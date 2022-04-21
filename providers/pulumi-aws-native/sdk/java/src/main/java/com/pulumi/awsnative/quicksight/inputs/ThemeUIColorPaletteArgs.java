@@ -5,9 +5,9 @@ package com.pulumi.awsnative.quicksight.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -28,10 +28,10 @@ public final class ThemeUIColorPaletteArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="accent")
-      private final @Nullable Output<String> accent;
+    private @Nullable Output<String> accent;
 
-    public Output<String> accent() {
-        return this.accent == null ? Codegen.empty() : this.accent;
+    public Optional<Output<String>> accent() {
+        return Optional.ofNullable(this.accent);
     }
 
     /**
@@ -40,10 +40,10 @@ public final class ThemeUIColorPaletteArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="accentForeground")
-      private final @Nullable Output<String> accentForeground;
+    private @Nullable Output<String> accentForeground;
 
-    public Output<String> accentForeground() {
-        return this.accentForeground == null ? Codegen.empty() : this.accentForeground;
+    public Optional<Output<String>> accentForeground() {
+        return Optional.ofNullable(this.accentForeground);
     }
 
     /**
@@ -51,10 +51,10 @@ public final class ThemeUIColorPaletteArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="danger")
-      private final @Nullable Output<String> danger;
+    private @Nullable Output<String> danger;
 
-    public Output<String> danger() {
-        return this.danger == null ? Codegen.empty() : this.danger;
+    public Optional<Output<String>> danger() {
+        return Optional.ofNullable(this.danger);
     }
 
     /**
@@ -63,10 +63,10 @@ public final class ThemeUIColorPaletteArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="dangerForeground")
-      private final @Nullable Output<String> dangerForeground;
+    private @Nullable Output<String> dangerForeground;
 
-    public Output<String> dangerForeground() {
-        return this.dangerForeground == null ? Codegen.empty() : this.dangerForeground;
+    public Optional<Output<String>> dangerForeground() {
+        return Optional.ofNullable(this.dangerForeground);
     }
 
     /**
@@ -75,10 +75,10 @@ public final class ThemeUIColorPaletteArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="dimension")
-      private final @Nullable Output<String> dimension;
+    private @Nullable Output<String> dimension;
 
-    public Output<String> dimension() {
-        return this.dimension == null ? Codegen.empty() : this.dimension;
+    public Optional<Output<String>> dimension() {
+        return Optional.ofNullable(this.dimension);
     }
 
     /**
@@ -87,10 +87,10 @@ public final class ThemeUIColorPaletteArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="dimensionForeground")
-      private final @Nullable Output<String> dimensionForeground;
+    private @Nullable Output<String> dimensionForeground;
 
-    public Output<String> dimensionForeground() {
-        return this.dimensionForeground == null ? Codegen.empty() : this.dimensionForeground;
+    public Optional<Output<String>> dimensionForeground() {
+        return Optional.ofNullable(this.dimensionForeground);
     }
 
     /**
@@ -98,10 +98,10 @@ public final class ThemeUIColorPaletteArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="measure")
-      private final @Nullable Output<String> measure;
+    private @Nullable Output<String> measure;
 
-    public Output<String> measure() {
-        return this.measure == null ? Codegen.empty() : this.measure;
+    public Optional<Output<String>> measure() {
+        return Optional.ofNullable(this.measure);
     }
 
     /**
@@ -110,10 +110,10 @@ public final class ThemeUIColorPaletteArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="measureForeground")
-      private final @Nullable Output<String> measureForeground;
+    private @Nullable Output<String> measureForeground;
 
-    public Output<String> measureForeground() {
-        return this.measureForeground == null ? Codegen.empty() : this.measureForeground;
+    public Optional<Output<String>> measureForeground() {
+        return Optional.ofNullable(this.measureForeground);
     }
 
     /**
@@ -121,10 +121,10 @@ public final class ThemeUIColorPaletteArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="primaryBackground")
-      private final @Nullable Output<String> primaryBackground;
+    private @Nullable Output<String> primaryBackground;
 
-    public Output<String> primaryBackground() {
-        return this.primaryBackground == null ? Codegen.empty() : this.primaryBackground;
+    public Optional<Output<String>> primaryBackground() {
+        return Optional.ofNullable(this.primaryBackground);
     }
 
     /**
@@ -133,10 +133,10 @@ public final class ThemeUIColorPaletteArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="primaryForeground")
-      private final @Nullable Output<String> primaryForeground;
+    private @Nullable Output<String> primaryForeground;
 
-    public Output<String> primaryForeground() {
-        return this.primaryForeground == null ? Codegen.empty() : this.primaryForeground;
+    public Optional<Output<String>> primaryForeground() {
+        return Optional.ofNullable(this.primaryForeground);
     }
 
     /**
@@ -144,10 +144,10 @@ public final class ThemeUIColorPaletteArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="secondaryBackground")
-      private final @Nullable Output<String> secondaryBackground;
+    private @Nullable Output<String> secondaryBackground;
 
-    public Output<String> secondaryBackground() {
-        return this.secondaryBackground == null ? Codegen.empty() : this.secondaryBackground;
+    public Optional<Output<String>> secondaryBackground() {
+        return Optional.ofNullable(this.secondaryBackground);
     }
 
     /**
@@ -156,10 +156,10 @@ public final class ThemeUIColorPaletteArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="secondaryForeground")
-      private final @Nullable Output<String> secondaryForeground;
+    private @Nullable Output<String> secondaryForeground;
 
-    public Output<String> secondaryForeground() {
-        return this.secondaryForeground == null ? Codegen.empty() : this.secondaryForeground;
+    public Optional<Output<String>> secondaryForeground() {
+        return Optional.ofNullable(this.secondaryForeground);
     }
 
     /**
@@ -168,10 +168,10 @@ public final class ThemeUIColorPaletteArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="success")
-      private final @Nullable Output<String> success;
+    private @Nullable Output<String> success;
 
-    public Output<String> success() {
-        return this.success == null ? Codegen.empty() : this.success;
+    public Optional<Output<String>> success() {
+        return Optional.ofNullable(this.success);
     }
 
     /**
@@ -180,10 +180,10 @@ public final class ThemeUIColorPaletteArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="successForeground")
-      private final @Nullable Output<String> successForeground;
+    private @Nullable Output<String> successForeground;
 
-    public Output<String> successForeground() {
-        return this.successForeground == null ? Codegen.empty() : this.successForeground;
+    public Optional<Output<String>> successForeground() {
+        return Optional.ofNullable(this.successForeground);
     }
 
     /**
@@ -191,10 +191,10 @@ public final class ThemeUIColorPaletteArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="warning")
-      private final @Nullable Output<String> warning;
+    private @Nullable Output<String> warning;
 
-    public Output<String> warning() {
-        return this.warning == null ? Codegen.empty() : this.warning;
+    public Optional<Output<String>> warning() {
+        return Optional.ofNullable(this.warning);
     }
 
     /**
@@ -203,245 +203,198 @@ public final class ThemeUIColorPaletteArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="warningForeground")
-      private final @Nullable Output<String> warningForeground;
+    private @Nullable Output<String> warningForeground;
 
-    public Output<String> warningForeground() {
-        return this.warningForeground == null ? Codegen.empty() : this.warningForeground;
+    public Optional<Output<String>> warningForeground() {
+        return Optional.ofNullable(this.warningForeground);
     }
 
-    public ThemeUIColorPaletteArgs(
-        @Nullable Output<String> accent,
-        @Nullable Output<String> accentForeground,
-        @Nullable Output<String> danger,
-        @Nullable Output<String> dangerForeground,
-        @Nullable Output<String> dimension,
-        @Nullable Output<String> dimensionForeground,
-        @Nullable Output<String> measure,
-        @Nullable Output<String> measureForeground,
-        @Nullable Output<String> primaryBackground,
-        @Nullable Output<String> primaryForeground,
-        @Nullable Output<String> secondaryBackground,
-        @Nullable Output<String> secondaryForeground,
-        @Nullable Output<String> success,
-        @Nullable Output<String> successForeground,
-        @Nullable Output<String> warning,
-        @Nullable Output<String> warningForeground) {
-        this.accent = accent;
-        this.accentForeground = accentForeground;
-        this.danger = danger;
-        this.dangerForeground = dangerForeground;
-        this.dimension = dimension;
-        this.dimensionForeground = dimensionForeground;
-        this.measure = measure;
-        this.measureForeground = measureForeground;
-        this.primaryBackground = primaryBackground;
-        this.primaryForeground = primaryForeground;
-        this.secondaryBackground = secondaryBackground;
-        this.secondaryForeground = secondaryForeground;
-        this.success = success;
-        this.successForeground = successForeground;
-        this.warning = warning;
-        this.warningForeground = warningForeground;
-    }
+    private ThemeUIColorPaletteArgs() {}
 
-    private ThemeUIColorPaletteArgs() {
-        this.accent = Codegen.empty();
-        this.accentForeground = Codegen.empty();
-        this.danger = Codegen.empty();
-        this.dangerForeground = Codegen.empty();
-        this.dimension = Codegen.empty();
-        this.dimensionForeground = Codegen.empty();
-        this.measure = Codegen.empty();
-        this.measureForeground = Codegen.empty();
-        this.primaryBackground = Codegen.empty();
-        this.primaryForeground = Codegen.empty();
-        this.secondaryBackground = Codegen.empty();
-        this.secondaryForeground = Codegen.empty();
-        this.success = Codegen.empty();
-        this.successForeground = Codegen.empty();
-        this.warning = Codegen.empty();
-        this.warningForeground = Codegen.empty();
+    private ThemeUIColorPaletteArgs(ThemeUIColorPaletteArgs $) {
+        this.accent = $.accent;
+        this.accentForeground = $.accentForeground;
+        this.danger = $.danger;
+        this.dangerForeground = $.dangerForeground;
+        this.dimension = $.dimension;
+        this.dimensionForeground = $.dimensionForeground;
+        this.measure = $.measure;
+        this.measureForeground = $.measureForeground;
+        this.primaryBackground = $.primaryBackground;
+        this.primaryForeground = $.primaryForeground;
+        this.secondaryBackground = $.secondaryBackground;
+        this.secondaryForeground = $.secondaryForeground;
+        this.success = $.success;
+        this.successForeground = $.successForeground;
+        this.warning = $.warning;
+        this.warningForeground = $.warningForeground;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ThemeUIColorPaletteArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> accent;
-        private @Nullable Output<String> accentForeground;
-        private @Nullable Output<String> danger;
-        private @Nullable Output<String> dangerForeground;
-        private @Nullable Output<String> dimension;
-        private @Nullable Output<String> dimensionForeground;
-        private @Nullable Output<String> measure;
-        private @Nullable Output<String> measureForeground;
-        private @Nullable Output<String> primaryBackground;
-        private @Nullable Output<String> primaryForeground;
-        private @Nullable Output<String> secondaryBackground;
-        private @Nullable Output<String> secondaryForeground;
-        private @Nullable Output<String> success;
-        private @Nullable Output<String> successForeground;
-        private @Nullable Output<String> warning;
-        private @Nullable Output<String> warningForeground;
+        private ThemeUIColorPaletteArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ThemeUIColorPaletteArgs();
         }
 
         public Builder(ThemeUIColorPaletteArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accent = defaults.accent;
-    	      this.accentForeground = defaults.accentForeground;
-    	      this.danger = defaults.danger;
-    	      this.dangerForeground = defaults.dangerForeground;
-    	      this.dimension = defaults.dimension;
-    	      this.dimensionForeground = defaults.dimensionForeground;
-    	      this.measure = defaults.measure;
-    	      this.measureForeground = defaults.measureForeground;
-    	      this.primaryBackground = defaults.primaryBackground;
-    	      this.primaryForeground = defaults.primaryForeground;
-    	      this.secondaryBackground = defaults.secondaryBackground;
-    	      this.secondaryForeground = defaults.secondaryForeground;
-    	      this.success = defaults.success;
-    	      this.successForeground = defaults.successForeground;
-    	      this.warning = defaults.warning;
-    	      this.warningForeground = defaults.warningForeground;
+            $ = new ThemeUIColorPaletteArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder accent(@Nullable Output<String> accent) {
-            this.accent = accent;
+            $.accent = accent;
             return this;
         }
-        public Builder accent(@Nullable String accent) {
-            this.accent = Codegen.ofNullable(accent);
-            return this;
+
+        public Builder accent(String accent) {
+            return accent(Output.of(accent));
         }
+
         public Builder accentForeground(@Nullable Output<String> accentForeground) {
-            this.accentForeground = accentForeground;
+            $.accentForeground = accentForeground;
             return this;
         }
-        public Builder accentForeground(@Nullable String accentForeground) {
-            this.accentForeground = Codegen.ofNullable(accentForeground);
-            return this;
+
+        public Builder accentForeground(String accentForeground) {
+            return accentForeground(Output.of(accentForeground));
         }
+
         public Builder danger(@Nullable Output<String> danger) {
-            this.danger = danger;
+            $.danger = danger;
             return this;
         }
-        public Builder danger(@Nullable String danger) {
-            this.danger = Codegen.ofNullable(danger);
-            return this;
+
+        public Builder danger(String danger) {
+            return danger(Output.of(danger));
         }
+
         public Builder dangerForeground(@Nullable Output<String> dangerForeground) {
-            this.dangerForeground = dangerForeground;
+            $.dangerForeground = dangerForeground;
             return this;
         }
-        public Builder dangerForeground(@Nullable String dangerForeground) {
-            this.dangerForeground = Codegen.ofNullable(dangerForeground);
-            return this;
+
+        public Builder dangerForeground(String dangerForeground) {
+            return dangerForeground(Output.of(dangerForeground));
         }
+
         public Builder dimension(@Nullable Output<String> dimension) {
-            this.dimension = dimension;
+            $.dimension = dimension;
             return this;
         }
-        public Builder dimension(@Nullable String dimension) {
-            this.dimension = Codegen.ofNullable(dimension);
-            return this;
+
+        public Builder dimension(String dimension) {
+            return dimension(Output.of(dimension));
         }
+
         public Builder dimensionForeground(@Nullable Output<String> dimensionForeground) {
-            this.dimensionForeground = dimensionForeground;
+            $.dimensionForeground = dimensionForeground;
             return this;
         }
-        public Builder dimensionForeground(@Nullable String dimensionForeground) {
-            this.dimensionForeground = Codegen.ofNullable(dimensionForeground);
-            return this;
+
+        public Builder dimensionForeground(String dimensionForeground) {
+            return dimensionForeground(Output.of(dimensionForeground));
         }
+
         public Builder measure(@Nullable Output<String> measure) {
-            this.measure = measure;
+            $.measure = measure;
             return this;
         }
-        public Builder measure(@Nullable String measure) {
-            this.measure = Codegen.ofNullable(measure);
-            return this;
+
+        public Builder measure(String measure) {
+            return measure(Output.of(measure));
         }
+
         public Builder measureForeground(@Nullable Output<String> measureForeground) {
-            this.measureForeground = measureForeground;
+            $.measureForeground = measureForeground;
             return this;
         }
-        public Builder measureForeground(@Nullable String measureForeground) {
-            this.measureForeground = Codegen.ofNullable(measureForeground);
-            return this;
+
+        public Builder measureForeground(String measureForeground) {
+            return measureForeground(Output.of(measureForeground));
         }
+
         public Builder primaryBackground(@Nullable Output<String> primaryBackground) {
-            this.primaryBackground = primaryBackground;
+            $.primaryBackground = primaryBackground;
             return this;
         }
-        public Builder primaryBackground(@Nullable String primaryBackground) {
-            this.primaryBackground = Codegen.ofNullable(primaryBackground);
-            return this;
+
+        public Builder primaryBackground(String primaryBackground) {
+            return primaryBackground(Output.of(primaryBackground));
         }
+
         public Builder primaryForeground(@Nullable Output<String> primaryForeground) {
-            this.primaryForeground = primaryForeground;
+            $.primaryForeground = primaryForeground;
             return this;
         }
-        public Builder primaryForeground(@Nullable String primaryForeground) {
-            this.primaryForeground = Codegen.ofNullable(primaryForeground);
-            return this;
+
+        public Builder primaryForeground(String primaryForeground) {
+            return primaryForeground(Output.of(primaryForeground));
         }
+
         public Builder secondaryBackground(@Nullable Output<String> secondaryBackground) {
-            this.secondaryBackground = secondaryBackground;
+            $.secondaryBackground = secondaryBackground;
             return this;
         }
-        public Builder secondaryBackground(@Nullable String secondaryBackground) {
-            this.secondaryBackground = Codegen.ofNullable(secondaryBackground);
-            return this;
+
+        public Builder secondaryBackground(String secondaryBackground) {
+            return secondaryBackground(Output.of(secondaryBackground));
         }
+
         public Builder secondaryForeground(@Nullable Output<String> secondaryForeground) {
-            this.secondaryForeground = secondaryForeground;
+            $.secondaryForeground = secondaryForeground;
             return this;
         }
-        public Builder secondaryForeground(@Nullable String secondaryForeground) {
-            this.secondaryForeground = Codegen.ofNullable(secondaryForeground);
-            return this;
+
+        public Builder secondaryForeground(String secondaryForeground) {
+            return secondaryForeground(Output.of(secondaryForeground));
         }
+
         public Builder success(@Nullable Output<String> success) {
-            this.success = success;
+            $.success = success;
             return this;
         }
-        public Builder success(@Nullable String success) {
-            this.success = Codegen.ofNullable(success);
-            return this;
+
+        public Builder success(String success) {
+            return success(Output.of(success));
         }
+
         public Builder successForeground(@Nullable Output<String> successForeground) {
-            this.successForeground = successForeground;
+            $.successForeground = successForeground;
             return this;
         }
-        public Builder successForeground(@Nullable String successForeground) {
-            this.successForeground = Codegen.ofNullable(successForeground);
-            return this;
+
+        public Builder successForeground(String successForeground) {
+            return successForeground(Output.of(successForeground));
         }
+
         public Builder warning(@Nullable Output<String> warning) {
-            this.warning = warning;
+            $.warning = warning;
             return this;
         }
-        public Builder warning(@Nullable String warning) {
-            this.warning = Codegen.ofNullable(warning);
-            return this;
+
+        public Builder warning(String warning) {
+            return warning(Output.of(warning));
         }
+
         public Builder warningForeground(@Nullable Output<String> warningForeground) {
-            this.warningForeground = warningForeground;
+            $.warningForeground = warningForeground;
             return this;
         }
-        public Builder warningForeground(@Nullable String warningForeground) {
-            this.warningForeground = Codegen.ofNullable(warningForeground);
-            return this;
-        }        public ThemeUIColorPaletteArgs build() {
-            return new ThemeUIColorPaletteArgs(accent, accentForeground, danger, dangerForeground, dimension, dimensionForeground, measure, measureForeground, primaryBackground, primaryForeground, secondaryBackground, secondaryForeground, success, successForeground, warning, warningForeground);
+
+        public Builder warningForeground(String warningForeground) {
+            return warningForeground(Output.of(warningForeground));
+        }
+
+        public ThemeUIColorPaletteArgs build() {
+            return $;
         }
     }
+
 }

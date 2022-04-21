@@ -21,45 +21,45 @@ public final class GoogleCloudContactcenterinsightsV1PhraseMatchRuleConfigRespon
      * 
      */
     @Import(name="exactMatchConfig", required=true)
-      private final GoogleCloudContactcenterinsightsV1ExactMatchConfigResponse exactMatchConfig;
+    private GoogleCloudContactcenterinsightsV1ExactMatchConfigResponse exactMatchConfig;
 
     public GoogleCloudContactcenterinsightsV1ExactMatchConfigResponse exactMatchConfig() {
         return this.exactMatchConfig;
     }
 
-    public GoogleCloudContactcenterinsightsV1PhraseMatchRuleConfigResponse(GoogleCloudContactcenterinsightsV1ExactMatchConfigResponse exactMatchConfig) {
-        this.exactMatchConfig = Objects.requireNonNull(exactMatchConfig, "expected parameter 'exactMatchConfig' to be non-null");
-    }
+    private GoogleCloudContactcenterinsightsV1PhraseMatchRuleConfigResponse() {}
 
-    private GoogleCloudContactcenterinsightsV1PhraseMatchRuleConfigResponse() {
-        this.exactMatchConfig = null;
+    private GoogleCloudContactcenterinsightsV1PhraseMatchRuleConfigResponse(GoogleCloudContactcenterinsightsV1PhraseMatchRuleConfigResponse $) {
+        this.exactMatchConfig = $.exactMatchConfig;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudContactcenterinsightsV1PhraseMatchRuleConfigResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private GoogleCloudContactcenterinsightsV1ExactMatchConfigResponse exactMatchConfig;
+        private GoogleCloudContactcenterinsightsV1PhraseMatchRuleConfigResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudContactcenterinsightsV1PhraseMatchRuleConfigResponse();
         }
 
         public Builder(GoogleCloudContactcenterinsightsV1PhraseMatchRuleConfigResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.exactMatchConfig = defaults.exactMatchConfig;
+            $ = new GoogleCloudContactcenterinsightsV1PhraseMatchRuleConfigResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder exactMatchConfig(GoogleCloudContactcenterinsightsV1ExactMatchConfigResponse exactMatchConfig) {
-            this.exactMatchConfig = Objects.requireNonNull(exactMatchConfig);
+            $.exactMatchConfig = exactMatchConfig;
             return this;
-        }        public GoogleCloudContactcenterinsightsV1PhraseMatchRuleConfigResponse build() {
-            return new GoogleCloudContactcenterinsightsV1PhraseMatchRuleConfigResponse(exactMatchConfig);
+        }
+
+        public GoogleCloudContactcenterinsightsV1PhraseMatchRuleConfigResponse build() {
+            $.exactMatchConfig = Objects.requireNonNull($.exactMatchConfig, "expected parameter 'exactMatchConfig' to be non-null");
+            return $;
         }
     }
+
 }

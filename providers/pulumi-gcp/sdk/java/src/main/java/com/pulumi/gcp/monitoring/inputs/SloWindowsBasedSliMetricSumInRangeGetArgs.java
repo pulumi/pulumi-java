@@ -5,7 +5,6 @@ package com.pulumi.gcp.monitoring.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.monitoring.inputs.SloWindowsBasedSliMetricSumInRangeRangeGetArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -26,7 +25,7 @@ public final class SloWindowsBasedSliMetricSumInRangeGetArgs extends com.pulumi.
      * 
      */
     @Import(name="range", required=true)
-      private final Output<SloWindowsBasedSliMetricSumInRangeRangeGetArgs> range;
+    private Output<SloWindowsBasedSliMetricSumInRangeRangeGetArgs> range;
 
     public Output<SloWindowsBasedSliMetricSumInRangeRangeGetArgs> range() {
         return this.range;
@@ -43,63 +42,60 @@ public final class SloWindowsBasedSliMetricSumInRangeGetArgs extends com.pulumi.
      * 
      */
     @Import(name="timeSeries", required=true)
-      private final Output<String> timeSeries;
+    private Output<String> timeSeries;
 
     public Output<String> timeSeries() {
         return this.timeSeries;
     }
 
-    public SloWindowsBasedSliMetricSumInRangeGetArgs(
-        Output<SloWindowsBasedSliMetricSumInRangeRangeGetArgs> range,
-        Output<String> timeSeries) {
-        this.range = Objects.requireNonNull(range, "expected parameter 'range' to be non-null");
-        this.timeSeries = Objects.requireNonNull(timeSeries, "expected parameter 'timeSeries' to be non-null");
-    }
+    private SloWindowsBasedSliMetricSumInRangeGetArgs() {}
 
-    private SloWindowsBasedSliMetricSumInRangeGetArgs() {
-        this.range = Codegen.empty();
-        this.timeSeries = Codegen.empty();
+    private SloWindowsBasedSliMetricSumInRangeGetArgs(SloWindowsBasedSliMetricSumInRangeGetArgs $) {
+        this.range = $.range;
+        this.timeSeries = $.timeSeries;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SloWindowsBasedSliMetricSumInRangeGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<SloWindowsBasedSliMetricSumInRangeRangeGetArgs> range;
-        private Output<String> timeSeries;
+        private SloWindowsBasedSliMetricSumInRangeGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SloWindowsBasedSliMetricSumInRangeGetArgs();
         }
 
         public Builder(SloWindowsBasedSliMetricSumInRangeGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.range = defaults.range;
-    	      this.timeSeries = defaults.timeSeries;
+            $ = new SloWindowsBasedSliMetricSumInRangeGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder range(Output<SloWindowsBasedSliMetricSumInRangeRangeGetArgs> range) {
-            this.range = Objects.requireNonNull(range);
+            $.range = range;
             return this;
         }
+
         public Builder range(SloWindowsBasedSliMetricSumInRangeRangeGetArgs range) {
-            this.range = Output.of(Objects.requireNonNull(range));
-            return this;
+            return range(Output.of(range));
         }
+
         public Builder timeSeries(Output<String> timeSeries) {
-            this.timeSeries = Objects.requireNonNull(timeSeries);
+            $.timeSeries = timeSeries;
             return this;
         }
+
         public Builder timeSeries(String timeSeries) {
-            this.timeSeries = Output.of(Objects.requireNonNull(timeSeries));
-            return this;
-        }        public SloWindowsBasedSliMetricSumInRangeGetArgs build() {
-            return new SloWindowsBasedSliMetricSumInRangeGetArgs(range, timeSeries);
+            return timeSeries(Output.of(timeSeries));
+        }
+
+        public SloWindowsBasedSliMetricSumInRangeGetArgs build() {
+            $.range = Objects.requireNonNull($.range, "expected parameter 'range' to be non-null");
+            $.timeSeries = Objects.requireNonNull($.timeSeries, "expected parameter 'timeSeries' to be non-null");
+            return $;
         }
     }
+
 }

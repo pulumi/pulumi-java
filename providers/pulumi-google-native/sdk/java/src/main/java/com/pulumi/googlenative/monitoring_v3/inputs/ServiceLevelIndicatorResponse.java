@@ -23,7 +23,7 @@ public final class ServiceLevelIndicatorResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="basicSli", required=true)
-      private final BasicSliResponse basicSli;
+    private BasicSliResponse basicSli;
 
     public BasicSliResponse basicSli() {
         return this.basicSli;
@@ -34,7 +34,7 @@ public final class ServiceLevelIndicatorResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="requestBased", required=true)
-      private final RequestBasedSliResponse requestBased;
+    private RequestBasedSliResponse requestBased;
 
     public RequestBasedSliResponse requestBased() {
         return this.requestBased;
@@ -45,64 +45,59 @@ public final class ServiceLevelIndicatorResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="windowsBased", required=true)
-      private final WindowsBasedSliResponse windowsBased;
+    private WindowsBasedSliResponse windowsBased;
 
     public WindowsBasedSliResponse windowsBased() {
         return this.windowsBased;
     }
 
-    public ServiceLevelIndicatorResponse(
-        BasicSliResponse basicSli,
-        RequestBasedSliResponse requestBased,
-        WindowsBasedSliResponse windowsBased) {
-        this.basicSli = Objects.requireNonNull(basicSli, "expected parameter 'basicSli' to be non-null");
-        this.requestBased = Objects.requireNonNull(requestBased, "expected parameter 'requestBased' to be non-null");
-        this.windowsBased = Objects.requireNonNull(windowsBased, "expected parameter 'windowsBased' to be non-null");
-    }
+    private ServiceLevelIndicatorResponse() {}
 
-    private ServiceLevelIndicatorResponse() {
-        this.basicSli = null;
-        this.requestBased = null;
-        this.windowsBased = null;
+    private ServiceLevelIndicatorResponse(ServiceLevelIndicatorResponse $) {
+        this.basicSli = $.basicSli;
+        this.requestBased = $.requestBased;
+        this.windowsBased = $.windowsBased;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ServiceLevelIndicatorResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private BasicSliResponse basicSli;
-        private RequestBasedSliResponse requestBased;
-        private WindowsBasedSliResponse windowsBased;
+        private ServiceLevelIndicatorResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ServiceLevelIndicatorResponse();
         }
 
         public Builder(ServiceLevelIndicatorResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.basicSli = defaults.basicSli;
-    	      this.requestBased = defaults.requestBased;
-    	      this.windowsBased = defaults.windowsBased;
+            $ = new ServiceLevelIndicatorResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder basicSli(BasicSliResponse basicSli) {
-            this.basicSli = Objects.requireNonNull(basicSli);
+            $.basicSli = basicSli;
             return this;
         }
+
         public Builder requestBased(RequestBasedSliResponse requestBased) {
-            this.requestBased = Objects.requireNonNull(requestBased);
+            $.requestBased = requestBased;
             return this;
         }
+
         public Builder windowsBased(WindowsBasedSliResponse windowsBased) {
-            this.windowsBased = Objects.requireNonNull(windowsBased);
+            $.windowsBased = windowsBased;
             return this;
-        }        public ServiceLevelIndicatorResponse build() {
-            return new ServiceLevelIndicatorResponse(basicSli, requestBased, windowsBased);
+        }
+
+        public ServiceLevelIndicatorResponse build() {
+            $.basicSli = Objects.requireNonNull($.basicSli, "expected parameter 'basicSli' to be non-null");
+            $.requestBased = Objects.requireNonNull($.requestBased, "expected parameter 'requestBased' to be non-null");
+            $.windowsBased = Objects.requireNonNull($.windowsBased, "expected parameter 'windowsBased' to be non-null");
+            return $;
         }
     }
+
 }

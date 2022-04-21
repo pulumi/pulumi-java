@@ -10,8 +10,8 @@ import com.pulumi.awsnative.transfer.inputs.WorkflowStepDeleteStepDetailsPropert
 import com.pulumi.awsnative.transfer.inputs.WorkflowStepTagStepDetailsPropertiesArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -28,10 +28,10 @@ public final class WorkflowStepArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="copyStepDetails")
-      private final @Nullable Output<WorkflowStepCopyStepDetailsPropertiesArgs> copyStepDetails;
+    private @Nullable Output<WorkflowStepCopyStepDetailsPropertiesArgs> copyStepDetails;
 
-    public Output<WorkflowStepCopyStepDetailsPropertiesArgs> copyStepDetails() {
-        return this.copyStepDetails == null ? Codegen.empty() : this.copyStepDetails;
+    public Optional<Output<WorkflowStepCopyStepDetailsPropertiesArgs>> copyStepDetails() {
+        return Optional.ofNullable(this.copyStepDetails);
     }
 
     /**
@@ -39,10 +39,10 @@ public final class WorkflowStepArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="customStepDetails")
-      private final @Nullable Output<WorkflowStepCustomStepDetailsPropertiesArgs> customStepDetails;
+    private @Nullable Output<WorkflowStepCustomStepDetailsPropertiesArgs> customStepDetails;
 
-    public Output<WorkflowStepCustomStepDetailsPropertiesArgs> customStepDetails() {
-        return this.customStepDetails == null ? Codegen.empty() : this.customStepDetails;
+    public Optional<Output<WorkflowStepCustomStepDetailsPropertiesArgs>> customStepDetails() {
+        return Optional.ofNullable(this.customStepDetails);
     }
 
     /**
@@ -50,10 +50,10 @@ public final class WorkflowStepArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="deleteStepDetails")
-      private final @Nullable Output<WorkflowStepDeleteStepDetailsPropertiesArgs> deleteStepDetails;
+    private @Nullable Output<WorkflowStepDeleteStepDetailsPropertiesArgs> deleteStepDetails;
 
-    public Output<WorkflowStepDeleteStepDetailsPropertiesArgs> deleteStepDetails() {
-        return this.deleteStepDetails == null ? Codegen.empty() : this.deleteStepDetails;
+    public Optional<Output<WorkflowStepDeleteStepDetailsPropertiesArgs>> deleteStepDetails() {
+        return Optional.ofNullable(this.deleteStepDetails);
     }
 
     /**
@@ -61,109 +61,95 @@ public final class WorkflowStepArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tagStepDetails")
-      private final @Nullable Output<WorkflowStepTagStepDetailsPropertiesArgs> tagStepDetails;
+    private @Nullable Output<WorkflowStepTagStepDetailsPropertiesArgs> tagStepDetails;
 
-    public Output<WorkflowStepTagStepDetailsPropertiesArgs> tagStepDetails() {
-        return this.tagStepDetails == null ? Codegen.empty() : this.tagStepDetails;
+    public Optional<Output<WorkflowStepTagStepDetailsPropertiesArgs>> tagStepDetails() {
+        return Optional.ofNullable(this.tagStepDetails);
     }
 
     @Import(name="type")
-      private final @Nullable Output<WorkflowStepType> type;
+    private @Nullable Output<WorkflowStepType> type;
 
-    public Output<WorkflowStepType> type() {
-        return this.type == null ? Codegen.empty() : this.type;
+    public Optional<Output<WorkflowStepType>> type() {
+        return Optional.ofNullable(this.type);
     }
 
-    public WorkflowStepArgs(
-        @Nullable Output<WorkflowStepCopyStepDetailsPropertiesArgs> copyStepDetails,
-        @Nullable Output<WorkflowStepCustomStepDetailsPropertiesArgs> customStepDetails,
-        @Nullable Output<WorkflowStepDeleteStepDetailsPropertiesArgs> deleteStepDetails,
-        @Nullable Output<WorkflowStepTagStepDetailsPropertiesArgs> tagStepDetails,
-        @Nullable Output<WorkflowStepType> type) {
-        this.copyStepDetails = copyStepDetails;
-        this.customStepDetails = customStepDetails;
-        this.deleteStepDetails = deleteStepDetails;
-        this.tagStepDetails = tagStepDetails;
-        this.type = type;
-    }
+    private WorkflowStepArgs() {}
 
-    private WorkflowStepArgs() {
-        this.copyStepDetails = Codegen.empty();
-        this.customStepDetails = Codegen.empty();
-        this.deleteStepDetails = Codegen.empty();
-        this.tagStepDetails = Codegen.empty();
-        this.type = Codegen.empty();
+    private WorkflowStepArgs(WorkflowStepArgs $) {
+        this.copyStepDetails = $.copyStepDetails;
+        this.customStepDetails = $.customStepDetails;
+        this.deleteStepDetails = $.deleteStepDetails;
+        this.tagStepDetails = $.tagStepDetails;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WorkflowStepArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<WorkflowStepCopyStepDetailsPropertiesArgs> copyStepDetails;
-        private @Nullable Output<WorkflowStepCustomStepDetailsPropertiesArgs> customStepDetails;
-        private @Nullable Output<WorkflowStepDeleteStepDetailsPropertiesArgs> deleteStepDetails;
-        private @Nullable Output<WorkflowStepTagStepDetailsPropertiesArgs> tagStepDetails;
-        private @Nullable Output<WorkflowStepType> type;
+        private WorkflowStepArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new WorkflowStepArgs();
         }
 
         public Builder(WorkflowStepArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.copyStepDetails = defaults.copyStepDetails;
-    	      this.customStepDetails = defaults.customStepDetails;
-    	      this.deleteStepDetails = defaults.deleteStepDetails;
-    	      this.tagStepDetails = defaults.tagStepDetails;
-    	      this.type = defaults.type;
+            $ = new WorkflowStepArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder copyStepDetails(@Nullable Output<WorkflowStepCopyStepDetailsPropertiesArgs> copyStepDetails) {
-            this.copyStepDetails = copyStepDetails;
+            $.copyStepDetails = copyStepDetails;
             return this;
         }
-        public Builder copyStepDetails(@Nullable WorkflowStepCopyStepDetailsPropertiesArgs copyStepDetails) {
-            this.copyStepDetails = Codegen.ofNullable(copyStepDetails);
-            return this;
+
+        public Builder copyStepDetails(WorkflowStepCopyStepDetailsPropertiesArgs copyStepDetails) {
+            return copyStepDetails(Output.of(copyStepDetails));
         }
+
         public Builder customStepDetails(@Nullable Output<WorkflowStepCustomStepDetailsPropertiesArgs> customStepDetails) {
-            this.customStepDetails = customStepDetails;
+            $.customStepDetails = customStepDetails;
             return this;
         }
-        public Builder customStepDetails(@Nullable WorkflowStepCustomStepDetailsPropertiesArgs customStepDetails) {
-            this.customStepDetails = Codegen.ofNullable(customStepDetails);
-            return this;
+
+        public Builder customStepDetails(WorkflowStepCustomStepDetailsPropertiesArgs customStepDetails) {
+            return customStepDetails(Output.of(customStepDetails));
         }
+
         public Builder deleteStepDetails(@Nullable Output<WorkflowStepDeleteStepDetailsPropertiesArgs> deleteStepDetails) {
-            this.deleteStepDetails = deleteStepDetails;
+            $.deleteStepDetails = deleteStepDetails;
             return this;
         }
-        public Builder deleteStepDetails(@Nullable WorkflowStepDeleteStepDetailsPropertiesArgs deleteStepDetails) {
-            this.deleteStepDetails = Codegen.ofNullable(deleteStepDetails);
-            return this;
+
+        public Builder deleteStepDetails(WorkflowStepDeleteStepDetailsPropertiesArgs deleteStepDetails) {
+            return deleteStepDetails(Output.of(deleteStepDetails));
         }
+
         public Builder tagStepDetails(@Nullable Output<WorkflowStepTagStepDetailsPropertiesArgs> tagStepDetails) {
-            this.tagStepDetails = tagStepDetails;
+            $.tagStepDetails = tagStepDetails;
             return this;
         }
-        public Builder tagStepDetails(@Nullable WorkflowStepTagStepDetailsPropertiesArgs tagStepDetails) {
-            this.tagStepDetails = Codegen.ofNullable(tagStepDetails);
-            return this;
+
+        public Builder tagStepDetails(WorkflowStepTagStepDetailsPropertiesArgs tagStepDetails) {
+            return tagStepDetails(Output.of(tagStepDetails));
         }
+
         public Builder type(@Nullable Output<WorkflowStepType> type) {
-            this.type = type;
+            $.type = type;
             return this;
         }
-        public Builder type(@Nullable WorkflowStepType type) {
-            this.type = Codegen.ofNullable(type);
-            return this;
-        }        public WorkflowStepArgs build() {
-            return new WorkflowStepArgs(copyStepDetails, customStepDetails, deleteStepDetails, tagStepDetails, type);
+
+        public Builder type(WorkflowStepType type) {
+            return type(Output.of(type));
+        }
+
+        public WorkflowStepArgs build() {
+            return $;
         }
     }
+
 }

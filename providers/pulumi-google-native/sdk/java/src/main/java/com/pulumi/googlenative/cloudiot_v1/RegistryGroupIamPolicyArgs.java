@@ -5,12 +5,12 @@ package com.pulumi.googlenative.cloudiot_v1;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.cloudiot_v1.inputs.BindingArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,10 @@ public final class RegistryGroupIamPolicyArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="bindings")
-      private final @Nullable Output<List<BindingArgs>> bindings;
+    private @Nullable Output<List<BindingArgs>> bindings;
 
-    public Output<List<BindingArgs>> bindings() {
-        return this.bindings == null ? Codegen.empty() : this.bindings;
+    public Optional<Output<List<BindingArgs>>> bindings() {
+        return Optional.ofNullable(this.bindings);
     }
 
     /**
@@ -34,35 +34,35 @@ public final class RegistryGroupIamPolicyArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="etag")
-      private final @Nullable Output<String> etag;
+    private @Nullable Output<String> etag;
 
-    public Output<String> etag() {
-        return this.etag == null ? Codegen.empty() : this.etag;
+    public Optional<Output<String>> etag() {
+        return Optional.ofNullable(this.etag);
     }
 
     @Import(name="groupId", required=true)
-      private final Output<String> groupId;
+    private Output<String> groupId;
 
     public Output<String> groupId() {
         return this.groupId;
     }
 
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     @Import(name="registryId", required=true)
-      private final Output<String> registryId;
+    private Output<String> registryId;
 
     public Output<String> registryId() {
         return this.registryId;
@@ -73,131 +73,114 @@ public final class RegistryGroupIamPolicyArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="version")
-      private final @Nullable Output<Integer> version;
+    private @Nullable Output<Integer> version;
 
-    public Output<Integer> version() {
-        return this.version == null ? Codegen.empty() : this.version;
+    public Optional<Output<Integer>> version() {
+        return Optional.ofNullable(this.version);
     }
 
-    public RegistryGroupIamPolicyArgs(
-        @Nullable Output<List<BindingArgs>> bindings,
-        @Nullable Output<String> etag,
-        Output<String> groupId,
-        @Nullable Output<String> location,
-        @Nullable Output<String> project,
-        Output<String> registryId,
-        @Nullable Output<Integer> version) {
-        this.bindings = bindings;
-        this.etag = etag;
-        this.groupId = Objects.requireNonNull(groupId, "expected parameter 'groupId' to be non-null");
-        this.location = location;
-        this.project = project;
-        this.registryId = Objects.requireNonNull(registryId, "expected parameter 'registryId' to be non-null");
-        this.version = version;
-    }
+    private RegistryGroupIamPolicyArgs() {}
 
-    private RegistryGroupIamPolicyArgs() {
-        this.bindings = Codegen.empty();
-        this.etag = Codegen.empty();
-        this.groupId = Codegen.empty();
-        this.location = Codegen.empty();
-        this.project = Codegen.empty();
-        this.registryId = Codegen.empty();
-        this.version = Codegen.empty();
+    private RegistryGroupIamPolicyArgs(RegistryGroupIamPolicyArgs $) {
+        this.bindings = $.bindings;
+        this.etag = $.etag;
+        this.groupId = $.groupId;
+        this.location = $.location;
+        this.project = $.project;
+        this.registryId = $.registryId;
+        this.version = $.version;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RegistryGroupIamPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<BindingArgs>> bindings;
-        private @Nullable Output<String> etag;
-        private Output<String> groupId;
-        private @Nullable Output<String> location;
-        private @Nullable Output<String> project;
-        private Output<String> registryId;
-        private @Nullable Output<Integer> version;
+        private RegistryGroupIamPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RegistryGroupIamPolicyArgs();
         }
 
         public Builder(RegistryGroupIamPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.bindings = defaults.bindings;
-    	      this.etag = defaults.etag;
-    	      this.groupId = defaults.groupId;
-    	      this.location = defaults.location;
-    	      this.project = defaults.project;
-    	      this.registryId = defaults.registryId;
-    	      this.version = defaults.version;
+            $ = new RegistryGroupIamPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder bindings(@Nullable Output<List<BindingArgs>> bindings) {
-            this.bindings = bindings;
+            $.bindings = bindings;
             return this;
         }
-        public Builder bindings(@Nullable List<BindingArgs> bindings) {
-            this.bindings = Codegen.ofNullable(bindings);
-            return this;
+
+        public Builder bindings(List<BindingArgs> bindings) {
+            return bindings(Output.of(bindings));
         }
+
         public Builder bindings(BindingArgs... bindings) {
             return bindings(List.of(bindings));
         }
+
         public Builder etag(@Nullable Output<String> etag) {
-            this.etag = etag;
+            $.etag = etag;
             return this;
         }
-        public Builder etag(@Nullable String etag) {
-            this.etag = Codegen.ofNullable(etag);
-            return this;
+
+        public Builder etag(String etag) {
+            return etag(Output.of(etag));
         }
+
         public Builder groupId(Output<String> groupId) {
-            this.groupId = Objects.requireNonNull(groupId);
+            $.groupId = groupId;
             return this;
         }
+
         public Builder groupId(String groupId) {
-            this.groupId = Output.of(Objects.requireNonNull(groupId));
-            return this;
+            return groupId(Output.of(groupId));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder registryId(Output<String> registryId) {
-            this.registryId = Objects.requireNonNull(registryId);
+            $.registryId = registryId;
             return this;
         }
+
         public Builder registryId(String registryId) {
-            this.registryId = Output.of(Objects.requireNonNull(registryId));
-            return this;
+            return registryId(Output.of(registryId));
         }
+
         public Builder version(@Nullable Output<Integer> version) {
-            this.version = version;
+            $.version = version;
             return this;
         }
-        public Builder version(@Nullable Integer version) {
-            this.version = Codegen.ofNullable(version);
-            return this;
-        }        public RegistryGroupIamPolicyArgs build() {
-            return new RegistryGroupIamPolicyArgs(bindings, etag, groupId, location, project, registryId, version);
+
+        public Builder version(Integer version) {
+            return version(Output.of(version));
+        }
+
+        public RegistryGroupIamPolicyArgs build() {
+            $.groupId = Objects.requireNonNull($.groupId, "expected parameter 'groupId' to be non-null");
+            $.registryId = Objects.requireNonNull($.registryId, "expected parameter 'registryId' to be non-null");
+            return $;
         }
     }
+
 }

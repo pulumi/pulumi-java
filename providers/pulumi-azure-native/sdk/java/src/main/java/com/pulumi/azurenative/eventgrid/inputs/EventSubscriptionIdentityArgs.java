@@ -7,9 +7,9 @@ import com.pulumi.azurenative.eventgrid.enums.EventSubscriptionIdentityType;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class EventSubscriptionIdentityArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="type")
-      private final @Nullable Output<Either<String,EventSubscriptionIdentityType>> type;
+    private @Nullable Output<Either<String,EventSubscriptionIdentityType>> type;
 
-    public Output<Either<String,EventSubscriptionIdentityType>> type() {
-        return this.type == null ? Codegen.empty() : this.type;
+    public Optional<Output<Either<String,EventSubscriptionIdentityType>>> type() {
+        return Optional.ofNullable(this.type);
     }
 
     /**
@@ -37,63 +37,58 @@ public final class EventSubscriptionIdentityArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="userAssignedIdentity")
-      private final @Nullable Output<String> userAssignedIdentity;
+    private @Nullable Output<String> userAssignedIdentity;
 
-    public Output<String> userAssignedIdentity() {
-        return this.userAssignedIdentity == null ? Codegen.empty() : this.userAssignedIdentity;
+    public Optional<Output<String>> userAssignedIdentity() {
+        return Optional.ofNullable(this.userAssignedIdentity);
     }
 
-    public EventSubscriptionIdentityArgs(
-        @Nullable Output<Either<String,EventSubscriptionIdentityType>> type,
-        @Nullable Output<String> userAssignedIdentity) {
-        this.type = type;
-        this.userAssignedIdentity = userAssignedIdentity;
-    }
+    private EventSubscriptionIdentityArgs() {}
 
-    private EventSubscriptionIdentityArgs() {
-        this.type = Codegen.empty();
-        this.userAssignedIdentity = Codegen.empty();
+    private EventSubscriptionIdentityArgs(EventSubscriptionIdentityArgs $) {
+        this.type = $.type;
+        this.userAssignedIdentity = $.userAssignedIdentity;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EventSubscriptionIdentityArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Either<String,EventSubscriptionIdentityType>> type;
-        private @Nullable Output<String> userAssignedIdentity;
+        private EventSubscriptionIdentityArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new EventSubscriptionIdentityArgs();
         }
 
         public Builder(EventSubscriptionIdentityArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.type = defaults.type;
-    	      this.userAssignedIdentity = defaults.userAssignedIdentity;
+            $ = new EventSubscriptionIdentityArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder type(@Nullable Output<Either<String,EventSubscriptionIdentityType>> type) {
-            this.type = type;
+            $.type = type;
             return this;
         }
-        public Builder type(@Nullable Either<String,EventSubscriptionIdentityType> type) {
-            this.type = Codegen.ofNullable(type);
-            return this;
+
+        public Builder type(Either<String,EventSubscriptionIdentityType> type) {
+            return type(Output.of(type));
         }
+
         public Builder userAssignedIdentity(@Nullable Output<String> userAssignedIdentity) {
-            this.userAssignedIdentity = userAssignedIdentity;
+            $.userAssignedIdentity = userAssignedIdentity;
             return this;
         }
-        public Builder userAssignedIdentity(@Nullable String userAssignedIdentity) {
-            this.userAssignedIdentity = Codegen.ofNullable(userAssignedIdentity);
-            return this;
-        }        public EventSubscriptionIdentityArgs build() {
-            return new EventSubscriptionIdentityArgs(type, userAssignedIdentity);
+
+        public Builder userAssignedIdentity(String userAssignedIdentity) {
+            return userAssignedIdentity(Output.of(userAssignedIdentity));
+        }
+
+        public EventSubscriptionIdentityArgs build() {
+            return $;
         }
     }
+
 }

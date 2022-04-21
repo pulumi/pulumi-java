@@ -17,45 +17,45 @@ public final class InstanceGroupManagerInstanceLifecyclePolicyResponse extends c
      * 
      */
     @Import(name="metadataBasedReadinessSignal", required=true)
-      private final InstanceGroupManagerInstanceLifecyclePolicyMetadataBasedReadinessSignalResponse metadataBasedReadinessSignal;
+    private InstanceGroupManagerInstanceLifecyclePolicyMetadataBasedReadinessSignalResponse metadataBasedReadinessSignal;
 
     public InstanceGroupManagerInstanceLifecyclePolicyMetadataBasedReadinessSignalResponse metadataBasedReadinessSignal() {
         return this.metadataBasedReadinessSignal;
     }
 
-    public InstanceGroupManagerInstanceLifecyclePolicyResponse(InstanceGroupManagerInstanceLifecyclePolicyMetadataBasedReadinessSignalResponse metadataBasedReadinessSignal) {
-        this.metadataBasedReadinessSignal = Objects.requireNonNull(metadataBasedReadinessSignal, "expected parameter 'metadataBasedReadinessSignal' to be non-null");
-    }
+    private InstanceGroupManagerInstanceLifecyclePolicyResponse() {}
 
-    private InstanceGroupManagerInstanceLifecyclePolicyResponse() {
-        this.metadataBasedReadinessSignal = null;
+    private InstanceGroupManagerInstanceLifecyclePolicyResponse(InstanceGroupManagerInstanceLifecyclePolicyResponse $) {
+        this.metadataBasedReadinessSignal = $.metadataBasedReadinessSignal;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(InstanceGroupManagerInstanceLifecyclePolicyResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private InstanceGroupManagerInstanceLifecyclePolicyMetadataBasedReadinessSignalResponse metadataBasedReadinessSignal;
+        private InstanceGroupManagerInstanceLifecyclePolicyResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new InstanceGroupManagerInstanceLifecyclePolicyResponse();
         }
 
         public Builder(InstanceGroupManagerInstanceLifecyclePolicyResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.metadataBasedReadinessSignal = defaults.metadataBasedReadinessSignal;
+            $ = new InstanceGroupManagerInstanceLifecyclePolicyResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder metadataBasedReadinessSignal(InstanceGroupManagerInstanceLifecyclePolicyMetadataBasedReadinessSignalResponse metadataBasedReadinessSignal) {
-            this.metadataBasedReadinessSignal = Objects.requireNonNull(metadataBasedReadinessSignal);
+            $.metadataBasedReadinessSignal = metadataBasedReadinessSignal;
             return this;
-        }        public InstanceGroupManagerInstanceLifecyclePolicyResponse build() {
-            return new InstanceGroupManagerInstanceLifecyclePolicyResponse(metadataBasedReadinessSignal);
+        }
+
+        public InstanceGroupManagerInstanceLifecyclePolicyResponse build() {
+            $.metadataBasedReadinessSignal = Objects.requireNonNull($.metadataBasedReadinessSignal, "expected parameter 'metadataBasedReadinessSignal' to be non-null");
+            return $;
         }
     }
+
 }

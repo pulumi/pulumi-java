@@ -7,9 +7,9 @@ import com.pulumi.azurenative.network.enums.AuthorizationUseStatus;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class ExpressRouteCircuitAuthorizationArgs extends com.pulumi.resou
      * 
      */
     @Import(name="authorizationKey")
-      private final @Nullable Output<String> authorizationKey;
+    private @Nullable Output<String> authorizationKey;
 
-    public Output<String> authorizationKey() {
-        return this.authorizationKey == null ? Codegen.empty() : this.authorizationKey;
+    public Optional<Output<String>> authorizationKey() {
+        return Optional.ofNullable(this.authorizationKey);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class ExpressRouteCircuitAuthorizationArgs extends com.pulumi.resou
      * 
      */
     @Import(name="authorizationUseStatus")
-      private final @Nullable Output<Either<String,AuthorizationUseStatus>> authorizationUseStatus;
+    private @Nullable Output<Either<String,AuthorizationUseStatus>> authorizationUseStatus;
 
-    public Output<Either<String,AuthorizationUseStatus>> authorizationUseStatus() {
-        return this.authorizationUseStatus == null ? Codegen.empty() : this.authorizationUseStatus;
+    public Optional<Output<Either<String,AuthorizationUseStatus>>> authorizationUseStatus() {
+        return Optional.ofNullable(this.authorizationUseStatus);
     }
 
     /**
@@ -48,10 +48,10 @@ public final class ExpressRouteCircuitAuthorizationArgs extends com.pulumi.resou
      * 
      */
     @Import(name="id")
-      private final @Nullable Output<String> id;
+    private @Nullable Output<String> id;
 
-    public Output<String> id() {
-        return this.id == null ? Codegen.empty() : this.id;
+    public Optional<Output<String>> id() {
+        return Optional.ofNullable(this.id);
     }
 
     /**
@@ -59,89 +59,78 @@ public final class ExpressRouteCircuitAuthorizationArgs extends com.pulumi.resou
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
-    public ExpressRouteCircuitAuthorizationArgs(
-        @Nullable Output<String> authorizationKey,
-        @Nullable Output<Either<String,AuthorizationUseStatus>> authorizationUseStatus,
-        @Nullable Output<String> id,
-        @Nullable Output<String> name) {
-        this.authorizationKey = authorizationKey;
-        this.authorizationUseStatus = authorizationUseStatus;
-        this.id = id;
-        this.name = name;
-    }
+    private ExpressRouteCircuitAuthorizationArgs() {}
 
-    private ExpressRouteCircuitAuthorizationArgs() {
-        this.authorizationKey = Codegen.empty();
-        this.authorizationUseStatus = Codegen.empty();
-        this.id = Codegen.empty();
-        this.name = Codegen.empty();
+    private ExpressRouteCircuitAuthorizationArgs(ExpressRouteCircuitAuthorizationArgs $) {
+        this.authorizationKey = $.authorizationKey;
+        this.authorizationUseStatus = $.authorizationUseStatus;
+        this.id = $.id;
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ExpressRouteCircuitAuthorizationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> authorizationKey;
-        private @Nullable Output<Either<String,AuthorizationUseStatus>> authorizationUseStatus;
-        private @Nullable Output<String> id;
-        private @Nullable Output<String> name;
+        private ExpressRouteCircuitAuthorizationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ExpressRouteCircuitAuthorizationArgs();
         }
 
         public Builder(ExpressRouteCircuitAuthorizationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.authorizationKey = defaults.authorizationKey;
-    	      this.authorizationUseStatus = defaults.authorizationUseStatus;
-    	      this.id = defaults.id;
-    	      this.name = defaults.name;
+            $ = new ExpressRouteCircuitAuthorizationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder authorizationKey(@Nullable Output<String> authorizationKey) {
-            this.authorizationKey = authorizationKey;
+            $.authorizationKey = authorizationKey;
             return this;
         }
-        public Builder authorizationKey(@Nullable String authorizationKey) {
-            this.authorizationKey = Codegen.ofNullable(authorizationKey);
-            return this;
+
+        public Builder authorizationKey(String authorizationKey) {
+            return authorizationKey(Output.of(authorizationKey));
         }
+
         public Builder authorizationUseStatus(@Nullable Output<Either<String,AuthorizationUseStatus>> authorizationUseStatus) {
-            this.authorizationUseStatus = authorizationUseStatus;
+            $.authorizationUseStatus = authorizationUseStatus;
             return this;
         }
-        public Builder authorizationUseStatus(@Nullable Either<String,AuthorizationUseStatus> authorizationUseStatus) {
-            this.authorizationUseStatus = Codegen.ofNullable(authorizationUseStatus);
-            return this;
+
+        public Builder authorizationUseStatus(Either<String,AuthorizationUseStatus> authorizationUseStatus) {
+            return authorizationUseStatus(Output.of(authorizationUseStatus));
         }
+
         public Builder id(@Nullable Output<String> id) {
-            this.id = id;
+            $.id = id;
             return this;
         }
-        public Builder id(@Nullable String id) {
-            this.id = Codegen.ofNullable(id);
-            return this;
+
+        public Builder id(String id) {
+            return id(Output.of(id));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
-        }        public ExpressRouteCircuitAuthorizationArgs build() {
-            return new ExpressRouteCircuitAuthorizationArgs(authorizationKey, authorizationUseStatus, id, name);
+
+        public Builder name(String name) {
+            return name(Output.of(name));
+        }
+
+        public ExpressRouteCircuitAuthorizationArgs build() {
+            return $;
         }
     }
+
 }

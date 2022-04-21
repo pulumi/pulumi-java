@@ -7,7 +7,6 @@ import com.pulumi.azurenative.providerhub.enums.FeaturesPolicy;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,49 +16,49 @@ public final class ResourceProviderManifestPropertiesFeaturesRuleArgs extends co
     public static final ResourceProviderManifestPropertiesFeaturesRuleArgs Empty = new ResourceProviderManifestPropertiesFeaturesRuleArgs();
 
     @Import(name="requiredFeaturesPolicy", required=true)
-      private final Output<Either<String,FeaturesPolicy>> requiredFeaturesPolicy;
+    private Output<Either<String,FeaturesPolicy>> requiredFeaturesPolicy;
 
     public Output<Either<String,FeaturesPolicy>> requiredFeaturesPolicy() {
         return this.requiredFeaturesPolicy;
     }
 
-    public ResourceProviderManifestPropertiesFeaturesRuleArgs(Output<Either<String,FeaturesPolicy>> requiredFeaturesPolicy) {
-        this.requiredFeaturesPolicy = Objects.requireNonNull(requiredFeaturesPolicy, "expected parameter 'requiredFeaturesPolicy' to be non-null");
-    }
+    private ResourceProviderManifestPropertiesFeaturesRuleArgs() {}
 
-    private ResourceProviderManifestPropertiesFeaturesRuleArgs() {
-        this.requiredFeaturesPolicy = Codegen.empty();
+    private ResourceProviderManifestPropertiesFeaturesRuleArgs(ResourceProviderManifestPropertiesFeaturesRuleArgs $) {
+        this.requiredFeaturesPolicy = $.requiredFeaturesPolicy;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ResourceProviderManifestPropertiesFeaturesRuleArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Either<String,FeaturesPolicy>> requiredFeaturesPolicy;
+        private ResourceProviderManifestPropertiesFeaturesRuleArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ResourceProviderManifestPropertiesFeaturesRuleArgs();
         }
 
         public Builder(ResourceProviderManifestPropertiesFeaturesRuleArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.requiredFeaturesPolicy = defaults.requiredFeaturesPolicy;
+            $ = new ResourceProviderManifestPropertiesFeaturesRuleArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder requiredFeaturesPolicy(Output<Either<String,FeaturesPolicy>> requiredFeaturesPolicy) {
-            this.requiredFeaturesPolicy = Objects.requireNonNull(requiredFeaturesPolicy);
+            $.requiredFeaturesPolicy = requiredFeaturesPolicy;
             return this;
         }
+
         public Builder requiredFeaturesPolicy(Either<String,FeaturesPolicy> requiredFeaturesPolicy) {
-            this.requiredFeaturesPolicy = Output.of(Objects.requireNonNull(requiredFeaturesPolicy));
-            return this;
-        }        public ResourceProviderManifestPropertiesFeaturesRuleArgs build() {
-            return new ResourceProviderManifestPropertiesFeaturesRuleArgs(requiredFeaturesPolicy);
+            return requiredFeaturesPolicy(Output.of(requiredFeaturesPolicy));
+        }
+
+        public ResourceProviderManifestPropertiesFeaturesRuleArgs build() {
+            $.requiredFeaturesPolicy = Objects.requireNonNull($.requiredFeaturesPolicy, "expected parameter 'requiredFeaturesPolicy' to be non-null");
+            return $;
         }
     }
+
 }

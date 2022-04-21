@@ -7,7 +7,6 @@ import com.pulumi.azurenative.costmanagement.enums.ReportConfigColumnType;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -25,7 +24,7 @@ public final class ReportConfigGroupingArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="name", required=true)
-      private final Output<String> name;
+    private Output<String> name;
 
     public Output<String> name() {
         return this.name;
@@ -36,63 +35,60 @@ public final class ReportConfigGroupingArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="type", required=true)
-      private final Output<Either<String,ReportConfigColumnType>> type;
+    private Output<Either<String,ReportConfigColumnType>> type;
 
     public Output<Either<String,ReportConfigColumnType>> type() {
         return this.type;
     }
 
-    public ReportConfigGroupingArgs(
-        Output<String> name,
-        Output<Either<String,ReportConfigColumnType>> type) {
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private ReportConfigGroupingArgs() {}
 
-    private ReportConfigGroupingArgs() {
-        this.name = Codegen.empty();
-        this.type = Codegen.empty();
+    private ReportConfigGroupingArgs(ReportConfigGroupingArgs $) {
+        this.name = $.name;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ReportConfigGroupingArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> name;
-        private Output<Either<String,ReportConfigColumnType>> type;
+        private ReportConfigGroupingArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ReportConfigGroupingArgs();
         }
 
         public Builder(ReportConfigGroupingArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.type = defaults.type;
+            $ = new ReportConfigGroupingArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder name(Output<String> name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Output.of(Objects.requireNonNull(name));
-            return this;
+            return name(Output.of(name));
         }
+
         public Builder type(Output<Either<String,ReportConfigColumnType>> type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder type(Either<String,ReportConfigColumnType> type) {
-            this.type = Output.of(Objects.requireNonNull(type));
-            return this;
-        }        public ReportConfigGroupingArgs build() {
-            return new ReportConfigGroupingArgs(name, type);
+            return type(Output.of(type));
+        }
+
+        public ReportConfigGroupingArgs build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

@@ -8,6 +8,7 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,7 +26,7 @@ public final class SecretAuthInfoArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="authType", required=true)
-      private final Output<String> authType;
+    private Output<String> authType;
 
     public Output<String> authType() {
         return this.authType;
@@ -36,10 +37,10 @@ public final class SecretAuthInfoArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -47,76 +48,69 @@ public final class SecretAuthInfoArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="secret")
-      private final @Nullable Output<String> secret;
+    private @Nullable Output<String> secret;
 
-    public Output<String> secret() {
-        return this.secret == null ? Codegen.empty() : this.secret;
+    public Optional<Output<String>> secret() {
+        return Optional.ofNullable(this.secret);
     }
 
-    public SecretAuthInfoArgs(
-        Output<String> authType,
-        @Nullable Output<String> name,
-        @Nullable Output<String> secret) {
-        this.authType = Codegen.stringProp("authType").output().arg(authType).require();
-        this.name = name;
-        this.secret = secret;
-    }
+    private SecretAuthInfoArgs() {}
 
-    private SecretAuthInfoArgs() {
-        this.authType = Codegen.empty();
-        this.name = Codegen.empty();
-        this.secret = Codegen.empty();
+    private SecretAuthInfoArgs(SecretAuthInfoArgs $) {
+        this.authType = $.authType;
+        this.name = $.name;
+        this.secret = $.secret;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SecretAuthInfoArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> authType;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> secret;
+        private SecretAuthInfoArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SecretAuthInfoArgs();
         }
 
         public Builder(SecretAuthInfoArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.authType = defaults.authType;
-    	      this.name = defaults.name;
-    	      this.secret = defaults.secret;
+            $ = new SecretAuthInfoArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder authType(Output<String> authType) {
-            this.authType = Objects.requireNonNull(authType);
+            $.authType = authType;
             return this;
         }
+
         public Builder authType(String authType) {
-            this.authType = Output.of(Objects.requireNonNull(authType));
-            return this;
+            return authType(Output.of(authType));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder secret(@Nullable Output<String> secret) {
-            this.secret = secret;
+            $.secret = secret;
             return this;
         }
-        public Builder secret(@Nullable String secret) {
-            this.secret = Codegen.ofNullable(secret);
-            return this;
-        }        public SecretAuthInfoArgs build() {
-            return new SecretAuthInfoArgs(authType, name, secret);
+
+        public Builder secret(String secret) {
+            return secret(Output.of(secret));
+        }
+
+        public SecretAuthInfoArgs build() {
+            $.authType = Codegen.stringProp("authType").output().arg($.authType).require();
+            return $;
         }
     }
+
 }

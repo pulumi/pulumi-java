@@ -15,78 +15,71 @@ public final class GetPolicyArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetPolicyArgs Empty = new GetPolicyArgs();
 
     @Import(name="clientOperationId")
-      private final @Nullable String clientOperationId;
+    private @Nullable String clientOperationId;
 
     public Optional<String> clientOperationId() {
-        return this.clientOperationId == null ? Optional.empty() : Optional.ofNullable(this.clientOperationId);
+        return Optional.ofNullable(this.clientOperationId);
     }
 
     @Import(name="policy", required=true)
-      private final String policy;
+    private String policy;
 
     public String policy() {
         return this.policy;
     }
 
     @Import(name="project")
-      private final @Nullable String project;
+    private @Nullable String project;
 
     public Optional<String> project() {
-        return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
+        return Optional.ofNullable(this.project);
     }
 
-    public GetPolicyArgs(
-        @Nullable String clientOperationId,
-        String policy,
-        @Nullable String project) {
-        this.clientOperationId = clientOperationId;
-        this.policy = Objects.requireNonNull(policy, "expected parameter 'policy' to be non-null");
-        this.project = project;
-    }
+    private GetPolicyArgs() {}
 
-    private GetPolicyArgs() {
-        this.clientOperationId = null;
-        this.policy = null;
-        this.project = null;
+    private GetPolicyArgs(GetPolicyArgs $) {
+        this.clientOperationId = $.clientOperationId;
+        this.policy = $.policy;
+        this.project = $.project;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String clientOperationId;
-        private String policy;
-        private @Nullable String project;
+        private GetPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetPolicyArgs();
         }
 
         public Builder(GetPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.clientOperationId = defaults.clientOperationId;
-    	      this.policy = defaults.policy;
-    	      this.project = defaults.project;
+            $ = new GetPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder clientOperationId(@Nullable String clientOperationId) {
-            this.clientOperationId = clientOperationId;
+            $.clientOperationId = clientOperationId;
             return this;
         }
+
         public Builder policy(String policy) {
-            this.policy = Objects.requireNonNull(policy);
+            $.policy = policy;
             return this;
         }
+
         public Builder project(@Nullable String project) {
-            this.project = project;
+            $.project = project;
             return this;
-        }        public GetPolicyArgs build() {
-            return new GetPolicyArgs(clientOperationId, policy, project);
+        }
+
+        public GetPolicyArgs build() {
+            $.policy = Objects.requireNonNull($.policy, "expected parameter 'policy' to be non-null");
+            return $;
         }
     }
+
 }

@@ -6,9 +6,9 @@ package com.pulumi.aws.ebs.inputs;
 import com.pulumi.aws.ebs.inputs.SnapshotImportDiskContainerUserBucketGetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class SnapshotImportDiskContainerGetArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -32,7 +32,7 @@ public final class SnapshotImportDiskContainerGetArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="format", required=true)
-      private final Output<String> format;
+    private Output<String> format;
 
     public Output<String> format() {
         return this.format;
@@ -43,10 +43,10 @@ public final class SnapshotImportDiskContainerGetArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="url")
-      private final @Nullable Output<String> url;
+    private @Nullable Output<String> url;
 
-    public Output<String> url() {
-        return this.url == null ? Codegen.empty() : this.url;
+    public Optional<Output<String>> url() {
+        return Optional.ofNullable(this.url);
     }
 
     /**
@@ -54,89 +54,79 @@ public final class SnapshotImportDiskContainerGetArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="userBucket")
-      private final @Nullable Output<SnapshotImportDiskContainerUserBucketGetArgs> userBucket;
+    private @Nullable Output<SnapshotImportDiskContainerUserBucketGetArgs> userBucket;
 
-    public Output<SnapshotImportDiskContainerUserBucketGetArgs> userBucket() {
-        return this.userBucket == null ? Codegen.empty() : this.userBucket;
+    public Optional<Output<SnapshotImportDiskContainerUserBucketGetArgs>> userBucket() {
+        return Optional.ofNullable(this.userBucket);
     }
 
-    public SnapshotImportDiskContainerGetArgs(
-        @Nullable Output<String> description,
-        Output<String> format,
-        @Nullable Output<String> url,
-        @Nullable Output<SnapshotImportDiskContainerUserBucketGetArgs> userBucket) {
-        this.description = description;
-        this.format = Objects.requireNonNull(format, "expected parameter 'format' to be non-null");
-        this.url = url;
-        this.userBucket = userBucket;
-    }
+    private SnapshotImportDiskContainerGetArgs() {}
 
-    private SnapshotImportDiskContainerGetArgs() {
-        this.description = Codegen.empty();
-        this.format = Codegen.empty();
-        this.url = Codegen.empty();
-        this.userBucket = Codegen.empty();
+    private SnapshotImportDiskContainerGetArgs(SnapshotImportDiskContainerGetArgs $) {
+        this.description = $.description;
+        this.format = $.format;
+        this.url = $.url;
+        this.userBucket = $.userBucket;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SnapshotImportDiskContainerGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> description;
-        private Output<String> format;
-        private @Nullable Output<String> url;
-        private @Nullable Output<SnapshotImportDiskContainerUserBucketGetArgs> userBucket;
+        private SnapshotImportDiskContainerGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SnapshotImportDiskContainerGetArgs();
         }
 
         public Builder(SnapshotImportDiskContainerGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.description = defaults.description;
-    	      this.format = defaults.format;
-    	      this.url = defaults.url;
-    	      this.userBucket = defaults.userBucket;
+            $ = new SnapshotImportDiskContainerGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder format(Output<String> format) {
-            this.format = Objects.requireNonNull(format);
+            $.format = format;
             return this;
         }
+
         public Builder format(String format) {
-            this.format = Output.of(Objects.requireNonNull(format));
-            return this;
+            return format(Output.of(format));
         }
+
         public Builder url(@Nullable Output<String> url) {
-            this.url = url;
+            $.url = url;
             return this;
         }
-        public Builder url(@Nullable String url) {
-            this.url = Codegen.ofNullable(url);
-            return this;
+
+        public Builder url(String url) {
+            return url(Output.of(url));
         }
+
         public Builder userBucket(@Nullable Output<SnapshotImportDiskContainerUserBucketGetArgs> userBucket) {
-            this.userBucket = userBucket;
+            $.userBucket = userBucket;
             return this;
         }
-        public Builder userBucket(@Nullable SnapshotImportDiskContainerUserBucketGetArgs userBucket) {
-            this.userBucket = Codegen.ofNullable(userBucket);
-            return this;
-        }        public SnapshotImportDiskContainerGetArgs build() {
-            return new SnapshotImportDiskContainerGetArgs(description, format, url, userBucket);
+
+        public Builder userBucket(SnapshotImportDiskContainerUserBucketGetArgs userBucket) {
+            return userBucket(Output.of(userBucket));
+        }
+
+        public SnapshotImportDiskContainerGetArgs build() {
+            $.format = Objects.requireNonNull($.format, "expected parameter 'format' to be non-null");
+            return $;
         }
     }
+
 }

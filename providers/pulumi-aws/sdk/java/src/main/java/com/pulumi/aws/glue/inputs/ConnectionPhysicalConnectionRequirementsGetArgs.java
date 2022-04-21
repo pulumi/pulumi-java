@@ -5,10 +5,10 @@ package com.pulumi.aws.glue.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class ConnectionPhysicalConnectionRequirementsGetArgs extends com.p
      * 
      */
     @Import(name="availabilityZone")
-      private final @Nullable Output<String> availabilityZone;
+    private @Nullable Output<String> availabilityZone;
 
-    public Output<String> availabilityZone() {
-        return this.availabilityZone == null ? Codegen.empty() : this.availabilityZone;
+    public Optional<Output<String>> availabilityZone() {
+        return Optional.ofNullable(this.availabilityZone);
     }
 
     /**
@@ -32,10 +32,10 @@ public final class ConnectionPhysicalConnectionRequirementsGetArgs extends com.p
      * 
      */
     @Import(name="securityGroupIdLists")
-      private final @Nullable Output<List<String>> securityGroupIdLists;
+    private @Nullable Output<List<String>> securityGroupIdLists;
 
-    public Output<List<String>> securityGroupIdLists() {
-        return this.securityGroupIdLists == null ? Codegen.empty() : this.securityGroupIdLists;
+    public Optional<Output<List<String>>> securityGroupIdLists() {
+        return Optional.ofNullable(this.securityGroupIdLists);
     }
 
     /**
@@ -43,79 +43,72 @@ public final class ConnectionPhysicalConnectionRequirementsGetArgs extends com.p
      * 
      */
     @Import(name="subnetId")
-      private final @Nullable Output<String> subnetId;
+    private @Nullable Output<String> subnetId;
 
-    public Output<String> subnetId() {
-        return this.subnetId == null ? Codegen.empty() : this.subnetId;
+    public Optional<Output<String>> subnetId() {
+        return Optional.ofNullable(this.subnetId);
     }
 
-    public ConnectionPhysicalConnectionRequirementsGetArgs(
-        @Nullable Output<String> availabilityZone,
-        @Nullable Output<List<String>> securityGroupIdLists,
-        @Nullable Output<String> subnetId) {
-        this.availabilityZone = availabilityZone;
-        this.securityGroupIdLists = securityGroupIdLists;
-        this.subnetId = subnetId;
-    }
+    private ConnectionPhysicalConnectionRequirementsGetArgs() {}
 
-    private ConnectionPhysicalConnectionRequirementsGetArgs() {
-        this.availabilityZone = Codegen.empty();
-        this.securityGroupIdLists = Codegen.empty();
-        this.subnetId = Codegen.empty();
+    private ConnectionPhysicalConnectionRequirementsGetArgs(ConnectionPhysicalConnectionRequirementsGetArgs $) {
+        this.availabilityZone = $.availabilityZone;
+        this.securityGroupIdLists = $.securityGroupIdLists;
+        this.subnetId = $.subnetId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ConnectionPhysicalConnectionRequirementsGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> availabilityZone;
-        private @Nullable Output<List<String>> securityGroupIdLists;
-        private @Nullable Output<String> subnetId;
+        private ConnectionPhysicalConnectionRequirementsGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ConnectionPhysicalConnectionRequirementsGetArgs();
         }
 
         public Builder(ConnectionPhysicalConnectionRequirementsGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.availabilityZone = defaults.availabilityZone;
-    	      this.securityGroupIdLists = defaults.securityGroupIdLists;
-    	      this.subnetId = defaults.subnetId;
+            $ = new ConnectionPhysicalConnectionRequirementsGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder availabilityZone(@Nullable Output<String> availabilityZone) {
-            this.availabilityZone = availabilityZone;
+            $.availabilityZone = availabilityZone;
             return this;
         }
-        public Builder availabilityZone(@Nullable String availabilityZone) {
-            this.availabilityZone = Codegen.ofNullable(availabilityZone);
-            return this;
+
+        public Builder availabilityZone(String availabilityZone) {
+            return availabilityZone(Output.of(availabilityZone));
         }
+
         public Builder securityGroupIdLists(@Nullable Output<List<String>> securityGroupIdLists) {
-            this.securityGroupIdLists = securityGroupIdLists;
+            $.securityGroupIdLists = securityGroupIdLists;
             return this;
         }
-        public Builder securityGroupIdLists(@Nullable List<String> securityGroupIdLists) {
-            this.securityGroupIdLists = Codegen.ofNullable(securityGroupIdLists);
-            return this;
+
+        public Builder securityGroupIdLists(List<String> securityGroupIdLists) {
+            return securityGroupIdLists(Output.of(securityGroupIdLists));
         }
+
         public Builder securityGroupIdLists(String... securityGroupIdLists) {
             return securityGroupIdLists(List.of(securityGroupIdLists));
         }
+
         public Builder subnetId(@Nullable Output<String> subnetId) {
-            this.subnetId = subnetId;
+            $.subnetId = subnetId;
             return this;
         }
-        public Builder subnetId(@Nullable String subnetId) {
-            this.subnetId = Codegen.ofNullable(subnetId);
-            return this;
-        }        public ConnectionPhysicalConnectionRequirementsGetArgs build() {
-            return new ConnectionPhysicalConnectionRequirementsGetArgs(availabilityZone, securityGroupIdLists, subnetId);
+
+        public Builder subnetId(String subnetId) {
+            return subnetId(Output.of(subnetId));
+        }
+
+        public ConnectionPhysicalConnectionRequirementsGetArgs build() {
+            return $;
         }
     }
+
 }

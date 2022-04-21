@@ -5,7 +5,6 @@ package com.pulumi.gcp.healthcare;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -22,7 +21,7 @@ public final class DicomStoreIamPolicyArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="dicomStoreId", required=true)
-      private final Output<String> dicomStoreId;
+    private Output<String> dicomStoreId;
 
     public Output<String> dicomStoreId() {
         return this.dicomStoreId;
@@ -34,63 +33,60 @@ public final class DicomStoreIamPolicyArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="policyData", required=true)
-      private final Output<String> policyData;
+    private Output<String> policyData;
 
     public Output<String> policyData() {
         return this.policyData;
     }
 
-    public DicomStoreIamPolicyArgs(
-        Output<String> dicomStoreId,
-        Output<String> policyData) {
-        this.dicomStoreId = Objects.requireNonNull(dicomStoreId, "expected parameter 'dicomStoreId' to be non-null");
-        this.policyData = Objects.requireNonNull(policyData, "expected parameter 'policyData' to be non-null");
-    }
+    private DicomStoreIamPolicyArgs() {}
 
-    private DicomStoreIamPolicyArgs() {
-        this.dicomStoreId = Codegen.empty();
-        this.policyData = Codegen.empty();
+    private DicomStoreIamPolicyArgs(DicomStoreIamPolicyArgs $) {
+        this.dicomStoreId = $.dicomStoreId;
+        this.policyData = $.policyData;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DicomStoreIamPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> dicomStoreId;
-        private Output<String> policyData;
+        private DicomStoreIamPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DicomStoreIamPolicyArgs();
         }
 
         public Builder(DicomStoreIamPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dicomStoreId = defaults.dicomStoreId;
-    	      this.policyData = defaults.policyData;
+            $ = new DicomStoreIamPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder dicomStoreId(Output<String> dicomStoreId) {
-            this.dicomStoreId = Objects.requireNonNull(dicomStoreId);
+            $.dicomStoreId = dicomStoreId;
             return this;
         }
+
         public Builder dicomStoreId(String dicomStoreId) {
-            this.dicomStoreId = Output.of(Objects.requireNonNull(dicomStoreId));
-            return this;
+            return dicomStoreId(Output.of(dicomStoreId));
         }
+
         public Builder policyData(Output<String> policyData) {
-            this.policyData = Objects.requireNonNull(policyData);
+            $.policyData = policyData;
             return this;
         }
+
         public Builder policyData(String policyData) {
-            this.policyData = Output.of(Objects.requireNonNull(policyData));
-            return this;
-        }        public DicomStoreIamPolicyArgs build() {
-            return new DicomStoreIamPolicyArgs(dicomStoreId, policyData);
+            return policyData(Output.of(policyData));
+        }
+
+        public DicomStoreIamPolicyArgs build() {
+            $.dicomStoreId = Objects.requireNonNull($.dicomStoreId, "expected parameter 'dicomStoreId' to be non-null");
+            $.policyData = Objects.requireNonNull($.policyData, "expected parameter 'policyData' to be non-null");
+            return $;
         }
     }
+
 }

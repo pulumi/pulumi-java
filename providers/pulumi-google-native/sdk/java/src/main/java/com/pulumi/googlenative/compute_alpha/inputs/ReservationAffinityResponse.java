@@ -22,7 +22,7 @@ public final class ReservationAffinityResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="consumeReservationType", required=true)
-      private final String consumeReservationType;
+    private String consumeReservationType;
 
     public String consumeReservationType() {
         return this.consumeReservationType;
@@ -33,7 +33,7 @@ public final class ReservationAffinityResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="key", required=true)
-      private final String key;
+    private String key;
 
     public String key() {
         return this.key;
@@ -44,67 +44,63 @@ public final class ReservationAffinityResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="values", required=true)
-      private final List<String> values;
+    private List<String> values;
 
     public List<String> values() {
         return this.values;
     }
 
-    public ReservationAffinityResponse(
-        String consumeReservationType,
-        String key,
-        List<String> values) {
-        this.consumeReservationType = Objects.requireNonNull(consumeReservationType, "expected parameter 'consumeReservationType' to be non-null");
-        this.key = Objects.requireNonNull(key, "expected parameter 'key' to be non-null");
-        this.values = Objects.requireNonNull(values, "expected parameter 'values' to be non-null");
-    }
+    private ReservationAffinityResponse() {}
 
-    private ReservationAffinityResponse() {
-        this.consumeReservationType = null;
-        this.key = null;
-        this.values = List.of();
+    private ReservationAffinityResponse(ReservationAffinityResponse $) {
+        this.consumeReservationType = $.consumeReservationType;
+        this.key = $.key;
+        this.values = $.values;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ReservationAffinityResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String consumeReservationType;
-        private String key;
-        private List<String> values;
+        private ReservationAffinityResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ReservationAffinityResponse();
         }
 
         public Builder(ReservationAffinityResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.consumeReservationType = defaults.consumeReservationType;
-    	      this.key = defaults.key;
-    	      this.values = defaults.values;
+            $ = new ReservationAffinityResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder consumeReservationType(String consumeReservationType) {
-            this.consumeReservationType = Objects.requireNonNull(consumeReservationType);
+            $.consumeReservationType = consumeReservationType;
             return this;
         }
+
         public Builder key(String key) {
-            this.key = Objects.requireNonNull(key);
+            $.key = key;
             return this;
         }
+
         public Builder values(List<String> values) {
-            this.values = Objects.requireNonNull(values);
+            $.values = values;
             return this;
         }
+
         public Builder values(String... values) {
             return values(List.of(values));
-        }        public ReservationAffinityResponse build() {
-            return new ReservationAffinityResponse(consumeReservationType, key, values);
+        }
+
+        public ReservationAffinityResponse build() {
+            $.consumeReservationType = Objects.requireNonNull($.consumeReservationType, "expected parameter 'consumeReservationType' to be non-null");
+            $.key = Objects.requireNonNull($.key, "expected parameter 'key' to be non-null");
+            $.values = Objects.requireNonNull($.values, "expected parameter 'values' to be non-null");
+            return $;
         }
     }
+
 }

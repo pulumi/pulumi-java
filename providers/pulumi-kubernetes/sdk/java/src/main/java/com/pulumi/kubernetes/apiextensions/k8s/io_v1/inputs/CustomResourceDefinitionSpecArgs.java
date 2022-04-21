@@ -5,7 +5,6 @@ package com.pulumi.kubernetes.apiextensions.k8s.io_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.kubernetes.apiextensions.k8s.io_v1.inputs.CustomResourceConversionArgs;
 import com.pulumi.kubernetes.apiextensions.k8s.io_v1.inputs.CustomResourceDefinitionNamesArgs;
 import com.pulumi.kubernetes.apiextensions.k8s.io_v1.inputs.CustomResourceDefinitionVersionArgs;
@@ -13,6 +12,7 @@ import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -29,10 +29,10 @@ public final class CustomResourceDefinitionSpecArgs extends com.pulumi.resources
      * 
      */
     @Import(name="conversion")
-      private final @Nullable Output<CustomResourceConversionArgs> conversion;
+    private @Nullable Output<CustomResourceConversionArgs> conversion;
 
-    public Output<CustomResourceConversionArgs> conversion() {
-        return this.conversion == null ? Codegen.empty() : this.conversion;
+    public Optional<Output<CustomResourceConversionArgs>> conversion() {
+        return Optional.ofNullable(this.conversion);
     }
 
     /**
@@ -40,7 +40,7 @@ public final class CustomResourceDefinitionSpecArgs extends com.pulumi.resources
      * 
      */
     @Import(name="group", required=true)
-      private final Output<String> group;
+    private Output<String> group;
 
     public Output<String> group() {
         return this.group;
@@ -51,7 +51,7 @@ public final class CustomResourceDefinitionSpecArgs extends com.pulumi.resources
      * 
      */
     @Import(name="names", required=true)
-      private final Output<CustomResourceDefinitionNamesArgs> names;
+    private Output<CustomResourceDefinitionNamesArgs> names;
 
     public Output<CustomResourceDefinitionNamesArgs> names() {
         return this.names;
@@ -62,10 +62,10 @@ public final class CustomResourceDefinitionSpecArgs extends com.pulumi.resources
      * 
      */
     @Import(name="preserveUnknownFields")
-      private final @Nullable Output<Boolean> preserveUnknownFields;
+    private @Nullable Output<Boolean> preserveUnknownFields;
 
-    public Output<Boolean> preserveUnknownFields() {
-        return this.preserveUnknownFields == null ? Codegen.empty() : this.preserveUnknownFields;
+    public Optional<Output<Boolean>> preserveUnknownFields() {
+        return Optional.ofNullable(this.preserveUnknownFields);
     }
 
     /**
@@ -73,7 +73,7 @@ public final class CustomResourceDefinitionSpecArgs extends com.pulumi.resources
      * 
      */
     @Import(name="scope", required=true)
-      private final Output<String> scope;
+    private Output<String> scope;
 
     public Output<String> scope() {
         return this.scope;
@@ -84,118 +84,106 @@ public final class CustomResourceDefinitionSpecArgs extends com.pulumi.resources
      * 
      */
     @Import(name="versions", required=true)
-      private final Output<List<CustomResourceDefinitionVersionArgs>> versions;
+    private Output<List<CustomResourceDefinitionVersionArgs>> versions;
 
     public Output<List<CustomResourceDefinitionVersionArgs>> versions() {
         return this.versions;
     }
 
-    public CustomResourceDefinitionSpecArgs(
-        @Nullable Output<CustomResourceConversionArgs> conversion,
-        Output<String> group,
-        Output<CustomResourceDefinitionNamesArgs> names,
-        @Nullable Output<Boolean> preserveUnknownFields,
-        Output<String> scope,
-        Output<List<CustomResourceDefinitionVersionArgs>> versions) {
-        this.conversion = conversion;
-        this.group = Objects.requireNonNull(group, "expected parameter 'group' to be non-null");
-        this.names = Objects.requireNonNull(names, "expected parameter 'names' to be non-null");
-        this.preserveUnknownFields = preserveUnknownFields;
-        this.scope = Objects.requireNonNull(scope, "expected parameter 'scope' to be non-null");
-        this.versions = Objects.requireNonNull(versions, "expected parameter 'versions' to be non-null");
-    }
+    private CustomResourceDefinitionSpecArgs() {}
 
-    private CustomResourceDefinitionSpecArgs() {
-        this.conversion = Codegen.empty();
-        this.group = Codegen.empty();
-        this.names = Codegen.empty();
-        this.preserveUnknownFields = Codegen.empty();
-        this.scope = Codegen.empty();
-        this.versions = Codegen.empty();
+    private CustomResourceDefinitionSpecArgs(CustomResourceDefinitionSpecArgs $) {
+        this.conversion = $.conversion;
+        this.group = $.group;
+        this.names = $.names;
+        this.preserveUnknownFields = $.preserveUnknownFields;
+        this.scope = $.scope;
+        this.versions = $.versions;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CustomResourceDefinitionSpecArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<CustomResourceConversionArgs> conversion;
-        private Output<String> group;
-        private Output<CustomResourceDefinitionNamesArgs> names;
-        private @Nullable Output<Boolean> preserveUnknownFields;
-        private Output<String> scope;
-        private Output<List<CustomResourceDefinitionVersionArgs>> versions;
+        private CustomResourceDefinitionSpecArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CustomResourceDefinitionSpecArgs();
         }
 
         public Builder(CustomResourceDefinitionSpecArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.conversion = defaults.conversion;
-    	      this.group = defaults.group;
-    	      this.names = defaults.names;
-    	      this.preserveUnknownFields = defaults.preserveUnknownFields;
-    	      this.scope = defaults.scope;
-    	      this.versions = defaults.versions;
+            $ = new CustomResourceDefinitionSpecArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder conversion(@Nullable Output<CustomResourceConversionArgs> conversion) {
-            this.conversion = conversion;
+            $.conversion = conversion;
             return this;
         }
-        public Builder conversion(@Nullable CustomResourceConversionArgs conversion) {
-            this.conversion = Codegen.ofNullable(conversion);
-            return this;
+
+        public Builder conversion(CustomResourceConversionArgs conversion) {
+            return conversion(Output.of(conversion));
         }
+
         public Builder group(Output<String> group) {
-            this.group = Objects.requireNonNull(group);
+            $.group = group;
             return this;
         }
+
         public Builder group(String group) {
-            this.group = Output.of(Objects.requireNonNull(group));
-            return this;
+            return group(Output.of(group));
         }
+
         public Builder names(Output<CustomResourceDefinitionNamesArgs> names) {
-            this.names = Objects.requireNonNull(names);
+            $.names = names;
             return this;
         }
+
         public Builder names(CustomResourceDefinitionNamesArgs names) {
-            this.names = Output.of(Objects.requireNonNull(names));
-            return this;
+            return names(Output.of(names));
         }
+
         public Builder preserveUnknownFields(@Nullable Output<Boolean> preserveUnknownFields) {
-            this.preserveUnknownFields = preserveUnknownFields;
+            $.preserveUnknownFields = preserveUnknownFields;
             return this;
         }
-        public Builder preserveUnknownFields(@Nullable Boolean preserveUnknownFields) {
-            this.preserveUnknownFields = Codegen.ofNullable(preserveUnknownFields);
-            return this;
+
+        public Builder preserveUnknownFields(Boolean preserveUnknownFields) {
+            return preserveUnknownFields(Output.of(preserveUnknownFields));
         }
+
         public Builder scope(Output<String> scope) {
-            this.scope = Objects.requireNonNull(scope);
+            $.scope = scope;
             return this;
         }
+
         public Builder scope(String scope) {
-            this.scope = Output.of(Objects.requireNonNull(scope));
-            return this;
+            return scope(Output.of(scope));
         }
+
         public Builder versions(Output<List<CustomResourceDefinitionVersionArgs>> versions) {
-            this.versions = Objects.requireNonNull(versions);
+            $.versions = versions;
             return this;
         }
+
         public Builder versions(List<CustomResourceDefinitionVersionArgs> versions) {
-            this.versions = Output.of(Objects.requireNonNull(versions));
-            return this;
+            return versions(Output.of(versions));
         }
+
         public Builder versions(CustomResourceDefinitionVersionArgs... versions) {
             return versions(List.of(versions));
-        }        public CustomResourceDefinitionSpecArgs build() {
-            return new CustomResourceDefinitionSpecArgs(conversion, group, names, preserveUnknownFields, scope, versions);
+        }
+
+        public CustomResourceDefinitionSpecArgs build() {
+            $.group = Objects.requireNonNull($.group, "expected parameter 'group' to be non-null");
+            $.names = Objects.requireNonNull($.names, "expected parameter 'names' to be non-null");
+            $.scope = Objects.requireNonNull($.scope, "expected parameter 'scope' to be non-null");
+            $.versions = Objects.requireNonNull($.versions, "expected parameter 'versions' to be non-null");
+            return $;
         }
     }
+
 }

@@ -7,10 +7,10 @@ import com.pulumi.azurenative.compute.enums.VirtualMachineScaleSetScaleInRules;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,52 +27,52 @@ public final class ScaleInPolicyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="rules")
-      private final @Nullable Output<List<Either<String,VirtualMachineScaleSetScaleInRules>>> rules;
+    private @Nullable Output<List<Either<String,VirtualMachineScaleSetScaleInRules>>> rules;
 
-    public Output<List<Either<String,VirtualMachineScaleSetScaleInRules>>> rules() {
-        return this.rules == null ? Codegen.empty() : this.rules;
+    public Optional<Output<List<Either<String,VirtualMachineScaleSetScaleInRules>>>> rules() {
+        return Optional.ofNullable(this.rules);
     }
 
-    public ScaleInPolicyArgs(@Nullable Output<List<Either<String,VirtualMachineScaleSetScaleInRules>>> rules) {
-        this.rules = rules;
-    }
+    private ScaleInPolicyArgs() {}
 
-    private ScaleInPolicyArgs() {
-        this.rules = Codegen.empty();
+    private ScaleInPolicyArgs(ScaleInPolicyArgs $) {
+        this.rules = $.rules;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ScaleInPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<Either<String,VirtualMachineScaleSetScaleInRules>>> rules;
+        private ScaleInPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ScaleInPolicyArgs();
         }
 
         public Builder(ScaleInPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.rules = defaults.rules;
+            $ = new ScaleInPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder rules(@Nullable Output<List<Either<String,VirtualMachineScaleSetScaleInRules>>> rules) {
-            this.rules = rules;
+            $.rules = rules;
             return this;
         }
-        public Builder rules(@Nullable List<Either<String,VirtualMachineScaleSetScaleInRules>> rules) {
-            this.rules = Codegen.ofNullable(rules);
-            return this;
+
+        public Builder rules(List<Either<String,VirtualMachineScaleSetScaleInRules>> rules) {
+            return rules(Output.of(rules));
         }
+
         public Builder rules(Either<String,VirtualMachineScaleSetScaleInRules>... rules) {
             return rules(List.of(rules));
-        }        public ScaleInPolicyArgs build() {
-            return new ScaleInPolicyArgs(rules);
+        }
+
+        public ScaleInPolicyArgs build() {
+            return $;
         }
     }
+
 }

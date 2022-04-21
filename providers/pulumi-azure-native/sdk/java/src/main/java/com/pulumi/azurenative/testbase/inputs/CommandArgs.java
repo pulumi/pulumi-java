@@ -8,11 +8,11 @@ import com.pulumi.azurenative.testbase.enums.ContentType;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -29,7 +29,7 @@ public final class CommandArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="action", required=true)
-      private final Output<Either<String,Action>> action;
+    private Output<Either<String,Action>> action;
 
     public Output<Either<String,Action>> action() {
         return this.action;
@@ -40,10 +40,10 @@ public final class CommandArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="alwaysRun")
-      private final @Nullable Output<Boolean> alwaysRun;
+    private @Nullable Output<Boolean> alwaysRun;
 
-    public Output<Boolean> alwaysRun() {
-        return this.alwaysRun == null ? Codegen.empty() : this.alwaysRun;
+    public Optional<Output<Boolean>> alwaysRun() {
+        return Optional.ofNullable(this.alwaysRun);
     }
 
     /**
@@ -51,10 +51,10 @@ public final class CommandArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="applyUpdateBefore")
-      private final @Nullable Output<Boolean> applyUpdateBefore;
+    private @Nullable Output<Boolean> applyUpdateBefore;
 
-    public Output<Boolean> applyUpdateBefore() {
-        return this.applyUpdateBefore == null ? Codegen.empty() : this.applyUpdateBefore;
+    public Optional<Output<Boolean>> applyUpdateBefore() {
+        return Optional.ofNullable(this.applyUpdateBefore);
     }
 
     /**
@@ -62,7 +62,7 @@ public final class CommandArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="content", required=true)
-      private final Output<String> content;
+    private Output<String> content;
 
     public Output<String> content() {
         return this.content;
@@ -73,7 +73,7 @@ public final class CommandArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="contentType", required=true)
-      private final Output<Either<String,ContentType>> contentType;
+    private Output<Either<String,ContentType>> contentType;
 
     public Output<Either<String,ContentType>> contentType() {
         return this.contentType;
@@ -84,10 +84,10 @@ public final class CommandArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="maxRunTime")
-      private final @Nullable Output<Integer> maxRunTime;
+    private @Nullable Output<Integer> maxRunTime;
 
-    public Output<Integer> maxRunTime() {
-        return this.maxRunTime == null ? Codegen.empty() : this.maxRunTime;
+    public Optional<Output<Integer>> maxRunTime() {
+        return Optional.ofNullable(this.maxRunTime);
     }
 
     /**
@@ -95,7 +95,7 @@ public final class CommandArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name", required=true)
-      private final Output<String> name;
+    private Output<String> name;
 
     public Output<String> name() {
         return this.name;
@@ -106,10 +106,10 @@ public final class CommandArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="restartAfter")
-      private final @Nullable Output<Boolean> restartAfter;
+    private @Nullable Output<Boolean> restartAfter;
 
-    public Output<Boolean> restartAfter() {
-        return this.restartAfter == null ? Codegen.empty() : this.restartAfter;
+    public Optional<Output<Boolean>> restartAfter() {
+        return Optional.ofNullable(this.restartAfter);
     }
 
     /**
@@ -117,10 +117,10 @@ public final class CommandArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="runAsInteractive")
-      private final @Nullable Output<Boolean> runAsInteractive;
+    private @Nullable Output<Boolean> runAsInteractive;
 
-    public Output<Boolean> runAsInteractive() {
-        return this.runAsInteractive == null ? Codegen.empty() : this.runAsInteractive;
+    public Optional<Output<Boolean>> runAsInteractive() {
+        return Optional.ofNullable(this.runAsInteractive);
     }
 
     /**
@@ -128,167 +128,142 @@ public final class CommandArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="runElevated")
-      private final @Nullable Output<Boolean> runElevated;
+    private @Nullable Output<Boolean> runElevated;
 
-    public Output<Boolean> runElevated() {
-        return this.runElevated == null ? Codegen.empty() : this.runElevated;
+    public Optional<Output<Boolean>> runElevated() {
+        return Optional.ofNullable(this.runElevated);
     }
 
-    public CommandArgs(
-        Output<Either<String,Action>> action,
-        @Nullable Output<Boolean> alwaysRun,
-        @Nullable Output<Boolean> applyUpdateBefore,
-        Output<String> content,
-        Output<Either<String,ContentType>> contentType,
-        @Nullable Output<Integer> maxRunTime,
-        Output<String> name,
-        @Nullable Output<Boolean> restartAfter,
-        @Nullable Output<Boolean> runAsInteractive,
-        @Nullable Output<Boolean> runElevated) {
-        this.action = Objects.requireNonNull(action, "expected parameter 'action' to be non-null");
-        this.alwaysRun = alwaysRun;
-        this.applyUpdateBefore = applyUpdateBefore;
-        this.content = Objects.requireNonNull(content, "expected parameter 'content' to be non-null");
-        this.contentType = Objects.requireNonNull(contentType, "expected parameter 'contentType' to be non-null");
-        this.maxRunTime = maxRunTime;
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.restartAfter = restartAfter;
-        this.runAsInteractive = runAsInteractive;
-        this.runElevated = runElevated;
-    }
+    private CommandArgs() {}
 
-    private CommandArgs() {
-        this.action = Codegen.empty();
-        this.alwaysRun = Codegen.empty();
-        this.applyUpdateBefore = Codegen.empty();
-        this.content = Codegen.empty();
-        this.contentType = Codegen.empty();
-        this.maxRunTime = Codegen.empty();
-        this.name = Codegen.empty();
-        this.restartAfter = Codegen.empty();
-        this.runAsInteractive = Codegen.empty();
-        this.runElevated = Codegen.empty();
+    private CommandArgs(CommandArgs $) {
+        this.action = $.action;
+        this.alwaysRun = $.alwaysRun;
+        this.applyUpdateBefore = $.applyUpdateBefore;
+        this.content = $.content;
+        this.contentType = $.contentType;
+        this.maxRunTime = $.maxRunTime;
+        this.name = $.name;
+        this.restartAfter = $.restartAfter;
+        this.runAsInteractive = $.runAsInteractive;
+        this.runElevated = $.runElevated;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CommandArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Either<String,Action>> action;
-        private @Nullable Output<Boolean> alwaysRun;
-        private @Nullable Output<Boolean> applyUpdateBefore;
-        private Output<String> content;
-        private Output<Either<String,ContentType>> contentType;
-        private @Nullable Output<Integer> maxRunTime;
-        private Output<String> name;
-        private @Nullable Output<Boolean> restartAfter;
-        private @Nullable Output<Boolean> runAsInteractive;
-        private @Nullable Output<Boolean> runElevated;
+        private CommandArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CommandArgs();
         }
 
         public Builder(CommandArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.action = defaults.action;
-    	      this.alwaysRun = defaults.alwaysRun;
-    	      this.applyUpdateBefore = defaults.applyUpdateBefore;
-    	      this.content = defaults.content;
-    	      this.contentType = defaults.contentType;
-    	      this.maxRunTime = defaults.maxRunTime;
-    	      this.name = defaults.name;
-    	      this.restartAfter = defaults.restartAfter;
-    	      this.runAsInteractive = defaults.runAsInteractive;
-    	      this.runElevated = defaults.runElevated;
+            $ = new CommandArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder action(Output<Either<String,Action>> action) {
-            this.action = Objects.requireNonNull(action);
+            $.action = action;
             return this;
         }
+
         public Builder action(Either<String,Action> action) {
-            this.action = Output.of(Objects.requireNonNull(action));
-            return this;
+            return action(Output.of(action));
         }
+
         public Builder alwaysRun(@Nullable Output<Boolean> alwaysRun) {
-            this.alwaysRun = alwaysRun;
+            $.alwaysRun = alwaysRun;
             return this;
         }
-        public Builder alwaysRun(@Nullable Boolean alwaysRun) {
-            this.alwaysRun = Codegen.ofNullable(alwaysRun);
-            return this;
+
+        public Builder alwaysRun(Boolean alwaysRun) {
+            return alwaysRun(Output.of(alwaysRun));
         }
+
         public Builder applyUpdateBefore(@Nullable Output<Boolean> applyUpdateBefore) {
-            this.applyUpdateBefore = applyUpdateBefore;
+            $.applyUpdateBefore = applyUpdateBefore;
             return this;
         }
-        public Builder applyUpdateBefore(@Nullable Boolean applyUpdateBefore) {
-            this.applyUpdateBefore = Codegen.ofNullable(applyUpdateBefore);
-            return this;
+
+        public Builder applyUpdateBefore(Boolean applyUpdateBefore) {
+            return applyUpdateBefore(Output.of(applyUpdateBefore));
         }
+
         public Builder content(Output<String> content) {
-            this.content = Objects.requireNonNull(content);
+            $.content = content;
             return this;
         }
+
         public Builder content(String content) {
-            this.content = Output.of(Objects.requireNonNull(content));
-            return this;
+            return content(Output.of(content));
         }
+
         public Builder contentType(Output<Either<String,ContentType>> contentType) {
-            this.contentType = Objects.requireNonNull(contentType);
+            $.contentType = contentType;
             return this;
         }
+
         public Builder contentType(Either<String,ContentType> contentType) {
-            this.contentType = Output.of(Objects.requireNonNull(contentType));
-            return this;
+            return contentType(Output.of(contentType));
         }
+
         public Builder maxRunTime(@Nullable Output<Integer> maxRunTime) {
-            this.maxRunTime = maxRunTime;
+            $.maxRunTime = maxRunTime;
             return this;
         }
-        public Builder maxRunTime(@Nullable Integer maxRunTime) {
-            this.maxRunTime = Codegen.ofNullable(maxRunTime);
-            return this;
+
+        public Builder maxRunTime(Integer maxRunTime) {
+            return maxRunTime(Output.of(maxRunTime));
         }
+
         public Builder name(Output<String> name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Output.of(Objects.requireNonNull(name));
-            return this;
+            return name(Output.of(name));
         }
+
         public Builder restartAfter(@Nullable Output<Boolean> restartAfter) {
-            this.restartAfter = restartAfter;
+            $.restartAfter = restartAfter;
             return this;
         }
-        public Builder restartAfter(@Nullable Boolean restartAfter) {
-            this.restartAfter = Codegen.ofNullable(restartAfter);
-            return this;
+
+        public Builder restartAfter(Boolean restartAfter) {
+            return restartAfter(Output.of(restartAfter));
         }
+
         public Builder runAsInteractive(@Nullable Output<Boolean> runAsInteractive) {
-            this.runAsInteractive = runAsInteractive;
+            $.runAsInteractive = runAsInteractive;
             return this;
         }
-        public Builder runAsInteractive(@Nullable Boolean runAsInteractive) {
-            this.runAsInteractive = Codegen.ofNullable(runAsInteractive);
-            return this;
+
+        public Builder runAsInteractive(Boolean runAsInteractive) {
+            return runAsInteractive(Output.of(runAsInteractive));
         }
+
         public Builder runElevated(@Nullable Output<Boolean> runElevated) {
-            this.runElevated = runElevated;
+            $.runElevated = runElevated;
             return this;
         }
-        public Builder runElevated(@Nullable Boolean runElevated) {
-            this.runElevated = Codegen.ofNullable(runElevated);
-            return this;
-        }        public CommandArgs build() {
-            return new CommandArgs(action, alwaysRun, applyUpdateBefore, content, contentType, maxRunTime, name, restartAfter, runAsInteractive, runElevated);
+
+        public Builder runElevated(Boolean runElevated) {
+            return runElevated(Output.of(runElevated));
+        }
+
+        public CommandArgs build() {
+            $.action = Objects.requireNonNull($.action, "expected parameter 'action' to be non-null");
+            $.content = Objects.requireNonNull($.content, "expected parameter 'content' to be non-null");
+            $.contentType = Objects.requireNonNull($.contentType, "expected parameter 'contentType' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            return $;
         }
     }
+
 }

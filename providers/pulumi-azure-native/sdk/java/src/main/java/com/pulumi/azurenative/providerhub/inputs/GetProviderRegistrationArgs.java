@@ -17,45 +17,45 @@ public final class GetProviderRegistrationArgs extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="providerNamespace", required=true)
-      private final String providerNamespace;
+    private String providerNamespace;
 
     public String providerNamespace() {
         return this.providerNamespace;
     }
 
-    public GetProviderRegistrationArgs(String providerNamespace) {
-        this.providerNamespace = Objects.requireNonNull(providerNamespace, "expected parameter 'providerNamespace' to be non-null");
-    }
+    private GetProviderRegistrationArgs() {}
 
-    private GetProviderRegistrationArgs() {
-        this.providerNamespace = null;
+    private GetProviderRegistrationArgs(GetProviderRegistrationArgs $) {
+        this.providerNamespace = $.providerNamespace;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetProviderRegistrationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String providerNamespace;
+        private GetProviderRegistrationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetProviderRegistrationArgs();
         }
 
         public Builder(GetProviderRegistrationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.providerNamespace = defaults.providerNamespace;
+            $ = new GetProviderRegistrationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder providerNamespace(String providerNamespace) {
-            this.providerNamespace = Objects.requireNonNull(providerNamespace);
+            $.providerNamespace = providerNamespace;
             return this;
-        }        public GetProviderRegistrationArgs build() {
-            return new GetProviderRegistrationArgs(providerNamespace);
+        }
+
+        public GetProviderRegistrationArgs build() {
+            $.providerNamespace = Objects.requireNonNull($.providerNamespace, "expected parameter 'providerNamespace' to be non-null");
+            return $;
         }
     }
+
 }

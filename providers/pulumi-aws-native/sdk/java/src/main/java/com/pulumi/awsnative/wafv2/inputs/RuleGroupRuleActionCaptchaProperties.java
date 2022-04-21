@@ -19,45 +19,44 @@ public final class RuleGroupRuleActionCaptchaProperties extends com.pulumi.resou
     public static final RuleGroupRuleActionCaptchaProperties Empty = new RuleGroupRuleActionCaptchaProperties();
 
     @Import(name="customRequestHandling")
-      private final @Nullable RuleGroupCustomRequestHandling customRequestHandling;
+    private @Nullable RuleGroupCustomRequestHandling customRequestHandling;
 
     public Optional<RuleGroupCustomRequestHandling> customRequestHandling() {
-        return this.customRequestHandling == null ? Optional.empty() : Optional.ofNullable(this.customRequestHandling);
+        return Optional.ofNullable(this.customRequestHandling);
     }
 
-    public RuleGroupRuleActionCaptchaProperties(@Nullable RuleGroupCustomRequestHandling customRequestHandling) {
-        this.customRequestHandling = customRequestHandling;
-    }
+    private RuleGroupRuleActionCaptchaProperties() {}
 
-    private RuleGroupRuleActionCaptchaProperties() {
-        this.customRequestHandling = null;
+    private RuleGroupRuleActionCaptchaProperties(RuleGroupRuleActionCaptchaProperties $) {
+        this.customRequestHandling = $.customRequestHandling;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RuleGroupRuleActionCaptchaProperties defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable RuleGroupCustomRequestHandling customRequestHandling;
+        private RuleGroupRuleActionCaptchaProperties $;
 
         public Builder() {
-    	      // Empty
+            $ = new RuleGroupRuleActionCaptchaProperties();
         }
 
         public Builder(RuleGroupRuleActionCaptchaProperties defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.customRequestHandling = defaults.customRequestHandling;
+            $ = new RuleGroupRuleActionCaptchaProperties(Objects.requireNonNull(defaults));
         }
 
         public Builder customRequestHandling(@Nullable RuleGroupCustomRequestHandling customRequestHandling) {
-            this.customRequestHandling = customRequestHandling;
+            $.customRequestHandling = customRequestHandling;
             return this;
-        }        public RuleGroupRuleActionCaptchaProperties build() {
-            return new RuleGroupRuleActionCaptchaProperties(customRequestHandling);
+        }
+
+        public RuleGroupRuleActionCaptchaProperties build() {
+            return $;
         }
     }
+
 }

@@ -24,7 +24,7 @@ public final class SSISAccessCredentialResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="domain", required=true)
-      private final Object domain;
+    private Object domain;
 
     public Object domain() {
         return this.domain;
@@ -35,7 +35,7 @@ public final class SSISAccessCredentialResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="password", required=true)
-      private final Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password;
+    private Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password;
 
     public Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password() {
         return this.password;
@@ -46,64 +46,59 @@ public final class SSISAccessCredentialResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="userName", required=true)
-      private final Object userName;
+    private Object userName;
 
     public Object userName() {
         return this.userName;
     }
 
-    public SSISAccessCredentialResponse(
-        Object domain,
-        Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password,
-        Object userName) {
-        this.domain = Objects.requireNonNull(domain, "expected parameter 'domain' to be non-null");
-        this.password = Objects.requireNonNull(password, "expected parameter 'password' to be non-null");
-        this.userName = Objects.requireNonNull(userName, "expected parameter 'userName' to be non-null");
-    }
+    private SSISAccessCredentialResponse() {}
 
-    private SSISAccessCredentialResponse() {
-        this.domain = null;
-        this.password = null;
-        this.userName = null;
+    private SSISAccessCredentialResponse(SSISAccessCredentialResponse $) {
+        this.domain = $.domain;
+        this.password = $.password;
+        this.userName = $.userName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SSISAccessCredentialResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Object domain;
-        private Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password;
-        private Object userName;
+        private SSISAccessCredentialResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new SSISAccessCredentialResponse();
         }
 
         public Builder(SSISAccessCredentialResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.domain = defaults.domain;
-    	      this.password = defaults.password;
-    	      this.userName = defaults.userName;
+            $ = new SSISAccessCredentialResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder domain(Object domain) {
-            this.domain = Objects.requireNonNull(domain);
+            $.domain = domain;
             return this;
         }
+
         public Builder password(Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password) {
-            this.password = Objects.requireNonNull(password);
+            $.password = password;
             return this;
         }
+
         public Builder userName(Object userName) {
-            this.userName = Objects.requireNonNull(userName);
+            $.userName = userName;
             return this;
-        }        public SSISAccessCredentialResponse build() {
-            return new SSISAccessCredentialResponse(domain, password, userName);
+        }
+
+        public SSISAccessCredentialResponse build() {
+            $.domain = Objects.requireNonNull($.domain, "expected parameter 'domain' to be non-null");
+            $.password = Objects.requireNonNull($.password, "expected parameter 'password' to be non-null");
+            $.userName = Objects.requireNonNull($.userName, "expected parameter 'userName' to be non-null");
+            return $;
         }
     }
+
 }

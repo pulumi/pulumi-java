@@ -17,7 +17,7 @@ public final class GetHybridConnectionArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="hybridConnectionName", required=true)
-      private final String hybridConnectionName;
+    private String hybridConnectionName;
 
     public String hybridConnectionName() {
         return this.hybridConnectionName;
@@ -28,7 +28,7 @@ public final class GetHybridConnectionArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="namespaceName", required=true)
-      private final String namespaceName;
+    private String namespaceName;
 
     public String namespaceName() {
         return this.namespaceName;
@@ -39,64 +39,59 @@ public final class GetHybridConnectionArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public GetHybridConnectionArgs(
-        String hybridConnectionName,
-        String namespaceName,
-        String resourceGroupName) {
-        this.hybridConnectionName = Objects.requireNonNull(hybridConnectionName, "expected parameter 'hybridConnectionName' to be non-null");
-        this.namespaceName = Objects.requireNonNull(namespaceName, "expected parameter 'namespaceName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private GetHybridConnectionArgs() {}
 
-    private GetHybridConnectionArgs() {
-        this.hybridConnectionName = null;
-        this.namespaceName = null;
-        this.resourceGroupName = null;
+    private GetHybridConnectionArgs(GetHybridConnectionArgs $) {
+        this.hybridConnectionName = $.hybridConnectionName;
+        this.namespaceName = $.namespaceName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetHybridConnectionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String hybridConnectionName;
-        private String namespaceName;
-        private String resourceGroupName;
+        private GetHybridConnectionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetHybridConnectionArgs();
         }
 
         public Builder(GetHybridConnectionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.hybridConnectionName = defaults.hybridConnectionName;
-    	      this.namespaceName = defaults.namespaceName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new GetHybridConnectionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder hybridConnectionName(String hybridConnectionName) {
-            this.hybridConnectionName = Objects.requireNonNull(hybridConnectionName);
+            $.hybridConnectionName = hybridConnectionName;
             return this;
         }
+
         public Builder namespaceName(String namespaceName) {
-            this.namespaceName = Objects.requireNonNull(namespaceName);
+            $.namespaceName = namespaceName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public GetHybridConnectionArgs build() {
-            return new GetHybridConnectionArgs(hybridConnectionName, namespaceName, resourceGroupName);
+        }
+
+        public GetHybridConnectionArgs build() {
+            $.hybridConnectionName = Objects.requireNonNull($.hybridConnectionName, "expected parameter 'hybridConnectionName' to be non-null");
+            $.namespaceName = Objects.requireNonNull($.namespaceName, "expected parameter 'namespaceName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

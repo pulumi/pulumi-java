@@ -6,7 +6,6 @@ package com.pulumi.awsnative.sagemaker.inputs;
 import com.pulumi.awsnative.sagemaker.inputs.DataQualityJobDefinitionEndpointInputArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
 
 
@@ -19,49 +18,49 @@ public final class DataQualityJobDefinitionDataQualityJobInputArgs extends com.p
     public static final DataQualityJobDefinitionDataQualityJobInputArgs Empty = new DataQualityJobDefinitionDataQualityJobInputArgs();
 
     @Import(name="endpointInput", required=true)
-      private final Output<DataQualityJobDefinitionEndpointInputArgs> endpointInput;
+    private Output<DataQualityJobDefinitionEndpointInputArgs> endpointInput;
 
     public Output<DataQualityJobDefinitionEndpointInputArgs> endpointInput() {
         return this.endpointInput;
     }
 
-    public DataQualityJobDefinitionDataQualityJobInputArgs(Output<DataQualityJobDefinitionEndpointInputArgs> endpointInput) {
-        this.endpointInput = Objects.requireNonNull(endpointInput, "expected parameter 'endpointInput' to be non-null");
-    }
+    private DataQualityJobDefinitionDataQualityJobInputArgs() {}
 
-    private DataQualityJobDefinitionDataQualityJobInputArgs() {
-        this.endpointInput = Codegen.empty();
+    private DataQualityJobDefinitionDataQualityJobInputArgs(DataQualityJobDefinitionDataQualityJobInputArgs $) {
+        this.endpointInput = $.endpointInput;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DataQualityJobDefinitionDataQualityJobInputArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<DataQualityJobDefinitionEndpointInputArgs> endpointInput;
+        private DataQualityJobDefinitionDataQualityJobInputArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DataQualityJobDefinitionDataQualityJobInputArgs();
         }
 
         public Builder(DataQualityJobDefinitionDataQualityJobInputArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.endpointInput = defaults.endpointInput;
+            $ = new DataQualityJobDefinitionDataQualityJobInputArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder endpointInput(Output<DataQualityJobDefinitionEndpointInputArgs> endpointInput) {
-            this.endpointInput = Objects.requireNonNull(endpointInput);
+            $.endpointInput = endpointInput;
             return this;
         }
+
         public Builder endpointInput(DataQualityJobDefinitionEndpointInputArgs endpointInput) {
-            this.endpointInput = Output.of(Objects.requireNonNull(endpointInput));
-            return this;
-        }        public DataQualityJobDefinitionDataQualityJobInputArgs build() {
-            return new DataQualityJobDefinitionDataQualityJobInputArgs(endpointInput);
+            return endpointInput(Output.of(endpointInput));
+        }
+
+        public DataQualityJobDefinitionDataQualityJobInputArgs build() {
+            $.endpointInput = Objects.requireNonNull($.endpointInput, "expected parameter 'endpointInput' to be non-null");
+            return $;
         }
     }
+
 }

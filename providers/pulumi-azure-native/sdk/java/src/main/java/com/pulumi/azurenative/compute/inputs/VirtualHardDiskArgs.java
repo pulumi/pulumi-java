@@ -5,9 +5,9 @@ package com.pulumi.azurenative.compute.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class VirtualHardDiskArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="uri")
-      private final @Nullable Output<String> uri;
+    private @Nullable Output<String> uri;
 
-    public Output<String> uri() {
-        return this.uri == null ? Codegen.empty() : this.uri;
+    public Optional<Output<String>> uri() {
+        return Optional.ofNullable(this.uri);
     }
 
-    public VirtualHardDiskArgs(@Nullable Output<String> uri) {
-        this.uri = uri;
-    }
+    private VirtualHardDiskArgs() {}
 
-    private VirtualHardDiskArgs() {
-        this.uri = Codegen.empty();
+    private VirtualHardDiskArgs(VirtualHardDiskArgs $) {
+        this.uri = $.uri;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VirtualHardDiskArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> uri;
+        private VirtualHardDiskArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new VirtualHardDiskArgs();
         }
 
         public Builder(VirtualHardDiskArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.uri = defaults.uri;
+            $ = new VirtualHardDiskArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder uri(@Nullable Output<String> uri) {
-            this.uri = uri;
+            $.uri = uri;
             return this;
         }
-        public Builder uri(@Nullable String uri) {
-            this.uri = Codegen.ofNullable(uri);
-            return this;
-        }        public VirtualHardDiskArgs build() {
-            return new VirtualHardDiskArgs(uri);
+
+        public Builder uri(String uri) {
+            return uri(Output.of(uri));
+        }
+
+        public VirtualHardDiskArgs build() {
+            return $;
         }
     }
+
 }

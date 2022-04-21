@@ -5,9 +5,9 @@ package com.pulumi.googlenative.dialogflow_v2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.dialogflow_v2.enums.GoogleCloudDialogflowV2SuggestionFeatureType;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class GoogleCloudDialogflowV2SuggestionFeatureArgs extends com.pulu
      * 
      */
     @Import(name="type")
-      private final @Nullable Output<GoogleCloudDialogflowV2SuggestionFeatureType> type;
+    private @Nullable Output<GoogleCloudDialogflowV2SuggestionFeatureType> type;
 
-    public Output<GoogleCloudDialogflowV2SuggestionFeatureType> type() {
-        return this.type == null ? Codegen.empty() : this.type;
+    public Optional<Output<GoogleCloudDialogflowV2SuggestionFeatureType>> type() {
+        return Optional.ofNullable(this.type);
     }
 
-    public GoogleCloudDialogflowV2SuggestionFeatureArgs(@Nullable Output<GoogleCloudDialogflowV2SuggestionFeatureType> type) {
-        this.type = type;
-    }
+    private GoogleCloudDialogflowV2SuggestionFeatureArgs() {}
 
-    private GoogleCloudDialogflowV2SuggestionFeatureArgs() {
-        this.type = Codegen.empty();
+    private GoogleCloudDialogflowV2SuggestionFeatureArgs(GoogleCloudDialogflowV2SuggestionFeatureArgs $) {
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudDialogflowV2SuggestionFeatureArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<GoogleCloudDialogflowV2SuggestionFeatureType> type;
+        private GoogleCloudDialogflowV2SuggestionFeatureArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudDialogflowV2SuggestionFeatureArgs();
         }
 
         public Builder(GoogleCloudDialogflowV2SuggestionFeatureArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.type = defaults.type;
+            $ = new GoogleCloudDialogflowV2SuggestionFeatureArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder type(@Nullable Output<GoogleCloudDialogflowV2SuggestionFeatureType> type) {
-            this.type = type;
+            $.type = type;
             return this;
         }
-        public Builder type(@Nullable GoogleCloudDialogflowV2SuggestionFeatureType type) {
-            this.type = Codegen.ofNullable(type);
-            return this;
-        }        public GoogleCloudDialogflowV2SuggestionFeatureArgs build() {
-            return new GoogleCloudDialogflowV2SuggestionFeatureArgs(type);
+
+        public Builder type(GoogleCloudDialogflowV2SuggestionFeatureType type) {
+            return type(Output.of(type));
+        }
+
+        public GoogleCloudDialogflowV2SuggestionFeatureArgs build() {
+            return $;
         }
     }
+
 }

@@ -17,7 +17,7 @@ public final class GetDatasetArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="datasetName", required=true)
-      private final String datasetName;
+    private String datasetName;
 
     public String datasetName() {
         return this.datasetName;
@@ -28,7 +28,7 @@ public final class GetDatasetArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="factoryName", required=true)
-      private final String factoryName;
+    private String factoryName;
 
     public String factoryName() {
         return this.factoryName;
@@ -39,64 +39,59 @@ public final class GetDatasetArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public GetDatasetArgs(
-        String datasetName,
-        String factoryName,
-        String resourceGroupName) {
-        this.datasetName = Objects.requireNonNull(datasetName, "expected parameter 'datasetName' to be non-null");
-        this.factoryName = Objects.requireNonNull(factoryName, "expected parameter 'factoryName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private GetDatasetArgs() {}
 
-    private GetDatasetArgs() {
-        this.datasetName = null;
-        this.factoryName = null;
-        this.resourceGroupName = null;
+    private GetDatasetArgs(GetDatasetArgs $) {
+        this.datasetName = $.datasetName;
+        this.factoryName = $.factoryName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetDatasetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String datasetName;
-        private String factoryName;
-        private String resourceGroupName;
+        private GetDatasetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetDatasetArgs();
         }
 
         public Builder(GetDatasetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.datasetName = defaults.datasetName;
-    	      this.factoryName = defaults.factoryName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new GetDatasetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder datasetName(String datasetName) {
-            this.datasetName = Objects.requireNonNull(datasetName);
+            $.datasetName = datasetName;
             return this;
         }
+
         public Builder factoryName(String factoryName) {
-            this.factoryName = Objects.requireNonNull(factoryName);
+            $.factoryName = factoryName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public GetDatasetArgs build() {
-            return new GetDatasetArgs(datasetName, factoryName, resourceGroupName);
+        }
+
+        public GetDatasetArgs build() {
+            $.datasetName = Objects.requireNonNull($.datasetName, "expected parameter 'datasetName' to be non-null");
+            $.factoryName = Objects.requireNonNull($.factoryName, "expected parameter 'factoryName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

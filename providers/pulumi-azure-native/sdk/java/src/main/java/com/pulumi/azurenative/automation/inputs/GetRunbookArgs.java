@@ -17,7 +17,7 @@ public final class GetRunbookArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="automationAccountName", required=true)
-      private final String automationAccountName;
+    private String automationAccountName;
 
     public String automationAccountName() {
         return this.automationAccountName;
@@ -28,7 +28,7 @@ public final class GetRunbookArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -39,64 +39,59 @@ public final class GetRunbookArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="runbookName", required=true)
-      private final String runbookName;
+    private String runbookName;
 
     public String runbookName() {
         return this.runbookName;
     }
 
-    public GetRunbookArgs(
-        String automationAccountName,
-        String resourceGroupName,
-        String runbookName) {
-        this.automationAccountName = Objects.requireNonNull(automationAccountName, "expected parameter 'automationAccountName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.runbookName = Objects.requireNonNull(runbookName, "expected parameter 'runbookName' to be non-null");
-    }
+    private GetRunbookArgs() {}
 
-    private GetRunbookArgs() {
-        this.automationAccountName = null;
-        this.resourceGroupName = null;
-        this.runbookName = null;
+    private GetRunbookArgs(GetRunbookArgs $) {
+        this.automationAccountName = $.automationAccountName;
+        this.resourceGroupName = $.resourceGroupName;
+        this.runbookName = $.runbookName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetRunbookArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String automationAccountName;
-        private String resourceGroupName;
-        private String runbookName;
+        private GetRunbookArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetRunbookArgs();
         }
 
         public Builder(GetRunbookArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.automationAccountName = defaults.automationAccountName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.runbookName = defaults.runbookName;
+            $ = new GetRunbookArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder automationAccountName(String automationAccountName) {
-            this.automationAccountName = Objects.requireNonNull(automationAccountName);
+            $.automationAccountName = automationAccountName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder runbookName(String runbookName) {
-            this.runbookName = Objects.requireNonNull(runbookName);
+            $.runbookName = runbookName;
             return this;
-        }        public GetRunbookArgs build() {
-            return new GetRunbookArgs(automationAccountName, resourceGroupName, runbookName);
+        }
+
+        public GetRunbookArgs build() {
+            $.automationAccountName = Objects.requireNonNull($.automationAccountName, "expected parameter 'automationAccountName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.runbookName = Objects.requireNonNull($.runbookName, "expected parameter 'runbookName' to be non-null");
+            return $;
         }
     }
+
 }

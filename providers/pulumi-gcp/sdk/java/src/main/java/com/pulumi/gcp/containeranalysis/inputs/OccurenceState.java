@@ -5,10 +5,10 @@ package com.pulumi.gcp.containeranalysis.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.containeranalysis.inputs.OccurenceAttestationGetArgs;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -29,10 +29,10 @@ public final class OccurenceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="attestation")
-      private final @Nullable Output<OccurenceAttestationGetArgs> attestation;
+    private @Nullable Output<OccurenceAttestationGetArgs> attestation;
 
-    public Output<OccurenceAttestationGetArgs> attestation() {
-        return this.attestation == null ? Codegen.empty() : this.attestation;
+    public Optional<Output<OccurenceAttestationGetArgs>> attestation() {
+        return Optional.ofNullable(this.attestation);
     }
 
     /**
@@ -40,10 +40,10 @@ public final class OccurenceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="createTime")
-      private final @Nullable Output<String> createTime;
+    private @Nullable Output<String> createTime;
 
-    public Output<String> createTime() {
-        return this.createTime == null ? Codegen.empty() : this.createTime;
+    public Optional<Output<String>> createTime() {
+        return Optional.ofNullable(this.createTime);
     }
 
     /**
@@ -52,10 +52,10 @@ public final class OccurenceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="kind")
-      private final @Nullable Output<String> kind;
+    private @Nullable Output<String> kind;
 
-    public Output<String> kind() {
-        return this.kind == null ? Codegen.empty() : this.kind;
+    public Optional<Output<String>> kind() {
+        return Optional.ofNullable(this.kind);
     }
 
     /**
@@ -63,10 +63,10 @@ public final class OccurenceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -76,10 +76,10 @@ public final class OccurenceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="noteName")
-      private final @Nullable Output<String> noteName;
+    private @Nullable Output<String> noteName;
 
-    public Output<String> noteName() {
-        return this.noteName == null ? Codegen.empty() : this.noteName;
+    public Optional<Output<String>> noteName() {
+        return Optional.ofNullable(this.noteName);
     }
 
     /**
@@ -88,10 +88,10 @@ public final class OccurenceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -99,10 +99,10 @@ public final class OccurenceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="remediation")
-      private final @Nullable Output<String> remediation;
+    private @Nullable Output<String> remediation;
 
-    public Output<String> remediation() {
-        return this.remediation == null ? Codegen.empty() : this.remediation;
+    public Optional<Output<String>> remediation() {
+        return Optional.ofNullable(this.remediation);
     }
 
     /**
@@ -112,10 +112,10 @@ public final class OccurenceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceUri")
-      private final @Nullable Output<String> resourceUri;
+    private @Nullable Output<String> resourceUri;
 
-    public Output<String> resourceUri() {
-        return this.resourceUri == null ? Codegen.empty() : this.resourceUri;
+    public Optional<Output<String>> resourceUri() {
+        return Optional.ofNullable(this.resourceUri);
     }
 
     /**
@@ -123,154 +123,128 @@ public final class OccurenceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="updateTime")
-      private final @Nullable Output<String> updateTime;
+    private @Nullable Output<String> updateTime;
 
-    public Output<String> updateTime() {
-        return this.updateTime == null ? Codegen.empty() : this.updateTime;
+    public Optional<Output<String>> updateTime() {
+        return Optional.ofNullable(this.updateTime);
     }
 
-    public OccurenceState(
-        @Nullable Output<OccurenceAttestationGetArgs> attestation,
-        @Nullable Output<String> createTime,
-        @Nullable Output<String> kind,
-        @Nullable Output<String> name,
-        @Nullable Output<String> noteName,
-        @Nullable Output<String> project,
-        @Nullable Output<String> remediation,
-        @Nullable Output<String> resourceUri,
-        @Nullable Output<String> updateTime) {
-        this.attestation = attestation;
-        this.createTime = createTime;
-        this.kind = kind;
-        this.name = name;
-        this.noteName = noteName;
-        this.project = project;
-        this.remediation = remediation;
-        this.resourceUri = resourceUri;
-        this.updateTime = updateTime;
-    }
+    private OccurenceState() {}
 
-    private OccurenceState() {
-        this.attestation = Codegen.empty();
-        this.createTime = Codegen.empty();
-        this.kind = Codegen.empty();
-        this.name = Codegen.empty();
-        this.noteName = Codegen.empty();
-        this.project = Codegen.empty();
-        this.remediation = Codegen.empty();
-        this.resourceUri = Codegen.empty();
-        this.updateTime = Codegen.empty();
+    private OccurenceState(OccurenceState $) {
+        this.attestation = $.attestation;
+        this.createTime = $.createTime;
+        this.kind = $.kind;
+        this.name = $.name;
+        this.noteName = $.noteName;
+        this.project = $.project;
+        this.remediation = $.remediation;
+        this.resourceUri = $.resourceUri;
+        this.updateTime = $.updateTime;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(OccurenceState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<OccurenceAttestationGetArgs> attestation;
-        private @Nullable Output<String> createTime;
-        private @Nullable Output<String> kind;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> noteName;
-        private @Nullable Output<String> project;
-        private @Nullable Output<String> remediation;
-        private @Nullable Output<String> resourceUri;
-        private @Nullable Output<String> updateTime;
+        private OccurenceState $;
 
         public Builder() {
-    	      // Empty
+            $ = new OccurenceState();
         }
 
         public Builder(OccurenceState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.attestation = defaults.attestation;
-    	      this.createTime = defaults.createTime;
-    	      this.kind = defaults.kind;
-    	      this.name = defaults.name;
-    	      this.noteName = defaults.noteName;
-    	      this.project = defaults.project;
-    	      this.remediation = defaults.remediation;
-    	      this.resourceUri = defaults.resourceUri;
-    	      this.updateTime = defaults.updateTime;
+            $ = new OccurenceState(Objects.requireNonNull(defaults));
         }
 
         public Builder attestation(@Nullable Output<OccurenceAttestationGetArgs> attestation) {
-            this.attestation = attestation;
+            $.attestation = attestation;
             return this;
         }
-        public Builder attestation(@Nullable OccurenceAttestationGetArgs attestation) {
-            this.attestation = Codegen.ofNullable(attestation);
-            return this;
+
+        public Builder attestation(OccurenceAttestationGetArgs attestation) {
+            return attestation(Output.of(attestation));
         }
+
         public Builder createTime(@Nullable Output<String> createTime) {
-            this.createTime = createTime;
+            $.createTime = createTime;
             return this;
         }
-        public Builder createTime(@Nullable String createTime) {
-            this.createTime = Codegen.ofNullable(createTime);
-            return this;
+
+        public Builder createTime(String createTime) {
+            return createTime(Output.of(createTime));
         }
+
         public Builder kind(@Nullable Output<String> kind) {
-            this.kind = kind;
+            $.kind = kind;
             return this;
         }
-        public Builder kind(@Nullable String kind) {
-            this.kind = Codegen.ofNullable(kind);
-            return this;
+
+        public Builder kind(String kind) {
+            return kind(Output.of(kind));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder noteName(@Nullable Output<String> noteName) {
-            this.noteName = noteName;
+            $.noteName = noteName;
             return this;
         }
-        public Builder noteName(@Nullable String noteName) {
-            this.noteName = Codegen.ofNullable(noteName);
-            return this;
+
+        public Builder noteName(String noteName) {
+            return noteName(Output.of(noteName));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder remediation(@Nullable Output<String> remediation) {
-            this.remediation = remediation;
+            $.remediation = remediation;
             return this;
         }
-        public Builder remediation(@Nullable String remediation) {
-            this.remediation = Codegen.ofNullable(remediation);
-            return this;
+
+        public Builder remediation(String remediation) {
+            return remediation(Output.of(remediation));
         }
+
         public Builder resourceUri(@Nullable Output<String> resourceUri) {
-            this.resourceUri = resourceUri;
+            $.resourceUri = resourceUri;
             return this;
         }
-        public Builder resourceUri(@Nullable String resourceUri) {
-            this.resourceUri = Codegen.ofNullable(resourceUri);
-            return this;
+
+        public Builder resourceUri(String resourceUri) {
+            return resourceUri(Output.of(resourceUri));
         }
+
         public Builder updateTime(@Nullable Output<String> updateTime) {
-            this.updateTime = updateTime;
+            $.updateTime = updateTime;
             return this;
         }
-        public Builder updateTime(@Nullable String updateTime) {
-            this.updateTime = Codegen.ofNullable(updateTime);
-            return this;
-        }        public OccurenceState build() {
-            return new OccurenceState(attestation, createTime, kind, name, noteName, project, remediation, resourceUri, updateTime);
+
+        public Builder updateTime(String updateTime) {
+            return updateTime(Output.of(updateTime));
+        }
+
+        public OccurenceState build() {
+            return $;
         }
     }
+
 }

@@ -6,13 +6,13 @@ package com.pulumi.azurenative.netapp;
 import com.pulumi.azurenative.netapp.inputs.VolumeBackupsArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,7 +25,7 @@ public final class BackupPolicyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="accountName", required=true)
-      private final Output<String> accountName;
+    private Output<String> accountName;
 
     public Output<String> accountName() {
         return this.accountName;
@@ -36,10 +36,10 @@ public final class BackupPolicyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="backupPolicyName")
-      private final @Nullable Output<String> backupPolicyName;
+    private @Nullable Output<String> backupPolicyName;
 
-    public Output<String> backupPolicyName() {
-        return this.backupPolicyName == null ? Codegen.empty() : this.backupPolicyName;
+    public Optional<Output<String>> backupPolicyName() {
+        return Optional.ofNullable(this.backupPolicyName);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class BackupPolicyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="dailyBackupsToKeep")
-      private final @Nullable Output<Integer> dailyBackupsToKeep;
+    private @Nullable Output<Integer> dailyBackupsToKeep;
 
-    public Output<Integer> dailyBackupsToKeep() {
-        return this.dailyBackupsToKeep == null ? Codegen.empty() : this.dailyBackupsToKeep;
+    public Optional<Output<Integer>> dailyBackupsToKeep() {
+        return Optional.ofNullable(this.dailyBackupsToKeep);
     }
 
     /**
@@ -58,10 +58,10 @@ public final class BackupPolicyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="enabled")
-      private final @Nullable Output<Boolean> enabled;
+    private @Nullable Output<Boolean> enabled;
 
-    public Output<Boolean> enabled() {
-        return this.enabled == null ? Codegen.empty() : this.enabled;
+    public Optional<Output<Boolean>> enabled() {
+        return Optional.ofNullable(this.enabled);
     }
 
     /**
@@ -69,10 +69,10 @@ public final class BackupPolicyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -80,10 +80,10 @@ public final class BackupPolicyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="monthlyBackupsToKeep")
-      private final @Nullable Output<Integer> monthlyBackupsToKeep;
+    private @Nullable Output<Integer> monthlyBackupsToKeep;
 
-    public Output<Integer> monthlyBackupsToKeep() {
-        return this.monthlyBackupsToKeep == null ? Codegen.empty() : this.monthlyBackupsToKeep;
+    public Optional<Output<Integer>> monthlyBackupsToKeep() {
+        return Optional.ofNullable(this.monthlyBackupsToKeep);
     }
 
     /**
@@ -91,7 +91,7 @@ public final class BackupPolicyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -102,10 +102,10 @@ public final class BackupPolicyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -113,10 +113,10 @@ public final class BackupPolicyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="volumeBackups")
-      private final @Nullable Output<List<VolumeBackupsArgs>> volumeBackups;
+    private @Nullable Output<List<VolumeBackupsArgs>> volumeBackups;
 
-    public Output<List<VolumeBackupsArgs>> volumeBackups() {
-        return this.volumeBackups == null ? Codegen.empty() : this.volumeBackups;
+    public Optional<Output<List<VolumeBackupsArgs>>> volumeBackups() {
+        return Optional.ofNullable(this.volumeBackups);
     }
 
     /**
@@ -124,10 +124,10 @@ public final class BackupPolicyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="volumesAssigned")
-      private final @Nullable Output<Integer> volumesAssigned;
+    private @Nullable Output<Integer> volumesAssigned;
 
-    public Output<Integer> volumesAssigned() {
-        return this.volumesAssigned == null ? Codegen.empty() : this.volumesAssigned;
+    public Optional<Output<Integer>> volumesAssigned() {
+        return Optional.ofNullable(this.volumesAssigned);
     }
 
     /**
@@ -135,10 +135,10 @@ public final class BackupPolicyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="weeklyBackupsToKeep")
-      private final @Nullable Output<Integer> weeklyBackupsToKeep;
+    private @Nullable Output<Integer> weeklyBackupsToKeep;
 
-    public Output<Integer> weeklyBackupsToKeep() {
-        return this.weeklyBackupsToKeep == null ? Codegen.empty() : this.weeklyBackupsToKeep;
+    public Optional<Output<Integer>> weeklyBackupsToKeep() {
+        return Optional.ofNullable(this.weeklyBackupsToKeep);
     }
 
     /**
@@ -146,196 +146,164 @@ public final class BackupPolicyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="yearlyBackupsToKeep")
-      private final @Nullable Output<Integer> yearlyBackupsToKeep;
+    private @Nullable Output<Integer> yearlyBackupsToKeep;
 
-    public Output<Integer> yearlyBackupsToKeep() {
-        return this.yearlyBackupsToKeep == null ? Codegen.empty() : this.yearlyBackupsToKeep;
+    public Optional<Output<Integer>> yearlyBackupsToKeep() {
+        return Optional.ofNullable(this.yearlyBackupsToKeep);
     }
 
-    public BackupPolicyArgs(
-        Output<String> accountName,
-        @Nullable Output<String> backupPolicyName,
-        @Nullable Output<Integer> dailyBackupsToKeep,
-        @Nullable Output<Boolean> enabled,
-        @Nullable Output<String> location,
-        @Nullable Output<Integer> monthlyBackupsToKeep,
-        Output<String> resourceGroupName,
-        @Nullable Output<Map<String,String>> tags,
-        @Nullable Output<List<VolumeBackupsArgs>> volumeBackups,
-        @Nullable Output<Integer> volumesAssigned,
-        @Nullable Output<Integer> weeklyBackupsToKeep,
-        @Nullable Output<Integer> yearlyBackupsToKeep) {
-        this.accountName = Objects.requireNonNull(accountName, "expected parameter 'accountName' to be non-null");
-        this.backupPolicyName = backupPolicyName;
-        this.dailyBackupsToKeep = dailyBackupsToKeep;
-        this.enabled = enabled;
-        this.location = location;
-        this.monthlyBackupsToKeep = monthlyBackupsToKeep;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.tags = tags;
-        this.volumeBackups = volumeBackups;
-        this.volumesAssigned = volumesAssigned;
-        this.weeklyBackupsToKeep = weeklyBackupsToKeep;
-        this.yearlyBackupsToKeep = yearlyBackupsToKeep;
-    }
+    private BackupPolicyArgs() {}
 
-    private BackupPolicyArgs() {
-        this.accountName = Codegen.empty();
-        this.backupPolicyName = Codegen.empty();
-        this.dailyBackupsToKeep = Codegen.empty();
-        this.enabled = Codegen.empty();
-        this.location = Codegen.empty();
-        this.monthlyBackupsToKeep = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.volumeBackups = Codegen.empty();
-        this.volumesAssigned = Codegen.empty();
-        this.weeklyBackupsToKeep = Codegen.empty();
-        this.yearlyBackupsToKeep = Codegen.empty();
+    private BackupPolicyArgs(BackupPolicyArgs $) {
+        this.accountName = $.accountName;
+        this.backupPolicyName = $.backupPolicyName;
+        this.dailyBackupsToKeep = $.dailyBackupsToKeep;
+        this.enabled = $.enabled;
+        this.location = $.location;
+        this.monthlyBackupsToKeep = $.monthlyBackupsToKeep;
+        this.resourceGroupName = $.resourceGroupName;
+        this.tags = $.tags;
+        this.volumeBackups = $.volumeBackups;
+        this.volumesAssigned = $.volumesAssigned;
+        this.weeklyBackupsToKeep = $.weeklyBackupsToKeep;
+        this.yearlyBackupsToKeep = $.yearlyBackupsToKeep;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BackupPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> accountName;
-        private @Nullable Output<String> backupPolicyName;
-        private @Nullable Output<Integer> dailyBackupsToKeep;
-        private @Nullable Output<Boolean> enabled;
-        private @Nullable Output<String> location;
-        private @Nullable Output<Integer> monthlyBackupsToKeep;
-        private Output<String> resourceGroupName;
-        private @Nullable Output<Map<String,String>> tags;
-        private @Nullable Output<List<VolumeBackupsArgs>> volumeBackups;
-        private @Nullable Output<Integer> volumesAssigned;
-        private @Nullable Output<Integer> weeklyBackupsToKeep;
-        private @Nullable Output<Integer> yearlyBackupsToKeep;
+        private BackupPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new BackupPolicyArgs();
         }
 
         public Builder(BackupPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accountName = defaults.accountName;
-    	      this.backupPolicyName = defaults.backupPolicyName;
-    	      this.dailyBackupsToKeep = defaults.dailyBackupsToKeep;
-    	      this.enabled = defaults.enabled;
-    	      this.location = defaults.location;
-    	      this.monthlyBackupsToKeep = defaults.monthlyBackupsToKeep;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.tags = defaults.tags;
-    	      this.volumeBackups = defaults.volumeBackups;
-    	      this.volumesAssigned = defaults.volumesAssigned;
-    	      this.weeklyBackupsToKeep = defaults.weeklyBackupsToKeep;
-    	      this.yearlyBackupsToKeep = defaults.yearlyBackupsToKeep;
+            $ = new BackupPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder accountName(Output<String> accountName) {
-            this.accountName = Objects.requireNonNull(accountName);
+            $.accountName = accountName;
             return this;
         }
+
         public Builder accountName(String accountName) {
-            this.accountName = Output.of(Objects.requireNonNull(accountName));
-            return this;
+            return accountName(Output.of(accountName));
         }
+
         public Builder backupPolicyName(@Nullable Output<String> backupPolicyName) {
-            this.backupPolicyName = backupPolicyName;
+            $.backupPolicyName = backupPolicyName;
             return this;
         }
-        public Builder backupPolicyName(@Nullable String backupPolicyName) {
-            this.backupPolicyName = Codegen.ofNullable(backupPolicyName);
-            return this;
+
+        public Builder backupPolicyName(String backupPolicyName) {
+            return backupPolicyName(Output.of(backupPolicyName));
         }
+
         public Builder dailyBackupsToKeep(@Nullable Output<Integer> dailyBackupsToKeep) {
-            this.dailyBackupsToKeep = dailyBackupsToKeep;
+            $.dailyBackupsToKeep = dailyBackupsToKeep;
             return this;
         }
-        public Builder dailyBackupsToKeep(@Nullable Integer dailyBackupsToKeep) {
-            this.dailyBackupsToKeep = Codegen.ofNullable(dailyBackupsToKeep);
-            return this;
+
+        public Builder dailyBackupsToKeep(Integer dailyBackupsToKeep) {
+            return dailyBackupsToKeep(Output.of(dailyBackupsToKeep));
         }
+
         public Builder enabled(@Nullable Output<Boolean> enabled) {
-            this.enabled = enabled;
+            $.enabled = enabled;
             return this;
         }
-        public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Codegen.ofNullable(enabled);
-            return this;
+
+        public Builder enabled(Boolean enabled) {
+            return enabled(Output.of(enabled));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder monthlyBackupsToKeep(@Nullable Output<Integer> monthlyBackupsToKeep) {
-            this.monthlyBackupsToKeep = monthlyBackupsToKeep;
+            $.monthlyBackupsToKeep = monthlyBackupsToKeep;
             return this;
         }
-        public Builder monthlyBackupsToKeep(@Nullable Integer monthlyBackupsToKeep) {
-            this.monthlyBackupsToKeep = Codegen.ofNullable(monthlyBackupsToKeep);
-            return this;
+
+        public Builder monthlyBackupsToKeep(Integer monthlyBackupsToKeep) {
+            return monthlyBackupsToKeep(Output.of(monthlyBackupsToKeep));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder volumeBackups(@Nullable Output<List<VolumeBackupsArgs>> volumeBackups) {
-            this.volumeBackups = volumeBackups;
+            $.volumeBackups = volumeBackups;
             return this;
         }
-        public Builder volumeBackups(@Nullable List<VolumeBackupsArgs> volumeBackups) {
-            this.volumeBackups = Codegen.ofNullable(volumeBackups);
-            return this;
+
+        public Builder volumeBackups(List<VolumeBackupsArgs> volumeBackups) {
+            return volumeBackups(Output.of(volumeBackups));
         }
+
         public Builder volumeBackups(VolumeBackupsArgs... volumeBackups) {
             return volumeBackups(List.of(volumeBackups));
         }
+
         public Builder volumesAssigned(@Nullable Output<Integer> volumesAssigned) {
-            this.volumesAssigned = volumesAssigned;
+            $.volumesAssigned = volumesAssigned;
             return this;
         }
-        public Builder volumesAssigned(@Nullable Integer volumesAssigned) {
-            this.volumesAssigned = Codegen.ofNullable(volumesAssigned);
-            return this;
+
+        public Builder volumesAssigned(Integer volumesAssigned) {
+            return volumesAssigned(Output.of(volumesAssigned));
         }
+
         public Builder weeklyBackupsToKeep(@Nullable Output<Integer> weeklyBackupsToKeep) {
-            this.weeklyBackupsToKeep = weeklyBackupsToKeep;
+            $.weeklyBackupsToKeep = weeklyBackupsToKeep;
             return this;
         }
-        public Builder weeklyBackupsToKeep(@Nullable Integer weeklyBackupsToKeep) {
-            this.weeklyBackupsToKeep = Codegen.ofNullable(weeklyBackupsToKeep);
-            return this;
+
+        public Builder weeklyBackupsToKeep(Integer weeklyBackupsToKeep) {
+            return weeklyBackupsToKeep(Output.of(weeklyBackupsToKeep));
         }
+
         public Builder yearlyBackupsToKeep(@Nullable Output<Integer> yearlyBackupsToKeep) {
-            this.yearlyBackupsToKeep = yearlyBackupsToKeep;
+            $.yearlyBackupsToKeep = yearlyBackupsToKeep;
             return this;
         }
-        public Builder yearlyBackupsToKeep(@Nullable Integer yearlyBackupsToKeep) {
-            this.yearlyBackupsToKeep = Codegen.ofNullable(yearlyBackupsToKeep);
-            return this;
-        }        public BackupPolicyArgs build() {
-            return new BackupPolicyArgs(accountName, backupPolicyName, dailyBackupsToKeep, enabled, location, monthlyBackupsToKeep, resourceGroupName, tags, volumeBackups, volumesAssigned, weeklyBackupsToKeep, yearlyBackupsToKeep);
+
+        public Builder yearlyBackupsToKeep(Integer yearlyBackupsToKeep) {
+            return yearlyBackupsToKeep(Output.of(yearlyBackupsToKeep));
+        }
+
+        public BackupPolicyArgs build() {
+            $.accountName = Objects.requireNonNull($.accountName, "expected parameter 'accountName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

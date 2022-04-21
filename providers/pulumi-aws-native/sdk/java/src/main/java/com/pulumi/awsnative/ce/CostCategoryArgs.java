@@ -6,9 +6,9 @@ package com.pulumi.awsnative.ce;
 import com.pulumi.awsnative.ce.enums.CostCategoryRuleVersion;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,21 +21,21 @@ public final class CostCategoryArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="defaultValue")
-      private final @Nullable Output<String> defaultValue;
+    private @Nullable Output<String> defaultValue;
 
-    public Output<String> defaultValue() {
-        return this.defaultValue == null ? Codegen.empty() : this.defaultValue;
+    public Optional<Output<String>> defaultValue() {
+        return Optional.ofNullable(this.defaultValue);
     }
 
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     @Import(name="ruleVersion", required=true)
-      private final Output<CostCategoryRuleVersion> ruleVersion;
+    private Output<CostCategoryRuleVersion> ruleVersion;
 
     public Output<CostCategoryRuleVersion> ruleVersion() {
         return this.ruleVersion;
@@ -46,7 +46,7 @@ public final class CostCategoryArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="rules", required=true)
-      private final Output<String> rules;
+    private Output<String> rules;
 
     public Output<String> rules() {
         return this.rules;
@@ -57,102 +57,90 @@ public final class CostCategoryArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="splitChargeRules")
-      private final @Nullable Output<String> splitChargeRules;
+    private @Nullable Output<String> splitChargeRules;
 
-    public Output<String> splitChargeRules() {
-        return this.splitChargeRules == null ? Codegen.empty() : this.splitChargeRules;
+    public Optional<Output<String>> splitChargeRules() {
+        return Optional.ofNullable(this.splitChargeRules);
     }
 
-    public CostCategoryArgs(
-        @Nullable Output<String> defaultValue,
-        @Nullable Output<String> name,
-        Output<CostCategoryRuleVersion> ruleVersion,
-        Output<String> rules,
-        @Nullable Output<String> splitChargeRules) {
-        this.defaultValue = defaultValue;
-        this.name = name;
-        this.ruleVersion = Objects.requireNonNull(ruleVersion, "expected parameter 'ruleVersion' to be non-null");
-        this.rules = Objects.requireNonNull(rules, "expected parameter 'rules' to be non-null");
-        this.splitChargeRules = splitChargeRules;
-    }
+    private CostCategoryArgs() {}
 
-    private CostCategoryArgs() {
-        this.defaultValue = Codegen.empty();
-        this.name = Codegen.empty();
-        this.ruleVersion = Codegen.empty();
-        this.rules = Codegen.empty();
-        this.splitChargeRules = Codegen.empty();
+    private CostCategoryArgs(CostCategoryArgs $) {
+        this.defaultValue = $.defaultValue;
+        this.name = $.name;
+        this.ruleVersion = $.ruleVersion;
+        this.rules = $.rules;
+        this.splitChargeRules = $.splitChargeRules;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CostCategoryArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> defaultValue;
-        private @Nullable Output<String> name;
-        private Output<CostCategoryRuleVersion> ruleVersion;
-        private Output<String> rules;
-        private @Nullable Output<String> splitChargeRules;
+        private CostCategoryArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CostCategoryArgs();
         }
 
         public Builder(CostCategoryArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.defaultValue = defaults.defaultValue;
-    	      this.name = defaults.name;
-    	      this.ruleVersion = defaults.ruleVersion;
-    	      this.rules = defaults.rules;
-    	      this.splitChargeRules = defaults.splitChargeRules;
+            $ = new CostCategoryArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder defaultValue(@Nullable Output<String> defaultValue) {
-            this.defaultValue = defaultValue;
+            $.defaultValue = defaultValue;
             return this;
         }
-        public Builder defaultValue(@Nullable String defaultValue) {
-            this.defaultValue = Codegen.ofNullable(defaultValue);
-            return this;
+
+        public Builder defaultValue(String defaultValue) {
+            return defaultValue(Output.of(defaultValue));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder ruleVersion(Output<CostCategoryRuleVersion> ruleVersion) {
-            this.ruleVersion = Objects.requireNonNull(ruleVersion);
+            $.ruleVersion = ruleVersion;
             return this;
         }
+
         public Builder ruleVersion(CostCategoryRuleVersion ruleVersion) {
-            this.ruleVersion = Output.of(Objects.requireNonNull(ruleVersion));
-            return this;
+            return ruleVersion(Output.of(ruleVersion));
         }
+
         public Builder rules(Output<String> rules) {
-            this.rules = Objects.requireNonNull(rules);
+            $.rules = rules;
             return this;
         }
+
         public Builder rules(String rules) {
-            this.rules = Output.of(Objects.requireNonNull(rules));
-            return this;
+            return rules(Output.of(rules));
         }
+
         public Builder splitChargeRules(@Nullable Output<String> splitChargeRules) {
-            this.splitChargeRules = splitChargeRules;
+            $.splitChargeRules = splitChargeRules;
             return this;
         }
-        public Builder splitChargeRules(@Nullable String splitChargeRules) {
-            this.splitChargeRules = Codegen.ofNullable(splitChargeRules);
-            return this;
-        }        public CostCategoryArgs build() {
-            return new CostCategoryArgs(defaultValue, name, ruleVersion, rules, splitChargeRules);
+
+        public Builder splitChargeRules(String splitChargeRules) {
+            return splitChargeRules(Output.of(splitChargeRules));
+        }
+
+        public CostCategoryArgs build() {
+            $.ruleVersion = Objects.requireNonNull($.ruleVersion, "expected parameter 'ruleVersion' to be non-null");
+            $.rules = Objects.requireNonNull($.rules, "expected parameter 'rules' to be non-null");
+            return $;
         }
     }
+
 }

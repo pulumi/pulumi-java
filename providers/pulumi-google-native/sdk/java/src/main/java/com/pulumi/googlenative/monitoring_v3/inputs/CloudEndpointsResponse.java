@@ -21,45 +21,45 @@ public final class CloudEndpointsResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="service", required=true)
-      private final String service;
+    private String service;
 
     public String service() {
         return this.service;
     }
 
-    public CloudEndpointsResponse(String service) {
-        this.service = Objects.requireNonNull(service, "expected parameter 'service' to be non-null");
-    }
+    private CloudEndpointsResponse() {}
 
-    private CloudEndpointsResponse() {
-        this.service = null;
+    private CloudEndpointsResponse(CloudEndpointsResponse $) {
+        this.service = $.service;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CloudEndpointsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String service;
+        private CloudEndpointsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new CloudEndpointsResponse();
         }
 
         public Builder(CloudEndpointsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.service = defaults.service;
+            $ = new CloudEndpointsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder service(String service) {
-            this.service = Objects.requireNonNull(service);
+            $.service = service;
             return this;
-        }        public CloudEndpointsResponse build() {
-            return new CloudEndpointsResponse(service);
+        }
+
+        public CloudEndpointsResponse build() {
+            $.service = Objects.requireNonNull($.service, "expected parameter 'service' to be non-null");
+            return $;
         }
     }
+
 }

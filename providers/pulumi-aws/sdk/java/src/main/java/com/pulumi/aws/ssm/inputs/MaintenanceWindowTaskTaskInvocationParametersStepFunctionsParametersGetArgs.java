@@ -5,9 +5,9 @@ package com.pulumi.aws.ssm.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class MaintenanceWindowTaskTaskInvocationParametersStepFunctionsPar
      * 
      */
     @Import(name="input")
-      private final @Nullable Output<String> input;
+    private @Nullable Output<String> input;
 
-    public Output<String> input() {
-        return this.input == null ? Codegen.empty() : this.input;
+    public Optional<Output<String>> input() {
+        return Optional.ofNullable(this.input);
     }
 
     /**
@@ -31,63 +31,58 @@ public final class MaintenanceWindowTaskTaskInvocationParametersStepFunctionsPar
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
-    public MaintenanceWindowTaskTaskInvocationParametersStepFunctionsParametersGetArgs(
-        @Nullable Output<String> input,
-        @Nullable Output<String> name) {
-        this.input = input;
-        this.name = name;
-    }
+    private MaintenanceWindowTaskTaskInvocationParametersStepFunctionsParametersGetArgs() {}
 
-    private MaintenanceWindowTaskTaskInvocationParametersStepFunctionsParametersGetArgs() {
-        this.input = Codegen.empty();
-        this.name = Codegen.empty();
+    private MaintenanceWindowTaskTaskInvocationParametersStepFunctionsParametersGetArgs(MaintenanceWindowTaskTaskInvocationParametersStepFunctionsParametersGetArgs $) {
+        this.input = $.input;
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MaintenanceWindowTaskTaskInvocationParametersStepFunctionsParametersGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> input;
-        private @Nullable Output<String> name;
+        private MaintenanceWindowTaskTaskInvocationParametersStepFunctionsParametersGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new MaintenanceWindowTaskTaskInvocationParametersStepFunctionsParametersGetArgs();
         }
 
         public Builder(MaintenanceWindowTaskTaskInvocationParametersStepFunctionsParametersGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.input = defaults.input;
-    	      this.name = defaults.name;
+            $ = new MaintenanceWindowTaskTaskInvocationParametersStepFunctionsParametersGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder input(@Nullable Output<String> input) {
-            this.input = input;
+            $.input = input;
             return this;
         }
-        public Builder input(@Nullable String input) {
-            this.input = Codegen.ofNullable(input);
-            return this;
+
+        public Builder input(String input) {
+            return input(Output.of(input));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
-        }        public MaintenanceWindowTaskTaskInvocationParametersStepFunctionsParametersGetArgs build() {
-            return new MaintenanceWindowTaskTaskInvocationParametersStepFunctionsParametersGetArgs(input, name);
+
+        public Builder name(String name) {
+            return name(Output.of(name));
+        }
+
+        public MaintenanceWindowTaskTaskInvocationParametersStepFunctionsParametersGetArgs build() {
+            return $;
         }
     }
+
 }

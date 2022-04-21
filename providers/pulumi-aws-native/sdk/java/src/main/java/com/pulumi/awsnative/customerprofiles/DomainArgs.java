@@ -6,11 +6,11 @@ package com.pulumi.awsnative.customerprofiles;
 import com.pulumi.awsnative.customerprofiles.inputs.DomainTagArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,10 @@ public final class DomainArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="deadLetterQueueUrl")
-      private final @Nullable Output<String> deadLetterQueueUrl;
+    private @Nullable Output<String> deadLetterQueueUrl;
 
-    public Output<String> deadLetterQueueUrl() {
-        return this.deadLetterQueueUrl == null ? Codegen.empty() : this.deadLetterQueueUrl;
+    public Optional<Output<String>> deadLetterQueueUrl() {
+        return Optional.ofNullable(this.deadLetterQueueUrl);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class DomainArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="defaultEncryptionKey")
-      private final @Nullable Output<String> defaultEncryptionKey;
+    private @Nullable Output<String> defaultEncryptionKey;
 
-    public Output<String> defaultEncryptionKey() {
-        return this.defaultEncryptionKey == null ? Codegen.empty() : this.defaultEncryptionKey;
+    public Optional<Output<String>> defaultEncryptionKey() {
+        return Optional.ofNullable(this.defaultEncryptionKey);
     }
 
     /**
@@ -45,10 +45,10 @@ public final class DomainArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="defaultExpirationDays")
-      private final @Nullable Output<Integer> defaultExpirationDays;
+    private @Nullable Output<Integer> defaultExpirationDays;
 
-    public Output<Integer> defaultExpirationDays() {
-        return this.defaultExpirationDays == null ? Codegen.empty() : this.defaultExpirationDays;
+    public Optional<Output<Integer>> defaultExpirationDays() {
+        return Optional.ofNullable(this.defaultExpirationDays);
     }
 
     /**
@@ -56,10 +56,10 @@ public final class DomainArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="domainName")
-      private final @Nullable Output<String> domainName;
+    private @Nullable Output<String> domainName;
 
-    public Output<String> domainName() {
-        return this.domainName == null ? Codegen.empty() : this.domainName;
+    public Optional<Output<String>> domainName() {
+        return Optional.ofNullable(this.domainName);
     }
 
     /**
@@ -67,105 +67,92 @@ public final class DomainArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<List<DomainTagArgs>> tags;
+    private @Nullable Output<List<DomainTagArgs>> tags;
 
-    public Output<List<DomainTagArgs>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<List<DomainTagArgs>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public DomainArgs(
-        @Nullable Output<String> deadLetterQueueUrl,
-        @Nullable Output<String> defaultEncryptionKey,
-        @Nullable Output<Integer> defaultExpirationDays,
-        @Nullable Output<String> domainName,
-        @Nullable Output<List<DomainTagArgs>> tags) {
-        this.deadLetterQueueUrl = deadLetterQueueUrl;
-        this.defaultEncryptionKey = defaultEncryptionKey;
-        this.defaultExpirationDays = defaultExpirationDays;
-        this.domainName = domainName;
-        this.tags = tags;
-    }
+    private DomainArgs() {}
 
-    private DomainArgs() {
-        this.deadLetterQueueUrl = Codegen.empty();
-        this.defaultEncryptionKey = Codegen.empty();
-        this.defaultExpirationDays = Codegen.empty();
-        this.domainName = Codegen.empty();
-        this.tags = Codegen.empty();
+    private DomainArgs(DomainArgs $) {
+        this.deadLetterQueueUrl = $.deadLetterQueueUrl;
+        this.defaultEncryptionKey = $.defaultEncryptionKey;
+        this.defaultExpirationDays = $.defaultExpirationDays;
+        this.domainName = $.domainName;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DomainArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> deadLetterQueueUrl;
-        private @Nullable Output<String> defaultEncryptionKey;
-        private @Nullable Output<Integer> defaultExpirationDays;
-        private @Nullable Output<String> domainName;
-        private @Nullable Output<List<DomainTagArgs>> tags;
+        private DomainArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DomainArgs();
         }
 
         public Builder(DomainArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.deadLetterQueueUrl = defaults.deadLetterQueueUrl;
-    	      this.defaultEncryptionKey = defaults.defaultEncryptionKey;
-    	      this.defaultExpirationDays = defaults.defaultExpirationDays;
-    	      this.domainName = defaults.domainName;
-    	      this.tags = defaults.tags;
+            $ = new DomainArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder deadLetterQueueUrl(@Nullable Output<String> deadLetterQueueUrl) {
-            this.deadLetterQueueUrl = deadLetterQueueUrl;
+            $.deadLetterQueueUrl = deadLetterQueueUrl;
             return this;
         }
-        public Builder deadLetterQueueUrl(@Nullable String deadLetterQueueUrl) {
-            this.deadLetterQueueUrl = Codegen.ofNullable(deadLetterQueueUrl);
-            return this;
+
+        public Builder deadLetterQueueUrl(String deadLetterQueueUrl) {
+            return deadLetterQueueUrl(Output.of(deadLetterQueueUrl));
         }
+
         public Builder defaultEncryptionKey(@Nullable Output<String> defaultEncryptionKey) {
-            this.defaultEncryptionKey = defaultEncryptionKey;
+            $.defaultEncryptionKey = defaultEncryptionKey;
             return this;
         }
-        public Builder defaultEncryptionKey(@Nullable String defaultEncryptionKey) {
-            this.defaultEncryptionKey = Codegen.ofNullable(defaultEncryptionKey);
-            return this;
+
+        public Builder defaultEncryptionKey(String defaultEncryptionKey) {
+            return defaultEncryptionKey(Output.of(defaultEncryptionKey));
         }
+
         public Builder defaultExpirationDays(@Nullable Output<Integer> defaultExpirationDays) {
-            this.defaultExpirationDays = defaultExpirationDays;
+            $.defaultExpirationDays = defaultExpirationDays;
             return this;
         }
-        public Builder defaultExpirationDays(@Nullable Integer defaultExpirationDays) {
-            this.defaultExpirationDays = Codegen.ofNullable(defaultExpirationDays);
-            return this;
+
+        public Builder defaultExpirationDays(Integer defaultExpirationDays) {
+            return defaultExpirationDays(Output.of(defaultExpirationDays));
         }
+
         public Builder domainName(@Nullable Output<String> domainName) {
-            this.domainName = domainName;
+            $.domainName = domainName;
             return this;
         }
-        public Builder domainName(@Nullable String domainName) {
-            this.domainName = Codegen.ofNullable(domainName);
-            return this;
+
+        public Builder domainName(String domainName) {
+            return domainName(Output.of(domainName));
         }
+
         public Builder tags(@Nullable Output<List<DomainTagArgs>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable List<DomainTagArgs> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(List<DomainTagArgs> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tags(DomainTagArgs... tags) {
             return tags(List.of(tags));
-        }        public DomainArgs build() {
-            return new DomainArgs(deadLetterQueueUrl, defaultEncryptionKey, defaultExpirationDays, domainName, tags);
+        }
+
+        public DomainArgs build() {
+            return $;
         }
     }
+
 }

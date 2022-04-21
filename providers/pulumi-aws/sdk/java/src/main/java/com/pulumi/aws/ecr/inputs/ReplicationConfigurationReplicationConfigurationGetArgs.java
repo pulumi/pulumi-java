@@ -6,7 +6,6 @@ package com.pulumi.aws.ecr.inputs;
 import com.pulumi.aws.ecr.inputs.ReplicationConfigurationReplicationConfigurationRuleGetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
 
 
@@ -19,49 +18,49 @@ public final class ReplicationConfigurationReplicationConfigurationGetArgs exten
      * 
      */
     @Import(name="rule", required=true)
-      private final Output<ReplicationConfigurationReplicationConfigurationRuleGetArgs> rule;
+    private Output<ReplicationConfigurationReplicationConfigurationRuleGetArgs> rule;
 
     public Output<ReplicationConfigurationReplicationConfigurationRuleGetArgs> rule() {
         return this.rule;
     }
 
-    public ReplicationConfigurationReplicationConfigurationGetArgs(Output<ReplicationConfigurationReplicationConfigurationRuleGetArgs> rule) {
-        this.rule = Objects.requireNonNull(rule, "expected parameter 'rule' to be non-null");
-    }
+    private ReplicationConfigurationReplicationConfigurationGetArgs() {}
 
-    private ReplicationConfigurationReplicationConfigurationGetArgs() {
-        this.rule = Codegen.empty();
+    private ReplicationConfigurationReplicationConfigurationGetArgs(ReplicationConfigurationReplicationConfigurationGetArgs $) {
+        this.rule = $.rule;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ReplicationConfigurationReplicationConfigurationGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<ReplicationConfigurationReplicationConfigurationRuleGetArgs> rule;
+        private ReplicationConfigurationReplicationConfigurationGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ReplicationConfigurationReplicationConfigurationGetArgs();
         }
 
         public Builder(ReplicationConfigurationReplicationConfigurationGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.rule = defaults.rule;
+            $ = new ReplicationConfigurationReplicationConfigurationGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder rule(Output<ReplicationConfigurationReplicationConfigurationRuleGetArgs> rule) {
-            this.rule = Objects.requireNonNull(rule);
+            $.rule = rule;
             return this;
         }
+
         public Builder rule(ReplicationConfigurationReplicationConfigurationRuleGetArgs rule) {
-            this.rule = Output.of(Objects.requireNonNull(rule));
-            return this;
-        }        public ReplicationConfigurationReplicationConfigurationGetArgs build() {
-            return new ReplicationConfigurationReplicationConfigurationGetArgs(rule);
+            return rule(Output.of(rule));
+        }
+
+        public ReplicationConfigurationReplicationConfigurationGetArgs build() {
+            $.rule = Objects.requireNonNull($.rule, "expected parameter 'rule' to be non-null");
+            return $;
         }
     }
+
 }

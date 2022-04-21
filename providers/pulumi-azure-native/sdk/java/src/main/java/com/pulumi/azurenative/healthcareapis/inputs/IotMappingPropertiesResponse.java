@@ -23,45 +23,44 @@ public final class IotMappingPropertiesResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="content")
-      private final @Nullable Object content;
+    private @Nullable Object content;
 
     public Optional<Object> content() {
-        return this.content == null ? Optional.empty() : Optional.ofNullable(this.content);
+        return Optional.ofNullable(this.content);
     }
 
-    public IotMappingPropertiesResponse(@Nullable Object content) {
-        this.content = content;
-    }
+    private IotMappingPropertiesResponse() {}
 
-    private IotMappingPropertiesResponse() {
-        this.content = null;
+    private IotMappingPropertiesResponse(IotMappingPropertiesResponse $) {
+        this.content = $.content;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(IotMappingPropertiesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Object content;
+        private IotMappingPropertiesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new IotMappingPropertiesResponse();
         }
 
         public Builder(IotMappingPropertiesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.content = defaults.content;
+            $ = new IotMappingPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder content(@Nullable Object content) {
-            this.content = content;
+            $.content = content;
             return this;
-        }        public IotMappingPropertiesResponse build() {
-            return new IotMappingPropertiesResponse(content);
+        }
+
+        public IotMappingPropertiesResponse build() {
+            return $;
         }
     }
+
 }

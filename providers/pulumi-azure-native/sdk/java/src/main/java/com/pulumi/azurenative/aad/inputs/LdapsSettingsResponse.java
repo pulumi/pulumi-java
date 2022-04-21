@@ -24,7 +24,7 @@ public final class LdapsSettingsResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="certificateNotAfter", required=true)
-      private final String certificateNotAfter;
+    private String certificateNotAfter;
 
     public String certificateNotAfter() {
         return this.certificateNotAfter;
@@ -35,7 +35,7 @@ public final class LdapsSettingsResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="certificateThumbprint", required=true)
-      private final String certificateThumbprint;
+    private String certificateThumbprint;
 
     public String certificateThumbprint() {
         return this.certificateThumbprint;
@@ -46,10 +46,10 @@ public final class LdapsSettingsResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="externalAccess")
-      private final @Nullable String externalAccess;
+    private @Nullable String externalAccess;
 
     public Optional<String> externalAccess() {
-        return this.externalAccess == null ? Optional.empty() : Optional.ofNullable(this.externalAccess);
+        return Optional.ofNullable(this.externalAccess);
     }
 
     /**
@@ -57,10 +57,10 @@ public final class LdapsSettingsResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="ldaps")
-      private final @Nullable String ldaps;
+    private @Nullable String ldaps;
 
     public Optional<String> ldaps() {
-        return this.ldaps == null ? Optional.empty() : Optional.ofNullable(this.ldaps);
+        return Optional.ofNullable(this.ldaps);
     }
 
     /**
@@ -68,10 +68,10 @@ public final class LdapsSettingsResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="pfxCertificate")
-      private final @Nullable String pfxCertificate;
+    private @Nullable String pfxCertificate;
 
     public Optional<String> pfxCertificate() {
-        return this.pfxCertificate == null ? Optional.empty() : Optional.ofNullable(this.pfxCertificate);
+        return Optional.ofNullable(this.pfxCertificate);
     }
 
     /**
@@ -79,10 +79,10 @@ public final class LdapsSettingsResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="pfxCertificatePassword")
-      private final @Nullable String pfxCertificatePassword;
+    private @Nullable String pfxCertificatePassword;
 
     public Optional<String> pfxCertificatePassword() {
-        return this.pfxCertificatePassword == null ? Optional.empty() : Optional.ofNullable(this.pfxCertificatePassword);
+        return Optional.ofNullable(this.pfxCertificatePassword);
     }
 
     /**
@@ -90,100 +90,85 @@ public final class LdapsSettingsResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="publicCertificate", required=true)
-      private final String publicCertificate;
+    private String publicCertificate;
 
     public String publicCertificate() {
         return this.publicCertificate;
     }
 
-    public LdapsSettingsResponse(
-        String certificateNotAfter,
-        String certificateThumbprint,
-        @Nullable String externalAccess,
-        @Nullable String ldaps,
-        @Nullable String pfxCertificate,
-        @Nullable String pfxCertificatePassword,
-        String publicCertificate) {
-        this.certificateNotAfter = Objects.requireNonNull(certificateNotAfter, "expected parameter 'certificateNotAfter' to be non-null");
-        this.certificateThumbprint = Objects.requireNonNull(certificateThumbprint, "expected parameter 'certificateThumbprint' to be non-null");
-        this.externalAccess = Codegen.stringProp("externalAccess").arg(externalAccess).def("Disabled").getNullable();
-        this.ldaps = Codegen.stringProp("ldaps").arg(ldaps).def("Disabled").getNullable();
-        this.pfxCertificate = pfxCertificate;
-        this.pfxCertificatePassword = pfxCertificatePassword;
-        this.publicCertificate = Objects.requireNonNull(publicCertificate, "expected parameter 'publicCertificate' to be non-null");
-    }
+    private LdapsSettingsResponse() {}
 
-    private LdapsSettingsResponse() {
-        this.certificateNotAfter = null;
-        this.certificateThumbprint = null;
-        this.externalAccess = null;
-        this.ldaps = null;
-        this.pfxCertificate = null;
-        this.pfxCertificatePassword = null;
-        this.publicCertificate = null;
+    private LdapsSettingsResponse(LdapsSettingsResponse $) {
+        this.certificateNotAfter = $.certificateNotAfter;
+        this.certificateThumbprint = $.certificateThumbprint;
+        this.externalAccess = $.externalAccess;
+        this.ldaps = $.ldaps;
+        this.pfxCertificate = $.pfxCertificate;
+        this.pfxCertificatePassword = $.pfxCertificatePassword;
+        this.publicCertificate = $.publicCertificate;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LdapsSettingsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String certificateNotAfter;
-        private String certificateThumbprint;
-        private @Nullable String externalAccess;
-        private @Nullable String ldaps;
-        private @Nullable String pfxCertificate;
-        private @Nullable String pfxCertificatePassword;
-        private String publicCertificate;
+        private LdapsSettingsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new LdapsSettingsResponse();
         }
 
         public Builder(LdapsSettingsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.certificateNotAfter = defaults.certificateNotAfter;
-    	      this.certificateThumbprint = defaults.certificateThumbprint;
-    	      this.externalAccess = defaults.externalAccess;
-    	      this.ldaps = defaults.ldaps;
-    	      this.pfxCertificate = defaults.pfxCertificate;
-    	      this.pfxCertificatePassword = defaults.pfxCertificatePassword;
-    	      this.publicCertificate = defaults.publicCertificate;
+            $ = new LdapsSettingsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder certificateNotAfter(String certificateNotAfter) {
-            this.certificateNotAfter = Objects.requireNonNull(certificateNotAfter);
+            $.certificateNotAfter = certificateNotAfter;
             return this;
         }
+
         public Builder certificateThumbprint(String certificateThumbprint) {
-            this.certificateThumbprint = Objects.requireNonNull(certificateThumbprint);
+            $.certificateThumbprint = certificateThumbprint;
             return this;
         }
+
         public Builder externalAccess(@Nullable String externalAccess) {
-            this.externalAccess = externalAccess;
+            $.externalAccess = externalAccess;
             return this;
         }
+
         public Builder ldaps(@Nullable String ldaps) {
-            this.ldaps = ldaps;
+            $.ldaps = ldaps;
             return this;
         }
+
         public Builder pfxCertificate(@Nullable String pfxCertificate) {
-            this.pfxCertificate = pfxCertificate;
+            $.pfxCertificate = pfxCertificate;
             return this;
         }
+
         public Builder pfxCertificatePassword(@Nullable String pfxCertificatePassword) {
-            this.pfxCertificatePassword = pfxCertificatePassword;
+            $.pfxCertificatePassword = pfxCertificatePassword;
             return this;
         }
+
         public Builder publicCertificate(String publicCertificate) {
-            this.publicCertificate = Objects.requireNonNull(publicCertificate);
+            $.publicCertificate = publicCertificate;
             return this;
-        }        public LdapsSettingsResponse build() {
-            return new LdapsSettingsResponse(certificateNotAfter, certificateThumbprint, externalAccess, ldaps, pfxCertificate, pfxCertificatePassword, publicCertificate);
+        }
+
+        public LdapsSettingsResponse build() {
+            $.certificateNotAfter = Objects.requireNonNull($.certificateNotAfter, "expected parameter 'certificateNotAfter' to be non-null");
+            $.certificateThumbprint = Objects.requireNonNull($.certificateThumbprint, "expected parameter 'certificateThumbprint' to be non-null");
+            $.externalAccess = Codegen.stringProp("externalAccess").arg($.externalAccess).def("Disabled").getNullable();
+            $.ldaps = Codegen.stringProp("ldaps").arg($.ldaps).def("Disabled").getNullable();
+            $.publicCertificate = Objects.requireNonNull($.publicCertificate, "expected parameter 'publicCertificate' to be non-null");
+            return $;
         }
     }
+
 }

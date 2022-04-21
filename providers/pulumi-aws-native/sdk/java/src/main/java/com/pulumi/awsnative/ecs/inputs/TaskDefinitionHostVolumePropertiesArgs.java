@@ -5,9 +5,9 @@ package com.pulumi.awsnative.ecs.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -16,49 +16,48 @@ public final class TaskDefinitionHostVolumePropertiesArgs extends com.pulumi.res
     public static final TaskDefinitionHostVolumePropertiesArgs Empty = new TaskDefinitionHostVolumePropertiesArgs();
 
     @Import(name="sourcePath")
-      private final @Nullable Output<String> sourcePath;
+    private @Nullable Output<String> sourcePath;
 
-    public Output<String> sourcePath() {
-        return this.sourcePath == null ? Codegen.empty() : this.sourcePath;
+    public Optional<Output<String>> sourcePath() {
+        return Optional.ofNullable(this.sourcePath);
     }
 
-    public TaskDefinitionHostVolumePropertiesArgs(@Nullable Output<String> sourcePath) {
-        this.sourcePath = sourcePath;
-    }
+    private TaskDefinitionHostVolumePropertiesArgs() {}
 
-    private TaskDefinitionHostVolumePropertiesArgs() {
-        this.sourcePath = Codegen.empty();
+    private TaskDefinitionHostVolumePropertiesArgs(TaskDefinitionHostVolumePropertiesArgs $) {
+        this.sourcePath = $.sourcePath;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TaskDefinitionHostVolumePropertiesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> sourcePath;
+        private TaskDefinitionHostVolumePropertiesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TaskDefinitionHostVolumePropertiesArgs();
         }
 
         public Builder(TaskDefinitionHostVolumePropertiesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.sourcePath = defaults.sourcePath;
+            $ = new TaskDefinitionHostVolumePropertiesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder sourcePath(@Nullable Output<String> sourcePath) {
-            this.sourcePath = sourcePath;
+            $.sourcePath = sourcePath;
             return this;
         }
-        public Builder sourcePath(@Nullable String sourcePath) {
-            this.sourcePath = Codegen.ofNullable(sourcePath);
-            return this;
-        }        public TaskDefinitionHostVolumePropertiesArgs build() {
-            return new TaskDefinitionHostVolumePropertiesArgs(sourcePath);
+
+        public Builder sourcePath(String sourcePath) {
+            return sourcePath(Output.of(sourcePath));
+        }
+
+        public TaskDefinitionHostVolumePropertiesArgs build() {
+            return $;
         }
     }
+
 }

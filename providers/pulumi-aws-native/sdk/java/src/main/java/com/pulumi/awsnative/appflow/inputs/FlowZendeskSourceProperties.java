@@ -13,45 +13,45 @@ public final class FlowZendeskSourceProperties extends com.pulumi.resources.Invo
     public static final FlowZendeskSourceProperties Empty = new FlowZendeskSourceProperties();
 
     @Import(name="object", required=true)
-      private final String object;
+    private String object;
 
     public String object() {
         return this.object;
     }
 
-    public FlowZendeskSourceProperties(String object) {
-        this.object = Objects.requireNonNull(object, "expected parameter 'object' to be non-null");
-    }
+    private FlowZendeskSourceProperties() {}
 
-    private FlowZendeskSourceProperties() {
-        this.object = null;
+    private FlowZendeskSourceProperties(FlowZendeskSourceProperties $) {
+        this.object = $.object;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FlowZendeskSourceProperties defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String object;
+        private FlowZendeskSourceProperties $;
 
         public Builder() {
-    	      // Empty
+            $ = new FlowZendeskSourceProperties();
         }
 
         public Builder(FlowZendeskSourceProperties defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.object = defaults.object;
+            $ = new FlowZendeskSourceProperties(Objects.requireNonNull(defaults));
         }
 
         public Builder object(String object) {
-            this.object = Objects.requireNonNull(object);
+            $.object = object;
             return this;
-        }        public FlowZendeskSourceProperties build() {
-            return new FlowZendeskSourceProperties(object);
+        }
+
+        public FlowZendeskSourceProperties build() {
+            $.object = Objects.requireNonNull($.object, "expected parameter 'object' to be non-null");
+            return $;
         }
     }
+
 }

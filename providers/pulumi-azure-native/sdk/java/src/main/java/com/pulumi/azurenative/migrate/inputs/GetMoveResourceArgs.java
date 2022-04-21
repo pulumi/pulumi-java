@@ -17,7 +17,7 @@ public final class GetMoveResourceArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="moveCollectionName", required=true)
-      private final String moveCollectionName;
+    private String moveCollectionName;
 
     public String moveCollectionName() {
         return this.moveCollectionName;
@@ -28,7 +28,7 @@ public final class GetMoveResourceArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="moveResourceName", required=true)
-      private final String moveResourceName;
+    private String moveResourceName;
 
     public String moveResourceName() {
         return this.moveResourceName;
@@ -39,64 +39,59 @@ public final class GetMoveResourceArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public GetMoveResourceArgs(
-        String moveCollectionName,
-        String moveResourceName,
-        String resourceGroupName) {
-        this.moveCollectionName = Objects.requireNonNull(moveCollectionName, "expected parameter 'moveCollectionName' to be non-null");
-        this.moveResourceName = Objects.requireNonNull(moveResourceName, "expected parameter 'moveResourceName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private GetMoveResourceArgs() {}
 
-    private GetMoveResourceArgs() {
-        this.moveCollectionName = null;
-        this.moveResourceName = null;
-        this.resourceGroupName = null;
+    private GetMoveResourceArgs(GetMoveResourceArgs $) {
+        this.moveCollectionName = $.moveCollectionName;
+        this.moveResourceName = $.moveResourceName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetMoveResourceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String moveCollectionName;
-        private String moveResourceName;
-        private String resourceGroupName;
+        private GetMoveResourceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetMoveResourceArgs();
         }
 
         public Builder(GetMoveResourceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.moveCollectionName = defaults.moveCollectionName;
-    	      this.moveResourceName = defaults.moveResourceName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new GetMoveResourceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder moveCollectionName(String moveCollectionName) {
-            this.moveCollectionName = Objects.requireNonNull(moveCollectionName);
+            $.moveCollectionName = moveCollectionName;
             return this;
         }
+
         public Builder moveResourceName(String moveResourceName) {
-            this.moveResourceName = Objects.requireNonNull(moveResourceName);
+            $.moveResourceName = moveResourceName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public GetMoveResourceArgs build() {
-            return new GetMoveResourceArgs(moveCollectionName, moveResourceName, resourceGroupName);
+        }
+
+        public GetMoveResourceArgs build() {
+            $.moveCollectionName = Objects.requireNonNull($.moveCollectionName, "expected parameter 'moveCollectionName' to be non-null");
+            $.moveResourceName = Objects.requireNonNull($.moveResourceName, "expected parameter 'moveResourceName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

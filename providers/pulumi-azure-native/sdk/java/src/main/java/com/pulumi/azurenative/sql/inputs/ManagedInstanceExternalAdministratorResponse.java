@@ -24,10 +24,10 @@ public final class ManagedInstanceExternalAdministratorResponse extends com.pulu
      * 
      */
     @Import(name="administratorType")
-      private final @Nullable String administratorType;
+    private @Nullable String administratorType;
 
     public Optional<String> administratorType() {
-        return this.administratorType == null ? Optional.empty() : Optional.ofNullable(this.administratorType);
+        return Optional.ofNullable(this.administratorType);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class ManagedInstanceExternalAdministratorResponse extends com.pulu
      * 
      */
     @Import(name="azureADOnlyAuthentication")
-      private final @Nullable Boolean azureADOnlyAuthentication;
+    private @Nullable Boolean azureADOnlyAuthentication;
 
     public Optional<Boolean> azureADOnlyAuthentication() {
-        return this.azureADOnlyAuthentication == null ? Optional.empty() : Optional.ofNullable(this.azureADOnlyAuthentication);
+        return Optional.ofNullable(this.azureADOnlyAuthentication);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class ManagedInstanceExternalAdministratorResponse extends com.pulu
      * 
      */
     @Import(name="login")
-      private final @Nullable String login;
+    private @Nullable String login;
 
     public Optional<String> login() {
-        return this.login == null ? Optional.empty() : Optional.ofNullable(this.login);
+        return Optional.ofNullable(this.login);
     }
 
     /**
@@ -57,10 +57,10 @@ public final class ManagedInstanceExternalAdministratorResponse extends com.pulu
      * 
      */
     @Import(name="principalType")
-      private final @Nullable String principalType;
+    private @Nullable String principalType;
 
     public Optional<String> principalType() {
-        return this.principalType == null ? Optional.empty() : Optional.ofNullable(this.principalType);
+        return Optional.ofNullable(this.principalType);
     }
 
     /**
@@ -68,10 +68,10 @@ public final class ManagedInstanceExternalAdministratorResponse extends com.pulu
      * 
      */
     @Import(name="sid")
-      private final @Nullable String sid;
+    private @Nullable String sid;
 
     public Optional<String> sid() {
-        return this.sid == null ? Optional.empty() : Optional.ofNullable(this.sid);
+        return Optional.ofNullable(this.sid);
     }
 
     /**
@@ -79,91 +79,74 @@ public final class ManagedInstanceExternalAdministratorResponse extends com.pulu
      * 
      */
     @Import(name="tenantId")
-      private final @Nullable String tenantId;
+    private @Nullable String tenantId;
 
     public Optional<String> tenantId() {
-        return this.tenantId == null ? Optional.empty() : Optional.ofNullable(this.tenantId);
+        return Optional.ofNullable(this.tenantId);
     }
 
-    public ManagedInstanceExternalAdministratorResponse(
-        @Nullable String administratorType,
-        @Nullable Boolean azureADOnlyAuthentication,
-        @Nullable String login,
-        @Nullable String principalType,
-        @Nullable String sid,
-        @Nullable String tenantId) {
-        this.administratorType = administratorType;
-        this.azureADOnlyAuthentication = azureADOnlyAuthentication;
-        this.login = login;
-        this.principalType = principalType;
-        this.sid = sid;
-        this.tenantId = tenantId;
-    }
+    private ManagedInstanceExternalAdministratorResponse() {}
 
-    private ManagedInstanceExternalAdministratorResponse() {
-        this.administratorType = null;
-        this.azureADOnlyAuthentication = null;
-        this.login = null;
-        this.principalType = null;
-        this.sid = null;
-        this.tenantId = null;
+    private ManagedInstanceExternalAdministratorResponse(ManagedInstanceExternalAdministratorResponse $) {
+        this.administratorType = $.administratorType;
+        this.azureADOnlyAuthentication = $.azureADOnlyAuthentication;
+        this.login = $.login;
+        this.principalType = $.principalType;
+        this.sid = $.sid;
+        this.tenantId = $.tenantId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ManagedInstanceExternalAdministratorResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String administratorType;
-        private @Nullable Boolean azureADOnlyAuthentication;
-        private @Nullable String login;
-        private @Nullable String principalType;
-        private @Nullable String sid;
-        private @Nullable String tenantId;
+        private ManagedInstanceExternalAdministratorResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ManagedInstanceExternalAdministratorResponse();
         }
 
         public Builder(ManagedInstanceExternalAdministratorResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.administratorType = defaults.administratorType;
-    	      this.azureADOnlyAuthentication = defaults.azureADOnlyAuthentication;
-    	      this.login = defaults.login;
-    	      this.principalType = defaults.principalType;
-    	      this.sid = defaults.sid;
-    	      this.tenantId = defaults.tenantId;
+            $ = new ManagedInstanceExternalAdministratorResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder administratorType(@Nullable String administratorType) {
-            this.administratorType = administratorType;
+            $.administratorType = administratorType;
             return this;
         }
+
         public Builder azureADOnlyAuthentication(@Nullable Boolean azureADOnlyAuthentication) {
-            this.azureADOnlyAuthentication = azureADOnlyAuthentication;
+            $.azureADOnlyAuthentication = azureADOnlyAuthentication;
             return this;
         }
+
         public Builder login(@Nullable String login) {
-            this.login = login;
+            $.login = login;
             return this;
         }
+
         public Builder principalType(@Nullable String principalType) {
-            this.principalType = principalType;
+            $.principalType = principalType;
             return this;
         }
+
         public Builder sid(@Nullable String sid) {
-            this.sid = sid;
+            $.sid = sid;
             return this;
         }
+
         public Builder tenantId(@Nullable String tenantId) {
-            this.tenantId = tenantId;
+            $.tenantId = tenantId;
             return this;
-        }        public ManagedInstanceExternalAdministratorResponse build() {
-            return new ManagedInstanceExternalAdministratorResponse(administratorType, azureADOnlyAuthentication, login, principalType, sid, tenantId);
+        }
+
+        public ManagedInstanceExternalAdministratorResponse build() {
+            return $;
         }
     }
+
 }

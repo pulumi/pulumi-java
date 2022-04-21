@@ -17,45 +17,45 @@ public final class GetUserPoolClientsArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="userPoolId", required=true)
-      private final String userPoolId;
+    private String userPoolId;
 
     public String userPoolId() {
         return this.userPoolId;
     }
 
-    public GetUserPoolClientsArgs(String userPoolId) {
-        this.userPoolId = Objects.requireNonNull(userPoolId, "expected parameter 'userPoolId' to be non-null");
-    }
+    private GetUserPoolClientsArgs() {}
 
-    private GetUserPoolClientsArgs() {
-        this.userPoolId = null;
+    private GetUserPoolClientsArgs(GetUserPoolClientsArgs $) {
+        this.userPoolId = $.userPoolId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetUserPoolClientsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String userPoolId;
+        private GetUserPoolClientsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetUserPoolClientsArgs();
         }
 
         public Builder(GetUserPoolClientsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.userPoolId = defaults.userPoolId;
+            $ = new GetUserPoolClientsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder userPoolId(String userPoolId) {
-            this.userPoolId = Objects.requireNonNull(userPoolId);
+            $.userPoolId = userPoolId;
             return this;
-        }        public GetUserPoolClientsArgs build() {
-            return new GetUserPoolClientsArgs(userPoolId);
+        }
+
+        public GetUserPoolClientsArgs build() {
+            $.userPoolId = Objects.requireNonNull($.userPoolId, "expected parameter 'userPoolId' to be non-null");
+            return $;
         }
     }
+
 }

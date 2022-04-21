@@ -5,9 +5,9 @@ package com.pulumi.azurenative.media.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class CrossSiteAccessPoliciesArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="clientAccessPolicy")
-      private final @Nullable Output<String> clientAccessPolicy;
+    private @Nullable Output<String> clientAccessPolicy;
 
-    public Output<String> clientAccessPolicy() {
-        return this.clientAccessPolicy == null ? Codegen.empty() : this.clientAccessPolicy;
+    public Optional<Output<String>> clientAccessPolicy() {
+        return Optional.ofNullable(this.clientAccessPolicy);
     }
 
     /**
@@ -35,63 +35,58 @@ public final class CrossSiteAccessPoliciesArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="crossDomainPolicy")
-      private final @Nullable Output<String> crossDomainPolicy;
+    private @Nullable Output<String> crossDomainPolicy;
 
-    public Output<String> crossDomainPolicy() {
-        return this.crossDomainPolicy == null ? Codegen.empty() : this.crossDomainPolicy;
+    public Optional<Output<String>> crossDomainPolicy() {
+        return Optional.ofNullable(this.crossDomainPolicy);
     }
 
-    public CrossSiteAccessPoliciesArgs(
-        @Nullable Output<String> clientAccessPolicy,
-        @Nullable Output<String> crossDomainPolicy) {
-        this.clientAccessPolicy = clientAccessPolicy;
-        this.crossDomainPolicy = crossDomainPolicy;
-    }
+    private CrossSiteAccessPoliciesArgs() {}
 
-    private CrossSiteAccessPoliciesArgs() {
-        this.clientAccessPolicy = Codegen.empty();
-        this.crossDomainPolicy = Codegen.empty();
+    private CrossSiteAccessPoliciesArgs(CrossSiteAccessPoliciesArgs $) {
+        this.clientAccessPolicy = $.clientAccessPolicy;
+        this.crossDomainPolicy = $.crossDomainPolicy;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CrossSiteAccessPoliciesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> clientAccessPolicy;
-        private @Nullable Output<String> crossDomainPolicy;
+        private CrossSiteAccessPoliciesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CrossSiteAccessPoliciesArgs();
         }
 
         public Builder(CrossSiteAccessPoliciesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.clientAccessPolicy = defaults.clientAccessPolicy;
-    	      this.crossDomainPolicy = defaults.crossDomainPolicy;
+            $ = new CrossSiteAccessPoliciesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder clientAccessPolicy(@Nullable Output<String> clientAccessPolicy) {
-            this.clientAccessPolicy = clientAccessPolicy;
+            $.clientAccessPolicy = clientAccessPolicy;
             return this;
         }
-        public Builder clientAccessPolicy(@Nullable String clientAccessPolicy) {
-            this.clientAccessPolicy = Codegen.ofNullable(clientAccessPolicy);
-            return this;
+
+        public Builder clientAccessPolicy(String clientAccessPolicy) {
+            return clientAccessPolicy(Output.of(clientAccessPolicy));
         }
+
         public Builder crossDomainPolicy(@Nullable Output<String> crossDomainPolicy) {
-            this.crossDomainPolicy = crossDomainPolicy;
+            $.crossDomainPolicy = crossDomainPolicy;
             return this;
         }
-        public Builder crossDomainPolicy(@Nullable String crossDomainPolicy) {
-            this.crossDomainPolicy = Codegen.ofNullable(crossDomainPolicy);
-            return this;
-        }        public CrossSiteAccessPoliciesArgs build() {
-            return new CrossSiteAccessPoliciesArgs(clientAccessPolicy, crossDomainPolicy);
+
+        public Builder crossDomainPolicy(String crossDomainPolicy) {
+            return crossDomainPolicy(Output.of(crossDomainPolicy));
+        }
+
+        public CrossSiteAccessPoliciesArgs build() {
+            return $;
         }
     }
+
 }

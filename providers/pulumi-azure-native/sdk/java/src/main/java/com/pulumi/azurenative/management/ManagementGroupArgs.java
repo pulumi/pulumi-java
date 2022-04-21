@@ -6,9 +6,9 @@ package com.pulumi.azurenative.management;
 import com.pulumi.azurenative.management.inputs.CreateManagementGroupDetailsArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class ManagementGroupArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="details")
-      private final @Nullable Output<CreateManagementGroupDetailsArgs> details;
+    private @Nullable Output<CreateManagementGroupDetailsArgs> details;
 
-    public Output<CreateManagementGroupDetailsArgs> details() {
-        return this.details == null ? Codegen.empty() : this.details;
+    public Optional<Output<CreateManagementGroupDetailsArgs>> details() {
+        return Optional.ofNullable(this.details);
     }
 
     /**
@@ -32,10 +32,10 @@ public final class ManagementGroupArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="displayName")
-      private final @Nullable Output<String> displayName;
+    private @Nullable Output<String> displayName;
 
-    public Output<String> displayName() {
-        return this.displayName == null ? Codegen.empty() : this.displayName;
+    public Optional<Output<String>> displayName() {
+        return Optional.ofNullable(this.displayName);
     }
 
     /**
@@ -43,10 +43,10 @@ public final class ManagementGroupArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="groupId")
-      private final @Nullable Output<String> groupId;
+    private @Nullable Output<String> groupId;
 
-    public Output<String> groupId() {
-        return this.groupId == null ? Codegen.empty() : this.groupId;
+    public Optional<Output<String>> groupId() {
+        return Optional.ofNullable(this.groupId);
     }
 
     /**
@@ -54,89 +54,78 @@ public final class ManagementGroupArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
-    public ManagementGroupArgs(
-        @Nullable Output<CreateManagementGroupDetailsArgs> details,
-        @Nullable Output<String> displayName,
-        @Nullable Output<String> groupId,
-        @Nullable Output<String> name) {
-        this.details = details;
-        this.displayName = displayName;
-        this.groupId = groupId;
-        this.name = name;
-    }
+    private ManagementGroupArgs() {}
 
-    private ManagementGroupArgs() {
-        this.details = Codegen.empty();
-        this.displayName = Codegen.empty();
-        this.groupId = Codegen.empty();
-        this.name = Codegen.empty();
+    private ManagementGroupArgs(ManagementGroupArgs $) {
+        this.details = $.details;
+        this.displayName = $.displayName;
+        this.groupId = $.groupId;
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ManagementGroupArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<CreateManagementGroupDetailsArgs> details;
-        private @Nullable Output<String> displayName;
-        private @Nullable Output<String> groupId;
-        private @Nullable Output<String> name;
+        private ManagementGroupArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ManagementGroupArgs();
         }
 
         public Builder(ManagementGroupArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.details = defaults.details;
-    	      this.displayName = defaults.displayName;
-    	      this.groupId = defaults.groupId;
-    	      this.name = defaults.name;
+            $ = new ManagementGroupArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder details(@Nullable Output<CreateManagementGroupDetailsArgs> details) {
-            this.details = details;
+            $.details = details;
             return this;
         }
-        public Builder details(@Nullable CreateManagementGroupDetailsArgs details) {
-            this.details = Codegen.ofNullable(details);
-            return this;
+
+        public Builder details(CreateManagementGroupDetailsArgs details) {
+            return details(Output.of(details));
         }
+
         public Builder displayName(@Nullable Output<String> displayName) {
-            this.displayName = displayName;
+            $.displayName = displayName;
             return this;
         }
-        public Builder displayName(@Nullable String displayName) {
-            this.displayName = Codegen.ofNullable(displayName);
-            return this;
+
+        public Builder displayName(String displayName) {
+            return displayName(Output.of(displayName));
         }
+
         public Builder groupId(@Nullable Output<String> groupId) {
-            this.groupId = groupId;
+            $.groupId = groupId;
             return this;
         }
-        public Builder groupId(@Nullable String groupId) {
-            this.groupId = Codegen.ofNullable(groupId);
-            return this;
+
+        public Builder groupId(String groupId) {
+            return groupId(Output.of(groupId));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
-        }        public ManagementGroupArgs build() {
-            return new ManagementGroupArgs(details, displayName, groupId, name);
+
+        public Builder name(String name) {
+            return name(Output.of(name));
+        }
+
+        public ManagementGroupArgs build() {
+            return $;
         }
     }
+
 }

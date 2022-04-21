@@ -6,9 +6,9 @@ package com.pulumi.awsnative.evidently.inputs;
 import com.pulumi.awsnative.evidently.inputs.ProjectS3DestinationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,70 +21,65 @@ public final class ProjectDataDeliveryObjectArgs extends com.pulumi.resources.Re
     public static final ProjectDataDeliveryObjectArgs Empty = new ProjectDataDeliveryObjectArgs();
 
     @Import(name="logGroup")
-      private final @Nullable Output<String> logGroup;
+    private @Nullable Output<String> logGroup;
 
-    public Output<String> logGroup() {
-        return this.logGroup == null ? Codegen.empty() : this.logGroup;
+    public Optional<Output<String>> logGroup() {
+        return Optional.ofNullable(this.logGroup);
     }
 
     @Import(name="s3")
-      private final @Nullable Output<ProjectS3DestinationArgs> s3;
+    private @Nullable Output<ProjectS3DestinationArgs> s3;
 
-    public Output<ProjectS3DestinationArgs> s3() {
-        return this.s3 == null ? Codegen.empty() : this.s3;
+    public Optional<Output<ProjectS3DestinationArgs>> s3() {
+        return Optional.ofNullable(this.s3);
     }
 
-    public ProjectDataDeliveryObjectArgs(
-        @Nullable Output<String> logGroup,
-        @Nullable Output<ProjectS3DestinationArgs> s3) {
-        this.logGroup = logGroup;
-        this.s3 = s3;
-    }
+    private ProjectDataDeliveryObjectArgs() {}
 
-    private ProjectDataDeliveryObjectArgs() {
-        this.logGroup = Codegen.empty();
-        this.s3 = Codegen.empty();
+    private ProjectDataDeliveryObjectArgs(ProjectDataDeliveryObjectArgs $) {
+        this.logGroup = $.logGroup;
+        this.s3 = $.s3;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ProjectDataDeliveryObjectArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> logGroup;
-        private @Nullable Output<ProjectS3DestinationArgs> s3;
+        private ProjectDataDeliveryObjectArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ProjectDataDeliveryObjectArgs();
         }
 
         public Builder(ProjectDataDeliveryObjectArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.logGroup = defaults.logGroup;
-    	      this.s3 = defaults.s3;
+            $ = new ProjectDataDeliveryObjectArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder logGroup(@Nullable Output<String> logGroup) {
-            this.logGroup = logGroup;
+            $.logGroup = logGroup;
             return this;
         }
-        public Builder logGroup(@Nullable String logGroup) {
-            this.logGroup = Codegen.ofNullable(logGroup);
-            return this;
+
+        public Builder logGroup(String logGroup) {
+            return logGroup(Output.of(logGroup));
         }
+
         public Builder s3(@Nullable Output<ProjectS3DestinationArgs> s3) {
-            this.s3 = s3;
+            $.s3 = s3;
             return this;
         }
-        public Builder s3(@Nullable ProjectS3DestinationArgs s3) {
-            this.s3 = Codegen.ofNullable(s3);
-            return this;
-        }        public ProjectDataDeliveryObjectArgs build() {
-            return new ProjectDataDeliveryObjectArgs(logGroup, s3);
+
+        public Builder s3(ProjectS3DestinationArgs s3) {
+            return s3(Output.of(s3));
+        }
+
+        public ProjectDataDeliveryObjectArgs build() {
+            return $;
         }
     }
+
 }

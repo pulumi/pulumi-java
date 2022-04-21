@@ -23,45 +23,44 @@ public final class ApiResourceBackendServiceResponse extends com.pulumi.resource
      * 
      */
     @Import(name="serviceUrl")
-      private final @Nullable String serviceUrl;
+    private @Nullable String serviceUrl;
 
     public Optional<String> serviceUrl() {
-        return this.serviceUrl == null ? Optional.empty() : Optional.ofNullable(this.serviceUrl);
+        return Optional.ofNullable(this.serviceUrl);
     }
 
-    public ApiResourceBackendServiceResponse(@Nullable String serviceUrl) {
-        this.serviceUrl = serviceUrl;
-    }
+    private ApiResourceBackendServiceResponse() {}
 
-    private ApiResourceBackendServiceResponse() {
-        this.serviceUrl = null;
+    private ApiResourceBackendServiceResponse(ApiResourceBackendServiceResponse $) {
+        this.serviceUrl = $.serviceUrl;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ApiResourceBackendServiceResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String serviceUrl;
+        private ApiResourceBackendServiceResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ApiResourceBackendServiceResponse();
         }
 
         public Builder(ApiResourceBackendServiceResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.serviceUrl = defaults.serviceUrl;
+            $ = new ApiResourceBackendServiceResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder serviceUrl(@Nullable String serviceUrl) {
-            this.serviceUrl = serviceUrl;
+            $.serviceUrl = serviceUrl;
             return this;
-        }        public ApiResourceBackendServiceResponse build() {
-            return new ApiResourceBackendServiceResponse(serviceUrl);
+        }
+
+        public ApiResourceBackendServiceResponse build() {
+            return $;
         }
     }
+
 }

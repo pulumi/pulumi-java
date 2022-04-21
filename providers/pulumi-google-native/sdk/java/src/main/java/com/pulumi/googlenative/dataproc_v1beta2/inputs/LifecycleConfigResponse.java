@@ -21,7 +21,7 @@ public final class LifecycleConfigResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="autoDeleteTime", required=true)
-      private final String autoDeleteTime;
+    private String autoDeleteTime;
 
     public String autoDeleteTime() {
         return this.autoDeleteTime;
@@ -32,7 +32,7 @@ public final class LifecycleConfigResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="autoDeleteTtl", required=true)
-      private final String autoDeleteTtl;
+    private String autoDeleteTtl;
 
     public String autoDeleteTtl() {
         return this.autoDeleteTtl;
@@ -43,7 +43,7 @@ public final class LifecycleConfigResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="idleDeleteTtl", required=true)
-      private final String idleDeleteTtl;
+    private String idleDeleteTtl;
 
     public String idleDeleteTtl() {
         return this.idleDeleteTtl;
@@ -54,73 +54,66 @@ public final class LifecycleConfigResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="idleStartTime", required=true)
-      private final String idleStartTime;
+    private String idleStartTime;
 
     public String idleStartTime() {
         return this.idleStartTime;
     }
 
-    public LifecycleConfigResponse(
-        String autoDeleteTime,
-        String autoDeleteTtl,
-        String idleDeleteTtl,
-        String idleStartTime) {
-        this.autoDeleteTime = Objects.requireNonNull(autoDeleteTime, "expected parameter 'autoDeleteTime' to be non-null");
-        this.autoDeleteTtl = Objects.requireNonNull(autoDeleteTtl, "expected parameter 'autoDeleteTtl' to be non-null");
-        this.idleDeleteTtl = Objects.requireNonNull(idleDeleteTtl, "expected parameter 'idleDeleteTtl' to be non-null");
-        this.idleStartTime = Objects.requireNonNull(idleStartTime, "expected parameter 'idleStartTime' to be non-null");
-    }
+    private LifecycleConfigResponse() {}
 
-    private LifecycleConfigResponse() {
-        this.autoDeleteTime = null;
-        this.autoDeleteTtl = null;
-        this.idleDeleteTtl = null;
-        this.idleStartTime = null;
+    private LifecycleConfigResponse(LifecycleConfigResponse $) {
+        this.autoDeleteTime = $.autoDeleteTime;
+        this.autoDeleteTtl = $.autoDeleteTtl;
+        this.idleDeleteTtl = $.idleDeleteTtl;
+        this.idleStartTime = $.idleStartTime;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LifecycleConfigResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String autoDeleteTime;
-        private String autoDeleteTtl;
-        private String idleDeleteTtl;
-        private String idleStartTime;
+        private LifecycleConfigResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new LifecycleConfigResponse();
         }
 
         public Builder(LifecycleConfigResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.autoDeleteTime = defaults.autoDeleteTime;
-    	      this.autoDeleteTtl = defaults.autoDeleteTtl;
-    	      this.idleDeleteTtl = defaults.idleDeleteTtl;
-    	      this.idleStartTime = defaults.idleStartTime;
+            $ = new LifecycleConfigResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder autoDeleteTime(String autoDeleteTime) {
-            this.autoDeleteTime = Objects.requireNonNull(autoDeleteTime);
+            $.autoDeleteTime = autoDeleteTime;
             return this;
         }
+
         public Builder autoDeleteTtl(String autoDeleteTtl) {
-            this.autoDeleteTtl = Objects.requireNonNull(autoDeleteTtl);
+            $.autoDeleteTtl = autoDeleteTtl;
             return this;
         }
+
         public Builder idleDeleteTtl(String idleDeleteTtl) {
-            this.idleDeleteTtl = Objects.requireNonNull(idleDeleteTtl);
+            $.idleDeleteTtl = idleDeleteTtl;
             return this;
         }
+
         public Builder idleStartTime(String idleStartTime) {
-            this.idleStartTime = Objects.requireNonNull(idleStartTime);
+            $.idleStartTime = idleStartTime;
             return this;
-        }        public LifecycleConfigResponse build() {
-            return new LifecycleConfigResponse(autoDeleteTime, autoDeleteTtl, idleDeleteTtl, idleStartTime);
+        }
+
+        public LifecycleConfigResponse build() {
+            $.autoDeleteTime = Objects.requireNonNull($.autoDeleteTime, "expected parameter 'autoDeleteTime' to be non-null");
+            $.autoDeleteTtl = Objects.requireNonNull($.autoDeleteTtl, "expected parameter 'autoDeleteTtl' to be non-null");
+            $.idleDeleteTtl = Objects.requireNonNull($.idleDeleteTtl, "expected parameter 'idleDeleteTtl' to be non-null");
+            $.idleStartTime = Objects.requireNonNull($.idleStartTime, "expected parameter 'idleStartTime' to be non-null");
+            return $;
         }
     }
+
 }

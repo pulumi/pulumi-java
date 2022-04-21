@@ -5,10 +5,10 @@ package com.pulumi.awsnative.apigateway.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class UsagePlanApiStageArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="apiId")
-      private final @Nullable Output<String> apiId;
+    private @Nullable Output<String> apiId;
 
-    public Output<String> apiId() {
-        return this.apiId == null ? Codegen.empty() : this.apiId;
+    public Optional<Output<String>> apiId() {
+        return Optional.ofNullable(this.apiId);
     }
 
     /**
@@ -32,10 +32,10 @@ public final class UsagePlanApiStageArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="stage")
-      private final @Nullable Output<String> stage;
+    private @Nullable Output<String> stage;
 
-    public Output<String> stage() {
-        return this.stage == null ? Codegen.empty() : this.stage;
+    public Optional<Output<String>> stage() {
+        return Optional.ofNullable(this.stage);
     }
 
     /**
@@ -43,76 +43,68 @@ public final class UsagePlanApiStageArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="throttle")
-      private final @Nullable Output<Object> throttle;
+    private @Nullable Output<Object> throttle;
 
-    public Output<Object> throttle() {
-        return this.throttle == null ? Codegen.empty() : this.throttle;
+    public Optional<Output<Object>> throttle() {
+        return Optional.ofNullable(this.throttle);
     }
 
-    public UsagePlanApiStageArgs(
-        @Nullable Output<String> apiId,
-        @Nullable Output<String> stage,
-        @Nullable Output<Object> throttle) {
-        this.apiId = apiId;
-        this.stage = stage;
-        this.throttle = throttle;
-    }
+    private UsagePlanApiStageArgs() {}
 
-    private UsagePlanApiStageArgs() {
-        this.apiId = Codegen.empty();
-        this.stage = Codegen.empty();
-        this.throttle = Codegen.empty();
+    private UsagePlanApiStageArgs(UsagePlanApiStageArgs $) {
+        this.apiId = $.apiId;
+        this.stage = $.stage;
+        this.throttle = $.throttle;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(UsagePlanApiStageArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> apiId;
-        private @Nullable Output<String> stage;
-        private @Nullable Output<Object> throttle;
+        private UsagePlanApiStageArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new UsagePlanApiStageArgs();
         }
 
         public Builder(UsagePlanApiStageArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.apiId = defaults.apiId;
-    	      this.stage = defaults.stage;
-    	      this.throttle = defaults.throttle;
+            $ = new UsagePlanApiStageArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder apiId(@Nullable Output<String> apiId) {
-            this.apiId = apiId;
+            $.apiId = apiId;
             return this;
         }
-        public Builder apiId(@Nullable String apiId) {
-            this.apiId = Codegen.ofNullable(apiId);
-            return this;
+
+        public Builder apiId(String apiId) {
+            return apiId(Output.of(apiId));
         }
+
         public Builder stage(@Nullable Output<String> stage) {
-            this.stage = stage;
+            $.stage = stage;
             return this;
         }
-        public Builder stage(@Nullable String stage) {
-            this.stage = Codegen.ofNullable(stage);
-            return this;
+
+        public Builder stage(String stage) {
+            return stage(Output.of(stage));
         }
+
         public Builder throttle(@Nullable Output<Object> throttle) {
-            this.throttle = throttle;
+            $.throttle = throttle;
             return this;
         }
-        public Builder throttle(@Nullable Object throttle) {
-            this.throttle = Codegen.ofNullable(throttle);
-            return this;
-        }        public UsagePlanApiStageArgs build() {
-            return new UsagePlanApiStageArgs(apiId, stage, throttle);
+
+        public Builder throttle(Object throttle) {
+            return throttle(Output.of(throttle));
+        }
+
+        public UsagePlanApiStageArgs build() {
+            return $;
         }
     }
+
 }

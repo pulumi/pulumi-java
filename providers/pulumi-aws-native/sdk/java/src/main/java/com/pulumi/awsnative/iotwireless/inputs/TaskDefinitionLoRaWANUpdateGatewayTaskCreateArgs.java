@@ -6,10 +6,10 @@ package com.pulumi.awsnative.iotwireless.inputs;
 import com.pulumi.awsnative.iotwireless.inputs.TaskDefinitionLoRaWANGatewayVersionArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -18,110 +18,99 @@ public final class TaskDefinitionLoRaWANUpdateGatewayTaskCreateArgs extends com.
     public static final TaskDefinitionLoRaWANUpdateGatewayTaskCreateArgs Empty = new TaskDefinitionLoRaWANUpdateGatewayTaskCreateArgs();
 
     @Import(name="currentVersion")
-      private final @Nullable Output<TaskDefinitionLoRaWANGatewayVersionArgs> currentVersion;
+    private @Nullable Output<TaskDefinitionLoRaWANGatewayVersionArgs> currentVersion;
 
-    public Output<TaskDefinitionLoRaWANGatewayVersionArgs> currentVersion() {
-        return this.currentVersion == null ? Codegen.empty() : this.currentVersion;
+    public Optional<Output<TaskDefinitionLoRaWANGatewayVersionArgs>> currentVersion() {
+        return Optional.ofNullable(this.currentVersion);
     }
 
     @Import(name="sigKeyCrc")
-      private final @Nullable Output<Integer> sigKeyCrc;
+    private @Nullable Output<Integer> sigKeyCrc;
 
-    public Output<Integer> sigKeyCrc() {
-        return this.sigKeyCrc == null ? Codegen.empty() : this.sigKeyCrc;
+    public Optional<Output<Integer>> sigKeyCrc() {
+        return Optional.ofNullable(this.sigKeyCrc);
     }
 
     @Import(name="updateSignature")
-      private final @Nullable Output<String> updateSignature;
+    private @Nullable Output<String> updateSignature;
 
-    public Output<String> updateSignature() {
-        return this.updateSignature == null ? Codegen.empty() : this.updateSignature;
+    public Optional<Output<String>> updateSignature() {
+        return Optional.ofNullable(this.updateSignature);
     }
 
     @Import(name="updateVersion")
-      private final @Nullable Output<TaskDefinitionLoRaWANGatewayVersionArgs> updateVersion;
+    private @Nullable Output<TaskDefinitionLoRaWANGatewayVersionArgs> updateVersion;
 
-    public Output<TaskDefinitionLoRaWANGatewayVersionArgs> updateVersion() {
-        return this.updateVersion == null ? Codegen.empty() : this.updateVersion;
+    public Optional<Output<TaskDefinitionLoRaWANGatewayVersionArgs>> updateVersion() {
+        return Optional.ofNullable(this.updateVersion);
     }
 
-    public TaskDefinitionLoRaWANUpdateGatewayTaskCreateArgs(
-        @Nullable Output<TaskDefinitionLoRaWANGatewayVersionArgs> currentVersion,
-        @Nullable Output<Integer> sigKeyCrc,
-        @Nullable Output<String> updateSignature,
-        @Nullable Output<TaskDefinitionLoRaWANGatewayVersionArgs> updateVersion) {
-        this.currentVersion = currentVersion;
-        this.sigKeyCrc = sigKeyCrc;
-        this.updateSignature = updateSignature;
-        this.updateVersion = updateVersion;
-    }
+    private TaskDefinitionLoRaWANUpdateGatewayTaskCreateArgs() {}
 
-    private TaskDefinitionLoRaWANUpdateGatewayTaskCreateArgs() {
-        this.currentVersion = Codegen.empty();
-        this.sigKeyCrc = Codegen.empty();
-        this.updateSignature = Codegen.empty();
-        this.updateVersion = Codegen.empty();
+    private TaskDefinitionLoRaWANUpdateGatewayTaskCreateArgs(TaskDefinitionLoRaWANUpdateGatewayTaskCreateArgs $) {
+        this.currentVersion = $.currentVersion;
+        this.sigKeyCrc = $.sigKeyCrc;
+        this.updateSignature = $.updateSignature;
+        this.updateVersion = $.updateVersion;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TaskDefinitionLoRaWANUpdateGatewayTaskCreateArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<TaskDefinitionLoRaWANGatewayVersionArgs> currentVersion;
-        private @Nullable Output<Integer> sigKeyCrc;
-        private @Nullable Output<String> updateSignature;
-        private @Nullable Output<TaskDefinitionLoRaWANGatewayVersionArgs> updateVersion;
+        private TaskDefinitionLoRaWANUpdateGatewayTaskCreateArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TaskDefinitionLoRaWANUpdateGatewayTaskCreateArgs();
         }
 
         public Builder(TaskDefinitionLoRaWANUpdateGatewayTaskCreateArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.currentVersion = defaults.currentVersion;
-    	      this.sigKeyCrc = defaults.sigKeyCrc;
-    	      this.updateSignature = defaults.updateSignature;
-    	      this.updateVersion = defaults.updateVersion;
+            $ = new TaskDefinitionLoRaWANUpdateGatewayTaskCreateArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder currentVersion(@Nullable Output<TaskDefinitionLoRaWANGatewayVersionArgs> currentVersion) {
-            this.currentVersion = currentVersion;
+            $.currentVersion = currentVersion;
             return this;
         }
-        public Builder currentVersion(@Nullable TaskDefinitionLoRaWANGatewayVersionArgs currentVersion) {
-            this.currentVersion = Codegen.ofNullable(currentVersion);
-            return this;
+
+        public Builder currentVersion(TaskDefinitionLoRaWANGatewayVersionArgs currentVersion) {
+            return currentVersion(Output.of(currentVersion));
         }
+
         public Builder sigKeyCrc(@Nullable Output<Integer> sigKeyCrc) {
-            this.sigKeyCrc = sigKeyCrc;
+            $.sigKeyCrc = sigKeyCrc;
             return this;
         }
-        public Builder sigKeyCrc(@Nullable Integer sigKeyCrc) {
-            this.sigKeyCrc = Codegen.ofNullable(sigKeyCrc);
-            return this;
+
+        public Builder sigKeyCrc(Integer sigKeyCrc) {
+            return sigKeyCrc(Output.of(sigKeyCrc));
         }
+
         public Builder updateSignature(@Nullable Output<String> updateSignature) {
-            this.updateSignature = updateSignature;
+            $.updateSignature = updateSignature;
             return this;
         }
-        public Builder updateSignature(@Nullable String updateSignature) {
-            this.updateSignature = Codegen.ofNullable(updateSignature);
-            return this;
+
+        public Builder updateSignature(String updateSignature) {
+            return updateSignature(Output.of(updateSignature));
         }
+
         public Builder updateVersion(@Nullable Output<TaskDefinitionLoRaWANGatewayVersionArgs> updateVersion) {
-            this.updateVersion = updateVersion;
+            $.updateVersion = updateVersion;
             return this;
         }
-        public Builder updateVersion(@Nullable TaskDefinitionLoRaWANGatewayVersionArgs updateVersion) {
-            this.updateVersion = Codegen.ofNullable(updateVersion);
-            return this;
-        }        public TaskDefinitionLoRaWANUpdateGatewayTaskCreateArgs build() {
-            return new TaskDefinitionLoRaWANUpdateGatewayTaskCreateArgs(currentVersion, sigKeyCrc, updateSignature, updateVersion);
+
+        public Builder updateVersion(TaskDefinitionLoRaWANGatewayVersionArgs updateVersion) {
+            return updateVersion(Output.of(updateVersion));
+        }
+
+        public TaskDefinitionLoRaWANUpdateGatewayTaskCreateArgs build() {
+            return $;
         }
     }
+
 }

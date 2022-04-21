@@ -23,45 +23,44 @@ public final class ScopeElementResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="field")
-      private final @Nullable String field;
+    private @Nullable String field;
 
     public Optional<String> field() {
-        return this.field == null ? Optional.empty() : Optional.ofNullable(this.field);
+        return Optional.ofNullable(this.field);
     }
 
-    public ScopeElementResponse(@Nullable String field) {
-        this.field = field;
-    }
+    private ScopeElementResponse() {}
 
-    private ScopeElementResponse() {
-        this.field = null;
+    private ScopeElementResponse(ScopeElementResponse $) {
+        this.field = $.field;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ScopeElementResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String field;
+        private ScopeElementResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ScopeElementResponse();
         }
 
         public Builder(ScopeElementResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.field = defaults.field;
+            $ = new ScopeElementResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder field(@Nullable String field) {
-            this.field = field;
+            $.field = field;
             return this;
-        }        public ScopeElementResponse build() {
-            return new ScopeElementResponse(field);
+        }
+
+        public ScopeElementResponse build() {
+            return $;
         }
     }
+
 }

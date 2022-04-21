@@ -21,78 +21,72 @@ public final class WebACLJsonBody extends com.pulumi.resources.InvokeArgs {
     public static final WebACLJsonBody Empty = new WebACLJsonBody();
 
     @Import(name="invalidFallbackBehavior")
-      private final @Nullable WebACLBodyParsingFallbackBehavior invalidFallbackBehavior;
+    private @Nullable WebACLBodyParsingFallbackBehavior invalidFallbackBehavior;
 
     public Optional<WebACLBodyParsingFallbackBehavior> invalidFallbackBehavior() {
-        return this.invalidFallbackBehavior == null ? Optional.empty() : Optional.ofNullable(this.invalidFallbackBehavior);
+        return Optional.ofNullable(this.invalidFallbackBehavior);
     }
 
     @Import(name="matchPattern", required=true)
-      private final WebACLJsonMatchPattern matchPattern;
+    private WebACLJsonMatchPattern matchPattern;
 
     public WebACLJsonMatchPattern matchPattern() {
         return this.matchPattern;
     }
 
     @Import(name="matchScope", required=true)
-      private final WebACLJsonMatchScope matchScope;
+    private WebACLJsonMatchScope matchScope;
 
     public WebACLJsonMatchScope matchScope() {
         return this.matchScope;
     }
 
-    public WebACLJsonBody(
-        @Nullable WebACLBodyParsingFallbackBehavior invalidFallbackBehavior,
-        WebACLJsonMatchPattern matchPattern,
-        WebACLJsonMatchScope matchScope) {
-        this.invalidFallbackBehavior = invalidFallbackBehavior;
-        this.matchPattern = Objects.requireNonNull(matchPattern, "expected parameter 'matchPattern' to be non-null");
-        this.matchScope = Objects.requireNonNull(matchScope, "expected parameter 'matchScope' to be non-null");
-    }
+    private WebACLJsonBody() {}
 
-    private WebACLJsonBody() {
-        this.invalidFallbackBehavior = null;
-        this.matchPattern = null;
-        this.matchScope = null;
+    private WebACLJsonBody(WebACLJsonBody $) {
+        this.invalidFallbackBehavior = $.invalidFallbackBehavior;
+        this.matchPattern = $.matchPattern;
+        this.matchScope = $.matchScope;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WebACLJsonBody defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable WebACLBodyParsingFallbackBehavior invalidFallbackBehavior;
-        private WebACLJsonMatchPattern matchPattern;
-        private WebACLJsonMatchScope matchScope;
+        private WebACLJsonBody $;
 
         public Builder() {
-    	      // Empty
+            $ = new WebACLJsonBody();
         }
 
         public Builder(WebACLJsonBody defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.invalidFallbackBehavior = defaults.invalidFallbackBehavior;
-    	      this.matchPattern = defaults.matchPattern;
-    	      this.matchScope = defaults.matchScope;
+            $ = new WebACLJsonBody(Objects.requireNonNull(defaults));
         }
 
         public Builder invalidFallbackBehavior(@Nullable WebACLBodyParsingFallbackBehavior invalidFallbackBehavior) {
-            this.invalidFallbackBehavior = invalidFallbackBehavior;
+            $.invalidFallbackBehavior = invalidFallbackBehavior;
             return this;
         }
+
         public Builder matchPattern(WebACLJsonMatchPattern matchPattern) {
-            this.matchPattern = Objects.requireNonNull(matchPattern);
+            $.matchPattern = matchPattern;
             return this;
         }
+
         public Builder matchScope(WebACLJsonMatchScope matchScope) {
-            this.matchScope = Objects.requireNonNull(matchScope);
+            $.matchScope = matchScope;
             return this;
-        }        public WebACLJsonBody build() {
-            return new WebACLJsonBody(invalidFallbackBehavior, matchPattern, matchScope);
+        }
+
+        public WebACLJsonBody build() {
+            $.matchPattern = Objects.requireNonNull($.matchPattern, "expected parameter 'matchPattern' to be non-null");
+            $.matchScope = Objects.requireNonNull($.matchScope, "expected parameter 'matchScope' to be non-null");
+            return $;
         }
     }
+
 }

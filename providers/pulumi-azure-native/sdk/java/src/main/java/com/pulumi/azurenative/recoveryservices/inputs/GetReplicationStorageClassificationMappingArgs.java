@@ -17,7 +17,7 @@ public final class GetReplicationStorageClassificationMappingArgs extends com.pu
      * 
      */
     @Import(name="fabricName", required=true)
-      private final String fabricName;
+    private String fabricName;
 
     public String fabricName() {
         return this.fabricName;
@@ -28,7 +28,7 @@ public final class GetReplicationStorageClassificationMappingArgs extends com.pu
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -39,7 +39,7 @@ public final class GetReplicationStorageClassificationMappingArgs extends com.pu
      * 
      */
     @Import(name="resourceName", required=true)
-      private final String resourceName;
+    private String resourceName;
 
     public String resourceName() {
         return this.resourceName;
@@ -50,7 +50,7 @@ public final class GetReplicationStorageClassificationMappingArgs extends com.pu
      * 
      */
     @Import(name="storageClassificationMappingName", required=true)
-      private final String storageClassificationMappingName;
+    private String storageClassificationMappingName;
 
     public String storageClassificationMappingName() {
         return this.storageClassificationMappingName;
@@ -61,82 +61,73 @@ public final class GetReplicationStorageClassificationMappingArgs extends com.pu
      * 
      */
     @Import(name="storageClassificationName", required=true)
-      private final String storageClassificationName;
+    private String storageClassificationName;
 
     public String storageClassificationName() {
         return this.storageClassificationName;
     }
 
-    public GetReplicationStorageClassificationMappingArgs(
-        String fabricName,
-        String resourceGroupName,
-        String resourceName,
-        String storageClassificationMappingName,
-        String storageClassificationName) {
-        this.fabricName = Objects.requireNonNull(fabricName, "expected parameter 'fabricName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.resourceName = Objects.requireNonNull(resourceName, "expected parameter 'resourceName' to be non-null");
-        this.storageClassificationMappingName = Objects.requireNonNull(storageClassificationMappingName, "expected parameter 'storageClassificationMappingName' to be non-null");
-        this.storageClassificationName = Objects.requireNonNull(storageClassificationName, "expected parameter 'storageClassificationName' to be non-null");
-    }
+    private GetReplicationStorageClassificationMappingArgs() {}
 
-    private GetReplicationStorageClassificationMappingArgs() {
-        this.fabricName = null;
-        this.resourceGroupName = null;
-        this.resourceName = null;
-        this.storageClassificationMappingName = null;
-        this.storageClassificationName = null;
+    private GetReplicationStorageClassificationMappingArgs(GetReplicationStorageClassificationMappingArgs $) {
+        this.fabricName = $.fabricName;
+        this.resourceGroupName = $.resourceGroupName;
+        this.resourceName = $.resourceName;
+        this.storageClassificationMappingName = $.storageClassificationMappingName;
+        this.storageClassificationName = $.storageClassificationName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetReplicationStorageClassificationMappingArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String fabricName;
-        private String resourceGroupName;
-        private String resourceName;
-        private String storageClassificationMappingName;
-        private String storageClassificationName;
+        private GetReplicationStorageClassificationMappingArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetReplicationStorageClassificationMappingArgs();
         }
 
         public Builder(GetReplicationStorageClassificationMappingArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.fabricName = defaults.fabricName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.resourceName = defaults.resourceName;
-    	      this.storageClassificationMappingName = defaults.storageClassificationMappingName;
-    	      this.storageClassificationName = defaults.storageClassificationName;
+            $ = new GetReplicationStorageClassificationMappingArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder fabricName(String fabricName) {
-            this.fabricName = Objects.requireNonNull(fabricName);
+            $.fabricName = fabricName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceName(String resourceName) {
-            this.resourceName = Objects.requireNonNull(resourceName);
+            $.resourceName = resourceName;
             return this;
         }
+
         public Builder storageClassificationMappingName(String storageClassificationMappingName) {
-            this.storageClassificationMappingName = Objects.requireNonNull(storageClassificationMappingName);
+            $.storageClassificationMappingName = storageClassificationMappingName;
             return this;
         }
+
         public Builder storageClassificationName(String storageClassificationName) {
-            this.storageClassificationName = Objects.requireNonNull(storageClassificationName);
+            $.storageClassificationName = storageClassificationName;
             return this;
-        }        public GetReplicationStorageClassificationMappingArgs build() {
-            return new GetReplicationStorageClassificationMappingArgs(fabricName, resourceGroupName, resourceName, storageClassificationMappingName, storageClassificationName);
+        }
+
+        public GetReplicationStorageClassificationMappingArgs build() {
+            $.fabricName = Objects.requireNonNull($.fabricName, "expected parameter 'fabricName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.resourceName = Objects.requireNonNull($.resourceName, "expected parameter 'resourceName' to be non-null");
+            $.storageClassificationMappingName = Objects.requireNonNull($.storageClassificationMappingName, "expected parameter 'storageClassificationMappingName' to be non-null");
+            $.storageClassificationName = Objects.requireNonNull($.storageClassificationName, "expected parameter 'storageClassificationName' to be non-null");
+            return $;
         }
     }
+
 }

@@ -17,45 +17,45 @@ public final class GetApiDestinationArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
     }
 
-    public GetApiDestinationArgs(String name) {
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-    }
+    private GetApiDestinationArgs() {}
 
-    private GetApiDestinationArgs() {
-        this.name = null;
+    private GetApiDestinationArgs(GetApiDestinationArgs $) {
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetApiDestinationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String name;
+        private GetApiDestinationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetApiDestinationArgs();
         }
 
         public Builder(GetApiDestinationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
+            $ = new GetApiDestinationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
-        }        public GetApiDestinationArgs build() {
-            return new GetApiDestinationArgs(name);
+        }
+
+        public GetApiDestinationArgs build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            return $;
         }
     }
+
 }

@@ -24,10 +24,10 @@ public final class MabFileFolderProtectedItemExtendedInfoResponse extends com.pu
      * 
      */
     @Import(name="lastRefreshedAt")
-      private final @Nullable String lastRefreshedAt;
+    private @Nullable String lastRefreshedAt;
 
     public Optional<String> lastRefreshedAt() {
-        return this.lastRefreshedAt == null ? Optional.empty() : Optional.ofNullable(this.lastRefreshedAt);
+        return Optional.ofNullable(this.lastRefreshedAt);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class MabFileFolderProtectedItemExtendedInfoResponse extends com.pu
      * 
      */
     @Import(name="oldestRecoveryPoint")
-      private final @Nullable String oldestRecoveryPoint;
+    private @Nullable String oldestRecoveryPoint;
 
     public Optional<String> oldestRecoveryPoint() {
-        return this.oldestRecoveryPoint == null ? Optional.empty() : Optional.ofNullable(this.oldestRecoveryPoint);
+        return Optional.ofNullable(this.oldestRecoveryPoint);
     }
 
     /**
@@ -46,64 +46,56 @@ public final class MabFileFolderProtectedItemExtendedInfoResponse extends com.pu
      * 
      */
     @Import(name="recoveryPointCount")
-      private final @Nullable Integer recoveryPointCount;
+    private @Nullable Integer recoveryPointCount;
 
     public Optional<Integer> recoveryPointCount() {
-        return this.recoveryPointCount == null ? Optional.empty() : Optional.ofNullable(this.recoveryPointCount);
+        return Optional.ofNullable(this.recoveryPointCount);
     }
 
-    public MabFileFolderProtectedItemExtendedInfoResponse(
-        @Nullable String lastRefreshedAt,
-        @Nullable String oldestRecoveryPoint,
-        @Nullable Integer recoveryPointCount) {
-        this.lastRefreshedAt = lastRefreshedAt;
-        this.oldestRecoveryPoint = oldestRecoveryPoint;
-        this.recoveryPointCount = recoveryPointCount;
-    }
+    private MabFileFolderProtectedItemExtendedInfoResponse() {}
 
-    private MabFileFolderProtectedItemExtendedInfoResponse() {
-        this.lastRefreshedAt = null;
-        this.oldestRecoveryPoint = null;
-        this.recoveryPointCount = null;
+    private MabFileFolderProtectedItemExtendedInfoResponse(MabFileFolderProtectedItemExtendedInfoResponse $) {
+        this.lastRefreshedAt = $.lastRefreshedAt;
+        this.oldestRecoveryPoint = $.oldestRecoveryPoint;
+        this.recoveryPointCount = $.recoveryPointCount;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MabFileFolderProtectedItemExtendedInfoResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String lastRefreshedAt;
-        private @Nullable String oldestRecoveryPoint;
-        private @Nullable Integer recoveryPointCount;
+        private MabFileFolderProtectedItemExtendedInfoResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new MabFileFolderProtectedItemExtendedInfoResponse();
         }
 
         public Builder(MabFileFolderProtectedItemExtendedInfoResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.lastRefreshedAt = defaults.lastRefreshedAt;
-    	      this.oldestRecoveryPoint = defaults.oldestRecoveryPoint;
-    	      this.recoveryPointCount = defaults.recoveryPointCount;
+            $ = new MabFileFolderProtectedItemExtendedInfoResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder lastRefreshedAt(@Nullable String lastRefreshedAt) {
-            this.lastRefreshedAt = lastRefreshedAt;
+            $.lastRefreshedAt = lastRefreshedAt;
             return this;
         }
+
         public Builder oldestRecoveryPoint(@Nullable String oldestRecoveryPoint) {
-            this.oldestRecoveryPoint = oldestRecoveryPoint;
+            $.oldestRecoveryPoint = oldestRecoveryPoint;
             return this;
         }
+
         public Builder recoveryPointCount(@Nullable Integer recoveryPointCount) {
-            this.recoveryPointCount = recoveryPointCount;
+            $.recoveryPointCount = recoveryPointCount;
             return this;
-        }        public MabFileFolderProtectedItemExtendedInfoResponse build() {
-            return new MabFileFolderProtectedItemExtendedInfoResponse(lastRefreshedAt, oldestRecoveryPoint, recoveryPointCount);
+        }
+
+        public MabFileFolderProtectedItemExtendedInfoResponse build() {
+            return $;
         }
     }
+
 }

@@ -5,10 +5,10 @@ package com.pulumi.aws.ecs.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class CapacityProviderAutoScalingGroupProviderManagedScalingGetArgs
      * 
      */
     @Import(name="instanceWarmupPeriod")
-      private final @Nullable Output<Integer> instanceWarmupPeriod;
+    private @Nullable Output<Integer> instanceWarmupPeriod;
 
-    public Output<Integer> instanceWarmupPeriod() {
-        return this.instanceWarmupPeriod == null ? Codegen.empty() : this.instanceWarmupPeriod;
+    public Optional<Output<Integer>> instanceWarmupPeriod() {
+        return Optional.ofNullable(this.instanceWarmupPeriod);
     }
 
     /**
@@ -32,10 +32,10 @@ public final class CapacityProviderAutoScalingGroupProviderManagedScalingGetArgs
      * 
      */
     @Import(name="maximumScalingStepSize")
-      private final @Nullable Output<Integer> maximumScalingStepSize;
+    private @Nullable Output<Integer> maximumScalingStepSize;
 
-    public Output<Integer> maximumScalingStepSize() {
-        return this.maximumScalingStepSize == null ? Codegen.empty() : this.maximumScalingStepSize;
+    public Optional<Output<Integer>> maximumScalingStepSize() {
+        return Optional.ofNullable(this.maximumScalingStepSize);
     }
 
     /**
@@ -43,10 +43,10 @@ public final class CapacityProviderAutoScalingGroupProviderManagedScalingGetArgs
      * 
      */
     @Import(name="minimumScalingStepSize")
-      private final @Nullable Output<Integer> minimumScalingStepSize;
+    private @Nullable Output<Integer> minimumScalingStepSize;
 
-    public Output<Integer> minimumScalingStepSize() {
-        return this.minimumScalingStepSize == null ? Codegen.empty() : this.minimumScalingStepSize;
+    public Optional<Output<Integer>> minimumScalingStepSize() {
+        return Optional.ofNullable(this.minimumScalingStepSize);
     }
 
     /**
@@ -54,10 +54,10 @@ public final class CapacityProviderAutoScalingGroupProviderManagedScalingGetArgs
      * 
      */
     @Import(name="status")
-      private final @Nullable Output<String> status;
+    private @Nullable Output<String> status;
 
-    public Output<String> status() {
-        return this.status == null ? Codegen.empty() : this.status;
+    public Optional<Output<String>> status() {
+        return Optional.ofNullable(this.status);
     }
 
     /**
@@ -65,102 +65,88 @@ public final class CapacityProviderAutoScalingGroupProviderManagedScalingGetArgs
      * 
      */
     @Import(name="targetCapacity")
-      private final @Nullable Output<Integer> targetCapacity;
+    private @Nullable Output<Integer> targetCapacity;
 
-    public Output<Integer> targetCapacity() {
-        return this.targetCapacity == null ? Codegen.empty() : this.targetCapacity;
+    public Optional<Output<Integer>> targetCapacity() {
+        return Optional.ofNullable(this.targetCapacity);
     }
 
-    public CapacityProviderAutoScalingGroupProviderManagedScalingGetArgs(
-        @Nullable Output<Integer> instanceWarmupPeriod,
-        @Nullable Output<Integer> maximumScalingStepSize,
-        @Nullable Output<Integer> minimumScalingStepSize,
-        @Nullable Output<String> status,
-        @Nullable Output<Integer> targetCapacity) {
-        this.instanceWarmupPeriod = instanceWarmupPeriod;
-        this.maximumScalingStepSize = maximumScalingStepSize;
-        this.minimumScalingStepSize = minimumScalingStepSize;
-        this.status = status;
-        this.targetCapacity = targetCapacity;
-    }
+    private CapacityProviderAutoScalingGroupProviderManagedScalingGetArgs() {}
 
-    private CapacityProviderAutoScalingGroupProviderManagedScalingGetArgs() {
-        this.instanceWarmupPeriod = Codegen.empty();
-        this.maximumScalingStepSize = Codegen.empty();
-        this.minimumScalingStepSize = Codegen.empty();
-        this.status = Codegen.empty();
-        this.targetCapacity = Codegen.empty();
+    private CapacityProviderAutoScalingGroupProviderManagedScalingGetArgs(CapacityProviderAutoScalingGroupProviderManagedScalingGetArgs $) {
+        this.instanceWarmupPeriod = $.instanceWarmupPeriod;
+        this.maximumScalingStepSize = $.maximumScalingStepSize;
+        this.minimumScalingStepSize = $.minimumScalingStepSize;
+        this.status = $.status;
+        this.targetCapacity = $.targetCapacity;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CapacityProviderAutoScalingGroupProviderManagedScalingGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> instanceWarmupPeriod;
-        private @Nullable Output<Integer> maximumScalingStepSize;
-        private @Nullable Output<Integer> minimumScalingStepSize;
-        private @Nullable Output<String> status;
-        private @Nullable Output<Integer> targetCapacity;
+        private CapacityProviderAutoScalingGroupProviderManagedScalingGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CapacityProviderAutoScalingGroupProviderManagedScalingGetArgs();
         }
 
         public Builder(CapacityProviderAutoScalingGroupProviderManagedScalingGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.instanceWarmupPeriod = defaults.instanceWarmupPeriod;
-    	      this.maximumScalingStepSize = defaults.maximumScalingStepSize;
-    	      this.minimumScalingStepSize = defaults.minimumScalingStepSize;
-    	      this.status = defaults.status;
-    	      this.targetCapacity = defaults.targetCapacity;
+            $ = new CapacityProviderAutoScalingGroupProviderManagedScalingGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder instanceWarmupPeriod(@Nullable Output<Integer> instanceWarmupPeriod) {
-            this.instanceWarmupPeriod = instanceWarmupPeriod;
+            $.instanceWarmupPeriod = instanceWarmupPeriod;
             return this;
         }
-        public Builder instanceWarmupPeriod(@Nullable Integer instanceWarmupPeriod) {
-            this.instanceWarmupPeriod = Codegen.ofNullable(instanceWarmupPeriod);
-            return this;
+
+        public Builder instanceWarmupPeriod(Integer instanceWarmupPeriod) {
+            return instanceWarmupPeriod(Output.of(instanceWarmupPeriod));
         }
+
         public Builder maximumScalingStepSize(@Nullable Output<Integer> maximumScalingStepSize) {
-            this.maximumScalingStepSize = maximumScalingStepSize;
+            $.maximumScalingStepSize = maximumScalingStepSize;
             return this;
         }
-        public Builder maximumScalingStepSize(@Nullable Integer maximumScalingStepSize) {
-            this.maximumScalingStepSize = Codegen.ofNullable(maximumScalingStepSize);
-            return this;
+
+        public Builder maximumScalingStepSize(Integer maximumScalingStepSize) {
+            return maximumScalingStepSize(Output.of(maximumScalingStepSize));
         }
+
         public Builder minimumScalingStepSize(@Nullable Output<Integer> minimumScalingStepSize) {
-            this.minimumScalingStepSize = minimumScalingStepSize;
+            $.minimumScalingStepSize = minimumScalingStepSize;
             return this;
         }
-        public Builder minimumScalingStepSize(@Nullable Integer minimumScalingStepSize) {
-            this.minimumScalingStepSize = Codegen.ofNullable(minimumScalingStepSize);
-            return this;
+
+        public Builder minimumScalingStepSize(Integer minimumScalingStepSize) {
+            return minimumScalingStepSize(Output.of(minimumScalingStepSize));
         }
+
         public Builder status(@Nullable Output<String> status) {
-            this.status = status;
+            $.status = status;
             return this;
         }
-        public Builder status(@Nullable String status) {
-            this.status = Codegen.ofNullable(status);
-            return this;
+
+        public Builder status(String status) {
+            return status(Output.of(status));
         }
+
         public Builder targetCapacity(@Nullable Output<Integer> targetCapacity) {
-            this.targetCapacity = targetCapacity;
+            $.targetCapacity = targetCapacity;
             return this;
         }
-        public Builder targetCapacity(@Nullable Integer targetCapacity) {
-            this.targetCapacity = Codegen.ofNullable(targetCapacity);
-            return this;
-        }        public CapacityProviderAutoScalingGroupProviderManagedScalingGetArgs build() {
-            return new CapacityProviderAutoScalingGroupProviderManagedScalingGetArgs(instanceWarmupPeriod, maximumScalingStepSize, minimumScalingStepSize, status, targetCapacity);
+
+        public Builder targetCapacity(Integer targetCapacity) {
+            return targetCapacity(Output.of(targetCapacity));
+        }
+
+        public CapacityProviderAutoScalingGroupProviderManagedScalingGetArgs build() {
+            return $;
         }
     }
+
 }

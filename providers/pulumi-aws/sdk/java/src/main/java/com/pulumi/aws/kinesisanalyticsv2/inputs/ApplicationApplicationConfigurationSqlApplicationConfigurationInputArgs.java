@@ -11,10 +11,10 @@ import com.pulumi.aws.kinesisanalyticsv2.inputs.ApplicationApplicationConfigurat
 import com.pulumi.aws.kinesisanalyticsv2.inputs.ApplicationApplicationConfigurationSqlApplicationConfigurationInputKinesisStreamsInputArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,17 +23,17 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
     public static final ApplicationApplicationConfigurationSqlApplicationConfigurationInputArgs Empty = new ApplicationApplicationConfigurationSqlApplicationConfigurationInputArgs();
 
     @Import(name="inAppStreamNames")
-      private final @Nullable Output<List<String>> inAppStreamNames;
+    private @Nullable Output<List<String>> inAppStreamNames;
 
-    public Output<List<String>> inAppStreamNames() {
-        return this.inAppStreamNames == null ? Codegen.empty() : this.inAppStreamNames;
+    public Optional<Output<List<String>>> inAppStreamNames() {
+        return Optional.ofNullable(this.inAppStreamNames);
     }
 
     @Import(name="inputId")
-      private final @Nullable Output<String> inputId;
+    private @Nullable Output<String> inputId;
 
-    public Output<String> inputId() {
-        return this.inputId == null ? Codegen.empty() : this.inputId;
+    public Optional<Output<String>> inputId() {
+        return Optional.ofNullable(this.inputId);
     }
 
     /**
@@ -41,10 +41,10 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
      * 
      */
     @Import(name="inputParallelism")
-      private final @Nullable Output<ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputParallelismArgs> inputParallelism;
+    private @Nullable Output<ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputParallelismArgs> inputParallelism;
 
-    public Output<ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputParallelismArgs> inputParallelism() {
-        return this.inputParallelism == null ? Codegen.empty() : this.inputParallelism;
+    public Optional<Output<ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputParallelismArgs>> inputParallelism() {
+        return Optional.ofNullable(this.inputParallelism);
     }
 
     /**
@@ -53,10 +53,10 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
      * 
      */
     @Import(name="inputProcessingConfiguration")
-      private final @Nullable Output<ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputProcessingConfigurationArgs> inputProcessingConfiguration;
+    private @Nullable Output<ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputProcessingConfigurationArgs> inputProcessingConfiguration;
 
-    public Output<ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputProcessingConfigurationArgs> inputProcessingConfiguration() {
-        return this.inputProcessingConfiguration == null ? Codegen.empty() : this.inputProcessingConfiguration;
+    public Optional<Output<ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputProcessingConfigurationArgs>> inputProcessingConfiguration() {
+        return Optional.ofNullable(this.inputProcessingConfiguration);
     }
 
     /**
@@ -64,7 +64,7 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
      * 
      */
     @Import(name="inputSchema", required=true)
-      private final Output<ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputSchemaArgs> inputSchema;
+    private Output<ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputSchemaArgs> inputSchema;
 
     public Output<ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputSchemaArgs> inputSchema() {
         return this.inputSchema;
@@ -75,10 +75,10 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
      * 
      */
     @Import(name="inputStartingPositionConfigurations")
-      private final @Nullable Output<List<ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputStartingPositionConfigurationArgs>> inputStartingPositionConfigurations;
+    private @Nullable Output<List<ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputStartingPositionConfigurationArgs>> inputStartingPositionConfigurations;
 
-    public Output<List<ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputStartingPositionConfigurationArgs>> inputStartingPositionConfigurations() {
-        return this.inputStartingPositionConfigurations == null ? Codegen.empty() : this.inputStartingPositionConfigurations;
+    public Optional<Output<List<ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputStartingPositionConfigurationArgs>>> inputStartingPositionConfigurations() {
+        return Optional.ofNullable(this.inputStartingPositionConfigurations);
     }
 
     /**
@@ -86,10 +86,10 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
      * 
      */
     @Import(name="kinesisFirehoseInput")
-      private final @Nullable Output<ApplicationApplicationConfigurationSqlApplicationConfigurationInputKinesisFirehoseInputArgs> kinesisFirehoseInput;
+    private @Nullable Output<ApplicationApplicationConfigurationSqlApplicationConfigurationInputKinesisFirehoseInputArgs> kinesisFirehoseInput;
 
-    public Output<ApplicationApplicationConfigurationSqlApplicationConfigurationInputKinesisFirehoseInputArgs> kinesisFirehoseInput() {
-        return this.kinesisFirehoseInput == null ? Codegen.empty() : this.kinesisFirehoseInput;
+    public Optional<Output<ApplicationApplicationConfigurationSqlApplicationConfigurationInputKinesisFirehoseInputArgs>> kinesisFirehoseInput() {
+        return Optional.ofNullable(this.kinesisFirehoseInput);
     }
 
     /**
@@ -97,10 +97,10 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
      * 
      */
     @Import(name="kinesisStreamsInput")
-      private final @Nullable Output<ApplicationApplicationConfigurationSqlApplicationConfigurationInputKinesisStreamsInputArgs> kinesisStreamsInput;
+    private @Nullable Output<ApplicationApplicationConfigurationSqlApplicationConfigurationInputKinesisStreamsInputArgs> kinesisStreamsInput;
 
-    public Output<ApplicationApplicationConfigurationSqlApplicationConfigurationInputKinesisStreamsInputArgs> kinesisStreamsInput() {
-        return this.kinesisStreamsInput == null ? Codegen.empty() : this.kinesisStreamsInput;
+    public Optional<Output<ApplicationApplicationConfigurationSqlApplicationConfigurationInputKinesisStreamsInputArgs>> kinesisStreamsInput() {
+        return Optional.ofNullable(this.kinesisStreamsInput);
     }
 
     /**
@@ -108,160 +108,138 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
      * 
      */
     @Import(name="namePrefix", required=true)
-      private final Output<String> namePrefix;
+    private Output<String> namePrefix;
 
     public Output<String> namePrefix() {
         return this.namePrefix;
     }
 
-    public ApplicationApplicationConfigurationSqlApplicationConfigurationInputArgs(
-        @Nullable Output<List<String>> inAppStreamNames,
-        @Nullable Output<String> inputId,
-        @Nullable Output<ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputParallelismArgs> inputParallelism,
-        @Nullable Output<ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputProcessingConfigurationArgs> inputProcessingConfiguration,
-        Output<ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputSchemaArgs> inputSchema,
-        @Nullable Output<List<ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputStartingPositionConfigurationArgs>> inputStartingPositionConfigurations,
-        @Nullable Output<ApplicationApplicationConfigurationSqlApplicationConfigurationInputKinesisFirehoseInputArgs> kinesisFirehoseInput,
-        @Nullable Output<ApplicationApplicationConfigurationSqlApplicationConfigurationInputKinesisStreamsInputArgs> kinesisStreamsInput,
-        Output<String> namePrefix) {
-        this.inAppStreamNames = inAppStreamNames;
-        this.inputId = inputId;
-        this.inputParallelism = inputParallelism;
-        this.inputProcessingConfiguration = inputProcessingConfiguration;
-        this.inputSchema = Objects.requireNonNull(inputSchema, "expected parameter 'inputSchema' to be non-null");
-        this.inputStartingPositionConfigurations = inputStartingPositionConfigurations;
-        this.kinesisFirehoseInput = kinesisFirehoseInput;
-        this.kinesisStreamsInput = kinesisStreamsInput;
-        this.namePrefix = Objects.requireNonNull(namePrefix, "expected parameter 'namePrefix' to be non-null");
-    }
+    private ApplicationApplicationConfigurationSqlApplicationConfigurationInputArgs() {}
 
-    private ApplicationApplicationConfigurationSqlApplicationConfigurationInputArgs() {
-        this.inAppStreamNames = Codegen.empty();
-        this.inputId = Codegen.empty();
-        this.inputParallelism = Codegen.empty();
-        this.inputProcessingConfiguration = Codegen.empty();
-        this.inputSchema = Codegen.empty();
-        this.inputStartingPositionConfigurations = Codegen.empty();
-        this.kinesisFirehoseInput = Codegen.empty();
-        this.kinesisStreamsInput = Codegen.empty();
-        this.namePrefix = Codegen.empty();
+    private ApplicationApplicationConfigurationSqlApplicationConfigurationInputArgs(ApplicationApplicationConfigurationSqlApplicationConfigurationInputArgs $) {
+        this.inAppStreamNames = $.inAppStreamNames;
+        this.inputId = $.inputId;
+        this.inputParallelism = $.inputParallelism;
+        this.inputProcessingConfiguration = $.inputProcessingConfiguration;
+        this.inputSchema = $.inputSchema;
+        this.inputStartingPositionConfigurations = $.inputStartingPositionConfigurations;
+        this.kinesisFirehoseInput = $.kinesisFirehoseInput;
+        this.kinesisStreamsInput = $.kinesisStreamsInput;
+        this.namePrefix = $.namePrefix;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ApplicationApplicationConfigurationSqlApplicationConfigurationInputArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> inAppStreamNames;
-        private @Nullable Output<String> inputId;
-        private @Nullable Output<ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputParallelismArgs> inputParallelism;
-        private @Nullable Output<ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputProcessingConfigurationArgs> inputProcessingConfiguration;
-        private Output<ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputSchemaArgs> inputSchema;
-        private @Nullable Output<List<ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputStartingPositionConfigurationArgs>> inputStartingPositionConfigurations;
-        private @Nullable Output<ApplicationApplicationConfigurationSqlApplicationConfigurationInputKinesisFirehoseInputArgs> kinesisFirehoseInput;
-        private @Nullable Output<ApplicationApplicationConfigurationSqlApplicationConfigurationInputKinesisStreamsInputArgs> kinesisStreamsInput;
-        private Output<String> namePrefix;
+        private ApplicationApplicationConfigurationSqlApplicationConfigurationInputArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ApplicationApplicationConfigurationSqlApplicationConfigurationInputArgs();
         }
 
         public Builder(ApplicationApplicationConfigurationSqlApplicationConfigurationInputArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.inAppStreamNames = defaults.inAppStreamNames;
-    	      this.inputId = defaults.inputId;
-    	      this.inputParallelism = defaults.inputParallelism;
-    	      this.inputProcessingConfiguration = defaults.inputProcessingConfiguration;
-    	      this.inputSchema = defaults.inputSchema;
-    	      this.inputStartingPositionConfigurations = defaults.inputStartingPositionConfigurations;
-    	      this.kinesisFirehoseInput = defaults.kinesisFirehoseInput;
-    	      this.kinesisStreamsInput = defaults.kinesisStreamsInput;
-    	      this.namePrefix = defaults.namePrefix;
+            $ = new ApplicationApplicationConfigurationSqlApplicationConfigurationInputArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder inAppStreamNames(@Nullable Output<List<String>> inAppStreamNames) {
-            this.inAppStreamNames = inAppStreamNames;
+            $.inAppStreamNames = inAppStreamNames;
             return this;
         }
-        public Builder inAppStreamNames(@Nullable List<String> inAppStreamNames) {
-            this.inAppStreamNames = Codegen.ofNullable(inAppStreamNames);
-            return this;
+
+        public Builder inAppStreamNames(List<String> inAppStreamNames) {
+            return inAppStreamNames(Output.of(inAppStreamNames));
         }
+
         public Builder inAppStreamNames(String... inAppStreamNames) {
             return inAppStreamNames(List.of(inAppStreamNames));
         }
+
         public Builder inputId(@Nullable Output<String> inputId) {
-            this.inputId = inputId;
+            $.inputId = inputId;
             return this;
         }
-        public Builder inputId(@Nullable String inputId) {
-            this.inputId = Codegen.ofNullable(inputId);
-            return this;
+
+        public Builder inputId(String inputId) {
+            return inputId(Output.of(inputId));
         }
+
         public Builder inputParallelism(@Nullable Output<ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputParallelismArgs> inputParallelism) {
-            this.inputParallelism = inputParallelism;
+            $.inputParallelism = inputParallelism;
             return this;
         }
-        public Builder inputParallelism(@Nullable ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputParallelismArgs inputParallelism) {
-            this.inputParallelism = Codegen.ofNullable(inputParallelism);
-            return this;
+
+        public Builder inputParallelism(ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputParallelismArgs inputParallelism) {
+            return inputParallelism(Output.of(inputParallelism));
         }
+
         public Builder inputProcessingConfiguration(@Nullable Output<ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputProcessingConfigurationArgs> inputProcessingConfiguration) {
-            this.inputProcessingConfiguration = inputProcessingConfiguration;
+            $.inputProcessingConfiguration = inputProcessingConfiguration;
             return this;
         }
-        public Builder inputProcessingConfiguration(@Nullable ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputProcessingConfigurationArgs inputProcessingConfiguration) {
-            this.inputProcessingConfiguration = Codegen.ofNullable(inputProcessingConfiguration);
-            return this;
+
+        public Builder inputProcessingConfiguration(ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputProcessingConfigurationArgs inputProcessingConfiguration) {
+            return inputProcessingConfiguration(Output.of(inputProcessingConfiguration));
         }
+
         public Builder inputSchema(Output<ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputSchemaArgs> inputSchema) {
-            this.inputSchema = Objects.requireNonNull(inputSchema);
+            $.inputSchema = inputSchema;
             return this;
         }
+
         public Builder inputSchema(ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputSchemaArgs inputSchema) {
-            this.inputSchema = Output.of(Objects.requireNonNull(inputSchema));
-            return this;
+            return inputSchema(Output.of(inputSchema));
         }
+
         public Builder inputStartingPositionConfigurations(@Nullable Output<List<ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputStartingPositionConfigurationArgs>> inputStartingPositionConfigurations) {
-            this.inputStartingPositionConfigurations = inputStartingPositionConfigurations;
+            $.inputStartingPositionConfigurations = inputStartingPositionConfigurations;
             return this;
         }
-        public Builder inputStartingPositionConfigurations(@Nullable List<ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputStartingPositionConfigurationArgs> inputStartingPositionConfigurations) {
-            this.inputStartingPositionConfigurations = Codegen.ofNullable(inputStartingPositionConfigurations);
-            return this;
+
+        public Builder inputStartingPositionConfigurations(List<ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputStartingPositionConfigurationArgs> inputStartingPositionConfigurations) {
+            return inputStartingPositionConfigurations(Output.of(inputStartingPositionConfigurations));
         }
+
         public Builder inputStartingPositionConfigurations(ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputStartingPositionConfigurationArgs... inputStartingPositionConfigurations) {
             return inputStartingPositionConfigurations(List.of(inputStartingPositionConfigurations));
         }
+
         public Builder kinesisFirehoseInput(@Nullable Output<ApplicationApplicationConfigurationSqlApplicationConfigurationInputKinesisFirehoseInputArgs> kinesisFirehoseInput) {
-            this.kinesisFirehoseInput = kinesisFirehoseInput;
+            $.kinesisFirehoseInput = kinesisFirehoseInput;
             return this;
         }
-        public Builder kinesisFirehoseInput(@Nullable ApplicationApplicationConfigurationSqlApplicationConfigurationInputKinesisFirehoseInputArgs kinesisFirehoseInput) {
-            this.kinesisFirehoseInput = Codegen.ofNullable(kinesisFirehoseInput);
-            return this;
+
+        public Builder kinesisFirehoseInput(ApplicationApplicationConfigurationSqlApplicationConfigurationInputKinesisFirehoseInputArgs kinesisFirehoseInput) {
+            return kinesisFirehoseInput(Output.of(kinesisFirehoseInput));
         }
+
         public Builder kinesisStreamsInput(@Nullable Output<ApplicationApplicationConfigurationSqlApplicationConfigurationInputKinesisStreamsInputArgs> kinesisStreamsInput) {
-            this.kinesisStreamsInput = kinesisStreamsInput;
+            $.kinesisStreamsInput = kinesisStreamsInput;
             return this;
         }
-        public Builder kinesisStreamsInput(@Nullable ApplicationApplicationConfigurationSqlApplicationConfigurationInputKinesisStreamsInputArgs kinesisStreamsInput) {
-            this.kinesisStreamsInput = Codegen.ofNullable(kinesisStreamsInput);
-            return this;
+
+        public Builder kinesisStreamsInput(ApplicationApplicationConfigurationSqlApplicationConfigurationInputKinesisStreamsInputArgs kinesisStreamsInput) {
+            return kinesisStreamsInput(Output.of(kinesisStreamsInput));
         }
+
         public Builder namePrefix(Output<String> namePrefix) {
-            this.namePrefix = Objects.requireNonNull(namePrefix);
+            $.namePrefix = namePrefix;
             return this;
         }
+
         public Builder namePrefix(String namePrefix) {
-            this.namePrefix = Output.of(Objects.requireNonNull(namePrefix));
-            return this;
-        }        public ApplicationApplicationConfigurationSqlApplicationConfigurationInputArgs build() {
-            return new ApplicationApplicationConfigurationSqlApplicationConfigurationInputArgs(inAppStreamNames, inputId, inputParallelism, inputProcessingConfiguration, inputSchema, inputStartingPositionConfigurations, kinesisFirehoseInput, kinesisStreamsInput, namePrefix);
+            return namePrefix(Output.of(namePrefix));
+        }
+
+        public ApplicationApplicationConfigurationSqlApplicationConfigurationInputArgs build() {
+            $.inputSchema = Objects.requireNonNull($.inputSchema, "expected parameter 'inputSchema' to be non-null");
+            $.namePrefix = Objects.requireNonNull($.namePrefix, "expected parameter 'namePrefix' to be non-null");
+            return $;
         }
     }
+
 }

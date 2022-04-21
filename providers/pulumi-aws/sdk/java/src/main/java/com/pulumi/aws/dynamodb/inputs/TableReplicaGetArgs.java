@@ -5,9 +5,9 @@ package com.pulumi.aws.dynamodb.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class TableReplicaGetArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="kmsKeyArn")
-      private final @Nullable Output<String> kmsKeyArn;
+    private @Nullable Output<String> kmsKeyArn;
 
-    public Output<String> kmsKeyArn() {
-        return this.kmsKeyArn == null ? Codegen.empty() : this.kmsKeyArn;
+    public Optional<Output<String>> kmsKeyArn() {
+        return Optional.ofNullable(this.kmsKeyArn);
     }
 
     /**
@@ -32,63 +32,59 @@ public final class TableReplicaGetArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="regionName", required=true)
-      private final Output<String> regionName;
+    private Output<String> regionName;
 
     public Output<String> regionName() {
         return this.regionName;
     }
 
-    public TableReplicaGetArgs(
-        @Nullable Output<String> kmsKeyArn,
-        Output<String> regionName) {
-        this.kmsKeyArn = kmsKeyArn;
-        this.regionName = Objects.requireNonNull(regionName, "expected parameter 'regionName' to be non-null");
-    }
+    private TableReplicaGetArgs() {}
 
-    private TableReplicaGetArgs() {
-        this.kmsKeyArn = Codegen.empty();
-        this.regionName = Codegen.empty();
+    private TableReplicaGetArgs(TableReplicaGetArgs $) {
+        this.kmsKeyArn = $.kmsKeyArn;
+        this.regionName = $.regionName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TableReplicaGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> kmsKeyArn;
-        private Output<String> regionName;
+        private TableReplicaGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TableReplicaGetArgs();
         }
 
         public Builder(TableReplicaGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.kmsKeyArn = defaults.kmsKeyArn;
-    	      this.regionName = defaults.regionName;
+            $ = new TableReplicaGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder kmsKeyArn(@Nullable Output<String> kmsKeyArn) {
-            this.kmsKeyArn = kmsKeyArn;
+            $.kmsKeyArn = kmsKeyArn;
             return this;
         }
-        public Builder kmsKeyArn(@Nullable String kmsKeyArn) {
-            this.kmsKeyArn = Codegen.ofNullable(kmsKeyArn);
-            return this;
+
+        public Builder kmsKeyArn(String kmsKeyArn) {
+            return kmsKeyArn(Output.of(kmsKeyArn));
         }
+
         public Builder regionName(Output<String> regionName) {
-            this.regionName = Objects.requireNonNull(regionName);
+            $.regionName = regionName;
             return this;
         }
+
         public Builder regionName(String regionName) {
-            this.regionName = Output.of(Objects.requireNonNull(regionName));
-            return this;
-        }        public TableReplicaGetArgs build() {
-            return new TableReplicaGetArgs(kmsKeyArn, regionName);
+            return regionName(Output.of(regionName));
+        }
+
+        public TableReplicaGetArgs build() {
+            $.regionName = Objects.requireNonNull($.regionName, "expected parameter 'regionName' to be non-null");
+            return $;
         }
     }
+
 }

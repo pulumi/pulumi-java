@@ -25,10 +25,10 @@ public final class VCenterPropertiesResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="discoveryStatus")
-      private final @Nullable String discoveryStatus;
+    private @Nullable String discoveryStatus;
 
     public Optional<String> discoveryStatus() {
-        return this.discoveryStatus == null ? Optional.empty() : Optional.ofNullable(this.discoveryStatus);
+        return Optional.ofNullable(this.discoveryStatus);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class VCenterPropertiesResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="fabricArmResourceName")
-      private final @Nullable String fabricArmResourceName;
+    private @Nullable String fabricArmResourceName;
 
     public Optional<String> fabricArmResourceName() {
-        return this.fabricArmResourceName == null ? Optional.empty() : Optional.ofNullable(this.fabricArmResourceName);
+        return Optional.ofNullable(this.fabricArmResourceName);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class VCenterPropertiesResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="friendlyName")
-      private final @Nullable String friendlyName;
+    private @Nullable String friendlyName;
 
     public Optional<String> friendlyName() {
-        return this.friendlyName == null ? Optional.empty() : Optional.ofNullable(this.friendlyName);
+        return Optional.ofNullable(this.friendlyName);
     }
 
     /**
@@ -58,10 +58,10 @@ public final class VCenterPropertiesResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="healthErrors")
-      private final @Nullable List<HealthErrorResponse> healthErrors;
+    private @Nullable List<HealthErrorResponse> healthErrors;
 
-    public List<HealthErrorResponse> healthErrors() {
-        return this.healthErrors == null ? List.of() : this.healthErrors;
+    public Optional<List<HealthErrorResponse>> healthErrors() {
+        return Optional.ofNullable(this.healthErrors);
     }
 
     /**
@@ -69,10 +69,10 @@ public final class VCenterPropertiesResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="infrastructureId")
-      private final @Nullable String infrastructureId;
+    private @Nullable String infrastructureId;
 
     public Optional<String> infrastructureId() {
-        return this.infrastructureId == null ? Optional.empty() : Optional.ofNullable(this.infrastructureId);
+        return Optional.ofNullable(this.infrastructureId);
     }
 
     /**
@@ -80,10 +80,10 @@ public final class VCenterPropertiesResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="internalId")
-      private final @Nullable String internalId;
+    private @Nullable String internalId;
 
     public Optional<String> internalId() {
-        return this.internalId == null ? Optional.empty() : Optional.ofNullable(this.internalId);
+        return Optional.ofNullable(this.internalId);
     }
 
     /**
@@ -91,10 +91,10 @@ public final class VCenterPropertiesResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="ipAddress")
-      private final @Nullable String ipAddress;
+    private @Nullable String ipAddress;
 
     public Optional<String> ipAddress() {
-        return this.ipAddress == null ? Optional.empty() : Optional.ofNullable(this.ipAddress);
+        return Optional.ofNullable(this.ipAddress);
     }
 
     /**
@@ -102,10 +102,10 @@ public final class VCenterPropertiesResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="lastHeartbeat")
-      private final @Nullable String lastHeartbeat;
+    private @Nullable String lastHeartbeat;
 
     public Optional<String> lastHeartbeat() {
-        return this.lastHeartbeat == null ? Optional.empty() : Optional.ofNullable(this.lastHeartbeat);
+        return Optional.ofNullable(this.lastHeartbeat);
     }
 
     /**
@@ -113,10 +113,10 @@ public final class VCenterPropertiesResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="port")
-      private final @Nullable String port;
+    private @Nullable String port;
 
     public Optional<String> port() {
-        return this.port == null ? Optional.empty() : Optional.ofNullable(this.port);
+        return Optional.ofNullable(this.port);
     }
 
     /**
@@ -124,10 +124,10 @@ public final class VCenterPropertiesResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="processServerId")
-      private final @Nullable String processServerId;
+    private @Nullable String processServerId;
 
     public Optional<String> processServerId() {
-        return this.processServerId == null ? Optional.empty() : Optional.ofNullable(this.processServerId);
+        return Optional.ofNullable(this.processServerId);
     }
 
     /**
@@ -135,139 +135,108 @@ public final class VCenterPropertiesResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="runAsAccountId")
-      private final @Nullable String runAsAccountId;
+    private @Nullable String runAsAccountId;
 
     public Optional<String> runAsAccountId() {
-        return this.runAsAccountId == null ? Optional.empty() : Optional.ofNullable(this.runAsAccountId);
+        return Optional.ofNullable(this.runAsAccountId);
     }
 
-    public VCenterPropertiesResponse(
-        @Nullable String discoveryStatus,
-        @Nullable String fabricArmResourceName,
-        @Nullable String friendlyName,
-        @Nullable List<HealthErrorResponse> healthErrors,
-        @Nullable String infrastructureId,
-        @Nullable String internalId,
-        @Nullable String ipAddress,
-        @Nullable String lastHeartbeat,
-        @Nullable String port,
-        @Nullable String processServerId,
-        @Nullable String runAsAccountId) {
-        this.discoveryStatus = discoveryStatus;
-        this.fabricArmResourceName = fabricArmResourceName;
-        this.friendlyName = friendlyName;
-        this.healthErrors = healthErrors;
-        this.infrastructureId = infrastructureId;
-        this.internalId = internalId;
-        this.ipAddress = ipAddress;
-        this.lastHeartbeat = lastHeartbeat;
-        this.port = port;
-        this.processServerId = processServerId;
-        this.runAsAccountId = runAsAccountId;
-    }
+    private VCenterPropertiesResponse() {}
 
-    private VCenterPropertiesResponse() {
-        this.discoveryStatus = null;
-        this.fabricArmResourceName = null;
-        this.friendlyName = null;
-        this.healthErrors = List.of();
-        this.infrastructureId = null;
-        this.internalId = null;
-        this.ipAddress = null;
-        this.lastHeartbeat = null;
-        this.port = null;
-        this.processServerId = null;
-        this.runAsAccountId = null;
+    private VCenterPropertiesResponse(VCenterPropertiesResponse $) {
+        this.discoveryStatus = $.discoveryStatus;
+        this.fabricArmResourceName = $.fabricArmResourceName;
+        this.friendlyName = $.friendlyName;
+        this.healthErrors = $.healthErrors;
+        this.infrastructureId = $.infrastructureId;
+        this.internalId = $.internalId;
+        this.ipAddress = $.ipAddress;
+        this.lastHeartbeat = $.lastHeartbeat;
+        this.port = $.port;
+        this.processServerId = $.processServerId;
+        this.runAsAccountId = $.runAsAccountId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VCenterPropertiesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String discoveryStatus;
-        private @Nullable String fabricArmResourceName;
-        private @Nullable String friendlyName;
-        private @Nullable List<HealthErrorResponse> healthErrors;
-        private @Nullable String infrastructureId;
-        private @Nullable String internalId;
-        private @Nullable String ipAddress;
-        private @Nullable String lastHeartbeat;
-        private @Nullable String port;
-        private @Nullable String processServerId;
-        private @Nullable String runAsAccountId;
+        private VCenterPropertiesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new VCenterPropertiesResponse();
         }
 
         public Builder(VCenterPropertiesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.discoveryStatus = defaults.discoveryStatus;
-    	      this.fabricArmResourceName = defaults.fabricArmResourceName;
-    	      this.friendlyName = defaults.friendlyName;
-    	      this.healthErrors = defaults.healthErrors;
-    	      this.infrastructureId = defaults.infrastructureId;
-    	      this.internalId = defaults.internalId;
-    	      this.ipAddress = defaults.ipAddress;
-    	      this.lastHeartbeat = defaults.lastHeartbeat;
-    	      this.port = defaults.port;
-    	      this.processServerId = defaults.processServerId;
-    	      this.runAsAccountId = defaults.runAsAccountId;
+            $ = new VCenterPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder discoveryStatus(@Nullable String discoveryStatus) {
-            this.discoveryStatus = discoveryStatus;
+            $.discoveryStatus = discoveryStatus;
             return this;
         }
+
         public Builder fabricArmResourceName(@Nullable String fabricArmResourceName) {
-            this.fabricArmResourceName = fabricArmResourceName;
+            $.fabricArmResourceName = fabricArmResourceName;
             return this;
         }
+
         public Builder friendlyName(@Nullable String friendlyName) {
-            this.friendlyName = friendlyName;
+            $.friendlyName = friendlyName;
             return this;
         }
+
         public Builder healthErrors(@Nullable List<HealthErrorResponse> healthErrors) {
-            this.healthErrors = healthErrors;
+            $.healthErrors = healthErrors;
             return this;
         }
+
         public Builder healthErrors(HealthErrorResponse... healthErrors) {
             return healthErrors(List.of(healthErrors));
         }
+
         public Builder infrastructureId(@Nullable String infrastructureId) {
-            this.infrastructureId = infrastructureId;
+            $.infrastructureId = infrastructureId;
             return this;
         }
+
         public Builder internalId(@Nullable String internalId) {
-            this.internalId = internalId;
+            $.internalId = internalId;
             return this;
         }
+
         public Builder ipAddress(@Nullable String ipAddress) {
-            this.ipAddress = ipAddress;
+            $.ipAddress = ipAddress;
             return this;
         }
+
         public Builder lastHeartbeat(@Nullable String lastHeartbeat) {
-            this.lastHeartbeat = lastHeartbeat;
+            $.lastHeartbeat = lastHeartbeat;
             return this;
         }
+
         public Builder port(@Nullable String port) {
-            this.port = port;
+            $.port = port;
             return this;
         }
+
         public Builder processServerId(@Nullable String processServerId) {
-            this.processServerId = processServerId;
+            $.processServerId = processServerId;
             return this;
         }
+
         public Builder runAsAccountId(@Nullable String runAsAccountId) {
-            this.runAsAccountId = runAsAccountId;
+            $.runAsAccountId = runAsAccountId;
             return this;
-        }        public VCenterPropertiesResponse build() {
-            return new VCenterPropertiesResponse(discoveryStatus, fabricArmResourceName, friendlyName, healthErrors, infrastructureId, internalId, ipAddress, lastHeartbeat, port, processServerId, runAsAccountId);
+        }
+
+        public VCenterPropertiesResponse build() {
+            return $;
         }
     }
+
 }

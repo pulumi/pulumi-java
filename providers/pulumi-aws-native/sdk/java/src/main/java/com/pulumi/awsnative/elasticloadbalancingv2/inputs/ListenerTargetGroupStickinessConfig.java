@@ -16,62 +16,57 @@ public final class ListenerTargetGroupStickinessConfig extends com.pulumi.resour
     public static final ListenerTargetGroupStickinessConfig Empty = new ListenerTargetGroupStickinessConfig();
 
     @Import(name="durationSeconds")
-      private final @Nullable Integer durationSeconds;
+    private @Nullable Integer durationSeconds;
 
     public Optional<Integer> durationSeconds() {
-        return this.durationSeconds == null ? Optional.empty() : Optional.ofNullable(this.durationSeconds);
+        return Optional.ofNullable(this.durationSeconds);
     }
 
     @Import(name="enabled")
-      private final @Nullable Boolean enabled;
+    private @Nullable Boolean enabled;
 
     public Optional<Boolean> enabled() {
-        return this.enabled == null ? Optional.empty() : Optional.ofNullable(this.enabled);
+        return Optional.ofNullable(this.enabled);
     }
 
-    public ListenerTargetGroupStickinessConfig(
-        @Nullable Integer durationSeconds,
-        @Nullable Boolean enabled) {
-        this.durationSeconds = durationSeconds;
-        this.enabled = enabled;
-    }
+    private ListenerTargetGroupStickinessConfig() {}
 
-    private ListenerTargetGroupStickinessConfig() {
-        this.durationSeconds = null;
-        this.enabled = null;
+    private ListenerTargetGroupStickinessConfig(ListenerTargetGroupStickinessConfig $) {
+        this.durationSeconds = $.durationSeconds;
+        this.enabled = $.enabled;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ListenerTargetGroupStickinessConfig defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Integer durationSeconds;
-        private @Nullable Boolean enabled;
+        private ListenerTargetGroupStickinessConfig $;
 
         public Builder() {
-    	      // Empty
+            $ = new ListenerTargetGroupStickinessConfig();
         }
 
         public Builder(ListenerTargetGroupStickinessConfig defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.durationSeconds = defaults.durationSeconds;
-    	      this.enabled = defaults.enabled;
+            $ = new ListenerTargetGroupStickinessConfig(Objects.requireNonNull(defaults));
         }
 
         public Builder durationSeconds(@Nullable Integer durationSeconds) {
-            this.durationSeconds = durationSeconds;
+            $.durationSeconds = durationSeconds;
             return this;
         }
+
         public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = enabled;
+            $.enabled = enabled;
             return this;
-        }        public ListenerTargetGroupStickinessConfig build() {
-            return new ListenerTargetGroupStickinessConfig(durationSeconds, enabled);
+        }
+
+        public ListenerTargetGroupStickinessConfig build() {
+            return $;
         }
     }
+
 }

@@ -21,10 +21,10 @@ public final class GetInstanceTypeOfferingsArgs extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="filters")
-      private final @Nullable List<GetInstanceTypeOfferingsFilter> filters;
+    private @Nullable List<GetInstanceTypeOfferingsFilter> filters;
 
-    public List<GetInstanceTypeOfferingsFilter> filters() {
-        return this.filters == null ? List.of() : this.filters;
+    public Optional<List<GetInstanceTypeOfferingsFilter>> filters() {
+        return Optional.ofNullable(this.filters);
     }
 
     /**
@@ -32,58 +32,54 @@ public final class GetInstanceTypeOfferingsArgs extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="locationType")
-      private final @Nullable String locationType;
+    private @Nullable String locationType;
 
     public Optional<String> locationType() {
-        return this.locationType == null ? Optional.empty() : Optional.ofNullable(this.locationType);
+        return Optional.ofNullable(this.locationType);
     }
 
-    public GetInstanceTypeOfferingsArgs(
-        @Nullable List<GetInstanceTypeOfferingsFilter> filters,
-        @Nullable String locationType) {
-        this.filters = filters;
-        this.locationType = locationType;
-    }
+    private GetInstanceTypeOfferingsArgs() {}
 
-    private GetInstanceTypeOfferingsArgs() {
-        this.filters = List.of();
-        this.locationType = null;
+    private GetInstanceTypeOfferingsArgs(GetInstanceTypeOfferingsArgs $) {
+        this.filters = $.filters;
+        this.locationType = $.locationType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetInstanceTypeOfferingsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<GetInstanceTypeOfferingsFilter> filters;
-        private @Nullable String locationType;
+        private GetInstanceTypeOfferingsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetInstanceTypeOfferingsArgs();
         }
 
         public Builder(GetInstanceTypeOfferingsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.filters = defaults.filters;
-    	      this.locationType = defaults.locationType;
+            $ = new GetInstanceTypeOfferingsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder filters(@Nullable List<GetInstanceTypeOfferingsFilter> filters) {
-            this.filters = filters;
+            $.filters = filters;
             return this;
         }
+
         public Builder filters(GetInstanceTypeOfferingsFilter... filters) {
             return filters(List.of(filters));
         }
+
         public Builder locationType(@Nullable String locationType) {
-            this.locationType = locationType;
+            $.locationType = locationType;
             return this;
-        }        public GetInstanceTypeOfferingsArgs build() {
-            return new GetInstanceTypeOfferingsArgs(filters, locationType);
+        }
+
+        public GetInstanceTypeOfferingsArgs build() {
+            return $;
         }
     }
+
 }

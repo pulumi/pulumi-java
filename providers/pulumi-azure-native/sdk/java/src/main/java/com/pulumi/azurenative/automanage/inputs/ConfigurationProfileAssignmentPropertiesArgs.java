@@ -7,9 +7,9 @@ import com.pulumi.azurenative.automanage.enums.ConfigurationProfile;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class ConfigurationProfileAssignmentPropertiesArgs extends com.pulu
      * 
      */
     @Import(name="accountId")
-      private final @Nullable Output<String> accountId;
+    private @Nullable Output<String> accountId;
 
-    public Output<String> accountId() {
-        return this.accountId == null ? Codegen.empty() : this.accountId;
+    public Optional<Output<String>> accountId() {
+        return Optional.ofNullable(this.accountId);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class ConfigurationProfileAssignmentPropertiesArgs extends com.pulu
      * 
      */
     @Import(name="configurationProfile")
-      private final @Nullable Output<Either<String,ConfigurationProfile>> configurationProfile;
+    private @Nullable Output<Either<String,ConfigurationProfile>> configurationProfile;
 
-    public Output<Either<String,ConfigurationProfile>> configurationProfile() {
-        return this.configurationProfile == null ? Codegen.empty() : this.configurationProfile;
+    public Optional<Output<Either<String,ConfigurationProfile>>> configurationProfile() {
+        return Optional.ofNullable(this.configurationProfile);
     }
 
     /**
@@ -48,10 +48,10 @@ public final class ConfigurationProfileAssignmentPropertiesArgs extends com.pulu
      * 
      */
     @Import(name="configurationProfilePreferenceId")
-      private final @Nullable Output<String> configurationProfilePreferenceId;
+    private @Nullable Output<String> configurationProfilePreferenceId;
 
-    public Output<String> configurationProfilePreferenceId() {
-        return this.configurationProfilePreferenceId == null ? Codegen.empty() : this.configurationProfilePreferenceId;
+    public Optional<Output<String>> configurationProfilePreferenceId() {
+        return Optional.ofNullable(this.configurationProfilePreferenceId);
     }
 
     /**
@@ -59,89 +59,78 @@ public final class ConfigurationProfileAssignmentPropertiesArgs extends com.pulu
      * 
      */
     @Import(name="targetId")
-      private final @Nullable Output<String> targetId;
+    private @Nullable Output<String> targetId;
 
-    public Output<String> targetId() {
-        return this.targetId == null ? Codegen.empty() : this.targetId;
+    public Optional<Output<String>> targetId() {
+        return Optional.ofNullable(this.targetId);
     }
 
-    public ConfigurationProfileAssignmentPropertiesArgs(
-        @Nullable Output<String> accountId,
-        @Nullable Output<Either<String,ConfigurationProfile>> configurationProfile,
-        @Nullable Output<String> configurationProfilePreferenceId,
-        @Nullable Output<String> targetId) {
-        this.accountId = accountId;
-        this.configurationProfile = configurationProfile;
-        this.configurationProfilePreferenceId = configurationProfilePreferenceId;
-        this.targetId = targetId;
-    }
+    private ConfigurationProfileAssignmentPropertiesArgs() {}
 
-    private ConfigurationProfileAssignmentPropertiesArgs() {
-        this.accountId = Codegen.empty();
-        this.configurationProfile = Codegen.empty();
-        this.configurationProfilePreferenceId = Codegen.empty();
-        this.targetId = Codegen.empty();
+    private ConfigurationProfileAssignmentPropertiesArgs(ConfigurationProfileAssignmentPropertiesArgs $) {
+        this.accountId = $.accountId;
+        this.configurationProfile = $.configurationProfile;
+        this.configurationProfilePreferenceId = $.configurationProfilePreferenceId;
+        this.targetId = $.targetId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ConfigurationProfileAssignmentPropertiesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> accountId;
-        private @Nullable Output<Either<String,ConfigurationProfile>> configurationProfile;
-        private @Nullable Output<String> configurationProfilePreferenceId;
-        private @Nullable Output<String> targetId;
+        private ConfigurationProfileAssignmentPropertiesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ConfigurationProfileAssignmentPropertiesArgs();
         }
 
         public Builder(ConfigurationProfileAssignmentPropertiesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accountId = defaults.accountId;
-    	      this.configurationProfile = defaults.configurationProfile;
-    	      this.configurationProfilePreferenceId = defaults.configurationProfilePreferenceId;
-    	      this.targetId = defaults.targetId;
+            $ = new ConfigurationProfileAssignmentPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder accountId(@Nullable Output<String> accountId) {
-            this.accountId = accountId;
+            $.accountId = accountId;
             return this;
         }
-        public Builder accountId(@Nullable String accountId) {
-            this.accountId = Codegen.ofNullable(accountId);
-            return this;
+
+        public Builder accountId(String accountId) {
+            return accountId(Output.of(accountId));
         }
+
         public Builder configurationProfile(@Nullable Output<Either<String,ConfigurationProfile>> configurationProfile) {
-            this.configurationProfile = configurationProfile;
+            $.configurationProfile = configurationProfile;
             return this;
         }
-        public Builder configurationProfile(@Nullable Either<String,ConfigurationProfile> configurationProfile) {
-            this.configurationProfile = Codegen.ofNullable(configurationProfile);
-            return this;
+
+        public Builder configurationProfile(Either<String,ConfigurationProfile> configurationProfile) {
+            return configurationProfile(Output.of(configurationProfile));
         }
+
         public Builder configurationProfilePreferenceId(@Nullable Output<String> configurationProfilePreferenceId) {
-            this.configurationProfilePreferenceId = configurationProfilePreferenceId;
+            $.configurationProfilePreferenceId = configurationProfilePreferenceId;
             return this;
         }
-        public Builder configurationProfilePreferenceId(@Nullable String configurationProfilePreferenceId) {
-            this.configurationProfilePreferenceId = Codegen.ofNullable(configurationProfilePreferenceId);
-            return this;
+
+        public Builder configurationProfilePreferenceId(String configurationProfilePreferenceId) {
+            return configurationProfilePreferenceId(Output.of(configurationProfilePreferenceId));
         }
+
         public Builder targetId(@Nullable Output<String> targetId) {
-            this.targetId = targetId;
+            $.targetId = targetId;
             return this;
         }
-        public Builder targetId(@Nullable String targetId) {
-            this.targetId = Codegen.ofNullable(targetId);
-            return this;
-        }        public ConfigurationProfileAssignmentPropertiesArgs build() {
-            return new ConfigurationProfileAssignmentPropertiesArgs(accountId, configurationProfile, configurationProfilePreferenceId, targetId);
+
+        public Builder targetId(String targetId) {
+            return targetId(Output.of(targetId));
+        }
+
+        public ConfigurationProfileAssignmentPropertiesArgs build() {
+            return $;
         }
     }
+
 }

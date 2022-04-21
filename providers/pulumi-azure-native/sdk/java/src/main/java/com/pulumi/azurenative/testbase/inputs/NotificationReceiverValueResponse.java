@@ -25,10 +25,10 @@ public final class NotificationReceiverValueResponse extends com.pulumi.resource
      * 
      */
     @Import(name="distributionGroupListReceiverValue")
-      private final @Nullable DistributionGroupListReceiverValueResponse distributionGroupListReceiverValue;
+    private @Nullable DistributionGroupListReceiverValueResponse distributionGroupListReceiverValue;
 
     public Optional<DistributionGroupListReceiverValueResponse> distributionGroupListReceiverValue() {
-        return this.distributionGroupListReceiverValue == null ? Optional.empty() : Optional.ofNullable(this.distributionGroupListReceiverValue);
+        return Optional.ofNullable(this.distributionGroupListReceiverValue);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class NotificationReceiverValueResponse extends com.pulumi.resource
      * 
      */
     @Import(name="subscriptionReceiverValue")
-      private final @Nullable SubscriptionReceiverValueResponse subscriptionReceiverValue;
+    private @Nullable SubscriptionReceiverValueResponse subscriptionReceiverValue;
 
     public Optional<SubscriptionReceiverValueResponse> subscriptionReceiverValue() {
-        return this.subscriptionReceiverValue == null ? Optional.empty() : Optional.ofNullable(this.subscriptionReceiverValue);
+        return Optional.ofNullable(this.subscriptionReceiverValue);
     }
 
     /**
@@ -47,64 +47,56 @@ public final class NotificationReceiverValueResponse extends com.pulumi.resource
      * 
      */
     @Import(name="userObjectReceiverValue")
-      private final @Nullable UserObjectReceiverValueResponse userObjectReceiverValue;
+    private @Nullable UserObjectReceiverValueResponse userObjectReceiverValue;
 
     public Optional<UserObjectReceiverValueResponse> userObjectReceiverValue() {
-        return this.userObjectReceiverValue == null ? Optional.empty() : Optional.ofNullable(this.userObjectReceiverValue);
+        return Optional.ofNullable(this.userObjectReceiverValue);
     }
 
-    public NotificationReceiverValueResponse(
-        @Nullable DistributionGroupListReceiverValueResponse distributionGroupListReceiverValue,
-        @Nullable SubscriptionReceiverValueResponse subscriptionReceiverValue,
-        @Nullable UserObjectReceiverValueResponse userObjectReceiverValue) {
-        this.distributionGroupListReceiverValue = distributionGroupListReceiverValue;
-        this.subscriptionReceiverValue = subscriptionReceiverValue;
-        this.userObjectReceiverValue = userObjectReceiverValue;
-    }
+    private NotificationReceiverValueResponse() {}
 
-    private NotificationReceiverValueResponse() {
-        this.distributionGroupListReceiverValue = null;
-        this.subscriptionReceiverValue = null;
-        this.userObjectReceiverValue = null;
+    private NotificationReceiverValueResponse(NotificationReceiverValueResponse $) {
+        this.distributionGroupListReceiverValue = $.distributionGroupListReceiverValue;
+        this.subscriptionReceiverValue = $.subscriptionReceiverValue;
+        this.userObjectReceiverValue = $.userObjectReceiverValue;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NotificationReceiverValueResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable DistributionGroupListReceiverValueResponse distributionGroupListReceiverValue;
-        private @Nullable SubscriptionReceiverValueResponse subscriptionReceiverValue;
-        private @Nullable UserObjectReceiverValueResponse userObjectReceiverValue;
+        private NotificationReceiverValueResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new NotificationReceiverValueResponse();
         }
 
         public Builder(NotificationReceiverValueResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.distributionGroupListReceiverValue = defaults.distributionGroupListReceiverValue;
-    	      this.subscriptionReceiverValue = defaults.subscriptionReceiverValue;
-    	      this.userObjectReceiverValue = defaults.userObjectReceiverValue;
+            $ = new NotificationReceiverValueResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder distributionGroupListReceiverValue(@Nullable DistributionGroupListReceiverValueResponse distributionGroupListReceiverValue) {
-            this.distributionGroupListReceiverValue = distributionGroupListReceiverValue;
+            $.distributionGroupListReceiverValue = distributionGroupListReceiverValue;
             return this;
         }
+
         public Builder subscriptionReceiverValue(@Nullable SubscriptionReceiverValueResponse subscriptionReceiverValue) {
-            this.subscriptionReceiverValue = subscriptionReceiverValue;
+            $.subscriptionReceiverValue = subscriptionReceiverValue;
             return this;
         }
+
         public Builder userObjectReceiverValue(@Nullable UserObjectReceiverValueResponse userObjectReceiverValue) {
-            this.userObjectReceiverValue = userObjectReceiverValue;
+            $.userObjectReceiverValue = userObjectReceiverValue;
             return this;
-        }        public NotificationReceiverValueResponse build() {
-            return new NotificationReceiverValueResponse(distributionGroupListReceiverValue, subscriptionReceiverValue, userObjectReceiverValue);
+        }
+
+        public NotificationReceiverValueResponse build() {
+            return $;
         }
     }
+
 }

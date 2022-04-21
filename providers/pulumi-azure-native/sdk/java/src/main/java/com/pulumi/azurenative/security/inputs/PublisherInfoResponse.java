@@ -23,10 +23,10 @@ public final class PublisherInfoResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="binaryName")
-      private final @Nullable String binaryName;
+    private @Nullable String binaryName;
 
     public Optional<String> binaryName() {
-        return this.binaryName == null ? Optional.empty() : Optional.ofNullable(this.binaryName);
+        return Optional.ofNullable(this.binaryName);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class PublisherInfoResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="productName")
-      private final @Nullable String productName;
+    private @Nullable String productName;
 
     public Optional<String> productName() {
-        return this.productName == null ? Optional.empty() : Optional.ofNullable(this.productName);
+        return Optional.ofNullable(this.productName);
     }
 
     /**
@@ -45,10 +45,10 @@ public final class PublisherInfoResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="publisherName")
-      private final @Nullable String publisherName;
+    private @Nullable String publisherName;
 
     public Optional<String> publisherName() {
-        return this.publisherName == null ? Optional.empty() : Optional.ofNullable(this.publisherName);
+        return Optional.ofNullable(this.publisherName);
     }
 
     /**
@@ -56,73 +56,62 @@ public final class PublisherInfoResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="version")
-      private final @Nullable String version;
+    private @Nullable String version;
 
     public Optional<String> version() {
-        return this.version == null ? Optional.empty() : Optional.ofNullable(this.version);
+        return Optional.ofNullable(this.version);
     }
 
-    public PublisherInfoResponse(
-        @Nullable String binaryName,
-        @Nullable String productName,
-        @Nullable String publisherName,
-        @Nullable String version) {
-        this.binaryName = binaryName;
-        this.productName = productName;
-        this.publisherName = publisherName;
-        this.version = version;
-    }
+    private PublisherInfoResponse() {}
 
-    private PublisherInfoResponse() {
-        this.binaryName = null;
-        this.productName = null;
-        this.publisherName = null;
-        this.version = null;
+    private PublisherInfoResponse(PublisherInfoResponse $) {
+        this.binaryName = $.binaryName;
+        this.productName = $.productName;
+        this.publisherName = $.publisherName;
+        this.version = $.version;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PublisherInfoResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String binaryName;
-        private @Nullable String productName;
-        private @Nullable String publisherName;
-        private @Nullable String version;
+        private PublisherInfoResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new PublisherInfoResponse();
         }
 
         public Builder(PublisherInfoResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.binaryName = defaults.binaryName;
-    	      this.productName = defaults.productName;
-    	      this.publisherName = defaults.publisherName;
-    	      this.version = defaults.version;
+            $ = new PublisherInfoResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder binaryName(@Nullable String binaryName) {
-            this.binaryName = binaryName;
+            $.binaryName = binaryName;
             return this;
         }
+
         public Builder productName(@Nullable String productName) {
-            this.productName = productName;
+            $.productName = productName;
             return this;
         }
+
         public Builder publisherName(@Nullable String publisherName) {
-            this.publisherName = publisherName;
+            $.publisherName = publisherName;
             return this;
         }
+
         public Builder version(@Nullable String version) {
-            this.version = version;
+            $.version = version;
             return this;
-        }        public PublisherInfoResponse build() {
-            return new PublisherInfoResponse(binaryName, productName, publisherName, version);
+        }
+
+        public PublisherInfoResponse build() {
+            return $;
         }
     }
+
 }

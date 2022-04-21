@@ -15,94 +15,86 @@ public final class GetAnalysisArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetAnalysisArgs Empty = new GetAnalysisArgs();
 
     @Import(name="analysisId", required=true)
-      private final String analysisId;
+    private String analysisId;
 
     public String analysisId() {
         return this.analysisId;
     }
 
     @Import(name="conversationId", required=true)
-      private final String conversationId;
+    private String conversationId;
 
     public String conversationId() {
         return this.conversationId;
     }
 
     @Import(name="location", required=true)
-      private final String location;
+    private String location;
 
     public String location() {
         return this.location;
     }
 
     @Import(name="project")
-      private final @Nullable String project;
+    private @Nullable String project;
 
     public Optional<String> project() {
-        return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
+        return Optional.ofNullable(this.project);
     }
 
-    public GetAnalysisArgs(
-        String analysisId,
-        String conversationId,
-        String location,
-        @Nullable String project) {
-        this.analysisId = Objects.requireNonNull(analysisId, "expected parameter 'analysisId' to be non-null");
-        this.conversationId = Objects.requireNonNull(conversationId, "expected parameter 'conversationId' to be non-null");
-        this.location = Objects.requireNonNull(location, "expected parameter 'location' to be non-null");
-        this.project = project;
-    }
+    private GetAnalysisArgs() {}
 
-    private GetAnalysisArgs() {
-        this.analysisId = null;
-        this.conversationId = null;
-        this.location = null;
-        this.project = null;
+    private GetAnalysisArgs(GetAnalysisArgs $) {
+        this.analysisId = $.analysisId;
+        this.conversationId = $.conversationId;
+        this.location = $.location;
+        this.project = $.project;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetAnalysisArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String analysisId;
-        private String conversationId;
-        private String location;
-        private @Nullable String project;
+        private GetAnalysisArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetAnalysisArgs();
         }
 
         public Builder(GetAnalysisArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.analysisId = defaults.analysisId;
-    	      this.conversationId = defaults.conversationId;
-    	      this.location = defaults.location;
-    	      this.project = defaults.project;
+            $ = new GetAnalysisArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder analysisId(String analysisId) {
-            this.analysisId = Objects.requireNonNull(analysisId);
+            $.analysisId = analysisId;
             return this;
         }
+
         public Builder conversationId(String conversationId) {
-            this.conversationId = Objects.requireNonNull(conversationId);
+            $.conversationId = conversationId;
             return this;
         }
+
         public Builder location(String location) {
-            this.location = Objects.requireNonNull(location);
+            $.location = location;
             return this;
         }
+
         public Builder project(@Nullable String project) {
-            this.project = project;
+            $.project = project;
             return this;
-        }        public GetAnalysisArgs build() {
-            return new GetAnalysisArgs(analysisId, conversationId, location, project);
+        }
+
+        public GetAnalysisArgs build() {
+            $.analysisId = Objects.requireNonNull($.analysisId, "expected parameter 'analysisId' to be non-null");
+            $.conversationId = Objects.requireNonNull($.conversationId, "expected parameter 'conversationId' to be non-null");
+            $.location = Objects.requireNonNull($.location, "expected parameter 'location' to be non-null");
+            return $;
         }
     }
+
 }

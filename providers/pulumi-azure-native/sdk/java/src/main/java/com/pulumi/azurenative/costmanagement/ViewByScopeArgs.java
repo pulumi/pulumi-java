@@ -15,10 +15,10 @@ import com.pulumi.azurenative.costmanagement.inputs.ReportConfigTimePeriodArgs;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -31,10 +31,10 @@ public final class ViewByScopeArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="accumulated")
-      private final @Nullable Output<Either<String,AccumulatedType>> accumulated;
+    private @Nullable Output<Either<String,AccumulatedType>> accumulated;
 
-    public Output<Either<String,AccumulatedType>> accumulated() {
-        return this.accumulated == null ? Codegen.empty() : this.accumulated;
+    public Optional<Output<Either<String,AccumulatedType>>> accumulated() {
+        return Optional.ofNullable(this.accumulated);
     }
 
     /**
@@ -42,10 +42,10 @@ public final class ViewByScopeArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="chart")
-      private final @Nullable Output<Either<String,ChartType>> chart;
+    private @Nullable Output<Either<String,ChartType>> chart;
 
-    public Output<Either<String,ChartType>> chart() {
-        return this.chart == null ? Codegen.empty() : this.chart;
+    public Optional<Output<Either<String,ChartType>>> chart() {
+        return Optional.ofNullable(this.chart);
     }
 
     /**
@@ -53,10 +53,10 @@ public final class ViewByScopeArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="dataSet")
-      private final @Nullable Output<ReportConfigDatasetArgs> dataSet;
+    private @Nullable Output<ReportConfigDatasetArgs> dataSet;
 
-    public Output<ReportConfigDatasetArgs> dataSet() {
-        return this.dataSet == null ? Codegen.empty() : this.dataSet;
+    public Optional<Output<ReportConfigDatasetArgs>> dataSet() {
+        return Optional.ofNullable(this.dataSet);
     }
 
     /**
@@ -64,10 +64,10 @@ public final class ViewByScopeArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="displayName")
-      private final @Nullable Output<String> displayName;
+    private @Nullable Output<String> displayName;
 
-    public Output<String> displayName() {
-        return this.displayName == null ? Codegen.empty() : this.displayName;
+    public Optional<Output<String>> displayName() {
+        return Optional.ofNullable(this.displayName);
     }
 
     /**
@@ -75,10 +75,10 @@ public final class ViewByScopeArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="eTag")
-      private final @Nullable Output<String> eTag;
+    private @Nullable Output<String> eTag;
 
-    public Output<String> eTag() {
-        return this.eTag == null ? Codegen.empty() : this.eTag;
+    public Optional<Output<String>> eTag() {
+        return Optional.ofNullable(this.eTag);
     }
 
     /**
@@ -86,10 +86,10 @@ public final class ViewByScopeArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="kpis")
-      private final @Nullable Output<List<KpiPropertiesArgs>> kpis;
+    private @Nullable Output<List<KpiPropertiesArgs>> kpis;
 
-    public Output<List<KpiPropertiesArgs>> kpis() {
-        return this.kpis == null ? Codegen.empty() : this.kpis;
+    public Optional<Output<List<KpiPropertiesArgs>>> kpis() {
+        return Optional.ofNullable(this.kpis);
     }
 
     /**
@@ -97,10 +97,10 @@ public final class ViewByScopeArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="metric")
-      private final @Nullable Output<Either<String,MetricType>> metric;
+    private @Nullable Output<Either<String,MetricType>> metric;
 
-    public Output<Either<String,MetricType>> metric() {
-        return this.metric == null ? Codegen.empty() : this.metric;
+    public Optional<Output<Either<String,MetricType>>> metric() {
+        return Optional.ofNullable(this.metric);
     }
 
     /**
@@ -108,10 +108,10 @@ public final class ViewByScopeArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="pivots")
-      private final @Nullable Output<List<PivotPropertiesArgs>> pivots;
+    private @Nullable Output<List<PivotPropertiesArgs>> pivots;
 
-    public Output<List<PivotPropertiesArgs>> pivots() {
-        return this.pivots == null ? Codegen.empty() : this.pivots;
+    public Optional<Output<List<PivotPropertiesArgs>>> pivots() {
+        return Optional.ofNullable(this.pivots);
     }
 
     /**
@@ -119,7 +119,7 @@ public final class ViewByScopeArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="scope", required=true)
-      private final Output<String> scope;
+    private Output<String> scope;
 
     public Output<String> scope() {
         return this.scope;
@@ -130,10 +130,10 @@ public final class ViewByScopeArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="timePeriod")
-      private final @Nullable Output<ReportConfigTimePeriodArgs> timePeriod;
+    private @Nullable Output<ReportConfigTimePeriodArgs> timePeriod;
 
-    public Output<ReportConfigTimePeriodArgs> timePeriod() {
-        return this.timePeriod == null ? Codegen.empty() : this.timePeriod;
+    public Optional<Output<ReportConfigTimePeriodArgs>> timePeriod() {
+        return Optional.ofNullable(this.timePeriod);
     }
 
     /**
@@ -141,7 +141,7 @@ public final class ViewByScopeArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="timeframe", required=true)
-      private final Output<Either<String,ReportTimeframeType>> timeframe;
+    private Output<Either<String,ReportTimeframeType>> timeframe;
 
     public Output<Either<String,ReportTimeframeType>> timeframe() {
         return this.timeframe;
@@ -152,7 +152,7 @@ public final class ViewByScopeArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="type", required=true)
-      private final Output<Either<String,ReportType>> type;
+    private Output<Either<String,ReportType>> type;
 
     public Output<Either<String,ReportType>> type() {
         return this.type;
@@ -163,212 +163,179 @@ public final class ViewByScopeArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="viewName")
-      private final @Nullable Output<String> viewName;
+    private @Nullable Output<String> viewName;
 
-    public Output<String> viewName() {
-        return this.viewName == null ? Codegen.empty() : this.viewName;
+    public Optional<Output<String>> viewName() {
+        return Optional.ofNullable(this.viewName);
     }
 
-    public ViewByScopeArgs(
-        @Nullable Output<Either<String,AccumulatedType>> accumulated,
-        @Nullable Output<Either<String,ChartType>> chart,
-        @Nullable Output<ReportConfigDatasetArgs> dataSet,
-        @Nullable Output<String> displayName,
-        @Nullable Output<String> eTag,
-        @Nullable Output<List<KpiPropertiesArgs>> kpis,
-        @Nullable Output<Either<String,MetricType>> metric,
-        @Nullable Output<List<PivotPropertiesArgs>> pivots,
-        Output<String> scope,
-        @Nullable Output<ReportConfigTimePeriodArgs> timePeriod,
-        Output<Either<String,ReportTimeframeType>> timeframe,
-        Output<Either<String,ReportType>> type,
-        @Nullable Output<String> viewName) {
-        this.accumulated = accumulated;
-        this.chart = chart;
-        this.dataSet = dataSet;
-        this.displayName = displayName;
-        this.eTag = eTag;
-        this.kpis = kpis;
-        this.metric = metric;
-        this.pivots = pivots;
-        this.scope = Objects.requireNonNull(scope, "expected parameter 'scope' to be non-null");
-        this.timePeriod = timePeriod;
-        this.timeframe = Objects.requireNonNull(timeframe, "expected parameter 'timeframe' to be non-null");
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-        this.viewName = viewName;
-    }
+    private ViewByScopeArgs() {}
 
-    private ViewByScopeArgs() {
-        this.accumulated = Codegen.empty();
-        this.chart = Codegen.empty();
-        this.dataSet = Codegen.empty();
-        this.displayName = Codegen.empty();
-        this.eTag = Codegen.empty();
-        this.kpis = Codegen.empty();
-        this.metric = Codegen.empty();
-        this.pivots = Codegen.empty();
-        this.scope = Codegen.empty();
-        this.timePeriod = Codegen.empty();
-        this.timeframe = Codegen.empty();
-        this.type = Codegen.empty();
-        this.viewName = Codegen.empty();
+    private ViewByScopeArgs(ViewByScopeArgs $) {
+        this.accumulated = $.accumulated;
+        this.chart = $.chart;
+        this.dataSet = $.dataSet;
+        this.displayName = $.displayName;
+        this.eTag = $.eTag;
+        this.kpis = $.kpis;
+        this.metric = $.metric;
+        this.pivots = $.pivots;
+        this.scope = $.scope;
+        this.timePeriod = $.timePeriod;
+        this.timeframe = $.timeframe;
+        this.type = $.type;
+        this.viewName = $.viewName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ViewByScopeArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Either<String,AccumulatedType>> accumulated;
-        private @Nullable Output<Either<String,ChartType>> chart;
-        private @Nullable Output<ReportConfigDatasetArgs> dataSet;
-        private @Nullable Output<String> displayName;
-        private @Nullable Output<String> eTag;
-        private @Nullable Output<List<KpiPropertiesArgs>> kpis;
-        private @Nullable Output<Either<String,MetricType>> metric;
-        private @Nullable Output<List<PivotPropertiesArgs>> pivots;
-        private Output<String> scope;
-        private @Nullable Output<ReportConfigTimePeriodArgs> timePeriod;
-        private Output<Either<String,ReportTimeframeType>> timeframe;
-        private Output<Either<String,ReportType>> type;
-        private @Nullable Output<String> viewName;
+        private ViewByScopeArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ViewByScopeArgs();
         }
 
         public Builder(ViewByScopeArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accumulated = defaults.accumulated;
-    	      this.chart = defaults.chart;
-    	      this.dataSet = defaults.dataSet;
-    	      this.displayName = defaults.displayName;
-    	      this.eTag = defaults.eTag;
-    	      this.kpis = defaults.kpis;
-    	      this.metric = defaults.metric;
-    	      this.pivots = defaults.pivots;
-    	      this.scope = defaults.scope;
-    	      this.timePeriod = defaults.timePeriod;
-    	      this.timeframe = defaults.timeframe;
-    	      this.type = defaults.type;
-    	      this.viewName = defaults.viewName;
+            $ = new ViewByScopeArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder accumulated(@Nullable Output<Either<String,AccumulatedType>> accumulated) {
-            this.accumulated = accumulated;
+            $.accumulated = accumulated;
             return this;
         }
-        public Builder accumulated(@Nullable Either<String,AccumulatedType> accumulated) {
-            this.accumulated = Codegen.ofNullable(accumulated);
-            return this;
+
+        public Builder accumulated(Either<String,AccumulatedType> accumulated) {
+            return accumulated(Output.of(accumulated));
         }
+
         public Builder chart(@Nullable Output<Either<String,ChartType>> chart) {
-            this.chart = chart;
+            $.chart = chart;
             return this;
         }
-        public Builder chart(@Nullable Either<String,ChartType> chart) {
-            this.chart = Codegen.ofNullable(chart);
-            return this;
+
+        public Builder chart(Either<String,ChartType> chart) {
+            return chart(Output.of(chart));
         }
+
         public Builder dataSet(@Nullable Output<ReportConfigDatasetArgs> dataSet) {
-            this.dataSet = dataSet;
+            $.dataSet = dataSet;
             return this;
         }
-        public Builder dataSet(@Nullable ReportConfigDatasetArgs dataSet) {
-            this.dataSet = Codegen.ofNullable(dataSet);
-            return this;
+
+        public Builder dataSet(ReportConfigDatasetArgs dataSet) {
+            return dataSet(Output.of(dataSet));
         }
+
         public Builder displayName(@Nullable Output<String> displayName) {
-            this.displayName = displayName;
+            $.displayName = displayName;
             return this;
         }
-        public Builder displayName(@Nullable String displayName) {
-            this.displayName = Codegen.ofNullable(displayName);
-            return this;
+
+        public Builder displayName(String displayName) {
+            return displayName(Output.of(displayName));
         }
+
         public Builder eTag(@Nullable Output<String> eTag) {
-            this.eTag = eTag;
+            $.eTag = eTag;
             return this;
         }
-        public Builder eTag(@Nullable String eTag) {
-            this.eTag = Codegen.ofNullable(eTag);
-            return this;
+
+        public Builder eTag(String eTag) {
+            return eTag(Output.of(eTag));
         }
+
         public Builder kpis(@Nullable Output<List<KpiPropertiesArgs>> kpis) {
-            this.kpis = kpis;
+            $.kpis = kpis;
             return this;
         }
-        public Builder kpis(@Nullable List<KpiPropertiesArgs> kpis) {
-            this.kpis = Codegen.ofNullable(kpis);
-            return this;
+
+        public Builder kpis(List<KpiPropertiesArgs> kpis) {
+            return kpis(Output.of(kpis));
         }
+
         public Builder kpis(KpiPropertiesArgs... kpis) {
             return kpis(List.of(kpis));
         }
+
         public Builder metric(@Nullable Output<Either<String,MetricType>> metric) {
-            this.metric = metric;
+            $.metric = metric;
             return this;
         }
-        public Builder metric(@Nullable Either<String,MetricType> metric) {
-            this.metric = Codegen.ofNullable(metric);
-            return this;
+
+        public Builder metric(Either<String,MetricType> metric) {
+            return metric(Output.of(metric));
         }
+
         public Builder pivots(@Nullable Output<List<PivotPropertiesArgs>> pivots) {
-            this.pivots = pivots;
+            $.pivots = pivots;
             return this;
         }
-        public Builder pivots(@Nullable List<PivotPropertiesArgs> pivots) {
-            this.pivots = Codegen.ofNullable(pivots);
-            return this;
+
+        public Builder pivots(List<PivotPropertiesArgs> pivots) {
+            return pivots(Output.of(pivots));
         }
+
         public Builder pivots(PivotPropertiesArgs... pivots) {
             return pivots(List.of(pivots));
         }
+
         public Builder scope(Output<String> scope) {
-            this.scope = Objects.requireNonNull(scope);
+            $.scope = scope;
             return this;
         }
+
         public Builder scope(String scope) {
-            this.scope = Output.of(Objects.requireNonNull(scope));
-            return this;
+            return scope(Output.of(scope));
         }
+
         public Builder timePeriod(@Nullable Output<ReportConfigTimePeriodArgs> timePeriod) {
-            this.timePeriod = timePeriod;
+            $.timePeriod = timePeriod;
             return this;
         }
-        public Builder timePeriod(@Nullable ReportConfigTimePeriodArgs timePeriod) {
-            this.timePeriod = Codegen.ofNullable(timePeriod);
-            return this;
+
+        public Builder timePeriod(ReportConfigTimePeriodArgs timePeriod) {
+            return timePeriod(Output.of(timePeriod));
         }
+
         public Builder timeframe(Output<Either<String,ReportTimeframeType>> timeframe) {
-            this.timeframe = Objects.requireNonNull(timeframe);
+            $.timeframe = timeframe;
             return this;
         }
+
         public Builder timeframe(Either<String,ReportTimeframeType> timeframe) {
-            this.timeframe = Output.of(Objects.requireNonNull(timeframe));
-            return this;
+            return timeframe(Output.of(timeframe));
         }
+
         public Builder type(Output<Either<String,ReportType>> type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder type(Either<String,ReportType> type) {
-            this.type = Output.of(Objects.requireNonNull(type));
-            return this;
+            return type(Output.of(type));
         }
+
         public Builder viewName(@Nullable Output<String> viewName) {
-            this.viewName = viewName;
+            $.viewName = viewName;
             return this;
         }
-        public Builder viewName(@Nullable String viewName) {
-            this.viewName = Codegen.ofNullable(viewName);
-            return this;
-        }        public ViewByScopeArgs build() {
-            return new ViewByScopeArgs(accumulated, chart, dataSet, displayName, eTag, kpis, metric, pivots, scope, timePeriod, timeframe, type, viewName);
+
+        public Builder viewName(String viewName) {
+            return viewName(Output.of(viewName));
+        }
+
+        public ViewByScopeArgs build() {
+            $.scope = Objects.requireNonNull($.scope, "expected parameter 'scope' to be non-null");
+            $.timeframe = Objects.requireNonNull($.timeframe, "expected parameter 'timeframe' to be non-null");
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

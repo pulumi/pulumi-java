@@ -32,7 +32,7 @@ public final class AmazonMWSLinkedServiceResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="accessKeyId", required=true)
-      private final Object accessKeyId;
+    private Object accessKeyId;
 
     public Object accessKeyId() {
         return this.accessKeyId;
@@ -43,10 +43,10 @@ public final class AmazonMWSLinkedServiceResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="annotations")
-      private final @Nullable List<Object> annotations;
+    private @Nullable List<Object> annotations;
 
-    public List<Object> annotations() {
-        return this.annotations == null ? List.of() : this.annotations;
+    public Optional<List<Object>> annotations() {
+        return Optional.ofNullable(this.annotations);
     }
 
     /**
@@ -54,10 +54,10 @@ public final class AmazonMWSLinkedServiceResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="connectVia")
-      private final @Nullable IntegrationRuntimeReferenceResponse connectVia;
+    private @Nullable IntegrationRuntimeReferenceResponse connectVia;
 
     public Optional<IntegrationRuntimeReferenceResponse> connectVia() {
-        return this.connectVia == null ? Optional.empty() : Optional.ofNullable(this.connectVia);
+        return Optional.ofNullable(this.connectVia);
     }
 
     /**
@@ -65,10 +65,10 @@ public final class AmazonMWSLinkedServiceResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="description")
-      private final @Nullable String description;
+    private @Nullable String description;
 
     public Optional<String> description() {
-        return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -76,10 +76,10 @@ public final class AmazonMWSLinkedServiceResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="encryptedCredential")
-      private final @Nullable Object encryptedCredential;
+    private @Nullable Object encryptedCredential;
 
     public Optional<Object> encryptedCredential() {
-        return this.encryptedCredential == null ? Optional.empty() : Optional.ofNullable(this.encryptedCredential);
+        return Optional.ofNullable(this.encryptedCredential);
     }
 
     /**
@@ -87,7 +87,7 @@ public final class AmazonMWSLinkedServiceResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="endpoint", required=true)
-      private final Object endpoint;
+    private Object endpoint;
 
     public Object endpoint() {
         return this.endpoint;
@@ -98,7 +98,7 @@ public final class AmazonMWSLinkedServiceResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="marketplaceID", required=true)
-      private final Object marketplaceID;
+    private Object marketplaceID;
 
     public Object marketplaceID() {
         return this.marketplaceID;
@@ -109,10 +109,10 @@ public final class AmazonMWSLinkedServiceResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="mwsAuthToken")
-      private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> mwsAuthToken;
+    private @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> mwsAuthToken;
 
-    public Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> mwsAuthToken() {
-        return this.mwsAuthToken == null ? null : this.mwsAuthToken;
+    public Optional<Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse>> mwsAuthToken() {
+        return Optional.ofNullable(this.mwsAuthToken);
     }
 
     /**
@@ -120,10 +120,10 @@ public final class AmazonMWSLinkedServiceResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="parameters")
-      private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
+    private @Nullable Map<String,ParameterSpecificationResponse> parameters;
 
-    public Map<String,ParameterSpecificationResponse> parameters() {
-        return this.parameters == null ? Map.of() : this.parameters;
+    public Optional<Map<String,ParameterSpecificationResponse>> parameters() {
+        return Optional.ofNullable(this.parameters);
     }
 
     /**
@@ -131,10 +131,10 @@ public final class AmazonMWSLinkedServiceResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="secretKey")
-      private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> secretKey;
+    private @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> secretKey;
 
-    public Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> secretKey() {
-        return this.secretKey == null ? null : this.secretKey;
+    public Optional<Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse>> secretKey() {
+        return Optional.ofNullable(this.secretKey);
     }
 
     /**
@@ -142,7 +142,7 @@ public final class AmazonMWSLinkedServiceResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="sellerID", required=true)
-      private final Object sellerID;
+    private Object sellerID;
 
     public Object sellerID() {
         return this.sellerID;
@@ -154,7 +154,7 @@ public final class AmazonMWSLinkedServiceResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
@@ -165,10 +165,10 @@ public final class AmazonMWSLinkedServiceResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="useEncryptedEndpoints")
-      private final @Nullable Object useEncryptedEndpoints;
+    private @Nullable Object useEncryptedEndpoints;
 
     public Optional<Object> useEncryptedEndpoints() {
-        return this.useEncryptedEndpoints == null ? Optional.empty() : Optional.ofNullable(this.useEncryptedEndpoints);
+        return Optional.ofNullable(this.useEncryptedEndpoints);
     }
 
     /**
@@ -176,10 +176,10 @@ public final class AmazonMWSLinkedServiceResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="useHostVerification")
-      private final @Nullable Object useHostVerification;
+    private @Nullable Object useHostVerification;
 
     public Optional<Object> useHostVerification() {
-        return this.useHostVerification == null ? Optional.empty() : Optional.ofNullable(this.useHostVerification);
+        return Optional.ofNullable(this.useHostVerification);
     }
 
     /**
@@ -187,175 +187,137 @@ public final class AmazonMWSLinkedServiceResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="usePeerVerification")
-      private final @Nullable Object usePeerVerification;
+    private @Nullable Object usePeerVerification;
 
     public Optional<Object> usePeerVerification() {
-        return this.usePeerVerification == null ? Optional.empty() : Optional.ofNullable(this.usePeerVerification);
+        return Optional.ofNullable(this.usePeerVerification);
     }
 
-    public AmazonMWSLinkedServiceResponse(
-        Object accessKeyId,
-        @Nullable List<Object> annotations,
-        @Nullable IntegrationRuntimeReferenceResponse connectVia,
-        @Nullable String description,
-        @Nullable Object encryptedCredential,
-        Object endpoint,
-        Object marketplaceID,
-        @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> mwsAuthToken,
-        @Nullable Map<String,ParameterSpecificationResponse> parameters,
-        @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> secretKey,
-        Object sellerID,
-        String type,
-        @Nullable Object useEncryptedEndpoints,
-        @Nullable Object useHostVerification,
-        @Nullable Object usePeerVerification) {
-        this.accessKeyId = Objects.requireNonNull(accessKeyId, "expected parameter 'accessKeyId' to be non-null");
-        this.annotations = annotations;
-        this.connectVia = connectVia;
-        this.description = description;
-        this.encryptedCredential = encryptedCredential;
-        this.endpoint = Objects.requireNonNull(endpoint, "expected parameter 'endpoint' to be non-null");
-        this.marketplaceID = Objects.requireNonNull(marketplaceID, "expected parameter 'marketplaceID' to be non-null");
-        this.mwsAuthToken = mwsAuthToken;
-        this.parameters = parameters;
-        this.secretKey = secretKey;
-        this.sellerID = Objects.requireNonNull(sellerID, "expected parameter 'sellerID' to be non-null");
-        this.type = Codegen.stringProp("type").arg(type).require();
-        this.useEncryptedEndpoints = useEncryptedEndpoints;
-        this.useHostVerification = useHostVerification;
-        this.usePeerVerification = usePeerVerification;
-    }
+    private AmazonMWSLinkedServiceResponse() {}
 
-    private AmazonMWSLinkedServiceResponse() {
-        this.accessKeyId = null;
-        this.annotations = List.of();
-        this.connectVia = null;
-        this.description = null;
-        this.encryptedCredential = null;
-        this.endpoint = null;
-        this.marketplaceID = null;
-        this.mwsAuthToken = null;
-        this.parameters = Map.of();
-        this.secretKey = null;
-        this.sellerID = null;
-        this.type = null;
-        this.useEncryptedEndpoints = null;
-        this.useHostVerification = null;
-        this.usePeerVerification = null;
+    private AmazonMWSLinkedServiceResponse(AmazonMWSLinkedServiceResponse $) {
+        this.accessKeyId = $.accessKeyId;
+        this.annotations = $.annotations;
+        this.connectVia = $.connectVia;
+        this.description = $.description;
+        this.encryptedCredential = $.encryptedCredential;
+        this.endpoint = $.endpoint;
+        this.marketplaceID = $.marketplaceID;
+        this.mwsAuthToken = $.mwsAuthToken;
+        this.parameters = $.parameters;
+        this.secretKey = $.secretKey;
+        this.sellerID = $.sellerID;
+        this.type = $.type;
+        this.useEncryptedEndpoints = $.useEncryptedEndpoints;
+        this.useHostVerification = $.useHostVerification;
+        this.usePeerVerification = $.usePeerVerification;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AmazonMWSLinkedServiceResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Object accessKeyId;
-        private @Nullable List<Object> annotations;
-        private @Nullable IntegrationRuntimeReferenceResponse connectVia;
-        private @Nullable String description;
-        private @Nullable Object encryptedCredential;
-        private Object endpoint;
-        private Object marketplaceID;
-        private @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> mwsAuthToken;
-        private @Nullable Map<String,ParameterSpecificationResponse> parameters;
-        private @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> secretKey;
-        private Object sellerID;
-        private String type;
-        private @Nullable Object useEncryptedEndpoints;
-        private @Nullable Object useHostVerification;
-        private @Nullable Object usePeerVerification;
+        private AmazonMWSLinkedServiceResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AmazonMWSLinkedServiceResponse();
         }
 
         public Builder(AmazonMWSLinkedServiceResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accessKeyId = defaults.accessKeyId;
-    	      this.annotations = defaults.annotations;
-    	      this.connectVia = defaults.connectVia;
-    	      this.description = defaults.description;
-    	      this.encryptedCredential = defaults.encryptedCredential;
-    	      this.endpoint = defaults.endpoint;
-    	      this.marketplaceID = defaults.marketplaceID;
-    	      this.mwsAuthToken = defaults.mwsAuthToken;
-    	      this.parameters = defaults.parameters;
-    	      this.secretKey = defaults.secretKey;
-    	      this.sellerID = defaults.sellerID;
-    	      this.type = defaults.type;
-    	      this.useEncryptedEndpoints = defaults.useEncryptedEndpoints;
-    	      this.useHostVerification = defaults.useHostVerification;
-    	      this.usePeerVerification = defaults.usePeerVerification;
+            $ = new AmazonMWSLinkedServiceResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder accessKeyId(Object accessKeyId) {
-            this.accessKeyId = Objects.requireNonNull(accessKeyId);
+            $.accessKeyId = accessKeyId;
             return this;
         }
+
         public Builder annotations(@Nullable List<Object> annotations) {
-            this.annotations = annotations;
+            $.annotations = annotations;
             return this;
         }
+
         public Builder annotations(Object... annotations) {
             return annotations(List.of(annotations));
         }
+
         public Builder connectVia(@Nullable IntegrationRuntimeReferenceResponse connectVia) {
-            this.connectVia = connectVia;
+            $.connectVia = connectVia;
             return this;
         }
+
         public Builder description(@Nullable String description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
+
         public Builder encryptedCredential(@Nullable Object encryptedCredential) {
-            this.encryptedCredential = encryptedCredential;
+            $.encryptedCredential = encryptedCredential;
             return this;
         }
+
         public Builder endpoint(Object endpoint) {
-            this.endpoint = Objects.requireNonNull(endpoint);
+            $.endpoint = endpoint;
             return this;
         }
+
         public Builder marketplaceID(Object marketplaceID) {
-            this.marketplaceID = Objects.requireNonNull(marketplaceID);
+            $.marketplaceID = marketplaceID;
             return this;
         }
+
         public Builder mwsAuthToken(@Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> mwsAuthToken) {
-            this.mwsAuthToken = mwsAuthToken;
+            $.mwsAuthToken = mwsAuthToken;
             return this;
         }
+
         public Builder parameters(@Nullable Map<String,ParameterSpecificationResponse> parameters) {
-            this.parameters = parameters;
+            $.parameters = parameters;
             return this;
         }
+
         public Builder secretKey(@Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> secretKey) {
-            this.secretKey = secretKey;
+            $.secretKey = secretKey;
             return this;
         }
+
         public Builder sellerID(Object sellerID) {
-            this.sellerID = Objects.requireNonNull(sellerID);
+            $.sellerID = sellerID;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder useEncryptedEndpoints(@Nullable Object useEncryptedEndpoints) {
-            this.useEncryptedEndpoints = useEncryptedEndpoints;
+            $.useEncryptedEndpoints = useEncryptedEndpoints;
             return this;
         }
+
         public Builder useHostVerification(@Nullable Object useHostVerification) {
-            this.useHostVerification = useHostVerification;
+            $.useHostVerification = useHostVerification;
             return this;
         }
+
         public Builder usePeerVerification(@Nullable Object usePeerVerification) {
-            this.usePeerVerification = usePeerVerification;
+            $.usePeerVerification = usePeerVerification;
             return this;
-        }        public AmazonMWSLinkedServiceResponse build() {
-            return new AmazonMWSLinkedServiceResponse(accessKeyId, annotations, connectVia, description, encryptedCredential, endpoint, marketplaceID, mwsAuthToken, parameters, secretKey, sellerID, type, useEncryptedEndpoints, useHostVerification, usePeerVerification);
+        }
+
+        public AmazonMWSLinkedServiceResponse build() {
+            $.accessKeyId = Objects.requireNonNull($.accessKeyId, "expected parameter 'accessKeyId' to be non-null");
+            $.endpoint = Objects.requireNonNull($.endpoint, "expected parameter 'endpoint' to be non-null");
+            $.marketplaceID = Objects.requireNonNull($.marketplaceID, "expected parameter 'marketplaceID' to be non-null");
+            $.sellerID = Objects.requireNonNull($.sellerID, "expected parameter 'sellerID' to be non-null");
+            $.type = Codegen.stringProp("type").arg($.type).require();
+            return $;
         }
     }
+
 }

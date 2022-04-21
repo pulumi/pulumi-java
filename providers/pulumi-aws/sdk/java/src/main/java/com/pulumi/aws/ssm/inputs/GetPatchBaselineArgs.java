@@ -20,10 +20,10 @@ public final class GetPatchBaselineArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="defaultBaseline")
-      private final @Nullable Boolean defaultBaseline;
+    private @Nullable Boolean defaultBaseline;
 
     public Optional<Boolean> defaultBaseline() {
-        return this.defaultBaseline == null ? Optional.empty() : Optional.ofNullable(this.defaultBaseline);
+        return Optional.ofNullable(this.defaultBaseline);
     }
 
     /**
@@ -31,10 +31,10 @@ public final class GetPatchBaselineArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="namePrefix")
-      private final @Nullable String namePrefix;
+    private @Nullable String namePrefix;
 
     public Optional<String> namePrefix() {
-        return this.namePrefix == null ? Optional.empty() : Optional.ofNullable(this.namePrefix);
+        return Optional.ofNullable(this.namePrefix);
     }
 
     /**
@@ -42,10 +42,10 @@ public final class GetPatchBaselineArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="operatingSystem")
-      private final @Nullable String operatingSystem;
+    private @Nullable String operatingSystem;
 
     public Optional<String> operatingSystem() {
-        return this.operatingSystem == null ? Optional.empty() : Optional.ofNullable(this.operatingSystem);
+        return Optional.ofNullable(this.operatingSystem);
     }
 
     /**
@@ -53,73 +53,63 @@ public final class GetPatchBaselineArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="owner", required=true)
-      private final String owner;
+    private String owner;
 
     public String owner() {
         return this.owner;
     }
 
-    public GetPatchBaselineArgs(
-        @Nullable Boolean defaultBaseline,
-        @Nullable String namePrefix,
-        @Nullable String operatingSystem,
-        String owner) {
-        this.defaultBaseline = defaultBaseline;
-        this.namePrefix = namePrefix;
-        this.operatingSystem = operatingSystem;
-        this.owner = Objects.requireNonNull(owner, "expected parameter 'owner' to be non-null");
-    }
+    private GetPatchBaselineArgs() {}
 
-    private GetPatchBaselineArgs() {
-        this.defaultBaseline = null;
-        this.namePrefix = null;
-        this.operatingSystem = null;
-        this.owner = null;
+    private GetPatchBaselineArgs(GetPatchBaselineArgs $) {
+        this.defaultBaseline = $.defaultBaseline;
+        this.namePrefix = $.namePrefix;
+        this.operatingSystem = $.operatingSystem;
+        this.owner = $.owner;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetPatchBaselineArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Boolean defaultBaseline;
-        private @Nullable String namePrefix;
-        private @Nullable String operatingSystem;
-        private String owner;
+        private GetPatchBaselineArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetPatchBaselineArgs();
         }
 
         public Builder(GetPatchBaselineArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.defaultBaseline = defaults.defaultBaseline;
-    	      this.namePrefix = defaults.namePrefix;
-    	      this.operatingSystem = defaults.operatingSystem;
-    	      this.owner = defaults.owner;
+            $ = new GetPatchBaselineArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder defaultBaseline(@Nullable Boolean defaultBaseline) {
-            this.defaultBaseline = defaultBaseline;
+            $.defaultBaseline = defaultBaseline;
             return this;
         }
+
         public Builder namePrefix(@Nullable String namePrefix) {
-            this.namePrefix = namePrefix;
+            $.namePrefix = namePrefix;
             return this;
         }
+
         public Builder operatingSystem(@Nullable String operatingSystem) {
-            this.operatingSystem = operatingSystem;
+            $.operatingSystem = operatingSystem;
             return this;
         }
+
         public Builder owner(String owner) {
-            this.owner = Objects.requireNonNull(owner);
+            $.owner = owner;
             return this;
-        }        public GetPatchBaselineArgs build() {
-            return new GetPatchBaselineArgs(defaultBaseline, namePrefix, operatingSystem, owner);
+        }
+
+        public GetPatchBaselineArgs build() {
+            $.owner = Objects.requireNonNull($.owner, "expected parameter 'owner' to be non-null");
+            return $;
         }
     }
+
 }

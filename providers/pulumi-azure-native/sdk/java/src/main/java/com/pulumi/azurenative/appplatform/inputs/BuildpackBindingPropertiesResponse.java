@@ -24,10 +24,10 @@ public final class BuildpackBindingPropertiesResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="bindingType")
-      private final @Nullable String bindingType;
+    private @Nullable String bindingType;
 
     public Optional<String> bindingType() {
-        return this.bindingType == null ? Optional.empty() : Optional.ofNullable(this.bindingType);
+        return Optional.ofNullable(this.bindingType);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class BuildpackBindingPropertiesResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="launchProperties")
-      private final @Nullable BuildpackBindingLaunchPropertiesResponse launchProperties;
+    private @Nullable BuildpackBindingLaunchPropertiesResponse launchProperties;
 
     public Optional<BuildpackBindingLaunchPropertiesResponse> launchProperties() {
-        return this.launchProperties == null ? Optional.empty() : Optional.ofNullable(this.launchProperties);
+        return Optional.ofNullable(this.launchProperties);
     }
 
     /**
@@ -46,64 +46,57 @@ public final class BuildpackBindingPropertiesResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="provisioningState", required=true)
-      private final String provisioningState;
+    private String provisioningState;
 
     public String provisioningState() {
         return this.provisioningState;
     }
 
-    public BuildpackBindingPropertiesResponse(
-        @Nullable String bindingType,
-        @Nullable BuildpackBindingLaunchPropertiesResponse launchProperties,
-        String provisioningState) {
-        this.bindingType = bindingType;
-        this.launchProperties = launchProperties;
-        this.provisioningState = Objects.requireNonNull(provisioningState, "expected parameter 'provisioningState' to be non-null");
-    }
+    private BuildpackBindingPropertiesResponse() {}
 
-    private BuildpackBindingPropertiesResponse() {
-        this.bindingType = null;
-        this.launchProperties = null;
-        this.provisioningState = null;
+    private BuildpackBindingPropertiesResponse(BuildpackBindingPropertiesResponse $) {
+        this.bindingType = $.bindingType;
+        this.launchProperties = $.launchProperties;
+        this.provisioningState = $.provisioningState;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BuildpackBindingPropertiesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String bindingType;
-        private @Nullable BuildpackBindingLaunchPropertiesResponse launchProperties;
-        private String provisioningState;
+        private BuildpackBindingPropertiesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new BuildpackBindingPropertiesResponse();
         }
 
         public Builder(BuildpackBindingPropertiesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.bindingType = defaults.bindingType;
-    	      this.launchProperties = defaults.launchProperties;
-    	      this.provisioningState = defaults.provisioningState;
+            $ = new BuildpackBindingPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder bindingType(@Nullable String bindingType) {
-            this.bindingType = bindingType;
+            $.bindingType = bindingType;
             return this;
         }
+
         public Builder launchProperties(@Nullable BuildpackBindingLaunchPropertiesResponse launchProperties) {
-            this.launchProperties = launchProperties;
+            $.launchProperties = launchProperties;
             return this;
         }
+
         public Builder provisioningState(String provisioningState) {
-            this.provisioningState = Objects.requireNonNull(provisioningState);
+            $.provisioningState = provisioningState;
             return this;
-        }        public BuildpackBindingPropertiesResponse build() {
-            return new BuildpackBindingPropertiesResponse(bindingType, launchProperties, provisioningState);
+        }
+
+        public BuildpackBindingPropertiesResponse build() {
+            $.provisioningState = Objects.requireNonNull($.provisioningState, "expected parameter 'provisioningState' to be non-null");
+            return $;
         }
     }
+
 }

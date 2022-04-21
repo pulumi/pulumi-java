@@ -5,9 +5,9 @@ package com.pulumi.aws.ec2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,49 +20,48 @@ public final class LaunchTemplateCapacityReservationSpecificationCapacityReserva
      * 
      */
     @Import(name="capacityReservationId")
-      private final @Nullable Output<String> capacityReservationId;
+    private @Nullable Output<String> capacityReservationId;
 
-    public Output<String> capacityReservationId() {
-        return this.capacityReservationId == null ? Codegen.empty() : this.capacityReservationId;
+    public Optional<Output<String>> capacityReservationId() {
+        return Optional.ofNullable(this.capacityReservationId);
     }
 
-    public LaunchTemplateCapacityReservationSpecificationCapacityReservationTargetGetArgs(@Nullable Output<String> capacityReservationId) {
-        this.capacityReservationId = capacityReservationId;
-    }
+    private LaunchTemplateCapacityReservationSpecificationCapacityReservationTargetGetArgs() {}
 
-    private LaunchTemplateCapacityReservationSpecificationCapacityReservationTargetGetArgs() {
-        this.capacityReservationId = Codegen.empty();
+    private LaunchTemplateCapacityReservationSpecificationCapacityReservationTargetGetArgs(LaunchTemplateCapacityReservationSpecificationCapacityReservationTargetGetArgs $) {
+        this.capacityReservationId = $.capacityReservationId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LaunchTemplateCapacityReservationSpecificationCapacityReservationTargetGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> capacityReservationId;
+        private LaunchTemplateCapacityReservationSpecificationCapacityReservationTargetGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new LaunchTemplateCapacityReservationSpecificationCapacityReservationTargetGetArgs();
         }
 
         public Builder(LaunchTemplateCapacityReservationSpecificationCapacityReservationTargetGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.capacityReservationId = defaults.capacityReservationId;
+            $ = new LaunchTemplateCapacityReservationSpecificationCapacityReservationTargetGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder capacityReservationId(@Nullable Output<String> capacityReservationId) {
-            this.capacityReservationId = capacityReservationId;
+            $.capacityReservationId = capacityReservationId;
             return this;
         }
-        public Builder capacityReservationId(@Nullable String capacityReservationId) {
-            this.capacityReservationId = Codegen.ofNullable(capacityReservationId);
-            return this;
-        }        public LaunchTemplateCapacityReservationSpecificationCapacityReservationTargetGetArgs build() {
-            return new LaunchTemplateCapacityReservationSpecificationCapacityReservationTargetGetArgs(capacityReservationId);
+
+        public Builder capacityReservationId(String capacityReservationId) {
+            return capacityReservationId(Output.of(capacityReservationId));
+        }
+
+        public LaunchTemplateCapacityReservationSpecificationCapacityReservationTargetGetArgs build() {
+            return $;
         }
     }
+
 }

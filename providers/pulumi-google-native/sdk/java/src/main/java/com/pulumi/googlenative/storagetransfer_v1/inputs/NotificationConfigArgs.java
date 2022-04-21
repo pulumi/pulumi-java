@@ -5,12 +5,12 @@ package com.pulumi.googlenative.storagetransfer_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.storagetransfer_v1.enums.NotificationConfigEventTypesItem;
 import com.pulumi.googlenative.storagetransfer_v1.enums.NotificationConfigPayloadFormat;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +27,10 @@ public final class NotificationConfigArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="eventTypes")
-      private final @Nullable Output<List<NotificationConfigEventTypesItem>> eventTypes;
+    private @Nullable Output<List<NotificationConfigEventTypesItem>> eventTypes;
 
-    public Output<List<NotificationConfigEventTypesItem>> eventTypes() {
-        return this.eventTypes == null ? Codegen.empty() : this.eventTypes;
+    public Optional<Output<List<NotificationConfigEventTypesItem>>> eventTypes() {
+        return Optional.ofNullable(this.eventTypes);
     }
 
     /**
@@ -38,7 +38,7 @@ public final class NotificationConfigArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="payloadFormat", required=true)
-      private final Output<NotificationConfigPayloadFormat> payloadFormat;
+    private Output<NotificationConfigPayloadFormat> payloadFormat;
 
     public Output<NotificationConfigPayloadFormat> payloadFormat() {
         return this.payloadFormat;
@@ -49,79 +49,74 @@ public final class NotificationConfigArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="pubsubTopic", required=true)
-      private final Output<String> pubsubTopic;
+    private Output<String> pubsubTopic;
 
     public Output<String> pubsubTopic() {
         return this.pubsubTopic;
     }
 
-    public NotificationConfigArgs(
-        @Nullable Output<List<NotificationConfigEventTypesItem>> eventTypes,
-        Output<NotificationConfigPayloadFormat> payloadFormat,
-        Output<String> pubsubTopic) {
-        this.eventTypes = eventTypes;
-        this.payloadFormat = Objects.requireNonNull(payloadFormat, "expected parameter 'payloadFormat' to be non-null");
-        this.pubsubTopic = Objects.requireNonNull(pubsubTopic, "expected parameter 'pubsubTopic' to be non-null");
-    }
+    private NotificationConfigArgs() {}
 
-    private NotificationConfigArgs() {
-        this.eventTypes = Codegen.empty();
-        this.payloadFormat = Codegen.empty();
-        this.pubsubTopic = Codegen.empty();
+    private NotificationConfigArgs(NotificationConfigArgs $) {
+        this.eventTypes = $.eventTypes;
+        this.payloadFormat = $.payloadFormat;
+        this.pubsubTopic = $.pubsubTopic;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NotificationConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<NotificationConfigEventTypesItem>> eventTypes;
-        private Output<NotificationConfigPayloadFormat> payloadFormat;
-        private Output<String> pubsubTopic;
+        private NotificationConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new NotificationConfigArgs();
         }
 
         public Builder(NotificationConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.eventTypes = defaults.eventTypes;
-    	      this.payloadFormat = defaults.payloadFormat;
-    	      this.pubsubTopic = defaults.pubsubTopic;
+            $ = new NotificationConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder eventTypes(@Nullable Output<List<NotificationConfigEventTypesItem>> eventTypes) {
-            this.eventTypes = eventTypes;
+            $.eventTypes = eventTypes;
             return this;
         }
-        public Builder eventTypes(@Nullable List<NotificationConfigEventTypesItem> eventTypes) {
-            this.eventTypes = Codegen.ofNullable(eventTypes);
-            return this;
+
+        public Builder eventTypes(List<NotificationConfigEventTypesItem> eventTypes) {
+            return eventTypes(Output.of(eventTypes));
         }
+
         public Builder eventTypes(NotificationConfigEventTypesItem... eventTypes) {
             return eventTypes(List.of(eventTypes));
         }
+
         public Builder payloadFormat(Output<NotificationConfigPayloadFormat> payloadFormat) {
-            this.payloadFormat = Objects.requireNonNull(payloadFormat);
+            $.payloadFormat = payloadFormat;
             return this;
         }
+
         public Builder payloadFormat(NotificationConfigPayloadFormat payloadFormat) {
-            this.payloadFormat = Output.of(Objects.requireNonNull(payloadFormat));
-            return this;
+            return payloadFormat(Output.of(payloadFormat));
         }
+
         public Builder pubsubTopic(Output<String> pubsubTopic) {
-            this.pubsubTopic = Objects.requireNonNull(pubsubTopic);
+            $.pubsubTopic = pubsubTopic;
             return this;
         }
+
         public Builder pubsubTopic(String pubsubTopic) {
-            this.pubsubTopic = Output.of(Objects.requireNonNull(pubsubTopic));
-            return this;
-        }        public NotificationConfigArgs build() {
-            return new NotificationConfigArgs(eventTypes, payloadFormat, pubsubTopic);
+            return pubsubTopic(Output.of(pubsubTopic));
+        }
+
+        public NotificationConfigArgs build() {
+            $.payloadFormat = Objects.requireNonNull($.payloadFormat, "expected parameter 'payloadFormat' to be non-null");
+            $.pubsubTopic = Objects.requireNonNull($.pubsubTopic, "expected parameter 'pubsubTopic' to be non-null");
+            return $;
         }
     }
+
 }

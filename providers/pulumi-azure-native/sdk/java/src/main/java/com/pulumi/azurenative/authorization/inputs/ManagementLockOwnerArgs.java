@@ -5,9 +5,9 @@ package com.pulumi.azurenative.authorization.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class ManagementLockOwnerArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="applicationId")
-      private final @Nullable Output<String> applicationId;
+    private @Nullable Output<String> applicationId;
 
-    public Output<String> applicationId() {
-        return this.applicationId == null ? Codegen.empty() : this.applicationId;
+    public Optional<Output<String>> applicationId() {
+        return Optional.ofNullable(this.applicationId);
     }
 
-    public ManagementLockOwnerArgs(@Nullable Output<String> applicationId) {
-        this.applicationId = applicationId;
-    }
+    private ManagementLockOwnerArgs() {}
 
-    private ManagementLockOwnerArgs() {
-        this.applicationId = Codegen.empty();
+    private ManagementLockOwnerArgs(ManagementLockOwnerArgs $) {
+        this.applicationId = $.applicationId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ManagementLockOwnerArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> applicationId;
+        private ManagementLockOwnerArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ManagementLockOwnerArgs();
         }
 
         public Builder(ManagementLockOwnerArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.applicationId = defaults.applicationId;
+            $ = new ManagementLockOwnerArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder applicationId(@Nullable Output<String> applicationId) {
-            this.applicationId = applicationId;
+            $.applicationId = applicationId;
             return this;
         }
-        public Builder applicationId(@Nullable String applicationId) {
-            this.applicationId = Codegen.ofNullable(applicationId);
-            return this;
-        }        public ManagementLockOwnerArgs build() {
-            return new ManagementLockOwnerArgs(applicationId);
+
+        public Builder applicationId(String applicationId) {
+            return applicationId(Output.of(applicationId));
+        }
+
+        public ManagementLockOwnerArgs build() {
+            return $;
         }
     }
+
 }

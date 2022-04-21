@@ -5,9 +5,9 @@ package com.pulumi.aws.s3.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,7 +20,7 @@ public final class BucketLoggingGetArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="targetBucket", required=true)
-      private final Output<String> targetBucket;
+    private Output<String> targetBucket;
 
     public Output<String> targetBucket() {
         return this.targetBucket;
@@ -31,63 +31,59 @@ public final class BucketLoggingGetArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="targetPrefix")
-      private final @Nullable Output<String> targetPrefix;
+    private @Nullable Output<String> targetPrefix;
 
-    public Output<String> targetPrefix() {
-        return this.targetPrefix == null ? Codegen.empty() : this.targetPrefix;
+    public Optional<Output<String>> targetPrefix() {
+        return Optional.ofNullable(this.targetPrefix);
     }
 
-    public BucketLoggingGetArgs(
-        Output<String> targetBucket,
-        @Nullable Output<String> targetPrefix) {
-        this.targetBucket = Objects.requireNonNull(targetBucket, "expected parameter 'targetBucket' to be non-null");
-        this.targetPrefix = targetPrefix;
-    }
+    private BucketLoggingGetArgs() {}
 
-    private BucketLoggingGetArgs() {
-        this.targetBucket = Codegen.empty();
-        this.targetPrefix = Codegen.empty();
+    private BucketLoggingGetArgs(BucketLoggingGetArgs $) {
+        this.targetBucket = $.targetBucket;
+        this.targetPrefix = $.targetPrefix;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BucketLoggingGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> targetBucket;
-        private @Nullable Output<String> targetPrefix;
+        private BucketLoggingGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new BucketLoggingGetArgs();
         }
 
         public Builder(BucketLoggingGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.targetBucket = defaults.targetBucket;
-    	      this.targetPrefix = defaults.targetPrefix;
+            $ = new BucketLoggingGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder targetBucket(Output<String> targetBucket) {
-            this.targetBucket = Objects.requireNonNull(targetBucket);
+            $.targetBucket = targetBucket;
             return this;
         }
+
         public Builder targetBucket(String targetBucket) {
-            this.targetBucket = Output.of(Objects.requireNonNull(targetBucket));
-            return this;
+            return targetBucket(Output.of(targetBucket));
         }
+
         public Builder targetPrefix(@Nullable Output<String> targetPrefix) {
-            this.targetPrefix = targetPrefix;
+            $.targetPrefix = targetPrefix;
             return this;
         }
-        public Builder targetPrefix(@Nullable String targetPrefix) {
-            this.targetPrefix = Codegen.ofNullable(targetPrefix);
-            return this;
-        }        public BucketLoggingGetArgs build() {
-            return new BucketLoggingGetArgs(targetBucket, targetPrefix);
+
+        public Builder targetPrefix(String targetPrefix) {
+            return targetPrefix(Output.of(targetPrefix));
+        }
+
+        public BucketLoggingGetArgs build() {
+            $.targetBucket = Objects.requireNonNull($.targetBucket, "expected parameter 'targetBucket' to be non-null");
+            return $;
         }
     }
+
 }

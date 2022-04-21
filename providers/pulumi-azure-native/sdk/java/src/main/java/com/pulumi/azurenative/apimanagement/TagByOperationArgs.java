@@ -5,9 +5,9 @@ package com.pulumi.azurenative.apimanagement;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,7 +20,7 @@ public final class TagByOperationArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="apiId", required=true)
-      private final Output<String> apiId;
+    private Output<String> apiId;
 
     public Output<String> apiId() {
         return this.apiId;
@@ -31,7 +31,7 @@ public final class TagByOperationArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="operationId", required=true)
-      private final Output<String> operationId;
+    private Output<String> operationId;
 
     public Output<String> operationId() {
         return this.operationId;
@@ -42,7 +42,7 @@ public final class TagByOperationArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -53,7 +53,7 @@ public final class TagByOperationArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="serviceName", required=true)
-      private final Output<String> serviceName;
+    private Output<String> serviceName;
 
     public Output<String> serviceName() {
         return this.serviceName;
@@ -64,102 +64,92 @@ public final class TagByOperationArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="tagId")
-      private final @Nullable Output<String> tagId;
+    private @Nullable Output<String> tagId;
 
-    public Output<String> tagId() {
-        return this.tagId == null ? Codegen.empty() : this.tagId;
+    public Optional<Output<String>> tagId() {
+        return Optional.ofNullable(this.tagId);
     }
 
-    public TagByOperationArgs(
-        Output<String> apiId,
-        Output<String> operationId,
-        Output<String> resourceGroupName,
-        Output<String> serviceName,
-        @Nullable Output<String> tagId) {
-        this.apiId = Objects.requireNonNull(apiId, "expected parameter 'apiId' to be non-null");
-        this.operationId = Objects.requireNonNull(operationId, "expected parameter 'operationId' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.serviceName = Objects.requireNonNull(serviceName, "expected parameter 'serviceName' to be non-null");
-        this.tagId = tagId;
-    }
+    private TagByOperationArgs() {}
 
-    private TagByOperationArgs() {
-        this.apiId = Codegen.empty();
-        this.operationId = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.serviceName = Codegen.empty();
-        this.tagId = Codegen.empty();
+    private TagByOperationArgs(TagByOperationArgs $) {
+        this.apiId = $.apiId;
+        this.operationId = $.operationId;
+        this.resourceGroupName = $.resourceGroupName;
+        this.serviceName = $.serviceName;
+        this.tagId = $.tagId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TagByOperationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> apiId;
-        private Output<String> operationId;
-        private Output<String> resourceGroupName;
-        private Output<String> serviceName;
-        private @Nullable Output<String> tagId;
+        private TagByOperationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TagByOperationArgs();
         }
 
         public Builder(TagByOperationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.apiId = defaults.apiId;
-    	      this.operationId = defaults.operationId;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.serviceName = defaults.serviceName;
-    	      this.tagId = defaults.tagId;
+            $ = new TagByOperationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder apiId(Output<String> apiId) {
-            this.apiId = Objects.requireNonNull(apiId);
+            $.apiId = apiId;
             return this;
         }
+
         public Builder apiId(String apiId) {
-            this.apiId = Output.of(Objects.requireNonNull(apiId));
-            return this;
+            return apiId(Output.of(apiId));
         }
+
         public Builder operationId(Output<String> operationId) {
-            this.operationId = Objects.requireNonNull(operationId);
+            $.operationId = operationId;
             return this;
         }
+
         public Builder operationId(String operationId) {
-            this.operationId = Output.of(Objects.requireNonNull(operationId));
-            return this;
+            return operationId(Output.of(operationId));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder serviceName(Output<String> serviceName) {
-            this.serviceName = Objects.requireNonNull(serviceName);
+            $.serviceName = serviceName;
             return this;
         }
+
         public Builder serviceName(String serviceName) {
-            this.serviceName = Output.of(Objects.requireNonNull(serviceName));
-            return this;
+            return serviceName(Output.of(serviceName));
         }
+
         public Builder tagId(@Nullable Output<String> tagId) {
-            this.tagId = tagId;
+            $.tagId = tagId;
             return this;
         }
-        public Builder tagId(@Nullable String tagId) {
-            this.tagId = Codegen.ofNullable(tagId);
-            return this;
-        }        public TagByOperationArgs build() {
-            return new TagByOperationArgs(apiId, operationId, resourceGroupName, serviceName, tagId);
+
+        public Builder tagId(String tagId) {
+            return tagId(Output.of(tagId));
+        }
+
+        public TagByOperationArgs build() {
+            $.apiId = Objects.requireNonNull($.apiId, "expected parameter 'apiId' to be non-null");
+            $.operationId = Objects.requireNonNull($.operationId, "expected parameter 'operationId' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.serviceName = Objects.requireNonNull($.serviceName, "expected parameter 'serviceName' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,7 +5,6 @@ package com.pulumi.gcp.container.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.Objects;
 
@@ -20,49 +19,49 @@ public final class ClusterAddonsConfigGcpFilestoreCsiDriverConfigGetArgs extends
      * 
      */
     @Import(name="enabled", required=true)
-      private final Output<Boolean> enabled;
+    private Output<Boolean> enabled;
 
     public Output<Boolean> enabled() {
         return this.enabled;
     }
 
-    public ClusterAddonsConfigGcpFilestoreCsiDriverConfigGetArgs(Output<Boolean> enabled) {
-        this.enabled = Objects.requireNonNull(enabled, "expected parameter 'enabled' to be non-null");
-    }
+    private ClusterAddonsConfigGcpFilestoreCsiDriverConfigGetArgs() {}
 
-    private ClusterAddonsConfigGcpFilestoreCsiDriverConfigGetArgs() {
-        this.enabled = Codegen.empty();
+    private ClusterAddonsConfigGcpFilestoreCsiDriverConfigGetArgs(ClusterAddonsConfigGcpFilestoreCsiDriverConfigGetArgs $) {
+        this.enabled = $.enabled;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ClusterAddonsConfigGcpFilestoreCsiDriverConfigGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Boolean> enabled;
+        private ClusterAddonsConfigGcpFilestoreCsiDriverConfigGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ClusterAddonsConfigGcpFilestoreCsiDriverConfigGetArgs();
         }
 
         public Builder(ClusterAddonsConfigGcpFilestoreCsiDriverConfigGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.enabled = defaults.enabled;
+            $ = new ClusterAddonsConfigGcpFilestoreCsiDriverConfigGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder enabled(Output<Boolean> enabled) {
-            this.enabled = Objects.requireNonNull(enabled);
+            $.enabled = enabled;
             return this;
         }
+
         public Builder enabled(Boolean enabled) {
-            this.enabled = Output.of(Objects.requireNonNull(enabled));
-            return this;
-        }        public ClusterAddonsConfigGcpFilestoreCsiDriverConfigGetArgs build() {
-            return new ClusterAddonsConfigGcpFilestoreCsiDriverConfigGetArgs(enabled);
+            return enabled(Output.of(enabled));
+        }
+
+        public ClusterAddonsConfigGcpFilestoreCsiDriverConfigGetArgs build() {
+            $.enabled = Objects.requireNonNull($.enabled, "expected parameter 'enabled' to be non-null");
+            return $;
         }
     }
+
 }

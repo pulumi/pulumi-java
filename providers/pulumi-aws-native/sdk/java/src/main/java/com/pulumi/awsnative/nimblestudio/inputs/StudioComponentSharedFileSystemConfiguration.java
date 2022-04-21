@@ -23,10 +23,10 @@ public final class StudioComponentSharedFileSystemConfiguration extends com.pulu
      * 
      */
     @Import(name="endpoint")
-      private final @Nullable String endpoint;
+    private @Nullable String endpoint;
 
     public Optional<String> endpoint() {
-        return this.endpoint == null ? Optional.empty() : Optional.ofNullable(this.endpoint);
+        return Optional.ofNullable(this.endpoint);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class StudioComponentSharedFileSystemConfiguration extends com.pulu
      * 
      */
     @Import(name="fileSystemId")
-      private final @Nullable String fileSystemId;
+    private @Nullable String fileSystemId;
 
     public Optional<String> fileSystemId() {
-        return this.fileSystemId == null ? Optional.empty() : Optional.ofNullable(this.fileSystemId);
+        return Optional.ofNullable(this.fileSystemId);
     }
 
     /**
@@ -45,10 +45,10 @@ public final class StudioComponentSharedFileSystemConfiguration extends com.pulu
      * 
      */
     @Import(name="linuxMountPoint")
-      private final @Nullable String linuxMountPoint;
+    private @Nullable String linuxMountPoint;
 
     public Optional<String> linuxMountPoint() {
-        return this.linuxMountPoint == null ? Optional.empty() : Optional.ofNullable(this.linuxMountPoint);
+        return Optional.ofNullable(this.linuxMountPoint);
     }
 
     /**
@@ -56,10 +56,10 @@ public final class StudioComponentSharedFileSystemConfiguration extends com.pulu
      * 
      */
     @Import(name="shareName")
-      private final @Nullable String shareName;
+    private @Nullable String shareName;
 
     public Optional<String> shareName() {
-        return this.shareName == null ? Optional.empty() : Optional.ofNullable(this.shareName);
+        return Optional.ofNullable(this.shareName);
     }
 
     /**
@@ -67,82 +67,68 @@ public final class StudioComponentSharedFileSystemConfiguration extends com.pulu
      * 
      */
     @Import(name="windowsMountDrive")
-      private final @Nullable String windowsMountDrive;
+    private @Nullable String windowsMountDrive;
 
     public Optional<String> windowsMountDrive() {
-        return this.windowsMountDrive == null ? Optional.empty() : Optional.ofNullable(this.windowsMountDrive);
+        return Optional.ofNullable(this.windowsMountDrive);
     }
 
-    public StudioComponentSharedFileSystemConfiguration(
-        @Nullable String endpoint,
-        @Nullable String fileSystemId,
-        @Nullable String linuxMountPoint,
-        @Nullable String shareName,
-        @Nullable String windowsMountDrive) {
-        this.endpoint = endpoint;
-        this.fileSystemId = fileSystemId;
-        this.linuxMountPoint = linuxMountPoint;
-        this.shareName = shareName;
-        this.windowsMountDrive = windowsMountDrive;
-    }
+    private StudioComponentSharedFileSystemConfiguration() {}
 
-    private StudioComponentSharedFileSystemConfiguration() {
-        this.endpoint = null;
-        this.fileSystemId = null;
-        this.linuxMountPoint = null;
-        this.shareName = null;
-        this.windowsMountDrive = null;
+    private StudioComponentSharedFileSystemConfiguration(StudioComponentSharedFileSystemConfiguration $) {
+        this.endpoint = $.endpoint;
+        this.fileSystemId = $.fileSystemId;
+        this.linuxMountPoint = $.linuxMountPoint;
+        this.shareName = $.shareName;
+        this.windowsMountDrive = $.windowsMountDrive;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(StudioComponentSharedFileSystemConfiguration defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String endpoint;
-        private @Nullable String fileSystemId;
-        private @Nullable String linuxMountPoint;
-        private @Nullable String shareName;
-        private @Nullable String windowsMountDrive;
+        private StudioComponentSharedFileSystemConfiguration $;
 
         public Builder() {
-    	      // Empty
+            $ = new StudioComponentSharedFileSystemConfiguration();
         }
 
         public Builder(StudioComponentSharedFileSystemConfiguration defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.endpoint = defaults.endpoint;
-    	      this.fileSystemId = defaults.fileSystemId;
-    	      this.linuxMountPoint = defaults.linuxMountPoint;
-    	      this.shareName = defaults.shareName;
-    	      this.windowsMountDrive = defaults.windowsMountDrive;
+            $ = new StudioComponentSharedFileSystemConfiguration(Objects.requireNonNull(defaults));
         }
 
         public Builder endpoint(@Nullable String endpoint) {
-            this.endpoint = endpoint;
+            $.endpoint = endpoint;
             return this;
         }
+
         public Builder fileSystemId(@Nullable String fileSystemId) {
-            this.fileSystemId = fileSystemId;
+            $.fileSystemId = fileSystemId;
             return this;
         }
+
         public Builder linuxMountPoint(@Nullable String linuxMountPoint) {
-            this.linuxMountPoint = linuxMountPoint;
+            $.linuxMountPoint = linuxMountPoint;
             return this;
         }
+
         public Builder shareName(@Nullable String shareName) {
-            this.shareName = shareName;
+            $.shareName = shareName;
             return this;
         }
+
         public Builder windowsMountDrive(@Nullable String windowsMountDrive) {
-            this.windowsMountDrive = windowsMountDrive;
+            $.windowsMountDrive = windowsMountDrive;
             return this;
-        }        public StudioComponentSharedFileSystemConfiguration build() {
-            return new StudioComponentSharedFileSystemConfiguration(endpoint, fileSystemId, linuxMountPoint, shareName, windowsMountDrive);
+        }
+
+        public StudioComponentSharedFileSystemConfiguration build() {
+            return $;
         }
     }
+
 }

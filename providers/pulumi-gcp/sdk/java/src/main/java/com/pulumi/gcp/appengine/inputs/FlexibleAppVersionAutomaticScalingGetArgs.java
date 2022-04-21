@@ -5,7 +5,6 @@ package com.pulumi.gcp.appengine.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.appengine.inputs.FlexibleAppVersionAutomaticScalingCpuUtilizationGetArgs;
 import com.pulumi.gcp.appengine.inputs.FlexibleAppVersionAutomaticScalingDiskUtilizationGetArgs;
 import com.pulumi.gcp.appengine.inputs.FlexibleAppVersionAutomaticScalingNetworkUtilizationGetArgs;
@@ -13,6 +12,7 @@ import com.pulumi.gcp.appengine.inputs.FlexibleAppVersionAutomaticScalingRequest
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +27,10 @@ public final class FlexibleAppVersionAutomaticScalingGetArgs extends com.pulumi.
      * 
      */
     @Import(name="coolDownPeriod")
-      private final @Nullable Output<String> coolDownPeriod;
+    private @Nullable Output<String> coolDownPeriod;
 
-    public Output<String> coolDownPeriod() {
-        return this.coolDownPeriod == null ? Codegen.empty() : this.coolDownPeriod;
+    public Optional<Output<String>> coolDownPeriod() {
+        return Optional.ofNullable(this.coolDownPeriod);
     }
 
     /**
@@ -39,7 +39,7 @@ public final class FlexibleAppVersionAutomaticScalingGetArgs extends com.pulumi.
      * 
      */
     @Import(name="cpuUtilization", required=true)
-      private final Output<FlexibleAppVersionAutomaticScalingCpuUtilizationGetArgs> cpuUtilization;
+    private Output<FlexibleAppVersionAutomaticScalingCpuUtilizationGetArgs> cpuUtilization;
 
     public Output<FlexibleAppVersionAutomaticScalingCpuUtilizationGetArgs> cpuUtilization() {
         return this.cpuUtilization;
@@ -51,10 +51,10 @@ public final class FlexibleAppVersionAutomaticScalingGetArgs extends com.pulumi.
      * 
      */
     @Import(name="diskUtilization")
-      private final @Nullable Output<FlexibleAppVersionAutomaticScalingDiskUtilizationGetArgs> diskUtilization;
+    private @Nullable Output<FlexibleAppVersionAutomaticScalingDiskUtilizationGetArgs> diskUtilization;
 
-    public Output<FlexibleAppVersionAutomaticScalingDiskUtilizationGetArgs> diskUtilization() {
-        return this.diskUtilization == null ? Codegen.empty() : this.diskUtilization;
+    public Optional<Output<FlexibleAppVersionAutomaticScalingDiskUtilizationGetArgs>> diskUtilization() {
+        return Optional.ofNullable(this.diskUtilization);
     }
 
     /**
@@ -63,10 +63,10 @@ public final class FlexibleAppVersionAutomaticScalingGetArgs extends com.pulumi.
      * 
      */
     @Import(name="maxConcurrentRequests")
-      private final @Nullable Output<Integer> maxConcurrentRequests;
+    private @Nullable Output<Integer> maxConcurrentRequests;
 
-    public Output<Integer> maxConcurrentRequests() {
-        return this.maxConcurrentRequests == null ? Codegen.empty() : this.maxConcurrentRequests;
+    public Optional<Output<Integer>> maxConcurrentRequests() {
+        return Optional.ofNullable(this.maxConcurrentRequests);
     }
 
     /**
@@ -74,10 +74,10 @@ public final class FlexibleAppVersionAutomaticScalingGetArgs extends com.pulumi.
      * 
      */
     @Import(name="maxIdleInstances")
-      private final @Nullable Output<Integer> maxIdleInstances;
+    private @Nullable Output<Integer> maxIdleInstances;
 
-    public Output<Integer> maxIdleInstances() {
-        return this.maxIdleInstances == null ? Codegen.empty() : this.maxIdleInstances;
+    public Optional<Output<Integer>> maxIdleInstances() {
+        return Optional.ofNullable(this.maxIdleInstances);
     }
 
     /**
@@ -85,10 +85,10 @@ public final class FlexibleAppVersionAutomaticScalingGetArgs extends com.pulumi.
      * 
      */
     @Import(name="maxPendingLatency")
-      private final @Nullable Output<String> maxPendingLatency;
+    private @Nullable Output<String> maxPendingLatency;
 
-    public Output<String> maxPendingLatency() {
-        return this.maxPendingLatency == null ? Codegen.empty() : this.maxPendingLatency;
+    public Optional<Output<String>> maxPendingLatency() {
+        return Optional.ofNullable(this.maxPendingLatency);
     }
 
     /**
@@ -96,10 +96,10 @@ public final class FlexibleAppVersionAutomaticScalingGetArgs extends com.pulumi.
      * 
      */
     @Import(name="maxTotalInstances")
-      private final @Nullable Output<Integer> maxTotalInstances;
+    private @Nullable Output<Integer> maxTotalInstances;
 
-    public Output<Integer> maxTotalInstances() {
-        return this.maxTotalInstances == null ? Codegen.empty() : this.maxTotalInstances;
+    public Optional<Output<Integer>> maxTotalInstances() {
+        return Optional.ofNullable(this.maxTotalInstances);
     }
 
     /**
@@ -107,10 +107,10 @@ public final class FlexibleAppVersionAutomaticScalingGetArgs extends com.pulumi.
      * 
      */
     @Import(name="minIdleInstances")
-      private final @Nullable Output<Integer> minIdleInstances;
+    private @Nullable Output<Integer> minIdleInstances;
 
-    public Output<Integer> minIdleInstances() {
-        return this.minIdleInstances == null ? Codegen.empty() : this.minIdleInstances;
+    public Optional<Output<Integer>> minIdleInstances() {
+        return Optional.ofNullable(this.minIdleInstances);
     }
 
     /**
@@ -118,10 +118,10 @@ public final class FlexibleAppVersionAutomaticScalingGetArgs extends com.pulumi.
      * 
      */
     @Import(name="minPendingLatency")
-      private final @Nullable Output<String> minPendingLatency;
+    private @Nullable Output<String> minPendingLatency;
 
-    public Output<String> minPendingLatency() {
-        return this.minPendingLatency == null ? Codegen.empty() : this.minPendingLatency;
+    public Optional<Output<String>> minPendingLatency() {
+        return Optional.ofNullable(this.minPendingLatency);
     }
 
     /**
@@ -129,10 +129,10 @@ public final class FlexibleAppVersionAutomaticScalingGetArgs extends com.pulumi.
      * 
      */
     @Import(name="minTotalInstances")
-      private final @Nullable Output<Integer> minTotalInstances;
+    private @Nullable Output<Integer> minTotalInstances;
 
-    public Output<Integer> minTotalInstances() {
-        return this.minTotalInstances == null ? Codegen.empty() : this.minTotalInstances;
+    public Optional<Output<Integer>> minTotalInstances() {
+        return Optional.ofNullable(this.minTotalInstances);
     }
 
     /**
@@ -141,10 +141,10 @@ public final class FlexibleAppVersionAutomaticScalingGetArgs extends com.pulumi.
      * 
      */
     @Import(name="networkUtilization")
-      private final @Nullable Output<FlexibleAppVersionAutomaticScalingNetworkUtilizationGetArgs> networkUtilization;
+    private @Nullable Output<FlexibleAppVersionAutomaticScalingNetworkUtilizationGetArgs> networkUtilization;
 
-    public Output<FlexibleAppVersionAutomaticScalingNetworkUtilizationGetArgs> networkUtilization() {
-        return this.networkUtilization == null ? Codegen.empty() : this.networkUtilization;
+    public Optional<Output<FlexibleAppVersionAutomaticScalingNetworkUtilizationGetArgs>> networkUtilization() {
+        return Optional.ofNullable(this.networkUtilization);
     }
 
     /**
@@ -153,193 +153,159 @@ public final class FlexibleAppVersionAutomaticScalingGetArgs extends com.pulumi.
      * 
      */
     @Import(name="requestUtilization")
-      private final @Nullable Output<FlexibleAppVersionAutomaticScalingRequestUtilizationGetArgs> requestUtilization;
+    private @Nullable Output<FlexibleAppVersionAutomaticScalingRequestUtilizationGetArgs> requestUtilization;
 
-    public Output<FlexibleAppVersionAutomaticScalingRequestUtilizationGetArgs> requestUtilization() {
-        return this.requestUtilization == null ? Codegen.empty() : this.requestUtilization;
+    public Optional<Output<FlexibleAppVersionAutomaticScalingRequestUtilizationGetArgs>> requestUtilization() {
+        return Optional.ofNullable(this.requestUtilization);
     }
 
-    public FlexibleAppVersionAutomaticScalingGetArgs(
-        @Nullable Output<String> coolDownPeriod,
-        Output<FlexibleAppVersionAutomaticScalingCpuUtilizationGetArgs> cpuUtilization,
-        @Nullable Output<FlexibleAppVersionAutomaticScalingDiskUtilizationGetArgs> diskUtilization,
-        @Nullable Output<Integer> maxConcurrentRequests,
-        @Nullable Output<Integer> maxIdleInstances,
-        @Nullable Output<String> maxPendingLatency,
-        @Nullable Output<Integer> maxTotalInstances,
-        @Nullable Output<Integer> minIdleInstances,
-        @Nullable Output<String> minPendingLatency,
-        @Nullable Output<Integer> minTotalInstances,
-        @Nullable Output<FlexibleAppVersionAutomaticScalingNetworkUtilizationGetArgs> networkUtilization,
-        @Nullable Output<FlexibleAppVersionAutomaticScalingRequestUtilizationGetArgs> requestUtilization) {
-        this.coolDownPeriod = coolDownPeriod;
-        this.cpuUtilization = Objects.requireNonNull(cpuUtilization, "expected parameter 'cpuUtilization' to be non-null");
-        this.diskUtilization = diskUtilization;
-        this.maxConcurrentRequests = maxConcurrentRequests;
-        this.maxIdleInstances = maxIdleInstances;
-        this.maxPendingLatency = maxPendingLatency;
-        this.maxTotalInstances = maxTotalInstances;
-        this.minIdleInstances = minIdleInstances;
-        this.minPendingLatency = minPendingLatency;
-        this.minTotalInstances = minTotalInstances;
-        this.networkUtilization = networkUtilization;
-        this.requestUtilization = requestUtilization;
-    }
+    private FlexibleAppVersionAutomaticScalingGetArgs() {}
 
-    private FlexibleAppVersionAutomaticScalingGetArgs() {
-        this.coolDownPeriod = Codegen.empty();
-        this.cpuUtilization = Codegen.empty();
-        this.diskUtilization = Codegen.empty();
-        this.maxConcurrentRequests = Codegen.empty();
-        this.maxIdleInstances = Codegen.empty();
-        this.maxPendingLatency = Codegen.empty();
-        this.maxTotalInstances = Codegen.empty();
-        this.minIdleInstances = Codegen.empty();
-        this.minPendingLatency = Codegen.empty();
-        this.minTotalInstances = Codegen.empty();
-        this.networkUtilization = Codegen.empty();
-        this.requestUtilization = Codegen.empty();
+    private FlexibleAppVersionAutomaticScalingGetArgs(FlexibleAppVersionAutomaticScalingGetArgs $) {
+        this.coolDownPeriod = $.coolDownPeriod;
+        this.cpuUtilization = $.cpuUtilization;
+        this.diskUtilization = $.diskUtilization;
+        this.maxConcurrentRequests = $.maxConcurrentRequests;
+        this.maxIdleInstances = $.maxIdleInstances;
+        this.maxPendingLatency = $.maxPendingLatency;
+        this.maxTotalInstances = $.maxTotalInstances;
+        this.minIdleInstances = $.minIdleInstances;
+        this.minPendingLatency = $.minPendingLatency;
+        this.minTotalInstances = $.minTotalInstances;
+        this.networkUtilization = $.networkUtilization;
+        this.requestUtilization = $.requestUtilization;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FlexibleAppVersionAutomaticScalingGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> coolDownPeriod;
-        private Output<FlexibleAppVersionAutomaticScalingCpuUtilizationGetArgs> cpuUtilization;
-        private @Nullable Output<FlexibleAppVersionAutomaticScalingDiskUtilizationGetArgs> diskUtilization;
-        private @Nullable Output<Integer> maxConcurrentRequests;
-        private @Nullable Output<Integer> maxIdleInstances;
-        private @Nullable Output<String> maxPendingLatency;
-        private @Nullable Output<Integer> maxTotalInstances;
-        private @Nullable Output<Integer> minIdleInstances;
-        private @Nullable Output<String> minPendingLatency;
-        private @Nullable Output<Integer> minTotalInstances;
-        private @Nullable Output<FlexibleAppVersionAutomaticScalingNetworkUtilizationGetArgs> networkUtilization;
-        private @Nullable Output<FlexibleAppVersionAutomaticScalingRequestUtilizationGetArgs> requestUtilization;
+        private FlexibleAppVersionAutomaticScalingGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new FlexibleAppVersionAutomaticScalingGetArgs();
         }
 
         public Builder(FlexibleAppVersionAutomaticScalingGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.coolDownPeriod = defaults.coolDownPeriod;
-    	      this.cpuUtilization = defaults.cpuUtilization;
-    	      this.diskUtilization = defaults.diskUtilization;
-    	      this.maxConcurrentRequests = defaults.maxConcurrentRequests;
-    	      this.maxIdleInstances = defaults.maxIdleInstances;
-    	      this.maxPendingLatency = defaults.maxPendingLatency;
-    	      this.maxTotalInstances = defaults.maxTotalInstances;
-    	      this.minIdleInstances = defaults.minIdleInstances;
-    	      this.minPendingLatency = defaults.minPendingLatency;
-    	      this.minTotalInstances = defaults.minTotalInstances;
-    	      this.networkUtilization = defaults.networkUtilization;
-    	      this.requestUtilization = defaults.requestUtilization;
+            $ = new FlexibleAppVersionAutomaticScalingGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder coolDownPeriod(@Nullable Output<String> coolDownPeriod) {
-            this.coolDownPeriod = coolDownPeriod;
+            $.coolDownPeriod = coolDownPeriod;
             return this;
         }
-        public Builder coolDownPeriod(@Nullable String coolDownPeriod) {
-            this.coolDownPeriod = Codegen.ofNullable(coolDownPeriod);
-            return this;
+
+        public Builder coolDownPeriod(String coolDownPeriod) {
+            return coolDownPeriod(Output.of(coolDownPeriod));
         }
+
         public Builder cpuUtilization(Output<FlexibleAppVersionAutomaticScalingCpuUtilizationGetArgs> cpuUtilization) {
-            this.cpuUtilization = Objects.requireNonNull(cpuUtilization);
+            $.cpuUtilization = cpuUtilization;
             return this;
         }
+
         public Builder cpuUtilization(FlexibleAppVersionAutomaticScalingCpuUtilizationGetArgs cpuUtilization) {
-            this.cpuUtilization = Output.of(Objects.requireNonNull(cpuUtilization));
-            return this;
+            return cpuUtilization(Output.of(cpuUtilization));
         }
+
         public Builder diskUtilization(@Nullable Output<FlexibleAppVersionAutomaticScalingDiskUtilizationGetArgs> diskUtilization) {
-            this.diskUtilization = diskUtilization;
+            $.diskUtilization = diskUtilization;
             return this;
         }
-        public Builder diskUtilization(@Nullable FlexibleAppVersionAutomaticScalingDiskUtilizationGetArgs diskUtilization) {
-            this.diskUtilization = Codegen.ofNullable(diskUtilization);
-            return this;
+
+        public Builder diskUtilization(FlexibleAppVersionAutomaticScalingDiskUtilizationGetArgs diskUtilization) {
+            return diskUtilization(Output.of(diskUtilization));
         }
+
         public Builder maxConcurrentRequests(@Nullable Output<Integer> maxConcurrentRequests) {
-            this.maxConcurrentRequests = maxConcurrentRequests;
+            $.maxConcurrentRequests = maxConcurrentRequests;
             return this;
         }
-        public Builder maxConcurrentRequests(@Nullable Integer maxConcurrentRequests) {
-            this.maxConcurrentRequests = Codegen.ofNullable(maxConcurrentRequests);
-            return this;
+
+        public Builder maxConcurrentRequests(Integer maxConcurrentRequests) {
+            return maxConcurrentRequests(Output.of(maxConcurrentRequests));
         }
+
         public Builder maxIdleInstances(@Nullable Output<Integer> maxIdleInstances) {
-            this.maxIdleInstances = maxIdleInstances;
+            $.maxIdleInstances = maxIdleInstances;
             return this;
         }
-        public Builder maxIdleInstances(@Nullable Integer maxIdleInstances) {
-            this.maxIdleInstances = Codegen.ofNullable(maxIdleInstances);
-            return this;
+
+        public Builder maxIdleInstances(Integer maxIdleInstances) {
+            return maxIdleInstances(Output.of(maxIdleInstances));
         }
+
         public Builder maxPendingLatency(@Nullable Output<String> maxPendingLatency) {
-            this.maxPendingLatency = maxPendingLatency;
+            $.maxPendingLatency = maxPendingLatency;
             return this;
         }
-        public Builder maxPendingLatency(@Nullable String maxPendingLatency) {
-            this.maxPendingLatency = Codegen.ofNullable(maxPendingLatency);
-            return this;
+
+        public Builder maxPendingLatency(String maxPendingLatency) {
+            return maxPendingLatency(Output.of(maxPendingLatency));
         }
+
         public Builder maxTotalInstances(@Nullable Output<Integer> maxTotalInstances) {
-            this.maxTotalInstances = maxTotalInstances;
+            $.maxTotalInstances = maxTotalInstances;
             return this;
         }
-        public Builder maxTotalInstances(@Nullable Integer maxTotalInstances) {
-            this.maxTotalInstances = Codegen.ofNullable(maxTotalInstances);
-            return this;
+
+        public Builder maxTotalInstances(Integer maxTotalInstances) {
+            return maxTotalInstances(Output.of(maxTotalInstances));
         }
+
         public Builder minIdleInstances(@Nullable Output<Integer> minIdleInstances) {
-            this.minIdleInstances = minIdleInstances;
+            $.minIdleInstances = minIdleInstances;
             return this;
         }
-        public Builder minIdleInstances(@Nullable Integer minIdleInstances) {
-            this.minIdleInstances = Codegen.ofNullable(minIdleInstances);
-            return this;
+
+        public Builder minIdleInstances(Integer minIdleInstances) {
+            return minIdleInstances(Output.of(minIdleInstances));
         }
+
         public Builder minPendingLatency(@Nullable Output<String> minPendingLatency) {
-            this.minPendingLatency = minPendingLatency;
+            $.minPendingLatency = minPendingLatency;
             return this;
         }
-        public Builder minPendingLatency(@Nullable String minPendingLatency) {
-            this.minPendingLatency = Codegen.ofNullable(minPendingLatency);
-            return this;
+
+        public Builder minPendingLatency(String minPendingLatency) {
+            return minPendingLatency(Output.of(minPendingLatency));
         }
+
         public Builder minTotalInstances(@Nullable Output<Integer> minTotalInstances) {
-            this.minTotalInstances = minTotalInstances;
+            $.minTotalInstances = minTotalInstances;
             return this;
         }
-        public Builder minTotalInstances(@Nullable Integer minTotalInstances) {
-            this.minTotalInstances = Codegen.ofNullable(minTotalInstances);
-            return this;
+
+        public Builder minTotalInstances(Integer minTotalInstances) {
+            return minTotalInstances(Output.of(minTotalInstances));
         }
+
         public Builder networkUtilization(@Nullable Output<FlexibleAppVersionAutomaticScalingNetworkUtilizationGetArgs> networkUtilization) {
-            this.networkUtilization = networkUtilization;
+            $.networkUtilization = networkUtilization;
             return this;
         }
-        public Builder networkUtilization(@Nullable FlexibleAppVersionAutomaticScalingNetworkUtilizationGetArgs networkUtilization) {
-            this.networkUtilization = Codegen.ofNullable(networkUtilization);
-            return this;
+
+        public Builder networkUtilization(FlexibleAppVersionAutomaticScalingNetworkUtilizationGetArgs networkUtilization) {
+            return networkUtilization(Output.of(networkUtilization));
         }
+
         public Builder requestUtilization(@Nullable Output<FlexibleAppVersionAutomaticScalingRequestUtilizationGetArgs> requestUtilization) {
-            this.requestUtilization = requestUtilization;
+            $.requestUtilization = requestUtilization;
             return this;
         }
-        public Builder requestUtilization(@Nullable FlexibleAppVersionAutomaticScalingRequestUtilizationGetArgs requestUtilization) {
-            this.requestUtilization = Codegen.ofNullable(requestUtilization);
-            return this;
-        }        public FlexibleAppVersionAutomaticScalingGetArgs build() {
-            return new FlexibleAppVersionAutomaticScalingGetArgs(coolDownPeriod, cpuUtilization, diskUtilization, maxConcurrentRequests, maxIdleInstances, maxPendingLatency, maxTotalInstances, minIdleInstances, minPendingLatency, minTotalInstances, networkUtilization, requestUtilization);
+
+        public Builder requestUtilization(FlexibleAppVersionAutomaticScalingRequestUtilizationGetArgs requestUtilization) {
+            return requestUtilization(Output.of(requestUtilization));
+        }
+
+        public FlexibleAppVersionAutomaticScalingGetArgs build() {
+            $.cpuUtilization = Objects.requireNonNull($.cpuUtilization, "expected parameter 'cpuUtilization' to be non-null");
+            return $;
         }
     }
+
 }

@@ -6,11 +6,11 @@ package com.pulumi.aws.lambda;
 import com.pulumi.asset.Archive;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,10 @@ public final class LayerVersionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="code")
-      private final @Nullable Output<Archive> code;
+    private @Nullable Output<Archive> code;
 
-    public Output<Archive> code() {
-        return this.code == null ? Codegen.empty() : this.code;
+    public Optional<Output<Archive>> code() {
+        return Optional.ofNullable(this.code);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class LayerVersionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="compatibleArchitectures")
-      private final @Nullable Output<List<String>> compatibleArchitectures;
+    private @Nullable Output<List<String>> compatibleArchitectures;
 
-    public Output<List<String>> compatibleArchitectures() {
-        return this.compatibleArchitectures == null ? Codegen.empty() : this.compatibleArchitectures;
+    public Optional<Output<List<String>>> compatibleArchitectures() {
+        return Optional.ofNullable(this.compatibleArchitectures);
     }
 
     /**
@@ -45,10 +45,10 @@ public final class LayerVersionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="compatibleRuntimes")
-      private final @Nullable Output<List<String>> compatibleRuntimes;
+    private @Nullable Output<List<String>> compatibleRuntimes;
 
-    public Output<List<String>> compatibleRuntimes() {
-        return this.compatibleRuntimes == null ? Codegen.empty() : this.compatibleRuntimes;
+    public Optional<Output<List<String>>> compatibleRuntimes() {
+        return Optional.ofNullable(this.compatibleRuntimes);
     }
 
     /**
@@ -56,10 +56,10 @@ public final class LayerVersionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -67,7 +67,7 @@ public final class LayerVersionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="layerName", required=true)
-      private final Output<String> layerName;
+    private Output<String> layerName;
 
     public Output<String> layerName() {
         return this.layerName;
@@ -78,10 +78,10 @@ public final class LayerVersionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="licenseInfo")
-      private final @Nullable Output<String> licenseInfo;
+    private @Nullable Output<String> licenseInfo;
 
-    public Output<String> licenseInfo() {
-        return this.licenseInfo == null ? Codegen.empty() : this.licenseInfo;
+    public Optional<Output<String>> licenseInfo() {
+        return Optional.ofNullable(this.licenseInfo);
     }
 
     /**
@@ -89,10 +89,10 @@ public final class LayerVersionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="s3Bucket")
-      private final @Nullable Output<String> s3Bucket;
+    private @Nullable Output<String> s3Bucket;
 
-    public Output<String> s3Bucket() {
-        return this.s3Bucket == null ? Codegen.empty() : this.s3Bucket;
+    public Optional<Output<String>> s3Bucket() {
+        return Optional.ofNullable(this.s3Bucket);
     }
 
     /**
@@ -100,10 +100,10 @@ public final class LayerVersionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="s3Key")
-      private final @Nullable Output<String> s3Key;
+    private @Nullable Output<String> s3Key;
 
-    public Output<String> s3Key() {
-        return this.s3Key == null ? Codegen.empty() : this.s3Key;
+    public Optional<Output<String>> s3Key() {
+        return Optional.ofNullable(this.s3Key);
     }
 
     /**
@@ -111,10 +111,10 @@ public final class LayerVersionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="s3ObjectVersion")
-      private final @Nullable Output<String> s3ObjectVersion;
+    private @Nullable Output<String> s3ObjectVersion;
 
-    public Output<String> s3ObjectVersion() {
-        return this.s3ObjectVersion == null ? Codegen.empty() : this.s3ObjectVersion;
+    public Optional<Output<String>> s3ObjectVersion() {
+        return Optional.ofNullable(this.s3ObjectVersion);
     }
 
     /**
@@ -122,193 +122,164 @@ public final class LayerVersionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="skipDestroy")
-      private final @Nullable Output<Boolean> skipDestroy;
+    private @Nullable Output<Boolean> skipDestroy;
 
-    public Output<Boolean> skipDestroy() {
-        return this.skipDestroy == null ? Codegen.empty() : this.skipDestroy;
+    public Optional<Output<Boolean>> skipDestroy() {
+        return Optional.ofNullable(this.skipDestroy);
     }
 
     @Import(name="sourceCodeHash")
-      private final @Nullable Output<String> sourceCodeHash;
+    private @Nullable Output<String> sourceCodeHash;
 
-    public Output<String> sourceCodeHash() {
-        return this.sourceCodeHash == null ? Codegen.empty() : this.sourceCodeHash;
+    public Optional<Output<String>> sourceCodeHash() {
+        return Optional.ofNullable(this.sourceCodeHash);
     }
 
-    public LayerVersionArgs(
-        @Nullable Output<Archive> code,
-        @Nullable Output<List<String>> compatibleArchitectures,
-        @Nullable Output<List<String>> compatibleRuntimes,
-        @Nullable Output<String> description,
-        Output<String> layerName,
-        @Nullable Output<String> licenseInfo,
-        @Nullable Output<String> s3Bucket,
-        @Nullable Output<String> s3Key,
-        @Nullable Output<String> s3ObjectVersion,
-        @Nullable Output<Boolean> skipDestroy,
-        @Nullable Output<String> sourceCodeHash) {
-        this.code = code;
-        this.compatibleArchitectures = compatibleArchitectures;
-        this.compatibleRuntimes = compatibleRuntimes;
-        this.description = description;
-        this.layerName = Objects.requireNonNull(layerName, "expected parameter 'layerName' to be non-null");
-        this.licenseInfo = licenseInfo;
-        this.s3Bucket = s3Bucket;
-        this.s3Key = s3Key;
-        this.s3ObjectVersion = s3ObjectVersion;
-        this.skipDestroy = skipDestroy;
-        this.sourceCodeHash = sourceCodeHash;
-    }
+    private LayerVersionArgs() {}
 
-    private LayerVersionArgs() {
-        this.code = Codegen.empty();
-        this.compatibleArchitectures = Codegen.empty();
-        this.compatibleRuntimes = Codegen.empty();
-        this.description = Codegen.empty();
-        this.layerName = Codegen.empty();
-        this.licenseInfo = Codegen.empty();
-        this.s3Bucket = Codegen.empty();
-        this.s3Key = Codegen.empty();
-        this.s3ObjectVersion = Codegen.empty();
-        this.skipDestroy = Codegen.empty();
-        this.sourceCodeHash = Codegen.empty();
+    private LayerVersionArgs(LayerVersionArgs $) {
+        this.code = $.code;
+        this.compatibleArchitectures = $.compatibleArchitectures;
+        this.compatibleRuntimes = $.compatibleRuntimes;
+        this.description = $.description;
+        this.layerName = $.layerName;
+        this.licenseInfo = $.licenseInfo;
+        this.s3Bucket = $.s3Bucket;
+        this.s3Key = $.s3Key;
+        this.s3ObjectVersion = $.s3ObjectVersion;
+        this.skipDestroy = $.skipDestroy;
+        this.sourceCodeHash = $.sourceCodeHash;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LayerVersionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Archive> code;
-        private @Nullable Output<List<String>> compatibleArchitectures;
-        private @Nullable Output<List<String>> compatibleRuntimes;
-        private @Nullable Output<String> description;
-        private Output<String> layerName;
-        private @Nullable Output<String> licenseInfo;
-        private @Nullable Output<String> s3Bucket;
-        private @Nullable Output<String> s3Key;
-        private @Nullable Output<String> s3ObjectVersion;
-        private @Nullable Output<Boolean> skipDestroy;
-        private @Nullable Output<String> sourceCodeHash;
+        private LayerVersionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new LayerVersionArgs();
         }
 
         public Builder(LayerVersionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.code = defaults.code;
-    	      this.compatibleArchitectures = defaults.compatibleArchitectures;
-    	      this.compatibleRuntimes = defaults.compatibleRuntimes;
-    	      this.description = defaults.description;
-    	      this.layerName = defaults.layerName;
-    	      this.licenseInfo = defaults.licenseInfo;
-    	      this.s3Bucket = defaults.s3Bucket;
-    	      this.s3Key = defaults.s3Key;
-    	      this.s3ObjectVersion = defaults.s3ObjectVersion;
-    	      this.skipDestroy = defaults.skipDestroy;
-    	      this.sourceCodeHash = defaults.sourceCodeHash;
+            $ = new LayerVersionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder code(@Nullable Output<Archive> code) {
-            this.code = code;
+            $.code = code;
             return this;
         }
-        public Builder code(@Nullable Archive code) {
-            this.code = Codegen.ofNullable(code);
-            return this;
+
+        public Builder code(Archive code) {
+            return code(Output.of(code));
         }
+
         public Builder compatibleArchitectures(@Nullable Output<List<String>> compatibleArchitectures) {
-            this.compatibleArchitectures = compatibleArchitectures;
+            $.compatibleArchitectures = compatibleArchitectures;
             return this;
         }
-        public Builder compatibleArchitectures(@Nullable List<String> compatibleArchitectures) {
-            this.compatibleArchitectures = Codegen.ofNullable(compatibleArchitectures);
-            return this;
+
+        public Builder compatibleArchitectures(List<String> compatibleArchitectures) {
+            return compatibleArchitectures(Output.of(compatibleArchitectures));
         }
+
         public Builder compatibleArchitectures(String... compatibleArchitectures) {
             return compatibleArchitectures(List.of(compatibleArchitectures));
         }
+
         public Builder compatibleRuntimes(@Nullable Output<List<String>> compatibleRuntimes) {
-            this.compatibleRuntimes = compatibleRuntimes;
+            $.compatibleRuntimes = compatibleRuntimes;
             return this;
         }
-        public Builder compatibleRuntimes(@Nullable List<String> compatibleRuntimes) {
-            this.compatibleRuntimes = Codegen.ofNullable(compatibleRuntimes);
-            return this;
+
+        public Builder compatibleRuntimes(List<String> compatibleRuntimes) {
+            return compatibleRuntimes(Output.of(compatibleRuntimes));
         }
+
         public Builder compatibleRuntimes(String... compatibleRuntimes) {
             return compatibleRuntimes(List.of(compatibleRuntimes));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder layerName(Output<String> layerName) {
-            this.layerName = Objects.requireNonNull(layerName);
+            $.layerName = layerName;
             return this;
         }
+
         public Builder layerName(String layerName) {
-            this.layerName = Output.of(Objects.requireNonNull(layerName));
-            return this;
+            return layerName(Output.of(layerName));
         }
+
         public Builder licenseInfo(@Nullable Output<String> licenseInfo) {
-            this.licenseInfo = licenseInfo;
+            $.licenseInfo = licenseInfo;
             return this;
         }
-        public Builder licenseInfo(@Nullable String licenseInfo) {
-            this.licenseInfo = Codegen.ofNullable(licenseInfo);
-            return this;
+
+        public Builder licenseInfo(String licenseInfo) {
+            return licenseInfo(Output.of(licenseInfo));
         }
+
         public Builder s3Bucket(@Nullable Output<String> s3Bucket) {
-            this.s3Bucket = s3Bucket;
+            $.s3Bucket = s3Bucket;
             return this;
         }
-        public Builder s3Bucket(@Nullable String s3Bucket) {
-            this.s3Bucket = Codegen.ofNullable(s3Bucket);
-            return this;
+
+        public Builder s3Bucket(String s3Bucket) {
+            return s3Bucket(Output.of(s3Bucket));
         }
+
         public Builder s3Key(@Nullable Output<String> s3Key) {
-            this.s3Key = s3Key;
+            $.s3Key = s3Key;
             return this;
         }
-        public Builder s3Key(@Nullable String s3Key) {
-            this.s3Key = Codegen.ofNullable(s3Key);
-            return this;
+
+        public Builder s3Key(String s3Key) {
+            return s3Key(Output.of(s3Key));
         }
+
         public Builder s3ObjectVersion(@Nullable Output<String> s3ObjectVersion) {
-            this.s3ObjectVersion = s3ObjectVersion;
+            $.s3ObjectVersion = s3ObjectVersion;
             return this;
         }
-        public Builder s3ObjectVersion(@Nullable String s3ObjectVersion) {
-            this.s3ObjectVersion = Codegen.ofNullable(s3ObjectVersion);
-            return this;
+
+        public Builder s3ObjectVersion(String s3ObjectVersion) {
+            return s3ObjectVersion(Output.of(s3ObjectVersion));
         }
+
         public Builder skipDestroy(@Nullable Output<Boolean> skipDestroy) {
-            this.skipDestroy = skipDestroy;
+            $.skipDestroy = skipDestroy;
             return this;
         }
-        public Builder skipDestroy(@Nullable Boolean skipDestroy) {
-            this.skipDestroy = Codegen.ofNullable(skipDestroy);
-            return this;
+
+        public Builder skipDestroy(Boolean skipDestroy) {
+            return skipDestroy(Output.of(skipDestroy));
         }
+
         public Builder sourceCodeHash(@Nullable Output<String> sourceCodeHash) {
-            this.sourceCodeHash = sourceCodeHash;
+            $.sourceCodeHash = sourceCodeHash;
             return this;
         }
-        public Builder sourceCodeHash(@Nullable String sourceCodeHash) {
-            this.sourceCodeHash = Codegen.ofNullable(sourceCodeHash);
-            return this;
-        }        public LayerVersionArgs build() {
-            return new LayerVersionArgs(code, compatibleArchitectures, compatibleRuntimes, description, layerName, licenseInfo, s3Bucket, s3Key, s3ObjectVersion, skipDestroy, sourceCodeHash);
+
+        public Builder sourceCodeHash(String sourceCodeHash) {
+            return sourceCodeHash(Output.of(sourceCodeHash));
+        }
+
+        public LayerVersionArgs build() {
+            $.layerName = Objects.requireNonNull($.layerName, "expected parameter 'layerName' to be non-null");
+            return $;
         }
     }
+
 }

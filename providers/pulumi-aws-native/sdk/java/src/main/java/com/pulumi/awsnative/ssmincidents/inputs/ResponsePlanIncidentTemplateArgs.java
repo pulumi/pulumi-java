@@ -6,11 +6,11 @@ package com.pulumi.awsnative.ssmincidents.inputs;
 import com.pulumi.awsnative.ssmincidents.inputs.ResponsePlanNotificationTargetItemArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +27,10 @@ public final class ResponsePlanIncidentTemplateArgs extends com.pulumi.resources
      * 
      */
     @Import(name="dedupeString")
-      private final @Nullable Output<String> dedupeString;
+    private @Nullable Output<String> dedupeString;
 
-    public Output<String> dedupeString() {
-        return this.dedupeString == null ? Codegen.empty() : this.dedupeString;
+    public Optional<Output<String>> dedupeString() {
+        return Optional.ofNullable(this.dedupeString);
     }
 
     /**
@@ -38,7 +38,7 @@ public final class ResponsePlanIncidentTemplateArgs extends com.pulumi.resources
      * 
      */
     @Import(name="impact", required=true)
-      private final Output<Integer> impact;
+    private Output<Integer> impact;
 
     public Output<Integer> impact() {
         return this.impact;
@@ -49,10 +49,10 @@ public final class ResponsePlanIncidentTemplateArgs extends com.pulumi.resources
      * 
      */
     @Import(name="notificationTargets")
-      private final @Nullable Output<List<ResponsePlanNotificationTargetItemArgs>> notificationTargets;
+    private @Nullable Output<List<ResponsePlanNotificationTargetItemArgs>> notificationTargets;
 
-    public Output<List<ResponsePlanNotificationTargetItemArgs>> notificationTargets() {
-        return this.notificationTargets == null ? Codegen.empty() : this.notificationTargets;
+    public Optional<Output<List<ResponsePlanNotificationTargetItemArgs>>> notificationTargets() {
+        return Optional.ofNullable(this.notificationTargets);
     }
 
     /**
@@ -60,10 +60,10 @@ public final class ResponsePlanIncidentTemplateArgs extends com.pulumi.resources
      * 
      */
     @Import(name="summary")
-      private final @Nullable Output<String> summary;
+    private @Nullable Output<String> summary;
 
-    public Output<String> summary() {
-        return this.summary == null ? Codegen.empty() : this.summary;
+    public Optional<Output<String>> summary() {
+        return Optional.ofNullable(this.summary);
     }
 
     /**
@@ -71,105 +71,94 @@ public final class ResponsePlanIncidentTemplateArgs extends com.pulumi.resources
      * 
      */
     @Import(name="title", required=true)
-      private final Output<String> title;
+    private Output<String> title;
 
     public Output<String> title() {
         return this.title;
     }
 
-    public ResponsePlanIncidentTemplateArgs(
-        @Nullable Output<String> dedupeString,
-        Output<Integer> impact,
-        @Nullable Output<List<ResponsePlanNotificationTargetItemArgs>> notificationTargets,
-        @Nullable Output<String> summary,
-        Output<String> title) {
-        this.dedupeString = dedupeString;
-        this.impact = Objects.requireNonNull(impact, "expected parameter 'impact' to be non-null");
-        this.notificationTargets = notificationTargets;
-        this.summary = summary;
-        this.title = Objects.requireNonNull(title, "expected parameter 'title' to be non-null");
-    }
+    private ResponsePlanIncidentTemplateArgs() {}
 
-    private ResponsePlanIncidentTemplateArgs() {
-        this.dedupeString = Codegen.empty();
-        this.impact = Codegen.empty();
-        this.notificationTargets = Codegen.empty();
-        this.summary = Codegen.empty();
-        this.title = Codegen.empty();
+    private ResponsePlanIncidentTemplateArgs(ResponsePlanIncidentTemplateArgs $) {
+        this.dedupeString = $.dedupeString;
+        this.impact = $.impact;
+        this.notificationTargets = $.notificationTargets;
+        this.summary = $.summary;
+        this.title = $.title;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ResponsePlanIncidentTemplateArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> dedupeString;
-        private Output<Integer> impact;
-        private @Nullable Output<List<ResponsePlanNotificationTargetItemArgs>> notificationTargets;
-        private @Nullable Output<String> summary;
-        private Output<String> title;
+        private ResponsePlanIncidentTemplateArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ResponsePlanIncidentTemplateArgs();
         }
 
         public Builder(ResponsePlanIncidentTemplateArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dedupeString = defaults.dedupeString;
-    	      this.impact = defaults.impact;
-    	      this.notificationTargets = defaults.notificationTargets;
-    	      this.summary = defaults.summary;
-    	      this.title = defaults.title;
+            $ = new ResponsePlanIncidentTemplateArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder dedupeString(@Nullable Output<String> dedupeString) {
-            this.dedupeString = dedupeString;
+            $.dedupeString = dedupeString;
             return this;
         }
-        public Builder dedupeString(@Nullable String dedupeString) {
-            this.dedupeString = Codegen.ofNullable(dedupeString);
-            return this;
+
+        public Builder dedupeString(String dedupeString) {
+            return dedupeString(Output.of(dedupeString));
         }
+
         public Builder impact(Output<Integer> impact) {
-            this.impact = Objects.requireNonNull(impact);
+            $.impact = impact;
             return this;
         }
+
         public Builder impact(Integer impact) {
-            this.impact = Output.of(Objects.requireNonNull(impact));
-            return this;
+            return impact(Output.of(impact));
         }
+
         public Builder notificationTargets(@Nullable Output<List<ResponsePlanNotificationTargetItemArgs>> notificationTargets) {
-            this.notificationTargets = notificationTargets;
+            $.notificationTargets = notificationTargets;
             return this;
         }
-        public Builder notificationTargets(@Nullable List<ResponsePlanNotificationTargetItemArgs> notificationTargets) {
-            this.notificationTargets = Codegen.ofNullable(notificationTargets);
-            return this;
+
+        public Builder notificationTargets(List<ResponsePlanNotificationTargetItemArgs> notificationTargets) {
+            return notificationTargets(Output.of(notificationTargets));
         }
+
         public Builder notificationTargets(ResponsePlanNotificationTargetItemArgs... notificationTargets) {
             return notificationTargets(List.of(notificationTargets));
         }
+
         public Builder summary(@Nullable Output<String> summary) {
-            this.summary = summary;
+            $.summary = summary;
             return this;
         }
-        public Builder summary(@Nullable String summary) {
-            this.summary = Codegen.ofNullable(summary);
-            return this;
+
+        public Builder summary(String summary) {
+            return summary(Output.of(summary));
         }
+
         public Builder title(Output<String> title) {
-            this.title = Objects.requireNonNull(title);
+            $.title = title;
             return this;
         }
+
         public Builder title(String title) {
-            this.title = Output.of(Objects.requireNonNull(title));
-            return this;
-        }        public ResponsePlanIncidentTemplateArgs build() {
-            return new ResponsePlanIncidentTemplateArgs(dedupeString, impact, notificationTargets, summary, title);
+            return title(Output.of(title));
+        }
+
+        public ResponsePlanIncidentTemplateArgs build() {
+            $.impact = Objects.requireNonNull($.impact, "expected parameter 'impact' to be non-null");
+            $.title = Objects.requireNonNull($.title, "expected parameter 'title' to be non-null");
+            return $;
         }
     }
+
 }

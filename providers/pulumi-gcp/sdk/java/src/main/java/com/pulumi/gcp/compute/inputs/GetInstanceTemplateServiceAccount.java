@@ -19,7 +19,7 @@ public final class GetInstanceTemplateServiceAccount extends com.pulumi.resource
      * 
      */
     @Import(name="email", required=true)
-      private final String email;
+    private String email;
 
     public String email() {
         return this.email;
@@ -32,58 +32,56 @@ public final class GetInstanceTemplateServiceAccount extends com.pulumi.resource
      * 
      */
     @Import(name="scopes", required=true)
-      private final List<String> scopes;
+    private List<String> scopes;
 
     public List<String> scopes() {
         return this.scopes;
     }
 
-    public GetInstanceTemplateServiceAccount(
-        String email,
-        List<String> scopes) {
-        this.email = Objects.requireNonNull(email, "expected parameter 'email' to be non-null");
-        this.scopes = Objects.requireNonNull(scopes, "expected parameter 'scopes' to be non-null");
-    }
+    private GetInstanceTemplateServiceAccount() {}
 
-    private GetInstanceTemplateServiceAccount() {
-        this.email = null;
-        this.scopes = List.of();
+    private GetInstanceTemplateServiceAccount(GetInstanceTemplateServiceAccount $) {
+        this.email = $.email;
+        this.scopes = $.scopes;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetInstanceTemplateServiceAccount defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String email;
-        private List<String> scopes;
+        private GetInstanceTemplateServiceAccount $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetInstanceTemplateServiceAccount();
         }
 
         public Builder(GetInstanceTemplateServiceAccount defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.email = defaults.email;
-    	      this.scopes = defaults.scopes;
+            $ = new GetInstanceTemplateServiceAccount(Objects.requireNonNull(defaults));
         }
 
         public Builder email(String email) {
-            this.email = Objects.requireNonNull(email);
+            $.email = email;
             return this;
         }
+
         public Builder scopes(List<String> scopes) {
-            this.scopes = Objects.requireNonNull(scopes);
+            $.scopes = scopes;
             return this;
         }
+
         public Builder scopes(String... scopes) {
             return scopes(List.of(scopes));
-        }        public GetInstanceTemplateServiceAccount build() {
-            return new GetInstanceTemplateServiceAccount(email, scopes);
+        }
+
+        public GetInstanceTemplateServiceAccount build() {
+            $.email = Objects.requireNonNull($.email, "expected parameter 'email' to be non-null");
+            $.scopes = Objects.requireNonNull($.scopes, "expected parameter 'scopes' to be non-null");
+            return $;
         }
     }
+
 }

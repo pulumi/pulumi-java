@@ -5,11 +5,11 @@ package com.pulumi.aws.datasync;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,7 +22,7 @@ public final class LocationFsxLustreArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="fsxFilesystemArn", required=true)
-      private final Output<String> fsxFilesystemArn;
+    private Output<String> fsxFilesystemArn;
 
     public Output<String> fsxFilesystemArn() {
         return this.fsxFilesystemArn;
@@ -33,7 +33,7 @@ public final class LocationFsxLustreArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="securityGroupArns", required=true)
-      private final Output<List<String>> securityGroupArns;
+    private Output<List<String>> securityGroupArns;
 
     public Output<List<String>> securityGroupArns() {
         return this.securityGroupArns;
@@ -44,10 +44,10 @@ public final class LocationFsxLustreArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="subdirectory")
-      private final @Nullable Output<String> subdirectory;
+    private @Nullable Output<String> subdirectory;
 
-    public Output<String> subdirectory() {
-        return this.subdirectory == null ? Codegen.empty() : this.subdirectory;
+    public Optional<Output<String>> subdirectory() {
+        return Optional.ofNullable(this.subdirectory);
     }
 
     /**
@@ -55,10 +55,10 @@ public final class LocationFsxLustreArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -66,105 +66,94 @@ public final class LocationFsxLustreArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="tagsAll")
-      private final @Nullable Output<Map<String,String>> tagsAll;
+    private @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> tagsAll() {
-        return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
+    public Optional<Output<Map<String,String>>> tagsAll() {
+        return Optional.ofNullable(this.tagsAll);
     }
 
-    public LocationFsxLustreArgs(
-        Output<String> fsxFilesystemArn,
-        Output<List<String>> securityGroupArns,
-        @Nullable Output<String> subdirectory,
-        @Nullable Output<Map<String,String>> tags,
-        @Nullable Output<Map<String,String>> tagsAll) {
-        this.fsxFilesystemArn = Objects.requireNonNull(fsxFilesystemArn, "expected parameter 'fsxFilesystemArn' to be non-null");
-        this.securityGroupArns = Objects.requireNonNull(securityGroupArns, "expected parameter 'securityGroupArns' to be non-null");
-        this.subdirectory = subdirectory;
-        this.tags = tags;
-        this.tagsAll = tagsAll;
-    }
+    private LocationFsxLustreArgs() {}
 
-    private LocationFsxLustreArgs() {
-        this.fsxFilesystemArn = Codegen.empty();
-        this.securityGroupArns = Codegen.empty();
-        this.subdirectory = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.tagsAll = Codegen.empty();
+    private LocationFsxLustreArgs(LocationFsxLustreArgs $) {
+        this.fsxFilesystemArn = $.fsxFilesystemArn;
+        this.securityGroupArns = $.securityGroupArns;
+        this.subdirectory = $.subdirectory;
+        this.tags = $.tags;
+        this.tagsAll = $.tagsAll;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LocationFsxLustreArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> fsxFilesystemArn;
-        private Output<List<String>> securityGroupArns;
-        private @Nullable Output<String> subdirectory;
-        private @Nullable Output<Map<String,String>> tags;
-        private @Nullable Output<Map<String,String>> tagsAll;
+        private LocationFsxLustreArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new LocationFsxLustreArgs();
         }
 
         public Builder(LocationFsxLustreArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.fsxFilesystemArn = defaults.fsxFilesystemArn;
-    	      this.securityGroupArns = defaults.securityGroupArns;
-    	      this.subdirectory = defaults.subdirectory;
-    	      this.tags = defaults.tags;
-    	      this.tagsAll = defaults.tagsAll;
+            $ = new LocationFsxLustreArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder fsxFilesystemArn(Output<String> fsxFilesystemArn) {
-            this.fsxFilesystemArn = Objects.requireNonNull(fsxFilesystemArn);
+            $.fsxFilesystemArn = fsxFilesystemArn;
             return this;
         }
+
         public Builder fsxFilesystemArn(String fsxFilesystemArn) {
-            this.fsxFilesystemArn = Output.of(Objects.requireNonNull(fsxFilesystemArn));
-            return this;
+            return fsxFilesystemArn(Output.of(fsxFilesystemArn));
         }
+
         public Builder securityGroupArns(Output<List<String>> securityGroupArns) {
-            this.securityGroupArns = Objects.requireNonNull(securityGroupArns);
+            $.securityGroupArns = securityGroupArns;
             return this;
         }
+
         public Builder securityGroupArns(List<String> securityGroupArns) {
-            this.securityGroupArns = Output.of(Objects.requireNonNull(securityGroupArns));
-            return this;
+            return securityGroupArns(Output.of(securityGroupArns));
         }
+
         public Builder securityGroupArns(String... securityGroupArns) {
             return securityGroupArns(List.of(securityGroupArns));
         }
+
         public Builder subdirectory(@Nullable Output<String> subdirectory) {
-            this.subdirectory = subdirectory;
+            $.subdirectory = subdirectory;
             return this;
         }
-        public Builder subdirectory(@Nullable String subdirectory) {
-            this.subdirectory = Codegen.ofNullable(subdirectory);
-            return this;
+
+        public Builder subdirectory(String subdirectory) {
+            return subdirectory(Output.of(subdirectory));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
-            this.tagsAll = tagsAll;
+            $.tagsAll = tagsAll;
             return this;
         }
-        public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Codegen.ofNullable(tagsAll);
-            return this;
-        }        public LocationFsxLustreArgs build() {
-            return new LocationFsxLustreArgs(fsxFilesystemArn, securityGroupArns, subdirectory, tags, tagsAll);
+
+        public Builder tagsAll(Map<String,String> tagsAll) {
+            return tagsAll(Output.of(tagsAll));
+        }
+
+        public LocationFsxLustreArgs build() {
+            $.fsxFilesystemArn = Objects.requireNonNull($.fsxFilesystemArn, "expected parameter 'fsxFilesystemArn' to be non-null");
+            $.securityGroupArns = Objects.requireNonNull($.securityGroupArns, "expected parameter 'securityGroupArns' to be non-null");
+            return $;
         }
     }
+
 }

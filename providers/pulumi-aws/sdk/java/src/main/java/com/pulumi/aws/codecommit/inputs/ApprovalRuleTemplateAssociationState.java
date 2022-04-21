@@ -5,9 +5,9 @@ package com.pulumi.aws.codecommit.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class ApprovalRuleTemplateAssociationState extends com.pulumi.resou
      * 
      */
     @Import(name="approvalRuleTemplateName")
-      private final @Nullable Output<String> approvalRuleTemplateName;
+    private @Nullable Output<String> approvalRuleTemplateName;
 
-    public Output<String> approvalRuleTemplateName() {
-        return this.approvalRuleTemplateName == null ? Codegen.empty() : this.approvalRuleTemplateName;
+    public Optional<Output<String>> approvalRuleTemplateName() {
+        return Optional.ofNullable(this.approvalRuleTemplateName);
     }
 
     /**
@@ -31,63 +31,58 @@ public final class ApprovalRuleTemplateAssociationState extends com.pulumi.resou
      * 
      */
     @Import(name="repositoryName")
-      private final @Nullable Output<String> repositoryName;
+    private @Nullable Output<String> repositoryName;
 
-    public Output<String> repositoryName() {
-        return this.repositoryName == null ? Codegen.empty() : this.repositoryName;
+    public Optional<Output<String>> repositoryName() {
+        return Optional.ofNullable(this.repositoryName);
     }
 
-    public ApprovalRuleTemplateAssociationState(
-        @Nullable Output<String> approvalRuleTemplateName,
-        @Nullable Output<String> repositoryName) {
-        this.approvalRuleTemplateName = approvalRuleTemplateName;
-        this.repositoryName = repositoryName;
-    }
+    private ApprovalRuleTemplateAssociationState() {}
 
-    private ApprovalRuleTemplateAssociationState() {
-        this.approvalRuleTemplateName = Codegen.empty();
-        this.repositoryName = Codegen.empty();
+    private ApprovalRuleTemplateAssociationState(ApprovalRuleTemplateAssociationState $) {
+        this.approvalRuleTemplateName = $.approvalRuleTemplateName;
+        this.repositoryName = $.repositoryName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ApprovalRuleTemplateAssociationState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> approvalRuleTemplateName;
-        private @Nullable Output<String> repositoryName;
+        private ApprovalRuleTemplateAssociationState $;
 
         public Builder() {
-    	      // Empty
+            $ = new ApprovalRuleTemplateAssociationState();
         }
 
         public Builder(ApprovalRuleTemplateAssociationState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.approvalRuleTemplateName = defaults.approvalRuleTemplateName;
-    	      this.repositoryName = defaults.repositoryName;
+            $ = new ApprovalRuleTemplateAssociationState(Objects.requireNonNull(defaults));
         }
 
         public Builder approvalRuleTemplateName(@Nullable Output<String> approvalRuleTemplateName) {
-            this.approvalRuleTemplateName = approvalRuleTemplateName;
+            $.approvalRuleTemplateName = approvalRuleTemplateName;
             return this;
         }
-        public Builder approvalRuleTemplateName(@Nullable String approvalRuleTemplateName) {
-            this.approvalRuleTemplateName = Codegen.ofNullable(approvalRuleTemplateName);
-            return this;
+
+        public Builder approvalRuleTemplateName(String approvalRuleTemplateName) {
+            return approvalRuleTemplateName(Output.of(approvalRuleTemplateName));
         }
+
         public Builder repositoryName(@Nullable Output<String> repositoryName) {
-            this.repositoryName = repositoryName;
+            $.repositoryName = repositoryName;
             return this;
         }
-        public Builder repositoryName(@Nullable String repositoryName) {
-            this.repositoryName = Codegen.ofNullable(repositoryName);
-            return this;
-        }        public ApprovalRuleTemplateAssociationState build() {
-            return new ApprovalRuleTemplateAssociationState(approvalRuleTemplateName, repositoryName);
+
+        public Builder repositoryName(String repositoryName) {
+            return repositoryName(Output.of(repositoryName));
+        }
+
+        public ApprovalRuleTemplateAssociationState build() {
+            return $;
         }
     }
+
 }

@@ -6,11 +6,11 @@ package com.pulumi.aws.organizations.inputs;
 import com.pulumi.aws.organizations.inputs.OrganizationalUnitAccountGetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,10 @@ public final class OrganizationalUnitState extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="accounts")
-      private final @Nullable Output<List<OrganizationalUnitAccountGetArgs>> accounts;
+    private @Nullable Output<List<OrganizationalUnitAccountGetArgs>> accounts;
 
-    public Output<List<OrganizationalUnitAccountGetArgs>> accounts() {
-        return this.accounts == null ? Codegen.empty() : this.accounts;
+    public Optional<Output<List<OrganizationalUnitAccountGetArgs>>> accounts() {
+        return Optional.ofNullable(this.accounts);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class OrganizationalUnitState extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="arn")
-      private final @Nullable Output<String> arn;
+    private @Nullable Output<String> arn;
 
-    public Output<String> arn() {
-        return this.arn == null ? Codegen.empty() : this.arn;
+    public Optional<Output<String>> arn() {
+        return Optional.ofNullable(this.arn);
     }
 
     /**
@@ -45,10 +45,10 @@ public final class OrganizationalUnitState extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -56,10 +56,10 @@ public final class OrganizationalUnitState extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="parentId")
-      private final @Nullable Output<String> parentId;
+    private @Nullable Output<String> parentId;
 
-    public Output<String> parentId() {
-        return this.parentId == null ? Codegen.empty() : this.parentId;
+    public Optional<Output<String>> parentId() {
+        return Optional.ofNullable(this.parentId);
     }
 
     /**
@@ -67,10 +67,10 @@ public final class OrganizationalUnitState extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -78,118 +78,102 @@ public final class OrganizationalUnitState extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="tagsAll")
-      private final @Nullable Output<Map<String,String>> tagsAll;
+    private @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> tagsAll() {
-        return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
+    public Optional<Output<Map<String,String>>> tagsAll() {
+        return Optional.ofNullable(this.tagsAll);
     }
 
-    public OrganizationalUnitState(
-        @Nullable Output<List<OrganizationalUnitAccountGetArgs>> accounts,
-        @Nullable Output<String> arn,
-        @Nullable Output<String> name,
-        @Nullable Output<String> parentId,
-        @Nullable Output<Map<String,String>> tags,
-        @Nullable Output<Map<String,String>> tagsAll) {
-        this.accounts = accounts;
-        this.arn = arn;
-        this.name = name;
-        this.parentId = parentId;
-        this.tags = tags;
-        this.tagsAll = tagsAll;
-    }
+    private OrganizationalUnitState() {}
 
-    private OrganizationalUnitState() {
-        this.accounts = Codegen.empty();
-        this.arn = Codegen.empty();
-        this.name = Codegen.empty();
-        this.parentId = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.tagsAll = Codegen.empty();
+    private OrganizationalUnitState(OrganizationalUnitState $) {
+        this.accounts = $.accounts;
+        this.arn = $.arn;
+        this.name = $.name;
+        this.parentId = $.parentId;
+        this.tags = $.tags;
+        this.tagsAll = $.tagsAll;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(OrganizationalUnitState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<OrganizationalUnitAccountGetArgs>> accounts;
-        private @Nullable Output<String> arn;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> parentId;
-        private @Nullable Output<Map<String,String>> tags;
-        private @Nullable Output<Map<String,String>> tagsAll;
+        private OrganizationalUnitState $;
 
         public Builder() {
-    	      // Empty
+            $ = new OrganizationalUnitState();
         }
 
         public Builder(OrganizationalUnitState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accounts = defaults.accounts;
-    	      this.arn = defaults.arn;
-    	      this.name = defaults.name;
-    	      this.parentId = defaults.parentId;
-    	      this.tags = defaults.tags;
-    	      this.tagsAll = defaults.tagsAll;
+            $ = new OrganizationalUnitState(Objects.requireNonNull(defaults));
         }
 
         public Builder accounts(@Nullable Output<List<OrganizationalUnitAccountGetArgs>> accounts) {
-            this.accounts = accounts;
+            $.accounts = accounts;
             return this;
         }
-        public Builder accounts(@Nullable List<OrganizationalUnitAccountGetArgs> accounts) {
-            this.accounts = Codegen.ofNullable(accounts);
-            return this;
+
+        public Builder accounts(List<OrganizationalUnitAccountGetArgs> accounts) {
+            return accounts(Output.of(accounts));
         }
+
         public Builder accounts(OrganizationalUnitAccountGetArgs... accounts) {
             return accounts(List.of(accounts));
         }
+
         public Builder arn(@Nullable Output<String> arn) {
-            this.arn = arn;
+            $.arn = arn;
             return this;
         }
-        public Builder arn(@Nullable String arn) {
-            this.arn = Codegen.ofNullable(arn);
-            return this;
+
+        public Builder arn(String arn) {
+            return arn(Output.of(arn));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder parentId(@Nullable Output<String> parentId) {
-            this.parentId = parentId;
+            $.parentId = parentId;
             return this;
         }
-        public Builder parentId(@Nullable String parentId) {
-            this.parentId = Codegen.ofNullable(parentId);
-            return this;
+
+        public Builder parentId(String parentId) {
+            return parentId(Output.of(parentId));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
-            this.tagsAll = tagsAll;
+            $.tagsAll = tagsAll;
             return this;
         }
-        public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Codegen.ofNullable(tagsAll);
-            return this;
-        }        public OrganizationalUnitState build() {
-            return new OrganizationalUnitState(accounts, arn, name, parentId, tags, tagsAll);
+
+        public Builder tagsAll(Map<String,String> tagsAll) {
+            return tagsAll(Output.of(tagsAll));
+        }
+
+        public OrganizationalUnitState build() {
+            return $;
         }
     }
+
 }

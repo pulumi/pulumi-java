@@ -5,9 +5,9 @@ package com.pulumi.googlenative.compute_alpha.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class SecurityPolicyAssociationArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="attachmentId")
-      private final @Nullable Output<String> attachmentId;
+    private @Nullable Output<String> attachmentId;
 
-    public Output<String> attachmentId() {
-        return this.attachmentId == null ? Codegen.empty() : this.attachmentId;
+    public Optional<Output<String>> attachmentId() {
+        return Optional.ofNullable(this.attachmentId);
     }
 
     /**
@@ -31,63 +31,58 @@ public final class SecurityPolicyAssociationArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
-    public SecurityPolicyAssociationArgs(
-        @Nullable Output<String> attachmentId,
-        @Nullable Output<String> name) {
-        this.attachmentId = attachmentId;
-        this.name = name;
-    }
+    private SecurityPolicyAssociationArgs() {}
 
-    private SecurityPolicyAssociationArgs() {
-        this.attachmentId = Codegen.empty();
-        this.name = Codegen.empty();
+    private SecurityPolicyAssociationArgs(SecurityPolicyAssociationArgs $) {
+        this.attachmentId = $.attachmentId;
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SecurityPolicyAssociationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> attachmentId;
-        private @Nullable Output<String> name;
+        private SecurityPolicyAssociationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SecurityPolicyAssociationArgs();
         }
 
         public Builder(SecurityPolicyAssociationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.attachmentId = defaults.attachmentId;
-    	      this.name = defaults.name;
+            $ = new SecurityPolicyAssociationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder attachmentId(@Nullable Output<String> attachmentId) {
-            this.attachmentId = attachmentId;
+            $.attachmentId = attachmentId;
             return this;
         }
-        public Builder attachmentId(@Nullable String attachmentId) {
-            this.attachmentId = Codegen.ofNullable(attachmentId);
-            return this;
+
+        public Builder attachmentId(String attachmentId) {
+            return attachmentId(Output.of(attachmentId));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
-        }        public SecurityPolicyAssociationArgs build() {
-            return new SecurityPolicyAssociationArgs(attachmentId, name);
+
+        public Builder name(String name) {
+            return name(Output.of(name));
+        }
+
+        public SecurityPolicyAssociationArgs build() {
+            return $;
         }
     }
+
 }

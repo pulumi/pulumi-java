@@ -23,7 +23,7 @@ public final class EnvironmentVariableSetupResponse extends com.pulumi.resources
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
@@ -34,7 +34,7 @@ public final class EnvironmentVariableSetupResponse extends com.pulumi.resources
      * 
      */
     @Import(name="variableName", required=true)
-      private final String variableName;
+    private String variableName;
 
     public String variableName() {
         return this.variableName;
@@ -45,64 +45,59 @@ public final class EnvironmentVariableSetupResponse extends com.pulumi.resources
      * 
      */
     @Import(name="variableValue", required=true)
-      private final String variableValue;
+    private String variableValue;
 
     public String variableValue() {
         return this.variableValue;
     }
 
-    public EnvironmentVariableSetupResponse(
-        String type,
-        String variableName,
-        String variableValue) {
-        this.type = Codegen.stringProp("type").arg(type).require();
-        this.variableName = Objects.requireNonNull(variableName, "expected parameter 'variableName' to be non-null");
-        this.variableValue = Objects.requireNonNull(variableValue, "expected parameter 'variableValue' to be non-null");
-    }
+    private EnvironmentVariableSetupResponse() {}
 
-    private EnvironmentVariableSetupResponse() {
-        this.type = null;
-        this.variableName = null;
-        this.variableValue = null;
+    private EnvironmentVariableSetupResponse(EnvironmentVariableSetupResponse $) {
+        this.type = $.type;
+        this.variableName = $.variableName;
+        this.variableValue = $.variableValue;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EnvironmentVariableSetupResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String type;
-        private String variableName;
-        private String variableValue;
+        private EnvironmentVariableSetupResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new EnvironmentVariableSetupResponse();
         }
 
         public Builder(EnvironmentVariableSetupResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.type = defaults.type;
-    	      this.variableName = defaults.variableName;
-    	      this.variableValue = defaults.variableValue;
+            $ = new EnvironmentVariableSetupResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder variableName(String variableName) {
-            this.variableName = Objects.requireNonNull(variableName);
+            $.variableName = variableName;
             return this;
         }
+
         public Builder variableValue(String variableValue) {
-            this.variableValue = Objects.requireNonNull(variableValue);
+            $.variableValue = variableValue;
             return this;
-        }        public EnvironmentVariableSetupResponse build() {
-            return new EnvironmentVariableSetupResponse(type, variableName, variableValue);
+        }
+
+        public EnvironmentVariableSetupResponse build() {
+            $.type = Codegen.stringProp("type").arg($.type).require();
+            $.variableName = Objects.requireNonNull($.variableName, "expected parameter 'variableName' to be non-null");
+            $.variableValue = Objects.requireNonNull($.variableValue, "expected parameter 'variableValue' to be non-null");
+            return $;
         }
     }
+
 }

@@ -20,7 +20,7 @@ public final class LoggingConfigurationFilter extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="behavior", required=true)
-      private final LoggingConfigurationFilterBehavior behavior;
+    private LoggingConfigurationFilterBehavior behavior;
 
     public LoggingConfigurationFilterBehavior behavior() {
         return this.behavior;
@@ -31,7 +31,7 @@ public final class LoggingConfigurationFilter extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="conditions", required=true)
-      private final List<LoggingConfigurationCondition> conditions;
+    private List<LoggingConfigurationCondition> conditions;
 
     public List<LoggingConfigurationCondition> conditions() {
         return this.conditions;
@@ -42,67 +42,63 @@ public final class LoggingConfigurationFilter extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="requirement", required=true)
-      private final LoggingConfigurationFilterRequirement requirement;
+    private LoggingConfigurationFilterRequirement requirement;
 
     public LoggingConfigurationFilterRequirement requirement() {
         return this.requirement;
     }
 
-    public LoggingConfigurationFilter(
-        LoggingConfigurationFilterBehavior behavior,
-        List<LoggingConfigurationCondition> conditions,
-        LoggingConfigurationFilterRequirement requirement) {
-        this.behavior = Objects.requireNonNull(behavior, "expected parameter 'behavior' to be non-null");
-        this.conditions = Objects.requireNonNull(conditions, "expected parameter 'conditions' to be non-null");
-        this.requirement = Objects.requireNonNull(requirement, "expected parameter 'requirement' to be non-null");
-    }
+    private LoggingConfigurationFilter() {}
 
-    private LoggingConfigurationFilter() {
-        this.behavior = null;
-        this.conditions = List.of();
-        this.requirement = null;
+    private LoggingConfigurationFilter(LoggingConfigurationFilter $) {
+        this.behavior = $.behavior;
+        this.conditions = $.conditions;
+        this.requirement = $.requirement;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LoggingConfigurationFilter defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private LoggingConfigurationFilterBehavior behavior;
-        private List<LoggingConfigurationCondition> conditions;
-        private LoggingConfigurationFilterRequirement requirement;
+        private LoggingConfigurationFilter $;
 
         public Builder() {
-    	      // Empty
+            $ = new LoggingConfigurationFilter();
         }
 
         public Builder(LoggingConfigurationFilter defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.behavior = defaults.behavior;
-    	      this.conditions = defaults.conditions;
-    	      this.requirement = defaults.requirement;
+            $ = new LoggingConfigurationFilter(Objects.requireNonNull(defaults));
         }
 
         public Builder behavior(LoggingConfigurationFilterBehavior behavior) {
-            this.behavior = Objects.requireNonNull(behavior);
+            $.behavior = behavior;
             return this;
         }
+
         public Builder conditions(List<LoggingConfigurationCondition> conditions) {
-            this.conditions = Objects.requireNonNull(conditions);
+            $.conditions = conditions;
             return this;
         }
+
         public Builder conditions(LoggingConfigurationCondition... conditions) {
             return conditions(List.of(conditions));
         }
+
         public Builder requirement(LoggingConfigurationFilterRequirement requirement) {
-            this.requirement = Objects.requireNonNull(requirement);
+            $.requirement = requirement;
             return this;
-        }        public LoggingConfigurationFilter build() {
-            return new LoggingConfigurationFilter(behavior, conditions, requirement);
+        }
+
+        public LoggingConfigurationFilter build() {
+            $.behavior = Objects.requireNonNull($.behavior, "expected parameter 'behavior' to be non-null");
+            $.conditions = Objects.requireNonNull($.conditions, "expected parameter 'conditions' to be non-null");
+            $.requirement = Objects.requireNonNull($.requirement, "expected parameter 'requirement' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,7 +5,6 @@ package com.pulumi.aws.ses;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,49 +18,49 @@ public final class DomainDkimArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="domain", required=true)
-      private final Output<String> domain;
+    private Output<String> domain;
 
     public Output<String> domain() {
         return this.domain;
     }
 
-    public DomainDkimArgs(Output<String> domain) {
-        this.domain = Objects.requireNonNull(domain, "expected parameter 'domain' to be non-null");
-    }
+    private DomainDkimArgs() {}
 
-    private DomainDkimArgs() {
-        this.domain = Codegen.empty();
+    private DomainDkimArgs(DomainDkimArgs $) {
+        this.domain = $.domain;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DomainDkimArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> domain;
+        private DomainDkimArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DomainDkimArgs();
         }
 
         public Builder(DomainDkimArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.domain = defaults.domain;
+            $ = new DomainDkimArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder domain(Output<String> domain) {
-            this.domain = Objects.requireNonNull(domain);
+            $.domain = domain;
             return this;
         }
+
         public Builder domain(String domain) {
-            this.domain = Output.of(Objects.requireNonNull(domain));
-            return this;
-        }        public DomainDkimArgs build() {
-            return new DomainDkimArgs(domain);
+            return domain(Output.of(domain));
+        }
+
+        public DomainDkimArgs build() {
+            $.domain = Objects.requireNonNull($.domain, "expected parameter 'domain' to be non-null");
+            return $;
         }
     }
+
 }

@@ -8,8 +8,8 @@ import com.pulumi.aws.budgets.inputs.BudgetActionDefinitionScpActionDefinitionAr
 import com.pulumi.aws.budgets.inputs.BudgetActionDefinitionSsmActionDefinitionArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class BudgetActionDefinitionArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="iamActionDefinition")
-      private final @Nullable Output<BudgetActionDefinitionIamActionDefinitionArgs> iamActionDefinition;
+    private @Nullable Output<BudgetActionDefinitionIamActionDefinitionArgs> iamActionDefinition;
 
-    public Output<BudgetActionDefinitionIamActionDefinitionArgs> iamActionDefinition() {
-        return this.iamActionDefinition == null ? Codegen.empty() : this.iamActionDefinition;
+    public Optional<Output<BudgetActionDefinitionIamActionDefinitionArgs>> iamActionDefinition() {
+        return Optional.ofNullable(this.iamActionDefinition);
     }
 
     /**
@@ -33,10 +33,10 @@ public final class BudgetActionDefinitionArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="scpActionDefinition")
-      private final @Nullable Output<BudgetActionDefinitionScpActionDefinitionArgs> scpActionDefinition;
+    private @Nullable Output<BudgetActionDefinitionScpActionDefinitionArgs> scpActionDefinition;
 
-    public Output<BudgetActionDefinitionScpActionDefinitionArgs> scpActionDefinition() {
-        return this.scpActionDefinition == null ? Codegen.empty() : this.scpActionDefinition;
+    public Optional<Output<BudgetActionDefinitionScpActionDefinitionArgs>> scpActionDefinition() {
+        return Optional.ofNullable(this.scpActionDefinition);
     }
 
     /**
@@ -44,76 +44,68 @@ public final class BudgetActionDefinitionArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="ssmActionDefinition")
-      private final @Nullable Output<BudgetActionDefinitionSsmActionDefinitionArgs> ssmActionDefinition;
+    private @Nullable Output<BudgetActionDefinitionSsmActionDefinitionArgs> ssmActionDefinition;
 
-    public Output<BudgetActionDefinitionSsmActionDefinitionArgs> ssmActionDefinition() {
-        return this.ssmActionDefinition == null ? Codegen.empty() : this.ssmActionDefinition;
+    public Optional<Output<BudgetActionDefinitionSsmActionDefinitionArgs>> ssmActionDefinition() {
+        return Optional.ofNullable(this.ssmActionDefinition);
     }
 
-    public BudgetActionDefinitionArgs(
-        @Nullable Output<BudgetActionDefinitionIamActionDefinitionArgs> iamActionDefinition,
-        @Nullable Output<BudgetActionDefinitionScpActionDefinitionArgs> scpActionDefinition,
-        @Nullable Output<BudgetActionDefinitionSsmActionDefinitionArgs> ssmActionDefinition) {
-        this.iamActionDefinition = iamActionDefinition;
-        this.scpActionDefinition = scpActionDefinition;
-        this.ssmActionDefinition = ssmActionDefinition;
-    }
+    private BudgetActionDefinitionArgs() {}
 
-    private BudgetActionDefinitionArgs() {
-        this.iamActionDefinition = Codegen.empty();
-        this.scpActionDefinition = Codegen.empty();
-        this.ssmActionDefinition = Codegen.empty();
+    private BudgetActionDefinitionArgs(BudgetActionDefinitionArgs $) {
+        this.iamActionDefinition = $.iamActionDefinition;
+        this.scpActionDefinition = $.scpActionDefinition;
+        this.ssmActionDefinition = $.ssmActionDefinition;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BudgetActionDefinitionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<BudgetActionDefinitionIamActionDefinitionArgs> iamActionDefinition;
-        private @Nullable Output<BudgetActionDefinitionScpActionDefinitionArgs> scpActionDefinition;
-        private @Nullable Output<BudgetActionDefinitionSsmActionDefinitionArgs> ssmActionDefinition;
+        private BudgetActionDefinitionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new BudgetActionDefinitionArgs();
         }
 
         public Builder(BudgetActionDefinitionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.iamActionDefinition = defaults.iamActionDefinition;
-    	      this.scpActionDefinition = defaults.scpActionDefinition;
-    	      this.ssmActionDefinition = defaults.ssmActionDefinition;
+            $ = new BudgetActionDefinitionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder iamActionDefinition(@Nullable Output<BudgetActionDefinitionIamActionDefinitionArgs> iamActionDefinition) {
-            this.iamActionDefinition = iamActionDefinition;
+            $.iamActionDefinition = iamActionDefinition;
             return this;
         }
-        public Builder iamActionDefinition(@Nullable BudgetActionDefinitionIamActionDefinitionArgs iamActionDefinition) {
-            this.iamActionDefinition = Codegen.ofNullable(iamActionDefinition);
-            return this;
+
+        public Builder iamActionDefinition(BudgetActionDefinitionIamActionDefinitionArgs iamActionDefinition) {
+            return iamActionDefinition(Output.of(iamActionDefinition));
         }
+
         public Builder scpActionDefinition(@Nullable Output<BudgetActionDefinitionScpActionDefinitionArgs> scpActionDefinition) {
-            this.scpActionDefinition = scpActionDefinition;
+            $.scpActionDefinition = scpActionDefinition;
             return this;
         }
-        public Builder scpActionDefinition(@Nullable BudgetActionDefinitionScpActionDefinitionArgs scpActionDefinition) {
-            this.scpActionDefinition = Codegen.ofNullable(scpActionDefinition);
-            return this;
+
+        public Builder scpActionDefinition(BudgetActionDefinitionScpActionDefinitionArgs scpActionDefinition) {
+            return scpActionDefinition(Output.of(scpActionDefinition));
         }
+
         public Builder ssmActionDefinition(@Nullable Output<BudgetActionDefinitionSsmActionDefinitionArgs> ssmActionDefinition) {
-            this.ssmActionDefinition = ssmActionDefinition;
+            $.ssmActionDefinition = ssmActionDefinition;
             return this;
         }
-        public Builder ssmActionDefinition(@Nullable BudgetActionDefinitionSsmActionDefinitionArgs ssmActionDefinition) {
-            this.ssmActionDefinition = Codegen.ofNullable(ssmActionDefinition);
-            return this;
-        }        public BudgetActionDefinitionArgs build() {
-            return new BudgetActionDefinitionArgs(iamActionDefinition, scpActionDefinition, ssmActionDefinition);
+
+        public Builder ssmActionDefinition(BudgetActionDefinitionSsmActionDefinitionArgs ssmActionDefinition) {
+            return ssmActionDefinition(Output.of(ssmActionDefinition));
+        }
+
+        public BudgetActionDefinitionArgs build() {
+            return $;
         }
     }
+
 }

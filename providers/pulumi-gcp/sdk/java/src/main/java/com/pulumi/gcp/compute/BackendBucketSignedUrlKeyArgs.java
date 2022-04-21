@@ -5,9 +5,9 @@ package com.pulumi.gcp.compute;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,7 +20,7 @@ public final class BackendBucketSignedUrlKeyArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="backendBucket", required=true)
-      private final Output<String> backendBucket;
+    private Output<String> backendBucket;
 
     public Output<String> backendBucket() {
         return this.backendBucket;
@@ -33,7 +33,7 @@ public final class BackendBucketSignedUrlKeyArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="keyValue", required=true)
-      private final Output<String> keyValue;
+    private Output<String> keyValue;
 
     public Output<String> keyValue() {
         return this.keyValue;
@@ -44,10 +44,10 @@ public final class BackendBucketSignedUrlKeyArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -56,89 +56,80 @@ public final class BackendBucketSignedUrlKeyArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
-    public BackendBucketSignedUrlKeyArgs(
-        Output<String> backendBucket,
-        Output<String> keyValue,
-        @Nullable Output<String> name,
-        @Nullable Output<String> project) {
-        this.backendBucket = Objects.requireNonNull(backendBucket, "expected parameter 'backendBucket' to be non-null");
-        this.keyValue = Objects.requireNonNull(keyValue, "expected parameter 'keyValue' to be non-null");
-        this.name = name;
-        this.project = project;
-    }
+    private BackendBucketSignedUrlKeyArgs() {}
 
-    private BackendBucketSignedUrlKeyArgs() {
-        this.backendBucket = Codegen.empty();
-        this.keyValue = Codegen.empty();
-        this.name = Codegen.empty();
-        this.project = Codegen.empty();
+    private BackendBucketSignedUrlKeyArgs(BackendBucketSignedUrlKeyArgs $) {
+        this.backendBucket = $.backendBucket;
+        this.keyValue = $.keyValue;
+        this.name = $.name;
+        this.project = $.project;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BackendBucketSignedUrlKeyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> backendBucket;
-        private Output<String> keyValue;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> project;
+        private BackendBucketSignedUrlKeyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new BackendBucketSignedUrlKeyArgs();
         }
 
         public Builder(BackendBucketSignedUrlKeyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.backendBucket = defaults.backendBucket;
-    	      this.keyValue = defaults.keyValue;
-    	      this.name = defaults.name;
-    	      this.project = defaults.project;
+            $ = new BackendBucketSignedUrlKeyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder backendBucket(Output<String> backendBucket) {
-            this.backendBucket = Objects.requireNonNull(backendBucket);
+            $.backendBucket = backendBucket;
             return this;
         }
+
         public Builder backendBucket(String backendBucket) {
-            this.backendBucket = Output.of(Objects.requireNonNull(backendBucket));
-            return this;
+            return backendBucket(Output.of(backendBucket));
         }
+
         public Builder keyValue(Output<String> keyValue) {
-            this.keyValue = Objects.requireNonNull(keyValue);
+            $.keyValue = keyValue;
             return this;
         }
+
         public Builder keyValue(String keyValue) {
-            this.keyValue = Output.of(Objects.requireNonNull(keyValue));
-            return this;
+            return keyValue(Output.of(keyValue));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
-        }        public BackendBucketSignedUrlKeyArgs build() {
-            return new BackendBucketSignedUrlKeyArgs(backendBucket, keyValue, name, project);
+
+        public Builder project(String project) {
+            return project(Output.of(project));
+        }
+
+        public BackendBucketSignedUrlKeyArgs build() {
+            $.backendBucket = Objects.requireNonNull($.backendBucket, "expected parameter 'backendBucket' to be non-null");
+            $.keyValue = Objects.requireNonNull($.keyValue, "expected parameter 'keyValue' to be non-null");
+            return $;
         }
     }
+
 }

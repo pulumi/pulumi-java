@@ -5,9 +5,9 @@ package com.pulumi.googlenative.containeranalysis_v1alpha1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,7 +24,7 @@ public final class GoogleDevtoolsContaineranalysisV1alpha1GitSourceContextArgs e
      * 
      */
     @Import(name="revisionId", required=true)
-      private final Output<String> revisionId;
+    private Output<String> revisionId;
 
     public Output<String> revisionId() {
         return this.revisionId;
@@ -35,63 +35,59 @@ public final class GoogleDevtoolsContaineranalysisV1alpha1GitSourceContextArgs e
      * 
      */
     @Import(name="url")
-      private final @Nullable Output<String> url;
+    private @Nullable Output<String> url;
 
-    public Output<String> url() {
-        return this.url == null ? Codegen.empty() : this.url;
+    public Optional<Output<String>> url() {
+        return Optional.ofNullable(this.url);
     }
 
-    public GoogleDevtoolsContaineranalysisV1alpha1GitSourceContextArgs(
-        Output<String> revisionId,
-        @Nullable Output<String> url) {
-        this.revisionId = Objects.requireNonNull(revisionId, "expected parameter 'revisionId' to be non-null");
-        this.url = url;
-    }
+    private GoogleDevtoolsContaineranalysisV1alpha1GitSourceContextArgs() {}
 
-    private GoogleDevtoolsContaineranalysisV1alpha1GitSourceContextArgs() {
-        this.revisionId = Codegen.empty();
-        this.url = Codegen.empty();
+    private GoogleDevtoolsContaineranalysisV1alpha1GitSourceContextArgs(GoogleDevtoolsContaineranalysisV1alpha1GitSourceContextArgs $) {
+        this.revisionId = $.revisionId;
+        this.url = $.url;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleDevtoolsContaineranalysisV1alpha1GitSourceContextArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> revisionId;
-        private @Nullable Output<String> url;
+        private GoogleDevtoolsContaineranalysisV1alpha1GitSourceContextArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleDevtoolsContaineranalysisV1alpha1GitSourceContextArgs();
         }
 
         public Builder(GoogleDevtoolsContaineranalysisV1alpha1GitSourceContextArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.revisionId = defaults.revisionId;
-    	      this.url = defaults.url;
+            $ = new GoogleDevtoolsContaineranalysisV1alpha1GitSourceContextArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder revisionId(Output<String> revisionId) {
-            this.revisionId = Objects.requireNonNull(revisionId);
+            $.revisionId = revisionId;
             return this;
         }
+
         public Builder revisionId(String revisionId) {
-            this.revisionId = Output.of(Objects.requireNonNull(revisionId));
-            return this;
+            return revisionId(Output.of(revisionId));
         }
+
         public Builder url(@Nullable Output<String> url) {
-            this.url = url;
+            $.url = url;
             return this;
         }
-        public Builder url(@Nullable String url) {
-            this.url = Codegen.ofNullable(url);
-            return this;
-        }        public GoogleDevtoolsContaineranalysisV1alpha1GitSourceContextArgs build() {
-            return new GoogleDevtoolsContaineranalysisV1alpha1GitSourceContextArgs(revisionId, url);
+
+        public Builder url(String url) {
+            return url(Output.of(url));
+        }
+
+        public GoogleDevtoolsContaineranalysisV1alpha1GitSourceContextArgs build() {
+            $.revisionId = Objects.requireNonNull($.revisionId, "expected parameter 'revisionId' to be non-null");
+            return $;
         }
     }
+
 }

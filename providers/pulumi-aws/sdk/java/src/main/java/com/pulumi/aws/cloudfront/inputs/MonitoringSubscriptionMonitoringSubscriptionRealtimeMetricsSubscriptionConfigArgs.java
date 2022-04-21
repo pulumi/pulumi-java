@@ -5,7 +5,6 @@ package com.pulumi.aws.cloudfront.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,49 +18,49 @@ public final class MonitoringSubscriptionMonitoringSubscriptionRealtimeMetricsSu
      * 
      */
     @Import(name="realtimeMetricsSubscriptionStatus", required=true)
-      private final Output<String> realtimeMetricsSubscriptionStatus;
+    private Output<String> realtimeMetricsSubscriptionStatus;
 
     public Output<String> realtimeMetricsSubscriptionStatus() {
         return this.realtimeMetricsSubscriptionStatus;
     }
 
-    public MonitoringSubscriptionMonitoringSubscriptionRealtimeMetricsSubscriptionConfigArgs(Output<String> realtimeMetricsSubscriptionStatus) {
-        this.realtimeMetricsSubscriptionStatus = Objects.requireNonNull(realtimeMetricsSubscriptionStatus, "expected parameter 'realtimeMetricsSubscriptionStatus' to be non-null");
-    }
+    private MonitoringSubscriptionMonitoringSubscriptionRealtimeMetricsSubscriptionConfigArgs() {}
 
-    private MonitoringSubscriptionMonitoringSubscriptionRealtimeMetricsSubscriptionConfigArgs() {
-        this.realtimeMetricsSubscriptionStatus = Codegen.empty();
+    private MonitoringSubscriptionMonitoringSubscriptionRealtimeMetricsSubscriptionConfigArgs(MonitoringSubscriptionMonitoringSubscriptionRealtimeMetricsSubscriptionConfigArgs $) {
+        this.realtimeMetricsSubscriptionStatus = $.realtimeMetricsSubscriptionStatus;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MonitoringSubscriptionMonitoringSubscriptionRealtimeMetricsSubscriptionConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> realtimeMetricsSubscriptionStatus;
+        private MonitoringSubscriptionMonitoringSubscriptionRealtimeMetricsSubscriptionConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new MonitoringSubscriptionMonitoringSubscriptionRealtimeMetricsSubscriptionConfigArgs();
         }
 
         public Builder(MonitoringSubscriptionMonitoringSubscriptionRealtimeMetricsSubscriptionConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.realtimeMetricsSubscriptionStatus = defaults.realtimeMetricsSubscriptionStatus;
+            $ = new MonitoringSubscriptionMonitoringSubscriptionRealtimeMetricsSubscriptionConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder realtimeMetricsSubscriptionStatus(Output<String> realtimeMetricsSubscriptionStatus) {
-            this.realtimeMetricsSubscriptionStatus = Objects.requireNonNull(realtimeMetricsSubscriptionStatus);
+            $.realtimeMetricsSubscriptionStatus = realtimeMetricsSubscriptionStatus;
             return this;
         }
+
         public Builder realtimeMetricsSubscriptionStatus(String realtimeMetricsSubscriptionStatus) {
-            this.realtimeMetricsSubscriptionStatus = Output.of(Objects.requireNonNull(realtimeMetricsSubscriptionStatus));
-            return this;
-        }        public MonitoringSubscriptionMonitoringSubscriptionRealtimeMetricsSubscriptionConfigArgs build() {
-            return new MonitoringSubscriptionMonitoringSubscriptionRealtimeMetricsSubscriptionConfigArgs(realtimeMetricsSubscriptionStatus);
+            return realtimeMetricsSubscriptionStatus(Output.of(realtimeMetricsSubscriptionStatus));
+        }
+
+        public MonitoringSubscriptionMonitoringSubscriptionRealtimeMetricsSubscriptionConfigArgs build() {
+            $.realtimeMetricsSubscriptionStatus = Objects.requireNonNull($.realtimeMetricsSubscriptionStatus, "expected parameter 'realtimeMetricsSubscriptionStatus' to be non-null");
+            return $;
         }
     }
+
 }

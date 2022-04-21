@@ -9,6 +9,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +26,10 @@ public final class AudioOverlayArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="audioGainLevel")
-      private final @Nullable Output<Double> audioGainLevel;
+    private @Nullable Output<Double> audioGainLevel;
 
-    public Output<Double> audioGainLevel() {
-        return this.audioGainLevel == null ? Codegen.empty() : this.audioGainLevel;
+    public Optional<Output<Double>> audioGainLevel() {
+        return Optional.ofNullable(this.audioGainLevel);
     }
 
     /**
@@ -36,10 +37,10 @@ public final class AudioOverlayArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="end")
-      private final @Nullable Output<String> end;
+    private @Nullable Output<String> end;
 
-    public Output<String> end() {
-        return this.end == null ? Codegen.empty() : this.end;
+    public Optional<Output<String>> end() {
+        return Optional.ofNullable(this.end);
     }
 
     /**
@@ -47,10 +48,10 @@ public final class AudioOverlayArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="fadeInDuration")
-      private final @Nullable Output<String> fadeInDuration;
+    private @Nullable Output<String> fadeInDuration;
 
-    public Output<String> fadeInDuration() {
-        return this.fadeInDuration == null ? Codegen.empty() : this.fadeInDuration;
+    public Optional<Output<String>> fadeInDuration() {
+        return Optional.ofNullable(this.fadeInDuration);
     }
 
     /**
@@ -58,10 +59,10 @@ public final class AudioOverlayArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="fadeOutDuration")
-      private final @Nullable Output<String> fadeOutDuration;
+    private @Nullable Output<String> fadeOutDuration;
 
-    public Output<String> fadeOutDuration() {
-        return this.fadeOutDuration == null ? Codegen.empty() : this.fadeOutDuration;
+    public Optional<Output<String>> fadeOutDuration() {
+        return Optional.ofNullable(this.fadeOutDuration);
     }
 
     /**
@@ -69,7 +70,7 @@ public final class AudioOverlayArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="inputLabel", required=true)
-      private final Output<String> inputLabel;
+    private Output<String> inputLabel;
 
     public Output<String> inputLabel() {
         return this.inputLabel;
@@ -81,7 +82,7 @@ public final class AudioOverlayArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="odataType", required=true)
-      private final Output<String> odataType;
+    private Output<String> odataType;
 
     public Output<String> odataType() {
         return this.odataType;
@@ -92,128 +93,110 @@ public final class AudioOverlayArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="start")
-      private final @Nullable Output<String> start;
+    private @Nullable Output<String> start;
 
-    public Output<String> start() {
-        return this.start == null ? Codegen.empty() : this.start;
+    public Optional<Output<String>> start() {
+        return Optional.ofNullable(this.start);
     }
 
-    public AudioOverlayArgs(
-        @Nullable Output<Double> audioGainLevel,
-        @Nullable Output<String> end,
-        @Nullable Output<String> fadeInDuration,
-        @Nullable Output<String> fadeOutDuration,
-        Output<String> inputLabel,
-        Output<String> odataType,
-        @Nullable Output<String> start) {
-        this.audioGainLevel = audioGainLevel;
-        this.end = end;
-        this.fadeInDuration = fadeInDuration;
-        this.fadeOutDuration = fadeOutDuration;
-        this.inputLabel = Objects.requireNonNull(inputLabel, "expected parameter 'inputLabel' to be non-null");
-        this.odataType = Codegen.stringProp("odataType").output().arg(odataType).require();
-        this.start = start;
-    }
+    private AudioOverlayArgs() {}
 
-    private AudioOverlayArgs() {
-        this.audioGainLevel = Codegen.empty();
-        this.end = Codegen.empty();
-        this.fadeInDuration = Codegen.empty();
-        this.fadeOutDuration = Codegen.empty();
-        this.inputLabel = Codegen.empty();
-        this.odataType = Codegen.empty();
-        this.start = Codegen.empty();
+    private AudioOverlayArgs(AudioOverlayArgs $) {
+        this.audioGainLevel = $.audioGainLevel;
+        this.end = $.end;
+        this.fadeInDuration = $.fadeInDuration;
+        this.fadeOutDuration = $.fadeOutDuration;
+        this.inputLabel = $.inputLabel;
+        this.odataType = $.odataType;
+        this.start = $.start;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AudioOverlayArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Double> audioGainLevel;
-        private @Nullable Output<String> end;
-        private @Nullable Output<String> fadeInDuration;
-        private @Nullable Output<String> fadeOutDuration;
-        private Output<String> inputLabel;
-        private Output<String> odataType;
-        private @Nullable Output<String> start;
+        private AudioOverlayArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AudioOverlayArgs();
         }
 
         public Builder(AudioOverlayArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.audioGainLevel = defaults.audioGainLevel;
-    	      this.end = defaults.end;
-    	      this.fadeInDuration = defaults.fadeInDuration;
-    	      this.fadeOutDuration = defaults.fadeOutDuration;
-    	      this.inputLabel = defaults.inputLabel;
-    	      this.odataType = defaults.odataType;
-    	      this.start = defaults.start;
+            $ = new AudioOverlayArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder audioGainLevel(@Nullable Output<Double> audioGainLevel) {
-            this.audioGainLevel = audioGainLevel;
+            $.audioGainLevel = audioGainLevel;
             return this;
         }
-        public Builder audioGainLevel(@Nullable Double audioGainLevel) {
-            this.audioGainLevel = Codegen.ofNullable(audioGainLevel);
-            return this;
+
+        public Builder audioGainLevel(Double audioGainLevel) {
+            return audioGainLevel(Output.of(audioGainLevel));
         }
+
         public Builder end(@Nullable Output<String> end) {
-            this.end = end;
+            $.end = end;
             return this;
         }
-        public Builder end(@Nullable String end) {
-            this.end = Codegen.ofNullable(end);
-            return this;
+
+        public Builder end(String end) {
+            return end(Output.of(end));
         }
+
         public Builder fadeInDuration(@Nullable Output<String> fadeInDuration) {
-            this.fadeInDuration = fadeInDuration;
+            $.fadeInDuration = fadeInDuration;
             return this;
         }
-        public Builder fadeInDuration(@Nullable String fadeInDuration) {
-            this.fadeInDuration = Codegen.ofNullable(fadeInDuration);
-            return this;
+
+        public Builder fadeInDuration(String fadeInDuration) {
+            return fadeInDuration(Output.of(fadeInDuration));
         }
+
         public Builder fadeOutDuration(@Nullable Output<String> fadeOutDuration) {
-            this.fadeOutDuration = fadeOutDuration;
+            $.fadeOutDuration = fadeOutDuration;
             return this;
         }
-        public Builder fadeOutDuration(@Nullable String fadeOutDuration) {
-            this.fadeOutDuration = Codegen.ofNullable(fadeOutDuration);
-            return this;
+
+        public Builder fadeOutDuration(String fadeOutDuration) {
+            return fadeOutDuration(Output.of(fadeOutDuration));
         }
+
         public Builder inputLabel(Output<String> inputLabel) {
-            this.inputLabel = Objects.requireNonNull(inputLabel);
+            $.inputLabel = inputLabel;
             return this;
         }
+
         public Builder inputLabel(String inputLabel) {
-            this.inputLabel = Output.of(Objects.requireNonNull(inputLabel));
-            return this;
+            return inputLabel(Output.of(inputLabel));
         }
+
         public Builder odataType(Output<String> odataType) {
-            this.odataType = Objects.requireNonNull(odataType);
+            $.odataType = odataType;
             return this;
         }
+
         public Builder odataType(String odataType) {
-            this.odataType = Output.of(Objects.requireNonNull(odataType));
-            return this;
+            return odataType(Output.of(odataType));
         }
+
         public Builder start(@Nullable Output<String> start) {
-            this.start = start;
+            $.start = start;
             return this;
         }
-        public Builder start(@Nullable String start) {
-            this.start = Codegen.ofNullable(start);
-            return this;
-        }        public AudioOverlayArgs build() {
-            return new AudioOverlayArgs(audioGainLevel, end, fadeInDuration, fadeOutDuration, inputLabel, odataType, start);
+
+        public Builder start(String start) {
+            return start(Output.of(start));
+        }
+
+        public AudioOverlayArgs build() {
+            $.inputLabel = Objects.requireNonNull($.inputLabel, "expected parameter 'inputLabel' to be non-null");
+            $.odataType = Codegen.stringProp("odataType").output().arg($.odataType).require();
+            return $;
         }
     }
+
 }

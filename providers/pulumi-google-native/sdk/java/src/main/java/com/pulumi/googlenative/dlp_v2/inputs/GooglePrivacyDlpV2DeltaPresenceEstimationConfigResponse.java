@@ -24,7 +24,7 @@ public final class GooglePrivacyDlpV2DeltaPresenceEstimationConfigResponse exten
      * 
      */
     @Import(name="auxiliaryTables", required=true)
-      private final List<GooglePrivacyDlpV2StatisticalTableResponse> auxiliaryTables;
+    private List<GooglePrivacyDlpV2StatisticalTableResponse> auxiliaryTables;
 
     public List<GooglePrivacyDlpV2StatisticalTableResponse> auxiliaryTables() {
         return this.auxiliaryTables;
@@ -35,7 +35,7 @@ public final class GooglePrivacyDlpV2DeltaPresenceEstimationConfigResponse exten
      * 
      */
     @Import(name="quasiIds", required=true)
-      private final List<GooglePrivacyDlpV2QuasiIdResponse> quasiIds;
+    private List<GooglePrivacyDlpV2QuasiIdResponse> quasiIds;
 
     public List<GooglePrivacyDlpV2QuasiIdResponse> quasiIds() {
         return this.quasiIds;
@@ -46,70 +46,67 @@ public final class GooglePrivacyDlpV2DeltaPresenceEstimationConfigResponse exten
      * 
      */
     @Import(name="regionCode", required=true)
-      private final String regionCode;
+    private String regionCode;
 
     public String regionCode() {
         return this.regionCode;
     }
 
-    public GooglePrivacyDlpV2DeltaPresenceEstimationConfigResponse(
-        List<GooglePrivacyDlpV2StatisticalTableResponse> auxiliaryTables,
-        List<GooglePrivacyDlpV2QuasiIdResponse> quasiIds,
-        String regionCode) {
-        this.auxiliaryTables = Objects.requireNonNull(auxiliaryTables, "expected parameter 'auxiliaryTables' to be non-null");
-        this.quasiIds = Objects.requireNonNull(quasiIds, "expected parameter 'quasiIds' to be non-null");
-        this.regionCode = Objects.requireNonNull(regionCode, "expected parameter 'regionCode' to be non-null");
-    }
+    private GooglePrivacyDlpV2DeltaPresenceEstimationConfigResponse() {}
 
-    private GooglePrivacyDlpV2DeltaPresenceEstimationConfigResponse() {
-        this.auxiliaryTables = List.of();
-        this.quasiIds = List.of();
-        this.regionCode = null;
+    private GooglePrivacyDlpV2DeltaPresenceEstimationConfigResponse(GooglePrivacyDlpV2DeltaPresenceEstimationConfigResponse $) {
+        this.auxiliaryTables = $.auxiliaryTables;
+        this.quasiIds = $.quasiIds;
+        this.regionCode = $.regionCode;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GooglePrivacyDlpV2DeltaPresenceEstimationConfigResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<GooglePrivacyDlpV2StatisticalTableResponse> auxiliaryTables;
-        private List<GooglePrivacyDlpV2QuasiIdResponse> quasiIds;
-        private String regionCode;
+        private GooglePrivacyDlpV2DeltaPresenceEstimationConfigResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GooglePrivacyDlpV2DeltaPresenceEstimationConfigResponse();
         }
 
         public Builder(GooglePrivacyDlpV2DeltaPresenceEstimationConfigResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.auxiliaryTables = defaults.auxiliaryTables;
-    	      this.quasiIds = defaults.quasiIds;
-    	      this.regionCode = defaults.regionCode;
+            $ = new GooglePrivacyDlpV2DeltaPresenceEstimationConfigResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder auxiliaryTables(List<GooglePrivacyDlpV2StatisticalTableResponse> auxiliaryTables) {
-            this.auxiliaryTables = Objects.requireNonNull(auxiliaryTables);
+            $.auxiliaryTables = auxiliaryTables;
             return this;
         }
+
         public Builder auxiliaryTables(GooglePrivacyDlpV2StatisticalTableResponse... auxiliaryTables) {
             return auxiliaryTables(List.of(auxiliaryTables));
         }
+
         public Builder quasiIds(List<GooglePrivacyDlpV2QuasiIdResponse> quasiIds) {
-            this.quasiIds = Objects.requireNonNull(quasiIds);
+            $.quasiIds = quasiIds;
             return this;
         }
+
         public Builder quasiIds(GooglePrivacyDlpV2QuasiIdResponse... quasiIds) {
             return quasiIds(List.of(quasiIds));
         }
+
         public Builder regionCode(String regionCode) {
-            this.regionCode = Objects.requireNonNull(regionCode);
+            $.regionCode = regionCode;
             return this;
-        }        public GooglePrivacyDlpV2DeltaPresenceEstimationConfigResponse build() {
-            return new GooglePrivacyDlpV2DeltaPresenceEstimationConfigResponse(auxiliaryTables, quasiIds, regionCode);
+        }
+
+        public GooglePrivacyDlpV2DeltaPresenceEstimationConfigResponse build() {
+            $.auxiliaryTables = Objects.requireNonNull($.auxiliaryTables, "expected parameter 'auxiliaryTables' to be non-null");
+            $.quasiIds = Objects.requireNonNull($.quasiIds, "expected parameter 'quasiIds' to be non-null");
+            $.regionCode = Objects.requireNonNull($.regionCode, "expected parameter 'regionCode' to be non-null");
+            return $;
         }
     }
+
 }

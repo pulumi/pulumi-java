@@ -8,13 +8,13 @@ import com.pulumi.azurenative.network.inputs.VirtualHubRouteTableArgs;
 import com.pulumi.azurenative.network.inputs.VirtualHubRouteTableV2Args;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +27,10 @@ public final class VirtualHubArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="addressPrefix")
-      private final @Nullable Output<String> addressPrefix;
+    private @Nullable Output<String> addressPrefix;
 
-    public Output<String> addressPrefix() {
-        return this.addressPrefix == null ? Codegen.empty() : this.addressPrefix;
+    public Optional<Output<String>> addressPrefix() {
+        return Optional.ofNullable(this.addressPrefix);
     }
 
     /**
@@ -38,10 +38,10 @@ public final class VirtualHubArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="allowBranchToBranchTraffic")
-      private final @Nullable Output<Boolean> allowBranchToBranchTraffic;
+    private @Nullable Output<Boolean> allowBranchToBranchTraffic;
 
-    public Output<Boolean> allowBranchToBranchTraffic() {
-        return this.allowBranchToBranchTraffic == null ? Codegen.empty() : this.allowBranchToBranchTraffic;
+    public Optional<Output<Boolean>> allowBranchToBranchTraffic() {
+        return Optional.ofNullable(this.allowBranchToBranchTraffic);
     }
 
     /**
@@ -49,10 +49,10 @@ public final class VirtualHubArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="azureFirewall")
-      private final @Nullable Output<SubResourceArgs> azureFirewall;
+    private @Nullable Output<SubResourceArgs> azureFirewall;
 
-    public Output<SubResourceArgs> azureFirewall() {
-        return this.azureFirewall == null ? Codegen.empty() : this.azureFirewall;
+    public Optional<Output<SubResourceArgs>> azureFirewall() {
+        return Optional.ofNullable(this.azureFirewall);
     }
 
     /**
@@ -60,10 +60,10 @@ public final class VirtualHubArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="expressRouteGateway")
-      private final @Nullable Output<SubResourceArgs> expressRouteGateway;
+    private @Nullable Output<SubResourceArgs> expressRouteGateway;
 
-    public Output<SubResourceArgs> expressRouteGateway() {
-        return this.expressRouteGateway == null ? Codegen.empty() : this.expressRouteGateway;
+    public Optional<Output<SubResourceArgs>> expressRouteGateway() {
+        return Optional.ofNullable(this.expressRouteGateway);
     }
 
     /**
@@ -71,10 +71,10 @@ public final class VirtualHubArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="id")
-      private final @Nullable Output<String> id;
+    private @Nullable Output<String> id;
 
-    public Output<String> id() {
-        return this.id == null ? Codegen.empty() : this.id;
+    public Optional<Output<String>> id() {
+        return Optional.ofNullable(this.id);
     }
 
     /**
@@ -82,10 +82,10 @@ public final class VirtualHubArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -93,10 +93,10 @@ public final class VirtualHubArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="p2SVpnGateway")
-      private final @Nullable Output<SubResourceArgs> p2SVpnGateway;
+    private @Nullable Output<SubResourceArgs> p2SVpnGateway;
 
-    public Output<SubResourceArgs> p2SVpnGateway() {
-        return this.p2SVpnGateway == null ? Codegen.empty() : this.p2SVpnGateway;
+    public Optional<Output<SubResourceArgs>> p2SVpnGateway() {
+        return Optional.ofNullable(this.p2SVpnGateway);
     }
 
     /**
@@ -104,7 +104,7 @@ public final class VirtualHubArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -115,10 +115,10 @@ public final class VirtualHubArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="routeTable")
-      private final @Nullable Output<VirtualHubRouteTableArgs> routeTable;
+    private @Nullable Output<VirtualHubRouteTableArgs> routeTable;
 
-    public Output<VirtualHubRouteTableArgs> routeTable() {
-        return this.routeTable == null ? Codegen.empty() : this.routeTable;
+    public Optional<Output<VirtualHubRouteTableArgs>> routeTable() {
+        return Optional.ofNullable(this.routeTable);
     }
 
     /**
@@ -126,10 +126,10 @@ public final class VirtualHubArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="securityPartnerProvider")
-      private final @Nullable Output<SubResourceArgs> securityPartnerProvider;
+    private @Nullable Output<SubResourceArgs> securityPartnerProvider;
 
-    public Output<SubResourceArgs> securityPartnerProvider() {
-        return this.securityPartnerProvider == null ? Codegen.empty() : this.securityPartnerProvider;
+    public Optional<Output<SubResourceArgs>> securityPartnerProvider() {
+        return Optional.ofNullable(this.securityPartnerProvider);
     }
 
     /**
@@ -137,10 +137,10 @@ public final class VirtualHubArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="securityProviderName")
-      private final @Nullable Output<String> securityProviderName;
+    private @Nullable Output<String> securityProviderName;
 
-    public Output<String> securityProviderName() {
-        return this.securityProviderName == null ? Codegen.empty() : this.securityProviderName;
+    public Optional<Output<String>> securityProviderName() {
+        return Optional.ofNullable(this.securityProviderName);
     }
 
     /**
@@ -148,10 +148,10 @@ public final class VirtualHubArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="sku")
-      private final @Nullable Output<String> sku;
+    private @Nullable Output<String> sku;
 
-    public Output<String> sku() {
-        return this.sku == null ? Codegen.empty() : this.sku;
+    public Optional<Output<String>> sku() {
+        return Optional.ofNullable(this.sku);
     }
 
     /**
@@ -159,10 +159,10 @@ public final class VirtualHubArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -170,10 +170,10 @@ public final class VirtualHubArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="virtualHubName")
-      private final @Nullable Output<String> virtualHubName;
+    private @Nullable Output<String> virtualHubName;
 
-    public Output<String> virtualHubName() {
-        return this.virtualHubName == null ? Codegen.empty() : this.virtualHubName;
+    public Optional<Output<String>> virtualHubName() {
+        return Optional.ofNullable(this.virtualHubName);
     }
 
     /**
@@ -181,10 +181,10 @@ public final class VirtualHubArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="virtualHubRouteTableV2s")
-      private final @Nullable Output<List<VirtualHubRouteTableV2Args>> virtualHubRouteTableV2s;
+    private @Nullable Output<List<VirtualHubRouteTableV2Args>> virtualHubRouteTableV2s;
 
-    public Output<List<VirtualHubRouteTableV2Args>> virtualHubRouteTableV2s() {
-        return this.virtualHubRouteTableV2s == null ? Codegen.empty() : this.virtualHubRouteTableV2s;
+    public Optional<Output<List<VirtualHubRouteTableV2Args>>> virtualHubRouteTableV2s() {
+        return Optional.ofNullable(this.virtualHubRouteTableV2s);
     }
 
     /**
@@ -192,10 +192,10 @@ public final class VirtualHubArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="virtualRouterAsn")
-      private final @Nullable Output<Double> virtualRouterAsn;
+    private @Nullable Output<Double> virtualRouterAsn;
 
-    public Output<Double> virtualRouterAsn() {
-        return this.virtualRouterAsn == null ? Codegen.empty() : this.virtualRouterAsn;
+    public Optional<Output<Double>> virtualRouterAsn() {
+        return Optional.ofNullable(this.virtualRouterAsn);
     }
 
     /**
@@ -203,10 +203,10 @@ public final class VirtualHubArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="virtualRouterIps")
-      private final @Nullable Output<List<String>> virtualRouterIps;
+    private @Nullable Output<List<String>> virtualRouterIps;
 
-    public Output<List<String>> virtualRouterIps() {
-        return this.virtualRouterIps == null ? Codegen.empty() : this.virtualRouterIps;
+    public Optional<Output<List<String>>> virtualRouterIps() {
+        return Optional.ofNullable(this.virtualRouterIps);
     }
 
     /**
@@ -214,10 +214,10 @@ public final class VirtualHubArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="virtualWan")
-      private final @Nullable Output<SubResourceArgs> virtualWan;
+    private @Nullable Output<SubResourceArgs> virtualWan;
 
-    public Output<SubResourceArgs> virtualWan() {
-        return this.virtualWan == null ? Codegen.empty() : this.virtualWan;
+    public Optional<Output<SubResourceArgs>> virtualWan() {
+        return Optional.ofNullable(this.virtualWan);
     }
 
     /**
@@ -225,290 +225,237 @@ public final class VirtualHubArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="vpnGateway")
-      private final @Nullable Output<SubResourceArgs> vpnGateway;
+    private @Nullable Output<SubResourceArgs> vpnGateway;
 
-    public Output<SubResourceArgs> vpnGateway() {
-        return this.vpnGateway == null ? Codegen.empty() : this.vpnGateway;
+    public Optional<Output<SubResourceArgs>> vpnGateway() {
+        return Optional.ofNullable(this.vpnGateway);
     }
 
-    public VirtualHubArgs(
-        @Nullable Output<String> addressPrefix,
-        @Nullable Output<Boolean> allowBranchToBranchTraffic,
-        @Nullable Output<SubResourceArgs> azureFirewall,
-        @Nullable Output<SubResourceArgs> expressRouteGateway,
-        @Nullable Output<String> id,
-        @Nullable Output<String> location,
-        @Nullable Output<SubResourceArgs> p2SVpnGateway,
-        Output<String> resourceGroupName,
-        @Nullable Output<VirtualHubRouteTableArgs> routeTable,
-        @Nullable Output<SubResourceArgs> securityPartnerProvider,
-        @Nullable Output<String> securityProviderName,
-        @Nullable Output<String> sku,
-        @Nullable Output<Map<String,String>> tags,
-        @Nullable Output<String> virtualHubName,
-        @Nullable Output<List<VirtualHubRouteTableV2Args>> virtualHubRouteTableV2s,
-        @Nullable Output<Double> virtualRouterAsn,
-        @Nullable Output<List<String>> virtualRouterIps,
-        @Nullable Output<SubResourceArgs> virtualWan,
-        @Nullable Output<SubResourceArgs> vpnGateway) {
-        this.addressPrefix = addressPrefix;
-        this.allowBranchToBranchTraffic = allowBranchToBranchTraffic;
-        this.azureFirewall = azureFirewall;
-        this.expressRouteGateway = expressRouteGateway;
-        this.id = id;
-        this.location = location;
-        this.p2SVpnGateway = p2SVpnGateway;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.routeTable = routeTable;
-        this.securityPartnerProvider = securityPartnerProvider;
-        this.securityProviderName = securityProviderName;
-        this.sku = sku;
-        this.tags = tags;
-        this.virtualHubName = virtualHubName;
-        this.virtualHubRouteTableV2s = virtualHubRouteTableV2s;
-        this.virtualRouterAsn = virtualRouterAsn;
-        this.virtualRouterIps = virtualRouterIps;
-        this.virtualWan = virtualWan;
-        this.vpnGateway = vpnGateway;
-    }
+    private VirtualHubArgs() {}
 
-    private VirtualHubArgs() {
-        this.addressPrefix = Codegen.empty();
-        this.allowBranchToBranchTraffic = Codegen.empty();
-        this.azureFirewall = Codegen.empty();
-        this.expressRouteGateway = Codegen.empty();
-        this.id = Codegen.empty();
-        this.location = Codegen.empty();
-        this.p2SVpnGateway = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.routeTable = Codegen.empty();
-        this.securityPartnerProvider = Codegen.empty();
-        this.securityProviderName = Codegen.empty();
-        this.sku = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.virtualHubName = Codegen.empty();
-        this.virtualHubRouteTableV2s = Codegen.empty();
-        this.virtualRouterAsn = Codegen.empty();
-        this.virtualRouterIps = Codegen.empty();
-        this.virtualWan = Codegen.empty();
-        this.vpnGateway = Codegen.empty();
+    private VirtualHubArgs(VirtualHubArgs $) {
+        this.addressPrefix = $.addressPrefix;
+        this.allowBranchToBranchTraffic = $.allowBranchToBranchTraffic;
+        this.azureFirewall = $.azureFirewall;
+        this.expressRouteGateway = $.expressRouteGateway;
+        this.id = $.id;
+        this.location = $.location;
+        this.p2SVpnGateway = $.p2SVpnGateway;
+        this.resourceGroupName = $.resourceGroupName;
+        this.routeTable = $.routeTable;
+        this.securityPartnerProvider = $.securityPartnerProvider;
+        this.securityProviderName = $.securityProviderName;
+        this.sku = $.sku;
+        this.tags = $.tags;
+        this.virtualHubName = $.virtualHubName;
+        this.virtualHubRouteTableV2s = $.virtualHubRouteTableV2s;
+        this.virtualRouterAsn = $.virtualRouterAsn;
+        this.virtualRouterIps = $.virtualRouterIps;
+        this.virtualWan = $.virtualWan;
+        this.vpnGateway = $.vpnGateway;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VirtualHubArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> addressPrefix;
-        private @Nullable Output<Boolean> allowBranchToBranchTraffic;
-        private @Nullable Output<SubResourceArgs> azureFirewall;
-        private @Nullable Output<SubResourceArgs> expressRouteGateway;
-        private @Nullable Output<String> id;
-        private @Nullable Output<String> location;
-        private @Nullable Output<SubResourceArgs> p2SVpnGateway;
-        private Output<String> resourceGroupName;
-        private @Nullable Output<VirtualHubRouteTableArgs> routeTable;
-        private @Nullable Output<SubResourceArgs> securityPartnerProvider;
-        private @Nullable Output<String> securityProviderName;
-        private @Nullable Output<String> sku;
-        private @Nullable Output<Map<String,String>> tags;
-        private @Nullable Output<String> virtualHubName;
-        private @Nullable Output<List<VirtualHubRouteTableV2Args>> virtualHubRouteTableV2s;
-        private @Nullable Output<Double> virtualRouterAsn;
-        private @Nullable Output<List<String>> virtualRouterIps;
-        private @Nullable Output<SubResourceArgs> virtualWan;
-        private @Nullable Output<SubResourceArgs> vpnGateway;
+        private VirtualHubArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new VirtualHubArgs();
         }
 
         public Builder(VirtualHubArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.addressPrefix = defaults.addressPrefix;
-    	      this.allowBranchToBranchTraffic = defaults.allowBranchToBranchTraffic;
-    	      this.azureFirewall = defaults.azureFirewall;
-    	      this.expressRouteGateway = defaults.expressRouteGateway;
-    	      this.id = defaults.id;
-    	      this.location = defaults.location;
-    	      this.p2SVpnGateway = defaults.p2SVpnGateway;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.routeTable = defaults.routeTable;
-    	      this.securityPartnerProvider = defaults.securityPartnerProvider;
-    	      this.securityProviderName = defaults.securityProviderName;
-    	      this.sku = defaults.sku;
-    	      this.tags = defaults.tags;
-    	      this.virtualHubName = defaults.virtualHubName;
-    	      this.virtualHubRouteTableV2s = defaults.virtualHubRouteTableV2s;
-    	      this.virtualRouterAsn = defaults.virtualRouterAsn;
-    	      this.virtualRouterIps = defaults.virtualRouterIps;
-    	      this.virtualWan = defaults.virtualWan;
-    	      this.vpnGateway = defaults.vpnGateway;
+            $ = new VirtualHubArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder addressPrefix(@Nullable Output<String> addressPrefix) {
-            this.addressPrefix = addressPrefix;
+            $.addressPrefix = addressPrefix;
             return this;
         }
-        public Builder addressPrefix(@Nullable String addressPrefix) {
-            this.addressPrefix = Codegen.ofNullable(addressPrefix);
-            return this;
+
+        public Builder addressPrefix(String addressPrefix) {
+            return addressPrefix(Output.of(addressPrefix));
         }
+
         public Builder allowBranchToBranchTraffic(@Nullable Output<Boolean> allowBranchToBranchTraffic) {
-            this.allowBranchToBranchTraffic = allowBranchToBranchTraffic;
+            $.allowBranchToBranchTraffic = allowBranchToBranchTraffic;
             return this;
         }
-        public Builder allowBranchToBranchTraffic(@Nullable Boolean allowBranchToBranchTraffic) {
-            this.allowBranchToBranchTraffic = Codegen.ofNullable(allowBranchToBranchTraffic);
-            return this;
+
+        public Builder allowBranchToBranchTraffic(Boolean allowBranchToBranchTraffic) {
+            return allowBranchToBranchTraffic(Output.of(allowBranchToBranchTraffic));
         }
+
         public Builder azureFirewall(@Nullable Output<SubResourceArgs> azureFirewall) {
-            this.azureFirewall = azureFirewall;
+            $.azureFirewall = azureFirewall;
             return this;
         }
-        public Builder azureFirewall(@Nullable SubResourceArgs azureFirewall) {
-            this.azureFirewall = Codegen.ofNullable(azureFirewall);
-            return this;
+
+        public Builder azureFirewall(SubResourceArgs azureFirewall) {
+            return azureFirewall(Output.of(azureFirewall));
         }
+
         public Builder expressRouteGateway(@Nullable Output<SubResourceArgs> expressRouteGateway) {
-            this.expressRouteGateway = expressRouteGateway;
+            $.expressRouteGateway = expressRouteGateway;
             return this;
         }
-        public Builder expressRouteGateway(@Nullable SubResourceArgs expressRouteGateway) {
-            this.expressRouteGateway = Codegen.ofNullable(expressRouteGateway);
-            return this;
+
+        public Builder expressRouteGateway(SubResourceArgs expressRouteGateway) {
+            return expressRouteGateway(Output.of(expressRouteGateway));
         }
+
         public Builder id(@Nullable Output<String> id) {
-            this.id = id;
+            $.id = id;
             return this;
         }
-        public Builder id(@Nullable String id) {
-            this.id = Codegen.ofNullable(id);
-            return this;
+
+        public Builder id(String id) {
+            return id(Output.of(id));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder p2SVpnGateway(@Nullable Output<SubResourceArgs> p2SVpnGateway) {
-            this.p2SVpnGateway = p2SVpnGateway;
+            $.p2SVpnGateway = p2SVpnGateway;
             return this;
         }
-        public Builder p2SVpnGateway(@Nullable SubResourceArgs p2SVpnGateway) {
-            this.p2SVpnGateway = Codegen.ofNullable(p2SVpnGateway);
-            return this;
+
+        public Builder p2SVpnGateway(SubResourceArgs p2SVpnGateway) {
+            return p2SVpnGateway(Output.of(p2SVpnGateway));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder routeTable(@Nullable Output<VirtualHubRouteTableArgs> routeTable) {
-            this.routeTable = routeTable;
+            $.routeTable = routeTable;
             return this;
         }
-        public Builder routeTable(@Nullable VirtualHubRouteTableArgs routeTable) {
-            this.routeTable = Codegen.ofNullable(routeTable);
-            return this;
+
+        public Builder routeTable(VirtualHubRouteTableArgs routeTable) {
+            return routeTable(Output.of(routeTable));
         }
+
         public Builder securityPartnerProvider(@Nullable Output<SubResourceArgs> securityPartnerProvider) {
-            this.securityPartnerProvider = securityPartnerProvider;
+            $.securityPartnerProvider = securityPartnerProvider;
             return this;
         }
-        public Builder securityPartnerProvider(@Nullable SubResourceArgs securityPartnerProvider) {
-            this.securityPartnerProvider = Codegen.ofNullable(securityPartnerProvider);
-            return this;
+
+        public Builder securityPartnerProvider(SubResourceArgs securityPartnerProvider) {
+            return securityPartnerProvider(Output.of(securityPartnerProvider));
         }
+
         public Builder securityProviderName(@Nullable Output<String> securityProviderName) {
-            this.securityProviderName = securityProviderName;
+            $.securityProviderName = securityProviderName;
             return this;
         }
-        public Builder securityProviderName(@Nullable String securityProviderName) {
-            this.securityProviderName = Codegen.ofNullable(securityProviderName);
-            return this;
+
+        public Builder securityProviderName(String securityProviderName) {
+            return securityProviderName(Output.of(securityProviderName));
         }
+
         public Builder sku(@Nullable Output<String> sku) {
-            this.sku = sku;
+            $.sku = sku;
             return this;
         }
-        public Builder sku(@Nullable String sku) {
-            this.sku = Codegen.ofNullable(sku);
-            return this;
+
+        public Builder sku(String sku) {
+            return sku(Output.of(sku));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder virtualHubName(@Nullable Output<String> virtualHubName) {
-            this.virtualHubName = virtualHubName;
+            $.virtualHubName = virtualHubName;
             return this;
         }
-        public Builder virtualHubName(@Nullable String virtualHubName) {
-            this.virtualHubName = Codegen.ofNullable(virtualHubName);
-            return this;
+
+        public Builder virtualHubName(String virtualHubName) {
+            return virtualHubName(Output.of(virtualHubName));
         }
+
         public Builder virtualHubRouteTableV2s(@Nullable Output<List<VirtualHubRouteTableV2Args>> virtualHubRouteTableV2s) {
-            this.virtualHubRouteTableV2s = virtualHubRouteTableV2s;
+            $.virtualHubRouteTableV2s = virtualHubRouteTableV2s;
             return this;
         }
-        public Builder virtualHubRouteTableV2s(@Nullable List<VirtualHubRouteTableV2Args> virtualHubRouteTableV2s) {
-            this.virtualHubRouteTableV2s = Codegen.ofNullable(virtualHubRouteTableV2s);
-            return this;
+
+        public Builder virtualHubRouteTableV2s(List<VirtualHubRouteTableV2Args> virtualHubRouteTableV2s) {
+            return virtualHubRouteTableV2s(Output.of(virtualHubRouteTableV2s));
         }
+
         public Builder virtualHubRouteTableV2s(VirtualHubRouteTableV2Args... virtualHubRouteTableV2s) {
             return virtualHubRouteTableV2s(List.of(virtualHubRouteTableV2s));
         }
+
         public Builder virtualRouterAsn(@Nullable Output<Double> virtualRouterAsn) {
-            this.virtualRouterAsn = virtualRouterAsn;
+            $.virtualRouterAsn = virtualRouterAsn;
             return this;
         }
-        public Builder virtualRouterAsn(@Nullable Double virtualRouterAsn) {
-            this.virtualRouterAsn = Codegen.ofNullable(virtualRouterAsn);
-            return this;
+
+        public Builder virtualRouterAsn(Double virtualRouterAsn) {
+            return virtualRouterAsn(Output.of(virtualRouterAsn));
         }
+
         public Builder virtualRouterIps(@Nullable Output<List<String>> virtualRouterIps) {
-            this.virtualRouterIps = virtualRouterIps;
+            $.virtualRouterIps = virtualRouterIps;
             return this;
         }
-        public Builder virtualRouterIps(@Nullable List<String> virtualRouterIps) {
-            this.virtualRouterIps = Codegen.ofNullable(virtualRouterIps);
-            return this;
+
+        public Builder virtualRouterIps(List<String> virtualRouterIps) {
+            return virtualRouterIps(Output.of(virtualRouterIps));
         }
+
         public Builder virtualRouterIps(String... virtualRouterIps) {
             return virtualRouterIps(List.of(virtualRouterIps));
         }
+
         public Builder virtualWan(@Nullable Output<SubResourceArgs> virtualWan) {
-            this.virtualWan = virtualWan;
+            $.virtualWan = virtualWan;
             return this;
         }
-        public Builder virtualWan(@Nullable SubResourceArgs virtualWan) {
-            this.virtualWan = Codegen.ofNullable(virtualWan);
-            return this;
+
+        public Builder virtualWan(SubResourceArgs virtualWan) {
+            return virtualWan(Output.of(virtualWan));
         }
+
         public Builder vpnGateway(@Nullable Output<SubResourceArgs> vpnGateway) {
-            this.vpnGateway = vpnGateway;
+            $.vpnGateway = vpnGateway;
             return this;
         }
-        public Builder vpnGateway(@Nullable SubResourceArgs vpnGateway) {
-            this.vpnGateway = Codegen.ofNullable(vpnGateway);
-            return this;
-        }        public VirtualHubArgs build() {
-            return new VirtualHubArgs(addressPrefix, allowBranchToBranchTraffic, azureFirewall, expressRouteGateway, id, location, p2SVpnGateway, resourceGroupName, routeTable, securityPartnerProvider, securityProviderName, sku, tags, virtualHubName, virtualHubRouteTableV2s, virtualRouterAsn, virtualRouterIps, virtualWan, vpnGateway);
+
+        public Builder vpnGateway(SubResourceArgs vpnGateway) {
+            return vpnGateway(Output.of(vpnGateway));
+        }
+
+        public VirtualHubArgs build() {
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

@@ -18,126 +18,109 @@ public final class NetworkInsightsAnalysisAnalysisAclRule extends com.pulumi.res
     public static final NetworkInsightsAnalysisAnalysisAclRule Empty = new NetworkInsightsAnalysisAnalysisAclRule();
 
     @Import(name="cidr")
-      private final @Nullable String cidr;
+    private @Nullable String cidr;
 
     public Optional<String> cidr() {
-        return this.cidr == null ? Optional.empty() : Optional.ofNullable(this.cidr);
+        return Optional.ofNullable(this.cidr);
     }
 
     @Import(name="egress")
-      private final @Nullable Boolean egress;
+    private @Nullable Boolean egress;
 
     public Optional<Boolean> egress() {
-        return this.egress == null ? Optional.empty() : Optional.ofNullable(this.egress);
+        return Optional.ofNullable(this.egress);
     }
 
     @Import(name="portRange")
-      private final @Nullable NetworkInsightsAnalysisPortRange portRange;
+    private @Nullable NetworkInsightsAnalysisPortRange portRange;
 
     public Optional<NetworkInsightsAnalysisPortRange> portRange() {
-        return this.portRange == null ? Optional.empty() : Optional.ofNullable(this.portRange);
+        return Optional.ofNullable(this.portRange);
     }
 
     @Import(name="protocol")
-      private final @Nullable String protocol;
+    private @Nullable String protocol;
 
     public Optional<String> protocol() {
-        return this.protocol == null ? Optional.empty() : Optional.ofNullable(this.protocol);
+        return Optional.ofNullable(this.protocol);
     }
 
     @Import(name="ruleAction")
-      private final @Nullable String ruleAction;
+    private @Nullable String ruleAction;
 
     public Optional<String> ruleAction() {
-        return this.ruleAction == null ? Optional.empty() : Optional.ofNullable(this.ruleAction);
+        return Optional.ofNullable(this.ruleAction);
     }
 
     @Import(name="ruleNumber")
-      private final @Nullable Integer ruleNumber;
+    private @Nullable Integer ruleNumber;
 
     public Optional<Integer> ruleNumber() {
-        return this.ruleNumber == null ? Optional.empty() : Optional.ofNullable(this.ruleNumber);
+        return Optional.ofNullable(this.ruleNumber);
     }
 
-    public NetworkInsightsAnalysisAnalysisAclRule(
-        @Nullable String cidr,
-        @Nullable Boolean egress,
-        @Nullable NetworkInsightsAnalysisPortRange portRange,
-        @Nullable String protocol,
-        @Nullable String ruleAction,
-        @Nullable Integer ruleNumber) {
-        this.cidr = cidr;
-        this.egress = egress;
-        this.portRange = portRange;
-        this.protocol = protocol;
-        this.ruleAction = ruleAction;
-        this.ruleNumber = ruleNumber;
-    }
+    private NetworkInsightsAnalysisAnalysisAclRule() {}
 
-    private NetworkInsightsAnalysisAnalysisAclRule() {
-        this.cidr = null;
-        this.egress = null;
-        this.portRange = null;
-        this.protocol = null;
-        this.ruleAction = null;
-        this.ruleNumber = null;
+    private NetworkInsightsAnalysisAnalysisAclRule(NetworkInsightsAnalysisAnalysisAclRule $) {
+        this.cidr = $.cidr;
+        this.egress = $.egress;
+        this.portRange = $.portRange;
+        this.protocol = $.protocol;
+        this.ruleAction = $.ruleAction;
+        this.ruleNumber = $.ruleNumber;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NetworkInsightsAnalysisAnalysisAclRule defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String cidr;
-        private @Nullable Boolean egress;
-        private @Nullable NetworkInsightsAnalysisPortRange portRange;
-        private @Nullable String protocol;
-        private @Nullable String ruleAction;
-        private @Nullable Integer ruleNumber;
+        private NetworkInsightsAnalysisAnalysisAclRule $;
 
         public Builder() {
-    	      // Empty
+            $ = new NetworkInsightsAnalysisAnalysisAclRule();
         }
 
         public Builder(NetworkInsightsAnalysisAnalysisAclRule defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cidr = defaults.cidr;
-    	      this.egress = defaults.egress;
-    	      this.portRange = defaults.portRange;
-    	      this.protocol = defaults.protocol;
-    	      this.ruleAction = defaults.ruleAction;
-    	      this.ruleNumber = defaults.ruleNumber;
+            $ = new NetworkInsightsAnalysisAnalysisAclRule(Objects.requireNonNull(defaults));
         }
 
         public Builder cidr(@Nullable String cidr) {
-            this.cidr = cidr;
+            $.cidr = cidr;
             return this;
         }
+
         public Builder egress(@Nullable Boolean egress) {
-            this.egress = egress;
+            $.egress = egress;
             return this;
         }
+
         public Builder portRange(@Nullable NetworkInsightsAnalysisPortRange portRange) {
-            this.portRange = portRange;
+            $.portRange = portRange;
             return this;
         }
+
         public Builder protocol(@Nullable String protocol) {
-            this.protocol = protocol;
+            $.protocol = protocol;
             return this;
         }
+
         public Builder ruleAction(@Nullable String ruleAction) {
-            this.ruleAction = ruleAction;
+            $.ruleAction = ruleAction;
             return this;
         }
+
         public Builder ruleNumber(@Nullable Integer ruleNumber) {
-            this.ruleNumber = ruleNumber;
+            $.ruleNumber = ruleNumber;
             return this;
-        }        public NetworkInsightsAnalysisAnalysisAclRule build() {
-            return new NetworkInsightsAnalysisAnalysisAclRule(cidr, egress, portRange, protocol, ruleAction, ruleNumber);
+        }
+
+        public NetworkInsightsAnalysisAnalysisAclRule build() {
+            return $;
         }
     }
+
 }

@@ -21,7 +21,7 @@ public final class SlsaProvenanceResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="builder", required=true)
-      private final SlsaBuilderResponse builder;
+    private SlsaBuilderResponse builder;
 
     public SlsaBuilderResponse builder_() {
         return this.builder;
@@ -32,14 +32,14 @@ public final class SlsaProvenanceResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="materials", required=true)
-      private final List<MaterialResponse> materials;
+    private List<MaterialResponse> materials;
 
     public List<MaterialResponse> materials() {
         return this.materials;
     }
 
     @Import(name="metadata", required=true)
-      private final SlsaMetadataResponse metadata;
+    private SlsaMetadataResponse metadata;
 
     public SlsaMetadataResponse metadata() {
         return this.metadata;
@@ -50,76 +50,70 @@ public final class SlsaProvenanceResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="recipe", required=true)
-      private final SlsaRecipeResponse recipe;
+    private SlsaRecipeResponse recipe;
 
     public SlsaRecipeResponse recipe() {
         return this.recipe;
     }
 
-    public SlsaProvenanceResponse(
-        SlsaBuilderResponse builder,
-        List<MaterialResponse> materials,
-        SlsaMetadataResponse metadata,
-        SlsaRecipeResponse recipe) {
-        this.builder = Objects.requireNonNull(builder, "expected parameter 'builder' to be non-null");
-        this.materials = Objects.requireNonNull(materials, "expected parameter 'materials' to be non-null");
-        this.metadata = Objects.requireNonNull(metadata, "expected parameter 'metadata' to be non-null");
-        this.recipe = Objects.requireNonNull(recipe, "expected parameter 'recipe' to be non-null");
-    }
+    private SlsaProvenanceResponse() {}
 
-    private SlsaProvenanceResponse() {
-        this.builder = null;
-        this.materials = List.of();
-        this.metadata = null;
-        this.recipe = null;
+    private SlsaProvenanceResponse(SlsaProvenanceResponse $) {
+        this.builder = $.builder;
+        this.materials = $.materials;
+        this.metadata = $.metadata;
+        this.recipe = $.recipe;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SlsaProvenanceResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private SlsaBuilderResponse builder;
-        private List<MaterialResponse> materials;
-        private SlsaMetadataResponse metadata;
-        private SlsaRecipeResponse recipe;
+        private SlsaProvenanceResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new SlsaProvenanceResponse();
         }
 
         public Builder(SlsaProvenanceResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.builder = defaults.builder;
-    	      this.materials = defaults.materials;
-    	      this.metadata = defaults.metadata;
-    	      this.recipe = defaults.recipe;
+            $ = new SlsaProvenanceResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder builder_(SlsaBuilderResponse builder) {
-            this.builder = Objects.requireNonNull(builder);
+            $.builder = builder;
             return this;
         }
+
         public Builder materials(List<MaterialResponse> materials) {
-            this.materials = Objects.requireNonNull(materials);
+            $.materials = materials;
             return this;
         }
+
         public Builder materials(MaterialResponse... materials) {
             return materials(List.of(materials));
         }
+
         public Builder metadata(SlsaMetadataResponse metadata) {
-            this.metadata = Objects.requireNonNull(metadata);
+            $.metadata = metadata;
             return this;
         }
+
         public Builder recipe(SlsaRecipeResponse recipe) {
-            this.recipe = Objects.requireNonNull(recipe);
+            $.recipe = recipe;
             return this;
-        }        public SlsaProvenanceResponse build() {
-            return new SlsaProvenanceResponse(builder, materials, metadata, recipe);
+        }
+
+        public SlsaProvenanceResponse build() {
+            $.builder = Objects.requireNonNull($.builder, "expected parameter 'builder' to be non-null");
+            $.materials = Objects.requireNonNull($.materials, "expected parameter 'materials' to be non-null");
+            $.metadata = Objects.requireNonNull($.metadata, "expected parameter 'metadata' to be non-null");
+            $.recipe = Objects.requireNonNull($.recipe, "expected parameter 'recipe' to be non-null");
+            return $;
         }
     }
+
 }

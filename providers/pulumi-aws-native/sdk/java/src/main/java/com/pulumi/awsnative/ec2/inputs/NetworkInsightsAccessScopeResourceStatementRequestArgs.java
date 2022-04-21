@@ -5,10 +5,10 @@ package com.pulumi.awsnative.ec2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -17,76 +17,73 @@ public final class NetworkInsightsAccessScopeResourceStatementRequestArgs extend
     public static final NetworkInsightsAccessScopeResourceStatementRequestArgs Empty = new NetworkInsightsAccessScopeResourceStatementRequestArgs();
 
     @Import(name="resourceTypes")
-      private final @Nullable Output<List<String>> resourceTypes;
+    private @Nullable Output<List<String>> resourceTypes;
 
-    public Output<List<String>> resourceTypes() {
-        return this.resourceTypes == null ? Codegen.empty() : this.resourceTypes;
+    public Optional<Output<List<String>>> resourceTypes() {
+        return Optional.ofNullable(this.resourceTypes);
     }
 
     @Import(name="resources")
-      private final @Nullable Output<List<String>> resources;
+    private @Nullable Output<List<String>> resources;
 
-    public Output<List<String>> resources() {
-        return this.resources == null ? Codegen.empty() : this.resources;
+    public Optional<Output<List<String>>> resources() {
+        return Optional.ofNullable(this.resources);
     }
 
-    public NetworkInsightsAccessScopeResourceStatementRequestArgs(
-        @Nullable Output<List<String>> resourceTypes,
-        @Nullable Output<List<String>> resources) {
-        this.resourceTypes = resourceTypes;
-        this.resources = resources;
-    }
+    private NetworkInsightsAccessScopeResourceStatementRequestArgs() {}
 
-    private NetworkInsightsAccessScopeResourceStatementRequestArgs() {
-        this.resourceTypes = Codegen.empty();
-        this.resources = Codegen.empty();
+    private NetworkInsightsAccessScopeResourceStatementRequestArgs(NetworkInsightsAccessScopeResourceStatementRequestArgs $) {
+        this.resourceTypes = $.resourceTypes;
+        this.resources = $.resources;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NetworkInsightsAccessScopeResourceStatementRequestArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> resourceTypes;
-        private @Nullable Output<List<String>> resources;
+        private NetworkInsightsAccessScopeResourceStatementRequestArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new NetworkInsightsAccessScopeResourceStatementRequestArgs();
         }
 
         public Builder(NetworkInsightsAccessScopeResourceStatementRequestArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.resourceTypes = defaults.resourceTypes;
-    	      this.resources = defaults.resources;
+            $ = new NetworkInsightsAccessScopeResourceStatementRequestArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder resourceTypes(@Nullable Output<List<String>> resourceTypes) {
-            this.resourceTypes = resourceTypes;
+            $.resourceTypes = resourceTypes;
             return this;
         }
-        public Builder resourceTypes(@Nullable List<String> resourceTypes) {
-            this.resourceTypes = Codegen.ofNullable(resourceTypes);
-            return this;
+
+        public Builder resourceTypes(List<String> resourceTypes) {
+            return resourceTypes(Output.of(resourceTypes));
         }
+
         public Builder resourceTypes(String... resourceTypes) {
             return resourceTypes(List.of(resourceTypes));
         }
+
         public Builder resources(@Nullable Output<List<String>> resources) {
-            this.resources = resources;
+            $.resources = resources;
             return this;
         }
-        public Builder resources(@Nullable List<String> resources) {
-            this.resources = Codegen.ofNullable(resources);
-            return this;
+
+        public Builder resources(List<String> resources) {
+            return resources(Output.of(resources));
         }
+
         public Builder resources(String... resources) {
             return resources(List.of(resources));
-        }        public NetworkInsightsAccessScopeResourceStatementRequestArgs build() {
-            return new NetworkInsightsAccessScopeResourceStatementRequestArgs(resourceTypes, resources);
+        }
+
+        public NetworkInsightsAccessScopeResourceStatementRequestArgs build() {
+            return $;
         }
     }
+
 }

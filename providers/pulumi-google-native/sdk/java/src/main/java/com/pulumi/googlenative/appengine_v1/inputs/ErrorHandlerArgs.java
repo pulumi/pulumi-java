@@ -5,10 +5,10 @@ package com.pulumi.googlenative.appengine_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.appengine_v1.enums.ErrorHandlerErrorCode;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class ErrorHandlerArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="errorCode")
-      private final @Nullable Output<ErrorHandlerErrorCode> errorCode;
+    private @Nullable Output<ErrorHandlerErrorCode> errorCode;
 
-    public Output<ErrorHandlerErrorCode> errorCode() {
-        return this.errorCode == null ? Codegen.empty() : this.errorCode;
+    public Optional<Output<ErrorHandlerErrorCode>> errorCode() {
+        return Optional.ofNullable(this.errorCode);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class ErrorHandlerArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="mimeType")
-      private final @Nullable Output<String> mimeType;
+    private @Nullable Output<String> mimeType;
 
-    public Output<String> mimeType() {
-        return this.mimeType == null ? Codegen.empty() : this.mimeType;
+    public Optional<Output<String>> mimeType() {
+        return Optional.ofNullable(this.mimeType);
     }
 
     /**
@@ -47,76 +47,68 @@ public final class ErrorHandlerArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="staticFile")
-      private final @Nullable Output<String> staticFile;
+    private @Nullable Output<String> staticFile;
 
-    public Output<String> staticFile() {
-        return this.staticFile == null ? Codegen.empty() : this.staticFile;
+    public Optional<Output<String>> staticFile() {
+        return Optional.ofNullable(this.staticFile);
     }
 
-    public ErrorHandlerArgs(
-        @Nullable Output<ErrorHandlerErrorCode> errorCode,
-        @Nullable Output<String> mimeType,
-        @Nullable Output<String> staticFile) {
-        this.errorCode = errorCode;
-        this.mimeType = mimeType;
-        this.staticFile = staticFile;
-    }
+    private ErrorHandlerArgs() {}
 
-    private ErrorHandlerArgs() {
-        this.errorCode = Codegen.empty();
-        this.mimeType = Codegen.empty();
-        this.staticFile = Codegen.empty();
+    private ErrorHandlerArgs(ErrorHandlerArgs $) {
+        this.errorCode = $.errorCode;
+        this.mimeType = $.mimeType;
+        this.staticFile = $.staticFile;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ErrorHandlerArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<ErrorHandlerErrorCode> errorCode;
-        private @Nullable Output<String> mimeType;
-        private @Nullable Output<String> staticFile;
+        private ErrorHandlerArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ErrorHandlerArgs();
         }
 
         public Builder(ErrorHandlerArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.errorCode = defaults.errorCode;
-    	      this.mimeType = defaults.mimeType;
-    	      this.staticFile = defaults.staticFile;
+            $ = new ErrorHandlerArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder errorCode(@Nullable Output<ErrorHandlerErrorCode> errorCode) {
-            this.errorCode = errorCode;
+            $.errorCode = errorCode;
             return this;
         }
-        public Builder errorCode(@Nullable ErrorHandlerErrorCode errorCode) {
-            this.errorCode = Codegen.ofNullable(errorCode);
-            return this;
+
+        public Builder errorCode(ErrorHandlerErrorCode errorCode) {
+            return errorCode(Output.of(errorCode));
         }
+
         public Builder mimeType(@Nullable Output<String> mimeType) {
-            this.mimeType = mimeType;
+            $.mimeType = mimeType;
             return this;
         }
-        public Builder mimeType(@Nullable String mimeType) {
-            this.mimeType = Codegen.ofNullable(mimeType);
-            return this;
+
+        public Builder mimeType(String mimeType) {
+            return mimeType(Output.of(mimeType));
         }
+
         public Builder staticFile(@Nullable Output<String> staticFile) {
-            this.staticFile = staticFile;
+            $.staticFile = staticFile;
             return this;
         }
-        public Builder staticFile(@Nullable String staticFile) {
-            this.staticFile = Codegen.ofNullable(staticFile);
-            return this;
-        }        public ErrorHandlerArgs build() {
-            return new ErrorHandlerArgs(errorCode, mimeType, staticFile);
+
+        public Builder staticFile(String staticFile) {
+            return staticFile(Output.of(staticFile));
+        }
+
+        public ErrorHandlerArgs build() {
+            return $;
         }
     }
+
 }

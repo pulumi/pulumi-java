@@ -23,7 +23,7 @@ public final class GoogleCloudDialogflowCxV3beta1FormParameterFillBehaviorRespon
      * 
      */
     @Import(name="initialPromptFulfillment", required=true)
-      private final GoogleCloudDialogflowCxV3beta1FulfillmentResponse initialPromptFulfillment;
+    private GoogleCloudDialogflowCxV3beta1FulfillmentResponse initialPromptFulfillment;
 
     public GoogleCloudDialogflowCxV3beta1FulfillmentResponse initialPromptFulfillment() {
         return this.initialPromptFulfillment;
@@ -34,58 +34,56 @@ public final class GoogleCloudDialogflowCxV3beta1FormParameterFillBehaviorRespon
      * 
      */
     @Import(name="repromptEventHandlers", required=true)
-      private final List<GoogleCloudDialogflowCxV3beta1EventHandlerResponse> repromptEventHandlers;
+    private List<GoogleCloudDialogflowCxV3beta1EventHandlerResponse> repromptEventHandlers;
 
     public List<GoogleCloudDialogflowCxV3beta1EventHandlerResponse> repromptEventHandlers() {
         return this.repromptEventHandlers;
     }
 
-    public GoogleCloudDialogflowCxV3beta1FormParameterFillBehaviorResponse(
-        GoogleCloudDialogflowCxV3beta1FulfillmentResponse initialPromptFulfillment,
-        List<GoogleCloudDialogflowCxV3beta1EventHandlerResponse> repromptEventHandlers) {
-        this.initialPromptFulfillment = Objects.requireNonNull(initialPromptFulfillment, "expected parameter 'initialPromptFulfillment' to be non-null");
-        this.repromptEventHandlers = Objects.requireNonNull(repromptEventHandlers, "expected parameter 'repromptEventHandlers' to be non-null");
-    }
+    private GoogleCloudDialogflowCxV3beta1FormParameterFillBehaviorResponse() {}
 
-    private GoogleCloudDialogflowCxV3beta1FormParameterFillBehaviorResponse() {
-        this.initialPromptFulfillment = null;
-        this.repromptEventHandlers = List.of();
+    private GoogleCloudDialogflowCxV3beta1FormParameterFillBehaviorResponse(GoogleCloudDialogflowCxV3beta1FormParameterFillBehaviorResponse $) {
+        this.initialPromptFulfillment = $.initialPromptFulfillment;
+        this.repromptEventHandlers = $.repromptEventHandlers;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudDialogflowCxV3beta1FormParameterFillBehaviorResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private GoogleCloudDialogflowCxV3beta1FulfillmentResponse initialPromptFulfillment;
-        private List<GoogleCloudDialogflowCxV3beta1EventHandlerResponse> repromptEventHandlers;
+        private GoogleCloudDialogflowCxV3beta1FormParameterFillBehaviorResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudDialogflowCxV3beta1FormParameterFillBehaviorResponse();
         }
 
         public Builder(GoogleCloudDialogflowCxV3beta1FormParameterFillBehaviorResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.initialPromptFulfillment = defaults.initialPromptFulfillment;
-    	      this.repromptEventHandlers = defaults.repromptEventHandlers;
+            $ = new GoogleCloudDialogflowCxV3beta1FormParameterFillBehaviorResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder initialPromptFulfillment(GoogleCloudDialogflowCxV3beta1FulfillmentResponse initialPromptFulfillment) {
-            this.initialPromptFulfillment = Objects.requireNonNull(initialPromptFulfillment);
+            $.initialPromptFulfillment = initialPromptFulfillment;
             return this;
         }
+
         public Builder repromptEventHandlers(List<GoogleCloudDialogflowCxV3beta1EventHandlerResponse> repromptEventHandlers) {
-            this.repromptEventHandlers = Objects.requireNonNull(repromptEventHandlers);
+            $.repromptEventHandlers = repromptEventHandlers;
             return this;
         }
+
         public Builder repromptEventHandlers(GoogleCloudDialogflowCxV3beta1EventHandlerResponse... repromptEventHandlers) {
             return repromptEventHandlers(List.of(repromptEventHandlers));
-        }        public GoogleCloudDialogflowCxV3beta1FormParameterFillBehaviorResponse build() {
-            return new GoogleCloudDialogflowCxV3beta1FormParameterFillBehaviorResponse(initialPromptFulfillment, repromptEventHandlers);
+        }
+
+        public GoogleCloudDialogflowCxV3beta1FormParameterFillBehaviorResponse build() {
+            $.initialPromptFulfillment = Objects.requireNonNull($.initialPromptFulfillment, "expected parameter 'initialPromptFulfillment' to be non-null");
+            $.repromptEventHandlers = Objects.requireNonNull($.repromptEventHandlers, "expected parameter 'repromptEventHandlers' to be non-null");
+            return $;
         }
     }
+
 }

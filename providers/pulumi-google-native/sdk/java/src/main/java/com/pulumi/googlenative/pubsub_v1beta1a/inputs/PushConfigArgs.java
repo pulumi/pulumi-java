@@ -5,9 +5,9 @@ package com.pulumi.googlenative.pubsub_v1beta1a.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class PushConfigArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="pushEndpoint")
-      private final @Nullable Output<String> pushEndpoint;
+    private @Nullable Output<String> pushEndpoint;
 
-    public Output<String> pushEndpoint() {
-        return this.pushEndpoint == null ? Codegen.empty() : this.pushEndpoint;
+    public Optional<Output<String>> pushEndpoint() {
+        return Optional.ofNullable(this.pushEndpoint);
     }
 
-    public PushConfigArgs(@Nullable Output<String> pushEndpoint) {
-        this.pushEndpoint = pushEndpoint;
-    }
+    private PushConfigArgs() {}
 
-    private PushConfigArgs() {
-        this.pushEndpoint = Codegen.empty();
+    private PushConfigArgs(PushConfigArgs $) {
+        this.pushEndpoint = $.pushEndpoint;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PushConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> pushEndpoint;
+        private PushConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PushConfigArgs();
         }
 
         public Builder(PushConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.pushEndpoint = defaults.pushEndpoint;
+            $ = new PushConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder pushEndpoint(@Nullable Output<String> pushEndpoint) {
-            this.pushEndpoint = pushEndpoint;
+            $.pushEndpoint = pushEndpoint;
             return this;
         }
-        public Builder pushEndpoint(@Nullable String pushEndpoint) {
-            this.pushEndpoint = Codegen.ofNullable(pushEndpoint);
-            return this;
-        }        public PushConfigArgs build() {
-            return new PushConfigArgs(pushEndpoint);
+
+        public Builder pushEndpoint(String pushEndpoint) {
+            return pushEndpoint(Output.of(pushEndpoint));
+        }
+
+        public PushConfigArgs build() {
+            return $;
         }
     }
+
 }

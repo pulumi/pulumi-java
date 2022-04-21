@@ -24,7 +24,7 @@ public final class AzureResourceErrorInfoResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="code", required=true)
-      private final String code;
+    private String code;
 
     public String code() {
         return this.code;
@@ -35,10 +35,10 @@ public final class AzureResourceErrorInfoResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="details")
-      private final @Nullable List<AzureResourceErrorInfoResponse> details;
+    private @Nullable List<AzureResourceErrorInfoResponse> details;
 
-    public List<AzureResourceErrorInfoResponse> details() {
-        return this.details == null ? List.of() : this.details;
+    public Optional<List<AzureResourceErrorInfoResponse>> details() {
+        return Optional.ofNullable(this.details);
     }
 
     /**
@@ -46,67 +46,62 @@ public final class AzureResourceErrorInfoResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="message", required=true)
-      private final String message;
+    private String message;
 
     public String message() {
         return this.message;
     }
 
-    public AzureResourceErrorInfoResponse(
-        String code,
-        @Nullable List<AzureResourceErrorInfoResponse> details,
-        String message) {
-        this.code = Objects.requireNonNull(code, "expected parameter 'code' to be non-null");
-        this.details = details;
-        this.message = Objects.requireNonNull(message, "expected parameter 'message' to be non-null");
-    }
+    private AzureResourceErrorInfoResponse() {}
 
-    private AzureResourceErrorInfoResponse() {
-        this.code = null;
-        this.details = List.of();
-        this.message = null;
+    private AzureResourceErrorInfoResponse(AzureResourceErrorInfoResponse $) {
+        this.code = $.code;
+        this.details = $.details;
+        this.message = $.message;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AzureResourceErrorInfoResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String code;
-        private @Nullable List<AzureResourceErrorInfoResponse> details;
-        private String message;
+        private AzureResourceErrorInfoResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AzureResourceErrorInfoResponse();
         }
 
         public Builder(AzureResourceErrorInfoResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.code = defaults.code;
-    	      this.details = defaults.details;
-    	      this.message = defaults.message;
+            $ = new AzureResourceErrorInfoResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder code(String code) {
-            this.code = Objects.requireNonNull(code);
+            $.code = code;
             return this;
         }
+
         public Builder details(@Nullable List<AzureResourceErrorInfoResponse> details) {
-            this.details = details;
+            $.details = details;
             return this;
         }
+
         public Builder details(AzureResourceErrorInfoResponse... details) {
             return details(List.of(details));
         }
+
         public Builder message(String message) {
-            this.message = Objects.requireNonNull(message);
+            $.message = message;
             return this;
-        }        public AzureResourceErrorInfoResponse build() {
-            return new AzureResourceErrorInfoResponse(code, details, message);
+        }
+
+        public AzureResourceErrorInfoResponse build() {
+            $.code = Objects.requireNonNull($.code, "expected parameter 'code' to be non-null");
+            $.message = Objects.requireNonNull($.message, "expected parameter 'message' to be non-null");
+            return $;
         }
     }
+
 }

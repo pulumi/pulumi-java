@@ -7,9 +7,9 @@ import com.pulumi.azurenative.network.enums.FirewallPolicyNatRuleCollectionActio
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,49 +26,48 @@ public final class FirewallPolicyNatRuleCollectionActionArgs extends com.pulumi.
      * 
      */
     @Import(name="type")
-      private final @Nullable Output<Either<String,FirewallPolicyNatRuleCollectionActionType>> type;
+    private @Nullable Output<Either<String,FirewallPolicyNatRuleCollectionActionType>> type;
 
-    public Output<Either<String,FirewallPolicyNatRuleCollectionActionType>> type() {
-        return this.type == null ? Codegen.empty() : this.type;
+    public Optional<Output<Either<String,FirewallPolicyNatRuleCollectionActionType>>> type() {
+        return Optional.ofNullable(this.type);
     }
 
-    public FirewallPolicyNatRuleCollectionActionArgs(@Nullable Output<Either<String,FirewallPolicyNatRuleCollectionActionType>> type) {
-        this.type = type;
-    }
+    private FirewallPolicyNatRuleCollectionActionArgs() {}
 
-    private FirewallPolicyNatRuleCollectionActionArgs() {
-        this.type = Codegen.empty();
+    private FirewallPolicyNatRuleCollectionActionArgs(FirewallPolicyNatRuleCollectionActionArgs $) {
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FirewallPolicyNatRuleCollectionActionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Either<String,FirewallPolicyNatRuleCollectionActionType>> type;
+        private FirewallPolicyNatRuleCollectionActionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new FirewallPolicyNatRuleCollectionActionArgs();
         }
 
         public Builder(FirewallPolicyNatRuleCollectionActionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.type = defaults.type;
+            $ = new FirewallPolicyNatRuleCollectionActionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder type(@Nullable Output<Either<String,FirewallPolicyNatRuleCollectionActionType>> type) {
-            this.type = type;
+            $.type = type;
             return this;
         }
-        public Builder type(@Nullable Either<String,FirewallPolicyNatRuleCollectionActionType> type) {
-            this.type = Codegen.ofNullable(type);
-            return this;
-        }        public FirewallPolicyNatRuleCollectionActionArgs build() {
-            return new FirewallPolicyNatRuleCollectionActionArgs(type);
+
+        public Builder type(Either<String,FirewallPolicyNatRuleCollectionActionType> type) {
+            return type(Output.of(type));
+        }
+
+        public FirewallPolicyNatRuleCollectionActionArgs build() {
+            return $;
         }
     }
+
 }

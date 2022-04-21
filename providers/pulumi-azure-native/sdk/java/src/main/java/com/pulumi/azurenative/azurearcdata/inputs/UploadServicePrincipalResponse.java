@@ -23,10 +23,10 @@ public final class UploadServicePrincipalResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="authority")
-      private final @Nullable String authority;
+    private @Nullable String authority;
 
     public Optional<String> authority() {
-        return this.authority == null ? Optional.empty() : Optional.ofNullable(this.authority);
+        return Optional.ofNullable(this.authority);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class UploadServicePrincipalResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="clientId")
-      private final @Nullable String clientId;
+    private @Nullable String clientId;
 
     public Optional<String> clientId() {
-        return this.clientId == null ? Optional.empty() : Optional.ofNullable(this.clientId);
+        return Optional.ofNullable(this.clientId);
     }
 
     /**
@@ -45,64 +45,56 @@ public final class UploadServicePrincipalResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="tenantId")
-      private final @Nullable String tenantId;
+    private @Nullable String tenantId;
 
     public Optional<String> tenantId() {
-        return this.tenantId == null ? Optional.empty() : Optional.ofNullable(this.tenantId);
+        return Optional.ofNullable(this.tenantId);
     }
 
-    public UploadServicePrincipalResponse(
-        @Nullable String authority,
-        @Nullable String clientId,
-        @Nullable String tenantId) {
-        this.authority = authority;
-        this.clientId = clientId;
-        this.tenantId = tenantId;
-    }
+    private UploadServicePrincipalResponse() {}
 
-    private UploadServicePrincipalResponse() {
-        this.authority = null;
-        this.clientId = null;
-        this.tenantId = null;
+    private UploadServicePrincipalResponse(UploadServicePrincipalResponse $) {
+        this.authority = $.authority;
+        this.clientId = $.clientId;
+        this.tenantId = $.tenantId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(UploadServicePrincipalResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String authority;
-        private @Nullable String clientId;
-        private @Nullable String tenantId;
+        private UploadServicePrincipalResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new UploadServicePrincipalResponse();
         }
 
         public Builder(UploadServicePrincipalResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.authority = defaults.authority;
-    	      this.clientId = defaults.clientId;
-    	      this.tenantId = defaults.tenantId;
+            $ = new UploadServicePrincipalResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder authority(@Nullable String authority) {
-            this.authority = authority;
+            $.authority = authority;
             return this;
         }
+
         public Builder clientId(@Nullable String clientId) {
-            this.clientId = clientId;
+            $.clientId = clientId;
             return this;
         }
+
         public Builder tenantId(@Nullable String tenantId) {
-            this.tenantId = tenantId;
+            $.tenantId = tenantId;
             return this;
-        }        public UploadServicePrincipalResponse build() {
-            return new UploadServicePrincipalResponse(authority, clientId, tenantId);
+        }
+
+        public UploadServicePrincipalResponse build() {
+            return $;
         }
     }
+
 }

@@ -16,6 +16,7 @@ import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -28,7 +29,7 @@ public final class ScheduledQueryRuleArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="action", required=true)
-      private final Output<Either<AlertingActionArgs,LogToMetricActionArgs>> action;
+    private Output<Either<AlertingActionArgs,LogToMetricActionArgs>> action;
 
     public Output<Either<AlertingActionArgs,LogToMetricActionArgs>> action() {
         return this.action;
@@ -39,10 +40,10 @@ public final class ScheduledQueryRuleArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="autoMitigate")
-      private final @Nullable Output<Boolean> autoMitigate;
+    private @Nullable Output<Boolean> autoMitigate;
 
-    public Output<Boolean> autoMitigate() {
-        return this.autoMitigate == null ? Codegen.empty() : this.autoMitigate;
+    public Optional<Output<Boolean>> autoMitigate() {
+        return Optional.ofNullable(this.autoMitigate);
     }
 
     /**
@@ -50,10 +51,10 @@ public final class ScheduledQueryRuleArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -61,10 +62,10 @@ public final class ScheduledQueryRuleArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="displayName")
-      private final @Nullable Output<String> displayName;
+    private @Nullable Output<String> displayName;
 
-    public Output<String> displayName() {
-        return this.displayName == null ? Codegen.empty() : this.displayName;
+    public Optional<Output<String>> displayName() {
+        return Optional.ofNullable(this.displayName);
     }
 
     /**
@@ -72,10 +73,10 @@ public final class ScheduledQueryRuleArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="enabled")
-      private final @Nullable Output<Either<String,Enabled>> enabled;
+    private @Nullable Output<Either<String,Enabled>> enabled;
 
-    public Output<Either<String,Enabled>> enabled() {
-        return this.enabled == null ? Codegen.empty() : this.enabled;
+    public Optional<Output<Either<String,Enabled>>> enabled() {
+        return Optional.ofNullable(this.enabled);
     }
 
     /**
@@ -83,10 +84,10 @@ public final class ScheduledQueryRuleArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -94,7 +95,7 @@ public final class ScheduledQueryRuleArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -105,10 +106,10 @@ public final class ScheduledQueryRuleArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="ruleName")
-      private final @Nullable Output<String> ruleName;
+    private @Nullable Output<String> ruleName;
 
-    public Output<String> ruleName() {
-        return this.ruleName == null ? Codegen.empty() : this.ruleName;
+    public Optional<Output<String>> ruleName() {
+        return Optional.ofNullable(this.ruleName);
     }
 
     /**
@@ -116,10 +117,10 @@ public final class ScheduledQueryRuleArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="schedule")
-      private final @Nullable Output<ScheduleArgs> schedule;
+    private @Nullable Output<ScheduleArgs> schedule;
 
-    public Output<ScheduleArgs> schedule() {
-        return this.schedule == null ? Codegen.empty() : this.schedule;
+    public Optional<Output<ScheduleArgs>> schedule() {
+        return Optional.ofNullable(this.schedule);
     }
 
     /**
@@ -127,7 +128,7 @@ public final class ScheduledQueryRuleArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="source", required=true)
-      private final Output<SourceArgs> source;
+    private Output<SourceArgs> source;
 
     public Output<SourceArgs> source() {
         return this.source;
@@ -138,180 +139,152 @@ public final class ScheduledQueryRuleArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public ScheduledQueryRuleArgs(
-        Output<Either<AlertingActionArgs,LogToMetricActionArgs>> action,
-        @Nullable Output<Boolean> autoMitigate,
-        @Nullable Output<String> description,
-        @Nullable Output<String> displayName,
-        @Nullable Output<Either<String,Enabled>> enabled,
-        @Nullable Output<String> location,
-        Output<String> resourceGroupName,
-        @Nullable Output<String> ruleName,
-        @Nullable Output<ScheduleArgs> schedule,
-        Output<SourceArgs> source,
-        @Nullable Output<Map<String,String>> tags) {
-        this.action = Objects.requireNonNull(action, "expected parameter 'action' to be non-null");
-        this.autoMitigate = Codegen.booleanProp("autoMitigate").output().arg(autoMitigate).def(false).getNullable();
-        this.description = description;
-        this.displayName = displayName;
-        this.enabled = enabled;
-        this.location = location;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.ruleName = ruleName;
-        this.schedule = schedule;
-        this.source = Objects.requireNonNull(source, "expected parameter 'source' to be non-null");
-        this.tags = tags;
-    }
+    private ScheduledQueryRuleArgs() {}
 
-    private ScheduledQueryRuleArgs() {
-        this.action = Codegen.empty();
-        this.autoMitigate = Codegen.empty();
-        this.description = Codegen.empty();
-        this.displayName = Codegen.empty();
-        this.enabled = Codegen.empty();
-        this.location = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.ruleName = Codegen.empty();
-        this.schedule = Codegen.empty();
-        this.source = Codegen.empty();
-        this.tags = Codegen.empty();
+    private ScheduledQueryRuleArgs(ScheduledQueryRuleArgs $) {
+        this.action = $.action;
+        this.autoMitigate = $.autoMitigate;
+        this.description = $.description;
+        this.displayName = $.displayName;
+        this.enabled = $.enabled;
+        this.location = $.location;
+        this.resourceGroupName = $.resourceGroupName;
+        this.ruleName = $.ruleName;
+        this.schedule = $.schedule;
+        this.source = $.source;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ScheduledQueryRuleArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Either<AlertingActionArgs,LogToMetricActionArgs>> action;
-        private @Nullable Output<Boolean> autoMitigate;
-        private @Nullable Output<String> description;
-        private @Nullable Output<String> displayName;
-        private @Nullable Output<Either<String,Enabled>> enabled;
-        private @Nullable Output<String> location;
-        private Output<String> resourceGroupName;
-        private @Nullable Output<String> ruleName;
-        private @Nullable Output<ScheduleArgs> schedule;
-        private Output<SourceArgs> source;
-        private @Nullable Output<Map<String,String>> tags;
+        private ScheduledQueryRuleArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ScheduledQueryRuleArgs();
         }
 
         public Builder(ScheduledQueryRuleArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.action = defaults.action;
-    	      this.autoMitigate = defaults.autoMitigate;
-    	      this.description = defaults.description;
-    	      this.displayName = defaults.displayName;
-    	      this.enabled = defaults.enabled;
-    	      this.location = defaults.location;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.ruleName = defaults.ruleName;
-    	      this.schedule = defaults.schedule;
-    	      this.source = defaults.source;
-    	      this.tags = defaults.tags;
+            $ = new ScheduledQueryRuleArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder action(Output<Either<AlertingActionArgs,LogToMetricActionArgs>> action) {
-            this.action = Objects.requireNonNull(action);
+            $.action = action;
             return this;
         }
+
         public Builder action(Either<AlertingActionArgs,LogToMetricActionArgs> action) {
-            this.action = Output.of(Objects.requireNonNull(action));
-            return this;
+            return action(Output.of(action));
         }
+
         public Builder autoMitigate(@Nullable Output<Boolean> autoMitigate) {
-            this.autoMitigate = autoMitigate;
+            $.autoMitigate = autoMitigate;
             return this;
         }
-        public Builder autoMitigate(@Nullable Boolean autoMitigate) {
-            this.autoMitigate = Codegen.ofNullable(autoMitigate);
-            return this;
+
+        public Builder autoMitigate(Boolean autoMitigate) {
+            return autoMitigate(Output.of(autoMitigate));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder displayName(@Nullable Output<String> displayName) {
-            this.displayName = displayName;
+            $.displayName = displayName;
             return this;
         }
-        public Builder displayName(@Nullable String displayName) {
-            this.displayName = Codegen.ofNullable(displayName);
-            return this;
+
+        public Builder displayName(String displayName) {
+            return displayName(Output.of(displayName));
         }
+
         public Builder enabled(@Nullable Output<Either<String,Enabled>> enabled) {
-            this.enabled = enabled;
+            $.enabled = enabled;
             return this;
         }
-        public Builder enabled(@Nullable Either<String,Enabled> enabled) {
-            this.enabled = Codegen.ofNullable(enabled);
-            return this;
+
+        public Builder enabled(Either<String,Enabled> enabled) {
+            return enabled(Output.of(enabled));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder ruleName(@Nullable Output<String> ruleName) {
-            this.ruleName = ruleName;
+            $.ruleName = ruleName;
             return this;
         }
-        public Builder ruleName(@Nullable String ruleName) {
-            this.ruleName = Codegen.ofNullable(ruleName);
-            return this;
+
+        public Builder ruleName(String ruleName) {
+            return ruleName(Output.of(ruleName));
         }
+
         public Builder schedule(@Nullable Output<ScheduleArgs> schedule) {
-            this.schedule = schedule;
+            $.schedule = schedule;
             return this;
         }
-        public Builder schedule(@Nullable ScheduleArgs schedule) {
-            this.schedule = Codegen.ofNullable(schedule);
-            return this;
+
+        public Builder schedule(ScheduleArgs schedule) {
+            return schedule(Output.of(schedule));
         }
+
         public Builder source(Output<SourceArgs> source) {
-            this.source = Objects.requireNonNull(source);
+            $.source = source;
             return this;
         }
+
         public Builder source(SourceArgs source) {
-            this.source = Output.of(Objects.requireNonNull(source));
-            return this;
+            return source(Output.of(source));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
-        }        public ScheduledQueryRuleArgs build() {
-            return new ScheduledQueryRuleArgs(action, autoMitigate, description, displayName, enabled, location, resourceGroupName, ruleName, schedule, source, tags);
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
+        }
+
+        public ScheduledQueryRuleArgs build() {
+            $.action = Objects.requireNonNull($.action, "expected parameter 'action' to be non-null");
+            $.autoMitigate = Codegen.booleanProp("autoMitigate").output().arg($.autoMitigate).def(false).getNullable();
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.source = Objects.requireNonNull($.source, "expected parameter 'source' to be non-null");
+            return $;
         }
     }
+
 }

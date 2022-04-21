@@ -23,45 +23,44 @@ public final class AlertsDataTypeOfDataConnectorResponse extends com.pulumi.reso
      * 
      */
     @Import(name="alerts")
-      private final @Nullable DataConnectorDataTypeCommonResponse alerts;
+    private @Nullable DataConnectorDataTypeCommonResponse alerts;
 
     public Optional<DataConnectorDataTypeCommonResponse> alerts() {
-        return this.alerts == null ? Optional.empty() : Optional.ofNullable(this.alerts);
+        return Optional.ofNullable(this.alerts);
     }
 
-    public AlertsDataTypeOfDataConnectorResponse(@Nullable DataConnectorDataTypeCommonResponse alerts) {
-        this.alerts = alerts;
-    }
+    private AlertsDataTypeOfDataConnectorResponse() {}
 
-    private AlertsDataTypeOfDataConnectorResponse() {
-        this.alerts = null;
+    private AlertsDataTypeOfDataConnectorResponse(AlertsDataTypeOfDataConnectorResponse $) {
+        this.alerts = $.alerts;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AlertsDataTypeOfDataConnectorResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable DataConnectorDataTypeCommonResponse alerts;
+        private AlertsDataTypeOfDataConnectorResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AlertsDataTypeOfDataConnectorResponse();
         }
 
         public Builder(AlertsDataTypeOfDataConnectorResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.alerts = defaults.alerts;
+            $ = new AlertsDataTypeOfDataConnectorResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder alerts(@Nullable DataConnectorDataTypeCommonResponse alerts) {
-            this.alerts = alerts;
+            $.alerts = alerts;
             return this;
-        }        public AlertsDataTypeOfDataConnectorResponse build() {
-            return new AlertsDataTypeOfDataConnectorResponse(alerts);
+        }
+
+        public AlertsDataTypeOfDataConnectorResponse build() {
+            return $;
         }
     }
+
 }

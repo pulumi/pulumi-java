@@ -5,10 +5,10 @@ package com.pulumi.gcp.container.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,7 +22,7 @@ public final class ClusterAddonsConfigCloudrunConfigArgs extends com.pulumi.reso
      * 
      */
     @Import(name="disabled", required=true)
-      private final Output<Boolean> disabled;
+    private Output<Boolean> disabled;
 
     public Output<Boolean> disabled() {
         return this.disabled;
@@ -34,63 +34,59 @@ public final class ClusterAddonsConfigCloudrunConfigArgs extends com.pulumi.reso
      * 
      */
     @Import(name="loadBalancerType")
-      private final @Nullable Output<String> loadBalancerType;
+    private @Nullable Output<String> loadBalancerType;
 
-    public Output<String> loadBalancerType() {
-        return this.loadBalancerType == null ? Codegen.empty() : this.loadBalancerType;
+    public Optional<Output<String>> loadBalancerType() {
+        return Optional.ofNullable(this.loadBalancerType);
     }
 
-    public ClusterAddonsConfigCloudrunConfigArgs(
-        Output<Boolean> disabled,
-        @Nullable Output<String> loadBalancerType) {
-        this.disabled = Objects.requireNonNull(disabled, "expected parameter 'disabled' to be non-null");
-        this.loadBalancerType = loadBalancerType;
-    }
+    private ClusterAddonsConfigCloudrunConfigArgs() {}
 
-    private ClusterAddonsConfigCloudrunConfigArgs() {
-        this.disabled = Codegen.empty();
-        this.loadBalancerType = Codegen.empty();
+    private ClusterAddonsConfigCloudrunConfigArgs(ClusterAddonsConfigCloudrunConfigArgs $) {
+        this.disabled = $.disabled;
+        this.loadBalancerType = $.loadBalancerType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ClusterAddonsConfigCloudrunConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Boolean> disabled;
-        private @Nullable Output<String> loadBalancerType;
+        private ClusterAddonsConfigCloudrunConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ClusterAddonsConfigCloudrunConfigArgs();
         }
 
         public Builder(ClusterAddonsConfigCloudrunConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.disabled = defaults.disabled;
-    	      this.loadBalancerType = defaults.loadBalancerType;
+            $ = new ClusterAddonsConfigCloudrunConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder disabled(Output<Boolean> disabled) {
-            this.disabled = Objects.requireNonNull(disabled);
+            $.disabled = disabled;
             return this;
         }
+
         public Builder disabled(Boolean disabled) {
-            this.disabled = Output.of(Objects.requireNonNull(disabled));
-            return this;
+            return disabled(Output.of(disabled));
         }
+
         public Builder loadBalancerType(@Nullable Output<String> loadBalancerType) {
-            this.loadBalancerType = loadBalancerType;
+            $.loadBalancerType = loadBalancerType;
             return this;
         }
-        public Builder loadBalancerType(@Nullable String loadBalancerType) {
-            this.loadBalancerType = Codegen.ofNullable(loadBalancerType);
-            return this;
-        }        public ClusterAddonsConfigCloudrunConfigArgs build() {
-            return new ClusterAddonsConfigCloudrunConfigArgs(disabled, loadBalancerType);
+
+        public Builder loadBalancerType(String loadBalancerType) {
+            return loadBalancerType(Output.of(loadBalancerType));
+        }
+
+        public ClusterAddonsConfigCloudrunConfigArgs build() {
+            $.disabled = Objects.requireNonNull($.disabled, "expected parameter 'disabled' to be non-null");
+            return $;
         }
     }
+
 }

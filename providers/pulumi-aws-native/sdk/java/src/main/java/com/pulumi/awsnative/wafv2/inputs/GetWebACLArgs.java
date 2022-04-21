@@ -14,78 +14,73 @@ public final class GetWebACLArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetWebACLArgs Empty = new GetWebACLArgs();
 
     @Import(name="id", required=true)
-      private final String id;
+    private String id;
 
     public String id() {
         return this.id;
     }
 
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
     }
 
     @Import(name="scope", required=true)
-      private final WebACLScope scope;
+    private WebACLScope scope;
 
     public WebACLScope scope() {
         return this.scope;
     }
 
-    public GetWebACLArgs(
-        String id,
-        String name,
-        WebACLScope scope) {
-        this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.scope = Objects.requireNonNull(scope, "expected parameter 'scope' to be non-null");
-    }
+    private GetWebACLArgs() {}
 
-    private GetWebACLArgs() {
-        this.id = null;
-        this.name = null;
-        this.scope = null;
+    private GetWebACLArgs(GetWebACLArgs $) {
+        this.id = $.id;
+        this.name = $.name;
+        this.scope = $.scope;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetWebACLArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String id;
-        private String name;
-        private WebACLScope scope;
+        private GetWebACLArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetWebACLArgs();
         }
 
         public Builder(GetWebACLArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.id = defaults.id;
-    	      this.name = defaults.name;
-    	      this.scope = defaults.scope;
+            $ = new GetWebACLArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder id(String id) {
-            this.id = Objects.requireNonNull(id);
+            $.id = id;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder scope(WebACLScope scope) {
-            this.scope = Objects.requireNonNull(scope);
+            $.scope = scope;
             return this;
-        }        public GetWebACLArgs build() {
-            return new GetWebACLArgs(id, name, scope);
+        }
+
+        public GetWebACLArgs build() {
+            $.id = Objects.requireNonNull($.id, "expected parameter 'id' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.scope = Objects.requireNonNull($.scope, "expected parameter 'scope' to be non-null");
+            return $;
         }
     }
+
 }

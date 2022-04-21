@@ -5,9 +5,9 @@ package com.pulumi.aws.storagegateway.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class NfsFileShareNfsFileShareDefaultsGetArgs extends com.pulumi.re
      * 
      */
     @Import(name="directoryMode")
-      private final @Nullable Output<String> directoryMode;
+    private @Nullable Output<String> directoryMode;
 
-    public Output<String> directoryMode() {
-        return this.directoryMode == null ? Codegen.empty() : this.directoryMode;
+    public Optional<Output<String>> directoryMode() {
+        return Optional.ofNullable(this.directoryMode);
     }
 
     /**
@@ -31,10 +31,10 @@ public final class NfsFileShareNfsFileShareDefaultsGetArgs extends com.pulumi.re
      * 
      */
     @Import(name="fileMode")
-      private final @Nullable Output<String> fileMode;
+    private @Nullable Output<String> fileMode;
 
-    public Output<String> fileMode() {
-        return this.fileMode == null ? Codegen.empty() : this.fileMode;
+    public Optional<Output<String>> fileMode() {
+        return Optional.ofNullable(this.fileMode);
     }
 
     /**
@@ -42,10 +42,10 @@ public final class NfsFileShareNfsFileShareDefaultsGetArgs extends com.pulumi.re
      * 
      */
     @Import(name="groupId")
-      private final @Nullable Output<String> groupId;
+    private @Nullable Output<String> groupId;
 
-    public Output<String> groupId() {
-        return this.groupId == null ? Codegen.empty() : this.groupId;
+    public Optional<Output<String>> groupId() {
+        return Optional.ofNullable(this.groupId);
     }
 
     /**
@@ -53,89 +53,78 @@ public final class NfsFileShareNfsFileShareDefaultsGetArgs extends com.pulumi.re
      * 
      */
     @Import(name="ownerId")
-      private final @Nullable Output<String> ownerId;
+    private @Nullable Output<String> ownerId;
 
-    public Output<String> ownerId() {
-        return this.ownerId == null ? Codegen.empty() : this.ownerId;
+    public Optional<Output<String>> ownerId() {
+        return Optional.ofNullable(this.ownerId);
     }
 
-    public NfsFileShareNfsFileShareDefaultsGetArgs(
-        @Nullable Output<String> directoryMode,
-        @Nullable Output<String> fileMode,
-        @Nullable Output<String> groupId,
-        @Nullable Output<String> ownerId) {
-        this.directoryMode = directoryMode;
-        this.fileMode = fileMode;
-        this.groupId = groupId;
-        this.ownerId = ownerId;
-    }
+    private NfsFileShareNfsFileShareDefaultsGetArgs() {}
 
-    private NfsFileShareNfsFileShareDefaultsGetArgs() {
-        this.directoryMode = Codegen.empty();
-        this.fileMode = Codegen.empty();
-        this.groupId = Codegen.empty();
-        this.ownerId = Codegen.empty();
+    private NfsFileShareNfsFileShareDefaultsGetArgs(NfsFileShareNfsFileShareDefaultsGetArgs $) {
+        this.directoryMode = $.directoryMode;
+        this.fileMode = $.fileMode;
+        this.groupId = $.groupId;
+        this.ownerId = $.ownerId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NfsFileShareNfsFileShareDefaultsGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> directoryMode;
-        private @Nullable Output<String> fileMode;
-        private @Nullable Output<String> groupId;
-        private @Nullable Output<String> ownerId;
+        private NfsFileShareNfsFileShareDefaultsGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new NfsFileShareNfsFileShareDefaultsGetArgs();
         }
 
         public Builder(NfsFileShareNfsFileShareDefaultsGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.directoryMode = defaults.directoryMode;
-    	      this.fileMode = defaults.fileMode;
-    	      this.groupId = defaults.groupId;
-    	      this.ownerId = defaults.ownerId;
+            $ = new NfsFileShareNfsFileShareDefaultsGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder directoryMode(@Nullable Output<String> directoryMode) {
-            this.directoryMode = directoryMode;
+            $.directoryMode = directoryMode;
             return this;
         }
-        public Builder directoryMode(@Nullable String directoryMode) {
-            this.directoryMode = Codegen.ofNullable(directoryMode);
-            return this;
+
+        public Builder directoryMode(String directoryMode) {
+            return directoryMode(Output.of(directoryMode));
         }
+
         public Builder fileMode(@Nullable Output<String> fileMode) {
-            this.fileMode = fileMode;
+            $.fileMode = fileMode;
             return this;
         }
-        public Builder fileMode(@Nullable String fileMode) {
-            this.fileMode = Codegen.ofNullable(fileMode);
-            return this;
+
+        public Builder fileMode(String fileMode) {
+            return fileMode(Output.of(fileMode));
         }
+
         public Builder groupId(@Nullable Output<String> groupId) {
-            this.groupId = groupId;
+            $.groupId = groupId;
             return this;
         }
-        public Builder groupId(@Nullable String groupId) {
-            this.groupId = Codegen.ofNullable(groupId);
-            return this;
+
+        public Builder groupId(String groupId) {
+            return groupId(Output.of(groupId));
         }
+
         public Builder ownerId(@Nullable Output<String> ownerId) {
-            this.ownerId = ownerId;
+            $.ownerId = ownerId;
             return this;
         }
-        public Builder ownerId(@Nullable String ownerId) {
-            this.ownerId = Codegen.ofNullable(ownerId);
-            return this;
-        }        public NfsFileShareNfsFileShareDefaultsGetArgs build() {
-            return new NfsFileShareNfsFileShareDefaultsGetArgs(directoryMode, fileMode, groupId, ownerId);
+
+        public Builder ownerId(String ownerId) {
+            return ownerId(Output.of(ownerId));
+        }
+
+        public NfsFileShareNfsFileShareDefaultsGetArgs build() {
+            return $;
         }
     }
+
 }

@@ -5,7 +5,6 @@ package com.pulumi.googlenative.recaptchaenterprise_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.recaptchaenterprise_v1.enums.GoogleCloudRecaptchaenterpriseV1WafSettingsWafFeature;
 import com.pulumi.googlenative.recaptchaenterprise_v1.enums.GoogleCloudRecaptchaenterpriseV1WafSettingsWafService;
 import java.util.Objects;
@@ -24,7 +23,7 @@ public final class GoogleCloudRecaptchaenterpriseV1WafSettingsArgs extends com.p
      * 
      */
     @Import(name="wafFeature", required=true)
-      private final Output<GoogleCloudRecaptchaenterpriseV1WafSettingsWafFeature> wafFeature;
+    private Output<GoogleCloudRecaptchaenterpriseV1WafSettingsWafFeature> wafFeature;
 
     public Output<GoogleCloudRecaptchaenterpriseV1WafSettingsWafFeature> wafFeature() {
         return this.wafFeature;
@@ -35,63 +34,60 @@ public final class GoogleCloudRecaptchaenterpriseV1WafSettingsArgs extends com.p
      * 
      */
     @Import(name="wafService", required=true)
-      private final Output<GoogleCloudRecaptchaenterpriseV1WafSettingsWafService> wafService;
+    private Output<GoogleCloudRecaptchaenterpriseV1WafSettingsWafService> wafService;
 
     public Output<GoogleCloudRecaptchaenterpriseV1WafSettingsWafService> wafService() {
         return this.wafService;
     }
 
-    public GoogleCloudRecaptchaenterpriseV1WafSettingsArgs(
-        Output<GoogleCloudRecaptchaenterpriseV1WafSettingsWafFeature> wafFeature,
-        Output<GoogleCloudRecaptchaenterpriseV1WafSettingsWafService> wafService) {
-        this.wafFeature = Objects.requireNonNull(wafFeature, "expected parameter 'wafFeature' to be non-null");
-        this.wafService = Objects.requireNonNull(wafService, "expected parameter 'wafService' to be non-null");
-    }
+    private GoogleCloudRecaptchaenterpriseV1WafSettingsArgs() {}
 
-    private GoogleCloudRecaptchaenterpriseV1WafSettingsArgs() {
-        this.wafFeature = Codegen.empty();
-        this.wafService = Codegen.empty();
+    private GoogleCloudRecaptchaenterpriseV1WafSettingsArgs(GoogleCloudRecaptchaenterpriseV1WafSettingsArgs $) {
+        this.wafFeature = $.wafFeature;
+        this.wafService = $.wafService;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudRecaptchaenterpriseV1WafSettingsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<GoogleCloudRecaptchaenterpriseV1WafSettingsWafFeature> wafFeature;
-        private Output<GoogleCloudRecaptchaenterpriseV1WafSettingsWafService> wafService;
+        private GoogleCloudRecaptchaenterpriseV1WafSettingsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudRecaptchaenterpriseV1WafSettingsArgs();
         }
 
         public Builder(GoogleCloudRecaptchaenterpriseV1WafSettingsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.wafFeature = defaults.wafFeature;
-    	      this.wafService = defaults.wafService;
+            $ = new GoogleCloudRecaptchaenterpriseV1WafSettingsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder wafFeature(Output<GoogleCloudRecaptchaenterpriseV1WafSettingsWafFeature> wafFeature) {
-            this.wafFeature = Objects.requireNonNull(wafFeature);
+            $.wafFeature = wafFeature;
             return this;
         }
+
         public Builder wafFeature(GoogleCloudRecaptchaenterpriseV1WafSettingsWafFeature wafFeature) {
-            this.wafFeature = Output.of(Objects.requireNonNull(wafFeature));
-            return this;
+            return wafFeature(Output.of(wafFeature));
         }
+
         public Builder wafService(Output<GoogleCloudRecaptchaenterpriseV1WafSettingsWafService> wafService) {
-            this.wafService = Objects.requireNonNull(wafService);
+            $.wafService = wafService;
             return this;
         }
+
         public Builder wafService(GoogleCloudRecaptchaenterpriseV1WafSettingsWafService wafService) {
-            this.wafService = Output.of(Objects.requireNonNull(wafService));
-            return this;
-        }        public GoogleCloudRecaptchaenterpriseV1WafSettingsArgs build() {
-            return new GoogleCloudRecaptchaenterpriseV1WafSettingsArgs(wafFeature, wafService);
+            return wafService(Output.of(wafService));
+        }
+
+        public GoogleCloudRecaptchaenterpriseV1WafSettingsArgs build() {
+            $.wafFeature = Objects.requireNonNull($.wafFeature, "expected parameter 'wafFeature' to be non-null");
+            $.wafService = Objects.requireNonNull($.wafService, "expected parameter 'wafService' to be non-null");
+            return $;
         }
     }
+
 }

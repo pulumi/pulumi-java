@@ -24,7 +24,7 @@ public final class SelfDependencyTumblingWindowTriggerReferenceResponse extends 
      * 
      */
     @Import(name="offset", required=true)
-      private final String offset;
+    private String offset;
 
     public String offset() {
         return this.offset;
@@ -35,10 +35,10 @@ public final class SelfDependencyTumblingWindowTriggerReferenceResponse extends 
      * 
      */
     @Import(name="size")
-      private final @Nullable String size;
+    private @Nullable String size;
 
     public Optional<String> size() {
-        return this.size == null ? Optional.empty() : Optional.ofNullable(this.size);
+        return Optional.ofNullable(this.size);
     }
 
     /**
@@ -47,64 +47,58 @@ public final class SelfDependencyTumblingWindowTriggerReferenceResponse extends 
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
     }
 
-    public SelfDependencyTumblingWindowTriggerReferenceResponse(
-        String offset,
-        @Nullable String size,
-        String type) {
-        this.offset = Objects.requireNonNull(offset, "expected parameter 'offset' to be non-null");
-        this.size = size;
-        this.type = Codegen.stringProp("type").arg(type).require();
-    }
+    private SelfDependencyTumblingWindowTriggerReferenceResponse() {}
 
-    private SelfDependencyTumblingWindowTriggerReferenceResponse() {
-        this.offset = null;
-        this.size = null;
-        this.type = null;
+    private SelfDependencyTumblingWindowTriggerReferenceResponse(SelfDependencyTumblingWindowTriggerReferenceResponse $) {
+        this.offset = $.offset;
+        this.size = $.size;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SelfDependencyTumblingWindowTriggerReferenceResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String offset;
-        private @Nullable String size;
-        private String type;
+        private SelfDependencyTumblingWindowTriggerReferenceResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new SelfDependencyTumblingWindowTriggerReferenceResponse();
         }
 
         public Builder(SelfDependencyTumblingWindowTriggerReferenceResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.offset = defaults.offset;
-    	      this.size = defaults.size;
-    	      this.type = defaults.type;
+            $ = new SelfDependencyTumblingWindowTriggerReferenceResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder offset(String offset) {
-            this.offset = Objects.requireNonNull(offset);
+            $.offset = offset;
             return this;
         }
+
         public Builder size(@Nullable String size) {
-            this.size = size;
+            $.size = size;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
-        }        public SelfDependencyTumblingWindowTriggerReferenceResponse build() {
-            return new SelfDependencyTumblingWindowTriggerReferenceResponse(offset, size, type);
+        }
+
+        public SelfDependencyTumblingWindowTriggerReferenceResponse build() {
+            $.offset = Objects.requireNonNull($.offset, "expected parameter 'offset' to be non-null");
+            $.type = Codegen.stringProp("type").arg($.type).require();
+            return $;
         }
     }
+
 }

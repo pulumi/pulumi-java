@@ -27,10 +27,10 @@ public final class PeeringPropertiesDirectResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="connections")
-      private final @Nullable List<DirectConnectionResponse> connections;
+    private @Nullable List<DirectConnectionResponse> connections;
 
-    public List<DirectConnectionResponse> connections() {
-        return this.connections == null ? List.of() : this.connections;
+    public Optional<List<DirectConnectionResponse>> connections() {
+        return Optional.ofNullable(this.connections);
     }
 
     /**
@@ -38,10 +38,10 @@ public final class PeeringPropertiesDirectResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="directPeeringType")
-      private final @Nullable String directPeeringType;
+    private @Nullable String directPeeringType;
 
     public Optional<String> directPeeringType() {
-        return this.directPeeringType == null ? Optional.empty() : Optional.ofNullable(this.directPeeringType);
+        return Optional.ofNullable(this.directPeeringType);
     }
 
     /**
@@ -49,10 +49,10 @@ public final class PeeringPropertiesDirectResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="peerAsn")
-      private final @Nullable SubResourceResponse peerAsn;
+    private @Nullable SubResourceResponse peerAsn;
 
     public Optional<SubResourceResponse> peerAsn() {
-        return this.peerAsn == null ? Optional.empty() : Optional.ofNullable(this.peerAsn);
+        return Optional.ofNullable(this.peerAsn);
     }
 
     /**
@@ -60,76 +60,67 @@ public final class PeeringPropertiesDirectResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="useForPeeringService", required=true)
-      private final Boolean useForPeeringService;
+    private Boolean useForPeeringService;
 
     public Boolean useForPeeringService() {
         return this.useForPeeringService;
     }
 
-    public PeeringPropertiesDirectResponse(
-        @Nullable List<DirectConnectionResponse> connections,
-        @Nullable String directPeeringType,
-        @Nullable SubResourceResponse peerAsn,
-        Boolean useForPeeringService) {
-        this.connections = connections;
-        this.directPeeringType = directPeeringType;
-        this.peerAsn = peerAsn;
-        this.useForPeeringService = Objects.requireNonNull(useForPeeringService, "expected parameter 'useForPeeringService' to be non-null");
-    }
+    private PeeringPropertiesDirectResponse() {}
 
-    private PeeringPropertiesDirectResponse() {
-        this.connections = List.of();
-        this.directPeeringType = null;
-        this.peerAsn = null;
-        this.useForPeeringService = null;
+    private PeeringPropertiesDirectResponse(PeeringPropertiesDirectResponse $) {
+        this.connections = $.connections;
+        this.directPeeringType = $.directPeeringType;
+        this.peerAsn = $.peerAsn;
+        this.useForPeeringService = $.useForPeeringService;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PeeringPropertiesDirectResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<DirectConnectionResponse> connections;
-        private @Nullable String directPeeringType;
-        private @Nullable SubResourceResponse peerAsn;
-        private Boolean useForPeeringService;
+        private PeeringPropertiesDirectResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new PeeringPropertiesDirectResponse();
         }
 
         public Builder(PeeringPropertiesDirectResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.connections = defaults.connections;
-    	      this.directPeeringType = defaults.directPeeringType;
-    	      this.peerAsn = defaults.peerAsn;
-    	      this.useForPeeringService = defaults.useForPeeringService;
+            $ = new PeeringPropertiesDirectResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder connections(@Nullable List<DirectConnectionResponse> connections) {
-            this.connections = connections;
+            $.connections = connections;
             return this;
         }
+
         public Builder connections(DirectConnectionResponse... connections) {
             return connections(List.of(connections));
         }
+
         public Builder directPeeringType(@Nullable String directPeeringType) {
-            this.directPeeringType = directPeeringType;
+            $.directPeeringType = directPeeringType;
             return this;
         }
+
         public Builder peerAsn(@Nullable SubResourceResponse peerAsn) {
-            this.peerAsn = peerAsn;
+            $.peerAsn = peerAsn;
             return this;
         }
+
         public Builder useForPeeringService(Boolean useForPeeringService) {
-            this.useForPeeringService = Objects.requireNonNull(useForPeeringService);
+            $.useForPeeringService = useForPeeringService;
             return this;
-        }        public PeeringPropertiesDirectResponse build() {
-            return new PeeringPropertiesDirectResponse(connections, directPeeringType, peerAsn, useForPeeringService);
+        }
+
+        public PeeringPropertiesDirectResponse build() {
+            $.useForPeeringService = Objects.requireNonNull($.useForPeeringService, "expected parameter 'useForPeeringService' to be non-null");
+            return $;
         }
     }
+
 }

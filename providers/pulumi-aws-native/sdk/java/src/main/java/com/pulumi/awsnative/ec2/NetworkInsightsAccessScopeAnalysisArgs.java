@@ -6,10 +6,10 @@ package com.pulumi.awsnative.ec2;
 import com.pulumi.awsnative.ec2.inputs.NetworkInsightsAccessScopeAnalysisTagArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -18,73 +18,70 @@ public final class NetworkInsightsAccessScopeAnalysisArgs extends com.pulumi.res
     public static final NetworkInsightsAccessScopeAnalysisArgs Empty = new NetworkInsightsAccessScopeAnalysisArgs();
 
     @Import(name="networkInsightsAccessScopeId", required=true)
-      private final Output<String> networkInsightsAccessScopeId;
+    private Output<String> networkInsightsAccessScopeId;
 
     public Output<String> networkInsightsAccessScopeId() {
         return this.networkInsightsAccessScopeId;
     }
 
     @Import(name="tags")
-      private final @Nullable Output<List<NetworkInsightsAccessScopeAnalysisTagArgs>> tags;
+    private @Nullable Output<List<NetworkInsightsAccessScopeAnalysisTagArgs>> tags;
 
-    public Output<List<NetworkInsightsAccessScopeAnalysisTagArgs>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<List<NetworkInsightsAccessScopeAnalysisTagArgs>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public NetworkInsightsAccessScopeAnalysisArgs(
-        Output<String> networkInsightsAccessScopeId,
-        @Nullable Output<List<NetworkInsightsAccessScopeAnalysisTagArgs>> tags) {
-        this.networkInsightsAccessScopeId = Objects.requireNonNull(networkInsightsAccessScopeId, "expected parameter 'networkInsightsAccessScopeId' to be non-null");
-        this.tags = tags;
-    }
+    private NetworkInsightsAccessScopeAnalysisArgs() {}
 
-    private NetworkInsightsAccessScopeAnalysisArgs() {
-        this.networkInsightsAccessScopeId = Codegen.empty();
-        this.tags = Codegen.empty();
+    private NetworkInsightsAccessScopeAnalysisArgs(NetworkInsightsAccessScopeAnalysisArgs $) {
+        this.networkInsightsAccessScopeId = $.networkInsightsAccessScopeId;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NetworkInsightsAccessScopeAnalysisArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> networkInsightsAccessScopeId;
-        private @Nullable Output<List<NetworkInsightsAccessScopeAnalysisTagArgs>> tags;
+        private NetworkInsightsAccessScopeAnalysisArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new NetworkInsightsAccessScopeAnalysisArgs();
         }
 
         public Builder(NetworkInsightsAccessScopeAnalysisArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.networkInsightsAccessScopeId = defaults.networkInsightsAccessScopeId;
-    	      this.tags = defaults.tags;
+            $ = new NetworkInsightsAccessScopeAnalysisArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder networkInsightsAccessScopeId(Output<String> networkInsightsAccessScopeId) {
-            this.networkInsightsAccessScopeId = Objects.requireNonNull(networkInsightsAccessScopeId);
+            $.networkInsightsAccessScopeId = networkInsightsAccessScopeId;
             return this;
         }
+
         public Builder networkInsightsAccessScopeId(String networkInsightsAccessScopeId) {
-            this.networkInsightsAccessScopeId = Output.of(Objects.requireNonNull(networkInsightsAccessScopeId));
-            return this;
+            return networkInsightsAccessScopeId(Output.of(networkInsightsAccessScopeId));
         }
+
         public Builder tags(@Nullable Output<List<NetworkInsightsAccessScopeAnalysisTagArgs>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable List<NetworkInsightsAccessScopeAnalysisTagArgs> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(List<NetworkInsightsAccessScopeAnalysisTagArgs> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tags(NetworkInsightsAccessScopeAnalysisTagArgs... tags) {
             return tags(List.of(tags));
-        }        public NetworkInsightsAccessScopeAnalysisArgs build() {
-            return new NetworkInsightsAccessScopeAnalysisArgs(networkInsightsAccessScopeId, tags);
+        }
+
+        public NetworkInsightsAccessScopeAnalysisArgs build() {
+            $.networkInsightsAccessScopeId = Objects.requireNonNull($.networkInsightsAccessScopeId, "expected parameter 'networkInsightsAccessScopeId' to be non-null");
+            return $;
         }
     }
+
 }

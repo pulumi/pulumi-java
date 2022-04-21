@@ -5,9 +5,9 @@ package com.pulumi.googlenative.compute_alpha.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class ShieldedVmIntegrityPolicyArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="updateAutoLearnPolicy")
-      private final @Nullable Output<Boolean> updateAutoLearnPolicy;
+    private @Nullable Output<Boolean> updateAutoLearnPolicy;
 
-    public Output<Boolean> updateAutoLearnPolicy() {
-        return this.updateAutoLearnPolicy == null ? Codegen.empty() : this.updateAutoLearnPolicy;
+    public Optional<Output<Boolean>> updateAutoLearnPolicy() {
+        return Optional.ofNullable(this.updateAutoLearnPolicy);
     }
 
-    public ShieldedVmIntegrityPolicyArgs(@Nullable Output<Boolean> updateAutoLearnPolicy) {
-        this.updateAutoLearnPolicy = updateAutoLearnPolicy;
-    }
+    private ShieldedVmIntegrityPolicyArgs() {}
 
-    private ShieldedVmIntegrityPolicyArgs() {
-        this.updateAutoLearnPolicy = Codegen.empty();
+    private ShieldedVmIntegrityPolicyArgs(ShieldedVmIntegrityPolicyArgs $) {
+        this.updateAutoLearnPolicy = $.updateAutoLearnPolicy;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ShieldedVmIntegrityPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> updateAutoLearnPolicy;
+        private ShieldedVmIntegrityPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ShieldedVmIntegrityPolicyArgs();
         }
 
         public Builder(ShieldedVmIntegrityPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.updateAutoLearnPolicy = defaults.updateAutoLearnPolicy;
+            $ = new ShieldedVmIntegrityPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder updateAutoLearnPolicy(@Nullable Output<Boolean> updateAutoLearnPolicy) {
-            this.updateAutoLearnPolicy = updateAutoLearnPolicy;
+            $.updateAutoLearnPolicy = updateAutoLearnPolicy;
             return this;
         }
-        public Builder updateAutoLearnPolicy(@Nullable Boolean updateAutoLearnPolicy) {
-            this.updateAutoLearnPolicy = Codegen.ofNullable(updateAutoLearnPolicy);
-            return this;
-        }        public ShieldedVmIntegrityPolicyArgs build() {
-            return new ShieldedVmIntegrityPolicyArgs(updateAutoLearnPolicy);
+
+        public Builder updateAutoLearnPolicy(Boolean updateAutoLearnPolicy) {
+            return updateAutoLearnPolicy(Output.of(updateAutoLearnPolicy));
+        }
+
+        public ShieldedVmIntegrityPolicyArgs build() {
+            return $;
         }
     }
+
 }

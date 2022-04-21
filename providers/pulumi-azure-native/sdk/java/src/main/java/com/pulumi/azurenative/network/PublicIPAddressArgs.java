@@ -16,12 +16,12 @@ import com.pulumi.azurenative.network.inputs.SubResourceArgs;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -34,10 +34,10 @@ public final class PublicIPAddressArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="ddosSettings")
-      private final @Nullable Output<DdosSettingsArgs> ddosSettings;
+    private @Nullable Output<DdosSettingsArgs> ddosSettings;
 
-    public Output<DdosSettingsArgs> ddosSettings() {
-        return this.ddosSettings == null ? Codegen.empty() : this.ddosSettings;
+    public Optional<Output<DdosSettingsArgs>> ddosSettings() {
+        return Optional.ofNullable(this.ddosSettings);
     }
 
     /**
@@ -45,10 +45,10 @@ public final class PublicIPAddressArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="dnsSettings")
-      private final @Nullable Output<PublicIPAddressDnsSettingsArgs> dnsSettings;
+    private @Nullable Output<PublicIPAddressDnsSettingsArgs> dnsSettings;
 
-    public Output<PublicIPAddressDnsSettingsArgs> dnsSettings() {
-        return this.dnsSettings == null ? Codegen.empty() : this.dnsSettings;
+    public Optional<Output<PublicIPAddressDnsSettingsArgs>> dnsSettings() {
+        return Optional.ofNullable(this.dnsSettings);
     }
 
     /**
@@ -56,10 +56,10 @@ public final class PublicIPAddressArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="extendedLocation")
-      private final @Nullable Output<ExtendedLocationArgs> extendedLocation;
+    private @Nullable Output<ExtendedLocationArgs> extendedLocation;
 
-    public Output<ExtendedLocationArgs> extendedLocation() {
-        return this.extendedLocation == null ? Codegen.empty() : this.extendedLocation;
+    public Optional<Output<ExtendedLocationArgs>> extendedLocation() {
+        return Optional.ofNullable(this.extendedLocation);
     }
 
     /**
@@ -67,10 +67,10 @@ public final class PublicIPAddressArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="id")
-      private final @Nullable Output<String> id;
+    private @Nullable Output<String> id;
 
-    public Output<String> id() {
-        return this.id == null ? Codegen.empty() : this.id;
+    public Optional<Output<String>> id() {
+        return Optional.ofNullable(this.id);
     }
 
     /**
@@ -78,10 +78,10 @@ public final class PublicIPAddressArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="idleTimeoutInMinutes")
-      private final @Nullable Output<Integer> idleTimeoutInMinutes;
+    private @Nullable Output<Integer> idleTimeoutInMinutes;
 
-    public Output<Integer> idleTimeoutInMinutes() {
-        return this.idleTimeoutInMinutes == null ? Codegen.empty() : this.idleTimeoutInMinutes;
+    public Optional<Output<Integer>> idleTimeoutInMinutes() {
+        return Optional.ofNullable(this.idleTimeoutInMinutes);
     }
 
     /**
@@ -89,10 +89,10 @@ public final class PublicIPAddressArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="ipAddress")
-      private final @Nullable Output<String> ipAddress;
+    private @Nullable Output<String> ipAddress;
 
-    public Output<String> ipAddress() {
-        return this.ipAddress == null ? Codegen.empty() : this.ipAddress;
+    public Optional<Output<String>> ipAddress() {
+        return Optional.ofNullable(this.ipAddress);
     }
 
     /**
@@ -100,10 +100,10 @@ public final class PublicIPAddressArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="ipTags")
-      private final @Nullable Output<List<IpTagArgs>> ipTags;
+    private @Nullable Output<List<IpTagArgs>> ipTags;
 
-    public Output<List<IpTagArgs>> ipTags() {
-        return this.ipTags == null ? Codegen.empty() : this.ipTags;
+    public Optional<Output<List<IpTagArgs>>> ipTags() {
+        return Optional.ofNullable(this.ipTags);
     }
 
     /**
@@ -111,10 +111,10 @@ public final class PublicIPAddressArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="linkedPublicIPAddress")
-      private final @Nullable Output<com.pulumi.azurenative.network.inputs.PublicIPAddressArgs> linkedPublicIPAddress;
+    private @Nullable Output<com.pulumi.azurenative.network.inputs.PublicIPAddressArgs> linkedPublicIPAddress;
 
-    public Output<com.pulumi.azurenative.network.inputs.PublicIPAddressArgs> linkedPublicIPAddress() {
-        return this.linkedPublicIPAddress == null ? Codegen.empty() : this.linkedPublicIPAddress;
+    public Optional<Output<com.pulumi.azurenative.network.inputs.PublicIPAddressArgs>> linkedPublicIPAddress() {
+        return Optional.ofNullable(this.linkedPublicIPAddress);
     }
 
     /**
@@ -122,10 +122,10 @@ public final class PublicIPAddressArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -133,10 +133,10 @@ public final class PublicIPAddressArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="migrationPhase")
-      private final @Nullable Output<Either<String,PublicIPAddressMigrationPhase>> migrationPhase;
+    private @Nullable Output<Either<String,PublicIPAddressMigrationPhase>> migrationPhase;
 
-    public Output<Either<String,PublicIPAddressMigrationPhase>> migrationPhase() {
-        return this.migrationPhase == null ? Codegen.empty() : this.migrationPhase;
+    public Optional<Output<Either<String,PublicIPAddressMigrationPhase>>> migrationPhase() {
+        return Optional.ofNullable(this.migrationPhase);
     }
 
     /**
@@ -144,10 +144,10 @@ public final class PublicIPAddressArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="natGateway")
-      private final @Nullable Output<NatGatewayArgs> natGateway;
+    private @Nullable Output<NatGatewayArgs> natGateway;
 
-    public Output<NatGatewayArgs> natGateway() {
-        return this.natGateway == null ? Codegen.empty() : this.natGateway;
+    public Optional<Output<NatGatewayArgs>> natGateway() {
+        return Optional.ofNullable(this.natGateway);
     }
 
     /**
@@ -155,10 +155,10 @@ public final class PublicIPAddressArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="publicIPAddressVersion")
-      private final @Nullable Output<Either<String,IPVersion>> publicIPAddressVersion;
+    private @Nullable Output<Either<String,IPVersion>> publicIPAddressVersion;
 
-    public Output<Either<String,IPVersion>> publicIPAddressVersion() {
-        return this.publicIPAddressVersion == null ? Codegen.empty() : this.publicIPAddressVersion;
+    public Optional<Output<Either<String,IPVersion>>> publicIPAddressVersion() {
+        return Optional.ofNullable(this.publicIPAddressVersion);
     }
 
     /**
@@ -166,10 +166,10 @@ public final class PublicIPAddressArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="publicIPAllocationMethod")
-      private final @Nullable Output<Either<String,IPAllocationMethod>> publicIPAllocationMethod;
+    private @Nullable Output<Either<String,IPAllocationMethod>> publicIPAllocationMethod;
 
-    public Output<Either<String,IPAllocationMethod>> publicIPAllocationMethod() {
-        return this.publicIPAllocationMethod == null ? Codegen.empty() : this.publicIPAllocationMethod;
+    public Optional<Output<Either<String,IPAllocationMethod>>> publicIPAllocationMethod() {
+        return Optional.ofNullable(this.publicIPAllocationMethod);
     }
 
     /**
@@ -177,10 +177,10 @@ public final class PublicIPAddressArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="publicIPPrefix")
-      private final @Nullable Output<SubResourceArgs> publicIPPrefix;
+    private @Nullable Output<SubResourceArgs> publicIPPrefix;
 
-    public Output<SubResourceArgs> publicIPPrefix() {
-        return this.publicIPPrefix == null ? Codegen.empty() : this.publicIPPrefix;
+    public Optional<Output<SubResourceArgs>> publicIPPrefix() {
+        return Optional.ofNullable(this.publicIPPrefix);
     }
 
     /**
@@ -188,10 +188,10 @@ public final class PublicIPAddressArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="publicIpAddressName")
-      private final @Nullable Output<String> publicIpAddressName;
+    private @Nullable Output<String> publicIpAddressName;
 
-    public Output<String> publicIpAddressName() {
-        return this.publicIpAddressName == null ? Codegen.empty() : this.publicIpAddressName;
+    public Optional<Output<String>> publicIpAddressName() {
+        return Optional.ofNullable(this.publicIpAddressName);
     }
 
     /**
@@ -199,7 +199,7 @@ public final class PublicIPAddressArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -210,10 +210,10 @@ public final class PublicIPAddressArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="servicePublicIPAddress")
-      private final @Nullable Output<com.pulumi.azurenative.network.inputs.PublicIPAddressArgs> servicePublicIPAddress;
+    private @Nullable Output<com.pulumi.azurenative.network.inputs.PublicIPAddressArgs> servicePublicIPAddress;
 
-    public Output<com.pulumi.azurenative.network.inputs.PublicIPAddressArgs> servicePublicIPAddress() {
-        return this.servicePublicIPAddress == null ? Codegen.empty() : this.servicePublicIPAddress;
+    public Optional<Output<com.pulumi.azurenative.network.inputs.PublicIPAddressArgs>> servicePublicIPAddress() {
+        return Optional.ofNullable(this.servicePublicIPAddress);
     }
 
     /**
@@ -221,10 +221,10 @@ public final class PublicIPAddressArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="sku")
-      private final @Nullable Output<PublicIPAddressSkuArgs> sku;
+    private @Nullable Output<PublicIPAddressSkuArgs> sku;
 
-    public Output<PublicIPAddressSkuArgs> sku() {
-        return this.sku == null ? Codegen.empty() : this.sku;
+    public Optional<Output<PublicIPAddressSkuArgs>> sku() {
+        return Optional.ofNullable(this.sku);
     }
 
     /**
@@ -232,10 +232,10 @@ public final class PublicIPAddressArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -243,303 +243,247 @@ public final class PublicIPAddressArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="zones")
-      private final @Nullable Output<List<String>> zones;
+    private @Nullable Output<List<String>> zones;
 
-    public Output<List<String>> zones() {
-        return this.zones == null ? Codegen.empty() : this.zones;
+    public Optional<Output<List<String>>> zones() {
+        return Optional.ofNullable(this.zones);
     }
 
-    public PublicIPAddressArgs(
-        @Nullable Output<DdosSettingsArgs> ddosSettings,
-        @Nullable Output<PublicIPAddressDnsSettingsArgs> dnsSettings,
-        @Nullable Output<ExtendedLocationArgs> extendedLocation,
-        @Nullable Output<String> id,
-        @Nullable Output<Integer> idleTimeoutInMinutes,
-        @Nullable Output<String> ipAddress,
-        @Nullable Output<List<IpTagArgs>> ipTags,
-        @Nullable Output<com.pulumi.azurenative.network.inputs.PublicIPAddressArgs> linkedPublicIPAddress,
-        @Nullable Output<String> location,
-        @Nullable Output<Either<String,PublicIPAddressMigrationPhase>> migrationPhase,
-        @Nullable Output<NatGatewayArgs> natGateway,
-        @Nullable Output<Either<String,IPVersion>> publicIPAddressVersion,
-        @Nullable Output<Either<String,IPAllocationMethod>> publicIPAllocationMethod,
-        @Nullable Output<SubResourceArgs> publicIPPrefix,
-        @Nullable Output<String> publicIpAddressName,
-        Output<String> resourceGroupName,
-        @Nullable Output<com.pulumi.azurenative.network.inputs.PublicIPAddressArgs> servicePublicIPAddress,
-        @Nullable Output<PublicIPAddressSkuArgs> sku,
-        @Nullable Output<Map<String,String>> tags,
-        @Nullable Output<List<String>> zones) {
-        this.ddosSettings = ddosSettings;
-        this.dnsSettings = dnsSettings;
-        this.extendedLocation = extendedLocation;
-        this.id = id;
-        this.idleTimeoutInMinutes = idleTimeoutInMinutes;
-        this.ipAddress = ipAddress;
-        this.ipTags = ipTags;
-        this.linkedPublicIPAddress = linkedPublicIPAddress;
-        this.location = location;
-        this.migrationPhase = migrationPhase;
-        this.natGateway = natGateway;
-        this.publicIPAddressVersion = publicIPAddressVersion;
-        this.publicIPAllocationMethod = publicIPAllocationMethod;
-        this.publicIPPrefix = publicIPPrefix;
-        this.publicIpAddressName = publicIpAddressName;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.servicePublicIPAddress = servicePublicIPAddress;
-        this.sku = sku;
-        this.tags = tags;
-        this.zones = zones;
-    }
+    private PublicIPAddressArgs() {}
 
-    private PublicIPAddressArgs() {
-        this.ddosSettings = Codegen.empty();
-        this.dnsSettings = Codegen.empty();
-        this.extendedLocation = Codegen.empty();
-        this.id = Codegen.empty();
-        this.idleTimeoutInMinutes = Codegen.empty();
-        this.ipAddress = Codegen.empty();
-        this.ipTags = Codegen.empty();
-        this.linkedPublicIPAddress = Codegen.empty();
-        this.location = Codegen.empty();
-        this.migrationPhase = Codegen.empty();
-        this.natGateway = Codegen.empty();
-        this.publicIPAddressVersion = Codegen.empty();
-        this.publicIPAllocationMethod = Codegen.empty();
-        this.publicIPPrefix = Codegen.empty();
-        this.publicIpAddressName = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.servicePublicIPAddress = Codegen.empty();
-        this.sku = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.zones = Codegen.empty();
+    private PublicIPAddressArgs(PublicIPAddressArgs $) {
+        this.ddosSettings = $.ddosSettings;
+        this.dnsSettings = $.dnsSettings;
+        this.extendedLocation = $.extendedLocation;
+        this.id = $.id;
+        this.idleTimeoutInMinutes = $.idleTimeoutInMinutes;
+        this.ipAddress = $.ipAddress;
+        this.ipTags = $.ipTags;
+        this.linkedPublicIPAddress = $.linkedPublicIPAddress;
+        this.location = $.location;
+        this.migrationPhase = $.migrationPhase;
+        this.natGateway = $.natGateway;
+        this.publicIPAddressVersion = $.publicIPAddressVersion;
+        this.publicIPAllocationMethod = $.publicIPAllocationMethod;
+        this.publicIPPrefix = $.publicIPPrefix;
+        this.publicIpAddressName = $.publicIpAddressName;
+        this.resourceGroupName = $.resourceGroupName;
+        this.servicePublicIPAddress = $.servicePublicIPAddress;
+        this.sku = $.sku;
+        this.tags = $.tags;
+        this.zones = $.zones;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PublicIPAddressArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<DdosSettingsArgs> ddosSettings;
-        private @Nullable Output<PublicIPAddressDnsSettingsArgs> dnsSettings;
-        private @Nullable Output<ExtendedLocationArgs> extendedLocation;
-        private @Nullable Output<String> id;
-        private @Nullable Output<Integer> idleTimeoutInMinutes;
-        private @Nullable Output<String> ipAddress;
-        private @Nullable Output<List<IpTagArgs>> ipTags;
-        private @Nullable Output<com.pulumi.azurenative.network.inputs.PublicIPAddressArgs> linkedPublicIPAddress;
-        private @Nullable Output<String> location;
-        private @Nullable Output<Either<String,PublicIPAddressMigrationPhase>> migrationPhase;
-        private @Nullable Output<NatGatewayArgs> natGateway;
-        private @Nullable Output<Either<String,IPVersion>> publicIPAddressVersion;
-        private @Nullable Output<Either<String,IPAllocationMethod>> publicIPAllocationMethod;
-        private @Nullable Output<SubResourceArgs> publicIPPrefix;
-        private @Nullable Output<String> publicIpAddressName;
-        private Output<String> resourceGroupName;
-        private @Nullable Output<com.pulumi.azurenative.network.inputs.PublicIPAddressArgs> servicePublicIPAddress;
-        private @Nullable Output<PublicIPAddressSkuArgs> sku;
-        private @Nullable Output<Map<String,String>> tags;
-        private @Nullable Output<List<String>> zones;
+        private PublicIPAddressArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PublicIPAddressArgs();
         }
 
         public Builder(PublicIPAddressArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.ddosSettings = defaults.ddosSettings;
-    	      this.dnsSettings = defaults.dnsSettings;
-    	      this.extendedLocation = defaults.extendedLocation;
-    	      this.id = defaults.id;
-    	      this.idleTimeoutInMinutes = defaults.idleTimeoutInMinutes;
-    	      this.ipAddress = defaults.ipAddress;
-    	      this.ipTags = defaults.ipTags;
-    	      this.linkedPublicIPAddress = defaults.linkedPublicIPAddress;
-    	      this.location = defaults.location;
-    	      this.migrationPhase = defaults.migrationPhase;
-    	      this.natGateway = defaults.natGateway;
-    	      this.publicIPAddressVersion = defaults.publicIPAddressVersion;
-    	      this.publicIPAllocationMethod = defaults.publicIPAllocationMethod;
-    	      this.publicIPPrefix = defaults.publicIPPrefix;
-    	      this.publicIpAddressName = defaults.publicIpAddressName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.servicePublicIPAddress = defaults.servicePublicIPAddress;
-    	      this.sku = defaults.sku;
-    	      this.tags = defaults.tags;
-    	      this.zones = defaults.zones;
+            $ = new PublicIPAddressArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder ddosSettings(@Nullable Output<DdosSettingsArgs> ddosSettings) {
-            this.ddosSettings = ddosSettings;
+            $.ddosSettings = ddosSettings;
             return this;
         }
-        public Builder ddosSettings(@Nullable DdosSettingsArgs ddosSettings) {
-            this.ddosSettings = Codegen.ofNullable(ddosSettings);
-            return this;
+
+        public Builder ddosSettings(DdosSettingsArgs ddosSettings) {
+            return ddosSettings(Output.of(ddosSettings));
         }
+
         public Builder dnsSettings(@Nullable Output<PublicIPAddressDnsSettingsArgs> dnsSettings) {
-            this.dnsSettings = dnsSettings;
+            $.dnsSettings = dnsSettings;
             return this;
         }
-        public Builder dnsSettings(@Nullable PublicIPAddressDnsSettingsArgs dnsSettings) {
-            this.dnsSettings = Codegen.ofNullable(dnsSettings);
-            return this;
+
+        public Builder dnsSettings(PublicIPAddressDnsSettingsArgs dnsSettings) {
+            return dnsSettings(Output.of(dnsSettings));
         }
+
         public Builder extendedLocation(@Nullable Output<ExtendedLocationArgs> extendedLocation) {
-            this.extendedLocation = extendedLocation;
+            $.extendedLocation = extendedLocation;
             return this;
         }
-        public Builder extendedLocation(@Nullable ExtendedLocationArgs extendedLocation) {
-            this.extendedLocation = Codegen.ofNullable(extendedLocation);
-            return this;
+
+        public Builder extendedLocation(ExtendedLocationArgs extendedLocation) {
+            return extendedLocation(Output.of(extendedLocation));
         }
+
         public Builder id(@Nullable Output<String> id) {
-            this.id = id;
+            $.id = id;
             return this;
         }
-        public Builder id(@Nullable String id) {
-            this.id = Codegen.ofNullable(id);
-            return this;
+
+        public Builder id(String id) {
+            return id(Output.of(id));
         }
+
         public Builder idleTimeoutInMinutes(@Nullable Output<Integer> idleTimeoutInMinutes) {
-            this.idleTimeoutInMinutes = idleTimeoutInMinutes;
+            $.idleTimeoutInMinutes = idleTimeoutInMinutes;
             return this;
         }
-        public Builder idleTimeoutInMinutes(@Nullable Integer idleTimeoutInMinutes) {
-            this.idleTimeoutInMinutes = Codegen.ofNullable(idleTimeoutInMinutes);
-            return this;
+
+        public Builder idleTimeoutInMinutes(Integer idleTimeoutInMinutes) {
+            return idleTimeoutInMinutes(Output.of(idleTimeoutInMinutes));
         }
+
         public Builder ipAddress(@Nullable Output<String> ipAddress) {
-            this.ipAddress = ipAddress;
+            $.ipAddress = ipAddress;
             return this;
         }
-        public Builder ipAddress(@Nullable String ipAddress) {
-            this.ipAddress = Codegen.ofNullable(ipAddress);
-            return this;
+
+        public Builder ipAddress(String ipAddress) {
+            return ipAddress(Output.of(ipAddress));
         }
+
         public Builder ipTags(@Nullable Output<List<IpTagArgs>> ipTags) {
-            this.ipTags = ipTags;
+            $.ipTags = ipTags;
             return this;
         }
-        public Builder ipTags(@Nullable List<IpTagArgs> ipTags) {
-            this.ipTags = Codegen.ofNullable(ipTags);
-            return this;
+
+        public Builder ipTags(List<IpTagArgs> ipTags) {
+            return ipTags(Output.of(ipTags));
         }
+
         public Builder ipTags(IpTagArgs... ipTags) {
             return ipTags(List.of(ipTags));
         }
+
         public Builder linkedPublicIPAddress(@Nullable Output<com.pulumi.azurenative.network.inputs.PublicIPAddressArgs> linkedPublicIPAddress) {
-            this.linkedPublicIPAddress = linkedPublicIPAddress;
+            $.linkedPublicIPAddress = linkedPublicIPAddress;
             return this;
         }
-        public Builder linkedPublicIPAddress(@Nullable com.pulumi.azurenative.network.inputs.PublicIPAddressArgs linkedPublicIPAddress) {
-            this.linkedPublicIPAddress = Codegen.ofNullable(linkedPublicIPAddress);
-            return this;
+
+        public Builder linkedPublicIPAddress(com.pulumi.azurenative.network.inputs.PublicIPAddressArgs linkedPublicIPAddress) {
+            return linkedPublicIPAddress(Output.of(linkedPublicIPAddress));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder migrationPhase(@Nullable Output<Either<String,PublicIPAddressMigrationPhase>> migrationPhase) {
-            this.migrationPhase = migrationPhase;
+            $.migrationPhase = migrationPhase;
             return this;
         }
-        public Builder migrationPhase(@Nullable Either<String,PublicIPAddressMigrationPhase> migrationPhase) {
-            this.migrationPhase = Codegen.ofNullable(migrationPhase);
-            return this;
+
+        public Builder migrationPhase(Either<String,PublicIPAddressMigrationPhase> migrationPhase) {
+            return migrationPhase(Output.of(migrationPhase));
         }
+
         public Builder natGateway(@Nullable Output<NatGatewayArgs> natGateway) {
-            this.natGateway = natGateway;
+            $.natGateway = natGateway;
             return this;
         }
-        public Builder natGateway(@Nullable NatGatewayArgs natGateway) {
-            this.natGateway = Codegen.ofNullable(natGateway);
-            return this;
+
+        public Builder natGateway(NatGatewayArgs natGateway) {
+            return natGateway(Output.of(natGateway));
         }
+
         public Builder publicIPAddressVersion(@Nullable Output<Either<String,IPVersion>> publicIPAddressVersion) {
-            this.publicIPAddressVersion = publicIPAddressVersion;
+            $.publicIPAddressVersion = publicIPAddressVersion;
             return this;
         }
-        public Builder publicIPAddressVersion(@Nullable Either<String,IPVersion> publicIPAddressVersion) {
-            this.publicIPAddressVersion = Codegen.ofNullable(publicIPAddressVersion);
-            return this;
+
+        public Builder publicIPAddressVersion(Either<String,IPVersion> publicIPAddressVersion) {
+            return publicIPAddressVersion(Output.of(publicIPAddressVersion));
         }
+
         public Builder publicIPAllocationMethod(@Nullable Output<Either<String,IPAllocationMethod>> publicIPAllocationMethod) {
-            this.publicIPAllocationMethod = publicIPAllocationMethod;
+            $.publicIPAllocationMethod = publicIPAllocationMethod;
             return this;
         }
-        public Builder publicIPAllocationMethod(@Nullable Either<String,IPAllocationMethod> publicIPAllocationMethod) {
-            this.publicIPAllocationMethod = Codegen.ofNullable(publicIPAllocationMethod);
-            return this;
+
+        public Builder publicIPAllocationMethod(Either<String,IPAllocationMethod> publicIPAllocationMethod) {
+            return publicIPAllocationMethod(Output.of(publicIPAllocationMethod));
         }
+
         public Builder publicIPPrefix(@Nullable Output<SubResourceArgs> publicIPPrefix) {
-            this.publicIPPrefix = publicIPPrefix;
+            $.publicIPPrefix = publicIPPrefix;
             return this;
         }
-        public Builder publicIPPrefix(@Nullable SubResourceArgs publicIPPrefix) {
-            this.publicIPPrefix = Codegen.ofNullable(publicIPPrefix);
-            return this;
+
+        public Builder publicIPPrefix(SubResourceArgs publicIPPrefix) {
+            return publicIPPrefix(Output.of(publicIPPrefix));
         }
+
         public Builder publicIpAddressName(@Nullable Output<String> publicIpAddressName) {
-            this.publicIpAddressName = publicIpAddressName;
+            $.publicIpAddressName = publicIpAddressName;
             return this;
         }
-        public Builder publicIpAddressName(@Nullable String publicIpAddressName) {
-            this.publicIpAddressName = Codegen.ofNullable(publicIpAddressName);
-            return this;
+
+        public Builder publicIpAddressName(String publicIpAddressName) {
+            return publicIpAddressName(Output.of(publicIpAddressName));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder servicePublicIPAddress(@Nullable Output<com.pulumi.azurenative.network.inputs.PublicIPAddressArgs> servicePublicIPAddress) {
-            this.servicePublicIPAddress = servicePublicIPAddress;
+            $.servicePublicIPAddress = servicePublicIPAddress;
             return this;
         }
-        public Builder servicePublicIPAddress(@Nullable com.pulumi.azurenative.network.inputs.PublicIPAddressArgs servicePublicIPAddress) {
-            this.servicePublicIPAddress = Codegen.ofNullable(servicePublicIPAddress);
-            return this;
+
+        public Builder servicePublicIPAddress(com.pulumi.azurenative.network.inputs.PublicIPAddressArgs servicePublicIPAddress) {
+            return servicePublicIPAddress(Output.of(servicePublicIPAddress));
         }
+
         public Builder sku(@Nullable Output<PublicIPAddressSkuArgs> sku) {
-            this.sku = sku;
+            $.sku = sku;
             return this;
         }
-        public Builder sku(@Nullable PublicIPAddressSkuArgs sku) {
-            this.sku = Codegen.ofNullable(sku);
-            return this;
+
+        public Builder sku(PublicIPAddressSkuArgs sku) {
+            return sku(Output.of(sku));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder zones(@Nullable Output<List<String>> zones) {
-            this.zones = zones;
+            $.zones = zones;
             return this;
         }
-        public Builder zones(@Nullable List<String> zones) {
-            this.zones = Codegen.ofNullable(zones);
-            return this;
+
+        public Builder zones(List<String> zones) {
+            return zones(Output.of(zones));
         }
+
         public Builder zones(String... zones) {
             return zones(List.of(zones));
-        }        public PublicIPAddressArgs build() {
-            return new PublicIPAddressArgs(ddosSettings, dnsSettings, extendedLocation, id, idleTimeoutInMinutes, ipAddress, ipTags, linkedPublicIPAddress, location, migrationPhase, natGateway, publicIPAddressVersion, publicIPAllocationMethod, publicIPPrefix, publicIpAddressName, resourceGroupName, servicePublicIPAddress, sku, tags, zones);
+        }
+
+        public PublicIPAddressArgs build() {
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

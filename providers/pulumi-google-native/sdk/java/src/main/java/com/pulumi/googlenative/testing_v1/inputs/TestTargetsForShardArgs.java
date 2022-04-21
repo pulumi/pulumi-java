@@ -5,10 +5,10 @@ package com.pulumi.googlenative.testing_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,52 +25,52 @@ public final class TestTargetsForShardArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="testTargets")
-      private final @Nullable Output<List<String>> testTargets;
+    private @Nullable Output<List<String>> testTargets;
 
-    public Output<List<String>> testTargets() {
-        return this.testTargets == null ? Codegen.empty() : this.testTargets;
+    public Optional<Output<List<String>>> testTargets() {
+        return Optional.ofNullable(this.testTargets);
     }
 
-    public TestTargetsForShardArgs(@Nullable Output<List<String>> testTargets) {
-        this.testTargets = testTargets;
-    }
+    private TestTargetsForShardArgs() {}
 
-    private TestTargetsForShardArgs() {
-        this.testTargets = Codegen.empty();
+    private TestTargetsForShardArgs(TestTargetsForShardArgs $) {
+        this.testTargets = $.testTargets;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TestTargetsForShardArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> testTargets;
+        private TestTargetsForShardArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TestTargetsForShardArgs();
         }
 
         public Builder(TestTargetsForShardArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.testTargets = defaults.testTargets;
+            $ = new TestTargetsForShardArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder testTargets(@Nullable Output<List<String>> testTargets) {
-            this.testTargets = testTargets;
+            $.testTargets = testTargets;
             return this;
         }
-        public Builder testTargets(@Nullable List<String> testTargets) {
-            this.testTargets = Codegen.ofNullable(testTargets);
-            return this;
+
+        public Builder testTargets(List<String> testTargets) {
+            return testTargets(Output.of(testTargets));
         }
+
         public Builder testTargets(String... testTargets) {
             return testTargets(List.of(testTargets));
-        }        public TestTargetsForShardArgs build() {
-            return new TestTargetsForShardArgs(testTargets);
+        }
+
+        public TestTargetsForShardArgs build() {
+            return $;
         }
     }
+
 }

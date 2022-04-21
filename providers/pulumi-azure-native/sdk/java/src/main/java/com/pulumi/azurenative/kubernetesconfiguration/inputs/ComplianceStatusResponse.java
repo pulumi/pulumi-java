@@ -23,7 +23,7 @@ public final class ComplianceStatusResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="complianceState", required=true)
-      private final String complianceState;
+    private String complianceState;
 
     public String complianceState() {
         return this.complianceState;
@@ -34,10 +34,10 @@ public final class ComplianceStatusResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="lastConfigApplied")
-      private final @Nullable String lastConfigApplied;
+    private @Nullable String lastConfigApplied;
 
     public Optional<String> lastConfigApplied() {
-        return this.lastConfigApplied == null ? Optional.empty() : Optional.ofNullable(this.lastConfigApplied);
+        return Optional.ofNullable(this.lastConfigApplied);
     }
 
     /**
@@ -45,10 +45,10 @@ public final class ComplianceStatusResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="message")
-      private final @Nullable String message;
+    private @Nullable String message;
 
     public Optional<String> message() {
-        return this.message == null ? Optional.empty() : Optional.ofNullable(this.message);
+        return Optional.ofNullable(this.message);
     }
 
     /**
@@ -56,73 +56,63 @@ public final class ComplianceStatusResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="messageLevel")
-      private final @Nullable String messageLevel;
+    private @Nullable String messageLevel;
 
     public Optional<String> messageLevel() {
-        return this.messageLevel == null ? Optional.empty() : Optional.ofNullable(this.messageLevel);
+        return Optional.ofNullable(this.messageLevel);
     }
 
-    public ComplianceStatusResponse(
-        String complianceState,
-        @Nullable String lastConfigApplied,
-        @Nullable String message,
-        @Nullable String messageLevel) {
-        this.complianceState = Objects.requireNonNull(complianceState, "expected parameter 'complianceState' to be non-null");
-        this.lastConfigApplied = lastConfigApplied;
-        this.message = message;
-        this.messageLevel = messageLevel;
-    }
+    private ComplianceStatusResponse() {}
 
-    private ComplianceStatusResponse() {
-        this.complianceState = null;
-        this.lastConfigApplied = null;
-        this.message = null;
-        this.messageLevel = null;
+    private ComplianceStatusResponse(ComplianceStatusResponse $) {
+        this.complianceState = $.complianceState;
+        this.lastConfigApplied = $.lastConfigApplied;
+        this.message = $.message;
+        this.messageLevel = $.messageLevel;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ComplianceStatusResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String complianceState;
-        private @Nullable String lastConfigApplied;
-        private @Nullable String message;
-        private @Nullable String messageLevel;
+        private ComplianceStatusResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ComplianceStatusResponse();
         }
 
         public Builder(ComplianceStatusResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.complianceState = defaults.complianceState;
-    	      this.lastConfigApplied = defaults.lastConfigApplied;
-    	      this.message = defaults.message;
-    	      this.messageLevel = defaults.messageLevel;
+            $ = new ComplianceStatusResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder complianceState(String complianceState) {
-            this.complianceState = Objects.requireNonNull(complianceState);
+            $.complianceState = complianceState;
             return this;
         }
+
         public Builder lastConfigApplied(@Nullable String lastConfigApplied) {
-            this.lastConfigApplied = lastConfigApplied;
+            $.lastConfigApplied = lastConfigApplied;
             return this;
         }
+
         public Builder message(@Nullable String message) {
-            this.message = message;
+            $.message = message;
             return this;
         }
+
         public Builder messageLevel(@Nullable String messageLevel) {
-            this.messageLevel = messageLevel;
+            $.messageLevel = messageLevel;
             return this;
-        }        public ComplianceStatusResponse build() {
-            return new ComplianceStatusResponse(complianceState, lastConfigApplied, message, messageLevel);
+        }
+
+        public ComplianceStatusResponse build() {
+            $.complianceState = Objects.requireNonNull($.complianceState, "expected parameter 'complianceState' to be non-null");
+            return $;
         }
     }
+
 }

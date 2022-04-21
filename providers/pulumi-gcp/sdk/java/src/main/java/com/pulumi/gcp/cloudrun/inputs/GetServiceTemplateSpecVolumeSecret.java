@@ -16,81 +16,77 @@ public final class GetServiceTemplateSpecVolumeSecret extends com.pulumi.resourc
     public static final GetServiceTemplateSpecVolumeSecret Empty = new GetServiceTemplateSpecVolumeSecret();
 
     @Import(name="defaultMode", required=true)
-      private final Integer defaultMode;
+    private Integer defaultMode;
 
     public Integer defaultMode() {
         return this.defaultMode;
     }
 
     @Import(name="items", required=true)
-      private final List<GetServiceTemplateSpecVolumeSecretItem> items;
+    private List<GetServiceTemplateSpecVolumeSecretItem> items;
 
     public List<GetServiceTemplateSpecVolumeSecretItem> items() {
         return this.items;
     }
 
     @Import(name="secretName", required=true)
-      private final String secretName;
+    private String secretName;
 
     public String secretName() {
         return this.secretName;
     }
 
-    public GetServiceTemplateSpecVolumeSecret(
-        Integer defaultMode,
-        List<GetServiceTemplateSpecVolumeSecretItem> items,
-        String secretName) {
-        this.defaultMode = Objects.requireNonNull(defaultMode, "expected parameter 'defaultMode' to be non-null");
-        this.items = Objects.requireNonNull(items, "expected parameter 'items' to be non-null");
-        this.secretName = Objects.requireNonNull(secretName, "expected parameter 'secretName' to be non-null");
-    }
+    private GetServiceTemplateSpecVolumeSecret() {}
 
-    private GetServiceTemplateSpecVolumeSecret() {
-        this.defaultMode = null;
-        this.items = List.of();
-        this.secretName = null;
+    private GetServiceTemplateSpecVolumeSecret(GetServiceTemplateSpecVolumeSecret $) {
+        this.defaultMode = $.defaultMode;
+        this.items = $.items;
+        this.secretName = $.secretName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetServiceTemplateSpecVolumeSecret defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Integer defaultMode;
-        private List<GetServiceTemplateSpecVolumeSecretItem> items;
-        private String secretName;
+        private GetServiceTemplateSpecVolumeSecret $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetServiceTemplateSpecVolumeSecret();
         }
 
         public Builder(GetServiceTemplateSpecVolumeSecret defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.defaultMode = defaults.defaultMode;
-    	      this.items = defaults.items;
-    	      this.secretName = defaults.secretName;
+            $ = new GetServiceTemplateSpecVolumeSecret(Objects.requireNonNull(defaults));
         }
 
         public Builder defaultMode(Integer defaultMode) {
-            this.defaultMode = Objects.requireNonNull(defaultMode);
+            $.defaultMode = defaultMode;
             return this;
         }
+
         public Builder items(List<GetServiceTemplateSpecVolumeSecretItem> items) {
-            this.items = Objects.requireNonNull(items);
+            $.items = items;
             return this;
         }
+
         public Builder items(GetServiceTemplateSpecVolumeSecretItem... items) {
             return items(List.of(items));
         }
+
         public Builder secretName(String secretName) {
-            this.secretName = Objects.requireNonNull(secretName);
+            $.secretName = secretName;
             return this;
-        }        public GetServiceTemplateSpecVolumeSecret build() {
-            return new GetServiceTemplateSpecVolumeSecret(defaultMode, items, secretName);
+        }
+
+        public GetServiceTemplateSpecVolumeSecret build() {
+            $.defaultMode = Objects.requireNonNull($.defaultMode, "expected parameter 'defaultMode' to be non-null");
+            $.items = Objects.requireNonNull($.items, "expected parameter 'items' to be non-null");
+            $.secretName = Objects.requireNonNull($.secretName, "expected parameter 'secretName' to be non-null");
+            return $;
         }
     }
+
 }

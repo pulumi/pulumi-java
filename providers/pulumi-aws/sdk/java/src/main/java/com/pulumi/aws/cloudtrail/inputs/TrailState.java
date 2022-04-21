@@ -8,12 +8,12 @@ import com.pulumi.aws.cloudtrail.inputs.TrailEventSelectorGetArgs;
 import com.pulumi.aws.cloudtrail.inputs.TrailInsightSelectorGetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class TrailState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="advancedEventSelectors")
-      private final @Nullable Output<List<TrailAdvancedEventSelectorGetArgs>> advancedEventSelectors;
+    private @Nullable Output<List<TrailAdvancedEventSelectorGetArgs>> advancedEventSelectors;
 
-    public Output<List<TrailAdvancedEventSelectorGetArgs>> advancedEventSelectors() {
-        return this.advancedEventSelectors == null ? Codegen.empty() : this.advancedEventSelectors;
+    public Optional<Output<List<TrailAdvancedEventSelectorGetArgs>>> advancedEventSelectors() {
+        return Optional.ofNullable(this.advancedEventSelectors);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class TrailState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="arn")
-      private final @Nullable Output<String> arn;
+    private @Nullable Output<String> arn;
 
-    public Output<String> arn() {
-        return this.arn == null ? Codegen.empty() : this.arn;
+    public Optional<Output<String>> arn() {
+        return Optional.ofNullable(this.arn);
     }
 
     /**
@@ -48,10 +48,10 @@ public final class TrailState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="cloudWatchLogsGroupArn")
-      private final @Nullable Output<String> cloudWatchLogsGroupArn;
+    private @Nullable Output<String> cloudWatchLogsGroupArn;
 
-    public Output<String> cloudWatchLogsGroupArn() {
-        return this.cloudWatchLogsGroupArn == null ? Codegen.empty() : this.cloudWatchLogsGroupArn;
+    public Optional<Output<String>> cloudWatchLogsGroupArn() {
+        return Optional.ofNullable(this.cloudWatchLogsGroupArn);
     }
 
     /**
@@ -59,10 +59,10 @@ public final class TrailState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="cloudWatchLogsRoleArn")
-      private final @Nullable Output<String> cloudWatchLogsRoleArn;
+    private @Nullable Output<String> cloudWatchLogsRoleArn;
 
-    public Output<String> cloudWatchLogsRoleArn() {
-        return this.cloudWatchLogsRoleArn == null ? Codegen.empty() : this.cloudWatchLogsRoleArn;
+    public Optional<Output<String>> cloudWatchLogsRoleArn() {
+        return Optional.ofNullable(this.cloudWatchLogsRoleArn);
     }
 
     /**
@@ -70,10 +70,10 @@ public final class TrailState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="enableLogFileValidation")
-      private final @Nullable Output<Boolean> enableLogFileValidation;
+    private @Nullable Output<Boolean> enableLogFileValidation;
 
-    public Output<Boolean> enableLogFileValidation() {
-        return this.enableLogFileValidation == null ? Codegen.empty() : this.enableLogFileValidation;
+    public Optional<Output<Boolean>> enableLogFileValidation() {
+        return Optional.ofNullable(this.enableLogFileValidation);
     }
 
     /**
@@ -81,10 +81,10 @@ public final class TrailState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="enableLogging")
-      private final @Nullable Output<Boolean> enableLogging;
+    private @Nullable Output<Boolean> enableLogging;
 
-    public Output<Boolean> enableLogging() {
-        return this.enableLogging == null ? Codegen.empty() : this.enableLogging;
+    public Optional<Output<Boolean>> enableLogging() {
+        return Optional.ofNullable(this.enableLogging);
     }
 
     /**
@@ -92,10 +92,10 @@ public final class TrailState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="eventSelectors")
-      private final @Nullable Output<List<TrailEventSelectorGetArgs>> eventSelectors;
+    private @Nullable Output<List<TrailEventSelectorGetArgs>> eventSelectors;
 
-    public Output<List<TrailEventSelectorGetArgs>> eventSelectors() {
-        return this.eventSelectors == null ? Codegen.empty() : this.eventSelectors;
+    public Optional<Output<List<TrailEventSelectorGetArgs>>> eventSelectors() {
+        return Optional.ofNullable(this.eventSelectors);
     }
 
     /**
@@ -103,10 +103,10 @@ public final class TrailState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="homeRegion")
-      private final @Nullable Output<String> homeRegion;
+    private @Nullable Output<String> homeRegion;
 
-    public Output<String> homeRegion() {
-        return this.homeRegion == null ? Codegen.empty() : this.homeRegion;
+    public Optional<Output<String>> homeRegion() {
+        return Optional.ofNullable(this.homeRegion);
     }
 
     /**
@@ -114,10 +114,10 @@ public final class TrailState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="includeGlobalServiceEvents")
-      private final @Nullable Output<Boolean> includeGlobalServiceEvents;
+    private @Nullable Output<Boolean> includeGlobalServiceEvents;
 
-    public Output<Boolean> includeGlobalServiceEvents() {
-        return this.includeGlobalServiceEvents == null ? Codegen.empty() : this.includeGlobalServiceEvents;
+    public Optional<Output<Boolean>> includeGlobalServiceEvents() {
+        return Optional.ofNullable(this.includeGlobalServiceEvents);
     }
 
     /**
@@ -125,10 +125,10 @@ public final class TrailState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="insightSelectors")
-      private final @Nullable Output<List<TrailInsightSelectorGetArgs>> insightSelectors;
+    private @Nullable Output<List<TrailInsightSelectorGetArgs>> insightSelectors;
 
-    public Output<List<TrailInsightSelectorGetArgs>> insightSelectors() {
-        return this.insightSelectors == null ? Codegen.empty() : this.insightSelectors;
+    public Optional<Output<List<TrailInsightSelectorGetArgs>>> insightSelectors() {
+        return Optional.ofNullable(this.insightSelectors);
     }
 
     /**
@@ -136,10 +136,10 @@ public final class TrailState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="isMultiRegionTrail")
-      private final @Nullable Output<Boolean> isMultiRegionTrail;
+    private @Nullable Output<Boolean> isMultiRegionTrail;
 
-    public Output<Boolean> isMultiRegionTrail() {
-        return this.isMultiRegionTrail == null ? Codegen.empty() : this.isMultiRegionTrail;
+    public Optional<Output<Boolean>> isMultiRegionTrail() {
+        return Optional.ofNullable(this.isMultiRegionTrail);
     }
 
     /**
@@ -147,10 +147,10 @@ public final class TrailState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="isOrganizationTrail")
-      private final @Nullable Output<Boolean> isOrganizationTrail;
+    private @Nullable Output<Boolean> isOrganizationTrail;
 
-    public Output<Boolean> isOrganizationTrail() {
-        return this.isOrganizationTrail == null ? Codegen.empty() : this.isOrganizationTrail;
+    public Optional<Output<Boolean>> isOrganizationTrail() {
+        return Optional.ofNullable(this.isOrganizationTrail);
     }
 
     /**
@@ -158,10 +158,10 @@ public final class TrailState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="kmsKeyId")
-      private final @Nullable Output<String> kmsKeyId;
+    private @Nullable Output<String> kmsKeyId;
 
-    public Output<String> kmsKeyId() {
-        return this.kmsKeyId == null ? Codegen.empty() : this.kmsKeyId;
+    public Optional<Output<String>> kmsKeyId() {
+        return Optional.ofNullable(this.kmsKeyId);
     }
 
     /**
@@ -169,10 +169,10 @@ public final class TrailState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -180,10 +180,10 @@ public final class TrailState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="s3BucketName")
-      private final @Nullable Output<String> s3BucketName;
+    private @Nullable Output<String> s3BucketName;
 
-    public Output<String> s3BucketName() {
-        return this.s3BucketName == null ? Codegen.empty() : this.s3BucketName;
+    public Optional<Output<String>> s3BucketName() {
+        return Optional.ofNullable(this.s3BucketName);
     }
 
     /**
@@ -191,10 +191,10 @@ public final class TrailState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="s3KeyPrefix")
-      private final @Nullable Output<String> s3KeyPrefix;
+    private @Nullable Output<String> s3KeyPrefix;
 
-    public Output<String> s3KeyPrefix() {
-        return this.s3KeyPrefix == null ? Codegen.empty() : this.s3KeyPrefix;
+    public Optional<Output<String>> s3KeyPrefix() {
+        return Optional.ofNullable(this.s3KeyPrefix);
     }
 
     /**
@@ -202,10 +202,10 @@ public final class TrailState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="snsTopicName")
-      private final @Nullable Output<String> snsTopicName;
+    private @Nullable Output<String> snsTopicName;
 
-    public Output<String> snsTopicName() {
-        return this.snsTopicName == null ? Codegen.empty() : this.snsTopicName;
+    public Optional<Output<String>> snsTopicName() {
+        return Optional.ofNullable(this.snsTopicName);
     }
 
     /**
@@ -213,10 +213,10 @@ public final class TrailState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -224,293 +224,240 @@ public final class TrailState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tagsAll")
-      private final @Nullable Output<Map<String,String>> tagsAll;
+    private @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> tagsAll() {
-        return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
+    public Optional<Output<Map<String,String>>> tagsAll() {
+        return Optional.ofNullable(this.tagsAll);
     }
 
-    public TrailState(
-        @Nullable Output<List<TrailAdvancedEventSelectorGetArgs>> advancedEventSelectors,
-        @Nullable Output<String> arn,
-        @Nullable Output<String> cloudWatchLogsGroupArn,
-        @Nullable Output<String> cloudWatchLogsRoleArn,
-        @Nullable Output<Boolean> enableLogFileValidation,
-        @Nullable Output<Boolean> enableLogging,
-        @Nullable Output<List<TrailEventSelectorGetArgs>> eventSelectors,
-        @Nullable Output<String> homeRegion,
-        @Nullable Output<Boolean> includeGlobalServiceEvents,
-        @Nullable Output<List<TrailInsightSelectorGetArgs>> insightSelectors,
-        @Nullable Output<Boolean> isMultiRegionTrail,
-        @Nullable Output<Boolean> isOrganizationTrail,
-        @Nullable Output<String> kmsKeyId,
-        @Nullable Output<String> name,
-        @Nullable Output<String> s3BucketName,
-        @Nullable Output<String> s3KeyPrefix,
-        @Nullable Output<String> snsTopicName,
-        @Nullable Output<Map<String,String>> tags,
-        @Nullable Output<Map<String,String>> tagsAll) {
-        this.advancedEventSelectors = advancedEventSelectors;
-        this.arn = arn;
-        this.cloudWatchLogsGroupArn = cloudWatchLogsGroupArn;
-        this.cloudWatchLogsRoleArn = cloudWatchLogsRoleArn;
-        this.enableLogFileValidation = enableLogFileValidation;
-        this.enableLogging = enableLogging;
-        this.eventSelectors = eventSelectors;
-        this.homeRegion = homeRegion;
-        this.includeGlobalServiceEvents = includeGlobalServiceEvents;
-        this.insightSelectors = insightSelectors;
-        this.isMultiRegionTrail = isMultiRegionTrail;
-        this.isOrganizationTrail = isOrganizationTrail;
-        this.kmsKeyId = kmsKeyId;
-        this.name = name;
-        this.s3BucketName = s3BucketName;
-        this.s3KeyPrefix = s3KeyPrefix;
-        this.snsTopicName = snsTopicName;
-        this.tags = tags;
-        this.tagsAll = tagsAll;
-    }
+    private TrailState() {}
 
-    private TrailState() {
-        this.advancedEventSelectors = Codegen.empty();
-        this.arn = Codegen.empty();
-        this.cloudWatchLogsGroupArn = Codegen.empty();
-        this.cloudWatchLogsRoleArn = Codegen.empty();
-        this.enableLogFileValidation = Codegen.empty();
-        this.enableLogging = Codegen.empty();
-        this.eventSelectors = Codegen.empty();
-        this.homeRegion = Codegen.empty();
-        this.includeGlobalServiceEvents = Codegen.empty();
-        this.insightSelectors = Codegen.empty();
-        this.isMultiRegionTrail = Codegen.empty();
-        this.isOrganizationTrail = Codegen.empty();
-        this.kmsKeyId = Codegen.empty();
-        this.name = Codegen.empty();
-        this.s3BucketName = Codegen.empty();
-        this.s3KeyPrefix = Codegen.empty();
-        this.snsTopicName = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.tagsAll = Codegen.empty();
+    private TrailState(TrailState $) {
+        this.advancedEventSelectors = $.advancedEventSelectors;
+        this.arn = $.arn;
+        this.cloudWatchLogsGroupArn = $.cloudWatchLogsGroupArn;
+        this.cloudWatchLogsRoleArn = $.cloudWatchLogsRoleArn;
+        this.enableLogFileValidation = $.enableLogFileValidation;
+        this.enableLogging = $.enableLogging;
+        this.eventSelectors = $.eventSelectors;
+        this.homeRegion = $.homeRegion;
+        this.includeGlobalServiceEvents = $.includeGlobalServiceEvents;
+        this.insightSelectors = $.insightSelectors;
+        this.isMultiRegionTrail = $.isMultiRegionTrail;
+        this.isOrganizationTrail = $.isOrganizationTrail;
+        this.kmsKeyId = $.kmsKeyId;
+        this.name = $.name;
+        this.s3BucketName = $.s3BucketName;
+        this.s3KeyPrefix = $.s3KeyPrefix;
+        this.snsTopicName = $.snsTopicName;
+        this.tags = $.tags;
+        this.tagsAll = $.tagsAll;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TrailState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<TrailAdvancedEventSelectorGetArgs>> advancedEventSelectors;
-        private @Nullable Output<String> arn;
-        private @Nullable Output<String> cloudWatchLogsGroupArn;
-        private @Nullable Output<String> cloudWatchLogsRoleArn;
-        private @Nullable Output<Boolean> enableLogFileValidation;
-        private @Nullable Output<Boolean> enableLogging;
-        private @Nullable Output<List<TrailEventSelectorGetArgs>> eventSelectors;
-        private @Nullable Output<String> homeRegion;
-        private @Nullable Output<Boolean> includeGlobalServiceEvents;
-        private @Nullable Output<List<TrailInsightSelectorGetArgs>> insightSelectors;
-        private @Nullable Output<Boolean> isMultiRegionTrail;
-        private @Nullable Output<Boolean> isOrganizationTrail;
-        private @Nullable Output<String> kmsKeyId;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> s3BucketName;
-        private @Nullable Output<String> s3KeyPrefix;
-        private @Nullable Output<String> snsTopicName;
-        private @Nullable Output<Map<String,String>> tags;
-        private @Nullable Output<Map<String,String>> tagsAll;
+        private TrailState $;
 
         public Builder() {
-    	      // Empty
+            $ = new TrailState();
         }
 
         public Builder(TrailState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.advancedEventSelectors = defaults.advancedEventSelectors;
-    	      this.arn = defaults.arn;
-    	      this.cloudWatchLogsGroupArn = defaults.cloudWatchLogsGroupArn;
-    	      this.cloudWatchLogsRoleArn = defaults.cloudWatchLogsRoleArn;
-    	      this.enableLogFileValidation = defaults.enableLogFileValidation;
-    	      this.enableLogging = defaults.enableLogging;
-    	      this.eventSelectors = defaults.eventSelectors;
-    	      this.homeRegion = defaults.homeRegion;
-    	      this.includeGlobalServiceEvents = defaults.includeGlobalServiceEvents;
-    	      this.insightSelectors = defaults.insightSelectors;
-    	      this.isMultiRegionTrail = defaults.isMultiRegionTrail;
-    	      this.isOrganizationTrail = defaults.isOrganizationTrail;
-    	      this.kmsKeyId = defaults.kmsKeyId;
-    	      this.name = defaults.name;
-    	      this.s3BucketName = defaults.s3BucketName;
-    	      this.s3KeyPrefix = defaults.s3KeyPrefix;
-    	      this.snsTopicName = defaults.snsTopicName;
-    	      this.tags = defaults.tags;
-    	      this.tagsAll = defaults.tagsAll;
+            $ = new TrailState(Objects.requireNonNull(defaults));
         }
 
         public Builder advancedEventSelectors(@Nullable Output<List<TrailAdvancedEventSelectorGetArgs>> advancedEventSelectors) {
-            this.advancedEventSelectors = advancedEventSelectors;
+            $.advancedEventSelectors = advancedEventSelectors;
             return this;
         }
-        public Builder advancedEventSelectors(@Nullable List<TrailAdvancedEventSelectorGetArgs> advancedEventSelectors) {
-            this.advancedEventSelectors = Codegen.ofNullable(advancedEventSelectors);
-            return this;
+
+        public Builder advancedEventSelectors(List<TrailAdvancedEventSelectorGetArgs> advancedEventSelectors) {
+            return advancedEventSelectors(Output.of(advancedEventSelectors));
         }
+
         public Builder advancedEventSelectors(TrailAdvancedEventSelectorGetArgs... advancedEventSelectors) {
             return advancedEventSelectors(List.of(advancedEventSelectors));
         }
+
         public Builder arn(@Nullable Output<String> arn) {
-            this.arn = arn;
+            $.arn = arn;
             return this;
         }
-        public Builder arn(@Nullable String arn) {
-            this.arn = Codegen.ofNullable(arn);
-            return this;
+
+        public Builder arn(String arn) {
+            return arn(Output.of(arn));
         }
+
         public Builder cloudWatchLogsGroupArn(@Nullable Output<String> cloudWatchLogsGroupArn) {
-            this.cloudWatchLogsGroupArn = cloudWatchLogsGroupArn;
+            $.cloudWatchLogsGroupArn = cloudWatchLogsGroupArn;
             return this;
         }
-        public Builder cloudWatchLogsGroupArn(@Nullable String cloudWatchLogsGroupArn) {
-            this.cloudWatchLogsGroupArn = Codegen.ofNullable(cloudWatchLogsGroupArn);
-            return this;
+
+        public Builder cloudWatchLogsGroupArn(String cloudWatchLogsGroupArn) {
+            return cloudWatchLogsGroupArn(Output.of(cloudWatchLogsGroupArn));
         }
+
         public Builder cloudWatchLogsRoleArn(@Nullable Output<String> cloudWatchLogsRoleArn) {
-            this.cloudWatchLogsRoleArn = cloudWatchLogsRoleArn;
+            $.cloudWatchLogsRoleArn = cloudWatchLogsRoleArn;
             return this;
         }
-        public Builder cloudWatchLogsRoleArn(@Nullable String cloudWatchLogsRoleArn) {
-            this.cloudWatchLogsRoleArn = Codegen.ofNullable(cloudWatchLogsRoleArn);
-            return this;
+
+        public Builder cloudWatchLogsRoleArn(String cloudWatchLogsRoleArn) {
+            return cloudWatchLogsRoleArn(Output.of(cloudWatchLogsRoleArn));
         }
+
         public Builder enableLogFileValidation(@Nullable Output<Boolean> enableLogFileValidation) {
-            this.enableLogFileValidation = enableLogFileValidation;
+            $.enableLogFileValidation = enableLogFileValidation;
             return this;
         }
-        public Builder enableLogFileValidation(@Nullable Boolean enableLogFileValidation) {
-            this.enableLogFileValidation = Codegen.ofNullable(enableLogFileValidation);
-            return this;
+
+        public Builder enableLogFileValidation(Boolean enableLogFileValidation) {
+            return enableLogFileValidation(Output.of(enableLogFileValidation));
         }
+
         public Builder enableLogging(@Nullable Output<Boolean> enableLogging) {
-            this.enableLogging = enableLogging;
+            $.enableLogging = enableLogging;
             return this;
         }
-        public Builder enableLogging(@Nullable Boolean enableLogging) {
-            this.enableLogging = Codegen.ofNullable(enableLogging);
-            return this;
+
+        public Builder enableLogging(Boolean enableLogging) {
+            return enableLogging(Output.of(enableLogging));
         }
+
         public Builder eventSelectors(@Nullable Output<List<TrailEventSelectorGetArgs>> eventSelectors) {
-            this.eventSelectors = eventSelectors;
+            $.eventSelectors = eventSelectors;
             return this;
         }
-        public Builder eventSelectors(@Nullable List<TrailEventSelectorGetArgs> eventSelectors) {
-            this.eventSelectors = Codegen.ofNullable(eventSelectors);
-            return this;
+
+        public Builder eventSelectors(List<TrailEventSelectorGetArgs> eventSelectors) {
+            return eventSelectors(Output.of(eventSelectors));
         }
+
         public Builder eventSelectors(TrailEventSelectorGetArgs... eventSelectors) {
             return eventSelectors(List.of(eventSelectors));
         }
+
         public Builder homeRegion(@Nullable Output<String> homeRegion) {
-            this.homeRegion = homeRegion;
+            $.homeRegion = homeRegion;
             return this;
         }
-        public Builder homeRegion(@Nullable String homeRegion) {
-            this.homeRegion = Codegen.ofNullable(homeRegion);
-            return this;
+
+        public Builder homeRegion(String homeRegion) {
+            return homeRegion(Output.of(homeRegion));
         }
+
         public Builder includeGlobalServiceEvents(@Nullable Output<Boolean> includeGlobalServiceEvents) {
-            this.includeGlobalServiceEvents = includeGlobalServiceEvents;
+            $.includeGlobalServiceEvents = includeGlobalServiceEvents;
             return this;
         }
-        public Builder includeGlobalServiceEvents(@Nullable Boolean includeGlobalServiceEvents) {
-            this.includeGlobalServiceEvents = Codegen.ofNullable(includeGlobalServiceEvents);
-            return this;
+
+        public Builder includeGlobalServiceEvents(Boolean includeGlobalServiceEvents) {
+            return includeGlobalServiceEvents(Output.of(includeGlobalServiceEvents));
         }
+
         public Builder insightSelectors(@Nullable Output<List<TrailInsightSelectorGetArgs>> insightSelectors) {
-            this.insightSelectors = insightSelectors;
+            $.insightSelectors = insightSelectors;
             return this;
         }
-        public Builder insightSelectors(@Nullable List<TrailInsightSelectorGetArgs> insightSelectors) {
-            this.insightSelectors = Codegen.ofNullable(insightSelectors);
-            return this;
+
+        public Builder insightSelectors(List<TrailInsightSelectorGetArgs> insightSelectors) {
+            return insightSelectors(Output.of(insightSelectors));
         }
+
         public Builder insightSelectors(TrailInsightSelectorGetArgs... insightSelectors) {
             return insightSelectors(List.of(insightSelectors));
         }
+
         public Builder isMultiRegionTrail(@Nullable Output<Boolean> isMultiRegionTrail) {
-            this.isMultiRegionTrail = isMultiRegionTrail;
+            $.isMultiRegionTrail = isMultiRegionTrail;
             return this;
         }
-        public Builder isMultiRegionTrail(@Nullable Boolean isMultiRegionTrail) {
-            this.isMultiRegionTrail = Codegen.ofNullable(isMultiRegionTrail);
-            return this;
+
+        public Builder isMultiRegionTrail(Boolean isMultiRegionTrail) {
+            return isMultiRegionTrail(Output.of(isMultiRegionTrail));
         }
+
         public Builder isOrganizationTrail(@Nullable Output<Boolean> isOrganizationTrail) {
-            this.isOrganizationTrail = isOrganizationTrail;
+            $.isOrganizationTrail = isOrganizationTrail;
             return this;
         }
-        public Builder isOrganizationTrail(@Nullable Boolean isOrganizationTrail) {
-            this.isOrganizationTrail = Codegen.ofNullable(isOrganizationTrail);
-            return this;
+
+        public Builder isOrganizationTrail(Boolean isOrganizationTrail) {
+            return isOrganizationTrail(Output.of(isOrganizationTrail));
         }
+
         public Builder kmsKeyId(@Nullable Output<String> kmsKeyId) {
-            this.kmsKeyId = kmsKeyId;
+            $.kmsKeyId = kmsKeyId;
             return this;
         }
-        public Builder kmsKeyId(@Nullable String kmsKeyId) {
-            this.kmsKeyId = Codegen.ofNullable(kmsKeyId);
-            return this;
+
+        public Builder kmsKeyId(String kmsKeyId) {
+            return kmsKeyId(Output.of(kmsKeyId));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder s3BucketName(@Nullable Output<String> s3BucketName) {
-            this.s3BucketName = s3BucketName;
+            $.s3BucketName = s3BucketName;
             return this;
         }
-        public Builder s3BucketName(@Nullable String s3BucketName) {
-            this.s3BucketName = Codegen.ofNullable(s3BucketName);
-            return this;
+
+        public Builder s3BucketName(String s3BucketName) {
+            return s3BucketName(Output.of(s3BucketName));
         }
+
         public Builder s3KeyPrefix(@Nullable Output<String> s3KeyPrefix) {
-            this.s3KeyPrefix = s3KeyPrefix;
+            $.s3KeyPrefix = s3KeyPrefix;
             return this;
         }
-        public Builder s3KeyPrefix(@Nullable String s3KeyPrefix) {
-            this.s3KeyPrefix = Codegen.ofNullable(s3KeyPrefix);
-            return this;
+
+        public Builder s3KeyPrefix(String s3KeyPrefix) {
+            return s3KeyPrefix(Output.of(s3KeyPrefix));
         }
+
         public Builder snsTopicName(@Nullable Output<String> snsTopicName) {
-            this.snsTopicName = snsTopicName;
+            $.snsTopicName = snsTopicName;
             return this;
         }
-        public Builder snsTopicName(@Nullable String snsTopicName) {
-            this.snsTopicName = Codegen.ofNullable(snsTopicName);
-            return this;
+
+        public Builder snsTopicName(String snsTopicName) {
+            return snsTopicName(Output.of(snsTopicName));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
-            this.tagsAll = tagsAll;
+            $.tagsAll = tagsAll;
             return this;
         }
-        public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Codegen.ofNullable(tagsAll);
-            return this;
-        }        public TrailState build() {
-            return new TrailState(advancedEventSelectors, arn, cloudWatchLogsGroupArn, cloudWatchLogsRoleArn, enableLogFileValidation, enableLogging, eventSelectors, homeRegion, includeGlobalServiceEvents, insightSelectors, isMultiRegionTrail, isOrganizationTrail, kmsKeyId, name, s3BucketName, s3KeyPrefix, snsTopicName, tags, tagsAll);
+
+        public Builder tagsAll(Map<String,String> tagsAll) {
+            return tagsAll(Output.of(tagsAll));
+        }
+
+        public TrailState build() {
+            return $;
         }
     }
+
 }

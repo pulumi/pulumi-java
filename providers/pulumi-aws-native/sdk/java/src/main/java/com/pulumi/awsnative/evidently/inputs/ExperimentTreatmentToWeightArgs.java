@@ -5,7 +5,6 @@ package com.pulumi.awsnative.evidently.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -16,70 +15,67 @@ public final class ExperimentTreatmentToWeightArgs extends com.pulumi.resources.
     public static final ExperimentTreatmentToWeightArgs Empty = new ExperimentTreatmentToWeightArgs();
 
     @Import(name="splitWeight", required=true)
-      private final Output<Integer> splitWeight;
+    private Output<Integer> splitWeight;
 
     public Output<Integer> splitWeight() {
         return this.splitWeight;
     }
 
     @Import(name="treatment", required=true)
-      private final Output<String> treatment;
+    private Output<String> treatment;
 
     public Output<String> treatment() {
         return this.treatment;
     }
 
-    public ExperimentTreatmentToWeightArgs(
-        Output<Integer> splitWeight,
-        Output<String> treatment) {
-        this.splitWeight = Objects.requireNonNull(splitWeight, "expected parameter 'splitWeight' to be non-null");
-        this.treatment = Objects.requireNonNull(treatment, "expected parameter 'treatment' to be non-null");
-    }
+    private ExperimentTreatmentToWeightArgs() {}
 
-    private ExperimentTreatmentToWeightArgs() {
-        this.splitWeight = Codegen.empty();
-        this.treatment = Codegen.empty();
+    private ExperimentTreatmentToWeightArgs(ExperimentTreatmentToWeightArgs $) {
+        this.splitWeight = $.splitWeight;
+        this.treatment = $.treatment;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ExperimentTreatmentToWeightArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Integer> splitWeight;
-        private Output<String> treatment;
+        private ExperimentTreatmentToWeightArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ExperimentTreatmentToWeightArgs();
         }
 
         public Builder(ExperimentTreatmentToWeightArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.splitWeight = defaults.splitWeight;
-    	      this.treatment = defaults.treatment;
+            $ = new ExperimentTreatmentToWeightArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder splitWeight(Output<Integer> splitWeight) {
-            this.splitWeight = Objects.requireNonNull(splitWeight);
+            $.splitWeight = splitWeight;
             return this;
         }
+
         public Builder splitWeight(Integer splitWeight) {
-            this.splitWeight = Output.of(Objects.requireNonNull(splitWeight));
-            return this;
+            return splitWeight(Output.of(splitWeight));
         }
+
         public Builder treatment(Output<String> treatment) {
-            this.treatment = Objects.requireNonNull(treatment);
+            $.treatment = treatment;
             return this;
         }
+
         public Builder treatment(String treatment) {
-            this.treatment = Output.of(Objects.requireNonNull(treatment));
-            return this;
-        }        public ExperimentTreatmentToWeightArgs build() {
-            return new ExperimentTreatmentToWeightArgs(splitWeight, treatment);
+            return treatment(Output.of(treatment));
+        }
+
+        public ExperimentTreatmentToWeightArgs build() {
+            $.splitWeight = Objects.requireNonNull($.splitWeight, "expected parameter 'splitWeight' to be non-null");
+            $.treatment = Objects.requireNonNull($.treatment, "expected parameter 'treatment' to be non-null");
+            return $;
         }
     }
+
 }

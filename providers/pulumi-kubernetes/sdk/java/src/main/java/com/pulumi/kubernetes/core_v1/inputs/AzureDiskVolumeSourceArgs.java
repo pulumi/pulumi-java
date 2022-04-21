@@ -5,10 +5,10 @@ package com.pulumi.kubernetes.core_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class AzureDiskVolumeSourceArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="cachingMode")
-      private final @Nullable Output<String> cachingMode;
+    private @Nullable Output<String> cachingMode;
 
-    public Output<String> cachingMode() {
-        return this.cachingMode == null ? Codegen.empty() : this.cachingMode;
+    public Optional<Output<String>> cachingMode() {
+        return Optional.ofNullable(this.cachingMode);
     }
 
     /**
@@ -36,7 +36,7 @@ public final class AzureDiskVolumeSourceArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="diskName", required=true)
-      private final Output<String> diskName;
+    private Output<String> diskName;
 
     public Output<String> diskName() {
         return this.diskName;
@@ -47,7 +47,7 @@ public final class AzureDiskVolumeSourceArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="diskURI", required=true)
-      private final Output<String> diskURI;
+    private Output<String> diskURI;
 
     public Output<String> diskURI() {
         return this.diskURI;
@@ -58,10 +58,10 @@ public final class AzureDiskVolumeSourceArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="fsType")
-      private final @Nullable Output<String> fsType;
+    private @Nullable Output<String> fsType;
 
-    public Output<String> fsType() {
-        return this.fsType == null ? Codegen.empty() : this.fsType;
+    public Optional<Output<String>> fsType() {
+        return Optional.ofNullable(this.fsType);
     }
 
     /**
@@ -69,10 +69,10 @@ public final class AzureDiskVolumeSourceArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="kind")
-      private final @Nullable Output<String> kind;
+    private @Nullable Output<String> kind;
 
-    public Output<String> kind() {
-        return this.kind == null ? Codegen.empty() : this.kind;
+    public Optional<Output<String>> kind() {
+        return Optional.ofNullable(this.kind);
     }
 
     /**
@@ -80,115 +80,100 @@ public final class AzureDiskVolumeSourceArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="readOnly")
-      private final @Nullable Output<Boolean> readOnly;
+    private @Nullable Output<Boolean> readOnly;
 
-    public Output<Boolean> readOnly() {
-        return this.readOnly == null ? Codegen.empty() : this.readOnly;
+    public Optional<Output<Boolean>> readOnly() {
+        return Optional.ofNullable(this.readOnly);
     }
 
-    public AzureDiskVolumeSourceArgs(
-        @Nullable Output<String> cachingMode,
-        Output<String> diskName,
-        Output<String> diskURI,
-        @Nullable Output<String> fsType,
-        @Nullable Output<String> kind,
-        @Nullable Output<Boolean> readOnly) {
-        this.cachingMode = cachingMode;
-        this.diskName = Objects.requireNonNull(diskName, "expected parameter 'diskName' to be non-null");
-        this.diskURI = Objects.requireNonNull(diskURI, "expected parameter 'diskURI' to be non-null");
-        this.fsType = fsType;
-        this.kind = kind;
-        this.readOnly = readOnly;
-    }
+    private AzureDiskVolumeSourceArgs() {}
 
-    private AzureDiskVolumeSourceArgs() {
-        this.cachingMode = Codegen.empty();
-        this.diskName = Codegen.empty();
-        this.diskURI = Codegen.empty();
-        this.fsType = Codegen.empty();
-        this.kind = Codegen.empty();
-        this.readOnly = Codegen.empty();
+    private AzureDiskVolumeSourceArgs(AzureDiskVolumeSourceArgs $) {
+        this.cachingMode = $.cachingMode;
+        this.diskName = $.diskName;
+        this.diskURI = $.diskURI;
+        this.fsType = $.fsType;
+        this.kind = $.kind;
+        this.readOnly = $.readOnly;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AzureDiskVolumeSourceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> cachingMode;
-        private Output<String> diskName;
-        private Output<String> diskURI;
-        private @Nullable Output<String> fsType;
-        private @Nullable Output<String> kind;
-        private @Nullable Output<Boolean> readOnly;
+        private AzureDiskVolumeSourceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AzureDiskVolumeSourceArgs();
         }
 
         public Builder(AzureDiskVolumeSourceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cachingMode = defaults.cachingMode;
-    	      this.diskName = defaults.diskName;
-    	      this.diskURI = defaults.diskURI;
-    	      this.fsType = defaults.fsType;
-    	      this.kind = defaults.kind;
-    	      this.readOnly = defaults.readOnly;
+            $ = new AzureDiskVolumeSourceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder cachingMode(@Nullable Output<String> cachingMode) {
-            this.cachingMode = cachingMode;
+            $.cachingMode = cachingMode;
             return this;
         }
-        public Builder cachingMode(@Nullable String cachingMode) {
-            this.cachingMode = Codegen.ofNullable(cachingMode);
-            return this;
+
+        public Builder cachingMode(String cachingMode) {
+            return cachingMode(Output.of(cachingMode));
         }
+
         public Builder diskName(Output<String> diskName) {
-            this.diskName = Objects.requireNonNull(diskName);
+            $.diskName = diskName;
             return this;
         }
+
         public Builder diskName(String diskName) {
-            this.diskName = Output.of(Objects.requireNonNull(diskName));
-            return this;
+            return diskName(Output.of(diskName));
         }
+
         public Builder diskURI(Output<String> diskURI) {
-            this.diskURI = Objects.requireNonNull(diskURI);
+            $.diskURI = diskURI;
             return this;
         }
+
         public Builder diskURI(String diskURI) {
-            this.diskURI = Output.of(Objects.requireNonNull(diskURI));
-            return this;
+            return diskURI(Output.of(diskURI));
         }
+
         public Builder fsType(@Nullable Output<String> fsType) {
-            this.fsType = fsType;
+            $.fsType = fsType;
             return this;
         }
-        public Builder fsType(@Nullable String fsType) {
-            this.fsType = Codegen.ofNullable(fsType);
-            return this;
+
+        public Builder fsType(String fsType) {
+            return fsType(Output.of(fsType));
         }
+
         public Builder kind(@Nullable Output<String> kind) {
-            this.kind = kind;
+            $.kind = kind;
             return this;
         }
-        public Builder kind(@Nullable String kind) {
-            this.kind = Codegen.ofNullable(kind);
-            return this;
+
+        public Builder kind(String kind) {
+            return kind(Output.of(kind));
         }
+
         public Builder readOnly(@Nullable Output<Boolean> readOnly) {
-            this.readOnly = readOnly;
+            $.readOnly = readOnly;
             return this;
         }
-        public Builder readOnly(@Nullable Boolean readOnly) {
-            this.readOnly = Codegen.ofNullable(readOnly);
-            return this;
-        }        public AzureDiskVolumeSourceArgs build() {
-            return new AzureDiskVolumeSourceArgs(cachingMode, diskName, diskURI, fsType, kind, readOnly);
+
+        public Builder readOnly(Boolean readOnly) {
+            return readOnly(Output.of(readOnly));
+        }
+
+        public AzureDiskVolumeSourceArgs build() {
+            $.diskName = Objects.requireNonNull($.diskName, "expected parameter 'diskName' to be non-null");
+            $.diskURI = Objects.requireNonNull($.diskURI, "expected parameter 'diskURI' to be non-null");
+            return $;
         }
     }
+
 }

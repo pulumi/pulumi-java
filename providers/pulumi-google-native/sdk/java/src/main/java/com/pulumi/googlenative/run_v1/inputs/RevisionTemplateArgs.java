@@ -5,10 +5,10 @@ package com.pulumi.googlenative.run_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.run_v1.inputs.ObjectMetaArgs;
 import com.pulumi.googlenative.run_v1.inputs.RevisionSpecArgs;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class RevisionTemplateArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="metadata")
-      private final @Nullable Output<ObjectMetaArgs> metadata;
+    private @Nullable Output<ObjectMetaArgs> metadata;
 
-    public Output<ObjectMetaArgs> metadata() {
-        return this.metadata == null ? Codegen.empty() : this.metadata;
+    public Optional<Output<ObjectMetaArgs>> metadata() {
+        return Optional.ofNullable(this.metadata);
     }
 
     /**
@@ -36,63 +36,58 @@ public final class RevisionTemplateArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="spec")
-      private final @Nullable Output<RevisionSpecArgs> spec;
+    private @Nullable Output<RevisionSpecArgs> spec;
 
-    public Output<RevisionSpecArgs> spec() {
-        return this.spec == null ? Codegen.empty() : this.spec;
+    public Optional<Output<RevisionSpecArgs>> spec() {
+        return Optional.ofNullable(this.spec);
     }
 
-    public RevisionTemplateArgs(
-        @Nullable Output<ObjectMetaArgs> metadata,
-        @Nullable Output<RevisionSpecArgs> spec) {
-        this.metadata = metadata;
-        this.spec = spec;
-    }
+    private RevisionTemplateArgs() {}
 
-    private RevisionTemplateArgs() {
-        this.metadata = Codegen.empty();
-        this.spec = Codegen.empty();
+    private RevisionTemplateArgs(RevisionTemplateArgs $) {
+        this.metadata = $.metadata;
+        this.spec = $.spec;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RevisionTemplateArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<ObjectMetaArgs> metadata;
-        private @Nullable Output<RevisionSpecArgs> spec;
+        private RevisionTemplateArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RevisionTemplateArgs();
         }
 
         public Builder(RevisionTemplateArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.metadata = defaults.metadata;
-    	      this.spec = defaults.spec;
+            $ = new RevisionTemplateArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder metadata(@Nullable Output<ObjectMetaArgs> metadata) {
-            this.metadata = metadata;
+            $.metadata = metadata;
             return this;
         }
-        public Builder metadata(@Nullable ObjectMetaArgs metadata) {
-            this.metadata = Codegen.ofNullable(metadata);
-            return this;
+
+        public Builder metadata(ObjectMetaArgs metadata) {
+            return metadata(Output.of(metadata));
         }
+
         public Builder spec(@Nullable Output<RevisionSpecArgs> spec) {
-            this.spec = spec;
+            $.spec = spec;
             return this;
         }
-        public Builder spec(@Nullable RevisionSpecArgs spec) {
-            this.spec = Codegen.ofNullable(spec);
-            return this;
-        }        public RevisionTemplateArgs build() {
-            return new RevisionTemplateArgs(metadata, spec);
+
+        public Builder spec(RevisionSpecArgs spec) {
+            return spec(Output.of(spec));
+        }
+
+        public RevisionTemplateArgs build() {
+            return $;
         }
     }
+
 }

@@ -5,7 +5,6 @@ package com.pulumi.kubernetes.core_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,7 +22,7 @@ public final class AttachedVolumeArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="devicePath", required=true)
-      private final Output<String> devicePath;
+    private Output<String> devicePath;
 
     public Output<String> devicePath() {
         return this.devicePath;
@@ -34,63 +33,60 @@ public final class AttachedVolumeArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="name", required=true)
-      private final Output<String> name;
+    private Output<String> name;
 
     public Output<String> name() {
         return this.name;
     }
 
-    public AttachedVolumeArgs(
-        Output<String> devicePath,
-        Output<String> name) {
-        this.devicePath = Objects.requireNonNull(devicePath, "expected parameter 'devicePath' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-    }
+    private AttachedVolumeArgs() {}
 
-    private AttachedVolumeArgs() {
-        this.devicePath = Codegen.empty();
-        this.name = Codegen.empty();
+    private AttachedVolumeArgs(AttachedVolumeArgs $) {
+        this.devicePath = $.devicePath;
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AttachedVolumeArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> devicePath;
-        private Output<String> name;
+        private AttachedVolumeArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AttachedVolumeArgs();
         }
 
         public Builder(AttachedVolumeArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.devicePath = defaults.devicePath;
-    	      this.name = defaults.name;
+            $ = new AttachedVolumeArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder devicePath(Output<String> devicePath) {
-            this.devicePath = Objects.requireNonNull(devicePath);
+            $.devicePath = devicePath;
             return this;
         }
+
         public Builder devicePath(String devicePath) {
-            this.devicePath = Output.of(Objects.requireNonNull(devicePath));
-            return this;
+            return devicePath(Output.of(devicePath));
         }
+
         public Builder name(Output<String> name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Output.of(Objects.requireNonNull(name));
-            return this;
-        }        public AttachedVolumeArgs build() {
-            return new AttachedVolumeArgs(devicePath, name);
+            return name(Output.of(name));
+        }
+
+        public AttachedVolumeArgs build() {
+            $.devicePath = Objects.requireNonNull($.devicePath, "expected parameter 'devicePath' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            return $;
         }
     }
+
 }

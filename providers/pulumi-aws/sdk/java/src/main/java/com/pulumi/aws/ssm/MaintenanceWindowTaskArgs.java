@@ -7,11 +7,11 @@ import com.pulumi.aws.ssm.inputs.MaintenanceWindowTaskTargetArgs;
 import com.pulumi.aws.ssm.inputs.MaintenanceWindowTaskTaskInvocationParametersArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class MaintenanceWindowTaskArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -35,7 +35,7 @@ public final class MaintenanceWindowTaskArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="maxConcurrency", required=true)
-      private final Output<String> maxConcurrency;
+    private Output<String> maxConcurrency;
 
     public Output<String> maxConcurrency() {
         return this.maxConcurrency;
@@ -46,7 +46,7 @@ public final class MaintenanceWindowTaskArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="maxErrors", required=true)
-      private final Output<String> maxErrors;
+    private Output<String> maxErrors;
 
     public Output<String> maxErrors() {
         return this.maxErrors;
@@ -57,10 +57,10 @@ public final class MaintenanceWindowTaskArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -68,10 +68,10 @@ public final class MaintenanceWindowTaskArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="priority")
-      private final @Nullable Output<Integer> priority;
+    private @Nullable Output<Integer> priority;
 
-    public Output<Integer> priority() {
-        return this.priority == null ? Codegen.empty() : this.priority;
+    public Optional<Output<Integer>> priority() {
+        return Optional.ofNullable(this.priority);
     }
 
     /**
@@ -79,10 +79,10 @@ public final class MaintenanceWindowTaskArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="serviceRoleArn")
-      private final @Nullable Output<String> serviceRoleArn;
+    private @Nullable Output<String> serviceRoleArn;
 
-    public Output<String> serviceRoleArn() {
-        return this.serviceRoleArn == null ? Codegen.empty() : this.serviceRoleArn;
+    public Optional<Output<String>> serviceRoleArn() {
+        return Optional.ofNullable(this.serviceRoleArn);
     }
 
     /**
@@ -90,10 +90,10 @@ public final class MaintenanceWindowTaskArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="targets")
-      private final @Nullable Output<List<MaintenanceWindowTaskTargetArgs>> targets;
+    private @Nullable Output<List<MaintenanceWindowTaskTargetArgs>> targets;
 
-    public Output<List<MaintenanceWindowTaskTargetArgs>> targets() {
-        return this.targets == null ? Codegen.empty() : this.targets;
+    public Optional<Output<List<MaintenanceWindowTaskTargetArgs>>> targets() {
+        return Optional.ofNullable(this.targets);
     }
 
     /**
@@ -101,7 +101,7 @@ public final class MaintenanceWindowTaskArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="taskArn", required=true)
-      private final Output<String> taskArn;
+    private Output<String> taskArn;
 
     public Output<String> taskArn() {
         return this.taskArn;
@@ -112,10 +112,10 @@ public final class MaintenanceWindowTaskArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="taskInvocationParameters")
-      private final @Nullable Output<MaintenanceWindowTaskTaskInvocationParametersArgs> taskInvocationParameters;
+    private @Nullable Output<MaintenanceWindowTaskTaskInvocationParametersArgs> taskInvocationParameters;
 
-    public Output<MaintenanceWindowTaskTaskInvocationParametersArgs> taskInvocationParameters() {
-        return this.taskInvocationParameters == null ? Codegen.empty() : this.taskInvocationParameters;
+    public Optional<Output<MaintenanceWindowTaskTaskInvocationParametersArgs>> taskInvocationParameters() {
+        return Optional.ofNullable(this.taskInvocationParameters);
     }
 
     /**
@@ -123,7 +123,7 @@ public final class MaintenanceWindowTaskArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="taskType", required=true)
-      private final Output<String> taskType;
+    private Output<String> taskType;
 
     public Output<String> taskType() {
         return this.taskType;
@@ -134,183 +134,157 @@ public final class MaintenanceWindowTaskArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="windowId", required=true)
-      private final Output<String> windowId;
+    private Output<String> windowId;
 
     public Output<String> windowId() {
         return this.windowId;
     }
 
-    public MaintenanceWindowTaskArgs(
-        @Nullable Output<String> description,
-        Output<String> maxConcurrency,
-        Output<String> maxErrors,
-        @Nullable Output<String> name,
-        @Nullable Output<Integer> priority,
-        @Nullable Output<String> serviceRoleArn,
-        @Nullable Output<List<MaintenanceWindowTaskTargetArgs>> targets,
-        Output<String> taskArn,
-        @Nullable Output<MaintenanceWindowTaskTaskInvocationParametersArgs> taskInvocationParameters,
-        Output<String> taskType,
-        Output<String> windowId) {
-        this.description = description;
-        this.maxConcurrency = Objects.requireNonNull(maxConcurrency, "expected parameter 'maxConcurrency' to be non-null");
-        this.maxErrors = Objects.requireNonNull(maxErrors, "expected parameter 'maxErrors' to be non-null");
-        this.name = name;
-        this.priority = priority;
-        this.serviceRoleArn = serviceRoleArn;
-        this.targets = targets;
-        this.taskArn = Objects.requireNonNull(taskArn, "expected parameter 'taskArn' to be non-null");
-        this.taskInvocationParameters = taskInvocationParameters;
-        this.taskType = Objects.requireNonNull(taskType, "expected parameter 'taskType' to be non-null");
-        this.windowId = Objects.requireNonNull(windowId, "expected parameter 'windowId' to be non-null");
-    }
+    private MaintenanceWindowTaskArgs() {}
 
-    private MaintenanceWindowTaskArgs() {
-        this.description = Codegen.empty();
-        this.maxConcurrency = Codegen.empty();
-        this.maxErrors = Codegen.empty();
-        this.name = Codegen.empty();
-        this.priority = Codegen.empty();
-        this.serviceRoleArn = Codegen.empty();
-        this.targets = Codegen.empty();
-        this.taskArn = Codegen.empty();
-        this.taskInvocationParameters = Codegen.empty();
-        this.taskType = Codegen.empty();
-        this.windowId = Codegen.empty();
+    private MaintenanceWindowTaskArgs(MaintenanceWindowTaskArgs $) {
+        this.description = $.description;
+        this.maxConcurrency = $.maxConcurrency;
+        this.maxErrors = $.maxErrors;
+        this.name = $.name;
+        this.priority = $.priority;
+        this.serviceRoleArn = $.serviceRoleArn;
+        this.targets = $.targets;
+        this.taskArn = $.taskArn;
+        this.taskInvocationParameters = $.taskInvocationParameters;
+        this.taskType = $.taskType;
+        this.windowId = $.windowId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MaintenanceWindowTaskArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> description;
-        private Output<String> maxConcurrency;
-        private Output<String> maxErrors;
-        private @Nullable Output<String> name;
-        private @Nullable Output<Integer> priority;
-        private @Nullable Output<String> serviceRoleArn;
-        private @Nullable Output<List<MaintenanceWindowTaskTargetArgs>> targets;
-        private Output<String> taskArn;
-        private @Nullable Output<MaintenanceWindowTaskTaskInvocationParametersArgs> taskInvocationParameters;
-        private Output<String> taskType;
-        private Output<String> windowId;
+        private MaintenanceWindowTaskArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new MaintenanceWindowTaskArgs();
         }
 
         public Builder(MaintenanceWindowTaskArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.description = defaults.description;
-    	      this.maxConcurrency = defaults.maxConcurrency;
-    	      this.maxErrors = defaults.maxErrors;
-    	      this.name = defaults.name;
-    	      this.priority = defaults.priority;
-    	      this.serviceRoleArn = defaults.serviceRoleArn;
-    	      this.targets = defaults.targets;
-    	      this.taskArn = defaults.taskArn;
-    	      this.taskInvocationParameters = defaults.taskInvocationParameters;
-    	      this.taskType = defaults.taskType;
-    	      this.windowId = defaults.windowId;
+            $ = new MaintenanceWindowTaskArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder maxConcurrency(Output<String> maxConcurrency) {
-            this.maxConcurrency = Objects.requireNonNull(maxConcurrency);
+            $.maxConcurrency = maxConcurrency;
             return this;
         }
+
         public Builder maxConcurrency(String maxConcurrency) {
-            this.maxConcurrency = Output.of(Objects.requireNonNull(maxConcurrency));
-            return this;
+            return maxConcurrency(Output.of(maxConcurrency));
         }
+
         public Builder maxErrors(Output<String> maxErrors) {
-            this.maxErrors = Objects.requireNonNull(maxErrors);
+            $.maxErrors = maxErrors;
             return this;
         }
+
         public Builder maxErrors(String maxErrors) {
-            this.maxErrors = Output.of(Objects.requireNonNull(maxErrors));
-            return this;
+            return maxErrors(Output.of(maxErrors));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder priority(@Nullable Output<Integer> priority) {
-            this.priority = priority;
+            $.priority = priority;
             return this;
         }
-        public Builder priority(@Nullable Integer priority) {
-            this.priority = Codegen.ofNullable(priority);
-            return this;
+
+        public Builder priority(Integer priority) {
+            return priority(Output.of(priority));
         }
+
         public Builder serviceRoleArn(@Nullable Output<String> serviceRoleArn) {
-            this.serviceRoleArn = serviceRoleArn;
+            $.serviceRoleArn = serviceRoleArn;
             return this;
         }
-        public Builder serviceRoleArn(@Nullable String serviceRoleArn) {
-            this.serviceRoleArn = Codegen.ofNullable(serviceRoleArn);
-            return this;
+
+        public Builder serviceRoleArn(String serviceRoleArn) {
+            return serviceRoleArn(Output.of(serviceRoleArn));
         }
+
         public Builder targets(@Nullable Output<List<MaintenanceWindowTaskTargetArgs>> targets) {
-            this.targets = targets;
+            $.targets = targets;
             return this;
         }
-        public Builder targets(@Nullable List<MaintenanceWindowTaskTargetArgs> targets) {
-            this.targets = Codegen.ofNullable(targets);
-            return this;
+
+        public Builder targets(List<MaintenanceWindowTaskTargetArgs> targets) {
+            return targets(Output.of(targets));
         }
+
         public Builder targets(MaintenanceWindowTaskTargetArgs... targets) {
             return targets(List.of(targets));
         }
+
         public Builder taskArn(Output<String> taskArn) {
-            this.taskArn = Objects.requireNonNull(taskArn);
+            $.taskArn = taskArn;
             return this;
         }
+
         public Builder taskArn(String taskArn) {
-            this.taskArn = Output.of(Objects.requireNonNull(taskArn));
-            return this;
+            return taskArn(Output.of(taskArn));
         }
+
         public Builder taskInvocationParameters(@Nullable Output<MaintenanceWindowTaskTaskInvocationParametersArgs> taskInvocationParameters) {
-            this.taskInvocationParameters = taskInvocationParameters;
+            $.taskInvocationParameters = taskInvocationParameters;
             return this;
         }
-        public Builder taskInvocationParameters(@Nullable MaintenanceWindowTaskTaskInvocationParametersArgs taskInvocationParameters) {
-            this.taskInvocationParameters = Codegen.ofNullable(taskInvocationParameters);
-            return this;
+
+        public Builder taskInvocationParameters(MaintenanceWindowTaskTaskInvocationParametersArgs taskInvocationParameters) {
+            return taskInvocationParameters(Output.of(taskInvocationParameters));
         }
+
         public Builder taskType(Output<String> taskType) {
-            this.taskType = Objects.requireNonNull(taskType);
+            $.taskType = taskType;
             return this;
         }
+
         public Builder taskType(String taskType) {
-            this.taskType = Output.of(Objects.requireNonNull(taskType));
-            return this;
+            return taskType(Output.of(taskType));
         }
+
         public Builder windowId(Output<String> windowId) {
-            this.windowId = Objects.requireNonNull(windowId);
+            $.windowId = windowId;
             return this;
         }
+
         public Builder windowId(String windowId) {
-            this.windowId = Output.of(Objects.requireNonNull(windowId));
-            return this;
-        }        public MaintenanceWindowTaskArgs build() {
-            return new MaintenanceWindowTaskArgs(description, maxConcurrency, maxErrors, name, priority, serviceRoleArn, targets, taskArn, taskInvocationParameters, taskType, windowId);
+            return windowId(Output.of(windowId));
+        }
+
+        public MaintenanceWindowTaskArgs build() {
+            $.maxConcurrency = Objects.requireNonNull($.maxConcurrency, "expected parameter 'maxConcurrency' to be non-null");
+            $.maxErrors = Objects.requireNonNull($.maxErrors, "expected parameter 'maxErrors' to be non-null");
+            $.taskArn = Objects.requireNonNull($.taskArn, "expected parameter 'taskArn' to be non-null");
+            $.taskType = Objects.requireNonNull($.taskType, "expected parameter 'taskType' to be non-null");
+            $.windowId = Objects.requireNonNull($.windowId, "expected parameter 'windowId' to be non-null");
+            return $;
         }
     }
+
 }

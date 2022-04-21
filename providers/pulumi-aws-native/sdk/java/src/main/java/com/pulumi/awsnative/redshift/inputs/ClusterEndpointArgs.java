@@ -5,9 +5,9 @@ package com.pulumi.awsnative.redshift.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -16,70 +16,65 @@ public final class ClusterEndpointArgs extends com.pulumi.resources.ResourceArgs
     public static final ClusterEndpointArgs Empty = new ClusterEndpointArgs();
 
     @Import(name="address")
-      private final @Nullable Output<String> address;
+    private @Nullable Output<String> address;
 
-    public Output<String> address() {
-        return this.address == null ? Codegen.empty() : this.address;
+    public Optional<Output<String>> address() {
+        return Optional.ofNullable(this.address);
     }
 
     @Import(name="port")
-      private final @Nullable Output<String> port;
+    private @Nullable Output<String> port;
 
-    public Output<String> port() {
-        return this.port == null ? Codegen.empty() : this.port;
+    public Optional<Output<String>> port() {
+        return Optional.ofNullable(this.port);
     }
 
-    public ClusterEndpointArgs(
-        @Nullable Output<String> address,
-        @Nullable Output<String> port) {
-        this.address = address;
-        this.port = port;
-    }
+    private ClusterEndpointArgs() {}
 
-    private ClusterEndpointArgs() {
-        this.address = Codegen.empty();
-        this.port = Codegen.empty();
+    private ClusterEndpointArgs(ClusterEndpointArgs $) {
+        this.address = $.address;
+        this.port = $.port;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ClusterEndpointArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> address;
-        private @Nullable Output<String> port;
+        private ClusterEndpointArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ClusterEndpointArgs();
         }
 
         public Builder(ClusterEndpointArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.address = defaults.address;
-    	      this.port = defaults.port;
+            $ = new ClusterEndpointArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder address(@Nullable Output<String> address) {
-            this.address = address;
+            $.address = address;
             return this;
         }
-        public Builder address(@Nullable String address) {
-            this.address = Codegen.ofNullable(address);
-            return this;
+
+        public Builder address(String address) {
+            return address(Output.of(address));
         }
+
         public Builder port(@Nullable Output<String> port) {
-            this.port = port;
+            $.port = port;
             return this;
         }
-        public Builder port(@Nullable String port) {
-            this.port = Codegen.ofNullable(port);
-            return this;
-        }        public ClusterEndpointArgs build() {
-            return new ClusterEndpointArgs(address, port);
+
+        public Builder port(String port) {
+            return port(Output.of(port));
+        }
+
+        public ClusterEndpointArgs build() {
+            return $;
         }
     }
+
 }

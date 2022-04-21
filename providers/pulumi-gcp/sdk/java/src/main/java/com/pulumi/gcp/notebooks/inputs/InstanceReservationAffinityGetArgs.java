@@ -5,10 +5,10 @@ package com.pulumi.gcp.notebooks.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,7 +22,7 @@ public final class InstanceReservationAffinityGetArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="consumeReservationType", required=true)
-      private final Output<String> consumeReservationType;
+    private Output<String> consumeReservationType;
 
     public Output<String> consumeReservationType() {
         return this.consumeReservationType;
@@ -33,10 +33,10 @@ public final class InstanceReservationAffinityGetArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="key")
-      private final @Nullable Output<String> key;
+    private @Nullable Output<String> key;
 
-    public Output<String> key() {
-        return this.key == null ? Codegen.empty() : this.key;
+    public Optional<Output<String>> key() {
+        return Optional.ofNullable(this.key);
     }
 
     /**
@@ -44,79 +44,73 @@ public final class InstanceReservationAffinityGetArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="values")
-      private final @Nullable Output<List<String>> values;
+    private @Nullable Output<List<String>> values;
 
-    public Output<List<String>> values() {
-        return this.values == null ? Codegen.empty() : this.values;
+    public Optional<Output<List<String>>> values() {
+        return Optional.ofNullable(this.values);
     }
 
-    public InstanceReservationAffinityGetArgs(
-        Output<String> consumeReservationType,
-        @Nullable Output<String> key,
-        @Nullable Output<List<String>> values) {
-        this.consumeReservationType = Objects.requireNonNull(consumeReservationType, "expected parameter 'consumeReservationType' to be non-null");
-        this.key = key;
-        this.values = values;
-    }
+    private InstanceReservationAffinityGetArgs() {}
 
-    private InstanceReservationAffinityGetArgs() {
-        this.consumeReservationType = Codegen.empty();
-        this.key = Codegen.empty();
-        this.values = Codegen.empty();
+    private InstanceReservationAffinityGetArgs(InstanceReservationAffinityGetArgs $) {
+        this.consumeReservationType = $.consumeReservationType;
+        this.key = $.key;
+        this.values = $.values;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(InstanceReservationAffinityGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> consumeReservationType;
-        private @Nullable Output<String> key;
-        private @Nullable Output<List<String>> values;
+        private InstanceReservationAffinityGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new InstanceReservationAffinityGetArgs();
         }
 
         public Builder(InstanceReservationAffinityGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.consumeReservationType = defaults.consumeReservationType;
-    	      this.key = defaults.key;
-    	      this.values = defaults.values;
+            $ = new InstanceReservationAffinityGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder consumeReservationType(Output<String> consumeReservationType) {
-            this.consumeReservationType = Objects.requireNonNull(consumeReservationType);
+            $.consumeReservationType = consumeReservationType;
             return this;
         }
+
         public Builder consumeReservationType(String consumeReservationType) {
-            this.consumeReservationType = Output.of(Objects.requireNonNull(consumeReservationType));
-            return this;
+            return consumeReservationType(Output.of(consumeReservationType));
         }
+
         public Builder key(@Nullable Output<String> key) {
-            this.key = key;
+            $.key = key;
             return this;
         }
-        public Builder key(@Nullable String key) {
-            this.key = Codegen.ofNullable(key);
-            return this;
+
+        public Builder key(String key) {
+            return key(Output.of(key));
         }
+
         public Builder values(@Nullable Output<List<String>> values) {
-            this.values = values;
+            $.values = values;
             return this;
         }
-        public Builder values(@Nullable List<String> values) {
-            this.values = Codegen.ofNullable(values);
-            return this;
+
+        public Builder values(List<String> values) {
+            return values(Output.of(values));
         }
+
         public Builder values(String... values) {
             return values(List.of(values));
-        }        public InstanceReservationAffinityGetArgs build() {
-            return new InstanceReservationAffinityGetArgs(consumeReservationType, key, values);
+        }
+
+        public InstanceReservationAffinityGetArgs build() {
+            $.consumeReservationType = Objects.requireNonNull($.consumeReservationType, "expected parameter 'consumeReservationType' to be non-null");
+            return $;
         }
     }
+
 }

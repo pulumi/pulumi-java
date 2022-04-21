@@ -24,62 +24,57 @@ public final class ThemeError extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="message")
-      private final @Nullable String message;
+    private @Nullable String message;
 
     public Optional<String> message() {
-        return this.message == null ? Optional.empty() : Optional.ofNullable(this.message);
+        return Optional.ofNullable(this.message);
     }
 
     @Import(name="type")
-      private final @Nullable ThemeErrorType type;
+    private @Nullable ThemeErrorType type;
 
     public Optional<ThemeErrorType> type() {
-        return this.type == null ? Optional.empty() : Optional.ofNullable(this.type);
+        return Optional.ofNullable(this.type);
     }
 
-    public ThemeError(
-        @Nullable String message,
-        @Nullable ThemeErrorType type) {
-        this.message = message;
-        this.type = type;
-    }
+    private ThemeError() {}
 
-    private ThemeError() {
-        this.message = null;
-        this.type = null;
+    private ThemeError(ThemeError $) {
+        this.message = $.message;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ThemeError defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String message;
-        private @Nullable ThemeErrorType type;
+        private ThemeError $;
 
         public Builder() {
-    	      // Empty
+            $ = new ThemeError();
         }
 
         public Builder(ThemeError defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.message = defaults.message;
-    	      this.type = defaults.type;
+            $ = new ThemeError(Objects.requireNonNull(defaults));
         }
 
         public Builder message(@Nullable String message) {
-            this.message = message;
+            $.message = message;
             return this;
         }
+
         public Builder type(@Nullable ThemeErrorType type) {
-            this.type = type;
+            $.type = type;
             return this;
-        }        public ThemeError build() {
-            return new ThemeError(message, type);
+        }
+
+        public ThemeError build() {
+            return $;
         }
     }
+
 }

@@ -5,9 +5,9 @@ package com.pulumi.gcp.gameservices.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class GameServerConfigScalingConfigScheduleGetArgs extends com.pulu
      * 
      */
     @Import(name="cronJobDuration")
-      private final @Nullable Output<String> cronJobDuration;
+    private @Nullable Output<String> cronJobDuration;
 
-    public Output<String> cronJobDuration() {
-        return this.cronJobDuration == null ? Codegen.empty() : this.cronJobDuration;
+    public Optional<Output<String>> cronJobDuration() {
+        return Optional.ofNullable(this.cronJobDuration);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class GameServerConfigScalingConfigScheduleGetArgs extends com.pulu
      * 
      */
     @Import(name="cronSpec")
-      private final @Nullable Output<String> cronSpec;
+    private @Nullable Output<String> cronSpec;
 
-    public Output<String> cronSpec() {
-        return this.cronSpec == null ? Codegen.empty() : this.cronSpec;
+    public Optional<Output<String>> cronSpec() {
+        return Optional.ofNullable(this.cronSpec);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class GameServerConfigScalingConfigScheduleGetArgs extends com.pulu
      * 
      */
     @Import(name="endTime")
-      private final @Nullable Output<String> endTime;
+    private @Nullable Output<String> endTime;
 
-    public Output<String> endTime() {
-        return this.endTime == null ? Codegen.empty() : this.endTime;
+    public Optional<Output<String>> endTime() {
+        return Optional.ofNullable(this.endTime);
     }
 
     /**
@@ -59,89 +59,78 @@ public final class GameServerConfigScalingConfigScheduleGetArgs extends com.pulu
      * 
      */
     @Import(name="startTime")
-      private final @Nullable Output<String> startTime;
+    private @Nullable Output<String> startTime;
 
-    public Output<String> startTime() {
-        return this.startTime == null ? Codegen.empty() : this.startTime;
+    public Optional<Output<String>> startTime() {
+        return Optional.ofNullable(this.startTime);
     }
 
-    public GameServerConfigScalingConfigScheduleGetArgs(
-        @Nullable Output<String> cronJobDuration,
-        @Nullable Output<String> cronSpec,
-        @Nullable Output<String> endTime,
-        @Nullable Output<String> startTime) {
-        this.cronJobDuration = cronJobDuration;
-        this.cronSpec = cronSpec;
-        this.endTime = endTime;
-        this.startTime = startTime;
-    }
+    private GameServerConfigScalingConfigScheduleGetArgs() {}
 
-    private GameServerConfigScalingConfigScheduleGetArgs() {
-        this.cronJobDuration = Codegen.empty();
-        this.cronSpec = Codegen.empty();
-        this.endTime = Codegen.empty();
-        this.startTime = Codegen.empty();
+    private GameServerConfigScalingConfigScheduleGetArgs(GameServerConfigScalingConfigScheduleGetArgs $) {
+        this.cronJobDuration = $.cronJobDuration;
+        this.cronSpec = $.cronSpec;
+        this.endTime = $.endTime;
+        this.startTime = $.startTime;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GameServerConfigScalingConfigScheduleGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> cronJobDuration;
-        private @Nullable Output<String> cronSpec;
-        private @Nullable Output<String> endTime;
-        private @Nullable Output<String> startTime;
+        private GameServerConfigScalingConfigScheduleGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GameServerConfigScalingConfigScheduleGetArgs();
         }
 
         public Builder(GameServerConfigScalingConfigScheduleGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cronJobDuration = defaults.cronJobDuration;
-    	      this.cronSpec = defaults.cronSpec;
-    	      this.endTime = defaults.endTime;
-    	      this.startTime = defaults.startTime;
+            $ = new GameServerConfigScalingConfigScheduleGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder cronJobDuration(@Nullable Output<String> cronJobDuration) {
-            this.cronJobDuration = cronJobDuration;
+            $.cronJobDuration = cronJobDuration;
             return this;
         }
-        public Builder cronJobDuration(@Nullable String cronJobDuration) {
-            this.cronJobDuration = Codegen.ofNullable(cronJobDuration);
-            return this;
+
+        public Builder cronJobDuration(String cronJobDuration) {
+            return cronJobDuration(Output.of(cronJobDuration));
         }
+
         public Builder cronSpec(@Nullable Output<String> cronSpec) {
-            this.cronSpec = cronSpec;
+            $.cronSpec = cronSpec;
             return this;
         }
-        public Builder cronSpec(@Nullable String cronSpec) {
-            this.cronSpec = Codegen.ofNullable(cronSpec);
-            return this;
+
+        public Builder cronSpec(String cronSpec) {
+            return cronSpec(Output.of(cronSpec));
         }
+
         public Builder endTime(@Nullable Output<String> endTime) {
-            this.endTime = endTime;
+            $.endTime = endTime;
             return this;
         }
-        public Builder endTime(@Nullable String endTime) {
-            this.endTime = Codegen.ofNullable(endTime);
-            return this;
+
+        public Builder endTime(String endTime) {
+            return endTime(Output.of(endTime));
         }
+
         public Builder startTime(@Nullable Output<String> startTime) {
-            this.startTime = startTime;
+            $.startTime = startTime;
             return this;
         }
-        public Builder startTime(@Nullable String startTime) {
-            this.startTime = Codegen.ofNullable(startTime);
-            return this;
-        }        public GameServerConfigScalingConfigScheduleGetArgs build() {
-            return new GameServerConfigScalingConfigScheduleGetArgs(cronJobDuration, cronSpec, endTime, startTime);
+
+        public Builder startTime(String startTime) {
+            return startTime(Output.of(startTime));
+        }
+
+        public GameServerConfigScalingConfigScheduleGetArgs build() {
+            return $;
         }
     }
+
 }

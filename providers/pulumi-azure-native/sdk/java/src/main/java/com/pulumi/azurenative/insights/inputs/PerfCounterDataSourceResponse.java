@@ -28,10 +28,10 @@ public final class PerfCounterDataSourceResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="counterSpecifiers")
-      private final @Nullable List<String> counterSpecifiers;
+    private @Nullable List<String> counterSpecifiers;
 
-    public List<String> counterSpecifiers() {
-        return this.counterSpecifiers == null ? List.of() : this.counterSpecifiers;
+    public Optional<List<String>> counterSpecifiers() {
+        return Optional.ofNullable(this.counterSpecifiers);
     }
 
     /**
@@ -40,10 +40,10 @@ public final class PerfCounterDataSourceResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="name")
-      private final @Nullable String name;
+    private @Nullable String name;
 
     public Optional<String> name() {
-        return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -51,10 +51,10 @@ public final class PerfCounterDataSourceResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="samplingFrequencyInSeconds")
-      private final @Nullable Integer samplingFrequencyInSeconds;
+    private @Nullable Integer samplingFrequencyInSeconds;
 
     public Optional<Integer> samplingFrequencyInSeconds() {
-        return this.samplingFrequencyInSeconds == null ? Optional.empty() : Optional.ofNullable(this.samplingFrequencyInSeconds);
+        return Optional.ofNullable(this.samplingFrequencyInSeconds);
     }
 
     /**
@@ -63,79 +63,70 @@ public final class PerfCounterDataSourceResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="streams")
-      private final @Nullable List<String> streams;
+    private @Nullable List<String> streams;
 
-    public List<String> streams() {
-        return this.streams == null ? List.of() : this.streams;
+    public Optional<List<String>> streams() {
+        return Optional.ofNullable(this.streams);
     }
 
-    public PerfCounterDataSourceResponse(
-        @Nullable List<String> counterSpecifiers,
-        @Nullable String name,
-        @Nullable Integer samplingFrequencyInSeconds,
-        @Nullable List<String> streams) {
-        this.counterSpecifiers = counterSpecifiers;
-        this.name = name;
-        this.samplingFrequencyInSeconds = samplingFrequencyInSeconds;
-        this.streams = streams;
-    }
+    private PerfCounterDataSourceResponse() {}
 
-    private PerfCounterDataSourceResponse() {
-        this.counterSpecifiers = List.of();
-        this.name = null;
-        this.samplingFrequencyInSeconds = null;
-        this.streams = List.of();
+    private PerfCounterDataSourceResponse(PerfCounterDataSourceResponse $) {
+        this.counterSpecifiers = $.counterSpecifiers;
+        this.name = $.name;
+        this.samplingFrequencyInSeconds = $.samplingFrequencyInSeconds;
+        this.streams = $.streams;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PerfCounterDataSourceResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<String> counterSpecifiers;
-        private @Nullable String name;
-        private @Nullable Integer samplingFrequencyInSeconds;
-        private @Nullable List<String> streams;
+        private PerfCounterDataSourceResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new PerfCounterDataSourceResponse();
         }
 
         public Builder(PerfCounterDataSourceResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.counterSpecifiers = defaults.counterSpecifiers;
-    	      this.name = defaults.name;
-    	      this.samplingFrequencyInSeconds = defaults.samplingFrequencyInSeconds;
-    	      this.streams = defaults.streams;
+            $ = new PerfCounterDataSourceResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder counterSpecifiers(@Nullable List<String> counterSpecifiers) {
-            this.counterSpecifiers = counterSpecifiers;
+            $.counterSpecifiers = counterSpecifiers;
             return this;
         }
+
         public Builder counterSpecifiers(String... counterSpecifiers) {
             return counterSpecifiers(List.of(counterSpecifiers));
         }
+
         public Builder name(@Nullable String name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
+
         public Builder samplingFrequencyInSeconds(@Nullable Integer samplingFrequencyInSeconds) {
-            this.samplingFrequencyInSeconds = samplingFrequencyInSeconds;
+            $.samplingFrequencyInSeconds = samplingFrequencyInSeconds;
             return this;
         }
+
         public Builder streams(@Nullable List<String> streams) {
-            this.streams = streams;
+            $.streams = streams;
             return this;
         }
+
         public Builder streams(String... streams) {
             return streams(List.of(streams));
-        }        public PerfCounterDataSourceResponse build() {
-            return new PerfCounterDataSourceResponse(counterSpecifiers, name, samplingFrequencyInSeconds, streams);
+        }
+
+        public PerfCounterDataSourceResponse build() {
+            return $;
         }
     }
+
 }

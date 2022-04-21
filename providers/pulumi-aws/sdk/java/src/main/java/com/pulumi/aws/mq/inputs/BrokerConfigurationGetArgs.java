@@ -5,10 +5,10 @@ package com.pulumi.aws.mq.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class BrokerConfigurationGetArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="id")
-      private final @Nullable Output<String> id;
+    private @Nullable Output<String> id;
 
-    public Output<String> id() {
-        return this.id == null ? Codegen.empty() : this.id;
+    public Optional<Output<String>> id() {
+        return Optional.ofNullable(this.id);
     }
 
     /**
@@ -32,63 +32,58 @@ public final class BrokerConfigurationGetArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="revision")
-      private final @Nullable Output<Integer> revision;
+    private @Nullable Output<Integer> revision;
 
-    public Output<Integer> revision() {
-        return this.revision == null ? Codegen.empty() : this.revision;
+    public Optional<Output<Integer>> revision() {
+        return Optional.ofNullable(this.revision);
     }
 
-    public BrokerConfigurationGetArgs(
-        @Nullable Output<String> id,
-        @Nullable Output<Integer> revision) {
-        this.id = id;
-        this.revision = revision;
-    }
+    private BrokerConfigurationGetArgs() {}
 
-    private BrokerConfigurationGetArgs() {
-        this.id = Codegen.empty();
-        this.revision = Codegen.empty();
+    private BrokerConfigurationGetArgs(BrokerConfigurationGetArgs $) {
+        this.id = $.id;
+        this.revision = $.revision;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BrokerConfigurationGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> id;
-        private @Nullable Output<Integer> revision;
+        private BrokerConfigurationGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new BrokerConfigurationGetArgs();
         }
 
         public Builder(BrokerConfigurationGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.id = defaults.id;
-    	      this.revision = defaults.revision;
+            $ = new BrokerConfigurationGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder id(@Nullable Output<String> id) {
-            this.id = id;
+            $.id = id;
             return this;
         }
-        public Builder id(@Nullable String id) {
-            this.id = Codegen.ofNullable(id);
-            return this;
+
+        public Builder id(String id) {
+            return id(Output.of(id));
         }
+
         public Builder revision(@Nullable Output<Integer> revision) {
-            this.revision = revision;
+            $.revision = revision;
             return this;
         }
-        public Builder revision(@Nullable Integer revision) {
-            this.revision = Codegen.ofNullable(revision);
-            return this;
-        }        public BrokerConfigurationGetArgs build() {
-            return new BrokerConfigurationGetArgs(id, revision);
+
+        public Builder revision(Integer revision) {
+            return revision(Output.of(revision));
+        }
+
+        public BrokerConfigurationGetArgs build() {
+            return $;
         }
     }
+
 }

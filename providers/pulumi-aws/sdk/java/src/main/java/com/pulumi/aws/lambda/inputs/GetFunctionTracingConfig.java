@@ -13,45 +13,45 @@ public final class GetFunctionTracingConfig extends com.pulumi.resources.InvokeA
     public static final GetFunctionTracingConfig Empty = new GetFunctionTracingConfig();
 
     @Import(name="mode", required=true)
-      private final String mode;
+    private String mode;
 
     public String mode() {
         return this.mode;
     }
 
-    public GetFunctionTracingConfig(String mode) {
-        this.mode = Objects.requireNonNull(mode, "expected parameter 'mode' to be non-null");
-    }
+    private GetFunctionTracingConfig() {}
 
-    private GetFunctionTracingConfig() {
-        this.mode = null;
+    private GetFunctionTracingConfig(GetFunctionTracingConfig $) {
+        this.mode = $.mode;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetFunctionTracingConfig defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String mode;
+        private GetFunctionTracingConfig $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetFunctionTracingConfig();
         }
 
         public Builder(GetFunctionTracingConfig defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.mode = defaults.mode;
+            $ = new GetFunctionTracingConfig(Objects.requireNonNull(defaults));
         }
 
         public Builder mode(String mode) {
-            this.mode = Objects.requireNonNull(mode);
+            $.mode = mode;
             return this;
-        }        public GetFunctionTracingConfig build() {
-            return new GetFunctionTracingConfig(mode);
+        }
+
+        public GetFunctionTracingConfig build() {
+            $.mode = Objects.requireNonNull($.mode, "expected parameter 'mode' to be non-null");
+            return $;
         }
     }
+
 }

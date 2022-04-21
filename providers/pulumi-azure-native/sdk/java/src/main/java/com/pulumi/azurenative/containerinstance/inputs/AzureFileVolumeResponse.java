@@ -24,10 +24,10 @@ public final class AzureFileVolumeResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="readOnly")
-      private final @Nullable Boolean readOnly;
+    private @Nullable Boolean readOnly;
 
     public Optional<Boolean> readOnly() {
-        return this.readOnly == null ? Optional.empty() : Optional.ofNullable(this.readOnly);
+        return Optional.ofNullable(this.readOnly);
     }
 
     /**
@@ -35,7 +35,7 @@ public final class AzureFileVolumeResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="shareName", required=true)
-      private final String shareName;
+    private String shareName;
 
     public String shareName() {
         return this.shareName;
@@ -46,10 +46,10 @@ public final class AzureFileVolumeResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="storageAccountKey")
-      private final @Nullable String storageAccountKey;
+    private @Nullable String storageAccountKey;
 
     public Optional<String> storageAccountKey() {
-        return this.storageAccountKey == null ? Optional.empty() : Optional.ofNullable(this.storageAccountKey);
+        return Optional.ofNullable(this.storageAccountKey);
     }
 
     /**
@@ -57,73 +57,64 @@ public final class AzureFileVolumeResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="storageAccountName", required=true)
-      private final String storageAccountName;
+    private String storageAccountName;
 
     public String storageAccountName() {
         return this.storageAccountName;
     }
 
-    public AzureFileVolumeResponse(
-        @Nullable Boolean readOnly,
-        String shareName,
-        @Nullable String storageAccountKey,
-        String storageAccountName) {
-        this.readOnly = readOnly;
-        this.shareName = Objects.requireNonNull(shareName, "expected parameter 'shareName' to be non-null");
-        this.storageAccountKey = storageAccountKey;
-        this.storageAccountName = Objects.requireNonNull(storageAccountName, "expected parameter 'storageAccountName' to be non-null");
-    }
+    private AzureFileVolumeResponse() {}
 
-    private AzureFileVolumeResponse() {
-        this.readOnly = null;
-        this.shareName = null;
-        this.storageAccountKey = null;
-        this.storageAccountName = null;
+    private AzureFileVolumeResponse(AzureFileVolumeResponse $) {
+        this.readOnly = $.readOnly;
+        this.shareName = $.shareName;
+        this.storageAccountKey = $.storageAccountKey;
+        this.storageAccountName = $.storageAccountName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AzureFileVolumeResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Boolean readOnly;
-        private String shareName;
-        private @Nullable String storageAccountKey;
-        private String storageAccountName;
+        private AzureFileVolumeResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AzureFileVolumeResponse();
         }
 
         public Builder(AzureFileVolumeResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.readOnly = defaults.readOnly;
-    	      this.shareName = defaults.shareName;
-    	      this.storageAccountKey = defaults.storageAccountKey;
-    	      this.storageAccountName = defaults.storageAccountName;
+            $ = new AzureFileVolumeResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder readOnly(@Nullable Boolean readOnly) {
-            this.readOnly = readOnly;
+            $.readOnly = readOnly;
             return this;
         }
+
         public Builder shareName(String shareName) {
-            this.shareName = Objects.requireNonNull(shareName);
+            $.shareName = shareName;
             return this;
         }
+
         public Builder storageAccountKey(@Nullable String storageAccountKey) {
-            this.storageAccountKey = storageAccountKey;
+            $.storageAccountKey = storageAccountKey;
             return this;
         }
+
         public Builder storageAccountName(String storageAccountName) {
-            this.storageAccountName = Objects.requireNonNull(storageAccountName);
+            $.storageAccountName = storageAccountName;
             return this;
-        }        public AzureFileVolumeResponse build() {
-            return new AzureFileVolumeResponse(readOnly, shareName, storageAccountKey, storageAccountName);
+        }
+
+        public AzureFileVolumeResponse build() {
+            $.shareName = Objects.requireNonNull($.shareName, "expected parameter 'shareName' to be non-null");
+            $.storageAccountName = Objects.requireNonNull($.storageAccountName, "expected parameter 'storageAccountName' to be non-null");
+            return $;
         }
     }
+
 }

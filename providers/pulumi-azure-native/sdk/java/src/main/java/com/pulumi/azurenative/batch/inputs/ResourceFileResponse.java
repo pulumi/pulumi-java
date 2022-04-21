@@ -19,10 +19,10 @@ public final class ResourceFileResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="autoStorageContainerName")
-      private final @Nullable String autoStorageContainerName;
+    private @Nullable String autoStorageContainerName;
 
     public Optional<String> autoStorageContainerName() {
-        return this.autoStorageContainerName == null ? Optional.empty() : Optional.ofNullable(this.autoStorageContainerName);
+        return Optional.ofNullable(this.autoStorageContainerName);
     }
 
     /**
@@ -30,10 +30,10 @@ public final class ResourceFileResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="blobPrefix")
-      private final @Nullable String blobPrefix;
+    private @Nullable String blobPrefix;
 
     public Optional<String> blobPrefix() {
-        return this.blobPrefix == null ? Optional.empty() : Optional.ofNullable(this.blobPrefix);
+        return Optional.ofNullable(this.blobPrefix);
     }
 
     /**
@@ -41,10 +41,10 @@ public final class ResourceFileResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="fileMode")
-      private final @Nullable String fileMode;
+    private @Nullable String fileMode;
 
     public Optional<String> fileMode() {
-        return this.fileMode == null ? Optional.empty() : Optional.ofNullable(this.fileMode);
+        return Optional.ofNullable(this.fileMode);
     }
 
     /**
@@ -52,10 +52,10 @@ public final class ResourceFileResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="filePath")
-      private final @Nullable String filePath;
+    private @Nullable String filePath;
 
     public Optional<String> filePath() {
-        return this.filePath == null ? Optional.empty() : Optional.ofNullable(this.filePath);
+        return Optional.ofNullable(this.filePath);
     }
 
     /**
@@ -63,10 +63,10 @@ public final class ResourceFileResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="httpUrl")
-      private final @Nullable String httpUrl;
+    private @Nullable String httpUrl;
 
     public Optional<String> httpUrl() {
-        return this.httpUrl == null ? Optional.empty() : Optional.ofNullable(this.httpUrl);
+        return Optional.ofNullable(this.httpUrl);
     }
 
     /**
@@ -74,91 +74,74 @@ public final class ResourceFileResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="storageContainerUrl")
-      private final @Nullable String storageContainerUrl;
+    private @Nullable String storageContainerUrl;
 
     public Optional<String> storageContainerUrl() {
-        return this.storageContainerUrl == null ? Optional.empty() : Optional.ofNullable(this.storageContainerUrl);
+        return Optional.ofNullable(this.storageContainerUrl);
     }
 
-    public ResourceFileResponse(
-        @Nullable String autoStorageContainerName,
-        @Nullable String blobPrefix,
-        @Nullable String fileMode,
-        @Nullable String filePath,
-        @Nullable String httpUrl,
-        @Nullable String storageContainerUrl) {
-        this.autoStorageContainerName = autoStorageContainerName;
-        this.blobPrefix = blobPrefix;
-        this.fileMode = fileMode;
-        this.filePath = filePath;
-        this.httpUrl = httpUrl;
-        this.storageContainerUrl = storageContainerUrl;
-    }
+    private ResourceFileResponse() {}
 
-    private ResourceFileResponse() {
-        this.autoStorageContainerName = null;
-        this.blobPrefix = null;
-        this.fileMode = null;
-        this.filePath = null;
-        this.httpUrl = null;
-        this.storageContainerUrl = null;
+    private ResourceFileResponse(ResourceFileResponse $) {
+        this.autoStorageContainerName = $.autoStorageContainerName;
+        this.blobPrefix = $.blobPrefix;
+        this.fileMode = $.fileMode;
+        this.filePath = $.filePath;
+        this.httpUrl = $.httpUrl;
+        this.storageContainerUrl = $.storageContainerUrl;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ResourceFileResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String autoStorageContainerName;
-        private @Nullable String blobPrefix;
-        private @Nullable String fileMode;
-        private @Nullable String filePath;
-        private @Nullable String httpUrl;
-        private @Nullable String storageContainerUrl;
+        private ResourceFileResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ResourceFileResponse();
         }
 
         public Builder(ResourceFileResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.autoStorageContainerName = defaults.autoStorageContainerName;
-    	      this.blobPrefix = defaults.blobPrefix;
-    	      this.fileMode = defaults.fileMode;
-    	      this.filePath = defaults.filePath;
-    	      this.httpUrl = defaults.httpUrl;
-    	      this.storageContainerUrl = defaults.storageContainerUrl;
+            $ = new ResourceFileResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder autoStorageContainerName(@Nullable String autoStorageContainerName) {
-            this.autoStorageContainerName = autoStorageContainerName;
+            $.autoStorageContainerName = autoStorageContainerName;
             return this;
         }
+
         public Builder blobPrefix(@Nullable String blobPrefix) {
-            this.blobPrefix = blobPrefix;
+            $.blobPrefix = blobPrefix;
             return this;
         }
+
         public Builder fileMode(@Nullable String fileMode) {
-            this.fileMode = fileMode;
+            $.fileMode = fileMode;
             return this;
         }
+
         public Builder filePath(@Nullable String filePath) {
-            this.filePath = filePath;
+            $.filePath = filePath;
             return this;
         }
+
         public Builder httpUrl(@Nullable String httpUrl) {
-            this.httpUrl = httpUrl;
+            $.httpUrl = httpUrl;
             return this;
         }
+
         public Builder storageContainerUrl(@Nullable String storageContainerUrl) {
-            this.storageContainerUrl = storageContainerUrl;
+            $.storageContainerUrl = storageContainerUrl;
             return this;
-        }        public ResourceFileResponse build() {
-            return new ResourceFileResponse(autoStorageContainerName, blobPrefix, fileMode, filePath, httpUrl, storageContainerUrl);
+        }
+
+        public ResourceFileResponse build() {
+            return $;
         }
     }
+
 }

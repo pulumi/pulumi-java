@@ -5,10 +5,10 @@ package com.pulumi.aws.globalaccelerator.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class AcceleratorAttributesArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="flowLogsEnabled")
-      private final @Nullable Output<Boolean> flowLogsEnabled;
+    private @Nullable Output<Boolean> flowLogsEnabled;
 
-    public Output<Boolean> flowLogsEnabled() {
-        return this.flowLogsEnabled == null ? Codegen.empty() : this.flowLogsEnabled;
+    public Optional<Output<Boolean>> flowLogsEnabled() {
+        return Optional.ofNullable(this.flowLogsEnabled);
     }
 
     /**
@@ -32,10 +32,10 @@ public final class AcceleratorAttributesArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="flowLogsS3Bucket")
-      private final @Nullable Output<String> flowLogsS3Bucket;
+    private @Nullable Output<String> flowLogsS3Bucket;
 
-    public Output<String> flowLogsS3Bucket() {
-        return this.flowLogsS3Bucket == null ? Codegen.empty() : this.flowLogsS3Bucket;
+    public Optional<Output<String>> flowLogsS3Bucket() {
+        return Optional.ofNullable(this.flowLogsS3Bucket);
     }
 
     /**
@@ -43,76 +43,68 @@ public final class AcceleratorAttributesArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="flowLogsS3Prefix")
-      private final @Nullable Output<String> flowLogsS3Prefix;
+    private @Nullable Output<String> flowLogsS3Prefix;
 
-    public Output<String> flowLogsS3Prefix() {
-        return this.flowLogsS3Prefix == null ? Codegen.empty() : this.flowLogsS3Prefix;
+    public Optional<Output<String>> flowLogsS3Prefix() {
+        return Optional.ofNullable(this.flowLogsS3Prefix);
     }
 
-    public AcceleratorAttributesArgs(
-        @Nullable Output<Boolean> flowLogsEnabled,
-        @Nullable Output<String> flowLogsS3Bucket,
-        @Nullable Output<String> flowLogsS3Prefix) {
-        this.flowLogsEnabled = flowLogsEnabled;
-        this.flowLogsS3Bucket = flowLogsS3Bucket;
-        this.flowLogsS3Prefix = flowLogsS3Prefix;
-    }
+    private AcceleratorAttributesArgs() {}
 
-    private AcceleratorAttributesArgs() {
-        this.flowLogsEnabled = Codegen.empty();
-        this.flowLogsS3Bucket = Codegen.empty();
-        this.flowLogsS3Prefix = Codegen.empty();
+    private AcceleratorAttributesArgs(AcceleratorAttributesArgs $) {
+        this.flowLogsEnabled = $.flowLogsEnabled;
+        this.flowLogsS3Bucket = $.flowLogsS3Bucket;
+        this.flowLogsS3Prefix = $.flowLogsS3Prefix;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AcceleratorAttributesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> flowLogsEnabled;
-        private @Nullable Output<String> flowLogsS3Bucket;
-        private @Nullable Output<String> flowLogsS3Prefix;
+        private AcceleratorAttributesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AcceleratorAttributesArgs();
         }
 
         public Builder(AcceleratorAttributesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.flowLogsEnabled = defaults.flowLogsEnabled;
-    	      this.flowLogsS3Bucket = defaults.flowLogsS3Bucket;
-    	      this.flowLogsS3Prefix = defaults.flowLogsS3Prefix;
+            $ = new AcceleratorAttributesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder flowLogsEnabled(@Nullable Output<Boolean> flowLogsEnabled) {
-            this.flowLogsEnabled = flowLogsEnabled;
+            $.flowLogsEnabled = flowLogsEnabled;
             return this;
         }
-        public Builder flowLogsEnabled(@Nullable Boolean flowLogsEnabled) {
-            this.flowLogsEnabled = Codegen.ofNullable(flowLogsEnabled);
-            return this;
+
+        public Builder flowLogsEnabled(Boolean flowLogsEnabled) {
+            return flowLogsEnabled(Output.of(flowLogsEnabled));
         }
+
         public Builder flowLogsS3Bucket(@Nullable Output<String> flowLogsS3Bucket) {
-            this.flowLogsS3Bucket = flowLogsS3Bucket;
+            $.flowLogsS3Bucket = flowLogsS3Bucket;
             return this;
         }
-        public Builder flowLogsS3Bucket(@Nullable String flowLogsS3Bucket) {
-            this.flowLogsS3Bucket = Codegen.ofNullable(flowLogsS3Bucket);
-            return this;
+
+        public Builder flowLogsS3Bucket(String flowLogsS3Bucket) {
+            return flowLogsS3Bucket(Output.of(flowLogsS3Bucket));
         }
+
         public Builder flowLogsS3Prefix(@Nullable Output<String> flowLogsS3Prefix) {
-            this.flowLogsS3Prefix = flowLogsS3Prefix;
+            $.flowLogsS3Prefix = flowLogsS3Prefix;
             return this;
         }
-        public Builder flowLogsS3Prefix(@Nullable String flowLogsS3Prefix) {
-            this.flowLogsS3Prefix = Codegen.ofNullable(flowLogsS3Prefix);
-            return this;
-        }        public AcceleratorAttributesArgs build() {
-            return new AcceleratorAttributesArgs(flowLogsEnabled, flowLogsS3Bucket, flowLogsS3Prefix);
+
+        public Builder flowLogsS3Prefix(String flowLogsS3Prefix) {
+            return flowLogsS3Prefix(Output.of(flowLogsS3Prefix));
+        }
+
+        public AcceleratorAttributesArgs build() {
+            return $;
         }
     }
+
 }

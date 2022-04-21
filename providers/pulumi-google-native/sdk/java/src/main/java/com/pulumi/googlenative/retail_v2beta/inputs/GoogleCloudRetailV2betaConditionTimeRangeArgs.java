@@ -5,9 +5,9 @@ package com.pulumi.googlenative.retail_v2beta.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class GoogleCloudRetailV2betaConditionTimeRangeArgs extends com.pul
      * 
      */
     @Import(name="endTime")
-      private final @Nullable Output<String> endTime;
+    private @Nullable Output<String> endTime;
 
-    public Output<String> endTime() {
-        return this.endTime == null ? Codegen.empty() : this.endTime;
+    public Optional<Output<String>> endTime() {
+        return Optional.ofNullable(this.endTime);
     }
 
     /**
@@ -35,63 +35,58 @@ public final class GoogleCloudRetailV2betaConditionTimeRangeArgs extends com.pul
      * 
      */
     @Import(name="startTime")
-      private final @Nullable Output<String> startTime;
+    private @Nullable Output<String> startTime;
 
-    public Output<String> startTime() {
-        return this.startTime == null ? Codegen.empty() : this.startTime;
+    public Optional<Output<String>> startTime() {
+        return Optional.ofNullable(this.startTime);
     }
 
-    public GoogleCloudRetailV2betaConditionTimeRangeArgs(
-        @Nullable Output<String> endTime,
-        @Nullable Output<String> startTime) {
-        this.endTime = endTime;
-        this.startTime = startTime;
-    }
+    private GoogleCloudRetailV2betaConditionTimeRangeArgs() {}
 
-    private GoogleCloudRetailV2betaConditionTimeRangeArgs() {
-        this.endTime = Codegen.empty();
-        this.startTime = Codegen.empty();
+    private GoogleCloudRetailV2betaConditionTimeRangeArgs(GoogleCloudRetailV2betaConditionTimeRangeArgs $) {
+        this.endTime = $.endTime;
+        this.startTime = $.startTime;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudRetailV2betaConditionTimeRangeArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> endTime;
-        private @Nullable Output<String> startTime;
+        private GoogleCloudRetailV2betaConditionTimeRangeArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudRetailV2betaConditionTimeRangeArgs();
         }
 
         public Builder(GoogleCloudRetailV2betaConditionTimeRangeArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.endTime = defaults.endTime;
-    	      this.startTime = defaults.startTime;
+            $ = new GoogleCloudRetailV2betaConditionTimeRangeArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder endTime(@Nullable Output<String> endTime) {
-            this.endTime = endTime;
+            $.endTime = endTime;
             return this;
         }
-        public Builder endTime(@Nullable String endTime) {
-            this.endTime = Codegen.ofNullable(endTime);
-            return this;
+
+        public Builder endTime(String endTime) {
+            return endTime(Output.of(endTime));
         }
+
         public Builder startTime(@Nullable Output<String> startTime) {
-            this.startTime = startTime;
+            $.startTime = startTime;
             return this;
         }
-        public Builder startTime(@Nullable String startTime) {
-            this.startTime = Codegen.ofNullable(startTime);
-            return this;
-        }        public GoogleCloudRetailV2betaConditionTimeRangeArgs build() {
-            return new GoogleCloudRetailV2betaConditionTimeRangeArgs(endTime, startTime);
+
+        public Builder startTime(String startTime) {
+            return startTime(Output.of(startTime));
+        }
+
+        public GoogleCloudRetailV2betaConditionTimeRangeArgs build() {
+            return $;
         }
     }
+
 }

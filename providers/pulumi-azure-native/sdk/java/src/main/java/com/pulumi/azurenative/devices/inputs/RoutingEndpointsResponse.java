@@ -27,10 +27,10 @@ public final class RoutingEndpointsResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="eventHubs")
-      private final @Nullable List<RoutingEventHubPropertiesResponse> eventHubs;
+    private @Nullable List<RoutingEventHubPropertiesResponse> eventHubs;
 
-    public List<RoutingEventHubPropertiesResponse> eventHubs() {
-        return this.eventHubs == null ? List.of() : this.eventHubs;
+    public Optional<List<RoutingEventHubPropertiesResponse>> eventHubs() {
+        return Optional.ofNullable(this.eventHubs);
     }
 
     /**
@@ -38,10 +38,10 @@ public final class RoutingEndpointsResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="serviceBusQueues")
-      private final @Nullable List<RoutingServiceBusQueueEndpointPropertiesResponse> serviceBusQueues;
+    private @Nullable List<RoutingServiceBusQueueEndpointPropertiesResponse> serviceBusQueues;
 
-    public List<RoutingServiceBusQueueEndpointPropertiesResponse> serviceBusQueues() {
-        return this.serviceBusQueues == null ? List.of() : this.serviceBusQueues;
+    public Optional<List<RoutingServiceBusQueueEndpointPropertiesResponse>> serviceBusQueues() {
+        return Optional.ofNullable(this.serviceBusQueues);
     }
 
     /**
@@ -49,10 +49,10 @@ public final class RoutingEndpointsResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="serviceBusTopics")
-      private final @Nullable List<RoutingServiceBusTopicEndpointPropertiesResponse> serviceBusTopics;
+    private @Nullable List<RoutingServiceBusTopicEndpointPropertiesResponse> serviceBusTopics;
 
-    public List<RoutingServiceBusTopicEndpointPropertiesResponse> serviceBusTopics() {
-        return this.serviceBusTopics == null ? List.of() : this.serviceBusTopics;
+    public Optional<List<RoutingServiceBusTopicEndpointPropertiesResponse>> serviceBusTopics() {
+        return Optional.ofNullable(this.serviceBusTopics);
     }
 
     /**
@@ -60,85 +60,78 @@ public final class RoutingEndpointsResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="storageContainers")
-      private final @Nullable List<RoutingStorageContainerPropertiesResponse> storageContainers;
+    private @Nullable List<RoutingStorageContainerPropertiesResponse> storageContainers;
 
-    public List<RoutingStorageContainerPropertiesResponse> storageContainers() {
-        return this.storageContainers == null ? List.of() : this.storageContainers;
+    public Optional<List<RoutingStorageContainerPropertiesResponse>> storageContainers() {
+        return Optional.ofNullable(this.storageContainers);
     }
 
-    public RoutingEndpointsResponse(
-        @Nullable List<RoutingEventHubPropertiesResponse> eventHubs,
-        @Nullable List<RoutingServiceBusQueueEndpointPropertiesResponse> serviceBusQueues,
-        @Nullable List<RoutingServiceBusTopicEndpointPropertiesResponse> serviceBusTopics,
-        @Nullable List<RoutingStorageContainerPropertiesResponse> storageContainers) {
-        this.eventHubs = eventHubs;
-        this.serviceBusQueues = serviceBusQueues;
-        this.serviceBusTopics = serviceBusTopics;
-        this.storageContainers = storageContainers;
-    }
+    private RoutingEndpointsResponse() {}
 
-    private RoutingEndpointsResponse() {
-        this.eventHubs = List.of();
-        this.serviceBusQueues = List.of();
-        this.serviceBusTopics = List.of();
-        this.storageContainers = List.of();
+    private RoutingEndpointsResponse(RoutingEndpointsResponse $) {
+        this.eventHubs = $.eventHubs;
+        this.serviceBusQueues = $.serviceBusQueues;
+        this.serviceBusTopics = $.serviceBusTopics;
+        this.storageContainers = $.storageContainers;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RoutingEndpointsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<RoutingEventHubPropertiesResponse> eventHubs;
-        private @Nullable List<RoutingServiceBusQueueEndpointPropertiesResponse> serviceBusQueues;
-        private @Nullable List<RoutingServiceBusTopicEndpointPropertiesResponse> serviceBusTopics;
-        private @Nullable List<RoutingStorageContainerPropertiesResponse> storageContainers;
+        private RoutingEndpointsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new RoutingEndpointsResponse();
         }
 
         public Builder(RoutingEndpointsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.eventHubs = defaults.eventHubs;
-    	      this.serviceBusQueues = defaults.serviceBusQueues;
-    	      this.serviceBusTopics = defaults.serviceBusTopics;
-    	      this.storageContainers = defaults.storageContainers;
+            $ = new RoutingEndpointsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder eventHubs(@Nullable List<RoutingEventHubPropertiesResponse> eventHubs) {
-            this.eventHubs = eventHubs;
+            $.eventHubs = eventHubs;
             return this;
         }
+
         public Builder eventHubs(RoutingEventHubPropertiesResponse... eventHubs) {
             return eventHubs(List.of(eventHubs));
         }
+
         public Builder serviceBusQueues(@Nullable List<RoutingServiceBusQueueEndpointPropertiesResponse> serviceBusQueues) {
-            this.serviceBusQueues = serviceBusQueues;
+            $.serviceBusQueues = serviceBusQueues;
             return this;
         }
+
         public Builder serviceBusQueues(RoutingServiceBusQueueEndpointPropertiesResponse... serviceBusQueues) {
             return serviceBusQueues(List.of(serviceBusQueues));
         }
+
         public Builder serviceBusTopics(@Nullable List<RoutingServiceBusTopicEndpointPropertiesResponse> serviceBusTopics) {
-            this.serviceBusTopics = serviceBusTopics;
+            $.serviceBusTopics = serviceBusTopics;
             return this;
         }
+
         public Builder serviceBusTopics(RoutingServiceBusTopicEndpointPropertiesResponse... serviceBusTopics) {
             return serviceBusTopics(List.of(serviceBusTopics));
         }
+
         public Builder storageContainers(@Nullable List<RoutingStorageContainerPropertiesResponse> storageContainers) {
-            this.storageContainers = storageContainers;
+            $.storageContainers = storageContainers;
             return this;
         }
+
         public Builder storageContainers(RoutingStorageContainerPropertiesResponse... storageContainers) {
             return storageContainers(List.of(storageContainers));
-        }        public RoutingEndpointsResponse build() {
-            return new RoutingEndpointsResponse(eventHubs, serviceBusQueues, serviceBusTopics, storageContainers);
+        }
+
+        public RoutingEndpointsResponse build() {
+            return $;
         }
     }
+
 }

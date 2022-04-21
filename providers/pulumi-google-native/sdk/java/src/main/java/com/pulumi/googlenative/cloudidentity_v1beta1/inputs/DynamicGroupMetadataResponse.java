@@ -23,7 +23,7 @@ public final class DynamicGroupMetadataResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="queries", required=true)
-      private final List<DynamicGroupQueryResponse> queries;
+    private List<DynamicGroupQueryResponse> queries;
 
     public List<DynamicGroupQueryResponse> queries() {
         return this.queries;
@@ -34,58 +34,56 @@ public final class DynamicGroupMetadataResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="status", required=true)
-      private final DynamicGroupStatusResponse status;
+    private DynamicGroupStatusResponse status;
 
     public DynamicGroupStatusResponse status() {
         return this.status;
     }
 
-    public DynamicGroupMetadataResponse(
-        List<DynamicGroupQueryResponse> queries,
-        DynamicGroupStatusResponse status) {
-        this.queries = Objects.requireNonNull(queries, "expected parameter 'queries' to be non-null");
-        this.status = Objects.requireNonNull(status, "expected parameter 'status' to be non-null");
-    }
+    private DynamicGroupMetadataResponse() {}
 
-    private DynamicGroupMetadataResponse() {
-        this.queries = List.of();
-        this.status = null;
+    private DynamicGroupMetadataResponse(DynamicGroupMetadataResponse $) {
+        this.queries = $.queries;
+        this.status = $.status;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DynamicGroupMetadataResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<DynamicGroupQueryResponse> queries;
-        private DynamicGroupStatusResponse status;
+        private DynamicGroupMetadataResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new DynamicGroupMetadataResponse();
         }
 
         public Builder(DynamicGroupMetadataResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.queries = defaults.queries;
-    	      this.status = defaults.status;
+            $ = new DynamicGroupMetadataResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder queries(List<DynamicGroupQueryResponse> queries) {
-            this.queries = Objects.requireNonNull(queries);
+            $.queries = queries;
             return this;
         }
+
         public Builder queries(DynamicGroupQueryResponse... queries) {
             return queries(List.of(queries));
         }
+
         public Builder status(DynamicGroupStatusResponse status) {
-            this.status = Objects.requireNonNull(status);
+            $.status = status;
             return this;
-        }        public DynamicGroupMetadataResponse build() {
-            return new DynamicGroupMetadataResponse(queries, status);
+        }
+
+        public DynamicGroupMetadataResponse build() {
+            $.queries = Objects.requireNonNull($.queries, "expected parameter 'queries' to be non-null");
+            $.status = Objects.requireNonNull($.status, "expected parameter 'status' to be non-null");
+            return $;
         }
     }
+
 }

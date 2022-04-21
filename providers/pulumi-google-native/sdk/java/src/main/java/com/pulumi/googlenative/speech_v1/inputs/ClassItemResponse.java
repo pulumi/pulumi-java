@@ -21,45 +21,45 @@ public final class ClassItemResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="value", required=true)
-      private final String value;
+    private String value;
 
     public String value() {
         return this.value;
     }
 
-    public ClassItemResponse(String value) {
-        this.value = Objects.requireNonNull(value, "expected parameter 'value' to be non-null");
-    }
+    private ClassItemResponse() {}
 
-    private ClassItemResponse() {
-        this.value = null;
+    private ClassItemResponse(ClassItemResponse $) {
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ClassItemResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String value;
+        private ClassItemResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ClassItemResponse();
         }
 
         public Builder(ClassItemResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.value = defaults.value;
+            $ = new ClassItemResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder value(String value) {
-            this.value = Objects.requireNonNull(value);
+            $.value = value;
             return this;
-        }        public ClassItemResponse build() {
-            return new ClassItemResponse(value);
+        }
+
+        public ClassItemResponse build() {
+            $.value = Objects.requireNonNull($.value, "expected parameter 'value' to be non-null");
+            return $;
         }
     }
+
 }

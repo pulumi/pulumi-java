@@ -5,11 +5,11 @@ package com.pulumi.gcp.dataloss.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class PreventionInspectTemplateInspectConfigCustomInfoTypeRegexArgs
      * 
      */
     @Import(name="groupIndexes")
-      private final @Nullable Output<List<Integer>> groupIndexes;
+    private @Nullable Output<List<Integer>> groupIndexes;
 
-    public Output<List<Integer>> groupIndexes() {
-        return this.groupIndexes == null ? Codegen.empty() : this.groupIndexes;
+    public Optional<Output<List<Integer>>> groupIndexes() {
+        return Optional.ofNullable(this.groupIndexes);
     }
 
     /**
@@ -34,66 +34,63 @@ public final class PreventionInspectTemplateInspectConfigCustomInfoTypeRegexArgs
      * 
      */
     @Import(name="pattern", required=true)
-      private final Output<String> pattern;
+    private Output<String> pattern;
 
     public Output<String> pattern() {
         return this.pattern;
     }
 
-    public PreventionInspectTemplateInspectConfigCustomInfoTypeRegexArgs(
-        @Nullable Output<List<Integer>> groupIndexes,
-        Output<String> pattern) {
-        this.groupIndexes = groupIndexes;
-        this.pattern = Objects.requireNonNull(pattern, "expected parameter 'pattern' to be non-null");
-    }
+    private PreventionInspectTemplateInspectConfigCustomInfoTypeRegexArgs() {}
 
-    private PreventionInspectTemplateInspectConfigCustomInfoTypeRegexArgs() {
-        this.groupIndexes = Codegen.empty();
-        this.pattern = Codegen.empty();
+    private PreventionInspectTemplateInspectConfigCustomInfoTypeRegexArgs(PreventionInspectTemplateInspectConfigCustomInfoTypeRegexArgs $) {
+        this.groupIndexes = $.groupIndexes;
+        this.pattern = $.pattern;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PreventionInspectTemplateInspectConfigCustomInfoTypeRegexArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<Integer>> groupIndexes;
-        private Output<String> pattern;
+        private PreventionInspectTemplateInspectConfigCustomInfoTypeRegexArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PreventionInspectTemplateInspectConfigCustomInfoTypeRegexArgs();
         }
 
         public Builder(PreventionInspectTemplateInspectConfigCustomInfoTypeRegexArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.groupIndexes = defaults.groupIndexes;
-    	      this.pattern = defaults.pattern;
+            $ = new PreventionInspectTemplateInspectConfigCustomInfoTypeRegexArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder groupIndexes(@Nullable Output<List<Integer>> groupIndexes) {
-            this.groupIndexes = groupIndexes;
+            $.groupIndexes = groupIndexes;
             return this;
         }
-        public Builder groupIndexes(@Nullable List<Integer> groupIndexes) {
-            this.groupIndexes = Codegen.ofNullable(groupIndexes);
-            return this;
+
+        public Builder groupIndexes(List<Integer> groupIndexes) {
+            return groupIndexes(Output.of(groupIndexes));
         }
+
         public Builder groupIndexes(Integer... groupIndexes) {
             return groupIndexes(List.of(groupIndexes));
         }
+
         public Builder pattern(Output<String> pattern) {
-            this.pattern = Objects.requireNonNull(pattern);
+            $.pattern = pattern;
             return this;
         }
+
         public Builder pattern(String pattern) {
-            this.pattern = Output.of(Objects.requireNonNull(pattern));
-            return this;
-        }        public PreventionInspectTemplateInspectConfigCustomInfoTypeRegexArgs build() {
-            return new PreventionInspectTemplateInspectConfigCustomInfoTypeRegexArgs(groupIndexes, pattern);
+            return pattern(Output.of(pattern));
+        }
+
+        public PreventionInspectTemplateInspectConfigCustomInfoTypeRegexArgs build() {
+            $.pattern = Objects.requireNonNull($.pattern, "expected parameter 'pattern' to be non-null");
+            return $;
         }
     }
+
 }

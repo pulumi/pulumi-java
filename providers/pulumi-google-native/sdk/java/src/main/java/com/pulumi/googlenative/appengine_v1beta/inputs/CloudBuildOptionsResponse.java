@@ -21,7 +21,7 @@ public final class CloudBuildOptionsResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="appYamlPath", required=true)
-      private final String appYamlPath;
+    private String appYamlPath;
 
     public String appYamlPath() {
         return this.appYamlPath;
@@ -32,55 +32,52 @@ public final class CloudBuildOptionsResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="cloudBuildTimeout", required=true)
-      private final String cloudBuildTimeout;
+    private String cloudBuildTimeout;
 
     public String cloudBuildTimeout() {
         return this.cloudBuildTimeout;
     }
 
-    public CloudBuildOptionsResponse(
-        String appYamlPath,
-        String cloudBuildTimeout) {
-        this.appYamlPath = Objects.requireNonNull(appYamlPath, "expected parameter 'appYamlPath' to be non-null");
-        this.cloudBuildTimeout = Objects.requireNonNull(cloudBuildTimeout, "expected parameter 'cloudBuildTimeout' to be non-null");
-    }
+    private CloudBuildOptionsResponse() {}
 
-    private CloudBuildOptionsResponse() {
-        this.appYamlPath = null;
-        this.cloudBuildTimeout = null;
+    private CloudBuildOptionsResponse(CloudBuildOptionsResponse $) {
+        this.appYamlPath = $.appYamlPath;
+        this.cloudBuildTimeout = $.cloudBuildTimeout;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CloudBuildOptionsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String appYamlPath;
-        private String cloudBuildTimeout;
+        private CloudBuildOptionsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new CloudBuildOptionsResponse();
         }
 
         public Builder(CloudBuildOptionsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.appYamlPath = defaults.appYamlPath;
-    	      this.cloudBuildTimeout = defaults.cloudBuildTimeout;
+            $ = new CloudBuildOptionsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder appYamlPath(String appYamlPath) {
-            this.appYamlPath = Objects.requireNonNull(appYamlPath);
+            $.appYamlPath = appYamlPath;
             return this;
         }
+
         public Builder cloudBuildTimeout(String cloudBuildTimeout) {
-            this.cloudBuildTimeout = Objects.requireNonNull(cloudBuildTimeout);
+            $.cloudBuildTimeout = cloudBuildTimeout;
             return this;
-        }        public CloudBuildOptionsResponse build() {
-            return new CloudBuildOptionsResponse(appYamlPath, cloudBuildTimeout);
+        }
+
+        public CloudBuildOptionsResponse build() {
+            $.appYamlPath = Objects.requireNonNull($.appYamlPath, "expected parameter 'appYamlPath' to be non-null");
+            $.cloudBuildTimeout = Objects.requireNonNull($.cloudBuildTimeout, "expected parameter 'cloudBuildTimeout' to be non-null");
+            return $;
         }
     }
+
 }

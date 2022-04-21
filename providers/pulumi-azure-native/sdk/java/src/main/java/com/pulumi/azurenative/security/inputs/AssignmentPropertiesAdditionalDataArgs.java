@@ -5,9 +5,9 @@ package com.pulumi.azurenative.security.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class AssignmentPropertiesAdditionalDataArgs extends com.pulumi.res
      * 
      */
     @Import(name="exemptionCategory")
-      private final @Nullable Output<String> exemptionCategory;
+    private @Nullable Output<String> exemptionCategory;
 
-    public Output<String> exemptionCategory() {
-        return this.exemptionCategory == null ? Codegen.empty() : this.exemptionCategory;
+    public Optional<Output<String>> exemptionCategory() {
+        return Optional.ofNullable(this.exemptionCategory);
     }
 
-    public AssignmentPropertiesAdditionalDataArgs(@Nullable Output<String> exemptionCategory) {
-        this.exemptionCategory = exemptionCategory;
-    }
+    private AssignmentPropertiesAdditionalDataArgs() {}
 
-    private AssignmentPropertiesAdditionalDataArgs() {
-        this.exemptionCategory = Codegen.empty();
+    private AssignmentPropertiesAdditionalDataArgs(AssignmentPropertiesAdditionalDataArgs $) {
+        this.exemptionCategory = $.exemptionCategory;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AssignmentPropertiesAdditionalDataArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> exemptionCategory;
+        private AssignmentPropertiesAdditionalDataArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AssignmentPropertiesAdditionalDataArgs();
         }
 
         public Builder(AssignmentPropertiesAdditionalDataArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.exemptionCategory = defaults.exemptionCategory;
+            $ = new AssignmentPropertiesAdditionalDataArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder exemptionCategory(@Nullable Output<String> exemptionCategory) {
-            this.exemptionCategory = exemptionCategory;
+            $.exemptionCategory = exemptionCategory;
             return this;
         }
-        public Builder exemptionCategory(@Nullable String exemptionCategory) {
-            this.exemptionCategory = Codegen.ofNullable(exemptionCategory);
-            return this;
-        }        public AssignmentPropertiesAdditionalDataArgs build() {
-            return new AssignmentPropertiesAdditionalDataArgs(exemptionCategory);
+
+        public Builder exemptionCategory(String exemptionCategory) {
+            return exemptionCategory(Output.of(exemptionCategory));
+        }
+
+        public AssignmentPropertiesAdditionalDataArgs build() {
+            return $;
         }
     }
+
 }

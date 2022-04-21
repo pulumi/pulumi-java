@@ -22,7 +22,7 @@ public final class TriggerResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="count", required=true)
-      private final Integer count;
+    private Integer count;
 
     public Integer count() {
         return this.count;
@@ -33,55 +33,52 @@ public final class TriggerResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="percent", required=true)
-      private final Double percent;
+    private Double percent;
 
     public Double percent() {
         return this.percent;
     }
 
-    public TriggerResponse(
-        Integer count,
-        Double percent) {
-        this.count = Objects.requireNonNull(count, "expected parameter 'count' to be non-null");
-        this.percent = Objects.requireNonNull(percent, "expected parameter 'percent' to be non-null");
-    }
+    private TriggerResponse() {}
 
-    private TriggerResponse() {
-        this.count = null;
-        this.percent = null;
+    private TriggerResponse(TriggerResponse $) {
+        this.count = $.count;
+        this.percent = $.percent;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TriggerResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Integer count;
-        private Double percent;
+        private TriggerResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new TriggerResponse();
         }
 
         public Builder(TriggerResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.count = defaults.count;
-    	      this.percent = defaults.percent;
+            $ = new TriggerResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder count(Integer count) {
-            this.count = Objects.requireNonNull(count);
+            $.count = count;
             return this;
         }
+
         public Builder percent(Double percent) {
-            this.percent = Objects.requireNonNull(percent);
+            $.percent = percent;
             return this;
-        }        public TriggerResponse build() {
-            return new TriggerResponse(count, percent);
+        }
+
+        public TriggerResponse build() {
+            $.count = Objects.requireNonNull($.count, "expected parameter 'count' to be non-null");
+            $.percent = Objects.requireNonNull($.percent, "expected parameter 'percent' to be non-null");
+            return $;
         }
     }
+
 }

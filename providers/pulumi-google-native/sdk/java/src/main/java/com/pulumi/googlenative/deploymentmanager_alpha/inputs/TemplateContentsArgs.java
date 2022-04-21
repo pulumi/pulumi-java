@@ -5,12 +5,12 @@ package com.pulumi.googlenative.deploymentmanager_alpha.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.deploymentmanager_alpha.enums.TemplateContentsInterpreter;
 import com.pulumi.googlenative.deploymentmanager_alpha.inputs.ImportFileArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +27,10 @@ public final class TemplateContentsArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="imports")
-      private final @Nullable Output<List<ImportFileArgs>> imports;
+    private @Nullable Output<List<ImportFileArgs>> imports;
 
-    public Output<List<ImportFileArgs>> imports() {
-        return this.imports == null ? Codegen.empty() : this.imports;
+    public Optional<Output<List<ImportFileArgs>>> imports() {
+        return Optional.ofNullable(this.imports);
     }
 
     /**
@@ -38,10 +38,10 @@ public final class TemplateContentsArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="interpreter")
-      private final @Nullable Output<TemplateContentsInterpreter> interpreter;
+    private @Nullable Output<TemplateContentsInterpreter> interpreter;
 
-    public Output<TemplateContentsInterpreter> interpreter() {
-        return this.interpreter == null ? Codegen.empty() : this.interpreter;
+    public Optional<Output<TemplateContentsInterpreter>> interpreter() {
+        return Optional.ofNullable(this.interpreter);
     }
 
     /**
@@ -49,10 +49,10 @@ public final class TemplateContentsArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="mainTemplate")
-      private final @Nullable Output<String> mainTemplate;
+    private @Nullable Output<String> mainTemplate;
 
-    public Output<String> mainTemplate() {
-        return this.mainTemplate == null ? Codegen.empty() : this.mainTemplate;
+    public Optional<Output<String>> mainTemplate() {
+        return Optional.ofNullable(this.mainTemplate);
     }
 
     /**
@@ -60,10 +60,10 @@ public final class TemplateContentsArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="schema")
-      private final @Nullable Output<String> schema;
+    private @Nullable Output<String> schema;
 
-    public Output<String> schema() {
-        return this.schema == null ? Codegen.empty() : this.schema;
+    public Optional<Output<String>> schema() {
+        return Optional.ofNullable(this.schema);
     }
 
     /**
@@ -71,105 +71,92 @@ public final class TemplateContentsArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="template")
-      private final @Nullable Output<String> template;
+    private @Nullable Output<String> template;
 
-    public Output<String> template() {
-        return this.template == null ? Codegen.empty() : this.template;
+    public Optional<Output<String>> template() {
+        return Optional.ofNullable(this.template);
     }
 
-    public TemplateContentsArgs(
-        @Nullable Output<List<ImportFileArgs>> imports,
-        @Nullable Output<TemplateContentsInterpreter> interpreter,
-        @Nullable Output<String> mainTemplate,
-        @Nullable Output<String> schema,
-        @Nullable Output<String> template) {
-        this.imports = imports;
-        this.interpreter = interpreter;
-        this.mainTemplate = mainTemplate;
-        this.schema = schema;
-        this.template = template;
-    }
+    private TemplateContentsArgs() {}
 
-    private TemplateContentsArgs() {
-        this.imports = Codegen.empty();
-        this.interpreter = Codegen.empty();
-        this.mainTemplate = Codegen.empty();
-        this.schema = Codegen.empty();
-        this.template = Codegen.empty();
+    private TemplateContentsArgs(TemplateContentsArgs $) {
+        this.imports = $.imports;
+        this.interpreter = $.interpreter;
+        this.mainTemplate = $.mainTemplate;
+        this.schema = $.schema;
+        this.template = $.template;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TemplateContentsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<ImportFileArgs>> imports;
-        private @Nullable Output<TemplateContentsInterpreter> interpreter;
-        private @Nullable Output<String> mainTemplate;
-        private @Nullable Output<String> schema;
-        private @Nullable Output<String> template;
+        private TemplateContentsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TemplateContentsArgs();
         }
 
         public Builder(TemplateContentsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.imports = defaults.imports;
-    	      this.interpreter = defaults.interpreter;
-    	      this.mainTemplate = defaults.mainTemplate;
-    	      this.schema = defaults.schema;
-    	      this.template = defaults.template;
+            $ = new TemplateContentsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder imports(@Nullable Output<List<ImportFileArgs>> imports) {
-            this.imports = imports;
+            $.imports = imports;
             return this;
         }
-        public Builder imports(@Nullable List<ImportFileArgs> imports) {
-            this.imports = Codegen.ofNullable(imports);
-            return this;
+
+        public Builder imports(List<ImportFileArgs> imports) {
+            return imports(Output.of(imports));
         }
+
         public Builder imports(ImportFileArgs... imports) {
             return imports(List.of(imports));
         }
+
         public Builder interpreter(@Nullable Output<TemplateContentsInterpreter> interpreter) {
-            this.interpreter = interpreter;
+            $.interpreter = interpreter;
             return this;
         }
-        public Builder interpreter(@Nullable TemplateContentsInterpreter interpreter) {
-            this.interpreter = Codegen.ofNullable(interpreter);
-            return this;
+
+        public Builder interpreter(TemplateContentsInterpreter interpreter) {
+            return interpreter(Output.of(interpreter));
         }
+
         public Builder mainTemplate(@Nullable Output<String> mainTemplate) {
-            this.mainTemplate = mainTemplate;
+            $.mainTemplate = mainTemplate;
             return this;
         }
-        public Builder mainTemplate(@Nullable String mainTemplate) {
-            this.mainTemplate = Codegen.ofNullable(mainTemplate);
-            return this;
+
+        public Builder mainTemplate(String mainTemplate) {
+            return mainTemplate(Output.of(mainTemplate));
         }
+
         public Builder schema(@Nullable Output<String> schema) {
-            this.schema = schema;
+            $.schema = schema;
             return this;
         }
-        public Builder schema(@Nullable String schema) {
-            this.schema = Codegen.ofNullable(schema);
-            return this;
+
+        public Builder schema(String schema) {
+            return schema(Output.of(schema));
         }
+
         public Builder template(@Nullable Output<String> template) {
-            this.template = template;
+            $.template = template;
             return this;
         }
-        public Builder template(@Nullable String template) {
-            this.template = Codegen.ofNullable(template);
-            return this;
-        }        public TemplateContentsArgs build() {
-            return new TemplateContentsArgs(imports, interpreter, mainTemplate, schema, template);
+
+        public Builder template(String template) {
+            return template(Output.of(template));
+        }
+
+        public TemplateContentsArgs build() {
+            return $;
         }
     }
+
 }

@@ -5,11 +5,11 @@ package com.pulumi.googlenative.apigee_v1;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.apigee_v1.inputs.GoogleCloudApigeeV1AttributeArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class DeveloperArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="accessType")
-      private final @Nullable Output<String> accessType;
+    private @Nullable Output<String> accessType;
 
-    public Output<String> accessType() {
-        return this.accessType == null ? Codegen.empty() : this.accessType;
+    public Optional<Output<String>> accessType() {
+        return Optional.ofNullable(this.accessType);
     }
 
     /**
@@ -33,10 +33,10 @@ public final class DeveloperArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="appFamily")
-      private final @Nullable Output<String> appFamily;
+    private @Nullable Output<String> appFamily;
 
-    public Output<String> appFamily() {
-        return this.appFamily == null ? Codegen.empty() : this.appFamily;
+    public Optional<Output<String>> appFamily() {
+        return Optional.ofNullable(this.appFamily);
     }
 
     /**
@@ -44,10 +44,10 @@ public final class DeveloperArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="apps")
-      private final @Nullable Output<List<String>> apps;
+    private @Nullable Output<List<String>> apps;
 
-    public Output<List<String>> apps() {
-        return this.apps == null ? Codegen.empty() : this.apps;
+    public Optional<Output<List<String>>> apps() {
+        return Optional.ofNullable(this.apps);
     }
 
     /**
@@ -55,10 +55,10 @@ public final class DeveloperArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="attributes")
-      private final @Nullable Output<List<GoogleCloudApigeeV1AttributeArgs>> attributes;
+    private @Nullable Output<List<GoogleCloudApigeeV1AttributeArgs>> attributes;
 
-    public Output<List<GoogleCloudApigeeV1AttributeArgs>> attributes() {
-        return this.attributes == null ? Codegen.empty() : this.attributes;
+    public Optional<Output<List<GoogleCloudApigeeV1AttributeArgs>>> attributes() {
+        return Optional.ofNullable(this.attributes);
     }
 
     /**
@@ -66,10 +66,10 @@ public final class DeveloperArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="companies")
-      private final @Nullable Output<List<String>> companies;
+    private @Nullable Output<List<String>> companies;
 
-    public Output<List<String>> companies() {
-        return this.companies == null ? Codegen.empty() : this.companies;
+    public Optional<Output<List<String>>> companies() {
+        return Optional.ofNullable(this.companies);
     }
 
     /**
@@ -77,10 +77,10 @@ public final class DeveloperArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="developerId")
-      private final @Nullable Output<String> developerId;
+    private @Nullable Output<String> developerId;
 
-    public Output<String> developerId() {
-        return this.developerId == null ? Codegen.empty() : this.developerId;
+    public Optional<Output<String>> developerId() {
+        return Optional.ofNullable(this.developerId);
     }
 
     /**
@@ -88,7 +88,7 @@ public final class DeveloperArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="email", required=true)
-      private final Output<String> email;
+    private Output<String> email;
 
     public Output<String> email() {
         return this.email;
@@ -99,7 +99,7 @@ public final class DeveloperArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="firstName", required=true)
-      private final Output<String> firstName;
+    private Output<String> firstName;
 
     public Output<String> firstName() {
         return this.firstName;
@@ -110,14 +110,14 @@ public final class DeveloperArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="lastName", required=true)
-      private final Output<String> lastName;
+    private Output<String> lastName;
 
     public Output<String> lastName() {
         return this.lastName;
     }
 
     @Import(name="organizationId", required=true)
-      private final Output<String> organizationId;
+    private Output<String> organizationId;
 
     public Output<String> organizationId() {
         return this.organizationId;
@@ -128,189 +128,165 @@ public final class DeveloperArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="userName", required=true)
-      private final Output<String> userName;
+    private Output<String> userName;
 
     public Output<String> userName() {
         return this.userName;
     }
 
-    public DeveloperArgs(
-        @Nullable Output<String> accessType,
-        @Nullable Output<String> appFamily,
-        @Nullable Output<List<String>> apps,
-        @Nullable Output<List<GoogleCloudApigeeV1AttributeArgs>> attributes,
-        @Nullable Output<List<String>> companies,
-        @Nullable Output<String> developerId,
-        Output<String> email,
-        Output<String> firstName,
-        Output<String> lastName,
-        Output<String> organizationId,
-        Output<String> userName) {
-        this.accessType = accessType;
-        this.appFamily = appFamily;
-        this.apps = apps;
-        this.attributes = attributes;
-        this.companies = companies;
-        this.developerId = developerId;
-        this.email = Objects.requireNonNull(email, "expected parameter 'email' to be non-null");
-        this.firstName = Objects.requireNonNull(firstName, "expected parameter 'firstName' to be non-null");
-        this.lastName = Objects.requireNonNull(lastName, "expected parameter 'lastName' to be non-null");
-        this.organizationId = Objects.requireNonNull(organizationId, "expected parameter 'organizationId' to be non-null");
-        this.userName = Objects.requireNonNull(userName, "expected parameter 'userName' to be non-null");
-    }
+    private DeveloperArgs() {}
 
-    private DeveloperArgs() {
-        this.accessType = Codegen.empty();
-        this.appFamily = Codegen.empty();
-        this.apps = Codegen.empty();
-        this.attributes = Codegen.empty();
-        this.companies = Codegen.empty();
-        this.developerId = Codegen.empty();
-        this.email = Codegen.empty();
-        this.firstName = Codegen.empty();
-        this.lastName = Codegen.empty();
-        this.organizationId = Codegen.empty();
-        this.userName = Codegen.empty();
+    private DeveloperArgs(DeveloperArgs $) {
+        this.accessType = $.accessType;
+        this.appFamily = $.appFamily;
+        this.apps = $.apps;
+        this.attributes = $.attributes;
+        this.companies = $.companies;
+        this.developerId = $.developerId;
+        this.email = $.email;
+        this.firstName = $.firstName;
+        this.lastName = $.lastName;
+        this.organizationId = $.organizationId;
+        this.userName = $.userName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DeveloperArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> accessType;
-        private @Nullable Output<String> appFamily;
-        private @Nullable Output<List<String>> apps;
-        private @Nullable Output<List<GoogleCloudApigeeV1AttributeArgs>> attributes;
-        private @Nullable Output<List<String>> companies;
-        private @Nullable Output<String> developerId;
-        private Output<String> email;
-        private Output<String> firstName;
-        private Output<String> lastName;
-        private Output<String> organizationId;
-        private Output<String> userName;
+        private DeveloperArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DeveloperArgs();
         }
 
         public Builder(DeveloperArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accessType = defaults.accessType;
-    	      this.appFamily = defaults.appFamily;
-    	      this.apps = defaults.apps;
-    	      this.attributes = defaults.attributes;
-    	      this.companies = defaults.companies;
-    	      this.developerId = defaults.developerId;
-    	      this.email = defaults.email;
-    	      this.firstName = defaults.firstName;
-    	      this.lastName = defaults.lastName;
-    	      this.organizationId = defaults.organizationId;
-    	      this.userName = defaults.userName;
+            $ = new DeveloperArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder accessType(@Nullable Output<String> accessType) {
-            this.accessType = accessType;
+            $.accessType = accessType;
             return this;
         }
-        public Builder accessType(@Nullable String accessType) {
-            this.accessType = Codegen.ofNullable(accessType);
-            return this;
+
+        public Builder accessType(String accessType) {
+            return accessType(Output.of(accessType));
         }
+
         public Builder appFamily(@Nullable Output<String> appFamily) {
-            this.appFamily = appFamily;
+            $.appFamily = appFamily;
             return this;
         }
-        public Builder appFamily(@Nullable String appFamily) {
-            this.appFamily = Codegen.ofNullable(appFamily);
-            return this;
+
+        public Builder appFamily(String appFamily) {
+            return appFamily(Output.of(appFamily));
         }
+
         public Builder apps(@Nullable Output<List<String>> apps) {
-            this.apps = apps;
+            $.apps = apps;
             return this;
         }
-        public Builder apps(@Nullable List<String> apps) {
-            this.apps = Codegen.ofNullable(apps);
-            return this;
+
+        public Builder apps(List<String> apps) {
+            return apps(Output.of(apps));
         }
+
         public Builder apps(String... apps) {
             return apps(List.of(apps));
         }
+
         public Builder attributes(@Nullable Output<List<GoogleCloudApigeeV1AttributeArgs>> attributes) {
-            this.attributes = attributes;
+            $.attributes = attributes;
             return this;
         }
-        public Builder attributes(@Nullable List<GoogleCloudApigeeV1AttributeArgs> attributes) {
-            this.attributes = Codegen.ofNullable(attributes);
-            return this;
+
+        public Builder attributes(List<GoogleCloudApigeeV1AttributeArgs> attributes) {
+            return attributes(Output.of(attributes));
         }
+
         public Builder attributes(GoogleCloudApigeeV1AttributeArgs... attributes) {
             return attributes(List.of(attributes));
         }
+
         public Builder companies(@Nullable Output<List<String>> companies) {
-            this.companies = companies;
+            $.companies = companies;
             return this;
         }
-        public Builder companies(@Nullable List<String> companies) {
-            this.companies = Codegen.ofNullable(companies);
-            return this;
+
+        public Builder companies(List<String> companies) {
+            return companies(Output.of(companies));
         }
+
         public Builder companies(String... companies) {
             return companies(List.of(companies));
         }
+
         public Builder developerId(@Nullable Output<String> developerId) {
-            this.developerId = developerId;
+            $.developerId = developerId;
             return this;
         }
-        public Builder developerId(@Nullable String developerId) {
-            this.developerId = Codegen.ofNullable(developerId);
-            return this;
+
+        public Builder developerId(String developerId) {
+            return developerId(Output.of(developerId));
         }
+
         public Builder email(Output<String> email) {
-            this.email = Objects.requireNonNull(email);
+            $.email = email;
             return this;
         }
+
         public Builder email(String email) {
-            this.email = Output.of(Objects.requireNonNull(email));
-            return this;
+            return email(Output.of(email));
         }
+
         public Builder firstName(Output<String> firstName) {
-            this.firstName = Objects.requireNonNull(firstName);
+            $.firstName = firstName;
             return this;
         }
+
         public Builder firstName(String firstName) {
-            this.firstName = Output.of(Objects.requireNonNull(firstName));
-            return this;
+            return firstName(Output.of(firstName));
         }
+
         public Builder lastName(Output<String> lastName) {
-            this.lastName = Objects.requireNonNull(lastName);
+            $.lastName = lastName;
             return this;
         }
+
         public Builder lastName(String lastName) {
-            this.lastName = Output.of(Objects.requireNonNull(lastName));
-            return this;
+            return lastName(Output.of(lastName));
         }
+
         public Builder organizationId(Output<String> organizationId) {
-            this.organizationId = Objects.requireNonNull(organizationId);
+            $.organizationId = organizationId;
             return this;
         }
+
         public Builder organizationId(String organizationId) {
-            this.organizationId = Output.of(Objects.requireNonNull(organizationId));
-            return this;
+            return organizationId(Output.of(organizationId));
         }
+
         public Builder userName(Output<String> userName) {
-            this.userName = Objects.requireNonNull(userName);
+            $.userName = userName;
             return this;
         }
+
         public Builder userName(String userName) {
-            this.userName = Output.of(Objects.requireNonNull(userName));
-            return this;
-        }        public DeveloperArgs build() {
-            return new DeveloperArgs(accessType, appFamily, apps, attributes, companies, developerId, email, firstName, lastName, organizationId, userName);
+            return userName(Output.of(userName));
+        }
+
+        public DeveloperArgs build() {
+            $.email = Objects.requireNonNull($.email, "expected parameter 'email' to be non-null");
+            $.firstName = Objects.requireNonNull($.firstName, "expected parameter 'firstName' to be non-null");
+            $.lastName = Objects.requireNonNull($.lastName, "expected parameter 'lastName' to be non-null");
+            $.organizationId = Objects.requireNonNull($.organizationId, "expected parameter 'organizationId' to be non-null");
+            $.userName = Objects.requireNonNull($.userName, "expected parameter 'userName' to be non-null");
+            return $;
         }
     }
+
 }

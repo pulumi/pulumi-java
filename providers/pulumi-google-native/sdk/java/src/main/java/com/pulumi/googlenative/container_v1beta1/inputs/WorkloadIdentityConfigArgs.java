@@ -5,9 +5,9 @@ package com.pulumi.googlenative.container_v1beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class WorkloadIdentityConfigArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="identityNamespace")
-      private final @Nullable Output<String> identityNamespace;
+    private @Nullable Output<String> identityNamespace;
 
-    public Output<String> identityNamespace() {
-        return this.identityNamespace == null ? Codegen.empty() : this.identityNamespace;
+    public Optional<Output<String>> identityNamespace() {
+        return Optional.ofNullable(this.identityNamespace);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class WorkloadIdentityConfigArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="identityProvider")
-      private final @Nullable Output<String> identityProvider;
+    private @Nullable Output<String> identityProvider;
 
-    public Output<String> identityProvider() {
-        return this.identityProvider == null ? Codegen.empty() : this.identityProvider;
+    public Optional<Output<String>> identityProvider() {
+        return Optional.ofNullable(this.identityProvider);
     }
 
     /**
@@ -46,76 +46,68 @@ public final class WorkloadIdentityConfigArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="workloadPool")
-      private final @Nullable Output<String> workloadPool;
+    private @Nullable Output<String> workloadPool;
 
-    public Output<String> workloadPool() {
-        return this.workloadPool == null ? Codegen.empty() : this.workloadPool;
+    public Optional<Output<String>> workloadPool() {
+        return Optional.ofNullable(this.workloadPool);
     }
 
-    public WorkloadIdentityConfigArgs(
-        @Nullable Output<String> identityNamespace,
-        @Nullable Output<String> identityProvider,
-        @Nullable Output<String> workloadPool) {
-        this.identityNamespace = identityNamespace;
-        this.identityProvider = identityProvider;
-        this.workloadPool = workloadPool;
-    }
+    private WorkloadIdentityConfigArgs() {}
 
-    private WorkloadIdentityConfigArgs() {
-        this.identityNamespace = Codegen.empty();
-        this.identityProvider = Codegen.empty();
-        this.workloadPool = Codegen.empty();
+    private WorkloadIdentityConfigArgs(WorkloadIdentityConfigArgs $) {
+        this.identityNamespace = $.identityNamespace;
+        this.identityProvider = $.identityProvider;
+        this.workloadPool = $.workloadPool;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WorkloadIdentityConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> identityNamespace;
-        private @Nullable Output<String> identityProvider;
-        private @Nullable Output<String> workloadPool;
+        private WorkloadIdentityConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new WorkloadIdentityConfigArgs();
         }
 
         public Builder(WorkloadIdentityConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.identityNamespace = defaults.identityNamespace;
-    	      this.identityProvider = defaults.identityProvider;
-    	      this.workloadPool = defaults.workloadPool;
+            $ = new WorkloadIdentityConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder identityNamespace(@Nullable Output<String> identityNamespace) {
-            this.identityNamespace = identityNamespace;
+            $.identityNamespace = identityNamespace;
             return this;
         }
-        public Builder identityNamespace(@Nullable String identityNamespace) {
-            this.identityNamespace = Codegen.ofNullable(identityNamespace);
-            return this;
+
+        public Builder identityNamespace(String identityNamespace) {
+            return identityNamespace(Output.of(identityNamespace));
         }
+
         public Builder identityProvider(@Nullable Output<String> identityProvider) {
-            this.identityProvider = identityProvider;
+            $.identityProvider = identityProvider;
             return this;
         }
-        public Builder identityProvider(@Nullable String identityProvider) {
-            this.identityProvider = Codegen.ofNullable(identityProvider);
-            return this;
+
+        public Builder identityProvider(String identityProvider) {
+            return identityProvider(Output.of(identityProvider));
         }
+
         public Builder workloadPool(@Nullable Output<String> workloadPool) {
-            this.workloadPool = workloadPool;
+            $.workloadPool = workloadPool;
             return this;
         }
-        public Builder workloadPool(@Nullable String workloadPool) {
-            this.workloadPool = Codegen.ofNullable(workloadPool);
-            return this;
-        }        public WorkloadIdentityConfigArgs build() {
-            return new WorkloadIdentityConfigArgs(identityNamespace, identityProvider, workloadPool);
+
+        public Builder workloadPool(String workloadPool) {
+            return workloadPool(Output.of(workloadPool));
+        }
+
+        public WorkloadIdentityConfigArgs build() {
+            return $;
         }
     }
+
 }

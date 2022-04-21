@@ -6,11 +6,11 @@ package com.pulumi.aws.athena;
 import com.pulumi.aws.athena.inputs.WorkgroupConfigurationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,10 @@ public final class WorkgroupArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="configuration")
-      private final @Nullable Output<WorkgroupConfigurationArgs> configuration;
+    private @Nullable Output<WorkgroupConfigurationArgs> configuration;
 
-    public Output<WorkgroupConfigurationArgs> configuration() {
-        return this.configuration == null ? Codegen.empty() : this.configuration;
+    public Optional<Output<WorkgroupConfigurationArgs>> configuration() {
+        return Optional.ofNullable(this.configuration);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class WorkgroupArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -45,10 +45,10 @@ public final class WorkgroupArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="forceDestroy")
-      private final @Nullable Output<Boolean> forceDestroy;
+    private @Nullable Output<Boolean> forceDestroy;
 
-    public Output<Boolean> forceDestroy() {
-        return this.forceDestroy == null ? Codegen.empty() : this.forceDestroy;
+    public Optional<Output<Boolean>> forceDestroy() {
+        return Optional.ofNullable(this.forceDestroy);
     }
 
     /**
@@ -56,10 +56,10 @@ public final class WorkgroupArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -67,10 +67,10 @@ public final class WorkgroupArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="state")
-      private final @Nullable Output<String> state;
+    private @Nullable Output<String> state;
 
-    public Output<String> state() {
-        return this.state == null ? Codegen.empty() : this.state;
+    public Optional<Output<String>> state() {
+        return Optional.ofNullable(this.state);
     }
 
     /**
@@ -78,115 +78,98 @@ public final class WorkgroupArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public WorkgroupArgs(
-        @Nullable Output<WorkgroupConfigurationArgs> configuration,
-        @Nullable Output<String> description,
-        @Nullable Output<Boolean> forceDestroy,
-        @Nullable Output<String> name,
-        @Nullable Output<String> state,
-        @Nullable Output<Map<String,String>> tags) {
-        this.configuration = configuration;
-        this.description = description;
-        this.forceDestroy = forceDestroy;
-        this.name = name;
-        this.state = state;
-        this.tags = tags;
-    }
+    private WorkgroupArgs() {}
 
-    private WorkgroupArgs() {
-        this.configuration = Codegen.empty();
-        this.description = Codegen.empty();
-        this.forceDestroy = Codegen.empty();
-        this.name = Codegen.empty();
-        this.state = Codegen.empty();
-        this.tags = Codegen.empty();
+    private WorkgroupArgs(WorkgroupArgs $) {
+        this.configuration = $.configuration;
+        this.description = $.description;
+        this.forceDestroy = $.forceDestroy;
+        this.name = $.name;
+        this.state = $.state;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WorkgroupArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<WorkgroupConfigurationArgs> configuration;
-        private @Nullable Output<String> description;
-        private @Nullable Output<Boolean> forceDestroy;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> state;
-        private @Nullable Output<Map<String,String>> tags;
+        private WorkgroupArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new WorkgroupArgs();
         }
 
         public Builder(WorkgroupArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.configuration = defaults.configuration;
-    	      this.description = defaults.description;
-    	      this.forceDestroy = defaults.forceDestroy;
-    	      this.name = defaults.name;
-    	      this.state = defaults.state;
-    	      this.tags = defaults.tags;
+            $ = new WorkgroupArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder configuration(@Nullable Output<WorkgroupConfigurationArgs> configuration) {
-            this.configuration = configuration;
+            $.configuration = configuration;
             return this;
         }
-        public Builder configuration(@Nullable WorkgroupConfigurationArgs configuration) {
-            this.configuration = Codegen.ofNullable(configuration);
-            return this;
+
+        public Builder configuration(WorkgroupConfigurationArgs configuration) {
+            return configuration(Output.of(configuration));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder forceDestroy(@Nullable Output<Boolean> forceDestroy) {
-            this.forceDestroy = forceDestroy;
+            $.forceDestroy = forceDestroy;
             return this;
         }
-        public Builder forceDestroy(@Nullable Boolean forceDestroy) {
-            this.forceDestroy = Codegen.ofNullable(forceDestroy);
-            return this;
+
+        public Builder forceDestroy(Boolean forceDestroy) {
+            return forceDestroy(Output.of(forceDestroy));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder state(@Nullable Output<String> state) {
-            this.state = state;
+            $.state = state;
             return this;
         }
-        public Builder state(@Nullable String state) {
-            this.state = Codegen.ofNullable(state);
-            return this;
+
+        public Builder state(String state) {
+            return state(Output.of(state));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
-        }        public WorkgroupArgs build() {
-            return new WorkgroupArgs(configuration, description, forceDestroy, name, state, tags);
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
+        }
+
+        public WorkgroupArgs build() {
+            return $;
         }
     }
+
 }

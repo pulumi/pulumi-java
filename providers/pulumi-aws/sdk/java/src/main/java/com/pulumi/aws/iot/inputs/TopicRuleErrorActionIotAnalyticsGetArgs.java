@@ -5,7 +5,6 @@ package com.pulumi.aws.iot.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,7 +18,7 @@ public final class TopicRuleErrorActionIotAnalyticsGetArgs extends com.pulumi.re
      * 
      */
     @Import(name="channelName", required=true)
-      private final Output<String> channelName;
+    private Output<String> channelName;
 
     public Output<String> channelName() {
         return this.channelName;
@@ -30,63 +29,60 @@ public final class TopicRuleErrorActionIotAnalyticsGetArgs extends com.pulumi.re
      * 
      */
     @Import(name="roleArn", required=true)
-      private final Output<String> roleArn;
+    private Output<String> roleArn;
 
     public Output<String> roleArn() {
         return this.roleArn;
     }
 
-    public TopicRuleErrorActionIotAnalyticsGetArgs(
-        Output<String> channelName,
-        Output<String> roleArn) {
-        this.channelName = Objects.requireNonNull(channelName, "expected parameter 'channelName' to be non-null");
-        this.roleArn = Objects.requireNonNull(roleArn, "expected parameter 'roleArn' to be non-null");
-    }
+    private TopicRuleErrorActionIotAnalyticsGetArgs() {}
 
-    private TopicRuleErrorActionIotAnalyticsGetArgs() {
-        this.channelName = Codegen.empty();
-        this.roleArn = Codegen.empty();
+    private TopicRuleErrorActionIotAnalyticsGetArgs(TopicRuleErrorActionIotAnalyticsGetArgs $) {
+        this.channelName = $.channelName;
+        this.roleArn = $.roleArn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TopicRuleErrorActionIotAnalyticsGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> channelName;
-        private Output<String> roleArn;
+        private TopicRuleErrorActionIotAnalyticsGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TopicRuleErrorActionIotAnalyticsGetArgs();
         }
 
         public Builder(TopicRuleErrorActionIotAnalyticsGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.channelName = defaults.channelName;
-    	      this.roleArn = defaults.roleArn;
+            $ = new TopicRuleErrorActionIotAnalyticsGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder channelName(Output<String> channelName) {
-            this.channelName = Objects.requireNonNull(channelName);
+            $.channelName = channelName;
             return this;
         }
+
         public Builder channelName(String channelName) {
-            this.channelName = Output.of(Objects.requireNonNull(channelName));
-            return this;
+            return channelName(Output.of(channelName));
         }
+
         public Builder roleArn(Output<String> roleArn) {
-            this.roleArn = Objects.requireNonNull(roleArn);
+            $.roleArn = roleArn;
             return this;
         }
+
         public Builder roleArn(String roleArn) {
-            this.roleArn = Output.of(Objects.requireNonNull(roleArn));
-            return this;
-        }        public TopicRuleErrorActionIotAnalyticsGetArgs build() {
-            return new TopicRuleErrorActionIotAnalyticsGetArgs(channelName, roleArn);
+            return roleArn(Output.of(roleArn));
+        }
+
+        public TopicRuleErrorActionIotAnalyticsGetArgs build() {
+            $.channelName = Objects.requireNonNull($.channelName, "expected parameter 'channelName' to be non-null");
+            $.roleArn = Objects.requireNonNull($.roleArn, "expected parameter 'roleArn' to be non-null");
+            return $;
         }
     }
+
 }

@@ -6,9 +6,9 @@ package com.pulumi.azurenative.databoxedge.inputs;
 import com.pulumi.azurenative.databoxedge.inputs.ImageRepositoryCredentialArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,7 +25,7 @@ public final class IoTEdgeAgentInfoArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="imageName", required=true)
-      private final Output<String> imageName;
+    private Output<String> imageName;
 
     public Output<String> imageName() {
         return this.imageName;
@@ -36,10 +36,10 @@ public final class IoTEdgeAgentInfoArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="imageRepository")
-      private final @Nullable Output<ImageRepositoryCredentialArgs> imageRepository;
+    private @Nullable Output<ImageRepositoryCredentialArgs> imageRepository;
 
-    public Output<ImageRepositoryCredentialArgs> imageRepository() {
-        return this.imageRepository == null ? Codegen.empty() : this.imageRepository;
+    public Optional<Output<ImageRepositoryCredentialArgs>> imageRepository() {
+        return Optional.ofNullable(this.imageRepository);
     }
 
     /**
@@ -47,76 +47,70 @@ public final class IoTEdgeAgentInfoArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="tag", required=true)
-      private final Output<String> tag;
+    private Output<String> tag;
 
     public Output<String> tag() {
         return this.tag;
     }
 
-    public IoTEdgeAgentInfoArgs(
-        Output<String> imageName,
-        @Nullable Output<ImageRepositoryCredentialArgs> imageRepository,
-        Output<String> tag) {
-        this.imageName = Objects.requireNonNull(imageName, "expected parameter 'imageName' to be non-null");
-        this.imageRepository = imageRepository;
-        this.tag = Objects.requireNonNull(tag, "expected parameter 'tag' to be non-null");
-    }
+    private IoTEdgeAgentInfoArgs() {}
 
-    private IoTEdgeAgentInfoArgs() {
-        this.imageName = Codegen.empty();
-        this.imageRepository = Codegen.empty();
-        this.tag = Codegen.empty();
+    private IoTEdgeAgentInfoArgs(IoTEdgeAgentInfoArgs $) {
+        this.imageName = $.imageName;
+        this.imageRepository = $.imageRepository;
+        this.tag = $.tag;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(IoTEdgeAgentInfoArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> imageName;
-        private @Nullable Output<ImageRepositoryCredentialArgs> imageRepository;
-        private Output<String> tag;
+        private IoTEdgeAgentInfoArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new IoTEdgeAgentInfoArgs();
         }
 
         public Builder(IoTEdgeAgentInfoArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.imageName = defaults.imageName;
-    	      this.imageRepository = defaults.imageRepository;
-    	      this.tag = defaults.tag;
+            $ = new IoTEdgeAgentInfoArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder imageName(Output<String> imageName) {
-            this.imageName = Objects.requireNonNull(imageName);
+            $.imageName = imageName;
             return this;
         }
+
         public Builder imageName(String imageName) {
-            this.imageName = Output.of(Objects.requireNonNull(imageName));
-            return this;
+            return imageName(Output.of(imageName));
         }
+
         public Builder imageRepository(@Nullable Output<ImageRepositoryCredentialArgs> imageRepository) {
-            this.imageRepository = imageRepository;
+            $.imageRepository = imageRepository;
             return this;
         }
-        public Builder imageRepository(@Nullable ImageRepositoryCredentialArgs imageRepository) {
-            this.imageRepository = Codegen.ofNullable(imageRepository);
-            return this;
+
+        public Builder imageRepository(ImageRepositoryCredentialArgs imageRepository) {
+            return imageRepository(Output.of(imageRepository));
         }
+
         public Builder tag(Output<String> tag) {
-            this.tag = Objects.requireNonNull(tag);
+            $.tag = tag;
             return this;
         }
+
         public Builder tag(String tag) {
-            this.tag = Output.of(Objects.requireNonNull(tag));
-            return this;
-        }        public IoTEdgeAgentInfoArgs build() {
-            return new IoTEdgeAgentInfoArgs(imageName, imageRepository, tag);
+            return tag(Output.of(tag));
+        }
+
+        public IoTEdgeAgentInfoArgs build() {
+            $.imageName = Objects.requireNonNull($.imageName, "expected parameter 'imageName' to be non-null");
+            $.tag = Objects.requireNonNull($.tag, "expected parameter 'tag' to be non-null");
+            return $;
         }
     }
+
 }

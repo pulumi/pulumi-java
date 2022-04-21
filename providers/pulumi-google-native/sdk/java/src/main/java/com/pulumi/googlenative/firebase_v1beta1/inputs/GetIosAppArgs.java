@@ -15,62 +15,58 @@ public final class GetIosAppArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetIosAppArgs Empty = new GetIosAppArgs();
 
     @Import(name="iosAppId", required=true)
-      private final String iosAppId;
+    private String iosAppId;
 
     public String iosAppId() {
         return this.iosAppId;
     }
 
     @Import(name="project")
-      private final @Nullable String project;
+    private @Nullable String project;
 
     public Optional<String> project() {
-        return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
+        return Optional.ofNullable(this.project);
     }
 
-    public GetIosAppArgs(
-        String iosAppId,
-        @Nullable String project) {
-        this.iosAppId = Objects.requireNonNull(iosAppId, "expected parameter 'iosAppId' to be non-null");
-        this.project = project;
-    }
+    private GetIosAppArgs() {}
 
-    private GetIosAppArgs() {
-        this.iosAppId = null;
-        this.project = null;
+    private GetIosAppArgs(GetIosAppArgs $) {
+        this.iosAppId = $.iosAppId;
+        this.project = $.project;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetIosAppArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String iosAppId;
-        private @Nullable String project;
+        private GetIosAppArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetIosAppArgs();
         }
 
         public Builder(GetIosAppArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.iosAppId = defaults.iosAppId;
-    	      this.project = defaults.project;
+            $ = new GetIosAppArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder iosAppId(String iosAppId) {
-            this.iosAppId = Objects.requireNonNull(iosAppId);
+            $.iosAppId = iosAppId;
             return this;
         }
+
         public Builder project(@Nullable String project) {
-            this.project = project;
+            $.project = project;
             return this;
-        }        public GetIosAppArgs build() {
-            return new GetIosAppArgs(iosAppId, project);
+        }
+
+        public GetIosAppArgs build() {
+            $.iosAppId = Objects.requireNonNull($.iosAppId, "expected parameter 'iosAppId' to be non-null");
+            return $;
         }
     }
+
 }

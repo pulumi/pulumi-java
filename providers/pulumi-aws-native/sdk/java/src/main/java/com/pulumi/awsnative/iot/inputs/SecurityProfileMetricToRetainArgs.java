@@ -6,9 +6,9 @@ package com.pulumi.awsnative.iot.inputs;
 import com.pulumi.awsnative.iot.inputs.SecurityProfileMetricDimensionArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,70 +25,66 @@ public final class SecurityProfileMetricToRetainArgs extends com.pulumi.resource
      * 
      */
     @Import(name="metric", required=true)
-      private final Output<String> metric;
+    private Output<String> metric;
 
     public Output<String> metric() {
         return this.metric;
     }
 
     @Import(name="metricDimension")
-      private final @Nullable Output<SecurityProfileMetricDimensionArgs> metricDimension;
+    private @Nullable Output<SecurityProfileMetricDimensionArgs> metricDimension;
 
-    public Output<SecurityProfileMetricDimensionArgs> metricDimension() {
-        return this.metricDimension == null ? Codegen.empty() : this.metricDimension;
+    public Optional<Output<SecurityProfileMetricDimensionArgs>> metricDimension() {
+        return Optional.ofNullable(this.metricDimension);
     }
 
-    public SecurityProfileMetricToRetainArgs(
-        Output<String> metric,
-        @Nullable Output<SecurityProfileMetricDimensionArgs> metricDimension) {
-        this.metric = Objects.requireNonNull(metric, "expected parameter 'metric' to be non-null");
-        this.metricDimension = metricDimension;
-    }
+    private SecurityProfileMetricToRetainArgs() {}
 
-    private SecurityProfileMetricToRetainArgs() {
-        this.metric = Codegen.empty();
-        this.metricDimension = Codegen.empty();
+    private SecurityProfileMetricToRetainArgs(SecurityProfileMetricToRetainArgs $) {
+        this.metric = $.metric;
+        this.metricDimension = $.metricDimension;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SecurityProfileMetricToRetainArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> metric;
-        private @Nullable Output<SecurityProfileMetricDimensionArgs> metricDimension;
+        private SecurityProfileMetricToRetainArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SecurityProfileMetricToRetainArgs();
         }
 
         public Builder(SecurityProfileMetricToRetainArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.metric = defaults.metric;
-    	      this.metricDimension = defaults.metricDimension;
+            $ = new SecurityProfileMetricToRetainArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder metric(Output<String> metric) {
-            this.metric = Objects.requireNonNull(metric);
+            $.metric = metric;
             return this;
         }
+
         public Builder metric(String metric) {
-            this.metric = Output.of(Objects.requireNonNull(metric));
-            return this;
+            return metric(Output.of(metric));
         }
+
         public Builder metricDimension(@Nullable Output<SecurityProfileMetricDimensionArgs> metricDimension) {
-            this.metricDimension = metricDimension;
+            $.metricDimension = metricDimension;
             return this;
         }
-        public Builder metricDimension(@Nullable SecurityProfileMetricDimensionArgs metricDimension) {
-            this.metricDimension = Codegen.ofNullable(metricDimension);
-            return this;
-        }        public SecurityProfileMetricToRetainArgs build() {
-            return new SecurityProfileMetricToRetainArgs(metric, metricDimension);
+
+        public Builder metricDimension(SecurityProfileMetricDimensionArgs metricDimension) {
+            return metricDimension(Output.of(metricDimension));
+        }
+
+        public SecurityProfileMetricToRetainArgs build() {
+            $.metric = Objects.requireNonNull($.metric, "expected parameter 'metric' to be non-null");
+            return $;
         }
     }
+
 }

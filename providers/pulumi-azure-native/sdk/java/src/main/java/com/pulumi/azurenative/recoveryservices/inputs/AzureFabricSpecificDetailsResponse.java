@@ -25,10 +25,10 @@ public final class AzureFabricSpecificDetailsResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="containerIds")
-      private final @Nullable List<String> containerIds;
+    private @Nullable List<String> containerIds;
 
-    public List<String> containerIds() {
-        return this.containerIds == null ? List.of() : this.containerIds;
+    public Optional<List<String>> containerIds() {
+        return Optional.ofNullable(this.containerIds);
     }
 
     /**
@@ -37,7 +37,7 @@ public final class AzureFabricSpecificDetailsResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="instanceType", required=true)
-      private final String instanceType;
+    private String instanceType;
 
     public String instanceType() {
         return this.instanceType;
@@ -48,67 +48,61 @@ public final class AzureFabricSpecificDetailsResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="location")
-      private final @Nullable String location;
+    private @Nullable String location;
 
     public Optional<String> location() {
-        return this.location == null ? Optional.empty() : Optional.ofNullable(this.location);
+        return Optional.ofNullable(this.location);
     }
 
-    public AzureFabricSpecificDetailsResponse(
-        @Nullable List<String> containerIds,
-        String instanceType,
-        @Nullable String location) {
-        this.containerIds = containerIds;
-        this.instanceType = Codegen.stringProp("instanceType").arg(instanceType).require();
-        this.location = location;
-    }
+    private AzureFabricSpecificDetailsResponse() {}
 
-    private AzureFabricSpecificDetailsResponse() {
-        this.containerIds = List.of();
-        this.instanceType = null;
-        this.location = null;
+    private AzureFabricSpecificDetailsResponse(AzureFabricSpecificDetailsResponse $) {
+        this.containerIds = $.containerIds;
+        this.instanceType = $.instanceType;
+        this.location = $.location;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AzureFabricSpecificDetailsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<String> containerIds;
-        private String instanceType;
-        private @Nullable String location;
+        private AzureFabricSpecificDetailsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AzureFabricSpecificDetailsResponse();
         }
 
         public Builder(AzureFabricSpecificDetailsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.containerIds = defaults.containerIds;
-    	      this.instanceType = defaults.instanceType;
-    	      this.location = defaults.location;
+            $ = new AzureFabricSpecificDetailsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder containerIds(@Nullable List<String> containerIds) {
-            this.containerIds = containerIds;
+            $.containerIds = containerIds;
             return this;
         }
+
         public Builder containerIds(String... containerIds) {
             return containerIds(List.of(containerIds));
         }
+
         public Builder instanceType(String instanceType) {
-            this.instanceType = Objects.requireNonNull(instanceType);
+            $.instanceType = instanceType;
             return this;
         }
+
         public Builder location(@Nullable String location) {
-            this.location = location;
+            $.location = location;
             return this;
-        }        public AzureFabricSpecificDetailsResponse build() {
-            return new AzureFabricSpecificDetailsResponse(containerIds, instanceType, location);
+        }
+
+        public AzureFabricSpecificDetailsResponse build() {
+            $.instanceType = Codegen.stringProp("instanceType").arg($.instanceType).require();
+            return $;
         }
     }
+
 }

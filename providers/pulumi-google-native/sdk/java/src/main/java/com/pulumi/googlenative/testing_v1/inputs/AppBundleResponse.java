@@ -21,45 +21,45 @@ public final class AppBundleResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="bundleLocation", required=true)
-      private final FileReferenceResponse bundleLocation;
+    private FileReferenceResponse bundleLocation;
 
     public FileReferenceResponse bundleLocation() {
         return this.bundleLocation;
     }
 
-    public AppBundleResponse(FileReferenceResponse bundleLocation) {
-        this.bundleLocation = Objects.requireNonNull(bundleLocation, "expected parameter 'bundleLocation' to be non-null");
-    }
+    private AppBundleResponse() {}
 
-    private AppBundleResponse() {
-        this.bundleLocation = null;
+    private AppBundleResponse(AppBundleResponse $) {
+        this.bundleLocation = $.bundleLocation;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AppBundleResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private FileReferenceResponse bundleLocation;
+        private AppBundleResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AppBundleResponse();
         }
 
         public Builder(AppBundleResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.bundleLocation = defaults.bundleLocation;
+            $ = new AppBundleResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder bundleLocation(FileReferenceResponse bundleLocation) {
-            this.bundleLocation = Objects.requireNonNull(bundleLocation);
+            $.bundleLocation = bundleLocation;
             return this;
-        }        public AppBundleResponse build() {
-            return new AppBundleResponse(bundleLocation);
+        }
+
+        public AppBundleResponse build() {
+            $.bundleLocation = Objects.requireNonNull($.bundleLocation, "expected parameter 'bundleLocation' to be non-null");
+            return $;
         }
     }
+
 }

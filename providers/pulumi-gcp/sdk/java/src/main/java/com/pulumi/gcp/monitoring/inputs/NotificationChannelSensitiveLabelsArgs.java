@@ -5,9 +5,9 @@ package com.pulumi.gcp.monitoring.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class NotificationChannelSensitiveLabelsArgs extends com.pulumi.res
      * 
      */
     @Import(name="authToken")
-      private final @Nullable Output<String> authToken;
+    private @Nullable Output<String> authToken;
 
-    public Output<String> authToken() {
-        return this.authToken == null ? Codegen.empty() : this.authToken;
+    public Optional<Output<String>> authToken() {
+        return Optional.ofNullable(this.authToken);
     }
 
     /**
@@ -33,10 +33,10 @@ public final class NotificationChannelSensitiveLabelsArgs extends com.pulumi.res
      * 
      */
     @Import(name="password")
-      private final @Nullable Output<String> password;
+    private @Nullable Output<String> password;
 
-    public Output<String> password() {
-        return this.password == null ? Codegen.empty() : this.password;
+    public Optional<Output<String>> password() {
+        return Optional.ofNullable(this.password);
     }
 
     /**
@@ -45,76 +45,68 @@ public final class NotificationChannelSensitiveLabelsArgs extends com.pulumi.res
      * 
      */
     @Import(name="serviceKey")
-      private final @Nullable Output<String> serviceKey;
+    private @Nullable Output<String> serviceKey;
 
-    public Output<String> serviceKey() {
-        return this.serviceKey == null ? Codegen.empty() : this.serviceKey;
+    public Optional<Output<String>> serviceKey() {
+        return Optional.ofNullable(this.serviceKey);
     }
 
-    public NotificationChannelSensitiveLabelsArgs(
-        @Nullable Output<String> authToken,
-        @Nullable Output<String> password,
-        @Nullable Output<String> serviceKey) {
-        this.authToken = authToken;
-        this.password = password;
-        this.serviceKey = serviceKey;
-    }
+    private NotificationChannelSensitiveLabelsArgs() {}
 
-    private NotificationChannelSensitiveLabelsArgs() {
-        this.authToken = Codegen.empty();
-        this.password = Codegen.empty();
-        this.serviceKey = Codegen.empty();
+    private NotificationChannelSensitiveLabelsArgs(NotificationChannelSensitiveLabelsArgs $) {
+        this.authToken = $.authToken;
+        this.password = $.password;
+        this.serviceKey = $.serviceKey;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NotificationChannelSensitiveLabelsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> authToken;
-        private @Nullable Output<String> password;
-        private @Nullable Output<String> serviceKey;
+        private NotificationChannelSensitiveLabelsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new NotificationChannelSensitiveLabelsArgs();
         }
 
         public Builder(NotificationChannelSensitiveLabelsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.authToken = defaults.authToken;
-    	      this.password = defaults.password;
-    	      this.serviceKey = defaults.serviceKey;
+            $ = new NotificationChannelSensitiveLabelsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder authToken(@Nullable Output<String> authToken) {
-            this.authToken = authToken;
+            $.authToken = authToken;
             return this;
         }
-        public Builder authToken(@Nullable String authToken) {
-            this.authToken = Codegen.ofNullable(authToken);
-            return this;
+
+        public Builder authToken(String authToken) {
+            return authToken(Output.of(authToken));
         }
+
         public Builder password(@Nullable Output<String> password) {
-            this.password = password;
+            $.password = password;
             return this;
         }
-        public Builder password(@Nullable String password) {
-            this.password = Codegen.ofNullable(password);
-            return this;
+
+        public Builder password(String password) {
+            return password(Output.of(password));
         }
+
         public Builder serviceKey(@Nullable Output<String> serviceKey) {
-            this.serviceKey = serviceKey;
+            $.serviceKey = serviceKey;
             return this;
         }
-        public Builder serviceKey(@Nullable String serviceKey) {
-            this.serviceKey = Codegen.ofNullable(serviceKey);
-            return this;
-        }        public NotificationChannelSensitiveLabelsArgs build() {
-            return new NotificationChannelSensitiveLabelsArgs(authToken, password, serviceKey);
+
+        public Builder serviceKey(String serviceKey) {
+            return serviceKey(Output.of(serviceKey));
+        }
+
+        public NotificationChannelSensitiveLabelsArgs build() {
+            return $;
         }
     }
+
 }

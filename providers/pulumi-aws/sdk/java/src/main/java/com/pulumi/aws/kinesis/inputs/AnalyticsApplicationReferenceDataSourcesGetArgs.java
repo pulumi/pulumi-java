@@ -7,9 +7,9 @@ import com.pulumi.aws.kinesis.inputs.AnalyticsApplicationReferenceDataSourcesS3G
 import com.pulumi.aws.kinesis.inputs.AnalyticsApplicationReferenceDataSourcesSchemaGetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class AnalyticsApplicationReferenceDataSourcesGetArgs extends com.p
      * 
      */
     @Import(name="id")
-      private final @Nullable Output<String> id;
+    private @Nullable Output<String> id;
 
-    public Output<String> id() {
-        return this.id == null ? Codegen.empty() : this.id;
+    public Optional<Output<String>> id() {
+        return Optional.ofNullable(this.id);
     }
 
     /**
@@ -33,7 +33,7 @@ public final class AnalyticsApplicationReferenceDataSourcesGetArgs extends com.p
      * 
      */
     @Import(name="s3", required=true)
-      private final Output<AnalyticsApplicationReferenceDataSourcesS3GetArgs> s3;
+    private Output<AnalyticsApplicationReferenceDataSourcesS3GetArgs> s3;
 
     public Output<AnalyticsApplicationReferenceDataSourcesS3GetArgs> s3() {
         return this.s3;
@@ -44,7 +44,7 @@ public final class AnalyticsApplicationReferenceDataSourcesGetArgs extends com.p
      * 
      */
     @Import(name="schema", required=true)
-      private final Output<AnalyticsApplicationReferenceDataSourcesSchemaGetArgs> schema;
+    private Output<AnalyticsApplicationReferenceDataSourcesSchemaGetArgs> schema;
 
     public Output<AnalyticsApplicationReferenceDataSourcesSchemaGetArgs> schema() {
         return this.schema;
@@ -55,89 +55,81 @@ public final class AnalyticsApplicationReferenceDataSourcesGetArgs extends com.p
      * 
      */
     @Import(name="tableName", required=true)
-      private final Output<String> tableName;
+    private Output<String> tableName;
 
     public Output<String> tableName() {
         return this.tableName;
     }
 
-    public AnalyticsApplicationReferenceDataSourcesGetArgs(
-        @Nullable Output<String> id,
-        Output<AnalyticsApplicationReferenceDataSourcesS3GetArgs> s3,
-        Output<AnalyticsApplicationReferenceDataSourcesSchemaGetArgs> schema,
-        Output<String> tableName) {
-        this.id = id;
-        this.s3 = Objects.requireNonNull(s3, "expected parameter 's3' to be non-null");
-        this.schema = Objects.requireNonNull(schema, "expected parameter 'schema' to be non-null");
-        this.tableName = Objects.requireNonNull(tableName, "expected parameter 'tableName' to be non-null");
-    }
+    private AnalyticsApplicationReferenceDataSourcesGetArgs() {}
 
-    private AnalyticsApplicationReferenceDataSourcesGetArgs() {
-        this.id = Codegen.empty();
-        this.s3 = Codegen.empty();
-        this.schema = Codegen.empty();
-        this.tableName = Codegen.empty();
+    private AnalyticsApplicationReferenceDataSourcesGetArgs(AnalyticsApplicationReferenceDataSourcesGetArgs $) {
+        this.id = $.id;
+        this.s3 = $.s3;
+        this.schema = $.schema;
+        this.tableName = $.tableName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AnalyticsApplicationReferenceDataSourcesGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> id;
-        private Output<AnalyticsApplicationReferenceDataSourcesS3GetArgs> s3;
-        private Output<AnalyticsApplicationReferenceDataSourcesSchemaGetArgs> schema;
-        private Output<String> tableName;
+        private AnalyticsApplicationReferenceDataSourcesGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AnalyticsApplicationReferenceDataSourcesGetArgs();
         }
 
         public Builder(AnalyticsApplicationReferenceDataSourcesGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.id = defaults.id;
-    	      this.s3 = defaults.s3;
-    	      this.schema = defaults.schema;
-    	      this.tableName = defaults.tableName;
+            $ = new AnalyticsApplicationReferenceDataSourcesGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder id(@Nullable Output<String> id) {
-            this.id = id;
+            $.id = id;
             return this;
         }
-        public Builder id(@Nullable String id) {
-            this.id = Codegen.ofNullable(id);
-            return this;
+
+        public Builder id(String id) {
+            return id(Output.of(id));
         }
+
         public Builder s3(Output<AnalyticsApplicationReferenceDataSourcesS3GetArgs> s3) {
-            this.s3 = Objects.requireNonNull(s3);
+            $.s3 = s3;
             return this;
         }
+
         public Builder s3(AnalyticsApplicationReferenceDataSourcesS3GetArgs s3) {
-            this.s3 = Output.of(Objects.requireNonNull(s3));
-            return this;
+            return s3(Output.of(s3));
         }
+
         public Builder schema(Output<AnalyticsApplicationReferenceDataSourcesSchemaGetArgs> schema) {
-            this.schema = Objects.requireNonNull(schema);
+            $.schema = schema;
             return this;
         }
+
         public Builder schema(AnalyticsApplicationReferenceDataSourcesSchemaGetArgs schema) {
-            this.schema = Output.of(Objects.requireNonNull(schema));
-            return this;
+            return schema(Output.of(schema));
         }
+
         public Builder tableName(Output<String> tableName) {
-            this.tableName = Objects.requireNonNull(tableName);
+            $.tableName = tableName;
             return this;
         }
+
         public Builder tableName(String tableName) {
-            this.tableName = Output.of(Objects.requireNonNull(tableName));
-            return this;
-        }        public AnalyticsApplicationReferenceDataSourcesGetArgs build() {
-            return new AnalyticsApplicationReferenceDataSourcesGetArgs(id, s3, schema, tableName);
+            return tableName(Output.of(tableName));
+        }
+
+        public AnalyticsApplicationReferenceDataSourcesGetArgs build() {
+            $.s3 = Objects.requireNonNull($.s3, "expected parameter 's3' to be non-null");
+            $.schema = Objects.requireNonNull($.schema, "expected parameter 'schema' to be non-null");
+            $.tableName = Objects.requireNonNull($.tableName, "expected parameter 'tableName' to be non-null");
+            return $;
         }
     }
+
 }

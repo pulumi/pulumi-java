@@ -24,10 +24,10 @@ public final class VirtualMachineScaleSetManagedDiskParametersResponse extends c
      * 
      */
     @Import(name="diskEncryptionSet")
-      private final @Nullable DiskEncryptionSetParametersResponse diskEncryptionSet;
+    private @Nullable DiskEncryptionSetParametersResponse diskEncryptionSet;
 
     public Optional<DiskEncryptionSetParametersResponse> diskEncryptionSet() {
-        return this.diskEncryptionSet == null ? Optional.empty() : Optional.ofNullable(this.diskEncryptionSet);
+        return Optional.ofNullable(this.diskEncryptionSet);
     }
 
     /**
@@ -35,55 +35,50 @@ public final class VirtualMachineScaleSetManagedDiskParametersResponse extends c
      * 
      */
     @Import(name="storageAccountType")
-      private final @Nullable String storageAccountType;
+    private @Nullable String storageAccountType;
 
     public Optional<String> storageAccountType() {
-        return this.storageAccountType == null ? Optional.empty() : Optional.ofNullable(this.storageAccountType);
+        return Optional.ofNullable(this.storageAccountType);
     }
 
-    public VirtualMachineScaleSetManagedDiskParametersResponse(
-        @Nullable DiskEncryptionSetParametersResponse diskEncryptionSet,
-        @Nullable String storageAccountType) {
-        this.diskEncryptionSet = diskEncryptionSet;
-        this.storageAccountType = storageAccountType;
-    }
+    private VirtualMachineScaleSetManagedDiskParametersResponse() {}
 
-    private VirtualMachineScaleSetManagedDiskParametersResponse() {
-        this.diskEncryptionSet = null;
-        this.storageAccountType = null;
+    private VirtualMachineScaleSetManagedDiskParametersResponse(VirtualMachineScaleSetManagedDiskParametersResponse $) {
+        this.diskEncryptionSet = $.diskEncryptionSet;
+        this.storageAccountType = $.storageAccountType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VirtualMachineScaleSetManagedDiskParametersResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable DiskEncryptionSetParametersResponse diskEncryptionSet;
-        private @Nullable String storageAccountType;
+        private VirtualMachineScaleSetManagedDiskParametersResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new VirtualMachineScaleSetManagedDiskParametersResponse();
         }
 
         public Builder(VirtualMachineScaleSetManagedDiskParametersResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.diskEncryptionSet = defaults.diskEncryptionSet;
-    	      this.storageAccountType = defaults.storageAccountType;
+            $ = new VirtualMachineScaleSetManagedDiskParametersResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder diskEncryptionSet(@Nullable DiskEncryptionSetParametersResponse diskEncryptionSet) {
-            this.diskEncryptionSet = diskEncryptionSet;
+            $.diskEncryptionSet = diskEncryptionSet;
             return this;
         }
+
         public Builder storageAccountType(@Nullable String storageAccountType) {
-            this.storageAccountType = storageAccountType;
+            $.storageAccountType = storageAccountType;
             return this;
-        }        public VirtualMachineScaleSetManagedDiskParametersResponse build() {
-            return new VirtualMachineScaleSetManagedDiskParametersResponse(diskEncryptionSet, storageAccountType);
+        }
+
+        public VirtualMachineScaleSetManagedDiskParametersResponse build() {
+            return $;
         }
     }
+
 }

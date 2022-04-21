@@ -5,12 +5,12 @@ package com.pulumi.googlenative.sqladmin_v1beta4.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.sqladmin_v1beta4.enums.PasswordValidationPolicyComplexity;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +27,10 @@ public final class PasswordValidationPolicyArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="complexity")
-      private final @Nullable Output<PasswordValidationPolicyComplexity> complexity;
+    private @Nullable Output<PasswordValidationPolicyComplexity> complexity;
 
-    public Output<PasswordValidationPolicyComplexity> complexity() {
-        return this.complexity == null ? Codegen.empty() : this.complexity;
+    public Optional<Output<PasswordValidationPolicyComplexity>> complexity() {
+        return Optional.ofNullable(this.complexity);
     }
 
     /**
@@ -38,10 +38,10 @@ public final class PasswordValidationPolicyArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="disallowUsernameSubstring")
-      private final @Nullable Output<Boolean> disallowUsernameSubstring;
+    private @Nullable Output<Boolean> disallowUsernameSubstring;
 
-    public Output<Boolean> disallowUsernameSubstring() {
-        return this.disallowUsernameSubstring == null ? Codegen.empty() : this.disallowUsernameSubstring;
+    public Optional<Output<Boolean>> disallowUsernameSubstring() {
+        return Optional.ofNullable(this.disallowUsernameSubstring);
     }
 
     /**
@@ -49,10 +49,10 @@ public final class PasswordValidationPolicyArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="minLength")
-      private final @Nullable Output<Integer> minLength;
+    private @Nullable Output<Integer> minLength;
 
-    public Output<Integer> minLength() {
-        return this.minLength == null ? Codegen.empty() : this.minLength;
+    public Optional<Output<Integer>> minLength() {
+        return Optional.ofNullable(this.minLength);
     }
 
     /**
@@ -60,10 +60,10 @@ public final class PasswordValidationPolicyArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="passwordChangeInterval")
-      private final @Nullable Output<String> passwordChangeInterval;
+    private @Nullable Output<String> passwordChangeInterval;
 
-    public Output<String> passwordChangeInterval() {
-        return this.passwordChangeInterval == null ? Codegen.empty() : this.passwordChangeInterval;
+    public Optional<Output<String>> passwordChangeInterval() {
+        return Optional.ofNullable(this.passwordChangeInterval);
     }
 
     /**
@@ -71,102 +71,88 @@ public final class PasswordValidationPolicyArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="reuseInterval")
-      private final @Nullable Output<Integer> reuseInterval;
+    private @Nullable Output<Integer> reuseInterval;
 
-    public Output<Integer> reuseInterval() {
-        return this.reuseInterval == null ? Codegen.empty() : this.reuseInterval;
+    public Optional<Output<Integer>> reuseInterval() {
+        return Optional.ofNullable(this.reuseInterval);
     }
 
-    public PasswordValidationPolicyArgs(
-        @Nullable Output<PasswordValidationPolicyComplexity> complexity,
-        @Nullable Output<Boolean> disallowUsernameSubstring,
-        @Nullable Output<Integer> minLength,
-        @Nullable Output<String> passwordChangeInterval,
-        @Nullable Output<Integer> reuseInterval) {
-        this.complexity = complexity;
-        this.disallowUsernameSubstring = disallowUsernameSubstring;
-        this.minLength = minLength;
-        this.passwordChangeInterval = passwordChangeInterval;
-        this.reuseInterval = reuseInterval;
-    }
+    private PasswordValidationPolicyArgs() {}
 
-    private PasswordValidationPolicyArgs() {
-        this.complexity = Codegen.empty();
-        this.disallowUsernameSubstring = Codegen.empty();
-        this.minLength = Codegen.empty();
-        this.passwordChangeInterval = Codegen.empty();
-        this.reuseInterval = Codegen.empty();
+    private PasswordValidationPolicyArgs(PasswordValidationPolicyArgs $) {
+        this.complexity = $.complexity;
+        this.disallowUsernameSubstring = $.disallowUsernameSubstring;
+        this.minLength = $.minLength;
+        this.passwordChangeInterval = $.passwordChangeInterval;
+        this.reuseInterval = $.reuseInterval;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PasswordValidationPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<PasswordValidationPolicyComplexity> complexity;
-        private @Nullable Output<Boolean> disallowUsernameSubstring;
-        private @Nullable Output<Integer> minLength;
-        private @Nullable Output<String> passwordChangeInterval;
-        private @Nullable Output<Integer> reuseInterval;
+        private PasswordValidationPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PasswordValidationPolicyArgs();
         }
 
         public Builder(PasswordValidationPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.complexity = defaults.complexity;
-    	      this.disallowUsernameSubstring = defaults.disallowUsernameSubstring;
-    	      this.minLength = defaults.minLength;
-    	      this.passwordChangeInterval = defaults.passwordChangeInterval;
-    	      this.reuseInterval = defaults.reuseInterval;
+            $ = new PasswordValidationPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder complexity(@Nullable Output<PasswordValidationPolicyComplexity> complexity) {
-            this.complexity = complexity;
+            $.complexity = complexity;
             return this;
         }
-        public Builder complexity(@Nullable PasswordValidationPolicyComplexity complexity) {
-            this.complexity = Codegen.ofNullable(complexity);
-            return this;
+
+        public Builder complexity(PasswordValidationPolicyComplexity complexity) {
+            return complexity(Output.of(complexity));
         }
+
         public Builder disallowUsernameSubstring(@Nullable Output<Boolean> disallowUsernameSubstring) {
-            this.disallowUsernameSubstring = disallowUsernameSubstring;
+            $.disallowUsernameSubstring = disallowUsernameSubstring;
             return this;
         }
-        public Builder disallowUsernameSubstring(@Nullable Boolean disallowUsernameSubstring) {
-            this.disallowUsernameSubstring = Codegen.ofNullable(disallowUsernameSubstring);
-            return this;
+
+        public Builder disallowUsernameSubstring(Boolean disallowUsernameSubstring) {
+            return disallowUsernameSubstring(Output.of(disallowUsernameSubstring));
         }
+
         public Builder minLength(@Nullable Output<Integer> minLength) {
-            this.minLength = minLength;
+            $.minLength = minLength;
             return this;
         }
-        public Builder minLength(@Nullable Integer minLength) {
-            this.minLength = Codegen.ofNullable(minLength);
-            return this;
+
+        public Builder minLength(Integer minLength) {
+            return minLength(Output.of(minLength));
         }
+
         public Builder passwordChangeInterval(@Nullable Output<String> passwordChangeInterval) {
-            this.passwordChangeInterval = passwordChangeInterval;
+            $.passwordChangeInterval = passwordChangeInterval;
             return this;
         }
-        public Builder passwordChangeInterval(@Nullable String passwordChangeInterval) {
-            this.passwordChangeInterval = Codegen.ofNullable(passwordChangeInterval);
-            return this;
+
+        public Builder passwordChangeInterval(String passwordChangeInterval) {
+            return passwordChangeInterval(Output.of(passwordChangeInterval));
         }
+
         public Builder reuseInterval(@Nullable Output<Integer> reuseInterval) {
-            this.reuseInterval = reuseInterval;
+            $.reuseInterval = reuseInterval;
             return this;
         }
-        public Builder reuseInterval(@Nullable Integer reuseInterval) {
-            this.reuseInterval = Codegen.ofNullable(reuseInterval);
-            return this;
-        }        public PasswordValidationPolicyArgs build() {
-            return new PasswordValidationPolicyArgs(complexity, disallowUsernameSubstring, minLength, passwordChangeInterval, reuseInterval);
+
+        public Builder reuseInterval(Integer reuseInterval) {
+            return reuseInterval(Output.of(reuseInterval));
+        }
+
+        public PasswordValidationPolicyArgs build() {
+            return $;
         }
     }
+
 }

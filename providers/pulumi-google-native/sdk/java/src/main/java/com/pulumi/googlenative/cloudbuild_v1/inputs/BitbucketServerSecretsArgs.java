@@ -5,7 +5,6 @@ package com.pulumi.googlenative.cloudbuild_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,7 +22,7 @@ public final class BitbucketServerSecretsArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="adminAccessTokenVersionName", required=true)
-      private final Output<String> adminAccessTokenVersionName;
+    private Output<String> adminAccessTokenVersionName;
 
     public Output<String> adminAccessTokenVersionName() {
         return this.adminAccessTokenVersionName;
@@ -34,7 +33,7 @@ public final class BitbucketServerSecretsArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="readAccessTokenVersionName", required=true)
-      private final Output<String> readAccessTokenVersionName;
+    private Output<String> readAccessTokenVersionName;
 
     public Output<String> readAccessTokenVersionName() {
         return this.readAccessTokenVersionName;
@@ -45,76 +44,71 @@ public final class BitbucketServerSecretsArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="webhookSecretVersionName", required=true)
-      private final Output<String> webhookSecretVersionName;
+    private Output<String> webhookSecretVersionName;
 
     public Output<String> webhookSecretVersionName() {
         return this.webhookSecretVersionName;
     }
 
-    public BitbucketServerSecretsArgs(
-        Output<String> adminAccessTokenVersionName,
-        Output<String> readAccessTokenVersionName,
-        Output<String> webhookSecretVersionName) {
-        this.adminAccessTokenVersionName = Objects.requireNonNull(adminAccessTokenVersionName, "expected parameter 'adminAccessTokenVersionName' to be non-null");
-        this.readAccessTokenVersionName = Objects.requireNonNull(readAccessTokenVersionName, "expected parameter 'readAccessTokenVersionName' to be non-null");
-        this.webhookSecretVersionName = Objects.requireNonNull(webhookSecretVersionName, "expected parameter 'webhookSecretVersionName' to be non-null");
-    }
+    private BitbucketServerSecretsArgs() {}
 
-    private BitbucketServerSecretsArgs() {
-        this.adminAccessTokenVersionName = Codegen.empty();
-        this.readAccessTokenVersionName = Codegen.empty();
-        this.webhookSecretVersionName = Codegen.empty();
+    private BitbucketServerSecretsArgs(BitbucketServerSecretsArgs $) {
+        this.adminAccessTokenVersionName = $.adminAccessTokenVersionName;
+        this.readAccessTokenVersionName = $.readAccessTokenVersionName;
+        this.webhookSecretVersionName = $.webhookSecretVersionName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BitbucketServerSecretsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> adminAccessTokenVersionName;
-        private Output<String> readAccessTokenVersionName;
-        private Output<String> webhookSecretVersionName;
+        private BitbucketServerSecretsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new BitbucketServerSecretsArgs();
         }
 
         public Builder(BitbucketServerSecretsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.adminAccessTokenVersionName = defaults.adminAccessTokenVersionName;
-    	      this.readAccessTokenVersionName = defaults.readAccessTokenVersionName;
-    	      this.webhookSecretVersionName = defaults.webhookSecretVersionName;
+            $ = new BitbucketServerSecretsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder adminAccessTokenVersionName(Output<String> adminAccessTokenVersionName) {
-            this.adminAccessTokenVersionName = Objects.requireNonNull(adminAccessTokenVersionName);
+            $.adminAccessTokenVersionName = adminAccessTokenVersionName;
             return this;
         }
+
         public Builder adminAccessTokenVersionName(String adminAccessTokenVersionName) {
-            this.adminAccessTokenVersionName = Output.of(Objects.requireNonNull(adminAccessTokenVersionName));
-            return this;
+            return adminAccessTokenVersionName(Output.of(adminAccessTokenVersionName));
         }
+
         public Builder readAccessTokenVersionName(Output<String> readAccessTokenVersionName) {
-            this.readAccessTokenVersionName = Objects.requireNonNull(readAccessTokenVersionName);
+            $.readAccessTokenVersionName = readAccessTokenVersionName;
             return this;
         }
+
         public Builder readAccessTokenVersionName(String readAccessTokenVersionName) {
-            this.readAccessTokenVersionName = Output.of(Objects.requireNonNull(readAccessTokenVersionName));
-            return this;
+            return readAccessTokenVersionName(Output.of(readAccessTokenVersionName));
         }
+
         public Builder webhookSecretVersionName(Output<String> webhookSecretVersionName) {
-            this.webhookSecretVersionName = Objects.requireNonNull(webhookSecretVersionName);
+            $.webhookSecretVersionName = webhookSecretVersionName;
             return this;
         }
+
         public Builder webhookSecretVersionName(String webhookSecretVersionName) {
-            this.webhookSecretVersionName = Output.of(Objects.requireNonNull(webhookSecretVersionName));
-            return this;
-        }        public BitbucketServerSecretsArgs build() {
-            return new BitbucketServerSecretsArgs(adminAccessTokenVersionName, readAccessTokenVersionName, webhookSecretVersionName);
+            return webhookSecretVersionName(Output.of(webhookSecretVersionName));
+        }
+
+        public BitbucketServerSecretsArgs build() {
+            $.adminAccessTokenVersionName = Objects.requireNonNull($.adminAccessTokenVersionName, "expected parameter 'adminAccessTokenVersionName' to be non-null");
+            $.readAccessTokenVersionName = Objects.requireNonNull($.readAccessTokenVersionName, "expected parameter 'readAccessTokenVersionName' to be non-null");
+            $.webhookSecretVersionName = Objects.requireNonNull($.webhookSecretVersionName, "expected parameter 'webhookSecretVersionName' to be non-null");
+            return $;
         }
     }
+
 }

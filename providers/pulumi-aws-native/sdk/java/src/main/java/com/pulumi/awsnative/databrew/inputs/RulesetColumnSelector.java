@@ -23,10 +23,10 @@ public final class RulesetColumnSelector extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="name")
-      private final @Nullable String name;
+    private @Nullable String name;
 
     public Optional<String> name() {
-        return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -34,55 +34,50 @@ public final class RulesetColumnSelector extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="regex")
-      private final @Nullable String regex;
+    private @Nullable String regex;
 
     public Optional<String> regex() {
-        return this.regex == null ? Optional.empty() : Optional.ofNullable(this.regex);
+        return Optional.ofNullable(this.regex);
     }
 
-    public RulesetColumnSelector(
-        @Nullable String name,
-        @Nullable String regex) {
-        this.name = name;
-        this.regex = regex;
-    }
+    private RulesetColumnSelector() {}
 
-    private RulesetColumnSelector() {
-        this.name = null;
-        this.regex = null;
+    private RulesetColumnSelector(RulesetColumnSelector $) {
+        this.name = $.name;
+        this.regex = $.regex;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RulesetColumnSelector defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String name;
-        private @Nullable String regex;
+        private RulesetColumnSelector $;
 
         public Builder() {
-    	      // Empty
+            $ = new RulesetColumnSelector();
         }
 
         public Builder(RulesetColumnSelector defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.regex = defaults.regex;
+            $ = new RulesetColumnSelector(Objects.requireNonNull(defaults));
         }
 
         public Builder name(@Nullable String name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
+
         public Builder regex(@Nullable String regex) {
-            this.regex = regex;
+            $.regex = regex;
             return this;
-        }        public RulesetColumnSelector build() {
-            return new RulesetColumnSelector(name, regex);
+        }
+
+        public RulesetColumnSelector build() {
+            return $;
         }
     }
+
 }

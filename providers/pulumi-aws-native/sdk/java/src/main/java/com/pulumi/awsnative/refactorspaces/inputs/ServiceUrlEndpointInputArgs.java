@@ -5,9 +5,9 @@ package com.pulumi.awsnative.refactorspaces.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -16,70 +16,66 @@ public final class ServiceUrlEndpointInputArgs extends com.pulumi.resources.Reso
     public static final ServiceUrlEndpointInputArgs Empty = new ServiceUrlEndpointInputArgs();
 
     @Import(name="healthUrl")
-      private final @Nullable Output<String> healthUrl;
+    private @Nullable Output<String> healthUrl;
 
-    public Output<String> healthUrl() {
-        return this.healthUrl == null ? Codegen.empty() : this.healthUrl;
+    public Optional<Output<String>> healthUrl() {
+        return Optional.ofNullable(this.healthUrl);
     }
 
     @Import(name="url", required=true)
-      private final Output<String> url;
+    private Output<String> url;
 
     public Output<String> url() {
         return this.url;
     }
 
-    public ServiceUrlEndpointInputArgs(
-        @Nullable Output<String> healthUrl,
-        Output<String> url) {
-        this.healthUrl = healthUrl;
-        this.url = Objects.requireNonNull(url, "expected parameter 'url' to be non-null");
-    }
+    private ServiceUrlEndpointInputArgs() {}
 
-    private ServiceUrlEndpointInputArgs() {
-        this.healthUrl = Codegen.empty();
-        this.url = Codegen.empty();
+    private ServiceUrlEndpointInputArgs(ServiceUrlEndpointInputArgs $) {
+        this.healthUrl = $.healthUrl;
+        this.url = $.url;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ServiceUrlEndpointInputArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> healthUrl;
-        private Output<String> url;
+        private ServiceUrlEndpointInputArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ServiceUrlEndpointInputArgs();
         }
 
         public Builder(ServiceUrlEndpointInputArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.healthUrl = defaults.healthUrl;
-    	      this.url = defaults.url;
+            $ = new ServiceUrlEndpointInputArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder healthUrl(@Nullable Output<String> healthUrl) {
-            this.healthUrl = healthUrl;
+            $.healthUrl = healthUrl;
             return this;
         }
-        public Builder healthUrl(@Nullable String healthUrl) {
-            this.healthUrl = Codegen.ofNullable(healthUrl);
-            return this;
+
+        public Builder healthUrl(String healthUrl) {
+            return healthUrl(Output.of(healthUrl));
         }
+
         public Builder url(Output<String> url) {
-            this.url = Objects.requireNonNull(url);
+            $.url = url;
             return this;
         }
+
         public Builder url(String url) {
-            this.url = Output.of(Objects.requireNonNull(url));
-            return this;
-        }        public ServiceUrlEndpointInputArgs build() {
-            return new ServiceUrlEndpointInputArgs(healthUrl, url);
+            return url(Output.of(url));
+        }
+
+        public ServiceUrlEndpointInputArgs build() {
+            $.url = Objects.requireNonNull($.url, "expected parameter 'url' to be non-null");
+            return $;
         }
     }
+
 }

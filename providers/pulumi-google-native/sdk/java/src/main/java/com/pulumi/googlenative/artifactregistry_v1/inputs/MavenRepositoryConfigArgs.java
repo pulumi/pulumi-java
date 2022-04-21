@@ -5,10 +5,10 @@ package com.pulumi.googlenative.artifactregistry_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.artifactregistry_v1.enums.MavenRepositoryConfigVersionPolicy;
 import java.lang.Boolean;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class MavenRepositoryConfigArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="allowSnapshotOverwrites")
-      private final @Nullable Output<Boolean> allowSnapshotOverwrites;
+    private @Nullable Output<Boolean> allowSnapshotOverwrites;
 
-    public Output<Boolean> allowSnapshotOverwrites() {
-        return this.allowSnapshotOverwrites == null ? Codegen.empty() : this.allowSnapshotOverwrites;
+    public Optional<Output<Boolean>> allowSnapshotOverwrites() {
+        return Optional.ofNullable(this.allowSnapshotOverwrites);
     }
 
     /**
@@ -36,63 +36,58 @@ public final class MavenRepositoryConfigArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="versionPolicy")
-      private final @Nullable Output<MavenRepositoryConfigVersionPolicy> versionPolicy;
+    private @Nullable Output<MavenRepositoryConfigVersionPolicy> versionPolicy;
 
-    public Output<MavenRepositoryConfigVersionPolicy> versionPolicy() {
-        return this.versionPolicy == null ? Codegen.empty() : this.versionPolicy;
+    public Optional<Output<MavenRepositoryConfigVersionPolicy>> versionPolicy() {
+        return Optional.ofNullable(this.versionPolicy);
     }
 
-    public MavenRepositoryConfigArgs(
-        @Nullable Output<Boolean> allowSnapshotOverwrites,
-        @Nullable Output<MavenRepositoryConfigVersionPolicy> versionPolicy) {
-        this.allowSnapshotOverwrites = allowSnapshotOverwrites;
-        this.versionPolicy = versionPolicy;
-    }
+    private MavenRepositoryConfigArgs() {}
 
-    private MavenRepositoryConfigArgs() {
-        this.allowSnapshotOverwrites = Codegen.empty();
-        this.versionPolicy = Codegen.empty();
+    private MavenRepositoryConfigArgs(MavenRepositoryConfigArgs $) {
+        this.allowSnapshotOverwrites = $.allowSnapshotOverwrites;
+        this.versionPolicy = $.versionPolicy;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MavenRepositoryConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> allowSnapshotOverwrites;
-        private @Nullable Output<MavenRepositoryConfigVersionPolicy> versionPolicy;
+        private MavenRepositoryConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new MavenRepositoryConfigArgs();
         }
 
         public Builder(MavenRepositoryConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.allowSnapshotOverwrites = defaults.allowSnapshotOverwrites;
-    	      this.versionPolicy = defaults.versionPolicy;
+            $ = new MavenRepositoryConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder allowSnapshotOverwrites(@Nullable Output<Boolean> allowSnapshotOverwrites) {
-            this.allowSnapshotOverwrites = allowSnapshotOverwrites;
+            $.allowSnapshotOverwrites = allowSnapshotOverwrites;
             return this;
         }
-        public Builder allowSnapshotOverwrites(@Nullable Boolean allowSnapshotOverwrites) {
-            this.allowSnapshotOverwrites = Codegen.ofNullable(allowSnapshotOverwrites);
-            return this;
+
+        public Builder allowSnapshotOverwrites(Boolean allowSnapshotOverwrites) {
+            return allowSnapshotOverwrites(Output.of(allowSnapshotOverwrites));
         }
+
         public Builder versionPolicy(@Nullable Output<MavenRepositoryConfigVersionPolicy> versionPolicy) {
-            this.versionPolicy = versionPolicy;
+            $.versionPolicy = versionPolicy;
             return this;
         }
-        public Builder versionPolicy(@Nullable MavenRepositoryConfigVersionPolicy versionPolicy) {
-            this.versionPolicy = Codegen.ofNullable(versionPolicy);
-            return this;
-        }        public MavenRepositoryConfigArgs build() {
-            return new MavenRepositoryConfigArgs(allowSnapshotOverwrites, versionPolicy);
+
+        public Builder versionPolicy(MavenRepositoryConfigVersionPolicy versionPolicy) {
+            return versionPolicy(Output.of(versionPolicy));
+        }
+
+        public MavenRepositoryConfigArgs build() {
+            return $;
         }
     }
+
 }

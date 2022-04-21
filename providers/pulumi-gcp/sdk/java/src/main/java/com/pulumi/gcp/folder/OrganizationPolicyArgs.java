@@ -5,13 +5,13 @@ package com.pulumi.gcp.folder;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.folder.inputs.OrganizationPolicyBooleanPolicyArgs;
 import com.pulumi.gcp.folder.inputs.OrganizationPolicyListPolicyArgs;
 import com.pulumi.gcp.folder.inputs.OrganizationPolicyRestorePolicyArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class OrganizationPolicyArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="booleanPolicy")
-      private final @Nullable Output<OrganizationPolicyBooleanPolicyArgs> booleanPolicy;
+    private @Nullable Output<OrganizationPolicyBooleanPolicyArgs> booleanPolicy;
 
-    public Output<OrganizationPolicyBooleanPolicyArgs> booleanPolicy() {
-        return this.booleanPolicy == null ? Codegen.empty() : this.booleanPolicy;
+    public Optional<Output<OrganizationPolicyBooleanPolicyArgs>> booleanPolicy() {
+        return Optional.ofNullable(this.booleanPolicy);
     }
 
     /**
@@ -35,7 +35,7 @@ public final class OrganizationPolicyArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="constraint", required=true)
-      private final Output<String> constraint;
+    private Output<String> constraint;
 
     public Output<String> constraint() {
         return this.constraint;
@@ -46,7 +46,7 @@ public final class OrganizationPolicyArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="folder", required=true)
-      private final Output<String> folder;
+    private Output<String> folder;
 
     public Output<String> folder() {
         return this.folder;
@@ -58,10 +58,10 @@ public final class OrganizationPolicyArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="listPolicy")
-      private final @Nullable Output<OrganizationPolicyListPolicyArgs> listPolicy;
+    private @Nullable Output<OrganizationPolicyListPolicyArgs> listPolicy;
 
-    public Output<OrganizationPolicyListPolicyArgs> listPolicy() {
-        return this.listPolicy == null ? Codegen.empty() : this.listPolicy;
+    public Optional<Output<OrganizationPolicyListPolicyArgs>> listPolicy() {
+        return Optional.ofNullable(this.listPolicy);
     }
 
     /**
@@ -69,10 +69,10 @@ public final class OrganizationPolicyArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="restorePolicy")
-      private final @Nullable Output<OrganizationPolicyRestorePolicyArgs> restorePolicy;
+    private @Nullable Output<OrganizationPolicyRestorePolicyArgs> restorePolicy;
 
-    public Output<OrganizationPolicyRestorePolicyArgs> restorePolicy() {
-        return this.restorePolicy == null ? Codegen.empty() : this.restorePolicy;
+    public Optional<Output<OrganizationPolicyRestorePolicyArgs>> restorePolicy() {
+        return Optional.ofNullable(this.restorePolicy);
     }
 
     /**
@@ -80,115 +80,100 @@ public final class OrganizationPolicyArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="version")
-      private final @Nullable Output<Integer> version;
+    private @Nullable Output<Integer> version;
 
-    public Output<Integer> version() {
-        return this.version == null ? Codegen.empty() : this.version;
+    public Optional<Output<Integer>> version() {
+        return Optional.ofNullable(this.version);
     }
 
-    public OrganizationPolicyArgs(
-        @Nullable Output<OrganizationPolicyBooleanPolicyArgs> booleanPolicy,
-        Output<String> constraint,
-        Output<String> folder,
-        @Nullable Output<OrganizationPolicyListPolicyArgs> listPolicy,
-        @Nullable Output<OrganizationPolicyRestorePolicyArgs> restorePolicy,
-        @Nullable Output<Integer> version) {
-        this.booleanPolicy = booleanPolicy;
-        this.constraint = Objects.requireNonNull(constraint, "expected parameter 'constraint' to be non-null");
-        this.folder = Objects.requireNonNull(folder, "expected parameter 'folder' to be non-null");
-        this.listPolicy = listPolicy;
-        this.restorePolicy = restorePolicy;
-        this.version = version;
-    }
+    private OrganizationPolicyArgs() {}
 
-    private OrganizationPolicyArgs() {
-        this.booleanPolicy = Codegen.empty();
-        this.constraint = Codegen.empty();
-        this.folder = Codegen.empty();
-        this.listPolicy = Codegen.empty();
-        this.restorePolicy = Codegen.empty();
-        this.version = Codegen.empty();
+    private OrganizationPolicyArgs(OrganizationPolicyArgs $) {
+        this.booleanPolicy = $.booleanPolicy;
+        this.constraint = $.constraint;
+        this.folder = $.folder;
+        this.listPolicy = $.listPolicy;
+        this.restorePolicy = $.restorePolicy;
+        this.version = $.version;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(OrganizationPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<OrganizationPolicyBooleanPolicyArgs> booleanPolicy;
-        private Output<String> constraint;
-        private Output<String> folder;
-        private @Nullable Output<OrganizationPolicyListPolicyArgs> listPolicy;
-        private @Nullable Output<OrganizationPolicyRestorePolicyArgs> restorePolicy;
-        private @Nullable Output<Integer> version;
+        private OrganizationPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new OrganizationPolicyArgs();
         }
 
         public Builder(OrganizationPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.booleanPolicy = defaults.booleanPolicy;
-    	      this.constraint = defaults.constraint;
-    	      this.folder = defaults.folder;
-    	      this.listPolicy = defaults.listPolicy;
-    	      this.restorePolicy = defaults.restorePolicy;
-    	      this.version = defaults.version;
+            $ = new OrganizationPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder booleanPolicy(@Nullable Output<OrganizationPolicyBooleanPolicyArgs> booleanPolicy) {
-            this.booleanPolicy = booleanPolicy;
+            $.booleanPolicy = booleanPolicy;
             return this;
         }
-        public Builder booleanPolicy(@Nullable OrganizationPolicyBooleanPolicyArgs booleanPolicy) {
-            this.booleanPolicy = Codegen.ofNullable(booleanPolicy);
-            return this;
+
+        public Builder booleanPolicy(OrganizationPolicyBooleanPolicyArgs booleanPolicy) {
+            return booleanPolicy(Output.of(booleanPolicy));
         }
+
         public Builder constraint(Output<String> constraint) {
-            this.constraint = Objects.requireNonNull(constraint);
+            $.constraint = constraint;
             return this;
         }
+
         public Builder constraint(String constraint) {
-            this.constraint = Output.of(Objects.requireNonNull(constraint));
-            return this;
+            return constraint(Output.of(constraint));
         }
+
         public Builder folder(Output<String> folder) {
-            this.folder = Objects.requireNonNull(folder);
+            $.folder = folder;
             return this;
         }
+
         public Builder folder(String folder) {
-            this.folder = Output.of(Objects.requireNonNull(folder));
-            return this;
+            return folder(Output.of(folder));
         }
+
         public Builder listPolicy(@Nullable Output<OrganizationPolicyListPolicyArgs> listPolicy) {
-            this.listPolicy = listPolicy;
+            $.listPolicy = listPolicy;
             return this;
         }
-        public Builder listPolicy(@Nullable OrganizationPolicyListPolicyArgs listPolicy) {
-            this.listPolicy = Codegen.ofNullable(listPolicy);
-            return this;
+
+        public Builder listPolicy(OrganizationPolicyListPolicyArgs listPolicy) {
+            return listPolicy(Output.of(listPolicy));
         }
+
         public Builder restorePolicy(@Nullable Output<OrganizationPolicyRestorePolicyArgs> restorePolicy) {
-            this.restorePolicy = restorePolicy;
+            $.restorePolicy = restorePolicy;
             return this;
         }
-        public Builder restorePolicy(@Nullable OrganizationPolicyRestorePolicyArgs restorePolicy) {
-            this.restorePolicy = Codegen.ofNullable(restorePolicy);
-            return this;
+
+        public Builder restorePolicy(OrganizationPolicyRestorePolicyArgs restorePolicy) {
+            return restorePolicy(Output.of(restorePolicy));
         }
+
         public Builder version(@Nullable Output<Integer> version) {
-            this.version = version;
+            $.version = version;
             return this;
         }
-        public Builder version(@Nullable Integer version) {
-            this.version = Codegen.ofNullable(version);
-            return this;
-        }        public OrganizationPolicyArgs build() {
-            return new OrganizationPolicyArgs(booleanPolicy, constraint, folder, listPolicy, restorePolicy, version);
+
+        public Builder version(Integer version) {
+            return version(Output.of(version));
+        }
+
+        public OrganizationPolicyArgs build() {
+            $.constraint = Objects.requireNonNull($.constraint, "expected parameter 'constraint' to be non-null");
+            $.folder = Objects.requireNonNull($.folder, "expected parameter 'folder' to be non-null");
+            return $;
         }
     }
+
 }

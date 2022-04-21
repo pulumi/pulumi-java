@@ -6,10 +6,10 @@ package com.pulumi.azurenative.aad.inputs;
 import com.pulumi.azurenative.aad.inputs.ForestTrustArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class ResourceForestSettingsArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="resourceForest")
-      private final @Nullable Output<String> resourceForest;
+    private @Nullable Output<String> resourceForest;
 
-    public Output<String> resourceForest() {
-        return this.resourceForest == null ? Codegen.empty() : this.resourceForest;
+    public Optional<Output<String>> resourceForest() {
+        return Optional.ofNullable(this.resourceForest);
     }
 
     /**
@@ -37,66 +37,62 @@ public final class ResourceForestSettingsArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="settings")
-      private final @Nullable Output<List<ForestTrustArgs>> settings;
+    private @Nullable Output<List<ForestTrustArgs>> settings;
 
-    public Output<List<ForestTrustArgs>> settings() {
-        return this.settings == null ? Codegen.empty() : this.settings;
+    public Optional<Output<List<ForestTrustArgs>>> settings() {
+        return Optional.ofNullable(this.settings);
     }
 
-    public ResourceForestSettingsArgs(
-        @Nullable Output<String> resourceForest,
-        @Nullable Output<List<ForestTrustArgs>> settings) {
-        this.resourceForest = resourceForest;
-        this.settings = settings;
-    }
+    private ResourceForestSettingsArgs() {}
 
-    private ResourceForestSettingsArgs() {
-        this.resourceForest = Codegen.empty();
-        this.settings = Codegen.empty();
+    private ResourceForestSettingsArgs(ResourceForestSettingsArgs $) {
+        this.resourceForest = $.resourceForest;
+        this.settings = $.settings;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ResourceForestSettingsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> resourceForest;
-        private @Nullable Output<List<ForestTrustArgs>> settings;
+        private ResourceForestSettingsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ResourceForestSettingsArgs();
         }
 
         public Builder(ResourceForestSettingsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.resourceForest = defaults.resourceForest;
-    	      this.settings = defaults.settings;
+            $ = new ResourceForestSettingsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder resourceForest(@Nullable Output<String> resourceForest) {
-            this.resourceForest = resourceForest;
+            $.resourceForest = resourceForest;
             return this;
         }
-        public Builder resourceForest(@Nullable String resourceForest) {
-            this.resourceForest = Codegen.ofNullable(resourceForest);
-            return this;
+
+        public Builder resourceForest(String resourceForest) {
+            return resourceForest(Output.of(resourceForest));
         }
+
         public Builder settings(@Nullable Output<List<ForestTrustArgs>> settings) {
-            this.settings = settings;
+            $.settings = settings;
             return this;
         }
-        public Builder settings(@Nullable List<ForestTrustArgs> settings) {
-            this.settings = Codegen.ofNullable(settings);
-            return this;
+
+        public Builder settings(List<ForestTrustArgs> settings) {
+            return settings(Output.of(settings));
         }
+
         public Builder settings(ForestTrustArgs... settings) {
             return settings(List.of(settings));
-        }        public ResourceForestSettingsArgs build() {
-            return new ResourceForestSettingsArgs(resourceForest, settings);
+        }
+
+        public ResourceForestSettingsArgs build() {
+            return $;
         }
     }
+
 }

@@ -5,10 +5,10 @@ package com.pulumi.googlenative.cloudbuild_v1alpha1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.cloudbuild_v1alpha1.inputs.NetworkArgs;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class WorkerConfigArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="diskSizeGb")
-      private final @Nullable Output<String> diskSizeGb;
+    private @Nullable Output<String> diskSizeGb;
 
-    public Output<String> diskSizeGb() {
-        return this.diskSizeGb == null ? Codegen.empty() : this.diskSizeGb;
+    public Optional<Output<String>> diskSizeGb() {
+        return Optional.ofNullable(this.diskSizeGb);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class WorkerConfigArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="machineType")
-      private final @Nullable Output<String> machineType;
+    private @Nullable Output<String> machineType;
 
-    public Output<String> machineType() {
-        return this.machineType == null ? Codegen.empty() : this.machineType;
+    public Optional<Output<String>> machineType() {
+        return Optional.ofNullable(this.machineType);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class WorkerConfigArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="network")
-      private final @Nullable Output<NetworkArgs> network;
+    private @Nullable Output<NetworkArgs> network;
 
-    public Output<NetworkArgs> network() {
-        return this.network == null ? Codegen.empty() : this.network;
+    public Optional<Output<NetworkArgs>> network() {
+        return Optional.ofNullable(this.network);
     }
 
     /**
@@ -58,89 +58,78 @@ public final class WorkerConfigArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tag")
-      private final @Nullable Output<String> tag;
+    private @Nullable Output<String> tag;
 
-    public Output<String> tag() {
-        return this.tag == null ? Codegen.empty() : this.tag;
+    public Optional<Output<String>> tag() {
+        return Optional.ofNullable(this.tag);
     }
 
-    public WorkerConfigArgs(
-        @Nullable Output<String> diskSizeGb,
-        @Nullable Output<String> machineType,
-        @Nullable Output<NetworkArgs> network,
-        @Nullable Output<String> tag) {
-        this.diskSizeGb = diskSizeGb;
-        this.machineType = machineType;
-        this.network = network;
-        this.tag = tag;
-    }
+    private WorkerConfigArgs() {}
 
-    private WorkerConfigArgs() {
-        this.diskSizeGb = Codegen.empty();
-        this.machineType = Codegen.empty();
-        this.network = Codegen.empty();
-        this.tag = Codegen.empty();
+    private WorkerConfigArgs(WorkerConfigArgs $) {
+        this.diskSizeGb = $.diskSizeGb;
+        this.machineType = $.machineType;
+        this.network = $.network;
+        this.tag = $.tag;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WorkerConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> diskSizeGb;
-        private @Nullable Output<String> machineType;
-        private @Nullable Output<NetworkArgs> network;
-        private @Nullable Output<String> tag;
+        private WorkerConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new WorkerConfigArgs();
         }
 
         public Builder(WorkerConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.diskSizeGb = defaults.diskSizeGb;
-    	      this.machineType = defaults.machineType;
-    	      this.network = defaults.network;
-    	      this.tag = defaults.tag;
+            $ = new WorkerConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder diskSizeGb(@Nullable Output<String> diskSizeGb) {
-            this.diskSizeGb = diskSizeGb;
+            $.diskSizeGb = diskSizeGb;
             return this;
         }
-        public Builder diskSizeGb(@Nullable String diskSizeGb) {
-            this.diskSizeGb = Codegen.ofNullable(diskSizeGb);
-            return this;
+
+        public Builder diskSizeGb(String diskSizeGb) {
+            return diskSizeGb(Output.of(diskSizeGb));
         }
+
         public Builder machineType(@Nullable Output<String> machineType) {
-            this.machineType = machineType;
+            $.machineType = machineType;
             return this;
         }
-        public Builder machineType(@Nullable String machineType) {
-            this.machineType = Codegen.ofNullable(machineType);
-            return this;
+
+        public Builder machineType(String machineType) {
+            return machineType(Output.of(machineType));
         }
+
         public Builder network(@Nullable Output<NetworkArgs> network) {
-            this.network = network;
+            $.network = network;
             return this;
         }
-        public Builder network(@Nullable NetworkArgs network) {
-            this.network = Codegen.ofNullable(network);
-            return this;
+
+        public Builder network(NetworkArgs network) {
+            return network(Output.of(network));
         }
+
         public Builder tag(@Nullable Output<String> tag) {
-            this.tag = tag;
+            $.tag = tag;
             return this;
         }
-        public Builder tag(@Nullable String tag) {
-            this.tag = Codegen.ofNullable(tag);
-            return this;
-        }        public WorkerConfigArgs build() {
-            return new WorkerConfigArgs(diskSizeGb, machineType, network, tag);
+
+        public Builder tag(String tag) {
+            return tag(Output.of(tag));
+        }
+
+        public WorkerConfigArgs build() {
+            return $;
         }
     }
+
 }

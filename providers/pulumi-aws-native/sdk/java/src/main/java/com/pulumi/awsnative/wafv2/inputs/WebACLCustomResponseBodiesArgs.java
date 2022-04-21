@@ -3,7 +3,7 @@
 
 package com.pulumi.awsnative.wafv2.inputs;
 
-import java.util.Objects;
+
 
 
 /**
@@ -14,28 +14,19 @@ public final class WebACLCustomResponseBodiesArgs extends com.pulumi.resources.R
 
     public static final WebACLCustomResponseBodiesArgs Empty = new WebACLCustomResponseBodiesArgs();
 
-    public WebACLCustomResponseBodiesArgs() {
-    }
-
     public static Builder builder() {
         return new Builder();
     }
 
-    public static Builder builder(WebACLCustomResponseBodiesArgs defaults) {
-        return new Builder(defaults);
-    }
-
     public static final class Builder {
+        private WebACLCustomResponseBodiesArgs $;
 
         public Builder() {
-    	      // Empty
-        }
-
-        public Builder(WebACLCustomResponseBodiesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
+            $ = new WebACLCustomResponseBodiesArgs();
         }
         public WebACLCustomResponseBodiesArgs build() {
-            return new WebACLCustomResponseBodiesArgs();
+            return $;
         }
     }
+
 }

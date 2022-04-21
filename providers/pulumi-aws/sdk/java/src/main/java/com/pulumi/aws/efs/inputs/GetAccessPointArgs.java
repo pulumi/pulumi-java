@@ -20,7 +20,7 @@ public final class GetAccessPointArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="accessPointId", required=true)
-      private final String accessPointId;
+    private String accessPointId;
 
     public String accessPointId() {
         return this.accessPointId;
@@ -31,55 +31,51 @@ public final class GetAccessPointArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Map<String,String> tags;
+    private @Nullable Map<String,String> tags;
 
-    public Map<String,String> tags() {
-        return this.tags == null ? Map.of() : this.tags;
+    public Optional<Map<String,String>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public GetAccessPointArgs(
-        String accessPointId,
-        @Nullable Map<String,String> tags) {
-        this.accessPointId = Objects.requireNonNull(accessPointId, "expected parameter 'accessPointId' to be non-null");
-        this.tags = tags;
-    }
+    private GetAccessPointArgs() {}
 
-    private GetAccessPointArgs() {
-        this.accessPointId = null;
-        this.tags = Map.of();
+    private GetAccessPointArgs(GetAccessPointArgs $) {
+        this.accessPointId = $.accessPointId;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetAccessPointArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String accessPointId;
-        private @Nullable Map<String,String> tags;
+        private GetAccessPointArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetAccessPointArgs();
         }
 
         public Builder(GetAccessPointArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accessPointId = defaults.accessPointId;
-    	      this.tags = defaults.tags;
+            $ = new GetAccessPointArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder accessPointId(String accessPointId) {
-            this.accessPointId = Objects.requireNonNull(accessPointId);
+            $.accessPointId = accessPointId;
             return this;
         }
+
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
-        }        public GetAccessPointArgs build() {
-            return new GetAccessPointArgs(accessPointId, tags);
+        }
+
+        public GetAccessPointArgs build() {
+            $.accessPointId = Objects.requireNonNull($.accessPointId, "expected parameter 'accessPointId' to be non-null");
+            return $;
         }
     }
+
 }

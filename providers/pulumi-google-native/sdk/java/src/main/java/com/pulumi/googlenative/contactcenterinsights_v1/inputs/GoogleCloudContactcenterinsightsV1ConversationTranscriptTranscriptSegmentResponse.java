@@ -28,7 +28,7 @@ public final class GoogleCloudContactcenterinsightsV1ConversationTranscriptTrans
      * 
      */
     @Import(name="channelTag", required=true)
-      private final Integer channelTag;
+    private Integer channelTag;
 
     public Integer channelTag() {
         return this.channelTag;
@@ -39,7 +39,7 @@ public final class GoogleCloudContactcenterinsightsV1ConversationTranscriptTrans
      * 
      */
     @Import(name="confidence", required=true)
-      private final Double confidence;
+    private Double confidence;
 
     public Double confidence() {
         return this.confidence;
@@ -50,7 +50,7 @@ public final class GoogleCloudContactcenterinsightsV1ConversationTranscriptTrans
      * 
      */
     @Import(name="dialogflowSegmentMetadata", required=true)
-      private final GoogleCloudContactcenterinsightsV1ConversationTranscriptTranscriptSegmentDialogflowSegmentMetadataResponse dialogflowSegmentMetadata;
+    private GoogleCloudContactcenterinsightsV1ConversationTranscriptTranscriptSegmentDialogflowSegmentMetadataResponse dialogflowSegmentMetadata;
 
     public GoogleCloudContactcenterinsightsV1ConversationTranscriptTranscriptSegmentDialogflowSegmentMetadataResponse dialogflowSegmentMetadata() {
         return this.dialogflowSegmentMetadata;
@@ -61,7 +61,7 @@ public final class GoogleCloudContactcenterinsightsV1ConversationTranscriptTrans
      * 
      */
     @Import(name="languageCode", required=true)
-      private final String languageCode;
+    private String languageCode;
 
     public String languageCode() {
         return this.languageCode;
@@ -72,7 +72,7 @@ public final class GoogleCloudContactcenterinsightsV1ConversationTranscriptTrans
      * 
      */
     @Import(name="messageTime", required=true)
-      private final String messageTime;
+    private String messageTime;
 
     public String messageTime() {
         return this.messageTime;
@@ -83,7 +83,7 @@ public final class GoogleCloudContactcenterinsightsV1ConversationTranscriptTrans
      * 
      */
     @Import(name="segmentParticipant", required=true)
-      private final GoogleCloudContactcenterinsightsV1ConversationParticipantResponse segmentParticipant;
+    private GoogleCloudContactcenterinsightsV1ConversationParticipantResponse segmentParticipant;
 
     public GoogleCloudContactcenterinsightsV1ConversationParticipantResponse segmentParticipant() {
         return this.segmentParticipant;
@@ -94,7 +94,7 @@ public final class GoogleCloudContactcenterinsightsV1ConversationTranscriptTrans
      * 
      */
     @Import(name="sentiment", required=true)
-      private final GoogleCloudContactcenterinsightsV1SentimentDataResponse sentiment;
+    private GoogleCloudContactcenterinsightsV1SentimentDataResponse sentiment;
 
     public GoogleCloudContactcenterinsightsV1SentimentDataResponse sentiment() {
         return this.sentiment;
@@ -105,7 +105,7 @@ public final class GoogleCloudContactcenterinsightsV1ConversationTranscriptTrans
      * 
      */
     @Import(name="text", required=true)
-      private final String text;
+    private String text;
 
     public String text() {
         return this.text;
@@ -116,121 +116,105 @@ public final class GoogleCloudContactcenterinsightsV1ConversationTranscriptTrans
      * 
      */
     @Import(name="words", required=true)
-      private final List<GoogleCloudContactcenterinsightsV1ConversationTranscriptTranscriptSegmentWordInfoResponse> words;
+    private List<GoogleCloudContactcenterinsightsV1ConversationTranscriptTranscriptSegmentWordInfoResponse> words;
 
     public List<GoogleCloudContactcenterinsightsV1ConversationTranscriptTranscriptSegmentWordInfoResponse> words() {
         return this.words;
     }
 
-    public GoogleCloudContactcenterinsightsV1ConversationTranscriptTranscriptSegmentResponse(
-        Integer channelTag,
-        Double confidence,
-        GoogleCloudContactcenterinsightsV1ConversationTranscriptTranscriptSegmentDialogflowSegmentMetadataResponse dialogflowSegmentMetadata,
-        String languageCode,
-        String messageTime,
-        GoogleCloudContactcenterinsightsV1ConversationParticipantResponse segmentParticipant,
-        GoogleCloudContactcenterinsightsV1SentimentDataResponse sentiment,
-        String text,
-        List<GoogleCloudContactcenterinsightsV1ConversationTranscriptTranscriptSegmentWordInfoResponse> words) {
-        this.channelTag = Objects.requireNonNull(channelTag, "expected parameter 'channelTag' to be non-null");
-        this.confidence = Objects.requireNonNull(confidence, "expected parameter 'confidence' to be non-null");
-        this.dialogflowSegmentMetadata = Objects.requireNonNull(dialogflowSegmentMetadata, "expected parameter 'dialogflowSegmentMetadata' to be non-null");
-        this.languageCode = Objects.requireNonNull(languageCode, "expected parameter 'languageCode' to be non-null");
-        this.messageTime = Objects.requireNonNull(messageTime, "expected parameter 'messageTime' to be non-null");
-        this.segmentParticipant = Objects.requireNonNull(segmentParticipant, "expected parameter 'segmentParticipant' to be non-null");
-        this.sentiment = Objects.requireNonNull(sentiment, "expected parameter 'sentiment' to be non-null");
-        this.text = Objects.requireNonNull(text, "expected parameter 'text' to be non-null");
-        this.words = Objects.requireNonNull(words, "expected parameter 'words' to be non-null");
-    }
+    private GoogleCloudContactcenterinsightsV1ConversationTranscriptTranscriptSegmentResponse() {}
 
-    private GoogleCloudContactcenterinsightsV1ConversationTranscriptTranscriptSegmentResponse() {
-        this.channelTag = null;
-        this.confidence = null;
-        this.dialogflowSegmentMetadata = null;
-        this.languageCode = null;
-        this.messageTime = null;
-        this.segmentParticipant = null;
-        this.sentiment = null;
-        this.text = null;
-        this.words = List.of();
+    private GoogleCloudContactcenterinsightsV1ConversationTranscriptTranscriptSegmentResponse(GoogleCloudContactcenterinsightsV1ConversationTranscriptTranscriptSegmentResponse $) {
+        this.channelTag = $.channelTag;
+        this.confidence = $.confidence;
+        this.dialogflowSegmentMetadata = $.dialogflowSegmentMetadata;
+        this.languageCode = $.languageCode;
+        this.messageTime = $.messageTime;
+        this.segmentParticipant = $.segmentParticipant;
+        this.sentiment = $.sentiment;
+        this.text = $.text;
+        this.words = $.words;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudContactcenterinsightsV1ConversationTranscriptTranscriptSegmentResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Integer channelTag;
-        private Double confidence;
-        private GoogleCloudContactcenterinsightsV1ConversationTranscriptTranscriptSegmentDialogflowSegmentMetadataResponse dialogflowSegmentMetadata;
-        private String languageCode;
-        private String messageTime;
-        private GoogleCloudContactcenterinsightsV1ConversationParticipantResponse segmentParticipant;
-        private GoogleCloudContactcenterinsightsV1SentimentDataResponse sentiment;
-        private String text;
-        private List<GoogleCloudContactcenterinsightsV1ConversationTranscriptTranscriptSegmentWordInfoResponse> words;
+        private GoogleCloudContactcenterinsightsV1ConversationTranscriptTranscriptSegmentResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudContactcenterinsightsV1ConversationTranscriptTranscriptSegmentResponse();
         }
 
         public Builder(GoogleCloudContactcenterinsightsV1ConversationTranscriptTranscriptSegmentResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.channelTag = defaults.channelTag;
-    	      this.confidence = defaults.confidence;
-    	      this.dialogflowSegmentMetadata = defaults.dialogflowSegmentMetadata;
-    	      this.languageCode = defaults.languageCode;
-    	      this.messageTime = defaults.messageTime;
-    	      this.segmentParticipant = defaults.segmentParticipant;
-    	      this.sentiment = defaults.sentiment;
-    	      this.text = defaults.text;
-    	      this.words = defaults.words;
+            $ = new GoogleCloudContactcenterinsightsV1ConversationTranscriptTranscriptSegmentResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder channelTag(Integer channelTag) {
-            this.channelTag = Objects.requireNonNull(channelTag);
+            $.channelTag = channelTag;
             return this;
         }
+
         public Builder confidence(Double confidence) {
-            this.confidence = Objects.requireNonNull(confidence);
+            $.confidence = confidence;
             return this;
         }
+
         public Builder dialogflowSegmentMetadata(GoogleCloudContactcenterinsightsV1ConversationTranscriptTranscriptSegmentDialogflowSegmentMetadataResponse dialogflowSegmentMetadata) {
-            this.dialogflowSegmentMetadata = Objects.requireNonNull(dialogflowSegmentMetadata);
+            $.dialogflowSegmentMetadata = dialogflowSegmentMetadata;
             return this;
         }
+
         public Builder languageCode(String languageCode) {
-            this.languageCode = Objects.requireNonNull(languageCode);
+            $.languageCode = languageCode;
             return this;
         }
+
         public Builder messageTime(String messageTime) {
-            this.messageTime = Objects.requireNonNull(messageTime);
+            $.messageTime = messageTime;
             return this;
         }
+
         public Builder segmentParticipant(GoogleCloudContactcenterinsightsV1ConversationParticipantResponse segmentParticipant) {
-            this.segmentParticipant = Objects.requireNonNull(segmentParticipant);
+            $.segmentParticipant = segmentParticipant;
             return this;
         }
+
         public Builder sentiment(GoogleCloudContactcenterinsightsV1SentimentDataResponse sentiment) {
-            this.sentiment = Objects.requireNonNull(sentiment);
+            $.sentiment = sentiment;
             return this;
         }
+
         public Builder text(String text) {
-            this.text = Objects.requireNonNull(text);
+            $.text = text;
             return this;
         }
+
         public Builder words(List<GoogleCloudContactcenterinsightsV1ConversationTranscriptTranscriptSegmentWordInfoResponse> words) {
-            this.words = Objects.requireNonNull(words);
+            $.words = words;
             return this;
         }
+
         public Builder words(GoogleCloudContactcenterinsightsV1ConversationTranscriptTranscriptSegmentWordInfoResponse... words) {
             return words(List.of(words));
-        }        public GoogleCloudContactcenterinsightsV1ConversationTranscriptTranscriptSegmentResponse build() {
-            return new GoogleCloudContactcenterinsightsV1ConversationTranscriptTranscriptSegmentResponse(channelTag, confidence, dialogflowSegmentMetadata, languageCode, messageTime, segmentParticipant, sentiment, text, words);
+        }
+
+        public GoogleCloudContactcenterinsightsV1ConversationTranscriptTranscriptSegmentResponse build() {
+            $.channelTag = Objects.requireNonNull($.channelTag, "expected parameter 'channelTag' to be non-null");
+            $.confidence = Objects.requireNonNull($.confidence, "expected parameter 'confidence' to be non-null");
+            $.dialogflowSegmentMetadata = Objects.requireNonNull($.dialogflowSegmentMetadata, "expected parameter 'dialogflowSegmentMetadata' to be non-null");
+            $.languageCode = Objects.requireNonNull($.languageCode, "expected parameter 'languageCode' to be non-null");
+            $.messageTime = Objects.requireNonNull($.messageTime, "expected parameter 'messageTime' to be non-null");
+            $.segmentParticipant = Objects.requireNonNull($.segmentParticipant, "expected parameter 'segmentParticipant' to be non-null");
+            $.sentiment = Objects.requireNonNull($.sentiment, "expected parameter 'sentiment' to be non-null");
+            $.text = Objects.requireNonNull($.text, "expected parameter 'text' to be non-null");
+            $.words = Objects.requireNonNull($.words, "expected parameter 'words' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,9 +5,9 @@ package com.pulumi.gcp.pubsub.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class SubscriptionPushConfigOidcTokenGetArgs extends com.pulumi.res
      * 
      */
     @Import(name="audience")
-      private final @Nullable Output<String> audience;
+    private @Nullable Output<String> audience;
 
-    public Output<String> audience() {
-        return this.audience == null ? Codegen.empty() : this.audience;
+    public Optional<Output<String>> audience() {
+        return Optional.ofNullable(this.audience);
     }
 
     /**
@@ -39,63 +39,59 @@ public final class SubscriptionPushConfigOidcTokenGetArgs extends com.pulumi.res
      * 
      */
     @Import(name="serviceAccountEmail", required=true)
-      private final Output<String> serviceAccountEmail;
+    private Output<String> serviceAccountEmail;
 
     public Output<String> serviceAccountEmail() {
         return this.serviceAccountEmail;
     }
 
-    public SubscriptionPushConfigOidcTokenGetArgs(
-        @Nullable Output<String> audience,
-        Output<String> serviceAccountEmail) {
-        this.audience = audience;
-        this.serviceAccountEmail = Objects.requireNonNull(serviceAccountEmail, "expected parameter 'serviceAccountEmail' to be non-null");
-    }
+    private SubscriptionPushConfigOidcTokenGetArgs() {}
 
-    private SubscriptionPushConfigOidcTokenGetArgs() {
-        this.audience = Codegen.empty();
-        this.serviceAccountEmail = Codegen.empty();
+    private SubscriptionPushConfigOidcTokenGetArgs(SubscriptionPushConfigOidcTokenGetArgs $) {
+        this.audience = $.audience;
+        this.serviceAccountEmail = $.serviceAccountEmail;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SubscriptionPushConfigOidcTokenGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> audience;
-        private Output<String> serviceAccountEmail;
+        private SubscriptionPushConfigOidcTokenGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SubscriptionPushConfigOidcTokenGetArgs();
         }
 
         public Builder(SubscriptionPushConfigOidcTokenGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.audience = defaults.audience;
-    	      this.serviceAccountEmail = defaults.serviceAccountEmail;
+            $ = new SubscriptionPushConfigOidcTokenGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder audience(@Nullable Output<String> audience) {
-            this.audience = audience;
+            $.audience = audience;
             return this;
         }
-        public Builder audience(@Nullable String audience) {
-            this.audience = Codegen.ofNullable(audience);
-            return this;
+
+        public Builder audience(String audience) {
+            return audience(Output.of(audience));
         }
+
         public Builder serviceAccountEmail(Output<String> serviceAccountEmail) {
-            this.serviceAccountEmail = Objects.requireNonNull(serviceAccountEmail);
+            $.serviceAccountEmail = serviceAccountEmail;
             return this;
         }
+
         public Builder serviceAccountEmail(String serviceAccountEmail) {
-            this.serviceAccountEmail = Output.of(Objects.requireNonNull(serviceAccountEmail));
-            return this;
-        }        public SubscriptionPushConfigOidcTokenGetArgs build() {
-            return new SubscriptionPushConfigOidcTokenGetArgs(audience, serviceAccountEmail);
+            return serviceAccountEmail(Output.of(serviceAccountEmail));
+        }
+
+        public SubscriptionPushConfigOidcTokenGetArgs build() {
+            $.serviceAccountEmail = Objects.requireNonNull($.serviceAccountEmail, "expected parameter 'serviceAccountEmail' to be non-null");
+            return $;
         }
     }
+
 }

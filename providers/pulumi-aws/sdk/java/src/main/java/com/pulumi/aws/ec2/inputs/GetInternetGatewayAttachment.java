@@ -17,7 +17,7 @@ public final class GetInternetGatewayAttachment extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="state", required=true)
-      private final String state;
+    private String state;
 
     public String state() {
         return this.state;
@@ -28,55 +28,52 @@ public final class GetInternetGatewayAttachment extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="vpcId", required=true)
-      private final String vpcId;
+    private String vpcId;
 
     public String vpcId() {
         return this.vpcId;
     }
 
-    public GetInternetGatewayAttachment(
-        String state,
-        String vpcId) {
-        this.state = Objects.requireNonNull(state, "expected parameter 'state' to be non-null");
-        this.vpcId = Objects.requireNonNull(vpcId, "expected parameter 'vpcId' to be non-null");
-    }
+    private GetInternetGatewayAttachment() {}
 
-    private GetInternetGatewayAttachment() {
-        this.state = null;
-        this.vpcId = null;
+    private GetInternetGatewayAttachment(GetInternetGatewayAttachment $) {
+        this.state = $.state;
+        this.vpcId = $.vpcId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetInternetGatewayAttachment defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String state;
-        private String vpcId;
+        private GetInternetGatewayAttachment $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetInternetGatewayAttachment();
         }
 
         public Builder(GetInternetGatewayAttachment defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.state = defaults.state;
-    	      this.vpcId = defaults.vpcId;
+            $ = new GetInternetGatewayAttachment(Objects.requireNonNull(defaults));
         }
 
         public Builder state(String state) {
-            this.state = Objects.requireNonNull(state);
+            $.state = state;
             return this;
         }
+
         public Builder vpcId(String vpcId) {
-            this.vpcId = Objects.requireNonNull(vpcId);
+            $.vpcId = vpcId;
             return this;
-        }        public GetInternetGatewayAttachment build() {
-            return new GetInternetGatewayAttachment(state, vpcId);
+        }
+
+        public GetInternetGatewayAttachment build() {
+            $.state = Objects.requireNonNull($.state, "expected parameter 'state' to be non-null");
+            $.vpcId = Objects.requireNonNull($.vpcId, "expected parameter 'vpcId' to be non-null");
+            return $;
         }
     }
+
 }

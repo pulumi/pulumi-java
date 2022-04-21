@@ -5,10 +5,10 @@ package com.pulumi.googlenative.compute_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.compute_v1.enums.ImageRawDiskContainerType;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class ImageRawDiskArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="containerType")
-      private final @Nullable Output<ImageRawDiskContainerType> containerType;
+    private @Nullable Output<ImageRawDiskContainerType> containerType;
 
-    public Output<ImageRawDiskContainerType> containerType() {
-        return this.containerType == null ? Codegen.empty() : this.containerType;
+    public Optional<Output<ImageRawDiskContainerType>> containerType() {
+        return Optional.ofNullable(this.containerType);
     }
 
     /**
@@ -36,63 +36,58 @@ public final class ImageRawDiskArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="source")
-      private final @Nullable Output<String> source;
+    private @Nullable Output<String> source;
 
-    public Output<String> source() {
-        return this.source == null ? Codegen.empty() : this.source;
+    public Optional<Output<String>> source() {
+        return Optional.ofNullable(this.source);
     }
 
-    public ImageRawDiskArgs(
-        @Nullable Output<ImageRawDiskContainerType> containerType,
-        @Nullable Output<String> source) {
-        this.containerType = containerType;
-        this.source = source;
-    }
+    private ImageRawDiskArgs() {}
 
-    private ImageRawDiskArgs() {
-        this.containerType = Codegen.empty();
-        this.source = Codegen.empty();
+    private ImageRawDiskArgs(ImageRawDiskArgs $) {
+        this.containerType = $.containerType;
+        this.source = $.source;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ImageRawDiskArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<ImageRawDiskContainerType> containerType;
-        private @Nullable Output<String> source;
+        private ImageRawDiskArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ImageRawDiskArgs();
         }
 
         public Builder(ImageRawDiskArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.containerType = defaults.containerType;
-    	      this.source = defaults.source;
+            $ = new ImageRawDiskArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder containerType(@Nullable Output<ImageRawDiskContainerType> containerType) {
-            this.containerType = containerType;
+            $.containerType = containerType;
             return this;
         }
-        public Builder containerType(@Nullable ImageRawDiskContainerType containerType) {
-            this.containerType = Codegen.ofNullable(containerType);
-            return this;
+
+        public Builder containerType(ImageRawDiskContainerType containerType) {
+            return containerType(Output.of(containerType));
         }
+
         public Builder source(@Nullable Output<String> source) {
-            this.source = source;
+            $.source = source;
             return this;
         }
-        public Builder source(@Nullable String source) {
-            this.source = Codegen.ofNullable(source);
-            return this;
-        }        public ImageRawDiskArgs build() {
-            return new ImageRawDiskArgs(containerType, source);
+
+        public Builder source(String source) {
+            return source(Output.of(source));
+        }
+
+        public ImageRawDiskArgs build() {
+            return $;
         }
     }
+
 }

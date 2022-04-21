@@ -6,7 +6,6 @@ package com.pulumi.awsnative.s3outposts.inputs;
 import com.pulumi.awsnative.s3outposts.inputs.BucketRuleArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
 
@@ -20,52 +19,53 @@ public final class BucketLifecycleConfigurationArgs extends com.pulumi.resources
      * 
      */
     @Import(name="rules", required=true)
-      private final Output<List<BucketRuleArgs>> rules;
+    private Output<List<BucketRuleArgs>> rules;
 
     public Output<List<BucketRuleArgs>> rules() {
         return this.rules;
     }
 
-    public BucketLifecycleConfigurationArgs(Output<List<BucketRuleArgs>> rules) {
-        this.rules = Objects.requireNonNull(rules, "expected parameter 'rules' to be non-null");
-    }
+    private BucketLifecycleConfigurationArgs() {}
 
-    private BucketLifecycleConfigurationArgs() {
-        this.rules = Codegen.empty();
+    private BucketLifecycleConfigurationArgs(BucketLifecycleConfigurationArgs $) {
+        this.rules = $.rules;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BucketLifecycleConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<List<BucketRuleArgs>> rules;
+        private BucketLifecycleConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new BucketLifecycleConfigurationArgs();
         }
 
         public Builder(BucketLifecycleConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.rules = defaults.rules;
+            $ = new BucketLifecycleConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder rules(Output<List<BucketRuleArgs>> rules) {
-            this.rules = Objects.requireNonNull(rules);
+            $.rules = rules;
             return this;
         }
+
         public Builder rules(List<BucketRuleArgs> rules) {
-            this.rules = Output.of(Objects.requireNonNull(rules));
-            return this;
+            return rules(Output.of(rules));
         }
+
         public Builder rules(BucketRuleArgs... rules) {
             return rules(List.of(rules));
-        }        public BucketLifecycleConfigurationArgs build() {
-            return new BucketLifecycleConfigurationArgs(rules);
+        }
+
+        public BucketLifecycleConfigurationArgs build() {
+            $.rules = Objects.requireNonNull($.rules, "expected parameter 'rules' to be non-null");
+            return $;
         }
     }
+
 }

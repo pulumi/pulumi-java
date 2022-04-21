@@ -6,9 +6,9 @@ package com.pulumi.aws.cloudfront.inputs;
 import com.pulumi.aws.cloudfront.inputs.CachePolicyParametersInCacheKeyAndForwardedToOriginCookiesConfigCookiesGetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,7 +21,7 @@ public final class CachePolicyParametersInCacheKeyAndForwardedToOriginCookiesCon
      * 
      */
     @Import(name="cookieBehavior", required=true)
-      private final Output<String> cookieBehavior;
+    private Output<String> cookieBehavior;
 
     public Output<String> cookieBehavior() {
         return this.cookieBehavior;
@@ -32,63 +32,59 @@ public final class CachePolicyParametersInCacheKeyAndForwardedToOriginCookiesCon
      * 
      */
     @Import(name="cookies")
-      private final @Nullable Output<CachePolicyParametersInCacheKeyAndForwardedToOriginCookiesConfigCookiesGetArgs> cookies;
+    private @Nullable Output<CachePolicyParametersInCacheKeyAndForwardedToOriginCookiesConfigCookiesGetArgs> cookies;
 
-    public Output<CachePolicyParametersInCacheKeyAndForwardedToOriginCookiesConfigCookiesGetArgs> cookies() {
-        return this.cookies == null ? Codegen.empty() : this.cookies;
+    public Optional<Output<CachePolicyParametersInCacheKeyAndForwardedToOriginCookiesConfigCookiesGetArgs>> cookies() {
+        return Optional.ofNullable(this.cookies);
     }
 
-    public CachePolicyParametersInCacheKeyAndForwardedToOriginCookiesConfigGetArgs(
-        Output<String> cookieBehavior,
-        @Nullable Output<CachePolicyParametersInCacheKeyAndForwardedToOriginCookiesConfigCookiesGetArgs> cookies) {
-        this.cookieBehavior = Objects.requireNonNull(cookieBehavior, "expected parameter 'cookieBehavior' to be non-null");
-        this.cookies = cookies;
-    }
+    private CachePolicyParametersInCacheKeyAndForwardedToOriginCookiesConfigGetArgs() {}
 
-    private CachePolicyParametersInCacheKeyAndForwardedToOriginCookiesConfigGetArgs() {
-        this.cookieBehavior = Codegen.empty();
-        this.cookies = Codegen.empty();
+    private CachePolicyParametersInCacheKeyAndForwardedToOriginCookiesConfigGetArgs(CachePolicyParametersInCacheKeyAndForwardedToOriginCookiesConfigGetArgs $) {
+        this.cookieBehavior = $.cookieBehavior;
+        this.cookies = $.cookies;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CachePolicyParametersInCacheKeyAndForwardedToOriginCookiesConfigGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> cookieBehavior;
-        private @Nullable Output<CachePolicyParametersInCacheKeyAndForwardedToOriginCookiesConfigCookiesGetArgs> cookies;
+        private CachePolicyParametersInCacheKeyAndForwardedToOriginCookiesConfigGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CachePolicyParametersInCacheKeyAndForwardedToOriginCookiesConfigGetArgs();
         }
 
         public Builder(CachePolicyParametersInCacheKeyAndForwardedToOriginCookiesConfigGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cookieBehavior = defaults.cookieBehavior;
-    	      this.cookies = defaults.cookies;
+            $ = new CachePolicyParametersInCacheKeyAndForwardedToOriginCookiesConfigGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder cookieBehavior(Output<String> cookieBehavior) {
-            this.cookieBehavior = Objects.requireNonNull(cookieBehavior);
+            $.cookieBehavior = cookieBehavior;
             return this;
         }
+
         public Builder cookieBehavior(String cookieBehavior) {
-            this.cookieBehavior = Output.of(Objects.requireNonNull(cookieBehavior));
-            return this;
+            return cookieBehavior(Output.of(cookieBehavior));
         }
+
         public Builder cookies(@Nullable Output<CachePolicyParametersInCacheKeyAndForwardedToOriginCookiesConfigCookiesGetArgs> cookies) {
-            this.cookies = cookies;
+            $.cookies = cookies;
             return this;
         }
-        public Builder cookies(@Nullable CachePolicyParametersInCacheKeyAndForwardedToOriginCookiesConfigCookiesGetArgs cookies) {
-            this.cookies = Codegen.ofNullable(cookies);
-            return this;
-        }        public CachePolicyParametersInCacheKeyAndForwardedToOriginCookiesConfigGetArgs build() {
-            return new CachePolicyParametersInCacheKeyAndForwardedToOriginCookiesConfigGetArgs(cookieBehavior, cookies);
+
+        public Builder cookies(CachePolicyParametersInCacheKeyAndForwardedToOriginCookiesConfigCookiesGetArgs cookies) {
+            return cookies(Output.of(cookies));
+        }
+
+        public CachePolicyParametersInCacheKeyAndForwardedToOriginCookiesConfigGetArgs build() {
+            $.cookieBehavior = Objects.requireNonNull($.cookieBehavior, "expected parameter 'cookieBehavior' to be non-null");
+            return $;
         }
     }
+
 }

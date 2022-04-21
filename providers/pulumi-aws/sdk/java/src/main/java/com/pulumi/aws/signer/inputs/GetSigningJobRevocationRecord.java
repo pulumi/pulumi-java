@@ -13,78 +13,73 @@ public final class GetSigningJobRevocationRecord extends com.pulumi.resources.In
     public static final GetSigningJobRevocationRecord Empty = new GetSigningJobRevocationRecord();
 
     @Import(name="reason", required=true)
-      private final String reason;
+    private String reason;
 
     public String reason() {
         return this.reason;
     }
 
     @Import(name="revokedAt", required=true)
-      private final String revokedAt;
+    private String revokedAt;
 
     public String revokedAt() {
         return this.revokedAt;
     }
 
     @Import(name="revokedBy", required=true)
-      private final String revokedBy;
+    private String revokedBy;
 
     public String revokedBy() {
         return this.revokedBy;
     }
 
-    public GetSigningJobRevocationRecord(
-        String reason,
-        String revokedAt,
-        String revokedBy) {
-        this.reason = Objects.requireNonNull(reason, "expected parameter 'reason' to be non-null");
-        this.revokedAt = Objects.requireNonNull(revokedAt, "expected parameter 'revokedAt' to be non-null");
-        this.revokedBy = Objects.requireNonNull(revokedBy, "expected parameter 'revokedBy' to be non-null");
-    }
+    private GetSigningJobRevocationRecord() {}
 
-    private GetSigningJobRevocationRecord() {
-        this.reason = null;
-        this.revokedAt = null;
-        this.revokedBy = null;
+    private GetSigningJobRevocationRecord(GetSigningJobRevocationRecord $) {
+        this.reason = $.reason;
+        this.revokedAt = $.revokedAt;
+        this.revokedBy = $.revokedBy;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetSigningJobRevocationRecord defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String reason;
-        private String revokedAt;
-        private String revokedBy;
+        private GetSigningJobRevocationRecord $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetSigningJobRevocationRecord();
         }
 
         public Builder(GetSigningJobRevocationRecord defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.reason = defaults.reason;
-    	      this.revokedAt = defaults.revokedAt;
-    	      this.revokedBy = defaults.revokedBy;
+            $ = new GetSigningJobRevocationRecord(Objects.requireNonNull(defaults));
         }
 
         public Builder reason(String reason) {
-            this.reason = Objects.requireNonNull(reason);
+            $.reason = reason;
             return this;
         }
+
         public Builder revokedAt(String revokedAt) {
-            this.revokedAt = Objects.requireNonNull(revokedAt);
+            $.revokedAt = revokedAt;
             return this;
         }
+
         public Builder revokedBy(String revokedBy) {
-            this.revokedBy = Objects.requireNonNull(revokedBy);
+            $.revokedBy = revokedBy;
             return this;
-        }        public GetSigningJobRevocationRecord build() {
-            return new GetSigningJobRevocationRecord(reason, revokedAt, revokedBy);
+        }
+
+        public GetSigningJobRevocationRecord build() {
+            $.reason = Objects.requireNonNull($.reason, "expected parameter 'reason' to be non-null");
+            $.revokedAt = Objects.requireNonNull($.revokedAt, "expected parameter 'revokedAt' to be non-null");
+            $.revokedBy = Objects.requireNonNull($.revokedBy, "expected parameter 'revokedBy' to be non-null");
+            return $;
         }
     }
+
 }

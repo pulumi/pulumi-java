@@ -21,7 +21,7 @@ public final class GoogleCloudRetailV2betaIntervalResponse extends com.pulumi.re
      * 
      */
     @Import(name="exclusiveMaximum", required=true)
-      private final Double exclusiveMaximum;
+    private Double exclusiveMaximum;
 
     public Double exclusiveMaximum() {
         return this.exclusiveMaximum;
@@ -32,7 +32,7 @@ public final class GoogleCloudRetailV2betaIntervalResponse extends com.pulumi.re
      * 
      */
     @Import(name="exclusiveMinimum", required=true)
-      private final Double exclusiveMinimum;
+    private Double exclusiveMinimum;
 
     public Double exclusiveMinimum() {
         return this.exclusiveMinimum;
@@ -43,7 +43,7 @@ public final class GoogleCloudRetailV2betaIntervalResponse extends com.pulumi.re
      * 
      */
     @Import(name="maximum", required=true)
-      private final Double maximum;
+    private Double maximum;
 
     public Double maximum() {
         return this.maximum;
@@ -54,73 +54,66 @@ public final class GoogleCloudRetailV2betaIntervalResponse extends com.pulumi.re
      * 
      */
     @Import(name="minimum", required=true)
-      private final Double minimum;
+    private Double minimum;
 
     public Double minimum() {
         return this.minimum;
     }
 
-    public GoogleCloudRetailV2betaIntervalResponse(
-        Double exclusiveMaximum,
-        Double exclusiveMinimum,
-        Double maximum,
-        Double minimum) {
-        this.exclusiveMaximum = Objects.requireNonNull(exclusiveMaximum, "expected parameter 'exclusiveMaximum' to be non-null");
-        this.exclusiveMinimum = Objects.requireNonNull(exclusiveMinimum, "expected parameter 'exclusiveMinimum' to be non-null");
-        this.maximum = Objects.requireNonNull(maximum, "expected parameter 'maximum' to be non-null");
-        this.minimum = Objects.requireNonNull(minimum, "expected parameter 'minimum' to be non-null");
-    }
+    private GoogleCloudRetailV2betaIntervalResponse() {}
 
-    private GoogleCloudRetailV2betaIntervalResponse() {
-        this.exclusiveMaximum = null;
-        this.exclusiveMinimum = null;
-        this.maximum = null;
-        this.minimum = null;
+    private GoogleCloudRetailV2betaIntervalResponse(GoogleCloudRetailV2betaIntervalResponse $) {
+        this.exclusiveMaximum = $.exclusiveMaximum;
+        this.exclusiveMinimum = $.exclusiveMinimum;
+        this.maximum = $.maximum;
+        this.minimum = $.minimum;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudRetailV2betaIntervalResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Double exclusiveMaximum;
-        private Double exclusiveMinimum;
-        private Double maximum;
-        private Double minimum;
+        private GoogleCloudRetailV2betaIntervalResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudRetailV2betaIntervalResponse();
         }
 
         public Builder(GoogleCloudRetailV2betaIntervalResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.exclusiveMaximum = defaults.exclusiveMaximum;
-    	      this.exclusiveMinimum = defaults.exclusiveMinimum;
-    	      this.maximum = defaults.maximum;
-    	      this.minimum = defaults.minimum;
+            $ = new GoogleCloudRetailV2betaIntervalResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder exclusiveMaximum(Double exclusiveMaximum) {
-            this.exclusiveMaximum = Objects.requireNonNull(exclusiveMaximum);
+            $.exclusiveMaximum = exclusiveMaximum;
             return this;
         }
+
         public Builder exclusiveMinimum(Double exclusiveMinimum) {
-            this.exclusiveMinimum = Objects.requireNonNull(exclusiveMinimum);
+            $.exclusiveMinimum = exclusiveMinimum;
             return this;
         }
+
         public Builder maximum(Double maximum) {
-            this.maximum = Objects.requireNonNull(maximum);
+            $.maximum = maximum;
             return this;
         }
+
         public Builder minimum(Double minimum) {
-            this.minimum = Objects.requireNonNull(minimum);
+            $.minimum = minimum;
             return this;
-        }        public GoogleCloudRetailV2betaIntervalResponse build() {
-            return new GoogleCloudRetailV2betaIntervalResponse(exclusiveMaximum, exclusiveMinimum, maximum, minimum);
+        }
+
+        public GoogleCloudRetailV2betaIntervalResponse build() {
+            $.exclusiveMaximum = Objects.requireNonNull($.exclusiveMaximum, "expected parameter 'exclusiveMaximum' to be non-null");
+            $.exclusiveMinimum = Objects.requireNonNull($.exclusiveMinimum, "expected parameter 'exclusiveMinimum' to be non-null");
+            $.maximum = Objects.requireNonNull($.maximum, "expected parameter 'maximum' to be non-null");
+            $.minimum = Objects.requireNonNull($.minimum, "expected parameter 'minimum' to be non-null");
+            return $;
         }
     }
+
 }

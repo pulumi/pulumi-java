@@ -17,7 +17,7 @@ public final class ListRemoteRenderingAccountKeysArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="accountName", required=true)
-      private final String accountName;
+    private String accountName;
 
     public String accountName() {
         return this.accountName;
@@ -28,55 +28,52 @@ public final class ListRemoteRenderingAccountKeysArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public ListRemoteRenderingAccountKeysArgs(
-        String accountName,
-        String resourceGroupName) {
-        this.accountName = Objects.requireNonNull(accountName, "expected parameter 'accountName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private ListRemoteRenderingAccountKeysArgs() {}
 
-    private ListRemoteRenderingAccountKeysArgs() {
-        this.accountName = null;
-        this.resourceGroupName = null;
+    private ListRemoteRenderingAccountKeysArgs(ListRemoteRenderingAccountKeysArgs $) {
+        this.accountName = $.accountName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ListRemoteRenderingAccountKeysArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String accountName;
-        private String resourceGroupName;
+        private ListRemoteRenderingAccountKeysArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ListRemoteRenderingAccountKeysArgs();
         }
 
         public Builder(ListRemoteRenderingAccountKeysArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accountName = defaults.accountName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new ListRemoteRenderingAccountKeysArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder accountName(String accountName) {
-            this.accountName = Objects.requireNonNull(accountName);
+            $.accountName = accountName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public ListRemoteRenderingAccountKeysArgs build() {
-            return new ListRemoteRenderingAccountKeysArgs(accountName, resourceGroupName);
+        }
+
+        public ListRemoteRenderingAccountKeysArgs build() {
+            $.accountName = Objects.requireNonNull($.accountName, "expected parameter 'accountName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

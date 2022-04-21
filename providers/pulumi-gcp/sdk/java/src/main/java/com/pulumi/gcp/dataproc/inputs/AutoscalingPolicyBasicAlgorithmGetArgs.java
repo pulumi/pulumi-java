@@ -5,10 +5,10 @@ package com.pulumi.gcp.dataproc.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.dataproc.inputs.AutoscalingPolicyBasicAlgorithmYarnConfigGetArgs;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,10 @@ public final class AutoscalingPolicyBasicAlgorithmGetArgs extends com.pulumi.res
      * 
      */
     @Import(name="cooldownPeriod")
-      private final @Nullable Output<String> cooldownPeriod;
+    private @Nullable Output<String> cooldownPeriod;
 
-    public Output<String> cooldownPeriod() {
-        return this.cooldownPeriod == null ? Codegen.empty() : this.cooldownPeriod;
+    public Optional<Output<String>> cooldownPeriod() {
+        return Optional.ofNullable(this.cooldownPeriod);
     }
 
     /**
@@ -35,63 +35,59 @@ public final class AutoscalingPolicyBasicAlgorithmGetArgs extends com.pulumi.res
      * 
      */
     @Import(name="yarnConfig", required=true)
-      private final Output<AutoscalingPolicyBasicAlgorithmYarnConfigGetArgs> yarnConfig;
+    private Output<AutoscalingPolicyBasicAlgorithmYarnConfigGetArgs> yarnConfig;
 
     public Output<AutoscalingPolicyBasicAlgorithmYarnConfigGetArgs> yarnConfig() {
         return this.yarnConfig;
     }
 
-    public AutoscalingPolicyBasicAlgorithmGetArgs(
-        @Nullable Output<String> cooldownPeriod,
-        Output<AutoscalingPolicyBasicAlgorithmYarnConfigGetArgs> yarnConfig) {
-        this.cooldownPeriod = cooldownPeriod;
-        this.yarnConfig = Objects.requireNonNull(yarnConfig, "expected parameter 'yarnConfig' to be non-null");
-    }
+    private AutoscalingPolicyBasicAlgorithmGetArgs() {}
 
-    private AutoscalingPolicyBasicAlgorithmGetArgs() {
-        this.cooldownPeriod = Codegen.empty();
-        this.yarnConfig = Codegen.empty();
+    private AutoscalingPolicyBasicAlgorithmGetArgs(AutoscalingPolicyBasicAlgorithmGetArgs $) {
+        this.cooldownPeriod = $.cooldownPeriod;
+        this.yarnConfig = $.yarnConfig;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AutoscalingPolicyBasicAlgorithmGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> cooldownPeriod;
-        private Output<AutoscalingPolicyBasicAlgorithmYarnConfigGetArgs> yarnConfig;
+        private AutoscalingPolicyBasicAlgorithmGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AutoscalingPolicyBasicAlgorithmGetArgs();
         }
 
         public Builder(AutoscalingPolicyBasicAlgorithmGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cooldownPeriod = defaults.cooldownPeriod;
-    	      this.yarnConfig = defaults.yarnConfig;
+            $ = new AutoscalingPolicyBasicAlgorithmGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder cooldownPeriod(@Nullable Output<String> cooldownPeriod) {
-            this.cooldownPeriod = cooldownPeriod;
+            $.cooldownPeriod = cooldownPeriod;
             return this;
         }
-        public Builder cooldownPeriod(@Nullable String cooldownPeriod) {
-            this.cooldownPeriod = Codegen.ofNullable(cooldownPeriod);
-            return this;
+
+        public Builder cooldownPeriod(String cooldownPeriod) {
+            return cooldownPeriod(Output.of(cooldownPeriod));
         }
+
         public Builder yarnConfig(Output<AutoscalingPolicyBasicAlgorithmYarnConfigGetArgs> yarnConfig) {
-            this.yarnConfig = Objects.requireNonNull(yarnConfig);
+            $.yarnConfig = yarnConfig;
             return this;
         }
+
         public Builder yarnConfig(AutoscalingPolicyBasicAlgorithmYarnConfigGetArgs yarnConfig) {
-            this.yarnConfig = Output.of(Objects.requireNonNull(yarnConfig));
-            return this;
-        }        public AutoscalingPolicyBasicAlgorithmGetArgs build() {
-            return new AutoscalingPolicyBasicAlgorithmGetArgs(cooldownPeriod, yarnConfig);
+            return yarnConfig(Output.of(yarnConfig));
+        }
+
+        public AutoscalingPolicyBasicAlgorithmGetArgs build() {
+            $.yarnConfig = Objects.requireNonNull($.yarnConfig, "expected parameter 'yarnConfig' to be non-null");
+            return $;
         }
     }
+
 }

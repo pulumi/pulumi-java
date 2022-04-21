@@ -20,48 +20,48 @@ public final class GetAmiIdsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="filters")
-      private final @Nullable List<GetAmiIdsFilter> filters;
+    private @Nullable List<GetAmiIdsFilter> filters;
 
-    public List<GetAmiIdsFilter> filters() {
-        return this.filters == null ? List.of() : this.filters;
+    public Optional<List<GetAmiIdsFilter>> filters() {
+        return Optional.ofNullable(this.filters);
     }
 
-    public GetAmiIdsArgs(@Nullable List<GetAmiIdsFilter> filters) {
-        this.filters = filters;
-    }
+    private GetAmiIdsArgs() {}
 
-    private GetAmiIdsArgs() {
-        this.filters = List.of();
+    private GetAmiIdsArgs(GetAmiIdsArgs $) {
+        this.filters = $.filters;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetAmiIdsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<GetAmiIdsFilter> filters;
+        private GetAmiIdsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetAmiIdsArgs();
         }
 
         public Builder(GetAmiIdsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.filters = defaults.filters;
+            $ = new GetAmiIdsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder filters(@Nullable List<GetAmiIdsFilter> filters) {
-            this.filters = filters;
+            $.filters = filters;
             return this;
         }
+
         public Builder filters(GetAmiIdsFilter... filters) {
             return filters(List.of(filters));
-        }        public GetAmiIdsArgs build() {
-            return new GetAmiIdsArgs(filters);
+        }
+
+        public GetAmiIdsArgs build() {
+            return $;
         }
     }
+
 }

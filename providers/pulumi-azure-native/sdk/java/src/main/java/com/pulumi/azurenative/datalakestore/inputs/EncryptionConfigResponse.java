@@ -24,10 +24,10 @@ public final class EncryptionConfigResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="keyVaultMetaInfo")
-      private final @Nullable KeyVaultMetaInfoResponse keyVaultMetaInfo;
+    private @Nullable KeyVaultMetaInfoResponse keyVaultMetaInfo;
 
     public Optional<KeyVaultMetaInfoResponse> keyVaultMetaInfo() {
-        return this.keyVaultMetaInfo == null ? Optional.empty() : Optional.ofNullable(this.keyVaultMetaInfo);
+        return Optional.ofNullable(this.keyVaultMetaInfo);
     }
 
     /**
@@ -35,55 +35,51 @@ public final class EncryptionConfigResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
     }
 
-    public EncryptionConfigResponse(
-        @Nullable KeyVaultMetaInfoResponse keyVaultMetaInfo,
-        String type) {
-        this.keyVaultMetaInfo = keyVaultMetaInfo;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private EncryptionConfigResponse() {}
 
-    private EncryptionConfigResponse() {
-        this.keyVaultMetaInfo = null;
-        this.type = null;
+    private EncryptionConfigResponse(EncryptionConfigResponse $) {
+        this.keyVaultMetaInfo = $.keyVaultMetaInfo;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EncryptionConfigResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable KeyVaultMetaInfoResponse keyVaultMetaInfo;
-        private String type;
+        private EncryptionConfigResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new EncryptionConfigResponse();
         }
 
         public Builder(EncryptionConfigResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.keyVaultMetaInfo = defaults.keyVaultMetaInfo;
-    	      this.type = defaults.type;
+            $ = new EncryptionConfigResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder keyVaultMetaInfo(@Nullable KeyVaultMetaInfoResponse keyVaultMetaInfo) {
-            this.keyVaultMetaInfo = keyVaultMetaInfo;
+            $.keyVaultMetaInfo = keyVaultMetaInfo;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
-        }        public EncryptionConfigResponse build() {
-            return new EncryptionConfigResponse(keyVaultMetaInfo, type);
+        }
+
+        public EncryptionConfigResponse build() {
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

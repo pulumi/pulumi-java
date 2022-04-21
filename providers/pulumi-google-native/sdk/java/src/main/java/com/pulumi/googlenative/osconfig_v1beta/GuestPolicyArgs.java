@@ -5,7 +5,6 @@ package com.pulumi.googlenative.osconfig_v1beta;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.osconfig_v1beta.inputs.AssignmentArgs;
 import com.pulumi.googlenative.osconfig_v1beta.inputs.PackageArgs;
 import com.pulumi.googlenative.osconfig_v1beta.inputs.PackageRepositoryArgs;
@@ -13,6 +12,7 @@ import com.pulumi.googlenative.osconfig_v1beta.inputs.SoftwareRecipeArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,7 +25,7 @@ public final class GuestPolicyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="assignment", required=true)
-      private final Output<AssignmentArgs> assignment;
+    private Output<AssignmentArgs> assignment;
 
     public Output<AssignmentArgs> assignment() {
         return this.assignment;
@@ -36,10 +36,10 @@ public final class GuestPolicyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -47,14 +47,14 @@ public final class GuestPolicyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="etag")
-      private final @Nullable Output<String> etag;
+    private @Nullable Output<String> etag;
 
-    public Output<String> etag() {
-        return this.etag == null ? Codegen.empty() : this.etag;
+    public Optional<Output<String>> etag() {
+        return Optional.ofNullable(this.etag);
     }
 
     @Import(name="guestPolicyId", required=true)
-      private final Output<String> guestPolicyId;
+    private Output<String> guestPolicyId;
 
     public Output<String> guestPolicyId() {
         return this.guestPolicyId;
@@ -65,10 +65,10 @@ public final class GuestPolicyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -76,10 +76,10 @@ public final class GuestPolicyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="packageRepositories")
-      private final @Nullable Output<List<PackageRepositoryArgs>> packageRepositories;
+    private @Nullable Output<List<PackageRepositoryArgs>> packageRepositories;
 
-    public Output<List<PackageRepositoryArgs>> packageRepositories() {
-        return this.packageRepositories == null ? Codegen.empty() : this.packageRepositories;
+    public Optional<Output<List<PackageRepositoryArgs>>> packageRepositories() {
+        return Optional.ofNullable(this.packageRepositories);
     }
 
     /**
@@ -87,17 +87,17 @@ public final class GuestPolicyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="packages")
-      private final @Nullable Output<List<PackageArgs>> packages;
+    private @Nullable Output<List<PackageArgs>> packages;
 
-    public Output<List<PackageArgs>> packages() {
-        return this.packages == null ? Codegen.empty() : this.packages;
+    public Optional<Output<List<PackageArgs>>> packages() {
+        return Optional.ofNullable(this.packages);
     }
 
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -105,163 +105,142 @@ public final class GuestPolicyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="recipes")
-      private final @Nullable Output<List<SoftwareRecipeArgs>> recipes;
+    private @Nullable Output<List<SoftwareRecipeArgs>> recipes;
 
-    public Output<List<SoftwareRecipeArgs>> recipes() {
-        return this.recipes == null ? Codegen.empty() : this.recipes;
+    public Optional<Output<List<SoftwareRecipeArgs>>> recipes() {
+        return Optional.ofNullable(this.recipes);
     }
 
-    public GuestPolicyArgs(
-        Output<AssignmentArgs> assignment,
-        @Nullable Output<String> description,
-        @Nullable Output<String> etag,
-        Output<String> guestPolicyId,
-        @Nullable Output<String> name,
-        @Nullable Output<List<PackageRepositoryArgs>> packageRepositories,
-        @Nullable Output<List<PackageArgs>> packages,
-        @Nullable Output<String> project,
-        @Nullable Output<List<SoftwareRecipeArgs>> recipes) {
-        this.assignment = Objects.requireNonNull(assignment, "expected parameter 'assignment' to be non-null");
-        this.description = description;
-        this.etag = etag;
-        this.guestPolicyId = Objects.requireNonNull(guestPolicyId, "expected parameter 'guestPolicyId' to be non-null");
-        this.name = name;
-        this.packageRepositories = packageRepositories;
-        this.packages = packages;
-        this.project = project;
-        this.recipes = recipes;
-    }
+    private GuestPolicyArgs() {}
 
-    private GuestPolicyArgs() {
-        this.assignment = Codegen.empty();
-        this.description = Codegen.empty();
-        this.etag = Codegen.empty();
-        this.guestPolicyId = Codegen.empty();
-        this.name = Codegen.empty();
-        this.packageRepositories = Codegen.empty();
-        this.packages = Codegen.empty();
-        this.project = Codegen.empty();
-        this.recipes = Codegen.empty();
+    private GuestPolicyArgs(GuestPolicyArgs $) {
+        this.assignment = $.assignment;
+        this.description = $.description;
+        this.etag = $.etag;
+        this.guestPolicyId = $.guestPolicyId;
+        this.name = $.name;
+        this.packageRepositories = $.packageRepositories;
+        this.packages = $.packages;
+        this.project = $.project;
+        this.recipes = $.recipes;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GuestPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<AssignmentArgs> assignment;
-        private @Nullable Output<String> description;
-        private @Nullable Output<String> etag;
-        private Output<String> guestPolicyId;
-        private @Nullable Output<String> name;
-        private @Nullable Output<List<PackageRepositoryArgs>> packageRepositories;
-        private @Nullable Output<List<PackageArgs>> packages;
-        private @Nullable Output<String> project;
-        private @Nullable Output<List<SoftwareRecipeArgs>> recipes;
+        private GuestPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GuestPolicyArgs();
         }
 
         public Builder(GuestPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.assignment = defaults.assignment;
-    	      this.description = defaults.description;
-    	      this.etag = defaults.etag;
-    	      this.guestPolicyId = defaults.guestPolicyId;
-    	      this.name = defaults.name;
-    	      this.packageRepositories = defaults.packageRepositories;
-    	      this.packages = defaults.packages;
-    	      this.project = defaults.project;
-    	      this.recipes = defaults.recipes;
+            $ = new GuestPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder assignment(Output<AssignmentArgs> assignment) {
-            this.assignment = Objects.requireNonNull(assignment);
+            $.assignment = assignment;
             return this;
         }
+
         public Builder assignment(AssignmentArgs assignment) {
-            this.assignment = Output.of(Objects.requireNonNull(assignment));
-            return this;
+            return assignment(Output.of(assignment));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder etag(@Nullable Output<String> etag) {
-            this.etag = etag;
+            $.etag = etag;
             return this;
         }
-        public Builder etag(@Nullable String etag) {
-            this.etag = Codegen.ofNullable(etag);
-            return this;
+
+        public Builder etag(String etag) {
+            return etag(Output.of(etag));
         }
+
         public Builder guestPolicyId(Output<String> guestPolicyId) {
-            this.guestPolicyId = Objects.requireNonNull(guestPolicyId);
+            $.guestPolicyId = guestPolicyId;
             return this;
         }
+
         public Builder guestPolicyId(String guestPolicyId) {
-            this.guestPolicyId = Output.of(Objects.requireNonNull(guestPolicyId));
-            return this;
+            return guestPolicyId(Output.of(guestPolicyId));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder packageRepositories(@Nullable Output<List<PackageRepositoryArgs>> packageRepositories) {
-            this.packageRepositories = packageRepositories;
+            $.packageRepositories = packageRepositories;
             return this;
         }
-        public Builder packageRepositories(@Nullable List<PackageRepositoryArgs> packageRepositories) {
-            this.packageRepositories = Codegen.ofNullable(packageRepositories);
-            return this;
+
+        public Builder packageRepositories(List<PackageRepositoryArgs> packageRepositories) {
+            return packageRepositories(Output.of(packageRepositories));
         }
+
         public Builder packageRepositories(PackageRepositoryArgs... packageRepositories) {
             return packageRepositories(List.of(packageRepositories));
         }
+
         public Builder packages(@Nullable Output<List<PackageArgs>> packages) {
-            this.packages = packages;
+            $.packages = packages;
             return this;
         }
-        public Builder packages(@Nullable List<PackageArgs> packages) {
-            this.packages = Codegen.ofNullable(packages);
-            return this;
+
+        public Builder packages(List<PackageArgs> packages) {
+            return packages(Output.of(packages));
         }
+
         public Builder packages(PackageArgs... packages) {
             return packages(List.of(packages));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder recipes(@Nullable Output<List<SoftwareRecipeArgs>> recipes) {
-            this.recipes = recipes;
+            $.recipes = recipes;
             return this;
         }
-        public Builder recipes(@Nullable List<SoftwareRecipeArgs> recipes) {
-            this.recipes = Codegen.ofNullable(recipes);
-            return this;
+
+        public Builder recipes(List<SoftwareRecipeArgs> recipes) {
+            return recipes(Output.of(recipes));
         }
+
         public Builder recipes(SoftwareRecipeArgs... recipes) {
             return recipes(List.of(recipes));
-        }        public GuestPolicyArgs build() {
-            return new GuestPolicyArgs(assignment, description, etag, guestPolicyId, name, packageRepositories, packages, project, recipes);
+        }
+
+        public GuestPolicyArgs build() {
+            $.assignment = Objects.requireNonNull($.assignment, "expected parameter 'assignment' to be non-null");
+            $.guestPolicyId = Objects.requireNonNull($.guestPolicyId, "expected parameter 'guestPolicyId' to be non-null");
+            return $;
         }
     }
+
 }

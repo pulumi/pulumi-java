@@ -17,7 +17,7 @@ public final class GetContainerGroupArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="containerGroupName", required=true)
-      private final String containerGroupName;
+    private String containerGroupName;
 
     public String containerGroupName() {
         return this.containerGroupName;
@@ -28,55 +28,52 @@ public final class GetContainerGroupArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public GetContainerGroupArgs(
-        String containerGroupName,
-        String resourceGroupName) {
-        this.containerGroupName = Objects.requireNonNull(containerGroupName, "expected parameter 'containerGroupName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private GetContainerGroupArgs() {}
 
-    private GetContainerGroupArgs() {
-        this.containerGroupName = null;
-        this.resourceGroupName = null;
+    private GetContainerGroupArgs(GetContainerGroupArgs $) {
+        this.containerGroupName = $.containerGroupName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetContainerGroupArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String containerGroupName;
-        private String resourceGroupName;
+        private GetContainerGroupArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetContainerGroupArgs();
         }
 
         public Builder(GetContainerGroupArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.containerGroupName = defaults.containerGroupName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new GetContainerGroupArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder containerGroupName(String containerGroupName) {
-            this.containerGroupName = Objects.requireNonNull(containerGroupName);
+            $.containerGroupName = containerGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public GetContainerGroupArgs build() {
-            return new GetContainerGroupArgs(containerGroupName, resourceGroupName);
+        }
+
+        public GetContainerGroupArgs build() {
+            $.containerGroupName = Objects.requireNonNull($.containerGroupName, "expected parameter 'containerGroupName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

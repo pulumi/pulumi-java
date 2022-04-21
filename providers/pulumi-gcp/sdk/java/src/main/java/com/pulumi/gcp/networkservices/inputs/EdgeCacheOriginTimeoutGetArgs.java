@@ -5,9 +5,9 @@ package com.pulumi.gcp.networkservices.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class EdgeCacheOriginTimeoutGetArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="connectTimeout")
-      private final @Nullable Output<String> connectTimeout;
+    private @Nullable Output<String> connectTimeout;
 
-    public Output<String> connectTimeout() {
-        return this.connectTimeout == null ? Codegen.empty() : this.connectTimeout;
+    public Optional<Output<String>> connectTimeout() {
+        return Optional.ofNullable(this.connectTimeout);
     }
 
     /**
@@ -33,10 +33,10 @@ public final class EdgeCacheOriginTimeoutGetArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="maxAttemptsTimeout")
-      private final @Nullable Output<String> maxAttemptsTimeout;
+    private @Nullable Output<String> maxAttemptsTimeout;
 
-    public Output<String> maxAttemptsTimeout() {
-        return this.maxAttemptsTimeout == null ? Codegen.empty() : this.maxAttemptsTimeout;
+    public Optional<Output<String>> maxAttemptsTimeout() {
+        return Optional.ofNullable(this.maxAttemptsTimeout);
     }
 
     /**
@@ -45,76 +45,68 @@ public final class EdgeCacheOriginTimeoutGetArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="responseTimeout")
-      private final @Nullable Output<String> responseTimeout;
+    private @Nullable Output<String> responseTimeout;
 
-    public Output<String> responseTimeout() {
-        return this.responseTimeout == null ? Codegen.empty() : this.responseTimeout;
+    public Optional<Output<String>> responseTimeout() {
+        return Optional.ofNullable(this.responseTimeout);
     }
 
-    public EdgeCacheOriginTimeoutGetArgs(
-        @Nullable Output<String> connectTimeout,
-        @Nullable Output<String> maxAttemptsTimeout,
-        @Nullable Output<String> responseTimeout) {
-        this.connectTimeout = connectTimeout;
-        this.maxAttemptsTimeout = maxAttemptsTimeout;
-        this.responseTimeout = responseTimeout;
-    }
+    private EdgeCacheOriginTimeoutGetArgs() {}
 
-    private EdgeCacheOriginTimeoutGetArgs() {
-        this.connectTimeout = Codegen.empty();
-        this.maxAttemptsTimeout = Codegen.empty();
-        this.responseTimeout = Codegen.empty();
+    private EdgeCacheOriginTimeoutGetArgs(EdgeCacheOriginTimeoutGetArgs $) {
+        this.connectTimeout = $.connectTimeout;
+        this.maxAttemptsTimeout = $.maxAttemptsTimeout;
+        this.responseTimeout = $.responseTimeout;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EdgeCacheOriginTimeoutGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> connectTimeout;
-        private @Nullable Output<String> maxAttemptsTimeout;
-        private @Nullable Output<String> responseTimeout;
+        private EdgeCacheOriginTimeoutGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new EdgeCacheOriginTimeoutGetArgs();
         }
 
         public Builder(EdgeCacheOriginTimeoutGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.connectTimeout = defaults.connectTimeout;
-    	      this.maxAttemptsTimeout = defaults.maxAttemptsTimeout;
-    	      this.responseTimeout = defaults.responseTimeout;
+            $ = new EdgeCacheOriginTimeoutGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder connectTimeout(@Nullable Output<String> connectTimeout) {
-            this.connectTimeout = connectTimeout;
+            $.connectTimeout = connectTimeout;
             return this;
         }
-        public Builder connectTimeout(@Nullable String connectTimeout) {
-            this.connectTimeout = Codegen.ofNullable(connectTimeout);
-            return this;
+
+        public Builder connectTimeout(String connectTimeout) {
+            return connectTimeout(Output.of(connectTimeout));
         }
+
         public Builder maxAttemptsTimeout(@Nullable Output<String> maxAttemptsTimeout) {
-            this.maxAttemptsTimeout = maxAttemptsTimeout;
+            $.maxAttemptsTimeout = maxAttemptsTimeout;
             return this;
         }
-        public Builder maxAttemptsTimeout(@Nullable String maxAttemptsTimeout) {
-            this.maxAttemptsTimeout = Codegen.ofNullable(maxAttemptsTimeout);
-            return this;
+
+        public Builder maxAttemptsTimeout(String maxAttemptsTimeout) {
+            return maxAttemptsTimeout(Output.of(maxAttemptsTimeout));
         }
+
         public Builder responseTimeout(@Nullable Output<String> responseTimeout) {
-            this.responseTimeout = responseTimeout;
+            $.responseTimeout = responseTimeout;
             return this;
         }
-        public Builder responseTimeout(@Nullable String responseTimeout) {
-            this.responseTimeout = Codegen.ofNullable(responseTimeout);
-            return this;
-        }        public EdgeCacheOriginTimeoutGetArgs build() {
-            return new EdgeCacheOriginTimeoutGetArgs(connectTimeout, maxAttemptsTimeout, responseTimeout);
+
+        public Builder responseTimeout(String responseTimeout) {
+            return responseTimeout(Output.of(responseTimeout));
+        }
+
+        public EdgeCacheOriginTimeoutGetArgs build() {
+            return $;
         }
     }
+
 }

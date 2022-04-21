@@ -5,9 +5,9 @@ package com.pulumi.gcp.osconfig.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class GuestPoliciesPackageGetArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="desiredState")
-      private final @Nullable Output<String> desiredState;
+    private @Nullable Output<String> desiredState;
 
-    public Output<String> desiredState() {
-        return this.desiredState == null ? Codegen.empty() : this.desiredState;
+    public Optional<Output<String>> desiredState() {
+        return Optional.ofNullable(this.desiredState);
     }
 
     /**
@@ -43,10 +43,10 @@ public final class GuestPoliciesPackageGetArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="manager")
-      private final @Nullable Output<String> manager;
+    private @Nullable Output<String> manager;
 
-    public Output<String> manager() {
-        return this.manager == null ? Codegen.empty() : this.manager;
+    public Optional<Output<String>> manager() {
+        return Optional.ofNullable(this.manager);
     }
 
     /**
@@ -57,76 +57,69 @@ public final class GuestPoliciesPackageGetArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="name", required=true)
-      private final Output<String> name;
+    private Output<String> name;
 
     public Output<String> name() {
         return this.name;
     }
 
-    public GuestPoliciesPackageGetArgs(
-        @Nullable Output<String> desiredState,
-        @Nullable Output<String> manager,
-        Output<String> name) {
-        this.desiredState = desiredState;
-        this.manager = manager;
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-    }
+    private GuestPoliciesPackageGetArgs() {}
 
-    private GuestPoliciesPackageGetArgs() {
-        this.desiredState = Codegen.empty();
-        this.manager = Codegen.empty();
-        this.name = Codegen.empty();
+    private GuestPoliciesPackageGetArgs(GuestPoliciesPackageGetArgs $) {
+        this.desiredState = $.desiredState;
+        this.manager = $.manager;
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GuestPoliciesPackageGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> desiredState;
-        private @Nullable Output<String> manager;
-        private Output<String> name;
+        private GuestPoliciesPackageGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GuestPoliciesPackageGetArgs();
         }
 
         public Builder(GuestPoliciesPackageGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.desiredState = defaults.desiredState;
-    	      this.manager = defaults.manager;
-    	      this.name = defaults.name;
+            $ = new GuestPoliciesPackageGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder desiredState(@Nullable Output<String> desiredState) {
-            this.desiredState = desiredState;
+            $.desiredState = desiredState;
             return this;
         }
-        public Builder desiredState(@Nullable String desiredState) {
-            this.desiredState = Codegen.ofNullable(desiredState);
-            return this;
+
+        public Builder desiredState(String desiredState) {
+            return desiredState(Output.of(desiredState));
         }
+
         public Builder manager(@Nullable Output<String> manager) {
-            this.manager = manager;
+            $.manager = manager;
             return this;
         }
-        public Builder manager(@Nullable String manager) {
-            this.manager = Codegen.ofNullable(manager);
-            return this;
+
+        public Builder manager(String manager) {
+            return manager(Output.of(manager));
         }
+
         public Builder name(Output<String> name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Output.of(Objects.requireNonNull(name));
-            return this;
-        }        public GuestPoliciesPackageGetArgs build() {
-            return new GuestPoliciesPackageGetArgs(desiredState, manager, name);
+            return name(Output.of(name));
+        }
+
+        public GuestPoliciesPackageGetArgs build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            return $;
         }
     }
+
 }

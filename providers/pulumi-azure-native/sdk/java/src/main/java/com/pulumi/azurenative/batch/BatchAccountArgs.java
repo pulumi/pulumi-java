@@ -11,10 +11,10 @@ import com.pulumi.azurenative.batch.inputs.EncryptionPropertiesArgs;
 import com.pulumi.azurenative.batch.inputs.KeyVaultReferenceArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +27,10 @@ public final class BatchAccountArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="accountName")
-      private final @Nullable Output<String> accountName;
+    private @Nullable Output<String> accountName;
 
-    public Output<String> accountName() {
-        return this.accountName == null ? Codegen.empty() : this.accountName;
+    public Optional<Output<String>> accountName() {
+        return Optional.ofNullable(this.accountName);
     }
 
     /**
@@ -38,10 +38,10 @@ public final class BatchAccountArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="autoStorage")
-      private final @Nullable Output<AutoStorageBasePropertiesArgs> autoStorage;
+    private @Nullable Output<AutoStorageBasePropertiesArgs> autoStorage;
 
-    public Output<AutoStorageBasePropertiesArgs> autoStorage() {
-        return this.autoStorage == null ? Codegen.empty() : this.autoStorage;
+    public Optional<Output<AutoStorageBasePropertiesArgs>> autoStorage() {
+        return Optional.ofNullable(this.autoStorage);
     }
 
     /**
@@ -49,10 +49,10 @@ public final class BatchAccountArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="encryption")
-      private final @Nullable Output<EncryptionPropertiesArgs> encryption;
+    private @Nullable Output<EncryptionPropertiesArgs> encryption;
 
-    public Output<EncryptionPropertiesArgs> encryption() {
-        return this.encryption == null ? Codegen.empty() : this.encryption;
+    public Optional<Output<EncryptionPropertiesArgs>> encryption() {
+        return Optional.ofNullable(this.encryption);
     }
 
     /**
@@ -60,10 +60,10 @@ public final class BatchAccountArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="identity")
-      private final @Nullable Output<BatchAccountIdentityArgs> identity;
+    private @Nullable Output<BatchAccountIdentityArgs> identity;
 
-    public Output<BatchAccountIdentityArgs> identity() {
-        return this.identity == null ? Codegen.empty() : this.identity;
+    public Optional<Output<BatchAccountIdentityArgs>> identity() {
+        return Optional.ofNullable(this.identity);
     }
 
     /**
@@ -71,10 +71,10 @@ public final class BatchAccountArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="keyVaultReference")
-      private final @Nullable Output<KeyVaultReferenceArgs> keyVaultReference;
+    private @Nullable Output<KeyVaultReferenceArgs> keyVaultReference;
 
-    public Output<KeyVaultReferenceArgs> keyVaultReference() {
-        return this.keyVaultReference == null ? Codegen.empty() : this.keyVaultReference;
+    public Optional<Output<KeyVaultReferenceArgs>> keyVaultReference() {
+        return Optional.ofNullable(this.keyVaultReference);
     }
 
     /**
@@ -82,10 +82,10 @@ public final class BatchAccountArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -93,10 +93,10 @@ public final class BatchAccountArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="poolAllocationMode")
-      private final @Nullable Output<PoolAllocationMode> poolAllocationMode;
+    private @Nullable Output<PoolAllocationMode> poolAllocationMode;
 
-    public Output<PoolAllocationMode> poolAllocationMode() {
-        return this.poolAllocationMode == null ? Codegen.empty() : this.poolAllocationMode;
+    public Optional<Output<PoolAllocationMode>> poolAllocationMode() {
+        return Optional.ofNullable(this.poolAllocationMode);
     }
 
     /**
@@ -104,10 +104,10 @@ public final class BatchAccountArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="publicNetworkAccess")
-      private final @Nullable Output<PublicNetworkAccessType> publicNetworkAccess;
+    private @Nullable Output<PublicNetworkAccessType> publicNetworkAccess;
 
-    public Output<PublicNetworkAccessType> publicNetworkAccess() {
-        return this.publicNetworkAccess == null ? Codegen.empty() : this.publicNetworkAccess;
+    public Optional<Output<PublicNetworkAccessType>> publicNetworkAccess() {
+        return Optional.ofNullable(this.publicNetworkAccess);
     }
 
     /**
@@ -115,7 +115,7 @@ public final class BatchAccountArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -126,167 +126,139 @@ public final class BatchAccountArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public BatchAccountArgs(
-        @Nullable Output<String> accountName,
-        @Nullable Output<AutoStorageBasePropertiesArgs> autoStorage,
-        @Nullable Output<EncryptionPropertiesArgs> encryption,
-        @Nullable Output<BatchAccountIdentityArgs> identity,
-        @Nullable Output<KeyVaultReferenceArgs> keyVaultReference,
-        @Nullable Output<String> location,
-        @Nullable Output<PoolAllocationMode> poolAllocationMode,
-        @Nullable Output<PublicNetworkAccessType> publicNetworkAccess,
-        Output<String> resourceGroupName,
-        @Nullable Output<Map<String,String>> tags) {
-        this.accountName = accountName;
-        this.autoStorage = autoStorage;
-        this.encryption = encryption;
-        this.identity = identity;
-        this.keyVaultReference = keyVaultReference;
-        this.location = location;
-        this.poolAllocationMode = poolAllocationMode;
-        this.publicNetworkAccess = publicNetworkAccess;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.tags = tags;
-    }
+    private BatchAccountArgs() {}
 
-    private BatchAccountArgs() {
-        this.accountName = Codegen.empty();
-        this.autoStorage = Codegen.empty();
-        this.encryption = Codegen.empty();
-        this.identity = Codegen.empty();
-        this.keyVaultReference = Codegen.empty();
-        this.location = Codegen.empty();
-        this.poolAllocationMode = Codegen.empty();
-        this.publicNetworkAccess = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.tags = Codegen.empty();
+    private BatchAccountArgs(BatchAccountArgs $) {
+        this.accountName = $.accountName;
+        this.autoStorage = $.autoStorage;
+        this.encryption = $.encryption;
+        this.identity = $.identity;
+        this.keyVaultReference = $.keyVaultReference;
+        this.location = $.location;
+        this.poolAllocationMode = $.poolAllocationMode;
+        this.publicNetworkAccess = $.publicNetworkAccess;
+        this.resourceGroupName = $.resourceGroupName;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BatchAccountArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> accountName;
-        private @Nullable Output<AutoStorageBasePropertiesArgs> autoStorage;
-        private @Nullable Output<EncryptionPropertiesArgs> encryption;
-        private @Nullable Output<BatchAccountIdentityArgs> identity;
-        private @Nullable Output<KeyVaultReferenceArgs> keyVaultReference;
-        private @Nullable Output<String> location;
-        private @Nullable Output<PoolAllocationMode> poolAllocationMode;
-        private @Nullable Output<PublicNetworkAccessType> publicNetworkAccess;
-        private Output<String> resourceGroupName;
-        private @Nullable Output<Map<String,String>> tags;
+        private BatchAccountArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new BatchAccountArgs();
         }
 
         public Builder(BatchAccountArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accountName = defaults.accountName;
-    	      this.autoStorage = defaults.autoStorage;
-    	      this.encryption = defaults.encryption;
-    	      this.identity = defaults.identity;
-    	      this.keyVaultReference = defaults.keyVaultReference;
-    	      this.location = defaults.location;
-    	      this.poolAllocationMode = defaults.poolAllocationMode;
-    	      this.publicNetworkAccess = defaults.publicNetworkAccess;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.tags = defaults.tags;
+            $ = new BatchAccountArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder accountName(@Nullable Output<String> accountName) {
-            this.accountName = accountName;
+            $.accountName = accountName;
             return this;
         }
-        public Builder accountName(@Nullable String accountName) {
-            this.accountName = Codegen.ofNullable(accountName);
-            return this;
+
+        public Builder accountName(String accountName) {
+            return accountName(Output.of(accountName));
         }
+
         public Builder autoStorage(@Nullable Output<AutoStorageBasePropertiesArgs> autoStorage) {
-            this.autoStorage = autoStorage;
+            $.autoStorage = autoStorage;
             return this;
         }
-        public Builder autoStorage(@Nullable AutoStorageBasePropertiesArgs autoStorage) {
-            this.autoStorage = Codegen.ofNullable(autoStorage);
-            return this;
+
+        public Builder autoStorage(AutoStorageBasePropertiesArgs autoStorage) {
+            return autoStorage(Output.of(autoStorage));
         }
+
         public Builder encryption(@Nullable Output<EncryptionPropertiesArgs> encryption) {
-            this.encryption = encryption;
+            $.encryption = encryption;
             return this;
         }
-        public Builder encryption(@Nullable EncryptionPropertiesArgs encryption) {
-            this.encryption = Codegen.ofNullable(encryption);
-            return this;
+
+        public Builder encryption(EncryptionPropertiesArgs encryption) {
+            return encryption(Output.of(encryption));
         }
+
         public Builder identity(@Nullable Output<BatchAccountIdentityArgs> identity) {
-            this.identity = identity;
+            $.identity = identity;
             return this;
         }
-        public Builder identity(@Nullable BatchAccountIdentityArgs identity) {
-            this.identity = Codegen.ofNullable(identity);
-            return this;
+
+        public Builder identity(BatchAccountIdentityArgs identity) {
+            return identity(Output.of(identity));
         }
+
         public Builder keyVaultReference(@Nullable Output<KeyVaultReferenceArgs> keyVaultReference) {
-            this.keyVaultReference = keyVaultReference;
+            $.keyVaultReference = keyVaultReference;
             return this;
         }
-        public Builder keyVaultReference(@Nullable KeyVaultReferenceArgs keyVaultReference) {
-            this.keyVaultReference = Codegen.ofNullable(keyVaultReference);
-            return this;
+
+        public Builder keyVaultReference(KeyVaultReferenceArgs keyVaultReference) {
+            return keyVaultReference(Output.of(keyVaultReference));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder poolAllocationMode(@Nullable Output<PoolAllocationMode> poolAllocationMode) {
-            this.poolAllocationMode = poolAllocationMode;
+            $.poolAllocationMode = poolAllocationMode;
             return this;
         }
-        public Builder poolAllocationMode(@Nullable PoolAllocationMode poolAllocationMode) {
-            this.poolAllocationMode = Codegen.ofNullable(poolAllocationMode);
-            return this;
+
+        public Builder poolAllocationMode(PoolAllocationMode poolAllocationMode) {
+            return poolAllocationMode(Output.of(poolAllocationMode));
         }
+
         public Builder publicNetworkAccess(@Nullable Output<PublicNetworkAccessType> publicNetworkAccess) {
-            this.publicNetworkAccess = publicNetworkAccess;
+            $.publicNetworkAccess = publicNetworkAccess;
             return this;
         }
-        public Builder publicNetworkAccess(@Nullable PublicNetworkAccessType publicNetworkAccess) {
-            this.publicNetworkAccess = Codegen.ofNullable(publicNetworkAccess);
-            return this;
+
+        public Builder publicNetworkAccess(PublicNetworkAccessType publicNetworkAccess) {
+            return publicNetworkAccess(Output.of(publicNetworkAccess));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
-        }        public BatchAccountArgs build() {
-            return new BatchAccountArgs(accountName, autoStorage, encryption, identity, keyVaultReference, location, poolAllocationMode, publicNetworkAccess, resourceGroupName, tags);
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
+        }
+
+        public BatchAccountArgs build() {
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

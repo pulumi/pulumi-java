@@ -23,10 +23,10 @@ public final class AutomationTriggeringRuleResponse extends com.pulumi.resources
      * 
      */
     @Import(name="expectedValue")
-      private final @Nullable String expectedValue;
+    private @Nullable String expectedValue;
 
     public Optional<String> expectedValue() {
-        return this.expectedValue == null ? Optional.empty() : Optional.ofNullable(this.expectedValue);
+        return Optional.ofNullable(this.expectedValue);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class AutomationTriggeringRuleResponse extends com.pulumi.resources
      * 
      */
     @Import(name="operator")
-      private final @Nullable String operator;
+    private @Nullable String operator;
 
     public Optional<String> operator() {
-        return this.operator == null ? Optional.empty() : Optional.ofNullable(this.operator);
+        return Optional.ofNullable(this.operator);
     }
 
     /**
@@ -45,10 +45,10 @@ public final class AutomationTriggeringRuleResponse extends com.pulumi.resources
      * 
      */
     @Import(name="propertyJPath")
-      private final @Nullable String propertyJPath;
+    private @Nullable String propertyJPath;
 
     public Optional<String> propertyJPath() {
-        return this.propertyJPath == null ? Optional.empty() : Optional.ofNullable(this.propertyJPath);
+        return Optional.ofNullable(this.propertyJPath);
     }
 
     /**
@@ -56,73 +56,62 @@ public final class AutomationTriggeringRuleResponse extends com.pulumi.resources
      * 
      */
     @Import(name="propertyType")
-      private final @Nullable String propertyType;
+    private @Nullable String propertyType;
 
     public Optional<String> propertyType() {
-        return this.propertyType == null ? Optional.empty() : Optional.ofNullable(this.propertyType);
+        return Optional.ofNullable(this.propertyType);
     }
 
-    public AutomationTriggeringRuleResponse(
-        @Nullable String expectedValue,
-        @Nullable String operator,
-        @Nullable String propertyJPath,
-        @Nullable String propertyType) {
-        this.expectedValue = expectedValue;
-        this.operator = operator;
-        this.propertyJPath = propertyJPath;
-        this.propertyType = propertyType;
-    }
+    private AutomationTriggeringRuleResponse() {}
 
-    private AutomationTriggeringRuleResponse() {
-        this.expectedValue = null;
-        this.operator = null;
-        this.propertyJPath = null;
-        this.propertyType = null;
+    private AutomationTriggeringRuleResponse(AutomationTriggeringRuleResponse $) {
+        this.expectedValue = $.expectedValue;
+        this.operator = $.operator;
+        this.propertyJPath = $.propertyJPath;
+        this.propertyType = $.propertyType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AutomationTriggeringRuleResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String expectedValue;
-        private @Nullable String operator;
-        private @Nullable String propertyJPath;
-        private @Nullable String propertyType;
+        private AutomationTriggeringRuleResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AutomationTriggeringRuleResponse();
         }
 
         public Builder(AutomationTriggeringRuleResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.expectedValue = defaults.expectedValue;
-    	      this.operator = defaults.operator;
-    	      this.propertyJPath = defaults.propertyJPath;
-    	      this.propertyType = defaults.propertyType;
+            $ = new AutomationTriggeringRuleResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder expectedValue(@Nullable String expectedValue) {
-            this.expectedValue = expectedValue;
+            $.expectedValue = expectedValue;
             return this;
         }
+
         public Builder operator(@Nullable String operator) {
-            this.operator = operator;
+            $.operator = operator;
             return this;
         }
+
         public Builder propertyJPath(@Nullable String propertyJPath) {
-            this.propertyJPath = propertyJPath;
+            $.propertyJPath = propertyJPath;
             return this;
         }
+
         public Builder propertyType(@Nullable String propertyType) {
-            this.propertyType = propertyType;
+            $.propertyType = propertyType;
             return this;
-        }        public AutomationTriggeringRuleResponse build() {
-            return new AutomationTriggeringRuleResponse(expectedValue, operator, propertyJPath, propertyType);
+        }
+
+        public AutomationTriggeringRuleResponse build() {
+            return $;
         }
     }
+
 }

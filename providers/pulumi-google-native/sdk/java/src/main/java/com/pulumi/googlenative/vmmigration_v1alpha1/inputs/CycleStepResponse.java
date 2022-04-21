@@ -24,7 +24,7 @@ public final class CycleStepResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="endTime", required=true)
-      private final String endTime;
+    private String endTime;
 
     public String endTime() {
         return this.endTime;
@@ -35,7 +35,7 @@ public final class CycleStepResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="initializingReplication", required=true)
-      private final InitializingReplicationStepResponse initializingReplication;
+    private InitializingReplicationStepResponse initializingReplication;
 
     public InitializingReplicationStepResponse initializingReplication() {
         return this.initializingReplication;
@@ -46,7 +46,7 @@ public final class CycleStepResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="postProcessing", required=true)
-      private final PostProcessingStepResponse postProcessing;
+    private PostProcessingStepResponse postProcessing;
 
     public PostProcessingStepResponse postProcessing() {
         return this.postProcessing;
@@ -57,7 +57,7 @@ public final class CycleStepResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="replicating", required=true)
-      private final ReplicatingStepResponse replicating;
+    private ReplicatingStepResponse replicating;
 
     public ReplicatingStepResponse replicating() {
         return this.replicating;
@@ -68,82 +68,73 @@ public final class CycleStepResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="startTime", required=true)
-      private final String startTime;
+    private String startTime;
 
     public String startTime() {
         return this.startTime;
     }
 
-    public CycleStepResponse(
-        String endTime,
-        InitializingReplicationStepResponse initializingReplication,
-        PostProcessingStepResponse postProcessing,
-        ReplicatingStepResponse replicating,
-        String startTime) {
-        this.endTime = Objects.requireNonNull(endTime, "expected parameter 'endTime' to be non-null");
-        this.initializingReplication = Objects.requireNonNull(initializingReplication, "expected parameter 'initializingReplication' to be non-null");
-        this.postProcessing = Objects.requireNonNull(postProcessing, "expected parameter 'postProcessing' to be non-null");
-        this.replicating = Objects.requireNonNull(replicating, "expected parameter 'replicating' to be non-null");
-        this.startTime = Objects.requireNonNull(startTime, "expected parameter 'startTime' to be non-null");
-    }
+    private CycleStepResponse() {}
 
-    private CycleStepResponse() {
-        this.endTime = null;
-        this.initializingReplication = null;
-        this.postProcessing = null;
-        this.replicating = null;
-        this.startTime = null;
+    private CycleStepResponse(CycleStepResponse $) {
+        this.endTime = $.endTime;
+        this.initializingReplication = $.initializingReplication;
+        this.postProcessing = $.postProcessing;
+        this.replicating = $.replicating;
+        this.startTime = $.startTime;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CycleStepResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String endTime;
-        private InitializingReplicationStepResponse initializingReplication;
-        private PostProcessingStepResponse postProcessing;
-        private ReplicatingStepResponse replicating;
-        private String startTime;
+        private CycleStepResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new CycleStepResponse();
         }
 
         public Builder(CycleStepResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.endTime = defaults.endTime;
-    	      this.initializingReplication = defaults.initializingReplication;
-    	      this.postProcessing = defaults.postProcessing;
-    	      this.replicating = defaults.replicating;
-    	      this.startTime = defaults.startTime;
+            $ = new CycleStepResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder endTime(String endTime) {
-            this.endTime = Objects.requireNonNull(endTime);
+            $.endTime = endTime;
             return this;
         }
+
         public Builder initializingReplication(InitializingReplicationStepResponse initializingReplication) {
-            this.initializingReplication = Objects.requireNonNull(initializingReplication);
+            $.initializingReplication = initializingReplication;
             return this;
         }
+
         public Builder postProcessing(PostProcessingStepResponse postProcessing) {
-            this.postProcessing = Objects.requireNonNull(postProcessing);
+            $.postProcessing = postProcessing;
             return this;
         }
+
         public Builder replicating(ReplicatingStepResponse replicating) {
-            this.replicating = Objects.requireNonNull(replicating);
+            $.replicating = replicating;
             return this;
         }
+
         public Builder startTime(String startTime) {
-            this.startTime = Objects.requireNonNull(startTime);
+            $.startTime = startTime;
             return this;
-        }        public CycleStepResponse build() {
-            return new CycleStepResponse(endTime, initializingReplication, postProcessing, replicating, startTime);
+        }
+
+        public CycleStepResponse build() {
+            $.endTime = Objects.requireNonNull($.endTime, "expected parameter 'endTime' to be non-null");
+            $.initializingReplication = Objects.requireNonNull($.initializingReplication, "expected parameter 'initializingReplication' to be non-null");
+            $.postProcessing = Objects.requireNonNull($.postProcessing, "expected parameter 'postProcessing' to be non-null");
+            $.replicating = Objects.requireNonNull($.replicating, "expected parameter 'replicating' to be non-null");
+            $.startTime = Objects.requireNonNull($.startTime, "expected parameter 'startTime' to be non-null");
+            return $;
         }
     }
+
 }

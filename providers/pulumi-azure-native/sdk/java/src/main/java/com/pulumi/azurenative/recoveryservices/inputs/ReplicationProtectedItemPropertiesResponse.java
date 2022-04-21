@@ -35,10 +35,10 @@ public final class ReplicationProtectedItemPropertiesResponse extends com.pulumi
      * 
      */
     @Import(name="activeLocation")
-      private final @Nullable String activeLocation;
+    private @Nullable String activeLocation;
 
     public Optional<String> activeLocation() {
-        return this.activeLocation == null ? Optional.empty() : Optional.ofNullable(this.activeLocation);
+        return Optional.ofNullable(this.activeLocation);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class ReplicationProtectedItemPropertiesResponse extends com.pulumi
      * 
      */
     @Import(name="allowedOperations")
-      private final @Nullable List<String> allowedOperations;
+    private @Nullable List<String> allowedOperations;
 
-    public List<String> allowedOperations() {
-        return this.allowedOperations == null ? List.of() : this.allowedOperations;
+    public Optional<List<String>> allowedOperations() {
+        return Optional.ofNullable(this.allowedOperations);
     }
 
     /**
@@ -57,10 +57,10 @@ public final class ReplicationProtectedItemPropertiesResponse extends com.pulumi
      * 
      */
     @Import(name="currentScenario")
-      private final @Nullable CurrentScenarioDetailsResponse currentScenario;
+    private @Nullable CurrentScenarioDetailsResponse currentScenario;
 
     public Optional<CurrentScenarioDetailsResponse> currentScenario() {
-        return this.currentScenario == null ? Optional.empty() : Optional.ofNullable(this.currentScenario);
+        return Optional.ofNullable(this.currentScenario);
     }
 
     /**
@@ -68,10 +68,10 @@ public final class ReplicationProtectedItemPropertiesResponse extends com.pulumi
      * 
      */
     @Import(name="failoverHealth")
-      private final @Nullable String failoverHealth;
+    private @Nullable String failoverHealth;
 
     public Optional<String> failoverHealth() {
-        return this.failoverHealth == null ? Optional.empty() : Optional.ofNullable(this.failoverHealth);
+        return Optional.ofNullable(this.failoverHealth);
     }
 
     /**
@@ -79,10 +79,10 @@ public final class ReplicationProtectedItemPropertiesResponse extends com.pulumi
      * 
      */
     @Import(name="failoverRecoveryPointId")
-      private final @Nullable String failoverRecoveryPointId;
+    private @Nullable String failoverRecoveryPointId;
 
     public Optional<String> failoverRecoveryPointId() {
-        return this.failoverRecoveryPointId == null ? Optional.empty() : Optional.ofNullable(this.failoverRecoveryPointId);
+        return Optional.ofNullable(this.failoverRecoveryPointId);
     }
 
     /**
@@ -90,10 +90,10 @@ public final class ReplicationProtectedItemPropertiesResponse extends com.pulumi
      * 
      */
     @Import(name="friendlyName")
-      private final @Nullable String friendlyName;
+    private @Nullable String friendlyName;
 
     public Optional<String> friendlyName() {
-        return this.friendlyName == null ? Optional.empty() : Optional.ofNullable(this.friendlyName);
+        return Optional.ofNullable(this.friendlyName);
     }
 
     /**
@@ -101,10 +101,10 @@ public final class ReplicationProtectedItemPropertiesResponse extends com.pulumi
      * 
      */
     @Import(name="healthErrors")
-      private final @Nullable List<HealthErrorResponse> healthErrors;
+    private @Nullable List<HealthErrorResponse> healthErrors;
 
-    public List<HealthErrorResponse> healthErrors() {
-        return this.healthErrors == null ? List.of() : this.healthErrors;
+    public Optional<List<HealthErrorResponse>> healthErrors() {
+        return Optional.ofNullable(this.healthErrors);
     }
 
     /**
@@ -112,10 +112,10 @@ public final class ReplicationProtectedItemPropertiesResponse extends com.pulumi
      * 
      */
     @Import(name="lastSuccessfulFailoverTime")
-      private final @Nullable String lastSuccessfulFailoverTime;
+    private @Nullable String lastSuccessfulFailoverTime;
 
     public Optional<String> lastSuccessfulFailoverTime() {
-        return this.lastSuccessfulFailoverTime == null ? Optional.empty() : Optional.ofNullable(this.lastSuccessfulFailoverTime);
+        return Optional.ofNullable(this.lastSuccessfulFailoverTime);
     }
 
     /**
@@ -123,10 +123,10 @@ public final class ReplicationProtectedItemPropertiesResponse extends com.pulumi
      * 
      */
     @Import(name="lastSuccessfulTestFailoverTime")
-      private final @Nullable String lastSuccessfulTestFailoverTime;
+    private @Nullable String lastSuccessfulTestFailoverTime;
 
     public Optional<String> lastSuccessfulTestFailoverTime() {
-        return this.lastSuccessfulTestFailoverTime == null ? Optional.empty() : Optional.ofNullable(this.lastSuccessfulTestFailoverTime);
+        return Optional.ofNullable(this.lastSuccessfulTestFailoverTime);
     }
 
     /**
@@ -134,10 +134,10 @@ public final class ReplicationProtectedItemPropertiesResponse extends com.pulumi
      * 
      */
     @Import(name="policyFriendlyName")
-      private final @Nullable String policyFriendlyName;
+    private @Nullable String policyFriendlyName;
 
     public Optional<String> policyFriendlyName() {
-        return this.policyFriendlyName == null ? Optional.empty() : Optional.ofNullable(this.policyFriendlyName);
+        return Optional.ofNullable(this.policyFriendlyName);
     }
 
     /**
@@ -145,10 +145,10 @@ public final class ReplicationProtectedItemPropertiesResponse extends com.pulumi
      * 
      */
     @Import(name="policyId")
-      private final @Nullable String policyId;
+    private @Nullable String policyId;
 
     public Optional<String> policyId() {
-        return this.policyId == null ? Optional.empty() : Optional.ofNullable(this.policyId);
+        return Optional.ofNullable(this.policyId);
     }
 
     /**
@@ -156,10 +156,10 @@ public final class ReplicationProtectedItemPropertiesResponse extends com.pulumi
      * 
      */
     @Import(name="primaryFabricFriendlyName")
-      private final @Nullable String primaryFabricFriendlyName;
+    private @Nullable String primaryFabricFriendlyName;
 
     public Optional<String> primaryFabricFriendlyName() {
-        return this.primaryFabricFriendlyName == null ? Optional.empty() : Optional.ofNullable(this.primaryFabricFriendlyName);
+        return Optional.ofNullable(this.primaryFabricFriendlyName);
     }
 
     /**
@@ -167,10 +167,10 @@ public final class ReplicationProtectedItemPropertiesResponse extends com.pulumi
      * 
      */
     @Import(name="primaryFabricProvider")
-      private final @Nullable String primaryFabricProvider;
+    private @Nullable String primaryFabricProvider;
 
     public Optional<String> primaryFabricProvider() {
-        return this.primaryFabricProvider == null ? Optional.empty() : Optional.ofNullable(this.primaryFabricProvider);
+        return Optional.ofNullable(this.primaryFabricProvider);
     }
 
     /**
@@ -178,10 +178,10 @@ public final class ReplicationProtectedItemPropertiesResponse extends com.pulumi
      * 
      */
     @Import(name="primaryProtectionContainerFriendlyName")
-      private final @Nullable String primaryProtectionContainerFriendlyName;
+    private @Nullable String primaryProtectionContainerFriendlyName;
 
     public Optional<String> primaryProtectionContainerFriendlyName() {
-        return this.primaryProtectionContainerFriendlyName == null ? Optional.empty() : Optional.ofNullable(this.primaryProtectionContainerFriendlyName);
+        return Optional.ofNullable(this.primaryProtectionContainerFriendlyName);
     }
 
     /**
@@ -189,10 +189,10 @@ public final class ReplicationProtectedItemPropertiesResponse extends com.pulumi
      * 
      */
     @Import(name="protectableItemId")
-      private final @Nullable String protectableItemId;
+    private @Nullable String protectableItemId;
 
     public Optional<String> protectableItemId() {
-        return this.protectableItemId == null ? Optional.empty() : Optional.ofNullable(this.protectableItemId);
+        return Optional.ofNullable(this.protectableItemId);
     }
 
     /**
@@ -200,10 +200,10 @@ public final class ReplicationProtectedItemPropertiesResponse extends com.pulumi
      * 
      */
     @Import(name="protectedItemType")
-      private final @Nullable String protectedItemType;
+    private @Nullable String protectedItemType;
 
     public Optional<String> protectedItemType() {
-        return this.protectedItemType == null ? Optional.empty() : Optional.ofNullable(this.protectedItemType);
+        return Optional.ofNullable(this.protectedItemType);
     }
 
     /**
@@ -211,10 +211,10 @@ public final class ReplicationProtectedItemPropertiesResponse extends com.pulumi
      * 
      */
     @Import(name="protectionState")
-      private final @Nullable String protectionState;
+    private @Nullable String protectionState;
 
     public Optional<String> protectionState() {
-        return this.protectionState == null ? Optional.empty() : Optional.ofNullable(this.protectionState);
+        return Optional.ofNullable(this.protectionState);
     }
 
     /**
@@ -222,10 +222,10 @@ public final class ReplicationProtectedItemPropertiesResponse extends com.pulumi
      * 
      */
     @Import(name="protectionStateDescription")
-      private final @Nullable String protectionStateDescription;
+    private @Nullable String protectionStateDescription;
 
     public Optional<String> protectionStateDescription() {
-        return this.protectionStateDescription == null ? Optional.empty() : Optional.ofNullable(this.protectionStateDescription);
+        return Optional.ofNullable(this.protectionStateDescription);
     }
 
     /**
@@ -233,10 +233,10 @@ public final class ReplicationProtectedItemPropertiesResponse extends com.pulumi
      * 
      */
     @Import(name="providerSpecificDetails")
-      private final @Nullable Object providerSpecificDetails;
+    private @Nullable Object providerSpecificDetails;
 
-    public Object providerSpecificDetails() {
-        return this.providerSpecificDetails == null ? null : this.providerSpecificDetails;
+    public Optional<Object> providerSpecificDetails() {
+        return Optional.ofNullable(this.providerSpecificDetails);
     }
 
     /**
@@ -244,10 +244,10 @@ public final class ReplicationProtectedItemPropertiesResponse extends com.pulumi
      * 
      */
     @Import(name="recoveryContainerId")
-      private final @Nullable String recoveryContainerId;
+    private @Nullable String recoveryContainerId;
 
     public Optional<String> recoveryContainerId() {
-        return this.recoveryContainerId == null ? Optional.empty() : Optional.ofNullable(this.recoveryContainerId);
+        return Optional.ofNullable(this.recoveryContainerId);
     }
 
     /**
@@ -255,10 +255,10 @@ public final class ReplicationProtectedItemPropertiesResponse extends com.pulumi
      * 
      */
     @Import(name="recoveryFabricFriendlyName")
-      private final @Nullable String recoveryFabricFriendlyName;
+    private @Nullable String recoveryFabricFriendlyName;
 
     public Optional<String> recoveryFabricFriendlyName() {
-        return this.recoveryFabricFriendlyName == null ? Optional.empty() : Optional.ofNullable(this.recoveryFabricFriendlyName);
+        return Optional.ofNullable(this.recoveryFabricFriendlyName);
     }
 
     /**
@@ -266,10 +266,10 @@ public final class ReplicationProtectedItemPropertiesResponse extends com.pulumi
      * 
      */
     @Import(name="recoveryFabricId")
-      private final @Nullable String recoveryFabricId;
+    private @Nullable String recoveryFabricId;
 
     public Optional<String> recoveryFabricId() {
-        return this.recoveryFabricId == null ? Optional.empty() : Optional.ofNullable(this.recoveryFabricId);
+        return Optional.ofNullable(this.recoveryFabricId);
     }
 
     /**
@@ -277,10 +277,10 @@ public final class ReplicationProtectedItemPropertiesResponse extends com.pulumi
      * 
      */
     @Import(name="recoveryProtectionContainerFriendlyName")
-      private final @Nullable String recoveryProtectionContainerFriendlyName;
+    private @Nullable String recoveryProtectionContainerFriendlyName;
 
     public Optional<String> recoveryProtectionContainerFriendlyName() {
-        return this.recoveryProtectionContainerFriendlyName == null ? Optional.empty() : Optional.ofNullable(this.recoveryProtectionContainerFriendlyName);
+        return Optional.ofNullable(this.recoveryProtectionContainerFriendlyName);
     }
 
     /**
@@ -288,10 +288,10 @@ public final class ReplicationProtectedItemPropertiesResponse extends com.pulumi
      * 
      */
     @Import(name="recoveryServicesProviderId")
-      private final @Nullable String recoveryServicesProviderId;
+    private @Nullable String recoveryServicesProviderId;
 
     public Optional<String> recoveryServicesProviderId() {
-        return this.recoveryServicesProviderId == null ? Optional.empty() : Optional.ofNullable(this.recoveryServicesProviderId);
+        return Optional.ofNullable(this.recoveryServicesProviderId);
     }
 
     /**
@@ -299,10 +299,10 @@ public final class ReplicationProtectedItemPropertiesResponse extends com.pulumi
      * 
      */
     @Import(name="replicationHealth")
-      private final @Nullable String replicationHealth;
+    private @Nullable String replicationHealth;
 
     public Optional<String> replicationHealth() {
-        return this.replicationHealth == null ? Optional.empty() : Optional.ofNullable(this.replicationHealth);
+        return Optional.ofNullable(this.replicationHealth);
     }
 
     /**
@@ -310,10 +310,10 @@ public final class ReplicationProtectedItemPropertiesResponse extends com.pulumi
      * 
      */
     @Import(name="testFailoverState")
-      private final @Nullable String testFailoverState;
+    private @Nullable String testFailoverState;
 
     public Optional<String> testFailoverState() {
-        return this.testFailoverState == null ? Optional.empty() : Optional.ofNullable(this.testFailoverState);
+        return Optional.ofNullable(this.testFailoverState);
     }
 
     /**
@@ -321,286 +321,208 @@ public final class ReplicationProtectedItemPropertiesResponse extends com.pulumi
      * 
      */
     @Import(name="testFailoverStateDescription")
-      private final @Nullable String testFailoverStateDescription;
+    private @Nullable String testFailoverStateDescription;
 
     public Optional<String> testFailoverStateDescription() {
-        return this.testFailoverStateDescription == null ? Optional.empty() : Optional.ofNullable(this.testFailoverStateDescription);
+        return Optional.ofNullable(this.testFailoverStateDescription);
     }
 
-    public ReplicationProtectedItemPropertiesResponse(
-        @Nullable String activeLocation,
-        @Nullable List<String> allowedOperations,
-        @Nullable CurrentScenarioDetailsResponse currentScenario,
-        @Nullable String failoverHealth,
-        @Nullable String failoverRecoveryPointId,
-        @Nullable String friendlyName,
-        @Nullable List<HealthErrorResponse> healthErrors,
-        @Nullable String lastSuccessfulFailoverTime,
-        @Nullable String lastSuccessfulTestFailoverTime,
-        @Nullable String policyFriendlyName,
-        @Nullable String policyId,
-        @Nullable String primaryFabricFriendlyName,
-        @Nullable String primaryFabricProvider,
-        @Nullable String primaryProtectionContainerFriendlyName,
-        @Nullable String protectableItemId,
-        @Nullable String protectedItemType,
-        @Nullable String protectionState,
-        @Nullable String protectionStateDescription,
-        @Nullable Object providerSpecificDetails,
-        @Nullable String recoveryContainerId,
-        @Nullable String recoveryFabricFriendlyName,
-        @Nullable String recoveryFabricId,
-        @Nullable String recoveryProtectionContainerFriendlyName,
-        @Nullable String recoveryServicesProviderId,
-        @Nullable String replicationHealth,
-        @Nullable String testFailoverState,
-        @Nullable String testFailoverStateDescription) {
-        this.activeLocation = activeLocation;
-        this.allowedOperations = allowedOperations;
-        this.currentScenario = currentScenario;
-        this.failoverHealth = failoverHealth;
-        this.failoverRecoveryPointId = failoverRecoveryPointId;
-        this.friendlyName = friendlyName;
-        this.healthErrors = healthErrors;
-        this.lastSuccessfulFailoverTime = lastSuccessfulFailoverTime;
-        this.lastSuccessfulTestFailoverTime = lastSuccessfulTestFailoverTime;
-        this.policyFriendlyName = policyFriendlyName;
-        this.policyId = policyId;
-        this.primaryFabricFriendlyName = primaryFabricFriendlyName;
-        this.primaryFabricProvider = primaryFabricProvider;
-        this.primaryProtectionContainerFriendlyName = primaryProtectionContainerFriendlyName;
-        this.protectableItemId = protectableItemId;
-        this.protectedItemType = protectedItemType;
-        this.protectionState = protectionState;
-        this.protectionStateDescription = protectionStateDescription;
-        this.providerSpecificDetails = providerSpecificDetails;
-        this.recoveryContainerId = recoveryContainerId;
-        this.recoveryFabricFriendlyName = recoveryFabricFriendlyName;
-        this.recoveryFabricId = recoveryFabricId;
-        this.recoveryProtectionContainerFriendlyName = recoveryProtectionContainerFriendlyName;
-        this.recoveryServicesProviderId = recoveryServicesProviderId;
-        this.replicationHealth = replicationHealth;
-        this.testFailoverState = testFailoverState;
-        this.testFailoverStateDescription = testFailoverStateDescription;
-    }
+    private ReplicationProtectedItemPropertiesResponse() {}
 
-    private ReplicationProtectedItemPropertiesResponse() {
-        this.activeLocation = null;
-        this.allowedOperations = List.of();
-        this.currentScenario = null;
-        this.failoverHealth = null;
-        this.failoverRecoveryPointId = null;
-        this.friendlyName = null;
-        this.healthErrors = List.of();
-        this.lastSuccessfulFailoverTime = null;
-        this.lastSuccessfulTestFailoverTime = null;
-        this.policyFriendlyName = null;
-        this.policyId = null;
-        this.primaryFabricFriendlyName = null;
-        this.primaryFabricProvider = null;
-        this.primaryProtectionContainerFriendlyName = null;
-        this.protectableItemId = null;
-        this.protectedItemType = null;
-        this.protectionState = null;
-        this.protectionStateDescription = null;
-        this.providerSpecificDetails = null;
-        this.recoveryContainerId = null;
-        this.recoveryFabricFriendlyName = null;
-        this.recoveryFabricId = null;
-        this.recoveryProtectionContainerFriendlyName = null;
-        this.recoveryServicesProviderId = null;
-        this.replicationHealth = null;
-        this.testFailoverState = null;
-        this.testFailoverStateDescription = null;
+    private ReplicationProtectedItemPropertiesResponse(ReplicationProtectedItemPropertiesResponse $) {
+        this.activeLocation = $.activeLocation;
+        this.allowedOperations = $.allowedOperations;
+        this.currentScenario = $.currentScenario;
+        this.failoverHealth = $.failoverHealth;
+        this.failoverRecoveryPointId = $.failoverRecoveryPointId;
+        this.friendlyName = $.friendlyName;
+        this.healthErrors = $.healthErrors;
+        this.lastSuccessfulFailoverTime = $.lastSuccessfulFailoverTime;
+        this.lastSuccessfulTestFailoverTime = $.lastSuccessfulTestFailoverTime;
+        this.policyFriendlyName = $.policyFriendlyName;
+        this.policyId = $.policyId;
+        this.primaryFabricFriendlyName = $.primaryFabricFriendlyName;
+        this.primaryFabricProvider = $.primaryFabricProvider;
+        this.primaryProtectionContainerFriendlyName = $.primaryProtectionContainerFriendlyName;
+        this.protectableItemId = $.protectableItemId;
+        this.protectedItemType = $.protectedItemType;
+        this.protectionState = $.protectionState;
+        this.protectionStateDescription = $.protectionStateDescription;
+        this.providerSpecificDetails = $.providerSpecificDetails;
+        this.recoveryContainerId = $.recoveryContainerId;
+        this.recoveryFabricFriendlyName = $.recoveryFabricFriendlyName;
+        this.recoveryFabricId = $.recoveryFabricId;
+        this.recoveryProtectionContainerFriendlyName = $.recoveryProtectionContainerFriendlyName;
+        this.recoveryServicesProviderId = $.recoveryServicesProviderId;
+        this.replicationHealth = $.replicationHealth;
+        this.testFailoverState = $.testFailoverState;
+        this.testFailoverStateDescription = $.testFailoverStateDescription;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ReplicationProtectedItemPropertiesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String activeLocation;
-        private @Nullable List<String> allowedOperations;
-        private @Nullable CurrentScenarioDetailsResponse currentScenario;
-        private @Nullable String failoverHealth;
-        private @Nullable String failoverRecoveryPointId;
-        private @Nullable String friendlyName;
-        private @Nullable List<HealthErrorResponse> healthErrors;
-        private @Nullable String lastSuccessfulFailoverTime;
-        private @Nullable String lastSuccessfulTestFailoverTime;
-        private @Nullable String policyFriendlyName;
-        private @Nullable String policyId;
-        private @Nullable String primaryFabricFriendlyName;
-        private @Nullable String primaryFabricProvider;
-        private @Nullable String primaryProtectionContainerFriendlyName;
-        private @Nullable String protectableItemId;
-        private @Nullable String protectedItemType;
-        private @Nullable String protectionState;
-        private @Nullable String protectionStateDescription;
-        private @Nullable Object providerSpecificDetails;
-        private @Nullable String recoveryContainerId;
-        private @Nullable String recoveryFabricFriendlyName;
-        private @Nullable String recoveryFabricId;
-        private @Nullable String recoveryProtectionContainerFriendlyName;
-        private @Nullable String recoveryServicesProviderId;
-        private @Nullable String replicationHealth;
-        private @Nullable String testFailoverState;
-        private @Nullable String testFailoverStateDescription;
+        private ReplicationProtectedItemPropertiesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ReplicationProtectedItemPropertiesResponse();
         }
 
         public Builder(ReplicationProtectedItemPropertiesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.activeLocation = defaults.activeLocation;
-    	      this.allowedOperations = defaults.allowedOperations;
-    	      this.currentScenario = defaults.currentScenario;
-    	      this.failoverHealth = defaults.failoverHealth;
-    	      this.failoverRecoveryPointId = defaults.failoverRecoveryPointId;
-    	      this.friendlyName = defaults.friendlyName;
-    	      this.healthErrors = defaults.healthErrors;
-    	      this.lastSuccessfulFailoverTime = defaults.lastSuccessfulFailoverTime;
-    	      this.lastSuccessfulTestFailoverTime = defaults.lastSuccessfulTestFailoverTime;
-    	      this.policyFriendlyName = defaults.policyFriendlyName;
-    	      this.policyId = defaults.policyId;
-    	      this.primaryFabricFriendlyName = defaults.primaryFabricFriendlyName;
-    	      this.primaryFabricProvider = defaults.primaryFabricProvider;
-    	      this.primaryProtectionContainerFriendlyName = defaults.primaryProtectionContainerFriendlyName;
-    	      this.protectableItemId = defaults.protectableItemId;
-    	      this.protectedItemType = defaults.protectedItemType;
-    	      this.protectionState = defaults.protectionState;
-    	      this.protectionStateDescription = defaults.protectionStateDescription;
-    	      this.providerSpecificDetails = defaults.providerSpecificDetails;
-    	      this.recoveryContainerId = defaults.recoveryContainerId;
-    	      this.recoveryFabricFriendlyName = defaults.recoveryFabricFriendlyName;
-    	      this.recoveryFabricId = defaults.recoveryFabricId;
-    	      this.recoveryProtectionContainerFriendlyName = defaults.recoveryProtectionContainerFriendlyName;
-    	      this.recoveryServicesProviderId = defaults.recoveryServicesProviderId;
-    	      this.replicationHealth = defaults.replicationHealth;
-    	      this.testFailoverState = defaults.testFailoverState;
-    	      this.testFailoverStateDescription = defaults.testFailoverStateDescription;
+            $ = new ReplicationProtectedItemPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder activeLocation(@Nullable String activeLocation) {
-            this.activeLocation = activeLocation;
+            $.activeLocation = activeLocation;
             return this;
         }
+
         public Builder allowedOperations(@Nullable List<String> allowedOperations) {
-            this.allowedOperations = allowedOperations;
+            $.allowedOperations = allowedOperations;
             return this;
         }
+
         public Builder allowedOperations(String... allowedOperations) {
             return allowedOperations(List.of(allowedOperations));
         }
+
         public Builder currentScenario(@Nullable CurrentScenarioDetailsResponse currentScenario) {
-            this.currentScenario = currentScenario;
+            $.currentScenario = currentScenario;
             return this;
         }
+
         public Builder failoverHealth(@Nullable String failoverHealth) {
-            this.failoverHealth = failoverHealth;
+            $.failoverHealth = failoverHealth;
             return this;
         }
+
         public Builder failoverRecoveryPointId(@Nullable String failoverRecoveryPointId) {
-            this.failoverRecoveryPointId = failoverRecoveryPointId;
+            $.failoverRecoveryPointId = failoverRecoveryPointId;
             return this;
         }
+
         public Builder friendlyName(@Nullable String friendlyName) {
-            this.friendlyName = friendlyName;
+            $.friendlyName = friendlyName;
             return this;
         }
+
         public Builder healthErrors(@Nullable List<HealthErrorResponse> healthErrors) {
-            this.healthErrors = healthErrors;
+            $.healthErrors = healthErrors;
             return this;
         }
+
         public Builder healthErrors(HealthErrorResponse... healthErrors) {
             return healthErrors(List.of(healthErrors));
         }
+
         public Builder lastSuccessfulFailoverTime(@Nullable String lastSuccessfulFailoverTime) {
-            this.lastSuccessfulFailoverTime = lastSuccessfulFailoverTime;
+            $.lastSuccessfulFailoverTime = lastSuccessfulFailoverTime;
             return this;
         }
+
         public Builder lastSuccessfulTestFailoverTime(@Nullable String lastSuccessfulTestFailoverTime) {
-            this.lastSuccessfulTestFailoverTime = lastSuccessfulTestFailoverTime;
+            $.lastSuccessfulTestFailoverTime = lastSuccessfulTestFailoverTime;
             return this;
         }
+
         public Builder policyFriendlyName(@Nullable String policyFriendlyName) {
-            this.policyFriendlyName = policyFriendlyName;
+            $.policyFriendlyName = policyFriendlyName;
             return this;
         }
+
         public Builder policyId(@Nullable String policyId) {
-            this.policyId = policyId;
+            $.policyId = policyId;
             return this;
         }
+
         public Builder primaryFabricFriendlyName(@Nullable String primaryFabricFriendlyName) {
-            this.primaryFabricFriendlyName = primaryFabricFriendlyName;
+            $.primaryFabricFriendlyName = primaryFabricFriendlyName;
             return this;
         }
+
         public Builder primaryFabricProvider(@Nullable String primaryFabricProvider) {
-            this.primaryFabricProvider = primaryFabricProvider;
+            $.primaryFabricProvider = primaryFabricProvider;
             return this;
         }
+
         public Builder primaryProtectionContainerFriendlyName(@Nullable String primaryProtectionContainerFriendlyName) {
-            this.primaryProtectionContainerFriendlyName = primaryProtectionContainerFriendlyName;
+            $.primaryProtectionContainerFriendlyName = primaryProtectionContainerFriendlyName;
             return this;
         }
+
         public Builder protectableItemId(@Nullable String protectableItemId) {
-            this.protectableItemId = protectableItemId;
+            $.protectableItemId = protectableItemId;
             return this;
         }
+
         public Builder protectedItemType(@Nullable String protectedItemType) {
-            this.protectedItemType = protectedItemType;
+            $.protectedItemType = protectedItemType;
             return this;
         }
+
         public Builder protectionState(@Nullable String protectionState) {
-            this.protectionState = protectionState;
+            $.protectionState = protectionState;
             return this;
         }
+
         public Builder protectionStateDescription(@Nullable String protectionStateDescription) {
-            this.protectionStateDescription = protectionStateDescription;
+            $.protectionStateDescription = protectionStateDescription;
             return this;
         }
+
         public Builder providerSpecificDetails(@Nullable Object providerSpecificDetails) {
-            this.providerSpecificDetails = providerSpecificDetails;
+            $.providerSpecificDetails = providerSpecificDetails;
             return this;
         }
+
         public Builder recoveryContainerId(@Nullable String recoveryContainerId) {
-            this.recoveryContainerId = recoveryContainerId;
+            $.recoveryContainerId = recoveryContainerId;
             return this;
         }
+
         public Builder recoveryFabricFriendlyName(@Nullable String recoveryFabricFriendlyName) {
-            this.recoveryFabricFriendlyName = recoveryFabricFriendlyName;
+            $.recoveryFabricFriendlyName = recoveryFabricFriendlyName;
             return this;
         }
+
         public Builder recoveryFabricId(@Nullable String recoveryFabricId) {
-            this.recoveryFabricId = recoveryFabricId;
+            $.recoveryFabricId = recoveryFabricId;
             return this;
         }
+
         public Builder recoveryProtectionContainerFriendlyName(@Nullable String recoveryProtectionContainerFriendlyName) {
-            this.recoveryProtectionContainerFriendlyName = recoveryProtectionContainerFriendlyName;
+            $.recoveryProtectionContainerFriendlyName = recoveryProtectionContainerFriendlyName;
             return this;
         }
+
         public Builder recoveryServicesProviderId(@Nullable String recoveryServicesProviderId) {
-            this.recoveryServicesProviderId = recoveryServicesProviderId;
+            $.recoveryServicesProviderId = recoveryServicesProviderId;
             return this;
         }
+
         public Builder replicationHealth(@Nullable String replicationHealth) {
-            this.replicationHealth = replicationHealth;
+            $.replicationHealth = replicationHealth;
             return this;
         }
+
         public Builder testFailoverState(@Nullable String testFailoverState) {
-            this.testFailoverState = testFailoverState;
+            $.testFailoverState = testFailoverState;
             return this;
         }
+
         public Builder testFailoverStateDescription(@Nullable String testFailoverStateDescription) {
-            this.testFailoverStateDescription = testFailoverStateDescription;
+            $.testFailoverStateDescription = testFailoverStateDescription;
             return this;
-        }        public ReplicationProtectedItemPropertiesResponse build() {
-            return new ReplicationProtectedItemPropertiesResponse(activeLocation, allowedOperations, currentScenario, failoverHealth, failoverRecoveryPointId, friendlyName, healthErrors, lastSuccessfulFailoverTime, lastSuccessfulTestFailoverTime, policyFriendlyName, policyId, primaryFabricFriendlyName, primaryFabricProvider, primaryProtectionContainerFriendlyName, protectableItemId, protectedItemType, protectionState, protectionStateDescription, providerSpecificDetails, recoveryContainerId, recoveryFabricFriendlyName, recoveryFabricId, recoveryProtectionContainerFriendlyName, recoveryServicesProviderId, replicationHealth, testFailoverState, testFailoverStateDescription);
+        }
+
+        public ReplicationProtectedItemPropertiesResponse build() {
+            return $;
         }
     }
+
 }

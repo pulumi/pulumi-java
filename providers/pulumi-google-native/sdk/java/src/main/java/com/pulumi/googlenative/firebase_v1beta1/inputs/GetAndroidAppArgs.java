@@ -15,62 +15,58 @@ public final class GetAndroidAppArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetAndroidAppArgs Empty = new GetAndroidAppArgs();
 
     @Import(name="androidAppId", required=true)
-      private final String androidAppId;
+    private String androidAppId;
 
     public String androidAppId() {
         return this.androidAppId;
     }
 
     @Import(name="project")
-      private final @Nullable String project;
+    private @Nullable String project;
 
     public Optional<String> project() {
-        return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
+        return Optional.ofNullable(this.project);
     }
 
-    public GetAndroidAppArgs(
-        String androidAppId,
-        @Nullable String project) {
-        this.androidAppId = Objects.requireNonNull(androidAppId, "expected parameter 'androidAppId' to be non-null");
-        this.project = project;
-    }
+    private GetAndroidAppArgs() {}
 
-    private GetAndroidAppArgs() {
-        this.androidAppId = null;
-        this.project = null;
+    private GetAndroidAppArgs(GetAndroidAppArgs $) {
+        this.androidAppId = $.androidAppId;
+        this.project = $.project;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetAndroidAppArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String androidAppId;
-        private @Nullable String project;
+        private GetAndroidAppArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetAndroidAppArgs();
         }
 
         public Builder(GetAndroidAppArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.androidAppId = defaults.androidAppId;
-    	      this.project = defaults.project;
+            $ = new GetAndroidAppArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder androidAppId(String androidAppId) {
-            this.androidAppId = Objects.requireNonNull(androidAppId);
+            $.androidAppId = androidAppId;
             return this;
         }
+
         public Builder project(@Nullable String project) {
-            this.project = project;
+            $.project = project;
             return this;
-        }        public GetAndroidAppArgs build() {
-            return new GetAndroidAppArgs(androidAppId, project);
+        }
+
+        public GetAndroidAppArgs build() {
+            $.androidAppId = Objects.requireNonNull($.androidAppId, "expected parameter 'androidAppId' to be non-null");
+            return $;
         }
     }
+
 }

@@ -24,48 +24,48 @@ public final class VnetRouteResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="staticRoutes")
-      private final @Nullable List<StaticRouteResponse> staticRoutes;
+    private @Nullable List<StaticRouteResponse> staticRoutes;
 
-    public List<StaticRouteResponse> staticRoutes() {
-        return this.staticRoutes == null ? List.of() : this.staticRoutes;
+    public Optional<List<StaticRouteResponse>> staticRoutes() {
+        return Optional.ofNullable(this.staticRoutes);
     }
 
-    public VnetRouteResponse(@Nullable List<StaticRouteResponse> staticRoutes) {
-        this.staticRoutes = staticRoutes;
-    }
+    private VnetRouteResponse() {}
 
-    private VnetRouteResponse() {
-        this.staticRoutes = List.of();
+    private VnetRouteResponse(VnetRouteResponse $) {
+        this.staticRoutes = $.staticRoutes;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VnetRouteResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<StaticRouteResponse> staticRoutes;
+        private VnetRouteResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new VnetRouteResponse();
         }
 
         public Builder(VnetRouteResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.staticRoutes = defaults.staticRoutes;
+            $ = new VnetRouteResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder staticRoutes(@Nullable List<StaticRouteResponse> staticRoutes) {
-            this.staticRoutes = staticRoutes;
+            $.staticRoutes = staticRoutes;
             return this;
         }
+
         public Builder staticRoutes(StaticRouteResponse... staticRoutes) {
             return staticRoutes(List.of(staticRoutes));
-        }        public VnetRouteResponse build() {
-            return new VnetRouteResponse(staticRoutes);
+        }
+
+        public VnetRouteResponse build() {
+            return $;
         }
     }
+
 }

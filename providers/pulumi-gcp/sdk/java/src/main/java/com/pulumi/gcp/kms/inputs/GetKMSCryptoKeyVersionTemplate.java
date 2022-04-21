@@ -13,62 +13,59 @@ public final class GetKMSCryptoKeyVersionTemplate extends com.pulumi.resources.I
     public static final GetKMSCryptoKeyVersionTemplate Empty = new GetKMSCryptoKeyVersionTemplate();
 
     @Import(name="algorithm", required=true)
-      private final String algorithm;
+    private String algorithm;
 
     public String algorithm() {
         return this.algorithm;
     }
 
     @Import(name="protectionLevel", required=true)
-      private final String protectionLevel;
+    private String protectionLevel;
 
     public String protectionLevel() {
         return this.protectionLevel;
     }
 
-    public GetKMSCryptoKeyVersionTemplate(
-        String algorithm,
-        String protectionLevel) {
-        this.algorithm = Objects.requireNonNull(algorithm, "expected parameter 'algorithm' to be non-null");
-        this.protectionLevel = Objects.requireNonNull(protectionLevel, "expected parameter 'protectionLevel' to be non-null");
-    }
+    private GetKMSCryptoKeyVersionTemplate() {}
 
-    private GetKMSCryptoKeyVersionTemplate() {
-        this.algorithm = null;
-        this.protectionLevel = null;
+    private GetKMSCryptoKeyVersionTemplate(GetKMSCryptoKeyVersionTemplate $) {
+        this.algorithm = $.algorithm;
+        this.protectionLevel = $.protectionLevel;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetKMSCryptoKeyVersionTemplate defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String algorithm;
-        private String protectionLevel;
+        private GetKMSCryptoKeyVersionTemplate $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetKMSCryptoKeyVersionTemplate();
         }
 
         public Builder(GetKMSCryptoKeyVersionTemplate defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.algorithm = defaults.algorithm;
-    	      this.protectionLevel = defaults.protectionLevel;
+            $ = new GetKMSCryptoKeyVersionTemplate(Objects.requireNonNull(defaults));
         }
 
         public Builder algorithm(String algorithm) {
-            this.algorithm = Objects.requireNonNull(algorithm);
+            $.algorithm = algorithm;
             return this;
         }
+
         public Builder protectionLevel(String protectionLevel) {
-            this.protectionLevel = Objects.requireNonNull(protectionLevel);
+            $.protectionLevel = protectionLevel;
             return this;
-        }        public GetKMSCryptoKeyVersionTemplate build() {
-            return new GetKMSCryptoKeyVersionTemplate(algorithm, protectionLevel);
+        }
+
+        public GetKMSCryptoKeyVersionTemplate build() {
+            $.algorithm = Objects.requireNonNull($.algorithm, "expected parameter 'algorithm' to be non-null");
+            $.protectionLevel = Objects.requireNonNull($.protectionLevel, "expected parameter 'protectionLevel' to be non-null");
+            return $;
         }
     }
+
 }

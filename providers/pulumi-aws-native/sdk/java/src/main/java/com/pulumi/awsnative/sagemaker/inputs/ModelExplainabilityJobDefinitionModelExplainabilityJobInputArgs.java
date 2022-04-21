@@ -6,7 +6,6 @@ package com.pulumi.awsnative.sagemaker.inputs;
 import com.pulumi.awsnative.sagemaker.inputs.ModelExplainabilityJobDefinitionEndpointInputArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
 
 
@@ -19,49 +18,49 @@ public final class ModelExplainabilityJobDefinitionModelExplainabilityJobInputAr
     public static final ModelExplainabilityJobDefinitionModelExplainabilityJobInputArgs Empty = new ModelExplainabilityJobDefinitionModelExplainabilityJobInputArgs();
 
     @Import(name="endpointInput", required=true)
-      private final Output<ModelExplainabilityJobDefinitionEndpointInputArgs> endpointInput;
+    private Output<ModelExplainabilityJobDefinitionEndpointInputArgs> endpointInput;
 
     public Output<ModelExplainabilityJobDefinitionEndpointInputArgs> endpointInput() {
         return this.endpointInput;
     }
 
-    public ModelExplainabilityJobDefinitionModelExplainabilityJobInputArgs(Output<ModelExplainabilityJobDefinitionEndpointInputArgs> endpointInput) {
-        this.endpointInput = Objects.requireNonNull(endpointInput, "expected parameter 'endpointInput' to be non-null");
-    }
+    private ModelExplainabilityJobDefinitionModelExplainabilityJobInputArgs() {}
 
-    private ModelExplainabilityJobDefinitionModelExplainabilityJobInputArgs() {
-        this.endpointInput = Codegen.empty();
+    private ModelExplainabilityJobDefinitionModelExplainabilityJobInputArgs(ModelExplainabilityJobDefinitionModelExplainabilityJobInputArgs $) {
+        this.endpointInput = $.endpointInput;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ModelExplainabilityJobDefinitionModelExplainabilityJobInputArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<ModelExplainabilityJobDefinitionEndpointInputArgs> endpointInput;
+        private ModelExplainabilityJobDefinitionModelExplainabilityJobInputArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ModelExplainabilityJobDefinitionModelExplainabilityJobInputArgs();
         }
 
         public Builder(ModelExplainabilityJobDefinitionModelExplainabilityJobInputArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.endpointInput = defaults.endpointInput;
+            $ = new ModelExplainabilityJobDefinitionModelExplainabilityJobInputArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder endpointInput(Output<ModelExplainabilityJobDefinitionEndpointInputArgs> endpointInput) {
-            this.endpointInput = Objects.requireNonNull(endpointInput);
+            $.endpointInput = endpointInput;
             return this;
         }
+
         public Builder endpointInput(ModelExplainabilityJobDefinitionEndpointInputArgs endpointInput) {
-            this.endpointInput = Output.of(Objects.requireNonNull(endpointInput));
-            return this;
-        }        public ModelExplainabilityJobDefinitionModelExplainabilityJobInputArgs build() {
-            return new ModelExplainabilityJobDefinitionModelExplainabilityJobInputArgs(endpointInput);
+            return endpointInput(Output.of(endpointInput));
+        }
+
+        public ModelExplainabilityJobDefinitionModelExplainabilityJobInputArgs build() {
+            $.endpointInput = Objects.requireNonNull($.endpointInput, "expected parameter 'endpointInput' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,7 +5,6 @@ package com.pulumi.googlenative.testing_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.testing_v1.inputs.IosDeviceArgs;
 import java.util.List;
 import java.util.Objects;
@@ -24,52 +23,53 @@ public final class IosDeviceListArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="iosDevices", required=true)
-      private final Output<List<IosDeviceArgs>> iosDevices;
+    private Output<List<IosDeviceArgs>> iosDevices;
 
     public Output<List<IosDeviceArgs>> iosDevices() {
         return this.iosDevices;
     }
 
-    public IosDeviceListArgs(Output<List<IosDeviceArgs>> iosDevices) {
-        this.iosDevices = Objects.requireNonNull(iosDevices, "expected parameter 'iosDevices' to be non-null");
-    }
+    private IosDeviceListArgs() {}
 
-    private IosDeviceListArgs() {
-        this.iosDevices = Codegen.empty();
+    private IosDeviceListArgs(IosDeviceListArgs $) {
+        this.iosDevices = $.iosDevices;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(IosDeviceListArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<List<IosDeviceArgs>> iosDevices;
+        private IosDeviceListArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new IosDeviceListArgs();
         }
 
         public Builder(IosDeviceListArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.iosDevices = defaults.iosDevices;
+            $ = new IosDeviceListArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder iosDevices(Output<List<IosDeviceArgs>> iosDevices) {
-            this.iosDevices = Objects.requireNonNull(iosDevices);
+            $.iosDevices = iosDevices;
             return this;
         }
+
         public Builder iosDevices(List<IosDeviceArgs> iosDevices) {
-            this.iosDevices = Output.of(Objects.requireNonNull(iosDevices));
-            return this;
+            return iosDevices(Output.of(iosDevices));
         }
+
         public Builder iosDevices(IosDeviceArgs... iosDevices) {
             return iosDevices(List.of(iosDevices));
-        }        public IosDeviceListArgs build() {
-            return new IosDeviceListArgs(iosDevices);
+        }
+
+        public IosDeviceListArgs build() {
+            $.iosDevices = Objects.requireNonNull($.iosDevices, "expected parameter 'iosDevices' to be non-null");
+            return $;
         }
     }
+
 }

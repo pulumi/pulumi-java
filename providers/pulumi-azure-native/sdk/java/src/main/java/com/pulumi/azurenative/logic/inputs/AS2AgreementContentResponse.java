@@ -21,7 +21,7 @@ public final class AS2AgreementContentResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="receiveAgreement", required=true)
-      private final AS2OneWayAgreementResponse receiveAgreement;
+    private AS2OneWayAgreementResponse receiveAgreement;
 
     public AS2OneWayAgreementResponse receiveAgreement() {
         return this.receiveAgreement;
@@ -32,55 +32,52 @@ public final class AS2AgreementContentResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="sendAgreement", required=true)
-      private final AS2OneWayAgreementResponse sendAgreement;
+    private AS2OneWayAgreementResponse sendAgreement;
 
     public AS2OneWayAgreementResponse sendAgreement() {
         return this.sendAgreement;
     }
 
-    public AS2AgreementContentResponse(
-        AS2OneWayAgreementResponse receiveAgreement,
-        AS2OneWayAgreementResponse sendAgreement) {
-        this.receiveAgreement = Objects.requireNonNull(receiveAgreement, "expected parameter 'receiveAgreement' to be non-null");
-        this.sendAgreement = Objects.requireNonNull(sendAgreement, "expected parameter 'sendAgreement' to be non-null");
-    }
+    private AS2AgreementContentResponse() {}
 
-    private AS2AgreementContentResponse() {
-        this.receiveAgreement = null;
-        this.sendAgreement = null;
+    private AS2AgreementContentResponse(AS2AgreementContentResponse $) {
+        this.receiveAgreement = $.receiveAgreement;
+        this.sendAgreement = $.sendAgreement;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AS2AgreementContentResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private AS2OneWayAgreementResponse receiveAgreement;
-        private AS2OneWayAgreementResponse sendAgreement;
+        private AS2AgreementContentResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AS2AgreementContentResponse();
         }
 
         public Builder(AS2AgreementContentResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.receiveAgreement = defaults.receiveAgreement;
-    	      this.sendAgreement = defaults.sendAgreement;
+            $ = new AS2AgreementContentResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder receiveAgreement(AS2OneWayAgreementResponse receiveAgreement) {
-            this.receiveAgreement = Objects.requireNonNull(receiveAgreement);
+            $.receiveAgreement = receiveAgreement;
             return this;
         }
+
         public Builder sendAgreement(AS2OneWayAgreementResponse sendAgreement) {
-            this.sendAgreement = Objects.requireNonNull(sendAgreement);
+            $.sendAgreement = sendAgreement;
             return this;
-        }        public AS2AgreementContentResponse build() {
-            return new AS2AgreementContentResponse(receiveAgreement, sendAgreement);
+        }
+
+        public AS2AgreementContentResponse build() {
+            $.receiveAgreement = Objects.requireNonNull($.receiveAgreement, "expected parameter 'receiveAgreement' to be non-null");
+            $.sendAgreement = Objects.requireNonNull($.sendAgreement, "expected parameter 'sendAgreement' to be non-null");
+            return $;
         }
     }
+
 }

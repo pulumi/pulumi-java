@@ -5,9 +5,9 @@ package com.pulumi.googlenative.containeranalysis_v1beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class LicenseArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="comments")
-      private final @Nullable Output<String> comments;
+    private @Nullable Output<String> comments;
 
-    public Output<String> comments() {
-        return this.comments == null ? Codegen.empty() : this.comments;
+    public Optional<Output<String>> comments() {
+        return Optional.ofNullable(this.comments);
     }
 
     /**
@@ -35,63 +35,58 @@ public final class LicenseArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="expression")
-      private final @Nullable Output<String> expression;
+    private @Nullable Output<String> expression;
 
-    public Output<String> expression() {
-        return this.expression == null ? Codegen.empty() : this.expression;
+    public Optional<Output<String>> expression() {
+        return Optional.ofNullable(this.expression);
     }
 
-    public LicenseArgs(
-        @Nullable Output<String> comments,
-        @Nullable Output<String> expression) {
-        this.comments = comments;
-        this.expression = expression;
-    }
+    private LicenseArgs() {}
 
-    private LicenseArgs() {
-        this.comments = Codegen.empty();
-        this.expression = Codegen.empty();
+    private LicenseArgs(LicenseArgs $) {
+        this.comments = $.comments;
+        this.expression = $.expression;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LicenseArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> comments;
-        private @Nullable Output<String> expression;
+        private LicenseArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new LicenseArgs();
         }
 
         public Builder(LicenseArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.comments = defaults.comments;
-    	      this.expression = defaults.expression;
+            $ = new LicenseArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder comments(@Nullable Output<String> comments) {
-            this.comments = comments;
+            $.comments = comments;
             return this;
         }
-        public Builder comments(@Nullable String comments) {
-            this.comments = Codegen.ofNullable(comments);
-            return this;
+
+        public Builder comments(String comments) {
+            return comments(Output.of(comments));
         }
+
         public Builder expression(@Nullable Output<String> expression) {
-            this.expression = expression;
+            $.expression = expression;
             return this;
         }
-        public Builder expression(@Nullable String expression) {
-            this.expression = Codegen.ofNullable(expression);
-            return this;
-        }        public LicenseArgs build() {
-            return new LicenseArgs(comments, expression);
+
+        public Builder expression(String expression) {
+            return expression(Output.of(expression));
+        }
+
+        public LicenseArgs build() {
+            return $;
         }
     }
+
 }

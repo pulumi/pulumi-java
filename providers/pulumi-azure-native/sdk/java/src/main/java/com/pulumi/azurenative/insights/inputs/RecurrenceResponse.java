@@ -22,7 +22,7 @@ public final class RecurrenceResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="frequency", required=true)
-      private final String frequency;
+    private String frequency;
 
     public String frequency() {
         return this.frequency;
@@ -33,55 +33,52 @@ public final class RecurrenceResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="schedule", required=true)
-      private final RecurrentScheduleResponse schedule;
+    private RecurrentScheduleResponse schedule;
 
     public RecurrentScheduleResponse schedule() {
         return this.schedule;
     }
 
-    public RecurrenceResponse(
-        String frequency,
-        RecurrentScheduleResponse schedule) {
-        this.frequency = Objects.requireNonNull(frequency, "expected parameter 'frequency' to be non-null");
-        this.schedule = Objects.requireNonNull(schedule, "expected parameter 'schedule' to be non-null");
-    }
+    private RecurrenceResponse() {}
 
-    private RecurrenceResponse() {
-        this.frequency = null;
-        this.schedule = null;
+    private RecurrenceResponse(RecurrenceResponse $) {
+        this.frequency = $.frequency;
+        this.schedule = $.schedule;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RecurrenceResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String frequency;
-        private RecurrentScheduleResponse schedule;
+        private RecurrenceResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new RecurrenceResponse();
         }
 
         public Builder(RecurrenceResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.frequency = defaults.frequency;
-    	      this.schedule = defaults.schedule;
+            $ = new RecurrenceResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder frequency(String frequency) {
-            this.frequency = Objects.requireNonNull(frequency);
+            $.frequency = frequency;
             return this;
         }
+
         public Builder schedule(RecurrentScheduleResponse schedule) {
-            this.schedule = Objects.requireNonNull(schedule);
+            $.schedule = schedule;
             return this;
-        }        public RecurrenceResponse build() {
-            return new RecurrenceResponse(frequency, schedule);
+        }
+
+        public RecurrenceResponse build() {
+            $.frequency = Objects.requireNonNull($.frequency, "expected parameter 'frequency' to be non-null");
+            $.schedule = Objects.requireNonNull($.schedule, "expected parameter 'schedule' to be non-null");
+            return $;
         }
     }
+
 }

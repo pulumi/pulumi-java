@@ -23,10 +23,10 @@ public final class GcmCredentialResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="gcmEndpoint")
-      private final @Nullable String gcmEndpoint;
+    private @Nullable String gcmEndpoint;
 
     public Optional<String> gcmEndpoint() {
-        return this.gcmEndpoint == null ? Optional.empty() : Optional.ofNullable(this.gcmEndpoint);
+        return Optional.ofNullable(this.gcmEndpoint);
     }
 
     /**
@@ -34,55 +34,50 @@ public final class GcmCredentialResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="googleApiKey")
-      private final @Nullable String googleApiKey;
+    private @Nullable String googleApiKey;
 
     public Optional<String> googleApiKey() {
-        return this.googleApiKey == null ? Optional.empty() : Optional.ofNullable(this.googleApiKey);
+        return Optional.ofNullable(this.googleApiKey);
     }
 
-    public GcmCredentialResponse(
-        @Nullable String gcmEndpoint,
-        @Nullable String googleApiKey) {
-        this.gcmEndpoint = gcmEndpoint;
-        this.googleApiKey = googleApiKey;
-    }
+    private GcmCredentialResponse() {}
 
-    private GcmCredentialResponse() {
-        this.gcmEndpoint = null;
-        this.googleApiKey = null;
+    private GcmCredentialResponse(GcmCredentialResponse $) {
+        this.gcmEndpoint = $.gcmEndpoint;
+        this.googleApiKey = $.googleApiKey;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GcmCredentialResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String gcmEndpoint;
-        private @Nullable String googleApiKey;
+        private GcmCredentialResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GcmCredentialResponse();
         }
 
         public Builder(GcmCredentialResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.gcmEndpoint = defaults.gcmEndpoint;
-    	      this.googleApiKey = defaults.googleApiKey;
+            $ = new GcmCredentialResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder gcmEndpoint(@Nullable String gcmEndpoint) {
-            this.gcmEndpoint = gcmEndpoint;
+            $.gcmEndpoint = gcmEndpoint;
             return this;
         }
+
         public Builder googleApiKey(@Nullable String googleApiKey) {
-            this.googleApiKey = googleApiKey;
+            $.googleApiKey = googleApiKey;
             return this;
-        }        public GcmCredentialResponse build() {
-            return new GcmCredentialResponse(gcmEndpoint, googleApiKey);
+        }
+
+        public GcmCredentialResponse build() {
+            return $;
         }
     }
+
 }

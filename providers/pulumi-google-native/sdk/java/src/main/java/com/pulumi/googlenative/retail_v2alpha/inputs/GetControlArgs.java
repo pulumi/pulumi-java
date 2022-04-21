@@ -15,94 +15,86 @@ public final class GetControlArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetControlArgs Empty = new GetControlArgs();
 
     @Import(name="catalogId", required=true)
-      private final String catalogId;
+    private String catalogId;
 
     public String catalogId() {
         return this.catalogId;
     }
 
     @Import(name="controlId", required=true)
-      private final String controlId;
+    private String controlId;
 
     public String controlId() {
         return this.controlId;
     }
 
     @Import(name="location", required=true)
-      private final String location;
+    private String location;
 
     public String location() {
         return this.location;
     }
 
     @Import(name="project")
-      private final @Nullable String project;
+    private @Nullable String project;
 
     public Optional<String> project() {
-        return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
+        return Optional.ofNullable(this.project);
     }
 
-    public GetControlArgs(
-        String catalogId,
-        String controlId,
-        String location,
-        @Nullable String project) {
-        this.catalogId = Objects.requireNonNull(catalogId, "expected parameter 'catalogId' to be non-null");
-        this.controlId = Objects.requireNonNull(controlId, "expected parameter 'controlId' to be non-null");
-        this.location = Objects.requireNonNull(location, "expected parameter 'location' to be non-null");
-        this.project = project;
-    }
+    private GetControlArgs() {}
 
-    private GetControlArgs() {
-        this.catalogId = null;
-        this.controlId = null;
-        this.location = null;
-        this.project = null;
+    private GetControlArgs(GetControlArgs $) {
+        this.catalogId = $.catalogId;
+        this.controlId = $.controlId;
+        this.location = $.location;
+        this.project = $.project;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetControlArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String catalogId;
-        private String controlId;
-        private String location;
-        private @Nullable String project;
+        private GetControlArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetControlArgs();
         }
 
         public Builder(GetControlArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.catalogId = defaults.catalogId;
-    	      this.controlId = defaults.controlId;
-    	      this.location = defaults.location;
-    	      this.project = defaults.project;
+            $ = new GetControlArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder catalogId(String catalogId) {
-            this.catalogId = Objects.requireNonNull(catalogId);
+            $.catalogId = catalogId;
             return this;
         }
+
         public Builder controlId(String controlId) {
-            this.controlId = Objects.requireNonNull(controlId);
+            $.controlId = controlId;
             return this;
         }
+
         public Builder location(String location) {
-            this.location = Objects.requireNonNull(location);
+            $.location = location;
             return this;
         }
+
         public Builder project(@Nullable String project) {
-            this.project = project;
+            $.project = project;
             return this;
-        }        public GetControlArgs build() {
-            return new GetControlArgs(catalogId, controlId, location, project);
+        }
+
+        public GetControlArgs build() {
+            $.catalogId = Objects.requireNonNull($.catalogId, "expected parameter 'catalogId' to be non-null");
+            $.controlId = Objects.requireNonNull($.controlId, "expected parameter 'controlId' to be non-null");
+            $.location = Objects.requireNonNull($.location, "expected parameter 'location' to be non-null");
+            return $;
         }
     }
+
 }

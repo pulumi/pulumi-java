@@ -15,62 +15,57 @@ public final class DeliveryStreamElasticsearchBufferingHints extends com.pulumi.
     public static final DeliveryStreamElasticsearchBufferingHints Empty = new DeliveryStreamElasticsearchBufferingHints();
 
     @Import(name="intervalInSeconds")
-      private final @Nullable Integer intervalInSeconds;
+    private @Nullable Integer intervalInSeconds;
 
     public Optional<Integer> intervalInSeconds() {
-        return this.intervalInSeconds == null ? Optional.empty() : Optional.ofNullable(this.intervalInSeconds);
+        return Optional.ofNullable(this.intervalInSeconds);
     }
 
     @Import(name="sizeInMBs")
-      private final @Nullable Integer sizeInMBs;
+    private @Nullable Integer sizeInMBs;
 
     public Optional<Integer> sizeInMBs() {
-        return this.sizeInMBs == null ? Optional.empty() : Optional.ofNullable(this.sizeInMBs);
+        return Optional.ofNullable(this.sizeInMBs);
     }
 
-    public DeliveryStreamElasticsearchBufferingHints(
-        @Nullable Integer intervalInSeconds,
-        @Nullable Integer sizeInMBs) {
-        this.intervalInSeconds = intervalInSeconds;
-        this.sizeInMBs = sizeInMBs;
-    }
+    private DeliveryStreamElasticsearchBufferingHints() {}
 
-    private DeliveryStreamElasticsearchBufferingHints() {
-        this.intervalInSeconds = null;
-        this.sizeInMBs = null;
+    private DeliveryStreamElasticsearchBufferingHints(DeliveryStreamElasticsearchBufferingHints $) {
+        this.intervalInSeconds = $.intervalInSeconds;
+        this.sizeInMBs = $.sizeInMBs;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DeliveryStreamElasticsearchBufferingHints defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Integer intervalInSeconds;
-        private @Nullable Integer sizeInMBs;
+        private DeliveryStreamElasticsearchBufferingHints $;
 
         public Builder() {
-    	      // Empty
+            $ = new DeliveryStreamElasticsearchBufferingHints();
         }
 
         public Builder(DeliveryStreamElasticsearchBufferingHints defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.intervalInSeconds = defaults.intervalInSeconds;
-    	      this.sizeInMBs = defaults.sizeInMBs;
+            $ = new DeliveryStreamElasticsearchBufferingHints(Objects.requireNonNull(defaults));
         }
 
         public Builder intervalInSeconds(@Nullable Integer intervalInSeconds) {
-            this.intervalInSeconds = intervalInSeconds;
+            $.intervalInSeconds = intervalInSeconds;
             return this;
         }
+
         public Builder sizeInMBs(@Nullable Integer sizeInMBs) {
-            this.sizeInMBs = sizeInMBs;
+            $.sizeInMBs = sizeInMBs;
             return this;
-        }        public DeliveryStreamElasticsearchBufferingHints build() {
-            return new DeliveryStreamElasticsearchBufferingHints(intervalInSeconds, sizeInMBs);
+        }
+
+        public DeliveryStreamElasticsearchBufferingHints build() {
+            return $;
         }
     }
+
 }

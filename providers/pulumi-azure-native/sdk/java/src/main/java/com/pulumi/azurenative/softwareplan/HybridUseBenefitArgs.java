@@ -6,9 +6,9 @@ package com.pulumi.azurenative.softwareplan;
 import com.pulumi.azurenative.softwareplan.inputs.SkuArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class HybridUseBenefitArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="planId")
-      private final @Nullable Output<String> planId;
+    private @Nullable Output<String> planId;
 
-    public Output<String> planId() {
-        return this.planId == null ? Codegen.empty() : this.planId;
+    public Optional<Output<String>> planId() {
+        return Optional.ofNullable(this.planId);
     }
 
     /**
@@ -32,7 +32,7 @@ public final class HybridUseBenefitArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="scope", required=true)
-      private final Output<String> scope;
+    private Output<String> scope;
 
     public Output<String> scope() {
         return this.scope;
@@ -43,76 +43,70 @@ public final class HybridUseBenefitArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="sku", required=true)
-      private final Output<SkuArgs> sku;
+    private Output<SkuArgs> sku;
 
     public Output<SkuArgs> sku() {
         return this.sku;
     }
 
-    public HybridUseBenefitArgs(
-        @Nullable Output<String> planId,
-        Output<String> scope,
-        Output<SkuArgs> sku) {
-        this.planId = planId;
-        this.scope = Objects.requireNonNull(scope, "expected parameter 'scope' to be non-null");
-        this.sku = Objects.requireNonNull(sku, "expected parameter 'sku' to be non-null");
-    }
+    private HybridUseBenefitArgs() {}
 
-    private HybridUseBenefitArgs() {
-        this.planId = Codegen.empty();
-        this.scope = Codegen.empty();
-        this.sku = Codegen.empty();
+    private HybridUseBenefitArgs(HybridUseBenefitArgs $) {
+        this.planId = $.planId;
+        this.scope = $.scope;
+        this.sku = $.sku;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(HybridUseBenefitArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> planId;
-        private Output<String> scope;
-        private Output<SkuArgs> sku;
+        private HybridUseBenefitArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new HybridUseBenefitArgs();
         }
 
         public Builder(HybridUseBenefitArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.planId = defaults.planId;
-    	      this.scope = defaults.scope;
-    	      this.sku = defaults.sku;
+            $ = new HybridUseBenefitArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder planId(@Nullable Output<String> planId) {
-            this.planId = planId;
+            $.planId = planId;
             return this;
         }
-        public Builder planId(@Nullable String planId) {
-            this.planId = Codegen.ofNullable(planId);
-            return this;
+
+        public Builder planId(String planId) {
+            return planId(Output.of(planId));
         }
+
         public Builder scope(Output<String> scope) {
-            this.scope = Objects.requireNonNull(scope);
+            $.scope = scope;
             return this;
         }
+
         public Builder scope(String scope) {
-            this.scope = Output.of(Objects.requireNonNull(scope));
-            return this;
+            return scope(Output.of(scope));
         }
+
         public Builder sku(Output<SkuArgs> sku) {
-            this.sku = Objects.requireNonNull(sku);
+            $.sku = sku;
             return this;
         }
+
         public Builder sku(SkuArgs sku) {
-            this.sku = Output.of(Objects.requireNonNull(sku));
-            return this;
-        }        public HybridUseBenefitArgs build() {
-            return new HybridUseBenefitArgs(planId, scope, sku);
+            return sku(Output.of(sku));
+        }
+
+        public HybridUseBenefitArgs build() {
+            $.scope = Objects.requireNonNull($.scope, "expected parameter 'scope' to be non-null");
+            $.sku = Objects.requireNonNull($.sku, "expected parameter 'sku' to be non-null");
+            return $;
         }
     }
+
 }

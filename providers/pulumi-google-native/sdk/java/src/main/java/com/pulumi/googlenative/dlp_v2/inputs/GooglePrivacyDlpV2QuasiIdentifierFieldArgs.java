@@ -5,10 +5,10 @@ package com.pulumi.googlenative.dlp_v2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2FieldIdArgs;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class GooglePrivacyDlpV2QuasiIdentifierFieldArgs extends com.pulumi
      * 
      */
     @Import(name="customTag")
-      private final @Nullable Output<String> customTag;
+    private @Nullable Output<String> customTag;
 
-    public Output<String> customTag() {
-        return this.customTag == null ? Codegen.empty() : this.customTag;
+    public Optional<Output<String>> customTag() {
+        return Optional.ofNullable(this.customTag);
     }
 
     /**
@@ -36,63 +36,58 @@ public final class GooglePrivacyDlpV2QuasiIdentifierFieldArgs extends com.pulumi
      * 
      */
     @Import(name="field")
-      private final @Nullable Output<GooglePrivacyDlpV2FieldIdArgs> field;
+    private @Nullable Output<GooglePrivacyDlpV2FieldIdArgs> field;
 
-    public Output<GooglePrivacyDlpV2FieldIdArgs> field() {
-        return this.field == null ? Codegen.empty() : this.field;
+    public Optional<Output<GooglePrivacyDlpV2FieldIdArgs>> field() {
+        return Optional.ofNullable(this.field);
     }
 
-    public GooglePrivacyDlpV2QuasiIdentifierFieldArgs(
-        @Nullable Output<String> customTag,
-        @Nullable Output<GooglePrivacyDlpV2FieldIdArgs> field) {
-        this.customTag = customTag;
-        this.field = field;
-    }
+    private GooglePrivacyDlpV2QuasiIdentifierFieldArgs() {}
 
-    private GooglePrivacyDlpV2QuasiIdentifierFieldArgs() {
-        this.customTag = Codegen.empty();
-        this.field = Codegen.empty();
+    private GooglePrivacyDlpV2QuasiIdentifierFieldArgs(GooglePrivacyDlpV2QuasiIdentifierFieldArgs $) {
+        this.customTag = $.customTag;
+        this.field = $.field;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GooglePrivacyDlpV2QuasiIdentifierFieldArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> customTag;
-        private @Nullable Output<GooglePrivacyDlpV2FieldIdArgs> field;
+        private GooglePrivacyDlpV2QuasiIdentifierFieldArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GooglePrivacyDlpV2QuasiIdentifierFieldArgs();
         }
 
         public Builder(GooglePrivacyDlpV2QuasiIdentifierFieldArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.customTag = defaults.customTag;
-    	      this.field = defaults.field;
+            $ = new GooglePrivacyDlpV2QuasiIdentifierFieldArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder customTag(@Nullable Output<String> customTag) {
-            this.customTag = customTag;
+            $.customTag = customTag;
             return this;
         }
-        public Builder customTag(@Nullable String customTag) {
-            this.customTag = Codegen.ofNullable(customTag);
-            return this;
+
+        public Builder customTag(String customTag) {
+            return customTag(Output.of(customTag));
         }
+
         public Builder field(@Nullable Output<GooglePrivacyDlpV2FieldIdArgs> field) {
-            this.field = field;
+            $.field = field;
             return this;
         }
-        public Builder field(@Nullable GooglePrivacyDlpV2FieldIdArgs field) {
-            this.field = Codegen.ofNullable(field);
-            return this;
-        }        public GooglePrivacyDlpV2QuasiIdentifierFieldArgs build() {
-            return new GooglePrivacyDlpV2QuasiIdentifierFieldArgs(customTag, field);
+
+        public Builder field(GooglePrivacyDlpV2FieldIdArgs field) {
+            return field(Output.of(field));
+        }
+
+        public GooglePrivacyDlpV2QuasiIdentifierFieldArgs build() {
+            return $;
         }
     }
+
 }

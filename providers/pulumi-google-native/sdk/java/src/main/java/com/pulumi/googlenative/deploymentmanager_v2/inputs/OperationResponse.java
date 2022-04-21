@@ -25,7 +25,7 @@ public final class OperationResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="clientOperationId", required=true)
-      private final String clientOperationId;
+    private String clientOperationId;
 
     public String clientOperationId() {
         return this.clientOperationId;
@@ -36,7 +36,7 @@ public final class OperationResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="description", required=true)
-      private final String description;
+    private String description;
 
     public String description() {
         return this.description;
@@ -47,7 +47,7 @@ public final class OperationResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="endTime", required=true)
-      private final String endTime;
+    private String endTime;
 
     public String endTime() {
         return this.endTime;
@@ -58,7 +58,7 @@ public final class OperationResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="error", required=true)
-      private final OperationErrorResponse error;
+    private OperationErrorResponse error;
 
     public OperationErrorResponse error() {
         return this.error;
@@ -69,7 +69,7 @@ public final class OperationResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="httpErrorMessage", required=true)
-      private final String httpErrorMessage;
+    private String httpErrorMessage;
 
     public String httpErrorMessage() {
         return this.httpErrorMessage;
@@ -80,7 +80,7 @@ public final class OperationResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="httpErrorStatusCode", required=true)
-      private final Integer httpErrorStatusCode;
+    private Integer httpErrorStatusCode;
 
     public Integer httpErrorStatusCode() {
         return this.httpErrorStatusCode;
@@ -91,7 +91,7 @@ public final class OperationResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="insertTime", required=true)
-      private final String insertTime;
+    private String insertTime;
 
     public String insertTime() {
         return this.insertTime;
@@ -102,7 +102,7 @@ public final class OperationResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="kind", required=true)
-      private final String kind;
+    private String kind;
 
     public String kind() {
         return this.kind;
@@ -113,7 +113,7 @@ public final class OperationResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -124,7 +124,7 @@ public final class OperationResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="operationGroupId", required=true)
-      private final String operationGroupId;
+    private String operationGroupId;
 
     public String operationGroupId() {
         return this.operationGroupId;
@@ -135,7 +135,7 @@ public final class OperationResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="operationType", required=true)
-      private final String operationType;
+    private String operationType;
 
     public String operationType() {
         return this.operationType;
@@ -146,7 +146,7 @@ public final class OperationResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="progress", required=true)
-      private final Integer progress;
+    private Integer progress;
 
     public Integer progress() {
         return this.progress;
@@ -157,7 +157,7 @@ public final class OperationResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="region", required=true)
-      private final String region;
+    private String region;
 
     public String region() {
         return this.region;
@@ -168,7 +168,7 @@ public final class OperationResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="selfLink", required=true)
-      private final String selfLink;
+    private String selfLink;
 
     public String selfLink() {
         return this.selfLink;
@@ -179,7 +179,7 @@ public final class OperationResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="startTime", required=true)
-      private final String startTime;
+    private String startTime;
 
     public String startTime() {
         return this.startTime;
@@ -190,7 +190,7 @@ public final class OperationResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="status", required=true)
-      private final String status;
+    private String status;
 
     public String status() {
         return this.status;
@@ -201,7 +201,7 @@ public final class OperationResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="statusMessage", required=true)
-      private final String statusMessage;
+    private String statusMessage;
 
     public String statusMessage() {
         return this.statusMessage;
@@ -212,7 +212,7 @@ public final class OperationResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="targetId", required=true)
-      private final String targetId;
+    private String targetId;
 
     public String targetId() {
         return this.targetId;
@@ -223,7 +223,7 @@ public final class OperationResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="targetLink", required=true)
-      private final String targetLink;
+    private String targetLink;
 
     public String targetLink() {
         return this.targetLink;
@@ -234,7 +234,7 @@ public final class OperationResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="user", required=true)
-      private final String user;
+    private String user;
 
     public String user() {
         return this.user;
@@ -245,7 +245,7 @@ public final class OperationResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="warnings", required=true)
-      private final List<OperationWarningsItemResponse> warnings;
+    private List<OperationWarningsItemResponse> warnings;
 
     public List<OperationWarningsItemResponse> warnings() {
         return this.warnings;
@@ -256,238 +256,196 @@ public final class OperationResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="zone", required=true)
-      private final String zone;
+    private String zone;
 
     public String zone() {
         return this.zone;
     }
 
-    public OperationResponse(
-        String clientOperationId,
-        String description,
-        String endTime,
-        OperationErrorResponse error,
-        String httpErrorMessage,
-        Integer httpErrorStatusCode,
-        String insertTime,
-        String kind,
-        String name,
-        String operationGroupId,
-        String operationType,
-        Integer progress,
-        String region,
-        String selfLink,
-        String startTime,
-        String status,
-        String statusMessage,
-        String targetId,
-        String targetLink,
-        String user,
-        List<OperationWarningsItemResponse> warnings,
-        String zone) {
-        this.clientOperationId = Objects.requireNonNull(clientOperationId, "expected parameter 'clientOperationId' to be non-null");
-        this.description = Objects.requireNonNull(description, "expected parameter 'description' to be non-null");
-        this.endTime = Objects.requireNonNull(endTime, "expected parameter 'endTime' to be non-null");
-        this.error = Objects.requireNonNull(error, "expected parameter 'error' to be non-null");
-        this.httpErrorMessage = Objects.requireNonNull(httpErrorMessage, "expected parameter 'httpErrorMessage' to be non-null");
-        this.httpErrorStatusCode = Objects.requireNonNull(httpErrorStatusCode, "expected parameter 'httpErrorStatusCode' to be non-null");
-        this.insertTime = Objects.requireNonNull(insertTime, "expected parameter 'insertTime' to be non-null");
-        this.kind = Objects.requireNonNull(kind, "expected parameter 'kind' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.operationGroupId = Objects.requireNonNull(operationGroupId, "expected parameter 'operationGroupId' to be non-null");
-        this.operationType = Objects.requireNonNull(operationType, "expected parameter 'operationType' to be non-null");
-        this.progress = Objects.requireNonNull(progress, "expected parameter 'progress' to be non-null");
-        this.region = Objects.requireNonNull(region, "expected parameter 'region' to be non-null");
-        this.selfLink = Objects.requireNonNull(selfLink, "expected parameter 'selfLink' to be non-null");
-        this.startTime = Objects.requireNonNull(startTime, "expected parameter 'startTime' to be non-null");
-        this.status = Objects.requireNonNull(status, "expected parameter 'status' to be non-null");
-        this.statusMessage = Objects.requireNonNull(statusMessage, "expected parameter 'statusMessage' to be non-null");
-        this.targetId = Objects.requireNonNull(targetId, "expected parameter 'targetId' to be non-null");
-        this.targetLink = Objects.requireNonNull(targetLink, "expected parameter 'targetLink' to be non-null");
-        this.user = Objects.requireNonNull(user, "expected parameter 'user' to be non-null");
-        this.warnings = Objects.requireNonNull(warnings, "expected parameter 'warnings' to be non-null");
-        this.zone = Objects.requireNonNull(zone, "expected parameter 'zone' to be non-null");
-    }
+    private OperationResponse() {}
 
-    private OperationResponse() {
-        this.clientOperationId = null;
-        this.description = null;
-        this.endTime = null;
-        this.error = null;
-        this.httpErrorMessage = null;
-        this.httpErrorStatusCode = null;
-        this.insertTime = null;
-        this.kind = null;
-        this.name = null;
-        this.operationGroupId = null;
-        this.operationType = null;
-        this.progress = null;
-        this.region = null;
-        this.selfLink = null;
-        this.startTime = null;
-        this.status = null;
-        this.statusMessage = null;
-        this.targetId = null;
-        this.targetLink = null;
-        this.user = null;
-        this.warnings = List.of();
-        this.zone = null;
+    private OperationResponse(OperationResponse $) {
+        this.clientOperationId = $.clientOperationId;
+        this.description = $.description;
+        this.endTime = $.endTime;
+        this.error = $.error;
+        this.httpErrorMessage = $.httpErrorMessage;
+        this.httpErrorStatusCode = $.httpErrorStatusCode;
+        this.insertTime = $.insertTime;
+        this.kind = $.kind;
+        this.name = $.name;
+        this.operationGroupId = $.operationGroupId;
+        this.operationType = $.operationType;
+        this.progress = $.progress;
+        this.region = $.region;
+        this.selfLink = $.selfLink;
+        this.startTime = $.startTime;
+        this.status = $.status;
+        this.statusMessage = $.statusMessage;
+        this.targetId = $.targetId;
+        this.targetLink = $.targetLink;
+        this.user = $.user;
+        this.warnings = $.warnings;
+        this.zone = $.zone;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(OperationResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String clientOperationId;
-        private String description;
-        private String endTime;
-        private OperationErrorResponse error;
-        private String httpErrorMessage;
-        private Integer httpErrorStatusCode;
-        private String insertTime;
-        private String kind;
-        private String name;
-        private String operationGroupId;
-        private String operationType;
-        private Integer progress;
-        private String region;
-        private String selfLink;
-        private String startTime;
-        private String status;
-        private String statusMessage;
-        private String targetId;
-        private String targetLink;
-        private String user;
-        private List<OperationWarningsItemResponse> warnings;
-        private String zone;
+        private OperationResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new OperationResponse();
         }
 
         public Builder(OperationResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.clientOperationId = defaults.clientOperationId;
-    	      this.description = defaults.description;
-    	      this.endTime = defaults.endTime;
-    	      this.error = defaults.error;
-    	      this.httpErrorMessage = defaults.httpErrorMessage;
-    	      this.httpErrorStatusCode = defaults.httpErrorStatusCode;
-    	      this.insertTime = defaults.insertTime;
-    	      this.kind = defaults.kind;
-    	      this.name = defaults.name;
-    	      this.operationGroupId = defaults.operationGroupId;
-    	      this.operationType = defaults.operationType;
-    	      this.progress = defaults.progress;
-    	      this.region = defaults.region;
-    	      this.selfLink = defaults.selfLink;
-    	      this.startTime = defaults.startTime;
-    	      this.status = defaults.status;
-    	      this.statusMessage = defaults.statusMessage;
-    	      this.targetId = defaults.targetId;
-    	      this.targetLink = defaults.targetLink;
-    	      this.user = defaults.user;
-    	      this.warnings = defaults.warnings;
-    	      this.zone = defaults.zone;
+            $ = new OperationResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder clientOperationId(String clientOperationId) {
-            this.clientOperationId = Objects.requireNonNull(clientOperationId);
+            $.clientOperationId = clientOperationId;
             return this;
         }
+
         public Builder description(String description) {
-            this.description = Objects.requireNonNull(description);
+            $.description = description;
             return this;
         }
+
         public Builder endTime(String endTime) {
-            this.endTime = Objects.requireNonNull(endTime);
+            $.endTime = endTime;
             return this;
         }
+
         public Builder error(OperationErrorResponse error) {
-            this.error = Objects.requireNonNull(error);
+            $.error = error;
             return this;
         }
+
         public Builder httpErrorMessage(String httpErrorMessage) {
-            this.httpErrorMessage = Objects.requireNonNull(httpErrorMessage);
+            $.httpErrorMessage = httpErrorMessage;
             return this;
         }
+
         public Builder httpErrorStatusCode(Integer httpErrorStatusCode) {
-            this.httpErrorStatusCode = Objects.requireNonNull(httpErrorStatusCode);
+            $.httpErrorStatusCode = httpErrorStatusCode;
             return this;
         }
+
         public Builder insertTime(String insertTime) {
-            this.insertTime = Objects.requireNonNull(insertTime);
+            $.insertTime = insertTime;
             return this;
         }
+
         public Builder kind(String kind) {
-            this.kind = Objects.requireNonNull(kind);
+            $.kind = kind;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder operationGroupId(String operationGroupId) {
-            this.operationGroupId = Objects.requireNonNull(operationGroupId);
+            $.operationGroupId = operationGroupId;
             return this;
         }
+
         public Builder operationType(String operationType) {
-            this.operationType = Objects.requireNonNull(operationType);
+            $.operationType = operationType;
             return this;
         }
+
         public Builder progress(Integer progress) {
-            this.progress = Objects.requireNonNull(progress);
+            $.progress = progress;
             return this;
         }
+
         public Builder region(String region) {
-            this.region = Objects.requireNonNull(region);
+            $.region = region;
             return this;
         }
+
         public Builder selfLink(String selfLink) {
-            this.selfLink = Objects.requireNonNull(selfLink);
+            $.selfLink = selfLink;
             return this;
         }
+
         public Builder startTime(String startTime) {
-            this.startTime = Objects.requireNonNull(startTime);
+            $.startTime = startTime;
             return this;
         }
+
         public Builder status(String status) {
-            this.status = Objects.requireNonNull(status);
+            $.status = status;
             return this;
         }
+
         public Builder statusMessage(String statusMessage) {
-            this.statusMessage = Objects.requireNonNull(statusMessage);
+            $.statusMessage = statusMessage;
             return this;
         }
+
         public Builder targetId(String targetId) {
-            this.targetId = Objects.requireNonNull(targetId);
+            $.targetId = targetId;
             return this;
         }
+
         public Builder targetLink(String targetLink) {
-            this.targetLink = Objects.requireNonNull(targetLink);
+            $.targetLink = targetLink;
             return this;
         }
+
         public Builder user(String user) {
-            this.user = Objects.requireNonNull(user);
+            $.user = user;
             return this;
         }
+
         public Builder warnings(List<OperationWarningsItemResponse> warnings) {
-            this.warnings = Objects.requireNonNull(warnings);
+            $.warnings = warnings;
             return this;
         }
+
         public Builder warnings(OperationWarningsItemResponse... warnings) {
             return warnings(List.of(warnings));
         }
+
         public Builder zone(String zone) {
-            this.zone = Objects.requireNonNull(zone);
+            $.zone = zone;
             return this;
-        }        public OperationResponse build() {
-            return new OperationResponse(clientOperationId, description, endTime, error, httpErrorMessage, httpErrorStatusCode, insertTime, kind, name, operationGroupId, operationType, progress, region, selfLink, startTime, status, statusMessage, targetId, targetLink, user, warnings, zone);
+        }
+
+        public OperationResponse build() {
+            $.clientOperationId = Objects.requireNonNull($.clientOperationId, "expected parameter 'clientOperationId' to be non-null");
+            $.description = Objects.requireNonNull($.description, "expected parameter 'description' to be non-null");
+            $.endTime = Objects.requireNonNull($.endTime, "expected parameter 'endTime' to be non-null");
+            $.error = Objects.requireNonNull($.error, "expected parameter 'error' to be non-null");
+            $.httpErrorMessage = Objects.requireNonNull($.httpErrorMessage, "expected parameter 'httpErrorMessage' to be non-null");
+            $.httpErrorStatusCode = Objects.requireNonNull($.httpErrorStatusCode, "expected parameter 'httpErrorStatusCode' to be non-null");
+            $.insertTime = Objects.requireNonNull($.insertTime, "expected parameter 'insertTime' to be non-null");
+            $.kind = Objects.requireNonNull($.kind, "expected parameter 'kind' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.operationGroupId = Objects.requireNonNull($.operationGroupId, "expected parameter 'operationGroupId' to be non-null");
+            $.operationType = Objects.requireNonNull($.operationType, "expected parameter 'operationType' to be non-null");
+            $.progress = Objects.requireNonNull($.progress, "expected parameter 'progress' to be non-null");
+            $.region = Objects.requireNonNull($.region, "expected parameter 'region' to be non-null");
+            $.selfLink = Objects.requireNonNull($.selfLink, "expected parameter 'selfLink' to be non-null");
+            $.startTime = Objects.requireNonNull($.startTime, "expected parameter 'startTime' to be non-null");
+            $.status = Objects.requireNonNull($.status, "expected parameter 'status' to be non-null");
+            $.statusMessage = Objects.requireNonNull($.statusMessage, "expected parameter 'statusMessage' to be non-null");
+            $.targetId = Objects.requireNonNull($.targetId, "expected parameter 'targetId' to be non-null");
+            $.targetLink = Objects.requireNonNull($.targetLink, "expected parameter 'targetLink' to be non-null");
+            $.user = Objects.requireNonNull($.user, "expected parameter 'user' to be non-null");
+            $.warnings = Objects.requireNonNull($.warnings, "expected parameter 'warnings' to be non-null");
+            $.zone = Objects.requireNonNull($.zone, "expected parameter 'zone' to be non-null");
+            return $;
         }
     }
+
 }

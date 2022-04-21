@@ -25,10 +25,10 @@ public final class PostgresInstancePropertiesResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="admin")
-      private final @Nullable String admin;
+    private @Nullable String admin;
 
     public Optional<String> admin() {
-        return this.admin == null ? Optional.empty() : Optional.ofNullable(this.admin);
+        return Optional.ofNullable(this.admin);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class PostgresInstancePropertiesResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="basicLoginInformation")
-      private final @Nullable BasicLoginInformationResponse basicLoginInformation;
+    private @Nullable BasicLoginInformationResponse basicLoginInformation;
 
     public Optional<BasicLoginInformationResponse> basicLoginInformation() {
-        return this.basicLoginInformation == null ? Optional.empty() : Optional.ofNullable(this.basicLoginInformation);
+        return Optional.ofNullable(this.basicLoginInformation);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class PostgresInstancePropertiesResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="dataControllerId")
-      private final @Nullable String dataControllerId;
+    private @Nullable String dataControllerId;
 
     public Optional<String> dataControllerId() {
-        return this.dataControllerId == null ? Optional.empty() : Optional.ofNullable(this.dataControllerId);
+        return Optional.ofNullable(this.dataControllerId);
     }
 
     /**
@@ -58,10 +58,10 @@ public final class PostgresInstancePropertiesResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="k8sRaw")
-      private final @Nullable Object k8sRaw;
+    private @Nullable Object k8sRaw;
 
     public Optional<Object> k8sRaw() {
-        return this.k8sRaw == null ? Optional.empty() : Optional.ofNullable(this.k8sRaw);
+        return Optional.ofNullable(this.k8sRaw);
     }
 
     /**
@@ -69,98 +69,82 @@ public final class PostgresInstancePropertiesResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="lastUploadedDate")
-      private final @Nullable String lastUploadedDate;
+    private @Nullable String lastUploadedDate;
 
     public Optional<String> lastUploadedDate() {
-        return this.lastUploadedDate == null ? Optional.empty() : Optional.ofNullable(this.lastUploadedDate);
+        return Optional.ofNullable(this.lastUploadedDate);
     }
 
     @Import(name="provisioningState", required=true)
-      private final String provisioningState;
+    private String provisioningState;
 
     public String provisioningState() {
         return this.provisioningState;
     }
 
-    public PostgresInstancePropertiesResponse(
-        @Nullable String admin,
-        @Nullable BasicLoginInformationResponse basicLoginInformation,
-        @Nullable String dataControllerId,
-        @Nullable Object k8sRaw,
-        @Nullable String lastUploadedDate,
-        String provisioningState) {
-        this.admin = admin;
-        this.basicLoginInformation = basicLoginInformation;
-        this.dataControllerId = dataControllerId;
-        this.k8sRaw = k8sRaw;
-        this.lastUploadedDate = lastUploadedDate;
-        this.provisioningState = Objects.requireNonNull(provisioningState, "expected parameter 'provisioningState' to be non-null");
-    }
+    private PostgresInstancePropertiesResponse() {}
 
-    private PostgresInstancePropertiesResponse() {
-        this.admin = null;
-        this.basicLoginInformation = null;
-        this.dataControllerId = null;
-        this.k8sRaw = null;
-        this.lastUploadedDate = null;
-        this.provisioningState = null;
+    private PostgresInstancePropertiesResponse(PostgresInstancePropertiesResponse $) {
+        this.admin = $.admin;
+        this.basicLoginInformation = $.basicLoginInformation;
+        this.dataControllerId = $.dataControllerId;
+        this.k8sRaw = $.k8sRaw;
+        this.lastUploadedDate = $.lastUploadedDate;
+        this.provisioningState = $.provisioningState;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PostgresInstancePropertiesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String admin;
-        private @Nullable BasicLoginInformationResponse basicLoginInformation;
-        private @Nullable String dataControllerId;
-        private @Nullable Object k8sRaw;
-        private @Nullable String lastUploadedDate;
-        private String provisioningState;
+        private PostgresInstancePropertiesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new PostgresInstancePropertiesResponse();
         }
 
         public Builder(PostgresInstancePropertiesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.admin = defaults.admin;
-    	      this.basicLoginInformation = defaults.basicLoginInformation;
-    	      this.dataControllerId = defaults.dataControllerId;
-    	      this.k8sRaw = defaults.k8sRaw;
-    	      this.lastUploadedDate = defaults.lastUploadedDate;
-    	      this.provisioningState = defaults.provisioningState;
+            $ = new PostgresInstancePropertiesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder admin(@Nullable String admin) {
-            this.admin = admin;
+            $.admin = admin;
             return this;
         }
+
         public Builder basicLoginInformation(@Nullable BasicLoginInformationResponse basicLoginInformation) {
-            this.basicLoginInformation = basicLoginInformation;
+            $.basicLoginInformation = basicLoginInformation;
             return this;
         }
+
         public Builder dataControllerId(@Nullable String dataControllerId) {
-            this.dataControllerId = dataControllerId;
+            $.dataControllerId = dataControllerId;
             return this;
         }
+
         public Builder k8sRaw(@Nullable Object k8sRaw) {
-            this.k8sRaw = k8sRaw;
+            $.k8sRaw = k8sRaw;
             return this;
         }
+
         public Builder lastUploadedDate(@Nullable String lastUploadedDate) {
-            this.lastUploadedDate = lastUploadedDate;
+            $.lastUploadedDate = lastUploadedDate;
             return this;
         }
+
         public Builder provisioningState(String provisioningState) {
-            this.provisioningState = Objects.requireNonNull(provisioningState);
+            $.provisioningState = provisioningState;
             return this;
-        }        public PostgresInstancePropertiesResponse build() {
-            return new PostgresInstancePropertiesResponse(admin, basicLoginInformation, dataControllerId, k8sRaw, lastUploadedDate, provisioningState);
+        }
+
+        public PostgresInstancePropertiesResponse build() {
+            $.provisioningState = Objects.requireNonNull($.provisioningState, "expected parameter 'provisioningState' to be non-null");
+            return $;
         }
     }
+
 }

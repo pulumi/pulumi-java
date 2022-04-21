@@ -5,13 +5,13 @@ package com.pulumi.googlenative.bigtableadmin_v2;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.bigtableadmin_v2.enums.ClusterDefaultStorageType;
 import com.pulumi.googlenative.bigtableadmin_v2.inputs.ClusterConfigArgs;
 import com.pulumi.googlenative.bigtableadmin_v2.inputs.EncryptionConfigArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,14 +24,14 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="clusterConfig")
-      private final @Nullable Output<ClusterConfigArgs> clusterConfig;
+    private @Nullable Output<ClusterConfigArgs> clusterConfig;
 
-    public Output<ClusterConfigArgs> clusterConfig() {
-        return this.clusterConfig == null ? Codegen.empty() : this.clusterConfig;
+    public Optional<Output<ClusterConfigArgs>> clusterConfig() {
+        return Optional.ofNullable(this.clusterConfig);
     }
 
     @Import(name="clusterId", required=true)
-      private final Output<String> clusterId;
+    private Output<String> clusterId;
 
     public Output<String> clusterId() {
         return this.clusterId;
@@ -42,10 +42,10 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="defaultStorageType")
-      private final @Nullable Output<ClusterDefaultStorageType> defaultStorageType;
+    private @Nullable Output<ClusterDefaultStorageType> defaultStorageType;
 
-    public Output<ClusterDefaultStorageType> defaultStorageType() {
-        return this.defaultStorageType == null ? Codegen.empty() : this.defaultStorageType;
+    public Optional<Output<ClusterDefaultStorageType>> defaultStorageType() {
+        return Optional.ofNullable(this.defaultStorageType);
     }
 
     /**
@@ -53,14 +53,14 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="encryptionConfig")
-      private final @Nullable Output<EncryptionConfigArgs> encryptionConfig;
+    private @Nullable Output<EncryptionConfigArgs> encryptionConfig;
 
-    public Output<EncryptionConfigArgs> encryptionConfig() {
-        return this.encryptionConfig == null ? Codegen.empty() : this.encryptionConfig;
+    public Optional<Output<EncryptionConfigArgs>> encryptionConfig() {
+        return Optional.ofNullable(this.encryptionConfig);
     }
 
     @Import(name="instanceId", required=true)
-      private final Output<String> instanceId;
+    private Output<String> instanceId;
 
     public Output<String> instanceId() {
         return this.instanceId;
@@ -71,10 +71,10 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -82,17 +82,17 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -100,154 +100,130 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="serveNodes")
-      private final @Nullable Output<Integer> serveNodes;
+    private @Nullable Output<Integer> serveNodes;
 
-    public Output<Integer> serveNodes() {
-        return this.serveNodes == null ? Codegen.empty() : this.serveNodes;
+    public Optional<Output<Integer>> serveNodes() {
+        return Optional.ofNullable(this.serveNodes);
     }
 
-    public ClusterArgs(
-        @Nullable Output<ClusterConfigArgs> clusterConfig,
-        Output<String> clusterId,
-        @Nullable Output<ClusterDefaultStorageType> defaultStorageType,
-        @Nullable Output<EncryptionConfigArgs> encryptionConfig,
-        Output<String> instanceId,
-        @Nullable Output<String> location,
-        @Nullable Output<String> name,
-        @Nullable Output<String> project,
-        @Nullable Output<Integer> serveNodes) {
-        this.clusterConfig = clusterConfig;
-        this.clusterId = Objects.requireNonNull(clusterId, "expected parameter 'clusterId' to be non-null");
-        this.defaultStorageType = defaultStorageType;
-        this.encryptionConfig = encryptionConfig;
-        this.instanceId = Objects.requireNonNull(instanceId, "expected parameter 'instanceId' to be non-null");
-        this.location = location;
-        this.name = name;
-        this.project = project;
-        this.serveNodes = serveNodes;
-    }
+    private ClusterArgs() {}
 
-    private ClusterArgs() {
-        this.clusterConfig = Codegen.empty();
-        this.clusterId = Codegen.empty();
-        this.defaultStorageType = Codegen.empty();
-        this.encryptionConfig = Codegen.empty();
-        this.instanceId = Codegen.empty();
-        this.location = Codegen.empty();
-        this.name = Codegen.empty();
-        this.project = Codegen.empty();
-        this.serveNodes = Codegen.empty();
+    private ClusterArgs(ClusterArgs $) {
+        this.clusterConfig = $.clusterConfig;
+        this.clusterId = $.clusterId;
+        this.defaultStorageType = $.defaultStorageType;
+        this.encryptionConfig = $.encryptionConfig;
+        this.instanceId = $.instanceId;
+        this.location = $.location;
+        this.name = $.name;
+        this.project = $.project;
+        this.serveNodes = $.serveNodes;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ClusterArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<ClusterConfigArgs> clusterConfig;
-        private Output<String> clusterId;
-        private @Nullable Output<ClusterDefaultStorageType> defaultStorageType;
-        private @Nullable Output<EncryptionConfigArgs> encryptionConfig;
-        private Output<String> instanceId;
-        private @Nullable Output<String> location;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> project;
-        private @Nullable Output<Integer> serveNodes;
+        private ClusterArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ClusterArgs();
         }
 
         public Builder(ClusterArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.clusterConfig = defaults.clusterConfig;
-    	      this.clusterId = defaults.clusterId;
-    	      this.defaultStorageType = defaults.defaultStorageType;
-    	      this.encryptionConfig = defaults.encryptionConfig;
-    	      this.instanceId = defaults.instanceId;
-    	      this.location = defaults.location;
-    	      this.name = defaults.name;
-    	      this.project = defaults.project;
-    	      this.serveNodes = defaults.serveNodes;
+            $ = new ClusterArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder clusterConfig(@Nullable Output<ClusterConfigArgs> clusterConfig) {
-            this.clusterConfig = clusterConfig;
+            $.clusterConfig = clusterConfig;
             return this;
         }
-        public Builder clusterConfig(@Nullable ClusterConfigArgs clusterConfig) {
-            this.clusterConfig = Codegen.ofNullable(clusterConfig);
-            return this;
+
+        public Builder clusterConfig(ClusterConfigArgs clusterConfig) {
+            return clusterConfig(Output.of(clusterConfig));
         }
+
         public Builder clusterId(Output<String> clusterId) {
-            this.clusterId = Objects.requireNonNull(clusterId);
+            $.clusterId = clusterId;
             return this;
         }
+
         public Builder clusterId(String clusterId) {
-            this.clusterId = Output.of(Objects.requireNonNull(clusterId));
-            return this;
+            return clusterId(Output.of(clusterId));
         }
+
         public Builder defaultStorageType(@Nullable Output<ClusterDefaultStorageType> defaultStorageType) {
-            this.defaultStorageType = defaultStorageType;
+            $.defaultStorageType = defaultStorageType;
             return this;
         }
-        public Builder defaultStorageType(@Nullable ClusterDefaultStorageType defaultStorageType) {
-            this.defaultStorageType = Codegen.ofNullable(defaultStorageType);
-            return this;
+
+        public Builder defaultStorageType(ClusterDefaultStorageType defaultStorageType) {
+            return defaultStorageType(Output.of(defaultStorageType));
         }
+
         public Builder encryptionConfig(@Nullable Output<EncryptionConfigArgs> encryptionConfig) {
-            this.encryptionConfig = encryptionConfig;
+            $.encryptionConfig = encryptionConfig;
             return this;
         }
-        public Builder encryptionConfig(@Nullable EncryptionConfigArgs encryptionConfig) {
-            this.encryptionConfig = Codegen.ofNullable(encryptionConfig);
-            return this;
+
+        public Builder encryptionConfig(EncryptionConfigArgs encryptionConfig) {
+            return encryptionConfig(Output.of(encryptionConfig));
         }
+
         public Builder instanceId(Output<String> instanceId) {
-            this.instanceId = Objects.requireNonNull(instanceId);
+            $.instanceId = instanceId;
             return this;
         }
+
         public Builder instanceId(String instanceId) {
-            this.instanceId = Output.of(Objects.requireNonNull(instanceId));
-            return this;
+            return instanceId(Output.of(instanceId));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder serveNodes(@Nullable Output<Integer> serveNodes) {
-            this.serveNodes = serveNodes;
+            $.serveNodes = serveNodes;
             return this;
         }
-        public Builder serveNodes(@Nullable Integer serveNodes) {
-            this.serveNodes = Codegen.ofNullable(serveNodes);
-            return this;
-        }        public ClusterArgs build() {
-            return new ClusterArgs(clusterConfig, clusterId, defaultStorageType, encryptionConfig, instanceId, location, name, project, serveNodes);
+
+        public Builder serveNodes(Integer serveNodes) {
+            return serveNodes(Output.of(serveNodes));
+        }
+
+        public ClusterArgs build() {
+            $.clusterId = Objects.requireNonNull($.clusterId, "expected parameter 'clusterId' to be non-null");
+            $.instanceId = Objects.requireNonNull($.instanceId, "expected parameter 'instanceId' to be non-null");
+            return $;
         }
     }
+
 }

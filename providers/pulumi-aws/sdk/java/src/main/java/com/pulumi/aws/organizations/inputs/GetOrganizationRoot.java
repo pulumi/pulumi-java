@@ -19,7 +19,7 @@ public final class GetOrganizationRoot extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="arn", required=true)
-      private final String arn;
+    private String arn;
 
     public String arn() {
         return this.arn;
@@ -30,7 +30,7 @@ public final class GetOrganizationRoot extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="id", required=true)
-      private final String id;
+    private String id;
 
     public String id() {
         return this.id;
@@ -41,7 +41,7 @@ public final class GetOrganizationRoot extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -52,76 +52,70 @@ public final class GetOrganizationRoot extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="policyTypes", required=true)
-      private final List<GetOrganizationRootPolicyType> policyTypes;
+    private List<GetOrganizationRootPolicyType> policyTypes;
 
     public List<GetOrganizationRootPolicyType> policyTypes() {
         return this.policyTypes;
     }
 
-    public GetOrganizationRoot(
-        String arn,
-        String id,
-        String name,
-        List<GetOrganizationRootPolicyType> policyTypes) {
-        this.arn = Objects.requireNonNull(arn, "expected parameter 'arn' to be non-null");
-        this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.policyTypes = Objects.requireNonNull(policyTypes, "expected parameter 'policyTypes' to be non-null");
-    }
+    private GetOrganizationRoot() {}
 
-    private GetOrganizationRoot() {
-        this.arn = null;
-        this.id = null;
-        this.name = null;
-        this.policyTypes = List.of();
+    private GetOrganizationRoot(GetOrganizationRoot $) {
+        this.arn = $.arn;
+        this.id = $.id;
+        this.name = $.name;
+        this.policyTypes = $.policyTypes;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetOrganizationRoot defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String arn;
-        private String id;
-        private String name;
-        private List<GetOrganizationRootPolicyType> policyTypes;
+        private GetOrganizationRoot $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetOrganizationRoot();
         }
 
         public Builder(GetOrganizationRoot defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.arn = defaults.arn;
-    	      this.id = defaults.id;
-    	      this.name = defaults.name;
-    	      this.policyTypes = defaults.policyTypes;
+            $ = new GetOrganizationRoot(Objects.requireNonNull(defaults));
         }
 
         public Builder arn(String arn) {
-            this.arn = Objects.requireNonNull(arn);
+            $.arn = arn;
             return this;
         }
+
         public Builder id(String id) {
-            this.id = Objects.requireNonNull(id);
+            $.id = id;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder policyTypes(List<GetOrganizationRootPolicyType> policyTypes) {
-            this.policyTypes = Objects.requireNonNull(policyTypes);
+            $.policyTypes = policyTypes;
             return this;
         }
+
         public Builder policyTypes(GetOrganizationRootPolicyType... policyTypes) {
             return policyTypes(List.of(policyTypes));
-        }        public GetOrganizationRoot build() {
-            return new GetOrganizationRoot(arn, id, name, policyTypes);
+        }
+
+        public GetOrganizationRoot build() {
+            $.arn = Objects.requireNonNull($.arn, "expected parameter 'arn' to be non-null");
+            $.id = Objects.requireNonNull($.id, "expected parameter 'id' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.policyTypes = Objects.requireNonNull($.policyTypes, "expected parameter 'policyTypes' to be non-null");
+            return $;
         }
     }
+
 }

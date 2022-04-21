@@ -5,9 +5,9 @@ package com.pulumi.googlenative.datafusion_v1beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class CryptoKeyConfigArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="keyReference")
-      private final @Nullable Output<String> keyReference;
+    private @Nullable Output<String> keyReference;
 
-    public Output<String> keyReference() {
-        return this.keyReference == null ? Codegen.empty() : this.keyReference;
+    public Optional<Output<String>> keyReference() {
+        return Optional.ofNullable(this.keyReference);
     }
 
-    public CryptoKeyConfigArgs(@Nullable Output<String> keyReference) {
-        this.keyReference = keyReference;
-    }
+    private CryptoKeyConfigArgs() {}
 
-    private CryptoKeyConfigArgs() {
-        this.keyReference = Codegen.empty();
+    private CryptoKeyConfigArgs(CryptoKeyConfigArgs $) {
+        this.keyReference = $.keyReference;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CryptoKeyConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> keyReference;
+        private CryptoKeyConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CryptoKeyConfigArgs();
         }
 
         public Builder(CryptoKeyConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.keyReference = defaults.keyReference;
+            $ = new CryptoKeyConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder keyReference(@Nullable Output<String> keyReference) {
-            this.keyReference = keyReference;
+            $.keyReference = keyReference;
             return this;
         }
-        public Builder keyReference(@Nullable String keyReference) {
-            this.keyReference = Codegen.ofNullable(keyReference);
-            return this;
-        }        public CryptoKeyConfigArgs build() {
-            return new CryptoKeyConfigArgs(keyReference);
+
+        public Builder keyReference(String keyReference) {
+            return keyReference(Output.of(keyReference));
+        }
+
+        public CryptoKeyConfigArgs build() {
+            return $;
         }
     }
+
 }

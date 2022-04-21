@@ -17,7 +17,7 @@ public final class GetWorkloadNetworkDnsZoneArgs extends com.pulumi.resources.In
      * 
      */
     @Import(name="dnsZoneId", required=true)
-      private final String dnsZoneId;
+    private String dnsZoneId;
 
     public String dnsZoneId() {
         return this.dnsZoneId;
@@ -28,7 +28,7 @@ public final class GetWorkloadNetworkDnsZoneArgs extends com.pulumi.resources.In
      * 
      */
     @Import(name="privateCloudName", required=true)
-      private final String privateCloudName;
+    private String privateCloudName;
 
     public String privateCloudName() {
         return this.privateCloudName;
@@ -39,64 +39,59 @@ public final class GetWorkloadNetworkDnsZoneArgs extends com.pulumi.resources.In
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public GetWorkloadNetworkDnsZoneArgs(
-        String dnsZoneId,
-        String privateCloudName,
-        String resourceGroupName) {
-        this.dnsZoneId = Objects.requireNonNull(dnsZoneId, "expected parameter 'dnsZoneId' to be non-null");
-        this.privateCloudName = Objects.requireNonNull(privateCloudName, "expected parameter 'privateCloudName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private GetWorkloadNetworkDnsZoneArgs() {}
 
-    private GetWorkloadNetworkDnsZoneArgs() {
-        this.dnsZoneId = null;
-        this.privateCloudName = null;
-        this.resourceGroupName = null;
+    private GetWorkloadNetworkDnsZoneArgs(GetWorkloadNetworkDnsZoneArgs $) {
+        this.dnsZoneId = $.dnsZoneId;
+        this.privateCloudName = $.privateCloudName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetWorkloadNetworkDnsZoneArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String dnsZoneId;
-        private String privateCloudName;
-        private String resourceGroupName;
+        private GetWorkloadNetworkDnsZoneArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetWorkloadNetworkDnsZoneArgs();
         }
 
         public Builder(GetWorkloadNetworkDnsZoneArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dnsZoneId = defaults.dnsZoneId;
-    	      this.privateCloudName = defaults.privateCloudName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new GetWorkloadNetworkDnsZoneArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder dnsZoneId(String dnsZoneId) {
-            this.dnsZoneId = Objects.requireNonNull(dnsZoneId);
+            $.dnsZoneId = dnsZoneId;
             return this;
         }
+
         public Builder privateCloudName(String privateCloudName) {
-            this.privateCloudName = Objects.requireNonNull(privateCloudName);
+            $.privateCloudName = privateCloudName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public GetWorkloadNetworkDnsZoneArgs build() {
-            return new GetWorkloadNetworkDnsZoneArgs(dnsZoneId, privateCloudName, resourceGroupName);
+        }
+
+        public GetWorkloadNetworkDnsZoneArgs build() {
+            $.dnsZoneId = Objects.requireNonNull($.dnsZoneId, "expected parameter 'dnsZoneId' to be non-null");
+            $.privateCloudName = Objects.requireNonNull($.privateCloudName, "expected parameter 'privateCloudName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

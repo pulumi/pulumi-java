@@ -5,9 +5,9 @@ package com.pulumi.gcp.kms.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class KeyRingIAMPolicyState extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="etag")
-      private final @Nullable Output<String> etag;
+    private @Nullable Output<String> etag;
 
-    public Output<String> etag() {
-        return this.etag == null ? Codegen.empty() : this.etag;
+    public Optional<Output<String>> etag() {
+        return Optional.ofNullable(this.etag);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class KeyRingIAMPolicyState extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="keyRingId")
-      private final @Nullable Output<String> keyRingId;
+    private @Nullable Output<String> keyRingId;
 
-    public Output<String> keyRingId() {
-        return this.keyRingId == null ? Codegen.empty() : this.keyRingId;
+    public Optional<Output<String>> keyRingId() {
+        return Optional.ofNullable(this.keyRingId);
     }
 
     /**
@@ -46,76 +46,68 @@ public final class KeyRingIAMPolicyState extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="policyData")
-      private final @Nullable Output<String> policyData;
+    private @Nullable Output<String> policyData;
 
-    public Output<String> policyData() {
-        return this.policyData == null ? Codegen.empty() : this.policyData;
+    public Optional<Output<String>> policyData() {
+        return Optional.ofNullable(this.policyData);
     }
 
-    public KeyRingIAMPolicyState(
-        @Nullable Output<String> etag,
-        @Nullable Output<String> keyRingId,
-        @Nullable Output<String> policyData) {
-        this.etag = etag;
-        this.keyRingId = keyRingId;
-        this.policyData = policyData;
-    }
+    private KeyRingIAMPolicyState() {}
 
-    private KeyRingIAMPolicyState() {
-        this.etag = Codegen.empty();
-        this.keyRingId = Codegen.empty();
-        this.policyData = Codegen.empty();
+    private KeyRingIAMPolicyState(KeyRingIAMPolicyState $) {
+        this.etag = $.etag;
+        this.keyRingId = $.keyRingId;
+        this.policyData = $.policyData;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(KeyRingIAMPolicyState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> etag;
-        private @Nullable Output<String> keyRingId;
-        private @Nullable Output<String> policyData;
+        private KeyRingIAMPolicyState $;
 
         public Builder() {
-    	      // Empty
+            $ = new KeyRingIAMPolicyState();
         }
 
         public Builder(KeyRingIAMPolicyState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.etag = defaults.etag;
-    	      this.keyRingId = defaults.keyRingId;
-    	      this.policyData = defaults.policyData;
+            $ = new KeyRingIAMPolicyState(Objects.requireNonNull(defaults));
         }
 
         public Builder etag(@Nullable Output<String> etag) {
-            this.etag = etag;
+            $.etag = etag;
             return this;
         }
-        public Builder etag(@Nullable String etag) {
-            this.etag = Codegen.ofNullable(etag);
-            return this;
+
+        public Builder etag(String etag) {
+            return etag(Output.of(etag));
         }
+
         public Builder keyRingId(@Nullable Output<String> keyRingId) {
-            this.keyRingId = keyRingId;
+            $.keyRingId = keyRingId;
             return this;
         }
-        public Builder keyRingId(@Nullable String keyRingId) {
-            this.keyRingId = Codegen.ofNullable(keyRingId);
-            return this;
+
+        public Builder keyRingId(String keyRingId) {
+            return keyRingId(Output.of(keyRingId));
         }
+
         public Builder policyData(@Nullable Output<String> policyData) {
-            this.policyData = policyData;
+            $.policyData = policyData;
             return this;
         }
-        public Builder policyData(@Nullable String policyData) {
-            this.policyData = Codegen.ofNullable(policyData);
-            return this;
-        }        public KeyRingIAMPolicyState build() {
-            return new KeyRingIAMPolicyState(etag, keyRingId, policyData);
+
+        public Builder policyData(String policyData) {
+            return policyData(Output.of(policyData));
+        }
+
+        public KeyRingIAMPolicyState build() {
+            return $;
         }
     }
+
 }

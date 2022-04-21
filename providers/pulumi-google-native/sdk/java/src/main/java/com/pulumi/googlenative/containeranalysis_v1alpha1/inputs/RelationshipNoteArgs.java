@@ -5,9 +5,9 @@ package com.pulumi.googlenative.containeranalysis_v1alpha1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.containeranalysis_v1alpha1.enums.RelationshipNoteType;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class RelationshipNoteArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="type")
-      private final @Nullable Output<RelationshipNoteType> type;
+    private @Nullable Output<RelationshipNoteType> type;
 
-    public Output<RelationshipNoteType> type() {
-        return this.type == null ? Codegen.empty() : this.type;
+    public Optional<Output<RelationshipNoteType>> type() {
+        return Optional.ofNullable(this.type);
     }
 
-    public RelationshipNoteArgs(@Nullable Output<RelationshipNoteType> type) {
-        this.type = type;
-    }
+    private RelationshipNoteArgs() {}
 
-    private RelationshipNoteArgs() {
-        this.type = Codegen.empty();
+    private RelationshipNoteArgs(RelationshipNoteArgs $) {
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RelationshipNoteArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<RelationshipNoteType> type;
+        private RelationshipNoteArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RelationshipNoteArgs();
         }
 
         public Builder(RelationshipNoteArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.type = defaults.type;
+            $ = new RelationshipNoteArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder type(@Nullable Output<RelationshipNoteType> type) {
-            this.type = type;
+            $.type = type;
             return this;
         }
-        public Builder type(@Nullable RelationshipNoteType type) {
-            this.type = Codegen.ofNullable(type);
-            return this;
-        }        public RelationshipNoteArgs build() {
-            return new RelationshipNoteArgs(type);
+
+        public Builder type(RelationshipNoteType type) {
+            return type(Output.of(type));
+        }
+
+        public RelationshipNoteArgs build() {
+            return $;
         }
     }
+
 }

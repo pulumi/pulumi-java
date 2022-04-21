@@ -15,110 +15,100 @@ public final class GetUserDataMappingArgs extends com.pulumi.resources.InvokeArg
     public static final GetUserDataMappingArgs Empty = new GetUserDataMappingArgs();
 
     @Import(name="consentStoreId", required=true)
-      private final String consentStoreId;
+    private String consentStoreId;
 
     public String consentStoreId() {
         return this.consentStoreId;
     }
 
     @Import(name="datasetId", required=true)
-      private final String datasetId;
+    private String datasetId;
 
     public String datasetId() {
         return this.datasetId;
     }
 
     @Import(name="location", required=true)
-      private final String location;
+    private String location;
 
     public String location() {
         return this.location;
     }
 
     @Import(name="project")
-      private final @Nullable String project;
+    private @Nullable String project;
 
     public Optional<String> project() {
-        return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
+        return Optional.ofNullable(this.project);
     }
 
     @Import(name="userDataMappingId", required=true)
-      private final String userDataMappingId;
+    private String userDataMappingId;
 
     public String userDataMappingId() {
         return this.userDataMappingId;
     }
 
-    public GetUserDataMappingArgs(
-        String consentStoreId,
-        String datasetId,
-        String location,
-        @Nullable String project,
-        String userDataMappingId) {
-        this.consentStoreId = Objects.requireNonNull(consentStoreId, "expected parameter 'consentStoreId' to be non-null");
-        this.datasetId = Objects.requireNonNull(datasetId, "expected parameter 'datasetId' to be non-null");
-        this.location = Objects.requireNonNull(location, "expected parameter 'location' to be non-null");
-        this.project = project;
-        this.userDataMappingId = Objects.requireNonNull(userDataMappingId, "expected parameter 'userDataMappingId' to be non-null");
-    }
+    private GetUserDataMappingArgs() {}
 
-    private GetUserDataMappingArgs() {
-        this.consentStoreId = null;
-        this.datasetId = null;
-        this.location = null;
-        this.project = null;
-        this.userDataMappingId = null;
+    private GetUserDataMappingArgs(GetUserDataMappingArgs $) {
+        this.consentStoreId = $.consentStoreId;
+        this.datasetId = $.datasetId;
+        this.location = $.location;
+        this.project = $.project;
+        this.userDataMappingId = $.userDataMappingId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetUserDataMappingArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String consentStoreId;
-        private String datasetId;
-        private String location;
-        private @Nullable String project;
-        private String userDataMappingId;
+        private GetUserDataMappingArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetUserDataMappingArgs();
         }
 
         public Builder(GetUserDataMappingArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.consentStoreId = defaults.consentStoreId;
-    	      this.datasetId = defaults.datasetId;
-    	      this.location = defaults.location;
-    	      this.project = defaults.project;
-    	      this.userDataMappingId = defaults.userDataMappingId;
+            $ = new GetUserDataMappingArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder consentStoreId(String consentStoreId) {
-            this.consentStoreId = Objects.requireNonNull(consentStoreId);
+            $.consentStoreId = consentStoreId;
             return this;
         }
+
         public Builder datasetId(String datasetId) {
-            this.datasetId = Objects.requireNonNull(datasetId);
+            $.datasetId = datasetId;
             return this;
         }
+
         public Builder location(String location) {
-            this.location = Objects.requireNonNull(location);
+            $.location = location;
             return this;
         }
+
         public Builder project(@Nullable String project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
+
         public Builder userDataMappingId(String userDataMappingId) {
-            this.userDataMappingId = Objects.requireNonNull(userDataMappingId);
+            $.userDataMappingId = userDataMappingId;
             return this;
-        }        public GetUserDataMappingArgs build() {
-            return new GetUserDataMappingArgs(consentStoreId, datasetId, location, project, userDataMappingId);
+        }
+
+        public GetUserDataMappingArgs build() {
+            $.consentStoreId = Objects.requireNonNull($.consentStoreId, "expected parameter 'consentStoreId' to be non-null");
+            $.datasetId = Objects.requireNonNull($.datasetId, "expected parameter 'datasetId' to be non-null");
+            $.location = Objects.requireNonNull($.location, "expected parameter 'location' to be non-null");
+            $.userDataMappingId = Objects.requireNonNull($.userDataMappingId, "expected parameter 'userDataMappingId' to be non-null");
+            return $;
         }
     }
+
 }

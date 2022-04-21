@@ -5,7 +5,6 @@ package com.pulumi.googlenative.genomics_v1alpha2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,7 +22,7 @@ public final class LocalCopyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="disk", required=true)
-      private final Output<String> disk;
+    private Output<String> disk;
 
     public Output<String> disk() {
         return this.disk;
@@ -34,63 +33,60 @@ public final class LocalCopyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="path", required=true)
-      private final Output<String> path;
+    private Output<String> path;
 
     public Output<String> path() {
         return this.path;
     }
 
-    public LocalCopyArgs(
-        Output<String> disk,
-        Output<String> path) {
-        this.disk = Objects.requireNonNull(disk, "expected parameter 'disk' to be non-null");
-        this.path = Objects.requireNonNull(path, "expected parameter 'path' to be non-null");
-    }
+    private LocalCopyArgs() {}
 
-    private LocalCopyArgs() {
-        this.disk = Codegen.empty();
-        this.path = Codegen.empty();
+    private LocalCopyArgs(LocalCopyArgs $) {
+        this.disk = $.disk;
+        this.path = $.path;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LocalCopyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> disk;
-        private Output<String> path;
+        private LocalCopyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new LocalCopyArgs();
         }
 
         public Builder(LocalCopyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.disk = defaults.disk;
-    	      this.path = defaults.path;
+            $ = new LocalCopyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder disk(Output<String> disk) {
-            this.disk = Objects.requireNonNull(disk);
+            $.disk = disk;
             return this;
         }
+
         public Builder disk(String disk) {
-            this.disk = Output.of(Objects.requireNonNull(disk));
-            return this;
+            return disk(Output.of(disk));
         }
+
         public Builder path(Output<String> path) {
-            this.path = Objects.requireNonNull(path);
+            $.path = path;
             return this;
         }
+
         public Builder path(String path) {
-            this.path = Output.of(Objects.requireNonNull(path));
-            return this;
-        }        public LocalCopyArgs build() {
-            return new LocalCopyArgs(disk, path);
+            return path(Output.of(path));
+        }
+
+        public LocalCopyArgs build() {
+            $.disk = Objects.requireNonNull($.disk, "expected parameter 'disk' to be non-null");
+            $.path = Objects.requireNonNull($.path, "expected parameter 'path' to be non-null");
+            return $;
         }
     }
+
 }

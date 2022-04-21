@@ -15,45 +15,44 @@ public final class DataSourceAccessControlListConfiguration extends com.pulumi.r
     public static final DataSourceAccessControlListConfiguration Empty = new DataSourceAccessControlListConfiguration();
 
     @Import(name="keyPath")
-      private final @Nullable String keyPath;
+    private @Nullable String keyPath;
 
     public Optional<String> keyPath() {
-        return this.keyPath == null ? Optional.empty() : Optional.ofNullable(this.keyPath);
+        return Optional.ofNullable(this.keyPath);
     }
 
-    public DataSourceAccessControlListConfiguration(@Nullable String keyPath) {
-        this.keyPath = keyPath;
-    }
+    private DataSourceAccessControlListConfiguration() {}
 
-    private DataSourceAccessControlListConfiguration() {
-        this.keyPath = null;
+    private DataSourceAccessControlListConfiguration(DataSourceAccessControlListConfiguration $) {
+        this.keyPath = $.keyPath;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DataSourceAccessControlListConfiguration defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String keyPath;
+        private DataSourceAccessControlListConfiguration $;
 
         public Builder() {
-    	      // Empty
+            $ = new DataSourceAccessControlListConfiguration();
         }
 
         public Builder(DataSourceAccessControlListConfiguration defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.keyPath = defaults.keyPath;
+            $ = new DataSourceAccessControlListConfiguration(Objects.requireNonNull(defaults));
         }
 
         public Builder keyPath(@Nullable String keyPath) {
-            this.keyPath = keyPath;
+            $.keyPath = keyPath;
             return this;
-        }        public DataSourceAccessControlListConfiguration build() {
-            return new DataSourceAccessControlListConfiguration(keyPath);
+        }
+
+        public DataSourceAccessControlListConfiguration build() {
+            return $;
         }
     }
+
 }

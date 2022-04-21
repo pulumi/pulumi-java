@@ -5,10 +5,10 @@ package com.pulumi.awsnative.iot.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -17,130 +17,119 @@ public final class TopicRuleKafkaActionArgs extends com.pulumi.resources.Resourc
     public static final TopicRuleKafkaActionArgs Empty = new TopicRuleKafkaActionArgs();
 
     @Import(name="clientProperties", required=true)
-      private final Output<Object> clientProperties;
+    private Output<Object> clientProperties;
 
     public Output<Object> clientProperties() {
         return this.clientProperties;
     }
 
     @Import(name="destinationArn", required=true)
-      private final Output<String> destinationArn;
+    private Output<String> destinationArn;
 
     public Output<String> destinationArn() {
         return this.destinationArn;
     }
 
     @Import(name="key")
-      private final @Nullable Output<String> key;
+    private @Nullable Output<String> key;
 
-    public Output<String> key() {
-        return this.key == null ? Codegen.empty() : this.key;
+    public Optional<Output<String>> key() {
+        return Optional.ofNullable(this.key);
     }
 
     @Import(name="partition")
-      private final @Nullable Output<String> partition;
+    private @Nullable Output<String> partition;
 
-    public Output<String> partition() {
-        return this.partition == null ? Codegen.empty() : this.partition;
+    public Optional<Output<String>> partition() {
+        return Optional.ofNullable(this.partition);
     }
 
     @Import(name="topic", required=true)
-      private final Output<String> topic;
+    private Output<String> topic;
 
     public Output<String> topic() {
         return this.topic;
     }
 
-    public TopicRuleKafkaActionArgs(
-        Output<Object> clientProperties,
-        Output<String> destinationArn,
-        @Nullable Output<String> key,
-        @Nullable Output<String> partition,
-        Output<String> topic) {
-        this.clientProperties = Objects.requireNonNull(clientProperties, "expected parameter 'clientProperties' to be non-null");
-        this.destinationArn = Objects.requireNonNull(destinationArn, "expected parameter 'destinationArn' to be non-null");
-        this.key = key;
-        this.partition = partition;
-        this.topic = Objects.requireNonNull(topic, "expected parameter 'topic' to be non-null");
-    }
+    private TopicRuleKafkaActionArgs() {}
 
-    private TopicRuleKafkaActionArgs() {
-        this.clientProperties = Codegen.empty();
-        this.destinationArn = Codegen.empty();
-        this.key = Codegen.empty();
-        this.partition = Codegen.empty();
-        this.topic = Codegen.empty();
+    private TopicRuleKafkaActionArgs(TopicRuleKafkaActionArgs $) {
+        this.clientProperties = $.clientProperties;
+        this.destinationArn = $.destinationArn;
+        this.key = $.key;
+        this.partition = $.partition;
+        this.topic = $.topic;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TopicRuleKafkaActionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Object> clientProperties;
-        private Output<String> destinationArn;
-        private @Nullable Output<String> key;
-        private @Nullable Output<String> partition;
-        private Output<String> topic;
+        private TopicRuleKafkaActionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TopicRuleKafkaActionArgs();
         }
 
         public Builder(TopicRuleKafkaActionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.clientProperties = defaults.clientProperties;
-    	      this.destinationArn = defaults.destinationArn;
-    	      this.key = defaults.key;
-    	      this.partition = defaults.partition;
-    	      this.topic = defaults.topic;
+            $ = new TopicRuleKafkaActionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder clientProperties(Output<Object> clientProperties) {
-            this.clientProperties = Objects.requireNonNull(clientProperties);
+            $.clientProperties = clientProperties;
             return this;
         }
+
         public Builder clientProperties(Object clientProperties) {
-            this.clientProperties = Output.of(Objects.requireNonNull(clientProperties));
-            return this;
+            return clientProperties(Output.of(clientProperties));
         }
+
         public Builder destinationArn(Output<String> destinationArn) {
-            this.destinationArn = Objects.requireNonNull(destinationArn);
+            $.destinationArn = destinationArn;
             return this;
         }
+
         public Builder destinationArn(String destinationArn) {
-            this.destinationArn = Output.of(Objects.requireNonNull(destinationArn));
-            return this;
+            return destinationArn(Output.of(destinationArn));
         }
+
         public Builder key(@Nullable Output<String> key) {
-            this.key = key;
+            $.key = key;
             return this;
         }
-        public Builder key(@Nullable String key) {
-            this.key = Codegen.ofNullable(key);
-            return this;
+
+        public Builder key(String key) {
+            return key(Output.of(key));
         }
+
         public Builder partition(@Nullable Output<String> partition) {
-            this.partition = partition;
+            $.partition = partition;
             return this;
         }
-        public Builder partition(@Nullable String partition) {
-            this.partition = Codegen.ofNullable(partition);
-            return this;
+
+        public Builder partition(String partition) {
+            return partition(Output.of(partition));
         }
+
         public Builder topic(Output<String> topic) {
-            this.topic = Objects.requireNonNull(topic);
+            $.topic = topic;
             return this;
         }
+
         public Builder topic(String topic) {
-            this.topic = Output.of(Objects.requireNonNull(topic));
-            return this;
-        }        public TopicRuleKafkaActionArgs build() {
-            return new TopicRuleKafkaActionArgs(clientProperties, destinationArn, key, partition, topic);
+            return topic(Output.of(topic));
+        }
+
+        public TopicRuleKafkaActionArgs build() {
+            $.clientProperties = Objects.requireNonNull($.clientProperties, "expected parameter 'clientProperties' to be non-null");
+            $.destinationArn = Objects.requireNonNull($.destinationArn, "expected parameter 'destinationArn' to be non-null");
+            $.topic = Objects.requireNonNull($.topic, "expected parameter 'topic' to be non-null");
+            return $;
         }
     }
+
 }

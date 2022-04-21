@@ -24,10 +24,10 @@ public final class DataDiskResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="createOption")
-      private final @Nullable String createOption;
+    private @Nullable String createOption;
 
     public Optional<String> createOption() {
-        return this.createOption == null ? Optional.empty() : Optional.ofNullable(this.createOption);
+        return Optional.ofNullable(this.createOption);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class DataDiskResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="diskSizeGB")
-      private final @Nullable Integer diskSizeGB;
+    private @Nullable Integer diskSizeGB;
 
     public Optional<Integer> diskSizeGB() {
-        return this.diskSizeGB == null ? Optional.empty() : Optional.ofNullable(this.diskSizeGB);
+        return Optional.ofNullable(this.diskSizeGB);
     }
 
     /**
@@ -46,64 +46,56 @@ public final class DataDiskResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable String name;
+    private @Nullable String name;
 
     public Optional<String> name() {
-        return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
+        return Optional.ofNullable(this.name);
     }
 
-    public DataDiskResponse(
-        @Nullable String createOption,
-        @Nullable Integer diskSizeGB,
-        @Nullable String name) {
-        this.createOption = createOption;
-        this.diskSizeGB = diskSizeGB;
-        this.name = name;
-    }
+    private DataDiskResponse() {}
 
-    private DataDiskResponse() {
-        this.createOption = null;
-        this.diskSizeGB = null;
-        this.name = null;
+    private DataDiskResponse(DataDiskResponse $) {
+        this.createOption = $.createOption;
+        this.diskSizeGB = $.diskSizeGB;
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DataDiskResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String createOption;
-        private @Nullable Integer diskSizeGB;
-        private @Nullable String name;
+        private DataDiskResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new DataDiskResponse();
         }
 
         public Builder(DataDiskResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.createOption = defaults.createOption;
-    	      this.diskSizeGB = defaults.diskSizeGB;
-    	      this.name = defaults.name;
+            $ = new DataDiskResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder createOption(@Nullable String createOption) {
-            this.createOption = createOption;
+            $.createOption = createOption;
             return this;
         }
+
         public Builder diskSizeGB(@Nullable Integer diskSizeGB) {
-            this.diskSizeGB = diskSizeGB;
+            $.diskSizeGB = diskSizeGB;
             return this;
         }
+
         public Builder name(@Nullable String name) {
-            this.name = name;
+            $.name = name;
             return this;
-        }        public DataDiskResponse build() {
-            return new DataDiskResponse(createOption, diskSizeGB, name);
+        }
+
+        public DataDiskResponse build() {
+            return $;
         }
     }
+
 }

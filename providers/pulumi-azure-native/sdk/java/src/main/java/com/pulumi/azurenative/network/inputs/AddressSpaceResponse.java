@@ -24,48 +24,48 @@ public final class AddressSpaceResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="addressPrefixes")
-      private final @Nullable List<String> addressPrefixes;
+    private @Nullable List<String> addressPrefixes;
 
-    public List<String> addressPrefixes() {
-        return this.addressPrefixes == null ? List.of() : this.addressPrefixes;
+    public Optional<List<String>> addressPrefixes() {
+        return Optional.ofNullable(this.addressPrefixes);
     }
 
-    public AddressSpaceResponse(@Nullable List<String> addressPrefixes) {
-        this.addressPrefixes = addressPrefixes;
-    }
+    private AddressSpaceResponse() {}
 
-    private AddressSpaceResponse() {
-        this.addressPrefixes = List.of();
+    private AddressSpaceResponse(AddressSpaceResponse $) {
+        this.addressPrefixes = $.addressPrefixes;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AddressSpaceResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<String> addressPrefixes;
+        private AddressSpaceResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AddressSpaceResponse();
         }
 
         public Builder(AddressSpaceResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.addressPrefixes = defaults.addressPrefixes;
+            $ = new AddressSpaceResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder addressPrefixes(@Nullable List<String> addressPrefixes) {
-            this.addressPrefixes = addressPrefixes;
+            $.addressPrefixes = addressPrefixes;
             return this;
         }
+
         public Builder addressPrefixes(String... addressPrefixes) {
             return addressPrefixes(List.of(addressPrefixes));
-        }        public AddressSpaceResponse build() {
-            return new AddressSpaceResponse(addressPrefixes);
+        }
+
+        public AddressSpaceResponse build() {
+            return $;
         }
     }
+
 }

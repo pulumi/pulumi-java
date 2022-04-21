@@ -3,7 +3,7 @@
 
 package com.pulumi.googlenative.vmmigration_v1alpha1.inputs;
 
-import java.util.Objects;
+
 
 
 /**
@@ -14,28 +14,19 @@ public final class InitializingReplicationStepResponse extends com.pulumi.resour
 
     public static final InitializingReplicationStepResponse Empty = new InitializingReplicationStepResponse();
 
-    public InitializingReplicationStepResponse() {
-    }
-
     public static Builder builder() {
         return new Builder();
     }
 
-    public static Builder builder(InitializingReplicationStepResponse defaults) {
-        return new Builder(defaults);
-    }
-
     public static final class Builder {
+        private InitializingReplicationStepResponse $;
 
         public Builder() {
-    	      // Empty
-        }
-
-        public Builder(InitializingReplicationStepResponse defaults) {
-    	      Objects.requireNonNull(defaults);
+            $ = new InitializingReplicationStepResponse();
         }
         public InitializingReplicationStepResponse build() {
-            return new InitializingReplicationStepResponse();
+            return $;
         }
     }
+
 }

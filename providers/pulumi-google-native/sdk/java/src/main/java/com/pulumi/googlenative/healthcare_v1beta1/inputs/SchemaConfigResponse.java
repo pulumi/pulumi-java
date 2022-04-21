@@ -21,7 +21,7 @@ public final class SchemaConfigResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="recursiveStructureDepth", required=true)
-      private final String recursiveStructureDepth;
+    private String recursiveStructureDepth;
 
     public String recursiveStructureDepth() {
         return this.recursiveStructureDepth;
@@ -32,55 +32,52 @@ public final class SchemaConfigResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="schemaType", required=true)
-      private final String schemaType;
+    private String schemaType;
 
     public String schemaType() {
         return this.schemaType;
     }
 
-    public SchemaConfigResponse(
-        String recursiveStructureDepth,
-        String schemaType) {
-        this.recursiveStructureDepth = Objects.requireNonNull(recursiveStructureDepth, "expected parameter 'recursiveStructureDepth' to be non-null");
-        this.schemaType = Objects.requireNonNull(schemaType, "expected parameter 'schemaType' to be non-null");
-    }
+    private SchemaConfigResponse() {}
 
-    private SchemaConfigResponse() {
-        this.recursiveStructureDepth = null;
-        this.schemaType = null;
+    private SchemaConfigResponse(SchemaConfigResponse $) {
+        this.recursiveStructureDepth = $.recursiveStructureDepth;
+        this.schemaType = $.schemaType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SchemaConfigResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String recursiveStructureDepth;
-        private String schemaType;
+        private SchemaConfigResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new SchemaConfigResponse();
         }
 
         public Builder(SchemaConfigResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.recursiveStructureDepth = defaults.recursiveStructureDepth;
-    	      this.schemaType = defaults.schemaType;
+            $ = new SchemaConfigResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder recursiveStructureDepth(String recursiveStructureDepth) {
-            this.recursiveStructureDepth = Objects.requireNonNull(recursiveStructureDepth);
+            $.recursiveStructureDepth = recursiveStructureDepth;
             return this;
         }
+
         public Builder schemaType(String schemaType) {
-            this.schemaType = Objects.requireNonNull(schemaType);
+            $.schemaType = schemaType;
             return this;
-        }        public SchemaConfigResponse build() {
-            return new SchemaConfigResponse(recursiveStructureDepth, schemaType);
+        }
+
+        public SchemaConfigResponse build() {
+            $.recursiveStructureDepth = Objects.requireNonNull($.recursiveStructureDepth, "expected parameter 'recursiveStructureDepth' to be non-null");
+            $.schemaType = Objects.requireNonNull($.schemaType, "expected parameter 'schemaType' to be non-null");
+            return $;
         }
     }
+
 }

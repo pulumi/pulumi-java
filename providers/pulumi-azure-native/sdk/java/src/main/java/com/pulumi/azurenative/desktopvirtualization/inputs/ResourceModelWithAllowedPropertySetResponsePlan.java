@@ -19,7 +19,7 @@ public final class ResourceModelWithAllowedPropertySetResponsePlan extends com.p
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -30,7 +30,7 @@ public final class ResourceModelWithAllowedPropertySetResponsePlan extends com.p
      * 
      */
     @Import(name="product", required=true)
-      private final String product;
+    private String product;
 
     public String product() {
         return this.product;
@@ -41,10 +41,10 @@ public final class ResourceModelWithAllowedPropertySetResponsePlan extends com.p
      * 
      */
     @Import(name="promotionCode")
-      private final @Nullable String promotionCode;
+    private @Nullable String promotionCode;
 
     public Optional<String> promotionCode() {
-        return this.promotionCode == null ? Optional.empty() : Optional.ofNullable(this.promotionCode);
+        return Optional.ofNullable(this.promotionCode);
     }
 
     /**
@@ -52,7 +52,7 @@ public final class ResourceModelWithAllowedPropertySetResponsePlan extends com.p
      * 
      */
     @Import(name="publisher", required=true)
-      private final String publisher;
+    private String publisher;
 
     public String publisher() {
         return this.publisher;
@@ -63,82 +63,71 @@ public final class ResourceModelWithAllowedPropertySetResponsePlan extends com.p
      * 
      */
     @Import(name="version")
-      private final @Nullable String version;
+    private @Nullable String version;
 
     public Optional<String> version() {
-        return this.version == null ? Optional.empty() : Optional.ofNullable(this.version);
+        return Optional.ofNullable(this.version);
     }
 
-    public ResourceModelWithAllowedPropertySetResponsePlan(
-        String name,
-        String product,
-        @Nullable String promotionCode,
-        String publisher,
-        @Nullable String version) {
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.product = Objects.requireNonNull(product, "expected parameter 'product' to be non-null");
-        this.promotionCode = promotionCode;
-        this.publisher = Objects.requireNonNull(publisher, "expected parameter 'publisher' to be non-null");
-        this.version = version;
-    }
+    private ResourceModelWithAllowedPropertySetResponsePlan() {}
 
-    private ResourceModelWithAllowedPropertySetResponsePlan() {
-        this.name = null;
-        this.product = null;
-        this.promotionCode = null;
-        this.publisher = null;
-        this.version = null;
+    private ResourceModelWithAllowedPropertySetResponsePlan(ResourceModelWithAllowedPropertySetResponsePlan $) {
+        this.name = $.name;
+        this.product = $.product;
+        this.promotionCode = $.promotionCode;
+        this.publisher = $.publisher;
+        this.version = $.version;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ResourceModelWithAllowedPropertySetResponsePlan defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String name;
-        private String product;
-        private @Nullable String promotionCode;
-        private String publisher;
-        private @Nullable String version;
+        private ResourceModelWithAllowedPropertySetResponsePlan $;
 
         public Builder() {
-    	      // Empty
+            $ = new ResourceModelWithAllowedPropertySetResponsePlan();
         }
 
         public Builder(ResourceModelWithAllowedPropertySetResponsePlan defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.product = defaults.product;
-    	      this.promotionCode = defaults.promotionCode;
-    	      this.publisher = defaults.publisher;
-    	      this.version = defaults.version;
+            $ = new ResourceModelWithAllowedPropertySetResponsePlan(Objects.requireNonNull(defaults));
         }
 
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder product(String product) {
-            this.product = Objects.requireNonNull(product);
+            $.product = product;
             return this;
         }
+
         public Builder promotionCode(@Nullable String promotionCode) {
-            this.promotionCode = promotionCode;
+            $.promotionCode = promotionCode;
             return this;
         }
+
         public Builder publisher(String publisher) {
-            this.publisher = Objects.requireNonNull(publisher);
+            $.publisher = publisher;
             return this;
         }
+
         public Builder version(@Nullable String version) {
-            this.version = version;
+            $.version = version;
             return this;
-        }        public ResourceModelWithAllowedPropertySetResponsePlan build() {
-            return new ResourceModelWithAllowedPropertySetResponsePlan(name, product, promotionCode, publisher, version);
+        }
+
+        public ResourceModelWithAllowedPropertySetResponsePlan build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.product = Objects.requireNonNull($.product, "expected parameter 'product' to be non-null");
+            $.publisher = Objects.requireNonNull($.publisher, "expected parameter 'publisher' to be non-null");
+            return $;
         }
     }
+
 }

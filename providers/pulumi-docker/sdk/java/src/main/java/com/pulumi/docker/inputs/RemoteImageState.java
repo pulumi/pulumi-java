@@ -5,12 +5,12 @@ package com.pulumi.docker.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.docker.inputs.RemoteImageBuildGetArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class RemoteImageState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="build")
-      private final @Nullable Output<RemoteImageBuildGetArgs> build;
+    private @Nullable Output<RemoteImageBuildGetArgs> build;
 
-    public Output<RemoteImageBuildGetArgs> build() {
-        return this.build == null ? Codegen.empty() : this.build;
+    public Optional<Output<RemoteImageBuildGetArgs>> build() {
+        return Optional.ofNullable(this.build);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class RemoteImageState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="forceRemove")
-      private final @Nullable Output<Boolean> forceRemove;
+    private @Nullable Output<Boolean> forceRemove;
 
-    public Output<Boolean> forceRemove() {
-        return this.forceRemove == null ? Codegen.empty() : this.forceRemove;
+    public Optional<Output<Boolean>> forceRemove() {
+        return Optional.ofNullable(this.forceRemove);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class RemoteImageState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="keepLocally")
-      private final @Nullable Output<Boolean> keepLocally;
+    private @Nullable Output<Boolean> keepLocally;
 
-    public Output<Boolean> keepLocally() {
-        return this.keepLocally == null ? Codegen.empty() : this.keepLocally;
+    public Optional<Output<Boolean>> keepLocally() {
+        return Optional.ofNullable(this.keepLocally);
     }
 
     /**
@@ -62,11 +62,11 @@ public final class RemoteImageState extends com.pulumi.resources.ResourceArgs {
      */
     @Deprecated /* Use repo_digest instead */
     @Import(name="latest")
-      private final @Nullable Output<String> latest;
+    private @Nullable Output<String> latest;
 
     @Deprecated /* Use repo_digest instead */
-    public Output<String> latest() {
-        return this.latest == null ? Codegen.empty() : this.latest;
+    public Optional<Output<String>> latest() {
+        return Optional.ofNullable(this.latest);
     }
 
     /**
@@ -74,10 +74,10 @@ public final class RemoteImageState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -87,11 +87,11 @@ public final class RemoteImageState extends com.pulumi.resources.ResourceArgs {
      */
     @Deprecated /* Is unused and will be removed. */
     @Import(name="output")
-      private final @Nullable Output<String> output;
+    private @Nullable Output<String> output;
 
     @Deprecated /* Is unused and will be removed. */
-    public Output<String> output() {
-        return this.output == null ? Codegen.empty() : this.output;
+    public Optional<Output<String>> output() {
+        return Optional.ofNullable(this.output);
     }
 
     /**
@@ -103,11 +103,11 @@ public final class RemoteImageState extends com.pulumi.resources.ResourceArgs {
      */
     @Deprecated /* Use field pull_triggers instead */
     @Import(name="pullTrigger")
-      private final @Nullable Output<String> pullTrigger;
+    private @Nullable Output<String> pullTrigger;
 
     @Deprecated /* Use field pull_triggers instead */
-    public Output<String> pullTrigger() {
-        return this.pullTrigger == null ? Codegen.empty() : this.pullTrigger;
+    public Optional<Output<String>> pullTrigger() {
+        return Optional.ofNullable(this.pullTrigger);
     }
 
     /**
@@ -116,10 +116,10 @@ public final class RemoteImageState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="pullTriggers")
-      private final @Nullable Output<List<String>> pullTriggers;
+    private @Nullable Output<List<String>> pullTriggers;
 
-    public Output<List<String>> pullTriggers() {
-        return this.pullTriggers == null ? Codegen.empty() : this.pullTriggers;
+    public Optional<Output<List<String>>> pullTriggers() {
+        return Optional.ofNullable(this.pullTriggers);
     }
 
     /**
@@ -127,157 +127,132 @@ public final class RemoteImageState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="repoDigest")
-      private final @Nullable Output<String> repoDigest;
+    private @Nullable Output<String> repoDigest;
 
-    public Output<String> repoDigest() {
-        return this.repoDigest == null ? Codegen.empty() : this.repoDigest;
+    public Optional<Output<String>> repoDigest() {
+        return Optional.ofNullable(this.repoDigest);
     }
 
-    public RemoteImageState(
-        @Nullable Output<RemoteImageBuildGetArgs> build,
-        @Nullable Output<Boolean> forceRemove,
-        @Nullable Output<Boolean> keepLocally,
-        @Nullable Output<String> latest,
-        @Nullable Output<String> name,
-        @Nullable Output<String> output,
-        @Nullable Output<String> pullTrigger,
-        @Nullable Output<List<String>> pullTriggers,
-        @Nullable Output<String> repoDigest) {
-        this.build = build;
-        this.forceRemove = forceRemove;
-        this.keepLocally = keepLocally;
-        this.latest = latest;
-        this.name = name;
-        this.output = output;
-        this.pullTrigger = pullTrigger;
-        this.pullTriggers = pullTriggers;
-        this.repoDigest = repoDigest;
-    }
+    private RemoteImageState() {}
 
-    private RemoteImageState() {
-        this.build = Codegen.empty();
-        this.forceRemove = Codegen.empty();
-        this.keepLocally = Codegen.empty();
-        this.latest = Codegen.empty();
-        this.name = Codegen.empty();
-        this.output = Codegen.empty();
-        this.pullTrigger = Codegen.empty();
-        this.pullTriggers = Codegen.empty();
-        this.repoDigest = Codegen.empty();
+    private RemoteImageState(RemoteImageState $) {
+        this.build = $.build;
+        this.forceRemove = $.forceRemove;
+        this.keepLocally = $.keepLocally;
+        this.latest = $.latest;
+        this.name = $.name;
+        this.output = $.output;
+        this.pullTrigger = $.pullTrigger;
+        this.pullTriggers = $.pullTriggers;
+        this.repoDigest = $.repoDigest;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RemoteImageState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<RemoteImageBuildGetArgs> build;
-        private @Nullable Output<Boolean> forceRemove;
-        private @Nullable Output<Boolean> keepLocally;
-        private @Nullable Output<String> latest;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> output;
-        private @Nullable Output<String> pullTrigger;
-        private @Nullable Output<List<String>> pullTriggers;
-        private @Nullable Output<String> repoDigest;
+        private RemoteImageState $;
 
         public Builder() {
-    	      // Empty
+            $ = new RemoteImageState();
         }
 
         public Builder(RemoteImageState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.build = defaults.build;
-    	      this.forceRemove = defaults.forceRemove;
-    	      this.keepLocally = defaults.keepLocally;
-    	      this.latest = defaults.latest;
-    	      this.name = defaults.name;
-    	      this.output = defaults.output;
-    	      this.pullTrigger = defaults.pullTrigger;
-    	      this.pullTriggers = defaults.pullTriggers;
-    	      this.repoDigest = defaults.repoDigest;
+            $ = new RemoteImageState(Objects.requireNonNull(defaults));
         }
 
         public Builder build(@Nullable Output<RemoteImageBuildGetArgs> build) {
-            this.build = build;
+            $.build = build;
             return this;
         }
-        public Builder build(@Nullable RemoteImageBuildGetArgs build) {
-            this.build = Codegen.ofNullable(build);
-            return this;
+
+        public Builder build(RemoteImageBuildGetArgs build) {
+            return build(Output.of(build));
         }
+
         public Builder forceRemove(@Nullable Output<Boolean> forceRemove) {
-            this.forceRemove = forceRemove;
+            $.forceRemove = forceRemove;
             return this;
         }
-        public Builder forceRemove(@Nullable Boolean forceRemove) {
-            this.forceRemove = Codegen.ofNullable(forceRemove);
-            return this;
+
+        public Builder forceRemove(Boolean forceRemove) {
+            return forceRemove(Output.of(forceRemove));
         }
+
         public Builder keepLocally(@Nullable Output<Boolean> keepLocally) {
-            this.keepLocally = keepLocally;
+            $.keepLocally = keepLocally;
             return this;
         }
-        public Builder keepLocally(@Nullable Boolean keepLocally) {
-            this.keepLocally = Codegen.ofNullable(keepLocally);
-            return this;
+
+        public Builder keepLocally(Boolean keepLocally) {
+            return keepLocally(Output.of(keepLocally));
         }
+
         public Builder latest(@Nullable Output<String> latest) {
-            this.latest = latest;
+            $.latest = latest;
             return this;
         }
-        public Builder latest(@Nullable String latest) {
-            this.latest = Codegen.ofNullable(latest);
-            return this;
+
+        public Builder latest(String latest) {
+            return latest(Output.of(latest));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder output(@Nullable Output<String> output) {
-            this.output = output;
+            $.output = output;
             return this;
         }
-        public Builder output(@Nullable String output) {
-            this.output = Codegen.ofNullable(output);
-            return this;
+
+        public Builder output(String output) {
+            return output(Output.of(output));
         }
+
         public Builder pullTrigger(@Nullable Output<String> pullTrigger) {
-            this.pullTrigger = pullTrigger;
+            $.pullTrigger = pullTrigger;
             return this;
         }
-        public Builder pullTrigger(@Nullable String pullTrigger) {
-            this.pullTrigger = Codegen.ofNullable(pullTrigger);
-            return this;
+
+        public Builder pullTrigger(String pullTrigger) {
+            return pullTrigger(Output.of(pullTrigger));
         }
+
         public Builder pullTriggers(@Nullable Output<List<String>> pullTriggers) {
-            this.pullTriggers = pullTriggers;
+            $.pullTriggers = pullTriggers;
             return this;
         }
-        public Builder pullTriggers(@Nullable List<String> pullTriggers) {
-            this.pullTriggers = Codegen.ofNullable(pullTriggers);
-            return this;
+
+        public Builder pullTriggers(List<String> pullTriggers) {
+            return pullTriggers(Output.of(pullTriggers));
         }
+
         public Builder pullTriggers(String... pullTriggers) {
             return pullTriggers(List.of(pullTriggers));
         }
+
         public Builder repoDigest(@Nullable Output<String> repoDigest) {
-            this.repoDigest = repoDigest;
+            $.repoDigest = repoDigest;
             return this;
         }
-        public Builder repoDigest(@Nullable String repoDigest) {
-            this.repoDigest = Codegen.ofNullable(repoDigest);
-            return this;
-        }        public RemoteImageState build() {
-            return new RemoteImageState(build, forceRemove, keepLocally, latest, name, output, pullTrigger, pullTriggers, repoDigest);
+
+        public Builder repoDigest(String repoDigest) {
+            return repoDigest(Output.of(repoDigest));
+        }
+
+        public RemoteImageState build() {
+            return $;
         }
     }
+
 }

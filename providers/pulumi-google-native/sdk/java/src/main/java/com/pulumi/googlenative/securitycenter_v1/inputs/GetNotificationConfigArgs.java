@@ -13,62 +13,59 @@ public final class GetNotificationConfigArgs extends com.pulumi.resources.Invoke
     public static final GetNotificationConfigArgs Empty = new GetNotificationConfigArgs();
 
     @Import(name="notificationConfigId", required=true)
-      private final String notificationConfigId;
+    private String notificationConfigId;
 
     public String notificationConfigId() {
         return this.notificationConfigId;
     }
 
     @Import(name="organizationId", required=true)
-      private final String organizationId;
+    private String organizationId;
 
     public String organizationId() {
         return this.organizationId;
     }
 
-    public GetNotificationConfigArgs(
-        String notificationConfigId,
-        String organizationId) {
-        this.notificationConfigId = Objects.requireNonNull(notificationConfigId, "expected parameter 'notificationConfigId' to be non-null");
-        this.organizationId = Objects.requireNonNull(organizationId, "expected parameter 'organizationId' to be non-null");
-    }
+    private GetNotificationConfigArgs() {}
 
-    private GetNotificationConfigArgs() {
-        this.notificationConfigId = null;
-        this.organizationId = null;
+    private GetNotificationConfigArgs(GetNotificationConfigArgs $) {
+        this.notificationConfigId = $.notificationConfigId;
+        this.organizationId = $.organizationId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetNotificationConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String notificationConfigId;
-        private String organizationId;
+        private GetNotificationConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetNotificationConfigArgs();
         }
 
         public Builder(GetNotificationConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.notificationConfigId = defaults.notificationConfigId;
-    	      this.organizationId = defaults.organizationId;
+            $ = new GetNotificationConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder notificationConfigId(String notificationConfigId) {
-            this.notificationConfigId = Objects.requireNonNull(notificationConfigId);
+            $.notificationConfigId = notificationConfigId;
             return this;
         }
+
         public Builder organizationId(String organizationId) {
-            this.organizationId = Objects.requireNonNull(organizationId);
+            $.organizationId = organizationId;
             return this;
-        }        public GetNotificationConfigArgs build() {
-            return new GetNotificationConfigArgs(notificationConfigId, organizationId);
+        }
+
+        public GetNotificationConfigArgs build() {
+            $.notificationConfigId = Objects.requireNonNull($.notificationConfigId, "expected parameter 'notificationConfigId' to be non-null");
+            $.organizationId = Objects.requireNonNull($.organizationId, "expected parameter 'organizationId' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,10 +5,10 @@ package com.pulumi.azurenative.managedservices.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class AuthorizationArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="delegatedRoleDefinitionIds")
-      private final @Nullable Output<List<String>> delegatedRoleDefinitionIds;
+    private @Nullable Output<List<String>> delegatedRoleDefinitionIds;
 
-    public Output<List<String>> delegatedRoleDefinitionIds() {
-        return this.delegatedRoleDefinitionIds == null ? Codegen.empty() : this.delegatedRoleDefinitionIds;
+    public Optional<Output<List<String>>> delegatedRoleDefinitionIds() {
+        return Optional.ofNullable(this.delegatedRoleDefinitionIds);
     }
 
     /**
@@ -36,7 +36,7 @@ public final class AuthorizationArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="principalId", required=true)
-      private final Output<String> principalId;
+    private Output<String> principalId;
 
     public Output<String> principalId() {
         return this.principalId;
@@ -47,10 +47,10 @@ public final class AuthorizationArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="principalIdDisplayName")
-      private final @Nullable Output<String> principalIdDisplayName;
+    private @Nullable Output<String> principalIdDisplayName;
 
-    public Output<String> principalIdDisplayName() {
-        return this.principalIdDisplayName == null ? Codegen.empty() : this.principalIdDisplayName;
+    public Optional<Output<String>> principalIdDisplayName() {
+        return Optional.ofNullable(this.principalIdDisplayName);
     }
 
     /**
@@ -58,92 +58,84 @@ public final class AuthorizationArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="roleDefinitionId", required=true)
-      private final Output<String> roleDefinitionId;
+    private Output<String> roleDefinitionId;
 
     public Output<String> roleDefinitionId() {
         return this.roleDefinitionId;
     }
 
-    public AuthorizationArgs(
-        @Nullable Output<List<String>> delegatedRoleDefinitionIds,
-        Output<String> principalId,
-        @Nullable Output<String> principalIdDisplayName,
-        Output<String> roleDefinitionId) {
-        this.delegatedRoleDefinitionIds = delegatedRoleDefinitionIds;
-        this.principalId = Objects.requireNonNull(principalId, "expected parameter 'principalId' to be non-null");
-        this.principalIdDisplayName = principalIdDisplayName;
-        this.roleDefinitionId = Objects.requireNonNull(roleDefinitionId, "expected parameter 'roleDefinitionId' to be non-null");
-    }
+    private AuthorizationArgs() {}
 
-    private AuthorizationArgs() {
-        this.delegatedRoleDefinitionIds = Codegen.empty();
-        this.principalId = Codegen.empty();
-        this.principalIdDisplayName = Codegen.empty();
-        this.roleDefinitionId = Codegen.empty();
+    private AuthorizationArgs(AuthorizationArgs $) {
+        this.delegatedRoleDefinitionIds = $.delegatedRoleDefinitionIds;
+        this.principalId = $.principalId;
+        this.principalIdDisplayName = $.principalIdDisplayName;
+        this.roleDefinitionId = $.roleDefinitionId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AuthorizationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> delegatedRoleDefinitionIds;
-        private Output<String> principalId;
-        private @Nullable Output<String> principalIdDisplayName;
-        private Output<String> roleDefinitionId;
+        private AuthorizationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AuthorizationArgs();
         }
 
         public Builder(AuthorizationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.delegatedRoleDefinitionIds = defaults.delegatedRoleDefinitionIds;
-    	      this.principalId = defaults.principalId;
-    	      this.principalIdDisplayName = defaults.principalIdDisplayName;
-    	      this.roleDefinitionId = defaults.roleDefinitionId;
+            $ = new AuthorizationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder delegatedRoleDefinitionIds(@Nullable Output<List<String>> delegatedRoleDefinitionIds) {
-            this.delegatedRoleDefinitionIds = delegatedRoleDefinitionIds;
+            $.delegatedRoleDefinitionIds = delegatedRoleDefinitionIds;
             return this;
         }
-        public Builder delegatedRoleDefinitionIds(@Nullable List<String> delegatedRoleDefinitionIds) {
-            this.delegatedRoleDefinitionIds = Codegen.ofNullable(delegatedRoleDefinitionIds);
-            return this;
+
+        public Builder delegatedRoleDefinitionIds(List<String> delegatedRoleDefinitionIds) {
+            return delegatedRoleDefinitionIds(Output.of(delegatedRoleDefinitionIds));
         }
+
         public Builder delegatedRoleDefinitionIds(String... delegatedRoleDefinitionIds) {
             return delegatedRoleDefinitionIds(List.of(delegatedRoleDefinitionIds));
         }
+
         public Builder principalId(Output<String> principalId) {
-            this.principalId = Objects.requireNonNull(principalId);
+            $.principalId = principalId;
             return this;
         }
+
         public Builder principalId(String principalId) {
-            this.principalId = Output.of(Objects.requireNonNull(principalId));
-            return this;
+            return principalId(Output.of(principalId));
         }
+
         public Builder principalIdDisplayName(@Nullable Output<String> principalIdDisplayName) {
-            this.principalIdDisplayName = principalIdDisplayName;
+            $.principalIdDisplayName = principalIdDisplayName;
             return this;
         }
-        public Builder principalIdDisplayName(@Nullable String principalIdDisplayName) {
-            this.principalIdDisplayName = Codegen.ofNullable(principalIdDisplayName);
-            return this;
+
+        public Builder principalIdDisplayName(String principalIdDisplayName) {
+            return principalIdDisplayName(Output.of(principalIdDisplayName));
         }
+
         public Builder roleDefinitionId(Output<String> roleDefinitionId) {
-            this.roleDefinitionId = Objects.requireNonNull(roleDefinitionId);
+            $.roleDefinitionId = roleDefinitionId;
             return this;
         }
+
         public Builder roleDefinitionId(String roleDefinitionId) {
-            this.roleDefinitionId = Output.of(Objects.requireNonNull(roleDefinitionId));
-            return this;
-        }        public AuthorizationArgs build() {
-            return new AuthorizationArgs(delegatedRoleDefinitionIds, principalId, principalIdDisplayName, roleDefinitionId);
+            return roleDefinitionId(Output.of(roleDefinitionId));
+        }
+
+        public AuthorizationArgs build() {
+            $.principalId = Objects.requireNonNull($.principalId, "expected parameter 'principalId' to be non-null");
+            $.roleDefinitionId = Objects.requireNonNull($.roleDefinitionId, "expected parameter 'roleDefinitionId' to be non-null");
+            return $;
         }
     }
+
 }

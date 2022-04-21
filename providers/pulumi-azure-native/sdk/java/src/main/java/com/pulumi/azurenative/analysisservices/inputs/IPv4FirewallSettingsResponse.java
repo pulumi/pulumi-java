@@ -25,10 +25,10 @@ public final class IPv4FirewallSettingsResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="enablePowerBIService")
-      private final @Nullable Boolean enablePowerBIService;
+    private @Nullable Boolean enablePowerBIService;
 
     public Optional<Boolean> enablePowerBIService() {
-        return this.enablePowerBIService == null ? Optional.empty() : Optional.ofNullable(this.enablePowerBIService);
+        return Optional.ofNullable(this.enablePowerBIService);
     }
 
     /**
@@ -36,58 +36,54 @@ public final class IPv4FirewallSettingsResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="firewallRules")
-      private final @Nullable List<IPv4FirewallRuleResponse> firewallRules;
+    private @Nullable List<IPv4FirewallRuleResponse> firewallRules;
 
-    public List<IPv4FirewallRuleResponse> firewallRules() {
-        return this.firewallRules == null ? List.of() : this.firewallRules;
+    public Optional<List<IPv4FirewallRuleResponse>> firewallRules() {
+        return Optional.ofNullable(this.firewallRules);
     }
 
-    public IPv4FirewallSettingsResponse(
-        @Nullable Boolean enablePowerBIService,
-        @Nullable List<IPv4FirewallRuleResponse> firewallRules) {
-        this.enablePowerBIService = enablePowerBIService;
-        this.firewallRules = firewallRules;
-    }
+    private IPv4FirewallSettingsResponse() {}
 
-    private IPv4FirewallSettingsResponse() {
-        this.enablePowerBIService = null;
-        this.firewallRules = List.of();
+    private IPv4FirewallSettingsResponse(IPv4FirewallSettingsResponse $) {
+        this.enablePowerBIService = $.enablePowerBIService;
+        this.firewallRules = $.firewallRules;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(IPv4FirewallSettingsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Boolean enablePowerBIService;
-        private @Nullable List<IPv4FirewallRuleResponse> firewallRules;
+        private IPv4FirewallSettingsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new IPv4FirewallSettingsResponse();
         }
 
         public Builder(IPv4FirewallSettingsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.enablePowerBIService = defaults.enablePowerBIService;
-    	      this.firewallRules = defaults.firewallRules;
+            $ = new IPv4FirewallSettingsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder enablePowerBIService(@Nullable Boolean enablePowerBIService) {
-            this.enablePowerBIService = enablePowerBIService;
+            $.enablePowerBIService = enablePowerBIService;
             return this;
         }
+
         public Builder firewallRules(@Nullable List<IPv4FirewallRuleResponse> firewallRules) {
-            this.firewallRules = firewallRules;
+            $.firewallRules = firewallRules;
             return this;
         }
+
         public Builder firewallRules(IPv4FirewallRuleResponse... firewallRules) {
             return firewallRules(List.of(firewallRules));
-        }        public IPv4FirewallSettingsResponse build() {
-            return new IPv4FirewallSettingsResponse(enablePowerBIService, firewallRules);
+        }
+
+        public IPv4FirewallSettingsResponse build() {
+            return $;
         }
     }
+
 }

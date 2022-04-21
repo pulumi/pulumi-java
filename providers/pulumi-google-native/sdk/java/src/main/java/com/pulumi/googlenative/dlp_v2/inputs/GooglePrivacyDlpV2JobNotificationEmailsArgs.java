@@ -3,7 +3,7 @@
 
 package com.pulumi.googlenative.dlp_v2.inputs;
 
-import java.util.Objects;
+
 
 
 /**
@@ -14,28 +14,19 @@ public final class GooglePrivacyDlpV2JobNotificationEmailsArgs extends com.pulum
 
     public static final GooglePrivacyDlpV2JobNotificationEmailsArgs Empty = new GooglePrivacyDlpV2JobNotificationEmailsArgs();
 
-    public GooglePrivacyDlpV2JobNotificationEmailsArgs() {
-    }
-
     public static Builder builder() {
         return new Builder();
     }
 
-    public static Builder builder(GooglePrivacyDlpV2JobNotificationEmailsArgs defaults) {
-        return new Builder(defaults);
-    }
-
     public static final class Builder {
+        private GooglePrivacyDlpV2JobNotificationEmailsArgs $;
 
         public Builder() {
-    	      // Empty
-        }
-
-        public Builder(GooglePrivacyDlpV2JobNotificationEmailsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
+            $ = new GooglePrivacyDlpV2JobNotificationEmailsArgs();
         }
         public GooglePrivacyDlpV2JobNotificationEmailsArgs build() {
-            return new GooglePrivacyDlpV2JobNotificationEmailsArgs();
+            return $;
         }
     }
+
 }

@@ -5,9 +5,9 @@ package com.pulumi.googlenative.sqladmin_v1beta4.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class DenyMaintenancePeriodArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="endDate")
-      private final @Nullable Output<String> endDate;
+    private @Nullable Output<String> endDate;
 
-    public Output<String> endDate() {
-        return this.endDate == null ? Codegen.empty() : this.endDate;
+    public Optional<Output<String>> endDate() {
+        return Optional.ofNullable(this.endDate);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class DenyMaintenancePeriodArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="startDate")
-      private final @Nullable Output<String> startDate;
+    private @Nullable Output<String> startDate;
 
-    public Output<String> startDate() {
-        return this.startDate == null ? Codegen.empty() : this.startDate;
+    public Optional<Output<String>> startDate() {
+        return Optional.ofNullable(this.startDate);
     }
 
     /**
@@ -46,76 +46,68 @@ public final class DenyMaintenancePeriodArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="time")
-      private final @Nullable Output<String> time;
+    private @Nullable Output<String> time;
 
-    public Output<String> time() {
-        return this.time == null ? Codegen.empty() : this.time;
+    public Optional<Output<String>> time() {
+        return Optional.ofNullable(this.time);
     }
 
-    public DenyMaintenancePeriodArgs(
-        @Nullable Output<String> endDate,
-        @Nullable Output<String> startDate,
-        @Nullable Output<String> time) {
-        this.endDate = endDate;
-        this.startDate = startDate;
-        this.time = time;
-    }
+    private DenyMaintenancePeriodArgs() {}
 
-    private DenyMaintenancePeriodArgs() {
-        this.endDate = Codegen.empty();
-        this.startDate = Codegen.empty();
-        this.time = Codegen.empty();
+    private DenyMaintenancePeriodArgs(DenyMaintenancePeriodArgs $) {
+        this.endDate = $.endDate;
+        this.startDate = $.startDate;
+        this.time = $.time;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DenyMaintenancePeriodArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> endDate;
-        private @Nullable Output<String> startDate;
-        private @Nullable Output<String> time;
+        private DenyMaintenancePeriodArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DenyMaintenancePeriodArgs();
         }
 
         public Builder(DenyMaintenancePeriodArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.endDate = defaults.endDate;
-    	      this.startDate = defaults.startDate;
-    	      this.time = defaults.time;
+            $ = new DenyMaintenancePeriodArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder endDate(@Nullable Output<String> endDate) {
-            this.endDate = endDate;
+            $.endDate = endDate;
             return this;
         }
-        public Builder endDate(@Nullable String endDate) {
-            this.endDate = Codegen.ofNullable(endDate);
-            return this;
+
+        public Builder endDate(String endDate) {
+            return endDate(Output.of(endDate));
         }
+
         public Builder startDate(@Nullable Output<String> startDate) {
-            this.startDate = startDate;
+            $.startDate = startDate;
             return this;
         }
-        public Builder startDate(@Nullable String startDate) {
-            this.startDate = Codegen.ofNullable(startDate);
-            return this;
+
+        public Builder startDate(String startDate) {
+            return startDate(Output.of(startDate));
         }
+
         public Builder time(@Nullable Output<String> time) {
-            this.time = time;
+            $.time = time;
             return this;
         }
-        public Builder time(@Nullable String time) {
-            this.time = Codegen.ofNullable(time);
-            return this;
-        }        public DenyMaintenancePeriodArgs build() {
-            return new DenyMaintenancePeriodArgs(endDate, startDate, time);
+
+        public Builder time(String time) {
+            return time(Output.of(time));
+        }
+
+        public DenyMaintenancePeriodArgs build() {
+            return $;
         }
     }
+
 }

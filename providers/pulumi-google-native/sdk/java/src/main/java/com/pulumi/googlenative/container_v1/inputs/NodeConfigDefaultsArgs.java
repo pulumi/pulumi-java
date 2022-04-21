@@ -5,9 +5,9 @@ package com.pulumi.googlenative.container_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.container_v1.inputs.GcfsConfigArgs;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class NodeConfigDefaultsArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="gcfsConfig")
-      private final @Nullable Output<GcfsConfigArgs> gcfsConfig;
+    private @Nullable Output<GcfsConfigArgs> gcfsConfig;
 
-    public Output<GcfsConfigArgs> gcfsConfig() {
-        return this.gcfsConfig == null ? Codegen.empty() : this.gcfsConfig;
+    public Optional<Output<GcfsConfigArgs>> gcfsConfig() {
+        return Optional.ofNullable(this.gcfsConfig);
     }
 
-    public NodeConfigDefaultsArgs(@Nullable Output<GcfsConfigArgs> gcfsConfig) {
-        this.gcfsConfig = gcfsConfig;
-    }
+    private NodeConfigDefaultsArgs() {}
 
-    private NodeConfigDefaultsArgs() {
-        this.gcfsConfig = Codegen.empty();
+    private NodeConfigDefaultsArgs(NodeConfigDefaultsArgs $) {
+        this.gcfsConfig = $.gcfsConfig;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NodeConfigDefaultsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<GcfsConfigArgs> gcfsConfig;
+        private NodeConfigDefaultsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new NodeConfigDefaultsArgs();
         }
 
         public Builder(NodeConfigDefaultsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.gcfsConfig = defaults.gcfsConfig;
+            $ = new NodeConfigDefaultsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder gcfsConfig(@Nullable Output<GcfsConfigArgs> gcfsConfig) {
-            this.gcfsConfig = gcfsConfig;
+            $.gcfsConfig = gcfsConfig;
             return this;
         }
-        public Builder gcfsConfig(@Nullable GcfsConfigArgs gcfsConfig) {
-            this.gcfsConfig = Codegen.ofNullable(gcfsConfig);
-            return this;
-        }        public NodeConfigDefaultsArgs build() {
-            return new NodeConfigDefaultsArgs(gcfsConfig);
+
+        public Builder gcfsConfig(GcfsConfigArgs gcfsConfig) {
+            return gcfsConfig(Output.of(gcfsConfig));
+        }
+
+        public NodeConfigDefaultsArgs build() {
+            return $;
         }
     }
+
 }

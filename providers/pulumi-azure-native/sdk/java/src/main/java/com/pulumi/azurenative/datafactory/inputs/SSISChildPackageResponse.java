@@ -24,7 +24,7 @@ public final class SSISChildPackageResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="packageContent", required=true)
-      private final Object packageContent;
+    private Object packageContent;
 
     public Object packageContent() {
         return this.packageContent;
@@ -35,10 +35,10 @@ public final class SSISChildPackageResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="packageLastModifiedDate")
-      private final @Nullable String packageLastModifiedDate;
+    private @Nullable String packageLastModifiedDate;
 
     public Optional<String> packageLastModifiedDate() {
-        return this.packageLastModifiedDate == null ? Optional.empty() : Optional.ofNullable(this.packageLastModifiedDate);
+        return Optional.ofNullable(this.packageLastModifiedDate);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class SSISChildPackageResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="packageName")
-      private final @Nullable String packageName;
+    private @Nullable String packageName;
 
     public Optional<String> packageName() {
-        return this.packageName == null ? Optional.empty() : Optional.ofNullable(this.packageName);
+        return Optional.ofNullable(this.packageName);
     }
 
     /**
@@ -57,73 +57,64 @@ public final class SSISChildPackageResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="packagePath", required=true)
-      private final Object packagePath;
+    private Object packagePath;
 
     public Object packagePath() {
         return this.packagePath;
     }
 
-    public SSISChildPackageResponse(
-        Object packageContent,
-        @Nullable String packageLastModifiedDate,
-        @Nullable String packageName,
-        Object packagePath) {
-        this.packageContent = Objects.requireNonNull(packageContent, "expected parameter 'packageContent' to be non-null");
-        this.packageLastModifiedDate = packageLastModifiedDate;
-        this.packageName = packageName;
-        this.packagePath = Objects.requireNonNull(packagePath, "expected parameter 'packagePath' to be non-null");
-    }
+    private SSISChildPackageResponse() {}
 
-    private SSISChildPackageResponse() {
-        this.packageContent = null;
-        this.packageLastModifiedDate = null;
-        this.packageName = null;
-        this.packagePath = null;
+    private SSISChildPackageResponse(SSISChildPackageResponse $) {
+        this.packageContent = $.packageContent;
+        this.packageLastModifiedDate = $.packageLastModifiedDate;
+        this.packageName = $.packageName;
+        this.packagePath = $.packagePath;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SSISChildPackageResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Object packageContent;
-        private @Nullable String packageLastModifiedDate;
-        private @Nullable String packageName;
-        private Object packagePath;
+        private SSISChildPackageResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new SSISChildPackageResponse();
         }
 
         public Builder(SSISChildPackageResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.packageContent = defaults.packageContent;
-    	      this.packageLastModifiedDate = defaults.packageLastModifiedDate;
-    	      this.packageName = defaults.packageName;
-    	      this.packagePath = defaults.packagePath;
+            $ = new SSISChildPackageResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder packageContent(Object packageContent) {
-            this.packageContent = Objects.requireNonNull(packageContent);
+            $.packageContent = packageContent;
             return this;
         }
+
         public Builder packageLastModifiedDate(@Nullable String packageLastModifiedDate) {
-            this.packageLastModifiedDate = packageLastModifiedDate;
+            $.packageLastModifiedDate = packageLastModifiedDate;
             return this;
         }
+
         public Builder packageName(@Nullable String packageName) {
-            this.packageName = packageName;
+            $.packageName = packageName;
             return this;
         }
+
         public Builder packagePath(Object packagePath) {
-            this.packagePath = Objects.requireNonNull(packagePath);
+            $.packagePath = packagePath;
             return this;
-        }        public SSISChildPackageResponse build() {
-            return new SSISChildPackageResponse(packageContent, packageLastModifiedDate, packageName, packagePath);
+        }
+
+        public SSISChildPackageResponse build() {
+            $.packageContent = Objects.requireNonNull($.packageContent, "expected parameter 'packageContent' to be non-null");
+            $.packagePath = Objects.requireNonNull($.packagePath, "expected parameter 'packagePath' to be non-null");
+            return $;
         }
     }
+
 }

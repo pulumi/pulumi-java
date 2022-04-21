@@ -5,9 +5,9 @@ package com.pulumi.aws.servicecatalog.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class PrincipalPortfolioAssociationState extends com.pulumi.resourc
      * 
      */
     @Import(name="acceptLanguage")
-      private final @Nullable Output<String> acceptLanguage;
+    private @Nullable Output<String> acceptLanguage;
 
-    public Output<String> acceptLanguage() {
-        return this.acceptLanguage == null ? Codegen.empty() : this.acceptLanguage;
+    public Optional<Output<String>> acceptLanguage() {
+        return Optional.ofNullable(this.acceptLanguage);
     }
 
     /**
@@ -31,10 +31,10 @@ public final class PrincipalPortfolioAssociationState extends com.pulumi.resourc
      * 
      */
     @Import(name="portfolioId")
-      private final @Nullable Output<String> portfolioId;
+    private @Nullable Output<String> portfolioId;
 
-    public Output<String> portfolioId() {
-        return this.portfolioId == null ? Codegen.empty() : this.portfolioId;
+    public Optional<Output<String>> portfolioId() {
+        return Optional.ofNullable(this.portfolioId);
     }
 
     /**
@@ -42,10 +42,10 @@ public final class PrincipalPortfolioAssociationState extends com.pulumi.resourc
      * 
      */
     @Import(name="principalArn")
-      private final @Nullable Output<String> principalArn;
+    private @Nullable Output<String> principalArn;
 
-    public Output<String> principalArn() {
-        return this.principalArn == null ? Codegen.empty() : this.principalArn;
+    public Optional<Output<String>> principalArn() {
+        return Optional.ofNullable(this.principalArn);
     }
 
     /**
@@ -53,89 +53,78 @@ public final class PrincipalPortfolioAssociationState extends com.pulumi.resourc
      * 
      */
     @Import(name="principalType")
-      private final @Nullable Output<String> principalType;
+    private @Nullable Output<String> principalType;
 
-    public Output<String> principalType() {
-        return this.principalType == null ? Codegen.empty() : this.principalType;
+    public Optional<Output<String>> principalType() {
+        return Optional.ofNullable(this.principalType);
     }
 
-    public PrincipalPortfolioAssociationState(
-        @Nullable Output<String> acceptLanguage,
-        @Nullable Output<String> portfolioId,
-        @Nullable Output<String> principalArn,
-        @Nullable Output<String> principalType) {
-        this.acceptLanguage = acceptLanguage;
-        this.portfolioId = portfolioId;
-        this.principalArn = principalArn;
-        this.principalType = principalType;
-    }
+    private PrincipalPortfolioAssociationState() {}
 
-    private PrincipalPortfolioAssociationState() {
-        this.acceptLanguage = Codegen.empty();
-        this.portfolioId = Codegen.empty();
-        this.principalArn = Codegen.empty();
-        this.principalType = Codegen.empty();
+    private PrincipalPortfolioAssociationState(PrincipalPortfolioAssociationState $) {
+        this.acceptLanguage = $.acceptLanguage;
+        this.portfolioId = $.portfolioId;
+        this.principalArn = $.principalArn;
+        this.principalType = $.principalType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PrincipalPortfolioAssociationState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> acceptLanguage;
-        private @Nullable Output<String> portfolioId;
-        private @Nullable Output<String> principalArn;
-        private @Nullable Output<String> principalType;
+        private PrincipalPortfolioAssociationState $;
 
         public Builder() {
-    	      // Empty
+            $ = new PrincipalPortfolioAssociationState();
         }
 
         public Builder(PrincipalPortfolioAssociationState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.acceptLanguage = defaults.acceptLanguage;
-    	      this.portfolioId = defaults.portfolioId;
-    	      this.principalArn = defaults.principalArn;
-    	      this.principalType = defaults.principalType;
+            $ = new PrincipalPortfolioAssociationState(Objects.requireNonNull(defaults));
         }
 
         public Builder acceptLanguage(@Nullable Output<String> acceptLanguage) {
-            this.acceptLanguage = acceptLanguage;
+            $.acceptLanguage = acceptLanguage;
             return this;
         }
-        public Builder acceptLanguage(@Nullable String acceptLanguage) {
-            this.acceptLanguage = Codegen.ofNullable(acceptLanguage);
-            return this;
+
+        public Builder acceptLanguage(String acceptLanguage) {
+            return acceptLanguage(Output.of(acceptLanguage));
         }
+
         public Builder portfolioId(@Nullable Output<String> portfolioId) {
-            this.portfolioId = portfolioId;
+            $.portfolioId = portfolioId;
             return this;
         }
-        public Builder portfolioId(@Nullable String portfolioId) {
-            this.portfolioId = Codegen.ofNullable(portfolioId);
-            return this;
+
+        public Builder portfolioId(String portfolioId) {
+            return portfolioId(Output.of(portfolioId));
         }
+
         public Builder principalArn(@Nullable Output<String> principalArn) {
-            this.principalArn = principalArn;
+            $.principalArn = principalArn;
             return this;
         }
-        public Builder principalArn(@Nullable String principalArn) {
-            this.principalArn = Codegen.ofNullable(principalArn);
-            return this;
+
+        public Builder principalArn(String principalArn) {
+            return principalArn(Output.of(principalArn));
         }
+
         public Builder principalType(@Nullable Output<String> principalType) {
-            this.principalType = principalType;
+            $.principalType = principalType;
             return this;
         }
-        public Builder principalType(@Nullable String principalType) {
-            this.principalType = Codegen.ofNullable(principalType);
-            return this;
-        }        public PrincipalPortfolioAssociationState build() {
-            return new PrincipalPortfolioAssociationState(acceptLanguage, portfolioId, principalArn, principalType);
+
+        public Builder principalType(String principalType) {
+            return principalType(Output.of(principalType));
+        }
+
+        public PrincipalPortfolioAssociationState build() {
+            return $;
         }
     }
+
 }

@@ -23,45 +23,44 @@ public final class AssignedStandardItemResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="id")
-      private final @Nullable String id;
+    private @Nullable String id;
 
     public Optional<String> id() {
-        return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
+        return Optional.ofNullable(this.id);
     }
 
-    public AssignedStandardItemResponse(@Nullable String id) {
-        this.id = id;
-    }
+    private AssignedStandardItemResponse() {}
 
-    private AssignedStandardItemResponse() {
-        this.id = null;
+    private AssignedStandardItemResponse(AssignedStandardItemResponse $) {
+        this.id = $.id;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AssignedStandardItemResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String id;
+        private AssignedStandardItemResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AssignedStandardItemResponse();
         }
 
         public Builder(AssignedStandardItemResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.id = defaults.id;
+            $ = new AssignedStandardItemResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder id(@Nullable String id) {
-            this.id = id;
+            $.id = id;
             return this;
-        }        public AssignedStandardItemResponse build() {
-            return new AssignedStandardItemResponse(id);
+        }
+
+        public AssignedStandardItemResponse build() {
+            return $;
         }
     }
+
 }

@@ -22,7 +22,7 @@ public final class DestinationConfigResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="destinationConnectionProfile", required=true)
-      private final String destinationConnectionProfile;
+    private String destinationConnectionProfile;
 
     public String destinationConnectionProfile() {
         return this.destinationConnectionProfile;
@@ -33,55 +33,52 @@ public final class DestinationConfigResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="gcsDestinationConfig", required=true)
-      private final GcsDestinationConfigResponse gcsDestinationConfig;
+    private GcsDestinationConfigResponse gcsDestinationConfig;
 
     public GcsDestinationConfigResponse gcsDestinationConfig() {
         return this.gcsDestinationConfig;
     }
 
-    public DestinationConfigResponse(
-        String destinationConnectionProfile,
-        GcsDestinationConfigResponse gcsDestinationConfig) {
-        this.destinationConnectionProfile = Objects.requireNonNull(destinationConnectionProfile, "expected parameter 'destinationConnectionProfile' to be non-null");
-        this.gcsDestinationConfig = Objects.requireNonNull(gcsDestinationConfig, "expected parameter 'gcsDestinationConfig' to be non-null");
-    }
+    private DestinationConfigResponse() {}
 
-    private DestinationConfigResponse() {
-        this.destinationConnectionProfile = null;
-        this.gcsDestinationConfig = null;
+    private DestinationConfigResponse(DestinationConfigResponse $) {
+        this.destinationConnectionProfile = $.destinationConnectionProfile;
+        this.gcsDestinationConfig = $.gcsDestinationConfig;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DestinationConfigResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String destinationConnectionProfile;
-        private GcsDestinationConfigResponse gcsDestinationConfig;
+        private DestinationConfigResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new DestinationConfigResponse();
         }
 
         public Builder(DestinationConfigResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.destinationConnectionProfile = defaults.destinationConnectionProfile;
-    	      this.gcsDestinationConfig = defaults.gcsDestinationConfig;
+            $ = new DestinationConfigResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder destinationConnectionProfile(String destinationConnectionProfile) {
-            this.destinationConnectionProfile = Objects.requireNonNull(destinationConnectionProfile);
+            $.destinationConnectionProfile = destinationConnectionProfile;
             return this;
         }
+
         public Builder gcsDestinationConfig(GcsDestinationConfigResponse gcsDestinationConfig) {
-            this.gcsDestinationConfig = Objects.requireNonNull(gcsDestinationConfig);
+            $.gcsDestinationConfig = gcsDestinationConfig;
             return this;
-        }        public DestinationConfigResponse build() {
-            return new DestinationConfigResponse(destinationConnectionProfile, gcsDestinationConfig);
+        }
+
+        public DestinationConfigResponse build() {
+            $.destinationConnectionProfile = Objects.requireNonNull($.destinationConnectionProfile, "expected parameter 'destinationConnectionProfile' to be non-null");
+            $.gcsDestinationConfig = Objects.requireNonNull($.gcsDestinationConfig, "expected parameter 'gcsDestinationConfig' to be non-null");
+            return $;
         }
     }
+
 }

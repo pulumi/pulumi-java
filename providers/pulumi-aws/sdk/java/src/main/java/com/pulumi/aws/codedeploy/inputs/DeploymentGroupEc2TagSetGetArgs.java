@@ -6,9 +6,9 @@ package com.pulumi.aws.codedeploy.inputs;
 import com.pulumi.aws.codedeploy.inputs.DeploymentGroupEc2TagSetEc2TagFilterGetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,52 +21,52 @@ public final class DeploymentGroupEc2TagSetGetArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="ec2TagFilters")
-      private final @Nullable Output<List<DeploymentGroupEc2TagSetEc2TagFilterGetArgs>> ec2TagFilters;
+    private @Nullable Output<List<DeploymentGroupEc2TagSetEc2TagFilterGetArgs>> ec2TagFilters;
 
-    public Output<List<DeploymentGroupEc2TagSetEc2TagFilterGetArgs>> ec2TagFilters() {
-        return this.ec2TagFilters == null ? Codegen.empty() : this.ec2TagFilters;
+    public Optional<Output<List<DeploymentGroupEc2TagSetEc2TagFilterGetArgs>>> ec2TagFilters() {
+        return Optional.ofNullable(this.ec2TagFilters);
     }
 
-    public DeploymentGroupEc2TagSetGetArgs(@Nullable Output<List<DeploymentGroupEc2TagSetEc2TagFilterGetArgs>> ec2TagFilters) {
-        this.ec2TagFilters = ec2TagFilters;
-    }
+    private DeploymentGroupEc2TagSetGetArgs() {}
 
-    private DeploymentGroupEc2TagSetGetArgs() {
-        this.ec2TagFilters = Codegen.empty();
+    private DeploymentGroupEc2TagSetGetArgs(DeploymentGroupEc2TagSetGetArgs $) {
+        this.ec2TagFilters = $.ec2TagFilters;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DeploymentGroupEc2TagSetGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<DeploymentGroupEc2TagSetEc2TagFilterGetArgs>> ec2TagFilters;
+        private DeploymentGroupEc2TagSetGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DeploymentGroupEc2TagSetGetArgs();
         }
 
         public Builder(DeploymentGroupEc2TagSetGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.ec2TagFilters = defaults.ec2TagFilters;
+            $ = new DeploymentGroupEc2TagSetGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder ec2TagFilters(@Nullable Output<List<DeploymentGroupEc2TagSetEc2TagFilterGetArgs>> ec2TagFilters) {
-            this.ec2TagFilters = ec2TagFilters;
+            $.ec2TagFilters = ec2TagFilters;
             return this;
         }
-        public Builder ec2TagFilters(@Nullable List<DeploymentGroupEc2TagSetEc2TagFilterGetArgs> ec2TagFilters) {
-            this.ec2TagFilters = Codegen.ofNullable(ec2TagFilters);
-            return this;
+
+        public Builder ec2TagFilters(List<DeploymentGroupEc2TagSetEc2TagFilterGetArgs> ec2TagFilters) {
+            return ec2TagFilters(Output.of(ec2TagFilters));
         }
+
         public Builder ec2TagFilters(DeploymentGroupEc2TagSetEc2TagFilterGetArgs... ec2TagFilters) {
             return ec2TagFilters(List.of(ec2TagFilters));
-        }        public DeploymentGroupEc2TagSetGetArgs build() {
-            return new DeploymentGroupEc2TagSetGetArgs(ec2TagFilters);
+        }
+
+        public DeploymentGroupEc2TagSetGetArgs build() {
+            return $;
         }
     }
+
 }

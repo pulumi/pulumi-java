@@ -6,9 +6,9 @@ package com.pulumi.awsnative.athena.inputs;
 import com.pulumi.awsnative.athena.inputs.WorkGroupEncryptionConfigurationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,70 +21,65 @@ public final class WorkGroupResultConfigurationArgs extends com.pulumi.resources
     public static final WorkGroupResultConfigurationArgs Empty = new WorkGroupResultConfigurationArgs();
 
     @Import(name="encryptionConfiguration")
-      private final @Nullable Output<WorkGroupEncryptionConfigurationArgs> encryptionConfiguration;
+    private @Nullable Output<WorkGroupEncryptionConfigurationArgs> encryptionConfiguration;
 
-    public Output<WorkGroupEncryptionConfigurationArgs> encryptionConfiguration() {
-        return this.encryptionConfiguration == null ? Codegen.empty() : this.encryptionConfiguration;
+    public Optional<Output<WorkGroupEncryptionConfigurationArgs>> encryptionConfiguration() {
+        return Optional.ofNullable(this.encryptionConfiguration);
     }
 
     @Import(name="outputLocation")
-      private final @Nullable Output<String> outputLocation;
+    private @Nullable Output<String> outputLocation;
 
-    public Output<String> outputLocation() {
-        return this.outputLocation == null ? Codegen.empty() : this.outputLocation;
+    public Optional<Output<String>> outputLocation() {
+        return Optional.ofNullable(this.outputLocation);
     }
 
-    public WorkGroupResultConfigurationArgs(
-        @Nullable Output<WorkGroupEncryptionConfigurationArgs> encryptionConfiguration,
-        @Nullable Output<String> outputLocation) {
-        this.encryptionConfiguration = encryptionConfiguration;
-        this.outputLocation = outputLocation;
-    }
+    private WorkGroupResultConfigurationArgs() {}
 
-    private WorkGroupResultConfigurationArgs() {
-        this.encryptionConfiguration = Codegen.empty();
-        this.outputLocation = Codegen.empty();
+    private WorkGroupResultConfigurationArgs(WorkGroupResultConfigurationArgs $) {
+        this.encryptionConfiguration = $.encryptionConfiguration;
+        this.outputLocation = $.outputLocation;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WorkGroupResultConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<WorkGroupEncryptionConfigurationArgs> encryptionConfiguration;
-        private @Nullable Output<String> outputLocation;
+        private WorkGroupResultConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new WorkGroupResultConfigurationArgs();
         }
 
         public Builder(WorkGroupResultConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.encryptionConfiguration = defaults.encryptionConfiguration;
-    	      this.outputLocation = defaults.outputLocation;
+            $ = new WorkGroupResultConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder encryptionConfiguration(@Nullable Output<WorkGroupEncryptionConfigurationArgs> encryptionConfiguration) {
-            this.encryptionConfiguration = encryptionConfiguration;
+            $.encryptionConfiguration = encryptionConfiguration;
             return this;
         }
-        public Builder encryptionConfiguration(@Nullable WorkGroupEncryptionConfigurationArgs encryptionConfiguration) {
-            this.encryptionConfiguration = Codegen.ofNullable(encryptionConfiguration);
-            return this;
+
+        public Builder encryptionConfiguration(WorkGroupEncryptionConfigurationArgs encryptionConfiguration) {
+            return encryptionConfiguration(Output.of(encryptionConfiguration));
         }
+
         public Builder outputLocation(@Nullable Output<String> outputLocation) {
-            this.outputLocation = outputLocation;
+            $.outputLocation = outputLocation;
             return this;
         }
-        public Builder outputLocation(@Nullable String outputLocation) {
-            this.outputLocation = Codegen.ofNullable(outputLocation);
-            return this;
-        }        public WorkGroupResultConfigurationArgs build() {
-            return new WorkGroupResultConfigurationArgs(encryptionConfiguration, outputLocation);
+
+        public Builder outputLocation(String outputLocation) {
+            return outputLocation(Output.of(outputLocation));
+        }
+
+        public WorkGroupResultConfigurationArgs build() {
+            return $;
         }
     }
+
 }

@@ -23,7 +23,7 @@ public final class GooglePrivacyDlpV2KAnonymityEquivalenceClassResponse extends 
      * 
      */
     @Import(name="equivalenceClassSize", required=true)
-      private final String equivalenceClassSize;
+    private String equivalenceClassSize;
 
     public String equivalenceClassSize() {
         return this.equivalenceClassSize;
@@ -34,58 +34,56 @@ public final class GooglePrivacyDlpV2KAnonymityEquivalenceClassResponse extends 
      * 
      */
     @Import(name="quasiIdsValues", required=true)
-      private final List<GooglePrivacyDlpV2ValueResponse> quasiIdsValues;
+    private List<GooglePrivacyDlpV2ValueResponse> quasiIdsValues;
 
     public List<GooglePrivacyDlpV2ValueResponse> quasiIdsValues() {
         return this.quasiIdsValues;
     }
 
-    public GooglePrivacyDlpV2KAnonymityEquivalenceClassResponse(
-        String equivalenceClassSize,
-        List<GooglePrivacyDlpV2ValueResponse> quasiIdsValues) {
-        this.equivalenceClassSize = Objects.requireNonNull(equivalenceClassSize, "expected parameter 'equivalenceClassSize' to be non-null");
-        this.quasiIdsValues = Objects.requireNonNull(quasiIdsValues, "expected parameter 'quasiIdsValues' to be non-null");
-    }
+    private GooglePrivacyDlpV2KAnonymityEquivalenceClassResponse() {}
 
-    private GooglePrivacyDlpV2KAnonymityEquivalenceClassResponse() {
-        this.equivalenceClassSize = null;
-        this.quasiIdsValues = List.of();
+    private GooglePrivacyDlpV2KAnonymityEquivalenceClassResponse(GooglePrivacyDlpV2KAnonymityEquivalenceClassResponse $) {
+        this.equivalenceClassSize = $.equivalenceClassSize;
+        this.quasiIdsValues = $.quasiIdsValues;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GooglePrivacyDlpV2KAnonymityEquivalenceClassResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String equivalenceClassSize;
-        private List<GooglePrivacyDlpV2ValueResponse> quasiIdsValues;
+        private GooglePrivacyDlpV2KAnonymityEquivalenceClassResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GooglePrivacyDlpV2KAnonymityEquivalenceClassResponse();
         }
 
         public Builder(GooglePrivacyDlpV2KAnonymityEquivalenceClassResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.equivalenceClassSize = defaults.equivalenceClassSize;
-    	      this.quasiIdsValues = defaults.quasiIdsValues;
+            $ = new GooglePrivacyDlpV2KAnonymityEquivalenceClassResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder equivalenceClassSize(String equivalenceClassSize) {
-            this.equivalenceClassSize = Objects.requireNonNull(equivalenceClassSize);
+            $.equivalenceClassSize = equivalenceClassSize;
             return this;
         }
+
         public Builder quasiIdsValues(List<GooglePrivacyDlpV2ValueResponse> quasiIdsValues) {
-            this.quasiIdsValues = Objects.requireNonNull(quasiIdsValues);
+            $.quasiIdsValues = quasiIdsValues;
             return this;
         }
+
         public Builder quasiIdsValues(GooglePrivacyDlpV2ValueResponse... quasiIdsValues) {
             return quasiIdsValues(List.of(quasiIdsValues));
-        }        public GooglePrivacyDlpV2KAnonymityEquivalenceClassResponse build() {
-            return new GooglePrivacyDlpV2KAnonymityEquivalenceClassResponse(equivalenceClassSize, quasiIdsValues);
+        }
+
+        public GooglePrivacyDlpV2KAnonymityEquivalenceClassResponse build() {
+            $.equivalenceClassSize = Objects.requireNonNull($.equivalenceClassSize, "expected parameter 'equivalenceClassSize' to be non-null");
+            $.quasiIdsValues = Objects.requireNonNull($.quasiIdsValues, "expected parameter 'quasiIdsValues' to be non-null");
+            return $;
         }
     }
+
 }

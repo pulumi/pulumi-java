@@ -25,10 +25,10 @@ public final class NetworkRefResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="endpointRefs")
-      private final @Nullable List<EndpointRefResponse> endpointRefs;
+    private @Nullable List<EndpointRefResponse> endpointRefs;
 
-    public List<EndpointRefResponse> endpointRefs() {
-        return this.endpointRefs == null ? List.of() : this.endpointRefs;
+    public Optional<List<EndpointRefResponse>> endpointRefs() {
+        return Optional.ofNullable(this.endpointRefs);
     }
 
     /**
@@ -36,58 +36,54 @@ public final class NetworkRefResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable String name;
+    private @Nullable String name;
 
     public Optional<String> name() {
-        return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
+        return Optional.ofNullable(this.name);
     }
 
-    public NetworkRefResponse(
-        @Nullable List<EndpointRefResponse> endpointRefs,
-        @Nullable String name) {
-        this.endpointRefs = endpointRefs;
-        this.name = name;
-    }
+    private NetworkRefResponse() {}
 
-    private NetworkRefResponse() {
-        this.endpointRefs = List.of();
-        this.name = null;
+    private NetworkRefResponse(NetworkRefResponse $) {
+        this.endpointRefs = $.endpointRefs;
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NetworkRefResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<EndpointRefResponse> endpointRefs;
-        private @Nullable String name;
+        private NetworkRefResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new NetworkRefResponse();
         }
 
         public Builder(NetworkRefResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.endpointRefs = defaults.endpointRefs;
-    	      this.name = defaults.name;
+            $ = new NetworkRefResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder endpointRefs(@Nullable List<EndpointRefResponse> endpointRefs) {
-            this.endpointRefs = endpointRefs;
+            $.endpointRefs = endpointRefs;
             return this;
         }
+
         public Builder endpointRefs(EndpointRefResponse... endpointRefs) {
             return endpointRefs(List.of(endpointRefs));
         }
+
         public Builder name(@Nullable String name) {
-            this.name = name;
+            $.name = name;
             return this;
-        }        public NetworkRefResponse build() {
-            return new NetworkRefResponse(endpointRefs, name);
+        }
+
+        public NetworkRefResponse build() {
+            return $;
         }
     }
+
 }

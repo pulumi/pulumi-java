@@ -43,7 +43,7 @@ public final class MoveResourcePropertiesResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="dependsOn", required=true)
-      private final List<MoveResourceDependencyResponse> dependsOn;
+    private List<MoveResourceDependencyResponse> dependsOn;
 
     public List<MoveResourceDependencyResponse> dependsOn() {
         return this.dependsOn;
@@ -54,10 +54,10 @@ public final class MoveResourcePropertiesResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="dependsOnOverrides")
-      private final @Nullable List<MoveResourceDependencyOverrideResponse> dependsOnOverrides;
+    private @Nullable List<MoveResourceDependencyOverrideResponse> dependsOnOverrides;
 
-    public List<MoveResourceDependencyOverrideResponse> dependsOnOverrides() {
-        return this.dependsOnOverrides == null ? List.of() : this.dependsOnOverrides;
+    public Optional<List<MoveResourceDependencyOverrideResponse>> dependsOnOverrides() {
+        return Optional.ofNullable(this.dependsOnOverrides);
     }
 
     /**
@@ -65,7 +65,7 @@ public final class MoveResourcePropertiesResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="errors", required=true)
-      private final MoveResourcePropertiesResponseErrors errors;
+    private MoveResourcePropertiesResponseErrors errors;
 
     public MoveResourcePropertiesResponseErrors errors() {
         return this.errors;
@@ -76,10 +76,10 @@ public final class MoveResourcePropertiesResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="existingTargetId")
-      private final @Nullable String existingTargetId;
+    private @Nullable String existingTargetId;
 
     public Optional<String> existingTargetId() {
-        return this.existingTargetId == null ? Optional.empty() : Optional.ofNullable(this.existingTargetId);
+        return Optional.ofNullable(this.existingTargetId);
     }
 
     /**
@@ -87,7 +87,7 @@ public final class MoveResourcePropertiesResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="isResolveRequired", required=true)
-      private final Boolean isResolveRequired;
+    private Boolean isResolveRequired;
 
     public Boolean isResolveRequired() {
         return this.isResolveRequired;
@@ -98,7 +98,7 @@ public final class MoveResourcePropertiesResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="moveStatus", required=true)
-      private final MoveResourcePropertiesResponseMoveStatus moveStatus;
+    private MoveResourcePropertiesResponseMoveStatus moveStatus;
 
     public MoveResourcePropertiesResponseMoveStatus moveStatus() {
         return this.moveStatus;
@@ -109,7 +109,7 @@ public final class MoveResourcePropertiesResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="provisioningState", required=true)
-      private final String provisioningState;
+    private String provisioningState;
 
     public String provisioningState() {
         return this.provisioningState;
@@ -120,10 +120,10 @@ public final class MoveResourcePropertiesResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="resourceSettings")
-      private final @Nullable Object resourceSettings;
+    private @Nullable Object resourceSettings;
 
-    public Object resourceSettings() {
-        return this.resourceSettings == null ? null : this.resourceSettings;
+    public Optional<Object> resourceSettings() {
+        return Optional.ofNullable(this.resourceSettings);
     }
 
     /**
@@ -131,7 +131,7 @@ public final class MoveResourcePropertiesResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="sourceId", required=true)
-      private final String sourceId;
+    private String sourceId;
 
     public String sourceId() {
         return this.sourceId;
@@ -142,7 +142,7 @@ public final class MoveResourcePropertiesResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="sourceResourceSettings", required=true)
-      private final Object sourceResourceSettings;
+    private Object sourceResourceSettings;
 
     public Object sourceResourceSettings() {
         return this.sourceResourceSettings;
@@ -153,142 +153,120 @@ public final class MoveResourcePropertiesResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="targetId", required=true)
-      private final String targetId;
+    private String targetId;
 
     public String targetId() {
         return this.targetId;
     }
 
-    public MoveResourcePropertiesResponse(
-        List<MoveResourceDependencyResponse> dependsOn,
-        @Nullable List<MoveResourceDependencyOverrideResponse> dependsOnOverrides,
-        MoveResourcePropertiesResponseErrors errors,
-        @Nullable String existingTargetId,
-        Boolean isResolveRequired,
-        MoveResourcePropertiesResponseMoveStatus moveStatus,
-        String provisioningState,
-        @Nullable Object resourceSettings,
-        String sourceId,
-        Object sourceResourceSettings,
-        String targetId) {
-        this.dependsOn = Objects.requireNonNull(dependsOn, "expected parameter 'dependsOn' to be non-null");
-        this.dependsOnOverrides = dependsOnOverrides;
-        this.errors = Objects.requireNonNull(errors, "expected parameter 'errors' to be non-null");
-        this.existingTargetId = existingTargetId;
-        this.isResolveRequired = Objects.requireNonNull(isResolveRequired, "expected parameter 'isResolveRequired' to be non-null");
-        this.moveStatus = Objects.requireNonNull(moveStatus, "expected parameter 'moveStatus' to be non-null");
-        this.provisioningState = Objects.requireNonNull(provisioningState, "expected parameter 'provisioningState' to be non-null");
-        this.resourceSettings = resourceSettings;
-        this.sourceId = Objects.requireNonNull(sourceId, "expected parameter 'sourceId' to be non-null");
-        this.sourceResourceSettings = Objects.requireNonNull(sourceResourceSettings, "expected parameter 'sourceResourceSettings' to be non-null");
-        this.targetId = Objects.requireNonNull(targetId, "expected parameter 'targetId' to be non-null");
-    }
+    private MoveResourcePropertiesResponse() {}
 
-    private MoveResourcePropertiesResponse() {
-        this.dependsOn = List.of();
-        this.dependsOnOverrides = List.of();
-        this.errors = null;
-        this.existingTargetId = null;
-        this.isResolveRequired = null;
-        this.moveStatus = null;
-        this.provisioningState = null;
-        this.resourceSettings = null;
-        this.sourceId = null;
-        this.sourceResourceSettings = null;
-        this.targetId = null;
+    private MoveResourcePropertiesResponse(MoveResourcePropertiesResponse $) {
+        this.dependsOn = $.dependsOn;
+        this.dependsOnOverrides = $.dependsOnOverrides;
+        this.errors = $.errors;
+        this.existingTargetId = $.existingTargetId;
+        this.isResolveRequired = $.isResolveRequired;
+        this.moveStatus = $.moveStatus;
+        this.provisioningState = $.provisioningState;
+        this.resourceSettings = $.resourceSettings;
+        this.sourceId = $.sourceId;
+        this.sourceResourceSettings = $.sourceResourceSettings;
+        this.targetId = $.targetId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MoveResourcePropertiesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<MoveResourceDependencyResponse> dependsOn;
-        private @Nullable List<MoveResourceDependencyOverrideResponse> dependsOnOverrides;
-        private MoveResourcePropertiesResponseErrors errors;
-        private @Nullable String existingTargetId;
-        private Boolean isResolveRequired;
-        private MoveResourcePropertiesResponseMoveStatus moveStatus;
-        private String provisioningState;
-        private @Nullable Object resourceSettings;
-        private String sourceId;
-        private Object sourceResourceSettings;
-        private String targetId;
+        private MoveResourcePropertiesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new MoveResourcePropertiesResponse();
         }
 
         public Builder(MoveResourcePropertiesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dependsOn = defaults.dependsOn;
-    	      this.dependsOnOverrides = defaults.dependsOnOverrides;
-    	      this.errors = defaults.errors;
-    	      this.existingTargetId = defaults.existingTargetId;
-    	      this.isResolveRequired = defaults.isResolveRequired;
-    	      this.moveStatus = defaults.moveStatus;
-    	      this.provisioningState = defaults.provisioningState;
-    	      this.resourceSettings = defaults.resourceSettings;
-    	      this.sourceId = defaults.sourceId;
-    	      this.sourceResourceSettings = defaults.sourceResourceSettings;
-    	      this.targetId = defaults.targetId;
+            $ = new MoveResourcePropertiesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder dependsOn(List<MoveResourceDependencyResponse> dependsOn) {
-            this.dependsOn = Objects.requireNonNull(dependsOn);
+            $.dependsOn = dependsOn;
             return this;
         }
+
         public Builder dependsOn(MoveResourceDependencyResponse... dependsOn) {
             return dependsOn(List.of(dependsOn));
         }
+
         public Builder dependsOnOverrides(@Nullable List<MoveResourceDependencyOverrideResponse> dependsOnOverrides) {
-            this.dependsOnOverrides = dependsOnOverrides;
+            $.dependsOnOverrides = dependsOnOverrides;
             return this;
         }
+
         public Builder dependsOnOverrides(MoveResourceDependencyOverrideResponse... dependsOnOverrides) {
             return dependsOnOverrides(List.of(dependsOnOverrides));
         }
+
         public Builder errors(MoveResourcePropertiesResponseErrors errors) {
-            this.errors = Objects.requireNonNull(errors);
+            $.errors = errors;
             return this;
         }
+
         public Builder existingTargetId(@Nullable String existingTargetId) {
-            this.existingTargetId = existingTargetId;
+            $.existingTargetId = existingTargetId;
             return this;
         }
+
         public Builder isResolveRequired(Boolean isResolveRequired) {
-            this.isResolveRequired = Objects.requireNonNull(isResolveRequired);
+            $.isResolveRequired = isResolveRequired;
             return this;
         }
+
         public Builder moveStatus(MoveResourcePropertiesResponseMoveStatus moveStatus) {
-            this.moveStatus = Objects.requireNonNull(moveStatus);
+            $.moveStatus = moveStatus;
             return this;
         }
+
         public Builder provisioningState(String provisioningState) {
-            this.provisioningState = Objects.requireNonNull(provisioningState);
+            $.provisioningState = provisioningState;
             return this;
         }
+
         public Builder resourceSettings(@Nullable Object resourceSettings) {
-            this.resourceSettings = resourceSettings;
+            $.resourceSettings = resourceSettings;
             return this;
         }
+
         public Builder sourceId(String sourceId) {
-            this.sourceId = Objects.requireNonNull(sourceId);
+            $.sourceId = sourceId;
             return this;
         }
+
         public Builder sourceResourceSettings(Object sourceResourceSettings) {
-            this.sourceResourceSettings = Objects.requireNonNull(sourceResourceSettings);
+            $.sourceResourceSettings = sourceResourceSettings;
             return this;
         }
+
         public Builder targetId(String targetId) {
-            this.targetId = Objects.requireNonNull(targetId);
+            $.targetId = targetId;
             return this;
-        }        public MoveResourcePropertiesResponse build() {
-            return new MoveResourcePropertiesResponse(dependsOn, dependsOnOverrides, errors, existingTargetId, isResolveRequired, moveStatus, provisioningState, resourceSettings, sourceId, sourceResourceSettings, targetId);
+        }
+
+        public MoveResourcePropertiesResponse build() {
+            $.dependsOn = Objects.requireNonNull($.dependsOn, "expected parameter 'dependsOn' to be non-null");
+            $.errors = Objects.requireNonNull($.errors, "expected parameter 'errors' to be non-null");
+            $.isResolveRequired = Objects.requireNonNull($.isResolveRequired, "expected parameter 'isResolveRequired' to be non-null");
+            $.moveStatus = Objects.requireNonNull($.moveStatus, "expected parameter 'moveStatus' to be non-null");
+            $.provisioningState = Objects.requireNonNull($.provisioningState, "expected parameter 'provisioningState' to be non-null");
+            $.sourceId = Objects.requireNonNull($.sourceId, "expected parameter 'sourceId' to be non-null");
+            $.sourceResourceSettings = Objects.requireNonNull($.sourceResourceSettings, "expected parameter 'sourceResourceSettings' to be non-null");
+            $.targetId = Objects.requireNonNull($.targetId, "expected parameter 'targetId' to be non-null");
+            return $;
         }
     }
+
 }

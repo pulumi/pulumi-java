@@ -5,9 +5,9 @@ package com.pulumi.aws.ec2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,49 +20,48 @@ public final class SpotInstanceRequestEnclaveOptionsArgs extends com.pulumi.reso
      * 
      */
     @Import(name="enabled")
-      private final @Nullable Output<Boolean> enabled;
+    private @Nullable Output<Boolean> enabled;
 
-    public Output<Boolean> enabled() {
-        return this.enabled == null ? Codegen.empty() : this.enabled;
+    public Optional<Output<Boolean>> enabled() {
+        return Optional.ofNullable(this.enabled);
     }
 
-    public SpotInstanceRequestEnclaveOptionsArgs(@Nullable Output<Boolean> enabled) {
-        this.enabled = enabled;
-    }
+    private SpotInstanceRequestEnclaveOptionsArgs() {}
 
-    private SpotInstanceRequestEnclaveOptionsArgs() {
-        this.enabled = Codegen.empty();
+    private SpotInstanceRequestEnclaveOptionsArgs(SpotInstanceRequestEnclaveOptionsArgs $) {
+        this.enabled = $.enabled;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SpotInstanceRequestEnclaveOptionsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> enabled;
+        private SpotInstanceRequestEnclaveOptionsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SpotInstanceRequestEnclaveOptionsArgs();
         }
 
         public Builder(SpotInstanceRequestEnclaveOptionsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.enabled = defaults.enabled;
+            $ = new SpotInstanceRequestEnclaveOptionsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder enabled(@Nullable Output<Boolean> enabled) {
-            this.enabled = enabled;
+            $.enabled = enabled;
             return this;
         }
-        public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Codegen.ofNullable(enabled);
-            return this;
-        }        public SpotInstanceRequestEnclaveOptionsArgs build() {
-            return new SpotInstanceRequestEnclaveOptionsArgs(enabled);
+
+        public Builder enabled(Boolean enabled) {
+            return enabled(Output.of(enabled));
+        }
+
+        public SpotInstanceRequestEnclaveOptionsArgs build() {
+            return $;
         }
     }
+
 }

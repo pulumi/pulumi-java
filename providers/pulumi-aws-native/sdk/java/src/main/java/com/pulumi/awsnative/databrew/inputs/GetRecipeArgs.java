@@ -17,45 +17,45 @@ public final class GetRecipeArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
     }
 
-    public GetRecipeArgs(String name) {
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-    }
+    private GetRecipeArgs() {}
 
-    private GetRecipeArgs() {
-        this.name = null;
+    private GetRecipeArgs(GetRecipeArgs $) {
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetRecipeArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String name;
+        private GetRecipeArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetRecipeArgs();
         }
 
         public Builder(GetRecipeArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
+            $ = new GetRecipeArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
-        }        public GetRecipeArgs build() {
-            return new GetRecipeArgs(name);
+        }
+
+        public GetRecipeArgs build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            return $;
         }
     }
+
 }

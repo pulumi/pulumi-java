@@ -6,8 +6,8 @@ package com.pulumi.awsnative.lex.inputs;
 import com.pulumi.awsnative.lex.inputs.BotAliasS3BucketLogDestinationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,49 +20,48 @@ public final class BotAliasAudioLogDestinationArgs extends com.pulumi.resources.
     public static final BotAliasAudioLogDestinationArgs Empty = new BotAliasAudioLogDestinationArgs();
 
     @Import(name="s3Bucket")
-      private final @Nullable Output<BotAliasS3BucketLogDestinationArgs> s3Bucket;
+    private @Nullable Output<BotAliasS3BucketLogDestinationArgs> s3Bucket;
 
-    public Output<BotAliasS3BucketLogDestinationArgs> s3Bucket() {
-        return this.s3Bucket == null ? Codegen.empty() : this.s3Bucket;
+    public Optional<Output<BotAliasS3BucketLogDestinationArgs>> s3Bucket() {
+        return Optional.ofNullable(this.s3Bucket);
     }
 
-    public BotAliasAudioLogDestinationArgs(@Nullable Output<BotAliasS3BucketLogDestinationArgs> s3Bucket) {
-        this.s3Bucket = s3Bucket;
-    }
+    private BotAliasAudioLogDestinationArgs() {}
 
-    private BotAliasAudioLogDestinationArgs() {
-        this.s3Bucket = Codegen.empty();
+    private BotAliasAudioLogDestinationArgs(BotAliasAudioLogDestinationArgs $) {
+        this.s3Bucket = $.s3Bucket;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BotAliasAudioLogDestinationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<BotAliasS3BucketLogDestinationArgs> s3Bucket;
+        private BotAliasAudioLogDestinationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new BotAliasAudioLogDestinationArgs();
         }
 
         public Builder(BotAliasAudioLogDestinationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.s3Bucket = defaults.s3Bucket;
+            $ = new BotAliasAudioLogDestinationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder s3Bucket(@Nullable Output<BotAliasS3BucketLogDestinationArgs> s3Bucket) {
-            this.s3Bucket = s3Bucket;
+            $.s3Bucket = s3Bucket;
             return this;
         }
-        public Builder s3Bucket(@Nullable BotAliasS3BucketLogDestinationArgs s3Bucket) {
-            this.s3Bucket = Codegen.ofNullable(s3Bucket);
-            return this;
-        }        public BotAliasAudioLogDestinationArgs build() {
-            return new BotAliasAudioLogDestinationArgs(s3Bucket);
+
+        public Builder s3Bucket(BotAliasS3BucketLogDestinationArgs s3Bucket) {
+            return s3Bucket(Output.of(s3Bucket));
+        }
+
+        public BotAliasAudioLogDestinationArgs build() {
+            return $;
         }
     }
+
 }

@@ -9,7 +9,6 @@ import com.pulumi.azurenative.dataprotection.inputs.DataStoreInfoBaseArgs;
 import com.pulumi.azurenative.dataprotection.inputs.ImmediateCopyOptionArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.util.Objects;
 
@@ -27,7 +26,7 @@ public final class TargetCopySettingArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="copyAfter", required=true)
-      private final Output<Object> copyAfter;
+    private Output<Object> copyAfter;
 
     public Output<Object> copyAfter() {
         return this.copyAfter;
@@ -38,63 +37,60 @@ public final class TargetCopySettingArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="dataStore", required=true)
-      private final Output<DataStoreInfoBaseArgs> dataStore;
+    private Output<DataStoreInfoBaseArgs> dataStore;
 
     public Output<DataStoreInfoBaseArgs> dataStore() {
         return this.dataStore;
     }
 
-    public TargetCopySettingArgs(
-        Output<Object> copyAfter,
-        Output<DataStoreInfoBaseArgs> dataStore) {
-        this.copyAfter = Objects.requireNonNull(copyAfter, "expected parameter 'copyAfter' to be non-null");
-        this.dataStore = Objects.requireNonNull(dataStore, "expected parameter 'dataStore' to be non-null");
-    }
+    private TargetCopySettingArgs() {}
 
-    private TargetCopySettingArgs() {
-        this.copyAfter = Codegen.empty();
-        this.dataStore = Codegen.empty();
+    private TargetCopySettingArgs(TargetCopySettingArgs $) {
+        this.copyAfter = $.copyAfter;
+        this.dataStore = $.dataStore;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TargetCopySettingArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Object> copyAfter;
-        private Output<DataStoreInfoBaseArgs> dataStore;
+        private TargetCopySettingArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TargetCopySettingArgs();
         }
 
         public Builder(TargetCopySettingArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.copyAfter = defaults.copyAfter;
-    	      this.dataStore = defaults.dataStore;
+            $ = new TargetCopySettingArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder copyAfter(Output<Object> copyAfter) {
-            this.copyAfter = Objects.requireNonNull(copyAfter);
+            $.copyAfter = copyAfter;
             return this;
         }
+
         public Builder copyAfter(Object copyAfter) {
-            this.copyAfter = Output.of(Objects.requireNonNull(copyAfter));
-            return this;
+            return copyAfter(Output.of(copyAfter));
         }
+
         public Builder dataStore(Output<DataStoreInfoBaseArgs> dataStore) {
-            this.dataStore = Objects.requireNonNull(dataStore);
+            $.dataStore = dataStore;
             return this;
         }
+
         public Builder dataStore(DataStoreInfoBaseArgs dataStore) {
-            this.dataStore = Output.of(Objects.requireNonNull(dataStore));
-            return this;
-        }        public TargetCopySettingArgs build() {
-            return new TargetCopySettingArgs(copyAfter, dataStore);
+            return dataStore(Output.of(dataStore));
+        }
+
+        public TargetCopySettingArgs build() {
+            $.copyAfter = Objects.requireNonNull($.copyAfter, "expected parameter 'copyAfter' to be non-null");
+            $.dataStore = Objects.requireNonNull($.dataStore, "expected parameter 'dataStore' to be non-null");
+            return $;
         }
     }
+
 }

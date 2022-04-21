@@ -5,10 +5,10 @@ package com.pulumi.kubernetes.flowcontrol.apiserver.k8s.io_v1beta2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.kubernetes.flowcontrol.apiserver.k8s.io_v1beta2.inputs.FlowSchemaConditionArgs;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,52 +25,52 @@ public final class FlowSchemaStatusArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="conditions")
-      private final @Nullable Output<List<FlowSchemaConditionArgs>> conditions;
+    private @Nullable Output<List<FlowSchemaConditionArgs>> conditions;
 
-    public Output<List<FlowSchemaConditionArgs>> conditions() {
-        return this.conditions == null ? Codegen.empty() : this.conditions;
+    public Optional<Output<List<FlowSchemaConditionArgs>>> conditions() {
+        return Optional.ofNullable(this.conditions);
     }
 
-    public FlowSchemaStatusArgs(@Nullable Output<List<FlowSchemaConditionArgs>> conditions) {
-        this.conditions = conditions;
-    }
+    private FlowSchemaStatusArgs() {}
 
-    private FlowSchemaStatusArgs() {
-        this.conditions = Codegen.empty();
+    private FlowSchemaStatusArgs(FlowSchemaStatusArgs $) {
+        this.conditions = $.conditions;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FlowSchemaStatusArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<FlowSchemaConditionArgs>> conditions;
+        private FlowSchemaStatusArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new FlowSchemaStatusArgs();
         }
 
         public Builder(FlowSchemaStatusArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.conditions = defaults.conditions;
+            $ = new FlowSchemaStatusArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder conditions(@Nullable Output<List<FlowSchemaConditionArgs>> conditions) {
-            this.conditions = conditions;
+            $.conditions = conditions;
             return this;
         }
-        public Builder conditions(@Nullable List<FlowSchemaConditionArgs> conditions) {
-            this.conditions = Codegen.ofNullable(conditions);
-            return this;
+
+        public Builder conditions(List<FlowSchemaConditionArgs> conditions) {
+            return conditions(Output.of(conditions));
         }
+
         public Builder conditions(FlowSchemaConditionArgs... conditions) {
             return conditions(List.of(conditions));
-        }        public FlowSchemaStatusArgs build() {
-            return new FlowSchemaStatusArgs(conditions);
+        }
+
+        public FlowSchemaStatusArgs build() {
+            return $;
         }
     }
+
 }

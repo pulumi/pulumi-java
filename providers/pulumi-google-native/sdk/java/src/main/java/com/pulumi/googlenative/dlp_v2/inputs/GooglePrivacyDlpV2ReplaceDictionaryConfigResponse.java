@@ -21,45 +21,45 @@ public final class GooglePrivacyDlpV2ReplaceDictionaryConfigResponse extends com
      * 
      */
     @Import(name="wordList", required=true)
-      private final GooglePrivacyDlpV2WordListResponse wordList;
+    private GooglePrivacyDlpV2WordListResponse wordList;
 
     public GooglePrivacyDlpV2WordListResponse wordList() {
         return this.wordList;
     }
 
-    public GooglePrivacyDlpV2ReplaceDictionaryConfigResponse(GooglePrivacyDlpV2WordListResponse wordList) {
-        this.wordList = Objects.requireNonNull(wordList, "expected parameter 'wordList' to be non-null");
-    }
+    private GooglePrivacyDlpV2ReplaceDictionaryConfigResponse() {}
 
-    private GooglePrivacyDlpV2ReplaceDictionaryConfigResponse() {
-        this.wordList = null;
+    private GooglePrivacyDlpV2ReplaceDictionaryConfigResponse(GooglePrivacyDlpV2ReplaceDictionaryConfigResponse $) {
+        this.wordList = $.wordList;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GooglePrivacyDlpV2ReplaceDictionaryConfigResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private GooglePrivacyDlpV2WordListResponse wordList;
+        private GooglePrivacyDlpV2ReplaceDictionaryConfigResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GooglePrivacyDlpV2ReplaceDictionaryConfigResponse();
         }
 
         public Builder(GooglePrivacyDlpV2ReplaceDictionaryConfigResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.wordList = defaults.wordList;
+            $ = new GooglePrivacyDlpV2ReplaceDictionaryConfigResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder wordList(GooglePrivacyDlpV2WordListResponse wordList) {
-            this.wordList = Objects.requireNonNull(wordList);
+            $.wordList = wordList;
             return this;
-        }        public GooglePrivacyDlpV2ReplaceDictionaryConfigResponse build() {
-            return new GooglePrivacyDlpV2ReplaceDictionaryConfigResponse(wordList);
+        }
+
+        public GooglePrivacyDlpV2ReplaceDictionaryConfigResponse build() {
+            $.wordList = Objects.requireNonNull($.wordList, "expected parameter 'wordList' to be non-null");
+            return $;
         }
     }
+
 }

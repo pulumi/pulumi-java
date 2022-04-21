@@ -3,7 +3,7 @@
 
 package com.pulumi.googlenative.contactcenterinsights_v1.inputs;
 
-import java.util.Objects;
+
 
 
 /**
@@ -14,28 +14,19 @@ public final class GoogleCloudContactcenterinsightsV1SilenceDataResponse extends
 
     public static final GoogleCloudContactcenterinsightsV1SilenceDataResponse Empty = new GoogleCloudContactcenterinsightsV1SilenceDataResponse();
 
-    public GoogleCloudContactcenterinsightsV1SilenceDataResponse() {
-    }
-
     public static Builder builder() {
         return new Builder();
     }
 
-    public static Builder builder(GoogleCloudContactcenterinsightsV1SilenceDataResponse defaults) {
-        return new Builder(defaults);
-    }
-
     public static final class Builder {
+        private GoogleCloudContactcenterinsightsV1SilenceDataResponse $;
 
         public Builder() {
-    	      // Empty
-        }
-
-        public Builder(GoogleCloudContactcenterinsightsV1SilenceDataResponse defaults) {
-    	      Objects.requireNonNull(defaults);
+            $ = new GoogleCloudContactcenterinsightsV1SilenceDataResponse();
         }
         public GoogleCloudContactcenterinsightsV1SilenceDataResponse build() {
-            return new GoogleCloudContactcenterinsightsV1SilenceDataResponse();
+            return $;
         }
     }
+
 }

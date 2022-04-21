@@ -5,9 +5,9 @@ package com.pulumi.googlenative.compute_alpha.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class BackendServiceIAPOAuth2ClientInfoArgs extends com.pulumi.reso
      * 
      */
     @Import(name="applicationName")
-      private final @Nullable Output<String> applicationName;
+    private @Nullable Output<String> applicationName;
 
-    public Output<String> applicationName() {
-        return this.applicationName == null ? Codegen.empty() : this.applicationName;
+    public Optional<Output<String>> applicationName() {
+        return Optional.ofNullable(this.applicationName);
     }
 
     /**
@@ -31,10 +31,10 @@ public final class BackendServiceIAPOAuth2ClientInfoArgs extends com.pulumi.reso
      * 
      */
     @Import(name="clientName")
-      private final @Nullable Output<String> clientName;
+    private @Nullable Output<String> clientName;
 
-    public Output<String> clientName() {
-        return this.clientName == null ? Codegen.empty() : this.clientName;
+    public Optional<Output<String>> clientName() {
+        return Optional.ofNullable(this.clientName);
     }
 
     /**
@@ -42,76 +42,68 @@ public final class BackendServiceIAPOAuth2ClientInfoArgs extends com.pulumi.reso
      * 
      */
     @Import(name="developerEmailAddress")
-      private final @Nullable Output<String> developerEmailAddress;
+    private @Nullable Output<String> developerEmailAddress;
 
-    public Output<String> developerEmailAddress() {
-        return this.developerEmailAddress == null ? Codegen.empty() : this.developerEmailAddress;
+    public Optional<Output<String>> developerEmailAddress() {
+        return Optional.ofNullable(this.developerEmailAddress);
     }
 
-    public BackendServiceIAPOAuth2ClientInfoArgs(
-        @Nullable Output<String> applicationName,
-        @Nullable Output<String> clientName,
-        @Nullable Output<String> developerEmailAddress) {
-        this.applicationName = applicationName;
-        this.clientName = clientName;
-        this.developerEmailAddress = developerEmailAddress;
-    }
+    private BackendServiceIAPOAuth2ClientInfoArgs() {}
 
-    private BackendServiceIAPOAuth2ClientInfoArgs() {
-        this.applicationName = Codegen.empty();
-        this.clientName = Codegen.empty();
-        this.developerEmailAddress = Codegen.empty();
+    private BackendServiceIAPOAuth2ClientInfoArgs(BackendServiceIAPOAuth2ClientInfoArgs $) {
+        this.applicationName = $.applicationName;
+        this.clientName = $.clientName;
+        this.developerEmailAddress = $.developerEmailAddress;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BackendServiceIAPOAuth2ClientInfoArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> applicationName;
-        private @Nullable Output<String> clientName;
-        private @Nullable Output<String> developerEmailAddress;
+        private BackendServiceIAPOAuth2ClientInfoArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new BackendServiceIAPOAuth2ClientInfoArgs();
         }
 
         public Builder(BackendServiceIAPOAuth2ClientInfoArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.applicationName = defaults.applicationName;
-    	      this.clientName = defaults.clientName;
-    	      this.developerEmailAddress = defaults.developerEmailAddress;
+            $ = new BackendServiceIAPOAuth2ClientInfoArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder applicationName(@Nullable Output<String> applicationName) {
-            this.applicationName = applicationName;
+            $.applicationName = applicationName;
             return this;
         }
-        public Builder applicationName(@Nullable String applicationName) {
-            this.applicationName = Codegen.ofNullable(applicationName);
-            return this;
+
+        public Builder applicationName(String applicationName) {
+            return applicationName(Output.of(applicationName));
         }
+
         public Builder clientName(@Nullable Output<String> clientName) {
-            this.clientName = clientName;
+            $.clientName = clientName;
             return this;
         }
-        public Builder clientName(@Nullable String clientName) {
-            this.clientName = Codegen.ofNullable(clientName);
-            return this;
+
+        public Builder clientName(String clientName) {
+            return clientName(Output.of(clientName));
         }
+
         public Builder developerEmailAddress(@Nullable Output<String> developerEmailAddress) {
-            this.developerEmailAddress = developerEmailAddress;
+            $.developerEmailAddress = developerEmailAddress;
             return this;
         }
-        public Builder developerEmailAddress(@Nullable String developerEmailAddress) {
-            this.developerEmailAddress = Codegen.ofNullable(developerEmailAddress);
-            return this;
-        }        public BackendServiceIAPOAuth2ClientInfoArgs build() {
-            return new BackendServiceIAPOAuth2ClientInfoArgs(applicationName, clientName, developerEmailAddress);
+
+        public Builder developerEmailAddress(String developerEmailAddress) {
+            return developerEmailAddress(Output.of(developerEmailAddress));
+        }
+
+        public BackendServiceIAPOAuth2ClientInfoArgs build() {
+            return $;
         }
     }
+
 }

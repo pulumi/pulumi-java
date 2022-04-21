@@ -5,7 +5,6 @@ package com.pulumi.gcp.certificateauthority.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.certificateauthority.inputs.CaPoolIssuancePolicyBaselineValuesAdditionalExtensionGetArgs;
 import com.pulumi.gcp.certificateauthority.inputs.CaPoolIssuancePolicyBaselineValuesCaOptionsGetArgs;
 import com.pulumi.gcp.certificateauthority.inputs.CaPoolIssuancePolicyBaselineValuesKeyUsageGetArgs;
@@ -13,6 +12,7 @@ import com.pulumi.gcp.certificateauthority.inputs.CaPoolIssuancePolicyBaselineVa
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class CaPoolIssuancePolicyBaselineValuesGetArgs extends com.pulumi.
      * 
      */
     @Import(name="additionalExtensions")
-      private final @Nullable Output<List<CaPoolIssuancePolicyBaselineValuesAdditionalExtensionGetArgs>> additionalExtensions;
+    private @Nullable Output<List<CaPoolIssuancePolicyBaselineValuesAdditionalExtensionGetArgs>> additionalExtensions;
 
-    public Output<List<CaPoolIssuancePolicyBaselineValuesAdditionalExtensionGetArgs>> additionalExtensions() {
-        return this.additionalExtensions == null ? Codegen.empty() : this.additionalExtensions;
+    public Optional<Output<List<CaPoolIssuancePolicyBaselineValuesAdditionalExtensionGetArgs>>> additionalExtensions() {
+        return Optional.ofNullable(this.additionalExtensions);
     }
 
     /**
@@ -38,10 +38,10 @@ public final class CaPoolIssuancePolicyBaselineValuesGetArgs extends com.pulumi.
      * 
      */
     @Import(name="aiaOcspServers")
-      private final @Nullable Output<List<String>> aiaOcspServers;
+    private @Nullable Output<List<String>> aiaOcspServers;
 
-    public Output<List<String>> aiaOcspServers() {
-        return this.aiaOcspServers == null ? Codegen.empty() : this.aiaOcspServers;
+    public Optional<Output<List<String>>> aiaOcspServers() {
+        return Optional.ofNullable(this.aiaOcspServers);
     }
 
     /**
@@ -50,7 +50,7 @@ public final class CaPoolIssuancePolicyBaselineValuesGetArgs extends com.pulumi.
      * 
      */
     @Import(name="caOptions", required=true)
-      private final Output<CaPoolIssuancePolicyBaselineValuesCaOptionsGetArgs> caOptions;
+    private Output<CaPoolIssuancePolicyBaselineValuesCaOptionsGetArgs> caOptions;
 
     public Output<CaPoolIssuancePolicyBaselineValuesCaOptionsGetArgs> caOptions() {
         return this.caOptions;
@@ -62,7 +62,7 @@ public final class CaPoolIssuancePolicyBaselineValuesGetArgs extends com.pulumi.
      * 
      */
     @Import(name="keyUsage", required=true)
-      private final Output<CaPoolIssuancePolicyBaselineValuesKeyUsageGetArgs> keyUsage;
+    private Output<CaPoolIssuancePolicyBaselineValuesKeyUsageGetArgs> keyUsage;
 
     public Output<CaPoolIssuancePolicyBaselineValuesKeyUsageGetArgs> keyUsage() {
         return this.keyUsage;
@@ -74,111 +74,102 @@ public final class CaPoolIssuancePolicyBaselineValuesGetArgs extends com.pulumi.
      * 
      */
     @Import(name="policyIds")
-      private final @Nullable Output<List<CaPoolIssuancePolicyBaselineValuesPolicyIdGetArgs>> policyIds;
+    private @Nullable Output<List<CaPoolIssuancePolicyBaselineValuesPolicyIdGetArgs>> policyIds;
 
-    public Output<List<CaPoolIssuancePolicyBaselineValuesPolicyIdGetArgs>> policyIds() {
-        return this.policyIds == null ? Codegen.empty() : this.policyIds;
+    public Optional<Output<List<CaPoolIssuancePolicyBaselineValuesPolicyIdGetArgs>>> policyIds() {
+        return Optional.ofNullable(this.policyIds);
     }
 
-    public CaPoolIssuancePolicyBaselineValuesGetArgs(
-        @Nullable Output<List<CaPoolIssuancePolicyBaselineValuesAdditionalExtensionGetArgs>> additionalExtensions,
-        @Nullable Output<List<String>> aiaOcspServers,
-        Output<CaPoolIssuancePolicyBaselineValuesCaOptionsGetArgs> caOptions,
-        Output<CaPoolIssuancePolicyBaselineValuesKeyUsageGetArgs> keyUsage,
-        @Nullable Output<List<CaPoolIssuancePolicyBaselineValuesPolicyIdGetArgs>> policyIds) {
-        this.additionalExtensions = additionalExtensions;
-        this.aiaOcspServers = aiaOcspServers;
-        this.caOptions = Objects.requireNonNull(caOptions, "expected parameter 'caOptions' to be non-null");
-        this.keyUsage = Objects.requireNonNull(keyUsage, "expected parameter 'keyUsage' to be non-null");
-        this.policyIds = policyIds;
-    }
+    private CaPoolIssuancePolicyBaselineValuesGetArgs() {}
 
-    private CaPoolIssuancePolicyBaselineValuesGetArgs() {
-        this.additionalExtensions = Codegen.empty();
-        this.aiaOcspServers = Codegen.empty();
-        this.caOptions = Codegen.empty();
-        this.keyUsage = Codegen.empty();
-        this.policyIds = Codegen.empty();
+    private CaPoolIssuancePolicyBaselineValuesGetArgs(CaPoolIssuancePolicyBaselineValuesGetArgs $) {
+        this.additionalExtensions = $.additionalExtensions;
+        this.aiaOcspServers = $.aiaOcspServers;
+        this.caOptions = $.caOptions;
+        this.keyUsage = $.keyUsage;
+        this.policyIds = $.policyIds;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CaPoolIssuancePolicyBaselineValuesGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<CaPoolIssuancePolicyBaselineValuesAdditionalExtensionGetArgs>> additionalExtensions;
-        private @Nullable Output<List<String>> aiaOcspServers;
-        private Output<CaPoolIssuancePolicyBaselineValuesCaOptionsGetArgs> caOptions;
-        private Output<CaPoolIssuancePolicyBaselineValuesKeyUsageGetArgs> keyUsage;
-        private @Nullable Output<List<CaPoolIssuancePolicyBaselineValuesPolicyIdGetArgs>> policyIds;
+        private CaPoolIssuancePolicyBaselineValuesGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CaPoolIssuancePolicyBaselineValuesGetArgs();
         }
 
         public Builder(CaPoolIssuancePolicyBaselineValuesGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.additionalExtensions = defaults.additionalExtensions;
-    	      this.aiaOcspServers = defaults.aiaOcspServers;
-    	      this.caOptions = defaults.caOptions;
-    	      this.keyUsage = defaults.keyUsage;
-    	      this.policyIds = defaults.policyIds;
+            $ = new CaPoolIssuancePolicyBaselineValuesGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder additionalExtensions(@Nullable Output<List<CaPoolIssuancePolicyBaselineValuesAdditionalExtensionGetArgs>> additionalExtensions) {
-            this.additionalExtensions = additionalExtensions;
+            $.additionalExtensions = additionalExtensions;
             return this;
         }
-        public Builder additionalExtensions(@Nullable List<CaPoolIssuancePolicyBaselineValuesAdditionalExtensionGetArgs> additionalExtensions) {
-            this.additionalExtensions = Codegen.ofNullable(additionalExtensions);
-            return this;
+
+        public Builder additionalExtensions(List<CaPoolIssuancePolicyBaselineValuesAdditionalExtensionGetArgs> additionalExtensions) {
+            return additionalExtensions(Output.of(additionalExtensions));
         }
+
         public Builder additionalExtensions(CaPoolIssuancePolicyBaselineValuesAdditionalExtensionGetArgs... additionalExtensions) {
             return additionalExtensions(List.of(additionalExtensions));
         }
+
         public Builder aiaOcspServers(@Nullable Output<List<String>> aiaOcspServers) {
-            this.aiaOcspServers = aiaOcspServers;
+            $.aiaOcspServers = aiaOcspServers;
             return this;
         }
-        public Builder aiaOcspServers(@Nullable List<String> aiaOcspServers) {
-            this.aiaOcspServers = Codegen.ofNullable(aiaOcspServers);
-            return this;
+
+        public Builder aiaOcspServers(List<String> aiaOcspServers) {
+            return aiaOcspServers(Output.of(aiaOcspServers));
         }
+
         public Builder aiaOcspServers(String... aiaOcspServers) {
             return aiaOcspServers(List.of(aiaOcspServers));
         }
+
         public Builder caOptions(Output<CaPoolIssuancePolicyBaselineValuesCaOptionsGetArgs> caOptions) {
-            this.caOptions = Objects.requireNonNull(caOptions);
+            $.caOptions = caOptions;
             return this;
         }
+
         public Builder caOptions(CaPoolIssuancePolicyBaselineValuesCaOptionsGetArgs caOptions) {
-            this.caOptions = Output.of(Objects.requireNonNull(caOptions));
-            return this;
+            return caOptions(Output.of(caOptions));
         }
+
         public Builder keyUsage(Output<CaPoolIssuancePolicyBaselineValuesKeyUsageGetArgs> keyUsage) {
-            this.keyUsage = Objects.requireNonNull(keyUsage);
+            $.keyUsage = keyUsage;
             return this;
         }
+
         public Builder keyUsage(CaPoolIssuancePolicyBaselineValuesKeyUsageGetArgs keyUsage) {
-            this.keyUsage = Output.of(Objects.requireNonNull(keyUsage));
-            return this;
+            return keyUsage(Output.of(keyUsage));
         }
+
         public Builder policyIds(@Nullable Output<List<CaPoolIssuancePolicyBaselineValuesPolicyIdGetArgs>> policyIds) {
-            this.policyIds = policyIds;
+            $.policyIds = policyIds;
             return this;
         }
-        public Builder policyIds(@Nullable List<CaPoolIssuancePolicyBaselineValuesPolicyIdGetArgs> policyIds) {
-            this.policyIds = Codegen.ofNullable(policyIds);
-            return this;
+
+        public Builder policyIds(List<CaPoolIssuancePolicyBaselineValuesPolicyIdGetArgs> policyIds) {
+            return policyIds(Output.of(policyIds));
         }
+
         public Builder policyIds(CaPoolIssuancePolicyBaselineValuesPolicyIdGetArgs... policyIds) {
             return policyIds(List.of(policyIds));
-        }        public CaPoolIssuancePolicyBaselineValuesGetArgs build() {
-            return new CaPoolIssuancePolicyBaselineValuesGetArgs(additionalExtensions, aiaOcspServers, caOptions, keyUsage, policyIds);
+        }
+
+        public CaPoolIssuancePolicyBaselineValuesGetArgs build() {
+            $.caOptions = Objects.requireNonNull($.caOptions, "expected parameter 'caOptions' to be non-null");
+            $.keyUsage = Objects.requireNonNull($.keyUsage, "expected parameter 'keyUsage' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,10 +5,10 @@ package com.pulumi.aws.backup.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class VaultNotificationsState extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="backupVaultArn")
-      private final @Nullable Output<String> backupVaultArn;
+    private @Nullable Output<String> backupVaultArn;
 
-    public Output<String> backupVaultArn() {
-        return this.backupVaultArn == null ? Codegen.empty() : this.backupVaultArn;
+    public Optional<Output<String>> backupVaultArn() {
+        return Optional.ofNullable(this.backupVaultArn);
     }
 
     /**
@@ -32,10 +32,10 @@ public final class VaultNotificationsState extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="backupVaultEvents")
-      private final @Nullable Output<List<String>> backupVaultEvents;
+    private @Nullable Output<List<String>> backupVaultEvents;
 
-    public Output<List<String>> backupVaultEvents() {
-        return this.backupVaultEvents == null ? Codegen.empty() : this.backupVaultEvents;
+    public Optional<Output<List<String>>> backupVaultEvents() {
+        return Optional.ofNullable(this.backupVaultEvents);
     }
 
     /**
@@ -43,10 +43,10 @@ public final class VaultNotificationsState extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="backupVaultName")
-      private final @Nullable Output<String> backupVaultName;
+    private @Nullable Output<String> backupVaultName;
 
-    public Output<String> backupVaultName() {
-        return this.backupVaultName == null ? Codegen.empty() : this.backupVaultName;
+    public Optional<Output<String>> backupVaultName() {
+        return Optional.ofNullable(this.backupVaultName);
     }
 
     /**
@@ -54,92 +54,82 @@ public final class VaultNotificationsState extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="snsTopicArn")
-      private final @Nullable Output<String> snsTopicArn;
+    private @Nullable Output<String> snsTopicArn;
 
-    public Output<String> snsTopicArn() {
-        return this.snsTopicArn == null ? Codegen.empty() : this.snsTopicArn;
+    public Optional<Output<String>> snsTopicArn() {
+        return Optional.ofNullable(this.snsTopicArn);
     }
 
-    public VaultNotificationsState(
-        @Nullable Output<String> backupVaultArn,
-        @Nullable Output<List<String>> backupVaultEvents,
-        @Nullable Output<String> backupVaultName,
-        @Nullable Output<String> snsTopicArn) {
-        this.backupVaultArn = backupVaultArn;
-        this.backupVaultEvents = backupVaultEvents;
-        this.backupVaultName = backupVaultName;
-        this.snsTopicArn = snsTopicArn;
-    }
+    private VaultNotificationsState() {}
 
-    private VaultNotificationsState() {
-        this.backupVaultArn = Codegen.empty();
-        this.backupVaultEvents = Codegen.empty();
-        this.backupVaultName = Codegen.empty();
-        this.snsTopicArn = Codegen.empty();
+    private VaultNotificationsState(VaultNotificationsState $) {
+        this.backupVaultArn = $.backupVaultArn;
+        this.backupVaultEvents = $.backupVaultEvents;
+        this.backupVaultName = $.backupVaultName;
+        this.snsTopicArn = $.snsTopicArn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VaultNotificationsState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> backupVaultArn;
-        private @Nullable Output<List<String>> backupVaultEvents;
-        private @Nullable Output<String> backupVaultName;
-        private @Nullable Output<String> snsTopicArn;
+        private VaultNotificationsState $;
 
         public Builder() {
-    	      // Empty
+            $ = new VaultNotificationsState();
         }
 
         public Builder(VaultNotificationsState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.backupVaultArn = defaults.backupVaultArn;
-    	      this.backupVaultEvents = defaults.backupVaultEvents;
-    	      this.backupVaultName = defaults.backupVaultName;
-    	      this.snsTopicArn = defaults.snsTopicArn;
+            $ = new VaultNotificationsState(Objects.requireNonNull(defaults));
         }
 
         public Builder backupVaultArn(@Nullable Output<String> backupVaultArn) {
-            this.backupVaultArn = backupVaultArn;
+            $.backupVaultArn = backupVaultArn;
             return this;
         }
-        public Builder backupVaultArn(@Nullable String backupVaultArn) {
-            this.backupVaultArn = Codegen.ofNullable(backupVaultArn);
-            return this;
+
+        public Builder backupVaultArn(String backupVaultArn) {
+            return backupVaultArn(Output.of(backupVaultArn));
         }
+
         public Builder backupVaultEvents(@Nullable Output<List<String>> backupVaultEvents) {
-            this.backupVaultEvents = backupVaultEvents;
+            $.backupVaultEvents = backupVaultEvents;
             return this;
         }
-        public Builder backupVaultEvents(@Nullable List<String> backupVaultEvents) {
-            this.backupVaultEvents = Codegen.ofNullable(backupVaultEvents);
-            return this;
+
+        public Builder backupVaultEvents(List<String> backupVaultEvents) {
+            return backupVaultEvents(Output.of(backupVaultEvents));
         }
+
         public Builder backupVaultEvents(String... backupVaultEvents) {
             return backupVaultEvents(List.of(backupVaultEvents));
         }
+
         public Builder backupVaultName(@Nullable Output<String> backupVaultName) {
-            this.backupVaultName = backupVaultName;
+            $.backupVaultName = backupVaultName;
             return this;
         }
-        public Builder backupVaultName(@Nullable String backupVaultName) {
-            this.backupVaultName = Codegen.ofNullable(backupVaultName);
-            return this;
+
+        public Builder backupVaultName(String backupVaultName) {
+            return backupVaultName(Output.of(backupVaultName));
         }
+
         public Builder snsTopicArn(@Nullable Output<String> snsTopicArn) {
-            this.snsTopicArn = snsTopicArn;
+            $.snsTopicArn = snsTopicArn;
             return this;
         }
-        public Builder snsTopicArn(@Nullable String snsTopicArn) {
-            this.snsTopicArn = Codegen.ofNullable(snsTopicArn);
-            return this;
-        }        public VaultNotificationsState build() {
-            return new VaultNotificationsState(backupVaultArn, backupVaultEvents, backupVaultName, snsTopicArn);
+
+        public Builder snsTopicArn(String snsTopicArn) {
+            return snsTopicArn(Output.of(snsTopicArn));
+        }
+
+        public VaultNotificationsState build() {
+            return $;
         }
     }
+
 }

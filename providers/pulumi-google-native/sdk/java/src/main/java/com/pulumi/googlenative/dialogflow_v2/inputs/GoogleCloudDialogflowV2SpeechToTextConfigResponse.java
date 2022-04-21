@@ -21,45 +21,45 @@ public final class GoogleCloudDialogflowV2SpeechToTextConfigResponse extends com
      * 
      */
     @Import(name="speechModelVariant", required=true)
-      private final String speechModelVariant;
+    private String speechModelVariant;
 
     public String speechModelVariant() {
         return this.speechModelVariant;
     }
 
-    public GoogleCloudDialogflowV2SpeechToTextConfigResponse(String speechModelVariant) {
-        this.speechModelVariant = Objects.requireNonNull(speechModelVariant, "expected parameter 'speechModelVariant' to be non-null");
-    }
+    private GoogleCloudDialogflowV2SpeechToTextConfigResponse() {}
 
-    private GoogleCloudDialogflowV2SpeechToTextConfigResponse() {
-        this.speechModelVariant = null;
+    private GoogleCloudDialogflowV2SpeechToTextConfigResponse(GoogleCloudDialogflowV2SpeechToTextConfigResponse $) {
+        this.speechModelVariant = $.speechModelVariant;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudDialogflowV2SpeechToTextConfigResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String speechModelVariant;
+        private GoogleCloudDialogflowV2SpeechToTextConfigResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudDialogflowV2SpeechToTextConfigResponse();
         }
 
         public Builder(GoogleCloudDialogflowV2SpeechToTextConfigResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.speechModelVariant = defaults.speechModelVariant;
+            $ = new GoogleCloudDialogflowV2SpeechToTextConfigResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder speechModelVariant(String speechModelVariant) {
-            this.speechModelVariant = Objects.requireNonNull(speechModelVariant);
+            $.speechModelVariant = speechModelVariant;
             return this;
-        }        public GoogleCloudDialogflowV2SpeechToTextConfigResponse build() {
-            return new GoogleCloudDialogflowV2SpeechToTextConfigResponse(speechModelVariant);
+        }
+
+        public GoogleCloudDialogflowV2SpeechToTextConfigResponse build() {
+            $.speechModelVariant = Objects.requireNonNull($.speechModelVariant, "expected parameter 'speechModelVariant' to be non-null");
+            return $;
         }
     }
+
 }

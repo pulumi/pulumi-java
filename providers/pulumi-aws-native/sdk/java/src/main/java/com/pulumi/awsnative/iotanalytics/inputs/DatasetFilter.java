@@ -15,45 +15,44 @@ public final class DatasetFilter extends com.pulumi.resources.InvokeArgs {
     public static final DatasetFilter Empty = new DatasetFilter();
 
     @Import(name="deltaTime")
-      private final @Nullable DatasetDeltaTime deltaTime;
+    private @Nullable DatasetDeltaTime deltaTime;
 
     public Optional<DatasetDeltaTime> deltaTime() {
-        return this.deltaTime == null ? Optional.empty() : Optional.ofNullable(this.deltaTime);
+        return Optional.ofNullable(this.deltaTime);
     }
 
-    public DatasetFilter(@Nullable DatasetDeltaTime deltaTime) {
-        this.deltaTime = deltaTime;
-    }
+    private DatasetFilter() {}
 
-    private DatasetFilter() {
-        this.deltaTime = null;
+    private DatasetFilter(DatasetFilter $) {
+        this.deltaTime = $.deltaTime;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DatasetFilter defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable DatasetDeltaTime deltaTime;
+        private DatasetFilter $;
 
         public Builder() {
-    	      // Empty
+            $ = new DatasetFilter();
         }
 
         public Builder(DatasetFilter defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.deltaTime = defaults.deltaTime;
+            $ = new DatasetFilter(Objects.requireNonNull(defaults));
         }
 
         public Builder deltaTime(@Nullable DatasetDeltaTime deltaTime) {
-            this.deltaTime = deltaTime;
+            $.deltaTime = deltaTime;
             return this;
-        }        public DatasetFilter build() {
-            return new DatasetFilter(deltaTime);
+        }
+
+        public DatasetFilter build() {
+            return $;
         }
     }
+
 }

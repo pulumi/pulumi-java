@@ -22,7 +22,7 @@ public final class InboundNatPoolResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="backendPort", required=true)
-      private final Integer backendPort;
+    private Integer backendPort;
 
     public Integer backendPort() {
         return this.backendPort;
@@ -33,7 +33,7 @@ public final class InboundNatPoolResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="frontendPortRangeEnd", required=true)
-      private final Integer frontendPortRangeEnd;
+    private Integer frontendPortRangeEnd;
 
     public Integer frontendPortRangeEnd() {
         return this.frontendPortRangeEnd;
@@ -44,7 +44,7 @@ public final class InboundNatPoolResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="frontendPortRangeStart", required=true)
-      private final Integer frontendPortRangeStart;
+    private Integer frontendPortRangeStart;
 
     public Integer frontendPortRangeStart() {
         return this.frontendPortRangeStart;
@@ -55,7 +55,7 @@ public final class InboundNatPoolResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -66,101 +66,90 @@ public final class InboundNatPoolResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="networkSecurityGroupRules")
-      private final @Nullable List<NetworkSecurityGroupRuleResponse> networkSecurityGroupRules;
+    private @Nullable List<NetworkSecurityGroupRuleResponse> networkSecurityGroupRules;
 
-    public List<NetworkSecurityGroupRuleResponse> networkSecurityGroupRules() {
-        return this.networkSecurityGroupRules == null ? List.of() : this.networkSecurityGroupRules;
+    public Optional<List<NetworkSecurityGroupRuleResponse>> networkSecurityGroupRules() {
+        return Optional.ofNullable(this.networkSecurityGroupRules);
     }
 
     @Import(name="protocol", required=true)
-      private final String protocol;
+    private String protocol;
 
     public String protocol() {
         return this.protocol;
     }
 
-    public InboundNatPoolResponse(
-        Integer backendPort,
-        Integer frontendPortRangeEnd,
-        Integer frontendPortRangeStart,
-        String name,
-        @Nullable List<NetworkSecurityGroupRuleResponse> networkSecurityGroupRules,
-        String protocol) {
-        this.backendPort = Objects.requireNonNull(backendPort, "expected parameter 'backendPort' to be non-null");
-        this.frontendPortRangeEnd = Objects.requireNonNull(frontendPortRangeEnd, "expected parameter 'frontendPortRangeEnd' to be non-null");
-        this.frontendPortRangeStart = Objects.requireNonNull(frontendPortRangeStart, "expected parameter 'frontendPortRangeStart' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.networkSecurityGroupRules = networkSecurityGroupRules;
-        this.protocol = Objects.requireNonNull(protocol, "expected parameter 'protocol' to be non-null");
-    }
+    private InboundNatPoolResponse() {}
 
-    private InboundNatPoolResponse() {
-        this.backendPort = null;
-        this.frontendPortRangeEnd = null;
-        this.frontendPortRangeStart = null;
-        this.name = null;
-        this.networkSecurityGroupRules = List.of();
-        this.protocol = null;
+    private InboundNatPoolResponse(InboundNatPoolResponse $) {
+        this.backendPort = $.backendPort;
+        this.frontendPortRangeEnd = $.frontendPortRangeEnd;
+        this.frontendPortRangeStart = $.frontendPortRangeStart;
+        this.name = $.name;
+        this.networkSecurityGroupRules = $.networkSecurityGroupRules;
+        this.protocol = $.protocol;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(InboundNatPoolResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Integer backendPort;
-        private Integer frontendPortRangeEnd;
-        private Integer frontendPortRangeStart;
-        private String name;
-        private @Nullable List<NetworkSecurityGroupRuleResponse> networkSecurityGroupRules;
-        private String protocol;
+        private InboundNatPoolResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new InboundNatPoolResponse();
         }
 
         public Builder(InboundNatPoolResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.backendPort = defaults.backendPort;
-    	      this.frontendPortRangeEnd = defaults.frontendPortRangeEnd;
-    	      this.frontendPortRangeStart = defaults.frontendPortRangeStart;
-    	      this.name = defaults.name;
-    	      this.networkSecurityGroupRules = defaults.networkSecurityGroupRules;
-    	      this.protocol = defaults.protocol;
+            $ = new InboundNatPoolResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder backendPort(Integer backendPort) {
-            this.backendPort = Objects.requireNonNull(backendPort);
+            $.backendPort = backendPort;
             return this;
         }
+
         public Builder frontendPortRangeEnd(Integer frontendPortRangeEnd) {
-            this.frontendPortRangeEnd = Objects.requireNonNull(frontendPortRangeEnd);
+            $.frontendPortRangeEnd = frontendPortRangeEnd;
             return this;
         }
+
         public Builder frontendPortRangeStart(Integer frontendPortRangeStart) {
-            this.frontendPortRangeStart = Objects.requireNonNull(frontendPortRangeStart);
+            $.frontendPortRangeStart = frontendPortRangeStart;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder networkSecurityGroupRules(@Nullable List<NetworkSecurityGroupRuleResponse> networkSecurityGroupRules) {
-            this.networkSecurityGroupRules = networkSecurityGroupRules;
+            $.networkSecurityGroupRules = networkSecurityGroupRules;
             return this;
         }
+
         public Builder networkSecurityGroupRules(NetworkSecurityGroupRuleResponse... networkSecurityGroupRules) {
             return networkSecurityGroupRules(List.of(networkSecurityGroupRules));
         }
+
         public Builder protocol(String protocol) {
-            this.protocol = Objects.requireNonNull(protocol);
+            $.protocol = protocol;
             return this;
-        }        public InboundNatPoolResponse build() {
-            return new InboundNatPoolResponse(backendPort, frontendPortRangeEnd, frontendPortRangeStart, name, networkSecurityGroupRules, protocol);
+        }
+
+        public InboundNatPoolResponse build() {
+            $.backendPort = Objects.requireNonNull($.backendPort, "expected parameter 'backendPort' to be non-null");
+            $.frontendPortRangeEnd = Objects.requireNonNull($.frontendPortRangeEnd, "expected parameter 'frontendPortRangeEnd' to be non-null");
+            $.frontendPortRangeStart = Objects.requireNonNull($.frontendPortRangeStart, "expected parameter 'frontendPortRangeStart' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.protocol = Objects.requireNonNull($.protocol, "expected parameter 'protocol' to be non-null");
+            return $;
         }
     }
+
 }

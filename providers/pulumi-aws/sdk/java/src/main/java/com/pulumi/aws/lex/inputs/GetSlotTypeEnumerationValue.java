@@ -14,65 +14,63 @@ public final class GetSlotTypeEnumerationValue extends com.pulumi.resources.Invo
     public static final GetSlotTypeEnumerationValue Empty = new GetSlotTypeEnumerationValue();
 
     @Import(name="synonyms", required=true)
-      private final List<String> synonyms;
+    private List<String> synonyms;
 
     public List<String> synonyms() {
         return this.synonyms;
     }
 
     @Import(name="value", required=true)
-      private final String value;
+    private String value;
 
     public String value() {
         return this.value;
     }
 
-    public GetSlotTypeEnumerationValue(
-        List<String> synonyms,
-        String value) {
-        this.synonyms = Objects.requireNonNull(synonyms, "expected parameter 'synonyms' to be non-null");
-        this.value = Objects.requireNonNull(value, "expected parameter 'value' to be non-null");
-    }
+    private GetSlotTypeEnumerationValue() {}
 
-    private GetSlotTypeEnumerationValue() {
-        this.synonyms = List.of();
-        this.value = null;
+    private GetSlotTypeEnumerationValue(GetSlotTypeEnumerationValue $) {
+        this.synonyms = $.synonyms;
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetSlotTypeEnumerationValue defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<String> synonyms;
-        private String value;
+        private GetSlotTypeEnumerationValue $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetSlotTypeEnumerationValue();
         }
 
         public Builder(GetSlotTypeEnumerationValue defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.synonyms = defaults.synonyms;
-    	      this.value = defaults.value;
+            $ = new GetSlotTypeEnumerationValue(Objects.requireNonNull(defaults));
         }
 
         public Builder synonyms(List<String> synonyms) {
-            this.synonyms = Objects.requireNonNull(synonyms);
+            $.synonyms = synonyms;
             return this;
         }
+
         public Builder synonyms(String... synonyms) {
             return synonyms(List.of(synonyms));
         }
+
         public Builder value(String value) {
-            this.value = Objects.requireNonNull(value);
+            $.value = value;
             return this;
-        }        public GetSlotTypeEnumerationValue build() {
-            return new GetSlotTypeEnumerationValue(synonyms, value);
+        }
+
+        public GetSlotTypeEnumerationValue build() {
+            $.synonyms = Objects.requireNonNull($.synonyms, "expected parameter 'synonyms' to be non-null");
+            $.value = Objects.requireNonNull($.value, "expected parameter 'value' to be non-null");
+            return $;
         }
     }
+
 }

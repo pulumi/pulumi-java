@@ -7,10 +7,10 @@ import com.pulumi.azurenative.storsimple.enums.Kind;
 import com.pulumi.azurenative.storsimple.inputs.AsymmetricEncryptedSecretArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,10 @@ public final class VolumeContainerArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="bandWidthRateInMbps")
-      private final @Nullable Output<Integer> bandWidthRateInMbps;
+    private @Nullable Output<Integer> bandWidthRateInMbps;
 
-    public Output<Integer> bandWidthRateInMbps() {
-        return this.bandWidthRateInMbps == null ? Codegen.empty() : this.bandWidthRateInMbps;
+    public Optional<Output<Integer>> bandWidthRateInMbps() {
+        return Optional.ofNullable(this.bandWidthRateInMbps);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class VolumeContainerArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="bandwidthSettingId")
-      private final @Nullable Output<String> bandwidthSettingId;
+    private @Nullable Output<String> bandwidthSettingId;
 
-    public Output<String> bandwidthSettingId() {
-        return this.bandwidthSettingId == null ? Codegen.empty() : this.bandwidthSettingId;
+    public Optional<Output<String>> bandwidthSettingId() {
+        return Optional.ofNullable(this.bandwidthSettingId);
     }
 
     /**
@@ -45,7 +45,7 @@ public final class VolumeContainerArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="deviceName", required=true)
-      private final Output<String> deviceName;
+    private Output<String> deviceName;
 
     public Output<String> deviceName() {
         return this.deviceName;
@@ -56,10 +56,10 @@ public final class VolumeContainerArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="encryptionKey")
-      private final @Nullable Output<AsymmetricEncryptedSecretArgs> encryptionKey;
+    private @Nullable Output<AsymmetricEncryptedSecretArgs> encryptionKey;
 
-    public Output<AsymmetricEncryptedSecretArgs> encryptionKey() {
-        return this.encryptionKey == null ? Codegen.empty() : this.encryptionKey;
+    public Optional<Output<AsymmetricEncryptedSecretArgs>> encryptionKey() {
+        return Optional.ofNullable(this.encryptionKey);
     }
 
     /**
@@ -67,10 +67,10 @@ public final class VolumeContainerArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="kind")
-      private final @Nullable Output<Kind> kind;
+    private @Nullable Output<Kind> kind;
 
-    public Output<Kind> kind() {
-        return this.kind == null ? Codegen.empty() : this.kind;
+    public Optional<Output<Kind>> kind() {
+        return Optional.ofNullable(this.kind);
     }
 
     /**
@@ -78,7 +78,7 @@ public final class VolumeContainerArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="managerName", required=true)
-      private final Output<String> managerName;
+    private Output<String> managerName;
 
     public Output<String> managerName() {
         return this.managerName;
@@ -89,7 +89,7 @@ public final class VolumeContainerArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -100,7 +100,7 @@ public final class VolumeContainerArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="storageAccountCredentialId", required=true)
-      private final Output<String> storageAccountCredentialId;
+    private Output<String> storageAccountCredentialId;
 
     public Output<String> storageAccountCredentialId() {
         return this.storageAccountCredentialId;
@@ -111,154 +111,132 @@ public final class VolumeContainerArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="volumeContainerName")
-      private final @Nullable Output<String> volumeContainerName;
+    private @Nullable Output<String> volumeContainerName;
 
-    public Output<String> volumeContainerName() {
-        return this.volumeContainerName == null ? Codegen.empty() : this.volumeContainerName;
+    public Optional<Output<String>> volumeContainerName() {
+        return Optional.ofNullable(this.volumeContainerName);
     }
 
-    public VolumeContainerArgs(
-        @Nullable Output<Integer> bandWidthRateInMbps,
-        @Nullable Output<String> bandwidthSettingId,
-        Output<String> deviceName,
-        @Nullable Output<AsymmetricEncryptedSecretArgs> encryptionKey,
-        @Nullable Output<Kind> kind,
-        Output<String> managerName,
-        Output<String> resourceGroupName,
-        Output<String> storageAccountCredentialId,
-        @Nullable Output<String> volumeContainerName) {
-        this.bandWidthRateInMbps = bandWidthRateInMbps;
-        this.bandwidthSettingId = bandwidthSettingId;
-        this.deviceName = Objects.requireNonNull(deviceName, "expected parameter 'deviceName' to be non-null");
-        this.encryptionKey = encryptionKey;
-        this.kind = kind;
-        this.managerName = Objects.requireNonNull(managerName, "expected parameter 'managerName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.storageAccountCredentialId = Objects.requireNonNull(storageAccountCredentialId, "expected parameter 'storageAccountCredentialId' to be non-null");
-        this.volumeContainerName = volumeContainerName;
-    }
+    private VolumeContainerArgs() {}
 
-    private VolumeContainerArgs() {
-        this.bandWidthRateInMbps = Codegen.empty();
-        this.bandwidthSettingId = Codegen.empty();
-        this.deviceName = Codegen.empty();
-        this.encryptionKey = Codegen.empty();
-        this.kind = Codegen.empty();
-        this.managerName = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.storageAccountCredentialId = Codegen.empty();
-        this.volumeContainerName = Codegen.empty();
+    private VolumeContainerArgs(VolumeContainerArgs $) {
+        this.bandWidthRateInMbps = $.bandWidthRateInMbps;
+        this.bandwidthSettingId = $.bandwidthSettingId;
+        this.deviceName = $.deviceName;
+        this.encryptionKey = $.encryptionKey;
+        this.kind = $.kind;
+        this.managerName = $.managerName;
+        this.resourceGroupName = $.resourceGroupName;
+        this.storageAccountCredentialId = $.storageAccountCredentialId;
+        this.volumeContainerName = $.volumeContainerName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VolumeContainerArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> bandWidthRateInMbps;
-        private @Nullable Output<String> bandwidthSettingId;
-        private Output<String> deviceName;
-        private @Nullable Output<AsymmetricEncryptedSecretArgs> encryptionKey;
-        private @Nullable Output<Kind> kind;
-        private Output<String> managerName;
-        private Output<String> resourceGroupName;
-        private Output<String> storageAccountCredentialId;
-        private @Nullable Output<String> volumeContainerName;
+        private VolumeContainerArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new VolumeContainerArgs();
         }
 
         public Builder(VolumeContainerArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.bandWidthRateInMbps = defaults.bandWidthRateInMbps;
-    	      this.bandwidthSettingId = defaults.bandwidthSettingId;
-    	      this.deviceName = defaults.deviceName;
-    	      this.encryptionKey = defaults.encryptionKey;
-    	      this.kind = defaults.kind;
-    	      this.managerName = defaults.managerName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.storageAccountCredentialId = defaults.storageAccountCredentialId;
-    	      this.volumeContainerName = defaults.volumeContainerName;
+            $ = new VolumeContainerArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder bandWidthRateInMbps(@Nullable Output<Integer> bandWidthRateInMbps) {
-            this.bandWidthRateInMbps = bandWidthRateInMbps;
+            $.bandWidthRateInMbps = bandWidthRateInMbps;
             return this;
         }
-        public Builder bandWidthRateInMbps(@Nullable Integer bandWidthRateInMbps) {
-            this.bandWidthRateInMbps = Codegen.ofNullable(bandWidthRateInMbps);
-            return this;
+
+        public Builder bandWidthRateInMbps(Integer bandWidthRateInMbps) {
+            return bandWidthRateInMbps(Output.of(bandWidthRateInMbps));
         }
+
         public Builder bandwidthSettingId(@Nullable Output<String> bandwidthSettingId) {
-            this.bandwidthSettingId = bandwidthSettingId;
+            $.bandwidthSettingId = bandwidthSettingId;
             return this;
         }
-        public Builder bandwidthSettingId(@Nullable String bandwidthSettingId) {
-            this.bandwidthSettingId = Codegen.ofNullable(bandwidthSettingId);
-            return this;
+
+        public Builder bandwidthSettingId(String bandwidthSettingId) {
+            return bandwidthSettingId(Output.of(bandwidthSettingId));
         }
+
         public Builder deviceName(Output<String> deviceName) {
-            this.deviceName = Objects.requireNonNull(deviceName);
+            $.deviceName = deviceName;
             return this;
         }
+
         public Builder deviceName(String deviceName) {
-            this.deviceName = Output.of(Objects.requireNonNull(deviceName));
-            return this;
+            return deviceName(Output.of(deviceName));
         }
+
         public Builder encryptionKey(@Nullable Output<AsymmetricEncryptedSecretArgs> encryptionKey) {
-            this.encryptionKey = encryptionKey;
+            $.encryptionKey = encryptionKey;
             return this;
         }
-        public Builder encryptionKey(@Nullable AsymmetricEncryptedSecretArgs encryptionKey) {
-            this.encryptionKey = Codegen.ofNullable(encryptionKey);
-            return this;
+
+        public Builder encryptionKey(AsymmetricEncryptedSecretArgs encryptionKey) {
+            return encryptionKey(Output.of(encryptionKey));
         }
+
         public Builder kind(@Nullable Output<Kind> kind) {
-            this.kind = kind;
+            $.kind = kind;
             return this;
         }
-        public Builder kind(@Nullable Kind kind) {
-            this.kind = Codegen.ofNullable(kind);
-            return this;
+
+        public Builder kind(Kind kind) {
+            return kind(Output.of(kind));
         }
+
         public Builder managerName(Output<String> managerName) {
-            this.managerName = Objects.requireNonNull(managerName);
+            $.managerName = managerName;
             return this;
         }
+
         public Builder managerName(String managerName) {
-            this.managerName = Output.of(Objects.requireNonNull(managerName));
-            return this;
+            return managerName(Output.of(managerName));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder storageAccountCredentialId(Output<String> storageAccountCredentialId) {
-            this.storageAccountCredentialId = Objects.requireNonNull(storageAccountCredentialId);
+            $.storageAccountCredentialId = storageAccountCredentialId;
             return this;
         }
+
         public Builder storageAccountCredentialId(String storageAccountCredentialId) {
-            this.storageAccountCredentialId = Output.of(Objects.requireNonNull(storageAccountCredentialId));
-            return this;
+            return storageAccountCredentialId(Output.of(storageAccountCredentialId));
         }
+
         public Builder volumeContainerName(@Nullable Output<String> volumeContainerName) {
-            this.volumeContainerName = volumeContainerName;
+            $.volumeContainerName = volumeContainerName;
             return this;
         }
-        public Builder volumeContainerName(@Nullable String volumeContainerName) {
-            this.volumeContainerName = Codegen.ofNullable(volumeContainerName);
-            return this;
-        }        public VolumeContainerArgs build() {
-            return new VolumeContainerArgs(bandWidthRateInMbps, bandwidthSettingId, deviceName, encryptionKey, kind, managerName, resourceGroupName, storageAccountCredentialId, volumeContainerName);
+
+        public Builder volumeContainerName(String volumeContainerName) {
+            return volumeContainerName(Output.of(volumeContainerName));
+        }
+
+        public VolumeContainerArgs build() {
+            $.deviceName = Objects.requireNonNull($.deviceName, "expected parameter 'deviceName' to be non-null");
+            $.managerName = Objects.requireNonNull($.managerName, "expected parameter 'managerName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.storageAccountCredentialId = Objects.requireNonNull($.storageAccountCredentialId, "expected parameter 'storageAccountCredentialId' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,11 +5,11 @@ package com.pulumi.awsnative.redshift;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,7 +22,7 @@ public final class EndpointAuthorizationArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="account", required=true)
-      private final Output<String> account;
+    private Output<String> account;
 
     public Output<String> account() {
         return this.account;
@@ -33,7 +33,7 @@ public final class EndpointAuthorizationArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="clusterIdentifier", required=true)
-      private final Output<String> clusterIdentifier;
+    private Output<String> clusterIdentifier;
 
     public Output<String> clusterIdentifier() {
         return this.clusterIdentifier;
@@ -44,10 +44,10 @@ public final class EndpointAuthorizationArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="force")
-      private final @Nullable Output<Boolean> force;
+    private @Nullable Output<Boolean> force;
 
-    public Output<Boolean> force() {
-        return this.force == null ? Codegen.empty() : this.force;
+    public Optional<Output<Boolean>> force() {
+        return Optional.ofNullable(this.force);
     }
 
     /**
@@ -55,92 +55,84 @@ public final class EndpointAuthorizationArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="vpcIds")
-      private final @Nullable Output<List<String>> vpcIds;
+    private @Nullable Output<List<String>> vpcIds;
 
-    public Output<List<String>> vpcIds() {
-        return this.vpcIds == null ? Codegen.empty() : this.vpcIds;
+    public Optional<Output<List<String>>> vpcIds() {
+        return Optional.ofNullable(this.vpcIds);
     }
 
-    public EndpointAuthorizationArgs(
-        Output<String> account,
-        Output<String> clusterIdentifier,
-        @Nullable Output<Boolean> force,
-        @Nullable Output<List<String>> vpcIds) {
-        this.account = Objects.requireNonNull(account, "expected parameter 'account' to be non-null");
-        this.clusterIdentifier = Objects.requireNonNull(clusterIdentifier, "expected parameter 'clusterIdentifier' to be non-null");
-        this.force = force;
-        this.vpcIds = vpcIds;
-    }
+    private EndpointAuthorizationArgs() {}
 
-    private EndpointAuthorizationArgs() {
-        this.account = Codegen.empty();
-        this.clusterIdentifier = Codegen.empty();
-        this.force = Codegen.empty();
-        this.vpcIds = Codegen.empty();
+    private EndpointAuthorizationArgs(EndpointAuthorizationArgs $) {
+        this.account = $.account;
+        this.clusterIdentifier = $.clusterIdentifier;
+        this.force = $.force;
+        this.vpcIds = $.vpcIds;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EndpointAuthorizationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> account;
-        private Output<String> clusterIdentifier;
-        private @Nullable Output<Boolean> force;
-        private @Nullable Output<List<String>> vpcIds;
+        private EndpointAuthorizationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new EndpointAuthorizationArgs();
         }
 
         public Builder(EndpointAuthorizationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.account = defaults.account;
-    	      this.clusterIdentifier = defaults.clusterIdentifier;
-    	      this.force = defaults.force;
-    	      this.vpcIds = defaults.vpcIds;
+            $ = new EndpointAuthorizationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder account(Output<String> account) {
-            this.account = Objects.requireNonNull(account);
+            $.account = account;
             return this;
         }
+
         public Builder account(String account) {
-            this.account = Output.of(Objects.requireNonNull(account));
-            return this;
+            return account(Output.of(account));
         }
+
         public Builder clusterIdentifier(Output<String> clusterIdentifier) {
-            this.clusterIdentifier = Objects.requireNonNull(clusterIdentifier);
+            $.clusterIdentifier = clusterIdentifier;
             return this;
         }
+
         public Builder clusterIdentifier(String clusterIdentifier) {
-            this.clusterIdentifier = Output.of(Objects.requireNonNull(clusterIdentifier));
-            return this;
+            return clusterIdentifier(Output.of(clusterIdentifier));
         }
+
         public Builder force(@Nullable Output<Boolean> force) {
-            this.force = force;
+            $.force = force;
             return this;
         }
-        public Builder force(@Nullable Boolean force) {
-            this.force = Codegen.ofNullable(force);
-            return this;
+
+        public Builder force(Boolean force) {
+            return force(Output.of(force));
         }
+
         public Builder vpcIds(@Nullable Output<List<String>> vpcIds) {
-            this.vpcIds = vpcIds;
+            $.vpcIds = vpcIds;
             return this;
         }
-        public Builder vpcIds(@Nullable List<String> vpcIds) {
-            this.vpcIds = Codegen.ofNullable(vpcIds);
-            return this;
+
+        public Builder vpcIds(List<String> vpcIds) {
+            return vpcIds(Output.of(vpcIds));
         }
+
         public Builder vpcIds(String... vpcIds) {
             return vpcIds(List.of(vpcIds));
-        }        public EndpointAuthorizationArgs build() {
-            return new EndpointAuthorizationArgs(account, clusterIdentifier, force, vpcIds);
+        }
+
+        public EndpointAuthorizationArgs build() {
+            $.account = Objects.requireNonNull($.account, "expected parameter 'account' to be non-null");
+            $.clusterIdentifier = Objects.requireNonNull($.clusterIdentifier, "expected parameter 'clusterIdentifier' to be non-null");
+            return $;
         }
     }
+
 }

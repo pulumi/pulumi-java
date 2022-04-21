@@ -23,7 +23,7 @@ public final class PrivateLinkServiceConnectionStatePropertyResponse extends com
      * 
      */
     @Import(name="actionsRequired", required=true)
-      private final String actionsRequired;
+    private String actionsRequired;
 
     public String actionsRequired() {
         return this.actionsRequired;
@@ -34,10 +34,10 @@ public final class PrivateLinkServiceConnectionStatePropertyResponse extends com
      * 
      */
     @Import(name="description")
-      private final @Nullable String description;
+    private @Nullable String description;
 
     public Optional<String> description() {
-        return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -45,64 +45,57 @@ public final class PrivateLinkServiceConnectionStatePropertyResponse extends com
      * 
      */
     @Import(name="status")
-      private final @Nullable String status;
+    private @Nullable String status;
 
     public Optional<String> status() {
-        return this.status == null ? Optional.empty() : Optional.ofNullable(this.status);
+        return Optional.ofNullable(this.status);
     }
 
-    public PrivateLinkServiceConnectionStatePropertyResponse(
-        String actionsRequired,
-        @Nullable String description,
-        @Nullable String status) {
-        this.actionsRequired = Objects.requireNonNull(actionsRequired, "expected parameter 'actionsRequired' to be non-null");
-        this.description = description;
-        this.status = status;
-    }
+    private PrivateLinkServiceConnectionStatePropertyResponse() {}
 
-    private PrivateLinkServiceConnectionStatePropertyResponse() {
-        this.actionsRequired = null;
-        this.description = null;
-        this.status = null;
+    private PrivateLinkServiceConnectionStatePropertyResponse(PrivateLinkServiceConnectionStatePropertyResponse $) {
+        this.actionsRequired = $.actionsRequired;
+        this.description = $.description;
+        this.status = $.status;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PrivateLinkServiceConnectionStatePropertyResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String actionsRequired;
-        private @Nullable String description;
-        private @Nullable String status;
+        private PrivateLinkServiceConnectionStatePropertyResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new PrivateLinkServiceConnectionStatePropertyResponse();
         }
 
         public Builder(PrivateLinkServiceConnectionStatePropertyResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.actionsRequired = defaults.actionsRequired;
-    	      this.description = defaults.description;
-    	      this.status = defaults.status;
+            $ = new PrivateLinkServiceConnectionStatePropertyResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder actionsRequired(String actionsRequired) {
-            this.actionsRequired = Objects.requireNonNull(actionsRequired);
+            $.actionsRequired = actionsRequired;
             return this;
         }
+
         public Builder description(@Nullable String description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
+
         public Builder status(@Nullable String status) {
-            this.status = status;
+            $.status = status;
             return this;
-        }        public PrivateLinkServiceConnectionStatePropertyResponse build() {
-            return new PrivateLinkServiceConnectionStatePropertyResponse(actionsRequired, description, status);
+        }
+
+        public PrivateLinkServiceConnectionStatePropertyResponse build() {
+            $.actionsRequired = Objects.requireNonNull($.actionsRequired, "expected parameter 'actionsRequired' to be non-null");
+            return $;
         }
     }
+
 }

@@ -21,7 +21,7 @@ public final class LatLngResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="latitude", required=true)
-      private final Double latitude;
+    private Double latitude;
 
     public Double latitude() {
         return this.latitude;
@@ -32,55 +32,52 @@ public final class LatLngResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="longitude", required=true)
-      private final Double longitude;
+    private Double longitude;
 
     public Double longitude() {
         return this.longitude;
     }
 
-    public LatLngResponse(
-        Double latitude,
-        Double longitude) {
-        this.latitude = Objects.requireNonNull(latitude, "expected parameter 'latitude' to be non-null");
-        this.longitude = Objects.requireNonNull(longitude, "expected parameter 'longitude' to be non-null");
-    }
+    private LatLngResponse() {}
 
-    private LatLngResponse() {
-        this.latitude = null;
-        this.longitude = null;
+    private LatLngResponse(LatLngResponse $) {
+        this.latitude = $.latitude;
+        this.longitude = $.longitude;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LatLngResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Double latitude;
-        private Double longitude;
+        private LatLngResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new LatLngResponse();
         }
 
         public Builder(LatLngResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.latitude = defaults.latitude;
-    	      this.longitude = defaults.longitude;
+            $ = new LatLngResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder latitude(Double latitude) {
-            this.latitude = Objects.requireNonNull(latitude);
+            $.latitude = latitude;
             return this;
         }
+
         public Builder longitude(Double longitude) {
-            this.longitude = Objects.requireNonNull(longitude);
+            $.longitude = longitude;
             return this;
-        }        public LatLngResponse build() {
-            return new LatLngResponse(latitude, longitude);
+        }
+
+        public LatLngResponse build() {
+            $.latitude = Objects.requireNonNull($.latitude, "expected parameter 'latitude' to be non-null");
+            $.longitude = Objects.requireNonNull($.longitude, "expected parameter 'longitude' to be non-null");
+            return $;
         }
     }
+
 }

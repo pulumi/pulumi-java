@@ -5,9 +5,9 @@ package com.pulumi.googlenative.compute_alpha.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class CustomerEncryptionKeyArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="kmsKeyName")
-      private final @Nullable Output<String> kmsKeyName;
+    private @Nullable Output<String> kmsKeyName;
 
-    public Output<String> kmsKeyName() {
-        return this.kmsKeyName == null ? Codegen.empty() : this.kmsKeyName;
+    public Optional<Output<String>> kmsKeyName() {
+        return Optional.ofNullable(this.kmsKeyName);
     }
 
     /**
@@ -31,10 +31,10 @@ public final class CustomerEncryptionKeyArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="kmsKeyServiceAccount")
-      private final @Nullable Output<String> kmsKeyServiceAccount;
+    private @Nullable Output<String> kmsKeyServiceAccount;
 
-    public Output<String> kmsKeyServiceAccount() {
-        return this.kmsKeyServiceAccount == null ? Codegen.empty() : this.kmsKeyServiceAccount;
+    public Optional<Output<String>> kmsKeyServiceAccount() {
+        return Optional.ofNullable(this.kmsKeyServiceAccount);
     }
 
     /**
@@ -42,10 +42,10 @@ public final class CustomerEncryptionKeyArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="rawKey")
-      private final @Nullable Output<String> rawKey;
+    private @Nullable Output<String> rawKey;
 
-    public Output<String> rawKey() {
-        return this.rawKey == null ? Codegen.empty() : this.rawKey;
+    public Optional<Output<String>> rawKey() {
+        return Optional.ofNullable(this.rawKey);
     }
 
     /**
@@ -53,89 +53,78 @@ public final class CustomerEncryptionKeyArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="rsaEncryptedKey")
-      private final @Nullable Output<String> rsaEncryptedKey;
+    private @Nullable Output<String> rsaEncryptedKey;
 
-    public Output<String> rsaEncryptedKey() {
-        return this.rsaEncryptedKey == null ? Codegen.empty() : this.rsaEncryptedKey;
+    public Optional<Output<String>> rsaEncryptedKey() {
+        return Optional.ofNullable(this.rsaEncryptedKey);
     }
 
-    public CustomerEncryptionKeyArgs(
-        @Nullable Output<String> kmsKeyName,
-        @Nullable Output<String> kmsKeyServiceAccount,
-        @Nullable Output<String> rawKey,
-        @Nullable Output<String> rsaEncryptedKey) {
-        this.kmsKeyName = kmsKeyName;
-        this.kmsKeyServiceAccount = kmsKeyServiceAccount;
-        this.rawKey = rawKey;
-        this.rsaEncryptedKey = rsaEncryptedKey;
-    }
+    private CustomerEncryptionKeyArgs() {}
 
-    private CustomerEncryptionKeyArgs() {
-        this.kmsKeyName = Codegen.empty();
-        this.kmsKeyServiceAccount = Codegen.empty();
-        this.rawKey = Codegen.empty();
-        this.rsaEncryptedKey = Codegen.empty();
+    private CustomerEncryptionKeyArgs(CustomerEncryptionKeyArgs $) {
+        this.kmsKeyName = $.kmsKeyName;
+        this.kmsKeyServiceAccount = $.kmsKeyServiceAccount;
+        this.rawKey = $.rawKey;
+        this.rsaEncryptedKey = $.rsaEncryptedKey;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CustomerEncryptionKeyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> kmsKeyName;
-        private @Nullable Output<String> kmsKeyServiceAccount;
-        private @Nullable Output<String> rawKey;
-        private @Nullable Output<String> rsaEncryptedKey;
+        private CustomerEncryptionKeyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CustomerEncryptionKeyArgs();
         }
 
         public Builder(CustomerEncryptionKeyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.kmsKeyName = defaults.kmsKeyName;
-    	      this.kmsKeyServiceAccount = defaults.kmsKeyServiceAccount;
-    	      this.rawKey = defaults.rawKey;
-    	      this.rsaEncryptedKey = defaults.rsaEncryptedKey;
+            $ = new CustomerEncryptionKeyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder kmsKeyName(@Nullable Output<String> kmsKeyName) {
-            this.kmsKeyName = kmsKeyName;
+            $.kmsKeyName = kmsKeyName;
             return this;
         }
-        public Builder kmsKeyName(@Nullable String kmsKeyName) {
-            this.kmsKeyName = Codegen.ofNullable(kmsKeyName);
-            return this;
+
+        public Builder kmsKeyName(String kmsKeyName) {
+            return kmsKeyName(Output.of(kmsKeyName));
         }
+
         public Builder kmsKeyServiceAccount(@Nullable Output<String> kmsKeyServiceAccount) {
-            this.kmsKeyServiceAccount = kmsKeyServiceAccount;
+            $.kmsKeyServiceAccount = kmsKeyServiceAccount;
             return this;
         }
-        public Builder kmsKeyServiceAccount(@Nullable String kmsKeyServiceAccount) {
-            this.kmsKeyServiceAccount = Codegen.ofNullable(kmsKeyServiceAccount);
-            return this;
+
+        public Builder kmsKeyServiceAccount(String kmsKeyServiceAccount) {
+            return kmsKeyServiceAccount(Output.of(kmsKeyServiceAccount));
         }
+
         public Builder rawKey(@Nullable Output<String> rawKey) {
-            this.rawKey = rawKey;
+            $.rawKey = rawKey;
             return this;
         }
-        public Builder rawKey(@Nullable String rawKey) {
-            this.rawKey = Codegen.ofNullable(rawKey);
-            return this;
+
+        public Builder rawKey(String rawKey) {
+            return rawKey(Output.of(rawKey));
         }
+
         public Builder rsaEncryptedKey(@Nullable Output<String> rsaEncryptedKey) {
-            this.rsaEncryptedKey = rsaEncryptedKey;
+            $.rsaEncryptedKey = rsaEncryptedKey;
             return this;
         }
-        public Builder rsaEncryptedKey(@Nullable String rsaEncryptedKey) {
-            this.rsaEncryptedKey = Codegen.ofNullable(rsaEncryptedKey);
-            return this;
-        }        public CustomerEncryptionKeyArgs build() {
-            return new CustomerEncryptionKeyArgs(kmsKeyName, kmsKeyServiceAccount, rawKey, rsaEncryptedKey);
+
+        public Builder rsaEncryptedKey(String rsaEncryptedKey) {
+            return rsaEncryptedKey(Output.of(rsaEncryptedKey));
+        }
+
+        public CustomerEncryptionKeyArgs build() {
+            return $;
         }
     }
+
 }

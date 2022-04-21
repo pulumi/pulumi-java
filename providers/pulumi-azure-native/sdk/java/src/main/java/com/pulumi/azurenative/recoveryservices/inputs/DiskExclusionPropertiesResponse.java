@@ -21,10 +21,10 @@ public final class DiskExclusionPropertiesResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="diskLunList")
-      private final @Nullable List<Integer> diskLunList;
+    private @Nullable List<Integer> diskLunList;
 
-    public List<Integer> diskLunList() {
-        return this.diskLunList == null ? List.of() : this.diskLunList;
+    public Optional<List<Integer>> diskLunList() {
+        return Optional.ofNullable(this.diskLunList);
     }
 
     /**
@@ -32,58 +32,54 @@ public final class DiskExclusionPropertiesResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="isInclusionList")
-      private final @Nullable Boolean isInclusionList;
+    private @Nullable Boolean isInclusionList;
 
     public Optional<Boolean> isInclusionList() {
-        return this.isInclusionList == null ? Optional.empty() : Optional.ofNullable(this.isInclusionList);
+        return Optional.ofNullable(this.isInclusionList);
     }
 
-    public DiskExclusionPropertiesResponse(
-        @Nullable List<Integer> diskLunList,
-        @Nullable Boolean isInclusionList) {
-        this.diskLunList = diskLunList;
-        this.isInclusionList = isInclusionList;
-    }
+    private DiskExclusionPropertiesResponse() {}
 
-    private DiskExclusionPropertiesResponse() {
-        this.diskLunList = List.of();
-        this.isInclusionList = null;
+    private DiskExclusionPropertiesResponse(DiskExclusionPropertiesResponse $) {
+        this.diskLunList = $.diskLunList;
+        this.isInclusionList = $.isInclusionList;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DiskExclusionPropertiesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<Integer> diskLunList;
-        private @Nullable Boolean isInclusionList;
+        private DiskExclusionPropertiesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new DiskExclusionPropertiesResponse();
         }
 
         public Builder(DiskExclusionPropertiesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.diskLunList = defaults.diskLunList;
-    	      this.isInclusionList = defaults.isInclusionList;
+            $ = new DiskExclusionPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder diskLunList(@Nullable List<Integer> diskLunList) {
-            this.diskLunList = diskLunList;
+            $.diskLunList = diskLunList;
             return this;
         }
+
         public Builder diskLunList(Integer... diskLunList) {
             return diskLunList(List.of(diskLunList));
         }
+
         public Builder isInclusionList(@Nullable Boolean isInclusionList) {
-            this.isInclusionList = isInclusionList;
+            $.isInclusionList = isInclusionList;
             return this;
-        }        public DiskExclusionPropertiesResponse build() {
-            return new DiskExclusionPropertiesResponse(diskLunList, isInclusionList);
+        }
+
+        public DiskExclusionPropertiesResponse build() {
+            return $;
         }
     }
+
 }

@@ -21,45 +21,45 @@ public final class GoogleCloudDialogflowCxV3EventInputResponse extends com.pulum
      * 
      */
     @Import(name="event", required=true)
-      private final String event;
+    private String event;
 
     public String event() {
         return this.event;
     }
 
-    public GoogleCloudDialogflowCxV3EventInputResponse(String event) {
-        this.event = Objects.requireNonNull(event, "expected parameter 'event' to be non-null");
-    }
+    private GoogleCloudDialogflowCxV3EventInputResponse() {}
 
-    private GoogleCloudDialogflowCxV3EventInputResponse() {
-        this.event = null;
+    private GoogleCloudDialogflowCxV3EventInputResponse(GoogleCloudDialogflowCxV3EventInputResponse $) {
+        this.event = $.event;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudDialogflowCxV3EventInputResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String event;
+        private GoogleCloudDialogflowCxV3EventInputResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudDialogflowCxV3EventInputResponse();
         }
 
         public Builder(GoogleCloudDialogflowCxV3EventInputResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.event = defaults.event;
+            $ = new GoogleCloudDialogflowCxV3EventInputResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder event(String event) {
-            this.event = Objects.requireNonNull(event);
+            $.event = event;
             return this;
-        }        public GoogleCloudDialogflowCxV3EventInputResponse build() {
-            return new GoogleCloudDialogflowCxV3EventInputResponse(event);
+        }
+
+        public GoogleCloudDialogflowCxV3EventInputResponse build() {
+            $.event = Objects.requireNonNull($.event, "expected parameter 'event' to be non-null");
+            return $;
         }
     }
+
 }

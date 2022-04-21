@@ -17,7 +17,7 @@ public final class GetWebAppHostNameBindingArgs extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="hostName", required=true)
-      private final String hostName;
+    private String hostName;
 
     public String hostName() {
         return this.hostName;
@@ -28,7 +28,7 @@ public final class GetWebAppHostNameBindingArgs extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -39,64 +39,59 @@ public final class GetWebAppHostNameBindingArgs extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public GetWebAppHostNameBindingArgs(
-        String hostName,
-        String name,
-        String resourceGroupName) {
-        this.hostName = Objects.requireNonNull(hostName, "expected parameter 'hostName' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private GetWebAppHostNameBindingArgs() {}
 
-    private GetWebAppHostNameBindingArgs() {
-        this.hostName = null;
-        this.name = null;
-        this.resourceGroupName = null;
+    private GetWebAppHostNameBindingArgs(GetWebAppHostNameBindingArgs $) {
+        this.hostName = $.hostName;
+        this.name = $.name;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetWebAppHostNameBindingArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String hostName;
-        private String name;
-        private String resourceGroupName;
+        private GetWebAppHostNameBindingArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetWebAppHostNameBindingArgs();
         }
 
         public Builder(GetWebAppHostNameBindingArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.hostName = defaults.hostName;
-    	      this.name = defaults.name;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new GetWebAppHostNameBindingArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder hostName(String hostName) {
-            this.hostName = Objects.requireNonNull(hostName);
+            $.hostName = hostName;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public GetWebAppHostNameBindingArgs build() {
-            return new GetWebAppHostNameBindingArgs(hostName, name, resourceGroupName);
+        }
+
+        public GetWebAppHostNameBindingArgs build() {
+            $.hostName = Objects.requireNonNull($.hostName, "expected parameter 'hostName' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

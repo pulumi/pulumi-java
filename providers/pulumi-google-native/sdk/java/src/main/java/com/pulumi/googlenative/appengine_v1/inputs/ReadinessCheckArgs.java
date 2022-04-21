@@ -5,10 +5,10 @@ package com.pulumi.googlenative.appengine_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class ReadinessCheckArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="appStartTimeout")
-      private final @Nullable Output<String> appStartTimeout;
+    private @Nullable Output<String> appStartTimeout;
 
-    public Output<String> appStartTimeout() {
-        return this.appStartTimeout == null ? Codegen.empty() : this.appStartTimeout;
+    public Optional<Output<String>> appStartTimeout() {
+        return Optional.ofNullable(this.appStartTimeout);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class ReadinessCheckArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="checkInterval")
-      private final @Nullable Output<String> checkInterval;
+    private @Nullable Output<String> checkInterval;
 
-    public Output<String> checkInterval() {
-        return this.checkInterval == null ? Codegen.empty() : this.checkInterval;
+    public Optional<Output<String>> checkInterval() {
+        return Optional.ofNullable(this.checkInterval);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class ReadinessCheckArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="failureThreshold")
-      private final @Nullable Output<Integer> failureThreshold;
+    private @Nullable Output<Integer> failureThreshold;
 
-    public Output<Integer> failureThreshold() {
-        return this.failureThreshold == null ? Codegen.empty() : this.failureThreshold;
+    public Optional<Output<Integer>> failureThreshold() {
+        return Optional.ofNullable(this.failureThreshold);
     }
 
     /**
@@ -58,10 +58,10 @@ public final class ReadinessCheckArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="host")
-      private final @Nullable Output<String> host;
+    private @Nullable Output<String> host;
 
-    public Output<String> host() {
-        return this.host == null ? Codegen.empty() : this.host;
+    public Optional<Output<String>> host() {
+        return Optional.ofNullable(this.host);
     }
 
     /**
@@ -69,10 +69,10 @@ public final class ReadinessCheckArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="path")
-      private final @Nullable Output<String> path;
+    private @Nullable Output<String> path;
 
-    public Output<String> path() {
-        return this.path == null ? Codegen.empty() : this.path;
+    public Optional<Output<String>> path() {
+        return Optional.ofNullable(this.path);
     }
 
     /**
@@ -80,10 +80,10 @@ public final class ReadinessCheckArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="successThreshold")
-      private final @Nullable Output<Integer> successThreshold;
+    private @Nullable Output<Integer> successThreshold;
 
-    public Output<Integer> successThreshold() {
-        return this.successThreshold == null ? Codegen.empty() : this.successThreshold;
+    public Optional<Output<Integer>> successThreshold() {
+        return Optional.ofNullable(this.successThreshold);
     }
 
     /**
@@ -91,128 +91,108 @@ public final class ReadinessCheckArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="timeout")
-      private final @Nullable Output<String> timeout;
+    private @Nullable Output<String> timeout;
 
-    public Output<String> timeout() {
-        return this.timeout == null ? Codegen.empty() : this.timeout;
+    public Optional<Output<String>> timeout() {
+        return Optional.ofNullable(this.timeout);
     }
 
-    public ReadinessCheckArgs(
-        @Nullable Output<String> appStartTimeout,
-        @Nullable Output<String> checkInterval,
-        @Nullable Output<Integer> failureThreshold,
-        @Nullable Output<String> host,
-        @Nullable Output<String> path,
-        @Nullable Output<Integer> successThreshold,
-        @Nullable Output<String> timeout) {
-        this.appStartTimeout = appStartTimeout;
-        this.checkInterval = checkInterval;
-        this.failureThreshold = failureThreshold;
-        this.host = host;
-        this.path = path;
-        this.successThreshold = successThreshold;
-        this.timeout = timeout;
-    }
+    private ReadinessCheckArgs() {}
 
-    private ReadinessCheckArgs() {
-        this.appStartTimeout = Codegen.empty();
-        this.checkInterval = Codegen.empty();
-        this.failureThreshold = Codegen.empty();
-        this.host = Codegen.empty();
-        this.path = Codegen.empty();
-        this.successThreshold = Codegen.empty();
-        this.timeout = Codegen.empty();
+    private ReadinessCheckArgs(ReadinessCheckArgs $) {
+        this.appStartTimeout = $.appStartTimeout;
+        this.checkInterval = $.checkInterval;
+        this.failureThreshold = $.failureThreshold;
+        this.host = $.host;
+        this.path = $.path;
+        this.successThreshold = $.successThreshold;
+        this.timeout = $.timeout;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ReadinessCheckArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> appStartTimeout;
-        private @Nullable Output<String> checkInterval;
-        private @Nullable Output<Integer> failureThreshold;
-        private @Nullable Output<String> host;
-        private @Nullable Output<String> path;
-        private @Nullable Output<Integer> successThreshold;
-        private @Nullable Output<String> timeout;
+        private ReadinessCheckArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ReadinessCheckArgs();
         }
 
         public Builder(ReadinessCheckArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.appStartTimeout = defaults.appStartTimeout;
-    	      this.checkInterval = defaults.checkInterval;
-    	      this.failureThreshold = defaults.failureThreshold;
-    	      this.host = defaults.host;
-    	      this.path = defaults.path;
-    	      this.successThreshold = defaults.successThreshold;
-    	      this.timeout = defaults.timeout;
+            $ = new ReadinessCheckArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder appStartTimeout(@Nullable Output<String> appStartTimeout) {
-            this.appStartTimeout = appStartTimeout;
+            $.appStartTimeout = appStartTimeout;
             return this;
         }
-        public Builder appStartTimeout(@Nullable String appStartTimeout) {
-            this.appStartTimeout = Codegen.ofNullable(appStartTimeout);
-            return this;
+
+        public Builder appStartTimeout(String appStartTimeout) {
+            return appStartTimeout(Output.of(appStartTimeout));
         }
+
         public Builder checkInterval(@Nullable Output<String> checkInterval) {
-            this.checkInterval = checkInterval;
+            $.checkInterval = checkInterval;
             return this;
         }
-        public Builder checkInterval(@Nullable String checkInterval) {
-            this.checkInterval = Codegen.ofNullable(checkInterval);
-            return this;
+
+        public Builder checkInterval(String checkInterval) {
+            return checkInterval(Output.of(checkInterval));
         }
+
         public Builder failureThreshold(@Nullable Output<Integer> failureThreshold) {
-            this.failureThreshold = failureThreshold;
+            $.failureThreshold = failureThreshold;
             return this;
         }
-        public Builder failureThreshold(@Nullable Integer failureThreshold) {
-            this.failureThreshold = Codegen.ofNullable(failureThreshold);
-            return this;
+
+        public Builder failureThreshold(Integer failureThreshold) {
+            return failureThreshold(Output.of(failureThreshold));
         }
+
         public Builder host(@Nullable Output<String> host) {
-            this.host = host;
+            $.host = host;
             return this;
         }
-        public Builder host(@Nullable String host) {
-            this.host = Codegen.ofNullable(host);
-            return this;
+
+        public Builder host(String host) {
+            return host(Output.of(host));
         }
+
         public Builder path(@Nullable Output<String> path) {
-            this.path = path;
+            $.path = path;
             return this;
         }
-        public Builder path(@Nullable String path) {
-            this.path = Codegen.ofNullable(path);
-            return this;
+
+        public Builder path(String path) {
+            return path(Output.of(path));
         }
+
         public Builder successThreshold(@Nullable Output<Integer> successThreshold) {
-            this.successThreshold = successThreshold;
+            $.successThreshold = successThreshold;
             return this;
         }
-        public Builder successThreshold(@Nullable Integer successThreshold) {
-            this.successThreshold = Codegen.ofNullable(successThreshold);
-            return this;
+
+        public Builder successThreshold(Integer successThreshold) {
+            return successThreshold(Output.of(successThreshold));
         }
+
         public Builder timeout(@Nullable Output<String> timeout) {
-            this.timeout = timeout;
+            $.timeout = timeout;
             return this;
         }
-        public Builder timeout(@Nullable String timeout) {
-            this.timeout = Codegen.ofNullable(timeout);
-            return this;
-        }        public ReadinessCheckArgs build() {
-            return new ReadinessCheckArgs(appStartTimeout, checkInterval, failureThreshold, host, path, successThreshold, timeout);
+
+        public Builder timeout(String timeout) {
+            return timeout(Output.of(timeout));
+        }
+
+        public ReadinessCheckArgs build() {
+            return $;
         }
     }
+
 }

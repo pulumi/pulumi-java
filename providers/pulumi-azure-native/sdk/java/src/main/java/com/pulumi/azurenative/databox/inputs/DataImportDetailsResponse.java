@@ -23,45 +23,45 @@ public final class DataImportDetailsResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="accountDetails", required=true)
-      private final Either<ManagedDiskDetailsResponse,StorageAccountDetailsResponse> accountDetails;
+    private Either<ManagedDiskDetailsResponse,StorageAccountDetailsResponse> accountDetails;
 
     public Either<ManagedDiskDetailsResponse,StorageAccountDetailsResponse> accountDetails() {
         return this.accountDetails;
     }
 
-    public DataImportDetailsResponse(Either<ManagedDiskDetailsResponse,StorageAccountDetailsResponse> accountDetails) {
-        this.accountDetails = Objects.requireNonNull(accountDetails, "expected parameter 'accountDetails' to be non-null");
-    }
+    private DataImportDetailsResponse() {}
 
-    private DataImportDetailsResponse() {
-        this.accountDetails = null;
+    private DataImportDetailsResponse(DataImportDetailsResponse $) {
+        this.accountDetails = $.accountDetails;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DataImportDetailsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Either<ManagedDiskDetailsResponse,StorageAccountDetailsResponse> accountDetails;
+        private DataImportDetailsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new DataImportDetailsResponse();
         }
 
         public Builder(DataImportDetailsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accountDetails = defaults.accountDetails;
+            $ = new DataImportDetailsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder accountDetails(Either<ManagedDiskDetailsResponse,StorageAccountDetailsResponse> accountDetails) {
-            this.accountDetails = Objects.requireNonNull(accountDetails);
+            $.accountDetails = accountDetails;
             return this;
-        }        public DataImportDetailsResponse build() {
-            return new DataImportDetailsResponse(accountDetails);
+        }
+
+        public DataImportDetailsResponse build() {
+            $.accountDetails = Objects.requireNonNull($.accountDetails, "expected parameter 'accountDetails' to be non-null");
+            return $;
         }
     }
+
 }

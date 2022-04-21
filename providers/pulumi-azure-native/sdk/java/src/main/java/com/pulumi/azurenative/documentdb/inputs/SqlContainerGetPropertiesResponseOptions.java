@@ -20,10 +20,10 @@ public final class SqlContainerGetPropertiesResponseOptions extends com.pulumi.r
      * 
      */
     @Import(name="autoscaleSettings")
-      private final @Nullable AutoscaleSettingsResponse autoscaleSettings;
+    private @Nullable AutoscaleSettingsResponse autoscaleSettings;
 
     public Optional<AutoscaleSettingsResponse> autoscaleSettings() {
-        return this.autoscaleSettings == null ? Optional.empty() : Optional.ofNullable(this.autoscaleSettings);
+        return Optional.ofNullable(this.autoscaleSettings);
     }
 
     /**
@@ -31,55 +31,50 @@ public final class SqlContainerGetPropertiesResponseOptions extends com.pulumi.r
      * 
      */
     @Import(name="throughput")
-      private final @Nullable Integer throughput;
+    private @Nullable Integer throughput;
 
     public Optional<Integer> throughput() {
-        return this.throughput == null ? Optional.empty() : Optional.ofNullable(this.throughput);
+        return Optional.ofNullable(this.throughput);
     }
 
-    public SqlContainerGetPropertiesResponseOptions(
-        @Nullable AutoscaleSettingsResponse autoscaleSettings,
-        @Nullable Integer throughput) {
-        this.autoscaleSettings = autoscaleSettings;
-        this.throughput = throughput;
-    }
+    private SqlContainerGetPropertiesResponseOptions() {}
 
-    private SqlContainerGetPropertiesResponseOptions() {
-        this.autoscaleSettings = null;
-        this.throughput = null;
+    private SqlContainerGetPropertiesResponseOptions(SqlContainerGetPropertiesResponseOptions $) {
+        this.autoscaleSettings = $.autoscaleSettings;
+        this.throughput = $.throughput;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SqlContainerGetPropertiesResponseOptions defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable AutoscaleSettingsResponse autoscaleSettings;
-        private @Nullable Integer throughput;
+        private SqlContainerGetPropertiesResponseOptions $;
 
         public Builder() {
-    	      // Empty
+            $ = new SqlContainerGetPropertiesResponseOptions();
         }
 
         public Builder(SqlContainerGetPropertiesResponseOptions defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.autoscaleSettings = defaults.autoscaleSettings;
-    	      this.throughput = defaults.throughput;
+            $ = new SqlContainerGetPropertiesResponseOptions(Objects.requireNonNull(defaults));
         }
 
         public Builder autoscaleSettings(@Nullable AutoscaleSettingsResponse autoscaleSettings) {
-            this.autoscaleSettings = autoscaleSettings;
+            $.autoscaleSettings = autoscaleSettings;
             return this;
         }
+
         public Builder throughput(@Nullable Integer throughput) {
-            this.throughput = throughput;
+            $.throughput = throughput;
             return this;
-        }        public SqlContainerGetPropertiesResponseOptions build() {
-            return new SqlContainerGetPropertiesResponseOptions(autoscaleSettings, throughput);
+        }
+
+        public SqlContainerGetPropertiesResponseOptions build() {
+            return $;
         }
     }
+
 }

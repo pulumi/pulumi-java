@@ -14,48 +14,49 @@ public final class GetClusterLoggingConfig extends com.pulumi.resources.InvokeAr
     public static final GetClusterLoggingConfig Empty = new GetClusterLoggingConfig();
 
     @Import(name="enableComponents", required=true)
-      private final List<String> enableComponents;
+    private List<String> enableComponents;
 
     public List<String> enableComponents() {
         return this.enableComponents;
     }
 
-    public GetClusterLoggingConfig(List<String> enableComponents) {
-        this.enableComponents = Objects.requireNonNull(enableComponents, "expected parameter 'enableComponents' to be non-null");
-    }
+    private GetClusterLoggingConfig() {}
 
-    private GetClusterLoggingConfig() {
-        this.enableComponents = List.of();
+    private GetClusterLoggingConfig(GetClusterLoggingConfig $) {
+        this.enableComponents = $.enableComponents;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetClusterLoggingConfig defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<String> enableComponents;
+        private GetClusterLoggingConfig $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetClusterLoggingConfig();
         }
 
         public Builder(GetClusterLoggingConfig defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.enableComponents = defaults.enableComponents;
+            $ = new GetClusterLoggingConfig(Objects.requireNonNull(defaults));
         }
 
         public Builder enableComponents(List<String> enableComponents) {
-            this.enableComponents = Objects.requireNonNull(enableComponents);
+            $.enableComponents = enableComponents;
             return this;
         }
+
         public Builder enableComponents(String... enableComponents) {
             return enableComponents(List.of(enableComponents));
-        }        public GetClusterLoggingConfig build() {
-            return new GetClusterLoggingConfig(enableComponents);
+        }
+
+        public GetClusterLoggingConfig build() {
+            $.enableComponents = Objects.requireNonNull($.enableComponents, "expected parameter 'enableComponents' to be non-null");
+            return $;
         }
     }
+
 }

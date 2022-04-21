@@ -5,9 +5,9 @@ package com.pulumi.googlenative.servicemanagement_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class OAuthRequirementsArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="canonicalScopes")
-      private final @Nullable Output<String> canonicalScopes;
+    private @Nullable Output<String> canonicalScopes;
 
-    public Output<String> canonicalScopes() {
-        return this.canonicalScopes == null ? Codegen.empty() : this.canonicalScopes;
+    public Optional<Output<String>> canonicalScopes() {
+        return Optional.ofNullable(this.canonicalScopes);
     }
 
-    public OAuthRequirementsArgs(@Nullable Output<String> canonicalScopes) {
-        this.canonicalScopes = canonicalScopes;
-    }
+    private OAuthRequirementsArgs() {}
 
-    private OAuthRequirementsArgs() {
-        this.canonicalScopes = Codegen.empty();
+    private OAuthRequirementsArgs(OAuthRequirementsArgs $) {
+        this.canonicalScopes = $.canonicalScopes;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(OAuthRequirementsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> canonicalScopes;
+        private OAuthRequirementsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new OAuthRequirementsArgs();
         }
 
         public Builder(OAuthRequirementsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.canonicalScopes = defaults.canonicalScopes;
+            $ = new OAuthRequirementsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder canonicalScopes(@Nullable Output<String> canonicalScopes) {
-            this.canonicalScopes = canonicalScopes;
+            $.canonicalScopes = canonicalScopes;
             return this;
         }
-        public Builder canonicalScopes(@Nullable String canonicalScopes) {
-            this.canonicalScopes = Codegen.ofNullable(canonicalScopes);
-            return this;
-        }        public OAuthRequirementsArgs build() {
-            return new OAuthRequirementsArgs(canonicalScopes);
+
+        public Builder canonicalScopes(String canonicalScopes) {
+            return canonicalScopes(Output.of(canonicalScopes));
+        }
+
+        public OAuthRequirementsArgs build() {
+            return $;
         }
     }
+
 }

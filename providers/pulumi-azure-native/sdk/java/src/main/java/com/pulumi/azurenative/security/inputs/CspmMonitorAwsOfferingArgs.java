@@ -9,6 +9,7 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +26,10 @@ public final class CspmMonitorAwsOfferingArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="nativeCloudConnection")
-      private final @Nullable Output<CspmMonitorAwsOfferingNativeCloudConnectionArgs> nativeCloudConnection;
+    private @Nullable Output<CspmMonitorAwsOfferingNativeCloudConnectionArgs> nativeCloudConnection;
 
-    public Output<CspmMonitorAwsOfferingNativeCloudConnectionArgs> nativeCloudConnection() {
-        return this.nativeCloudConnection == null ? Codegen.empty() : this.nativeCloudConnection;
+    public Optional<Output<CspmMonitorAwsOfferingNativeCloudConnectionArgs>> nativeCloudConnection() {
+        return Optional.ofNullable(this.nativeCloudConnection);
     }
 
     /**
@@ -37,63 +38,59 @@ public final class CspmMonitorAwsOfferingArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="offeringType", required=true)
-      private final Output<String> offeringType;
+    private Output<String> offeringType;
 
     public Output<String> offeringType() {
         return this.offeringType;
     }
 
-    public CspmMonitorAwsOfferingArgs(
-        @Nullable Output<CspmMonitorAwsOfferingNativeCloudConnectionArgs> nativeCloudConnection,
-        Output<String> offeringType) {
-        this.nativeCloudConnection = nativeCloudConnection;
-        this.offeringType = Codegen.stringProp("offeringType").output().arg(offeringType).require();
-    }
+    private CspmMonitorAwsOfferingArgs() {}
 
-    private CspmMonitorAwsOfferingArgs() {
-        this.nativeCloudConnection = Codegen.empty();
-        this.offeringType = Codegen.empty();
+    private CspmMonitorAwsOfferingArgs(CspmMonitorAwsOfferingArgs $) {
+        this.nativeCloudConnection = $.nativeCloudConnection;
+        this.offeringType = $.offeringType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CspmMonitorAwsOfferingArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<CspmMonitorAwsOfferingNativeCloudConnectionArgs> nativeCloudConnection;
-        private Output<String> offeringType;
+        private CspmMonitorAwsOfferingArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CspmMonitorAwsOfferingArgs();
         }
 
         public Builder(CspmMonitorAwsOfferingArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.nativeCloudConnection = defaults.nativeCloudConnection;
-    	      this.offeringType = defaults.offeringType;
+            $ = new CspmMonitorAwsOfferingArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder nativeCloudConnection(@Nullable Output<CspmMonitorAwsOfferingNativeCloudConnectionArgs> nativeCloudConnection) {
-            this.nativeCloudConnection = nativeCloudConnection;
+            $.nativeCloudConnection = nativeCloudConnection;
             return this;
         }
-        public Builder nativeCloudConnection(@Nullable CspmMonitorAwsOfferingNativeCloudConnectionArgs nativeCloudConnection) {
-            this.nativeCloudConnection = Codegen.ofNullable(nativeCloudConnection);
-            return this;
+
+        public Builder nativeCloudConnection(CspmMonitorAwsOfferingNativeCloudConnectionArgs nativeCloudConnection) {
+            return nativeCloudConnection(Output.of(nativeCloudConnection));
         }
+
         public Builder offeringType(Output<String> offeringType) {
-            this.offeringType = Objects.requireNonNull(offeringType);
+            $.offeringType = offeringType;
             return this;
         }
+
         public Builder offeringType(String offeringType) {
-            this.offeringType = Output.of(Objects.requireNonNull(offeringType));
-            return this;
-        }        public CspmMonitorAwsOfferingArgs build() {
-            return new CspmMonitorAwsOfferingArgs(nativeCloudConnection, offeringType);
+            return offeringType(Output.of(offeringType));
+        }
+
+        public CspmMonitorAwsOfferingArgs build() {
+            $.offeringType = Codegen.stringProp("offeringType").output().arg($.offeringType).require();
+            return $;
         }
     }
+
 }

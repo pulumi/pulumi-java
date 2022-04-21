@@ -15,78 +15,72 @@ public final class GetJobTriggerArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetJobTriggerArgs Empty = new GetJobTriggerArgs();
 
     @Import(name="jobTriggerId", required=true)
-      private final String jobTriggerId;
+    private String jobTriggerId;
 
     public String jobTriggerId() {
         return this.jobTriggerId;
     }
 
     @Import(name="location", required=true)
-      private final String location;
+    private String location;
 
     public String location() {
         return this.location;
     }
 
     @Import(name="project")
-      private final @Nullable String project;
+    private @Nullable String project;
 
     public Optional<String> project() {
-        return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
+        return Optional.ofNullable(this.project);
     }
 
-    public GetJobTriggerArgs(
-        String jobTriggerId,
-        String location,
-        @Nullable String project) {
-        this.jobTriggerId = Objects.requireNonNull(jobTriggerId, "expected parameter 'jobTriggerId' to be non-null");
-        this.location = Objects.requireNonNull(location, "expected parameter 'location' to be non-null");
-        this.project = project;
-    }
+    private GetJobTriggerArgs() {}
 
-    private GetJobTriggerArgs() {
-        this.jobTriggerId = null;
-        this.location = null;
-        this.project = null;
+    private GetJobTriggerArgs(GetJobTriggerArgs $) {
+        this.jobTriggerId = $.jobTriggerId;
+        this.location = $.location;
+        this.project = $.project;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetJobTriggerArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String jobTriggerId;
-        private String location;
-        private @Nullable String project;
+        private GetJobTriggerArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetJobTriggerArgs();
         }
 
         public Builder(GetJobTriggerArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.jobTriggerId = defaults.jobTriggerId;
-    	      this.location = defaults.location;
-    	      this.project = defaults.project;
+            $ = new GetJobTriggerArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder jobTriggerId(String jobTriggerId) {
-            this.jobTriggerId = Objects.requireNonNull(jobTriggerId);
+            $.jobTriggerId = jobTriggerId;
             return this;
         }
+
         public Builder location(String location) {
-            this.location = Objects.requireNonNull(location);
+            $.location = location;
             return this;
         }
+
         public Builder project(@Nullable String project) {
-            this.project = project;
+            $.project = project;
             return this;
-        }        public GetJobTriggerArgs build() {
-            return new GetJobTriggerArgs(jobTriggerId, location, project);
+        }
+
+        public GetJobTriggerArgs build() {
+            $.jobTriggerId = Objects.requireNonNull($.jobTriggerId, "expected parameter 'jobTriggerId' to be non-null");
+            $.location = Objects.requireNonNull($.location, "expected parameter 'location' to be non-null");
+            return $;
         }
     }
+
 }

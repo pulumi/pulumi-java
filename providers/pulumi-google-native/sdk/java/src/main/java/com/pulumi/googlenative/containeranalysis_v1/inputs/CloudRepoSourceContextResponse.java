@@ -23,7 +23,7 @@ public final class CloudRepoSourceContextResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="aliasContext", required=true)
-      private final AliasContextResponse aliasContext;
+    private AliasContextResponse aliasContext;
 
     public AliasContextResponse aliasContext() {
         return this.aliasContext;
@@ -34,7 +34,7 @@ public final class CloudRepoSourceContextResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="repoId", required=true)
-      private final RepoIdResponse repoId;
+    private RepoIdResponse repoId;
 
     public RepoIdResponse repoId() {
         return this.repoId;
@@ -45,64 +45,59 @@ public final class CloudRepoSourceContextResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="revisionId", required=true)
-      private final String revisionId;
+    private String revisionId;
 
     public String revisionId() {
         return this.revisionId;
     }
 
-    public CloudRepoSourceContextResponse(
-        AliasContextResponse aliasContext,
-        RepoIdResponse repoId,
-        String revisionId) {
-        this.aliasContext = Objects.requireNonNull(aliasContext, "expected parameter 'aliasContext' to be non-null");
-        this.repoId = Objects.requireNonNull(repoId, "expected parameter 'repoId' to be non-null");
-        this.revisionId = Objects.requireNonNull(revisionId, "expected parameter 'revisionId' to be non-null");
-    }
+    private CloudRepoSourceContextResponse() {}
 
-    private CloudRepoSourceContextResponse() {
-        this.aliasContext = null;
-        this.repoId = null;
-        this.revisionId = null;
+    private CloudRepoSourceContextResponse(CloudRepoSourceContextResponse $) {
+        this.aliasContext = $.aliasContext;
+        this.repoId = $.repoId;
+        this.revisionId = $.revisionId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CloudRepoSourceContextResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private AliasContextResponse aliasContext;
-        private RepoIdResponse repoId;
-        private String revisionId;
+        private CloudRepoSourceContextResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new CloudRepoSourceContextResponse();
         }
 
         public Builder(CloudRepoSourceContextResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.aliasContext = defaults.aliasContext;
-    	      this.repoId = defaults.repoId;
-    	      this.revisionId = defaults.revisionId;
+            $ = new CloudRepoSourceContextResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder aliasContext(AliasContextResponse aliasContext) {
-            this.aliasContext = Objects.requireNonNull(aliasContext);
+            $.aliasContext = aliasContext;
             return this;
         }
+
         public Builder repoId(RepoIdResponse repoId) {
-            this.repoId = Objects.requireNonNull(repoId);
+            $.repoId = repoId;
             return this;
         }
+
         public Builder revisionId(String revisionId) {
-            this.revisionId = Objects.requireNonNull(revisionId);
+            $.revisionId = revisionId;
             return this;
-        }        public CloudRepoSourceContextResponse build() {
-            return new CloudRepoSourceContextResponse(aliasContext, repoId, revisionId);
+        }
+
+        public CloudRepoSourceContextResponse build() {
+            $.aliasContext = Objects.requireNonNull($.aliasContext, "expected parameter 'aliasContext' to be non-null");
+            $.repoId = Objects.requireNonNull($.repoId, "expected parameter 'repoId' to be non-null");
+            $.revisionId = Objects.requireNonNull($.revisionId, "expected parameter 'revisionId' to be non-null");
+            return $;
         }
     }
+
 }

@@ -7,9 +7,9 @@ import com.pulumi.aws.lambda.inputs.CodeSigningConfigAllowedPublishersGetArgs;
 import com.pulumi.aws.lambda.inputs.CodeSigningConfigPoliciesGetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class CodeSigningConfigState extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="allowedPublishers")
-      private final @Nullable Output<CodeSigningConfigAllowedPublishersGetArgs> allowedPublishers;
+    private @Nullable Output<CodeSigningConfigAllowedPublishersGetArgs> allowedPublishers;
 
-    public Output<CodeSigningConfigAllowedPublishersGetArgs> allowedPublishers() {
-        return this.allowedPublishers == null ? Codegen.empty() : this.allowedPublishers;
+    public Optional<Output<CodeSigningConfigAllowedPublishersGetArgs>> allowedPublishers() {
+        return Optional.ofNullable(this.allowedPublishers);
     }
 
     /**
@@ -33,10 +33,10 @@ public final class CodeSigningConfigState extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="arn")
-      private final @Nullable Output<String> arn;
+    private @Nullable Output<String> arn;
 
-    public Output<String> arn() {
-        return this.arn == null ? Codegen.empty() : this.arn;
+    public Optional<Output<String>> arn() {
+        return Optional.ofNullable(this.arn);
     }
 
     /**
@@ -44,10 +44,10 @@ public final class CodeSigningConfigState extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="configId")
-      private final @Nullable Output<String> configId;
+    private @Nullable Output<String> configId;
 
-    public Output<String> configId() {
-        return this.configId == null ? Codegen.empty() : this.configId;
+    public Optional<Output<String>> configId() {
+        return Optional.ofNullable(this.configId);
     }
 
     /**
@@ -55,10 +55,10 @@ public final class CodeSigningConfigState extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -66,10 +66,10 @@ public final class CodeSigningConfigState extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="lastModified")
-      private final @Nullable Output<String> lastModified;
+    private @Nullable Output<String> lastModified;
 
-    public Output<String> lastModified() {
-        return this.lastModified == null ? Codegen.empty() : this.lastModified;
+    public Optional<Output<String>> lastModified() {
+        return Optional.ofNullable(this.lastModified);
     }
 
     /**
@@ -77,115 +77,98 @@ public final class CodeSigningConfigState extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="policies")
-      private final @Nullable Output<CodeSigningConfigPoliciesGetArgs> policies;
+    private @Nullable Output<CodeSigningConfigPoliciesGetArgs> policies;
 
-    public Output<CodeSigningConfigPoliciesGetArgs> policies() {
-        return this.policies == null ? Codegen.empty() : this.policies;
+    public Optional<Output<CodeSigningConfigPoliciesGetArgs>> policies() {
+        return Optional.ofNullable(this.policies);
     }
 
-    public CodeSigningConfigState(
-        @Nullable Output<CodeSigningConfigAllowedPublishersGetArgs> allowedPublishers,
-        @Nullable Output<String> arn,
-        @Nullable Output<String> configId,
-        @Nullable Output<String> description,
-        @Nullable Output<String> lastModified,
-        @Nullable Output<CodeSigningConfigPoliciesGetArgs> policies) {
-        this.allowedPublishers = allowedPublishers;
-        this.arn = arn;
-        this.configId = configId;
-        this.description = description;
-        this.lastModified = lastModified;
-        this.policies = policies;
-    }
+    private CodeSigningConfigState() {}
 
-    private CodeSigningConfigState() {
-        this.allowedPublishers = Codegen.empty();
-        this.arn = Codegen.empty();
-        this.configId = Codegen.empty();
-        this.description = Codegen.empty();
-        this.lastModified = Codegen.empty();
-        this.policies = Codegen.empty();
+    private CodeSigningConfigState(CodeSigningConfigState $) {
+        this.allowedPublishers = $.allowedPublishers;
+        this.arn = $.arn;
+        this.configId = $.configId;
+        this.description = $.description;
+        this.lastModified = $.lastModified;
+        this.policies = $.policies;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CodeSigningConfigState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<CodeSigningConfigAllowedPublishersGetArgs> allowedPublishers;
-        private @Nullable Output<String> arn;
-        private @Nullable Output<String> configId;
-        private @Nullable Output<String> description;
-        private @Nullable Output<String> lastModified;
-        private @Nullable Output<CodeSigningConfigPoliciesGetArgs> policies;
+        private CodeSigningConfigState $;
 
         public Builder() {
-    	      // Empty
+            $ = new CodeSigningConfigState();
         }
 
         public Builder(CodeSigningConfigState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.allowedPublishers = defaults.allowedPublishers;
-    	      this.arn = defaults.arn;
-    	      this.configId = defaults.configId;
-    	      this.description = defaults.description;
-    	      this.lastModified = defaults.lastModified;
-    	      this.policies = defaults.policies;
+            $ = new CodeSigningConfigState(Objects.requireNonNull(defaults));
         }
 
         public Builder allowedPublishers(@Nullable Output<CodeSigningConfigAllowedPublishersGetArgs> allowedPublishers) {
-            this.allowedPublishers = allowedPublishers;
+            $.allowedPublishers = allowedPublishers;
             return this;
         }
-        public Builder allowedPublishers(@Nullable CodeSigningConfigAllowedPublishersGetArgs allowedPublishers) {
-            this.allowedPublishers = Codegen.ofNullable(allowedPublishers);
-            return this;
+
+        public Builder allowedPublishers(CodeSigningConfigAllowedPublishersGetArgs allowedPublishers) {
+            return allowedPublishers(Output.of(allowedPublishers));
         }
+
         public Builder arn(@Nullable Output<String> arn) {
-            this.arn = arn;
+            $.arn = arn;
             return this;
         }
-        public Builder arn(@Nullable String arn) {
-            this.arn = Codegen.ofNullable(arn);
-            return this;
+
+        public Builder arn(String arn) {
+            return arn(Output.of(arn));
         }
+
         public Builder configId(@Nullable Output<String> configId) {
-            this.configId = configId;
+            $.configId = configId;
             return this;
         }
-        public Builder configId(@Nullable String configId) {
-            this.configId = Codegen.ofNullable(configId);
-            return this;
+
+        public Builder configId(String configId) {
+            return configId(Output.of(configId));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder lastModified(@Nullable Output<String> lastModified) {
-            this.lastModified = lastModified;
+            $.lastModified = lastModified;
             return this;
         }
-        public Builder lastModified(@Nullable String lastModified) {
-            this.lastModified = Codegen.ofNullable(lastModified);
-            return this;
+
+        public Builder lastModified(String lastModified) {
+            return lastModified(Output.of(lastModified));
         }
+
         public Builder policies(@Nullable Output<CodeSigningConfigPoliciesGetArgs> policies) {
-            this.policies = policies;
+            $.policies = policies;
             return this;
         }
-        public Builder policies(@Nullable CodeSigningConfigPoliciesGetArgs policies) {
-            this.policies = Codegen.ofNullable(policies);
-            return this;
-        }        public CodeSigningConfigState build() {
-            return new CodeSigningConfigState(allowedPublishers, arn, configId, description, lastModified, policies);
+
+        public Builder policies(CodeSigningConfigPoliciesGetArgs policies) {
+            return policies(Output.of(policies));
+        }
+
+        public CodeSigningConfigState build() {
+            return $;
         }
     }
+
 }

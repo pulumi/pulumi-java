@@ -15,78 +15,70 @@ public final class SparkMavenPackageResponse extends com.pulumi.resources.Invoke
     public static final SparkMavenPackageResponse Empty = new SparkMavenPackageResponse();
 
     @Import(name="artifact")
-      private final @Nullable String artifact;
+    private @Nullable String artifact;
 
     public Optional<String> artifact() {
-        return this.artifact == null ? Optional.empty() : Optional.ofNullable(this.artifact);
+        return Optional.ofNullable(this.artifact);
     }
 
     @Import(name="group")
-      private final @Nullable String group;
+    private @Nullable String group;
 
     public Optional<String> group() {
-        return this.group == null ? Optional.empty() : Optional.ofNullable(this.group);
+        return Optional.ofNullable(this.group);
     }
 
     @Import(name="version")
-      private final @Nullable String version;
+    private @Nullable String version;
 
     public Optional<String> version() {
-        return this.version == null ? Optional.empty() : Optional.ofNullable(this.version);
+        return Optional.ofNullable(this.version);
     }
 
-    public SparkMavenPackageResponse(
-        @Nullable String artifact,
-        @Nullable String group,
-        @Nullable String version) {
-        this.artifact = artifact;
-        this.group = group;
-        this.version = version;
-    }
+    private SparkMavenPackageResponse() {}
 
-    private SparkMavenPackageResponse() {
-        this.artifact = null;
-        this.group = null;
-        this.version = null;
+    private SparkMavenPackageResponse(SparkMavenPackageResponse $) {
+        this.artifact = $.artifact;
+        this.group = $.group;
+        this.version = $.version;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SparkMavenPackageResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String artifact;
-        private @Nullable String group;
-        private @Nullable String version;
+        private SparkMavenPackageResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new SparkMavenPackageResponse();
         }
 
         public Builder(SparkMavenPackageResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.artifact = defaults.artifact;
-    	      this.group = defaults.group;
-    	      this.version = defaults.version;
+            $ = new SparkMavenPackageResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder artifact(@Nullable String artifact) {
-            this.artifact = artifact;
+            $.artifact = artifact;
             return this;
         }
+
         public Builder group(@Nullable String group) {
-            this.group = group;
+            $.group = group;
             return this;
         }
+
         public Builder version(@Nullable String version) {
-            this.version = version;
+            $.version = version;
             return this;
-        }        public SparkMavenPackageResponse build() {
-            return new SparkMavenPackageResponse(artifact, group, version);
+        }
+
+        public SparkMavenPackageResponse build() {
+            return $;
         }
     }
+
 }

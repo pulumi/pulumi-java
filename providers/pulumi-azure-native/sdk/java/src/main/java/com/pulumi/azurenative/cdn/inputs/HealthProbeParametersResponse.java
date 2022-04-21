@@ -24,10 +24,10 @@ public final class HealthProbeParametersResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="probeIntervalInSeconds")
-      private final @Nullable Integer probeIntervalInSeconds;
+    private @Nullable Integer probeIntervalInSeconds;
 
     public Optional<Integer> probeIntervalInSeconds() {
-        return this.probeIntervalInSeconds == null ? Optional.empty() : Optional.ofNullable(this.probeIntervalInSeconds);
+        return Optional.ofNullable(this.probeIntervalInSeconds);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class HealthProbeParametersResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="probePath")
-      private final @Nullable String probePath;
+    private @Nullable String probePath;
 
     public Optional<String> probePath() {
-        return this.probePath == null ? Optional.empty() : Optional.ofNullable(this.probePath);
+        return Optional.ofNullable(this.probePath);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class HealthProbeParametersResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="probeProtocol")
-      private final @Nullable String probeProtocol;
+    private @Nullable String probeProtocol;
 
     public Optional<String> probeProtocol() {
-        return this.probeProtocol == null ? Optional.empty() : Optional.ofNullable(this.probeProtocol);
+        return Optional.ofNullable(this.probeProtocol);
     }
 
     /**
@@ -57,73 +57,62 @@ public final class HealthProbeParametersResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="probeRequestType")
-      private final @Nullable String probeRequestType;
+    private @Nullable String probeRequestType;
 
     public Optional<String> probeRequestType() {
-        return this.probeRequestType == null ? Optional.empty() : Optional.ofNullable(this.probeRequestType);
+        return Optional.ofNullable(this.probeRequestType);
     }
 
-    public HealthProbeParametersResponse(
-        @Nullable Integer probeIntervalInSeconds,
-        @Nullable String probePath,
-        @Nullable String probeProtocol,
-        @Nullable String probeRequestType) {
-        this.probeIntervalInSeconds = probeIntervalInSeconds;
-        this.probePath = probePath;
-        this.probeProtocol = probeProtocol;
-        this.probeRequestType = probeRequestType;
-    }
+    private HealthProbeParametersResponse() {}
 
-    private HealthProbeParametersResponse() {
-        this.probeIntervalInSeconds = null;
-        this.probePath = null;
-        this.probeProtocol = null;
-        this.probeRequestType = null;
+    private HealthProbeParametersResponse(HealthProbeParametersResponse $) {
+        this.probeIntervalInSeconds = $.probeIntervalInSeconds;
+        this.probePath = $.probePath;
+        this.probeProtocol = $.probeProtocol;
+        this.probeRequestType = $.probeRequestType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(HealthProbeParametersResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Integer probeIntervalInSeconds;
-        private @Nullable String probePath;
-        private @Nullable String probeProtocol;
-        private @Nullable String probeRequestType;
+        private HealthProbeParametersResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new HealthProbeParametersResponse();
         }
 
         public Builder(HealthProbeParametersResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.probeIntervalInSeconds = defaults.probeIntervalInSeconds;
-    	      this.probePath = defaults.probePath;
-    	      this.probeProtocol = defaults.probeProtocol;
-    	      this.probeRequestType = defaults.probeRequestType;
+            $ = new HealthProbeParametersResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder probeIntervalInSeconds(@Nullable Integer probeIntervalInSeconds) {
-            this.probeIntervalInSeconds = probeIntervalInSeconds;
+            $.probeIntervalInSeconds = probeIntervalInSeconds;
             return this;
         }
+
         public Builder probePath(@Nullable String probePath) {
-            this.probePath = probePath;
+            $.probePath = probePath;
             return this;
         }
+
         public Builder probeProtocol(@Nullable String probeProtocol) {
-            this.probeProtocol = probeProtocol;
+            $.probeProtocol = probeProtocol;
             return this;
         }
+
         public Builder probeRequestType(@Nullable String probeRequestType) {
-            this.probeRequestType = probeRequestType;
+            $.probeRequestType = probeRequestType;
             return this;
-        }        public HealthProbeParametersResponse build() {
-            return new HealthProbeParametersResponse(probeIntervalInSeconds, probePath, probeProtocol, probeRequestType);
+        }
+
+        public HealthProbeParametersResponse build() {
+            return $;
         }
     }
+
 }

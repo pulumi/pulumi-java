@@ -20,7 +20,7 @@ public final class GetFolderArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="folder", required=true)
-      private final String folder;
+    private String folder;
 
     public String folder() {
         return this.folder;
@@ -31,55 +31,51 @@ public final class GetFolderArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="lookupOrganization")
-      private final @Nullable Boolean lookupOrganization;
+    private @Nullable Boolean lookupOrganization;
 
     public Optional<Boolean> lookupOrganization() {
-        return this.lookupOrganization == null ? Optional.empty() : Optional.ofNullable(this.lookupOrganization);
+        return Optional.ofNullable(this.lookupOrganization);
     }
 
-    public GetFolderArgs(
-        String folder,
-        @Nullable Boolean lookupOrganization) {
-        this.folder = Objects.requireNonNull(folder, "expected parameter 'folder' to be non-null");
-        this.lookupOrganization = lookupOrganization;
-    }
+    private GetFolderArgs() {}
 
-    private GetFolderArgs() {
-        this.folder = null;
-        this.lookupOrganization = null;
+    private GetFolderArgs(GetFolderArgs $) {
+        this.folder = $.folder;
+        this.lookupOrganization = $.lookupOrganization;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetFolderArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String folder;
-        private @Nullable Boolean lookupOrganization;
+        private GetFolderArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetFolderArgs();
         }
 
         public Builder(GetFolderArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.folder = defaults.folder;
-    	      this.lookupOrganization = defaults.lookupOrganization;
+            $ = new GetFolderArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder folder(String folder) {
-            this.folder = Objects.requireNonNull(folder);
+            $.folder = folder;
             return this;
         }
+
         public Builder lookupOrganization(@Nullable Boolean lookupOrganization) {
-            this.lookupOrganization = lookupOrganization;
+            $.lookupOrganization = lookupOrganization;
             return this;
-        }        public GetFolderArgs build() {
-            return new GetFolderArgs(folder, lookupOrganization);
+        }
+
+        public GetFolderArgs build() {
+            $.folder = Objects.requireNonNull($.folder, "expected parameter 'folder' to be non-null");
+            return $;
         }
     }
+
 }

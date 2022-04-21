@@ -5,10 +5,10 @@ package com.pulumi.aws.pinpoint;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,7 +21,7 @@ public final class SmsChannelArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="applicationId", required=true)
-      private final Output<String> applicationId;
+    private Output<String> applicationId;
 
     public Output<String> applicationId() {
         return this.applicationId;
@@ -32,10 +32,10 @@ public final class SmsChannelArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="enabled")
-      private final @Nullable Output<Boolean> enabled;
+    private @Nullable Output<Boolean> enabled;
 
-    public Output<Boolean> enabled() {
-        return this.enabled == null ? Codegen.empty() : this.enabled;
+    public Optional<Output<Boolean>> enabled() {
+        return Optional.ofNullable(this.enabled);
     }
 
     /**
@@ -43,10 +43,10 @@ public final class SmsChannelArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="senderId")
-      private final @Nullable Output<String> senderId;
+    private @Nullable Output<String> senderId;
 
-    public Output<String> senderId() {
-        return this.senderId == null ? Codegen.empty() : this.senderId;
+    public Optional<Output<String>> senderId() {
+        return Optional.ofNullable(this.senderId);
     }
 
     /**
@@ -54,89 +54,79 @@ public final class SmsChannelArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="shortCode")
-      private final @Nullable Output<String> shortCode;
+    private @Nullable Output<String> shortCode;
 
-    public Output<String> shortCode() {
-        return this.shortCode == null ? Codegen.empty() : this.shortCode;
+    public Optional<Output<String>> shortCode() {
+        return Optional.ofNullable(this.shortCode);
     }
 
-    public SmsChannelArgs(
-        Output<String> applicationId,
-        @Nullable Output<Boolean> enabled,
-        @Nullable Output<String> senderId,
-        @Nullable Output<String> shortCode) {
-        this.applicationId = Objects.requireNonNull(applicationId, "expected parameter 'applicationId' to be non-null");
-        this.enabled = enabled;
-        this.senderId = senderId;
-        this.shortCode = shortCode;
-    }
+    private SmsChannelArgs() {}
 
-    private SmsChannelArgs() {
-        this.applicationId = Codegen.empty();
-        this.enabled = Codegen.empty();
-        this.senderId = Codegen.empty();
-        this.shortCode = Codegen.empty();
+    private SmsChannelArgs(SmsChannelArgs $) {
+        this.applicationId = $.applicationId;
+        this.enabled = $.enabled;
+        this.senderId = $.senderId;
+        this.shortCode = $.shortCode;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SmsChannelArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> applicationId;
-        private @Nullable Output<Boolean> enabled;
-        private @Nullable Output<String> senderId;
-        private @Nullable Output<String> shortCode;
+        private SmsChannelArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SmsChannelArgs();
         }
 
         public Builder(SmsChannelArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.applicationId = defaults.applicationId;
-    	      this.enabled = defaults.enabled;
-    	      this.senderId = defaults.senderId;
-    	      this.shortCode = defaults.shortCode;
+            $ = new SmsChannelArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder applicationId(Output<String> applicationId) {
-            this.applicationId = Objects.requireNonNull(applicationId);
+            $.applicationId = applicationId;
             return this;
         }
+
         public Builder applicationId(String applicationId) {
-            this.applicationId = Output.of(Objects.requireNonNull(applicationId));
-            return this;
+            return applicationId(Output.of(applicationId));
         }
+
         public Builder enabled(@Nullable Output<Boolean> enabled) {
-            this.enabled = enabled;
+            $.enabled = enabled;
             return this;
         }
-        public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Codegen.ofNullable(enabled);
-            return this;
+
+        public Builder enabled(Boolean enabled) {
+            return enabled(Output.of(enabled));
         }
+
         public Builder senderId(@Nullable Output<String> senderId) {
-            this.senderId = senderId;
+            $.senderId = senderId;
             return this;
         }
-        public Builder senderId(@Nullable String senderId) {
-            this.senderId = Codegen.ofNullable(senderId);
-            return this;
+
+        public Builder senderId(String senderId) {
+            return senderId(Output.of(senderId));
         }
+
         public Builder shortCode(@Nullable Output<String> shortCode) {
-            this.shortCode = shortCode;
+            $.shortCode = shortCode;
             return this;
         }
-        public Builder shortCode(@Nullable String shortCode) {
-            this.shortCode = Codegen.ofNullable(shortCode);
-            return this;
-        }        public SmsChannelArgs build() {
-            return new SmsChannelArgs(applicationId, enabled, senderId, shortCode);
+
+        public Builder shortCode(String shortCode) {
+            return shortCode(Output.of(shortCode));
+        }
+
+        public SmsChannelArgs build() {
+            $.applicationId = Objects.requireNonNull($.applicationId, "expected parameter 'applicationId' to be non-null");
+            return $;
         }
     }
+
 }

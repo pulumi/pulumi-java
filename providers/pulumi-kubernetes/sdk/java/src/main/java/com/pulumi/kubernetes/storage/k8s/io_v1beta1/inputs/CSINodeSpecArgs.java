@@ -5,7 +5,6 @@ package com.pulumi.kubernetes.storage.k8s.io_v1beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.kubernetes.storage.k8s.io_v1beta1.inputs.CSINodeDriverArgs;
 import java.util.List;
 import java.util.Objects;
@@ -24,52 +23,53 @@ public final class CSINodeSpecArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="drivers", required=true)
-      private final Output<List<CSINodeDriverArgs>> drivers;
+    private Output<List<CSINodeDriverArgs>> drivers;
 
     public Output<List<CSINodeDriverArgs>> drivers() {
         return this.drivers;
     }
 
-    public CSINodeSpecArgs(Output<List<CSINodeDriverArgs>> drivers) {
-        this.drivers = Objects.requireNonNull(drivers, "expected parameter 'drivers' to be non-null");
-    }
+    private CSINodeSpecArgs() {}
 
-    private CSINodeSpecArgs() {
-        this.drivers = Codegen.empty();
+    private CSINodeSpecArgs(CSINodeSpecArgs $) {
+        this.drivers = $.drivers;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CSINodeSpecArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<List<CSINodeDriverArgs>> drivers;
+        private CSINodeSpecArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CSINodeSpecArgs();
         }
 
         public Builder(CSINodeSpecArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.drivers = defaults.drivers;
+            $ = new CSINodeSpecArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder drivers(Output<List<CSINodeDriverArgs>> drivers) {
-            this.drivers = Objects.requireNonNull(drivers);
+            $.drivers = drivers;
             return this;
         }
+
         public Builder drivers(List<CSINodeDriverArgs> drivers) {
-            this.drivers = Output.of(Objects.requireNonNull(drivers));
-            return this;
+            return drivers(Output.of(drivers));
         }
+
         public Builder drivers(CSINodeDriverArgs... drivers) {
             return drivers(List.of(drivers));
-        }        public CSINodeSpecArgs build() {
-            return new CSINodeSpecArgs(drivers);
+        }
+
+        public CSINodeSpecArgs build() {
+            $.drivers = Objects.requireNonNull($.drivers, "expected parameter 'drivers' to be non-null");
+            return $;
         }
     }
+
 }

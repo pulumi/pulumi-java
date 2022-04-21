@@ -5,9 +5,9 @@ package com.pulumi.kubernetes.core_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class ObjectReferenceArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="apiVersion")
-      private final @Nullable Output<String> apiVersion;
+    private @Nullable Output<String> apiVersion;
 
-    public Output<String> apiVersion() {
-        return this.apiVersion == null ? Codegen.empty() : this.apiVersion;
+    public Optional<Output<String>> apiVersion() {
+        return Optional.ofNullable(this.apiVersion);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class ObjectReferenceArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="fieldPath")
-      private final @Nullable Output<String> fieldPath;
+    private @Nullable Output<String> fieldPath;
 
-    public Output<String> fieldPath() {
-        return this.fieldPath == null ? Codegen.empty() : this.fieldPath;
+    public Optional<Output<String>> fieldPath() {
+        return Optional.ofNullable(this.fieldPath);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class ObjectReferenceArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="kind")
-      private final @Nullable Output<String> kind;
+    private @Nullable Output<String> kind;
 
-    public Output<String> kind() {
-        return this.kind == null ? Codegen.empty() : this.kind;
+    public Optional<Output<String>> kind() {
+        return Optional.ofNullable(this.kind);
     }
 
     /**
@@ -57,10 +57,10 @@ public final class ObjectReferenceArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -68,10 +68,10 @@ public final class ObjectReferenceArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="namespace")
-      private final @Nullable Output<String> namespace;
+    private @Nullable Output<String> namespace;
 
-    public Output<String> namespace() {
-        return this.namespace == null ? Codegen.empty() : this.namespace;
+    public Optional<Output<String>> namespace() {
+        return Optional.ofNullable(this.namespace);
     }
 
     /**
@@ -79,10 +79,10 @@ public final class ObjectReferenceArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="resourceVersion")
-      private final @Nullable Output<String> resourceVersion;
+    private @Nullable Output<String> resourceVersion;
 
-    public Output<String> resourceVersion() {
-        return this.resourceVersion == null ? Codegen.empty() : this.resourceVersion;
+    public Optional<Output<String>> resourceVersion() {
+        return Optional.ofNullable(this.resourceVersion);
     }
 
     /**
@@ -90,128 +90,108 @@ public final class ObjectReferenceArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="uid")
-      private final @Nullable Output<String> uid;
+    private @Nullable Output<String> uid;
 
-    public Output<String> uid() {
-        return this.uid == null ? Codegen.empty() : this.uid;
+    public Optional<Output<String>> uid() {
+        return Optional.ofNullable(this.uid);
     }
 
-    public ObjectReferenceArgs(
-        @Nullable Output<String> apiVersion,
-        @Nullable Output<String> fieldPath,
-        @Nullable Output<String> kind,
-        @Nullable Output<String> name,
-        @Nullable Output<String> namespace,
-        @Nullable Output<String> resourceVersion,
-        @Nullable Output<String> uid) {
-        this.apiVersion = apiVersion;
-        this.fieldPath = fieldPath;
-        this.kind = kind;
-        this.name = name;
-        this.namespace = namespace;
-        this.resourceVersion = resourceVersion;
-        this.uid = uid;
-    }
+    private ObjectReferenceArgs() {}
 
-    private ObjectReferenceArgs() {
-        this.apiVersion = Codegen.empty();
-        this.fieldPath = Codegen.empty();
-        this.kind = Codegen.empty();
-        this.name = Codegen.empty();
-        this.namespace = Codegen.empty();
-        this.resourceVersion = Codegen.empty();
-        this.uid = Codegen.empty();
+    private ObjectReferenceArgs(ObjectReferenceArgs $) {
+        this.apiVersion = $.apiVersion;
+        this.fieldPath = $.fieldPath;
+        this.kind = $.kind;
+        this.name = $.name;
+        this.namespace = $.namespace;
+        this.resourceVersion = $.resourceVersion;
+        this.uid = $.uid;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ObjectReferenceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> apiVersion;
-        private @Nullable Output<String> fieldPath;
-        private @Nullable Output<String> kind;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> namespace;
-        private @Nullable Output<String> resourceVersion;
-        private @Nullable Output<String> uid;
+        private ObjectReferenceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ObjectReferenceArgs();
         }
 
         public Builder(ObjectReferenceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.apiVersion = defaults.apiVersion;
-    	      this.fieldPath = defaults.fieldPath;
-    	      this.kind = defaults.kind;
-    	      this.name = defaults.name;
-    	      this.namespace = defaults.namespace;
-    	      this.resourceVersion = defaults.resourceVersion;
-    	      this.uid = defaults.uid;
+            $ = new ObjectReferenceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder apiVersion(@Nullable Output<String> apiVersion) {
-            this.apiVersion = apiVersion;
+            $.apiVersion = apiVersion;
             return this;
         }
-        public Builder apiVersion(@Nullable String apiVersion) {
-            this.apiVersion = Codegen.ofNullable(apiVersion);
-            return this;
+
+        public Builder apiVersion(String apiVersion) {
+            return apiVersion(Output.of(apiVersion));
         }
+
         public Builder fieldPath(@Nullable Output<String> fieldPath) {
-            this.fieldPath = fieldPath;
+            $.fieldPath = fieldPath;
             return this;
         }
-        public Builder fieldPath(@Nullable String fieldPath) {
-            this.fieldPath = Codegen.ofNullable(fieldPath);
-            return this;
+
+        public Builder fieldPath(String fieldPath) {
+            return fieldPath(Output.of(fieldPath));
         }
+
         public Builder kind(@Nullable Output<String> kind) {
-            this.kind = kind;
+            $.kind = kind;
             return this;
         }
-        public Builder kind(@Nullable String kind) {
-            this.kind = Codegen.ofNullable(kind);
-            return this;
+
+        public Builder kind(String kind) {
+            return kind(Output.of(kind));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder namespace(@Nullable Output<String> namespace) {
-            this.namespace = namespace;
+            $.namespace = namespace;
             return this;
         }
-        public Builder namespace(@Nullable String namespace) {
-            this.namespace = Codegen.ofNullable(namespace);
-            return this;
+
+        public Builder namespace(String namespace) {
+            return namespace(Output.of(namespace));
         }
+
         public Builder resourceVersion(@Nullable Output<String> resourceVersion) {
-            this.resourceVersion = resourceVersion;
+            $.resourceVersion = resourceVersion;
             return this;
         }
-        public Builder resourceVersion(@Nullable String resourceVersion) {
-            this.resourceVersion = Codegen.ofNullable(resourceVersion);
-            return this;
+
+        public Builder resourceVersion(String resourceVersion) {
+            return resourceVersion(Output.of(resourceVersion));
         }
+
         public Builder uid(@Nullable Output<String> uid) {
-            this.uid = uid;
+            $.uid = uid;
             return this;
         }
-        public Builder uid(@Nullable String uid) {
-            this.uid = Codegen.ofNullable(uid);
-            return this;
-        }        public ObjectReferenceArgs build() {
-            return new ObjectReferenceArgs(apiVersion, fieldPath, kind, name, namespace, resourceVersion, uid);
+
+        public Builder uid(String uid) {
+            return uid(Output.of(uid));
+        }
+
+        public ObjectReferenceArgs build() {
+            return $;
         }
     }
+
 }

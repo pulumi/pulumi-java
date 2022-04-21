@@ -7,8 +7,8 @@ import com.pulumi.awsnative.quicksight.inputs.TemplateSourceAnalysisArgs;
 import com.pulumi.awsnative.quicksight.inputs.TemplateSourceTemplateArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,70 +21,65 @@ public final class TemplateSourceEntityArgs extends com.pulumi.resources.Resourc
     public static final TemplateSourceEntityArgs Empty = new TemplateSourceEntityArgs();
 
     @Import(name="sourceAnalysis")
-      private final @Nullable Output<TemplateSourceAnalysisArgs> sourceAnalysis;
+    private @Nullable Output<TemplateSourceAnalysisArgs> sourceAnalysis;
 
-    public Output<TemplateSourceAnalysisArgs> sourceAnalysis() {
-        return this.sourceAnalysis == null ? Codegen.empty() : this.sourceAnalysis;
+    public Optional<Output<TemplateSourceAnalysisArgs>> sourceAnalysis() {
+        return Optional.ofNullable(this.sourceAnalysis);
     }
 
     @Import(name="sourceTemplate")
-      private final @Nullable Output<TemplateSourceTemplateArgs> sourceTemplate;
+    private @Nullable Output<TemplateSourceTemplateArgs> sourceTemplate;
 
-    public Output<TemplateSourceTemplateArgs> sourceTemplate() {
-        return this.sourceTemplate == null ? Codegen.empty() : this.sourceTemplate;
+    public Optional<Output<TemplateSourceTemplateArgs>> sourceTemplate() {
+        return Optional.ofNullable(this.sourceTemplate);
     }
 
-    public TemplateSourceEntityArgs(
-        @Nullable Output<TemplateSourceAnalysisArgs> sourceAnalysis,
-        @Nullable Output<TemplateSourceTemplateArgs> sourceTemplate) {
-        this.sourceAnalysis = sourceAnalysis;
-        this.sourceTemplate = sourceTemplate;
-    }
+    private TemplateSourceEntityArgs() {}
 
-    private TemplateSourceEntityArgs() {
-        this.sourceAnalysis = Codegen.empty();
-        this.sourceTemplate = Codegen.empty();
+    private TemplateSourceEntityArgs(TemplateSourceEntityArgs $) {
+        this.sourceAnalysis = $.sourceAnalysis;
+        this.sourceTemplate = $.sourceTemplate;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TemplateSourceEntityArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<TemplateSourceAnalysisArgs> sourceAnalysis;
-        private @Nullable Output<TemplateSourceTemplateArgs> sourceTemplate;
+        private TemplateSourceEntityArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TemplateSourceEntityArgs();
         }
 
         public Builder(TemplateSourceEntityArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.sourceAnalysis = defaults.sourceAnalysis;
-    	      this.sourceTemplate = defaults.sourceTemplate;
+            $ = new TemplateSourceEntityArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder sourceAnalysis(@Nullable Output<TemplateSourceAnalysisArgs> sourceAnalysis) {
-            this.sourceAnalysis = sourceAnalysis;
+            $.sourceAnalysis = sourceAnalysis;
             return this;
         }
-        public Builder sourceAnalysis(@Nullable TemplateSourceAnalysisArgs sourceAnalysis) {
-            this.sourceAnalysis = Codegen.ofNullable(sourceAnalysis);
-            return this;
+
+        public Builder sourceAnalysis(TemplateSourceAnalysisArgs sourceAnalysis) {
+            return sourceAnalysis(Output.of(sourceAnalysis));
         }
+
         public Builder sourceTemplate(@Nullable Output<TemplateSourceTemplateArgs> sourceTemplate) {
-            this.sourceTemplate = sourceTemplate;
+            $.sourceTemplate = sourceTemplate;
             return this;
         }
-        public Builder sourceTemplate(@Nullable TemplateSourceTemplateArgs sourceTemplate) {
-            this.sourceTemplate = Codegen.ofNullable(sourceTemplate);
-            return this;
-        }        public TemplateSourceEntityArgs build() {
-            return new TemplateSourceEntityArgs(sourceAnalysis, sourceTemplate);
+
+        public Builder sourceTemplate(TemplateSourceTemplateArgs sourceTemplate) {
+            return sourceTemplate(Output.of(sourceTemplate));
+        }
+
+        public TemplateSourceEntityArgs build() {
+            return $;
         }
     }
+
 }

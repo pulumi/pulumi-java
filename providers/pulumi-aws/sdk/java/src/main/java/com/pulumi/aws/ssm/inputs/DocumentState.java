@@ -7,11 +7,11 @@ import com.pulumi.aws.ssm.inputs.DocumentAttachmentsSourceGetArgs;
 import com.pulumi.aws.ssm.inputs.DocumentParameterGetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class DocumentState extends com.pulumi.resources.ResourceArgs {
     public static final DocumentState Empty = new DocumentState();
 
     @Import(name="arn")
-      private final @Nullable Output<String> arn;
+    private @Nullable Output<String> arn;
 
-    public Output<String> arn() {
-        return this.arn == null ? Codegen.empty() : this.arn;
+    public Optional<Output<String>> arn() {
+        return Optional.ofNullable(this.arn);
     }
 
     /**
@@ -31,10 +31,10 @@ public final class DocumentState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="attachmentsSources")
-      private final @Nullable Output<List<DocumentAttachmentsSourceGetArgs>> attachmentsSources;
+    private @Nullable Output<List<DocumentAttachmentsSourceGetArgs>> attachmentsSources;
 
-    public Output<List<DocumentAttachmentsSourceGetArgs>> attachmentsSources() {
-        return this.attachmentsSources == null ? Codegen.empty() : this.attachmentsSources;
+    public Optional<Output<List<DocumentAttachmentsSourceGetArgs>>> attachmentsSources() {
+        return Optional.ofNullable(this.attachmentsSources);
     }
 
     /**
@@ -42,10 +42,10 @@ public final class DocumentState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="content")
-      private final @Nullable Output<String> content;
+    private @Nullable Output<String> content;
 
-    public Output<String> content() {
-        return this.content == null ? Codegen.empty() : this.content;
+    public Optional<Output<String>> content() {
+        return Optional.ofNullable(this.content);
     }
 
     /**
@@ -53,10 +53,10 @@ public final class DocumentState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="createdDate")
-      private final @Nullable Output<String> createdDate;
+    private @Nullable Output<String> createdDate;
 
-    public Output<String> createdDate() {
-        return this.createdDate == null ? Codegen.empty() : this.createdDate;
+    public Optional<Output<String>> createdDate() {
+        return Optional.ofNullable(this.createdDate);
     }
 
     /**
@@ -64,10 +64,10 @@ public final class DocumentState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="defaultVersion")
-      private final @Nullable Output<String> defaultVersion;
+    private @Nullable Output<String> defaultVersion;
 
-    public Output<String> defaultVersion() {
-        return this.defaultVersion == null ? Codegen.empty() : this.defaultVersion;
+    public Optional<Output<String>> defaultVersion() {
+        return Optional.ofNullable(this.defaultVersion);
     }
 
     /**
@@ -75,10 +75,10 @@ public final class DocumentState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -86,10 +86,10 @@ public final class DocumentState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="documentFormat")
-      private final @Nullable Output<String> documentFormat;
+    private @Nullable Output<String> documentFormat;
 
-    public Output<String> documentFormat() {
-        return this.documentFormat == null ? Codegen.empty() : this.documentFormat;
+    public Optional<Output<String>> documentFormat() {
+        return Optional.ofNullable(this.documentFormat);
     }
 
     /**
@@ -97,10 +97,10 @@ public final class DocumentState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="documentType")
-      private final @Nullable Output<String> documentType;
+    private @Nullable Output<String> documentType;
 
-    public Output<String> documentType() {
-        return this.documentType == null ? Codegen.empty() : this.documentType;
+    public Optional<Output<String>> documentType() {
+        return Optional.ofNullable(this.documentType);
     }
 
     /**
@@ -108,10 +108,10 @@ public final class DocumentState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="documentVersion")
-      private final @Nullable Output<String> documentVersion;
+    private @Nullable Output<String> documentVersion;
 
-    public Output<String> documentVersion() {
-        return this.documentVersion == null ? Codegen.empty() : this.documentVersion;
+    public Optional<Output<String>> documentVersion() {
+        return Optional.ofNullable(this.documentVersion);
     }
 
     /**
@@ -119,10 +119,10 @@ public final class DocumentState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="hash")
-      private final @Nullable Output<String> hash;
+    private @Nullable Output<String> hash;
 
-    public Output<String> hash() {
-        return this.hash == null ? Codegen.empty() : this.hash;
+    public Optional<Output<String>> hash() {
+        return Optional.ofNullable(this.hash);
     }
 
     /**
@@ -130,10 +130,10 @@ public final class DocumentState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="hashType")
-      private final @Nullable Output<String> hashType;
+    private @Nullable Output<String> hashType;
 
-    public Output<String> hashType() {
-        return this.hashType == null ? Codegen.empty() : this.hashType;
+    public Optional<Output<String>> hashType() {
+        return Optional.ofNullable(this.hashType);
     }
 
     /**
@@ -141,10 +141,10 @@ public final class DocumentState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="latestVersion")
-      private final @Nullable Output<String> latestVersion;
+    private @Nullable Output<String> latestVersion;
 
-    public Output<String> latestVersion() {
-        return this.latestVersion == null ? Codegen.empty() : this.latestVersion;
+    public Optional<Output<String>> latestVersion() {
+        return Optional.ofNullable(this.latestVersion);
     }
 
     /**
@@ -152,10 +152,10 @@ public final class DocumentState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -163,10 +163,10 @@ public final class DocumentState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="owner")
-      private final @Nullable Output<String> owner;
+    private @Nullable Output<String> owner;
 
-    public Output<String> owner() {
-        return this.owner == null ? Codegen.empty() : this.owner;
+    public Optional<Output<String>> owner() {
+        return Optional.ofNullable(this.owner);
     }
 
     /**
@@ -174,10 +174,10 @@ public final class DocumentState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="parameters")
-      private final @Nullable Output<List<DocumentParameterGetArgs>> parameters;
+    private @Nullable Output<List<DocumentParameterGetArgs>> parameters;
 
-    public Output<List<DocumentParameterGetArgs>> parameters() {
-        return this.parameters == null ? Codegen.empty() : this.parameters;
+    public Optional<Output<List<DocumentParameterGetArgs>>> parameters() {
+        return Optional.ofNullable(this.parameters);
     }
 
     /**
@@ -185,10 +185,10 @@ public final class DocumentState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="permissions")
-      private final @Nullable Output<Map<String,String>> permissions;
+    private @Nullable Output<Map<String,String>> permissions;
 
-    public Output<Map<String,String>> permissions() {
-        return this.permissions == null ? Codegen.empty() : this.permissions;
+    public Optional<Output<Map<String,String>>> permissions() {
+        return Optional.ofNullable(this.permissions);
     }
 
     /**
@@ -196,10 +196,10 @@ public final class DocumentState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="platformTypes")
-      private final @Nullable Output<List<String>> platformTypes;
+    private @Nullable Output<List<String>> platformTypes;
 
-    public Output<List<String>> platformTypes() {
-        return this.platformTypes == null ? Codegen.empty() : this.platformTypes;
+    public Optional<Output<List<String>>> platformTypes() {
+        return Optional.ofNullable(this.platformTypes);
     }
 
     /**
@@ -207,10 +207,10 @@ public final class DocumentState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="schemaVersion")
-      private final @Nullable Output<String> schemaVersion;
+    private @Nullable Output<String> schemaVersion;
 
-    public Output<String> schemaVersion() {
-        return this.schemaVersion == null ? Codegen.empty() : this.schemaVersion;
+    public Optional<Output<String>> schemaVersion() {
+        return Optional.ofNullable(this.schemaVersion);
     }
 
     /**
@@ -218,10 +218,10 @@ public final class DocumentState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="status")
-      private final @Nullable Output<String> status;
+    private @Nullable Output<String> status;
 
-    public Output<String> status() {
-        return this.status == null ? Codegen.empty() : this.status;
+    public Optional<Output<String>> status() {
+        return Optional.ofNullable(this.status);
     }
 
     /**
@@ -229,10 +229,10 @@ public final class DocumentState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -240,10 +240,10 @@ public final class DocumentState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tagsAll")
-      private final @Nullable Output<Map<String,String>> tagsAll;
+    private @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> tagsAll() {
-        return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
+    public Optional<Output<Map<String,String>>> tagsAll() {
+        return Optional.ofNullable(this.tagsAll);
     }
 
     /**
@@ -251,10 +251,10 @@ public final class DocumentState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="targetType")
-      private final @Nullable Output<String> targetType;
+    private @Nullable Output<String> targetType;
 
-    public Output<String> targetType() {
-        return this.targetType == null ? Codegen.empty() : this.targetType;
+    public Optional<Output<String>> targetType() {
+        return Optional.ofNullable(this.targetType);
     }
 
     /**
@@ -262,345 +262,280 @@ public final class DocumentState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="versionName")
-      private final @Nullable Output<String> versionName;
+    private @Nullable Output<String> versionName;
 
-    public Output<String> versionName() {
-        return this.versionName == null ? Codegen.empty() : this.versionName;
+    public Optional<Output<String>> versionName() {
+        return Optional.ofNullable(this.versionName);
     }
 
-    public DocumentState(
-        @Nullable Output<String> arn,
-        @Nullable Output<List<DocumentAttachmentsSourceGetArgs>> attachmentsSources,
-        @Nullable Output<String> content,
-        @Nullable Output<String> createdDate,
-        @Nullable Output<String> defaultVersion,
-        @Nullable Output<String> description,
-        @Nullable Output<String> documentFormat,
-        @Nullable Output<String> documentType,
-        @Nullable Output<String> documentVersion,
-        @Nullable Output<String> hash,
-        @Nullable Output<String> hashType,
-        @Nullable Output<String> latestVersion,
-        @Nullable Output<String> name,
-        @Nullable Output<String> owner,
-        @Nullable Output<List<DocumentParameterGetArgs>> parameters,
-        @Nullable Output<Map<String,String>> permissions,
-        @Nullable Output<List<String>> platformTypes,
-        @Nullable Output<String> schemaVersion,
-        @Nullable Output<String> status,
-        @Nullable Output<Map<String,String>> tags,
-        @Nullable Output<Map<String,String>> tagsAll,
-        @Nullable Output<String> targetType,
-        @Nullable Output<String> versionName) {
-        this.arn = arn;
-        this.attachmentsSources = attachmentsSources;
-        this.content = content;
-        this.createdDate = createdDate;
-        this.defaultVersion = defaultVersion;
-        this.description = description;
-        this.documentFormat = documentFormat;
-        this.documentType = documentType;
-        this.documentVersion = documentVersion;
-        this.hash = hash;
-        this.hashType = hashType;
-        this.latestVersion = latestVersion;
-        this.name = name;
-        this.owner = owner;
-        this.parameters = parameters;
-        this.permissions = permissions;
-        this.platformTypes = platformTypes;
-        this.schemaVersion = schemaVersion;
-        this.status = status;
-        this.tags = tags;
-        this.tagsAll = tagsAll;
-        this.targetType = targetType;
-        this.versionName = versionName;
-    }
+    private DocumentState() {}
 
-    private DocumentState() {
-        this.arn = Codegen.empty();
-        this.attachmentsSources = Codegen.empty();
-        this.content = Codegen.empty();
-        this.createdDate = Codegen.empty();
-        this.defaultVersion = Codegen.empty();
-        this.description = Codegen.empty();
-        this.documentFormat = Codegen.empty();
-        this.documentType = Codegen.empty();
-        this.documentVersion = Codegen.empty();
-        this.hash = Codegen.empty();
-        this.hashType = Codegen.empty();
-        this.latestVersion = Codegen.empty();
-        this.name = Codegen.empty();
-        this.owner = Codegen.empty();
-        this.parameters = Codegen.empty();
-        this.permissions = Codegen.empty();
-        this.platformTypes = Codegen.empty();
-        this.schemaVersion = Codegen.empty();
-        this.status = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.tagsAll = Codegen.empty();
-        this.targetType = Codegen.empty();
-        this.versionName = Codegen.empty();
+    private DocumentState(DocumentState $) {
+        this.arn = $.arn;
+        this.attachmentsSources = $.attachmentsSources;
+        this.content = $.content;
+        this.createdDate = $.createdDate;
+        this.defaultVersion = $.defaultVersion;
+        this.description = $.description;
+        this.documentFormat = $.documentFormat;
+        this.documentType = $.documentType;
+        this.documentVersion = $.documentVersion;
+        this.hash = $.hash;
+        this.hashType = $.hashType;
+        this.latestVersion = $.latestVersion;
+        this.name = $.name;
+        this.owner = $.owner;
+        this.parameters = $.parameters;
+        this.permissions = $.permissions;
+        this.platformTypes = $.platformTypes;
+        this.schemaVersion = $.schemaVersion;
+        this.status = $.status;
+        this.tags = $.tags;
+        this.tagsAll = $.tagsAll;
+        this.targetType = $.targetType;
+        this.versionName = $.versionName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DocumentState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> arn;
-        private @Nullable Output<List<DocumentAttachmentsSourceGetArgs>> attachmentsSources;
-        private @Nullable Output<String> content;
-        private @Nullable Output<String> createdDate;
-        private @Nullable Output<String> defaultVersion;
-        private @Nullable Output<String> description;
-        private @Nullable Output<String> documentFormat;
-        private @Nullable Output<String> documentType;
-        private @Nullable Output<String> documentVersion;
-        private @Nullable Output<String> hash;
-        private @Nullable Output<String> hashType;
-        private @Nullable Output<String> latestVersion;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> owner;
-        private @Nullable Output<List<DocumentParameterGetArgs>> parameters;
-        private @Nullable Output<Map<String,String>> permissions;
-        private @Nullable Output<List<String>> platformTypes;
-        private @Nullable Output<String> schemaVersion;
-        private @Nullable Output<String> status;
-        private @Nullable Output<Map<String,String>> tags;
-        private @Nullable Output<Map<String,String>> tagsAll;
-        private @Nullable Output<String> targetType;
-        private @Nullable Output<String> versionName;
+        private DocumentState $;
 
         public Builder() {
-    	      // Empty
+            $ = new DocumentState();
         }
 
         public Builder(DocumentState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.arn = defaults.arn;
-    	      this.attachmentsSources = defaults.attachmentsSources;
-    	      this.content = defaults.content;
-    	      this.createdDate = defaults.createdDate;
-    	      this.defaultVersion = defaults.defaultVersion;
-    	      this.description = defaults.description;
-    	      this.documentFormat = defaults.documentFormat;
-    	      this.documentType = defaults.documentType;
-    	      this.documentVersion = defaults.documentVersion;
-    	      this.hash = defaults.hash;
-    	      this.hashType = defaults.hashType;
-    	      this.latestVersion = defaults.latestVersion;
-    	      this.name = defaults.name;
-    	      this.owner = defaults.owner;
-    	      this.parameters = defaults.parameters;
-    	      this.permissions = defaults.permissions;
-    	      this.platformTypes = defaults.platformTypes;
-    	      this.schemaVersion = defaults.schemaVersion;
-    	      this.status = defaults.status;
-    	      this.tags = defaults.tags;
-    	      this.tagsAll = defaults.tagsAll;
-    	      this.targetType = defaults.targetType;
-    	      this.versionName = defaults.versionName;
+            $ = new DocumentState(Objects.requireNonNull(defaults));
         }
 
         public Builder arn(@Nullable Output<String> arn) {
-            this.arn = arn;
+            $.arn = arn;
             return this;
         }
-        public Builder arn(@Nullable String arn) {
-            this.arn = Codegen.ofNullable(arn);
-            return this;
+
+        public Builder arn(String arn) {
+            return arn(Output.of(arn));
         }
+
         public Builder attachmentsSources(@Nullable Output<List<DocumentAttachmentsSourceGetArgs>> attachmentsSources) {
-            this.attachmentsSources = attachmentsSources;
+            $.attachmentsSources = attachmentsSources;
             return this;
         }
-        public Builder attachmentsSources(@Nullable List<DocumentAttachmentsSourceGetArgs> attachmentsSources) {
-            this.attachmentsSources = Codegen.ofNullable(attachmentsSources);
-            return this;
+
+        public Builder attachmentsSources(List<DocumentAttachmentsSourceGetArgs> attachmentsSources) {
+            return attachmentsSources(Output.of(attachmentsSources));
         }
+
         public Builder attachmentsSources(DocumentAttachmentsSourceGetArgs... attachmentsSources) {
             return attachmentsSources(List.of(attachmentsSources));
         }
+
         public Builder content(@Nullable Output<String> content) {
-            this.content = content;
+            $.content = content;
             return this;
         }
-        public Builder content(@Nullable String content) {
-            this.content = Codegen.ofNullable(content);
-            return this;
+
+        public Builder content(String content) {
+            return content(Output.of(content));
         }
+
         public Builder createdDate(@Nullable Output<String> createdDate) {
-            this.createdDate = createdDate;
+            $.createdDate = createdDate;
             return this;
         }
-        public Builder createdDate(@Nullable String createdDate) {
-            this.createdDate = Codegen.ofNullable(createdDate);
-            return this;
+
+        public Builder createdDate(String createdDate) {
+            return createdDate(Output.of(createdDate));
         }
+
         public Builder defaultVersion(@Nullable Output<String> defaultVersion) {
-            this.defaultVersion = defaultVersion;
+            $.defaultVersion = defaultVersion;
             return this;
         }
-        public Builder defaultVersion(@Nullable String defaultVersion) {
-            this.defaultVersion = Codegen.ofNullable(defaultVersion);
-            return this;
+
+        public Builder defaultVersion(String defaultVersion) {
+            return defaultVersion(Output.of(defaultVersion));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder documentFormat(@Nullable Output<String> documentFormat) {
-            this.documentFormat = documentFormat;
+            $.documentFormat = documentFormat;
             return this;
         }
-        public Builder documentFormat(@Nullable String documentFormat) {
-            this.documentFormat = Codegen.ofNullable(documentFormat);
-            return this;
+
+        public Builder documentFormat(String documentFormat) {
+            return documentFormat(Output.of(documentFormat));
         }
+
         public Builder documentType(@Nullable Output<String> documentType) {
-            this.documentType = documentType;
+            $.documentType = documentType;
             return this;
         }
-        public Builder documentType(@Nullable String documentType) {
-            this.documentType = Codegen.ofNullable(documentType);
-            return this;
+
+        public Builder documentType(String documentType) {
+            return documentType(Output.of(documentType));
         }
+
         public Builder documentVersion(@Nullable Output<String> documentVersion) {
-            this.documentVersion = documentVersion;
+            $.documentVersion = documentVersion;
             return this;
         }
-        public Builder documentVersion(@Nullable String documentVersion) {
-            this.documentVersion = Codegen.ofNullable(documentVersion);
-            return this;
+
+        public Builder documentVersion(String documentVersion) {
+            return documentVersion(Output.of(documentVersion));
         }
+
         public Builder hash(@Nullable Output<String> hash) {
-            this.hash = hash;
+            $.hash = hash;
             return this;
         }
-        public Builder hash(@Nullable String hash) {
-            this.hash = Codegen.ofNullable(hash);
-            return this;
+
+        public Builder hash(String hash) {
+            return hash(Output.of(hash));
         }
+
         public Builder hashType(@Nullable Output<String> hashType) {
-            this.hashType = hashType;
+            $.hashType = hashType;
             return this;
         }
-        public Builder hashType(@Nullable String hashType) {
-            this.hashType = Codegen.ofNullable(hashType);
-            return this;
+
+        public Builder hashType(String hashType) {
+            return hashType(Output.of(hashType));
         }
+
         public Builder latestVersion(@Nullable Output<String> latestVersion) {
-            this.latestVersion = latestVersion;
+            $.latestVersion = latestVersion;
             return this;
         }
-        public Builder latestVersion(@Nullable String latestVersion) {
-            this.latestVersion = Codegen.ofNullable(latestVersion);
-            return this;
+
+        public Builder latestVersion(String latestVersion) {
+            return latestVersion(Output.of(latestVersion));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder owner(@Nullable Output<String> owner) {
-            this.owner = owner;
+            $.owner = owner;
             return this;
         }
-        public Builder owner(@Nullable String owner) {
-            this.owner = Codegen.ofNullable(owner);
-            return this;
+
+        public Builder owner(String owner) {
+            return owner(Output.of(owner));
         }
+
         public Builder parameters(@Nullable Output<List<DocumentParameterGetArgs>> parameters) {
-            this.parameters = parameters;
+            $.parameters = parameters;
             return this;
         }
-        public Builder parameters(@Nullable List<DocumentParameterGetArgs> parameters) {
-            this.parameters = Codegen.ofNullable(parameters);
-            return this;
+
+        public Builder parameters(List<DocumentParameterGetArgs> parameters) {
+            return parameters(Output.of(parameters));
         }
+
         public Builder parameters(DocumentParameterGetArgs... parameters) {
             return parameters(List.of(parameters));
         }
+
         public Builder permissions(@Nullable Output<Map<String,String>> permissions) {
-            this.permissions = permissions;
+            $.permissions = permissions;
             return this;
         }
-        public Builder permissions(@Nullable Map<String,String> permissions) {
-            this.permissions = Codegen.ofNullable(permissions);
-            return this;
+
+        public Builder permissions(Map<String,String> permissions) {
+            return permissions(Output.of(permissions));
         }
+
         public Builder platformTypes(@Nullable Output<List<String>> platformTypes) {
-            this.platformTypes = platformTypes;
+            $.platformTypes = platformTypes;
             return this;
         }
-        public Builder platformTypes(@Nullable List<String> platformTypes) {
-            this.platformTypes = Codegen.ofNullable(platformTypes);
-            return this;
+
+        public Builder platformTypes(List<String> platformTypes) {
+            return platformTypes(Output.of(platformTypes));
         }
+
         public Builder platformTypes(String... platformTypes) {
             return platformTypes(List.of(platformTypes));
         }
+
         public Builder schemaVersion(@Nullable Output<String> schemaVersion) {
-            this.schemaVersion = schemaVersion;
+            $.schemaVersion = schemaVersion;
             return this;
         }
-        public Builder schemaVersion(@Nullable String schemaVersion) {
-            this.schemaVersion = Codegen.ofNullable(schemaVersion);
-            return this;
+
+        public Builder schemaVersion(String schemaVersion) {
+            return schemaVersion(Output.of(schemaVersion));
         }
+
         public Builder status(@Nullable Output<String> status) {
-            this.status = status;
+            $.status = status;
             return this;
         }
-        public Builder status(@Nullable String status) {
-            this.status = Codegen.ofNullable(status);
-            return this;
+
+        public Builder status(String status) {
+            return status(Output.of(status));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
-            this.tagsAll = tagsAll;
+            $.tagsAll = tagsAll;
             return this;
         }
-        public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Codegen.ofNullable(tagsAll);
-            return this;
+
+        public Builder tagsAll(Map<String,String> tagsAll) {
+            return tagsAll(Output.of(tagsAll));
         }
+
         public Builder targetType(@Nullable Output<String> targetType) {
-            this.targetType = targetType;
+            $.targetType = targetType;
             return this;
         }
-        public Builder targetType(@Nullable String targetType) {
-            this.targetType = Codegen.ofNullable(targetType);
-            return this;
+
+        public Builder targetType(String targetType) {
+            return targetType(Output.of(targetType));
         }
+
         public Builder versionName(@Nullable Output<String> versionName) {
-            this.versionName = versionName;
+            $.versionName = versionName;
             return this;
         }
-        public Builder versionName(@Nullable String versionName) {
-            this.versionName = Codegen.ofNullable(versionName);
-            return this;
-        }        public DocumentState build() {
-            return new DocumentState(arn, attachmentsSources, content, createdDate, defaultVersion, description, documentFormat, documentType, documentVersion, hash, hashType, latestVersion, name, owner, parameters, permissions, platformTypes, schemaVersion, status, tags, tagsAll, targetType, versionName);
+
+        public Builder versionName(String versionName) {
+            return versionName(Output.of(versionName));
+        }
+
+        public DocumentState build() {
+            return $;
         }
     }
+
 }

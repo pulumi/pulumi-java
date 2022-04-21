@@ -17,81 +17,75 @@ public final class ConfigurationAggregatorOrganizationAggregationSource extends 
     public static final ConfigurationAggregatorOrganizationAggregationSource Empty = new ConfigurationAggregatorOrganizationAggregationSource();
 
     @Import(name="allAwsRegions")
-      private final @Nullable Boolean allAwsRegions;
+    private @Nullable Boolean allAwsRegions;
 
     public Optional<Boolean> allAwsRegions() {
-        return this.allAwsRegions == null ? Optional.empty() : Optional.ofNullable(this.allAwsRegions);
+        return Optional.ofNullable(this.allAwsRegions);
     }
 
     @Import(name="awsRegions")
-      private final @Nullable List<String> awsRegions;
+    private @Nullable List<String> awsRegions;
 
-    public List<String> awsRegions() {
-        return this.awsRegions == null ? List.of() : this.awsRegions;
+    public Optional<List<String>> awsRegions() {
+        return Optional.ofNullable(this.awsRegions);
     }
 
     @Import(name="roleArn", required=true)
-      private final String roleArn;
+    private String roleArn;
 
     public String roleArn() {
         return this.roleArn;
     }
 
-    public ConfigurationAggregatorOrganizationAggregationSource(
-        @Nullable Boolean allAwsRegions,
-        @Nullable List<String> awsRegions,
-        String roleArn) {
-        this.allAwsRegions = allAwsRegions;
-        this.awsRegions = awsRegions;
-        this.roleArn = Objects.requireNonNull(roleArn, "expected parameter 'roleArn' to be non-null");
-    }
+    private ConfigurationAggregatorOrganizationAggregationSource() {}
 
-    private ConfigurationAggregatorOrganizationAggregationSource() {
-        this.allAwsRegions = null;
-        this.awsRegions = List.of();
-        this.roleArn = null;
+    private ConfigurationAggregatorOrganizationAggregationSource(ConfigurationAggregatorOrganizationAggregationSource $) {
+        this.allAwsRegions = $.allAwsRegions;
+        this.awsRegions = $.awsRegions;
+        this.roleArn = $.roleArn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ConfigurationAggregatorOrganizationAggregationSource defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Boolean allAwsRegions;
-        private @Nullable List<String> awsRegions;
-        private String roleArn;
+        private ConfigurationAggregatorOrganizationAggregationSource $;
 
         public Builder() {
-    	      // Empty
+            $ = new ConfigurationAggregatorOrganizationAggregationSource();
         }
 
         public Builder(ConfigurationAggregatorOrganizationAggregationSource defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.allAwsRegions = defaults.allAwsRegions;
-    	      this.awsRegions = defaults.awsRegions;
-    	      this.roleArn = defaults.roleArn;
+            $ = new ConfigurationAggregatorOrganizationAggregationSource(Objects.requireNonNull(defaults));
         }
 
         public Builder allAwsRegions(@Nullable Boolean allAwsRegions) {
-            this.allAwsRegions = allAwsRegions;
+            $.allAwsRegions = allAwsRegions;
             return this;
         }
+
         public Builder awsRegions(@Nullable List<String> awsRegions) {
-            this.awsRegions = awsRegions;
+            $.awsRegions = awsRegions;
             return this;
         }
+
         public Builder awsRegions(String... awsRegions) {
             return awsRegions(List.of(awsRegions));
         }
+
         public Builder roleArn(String roleArn) {
-            this.roleArn = Objects.requireNonNull(roleArn);
+            $.roleArn = roleArn;
             return this;
-        }        public ConfigurationAggregatorOrganizationAggregationSource build() {
-            return new ConfigurationAggregatorOrganizationAggregationSource(allAwsRegions, awsRegions, roleArn);
+        }
+
+        public ConfigurationAggregatorOrganizationAggregationSource build() {
+            $.roleArn = Objects.requireNonNull($.roleArn, "expected parameter 'roleArn' to be non-null");
+            return $;
         }
     }
+
 }

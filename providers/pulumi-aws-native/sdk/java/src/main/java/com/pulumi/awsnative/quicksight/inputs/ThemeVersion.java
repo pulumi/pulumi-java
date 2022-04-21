@@ -28,10 +28,10 @@ public final class ThemeVersion extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="arn")
-      private final @Nullable String arn;
+    private @Nullable String arn;
 
     public Optional<String> arn() {
-        return this.arn == null ? Optional.empty() : Optional.ofNullable(this.arn);
+        return Optional.ofNullable(this.arn);
     }
 
     /**
@@ -40,17 +40,17 @@ public final class ThemeVersion extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="baseThemeId")
-      private final @Nullable String baseThemeId;
+    private @Nullable String baseThemeId;
 
     public Optional<String> baseThemeId() {
-        return this.baseThemeId == null ? Optional.empty() : Optional.ofNullable(this.baseThemeId);
+        return Optional.ofNullable(this.baseThemeId);
     }
 
     @Import(name="configuration")
-      private final @Nullable ThemeConfiguration configuration;
+    private @Nullable ThemeConfiguration configuration;
 
     public Optional<ThemeConfiguration> configuration() {
-        return this.configuration == null ? Optional.empty() : Optional.ofNullable(this.configuration);
+        return Optional.ofNullable(this.configuration);
     }
 
     /**
@@ -58,10 +58,10 @@ public final class ThemeVersion extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="createdTime")
-      private final @Nullable String createdTime;
+    private @Nullable String createdTime;
 
     public Optional<String> createdTime() {
-        return this.createdTime == null ? Optional.empty() : Optional.ofNullable(this.createdTime);
+        return Optional.ofNullable(this.createdTime);
     }
 
     /**
@@ -69,10 +69,10 @@ public final class ThemeVersion extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable String description;
+    private @Nullable String description;
 
     public Optional<String> description() {
-        return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -80,17 +80,17 @@ public final class ThemeVersion extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="errors")
-      private final @Nullable List<ThemeError> errors;
+    private @Nullable List<ThemeError> errors;
 
-    public List<ThemeError> errors() {
-        return this.errors == null ? List.of() : this.errors;
+    public Optional<List<ThemeError>> errors() {
+        return Optional.ofNullable(this.errors);
     }
 
     @Import(name="status")
-      private final @Nullable ThemeResourceStatus status;
+    private @Nullable ThemeResourceStatus status;
 
     public Optional<ThemeResourceStatus> status() {
-        return this.status == null ? Optional.empty() : Optional.ofNullable(this.status);
+        return Optional.ofNullable(this.status);
     }
 
     /**
@@ -98,112 +98,90 @@ public final class ThemeVersion extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="versionNumber")
-      private final @Nullable Double versionNumber;
+    private @Nullable Double versionNumber;
 
     public Optional<Double> versionNumber() {
-        return this.versionNumber == null ? Optional.empty() : Optional.ofNullable(this.versionNumber);
+        return Optional.ofNullable(this.versionNumber);
     }
 
-    public ThemeVersion(
-        @Nullable String arn,
-        @Nullable String baseThemeId,
-        @Nullable ThemeConfiguration configuration,
-        @Nullable String createdTime,
-        @Nullable String description,
-        @Nullable List<ThemeError> errors,
-        @Nullable ThemeResourceStatus status,
-        @Nullable Double versionNumber) {
-        this.arn = arn;
-        this.baseThemeId = baseThemeId;
-        this.configuration = configuration;
-        this.createdTime = createdTime;
-        this.description = description;
-        this.errors = errors;
-        this.status = status;
-        this.versionNumber = versionNumber;
-    }
+    private ThemeVersion() {}
 
-    private ThemeVersion() {
-        this.arn = null;
-        this.baseThemeId = null;
-        this.configuration = null;
-        this.createdTime = null;
-        this.description = null;
-        this.errors = List.of();
-        this.status = null;
-        this.versionNumber = null;
+    private ThemeVersion(ThemeVersion $) {
+        this.arn = $.arn;
+        this.baseThemeId = $.baseThemeId;
+        this.configuration = $.configuration;
+        this.createdTime = $.createdTime;
+        this.description = $.description;
+        this.errors = $.errors;
+        this.status = $.status;
+        this.versionNumber = $.versionNumber;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ThemeVersion defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String arn;
-        private @Nullable String baseThemeId;
-        private @Nullable ThemeConfiguration configuration;
-        private @Nullable String createdTime;
-        private @Nullable String description;
-        private @Nullable List<ThemeError> errors;
-        private @Nullable ThemeResourceStatus status;
-        private @Nullable Double versionNumber;
+        private ThemeVersion $;
 
         public Builder() {
-    	      // Empty
+            $ = new ThemeVersion();
         }
 
         public Builder(ThemeVersion defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.arn = defaults.arn;
-    	      this.baseThemeId = defaults.baseThemeId;
-    	      this.configuration = defaults.configuration;
-    	      this.createdTime = defaults.createdTime;
-    	      this.description = defaults.description;
-    	      this.errors = defaults.errors;
-    	      this.status = defaults.status;
-    	      this.versionNumber = defaults.versionNumber;
+            $ = new ThemeVersion(Objects.requireNonNull(defaults));
         }
 
         public Builder arn(@Nullable String arn) {
-            this.arn = arn;
+            $.arn = arn;
             return this;
         }
+
         public Builder baseThemeId(@Nullable String baseThemeId) {
-            this.baseThemeId = baseThemeId;
+            $.baseThemeId = baseThemeId;
             return this;
         }
+
         public Builder configuration(@Nullable ThemeConfiguration configuration) {
-            this.configuration = configuration;
+            $.configuration = configuration;
             return this;
         }
+
         public Builder createdTime(@Nullable String createdTime) {
-            this.createdTime = createdTime;
+            $.createdTime = createdTime;
             return this;
         }
+
         public Builder description(@Nullable String description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
+
         public Builder errors(@Nullable List<ThemeError> errors) {
-            this.errors = errors;
+            $.errors = errors;
             return this;
         }
+
         public Builder errors(ThemeError... errors) {
             return errors(List.of(errors));
         }
+
         public Builder status(@Nullable ThemeResourceStatus status) {
-            this.status = status;
+            $.status = status;
             return this;
         }
+
         public Builder versionNumber(@Nullable Double versionNumber) {
-            this.versionNumber = versionNumber;
+            $.versionNumber = versionNumber;
             return this;
-        }        public ThemeVersion build() {
-            return new ThemeVersion(arn, baseThemeId, configuration, createdTime, description, errors, status, versionNumber);
+        }
+
+        public ThemeVersion build() {
+            return $;
         }
     }
+
 }

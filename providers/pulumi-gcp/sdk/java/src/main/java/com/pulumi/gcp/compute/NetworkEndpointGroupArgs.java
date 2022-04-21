@@ -5,10 +5,10 @@ package com.pulumi.gcp.compute;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class NetworkEndpointGroupArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="defaultPort")
-      private final @Nullable Output<Integer> defaultPort;
+    private @Nullable Output<Integer> defaultPort;
 
-    public Output<Integer> defaultPort() {
-        return this.defaultPort == null ? Codegen.empty() : this.defaultPort;
+    public Optional<Output<Integer>> defaultPort() {
+        return Optional.ofNullable(this.defaultPort);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class NetworkEndpointGroupArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -51,10 +51,10 @@ public final class NetworkEndpointGroupArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -63,7 +63,7 @@ public final class NetworkEndpointGroupArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="network", required=true)
-      private final Output<String> network;
+    private Output<String> network;
 
     public Output<String> network() {
         return this.network;
@@ -76,10 +76,10 @@ public final class NetworkEndpointGroupArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="networkEndpointType")
-      private final @Nullable Output<String> networkEndpointType;
+    private @Nullable Output<String> networkEndpointType;
 
-    public Output<String> networkEndpointType() {
-        return this.networkEndpointType == null ? Codegen.empty() : this.networkEndpointType;
+    public Optional<Output<String>> networkEndpointType() {
+        return Optional.ofNullable(this.networkEndpointType);
     }
 
     /**
@@ -88,10 +88,10 @@ public final class NetworkEndpointGroupArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -99,10 +99,10 @@ public final class NetworkEndpointGroupArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="subnetwork")
-      private final @Nullable Output<String> subnetwork;
+    private @Nullable Output<String> subnetwork;
 
-    public Output<String> subnetwork() {
-        return this.subnetwork == null ? Codegen.empty() : this.subnetwork;
+    public Optional<Output<String>> subnetwork() {
+        return Optional.ofNullable(this.subnetwork);
     }
 
     /**
@@ -110,141 +110,119 @@ public final class NetworkEndpointGroupArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="zone")
-      private final @Nullable Output<String> zone;
+    private @Nullable Output<String> zone;
 
-    public Output<String> zone() {
-        return this.zone == null ? Codegen.empty() : this.zone;
+    public Optional<Output<String>> zone() {
+        return Optional.ofNullable(this.zone);
     }
 
-    public NetworkEndpointGroupArgs(
-        @Nullable Output<Integer> defaultPort,
-        @Nullable Output<String> description,
-        @Nullable Output<String> name,
-        Output<String> network,
-        @Nullable Output<String> networkEndpointType,
-        @Nullable Output<String> project,
-        @Nullable Output<String> subnetwork,
-        @Nullable Output<String> zone) {
-        this.defaultPort = defaultPort;
-        this.description = description;
-        this.name = name;
-        this.network = Objects.requireNonNull(network, "expected parameter 'network' to be non-null");
-        this.networkEndpointType = networkEndpointType;
-        this.project = project;
-        this.subnetwork = subnetwork;
-        this.zone = zone;
-    }
+    private NetworkEndpointGroupArgs() {}
 
-    private NetworkEndpointGroupArgs() {
-        this.defaultPort = Codegen.empty();
-        this.description = Codegen.empty();
-        this.name = Codegen.empty();
-        this.network = Codegen.empty();
-        this.networkEndpointType = Codegen.empty();
-        this.project = Codegen.empty();
-        this.subnetwork = Codegen.empty();
-        this.zone = Codegen.empty();
+    private NetworkEndpointGroupArgs(NetworkEndpointGroupArgs $) {
+        this.defaultPort = $.defaultPort;
+        this.description = $.description;
+        this.name = $.name;
+        this.network = $.network;
+        this.networkEndpointType = $.networkEndpointType;
+        this.project = $.project;
+        this.subnetwork = $.subnetwork;
+        this.zone = $.zone;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NetworkEndpointGroupArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> defaultPort;
-        private @Nullable Output<String> description;
-        private @Nullable Output<String> name;
-        private Output<String> network;
-        private @Nullable Output<String> networkEndpointType;
-        private @Nullable Output<String> project;
-        private @Nullable Output<String> subnetwork;
-        private @Nullable Output<String> zone;
+        private NetworkEndpointGroupArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new NetworkEndpointGroupArgs();
         }
 
         public Builder(NetworkEndpointGroupArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.defaultPort = defaults.defaultPort;
-    	      this.description = defaults.description;
-    	      this.name = defaults.name;
-    	      this.network = defaults.network;
-    	      this.networkEndpointType = defaults.networkEndpointType;
-    	      this.project = defaults.project;
-    	      this.subnetwork = defaults.subnetwork;
-    	      this.zone = defaults.zone;
+            $ = new NetworkEndpointGroupArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder defaultPort(@Nullable Output<Integer> defaultPort) {
-            this.defaultPort = defaultPort;
+            $.defaultPort = defaultPort;
             return this;
         }
-        public Builder defaultPort(@Nullable Integer defaultPort) {
-            this.defaultPort = Codegen.ofNullable(defaultPort);
-            return this;
+
+        public Builder defaultPort(Integer defaultPort) {
+            return defaultPort(Output.of(defaultPort));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder network(Output<String> network) {
-            this.network = Objects.requireNonNull(network);
+            $.network = network;
             return this;
         }
+
         public Builder network(String network) {
-            this.network = Output.of(Objects.requireNonNull(network));
-            return this;
+            return network(Output.of(network));
         }
+
         public Builder networkEndpointType(@Nullable Output<String> networkEndpointType) {
-            this.networkEndpointType = networkEndpointType;
+            $.networkEndpointType = networkEndpointType;
             return this;
         }
-        public Builder networkEndpointType(@Nullable String networkEndpointType) {
-            this.networkEndpointType = Codegen.ofNullable(networkEndpointType);
-            return this;
+
+        public Builder networkEndpointType(String networkEndpointType) {
+            return networkEndpointType(Output.of(networkEndpointType));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder subnetwork(@Nullable Output<String> subnetwork) {
-            this.subnetwork = subnetwork;
+            $.subnetwork = subnetwork;
             return this;
         }
-        public Builder subnetwork(@Nullable String subnetwork) {
-            this.subnetwork = Codegen.ofNullable(subnetwork);
-            return this;
+
+        public Builder subnetwork(String subnetwork) {
+            return subnetwork(Output.of(subnetwork));
         }
+
         public Builder zone(@Nullable Output<String> zone) {
-            this.zone = zone;
+            $.zone = zone;
             return this;
         }
-        public Builder zone(@Nullable String zone) {
-            this.zone = Codegen.ofNullable(zone);
-            return this;
-        }        public NetworkEndpointGroupArgs build() {
-            return new NetworkEndpointGroupArgs(defaultPort, description, name, network, networkEndpointType, project, subnetwork, zone);
+
+        public Builder zone(String zone) {
+            return zone(Output.of(zone));
+        }
+
+        public NetworkEndpointGroupArgs build() {
+            $.network = Objects.requireNonNull($.network, "expected parameter 'network' to be non-null");
+            return $;
         }
     }
+
 }

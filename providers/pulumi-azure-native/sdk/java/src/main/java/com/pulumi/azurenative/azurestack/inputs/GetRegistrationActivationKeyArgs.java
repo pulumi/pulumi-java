@@ -17,7 +17,7 @@ public final class GetRegistrationActivationKeyArgs extends com.pulumi.resources
      * 
      */
     @Import(name="registrationName", required=true)
-      private final String registrationName;
+    private String registrationName;
 
     public String registrationName() {
         return this.registrationName;
@@ -28,55 +28,52 @@ public final class GetRegistrationActivationKeyArgs extends com.pulumi.resources
      * 
      */
     @Import(name="resourceGroup", required=true)
-      private final String resourceGroup;
+    private String resourceGroup;
 
     public String resourceGroup() {
         return this.resourceGroup;
     }
 
-    public GetRegistrationActivationKeyArgs(
-        String registrationName,
-        String resourceGroup) {
-        this.registrationName = Objects.requireNonNull(registrationName, "expected parameter 'registrationName' to be non-null");
-        this.resourceGroup = Objects.requireNonNull(resourceGroup, "expected parameter 'resourceGroup' to be non-null");
-    }
+    private GetRegistrationActivationKeyArgs() {}
 
-    private GetRegistrationActivationKeyArgs() {
-        this.registrationName = null;
-        this.resourceGroup = null;
+    private GetRegistrationActivationKeyArgs(GetRegistrationActivationKeyArgs $) {
+        this.registrationName = $.registrationName;
+        this.resourceGroup = $.resourceGroup;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetRegistrationActivationKeyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String registrationName;
-        private String resourceGroup;
+        private GetRegistrationActivationKeyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetRegistrationActivationKeyArgs();
         }
 
         public Builder(GetRegistrationActivationKeyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.registrationName = defaults.registrationName;
-    	      this.resourceGroup = defaults.resourceGroup;
+            $ = new GetRegistrationActivationKeyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder registrationName(String registrationName) {
-            this.registrationName = Objects.requireNonNull(registrationName);
+            $.registrationName = registrationName;
             return this;
         }
+
         public Builder resourceGroup(String resourceGroup) {
-            this.resourceGroup = Objects.requireNonNull(resourceGroup);
+            $.resourceGroup = resourceGroup;
             return this;
-        }        public GetRegistrationActivationKeyArgs build() {
-            return new GetRegistrationActivationKeyArgs(registrationName, resourceGroup);
+        }
+
+        public GetRegistrationActivationKeyArgs build() {
+            $.registrationName = Objects.requireNonNull($.registrationName, "expected parameter 'registrationName' to be non-null");
+            $.resourceGroup = Objects.requireNonNull($.resourceGroup, "expected parameter 'resourceGroup' to be non-null");
+            return $;
         }
     }
+
 }

@@ -17,45 +17,45 @@ public final class GetCostCategoryArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="arn", required=true)
-      private final String arn;
+    private String arn;
 
     public String arn() {
         return this.arn;
     }
 
-    public GetCostCategoryArgs(String arn) {
-        this.arn = Objects.requireNonNull(arn, "expected parameter 'arn' to be non-null");
-    }
+    private GetCostCategoryArgs() {}
 
-    private GetCostCategoryArgs() {
-        this.arn = null;
+    private GetCostCategoryArgs(GetCostCategoryArgs $) {
+        this.arn = $.arn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetCostCategoryArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String arn;
+        private GetCostCategoryArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetCostCategoryArgs();
         }
 
         public Builder(GetCostCategoryArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.arn = defaults.arn;
+            $ = new GetCostCategoryArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder arn(String arn) {
-            this.arn = Objects.requireNonNull(arn);
+            $.arn = arn;
             return this;
-        }        public GetCostCategoryArgs build() {
-            return new GetCostCategoryArgs(arn);
+        }
+
+        public GetCostCategoryArgs build() {
+            $.arn = Objects.requireNonNull($.arn, "expected parameter 'arn' to be non-null");
+            return $;
         }
     }
+
 }

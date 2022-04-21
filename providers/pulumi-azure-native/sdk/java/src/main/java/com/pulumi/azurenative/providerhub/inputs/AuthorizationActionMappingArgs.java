@@ -5,9 +5,9 @@ package com.pulumi.azurenative.providerhub.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -16,70 +16,65 @@ public final class AuthorizationActionMappingArgs extends com.pulumi.resources.R
     public static final AuthorizationActionMappingArgs Empty = new AuthorizationActionMappingArgs();
 
     @Import(name="desired")
-      private final @Nullable Output<String> desired;
+    private @Nullable Output<String> desired;
 
-    public Output<String> desired() {
-        return this.desired == null ? Codegen.empty() : this.desired;
+    public Optional<Output<String>> desired() {
+        return Optional.ofNullable(this.desired);
     }
 
     @Import(name="original")
-      private final @Nullable Output<String> original;
+    private @Nullable Output<String> original;
 
-    public Output<String> original() {
-        return this.original == null ? Codegen.empty() : this.original;
+    public Optional<Output<String>> original() {
+        return Optional.ofNullable(this.original);
     }
 
-    public AuthorizationActionMappingArgs(
-        @Nullable Output<String> desired,
-        @Nullable Output<String> original) {
-        this.desired = desired;
-        this.original = original;
-    }
+    private AuthorizationActionMappingArgs() {}
 
-    private AuthorizationActionMappingArgs() {
-        this.desired = Codegen.empty();
-        this.original = Codegen.empty();
+    private AuthorizationActionMappingArgs(AuthorizationActionMappingArgs $) {
+        this.desired = $.desired;
+        this.original = $.original;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AuthorizationActionMappingArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> desired;
-        private @Nullable Output<String> original;
+        private AuthorizationActionMappingArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AuthorizationActionMappingArgs();
         }
 
         public Builder(AuthorizationActionMappingArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.desired = defaults.desired;
-    	      this.original = defaults.original;
+            $ = new AuthorizationActionMappingArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder desired(@Nullable Output<String> desired) {
-            this.desired = desired;
+            $.desired = desired;
             return this;
         }
-        public Builder desired(@Nullable String desired) {
-            this.desired = Codegen.ofNullable(desired);
-            return this;
+
+        public Builder desired(String desired) {
+            return desired(Output.of(desired));
         }
+
         public Builder original(@Nullable Output<String> original) {
-            this.original = original;
+            $.original = original;
             return this;
         }
-        public Builder original(@Nullable String original) {
-            this.original = Codegen.ofNullable(original);
-            return this;
-        }        public AuthorizationActionMappingArgs build() {
-            return new AuthorizationActionMappingArgs(desired, original);
+
+        public Builder original(String original) {
+            return original(Output.of(original));
+        }
+
+        public AuthorizationActionMappingArgs build() {
+            return $;
         }
     }
+
 }

@@ -5,7 +5,6 @@ package com.pulumi.aws.iot.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,49 +18,49 @@ public final class TopicRuleDynamodbv2PutItemGetArgs extends com.pulumi.resource
      * 
      */
     @Import(name="tableName", required=true)
-      private final Output<String> tableName;
+    private Output<String> tableName;
 
     public Output<String> tableName() {
         return this.tableName;
     }
 
-    public TopicRuleDynamodbv2PutItemGetArgs(Output<String> tableName) {
-        this.tableName = Objects.requireNonNull(tableName, "expected parameter 'tableName' to be non-null");
-    }
+    private TopicRuleDynamodbv2PutItemGetArgs() {}
 
-    private TopicRuleDynamodbv2PutItemGetArgs() {
-        this.tableName = Codegen.empty();
+    private TopicRuleDynamodbv2PutItemGetArgs(TopicRuleDynamodbv2PutItemGetArgs $) {
+        this.tableName = $.tableName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TopicRuleDynamodbv2PutItemGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> tableName;
+        private TopicRuleDynamodbv2PutItemGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TopicRuleDynamodbv2PutItemGetArgs();
         }
 
         public Builder(TopicRuleDynamodbv2PutItemGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.tableName = defaults.tableName;
+            $ = new TopicRuleDynamodbv2PutItemGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder tableName(Output<String> tableName) {
-            this.tableName = Objects.requireNonNull(tableName);
+            $.tableName = tableName;
             return this;
         }
+
         public Builder tableName(String tableName) {
-            this.tableName = Output.of(Objects.requireNonNull(tableName));
-            return this;
-        }        public TopicRuleDynamodbv2PutItemGetArgs build() {
-            return new TopicRuleDynamodbv2PutItemGetArgs(tableName);
+            return tableName(Output.of(tableName));
+        }
+
+        public TopicRuleDynamodbv2PutItemGetArgs build() {
+            $.tableName = Objects.requireNonNull($.tableName, "expected parameter 'tableName' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,9 +5,9 @@ package com.pulumi.awsnative.nimblestudio.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class StudioComponentLicenseServiceConfigurationArgs extends com.pu
      * 
      */
     @Import(name="endpoint")
-      private final @Nullable Output<String> endpoint;
+    private @Nullable Output<String> endpoint;
 
-    public Output<String> endpoint() {
-        return this.endpoint == null ? Codegen.empty() : this.endpoint;
+    public Optional<Output<String>> endpoint() {
+        return Optional.ofNullable(this.endpoint);
     }
 
-    public StudioComponentLicenseServiceConfigurationArgs(@Nullable Output<String> endpoint) {
-        this.endpoint = endpoint;
-    }
+    private StudioComponentLicenseServiceConfigurationArgs() {}
 
-    private StudioComponentLicenseServiceConfigurationArgs() {
-        this.endpoint = Codegen.empty();
+    private StudioComponentLicenseServiceConfigurationArgs(StudioComponentLicenseServiceConfigurationArgs $) {
+        this.endpoint = $.endpoint;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(StudioComponentLicenseServiceConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> endpoint;
+        private StudioComponentLicenseServiceConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new StudioComponentLicenseServiceConfigurationArgs();
         }
 
         public Builder(StudioComponentLicenseServiceConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.endpoint = defaults.endpoint;
+            $ = new StudioComponentLicenseServiceConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder endpoint(@Nullable Output<String> endpoint) {
-            this.endpoint = endpoint;
+            $.endpoint = endpoint;
             return this;
         }
-        public Builder endpoint(@Nullable String endpoint) {
-            this.endpoint = Codegen.ofNullable(endpoint);
-            return this;
-        }        public StudioComponentLicenseServiceConfigurationArgs build() {
-            return new StudioComponentLicenseServiceConfigurationArgs(endpoint);
+
+        public Builder endpoint(String endpoint) {
+            return endpoint(Output.of(endpoint));
+        }
+
+        public StudioComponentLicenseServiceConfigurationArgs build() {
+            return $;
         }
     }
+
 }

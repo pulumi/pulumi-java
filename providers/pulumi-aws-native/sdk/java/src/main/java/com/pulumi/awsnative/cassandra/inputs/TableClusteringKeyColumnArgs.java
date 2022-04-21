@@ -7,8 +7,8 @@ import com.pulumi.awsnative.cassandra.enums.TableClusteringKeyColumnOrderBy;
 import com.pulumi.awsnative.cassandra.inputs.TableColumnArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -17,70 +17,66 @@ public final class TableClusteringKeyColumnArgs extends com.pulumi.resources.Res
     public static final TableClusteringKeyColumnArgs Empty = new TableClusteringKeyColumnArgs();
 
     @Import(name="column", required=true)
-      private final Output<TableColumnArgs> column;
+    private Output<TableColumnArgs> column;
 
     public Output<TableColumnArgs> column() {
         return this.column;
     }
 
     @Import(name="orderBy")
-      private final @Nullable Output<TableClusteringKeyColumnOrderBy> orderBy;
+    private @Nullable Output<TableClusteringKeyColumnOrderBy> orderBy;
 
-    public Output<TableClusteringKeyColumnOrderBy> orderBy() {
-        return this.orderBy == null ? Codegen.empty() : this.orderBy;
+    public Optional<Output<TableClusteringKeyColumnOrderBy>> orderBy() {
+        return Optional.ofNullable(this.orderBy);
     }
 
-    public TableClusteringKeyColumnArgs(
-        Output<TableColumnArgs> column,
-        @Nullable Output<TableClusteringKeyColumnOrderBy> orderBy) {
-        this.column = Objects.requireNonNull(column, "expected parameter 'column' to be non-null");
-        this.orderBy = orderBy;
-    }
+    private TableClusteringKeyColumnArgs() {}
 
-    private TableClusteringKeyColumnArgs() {
-        this.column = Codegen.empty();
-        this.orderBy = Codegen.empty();
+    private TableClusteringKeyColumnArgs(TableClusteringKeyColumnArgs $) {
+        this.column = $.column;
+        this.orderBy = $.orderBy;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TableClusteringKeyColumnArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<TableColumnArgs> column;
-        private @Nullable Output<TableClusteringKeyColumnOrderBy> orderBy;
+        private TableClusteringKeyColumnArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TableClusteringKeyColumnArgs();
         }
 
         public Builder(TableClusteringKeyColumnArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.column = defaults.column;
-    	      this.orderBy = defaults.orderBy;
+            $ = new TableClusteringKeyColumnArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder column(Output<TableColumnArgs> column) {
-            this.column = Objects.requireNonNull(column);
+            $.column = column;
             return this;
         }
+
         public Builder column(TableColumnArgs column) {
-            this.column = Output.of(Objects.requireNonNull(column));
-            return this;
+            return column(Output.of(column));
         }
+
         public Builder orderBy(@Nullable Output<TableClusteringKeyColumnOrderBy> orderBy) {
-            this.orderBy = orderBy;
+            $.orderBy = orderBy;
             return this;
         }
-        public Builder orderBy(@Nullable TableClusteringKeyColumnOrderBy orderBy) {
-            this.orderBy = Codegen.ofNullable(orderBy);
-            return this;
-        }        public TableClusteringKeyColumnArgs build() {
-            return new TableClusteringKeyColumnArgs(column, orderBy);
+
+        public Builder orderBy(TableClusteringKeyColumnOrderBy orderBy) {
+            return orderBy(Output.of(orderBy));
+        }
+
+        public TableClusteringKeyColumnArgs build() {
+            $.column = Objects.requireNonNull($.column, "expected parameter 'column' to be non-null");
+            return $;
         }
     }
+
 }

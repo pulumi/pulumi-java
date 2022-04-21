@@ -5,7 +5,6 @@ package com.pulumi.awsnative.cloudfront.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -15,49 +14,49 @@ public final class CloudFrontOriginAccessIdentityConfigArgs extends com.pulumi.r
     public static final CloudFrontOriginAccessIdentityConfigArgs Empty = new CloudFrontOriginAccessIdentityConfigArgs();
 
     @Import(name="comment", required=true)
-      private final Output<String> comment;
+    private Output<String> comment;
 
     public Output<String> comment() {
         return this.comment;
     }
 
-    public CloudFrontOriginAccessIdentityConfigArgs(Output<String> comment) {
-        this.comment = Objects.requireNonNull(comment, "expected parameter 'comment' to be non-null");
-    }
+    private CloudFrontOriginAccessIdentityConfigArgs() {}
 
-    private CloudFrontOriginAccessIdentityConfigArgs() {
-        this.comment = Codegen.empty();
+    private CloudFrontOriginAccessIdentityConfigArgs(CloudFrontOriginAccessIdentityConfigArgs $) {
+        this.comment = $.comment;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CloudFrontOriginAccessIdentityConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> comment;
+        private CloudFrontOriginAccessIdentityConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CloudFrontOriginAccessIdentityConfigArgs();
         }
 
         public Builder(CloudFrontOriginAccessIdentityConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.comment = defaults.comment;
+            $ = new CloudFrontOriginAccessIdentityConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder comment(Output<String> comment) {
-            this.comment = Objects.requireNonNull(comment);
+            $.comment = comment;
             return this;
         }
+
         public Builder comment(String comment) {
-            this.comment = Output.of(Objects.requireNonNull(comment));
-            return this;
-        }        public CloudFrontOriginAccessIdentityConfigArgs build() {
-            return new CloudFrontOriginAccessIdentityConfigArgs(comment);
+            return comment(Output.of(comment));
+        }
+
+        public CloudFrontOriginAccessIdentityConfigArgs build() {
+            $.comment = Objects.requireNonNull($.comment, "expected parameter 'comment' to be non-null");
+            return $;
         }
     }
+
 }

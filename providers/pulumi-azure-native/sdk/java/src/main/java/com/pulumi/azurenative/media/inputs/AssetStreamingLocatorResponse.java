@@ -21,7 +21,7 @@ public final class AssetStreamingLocatorResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="assetName", required=true)
-      private final String assetName;
+    private String assetName;
 
     public String assetName() {
         return this.assetName;
@@ -32,7 +32,7 @@ public final class AssetStreamingLocatorResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="created", required=true)
-      private final String created;
+    private String created;
 
     public String created() {
         return this.created;
@@ -43,7 +43,7 @@ public final class AssetStreamingLocatorResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="defaultContentKeyPolicyName", required=true)
-      private final String defaultContentKeyPolicyName;
+    private String defaultContentKeyPolicyName;
 
     public String defaultContentKeyPolicyName() {
         return this.defaultContentKeyPolicyName;
@@ -54,7 +54,7 @@ public final class AssetStreamingLocatorResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="endTime", required=true)
-      private final String endTime;
+    private String endTime;
 
     public String endTime() {
         return this.endTime;
@@ -65,7 +65,7 @@ public final class AssetStreamingLocatorResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -76,7 +76,7 @@ public final class AssetStreamingLocatorResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="startTime", required=true)
-      private final String startTime;
+    private String startTime;
 
     public String startTime() {
         return this.startTime;
@@ -87,7 +87,7 @@ public final class AssetStreamingLocatorResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="streamingLocatorId", required=true)
-      private final String streamingLocatorId;
+    private String streamingLocatorId;
 
     public String streamingLocatorId() {
         return this.streamingLocatorId;
@@ -98,109 +98,94 @@ public final class AssetStreamingLocatorResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="streamingPolicyName", required=true)
-      private final String streamingPolicyName;
+    private String streamingPolicyName;
 
     public String streamingPolicyName() {
         return this.streamingPolicyName;
     }
 
-    public AssetStreamingLocatorResponse(
-        String assetName,
-        String created,
-        String defaultContentKeyPolicyName,
-        String endTime,
-        String name,
-        String startTime,
-        String streamingLocatorId,
-        String streamingPolicyName) {
-        this.assetName = Objects.requireNonNull(assetName, "expected parameter 'assetName' to be non-null");
-        this.created = Objects.requireNonNull(created, "expected parameter 'created' to be non-null");
-        this.defaultContentKeyPolicyName = Objects.requireNonNull(defaultContentKeyPolicyName, "expected parameter 'defaultContentKeyPolicyName' to be non-null");
-        this.endTime = Objects.requireNonNull(endTime, "expected parameter 'endTime' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.startTime = Objects.requireNonNull(startTime, "expected parameter 'startTime' to be non-null");
-        this.streamingLocatorId = Objects.requireNonNull(streamingLocatorId, "expected parameter 'streamingLocatorId' to be non-null");
-        this.streamingPolicyName = Objects.requireNonNull(streamingPolicyName, "expected parameter 'streamingPolicyName' to be non-null");
-    }
+    private AssetStreamingLocatorResponse() {}
 
-    private AssetStreamingLocatorResponse() {
-        this.assetName = null;
-        this.created = null;
-        this.defaultContentKeyPolicyName = null;
-        this.endTime = null;
-        this.name = null;
-        this.startTime = null;
-        this.streamingLocatorId = null;
-        this.streamingPolicyName = null;
+    private AssetStreamingLocatorResponse(AssetStreamingLocatorResponse $) {
+        this.assetName = $.assetName;
+        this.created = $.created;
+        this.defaultContentKeyPolicyName = $.defaultContentKeyPolicyName;
+        this.endTime = $.endTime;
+        this.name = $.name;
+        this.startTime = $.startTime;
+        this.streamingLocatorId = $.streamingLocatorId;
+        this.streamingPolicyName = $.streamingPolicyName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AssetStreamingLocatorResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String assetName;
-        private String created;
-        private String defaultContentKeyPolicyName;
-        private String endTime;
-        private String name;
-        private String startTime;
-        private String streamingLocatorId;
-        private String streamingPolicyName;
+        private AssetStreamingLocatorResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AssetStreamingLocatorResponse();
         }
 
         public Builder(AssetStreamingLocatorResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.assetName = defaults.assetName;
-    	      this.created = defaults.created;
-    	      this.defaultContentKeyPolicyName = defaults.defaultContentKeyPolicyName;
-    	      this.endTime = defaults.endTime;
-    	      this.name = defaults.name;
-    	      this.startTime = defaults.startTime;
-    	      this.streamingLocatorId = defaults.streamingLocatorId;
-    	      this.streamingPolicyName = defaults.streamingPolicyName;
+            $ = new AssetStreamingLocatorResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder assetName(String assetName) {
-            this.assetName = Objects.requireNonNull(assetName);
+            $.assetName = assetName;
             return this;
         }
+
         public Builder created(String created) {
-            this.created = Objects.requireNonNull(created);
+            $.created = created;
             return this;
         }
+
         public Builder defaultContentKeyPolicyName(String defaultContentKeyPolicyName) {
-            this.defaultContentKeyPolicyName = Objects.requireNonNull(defaultContentKeyPolicyName);
+            $.defaultContentKeyPolicyName = defaultContentKeyPolicyName;
             return this;
         }
+
         public Builder endTime(String endTime) {
-            this.endTime = Objects.requireNonNull(endTime);
+            $.endTime = endTime;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder startTime(String startTime) {
-            this.startTime = Objects.requireNonNull(startTime);
+            $.startTime = startTime;
             return this;
         }
+
         public Builder streamingLocatorId(String streamingLocatorId) {
-            this.streamingLocatorId = Objects.requireNonNull(streamingLocatorId);
+            $.streamingLocatorId = streamingLocatorId;
             return this;
         }
+
         public Builder streamingPolicyName(String streamingPolicyName) {
-            this.streamingPolicyName = Objects.requireNonNull(streamingPolicyName);
+            $.streamingPolicyName = streamingPolicyName;
             return this;
-        }        public AssetStreamingLocatorResponse build() {
-            return new AssetStreamingLocatorResponse(assetName, created, defaultContentKeyPolicyName, endTime, name, startTime, streamingLocatorId, streamingPolicyName);
+        }
+
+        public AssetStreamingLocatorResponse build() {
+            $.assetName = Objects.requireNonNull($.assetName, "expected parameter 'assetName' to be non-null");
+            $.created = Objects.requireNonNull($.created, "expected parameter 'created' to be non-null");
+            $.defaultContentKeyPolicyName = Objects.requireNonNull($.defaultContentKeyPolicyName, "expected parameter 'defaultContentKeyPolicyName' to be non-null");
+            $.endTime = Objects.requireNonNull($.endTime, "expected parameter 'endTime' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.startTime = Objects.requireNonNull($.startTime, "expected parameter 'startTime' to be non-null");
+            $.streamingLocatorId = Objects.requireNonNull($.streamingLocatorId, "expected parameter 'streamingLocatorId' to be non-null");
+            $.streamingPolicyName = Objects.requireNonNull($.streamingPolicyName, "expected parameter 'streamingPolicyName' to be non-null");
+            return $;
         }
     }
+
 }

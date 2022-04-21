@@ -15,45 +15,44 @@ public final class DomainSnapshotOptions extends com.pulumi.resources.InvokeArgs
     public static final DomainSnapshotOptions Empty = new DomainSnapshotOptions();
 
     @Import(name="automatedSnapshotStartHour")
-      private final @Nullable Integer automatedSnapshotStartHour;
+    private @Nullable Integer automatedSnapshotStartHour;
 
     public Optional<Integer> automatedSnapshotStartHour() {
-        return this.automatedSnapshotStartHour == null ? Optional.empty() : Optional.ofNullable(this.automatedSnapshotStartHour);
+        return Optional.ofNullable(this.automatedSnapshotStartHour);
     }
 
-    public DomainSnapshotOptions(@Nullable Integer automatedSnapshotStartHour) {
-        this.automatedSnapshotStartHour = automatedSnapshotStartHour;
-    }
+    private DomainSnapshotOptions() {}
 
-    private DomainSnapshotOptions() {
-        this.automatedSnapshotStartHour = null;
+    private DomainSnapshotOptions(DomainSnapshotOptions $) {
+        this.automatedSnapshotStartHour = $.automatedSnapshotStartHour;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DomainSnapshotOptions defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Integer automatedSnapshotStartHour;
+        private DomainSnapshotOptions $;
 
         public Builder() {
-    	      // Empty
+            $ = new DomainSnapshotOptions();
         }
 
         public Builder(DomainSnapshotOptions defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.automatedSnapshotStartHour = defaults.automatedSnapshotStartHour;
+            $ = new DomainSnapshotOptions(Objects.requireNonNull(defaults));
         }
 
         public Builder automatedSnapshotStartHour(@Nullable Integer automatedSnapshotStartHour) {
-            this.automatedSnapshotStartHour = automatedSnapshotStartHour;
+            $.automatedSnapshotStartHour = automatedSnapshotStartHour;
             return this;
-        }        public DomainSnapshotOptions build() {
-            return new DomainSnapshotOptions(automatedSnapshotStartHour);
+        }
+
+        public DomainSnapshotOptions build() {
+            return $;
         }
     }
+
 }

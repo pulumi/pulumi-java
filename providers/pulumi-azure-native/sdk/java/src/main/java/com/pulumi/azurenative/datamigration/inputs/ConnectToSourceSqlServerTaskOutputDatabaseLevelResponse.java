@@ -25,7 +25,7 @@ public final class ConnectToSourceSqlServerTaskOutputDatabaseLevelResponse exten
      * 
      */
     @Import(name="compatibilityLevel", required=true)
-      private final String compatibilityLevel;
+    private String compatibilityLevel;
 
     public String compatibilityLevel() {
         return this.compatibilityLevel;
@@ -36,7 +36,7 @@ public final class ConnectToSourceSqlServerTaskOutputDatabaseLevelResponse exten
      * 
      */
     @Import(name="databaseFiles", required=true)
-      private final List<DatabaseFileInfoResponse> databaseFiles;
+    private List<DatabaseFileInfoResponse> databaseFiles;
 
     public List<DatabaseFileInfoResponse> databaseFiles() {
         return this.databaseFiles;
@@ -47,7 +47,7 @@ public final class ConnectToSourceSqlServerTaskOutputDatabaseLevelResponse exten
      * 
      */
     @Import(name="databaseState", required=true)
-      private final String databaseState;
+    private String databaseState;
 
     public String databaseState() {
         return this.databaseState;
@@ -58,7 +58,7 @@ public final class ConnectToSourceSqlServerTaskOutputDatabaseLevelResponse exten
      * 
      */
     @Import(name="id", required=true)
-      private final String id;
+    private String id;
 
     public String id() {
         return this.id;
@@ -69,7 +69,7 @@ public final class ConnectToSourceSqlServerTaskOutputDatabaseLevelResponse exten
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -81,7 +81,7 @@ public final class ConnectToSourceSqlServerTaskOutputDatabaseLevelResponse exten
      * 
      */
     @Import(name="resultType", required=true)
-      private final String resultType;
+    private String resultType;
 
     public String resultType() {
         return this.resultType;
@@ -92,103 +92,91 @@ public final class ConnectToSourceSqlServerTaskOutputDatabaseLevelResponse exten
      * 
      */
     @Import(name="sizeMB", required=true)
-      private final Double sizeMB;
+    private Double sizeMB;
 
     public Double sizeMB() {
         return this.sizeMB;
     }
 
-    public ConnectToSourceSqlServerTaskOutputDatabaseLevelResponse(
-        String compatibilityLevel,
-        List<DatabaseFileInfoResponse> databaseFiles,
-        String databaseState,
-        String id,
-        String name,
-        String resultType,
-        Double sizeMB) {
-        this.compatibilityLevel = Objects.requireNonNull(compatibilityLevel, "expected parameter 'compatibilityLevel' to be non-null");
-        this.databaseFiles = Objects.requireNonNull(databaseFiles, "expected parameter 'databaseFiles' to be non-null");
-        this.databaseState = Objects.requireNonNull(databaseState, "expected parameter 'databaseState' to be non-null");
-        this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.resultType = Codegen.stringProp("resultType").arg(resultType).require();
-        this.sizeMB = Objects.requireNonNull(sizeMB, "expected parameter 'sizeMB' to be non-null");
-    }
+    private ConnectToSourceSqlServerTaskOutputDatabaseLevelResponse() {}
 
-    private ConnectToSourceSqlServerTaskOutputDatabaseLevelResponse() {
-        this.compatibilityLevel = null;
-        this.databaseFiles = List.of();
-        this.databaseState = null;
-        this.id = null;
-        this.name = null;
-        this.resultType = null;
-        this.sizeMB = null;
+    private ConnectToSourceSqlServerTaskOutputDatabaseLevelResponse(ConnectToSourceSqlServerTaskOutputDatabaseLevelResponse $) {
+        this.compatibilityLevel = $.compatibilityLevel;
+        this.databaseFiles = $.databaseFiles;
+        this.databaseState = $.databaseState;
+        this.id = $.id;
+        this.name = $.name;
+        this.resultType = $.resultType;
+        this.sizeMB = $.sizeMB;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ConnectToSourceSqlServerTaskOutputDatabaseLevelResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String compatibilityLevel;
-        private List<DatabaseFileInfoResponse> databaseFiles;
-        private String databaseState;
-        private String id;
-        private String name;
-        private String resultType;
-        private Double sizeMB;
+        private ConnectToSourceSqlServerTaskOutputDatabaseLevelResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ConnectToSourceSqlServerTaskOutputDatabaseLevelResponse();
         }
 
         public Builder(ConnectToSourceSqlServerTaskOutputDatabaseLevelResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.compatibilityLevel = defaults.compatibilityLevel;
-    	      this.databaseFiles = defaults.databaseFiles;
-    	      this.databaseState = defaults.databaseState;
-    	      this.id = defaults.id;
-    	      this.name = defaults.name;
-    	      this.resultType = defaults.resultType;
-    	      this.sizeMB = defaults.sizeMB;
+            $ = new ConnectToSourceSqlServerTaskOutputDatabaseLevelResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder compatibilityLevel(String compatibilityLevel) {
-            this.compatibilityLevel = Objects.requireNonNull(compatibilityLevel);
+            $.compatibilityLevel = compatibilityLevel;
             return this;
         }
+
         public Builder databaseFiles(List<DatabaseFileInfoResponse> databaseFiles) {
-            this.databaseFiles = Objects.requireNonNull(databaseFiles);
+            $.databaseFiles = databaseFiles;
             return this;
         }
+
         public Builder databaseFiles(DatabaseFileInfoResponse... databaseFiles) {
             return databaseFiles(List.of(databaseFiles));
         }
+
         public Builder databaseState(String databaseState) {
-            this.databaseState = Objects.requireNonNull(databaseState);
+            $.databaseState = databaseState;
             return this;
         }
+
         public Builder id(String id) {
-            this.id = Objects.requireNonNull(id);
+            $.id = id;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder resultType(String resultType) {
-            this.resultType = Objects.requireNonNull(resultType);
+            $.resultType = resultType;
             return this;
         }
+
         public Builder sizeMB(Double sizeMB) {
-            this.sizeMB = Objects.requireNonNull(sizeMB);
+            $.sizeMB = sizeMB;
             return this;
-        }        public ConnectToSourceSqlServerTaskOutputDatabaseLevelResponse build() {
-            return new ConnectToSourceSqlServerTaskOutputDatabaseLevelResponse(compatibilityLevel, databaseFiles, databaseState, id, name, resultType, sizeMB);
+        }
+
+        public ConnectToSourceSqlServerTaskOutputDatabaseLevelResponse build() {
+            $.compatibilityLevel = Objects.requireNonNull($.compatibilityLevel, "expected parameter 'compatibilityLevel' to be non-null");
+            $.databaseFiles = Objects.requireNonNull($.databaseFiles, "expected parameter 'databaseFiles' to be non-null");
+            $.databaseState = Objects.requireNonNull($.databaseState, "expected parameter 'databaseState' to be non-null");
+            $.id = Objects.requireNonNull($.id, "expected parameter 'id' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.resultType = Codegen.stringProp("resultType").arg($.resultType).require();
+            $.sizeMB = Objects.requireNonNull($.sizeMB, "expected parameter 'sizeMB' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,7 +5,6 @@ package com.pulumi.googlenative.privateca_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.privateca_v1.enums.PublicKeyFormat;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +23,7 @@ public final class PublicKeyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="format", required=true)
-      private final Output<PublicKeyFormat> format;
+    private Output<PublicKeyFormat> format;
 
     public Output<PublicKeyFormat> format() {
         return this.format;
@@ -35,63 +34,60 @@ public final class PublicKeyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="key", required=true)
-      private final Output<String> key;
+    private Output<String> key;
 
     public Output<String> key() {
         return this.key;
     }
 
-    public PublicKeyArgs(
-        Output<PublicKeyFormat> format,
-        Output<String> key) {
-        this.format = Objects.requireNonNull(format, "expected parameter 'format' to be non-null");
-        this.key = Objects.requireNonNull(key, "expected parameter 'key' to be non-null");
-    }
+    private PublicKeyArgs() {}
 
-    private PublicKeyArgs() {
-        this.format = Codegen.empty();
-        this.key = Codegen.empty();
+    private PublicKeyArgs(PublicKeyArgs $) {
+        this.format = $.format;
+        this.key = $.key;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PublicKeyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<PublicKeyFormat> format;
-        private Output<String> key;
+        private PublicKeyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PublicKeyArgs();
         }
 
         public Builder(PublicKeyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.format = defaults.format;
-    	      this.key = defaults.key;
+            $ = new PublicKeyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder format(Output<PublicKeyFormat> format) {
-            this.format = Objects.requireNonNull(format);
+            $.format = format;
             return this;
         }
+
         public Builder format(PublicKeyFormat format) {
-            this.format = Output.of(Objects.requireNonNull(format));
-            return this;
+            return format(Output.of(format));
         }
+
         public Builder key(Output<String> key) {
-            this.key = Objects.requireNonNull(key);
+            $.key = key;
             return this;
         }
+
         public Builder key(String key) {
-            this.key = Output.of(Objects.requireNonNull(key));
-            return this;
-        }        public PublicKeyArgs build() {
-            return new PublicKeyArgs(format, key);
+            return key(Output.of(key));
+        }
+
+        public PublicKeyArgs build() {
+            $.format = Objects.requireNonNull($.format, "expected parameter 'format' to be non-null");
+            $.key = Objects.requireNonNull($.key, "expected parameter 'key' to be non-null");
+            return $;
         }
     }
+
 }

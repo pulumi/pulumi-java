@@ -5,9 +5,9 @@ package com.pulumi.aws.wafregional.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class WebAclAssociationState extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="resourceArn")
-      private final @Nullable Output<String> resourceArn;
+    private @Nullable Output<String> resourceArn;
 
-    public Output<String> resourceArn() {
-        return this.resourceArn == null ? Codegen.empty() : this.resourceArn;
+    public Optional<Output<String>> resourceArn() {
+        return Optional.ofNullable(this.resourceArn);
     }
 
     /**
@@ -31,63 +31,58 @@ public final class WebAclAssociationState extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="webAclId")
-      private final @Nullable Output<String> webAclId;
+    private @Nullable Output<String> webAclId;
 
-    public Output<String> webAclId() {
-        return this.webAclId == null ? Codegen.empty() : this.webAclId;
+    public Optional<Output<String>> webAclId() {
+        return Optional.ofNullable(this.webAclId);
     }
 
-    public WebAclAssociationState(
-        @Nullable Output<String> resourceArn,
-        @Nullable Output<String> webAclId) {
-        this.resourceArn = resourceArn;
-        this.webAclId = webAclId;
-    }
+    private WebAclAssociationState() {}
 
-    private WebAclAssociationState() {
-        this.resourceArn = Codegen.empty();
-        this.webAclId = Codegen.empty();
+    private WebAclAssociationState(WebAclAssociationState $) {
+        this.resourceArn = $.resourceArn;
+        this.webAclId = $.webAclId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WebAclAssociationState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> resourceArn;
-        private @Nullable Output<String> webAclId;
+        private WebAclAssociationState $;
 
         public Builder() {
-    	      // Empty
+            $ = new WebAclAssociationState();
         }
 
         public Builder(WebAclAssociationState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.resourceArn = defaults.resourceArn;
-    	      this.webAclId = defaults.webAclId;
+            $ = new WebAclAssociationState(Objects.requireNonNull(defaults));
         }
 
         public Builder resourceArn(@Nullable Output<String> resourceArn) {
-            this.resourceArn = resourceArn;
+            $.resourceArn = resourceArn;
             return this;
         }
-        public Builder resourceArn(@Nullable String resourceArn) {
-            this.resourceArn = Codegen.ofNullable(resourceArn);
-            return this;
+
+        public Builder resourceArn(String resourceArn) {
+            return resourceArn(Output.of(resourceArn));
         }
+
         public Builder webAclId(@Nullable Output<String> webAclId) {
-            this.webAclId = webAclId;
+            $.webAclId = webAclId;
             return this;
         }
-        public Builder webAclId(@Nullable String webAclId) {
-            this.webAclId = Codegen.ofNullable(webAclId);
-            return this;
-        }        public WebAclAssociationState build() {
-            return new WebAclAssociationState(resourceArn, webAclId);
+
+        public Builder webAclId(String webAclId) {
+            return webAclId(Output.of(webAclId));
+        }
+
+        public WebAclAssociationState build() {
+            return $;
         }
     }
+
 }

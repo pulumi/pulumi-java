@@ -5,12 +5,12 @@ package com.pulumi.gcp.certificateauthority.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.certificateauthority.inputs.CaPoolIssuancePolicyGetArgs;
 import com.pulumi.gcp.certificateauthority.inputs.CaPoolPublishingOptionsGetArgs;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class CaPoolState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="issuancePolicy")
-      private final @Nullable Output<CaPoolIssuancePolicyGetArgs> issuancePolicy;
+    private @Nullable Output<CaPoolIssuancePolicyGetArgs> issuancePolicy;
 
-    public Output<CaPoolIssuancePolicyGetArgs> issuancePolicy() {
-        return this.issuancePolicy == null ? Codegen.empty() : this.issuancePolicy;
+    public Optional<Output<CaPoolIssuancePolicyGetArgs>> issuancePolicy() {
+        return Optional.ofNullable(this.issuancePolicy);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class CaPoolState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="labels")
-      private final @Nullable Output<Map<String,String>> labels;
+    private @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> labels() {
-        return this.labels == null ? Codegen.empty() : this.labels;
+    public Optional<Output<Map<String,String>>> labels() {
+        return Optional.ofNullable(this.labels);
     }
 
     /**
@@ -48,10 +48,10 @@ public final class CaPoolState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -59,10 +59,10 @@ public final class CaPoolState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -71,10 +71,10 @@ public final class CaPoolState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -83,10 +83,10 @@ public final class CaPoolState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="publishingOptions")
-      private final @Nullable Output<CaPoolPublishingOptionsGetArgs> publishingOptions;
+    private @Nullable Output<CaPoolPublishingOptionsGetArgs> publishingOptions;
 
-    public Output<CaPoolPublishingOptionsGetArgs> publishingOptions() {
-        return this.publishingOptions == null ? Codegen.empty() : this.publishingOptions;
+    public Optional<Output<CaPoolPublishingOptionsGetArgs>> publishingOptions() {
+        return Optional.ofNullable(this.publishingOptions);
     }
 
     /**
@@ -95,128 +95,108 @@ public final class CaPoolState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tier")
-      private final @Nullable Output<String> tier;
+    private @Nullable Output<String> tier;
 
-    public Output<String> tier() {
-        return this.tier == null ? Codegen.empty() : this.tier;
+    public Optional<Output<String>> tier() {
+        return Optional.ofNullable(this.tier);
     }
 
-    public CaPoolState(
-        @Nullable Output<CaPoolIssuancePolicyGetArgs> issuancePolicy,
-        @Nullable Output<Map<String,String>> labels,
-        @Nullable Output<String> location,
-        @Nullable Output<String> name,
-        @Nullable Output<String> project,
-        @Nullable Output<CaPoolPublishingOptionsGetArgs> publishingOptions,
-        @Nullable Output<String> tier) {
-        this.issuancePolicy = issuancePolicy;
-        this.labels = labels;
-        this.location = location;
-        this.name = name;
-        this.project = project;
-        this.publishingOptions = publishingOptions;
-        this.tier = tier;
-    }
+    private CaPoolState() {}
 
-    private CaPoolState() {
-        this.issuancePolicy = Codegen.empty();
-        this.labels = Codegen.empty();
-        this.location = Codegen.empty();
-        this.name = Codegen.empty();
-        this.project = Codegen.empty();
-        this.publishingOptions = Codegen.empty();
-        this.tier = Codegen.empty();
+    private CaPoolState(CaPoolState $) {
+        this.issuancePolicy = $.issuancePolicy;
+        this.labels = $.labels;
+        this.location = $.location;
+        this.name = $.name;
+        this.project = $.project;
+        this.publishingOptions = $.publishingOptions;
+        this.tier = $.tier;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CaPoolState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<CaPoolIssuancePolicyGetArgs> issuancePolicy;
-        private @Nullable Output<Map<String,String>> labels;
-        private @Nullable Output<String> location;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> project;
-        private @Nullable Output<CaPoolPublishingOptionsGetArgs> publishingOptions;
-        private @Nullable Output<String> tier;
+        private CaPoolState $;
 
         public Builder() {
-    	      // Empty
+            $ = new CaPoolState();
         }
 
         public Builder(CaPoolState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.issuancePolicy = defaults.issuancePolicy;
-    	      this.labels = defaults.labels;
-    	      this.location = defaults.location;
-    	      this.name = defaults.name;
-    	      this.project = defaults.project;
-    	      this.publishingOptions = defaults.publishingOptions;
-    	      this.tier = defaults.tier;
+            $ = new CaPoolState(Objects.requireNonNull(defaults));
         }
 
         public Builder issuancePolicy(@Nullable Output<CaPoolIssuancePolicyGetArgs> issuancePolicy) {
-            this.issuancePolicy = issuancePolicy;
+            $.issuancePolicy = issuancePolicy;
             return this;
         }
-        public Builder issuancePolicy(@Nullable CaPoolIssuancePolicyGetArgs issuancePolicy) {
-            this.issuancePolicy = Codegen.ofNullable(issuancePolicy);
-            return this;
+
+        public Builder issuancePolicy(CaPoolIssuancePolicyGetArgs issuancePolicy) {
+            return issuancePolicy(Output.of(issuancePolicy));
         }
+
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
-            this.labels = labels;
+            $.labels = labels;
             return this;
         }
-        public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Codegen.ofNullable(labels);
-            return this;
+
+        public Builder labels(Map<String,String> labels) {
+            return labels(Output.of(labels));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder publishingOptions(@Nullable Output<CaPoolPublishingOptionsGetArgs> publishingOptions) {
-            this.publishingOptions = publishingOptions;
+            $.publishingOptions = publishingOptions;
             return this;
         }
-        public Builder publishingOptions(@Nullable CaPoolPublishingOptionsGetArgs publishingOptions) {
-            this.publishingOptions = Codegen.ofNullable(publishingOptions);
-            return this;
+
+        public Builder publishingOptions(CaPoolPublishingOptionsGetArgs publishingOptions) {
+            return publishingOptions(Output.of(publishingOptions));
         }
+
         public Builder tier(@Nullable Output<String> tier) {
-            this.tier = tier;
+            $.tier = tier;
             return this;
         }
-        public Builder tier(@Nullable String tier) {
-            this.tier = Codegen.ofNullable(tier);
-            return this;
-        }        public CaPoolState build() {
-            return new CaPoolState(issuancePolicy, labels, location, name, project, publishingOptions, tier);
+
+        public Builder tier(String tier) {
+            return tier(Output.of(tier));
+        }
+
+        public CaPoolState build() {
+            return $;
         }
     }
+
 }

@@ -26,10 +26,10 @@ public final class ApiErrorResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="code")
-      private final @Nullable String code;
+    private @Nullable String code;
 
     public Optional<String> code() {
-        return this.code == null ? Optional.empty() : Optional.ofNullable(this.code);
+        return Optional.ofNullable(this.code);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class ApiErrorResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="details")
-      private final @Nullable List<ApiErrorBaseResponse> details;
+    private @Nullable List<ApiErrorBaseResponse> details;
 
-    public List<ApiErrorBaseResponse> details() {
-        return this.details == null ? List.of() : this.details;
+    public Optional<List<ApiErrorBaseResponse>> details() {
+        return Optional.ofNullable(this.details);
     }
 
     /**
@@ -48,10 +48,10 @@ public final class ApiErrorResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="innererror")
-      private final @Nullable InnerErrorResponse innererror;
+    private @Nullable InnerErrorResponse innererror;
 
     public Optional<InnerErrorResponse> innererror() {
-        return this.innererror == null ? Optional.empty() : Optional.ofNullable(this.innererror);
+        return Optional.ofNullable(this.innererror);
     }
 
     /**
@@ -59,10 +59,10 @@ public final class ApiErrorResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="message")
-      private final @Nullable String message;
+    private @Nullable String message;
 
     public Optional<String> message() {
-        return this.message == null ? Optional.empty() : Optional.ofNullable(this.message);
+        return Optional.ofNullable(this.message);
     }
 
     /**
@@ -70,85 +70,72 @@ public final class ApiErrorResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="target")
-      private final @Nullable String target;
+    private @Nullable String target;
 
     public Optional<String> target() {
-        return this.target == null ? Optional.empty() : Optional.ofNullable(this.target);
+        return Optional.ofNullable(this.target);
     }
 
-    public ApiErrorResponse(
-        @Nullable String code,
-        @Nullable List<ApiErrorBaseResponse> details,
-        @Nullable InnerErrorResponse innererror,
-        @Nullable String message,
-        @Nullable String target) {
-        this.code = code;
-        this.details = details;
-        this.innererror = innererror;
-        this.message = message;
-        this.target = target;
-    }
+    private ApiErrorResponse() {}
 
-    private ApiErrorResponse() {
-        this.code = null;
-        this.details = List.of();
-        this.innererror = null;
-        this.message = null;
-        this.target = null;
+    private ApiErrorResponse(ApiErrorResponse $) {
+        this.code = $.code;
+        this.details = $.details;
+        this.innererror = $.innererror;
+        this.message = $.message;
+        this.target = $.target;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ApiErrorResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String code;
-        private @Nullable List<ApiErrorBaseResponse> details;
-        private @Nullable InnerErrorResponse innererror;
-        private @Nullable String message;
-        private @Nullable String target;
+        private ApiErrorResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ApiErrorResponse();
         }
 
         public Builder(ApiErrorResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.code = defaults.code;
-    	      this.details = defaults.details;
-    	      this.innererror = defaults.innererror;
-    	      this.message = defaults.message;
-    	      this.target = defaults.target;
+            $ = new ApiErrorResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder code(@Nullable String code) {
-            this.code = code;
+            $.code = code;
             return this;
         }
+
         public Builder details(@Nullable List<ApiErrorBaseResponse> details) {
-            this.details = details;
+            $.details = details;
             return this;
         }
+
         public Builder details(ApiErrorBaseResponse... details) {
             return details(List.of(details));
         }
+
         public Builder innererror(@Nullable InnerErrorResponse innererror) {
-            this.innererror = innererror;
+            $.innererror = innererror;
             return this;
         }
+
         public Builder message(@Nullable String message) {
-            this.message = message;
+            $.message = message;
             return this;
         }
+
         public Builder target(@Nullable String target) {
-            this.target = target;
+            $.target = target;
             return this;
-        }        public ApiErrorResponse build() {
-            return new ApiErrorResponse(code, details, innererror, message, target);
+        }
+
+        public ApiErrorResponse build() {
+            return $;
         }
     }
+
 }

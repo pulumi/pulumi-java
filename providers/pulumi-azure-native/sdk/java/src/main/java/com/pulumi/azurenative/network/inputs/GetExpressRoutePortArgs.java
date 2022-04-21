@@ -17,7 +17,7 @@ public final class GetExpressRoutePortArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="expressRoutePortName", required=true)
-      private final String expressRoutePortName;
+    private String expressRoutePortName;
 
     public String expressRoutePortName() {
         return this.expressRoutePortName;
@@ -28,55 +28,52 @@ public final class GetExpressRoutePortArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public GetExpressRoutePortArgs(
-        String expressRoutePortName,
-        String resourceGroupName) {
-        this.expressRoutePortName = Objects.requireNonNull(expressRoutePortName, "expected parameter 'expressRoutePortName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private GetExpressRoutePortArgs() {}
 
-    private GetExpressRoutePortArgs() {
-        this.expressRoutePortName = null;
-        this.resourceGroupName = null;
+    private GetExpressRoutePortArgs(GetExpressRoutePortArgs $) {
+        this.expressRoutePortName = $.expressRoutePortName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetExpressRoutePortArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String expressRoutePortName;
-        private String resourceGroupName;
+        private GetExpressRoutePortArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetExpressRoutePortArgs();
         }
 
         public Builder(GetExpressRoutePortArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.expressRoutePortName = defaults.expressRoutePortName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new GetExpressRoutePortArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder expressRoutePortName(String expressRoutePortName) {
-            this.expressRoutePortName = Objects.requireNonNull(expressRoutePortName);
+            $.expressRoutePortName = expressRoutePortName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public GetExpressRoutePortArgs build() {
-            return new GetExpressRoutePortArgs(expressRoutePortName, resourceGroupName);
+        }
+
+        public GetExpressRoutePortArgs build() {
+            $.expressRoutePortName = Objects.requireNonNull($.expressRoutePortName, "expected parameter 'expressRoutePortName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

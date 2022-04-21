@@ -23,7 +23,7 @@ public final class GoogleCloudDatacatalogV1beta1GcsFilesetSpecResponse extends c
      * 
      */
     @Import(name="filePatterns", required=true)
-      private final List<String> filePatterns;
+    private List<String> filePatterns;
 
     public List<String> filePatterns() {
         return this.filePatterns;
@@ -34,61 +34,60 @@ public final class GoogleCloudDatacatalogV1beta1GcsFilesetSpecResponse extends c
      * 
      */
     @Import(name="sampleGcsFileSpecs", required=true)
-      private final List<GoogleCloudDatacatalogV1beta1GcsFileSpecResponse> sampleGcsFileSpecs;
+    private List<GoogleCloudDatacatalogV1beta1GcsFileSpecResponse> sampleGcsFileSpecs;
 
     public List<GoogleCloudDatacatalogV1beta1GcsFileSpecResponse> sampleGcsFileSpecs() {
         return this.sampleGcsFileSpecs;
     }
 
-    public GoogleCloudDatacatalogV1beta1GcsFilesetSpecResponse(
-        List<String> filePatterns,
-        List<GoogleCloudDatacatalogV1beta1GcsFileSpecResponse> sampleGcsFileSpecs) {
-        this.filePatterns = Objects.requireNonNull(filePatterns, "expected parameter 'filePatterns' to be non-null");
-        this.sampleGcsFileSpecs = Objects.requireNonNull(sampleGcsFileSpecs, "expected parameter 'sampleGcsFileSpecs' to be non-null");
-    }
+    private GoogleCloudDatacatalogV1beta1GcsFilesetSpecResponse() {}
 
-    private GoogleCloudDatacatalogV1beta1GcsFilesetSpecResponse() {
-        this.filePatterns = List.of();
-        this.sampleGcsFileSpecs = List.of();
+    private GoogleCloudDatacatalogV1beta1GcsFilesetSpecResponse(GoogleCloudDatacatalogV1beta1GcsFilesetSpecResponse $) {
+        this.filePatterns = $.filePatterns;
+        this.sampleGcsFileSpecs = $.sampleGcsFileSpecs;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudDatacatalogV1beta1GcsFilesetSpecResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<String> filePatterns;
-        private List<GoogleCloudDatacatalogV1beta1GcsFileSpecResponse> sampleGcsFileSpecs;
+        private GoogleCloudDatacatalogV1beta1GcsFilesetSpecResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudDatacatalogV1beta1GcsFilesetSpecResponse();
         }
 
         public Builder(GoogleCloudDatacatalogV1beta1GcsFilesetSpecResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.filePatterns = defaults.filePatterns;
-    	      this.sampleGcsFileSpecs = defaults.sampleGcsFileSpecs;
+            $ = new GoogleCloudDatacatalogV1beta1GcsFilesetSpecResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder filePatterns(List<String> filePatterns) {
-            this.filePatterns = Objects.requireNonNull(filePatterns);
+            $.filePatterns = filePatterns;
             return this;
         }
+
         public Builder filePatterns(String... filePatterns) {
             return filePatterns(List.of(filePatterns));
         }
+
         public Builder sampleGcsFileSpecs(List<GoogleCloudDatacatalogV1beta1GcsFileSpecResponse> sampleGcsFileSpecs) {
-            this.sampleGcsFileSpecs = Objects.requireNonNull(sampleGcsFileSpecs);
+            $.sampleGcsFileSpecs = sampleGcsFileSpecs;
             return this;
         }
+
         public Builder sampleGcsFileSpecs(GoogleCloudDatacatalogV1beta1GcsFileSpecResponse... sampleGcsFileSpecs) {
             return sampleGcsFileSpecs(List.of(sampleGcsFileSpecs));
-        }        public GoogleCloudDatacatalogV1beta1GcsFilesetSpecResponse build() {
-            return new GoogleCloudDatacatalogV1beta1GcsFilesetSpecResponse(filePatterns, sampleGcsFileSpecs);
+        }
+
+        public GoogleCloudDatacatalogV1beta1GcsFilesetSpecResponse build() {
+            $.filePatterns = Objects.requireNonNull($.filePatterns, "expected parameter 'filePatterns' to be non-null");
+            $.sampleGcsFileSpecs = Objects.requireNonNull($.sampleGcsFileSpecs, "expected parameter 'sampleGcsFileSpecs' to be non-null");
+            return $;
         }
     }
+
 }

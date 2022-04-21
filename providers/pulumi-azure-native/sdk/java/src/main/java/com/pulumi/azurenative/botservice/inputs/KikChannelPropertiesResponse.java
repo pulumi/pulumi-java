@@ -24,10 +24,10 @@ public final class KikChannelPropertiesResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="apiKey")
-      private final @Nullable String apiKey;
+    private @Nullable String apiKey;
 
     public Optional<String> apiKey() {
-        return this.apiKey == null ? Optional.empty() : Optional.ofNullable(this.apiKey);
+        return Optional.ofNullable(this.apiKey);
     }
 
     /**
@@ -35,7 +35,7 @@ public final class KikChannelPropertiesResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="isEnabled", required=true)
-      private final Boolean isEnabled;
+    private Boolean isEnabled;
 
     public Boolean isEnabled() {
         return this.isEnabled;
@@ -46,10 +46,10 @@ public final class KikChannelPropertiesResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="isValidated")
-      private final @Nullable Boolean isValidated;
+    private @Nullable Boolean isValidated;
 
     public Optional<Boolean> isValidated() {
-        return this.isValidated == null ? Optional.empty() : Optional.ofNullable(this.isValidated);
+        return Optional.ofNullable(this.isValidated);
     }
 
     /**
@@ -57,73 +57,64 @@ public final class KikChannelPropertiesResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="userName", required=true)
-      private final String userName;
+    private String userName;
 
     public String userName() {
         return this.userName;
     }
 
-    public KikChannelPropertiesResponse(
-        @Nullable String apiKey,
-        Boolean isEnabled,
-        @Nullable Boolean isValidated,
-        String userName) {
-        this.apiKey = apiKey;
-        this.isEnabled = Objects.requireNonNull(isEnabled, "expected parameter 'isEnabled' to be non-null");
-        this.isValidated = isValidated;
-        this.userName = Objects.requireNonNull(userName, "expected parameter 'userName' to be non-null");
-    }
+    private KikChannelPropertiesResponse() {}
 
-    private KikChannelPropertiesResponse() {
-        this.apiKey = null;
-        this.isEnabled = null;
-        this.isValidated = null;
-        this.userName = null;
+    private KikChannelPropertiesResponse(KikChannelPropertiesResponse $) {
+        this.apiKey = $.apiKey;
+        this.isEnabled = $.isEnabled;
+        this.isValidated = $.isValidated;
+        this.userName = $.userName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(KikChannelPropertiesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String apiKey;
-        private Boolean isEnabled;
-        private @Nullable Boolean isValidated;
-        private String userName;
+        private KikChannelPropertiesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new KikChannelPropertiesResponse();
         }
 
         public Builder(KikChannelPropertiesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.apiKey = defaults.apiKey;
-    	      this.isEnabled = defaults.isEnabled;
-    	      this.isValidated = defaults.isValidated;
-    	      this.userName = defaults.userName;
+            $ = new KikChannelPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder apiKey(@Nullable String apiKey) {
-            this.apiKey = apiKey;
+            $.apiKey = apiKey;
             return this;
         }
+
         public Builder isEnabled(Boolean isEnabled) {
-            this.isEnabled = Objects.requireNonNull(isEnabled);
+            $.isEnabled = isEnabled;
             return this;
         }
+
         public Builder isValidated(@Nullable Boolean isValidated) {
-            this.isValidated = isValidated;
+            $.isValidated = isValidated;
             return this;
         }
+
         public Builder userName(String userName) {
-            this.userName = Objects.requireNonNull(userName);
+            $.userName = userName;
             return this;
-        }        public KikChannelPropertiesResponse build() {
-            return new KikChannelPropertiesResponse(apiKey, isEnabled, isValidated, userName);
+        }
+
+        public KikChannelPropertiesResponse build() {
+            $.isEnabled = Objects.requireNonNull($.isEnabled, "expected parameter 'isEnabled' to be non-null");
+            $.userName = Objects.requireNonNull($.userName, "expected parameter 'userName' to be non-null");
+            return $;
         }
     }
+
 }

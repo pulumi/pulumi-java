@@ -22,7 +22,7 @@ public final class VirtualMachineResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="instanceId", required=true)
-      private final String instanceId;
+    private String instanceId;
 
     public String instanceId() {
         return this.instanceId;
@@ -33,7 +33,7 @@ public final class VirtualMachineResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="instanceName", required=true)
-      private final String instanceName;
+    private String instanceName;
 
     public String instanceName() {
         return this.instanceName;
@@ -44,64 +44,59 @@ public final class VirtualMachineResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="virtualMachineConfig", required=true)
-      private final VirtualMachineConfigResponse virtualMachineConfig;
+    private VirtualMachineConfigResponse virtualMachineConfig;
 
     public VirtualMachineConfigResponse virtualMachineConfig() {
         return this.virtualMachineConfig;
     }
 
-    public VirtualMachineResponse(
-        String instanceId,
-        String instanceName,
-        VirtualMachineConfigResponse virtualMachineConfig) {
-        this.instanceId = Objects.requireNonNull(instanceId, "expected parameter 'instanceId' to be non-null");
-        this.instanceName = Objects.requireNonNull(instanceName, "expected parameter 'instanceName' to be non-null");
-        this.virtualMachineConfig = Objects.requireNonNull(virtualMachineConfig, "expected parameter 'virtualMachineConfig' to be non-null");
-    }
+    private VirtualMachineResponse() {}
 
-    private VirtualMachineResponse() {
-        this.instanceId = null;
-        this.instanceName = null;
-        this.virtualMachineConfig = null;
+    private VirtualMachineResponse(VirtualMachineResponse $) {
+        this.instanceId = $.instanceId;
+        this.instanceName = $.instanceName;
+        this.virtualMachineConfig = $.virtualMachineConfig;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VirtualMachineResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String instanceId;
-        private String instanceName;
-        private VirtualMachineConfigResponse virtualMachineConfig;
+        private VirtualMachineResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new VirtualMachineResponse();
         }
 
         public Builder(VirtualMachineResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.instanceId = defaults.instanceId;
-    	      this.instanceName = defaults.instanceName;
-    	      this.virtualMachineConfig = defaults.virtualMachineConfig;
+            $ = new VirtualMachineResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder instanceId(String instanceId) {
-            this.instanceId = Objects.requireNonNull(instanceId);
+            $.instanceId = instanceId;
             return this;
         }
+
         public Builder instanceName(String instanceName) {
-            this.instanceName = Objects.requireNonNull(instanceName);
+            $.instanceName = instanceName;
             return this;
         }
+
         public Builder virtualMachineConfig(VirtualMachineConfigResponse virtualMachineConfig) {
-            this.virtualMachineConfig = Objects.requireNonNull(virtualMachineConfig);
+            $.virtualMachineConfig = virtualMachineConfig;
             return this;
-        }        public VirtualMachineResponse build() {
-            return new VirtualMachineResponse(instanceId, instanceName, virtualMachineConfig);
+        }
+
+        public VirtualMachineResponse build() {
+            $.instanceId = Objects.requireNonNull($.instanceId, "expected parameter 'instanceId' to be non-null");
+            $.instanceName = Objects.requireNonNull($.instanceName, "expected parameter 'instanceName' to be non-null");
+            $.virtualMachineConfig = Objects.requireNonNull($.virtualMachineConfig, "expected parameter 'virtualMachineConfig' to be non-null");
+            return $;
         }
     }
+
 }

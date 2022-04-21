@@ -5,7 +5,6 @@ package com.pulumi.awsnative.appflow.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -15,49 +14,49 @@ public final class FlowGoogleAnalyticsSourcePropertiesArgs extends com.pulumi.re
     public static final FlowGoogleAnalyticsSourcePropertiesArgs Empty = new FlowGoogleAnalyticsSourcePropertiesArgs();
 
     @Import(name="object", required=true)
-      private final Output<String> object;
+    private Output<String> object;
 
     public Output<String> object() {
         return this.object;
     }
 
-    public FlowGoogleAnalyticsSourcePropertiesArgs(Output<String> object) {
-        this.object = Objects.requireNonNull(object, "expected parameter 'object' to be non-null");
-    }
+    private FlowGoogleAnalyticsSourcePropertiesArgs() {}
 
-    private FlowGoogleAnalyticsSourcePropertiesArgs() {
-        this.object = Codegen.empty();
+    private FlowGoogleAnalyticsSourcePropertiesArgs(FlowGoogleAnalyticsSourcePropertiesArgs $) {
+        this.object = $.object;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FlowGoogleAnalyticsSourcePropertiesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> object;
+        private FlowGoogleAnalyticsSourcePropertiesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new FlowGoogleAnalyticsSourcePropertiesArgs();
         }
 
         public Builder(FlowGoogleAnalyticsSourcePropertiesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.object = defaults.object;
+            $ = new FlowGoogleAnalyticsSourcePropertiesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder object(Output<String> object) {
-            this.object = Objects.requireNonNull(object);
+            $.object = object;
             return this;
         }
+
         public Builder object(String object) {
-            this.object = Output.of(Objects.requireNonNull(object));
-            return this;
-        }        public FlowGoogleAnalyticsSourcePropertiesArgs build() {
-            return new FlowGoogleAnalyticsSourcePropertiesArgs(object);
+            return object(Output.of(object));
+        }
+
+        public FlowGoogleAnalyticsSourcePropertiesArgs build() {
+            $.object = Objects.requireNonNull($.object, "expected parameter 'object' to be non-null");
+            return $;
         }
     }
+
 }

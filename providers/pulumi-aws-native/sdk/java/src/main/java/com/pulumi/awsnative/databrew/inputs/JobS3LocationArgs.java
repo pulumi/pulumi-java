@@ -5,9 +5,9 @@ package com.pulumi.awsnative.databrew.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,90 +20,83 @@ public final class JobS3LocationArgs extends com.pulumi.resources.ResourceArgs {
     public static final JobS3LocationArgs Empty = new JobS3LocationArgs();
 
     @Import(name="bucket", required=true)
-      private final Output<String> bucket;
+    private Output<String> bucket;
 
     public Output<String> bucket() {
         return this.bucket;
     }
 
     @Import(name="bucketOwner")
-      private final @Nullable Output<String> bucketOwner;
+    private @Nullable Output<String> bucketOwner;
 
-    public Output<String> bucketOwner() {
-        return this.bucketOwner == null ? Codegen.empty() : this.bucketOwner;
+    public Optional<Output<String>> bucketOwner() {
+        return Optional.ofNullable(this.bucketOwner);
     }
 
     @Import(name="key")
-      private final @Nullable Output<String> key;
+    private @Nullable Output<String> key;
 
-    public Output<String> key() {
-        return this.key == null ? Codegen.empty() : this.key;
+    public Optional<Output<String>> key() {
+        return Optional.ofNullable(this.key);
     }
 
-    public JobS3LocationArgs(
-        Output<String> bucket,
-        @Nullable Output<String> bucketOwner,
-        @Nullable Output<String> key) {
-        this.bucket = Objects.requireNonNull(bucket, "expected parameter 'bucket' to be non-null");
-        this.bucketOwner = bucketOwner;
-        this.key = key;
-    }
+    private JobS3LocationArgs() {}
 
-    private JobS3LocationArgs() {
-        this.bucket = Codegen.empty();
-        this.bucketOwner = Codegen.empty();
-        this.key = Codegen.empty();
+    private JobS3LocationArgs(JobS3LocationArgs $) {
+        this.bucket = $.bucket;
+        this.bucketOwner = $.bucketOwner;
+        this.key = $.key;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(JobS3LocationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> bucket;
-        private @Nullable Output<String> bucketOwner;
-        private @Nullable Output<String> key;
+        private JobS3LocationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new JobS3LocationArgs();
         }
 
         public Builder(JobS3LocationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.bucket = defaults.bucket;
-    	      this.bucketOwner = defaults.bucketOwner;
-    	      this.key = defaults.key;
+            $ = new JobS3LocationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder bucket(Output<String> bucket) {
-            this.bucket = Objects.requireNonNull(bucket);
+            $.bucket = bucket;
             return this;
         }
+
         public Builder bucket(String bucket) {
-            this.bucket = Output.of(Objects.requireNonNull(bucket));
-            return this;
+            return bucket(Output.of(bucket));
         }
+
         public Builder bucketOwner(@Nullable Output<String> bucketOwner) {
-            this.bucketOwner = bucketOwner;
+            $.bucketOwner = bucketOwner;
             return this;
         }
-        public Builder bucketOwner(@Nullable String bucketOwner) {
-            this.bucketOwner = Codegen.ofNullable(bucketOwner);
-            return this;
+
+        public Builder bucketOwner(String bucketOwner) {
+            return bucketOwner(Output.of(bucketOwner));
         }
+
         public Builder key(@Nullable Output<String> key) {
-            this.key = key;
+            $.key = key;
             return this;
         }
-        public Builder key(@Nullable String key) {
-            this.key = Codegen.ofNullable(key);
-            return this;
-        }        public JobS3LocationArgs build() {
-            return new JobS3LocationArgs(bucket, bucketOwner, key);
+
+        public Builder key(String key) {
+            return key(Output.of(key));
+        }
+
+        public JobS3LocationArgs build() {
+            $.bucket = Objects.requireNonNull($.bucket, "expected parameter 'bucket' to be non-null");
+            return $;
         }
     }
+
 }

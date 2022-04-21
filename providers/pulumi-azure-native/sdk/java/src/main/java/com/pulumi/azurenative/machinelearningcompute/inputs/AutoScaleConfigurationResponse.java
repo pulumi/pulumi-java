@@ -26,10 +26,10 @@ public final class AutoScaleConfigurationResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="maxReplicas")
-      private final @Nullable Integer maxReplicas;
+    private @Nullable Integer maxReplicas;
 
     public Optional<Integer> maxReplicas() {
-        return this.maxReplicas == null ? Optional.empty() : Optional.ofNullable(this.maxReplicas);
+        return Optional.ofNullable(this.maxReplicas);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class AutoScaleConfigurationResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="minReplicas")
-      private final @Nullable Integer minReplicas;
+    private @Nullable Integer minReplicas;
 
     public Optional<Integer> minReplicas() {
-        return this.minReplicas == null ? Optional.empty() : Optional.ofNullable(this.minReplicas);
+        return Optional.ofNullable(this.minReplicas);
     }
 
     /**
@@ -48,10 +48,10 @@ public final class AutoScaleConfigurationResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="refreshPeriodInSeconds")
-      private final @Nullable Integer refreshPeriodInSeconds;
+    private @Nullable Integer refreshPeriodInSeconds;
 
     public Optional<Integer> refreshPeriodInSeconds() {
-        return this.refreshPeriodInSeconds == null ? Optional.empty() : Optional.ofNullable(this.refreshPeriodInSeconds);
+        return Optional.ofNullable(this.refreshPeriodInSeconds);
     }
 
     /**
@@ -59,10 +59,10 @@ public final class AutoScaleConfigurationResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="status")
-      private final @Nullable String status;
+    private @Nullable String status;
 
     public Optional<String> status() {
-        return this.status == null ? Optional.empty() : Optional.ofNullable(this.status);
+        return Optional.ofNullable(this.status);
     }
 
     /**
@@ -70,82 +70,71 @@ public final class AutoScaleConfigurationResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="targetUtilization")
-      private final @Nullable Double targetUtilization;
+    private @Nullable Double targetUtilization;
 
     public Optional<Double> targetUtilization() {
-        return this.targetUtilization == null ? Optional.empty() : Optional.ofNullable(this.targetUtilization);
+        return Optional.ofNullable(this.targetUtilization);
     }
 
-    public AutoScaleConfigurationResponse(
-        @Nullable Integer maxReplicas,
-        @Nullable Integer minReplicas,
-        @Nullable Integer refreshPeriodInSeconds,
-        @Nullable String status,
-        @Nullable Double targetUtilization) {
-        this.maxReplicas = Codegen.integerProp("maxReplicas").arg(maxReplicas).def(100).getNullable();
-        this.minReplicas = Codegen.integerProp("minReplicas").arg(minReplicas).def(1).getNullable();
-        this.refreshPeriodInSeconds = refreshPeriodInSeconds;
-        this.status = Codegen.stringProp("status").arg(status).def("Disabled").getNullable();
-        this.targetUtilization = targetUtilization;
-    }
+    private AutoScaleConfigurationResponse() {}
 
-    private AutoScaleConfigurationResponse() {
-        this.maxReplicas = null;
-        this.minReplicas = null;
-        this.refreshPeriodInSeconds = null;
-        this.status = null;
-        this.targetUtilization = null;
+    private AutoScaleConfigurationResponse(AutoScaleConfigurationResponse $) {
+        this.maxReplicas = $.maxReplicas;
+        this.minReplicas = $.minReplicas;
+        this.refreshPeriodInSeconds = $.refreshPeriodInSeconds;
+        this.status = $.status;
+        this.targetUtilization = $.targetUtilization;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AutoScaleConfigurationResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Integer maxReplicas;
-        private @Nullable Integer minReplicas;
-        private @Nullable Integer refreshPeriodInSeconds;
-        private @Nullable String status;
-        private @Nullable Double targetUtilization;
+        private AutoScaleConfigurationResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AutoScaleConfigurationResponse();
         }
 
         public Builder(AutoScaleConfigurationResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.maxReplicas = defaults.maxReplicas;
-    	      this.minReplicas = defaults.minReplicas;
-    	      this.refreshPeriodInSeconds = defaults.refreshPeriodInSeconds;
-    	      this.status = defaults.status;
-    	      this.targetUtilization = defaults.targetUtilization;
+            $ = new AutoScaleConfigurationResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder maxReplicas(@Nullable Integer maxReplicas) {
-            this.maxReplicas = maxReplicas;
+            $.maxReplicas = maxReplicas;
             return this;
         }
+
         public Builder minReplicas(@Nullable Integer minReplicas) {
-            this.minReplicas = minReplicas;
+            $.minReplicas = minReplicas;
             return this;
         }
+
         public Builder refreshPeriodInSeconds(@Nullable Integer refreshPeriodInSeconds) {
-            this.refreshPeriodInSeconds = refreshPeriodInSeconds;
+            $.refreshPeriodInSeconds = refreshPeriodInSeconds;
             return this;
         }
+
         public Builder status(@Nullable String status) {
-            this.status = status;
+            $.status = status;
             return this;
         }
+
         public Builder targetUtilization(@Nullable Double targetUtilization) {
-            this.targetUtilization = targetUtilization;
+            $.targetUtilization = targetUtilization;
             return this;
-        }        public AutoScaleConfigurationResponse build() {
-            return new AutoScaleConfigurationResponse(maxReplicas, minReplicas, refreshPeriodInSeconds, status, targetUtilization);
+        }
+
+        public AutoScaleConfigurationResponse build() {
+            $.maxReplicas = Codegen.integerProp("maxReplicas").arg($.maxReplicas).def(100).getNullable();
+            $.minReplicas = Codegen.integerProp("minReplicas").arg($.minReplicas).def(1).getNullable();
+            $.status = Codegen.stringProp("status").arg($.status).def("Disabled").getNullable();
+            return $;
         }
     }
+
 }

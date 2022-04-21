@@ -17,7 +17,7 @@ public final class GetWebApplicationFirewallPolicyArgs extends com.pulumi.resour
      * 
      */
     @Import(name="policyName", required=true)
-      private final String policyName;
+    private String policyName;
 
     public String policyName() {
         return this.policyName;
@@ -28,55 +28,52 @@ public final class GetWebApplicationFirewallPolicyArgs extends com.pulumi.resour
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public GetWebApplicationFirewallPolicyArgs(
-        String policyName,
-        String resourceGroupName) {
-        this.policyName = Objects.requireNonNull(policyName, "expected parameter 'policyName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private GetWebApplicationFirewallPolicyArgs() {}
 
-    private GetWebApplicationFirewallPolicyArgs() {
-        this.policyName = null;
-        this.resourceGroupName = null;
+    private GetWebApplicationFirewallPolicyArgs(GetWebApplicationFirewallPolicyArgs $) {
+        this.policyName = $.policyName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetWebApplicationFirewallPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String policyName;
-        private String resourceGroupName;
+        private GetWebApplicationFirewallPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetWebApplicationFirewallPolicyArgs();
         }
 
         public Builder(GetWebApplicationFirewallPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.policyName = defaults.policyName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new GetWebApplicationFirewallPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder policyName(String policyName) {
-            this.policyName = Objects.requireNonNull(policyName);
+            $.policyName = policyName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public GetWebApplicationFirewallPolicyArgs build() {
-            return new GetWebApplicationFirewallPolicyArgs(policyName, resourceGroupName);
+        }
+
+        public GetWebApplicationFirewallPolicyArgs build() {
+            $.policyName = Objects.requireNonNull($.policyName, "expected parameter 'policyName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

@@ -3,7 +3,7 @@
 
 package com.pulumi.googlenative.gkehub_v1alpha.inputs;
 
-import java.util.Objects;
+
 
 
 /**
@@ -14,28 +14,19 @@ public final class AppDevExperienceFeatureSpecArgs extends com.pulumi.resources.
 
     public static final AppDevExperienceFeatureSpecArgs Empty = new AppDevExperienceFeatureSpecArgs();
 
-    public AppDevExperienceFeatureSpecArgs() {
-    }
-
     public static Builder builder() {
         return new Builder();
     }
 
-    public static Builder builder(AppDevExperienceFeatureSpecArgs defaults) {
-        return new Builder(defaults);
-    }
-
     public static final class Builder {
+        private AppDevExperienceFeatureSpecArgs $;
 
         public Builder() {
-    	      // Empty
-        }
-
-        public Builder(AppDevExperienceFeatureSpecArgs defaults) {
-    	      Objects.requireNonNull(defaults);
+            $ = new AppDevExperienceFeatureSpecArgs();
         }
         public AppDevExperienceFeatureSpecArgs build() {
-            return new AppDevExperienceFeatureSpecArgs();
+            return $;
         }
     }
+
 }

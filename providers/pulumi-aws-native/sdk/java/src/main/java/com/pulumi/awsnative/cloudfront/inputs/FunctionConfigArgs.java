@@ -5,7 +5,6 @@ package com.pulumi.awsnative.cloudfront.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -15,70 +14,67 @@ public final class FunctionConfigArgs extends com.pulumi.resources.ResourceArgs 
     public static final FunctionConfigArgs Empty = new FunctionConfigArgs();
 
     @Import(name="comment", required=true)
-      private final Output<String> comment;
+    private Output<String> comment;
 
     public Output<String> comment() {
         return this.comment;
     }
 
     @Import(name="runtime", required=true)
-      private final Output<String> runtime;
+    private Output<String> runtime;
 
     public Output<String> runtime() {
         return this.runtime;
     }
 
-    public FunctionConfigArgs(
-        Output<String> comment,
-        Output<String> runtime) {
-        this.comment = Objects.requireNonNull(comment, "expected parameter 'comment' to be non-null");
-        this.runtime = Objects.requireNonNull(runtime, "expected parameter 'runtime' to be non-null");
-    }
+    private FunctionConfigArgs() {}
 
-    private FunctionConfigArgs() {
-        this.comment = Codegen.empty();
-        this.runtime = Codegen.empty();
+    private FunctionConfigArgs(FunctionConfigArgs $) {
+        this.comment = $.comment;
+        this.runtime = $.runtime;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FunctionConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> comment;
-        private Output<String> runtime;
+        private FunctionConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new FunctionConfigArgs();
         }
 
         public Builder(FunctionConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.comment = defaults.comment;
-    	      this.runtime = defaults.runtime;
+            $ = new FunctionConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder comment(Output<String> comment) {
-            this.comment = Objects.requireNonNull(comment);
+            $.comment = comment;
             return this;
         }
+
         public Builder comment(String comment) {
-            this.comment = Output.of(Objects.requireNonNull(comment));
-            return this;
+            return comment(Output.of(comment));
         }
+
         public Builder runtime(Output<String> runtime) {
-            this.runtime = Objects.requireNonNull(runtime);
+            $.runtime = runtime;
             return this;
         }
+
         public Builder runtime(String runtime) {
-            this.runtime = Output.of(Objects.requireNonNull(runtime));
-            return this;
-        }        public FunctionConfigArgs build() {
-            return new FunctionConfigArgs(comment, runtime);
+            return runtime(Output.of(runtime));
+        }
+
+        public FunctionConfigArgs build() {
+            $.comment = Objects.requireNonNull($.comment, "expected parameter 'comment' to be non-null");
+            $.runtime = Objects.requireNonNull($.runtime, "expected parameter 'runtime' to be non-null");
+            return $;
         }
     }
+
 }

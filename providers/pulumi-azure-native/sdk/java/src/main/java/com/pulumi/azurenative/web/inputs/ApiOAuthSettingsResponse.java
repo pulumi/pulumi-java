@@ -27,10 +27,10 @@ public final class ApiOAuthSettingsResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="clientId")
-      private final @Nullable String clientId;
+    private @Nullable String clientId;
 
     public Optional<String> clientId() {
-        return this.clientId == null ? Optional.empty() : Optional.ofNullable(this.clientId);
+        return Optional.ofNullable(this.clientId);
     }
 
     /**
@@ -38,10 +38,10 @@ public final class ApiOAuthSettingsResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="clientSecret")
-      private final @Nullable String clientSecret;
+    private @Nullable String clientSecret;
 
     public Optional<String> clientSecret() {
-        return this.clientSecret == null ? Optional.empty() : Optional.ofNullable(this.clientSecret);
+        return Optional.ofNullable(this.clientSecret);
     }
 
     /**
@@ -49,10 +49,10 @@ public final class ApiOAuthSettingsResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="customParameters")
-      private final @Nullable Map<String,ApiOAuthSettingsParameterResponse> customParameters;
+    private @Nullable Map<String,ApiOAuthSettingsParameterResponse> customParameters;
 
-    public Map<String,ApiOAuthSettingsParameterResponse> customParameters() {
-        return this.customParameters == null ? Map.of() : this.customParameters;
+    public Optional<Map<String,ApiOAuthSettingsParameterResponse>> customParameters() {
+        return Optional.ofNullable(this.customParameters);
     }
 
     /**
@@ -60,10 +60,10 @@ public final class ApiOAuthSettingsResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="identityProvider")
-      private final @Nullable String identityProvider;
+    private @Nullable String identityProvider;
 
     public Optional<String> identityProvider() {
-        return this.identityProvider == null ? Optional.empty() : Optional.ofNullable(this.identityProvider);
+        return Optional.ofNullable(this.identityProvider);
     }
 
     /**
@@ -71,10 +71,10 @@ public final class ApiOAuthSettingsResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="properties")
-      private final @Nullable Object properties;
+    private @Nullable Object properties;
 
     public Optional<Object> properties() {
-        return this.properties == null ? Optional.empty() : Optional.ofNullable(this.properties);
+        return Optional.ofNullable(this.properties);
     }
 
     /**
@@ -82,10 +82,10 @@ public final class ApiOAuthSettingsResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="redirectUrl")
-      private final @Nullable String redirectUrl;
+    private @Nullable String redirectUrl;
 
     public Optional<String> redirectUrl() {
-        return this.redirectUrl == null ? Optional.empty() : Optional.ofNullable(this.redirectUrl);
+        return Optional.ofNullable(this.redirectUrl);
     }
 
     /**
@@ -93,103 +93,84 @@ public final class ApiOAuthSettingsResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="scopes")
-      private final @Nullable List<String> scopes;
+    private @Nullable List<String> scopes;
 
-    public List<String> scopes() {
-        return this.scopes == null ? List.of() : this.scopes;
+    public Optional<List<String>> scopes() {
+        return Optional.ofNullable(this.scopes);
     }
 
-    public ApiOAuthSettingsResponse(
-        @Nullable String clientId,
-        @Nullable String clientSecret,
-        @Nullable Map<String,ApiOAuthSettingsParameterResponse> customParameters,
-        @Nullable String identityProvider,
-        @Nullable Object properties,
-        @Nullable String redirectUrl,
-        @Nullable List<String> scopes) {
-        this.clientId = clientId;
-        this.clientSecret = clientSecret;
-        this.customParameters = customParameters;
-        this.identityProvider = identityProvider;
-        this.properties = properties;
-        this.redirectUrl = redirectUrl;
-        this.scopes = scopes;
-    }
+    private ApiOAuthSettingsResponse() {}
 
-    private ApiOAuthSettingsResponse() {
-        this.clientId = null;
-        this.clientSecret = null;
-        this.customParameters = Map.of();
-        this.identityProvider = null;
-        this.properties = null;
-        this.redirectUrl = null;
-        this.scopes = List.of();
+    private ApiOAuthSettingsResponse(ApiOAuthSettingsResponse $) {
+        this.clientId = $.clientId;
+        this.clientSecret = $.clientSecret;
+        this.customParameters = $.customParameters;
+        this.identityProvider = $.identityProvider;
+        this.properties = $.properties;
+        this.redirectUrl = $.redirectUrl;
+        this.scopes = $.scopes;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ApiOAuthSettingsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String clientId;
-        private @Nullable String clientSecret;
-        private @Nullable Map<String,ApiOAuthSettingsParameterResponse> customParameters;
-        private @Nullable String identityProvider;
-        private @Nullable Object properties;
-        private @Nullable String redirectUrl;
-        private @Nullable List<String> scopes;
+        private ApiOAuthSettingsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ApiOAuthSettingsResponse();
         }
 
         public Builder(ApiOAuthSettingsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.clientId = defaults.clientId;
-    	      this.clientSecret = defaults.clientSecret;
-    	      this.customParameters = defaults.customParameters;
-    	      this.identityProvider = defaults.identityProvider;
-    	      this.properties = defaults.properties;
-    	      this.redirectUrl = defaults.redirectUrl;
-    	      this.scopes = defaults.scopes;
+            $ = new ApiOAuthSettingsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder clientId(@Nullable String clientId) {
-            this.clientId = clientId;
+            $.clientId = clientId;
             return this;
         }
+
         public Builder clientSecret(@Nullable String clientSecret) {
-            this.clientSecret = clientSecret;
+            $.clientSecret = clientSecret;
             return this;
         }
+
         public Builder customParameters(@Nullable Map<String,ApiOAuthSettingsParameterResponse> customParameters) {
-            this.customParameters = customParameters;
+            $.customParameters = customParameters;
             return this;
         }
+
         public Builder identityProvider(@Nullable String identityProvider) {
-            this.identityProvider = identityProvider;
+            $.identityProvider = identityProvider;
             return this;
         }
+
         public Builder properties(@Nullable Object properties) {
-            this.properties = properties;
+            $.properties = properties;
             return this;
         }
+
         public Builder redirectUrl(@Nullable String redirectUrl) {
-            this.redirectUrl = redirectUrl;
+            $.redirectUrl = redirectUrl;
             return this;
         }
+
         public Builder scopes(@Nullable List<String> scopes) {
-            this.scopes = scopes;
+            $.scopes = scopes;
             return this;
         }
+
         public Builder scopes(String... scopes) {
             return scopes(List.of(scopes));
-        }        public ApiOAuthSettingsResponse build() {
-            return new ApiOAuthSettingsResponse(clientId, clientSecret, customParameters, identityProvider, properties, redirectUrl, scopes);
+        }
+
+        public ApiOAuthSettingsResponse build() {
+            return $;
         }
     }
+
 }

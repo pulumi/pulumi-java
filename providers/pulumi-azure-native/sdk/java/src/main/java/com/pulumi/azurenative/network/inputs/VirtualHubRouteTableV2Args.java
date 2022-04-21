@@ -6,10 +6,10 @@ package com.pulumi.azurenative.network.inputs;
 import com.pulumi.azurenative.network.inputs.VirtualHubRouteV2Args;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class VirtualHubRouteTableV2Args extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="attachedConnections")
-      private final @Nullable Output<List<String>> attachedConnections;
+    private @Nullable Output<List<String>> attachedConnections;
 
-    public Output<List<String>> attachedConnections() {
-        return this.attachedConnections == null ? Codegen.empty() : this.attachedConnections;
+    public Optional<Output<List<String>>> attachedConnections() {
+        return Optional.ofNullable(this.attachedConnections);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class VirtualHubRouteTableV2Args extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="id")
-      private final @Nullable Output<String> id;
+    private @Nullable Output<String> id;
 
-    public Output<String> id() {
-        return this.id == null ? Codegen.empty() : this.id;
+    public Optional<Output<String>> id() {
+        return Optional.ofNullable(this.id);
     }
 
     /**
@@ -48,10 +48,10 @@ public final class VirtualHubRouteTableV2Args extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -59,95 +59,86 @@ public final class VirtualHubRouteTableV2Args extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="routes")
-      private final @Nullable Output<List<VirtualHubRouteV2Args>> routes;
+    private @Nullable Output<List<VirtualHubRouteV2Args>> routes;
 
-    public Output<List<VirtualHubRouteV2Args>> routes() {
-        return this.routes == null ? Codegen.empty() : this.routes;
+    public Optional<Output<List<VirtualHubRouteV2Args>>> routes() {
+        return Optional.ofNullable(this.routes);
     }
 
-    public VirtualHubRouteTableV2Args(
-        @Nullable Output<List<String>> attachedConnections,
-        @Nullable Output<String> id,
-        @Nullable Output<String> name,
-        @Nullable Output<List<VirtualHubRouteV2Args>> routes) {
-        this.attachedConnections = attachedConnections;
-        this.id = id;
-        this.name = name;
-        this.routes = routes;
-    }
+    private VirtualHubRouteTableV2Args() {}
 
-    private VirtualHubRouteTableV2Args() {
-        this.attachedConnections = Codegen.empty();
-        this.id = Codegen.empty();
-        this.name = Codegen.empty();
-        this.routes = Codegen.empty();
+    private VirtualHubRouteTableV2Args(VirtualHubRouteTableV2Args $) {
+        this.attachedConnections = $.attachedConnections;
+        this.id = $.id;
+        this.name = $.name;
+        this.routes = $.routes;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VirtualHubRouteTableV2Args defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> attachedConnections;
-        private @Nullable Output<String> id;
-        private @Nullable Output<String> name;
-        private @Nullable Output<List<VirtualHubRouteV2Args>> routes;
+        private VirtualHubRouteTableV2Args $;
 
         public Builder() {
-    	      // Empty
+            $ = new VirtualHubRouteTableV2Args();
         }
 
         public Builder(VirtualHubRouteTableV2Args defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.attachedConnections = defaults.attachedConnections;
-    	      this.id = defaults.id;
-    	      this.name = defaults.name;
-    	      this.routes = defaults.routes;
+            $ = new VirtualHubRouteTableV2Args(Objects.requireNonNull(defaults));
         }
 
         public Builder attachedConnections(@Nullable Output<List<String>> attachedConnections) {
-            this.attachedConnections = attachedConnections;
+            $.attachedConnections = attachedConnections;
             return this;
         }
-        public Builder attachedConnections(@Nullable List<String> attachedConnections) {
-            this.attachedConnections = Codegen.ofNullable(attachedConnections);
-            return this;
+
+        public Builder attachedConnections(List<String> attachedConnections) {
+            return attachedConnections(Output.of(attachedConnections));
         }
+
         public Builder attachedConnections(String... attachedConnections) {
             return attachedConnections(List.of(attachedConnections));
         }
+
         public Builder id(@Nullable Output<String> id) {
-            this.id = id;
+            $.id = id;
             return this;
         }
-        public Builder id(@Nullable String id) {
-            this.id = Codegen.ofNullable(id);
-            return this;
+
+        public Builder id(String id) {
+            return id(Output.of(id));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder routes(@Nullable Output<List<VirtualHubRouteV2Args>> routes) {
-            this.routes = routes;
+            $.routes = routes;
             return this;
         }
-        public Builder routes(@Nullable List<VirtualHubRouteV2Args> routes) {
-            this.routes = Codegen.ofNullable(routes);
-            return this;
+
+        public Builder routes(List<VirtualHubRouteV2Args> routes) {
+            return routes(Output.of(routes));
         }
+
         public Builder routes(VirtualHubRouteV2Args... routes) {
             return routes(List.of(routes));
-        }        public VirtualHubRouteTableV2Args build() {
-            return new VirtualHubRouteTableV2Args(attachedConnections, id, name, routes);
+        }
+
+        public VirtualHubRouteTableV2Args build() {
+            return $;
         }
     }
+
 }

@@ -24,7 +24,7 @@ public final class MediaGraphAssetSinkArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="assetName", required=true)
-      private final Output<String> assetName;
+    private Output<String> assetName;
 
     public Output<String> assetName() {
         return this.assetName;
@@ -35,7 +35,7 @@ public final class MediaGraphAssetSinkArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="inputs", required=true)
-      private final Output<List<String>> inputs;
+    private Output<List<String>> inputs;
 
     public Output<List<String>> inputs() {
         return this.inputs;
@@ -46,7 +46,7 @@ public final class MediaGraphAssetSinkArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="name", required=true)
-      private final Output<String> name;
+    private Output<String> name;
 
     public Output<String> name() {
         return this.name;
@@ -58,92 +58,86 @@ public final class MediaGraphAssetSinkArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="odataType", required=true)
-      private final Output<String> odataType;
+    private Output<String> odataType;
 
     public Output<String> odataType() {
         return this.odataType;
     }
 
-    public MediaGraphAssetSinkArgs(
-        Output<String> assetName,
-        Output<List<String>> inputs,
-        Output<String> name,
-        Output<String> odataType) {
-        this.assetName = Objects.requireNonNull(assetName, "expected parameter 'assetName' to be non-null");
-        this.inputs = Objects.requireNonNull(inputs, "expected parameter 'inputs' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.odataType = Codegen.stringProp("odataType").output().arg(odataType).require();
-    }
+    private MediaGraphAssetSinkArgs() {}
 
-    private MediaGraphAssetSinkArgs() {
-        this.assetName = Codegen.empty();
-        this.inputs = Codegen.empty();
-        this.name = Codegen.empty();
-        this.odataType = Codegen.empty();
+    private MediaGraphAssetSinkArgs(MediaGraphAssetSinkArgs $) {
+        this.assetName = $.assetName;
+        this.inputs = $.inputs;
+        this.name = $.name;
+        this.odataType = $.odataType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MediaGraphAssetSinkArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> assetName;
-        private Output<List<String>> inputs;
-        private Output<String> name;
-        private Output<String> odataType;
+        private MediaGraphAssetSinkArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new MediaGraphAssetSinkArgs();
         }
 
         public Builder(MediaGraphAssetSinkArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.assetName = defaults.assetName;
-    	      this.inputs = defaults.inputs;
-    	      this.name = defaults.name;
-    	      this.odataType = defaults.odataType;
+            $ = new MediaGraphAssetSinkArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder assetName(Output<String> assetName) {
-            this.assetName = Objects.requireNonNull(assetName);
+            $.assetName = assetName;
             return this;
         }
+
         public Builder assetName(String assetName) {
-            this.assetName = Output.of(Objects.requireNonNull(assetName));
-            return this;
+            return assetName(Output.of(assetName));
         }
+
         public Builder inputs(Output<List<String>> inputs) {
-            this.inputs = Objects.requireNonNull(inputs);
+            $.inputs = inputs;
             return this;
         }
+
         public Builder inputs(List<String> inputs) {
-            this.inputs = Output.of(Objects.requireNonNull(inputs));
-            return this;
+            return inputs(Output.of(inputs));
         }
+
         public Builder inputs(String... inputs) {
             return inputs(List.of(inputs));
         }
+
         public Builder name(Output<String> name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Output.of(Objects.requireNonNull(name));
-            return this;
+            return name(Output.of(name));
         }
+
         public Builder odataType(Output<String> odataType) {
-            this.odataType = Objects.requireNonNull(odataType);
+            $.odataType = odataType;
             return this;
         }
+
         public Builder odataType(String odataType) {
-            this.odataType = Output.of(Objects.requireNonNull(odataType));
-            return this;
-        }        public MediaGraphAssetSinkArgs build() {
-            return new MediaGraphAssetSinkArgs(assetName, inputs, name, odataType);
+            return odataType(Output.of(odataType));
+        }
+
+        public MediaGraphAssetSinkArgs build() {
+            $.assetName = Objects.requireNonNull($.assetName, "expected parameter 'assetName' to be non-null");
+            $.inputs = Objects.requireNonNull($.inputs, "expected parameter 'inputs' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.odataType = Codegen.stringProp("odataType").output().arg($.odataType).require();
+            return $;
         }
     }
+
 }

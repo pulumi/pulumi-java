@@ -17,7 +17,7 @@ public final class GetMSIXPackageArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="hostPoolName", required=true)
-      private final String hostPoolName;
+    private String hostPoolName;
 
     public String hostPoolName() {
         return this.hostPoolName;
@@ -28,7 +28,7 @@ public final class GetMSIXPackageArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="msixPackageFullName", required=true)
-      private final String msixPackageFullName;
+    private String msixPackageFullName;
 
     public String msixPackageFullName() {
         return this.msixPackageFullName;
@@ -39,64 +39,59 @@ public final class GetMSIXPackageArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public GetMSIXPackageArgs(
-        String hostPoolName,
-        String msixPackageFullName,
-        String resourceGroupName) {
-        this.hostPoolName = Objects.requireNonNull(hostPoolName, "expected parameter 'hostPoolName' to be non-null");
-        this.msixPackageFullName = Objects.requireNonNull(msixPackageFullName, "expected parameter 'msixPackageFullName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private GetMSIXPackageArgs() {}
 
-    private GetMSIXPackageArgs() {
-        this.hostPoolName = null;
-        this.msixPackageFullName = null;
-        this.resourceGroupName = null;
+    private GetMSIXPackageArgs(GetMSIXPackageArgs $) {
+        this.hostPoolName = $.hostPoolName;
+        this.msixPackageFullName = $.msixPackageFullName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetMSIXPackageArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String hostPoolName;
-        private String msixPackageFullName;
-        private String resourceGroupName;
+        private GetMSIXPackageArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetMSIXPackageArgs();
         }
 
         public Builder(GetMSIXPackageArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.hostPoolName = defaults.hostPoolName;
-    	      this.msixPackageFullName = defaults.msixPackageFullName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new GetMSIXPackageArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder hostPoolName(String hostPoolName) {
-            this.hostPoolName = Objects.requireNonNull(hostPoolName);
+            $.hostPoolName = hostPoolName;
             return this;
         }
+
         public Builder msixPackageFullName(String msixPackageFullName) {
-            this.msixPackageFullName = Objects.requireNonNull(msixPackageFullName);
+            $.msixPackageFullName = msixPackageFullName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public GetMSIXPackageArgs build() {
-            return new GetMSIXPackageArgs(hostPoolName, msixPackageFullName, resourceGroupName);
+        }
+
+        public GetMSIXPackageArgs build() {
+            $.hostPoolName = Objects.requireNonNull($.hostPoolName, "expected parameter 'hostPoolName' to be non-null");
+            $.msixPackageFullName = Objects.requireNonNull($.msixPackageFullName, "expected parameter 'msixPackageFullName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

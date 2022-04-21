@@ -5,9 +5,9 @@ package com.pulumi.docker.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -16,49 +16,48 @@ public final class ServiceModeReplicatedGetArgs extends com.pulumi.resources.Res
     public static final ServiceModeReplicatedGetArgs Empty = new ServiceModeReplicatedGetArgs();
 
     @Import(name="replicas")
-      private final @Nullable Output<Integer> replicas;
+    private @Nullable Output<Integer> replicas;
 
-    public Output<Integer> replicas() {
-        return this.replicas == null ? Codegen.empty() : this.replicas;
+    public Optional<Output<Integer>> replicas() {
+        return Optional.ofNullable(this.replicas);
     }
 
-    public ServiceModeReplicatedGetArgs(@Nullable Output<Integer> replicas) {
-        this.replicas = replicas;
-    }
+    private ServiceModeReplicatedGetArgs() {}
 
-    private ServiceModeReplicatedGetArgs() {
-        this.replicas = Codegen.empty();
+    private ServiceModeReplicatedGetArgs(ServiceModeReplicatedGetArgs $) {
+        this.replicas = $.replicas;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ServiceModeReplicatedGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> replicas;
+        private ServiceModeReplicatedGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ServiceModeReplicatedGetArgs();
         }
 
         public Builder(ServiceModeReplicatedGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.replicas = defaults.replicas;
+            $ = new ServiceModeReplicatedGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder replicas(@Nullable Output<Integer> replicas) {
-            this.replicas = replicas;
+            $.replicas = replicas;
             return this;
         }
-        public Builder replicas(@Nullable Integer replicas) {
-            this.replicas = Codegen.ofNullable(replicas);
-            return this;
-        }        public ServiceModeReplicatedGetArgs build() {
-            return new ServiceModeReplicatedGetArgs(replicas);
+
+        public Builder replicas(Integer replicas) {
+            return replicas(Output.of(replicas));
+        }
+
+        public ServiceModeReplicatedGetArgs build() {
+            return $;
         }
     }
+
 }

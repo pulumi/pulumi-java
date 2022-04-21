@@ -13,45 +13,45 @@ public final class GetInstanceCreditSpecification extends com.pulumi.resources.I
     public static final GetInstanceCreditSpecification Empty = new GetInstanceCreditSpecification();
 
     @Import(name="cpuCredits", required=true)
-      private final String cpuCredits;
+    private String cpuCredits;
 
     public String cpuCredits() {
         return this.cpuCredits;
     }
 
-    public GetInstanceCreditSpecification(String cpuCredits) {
-        this.cpuCredits = Objects.requireNonNull(cpuCredits, "expected parameter 'cpuCredits' to be non-null");
-    }
+    private GetInstanceCreditSpecification() {}
 
-    private GetInstanceCreditSpecification() {
-        this.cpuCredits = null;
+    private GetInstanceCreditSpecification(GetInstanceCreditSpecification $) {
+        this.cpuCredits = $.cpuCredits;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetInstanceCreditSpecification defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String cpuCredits;
+        private GetInstanceCreditSpecification $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetInstanceCreditSpecification();
         }
 
         public Builder(GetInstanceCreditSpecification defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cpuCredits = defaults.cpuCredits;
+            $ = new GetInstanceCreditSpecification(Objects.requireNonNull(defaults));
         }
 
         public Builder cpuCredits(String cpuCredits) {
-            this.cpuCredits = Objects.requireNonNull(cpuCredits);
+            $.cpuCredits = cpuCredits;
             return this;
-        }        public GetInstanceCreditSpecification build() {
-            return new GetInstanceCreditSpecification(cpuCredits);
+        }
+
+        public GetInstanceCreditSpecification build() {
+            $.cpuCredits = Objects.requireNonNull($.cpuCredits, "expected parameter 'cpuCredits' to be non-null");
+            return $;
         }
     }
+
 }

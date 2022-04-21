@@ -22,48 +22,49 @@ public final class V2AndroidKeyRestrictionsResponse extends com.pulumi.resources
      * 
      */
     @Import(name="allowedApplications", required=true)
-      private final List<V2AndroidApplicationResponse> allowedApplications;
+    private List<V2AndroidApplicationResponse> allowedApplications;
 
     public List<V2AndroidApplicationResponse> allowedApplications() {
         return this.allowedApplications;
     }
 
-    public V2AndroidKeyRestrictionsResponse(List<V2AndroidApplicationResponse> allowedApplications) {
-        this.allowedApplications = Objects.requireNonNull(allowedApplications, "expected parameter 'allowedApplications' to be non-null");
-    }
+    private V2AndroidKeyRestrictionsResponse() {}
 
-    private V2AndroidKeyRestrictionsResponse() {
-        this.allowedApplications = List.of();
+    private V2AndroidKeyRestrictionsResponse(V2AndroidKeyRestrictionsResponse $) {
+        this.allowedApplications = $.allowedApplications;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(V2AndroidKeyRestrictionsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<V2AndroidApplicationResponse> allowedApplications;
+        private V2AndroidKeyRestrictionsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new V2AndroidKeyRestrictionsResponse();
         }
 
         public Builder(V2AndroidKeyRestrictionsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.allowedApplications = defaults.allowedApplications;
+            $ = new V2AndroidKeyRestrictionsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder allowedApplications(List<V2AndroidApplicationResponse> allowedApplications) {
-            this.allowedApplications = Objects.requireNonNull(allowedApplications);
+            $.allowedApplications = allowedApplications;
             return this;
         }
+
         public Builder allowedApplications(V2AndroidApplicationResponse... allowedApplications) {
             return allowedApplications(List.of(allowedApplications));
-        }        public V2AndroidKeyRestrictionsResponse build() {
-            return new V2AndroidKeyRestrictionsResponse(allowedApplications);
+        }
+
+        public V2AndroidKeyRestrictionsResponse build() {
+            $.allowedApplications = Objects.requireNonNull($.allowedApplications, "expected parameter 'allowedApplications' to be non-null");
+            return $;
         }
     }
+
 }

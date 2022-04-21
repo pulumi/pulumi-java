@@ -5,10 +5,10 @@ package com.pulumi.aws.cloudfront.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -17,52 +17,52 @@ public final class ResponseHeadersPolicyCorsConfigAccessControlAllowMethodsArgs 
     public static final ResponseHeadersPolicyCorsConfigAccessControlAllowMethodsArgs Empty = new ResponseHeadersPolicyCorsConfigAccessControlAllowMethodsArgs();
 
     @Import(name="items")
-      private final @Nullable Output<List<String>> items;
+    private @Nullable Output<List<String>> items;
 
-    public Output<List<String>> items() {
-        return this.items == null ? Codegen.empty() : this.items;
+    public Optional<Output<List<String>>> items() {
+        return Optional.ofNullable(this.items);
     }
 
-    public ResponseHeadersPolicyCorsConfigAccessControlAllowMethodsArgs(@Nullable Output<List<String>> items) {
-        this.items = items;
-    }
+    private ResponseHeadersPolicyCorsConfigAccessControlAllowMethodsArgs() {}
 
-    private ResponseHeadersPolicyCorsConfigAccessControlAllowMethodsArgs() {
-        this.items = Codegen.empty();
+    private ResponseHeadersPolicyCorsConfigAccessControlAllowMethodsArgs(ResponseHeadersPolicyCorsConfigAccessControlAllowMethodsArgs $) {
+        this.items = $.items;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ResponseHeadersPolicyCorsConfigAccessControlAllowMethodsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> items;
+        private ResponseHeadersPolicyCorsConfigAccessControlAllowMethodsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ResponseHeadersPolicyCorsConfigAccessControlAllowMethodsArgs();
         }
 
         public Builder(ResponseHeadersPolicyCorsConfigAccessControlAllowMethodsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.items = defaults.items;
+            $ = new ResponseHeadersPolicyCorsConfigAccessControlAllowMethodsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder items(@Nullable Output<List<String>> items) {
-            this.items = items;
+            $.items = items;
             return this;
         }
-        public Builder items(@Nullable List<String> items) {
-            this.items = Codegen.ofNullable(items);
-            return this;
+
+        public Builder items(List<String> items) {
+            return items(Output.of(items));
         }
+
         public Builder items(String... items) {
             return items(List.of(items));
-        }        public ResponseHeadersPolicyCorsConfigAccessControlAllowMethodsArgs build() {
-            return new ResponseHeadersPolicyCorsConfigAccessControlAllowMethodsArgs(items);
+        }
+
+        public ResponseHeadersPolicyCorsConfigAccessControlAllowMethodsArgs build() {
+            return $;
         }
     }
+
 }

@@ -5,7 +5,6 @@ package com.pulumi.azurenative.servicefabric.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.util.Objects;
 
@@ -19,49 +18,49 @@ public final class ApplicationTypeVersionsCleanupPolicyArgs extends com.pulumi.r
      * 
      */
     @Import(name="maxUnusedVersionsToKeep", required=true)
-      private final Output<Double> maxUnusedVersionsToKeep;
+    private Output<Double> maxUnusedVersionsToKeep;
 
     public Output<Double> maxUnusedVersionsToKeep() {
         return this.maxUnusedVersionsToKeep;
     }
 
-    public ApplicationTypeVersionsCleanupPolicyArgs(Output<Double> maxUnusedVersionsToKeep) {
-        this.maxUnusedVersionsToKeep = Objects.requireNonNull(maxUnusedVersionsToKeep, "expected parameter 'maxUnusedVersionsToKeep' to be non-null");
-    }
+    private ApplicationTypeVersionsCleanupPolicyArgs() {}
 
-    private ApplicationTypeVersionsCleanupPolicyArgs() {
-        this.maxUnusedVersionsToKeep = Codegen.empty();
+    private ApplicationTypeVersionsCleanupPolicyArgs(ApplicationTypeVersionsCleanupPolicyArgs $) {
+        this.maxUnusedVersionsToKeep = $.maxUnusedVersionsToKeep;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ApplicationTypeVersionsCleanupPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Double> maxUnusedVersionsToKeep;
+        private ApplicationTypeVersionsCleanupPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ApplicationTypeVersionsCleanupPolicyArgs();
         }
 
         public Builder(ApplicationTypeVersionsCleanupPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.maxUnusedVersionsToKeep = defaults.maxUnusedVersionsToKeep;
+            $ = new ApplicationTypeVersionsCleanupPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder maxUnusedVersionsToKeep(Output<Double> maxUnusedVersionsToKeep) {
-            this.maxUnusedVersionsToKeep = Objects.requireNonNull(maxUnusedVersionsToKeep);
+            $.maxUnusedVersionsToKeep = maxUnusedVersionsToKeep;
             return this;
         }
+
         public Builder maxUnusedVersionsToKeep(Double maxUnusedVersionsToKeep) {
-            this.maxUnusedVersionsToKeep = Output.of(Objects.requireNonNull(maxUnusedVersionsToKeep));
-            return this;
-        }        public ApplicationTypeVersionsCleanupPolicyArgs build() {
-            return new ApplicationTypeVersionsCleanupPolicyArgs(maxUnusedVersionsToKeep);
+            return maxUnusedVersionsToKeep(Output.of(maxUnusedVersionsToKeep));
+        }
+
+        public ApplicationTypeVersionsCleanupPolicyArgs build() {
+            $.maxUnusedVersionsToKeep = Objects.requireNonNull($.maxUnusedVersionsToKeep, "expected parameter 'maxUnusedVersionsToKeep' to be non-null");
+            return $;
         }
     }
+
 }

@@ -7,10 +7,10 @@ import com.pulumi.aws.s3control.inputs.MultiRegionAccessPointDetailsPublicAccess
 import com.pulumi.aws.s3control.inputs.MultiRegionAccessPointDetailsRegionGetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,7 +23,7 @@ public final class MultiRegionAccessPointDetailsGetArgs extends com.pulumi.resou
      * 
      */
     @Import(name="name", required=true)
-      private final Output<String> name;
+    private Output<String> name;
 
     public Output<String> name() {
         return this.name;
@@ -34,10 +34,10 @@ public final class MultiRegionAccessPointDetailsGetArgs extends com.pulumi.resou
      * 
      */
     @Import(name="publicAccessBlock")
-      private final @Nullable Output<MultiRegionAccessPointDetailsPublicAccessBlockGetArgs> publicAccessBlock;
+    private @Nullable Output<MultiRegionAccessPointDetailsPublicAccessBlockGetArgs> publicAccessBlock;
 
-    public Output<MultiRegionAccessPointDetailsPublicAccessBlockGetArgs> publicAccessBlock() {
-        return this.publicAccessBlock == null ? Codegen.empty() : this.publicAccessBlock;
+    public Optional<Output<MultiRegionAccessPointDetailsPublicAccessBlockGetArgs>> publicAccessBlock() {
+        return Optional.ofNullable(this.publicAccessBlock);
     }
 
     /**
@@ -45,79 +45,74 @@ public final class MultiRegionAccessPointDetailsGetArgs extends com.pulumi.resou
      * 
      */
     @Import(name="regions", required=true)
-      private final Output<List<MultiRegionAccessPointDetailsRegionGetArgs>> regions;
+    private Output<List<MultiRegionAccessPointDetailsRegionGetArgs>> regions;
 
     public Output<List<MultiRegionAccessPointDetailsRegionGetArgs>> regions() {
         return this.regions;
     }
 
-    public MultiRegionAccessPointDetailsGetArgs(
-        Output<String> name,
-        @Nullable Output<MultiRegionAccessPointDetailsPublicAccessBlockGetArgs> publicAccessBlock,
-        Output<List<MultiRegionAccessPointDetailsRegionGetArgs>> regions) {
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.publicAccessBlock = publicAccessBlock;
-        this.regions = Objects.requireNonNull(regions, "expected parameter 'regions' to be non-null");
-    }
+    private MultiRegionAccessPointDetailsGetArgs() {}
 
-    private MultiRegionAccessPointDetailsGetArgs() {
-        this.name = Codegen.empty();
-        this.publicAccessBlock = Codegen.empty();
-        this.regions = Codegen.empty();
+    private MultiRegionAccessPointDetailsGetArgs(MultiRegionAccessPointDetailsGetArgs $) {
+        this.name = $.name;
+        this.publicAccessBlock = $.publicAccessBlock;
+        this.regions = $.regions;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MultiRegionAccessPointDetailsGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> name;
-        private @Nullable Output<MultiRegionAccessPointDetailsPublicAccessBlockGetArgs> publicAccessBlock;
-        private Output<List<MultiRegionAccessPointDetailsRegionGetArgs>> regions;
+        private MultiRegionAccessPointDetailsGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new MultiRegionAccessPointDetailsGetArgs();
         }
 
         public Builder(MultiRegionAccessPointDetailsGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.publicAccessBlock = defaults.publicAccessBlock;
-    	      this.regions = defaults.regions;
+            $ = new MultiRegionAccessPointDetailsGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder name(Output<String> name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Output.of(Objects.requireNonNull(name));
-            return this;
+            return name(Output.of(name));
         }
+
         public Builder publicAccessBlock(@Nullable Output<MultiRegionAccessPointDetailsPublicAccessBlockGetArgs> publicAccessBlock) {
-            this.publicAccessBlock = publicAccessBlock;
+            $.publicAccessBlock = publicAccessBlock;
             return this;
         }
-        public Builder publicAccessBlock(@Nullable MultiRegionAccessPointDetailsPublicAccessBlockGetArgs publicAccessBlock) {
-            this.publicAccessBlock = Codegen.ofNullable(publicAccessBlock);
-            return this;
+
+        public Builder publicAccessBlock(MultiRegionAccessPointDetailsPublicAccessBlockGetArgs publicAccessBlock) {
+            return publicAccessBlock(Output.of(publicAccessBlock));
         }
+
         public Builder regions(Output<List<MultiRegionAccessPointDetailsRegionGetArgs>> regions) {
-            this.regions = Objects.requireNonNull(regions);
+            $.regions = regions;
             return this;
         }
+
         public Builder regions(List<MultiRegionAccessPointDetailsRegionGetArgs> regions) {
-            this.regions = Output.of(Objects.requireNonNull(regions));
-            return this;
+            return regions(Output.of(regions));
         }
+
         public Builder regions(MultiRegionAccessPointDetailsRegionGetArgs... regions) {
             return regions(List.of(regions));
-        }        public MultiRegionAccessPointDetailsGetArgs build() {
-            return new MultiRegionAccessPointDetailsGetArgs(name, publicAccessBlock, regions);
+        }
+
+        public MultiRegionAccessPointDetailsGetArgs build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.regions = Objects.requireNonNull($.regions, "expected parameter 'regions' to be non-null");
+            return $;
         }
     }
+
 }

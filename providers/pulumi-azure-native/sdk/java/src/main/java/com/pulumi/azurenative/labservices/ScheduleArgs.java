@@ -6,9 +6,9 @@ package com.pulumi.azurenative.labservices;
 import com.pulumi.azurenative.labservices.inputs.RecurrencePatternArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,7 +21,7 @@ public final class ScheduleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="labName", required=true)
-      private final Output<String> labName;
+    private Output<String> labName;
 
     public Output<String> labName() {
         return this.labName;
@@ -32,10 +32,10 @@ public final class ScheduleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="notes")
-      private final @Nullable Output<String> notes;
+    private @Nullable Output<String> notes;
 
-    public Output<String> notes() {
-        return this.notes == null ? Codegen.empty() : this.notes;
+    public Optional<Output<String>> notes() {
+        return Optional.ofNullable(this.notes);
     }
 
     /**
@@ -43,10 +43,10 @@ public final class ScheduleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="recurrencePattern")
-      private final @Nullable Output<RecurrencePatternArgs> recurrencePattern;
+    private @Nullable Output<RecurrencePatternArgs> recurrencePattern;
 
-    public Output<RecurrencePatternArgs> recurrencePattern() {
-        return this.recurrencePattern == null ? Codegen.empty() : this.recurrencePattern;
+    public Optional<Output<RecurrencePatternArgs>> recurrencePattern() {
+        return Optional.ofNullable(this.recurrencePattern);
     }
 
     /**
@@ -54,7 +54,7 @@ public final class ScheduleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -65,10 +65,10 @@ public final class ScheduleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="scheduleName")
-      private final @Nullable Output<String> scheduleName;
+    private @Nullable Output<String> scheduleName;
 
-    public Output<String> scheduleName() {
-        return this.scheduleName == null ? Codegen.empty() : this.scheduleName;
+    public Optional<Output<String>> scheduleName() {
+        return Optional.ofNullable(this.scheduleName);
     }
 
     /**
@@ -76,10 +76,10 @@ public final class ScheduleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="startAt")
-      private final @Nullable Output<String> startAt;
+    private @Nullable Output<String> startAt;
 
-    public Output<String> startAt() {
-        return this.startAt == null ? Codegen.empty() : this.startAt;
+    public Optional<Output<String>> startAt() {
+        return Optional.ofNullable(this.startAt);
     }
 
     /**
@@ -87,7 +87,7 @@ public final class ScheduleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="stopAt", required=true)
-      private final Output<String> stopAt;
+    private Output<String> stopAt;
 
     public Output<String> stopAt() {
         return this.stopAt;
@@ -98,141 +98,122 @@ public final class ScheduleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="timeZoneId", required=true)
-      private final Output<String> timeZoneId;
+    private Output<String> timeZoneId;
 
     public Output<String> timeZoneId() {
         return this.timeZoneId;
     }
 
-    public ScheduleArgs(
-        Output<String> labName,
-        @Nullable Output<String> notes,
-        @Nullable Output<RecurrencePatternArgs> recurrencePattern,
-        Output<String> resourceGroupName,
-        @Nullable Output<String> scheduleName,
-        @Nullable Output<String> startAt,
-        Output<String> stopAt,
-        Output<String> timeZoneId) {
-        this.labName = Objects.requireNonNull(labName, "expected parameter 'labName' to be non-null");
-        this.notes = notes;
-        this.recurrencePattern = recurrencePattern;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.scheduleName = scheduleName;
-        this.startAt = startAt;
-        this.stopAt = Objects.requireNonNull(stopAt, "expected parameter 'stopAt' to be non-null");
-        this.timeZoneId = Objects.requireNonNull(timeZoneId, "expected parameter 'timeZoneId' to be non-null");
-    }
+    private ScheduleArgs() {}
 
-    private ScheduleArgs() {
-        this.labName = Codegen.empty();
-        this.notes = Codegen.empty();
-        this.recurrencePattern = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.scheduleName = Codegen.empty();
-        this.startAt = Codegen.empty();
-        this.stopAt = Codegen.empty();
-        this.timeZoneId = Codegen.empty();
+    private ScheduleArgs(ScheduleArgs $) {
+        this.labName = $.labName;
+        this.notes = $.notes;
+        this.recurrencePattern = $.recurrencePattern;
+        this.resourceGroupName = $.resourceGroupName;
+        this.scheduleName = $.scheduleName;
+        this.startAt = $.startAt;
+        this.stopAt = $.stopAt;
+        this.timeZoneId = $.timeZoneId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ScheduleArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> labName;
-        private @Nullable Output<String> notes;
-        private @Nullable Output<RecurrencePatternArgs> recurrencePattern;
-        private Output<String> resourceGroupName;
-        private @Nullable Output<String> scheduleName;
-        private @Nullable Output<String> startAt;
-        private Output<String> stopAt;
-        private Output<String> timeZoneId;
+        private ScheduleArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ScheduleArgs();
         }
 
         public Builder(ScheduleArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.labName = defaults.labName;
-    	      this.notes = defaults.notes;
-    	      this.recurrencePattern = defaults.recurrencePattern;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.scheduleName = defaults.scheduleName;
-    	      this.startAt = defaults.startAt;
-    	      this.stopAt = defaults.stopAt;
-    	      this.timeZoneId = defaults.timeZoneId;
+            $ = new ScheduleArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder labName(Output<String> labName) {
-            this.labName = Objects.requireNonNull(labName);
+            $.labName = labName;
             return this;
         }
+
         public Builder labName(String labName) {
-            this.labName = Output.of(Objects.requireNonNull(labName));
-            return this;
+            return labName(Output.of(labName));
         }
+
         public Builder notes(@Nullable Output<String> notes) {
-            this.notes = notes;
+            $.notes = notes;
             return this;
         }
-        public Builder notes(@Nullable String notes) {
-            this.notes = Codegen.ofNullable(notes);
-            return this;
+
+        public Builder notes(String notes) {
+            return notes(Output.of(notes));
         }
+
         public Builder recurrencePattern(@Nullable Output<RecurrencePatternArgs> recurrencePattern) {
-            this.recurrencePattern = recurrencePattern;
+            $.recurrencePattern = recurrencePattern;
             return this;
         }
-        public Builder recurrencePattern(@Nullable RecurrencePatternArgs recurrencePattern) {
-            this.recurrencePattern = Codegen.ofNullable(recurrencePattern);
-            return this;
+
+        public Builder recurrencePattern(RecurrencePatternArgs recurrencePattern) {
+            return recurrencePattern(Output.of(recurrencePattern));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder scheduleName(@Nullable Output<String> scheduleName) {
-            this.scheduleName = scheduleName;
+            $.scheduleName = scheduleName;
             return this;
         }
-        public Builder scheduleName(@Nullable String scheduleName) {
-            this.scheduleName = Codegen.ofNullable(scheduleName);
-            return this;
+
+        public Builder scheduleName(String scheduleName) {
+            return scheduleName(Output.of(scheduleName));
         }
+
         public Builder startAt(@Nullable Output<String> startAt) {
-            this.startAt = startAt;
+            $.startAt = startAt;
             return this;
         }
-        public Builder startAt(@Nullable String startAt) {
-            this.startAt = Codegen.ofNullable(startAt);
-            return this;
+
+        public Builder startAt(String startAt) {
+            return startAt(Output.of(startAt));
         }
+
         public Builder stopAt(Output<String> stopAt) {
-            this.stopAt = Objects.requireNonNull(stopAt);
+            $.stopAt = stopAt;
             return this;
         }
+
         public Builder stopAt(String stopAt) {
-            this.stopAt = Output.of(Objects.requireNonNull(stopAt));
-            return this;
+            return stopAt(Output.of(stopAt));
         }
+
         public Builder timeZoneId(Output<String> timeZoneId) {
-            this.timeZoneId = Objects.requireNonNull(timeZoneId);
+            $.timeZoneId = timeZoneId;
             return this;
         }
+
         public Builder timeZoneId(String timeZoneId) {
-            this.timeZoneId = Output.of(Objects.requireNonNull(timeZoneId));
-            return this;
-        }        public ScheduleArgs build() {
-            return new ScheduleArgs(labName, notes, recurrencePattern, resourceGroupName, scheduleName, startAt, stopAt, timeZoneId);
+            return timeZoneId(Output.of(timeZoneId));
+        }
+
+        public ScheduleArgs build() {
+            $.labName = Objects.requireNonNull($.labName, "expected parameter 'labName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.stopAt = Objects.requireNonNull($.stopAt, "expected parameter 'stopAt' to be non-null");
+            $.timeZoneId = Objects.requireNonNull($.timeZoneId, "expected parameter 'timeZoneId' to be non-null");
+            return $;
         }
     }
+
 }

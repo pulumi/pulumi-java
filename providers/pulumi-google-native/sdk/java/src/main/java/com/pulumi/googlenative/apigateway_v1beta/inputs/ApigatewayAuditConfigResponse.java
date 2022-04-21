@@ -23,7 +23,7 @@ public final class ApigatewayAuditConfigResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="auditLogConfigs", required=true)
-      private final List<ApigatewayAuditLogConfigResponse> auditLogConfigs;
+    private List<ApigatewayAuditLogConfigResponse> auditLogConfigs;
 
     public List<ApigatewayAuditLogConfigResponse> auditLogConfigs() {
         return this.auditLogConfigs;
@@ -34,58 +34,56 @@ public final class ApigatewayAuditConfigResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="service", required=true)
-      private final String service;
+    private String service;
 
     public String service() {
         return this.service;
     }
 
-    public ApigatewayAuditConfigResponse(
-        List<ApigatewayAuditLogConfigResponse> auditLogConfigs,
-        String service) {
-        this.auditLogConfigs = Objects.requireNonNull(auditLogConfigs, "expected parameter 'auditLogConfigs' to be non-null");
-        this.service = Objects.requireNonNull(service, "expected parameter 'service' to be non-null");
-    }
+    private ApigatewayAuditConfigResponse() {}
 
-    private ApigatewayAuditConfigResponse() {
-        this.auditLogConfigs = List.of();
-        this.service = null;
+    private ApigatewayAuditConfigResponse(ApigatewayAuditConfigResponse $) {
+        this.auditLogConfigs = $.auditLogConfigs;
+        this.service = $.service;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ApigatewayAuditConfigResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<ApigatewayAuditLogConfigResponse> auditLogConfigs;
-        private String service;
+        private ApigatewayAuditConfigResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ApigatewayAuditConfigResponse();
         }
 
         public Builder(ApigatewayAuditConfigResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.auditLogConfigs = defaults.auditLogConfigs;
-    	      this.service = defaults.service;
+            $ = new ApigatewayAuditConfigResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder auditLogConfigs(List<ApigatewayAuditLogConfigResponse> auditLogConfigs) {
-            this.auditLogConfigs = Objects.requireNonNull(auditLogConfigs);
+            $.auditLogConfigs = auditLogConfigs;
             return this;
         }
+
         public Builder auditLogConfigs(ApigatewayAuditLogConfigResponse... auditLogConfigs) {
             return auditLogConfigs(List.of(auditLogConfigs));
         }
+
         public Builder service(String service) {
-            this.service = Objects.requireNonNull(service);
+            $.service = service;
             return this;
-        }        public ApigatewayAuditConfigResponse build() {
-            return new ApigatewayAuditConfigResponse(auditLogConfigs, service);
+        }
+
+        public ApigatewayAuditConfigResponse build() {
+            $.auditLogConfigs = Objects.requireNonNull($.auditLogConfigs, "expected parameter 'auditLogConfigs' to be non-null");
+            $.service = Objects.requireNonNull($.service, "expected parameter 'service' to be non-null");
+            return $;
         }
     }
+
 }

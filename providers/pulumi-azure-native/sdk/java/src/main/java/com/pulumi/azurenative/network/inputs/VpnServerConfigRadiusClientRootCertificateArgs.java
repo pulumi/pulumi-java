@@ -5,9 +5,9 @@ package com.pulumi.azurenative.network.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class VpnServerConfigRadiusClientRootCertificateArgs extends com.pu
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -35,63 +35,58 @@ public final class VpnServerConfigRadiusClientRootCertificateArgs extends com.pu
      * 
      */
     @Import(name="thumbprint")
-      private final @Nullable Output<String> thumbprint;
+    private @Nullable Output<String> thumbprint;
 
-    public Output<String> thumbprint() {
-        return this.thumbprint == null ? Codegen.empty() : this.thumbprint;
+    public Optional<Output<String>> thumbprint() {
+        return Optional.ofNullable(this.thumbprint);
     }
 
-    public VpnServerConfigRadiusClientRootCertificateArgs(
-        @Nullable Output<String> name,
-        @Nullable Output<String> thumbprint) {
-        this.name = name;
-        this.thumbprint = thumbprint;
-    }
+    private VpnServerConfigRadiusClientRootCertificateArgs() {}
 
-    private VpnServerConfigRadiusClientRootCertificateArgs() {
-        this.name = Codegen.empty();
-        this.thumbprint = Codegen.empty();
+    private VpnServerConfigRadiusClientRootCertificateArgs(VpnServerConfigRadiusClientRootCertificateArgs $) {
+        this.name = $.name;
+        this.thumbprint = $.thumbprint;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VpnServerConfigRadiusClientRootCertificateArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> thumbprint;
+        private VpnServerConfigRadiusClientRootCertificateArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new VpnServerConfigRadiusClientRootCertificateArgs();
         }
 
         public Builder(VpnServerConfigRadiusClientRootCertificateArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.thumbprint = defaults.thumbprint;
+            $ = new VpnServerConfigRadiusClientRootCertificateArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder thumbprint(@Nullable Output<String> thumbprint) {
-            this.thumbprint = thumbprint;
+            $.thumbprint = thumbprint;
             return this;
         }
-        public Builder thumbprint(@Nullable String thumbprint) {
-            this.thumbprint = Codegen.ofNullable(thumbprint);
-            return this;
-        }        public VpnServerConfigRadiusClientRootCertificateArgs build() {
-            return new VpnServerConfigRadiusClientRootCertificateArgs(name, thumbprint);
+
+        public Builder thumbprint(String thumbprint) {
+            return thumbprint(Output.of(thumbprint));
+        }
+
+        public VpnServerConfigRadiusClientRootCertificateArgs build() {
+            return $;
         }
     }
+
 }

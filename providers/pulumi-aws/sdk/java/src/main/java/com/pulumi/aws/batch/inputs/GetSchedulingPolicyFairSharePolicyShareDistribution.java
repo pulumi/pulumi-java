@@ -18,7 +18,7 @@ public final class GetSchedulingPolicyFairSharePolicyShareDistribution extends c
      * 
      */
     @Import(name="shareIdentifier", required=true)
-      private final String shareIdentifier;
+    private String shareIdentifier;
 
     public String shareIdentifier() {
         return this.shareIdentifier;
@@ -29,55 +29,52 @@ public final class GetSchedulingPolicyFairSharePolicyShareDistribution extends c
      * 
      */
     @Import(name="weightFactor", required=true)
-      private final Double weightFactor;
+    private Double weightFactor;
 
     public Double weightFactor() {
         return this.weightFactor;
     }
 
-    public GetSchedulingPolicyFairSharePolicyShareDistribution(
-        String shareIdentifier,
-        Double weightFactor) {
-        this.shareIdentifier = Objects.requireNonNull(shareIdentifier, "expected parameter 'shareIdentifier' to be non-null");
-        this.weightFactor = Objects.requireNonNull(weightFactor, "expected parameter 'weightFactor' to be non-null");
-    }
+    private GetSchedulingPolicyFairSharePolicyShareDistribution() {}
 
-    private GetSchedulingPolicyFairSharePolicyShareDistribution() {
-        this.shareIdentifier = null;
-        this.weightFactor = null;
+    private GetSchedulingPolicyFairSharePolicyShareDistribution(GetSchedulingPolicyFairSharePolicyShareDistribution $) {
+        this.shareIdentifier = $.shareIdentifier;
+        this.weightFactor = $.weightFactor;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetSchedulingPolicyFairSharePolicyShareDistribution defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String shareIdentifier;
-        private Double weightFactor;
+        private GetSchedulingPolicyFairSharePolicyShareDistribution $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetSchedulingPolicyFairSharePolicyShareDistribution();
         }
 
         public Builder(GetSchedulingPolicyFairSharePolicyShareDistribution defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.shareIdentifier = defaults.shareIdentifier;
-    	      this.weightFactor = defaults.weightFactor;
+            $ = new GetSchedulingPolicyFairSharePolicyShareDistribution(Objects.requireNonNull(defaults));
         }
 
         public Builder shareIdentifier(String shareIdentifier) {
-            this.shareIdentifier = Objects.requireNonNull(shareIdentifier);
+            $.shareIdentifier = shareIdentifier;
             return this;
         }
+
         public Builder weightFactor(Double weightFactor) {
-            this.weightFactor = Objects.requireNonNull(weightFactor);
+            $.weightFactor = weightFactor;
             return this;
-        }        public GetSchedulingPolicyFairSharePolicyShareDistribution build() {
-            return new GetSchedulingPolicyFairSharePolicyShareDistribution(shareIdentifier, weightFactor);
+        }
+
+        public GetSchedulingPolicyFairSharePolicyShareDistribution build() {
+            $.shareIdentifier = Objects.requireNonNull($.shareIdentifier, "expected parameter 'shareIdentifier' to be non-null");
+            $.weightFactor = Objects.requireNonNull($.weightFactor, "expected parameter 'weightFactor' to be non-null");
+            return $;
         }
     }
+
 }

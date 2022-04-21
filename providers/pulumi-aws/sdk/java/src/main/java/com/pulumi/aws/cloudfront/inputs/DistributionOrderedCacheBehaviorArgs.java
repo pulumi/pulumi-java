@@ -8,12 +8,12 @@ import com.pulumi.aws.cloudfront.inputs.DistributionOrderedCacheBehaviorFunction
 import com.pulumi.aws.cloudfront.inputs.DistributionOrderedCacheBehaviorLambdaFunctionAssociationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,7 +27,7 @@ public final class DistributionOrderedCacheBehaviorArgs extends com.pulumi.resou
      * 
      */
     @Import(name="allowedMethods", required=true)
-      private final Output<List<String>> allowedMethods;
+    private Output<List<String>> allowedMethods;
 
     public Output<List<String>> allowedMethods() {
         return this.allowedMethods;
@@ -39,10 +39,10 @@ public final class DistributionOrderedCacheBehaviorArgs extends com.pulumi.resou
      * 
      */
     @Import(name="cachePolicyId")
-      private final @Nullable Output<String> cachePolicyId;
+    private @Nullable Output<String> cachePolicyId;
 
-    public Output<String> cachePolicyId() {
-        return this.cachePolicyId == null ? Codegen.empty() : this.cachePolicyId;
+    public Optional<Output<String>> cachePolicyId() {
+        return Optional.ofNullable(this.cachePolicyId);
     }
 
     /**
@@ -51,7 +51,7 @@ public final class DistributionOrderedCacheBehaviorArgs extends com.pulumi.resou
      * 
      */
     @Import(name="cachedMethods", required=true)
-      private final Output<List<String>> cachedMethods;
+    private Output<List<String>> cachedMethods;
 
     public Output<List<String>> cachedMethods() {
         return this.cachedMethods;
@@ -64,10 +64,10 @@ public final class DistributionOrderedCacheBehaviorArgs extends com.pulumi.resou
      * 
      */
     @Import(name="compress")
-      private final @Nullable Output<Boolean> compress;
+    private @Nullable Output<Boolean> compress;
 
-    public Output<Boolean> compress() {
-        return this.compress == null ? Codegen.empty() : this.compress;
+    public Optional<Output<Boolean>> compress() {
+        return Optional.ofNullable(this.compress);
     }
 
     /**
@@ -77,10 +77,10 @@ public final class DistributionOrderedCacheBehaviorArgs extends com.pulumi.resou
      * 
      */
     @Import(name="defaultTtl")
-      private final @Nullable Output<Integer> defaultTtl;
+    private @Nullable Output<Integer> defaultTtl;
 
-    public Output<Integer> defaultTtl() {
-        return this.defaultTtl == null ? Codegen.empty() : this.defaultTtl;
+    public Optional<Output<Integer>> defaultTtl() {
+        return Optional.ofNullable(this.defaultTtl);
     }
 
     /**
@@ -88,10 +88,10 @@ public final class DistributionOrderedCacheBehaviorArgs extends com.pulumi.resou
      * 
      */
     @Import(name="fieldLevelEncryptionId")
-      private final @Nullable Output<String> fieldLevelEncryptionId;
+    private @Nullable Output<String> fieldLevelEncryptionId;
 
-    public Output<String> fieldLevelEncryptionId() {
-        return this.fieldLevelEncryptionId == null ? Codegen.empty() : this.fieldLevelEncryptionId;
+    public Optional<Output<String>> fieldLevelEncryptionId() {
+        return Optional.ofNullable(this.fieldLevelEncryptionId);
     }
 
     /**
@@ -100,10 +100,10 @@ public final class DistributionOrderedCacheBehaviorArgs extends com.pulumi.resou
      * 
      */
     @Import(name="forwardedValues")
-      private final @Nullable Output<DistributionOrderedCacheBehaviorForwardedValuesArgs> forwardedValues;
+    private @Nullable Output<DistributionOrderedCacheBehaviorForwardedValuesArgs> forwardedValues;
 
-    public Output<DistributionOrderedCacheBehaviorForwardedValuesArgs> forwardedValues() {
-        return this.forwardedValues == null ? Codegen.empty() : this.forwardedValues;
+    public Optional<Output<DistributionOrderedCacheBehaviorForwardedValuesArgs>> forwardedValues() {
+        return Optional.ofNullable(this.forwardedValues);
     }
 
     /**
@@ -112,10 +112,10 @@ public final class DistributionOrderedCacheBehaviorArgs extends com.pulumi.resou
      * 
      */
     @Import(name="functionAssociations")
-      private final @Nullable Output<List<DistributionOrderedCacheBehaviorFunctionAssociationArgs>> functionAssociations;
+    private @Nullable Output<List<DistributionOrderedCacheBehaviorFunctionAssociationArgs>> functionAssociations;
 
-    public Output<List<DistributionOrderedCacheBehaviorFunctionAssociationArgs>> functionAssociations() {
-        return this.functionAssociations == null ? Codegen.empty() : this.functionAssociations;
+    public Optional<Output<List<DistributionOrderedCacheBehaviorFunctionAssociationArgs>>> functionAssociations() {
+        return Optional.ofNullable(this.functionAssociations);
     }
 
     /**
@@ -124,10 +124,10 @@ public final class DistributionOrderedCacheBehaviorArgs extends com.pulumi.resou
      * 
      */
     @Import(name="lambdaFunctionAssociations")
-      private final @Nullable Output<List<DistributionOrderedCacheBehaviorLambdaFunctionAssociationArgs>> lambdaFunctionAssociations;
+    private @Nullable Output<List<DistributionOrderedCacheBehaviorLambdaFunctionAssociationArgs>> lambdaFunctionAssociations;
 
-    public Output<List<DistributionOrderedCacheBehaviorLambdaFunctionAssociationArgs>> lambdaFunctionAssociations() {
-        return this.lambdaFunctionAssociations == null ? Codegen.empty() : this.lambdaFunctionAssociations;
+    public Optional<Output<List<DistributionOrderedCacheBehaviorLambdaFunctionAssociationArgs>>> lambdaFunctionAssociations() {
+        return Optional.ofNullable(this.lambdaFunctionAssociations);
     }
 
     /**
@@ -139,10 +139,10 @@ public final class DistributionOrderedCacheBehaviorArgs extends com.pulumi.resou
      * 
      */
     @Import(name="maxTtl")
-      private final @Nullable Output<Integer> maxTtl;
+    private @Nullable Output<Integer> maxTtl;
 
-    public Output<Integer> maxTtl() {
-        return this.maxTtl == null ? Codegen.empty() : this.maxTtl;
+    public Optional<Output<Integer>> maxTtl() {
+        return Optional.ofNullable(this.maxTtl);
     }
 
     /**
@@ -152,10 +152,10 @@ public final class DistributionOrderedCacheBehaviorArgs extends com.pulumi.resou
      * 
      */
     @Import(name="minTtl")
-      private final @Nullable Output<Integer> minTtl;
+    private @Nullable Output<Integer> minTtl;
 
-    public Output<Integer> minTtl() {
-        return this.minTtl == null ? Codegen.empty() : this.minTtl;
+    public Optional<Output<Integer>> minTtl() {
+        return Optional.ofNullable(this.minTtl);
     }
 
     /**
@@ -164,10 +164,10 @@ public final class DistributionOrderedCacheBehaviorArgs extends com.pulumi.resou
      * 
      */
     @Import(name="originRequestPolicyId")
-      private final @Nullable Output<String> originRequestPolicyId;
+    private @Nullable Output<String> originRequestPolicyId;
 
-    public Output<String> originRequestPolicyId() {
-        return this.originRequestPolicyId == null ? Codegen.empty() : this.originRequestPolicyId;
+    public Optional<Output<String>> originRequestPolicyId() {
+        return Optional.ofNullable(this.originRequestPolicyId);
     }
 
     /**
@@ -176,7 +176,7 @@ public final class DistributionOrderedCacheBehaviorArgs extends com.pulumi.resou
      * 
      */
     @Import(name="pathPattern", required=true)
-      private final Output<String> pathPattern;
+    private Output<String> pathPattern;
 
     public Output<String> pathPattern() {
         return this.pathPattern;
@@ -188,10 +188,10 @@ public final class DistributionOrderedCacheBehaviorArgs extends com.pulumi.resou
      * 
      */
     @Import(name="realtimeLogConfigArn")
-      private final @Nullable Output<String> realtimeLogConfigArn;
+    private @Nullable Output<String> realtimeLogConfigArn;
 
-    public Output<String> realtimeLogConfigArn() {
-        return this.realtimeLogConfigArn == null ? Codegen.empty() : this.realtimeLogConfigArn;
+    public Optional<Output<String>> realtimeLogConfigArn() {
+        return Optional.ofNullable(this.realtimeLogConfigArn);
     }
 
     /**
@@ -199,10 +199,10 @@ public final class DistributionOrderedCacheBehaviorArgs extends com.pulumi.resou
      * 
      */
     @Import(name="responseHeadersPolicyId")
-      private final @Nullable Output<String> responseHeadersPolicyId;
+    private @Nullable Output<String> responseHeadersPolicyId;
 
-    public Output<String> responseHeadersPolicyId() {
-        return this.responseHeadersPolicyId == null ? Codegen.empty() : this.responseHeadersPolicyId;
+    public Optional<Output<String>> responseHeadersPolicyId() {
+        return Optional.ofNullable(this.responseHeadersPolicyId);
     }
 
     /**
@@ -212,10 +212,10 @@ public final class DistributionOrderedCacheBehaviorArgs extends com.pulumi.resou
      * 
      */
     @Import(name="smoothStreaming")
-      private final @Nullable Output<Boolean> smoothStreaming;
+    private @Nullable Output<Boolean> smoothStreaming;
 
-    public Output<Boolean> smoothStreaming() {
-        return this.smoothStreaming == null ? Codegen.empty() : this.smoothStreaming;
+    public Optional<Output<Boolean>> smoothStreaming() {
+        return Optional.ofNullable(this.smoothStreaming);
     }
 
     /**
@@ -225,7 +225,7 @@ public final class DistributionOrderedCacheBehaviorArgs extends com.pulumi.resou
      * 
      */
     @Import(name="targetOriginId", required=true)
-      private final Output<String> targetOriginId;
+    private Output<String> targetOriginId;
 
     public Output<String> targetOriginId() {
         return this.targetOriginId;
@@ -237,10 +237,10 @@ public final class DistributionOrderedCacheBehaviorArgs extends com.pulumi.resou
      * 
      */
     @Import(name="trustedKeyGroups")
-      private final @Nullable Output<List<String>> trustedKeyGroups;
+    private @Nullable Output<List<String>> trustedKeyGroups;
 
-    public Output<List<String>> trustedKeyGroups() {
-        return this.trustedKeyGroups == null ? Codegen.empty() : this.trustedKeyGroups;
+    public Optional<Output<List<String>>> trustedKeyGroups() {
+        return Optional.ofNullable(this.trustedKeyGroups);
     }
 
     /**
@@ -249,10 +249,10 @@ public final class DistributionOrderedCacheBehaviorArgs extends com.pulumi.resou
      * 
      */
     @Import(name="trustedSigners")
-      private final @Nullable Output<List<String>> trustedSigners;
+    private @Nullable Output<List<String>> trustedSigners;
 
-    public Output<List<String>> trustedSigners() {
-        return this.trustedSigners == null ? Codegen.empty() : this.trustedSigners;
+    public Optional<Output<List<String>>> trustedSigners() {
+        return Optional.ofNullable(this.trustedSigners);
     }
 
     /**
@@ -263,315 +263,267 @@ public final class DistributionOrderedCacheBehaviorArgs extends com.pulumi.resou
      * 
      */
     @Import(name="viewerProtocolPolicy", required=true)
-      private final Output<String> viewerProtocolPolicy;
+    private Output<String> viewerProtocolPolicy;
 
     public Output<String> viewerProtocolPolicy() {
         return this.viewerProtocolPolicy;
     }
 
-    public DistributionOrderedCacheBehaviorArgs(
-        Output<List<String>> allowedMethods,
-        @Nullable Output<String> cachePolicyId,
-        Output<List<String>> cachedMethods,
-        @Nullable Output<Boolean> compress,
-        @Nullable Output<Integer> defaultTtl,
-        @Nullable Output<String> fieldLevelEncryptionId,
-        @Nullable Output<DistributionOrderedCacheBehaviorForwardedValuesArgs> forwardedValues,
-        @Nullable Output<List<DistributionOrderedCacheBehaviorFunctionAssociationArgs>> functionAssociations,
-        @Nullable Output<List<DistributionOrderedCacheBehaviorLambdaFunctionAssociationArgs>> lambdaFunctionAssociations,
-        @Nullable Output<Integer> maxTtl,
-        @Nullable Output<Integer> minTtl,
-        @Nullable Output<String> originRequestPolicyId,
-        Output<String> pathPattern,
-        @Nullable Output<String> realtimeLogConfigArn,
-        @Nullable Output<String> responseHeadersPolicyId,
-        @Nullable Output<Boolean> smoothStreaming,
-        Output<String> targetOriginId,
-        @Nullable Output<List<String>> trustedKeyGroups,
-        @Nullable Output<List<String>> trustedSigners,
-        Output<String> viewerProtocolPolicy) {
-        this.allowedMethods = Objects.requireNonNull(allowedMethods, "expected parameter 'allowedMethods' to be non-null");
-        this.cachePolicyId = cachePolicyId;
-        this.cachedMethods = Objects.requireNonNull(cachedMethods, "expected parameter 'cachedMethods' to be non-null");
-        this.compress = compress;
-        this.defaultTtl = defaultTtl;
-        this.fieldLevelEncryptionId = fieldLevelEncryptionId;
-        this.forwardedValues = forwardedValues;
-        this.functionAssociations = functionAssociations;
-        this.lambdaFunctionAssociations = lambdaFunctionAssociations;
-        this.maxTtl = maxTtl;
-        this.minTtl = minTtl;
-        this.originRequestPolicyId = originRequestPolicyId;
-        this.pathPattern = Objects.requireNonNull(pathPattern, "expected parameter 'pathPattern' to be non-null");
-        this.realtimeLogConfigArn = realtimeLogConfigArn;
-        this.responseHeadersPolicyId = responseHeadersPolicyId;
-        this.smoothStreaming = smoothStreaming;
-        this.targetOriginId = Objects.requireNonNull(targetOriginId, "expected parameter 'targetOriginId' to be non-null");
-        this.trustedKeyGroups = trustedKeyGroups;
-        this.trustedSigners = trustedSigners;
-        this.viewerProtocolPolicy = Objects.requireNonNull(viewerProtocolPolicy, "expected parameter 'viewerProtocolPolicy' to be non-null");
-    }
+    private DistributionOrderedCacheBehaviorArgs() {}
 
-    private DistributionOrderedCacheBehaviorArgs() {
-        this.allowedMethods = Codegen.empty();
-        this.cachePolicyId = Codegen.empty();
-        this.cachedMethods = Codegen.empty();
-        this.compress = Codegen.empty();
-        this.defaultTtl = Codegen.empty();
-        this.fieldLevelEncryptionId = Codegen.empty();
-        this.forwardedValues = Codegen.empty();
-        this.functionAssociations = Codegen.empty();
-        this.lambdaFunctionAssociations = Codegen.empty();
-        this.maxTtl = Codegen.empty();
-        this.minTtl = Codegen.empty();
-        this.originRequestPolicyId = Codegen.empty();
-        this.pathPattern = Codegen.empty();
-        this.realtimeLogConfigArn = Codegen.empty();
-        this.responseHeadersPolicyId = Codegen.empty();
-        this.smoothStreaming = Codegen.empty();
-        this.targetOriginId = Codegen.empty();
-        this.trustedKeyGroups = Codegen.empty();
-        this.trustedSigners = Codegen.empty();
-        this.viewerProtocolPolicy = Codegen.empty();
+    private DistributionOrderedCacheBehaviorArgs(DistributionOrderedCacheBehaviorArgs $) {
+        this.allowedMethods = $.allowedMethods;
+        this.cachePolicyId = $.cachePolicyId;
+        this.cachedMethods = $.cachedMethods;
+        this.compress = $.compress;
+        this.defaultTtl = $.defaultTtl;
+        this.fieldLevelEncryptionId = $.fieldLevelEncryptionId;
+        this.forwardedValues = $.forwardedValues;
+        this.functionAssociations = $.functionAssociations;
+        this.lambdaFunctionAssociations = $.lambdaFunctionAssociations;
+        this.maxTtl = $.maxTtl;
+        this.minTtl = $.minTtl;
+        this.originRequestPolicyId = $.originRequestPolicyId;
+        this.pathPattern = $.pathPattern;
+        this.realtimeLogConfigArn = $.realtimeLogConfigArn;
+        this.responseHeadersPolicyId = $.responseHeadersPolicyId;
+        this.smoothStreaming = $.smoothStreaming;
+        this.targetOriginId = $.targetOriginId;
+        this.trustedKeyGroups = $.trustedKeyGroups;
+        this.trustedSigners = $.trustedSigners;
+        this.viewerProtocolPolicy = $.viewerProtocolPolicy;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DistributionOrderedCacheBehaviorArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<List<String>> allowedMethods;
-        private @Nullable Output<String> cachePolicyId;
-        private Output<List<String>> cachedMethods;
-        private @Nullable Output<Boolean> compress;
-        private @Nullable Output<Integer> defaultTtl;
-        private @Nullable Output<String> fieldLevelEncryptionId;
-        private @Nullable Output<DistributionOrderedCacheBehaviorForwardedValuesArgs> forwardedValues;
-        private @Nullable Output<List<DistributionOrderedCacheBehaviorFunctionAssociationArgs>> functionAssociations;
-        private @Nullable Output<List<DistributionOrderedCacheBehaviorLambdaFunctionAssociationArgs>> lambdaFunctionAssociations;
-        private @Nullable Output<Integer> maxTtl;
-        private @Nullable Output<Integer> minTtl;
-        private @Nullable Output<String> originRequestPolicyId;
-        private Output<String> pathPattern;
-        private @Nullable Output<String> realtimeLogConfigArn;
-        private @Nullable Output<String> responseHeadersPolicyId;
-        private @Nullable Output<Boolean> smoothStreaming;
-        private Output<String> targetOriginId;
-        private @Nullable Output<List<String>> trustedKeyGroups;
-        private @Nullable Output<List<String>> trustedSigners;
-        private Output<String> viewerProtocolPolicy;
+        private DistributionOrderedCacheBehaviorArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DistributionOrderedCacheBehaviorArgs();
         }
 
         public Builder(DistributionOrderedCacheBehaviorArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.allowedMethods = defaults.allowedMethods;
-    	      this.cachePolicyId = defaults.cachePolicyId;
-    	      this.cachedMethods = defaults.cachedMethods;
-    	      this.compress = defaults.compress;
-    	      this.defaultTtl = defaults.defaultTtl;
-    	      this.fieldLevelEncryptionId = defaults.fieldLevelEncryptionId;
-    	      this.forwardedValues = defaults.forwardedValues;
-    	      this.functionAssociations = defaults.functionAssociations;
-    	      this.lambdaFunctionAssociations = defaults.lambdaFunctionAssociations;
-    	      this.maxTtl = defaults.maxTtl;
-    	      this.minTtl = defaults.minTtl;
-    	      this.originRequestPolicyId = defaults.originRequestPolicyId;
-    	      this.pathPattern = defaults.pathPattern;
-    	      this.realtimeLogConfigArn = defaults.realtimeLogConfigArn;
-    	      this.responseHeadersPolicyId = defaults.responseHeadersPolicyId;
-    	      this.smoothStreaming = defaults.smoothStreaming;
-    	      this.targetOriginId = defaults.targetOriginId;
-    	      this.trustedKeyGroups = defaults.trustedKeyGroups;
-    	      this.trustedSigners = defaults.trustedSigners;
-    	      this.viewerProtocolPolicy = defaults.viewerProtocolPolicy;
+            $ = new DistributionOrderedCacheBehaviorArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder allowedMethods(Output<List<String>> allowedMethods) {
-            this.allowedMethods = Objects.requireNonNull(allowedMethods);
+            $.allowedMethods = allowedMethods;
             return this;
         }
+
         public Builder allowedMethods(List<String> allowedMethods) {
-            this.allowedMethods = Output.of(Objects.requireNonNull(allowedMethods));
-            return this;
+            return allowedMethods(Output.of(allowedMethods));
         }
+
         public Builder allowedMethods(String... allowedMethods) {
             return allowedMethods(List.of(allowedMethods));
         }
+
         public Builder cachePolicyId(@Nullable Output<String> cachePolicyId) {
-            this.cachePolicyId = cachePolicyId;
+            $.cachePolicyId = cachePolicyId;
             return this;
         }
-        public Builder cachePolicyId(@Nullable String cachePolicyId) {
-            this.cachePolicyId = Codegen.ofNullable(cachePolicyId);
-            return this;
+
+        public Builder cachePolicyId(String cachePolicyId) {
+            return cachePolicyId(Output.of(cachePolicyId));
         }
+
         public Builder cachedMethods(Output<List<String>> cachedMethods) {
-            this.cachedMethods = Objects.requireNonNull(cachedMethods);
+            $.cachedMethods = cachedMethods;
             return this;
         }
+
         public Builder cachedMethods(List<String> cachedMethods) {
-            this.cachedMethods = Output.of(Objects.requireNonNull(cachedMethods));
-            return this;
+            return cachedMethods(Output.of(cachedMethods));
         }
+
         public Builder cachedMethods(String... cachedMethods) {
             return cachedMethods(List.of(cachedMethods));
         }
+
         public Builder compress(@Nullable Output<Boolean> compress) {
-            this.compress = compress;
+            $.compress = compress;
             return this;
         }
-        public Builder compress(@Nullable Boolean compress) {
-            this.compress = Codegen.ofNullable(compress);
-            return this;
+
+        public Builder compress(Boolean compress) {
+            return compress(Output.of(compress));
         }
+
         public Builder defaultTtl(@Nullable Output<Integer> defaultTtl) {
-            this.defaultTtl = defaultTtl;
+            $.defaultTtl = defaultTtl;
             return this;
         }
-        public Builder defaultTtl(@Nullable Integer defaultTtl) {
-            this.defaultTtl = Codegen.ofNullable(defaultTtl);
-            return this;
+
+        public Builder defaultTtl(Integer defaultTtl) {
+            return defaultTtl(Output.of(defaultTtl));
         }
+
         public Builder fieldLevelEncryptionId(@Nullable Output<String> fieldLevelEncryptionId) {
-            this.fieldLevelEncryptionId = fieldLevelEncryptionId;
+            $.fieldLevelEncryptionId = fieldLevelEncryptionId;
             return this;
         }
-        public Builder fieldLevelEncryptionId(@Nullable String fieldLevelEncryptionId) {
-            this.fieldLevelEncryptionId = Codegen.ofNullable(fieldLevelEncryptionId);
-            return this;
+
+        public Builder fieldLevelEncryptionId(String fieldLevelEncryptionId) {
+            return fieldLevelEncryptionId(Output.of(fieldLevelEncryptionId));
         }
+
         public Builder forwardedValues(@Nullable Output<DistributionOrderedCacheBehaviorForwardedValuesArgs> forwardedValues) {
-            this.forwardedValues = forwardedValues;
+            $.forwardedValues = forwardedValues;
             return this;
         }
-        public Builder forwardedValues(@Nullable DistributionOrderedCacheBehaviorForwardedValuesArgs forwardedValues) {
-            this.forwardedValues = Codegen.ofNullable(forwardedValues);
-            return this;
+
+        public Builder forwardedValues(DistributionOrderedCacheBehaviorForwardedValuesArgs forwardedValues) {
+            return forwardedValues(Output.of(forwardedValues));
         }
+
         public Builder functionAssociations(@Nullable Output<List<DistributionOrderedCacheBehaviorFunctionAssociationArgs>> functionAssociations) {
-            this.functionAssociations = functionAssociations;
+            $.functionAssociations = functionAssociations;
             return this;
         }
-        public Builder functionAssociations(@Nullable List<DistributionOrderedCacheBehaviorFunctionAssociationArgs> functionAssociations) {
-            this.functionAssociations = Codegen.ofNullable(functionAssociations);
-            return this;
+
+        public Builder functionAssociations(List<DistributionOrderedCacheBehaviorFunctionAssociationArgs> functionAssociations) {
+            return functionAssociations(Output.of(functionAssociations));
         }
+
         public Builder functionAssociations(DistributionOrderedCacheBehaviorFunctionAssociationArgs... functionAssociations) {
             return functionAssociations(List.of(functionAssociations));
         }
+
         public Builder lambdaFunctionAssociations(@Nullable Output<List<DistributionOrderedCacheBehaviorLambdaFunctionAssociationArgs>> lambdaFunctionAssociations) {
-            this.lambdaFunctionAssociations = lambdaFunctionAssociations;
+            $.lambdaFunctionAssociations = lambdaFunctionAssociations;
             return this;
         }
-        public Builder lambdaFunctionAssociations(@Nullable List<DistributionOrderedCacheBehaviorLambdaFunctionAssociationArgs> lambdaFunctionAssociations) {
-            this.lambdaFunctionAssociations = Codegen.ofNullable(lambdaFunctionAssociations);
-            return this;
+
+        public Builder lambdaFunctionAssociations(List<DistributionOrderedCacheBehaviorLambdaFunctionAssociationArgs> lambdaFunctionAssociations) {
+            return lambdaFunctionAssociations(Output.of(lambdaFunctionAssociations));
         }
+
         public Builder lambdaFunctionAssociations(DistributionOrderedCacheBehaviorLambdaFunctionAssociationArgs... lambdaFunctionAssociations) {
             return lambdaFunctionAssociations(List.of(lambdaFunctionAssociations));
         }
+
         public Builder maxTtl(@Nullable Output<Integer> maxTtl) {
-            this.maxTtl = maxTtl;
+            $.maxTtl = maxTtl;
             return this;
         }
-        public Builder maxTtl(@Nullable Integer maxTtl) {
-            this.maxTtl = Codegen.ofNullable(maxTtl);
-            return this;
+
+        public Builder maxTtl(Integer maxTtl) {
+            return maxTtl(Output.of(maxTtl));
         }
+
         public Builder minTtl(@Nullable Output<Integer> minTtl) {
-            this.minTtl = minTtl;
+            $.minTtl = minTtl;
             return this;
         }
-        public Builder minTtl(@Nullable Integer minTtl) {
-            this.minTtl = Codegen.ofNullable(minTtl);
-            return this;
+
+        public Builder minTtl(Integer minTtl) {
+            return minTtl(Output.of(minTtl));
         }
+
         public Builder originRequestPolicyId(@Nullable Output<String> originRequestPolicyId) {
-            this.originRequestPolicyId = originRequestPolicyId;
+            $.originRequestPolicyId = originRequestPolicyId;
             return this;
         }
-        public Builder originRequestPolicyId(@Nullable String originRequestPolicyId) {
-            this.originRequestPolicyId = Codegen.ofNullable(originRequestPolicyId);
-            return this;
+
+        public Builder originRequestPolicyId(String originRequestPolicyId) {
+            return originRequestPolicyId(Output.of(originRequestPolicyId));
         }
+
         public Builder pathPattern(Output<String> pathPattern) {
-            this.pathPattern = Objects.requireNonNull(pathPattern);
+            $.pathPattern = pathPattern;
             return this;
         }
+
         public Builder pathPattern(String pathPattern) {
-            this.pathPattern = Output.of(Objects.requireNonNull(pathPattern));
-            return this;
+            return pathPattern(Output.of(pathPattern));
         }
+
         public Builder realtimeLogConfigArn(@Nullable Output<String> realtimeLogConfigArn) {
-            this.realtimeLogConfigArn = realtimeLogConfigArn;
+            $.realtimeLogConfigArn = realtimeLogConfigArn;
             return this;
         }
-        public Builder realtimeLogConfigArn(@Nullable String realtimeLogConfigArn) {
-            this.realtimeLogConfigArn = Codegen.ofNullable(realtimeLogConfigArn);
-            return this;
+
+        public Builder realtimeLogConfigArn(String realtimeLogConfigArn) {
+            return realtimeLogConfigArn(Output.of(realtimeLogConfigArn));
         }
+
         public Builder responseHeadersPolicyId(@Nullable Output<String> responseHeadersPolicyId) {
-            this.responseHeadersPolicyId = responseHeadersPolicyId;
+            $.responseHeadersPolicyId = responseHeadersPolicyId;
             return this;
         }
-        public Builder responseHeadersPolicyId(@Nullable String responseHeadersPolicyId) {
-            this.responseHeadersPolicyId = Codegen.ofNullable(responseHeadersPolicyId);
-            return this;
+
+        public Builder responseHeadersPolicyId(String responseHeadersPolicyId) {
+            return responseHeadersPolicyId(Output.of(responseHeadersPolicyId));
         }
+
         public Builder smoothStreaming(@Nullable Output<Boolean> smoothStreaming) {
-            this.smoothStreaming = smoothStreaming;
+            $.smoothStreaming = smoothStreaming;
             return this;
         }
-        public Builder smoothStreaming(@Nullable Boolean smoothStreaming) {
-            this.smoothStreaming = Codegen.ofNullable(smoothStreaming);
-            return this;
+
+        public Builder smoothStreaming(Boolean smoothStreaming) {
+            return smoothStreaming(Output.of(smoothStreaming));
         }
+
         public Builder targetOriginId(Output<String> targetOriginId) {
-            this.targetOriginId = Objects.requireNonNull(targetOriginId);
+            $.targetOriginId = targetOriginId;
             return this;
         }
+
         public Builder targetOriginId(String targetOriginId) {
-            this.targetOriginId = Output.of(Objects.requireNonNull(targetOriginId));
-            return this;
+            return targetOriginId(Output.of(targetOriginId));
         }
+
         public Builder trustedKeyGroups(@Nullable Output<List<String>> trustedKeyGroups) {
-            this.trustedKeyGroups = trustedKeyGroups;
+            $.trustedKeyGroups = trustedKeyGroups;
             return this;
         }
-        public Builder trustedKeyGroups(@Nullable List<String> trustedKeyGroups) {
-            this.trustedKeyGroups = Codegen.ofNullable(trustedKeyGroups);
-            return this;
+
+        public Builder trustedKeyGroups(List<String> trustedKeyGroups) {
+            return trustedKeyGroups(Output.of(trustedKeyGroups));
         }
+
         public Builder trustedKeyGroups(String... trustedKeyGroups) {
             return trustedKeyGroups(List.of(trustedKeyGroups));
         }
+
         public Builder trustedSigners(@Nullable Output<List<String>> trustedSigners) {
-            this.trustedSigners = trustedSigners;
+            $.trustedSigners = trustedSigners;
             return this;
         }
-        public Builder trustedSigners(@Nullable List<String> trustedSigners) {
-            this.trustedSigners = Codegen.ofNullable(trustedSigners);
-            return this;
+
+        public Builder trustedSigners(List<String> trustedSigners) {
+            return trustedSigners(Output.of(trustedSigners));
         }
+
         public Builder trustedSigners(String... trustedSigners) {
             return trustedSigners(List.of(trustedSigners));
         }
+
         public Builder viewerProtocolPolicy(Output<String> viewerProtocolPolicy) {
-            this.viewerProtocolPolicy = Objects.requireNonNull(viewerProtocolPolicy);
+            $.viewerProtocolPolicy = viewerProtocolPolicy;
             return this;
         }
+
         public Builder viewerProtocolPolicy(String viewerProtocolPolicy) {
-            this.viewerProtocolPolicy = Output.of(Objects.requireNonNull(viewerProtocolPolicy));
-            return this;
-        }        public DistributionOrderedCacheBehaviorArgs build() {
-            return new DistributionOrderedCacheBehaviorArgs(allowedMethods, cachePolicyId, cachedMethods, compress, defaultTtl, fieldLevelEncryptionId, forwardedValues, functionAssociations, lambdaFunctionAssociations, maxTtl, minTtl, originRequestPolicyId, pathPattern, realtimeLogConfigArn, responseHeadersPolicyId, smoothStreaming, targetOriginId, trustedKeyGroups, trustedSigners, viewerProtocolPolicy);
+            return viewerProtocolPolicy(Output.of(viewerProtocolPolicy));
+        }
+
+        public DistributionOrderedCacheBehaviorArgs build() {
+            $.allowedMethods = Objects.requireNonNull($.allowedMethods, "expected parameter 'allowedMethods' to be non-null");
+            $.cachedMethods = Objects.requireNonNull($.cachedMethods, "expected parameter 'cachedMethods' to be non-null");
+            $.pathPattern = Objects.requireNonNull($.pathPattern, "expected parameter 'pathPattern' to be non-null");
+            $.targetOriginId = Objects.requireNonNull($.targetOriginId, "expected parameter 'targetOriginId' to be non-null");
+            $.viewerProtocolPolicy = Objects.requireNonNull($.viewerProtocolPolicy, "expected parameter 'viewerProtocolPolicy' to be non-null");
+            return $;
         }
     }
+
 }

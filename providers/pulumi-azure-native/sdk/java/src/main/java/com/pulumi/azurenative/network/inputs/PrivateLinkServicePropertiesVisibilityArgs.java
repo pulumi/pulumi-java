@@ -5,10 +5,10 @@ package com.pulumi.azurenative.network.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,52 +25,52 @@ public final class PrivateLinkServicePropertiesVisibilityArgs extends com.pulumi
      * 
      */
     @Import(name="subscriptions")
-      private final @Nullable Output<List<String>> subscriptions;
+    private @Nullable Output<List<String>> subscriptions;
 
-    public Output<List<String>> subscriptions() {
-        return this.subscriptions == null ? Codegen.empty() : this.subscriptions;
+    public Optional<Output<List<String>>> subscriptions() {
+        return Optional.ofNullable(this.subscriptions);
     }
 
-    public PrivateLinkServicePropertiesVisibilityArgs(@Nullable Output<List<String>> subscriptions) {
-        this.subscriptions = subscriptions;
-    }
+    private PrivateLinkServicePropertiesVisibilityArgs() {}
 
-    private PrivateLinkServicePropertiesVisibilityArgs() {
-        this.subscriptions = Codegen.empty();
+    private PrivateLinkServicePropertiesVisibilityArgs(PrivateLinkServicePropertiesVisibilityArgs $) {
+        this.subscriptions = $.subscriptions;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PrivateLinkServicePropertiesVisibilityArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> subscriptions;
+        private PrivateLinkServicePropertiesVisibilityArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PrivateLinkServicePropertiesVisibilityArgs();
         }
 
         public Builder(PrivateLinkServicePropertiesVisibilityArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.subscriptions = defaults.subscriptions;
+            $ = new PrivateLinkServicePropertiesVisibilityArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder subscriptions(@Nullable Output<List<String>> subscriptions) {
-            this.subscriptions = subscriptions;
+            $.subscriptions = subscriptions;
             return this;
         }
-        public Builder subscriptions(@Nullable List<String> subscriptions) {
-            this.subscriptions = Codegen.ofNullable(subscriptions);
-            return this;
+
+        public Builder subscriptions(List<String> subscriptions) {
+            return subscriptions(Output.of(subscriptions));
         }
+
         public Builder subscriptions(String... subscriptions) {
             return subscriptions(List.of(subscriptions));
-        }        public PrivateLinkServicePropertiesVisibilityArgs build() {
-            return new PrivateLinkServicePropertiesVisibilityArgs(subscriptions);
+        }
+
+        public PrivateLinkServicePropertiesVisibilityArgs build() {
+            return $;
         }
     }
+
 }

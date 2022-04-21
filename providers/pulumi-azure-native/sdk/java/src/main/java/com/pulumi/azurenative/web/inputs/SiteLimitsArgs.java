@@ -5,9 +5,9 @@ package com.pulumi.azurenative.web.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class SiteLimitsArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="maxDiskSizeInMb")
-      private final @Nullable Output<Double> maxDiskSizeInMb;
+    private @Nullable Output<Double> maxDiskSizeInMb;
 
-    public Output<Double> maxDiskSizeInMb() {
-        return this.maxDiskSizeInMb == null ? Codegen.empty() : this.maxDiskSizeInMb;
+    public Optional<Output<Double>> maxDiskSizeInMb() {
+        return Optional.ofNullable(this.maxDiskSizeInMb);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class SiteLimitsArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="maxMemoryInMb")
-      private final @Nullable Output<Double> maxMemoryInMb;
+    private @Nullable Output<Double> maxMemoryInMb;
 
-    public Output<Double> maxMemoryInMb() {
-        return this.maxMemoryInMb == null ? Codegen.empty() : this.maxMemoryInMb;
+    public Optional<Output<Double>> maxMemoryInMb() {
+        return Optional.ofNullable(this.maxMemoryInMb);
     }
 
     /**
@@ -46,76 +46,68 @@ public final class SiteLimitsArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="maxPercentageCpu")
-      private final @Nullable Output<Double> maxPercentageCpu;
+    private @Nullable Output<Double> maxPercentageCpu;
 
-    public Output<Double> maxPercentageCpu() {
-        return this.maxPercentageCpu == null ? Codegen.empty() : this.maxPercentageCpu;
+    public Optional<Output<Double>> maxPercentageCpu() {
+        return Optional.ofNullable(this.maxPercentageCpu);
     }
 
-    public SiteLimitsArgs(
-        @Nullable Output<Double> maxDiskSizeInMb,
-        @Nullable Output<Double> maxMemoryInMb,
-        @Nullable Output<Double> maxPercentageCpu) {
-        this.maxDiskSizeInMb = maxDiskSizeInMb;
-        this.maxMemoryInMb = maxMemoryInMb;
-        this.maxPercentageCpu = maxPercentageCpu;
-    }
+    private SiteLimitsArgs() {}
 
-    private SiteLimitsArgs() {
-        this.maxDiskSizeInMb = Codegen.empty();
-        this.maxMemoryInMb = Codegen.empty();
-        this.maxPercentageCpu = Codegen.empty();
+    private SiteLimitsArgs(SiteLimitsArgs $) {
+        this.maxDiskSizeInMb = $.maxDiskSizeInMb;
+        this.maxMemoryInMb = $.maxMemoryInMb;
+        this.maxPercentageCpu = $.maxPercentageCpu;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SiteLimitsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Double> maxDiskSizeInMb;
-        private @Nullable Output<Double> maxMemoryInMb;
-        private @Nullable Output<Double> maxPercentageCpu;
+        private SiteLimitsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SiteLimitsArgs();
         }
 
         public Builder(SiteLimitsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.maxDiskSizeInMb = defaults.maxDiskSizeInMb;
-    	      this.maxMemoryInMb = defaults.maxMemoryInMb;
-    	      this.maxPercentageCpu = defaults.maxPercentageCpu;
+            $ = new SiteLimitsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder maxDiskSizeInMb(@Nullable Output<Double> maxDiskSizeInMb) {
-            this.maxDiskSizeInMb = maxDiskSizeInMb;
+            $.maxDiskSizeInMb = maxDiskSizeInMb;
             return this;
         }
-        public Builder maxDiskSizeInMb(@Nullable Double maxDiskSizeInMb) {
-            this.maxDiskSizeInMb = Codegen.ofNullable(maxDiskSizeInMb);
-            return this;
+
+        public Builder maxDiskSizeInMb(Double maxDiskSizeInMb) {
+            return maxDiskSizeInMb(Output.of(maxDiskSizeInMb));
         }
+
         public Builder maxMemoryInMb(@Nullable Output<Double> maxMemoryInMb) {
-            this.maxMemoryInMb = maxMemoryInMb;
+            $.maxMemoryInMb = maxMemoryInMb;
             return this;
         }
-        public Builder maxMemoryInMb(@Nullable Double maxMemoryInMb) {
-            this.maxMemoryInMb = Codegen.ofNullable(maxMemoryInMb);
-            return this;
+
+        public Builder maxMemoryInMb(Double maxMemoryInMb) {
+            return maxMemoryInMb(Output.of(maxMemoryInMb));
         }
+
         public Builder maxPercentageCpu(@Nullable Output<Double> maxPercentageCpu) {
-            this.maxPercentageCpu = maxPercentageCpu;
+            $.maxPercentageCpu = maxPercentageCpu;
             return this;
         }
-        public Builder maxPercentageCpu(@Nullable Double maxPercentageCpu) {
-            this.maxPercentageCpu = Codegen.ofNullable(maxPercentageCpu);
-            return this;
-        }        public SiteLimitsArgs build() {
-            return new SiteLimitsArgs(maxDiskSizeInMb, maxMemoryInMb, maxPercentageCpu);
+
+        public Builder maxPercentageCpu(Double maxPercentageCpu) {
+            return maxPercentageCpu(Output.of(maxPercentageCpu));
+        }
+
+        public SiteLimitsArgs build() {
+            return $;
         }
     }
+
 }

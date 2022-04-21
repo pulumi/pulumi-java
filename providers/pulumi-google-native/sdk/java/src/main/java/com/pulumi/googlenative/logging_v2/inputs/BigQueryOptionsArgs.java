@@ -5,9 +5,9 @@ package com.pulumi.googlenative.logging_v2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class BigQueryOptionsArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="usePartitionedTables")
-      private final @Nullable Output<Boolean> usePartitionedTables;
+    private @Nullable Output<Boolean> usePartitionedTables;
 
-    public Output<Boolean> usePartitionedTables() {
-        return this.usePartitionedTables == null ? Codegen.empty() : this.usePartitionedTables;
+    public Optional<Output<Boolean>> usePartitionedTables() {
+        return Optional.ofNullable(this.usePartitionedTables);
     }
 
-    public BigQueryOptionsArgs(@Nullable Output<Boolean> usePartitionedTables) {
-        this.usePartitionedTables = usePartitionedTables;
-    }
+    private BigQueryOptionsArgs() {}
 
-    private BigQueryOptionsArgs() {
-        this.usePartitionedTables = Codegen.empty();
+    private BigQueryOptionsArgs(BigQueryOptionsArgs $) {
+        this.usePartitionedTables = $.usePartitionedTables;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BigQueryOptionsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> usePartitionedTables;
+        private BigQueryOptionsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new BigQueryOptionsArgs();
         }
 
         public Builder(BigQueryOptionsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.usePartitionedTables = defaults.usePartitionedTables;
+            $ = new BigQueryOptionsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder usePartitionedTables(@Nullable Output<Boolean> usePartitionedTables) {
-            this.usePartitionedTables = usePartitionedTables;
+            $.usePartitionedTables = usePartitionedTables;
             return this;
         }
-        public Builder usePartitionedTables(@Nullable Boolean usePartitionedTables) {
-            this.usePartitionedTables = Codegen.ofNullable(usePartitionedTables);
-            return this;
-        }        public BigQueryOptionsArgs build() {
-            return new BigQueryOptionsArgs(usePartitionedTables);
+
+        public Builder usePartitionedTables(Boolean usePartitionedTables) {
+            return usePartitionedTables(Output.of(usePartitionedTables));
+        }
+
+        public BigQueryOptionsArgs build() {
+            return $;
         }
     }
+
 }

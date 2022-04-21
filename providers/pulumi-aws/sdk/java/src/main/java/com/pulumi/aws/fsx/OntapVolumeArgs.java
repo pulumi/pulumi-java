@@ -6,12 +6,12 @@ package com.pulumi.aws.fsx;
 import com.pulumi.aws.fsx.inputs.OntapVolumeTieringPolicyArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,7 +24,7 @@ public final class OntapVolumeArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="junctionPath", required=true)
-      private final Output<String> junctionPath;
+    private Output<String> junctionPath;
 
     public Output<String> junctionPath() {
         return this.junctionPath;
@@ -35,10 +35,10 @@ public final class OntapVolumeArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class OntapVolumeArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="securityStyle")
-      private final @Nullable Output<String> securityStyle;
+    private @Nullable Output<String> securityStyle;
 
-    public Output<String> securityStyle() {
-        return this.securityStyle == null ? Codegen.empty() : this.securityStyle;
+    public Optional<Output<String>> securityStyle() {
+        return Optional.ofNullable(this.securityStyle);
     }
 
     /**
@@ -57,7 +57,7 @@ public final class OntapVolumeArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="sizeInMegabytes", required=true)
-      private final Output<Integer> sizeInMegabytes;
+    private Output<Integer> sizeInMegabytes;
 
     public Output<Integer> sizeInMegabytes() {
         return this.sizeInMegabytes;
@@ -68,7 +68,7 @@ public final class OntapVolumeArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="storageEfficiencyEnabled", required=true)
-      private final Output<Boolean> storageEfficiencyEnabled;
+    private Output<Boolean> storageEfficiencyEnabled;
 
     public Output<Boolean> storageEfficiencyEnabled() {
         return this.storageEfficiencyEnabled;
@@ -79,7 +79,7 @@ public final class OntapVolumeArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="storageVirtualMachineId", required=true)
-      private final Output<String> storageVirtualMachineId;
+    private Output<String> storageVirtualMachineId;
 
     public Output<String> storageVirtualMachineId() {
         return this.storageVirtualMachineId;
@@ -90,17 +90,17 @@ public final class OntapVolumeArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     @Import(name="tieringPolicy")
-      private final @Nullable Output<OntapVolumeTieringPolicyArgs> tieringPolicy;
+    private @Nullable Output<OntapVolumeTieringPolicyArgs> tieringPolicy;
 
-    public Output<OntapVolumeTieringPolicyArgs> tieringPolicy() {
-        return this.tieringPolicy == null ? Codegen.empty() : this.tieringPolicy;
+    public Optional<Output<OntapVolumeTieringPolicyArgs>> tieringPolicy() {
+        return Optional.ofNullable(this.tieringPolicy);
     }
 
     /**
@@ -108,154 +108,132 @@ public final class OntapVolumeArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="volumeType")
-      private final @Nullable Output<String> volumeType;
+    private @Nullable Output<String> volumeType;
 
-    public Output<String> volumeType() {
-        return this.volumeType == null ? Codegen.empty() : this.volumeType;
+    public Optional<Output<String>> volumeType() {
+        return Optional.ofNullable(this.volumeType);
     }
 
-    public OntapVolumeArgs(
-        Output<String> junctionPath,
-        @Nullable Output<String> name,
-        @Nullable Output<String> securityStyle,
-        Output<Integer> sizeInMegabytes,
-        Output<Boolean> storageEfficiencyEnabled,
-        Output<String> storageVirtualMachineId,
-        @Nullable Output<Map<String,String>> tags,
-        @Nullable Output<OntapVolumeTieringPolicyArgs> tieringPolicy,
-        @Nullable Output<String> volumeType) {
-        this.junctionPath = Objects.requireNonNull(junctionPath, "expected parameter 'junctionPath' to be non-null");
-        this.name = name;
-        this.securityStyle = securityStyle;
-        this.sizeInMegabytes = Objects.requireNonNull(sizeInMegabytes, "expected parameter 'sizeInMegabytes' to be non-null");
-        this.storageEfficiencyEnabled = Objects.requireNonNull(storageEfficiencyEnabled, "expected parameter 'storageEfficiencyEnabled' to be non-null");
-        this.storageVirtualMachineId = Objects.requireNonNull(storageVirtualMachineId, "expected parameter 'storageVirtualMachineId' to be non-null");
-        this.tags = tags;
-        this.tieringPolicy = tieringPolicy;
-        this.volumeType = volumeType;
-    }
+    private OntapVolumeArgs() {}
 
-    private OntapVolumeArgs() {
-        this.junctionPath = Codegen.empty();
-        this.name = Codegen.empty();
-        this.securityStyle = Codegen.empty();
-        this.sizeInMegabytes = Codegen.empty();
-        this.storageEfficiencyEnabled = Codegen.empty();
-        this.storageVirtualMachineId = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.tieringPolicy = Codegen.empty();
-        this.volumeType = Codegen.empty();
+    private OntapVolumeArgs(OntapVolumeArgs $) {
+        this.junctionPath = $.junctionPath;
+        this.name = $.name;
+        this.securityStyle = $.securityStyle;
+        this.sizeInMegabytes = $.sizeInMegabytes;
+        this.storageEfficiencyEnabled = $.storageEfficiencyEnabled;
+        this.storageVirtualMachineId = $.storageVirtualMachineId;
+        this.tags = $.tags;
+        this.tieringPolicy = $.tieringPolicy;
+        this.volumeType = $.volumeType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(OntapVolumeArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> junctionPath;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> securityStyle;
-        private Output<Integer> sizeInMegabytes;
-        private Output<Boolean> storageEfficiencyEnabled;
-        private Output<String> storageVirtualMachineId;
-        private @Nullable Output<Map<String,String>> tags;
-        private @Nullable Output<OntapVolumeTieringPolicyArgs> tieringPolicy;
-        private @Nullable Output<String> volumeType;
+        private OntapVolumeArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new OntapVolumeArgs();
         }
 
         public Builder(OntapVolumeArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.junctionPath = defaults.junctionPath;
-    	      this.name = defaults.name;
-    	      this.securityStyle = defaults.securityStyle;
-    	      this.sizeInMegabytes = defaults.sizeInMegabytes;
-    	      this.storageEfficiencyEnabled = defaults.storageEfficiencyEnabled;
-    	      this.storageVirtualMachineId = defaults.storageVirtualMachineId;
-    	      this.tags = defaults.tags;
-    	      this.tieringPolicy = defaults.tieringPolicy;
-    	      this.volumeType = defaults.volumeType;
+            $ = new OntapVolumeArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder junctionPath(Output<String> junctionPath) {
-            this.junctionPath = Objects.requireNonNull(junctionPath);
+            $.junctionPath = junctionPath;
             return this;
         }
+
         public Builder junctionPath(String junctionPath) {
-            this.junctionPath = Output.of(Objects.requireNonNull(junctionPath));
-            return this;
+            return junctionPath(Output.of(junctionPath));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder securityStyle(@Nullable Output<String> securityStyle) {
-            this.securityStyle = securityStyle;
+            $.securityStyle = securityStyle;
             return this;
         }
-        public Builder securityStyle(@Nullable String securityStyle) {
-            this.securityStyle = Codegen.ofNullable(securityStyle);
-            return this;
+
+        public Builder securityStyle(String securityStyle) {
+            return securityStyle(Output.of(securityStyle));
         }
+
         public Builder sizeInMegabytes(Output<Integer> sizeInMegabytes) {
-            this.sizeInMegabytes = Objects.requireNonNull(sizeInMegabytes);
+            $.sizeInMegabytes = sizeInMegabytes;
             return this;
         }
+
         public Builder sizeInMegabytes(Integer sizeInMegabytes) {
-            this.sizeInMegabytes = Output.of(Objects.requireNonNull(sizeInMegabytes));
-            return this;
+            return sizeInMegabytes(Output.of(sizeInMegabytes));
         }
+
         public Builder storageEfficiencyEnabled(Output<Boolean> storageEfficiencyEnabled) {
-            this.storageEfficiencyEnabled = Objects.requireNonNull(storageEfficiencyEnabled);
+            $.storageEfficiencyEnabled = storageEfficiencyEnabled;
             return this;
         }
+
         public Builder storageEfficiencyEnabled(Boolean storageEfficiencyEnabled) {
-            this.storageEfficiencyEnabled = Output.of(Objects.requireNonNull(storageEfficiencyEnabled));
-            return this;
+            return storageEfficiencyEnabled(Output.of(storageEfficiencyEnabled));
         }
+
         public Builder storageVirtualMachineId(Output<String> storageVirtualMachineId) {
-            this.storageVirtualMachineId = Objects.requireNonNull(storageVirtualMachineId);
+            $.storageVirtualMachineId = storageVirtualMachineId;
             return this;
         }
+
         public Builder storageVirtualMachineId(String storageVirtualMachineId) {
-            this.storageVirtualMachineId = Output.of(Objects.requireNonNull(storageVirtualMachineId));
-            return this;
+            return storageVirtualMachineId(Output.of(storageVirtualMachineId));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tieringPolicy(@Nullable Output<OntapVolumeTieringPolicyArgs> tieringPolicy) {
-            this.tieringPolicy = tieringPolicy;
+            $.tieringPolicy = tieringPolicy;
             return this;
         }
-        public Builder tieringPolicy(@Nullable OntapVolumeTieringPolicyArgs tieringPolicy) {
-            this.tieringPolicy = Codegen.ofNullable(tieringPolicy);
-            return this;
+
+        public Builder tieringPolicy(OntapVolumeTieringPolicyArgs tieringPolicy) {
+            return tieringPolicy(Output.of(tieringPolicy));
         }
+
         public Builder volumeType(@Nullable Output<String> volumeType) {
-            this.volumeType = volumeType;
+            $.volumeType = volumeType;
             return this;
         }
-        public Builder volumeType(@Nullable String volumeType) {
-            this.volumeType = Codegen.ofNullable(volumeType);
-            return this;
-        }        public OntapVolumeArgs build() {
-            return new OntapVolumeArgs(junctionPath, name, securityStyle, sizeInMegabytes, storageEfficiencyEnabled, storageVirtualMachineId, tags, tieringPolicy, volumeType);
+
+        public Builder volumeType(String volumeType) {
+            return volumeType(Output.of(volumeType));
+        }
+
+        public OntapVolumeArgs build() {
+            $.junctionPath = Objects.requireNonNull($.junctionPath, "expected parameter 'junctionPath' to be non-null");
+            $.sizeInMegabytes = Objects.requireNonNull($.sizeInMegabytes, "expected parameter 'sizeInMegabytes' to be non-null");
+            $.storageEfficiencyEnabled = Objects.requireNonNull($.storageEfficiencyEnabled, "expected parameter 'storageEfficiencyEnabled' to be non-null");
+            $.storageVirtualMachineId = Objects.requireNonNull($.storageVirtualMachineId, "expected parameter 'storageVirtualMachineId' to be non-null");
+            return $;
         }
     }
+
 }

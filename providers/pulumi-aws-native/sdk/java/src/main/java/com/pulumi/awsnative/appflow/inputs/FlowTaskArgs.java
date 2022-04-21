@@ -8,10 +8,10 @@ import com.pulumi.awsnative.appflow.inputs.FlowConnectorOperatorArgs;
 import com.pulumi.awsnative.appflow.inputs.FlowTaskPropertiesObjectArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class FlowTaskArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="connectorOperator")
-      private final @Nullable Output<FlowConnectorOperatorArgs> connectorOperator;
+    private @Nullable Output<FlowConnectorOperatorArgs> connectorOperator;
 
-    public Output<FlowConnectorOperatorArgs> connectorOperator() {
-        return this.connectorOperator == null ? Codegen.empty() : this.connectorOperator;
+    public Optional<Output<FlowConnectorOperatorArgs>> connectorOperator() {
+        return Optional.ofNullable(this.connectorOperator);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class FlowTaskArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="destinationField")
-      private final @Nullable Output<String> destinationField;
+    private @Nullable Output<String> destinationField;
 
-    public Output<String> destinationField() {
-        return this.destinationField == null ? Codegen.empty() : this.destinationField;
+    public Optional<Output<String>> destinationField() {
+        return Optional.ofNullable(this.destinationField);
     }
 
     /**
@@ -46,7 +46,7 @@ public final class FlowTaskArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="sourceFields", required=true)
-      private final Output<List<String>> sourceFields;
+    private Output<List<String>> sourceFields;
 
     public Output<List<String>> sourceFields() {
         return this.sourceFields;
@@ -57,10 +57,10 @@ public final class FlowTaskArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="taskProperties")
-      private final @Nullable Output<List<FlowTaskPropertiesObjectArgs>> taskProperties;
+    private @Nullable Output<List<FlowTaskPropertiesObjectArgs>> taskProperties;
 
-    public Output<List<FlowTaskPropertiesObjectArgs>> taskProperties() {
-        return this.taskProperties == null ? Codegen.empty() : this.taskProperties;
+    public Optional<Output<List<FlowTaskPropertiesObjectArgs>>> taskProperties() {
+        return Optional.ofNullable(this.taskProperties);
     }
 
     /**
@@ -68,108 +68,98 @@ public final class FlowTaskArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="taskType", required=true)
-      private final Output<FlowTaskType> taskType;
+    private Output<FlowTaskType> taskType;
 
     public Output<FlowTaskType> taskType() {
         return this.taskType;
     }
 
-    public FlowTaskArgs(
-        @Nullable Output<FlowConnectorOperatorArgs> connectorOperator,
-        @Nullable Output<String> destinationField,
-        Output<List<String>> sourceFields,
-        @Nullable Output<List<FlowTaskPropertiesObjectArgs>> taskProperties,
-        Output<FlowTaskType> taskType) {
-        this.connectorOperator = connectorOperator;
-        this.destinationField = destinationField;
-        this.sourceFields = Objects.requireNonNull(sourceFields, "expected parameter 'sourceFields' to be non-null");
-        this.taskProperties = taskProperties;
-        this.taskType = Objects.requireNonNull(taskType, "expected parameter 'taskType' to be non-null");
-    }
+    private FlowTaskArgs() {}
 
-    private FlowTaskArgs() {
-        this.connectorOperator = Codegen.empty();
-        this.destinationField = Codegen.empty();
-        this.sourceFields = Codegen.empty();
-        this.taskProperties = Codegen.empty();
-        this.taskType = Codegen.empty();
+    private FlowTaskArgs(FlowTaskArgs $) {
+        this.connectorOperator = $.connectorOperator;
+        this.destinationField = $.destinationField;
+        this.sourceFields = $.sourceFields;
+        this.taskProperties = $.taskProperties;
+        this.taskType = $.taskType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FlowTaskArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<FlowConnectorOperatorArgs> connectorOperator;
-        private @Nullable Output<String> destinationField;
-        private Output<List<String>> sourceFields;
-        private @Nullable Output<List<FlowTaskPropertiesObjectArgs>> taskProperties;
-        private Output<FlowTaskType> taskType;
+        private FlowTaskArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new FlowTaskArgs();
         }
 
         public Builder(FlowTaskArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.connectorOperator = defaults.connectorOperator;
-    	      this.destinationField = defaults.destinationField;
-    	      this.sourceFields = defaults.sourceFields;
-    	      this.taskProperties = defaults.taskProperties;
-    	      this.taskType = defaults.taskType;
+            $ = new FlowTaskArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder connectorOperator(@Nullable Output<FlowConnectorOperatorArgs> connectorOperator) {
-            this.connectorOperator = connectorOperator;
+            $.connectorOperator = connectorOperator;
             return this;
         }
-        public Builder connectorOperator(@Nullable FlowConnectorOperatorArgs connectorOperator) {
-            this.connectorOperator = Codegen.ofNullable(connectorOperator);
-            return this;
+
+        public Builder connectorOperator(FlowConnectorOperatorArgs connectorOperator) {
+            return connectorOperator(Output.of(connectorOperator));
         }
+
         public Builder destinationField(@Nullable Output<String> destinationField) {
-            this.destinationField = destinationField;
+            $.destinationField = destinationField;
             return this;
         }
-        public Builder destinationField(@Nullable String destinationField) {
-            this.destinationField = Codegen.ofNullable(destinationField);
-            return this;
+
+        public Builder destinationField(String destinationField) {
+            return destinationField(Output.of(destinationField));
         }
+
         public Builder sourceFields(Output<List<String>> sourceFields) {
-            this.sourceFields = Objects.requireNonNull(sourceFields);
+            $.sourceFields = sourceFields;
             return this;
         }
+
         public Builder sourceFields(List<String> sourceFields) {
-            this.sourceFields = Output.of(Objects.requireNonNull(sourceFields));
-            return this;
+            return sourceFields(Output.of(sourceFields));
         }
+
         public Builder sourceFields(String... sourceFields) {
             return sourceFields(List.of(sourceFields));
         }
+
         public Builder taskProperties(@Nullable Output<List<FlowTaskPropertiesObjectArgs>> taskProperties) {
-            this.taskProperties = taskProperties;
+            $.taskProperties = taskProperties;
             return this;
         }
-        public Builder taskProperties(@Nullable List<FlowTaskPropertiesObjectArgs> taskProperties) {
-            this.taskProperties = Codegen.ofNullable(taskProperties);
-            return this;
+
+        public Builder taskProperties(List<FlowTaskPropertiesObjectArgs> taskProperties) {
+            return taskProperties(Output.of(taskProperties));
         }
+
         public Builder taskProperties(FlowTaskPropertiesObjectArgs... taskProperties) {
             return taskProperties(List.of(taskProperties));
         }
+
         public Builder taskType(Output<FlowTaskType> taskType) {
-            this.taskType = Objects.requireNonNull(taskType);
+            $.taskType = taskType;
             return this;
         }
+
         public Builder taskType(FlowTaskType taskType) {
-            this.taskType = Output.of(Objects.requireNonNull(taskType));
-            return this;
-        }        public FlowTaskArgs build() {
-            return new FlowTaskArgs(connectorOperator, destinationField, sourceFields, taskProperties, taskType);
+            return taskType(Output.of(taskType));
+        }
+
+        public FlowTaskArgs build() {
+            $.sourceFields = Objects.requireNonNull($.sourceFields, "expected parameter 'sourceFields' to be non-null");
+            $.taskType = Objects.requireNonNull($.taskType, "expected parameter 'taskType' to be non-null");
+            return $;
         }
     }
+
 }

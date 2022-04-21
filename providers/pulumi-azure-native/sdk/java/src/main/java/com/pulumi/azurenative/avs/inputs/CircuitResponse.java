@@ -21,7 +21,7 @@ public final class CircuitResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="expressRouteID", required=true)
-      private final String expressRouteID;
+    private String expressRouteID;
 
     public String expressRouteID() {
         return this.expressRouteID;
@@ -32,7 +32,7 @@ public final class CircuitResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="expressRoutePrivatePeeringID", required=true)
-      private final String expressRoutePrivatePeeringID;
+    private String expressRoutePrivatePeeringID;
 
     public String expressRoutePrivatePeeringID() {
         return this.expressRoutePrivatePeeringID;
@@ -43,7 +43,7 @@ public final class CircuitResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="primarySubnet", required=true)
-      private final String primarySubnet;
+    private String primarySubnet;
 
     public String primarySubnet() {
         return this.primarySubnet;
@@ -54,73 +54,66 @@ public final class CircuitResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="secondarySubnet", required=true)
-      private final String secondarySubnet;
+    private String secondarySubnet;
 
     public String secondarySubnet() {
         return this.secondarySubnet;
     }
 
-    public CircuitResponse(
-        String expressRouteID,
-        String expressRoutePrivatePeeringID,
-        String primarySubnet,
-        String secondarySubnet) {
-        this.expressRouteID = Objects.requireNonNull(expressRouteID, "expected parameter 'expressRouteID' to be non-null");
-        this.expressRoutePrivatePeeringID = Objects.requireNonNull(expressRoutePrivatePeeringID, "expected parameter 'expressRoutePrivatePeeringID' to be non-null");
-        this.primarySubnet = Objects.requireNonNull(primarySubnet, "expected parameter 'primarySubnet' to be non-null");
-        this.secondarySubnet = Objects.requireNonNull(secondarySubnet, "expected parameter 'secondarySubnet' to be non-null");
-    }
+    private CircuitResponse() {}
 
-    private CircuitResponse() {
-        this.expressRouteID = null;
-        this.expressRoutePrivatePeeringID = null;
-        this.primarySubnet = null;
-        this.secondarySubnet = null;
+    private CircuitResponse(CircuitResponse $) {
+        this.expressRouteID = $.expressRouteID;
+        this.expressRoutePrivatePeeringID = $.expressRoutePrivatePeeringID;
+        this.primarySubnet = $.primarySubnet;
+        this.secondarySubnet = $.secondarySubnet;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CircuitResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String expressRouteID;
-        private String expressRoutePrivatePeeringID;
-        private String primarySubnet;
-        private String secondarySubnet;
+        private CircuitResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new CircuitResponse();
         }
 
         public Builder(CircuitResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.expressRouteID = defaults.expressRouteID;
-    	      this.expressRoutePrivatePeeringID = defaults.expressRoutePrivatePeeringID;
-    	      this.primarySubnet = defaults.primarySubnet;
-    	      this.secondarySubnet = defaults.secondarySubnet;
+            $ = new CircuitResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder expressRouteID(String expressRouteID) {
-            this.expressRouteID = Objects.requireNonNull(expressRouteID);
+            $.expressRouteID = expressRouteID;
             return this;
         }
+
         public Builder expressRoutePrivatePeeringID(String expressRoutePrivatePeeringID) {
-            this.expressRoutePrivatePeeringID = Objects.requireNonNull(expressRoutePrivatePeeringID);
+            $.expressRoutePrivatePeeringID = expressRoutePrivatePeeringID;
             return this;
         }
+
         public Builder primarySubnet(String primarySubnet) {
-            this.primarySubnet = Objects.requireNonNull(primarySubnet);
+            $.primarySubnet = primarySubnet;
             return this;
         }
+
         public Builder secondarySubnet(String secondarySubnet) {
-            this.secondarySubnet = Objects.requireNonNull(secondarySubnet);
+            $.secondarySubnet = secondarySubnet;
             return this;
-        }        public CircuitResponse build() {
-            return new CircuitResponse(expressRouteID, expressRoutePrivatePeeringID, primarySubnet, secondarySubnet);
+        }
+
+        public CircuitResponse build() {
+            $.expressRouteID = Objects.requireNonNull($.expressRouteID, "expected parameter 'expressRouteID' to be non-null");
+            $.expressRoutePrivatePeeringID = Objects.requireNonNull($.expressRoutePrivatePeeringID, "expected parameter 'expressRoutePrivatePeeringID' to be non-null");
+            $.primarySubnet = Objects.requireNonNull($.primarySubnet, "expected parameter 'primarySubnet' to be non-null");
+            $.secondarySubnet = Objects.requireNonNull($.secondarySubnet, "expected parameter 'secondarySubnet' to be non-null");
+            return $;
         }
     }
+
 }

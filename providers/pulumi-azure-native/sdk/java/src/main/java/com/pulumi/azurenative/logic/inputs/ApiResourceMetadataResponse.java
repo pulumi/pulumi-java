@@ -26,10 +26,10 @@ public final class ApiResourceMetadataResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="apiType")
-      private final @Nullable String apiType;
+    private @Nullable String apiType;
 
     public Optional<String> apiType() {
-        return this.apiType == null ? Optional.empty() : Optional.ofNullable(this.apiType);
+        return Optional.ofNullable(this.apiType);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class ApiResourceMetadataResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="brandColor")
-      private final @Nullable String brandColor;
+    private @Nullable String brandColor;
 
     public Optional<String> brandColor() {
-        return this.brandColor == null ? Optional.empty() : Optional.ofNullable(this.brandColor);
+        return Optional.ofNullable(this.brandColor);
     }
 
     /**
@@ -48,10 +48,10 @@ public final class ApiResourceMetadataResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="connectionType")
-      private final @Nullable String connectionType;
+    private @Nullable String connectionType;
 
     public Optional<String> connectionType() {
-        return this.connectionType == null ? Optional.empty() : Optional.ofNullable(this.connectionType);
+        return Optional.ofNullable(this.connectionType);
     }
 
     /**
@@ -59,10 +59,10 @@ public final class ApiResourceMetadataResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="deploymentParameters")
-      private final @Nullable ApiDeploymentParameterMetadataSetResponse deploymentParameters;
+    private @Nullable ApiDeploymentParameterMetadataSetResponse deploymentParameters;
 
     public Optional<ApiDeploymentParameterMetadataSetResponse> deploymentParameters() {
-        return this.deploymentParameters == null ? Optional.empty() : Optional.ofNullable(this.deploymentParameters);
+        return Optional.ofNullable(this.deploymentParameters);
     }
 
     /**
@@ -70,10 +70,10 @@ public final class ApiResourceMetadataResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="hideKey")
-      private final @Nullable String hideKey;
+    private @Nullable String hideKey;
 
     public Optional<String> hideKey() {
-        return this.hideKey == null ? Optional.empty() : Optional.ofNullable(this.hideKey);
+        return Optional.ofNullable(this.hideKey);
     }
 
     /**
@@ -81,10 +81,10 @@ public final class ApiResourceMetadataResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="provisioningState")
-      private final @Nullable String provisioningState;
+    private @Nullable String provisioningState;
 
     public Optional<String> provisioningState() {
-        return this.provisioningState == null ? Optional.empty() : Optional.ofNullable(this.provisioningState);
+        return Optional.ofNullable(this.provisioningState);
     }
 
     /**
@@ -92,10 +92,10 @@ public final class ApiResourceMetadataResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="source")
-      private final @Nullable String source;
+    private @Nullable String source;
 
     public Optional<String> source() {
-        return this.source == null ? Optional.empty() : Optional.ofNullable(this.source);
+        return Optional.ofNullable(this.source);
     }
 
     /**
@@ -103,10 +103,10 @@ public final class ApiResourceMetadataResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="tags")
-      private final @Nullable Map<String,String> tags;
+    private @Nullable Map<String,String> tags;
 
-    public Map<String,String> tags() {
-        return this.tags == null ? Map.of() : this.tags;
+    public Optional<Map<String,String>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -114,10 +114,10 @@ public final class ApiResourceMetadataResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="wsdlImportMethod")
-      private final @Nullable String wsdlImportMethod;
+    private @Nullable String wsdlImportMethod;
 
     public Optional<String> wsdlImportMethod() {
-        return this.wsdlImportMethod == null ? Optional.empty() : Optional.ofNullable(this.wsdlImportMethod);
+        return Optional.ofNullable(this.wsdlImportMethod);
     }
 
     /**
@@ -125,127 +125,98 @@ public final class ApiResourceMetadataResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="wsdlService")
-      private final @Nullable WsdlServiceResponse wsdlService;
+    private @Nullable WsdlServiceResponse wsdlService;
 
     public Optional<WsdlServiceResponse> wsdlService() {
-        return this.wsdlService == null ? Optional.empty() : Optional.ofNullable(this.wsdlService);
+        return Optional.ofNullable(this.wsdlService);
     }
 
-    public ApiResourceMetadataResponse(
-        @Nullable String apiType,
-        @Nullable String brandColor,
-        @Nullable String connectionType,
-        @Nullable ApiDeploymentParameterMetadataSetResponse deploymentParameters,
-        @Nullable String hideKey,
-        @Nullable String provisioningState,
-        @Nullable String source,
-        @Nullable Map<String,String> tags,
-        @Nullable String wsdlImportMethod,
-        @Nullable WsdlServiceResponse wsdlService) {
-        this.apiType = apiType;
-        this.brandColor = brandColor;
-        this.connectionType = connectionType;
-        this.deploymentParameters = deploymentParameters;
-        this.hideKey = hideKey;
-        this.provisioningState = provisioningState;
-        this.source = source;
-        this.tags = tags;
-        this.wsdlImportMethod = wsdlImportMethod;
-        this.wsdlService = wsdlService;
-    }
+    private ApiResourceMetadataResponse() {}
 
-    private ApiResourceMetadataResponse() {
-        this.apiType = null;
-        this.brandColor = null;
-        this.connectionType = null;
-        this.deploymentParameters = null;
-        this.hideKey = null;
-        this.provisioningState = null;
-        this.source = null;
-        this.tags = Map.of();
-        this.wsdlImportMethod = null;
-        this.wsdlService = null;
+    private ApiResourceMetadataResponse(ApiResourceMetadataResponse $) {
+        this.apiType = $.apiType;
+        this.brandColor = $.brandColor;
+        this.connectionType = $.connectionType;
+        this.deploymentParameters = $.deploymentParameters;
+        this.hideKey = $.hideKey;
+        this.provisioningState = $.provisioningState;
+        this.source = $.source;
+        this.tags = $.tags;
+        this.wsdlImportMethod = $.wsdlImportMethod;
+        this.wsdlService = $.wsdlService;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ApiResourceMetadataResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String apiType;
-        private @Nullable String brandColor;
-        private @Nullable String connectionType;
-        private @Nullable ApiDeploymentParameterMetadataSetResponse deploymentParameters;
-        private @Nullable String hideKey;
-        private @Nullable String provisioningState;
-        private @Nullable String source;
-        private @Nullable Map<String,String> tags;
-        private @Nullable String wsdlImportMethod;
-        private @Nullable WsdlServiceResponse wsdlService;
+        private ApiResourceMetadataResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ApiResourceMetadataResponse();
         }
 
         public Builder(ApiResourceMetadataResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.apiType = defaults.apiType;
-    	      this.brandColor = defaults.brandColor;
-    	      this.connectionType = defaults.connectionType;
-    	      this.deploymentParameters = defaults.deploymentParameters;
-    	      this.hideKey = defaults.hideKey;
-    	      this.provisioningState = defaults.provisioningState;
-    	      this.source = defaults.source;
-    	      this.tags = defaults.tags;
-    	      this.wsdlImportMethod = defaults.wsdlImportMethod;
-    	      this.wsdlService = defaults.wsdlService;
+            $ = new ApiResourceMetadataResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder apiType(@Nullable String apiType) {
-            this.apiType = apiType;
+            $.apiType = apiType;
             return this;
         }
+
         public Builder brandColor(@Nullable String brandColor) {
-            this.brandColor = brandColor;
+            $.brandColor = brandColor;
             return this;
         }
+
         public Builder connectionType(@Nullable String connectionType) {
-            this.connectionType = connectionType;
+            $.connectionType = connectionType;
             return this;
         }
+
         public Builder deploymentParameters(@Nullable ApiDeploymentParameterMetadataSetResponse deploymentParameters) {
-            this.deploymentParameters = deploymentParameters;
+            $.deploymentParameters = deploymentParameters;
             return this;
         }
+
         public Builder hideKey(@Nullable String hideKey) {
-            this.hideKey = hideKey;
+            $.hideKey = hideKey;
             return this;
         }
+
         public Builder provisioningState(@Nullable String provisioningState) {
-            this.provisioningState = provisioningState;
+            $.provisioningState = provisioningState;
             return this;
         }
+
         public Builder source(@Nullable String source) {
-            this.source = source;
+            $.source = source;
             return this;
         }
+
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
+
         public Builder wsdlImportMethod(@Nullable String wsdlImportMethod) {
-            this.wsdlImportMethod = wsdlImportMethod;
+            $.wsdlImportMethod = wsdlImportMethod;
             return this;
         }
+
         public Builder wsdlService(@Nullable WsdlServiceResponse wsdlService) {
-            this.wsdlService = wsdlService;
+            $.wsdlService = wsdlService;
             return this;
-        }        public ApiResourceMetadataResponse build() {
-            return new ApiResourceMetadataResponse(apiType, brandColor, connectionType, deploymentParameters, hideKey, provisioningState, source, tags, wsdlImportMethod, wsdlService);
+        }
+
+        public ApiResourceMetadataResponse build() {
+            return $;
         }
     }
+
 }

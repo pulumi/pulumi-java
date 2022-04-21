@@ -5,13 +5,13 @@ package com.pulumi.googlenative.compute_v1;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.compute_v1.enums.InterconnectInterconnectType;
 import com.pulumi.googlenative.compute_v1.enums.InterconnectLinkType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class InterconnectArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="adminEnabled")
-      private final @Nullable Output<Boolean> adminEnabled;
+    private @Nullable Output<Boolean> adminEnabled;
 
-    public Output<Boolean> adminEnabled() {
-        return this.adminEnabled == null ? Codegen.empty() : this.adminEnabled;
+    public Optional<Output<Boolean>> adminEnabled() {
+        return Optional.ofNullable(this.adminEnabled);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class InterconnectArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="customerName")
-      private final @Nullable Output<String> customerName;
+    private @Nullable Output<String> customerName;
 
-    public Output<String> customerName() {
-        return this.customerName == null ? Codegen.empty() : this.customerName;
+    public Optional<Output<String>> customerName() {
+        return Optional.ofNullable(this.customerName);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class InterconnectArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -57,10 +57,10 @@ public final class InterconnectArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="interconnectType")
-      private final @Nullable Output<InterconnectInterconnectType> interconnectType;
+    private @Nullable Output<InterconnectInterconnectType> interconnectType;
 
-    public Output<InterconnectInterconnectType> interconnectType() {
-        return this.interconnectType == null ? Codegen.empty() : this.interconnectType;
+    public Optional<Output<InterconnectInterconnectType>> interconnectType() {
+        return Optional.ofNullable(this.interconnectType);
     }
 
     /**
@@ -68,10 +68,10 @@ public final class InterconnectArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="linkType")
-      private final @Nullable Output<InterconnectLinkType> linkType;
+    private @Nullable Output<InterconnectLinkType> linkType;
 
-    public Output<InterconnectLinkType> linkType() {
-        return this.linkType == null ? Codegen.empty() : this.linkType;
+    public Optional<Output<InterconnectLinkType>> linkType() {
+        return Optional.ofNullable(this.linkType);
     }
 
     /**
@@ -79,10 +79,10 @@ public final class InterconnectArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -90,10 +90,10 @@ public final class InterconnectArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -101,24 +101,24 @@ public final class InterconnectArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="nocContactEmail")
-      private final @Nullable Output<String> nocContactEmail;
+    private @Nullable Output<String> nocContactEmail;
 
-    public Output<String> nocContactEmail() {
-        return this.nocContactEmail == null ? Codegen.empty() : this.nocContactEmail;
+    public Optional<Output<String>> nocContactEmail() {
+        return Optional.ofNullable(this.nocContactEmail);
     }
 
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     @Import(name="requestId")
-      private final @Nullable Output<String> requestId;
+    private @Nullable Output<String> requestId;
 
-    public Output<String> requestId() {
-        return this.requestId == null ? Codegen.empty() : this.requestId;
+    public Optional<Output<String>> requestId() {
+        return Optional.ofNullable(this.requestId);
     }
 
     /**
@@ -126,180 +126,148 @@ public final class InterconnectArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="requestedLinkCount")
-      private final @Nullable Output<Integer> requestedLinkCount;
+    private @Nullable Output<Integer> requestedLinkCount;
 
-    public Output<Integer> requestedLinkCount() {
-        return this.requestedLinkCount == null ? Codegen.empty() : this.requestedLinkCount;
+    public Optional<Output<Integer>> requestedLinkCount() {
+        return Optional.ofNullable(this.requestedLinkCount);
     }
 
-    public InterconnectArgs(
-        @Nullable Output<Boolean> adminEnabled,
-        @Nullable Output<String> customerName,
-        @Nullable Output<String> description,
-        @Nullable Output<InterconnectInterconnectType> interconnectType,
-        @Nullable Output<InterconnectLinkType> linkType,
-        @Nullable Output<String> location,
-        @Nullable Output<String> name,
-        @Nullable Output<String> nocContactEmail,
-        @Nullable Output<String> project,
-        @Nullable Output<String> requestId,
-        @Nullable Output<Integer> requestedLinkCount) {
-        this.adminEnabled = adminEnabled;
-        this.customerName = customerName;
-        this.description = description;
-        this.interconnectType = interconnectType;
-        this.linkType = linkType;
-        this.location = location;
-        this.name = name;
-        this.nocContactEmail = nocContactEmail;
-        this.project = project;
-        this.requestId = requestId;
-        this.requestedLinkCount = requestedLinkCount;
-    }
+    private InterconnectArgs() {}
 
-    private InterconnectArgs() {
-        this.adminEnabled = Codegen.empty();
-        this.customerName = Codegen.empty();
-        this.description = Codegen.empty();
-        this.interconnectType = Codegen.empty();
-        this.linkType = Codegen.empty();
-        this.location = Codegen.empty();
-        this.name = Codegen.empty();
-        this.nocContactEmail = Codegen.empty();
-        this.project = Codegen.empty();
-        this.requestId = Codegen.empty();
-        this.requestedLinkCount = Codegen.empty();
+    private InterconnectArgs(InterconnectArgs $) {
+        this.adminEnabled = $.adminEnabled;
+        this.customerName = $.customerName;
+        this.description = $.description;
+        this.interconnectType = $.interconnectType;
+        this.linkType = $.linkType;
+        this.location = $.location;
+        this.name = $.name;
+        this.nocContactEmail = $.nocContactEmail;
+        this.project = $.project;
+        this.requestId = $.requestId;
+        this.requestedLinkCount = $.requestedLinkCount;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(InterconnectArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> adminEnabled;
-        private @Nullable Output<String> customerName;
-        private @Nullable Output<String> description;
-        private @Nullable Output<InterconnectInterconnectType> interconnectType;
-        private @Nullable Output<InterconnectLinkType> linkType;
-        private @Nullable Output<String> location;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> nocContactEmail;
-        private @Nullable Output<String> project;
-        private @Nullable Output<String> requestId;
-        private @Nullable Output<Integer> requestedLinkCount;
+        private InterconnectArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new InterconnectArgs();
         }
 
         public Builder(InterconnectArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.adminEnabled = defaults.adminEnabled;
-    	      this.customerName = defaults.customerName;
-    	      this.description = defaults.description;
-    	      this.interconnectType = defaults.interconnectType;
-    	      this.linkType = defaults.linkType;
-    	      this.location = defaults.location;
-    	      this.name = defaults.name;
-    	      this.nocContactEmail = defaults.nocContactEmail;
-    	      this.project = defaults.project;
-    	      this.requestId = defaults.requestId;
-    	      this.requestedLinkCount = defaults.requestedLinkCount;
+            $ = new InterconnectArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder adminEnabled(@Nullable Output<Boolean> adminEnabled) {
-            this.adminEnabled = adminEnabled;
+            $.adminEnabled = adminEnabled;
             return this;
         }
-        public Builder adminEnabled(@Nullable Boolean adminEnabled) {
-            this.adminEnabled = Codegen.ofNullable(adminEnabled);
-            return this;
+
+        public Builder adminEnabled(Boolean adminEnabled) {
+            return adminEnabled(Output.of(adminEnabled));
         }
+
         public Builder customerName(@Nullable Output<String> customerName) {
-            this.customerName = customerName;
+            $.customerName = customerName;
             return this;
         }
-        public Builder customerName(@Nullable String customerName) {
-            this.customerName = Codegen.ofNullable(customerName);
-            return this;
+
+        public Builder customerName(String customerName) {
+            return customerName(Output.of(customerName));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder interconnectType(@Nullable Output<InterconnectInterconnectType> interconnectType) {
-            this.interconnectType = interconnectType;
+            $.interconnectType = interconnectType;
             return this;
         }
-        public Builder interconnectType(@Nullable InterconnectInterconnectType interconnectType) {
-            this.interconnectType = Codegen.ofNullable(interconnectType);
-            return this;
+
+        public Builder interconnectType(InterconnectInterconnectType interconnectType) {
+            return interconnectType(Output.of(interconnectType));
         }
+
         public Builder linkType(@Nullable Output<InterconnectLinkType> linkType) {
-            this.linkType = linkType;
+            $.linkType = linkType;
             return this;
         }
-        public Builder linkType(@Nullable InterconnectLinkType linkType) {
-            this.linkType = Codegen.ofNullable(linkType);
-            return this;
+
+        public Builder linkType(InterconnectLinkType linkType) {
+            return linkType(Output.of(linkType));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder nocContactEmail(@Nullable Output<String> nocContactEmail) {
-            this.nocContactEmail = nocContactEmail;
+            $.nocContactEmail = nocContactEmail;
             return this;
         }
-        public Builder nocContactEmail(@Nullable String nocContactEmail) {
-            this.nocContactEmail = Codegen.ofNullable(nocContactEmail);
-            return this;
+
+        public Builder nocContactEmail(String nocContactEmail) {
+            return nocContactEmail(Output.of(nocContactEmail));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder requestId(@Nullable Output<String> requestId) {
-            this.requestId = requestId;
+            $.requestId = requestId;
             return this;
         }
-        public Builder requestId(@Nullable String requestId) {
-            this.requestId = Codegen.ofNullable(requestId);
-            return this;
+
+        public Builder requestId(String requestId) {
+            return requestId(Output.of(requestId));
         }
+
         public Builder requestedLinkCount(@Nullable Output<Integer> requestedLinkCount) {
-            this.requestedLinkCount = requestedLinkCount;
+            $.requestedLinkCount = requestedLinkCount;
             return this;
         }
-        public Builder requestedLinkCount(@Nullable Integer requestedLinkCount) {
-            this.requestedLinkCount = Codegen.ofNullable(requestedLinkCount);
-            return this;
-        }        public InterconnectArgs build() {
-            return new InterconnectArgs(adminEnabled, customerName, description, interconnectType, linkType, location, name, nocContactEmail, project, requestId, requestedLinkCount);
+
+        public Builder requestedLinkCount(Integer requestedLinkCount) {
+            return requestedLinkCount(Output.of(requestedLinkCount));
+        }
+
+        public InterconnectArgs build() {
+            return $;
         }
     }
+
 }

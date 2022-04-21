@@ -6,9 +6,9 @@ package com.pulumi.awsnative.lookoutmetrics.inputs;
 import com.pulumi.awsnative.lookoutmetrics.enums.AnomalyDetectorJsonFormatDescriptorFileCompression;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -17,70 +17,65 @@ public final class AnomalyDetectorJsonFormatDescriptorArgs extends com.pulumi.re
     public static final AnomalyDetectorJsonFormatDescriptorArgs Empty = new AnomalyDetectorJsonFormatDescriptorArgs();
 
     @Import(name="charset")
-      private final @Nullable Output<String> charset;
+    private @Nullable Output<String> charset;
 
-    public Output<String> charset() {
-        return this.charset == null ? Codegen.empty() : this.charset;
+    public Optional<Output<String>> charset() {
+        return Optional.ofNullable(this.charset);
     }
 
     @Import(name="fileCompression")
-      private final @Nullable Output<AnomalyDetectorJsonFormatDescriptorFileCompression> fileCompression;
+    private @Nullable Output<AnomalyDetectorJsonFormatDescriptorFileCompression> fileCompression;
 
-    public Output<AnomalyDetectorJsonFormatDescriptorFileCompression> fileCompression() {
-        return this.fileCompression == null ? Codegen.empty() : this.fileCompression;
+    public Optional<Output<AnomalyDetectorJsonFormatDescriptorFileCompression>> fileCompression() {
+        return Optional.ofNullable(this.fileCompression);
     }
 
-    public AnomalyDetectorJsonFormatDescriptorArgs(
-        @Nullable Output<String> charset,
-        @Nullable Output<AnomalyDetectorJsonFormatDescriptorFileCompression> fileCompression) {
-        this.charset = charset;
-        this.fileCompression = fileCompression;
-    }
+    private AnomalyDetectorJsonFormatDescriptorArgs() {}
 
-    private AnomalyDetectorJsonFormatDescriptorArgs() {
-        this.charset = Codegen.empty();
-        this.fileCompression = Codegen.empty();
+    private AnomalyDetectorJsonFormatDescriptorArgs(AnomalyDetectorJsonFormatDescriptorArgs $) {
+        this.charset = $.charset;
+        this.fileCompression = $.fileCompression;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AnomalyDetectorJsonFormatDescriptorArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> charset;
-        private @Nullable Output<AnomalyDetectorJsonFormatDescriptorFileCompression> fileCompression;
+        private AnomalyDetectorJsonFormatDescriptorArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AnomalyDetectorJsonFormatDescriptorArgs();
         }
 
         public Builder(AnomalyDetectorJsonFormatDescriptorArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.charset = defaults.charset;
-    	      this.fileCompression = defaults.fileCompression;
+            $ = new AnomalyDetectorJsonFormatDescriptorArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder charset(@Nullable Output<String> charset) {
-            this.charset = charset;
+            $.charset = charset;
             return this;
         }
-        public Builder charset(@Nullable String charset) {
-            this.charset = Codegen.ofNullable(charset);
-            return this;
+
+        public Builder charset(String charset) {
+            return charset(Output.of(charset));
         }
+
         public Builder fileCompression(@Nullable Output<AnomalyDetectorJsonFormatDescriptorFileCompression> fileCompression) {
-            this.fileCompression = fileCompression;
+            $.fileCompression = fileCompression;
             return this;
         }
-        public Builder fileCompression(@Nullable AnomalyDetectorJsonFormatDescriptorFileCompression fileCompression) {
-            this.fileCompression = Codegen.ofNullable(fileCompression);
-            return this;
-        }        public AnomalyDetectorJsonFormatDescriptorArgs build() {
-            return new AnomalyDetectorJsonFormatDescriptorArgs(charset, fileCompression);
+
+        public Builder fileCompression(AnomalyDetectorJsonFormatDescriptorFileCompression fileCompression) {
+            return fileCompression(Output.of(fileCompression));
+        }
+
+        public AnomalyDetectorJsonFormatDescriptorArgs build() {
+            return $;
         }
     }
+
 }

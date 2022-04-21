@@ -19,65 +19,63 @@ public final class ComplianceOccurrenceResponse extends com.pulumi.resources.Inv
     public static final ComplianceOccurrenceResponse Empty = new ComplianceOccurrenceResponse();
 
     @Import(name="nonComplianceReason", required=true)
-      private final String nonComplianceReason;
+    private String nonComplianceReason;
 
     public String nonComplianceReason() {
         return this.nonComplianceReason;
     }
 
     @Import(name="nonCompliantFiles", required=true)
-      private final List<NonCompliantFileResponse> nonCompliantFiles;
+    private List<NonCompliantFileResponse> nonCompliantFiles;
 
     public List<NonCompliantFileResponse> nonCompliantFiles() {
         return this.nonCompliantFiles;
     }
 
-    public ComplianceOccurrenceResponse(
-        String nonComplianceReason,
-        List<NonCompliantFileResponse> nonCompliantFiles) {
-        this.nonComplianceReason = Objects.requireNonNull(nonComplianceReason, "expected parameter 'nonComplianceReason' to be non-null");
-        this.nonCompliantFiles = Objects.requireNonNull(nonCompliantFiles, "expected parameter 'nonCompliantFiles' to be non-null");
-    }
+    private ComplianceOccurrenceResponse() {}
 
-    private ComplianceOccurrenceResponse() {
-        this.nonComplianceReason = null;
-        this.nonCompliantFiles = List.of();
+    private ComplianceOccurrenceResponse(ComplianceOccurrenceResponse $) {
+        this.nonComplianceReason = $.nonComplianceReason;
+        this.nonCompliantFiles = $.nonCompliantFiles;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ComplianceOccurrenceResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String nonComplianceReason;
-        private List<NonCompliantFileResponse> nonCompliantFiles;
+        private ComplianceOccurrenceResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ComplianceOccurrenceResponse();
         }
 
         public Builder(ComplianceOccurrenceResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.nonComplianceReason = defaults.nonComplianceReason;
-    	      this.nonCompliantFiles = defaults.nonCompliantFiles;
+            $ = new ComplianceOccurrenceResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder nonComplianceReason(String nonComplianceReason) {
-            this.nonComplianceReason = Objects.requireNonNull(nonComplianceReason);
+            $.nonComplianceReason = nonComplianceReason;
             return this;
         }
+
         public Builder nonCompliantFiles(List<NonCompliantFileResponse> nonCompliantFiles) {
-            this.nonCompliantFiles = Objects.requireNonNull(nonCompliantFiles);
+            $.nonCompliantFiles = nonCompliantFiles;
             return this;
         }
+
         public Builder nonCompliantFiles(NonCompliantFileResponse... nonCompliantFiles) {
             return nonCompliantFiles(List.of(nonCompliantFiles));
-        }        public ComplianceOccurrenceResponse build() {
-            return new ComplianceOccurrenceResponse(nonComplianceReason, nonCompliantFiles);
+        }
+
+        public ComplianceOccurrenceResponse build() {
+            $.nonComplianceReason = Objects.requireNonNull($.nonComplianceReason, "expected parameter 'nonComplianceReason' to be non-null");
+            $.nonCompliantFiles = Objects.requireNonNull($.nonCompliantFiles, "expected parameter 'nonCompliantFiles' to be non-null");
+            return $;
         }
     }
+
 }

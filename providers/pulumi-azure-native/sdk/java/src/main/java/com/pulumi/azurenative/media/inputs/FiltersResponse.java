@@ -29,10 +29,10 @@ public final class FiltersResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="crop")
-      private final @Nullable RectangleResponse crop;
+    private @Nullable RectangleResponse crop;
 
     public Optional<RectangleResponse> crop() {
-        return this.crop == null ? Optional.empty() : Optional.ofNullable(this.crop);
+        return Optional.ofNullable(this.crop);
     }
 
     /**
@@ -40,10 +40,10 @@ public final class FiltersResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="deinterlace")
-      private final @Nullable DeinterlaceResponse deinterlace;
+    private @Nullable DeinterlaceResponse deinterlace;
 
     public Optional<DeinterlaceResponse> deinterlace() {
-        return this.deinterlace == null ? Optional.empty() : Optional.ofNullable(this.deinterlace);
+        return Optional.ofNullable(this.deinterlace);
     }
 
     /**
@@ -51,10 +51,10 @@ public final class FiltersResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="overlays")
-      private final @Nullable List<Either<AudioOverlayResponse,VideoOverlayResponse>> overlays;
+    private @Nullable List<Either<AudioOverlayResponse,VideoOverlayResponse>> overlays;
 
-    public List<Either<AudioOverlayResponse,VideoOverlayResponse>> overlays() {
-        return this.overlays == null ? List.of() : this.overlays;
+    public Optional<List<Either<AudioOverlayResponse,VideoOverlayResponse>>> overlays() {
+        return Optional.ofNullable(this.overlays);
     }
 
     /**
@@ -62,76 +62,66 @@ public final class FiltersResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="rotation")
-      private final @Nullable String rotation;
+    private @Nullable String rotation;
 
     public Optional<String> rotation() {
-        return this.rotation == null ? Optional.empty() : Optional.ofNullable(this.rotation);
+        return Optional.ofNullable(this.rotation);
     }
 
-    public FiltersResponse(
-        @Nullable RectangleResponse crop,
-        @Nullable DeinterlaceResponse deinterlace,
-        @Nullable List<Either<AudioOverlayResponse,VideoOverlayResponse>> overlays,
-        @Nullable String rotation) {
-        this.crop = crop;
-        this.deinterlace = deinterlace;
-        this.overlays = overlays;
-        this.rotation = rotation;
-    }
+    private FiltersResponse() {}
 
-    private FiltersResponse() {
-        this.crop = null;
-        this.deinterlace = null;
-        this.overlays = List.of();
-        this.rotation = null;
+    private FiltersResponse(FiltersResponse $) {
+        this.crop = $.crop;
+        this.deinterlace = $.deinterlace;
+        this.overlays = $.overlays;
+        this.rotation = $.rotation;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FiltersResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable RectangleResponse crop;
-        private @Nullable DeinterlaceResponse deinterlace;
-        private @Nullable List<Either<AudioOverlayResponse,VideoOverlayResponse>> overlays;
-        private @Nullable String rotation;
+        private FiltersResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new FiltersResponse();
         }
 
         public Builder(FiltersResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.crop = defaults.crop;
-    	      this.deinterlace = defaults.deinterlace;
-    	      this.overlays = defaults.overlays;
-    	      this.rotation = defaults.rotation;
+            $ = new FiltersResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder crop(@Nullable RectangleResponse crop) {
-            this.crop = crop;
+            $.crop = crop;
             return this;
         }
+
         public Builder deinterlace(@Nullable DeinterlaceResponse deinterlace) {
-            this.deinterlace = deinterlace;
+            $.deinterlace = deinterlace;
             return this;
         }
+
         public Builder overlays(@Nullable List<Either<AudioOverlayResponse,VideoOverlayResponse>> overlays) {
-            this.overlays = overlays;
+            $.overlays = overlays;
             return this;
         }
+
         public Builder overlays(Either<AudioOverlayResponse,VideoOverlayResponse>... overlays) {
             return overlays(List.of(overlays));
         }
+
         public Builder rotation(@Nullable String rotation) {
-            this.rotation = rotation;
+            $.rotation = rotation;
             return this;
-        }        public FiltersResponse build() {
-            return new FiltersResponse(crop, deinterlace, overlays, rotation);
+        }
+
+        public FiltersResponse build() {
+            return $;
         }
     }
+
 }

@@ -5,10 +5,10 @@ package com.pulumi.googlenative.dialogflow_v3.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.dialogflow_v3.inputs.GoogleCloudDialogflowCxV3FulfillmentArgs;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class GoogleCloudDialogflowCxV3TransitionRouteArgs extends com.pulu
      * 
      */
     @Import(name="condition")
-      private final @Nullable Output<String> condition;
+    private @Nullable Output<String> condition;
 
-    public Output<String> condition() {
-        return this.condition == null ? Codegen.empty() : this.condition;
+    public Optional<Output<String>> condition() {
+        return Optional.ofNullable(this.condition);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class GoogleCloudDialogflowCxV3TransitionRouteArgs extends com.pulu
      * 
      */
     @Import(name="intent")
-      private final @Nullable Output<String> intent;
+    private @Nullable Output<String> intent;
 
-    public Output<String> intent() {
-        return this.intent == null ? Codegen.empty() : this.intent;
+    public Optional<Output<String>> intent() {
+        return Optional.ofNullable(this.intent);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class GoogleCloudDialogflowCxV3TransitionRouteArgs extends com.pulu
      * 
      */
     @Import(name="targetFlow")
-      private final @Nullable Output<String> targetFlow;
+    private @Nullable Output<String> targetFlow;
 
-    public Output<String> targetFlow() {
-        return this.targetFlow == null ? Codegen.empty() : this.targetFlow;
+    public Optional<Output<String>> targetFlow() {
+        return Optional.ofNullable(this.targetFlow);
     }
 
     /**
@@ -58,10 +58,10 @@ public final class GoogleCloudDialogflowCxV3TransitionRouteArgs extends com.pulu
      * 
      */
     @Import(name="targetPage")
-      private final @Nullable Output<String> targetPage;
+    private @Nullable Output<String> targetPage;
 
-    public Output<String> targetPage() {
-        return this.targetPage == null ? Codegen.empty() : this.targetPage;
+    public Optional<Output<String>> targetPage() {
+        return Optional.ofNullable(this.targetPage);
     }
 
     /**
@@ -69,102 +69,88 @@ public final class GoogleCloudDialogflowCxV3TransitionRouteArgs extends com.pulu
      * 
      */
     @Import(name="triggerFulfillment")
-      private final @Nullable Output<GoogleCloudDialogflowCxV3FulfillmentArgs> triggerFulfillment;
+    private @Nullable Output<GoogleCloudDialogflowCxV3FulfillmentArgs> triggerFulfillment;
 
-    public Output<GoogleCloudDialogflowCxV3FulfillmentArgs> triggerFulfillment() {
-        return this.triggerFulfillment == null ? Codegen.empty() : this.triggerFulfillment;
+    public Optional<Output<GoogleCloudDialogflowCxV3FulfillmentArgs>> triggerFulfillment() {
+        return Optional.ofNullable(this.triggerFulfillment);
     }
 
-    public GoogleCloudDialogflowCxV3TransitionRouteArgs(
-        @Nullable Output<String> condition,
-        @Nullable Output<String> intent,
-        @Nullable Output<String> targetFlow,
-        @Nullable Output<String> targetPage,
-        @Nullable Output<GoogleCloudDialogflowCxV3FulfillmentArgs> triggerFulfillment) {
-        this.condition = condition;
-        this.intent = intent;
-        this.targetFlow = targetFlow;
-        this.targetPage = targetPage;
-        this.triggerFulfillment = triggerFulfillment;
-    }
+    private GoogleCloudDialogflowCxV3TransitionRouteArgs() {}
 
-    private GoogleCloudDialogflowCxV3TransitionRouteArgs() {
-        this.condition = Codegen.empty();
-        this.intent = Codegen.empty();
-        this.targetFlow = Codegen.empty();
-        this.targetPage = Codegen.empty();
-        this.triggerFulfillment = Codegen.empty();
+    private GoogleCloudDialogflowCxV3TransitionRouteArgs(GoogleCloudDialogflowCxV3TransitionRouteArgs $) {
+        this.condition = $.condition;
+        this.intent = $.intent;
+        this.targetFlow = $.targetFlow;
+        this.targetPage = $.targetPage;
+        this.triggerFulfillment = $.triggerFulfillment;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudDialogflowCxV3TransitionRouteArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> condition;
-        private @Nullable Output<String> intent;
-        private @Nullable Output<String> targetFlow;
-        private @Nullable Output<String> targetPage;
-        private @Nullable Output<GoogleCloudDialogflowCxV3FulfillmentArgs> triggerFulfillment;
+        private GoogleCloudDialogflowCxV3TransitionRouteArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudDialogflowCxV3TransitionRouteArgs();
         }
 
         public Builder(GoogleCloudDialogflowCxV3TransitionRouteArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.condition = defaults.condition;
-    	      this.intent = defaults.intent;
-    	      this.targetFlow = defaults.targetFlow;
-    	      this.targetPage = defaults.targetPage;
-    	      this.triggerFulfillment = defaults.triggerFulfillment;
+            $ = new GoogleCloudDialogflowCxV3TransitionRouteArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder condition(@Nullable Output<String> condition) {
-            this.condition = condition;
+            $.condition = condition;
             return this;
         }
-        public Builder condition(@Nullable String condition) {
-            this.condition = Codegen.ofNullable(condition);
-            return this;
+
+        public Builder condition(String condition) {
+            return condition(Output.of(condition));
         }
+
         public Builder intent(@Nullable Output<String> intent) {
-            this.intent = intent;
+            $.intent = intent;
             return this;
         }
-        public Builder intent(@Nullable String intent) {
-            this.intent = Codegen.ofNullable(intent);
-            return this;
+
+        public Builder intent(String intent) {
+            return intent(Output.of(intent));
         }
+
         public Builder targetFlow(@Nullable Output<String> targetFlow) {
-            this.targetFlow = targetFlow;
+            $.targetFlow = targetFlow;
             return this;
         }
-        public Builder targetFlow(@Nullable String targetFlow) {
-            this.targetFlow = Codegen.ofNullable(targetFlow);
-            return this;
+
+        public Builder targetFlow(String targetFlow) {
+            return targetFlow(Output.of(targetFlow));
         }
+
         public Builder targetPage(@Nullable Output<String> targetPage) {
-            this.targetPage = targetPage;
+            $.targetPage = targetPage;
             return this;
         }
-        public Builder targetPage(@Nullable String targetPage) {
-            this.targetPage = Codegen.ofNullable(targetPage);
-            return this;
+
+        public Builder targetPage(String targetPage) {
+            return targetPage(Output.of(targetPage));
         }
+
         public Builder triggerFulfillment(@Nullable Output<GoogleCloudDialogflowCxV3FulfillmentArgs> triggerFulfillment) {
-            this.triggerFulfillment = triggerFulfillment;
+            $.triggerFulfillment = triggerFulfillment;
             return this;
         }
-        public Builder triggerFulfillment(@Nullable GoogleCloudDialogflowCxV3FulfillmentArgs triggerFulfillment) {
-            this.triggerFulfillment = Codegen.ofNullable(triggerFulfillment);
-            return this;
-        }        public GoogleCloudDialogflowCxV3TransitionRouteArgs build() {
-            return new GoogleCloudDialogflowCxV3TransitionRouteArgs(condition, intent, targetFlow, targetPage, triggerFulfillment);
+
+        public Builder triggerFulfillment(GoogleCloudDialogflowCxV3FulfillmentArgs triggerFulfillment) {
+            return triggerFulfillment(Output.of(triggerFulfillment));
+        }
+
+        public GoogleCloudDialogflowCxV3TransitionRouteArgs build() {
+            return $;
         }
     }
+
 }

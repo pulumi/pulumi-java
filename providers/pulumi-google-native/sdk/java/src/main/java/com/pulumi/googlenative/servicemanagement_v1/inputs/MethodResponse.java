@@ -24,7 +24,7 @@ public final class MethodResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -35,7 +35,7 @@ public final class MethodResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="options", required=true)
-      private final List<OptionResponse> options;
+    private List<OptionResponse> options;
 
     public List<OptionResponse> options() {
         return this.options;
@@ -46,7 +46,7 @@ public final class MethodResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="requestStreaming", required=true)
-      private final Boolean requestStreaming;
+    private Boolean requestStreaming;
 
     public Boolean requestStreaming() {
         return this.requestStreaming;
@@ -57,7 +57,7 @@ public final class MethodResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="requestTypeUrl", required=true)
-      private final String requestTypeUrl;
+    private String requestTypeUrl;
 
     public String requestTypeUrl() {
         return this.requestTypeUrl;
@@ -68,7 +68,7 @@ public final class MethodResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="responseStreaming", required=true)
-      private final Boolean responseStreaming;
+    private Boolean responseStreaming;
 
     public Boolean responseStreaming() {
         return this.responseStreaming;
@@ -79,7 +79,7 @@ public final class MethodResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="responseTypeUrl", required=true)
-      private final String responseTypeUrl;
+    private String responseTypeUrl;
 
     public String responseTypeUrl() {
         return this.responseTypeUrl;
@@ -90,103 +90,91 @@ public final class MethodResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="syntax", required=true)
-      private final String syntax;
+    private String syntax;
 
     public String syntax() {
         return this.syntax;
     }
 
-    public MethodResponse(
-        String name,
-        List<OptionResponse> options,
-        Boolean requestStreaming,
-        String requestTypeUrl,
-        Boolean responseStreaming,
-        String responseTypeUrl,
-        String syntax) {
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.options = Objects.requireNonNull(options, "expected parameter 'options' to be non-null");
-        this.requestStreaming = Objects.requireNonNull(requestStreaming, "expected parameter 'requestStreaming' to be non-null");
-        this.requestTypeUrl = Objects.requireNonNull(requestTypeUrl, "expected parameter 'requestTypeUrl' to be non-null");
-        this.responseStreaming = Objects.requireNonNull(responseStreaming, "expected parameter 'responseStreaming' to be non-null");
-        this.responseTypeUrl = Objects.requireNonNull(responseTypeUrl, "expected parameter 'responseTypeUrl' to be non-null");
-        this.syntax = Objects.requireNonNull(syntax, "expected parameter 'syntax' to be non-null");
-    }
+    private MethodResponse() {}
 
-    private MethodResponse() {
-        this.name = null;
-        this.options = List.of();
-        this.requestStreaming = null;
-        this.requestTypeUrl = null;
-        this.responseStreaming = null;
-        this.responseTypeUrl = null;
-        this.syntax = null;
+    private MethodResponse(MethodResponse $) {
+        this.name = $.name;
+        this.options = $.options;
+        this.requestStreaming = $.requestStreaming;
+        this.requestTypeUrl = $.requestTypeUrl;
+        this.responseStreaming = $.responseStreaming;
+        this.responseTypeUrl = $.responseTypeUrl;
+        this.syntax = $.syntax;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MethodResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String name;
-        private List<OptionResponse> options;
-        private Boolean requestStreaming;
-        private String requestTypeUrl;
-        private Boolean responseStreaming;
-        private String responseTypeUrl;
-        private String syntax;
+        private MethodResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new MethodResponse();
         }
 
         public Builder(MethodResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.options = defaults.options;
-    	      this.requestStreaming = defaults.requestStreaming;
-    	      this.requestTypeUrl = defaults.requestTypeUrl;
-    	      this.responseStreaming = defaults.responseStreaming;
-    	      this.responseTypeUrl = defaults.responseTypeUrl;
-    	      this.syntax = defaults.syntax;
+            $ = new MethodResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder options(List<OptionResponse> options) {
-            this.options = Objects.requireNonNull(options);
+            $.options = options;
             return this;
         }
+
         public Builder options(OptionResponse... options) {
             return options(List.of(options));
         }
+
         public Builder requestStreaming(Boolean requestStreaming) {
-            this.requestStreaming = Objects.requireNonNull(requestStreaming);
+            $.requestStreaming = requestStreaming;
             return this;
         }
+
         public Builder requestTypeUrl(String requestTypeUrl) {
-            this.requestTypeUrl = Objects.requireNonNull(requestTypeUrl);
+            $.requestTypeUrl = requestTypeUrl;
             return this;
         }
+
         public Builder responseStreaming(Boolean responseStreaming) {
-            this.responseStreaming = Objects.requireNonNull(responseStreaming);
+            $.responseStreaming = responseStreaming;
             return this;
         }
+
         public Builder responseTypeUrl(String responseTypeUrl) {
-            this.responseTypeUrl = Objects.requireNonNull(responseTypeUrl);
+            $.responseTypeUrl = responseTypeUrl;
             return this;
         }
+
         public Builder syntax(String syntax) {
-            this.syntax = Objects.requireNonNull(syntax);
+            $.syntax = syntax;
             return this;
-        }        public MethodResponse build() {
-            return new MethodResponse(name, options, requestStreaming, requestTypeUrl, responseStreaming, responseTypeUrl, syntax);
+        }
+
+        public MethodResponse build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.options = Objects.requireNonNull($.options, "expected parameter 'options' to be non-null");
+            $.requestStreaming = Objects.requireNonNull($.requestStreaming, "expected parameter 'requestStreaming' to be non-null");
+            $.requestTypeUrl = Objects.requireNonNull($.requestTypeUrl, "expected parameter 'requestTypeUrl' to be non-null");
+            $.responseStreaming = Objects.requireNonNull($.responseStreaming, "expected parameter 'responseStreaming' to be non-null");
+            $.responseTypeUrl = Objects.requireNonNull($.responseTypeUrl, "expected parameter 'responseTypeUrl' to be non-null");
+            $.syntax = Objects.requireNonNull($.syntax, "expected parameter 'syntax' to be non-null");
+            return $;
         }
     }
+
 }

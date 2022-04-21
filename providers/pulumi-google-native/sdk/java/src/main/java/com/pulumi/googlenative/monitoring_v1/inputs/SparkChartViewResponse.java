@@ -21,7 +21,7 @@ public final class SparkChartViewResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="minAlignmentPeriod", required=true)
-      private final String minAlignmentPeriod;
+    private String minAlignmentPeriod;
 
     public String minAlignmentPeriod() {
         return this.minAlignmentPeriod;
@@ -32,55 +32,52 @@ public final class SparkChartViewResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="sparkChartType", required=true)
-      private final String sparkChartType;
+    private String sparkChartType;
 
     public String sparkChartType() {
         return this.sparkChartType;
     }
 
-    public SparkChartViewResponse(
-        String minAlignmentPeriod,
-        String sparkChartType) {
-        this.minAlignmentPeriod = Objects.requireNonNull(minAlignmentPeriod, "expected parameter 'minAlignmentPeriod' to be non-null");
-        this.sparkChartType = Objects.requireNonNull(sparkChartType, "expected parameter 'sparkChartType' to be non-null");
-    }
+    private SparkChartViewResponse() {}
 
-    private SparkChartViewResponse() {
-        this.minAlignmentPeriod = null;
-        this.sparkChartType = null;
+    private SparkChartViewResponse(SparkChartViewResponse $) {
+        this.minAlignmentPeriod = $.minAlignmentPeriod;
+        this.sparkChartType = $.sparkChartType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SparkChartViewResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String minAlignmentPeriod;
-        private String sparkChartType;
+        private SparkChartViewResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new SparkChartViewResponse();
         }
 
         public Builder(SparkChartViewResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.minAlignmentPeriod = defaults.minAlignmentPeriod;
-    	      this.sparkChartType = defaults.sparkChartType;
+            $ = new SparkChartViewResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder minAlignmentPeriod(String minAlignmentPeriod) {
-            this.minAlignmentPeriod = Objects.requireNonNull(minAlignmentPeriod);
+            $.minAlignmentPeriod = minAlignmentPeriod;
             return this;
         }
+
         public Builder sparkChartType(String sparkChartType) {
-            this.sparkChartType = Objects.requireNonNull(sparkChartType);
+            $.sparkChartType = sparkChartType;
             return this;
-        }        public SparkChartViewResponse build() {
-            return new SparkChartViewResponse(minAlignmentPeriod, sparkChartType);
+        }
+
+        public SparkChartViewResponse build() {
+            $.minAlignmentPeriod = Objects.requireNonNull($.minAlignmentPeriod, "expected parameter 'minAlignmentPeriod' to be non-null");
+            $.sparkChartType = Objects.requireNonNull($.sparkChartType, "expected parameter 'sparkChartType' to be non-null");
+            return $;
         }
     }
+
 }

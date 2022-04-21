@@ -17,45 +17,45 @@ public final class GetInfrastructureConfigurationArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="arn", required=true)
-      private final String arn;
+    private String arn;
 
     public String arn() {
         return this.arn;
     }
 
-    public GetInfrastructureConfigurationArgs(String arn) {
-        this.arn = Objects.requireNonNull(arn, "expected parameter 'arn' to be non-null");
-    }
+    private GetInfrastructureConfigurationArgs() {}
 
-    private GetInfrastructureConfigurationArgs() {
-        this.arn = null;
+    private GetInfrastructureConfigurationArgs(GetInfrastructureConfigurationArgs $) {
+        this.arn = $.arn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetInfrastructureConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String arn;
+        private GetInfrastructureConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetInfrastructureConfigurationArgs();
         }
 
         public Builder(GetInfrastructureConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.arn = defaults.arn;
+            $ = new GetInfrastructureConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder arn(String arn) {
-            this.arn = Objects.requireNonNull(arn);
+            $.arn = arn;
             return this;
-        }        public GetInfrastructureConfigurationArgs build() {
-            return new GetInfrastructureConfigurationArgs(arn);
+        }
+
+        public GetInfrastructureConfigurationArgs build() {
+            $.arn = Objects.requireNonNull($.arn, "expected parameter 'arn' to be non-null");
+            return $;
         }
     }
+
 }

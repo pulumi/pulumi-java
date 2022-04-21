@@ -17,7 +17,7 @@ public final class GetActiveFolderArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="displayName", required=true)
-      private final String displayName;
+    private String displayName;
 
     public String displayName() {
         return this.displayName;
@@ -28,55 +28,52 @@ public final class GetActiveFolderArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="parent", required=true)
-      private final String parent;
+    private String parent;
 
     public String parent() {
         return this.parent;
     }
 
-    public GetActiveFolderArgs(
-        String displayName,
-        String parent) {
-        this.displayName = Objects.requireNonNull(displayName, "expected parameter 'displayName' to be non-null");
-        this.parent = Objects.requireNonNull(parent, "expected parameter 'parent' to be non-null");
-    }
+    private GetActiveFolderArgs() {}
 
-    private GetActiveFolderArgs() {
-        this.displayName = null;
-        this.parent = null;
+    private GetActiveFolderArgs(GetActiveFolderArgs $) {
+        this.displayName = $.displayName;
+        this.parent = $.parent;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetActiveFolderArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String displayName;
-        private String parent;
+        private GetActiveFolderArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetActiveFolderArgs();
         }
 
         public Builder(GetActiveFolderArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.displayName = defaults.displayName;
-    	      this.parent = defaults.parent;
+            $ = new GetActiveFolderArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder displayName(String displayName) {
-            this.displayName = Objects.requireNonNull(displayName);
+            $.displayName = displayName;
             return this;
         }
+
         public Builder parent(String parent) {
-            this.parent = Objects.requireNonNull(parent);
+            $.parent = parent;
             return this;
-        }        public GetActiveFolderArgs build() {
-            return new GetActiveFolderArgs(displayName, parent);
+        }
+
+        public GetActiveFolderArgs build() {
+            $.displayName = Objects.requireNonNull($.displayName, "expected parameter 'displayName' to be non-null");
+            $.parent = Objects.requireNonNull($.parent, "expected parameter 'parent' to be non-null");
+            return $;
         }
     }
+
 }

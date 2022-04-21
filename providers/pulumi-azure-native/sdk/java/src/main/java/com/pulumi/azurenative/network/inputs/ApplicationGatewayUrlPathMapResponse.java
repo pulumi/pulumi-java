@@ -26,10 +26,10 @@ public final class ApplicationGatewayUrlPathMapResponse extends com.pulumi.resou
      * 
      */
     @Import(name="defaultBackendAddressPool")
-      private final @Nullable SubResourceResponse defaultBackendAddressPool;
+    private @Nullable SubResourceResponse defaultBackendAddressPool;
 
     public Optional<SubResourceResponse> defaultBackendAddressPool() {
-        return this.defaultBackendAddressPool == null ? Optional.empty() : Optional.ofNullable(this.defaultBackendAddressPool);
+        return Optional.ofNullable(this.defaultBackendAddressPool);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class ApplicationGatewayUrlPathMapResponse extends com.pulumi.resou
      * 
      */
     @Import(name="defaultBackendHttpSettings")
-      private final @Nullable SubResourceResponse defaultBackendHttpSettings;
+    private @Nullable SubResourceResponse defaultBackendHttpSettings;
 
     public Optional<SubResourceResponse> defaultBackendHttpSettings() {
-        return this.defaultBackendHttpSettings == null ? Optional.empty() : Optional.ofNullable(this.defaultBackendHttpSettings);
+        return Optional.ofNullable(this.defaultBackendHttpSettings);
     }
 
     /**
@@ -48,10 +48,10 @@ public final class ApplicationGatewayUrlPathMapResponse extends com.pulumi.resou
      * 
      */
     @Import(name="defaultRedirectConfiguration")
-      private final @Nullable SubResourceResponse defaultRedirectConfiguration;
+    private @Nullable SubResourceResponse defaultRedirectConfiguration;
 
     public Optional<SubResourceResponse> defaultRedirectConfiguration() {
-        return this.defaultRedirectConfiguration == null ? Optional.empty() : Optional.ofNullable(this.defaultRedirectConfiguration);
+        return Optional.ofNullable(this.defaultRedirectConfiguration);
     }
 
     /**
@@ -59,10 +59,10 @@ public final class ApplicationGatewayUrlPathMapResponse extends com.pulumi.resou
      * 
      */
     @Import(name="defaultRewriteRuleSet")
-      private final @Nullable SubResourceResponse defaultRewriteRuleSet;
+    private @Nullable SubResourceResponse defaultRewriteRuleSet;
 
     public Optional<SubResourceResponse> defaultRewriteRuleSet() {
-        return this.defaultRewriteRuleSet == null ? Optional.empty() : Optional.ofNullable(this.defaultRewriteRuleSet);
+        return Optional.ofNullable(this.defaultRewriteRuleSet);
     }
 
     /**
@@ -70,7 +70,7 @@ public final class ApplicationGatewayUrlPathMapResponse extends com.pulumi.resou
      * 
      */
     @Import(name="etag", required=true)
-      private final String etag;
+    private String etag;
 
     public String etag() {
         return this.etag;
@@ -81,10 +81,10 @@ public final class ApplicationGatewayUrlPathMapResponse extends com.pulumi.resou
      * 
      */
     @Import(name="id")
-      private final @Nullable String id;
+    private @Nullable String id;
 
     public Optional<String> id() {
-        return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
+        return Optional.ofNullable(this.id);
     }
 
     /**
@@ -92,10 +92,10 @@ public final class ApplicationGatewayUrlPathMapResponse extends com.pulumi.resou
      * 
      */
     @Import(name="name")
-      private final @Nullable String name;
+    private @Nullable String name;
 
     public Optional<String> name() {
-        return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -103,10 +103,10 @@ public final class ApplicationGatewayUrlPathMapResponse extends com.pulumi.resou
      * 
      */
     @Import(name="pathRules")
-      private final @Nullable List<ApplicationGatewayPathRuleResponse> pathRules;
+    private @Nullable List<ApplicationGatewayPathRuleResponse> pathRules;
 
-    public List<ApplicationGatewayPathRuleResponse> pathRules() {
-        return this.pathRules == null ? List.of() : this.pathRules;
+    public Optional<List<ApplicationGatewayPathRuleResponse>> pathRules() {
+        return Optional.ofNullable(this.pathRules);
     }
 
     /**
@@ -114,7 +114,7 @@ public final class ApplicationGatewayUrlPathMapResponse extends com.pulumi.resou
      * 
      */
     @Import(name="provisioningState", required=true)
-      private final String provisioningState;
+    private String provisioningState;
 
     public String provisioningState() {
         return this.provisioningState;
@@ -125,130 +125,105 @@ public final class ApplicationGatewayUrlPathMapResponse extends com.pulumi.resou
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
     }
 
-    public ApplicationGatewayUrlPathMapResponse(
-        @Nullable SubResourceResponse defaultBackendAddressPool,
-        @Nullable SubResourceResponse defaultBackendHttpSettings,
-        @Nullable SubResourceResponse defaultRedirectConfiguration,
-        @Nullable SubResourceResponse defaultRewriteRuleSet,
-        String etag,
-        @Nullable String id,
-        @Nullable String name,
-        @Nullable List<ApplicationGatewayPathRuleResponse> pathRules,
-        String provisioningState,
-        String type) {
-        this.defaultBackendAddressPool = defaultBackendAddressPool;
-        this.defaultBackendHttpSettings = defaultBackendHttpSettings;
-        this.defaultRedirectConfiguration = defaultRedirectConfiguration;
-        this.defaultRewriteRuleSet = defaultRewriteRuleSet;
-        this.etag = Objects.requireNonNull(etag, "expected parameter 'etag' to be non-null");
-        this.id = id;
-        this.name = name;
-        this.pathRules = pathRules;
-        this.provisioningState = Objects.requireNonNull(provisioningState, "expected parameter 'provisioningState' to be non-null");
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private ApplicationGatewayUrlPathMapResponse() {}
 
-    private ApplicationGatewayUrlPathMapResponse() {
-        this.defaultBackendAddressPool = null;
-        this.defaultBackendHttpSettings = null;
-        this.defaultRedirectConfiguration = null;
-        this.defaultRewriteRuleSet = null;
-        this.etag = null;
-        this.id = null;
-        this.name = null;
-        this.pathRules = List.of();
-        this.provisioningState = null;
-        this.type = null;
+    private ApplicationGatewayUrlPathMapResponse(ApplicationGatewayUrlPathMapResponse $) {
+        this.defaultBackendAddressPool = $.defaultBackendAddressPool;
+        this.defaultBackendHttpSettings = $.defaultBackendHttpSettings;
+        this.defaultRedirectConfiguration = $.defaultRedirectConfiguration;
+        this.defaultRewriteRuleSet = $.defaultRewriteRuleSet;
+        this.etag = $.etag;
+        this.id = $.id;
+        this.name = $.name;
+        this.pathRules = $.pathRules;
+        this.provisioningState = $.provisioningState;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ApplicationGatewayUrlPathMapResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable SubResourceResponse defaultBackendAddressPool;
-        private @Nullable SubResourceResponse defaultBackendHttpSettings;
-        private @Nullable SubResourceResponse defaultRedirectConfiguration;
-        private @Nullable SubResourceResponse defaultRewriteRuleSet;
-        private String etag;
-        private @Nullable String id;
-        private @Nullable String name;
-        private @Nullable List<ApplicationGatewayPathRuleResponse> pathRules;
-        private String provisioningState;
-        private String type;
+        private ApplicationGatewayUrlPathMapResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ApplicationGatewayUrlPathMapResponse();
         }
 
         public Builder(ApplicationGatewayUrlPathMapResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.defaultBackendAddressPool = defaults.defaultBackendAddressPool;
-    	      this.defaultBackendHttpSettings = defaults.defaultBackendHttpSettings;
-    	      this.defaultRedirectConfiguration = defaults.defaultRedirectConfiguration;
-    	      this.defaultRewriteRuleSet = defaults.defaultRewriteRuleSet;
-    	      this.etag = defaults.etag;
-    	      this.id = defaults.id;
-    	      this.name = defaults.name;
-    	      this.pathRules = defaults.pathRules;
-    	      this.provisioningState = defaults.provisioningState;
-    	      this.type = defaults.type;
+            $ = new ApplicationGatewayUrlPathMapResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder defaultBackendAddressPool(@Nullable SubResourceResponse defaultBackendAddressPool) {
-            this.defaultBackendAddressPool = defaultBackendAddressPool;
+            $.defaultBackendAddressPool = defaultBackendAddressPool;
             return this;
         }
+
         public Builder defaultBackendHttpSettings(@Nullable SubResourceResponse defaultBackendHttpSettings) {
-            this.defaultBackendHttpSettings = defaultBackendHttpSettings;
+            $.defaultBackendHttpSettings = defaultBackendHttpSettings;
             return this;
         }
+
         public Builder defaultRedirectConfiguration(@Nullable SubResourceResponse defaultRedirectConfiguration) {
-            this.defaultRedirectConfiguration = defaultRedirectConfiguration;
+            $.defaultRedirectConfiguration = defaultRedirectConfiguration;
             return this;
         }
+
         public Builder defaultRewriteRuleSet(@Nullable SubResourceResponse defaultRewriteRuleSet) {
-            this.defaultRewriteRuleSet = defaultRewriteRuleSet;
+            $.defaultRewriteRuleSet = defaultRewriteRuleSet;
             return this;
         }
+
         public Builder etag(String etag) {
-            this.etag = Objects.requireNonNull(etag);
+            $.etag = etag;
             return this;
         }
+
         public Builder id(@Nullable String id) {
-            this.id = id;
+            $.id = id;
             return this;
         }
+
         public Builder name(@Nullable String name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
+
         public Builder pathRules(@Nullable List<ApplicationGatewayPathRuleResponse> pathRules) {
-            this.pathRules = pathRules;
+            $.pathRules = pathRules;
             return this;
         }
+
         public Builder pathRules(ApplicationGatewayPathRuleResponse... pathRules) {
             return pathRules(List.of(pathRules));
         }
+
         public Builder provisioningState(String provisioningState) {
-            this.provisioningState = Objects.requireNonNull(provisioningState);
+            $.provisioningState = provisioningState;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
-        }        public ApplicationGatewayUrlPathMapResponse build() {
-            return new ApplicationGatewayUrlPathMapResponse(defaultBackendAddressPool, defaultBackendHttpSettings, defaultRedirectConfiguration, defaultRewriteRuleSet, etag, id, name, pathRules, provisioningState, type);
+        }
+
+        public ApplicationGatewayUrlPathMapResponse build() {
+            $.etag = Objects.requireNonNull($.etag, "expected parameter 'etag' to be non-null");
+            $.provisioningState = Objects.requireNonNull($.provisioningState, "expected parameter 'provisioningState' to be non-null");
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

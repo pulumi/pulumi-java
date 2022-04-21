@@ -5,9 +5,9 @@ package com.pulumi.gcp.compute.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class MachineImageIamPolicyState extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="etag")
-      private final @Nullable Output<String> etag;
+    private @Nullable Output<String> etag;
 
-    public Output<String> etag() {
-        return this.etag == null ? Codegen.empty() : this.etag;
+    public Optional<Output<String>> etag() {
+        return Optional.ofNullable(this.etag);
     }
 
     /**
@@ -31,10 +31,10 @@ public final class MachineImageIamPolicyState extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="machineImage")
-      private final @Nullable Output<String> machineImage;
+    private @Nullable Output<String> machineImage;
 
-    public Output<String> machineImage() {
-        return this.machineImage == null ? Codegen.empty() : this.machineImage;
+    public Optional<Output<String>> machineImage() {
+        return Optional.ofNullable(this.machineImage);
     }
 
     /**
@@ -43,10 +43,10 @@ public final class MachineImageIamPolicyState extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="policyData")
-      private final @Nullable Output<String> policyData;
+    private @Nullable Output<String> policyData;
 
-    public Output<String> policyData() {
-        return this.policyData == null ? Codegen.empty() : this.policyData;
+    public Optional<Output<String>> policyData() {
+        return Optional.ofNullable(this.policyData);
     }
 
     /**
@@ -55,89 +55,78 @@ public final class MachineImageIamPolicyState extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
-    public MachineImageIamPolicyState(
-        @Nullable Output<String> etag,
-        @Nullable Output<String> machineImage,
-        @Nullable Output<String> policyData,
-        @Nullable Output<String> project) {
-        this.etag = etag;
-        this.machineImage = machineImage;
-        this.policyData = policyData;
-        this.project = project;
-    }
+    private MachineImageIamPolicyState() {}
 
-    private MachineImageIamPolicyState() {
-        this.etag = Codegen.empty();
-        this.machineImage = Codegen.empty();
-        this.policyData = Codegen.empty();
-        this.project = Codegen.empty();
+    private MachineImageIamPolicyState(MachineImageIamPolicyState $) {
+        this.etag = $.etag;
+        this.machineImage = $.machineImage;
+        this.policyData = $.policyData;
+        this.project = $.project;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MachineImageIamPolicyState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> etag;
-        private @Nullable Output<String> machineImage;
-        private @Nullable Output<String> policyData;
-        private @Nullable Output<String> project;
+        private MachineImageIamPolicyState $;
 
         public Builder() {
-    	      // Empty
+            $ = new MachineImageIamPolicyState();
         }
 
         public Builder(MachineImageIamPolicyState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.etag = defaults.etag;
-    	      this.machineImage = defaults.machineImage;
-    	      this.policyData = defaults.policyData;
-    	      this.project = defaults.project;
+            $ = new MachineImageIamPolicyState(Objects.requireNonNull(defaults));
         }
 
         public Builder etag(@Nullable Output<String> etag) {
-            this.etag = etag;
+            $.etag = etag;
             return this;
         }
-        public Builder etag(@Nullable String etag) {
-            this.etag = Codegen.ofNullable(etag);
-            return this;
+
+        public Builder etag(String etag) {
+            return etag(Output.of(etag));
         }
+
         public Builder machineImage(@Nullable Output<String> machineImage) {
-            this.machineImage = machineImage;
+            $.machineImage = machineImage;
             return this;
         }
-        public Builder machineImage(@Nullable String machineImage) {
-            this.machineImage = Codegen.ofNullable(machineImage);
-            return this;
+
+        public Builder machineImage(String machineImage) {
+            return machineImage(Output.of(machineImage));
         }
+
         public Builder policyData(@Nullable Output<String> policyData) {
-            this.policyData = policyData;
+            $.policyData = policyData;
             return this;
         }
-        public Builder policyData(@Nullable String policyData) {
-            this.policyData = Codegen.ofNullable(policyData);
-            return this;
+
+        public Builder policyData(String policyData) {
+            return policyData(Output.of(policyData));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
-        }        public MachineImageIamPolicyState build() {
-            return new MachineImageIamPolicyState(etag, machineImage, policyData, project);
+
+        public Builder project(String project) {
+            return project(Output.of(project));
+        }
+
+        public MachineImageIamPolicyState build() {
+            return $;
         }
     }
+
 }

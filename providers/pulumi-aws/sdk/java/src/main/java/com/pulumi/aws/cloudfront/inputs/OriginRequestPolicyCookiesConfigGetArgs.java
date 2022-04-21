@@ -6,9 +6,9 @@ package com.pulumi.aws.cloudfront.inputs;
 import com.pulumi.aws.cloudfront.inputs.OriginRequestPolicyCookiesConfigCookiesGetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -17,70 +17,66 @@ public final class OriginRequestPolicyCookiesConfigGetArgs extends com.pulumi.re
     public static final OriginRequestPolicyCookiesConfigGetArgs Empty = new OriginRequestPolicyCookiesConfigGetArgs();
 
     @Import(name="cookieBehavior", required=true)
-      private final Output<String> cookieBehavior;
+    private Output<String> cookieBehavior;
 
     public Output<String> cookieBehavior() {
         return this.cookieBehavior;
     }
 
     @Import(name="cookies")
-      private final @Nullable Output<OriginRequestPolicyCookiesConfigCookiesGetArgs> cookies;
+    private @Nullable Output<OriginRequestPolicyCookiesConfigCookiesGetArgs> cookies;
 
-    public Output<OriginRequestPolicyCookiesConfigCookiesGetArgs> cookies() {
-        return this.cookies == null ? Codegen.empty() : this.cookies;
+    public Optional<Output<OriginRequestPolicyCookiesConfigCookiesGetArgs>> cookies() {
+        return Optional.ofNullable(this.cookies);
     }
 
-    public OriginRequestPolicyCookiesConfigGetArgs(
-        Output<String> cookieBehavior,
-        @Nullable Output<OriginRequestPolicyCookiesConfigCookiesGetArgs> cookies) {
-        this.cookieBehavior = Objects.requireNonNull(cookieBehavior, "expected parameter 'cookieBehavior' to be non-null");
-        this.cookies = cookies;
-    }
+    private OriginRequestPolicyCookiesConfigGetArgs() {}
 
-    private OriginRequestPolicyCookiesConfigGetArgs() {
-        this.cookieBehavior = Codegen.empty();
-        this.cookies = Codegen.empty();
+    private OriginRequestPolicyCookiesConfigGetArgs(OriginRequestPolicyCookiesConfigGetArgs $) {
+        this.cookieBehavior = $.cookieBehavior;
+        this.cookies = $.cookies;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(OriginRequestPolicyCookiesConfigGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> cookieBehavior;
-        private @Nullable Output<OriginRequestPolicyCookiesConfigCookiesGetArgs> cookies;
+        private OriginRequestPolicyCookiesConfigGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new OriginRequestPolicyCookiesConfigGetArgs();
         }
 
         public Builder(OriginRequestPolicyCookiesConfigGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cookieBehavior = defaults.cookieBehavior;
-    	      this.cookies = defaults.cookies;
+            $ = new OriginRequestPolicyCookiesConfigGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder cookieBehavior(Output<String> cookieBehavior) {
-            this.cookieBehavior = Objects.requireNonNull(cookieBehavior);
+            $.cookieBehavior = cookieBehavior;
             return this;
         }
+
         public Builder cookieBehavior(String cookieBehavior) {
-            this.cookieBehavior = Output.of(Objects.requireNonNull(cookieBehavior));
-            return this;
+            return cookieBehavior(Output.of(cookieBehavior));
         }
+
         public Builder cookies(@Nullable Output<OriginRequestPolicyCookiesConfigCookiesGetArgs> cookies) {
-            this.cookies = cookies;
+            $.cookies = cookies;
             return this;
         }
-        public Builder cookies(@Nullable OriginRequestPolicyCookiesConfigCookiesGetArgs cookies) {
-            this.cookies = Codegen.ofNullable(cookies);
-            return this;
-        }        public OriginRequestPolicyCookiesConfigGetArgs build() {
-            return new OriginRequestPolicyCookiesConfigGetArgs(cookieBehavior, cookies);
+
+        public Builder cookies(OriginRequestPolicyCookiesConfigCookiesGetArgs cookies) {
+            return cookies(Output.of(cookies));
+        }
+
+        public OriginRequestPolicyCookiesConfigGetArgs build() {
+            $.cookieBehavior = Objects.requireNonNull($.cookieBehavior, "expected parameter 'cookieBehavior' to be non-null");
+            return $;
         }
     }
+
 }

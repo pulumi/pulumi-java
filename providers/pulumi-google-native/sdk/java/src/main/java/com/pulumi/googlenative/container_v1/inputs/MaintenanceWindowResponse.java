@@ -24,7 +24,7 @@ public final class MaintenanceWindowResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="dailyMaintenanceWindow", required=true)
-      private final DailyMaintenanceWindowResponse dailyMaintenanceWindow;
+    private DailyMaintenanceWindowResponse dailyMaintenanceWindow;
 
     public DailyMaintenanceWindowResponse dailyMaintenanceWindow() {
         return this.dailyMaintenanceWindow;
@@ -35,7 +35,7 @@ public final class MaintenanceWindowResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="maintenanceExclusions", required=true)
-      private final Map<String,String> maintenanceExclusions;
+    private Map<String,String> maintenanceExclusions;
 
     public Map<String,String> maintenanceExclusions() {
         return this.maintenanceExclusions;
@@ -46,64 +46,59 @@ public final class MaintenanceWindowResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="recurringWindow", required=true)
-      private final RecurringTimeWindowResponse recurringWindow;
+    private RecurringTimeWindowResponse recurringWindow;
 
     public RecurringTimeWindowResponse recurringWindow() {
         return this.recurringWindow;
     }
 
-    public MaintenanceWindowResponse(
-        DailyMaintenanceWindowResponse dailyMaintenanceWindow,
-        Map<String,String> maintenanceExclusions,
-        RecurringTimeWindowResponse recurringWindow) {
-        this.dailyMaintenanceWindow = Objects.requireNonNull(dailyMaintenanceWindow, "expected parameter 'dailyMaintenanceWindow' to be non-null");
-        this.maintenanceExclusions = Objects.requireNonNull(maintenanceExclusions, "expected parameter 'maintenanceExclusions' to be non-null");
-        this.recurringWindow = Objects.requireNonNull(recurringWindow, "expected parameter 'recurringWindow' to be non-null");
-    }
+    private MaintenanceWindowResponse() {}
 
-    private MaintenanceWindowResponse() {
-        this.dailyMaintenanceWindow = null;
-        this.maintenanceExclusions = Map.of();
-        this.recurringWindow = null;
+    private MaintenanceWindowResponse(MaintenanceWindowResponse $) {
+        this.dailyMaintenanceWindow = $.dailyMaintenanceWindow;
+        this.maintenanceExclusions = $.maintenanceExclusions;
+        this.recurringWindow = $.recurringWindow;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MaintenanceWindowResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private DailyMaintenanceWindowResponse dailyMaintenanceWindow;
-        private Map<String,String> maintenanceExclusions;
-        private RecurringTimeWindowResponse recurringWindow;
+        private MaintenanceWindowResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new MaintenanceWindowResponse();
         }
 
         public Builder(MaintenanceWindowResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dailyMaintenanceWindow = defaults.dailyMaintenanceWindow;
-    	      this.maintenanceExclusions = defaults.maintenanceExclusions;
-    	      this.recurringWindow = defaults.recurringWindow;
+            $ = new MaintenanceWindowResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder dailyMaintenanceWindow(DailyMaintenanceWindowResponse dailyMaintenanceWindow) {
-            this.dailyMaintenanceWindow = Objects.requireNonNull(dailyMaintenanceWindow);
+            $.dailyMaintenanceWindow = dailyMaintenanceWindow;
             return this;
         }
+
         public Builder maintenanceExclusions(Map<String,String> maintenanceExclusions) {
-            this.maintenanceExclusions = Objects.requireNonNull(maintenanceExclusions);
+            $.maintenanceExclusions = maintenanceExclusions;
             return this;
         }
+
         public Builder recurringWindow(RecurringTimeWindowResponse recurringWindow) {
-            this.recurringWindow = Objects.requireNonNull(recurringWindow);
+            $.recurringWindow = recurringWindow;
             return this;
-        }        public MaintenanceWindowResponse build() {
-            return new MaintenanceWindowResponse(dailyMaintenanceWindow, maintenanceExclusions, recurringWindow);
+        }
+
+        public MaintenanceWindowResponse build() {
+            $.dailyMaintenanceWindow = Objects.requireNonNull($.dailyMaintenanceWindow, "expected parameter 'dailyMaintenanceWindow' to be non-null");
+            $.maintenanceExclusions = Objects.requireNonNull($.maintenanceExclusions, "expected parameter 'maintenanceExclusions' to be non-null");
+            $.recurringWindow = Objects.requireNonNull($.recurringWindow, "expected parameter 'recurringWindow' to be non-null");
+            return $;
         }
     }
+
 }

@@ -7,10 +7,10 @@ import com.pulumi.azurenative.recoveryservices.enums.BackupItemType;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +27,10 @@ public final class MabContainerExtendedInfoArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="backupItemType")
-      private final @Nullable Output<Either<String,BackupItemType>> backupItemType;
+    private @Nullable Output<Either<String,BackupItemType>> backupItemType;
 
-    public Output<Either<String,BackupItemType>> backupItemType() {
-        return this.backupItemType == null ? Codegen.empty() : this.backupItemType;
+    public Optional<Output<Either<String,BackupItemType>>> backupItemType() {
+        return Optional.ofNullable(this.backupItemType);
     }
 
     /**
@@ -38,10 +38,10 @@ public final class MabContainerExtendedInfoArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="backupItems")
-      private final @Nullable Output<List<String>> backupItems;
+    private @Nullable Output<List<String>> backupItems;
 
-    public Output<List<String>> backupItems() {
-        return this.backupItems == null ? Codegen.empty() : this.backupItems;
+    public Optional<Output<List<String>>> backupItems() {
+        return Optional.ofNullable(this.backupItems);
     }
 
     /**
@@ -49,10 +49,10 @@ public final class MabContainerExtendedInfoArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="lastBackupStatus")
-      private final @Nullable Output<String> lastBackupStatus;
+    private @Nullable Output<String> lastBackupStatus;
 
-    public Output<String> lastBackupStatus() {
-        return this.lastBackupStatus == null ? Codegen.empty() : this.lastBackupStatus;
+    public Optional<Output<String>> lastBackupStatus() {
+        return Optional.ofNullable(this.lastBackupStatus);
     }
 
     /**
@@ -60,10 +60,10 @@ public final class MabContainerExtendedInfoArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="lastRefreshedAt")
-      private final @Nullable Output<String> lastRefreshedAt;
+    private @Nullable Output<String> lastRefreshedAt;
 
-    public Output<String> lastRefreshedAt() {
-        return this.lastRefreshedAt == null ? Codegen.empty() : this.lastRefreshedAt;
+    public Optional<Output<String>> lastRefreshedAt() {
+        return Optional.ofNullable(this.lastRefreshedAt);
     }
 
     /**
@@ -71,105 +71,92 @@ public final class MabContainerExtendedInfoArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="policyName")
-      private final @Nullable Output<String> policyName;
+    private @Nullable Output<String> policyName;
 
-    public Output<String> policyName() {
-        return this.policyName == null ? Codegen.empty() : this.policyName;
+    public Optional<Output<String>> policyName() {
+        return Optional.ofNullable(this.policyName);
     }
 
-    public MabContainerExtendedInfoArgs(
-        @Nullable Output<Either<String,BackupItemType>> backupItemType,
-        @Nullable Output<List<String>> backupItems,
-        @Nullable Output<String> lastBackupStatus,
-        @Nullable Output<String> lastRefreshedAt,
-        @Nullable Output<String> policyName) {
-        this.backupItemType = backupItemType;
-        this.backupItems = backupItems;
-        this.lastBackupStatus = lastBackupStatus;
-        this.lastRefreshedAt = lastRefreshedAt;
-        this.policyName = policyName;
-    }
+    private MabContainerExtendedInfoArgs() {}
 
-    private MabContainerExtendedInfoArgs() {
-        this.backupItemType = Codegen.empty();
-        this.backupItems = Codegen.empty();
-        this.lastBackupStatus = Codegen.empty();
-        this.lastRefreshedAt = Codegen.empty();
-        this.policyName = Codegen.empty();
+    private MabContainerExtendedInfoArgs(MabContainerExtendedInfoArgs $) {
+        this.backupItemType = $.backupItemType;
+        this.backupItems = $.backupItems;
+        this.lastBackupStatus = $.lastBackupStatus;
+        this.lastRefreshedAt = $.lastRefreshedAt;
+        this.policyName = $.policyName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MabContainerExtendedInfoArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Either<String,BackupItemType>> backupItemType;
-        private @Nullable Output<List<String>> backupItems;
-        private @Nullable Output<String> lastBackupStatus;
-        private @Nullable Output<String> lastRefreshedAt;
-        private @Nullable Output<String> policyName;
+        private MabContainerExtendedInfoArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new MabContainerExtendedInfoArgs();
         }
 
         public Builder(MabContainerExtendedInfoArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.backupItemType = defaults.backupItemType;
-    	      this.backupItems = defaults.backupItems;
-    	      this.lastBackupStatus = defaults.lastBackupStatus;
-    	      this.lastRefreshedAt = defaults.lastRefreshedAt;
-    	      this.policyName = defaults.policyName;
+            $ = new MabContainerExtendedInfoArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder backupItemType(@Nullable Output<Either<String,BackupItemType>> backupItemType) {
-            this.backupItemType = backupItemType;
+            $.backupItemType = backupItemType;
             return this;
         }
-        public Builder backupItemType(@Nullable Either<String,BackupItemType> backupItemType) {
-            this.backupItemType = Codegen.ofNullable(backupItemType);
-            return this;
+
+        public Builder backupItemType(Either<String,BackupItemType> backupItemType) {
+            return backupItemType(Output.of(backupItemType));
         }
+
         public Builder backupItems(@Nullable Output<List<String>> backupItems) {
-            this.backupItems = backupItems;
+            $.backupItems = backupItems;
             return this;
         }
-        public Builder backupItems(@Nullable List<String> backupItems) {
-            this.backupItems = Codegen.ofNullable(backupItems);
-            return this;
+
+        public Builder backupItems(List<String> backupItems) {
+            return backupItems(Output.of(backupItems));
         }
+
         public Builder backupItems(String... backupItems) {
             return backupItems(List.of(backupItems));
         }
+
         public Builder lastBackupStatus(@Nullable Output<String> lastBackupStatus) {
-            this.lastBackupStatus = lastBackupStatus;
+            $.lastBackupStatus = lastBackupStatus;
             return this;
         }
-        public Builder lastBackupStatus(@Nullable String lastBackupStatus) {
-            this.lastBackupStatus = Codegen.ofNullable(lastBackupStatus);
-            return this;
+
+        public Builder lastBackupStatus(String lastBackupStatus) {
+            return lastBackupStatus(Output.of(lastBackupStatus));
         }
+
         public Builder lastRefreshedAt(@Nullable Output<String> lastRefreshedAt) {
-            this.lastRefreshedAt = lastRefreshedAt;
+            $.lastRefreshedAt = lastRefreshedAt;
             return this;
         }
-        public Builder lastRefreshedAt(@Nullable String lastRefreshedAt) {
-            this.lastRefreshedAt = Codegen.ofNullable(lastRefreshedAt);
-            return this;
+
+        public Builder lastRefreshedAt(String lastRefreshedAt) {
+            return lastRefreshedAt(Output.of(lastRefreshedAt));
         }
+
         public Builder policyName(@Nullable Output<String> policyName) {
-            this.policyName = policyName;
+            $.policyName = policyName;
             return this;
         }
-        public Builder policyName(@Nullable String policyName) {
-            this.policyName = Codegen.ofNullable(policyName);
-            return this;
-        }        public MabContainerExtendedInfoArgs build() {
-            return new MabContainerExtendedInfoArgs(backupItemType, backupItems, lastBackupStatus, lastRefreshedAt, policyName);
+
+        public Builder policyName(String policyName) {
+            return policyName(Output.of(policyName));
+        }
+
+        public MabContainerExtendedInfoArgs build() {
+            return $;
         }
     }
+
 }

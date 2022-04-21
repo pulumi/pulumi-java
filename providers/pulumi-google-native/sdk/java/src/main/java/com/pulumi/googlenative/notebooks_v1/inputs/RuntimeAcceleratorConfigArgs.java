@@ -5,10 +5,10 @@ package com.pulumi.googlenative.notebooks_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.notebooks_v1.enums.RuntimeAcceleratorConfigType;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class RuntimeAcceleratorConfigArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="coreCount")
-      private final @Nullable Output<String> coreCount;
+    private @Nullable Output<String> coreCount;
 
-    public Output<String> coreCount() {
-        return this.coreCount == null ? Codegen.empty() : this.coreCount;
+    public Optional<Output<String>> coreCount() {
+        return Optional.ofNullable(this.coreCount);
     }
 
     /**
@@ -36,63 +36,58 @@ public final class RuntimeAcceleratorConfigArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="type")
-      private final @Nullable Output<RuntimeAcceleratorConfigType> type;
+    private @Nullable Output<RuntimeAcceleratorConfigType> type;
 
-    public Output<RuntimeAcceleratorConfigType> type() {
-        return this.type == null ? Codegen.empty() : this.type;
+    public Optional<Output<RuntimeAcceleratorConfigType>> type() {
+        return Optional.ofNullable(this.type);
     }
 
-    public RuntimeAcceleratorConfigArgs(
-        @Nullable Output<String> coreCount,
-        @Nullable Output<RuntimeAcceleratorConfigType> type) {
-        this.coreCount = coreCount;
-        this.type = type;
-    }
+    private RuntimeAcceleratorConfigArgs() {}
 
-    private RuntimeAcceleratorConfigArgs() {
-        this.coreCount = Codegen.empty();
-        this.type = Codegen.empty();
+    private RuntimeAcceleratorConfigArgs(RuntimeAcceleratorConfigArgs $) {
+        this.coreCount = $.coreCount;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RuntimeAcceleratorConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> coreCount;
-        private @Nullable Output<RuntimeAcceleratorConfigType> type;
+        private RuntimeAcceleratorConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RuntimeAcceleratorConfigArgs();
         }
 
         public Builder(RuntimeAcceleratorConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.coreCount = defaults.coreCount;
-    	      this.type = defaults.type;
+            $ = new RuntimeAcceleratorConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder coreCount(@Nullable Output<String> coreCount) {
-            this.coreCount = coreCount;
+            $.coreCount = coreCount;
             return this;
         }
-        public Builder coreCount(@Nullable String coreCount) {
-            this.coreCount = Codegen.ofNullable(coreCount);
-            return this;
+
+        public Builder coreCount(String coreCount) {
+            return coreCount(Output.of(coreCount));
         }
+
         public Builder type(@Nullable Output<RuntimeAcceleratorConfigType> type) {
-            this.type = type;
+            $.type = type;
             return this;
         }
-        public Builder type(@Nullable RuntimeAcceleratorConfigType type) {
-            this.type = Codegen.ofNullable(type);
-            return this;
-        }        public RuntimeAcceleratorConfigArgs build() {
-            return new RuntimeAcceleratorConfigArgs(coreCount, type);
+
+        public Builder type(RuntimeAcceleratorConfigType type) {
+            return type(Output.of(type));
+        }
+
+        public RuntimeAcceleratorConfigArgs build() {
+            return $;
         }
     }
+
 }

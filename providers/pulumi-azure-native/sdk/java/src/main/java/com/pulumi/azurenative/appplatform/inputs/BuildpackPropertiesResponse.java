@@ -23,45 +23,44 @@ public final class BuildpackPropertiesResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="id")
-      private final @Nullable String id;
+    private @Nullable String id;
 
     public Optional<String> id() {
-        return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
+        return Optional.ofNullable(this.id);
     }
 
-    public BuildpackPropertiesResponse(@Nullable String id) {
-        this.id = id;
-    }
+    private BuildpackPropertiesResponse() {}
 
-    private BuildpackPropertiesResponse() {
-        this.id = null;
+    private BuildpackPropertiesResponse(BuildpackPropertiesResponse $) {
+        this.id = $.id;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BuildpackPropertiesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String id;
+        private BuildpackPropertiesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new BuildpackPropertiesResponse();
         }
 
         public Builder(BuildpackPropertiesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.id = defaults.id;
+            $ = new BuildpackPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder id(@Nullable String id) {
-            this.id = id;
+            $.id = id;
             return this;
-        }        public BuildpackPropertiesResponse build() {
-            return new BuildpackPropertiesResponse(id);
+        }
+
+        public BuildpackPropertiesResponse build() {
+            return $;
         }
     }
+
 }

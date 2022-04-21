@@ -5,9 +5,9 @@ package com.pulumi.azurenative.devtestlab.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class UserIdentityArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="appId")
-      private final @Nullable Output<String> appId;
+    private @Nullable Output<String> appId;
 
-    public Output<String> appId() {
-        return this.appId == null ? Codegen.empty() : this.appId;
+    public Optional<Output<String>> appId() {
+        return Optional.ofNullable(this.appId);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class UserIdentityArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="objectId")
-      private final @Nullable Output<String> objectId;
+    private @Nullable Output<String> objectId;
 
-    public Output<String> objectId() {
-        return this.objectId == null ? Codegen.empty() : this.objectId;
+    public Optional<Output<String>> objectId() {
+        return Optional.ofNullable(this.objectId);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class UserIdentityArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="principalId")
-      private final @Nullable Output<String> principalId;
+    private @Nullable Output<String> principalId;
 
-    public Output<String> principalId() {
-        return this.principalId == null ? Codegen.empty() : this.principalId;
+    public Optional<Output<String>> principalId() {
+        return Optional.ofNullable(this.principalId);
     }
 
     /**
@@ -57,10 +57,10 @@ public final class UserIdentityArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="principalName")
-      private final @Nullable Output<String> principalName;
+    private @Nullable Output<String> principalName;
 
-    public Output<String> principalName() {
-        return this.principalName == null ? Codegen.empty() : this.principalName;
+    public Optional<Output<String>> principalName() {
+        return Optional.ofNullable(this.principalName);
     }
 
     /**
@@ -68,102 +68,88 @@ public final class UserIdentityArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tenantId")
-      private final @Nullable Output<String> tenantId;
+    private @Nullable Output<String> tenantId;
 
-    public Output<String> tenantId() {
-        return this.tenantId == null ? Codegen.empty() : this.tenantId;
+    public Optional<Output<String>> tenantId() {
+        return Optional.ofNullable(this.tenantId);
     }
 
-    public UserIdentityArgs(
-        @Nullable Output<String> appId,
-        @Nullable Output<String> objectId,
-        @Nullable Output<String> principalId,
-        @Nullable Output<String> principalName,
-        @Nullable Output<String> tenantId) {
-        this.appId = appId;
-        this.objectId = objectId;
-        this.principalId = principalId;
-        this.principalName = principalName;
-        this.tenantId = tenantId;
-    }
+    private UserIdentityArgs() {}
 
-    private UserIdentityArgs() {
-        this.appId = Codegen.empty();
-        this.objectId = Codegen.empty();
-        this.principalId = Codegen.empty();
-        this.principalName = Codegen.empty();
-        this.tenantId = Codegen.empty();
+    private UserIdentityArgs(UserIdentityArgs $) {
+        this.appId = $.appId;
+        this.objectId = $.objectId;
+        this.principalId = $.principalId;
+        this.principalName = $.principalName;
+        this.tenantId = $.tenantId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(UserIdentityArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> appId;
-        private @Nullable Output<String> objectId;
-        private @Nullable Output<String> principalId;
-        private @Nullable Output<String> principalName;
-        private @Nullable Output<String> tenantId;
+        private UserIdentityArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new UserIdentityArgs();
         }
 
         public Builder(UserIdentityArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.appId = defaults.appId;
-    	      this.objectId = defaults.objectId;
-    	      this.principalId = defaults.principalId;
-    	      this.principalName = defaults.principalName;
-    	      this.tenantId = defaults.tenantId;
+            $ = new UserIdentityArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder appId(@Nullable Output<String> appId) {
-            this.appId = appId;
+            $.appId = appId;
             return this;
         }
-        public Builder appId(@Nullable String appId) {
-            this.appId = Codegen.ofNullable(appId);
-            return this;
+
+        public Builder appId(String appId) {
+            return appId(Output.of(appId));
         }
+
         public Builder objectId(@Nullable Output<String> objectId) {
-            this.objectId = objectId;
+            $.objectId = objectId;
             return this;
         }
-        public Builder objectId(@Nullable String objectId) {
-            this.objectId = Codegen.ofNullable(objectId);
-            return this;
+
+        public Builder objectId(String objectId) {
+            return objectId(Output.of(objectId));
         }
+
         public Builder principalId(@Nullable Output<String> principalId) {
-            this.principalId = principalId;
+            $.principalId = principalId;
             return this;
         }
-        public Builder principalId(@Nullable String principalId) {
-            this.principalId = Codegen.ofNullable(principalId);
-            return this;
+
+        public Builder principalId(String principalId) {
+            return principalId(Output.of(principalId));
         }
+
         public Builder principalName(@Nullable Output<String> principalName) {
-            this.principalName = principalName;
+            $.principalName = principalName;
             return this;
         }
-        public Builder principalName(@Nullable String principalName) {
-            this.principalName = Codegen.ofNullable(principalName);
-            return this;
+
+        public Builder principalName(String principalName) {
+            return principalName(Output.of(principalName));
         }
+
         public Builder tenantId(@Nullable Output<String> tenantId) {
-            this.tenantId = tenantId;
+            $.tenantId = tenantId;
             return this;
         }
-        public Builder tenantId(@Nullable String tenantId) {
-            this.tenantId = Codegen.ofNullable(tenantId);
-            return this;
-        }        public UserIdentityArgs build() {
-            return new UserIdentityArgs(appId, objectId, principalId, principalName, tenantId);
+
+        public Builder tenantId(String tenantId) {
+            return tenantId(Output.of(tenantId));
+        }
+
+        public UserIdentityArgs build() {
+            return $;
         }
     }
+
 }

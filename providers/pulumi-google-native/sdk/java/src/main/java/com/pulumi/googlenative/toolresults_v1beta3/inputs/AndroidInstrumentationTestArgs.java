@@ -5,11 +5,11 @@ package com.pulumi.googlenative.toolresults_v1beta3.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class AndroidInstrumentationTestArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="testPackageId")
-      private final @Nullable Output<String> testPackageId;
+    private @Nullable Output<String> testPackageId;
 
-    public Output<String> testPackageId() {
-        return this.testPackageId == null ? Codegen.empty() : this.testPackageId;
+    public Optional<Output<String>> testPackageId() {
+        return Optional.ofNullable(this.testPackageId);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class AndroidInstrumentationTestArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="testRunnerClass")
-      private final @Nullable Output<String> testRunnerClass;
+    private @Nullable Output<String> testRunnerClass;
 
-    public Output<String> testRunnerClass() {
-        return this.testRunnerClass == null ? Codegen.empty() : this.testRunnerClass;
+    public Optional<Output<String>> testRunnerClass() {
+        return Optional.ofNullable(this.testRunnerClass);
     }
 
     /**
@@ -48,10 +48,10 @@ public final class AndroidInstrumentationTestArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="testTargets")
-      private final @Nullable Output<List<String>> testTargets;
+    private @Nullable Output<List<String>> testTargets;
 
-    public Output<List<String>> testTargets() {
-        return this.testTargets == null ? Codegen.empty() : this.testTargets;
+    public Optional<Output<List<String>>> testTargets() {
+        return Optional.ofNullable(this.testTargets);
     }
 
     /**
@@ -59,92 +59,82 @@ public final class AndroidInstrumentationTestArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="useOrchestrator")
-      private final @Nullable Output<Boolean> useOrchestrator;
+    private @Nullable Output<Boolean> useOrchestrator;
 
-    public Output<Boolean> useOrchestrator() {
-        return this.useOrchestrator == null ? Codegen.empty() : this.useOrchestrator;
+    public Optional<Output<Boolean>> useOrchestrator() {
+        return Optional.ofNullable(this.useOrchestrator);
     }
 
-    public AndroidInstrumentationTestArgs(
-        @Nullable Output<String> testPackageId,
-        @Nullable Output<String> testRunnerClass,
-        @Nullable Output<List<String>> testTargets,
-        @Nullable Output<Boolean> useOrchestrator) {
-        this.testPackageId = testPackageId;
-        this.testRunnerClass = testRunnerClass;
-        this.testTargets = testTargets;
-        this.useOrchestrator = useOrchestrator;
-    }
+    private AndroidInstrumentationTestArgs() {}
 
-    private AndroidInstrumentationTestArgs() {
-        this.testPackageId = Codegen.empty();
-        this.testRunnerClass = Codegen.empty();
-        this.testTargets = Codegen.empty();
-        this.useOrchestrator = Codegen.empty();
+    private AndroidInstrumentationTestArgs(AndroidInstrumentationTestArgs $) {
+        this.testPackageId = $.testPackageId;
+        this.testRunnerClass = $.testRunnerClass;
+        this.testTargets = $.testTargets;
+        this.useOrchestrator = $.useOrchestrator;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AndroidInstrumentationTestArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> testPackageId;
-        private @Nullable Output<String> testRunnerClass;
-        private @Nullable Output<List<String>> testTargets;
-        private @Nullable Output<Boolean> useOrchestrator;
+        private AndroidInstrumentationTestArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AndroidInstrumentationTestArgs();
         }
 
         public Builder(AndroidInstrumentationTestArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.testPackageId = defaults.testPackageId;
-    	      this.testRunnerClass = defaults.testRunnerClass;
-    	      this.testTargets = defaults.testTargets;
-    	      this.useOrchestrator = defaults.useOrchestrator;
+            $ = new AndroidInstrumentationTestArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder testPackageId(@Nullable Output<String> testPackageId) {
-            this.testPackageId = testPackageId;
+            $.testPackageId = testPackageId;
             return this;
         }
-        public Builder testPackageId(@Nullable String testPackageId) {
-            this.testPackageId = Codegen.ofNullable(testPackageId);
-            return this;
+
+        public Builder testPackageId(String testPackageId) {
+            return testPackageId(Output.of(testPackageId));
         }
+
         public Builder testRunnerClass(@Nullable Output<String> testRunnerClass) {
-            this.testRunnerClass = testRunnerClass;
+            $.testRunnerClass = testRunnerClass;
             return this;
         }
-        public Builder testRunnerClass(@Nullable String testRunnerClass) {
-            this.testRunnerClass = Codegen.ofNullable(testRunnerClass);
-            return this;
+
+        public Builder testRunnerClass(String testRunnerClass) {
+            return testRunnerClass(Output.of(testRunnerClass));
         }
+
         public Builder testTargets(@Nullable Output<List<String>> testTargets) {
-            this.testTargets = testTargets;
+            $.testTargets = testTargets;
             return this;
         }
-        public Builder testTargets(@Nullable List<String> testTargets) {
-            this.testTargets = Codegen.ofNullable(testTargets);
-            return this;
+
+        public Builder testTargets(List<String> testTargets) {
+            return testTargets(Output.of(testTargets));
         }
+
         public Builder testTargets(String... testTargets) {
             return testTargets(List.of(testTargets));
         }
+
         public Builder useOrchestrator(@Nullable Output<Boolean> useOrchestrator) {
-            this.useOrchestrator = useOrchestrator;
+            $.useOrchestrator = useOrchestrator;
             return this;
         }
-        public Builder useOrchestrator(@Nullable Boolean useOrchestrator) {
-            this.useOrchestrator = Codegen.ofNullable(useOrchestrator);
-            return this;
-        }        public AndroidInstrumentationTestArgs build() {
-            return new AndroidInstrumentationTestArgs(testPackageId, testRunnerClass, testTargets, useOrchestrator);
+
+        public Builder useOrchestrator(Boolean useOrchestrator) {
+            return useOrchestrator(Output.of(useOrchestrator));
+        }
+
+        public AndroidInstrumentationTestArgs build() {
+            return $;
         }
     }
+
 }

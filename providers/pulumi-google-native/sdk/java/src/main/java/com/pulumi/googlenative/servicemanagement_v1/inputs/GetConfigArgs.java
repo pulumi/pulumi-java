@@ -15,78 +15,72 @@ public final class GetConfigArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetConfigArgs Empty = new GetConfigArgs();
 
     @Import(name="configId", required=true)
-      private final String configId;
+    private String configId;
 
     public String configId() {
         return this.configId;
     }
 
     @Import(name="serviceName", required=true)
-      private final String serviceName;
+    private String serviceName;
 
     public String serviceName() {
         return this.serviceName;
     }
 
     @Import(name="view")
-      private final @Nullable String view;
+    private @Nullable String view;
 
     public Optional<String> view() {
-        return this.view == null ? Optional.empty() : Optional.ofNullable(this.view);
+        return Optional.ofNullable(this.view);
     }
 
-    public GetConfigArgs(
-        String configId,
-        String serviceName,
-        @Nullable String view) {
-        this.configId = Objects.requireNonNull(configId, "expected parameter 'configId' to be non-null");
-        this.serviceName = Objects.requireNonNull(serviceName, "expected parameter 'serviceName' to be non-null");
-        this.view = view;
-    }
+    private GetConfigArgs() {}
 
-    private GetConfigArgs() {
-        this.configId = null;
-        this.serviceName = null;
-        this.view = null;
+    private GetConfigArgs(GetConfigArgs $) {
+        this.configId = $.configId;
+        this.serviceName = $.serviceName;
+        this.view = $.view;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String configId;
-        private String serviceName;
-        private @Nullable String view;
+        private GetConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetConfigArgs();
         }
 
         public Builder(GetConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.configId = defaults.configId;
-    	      this.serviceName = defaults.serviceName;
-    	      this.view = defaults.view;
+            $ = new GetConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder configId(String configId) {
-            this.configId = Objects.requireNonNull(configId);
+            $.configId = configId;
             return this;
         }
+
         public Builder serviceName(String serviceName) {
-            this.serviceName = Objects.requireNonNull(serviceName);
+            $.serviceName = serviceName;
             return this;
         }
+
         public Builder view(@Nullable String view) {
-            this.view = view;
+            $.view = view;
             return this;
-        }        public GetConfigArgs build() {
-            return new GetConfigArgs(configId, serviceName, view);
+        }
+
+        public GetConfigArgs build() {
+            $.configId = Objects.requireNonNull($.configId, "expected parameter 'configId' to be non-null");
+            $.serviceName = Objects.requireNonNull($.serviceName, "expected parameter 'serviceName' to be non-null");
+            return $;
         }
     }
+
 }

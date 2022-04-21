@@ -5,11 +5,11 @@ package com.pulumi.gcp.datacatalog.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.datacatalog.inputs.TagTemplateIamBindingConditionGetArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -18,173 +18,154 @@ public final class TagTemplateIamBindingState extends com.pulumi.resources.Resou
     public static final TagTemplateIamBindingState Empty = new TagTemplateIamBindingState();
 
     @Import(name="condition")
-      private final @Nullable Output<TagTemplateIamBindingConditionGetArgs> condition;
+    private @Nullable Output<TagTemplateIamBindingConditionGetArgs> condition;
 
-    public Output<TagTemplateIamBindingConditionGetArgs> condition() {
-        return this.condition == null ? Codegen.empty() : this.condition;
+    public Optional<Output<TagTemplateIamBindingConditionGetArgs>> condition() {
+        return Optional.ofNullable(this.condition);
     }
 
     @Import(name="etag")
-      private final @Nullable Output<String> etag;
+    private @Nullable Output<String> etag;
 
-    public Output<String> etag() {
-        return this.etag == null ? Codegen.empty() : this.etag;
+    public Optional<Output<String>> etag() {
+        return Optional.ofNullable(this.etag);
     }
 
     @Import(name="members")
-      private final @Nullable Output<List<String>> members;
+    private @Nullable Output<List<String>> members;
 
-    public Output<List<String>> members() {
-        return this.members == null ? Codegen.empty() : this.members;
+    public Optional<Output<List<String>>> members() {
+        return Optional.ofNullable(this.members);
     }
 
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     @Import(name="region")
-      private final @Nullable Output<String> region;
+    private @Nullable Output<String> region;
 
-    public Output<String> region() {
-        return this.region == null ? Codegen.empty() : this.region;
+    public Optional<Output<String>> region() {
+        return Optional.ofNullable(this.region);
     }
 
     @Import(name="role")
-      private final @Nullable Output<String> role;
+    private @Nullable Output<String> role;
 
-    public Output<String> role() {
-        return this.role == null ? Codegen.empty() : this.role;
+    public Optional<Output<String>> role() {
+        return Optional.ofNullable(this.role);
     }
 
     @Import(name="tagTemplate")
-      private final @Nullable Output<String> tagTemplate;
+    private @Nullable Output<String> tagTemplate;
 
-    public Output<String> tagTemplate() {
-        return this.tagTemplate == null ? Codegen.empty() : this.tagTemplate;
+    public Optional<Output<String>> tagTemplate() {
+        return Optional.ofNullable(this.tagTemplate);
     }
 
-    public TagTemplateIamBindingState(
-        @Nullable Output<TagTemplateIamBindingConditionGetArgs> condition,
-        @Nullable Output<String> etag,
-        @Nullable Output<List<String>> members,
-        @Nullable Output<String> project,
-        @Nullable Output<String> region,
-        @Nullable Output<String> role,
-        @Nullable Output<String> tagTemplate) {
-        this.condition = condition;
-        this.etag = etag;
-        this.members = members;
-        this.project = project;
-        this.region = region;
-        this.role = role;
-        this.tagTemplate = tagTemplate;
-    }
+    private TagTemplateIamBindingState() {}
 
-    private TagTemplateIamBindingState() {
-        this.condition = Codegen.empty();
-        this.etag = Codegen.empty();
-        this.members = Codegen.empty();
-        this.project = Codegen.empty();
-        this.region = Codegen.empty();
-        this.role = Codegen.empty();
-        this.tagTemplate = Codegen.empty();
+    private TagTemplateIamBindingState(TagTemplateIamBindingState $) {
+        this.condition = $.condition;
+        this.etag = $.etag;
+        this.members = $.members;
+        this.project = $.project;
+        this.region = $.region;
+        this.role = $.role;
+        this.tagTemplate = $.tagTemplate;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TagTemplateIamBindingState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<TagTemplateIamBindingConditionGetArgs> condition;
-        private @Nullable Output<String> etag;
-        private @Nullable Output<List<String>> members;
-        private @Nullable Output<String> project;
-        private @Nullable Output<String> region;
-        private @Nullable Output<String> role;
-        private @Nullable Output<String> tagTemplate;
+        private TagTemplateIamBindingState $;
 
         public Builder() {
-    	      // Empty
+            $ = new TagTemplateIamBindingState();
         }
 
         public Builder(TagTemplateIamBindingState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.condition = defaults.condition;
-    	      this.etag = defaults.etag;
-    	      this.members = defaults.members;
-    	      this.project = defaults.project;
-    	      this.region = defaults.region;
-    	      this.role = defaults.role;
-    	      this.tagTemplate = defaults.tagTemplate;
+            $ = new TagTemplateIamBindingState(Objects.requireNonNull(defaults));
         }
 
         public Builder condition(@Nullable Output<TagTemplateIamBindingConditionGetArgs> condition) {
-            this.condition = condition;
+            $.condition = condition;
             return this;
         }
-        public Builder condition(@Nullable TagTemplateIamBindingConditionGetArgs condition) {
-            this.condition = Codegen.ofNullable(condition);
-            return this;
+
+        public Builder condition(TagTemplateIamBindingConditionGetArgs condition) {
+            return condition(Output.of(condition));
         }
+
         public Builder etag(@Nullable Output<String> etag) {
-            this.etag = etag;
+            $.etag = etag;
             return this;
         }
-        public Builder etag(@Nullable String etag) {
-            this.etag = Codegen.ofNullable(etag);
-            return this;
+
+        public Builder etag(String etag) {
+            return etag(Output.of(etag));
         }
+
         public Builder members(@Nullable Output<List<String>> members) {
-            this.members = members;
+            $.members = members;
             return this;
         }
-        public Builder members(@Nullable List<String> members) {
-            this.members = Codegen.ofNullable(members);
-            return this;
+
+        public Builder members(List<String> members) {
+            return members(Output.of(members));
         }
+
         public Builder members(String... members) {
             return members(List.of(members));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder region(@Nullable Output<String> region) {
-            this.region = region;
+            $.region = region;
             return this;
         }
-        public Builder region(@Nullable String region) {
-            this.region = Codegen.ofNullable(region);
-            return this;
+
+        public Builder region(String region) {
+            return region(Output.of(region));
         }
+
         public Builder role(@Nullable Output<String> role) {
-            this.role = role;
+            $.role = role;
             return this;
         }
-        public Builder role(@Nullable String role) {
-            this.role = Codegen.ofNullable(role);
-            return this;
+
+        public Builder role(String role) {
+            return role(Output.of(role));
         }
+
         public Builder tagTemplate(@Nullable Output<String> tagTemplate) {
-            this.tagTemplate = tagTemplate;
+            $.tagTemplate = tagTemplate;
             return this;
         }
-        public Builder tagTemplate(@Nullable String tagTemplate) {
-            this.tagTemplate = Codegen.ofNullable(tagTemplate);
-            return this;
-        }        public TagTemplateIamBindingState build() {
-            return new TagTemplateIamBindingState(condition, etag, members, project, region, role, tagTemplate);
+
+        public Builder tagTemplate(String tagTemplate) {
+            return tagTemplate(Output.of(tagTemplate));
+        }
+
+        public TagTemplateIamBindingState build() {
+            return $;
         }
     }
+
 }

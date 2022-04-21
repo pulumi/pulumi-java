@@ -5,10 +5,10 @@ package com.pulumi.gcp.diagflow.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.diagflow.inputs.CxFlowEventHandlerTriggerFulfillmentArgs;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class CxFlowEventHandlerArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="event")
-      private final @Nullable Output<String> event;
+    private @Nullable Output<String> event;
 
-    public Output<String> event() {
-        return this.event == null ? Codegen.empty() : this.event;
+    public Optional<Output<String>> event() {
+        return Optional.ofNullable(this.event);
     }
 
     /**
@@ -33,10 +33,10 @@ public final class CxFlowEventHandlerArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -45,10 +45,10 @@ public final class CxFlowEventHandlerArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="targetFlow")
-      private final @Nullable Output<String> targetFlow;
+    private @Nullable Output<String> targetFlow;
 
-    public Output<String> targetFlow() {
-        return this.targetFlow == null ? Codegen.empty() : this.targetFlow;
+    public Optional<Output<String>> targetFlow() {
+        return Optional.ofNullable(this.targetFlow);
     }
 
     /**
@@ -57,10 +57,10 @@ public final class CxFlowEventHandlerArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="targetPage")
-      private final @Nullable Output<String> targetPage;
+    private @Nullable Output<String> targetPage;
 
-    public Output<String> targetPage() {
-        return this.targetPage == null ? Codegen.empty() : this.targetPage;
+    public Optional<Output<String>> targetPage() {
+        return Optional.ofNullable(this.targetPage);
     }
 
     /**
@@ -69,102 +69,88 @@ public final class CxFlowEventHandlerArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="triggerFulfillment")
-      private final @Nullable Output<CxFlowEventHandlerTriggerFulfillmentArgs> triggerFulfillment;
+    private @Nullable Output<CxFlowEventHandlerTriggerFulfillmentArgs> triggerFulfillment;
 
-    public Output<CxFlowEventHandlerTriggerFulfillmentArgs> triggerFulfillment() {
-        return this.triggerFulfillment == null ? Codegen.empty() : this.triggerFulfillment;
+    public Optional<Output<CxFlowEventHandlerTriggerFulfillmentArgs>> triggerFulfillment() {
+        return Optional.ofNullable(this.triggerFulfillment);
     }
 
-    public CxFlowEventHandlerArgs(
-        @Nullable Output<String> event,
-        @Nullable Output<String> name,
-        @Nullable Output<String> targetFlow,
-        @Nullable Output<String> targetPage,
-        @Nullable Output<CxFlowEventHandlerTriggerFulfillmentArgs> triggerFulfillment) {
-        this.event = event;
-        this.name = name;
-        this.targetFlow = targetFlow;
-        this.targetPage = targetPage;
-        this.triggerFulfillment = triggerFulfillment;
-    }
+    private CxFlowEventHandlerArgs() {}
 
-    private CxFlowEventHandlerArgs() {
-        this.event = Codegen.empty();
-        this.name = Codegen.empty();
-        this.targetFlow = Codegen.empty();
-        this.targetPage = Codegen.empty();
-        this.triggerFulfillment = Codegen.empty();
+    private CxFlowEventHandlerArgs(CxFlowEventHandlerArgs $) {
+        this.event = $.event;
+        this.name = $.name;
+        this.targetFlow = $.targetFlow;
+        this.targetPage = $.targetPage;
+        this.triggerFulfillment = $.triggerFulfillment;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CxFlowEventHandlerArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> event;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> targetFlow;
-        private @Nullable Output<String> targetPage;
-        private @Nullable Output<CxFlowEventHandlerTriggerFulfillmentArgs> triggerFulfillment;
+        private CxFlowEventHandlerArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CxFlowEventHandlerArgs();
         }
 
         public Builder(CxFlowEventHandlerArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.event = defaults.event;
-    	      this.name = defaults.name;
-    	      this.targetFlow = defaults.targetFlow;
-    	      this.targetPage = defaults.targetPage;
-    	      this.triggerFulfillment = defaults.triggerFulfillment;
+            $ = new CxFlowEventHandlerArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder event(@Nullable Output<String> event) {
-            this.event = event;
+            $.event = event;
             return this;
         }
-        public Builder event(@Nullable String event) {
-            this.event = Codegen.ofNullable(event);
-            return this;
+
+        public Builder event(String event) {
+            return event(Output.of(event));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder targetFlow(@Nullable Output<String> targetFlow) {
-            this.targetFlow = targetFlow;
+            $.targetFlow = targetFlow;
             return this;
         }
-        public Builder targetFlow(@Nullable String targetFlow) {
-            this.targetFlow = Codegen.ofNullable(targetFlow);
-            return this;
+
+        public Builder targetFlow(String targetFlow) {
+            return targetFlow(Output.of(targetFlow));
         }
+
         public Builder targetPage(@Nullable Output<String> targetPage) {
-            this.targetPage = targetPage;
+            $.targetPage = targetPage;
             return this;
         }
-        public Builder targetPage(@Nullable String targetPage) {
-            this.targetPage = Codegen.ofNullable(targetPage);
-            return this;
+
+        public Builder targetPage(String targetPage) {
+            return targetPage(Output.of(targetPage));
         }
+
         public Builder triggerFulfillment(@Nullable Output<CxFlowEventHandlerTriggerFulfillmentArgs> triggerFulfillment) {
-            this.triggerFulfillment = triggerFulfillment;
+            $.triggerFulfillment = triggerFulfillment;
             return this;
         }
-        public Builder triggerFulfillment(@Nullable CxFlowEventHandlerTriggerFulfillmentArgs triggerFulfillment) {
-            this.triggerFulfillment = Codegen.ofNullable(triggerFulfillment);
-            return this;
-        }        public CxFlowEventHandlerArgs build() {
-            return new CxFlowEventHandlerArgs(event, name, targetFlow, targetPage, triggerFulfillment);
+
+        public Builder triggerFulfillment(CxFlowEventHandlerTriggerFulfillmentArgs triggerFulfillment) {
+            return triggerFulfillment(Output.of(triggerFulfillment));
+        }
+
+        public CxFlowEventHandlerArgs build() {
+            return $;
         }
     }
+
 }

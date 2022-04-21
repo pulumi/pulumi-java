@@ -7,10 +7,10 @@ import com.pulumi.azurenative.apimanagement.inputs.BodyDiagnosticSettingsArgs;
 import com.pulumi.azurenative.apimanagement.inputs.DataMaskingArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +27,10 @@ public final class HttpMessageDiagnosticArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="body")
-      private final @Nullable Output<BodyDiagnosticSettingsArgs> body;
+    private @Nullable Output<BodyDiagnosticSettingsArgs> body;
 
-    public Output<BodyDiagnosticSettingsArgs> body() {
-        return this.body == null ? Codegen.empty() : this.body;
+    public Optional<Output<BodyDiagnosticSettingsArgs>> body() {
+        return Optional.ofNullable(this.body);
     }
 
     /**
@@ -38,10 +38,10 @@ public final class HttpMessageDiagnosticArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="dataMasking")
-      private final @Nullable Output<DataMaskingArgs> dataMasking;
+    private @Nullable Output<DataMaskingArgs> dataMasking;
 
-    public Output<DataMaskingArgs> dataMasking() {
-        return this.dataMasking == null ? Codegen.empty() : this.dataMasking;
+    public Optional<Output<DataMaskingArgs>> dataMasking() {
+        return Optional.ofNullable(this.dataMasking);
     }
 
     /**
@@ -49,79 +49,72 @@ public final class HttpMessageDiagnosticArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="headers")
-      private final @Nullable Output<List<String>> headers;
+    private @Nullable Output<List<String>> headers;
 
-    public Output<List<String>> headers() {
-        return this.headers == null ? Codegen.empty() : this.headers;
+    public Optional<Output<List<String>>> headers() {
+        return Optional.ofNullable(this.headers);
     }
 
-    public HttpMessageDiagnosticArgs(
-        @Nullable Output<BodyDiagnosticSettingsArgs> body,
-        @Nullable Output<DataMaskingArgs> dataMasking,
-        @Nullable Output<List<String>> headers) {
-        this.body = body;
-        this.dataMasking = dataMasking;
-        this.headers = headers;
-    }
+    private HttpMessageDiagnosticArgs() {}
 
-    private HttpMessageDiagnosticArgs() {
-        this.body = Codegen.empty();
-        this.dataMasking = Codegen.empty();
-        this.headers = Codegen.empty();
+    private HttpMessageDiagnosticArgs(HttpMessageDiagnosticArgs $) {
+        this.body = $.body;
+        this.dataMasking = $.dataMasking;
+        this.headers = $.headers;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(HttpMessageDiagnosticArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<BodyDiagnosticSettingsArgs> body;
-        private @Nullable Output<DataMaskingArgs> dataMasking;
-        private @Nullable Output<List<String>> headers;
+        private HttpMessageDiagnosticArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new HttpMessageDiagnosticArgs();
         }
 
         public Builder(HttpMessageDiagnosticArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.body = defaults.body;
-    	      this.dataMasking = defaults.dataMasking;
-    	      this.headers = defaults.headers;
+            $ = new HttpMessageDiagnosticArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder body(@Nullable Output<BodyDiagnosticSettingsArgs> body) {
-            this.body = body;
+            $.body = body;
             return this;
         }
-        public Builder body(@Nullable BodyDiagnosticSettingsArgs body) {
-            this.body = Codegen.ofNullable(body);
-            return this;
+
+        public Builder body(BodyDiagnosticSettingsArgs body) {
+            return body(Output.of(body));
         }
+
         public Builder dataMasking(@Nullable Output<DataMaskingArgs> dataMasking) {
-            this.dataMasking = dataMasking;
+            $.dataMasking = dataMasking;
             return this;
         }
-        public Builder dataMasking(@Nullable DataMaskingArgs dataMasking) {
-            this.dataMasking = Codegen.ofNullable(dataMasking);
-            return this;
+
+        public Builder dataMasking(DataMaskingArgs dataMasking) {
+            return dataMasking(Output.of(dataMasking));
         }
+
         public Builder headers(@Nullable Output<List<String>> headers) {
-            this.headers = headers;
+            $.headers = headers;
             return this;
         }
-        public Builder headers(@Nullable List<String> headers) {
-            this.headers = Codegen.ofNullable(headers);
-            return this;
+
+        public Builder headers(List<String> headers) {
+            return headers(Output.of(headers));
         }
+
         public Builder headers(String... headers) {
             return headers(List.of(headers));
-        }        public HttpMessageDiagnosticArgs build() {
-            return new HttpMessageDiagnosticArgs(body, dataMasking, headers);
+        }
+
+        public HttpMessageDiagnosticArgs build() {
+            return $;
         }
     }
+
 }

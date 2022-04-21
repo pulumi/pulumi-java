@@ -16,6 +16,7 @@ import java.lang.Object;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -32,10 +33,10 @@ public final class FromAllInputFileArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="includedTracks")
-      private final @Nullable Output<List<Object>> includedTracks;
+    private @Nullable Output<List<Object>> includedTracks;
 
-    public Output<List<Object>> includedTracks() {
-        return this.includedTracks == null ? Codegen.empty() : this.includedTracks;
+    public Optional<Output<List<Object>>> includedTracks() {
+        return Optional.ofNullable(this.includedTracks);
     }
 
     /**
@@ -44,66 +45,63 @@ public final class FromAllInputFileArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="odataType", required=true)
-      private final Output<String> odataType;
+    private Output<String> odataType;
 
     public Output<String> odataType() {
         return this.odataType;
     }
 
-    public FromAllInputFileArgs(
-        @Nullable Output<List<Object>> includedTracks,
-        Output<String> odataType) {
-        this.includedTracks = includedTracks;
-        this.odataType = Codegen.stringProp("odataType").output().arg(odataType).require();
-    }
+    private FromAllInputFileArgs() {}
 
-    private FromAllInputFileArgs() {
-        this.includedTracks = Codegen.empty();
-        this.odataType = Codegen.empty();
+    private FromAllInputFileArgs(FromAllInputFileArgs $) {
+        this.includedTracks = $.includedTracks;
+        this.odataType = $.odataType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FromAllInputFileArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<Object>> includedTracks;
-        private Output<String> odataType;
+        private FromAllInputFileArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new FromAllInputFileArgs();
         }
 
         public Builder(FromAllInputFileArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.includedTracks = defaults.includedTracks;
-    	      this.odataType = defaults.odataType;
+            $ = new FromAllInputFileArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder includedTracks(@Nullable Output<List<Object>> includedTracks) {
-            this.includedTracks = includedTracks;
+            $.includedTracks = includedTracks;
             return this;
         }
-        public Builder includedTracks(@Nullable List<Object> includedTracks) {
-            this.includedTracks = Codegen.ofNullable(includedTracks);
-            return this;
+
+        public Builder includedTracks(List<Object> includedTracks) {
+            return includedTracks(Output.of(includedTracks));
         }
+
         public Builder includedTracks(Object... includedTracks) {
             return includedTracks(List.of(includedTracks));
         }
+
         public Builder odataType(Output<String> odataType) {
-            this.odataType = Objects.requireNonNull(odataType);
+            $.odataType = odataType;
             return this;
         }
+
         public Builder odataType(String odataType) {
-            this.odataType = Output.of(Objects.requireNonNull(odataType));
-            return this;
-        }        public FromAllInputFileArgs build() {
-            return new FromAllInputFileArgs(includedTracks, odataType);
+            return odataType(Output.of(odataType));
+        }
+
+        public FromAllInputFileArgs build() {
+            $.odataType = Codegen.stringProp("odataType").output().arg($.odataType).require();
+            return $;
         }
     }
+
 }

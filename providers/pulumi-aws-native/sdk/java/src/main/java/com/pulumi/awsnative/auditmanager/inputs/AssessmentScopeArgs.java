@@ -7,9 +7,9 @@ import com.pulumi.awsnative.auditmanager.inputs.AssessmentAWSAccountArgs;
 import com.pulumi.awsnative.auditmanager.inputs.AssessmentAWSServiceArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class AssessmentScopeArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="awsAccounts")
-      private final @Nullable Output<List<AssessmentAWSAccountArgs>> awsAccounts;
+    private @Nullable Output<List<AssessmentAWSAccountArgs>> awsAccounts;
 
-    public Output<List<AssessmentAWSAccountArgs>> awsAccounts() {
-        return this.awsAccounts == null ? Codegen.empty() : this.awsAccounts;
+    public Optional<Output<List<AssessmentAWSAccountArgs>>> awsAccounts() {
+        return Optional.ofNullable(this.awsAccounts);
     }
 
     /**
@@ -37,69 +37,66 @@ public final class AssessmentScopeArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="awsServices")
-      private final @Nullable Output<List<AssessmentAWSServiceArgs>> awsServices;
+    private @Nullable Output<List<AssessmentAWSServiceArgs>> awsServices;
 
-    public Output<List<AssessmentAWSServiceArgs>> awsServices() {
-        return this.awsServices == null ? Codegen.empty() : this.awsServices;
+    public Optional<Output<List<AssessmentAWSServiceArgs>>> awsServices() {
+        return Optional.ofNullable(this.awsServices);
     }
 
-    public AssessmentScopeArgs(
-        @Nullable Output<List<AssessmentAWSAccountArgs>> awsAccounts,
-        @Nullable Output<List<AssessmentAWSServiceArgs>> awsServices) {
-        this.awsAccounts = awsAccounts;
-        this.awsServices = awsServices;
-    }
+    private AssessmentScopeArgs() {}
 
-    private AssessmentScopeArgs() {
-        this.awsAccounts = Codegen.empty();
-        this.awsServices = Codegen.empty();
+    private AssessmentScopeArgs(AssessmentScopeArgs $) {
+        this.awsAccounts = $.awsAccounts;
+        this.awsServices = $.awsServices;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AssessmentScopeArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<AssessmentAWSAccountArgs>> awsAccounts;
-        private @Nullable Output<List<AssessmentAWSServiceArgs>> awsServices;
+        private AssessmentScopeArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AssessmentScopeArgs();
         }
 
         public Builder(AssessmentScopeArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.awsAccounts = defaults.awsAccounts;
-    	      this.awsServices = defaults.awsServices;
+            $ = new AssessmentScopeArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder awsAccounts(@Nullable Output<List<AssessmentAWSAccountArgs>> awsAccounts) {
-            this.awsAccounts = awsAccounts;
+            $.awsAccounts = awsAccounts;
             return this;
         }
-        public Builder awsAccounts(@Nullable List<AssessmentAWSAccountArgs> awsAccounts) {
-            this.awsAccounts = Codegen.ofNullable(awsAccounts);
-            return this;
+
+        public Builder awsAccounts(List<AssessmentAWSAccountArgs> awsAccounts) {
+            return awsAccounts(Output.of(awsAccounts));
         }
+
         public Builder awsAccounts(AssessmentAWSAccountArgs... awsAccounts) {
             return awsAccounts(List.of(awsAccounts));
         }
+
         public Builder awsServices(@Nullable Output<List<AssessmentAWSServiceArgs>> awsServices) {
-            this.awsServices = awsServices;
+            $.awsServices = awsServices;
             return this;
         }
-        public Builder awsServices(@Nullable List<AssessmentAWSServiceArgs> awsServices) {
-            this.awsServices = Codegen.ofNullable(awsServices);
-            return this;
+
+        public Builder awsServices(List<AssessmentAWSServiceArgs> awsServices) {
+            return awsServices(Output.of(awsServices));
         }
+
         public Builder awsServices(AssessmentAWSServiceArgs... awsServices) {
             return awsServices(List.of(awsServices));
-        }        public AssessmentScopeArgs build() {
-            return new AssessmentScopeArgs(awsAccounts, awsServices);
+        }
+
+        public AssessmentScopeArgs build() {
+            return $;
         }
     }
+
 }

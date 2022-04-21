@@ -6,8 +6,8 @@ package com.pulumi.awsnative.groundstation.inputs;
 import com.pulumi.awsnative.groundstation.enums.ConfigTrackingConfigAutotrack;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -16,49 +16,48 @@ public final class ConfigTrackingConfigArgs extends com.pulumi.resources.Resourc
     public static final ConfigTrackingConfigArgs Empty = new ConfigTrackingConfigArgs();
 
     @Import(name="autotrack")
-      private final @Nullable Output<ConfigTrackingConfigAutotrack> autotrack;
+    private @Nullable Output<ConfigTrackingConfigAutotrack> autotrack;
 
-    public Output<ConfigTrackingConfigAutotrack> autotrack() {
-        return this.autotrack == null ? Codegen.empty() : this.autotrack;
+    public Optional<Output<ConfigTrackingConfigAutotrack>> autotrack() {
+        return Optional.ofNullable(this.autotrack);
     }
 
-    public ConfigTrackingConfigArgs(@Nullable Output<ConfigTrackingConfigAutotrack> autotrack) {
-        this.autotrack = autotrack;
-    }
+    private ConfigTrackingConfigArgs() {}
 
-    private ConfigTrackingConfigArgs() {
-        this.autotrack = Codegen.empty();
+    private ConfigTrackingConfigArgs(ConfigTrackingConfigArgs $) {
+        this.autotrack = $.autotrack;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ConfigTrackingConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<ConfigTrackingConfigAutotrack> autotrack;
+        private ConfigTrackingConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ConfigTrackingConfigArgs();
         }
 
         public Builder(ConfigTrackingConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.autotrack = defaults.autotrack;
+            $ = new ConfigTrackingConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder autotrack(@Nullable Output<ConfigTrackingConfigAutotrack> autotrack) {
-            this.autotrack = autotrack;
+            $.autotrack = autotrack;
             return this;
         }
-        public Builder autotrack(@Nullable ConfigTrackingConfigAutotrack autotrack) {
-            this.autotrack = Codegen.ofNullable(autotrack);
-            return this;
-        }        public ConfigTrackingConfigArgs build() {
-            return new ConfigTrackingConfigArgs(autotrack);
+
+        public Builder autotrack(ConfigTrackingConfigAutotrack autotrack) {
+            return autotrack(Output.of(autotrack));
+        }
+
+        public ConfigTrackingConfigArgs build() {
+            return $;
         }
     }
+
 }

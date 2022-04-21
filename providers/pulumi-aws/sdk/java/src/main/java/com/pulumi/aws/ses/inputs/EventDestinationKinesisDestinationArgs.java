@@ -5,7 +5,6 @@ package com.pulumi.aws.ses.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,7 +18,7 @@ public final class EventDestinationKinesisDestinationArgs extends com.pulumi.res
      * 
      */
     @Import(name="roleArn", required=true)
-      private final Output<String> roleArn;
+    private Output<String> roleArn;
 
     public Output<String> roleArn() {
         return this.roleArn;
@@ -30,63 +29,60 @@ public final class EventDestinationKinesisDestinationArgs extends com.pulumi.res
      * 
      */
     @Import(name="streamArn", required=true)
-      private final Output<String> streamArn;
+    private Output<String> streamArn;
 
     public Output<String> streamArn() {
         return this.streamArn;
     }
 
-    public EventDestinationKinesisDestinationArgs(
-        Output<String> roleArn,
-        Output<String> streamArn) {
-        this.roleArn = Objects.requireNonNull(roleArn, "expected parameter 'roleArn' to be non-null");
-        this.streamArn = Objects.requireNonNull(streamArn, "expected parameter 'streamArn' to be non-null");
-    }
+    private EventDestinationKinesisDestinationArgs() {}
 
-    private EventDestinationKinesisDestinationArgs() {
-        this.roleArn = Codegen.empty();
-        this.streamArn = Codegen.empty();
+    private EventDestinationKinesisDestinationArgs(EventDestinationKinesisDestinationArgs $) {
+        this.roleArn = $.roleArn;
+        this.streamArn = $.streamArn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EventDestinationKinesisDestinationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> roleArn;
-        private Output<String> streamArn;
+        private EventDestinationKinesisDestinationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new EventDestinationKinesisDestinationArgs();
         }
 
         public Builder(EventDestinationKinesisDestinationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.roleArn = defaults.roleArn;
-    	      this.streamArn = defaults.streamArn;
+            $ = new EventDestinationKinesisDestinationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder roleArn(Output<String> roleArn) {
-            this.roleArn = Objects.requireNonNull(roleArn);
+            $.roleArn = roleArn;
             return this;
         }
+
         public Builder roleArn(String roleArn) {
-            this.roleArn = Output.of(Objects.requireNonNull(roleArn));
-            return this;
+            return roleArn(Output.of(roleArn));
         }
+
         public Builder streamArn(Output<String> streamArn) {
-            this.streamArn = Objects.requireNonNull(streamArn);
+            $.streamArn = streamArn;
             return this;
         }
+
         public Builder streamArn(String streamArn) {
-            this.streamArn = Output.of(Objects.requireNonNull(streamArn));
-            return this;
-        }        public EventDestinationKinesisDestinationArgs build() {
-            return new EventDestinationKinesisDestinationArgs(roleArn, streamArn);
+            return streamArn(Output.of(streamArn));
+        }
+
+        public EventDestinationKinesisDestinationArgs build() {
+            $.roleArn = Objects.requireNonNull($.roleArn, "expected parameter 'roleArn' to be non-null");
+            $.streamArn = Objects.requireNonNull($.streamArn, "expected parameter 'streamArn' to be non-null");
+            return $;
         }
     }
+
 }

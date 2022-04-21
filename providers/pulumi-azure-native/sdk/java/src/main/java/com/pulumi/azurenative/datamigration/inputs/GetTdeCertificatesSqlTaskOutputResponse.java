@@ -24,7 +24,7 @@ public final class GetTdeCertificatesSqlTaskOutputResponse extends com.pulumi.re
      * 
      */
     @Import(name="base64EncodedCertificates", required=true)
-      private final Map<String,List<String>> base64EncodedCertificates;
+    private Map<String,List<String>> base64EncodedCertificates;
 
     public Map<String,List<String>> base64EncodedCertificates() {
         return this.base64EncodedCertificates;
@@ -35,58 +35,56 @@ public final class GetTdeCertificatesSqlTaskOutputResponse extends com.pulumi.re
      * 
      */
     @Import(name="validationErrors", required=true)
-      private final List<ReportableExceptionResponse> validationErrors;
+    private List<ReportableExceptionResponse> validationErrors;
 
     public List<ReportableExceptionResponse> validationErrors() {
         return this.validationErrors;
     }
 
-    public GetTdeCertificatesSqlTaskOutputResponse(
-        Map<String,List<String>> base64EncodedCertificates,
-        List<ReportableExceptionResponse> validationErrors) {
-        this.base64EncodedCertificates = Objects.requireNonNull(base64EncodedCertificates, "expected parameter 'base64EncodedCertificates' to be non-null");
-        this.validationErrors = Objects.requireNonNull(validationErrors, "expected parameter 'validationErrors' to be non-null");
-    }
+    private GetTdeCertificatesSqlTaskOutputResponse() {}
 
-    private GetTdeCertificatesSqlTaskOutputResponse() {
-        this.base64EncodedCertificates = Map.of();
-        this.validationErrors = List.of();
+    private GetTdeCertificatesSqlTaskOutputResponse(GetTdeCertificatesSqlTaskOutputResponse $) {
+        this.base64EncodedCertificates = $.base64EncodedCertificates;
+        this.validationErrors = $.validationErrors;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetTdeCertificatesSqlTaskOutputResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Map<String,List<String>> base64EncodedCertificates;
-        private List<ReportableExceptionResponse> validationErrors;
+        private GetTdeCertificatesSqlTaskOutputResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetTdeCertificatesSqlTaskOutputResponse();
         }
 
         public Builder(GetTdeCertificatesSqlTaskOutputResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.base64EncodedCertificates = defaults.base64EncodedCertificates;
-    	      this.validationErrors = defaults.validationErrors;
+            $ = new GetTdeCertificatesSqlTaskOutputResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder base64EncodedCertificates(Map<String,List<String>> base64EncodedCertificates) {
-            this.base64EncodedCertificates = Objects.requireNonNull(base64EncodedCertificates);
+            $.base64EncodedCertificates = base64EncodedCertificates;
             return this;
         }
+
         public Builder validationErrors(List<ReportableExceptionResponse> validationErrors) {
-            this.validationErrors = Objects.requireNonNull(validationErrors);
+            $.validationErrors = validationErrors;
             return this;
         }
+
         public Builder validationErrors(ReportableExceptionResponse... validationErrors) {
             return validationErrors(List.of(validationErrors));
-        }        public GetTdeCertificatesSqlTaskOutputResponse build() {
-            return new GetTdeCertificatesSqlTaskOutputResponse(base64EncodedCertificates, validationErrors);
+        }
+
+        public GetTdeCertificatesSqlTaskOutputResponse build() {
+            $.base64EncodedCertificates = Objects.requireNonNull($.base64EncodedCertificates, "expected parameter 'base64EncodedCertificates' to be non-null");
+            $.validationErrors = Objects.requireNonNull($.validationErrors, "expected parameter 'validationErrors' to be non-null");
+            return $;
         }
     }
+
 }

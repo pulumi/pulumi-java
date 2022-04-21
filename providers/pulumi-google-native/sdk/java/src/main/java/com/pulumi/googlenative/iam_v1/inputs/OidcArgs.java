@@ -5,10 +5,10 @@ package com.pulumi.googlenative.iam_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class OidcArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="allowedAudiences")
-      private final @Nullable Output<List<String>> allowedAudiences;
+    private @Nullable Output<List<String>> allowedAudiences;
 
-    public Output<List<String>> allowedAudiences() {
-        return this.allowedAudiences == null ? Codegen.empty() : this.allowedAudiences;
+    public Optional<Output<List<String>>> allowedAudiences() {
+        return Optional.ofNullable(this.allowedAudiences);
     }
 
     /**
@@ -36,66 +36,63 @@ public final class OidcArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="issuerUri", required=true)
-      private final Output<String> issuerUri;
+    private Output<String> issuerUri;
 
     public Output<String> issuerUri() {
         return this.issuerUri;
     }
 
-    public OidcArgs(
-        @Nullable Output<List<String>> allowedAudiences,
-        Output<String> issuerUri) {
-        this.allowedAudiences = allowedAudiences;
-        this.issuerUri = Objects.requireNonNull(issuerUri, "expected parameter 'issuerUri' to be non-null");
-    }
+    private OidcArgs() {}
 
-    private OidcArgs() {
-        this.allowedAudiences = Codegen.empty();
-        this.issuerUri = Codegen.empty();
+    private OidcArgs(OidcArgs $) {
+        this.allowedAudiences = $.allowedAudiences;
+        this.issuerUri = $.issuerUri;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(OidcArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> allowedAudiences;
-        private Output<String> issuerUri;
+        private OidcArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new OidcArgs();
         }
 
         public Builder(OidcArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.allowedAudiences = defaults.allowedAudiences;
-    	      this.issuerUri = defaults.issuerUri;
+            $ = new OidcArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder allowedAudiences(@Nullable Output<List<String>> allowedAudiences) {
-            this.allowedAudiences = allowedAudiences;
+            $.allowedAudiences = allowedAudiences;
             return this;
         }
-        public Builder allowedAudiences(@Nullable List<String> allowedAudiences) {
-            this.allowedAudiences = Codegen.ofNullable(allowedAudiences);
-            return this;
+
+        public Builder allowedAudiences(List<String> allowedAudiences) {
+            return allowedAudiences(Output.of(allowedAudiences));
         }
+
         public Builder allowedAudiences(String... allowedAudiences) {
             return allowedAudiences(List.of(allowedAudiences));
         }
+
         public Builder issuerUri(Output<String> issuerUri) {
-            this.issuerUri = Objects.requireNonNull(issuerUri);
+            $.issuerUri = issuerUri;
             return this;
         }
+
         public Builder issuerUri(String issuerUri) {
-            this.issuerUri = Output.of(Objects.requireNonNull(issuerUri));
-            return this;
-        }        public OidcArgs build() {
-            return new OidcArgs(allowedAudiences, issuerUri);
+            return issuerUri(Output.of(issuerUri));
+        }
+
+        public OidcArgs build() {
+            $.issuerUri = Objects.requireNonNull($.issuerUri, "expected parameter 'issuerUri' to be non-null");
+            return $;
         }
     }
+
 }

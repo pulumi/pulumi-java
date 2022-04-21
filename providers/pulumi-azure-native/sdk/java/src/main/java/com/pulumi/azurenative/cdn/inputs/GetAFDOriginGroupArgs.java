@@ -17,7 +17,7 @@ public final class GetAFDOriginGroupArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="originGroupName", required=true)
-      private final String originGroupName;
+    private String originGroupName;
 
     public String originGroupName() {
         return this.originGroupName;
@@ -28,7 +28,7 @@ public final class GetAFDOriginGroupArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="profileName", required=true)
-      private final String profileName;
+    private String profileName;
 
     public String profileName() {
         return this.profileName;
@@ -39,64 +39,59 @@ public final class GetAFDOriginGroupArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public GetAFDOriginGroupArgs(
-        String originGroupName,
-        String profileName,
-        String resourceGroupName) {
-        this.originGroupName = Objects.requireNonNull(originGroupName, "expected parameter 'originGroupName' to be non-null");
-        this.profileName = Objects.requireNonNull(profileName, "expected parameter 'profileName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private GetAFDOriginGroupArgs() {}
 
-    private GetAFDOriginGroupArgs() {
-        this.originGroupName = null;
-        this.profileName = null;
-        this.resourceGroupName = null;
+    private GetAFDOriginGroupArgs(GetAFDOriginGroupArgs $) {
+        this.originGroupName = $.originGroupName;
+        this.profileName = $.profileName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetAFDOriginGroupArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String originGroupName;
-        private String profileName;
-        private String resourceGroupName;
+        private GetAFDOriginGroupArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetAFDOriginGroupArgs();
         }
 
         public Builder(GetAFDOriginGroupArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.originGroupName = defaults.originGroupName;
-    	      this.profileName = defaults.profileName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new GetAFDOriginGroupArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder originGroupName(String originGroupName) {
-            this.originGroupName = Objects.requireNonNull(originGroupName);
+            $.originGroupName = originGroupName;
             return this;
         }
+
         public Builder profileName(String profileName) {
-            this.profileName = Objects.requireNonNull(profileName);
+            $.profileName = profileName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public GetAFDOriginGroupArgs build() {
-            return new GetAFDOriginGroupArgs(originGroupName, profileName, resourceGroupName);
+        }
+
+        public GetAFDOriginGroupArgs build() {
+            $.originGroupName = Objects.requireNonNull($.originGroupName, "expected parameter 'originGroupName' to be non-null");
+            $.profileName = Objects.requireNonNull($.profileName, "expected parameter 'profileName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

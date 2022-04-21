@@ -5,10 +5,10 @@ package com.pulumi.aws.ecs.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,7 +21,7 @@ public final class TaskDefinitionProxyConfigurationArgs extends com.pulumi.resou
      * 
      */
     @Import(name="containerName", required=true)
-      private final Output<String> containerName;
+    private Output<String> containerName;
 
     public Output<String> containerName() {
         return this.containerName;
@@ -32,10 +32,10 @@ public final class TaskDefinitionProxyConfigurationArgs extends com.pulumi.resou
      * 
      */
     @Import(name="properties")
-      private final @Nullable Output<Map<String,String>> properties;
+    private @Nullable Output<Map<String,String>> properties;
 
-    public Output<Map<String,String>> properties() {
-        return this.properties == null ? Codegen.empty() : this.properties;
+    public Optional<Output<Map<String,String>>> properties() {
+        return Optional.ofNullable(this.properties);
     }
 
     /**
@@ -43,76 +43,69 @@ public final class TaskDefinitionProxyConfigurationArgs extends com.pulumi.resou
      * 
      */
     @Import(name="type")
-      private final @Nullable Output<String> type;
+    private @Nullable Output<String> type;
 
-    public Output<String> type() {
-        return this.type == null ? Codegen.empty() : this.type;
+    public Optional<Output<String>> type() {
+        return Optional.ofNullable(this.type);
     }
 
-    public TaskDefinitionProxyConfigurationArgs(
-        Output<String> containerName,
-        @Nullable Output<Map<String,String>> properties,
-        @Nullable Output<String> type) {
-        this.containerName = Objects.requireNonNull(containerName, "expected parameter 'containerName' to be non-null");
-        this.properties = properties;
-        this.type = type;
-    }
+    private TaskDefinitionProxyConfigurationArgs() {}
 
-    private TaskDefinitionProxyConfigurationArgs() {
-        this.containerName = Codegen.empty();
-        this.properties = Codegen.empty();
-        this.type = Codegen.empty();
+    private TaskDefinitionProxyConfigurationArgs(TaskDefinitionProxyConfigurationArgs $) {
+        this.containerName = $.containerName;
+        this.properties = $.properties;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TaskDefinitionProxyConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> containerName;
-        private @Nullable Output<Map<String,String>> properties;
-        private @Nullable Output<String> type;
+        private TaskDefinitionProxyConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TaskDefinitionProxyConfigurationArgs();
         }
 
         public Builder(TaskDefinitionProxyConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.containerName = defaults.containerName;
-    	      this.properties = defaults.properties;
-    	      this.type = defaults.type;
+            $ = new TaskDefinitionProxyConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder containerName(Output<String> containerName) {
-            this.containerName = Objects.requireNonNull(containerName);
+            $.containerName = containerName;
             return this;
         }
+
         public Builder containerName(String containerName) {
-            this.containerName = Output.of(Objects.requireNonNull(containerName));
-            return this;
+            return containerName(Output.of(containerName));
         }
+
         public Builder properties(@Nullable Output<Map<String,String>> properties) {
-            this.properties = properties;
+            $.properties = properties;
             return this;
         }
-        public Builder properties(@Nullable Map<String,String> properties) {
-            this.properties = Codegen.ofNullable(properties);
-            return this;
+
+        public Builder properties(Map<String,String> properties) {
+            return properties(Output.of(properties));
         }
+
         public Builder type(@Nullable Output<String> type) {
-            this.type = type;
+            $.type = type;
             return this;
         }
-        public Builder type(@Nullable String type) {
-            this.type = Codegen.ofNullable(type);
-            return this;
-        }        public TaskDefinitionProxyConfigurationArgs build() {
-            return new TaskDefinitionProxyConfigurationArgs(containerName, properties, type);
+
+        public Builder type(String type) {
+            return type(Output.of(type));
+        }
+
+        public TaskDefinitionProxyConfigurationArgs build() {
+            $.containerName = Objects.requireNonNull($.containerName, "expected parameter 'containerName' to be non-null");
+            return $;
         }
     }
+
 }

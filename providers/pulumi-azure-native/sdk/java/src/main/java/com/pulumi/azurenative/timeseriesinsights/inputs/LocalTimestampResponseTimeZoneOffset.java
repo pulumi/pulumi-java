@@ -23,45 +23,44 @@ public final class LocalTimestampResponseTimeZoneOffset extends com.pulumi.resou
      * 
      */
     @Import(name="propertyName")
-      private final @Nullable String propertyName;
+    private @Nullable String propertyName;
 
     public Optional<String> propertyName() {
-        return this.propertyName == null ? Optional.empty() : Optional.ofNullable(this.propertyName);
+        return Optional.ofNullable(this.propertyName);
     }
 
-    public LocalTimestampResponseTimeZoneOffset(@Nullable String propertyName) {
-        this.propertyName = propertyName;
-    }
+    private LocalTimestampResponseTimeZoneOffset() {}
 
-    private LocalTimestampResponseTimeZoneOffset() {
-        this.propertyName = null;
+    private LocalTimestampResponseTimeZoneOffset(LocalTimestampResponseTimeZoneOffset $) {
+        this.propertyName = $.propertyName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LocalTimestampResponseTimeZoneOffset defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String propertyName;
+        private LocalTimestampResponseTimeZoneOffset $;
 
         public Builder() {
-    	      // Empty
+            $ = new LocalTimestampResponseTimeZoneOffset();
         }
 
         public Builder(LocalTimestampResponseTimeZoneOffset defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.propertyName = defaults.propertyName;
+            $ = new LocalTimestampResponseTimeZoneOffset(Objects.requireNonNull(defaults));
         }
 
         public Builder propertyName(@Nullable String propertyName) {
-            this.propertyName = propertyName;
+            $.propertyName = propertyName;
             return this;
-        }        public LocalTimestampResponseTimeZoneOffset build() {
-            return new LocalTimestampResponseTimeZoneOffset(propertyName);
+        }
+
+        public LocalTimestampResponseTimeZoneOffset build() {
+            return $;
         }
     }
+
 }

@@ -24,10 +24,10 @@ public final class CodeContainerResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="description")
-      private final @Nullable String description;
+    private @Nullable String description;
 
     public Optional<String> description() {
-        return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class CodeContainerResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="properties")
-      private final @Nullable Map<String,String> properties;
+    private @Nullable Map<String,String> properties;
 
-    public Map<String,String> properties() {
-        return this.properties == null ? Map.of() : this.properties;
+    public Optional<Map<String,String>> properties() {
+        return Optional.ofNullable(this.properties);
     }
 
     /**
@@ -46,64 +46,56 @@ public final class CodeContainerResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="tags")
-      private final @Nullable Map<String,String> tags;
+    private @Nullable Map<String,String> tags;
 
-    public Map<String,String> tags() {
-        return this.tags == null ? Map.of() : this.tags;
+    public Optional<Map<String,String>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public CodeContainerResponse(
-        @Nullable String description,
-        @Nullable Map<String,String> properties,
-        @Nullable Map<String,String> tags) {
-        this.description = description;
-        this.properties = properties;
-        this.tags = tags;
-    }
+    private CodeContainerResponse() {}
 
-    private CodeContainerResponse() {
-        this.description = null;
-        this.properties = Map.of();
-        this.tags = Map.of();
+    private CodeContainerResponse(CodeContainerResponse $) {
+        this.description = $.description;
+        this.properties = $.properties;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CodeContainerResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String description;
-        private @Nullable Map<String,String> properties;
-        private @Nullable Map<String,String> tags;
+        private CodeContainerResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new CodeContainerResponse();
         }
 
         public Builder(CodeContainerResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.description = defaults.description;
-    	      this.properties = defaults.properties;
-    	      this.tags = defaults.tags;
+            $ = new CodeContainerResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder description(@Nullable String description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
+
         public Builder properties(@Nullable Map<String,String> properties) {
-            this.properties = properties;
+            $.properties = properties;
             return this;
         }
+
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
-        }        public CodeContainerResponse build() {
-            return new CodeContainerResponse(description, properties, tags);
+        }
+
+        public CodeContainerResponse build() {
+            return $;
         }
     }
+
 }

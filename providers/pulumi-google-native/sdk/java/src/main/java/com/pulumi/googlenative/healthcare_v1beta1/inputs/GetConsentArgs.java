@@ -15,110 +15,100 @@ public final class GetConsentArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetConsentArgs Empty = new GetConsentArgs();
 
     @Import(name="consentId", required=true)
-      private final String consentId;
+    private String consentId;
 
     public String consentId() {
         return this.consentId;
     }
 
     @Import(name="consentStoreId", required=true)
-      private final String consentStoreId;
+    private String consentStoreId;
 
     public String consentStoreId() {
         return this.consentStoreId;
     }
 
     @Import(name="datasetId", required=true)
-      private final String datasetId;
+    private String datasetId;
 
     public String datasetId() {
         return this.datasetId;
     }
 
     @Import(name="location", required=true)
-      private final String location;
+    private String location;
 
     public String location() {
         return this.location;
     }
 
     @Import(name="project")
-      private final @Nullable String project;
+    private @Nullable String project;
 
     public Optional<String> project() {
-        return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
+        return Optional.ofNullable(this.project);
     }
 
-    public GetConsentArgs(
-        String consentId,
-        String consentStoreId,
-        String datasetId,
-        String location,
-        @Nullable String project) {
-        this.consentId = Objects.requireNonNull(consentId, "expected parameter 'consentId' to be non-null");
-        this.consentStoreId = Objects.requireNonNull(consentStoreId, "expected parameter 'consentStoreId' to be non-null");
-        this.datasetId = Objects.requireNonNull(datasetId, "expected parameter 'datasetId' to be non-null");
-        this.location = Objects.requireNonNull(location, "expected parameter 'location' to be non-null");
-        this.project = project;
-    }
+    private GetConsentArgs() {}
 
-    private GetConsentArgs() {
-        this.consentId = null;
-        this.consentStoreId = null;
-        this.datasetId = null;
-        this.location = null;
-        this.project = null;
+    private GetConsentArgs(GetConsentArgs $) {
+        this.consentId = $.consentId;
+        this.consentStoreId = $.consentStoreId;
+        this.datasetId = $.datasetId;
+        this.location = $.location;
+        this.project = $.project;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetConsentArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String consentId;
-        private String consentStoreId;
-        private String datasetId;
-        private String location;
-        private @Nullable String project;
+        private GetConsentArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetConsentArgs();
         }
 
         public Builder(GetConsentArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.consentId = defaults.consentId;
-    	      this.consentStoreId = defaults.consentStoreId;
-    	      this.datasetId = defaults.datasetId;
-    	      this.location = defaults.location;
-    	      this.project = defaults.project;
+            $ = new GetConsentArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder consentId(String consentId) {
-            this.consentId = Objects.requireNonNull(consentId);
+            $.consentId = consentId;
             return this;
         }
+
         public Builder consentStoreId(String consentStoreId) {
-            this.consentStoreId = Objects.requireNonNull(consentStoreId);
+            $.consentStoreId = consentStoreId;
             return this;
         }
+
         public Builder datasetId(String datasetId) {
-            this.datasetId = Objects.requireNonNull(datasetId);
+            $.datasetId = datasetId;
             return this;
         }
+
         public Builder location(String location) {
-            this.location = Objects.requireNonNull(location);
+            $.location = location;
             return this;
         }
+
         public Builder project(@Nullable String project) {
-            this.project = project;
+            $.project = project;
             return this;
-        }        public GetConsentArgs build() {
-            return new GetConsentArgs(consentId, consentStoreId, datasetId, location, project);
+        }
+
+        public GetConsentArgs build() {
+            $.consentId = Objects.requireNonNull($.consentId, "expected parameter 'consentId' to be non-null");
+            $.consentStoreId = Objects.requireNonNull($.consentStoreId, "expected parameter 'consentStoreId' to be non-null");
+            $.datasetId = Objects.requireNonNull($.datasetId, "expected parameter 'datasetId' to be non-null");
+            $.location = Objects.requireNonNull($.location, "expected parameter 'location' to be non-null");
+            return $;
         }
     }
+
 }

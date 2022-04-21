@@ -21,7 +21,7 @@ public final class MountPointMapResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="mountPoint", required=true)
-      private final String mountPoint;
+    private String mountPoint;
 
     public String mountPoint() {
         return this.mountPoint;
@@ -32,7 +32,7 @@ public final class MountPointMapResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="mountType", required=true)
-      private final String mountType;
+    private String mountType;
 
     public String mountType() {
         return this.mountType;
@@ -43,7 +43,7 @@ public final class MountPointMapResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="roleId", required=true)
-      private final String roleId;
+    private String roleId;
 
     public String roleId() {
         return this.roleId;
@@ -54,7 +54,7 @@ public final class MountPointMapResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="roleType", required=true)
-      private final String roleType;
+    private String roleType;
 
     public String roleType() {
         return this.roleType;
@@ -65,82 +65,73 @@ public final class MountPointMapResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="shareId", required=true)
-      private final String shareId;
+    private String shareId;
 
     public String shareId() {
         return this.shareId;
     }
 
-    public MountPointMapResponse(
-        String mountPoint,
-        String mountType,
-        String roleId,
-        String roleType,
-        String shareId) {
-        this.mountPoint = Objects.requireNonNull(mountPoint, "expected parameter 'mountPoint' to be non-null");
-        this.mountType = Objects.requireNonNull(mountType, "expected parameter 'mountType' to be non-null");
-        this.roleId = Objects.requireNonNull(roleId, "expected parameter 'roleId' to be non-null");
-        this.roleType = Objects.requireNonNull(roleType, "expected parameter 'roleType' to be non-null");
-        this.shareId = Objects.requireNonNull(shareId, "expected parameter 'shareId' to be non-null");
-    }
+    private MountPointMapResponse() {}
 
-    private MountPointMapResponse() {
-        this.mountPoint = null;
-        this.mountType = null;
-        this.roleId = null;
-        this.roleType = null;
-        this.shareId = null;
+    private MountPointMapResponse(MountPointMapResponse $) {
+        this.mountPoint = $.mountPoint;
+        this.mountType = $.mountType;
+        this.roleId = $.roleId;
+        this.roleType = $.roleType;
+        this.shareId = $.shareId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MountPointMapResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String mountPoint;
-        private String mountType;
-        private String roleId;
-        private String roleType;
-        private String shareId;
+        private MountPointMapResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new MountPointMapResponse();
         }
 
         public Builder(MountPointMapResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.mountPoint = defaults.mountPoint;
-    	      this.mountType = defaults.mountType;
-    	      this.roleId = defaults.roleId;
-    	      this.roleType = defaults.roleType;
-    	      this.shareId = defaults.shareId;
+            $ = new MountPointMapResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder mountPoint(String mountPoint) {
-            this.mountPoint = Objects.requireNonNull(mountPoint);
+            $.mountPoint = mountPoint;
             return this;
         }
+
         public Builder mountType(String mountType) {
-            this.mountType = Objects.requireNonNull(mountType);
+            $.mountType = mountType;
             return this;
         }
+
         public Builder roleId(String roleId) {
-            this.roleId = Objects.requireNonNull(roleId);
+            $.roleId = roleId;
             return this;
         }
+
         public Builder roleType(String roleType) {
-            this.roleType = Objects.requireNonNull(roleType);
+            $.roleType = roleType;
             return this;
         }
+
         public Builder shareId(String shareId) {
-            this.shareId = Objects.requireNonNull(shareId);
+            $.shareId = shareId;
             return this;
-        }        public MountPointMapResponse build() {
-            return new MountPointMapResponse(mountPoint, mountType, roleId, roleType, shareId);
+        }
+
+        public MountPointMapResponse build() {
+            $.mountPoint = Objects.requireNonNull($.mountPoint, "expected parameter 'mountPoint' to be non-null");
+            $.mountType = Objects.requireNonNull($.mountType, "expected parameter 'mountType' to be non-null");
+            $.roleId = Objects.requireNonNull($.roleId, "expected parameter 'roleId' to be non-null");
+            $.roleType = Objects.requireNonNull($.roleType, "expected parameter 'roleType' to be non-null");
+            $.shareId = Objects.requireNonNull($.shareId, "expected parameter 'shareId' to be non-null");
+            return $;
         }
     }
+
 }

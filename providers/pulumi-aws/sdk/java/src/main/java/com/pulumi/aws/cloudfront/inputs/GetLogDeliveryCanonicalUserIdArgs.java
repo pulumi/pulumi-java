@@ -19,45 +19,44 @@ public final class GetLogDeliveryCanonicalUserIdArgs extends com.pulumi.resource
      * 
      */
     @Import(name="region")
-      private final @Nullable String region;
+    private @Nullable String region;
 
     public Optional<String> region() {
-        return this.region == null ? Optional.empty() : Optional.ofNullable(this.region);
+        return Optional.ofNullable(this.region);
     }
 
-    public GetLogDeliveryCanonicalUserIdArgs(@Nullable String region) {
-        this.region = region;
-    }
+    private GetLogDeliveryCanonicalUserIdArgs() {}
 
-    private GetLogDeliveryCanonicalUserIdArgs() {
-        this.region = null;
+    private GetLogDeliveryCanonicalUserIdArgs(GetLogDeliveryCanonicalUserIdArgs $) {
+        this.region = $.region;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetLogDeliveryCanonicalUserIdArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String region;
+        private GetLogDeliveryCanonicalUserIdArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetLogDeliveryCanonicalUserIdArgs();
         }
 
         public Builder(GetLogDeliveryCanonicalUserIdArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.region = defaults.region;
+            $ = new GetLogDeliveryCanonicalUserIdArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder region(@Nullable String region) {
-            this.region = region;
+            $.region = region;
             return this;
-        }        public GetLogDeliveryCanonicalUserIdArgs build() {
-            return new GetLogDeliveryCanonicalUserIdArgs(region);
+        }
+
+        public GetLogDeliveryCanonicalUserIdArgs build() {
+            return $;
         }
     }
+
 }

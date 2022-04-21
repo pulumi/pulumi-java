@@ -5,10 +5,10 @@ package com.pulumi.gcp.sql;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,7 +22,7 @@ public final class SourceRepresentationInstanceArgs extends com.pulumi.resources
      * 
      */
     @Import(name="databaseVersion", required=true)
-      private final Output<String> databaseVersion;
+    private Output<String> databaseVersion;
 
     public Output<String> databaseVersion() {
         return this.databaseVersion;
@@ -33,7 +33,7 @@ public final class SourceRepresentationInstanceArgs extends com.pulumi.resources
      * 
      */
     @Import(name="host", required=true)
-      private final Output<String> host;
+    private Output<String> host;
 
     public Output<String> host() {
         return this.host;
@@ -44,10 +44,10 @@ public final class SourceRepresentationInstanceArgs extends com.pulumi.resources
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -56,10 +56,10 @@ public final class SourceRepresentationInstanceArgs extends com.pulumi.resources
      * 
      */
     @Import(name="port")
-      private final @Nullable Output<Integer> port;
+    private @Nullable Output<Integer> port;
 
-    public Output<Integer> port() {
-        return this.port == null ? Codegen.empty() : this.port;
+    public Optional<Output<Integer>> port() {
+        return Optional.ofNullable(this.port);
     }
 
     /**
@@ -68,10 +68,10 @@ public final class SourceRepresentationInstanceArgs extends com.pulumi.resources
      * 
      */
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -80,115 +80,100 @@ public final class SourceRepresentationInstanceArgs extends com.pulumi.resources
      * 
      */
     @Import(name="region")
-      private final @Nullable Output<String> region;
+    private @Nullable Output<String> region;
 
-    public Output<String> region() {
-        return this.region == null ? Codegen.empty() : this.region;
+    public Optional<Output<String>> region() {
+        return Optional.ofNullable(this.region);
     }
 
-    public SourceRepresentationInstanceArgs(
-        Output<String> databaseVersion,
-        Output<String> host,
-        @Nullable Output<String> name,
-        @Nullable Output<Integer> port,
-        @Nullable Output<String> project,
-        @Nullable Output<String> region) {
-        this.databaseVersion = Objects.requireNonNull(databaseVersion, "expected parameter 'databaseVersion' to be non-null");
-        this.host = Objects.requireNonNull(host, "expected parameter 'host' to be non-null");
-        this.name = name;
-        this.port = port;
-        this.project = project;
-        this.region = region;
-    }
+    private SourceRepresentationInstanceArgs() {}
 
-    private SourceRepresentationInstanceArgs() {
-        this.databaseVersion = Codegen.empty();
-        this.host = Codegen.empty();
-        this.name = Codegen.empty();
-        this.port = Codegen.empty();
-        this.project = Codegen.empty();
-        this.region = Codegen.empty();
+    private SourceRepresentationInstanceArgs(SourceRepresentationInstanceArgs $) {
+        this.databaseVersion = $.databaseVersion;
+        this.host = $.host;
+        this.name = $.name;
+        this.port = $.port;
+        this.project = $.project;
+        this.region = $.region;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SourceRepresentationInstanceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> databaseVersion;
-        private Output<String> host;
-        private @Nullable Output<String> name;
-        private @Nullable Output<Integer> port;
-        private @Nullable Output<String> project;
-        private @Nullable Output<String> region;
+        private SourceRepresentationInstanceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SourceRepresentationInstanceArgs();
         }
 
         public Builder(SourceRepresentationInstanceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.databaseVersion = defaults.databaseVersion;
-    	      this.host = defaults.host;
-    	      this.name = defaults.name;
-    	      this.port = defaults.port;
-    	      this.project = defaults.project;
-    	      this.region = defaults.region;
+            $ = new SourceRepresentationInstanceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder databaseVersion(Output<String> databaseVersion) {
-            this.databaseVersion = Objects.requireNonNull(databaseVersion);
+            $.databaseVersion = databaseVersion;
             return this;
         }
+
         public Builder databaseVersion(String databaseVersion) {
-            this.databaseVersion = Output.of(Objects.requireNonNull(databaseVersion));
-            return this;
+            return databaseVersion(Output.of(databaseVersion));
         }
+
         public Builder host(Output<String> host) {
-            this.host = Objects.requireNonNull(host);
+            $.host = host;
             return this;
         }
+
         public Builder host(String host) {
-            this.host = Output.of(Objects.requireNonNull(host));
-            return this;
+            return host(Output.of(host));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder port(@Nullable Output<Integer> port) {
-            this.port = port;
+            $.port = port;
             return this;
         }
-        public Builder port(@Nullable Integer port) {
-            this.port = Codegen.ofNullable(port);
-            return this;
+
+        public Builder port(Integer port) {
+            return port(Output.of(port));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder region(@Nullable Output<String> region) {
-            this.region = region;
+            $.region = region;
             return this;
         }
-        public Builder region(@Nullable String region) {
-            this.region = Codegen.ofNullable(region);
-            return this;
-        }        public SourceRepresentationInstanceArgs build() {
-            return new SourceRepresentationInstanceArgs(databaseVersion, host, name, port, project, region);
+
+        public Builder region(String region) {
+            return region(Output.of(region));
+        }
+
+        public SourceRepresentationInstanceArgs build() {
+            $.databaseVersion = Objects.requireNonNull($.databaseVersion, "expected parameter 'databaseVersion' to be non-null");
+            $.host = Objects.requireNonNull($.host, "expected parameter 'host' to be non-null");
+            return $;
         }
     }
+
 }

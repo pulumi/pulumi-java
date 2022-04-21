@@ -21,45 +21,45 @@ public final class PrivateLinkServiceProxyResponseRemotePrivateEndpointConnectio
      * 
      */
     @Import(name="id", required=true)
-      private final String id;
+    private String id;
 
     public String id() {
         return this.id;
     }
 
-    public PrivateLinkServiceProxyResponseRemotePrivateEndpointConnection(String id) {
-        this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
-    }
+    private PrivateLinkServiceProxyResponseRemotePrivateEndpointConnection() {}
 
-    private PrivateLinkServiceProxyResponseRemotePrivateEndpointConnection() {
-        this.id = null;
+    private PrivateLinkServiceProxyResponseRemotePrivateEndpointConnection(PrivateLinkServiceProxyResponseRemotePrivateEndpointConnection $) {
+        this.id = $.id;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PrivateLinkServiceProxyResponseRemotePrivateEndpointConnection defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String id;
+        private PrivateLinkServiceProxyResponseRemotePrivateEndpointConnection $;
 
         public Builder() {
-    	      // Empty
+            $ = new PrivateLinkServiceProxyResponseRemotePrivateEndpointConnection();
         }
 
         public Builder(PrivateLinkServiceProxyResponseRemotePrivateEndpointConnection defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.id = defaults.id;
+            $ = new PrivateLinkServiceProxyResponseRemotePrivateEndpointConnection(Objects.requireNonNull(defaults));
         }
 
         public Builder id(String id) {
-            this.id = Objects.requireNonNull(id);
+            $.id = id;
             return this;
-        }        public PrivateLinkServiceProxyResponseRemotePrivateEndpointConnection build() {
-            return new PrivateLinkServiceProxyResponseRemotePrivateEndpointConnection(id);
+        }
+
+        public PrivateLinkServiceProxyResponseRemotePrivateEndpointConnection build() {
+            $.id = Objects.requireNonNull($.id, "expected parameter 'id' to be non-null");
+            return $;
         }
     }
+
 }

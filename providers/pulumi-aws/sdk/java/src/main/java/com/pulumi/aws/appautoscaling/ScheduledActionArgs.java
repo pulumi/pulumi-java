@@ -6,9 +6,9 @@ package com.pulumi.aws.appautoscaling;
 import com.pulumi.aws.appautoscaling.inputs.ScheduledActionScalableTargetActionArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class ScheduledActionArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="endTime")
-      private final @Nullable Output<String> endTime;
+    private @Nullable Output<String> endTime;
 
-    public Output<String> endTime() {
-        return this.endTime == null ? Codegen.empty() : this.endTime;
+    public Optional<Output<String>> endTime() {
+        return Optional.ofNullable(this.endTime);
     }
 
     /**
@@ -32,10 +32,10 @@ public final class ScheduledActionArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -43,7 +43,7 @@ public final class ScheduledActionArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="resourceId", required=true)
-      private final Output<String> resourceId;
+    private Output<String> resourceId;
 
     public Output<String> resourceId() {
         return this.resourceId;
@@ -54,7 +54,7 @@ public final class ScheduledActionArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="scalableDimension", required=true)
-      private final Output<String> scalableDimension;
+    private Output<String> scalableDimension;
 
     public Output<String> scalableDimension() {
         return this.scalableDimension;
@@ -65,7 +65,7 @@ public final class ScheduledActionArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="scalableTargetAction", required=true)
-      private final Output<ScheduledActionScalableTargetActionArgs> scalableTargetAction;
+    private Output<ScheduledActionScalableTargetActionArgs> scalableTargetAction;
 
     public Output<ScheduledActionScalableTargetActionArgs> scalableTargetAction() {
         return this.scalableTargetAction;
@@ -76,7 +76,7 @@ public final class ScheduledActionArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="schedule", required=true)
-      private final Output<String> schedule;
+    private Output<String> schedule;
 
     public Output<String> schedule() {
         return this.schedule;
@@ -87,7 +87,7 @@ public final class ScheduledActionArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="serviceNamespace", required=true)
-      private final Output<String> serviceNamespace;
+    private Output<String> serviceNamespace;
 
     public Output<String> serviceNamespace() {
         return this.serviceNamespace;
@@ -98,10 +98,10 @@ public final class ScheduledActionArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="startTime")
-      private final @Nullable Output<String> startTime;
+    private @Nullable Output<String> startTime;
 
-    public Output<String> startTime() {
-        return this.startTime == null ? Codegen.empty() : this.startTime;
+    public Optional<Output<String>> startTime() {
+        return Optional.ofNullable(this.startTime);
     }
 
     /**
@@ -109,154 +109,133 @@ public final class ScheduledActionArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="timezone")
-      private final @Nullable Output<String> timezone;
+    private @Nullable Output<String> timezone;
 
-    public Output<String> timezone() {
-        return this.timezone == null ? Codegen.empty() : this.timezone;
+    public Optional<Output<String>> timezone() {
+        return Optional.ofNullable(this.timezone);
     }
 
-    public ScheduledActionArgs(
-        @Nullable Output<String> endTime,
-        @Nullable Output<String> name,
-        Output<String> resourceId,
-        Output<String> scalableDimension,
-        Output<ScheduledActionScalableTargetActionArgs> scalableTargetAction,
-        Output<String> schedule,
-        Output<String> serviceNamespace,
-        @Nullable Output<String> startTime,
-        @Nullable Output<String> timezone) {
-        this.endTime = endTime;
-        this.name = name;
-        this.resourceId = Objects.requireNonNull(resourceId, "expected parameter 'resourceId' to be non-null");
-        this.scalableDimension = Objects.requireNonNull(scalableDimension, "expected parameter 'scalableDimension' to be non-null");
-        this.scalableTargetAction = Objects.requireNonNull(scalableTargetAction, "expected parameter 'scalableTargetAction' to be non-null");
-        this.schedule = Objects.requireNonNull(schedule, "expected parameter 'schedule' to be non-null");
-        this.serviceNamespace = Objects.requireNonNull(serviceNamespace, "expected parameter 'serviceNamespace' to be non-null");
-        this.startTime = startTime;
-        this.timezone = timezone;
-    }
+    private ScheduledActionArgs() {}
 
-    private ScheduledActionArgs() {
-        this.endTime = Codegen.empty();
-        this.name = Codegen.empty();
-        this.resourceId = Codegen.empty();
-        this.scalableDimension = Codegen.empty();
-        this.scalableTargetAction = Codegen.empty();
-        this.schedule = Codegen.empty();
-        this.serviceNamespace = Codegen.empty();
-        this.startTime = Codegen.empty();
-        this.timezone = Codegen.empty();
+    private ScheduledActionArgs(ScheduledActionArgs $) {
+        this.endTime = $.endTime;
+        this.name = $.name;
+        this.resourceId = $.resourceId;
+        this.scalableDimension = $.scalableDimension;
+        this.scalableTargetAction = $.scalableTargetAction;
+        this.schedule = $.schedule;
+        this.serviceNamespace = $.serviceNamespace;
+        this.startTime = $.startTime;
+        this.timezone = $.timezone;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ScheduledActionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> endTime;
-        private @Nullable Output<String> name;
-        private Output<String> resourceId;
-        private Output<String> scalableDimension;
-        private Output<ScheduledActionScalableTargetActionArgs> scalableTargetAction;
-        private Output<String> schedule;
-        private Output<String> serviceNamespace;
-        private @Nullable Output<String> startTime;
-        private @Nullable Output<String> timezone;
+        private ScheduledActionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ScheduledActionArgs();
         }
 
         public Builder(ScheduledActionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.endTime = defaults.endTime;
-    	      this.name = defaults.name;
-    	      this.resourceId = defaults.resourceId;
-    	      this.scalableDimension = defaults.scalableDimension;
-    	      this.scalableTargetAction = defaults.scalableTargetAction;
-    	      this.schedule = defaults.schedule;
-    	      this.serviceNamespace = defaults.serviceNamespace;
-    	      this.startTime = defaults.startTime;
-    	      this.timezone = defaults.timezone;
+            $ = new ScheduledActionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder endTime(@Nullable Output<String> endTime) {
-            this.endTime = endTime;
+            $.endTime = endTime;
             return this;
         }
-        public Builder endTime(@Nullable String endTime) {
-            this.endTime = Codegen.ofNullable(endTime);
-            return this;
+
+        public Builder endTime(String endTime) {
+            return endTime(Output.of(endTime));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder resourceId(Output<String> resourceId) {
-            this.resourceId = Objects.requireNonNull(resourceId);
+            $.resourceId = resourceId;
             return this;
         }
+
         public Builder resourceId(String resourceId) {
-            this.resourceId = Output.of(Objects.requireNonNull(resourceId));
-            return this;
+            return resourceId(Output.of(resourceId));
         }
+
         public Builder scalableDimension(Output<String> scalableDimension) {
-            this.scalableDimension = Objects.requireNonNull(scalableDimension);
+            $.scalableDimension = scalableDimension;
             return this;
         }
+
         public Builder scalableDimension(String scalableDimension) {
-            this.scalableDimension = Output.of(Objects.requireNonNull(scalableDimension));
-            return this;
+            return scalableDimension(Output.of(scalableDimension));
         }
+
         public Builder scalableTargetAction(Output<ScheduledActionScalableTargetActionArgs> scalableTargetAction) {
-            this.scalableTargetAction = Objects.requireNonNull(scalableTargetAction);
+            $.scalableTargetAction = scalableTargetAction;
             return this;
         }
+
         public Builder scalableTargetAction(ScheduledActionScalableTargetActionArgs scalableTargetAction) {
-            this.scalableTargetAction = Output.of(Objects.requireNonNull(scalableTargetAction));
-            return this;
+            return scalableTargetAction(Output.of(scalableTargetAction));
         }
+
         public Builder schedule(Output<String> schedule) {
-            this.schedule = Objects.requireNonNull(schedule);
+            $.schedule = schedule;
             return this;
         }
+
         public Builder schedule(String schedule) {
-            this.schedule = Output.of(Objects.requireNonNull(schedule));
-            return this;
+            return schedule(Output.of(schedule));
         }
+
         public Builder serviceNamespace(Output<String> serviceNamespace) {
-            this.serviceNamespace = Objects.requireNonNull(serviceNamespace);
+            $.serviceNamespace = serviceNamespace;
             return this;
         }
+
         public Builder serviceNamespace(String serviceNamespace) {
-            this.serviceNamespace = Output.of(Objects.requireNonNull(serviceNamespace));
-            return this;
+            return serviceNamespace(Output.of(serviceNamespace));
         }
+
         public Builder startTime(@Nullable Output<String> startTime) {
-            this.startTime = startTime;
+            $.startTime = startTime;
             return this;
         }
-        public Builder startTime(@Nullable String startTime) {
-            this.startTime = Codegen.ofNullable(startTime);
-            return this;
+
+        public Builder startTime(String startTime) {
+            return startTime(Output.of(startTime));
         }
+
         public Builder timezone(@Nullable Output<String> timezone) {
-            this.timezone = timezone;
+            $.timezone = timezone;
             return this;
         }
-        public Builder timezone(@Nullable String timezone) {
-            this.timezone = Codegen.ofNullable(timezone);
-            return this;
-        }        public ScheduledActionArgs build() {
-            return new ScheduledActionArgs(endTime, name, resourceId, scalableDimension, scalableTargetAction, schedule, serviceNamespace, startTime, timezone);
+
+        public Builder timezone(String timezone) {
+            return timezone(Output.of(timezone));
+        }
+
+        public ScheduledActionArgs build() {
+            $.resourceId = Objects.requireNonNull($.resourceId, "expected parameter 'resourceId' to be non-null");
+            $.scalableDimension = Objects.requireNonNull($.scalableDimension, "expected parameter 'scalableDimension' to be non-null");
+            $.scalableTargetAction = Objects.requireNonNull($.scalableTargetAction, "expected parameter 'scalableTargetAction' to be non-null");
+            $.schedule = Objects.requireNonNull($.schedule, "expected parameter 'schedule' to be non-null");
+            $.serviceNamespace = Objects.requireNonNull($.serviceNamespace, "expected parameter 'serviceNamespace' to be non-null");
+            return $;
         }
     }
+
 }

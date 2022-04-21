@@ -23,45 +23,44 @@ public final class StorageAccountPropertiesResponse extends com.pulumi.resources
      * 
      */
     @Import(name="resourceId")
-      private final @Nullable String resourceId;
+    private @Nullable String resourceId;
 
     public Optional<String> resourceId() {
-        return this.resourceId == null ? Optional.empty() : Optional.ofNullable(this.resourceId);
+        return Optional.ofNullable(this.resourceId);
     }
 
-    public StorageAccountPropertiesResponse(@Nullable String resourceId) {
-        this.resourceId = resourceId;
-    }
+    private StorageAccountPropertiesResponse() {}
 
-    private StorageAccountPropertiesResponse() {
-        this.resourceId = null;
+    private StorageAccountPropertiesResponse(StorageAccountPropertiesResponse $) {
+        this.resourceId = $.resourceId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(StorageAccountPropertiesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String resourceId;
+        private StorageAccountPropertiesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new StorageAccountPropertiesResponse();
         }
 
         public Builder(StorageAccountPropertiesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.resourceId = defaults.resourceId;
+            $ = new StorageAccountPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder resourceId(@Nullable String resourceId) {
-            this.resourceId = resourceId;
+            $.resourceId = resourceId;
             return this;
-        }        public StorageAccountPropertiesResponse build() {
-            return new StorageAccountPropertiesResponse(resourceId);
+        }
+
+        public StorageAccountPropertiesResponse build() {
+            return $;
         }
     }
+
 }

@@ -5,9 +5,9 @@ package com.pulumi.aws.cloudwatch;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class LogDestinationArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -31,7 +31,7 @@ public final class LogDestinationArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="roleArn", required=true)
-      private final Output<String> roleArn;
+    private Output<String> roleArn;
 
     public Output<String> roleArn() {
         return this.roleArn;
@@ -42,76 +42,70 @@ public final class LogDestinationArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="targetArn", required=true)
-      private final Output<String> targetArn;
+    private Output<String> targetArn;
 
     public Output<String> targetArn() {
         return this.targetArn;
     }
 
-    public LogDestinationArgs(
-        @Nullable Output<String> name,
-        Output<String> roleArn,
-        Output<String> targetArn) {
-        this.name = name;
-        this.roleArn = Objects.requireNonNull(roleArn, "expected parameter 'roleArn' to be non-null");
-        this.targetArn = Objects.requireNonNull(targetArn, "expected parameter 'targetArn' to be non-null");
-    }
+    private LogDestinationArgs() {}
 
-    private LogDestinationArgs() {
-        this.name = Codegen.empty();
-        this.roleArn = Codegen.empty();
-        this.targetArn = Codegen.empty();
+    private LogDestinationArgs(LogDestinationArgs $) {
+        this.name = $.name;
+        this.roleArn = $.roleArn;
+        this.targetArn = $.targetArn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LogDestinationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> name;
-        private Output<String> roleArn;
-        private Output<String> targetArn;
+        private LogDestinationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new LogDestinationArgs();
         }
 
         public Builder(LogDestinationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.roleArn = defaults.roleArn;
-    	      this.targetArn = defaults.targetArn;
+            $ = new LogDestinationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder roleArn(Output<String> roleArn) {
-            this.roleArn = Objects.requireNonNull(roleArn);
+            $.roleArn = roleArn;
             return this;
         }
+
         public Builder roleArn(String roleArn) {
-            this.roleArn = Output.of(Objects.requireNonNull(roleArn));
-            return this;
+            return roleArn(Output.of(roleArn));
         }
+
         public Builder targetArn(Output<String> targetArn) {
-            this.targetArn = Objects.requireNonNull(targetArn);
+            $.targetArn = targetArn;
             return this;
         }
+
         public Builder targetArn(String targetArn) {
-            this.targetArn = Output.of(Objects.requireNonNull(targetArn));
-            return this;
-        }        public LogDestinationArgs build() {
-            return new LogDestinationArgs(name, roleArn, targetArn);
+            return targetArn(Output.of(targetArn));
+        }
+
+        public LogDestinationArgs build() {
+            $.roleArn = Objects.requireNonNull($.roleArn, "expected parameter 'roleArn' to be non-null");
+            $.targetArn = Objects.requireNonNull($.targetArn, "expected parameter 'targetArn' to be non-null");
+            return $;
         }
     }
+
 }

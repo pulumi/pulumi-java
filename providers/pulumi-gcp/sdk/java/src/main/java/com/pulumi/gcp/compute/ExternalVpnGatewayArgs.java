@@ -5,11 +5,11 @@ package com.pulumi.gcp.compute;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.compute.inputs.ExternalVpnGatewayInterfaceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class ExternalVpnGatewayArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class ExternalVpnGatewayArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="interfaces")
-      private final @Nullable Output<List<ExternalVpnGatewayInterfaceArgs>> interfaces;
+    private @Nullable Output<List<ExternalVpnGatewayInterfaceArgs>> interfaces;
 
-    public Output<List<ExternalVpnGatewayInterfaceArgs>> interfaces() {
-        return this.interfaces == null ? Codegen.empty() : this.interfaces;
+    public Optional<Output<List<ExternalVpnGatewayInterfaceArgs>>> interfaces() {
+        return Optional.ofNullable(this.interfaces);
     }
 
     /**
@@ -51,10 +51,10 @@ public final class ExternalVpnGatewayArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -63,10 +63,10 @@ public final class ExternalVpnGatewayArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -75,105 +75,92 @@ public final class ExternalVpnGatewayArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="redundancyType")
-      private final @Nullable Output<String> redundancyType;
+    private @Nullable Output<String> redundancyType;
 
-    public Output<String> redundancyType() {
-        return this.redundancyType == null ? Codegen.empty() : this.redundancyType;
+    public Optional<Output<String>> redundancyType() {
+        return Optional.ofNullable(this.redundancyType);
     }
 
-    public ExternalVpnGatewayArgs(
-        @Nullable Output<String> description,
-        @Nullable Output<List<ExternalVpnGatewayInterfaceArgs>> interfaces,
-        @Nullable Output<String> name,
-        @Nullable Output<String> project,
-        @Nullable Output<String> redundancyType) {
-        this.description = description;
-        this.interfaces = interfaces;
-        this.name = name;
-        this.project = project;
-        this.redundancyType = redundancyType;
-    }
+    private ExternalVpnGatewayArgs() {}
 
-    private ExternalVpnGatewayArgs() {
-        this.description = Codegen.empty();
-        this.interfaces = Codegen.empty();
-        this.name = Codegen.empty();
-        this.project = Codegen.empty();
-        this.redundancyType = Codegen.empty();
+    private ExternalVpnGatewayArgs(ExternalVpnGatewayArgs $) {
+        this.description = $.description;
+        this.interfaces = $.interfaces;
+        this.name = $.name;
+        this.project = $.project;
+        this.redundancyType = $.redundancyType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ExternalVpnGatewayArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> description;
-        private @Nullable Output<List<ExternalVpnGatewayInterfaceArgs>> interfaces;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> project;
-        private @Nullable Output<String> redundancyType;
+        private ExternalVpnGatewayArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ExternalVpnGatewayArgs();
         }
 
         public Builder(ExternalVpnGatewayArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.description = defaults.description;
-    	      this.interfaces = defaults.interfaces;
-    	      this.name = defaults.name;
-    	      this.project = defaults.project;
-    	      this.redundancyType = defaults.redundancyType;
+            $ = new ExternalVpnGatewayArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder interfaces(@Nullable Output<List<ExternalVpnGatewayInterfaceArgs>> interfaces) {
-            this.interfaces = interfaces;
+            $.interfaces = interfaces;
             return this;
         }
-        public Builder interfaces(@Nullable List<ExternalVpnGatewayInterfaceArgs> interfaces) {
-            this.interfaces = Codegen.ofNullable(interfaces);
-            return this;
+
+        public Builder interfaces(List<ExternalVpnGatewayInterfaceArgs> interfaces) {
+            return interfaces(Output.of(interfaces));
         }
+
         public Builder interfaces(ExternalVpnGatewayInterfaceArgs... interfaces) {
             return interfaces(List.of(interfaces));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder redundancyType(@Nullable Output<String> redundancyType) {
-            this.redundancyType = redundancyType;
+            $.redundancyType = redundancyType;
             return this;
         }
-        public Builder redundancyType(@Nullable String redundancyType) {
-            this.redundancyType = Codegen.ofNullable(redundancyType);
-            return this;
-        }        public ExternalVpnGatewayArgs build() {
-            return new ExternalVpnGatewayArgs(description, interfaces, name, project, redundancyType);
+
+        public Builder redundancyType(String redundancyType) {
+            return redundancyType(Output.of(redundancyType));
+        }
+
+        public ExternalVpnGatewayArgs build() {
+            return $;
         }
     }
+
 }

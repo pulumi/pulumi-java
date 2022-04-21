@@ -6,11 +6,11 @@ package com.pulumi.aws.ec2;
 import com.pulumi.aws.ec2.inputs.DefaultRouteTableRouteArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,7 +23,7 @@ public final class DefaultRouteTableArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="defaultRouteTableId", required=true)
-      private final Output<String> defaultRouteTableId;
+    private Output<String> defaultRouteTableId;
 
     public Output<String> defaultRouteTableId() {
         return this.defaultRouteTableId;
@@ -34,10 +34,10 @@ public final class DefaultRouteTableArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="propagatingVgws")
-      private final @Nullable Output<List<String>> propagatingVgws;
+    private @Nullable Output<List<String>> propagatingVgws;
 
-    public Output<List<String>> propagatingVgws() {
-        return this.propagatingVgws == null ? Codegen.empty() : this.propagatingVgws;
+    public Optional<Output<List<String>>> propagatingVgws() {
+        return Optional.ofNullable(this.propagatingVgws);
     }
 
     /**
@@ -45,10 +45,10 @@ public final class DefaultRouteTableArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="routes")
-      private final @Nullable Output<List<DefaultRouteTableRouteArgs>> routes;
+    private @Nullable Output<List<DefaultRouteTableRouteArgs>> routes;
 
-    public Output<List<DefaultRouteTableRouteArgs>> routes() {
-        return this.routes == null ? Codegen.empty() : this.routes;
+    public Optional<Output<List<DefaultRouteTableRouteArgs>>> routes() {
+        return Optional.ofNullable(this.routes);
     }
 
     /**
@@ -56,95 +56,87 @@ public final class DefaultRouteTableArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public DefaultRouteTableArgs(
-        Output<String> defaultRouteTableId,
-        @Nullable Output<List<String>> propagatingVgws,
-        @Nullable Output<List<DefaultRouteTableRouteArgs>> routes,
-        @Nullable Output<Map<String,String>> tags) {
-        this.defaultRouteTableId = Objects.requireNonNull(defaultRouteTableId, "expected parameter 'defaultRouteTableId' to be non-null");
-        this.propagatingVgws = propagatingVgws;
-        this.routes = routes;
-        this.tags = tags;
-    }
+    private DefaultRouteTableArgs() {}
 
-    private DefaultRouteTableArgs() {
-        this.defaultRouteTableId = Codegen.empty();
-        this.propagatingVgws = Codegen.empty();
-        this.routes = Codegen.empty();
-        this.tags = Codegen.empty();
+    private DefaultRouteTableArgs(DefaultRouteTableArgs $) {
+        this.defaultRouteTableId = $.defaultRouteTableId;
+        this.propagatingVgws = $.propagatingVgws;
+        this.routes = $.routes;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DefaultRouteTableArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> defaultRouteTableId;
-        private @Nullable Output<List<String>> propagatingVgws;
-        private @Nullable Output<List<DefaultRouteTableRouteArgs>> routes;
-        private @Nullable Output<Map<String,String>> tags;
+        private DefaultRouteTableArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DefaultRouteTableArgs();
         }
 
         public Builder(DefaultRouteTableArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.defaultRouteTableId = defaults.defaultRouteTableId;
-    	      this.propagatingVgws = defaults.propagatingVgws;
-    	      this.routes = defaults.routes;
-    	      this.tags = defaults.tags;
+            $ = new DefaultRouteTableArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder defaultRouteTableId(Output<String> defaultRouteTableId) {
-            this.defaultRouteTableId = Objects.requireNonNull(defaultRouteTableId);
+            $.defaultRouteTableId = defaultRouteTableId;
             return this;
         }
+
         public Builder defaultRouteTableId(String defaultRouteTableId) {
-            this.defaultRouteTableId = Output.of(Objects.requireNonNull(defaultRouteTableId));
-            return this;
+            return defaultRouteTableId(Output.of(defaultRouteTableId));
         }
+
         public Builder propagatingVgws(@Nullable Output<List<String>> propagatingVgws) {
-            this.propagatingVgws = propagatingVgws;
+            $.propagatingVgws = propagatingVgws;
             return this;
         }
-        public Builder propagatingVgws(@Nullable List<String> propagatingVgws) {
-            this.propagatingVgws = Codegen.ofNullable(propagatingVgws);
-            return this;
+
+        public Builder propagatingVgws(List<String> propagatingVgws) {
+            return propagatingVgws(Output.of(propagatingVgws));
         }
+
         public Builder propagatingVgws(String... propagatingVgws) {
             return propagatingVgws(List.of(propagatingVgws));
         }
+
         public Builder routes(@Nullable Output<List<DefaultRouteTableRouteArgs>> routes) {
-            this.routes = routes;
+            $.routes = routes;
             return this;
         }
-        public Builder routes(@Nullable List<DefaultRouteTableRouteArgs> routes) {
-            this.routes = Codegen.ofNullable(routes);
-            return this;
+
+        public Builder routes(List<DefaultRouteTableRouteArgs> routes) {
+            return routes(Output.of(routes));
         }
+
         public Builder routes(DefaultRouteTableRouteArgs... routes) {
             return routes(List.of(routes));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
-        }        public DefaultRouteTableArgs build() {
-            return new DefaultRouteTableArgs(defaultRouteTableId, propagatingVgws, routes, tags);
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
+        }
+
+        public DefaultRouteTableArgs build() {
+            $.defaultRouteTableId = Objects.requireNonNull($.defaultRouteTableId, "expected parameter 'defaultRouteTableId' to be non-null");
+            return $;
         }
     }
+
 }

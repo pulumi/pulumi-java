@@ -21,7 +21,7 @@ public final class JobConfigurationExtractResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="compression", required=true)
-      private final String compression;
+    private String compression;
 
     public String compression() {
         return this.compression;
@@ -32,7 +32,7 @@ public final class JobConfigurationExtractResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="destinationFormat", required=true)
-      private final String destinationFormat;
+    private String destinationFormat;
 
     public String destinationFormat() {
         return this.destinationFormat;
@@ -43,7 +43,7 @@ public final class JobConfigurationExtractResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="destinationUri", required=true)
-      private final String destinationUri;
+    private String destinationUri;
 
     public String destinationUri() {
         return this.destinationUri;
@@ -54,7 +54,7 @@ public final class JobConfigurationExtractResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="destinationUris", required=true)
-      private final List<String> destinationUris;
+    private List<String> destinationUris;
 
     public List<String> destinationUris() {
         return this.destinationUris;
@@ -65,7 +65,7 @@ public final class JobConfigurationExtractResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="fieldDelimiter", required=true)
-      private final String fieldDelimiter;
+    private String fieldDelimiter;
 
     public String fieldDelimiter() {
         return this.fieldDelimiter;
@@ -76,7 +76,7 @@ public final class JobConfigurationExtractResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="printHeader", required=true)
-      private final Boolean printHeader;
+    private Boolean printHeader;
 
     public Boolean printHeader() {
         return this.printHeader;
@@ -87,7 +87,7 @@ public final class JobConfigurationExtractResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="sourceModel", required=true)
-      private final ModelReferenceResponse sourceModel;
+    private ModelReferenceResponse sourceModel;
 
     public ModelReferenceResponse sourceModel() {
         return this.sourceModel;
@@ -98,7 +98,7 @@ public final class JobConfigurationExtractResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="sourceTable", required=true)
-      private final TableReferenceResponse sourceTable;
+    private TableReferenceResponse sourceTable;
 
     public TableReferenceResponse sourceTable() {
         return this.sourceTable;
@@ -109,121 +109,105 @@ public final class JobConfigurationExtractResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="useAvroLogicalTypes", required=true)
-      private final Boolean useAvroLogicalTypes;
+    private Boolean useAvroLogicalTypes;
 
     public Boolean useAvroLogicalTypes() {
         return this.useAvroLogicalTypes;
     }
 
-    public JobConfigurationExtractResponse(
-        String compression,
-        String destinationFormat,
-        String destinationUri,
-        List<String> destinationUris,
-        String fieldDelimiter,
-        Boolean printHeader,
-        ModelReferenceResponse sourceModel,
-        TableReferenceResponse sourceTable,
-        Boolean useAvroLogicalTypes) {
-        this.compression = Objects.requireNonNull(compression, "expected parameter 'compression' to be non-null");
-        this.destinationFormat = Objects.requireNonNull(destinationFormat, "expected parameter 'destinationFormat' to be non-null");
-        this.destinationUri = Objects.requireNonNull(destinationUri, "expected parameter 'destinationUri' to be non-null");
-        this.destinationUris = Objects.requireNonNull(destinationUris, "expected parameter 'destinationUris' to be non-null");
-        this.fieldDelimiter = Objects.requireNonNull(fieldDelimiter, "expected parameter 'fieldDelimiter' to be non-null");
-        this.printHeader = Objects.requireNonNull(printHeader, "expected parameter 'printHeader' to be non-null");
-        this.sourceModel = Objects.requireNonNull(sourceModel, "expected parameter 'sourceModel' to be non-null");
-        this.sourceTable = Objects.requireNonNull(sourceTable, "expected parameter 'sourceTable' to be non-null");
-        this.useAvroLogicalTypes = Objects.requireNonNull(useAvroLogicalTypes, "expected parameter 'useAvroLogicalTypes' to be non-null");
-    }
+    private JobConfigurationExtractResponse() {}
 
-    private JobConfigurationExtractResponse() {
-        this.compression = null;
-        this.destinationFormat = null;
-        this.destinationUri = null;
-        this.destinationUris = List.of();
-        this.fieldDelimiter = null;
-        this.printHeader = null;
-        this.sourceModel = null;
-        this.sourceTable = null;
-        this.useAvroLogicalTypes = null;
+    private JobConfigurationExtractResponse(JobConfigurationExtractResponse $) {
+        this.compression = $.compression;
+        this.destinationFormat = $.destinationFormat;
+        this.destinationUri = $.destinationUri;
+        this.destinationUris = $.destinationUris;
+        this.fieldDelimiter = $.fieldDelimiter;
+        this.printHeader = $.printHeader;
+        this.sourceModel = $.sourceModel;
+        this.sourceTable = $.sourceTable;
+        this.useAvroLogicalTypes = $.useAvroLogicalTypes;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(JobConfigurationExtractResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String compression;
-        private String destinationFormat;
-        private String destinationUri;
-        private List<String> destinationUris;
-        private String fieldDelimiter;
-        private Boolean printHeader;
-        private ModelReferenceResponse sourceModel;
-        private TableReferenceResponse sourceTable;
-        private Boolean useAvroLogicalTypes;
+        private JobConfigurationExtractResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new JobConfigurationExtractResponse();
         }
 
         public Builder(JobConfigurationExtractResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.compression = defaults.compression;
-    	      this.destinationFormat = defaults.destinationFormat;
-    	      this.destinationUri = defaults.destinationUri;
-    	      this.destinationUris = defaults.destinationUris;
-    	      this.fieldDelimiter = defaults.fieldDelimiter;
-    	      this.printHeader = defaults.printHeader;
-    	      this.sourceModel = defaults.sourceModel;
-    	      this.sourceTable = defaults.sourceTable;
-    	      this.useAvroLogicalTypes = defaults.useAvroLogicalTypes;
+            $ = new JobConfigurationExtractResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder compression(String compression) {
-            this.compression = Objects.requireNonNull(compression);
+            $.compression = compression;
             return this;
         }
+
         public Builder destinationFormat(String destinationFormat) {
-            this.destinationFormat = Objects.requireNonNull(destinationFormat);
+            $.destinationFormat = destinationFormat;
             return this;
         }
+
         public Builder destinationUri(String destinationUri) {
-            this.destinationUri = Objects.requireNonNull(destinationUri);
+            $.destinationUri = destinationUri;
             return this;
         }
+
         public Builder destinationUris(List<String> destinationUris) {
-            this.destinationUris = Objects.requireNonNull(destinationUris);
+            $.destinationUris = destinationUris;
             return this;
         }
+
         public Builder destinationUris(String... destinationUris) {
             return destinationUris(List.of(destinationUris));
         }
+
         public Builder fieldDelimiter(String fieldDelimiter) {
-            this.fieldDelimiter = Objects.requireNonNull(fieldDelimiter);
+            $.fieldDelimiter = fieldDelimiter;
             return this;
         }
+
         public Builder printHeader(Boolean printHeader) {
-            this.printHeader = Objects.requireNonNull(printHeader);
+            $.printHeader = printHeader;
             return this;
         }
+
         public Builder sourceModel(ModelReferenceResponse sourceModel) {
-            this.sourceModel = Objects.requireNonNull(sourceModel);
+            $.sourceModel = sourceModel;
             return this;
         }
+
         public Builder sourceTable(TableReferenceResponse sourceTable) {
-            this.sourceTable = Objects.requireNonNull(sourceTable);
+            $.sourceTable = sourceTable;
             return this;
         }
+
         public Builder useAvroLogicalTypes(Boolean useAvroLogicalTypes) {
-            this.useAvroLogicalTypes = Objects.requireNonNull(useAvroLogicalTypes);
+            $.useAvroLogicalTypes = useAvroLogicalTypes;
             return this;
-        }        public JobConfigurationExtractResponse build() {
-            return new JobConfigurationExtractResponse(compression, destinationFormat, destinationUri, destinationUris, fieldDelimiter, printHeader, sourceModel, sourceTable, useAvroLogicalTypes);
+        }
+
+        public JobConfigurationExtractResponse build() {
+            $.compression = Objects.requireNonNull($.compression, "expected parameter 'compression' to be non-null");
+            $.destinationFormat = Objects.requireNonNull($.destinationFormat, "expected parameter 'destinationFormat' to be non-null");
+            $.destinationUri = Objects.requireNonNull($.destinationUri, "expected parameter 'destinationUri' to be non-null");
+            $.destinationUris = Objects.requireNonNull($.destinationUris, "expected parameter 'destinationUris' to be non-null");
+            $.fieldDelimiter = Objects.requireNonNull($.fieldDelimiter, "expected parameter 'fieldDelimiter' to be non-null");
+            $.printHeader = Objects.requireNonNull($.printHeader, "expected parameter 'printHeader' to be non-null");
+            $.sourceModel = Objects.requireNonNull($.sourceModel, "expected parameter 'sourceModel' to be non-null");
+            $.sourceTable = Objects.requireNonNull($.sourceTable, "expected parameter 'sourceTable' to be non-null");
+            $.useAvroLogicalTypes = Objects.requireNonNull($.useAvroLogicalTypes, "expected parameter 'useAvroLogicalTypes' to be non-null");
+            return $;
         }
     }
+
 }

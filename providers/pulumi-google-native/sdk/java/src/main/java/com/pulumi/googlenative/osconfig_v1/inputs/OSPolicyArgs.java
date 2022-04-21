@@ -5,13 +5,13 @@ package com.pulumi.googlenative.osconfig_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.osconfig_v1.enums.OSPolicyMode;
 import com.pulumi.googlenative.osconfig_v1.inputs.OSPolicyResourceGroupArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -28,10 +28,10 @@ public final class OSPolicyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="allowNoResourceGroupMatch")
-      private final @Nullable Output<Boolean> allowNoResourceGroupMatch;
+    private @Nullable Output<Boolean> allowNoResourceGroupMatch;
 
-    public Output<Boolean> allowNoResourceGroupMatch() {
-        return this.allowNoResourceGroupMatch == null ? Codegen.empty() : this.allowNoResourceGroupMatch;
+    public Optional<Output<Boolean>> allowNoResourceGroupMatch() {
+        return Optional.ofNullable(this.allowNoResourceGroupMatch);
     }
 
     /**
@@ -39,10 +39,10 @@ public final class OSPolicyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -50,7 +50,7 @@ public final class OSPolicyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="id", required=true)
-      private final Output<String> id;
+    private Output<String> id;
 
     public Output<String> id() {
         return this.id;
@@ -61,7 +61,7 @@ public final class OSPolicyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="mode", required=true)
-      private final Output<OSPolicyMode> mode;
+    private Output<OSPolicyMode> mode;
 
     public Output<OSPolicyMode> mode() {
         return this.mode;
@@ -72,105 +72,95 @@ public final class OSPolicyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceGroups", required=true)
-      private final Output<List<OSPolicyResourceGroupArgs>> resourceGroups;
+    private Output<List<OSPolicyResourceGroupArgs>> resourceGroups;
 
     public Output<List<OSPolicyResourceGroupArgs>> resourceGroups() {
         return this.resourceGroups;
     }
 
-    public OSPolicyArgs(
-        @Nullable Output<Boolean> allowNoResourceGroupMatch,
-        @Nullable Output<String> description,
-        Output<String> id,
-        Output<OSPolicyMode> mode,
-        Output<List<OSPolicyResourceGroupArgs>> resourceGroups) {
-        this.allowNoResourceGroupMatch = allowNoResourceGroupMatch;
-        this.description = description;
-        this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
-        this.mode = Objects.requireNonNull(mode, "expected parameter 'mode' to be non-null");
-        this.resourceGroups = Objects.requireNonNull(resourceGroups, "expected parameter 'resourceGroups' to be non-null");
-    }
+    private OSPolicyArgs() {}
 
-    private OSPolicyArgs() {
-        this.allowNoResourceGroupMatch = Codegen.empty();
-        this.description = Codegen.empty();
-        this.id = Codegen.empty();
-        this.mode = Codegen.empty();
-        this.resourceGroups = Codegen.empty();
+    private OSPolicyArgs(OSPolicyArgs $) {
+        this.allowNoResourceGroupMatch = $.allowNoResourceGroupMatch;
+        this.description = $.description;
+        this.id = $.id;
+        this.mode = $.mode;
+        this.resourceGroups = $.resourceGroups;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(OSPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> allowNoResourceGroupMatch;
-        private @Nullable Output<String> description;
-        private Output<String> id;
-        private Output<OSPolicyMode> mode;
-        private Output<List<OSPolicyResourceGroupArgs>> resourceGroups;
+        private OSPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new OSPolicyArgs();
         }
 
         public Builder(OSPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.allowNoResourceGroupMatch = defaults.allowNoResourceGroupMatch;
-    	      this.description = defaults.description;
-    	      this.id = defaults.id;
-    	      this.mode = defaults.mode;
-    	      this.resourceGroups = defaults.resourceGroups;
+            $ = new OSPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder allowNoResourceGroupMatch(@Nullable Output<Boolean> allowNoResourceGroupMatch) {
-            this.allowNoResourceGroupMatch = allowNoResourceGroupMatch;
+            $.allowNoResourceGroupMatch = allowNoResourceGroupMatch;
             return this;
         }
-        public Builder allowNoResourceGroupMatch(@Nullable Boolean allowNoResourceGroupMatch) {
-            this.allowNoResourceGroupMatch = Codegen.ofNullable(allowNoResourceGroupMatch);
-            return this;
+
+        public Builder allowNoResourceGroupMatch(Boolean allowNoResourceGroupMatch) {
+            return allowNoResourceGroupMatch(Output.of(allowNoResourceGroupMatch));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder id(Output<String> id) {
-            this.id = Objects.requireNonNull(id);
+            $.id = id;
             return this;
         }
+
         public Builder id(String id) {
-            this.id = Output.of(Objects.requireNonNull(id));
-            return this;
+            return id(Output.of(id));
         }
+
         public Builder mode(Output<OSPolicyMode> mode) {
-            this.mode = Objects.requireNonNull(mode);
+            $.mode = mode;
             return this;
         }
+
         public Builder mode(OSPolicyMode mode) {
-            this.mode = Output.of(Objects.requireNonNull(mode));
-            return this;
+            return mode(Output.of(mode));
         }
+
         public Builder resourceGroups(Output<List<OSPolicyResourceGroupArgs>> resourceGroups) {
-            this.resourceGroups = Objects.requireNonNull(resourceGroups);
+            $.resourceGroups = resourceGroups;
             return this;
         }
+
         public Builder resourceGroups(List<OSPolicyResourceGroupArgs> resourceGroups) {
-            this.resourceGroups = Output.of(Objects.requireNonNull(resourceGroups));
-            return this;
+            return resourceGroups(Output.of(resourceGroups));
         }
+
         public Builder resourceGroups(OSPolicyResourceGroupArgs... resourceGroups) {
             return resourceGroups(List.of(resourceGroups));
-        }        public OSPolicyArgs build() {
-            return new OSPolicyArgs(allowNoResourceGroupMatch, description, id, mode, resourceGroups);
+        }
+
+        public OSPolicyArgs build() {
+            $.id = Objects.requireNonNull($.id, "expected parameter 'id' to be non-null");
+            $.mode = Objects.requireNonNull($.mode, "expected parameter 'mode' to be non-null");
+            $.resourceGroups = Objects.requireNonNull($.resourceGroups, "expected parameter 'resourceGroups' to be non-null");
+            return $;
         }
     }
+
 }

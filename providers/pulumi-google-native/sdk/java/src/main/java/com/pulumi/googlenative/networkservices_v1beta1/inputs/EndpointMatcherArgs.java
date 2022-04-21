@@ -5,9 +5,9 @@ package com.pulumi.googlenative.networkservices_v1beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.networkservices_v1beta1.inputs.MetadataLabelMatcherArgs;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class EndpointMatcherArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="metadataLabelMatcher")
-      private final @Nullable Output<MetadataLabelMatcherArgs> metadataLabelMatcher;
+    private @Nullable Output<MetadataLabelMatcherArgs> metadataLabelMatcher;
 
-    public Output<MetadataLabelMatcherArgs> metadataLabelMatcher() {
-        return this.metadataLabelMatcher == null ? Codegen.empty() : this.metadataLabelMatcher;
+    public Optional<Output<MetadataLabelMatcherArgs>> metadataLabelMatcher() {
+        return Optional.ofNullable(this.metadataLabelMatcher);
     }
 
-    public EndpointMatcherArgs(@Nullable Output<MetadataLabelMatcherArgs> metadataLabelMatcher) {
-        this.metadataLabelMatcher = metadataLabelMatcher;
-    }
+    private EndpointMatcherArgs() {}
 
-    private EndpointMatcherArgs() {
-        this.metadataLabelMatcher = Codegen.empty();
+    private EndpointMatcherArgs(EndpointMatcherArgs $) {
+        this.metadataLabelMatcher = $.metadataLabelMatcher;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EndpointMatcherArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<MetadataLabelMatcherArgs> metadataLabelMatcher;
+        private EndpointMatcherArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new EndpointMatcherArgs();
         }
 
         public Builder(EndpointMatcherArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.metadataLabelMatcher = defaults.metadataLabelMatcher;
+            $ = new EndpointMatcherArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder metadataLabelMatcher(@Nullable Output<MetadataLabelMatcherArgs> metadataLabelMatcher) {
-            this.metadataLabelMatcher = metadataLabelMatcher;
+            $.metadataLabelMatcher = metadataLabelMatcher;
             return this;
         }
-        public Builder metadataLabelMatcher(@Nullable MetadataLabelMatcherArgs metadataLabelMatcher) {
-            this.metadataLabelMatcher = Codegen.ofNullable(metadataLabelMatcher);
-            return this;
-        }        public EndpointMatcherArgs build() {
-            return new EndpointMatcherArgs(metadataLabelMatcher);
+
+        public Builder metadataLabelMatcher(MetadataLabelMatcherArgs metadataLabelMatcher) {
+            return metadataLabelMatcher(Output.of(metadataLabelMatcher));
+        }
+
+        public EndpointMatcherArgs build() {
+            return $;
         }
     }
+
 }

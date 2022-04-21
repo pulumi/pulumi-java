@@ -6,9 +6,9 @@ package com.pulumi.azurenative.guestconfiguration.inputs;
 import com.pulumi.azurenative.guestconfiguration.inputs.GuestConfigurationNavigationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class GuestConfigurationAssignmentPropertiesArgs extends com.pulumi
      * 
      */
     @Import(name="context")
-      private final @Nullable Output<String> context;
+    private @Nullable Output<String> context;
 
-    public Output<String> context() {
-        return this.context == null ? Codegen.empty() : this.context;
+    public Optional<Output<String>> context() {
+        return Optional.ofNullable(this.context);
     }
 
     /**
@@ -36,63 +36,58 @@ public final class GuestConfigurationAssignmentPropertiesArgs extends com.pulumi
      * 
      */
     @Import(name="guestConfiguration")
-      private final @Nullable Output<GuestConfigurationNavigationArgs> guestConfiguration;
+    private @Nullable Output<GuestConfigurationNavigationArgs> guestConfiguration;
 
-    public Output<GuestConfigurationNavigationArgs> guestConfiguration() {
-        return this.guestConfiguration == null ? Codegen.empty() : this.guestConfiguration;
+    public Optional<Output<GuestConfigurationNavigationArgs>> guestConfiguration() {
+        return Optional.ofNullable(this.guestConfiguration);
     }
 
-    public GuestConfigurationAssignmentPropertiesArgs(
-        @Nullable Output<String> context,
-        @Nullable Output<GuestConfigurationNavigationArgs> guestConfiguration) {
-        this.context = context;
-        this.guestConfiguration = guestConfiguration;
-    }
+    private GuestConfigurationAssignmentPropertiesArgs() {}
 
-    private GuestConfigurationAssignmentPropertiesArgs() {
-        this.context = Codegen.empty();
-        this.guestConfiguration = Codegen.empty();
+    private GuestConfigurationAssignmentPropertiesArgs(GuestConfigurationAssignmentPropertiesArgs $) {
+        this.context = $.context;
+        this.guestConfiguration = $.guestConfiguration;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GuestConfigurationAssignmentPropertiesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> context;
-        private @Nullable Output<GuestConfigurationNavigationArgs> guestConfiguration;
+        private GuestConfigurationAssignmentPropertiesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GuestConfigurationAssignmentPropertiesArgs();
         }
 
         public Builder(GuestConfigurationAssignmentPropertiesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.context = defaults.context;
-    	      this.guestConfiguration = defaults.guestConfiguration;
+            $ = new GuestConfigurationAssignmentPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder context(@Nullable Output<String> context) {
-            this.context = context;
+            $.context = context;
             return this;
         }
-        public Builder context(@Nullable String context) {
-            this.context = Codegen.ofNullable(context);
-            return this;
+
+        public Builder context(String context) {
+            return context(Output.of(context));
         }
+
         public Builder guestConfiguration(@Nullable Output<GuestConfigurationNavigationArgs> guestConfiguration) {
-            this.guestConfiguration = guestConfiguration;
+            $.guestConfiguration = guestConfiguration;
             return this;
         }
-        public Builder guestConfiguration(@Nullable GuestConfigurationNavigationArgs guestConfiguration) {
-            this.guestConfiguration = Codegen.ofNullable(guestConfiguration);
-            return this;
-        }        public GuestConfigurationAssignmentPropertiesArgs build() {
-            return new GuestConfigurationAssignmentPropertiesArgs(context, guestConfiguration);
+
+        public Builder guestConfiguration(GuestConfigurationNavigationArgs guestConfiguration) {
+            return guestConfiguration(Output.of(guestConfiguration));
+        }
+
+        public GuestConfigurationAssignmentPropertiesArgs build() {
+            return $;
         }
     }
+
 }

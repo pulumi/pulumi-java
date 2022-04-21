@@ -12,6 +12,7 @@ import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +25,10 @@ public final class ZoneArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -35,10 +36,10 @@ public final class ZoneArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="registrationVirtualNetworks")
-      private final @Nullable Output<List<SubResourceArgs>> registrationVirtualNetworks;
+    private @Nullable Output<List<SubResourceArgs>> registrationVirtualNetworks;
 
-    public Output<List<SubResourceArgs>> registrationVirtualNetworks() {
-        return this.registrationVirtualNetworks == null ? Codegen.empty() : this.registrationVirtualNetworks;
+    public Optional<Output<List<SubResourceArgs>>> registrationVirtualNetworks() {
+        return Optional.ofNullable(this.registrationVirtualNetworks);
     }
 
     /**
@@ -46,10 +47,10 @@ public final class ZoneArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resolutionVirtualNetworks")
-      private final @Nullable Output<List<SubResourceArgs>> resolutionVirtualNetworks;
+    private @Nullable Output<List<SubResourceArgs>> resolutionVirtualNetworks;
 
-    public Output<List<SubResourceArgs>> resolutionVirtualNetworks() {
-        return this.resolutionVirtualNetworks == null ? Codegen.empty() : this.resolutionVirtualNetworks;
+    public Optional<Output<List<SubResourceArgs>>> resolutionVirtualNetworks() {
+        return Optional.ofNullable(this.resolutionVirtualNetworks);
     }
 
     /**
@@ -57,7 +58,7 @@ public final class ZoneArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -68,10 +69,10 @@ public final class ZoneArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -79,10 +80,10 @@ public final class ZoneArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="zoneName")
-      private final @Nullable Output<String> zoneName;
+    private @Nullable Output<String> zoneName;
 
-    public Output<String> zoneName() {
-        return this.zoneName == null ? Codegen.empty() : this.zoneName;
+    public Optional<Output<String>> zoneName() {
+        return Optional.ofNullable(this.zoneName);
     }
 
     /**
@@ -90,134 +91,118 @@ public final class ZoneArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="zoneType")
-      private final @Nullable Output<ZoneType> zoneType;
+    private @Nullable Output<ZoneType> zoneType;
 
-    public Output<ZoneType> zoneType() {
-        return this.zoneType == null ? Codegen.empty() : this.zoneType;
+    public Optional<Output<ZoneType>> zoneType() {
+        return Optional.ofNullable(this.zoneType);
     }
 
-    public ZoneArgs(
-        @Nullable Output<String> location,
-        @Nullable Output<List<SubResourceArgs>> registrationVirtualNetworks,
-        @Nullable Output<List<SubResourceArgs>> resolutionVirtualNetworks,
-        Output<String> resourceGroupName,
-        @Nullable Output<Map<String,String>> tags,
-        @Nullable Output<String> zoneName,
-        @Nullable Output<ZoneType> zoneType) {
-        this.location = location;
-        this.registrationVirtualNetworks = registrationVirtualNetworks;
-        this.resolutionVirtualNetworks = resolutionVirtualNetworks;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.tags = tags;
-        this.zoneName = zoneName;
-        this.zoneType = Codegen.objectProp("zoneType", ZoneType.class).output().arg(zoneType).def(ZoneType.Public).getNullable();
-    }
+    private ZoneArgs() {}
 
-    private ZoneArgs() {
-        this.location = Codegen.empty();
-        this.registrationVirtualNetworks = Codegen.empty();
-        this.resolutionVirtualNetworks = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.zoneName = Codegen.empty();
-        this.zoneType = Codegen.empty();
+    private ZoneArgs(ZoneArgs $) {
+        this.location = $.location;
+        this.registrationVirtualNetworks = $.registrationVirtualNetworks;
+        this.resolutionVirtualNetworks = $.resolutionVirtualNetworks;
+        this.resourceGroupName = $.resourceGroupName;
+        this.tags = $.tags;
+        this.zoneName = $.zoneName;
+        this.zoneType = $.zoneType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ZoneArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> location;
-        private @Nullable Output<List<SubResourceArgs>> registrationVirtualNetworks;
-        private @Nullable Output<List<SubResourceArgs>> resolutionVirtualNetworks;
-        private Output<String> resourceGroupName;
-        private @Nullable Output<Map<String,String>> tags;
-        private @Nullable Output<String> zoneName;
-        private @Nullable Output<ZoneType> zoneType;
+        private ZoneArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ZoneArgs();
         }
 
         public Builder(ZoneArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.location = defaults.location;
-    	      this.registrationVirtualNetworks = defaults.registrationVirtualNetworks;
-    	      this.resolutionVirtualNetworks = defaults.resolutionVirtualNetworks;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.tags = defaults.tags;
-    	      this.zoneName = defaults.zoneName;
-    	      this.zoneType = defaults.zoneType;
+            $ = new ZoneArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder registrationVirtualNetworks(@Nullable Output<List<SubResourceArgs>> registrationVirtualNetworks) {
-            this.registrationVirtualNetworks = registrationVirtualNetworks;
+            $.registrationVirtualNetworks = registrationVirtualNetworks;
             return this;
         }
-        public Builder registrationVirtualNetworks(@Nullable List<SubResourceArgs> registrationVirtualNetworks) {
-            this.registrationVirtualNetworks = Codegen.ofNullable(registrationVirtualNetworks);
-            return this;
+
+        public Builder registrationVirtualNetworks(List<SubResourceArgs> registrationVirtualNetworks) {
+            return registrationVirtualNetworks(Output.of(registrationVirtualNetworks));
         }
+
         public Builder registrationVirtualNetworks(SubResourceArgs... registrationVirtualNetworks) {
             return registrationVirtualNetworks(List.of(registrationVirtualNetworks));
         }
+
         public Builder resolutionVirtualNetworks(@Nullable Output<List<SubResourceArgs>> resolutionVirtualNetworks) {
-            this.resolutionVirtualNetworks = resolutionVirtualNetworks;
+            $.resolutionVirtualNetworks = resolutionVirtualNetworks;
             return this;
         }
-        public Builder resolutionVirtualNetworks(@Nullable List<SubResourceArgs> resolutionVirtualNetworks) {
-            this.resolutionVirtualNetworks = Codegen.ofNullable(resolutionVirtualNetworks);
-            return this;
+
+        public Builder resolutionVirtualNetworks(List<SubResourceArgs> resolutionVirtualNetworks) {
+            return resolutionVirtualNetworks(Output.of(resolutionVirtualNetworks));
         }
+
         public Builder resolutionVirtualNetworks(SubResourceArgs... resolutionVirtualNetworks) {
             return resolutionVirtualNetworks(List.of(resolutionVirtualNetworks));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder zoneName(@Nullable Output<String> zoneName) {
-            this.zoneName = zoneName;
+            $.zoneName = zoneName;
             return this;
         }
-        public Builder zoneName(@Nullable String zoneName) {
-            this.zoneName = Codegen.ofNullable(zoneName);
-            return this;
+
+        public Builder zoneName(String zoneName) {
+            return zoneName(Output.of(zoneName));
         }
+
         public Builder zoneType(@Nullable Output<ZoneType> zoneType) {
-            this.zoneType = zoneType;
+            $.zoneType = zoneType;
             return this;
         }
-        public Builder zoneType(@Nullable ZoneType zoneType) {
-            this.zoneType = Codegen.ofNullable(zoneType);
-            return this;
-        }        public ZoneArgs build() {
-            return new ZoneArgs(location, registrationVirtualNetworks, resolutionVirtualNetworks, resourceGroupName, tags, zoneName, zoneType);
+
+        public Builder zoneType(ZoneType zoneType) {
+            return zoneType(Output.of(zoneType));
+        }
+
+        public ZoneArgs build() {
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.zoneType = Codegen.objectProp("zoneType", ZoneType.class).output().arg($.zoneType).def(ZoneType.Public).getNullable();
+            return $;
         }
     }
+
 }

@@ -5,7 +5,6 @@ package com.pulumi.azurenative.timeseriesinsights.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,7 +22,7 @@ public final class Gen2StorageConfigurationInputArgs extends com.pulumi.resource
      * 
      */
     @Import(name="accountName", required=true)
-      private final Output<String> accountName;
+    private Output<String> accountName;
 
     public Output<String> accountName() {
         return this.accountName;
@@ -34,63 +33,60 @@ public final class Gen2StorageConfigurationInputArgs extends com.pulumi.resource
      * 
      */
     @Import(name="managementKey", required=true)
-      private final Output<String> managementKey;
+    private Output<String> managementKey;
 
     public Output<String> managementKey() {
         return this.managementKey;
     }
 
-    public Gen2StorageConfigurationInputArgs(
-        Output<String> accountName,
-        Output<String> managementKey) {
-        this.accountName = Objects.requireNonNull(accountName, "expected parameter 'accountName' to be non-null");
-        this.managementKey = Objects.requireNonNull(managementKey, "expected parameter 'managementKey' to be non-null");
-    }
+    private Gen2StorageConfigurationInputArgs() {}
 
-    private Gen2StorageConfigurationInputArgs() {
-        this.accountName = Codegen.empty();
-        this.managementKey = Codegen.empty();
+    private Gen2StorageConfigurationInputArgs(Gen2StorageConfigurationInputArgs $) {
+        this.accountName = $.accountName;
+        this.managementKey = $.managementKey;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(Gen2StorageConfigurationInputArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> accountName;
-        private Output<String> managementKey;
+        private Gen2StorageConfigurationInputArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new Gen2StorageConfigurationInputArgs();
         }
 
         public Builder(Gen2StorageConfigurationInputArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accountName = defaults.accountName;
-    	      this.managementKey = defaults.managementKey;
+            $ = new Gen2StorageConfigurationInputArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder accountName(Output<String> accountName) {
-            this.accountName = Objects.requireNonNull(accountName);
+            $.accountName = accountName;
             return this;
         }
+
         public Builder accountName(String accountName) {
-            this.accountName = Output.of(Objects.requireNonNull(accountName));
-            return this;
+            return accountName(Output.of(accountName));
         }
+
         public Builder managementKey(Output<String> managementKey) {
-            this.managementKey = Objects.requireNonNull(managementKey);
+            $.managementKey = managementKey;
             return this;
         }
+
         public Builder managementKey(String managementKey) {
-            this.managementKey = Output.of(Objects.requireNonNull(managementKey));
-            return this;
-        }        public Gen2StorageConfigurationInputArgs build() {
-            return new Gen2StorageConfigurationInputArgs(accountName, managementKey);
+            return managementKey(Output.of(managementKey));
+        }
+
+        public Gen2StorageConfigurationInputArgs build() {
+            $.accountName = Objects.requireNonNull($.accountName, "expected parameter 'accountName' to be non-null");
+            $.managementKey = Objects.requireNonNull($.managementKey, "expected parameter 'managementKey' to be non-null");
+            return $;
         }
     }
+
 }

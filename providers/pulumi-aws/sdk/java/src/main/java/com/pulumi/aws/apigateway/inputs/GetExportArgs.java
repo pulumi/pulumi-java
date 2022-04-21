@@ -20,10 +20,10 @@ public final class GetExportArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="accepts")
-      private final @Nullable String accepts;
+    private @Nullable String accepts;
 
     public Optional<String> accepts() {
-        return this.accepts == null ? Optional.empty() : Optional.ofNullable(this.accepts);
+        return Optional.ofNullable(this.accepts);
     }
 
     /**
@@ -31,7 +31,7 @@ public final class GetExportArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="exportType", required=true)
-      private final String exportType;
+    private String exportType;
 
     public String exportType() {
         return this.exportType;
@@ -42,10 +42,10 @@ public final class GetExportArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="parameters")
-      private final @Nullable Map<String,String> parameters;
+    private @Nullable Map<String,String> parameters;
 
-    public Map<String,String> parameters() {
-        return this.parameters == null ? Map.of() : this.parameters;
+    public Optional<Map<String,String>> parameters() {
+        return Optional.ofNullable(this.parameters);
     }
 
     /**
@@ -53,7 +53,7 @@ public final class GetExportArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="restApiId", required=true)
-      private final String restApiId;
+    private String restApiId;
 
     public String restApiId() {
         return this.restApiId;
@@ -64,82 +64,71 @@ public final class GetExportArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="stageName", required=true)
-      private final String stageName;
+    private String stageName;
 
     public String stageName() {
         return this.stageName;
     }
 
-    public GetExportArgs(
-        @Nullable String accepts,
-        String exportType,
-        @Nullable Map<String,String> parameters,
-        String restApiId,
-        String stageName) {
-        this.accepts = accepts;
-        this.exportType = Objects.requireNonNull(exportType, "expected parameter 'exportType' to be non-null");
-        this.parameters = parameters;
-        this.restApiId = Objects.requireNonNull(restApiId, "expected parameter 'restApiId' to be non-null");
-        this.stageName = Objects.requireNonNull(stageName, "expected parameter 'stageName' to be non-null");
-    }
+    private GetExportArgs() {}
 
-    private GetExportArgs() {
-        this.accepts = null;
-        this.exportType = null;
-        this.parameters = Map.of();
-        this.restApiId = null;
-        this.stageName = null;
+    private GetExportArgs(GetExportArgs $) {
+        this.accepts = $.accepts;
+        this.exportType = $.exportType;
+        this.parameters = $.parameters;
+        this.restApiId = $.restApiId;
+        this.stageName = $.stageName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetExportArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String accepts;
-        private String exportType;
-        private @Nullable Map<String,String> parameters;
-        private String restApiId;
-        private String stageName;
+        private GetExportArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetExportArgs();
         }
 
         public Builder(GetExportArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accepts = defaults.accepts;
-    	      this.exportType = defaults.exportType;
-    	      this.parameters = defaults.parameters;
-    	      this.restApiId = defaults.restApiId;
-    	      this.stageName = defaults.stageName;
+            $ = new GetExportArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder accepts(@Nullable String accepts) {
-            this.accepts = accepts;
+            $.accepts = accepts;
             return this;
         }
+
         public Builder exportType(String exportType) {
-            this.exportType = Objects.requireNonNull(exportType);
+            $.exportType = exportType;
             return this;
         }
+
         public Builder parameters(@Nullable Map<String,String> parameters) {
-            this.parameters = parameters;
+            $.parameters = parameters;
             return this;
         }
+
         public Builder restApiId(String restApiId) {
-            this.restApiId = Objects.requireNonNull(restApiId);
+            $.restApiId = restApiId;
             return this;
         }
+
         public Builder stageName(String stageName) {
-            this.stageName = Objects.requireNonNull(stageName);
+            $.stageName = stageName;
             return this;
-        }        public GetExportArgs build() {
-            return new GetExportArgs(accepts, exportType, parameters, restApiId, stageName);
+        }
+
+        public GetExportArgs build() {
+            $.exportType = Objects.requireNonNull($.exportType, "expected parameter 'exportType' to be non-null");
+            $.restApiId = Objects.requireNonNull($.restApiId, "expected parameter 'restApiId' to be non-null");
+            $.stageName = Objects.requireNonNull($.stageName, "expected parameter 'stageName' to be non-null");
+            return $;
         }
     }
+
 }

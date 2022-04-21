@@ -27,7 +27,7 @@ public final class SchemaComparisonValidationResultResponse extends com.pulumi.r
      * 
      */
     @Import(name="schemaDifferences", required=true)
-      private final SchemaComparisonValidationResultTypeResponse schemaDifferences;
+    private SchemaComparisonValidationResultTypeResponse schemaDifferences;
 
     public SchemaComparisonValidationResultTypeResponse schemaDifferences() {
         return this.schemaDifferences;
@@ -38,10 +38,10 @@ public final class SchemaComparisonValidationResultResponse extends com.pulumi.r
      * 
      */
     @Import(name="sourceDatabaseObjectCount")
-      private final @Nullable Map<String,Double> sourceDatabaseObjectCount;
+    private @Nullable Map<String,Double> sourceDatabaseObjectCount;
 
-    public Map<String,Double> sourceDatabaseObjectCount() {
-        return this.sourceDatabaseObjectCount == null ? Map.of() : this.sourceDatabaseObjectCount;
+    public Optional<Map<String,Double>> sourceDatabaseObjectCount() {
+        return Optional.ofNullable(this.sourceDatabaseObjectCount);
     }
 
     /**
@@ -49,10 +49,10 @@ public final class SchemaComparisonValidationResultResponse extends com.pulumi.r
      * 
      */
     @Import(name="targetDatabaseObjectCount")
-      private final @Nullable Map<String,Double> targetDatabaseObjectCount;
+    private @Nullable Map<String,Double> targetDatabaseObjectCount;
 
-    public Map<String,Double> targetDatabaseObjectCount() {
-        return this.targetDatabaseObjectCount == null ? Map.of() : this.targetDatabaseObjectCount;
+    public Optional<Map<String,Double>> targetDatabaseObjectCount() {
+        return Optional.ofNullable(this.targetDatabaseObjectCount);
     }
 
     /**
@@ -60,73 +60,64 @@ public final class SchemaComparisonValidationResultResponse extends com.pulumi.r
      * 
      */
     @Import(name="validationErrors", required=true)
-      private final ValidationErrorResponse validationErrors;
+    private ValidationErrorResponse validationErrors;
 
     public ValidationErrorResponse validationErrors() {
         return this.validationErrors;
     }
 
-    public SchemaComparisonValidationResultResponse(
-        SchemaComparisonValidationResultTypeResponse schemaDifferences,
-        @Nullable Map<String,Double> sourceDatabaseObjectCount,
-        @Nullable Map<String,Double> targetDatabaseObjectCount,
-        ValidationErrorResponse validationErrors) {
-        this.schemaDifferences = Objects.requireNonNull(schemaDifferences, "expected parameter 'schemaDifferences' to be non-null");
-        this.sourceDatabaseObjectCount = sourceDatabaseObjectCount;
-        this.targetDatabaseObjectCount = targetDatabaseObjectCount;
-        this.validationErrors = Objects.requireNonNull(validationErrors, "expected parameter 'validationErrors' to be non-null");
-    }
+    private SchemaComparisonValidationResultResponse() {}
 
-    private SchemaComparisonValidationResultResponse() {
-        this.schemaDifferences = null;
-        this.sourceDatabaseObjectCount = Map.of();
-        this.targetDatabaseObjectCount = Map.of();
-        this.validationErrors = null;
+    private SchemaComparisonValidationResultResponse(SchemaComparisonValidationResultResponse $) {
+        this.schemaDifferences = $.schemaDifferences;
+        this.sourceDatabaseObjectCount = $.sourceDatabaseObjectCount;
+        this.targetDatabaseObjectCount = $.targetDatabaseObjectCount;
+        this.validationErrors = $.validationErrors;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SchemaComparisonValidationResultResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private SchemaComparisonValidationResultTypeResponse schemaDifferences;
-        private @Nullable Map<String,Double> sourceDatabaseObjectCount;
-        private @Nullable Map<String,Double> targetDatabaseObjectCount;
-        private ValidationErrorResponse validationErrors;
+        private SchemaComparisonValidationResultResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new SchemaComparisonValidationResultResponse();
         }
 
         public Builder(SchemaComparisonValidationResultResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.schemaDifferences = defaults.schemaDifferences;
-    	      this.sourceDatabaseObjectCount = defaults.sourceDatabaseObjectCount;
-    	      this.targetDatabaseObjectCount = defaults.targetDatabaseObjectCount;
-    	      this.validationErrors = defaults.validationErrors;
+            $ = new SchemaComparisonValidationResultResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder schemaDifferences(SchemaComparisonValidationResultTypeResponse schemaDifferences) {
-            this.schemaDifferences = Objects.requireNonNull(schemaDifferences);
+            $.schemaDifferences = schemaDifferences;
             return this;
         }
+
         public Builder sourceDatabaseObjectCount(@Nullable Map<String,Double> sourceDatabaseObjectCount) {
-            this.sourceDatabaseObjectCount = sourceDatabaseObjectCount;
+            $.sourceDatabaseObjectCount = sourceDatabaseObjectCount;
             return this;
         }
+
         public Builder targetDatabaseObjectCount(@Nullable Map<String,Double> targetDatabaseObjectCount) {
-            this.targetDatabaseObjectCount = targetDatabaseObjectCount;
+            $.targetDatabaseObjectCount = targetDatabaseObjectCount;
             return this;
         }
+
         public Builder validationErrors(ValidationErrorResponse validationErrors) {
-            this.validationErrors = Objects.requireNonNull(validationErrors);
+            $.validationErrors = validationErrors;
             return this;
-        }        public SchemaComparisonValidationResultResponse build() {
-            return new SchemaComparisonValidationResultResponse(schemaDifferences, sourceDatabaseObjectCount, targetDatabaseObjectCount, validationErrors);
+        }
+
+        public SchemaComparisonValidationResultResponse build() {
+            $.schemaDifferences = Objects.requireNonNull($.schemaDifferences, "expected parameter 'schemaDifferences' to be non-null");
+            $.validationErrors = Objects.requireNonNull($.validationErrors, "expected parameter 'validationErrors' to be non-null");
+            return $;
         }
     }
+
 }

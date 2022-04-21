@@ -23,7 +23,7 @@ public final class LoadBalancerInfoResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="backendType", required=true)
-      private final String backendType;
+    private String backendType;
 
     public String backendType() {
         return this.backendType;
@@ -34,7 +34,7 @@ public final class LoadBalancerInfoResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="backendUri", required=true)
-      private final String backendUri;
+    private String backendUri;
 
     public String backendUri() {
         return this.backendUri;
@@ -45,7 +45,7 @@ public final class LoadBalancerInfoResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="backends", required=true)
-      private final List<LoadBalancerBackendResponse> backends;
+    private List<LoadBalancerBackendResponse> backends;
 
     public List<LoadBalancerBackendResponse> backends() {
         return this.backends;
@@ -56,7 +56,7 @@ public final class LoadBalancerInfoResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="healthCheckUri", required=true)
-      private final String healthCheckUri;
+    private String healthCheckUri;
 
     public String healthCheckUri() {
         return this.healthCheckUri;
@@ -67,85 +67,77 @@ public final class LoadBalancerInfoResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="loadBalancerType", required=true)
-      private final String loadBalancerType;
+    private String loadBalancerType;
 
     public String loadBalancerType() {
         return this.loadBalancerType;
     }
 
-    public LoadBalancerInfoResponse(
-        String backendType,
-        String backendUri,
-        List<LoadBalancerBackendResponse> backends,
-        String healthCheckUri,
-        String loadBalancerType) {
-        this.backendType = Objects.requireNonNull(backendType, "expected parameter 'backendType' to be non-null");
-        this.backendUri = Objects.requireNonNull(backendUri, "expected parameter 'backendUri' to be non-null");
-        this.backends = Objects.requireNonNull(backends, "expected parameter 'backends' to be non-null");
-        this.healthCheckUri = Objects.requireNonNull(healthCheckUri, "expected parameter 'healthCheckUri' to be non-null");
-        this.loadBalancerType = Objects.requireNonNull(loadBalancerType, "expected parameter 'loadBalancerType' to be non-null");
-    }
+    private LoadBalancerInfoResponse() {}
 
-    private LoadBalancerInfoResponse() {
-        this.backendType = null;
-        this.backendUri = null;
-        this.backends = List.of();
-        this.healthCheckUri = null;
-        this.loadBalancerType = null;
+    private LoadBalancerInfoResponse(LoadBalancerInfoResponse $) {
+        this.backendType = $.backendType;
+        this.backendUri = $.backendUri;
+        this.backends = $.backends;
+        this.healthCheckUri = $.healthCheckUri;
+        this.loadBalancerType = $.loadBalancerType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LoadBalancerInfoResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String backendType;
-        private String backendUri;
-        private List<LoadBalancerBackendResponse> backends;
-        private String healthCheckUri;
-        private String loadBalancerType;
+        private LoadBalancerInfoResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new LoadBalancerInfoResponse();
         }
 
         public Builder(LoadBalancerInfoResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.backendType = defaults.backendType;
-    	      this.backendUri = defaults.backendUri;
-    	      this.backends = defaults.backends;
-    	      this.healthCheckUri = defaults.healthCheckUri;
-    	      this.loadBalancerType = defaults.loadBalancerType;
+            $ = new LoadBalancerInfoResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder backendType(String backendType) {
-            this.backendType = Objects.requireNonNull(backendType);
+            $.backendType = backendType;
             return this;
         }
+
         public Builder backendUri(String backendUri) {
-            this.backendUri = Objects.requireNonNull(backendUri);
+            $.backendUri = backendUri;
             return this;
         }
+
         public Builder backends(List<LoadBalancerBackendResponse> backends) {
-            this.backends = Objects.requireNonNull(backends);
+            $.backends = backends;
             return this;
         }
+
         public Builder backends(LoadBalancerBackendResponse... backends) {
             return backends(List.of(backends));
         }
+
         public Builder healthCheckUri(String healthCheckUri) {
-            this.healthCheckUri = Objects.requireNonNull(healthCheckUri);
+            $.healthCheckUri = healthCheckUri;
             return this;
         }
+
         public Builder loadBalancerType(String loadBalancerType) {
-            this.loadBalancerType = Objects.requireNonNull(loadBalancerType);
+            $.loadBalancerType = loadBalancerType;
             return this;
-        }        public LoadBalancerInfoResponse build() {
-            return new LoadBalancerInfoResponse(backendType, backendUri, backends, healthCheckUri, loadBalancerType);
+        }
+
+        public LoadBalancerInfoResponse build() {
+            $.backendType = Objects.requireNonNull($.backendType, "expected parameter 'backendType' to be non-null");
+            $.backendUri = Objects.requireNonNull($.backendUri, "expected parameter 'backendUri' to be non-null");
+            $.backends = Objects.requireNonNull($.backends, "expected parameter 'backends' to be non-null");
+            $.healthCheckUri = Objects.requireNonNull($.healthCheckUri, "expected parameter 'healthCheckUri' to be non-null");
+            $.loadBalancerType = Objects.requireNonNull($.loadBalancerType, "expected parameter 'loadBalancerType' to be non-null");
+            return $;
         }
     }
+
 }

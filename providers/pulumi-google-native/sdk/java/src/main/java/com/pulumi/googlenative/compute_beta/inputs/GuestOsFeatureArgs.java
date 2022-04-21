@@ -5,9 +5,9 @@ package com.pulumi.googlenative.compute_beta.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.compute_beta.enums.GuestOsFeatureType;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class GuestOsFeatureArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="type")
-      private final @Nullable Output<GuestOsFeatureType> type;
+    private @Nullable Output<GuestOsFeatureType> type;
 
-    public Output<GuestOsFeatureType> type() {
-        return this.type == null ? Codegen.empty() : this.type;
+    public Optional<Output<GuestOsFeatureType>> type() {
+        return Optional.ofNullable(this.type);
     }
 
-    public GuestOsFeatureArgs(@Nullable Output<GuestOsFeatureType> type) {
-        this.type = type;
-    }
+    private GuestOsFeatureArgs() {}
 
-    private GuestOsFeatureArgs() {
-        this.type = Codegen.empty();
+    private GuestOsFeatureArgs(GuestOsFeatureArgs $) {
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GuestOsFeatureArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<GuestOsFeatureType> type;
+        private GuestOsFeatureArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GuestOsFeatureArgs();
         }
 
         public Builder(GuestOsFeatureArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.type = defaults.type;
+            $ = new GuestOsFeatureArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder type(@Nullable Output<GuestOsFeatureType> type) {
-            this.type = type;
+            $.type = type;
             return this;
         }
-        public Builder type(@Nullable GuestOsFeatureType type) {
-            this.type = Codegen.ofNullable(type);
-            return this;
-        }        public GuestOsFeatureArgs build() {
-            return new GuestOsFeatureArgs(type);
+
+        public Builder type(GuestOsFeatureType type) {
+            return type(Output.of(type));
+        }
+
+        public GuestOsFeatureArgs build() {
+            return $;
         }
     }
+
 }

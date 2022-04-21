@@ -17,7 +17,7 @@ public final class GetServiceEndpointPolicyDefinitionArgs extends com.pulumi.res
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -28,7 +28,7 @@ public final class GetServiceEndpointPolicyDefinitionArgs extends com.pulumi.res
      * 
      */
     @Import(name="serviceEndpointPolicyDefinitionName", required=true)
-      private final String serviceEndpointPolicyDefinitionName;
+    private String serviceEndpointPolicyDefinitionName;
 
     public String serviceEndpointPolicyDefinitionName() {
         return this.serviceEndpointPolicyDefinitionName;
@@ -39,64 +39,59 @@ public final class GetServiceEndpointPolicyDefinitionArgs extends com.pulumi.res
      * 
      */
     @Import(name="serviceEndpointPolicyName", required=true)
-      private final String serviceEndpointPolicyName;
+    private String serviceEndpointPolicyName;
 
     public String serviceEndpointPolicyName() {
         return this.serviceEndpointPolicyName;
     }
 
-    public GetServiceEndpointPolicyDefinitionArgs(
-        String resourceGroupName,
-        String serviceEndpointPolicyDefinitionName,
-        String serviceEndpointPolicyName) {
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.serviceEndpointPolicyDefinitionName = Objects.requireNonNull(serviceEndpointPolicyDefinitionName, "expected parameter 'serviceEndpointPolicyDefinitionName' to be non-null");
-        this.serviceEndpointPolicyName = Objects.requireNonNull(serviceEndpointPolicyName, "expected parameter 'serviceEndpointPolicyName' to be non-null");
-    }
+    private GetServiceEndpointPolicyDefinitionArgs() {}
 
-    private GetServiceEndpointPolicyDefinitionArgs() {
-        this.resourceGroupName = null;
-        this.serviceEndpointPolicyDefinitionName = null;
-        this.serviceEndpointPolicyName = null;
+    private GetServiceEndpointPolicyDefinitionArgs(GetServiceEndpointPolicyDefinitionArgs $) {
+        this.resourceGroupName = $.resourceGroupName;
+        this.serviceEndpointPolicyDefinitionName = $.serviceEndpointPolicyDefinitionName;
+        this.serviceEndpointPolicyName = $.serviceEndpointPolicyName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetServiceEndpointPolicyDefinitionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String resourceGroupName;
-        private String serviceEndpointPolicyDefinitionName;
-        private String serviceEndpointPolicyName;
+        private GetServiceEndpointPolicyDefinitionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetServiceEndpointPolicyDefinitionArgs();
         }
 
         public Builder(GetServiceEndpointPolicyDefinitionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.serviceEndpointPolicyDefinitionName = defaults.serviceEndpointPolicyDefinitionName;
-    	      this.serviceEndpointPolicyName = defaults.serviceEndpointPolicyName;
+            $ = new GetServiceEndpointPolicyDefinitionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder serviceEndpointPolicyDefinitionName(String serviceEndpointPolicyDefinitionName) {
-            this.serviceEndpointPolicyDefinitionName = Objects.requireNonNull(serviceEndpointPolicyDefinitionName);
+            $.serviceEndpointPolicyDefinitionName = serviceEndpointPolicyDefinitionName;
             return this;
         }
+
         public Builder serviceEndpointPolicyName(String serviceEndpointPolicyName) {
-            this.serviceEndpointPolicyName = Objects.requireNonNull(serviceEndpointPolicyName);
+            $.serviceEndpointPolicyName = serviceEndpointPolicyName;
             return this;
-        }        public GetServiceEndpointPolicyDefinitionArgs build() {
-            return new GetServiceEndpointPolicyDefinitionArgs(resourceGroupName, serviceEndpointPolicyDefinitionName, serviceEndpointPolicyName);
+        }
+
+        public GetServiceEndpointPolicyDefinitionArgs build() {
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.serviceEndpointPolicyDefinitionName = Objects.requireNonNull($.serviceEndpointPolicyDefinitionName, "expected parameter 'serviceEndpointPolicyDefinitionName' to be non-null");
+            $.serviceEndpointPolicyName = Objects.requireNonNull($.serviceEndpointPolicyName, "expected parameter 'serviceEndpointPolicyName' to be non-null");
+            return $;
         }
     }
+
 }

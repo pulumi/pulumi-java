@@ -21,7 +21,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageImageResponse extend
      * 
      */
     @Import(name="accessibilityText", required=true)
-      private final String accessibilityText;
+    private String accessibilityText;
 
     public String accessibilityText() {
         return this.accessibilityText;
@@ -32,55 +32,52 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageImageResponse extend
      * 
      */
     @Import(name="imageUri", required=true)
-      private final String imageUri;
+    private String imageUri;
 
     public String imageUri() {
         return this.imageUri;
     }
 
-    public GoogleCloudDialogflowV2beta1IntentMessageImageResponse(
-        String accessibilityText,
-        String imageUri) {
-        this.accessibilityText = Objects.requireNonNull(accessibilityText, "expected parameter 'accessibilityText' to be non-null");
-        this.imageUri = Objects.requireNonNull(imageUri, "expected parameter 'imageUri' to be non-null");
-    }
+    private GoogleCloudDialogflowV2beta1IntentMessageImageResponse() {}
 
-    private GoogleCloudDialogflowV2beta1IntentMessageImageResponse() {
-        this.accessibilityText = null;
-        this.imageUri = null;
+    private GoogleCloudDialogflowV2beta1IntentMessageImageResponse(GoogleCloudDialogflowV2beta1IntentMessageImageResponse $) {
+        this.accessibilityText = $.accessibilityText;
+        this.imageUri = $.imageUri;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudDialogflowV2beta1IntentMessageImageResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String accessibilityText;
-        private String imageUri;
+        private GoogleCloudDialogflowV2beta1IntentMessageImageResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudDialogflowV2beta1IntentMessageImageResponse();
         }
 
         public Builder(GoogleCloudDialogflowV2beta1IntentMessageImageResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accessibilityText = defaults.accessibilityText;
-    	      this.imageUri = defaults.imageUri;
+            $ = new GoogleCloudDialogflowV2beta1IntentMessageImageResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder accessibilityText(String accessibilityText) {
-            this.accessibilityText = Objects.requireNonNull(accessibilityText);
+            $.accessibilityText = accessibilityText;
             return this;
         }
+
         public Builder imageUri(String imageUri) {
-            this.imageUri = Objects.requireNonNull(imageUri);
+            $.imageUri = imageUri;
             return this;
-        }        public GoogleCloudDialogflowV2beta1IntentMessageImageResponse build() {
-            return new GoogleCloudDialogflowV2beta1IntentMessageImageResponse(accessibilityText, imageUri);
+        }
+
+        public GoogleCloudDialogflowV2beta1IntentMessageImageResponse build() {
+            $.accessibilityText = Objects.requireNonNull($.accessibilityText, "expected parameter 'accessibilityText' to be non-null");
+            $.imageUri = Objects.requireNonNull($.imageUri, "expected parameter 'imageUri' to be non-null");
+            return $;
         }
     }
+
 }

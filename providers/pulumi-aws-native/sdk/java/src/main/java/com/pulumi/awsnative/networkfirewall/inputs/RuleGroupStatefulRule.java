@@ -16,81 +16,77 @@ public final class RuleGroupStatefulRule extends com.pulumi.resources.InvokeArgs
     public static final RuleGroupStatefulRule Empty = new RuleGroupStatefulRule();
 
     @Import(name="action", required=true)
-      private final RuleGroupStatefulRuleAction action;
+    private RuleGroupStatefulRuleAction action;
 
     public RuleGroupStatefulRuleAction action() {
         return this.action;
     }
 
     @Import(name="header", required=true)
-      private final RuleGroupHeader header;
+    private RuleGroupHeader header;
 
     public RuleGroupHeader header() {
         return this.header;
     }
 
     @Import(name="ruleOptions", required=true)
-      private final List<RuleGroupRuleOption> ruleOptions;
+    private List<RuleGroupRuleOption> ruleOptions;
 
     public List<RuleGroupRuleOption> ruleOptions() {
         return this.ruleOptions;
     }
 
-    public RuleGroupStatefulRule(
-        RuleGroupStatefulRuleAction action,
-        RuleGroupHeader header,
-        List<RuleGroupRuleOption> ruleOptions) {
-        this.action = Objects.requireNonNull(action, "expected parameter 'action' to be non-null");
-        this.header = Objects.requireNonNull(header, "expected parameter 'header' to be non-null");
-        this.ruleOptions = Objects.requireNonNull(ruleOptions, "expected parameter 'ruleOptions' to be non-null");
-    }
+    private RuleGroupStatefulRule() {}
 
-    private RuleGroupStatefulRule() {
-        this.action = null;
-        this.header = null;
-        this.ruleOptions = List.of();
+    private RuleGroupStatefulRule(RuleGroupStatefulRule $) {
+        this.action = $.action;
+        this.header = $.header;
+        this.ruleOptions = $.ruleOptions;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RuleGroupStatefulRule defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private RuleGroupStatefulRuleAction action;
-        private RuleGroupHeader header;
-        private List<RuleGroupRuleOption> ruleOptions;
+        private RuleGroupStatefulRule $;
 
         public Builder() {
-    	      // Empty
+            $ = new RuleGroupStatefulRule();
         }
 
         public Builder(RuleGroupStatefulRule defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.action = defaults.action;
-    	      this.header = defaults.header;
-    	      this.ruleOptions = defaults.ruleOptions;
+            $ = new RuleGroupStatefulRule(Objects.requireNonNull(defaults));
         }
 
         public Builder action(RuleGroupStatefulRuleAction action) {
-            this.action = Objects.requireNonNull(action);
+            $.action = action;
             return this;
         }
+
         public Builder header(RuleGroupHeader header) {
-            this.header = Objects.requireNonNull(header);
+            $.header = header;
             return this;
         }
+
         public Builder ruleOptions(List<RuleGroupRuleOption> ruleOptions) {
-            this.ruleOptions = Objects.requireNonNull(ruleOptions);
+            $.ruleOptions = ruleOptions;
             return this;
         }
+
         public Builder ruleOptions(RuleGroupRuleOption... ruleOptions) {
             return ruleOptions(List.of(ruleOptions));
-        }        public RuleGroupStatefulRule build() {
-            return new RuleGroupStatefulRule(action, header, ruleOptions);
+        }
+
+        public RuleGroupStatefulRule build() {
+            $.action = Objects.requireNonNull($.action, "expected parameter 'action' to be non-null");
+            $.header = Objects.requireNonNull($.header, "expected parameter 'header' to be non-null");
+            $.ruleOptions = Objects.requireNonNull($.ruleOptions, "expected parameter 'ruleOptions' to be non-null");
+            return $;
         }
     }
+
 }

@@ -17,7 +17,7 @@ public final class GetDiskAccessAPrivateEndpointConnectionArgs extends com.pulum
      * 
      */
     @Import(name="diskAccessName", required=true)
-      private final String diskAccessName;
+    private String diskAccessName;
 
     public String diskAccessName() {
         return this.diskAccessName;
@@ -28,7 +28,7 @@ public final class GetDiskAccessAPrivateEndpointConnectionArgs extends com.pulum
      * 
      */
     @Import(name="privateEndpointConnectionName", required=true)
-      private final String privateEndpointConnectionName;
+    private String privateEndpointConnectionName;
 
     public String privateEndpointConnectionName() {
         return this.privateEndpointConnectionName;
@@ -39,64 +39,59 @@ public final class GetDiskAccessAPrivateEndpointConnectionArgs extends com.pulum
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public GetDiskAccessAPrivateEndpointConnectionArgs(
-        String diskAccessName,
-        String privateEndpointConnectionName,
-        String resourceGroupName) {
-        this.diskAccessName = Objects.requireNonNull(diskAccessName, "expected parameter 'diskAccessName' to be non-null");
-        this.privateEndpointConnectionName = Objects.requireNonNull(privateEndpointConnectionName, "expected parameter 'privateEndpointConnectionName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private GetDiskAccessAPrivateEndpointConnectionArgs() {}
 
-    private GetDiskAccessAPrivateEndpointConnectionArgs() {
-        this.diskAccessName = null;
-        this.privateEndpointConnectionName = null;
-        this.resourceGroupName = null;
+    private GetDiskAccessAPrivateEndpointConnectionArgs(GetDiskAccessAPrivateEndpointConnectionArgs $) {
+        this.diskAccessName = $.diskAccessName;
+        this.privateEndpointConnectionName = $.privateEndpointConnectionName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetDiskAccessAPrivateEndpointConnectionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String diskAccessName;
-        private String privateEndpointConnectionName;
-        private String resourceGroupName;
+        private GetDiskAccessAPrivateEndpointConnectionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetDiskAccessAPrivateEndpointConnectionArgs();
         }
 
         public Builder(GetDiskAccessAPrivateEndpointConnectionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.diskAccessName = defaults.diskAccessName;
-    	      this.privateEndpointConnectionName = defaults.privateEndpointConnectionName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new GetDiskAccessAPrivateEndpointConnectionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder diskAccessName(String diskAccessName) {
-            this.diskAccessName = Objects.requireNonNull(diskAccessName);
+            $.diskAccessName = diskAccessName;
             return this;
         }
+
         public Builder privateEndpointConnectionName(String privateEndpointConnectionName) {
-            this.privateEndpointConnectionName = Objects.requireNonNull(privateEndpointConnectionName);
+            $.privateEndpointConnectionName = privateEndpointConnectionName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public GetDiskAccessAPrivateEndpointConnectionArgs build() {
-            return new GetDiskAccessAPrivateEndpointConnectionArgs(diskAccessName, privateEndpointConnectionName, resourceGroupName);
+        }
+
+        public GetDiskAccessAPrivateEndpointConnectionArgs build() {
+            $.diskAccessName = Objects.requireNonNull($.diskAccessName, "expected parameter 'diskAccessName' to be non-null");
+            $.privateEndpointConnectionName = Objects.requireNonNull($.privateEndpointConnectionName, "expected parameter 'privateEndpointConnectionName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

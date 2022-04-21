@@ -23,10 +23,10 @@ public final class AzureVmDiskDetailsResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="diskEncryptionSetId")
-      private final @Nullable String diskEncryptionSetId;
+    private @Nullable String diskEncryptionSetId;
 
     public Optional<String> diskEncryptionSetId() {
-        return this.diskEncryptionSetId == null ? Optional.empty() : Optional.ofNullable(this.diskEncryptionSetId);
+        return Optional.ofNullable(this.diskEncryptionSetId);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class AzureVmDiskDetailsResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="diskId")
-      private final @Nullable String diskId;
+    private @Nullable String diskId;
 
     public Optional<String> diskId() {
-        return this.diskId == null ? Optional.empty() : Optional.ofNullable(this.diskId);
+        return Optional.ofNullable(this.diskId);
     }
 
     /**
@@ -45,10 +45,10 @@ public final class AzureVmDiskDetailsResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="lunId")
-      private final @Nullable String lunId;
+    private @Nullable String lunId;
 
     public Optional<String> lunId() {
-        return this.lunId == null ? Optional.empty() : Optional.ofNullable(this.lunId);
+        return Optional.ofNullable(this.lunId);
     }
 
     /**
@@ -56,10 +56,10 @@ public final class AzureVmDiskDetailsResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="maxSizeMB")
-      private final @Nullable String maxSizeMB;
+    private @Nullable String maxSizeMB;
 
     public Optional<String> maxSizeMB() {
-        return this.maxSizeMB == null ? Optional.empty() : Optional.ofNullable(this.maxSizeMB);
+        return Optional.ofNullable(this.maxSizeMB);
     }
 
     /**
@@ -67,10 +67,10 @@ public final class AzureVmDiskDetailsResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="targetDiskLocation")
-      private final @Nullable String targetDiskLocation;
+    private @Nullable String targetDiskLocation;
 
     public Optional<String> targetDiskLocation() {
-        return this.targetDiskLocation == null ? Optional.empty() : Optional.ofNullable(this.targetDiskLocation);
+        return Optional.ofNullable(this.targetDiskLocation);
     }
 
     /**
@@ -78,10 +78,10 @@ public final class AzureVmDiskDetailsResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="targetDiskName")
-      private final @Nullable String targetDiskName;
+    private @Nullable String targetDiskName;
 
     public Optional<String> targetDiskName() {
-        return this.targetDiskName == null ? Optional.empty() : Optional.ofNullable(this.targetDiskName);
+        return Optional.ofNullable(this.targetDiskName);
     }
 
     /**
@@ -89,10 +89,10 @@ public final class AzureVmDiskDetailsResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="vhdId")
-      private final @Nullable String vhdId;
+    private @Nullable String vhdId;
 
     public Optional<String> vhdId() {
-        return this.vhdId == null ? Optional.empty() : Optional.ofNullable(this.vhdId);
+        return Optional.ofNullable(this.vhdId);
     }
 
     /**
@@ -100,10 +100,10 @@ public final class AzureVmDiskDetailsResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="vhdName")
-      private final @Nullable String vhdName;
+    private @Nullable String vhdName;
 
     public Optional<String> vhdName() {
-        return this.vhdName == null ? Optional.empty() : Optional.ofNullable(this.vhdName);
+        return Optional.ofNullable(this.vhdName);
     }
 
     /**
@@ -111,118 +111,92 @@ public final class AzureVmDiskDetailsResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="vhdType")
-      private final @Nullable String vhdType;
+    private @Nullable String vhdType;
 
     public Optional<String> vhdType() {
-        return this.vhdType == null ? Optional.empty() : Optional.ofNullable(this.vhdType);
+        return Optional.ofNullable(this.vhdType);
     }
 
-    public AzureVmDiskDetailsResponse(
-        @Nullable String diskEncryptionSetId,
-        @Nullable String diskId,
-        @Nullable String lunId,
-        @Nullable String maxSizeMB,
-        @Nullable String targetDiskLocation,
-        @Nullable String targetDiskName,
-        @Nullable String vhdId,
-        @Nullable String vhdName,
-        @Nullable String vhdType) {
-        this.diskEncryptionSetId = diskEncryptionSetId;
-        this.diskId = diskId;
-        this.lunId = lunId;
-        this.maxSizeMB = maxSizeMB;
-        this.targetDiskLocation = targetDiskLocation;
-        this.targetDiskName = targetDiskName;
-        this.vhdId = vhdId;
-        this.vhdName = vhdName;
-        this.vhdType = vhdType;
-    }
+    private AzureVmDiskDetailsResponse() {}
 
-    private AzureVmDiskDetailsResponse() {
-        this.diskEncryptionSetId = null;
-        this.diskId = null;
-        this.lunId = null;
-        this.maxSizeMB = null;
-        this.targetDiskLocation = null;
-        this.targetDiskName = null;
-        this.vhdId = null;
-        this.vhdName = null;
-        this.vhdType = null;
+    private AzureVmDiskDetailsResponse(AzureVmDiskDetailsResponse $) {
+        this.diskEncryptionSetId = $.diskEncryptionSetId;
+        this.diskId = $.diskId;
+        this.lunId = $.lunId;
+        this.maxSizeMB = $.maxSizeMB;
+        this.targetDiskLocation = $.targetDiskLocation;
+        this.targetDiskName = $.targetDiskName;
+        this.vhdId = $.vhdId;
+        this.vhdName = $.vhdName;
+        this.vhdType = $.vhdType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AzureVmDiskDetailsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String diskEncryptionSetId;
-        private @Nullable String diskId;
-        private @Nullable String lunId;
-        private @Nullable String maxSizeMB;
-        private @Nullable String targetDiskLocation;
-        private @Nullable String targetDiskName;
-        private @Nullable String vhdId;
-        private @Nullable String vhdName;
-        private @Nullable String vhdType;
+        private AzureVmDiskDetailsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AzureVmDiskDetailsResponse();
         }
 
         public Builder(AzureVmDiskDetailsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.diskEncryptionSetId = defaults.diskEncryptionSetId;
-    	      this.diskId = defaults.diskId;
-    	      this.lunId = defaults.lunId;
-    	      this.maxSizeMB = defaults.maxSizeMB;
-    	      this.targetDiskLocation = defaults.targetDiskLocation;
-    	      this.targetDiskName = defaults.targetDiskName;
-    	      this.vhdId = defaults.vhdId;
-    	      this.vhdName = defaults.vhdName;
-    	      this.vhdType = defaults.vhdType;
+            $ = new AzureVmDiskDetailsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder diskEncryptionSetId(@Nullable String diskEncryptionSetId) {
-            this.diskEncryptionSetId = diskEncryptionSetId;
+            $.diskEncryptionSetId = diskEncryptionSetId;
             return this;
         }
+
         public Builder diskId(@Nullable String diskId) {
-            this.diskId = diskId;
+            $.diskId = diskId;
             return this;
         }
+
         public Builder lunId(@Nullable String lunId) {
-            this.lunId = lunId;
+            $.lunId = lunId;
             return this;
         }
+
         public Builder maxSizeMB(@Nullable String maxSizeMB) {
-            this.maxSizeMB = maxSizeMB;
+            $.maxSizeMB = maxSizeMB;
             return this;
         }
+
         public Builder targetDiskLocation(@Nullable String targetDiskLocation) {
-            this.targetDiskLocation = targetDiskLocation;
+            $.targetDiskLocation = targetDiskLocation;
             return this;
         }
+
         public Builder targetDiskName(@Nullable String targetDiskName) {
-            this.targetDiskName = targetDiskName;
+            $.targetDiskName = targetDiskName;
             return this;
         }
+
         public Builder vhdId(@Nullable String vhdId) {
-            this.vhdId = vhdId;
+            $.vhdId = vhdId;
             return this;
         }
+
         public Builder vhdName(@Nullable String vhdName) {
-            this.vhdName = vhdName;
+            $.vhdName = vhdName;
             return this;
         }
+
         public Builder vhdType(@Nullable String vhdType) {
-            this.vhdType = vhdType;
+            $.vhdType = vhdType;
             return this;
-        }        public AzureVmDiskDetailsResponse build() {
-            return new AzureVmDiskDetailsResponse(diskEncryptionSetId, diskId, lunId, maxSizeMB, targetDiskLocation, targetDiskName, vhdId, vhdName, vhdType);
+        }
+
+        public AzureVmDiskDetailsResponse build() {
+            return $;
         }
     }
+
 }

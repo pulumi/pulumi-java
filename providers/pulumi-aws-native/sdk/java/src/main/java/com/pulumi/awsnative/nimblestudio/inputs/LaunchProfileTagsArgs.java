@@ -3,35 +3,26 @@
 
 package com.pulumi.awsnative.nimblestudio.inputs;
 
-import java.util.Objects;
+
 
 
 public final class LaunchProfileTagsArgs extends com.pulumi.resources.ResourceArgs {
 
     public static final LaunchProfileTagsArgs Empty = new LaunchProfileTagsArgs();
 
-    public LaunchProfileTagsArgs() {
-    }
-
     public static Builder builder() {
         return new Builder();
     }
 
-    public static Builder builder(LaunchProfileTagsArgs defaults) {
-        return new Builder(defaults);
-    }
-
     public static final class Builder {
+        private LaunchProfileTagsArgs $;
 
         public Builder() {
-    	      // Empty
-        }
-
-        public Builder(LaunchProfileTagsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
+            $ = new LaunchProfileTagsArgs();
         }
         public LaunchProfileTagsArgs build() {
-            return new LaunchProfileTagsArgs();
+            return $;
         }
     }
+
 }

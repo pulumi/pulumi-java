@@ -22,10 +22,10 @@ public final class GetNetworkAclsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="filters")
-      private final @Nullable List<GetNetworkAclsFilter> filters;
+    private @Nullable List<GetNetworkAclsFilter> filters;
 
-    public List<GetNetworkAclsFilter> filters() {
-        return this.filters == null ? List.of() : this.filters;
+    public Optional<List<GetNetworkAclsFilter>> filters() {
+        return Optional.ofNullable(this.filters);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class GetNetworkAclsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Map<String,String> tags;
+    private @Nullable Map<String,String> tags;
 
-    public Map<String,String> tags() {
-        return this.tags == null ? Map.of() : this.tags;
+    public Optional<Map<String,String>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -45,67 +45,60 @@ public final class GetNetworkAclsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="vpcId")
-      private final @Nullable String vpcId;
+    private @Nullable String vpcId;
 
     public Optional<String> vpcId() {
-        return this.vpcId == null ? Optional.empty() : Optional.ofNullable(this.vpcId);
+        return Optional.ofNullable(this.vpcId);
     }
 
-    public GetNetworkAclsArgs(
-        @Nullable List<GetNetworkAclsFilter> filters,
-        @Nullable Map<String,String> tags,
-        @Nullable String vpcId) {
-        this.filters = filters;
-        this.tags = tags;
-        this.vpcId = vpcId;
-    }
+    private GetNetworkAclsArgs() {}
 
-    private GetNetworkAclsArgs() {
-        this.filters = List.of();
-        this.tags = Map.of();
-        this.vpcId = null;
+    private GetNetworkAclsArgs(GetNetworkAclsArgs $) {
+        this.filters = $.filters;
+        this.tags = $.tags;
+        this.vpcId = $.vpcId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetNetworkAclsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<GetNetworkAclsFilter> filters;
-        private @Nullable Map<String,String> tags;
-        private @Nullable String vpcId;
+        private GetNetworkAclsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetNetworkAclsArgs();
         }
 
         public Builder(GetNetworkAclsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.filters = defaults.filters;
-    	      this.tags = defaults.tags;
-    	      this.vpcId = defaults.vpcId;
+            $ = new GetNetworkAclsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder filters(@Nullable List<GetNetworkAclsFilter> filters) {
-            this.filters = filters;
+            $.filters = filters;
             return this;
         }
+
         public Builder filters(GetNetworkAclsFilter... filters) {
             return filters(List.of(filters));
         }
+
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
+
         public Builder vpcId(@Nullable String vpcId) {
-            this.vpcId = vpcId;
+            $.vpcId = vpcId;
             return this;
-        }        public GetNetworkAclsArgs build() {
-            return new GetNetworkAclsArgs(filters, tags, vpcId);
+        }
+
+        public GetNetworkAclsArgs build() {
+            return $;
         }
     }
+
 }

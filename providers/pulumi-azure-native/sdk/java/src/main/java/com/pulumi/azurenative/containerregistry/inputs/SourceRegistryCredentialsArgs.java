@@ -7,9 +7,9 @@ import com.pulumi.azurenative.containerregistry.enums.SourceRegistryLoginMode;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -28,49 +28,48 @@ public final class SourceRegistryCredentialsArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="loginMode")
-      private final @Nullable Output<Either<String,SourceRegistryLoginMode>> loginMode;
+    private @Nullable Output<Either<String,SourceRegistryLoginMode>> loginMode;
 
-    public Output<Either<String,SourceRegistryLoginMode>> loginMode() {
-        return this.loginMode == null ? Codegen.empty() : this.loginMode;
+    public Optional<Output<Either<String,SourceRegistryLoginMode>>> loginMode() {
+        return Optional.ofNullable(this.loginMode);
     }
 
-    public SourceRegistryCredentialsArgs(@Nullable Output<Either<String,SourceRegistryLoginMode>> loginMode) {
-        this.loginMode = loginMode;
-    }
+    private SourceRegistryCredentialsArgs() {}
 
-    private SourceRegistryCredentialsArgs() {
-        this.loginMode = Codegen.empty();
+    private SourceRegistryCredentialsArgs(SourceRegistryCredentialsArgs $) {
+        this.loginMode = $.loginMode;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SourceRegistryCredentialsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Either<String,SourceRegistryLoginMode>> loginMode;
+        private SourceRegistryCredentialsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SourceRegistryCredentialsArgs();
         }
 
         public Builder(SourceRegistryCredentialsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.loginMode = defaults.loginMode;
+            $ = new SourceRegistryCredentialsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder loginMode(@Nullable Output<Either<String,SourceRegistryLoginMode>> loginMode) {
-            this.loginMode = loginMode;
+            $.loginMode = loginMode;
             return this;
         }
-        public Builder loginMode(@Nullable Either<String,SourceRegistryLoginMode> loginMode) {
-            this.loginMode = Codegen.ofNullable(loginMode);
-            return this;
-        }        public SourceRegistryCredentialsArgs build() {
-            return new SourceRegistryCredentialsArgs(loginMode);
+
+        public Builder loginMode(Either<String,SourceRegistryLoginMode> loginMode) {
+            return loginMode(Output.of(loginMode));
+        }
+
+        public SourceRegistryCredentialsArgs build() {
+            return $;
         }
     }
+
 }

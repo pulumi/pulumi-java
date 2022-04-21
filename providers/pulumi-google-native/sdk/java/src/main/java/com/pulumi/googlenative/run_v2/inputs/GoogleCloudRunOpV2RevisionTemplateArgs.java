@@ -5,7 +5,6 @@ package com.pulumi.googlenative.run_v2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.run_v2.enums.GoogleCloudRunOpV2RevisionTemplateExecutionEnvironment;
 import com.pulumi.googlenative.run_v2.inputs.GoogleCloudRunOpV2ContainerArgs;
 import com.pulumi.googlenative.run_v2.inputs.GoogleCloudRunOpV2RevisionScalingArgs;
@@ -17,6 +16,7 @@ import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -33,10 +33,10 @@ public final class GoogleCloudRunOpV2RevisionTemplateArgs extends com.pulumi.res
      * 
      */
     @Import(name="annotations")
-      private final @Nullable Output<Map<String,String>> annotations;
+    private @Nullable Output<Map<String,String>> annotations;
 
-    public Output<Map<String,String>> annotations() {
-        return this.annotations == null ? Codegen.empty() : this.annotations;
+    public Optional<Output<Map<String,String>>> annotations() {
+        return Optional.ofNullable(this.annotations);
     }
 
     /**
@@ -44,10 +44,10 @@ public final class GoogleCloudRunOpV2RevisionTemplateArgs extends com.pulumi.res
      * 
      */
     @Import(name="confidential")
-      private final @Nullable Output<Boolean> confidential;
+    private @Nullable Output<Boolean> confidential;
 
-    public Output<Boolean> confidential() {
-        return this.confidential == null ? Codegen.empty() : this.confidential;
+    public Optional<Output<Boolean>> confidential() {
+        return Optional.ofNullable(this.confidential);
     }
 
     /**
@@ -55,10 +55,10 @@ public final class GoogleCloudRunOpV2RevisionTemplateArgs extends com.pulumi.res
      * 
      */
     @Import(name="containerConcurrency")
-      private final @Nullable Output<Integer> containerConcurrency;
+    private @Nullable Output<Integer> containerConcurrency;
 
-    public Output<Integer> containerConcurrency() {
-        return this.containerConcurrency == null ? Codegen.empty() : this.containerConcurrency;
+    public Optional<Output<Integer>> containerConcurrency() {
+        return Optional.ofNullable(this.containerConcurrency);
     }
 
     /**
@@ -66,10 +66,10 @@ public final class GoogleCloudRunOpV2RevisionTemplateArgs extends com.pulumi.res
      * 
      */
     @Import(name="containers")
-      private final @Nullable Output<List<GoogleCloudRunOpV2ContainerArgs>> containers;
+    private @Nullable Output<List<GoogleCloudRunOpV2ContainerArgs>> containers;
 
-    public Output<List<GoogleCloudRunOpV2ContainerArgs>> containers() {
-        return this.containers == null ? Codegen.empty() : this.containers;
+    public Optional<Output<List<GoogleCloudRunOpV2ContainerArgs>>> containers() {
+        return Optional.ofNullable(this.containers);
     }
 
     /**
@@ -77,10 +77,10 @@ public final class GoogleCloudRunOpV2RevisionTemplateArgs extends com.pulumi.res
      * 
      */
     @Import(name="encryptionKey")
-      private final @Nullable Output<String> encryptionKey;
+    private @Nullable Output<String> encryptionKey;
 
-    public Output<String> encryptionKey() {
-        return this.encryptionKey == null ? Codegen.empty() : this.encryptionKey;
+    public Optional<Output<String>> encryptionKey() {
+        return Optional.ofNullable(this.encryptionKey);
     }
 
     /**
@@ -88,10 +88,10 @@ public final class GoogleCloudRunOpV2RevisionTemplateArgs extends com.pulumi.res
      * 
      */
     @Import(name="executionEnvironment")
-      private final @Nullable Output<GoogleCloudRunOpV2RevisionTemplateExecutionEnvironment> executionEnvironment;
+    private @Nullable Output<GoogleCloudRunOpV2RevisionTemplateExecutionEnvironment> executionEnvironment;
 
-    public Output<GoogleCloudRunOpV2RevisionTemplateExecutionEnvironment> executionEnvironment() {
-        return this.executionEnvironment == null ? Codegen.empty() : this.executionEnvironment;
+    public Optional<Output<GoogleCloudRunOpV2RevisionTemplateExecutionEnvironment>> executionEnvironment() {
+        return Optional.ofNullable(this.executionEnvironment);
     }
 
     /**
@@ -99,10 +99,10 @@ public final class GoogleCloudRunOpV2RevisionTemplateArgs extends com.pulumi.res
      * 
      */
     @Import(name="labels")
-      private final @Nullable Output<Map<String,String>> labels;
+    private @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> labels() {
-        return this.labels == null ? Codegen.empty() : this.labels;
+    public Optional<Output<Map<String,String>>> labels() {
+        return Optional.ofNullable(this.labels);
     }
 
     /**
@@ -110,10 +110,10 @@ public final class GoogleCloudRunOpV2RevisionTemplateArgs extends com.pulumi.res
      * 
      */
     @Import(name="revision")
-      private final @Nullable Output<String> revision;
+    private @Nullable Output<String> revision;
 
-    public Output<String> revision() {
-        return this.revision == null ? Codegen.empty() : this.revision;
+    public Optional<Output<String>> revision() {
+        return Optional.ofNullable(this.revision);
     }
 
     /**
@@ -121,10 +121,10 @@ public final class GoogleCloudRunOpV2RevisionTemplateArgs extends com.pulumi.res
      * 
      */
     @Import(name="scaling")
-      private final @Nullable Output<GoogleCloudRunOpV2RevisionScalingArgs> scaling;
+    private @Nullable Output<GoogleCloudRunOpV2RevisionScalingArgs> scaling;
 
-    public Output<GoogleCloudRunOpV2RevisionScalingArgs> scaling() {
-        return this.scaling == null ? Codegen.empty() : this.scaling;
+    public Optional<Output<GoogleCloudRunOpV2RevisionScalingArgs>> scaling() {
+        return Optional.ofNullable(this.scaling);
     }
 
     /**
@@ -132,10 +132,10 @@ public final class GoogleCloudRunOpV2RevisionTemplateArgs extends com.pulumi.res
      * 
      */
     @Import(name="serviceAccount")
-      private final @Nullable Output<String> serviceAccount;
+    private @Nullable Output<String> serviceAccount;
 
-    public Output<String> serviceAccount() {
-        return this.serviceAccount == null ? Codegen.empty() : this.serviceAccount;
+    public Optional<Output<String>> serviceAccount() {
+        return Optional.ofNullable(this.serviceAccount);
     }
 
     /**
@@ -143,10 +143,10 @@ public final class GoogleCloudRunOpV2RevisionTemplateArgs extends com.pulumi.res
      * 
      */
     @Import(name="timeout")
-      private final @Nullable Output<String> timeout;
+    private @Nullable Output<String> timeout;
 
-    public Output<String> timeout() {
-        return this.timeout == null ? Codegen.empty() : this.timeout;
+    public Optional<Output<String>> timeout() {
+        return Optional.ofNullable(this.timeout);
     }
 
     /**
@@ -154,10 +154,10 @@ public final class GoogleCloudRunOpV2RevisionTemplateArgs extends com.pulumi.res
      * 
      */
     @Import(name="volumes")
-      private final @Nullable Output<List<GoogleCloudRunOpV2VolumeArgs>> volumes;
+    private @Nullable Output<List<GoogleCloudRunOpV2VolumeArgs>> volumes;
 
-    public Output<List<GoogleCloudRunOpV2VolumeArgs>> volumes() {
-        return this.volumes == null ? Codegen.empty() : this.volumes;
+    public Optional<Output<List<GoogleCloudRunOpV2VolumeArgs>>> volumes() {
+        return Optional.ofNullable(this.volumes);
     }
 
     /**
@@ -165,212 +165,176 @@ public final class GoogleCloudRunOpV2RevisionTemplateArgs extends com.pulumi.res
      * 
      */
     @Import(name="vpcAccess")
-      private final @Nullable Output<GoogleCloudRunOpV2VpcAccessArgs> vpcAccess;
+    private @Nullable Output<GoogleCloudRunOpV2VpcAccessArgs> vpcAccess;
 
-    public Output<GoogleCloudRunOpV2VpcAccessArgs> vpcAccess() {
-        return this.vpcAccess == null ? Codegen.empty() : this.vpcAccess;
+    public Optional<Output<GoogleCloudRunOpV2VpcAccessArgs>> vpcAccess() {
+        return Optional.ofNullable(this.vpcAccess);
     }
 
-    public GoogleCloudRunOpV2RevisionTemplateArgs(
-        @Nullable Output<Map<String,String>> annotations,
-        @Nullable Output<Boolean> confidential,
-        @Nullable Output<Integer> containerConcurrency,
-        @Nullable Output<List<GoogleCloudRunOpV2ContainerArgs>> containers,
-        @Nullable Output<String> encryptionKey,
-        @Nullable Output<GoogleCloudRunOpV2RevisionTemplateExecutionEnvironment> executionEnvironment,
-        @Nullable Output<Map<String,String>> labels,
-        @Nullable Output<String> revision,
-        @Nullable Output<GoogleCloudRunOpV2RevisionScalingArgs> scaling,
-        @Nullable Output<String> serviceAccount,
-        @Nullable Output<String> timeout,
-        @Nullable Output<List<GoogleCloudRunOpV2VolumeArgs>> volumes,
-        @Nullable Output<GoogleCloudRunOpV2VpcAccessArgs> vpcAccess) {
-        this.annotations = annotations;
-        this.confidential = confidential;
-        this.containerConcurrency = containerConcurrency;
-        this.containers = containers;
-        this.encryptionKey = encryptionKey;
-        this.executionEnvironment = executionEnvironment;
-        this.labels = labels;
-        this.revision = revision;
-        this.scaling = scaling;
-        this.serviceAccount = serviceAccount;
-        this.timeout = timeout;
-        this.volumes = volumes;
-        this.vpcAccess = vpcAccess;
-    }
+    private GoogleCloudRunOpV2RevisionTemplateArgs() {}
 
-    private GoogleCloudRunOpV2RevisionTemplateArgs() {
-        this.annotations = Codegen.empty();
-        this.confidential = Codegen.empty();
-        this.containerConcurrency = Codegen.empty();
-        this.containers = Codegen.empty();
-        this.encryptionKey = Codegen.empty();
-        this.executionEnvironment = Codegen.empty();
-        this.labels = Codegen.empty();
-        this.revision = Codegen.empty();
-        this.scaling = Codegen.empty();
-        this.serviceAccount = Codegen.empty();
-        this.timeout = Codegen.empty();
-        this.volumes = Codegen.empty();
-        this.vpcAccess = Codegen.empty();
+    private GoogleCloudRunOpV2RevisionTemplateArgs(GoogleCloudRunOpV2RevisionTemplateArgs $) {
+        this.annotations = $.annotations;
+        this.confidential = $.confidential;
+        this.containerConcurrency = $.containerConcurrency;
+        this.containers = $.containers;
+        this.encryptionKey = $.encryptionKey;
+        this.executionEnvironment = $.executionEnvironment;
+        this.labels = $.labels;
+        this.revision = $.revision;
+        this.scaling = $.scaling;
+        this.serviceAccount = $.serviceAccount;
+        this.timeout = $.timeout;
+        this.volumes = $.volumes;
+        this.vpcAccess = $.vpcAccess;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudRunOpV2RevisionTemplateArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Map<String,String>> annotations;
-        private @Nullable Output<Boolean> confidential;
-        private @Nullable Output<Integer> containerConcurrency;
-        private @Nullable Output<List<GoogleCloudRunOpV2ContainerArgs>> containers;
-        private @Nullable Output<String> encryptionKey;
-        private @Nullable Output<GoogleCloudRunOpV2RevisionTemplateExecutionEnvironment> executionEnvironment;
-        private @Nullable Output<Map<String,String>> labels;
-        private @Nullable Output<String> revision;
-        private @Nullable Output<GoogleCloudRunOpV2RevisionScalingArgs> scaling;
-        private @Nullable Output<String> serviceAccount;
-        private @Nullable Output<String> timeout;
-        private @Nullable Output<List<GoogleCloudRunOpV2VolumeArgs>> volumes;
-        private @Nullable Output<GoogleCloudRunOpV2VpcAccessArgs> vpcAccess;
+        private GoogleCloudRunOpV2RevisionTemplateArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudRunOpV2RevisionTemplateArgs();
         }
 
         public Builder(GoogleCloudRunOpV2RevisionTemplateArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.annotations = defaults.annotations;
-    	      this.confidential = defaults.confidential;
-    	      this.containerConcurrency = defaults.containerConcurrency;
-    	      this.containers = defaults.containers;
-    	      this.encryptionKey = defaults.encryptionKey;
-    	      this.executionEnvironment = defaults.executionEnvironment;
-    	      this.labels = defaults.labels;
-    	      this.revision = defaults.revision;
-    	      this.scaling = defaults.scaling;
-    	      this.serviceAccount = defaults.serviceAccount;
-    	      this.timeout = defaults.timeout;
-    	      this.volumes = defaults.volumes;
-    	      this.vpcAccess = defaults.vpcAccess;
+            $ = new GoogleCloudRunOpV2RevisionTemplateArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder annotations(@Nullable Output<Map<String,String>> annotations) {
-            this.annotations = annotations;
+            $.annotations = annotations;
             return this;
         }
-        public Builder annotations(@Nullable Map<String,String> annotations) {
-            this.annotations = Codegen.ofNullable(annotations);
-            return this;
+
+        public Builder annotations(Map<String,String> annotations) {
+            return annotations(Output.of(annotations));
         }
+
         public Builder confidential(@Nullable Output<Boolean> confidential) {
-            this.confidential = confidential;
+            $.confidential = confidential;
             return this;
         }
-        public Builder confidential(@Nullable Boolean confidential) {
-            this.confidential = Codegen.ofNullable(confidential);
-            return this;
+
+        public Builder confidential(Boolean confidential) {
+            return confidential(Output.of(confidential));
         }
+
         public Builder containerConcurrency(@Nullable Output<Integer> containerConcurrency) {
-            this.containerConcurrency = containerConcurrency;
+            $.containerConcurrency = containerConcurrency;
             return this;
         }
-        public Builder containerConcurrency(@Nullable Integer containerConcurrency) {
-            this.containerConcurrency = Codegen.ofNullable(containerConcurrency);
-            return this;
+
+        public Builder containerConcurrency(Integer containerConcurrency) {
+            return containerConcurrency(Output.of(containerConcurrency));
         }
+
         public Builder containers(@Nullable Output<List<GoogleCloudRunOpV2ContainerArgs>> containers) {
-            this.containers = containers;
+            $.containers = containers;
             return this;
         }
-        public Builder containers(@Nullable List<GoogleCloudRunOpV2ContainerArgs> containers) {
-            this.containers = Codegen.ofNullable(containers);
-            return this;
+
+        public Builder containers(List<GoogleCloudRunOpV2ContainerArgs> containers) {
+            return containers(Output.of(containers));
         }
+
         public Builder containers(GoogleCloudRunOpV2ContainerArgs... containers) {
             return containers(List.of(containers));
         }
+
         public Builder encryptionKey(@Nullable Output<String> encryptionKey) {
-            this.encryptionKey = encryptionKey;
+            $.encryptionKey = encryptionKey;
             return this;
         }
-        public Builder encryptionKey(@Nullable String encryptionKey) {
-            this.encryptionKey = Codegen.ofNullable(encryptionKey);
-            return this;
+
+        public Builder encryptionKey(String encryptionKey) {
+            return encryptionKey(Output.of(encryptionKey));
         }
+
         public Builder executionEnvironment(@Nullable Output<GoogleCloudRunOpV2RevisionTemplateExecutionEnvironment> executionEnvironment) {
-            this.executionEnvironment = executionEnvironment;
+            $.executionEnvironment = executionEnvironment;
             return this;
         }
-        public Builder executionEnvironment(@Nullable GoogleCloudRunOpV2RevisionTemplateExecutionEnvironment executionEnvironment) {
-            this.executionEnvironment = Codegen.ofNullable(executionEnvironment);
-            return this;
+
+        public Builder executionEnvironment(GoogleCloudRunOpV2RevisionTemplateExecutionEnvironment executionEnvironment) {
+            return executionEnvironment(Output.of(executionEnvironment));
         }
+
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
-            this.labels = labels;
+            $.labels = labels;
             return this;
         }
-        public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Codegen.ofNullable(labels);
-            return this;
+
+        public Builder labels(Map<String,String> labels) {
+            return labels(Output.of(labels));
         }
+
         public Builder revision(@Nullable Output<String> revision) {
-            this.revision = revision;
+            $.revision = revision;
             return this;
         }
-        public Builder revision(@Nullable String revision) {
-            this.revision = Codegen.ofNullable(revision);
-            return this;
+
+        public Builder revision(String revision) {
+            return revision(Output.of(revision));
         }
+
         public Builder scaling(@Nullable Output<GoogleCloudRunOpV2RevisionScalingArgs> scaling) {
-            this.scaling = scaling;
+            $.scaling = scaling;
             return this;
         }
-        public Builder scaling(@Nullable GoogleCloudRunOpV2RevisionScalingArgs scaling) {
-            this.scaling = Codegen.ofNullable(scaling);
-            return this;
+
+        public Builder scaling(GoogleCloudRunOpV2RevisionScalingArgs scaling) {
+            return scaling(Output.of(scaling));
         }
+
         public Builder serviceAccount(@Nullable Output<String> serviceAccount) {
-            this.serviceAccount = serviceAccount;
+            $.serviceAccount = serviceAccount;
             return this;
         }
-        public Builder serviceAccount(@Nullable String serviceAccount) {
-            this.serviceAccount = Codegen.ofNullable(serviceAccount);
-            return this;
+
+        public Builder serviceAccount(String serviceAccount) {
+            return serviceAccount(Output.of(serviceAccount));
         }
+
         public Builder timeout(@Nullable Output<String> timeout) {
-            this.timeout = timeout;
+            $.timeout = timeout;
             return this;
         }
-        public Builder timeout(@Nullable String timeout) {
-            this.timeout = Codegen.ofNullable(timeout);
-            return this;
+
+        public Builder timeout(String timeout) {
+            return timeout(Output.of(timeout));
         }
+
         public Builder volumes(@Nullable Output<List<GoogleCloudRunOpV2VolumeArgs>> volumes) {
-            this.volumes = volumes;
+            $.volumes = volumes;
             return this;
         }
-        public Builder volumes(@Nullable List<GoogleCloudRunOpV2VolumeArgs> volumes) {
-            this.volumes = Codegen.ofNullable(volumes);
-            return this;
+
+        public Builder volumes(List<GoogleCloudRunOpV2VolumeArgs> volumes) {
+            return volumes(Output.of(volumes));
         }
+
         public Builder volumes(GoogleCloudRunOpV2VolumeArgs... volumes) {
             return volumes(List.of(volumes));
         }
+
         public Builder vpcAccess(@Nullable Output<GoogleCloudRunOpV2VpcAccessArgs> vpcAccess) {
-            this.vpcAccess = vpcAccess;
+            $.vpcAccess = vpcAccess;
             return this;
         }
-        public Builder vpcAccess(@Nullable GoogleCloudRunOpV2VpcAccessArgs vpcAccess) {
-            this.vpcAccess = Codegen.ofNullable(vpcAccess);
-            return this;
-        }        public GoogleCloudRunOpV2RevisionTemplateArgs build() {
-            return new GoogleCloudRunOpV2RevisionTemplateArgs(annotations, confidential, containerConcurrency, containers, encryptionKey, executionEnvironment, labels, revision, scaling, serviceAccount, timeout, volumes, vpcAccess);
+
+        public Builder vpcAccess(GoogleCloudRunOpV2VpcAccessArgs vpcAccess) {
+            return vpcAccess(Output.of(vpcAccess));
+        }
+
+        public GoogleCloudRunOpV2RevisionTemplateArgs build() {
+            return $;
         }
     }
+
 }

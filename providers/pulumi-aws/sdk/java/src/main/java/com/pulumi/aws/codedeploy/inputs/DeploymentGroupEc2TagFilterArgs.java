@@ -5,9 +5,9 @@ package com.pulumi.aws.codedeploy.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class DeploymentGroupEc2TagFilterArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="key")
-      private final @Nullable Output<String> key;
+    private @Nullable Output<String> key;
 
-    public Output<String> key() {
-        return this.key == null ? Codegen.empty() : this.key;
+    public Optional<Output<String>> key() {
+        return Optional.ofNullable(this.key);
     }
 
     /**
@@ -31,10 +31,10 @@ public final class DeploymentGroupEc2TagFilterArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="type")
-      private final @Nullable Output<String> type;
+    private @Nullable Output<String> type;
 
-    public Output<String> type() {
-        return this.type == null ? Codegen.empty() : this.type;
+    public Optional<Output<String>> type() {
+        return Optional.ofNullable(this.type);
     }
 
     /**
@@ -42,76 +42,68 @@ public final class DeploymentGroupEc2TagFilterArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="value")
-      private final @Nullable Output<String> value;
+    private @Nullable Output<String> value;
 
-    public Output<String> value() {
-        return this.value == null ? Codegen.empty() : this.value;
+    public Optional<Output<String>> value() {
+        return Optional.ofNullable(this.value);
     }
 
-    public DeploymentGroupEc2TagFilterArgs(
-        @Nullable Output<String> key,
-        @Nullable Output<String> type,
-        @Nullable Output<String> value) {
-        this.key = key;
-        this.type = type;
-        this.value = value;
-    }
+    private DeploymentGroupEc2TagFilterArgs() {}
 
-    private DeploymentGroupEc2TagFilterArgs() {
-        this.key = Codegen.empty();
-        this.type = Codegen.empty();
-        this.value = Codegen.empty();
+    private DeploymentGroupEc2TagFilterArgs(DeploymentGroupEc2TagFilterArgs $) {
+        this.key = $.key;
+        this.type = $.type;
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DeploymentGroupEc2TagFilterArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> key;
-        private @Nullable Output<String> type;
-        private @Nullable Output<String> value;
+        private DeploymentGroupEc2TagFilterArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DeploymentGroupEc2TagFilterArgs();
         }
 
         public Builder(DeploymentGroupEc2TagFilterArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.key = defaults.key;
-    	      this.type = defaults.type;
-    	      this.value = defaults.value;
+            $ = new DeploymentGroupEc2TagFilterArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder key(@Nullable Output<String> key) {
-            this.key = key;
+            $.key = key;
             return this;
         }
-        public Builder key(@Nullable String key) {
-            this.key = Codegen.ofNullable(key);
-            return this;
+
+        public Builder key(String key) {
+            return key(Output.of(key));
         }
+
         public Builder type(@Nullable Output<String> type) {
-            this.type = type;
+            $.type = type;
             return this;
         }
-        public Builder type(@Nullable String type) {
-            this.type = Codegen.ofNullable(type);
-            return this;
+
+        public Builder type(String type) {
+            return type(Output.of(type));
         }
+
         public Builder value(@Nullable Output<String> value) {
-            this.value = value;
+            $.value = value;
             return this;
         }
-        public Builder value(@Nullable String value) {
-            this.value = Codegen.ofNullable(value);
-            return this;
-        }        public DeploymentGroupEc2TagFilterArgs build() {
-            return new DeploymentGroupEc2TagFilterArgs(key, type, value);
+
+        public Builder value(String value) {
+            return value(Output.of(value));
+        }
+
+        public DeploymentGroupEc2TagFilterArgs build() {
+            return $;
         }
     }
+
 }

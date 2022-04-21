@@ -21,45 +21,45 @@ public final class GoogleCloudDatalabelingV1beta1EvaluationConfigResponse extend
      * 
      */
     @Import(name="boundingBoxEvaluationOptions", required=true)
-      private final GoogleCloudDatalabelingV1beta1BoundingBoxEvaluationOptionsResponse boundingBoxEvaluationOptions;
+    private GoogleCloudDatalabelingV1beta1BoundingBoxEvaluationOptionsResponse boundingBoxEvaluationOptions;
 
     public GoogleCloudDatalabelingV1beta1BoundingBoxEvaluationOptionsResponse boundingBoxEvaluationOptions() {
         return this.boundingBoxEvaluationOptions;
     }
 
-    public GoogleCloudDatalabelingV1beta1EvaluationConfigResponse(GoogleCloudDatalabelingV1beta1BoundingBoxEvaluationOptionsResponse boundingBoxEvaluationOptions) {
-        this.boundingBoxEvaluationOptions = Objects.requireNonNull(boundingBoxEvaluationOptions, "expected parameter 'boundingBoxEvaluationOptions' to be non-null");
-    }
+    private GoogleCloudDatalabelingV1beta1EvaluationConfigResponse() {}
 
-    private GoogleCloudDatalabelingV1beta1EvaluationConfigResponse() {
-        this.boundingBoxEvaluationOptions = null;
+    private GoogleCloudDatalabelingV1beta1EvaluationConfigResponse(GoogleCloudDatalabelingV1beta1EvaluationConfigResponse $) {
+        this.boundingBoxEvaluationOptions = $.boundingBoxEvaluationOptions;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudDatalabelingV1beta1EvaluationConfigResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private GoogleCloudDatalabelingV1beta1BoundingBoxEvaluationOptionsResponse boundingBoxEvaluationOptions;
+        private GoogleCloudDatalabelingV1beta1EvaluationConfigResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudDatalabelingV1beta1EvaluationConfigResponse();
         }
 
         public Builder(GoogleCloudDatalabelingV1beta1EvaluationConfigResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.boundingBoxEvaluationOptions = defaults.boundingBoxEvaluationOptions;
+            $ = new GoogleCloudDatalabelingV1beta1EvaluationConfigResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder boundingBoxEvaluationOptions(GoogleCloudDatalabelingV1beta1BoundingBoxEvaluationOptionsResponse boundingBoxEvaluationOptions) {
-            this.boundingBoxEvaluationOptions = Objects.requireNonNull(boundingBoxEvaluationOptions);
+            $.boundingBoxEvaluationOptions = boundingBoxEvaluationOptions;
             return this;
-        }        public GoogleCloudDatalabelingV1beta1EvaluationConfigResponse build() {
-            return new GoogleCloudDatalabelingV1beta1EvaluationConfigResponse(boundingBoxEvaluationOptions);
+        }
+
+        public GoogleCloudDatalabelingV1beta1EvaluationConfigResponse build() {
+            $.boundingBoxEvaluationOptions = Objects.requireNonNull($.boundingBoxEvaluationOptions, "expected parameter 'boundingBoxEvaluationOptions' to be non-null");
+            return $;
         }
     }
+
 }

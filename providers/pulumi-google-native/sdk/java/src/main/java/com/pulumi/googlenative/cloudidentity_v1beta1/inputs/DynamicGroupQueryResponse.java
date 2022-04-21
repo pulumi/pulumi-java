@@ -21,62 +21,59 @@ public final class DynamicGroupQueryResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="query", required=true)
-      private final String query;
+    private String query;
 
     public String query() {
         return this.query;
     }
 
     @Import(name="resourceType", required=true)
-      private final String resourceType;
+    private String resourceType;
 
     public String resourceType() {
         return this.resourceType;
     }
 
-    public DynamicGroupQueryResponse(
-        String query,
-        String resourceType) {
-        this.query = Objects.requireNonNull(query, "expected parameter 'query' to be non-null");
-        this.resourceType = Objects.requireNonNull(resourceType, "expected parameter 'resourceType' to be non-null");
-    }
+    private DynamicGroupQueryResponse() {}
 
-    private DynamicGroupQueryResponse() {
-        this.query = null;
-        this.resourceType = null;
+    private DynamicGroupQueryResponse(DynamicGroupQueryResponse $) {
+        this.query = $.query;
+        this.resourceType = $.resourceType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DynamicGroupQueryResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String query;
-        private String resourceType;
+        private DynamicGroupQueryResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new DynamicGroupQueryResponse();
         }
 
         public Builder(DynamicGroupQueryResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.query = defaults.query;
-    	      this.resourceType = defaults.resourceType;
+            $ = new DynamicGroupQueryResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder query(String query) {
-            this.query = Objects.requireNonNull(query);
+            $.query = query;
             return this;
         }
+
         public Builder resourceType(String resourceType) {
-            this.resourceType = Objects.requireNonNull(resourceType);
+            $.resourceType = resourceType;
             return this;
-        }        public DynamicGroupQueryResponse build() {
-            return new DynamicGroupQueryResponse(query, resourceType);
+        }
+
+        public DynamicGroupQueryResponse build() {
+            $.query = Objects.requireNonNull($.query, "expected parameter 'query' to be non-null");
+            $.resourceType = Objects.requireNonNull($.resourceType, "expected parameter 'resourceType' to be non-null");
+            return $;
         }
     }
+
 }

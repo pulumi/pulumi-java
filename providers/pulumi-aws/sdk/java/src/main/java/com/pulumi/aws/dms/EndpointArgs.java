@@ -10,11 +10,11 @@ import com.pulumi.aws.dms.inputs.EndpointMongodbSettingsArgs;
 import com.pulumi.aws.dms.inputs.EndpointS3SettingsArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +27,10 @@ public final class EndpointArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="certificateArn")
-      private final @Nullable Output<String> certificateArn;
+    private @Nullable Output<String> certificateArn;
 
-    public Output<String> certificateArn() {
-        return this.certificateArn == null ? Codegen.empty() : this.certificateArn;
+    public Optional<Output<String>> certificateArn() {
+        return Optional.ofNullable(this.certificateArn);
     }
 
     /**
@@ -38,10 +38,10 @@ public final class EndpointArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="databaseName")
-      private final @Nullable Output<String> databaseName;
+    private @Nullable Output<String> databaseName;
 
-    public Output<String> databaseName() {
-        return this.databaseName == null ? Codegen.empty() : this.databaseName;
+    public Optional<Output<String>> databaseName() {
+        return Optional.ofNullable(this.databaseName);
     }
 
     /**
@@ -49,10 +49,10 @@ public final class EndpointArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="elasticsearchSettings")
-      private final @Nullable Output<EndpointElasticsearchSettingsArgs> elasticsearchSettings;
+    private @Nullable Output<EndpointElasticsearchSettingsArgs> elasticsearchSettings;
 
-    public Output<EndpointElasticsearchSettingsArgs> elasticsearchSettings() {
-        return this.elasticsearchSettings == null ? Codegen.empty() : this.elasticsearchSettings;
+    public Optional<Output<EndpointElasticsearchSettingsArgs>> elasticsearchSettings() {
+        return Optional.ofNullable(this.elasticsearchSettings);
     }
 
     /**
@@ -60,7 +60,7 @@ public final class EndpointArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="endpointId", required=true)
-      private final Output<String> endpointId;
+    private Output<String> endpointId;
 
     public Output<String> endpointId() {
         return this.endpointId;
@@ -71,7 +71,7 @@ public final class EndpointArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="endpointType", required=true)
-      private final Output<String> endpointType;
+    private Output<String> endpointType;
 
     public Output<String> endpointType() {
         return this.endpointType;
@@ -82,7 +82,7 @@ public final class EndpointArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="engineName", required=true)
-      private final Output<String> engineName;
+    private Output<String> engineName;
 
     public Output<String> engineName() {
         return this.engineName;
@@ -93,10 +93,10 @@ public final class EndpointArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="extraConnectionAttributes")
-      private final @Nullable Output<String> extraConnectionAttributes;
+    private @Nullable Output<String> extraConnectionAttributes;
 
-    public Output<String> extraConnectionAttributes() {
-        return this.extraConnectionAttributes == null ? Codegen.empty() : this.extraConnectionAttributes;
+    public Optional<Output<String>> extraConnectionAttributes() {
+        return Optional.ofNullable(this.extraConnectionAttributes);
     }
 
     /**
@@ -104,10 +104,10 @@ public final class EndpointArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="kafkaSettings")
-      private final @Nullable Output<EndpointKafkaSettingsArgs> kafkaSettings;
+    private @Nullable Output<EndpointKafkaSettingsArgs> kafkaSettings;
 
-    public Output<EndpointKafkaSettingsArgs> kafkaSettings() {
-        return this.kafkaSettings == null ? Codegen.empty() : this.kafkaSettings;
+    public Optional<Output<EndpointKafkaSettingsArgs>> kafkaSettings() {
+        return Optional.ofNullable(this.kafkaSettings);
     }
 
     /**
@@ -115,10 +115,10 @@ public final class EndpointArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="kinesisSettings")
-      private final @Nullable Output<EndpointKinesisSettingsArgs> kinesisSettings;
+    private @Nullable Output<EndpointKinesisSettingsArgs> kinesisSettings;
 
-    public Output<EndpointKinesisSettingsArgs> kinesisSettings() {
-        return this.kinesisSettings == null ? Codegen.empty() : this.kinesisSettings;
+    public Optional<Output<EndpointKinesisSettingsArgs>> kinesisSettings() {
+        return Optional.ofNullable(this.kinesisSettings);
     }
 
     /**
@@ -126,10 +126,10 @@ public final class EndpointArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="kmsKeyArn")
-      private final @Nullable Output<String> kmsKeyArn;
+    private @Nullable Output<String> kmsKeyArn;
 
-    public Output<String> kmsKeyArn() {
-        return this.kmsKeyArn == null ? Codegen.empty() : this.kmsKeyArn;
+    public Optional<Output<String>> kmsKeyArn() {
+        return Optional.ofNullable(this.kmsKeyArn);
     }
 
     /**
@@ -137,10 +137,10 @@ public final class EndpointArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="mongodbSettings")
-      private final @Nullable Output<EndpointMongodbSettingsArgs> mongodbSettings;
+    private @Nullable Output<EndpointMongodbSettingsArgs> mongodbSettings;
 
-    public Output<EndpointMongodbSettingsArgs> mongodbSettings() {
-        return this.mongodbSettings == null ? Codegen.empty() : this.mongodbSettings;
+    public Optional<Output<EndpointMongodbSettingsArgs>> mongodbSettings() {
+        return Optional.ofNullable(this.mongodbSettings);
     }
 
     /**
@@ -148,10 +148,10 @@ public final class EndpointArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="password")
-      private final @Nullable Output<String> password;
+    private @Nullable Output<String> password;
 
-    public Output<String> password() {
-        return this.password == null ? Codegen.empty() : this.password;
+    public Optional<Output<String>> password() {
+        return Optional.ofNullable(this.password);
     }
 
     /**
@@ -159,10 +159,10 @@ public final class EndpointArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="port")
-      private final @Nullable Output<Integer> port;
+    private @Nullable Output<Integer> port;
 
-    public Output<Integer> port() {
-        return this.port == null ? Codegen.empty() : this.port;
+    public Optional<Output<Integer>> port() {
+        return Optional.ofNullable(this.port);
     }
 
     /**
@@ -170,10 +170,10 @@ public final class EndpointArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="s3Settings")
-      private final @Nullable Output<EndpointS3SettingsArgs> s3Settings;
+    private @Nullable Output<EndpointS3SettingsArgs> s3Settings;
 
-    public Output<EndpointS3SettingsArgs> s3Settings() {
-        return this.s3Settings == null ? Codegen.empty() : this.s3Settings;
+    public Optional<Output<EndpointS3SettingsArgs>> s3Settings() {
+        return Optional.ofNullable(this.s3Settings);
     }
 
     /**
@@ -181,10 +181,10 @@ public final class EndpointArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="secretsManagerAccessRoleArn")
-      private final @Nullable Output<String> secretsManagerAccessRoleArn;
+    private @Nullable Output<String> secretsManagerAccessRoleArn;
 
-    public Output<String> secretsManagerAccessRoleArn() {
-        return this.secretsManagerAccessRoleArn == null ? Codegen.empty() : this.secretsManagerAccessRoleArn;
+    public Optional<Output<String>> secretsManagerAccessRoleArn() {
+        return Optional.ofNullable(this.secretsManagerAccessRoleArn);
     }
 
     /**
@@ -192,10 +192,10 @@ public final class EndpointArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="secretsManagerArn")
-      private final @Nullable Output<String> secretsManagerArn;
+    private @Nullable Output<String> secretsManagerArn;
 
-    public Output<String> secretsManagerArn() {
-        return this.secretsManagerArn == null ? Codegen.empty() : this.secretsManagerArn;
+    public Optional<Output<String>> secretsManagerArn() {
+        return Optional.ofNullable(this.secretsManagerArn);
     }
 
     /**
@@ -203,10 +203,10 @@ public final class EndpointArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="serverName")
-      private final @Nullable Output<String> serverName;
+    private @Nullable Output<String> serverName;
 
-    public Output<String> serverName() {
-        return this.serverName == null ? Codegen.empty() : this.serverName;
+    public Optional<Output<String>> serverName() {
+        return Optional.ofNullable(this.serverName);
     }
 
     /**
@@ -214,10 +214,10 @@ public final class EndpointArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="serviceAccessRole")
-      private final @Nullable Output<String> serviceAccessRole;
+    private @Nullable Output<String> serviceAccessRole;
 
-    public Output<String> serviceAccessRole() {
-        return this.serviceAccessRole == null ? Codegen.empty() : this.serviceAccessRole;
+    public Optional<Output<String>> serviceAccessRole() {
+        return Optional.ofNullable(this.serviceAccessRole);
     }
 
     /**
@@ -225,10 +225,10 @@ public final class EndpointArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="sslMode")
-      private final @Nullable Output<String> sslMode;
+    private @Nullable Output<String> sslMode;
 
-    public Output<String> sslMode() {
-        return this.sslMode == null ? Codegen.empty() : this.sslMode;
+    public Optional<Output<String>> sslMode() {
+        return Optional.ofNullable(this.sslMode);
     }
 
     /**
@@ -236,10 +236,10 @@ public final class EndpointArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -247,310 +247,251 @@ public final class EndpointArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="username")
-      private final @Nullable Output<String> username;
+    private @Nullable Output<String> username;
 
-    public Output<String> username() {
-        return this.username == null ? Codegen.empty() : this.username;
+    public Optional<Output<String>> username() {
+        return Optional.ofNullable(this.username);
     }
 
-    public EndpointArgs(
-        @Nullable Output<String> certificateArn,
-        @Nullable Output<String> databaseName,
-        @Nullable Output<EndpointElasticsearchSettingsArgs> elasticsearchSettings,
-        Output<String> endpointId,
-        Output<String> endpointType,
-        Output<String> engineName,
-        @Nullable Output<String> extraConnectionAttributes,
-        @Nullable Output<EndpointKafkaSettingsArgs> kafkaSettings,
-        @Nullable Output<EndpointKinesisSettingsArgs> kinesisSettings,
-        @Nullable Output<String> kmsKeyArn,
-        @Nullable Output<EndpointMongodbSettingsArgs> mongodbSettings,
-        @Nullable Output<String> password,
-        @Nullable Output<Integer> port,
-        @Nullable Output<EndpointS3SettingsArgs> s3Settings,
-        @Nullable Output<String> secretsManagerAccessRoleArn,
-        @Nullable Output<String> secretsManagerArn,
-        @Nullable Output<String> serverName,
-        @Nullable Output<String> serviceAccessRole,
-        @Nullable Output<String> sslMode,
-        @Nullable Output<Map<String,String>> tags,
-        @Nullable Output<String> username) {
-        this.certificateArn = certificateArn;
-        this.databaseName = databaseName;
-        this.elasticsearchSettings = elasticsearchSettings;
-        this.endpointId = Objects.requireNonNull(endpointId, "expected parameter 'endpointId' to be non-null");
-        this.endpointType = Objects.requireNonNull(endpointType, "expected parameter 'endpointType' to be non-null");
-        this.engineName = Objects.requireNonNull(engineName, "expected parameter 'engineName' to be non-null");
-        this.extraConnectionAttributes = extraConnectionAttributes;
-        this.kafkaSettings = kafkaSettings;
-        this.kinesisSettings = kinesisSettings;
-        this.kmsKeyArn = kmsKeyArn;
-        this.mongodbSettings = mongodbSettings;
-        this.password = password;
-        this.port = port;
-        this.s3Settings = s3Settings;
-        this.secretsManagerAccessRoleArn = secretsManagerAccessRoleArn;
-        this.secretsManagerArn = secretsManagerArn;
-        this.serverName = serverName;
-        this.serviceAccessRole = serviceAccessRole;
-        this.sslMode = sslMode;
-        this.tags = tags;
-        this.username = username;
-    }
+    private EndpointArgs() {}
 
-    private EndpointArgs() {
-        this.certificateArn = Codegen.empty();
-        this.databaseName = Codegen.empty();
-        this.elasticsearchSettings = Codegen.empty();
-        this.endpointId = Codegen.empty();
-        this.endpointType = Codegen.empty();
-        this.engineName = Codegen.empty();
-        this.extraConnectionAttributes = Codegen.empty();
-        this.kafkaSettings = Codegen.empty();
-        this.kinesisSettings = Codegen.empty();
-        this.kmsKeyArn = Codegen.empty();
-        this.mongodbSettings = Codegen.empty();
-        this.password = Codegen.empty();
-        this.port = Codegen.empty();
-        this.s3Settings = Codegen.empty();
-        this.secretsManagerAccessRoleArn = Codegen.empty();
-        this.secretsManagerArn = Codegen.empty();
-        this.serverName = Codegen.empty();
-        this.serviceAccessRole = Codegen.empty();
-        this.sslMode = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.username = Codegen.empty();
+    private EndpointArgs(EndpointArgs $) {
+        this.certificateArn = $.certificateArn;
+        this.databaseName = $.databaseName;
+        this.elasticsearchSettings = $.elasticsearchSettings;
+        this.endpointId = $.endpointId;
+        this.endpointType = $.endpointType;
+        this.engineName = $.engineName;
+        this.extraConnectionAttributes = $.extraConnectionAttributes;
+        this.kafkaSettings = $.kafkaSettings;
+        this.kinesisSettings = $.kinesisSettings;
+        this.kmsKeyArn = $.kmsKeyArn;
+        this.mongodbSettings = $.mongodbSettings;
+        this.password = $.password;
+        this.port = $.port;
+        this.s3Settings = $.s3Settings;
+        this.secretsManagerAccessRoleArn = $.secretsManagerAccessRoleArn;
+        this.secretsManagerArn = $.secretsManagerArn;
+        this.serverName = $.serverName;
+        this.serviceAccessRole = $.serviceAccessRole;
+        this.sslMode = $.sslMode;
+        this.tags = $.tags;
+        this.username = $.username;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EndpointArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> certificateArn;
-        private @Nullable Output<String> databaseName;
-        private @Nullable Output<EndpointElasticsearchSettingsArgs> elasticsearchSettings;
-        private Output<String> endpointId;
-        private Output<String> endpointType;
-        private Output<String> engineName;
-        private @Nullable Output<String> extraConnectionAttributes;
-        private @Nullable Output<EndpointKafkaSettingsArgs> kafkaSettings;
-        private @Nullable Output<EndpointKinesisSettingsArgs> kinesisSettings;
-        private @Nullable Output<String> kmsKeyArn;
-        private @Nullable Output<EndpointMongodbSettingsArgs> mongodbSettings;
-        private @Nullable Output<String> password;
-        private @Nullable Output<Integer> port;
-        private @Nullable Output<EndpointS3SettingsArgs> s3Settings;
-        private @Nullable Output<String> secretsManagerAccessRoleArn;
-        private @Nullable Output<String> secretsManagerArn;
-        private @Nullable Output<String> serverName;
-        private @Nullable Output<String> serviceAccessRole;
-        private @Nullable Output<String> sslMode;
-        private @Nullable Output<Map<String,String>> tags;
-        private @Nullable Output<String> username;
+        private EndpointArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new EndpointArgs();
         }
 
         public Builder(EndpointArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.certificateArn = defaults.certificateArn;
-    	      this.databaseName = defaults.databaseName;
-    	      this.elasticsearchSettings = defaults.elasticsearchSettings;
-    	      this.endpointId = defaults.endpointId;
-    	      this.endpointType = defaults.endpointType;
-    	      this.engineName = defaults.engineName;
-    	      this.extraConnectionAttributes = defaults.extraConnectionAttributes;
-    	      this.kafkaSettings = defaults.kafkaSettings;
-    	      this.kinesisSettings = defaults.kinesisSettings;
-    	      this.kmsKeyArn = defaults.kmsKeyArn;
-    	      this.mongodbSettings = defaults.mongodbSettings;
-    	      this.password = defaults.password;
-    	      this.port = defaults.port;
-    	      this.s3Settings = defaults.s3Settings;
-    	      this.secretsManagerAccessRoleArn = defaults.secretsManagerAccessRoleArn;
-    	      this.secretsManagerArn = defaults.secretsManagerArn;
-    	      this.serverName = defaults.serverName;
-    	      this.serviceAccessRole = defaults.serviceAccessRole;
-    	      this.sslMode = defaults.sslMode;
-    	      this.tags = defaults.tags;
-    	      this.username = defaults.username;
+            $ = new EndpointArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder certificateArn(@Nullable Output<String> certificateArn) {
-            this.certificateArn = certificateArn;
+            $.certificateArn = certificateArn;
             return this;
         }
-        public Builder certificateArn(@Nullable String certificateArn) {
-            this.certificateArn = Codegen.ofNullable(certificateArn);
-            return this;
+
+        public Builder certificateArn(String certificateArn) {
+            return certificateArn(Output.of(certificateArn));
         }
+
         public Builder databaseName(@Nullable Output<String> databaseName) {
-            this.databaseName = databaseName;
+            $.databaseName = databaseName;
             return this;
         }
-        public Builder databaseName(@Nullable String databaseName) {
-            this.databaseName = Codegen.ofNullable(databaseName);
-            return this;
+
+        public Builder databaseName(String databaseName) {
+            return databaseName(Output.of(databaseName));
         }
+
         public Builder elasticsearchSettings(@Nullable Output<EndpointElasticsearchSettingsArgs> elasticsearchSettings) {
-            this.elasticsearchSettings = elasticsearchSettings;
+            $.elasticsearchSettings = elasticsearchSettings;
             return this;
         }
-        public Builder elasticsearchSettings(@Nullable EndpointElasticsearchSettingsArgs elasticsearchSettings) {
-            this.elasticsearchSettings = Codegen.ofNullable(elasticsearchSettings);
-            return this;
+
+        public Builder elasticsearchSettings(EndpointElasticsearchSettingsArgs elasticsearchSettings) {
+            return elasticsearchSettings(Output.of(elasticsearchSettings));
         }
+
         public Builder endpointId(Output<String> endpointId) {
-            this.endpointId = Objects.requireNonNull(endpointId);
+            $.endpointId = endpointId;
             return this;
         }
+
         public Builder endpointId(String endpointId) {
-            this.endpointId = Output.of(Objects.requireNonNull(endpointId));
-            return this;
+            return endpointId(Output.of(endpointId));
         }
+
         public Builder endpointType(Output<String> endpointType) {
-            this.endpointType = Objects.requireNonNull(endpointType);
+            $.endpointType = endpointType;
             return this;
         }
+
         public Builder endpointType(String endpointType) {
-            this.endpointType = Output.of(Objects.requireNonNull(endpointType));
-            return this;
+            return endpointType(Output.of(endpointType));
         }
+
         public Builder engineName(Output<String> engineName) {
-            this.engineName = Objects.requireNonNull(engineName);
+            $.engineName = engineName;
             return this;
         }
+
         public Builder engineName(String engineName) {
-            this.engineName = Output.of(Objects.requireNonNull(engineName));
-            return this;
+            return engineName(Output.of(engineName));
         }
+
         public Builder extraConnectionAttributes(@Nullable Output<String> extraConnectionAttributes) {
-            this.extraConnectionAttributes = extraConnectionAttributes;
+            $.extraConnectionAttributes = extraConnectionAttributes;
             return this;
         }
-        public Builder extraConnectionAttributes(@Nullable String extraConnectionAttributes) {
-            this.extraConnectionAttributes = Codegen.ofNullable(extraConnectionAttributes);
-            return this;
+
+        public Builder extraConnectionAttributes(String extraConnectionAttributes) {
+            return extraConnectionAttributes(Output.of(extraConnectionAttributes));
         }
+
         public Builder kafkaSettings(@Nullable Output<EndpointKafkaSettingsArgs> kafkaSettings) {
-            this.kafkaSettings = kafkaSettings;
+            $.kafkaSettings = kafkaSettings;
             return this;
         }
-        public Builder kafkaSettings(@Nullable EndpointKafkaSettingsArgs kafkaSettings) {
-            this.kafkaSettings = Codegen.ofNullable(kafkaSettings);
-            return this;
+
+        public Builder kafkaSettings(EndpointKafkaSettingsArgs kafkaSettings) {
+            return kafkaSettings(Output.of(kafkaSettings));
         }
+
         public Builder kinesisSettings(@Nullable Output<EndpointKinesisSettingsArgs> kinesisSettings) {
-            this.kinesisSettings = kinesisSettings;
+            $.kinesisSettings = kinesisSettings;
             return this;
         }
-        public Builder kinesisSettings(@Nullable EndpointKinesisSettingsArgs kinesisSettings) {
-            this.kinesisSettings = Codegen.ofNullable(kinesisSettings);
-            return this;
+
+        public Builder kinesisSettings(EndpointKinesisSettingsArgs kinesisSettings) {
+            return kinesisSettings(Output.of(kinesisSettings));
         }
+
         public Builder kmsKeyArn(@Nullable Output<String> kmsKeyArn) {
-            this.kmsKeyArn = kmsKeyArn;
+            $.kmsKeyArn = kmsKeyArn;
             return this;
         }
-        public Builder kmsKeyArn(@Nullable String kmsKeyArn) {
-            this.kmsKeyArn = Codegen.ofNullable(kmsKeyArn);
-            return this;
+
+        public Builder kmsKeyArn(String kmsKeyArn) {
+            return kmsKeyArn(Output.of(kmsKeyArn));
         }
+
         public Builder mongodbSettings(@Nullable Output<EndpointMongodbSettingsArgs> mongodbSettings) {
-            this.mongodbSettings = mongodbSettings;
+            $.mongodbSettings = mongodbSettings;
             return this;
         }
-        public Builder mongodbSettings(@Nullable EndpointMongodbSettingsArgs mongodbSettings) {
-            this.mongodbSettings = Codegen.ofNullable(mongodbSettings);
-            return this;
+
+        public Builder mongodbSettings(EndpointMongodbSettingsArgs mongodbSettings) {
+            return mongodbSettings(Output.of(mongodbSettings));
         }
+
         public Builder password(@Nullable Output<String> password) {
-            this.password = password;
+            $.password = password;
             return this;
         }
-        public Builder password(@Nullable String password) {
-            this.password = Codegen.ofNullable(password);
-            return this;
+
+        public Builder password(String password) {
+            return password(Output.of(password));
         }
+
         public Builder port(@Nullable Output<Integer> port) {
-            this.port = port;
+            $.port = port;
             return this;
         }
-        public Builder port(@Nullable Integer port) {
-            this.port = Codegen.ofNullable(port);
-            return this;
+
+        public Builder port(Integer port) {
+            return port(Output.of(port));
         }
+
         public Builder s3Settings(@Nullable Output<EndpointS3SettingsArgs> s3Settings) {
-            this.s3Settings = s3Settings;
+            $.s3Settings = s3Settings;
             return this;
         }
-        public Builder s3Settings(@Nullable EndpointS3SettingsArgs s3Settings) {
-            this.s3Settings = Codegen.ofNullable(s3Settings);
-            return this;
+
+        public Builder s3Settings(EndpointS3SettingsArgs s3Settings) {
+            return s3Settings(Output.of(s3Settings));
         }
+
         public Builder secretsManagerAccessRoleArn(@Nullable Output<String> secretsManagerAccessRoleArn) {
-            this.secretsManagerAccessRoleArn = secretsManagerAccessRoleArn;
+            $.secretsManagerAccessRoleArn = secretsManagerAccessRoleArn;
             return this;
         }
-        public Builder secretsManagerAccessRoleArn(@Nullable String secretsManagerAccessRoleArn) {
-            this.secretsManagerAccessRoleArn = Codegen.ofNullable(secretsManagerAccessRoleArn);
-            return this;
+
+        public Builder secretsManagerAccessRoleArn(String secretsManagerAccessRoleArn) {
+            return secretsManagerAccessRoleArn(Output.of(secretsManagerAccessRoleArn));
         }
+
         public Builder secretsManagerArn(@Nullable Output<String> secretsManagerArn) {
-            this.secretsManagerArn = secretsManagerArn;
+            $.secretsManagerArn = secretsManagerArn;
             return this;
         }
-        public Builder secretsManagerArn(@Nullable String secretsManagerArn) {
-            this.secretsManagerArn = Codegen.ofNullable(secretsManagerArn);
-            return this;
+
+        public Builder secretsManagerArn(String secretsManagerArn) {
+            return secretsManagerArn(Output.of(secretsManagerArn));
         }
+
         public Builder serverName(@Nullable Output<String> serverName) {
-            this.serverName = serverName;
+            $.serverName = serverName;
             return this;
         }
-        public Builder serverName(@Nullable String serverName) {
-            this.serverName = Codegen.ofNullable(serverName);
-            return this;
+
+        public Builder serverName(String serverName) {
+            return serverName(Output.of(serverName));
         }
+
         public Builder serviceAccessRole(@Nullable Output<String> serviceAccessRole) {
-            this.serviceAccessRole = serviceAccessRole;
+            $.serviceAccessRole = serviceAccessRole;
             return this;
         }
-        public Builder serviceAccessRole(@Nullable String serviceAccessRole) {
-            this.serviceAccessRole = Codegen.ofNullable(serviceAccessRole);
-            return this;
+
+        public Builder serviceAccessRole(String serviceAccessRole) {
+            return serviceAccessRole(Output.of(serviceAccessRole));
         }
+
         public Builder sslMode(@Nullable Output<String> sslMode) {
-            this.sslMode = sslMode;
+            $.sslMode = sslMode;
             return this;
         }
-        public Builder sslMode(@Nullable String sslMode) {
-            this.sslMode = Codegen.ofNullable(sslMode);
-            return this;
+
+        public Builder sslMode(String sslMode) {
+            return sslMode(Output.of(sslMode));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder username(@Nullable Output<String> username) {
-            this.username = username;
+            $.username = username;
             return this;
         }
-        public Builder username(@Nullable String username) {
-            this.username = Codegen.ofNullable(username);
-            return this;
-        }        public EndpointArgs build() {
-            return new EndpointArgs(certificateArn, databaseName, elasticsearchSettings, endpointId, endpointType, engineName, extraConnectionAttributes, kafkaSettings, kinesisSettings, kmsKeyArn, mongodbSettings, password, port, s3Settings, secretsManagerAccessRoleArn, secretsManagerArn, serverName, serviceAccessRole, sslMode, tags, username);
+
+        public Builder username(String username) {
+            return username(Output.of(username));
+        }
+
+        public EndpointArgs build() {
+            $.endpointId = Objects.requireNonNull($.endpointId, "expected parameter 'endpointId' to be non-null");
+            $.endpointType = Objects.requireNonNull($.endpointType, "expected parameter 'endpointType' to be non-null");
+            $.engineName = Objects.requireNonNull($.engineName, "expected parameter 'engineName' to be non-null");
+            return $;
         }
     }
+
 }

@@ -20,10 +20,10 @@ public final class GetTestablePermissionsArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="customSupportLevel")
-      private final @Nullable String customSupportLevel;
+    private @Nullable String customSupportLevel;
 
     public Optional<String> customSupportLevel() {
-        return this.customSupportLevel == null ? Optional.empty() : Optional.ofNullable(this.customSupportLevel);
+        return Optional.ofNullable(this.customSupportLevel);
     }
 
     /**
@@ -31,7 +31,7 @@ public final class GetTestablePermissionsArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="fullResourceName", required=true)
-      private final String fullResourceName;
+    private String fullResourceName;
 
     public String fullResourceName() {
         return this.fullResourceName;
@@ -42,67 +42,61 @@ public final class GetTestablePermissionsArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="stages")
-      private final @Nullable List<String> stages;
+    private @Nullable List<String> stages;
 
-    public List<String> stages() {
-        return this.stages == null ? List.of() : this.stages;
+    public Optional<List<String>> stages() {
+        return Optional.ofNullable(this.stages);
     }
 
-    public GetTestablePermissionsArgs(
-        @Nullable String customSupportLevel,
-        String fullResourceName,
-        @Nullable List<String> stages) {
-        this.customSupportLevel = customSupportLevel;
-        this.fullResourceName = Objects.requireNonNull(fullResourceName, "expected parameter 'fullResourceName' to be non-null");
-        this.stages = stages;
-    }
+    private GetTestablePermissionsArgs() {}
 
-    private GetTestablePermissionsArgs() {
-        this.customSupportLevel = null;
-        this.fullResourceName = null;
-        this.stages = List.of();
+    private GetTestablePermissionsArgs(GetTestablePermissionsArgs $) {
+        this.customSupportLevel = $.customSupportLevel;
+        this.fullResourceName = $.fullResourceName;
+        this.stages = $.stages;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetTestablePermissionsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String customSupportLevel;
-        private String fullResourceName;
-        private @Nullable List<String> stages;
+        private GetTestablePermissionsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetTestablePermissionsArgs();
         }
 
         public Builder(GetTestablePermissionsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.customSupportLevel = defaults.customSupportLevel;
-    	      this.fullResourceName = defaults.fullResourceName;
-    	      this.stages = defaults.stages;
+            $ = new GetTestablePermissionsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder customSupportLevel(@Nullable String customSupportLevel) {
-            this.customSupportLevel = customSupportLevel;
+            $.customSupportLevel = customSupportLevel;
             return this;
         }
+
         public Builder fullResourceName(String fullResourceName) {
-            this.fullResourceName = Objects.requireNonNull(fullResourceName);
+            $.fullResourceName = fullResourceName;
             return this;
         }
+
         public Builder stages(@Nullable List<String> stages) {
-            this.stages = stages;
+            $.stages = stages;
             return this;
         }
+
         public Builder stages(String... stages) {
             return stages(List.of(stages));
-        }        public GetTestablePermissionsArgs build() {
-            return new GetTestablePermissionsArgs(customSupportLevel, fullResourceName, stages);
+        }
+
+        public GetTestablePermissionsArgs build() {
+            $.fullResourceName = Objects.requireNonNull($.fullResourceName, "expected parameter 'fullResourceName' to be non-null");
+            return $;
         }
     }
+
 }

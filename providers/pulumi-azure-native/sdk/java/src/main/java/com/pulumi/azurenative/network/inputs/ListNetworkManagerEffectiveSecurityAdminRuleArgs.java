@@ -19,7 +19,7 @@ public final class ListNetworkManagerEffectiveSecurityAdminRuleArgs extends com.
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -30,10 +30,10 @@ public final class ListNetworkManagerEffectiveSecurityAdminRuleArgs extends com.
      * 
      */
     @Import(name="skipToken")
-      private final @Nullable String skipToken;
+    private @Nullable String skipToken;
 
     public Optional<String> skipToken() {
-        return this.skipToken == null ? Optional.empty() : Optional.ofNullable(this.skipToken);
+        return Optional.ofNullable(this.skipToken);
     }
 
     /**
@@ -41,64 +41,58 @@ public final class ListNetworkManagerEffectiveSecurityAdminRuleArgs extends com.
      * 
      */
     @Import(name="virtualNetworkName", required=true)
-      private final String virtualNetworkName;
+    private String virtualNetworkName;
 
     public String virtualNetworkName() {
         return this.virtualNetworkName;
     }
 
-    public ListNetworkManagerEffectiveSecurityAdminRuleArgs(
-        String resourceGroupName,
-        @Nullable String skipToken,
-        String virtualNetworkName) {
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.skipToken = skipToken;
-        this.virtualNetworkName = Objects.requireNonNull(virtualNetworkName, "expected parameter 'virtualNetworkName' to be non-null");
-    }
+    private ListNetworkManagerEffectiveSecurityAdminRuleArgs() {}
 
-    private ListNetworkManagerEffectiveSecurityAdminRuleArgs() {
-        this.resourceGroupName = null;
-        this.skipToken = null;
-        this.virtualNetworkName = null;
+    private ListNetworkManagerEffectiveSecurityAdminRuleArgs(ListNetworkManagerEffectiveSecurityAdminRuleArgs $) {
+        this.resourceGroupName = $.resourceGroupName;
+        this.skipToken = $.skipToken;
+        this.virtualNetworkName = $.virtualNetworkName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ListNetworkManagerEffectiveSecurityAdminRuleArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String resourceGroupName;
-        private @Nullable String skipToken;
-        private String virtualNetworkName;
+        private ListNetworkManagerEffectiveSecurityAdminRuleArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ListNetworkManagerEffectiveSecurityAdminRuleArgs();
         }
 
         public Builder(ListNetworkManagerEffectiveSecurityAdminRuleArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.skipToken = defaults.skipToken;
-    	      this.virtualNetworkName = defaults.virtualNetworkName;
+            $ = new ListNetworkManagerEffectiveSecurityAdminRuleArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder skipToken(@Nullable String skipToken) {
-            this.skipToken = skipToken;
+            $.skipToken = skipToken;
             return this;
         }
+
         public Builder virtualNetworkName(String virtualNetworkName) {
-            this.virtualNetworkName = Objects.requireNonNull(virtualNetworkName);
+            $.virtualNetworkName = virtualNetworkName;
             return this;
-        }        public ListNetworkManagerEffectiveSecurityAdminRuleArgs build() {
-            return new ListNetworkManagerEffectiveSecurityAdminRuleArgs(resourceGroupName, skipToken, virtualNetworkName);
+        }
+
+        public ListNetworkManagerEffectiveSecurityAdminRuleArgs build() {
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.virtualNetworkName = Objects.requireNonNull($.virtualNetworkName, "expected parameter 'virtualNetworkName' to be non-null");
+            return $;
         }
     }
+
 }

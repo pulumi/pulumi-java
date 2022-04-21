@@ -5,11 +5,11 @@ package com.pulumi.gcp.compute.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.compute.inputs.BackendServiceConsistentHashHttpCookieGetArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class BackendServiceConsistentHashGetArgs extends com.pulumi.resour
      * 
      */
     @Import(name="httpCookie")
-      private final @Nullable Output<BackendServiceConsistentHashHttpCookieGetArgs> httpCookie;
+    private @Nullable Output<BackendServiceConsistentHashHttpCookieGetArgs> httpCookie;
 
-    public Output<BackendServiceConsistentHashHttpCookieGetArgs> httpCookie() {
-        return this.httpCookie == null ? Codegen.empty() : this.httpCookie;
+    public Optional<Output<BackendServiceConsistentHashHttpCookieGetArgs>> httpCookie() {
+        return Optional.ofNullable(this.httpCookie);
     }
 
     /**
@@ -38,10 +38,10 @@ public final class BackendServiceConsistentHashGetArgs extends com.pulumi.resour
      * 
      */
     @Import(name="httpHeaderName")
-      private final @Nullable Output<String> httpHeaderName;
+    private @Nullable Output<String> httpHeaderName;
 
-    public Output<String> httpHeaderName() {
-        return this.httpHeaderName == null ? Codegen.empty() : this.httpHeaderName;
+    public Optional<Output<String>> httpHeaderName() {
+        return Optional.ofNullable(this.httpHeaderName);
     }
 
     /**
@@ -54,76 +54,68 @@ public final class BackendServiceConsistentHashGetArgs extends com.pulumi.resour
      * 
      */
     @Import(name="minimumRingSize")
-      private final @Nullable Output<Integer> minimumRingSize;
+    private @Nullable Output<Integer> minimumRingSize;
 
-    public Output<Integer> minimumRingSize() {
-        return this.minimumRingSize == null ? Codegen.empty() : this.minimumRingSize;
+    public Optional<Output<Integer>> minimumRingSize() {
+        return Optional.ofNullable(this.minimumRingSize);
     }
 
-    public BackendServiceConsistentHashGetArgs(
-        @Nullable Output<BackendServiceConsistentHashHttpCookieGetArgs> httpCookie,
-        @Nullable Output<String> httpHeaderName,
-        @Nullable Output<Integer> minimumRingSize) {
-        this.httpCookie = httpCookie;
-        this.httpHeaderName = httpHeaderName;
-        this.minimumRingSize = minimumRingSize;
-    }
+    private BackendServiceConsistentHashGetArgs() {}
 
-    private BackendServiceConsistentHashGetArgs() {
-        this.httpCookie = Codegen.empty();
-        this.httpHeaderName = Codegen.empty();
-        this.minimumRingSize = Codegen.empty();
+    private BackendServiceConsistentHashGetArgs(BackendServiceConsistentHashGetArgs $) {
+        this.httpCookie = $.httpCookie;
+        this.httpHeaderName = $.httpHeaderName;
+        this.minimumRingSize = $.minimumRingSize;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BackendServiceConsistentHashGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<BackendServiceConsistentHashHttpCookieGetArgs> httpCookie;
-        private @Nullable Output<String> httpHeaderName;
-        private @Nullable Output<Integer> minimumRingSize;
+        private BackendServiceConsistentHashGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new BackendServiceConsistentHashGetArgs();
         }
 
         public Builder(BackendServiceConsistentHashGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.httpCookie = defaults.httpCookie;
-    	      this.httpHeaderName = defaults.httpHeaderName;
-    	      this.minimumRingSize = defaults.minimumRingSize;
+            $ = new BackendServiceConsistentHashGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder httpCookie(@Nullable Output<BackendServiceConsistentHashHttpCookieGetArgs> httpCookie) {
-            this.httpCookie = httpCookie;
+            $.httpCookie = httpCookie;
             return this;
         }
-        public Builder httpCookie(@Nullable BackendServiceConsistentHashHttpCookieGetArgs httpCookie) {
-            this.httpCookie = Codegen.ofNullable(httpCookie);
-            return this;
+
+        public Builder httpCookie(BackendServiceConsistentHashHttpCookieGetArgs httpCookie) {
+            return httpCookie(Output.of(httpCookie));
         }
+
         public Builder httpHeaderName(@Nullable Output<String> httpHeaderName) {
-            this.httpHeaderName = httpHeaderName;
+            $.httpHeaderName = httpHeaderName;
             return this;
         }
-        public Builder httpHeaderName(@Nullable String httpHeaderName) {
-            this.httpHeaderName = Codegen.ofNullable(httpHeaderName);
-            return this;
+
+        public Builder httpHeaderName(String httpHeaderName) {
+            return httpHeaderName(Output.of(httpHeaderName));
         }
+
         public Builder minimumRingSize(@Nullable Output<Integer> minimumRingSize) {
-            this.minimumRingSize = minimumRingSize;
+            $.minimumRingSize = minimumRingSize;
             return this;
         }
-        public Builder minimumRingSize(@Nullable Integer minimumRingSize) {
-            this.minimumRingSize = Codegen.ofNullable(minimumRingSize);
-            return this;
-        }        public BackendServiceConsistentHashGetArgs build() {
-            return new BackendServiceConsistentHashGetArgs(httpCookie, httpHeaderName, minimumRingSize);
+
+        public Builder minimumRingSize(Integer minimumRingSize) {
+            return minimumRingSize(Output.of(minimumRingSize));
+        }
+
+        public BackendServiceConsistentHashGetArgs build() {
+            return $;
         }
     }
+
 }

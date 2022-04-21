@@ -5,7 +5,6 @@ package com.pulumi.aws.dynamodb;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,7 +18,7 @@ public final class KinesisStreamingDestinationArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="streamArn", required=true)
-      private final Output<String> streamArn;
+    private Output<String> streamArn;
 
     public Output<String> streamArn() {
         return this.streamArn;
@@ -31,63 +30,60 @@ public final class KinesisStreamingDestinationArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="tableName", required=true)
-      private final Output<String> tableName;
+    private Output<String> tableName;
 
     public Output<String> tableName() {
         return this.tableName;
     }
 
-    public KinesisStreamingDestinationArgs(
-        Output<String> streamArn,
-        Output<String> tableName) {
-        this.streamArn = Objects.requireNonNull(streamArn, "expected parameter 'streamArn' to be non-null");
-        this.tableName = Objects.requireNonNull(tableName, "expected parameter 'tableName' to be non-null");
-    }
+    private KinesisStreamingDestinationArgs() {}
 
-    private KinesisStreamingDestinationArgs() {
-        this.streamArn = Codegen.empty();
-        this.tableName = Codegen.empty();
+    private KinesisStreamingDestinationArgs(KinesisStreamingDestinationArgs $) {
+        this.streamArn = $.streamArn;
+        this.tableName = $.tableName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(KinesisStreamingDestinationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> streamArn;
-        private Output<String> tableName;
+        private KinesisStreamingDestinationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new KinesisStreamingDestinationArgs();
         }
 
         public Builder(KinesisStreamingDestinationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.streamArn = defaults.streamArn;
-    	      this.tableName = defaults.tableName;
+            $ = new KinesisStreamingDestinationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder streamArn(Output<String> streamArn) {
-            this.streamArn = Objects.requireNonNull(streamArn);
+            $.streamArn = streamArn;
             return this;
         }
+
         public Builder streamArn(String streamArn) {
-            this.streamArn = Output.of(Objects.requireNonNull(streamArn));
-            return this;
+            return streamArn(Output.of(streamArn));
         }
+
         public Builder tableName(Output<String> tableName) {
-            this.tableName = Objects.requireNonNull(tableName);
+            $.tableName = tableName;
             return this;
         }
+
         public Builder tableName(String tableName) {
-            this.tableName = Output.of(Objects.requireNonNull(tableName));
-            return this;
-        }        public KinesisStreamingDestinationArgs build() {
-            return new KinesisStreamingDestinationArgs(streamArn, tableName);
+            return tableName(Output.of(tableName));
+        }
+
+        public KinesisStreamingDestinationArgs build() {
+            $.streamArn = Objects.requireNonNull($.streamArn, "expected parameter 'streamArn' to be non-null");
+            $.tableName = Objects.requireNonNull($.tableName, "expected parameter 'tableName' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,9 +5,9 @@ package com.pulumi.googlenative.compute_alpha.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -16,49 +16,48 @@ public final class InstanceGroupManagerStandbyPolicyArgs extends com.pulumi.reso
     public static final InstanceGroupManagerStandbyPolicyArgs Empty = new InstanceGroupManagerStandbyPolicyArgs();
 
     @Import(name="initialDelaySec")
-      private final @Nullable Output<Integer> initialDelaySec;
+    private @Nullable Output<Integer> initialDelaySec;
 
-    public Output<Integer> initialDelaySec() {
-        return this.initialDelaySec == null ? Codegen.empty() : this.initialDelaySec;
+    public Optional<Output<Integer>> initialDelaySec() {
+        return Optional.ofNullable(this.initialDelaySec);
     }
 
-    public InstanceGroupManagerStandbyPolicyArgs(@Nullable Output<Integer> initialDelaySec) {
-        this.initialDelaySec = initialDelaySec;
-    }
+    private InstanceGroupManagerStandbyPolicyArgs() {}
 
-    private InstanceGroupManagerStandbyPolicyArgs() {
-        this.initialDelaySec = Codegen.empty();
+    private InstanceGroupManagerStandbyPolicyArgs(InstanceGroupManagerStandbyPolicyArgs $) {
+        this.initialDelaySec = $.initialDelaySec;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(InstanceGroupManagerStandbyPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> initialDelaySec;
+        private InstanceGroupManagerStandbyPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new InstanceGroupManagerStandbyPolicyArgs();
         }
 
         public Builder(InstanceGroupManagerStandbyPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.initialDelaySec = defaults.initialDelaySec;
+            $ = new InstanceGroupManagerStandbyPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder initialDelaySec(@Nullable Output<Integer> initialDelaySec) {
-            this.initialDelaySec = initialDelaySec;
+            $.initialDelaySec = initialDelaySec;
             return this;
         }
-        public Builder initialDelaySec(@Nullable Integer initialDelaySec) {
-            this.initialDelaySec = Codegen.ofNullable(initialDelaySec);
-            return this;
-        }        public InstanceGroupManagerStandbyPolicyArgs build() {
-            return new InstanceGroupManagerStandbyPolicyArgs(initialDelaySec);
+
+        public Builder initialDelaySec(Integer initialDelaySec) {
+            return initialDelaySec(Output.of(initialDelaySec));
+        }
+
+        public InstanceGroupManagerStandbyPolicyArgs build() {
+            return $;
         }
     }
+
 }

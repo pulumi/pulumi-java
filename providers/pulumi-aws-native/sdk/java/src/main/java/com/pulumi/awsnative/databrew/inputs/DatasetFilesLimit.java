@@ -21,7 +21,7 @@ public final class DatasetFilesLimit extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="maxFiles", required=true)
-      private final Integer maxFiles;
+    private Integer maxFiles;
 
     public Integer maxFiles() {
         return this.maxFiles;
@@ -32,10 +32,10 @@ public final class DatasetFilesLimit extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="order")
-      private final @Nullable DatasetFilesLimitOrder order;
+    private @Nullable DatasetFilesLimitOrder order;
 
     public Optional<DatasetFilesLimitOrder> order() {
-        return this.order == null ? Optional.empty() : Optional.ofNullable(this.order);
+        return Optional.ofNullable(this.order);
     }
 
     /**
@@ -43,64 +43,57 @@ public final class DatasetFilesLimit extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="orderedBy")
-      private final @Nullable DatasetFilesLimitOrderedBy orderedBy;
+    private @Nullable DatasetFilesLimitOrderedBy orderedBy;
 
     public Optional<DatasetFilesLimitOrderedBy> orderedBy() {
-        return this.orderedBy == null ? Optional.empty() : Optional.ofNullable(this.orderedBy);
+        return Optional.ofNullable(this.orderedBy);
     }
 
-    public DatasetFilesLimit(
-        Integer maxFiles,
-        @Nullable DatasetFilesLimitOrder order,
-        @Nullable DatasetFilesLimitOrderedBy orderedBy) {
-        this.maxFiles = Objects.requireNonNull(maxFiles, "expected parameter 'maxFiles' to be non-null");
-        this.order = order;
-        this.orderedBy = orderedBy;
-    }
+    private DatasetFilesLimit() {}
 
-    private DatasetFilesLimit() {
-        this.maxFiles = null;
-        this.order = null;
-        this.orderedBy = null;
+    private DatasetFilesLimit(DatasetFilesLimit $) {
+        this.maxFiles = $.maxFiles;
+        this.order = $.order;
+        this.orderedBy = $.orderedBy;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DatasetFilesLimit defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Integer maxFiles;
-        private @Nullable DatasetFilesLimitOrder order;
-        private @Nullable DatasetFilesLimitOrderedBy orderedBy;
+        private DatasetFilesLimit $;
 
         public Builder() {
-    	      // Empty
+            $ = new DatasetFilesLimit();
         }
 
         public Builder(DatasetFilesLimit defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.maxFiles = defaults.maxFiles;
-    	      this.order = defaults.order;
-    	      this.orderedBy = defaults.orderedBy;
+            $ = new DatasetFilesLimit(Objects.requireNonNull(defaults));
         }
 
         public Builder maxFiles(Integer maxFiles) {
-            this.maxFiles = Objects.requireNonNull(maxFiles);
+            $.maxFiles = maxFiles;
             return this;
         }
+
         public Builder order(@Nullable DatasetFilesLimitOrder order) {
-            this.order = order;
+            $.order = order;
             return this;
         }
+
         public Builder orderedBy(@Nullable DatasetFilesLimitOrderedBy orderedBy) {
-            this.orderedBy = orderedBy;
+            $.orderedBy = orderedBy;
             return this;
-        }        public DatasetFilesLimit build() {
-            return new DatasetFilesLimit(maxFiles, order, orderedBy);
+        }
+
+        public DatasetFilesLimit build() {
+            $.maxFiles = Objects.requireNonNull($.maxFiles, "expected parameter 'maxFiles' to be non-null");
+            return $;
         }
     }
+
 }

@@ -18,14 +18,14 @@ public final class NetworkInterfaceSubInterfaceResponse extends com.pulumi.resou
      * 
      */
     @Import(name="ipAddress", required=true)
-      private final String ipAddress;
+    private String ipAddress;
 
     public String ipAddress() {
         return this.ipAddress;
     }
 
     @Import(name="ipAllocationMode", required=true)
-      private final String ipAllocationMode;
+    private String ipAllocationMode;
 
     public String ipAllocationMode() {
         return this.ipAllocationMode;
@@ -36,7 +36,7 @@ public final class NetworkInterfaceSubInterfaceResponse extends com.pulumi.resou
      * 
      */
     @Import(name="subnetwork", required=true)
-      private final String subnetwork;
+    private String subnetwork;
 
     public String subnetwork() {
         return this.subnetwork;
@@ -47,73 +47,66 @@ public final class NetworkInterfaceSubInterfaceResponse extends com.pulumi.resou
      * 
      */
     @Import(name="vlan", required=true)
-      private final Integer vlan;
+    private Integer vlan;
 
     public Integer vlan() {
         return this.vlan;
     }
 
-    public NetworkInterfaceSubInterfaceResponse(
-        String ipAddress,
-        String ipAllocationMode,
-        String subnetwork,
-        Integer vlan) {
-        this.ipAddress = Objects.requireNonNull(ipAddress, "expected parameter 'ipAddress' to be non-null");
-        this.ipAllocationMode = Objects.requireNonNull(ipAllocationMode, "expected parameter 'ipAllocationMode' to be non-null");
-        this.subnetwork = Objects.requireNonNull(subnetwork, "expected parameter 'subnetwork' to be non-null");
-        this.vlan = Objects.requireNonNull(vlan, "expected parameter 'vlan' to be non-null");
-    }
+    private NetworkInterfaceSubInterfaceResponse() {}
 
-    private NetworkInterfaceSubInterfaceResponse() {
-        this.ipAddress = null;
-        this.ipAllocationMode = null;
-        this.subnetwork = null;
-        this.vlan = null;
+    private NetworkInterfaceSubInterfaceResponse(NetworkInterfaceSubInterfaceResponse $) {
+        this.ipAddress = $.ipAddress;
+        this.ipAllocationMode = $.ipAllocationMode;
+        this.subnetwork = $.subnetwork;
+        this.vlan = $.vlan;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NetworkInterfaceSubInterfaceResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String ipAddress;
-        private String ipAllocationMode;
-        private String subnetwork;
-        private Integer vlan;
+        private NetworkInterfaceSubInterfaceResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new NetworkInterfaceSubInterfaceResponse();
         }
 
         public Builder(NetworkInterfaceSubInterfaceResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.ipAddress = defaults.ipAddress;
-    	      this.ipAllocationMode = defaults.ipAllocationMode;
-    	      this.subnetwork = defaults.subnetwork;
-    	      this.vlan = defaults.vlan;
+            $ = new NetworkInterfaceSubInterfaceResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder ipAddress(String ipAddress) {
-            this.ipAddress = Objects.requireNonNull(ipAddress);
+            $.ipAddress = ipAddress;
             return this;
         }
+
         public Builder ipAllocationMode(String ipAllocationMode) {
-            this.ipAllocationMode = Objects.requireNonNull(ipAllocationMode);
+            $.ipAllocationMode = ipAllocationMode;
             return this;
         }
+
         public Builder subnetwork(String subnetwork) {
-            this.subnetwork = Objects.requireNonNull(subnetwork);
+            $.subnetwork = subnetwork;
             return this;
         }
+
         public Builder vlan(Integer vlan) {
-            this.vlan = Objects.requireNonNull(vlan);
+            $.vlan = vlan;
             return this;
-        }        public NetworkInterfaceSubInterfaceResponse build() {
-            return new NetworkInterfaceSubInterfaceResponse(ipAddress, ipAllocationMode, subnetwork, vlan);
+        }
+
+        public NetworkInterfaceSubInterfaceResponse build() {
+            $.ipAddress = Objects.requireNonNull($.ipAddress, "expected parameter 'ipAddress' to be non-null");
+            $.ipAllocationMode = Objects.requireNonNull($.ipAllocationMode, "expected parameter 'ipAllocationMode' to be non-null");
+            $.subnetwork = Objects.requireNonNull($.subnetwork, "expected parameter 'subnetwork' to be non-null");
+            $.vlan = Objects.requireNonNull($.vlan, "expected parameter 'vlan' to be non-null");
+            return $;
         }
     }
+
 }

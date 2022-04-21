@@ -25,10 +25,10 @@ public final class ServiceBusQueueOutputDataSourceResponse extends com.pulumi.re
      * 
      */
     @Import(name="propertyColumns")
-      private final @Nullable List<String> propertyColumns;
+    private @Nullable List<String> propertyColumns;
 
-    public List<String> propertyColumns() {
-        return this.propertyColumns == null ? List.of() : this.propertyColumns;
+    public Optional<List<String>> propertyColumns() {
+        return Optional.ofNullable(this.propertyColumns);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class ServiceBusQueueOutputDataSourceResponse extends com.pulumi.re
      * 
      */
     @Import(name="queueName")
-      private final @Nullable String queueName;
+    private @Nullable String queueName;
 
     public Optional<String> queueName() {
-        return this.queueName == null ? Optional.empty() : Optional.ofNullable(this.queueName);
+        return Optional.ofNullable(this.queueName);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class ServiceBusQueueOutputDataSourceResponse extends com.pulumi.re
      * 
      */
     @Import(name="serviceBusNamespace")
-      private final @Nullable String serviceBusNamespace;
+    private @Nullable String serviceBusNamespace;
 
     public Optional<String> serviceBusNamespace() {
-        return this.serviceBusNamespace == null ? Optional.empty() : Optional.ofNullable(this.serviceBusNamespace);
+        return Optional.ofNullable(this.serviceBusNamespace);
     }
 
     /**
@@ -58,10 +58,10 @@ public final class ServiceBusQueueOutputDataSourceResponse extends com.pulumi.re
      * 
      */
     @Import(name="sharedAccessPolicyKey")
-      private final @Nullable String sharedAccessPolicyKey;
+    private @Nullable String sharedAccessPolicyKey;
 
     public Optional<String> sharedAccessPolicyKey() {
-        return this.sharedAccessPolicyKey == null ? Optional.empty() : Optional.ofNullable(this.sharedAccessPolicyKey);
+        return Optional.ofNullable(this.sharedAccessPolicyKey);
     }
 
     /**
@@ -69,10 +69,10 @@ public final class ServiceBusQueueOutputDataSourceResponse extends com.pulumi.re
      * 
      */
     @Import(name="sharedAccessPolicyName")
-      private final @Nullable String sharedAccessPolicyName;
+    private @Nullable String sharedAccessPolicyName;
 
     public Optional<String> sharedAccessPolicyName() {
-        return this.sharedAccessPolicyName == null ? Optional.empty() : Optional.ofNullable(this.sharedAccessPolicyName);
+        return Optional.ofNullable(this.sharedAccessPolicyName);
     }
 
     /**
@@ -81,94 +81,79 @@ public final class ServiceBusQueueOutputDataSourceResponse extends com.pulumi.re
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
     }
 
-    public ServiceBusQueueOutputDataSourceResponse(
-        @Nullable List<String> propertyColumns,
-        @Nullable String queueName,
-        @Nullable String serviceBusNamespace,
-        @Nullable String sharedAccessPolicyKey,
-        @Nullable String sharedAccessPolicyName,
-        String type) {
-        this.propertyColumns = propertyColumns;
-        this.queueName = queueName;
-        this.serviceBusNamespace = serviceBusNamespace;
-        this.sharedAccessPolicyKey = sharedAccessPolicyKey;
-        this.sharedAccessPolicyName = sharedAccessPolicyName;
-        this.type = Codegen.stringProp("type").arg(type).require();
-    }
+    private ServiceBusQueueOutputDataSourceResponse() {}
 
-    private ServiceBusQueueOutputDataSourceResponse() {
-        this.propertyColumns = List.of();
-        this.queueName = null;
-        this.serviceBusNamespace = null;
-        this.sharedAccessPolicyKey = null;
-        this.sharedAccessPolicyName = null;
-        this.type = null;
+    private ServiceBusQueueOutputDataSourceResponse(ServiceBusQueueOutputDataSourceResponse $) {
+        this.propertyColumns = $.propertyColumns;
+        this.queueName = $.queueName;
+        this.serviceBusNamespace = $.serviceBusNamespace;
+        this.sharedAccessPolicyKey = $.sharedAccessPolicyKey;
+        this.sharedAccessPolicyName = $.sharedAccessPolicyName;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ServiceBusQueueOutputDataSourceResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<String> propertyColumns;
-        private @Nullable String queueName;
-        private @Nullable String serviceBusNamespace;
-        private @Nullable String sharedAccessPolicyKey;
-        private @Nullable String sharedAccessPolicyName;
-        private String type;
+        private ServiceBusQueueOutputDataSourceResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ServiceBusQueueOutputDataSourceResponse();
         }
 
         public Builder(ServiceBusQueueOutputDataSourceResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.propertyColumns = defaults.propertyColumns;
-    	      this.queueName = defaults.queueName;
-    	      this.serviceBusNamespace = defaults.serviceBusNamespace;
-    	      this.sharedAccessPolicyKey = defaults.sharedAccessPolicyKey;
-    	      this.sharedAccessPolicyName = defaults.sharedAccessPolicyName;
-    	      this.type = defaults.type;
+            $ = new ServiceBusQueueOutputDataSourceResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder propertyColumns(@Nullable List<String> propertyColumns) {
-            this.propertyColumns = propertyColumns;
+            $.propertyColumns = propertyColumns;
             return this;
         }
+
         public Builder propertyColumns(String... propertyColumns) {
             return propertyColumns(List.of(propertyColumns));
         }
+
         public Builder queueName(@Nullable String queueName) {
-            this.queueName = queueName;
+            $.queueName = queueName;
             return this;
         }
+
         public Builder serviceBusNamespace(@Nullable String serviceBusNamespace) {
-            this.serviceBusNamespace = serviceBusNamespace;
+            $.serviceBusNamespace = serviceBusNamespace;
             return this;
         }
+
         public Builder sharedAccessPolicyKey(@Nullable String sharedAccessPolicyKey) {
-            this.sharedAccessPolicyKey = sharedAccessPolicyKey;
+            $.sharedAccessPolicyKey = sharedAccessPolicyKey;
             return this;
         }
+
         public Builder sharedAccessPolicyName(@Nullable String sharedAccessPolicyName) {
-            this.sharedAccessPolicyName = sharedAccessPolicyName;
+            $.sharedAccessPolicyName = sharedAccessPolicyName;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
-        }        public ServiceBusQueueOutputDataSourceResponse build() {
-            return new ServiceBusQueueOutputDataSourceResponse(propertyColumns, queueName, serviceBusNamespace, sharedAccessPolicyKey, sharedAccessPolicyName, type);
+        }
+
+        public ServiceBusQueueOutputDataSourceResponse build() {
+            $.type = Codegen.stringProp("type").arg($.type).require();
+            return $;
         }
     }
+
 }

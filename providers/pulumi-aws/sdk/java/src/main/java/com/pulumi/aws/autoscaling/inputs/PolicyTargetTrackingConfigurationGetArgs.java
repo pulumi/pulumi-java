@@ -7,10 +7,10 @@ import com.pulumi.aws.autoscaling.inputs.PolicyTargetTrackingConfigurationCustom
 import com.pulumi.aws.autoscaling.inputs.PolicyTargetTrackingConfigurationPredefinedMetricSpecificationGetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,10 @@ public final class PolicyTargetTrackingConfigurationGetArgs extends com.pulumi.r
      * 
      */
     @Import(name="customizedMetricSpecification")
-      private final @Nullable Output<PolicyTargetTrackingConfigurationCustomizedMetricSpecificationGetArgs> customizedMetricSpecification;
+    private @Nullable Output<PolicyTargetTrackingConfigurationCustomizedMetricSpecificationGetArgs> customizedMetricSpecification;
 
-    public Output<PolicyTargetTrackingConfigurationCustomizedMetricSpecificationGetArgs> customizedMetricSpecification() {
-        return this.customizedMetricSpecification == null ? Codegen.empty() : this.customizedMetricSpecification;
+    public Optional<Output<PolicyTargetTrackingConfigurationCustomizedMetricSpecificationGetArgs>> customizedMetricSpecification() {
+        return Optional.ofNullable(this.customizedMetricSpecification);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class PolicyTargetTrackingConfigurationGetArgs extends com.pulumi.r
      * 
      */
     @Import(name="disableScaleIn")
-      private final @Nullable Output<Boolean> disableScaleIn;
+    private @Nullable Output<Boolean> disableScaleIn;
 
-    public Output<Boolean> disableScaleIn() {
-        return this.disableScaleIn == null ? Codegen.empty() : this.disableScaleIn;
+    public Optional<Output<Boolean>> disableScaleIn() {
+        return Optional.ofNullable(this.disableScaleIn);
     }
 
     /**
@@ -45,10 +45,10 @@ public final class PolicyTargetTrackingConfigurationGetArgs extends com.pulumi.r
      * 
      */
     @Import(name="predefinedMetricSpecification")
-      private final @Nullable Output<PolicyTargetTrackingConfigurationPredefinedMetricSpecificationGetArgs> predefinedMetricSpecification;
+    private @Nullable Output<PolicyTargetTrackingConfigurationPredefinedMetricSpecificationGetArgs> predefinedMetricSpecification;
 
-    public Output<PolicyTargetTrackingConfigurationPredefinedMetricSpecificationGetArgs> predefinedMetricSpecification() {
-        return this.predefinedMetricSpecification == null ? Codegen.empty() : this.predefinedMetricSpecification;
+    public Optional<Output<PolicyTargetTrackingConfigurationPredefinedMetricSpecificationGetArgs>> predefinedMetricSpecification() {
+        return Optional.ofNullable(this.predefinedMetricSpecification);
     }
 
     /**
@@ -56,89 +56,79 @@ public final class PolicyTargetTrackingConfigurationGetArgs extends com.pulumi.r
      * 
      */
     @Import(name="targetValue", required=true)
-      private final Output<Double> targetValue;
+    private Output<Double> targetValue;
 
     public Output<Double> targetValue() {
         return this.targetValue;
     }
 
-    public PolicyTargetTrackingConfigurationGetArgs(
-        @Nullable Output<PolicyTargetTrackingConfigurationCustomizedMetricSpecificationGetArgs> customizedMetricSpecification,
-        @Nullable Output<Boolean> disableScaleIn,
-        @Nullable Output<PolicyTargetTrackingConfigurationPredefinedMetricSpecificationGetArgs> predefinedMetricSpecification,
-        Output<Double> targetValue) {
-        this.customizedMetricSpecification = customizedMetricSpecification;
-        this.disableScaleIn = disableScaleIn;
-        this.predefinedMetricSpecification = predefinedMetricSpecification;
-        this.targetValue = Objects.requireNonNull(targetValue, "expected parameter 'targetValue' to be non-null");
-    }
+    private PolicyTargetTrackingConfigurationGetArgs() {}
 
-    private PolicyTargetTrackingConfigurationGetArgs() {
-        this.customizedMetricSpecification = Codegen.empty();
-        this.disableScaleIn = Codegen.empty();
-        this.predefinedMetricSpecification = Codegen.empty();
-        this.targetValue = Codegen.empty();
+    private PolicyTargetTrackingConfigurationGetArgs(PolicyTargetTrackingConfigurationGetArgs $) {
+        this.customizedMetricSpecification = $.customizedMetricSpecification;
+        this.disableScaleIn = $.disableScaleIn;
+        this.predefinedMetricSpecification = $.predefinedMetricSpecification;
+        this.targetValue = $.targetValue;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PolicyTargetTrackingConfigurationGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<PolicyTargetTrackingConfigurationCustomizedMetricSpecificationGetArgs> customizedMetricSpecification;
-        private @Nullable Output<Boolean> disableScaleIn;
-        private @Nullable Output<PolicyTargetTrackingConfigurationPredefinedMetricSpecificationGetArgs> predefinedMetricSpecification;
-        private Output<Double> targetValue;
+        private PolicyTargetTrackingConfigurationGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PolicyTargetTrackingConfigurationGetArgs();
         }
 
         public Builder(PolicyTargetTrackingConfigurationGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.customizedMetricSpecification = defaults.customizedMetricSpecification;
-    	      this.disableScaleIn = defaults.disableScaleIn;
-    	      this.predefinedMetricSpecification = defaults.predefinedMetricSpecification;
-    	      this.targetValue = defaults.targetValue;
+            $ = new PolicyTargetTrackingConfigurationGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder customizedMetricSpecification(@Nullable Output<PolicyTargetTrackingConfigurationCustomizedMetricSpecificationGetArgs> customizedMetricSpecification) {
-            this.customizedMetricSpecification = customizedMetricSpecification;
+            $.customizedMetricSpecification = customizedMetricSpecification;
             return this;
         }
-        public Builder customizedMetricSpecification(@Nullable PolicyTargetTrackingConfigurationCustomizedMetricSpecificationGetArgs customizedMetricSpecification) {
-            this.customizedMetricSpecification = Codegen.ofNullable(customizedMetricSpecification);
-            return this;
+
+        public Builder customizedMetricSpecification(PolicyTargetTrackingConfigurationCustomizedMetricSpecificationGetArgs customizedMetricSpecification) {
+            return customizedMetricSpecification(Output.of(customizedMetricSpecification));
         }
+
         public Builder disableScaleIn(@Nullable Output<Boolean> disableScaleIn) {
-            this.disableScaleIn = disableScaleIn;
+            $.disableScaleIn = disableScaleIn;
             return this;
         }
-        public Builder disableScaleIn(@Nullable Boolean disableScaleIn) {
-            this.disableScaleIn = Codegen.ofNullable(disableScaleIn);
-            return this;
+
+        public Builder disableScaleIn(Boolean disableScaleIn) {
+            return disableScaleIn(Output.of(disableScaleIn));
         }
+
         public Builder predefinedMetricSpecification(@Nullable Output<PolicyTargetTrackingConfigurationPredefinedMetricSpecificationGetArgs> predefinedMetricSpecification) {
-            this.predefinedMetricSpecification = predefinedMetricSpecification;
+            $.predefinedMetricSpecification = predefinedMetricSpecification;
             return this;
         }
-        public Builder predefinedMetricSpecification(@Nullable PolicyTargetTrackingConfigurationPredefinedMetricSpecificationGetArgs predefinedMetricSpecification) {
-            this.predefinedMetricSpecification = Codegen.ofNullable(predefinedMetricSpecification);
-            return this;
+
+        public Builder predefinedMetricSpecification(PolicyTargetTrackingConfigurationPredefinedMetricSpecificationGetArgs predefinedMetricSpecification) {
+            return predefinedMetricSpecification(Output.of(predefinedMetricSpecification));
         }
+
         public Builder targetValue(Output<Double> targetValue) {
-            this.targetValue = Objects.requireNonNull(targetValue);
+            $.targetValue = targetValue;
             return this;
         }
+
         public Builder targetValue(Double targetValue) {
-            this.targetValue = Output.of(Objects.requireNonNull(targetValue));
-            return this;
-        }        public PolicyTargetTrackingConfigurationGetArgs build() {
-            return new PolicyTargetTrackingConfigurationGetArgs(customizedMetricSpecification, disableScaleIn, predefinedMetricSpecification, targetValue);
+            return targetValue(Output.of(targetValue));
+        }
+
+        public PolicyTargetTrackingConfigurationGetArgs build() {
+            $.targetValue = Objects.requireNonNull($.targetValue, "expected parameter 'targetValue' to be non-null");
+            return $;
         }
     }
+
 }

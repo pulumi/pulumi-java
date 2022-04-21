@@ -17,7 +17,7 @@ public final class GetAssetEncryptionKeyArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="accountName", required=true)
-      private final String accountName;
+    private String accountName;
 
     public String accountName() {
         return this.accountName;
@@ -28,7 +28,7 @@ public final class GetAssetEncryptionKeyArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="assetName", required=true)
-      private final String assetName;
+    private String assetName;
 
     public String assetName() {
         return this.assetName;
@@ -39,64 +39,59 @@ public final class GetAssetEncryptionKeyArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public GetAssetEncryptionKeyArgs(
-        String accountName,
-        String assetName,
-        String resourceGroupName) {
-        this.accountName = Objects.requireNonNull(accountName, "expected parameter 'accountName' to be non-null");
-        this.assetName = Objects.requireNonNull(assetName, "expected parameter 'assetName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private GetAssetEncryptionKeyArgs() {}
 
-    private GetAssetEncryptionKeyArgs() {
-        this.accountName = null;
-        this.assetName = null;
-        this.resourceGroupName = null;
+    private GetAssetEncryptionKeyArgs(GetAssetEncryptionKeyArgs $) {
+        this.accountName = $.accountName;
+        this.assetName = $.assetName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetAssetEncryptionKeyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String accountName;
-        private String assetName;
-        private String resourceGroupName;
+        private GetAssetEncryptionKeyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetAssetEncryptionKeyArgs();
         }
 
         public Builder(GetAssetEncryptionKeyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accountName = defaults.accountName;
-    	      this.assetName = defaults.assetName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new GetAssetEncryptionKeyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder accountName(String accountName) {
-            this.accountName = Objects.requireNonNull(accountName);
+            $.accountName = accountName;
             return this;
         }
+
         public Builder assetName(String assetName) {
-            this.assetName = Objects.requireNonNull(assetName);
+            $.assetName = assetName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public GetAssetEncryptionKeyArgs build() {
-            return new GetAssetEncryptionKeyArgs(accountName, assetName, resourceGroupName);
+        }
+
+        public GetAssetEncryptionKeyArgs build() {
+            $.accountName = Objects.requireNonNull($.accountName, "expected parameter 'accountName' to be non-null");
+            $.assetName = Objects.requireNonNull($.assetName, "expected parameter 'assetName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

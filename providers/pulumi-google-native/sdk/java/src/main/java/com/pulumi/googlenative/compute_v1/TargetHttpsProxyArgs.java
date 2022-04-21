@@ -5,12 +5,12 @@ package com.pulumi.googlenative.compute_v1;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.compute_v1.enums.TargetHttpsProxyQuicOverride;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,10 @@ public final class TargetHttpsProxyArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="authorizationPolicy")
-      private final @Nullable Output<String> authorizationPolicy;
+    private @Nullable Output<String> authorizationPolicy;
 
-    public Output<String> authorizationPolicy() {
-        return this.authorizationPolicy == null ? Codegen.empty() : this.authorizationPolicy;
+    public Optional<Output<String>> authorizationPolicy() {
+        return Optional.ofNullable(this.authorizationPolicy);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class TargetHttpsProxyArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -45,17 +45,17 @@ public final class TargetHttpsProxyArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -63,10 +63,10 @@ public final class TargetHttpsProxyArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="proxyBind")
-      private final @Nullable Output<Boolean> proxyBind;
+    private @Nullable Output<Boolean> proxyBind;
 
-    public Output<Boolean> proxyBind() {
-        return this.proxyBind == null ? Codegen.empty() : this.proxyBind;
+    public Optional<Output<Boolean>> proxyBind() {
+        return Optional.ofNullable(this.proxyBind);
     }
 
     /**
@@ -74,17 +74,17 @@ public final class TargetHttpsProxyArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="quicOverride")
-      private final @Nullable Output<TargetHttpsProxyQuicOverride> quicOverride;
+    private @Nullable Output<TargetHttpsProxyQuicOverride> quicOverride;
 
-    public Output<TargetHttpsProxyQuicOverride> quicOverride() {
-        return this.quicOverride == null ? Codegen.empty() : this.quicOverride;
+    public Optional<Output<TargetHttpsProxyQuicOverride>> quicOverride() {
+        return Optional.ofNullable(this.quicOverride);
     }
 
     @Import(name="requestId")
-      private final @Nullable Output<String> requestId;
+    private @Nullable Output<String> requestId;
 
-    public Output<String> requestId() {
-        return this.requestId == null ? Codegen.empty() : this.requestId;
+    public Optional<Output<String>> requestId() {
+        return Optional.ofNullable(this.requestId);
     }
 
     /**
@@ -92,10 +92,10 @@ public final class TargetHttpsProxyArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="serverTlsPolicy")
-      private final @Nullable Output<String> serverTlsPolicy;
+    private @Nullable Output<String> serverTlsPolicy;
 
-    public Output<String> serverTlsPolicy() {
-        return this.serverTlsPolicy == null ? Codegen.empty() : this.serverTlsPolicy;
+    public Optional<Output<String>> serverTlsPolicy() {
+        return Optional.ofNullable(this.serverTlsPolicy);
     }
 
     /**
@@ -103,10 +103,10 @@ public final class TargetHttpsProxyArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="sslCertificates")
-      private final @Nullable Output<List<String>> sslCertificates;
+    private @Nullable Output<List<String>> sslCertificates;
 
-    public Output<List<String>> sslCertificates() {
-        return this.sslCertificates == null ? Codegen.empty() : this.sslCertificates;
+    public Optional<Output<List<String>>> sslCertificates() {
+        return Optional.ofNullable(this.sslCertificates);
     }
 
     /**
@@ -114,10 +114,10 @@ public final class TargetHttpsProxyArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="sslPolicy")
-      private final @Nullable Output<String> sslPolicy;
+    private @Nullable Output<String> sslPolicy;
 
-    public Output<String> sslPolicy() {
-        return this.sslPolicy == null ? Codegen.empty() : this.sslPolicy;
+    public Optional<Output<String>> sslPolicy() {
+        return Optional.ofNullable(this.sslPolicy);
     }
 
     /**
@@ -125,183 +125,152 @@ public final class TargetHttpsProxyArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="urlMap")
-      private final @Nullable Output<String> urlMap;
+    private @Nullable Output<String> urlMap;
 
-    public Output<String> urlMap() {
-        return this.urlMap == null ? Codegen.empty() : this.urlMap;
+    public Optional<Output<String>> urlMap() {
+        return Optional.ofNullable(this.urlMap);
     }
 
-    public TargetHttpsProxyArgs(
-        @Nullable Output<String> authorizationPolicy,
-        @Nullable Output<String> description,
-        @Nullable Output<String> name,
-        @Nullable Output<String> project,
-        @Nullable Output<Boolean> proxyBind,
-        @Nullable Output<TargetHttpsProxyQuicOverride> quicOverride,
-        @Nullable Output<String> requestId,
-        @Nullable Output<String> serverTlsPolicy,
-        @Nullable Output<List<String>> sslCertificates,
-        @Nullable Output<String> sslPolicy,
-        @Nullable Output<String> urlMap) {
-        this.authorizationPolicy = authorizationPolicy;
-        this.description = description;
-        this.name = name;
-        this.project = project;
-        this.proxyBind = proxyBind;
-        this.quicOverride = quicOverride;
-        this.requestId = requestId;
-        this.serverTlsPolicy = serverTlsPolicy;
-        this.sslCertificates = sslCertificates;
-        this.sslPolicy = sslPolicy;
-        this.urlMap = urlMap;
-    }
+    private TargetHttpsProxyArgs() {}
 
-    private TargetHttpsProxyArgs() {
-        this.authorizationPolicy = Codegen.empty();
-        this.description = Codegen.empty();
-        this.name = Codegen.empty();
-        this.project = Codegen.empty();
-        this.proxyBind = Codegen.empty();
-        this.quicOverride = Codegen.empty();
-        this.requestId = Codegen.empty();
-        this.serverTlsPolicy = Codegen.empty();
-        this.sslCertificates = Codegen.empty();
-        this.sslPolicy = Codegen.empty();
-        this.urlMap = Codegen.empty();
+    private TargetHttpsProxyArgs(TargetHttpsProxyArgs $) {
+        this.authorizationPolicy = $.authorizationPolicy;
+        this.description = $.description;
+        this.name = $.name;
+        this.project = $.project;
+        this.proxyBind = $.proxyBind;
+        this.quicOverride = $.quicOverride;
+        this.requestId = $.requestId;
+        this.serverTlsPolicy = $.serverTlsPolicy;
+        this.sslCertificates = $.sslCertificates;
+        this.sslPolicy = $.sslPolicy;
+        this.urlMap = $.urlMap;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TargetHttpsProxyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> authorizationPolicy;
-        private @Nullable Output<String> description;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> project;
-        private @Nullable Output<Boolean> proxyBind;
-        private @Nullable Output<TargetHttpsProxyQuicOverride> quicOverride;
-        private @Nullable Output<String> requestId;
-        private @Nullable Output<String> serverTlsPolicy;
-        private @Nullable Output<List<String>> sslCertificates;
-        private @Nullable Output<String> sslPolicy;
-        private @Nullable Output<String> urlMap;
+        private TargetHttpsProxyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TargetHttpsProxyArgs();
         }
 
         public Builder(TargetHttpsProxyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.authorizationPolicy = defaults.authorizationPolicy;
-    	      this.description = defaults.description;
-    	      this.name = defaults.name;
-    	      this.project = defaults.project;
-    	      this.proxyBind = defaults.proxyBind;
-    	      this.quicOverride = defaults.quicOverride;
-    	      this.requestId = defaults.requestId;
-    	      this.serverTlsPolicy = defaults.serverTlsPolicy;
-    	      this.sslCertificates = defaults.sslCertificates;
-    	      this.sslPolicy = defaults.sslPolicy;
-    	      this.urlMap = defaults.urlMap;
+            $ = new TargetHttpsProxyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder authorizationPolicy(@Nullable Output<String> authorizationPolicy) {
-            this.authorizationPolicy = authorizationPolicy;
+            $.authorizationPolicy = authorizationPolicy;
             return this;
         }
-        public Builder authorizationPolicy(@Nullable String authorizationPolicy) {
-            this.authorizationPolicy = Codegen.ofNullable(authorizationPolicy);
-            return this;
+
+        public Builder authorizationPolicy(String authorizationPolicy) {
+            return authorizationPolicy(Output.of(authorizationPolicy));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder proxyBind(@Nullable Output<Boolean> proxyBind) {
-            this.proxyBind = proxyBind;
+            $.proxyBind = proxyBind;
             return this;
         }
-        public Builder proxyBind(@Nullable Boolean proxyBind) {
-            this.proxyBind = Codegen.ofNullable(proxyBind);
-            return this;
+
+        public Builder proxyBind(Boolean proxyBind) {
+            return proxyBind(Output.of(proxyBind));
         }
+
         public Builder quicOverride(@Nullable Output<TargetHttpsProxyQuicOverride> quicOverride) {
-            this.quicOverride = quicOverride;
+            $.quicOverride = quicOverride;
             return this;
         }
-        public Builder quicOverride(@Nullable TargetHttpsProxyQuicOverride quicOverride) {
-            this.quicOverride = Codegen.ofNullable(quicOverride);
-            return this;
+
+        public Builder quicOverride(TargetHttpsProxyQuicOverride quicOverride) {
+            return quicOverride(Output.of(quicOverride));
         }
+
         public Builder requestId(@Nullable Output<String> requestId) {
-            this.requestId = requestId;
+            $.requestId = requestId;
             return this;
         }
-        public Builder requestId(@Nullable String requestId) {
-            this.requestId = Codegen.ofNullable(requestId);
-            return this;
+
+        public Builder requestId(String requestId) {
+            return requestId(Output.of(requestId));
         }
+
         public Builder serverTlsPolicy(@Nullable Output<String> serverTlsPolicy) {
-            this.serverTlsPolicy = serverTlsPolicy;
+            $.serverTlsPolicy = serverTlsPolicy;
             return this;
         }
-        public Builder serverTlsPolicy(@Nullable String serverTlsPolicy) {
-            this.serverTlsPolicy = Codegen.ofNullable(serverTlsPolicy);
-            return this;
+
+        public Builder serverTlsPolicy(String serverTlsPolicy) {
+            return serverTlsPolicy(Output.of(serverTlsPolicy));
         }
+
         public Builder sslCertificates(@Nullable Output<List<String>> sslCertificates) {
-            this.sslCertificates = sslCertificates;
+            $.sslCertificates = sslCertificates;
             return this;
         }
-        public Builder sslCertificates(@Nullable List<String> sslCertificates) {
-            this.sslCertificates = Codegen.ofNullable(sslCertificates);
-            return this;
+
+        public Builder sslCertificates(List<String> sslCertificates) {
+            return sslCertificates(Output.of(sslCertificates));
         }
+
         public Builder sslCertificates(String... sslCertificates) {
             return sslCertificates(List.of(sslCertificates));
         }
+
         public Builder sslPolicy(@Nullable Output<String> sslPolicy) {
-            this.sslPolicy = sslPolicy;
+            $.sslPolicy = sslPolicy;
             return this;
         }
-        public Builder sslPolicy(@Nullable String sslPolicy) {
-            this.sslPolicy = Codegen.ofNullable(sslPolicy);
-            return this;
+
+        public Builder sslPolicy(String sslPolicy) {
+            return sslPolicy(Output.of(sslPolicy));
         }
+
         public Builder urlMap(@Nullable Output<String> urlMap) {
-            this.urlMap = urlMap;
+            $.urlMap = urlMap;
             return this;
         }
-        public Builder urlMap(@Nullable String urlMap) {
-            this.urlMap = Codegen.ofNullable(urlMap);
-            return this;
-        }        public TargetHttpsProxyArgs build() {
-            return new TargetHttpsProxyArgs(authorizationPolicy, description, name, project, proxyBind, quicOverride, requestId, serverTlsPolicy, sslCertificates, sslPolicy, urlMap);
+
+        public Builder urlMap(String urlMap) {
+            return urlMap(Output.of(urlMap));
+        }
+
+        public TargetHttpsProxyArgs build() {
+            return $;
         }
     }
+
 }

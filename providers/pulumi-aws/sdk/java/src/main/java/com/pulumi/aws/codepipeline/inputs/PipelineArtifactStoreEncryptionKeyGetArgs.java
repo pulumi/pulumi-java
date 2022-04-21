@@ -5,7 +5,6 @@ package com.pulumi.aws.codepipeline.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,7 +18,7 @@ public final class PipelineArtifactStoreEncryptionKeyGetArgs extends com.pulumi.
      * 
      */
     @Import(name="id", required=true)
-      private final Output<String> id;
+    private Output<String> id;
 
     public Output<String> id() {
         return this.id;
@@ -30,63 +29,60 @@ public final class PipelineArtifactStoreEncryptionKeyGetArgs extends com.pulumi.
      * 
      */
     @Import(name="type", required=true)
-      private final Output<String> type;
+    private Output<String> type;
 
     public Output<String> type() {
         return this.type;
     }
 
-    public PipelineArtifactStoreEncryptionKeyGetArgs(
-        Output<String> id,
-        Output<String> type) {
-        this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private PipelineArtifactStoreEncryptionKeyGetArgs() {}
 
-    private PipelineArtifactStoreEncryptionKeyGetArgs() {
-        this.id = Codegen.empty();
-        this.type = Codegen.empty();
+    private PipelineArtifactStoreEncryptionKeyGetArgs(PipelineArtifactStoreEncryptionKeyGetArgs $) {
+        this.id = $.id;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PipelineArtifactStoreEncryptionKeyGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> id;
-        private Output<String> type;
+        private PipelineArtifactStoreEncryptionKeyGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PipelineArtifactStoreEncryptionKeyGetArgs();
         }
 
         public Builder(PipelineArtifactStoreEncryptionKeyGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.id = defaults.id;
-    	      this.type = defaults.type;
+            $ = new PipelineArtifactStoreEncryptionKeyGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder id(Output<String> id) {
-            this.id = Objects.requireNonNull(id);
+            $.id = id;
             return this;
         }
+
         public Builder id(String id) {
-            this.id = Output.of(Objects.requireNonNull(id));
-            return this;
+            return id(Output.of(id));
         }
+
         public Builder type(Output<String> type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Output.of(Objects.requireNonNull(type));
-            return this;
-        }        public PipelineArtifactStoreEncryptionKeyGetArgs build() {
-            return new PipelineArtifactStoreEncryptionKeyGetArgs(id, type);
+            return type(Output.of(type));
+        }
+
+        public PipelineArtifactStoreEncryptionKeyGetArgs build() {
+            $.id = Objects.requireNonNull($.id, "expected parameter 'id' to be non-null");
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

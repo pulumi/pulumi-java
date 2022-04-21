@@ -21,45 +21,45 @@ public final class ExpiryDetailResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="expireTime", required=true)
-      private final String expireTime;
+    private String expireTime;
 
     public String expireTime() {
         return this.expireTime;
     }
 
-    public ExpiryDetailResponse(String expireTime) {
-        this.expireTime = Objects.requireNonNull(expireTime, "expected parameter 'expireTime' to be non-null");
-    }
+    private ExpiryDetailResponse() {}
 
-    private ExpiryDetailResponse() {
-        this.expireTime = null;
+    private ExpiryDetailResponse(ExpiryDetailResponse $) {
+        this.expireTime = $.expireTime;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ExpiryDetailResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String expireTime;
+        private ExpiryDetailResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ExpiryDetailResponse();
         }
 
         public Builder(ExpiryDetailResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.expireTime = defaults.expireTime;
+            $ = new ExpiryDetailResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder expireTime(String expireTime) {
-            this.expireTime = Objects.requireNonNull(expireTime);
+            $.expireTime = expireTime;
             return this;
-        }        public ExpiryDetailResponse build() {
-            return new ExpiryDetailResponse(expireTime);
+        }
+
+        public ExpiryDetailResponse build() {
+            $.expireTime = Objects.requireNonNull($.expireTime, "expected parameter 'expireTime' to be non-null");
+            return $;
         }
     }
+
 }

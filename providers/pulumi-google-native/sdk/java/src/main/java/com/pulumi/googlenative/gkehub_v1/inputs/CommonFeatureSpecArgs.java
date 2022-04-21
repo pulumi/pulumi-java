@@ -5,10 +5,10 @@ package com.pulumi.googlenative.gkehub_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.gkehub_v1.inputs.AppDevExperienceFeatureSpecArgs;
 import com.pulumi.googlenative.gkehub_v1.inputs.MultiClusterIngressFeatureSpecArgs;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class CommonFeatureSpecArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="appdevexperience")
-      private final @Nullable Output<AppDevExperienceFeatureSpecArgs> appdevexperience;
+    private @Nullable Output<AppDevExperienceFeatureSpecArgs> appdevexperience;
 
-    public Output<AppDevExperienceFeatureSpecArgs> appdevexperience() {
-        return this.appdevexperience == null ? Codegen.empty() : this.appdevexperience;
+    public Optional<Output<AppDevExperienceFeatureSpecArgs>> appdevexperience() {
+        return Optional.ofNullable(this.appdevexperience);
     }
 
     /**
@@ -36,63 +36,58 @@ public final class CommonFeatureSpecArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="multiclusteringress")
-      private final @Nullable Output<MultiClusterIngressFeatureSpecArgs> multiclusteringress;
+    private @Nullable Output<MultiClusterIngressFeatureSpecArgs> multiclusteringress;
 
-    public Output<MultiClusterIngressFeatureSpecArgs> multiclusteringress() {
-        return this.multiclusteringress == null ? Codegen.empty() : this.multiclusteringress;
+    public Optional<Output<MultiClusterIngressFeatureSpecArgs>> multiclusteringress() {
+        return Optional.ofNullable(this.multiclusteringress);
     }
 
-    public CommonFeatureSpecArgs(
-        @Nullable Output<AppDevExperienceFeatureSpecArgs> appdevexperience,
-        @Nullable Output<MultiClusterIngressFeatureSpecArgs> multiclusteringress) {
-        this.appdevexperience = appdevexperience;
-        this.multiclusteringress = multiclusteringress;
-    }
+    private CommonFeatureSpecArgs() {}
 
-    private CommonFeatureSpecArgs() {
-        this.appdevexperience = Codegen.empty();
-        this.multiclusteringress = Codegen.empty();
+    private CommonFeatureSpecArgs(CommonFeatureSpecArgs $) {
+        this.appdevexperience = $.appdevexperience;
+        this.multiclusteringress = $.multiclusteringress;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CommonFeatureSpecArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<AppDevExperienceFeatureSpecArgs> appdevexperience;
-        private @Nullable Output<MultiClusterIngressFeatureSpecArgs> multiclusteringress;
+        private CommonFeatureSpecArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CommonFeatureSpecArgs();
         }
 
         public Builder(CommonFeatureSpecArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.appdevexperience = defaults.appdevexperience;
-    	      this.multiclusteringress = defaults.multiclusteringress;
+            $ = new CommonFeatureSpecArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder appdevexperience(@Nullable Output<AppDevExperienceFeatureSpecArgs> appdevexperience) {
-            this.appdevexperience = appdevexperience;
+            $.appdevexperience = appdevexperience;
             return this;
         }
-        public Builder appdevexperience(@Nullable AppDevExperienceFeatureSpecArgs appdevexperience) {
-            this.appdevexperience = Codegen.ofNullable(appdevexperience);
-            return this;
+
+        public Builder appdevexperience(AppDevExperienceFeatureSpecArgs appdevexperience) {
+            return appdevexperience(Output.of(appdevexperience));
         }
+
         public Builder multiclusteringress(@Nullable Output<MultiClusterIngressFeatureSpecArgs> multiclusteringress) {
-            this.multiclusteringress = multiclusteringress;
+            $.multiclusteringress = multiclusteringress;
             return this;
         }
-        public Builder multiclusteringress(@Nullable MultiClusterIngressFeatureSpecArgs multiclusteringress) {
-            this.multiclusteringress = Codegen.ofNullable(multiclusteringress);
-            return this;
-        }        public CommonFeatureSpecArgs build() {
-            return new CommonFeatureSpecArgs(appdevexperience, multiclusteringress);
+
+        public Builder multiclusteringress(MultiClusterIngressFeatureSpecArgs multiclusteringress) {
+            return multiclusteringress(Output.of(multiclusteringress));
+        }
+
+        public CommonFeatureSpecArgs build() {
+            return $;
         }
     }
+
 }

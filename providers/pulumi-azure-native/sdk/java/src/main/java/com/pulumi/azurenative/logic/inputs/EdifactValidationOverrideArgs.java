@@ -7,7 +7,6 @@ import com.pulumi.azurenative.logic.enums.TrailingSeparatorPolicy;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -26,7 +25,7 @@ public final class EdifactValidationOverrideArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="allowLeadingAndTrailingSpacesAndZeroes", required=true)
-      private final Output<Boolean> allowLeadingAndTrailingSpacesAndZeroes;
+    private Output<Boolean> allowLeadingAndTrailingSpacesAndZeroes;
 
     public Output<Boolean> allowLeadingAndTrailingSpacesAndZeroes() {
         return this.allowLeadingAndTrailingSpacesAndZeroes;
@@ -37,7 +36,7 @@ public final class EdifactValidationOverrideArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="enforceCharacterSet", required=true)
-      private final Output<Boolean> enforceCharacterSet;
+    private Output<Boolean> enforceCharacterSet;
 
     public Output<Boolean> enforceCharacterSet() {
         return this.enforceCharacterSet;
@@ -48,7 +47,7 @@ public final class EdifactValidationOverrideArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="messageId", required=true)
-      private final Output<String> messageId;
+    private Output<String> messageId;
 
     public Output<String> messageId() {
         return this.messageId;
@@ -59,7 +58,7 @@ public final class EdifactValidationOverrideArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="trailingSeparatorPolicy", required=true)
-      private final Output<Either<String,TrailingSeparatorPolicy>> trailingSeparatorPolicy;
+    private Output<Either<String,TrailingSeparatorPolicy>> trailingSeparatorPolicy;
 
     public Output<Either<String,TrailingSeparatorPolicy>> trailingSeparatorPolicy() {
         return this.trailingSeparatorPolicy;
@@ -70,7 +69,7 @@ public final class EdifactValidationOverrideArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="trimLeadingAndTrailingSpacesAndZeroes", required=true)
-      private final Output<Boolean> trimLeadingAndTrailingSpacesAndZeroes;
+    private Output<Boolean> trimLeadingAndTrailingSpacesAndZeroes;
 
     public Output<Boolean> trimLeadingAndTrailingSpacesAndZeroes() {
         return this.trimLeadingAndTrailingSpacesAndZeroes;
@@ -81,7 +80,7 @@ public final class EdifactValidationOverrideArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="validateEDITypes", required=true)
-      private final Output<Boolean> validateEDITypes;
+    private Output<Boolean> validateEDITypes;
 
     public Output<Boolean> validateEDITypes() {
         return this.validateEDITypes;
@@ -92,128 +91,115 @@ public final class EdifactValidationOverrideArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="validateXSDTypes", required=true)
-      private final Output<Boolean> validateXSDTypes;
+    private Output<Boolean> validateXSDTypes;
 
     public Output<Boolean> validateXSDTypes() {
         return this.validateXSDTypes;
     }
 
-    public EdifactValidationOverrideArgs(
-        Output<Boolean> allowLeadingAndTrailingSpacesAndZeroes,
-        Output<Boolean> enforceCharacterSet,
-        Output<String> messageId,
-        Output<Either<String,TrailingSeparatorPolicy>> trailingSeparatorPolicy,
-        Output<Boolean> trimLeadingAndTrailingSpacesAndZeroes,
-        Output<Boolean> validateEDITypes,
-        Output<Boolean> validateXSDTypes) {
-        this.allowLeadingAndTrailingSpacesAndZeroes = Objects.requireNonNull(allowLeadingAndTrailingSpacesAndZeroes, "expected parameter 'allowLeadingAndTrailingSpacesAndZeroes' to be non-null");
-        this.enforceCharacterSet = Objects.requireNonNull(enforceCharacterSet, "expected parameter 'enforceCharacterSet' to be non-null");
-        this.messageId = Objects.requireNonNull(messageId, "expected parameter 'messageId' to be non-null");
-        this.trailingSeparatorPolicy = Objects.requireNonNull(trailingSeparatorPolicy, "expected parameter 'trailingSeparatorPolicy' to be non-null");
-        this.trimLeadingAndTrailingSpacesAndZeroes = Objects.requireNonNull(trimLeadingAndTrailingSpacesAndZeroes, "expected parameter 'trimLeadingAndTrailingSpacesAndZeroes' to be non-null");
-        this.validateEDITypes = Objects.requireNonNull(validateEDITypes, "expected parameter 'validateEDITypes' to be non-null");
-        this.validateXSDTypes = Objects.requireNonNull(validateXSDTypes, "expected parameter 'validateXSDTypes' to be non-null");
-    }
+    private EdifactValidationOverrideArgs() {}
 
-    private EdifactValidationOverrideArgs() {
-        this.allowLeadingAndTrailingSpacesAndZeroes = Codegen.empty();
-        this.enforceCharacterSet = Codegen.empty();
-        this.messageId = Codegen.empty();
-        this.trailingSeparatorPolicy = Codegen.empty();
-        this.trimLeadingAndTrailingSpacesAndZeroes = Codegen.empty();
-        this.validateEDITypes = Codegen.empty();
-        this.validateXSDTypes = Codegen.empty();
+    private EdifactValidationOverrideArgs(EdifactValidationOverrideArgs $) {
+        this.allowLeadingAndTrailingSpacesAndZeroes = $.allowLeadingAndTrailingSpacesAndZeroes;
+        this.enforceCharacterSet = $.enforceCharacterSet;
+        this.messageId = $.messageId;
+        this.trailingSeparatorPolicy = $.trailingSeparatorPolicy;
+        this.trimLeadingAndTrailingSpacesAndZeroes = $.trimLeadingAndTrailingSpacesAndZeroes;
+        this.validateEDITypes = $.validateEDITypes;
+        this.validateXSDTypes = $.validateXSDTypes;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EdifactValidationOverrideArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Boolean> allowLeadingAndTrailingSpacesAndZeroes;
-        private Output<Boolean> enforceCharacterSet;
-        private Output<String> messageId;
-        private Output<Either<String,TrailingSeparatorPolicy>> trailingSeparatorPolicy;
-        private Output<Boolean> trimLeadingAndTrailingSpacesAndZeroes;
-        private Output<Boolean> validateEDITypes;
-        private Output<Boolean> validateXSDTypes;
+        private EdifactValidationOverrideArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new EdifactValidationOverrideArgs();
         }
 
         public Builder(EdifactValidationOverrideArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.allowLeadingAndTrailingSpacesAndZeroes = defaults.allowLeadingAndTrailingSpacesAndZeroes;
-    	      this.enforceCharacterSet = defaults.enforceCharacterSet;
-    	      this.messageId = defaults.messageId;
-    	      this.trailingSeparatorPolicy = defaults.trailingSeparatorPolicy;
-    	      this.trimLeadingAndTrailingSpacesAndZeroes = defaults.trimLeadingAndTrailingSpacesAndZeroes;
-    	      this.validateEDITypes = defaults.validateEDITypes;
-    	      this.validateXSDTypes = defaults.validateXSDTypes;
+            $ = new EdifactValidationOverrideArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder allowLeadingAndTrailingSpacesAndZeroes(Output<Boolean> allowLeadingAndTrailingSpacesAndZeroes) {
-            this.allowLeadingAndTrailingSpacesAndZeroes = Objects.requireNonNull(allowLeadingAndTrailingSpacesAndZeroes);
+            $.allowLeadingAndTrailingSpacesAndZeroes = allowLeadingAndTrailingSpacesAndZeroes;
             return this;
         }
+
         public Builder allowLeadingAndTrailingSpacesAndZeroes(Boolean allowLeadingAndTrailingSpacesAndZeroes) {
-            this.allowLeadingAndTrailingSpacesAndZeroes = Output.of(Objects.requireNonNull(allowLeadingAndTrailingSpacesAndZeroes));
-            return this;
+            return allowLeadingAndTrailingSpacesAndZeroes(Output.of(allowLeadingAndTrailingSpacesAndZeroes));
         }
+
         public Builder enforceCharacterSet(Output<Boolean> enforceCharacterSet) {
-            this.enforceCharacterSet = Objects.requireNonNull(enforceCharacterSet);
+            $.enforceCharacterSet = enforceCharacterSet;
             return this;
         }
+
         public Builder enforceCharacterSet(Boolean enforceCharacterSet) {
-            this.enforceCharacterSet = Output.of(Objects.requireNonNull(enforceCharacterSet));
-            return this;
+            return enforceCharacterSet(Output.of(enforceCharacterSet));
         }
+
         public Builder messageId(Output<String> messageId) {
-            this.messageId = Objects.requireNonNull(messageId);
+            $.messageId = messageId;
             return this;
         }
+
         public Builder messageId(String messageId) {
-            this.messageId = Output.of(Objects.requireNonNull(messageId));
-            return this;
+            return messageId(Output.of(messageId));
         }
+
         public Builder trailingSeparatorPolicy(Output<Either<String,TrailingSeparatorPolicy>> trailingSeparatorPolicy) {
-            this.trailingSeparatorPolicy = Objects.requireNonNull(trailingSeparatorPolicy);
+            $.trailingSeparatorPolicy = trailingSeparatorPolicy;
             return this;
         }
+
         public Builder trailingSeparatorPolicy(Either<String,TrailingSeparatorPolicy> trailingSeparatorPolicy) {
-            this.trailingSeparatorPolicy = Output.of(Objects.requireNonNull(trailingSeparatorPolicy));
-            return this;
+            return trailingSeparatorPolicy(Output.of(trailingSeparatorPolicy));
         }
+
         public Builder trimLeadingAndTrailingSpacesAndZeroes(Output<Boolean> trimLeadingAndTrailingSpacesAndZeroes) {
-            this.trimLeadingAndTrailingSpacesAndZeroes = Objects.requireNonNull(trimLeadingAndTrailingSpacesAndZeroes);
+            $.trimLeadingAndTrailingSpacesAndZeroes = trimLeadingAndTrailingSpacesAndZeroes;
             return this;
         }
+
         public Builder trimLeadingAndTrailingSpacesAndZeroes(Boolean trimLeadingAndTrailingSpacesAndZeroes) {
-            this.trimLeadingAndTrailingSpacesAndZeroes = Output.of(Objects.requireNonNull(trimLeadingAndTrailingSpacesAndZeroes));
-            return this;
+            return trimLeadingAndTrailingSpacesAndZeroes(Output.of(trimLeadingAndTrailingSpacesAndZeroes));
         }
+
         public Builder validateEDITypes(Output<Boolean> validateEDITypes) {
-            this.validateEDITypes = Objects.requireNonNull(validateEDITypes);
+            $.validateEDITypes = validateEDITypes;
             return this;
         }
+
         public Builder validateEDITypes(Boolean validateEDITypes) {
-            this.validateEDITypes = Output.of(Objects.requireNonNull(validateEDITypes));
-            return this;
+            return validateEDITypes(Output.of(validateEDITypes));
         }
+
         public Builder validateXSDTypes(Output<Boolean> validateXSDTypes) {
-            this.validateXSDTypes = Objects.requireNonNull(validateXSDTypes);
+            $.validateXSDTypes = validateXSDTypes;
             return this;
         }
+
         public Builder validateXSDTypes(Boolean validateXSDTypes) {
-            this.validateXSDTypes = Output.of(Objects.requireNonNull(validateXSDTypes));
-            return this;
-        }        public EdifactValidationOverrideArgs build() {
-            return new EdifactValidationOverrideArgs(allowLeadingAndTrailingSpacesAndZeroes, enforceCharacterSet, messageId, trailingSeparatorPolicy, trimLeadingAndTrailingSpacesAndZeroes, validateEDITypes, validateXSDTypes);
+            return validateXSDTypes(Output.of(validateXSDTypes));
+        }
+
+        public EdifactValidationOverrideArgs build() {
+            $.allowLeadingAndTrailingSpacesAndZeroes = Objects.requireNonNull($.allowLeadingAndTrailingSpacesAndZeroes, "expected parameter 'allowLeadingAndTrailingSpacesAndZeroes' to be non-null");
+            $.enforceCharacterSet = Objects.requireNonNull($.enforceCharacterSet, "expected parameter 'enforceCharacterSet' to be non-null");
+            $.messageId = Objects.requireNonNull($.messageId, "expected parameter 'messageId' to be non-null");
+            $.trailingSeparatorPolicy = Objects.requireNonNull($.trailingSeparatorPolicy, "expected parameter 'trailingSeparatorPolicy' to be non-null");
+            $.trimLeadingAndTrailingSpacesAndZeroes = Objects.requireNonNull($.trimLeadingAndTrailingSpacesAndZeroes, "expected parameter 'trimLeadingAndTrailingSpacesAndZeroes' to be non-null");
+            $.validateEDITypes = Objects.requireNonNull($.validateEDITypes, "expected parameter 'validateEDITypes' to be non-null");
+            $.validateXSDTypes = Objects.requireNonNull($.validateXSDTypes, "expected parameter 'validateXSDTypes' to be non-null");
+            return $;
         }
     }
+
 }

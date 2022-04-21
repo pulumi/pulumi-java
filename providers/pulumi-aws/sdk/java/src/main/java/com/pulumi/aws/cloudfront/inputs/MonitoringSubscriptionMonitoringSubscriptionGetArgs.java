@@ -6,7 +6,6 @@ package com.pulumi.aws.cloudfront.inputs;
 import com.pulumi.aws.cloudfront.inputs.MonitoringSubscriptionMonitoringSubscriptionRealtimeMetricsSubscriptionConfigGetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
 
 
@@ -19,49 +18,49 @@ public final class MonitoringSubscriptionMonitoringSubscriptionGetArgs extends c
      * 
      */
     @Import(name="realtimeMetricsSubscriptionConfig", required=true)
-      private final Output<MonitoringSubscriptionMonitoringSubscriptionRealtimeMetricsSubscriptionConfigGetArgs> realtimeMetricsSubscriptionConfig;
+    private Output<MonitoringSubscriptionMonitoringSubscriptionRealtimeMetricsSubscriptionConfigGetArgs> realtimeMetricsSubscriptionConfig;
 
     public Output<MonitoringSubscriptionMonitoringSubscriptionRealtimeMetricsSubscriptionConfigGetArgs> realtimeMetricsSubscriptionConfig() {
         return this.realtimeMetricsSubscriptionConfig;
     }
 
-    public MonitoringSubscriptionMonitoringSubscriptionGetArgs(Output<MonitoringSubscriptionMonitoringSubscriptionRealtimeMetricsSubscriptionConfigGetArgs> realtimeMetricsSubscriptionConfig) {
-        this.realtimeMetricsSubscriptionConfig = Objects.requireNonNull(realtimeMetricsSubscriptionConfig, "expected parameter 'realtimeMetricsSubscriptionConfig' to be non-null");
-    }
+    private MonitoringSubscriptionMonitoringSubscriptionGetArgs() {}
 
-    private MonitoringSubscriptionMonitoringSubscriptionGetArgs() {
-        this.realtimeMetricsSubscriptionConfig = Codegen.empty();
+    private MonitoringSubscriptionMonitoringSubscriptionGetArgs(MonitoringSubscriptionMonitoringSubscriptionGetArgs $) {
+        this.realtimeMetricsSubscriptionConfig = $.realtimeMetricsSubscriptionConfig;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MonitoringSubscriptionMonitoringSubscriptionGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<MonitoringSubscriptionMonitoringSubscriptionRealtimeMetricsSubscriptionConfigGetArgs> realtimeMetricsSubscriptionConfig;
+        private MonitoringSubscriptionMonitoringSubscriptionGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new MonitoringSubscriptionMonitoringSubscriptionGetArgs();
         }
 
         public Builder(MonitoringSubscriptionMonitoringSubscriptionGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.realtimeMetricsSubscriptionConfig = defaults.realtimeMetricsSubscriptionConfig;
+            $ = new MonitoringSubscriptionMonitoringSubscriptionGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder realtimeMetricsSubscriptionConfig(Output<MonitoringSubscriptionMonitoringSubscriptionRealtimeMetricsSubscriptionConfigGetArgs> realtimeMetricsSubscriptionConfig) {
-            this.realtimeMetricsSubscriptionConfig = Objects.requireNonNull(realtimeMetricsSubscriptionConfig);
+            $.realtimeMetricsSubscriptionConfig = realtimeMetricsSubscriptionConfig;
             return this;
         }
+
         public Builder realtimeMetricsSubscriptionConfig(MonitoringSubscriptionMonitoringSubscriptionRealtimeMetricsSubscriptionConfigGetArgs realtimeMetricsSubscriptionConfig) {
-            this.realtimeMetricsSubscriptionConfig = Output.of(Objects.requireNonNull(realtimeMetricsSubscriptionConfig));
-            return this;
-        }        public MonitoringSubscriptionMonitoringSubscriptionGetArgs build() {
-            return new MonitoringSubscriptionMonitoringSubscriptionGetArgs(realtimeMetricsSubscriptionConfig);
+            return realtimeMetricsSubscriptionConfig(Output.of(realtimeMetricsSubscriptionConfig));
+        }
+
+        public MonitoringSubscriptionMonitoringSubscriptionGetArgs build() {
+            $.realtimeMetricsSubscriptionConfig = Objects.requireNonNull($.realtimeMetricsSubscriptionConfig, "expected parameter 'realtimeMetricsSubscriptionConfig' to be non-null");
+            return $;
         }
     }
+
 }

@@ -23,10 +23,10 @@ public final class SubscriptionKeyParameterNamesContractResponse extends com.pul
      * 
      */
     @Import(name="header")
-      private final @Nullable String header;
+    private @Nullable String header;
 
     public Optional<String> header() {
-        return this.header == null ? Optional.empty() : Optional.ofNullable(this.header);
+        return Optional.ofNullable(this.header);
     }
 
     /**
@@ -34,55 +34,50 @@ public final class SubscriptionKeyParameterNamesContractResponse extends com.pul
      * 
      */
     @Import(name="query")
-      private final @Nullable String query;
+    private @Nullable String query;
 
     public Optional<String> query() {
-        return this.query == null ? Optional.empty() : Optional.ofNullable(this.query);
+        return Optional.ofNullable(this.query);
     }
 
-    public SubscriptionKeyParameterNamesContractResponse(
-        @Nullable String header,
-        @Nullable String query) {
-        this.header = header;
-        this.query = query;
-    }
+    private SubscriptionKeyParameterNamesContractResponse() {}
 
-    private SubscriptionKeyParameterNamesContractResponse() {
-        this.header = null;
-        this.query = null;
+    private SubscriptionKeyParameterNamesContractResponse(SubscriptionKeyParameterNamesContractResponse $) {
+        this.header = $.header;
+        this.query = $.query;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SubscriptionKeyParameterNamesContractResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String header;
-        private @Nullable String query;
+        private SubscriptionKeyParameterNamesContractResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new SubscriptionKeyParameterNamesContractResponse();
         }
 
         public Builder(SubscriptionKeyParameterNamesContractResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.header = defaults.header;
-    	      this.query = defaults.query;
+            $ = new SubscriptionKeyParameterNamesContractResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder header(@Nullable String header) {
-            this.header = header;
+            $.header = header;
             return this;
         }
+
         public Builder query(@Nullable String query) {
-            this.query = query;
+            $.query = query;
             return this;
-        }        public SubscriptionKeyParameterNamesContractResponse build() {
-            return new SubscriptionKeyParameterNamesContractResponse(header, query);
+        }
+
+        public SubscriptionKeyParameterNamesContractResponse build() {
+            return $;
         }
     }
+
 }

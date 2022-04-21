@@ -13,78 +13,73 @@ public final class GetClusterNodeConfigTaint extends com.pulumi.resources.Invoke
     public static final GetClusterNodeConfigTaint Empty = new GetClusterNodeConfigTaint();
 
     @Import(name="effect", required=true)
-      private final String effect;
+    private String effect;
 
     public String effect() {
         return this.effect;
     }
 
     @Import(name="key", required=true)
-      private final String key;
+    private String key;
 
     public String key() {
         return this.key;
     }
 
     @Import(name="value", required=true)
-      private final String value;
+    private String value;
 
     public String value() {
         return this.value;
     }
 
-    public GetClusterNodeConfigTaint(
-        String effect,
-        String key,
-        String value) {
-        this.effect = Objects.requireNonNull(effect, "expected parameter 'effect' to be non-null");
-        this.key = Objects.requireNonNull(key, "expected parameter 'key' to be non-null");
-        this.value = Objects.requireNonNull(value, "expected parameter 'value' to be non-null");
-    }
+    private GetClusterNodeConfigTaint() {}
 
-    private GetClusterNodeConfigTaint() {
-        this.effect = null;
-        this.key = null;
-        this.value = null;
+    private GetClusterNodeConfigTaint(GetClusterNodeConfigTaint $) {
+        this.effect = $.effect;
+        this.key = $.key;
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetClusterNodeConfigTaint defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String effect;
-        private String key;
-        private String value;
+        private GetClusterNodeConfigTaint $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetClusterNodeConfigTaint();
         }
 
         public Builder(GetClusterNodeConfigTaint defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.effect = defaults.effect;
-    	      this.key = defaults.key;
-    	      this.value = defaults.value;
+            $ = new GetClusterNodeConfigTaint(Objects.requireNonNull(defaults));
         }
 
         public Builder effect(String effect) {
-            this.effect = Objects.requireNonNull(effect);
+            $.effect = effect;
             return this;
         }
+
         public Builder key(String key) {
-            this.key = Objects.requireNonNull(key);
+            $.key = key;
             return this;
         }
+
         public Builder value(String value) {
-            this.value = Objects.requireNonNull(value);
+            $.value = value;
             return this;
-        }        public GetClusterNodeConfigTaint build() {
-            return new GetClusterNodeConfigTaint(effect, key, value);
+        }
+
+        public GetClusterNodeConfigTaint build() {
+            $.effect = Objects.requireNonNull($.effect, "expected parameter 'effect' to be non-null");
+            $.key = Objects.requireNonNull($.key, "expected parameter 'key' to be non-null");
+            $.value = Objects.requireNonNull($.value, "expected parameter 'value' to be non-null");
+            return $;
         }
     }
+
 }

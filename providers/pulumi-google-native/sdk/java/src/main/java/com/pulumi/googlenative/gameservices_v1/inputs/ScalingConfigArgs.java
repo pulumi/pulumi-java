@@ -5,12 +5,12 @@ package com.pulumi.googlenative.gameservices_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.gameservices_v1.inputs.LabelSelectorArgs;
 import com.pulumi.googlenative.gameservices_v1.inputs.ScheduleArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,7 +27,7 @@ public final class ScalingConfigArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="fleetAutoscalerSpec", required=true)
-      private final Output<String> fleetAutoscalerSpec;
+    private Output<String> fleetAutoscalerSpec;
 
     public Output<String> fleetAutoscalerSpec() {
         return this.fleetAutoscalerSpec;
@@ -38,7 +38,7 @@ public final class ScalingConfigArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name", required=true)
-      private final Output<String> name;
+    private Output<String> name;
 
     public Output<String> name() {
         return this.name;
@@ -49,10 +49,10 @@ public final class ScalingConfigArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="schedules")
-      private final @Nullable Output<List<ScheduleArgs>> schedules;
+    private @Nullable Output<List<ScheduleArgs>> schedules;
 
-    public Output<List<ScheduleArgs>> schedules() {
-        return this.schedules == null ? Codegen.empty() : this.schedules;
+    public Optional<Output<List<ScheduleArgs>>> schedules() {
+        return Optional.ofNullable(this.schedules);
     }
 
     /**
@@ -60,95 +60,88 @@ public final class ScalingConfigArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="selectors")
-      private final @Nullable Output<List<LabelSelectorArgs>> selectors;
+    private @Nullable Output<List<LabelSelectorArgs>> selectors;
 
-    public Output<List<LabelSelectorArgs>> selectors() {
-        return this.selectors == null ? Codegen.empty() : this.selectors;
+    public Optional<Output<List<LabelSelectorArgs>>> selectors() {
+        return Optional.ofNullable(this.selectors);
     }
 
-    public ScalingConfigArgs(
-        Output<String> fleetAutoscalerSpec,
-        Output<String> name,
-        @Nullable Output<List<ScheduleArgs>> schedules,
-        @Nullable Output<List<LabelSelectorArgs>> selectors) {
-        this.fleetAutoscalerSpec = Objects.requireNonNull(fleetAutoscalerSpec, "expected parameter 'fleetAutoscalerSpec' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.schedules = schedules;
-        this.selectors = selectors;
-    }
+    private ScalingConfigArgs() {}
 
-    private ScalingConfigArgs() {
-        this.fleetAutoscalerSpec = Codegen.empty();
-        this.name = Codegen.empty();
-        this.schedules = Codegen.empty();
-        this.selectors = Codegen.empty();
+    private ScalingConfigArgs(ScalingConfigArgs $) {
+        this.fleetAutoscalerSpec = $.fleetAutoscalerSpec;
+        this.name = $.name;
+        this.schedules = $.schedules;
+        this.selectors = $.selectors;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ScalingConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> fleetAutoscalerSpec;
-        private Output<String> name;
-        private @Nullable Output<List<ScheduleArgs>> schedules;
-        private @Nullable Output<List<LabelSelectorArgs>> selectors;
+        private ScalingConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ScalingConfigArgs();
         }
 
         public Builder(ScalingConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.fleetAutoscalerSpec = defaults.fleetAutoscalerSpec;
-    	      this.name = defaults.name;
-    	      this.schedules = defaults.schedules;
-    	      this.selectors = defaults.selectors;
+            $ = new ScalingConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder fleetAutoscalerSpec(Output<String> fleetAutoscalerSpec) {
-            this.fleetAutoscalerSpec = Objects.requireNonNull(fleetAutoscalerSpec);
+            $.fleetAutoscalerSpec = fleetAutoscalerSpec;
             return this;
         }
+
         public Builder fleetAutoscalerSpec(String fleetAutoscalerSpec) {
-            this.fleetAutoscalerSpec = Output.of(Objects.requireNonNull(fleetAutoscalerSpec));
-            return this;
+            return fleetAutoscalerSpec(Output.of(fleetAutoscalerSpec));
         }
+
         public Builder name(Output<String> name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Output.of(Objects.requireNonNull(name));
-            return this;
+            return name(Output.of(name));
         }
+
         public Builder schedules(@Nullable Output<List<ScheduleArgs>> schedules) {
-            this.schedules = schedules;
+            $.schedules = schedules;
             return this;
         }
-        public Builder schedules(@Nullable List<ScheduleArgs> schedules) {
-            this.schedules = Codegen.ofNullable(schedules);
-            return this;
+
+        public Builder schedules(List<ScheduleArgs> schedules) {
+            return schedules(Output.of(schedules));
         }
+
         public Builder schedules(ScheduleArgs... schedules) {
             return schedules(List.of(schedules));
         }
+
         public Builder selectors(@Nullable Output<List<LabelSelectorArgs>> selectors) {
-            this.selectors = selectors;
+            $.selectors = selectors;
             return this;
         }
-        public Builder selectors(@Nullable List<LabelSelectorArgs> selectors) {
-            this.selectors = Codegen.ofNullable(selectors);
-            return this;
+
+        public Builder selectors(List<LabelSelectorArgs> selectors) {
+            return selectors(Output.of(selectors));
         }
+
         public Builder selectors(LabelSelectorArgs... selectors) {
             return selectors(List.of(selectors));
-        }        public ScalingConfigArgs build() {
-            return new ScalingConfigArgs(fleetAutoscalerSpec, name, schedules, selectors);
+        }
+
+        public ScalingConfigArgs build() {
+            $.fleetAutoscalerSpec = Objects.requireNonNull($.fleetAutoscalerSpec, "expected parameter 'fleetAutoscalerSpec' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            return $;
         }
     }
+
 }

@@ -29,10 +29,10 @@ public final class ManagedHsmPropertiesResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="createMode")
-      private final @Nullable String createMode;
+    private @Nullable String createMode;
 
     public Optional<String> createMode() {
-        return this.createMode == null ? Optional.empty() : Optional.ofNullable(this.createMode);
+        return Optional.ofNullable(this.createMode);
     }
 
     /**
@@ -40,10 +40,10 @@ public final class ManagedHsmPropertiesResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="enablePurgeProtection")
-      private final @Nullable Boolean enablePurgeProtection;
+    private @Nullable Boolean enablePurgeProtection;
 
     public Optional<Boolean> enablePurgeProtection() {
-        return this.enablePurgeProtection == null ? Optional.empty() : Optional.ofNullable(this.enablePurgeProtection);
+        return Optional.ofNullable(this.enablePurgeProtection);
     }
 
     /**
@@ -51,10 +51,10 @@ public final class ManagedHsmPropertiesResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="enableSoftDelete")
-      private final @Nullable Boolean enableSoftDelete;
+    private @Nullable Boolean enableSoftDelete;
 
     public Optional<Boolean> enableSoftDelete() {
-        return this.enableSoftDelete == null ? Optional.empty() : Optional.ofNullable(this.enableSoftDelete);
+        return Optional.ofNullable(this.enableSoftDelete);
     }
 
     /**
@@ -62,7 +62,7 @@ public final class ManagedHsmPropertiesResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="hsmUri", required=true)
-      private final String hsmUri;
+    private String hsmUri;
 
     public String hsmUri() {
         return this.hsmUri;
@@ -73,10 +73,10 @@ public final class ManagedHsmPropertiesResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="initialAdminObjectIds")
-      private final @Nullable List<String> initialAdminObjectIds;
+    private @Nullable List<String> initialAdminObjectIds;
 
-    public List<String> initialAdminObjectIds() {
-        return this.initialAdminObjectIds == null ? List.of() : this.initialAdminObjectIds;
+    public Optional<List<String>> initialAdminObjectIds() {
+        return Optional.ofNullable(this.initialAdminObjectIds);
     }
 
     /**
@@ -84,10 +84,10 @@ public final class ManagedHsmPropertiesResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="networkAcls")
-      private final @Nullable MHSMNetworkRuleSetResponse networkAcls;
+    private @Nullable MHSMNetworkRuleSetResponse networkAcls;
 
     public Optional<MHSMNetworkRuleSetResponse> networkAcls() {
-        return this.networkAcls == null ? Optional.empty() : Optional.ofNullable(this.networkAcls);
+        return Optional.ofNullable(this.networkAcls);
     }
 
     /**
@@ -95,7 +95,7 @@ public final class ManagedHsmPropertiesResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="privateEndpointConnections", required=true)
-      private final List<MHSMPrivateEndpointConnectionItemResponse> privateEndpointConnections;
+    private List<MHSMPrivateEndpointConnectionItemResponse> privateEndpointConnections;
 
     public List<MHSMPrivateEndpointConnectionItemResponse> privateEndpointConnections() {
         return this.privateEndpointConnections;
@@ -106,7 +106,7 @@ public final class ManagedHsmPropertiesResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="provisioningState", required=true)
-      private final String provisioningState;
+    private String provisioningState;
 
     public String provisioningState() {
         return this.provisioningState;
@@ -117,10 +117,10 @@ public final class ManagedHsmPropertiesResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="publicNetworkAccess")
-      private final @Nullable String publicNetworkAccess;
+    private @Nullable String publicNetworkAccess;
 
     public Optional<String> publicNetworkAccess() {
-        return this.publicNetworkAccess == null ? Optional.empty() : Optional.ofNullable(this.publicNetworkAccess);
+        return Optional.ofNullable(this.publicNetworkAccess);
     }
 
     /**
@@ -128,7 +128,7 @@ public final class ManagedHsmPropertiesResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="scheduledPurgeDate", required=true)
-      private final String scheduledPurgeDate;
+    private String scheduledPurgeDate;
 
     public String scheduledPurgeDate() {
         return this.scheduledPurgeDate;
@@ -139,10 +139,10 @@ public final class ManagedHsmPropertiesResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="softDeleteRetentionInDays")
-      private final @Nullable Integer softDeleteRetentionInDays;
+    private @Nullable Integer softDeleteRetentionInDays;
 
     public Optional<Integer> softDeleteRetentionInDays() {
-        return this.softDeleteRetentionInDays == null ? Optional.empty() : Optional.ofNullable(this.softDeleteRetentionInDays);
+        return Optional.ofNullable(this.softDeleteRetentionInDays);
     }
 
     /**
@@ -150,7 +150,7 @@ public final class ManagedHsmPropertiesResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="statusMessage", required=true)
-      private final String statusMessage;
+    private String statusMessage;
 
     public String statusMessage() {
         return this.statusMessage;
@@ -161,160 +161,132 @@ public final class ManagedHsmPropertiesResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="tenantId")
-      private final @Nullable String tenantId;
+    private @Nullable String tenantId;
 
     public Optional<String> tenantId() {
-        return this.tenantId == null ? Optional.empty() : Optional.ofNullable(this.tenantId);
+        return Optional.ofNullable(this.tenantId);
     }
 
-    public ManagedHsmPropertiesResponse(
-        @Nullable String createMode,
-        @Nullable Boolean enablePurgeProtection,
-        @Nullable Boolean enableSoftDelete,
-        String hsmUri,
-        @Nullable List<String> initialAdminObjectIds,
-        @Nullable MHSMNetworkRuleSetResponse networkAcls,
-        List<MHSMPrivateEndpointConnectionItemResponse> privateEndpointConnections,
-        String provisioningState,
-        @Nullable String publicNetworkAccess,
-        String scheduledPurgeDate,
-        @Nullable Integer softDeleteRetentionInDays,
-        String statusMessage,
-        @Nullable String tenantId) {
-        this.createMode = createMode;
-        this.enablePurgeProtection = Codegen.booleanProp("enablePurgeProtection").arg(enablePurgeProtection).def(true).getNullable();
-        this.enableSoftDelete = Codegen.booleanProp("enableSoftDelete").arg(enableSoftDelete).def(true).getNullable();
-        this.hsmUri = Objects.requireNonNull(hsmUri, "expected parameter 'hsmUri' to be non-null");
-        this.initialAdminObjectIds = initialAdminObjectIds;
-        this.networkAcls = networkAcls;
-        this.privateEndpointConnections = Objects.requireNonNull(privateEndpointConnections, "expected parameter 'privateEndpointConnections' to be non-null");
-        this.provisioningState = Objects.requireNonNull(provisioningState, "expected parameter 'provisioningState' to be non-null");
-        this.publicNetworkAccess = publicNetworkAccess;
-        this.scheduledPurgeDate = Objects.requireNonNull(scheduledPurgeDate, "expected parameter 'scheduledPurgeDate' to be non-null");
-        this.softDeleteRetentionInDays = Codegen.integerProp("softDeleteRetentionInDays").arg(softDeleteRetentionInDays).def(90).getNullable();
-        this.statusMessage = Objects.requireNonNull(statusMessage, "expected parameter 'statusMessage' to be non-null");
-        this.tenantId = tenantId;
-    }
+    private ManagedHsmPropertiesResponse() {}
 
-    private ManagedHsmPropertiesResponse() {
-        this.createMode = null;
-        this.enablePurgeProtection = null;
-        this.enableSoftDelete = null;
-        this.hsmUri = null;
-        this.initialAdminObjectIds = List.of();
-        this.networkAcls = null;
-        this.privateEndpointConnections = List.of();
-        this.provisioningState = null;
-        this.publicNetworkAccess = null;
-        this.scheduledPurgeDate = null;
-        this.softDeleteRetentionInDays = null;
-        this.statusMessage = null;
-        this.tenantId = null;
+    private ManagedHsmPropertiesResponse(ManagedHsmPropertiesResponse $) {
+        this.createMode = $.createMode;
+        this.enablePurgeProtection = $.enablePurgeProtection;
+        this.enableSoftDelete = $.enableSoftDelete;
+        this.hsmUri = $.hsmUri;
+        this.initialAdminObjectIds = $.initialAdminObjectIds;
+        this.networkAcls = $.networkAcls;
+        this.privateEndpointConnections = $.privateEndpointConnections;
+        this.provisioningState = $.provisioningState;
+        this.publicNetworkAccess = $.publicNetworkAccess;
+        this.scheduledPurgeDate = $.scheduledPurgeDate;
+        this.softDeleteRetentionInDays = $.softDeleteRetentionInDays;
+        this.statusMessage = $.statusMessage;
+        this.tenantId = $.tenantId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ManagedHsmPropertiesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String createMode;
-        private @Nullable Boolean enablePurgeProtection;
-        private @Nullable Boolean enableSoftDelete;
-        private String hsmUri;
-        private @Nullable List<String> initialAdminObjectIds;
-        private @Nullable MHSMNetworkRuleSetResponse networkAcls;
-        private List<MHSMPrivateEndpointConnectionItemResponse> privateEndpointConnections;
-        private String provisioningState;
-        private @Nullable String publicNetworkAccess;
-        private String scheduledPurgeDate;
-        private @Nullable Integer softDeleteRetentionInDays;
-        private String statusMessage;
-        private @Nullable String tenantId;
+        private ManagedHsmPropertiesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ManagedHsmPropertiesResponse();
         }
 
         public Builder(ManagedHsmPropertiesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.createMode = defaults.createMode;
-    	      this.enablePurgeProtection = defaults.enablePurgeProtection;
-    	      this.enableSoftDelete = defaults.enableSoftDelete;
-    	      this.hsmUri = defaults.hsmUri;
-    	      this.initialAdminObjectIds = defaults.initialAdminObjectIds;
-    	      this.networkAcls = defaults.networkAcls;
-    	      this.privateEndpointConnections = defaults.privateEndpointConnections;
-    	      this.provisioningState = defaults.provisioningState;
-    	      this.publicNetworkAccess = defaults.publicNetworkAccess;
-    	      this.scheduledPurgeDate = defaults.scheduledPurgeDate;
-    	      this.softDeleteRetentionInDays = defaults.softDeleteRetentionInDays;
-    	      this.statusMessage = defaults.statusMessage;
-    	      this.tenantId = defaults.tenantId;
+            $ = new ManagedHsmPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder createMode(@Nullable String createMode) {
-            this.createMode = createMode;
+            $.createMode = createMode;
             return this;
         }
+
         public Builder enablePurgeProtection(@Nullable Boolean enablePurgeProtection) {
-            this.enablePurgeProtection = enablePurgeProtection;
+            $.enablePurgeProtection = enablePurgeProtection;
             return this;
         }
+
         public Builder enableSoftDelete(@Nullable Boolean enableSoftDelete) {
-            this.enableSoftDelete = enableSoftDelete;
+            $.enableSoftDelete = enableSoftDelete;
             return this;
         }
+
         public Builder hsmUri(String hsmUri) {
-            this.hsmUri = Objects.requireNonNull(hsmUri);
+            $.hsmUri = hsmUri;
             return this;
         }
+
         public Builder initialAdminObjectIds(@Nullable List<String> initialAdminObjectIds) {
-            this.initialAdminObjectIds = initialAdminObjectIds;
+            $.initialAdminObjectIds = initialAdminObjectIds;
             return this;
         }
+
         public Builder initialAdminObjectIds(String... initialAdminObjectIds) {
             return initialAdminObjectIds(List.of(initialAdminObjectIds));
         }
+
         public Builder networkAcls(@Nullable MHSMNetworkRuleSetResponse networkAcls) {
-            this.networkAcls = networkAcls;
+            $.networkAcls = networkAcls;
             return this;
         }
+
         public Builder privateEndpointConnections(List<MHSMPrivateEndpointConnectionItemResponse> privateEndpointConnections) {
-            this.privateEndpointConnections = Objects.requireNonNull(privateEndpointConnections);
+            $.privateEndpointConnections = privateEndpointConnections;
             return this;
         }
+
         public Builder privateEndpointConnections(MHSMPrivateEndpointConnectionItemResponse... privateEndpointConnections) {
             return privateEndpointConnections(List.of(privateEndpointConnections));
         }
+
         public Builder provisioningState(String provisioningState) {
-            this.provisioningState = Objects.requireNonNull(provisioningState);
+            $.provisioningState = provisioningState;
             return this;
         }
+
         public Builder publicNetworkAccess(@Nullable String publicNetworkAccess) {
-            this.publicNetworkAccess = publicNetworkAccess;
+            $.publicNetworkAccess = publicNetworkAccess;
             return this;
         }
+
         public Builder scheduledPurgeDate(String scheduledPurgeDate) {
-            this.scheduledPurgeDate = Objects.requireNonNull(scheduledPurgeDate);
+            $.scheduledPurgeDate = scheduledPurgeDate;
             return this;
         }
+
         public Builder softDeleteRetentionInDays(@Nullable Integer softDeleteRetentionInDays) {
-            this.softDeleteRetentionInDays = softDeleteRetentionInDays;
+            $.softDeleteRetentionInDays = softDeleteRetentionInDays;
             return this;
         }
+
         public Builder statusMessage(String statusMessage) {
-            this.statusMessage = Objects.requireNonNull(statusMessage);
+            $.statusMessage = statusMessage;
             return this;
         }
+
         public Builder tenantId(@Nullable String tenantId) {
-            this.tenantId = tenantId;
+            $.tenantId = tenantId;
             return this;
-        }        public ManagedHsmPropertiesResponse build() {
-            return new ManagedHsmPropertiesResponse(createMode, enablePurgeProtection, enableSoftDelete, hsmUri, initialAdminObjectIds, networkAcls, privateEndpointConnections, provisioningState, publicNetworkAccess, scheduledPurgeDate, softDeleteRetentionInDays, statusMessage, tenantId);
+        }
+
+        public ManagedHsmPropertiesResponse build() {
+            $.enablePurgeProtection = Codegen.booleanProp("enablePurgeProtection").arg($.enablePurgeProtection).def(true).getNullable();
+            $.enableSoftDelete = Codegen.booleanProp("enableSoftDelete").arg($.enableSoftDelete).def(true).getNullable();
+            $.hsmUri = Objects.requireNonNull($.hsmUri, "expected parameter 'hsmUri' to be non-null");
+            $.privateEndpointConnections = Objects.requireNonNull($.privateEndpointConnections, "expected parameter 'privateEndpointConnections' to be non-null");
+            $.provisioningState = Objects.requireNonNull($.provisioningState, "expected parameter 'provisioningState' to be non-null");
+            $.scheduledPurgeDate = Objects.requireNonNull($.scheduledPurgeDate, "expected parameter 'scheduledPurgeDate' to be non-null");
+            $.softDeleteRetentionInDays = Codegen.integerProp("softDeleteRetentionInDays").arg($.softDeleteRetentionInDays).def(90).getNullable();
+            $.statusMessage = Objects.requireNonNull($.statusMessage, "expected parameter 'statusMessage' to be non-null");
+            return $;
         }
     }
+
 }

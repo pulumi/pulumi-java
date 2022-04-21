@@ -17,7 +17,7 @@ public final class GetProfileSupportedOptimizationTypesArgs extends com.pulumi.r
      * 
      */
     @Import(name="profileName", required=true)
-      private final String profileName;
+    private String profileName;
 
     public String profileName() {
         return this.profileName;
@@ -28,55 +28,52 @@ public final class GetProfileSupportedOptimizationTypesArgs extends com.pulumi.r
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public GetProfileSupportedOptimizationTypesArgs(
-        String profileName,
-        String resourceGroupName) {
-        this.profileName = Objects.requireNonNull(profileName, "expected parameter 'profileName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private GetProfileSupportedOptimizationTypesArgs() {}
 
-    private GetProfileSupportedOptimizationTypesArgs() {
-        this.profileName = null;
-        this.resourceGroupName = null;
+    private GetProfileSupportedOptimizationTypesArgs(GetProfileSupportedOptimizationTypesArgs $) {
+        this.profileName = $.profileName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetProfileSupportedOptimizationTypesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String profileName;
-        private String resourceGroupName;
+        private GetProfileSupportedOptimizationTypesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetProfileSupportedOptimizationTypesArgs();
         }
 
         public Builder(GetProfileSupportedOptimizationTypesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.profileName = defaults.profileName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new GetProfileSupportedOptimizationTypesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder profileName(String profileName) {
-            this.profileName = Objects.requireNonNull(profileName);
+            $.profileName = profileName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public GetProfileSupportedOptimizationTypesArgs build() {
-            return new GetProfileSupportedOptimizationTypesArgs(profileName, resourceGroupName);
+        }
+
+        public GetProfileSupportedOptimizationTypesArgs build() {
+            $.profileName = Objects.requireNonNull($.profileName, "expected parameter 'profileName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

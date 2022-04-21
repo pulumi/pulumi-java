@@ -26,7 +26,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageTableCardResponse ex
      * 
      */
     @Import(name="buttons", required=true)
-      private final List<GoogleCloudDialogflowV2beta1IntentMessageBasicCardButtonResponse> buttons;
+    private List<GoogleCloudDialogflowV2beta1IntentMessageBasicCardButtonResponse> buttons;
 
     public List<GoogleCloudDialogflowV2beta1IntentMessageBasicCardButtonResponse> buttons() {
         return this.buttons;
@@ -37,7 +37,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageTableCardResponse ex
      * 
      */
     @Import(name="columnProperties", required=true)
-      private final List<GoogleCloudDialogflowV2beta1IntentMessageColumnPropertiesResponse> columnProperties;
+    private List<GoogleCloudDialogflowV2beta1IntentMessageColumnPropertiesResponse> columnProperties;
 
     public List<GoogleCloudDialogflowV2beta1IntentMessageColumnPropertiesResponse> columnProperties() {
         return this.columnProperties;
@@ -48,7 +48,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageTableCardResponse ex
      * 
      */
     @Import(name="image", required=true)
-      private final GoogleCloudDialogflowV2beta1IntentMessageImageResponse image;
+    private GoogleCloudDialogflowV2beta1IntentMessageImageResponse image;
 
     public GoogleCloudDialogflowV2beta1IntentMessageImageResponse image() {
         return this.image;
@@ -59,7 +59,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageTableCardResponse ex
      * 
      */
     @Import(name="rows", required=true)
-      private final List<GoogleCloudDialogflowV2beta1IntentMessageTableCardRowResponse> rows;
+    private List<GoogleCloudDialogflowV2beta1IntentMessageTableCardRowResponse> rows;
 
     public List<GoogleCloudDialogflowV2beta1IntentMessageTableCardRowResponse> rows() {
         return this.rows;
@@ -70,7 +70,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageTableCardResponse ex
      * 
      */
     @Import(name="subtitle", required=true)
-      private final String subtitle;
+    private String subtitle;
 
     public String subtitle() {
         return this.subtitle;
@@ -81,100 +81,92 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageTableCardResponse ex
      * 
      */
     @Import(name="title", required=true)
-      private final String title;
+    private String title;
 
     public String title() {
         return this.title;
     }
 
-    public GoogleCloudDialogflowV2beta1IntentMessageTableCardResponse(
-        List<GoogleCloudDialogflowV2beta1IntentMessageBasicCardButtonResponse> buttons,
-        List<GoogleCloudDialogflowV2beta1IntentMessageColumnPropertiesResponse> columnProperties,
-        GoogleCloudDialogflowV2beta1IntentMessageImageResponse image,
-        List<GoogleCloudDialogflowV2beta1IntentMessageTableCardRowResponse> rows,
-        String subtitle,
-        String title) {
-        this.buttons = Objects.requireNonNull(buttons, "expected parameter 'buttons' to be non-null");
-        this.columnProperties = Objects.requireNonNull(columnProperties, "expected parameter 'columnProperties' to be non-null");
-        this.image = Objects.requireNonNull(image, "expected parameter 'image' to be non-null");
-        this.rows = Objects.requireNonNull(rows, "expected parameter 'rows' to be non-null");
-        this.subtitle = Objects.requireNonNull(subtitle, "expected parameter 'subtitle' to be non-null");
-        this.title = Objects.requireNonNull(title, "expected parameter 'title' to be non-null");
-    }
+    private GoogleCloudDialogflowV2beta1IntentMessageTableCardResponse() {}
 
-    private GoogleCloudDialogflowV2beta1IntentMessageTableCardResponse() {
-        this.buttons = List.of();
-        this.columnProperties = List.of();
-        this.image = null;
-        this.rows = List.of();
-        this.subtitle = null;
-        this.title = null;
+    private GoogleCloudDialogflowV2beta1IntentMessageTableCardResponse(GoogleCloudDialogflowV2beta1IntentMessageTableCardResponse $) {
+        this.buttons = $.buttons;
+        this.columnProperties = $.columnProperties;
+        this.image = $.image;
+        this.rows = $.rows;
+        this.subtitle = $.subtitle;
+        this.title = $.title;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudDialogflowV2beta1IntentMessageTableCardResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<GoogleCloudDialogflowV2beta1IntentMessageBasicCardButtonResponse> buttons;
-        private List<GoogleCloudDialogflowV2beta1IntentMessageColumnPropertiesResponse> columnProperties;
-        private GoogleCloudDialogflowV2beta1IntentMessageImageResponse image;
-        private List<GoogleCloudDialogflowV2beta1IntentMessageTableCardRowResponse> rows;
-        private String subtitle;
-        private String title;
+        private GoogleCloudDialogflowV2beta1IntentMessageTableCardResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudDialogflowV2beta1IntentMessageTableCardResponse();
         }
 
         public Builder(GoogleCloudDialogflowV2beta1IntentMessageTableCardResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.buttons = defaults.buttons;
-    	      this.columnProperties = defaults.columnProperties;
-    	      this.image = defaults.image;
-    	      this.rows = defaults.rows;
-    	      this.subtitle = defaults.subtitle;
-    	      this.title = defaults.title;
+            $ = new GoogleCloudDialogflowV2beta1IntentMessageTableCardResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder buttons(List<GoogleCloudDialogflowV2beta1IntentMessageBasicCardButtonResponse> buttons) {
-            this.buttons = Objects.requireNonNull(buttons);
+            $.buttons = buttons;
             return this;
         }
+
         public Builder buttons(GoogleCloudDialogflowV2beta1IntentMessageBasicCardButtonResponse... buttons) {
             return buttons(List.of(buttons));
         }
+
         public Builder columnProperties(List<GoogleCloudDialogflowV2beta1IntentMessageColumnPropertiesResponse> columnProperties) {
-            this.columnProperties = Objects.requireNonNull(columnProperties);
+            $.columnProperties = columnProperties;
             return this;
         }
+
         public Builder columnProperties(GoogleCloudDialogflowV2beta1IntentMessageColumnPropertiesResponse... columnProperties) {
             return columnProperties(List.of(columnProperties));
         }
+
         public Builder image(GoogleCloudDialogflowV2beta1IntentMessageImageResponse image) {
-            this.image = Objects.requireNonNull(image);
+            $.image = image;
             return this;
         }
+
         public Builder rows(List<GoogleCloudDialogflowV2beta1IntentMessageTableCardRowResponse> rows) {
-            this.rows = Objects.requireNonNull(rows);
+            $.rows = rows;
             return this;
         }
+
         public Builder rows(GoogleCloudDialogflowV2beta1IntentMessageTableCardRowResponse... rows) {
             return rows(List.of(rows));
         }
+
         public Builder subtitle(String subtitle) {
-            this.subtitle = Objects.requireNonNull(subtitle);
+            $.subtitle = subtitle;
             return this;
         }
+
         public Builder title(String title) {
-            this.title = Objects.requireNonNull(title);
+            $.title = title;
             return this;
-        }        public GoogleCloudDialogflowV2beta1IntentMessageTableCardResponse build() {
-            return new GoogleCloudDialogflowV2beta1IntentMessageTableCardResponse(buttons, columnProperties, image, rows, subtitle, title);
+        }
+
+        public GoogleCloudDialogflowV2beta1IntentMessageTableCardResponse build() {
+            $.buttons = Objects.requireNonNull($.buttons, "expected parameter 'buttons' to be non-null");
+            $.columnProperties = Objects.requireNonNull($.columnProperties, "expected parameter 'columnProperties' to be non-null");
+            $.image = Objects.requireNonNull($.image, "expected parameter 'image' to be non-null");
+            $.rows = Objects.requireNonNull($.rows, "expected parameter 'rows' to be non-null");
+            $.subtitle = Objects.requireNonNull($.subtitle, "expected parameter 'subtitle' to be non-null");
+            $.title = Objects.requireNonNull($.title, "expected parameter 'title' to be non-null");
+            return $;
         }
     }
+
 }

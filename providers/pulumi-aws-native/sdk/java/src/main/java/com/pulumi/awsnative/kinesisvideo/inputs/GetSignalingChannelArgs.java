@@ -17,45 +17,45 @@ public final class GetSignalingChannelArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
     }
 
-    public GetSignalingChannelArgs(String name) {
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-    }
+    private GetSignalingChannelArgs() {}
 
-    private GetSignalingChannelArgs() {
-        this.name = null;
+    private GetSignalingChannelArgs(GetSignalingChannelArgs $) {
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetSignalingChannelArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String name;
+        private GetSignalingChannelArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetSignalingChannelArgs();
         }
 
         public Builder(GetSignalingChannelArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
+            $ = new GetSignalingChannelArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
-        }        public GetSignalingChannelArgs build() {
-            return new GetSignalingChannelArgs(name);
+        }
+
+        public GetSignalingChannelArgs build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            return $;
         }
     }
+
 }

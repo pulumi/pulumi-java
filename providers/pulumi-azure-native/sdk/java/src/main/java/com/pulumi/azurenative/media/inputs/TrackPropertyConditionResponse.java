@@ -23,7 +23,7 @@ public final class TrackPropertyConditionResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="operation", required=true)
-      private final String operation;
+    private String operation;
 
     public String operation() {
         return this.operation;
@@ -34,7 +34,7 @@ public final class TrackPropertyConditionResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="property", required=true)
-      private final String property;
+    private String property;
 
     public String property() {
         return this.property;
@@ -45,64 +45,58 @@ public final class TrackPropertyConditionResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="value")
-      private final @Nullable String value;
+    private @Nullable String value;
 
     public Optional<String> value() {
-        return this.value == null ? Optional.empty() : Optional.ofNullable(this.value);
+        return Optional.ofNullable(this.value);
     }
 
-    public TrackPropertyConditionResponse(
-        String operation,
-        String property,
-        @Nullable String value) {
-        this.operation = Objects.requireNonNull(operation, "expected parameter 'operation' to be non-null");
-        this.property = Objects.requireNonNull(property, "expected parameter 'property' to be non-null");
-        this.value = value;
-    }
+    private TrackPropertyConditionResponse() {}
 
-    private TrackPropertyConditionResponse() {
-        this.operation = null;
-        this.property = null;
-        this.value = null;
+    private TrackPropertyConditionResponse(TrackPropertyConditionResponse $) {
+        this.operation = $.operation;
+        this.property = $.property;
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TrackPropertyConditionResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String operation;
-        private String property;
-        private @Nullable String value;
+        private TrackPropertyConditionResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new TrackPropertyConditionResponse();
         }
 
         public Builder(TrackPropertyConditionResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.operation = defaults.operation;
-    	      this.property = defaults.property;
-    	      this.value = defaults.value;
+            $ = new TrackPropertyConditionResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder operation(String operation) {
-            this.operation = Objects.requireNonNull(operation);
+            $.operation = operation;
             return this;
         }
+
         public Builder property(String property) {
-            this.property = Objects.requireNonNull(property);
+            $.property = property;
             return this;
         }
+
         public Builder value(@Nullable String value) {
-            this.value = value;
+            $.value = value;
             return this;
-        }        public TrackPropertyConditionResponse build() {
-            return new TrackPropertyConditionResponse(operation, property, value);
+        }
+
+        public TrackPropertyConditionResponse build() {
+            $.operation = Objects.requireNonNull($.operation, "expected parameter 'operation' to be non-null");
+            $.property = Objects.requireNonNull($.property, "expected parameter 'property' to be non-null");
+            return $;
         }
     }
+
 }

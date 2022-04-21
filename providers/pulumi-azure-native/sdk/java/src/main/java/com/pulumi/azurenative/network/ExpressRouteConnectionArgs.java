@@ -7,11 +7,11 @@ import com.pulumi.azurenative.network.inputs.ExpressRouteCircuitPeeringIdArgs;
 import com.pulumi.azurenative.network.inputs.RoutingConfigurationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class ExpressRouteConnectionArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="authorizationKey")
-      private final @Nullable Output<String> authorizationKey;
+    private @Nullable Output<String> authorizationKey;
 
-    public Output<String> authorizationKey() {
-        return this.authorizationKey == null ? Codegen.empty() : this.authorizationKey;
+    public Optional<Output<String>> authorizationKey() {
+        return Optional.ofNullable(this.authorizationKey);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class ExpressRouteConnectionArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="connectionName")
-      private final @Nullable Output<String> connectionName;
+    private @Nullable Output<String> connectionName;
 
-    public Output<String> connectionName() {
-        return this.connectionName == null ? Codegen.empty() : this.connectionName;
+    public Optional<Output<String>> connectionName() {
+        return Optional.ofNullable(this.connectionName);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class ExpressRouteConnectionArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="enableInternetSecurity")
-      private final @Nullable Output<Boolean> enableInternetSecurity;
+    private @Nullable Output<Boolean> enableInternetSecurity;
 
-    public Output<Boolean> enableInternetSecurity() {
-        return this.enableInternetSecurity == null ? Codegen.empty() : this.enableInternetSecurity;
+    public Optional<Output<Boolean>> enableInternetSecurity() {
+        return Optional.ofNullable(this.enableInternetSecurity);
     }
 
     /**
@@ -57,7 +57,7 @@ public final class ExpressRouteConnectionArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="expressRouteCircuitPeering", required=true)
-      private final Output<ExpressRouteCircuitPeeringIdArgs> expressRouteCircuitPeering;
+    private Output<ExpressRouteCircuitPeeringIdArgs> expressRouteCircuitPeering;
 
     public Output<ExpressRouteCircuitPeeringIdArgs> expressRouteCircuitPeering() {
         return this.expressRouteCircuitPeering;
@@ -68,10 +68,10 @@ public final class ExpressRouteConnectionArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="expressRouteGatewayBypass")
-      private final @Nullable Output<Boolean> expressRouteGatewayBypass;
+    private @Nullable Output<Boolean> expressRouteGatewayBypass;
 
-    public Output<Boolean> expressRouteGatewayBypass() {
-        return this.expressRouteGatewayBypass == null ? Codegen.empty() : this.expressRouteGatewayBypass;
+    public Optional<Output<Boolean>> expressRouteGatewayBypass() {
+        return Optional.ofNullable(this.expressRouteGatewayBypass);
     }
 
     /**
@@ -79,7 +79,7 @@ public final class ExpressRouteConnectionArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="expressRouteGatewayName", required=true)
-      private final Output<String> expressRouteGatewayName;
+    private Output<String> expressRouteGatewayName;
 
     public Output<String> expressRouteGatewayName() {
         return this.expressRouteGatewayName;
@@ -90,10 +90,10 @@ public final class ExpressRouteConnectionArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="id")
-      private final @Nullable Output<String> id;
+    private @Nullable Output<String> id;
 
-    public Output<String> id() {
-        return this.id == null ? Codegen.empty() : this.id;
+    public Optional<Output<String>> id() {
+        return Optional.ofNullable(this.id);
     }
 
     /**
@@ -101,7 +101,7 @@ public final class ExpressRouteConnectionArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="name", required=true)
-      private final Output<String> name;
+    private Output<String> name;
 
     public Output<String> name() {
         return this.name;
@@ -112,7 +112,7 @@ public final class ExpressRouteConnectionArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -123,10 +123,10 @@ public final class ExpressRouteConnectionArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="routingConfiguration")
-      private final @Nullable Output<RoutingConfigurationArgs> routingConfiguration;
+    private @Nullable Output<RoutingConfigurationArgs> routingConfiguration;
 
-    public Output<RoutingConfigurationArgs> routingConfiguration() {
-        return this.routingConfiguration == null ? Codegen.empty() : this.routingConfiguration;
+    public Optional<Output<RoutingConfigurationArgs>> routingConfiguration() {
+        return Optional.ofNullable(this.routingConfiguration);
     }
 
     /**
@@ -134,180 +134,152 @@ public final class ExpressRouteConnectionArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="routingWeight")
-      private final @Nullable Output<Integer> routingWeight;
+    private @Nullable Output<Integer> routingWeight;
 
-    public Output<Integer> routingWeight() {
-        return this.routingWeight == null ? Codegen.empty() : this.routingWeight;
+    public Optional<Output<Integer>> routingWeight() {
+        return Optional.ofNullable(this.routingWeight);
     }
 
-    public ExpressRouteConnectionArgs(
-        @Nullable Output<String> authorizationKey,
-        @Nullable Output<String> connectionName,
-        @Nullable Output<Boolean> enableInternetSecurity,
-        Output<ExpressRouteCircuitPeeringIdArgs> expressRouteCircuitPeering,
-        @Nullable Output<Boolean> expressRouteGatewayBypass,
-        Output<String> expressRouteGatewayName,
-        @Nullable Output<String> id,
-        Output<String> name,
-        Output<String> resourceGroupName,
-        @Nullable Output<RoutingConfigurationArgs> routingConfiguration,
-        @Nullable Output<Integer> routingWeight) {
-        this.authorizationKey = authorizationKey;
-        this.connectionName = connectionName;
-        this.enableInternetSecurity = enableInternetSecurity;
-        this.expressRouteCircuitPeering = Objects.requireNonNull(expressRouteCircuitPeering, "expected parameter 'expressRouteCircuitPeering' to be non-null");
-        this.expressRouteGatewayBypass = expressRouteGatewayBypass;
-        this.expressRouteGatewayName = Objects.requireNonNull(expressRouteGatewayName, "expected parameter 'expressRouteGatewayName' to be non-null");
-        this.id = id;
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.routingConfiguration = routingConfiguration;
-        this.routingWeight = routingWeight;
-    }
+    private ExpressRouteConnectionArgs() {}
 
-    private ExpressRouteConnectionArgs() {
-        this.authorizationKey = Codegen.empty();
-        this.connectionName = Codegen.empty();
-        this.enableInternetSecurity = Codegen.empty();
-        this.expressRouteCircuitPeering = Codegen.empty();
-        this.expressRouteGatewayBypass = Codegen.empty();
-        this.expressRouteGatewayName = Codegen.empty();
-        this.id = Codegen.empty();
-        this.name = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.routingConfiguration = Codegen.empty();
-        this.routingWeight = Codegen.empty();
+    private ExpressRouteConnectionArgs(ExpressRouteConnectionArgs $) {
+        this.authorizationKey = $.authorizationKey;
+        this.connectionName = $.connectionName;
+        this.enableInternetSecurity = $.enableInternetSecurity;
+        this.expressRouteCircuitPeering = $.expressRouteCircuitPeering;
+        this.expressRouteGatewayBypass = $.expressRouteGatewayBypass;
+        this.expressRouteGatewayName = $.expressRouteGatewayName;
+        this.id = $.id;
+        this.name = $.name;
+        this.resourceGroupName = $.resourceGroupName;
+        this.routingConfiguration = $.routingConfiguration;
+        this.routingWeight = $.routingWeight;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ExpressRouteConnectionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> authorizationKey;
-        private @Nullable Output<String> connectionName;
-        private @Nullable Output<Boolean> enableInternetSecurity;
-        private Output<ExpressRouteCircuitPeeringIdArgs> expressRouteCircuitPeering;
-        private @Nullable Output<Boolean> expressRouteGatewayBypass;
-        private Output<String> expressRouteGatewayName;
-        private @Nullable Output<String> id;
-        private Output<String> name;
-        private Output<String> resourceGroupName;
-        private @Nullable Output<RoutingConfigurationArgs> routingConfiguration;
-        private @Nullable Output<Integer> routingWeight;
+        private ExpressRouteConnectionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ExpressRouteConnectionArgs();
         }
 
         public Builder(ExpressRouteConnectionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.authorizationKey = defaults.authorizationKey;
-    	      this.connectionName = defaults.connectionName;
-    	      this.enableInternetSecurity = defaults.enableInternetSecurity;
-    	      this.expressRouteCircuitPeering = defaults.expressRouteCircuitPeering;
-    	      this.expressRouteGatewayBypass = defaults.expressRouteGatewayBypass;
-    	      this.expressRouteGatewayName = defaults.expressRouteGatewayName;
-    	      this.id = defaults.id;
-    	      this.name = defaults.name;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.routingConfiguration = defaults.routingConfiguration;
-    	      this.routingWeight = defaults.routingWeight;
+            $ = new ExpressRouteConnectionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder authorizationKey(@Nullable Output<String> authorizationKey) {
-            this.authorizationKey = authorizationKey;
+            $.authorizationKey = authorizationKey;
             return this;
         }
-        public Builder authorizationKey(@Nullable String authorizationKey) {
-            this.authorizationKey = Codegen.ofNullable(authorizationKey);
-            return this;
+
+        public Builder authorizationKey(String authorizationKey) {
+            return authorizationKey(Output.of(authorizationKey));
         }
+
         public Builder connectionName(@Nullable Output<String> connectionName) {
-            this.connectionName = connectionName;
+            $.connectionName = connectionName;
             return this;
         }
-        public Builder connectionName(@Nullable String connectionName) {
-            this.connectionName = Codegen.ofNullable(connectionName);
-            return this;
+
+        public Builder connectionName(String connectionName) {
+            return connectionName(Output.of(connectionName));
         }
+
         public Builder enableInternetSecurity(@Nullable Output<Boolean> enableInternetSecurity) {
-            this.enableInternetSecurity = enableInternetSecurity;
+            $.enableInternetSecurity = enableInternetSecurity;
             return this;
         }
-        public Builder enableInternetSecurity(@Nullable Boolean enableInternetSecurity) {
-            this.enableInternetSecurity = Codegen.ofNullable(enableInternetSecurity);
-            return this;
+
+        public Builder enableInternetSecurity(Boolean enableInternetSecurity) {
+            return enableInternetSecurity(Output.of(enableInternetSecurity));
         }
+
         public Builder expressRouteCircuitPeering(Output<ExpressRouteCircuitPeeringIdArgs> expressRouteCircuitPeering) {
-            this.expressRouteCircuitPeering = Objects.requireNonNull(expressRouteCircuitPeering);
+            $.expressRouteCircuitPeering = expressRouteCircuitPeering;
             return this;
         }
+
         public Builder expressRouteCircuitPeering(ExpressRouteCircuitPeeringIdArgs expressRouteCircuitPeering) {
-            this.expressRouteCircuitPeering = Output.of(Objects.requireNonNull(expressRouteCircuitPeering));
-            return this;
+            return expressRouteCircuitPeering(Output.of(expressRouteCircuitPeering));
         }
+
         public Builder expressRouteGatewayBypass(@Nullable Output<Boolean> expressRouteGatewayBypass) {
-            this.expressRouteGatewayBypass = expressRouteGatewayBypass;
+            $.expressRouteGatewayBypass = expressRouteGatewayBypass;
             return this;
         }
-        public Builder expressRouteGatewayBypass(@Nullable Boolean expressRouteGatewayBypass) {
-            this.expressRouteGatewayBypass = Codegen.ofNullable(expressRouteGatewayBypass);
-            return this;
+
+        public Builder expressRouteGatewayBypass(Boolean expressRouteGatewayBypass) {
+            return expressRouteGatewayBypass(Output.of(expressRouteGatewayBypass));
         }
+
         public Builder expressRouteGatewayName(Output<String> expressRouteGatewayName) {
-            this.expressRouteGatewayName = Objects.requireNonNull(expressRouteGatewayName);
+            $.expressRouteGatewayName = expressRouteGatewayName;
             return this;
         }
+
         public Builder expressRouteGatewayName(String expressRouteGatewayName) {
-            this.expressRouteGatewayName = Output.of(Objects.requireNonNull(expressRouteGatewayName));
-            return this;
+            return expressRouteGatewayName(Output.of(expressRouteGatewayName));
         }
+
         public Builder id(@Nullable Output<String> id) {
-            this.id = id;
+            $.id = id;
             return this;
         }
-        public Builder id(@Nullable String id) {
-            this.id = Codegen.ofNullable(id);
-            return this;
+
+        public Builder id(String id) {
+            return id(Output.of(id));
         }
+
         public Builder name(Output<String> name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Output.of(Objects.requireNonNull(name));
-            return this;
+            return name(Output.of(name));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder routingConfiguration(@Nullable Output<RoutingConfigurationArgs> routingConfiguration) {
-            this.routingConfiguration = routingConfiguration;
+            $.routingConfiguration = routingConfiguration;
             return this;
         }
-        public Builder routingConfiguration(@Nullable RoutingConfigurationArgs routingConfiguration) {
-            this.routingConfiguration = Codegen.ofNullable(routingConfiguration);
-            return this;
+
+        public Builder routingConfiguration(RoutingConfigurationArgs routingConfiguration) {
+            return routingConfiguration(Output.of(routingConfiguration));
         }
+
         public Builder routingWeight(@Nullable Output<Integer> routingWeight) {
-            this.routingWeight = routingWeight;
+            $.routingWeight = routingWeight;
             return this;
         }
-        public Builder routingWeight(@Nullable Integer routingWeight) {
-            this.routingWeight = Codegen.ofNullable(routingWeight);
-            return this;
-        }        public ExpressRouteConnectionArgs build() {
-            return new ExpressRouteConnectionArgs(authorizationKey, connectionName, enableInternetSecurity, expressRouteCircuitPeering, expressRouteGatewayBypass, expressRouteGatewayName, id, name, resourceGroupName, routingConfiguration, routingWeight);
+
+        public Builder routingWeight(Integer routingWeight) {
+            return routingWeight(Output.of(routingWeight));
+        }
+
+        public ExpressRouteConnectionArgs build() {
+            $.expressRouteCircuitPeering = Objects.requireNonNull($.expressRouteCircuitPeering, "expected parameter 'expressRouteCircuitPeering' to be non-null");
+            $.expressRouteGatewayName = Objects.requireNonNull($.expressRouteGatewayName, "expected parameter 'expressRouteGatewayName' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

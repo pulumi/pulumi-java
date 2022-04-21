@@ -5,10 +5,10 @@ package com.pulumi.azurenative.operationalinsights.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class SearchResultsArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class SearchResultsArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="endSearchTime")
-      private final @Nullable Output<String> endSearchTime;
+    private @Nullable Output<String> endSearchTime;
 
-    public Output<String> endSearchTime() {
-        return this.endSearchTime == null ? Codegen.empty() : this.endSearchTime;
+    public Optional<Output<String>> endSearchTime() {
+        return Optional.ofNullable(this.endSearchTime);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class SearchResultsArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="limit")
-      private final @Nullable Output<Integer> limit;
+    private @Nullable Output<Integer> limit;
 
-    public Output<Integer> limit() {
-        return this.limit == null ? Codegen.empty() : this.limit;
+    public Optional<Output<Integer>> limit() {
+        return Optional.ofNullable(this.limit);
     }
 
     /**
@@ -58,10 +58,10 @@ public final class SearchResultsArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="query")
-      private final @Nullable Output<String> query;
+    private @Nullable Output<String> query;
 
-    public Output<String> query() {
-        return this.query == null ? Codegen.empty() : this.query;
+    public Optional<Output<String>> query() {
+        return Optional.ofNullable(this.query);
     }
 
     /**
@@ -69,102 +69,88 @@ public final class SearchResultsArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="startSearchTime")
-      private final @Nullable Output<String> startSearchTime;
+    private @Nullable Output<String> startSearchTime;
 
-    public Output<String> startSearchTime() {
-        return this.startSearchTime == null ? Codegen.empty() : this.startSearchTime;
+    public Optional<Output<String>> startSearchTime() {
+        return Optional.ofNullable(this.startSearchTime);
     }
 
-    public SearchResultsArgs(
-        @Nullable Output<String> description,
-        @Nullable Output<String> endSearchTime,
-        @Nullable Output<Integer> limit,
-        @Nullable Output<String> query,
-        @Nullable Output<String> startSearchTime) {
-        this.description = description;
-        this.endSearchTime = endSearchTime;
-        this.limit = limit;
-        this.query = query;
-        this.startSearchTime = startSearchTime;
-    }
+    private SearchResultsArgs() {}
 
-    private SearchResultsArgs() {
-        this.description = Codegen.empty();
-        this.endSearchTime = Codegen.empty();
-        this.limit = Codegen.empty();
-        this.query = Codegen.empty();
-        this.startSearchTime = Codegen.empty();
+    private SearchResultsArgs(SearchResultsArgs $) {
+        this.description = $.description;
+        this.endSearchTime = $.endSearchTime;
+        this.limit = $.limit;
+        this.query = $.query;
+        this.startSearchTime = $.startSearchTime;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SearchResultsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> description;
-        private @Nullable Output<String> endSearchTime;
-        private @Nullable Output<Integer> limit;
-        private @Nullable Output<String> query;
-        private @Nullable Output<String> startSearchTime;
+        private SearchResultsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SearchResultsArgs();
         }
 
         public Builder(SearchResultsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.description = defaults.description;
-    	      this.endSearchTime = defaults.endSearchTime;
-    	      this.limit = defaults.limit;
-    	      this.query = defaults.query;
-    	      this.startSearchTime = defaults.startSearchTime;
+            $ = new SearchResultsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder endSearchTime(@Nullable Output<String> endSearchTime) {
-            this.endSearchTime = endSearchTime;
+            $.endSearchTime = endSearchTime;
             return this;
         }
-        public Builder endSearchTime(@Nullable String endSearchTime) {
-            this.endSearchTime = Codegen.ofNullable(endSearchTime);
-            return this;
+
+        public Builder endSearchTime(String endSearchTime) {
+            return endSearchTime(Output.of(endSearchTime));
         }
+
         public Builder limit(@Nullable Output<Integer> limit) {
-            this.limit = limit;
+            $.limit = limit;
             return this;
         }
-        public Builder limit(@Nullable Integer limit) {
-            this.limit = Codegen.ofNullable(limit);
-            return this;
+
+        public Builder limit(Integer limit) {
+            return limit(Output.of(limit));
         }
+
         public Builder query(@Nullable Output<String> query) {
-            this.query = query;
+            $.query = query;
             return this;
         }
-        public Builder query(@Nullable String query) {
-            this.query = Codegen.ofNullable(query);
-            return this;
+
+        public Builder query(String query) {
+            return query(Output.of(query));
         }
+
         public Builder startSearchTime(@Nullable Output<String> startSearchTime) {
-            this.startSearchTime = startSearchTime;
+            $.startSearchTime = startSearchTime;
             return this;
         }
-        public Builder startSearchTime(@Nullable String startSearchTime) {
-            this.startSearchTime = Codegen.ofNullable(startSearchTime);
-            return this;
-        }        public SearchResultsArgs build() {
-            return new SearchResultsArgs(description, endSearchTime, limit, query, startSearchTime);
+
+        public Builder startSearchTime(String startSearchTime) {
+            return startSearchTime(Output.of(startSearchTime));
+        }
+
+        public SearchResultsArgs build() {
+            return $;
         }
     }
+
 }

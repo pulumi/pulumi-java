@@ -5,9 +5,9 @@ package com.pulumi.aws.amplify.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class BackendEnvironmentState extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="appId")
-      private final @Nullable Output<String> appId;
+    private @Nullable Output<String> appId;
 
-    public Output<String> appId() {
-        return this.appId == null ? Codegen.empty() : this.appId;
+    public Optional<Output<String>> appId() {
+        return Optional.ofNullable(this.appId);
     }
 
     /**
@@ -31,10 +31,10 @@ public final class BackendEnvironmentState extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="arn")
-      private final @Nullable Output<String> arn;
+    private @Nullable Output<String> arn;
 
-    public Output<String> arn() {
-        return this.arn == null ? Codegen.empty() : this.arn;
+    public Optional<Output<String>> arn() {
+        return Optional.ofNullable(this.arn);
     }
 
     /**
@@ -42,10 +42,10 @@ public final class BackendEnvironmentState extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="deploymentArtifacts")
-      private final @Nullable Output<String> deploymentArtifacts;
+    private @Nullable Output<String> deploymentArtifacts;
 
-    public Output<String> deploymentArtifacts() {
-        return this.deploymentArtifacts == null ? Codegen.empty() : this.deploymentArtifacts;
+    public Optional<Output<String>> deploymentArtifacts() {
+        return Optional.ofNullable(this.deploymentArtifacts);
     }
 
     /**
@@ -53,10 +53,10 @@ public final class BackendEnvironmentState extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="environmentName")
-      private final @Nullable Output<String> environmentName;
+    private @Nullable Output<String> environmentName;
 
-    public Output<String> environmentName() {
-        return this.environmentName == null ? Codegen.empty() : this.environmentName;
+    public Optional<Output<String>> environmentName() {
+        return Optional.ofNullable(this.environmentName);
     }
 
     /**
@@ -64,102 +64,88 @@ public final class BackendEnvironmentState extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="stackName")
-      private final @Nullable Output<String> stackName;
+    private @Nullable Output<String> stackName;
 
-    public Output<String> stackName() {
-        return this.stackName == null ? Codegen.empty() : this.stackName;
+    public Optional<Output<String>> stackName() {
+        return Optional.ofNullable(this.stackName);
     }
 
-    public BackendEnvironmentState(
-        @Nullable Output<String> appId,
-        @Nullable Output<String> arn,
-        @Nullable Output<String> deploymentArtifacts,
-        @Nullable Output<String> environmentName,
-        @Nullable Output<String> stackName) {
-        this.appId = appId;
-        this.arn = arn;
-        this.deploymentArtifacts = deploymentArtifacts;
-        this.environmentName = environmentName;
-        this.stackName = stackName;
-    }
+    private BackendEnvironmentState() {}
 
-    private BackendEnvironmentState() {
-        this.appId = Codegen.empty();
-        this.arn = Codegen.empty();
-        this.deploymentArtifacts = Codegen.empty();
-        this.environmentName = Codegen.empty();
-        this.stackName = Codegen.empty();
+    private BackendEnvironmentState(BackendEnvironmentState $) {
+        this.appId = $.appId;
+        this.arn = $.arn;
+        this.deploymentArtifacts = $.deploymentArtifacts;
+        this.environmentName = $.environmentName;
+        this.stackName = $.stackName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BackendEnvironmentState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> appId;
-        private @Nullable Output<String> arn;
-        private @Nullable Output<String> deploymentArtifacts;
-        private @Nullable Output<String> environmentName;
-        private @Nullable Output<String> stackName;
+        private BackendEnvironmentState $;
 
         public Builder() {
-    	      // Empty
+            $ = new BackendEnvironmentState();
         }
 
         public Builder(BackendEnvironmentState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.appId = defaults.appId;
-    	      this.arn = defaults.arn;
-    	      this.deploymentArtifacts = defaults.deploymentArtifacts;
-    	      this.environmentName = defaults.environmentName;
-    	      this.stackName = defaults.stackName;
+            $ = new BackendEnvironmentState(Objects.requireNonNull(defaults));
         }
 
         public Builder appId(@Nullable Output<String> appId) {
-            this.appId = appId;
+            $.appId = appId;
             return this;
         }
-        public Builder appId(@Nullable String appId) {
-            this.appId = Codegen.ofNullable(appId);
-            return this;
+
+        public Builder appId(String appId) {
+            return appId(Output.of(appId));
         }
+
         public Builder arn(@Nullable Output<String> arn) {
-            this.arn = arn;
+            $.arn = arn;
             return this;
         }
-        public Builder arn(@Nullable String arn) {
-            this.arn = Codegen.ofNullable(arn);
-            return this;
+
+        public Builder arn(String arn) {
+            return arn(Output.of(arn));
         }
+
         public Builder deploymentArtifacts(@Nullable Output<String> deploymentArtifacts) {
-            this.deploymentArtifacts = deploymentArtifacts;
+            $.deploymentArtifacts = deploymentArtifacts;
             return this;
         }
-        public Builder deploymentArtifacts(@Nullable String deploymentArtifacts) {
-            this.deploymentArtifacts = Codegen.ofNullable(deploymentArtifacts);
-            return this;
+
+        public Builder deploymentArtifacts(String deploymentArtifacts) {
+            return deploymentArtifacts(Output.of(deploymentArtifacts));
         }
+
         public Builder environmentName(@Nullable Output<String> environmentName) {
-            this.environmentName = environmentName;
+            $.environmentName = environmentName;
             return this;
         }
-        public Builder environmentName(@Nullable String environmentName) {
-            this.environmentName = Codegen.ofNullable(environmentName);
-            return this;
+
+        public Builder environmentName(String environmentName) {
+            return environmentName(Output.of(environmentName));
         }
+
         public Builder stackName(@Nullable Output<String> stackName) {
-            this.stackName = stackName;
+            $.stackName = stackName;
             return this;
         }
-        public Builder stackName(@Nullable String stackName) {
-            this.stackName = Codegen.ofNullable(stackName);
-            return this;
-        }        public BackendEnvironmentState build() {
-            return new BackendEnvironmentState(appId, arn, deploymentArtifacts, environmentName, stackName);
+
+        public Builder stackName(String stackName) {
+            return stackName(Output.of(stackName));
+        }
+
+        public BackendEnvironmentState build() {
+            return $;
         }
     }
+
 }

@@ -5,10 +5,10 @@ package com.pulumi.gcp.container.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,7 +22,7 @@ public final class ClusterNotificationConfigPubsubArgs extends com.pulumi.resour
      * 
      */
     @Import(name="enabled", required=true)
-      private final Output<Boolean> enabled;
+    private Output<Boolean> enabled;
 
     public Output<Boolean> enabled() {
         return this.enabled;
@@ -33,63 +33,59 @@ public final class ClusterNotificationConfigPubsubArgs extends com.pulumi.resour
      * 
      */
     @Import(name="topic")
-      private final @Nullable Output<String> topic;
+    private @Nullable Output<String> topic;
 
-    public Output<String> topic() {
-        return this.topic == null ? Codegen.empty() : this.topic;
+    public Optional<Output<String>> topic() {
+        return Optional.ofNullable(this.topic);
     }
 
-    public ClusterNotificationConfigPubsubArgs(
-        Output<Boolean> enabled,
-        @Nullable Output<String> topic) {
-        this.enabled = Objects.requireNonNull(enabled, "expected parameter 'enabled' to be non-null");
-        this.topic = topic;
-    }
+    private ClusterNotificationConfigPubsubArgs() {}
 
-    private ClusterNotificationConfigPubsubArgs() {
-        this.enabled = Codegen.empty();
-        this.topic = Codegen.empty();
+    private ClusterNotificationConfigPubsubArgs(ClusterNotificationConfigPubsubArgs $) {
+        this.enabled = $.enabled;
+        this.topic = $.topic;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ClusterNotificationConfigPubsubArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Boolean> enabled;
-        private @Nullable Output<String> topic;
+        private ClusterNotificationConfigPubsubArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ClusterNotificationConfigPubsubArgs();
         }
 
         public Builder(ClusterNotificationConfigPubsubArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.enabled = defaults.enabled;
-    	      this.topic = defaults.topic;
+            $ = new ClusterNotificationConfigPubsubArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder enabled(Output<Boolean> enabled) {
-            this.enabled = Objects.requireNonNull(enabled);
+            $.enabled = enabled;
             return this;
         }
+
         public Builder enabled(Boolean enabled) {
-            this.enabled = Output.of(Objects.requireNonNull(enabled));
-            return this;
+            return enabled(Output.of(enabled));
         }
+
         public Builder topic(@Nullable Output<String> topic) {
-            this.topic = topic;
+            $.topic = topic;
             return this;
         }
-        public Builder topic(@Nullable String topic) {
-            this.topic = Codegen.ofNullable(topic);
-            return this;
-        }        public ClusterNotificationConfigPubsubArgs build() {
-            return new ClusterNotificationConfigPubsubArgs(enabled, topic);
+
+        public Builder topic(String topic) {
+            return topic(Output.of(topic));
+        }
+
+        public ClusterNotificationConfigPubsubArgs build() {
+            $.enabled = Objects.requireNonNull($.enabled, "expected parameter 'enabled' to be non-null");
+            return $;
         }
     }
+
 }

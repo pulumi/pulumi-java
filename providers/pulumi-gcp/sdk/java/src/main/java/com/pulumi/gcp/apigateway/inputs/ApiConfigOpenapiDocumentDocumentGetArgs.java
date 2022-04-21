@@ -5,7 +5,6 @@ package com.pulumi.gcp.apigateway.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,7 +18,7 @@ public final class ApiConfigOpenapiDocumentDocumentGetArgs extends com.pulumi.re
      * 
      */
     @Import(name="contents", required=true)
-      private final Output<String> contents;
+    private Output<String> contents;
 
     public Output<String> contents() {
         return this.contents;
@@ -30,63 +29,60 @@ public final class ApiConfigOpenapiDocumentDocumentGetArgs extends com.pulumi.re
      * 
      */
     @Import(name="path", required=true)
-      private final Output<String> path;
+    private Output<String> path;
 
     public Output<String> path() {
         return this.path;
     }
 
-    public ApiConfigOpenapiDocumentDocumentGetArgs(
-        Output<String> contents,
-        Output<String> path) {
-        this.contents = Objects.requireNonNull(contents, "expected parameter 'contents' to be non-null");
-        this.path = Objects.requireNonNull(path, "expected parameter 'path' to be non-null");
-    }
+    private ApiConfigOpenapiDocumentDocumentGetArgs() {}
 
-    private ApiConfigOpenapiDocumentDocumentGetArgs() {
-        this.contents = Codegen.empty();
-        this.path = Codegen.empty();
+    private ApiConfigOpenapiDocumentDocumentGetArgs(ApiConfigOpenapiDocumentDocumentGetArgs $) {
+        this.contents = $.contents;
+        this.path = $.path;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ApiConfigOpenapiDocumentDocumentGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> contents;
-        private Output<String> path;
+        private ApiConfigOpenapiDocumentDocumentGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ApiConfigOpenapiDocumentDocumentGetArgs();
         }
 
         public Builder(ApiConfigOpenapiDocumentDocumentGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.contents = defaults.contents;
-    	      this.path = defaults.path;
+            $ = new ApiConfigOpenapiDocumentDocumentGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder contents(Output<String> contents) {
-            this.contents = Objects.requireNonNull(contents);
+            $.contents = contents;
             return this;
         }
+
         public Builder contents(String contents) {
-            this.contents = Output.of(Objects.requireNonNull(contents));
-            return this;
+            return contents(Output.of(contents));
         }
+
         public Builder path(Output<String> path) {
-            this.path = Objects.requireNonNull(path);
+            $.path = path;
             return this;
         }
+
         public Builder path(String path) {
-            this.path = Output.of(Objects.requireNonNull(path));
-            return this;
-        }        public ApiConfigOpenapiDocumentDocumentGetArgs build() {
-            return new ApiConfigOpenapiDocumentDocumentGetArgs(contents, path);
+            return path(Output.of(path));
+        }
+
+        public ApiConfigOpenapiDocumentDocumentGetArgs build() {
+            $.contents = Objects.requireNonNull($.contents, "expected parameter 'contents' to be non-null");
+            $.path = Objects.requireNonNull($.path, "expected parameter 'path' to be non-null");
+            return $;
         }
     }
+
 }

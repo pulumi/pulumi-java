@@ -7,10 +7,10 @@ import com.pulumi.azurenative.containerservice.inputs.TimeInWeekArgs;
 import com.pulumi.azurenative.containerservice.inputs.TimeSpanArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,10 @@ public final class MaintenanceConfigurationArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="configName")
-      private final @Nullable Output<String> configName;
+    private @Nullable Output<String> configName;
 
-    public Output<String> configName() {
-        return this.configName == null ? Codegen.empty() : this.configName;
+    public Optional<Output<String>> configName() {
+        return Optional.ofNullable(this.configName);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class MaintenanceConfigurationArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="notAllowedTime")
-      private final @Nullable Output<List<TimeSpanArgs>> notAllowedTime;
+    private @Nullable Output<List<TimeSpanArgs>> notAllowedTime;
 
-    public Output<List<TimeSpanArgs>> notAllowedTime() {
-        return this.notAllowedTime == null ? Codegen.empty() : this.notAllowedTime;
+    public Optional<Output<List<TimeSpanArgs>>> notAllowedTime() {
+        return Optional.ofNullable(this.notAllowedTime);
     }
 
     /**
@@ -45,7 +45,7 @@ public final class MaintenanceConfigurationArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -56,7 +56,7 @@ public final class MaintenanceConfigurationArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="resourceName", required=true)
-      private final Output<String> resourceName;
+    private Output<String> resourceName;
 
     public Output<String> resourceName() {
         return this.resourceName;
@@ -67,108 +67,98 @@ public final class MaintenanceConfigurationArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="timeInWeek")
-      private final @Nullable Output<List<TimeInWeekArgs>> timeInWeek;
+    private @Nullable Output<List<TimeInWeekArgs>> timeInWeek;
 
-    public Output<List<TimeInWeekArgs>> timeInWeek() {
-        return this.timeInWeek == null ? Codegen.empty() : this.timeInWeek;
+    public Optional<Output<List<TimeInWeekArgs>>> timeInWeek() {
+        return Optional.ofNullable(this.timeInWeek);
     }
 
-    public MaintenanceConfigurationArgs(
-        @Nullable Output<String> configName,
-        @Nullable Output<List<TimeSpanArgs>> notAllowedTime,
-        Output<String> resourceGroupName,
-        Output<String> resourceName,
-        @Nullable Output<List<TimeInWeekArgs>> timeInWeek) {
-        this.configName = configName;
-        this.notAllowedTime = notAllowedTime;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.resourceName = Objects.requireNonNull(resourceName, "expected parameter 'resourceName' to be non-null");
-        this.timeInWeek = timeInWeek;
-    }
+    private MaintenanceConfigurationArgs() {}
 
-    private MaintenanceConfigurationArgs() {
-        this.configName = Codegen.empty();
-        this.notAllowedTime = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.resourceName = Codegen.empty();
-        this.timeInWeek = Codegen.empty();
+    private MaintenanceConfigurationArgs(MaintenanceConfigurationArgs $) {
+        this.configName = $.configName;
+        this.notAllowedTime = $.notAllowedTime;
+        this.resourceGroupName = $.resourceGroupName;
+        this.resourceName = $.resourceName;
+        this.timeInWeek = $.timeInWeek;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MaintenanceConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> configName;
-        private @Nullable Output<List<TimeSpanArgs>> notAllowedTime;
-        private Output<String> resourceGroupName;
-        private Output<String> resourceName;
-        private @Nullable Output<List<TimeInWeekArgs>> timeInWeek;
+        private MaintenanceConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new MaintenanceConfigurationArgs();
         }
 
         public Builder(MaintenanceConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.configName = defaults.configName;
-    	      this.notAllowedTime = defaults.notAllowedTime;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.resourceName = defaults.resourceName;
-    	      this.timeInWeek = defaults.timeInWeek;
+            $ = new MaintenanceConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder configName(@Nullable Output<String> configName) {
-            this.configName = configName;
+            $.configName = configName;
             return this;
         }
-        public Builder configName(@Nullable String configName) {
-            this.configName = Codegen.ofNullable(configName);
-            return this;
+
+        public Builder configName(String configName) {
+            return configName(Output.of(configName));
         }
+
         public Builder notAllowedTime(@Nullable Output<List<TimeSpanArgs>> notAllowedTime) {
-            this.notAllowedTime = notAllowedTime;
+            $.notAllowedTime = notAllowedTime;
             return this;
         }
-        public Builder notAllowedTime(@Nullable List<TimeSpanArgs> notAllowedTime) {
-            this.notAllowedTime = Codegen.ofNullable(notAllowedTime);
-            return this;
+
+        public Builder notAllowedTime(List<TimeSpanArgs> notAllowedTime) {
+            return notAllowedTime(Output.of(notAllowedTime));
         }
+
         public Builder notAllowedTime(TimeSpanArgs... notAllowedTime) {
             return notAllowedTime(List.of(notAllowedTime));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder resourceName(Output<String> resourceName) {
-            this.resourceName = Objects.requireNonNull(resourceName);
+            $.resourceName = resourceName;
             return this;
         }
+
         public Builder resourceName(String resourceName) {
-            this.resourceName = Output.of(Objects.requireNonNull(resourceName));
-            return this;
+            return resourceName(Output.of(resourceName));
         }
+
         public Builder timeInWeek(@Nullable Output<List<TimeInWeekArgs>> timeInWeek) {
-            this.timeInWeek = timeInWeek;
+            $.timeInWeek = timeInWeek;
             return this;
         }
-        public Builder timeInWeek(@Nullable List<TimeInWeekArgs> timeInWeek) {
-            this.timeInWeek = Codegen.ofNullable(timeInWeek);
-            return this;
+
+        public Builder timeInWeek(List<TimeInWeekArgs> timeInWeek) {
+            return timeInWeek(Output.of(timeInWeek));
         }
+
         public Builder timeInWeek(TimeInWeekArgs... timeInWeek) {
             return timeInWeek(List.of(timeInWeek));
-        }        public MaintenanceConfigurationArgs build() {
-            return new MaintenanceConfigurationArgs(configName, notAllowedTime, resourceGroupName, resourceName, timeInWeek);
+        }
+
+        public MaintenanceConfigurationArgs build() {
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.resourceName = Objects.requireNonNull($.resourceName, "expected parameter 'resourceName' to be non-null");
+            return $;
         }
     }
+
 }

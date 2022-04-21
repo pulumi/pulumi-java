@@ -11,6 +11,7 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +28,10 @@ public final class SelfHostedIntegrationRuntimeArgs extends com.pulumi.resources
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -38,10 +39,10 @@ public final class SelfHostedIntegrationRuntimeArgs extends com.pulumi.resources
      * 
      */
     @Import(name="linkedInfo")
-      private final @Nullable Output<Either<LinkedIntegrationRuntimeKeyAuthorizationArgs,LinkedIntegrationRuntimeRbacAuthorizationArgs>> linkedInfo;
+    private @Nullable Output<Either<LinkedIntegrationRuntimeKeyAuthorizationArgs,LinkedIntegrationRuntimeRbacAuthorizationArgs>> linkedInfo;
 
-    public Output<Either<LinkedIntegrationRuntimeKeyAuthorizationArgs,LinkedIntegrationRuntimeRbacAuthorizationArgs>> linkedInfo() {
-        return this.linkedInfo == null ? Codegen.empty() : this.linkedInfo;
+    public Optional<Output<Either<LinkedIntegrationRuntimeKeyAuthorizationArgs,LinkedIntegrationRuntimeRbacAuthorizationArgs>>> linkedInfo() {
+        return Optional.ofNullable(this.linkedInfo);
     }
 
     /**
@@ -50,76 +51,69 @@ public final class SelfHostedIntegrationRuntimeArgs extends com.pulumi.resources
      * 
      */
     @Import(name="type", required=true)
-      private final Output<String> type;
+    private Output<String> type;
 
     public Output<String> type() {
         return this.type;
     }
 
-    public SelfHostedIntegrationRuntimeArgs(
-        @Nullable Output<String> description,
-        @Nullable Output<Either<LinkedIntegrationRuntimeKeyAuthorizationArgs,LinkedIntegrationRuntimeRbacAuthorizationArgs>> linkedInfo,
-        Output<String> type) {
-        this.description = description;
-        this.linkedInfo = linkedInfo;
-        this.type = Codegen.stringProp("type").output().arg(type).require();
-    }
+    private SelfHostedIntegrationRuntimeArgs() {}
 
-    private SelfHostedIntegrationRuntimeArgs() {
-        this.description = Codegen.empty();
-        this.linkedInfo = Codegen.empty();
-        this.type = Codegen.empty();
+    private SelfHostedIntegrationRuntimeArgs(SelfHostedIntegrationRuntimeArgs $) {
+        this.description = $.description;
+        this.linkedInfo = $.linkedInfo;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SelfHostedIntegrationRuntimeArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> description;
-        private @Nullable Output<Either<LinkedIntegrationRuntimeKeyAuthorizationArgs,LinkedIntegrationRuntimeRbacAuthorizationArgs>> linkedInfo;
-        private Output<String> type;
+        private SelfHostedIntegrationRuntimeArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SelfHostedIntegrationRuntimeArgs();
         }
 
         public Builder(SelfHostedIntegrationRuntimeArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.description = defaults.description;
-    	      this.linkedInfo = defaults.linkedInfo;
-    	      this.type = defaults.type;
+            $ = new SelfHostedIntegrationRuntimeArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder linkedInfo(@Nullable Output<Either<LinkedIntegrationRuntimeKeyAuthorizationArgs,LinkedIntegrationRuntimeRbacAuthorizationArgs>> linkedInfo) {
-            this.linkedInfo = linkedInfo;
+            $.linkedInfo = linkedInfo;
             return this;
         }
-        public Builder linkedInfo(@Nullable Either<LinkedIntegrationRuntimeKeyAuthorizationArgs,LinkedIntegrationRuntimeRbacAuthorizationArgs> linkedInfo) {
-            this.linkedInfo = Codegen.ofNullable(linkedInfo);
-            return this;
+
+        public Builder linkedInfo(Either<LinkedIntegrationRuntimeKeyAuthorizationArgs,LinkedIntegrationRuntimeRbacAuthorizationArgs> linkedInfo) {
+            return linkedInfo(Output.of(linkedInfo));
         }
+
         public Builder type(Output<String> type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Output.of(Objects.requireNonNull(type));
-            return this;
-        }        public SelfHostedIntegrationRuntimeArgs build() {
-            return new SelfHostedIntegrationRuntimeArgs(description, linkedInfo, type);
+            return type(Output.of(type));
+        }
+
+        public SelfHostedIntegrationRuntimeArgs build() {
+            $.type = Codegen.stringProp("type").output().arg($.type).require();
+            return $;
         }
     }
+
 }

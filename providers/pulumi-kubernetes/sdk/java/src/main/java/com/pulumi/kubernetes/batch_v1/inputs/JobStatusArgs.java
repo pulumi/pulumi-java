@@ -5,13 +5,13 @@ package com.pulumi.kubernetes.batch_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.kubernetes.batch_v1.inputs.JobConditionArgs;
 import com.pulumi.kubernetes.batch_v1.inputs.UncountedTerminatedPodsArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -28,10 +28,10 @@ public final class JobStatusArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="active")
-      private final @Nullable Output<Integer> active;
+    private @Nullable Output<Integer> active;
 
-    public Output<Integer> active() {
-        return this.active == null ? Codegen.empty() : this.active;
+    public Optional<Output<Integer>> active() {
+        return Optional.ofNullable(this.active);
     }
 
     /**
@@ -39,10 +39,10 @@ public final class JobStatusArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="completedIndexes")
-      private final @Nullable Output<String> completedIndexes;
+    private @Nullable Output<String> completedIndexes;
 
-    public Output<String> completedIndexes() {
-        return this.completedIndexes == null ? Codegen.empty() : this.completedIndexes;
+    public Optional<Output<String>> completedIndexes() {
+        return Optional.ofNullable(this.completedIndexes);
     }
 
     /**
@@ -50,10 +50,10 @@ public final class JobStatusArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="completionTime")
-      private final @Nullable Output<String> completionTime;
+    private @Nullable Output<String> completionTime;
 
-    public Output<String> completionTime() {
-        return this.completionTime == null ? Codegen.empty() : this.completionTime;
+    public Optional<Output<String>> completionTime() {
+        return Optional.ofNullable(this.completionTime);
     }
 
     /**
@@ -61,10 +61,10 @@ public final class JobStatusArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="conditions")
-      private final @Nullable Output<List<JobConditionArgs>> conditions;
+    private @Nullable Output<List<JobConditionArgs>> conditions;
 
-    public Output<List<JobConditionArgs>> conditions() {
-        return this.conditions == null ? Codegen.empty() : this.conditions;
+    public Optional<Output<List<JobConditionArgs>>> conditions() {
+        return Optional.ofNullable(this.conditions);
     }
 
     /**
@@ -72,10 +72,10 @@ public final class JobStatusArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="failed")
-      private final @Nullable Output<Integer> failed;
+    private @Nullable Output<Integer> failed;
 
-    public Output<Integer> failed() {
-        return this.failed == null ? Codegen.empty() : this.failed;
+    public Optional<Output<Integer>> failed() {
+        return Optional.ofNullable(this.failed);
     }
 
     /**
@@ -85,10 +85,10 @@ public final class JobStatusArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="ready")
-      private final @Nullable Output<Integer> ready;
+    private @Nullable Output<Integer> ready;
 
-    public Output<Integer> ready() {
-        return this.ready == null ? Codegen.empty() : this.ready;
+    public Optional<Output<Integer>> ready() {
+        return Optional.ofNullable(this.ready);
     }
 
     /**
@@ -96,10 +96,10 @@ public final class JobStatusArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="startTime")
-      private final @Nullable Output<String> startTime;
+    private @Nullable Output<String> startTime;
 
-    public Output<String> startTime() {
-        return this.startTime == null ? Codegen.empty() : this.startTime;
+    public Optional<Output<String>> startTime() {
+        return Optional.ofNullable(this.startTime);
     }
 
     /**
@@ -107,10 +107,10 @@ public final class JobStatusArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="succeeded")
-      private final @Nullable Output<Integer> succeeded;
+    private @Nullable Output<Integer> succeeded;
 
-    public Output<Integer> succeeded() {
-        return this.succeeded == null ? Codegen.empty() : this.succeeded;
+    public Optional<Output<Integer>> succeeded() {
+        return Optional.ofNullable(this.succeeded);
     }
 
     /**
@@ -123,157 +123,132 @@ public final class JobStatusArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="uncountedTerminatedPods")
-      private final @Nullable Output<UncountedTerminatedPodsArgs> uncountedTerminatedPods;
+    private @Nullable Output<UncountedTerminatedPodsArgs> uncountedTerminatedPods;
 
-    public Output<UncountedTerminatedPodsArgs> uncountedTerminatedPods() {
-        return this.uncountedTerminatedPods == null ? Codegen.empty() : this.uncountedTerminatedPods;
+    public Optional<Output<UncountedTerminatedPodsArgs>> uncountedTerminatedPods() {
+        return Optional.ofNullable(this.uncountedTerminatedPods);
     }
 
-    public JobStatusArgs(
-        @Nullable Output<Integer> active,
-        @Nullable Output<String> completedIndexes,
-        @Nullable Output<String> completionTime,
-        @Nullable Output<List<JobConditionArgs>> conditions,
-        @Nullable Output<Integer> failed,
-        @Nullable Output<Integer> ready,
-        @Nullable Output<String> startTime,
-        @Nullable Output<Integer> succeeded,
-        @Nullable Output<UncountedTerminatedPodsArgs> uncountedTerminatedPods) {
-        this.active = active;
-        this.completedIndexes = completedIndexes;
-        this.completionTime = completionTime;
-        this.conditions = conditions;
-        this.failed = failed;
-        this.ready = ready;
-        this.startTime = startTime;
-        this.succeeded = succeeded;
-        this.uncountedTerminatedPods = uncountedTerminatedPods;
-    }
+    private JobStatusArgs() {}
 
-    private JobStatusArgs() {
-        this.active = Codegen.empty();
-        this.completedIndexes = Codegen.empty();
-        this.completionTime = Codegen.empty();
-        this.conditions = Codegen.empty();
-        this.failed = Codegen.empty();
-        this.ready = Codegen.empty();
-        this.startTime = Codegen.empty();
-        this.succeeded = Codegen.empty();
-        this.uncountedTerminatedPods = Codegen.empty();
+    private JobStatusArgs(JobStatusArgs $) {
+        this.active = $.active;
+        this.completedIndexes = $.completedIndexes;
+        this.completionTime = $.completionTime;
+        this.conditions = $.conditions;
+        this.failed = $.failed;
+        this.ready = $.ready;
+        this.startTime = $.startTime;
+        this.succeeded = $.succeeded;
+        this.uncountedTerminatedPods = $.uncountedTerminatedPods;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(JobStatusArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> active;
-        private @Nullable Output<String> completedIndexes;
-        private @Nullable Output<String> completionTime;
-        private @Nullable Output<List<JobConditionArgs>> conditions;
-        private @Nullable Output<Integer> failed;
-        private @Nullable Output<Integer> ready;
-        private @Nullable Output<String> startTime;
-        private @Nullable Output<Integer> succeeded;
-        private @Nullable Output<UncountedTerminatedPodsArgs> uncountedTerminatedPods;
+        private JobStatusArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new JobStatusArgs();
         }
 
         public Builder(JobStatusArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.active = defaults.active;
-    	      this.completedIndexes = defaults.completedIndexes;
-    	      this.completionTime = defaults.completionTime;
-    	      this.conditions = defaults.conditions;
-    	      this.failed = defaults.failed;
-    	      this.ready = defaults.ready;
-    	      this.startTime = defaults.startTime;
-    	      this.succeeded = defaults.succeeded;
-    	      this.uncountedTerminatedPods = defaults.uncountedTerminatedPods;
+            $ = new JobStatusArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder active(@Nullable Output<Integer> active) {
-            this.active = active;
+            $.active = active;
             return this;
         }
-        public Builder active(@Nullable Integer active) {
-            this.active = Codegen.ofNullable(active);
-            return this;
+
+        public Builder active(Integer active) {
+            return active(Output.of(active));
         }
+
         public Builder completedIndexes(@Nullable Output<String> completedIndexes) {
-            this.completedIndexes = completedIndexes;
+            $.completedIndexes = completedIndexes;
             return this;
         }
-        public Builder completedIndexes(@Nullable String completedIndexes) {
-            this.completedIndexes = Codegen.ofNullable(completedIndexes);
-            return this;
+
+        public Builder completedIndexes(String completedIndexes) {
+            return completedIndexes(Output.of(completedIndexes));
         }
+
         public Builder completionTime(@Nullable Output<String> completionTime) {
-            this.completionTime = completionTime;
+            $.completionTime = completionTime;
             return this;
         }
-        public Builder completionTime(@Nullable String completionTime) {
-            this.completionTime = Codegen.ofNullable(completionTime);
-            return this;
+
+        public Builder completionTime(String completionTime) {
+            return completionTime(Output.of(completionTime));
         }
+
         public Builder conditions(@Nullable Output<List<JobConditionArgs>> conditions) {
-            this.conditions = conditions;
+            $.conditions = conditions;
             return this;
         }
-        public Builder conditions(@Nullable List<JobConditionArgs> conditions) {
-            this.conditions = Codegen.ofNullable(conditions);
-            return this;
+
+        public Builder conditions(List<JobConditionArgs> conditions) {
+            return conditions(Output.of(conditions));
         }
+
         public Builder conditions(JobConditionArgs... conditions) {
             return conditions(List.of(conditions));
         }
+
         public Builder failed(@Nullable Output<Integer> failed) {
-            this.failed = failed;
+            $.failed = failed;
             return this;
         }
-        public Builder failed(@Nullable Integer failed) {
-            this.failed = Codegen.ofNullable(failed);
-            return this;
+
+        public Builder failed(Integer failed) {
+            return failed(Output.of(failed));
         }
+
         public Builder ready(@Nullable Output<Integer> ready) {
-            this.ready = ready;
+            $.ready = ready;
             return this;
         }
-        public Builder ready(@Nullable Integer ready) {
-            this.ready = Codegen.ofNullable(ready);
-            return this;
+
+        public Builder ready(Integer ready) {
+            return ready(Output.of(ready));
         }
+
         public Builder startTime(@Nullable Output<String> startTime) {
-            this.startTime = startTime;
+            $.startTime = startTime;
             return this;
         }
-        public Builder startTime(@Nullable String startTime) {
-            this.startTime = Codegen.ofNullable(startTime);
-            return this;
+
+        public Builder startTime(String startTime) {
+            return startTime(Output.of(startTime));
         }
+
         public Builder succeeded(@Nullable Output<Integer> succeeded) {
-            this.succeeded = succeeded;
+            $.succeeded = succeeded;
             return this;
         }
-        public Builder succeeded(@Nullable Integer succeeded) {
-            this.succeeded = Codegen.ofNullable(succeeded);
-            return this;
+
+        public Builder succeeded(Integer succeeded) {
+            return succeeded(Output.of(succeeded));
         }
+
         public Builder uncountedTerminatedPods(@Nullable Output<UncountedTerminatedPodsArgs> uncountedTerminatedPods) {
-            this.uncountedTerminatedPods = uncountedTerminatedPods;
+            $.uncountedTerminatedPods = uncountedTerminatedPods;
             return this;
         }
-        public Builder uncountedTerminatedPods(@Nullable UncountedTerminatedPodsArgs uncountedTerminatedPods) {
-            this.uncountedTerminatedPods = Codegen.ofNullable(uncountedTerminatedPods);
-            return this;
-        }        public JobStatusArgs build() {
-            return new JobStatusArgs(active, completedIndexes, completionTime, conditions, failed, ready, startTime, succeeded, uncountedTerminatedPods);
+
+        public Builder uncountedTerminatedPods(UncountedTerminatedPodsArgs uncountedTerminatedPods) {
+            return uncountedTerminatedPods(Output.of(uncountedTerminatedPods));
+        }
+
+        public JobStatusArgs build() {
+            return $;
         }
     }
+
 }

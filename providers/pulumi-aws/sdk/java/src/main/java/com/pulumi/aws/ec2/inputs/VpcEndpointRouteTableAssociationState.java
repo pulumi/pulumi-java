@@ -5,9 +5,9 @@ package com.pulumi.aws.ec2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class VpcEndpointRouteTableAssociationState extends com.pulumi.reso
      * 
      */
     @Import(name="routeTableId")
-      private final @Nullable Output<String> routeTableId;
+    private @Nullable Output<String> routeTableId;
 
-    public Output<String> routeTableId() {
-        return this.routeTableId == null ? Codegen.empty() : this.routeTableId;
+    public Optional<Output<String>> routeTableId() {
+        return Optional.ofNullable(this.routeTableId);
     }
 
     /**
@@ -31,63 +31,58 @@ public final class VpcEndpointRouteTableAssociationState extends com.pulumi.reso
      * 
      */
     @Import(name="vpcEndpointId")
-      private final @Nullable Output<String> vpcEndpointId;
+    private @Nullable Output<String> vpcEndpointId;
 
-    public Output<String> vpcEndpointId() {
-        return this.vpcEndpointId == null ? Codegen.empty() : this.vpcEndpointId;
+    public Optional<Output<String>> vpcEndpointId() {
+        return Optional.ofNullable(this.vpcEndpointId);
     }
 
-    public VpcEndpointRouteTableAssociationState(
-        @Nullable Output<String> routeTableId,
-        @Nullable Output<String> vpcEndpointId) {
-        this.routeTableId = routeTableId;
-        this.vpcEndpointId = vpcEndpointId;
-    }
+    private VpcEndpointRouteTableAssociationState() {}
 
-    private VpcEndpointRouteTableAssociationState() {
-        this.routeTableId = Codegen.empty();
-        this.vpcEndpointId = Codegen.empty();
+    private VpcEndpointRouteTableAssociationState(VpcEndpointRouteTableAssociationState $) {
+        this.routeTableId = $.routeTableId;
+        this.vpcEndpointId = $.vpcEndpointId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VpcEndpointRouteTableAssociationState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> routeTableId;
-        private @Nullable Output<String> vpcEndpointId;
+        private VpcEndpointRouteTableAssociationState $;
 
         public Builder() {
-    	      // Empty
+            $ = new VpcEndpointRouteTableAssociationState();
         }
 
         public Builder(VpcEndpointRouteTableAssociationState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.routeTableId = defaults.routeTableId;
-    	      this.vpcEndpointId = defaults.vpcEndpointId;
+            $ = new VpcEndpointRouteTableAssociationState(Objects.requireNonNull(defaults));
         }
 
         public Builder routeTableId(@Nullable Output<String> routeTableId) {
-            this.routeTableId = routeTableId;
+            $.routeTableId = routeTableId;
             return this;
         }
-        public Builder routeTableId(@Nullable String routeTableId) {
-            this.routeTableId = Codegen.ofNullable(routeTableId);
-            return this;
+
+        public Builder routeTableId(String routeTableId) {
+            return routeTableId(Output.of(routeTableId));
         }
+
         public Builder vpcEndpointId(@Nullable Output<String> vpcEndpointId) {
-            this.vpcEndpointId = vpcEndpointId;
+            $.vpcEndpointId = vpcEndpointId;
             return this;
         }
-        public Builder vpcEndpointId(@Nullable String vpcEndpointId) {
-            this.vpcEndpointId = Codegen.ofNullable(vpcEndpointId);
-            return this;
-        }        public VpcEndpointRouteTableAssociationState build() {
-            return new VpcEndpointRouteTableAssociationState(routeTableId, vpcEndpointId);
+
+        public Builder vpcEndpointId(String vpcEndpointId) {
+            return vpcEndpointId(Output.of(vpcEndpointId));
+        }
+
+        public VpcEndpointRouteTableAssociationState build() {
+            return $;
         }
     }
+
 }

@@ -13,45 +13,45 @@ public final class GetRobotArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetRobotArgs Empty = new GetRobotArgs();
 
     @Import(name="arn", required=true)
-      private final String arn;
+    private String arn;
 
     public String arn() {
         return this.arn;
     }
 
-    public GetRobotArgs(String arn) {
-        this.arn = Objects.requireNonNull(arn, "expected parameter 'arn' to be non-null");
-    }
+    private GetRobotArgs() {}
 
-    private GetRobotArgs() {
-        this.arn = null;
+    private GetRobotArgs(GetRobotArgs $) {
+        this.arn = $.arn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetRobotArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String arn;
+        private GetRobotArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetRobotArgs();
         }
 
         public Builder(GetRobotArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.arn = defaults.arn;
+            $ = new GetRobotArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder arn(String arn) {
-            this.arn = Objects.requireNonNull(arn);
+            $.arn = arn;
             return this;
-        }        public GetRobotArgs build() {
-            return new GetRobotArgs(arn);
+        }
+
+        public GetRobotArgs build() {
+            $.arn = Objects.requireNonNull($.arn, "expected parameter 'arn' to be non-null");
+            return $;
         }
     }
+
 }

@@ -23,10 +23,10 @@ public final class ReplicationObjectResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="endpointType")
-      private final @Nullable String endpointType;
+    private @Nullable String endpointType;
 
     public Optional<String> endpointType() {
-        return this.endpointType == null ? Optional.empty() : Optional.ofNullable(this.endpointType);
+        return Optional.ofNullable(this.endpointType);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class ReplicationObjectResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="remoteVolumeRegion")
-      private final @Nullable String remoteVolumeRegion;
+    private @Nullable String remoteVolumeRegion;
 
     public Optional<String> remoteVolumeRegion() {
-        return this.remoteVolumeRegion == null ? Optional.empty() : Optional.ofNullable(this.remoteVolumeRegion);
+        return Optional.ofNullable(this.remoteVolumeRegion);
     }
 
     /**
@@ -45,7 +45,7 @@ public final class ReplicationObjectResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="remoteVolumeResourceId", required=true)
-      private final String remoteVolumeResourceId;
+    private String remoteVolumeResourceId;
 
     public String remoteVolumeResourceId() {
         return this.remoteVolumeResourceId;
@@ -56,10 +56,10 @@ public final class ReplicationObjectResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="replicationId")
-      private final @Nullable String replicationId;
+    private @Nullable String replicationId;
 
     public Optional<String> replicationId() {
-        return this.replicationId == null ? Optional.empty() : Optional.ofNullable(this.replicationId);
+        return Optional.ofNullable(this.replicationId);
     }
 
     /**
@@ -67,82 +67,70 @@ public final class ReplicationObjectResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="replicationSchedule", required=true)
-      private final String replicationSchedule;
+    private String replicationSchedule;
 
     public String replicationSchedule() {
         return this.replicationSchedule;
     }
 
-    public ReplicationObjectResponse(
-        @Nullable String endpointType,
-        @Nullable String remoteVolumeRegion,
-        String remoteVolumeResourceId,
-        @Nullable String replicationId,
-        String replicationSchedule) {
-        this.endpointType = endpointType;
-        this.remoteVolumeRegion = remoteVolumeRegion;
-        this.remoteVolumeResourceId = Objects.requireNonNull(remoteVolumeResourceId, "expected parameter 'remoteVolumeResourceId' to be non-null");
-        this.replicationId = replicationId;
-        this.replicationSchedule = Objects.requireNonNull(replicationSchedule, "expected parameter 'replicationSchedule' to be non-null");
-    }
+    private ReplicationObjectResponse() {}
 
-    private ReplicationObjectResponse() {
-        this.endpointType = null;
-        this.remoteVolumeRegion = null;
-        this.remoteVolumeResourceId = null;
-        this.replicationId = null;
-        this.replicationSchedule = null;
+    private ReplicationObjectResponse(ReplicationObjectResponse $) {
+        this.endpointType = $.endpointType;
+        this.remoteVolumeRegion = $.remoteVolumeRegion;
+        this.remoteVolumeResourceId = $.remoteVolumeResourceId;
+        this.replicationId = $.replicationId;
+        this.replicationSchedule = $.replicationSchedule;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ReplicationObjectResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String endpointType;
-        private @Nullable String remoteVolumeRegion;
-        private String remoteVolumeResourceId;
-        private @Nullable String replicationId;
-        private String replicationSchedule;
+        private ReplicationObjectResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ReplicationObjectResponse();
         }
 
         public Builder(ReplicationObjectResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.endpointType = defaults.endpointType;
-    	      this.remoteVolumeRegion = defaults.remoteVolumeRegion;
-    	      this.remoteVolumeResourceId = defaults.remoteVolumeResourceId;
-    	      this.replicationId = defaults.replicationId;
-    	      this.replicationSchedule = defaults.replicationSchedule;
+            $ = new ReplicationObjectResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder endpointType(@Nullable String endpointType) {
-            this.endpointType = endpointType;
+            $.endpointType = endpointType;
             return this;
         }
+
         public Builder remoteVolumeRegion(@Nullable String remoteVolumeRegion) {
-            this.remoteVolumeRegion = remoteVolumeRegion;
+            $.remoteVolumeRegion = remoteVolumeRegion;
             return this;
         }
+
         public Builder remoteVolumeResourceId(String remoteVolumeResourceId) {
-            this.remoteVolumeResourceId = Objects.requireNonNull(remoteVolumeResourceId);
+            $.remoteVolumeResourceId = remoteVolumeResourceId;
             return this;
         }
+
         public Builder replicationId(@Nullable String replicationId) {
-            this.replicationId = replicationId;
+            $.replicationId = replicationId;
             return this;
         }
+
         public Builder replicationSchedule(String replicationSchedule) {
-            this.replicationSchedule = Objects.requireNonNull(replicationSchedule);
+            $.replicationSchedule = replicationSchedule;
             return this;
-        }        public ReplicationObjectResponse build() {
-            return new ReplicationObjectResponse(endpointType, remoteVolumeRegion, remoteVolumeResourceId, replicationId, replicationSchedule);
+        }
+
+        public ReplicationObjectResponse build() {
+            $.remoteVolumeResourceId = Objects.requireNonNull($.remoteVolumeResourceId, "expected parameter 'remoteVolumeResourceId' to be non-null");
+            $.replicationSchedule = Objects.requireNonNull($.replicationSchedule, "expected parameter 'replicationSchedule' to be non-null");
+            return $;
         }
     }
+
 }

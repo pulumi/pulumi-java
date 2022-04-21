@@ -26,10 +26,10 @@ public final class ManagedRuleSetResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="anomalyScore")
-      private final @Nullable Integer anomalyScore;
+    private @Nullable Integer anomalyScore;
 
     public Optional<Integer> anomalyScore() {
-        return this.anomalyScore == null ? Optional.empty() : Optional.ofNullable(this.anomalyScore);
+        return Optional.ofNullable(this.anomalyScore);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class ManagedRuleSetResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="ruleGroupOverrides")
-      private final @Nullable List<ManagedRuleGroupOverrideResponse> ruleGroupOverrides;
+    private @Nullable List<ManagedRuleGroupOverrideResponse> ruleGroupOverrides;
 
-    public List<ManagedRuleGroupOverrideResponse> ruleGroupOverrides() {
-        return this.ruleGroupOverrides == null ? List.of() : this.ruleGroupOverrides;
+    public Optional<List<ManagedRuleGroupOverrideResponse>> ruleGroupOverrides() {
+        return Optional.ofNullable(this.ruleGroupOverrides);
     }
 
     /**
@@ -48,7 +48,7 @@ public final class ManagedRuleSetResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="ruleSetType", required=true)
-      private final String ruleSetType;
+    private String ruleSetType;
 
     public String ruleSetType() {
         return this.ruleSetType;
@@ -59,76 +59,68 @@ public final class ManagedRuleSetResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="ruleSetVersion", required=true)
-      private final String ruleSetVersion;
+    private String ruleSetVersion;
 
     public String ruleSetVersion() {
         return this.ruleSetVersion;
     }
 
-    public ManagedRuleSetResponse(
-        @Nullable Integer anomalyScore,
-        @Nullable List<ManagedRuleGroupOverrideResponse> ruleGroupOverrides,
-        String ruleSetType,
-        String ruleSetVersion) {
-        this.anomalyScore = anomalyScore;
-        this.ruleGroupOverrides = ruleGroupOverrides;
-        this.ruleSetType = Objects.requireNonNull(ruleSetType, "expected parameter 'ruleSetType' to be non-null");
-        this.ruleSetVersion = Objects.requireNonNull(ruleSetVersion, "expected parameter 'ruleSetVersion' to be non-null");
-    }
+    private ManagedRuleSetResponse() {}
 
-    private ManagedRuleSetResponse() {
-        this.anomalyScore = null;
-        this.ruleGroupOverrides = List.of();
-        this.ruleSetType = null;
-        this.ruleSetVersion = null;
+    private ManagedRuleSetResponse(ManagedRuleSetResponse $) {
+        this.anomalyScore = $.anomalyScore;
+        this.ruleGroupOverrides = $.ruleGroupOverrides;
+        this.ruleSetType = $.ruleSetType;
+        this.ruleSetVersion = $.ruleSetVersion;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ManagedRuleSetResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Integer anomalyScore;
-        private @Nullable List<ManagedRuleGroupOverrideResponse> ruleGroupOverrides;
-        private String ruleSetType;
-        private String ruleSetVersion;
+        private ManagedRuleSetResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ManagedRuleSetResponse();
         }
 
         public Builder(ManagedRuleSetResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.anomalyScore = defaults.anomalyScore;
-    	      this.ruleGroupOverrides = defaults.ruleGroupOverrides;
-    	      this.ruleSetType = defaults.ruleSetType;
-    	      this.ruleSetVersion = defaults.ruleSetVersion;
+            $ = new ManagedRuleSetResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder anomalyScore(@Nullable Integer anomalyScore) {
-            this.anomalyScore = anomalyScore;
+            $.anomalyScore = anomalyScore;
             return this;
         }
+
         public Builder ruleGroupOverrides(@Nullable List<ManagedRuleGroupOverrideResponse> ruleGroupOverrides) {
-            this.ruleGroupOverrides = ruleGroupOverrides;
+            $.ruleGroupOverrides = ruleGroupOverrides;
             return this;
         }
+
         public Builder ruleGroupOverrides(ManagedRuleGroupOverrideResponse... ruleGroupOverrides) {
             return ruleGroupOverrides(List.of(ruleGroupOverrides));
         }
+
         public Builder ruleSetType(String ruleSetType) {
-            this.ruleSetType = Objects.requireNonNull(ruleSetType);
+            $.ruleSetType = ruleSetType;
             return this;
         }
+
         public Builder ruleSetVersion(String ruleSetVersion) {
-            this.ruleSetVersion = Objects.requireNonNull(ruleSetVersion);
+            $.ruleSetVersion = ruleSetVersion;
             return this;
-        }        public ManagedRuleSetResponse build() {
-            return new ManagedRuleSetResponse(anomalyScore, ruleGroupOverrides, ruleSetType, ruleSetVersion);
+        }
+
+        public ManagedRuleSetResponse build() {
+            $.ruleSetType = Objects.requireNonNull($.ruleSetType, "expected parameter 'ruleSetType' to be non-null");
+            $.ruleSetVersion = Objects.requireNonNull($.ruleSetVersion, "expected parameter 'ruleSetVersion' to be non-null");
+            return $;
         }
     }
+
 }

@@ -13,6 +13,7 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,7 +26,7 @@ public final class KubernetesRoleArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="deviceName", required=true)
-      private final Output<String> deviceName;
+    private Output<String> deviceName;
 
     public Output<String> deviceName() {
         return this.deviceName;
@@ -36,7 +37,7 @@ public final class KubernetesRoleArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="hostPlatform", required=true)
-      private final Output<Either<String,PlatformType>> hostPlatform;
+    private Output<Either<String,PlatformType>> hostPlatform;
 
     public Output<Either<String,PlatformType>> hostPlatform() {
         return this.hostPlatform;
@@ -48,7 +49,7 @@ public final class KubernetesRoleArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="kind", required=true)
-      private final Output<String> kind;
+    private Output<String> kind;
 
     public Output<String> kind() {
         return this.kind;
@@ -59,7 +60,7 @@ public final class KubernetesRoleArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="kubernetesClusterInfo", required=true)
-      private final Output<KubernetesClusterInfoArgs> kubernetesClusterInfo;
+    private Output<KubernetesClusterInfoArgs> kubernetesClusterInfo;
 
     public Output<KubernetesClusterInfoArgs> kubernetesClusterInfo() {
         return this.kubernetesClusterInfo;
@@ -70,7 +71,7 @@ public final class KubernetesRoleArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="kubernetesRoleResources", required=true)
-      private final Output<KubernetesRoleResourcesArgs> kubernetesRoleResources;
+    private Output<KubernetesRoleResourcesArgs> kubernetesRoleResources;
 
     public Output<KubernetesRoleResourcesArgs> kubernetesRoleResources() {
         return this.kubernetesRoleResources;
@@ -81,10 +82,10 @@ public final class KubernetesRoleArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -92,7 +93,7 @@ public final class KubernetesRoleArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -103,141 +104,125 @@ public final class KubernetesRoleArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="roleStatus", required=true)
-      private final Output<Either<String,RoleStatus>> roleStatus;
+    private Output<Either<String,RoleStatus>> roleStatus;
 
     public Output<Either<String,RoleStatus>> roleStatus() {
         return this.roleStatus;
     }
 
-    public KubernetesRoleArgs(
-        Output<String> deviceName,
-        Output<Either<String,PlatformType>> hostPlatform,
-        Output<String> kind,
-        Output<KubernetesClusterInfoArgs> kubernetesClusterInfo,
-        Output<KubernetesRoleResourcesArgs> kubernetesRoleResources,
-        @Nullable Output<String> name,
-        Output<String> resourceGroupName,
-        Output<Either<String,RoleStatus>> roleStatus) {
-        this.deviceName = Objects.requireNonNull(deviceName, "expected parameter 'deviceName' to be non-null");
-        this.hostPlatform = Objects.requireNonNull(hostPlatform, "expected parameter 'hostPlatform' to be non-null");
-        this.kind = Codegen.stringProp("kind").output().arg(kind).require();
-        this.kubernetesClusterInfo = Objects.requireNonNull(kubernetesClusterInfo, "expected parameter 'kubernetesClusterInfo' to be non-null");
-        this.kubernetesRoleResources = Objects.requireNonNull(kubernetesRoleResources, "expected parameter 'kubernetesRoleResources' to be non-null");
-        this.name = name;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.roleStatus = Objects.requireNonNull(roleStatus, "expected parameter 'roleStatus' to be non-null");
-    }
+    private KubernetesRoleArgs() {}
 
-    private KubernetesRoleArgs() {
-        this.deviceName = Codegen.empty();
-        this.hostPlatform = Codegen.empty();
-        this.kind = Codegen.empty();
-        this.kubernetesClusterInfo = Codegen.empty();
-        this.kubernetesRoleResources = Codegen.empty();
-        this.name = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.roleStatus = Codegen.empty();
+    private KubernetesRoleArgs(KubernetesRoleArgs $) {
+        this.deviceName = $.deviceName;
+        this.hostPlatform = $.hostPlatform;
+        this.kind = $.kind;
+        this.kubernetesClusterInfo = $.kubernetesClusterInfo;
+        this.kubernetesRoleResources = $.kubernetesRoleResources;
+        this.name = $.name;
+        this.resourceGroupName = $.resourceGroupName;
+        this.roleStatus = $.roleStatus;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(KubernetesRoleArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> deviceName;
-        private Output<Either<String,PlatformType>> hostPlatform;
-        private Output<String> kind;
-        private Output<KubernetesClusterInfoArgs> kubernetesClusterInfo;
-        private Output<KubernetesRoleResourcesArgs> kubernetesRoleResources;
-        private @Nullable Output<String> name;
-        private Output<String> resourceGroupName;
-        private Output<Either<String,RoleStatus>> roleStatus;
+        private KubernetesRoleArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new KubernetesRoleArgs();
         }
 
         public Builder(KubernetesRoleArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.deviceName = defaults.deviceName;
-    	      this.hostPlatform = defaults.hostPlatform;
-    	      this.kind = defaults.kind;
-    	      this.kubernetesClusterInfo = defaults.kubernetesClusterInfo;
-    	      this.kubernetesRoleResources = defaults.kubernetesRoleResources;
-    	      this.name = defaults.name;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.roleStatus = defaults.roleStatus;
+            $ = new KubernetesRoleArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder deviceName(Output<String> deviceName) {
-            this.deviceName = Objects.requireNonNull(deviceName);
+            $.deviceName = deviceName;
             return this;
         }
+
         public Builder deviceName(String deviceName) {
-            this.deviceName = Output.of(Objects.requireNonNull(deviceName));
-            return this;
+            return deviceName(Output.of(deviceName));
         }
+
         public Builder hostPlatform(Output<Either<String,PlatformType>> hostPlatform) {
-            this.hostPlatform = Objects.requireNonNull(hostPlatform);
+            $.hostPlatform = hostPlatform;
             return this;
         }
+
         public Builder hostPlatform(Either<String,PlatformType> hostPlatform) {
-            this.hostPlatform = Output.of(Objects.requireNonNull(hostPlatform));
-            return this;
+            return hostPlatform(Output.of(hostPlatform));
         }
+
         public Builder kind(Output<String> kind) {
-            this.kind = Objects.requireNonNull(kind);
+            $.kind = kind;
             return this;
         }
+
         public Builder kind(String kind) {
-            this.kind = Output.of(Objects.requireNonNull(kind));
-            return this;
+            return kind(Output.of(kind));
         }
+
         public Builder kubernetesClusterInfo(Output<KubernetesClusterInfoArgs> kubernetesClusterInfo) {
-            this.kubernetesClusterInfo = Objects.requireNonNull(kubernetesClusterInfo);
+            $.kubernetesClusterInfo = kubernetesClusterInfo;
             return this;
         }
+
         public Builder kubernetesClusterInfo(KubernetesClusterInfoArgs kubernetesClusterInfo) {
-            this.kubernetesClusterInfo = Output.of(Objects.requireNonNull(kubernetesClusterInfo));
-            return this;
+            return kubernetesClusterInfo(Output.of(kubernetesClusterInfo));
         }
+
         public Builder kubernetesRoleResources(Output<KubernetesRoleResourcesArgs> kubernetesRoleResources) {
-            this.kubernetesRoleResources = Objects.requireNonNull(kubernetesRoleResources);
+            $.kubernetesRoleResources = kubernetesRoleResources;
             return this;
         }
+
         public Builder kubernetesRoleResources(KubernetesRoleResourcesArgs kubernetesRoleResources) {
-            this.kubernetesRoleResources = Output.of(Objects.requireNonNull(kubernetesRoleResources));
-            return this;
+            return kubernetesRoleResources(Output.of(kubernetesRoleResources));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder roleStatus(Output<Either<String,RoleStatus>> roleStatus) {
-            this.roleStatus = Objects.requireNonNull(roleStatus);
+            $.roleStatus = roleStatus;
             return this;
         }
+
         public Builder roleStatus(Either<String,RoleStatus> roleStatus) {
-            this.roleStatus = Output.of(Objects.requireNonNull(roleStatus));
-            return this;
-        }        public KubernetesRoleArgs build() {
-            return new KubernetesRoleArgs(deviceName, hostPlatform, kind, kubernetesClusterInfo, kubernetesRoleResources, name, resourceGroupName, roleStatus);
+            return roleStatus(Output.of(roleStatus));
+        }
+
+        public KubernetesRoleArgs build() {
+            $.deviceName = Objects.requireNonNull($.deviceName, "expected parameter 'deviceName' to be non-null");
+            $.hostPlatform = Objects.requireNonNull($.hostPlatform, "expected parameter 'hostPlatform' to be non-null");
+            $.kind = Codegen.stringProp("kind").output().arg($.kind).require();
+            $.kubernetesClusterInfo = Objects.requireNonNull($.kubernetesClusterInfo, "expected parameter 'kubernetesClusterInfo' to be non-null");
+            $.kubernetesRoleResources = Objects.requireNonNull($.kubernetesRoleResources, "expected parameter 'kubernetesRoleResources' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.roleStatus = Objects.requireNonNull($.roleStatus, "expected parameter 'roleStatus' to be non-null");
+            return $;
         }
     }
+
 }

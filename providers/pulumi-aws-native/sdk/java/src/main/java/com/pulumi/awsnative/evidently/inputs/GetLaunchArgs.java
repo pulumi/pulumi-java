@@ -13,45 +13,45 @@ public final class GetLaunchArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetLaunchArgs Empty = new GetLaunchArgs();
 
     @Import(name="arn", required=true)
-      private final String arn;
+    private String arn;
 
     public String arn() {
         return this.arn;
     }
 
-    public GetLaunchArgs(String arn) {
-        this.arn = Objects.requireNonNull(arn, "expected parameter 'arn' to be non-null");
-    }
+    private GetLaunchArgs() {}
 
-    private GetLaunchArgs() {
-        this.arn = null;
+    private GetLaunchArgs(GetLaunchArgs $) {
+        this.arn = $.arn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetLaunchArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String arn;
+        private GetLaunchArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetLaunchArgs();
         }
 
         public Builder(GetLaunchArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.arn = defaults.arn;
+            $ = new GetLaunchArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder arn(String arn) {
-            this.arn = Objects.requireNonNull(arn);
+            $.arn = arn;
             return this;
-        }        public GetLaunchArgs build() {
-            return new GetLaunchArgs(arn);
+        }
+
+        public GetLaunchArgs build() {
+            $.arn = Objects.requireNonNull($.arn, "expected parameter 'arn' to be non-null");
+            return $;
         }
     }
+
 }

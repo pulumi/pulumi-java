@@ -22,7 +22,7 @@ public final class GoogleCloudRetailV2alphaAudienceResponse extends com.pulumi.r
      * 
      */
     @Import(name="ageGroups", required=true)
-      private final List<String> ageGroups;
+    private List<String> ageGroups;
 
     public List<String> ageGroups() {
         return this.ageGroups;
@@ -33,61 +33,60 @@ public final class GoogleCloudRetailV2alphaAudienceResponse extends com.pulumi.r
      * 
      */
     @Import(name="genders", required=true)
-      private final List<String> genders;
+    private List<String> genders;
 
     public List<String> genders() {
         return this.genders;
     }
 
-    public GoogleCloudRetailV2alphaAudienceResponse(
-        List<String> ageGroups,
-        List<String> genders) {
-        this.ageGroups = Objects.requireNonNull(ageGroups, "expected parameter 'ageGroups' to be non-null");
-        this.genders = Objects.requireNonNull(genders, "expected parameter 'genders' to be non-null");
-    }
+    private GoogleCloudRetailV2alphaAudienceResponse() {}
 
-    private GoogleCloudRetailV2alphaAudienceResponse() {
-        this.ageGroups = List.of();
-        this.genders = List.of();
+    private GoogleCloudRetailV2alphaAudienceResponse(GoogleCloudRetailV2alphaAudienceResponse $) {
+        this.ageGroups = $.ageGroups;
+        this.genders = $.genders;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudRetailV2alphaAudienceResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<String> ageGroups;
-        private List<String> genders;
+        private GoogleCloudRetailV2alphaAudienceResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudRetailV2alphaAudienceResponse();
         }
 
         public Builder(GoogleCloudRetailV2alphaAudienceResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.ageGroups = defaults.ageGroups;
-    	      this.genders = defaults.genders;
+            $ = new GoogleCloudRetailV2alphaAudienceResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder ageGroups(List<String> ageGroups) {
-            this.ageGroups = Objects.requireNonNull(ageGroups);
+            $.ageGroups = ageGroups;
             return this;
         }
+
         public Builder ageGroups(String... ageGroups) {
             return ageGroups(List.of(ageGroups));
         }
+
         public Builder genders(List<String> genders) {
-            this.genders = Objects.requireNonNull(genders);
+            $.genders = genders;
             return this;
         }
+
         public Builder genders(String... genders) {
             return genders(List.of(genders));
-        }        public GoogleCloudRetailV2alphaAudienceResponse build() {
-            return new GoogleCloudRetailV2alphaAudienceResponse(ageGroups, genders);
+        }
+
+        public GoogleCloudRetailV2alphaAudienceResponse build() {
+            $.ageGroups = Objects.requireNonNull($.ageGroups, "expected parameter 'ageGroups' to be non-null");
+            $.genders = Objects.requireNonNull($.genders, "expected parameter 'genders' to be non-null");
+            return $;
         }
     }
+
 }

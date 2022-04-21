@@ -9,6 +9,7 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +26,10 @@ public final class ConnectToTargetSqlDbTaskPropertiesArgs extends com.pulumi.res
      * 
      */
     @Import(name="input")
-      private final @Nullable Output<ConnectToTargetSqlDbTaskInputArgs> input;
+    private @Nullable Output<ConnectToTargetSqlDbTaskInputArgs> input;
 
-    public Output<ConnectToTargetSqlDbTaskInputArgs> input() {
-        return this.input == null ? Codegen.empty() : this.input;
+    public Optional<Output<ConnectToTargetSqlDbTaskInputArgs>> input() {
+        return Optional.ofNullable(this.input);
     }
 
     /**
@@ -37,63 +38,59 @@ public final class ConnectToTargetSqlDbTaskPropertiesArgs extends com.pulumi.res
      * 
      */
     @Import(name="taskType", required=true)
-      private final Output<String> taskType;
+    private Output<String> taskType;
 
     public Output<String> taskType() {
         return this.taskType;
     }
 
-    public ConnectToTargetSqlDbTaskPropertiesArgs(
-        @Nullable Output<ConnectToTargetSqlDbTaskInputArgs> input,
-        Output<String> taskType) {
-        this.input = input;
-        this.taskType = Codegen.stringProp("taskType").output().arg(taskType).require();
-    }
+    private ConnectToTargetSqlDbTaskPropertiesArgs() {}
 
-    private ConnectToTargetSqlDbTaskPropertiesArgs() {
-        this.input = Codegen.empty();
-        this.taskType = Codegen.empty();
+    private ConnectToTargetSqlDbTaskPropertiesArgs(ConnectToTargetSqlDbTaskPropertiesArgs $) {
+        this.input = $.input;
+        this.taskType = $.taskType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ConnectToTargetSqlDbTaskPropertiesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<ConnectToTargetSqlDbTaskInputArgs> input;
-        private Output<String> taskType;
+        private ConnectToTargetSqlDbTaskPropertiesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ConnectToTargetSqlDbTaskPropertiesArgs();
         }
 
         public Builder(ConnectToTargetSqlDbTaskPropertiesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.input = defaults.input;
-    	      this.taskType = defaults.taskType;
+            $ = new ConnectToTargetSqlDbTaskPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder input(@Nullable Output<ConnectToTargetSqlDbTaskInputArgs> input) {
-            this.input = input;
+            $.input = input;
             return this;
         }
-        public Builder input(@Nullable ConnectToTargetSqlDbTaskInputArgs input) {
-            this.input = Codegen.ofNullable(input);
-            return this;
+
+        public Builder input(ConnectToTargetSqlDbTaskInputArgs input) {
+            return input(Output.of(input));
         }
+
         public Builder taskType(Output<String> taskType) {
-            this.taskType = Objects.requireNonNull(taskType);
+            $.taskType = taskType;
             return this;
         }
+
         public Builder taskType(String taskType) {
-            this.taskType = Output.of(Objects.requireNonNull(taskType));
-            return this;
-        }        public ConnectToTargetSqlDbTaskPropertiesArgs build() {
-            return new ConnectToTargetSqlDbTaskPropertiesArgs(input, taskType);
+            return taskType(Output.of(taskType));
+        }
+
+        public ConnectToTargetSqlDbTaskPropertiesArgs build() {
+            $.taskType = Codegen.stringProp("taskType").output().arg($.taskType).require();
+            return $;
         }
     }
+
 }

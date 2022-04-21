@@ -16,62 +16,57 @@ public final class GroupResourceQuery extends com.pulumi.resources.InvokeArgs {
     public static final GroupResourceQuery Empty = new GroupResourceQuery();
 
     @Import(name="query")
-      private final @Nullable GroupQuery query;
+    private @Nullable GroupQuery query;
 
     public Optional<GroupQuery> query() {
-        return this.query == null ? Optional.empty() : Optional.ofNullable(this.query);
+        return Optional.ofNullable(this.query);
     }
 
     @Import(name="type")
-      private final @Nullable GroupResourceQueryType type;
+    private @Nullable GroupResourceQueryType type;
 
     public Optional<GroupResourceQueryType> type() {
-        return this.type == null ? Optional.empty() : Optional.ofNullable(this.type);
+        return Optional.ofNullable(this.type);
     }
 
-    public GroupResourceQuery(
-        @Nullable GroupQuery query,
-        @Nullable GroupResourceQueryType type) {
-        this.query = query;
-        this.type = type;
-    }
+    private GroupResourceQuery() {}
 
-    private GroupResourceQuery() {
-        this.query = null;
-        this.type = null;
+    private GroupResourceQuery(GroupResourceQuery $) {
+        this.query = $.query;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GroupResourceQuery defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable GroupQuery query;
-        private @Nullable GroupResourceQueryType type;
+        private GroupResourceQuery $;
 
         public Builder() {
-    	      // Empty
+            $ = new GroupResourceQuery();
         }
 
         public Builder(GroupResourceQuery defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.query = defaults.query;
-    	      this.type = defaults.type;
+            $ = new GroupResourceQuery(Objects.requireNonNull(defaults));
         }
 
         public Builder query(@Nullable GroupQuery query) {
-            this.query = query;
+            $.query = query;
             return this;
         }
+
         public Builder type(@Nullable GroupResourceQueryType type) {
-            this.type = type;
+            $.type = type;
             return this;
-        }        public GroupResourceQuery build() {
-            return new GroupResourceQuery(query, type);
+        }
+
+        public GroupResourceQuery build() {
+            return $;
         }
     }
+
 }

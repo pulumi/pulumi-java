@@ -5,9 +5,9 @@ package com.pulumi.gcp.composer.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -16,70 +16,66 @@ public final class EnvironmentConfigWebServerNetworkAccessControlAllowedIpRangeG
     public static final EnvironmentConfigWebServerNetworkAccessControlAllowedIpRangeGetArgs Empty = new EnvironmentConfigWebServerNetworkAccessControlAllowedIpRangeGetArgs();
 
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     @Import(name="value", required=true)
-      private final Output<String> value;
+    private Output<String> value;
 
     public Output<String> value() {
         return this.value;
     }
 
-    public EnvironmentConfigWebServerNetworkAccessControlAllowedIpRangeGetArgs(
-        @Nullable Output<String> description,
-        Output<String> value) {
-        this.description = description;
-        this.value = Objects.requireNonNull(value, "expected parameter 'value' to be non-null");
-    }
+    private EnvironmentConfigWebServerNetworkAccessControlAllowedIpRangeGetArgs() {}
 
-    private EnvironmentConfigWebServerNetworkAccessControlAllowedIpRangeGetArgs() {
-        this.description = Codegen.empty();
-        this.value = Codegen.empty();
+    private EnvironmentConfigWebServerNetworkAccessControlAllowedIpRangeGetArgs(EnvironmentConfigWebServerNetworkAccessControlAllowedIpRangeGetArgs $) {
+        this.description = $.description;
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EnvironmentConfigWebServerNetworkAccessControlAllowedIpRangeGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> description;
-        private Output<String> value;
+        private EnvironmentConfigWebServerNetworkAccessControlAllowedIpRangeGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new EnvironmentConfigWebServerNetworkAccessControlAllowedIpRangeGetArgs();
         }
 
         public Builder(EnvironmentConfigWebServerNetworkAccessControlAllowedIpRangeGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.description = defaults.description;
-    	      this.value = defaults.value;
+            $ = new EnvironmentConfigWebServerNetworkAccessControlAllowedIpRangeGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder value(Output<String> value) {
-            this.value = Objects.requireNonNull(value);
+            $.value = value;
             return this;
         }
+
         public Builder value(String value) {
-            this.value = Output.of(Objects.requireNonNull(value));
-            return this;
-        }        public EnvironmentConfigWebServerNetworkAccessControlAllowedIpRangeGetArgs build() {
-            return new EnvironmentConfigWebServerNetworkAccessControlAllowedIpRangeGetArgs(description, value);
+            return value(Output.of(value));
+        }
+
+        public EnvironmentConfigWebServerNetworkAccessControlAllowedIpRangeGetArgs build() {
+            $.value = Objects.requireNonNull($.value, "expected parameter 'value' to be non-null");
+            return $;
         }
     }
+
 }

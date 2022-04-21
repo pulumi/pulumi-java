@@ -5,11 +5,11 @@ package com.pulumi.googlenative.osconfig_v1beta.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.osconfig_v1beta.enums.PackageDesiredState;
 import com.pulumi.googlenative.osconfig_v1beta.enums.PackageManager;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class PackageArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="desiredState")
-      private final @Nullable Output<PackageDesiredState> desiredState;
+    private @Nullable Output<PackageDesiredState> desiredState;
 
-    public Output<PackageDesiredState> desiredState() {
-        return this.desiredState == null ? Codegen.empty() : this.desiredState;
+    public Optional<Output<PackageDesiredState>> desiredState() {
+        return Optional.ofNullable(this.desiredState);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class PackageArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="manager")
-      private final @Nullable Output<PackageManager> manager;
+    private @Nullable Output<PackageManager> manager;
 
-    public Output<PackageManager> manager() {
-        return this.manager == null ? Codegen.empty() : this.manager;
+    public Optional<Output<PackageManager>> manager() {
+        return Optional.ofNullable(this.manager);
     }
 
     /**
@@ -48,76 +48,69 @@ public final class PackageArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name", required=true)
-      private final Output<String> name;
+    private Output<String> name;
 
     public Output<String> name() {
         return this.name;
     }
 
-    public PackageArgs(
-        @Nullable Output<PackageDesiredState> desiredState,
-        @Nullable Output<PackageManager> manager,
-        Output<String> name) {
-        this.desiredState = desiredState;
-        this.manager = manager;
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-    }
+    private PackageArgs() {}
 
-    private PackageArgs() {
-        this.desiredState = Codegen.empty();
-        this.manager = Codegen.empty();
-        this.name = Codegen.empty();
+    private PackageArgs(PackageArgs $) {
+        this.desiredState = $.desiredState;
+        this.manager = $.manager;
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PackageArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<PackageDesiredState> desiredState;
-        private @Nullable Output<PackageManager> manager;
-        private Output<String> name;
+        private PackageArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PackageArgs();
         }
 
         public Builder(PackageArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.desiredState = defaults.desiredState;
-    	      this.manager = defaults.manager;
-    	      this.name = defaults.name;
+            $ = new PackageArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder desiredState(@Nullable Output<PackageDesiredState> desiredState) {
-            this.desiredState = desiredState;
+            $.desiredState = desiredState;
             return this;
         }
-        public Builder desiredState(@Nullable PackageDesiredState desiredState) {
-            this.desiredState = Codegen.ofNullable(desiredState);
-            return this;
+
+        public Builder desiredState(PackageDesiredState desiredState) {
+            return desiredState(Output.of(desiredState));
         }
+
         public Builder manager(@Nullable Output<PackageManager> manager) {
-            this.manager = manager;
+            $.manager = manager;
             return this;
         }
-        public Builder manager(@Nullable PackageManager manager) {
-            this.manager = Codegen.ofNullable(manager);
-            return this;
+
+        public Builder manager(PackageManager manager) {
+            return manager(Output.of(manager));
         }
+
         public Builder name(Output<String> name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Output.of(Objects.requireNonNull(name));
-            return this;
-        }        public PackageArgs build() {
-            return new PackageArgs(desiredState, manager, name);
+            return name(Output.of(name));
+        }
+
+        public PackageArgs build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            return $;
         }
     }
+
 }

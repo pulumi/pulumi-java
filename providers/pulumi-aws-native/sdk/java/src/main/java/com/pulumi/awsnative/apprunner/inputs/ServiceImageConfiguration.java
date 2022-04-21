@@ -25,17 +25,17 @@ public final class ServiceImageConfiguration extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="port")
-      private final @Nullable String port;
+    private @Nullable String port;
 
     public Optional<String> port() {
-        return this.port == null ? Optional.empty() : Optional.ofNullable(this.port);
+        return Optional.ofNullable(this.port);
     }
 
     @Import(name="runtimeEnvironmentVariables")
-      private final @Nullable List<ServiceKeyValuePair> runtimeEnvironmentVariables;
+    private @Nullable List<ServiceKeyValuePair> runtimeEnvironmentVariables;
 
-    public List<ServiceKeyValuePair> runtimeEnvironmentVariables() {
-        return this.runtimeEnvironmentVariables == null ? List.of() : this.runtimeEnvironmentVariables;
+    public Optional<List<ServiceKeyValuePair>> runtimeEnvironmentVariables() {
+        return Optional.ofNullable(this.runtimeEnvironmentVariables);
     }
 
     /**
@@ -43,67 +43,60 @@ public final class ServiceImageConfiguration extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="startCommand")
-      private final @Nullable String startCommand;
+    private @Nullable String startCommand;
 
     public Optional<String> startCommand() {
-        return this.startCommand == null ? Optional.empty() : Optional.ofNullable(this.startCommand);
+        return Optional.ofNullable(this.startCommand);
     }
 
-    public ServiceImageConfiguration(
-        @Nullable String port,
-        @Nullable List<ServiceKeyValuePair> runtimeEnvironmentVariables,
-        @Nullable String startCommand) {
-        this.port = port;
-        this.runtimeEnvironmentVariables = runtimeEnvironmentVariables;
-        this.startCommand = startCommand;
-    }
+    private ServiceImageConfiguration() {}
 
-    private ServiceImageConfiguration() {
-        this.port = null;
-        this.runtimeEnvironmentVariables = List.of();
-        this.startCommand = null;
+    private ServiceImageConfiguration(ServiceImageConfiguration $) {
+        this.port = $.port;
+        this.runtimeEnvironmentVariables = $.runtimeEnvironmentVariables;
+        this.startCommand = $.startCommand;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ServiceImageConfiguration defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String port;
-        private @Nullable List<ServiceKeyValuePair> runtimeEnvironmentVariables;
-        private @Nullable String startCommand;
+        private ServiceImageConfiguration $;
 
         public Builder() {
-    	      // Empty
+            $ = new ServiceImageConfiguration();
         }
 
         public Builder(ServiceImageConfiguration defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.port = defaults.port;
-    	      this.runtimeEnvironmentVariables = defaults.runtimeEnvironmentVariables;
-    	      this.startCommand = defaults.startCommand;
+            $ = new ServiceImageConfiguration(Objects.requireNonNull(defaults));
         }
 
         public Builder port(@Nullable String port) {
-            this.port = port;
+            $.port = port;
             return this;
         }
+
         public Builder runtimeEnvironmentVariables(@Nullable List<ServiceKeyValuePair> runtimeEnvironmentVariables) {
-            this.runtimeEnvironmentVariables = runtimeEnvironmentVariables;
+            $.runtimeEnvironmentVariables = runtimeEnvironmentVariables;
             return this;
         }
+
         public Builder runtimeEnvironmentVariables(ServiceKeyValuePair... runtimeEnvironmentVariables) {
             return runtimeEnvironmentVariables(List.of(runtimeEnvironmentVariables));
         }
+
         public Builder startCommand(@Nullable String startCommand) {
-            this.startCommand = startCommand;
+            $.startCommand = startCommand;
             return this;
-        }        public ServiceImageConfiguration build() {
-            return new ServiceImageConfiguration(port, runtimeEnvironmentVariables, startCommand);
+        }
+
+        public ServiceImageConfiguration build() {
+            return $;
         }
     }
+
 }

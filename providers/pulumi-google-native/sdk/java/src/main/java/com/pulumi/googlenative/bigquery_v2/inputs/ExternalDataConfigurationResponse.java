@@ -27,7 +27,7 @@ public final class ExternalDataConfigurationResponse extends com.pulumi.resource
      * 
      */
     @Import(name="autodetect", required=true)
-      private final Boolean autodetect;
+    private Boolean autodetect;
 
     public Boolean autodetect() {
         return this.autodetect;
@@ -38,7 +38,7 @@ public final class ExternalDataConfigurationResponse extends com.pulumi.resource
      * 
      */
     @Import(name="avroOptions", required=true)
-      private final AvroOptionsResponse avroOptions;
+    private AvroOptionsResponse avroOptions;
 
     public AvroOptionsResponse avroOptions() {
         return this.avroOptions;
@@ -49,7 +49,7 @@ public final class ExternalDataConfigurationResponse extends com.pulumi.resource
      * 
      */
     @Import(name="bigtableOptions", required=true)
-      private final BigtableOptionsResponse bigtableOptions;
+    private BigtableOptionsResponse bigtableOptions;
 
     public BigtableOptionsResponse bigtableOptions() {
         return this.bigtableOptions;
@@ -60,7 +60,7 @@ public final class ExternalDataConfigurationResponse extends com.pulumi.resource
      * 
      */
     @Import(name="compression", required=true)
-      private final String compression;
+    private String compression;
 
     public String compression() {
         return this.compression;
@@ -71,7 +71,7 @@ public final class ExternalDataConfigurationResponse extends com.pulumi.resource
      * 
      */
     @Import(name="connectionId", required=true)
-      private final String connectionId;
+    private String connectionId;
 
     public String connectionId() {
         return this.connectionId;
@@ -82,7 +82,7 @@ public final class ExternalDataConfigurationResponse extends com.pulumi.resource
      * 
      */
     @Import(name="csvOptions", required=true)
-      private final CsvOptionsResponse csvOptions;
+    private CsvOptionsResponse csvOptions;
 
     public CsvOptionsResponse csvOptions() {
         return this.csvOptions;
@@ -93,7 +93,7 @@ public final class ExternalDataConfigurationResponse extends com.pulumi.resource
      * 
      */
     @Import(name="decimalTargetTypes", required=true)
-      private final List<String> decimalTargetTypes;
+    private List<String> decimalTargetTypes;
 
     public List<String> decimalTargetTypes() {
         return this.decimalTargetTypes;
@@ -104,7 +104,7 @@ public final class ExternalDataConfigurationResponse extends com.pulumi.resource
      * 
      */
     @Import(name="googleSheetsOptions", required=true)
-      private final GoogleSheetsOptionsResponse googleSheetsOptions;
+    private GoogleSheetsOptionsResponse googleSheetsOptions;
 
     public GoogleSheetsOptionsResponse googleSheetsOptions() {
         return this.googleSheetsOptions;
@@ -115,7 +115,7 @@ public final class ExternalDataConfigurationResponse extends com.pulumi.resource
      * 
      */
     @Import(name="hivePartitioningOptions", required=true)
-      private final HivePartitioningOptionsResponse hivePartitioningOptions;
+    private HivePartitioningOptionsResponse hivePartitioningOptions;
 
     public HivePartitioningOptionsResponse hivePartitioningOptions() {
         return this.hivePartitioningOptions;
@@ -126,7 +126,7 @@ public final class ExternalDataConfigurationResponse extends com.pulumi.resource
      * 
      */
     @Import(name="ignoreUnknownValues", required=true)
-      private final Boolean ignoreUnknownValues;
+    private Boolean ignoreUnknownValues;
 
     public Boolean ignoreUnknownValues() {
         return this.ignoreUnknownValues;
@@ -137,7 +137,7 @@ public final class ExternalDataConfigurationResponse extends com.pulumi.resource
      * 
      */
     @Import(name="maxBadRecords", required=true)
-      private final Integer maxBadRecords;
+    private Integer maxBadRecords;
 
     public Integer maxBadRecords() {
         return this.maxBadRecords;
@@ -148,7 +148,7 @@ public final class ExternalDataConfigurationResponse extends com.pulumi.resource
      * 
      */
     @Import(name="parquetOptions", required=true)
-      private final ParquetOptionsResponse parquetOptions;
+    private ParquetOptionsResponse parquetOptions;
 
     public ParquetOptionsResponse parquetOptions() {
         return this.parquetOptions;
@@ -159,7 +159,7 @@ public final class ExternalDataConfigurationResponse extends com.pulumi.resource
      * 
      */
     @Import(name="schema", required=true)
-      private final TableSchemaResponse schema;
+    private TableSchemaResponse schema;
 
     public TableSchemaResponse schema() {
         return this.schema;
@@ -170,7 +170,7 @@ public final class ExternalDataConfigurationResponse extends com.pulumi.resource
      * 
      */
     @Import(name="sourceFormat", required=true)
-      private final String sourceFormat;
+    private String sourceFormat;
 
     public String sourceFormat() {
         return this.sourceFormat;
@@ -181,178 +181,151 @@ public final class ExternalDataConfigurationResponse extends com.pulumi.resource
      * 
      */
     @Import(name="sourceUris", required=true)
-      private final List<String> sourceUris;
+    private List<String> sourceUris;
 
     public List<String> sourceUris() {
         return this.sourceUris;
     }
 
-    public ExternalDataConfigurationResponse(
-        Boolean autodetect,
-        AvroOptionsResponse avroOptions,
-        BigtableOptionsResponse bigtableOptions,
-        String compression,
-        String connectionId,
-        CsvOptionsResponse csvOptions,
-        List<String> decimalTargetTypes,
-        GoogleSheetsOptionsResponse googleSheetsOptions,
-        HivePartitioningOptionsResponse hivePartitioningOptions,
-        Boolean ignoreUnknownValues,
-        Integer maxBadRecords,
-        ParquetOptionsResponse parquetOptions,
-        TableSchemaResponse schema,
-        String sourceFormat,
-        List<String> sourceUris) {
-        this.autodetect = Objects.requireNonNull(autodetect, "expected parameter 'autodetect' to be non-null");
-        this.avroOptions = Objects.requireNonNull(avroOptions, "expected parameter 'avroOptions' to be non-null");
-        this.bigtableOptions = Objects.requireNonNull(bigtableOptions, "expected parameter 'bigtableOptions' to be non-null");
-        this.compression = Objects.requireNonNull(compression, "expected parameter 'compression' to be non-null");
-        this.connectionId = Objects.requireNonNull(connectionId, "expected parameter 'connectionId' to be non-null");
-        this.csvOptions = Objects.requireNonNull(csvOptions, "expected parameter 'csvOptions' to be non-null");
-        this.decimalTargetTypes = Objects.requireNonNull(decimalTargetTypes, "expected parameter 'decimalTargetTypes' to be non-null");
-        this.googleSheetsOptions = Objects.requireNonNull(googleSheetsOptions, "expected parameter 'googleSheetsOptions' to be non-null");
-        this.hivePartitioningOptions = Objects.requireNonNull(hivePartitioningOptions, "expected parameter 'hivePartitioningOptions' to be non-null");
-        this.ignoreUnknownValues = Objects.requireNonNull(ignoreUnknownValues, "expected parameter 'ignoreUnknownValues' to be non-null");
-        this.maxBadRecords = Objects.requireNonNull(maxBadRecords, "expected parameter 'maxBadRecords' to be non-null");
-        this.parquetOptions = Objects.requireNonNull(parquetOptions, "expected parameter 'parquetOptions' to be non-null");
-        this.schema = Objects.requireNonNull(schema, "expected parameter 'schema' to be non-null");
-        this.sourceFormat = Objects.requireNonNull(sourceFormat, "expected parameter 'sourceFormat' to be non-null");
-        this.sourceUris = Objects.requireNonNull(sourceUris, "expected parameter 'sourceUris' to be non-null");
-    }
+    private ExternalDataConfigurationResponse() {}
 
-    private ExternalDataConfigurationResponse() {
-        this.autodetect = null;
-        this.avroOptions = null;
-        this.bigtableOptions = null;
-        this.compression = null;
-        this.connectionId = null;
-        this.csvOptions = null;
-        this.decimalTargetTypes = List.of();
-        this.googleSheetsOptions = null;
-        this.hivePartitioningOptions = null;
-        this.ignoreUnknownValues = null;
-        this.maxBadRecords = null;
-        this.parquetOptions = null;
-        this.schema = null;
-        this.sourceFormat = null;
-        this.sourceUris = List.of();
+    private ExternalDataConfigurationResponse(ExternalDataConfigurationResponse $) {
+        this.autodetect = $.autodetect;
+        this.avroOptions = $.avroOptions;
+        this.bigtableOptions = $.bigtableOptions;
+        this.compression = $.compression;
+        this.connectionId = $.connectionId;
+        this.csvOptions = $.csvOptions;
+        this.decimalTargetTypes = $.decimalTargetTypes;
+        this.googleSheetsOptions = $.googleSheetsOptions;
+        this.hivePartitioningOptions = $.hivePartitioningOptions;
+        this.ignoreUnknownValues = $.ignoreUnknownValues;
+        this.maxBadRecords = $.maxBadRecords;
+        this.parquetOptions = $.parquetOptions;
+        this.schema = $.schema;
+        this.sourceFormat = $.sourceFormat;
+        this.sourceUris = $.sourceUris;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ExternalDataConfigurationResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Boolean autodetect;
-        private AvroOptionsResponse avroOptions;
-        private BigtableOptionsResponse bigtableOptions;
-        private String compression;
-        private String connectionId;
-        private CsvOptionsResponse csvOptions;
-        private List<String> decimalTargetTypes;
-        private GoogleSheetsOptionsResponse googleSheetsOptions;
-        private HivePartitioningOptionsResponse hivePartitioningOptions;
-        private Boolean ignoreUnknownValues;
-        private Integer maxBadRecords;
-        private ParquetOptionsResponse parquetOptions;
-        private TableSchemaResponse schema;
-        private String sourceFormat;
-        private List<String> sourceUris;
+        private ExternalDataConfigurationResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ExternalDataConfigurationResponse();
         }
 
         public Builder(ExternalDataConfigurationResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.autodetect = defaults.autodetect;
-    	      this.avroOptions = defaults.avroOptions;
-    	      this.bigtableOptions = defaults.bigtableOptions;
-    	      this.compression = defaults.compression;
-    	      this.connectionId = defaults.connectionId;
-    	      this.csvOptions = defaults.csvOptions;
-    	      this.decimalTargetTypes = defaults.decimalTargetTypes;
-    	      this.googleSheetsOptions = defaults.googleSheetsOptions;
-    	      this.hivePartitioningOptions = defaults.hivePartitioningOptions;
-    	      this.ignoreUnknownValues = defaults.ignoreUnknownValues;
-    	      this.maxBadRecords = defaults.maxBadRecords;
-    	      this.parquetOptions = defaults.parquetOptions;
-    	      this.schema = defaults.schema;
-    	      this.sourceFormat = defaults.sourceFormat;
-    	      this.sourceUris = defaults.sourceUris;
+            $ = new ExternalDataConfigurationResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder autodetect(Boolean autodetect) {
-            this.autodetect = Objects.requireNonNull(autodetect);
+            $.autodetect = autodetect;
             return this;
         }
+
         public Builder avroOptions(AvroOptionsResponse avroOptions) {
-            this.avroOptions = Objects.requireNonNull(avroOptions);
+            $.avroOptions = avroOptions;
             return this;
         }
+
         public Builder bigtableOptions(BigtableOptionsResponse bigtableOptions) {
-            this.bigtableOptions = Objects.requireNonNull(bigtableOptions);
+            $.bigtableOptions = bigtableOptions;
             return this;
         }
+
         public Builder compression(String compression) {
-            this.compression = Objects.requireNonNull(compression);
+            $.compression = compression;
             return this;
         }
+
         public Builder connectionId(String connectionId) {
-            this.connectionId = Objects.requireNonNull(connectionId);
+            $.connectionId = connectionId;
             return this;
         }
+
         public Builder csvOptions(CsvOptionsResponse csvOptions) {
-            this.csvOptions = Objects.requireNonNull(csvOptions);
+            $.csvOptions = csvOptions;
             return this;
         }
+
         public Builder decimalTargetTypes(List<String> decimalTargetTypes) {
-            this.decimalTargetTypes = Objects.requireNonNull(decimalTargetTypes);
+            $.decimalTargetTypes = decimalTargetTypes;
             return this;
         }
+
         public Builder decimalTargetTypes(String... decimalTargetTypes) {
             return decimalTargetTypes(List.of(decimalTargetTypes));
         }
+
         public Builder googleSheetsOptions(GoogleSheetsOptionsResponse googleSheetsOptions) {
-            this.googleSheetsOptions = Objects.requireNonNull(googleSheetsOptions);
+            $.googleSheetsOptions = googleSheetsOptions;
             return this;
         }
+
         public Builder hivePartitioningOptions(HivePartitioningOptionsResponse hivePartitioningOptions) {
-            this.hivePartitioningOptions = Objects.requireNonNull(hivePartitioningOptions);
+            $.hivePartitioningOptions = hivePartitioningOptions;
             return this;
         }
+
         public Builder ignoreUnknownValues(Boolean ignoreUnknownValues) {
-            this.ignoreUnknownValues = Objects.requireNonNull(ignoreUnknownValues);
+            $.ignoreUnknownValues = ignoreUnknownValues;
             return this;
         }
+
         public Builder maxBadRecords(Integer maxBadRecords) {
-            this.maxBadRecords = Objects.requireNonNull(maxBadRecords);
+            $.maxBadRecords = maxBadRecords;
             return this;
         }
+
         public Builder parquetOptions(ParquetOptionsResponse parquetOptions) {
-            this.parquetOptions = Objects.requireNonNull(parquetOptions);
+            $.parquetOptions = parquetOptions;
             return this;
         }
+
         public Builder schema(TableSchemaResponse schema) {
-            this.schema = Objects.requireNonNull(schema);
+            $.schema = schema;
             return this;
         }
+
         public Builder sourceFormat(String sourceFormat) {
-            this.sourceFormat = Objects.requireNonNull(sourceFormat);
+            $.sourceFormat = sourceFormat;
             return this;
         }
+
         public Builder sourceUris(List<String> sourceUris) {
-            this.sourceUris = Objects.requireNonNull(sourceUris);
+            $.sourceUris = sourceUris;
             return this;
         }
+
         public Builder sourceUris(String... sourceUris) {
             return sourceUris(List.of(sourceUris));
-        }        public ExternalDataConfigurationResponse build() {
-            return new ExternalDataConfigurationResponse(autodetect, avroOptions, bigtableOptions, compression, connectionId, csvOptions, decimalTargetTypes, googleSheetsOptions, hivePartitioningOptions, ignoreUnknownValues, maxBadRecords, parquetOptions, schema, sourceFormat, sourceUris);
+        }
+
+        public ExternalDataConfigurationResponse build() {
+            $.autodetect = Objects.requireNonNull($.autodetect, "expected parameter 'autodetect' to be non-null");
+            $.avroOptions = Objects.requireNonNull($.avroOptions, "expected parameter 'avroOptions' to be non-null");
+            $.bigtableOptions = Objects.requireNonNull($.bigtableOptions, "expected parameter 'bigtableOptions' to be non-null");
+            $.compression = Objects.requireNonNull($.compression, "expected parameter 'compression' to be non-null");
+            $.connectionId = Objects.requireNonNull($.connectionId, "expected parameter 'connectionId' to be non-null");
+            $.csvOptions = Objects.requireNonNull($.csvOptions, "expected parameter 'csvOptions' to be non-null");
+            $.decimalTargetTypes = Objects.requireNonNull($.decimalTargetTypes, "expected parameter 'decimalTargetTypes' to be non-null");
+            $.googleSheetsOptions = Objects.requireNonNull($.googleSheetsOptions, "expected parameter 'googleSheetsOptions' to be non-null");
+            $.hivePartitioningOptions = Objects.requireNonNull($.hivePartitioningOptions, "expected parameter 'hivePartitioningOptions' to be non-null");
+            $.ignoreUnknownValues = Objects.requireNonNull($.ignoreUnknownValues, "expected parameter 'ignoreUnknownValues' to be non-null");
+            $.maxBadRecords = Objects.requireNonNull($.maxBadRecords, "expected parameter 'maxBadRecords' to be non-null");
+            $.parquetOptions = Objects.requireNonNull($.parquetOptions, "expected parameter 'parquetOptions' to be non-null");
+            $.schema = Objects.requireNonNull($.schema, "expected parameter 'schema' to be non-null");
+            $.sourceFormat = Objects.requireNonNull($.sourceFormat, "expected parameter 'sourceFormat' to be non-null");
+            $.sourceUris = Objects.requireNonNull($.sourceUris, "expected parameter 'sourceUris' to be non-null");
+            return $;
         }
     }
+
 }

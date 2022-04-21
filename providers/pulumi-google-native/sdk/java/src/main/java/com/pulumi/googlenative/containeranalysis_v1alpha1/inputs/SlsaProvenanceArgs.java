@@ -5,13 +5,13 @@ package com.pulumi.googlenative.containeranalysis_v1alpha1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.containeranalysis_v1alpha1.inputs.MaterialArgs;
 import com.pulumi.googlenative.containeranalysis_v1alpha1.inputs.SlsaBuilderArgs;
 import com.pulumi.googlenative.containeranalysis_v1alpha1.inputs.SlsaMetadataArgs;
 import com.pulumi.googlenative.containeranalysis_v1alpha1.inputs.SlsaRecipeArgs;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -28,10 +28,10 @@ public final class SlsaProvenanceArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="builder")
-      private final @Nullable Output<SlsaBuilderArgs> builder;
+    private @Nullable Output<SlsaBuilderArgs> builder;
 
-    public Output<SlsaBuilderArgs> builder_() {
-        return this.builder == null ? Codegen.empty() : this.builder;
+    public Optional<Output<SlsaBuilderArgs>> builder_() {
+        return Optional.ofNullable(this.builder);
     }
 
     /**
@@ -39,10 +39,10 @@ public final class SlsaProvenanceArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="materials")
-      private final @Nullable Output<List<MaterialArgs>> materials;
+    private @Nullable Output<List<MaterialArgs>> materials;
 
-    public Output<List<MaterialArgs>> materials() {
-        return this.materials == null ? Codegen.empty() : this.materials;
+    public Optional<Output<List<MaterialArgs>>> materials() {
+        return Optional.ofNullable(this.materials);
     }
 
     /**
@@ -50,10 +50,10 @@ public final class SlsaProvenanceArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="metadata")
-      private final @Nullable Output<SlsaMetadataArgs> metadata;
+    private @Nullable Output<SlsaMetadataArgs> metadata;
 
-    public Output<SlsaMetadataArgs> metadata() {
-        return this.metadata == null ? Codegen.empty() : this.metadata;
+    public Optional<Output<SlsaMetadataArgs>> metadata() {
+        return Optional.ofNullable(this.metadata);
     }
 
     /**
@@ -61,92 +61,82 @@ public final class SlsaProvenanceArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="recipe")
-      private final @Nullable Output<SlsaRecipeArgs> recipe;
+    private @Nullable Output<SlsaRecipeArgs> recipe;
 
-    public Output<SlsaRecipeArgs> recipe() {
-        return this.recipe == null ? Codegen.empty() : this.recipe;
+    public Optional<Output<SlsaRecipeArgs>> recipe() {
+        return Optional.ofNullable(this.recipe);
     }
 
-    public SlsaProvenanceArgs(
-        @Nullable Output<SlsaBuilderArgs> builder,
-        @Nullable Output<List<MaterialArgs>> materials,
-        @Nullable Output<SlsaMetadataArgs> metadata,
-        @Nullable Output<SlsaRecipeArgs> recipe) {
-        this.builder = builder;
-        this.materials = materials;
-        this.metadata = metadata;
-        this.recipe = recipe;
-    }
+    private SlsaProvenanceArgs() {}
 
-    private SlsaProvenanceArgs() {
-        this.builder = Codegen.empty();
-        this.materials = Codegen.empty();
-        this.metadata = Codegen.empty();
-        this.recipe = Codegen.empty();
+    private SlsaProvenanceArgs(SlsaProvenanceArgs $) {
+        this.builder = $.builder;
+        this.materials = $.materials;
+        this.metadata = $.metadata;
+        this.recipe = $.recipe;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SlsaProvenanceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<SlsaBuilderArgs> builder;
-        private @Nullable Output<List<MaterialArgs>> materials;
-        private @Nullable Output<SlsaMetadataArgs> metadata;
-        private @Nullable Output<SlsaRecipeArgs> recipe;
+        private SlsaProvenanceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SlsaProvenanceArgs();
         }
 
         public Builder(SlsaProvenanceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.builder = defaults.builder;
-    	      this.materials = defaults.materials;
-    	      this.metadata = defaults.metadata;
-    	      this.recipe = defaults.recipe;
+            $ = new SlsaProvenanceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder builder_(@Nullable Output<SlsaBuilderArgs> builder) {
-            this.builder = builder;
+            $.builder = builder;
             return this;
         }
-        public Builder builder_(@Nullable SlsaBuilderArgs builder) {
-            this.builder = Codegen.ofNullable(builder);
-            return this;
+
+        public Builder builder_(SlsaBuilderArgs builder) {
+            return builder_(Output.of(builder));
         }
+
         public Builder materials(@Nullable Output<List<MaterialArgs>> materials) {
-            this.materials = materials;
+            $.materials = materials;
             return this;
         }
-        public Builder materials(@Nullable List<MaterialArgs> materials) {
-            this.materials = Codegen.ofNullable(materials);
-            return this;
+
+        public Builder materials(List<MaterialArgs> materials) {
+            return materials(Output.of(materials));
         }
+
         public Builder materials(MaterialArgs... materials) {
             return materials(List.of(materials));
         }
+
         public Builder metadata(@Nullable Output<SlsaMetadataArgs> metadata) {
-            this.metadata = metadata;
+            $.metadata = metadata;
             return this;
         }
-        public Builder metadata(@Nullable SlsaMetadataArgs metadata) {
-            this.metadata = Codegen.ofNullable(metadata);
-            return this;
+
+        public Builder metadata(SlsaMetadataArgs metadata) {
+            return metadata(Output.of(metadata));
         }
+
         public Builder recipe(@Nullable Output<SlsaRecipeArgs> recipe) {
-            this.recipe = recipe;
+            $.recipe = recipe;
             return this;
         }
-        public Builder recipe(@Nullable SlsaRecipeArgs recipe) {
-            this.recipe = Codegen.ofNullable(recipe);
-            return this;
-        }        public SlsaProvenanceArgs build() {
-            return new SlsaProvenanceArgs(builder, materials, metadata, recipe);
+
+        public Builder recipe(SlsaRecipeArgs recipe) {
+            return recipe(Output.of(recipe));
+        }
+
+        public SlsaProvenanceArgs build() {
+            return $;
         }
     }
+
 }

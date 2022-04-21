@@ -24,7 +24,7 @@ public final class ApplicationHANAPrometheusExporter extends com.pulumi.resource
      * 
      */
     @Import(name="agreeToInstallHANADBClient", required=true)
-      private final Boolean agreeToInstallHANADBClient;
+    private Boolean agreeToInstallHANADBClient;
 
     public Boolean agreeToInstallHANADBClient() {
         return this.agreeToInstallHANADBClient;
@@ -35,7 +35,7 @@ public final class ApplicationHANAPrometheusExporter extends com.pulumi.resource
      * 
      */
     @Import(name="hANAPort", required=true)
-      private final String hANAPort;
+    private String hANAPort;
 
     public String hANAPort() {
         return this.hANAPort;
@@ -46,7 +46,7 @@ public final class ApplicationHANAPrometheusExporter extends com.pulumi.resource
      * 
      */
     @Import(name="hANASID", required=true)
-      private final String hANASID;
+    private String hANASID;
 
     public String hANASID() {
         return this.hANASID;
@@ -60,7 +60,7 @@ public final class ApplicationHANAPrometheusExporter extends com.pulumi.resource
      * 
      */
     @Import(name="hANASecretName", required=true)
-      private final String hANASecretName;
+    private String hANASecretName;
 
     public String hANASecretName() {
         return this.hANASecretName;
@@ -71,82 +71,72 @@ public final class ApplicationHANAPrometheusExporter extends com.pulumi.resource
      * 
      */
     @Import(name="prometheusPort")
-      private final @Nullable String prometheusPort;
+    private @Nullable String prometheusPort;
 
     public Optional<String> prometheusPort() {
-        return this.prometheusPort == null ? Optional.empty() : Optional.ofNullable(this.prometheusPort);
+        return Optional.ofNullable(this.prometheusPort);
     }
 
-    public ApplicationHANAPrometheusExporter(
-        Boolean agreeToInstallHANADBClient,
-        String hANAPort,
-        String hANASID,
-        String hANASecretName,
-        @Nullable String prometheusPort) {
-        this.agreeToInstallHANADBClient = Objects.requireNonNull(agreeToInstallHANADBClient, "expected parameter 'agreeToInstallHANADBClient' to be non-null");
-        this.hANAPort = Objects.requireNonNull(hANAPort, "expected parameter 'hANAPort' to be non-null");
-        this.hANASID = Objects.requireNonNull(hANASID, "expected parameter 'hANASID' to be non-null");
-        this.hANASecretName = Objects.requireNonNull(hANASecretName, "expected parameter 'hANASecretName' to be non-null");
-        this.prometheusPort = prometheusPort;
-    }
+    private ApplicationHANAPrometheusExporter() {}
 
-    private ApplicationHANAPrometheusExporter() {
-        this.agreeToInstallHANADBClient = null;
-        this.hANAPort = null;
-        this.hANASID = null;
-        this.hANASecretName = null;
-        this.prometheusPort = null;
+    private ApplicationHANAPrometheusExporter(ApplicationHANAPrometheusExporter $) {
+        this.agreeToInstallHANADBClient = $.agreeToInstallHANADBClient;
+        this.hANAPort = $.hANAPort;
+        this.hANASID = $.hANASID;
+        this.hANASecretName = $.hANASecretName;
+        this.prometheusPort = $.prometheusPort;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ApplicationHANAPrometheusExporter defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Boolean agreeToInstallHANADBClient;
-        private String hANAPort;
-        private String hANASID;
-        private String hANASecretName;
-        private @Nullable String prometheusPort;
+        private ApplicationHANAPrometheusExporter $;
 
         public Builder() {
-    	      // Empty
+            $ = new ApplicationHANAPrometheusExporter();
         }
 
         public Builder(ApplicationHANAPrometheusExporter defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.agreeToInstallHANADBClient = defaults.agreeToInstallHANADBClient;
-    	      this.hANAPort = defaults.hANAPort;
-    	      this.hANASID = defaults.hANASID;
-    	      this.hANASecretName = defaults.hANASecretName;
-    	      this.prometheusPort = defaults.prometheusPort;
+            $ = new ApplicationHANAPrometheusExporter(Objects.requireNonNull(defaults));
         }
 
         public Builder agreeToInstallHANADBClient(Boolean agreeToInstallHANADBClient) {
-            this.agreeToInstallHANADBClient = Objects.requireNonNull(agreeToInstallHANADBClient);
+            $.agreeToInstallHANADBClient = agreeToInstallHANADBClient;
             return this;
         }
+
         public Builder hANAPort(String hANAPort) {
-            this.hANAPort = Objects.requireNonNull(hANAPort);
+            $.hANAPort = hANAPort;
             return this;
         }
+
         public Builder hANASID(String hANASID) {
-            this.hANASID = Objects.requireNonNull(hANASID);
+            $.hANASID = hANASID;
             return this;
         }
+
         public Builder hANASecretName(String hANASecretName) {
-            this.hANASecretName = Objects.requireNonNull(hANASecretName);
+            $.hANASecretName = hANASecretName;
             return this;
         }
+
         public Builder prometheusPort(@Nullable String prometheusPort) {
-            this.prometheusPort = prometheusPort;
+            $.prometheusPort = prometheusPort;
             return this;
-        }        public ApplicationHANAPrometheusExporter build() {
-            return new ApplicationHANAPrometheusExporter(agreeToInstallHANADBClient, hANAPort, hANASID, hANASecretName, prometheusPort);
+        }
+
+        public ApplicationHANAPrometheusExporter build() {
+            $.agreeToInstallHANADBClient = Objects.requireNonNull($.agreeToInstallHANADBClient, "expected parameter 'agreeToInstallHANADBClient' to be non-null");
+            $.hANAPort = Objects.requireNonNull($.hANAPort, "expected parameter 'hANAPort' to be non-null");
+            $.hANASID = Objects.requireNonNull($.hANASID, "expected parameter 'hANASID' to be non-null");
+            $.hANASecretName = Objects.requireNonNull($.hANASecretName, "expected parameter 'hANASecretName' to be non-null");
+            return $;
         }
     }
+
 }

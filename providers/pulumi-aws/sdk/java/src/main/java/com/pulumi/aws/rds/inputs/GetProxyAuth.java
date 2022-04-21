@@ -13,94 +13,87 @@ public final class GetProxyAuth extends com.pulumi.resources.InvokeArgs {
     public static final GetProxyAuth Empty = new GetProxyAuth();
 
     @Import(name="authScheme", required=true)
-      private final String authScheme;
+    private String authScheme;
 
     public String authScheme() {
         return this.authScheme;
     }
 
     @Import(name="description", required=true)
-      private final String description;
+    private String description;
 
     public String description() {
         return this.description;
     }
 
     @Import(name="iamAuth", required=true)
-      private final String iamAuth;
+    private String iamAuth;
 
     public String iamAuth() {
         return this.iamAuth;
     }
 
     @Import(name="secretArn", required=true)
-      private final String secretArn;
+    private String secretArn;
 
     public String secretArn() {
         return this.secretArn;
     }
 
-    public GetProxyAuth(
-        String authScheme,
-        String description,
-        String iamAuth,
-        String secretArn) {
-        this.authScheme = Objects.requireNonNull(authScheme, "expected parameter 'authScheme' to be non-null");
-        this.description = Objects.requireNonNull(description, "expected parameter 'description' to be non-null");
-        this.iamAuth = Objects.requireNonNull(iamAuth, "expected parameter 'iamAuth' to be non-null");
-        this.secretArn = Objects.requireNonNull(secretArn, "expected parameter 'secretArn' to be non-null");
-    }
+    private GetProxyAuth() {}
 
-    private GetProxyAuth() {
-        this.authScheme = null;
-        this.description = null;
-        this.iamAuth = null;
-        this.secretArn = null;
+    private GetProxyAuth(GetProxyAuth $) {
+        this.authScheme = $.authScheme;
+        this.description = $.description;
+        this.iamAuth = $.iamAuth;
+        this.secretArn = $.secretArn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetProxyAuth defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String authScheme;
-        private String description;
-        private String iamAuth;
-        private String secretArn;
+        private GetProxyAuth $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetProxyAuth();
         }
 
         public Builder(GetProxyAuth defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.authScheme = defaults.authScheme;
-    	      this.description = defaults.description;
-    	      this.iamAuth = defaults.iamAuth;
-    	      this.secretArn = defaults.secretArn;
+            $ = new GetProxyAuth(Objects.requireNonNull(defaults));
         }
 
         public Builder authScheme(String authScheme) {
-            this.authScheme = Objects.requireNonNull(authScheme);
+            $.authScheme = authScheme;
             return this;
         }
+
         public Builder description(String description) {
-            this.description = Objects.requireNonNull(description);
+            $.description = description;
             return this;
         }
+
         public Builder iamAuth(String iamAuth) {
-            this.iamAuth = Objects.requireNonNull(iamAuth);
+            $.iamAuth = iamAuth;
             return this;
         }
+
         public Builder secretArn(String secretArn) {
-            this.secretArn = Objects.requireNonNull(secretArn);
+            $.secretArn = secretArn;
             return this;
-        }        public GetProxyAuth build() {
-            return new GetProxyAuth(authScheme, description, iamAuth, secretArn);
+        }
+
+        public GetProxyAuth build() {
+            $.authScheme = Objects.requireNonNull($.authScheme, "expected parameter 'authScheme' to be non-null");
+            $.description = Objects.requireNonNull($.description, "expected parameter 'description' to be non-null");
+            $.iamAuth = Objects.requireNonNull($.iamAuth, "expected parameter 'iamAuth' to be non-null");
+            $.secretArn = Objects.requireNonNull($.secretArn, "expected parameter 'secretArn' to be non-null");
+            return $;
         }
     }
+
 }

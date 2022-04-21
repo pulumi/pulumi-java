@@ -17,7 +17,7 @@ public final class GetManagedInstanceAzureADOnlyAuthenticationArgs extends com.p
      * 
      */
     @Import(name="authenticationName", required=true)
-      private final String authenticationName;
+    private String authenticationName;
 
     public String authenticationName() {
         return this.authenticationName;
@@ -28,7 +28,7 @@ public final class GetManagedInstanceAzureADOnlyAuthenticationArgs extends com.p
      * 
      */
     @Import(name="managedInstanceName", required=true)
-      private final String managedInstanceName;
+    private String managedInstanceName;
 
     public String managedInstanceName() {
         return this.managedInstanceName;
@@ -39,64 +39,59 @@ public final class GetManagedInstanceAzureADOnlyAuthenticationArgs extends com.p
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public GetManagedInstanceAzureADOnlyAuthenticationArgs(
-        String authenticationName,
-        String managedInstanceName,
-        String resourceGroupName) {
-        this.authenticationName = Objects.requireNonNull(authenticationName, "expected parameter 'authenticationName' to be non-null");
-        this.managedInstanceName = Objects.requireNonNull(managedInstanceName, "expected parameter 'managedInstanceName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private GetManagedInstanceAzureADOnlyAuthenticationArgs() {}
 
-    private GetManagedInstanceAzureADOnlyAuthenticationArgs() {
-        this.authenticationName = null;
-        this.managedInstanceName = null;
-        this.resourceGroupName = null;
+    private GetManagedInstanceAzureADOnlyAuthenticationArgs(GetManagedInstanceAzureADOnlyAuthenticationArgs $) {
+        this.authenticationName = $.authenticationName;
+        this.managedInstanceName = $.managedInstanceName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetManagedInstanceAzureADOnlyAuthenticationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String authenticationName;
-        private String managedInstanceName;
-        private String resourceGroupName;
+        private GetManagedInstanceAzureADOnlyAuthenticationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetManagedInstanceAzureADOnlyAuthenticationArgs();
         }
 
         public Builder(GetManagedInstanceAzureADOnlyAuthenticationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.authenticationName = defaults.authenticationName;
-    	      this.managedInstanceName = defaults.managedInstanceName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new GetManagedInstanceAzureADOnlyAuthenticationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder authenticationName(String authenticationName) {
-            this.authenticationName = Objects.requireNonNull(authenticationName);
+            $.authenticationName = authenticationName;
             return this;
         }
+
         public Builder managedInstanceName(String managedInstanceName) {
-            this.managedInstanceName = Objects.requireNonNull(managedInstanceName);
+            $.managedInstanceName = managedInstanceName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public GetManagedInstanceAzureADOnlyAuthenticationArgs build() {
-            return new GetManagedInstanceAzureADOnlyAuthenticationArgs(authenticationName, managedInstanceName, resourceGroupName);
+        }
+
+        public GetManagedInstanceAzureADOnlyAuthenticationArgs build() {
+            $.authenticationName = Objects.requireNonNull($.authenticationName, "expected parameter 'authenticationName' to be non-null");
+            $.managedInstanceName = Objects.requireNonNull($.managedInstanceName, "expected parameter 'managedInstanceName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

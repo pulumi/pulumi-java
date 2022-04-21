@@ -6,10 +6,10 @@ package com.pulumi.aws.codebuild.inputs;
 import com.pulumi.aws.codebuild.inputs.WebhookFilterGroupGetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class WebhookState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="branchFilter")
-      private final @Nullable Output<String> branchFilter;
+    private @Nullable Output<String> branchFilter;
 
-    public Output<String> branchFilter() {
-        return this.branchFilter == null ? Codegen.empty() : this.branchFilter;
+    public Optional<Output<String>> branchFilter() {
+        return Optional.ofNullable(this.branchFilter);
     }
 
     /**
@@ -33,10 +33,10 @@ public final class WebhookState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="buildType")
-      private final @Nullable Output<String> buildType;
+    private @Nullable Output<String> buildType;
 
-    public Output<String> buildType() {
-        return this.buildType == null ? Codegen.empty() : this.buildType;
+    public Optional<Output<String>> buildType() {
+        return Optional.ofNullable(this.buildType);
     }
 
     /**
@@ -44,10 +44,10 @@ public final class WebhookState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="filterGroups")
-      private final @Nullable Output<List<WebhookFilterGroupGetArgs>> filterGroups;
+    private @Nullable Output<List<WebhookFilterGroupGetArgs>> filterGroups;
 
-    public Output<List<WebhookFilterGroupGetArgs>> filterGroups() {
-        return this.filterGroups == null ? Codegen.empty() : this.filterGroups;
+    public Optional<Output<List<WebhookFilterGroupGetArgs>>> filterGroups() {
+        return Optional.ofNullable(this.filterGroups);
     }
 
     /**
@@ -55,10 +55,10 @@ public final class WebhookState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="payloadUrl")
-      private final @Nullable Output<String> payloadUrl;
+    private @Nullable Output<String> payloadUrl;
 
-    public Output<String> payloadUrl() {
-        return this.payloadUrl == null ? Codegen.empty() : this.payloadUrl;
+    public Optional<Output<String>> payloadUrl() {
+        return Optional.ofNullable(this.payloadUrl);
     }
 
     /**
@@ -66,10 +66,10 @@ public final class WebhookState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="projectName")
-      private final @Nullable Output<String> projectName;
+    private @Nullable Output<String> projectName;
 
-    public Output<String> projectName() {
-        return this.projectName == null ? Codegen.empty() : this.projectName;
+    public Optional<Output<String>> projectName() {
+        return Optional.ofNullable(this.projectName);
     }
 
     /**
@@ -77,10 +77,10 @@ public final class WebhookState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="secret")
-      private final @Nullable Output<String> secret;
+    private @Nullable Output<String> secret;
 
-    public Output<String> secret() {
-        return this.secret == null ? Codegen.empty() : this.secret;
+    public Optional<Output<String>> secret() {
+        return Optional.ofNullable(this.secret);
     }
 
     /**
@@ -88,131 +88,112 @@ public final class WebhookState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="url")
-      private final @Nullable Output<String> url;
+    private @Nullable Output<String> url;
 
-    public Output<String> url() {
-        return this.url == null ? Codegen.empty() : this.url;
+    public Optional<Output<String>> url() {
+        return Optional.ofNullable(this.url);
     }
 
-    public WebhookState(
-        @Nullable Output<String> branchFilter,
-        @Nullable Output<String> buildType,
-        @Nullable Output<List<WebhookFilterGroupGetArgs>> filterGroups,
-        @Nullable Output<String> payloadUrl,
-        @Nullable Output<String> projectName,
-        @Nullable Output<String> secret,
-        @Nullable Output<String> url) {
-        this.branchFilter = branchFilter;
-        this.buildType = buildType;
-        this.filterGroups = filterGroups;
-        this.payloadUrl = payloadUrl;
-        this.projectName = projectName;
-        this.secret = secret;
-        this.url = url;
-    }
+    private WebhookState() {}
 
-    private WebhookState() {
-        this.branchFilter = Codegen.empty();
-        this.buildType = Codegen.empty();
-        this.filterGroups = Codegen.empty();
-        this.payloadUrl = Codegen.empty();
-        this.projectName = Codegen.empty();
-        this.secret = Codegen.empty();
-        this.url = Codegen.empty();
+    private WebhookState(WebhookState $) {
+        this.branchFilter = $.branchFilter;
+        this.buildType = $.buildType;
+        this.filterGroups = $.filterGroups;
+        this.payloadUrl = $.payloadUrl;
+        this.projectName = $.projectName;
+        this.secret = $.secret;
+        this.url = $.url;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WebhookState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> branchFilter;
-        private @Nullable Output<String> buildType;
-        private @Nullable Output<List<WebhookFilterGroupGetArgs>> filterGroups;
-        private @Nullable Output<String> payloadUrl;
-        private @Nullable Output<String> projectName;
-        private @Nullable Output<String> secret;
-        private @Nullable Output<String> url;
+        private WebhookState $;
 
         public Builder() {
-    	      // Empty
+            $ = new WebhookState();
         }
 
         public Builder(WebhookState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.branchFilter = defaults.branchFilter;
-    	      this.buildType = defaults.buildType;
-    	      this.filterGroups = defaults.filterGroups;
-    	      this.payloadUrl = defaults.payloadUrl;
-    	      this.projectName = defaults.projectName;
-    	      this.secret = defaults.secret;
-    	      this.url = defaults.url;
+            $ = new WebhookState(Objects.requireNonNull(defaults));
         }
 
         public Builder branchFilter(@Nullable Output<String> branchFilter) {
-            this.branchFilter = branchFilter;
+            $.branchFilter = branchFilter;
             return this;
         }
-        public Builder branchFilter(@Nullable String branchFilter) {
-            this.branchFilter = Codegen.ofNullable(branchFilter);
-            return this;
+
+        public Builder branchFilter(String branchFilter) {
+            return branchFilter(Output.of(branchFilter));
         }
+
         public Builder buildType(@Nullable Output<String> buildType) {
-            this.buildType = buildType;
+            $.buildType = buildType;
             return this;
         }
-        public Builder buildType(@Nullable String buildType) {
-            this.buildType = Codegen.ofNullable(buildType);
-            return this;
+
+        public Builder buildType(String buildType) {
+            return buildType(Output.of(buildType));
         }
+
         public Builder filterGroups(@Nullable Output<List<WebhookFilterGroupGetArgs>> filterGroups) {
-            this.filterGroups = filterGroups;
+            $.filterGroups = filterGroups;
             return this;
         }
-        public Builder filterGroups(@Nullable List<WebhookFilterGroupGetArgs> filterGroups) {
-            this.filterGroups = Codegen.ofNullable(filterGroups);
-            return this;
+
+        public Builder filterGroups(List<WebhookFilterGroupGetArgs> filterGroups) {
+            return filterGroups(Output.of(filterGroups));
         }
+
         public Builder filterGroups(WebhookFilterGroupGetArgs... filterGroups) {
             return filterGroups(List.of(filterGroups));
         }
+
         public Builder payloadUrl(@Nullable Output<String> payloadUrl) {
-            this.payloadUrl = payloadUrl;
+            $.payloadUrl = payloadUrl;
             return this;
         }
-        public Builder payloadUrl(@Nullable String payloadUrl) {
-            this.payloadUrl = Codegen.ofNullable(payloadUrl);
-            return this;
+
+        public Builder payloadUrl(String payloadUrl) {
+            return payloadUrl(Output.of(payloadUrl));
         }
+
         public Builder projectName(@Nullable Output<String> projectName) {
-            this.projectName = projectName;
+            $.projectName = projectName;
             return this;
         }
-        public Builder projectName(@Nullable String projectName) {
-            this.projectName = Codegen.ofNullable(projectName);
-            return this;
+
+        public Builder projectName(String projectName) {
+            return projectName(Output.of(projectName));
         }
+
         public Builder secret(@Nullable Output<String> secret) {
-            this.secret = secret;
+            $.secret = secret;
             return this;
         }
-        public Builder secret(@Nullable String secret) {
-            this.secret = Codegen.ofNullable(secret);
-            return this;
+
+        public Builder secret(String secret) {
+            return secret(Output.of(secret));
         }
+
         public Builder url(@Nullable Output<String> url) {
-            this.url = url;
+            $.url = url;
             return this;
         }
-        public Builder url(@Nullable String url) {
-            this.url = Codegen.ofNullable(url);
-            return this;
-        }        public WebhookState build() {
-            return new WebhookState(branchFilter, buildType, filterGroups, payloadUrl, projectName, secret, url);
+
+        public Builder url(String url) {
+            return url(Output.of(url));
+        }
+
+        public WebhookState build() {
+            return $;
         }
     }
+
 }

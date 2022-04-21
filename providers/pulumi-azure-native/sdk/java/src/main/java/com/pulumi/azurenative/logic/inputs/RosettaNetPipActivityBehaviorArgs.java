@@ -8,7 +8,6 @@ import com.pulumi.azurenative.logic.enums.RosettaNetPipConfidentialityScope;
 import com.pulumi.azurenative.logic.enums.RosettaNetResponseType;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.Objects;
@@ -27,7 +26,7 @@ public final class RosettaNetPipActivityBehaviorArgs extends com.pulumi.resource
      * 
      */
     @Import(name="actionType", required=true)
-      private final Output<RosettaNetActionType> actionType;
+    private Output<RosettaNetActionType> actionType;
 
     public Output<RosettaNetActionType> actionType() {
         return this.actionType;
@@ -38,7 +37,7 @@ public final class RosettaNetPipActivityBehaviorArgs extends com.pulumi.resource
      * 
      */
     @Import(name="isAuthorizationRequired", required=true)
-      private final Output<Boolean> isAuthorizationRequired;
+    private Output<Boolean> isAuthorizationRequired;
 
     public Output<Boolean> isAuthorizationRequired() {
         return this.isAuthorizationRequired;
@@ -49,7 +48,7 @@ public final class RosettaNetPipActivityBehaviorArgs extends com.pulumi.resource
      * 
      */
     @Import(name="isSecuredTransportRequired", required=true)
-      private final Output<Boolean> isSecuredTransportRequired;
+    private Output<Boolean> isSecuredTransportRequired;
 
     public Output<Boolean> isSecuredTransportRequired() {
         return this.isSecuredTransportRequired;
@@ -60,7 +59,7 @@ public final class RosettaNetPipActivityBehaviorArgs extends com.pulumi.resource
      * 
      */
     @Import(name="nonRepudiationOfOriginAndContent", required=true)
-      private final Output<Boolean> nonRepudiationOfOriginAndContent;
+    private Output<Boolean> nonRepudiationOfOriginAndContent;
 
     public Output<Boolean> nonRepudiationOfOriginAndContent() {
         return this.nonRepudiationOfOriginAndContent;
@@ -71,7 +70,7 @@ public final class RosettaNetPipActivityBehaviorArgs extends com.pulumi.resource
      * 
      */
     @Import(name="persistentConfidentialityScope", required=true)
-      private final Output<RosettaNetPipConfidentialityScope> persistentConfidentialityScope;
+    private Output<RosettaNetPipConfidentialityScope> persistentConfidentialityScope;
 
     public Output<RosettaNetPipConfidentialityScope> persistentConfidentialityScope() {
         return this.persistentConfidentialityScope;
@@ -82,7 +81,7 @@ public final class RosettaNetPipActivityBehaviorArgs extends com.pulumi.resource
      * 
      */
     @Import(name="responseType", required=true)
-      private final Output<RosettaNetResponseType> responseType;
+    private Output<RosettaNetResponseType> responseType;
 
     public Output<RosettaNetResponseType> responseType() {
         return this.responseType;
@@ -93,7 +92,7 @@ public final class RosettaNetPipActivityBehaviorArgs extends com.pulumi.resource
      * 
      */
     @Import(name="retryCount", required=true)
-      private final Output<Integer> retryCount;
+    private Output<Integer> retryCount;
 
     public Output<Integer> retryCount() {
         return this.retryCount;
@@ -104,141 +103,126 @@ public final class RosettaNetPipActivityBehaviorArgs extends com.pulumi.resource
      * 
      */
     @Import(name="timeToPerformInSeconds", required=true)
-      private final Output<Integer> timeToPerformInSeconds;
+    private Output<Integer> timeToPerformInSeconds;
 
     public Output<Integer> timeToPerformInSeconds() {
         return this.timeToPerformInSeconds;
     }
 
-    public RosettaNetPipActivityBehaviorArgs(
-        Output<RosettaNetActionType> actionType,
-        Output<Boolean> isAuthorizationRequired,
-        Output<Boolean> isSecuredTransportRequired,
-        Output<Boolean> nonRepudiationOfOriginAndContent,
-        Output<RosettaNetPipConfidentialityScope> persistentConfidentialityScope,
-        Output<RosettaNetResponseType> responseType,
-        Output<Integer> retryCount,
-        Output<Integer> timeToPerformInSeconds) {
-        this.actionType = Objects.requireNonNull(actionType, "expected parameter 'actionType' to be non-null");
-        this.isAuthorizationRequired = Objects.requireNonNull(isAuthorizationRequired, "expected parameter 'isAuthorizationRequired' to be non-null");
-        this.isSecuredTransportRequired = Objects.requireNonNull(isSecuredTransportRequired, "expected parameter 'isSecuredTransportRequired' to be non-null");
-        this.nonRepudiationOfOriginAndContent = Objects.requireNonNull(nonRepudiationOfOriginAndContent, "expected parameter 'nonRepudiationOfOriginAndContent' to be non-null");
-        this.persistentConfidentialityScope = Objects.requireNonNull(persistentConfidentialityScope, "expected parameter 'persistentConfidentialityScope' to be non-null");
-        this.responseType = Objects.requireNonNull(responseType, "expected parameter 'responseType' to be non-null");
-        this.retryCount = Objects.requireNonNull(retryCount, "expected parameter 'retryCount' to be non-null");
-        this.timeToPerformInSeconds = Objects.requireNonNull(timeToPerformInSeconds, "expected parameter 'timeToPerformInSeconds' to be non-null");
-    }
+    private RosettaNetPipActivityBehaviorArgs() {}
 
-    private RosettaNetPipActivityBehaviorArgs() {
-        this.actionType = Codegen.empty();
-        this.isAuthorizationRequired = Codegen.empty();
-        this.isSecuredTransportRequired = Codegen.empty();
-        this.nonRepudiationOfOriginAndContent = Codegen.empty();
-        this.persistentConfidentialityScope = Codegen.empty();
-        this.responseType = Codegen.empty();
-        this.retryCount = Codegen.empty();
-        this.timeToPerformInSeconds = Codegen.empty();
+    private RosettaNetPipActivityBehaviorArgs(RosettaNetPipActivityBehaviorArgs $) {
+        this.actionType = $.actionType;
+        this.isAuthorizationRequired = $.isAuthorizationRequired;
+        this.isSecuredTransportRequired = $.isSecuredTransportRequired;
+        this.nonRepudiationOfOriginAndContent = $.nonRepudiationOfOriginAndContent;
+        this.persistentConfidentialityScope = $.persistentConfidentialityScope;
+        this.responseType = $.responseType;
+        this.retryCount = $.retryCount;
+        this.timeToPerformInSeconds = $.timeToPerformInSeconds;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RosettaNetPipActivityBehaviorArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<RosettaNetActionType> actionType;
-        private Output<Boolean> isAuthorizationRequired;
-        private Output<Boolean> isSecuredTransportRequired;
-        private Output<Boolean> nonRepudiationOfOriginAndContent;
-        private Output<RosettaNetPipConfidentialityScope> persistentConfidentialityScope;
-        private Output<RosettaNetResponseType> responseType;
-        private Output<Integer> retryCount;
-        private Output<Integer> timeToPerformInSeconds;
+        private RosettaNetPipActivityBehaviorArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RosettaNetPipActivityBehaviorArgs();
         }
 
         public Builder(RosettaNetPipActivityBehaviorArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.actionType = defaults.actionType;
-    	      this.isAuthorizationRequired = defaults.isAuthorizationRequired;
-    	      this.isSecuredTransportRequired = defaults.isSecuredTransportRequired;
-    	      this.nonRepudiationOfOriginAndContent = defaults.nonRepudiationOfOriginAndContent;
-    	      this.persistentConfidentialityScope = defaults.persistentConfidentialityScope;
-    	      this.responseType = defaults.responseType;
-    	      this.retryCount = defaults.retryCount;
-    	      this.timeToPerformInSeconds = defaults.timeToPerformInSeconds;
+            $ = new RosettaNetPipActivityBehaviorArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder actionType(Output<RosettaNetActionType> actionType) {
-            this.actionType = Objects.requireNonNull(actionType);
+            $.actionType = actionType;
             return this;
         }
+
         public Builder actionType(RosettaNetActionType actionType) {
-            this.actionType = Output.of(Objects.requireNonNull(actionType));
-            return this;
+            return actionType(Output.of(actionType));
         }
+
         public Builder isAuthorizationRequired(Output<Boolean> isAuthorizationRequired) {
-            this.isAuthorizationRequired = Objects.requireNonNull(isAuthorizationRequired);
+            $.isAuthorizationRequired = isAuthorizationRequired;
             return this;
         }
+
         public Builder isAuthorizationRequired(Boolean isAuthorizationRequired) {
-            this.isAuthorizationRequired = Output.of(Objects.requireNonNull(isAuthorizationRequired));
-            return this;
+            return isAuthorizationRequired(Output.of(isAuthorizationRequired));
         }
+
         public Builder isSecuredTransportRequired(Output<Boolean> isSecuredTransportRequired) {
-            this.isSecuredTransportRequired = Objects.requireNonNull(isSecuredTransportRequired);
+            $.isSecuredTransportRequired = isSecuredTransportRequired;
             return this;
         }
+
         public Builder isSecuredTransportRequired(Boolean isSecuredTransportRequired) {
-            this.isSecuredTransportRequired = Output.of(Objects.requireNonNull(isSecuredTransportRequired));
-            return this;
+            return isSecuredTransportRequired(Output.of(isSecuredTransportRequired));
         }
+
         public Builder nonRepudiationOfOriginAndContent(Output<Boolean> nonRepudiationOfOriginAndContent) {
-            this.nonRepudiationOfOriginAndContent = Objects.requireNonNull(nonRepudiationOfOriginAndContent);
+            $.nonRepudiationOfOriginAndContent = nonRepudiationOfOriginAndContent;
             return this;
         }
+
         public Builder nonRepudiationOfOriginAndContent(Boolean nonRepudiationOfOriginAndContent) {
-            this.nonRepudiationOfOriginAndContent = Output.of(Objects.requireNonNull(nonRepudiationOfOriginAndContent));
-            return this;
+            return nonRepudiationOfOriginAndContent(Output.of(nonRepudiationOfOriginAndContent));
         }
+
         public Builder persistentConfidentialityScope(Output<RosettaNetPipConfidentialityScope> persistentConfidentialityScope) {
-            this.persistentConfidentialityScope = Objects.requireNonNull(persistentConfidentialityScope);
+            $.persistentConfidentialityScope = persistentConfidentialityScope;
             return this;
         }
+
         public Builder persistentConfidentialityScope(RosettaNetPipConfidentialityScope persistentConfidentialityScope) {
-            this.persistentConfidentialityScope = Output.of(Objects.requireNonNull(persistentConfidentialityScope));
-            return this;
+            return persistentConfidentialityScope(Output.of(persistentConfidentialityScope));
         }
+
         public Builder responseType(Output<RosettaNetResponseType> responseType) {
-            this.responseType = Objects.requireNonNull(responseType);
+            $.responseType = responseType;
             return this;
         }
+
         public Builder responseType(RosettaNetResponseType responseType) {
-            this.responseType = Output.of(Objects.requireNonNull(responseType));
-            return this;
+            return responseType(Output.of(responseType));
         }
+
         public Builder retryCount(Output<Integer> retryCount) {
-            this.retryCount = Objects.requireNonNull(retryCount);
+            $.retryCount = retryCount;
             return this;
         }
+
         public Builder retryCount(Integer retryCount) {
-            this.retryCount = Output.of(Objects.requireNonNull(retryCount));
-            return this;
+            return retryCount(Output.of(retryCount));
         }
+
         public Builder timeToPerformInSeconds(Output<Integer> timeToPerformInSeconds) {
-            this.timeToPerformInSeconds = Objects.requireNonNull(timeToPerformInSeconds);
+            $.timeToPerformInSeconds = timeToPerformInSeconds;
             return this;
         }
+
         public Builder timeToPerformInSeconds(Integer timeToPerformInSeconds) {
-            this.timeToPerformInSeconds = Output.of(Objects.requireNonNull(timeToPerformInSeconds));
-            return this;
-        }        public RosettaNetPipActivityBehaviorArgs build() {
-            return new RosettaNetPipActivityBehaviorArgs(actionType, isAuthorizationRequired, isSecuredTransportRequired, nonRepudiationOfOriginAndContent, persistentConfidentialityScope, responseType, retryCount, timeToPerformInSeconds);
+            return timeToPerformInSeconds(Output.of(timeToPerformInSeconds));
+        }
+
+        public RosettaNetPipActivityBehaviorArgs build() {
+            $.actionType = Objects.requireNonNull($.actionType, "expected parameter 'actionType' to be non-null");
+            $.isAuthorizationRequired = Objects.requireNonNull($.isAuthorizationRequired, "expected parameter 'isAuthorizationRequired' to be non-null");
+            $.isSecuredTransportRequired = Objects.requireNonNull($.isSecuredTransportRequired, "expected parameter 'isSecuredTransportRequired' to be non-null");
+            $.nonRepudiationOfOriginAndContent = Objects.requireNonNull($.nonRepudiationOfOriginAndContent, "expected parameter 'nonRepudiationOfOriginAndContent' to be non-null");
+            $.persistentConfidentialityScope = Objects.requireNonNull($.persistentConfidentialityScope, "expected parameter 'persistentConfidentialityScope' to be non-null");
+            $.responseType = Objects.requireNonNull($.responseType, "expected parameter 'responseType' to be non-null");
+            $.retryCount = Objects.requireNonNull($.retryCount, "expected parameter 'retryCount' to be non-null");
+            $.timeToPerformInSeconds = Objects.requireNonNull($.timeToPerformInSeconds, "expected parameter 'timeToPerformInSeconds' to be non-null");
+            return $;
         }
     }
+
 }

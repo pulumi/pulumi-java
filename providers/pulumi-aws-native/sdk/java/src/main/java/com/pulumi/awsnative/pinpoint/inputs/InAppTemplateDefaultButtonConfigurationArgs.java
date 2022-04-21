@@ -6,10 +6,10 @@ package com.pulumi.awsnative.pinpoint.inputs;
 import com.pulumi.awsnative.pinpoint.enums.InAppTemplateButtonAction;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -18,150 +18,133 @@ public final class InAppTemplateDefaultButtonConfigurationArgs extends com.pulum
     public static final InAppTemplateDefaultButtonConfigurationArgs Empty = new InAppTemplateDefaultButtonConfigurationArgs();
 
     @Import(name="backgroundColor")
-      private final @Nullable Output<String> backgroundColor;
+    private @Nullable Output<String> backgroundColor;
 
-    public Output<String> backgroundColor() {
-        return this.backgroundColor == null ? Codegen.empty() : this.backgroundColor;
+    public Optional<Output<String>> backgroundColor() {
+        return Optional.ofNullable(this.backgroundColor);
     }
 
     @Import(name="borderRadius")
-      private final @Nullable Output<Integer> borderRadius;
+    private @Nullable Output<Integer> borderRadius;
 
-    public Output<Integer> borderRadius() {
-        return this.borderRadius == null ? Codegen.empty() : this.borderRadius;
+    public Optional<Output<Integer>> borderRadius() {
+        return Optional.ofNullable(this.borderRadius);
     }
 
     @Import(name="buttonAction")
-      private final @Nullable Output<InAppTemplateButtonAction> buttonAction;
+    private @Nullable Output<InAppTemplateButtonAction> buttonAction;
 
-    public Output<InAppTemplateButtonAction> buttonAction() {
-        return this.buttonAction == null ? Codegen.empty() : this.buttonAction;
+    public Optional<Output<InAppTemplateButtonAction>> buttonAction() {
+        return Optional.ofNullable(this.buttonAction);
     }
 
     @Import(name="link")
-      private final @Nullable Output<String> link;
+    private @Nullable Output<String> link;
 
-    public Output<String> link() {
-        return this.link == null ? Codegen.empty() : this.link;
+    public Optional<Output<String>> link() {
+        return Optional.ofNullable(this.link);
     }
 
     @Import(name="text")
-      private final @Nullable Output<String> text;
+    private @Nullable Output<String> text;
 
-    public Output<String> text() {
-        return this.text == null ? Codegen.empty() : this.text;
+    public Optional<Output<String>> text() {
+        return Optional.ofNullable(this.text);
     }
 
     @Import(name="textColor")
-      private final @Nullable Output<String> textColor;
+    private @Nullable Output<String> textColor;
 
-    public Output<String> textColor() {
-        return this.textColor == null ? Codegen.empty() : this.textColor;
+    public Optional<Output<String>> textColor() {
+        return Optional.ofNullable(this.textColor);
     }
 
-    public InAppTemplateDefaultButtonConfigurationArgs(
-        @Nullable Output<String> backgroundColor,
-        @Nullable Output<Integer> borderRadius,
-        @Nullable Output<InAppTemplateButtonAction> buttonAction,
-        @Nullable Output<String> link,
-        @Nullable Output<String> text,
-        @Nullable Output<String> textColor) {
-        this.backgroundColor = backgroundColor;
-        this.borderRadius = borderRadius;
-        this.buttonAction = buttonAction;
-        this.link = link;
-        this.text = text;
-        this.textColor = textColor;
-    }
+    private InAppTemplateDefaultButtonConfigurationArgs() {}
 
-    private InAppTemplateDefaultButtonConfigurationArgs() {
-        this.backgroundColor = Codegen.empty();
-        this.borderRadius = Codegen.empty();
-        this.buttonAction = Codegen.empty();
-        this.link = Codegen.empty();
-        this.text = Codegen.empty();
-        this.textColor = Codegen.empty();
+    private InAppTemplateDefaultButtonConfigurationArgs(InAppTemplateDefaultButtonConfigurationArgs $) {
+        this.backgroundColor = $.backgroundColor;
+        this.borderRadius = $.borderRadius;
+        this.buttonAction = $.buttonAction;
+        this.link = $.link;
+        this.text = $.text;
+        this.textColor = $.textColor;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(InAppTemplateDefaultButtonConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> backgroundColor;
-        private @Nullable Output<Integer> borderRadius;
-        private @Nullable Output<InAppTemplateButtonAction> buttonAction;
-        private @Nullable Output<String> link;
-        private @Nullable Output<String> text;
-        private @Nullable Output<String> textColor;
+        private InAppTemplateDefaultButtonConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new InAppTemplateDefaultButtonConfigurationArgs();
         }
 
         public Builder(InAppTemplateDefaultButtonConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.backgroundColor = defaults.backgroundColor;
-    	      this.borderRadius = defaults.borderRadius;
-    	      this.buttonAction = defaults.buttonAction;
-    	      this.link = defaults.link;
-    	      this.text = defaults.text;
-    	      this.textColor = defaults.textColor;
+            $ = new InAppTemplateDefaultButtonConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder backgroundColor(@Nullable Output<String> backgroundColor) {
-            this.backgroundColor = backgroundColor;
+            $.backgroundColor = backgroundColor;
             return this;
         }
-        public Builder backgroundColor(@Nullable String backgroundColor) {
-            this.backgroundColor = Codegen.ofNullable(backgroundColor);
-            return this;
+
+        public Builder backgroundColor(String backgroundColor) {
+            return backgroundColor(Output.of(backgroundColor));
         }
+
         public Builder borderRadius(@Nullable Output<Integer> borderRadius) {
-            this.borderRadius = borderRadius;
+            $.borderRadius = borderRadius;
             return this;
         }
-        public Builder borderRadius(@Nullable Integer borderRadius) {
-            this.borderRadius = Codegen.ofNullable(borderRadius);
-            return this;
+
+        public Builder borderRadius(Integer borderRadius) {
+            return borderRadius(Output.of(borderRadius));
         }
+
         public Builder buttonAction(@Nullable Output<InAppTemplateButtonAction> buttonAction) {
-            this.buttonAction = buttonAction;
+            $.buttonAction = buttonAction;
             return this;
         }
-        public Builder buttonAction(@Nullable InAppTemplateButtonAction buttonAction) {
-            this.buttonAction = Codegen.ofNullable(buttonAction);
-            return this;
+
+        public Builder buttonAction(InAppTemplateButtonAction buttonAction) {
+            return buttonAction(Output.of(buttonAction));
         }
+
         public Builder link(@Nullable Output<String> link) {
-            this.link = link;
+            $.link = link;
             return this;
         }
-        public Builder link(@Nullable String link) {
-            this.link = Codegen.ofNullable(link);
-            return this;
+
+        public Builder link(String link) {
+            return link(Output.of(link));
         }
+
         public Builder text(@Nullable Output<String> text) {
-            this.text = text;
+            $.text = text;
             return this;
         }
-        public Builder text(@Nullable String text) {
-            this.text = Codegen.ofNullable(text);
-            return this;
+
+        public Builder text(String text) {
+            return text(Output.of(text));
         }
+
         public Builder textColor(@Nullable Output<String> textColor) {
-            this.textColor = textColor;
+            $.textColor = textColor;
             return this;
         }
-        public Builder textColor(@Nullable String textColor) {
-            this.textColor = Codegen.ofNullable(textColor);
-            return this;
-        }        public InAppTemplateDefaultButtonConfigurationArgs build() {
-            return new InAppTemplateDefaultButtonConfigurationArgs(backgroundColor, borderRadius, buttonAction, link, text, textColor);
+
+        public Builder textColor(String textColor) {
+            return textColor(Output.of(textColor));
+        }
+
+        public InAppTemplateDefaultButtonConfigurationArgs build() {
+            return $;
         }
     }
+
 }

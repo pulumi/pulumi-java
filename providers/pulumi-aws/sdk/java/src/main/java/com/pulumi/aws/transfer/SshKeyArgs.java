@@ -5,7 +5,6 @@ package com.pulumi.aws.transfer;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,7 +18,7 @@ public final class SshKeyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="body", required=true)
-      private final Output<String> body;
+    private Output<String> body;
 
     public Output<String> body() {
         return this.body;
@@ -30,7 +29,7 @@ public final class SshKeyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="serverId", required=true)
-      private final Output<String> serverId;
+    private Output<String> serverId;
 
     public Output<String> serverId() {
         return this.serverId;
@@ -41,76 +40,71 @@ public final class SshKeyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="userName", required=true)
-      private final Output<String> userName;
+    private Output<String> userName;
 
     public Output<String> userName() {
         return this.userName;
     }
 
-    public SshKeyArgs(
-        Output<String> body,
-        Output<String> serverId,
-        Output<String> userName) {
-        this.body = Objects.requireNonNull(body, "expected parameter 'body' to be non-null");
-        this.serverId = Objects.requireNonNull(serverId, "expected parameter 'serverId' to be non-null");
-        this.userName = Objects.requireNonNull(userName, "expected parameter 'userName' to be non-null");
-    }
+    private SshKeyArgs() {}
 
-    private SshKeyArgs() {
-        this.body = Codegen.empty();
-        this.serverId = Codegen.empty();
-        this.userName = Codegen.empty();
+    private SshKeyArgs(SshKeyArgs $) {
+        this.body = $.body;
+        this.serverId = $.serverId;
+        this.userName = $.userName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SshKeyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> body;
-        private Output<String> serverId;
-        private Output<String> userName;
+        private SshKeyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SshKeyArgs();
         }
 
         public Builder(SshKeyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.body = defaults.body;
-    	      this.serverId = defaults.serverId;
-    	      this.userName = defaults.userName;
+            $ = new SshKeyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder body(Output<String> body) {
-            this.body = Objects.requireNonNull(body);
+            $.body = body;
             return this;
         }
+
         public Builder body(String body) {
-            this.body = Output.of(Objects.requireNonNull(body));
-            return this;
+            return body(Output.of(body));
         }
+
         public Builder serverId(Output<String> serverId) {
-            this.serverId = Objects.requireNonNull(serverId);
+            $.serverId = serverId;
             return this;
         }
+
         public Builder serverId(String serverId) {
-            this.serverId = Output.of(Objects.requireNonNull(serverId));
-            return this;
+            return serverId(Output.of(serverId));
         }
+
         public Builder userName(Output<String> userName) {
-            this.userName = Objects.requireNonNull(userName);
+            $.userName = userName;
             return this;
         }
+
         public Builder userName(String userName) {
-            this.userName = Output.of(Objects.requireNonNull(userName));
-            return this;
-        }        public SshKeyArgs build() {
-            return new SshKeyArgs(body, serverId, userName);
+            return userName(Output.of(userName));
+        }
+
+        public SshKeyArgs build() {
+            $.body = Objects.requireNonNull($.body, "expected parameter 'body' to be non-null");
+            $.serverId = Objects.requireNonNull($.serverId, "expected parameter 'serverId' to be non-null");
+            $.userName = Objects.requireNonNull($.userName, "expected parameter 'userName' to be non-null");
+            return $;
         }
     }
+
 }

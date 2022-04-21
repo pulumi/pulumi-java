@@ -24,7 +24,7 @@ public final class GoogleCloudOrgpolicyV2PolicySpecResponse extends com.pulumi.r
      * 
      */
     @Import(name="etag", required=true)
-      private final String etag;
+    private String etag;
 
     public String etag() {
         return this.etag;
@@ -35,7 +35,7 @@ public final class GoogleCloudOrgpolicyV2PolicySpecResponse extends com.pulumi.r
      * 
      */
     @Import(name="inheritFromParent", required=true)
-      private final Boolean inheritFromParent;
+    private Boolean inheritFromParent;
 
     public Boolean inheritFromParent() {
         return this.inheritFromParent;
@@ -46,7 +46,7 @@ public final class GoogleCloudOrgpolicyV2PolicySpecResponse extends com.pulumi.r
      * 
      */
     @Import(name="reset", required=true)
-      private final Boolean reset;
+    private Boolean reset;
 
     public Boolean reset() {
         return this.reset;
@@ -57,7 +57,7 @@ public final class GoogleCloudOrgpolicyV2PolicySpecResponse extends com.pulumi.r
      * 
      */
     @Import(name="rules", required=true)
-      private final List<GoogleCloudOrgpolicyV2PolicySpecPolicyRuleResponse> rules;
+    private List<GoogleCloudOrgpolicyV2PolicySpecPolicyRuleResponse> rules;
 
     public List<GoogleCloudOrgpolicyV2PolicySpecPolicyRuleResponse> rules() {
         return this.rules;
@@ -68,85 +68,77 @@ public final class GoogleCloudOrgpolicyV2PolicySpecResponse extends com.pulumi.r
      * 
      */
     @Import(name="updateTime", required=true)
-      private final String updateTime;
+    private String updateTime;
 
     public String updateTime() {
         return this.updateTime;
     }
 
-    public GoogleCloudOrgpolicyV2PolicySpecResponse(
-        String etag,
-        Boolean inheritFromParent,
-        Boolean reset,
-        List<GoogleCloudOrgpolicyV2PolicySpecPolicyRuleResponse> rules,
-        String updateTime) {
-        this.etag = Objects.requireNonNull(etag, "expected parameter 'etag' to be non-null");
-        this.inheritFromParent = Objects.requireNonNull(inheritFromParent, "expected parameter 'inheritFromParent' to be non-null");
-        this.reset = Objects.requireNonNull(reset, "expected parameter 'reset' to be non-null");
-        this.rules = Objects.requireNonNull(rules, "expected parameter 'rules' to be non-null");
-        this.updateTime = Objects.requireNonNull(updateTime, "expected parameter 'updateTime' to be non-null");
-    }
+    private GoogleCloudOrgpolicyV2PolicySpecResponse() {}
 
-    private GoogleCloudOrgpolicyV2PolicySpecResponse() {
-        this.etag = null;
-        this.inheritFromParent = null;
-        this.reset = null;
-        this.rules = List.of();
-        this.updateTime = null;
+    private GoogleCloudOrgpolicyV2PolicySpecResponse(GoogleCloudOrgpolicyV2PolicySpecResponse $) {
+        this.etag = $.etag;
+        this.inheritFromParent = $.inheritFromParent;
+        this.reset = $.reset;
+        this.rules = $.rules;
+        this.updateTime = $.updateTime;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudOrgpolicyV2PolicySpecResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String etag;
-        private Boolean inheritFromParent;
-        private Boolean reset;
-        private List<GoogleCloudOrgpolicyV2PolicySpecPolicyRuleResponse> rules;
-        private String updateTime;
+        private GoogleCloudOrgpolicyV2PolicySpecResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudOrgpolicyV2PolicySpecResponse();
         }
 
         public Builder(GoogleCloudOrgpolicyV2PolicySpecResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.etag = defaults.etag;
-    	      this.inheritFromParent = defaults.inheritFromParent;
-    	      this.reset = defaults.reset;
-    	      this.rules = defaults.rules;
-    	      this.updateTime = defaults.updateTime;
+            $ = new GoogleCloudOrgpolicyV2PolicySpecResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder etag(String etag) {
-            this.etag = Objects.requireNonNull(etag);
+            $.etag = etag;
             return this;
         }
+
         public Builder inheritFromParent(Boolean inheritFromParent) {
-            this.inheritFromParent = Objects.requireNonNull(inheritFromParent);
+            $.inheritFromParent = inheritFromParent;
             return this;
         }
+
         public Builder reset(Boolean reset) {
-            this.reset = Objects.requireNonNull(reset);
+            $.reset = reset;
             return this;
         }
+
         public Builder rules(List<GoogleCloudOrgpolicyV2PolicySpecPolicyRuleResponse> rules) {
-            this.rules = Objects.requireNonNull(rules);
+            $.rules = rules;
             return this;
         }
+
         public Builder rules(GoogleCloudOrgpolicyV2PolicySpecPolicyRuleResponse... rules) {
             return rules(List.of(rules));
         }
+
         public Builder updateTime(String updateTime) {
-            this.updateTime = Objects.requireNonNull(updateTime);
+            $.updateTime = updateTime;
             return this;
-        }        public GoogleCloudOrgpolicyV2PolicySpecResponse build() {
-            return new GoogleCloudOrgpolicyV2PolicySpecResponse(etag, inheritFromParent, reset, rules, updateTime);
+        }
+
+        public GoogleCloudOrgpolicyV2PolicySpecResponse build() {
+            $.etag = Objects.requireNonNull($.etag, "expected parameter 'etag' to be non-null");
+            $.inheritFromParent = Objects.requireNonNull($.inheritFromParent, "expected parameter 'inheritFromParent' to be non-null");
+            $.reset = Objects.requireNonNull($.reset, "expected parameter 'reset' to be non-null");
+            $.rules = Objects.requireNonNull($.rules, "expected parameter 'rules' to be non-null");
+            $.updateTime = Objects.requireNonNull($.updateTime, "expected parameter 'updateTime' to be non-null");
+            return $;
         }
     }
+
 }

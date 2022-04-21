@@ -5,9 +5,9 @@ package com.pulumi.awsnative.iotanalytics.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -16,70 +16,66 @@ public final class DatastoreTimestampPartitionArgs extends com.pulumi.resources.
     public static final DatastoreTimestampPartitionArgs Empty = new DatastoreTimestampPartitionArgs();
 
     @Import(name="attributeName", required=true)
-      private final Output<String> attributeName;
+    private Output<String> attributeName;
 
     public Output<String> attributeName() {
         return this.attributeName;
     }
 
     @Import(name="timestampFormat")
-      private final @Nullable Output<String> timestampFormat;
+    private @Nullable Output<String> timestampFormat;
 
-    public Output<String> timestampFormat() {
-        return this.timestampFormat == null ? Codegen.empty() : this.timestampFormat;
+    public Optional<Output<String>> timestampFormat() {
+        return Optional.ofNullable(this.timestampFormat);
     }
 
-    public DatastoreTimestampPartitionArgs(
-        Output<String> attributeName,
-        @Nullable Output<String> timestampFormat) {
-        this.attributeName = Objects.requireNonNull(attributeName, "expected parameter 'attributeName' to be non-null");
-        this.timestampFormat = timestampFormat;
-    }
+    private DatastoreTimestampPartitionArgs() {}
 
-    private DatastoreTimestampPartitionArgs() {
-        this.attributeName = Codegen.empty();
-        this.timestampFormat = Codegen.empty();
+    private DatastoreTimestampPartitionArgs(DatastoreTimestampPartitionArgs $) {
+        this.attributeName = $.attributeName;
+        this.timestampFormat = $.timestampFormat;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DatastoreTimestampPartitionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> attributeName;
-        private @Nullable Output<String> timestampFormat;
+        private DatastoreTimestampPartitionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DatastoreTimestampPartitionArgs();
         }
 
         public Builder(DatastoreTimestampPartitionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.attributeName = defaults.attributeName;
-    	      this.timestampFormat = defaults.timestampFormat;
+            $ = new DatastoreTimestampPartitionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder attributeName(Output<String> attributeName) {
-            this.attributeName = Objects.requireNonNull(attributeName);
+            $.attributeName = attributeName;
             return this;
         }
+
         public Builder attributeName(String attributeName) {
-            this.attributeName = Output.of(Objects.requireNonNull(attributeName));
-            return this;
+            return attributeName(Output.of(attributeName));
         }
+
         public Builder timestampFormat(@Nullable Output<String> timestampFormat) {
-            this.timestampFormat = timestampFormat;
+            $.timestampFormat = timestampFormat;
             return this;
         }
-        public Builder timestampFormat(@Nullable String timestampFormat) {
-            this.timestampFormat = Codegen.ofNullable(timestampFormat);
-            return this;
-        }        public DatastoreTimestampPartitionArgs build() {
-            return new DatastoreTimestampPartitionArgs(attributeName, timestampFormat);
+
+        public Builder timestampFormat(String timestampFormat) {
+            return timestampFormat(Output.of(timestampFormat));
+        }
+
+        public DatastoreTimestampPartitionArgs build() {
+            $.attributeName = Objects.requireNonNull($.attributeName, "expected parameter 'attributeName' to be non-null");
+            return $;
         }
     }
+
 }

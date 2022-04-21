@@ -10,13 +10,13 @@ import com.pulumi.aws.rds.inputs.InstanceS3ImportGetArgs;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -29,10 +29,10 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="address")
-      private final @Nullable Output<String> address;
+    private @Nullable Output<String> address;
 
-    public Output<String> address() {
-        return this.address == null ? Codegen.empty() : this.address;
+    public Optional<Output<String>> address() {
+        return Optional.ofNullable(this.address);
     }
 
     /**
@@ -40,10 +40,10 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="allocatedStorage")
-      private final @Nullable Output<Integer> allocatedStorage;
+    private @Nullable Output<Integer> allocatedStorage;
 
-    public Output<Integer> allocatedStorage() {
-        return this.allocatedStorage == null ? Codegen.empty() : this.allocatedStorage;
+    public Optional<Output<Integer>> allocatedStorage() {
+        return Optional.ofNullable(this.allocatedStorage);
     }
 
     /**
@@ -53,10 +53,10 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="allowMajorVersionUpgrade")
-      private final @Nullable Output<Boolean> allowMajorVersionUpgrade;
+    private @Nullable Output<Boolean> allowMajorVersionUpgrade;
 
-    public Output<Boolean> allowMajorVersionUpgrade() {
-        return this.allowMajorVersionUpgrade == null ? Codegen.empty() : this.allowMajorVersionUpgrade;
+    public Optional<Output<Boolean>> allowMajorVersionUpgrade() {
+        return Optional.ofNullable(this.allowMajorVersionUpgrade);
     }
 
     /**
@@ -67,10 +67,10 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="applyImmediately")
-      private final @Nullable Output<Boolean> applyImmediately;
+    private @Nullable Output<Boolean> applyImmediately;
 
-    public Output<Boolean> applyImmediately() {
-        return this.applyImmediately == null ? Codegen.empty() : this.applyImmediately;
+    public Optional<Output<Boolean>> applyImmediately() {
+        return Optional.ofNullable(this.applyImmediately);
     }
 
     /**
@@ -78,10 +78,10 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="arn")
-      private final @Nullable Output<String> arn;
+    private @Nullable Output<String> arn;
 
-    public Output<String> arn() {
-        return this.arn == null ? Codegen.empty() : this.arn;
+    public Optional<Output<String>> arn() {
+        return Optional.ofNullable(this.arn);
     }
 
     /**
@@ -91,10 +91,10 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="autoMinorVersionUpgrade")
-      private final @Nullable Output<Boolean> autoMinorVersionUpgrade;
+    private @Nullable Output<Boolean> autoMinorVersionUpgrade;
 
-    public Output<Boolean> autoMinorVersionUpgrade() {
-        return this.autoMinorVersionUpgrade == null ? Codegen.empty() : this.autoMinorVersionUpgrade;
+    public Optional<Output<Boolean>> autoMinorVersionUpgrade() {
+        return Optional.ofNullable(this.autoMinorVersionUpgrade);
     }
 
     /**
@@ -102,10 +102,10 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="availabilityZone")
-      private final @Nullable Output<String> availabilityZone;
+    private @Nullable Output<String> availabilityZone;
 
-    public Output<String> availabilityZone() {
-        return this.availabilityZone == null ? Codegen.empty() : this.availabilityZone;
+    public Optional<Output<String>> availabilityZone() {
+        return Optional.ofNullable(this.availabilityZone);
     }
 
     /**
@@ -114,10 +114,10 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="backupRetentionPeriod")
-      private final @Nullable Output<Integer> backupRetentionPeriod;
+    private @Nullable Output<Integer> backupRetentionPeriod;
 
-    public Output<Integer> backupRetentionPeriod() {
-        return this.backupRetentionPeriod == null ? Codegen.empty() : this.backupRetentionPeriod;
+    public Optional<Output<Integer>> backupRetentionPeriod() {
+        return Optional.ofNullable(this.backupRetentionPeriod);
     }
 
     /**
@@ -127,10 +127,10 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="backupWindow")
-      private final @Nullable Output<String> backupWindow;
+    private @Nullable Output<String> backupWindow;
 
-    public Output<String> backupWindow() {
-        return this.backupWindow == null ? Codegen.empty() : this.backupWindow;
+    public Optional<Output<String>> backupWindow() {
+        return Optional.ofNullable(this.backupWindow);
     }
 
     /**
@@ -138,10 +138,10 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="caCertIdentifier")
-      private final @Nullable Output<String> caCertIdentifier;
+    private @Nullable Output<String> caCertIdentifier;
 
-    public Output<String> caCertIdentifier() {
-        return this.caCertIdentifier == null ? Codegen.empty() : this.caCertIdentifier;
+    public Optional<Output<String>> caCertIdentifier() {
+        return Optional.ofNullable(this.caCertIdentifier);
     }
 
     /**
@@ -152,10 +152,10 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="characterSetName")
-      private final @Nullable Output<String> characterSetName;
+    private @Nullable Output<String> characterSetName;
 
-    public Output<String> characterSetName() {
-        return this.characterSetName == null ? Codegen.empty() : this.characterSetName;
+    public Optional<Output<String>> characterSetName() {
+        return Optional.ofNullable(this.characterSetName);
     }
 
     /**
@@ -163,10 +163,10 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="copyTagsToSnapshot")
-      private final @Nullable Output<Boolean> copyTagsToSnapshot;
+    private @Nullable Output<Boolean> copyTagsToSnapshot;
 
-    public Output<Boolean> copyTagsToSnapshot() {
-        return this.copyTagsToSnapshot == null ? Codegen.empty() : this.copyTagsToSnapshot;
+    public Optional<Output<Boolean>> copyTagsToSnapshot() {
+        return Optional.ofNullable(this.copyTagsToSnapshot);
     }
 
     /**
@@ -174,10 +174,10 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="customerOwnedIpEnabled")
-      private final @Nullable Output<Boolean> customerOwnedIpEnabled;
+    private @Nullable Output<Boolean> customerOwnedIpEnabled;
 
-    public Output<Boolean> customerOwnedIpEnabled() {
-        return this.customerOwnedIpEnabled == null ? Codegen.empty() : this.customerOwnedIpEnabled;
+    public Optional<Output<Boolean>> customerOwnedIpEnabled() {
+        return Optional.ofNullable(this.customerOwnedIpEnabled);
     }
 
     /**
@@ -191,10 +191,10 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="dbSubnetGroupName")
-      private final @Nullable Output<String> dbSubnetGroupName;
+    private @Nullable Output<String> dbSubnetGroupName;
 
-    public Output<String> dbSubnetGroupName() {
-        return this.dbSubnetGroupName == null ? Codegen.empty() : this.dbSubnetGroupName;
+    public Optional<Output<String>> dbSubnetGroupName() {
+        return Optional.ofNullable(this.dbSubnetGroupName);
     }
 
     /**
@@ -202,10 +202,10 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="deleteAutomatedBackups")
-      private final @Nullable Output<Boolean> deleteAutomatedBackups;
+    private @Nullable Output<Boolean> deleteAutomatedBackups;
 
-    public Output<Boolean> deleteAutomatedBackups() {
-        return this.deleteAutomatedBackups == null ? Codegen.empty() : this.deleteAutomatedBackups;
+    public Optional<Output<Boolean>> deleteAutomatedBackups() {
+        return Optional.ofNullable(this.deleteAutomatedBackups);
     }
 
     /**
@@ -213,10 +213,10 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="deletionProtection")
-      private final @Nullable Output<Boolean> deletionProtection;
+    private @Nullable Output<Boolean> deletionProtection;
 
-    public Output<Boolean> deletionProtection() {
-        return this.deletionProtection == null ? Codegen.empty() : this.deletionProtection;
+    public Optional<Output<Boolean>> deletionProtection() {
+        return Optional.ofNullable(this.deletionProtection);
     }
 
     /**
@@ -224,10 +224,10 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="domain")
-      private final @Nullable Output<String> domain;
+    private @Nullable Output<String> domain;
 
-    public Output<String> domain() {
-        return this.domain == null ? Codegen.empty() : this.domain;
+    public Optional<Output<String>> domain() {
+        return Optional.ofNullable(this.domain);
     }
 
     /**
@@ -235,10 +235,10 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="domainIamRoleName")
-      private final @Nullable Output<String> domainIamRoleName;
+    private @Nullable Output<String> domainIamRoleName;
 
-    public Output<String> domainIamRoleName() {
-        return this.domainIamRoleName == null ? Codegen.empty() : this.domainIamRoleName;
+    public Optional<Output<String>> domainIamRoleName() {
+        return Optional.ofNullable(this.domainIamRoleName);
     }
 
     /**
@@ -246,10 +246,10 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="enabledCloudwatchLogsExports")
-      private final @Nullable Output<List<String>> enabledCloudwatchLogsExports;
+    private @Nullable Output<List<String>> enabledCloudwatchLogsExports;
 
-    public Output<List<String>> enabledCloudwatchLogsExports() {
-        return this.enabledCloudwatchLogsExports == null ? Codegen.empty() : this.enabledCloudwatchLogsExports;
+    public Optional<Output<List<String>>> enabledCloudwatchLogsExports() {
+        return Optional.ofNullable(this.enabledCloudwatchLogsExports);
     }
 
     /**
@@ -257,10 +257,10 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="endpoint")
-      private final @Nullable Output<String> endpoint;
+    private @Nullable Output<String> endpoint;
 
-    public Output<String> endpoint() {
-        return this.endpoint == null ? Codegen.empty() : this.endpoint;
+    public Optional<Output<String>> endpoint() {
+        return Optional.ofNullable(this.endpoint);
     }
 
     /**
@@ -273,10 +273,10 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="engine")
-      private final @Nullable Output<String> engine;
+    private @Nullable Output<String> engine;
 
-    public Output<String> engine() {
-        return this.engine == null ? Codegen.empty() : this.engine;
+    public Optional<Output<String>> engine() {
+        return Optional.ofNullable(this.engine);
     }
 
     /**
@@ -288,10 +288,10 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="engineVersion")
-      private final @Nullable Output<String> engineVersion;
+    private @Nullable Output<String> engineVersion;
 
-    public Output<String> engineVersion() {
-        return this.engineVersion == null ? Codegen.empty() : this.engineVersion;
+    public Optional<Output<String>> engineVersion() {
+        return Optional.ofNullable(this.engineVersion);
     }
 
     /**
@@ -299,10 +299,10 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="engineVersionActual")
-      private final @Nullable Output<String> engineVersionActual;
+    private @Nullable Output<String> engineVersionActual;
 
-    public Output<String> engineVersionActual() {
-        return this.engineVersionActual == null ? Codegen.empty() : this.engineVersionActual;
+    public Optional<Output<String>> engineVersionActual() {
+        return Optional.ofNullable(this.engineVersionActual);
     }
 
     /**
@@ -312,10 +312,10 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="finalSnapshotIdentifier")
-      private final @Nullable Output<String> finalSnapshotIdentifier;
+    private @Nullable Output<String> finalSnapshotIdentifier;
 
-    public Output<String> finalSnapshotIdentifier() {
-        return this.finalSnapshotIdentifier == null ? Codegen.empty() : this.finalSnapshotIdentifier;
+    public Optional<Output<String>> finalSnapshotIdentifier() {
+        return Optional.ofNullable(this.finalSnapshotIdentifier);
     }
 
     /**
@@ -324,10 +324,10 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="hostedZoneId")
-      private final @Nullable Output<String> hostedZoneId;
+    private @Nullable Output<String> hostedZoneId;
 
-    public Output<String> hostedZoneId() {
-        return this.hostedZoneId == null ? Codegen.empty() : this.hostedZoneId;
+    public Optional<Output<String>> hostedZoneId() {
+        return Optional.ofNullable(this.hostedZoneId);
     }
 
     /**
@@ -337,10 +337,10 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="iamDatabaseAuthenticationEnabled")
-      private final @Nullable Output<Boolean> iamDatabaseAuthenticationEnabled;
+    private @Nullable Output<Boolean> iamDatabaseAuthenticationEnabled;
 
-    public Output<Boolean> iamDatabaseAuthenticationEnabled() {
-        return this.iamDatabaseAuthenticationEnabled == null ? Codegen.empty() : this.iamDatabaseAuthenticationEnabled;
+    public Optional<Output<Boolean>> iamDatabaseAuthenticationEnabled() {
+        return Optional.ofNullable(this.iamDatabaseAuthenticationEnabled);
     }
 
     /**
@@ -349,10 +349,10 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="identifier")
-      private final @Nullable Output<String> identifier;
+    private @Nullable Output<String> identifier;
 
-    public Output<String> identifier() {
-        return this.identifier == null ? Codegen.empty() : this.identifier;
+    public Optional<Output<String>> identifier() {
+        return Optional.ofNullable(this.identifier);
     }
 
     /**
@@ -361,10 +361,10 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="identifierPrefix")
-      private final @Nullable Output<String> identifierPrefix;
+    private @Nullable Output<String> identifierPrefix;
 
-    public Output<String> identifierPrefix() {
-        return this.identifierPrefix == null ? Codegen.empty() : this.identifierPrefix;
+    public Optional<Output<String>> identifierPrefix() {
+        return Optional.ofNullable(this.identifierPrefix);
     }
 
     /**
@@ -372,10 +372,10 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="instanceClass")
-      private final @Nullable Output<Either<String,InstanceType>> instanceClass;
+    private @Nullable Output<Either<String,InstanceType>> instanceClass;
 
-    public Output<Either<String,InstanceType>> instanceClass() {
-        return this.instanceClass == null ? Codegen.empty() : this.instanceClass;
+    public Optional<Output<Either<String,InstanceType>>> instanceClass() {
+        return Optional.ofNullable(this.instanceClass);
     }
 
     /**
@@ -384,10 +384,10 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="iops")
-      private final @Nullable Output<Integer> iops;
+    private @Nullable Output<Integer> iops;
 
-    public Output<Integer> iops() {
-        return this.iops == null ? Codegen.empty() : this.iops;
+    public Optional<Output<Integer>> iops() {
+        return Optional.ofNullable(this.iops);
     }
 
     /**
@@ -396,10 +396,10 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="kmsKeyId")
-      private final @Nullable Output<String> kmsKeyId;
+    private @Nullable Output<String> kmsKeyId;
 
-    public Output<String> kmsKeyId() {
-        return this.kmsKeyId == null ? Codegen.empty() : this.kmsKeyId;
+    public Optional<Output<String>> kmsKeyId() {
+        return Optional.ofNullable(this.kmsKeyId);
     }
 
     /**
@@ -407,10 +407,10 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="latestRestorableTime")
-      private final @Nullable Output<String> latestRestorableTime;
+    private @Nullable Output<String> latestRestorableTime;
 
-    public Output<String> latestRestorableTime() {
-        return this.latestRestorableTime == null ? Codegen.empty() : this.latestRestorableTime;
+    public Optional<Output<String>> latestRestorableTime() {
+        return Optional.ofNullable(this.latestRestorableTime);
     }
 
     /**
@@ -419,10 +419,10 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="licenseModel")
-      private final @Nullable Output<String> licenseModel;
+    private @Nullable Output<String> licenseModel;
 
-    public Output<String> licenseModel() {
-        return this.licenseModel == null ? Codegen.empty() : this.licenseModel;
+    public Optional<Output<String>> licenseModel() {
+        return Optional.ofNullable(this.licenseModel);
     }
 
     /**
@@ -434,10 +434,10 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="maintenanceWindow")
-      private final @Nullable Output<String> maintenanceWindow;
+    private @Nullable Output<String> maintenanceWindow;
 
-    public Output<String> maintenanceWindow() {
-        return this.maintenanceWindow == null ? Codegen.empty() : this.maintenanceWindow;
+    public Optional<Output<String>> maintenanceWindow() {
+        return Optional.ofNullable(this.maintenanceWindow);
     }
 
     /**
@@ -445,10 +445,10 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="maxAllocatedStorage")
-      private final @Nullable Output<Integer> maxAllocatedStorage;
+    private @Nullable Output<Integer> maxAllocatedStorage;
 
-    public Output<Integer> maxAllocatedStorage() {
-        return this.maxAllocatedStorage == null ? Codegen.empty() : this.maxAllocatedStorage;
+    public Optional<Output<Integer>> maxAllocatedStorage() {
+        return Optional.ofNullable(this.maxAllocatedStorage);
     }
 
     /**
@@ -459,10 +459,10 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="monitoringInterval")
-      private final @Nullable Output<Integer> monitoringInterval;
+    private @Nullable Output<Integer> monitoringInterval;
 
-    public Output<Integer> monitoringInterval() {
-        return this.monitoringInterval == null ? Codegen.empty() : this.monitoringInterval;
+    public Optional<Output<Integer>> monitoringInterval() {
+        return Optional.ofNullable(this.monitoringInterval);
     }
 
     /**
@@ -474,10 +474,10 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="monitoringRoleArn")
-      private final @Nullable Output<String> monitoringRoleArn;
+    private @Nullable Output<String> monitoringRoleArn;
 
-    public Output<String> monitoringRoleArn() {
-        return this.monitoringRoleArn == null ? Codegen.empty() : this.monitoringRoleArn;
+    public Optional<Output<String>> monitoringRoleArn() {
+        return Optional.ofNullable(this.monitoringRoleArn);
     }
 
     /**
@@ -485,10 +485,10 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="multiAz")
-      private final @Nullable Output<Boolean> multiAz;
+    private @Nullable Output<Boolean> multiAz;
 
-    public Output<Boolean> multiAz() {
-        return this.multiAz == null ? Codegen.empty() : this.multiAz;
+    public Optional<Output<Boolean>> multiAz() {
+        return Optional.ofNullable(this.multiAz);
     }
 
     /**
@@ -496,10 +496,10 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -508,10 +508,10 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="ncharCharacterSetName")
-      private final @Nullable Output<String> ncharCharacterSetName;
+    private @Nullable Output<String> ncharCharacterSetName;
 
-    public Output<String> ncharCharacterSetName() {
-        return this.ncharCharacterSetName == null ? Codegen.empty() : this.ncharCharacterSetName;
+    public Optional<Output<String>> ncharCharacterSetName() {
+        return Optional.ofNullable(this.ncharCharacterSetName);
     }
 
     /**
@@ -519,10 +519,10 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="optionGroupName")
-      private final @Nullable Output<String> optionGroupName;
+    private @Nullable Output<String> optionGroupName;
 
-    public Output<String> optionGroupName() {
-        return this.optionGroupName == null ? Codegen.empty() : this.optionGroupName;
+    public Optional<Output<String>> optionGroupName() {
+        return Optional.ofNullable(this.optionGroupName);
     }
 
     /**
@@ -531,10 +531,10 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="parameterGroupName")
-      private final @Nullable Output<String> parameterGroupName;
+    private @Nullable Output<String> parameterGroupName;
 
-    public Output<String> parameterGroupName() {
-        return this.parameterGroupName == null ? Codegen.empty() : this.parameterGroupName;
+    public Optional<Output<String>> parameterGroupName() {
+        return Optional.ofNullable(this.parameterGroupName);
     }
 
     /**
@@ -544,10 +544,10 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="password")
-      private final @Nullable Output<String> password;
+    private @Nullable Output<String> password;
 
-    public Output<String> password() {
-        return this.password == null ? Codegen.empty() : this.password;
+    public Optional<Output<String>> password() {
+        return Optional.ofNullable(this.password);
     }
 
     /**
@@ -555,10 +555,10 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="performanceInsightsEnabled")
-      private final @Nullable Output<Boolean> performanceInsightsEnabled;
+    private @Nullable Output<Boolean> performanceInsightsEnabled;
 
-    public Output<Boolean> performanceInsightsEnabled() {
-        return this.performanceInsightsEnabled == null ? Codegen.empty() : this.performanceInsightsEnabled;
+    public Optional<Output<Boolean>> performanceInsightsEnabled() {
+        return Optional.ofNullable(this.performanceInsightsEnabled);
     }
 
     /**
@@ -566,10 +566,10 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="performanceInsightsKmsKeyId")
-      private final @Nullable Output<String> performanceInsightsKmsKeyId;
+    private @Nullable Output<String> performanceInsightsKmsKeyId;
 
-    public Output<String> performanceInsightsKmsKeyId() {
-        return this.performanceInsightsKmsKeyId == null ? Codegen.empty() : this.performanceInsightsKmsKeyId;
+    public Optional<Output<String>> performanceInsightsKmsKeyId() {
+        return Optional.ofNullable(this.performanceInsightsKmsKeyId);
     }
 
     /**
@@ -577,10 +577,10 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="performanceInsightsRetentionPeriod")
-      private final @Nullable Output<Integer> performanceInsightsRetentionPeriod;
+    private @Nullable Output<Integer> performanceInsightsRetentionPeriod;
 
-    public Output<Integer> performanceInsightsRetentionPeriod() {
-        return this.performanceInsightsRetentionPeriod == null ? Codegen.empty() : this.performanceInsightsRetentionPeriod;
+    public Optional<Output<Integer>> performanceInsightsRetentionPeriod() {
+        return Optional.ofNullable(this.performanceInsightsRetentionPeriod);
     }
 
     /**
@@ -588,10 +588,10 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="port")
-      private final @Nullable Output<Integer> port;
+    private @Nullable Output<Integer> port;
 
-    public Output<Integer> port() {
-        return this.port == null ? Codegen.empty() : this.port;
+    public Optional<Output<Integer>> port() {
+        return Optional.ofNullable(this.port);
     }
 
     /**
@@ -600,10 +600,10 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="publiclyAccessible")
-      private final @Nullable Output<Boolean> publiclyAccessible;
+    private @Nullable Output<Boolean> publiclyAccessible;
 
-    public Output<Boolean> publiclyAccessible() {
-        return this.publiclyAccessible == null ? Codegen.empty() : this.publiclyAccessible;
+    public Optional<Output<Boolean>> publiclyAccessible() {
+        return Optional.ofNullable(this.publiclyAccessible);
     }
 
     /**
@@ -612,17 +612,17 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="replicaMode")
-      private final @Nullable Output<String> replicaMode;
+    private @Nullable Output<String> replicaMode;
 
-    public Output<String> replicaMode() {
-        return this.replicaMode == null ? Codegen.empty() : this.replicaMode;
+    public Optional<Output<String>> replicaMode() {
+        return Optional.ofNullable(this.replicaMode);
     }
 
     @Import(name="replicas")
-      private final @Nullable Output<List<String>> replicas;
+    private @Nullable Output<List<String>> replicas;
 
-    public Output<List<String>> replicas() {
-        return this.replicas == null ? Codegen.empty() : this.replicas;
+    public Optional<Output<List<String>>> replicas() {
+        return Optional.ofNullable(this.replicas);
     }
 
     /**
@@ -638,10 +638,10 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="replicateSourceDb")
-      private final @Nullable Output<String> replicateSourceDb;
+    private @Nullable Output<String> replicateSourceDb;
 
-    public Output<String> replicateSourceDb() {
-        return this.replicateSourceDb == null ? Codegen.empty() : this.replicateSourceDb;
+    public Optional<Output<String>> replicateSourceDb() {
+        return Optional.ofNullable(this.replicateSourceDb);
     }
 
     /**
@@ -649,10 +649,10 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceId")
-      private final @Nullable Output<String> resourceId;
+    private @Nullable Output<String> resourceId;
 
-    public Output<String> resourceId() {
-        return this.resourceId == null ? Codegen.empty() : this.resourceId;
+    public Optional<Output<String>> resourceId() {
+        return Optional.ofNullable(this.resourceId);
     }
 
     /**
@@ -660,10 +660,10 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="restoreToPointInTime")
-      private final @Nullable Output<InstanceRestoreToPointInTimeGetArgs> restoreToPointInTime;
+    private @Nullable Output<InstanceRestoreToPointInTimeGetArgs> restoreToPointInTime;
 
-    public Output<InstanceRestoreToPointInTimeGetArgs> restoreToPointInTime() {
-        return this.restoreToPointInTime == null ? Codegen.empty() : this.restoreToPointInTime;
+    public Optional<Output<InstanceRestoreToPointInTimeGetArgs>> restoreToPointInTime() {
+        return Optional.ofNullable(this.restoreToPointInTime);
     }
 
     /**
@@ -671,10 +671,10 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="s3Import")
-      private final @Nullable Output<InstanceS3ImportGetArgs> s3Import;
+    private @Nullable Output<InstanceS3ImportGetArgs> s3Import;
 
-    public Output<InstanceS3ImportGetArgs> s3Import() {
-        return this.s3Import == null ? Codegen.empty() : this.s3Import;
+    public Optional<Output<InstanceS3ImportGetArgs>> s3Import() {
+        return Optional.ofNullable(this.s3Import);
     }
 
     /**
@@ -684,10 +684,10 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="securityGroupNames")
-      private final @Nullable Output<List<String>> securityGroupNames;
+    private @Nullable Output<List<String>> securityGroupNames;
 
-    public Output<List<String>> securityGroupNames() {
-        return this.securityGroupNames == null ? Codegen.empty() : this.securityGroupNames;
+    public Optional<Output<List<String>>> securityGroupNames() {
+        return Optional.ofNullable(this.securityGroupNames);
     }
 
     /**
@@ -699,10 +699,10 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="skipFinalSnapshot")
-      private final @Nullable Output<Boolean> skipFinalSnapshot;
+    private @Nullable Output<Boolean> skipFinalSnapshot;
 
-    public Output<Boolean> skipFinalSnapshot() {
-        return this.skipFinalSnapshot == null ? Codegen.empty() : this.skipFinalSnapshot;
+    public Optional<Output<Boolean>> skipFinalSnapshot() {
+        return Optional.ofNullable(this.skipFinalSnapshot);
     }
 
     /**
@@ -712,10 +712,10 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="snapshotIdentifier")
-      private final @Nullable Output<String> snapshotIdentifier;
+    private @Nullable Output<String> snapshotIdentifier;
 
-    public Output<String> snapshotIdentifier() {
-        return this.snapshotIdentifier == null ? Codegen.empty() : this.snapshotIdentifier;
+    public Optional<Output<String>> snapshotIdentifier() {
+        return Optional.ofNullable(this.snapshotIdentifier);
     }
 
     /**
@@ -723,10 +723,10 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="status")
-      private final @Nullable Output<String> status;
+    private @Nullable Output<String> status;
 
-    public Output<String> status() {
-        return this.status == null ? Codegen.empty() : this.status;
+    public Optional<Output<String>> status() {
+        return Optional.ofNullable(this.status);
     }
 
     /**
@@ -737,10 +737,10 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="storageEncrypted")
-      private final @Nullable Output<Boolean> storageEncrypted;
+    private @Nullable Output<Boolean> storageEncrypted;
 
-    public Output<Boolean> storageEncrypted() {
-        return this.storageEncrypted == null ? Codegen.empty() : this.storageEncrypted;
+    public Optional<Output<Boolean>> storageEncrypted() {
+        return Optional.ofNullable(this.storageEncrypted);
     }
 
     /**
@@ -750,10 +750,10 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="storageType")
-      private final @Nullable Output<Either<String,StorageType>> storageType;
+    private @Nullable Output<Either<String,StorageType>> storageType;
 
-    public Output<Either<String,StorageType>> storageType() {
-        return this.storageType == null ? Codegen.empty() : this.storageType;
+    public Optional<Output<Either<String,StorageType>>> storageType() {
+        return Optional.ofNullable(this.storageType);
     }
 
     /**
@@ -761,10 +761,10 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -772,10 +772,10 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tagsAll")
-      private final @Nullable Output<Map<String,String>> tagsAll;
+    private @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> tagsAll() {
-        return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
+    public Optional<Output<Map<String,String>>> tagsAll() {
+        return Optional.ofNullable(this.tagsAll);
     }
 
     /**
@@ -787,10 +787,10 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="timezone")
-      private final @Nullable Output<String> timezone;
+    private @Nullable Output<String> timezone;
 
-    public Output<String> timezone() {
-        return this.timezone == null ? Codegen.empty() : this.timezone;
+    public Optional<Output<String>> timezone() {
+        return Optional.ofNullable(this.timezone);
     }
 
     /**
@@ -799,10 +799,10 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="username")
-      private final @Nullable Output<String> username;
+    private @Nullable Output<String> username;
 
-    public Output<String> username() {
-        return this.username == null ? Codegen.empty() : this.username;
+    public Optional<Output<String>> username() {
+        return Optional.ofNullable(this.username);
     }
 
     /**
@@ -811,894 +811,704 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="vpcSecurityGroupIds")
-      private final @Nullable Output<List<String>> vpcSecurityGroupIds;
+    private @Nullable Output<List<String>> vpcSecurityGroupIds;
 
-    public Output<List<String>> vpcSecurityGroupIds() {
-        return this.vpcSecurityGroupIds == null ? Codegen.empty() : this.vpcSecurityGroupIds;
+    public Optional<Output<List<String>>> vpcSecurityGroupIds() {
+        return Optional.ofNullable(this.vpcSecurityGroupIds);
     }
 
-    public InstanceState(
-        @Nullable Output<String> address,
-        @Nullable Output<Integer> allocatedStorage,
-        @Nullable Output<Boolean> allowMajorVersionUpgrade,
-        @Nullable Output<Boolean> applyImmediately,
-        @Nullable Output<String> arn,
-        @Nullable Output<Boolean> autoMinorVersionUpgrade,
-        @Nullable Output<String> availabilityZone,
-        @Nullable Output<Integer> backupRetentionPeriod,
-        @Nullable Output<String> backupWindow,
-        @Nullable Output<String> caCertIdentifier,
-        @Nullable Output<String> characterSetName,
-        @Nullable Output<Boolean> copyTagsToSnapshot,
-        @Nullable Output<Boolean> customerOwnedIpEnabled,
-        @Nullable Output<String> dbSubnetGroupName,
-        @Nullable Output<Boolean> deleteAutomatedBackups,
-        @Nullable Output<Boolean> deletionProtection,
-        @Nullable Output<String> domain,
-        @Nullable Output<String> domainIamRoleName,
-        @Nullable Output<List<String>> enabledCloudwatchLogsExports,
-        @Nullable Output<String> endpoint,
-        @Nullable Output<String> engine,
-        @Nullable Output<String> engineVersion,
-        @Nullable Output<String> engineVersionActual,
-        @Nullable Output<String> finalSnapshotIdentifier,
-        @Nullable Output<String> hostedZoneId,
-        @Nullable Output<Boolean> iamDatabaseAuthenticationEnabled,
-        @Nullable Output<String> identifier,
-        @Nullable Output<String> identifierPrefix,
-        @Nullable Output<Either<String,InstanceType>> instanceClass,
-        @Nullable Output<Integer> iops,
-        @Nullable Output<String> kmsKeyId,
-        @Nullable Output<String> latestRestorableTime,
-        @Nullable Output<String> licenseModel,
-        @Nullable Output<String> maintenanceWindow,
-        @Nullable Output<Integer> maxAllocatedStorage,
-        @Nullable Output<Integer> monitoringInterval,
-        @Nullable Output<String> monitoringRoleArn,
-        @Nullable Output<Boolean> multiAz,
-        @Nullable Output<String> name,
-        @Nullable Output<String> ncharCharacterSetName,
-        @Nullable Output<String> optionGroupName,
-        @Nullable Output<String> parameterGroupName,
-        @Nullable Output<String> password,
-        @Nullable Output<Boolean> performanceInsightsEnabled,
-        @Nullable Output<String> performanceInsightsKmsKeyId,
-        @Nullable Output<Integer> performanceInsightsRetentionPeriod,
-        @Nullable Output<Integer> port,
-        @Nullable Output<Boolean> publiclyAccessible,
-        @Nullable Output<String> replicaMode,
-        @Nullable Output<List<String>> replicas,
-        @Nullable Output<String> replicateSourceDb,
-        @Nullable Output<String> resourceId,
-        @Nullable Output<InstanceRestoreToPointInTimeGetArgs> restoreToPointInTime,
-        @Nullable Output<InstanceS3ImportGetArgs> s3Import,
-        @Nullable Output<List<String>> securityGroupNames,
-        @Nullable Output<Boolean> skipFinalSnapshot,
-        @Nullable Output<String> snapshotIdentifier,
-        @Nullable Output<String> status,
-        @Nullable Output<Boolean> storageEncrypted,
-        @Nullable Output<Either<String,StorageType>> storageType,
-        @Nullable Output<Map<String,String>> tags,
-        @Nullable Output<Map<String,String>> tagsAll,
-        @Nullable Output<String> timezone,
-        @Nullable Output<String> username,
-        @Nullable Output<List<String>> vpcSecurityGroupIds) {
-        this.address = address;
-        this.allocatedStorage = allocatedStorage;
-        this.allowMajorVersionUpgrade = allowMajorVersionUpgrade;
-        this.applyImmediately = applyImmediately;
-        this.arn = arn;
-        this.autoMinorVersionUpgrade = autoMinorVersionUpgrade;
-        this.availabilityZone = availabilityZone;
-        this.backupRetentionPeriod = backupRetentionPeriod;
-        this.backupWindow = backupWindow;
-        this.caCertIdentifier = caCertIdentifier;
-        this.characterSetName = characterSetName;
-        this.copyTagsToSnapshot = copyTagsToSnapshot;
-        this.customerOwnedIpEnabled = customerOwnedIpEnabled;
-        this.dbSubnetGroupName = dbSubnetGroupName;
-        this.deleteAutomatedBackups = deleteAutomatedBackups;
-        this.deletionProtection = deletionProtection;
-        this.domain = domain;
-        this.domainIamRoleName = domainIamRoleName;
-        this.enabledCloudwatchLogsExports = enabledCloudwatchLogsExports;
-        this.endpoint = endpoint;
-        this.engine = engine;
-        this.engineVersion = engineVersion;
-        this.engineVersionActual = engineVersionActual;
-        this.finalSnapshotIdentifier = finalSnapshotIdentifier;
-        this.hostedZoneId = hostedZoneId;
-        this.iamDatabaseAuthenticationEnabled = iamDatabaseAuthenticationEnabled;
-        this.identifier = identifier;
-        this.identifierPrefix = identifierPrefix;
-        this.instanceClass = instanceClass;
-        this.iops = iops;
-        this.kmsKeyId = kmsKeyId;
-        this.latestRestorableTime = latestRestorableTime;
-        this.licenseModel = licenseModel;
-        this.maintenanceWindow = maintenanceWindow;
-        this.maxAllocatedStorage = maxAllocatedStorage;
-        this.monitoringInterval = monitoringInterval;
-        this.monitoringRoleArn = monitoringRoleArn;
-        this.multiAz = multiAz;
-        this.name = name;
-        this.ncharCharacterSetName = ncharCharacterSetName;
-        this.optionGroupName = optionGroupName;
-        this.parameterGroupName = parameterGroupName;
-        this.password = password;
-        this.performanceInsightsEnabled = performanceInsightsEnabled;
-        this.performanceInsightsKmsKeyId = performanceInsightsKmsKeyId;
-        this.performanceInsightsRetentionPeriod = performanceInsightsRetentionPeriod;
-        this.port = port;
-        this.publiclyAccessible = publiclyAccessible;
-        this.replicaMode = replicaMode;
-        this.replicas = replicas;
-        this.replicateSourceDb = replicateSourceDb;
-        this.resourceId = resourceId;
-        this.restoreToPointInTime = restoreToPointInTime;
-        this.s3Import = s3Import;
-        this.securityGroupNames = securityGroupNames;
-        this.skipFinalSnapshot = skipFinalSnapshot;
-        this.snapshotIdentifier = snapshotIdentifier;
-        this.status = status;
-        this.storageEncrypted = storageEncrypted;
-        this.storageType = storageType;
-        this.tags = tags;
-        this.tagsAll = tagsAll;
-        this.timezone = timezone;
-        this.username = username;
-        this.vpcSecurityGroupIds = vpcSecurityGroupIds;
-    }
+    private InstanceState() {}
 
-    private InstanceState() {
-        this.address = Codegen.empty();
-        this.allocatedStorage = Codegen.empty();
-        this.allowMajorVersionUpgrade = Codegen.empty();
-        this.applyImmediately = Codegen.empty();
-        this.arn = Codegen.empty();
-        this.autoMinorVersionUpgrade = Codegen.empty();
-        this.availabilityZone = Codegen.empty();
-        this.backupRetentionPeriod = Codegen.empty();
-        this.backupWindow = Codegen.empty();
-        this.caCertIdentifier = Codegen.empty();
-        this.characterSetName = Codegen.empty();
-        this.copyTagsToSnapshot = Codegen.empty();
-        this.customerOwnedIpEnabled = Codegen.empty();
-        this.dbSubnetGroupName = Codegen.empty();
-        this.deleteAutomatedBackups = Codegen.empty();
-        this.deletionProtection = Codegen.empty();
-        this.domain = Codegen.empty();
-        this.domainIamRoleName = Codegen.empty();
-        this.enabledCloudwatchLogsExports = Codegen.empty();
-        this.endpoint = Codegen.empty();
-        this.engine = Codegen.empty();
-        this.engineVersion = Codegen.empty();
-        this.engineVersionActual = Codegen.empty();
-        this.finalSnapshotIdentifier = Codegen.empty();
-        this.hostedZoneId = Codegen.empty();
-        this.iamDatabaseAuthenticationEnabled = Codegen.empty();
-        this.identifier = Codegen.empty();
-        this.identifierPrefix = Codegen.empty();
-        this.instanceClass = Codegen.empty();
-        this.iops = Codegen.empty();
-        this.kmsKeyId = Codegen.empty();
-        this.latestRestorableTime = Codegen.empty();
-        this.licenseModel = Codegen.empty();
-        this.maintenanceWindow = Codegen.empty();
-        this.maxAllocatedStorage = Codegen.empty();
-        this.monitoringInterval = Codegen.empty();
-        this.monitoringRoleArn = Codegen.empty();
-        this.multiAz = Codegen.empty();
-        this.name = Codegen.empty();
-        this.ncharCharacterSetName = Codegen.empty();
-        this.optionGroupName = Codegen.empty();
-        this.parameterGroupName = Codegen.empty();
-        this.password = Codegen.empty();
-        this.performanceInsightsEnabled = Codegen.empty();
-        this.performanceInsightsKmsKeyId = Codegen.empty();
-        this.performanceInsightsRetentionPeriod = Codegen.empty();
-        this.port = Codegen.empty();
-        this.publiclyAccessible = Codegen.empty();
-        this.replicaMode = Codegen.empty();
-        this.replicas = Codegen.empty();
-        this.replicateSourceDb = Codegen.empty();
-        this.resourceId = Codegen.empty();
-        this.restoreToPointInTime = Codegen.empty();
-        this.s3Import = Codegen.empty();
-        this.securityGroupNames = Codegen.empty();
-        this.skipFinalSnapshot = Codegen.empty();
-        this.snapshotIdentifier = Codegen.empty();
-        this.status = Codegen.empty();
-        this.storageEncrypted = Codegen.empty();
-        this.storageType = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.tagsAll = Codegen.empty();
-        this.timezone = Codegen.empty();
-        this.username = Codegen.empty();
-        this.vpcSecurityGroupIds = Codegen.empty();
+    private InstanceState(InstanceState $) {
+        this.address = $.address;
+        this.allocatedStorage = $.allocatedStorage;
+        this.allowMajorVersionUpgrade = $.allowMajorVersionUpgrade;
+        this.applyImmediately = $.applyImmediately;
+        this.arn = $.arn;
+        this.autoMinorVersionUpgrade = $.autoMinorVersionUpgrade;
+        this.availabilityZone = $.availabilityZone;
+        this.backupRetentionPeriod = $.backupRetentionPeriod;
+        this.backupWindow = $.backupWindow;
+        this.caCertIdentifier = $.caCertIdentifier;
+        this.characterSetName = $.characterSetName;
+        this.copyTagsToSnapshot = $.copyTagsToSnapshot;
+        this.customerOwnedIpEnabled = $.customerOwnedIpEnabled;
+        this.dbSubnetGroupName = $.dbSubnetGroupName;
+        this.deleteAutomatedBackups = $.deleteAutomatedBackups;
+        this.deletionProtection = $.deletionProtection;
+        this.domain = $.domain;
+        this.domainIamRoleName = $.domainIamRoleName;
+        this.enabledCloudwatchLogsExports = $.enabledCloudwatchLogsExports;
+        this.endpoint = $.endpoint;
+        this.engine = $.engine;
+        this.engineVersion = $.engineVersion;
+        this.engineVersionActual = $.engineVersionActual;
+        this.finalSnapshotIdentifier = $.finalSnapshotIdentifier;
+        this.hostedZoneId = $.hostedZoneId;
+        this.iamDatabaseAuthenticationEnabled = $.iamDatabaseAuthenticationEnabled;
+        this.identifier = $.identifier;
+        this.identifierPrefix = $.identifierPrefix;
+        this.instanceClass = $.instanceClass;
+        this.iops = $.iops;
+        this.kmsKeyId = $.kmsKeyId;
+        this.latestRestorableTime = $.latestRestorableTime;
+        this.licenseModel = $.licenseModel;
+        this.maintenanceWindow = $.maintenanceWindow;
+        this.maxAllocatedStorage = $.maxAllocatedStorage;
+        this.monitoringInterval = $.monitoringInterval;
+        this.monitoringRoleArn = $.monitoringRoleArn;
+        this.multiAz = $.multiAz;
+        this.name = $.name;
+        this.ncharCharacterSetName = $.ncharCharacterSetName;
+        this.optionGroupName = $.optionGroupName;
+        this.parameterGroupName = $.parameterGroupName;
+        this.password = $.password;
+        this.performanceInsightsEnabled = $.performanceInsightsEnabled;
+        this.performanceInsightsKmsKeyId = $.performanceInsightsKmsKeyId;
+        this.performanceInsightsRetentionPeriod = $.performanceInsightsRetentionPeriod;
+        this.port = $.port;
+        this.publiclyAccessible = $.publiclyAccessible;
+        this.replicaMode = $.replicaMode;
+        this.replicas = $.replicas;
+        this.replicateSourceDb = $.replicateSourceDb;
+        this.resourceId = $.resourceId;
+        this.restoreToPointInTime = $.restoreToPointInTime;
+        this.s3Import = $.s3Import;
+        this.securityGroupNames = $.securityGroupNames;
+        this.skipFinalSnapshot = $.skipFinalSnapshot;
+        this.snapshotIdentifier = $.snapshotIdentifier;
+        this.status = $.status;
+        this.storageEncrypted = $.storageEncrypted;
+        this.storageType = $.storageType;
+        this.tags = $.tags;
+        this.tagsAll = $.tagsAll;
+        this.timezone = $.timezone;
+        this.username = $.username;
+        this.vpcSecurityGroupIds = $.vpcSecurityGroupIds;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(InstanceState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> address;
-        private @Nullable Output<Integer> allocatedStorage;
-        private @Nullable Output<Boolean> allowMajorVersionUpgrade;
-        private @Nullable Output<Boolean> applyImmediately;
-        private @Nullable Output<String> arn;
-        private @Nullable Output<Boolean> autoMinorVersionUpgrade;
-        private @Nullable Output<String> availabilityZone;
-        private @Nullable Output<Integer> backupRetentionPeriod;
-        private @Nullable Output<String> backupWindow;
-        private @Nullable Output<String> caCertIdentifier;
-        private @Nullable Output<String> characterSetName;
-        private @Nullable Output<Boolean> copyTagsToSnapshot;
-        private @Nullable Output<Boolean> customerOwnedIpEnabled;
-        private @Nullable Output<String> dbSubnetGroupName;
-        private @Nullable Output<Boolean> deleteAutomatedBackups;
-        private @Nullable Output<Boolean> deletionProtection;
-        private @Nullable Output<String> domain;
-        private @Nullable Output<String> domainIamRoleName;
-        private @Nullable Output<List<String>> enabledCloudwatchLogsExports;
-        private @Nullable Output<String> endpoint;
-        private @Nullable Output<String> engine;
-        private @Nullable Output<String> engineVersion;
-        private @Nullable Output<String> engineVersionActual;
-        private @Nullable Output<String> finalSnapshotIdentifier;
-        private @Nullable Output<String> hostedZoneId;
-        private @Nullable Output<Boolean> iamDatabaseAuthenticationEnabled;
-        private @Nullable Output<String> identifier;
-        private @Nullable Output<String> identifierPrefix;
-        private @Nullable Output<Either<String,InstanceType>> instanceClass;
-        private @Nullable Output<Integer> iops;
-        private @Nullable Output<String> kmsKeyId;
-        private @Nullable Output<String> latestRestorableTime;
-        private @Nullable Output<String> licenseModel;
-        private @Nullable Output<String> maintenanceWindow;
-        private @Nullable Output<Integer> maxAllocatedStorage;
-        private @Nullable Output<Integer> monitoringInterval;
-        private @Nullable Output<String> monitoringRoleArn;
-        private @Nullable Output<Boolean> multiAz;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> ncharCharacterSetName;
-        private @Nullable Output<String> optionGroupName;
-        private @Nullable Output<String> parameterGroupName;
-        private @Nullable Output<String> password;
-        private @Nullable Output<Boolean> performanceInsightsEnabled;
-        private @Nullable Output<String> performanceInsightsKmsKeyId;
-        private @Nullable Output<Integer> performanceInsightsRetentionPeriod;
-        private @Nullable Output<Integer> port;
-        private @Nullable Output<Boolean> publiclyAccessible;
-        private @Nullable Output<String> replicaMode;
-        private @Nullable Output<List<String>> replicas;
-        private @Nullable Output<String> replicateSourceDb;
-        private @Nullable Output<String> resourceId;
-        private @Nullable Output<InstanceRestoreToPointInTimeGetArgs> restoreToPointInTime;
-        private @Nullable Output<InstanceS3ImportGetArgs> s3Import;
-        private @Nullable Output<List<String>> securityGroupNames;
-        private @Nullable Output<Boolean> skipFinalSnapshot;
-        private @Nullable Output<String> snapshotIdentifier;
-        private @Nullable Output<String> status;
-        private @Nullable Output<Boolean> storageEncrypted;
-        private @Nullable Output<Either<String,StorageType>> storageType;
-        private @Nullable Output<Map<String,String>> tags;
-        private @Nullable Output<Map<String,String>> tagsAll;
-        private @Nullable Output<String> timezone;
-        private @Nullable Output<String> username;
-        private @Nullable Output<List<String>> vpcSecurityGroupIds;
+        private InstanceState $;
 
         public Builder() {
-    	      // Empty
+            $ = new InstanceState();
         }
 
         public Builder(InstanceState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.address = defaults.address;
-    	      this.allocatedStorage = defaults.allocatedStorage;
-    	      this.allowMajorVersionUpgrade = defaults.allowMajorVersionUpgrade;
-    	      this.applyImmediately = defaults.applyImmediately;
-    	      this.arn = defaults.arn;
-    	      this.autoMinorVersionUpgrade = defaults.autoMinorVersionUpgrade;
-    	      this.availabilityZone = defaults.availabilityZone;
-    	      this.backupRetentionPeriod = defaults.backupRetentionPeriod;
-    	      this.backupWindow = defaults.backupWindow;
-    	      this.caCertIdentifier = defaults.caCertIdentifier;
-    	      this.characterSetName = defaults.characterSetName;
-    	      this.copyTagsToSnapshot = defaults.copyTagsToSnapshot;
-    	      this.customerOwnedIpEnabled = defaults.customerOwnedIpEnabled;
-    	      this.dbSubnetGroupName = defaults.dbSubnetGroupName;
-    	      this.deleteAutomatedBackups = defaults.deleteAutomatedBackups;
-    	      this.deletionProtection = defaults.deletionProtection;
-    	      this.domain = defaults.domain;
-    	      this.domainIamRoleName = defaults.domainIamRoleName;
-    	      this.enabledCloudwatchLogsExports = defaults.enabledCloudwatchLogsExports;
-    	      this.endpoint = defaults.endpoint;
-    	      this.engine = defaults.engine;
-    	      this.engineVersion = defaults.engineVersion;
-    	      this.engineVersionActual = defaults.engineVersionActual;
-    	      this.finalSnapshotIdentifier = defaults.finalSnapshotIdentifier;
-    	      this.hostedZoneId = defaults.hostedZoneId;
-    	      this.iamDatabaseAuthenticationEnabled = defaults.iamDatabaseAuthenticationEnabled;
-    	      this.identifier = defaults.identifier;
-    	      this.identifierPrefix = defaults.identifierPrefix;
-    	      this.instanceClass = defaults.instanceClass;
-    	      this.iops = defaults.iops;
-    	      this.kmsKeyId = defaults.kmsKeyId;
-    	      this.latestRestorableTime = defaults.latestRestorableTime;
-    	      this.licenseModel = defaults.licenseModel;
-    	      this.maintenanceWindow = defaults.maintenanceWindow;
-    	      this.maxAllocatedStorage = defaults.maxAllocatedStorage;
-    	      this.monitoringInterval = defaults.monitoringInterval;
-    	      this.monitoringRoleArn = defaults.monitoringRoleArn;
-    	      this.multiAz = defaults.multiAz;
-    	      this.name = defaults.name;
-    	      this.ncharCharacterSetName = defaults.ncharCharacterSetName;
-    	      this.optionGroupName = defaults.optionGroupName;
-    	      this.parameterGroupName = defaults.parameterGroupName;
-    	      this.password = defaults.password;
-    	      this.performanceInsightsEnabled = defaults.performanceInsightsEnabled;
-    	      this.performanceInsightsKmsKeyId = defaults.performanceInsightsKmsKeyId;
-    	      this.performanceInsightsRetentionPeriod = defaults.performanceInsightsRetentionPeriod;
-    	      this.port = defaults.port;
-    	      this.publiclyAccessible = defaults.publiclyAccessible;
-    	      this.replicaMode = defaults.replicaMode;
-    	      this.replicas = defaults.replicas;
-    	      this.replicateSourceDb = defaults.replicateSourceDb;
-    	      this.resourceId = defaults.resourceId;
-    	      this.restoreToPointInTime = defaults.restoreToPointInTime;
-    	      this.s3Import = defaults.s3Import;
-    	      this.securityGroupNames = defaults.securityGroupNames;
-    	      this.skipFinalSnapshot = defaults.skipFinalSnapshot;
-    	      this.snapshotIdentifier = defaults.snapshotIdentifier;
-    	      this.status = defaults.status;
-    	      this.storageEncrypted = defaults.storageEncrypted;
-    	      this.storageType = defaults.storageType;
-    	      this.tags = defaults.tags;
-    	      this.tagsAll = defaults.tagsAll;
-    	      this.timezone = defaults.timezone;
-    	      this.username = defaults.username;
-    	      this.vpcSecurityGroupIds = defaults.vpcSecurityGroupIds;
+            $ = new InstanceState(Objects.requireNonNull(defaults));
         }
 
         public Builder address(@Nullable Output<String> address) {
-            this.address = address;
+            $.address = address;
             return this;
         }
-        public Builder address(@Nullable String address) {
-            this.address = Codegen.ofNullable(address);
-            return this;
+
+        public Builder address(String address) {
+            return address(Output.of(address));
         }
+
         public Builder allocatedStorage(@Nullable Output<Integer> allocatedStorage) {
-            this.allocatedStorage = allocatedStorage;
+            $.allocatedStorage = allocatedStorage;
             return this;
         }
-        public Builder allocatedStorage(@Nullable Integer allocatedStorage) {
-            this.allocatedStorage = Codegen.ofNullable(allocatedStorage);
-            return this;
+
+        public Builder allocatedStorage(Integer allocatedStorage) {
+            return allocatedStorage(Output.of(allocatedStorage));
         }
+
         public Builder allowMajorVersionUpgrade(@Nullable Output<Boolean> allowMajorVersionUpgrade) {
-            this.allowMajorVersionUpgrade = allowMajorVersionUpgrade;
+            $.allowMajorVersionUpgrade = allowMajorVersionUpgrade;
             return this;
         }
-        public Builder allowMajorVersionUpgrade(@Nullable Boolean allowMajorVersionUpgrade) {
-            this.allowMajorVersionUpgrade = Codegen.ofNullable(allowMajorVersionUpgrade);
-            return this;
+
+        public Builder allowMajorVersionUpgrade(Boolean allowMajorVersionUpgrade) {
+            return allowMajorVersionUpgrade(Output.of(allowMajorVersionUpgrade));
         }
+
         public Builder applyImmediately(@Nullable Output<Boolean> applyImmediately) {
-            this.applyImmediately = applyImmediately;
+            $.applyImmediately = applyImmediately;
             return this;
         }
-        public Builder applyImmediately(@Nullable Boolean applyImmediately) {
-            this.applyImmediately = Codegen.ofNullable(applyImmediately);
-            return this;
+
+        public Builder applyImmediately(Boolean applyImmediately) {
+            return applyImmediately(Output.of(applyImmediately));
         }
+
         public Builder arn(@Nullable Output<String> arn) {
-            this.arn = arn;
+            $.arn = arn;
             return this;
         }
-        public Builder arn(@Nullable String arn) {
-            this.arn = Codegen.ofNullable(arn);
-            return this;
+
+        public Builder arn(String arn) {
+            return arn(Output.of(arn));
         }
+
         public Builder autoMinorVersionUpgrade(@Nullable Output<Boolean> autoMinorVersionUpgrade) {
-            this.autoMinorVersionUpgrade = autoMinorVersionUpgrade;
+            $.autoMinorVersionUpgrade = autoMinorVersionUpgrade;
             return this;
         }
-        public Builder autoMinorVersionUpgrade(@Nullable Boolean autoMinorVersionUpgrade) {
-            this.autoMinorVersionUpgrade = Codegen.ofNullable(autoMinorVersionUpgrade);
-            return this;
+
+        public Builder autoMinorVersionUpgrade(Boolean autoMinorVersionUpgrade) {
+            return autoMinorVersionUpgrade(Output.of(autoMinorVersionUpgrade));
         }
+
         public Builder availabilityZone(@Nullable Output<String> availabilityZone) {
-            this.availabilityZone = availabilityZone;
+            $.availabilityZone = availabilityZone;
             return this;
         }
-        public Builder availabilityZone(@Nullable String availabilityZone) {
-            this.availabilityZone = Codegen.ofNullable(availabilityZone);
-            return this;
+
+        public Builder availabilityZone(String availabilityZone) {
+            return availabilityZone(Output.of(availabilityZone));
         }
+
         public Builder backupRetentionPeriod(@Nullable Output<Integer> backupRetentionPeriod) {
-            this.backupRetentionPeriod = backupRetentionPeriod;
+            $.backupRetentionPeriod = backupRetentionPeriod;
             return this;
         }
-        public Builder backupRetentionPeriod(@Nullable Integer backupRetentionPeriod) {
-            this.backupRetentionPeriod = Codegen.ofNullable(backupRetentionPeriod);
-            return this;
+
+        public Builder backupRetentionPeriod(Integer backupRetentionPeriod) {
+            return backupRetentionPeriod(Output.of(backupRetentionPeriod));
         }
+
         public Builder backupWindow(@Nullable Output<String> backupWindow) {
-            this.backupWindow = backupWindow;
+            $.backupWindow = backupWindow;
             return this;
         }
-        public Builder backupWindow(@Nullable String backupWindow) {
-            this.backupWindow = Codegen.ofNullable(backupWindow);
-            return this;
+
+        public Builder backupWindow(String backupWindow) {
+            return backupWindow(Output.of(backupWindow));
         }
+
         public Builder caCertIdentifier(@Nullable Output<String> caCertIdentifier) {
-            this.caCertIdentifier = caCertIdentifier;
+            $.caCertIdentifier = caCertIdentifier;
             return this;
         }
-        public Builder caCertIdentifier(@Nullable String caCertIdentifier) {
-            this.caCertIdentifier = Codegen.ofNullable(caCertIdentifier);
-            return this;
+
+        public Builder caCertIdentifier(String caCertIdentifier) {
+            return caCertIdentifier(Output.of(caCertIdentifier));
         }
+
         public Builder characterSetName(@Nullable Output<String> characterSetName) {
-            this.characterSetName = characterSetName;
+            $.characterSetName = characterSetName;
             return this;
         }
-        public Builder characterSetName(@Nullable String characterSetName) {
-            this.characterSetName = Codegen.ofNullable(characterSetName);
-            return this;
+
+        public Builder characterSetName(String characterSetName) {
+            return characterSetName(Output.of(characterSetName));
         }
+
         public Builder copyTagsToSnapshot(@Nullable Output<Boolean> copyTagsToSnapshot) {
-            this.copyTagsToSnapshot = copyTagsToSnapshot;
+            $.copyTagsToSnapshot = copyTagsToSnapshot;
             return this;
         }
-        public Builder copyTagsToSnapshot(@Nullable Boolean copyTagsToSnapshot) {
-            this.copyTagsToSnapshot = Codegen.ofNullable(copyTagsToSnapshot);
-            return this;
+
+        public Builder copyTagsToSnapshot(Boolean copyTagsToSnapshot) {
+            return copyTagsToSnapshot(Output.of(copyTagsToSnapshot));
         }
+
         public Builder customerOwnedIpEnabled(@Nullable Output<Boolean> customerOwnedIpEnabled) {
-            this.customerOwnedIpEnabled = customerOwnedIpEnabled;
+            $.customerOwnedIpEnabled = customerOwnedIpEnabled;
             return this;
         }
-        public Builder customerOwnedIpEnabled(@Nullable Boolean customerOwnedIpEnabled) {
-            this.customerOwnedIpEnabled = Codegen.ofNullable(customerOwnedIpEnabled);
-            return this;
+
+        public Builder customerOwnedIpEnabled(Boolean customerOwnedIpEnabled) {
+            return customerOwnedIpEnabled(Output.of(customerOwnedIpEnabled));
         }
+
         public Builder dbSubnetGroupName(@Nullable Output<String> dbSubnetGroupName) {
-            this.dbSubnetGroupName = dbSubnetGroupName;
+            $.dbSubnetGroupName = dbSubnetGroupName;
             return this;
         }
-        public Builder dbSubnetGroupName(@Nullable String dbSubnetGroupName) {
-            this.dbSubnetGroupName = Codegen.ofNullable(dbSubnetGroupName);
-            return this;
+
+        public Builder dbSubnetGroupName(String dbSubnetGroupName) {
+            return dbSubnetGroupName(Output.of(dbSubnetGroupName));
         }
+
         public Builder deleteAutomatedBackups(@Nullable Output<Boolean> deleteAutomatedBackups) {
-            this.deleteAutomatedBackups = deleteAutomatedBackups;
+            $.deleteAutomatedBackups = deleteAutomatedBackups;
             return this;
         }
-        public Builder deleteAutomatedBackups(@Nullable Boolean deleteAutomatedBackups) {
-            this.deleteAutomatedBackups = Codegen.ofNullable(deleteAutomatedBackups);
-            return this;
+
+        public Builder deleteAutomatedBackups(Boolean deleteAutomatedBackups) {
+            return deleteAutomatedBackups(Output.of(deleteAutomatedBackups));
         }
+
         public Builder deletionProtection(@Nullable Output<Boolean> deletionProtection) {
-            this.deletionProtection = deletionProtection;
+            $.deletionProtection = deletionProtection;
             return this;
         }
-        public Builder deletionProtection(@Nullable Boolean deletionProtection) {
-            this.deletionProtection = Codegen.ofNullable(deletionProtection);
-            return this;
+
+        public Builder deletionProtection(Boolean deletionProtection) {
+            return deletionProtection(Output.of(deletionProtection));
         }
+
         public Builder domain(@Nullable Output<String> domain) {
-            this.domain = domain;
+            $.domain = domain;
             return this;
         }
-        public Builder domain(@Nullable String domain) {
-            this.domain = Codegen.ofNullable(domain);
-            return this;
+
+        public Builder domain(String domain) {
+            return domain(Output.of(domain));
         }
+
         public Builder domainIamRoleName(@Nullable Output<String> domainIamRoleName) {
-            this.domainIamRoleName = domainIamRoleName;
+            $.domainIamRoleName = domainIamRoleName;
             return this;
         }
-        public Builder domainIamRoleName(@Nullable String domainIamRoleName) {
-            this.domainIamRoleName = Codegen.ofNullable(domainIamRoleName);
-            return this;
+
+        public Builder domainIamRoleName(String domainIamRoleName) {
+            return domainIamRoleName(Output.of(domainIamRoleName));
         }
+
         public Builder enabledCloudwatchLogsExports(@Nullable Output<List<String>> enabledCloudwatchLogsExports) {
-            this.enabledCloudwatchLogsExports = enabledCloudwatchLogsExports;
+            $.enabledCloudwatchLogsExports = enabledCloudwatchLogsExports;
             return this;
         }
-        public Builder enabledCloudwatchLogsExports(@Nullable List<String> enabledCloudwatchLogsExports) {
-            this.enabledCloudwatchLogsExports = Codegen.ofNullable(enabledCloudwatchLogsExports);
-            return this;
+
+        public Builder enabledCloudwatchLogsExports(List<String> enabledCloudwatchLogsExports) {
+            return enabledCloudwatchLogsExports(Output.of(enabledCloudwatchLogsExports));
         }
+
         public Builder enabledCloudwatchLogsExports(String... enabledCloudwatchLogsExports) {
             return enabledCloudwatchLogsExports(List.of(enabledCloudwatchLogsExports));
         }
+
         public Builder endpoint(@Nullable Output<String> endpoint) {
-            this.endpoint = endpoint;
+            $.endpoint = endpoint;
             return this;
         }
-        public Builder endpoint(@Nullable String endpoint) {
-            this.endpoint = Codegen.ofNullable(endpoint);
-            return this;
+
+        public Builder endpoint(String endpoint) {
+            return endpoint(Output.of(endpoint));
         }
+
         public Builder engine(@Nullable Output<String> engine) {
-            this.engine = engine;
+            $.engine = engine;
             return this;
         }
-        public Builder engine(@Nullable String engine) {
-            this.engine = Codegen.ofNullable(engine);
-            return this;
+
+        public Builder engine(String engine) {
+            return engine(Output.of(engine));
         }
+
         public Builder engineVersion(@Nullable Output<String> engineVersion) {
-            this.engineVersion = engineVersion;
+            $.engineVersion = engineVersion;
             return this;
         }
-        public Builder engineVersion(@Nullable String engineVersion) {
-            this.engineVersion = Codegen.ofNullable(engineVersion);
-            return this;
+
+        public Builder engineVersion(String engineVersion) {
+            return engineVersion(Output.of(engineVersion));
         }
+
         public Builder engineVersionActual(@Nullable Output<String> engineVersionActual) {
-            this.engineVersionActual = engineVersionActual;
+            $.engineVersionActual = engineVersionActual;
             return this;
         }
-        public Builder engineVersionActual(@Nullable String engineVersionActual) {
-            this.engineVersionActual = Codegen.ofNullable(engineVersionActual);
-            return this;
+
+        public Builder engineVersionActual(String engineVersionActual) {
+            return engineVersionActual(Output.of(engineVersionActual));
         }
+
         public Builder finalSnapshotIdentifier(@Nullable Output<String> finalSnapshotIdentifier) {
-            this.finalSnapshotIdentifier = finalSnapshotIdentifier;
+            $.finalSnapshotIdentifier = finalSnapshotIdentifier;
             return this;
         }
-        public Builder finalSnapshotIdentifier(@Nullable String finalSnapshotIdentifier) {
-            this.finalSnapshotIdentifier = Codegen.ofNullable(finalSnapshotIdentifier);
-            return this;
+
+        public Builder finalSnapshotIdentifier(String finalSnapshotIdentifier) {
+            return finalSnapshotIdentifier(Output.of(finalSnapshotIdentifier));
         }
+
         public Builder hostedZoneId(@Nullable Output<String> hostedZoneId) {
-            this.hostedZoneId = hostedZoneId;
+            $.hostedZoneId = hostedZoneId;
             return this;
         }
-        public Builder hostedZoneId(@Nullable String hostedZoneId) {
-            this.hostedZoneId = Codegen.ofNullable(hostedZoneId);
-            return this;
+
+        public Builder hostedZoneId(String hostedZoneId) {
+            return hostedZoneId(Output.of(hostedZoneId));
         }
+
         public Builder iamDatabaseAuthenticationEnabled(@Nullable Output<Boolean> iamDatabaseAuthenticationEnabled) {
-            this.iamDatabaseAuthenticationEnabled = iamDatabaseAuthenticationEnabled;
+            $.iamDatabaseAuthenticationEnabled = iamDatabaseAuthenticationEnabled;
             return this;
         }
-        public Builder iamDatabaseAuthenticationEnabled(@Nullable Boolean iamDatabaseAuthenticationEnabled) {
-            this.iamDatabaseAuthenticationEnabled = Codegen.ofNullable(iamDatabaseAuthenticationEnabled);
-            return this;
+
+        public Builder iamDatabaseAuthenticationEnabled(Boolean iamDatabaseAuthenticationEnabled) {
+            return iamDatabaseAuthenticationEnabled(Output.of(iamDatabaseAuthenticationEnabled));
         }
+
         public Builder identifier(@Nullable Output<String> identifier) {
-            this.identifier = identifier;
+            $.identifier = identifier;
             return this;
         }
-        public Builder identifier(@Nullable String identifier) {
-            this.identifier = Codegen.ofNullable(identifier);
-            return this;
+
+        public Builder identifier(String identifier) {
+            return identifier(Output.of(identifier));
         }
+
         public Builder identifierPrefix(@Nullable Output<String> identifierPrefix) {
-            this.identifierPrefix = identifierPrefix;
+            $.identifierPrefix = identifierPrefix;
             return this;
         }
-        public Builder identifierPrefix(@Nullable String identifierPrefix) {
-            this.identifierPrefix = Codegen.ofNullable(identifierPrefix);
-            return this;
+
+        public Builder identifierPrefix(String identifierPrefix) {
+            return identifierPrefix(Output.of(identifierPrefix));
         }
+
         public Builder instanceClass(@Nullable Output<Either<String,InstanceType>> instanceClass) {
-            this.instanceClass = instanceClass;
+            $.instanceClass = instanceClass;
             return this;
         }
-        public Builder instanceClass(@Nullable Either<String,InstanceType> instanceClass) {
-            this.instanceClass = Codegen.ofNullable(instanceClass);
-            return this;
+
+        public Builder instanceClass(Either<String,InstanceType> instanceClass) {
+            return instanceClass(Output.of(instanceClass));
         }
+
         public Builder iops(@Nullable Output<Integer> iops) {
-            this.iops = iops;
+            $.iops = iops;
             return this;
         }
-        public Builder iops(@Nullable Integer iops) {
-            this.iops = Codegen.ofNullable(iops);
-            return this;
+
+        public Builder iops(Integer iops) {
+            return iops(Output.of(iops));
         }
+
         public Builder kmsKeyId(@Nullable Output<String> kmsKeyId) {
-            this.kmsKeyId = kmsKeyId;
+            $.kmsKeyId = kmsKeyId;
             return this;
         }
-        public Builder kmsKeyId(@Nullable String kmsKeyId) {
-            this.kmsKeyId = Codegen.ofNullable(kmsKeyId);
-            return this;
+
+        public Builder kmsKeyId(String kmsKeyId) {
+            return kmsKeyId(Output.of(kmsKeyId));
         }
+
         public Builder latestRestorableTime(@Nullable Output<String> latestRestorableTime) {
-            this.latestRestorableTime = latestRestorableTime;
+            $.latestRestorableTime = latestRestorableTime;
             return this;
         }
-        public Builder latestRestorableTime(@Nullable String latestRestorableTime) {
-            this.latestRestorableTime = Codegen.ofNullable(latestRestorableTime);
-            return this;
+
+        public Builder latestRestorableTime(String latestRestorableTime) {
+            return latestRestorableTime(Output.of(latestRestorableTime));
         }
+
         public Builder licenseModel(@Nullable Output<String> licenseModel) {
-            this.licenseModel = licenseModel;
+            $.licenseModel = licenseModel;
             return this;
         }
-        public Builder licenseModel(@Nullable String licenseModel) {
-            this.licenseModel = Codegen.ofNullable(licenseModel);
-            return this;
+
+        public Builder licenseModel(String licenseModel) {
+            return licenseModel(Output.of(licenseModel));
         }
+
         public Builder maintenanceWindow(@Nullable Output<String> maintenanceWindow) {
-            this.maintenanceWindow = maintenanceWindow;
+            $.maintenanceWindow = maintenanceWindow;
             return this;
         }
-        public Builder maintenanceWindow(@Nullable String maintenanceWindow) {
-            this.maintenanceWindow = Codegen.ofNullable(maintenanceWindow);
-            return this;
+
+        public Builder maintenanceWindow(String maintenanceWindow) {
+            return maintenanceWindow(Output.of(maintenanceWindow));
         }
+
         public Builder maxAllocatedStorage(@Nullable Output<Integer> maxAllocatedStorage) {
-            this.maxAllocatedStorage = maxAllocatedStorage;
+            $.maxAllocatedStorage = maxAllocatedStorage;
             return this;
         }
-        public Builder maxAllocatedStorage(@Nullable Integer maxAllocatedStorage) {
-            this.maxAllocatedStorage = Codegen.ofNullable(maxAllocatedStorage);
-            return this;
+
+        public Builder maxAllocatedStorage(Integer maxAllocatedStorage) {
+            return maxAllocatedStorage(Output.of(maxAllocatedStorage));
         }
+
         public Builder monitoringInterval(@Nullable Output<Integer> monitoringInterval) {
-            this.monitoringInterval = monitoringInterval;
+            $.monitoringInterval = monitoringInterval;
             return this;
         }
-        public Builder monitoringInterval(@Nullable Integer monitoringInterval) {
-            this.monitoringInterval = Codegen.ofNullable(monitoringInterval);
-            return this;
+
+        public Builder monitoringInterval(Integer monitoringInterval) {
+            return monitoringInterval(Output.of(monitoringInterval));
         }
+
         public Builder monitoringRoleArn(@Nullable Output<String> monitoringRoleArn) {
-            this.monitoringRoleArn = monitoringRoleArn;
+            $.monitoringRoleArn = monitoringRoleArn;
             return this;
         }
-        public Builder monitoringRoleArn(@Nullable String monitoringRoleArn) {
-            this.monitoringRoleArn = Codegen.ofNullable(monitoringRoleArn);
-            return this;
+
+        public Builder monitoringRoleArn(String monitoringRoleArn) {
+            return monitoringRoleArn(Output.of(monitoringRoleArn));
         }
+
         public Builder multiAz(@Nullable Output<Boolean> multiAz) {
-            this.multiAz = multiAz;
+            $.multiAz = multiAz;
             return this;
         }
-        public Builder multiAz(@Nullable Boolean multiAz) {
-            this.multiAz = Codegen.ofNullable(multiAz);
-            return this;
+
+        public Builder multiAz(Boolean multiAz) {
+            return multiAz(Output.of(multiAz));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder ncharCharacterSetName(@Nullable Output<String> ncharCharacterSetName) {
-            this.ncharCharacterSetName = ncharCharacterSetName;
+            $.ncharCharacterSetName = ncharCharacterSetName;
             return this;
         }
-        public Builder ncharCharacterSetName(@Nullable String ncharCharacterSetName) {
-            this.ncharCharacterSetName = Codegen.ofNullable(ncharCharacterSetName);
-            return this;
+
+        public Builder ncharCharacterSetName(String ncharCharacterSetName) {
+            return ncharCharacterSetName(Output.of(ncharCharacterSetName));
         }
+
         public Builder optionGroupName(@Nullable Output<String> optionGroupName) {
-            this.optionGroupName = optionGroupName;
+            $.optionGroupName = optionGroupName;
             return this;
         }
-        public Builder optionGroupName(@Nullable String optionGroupName) {
-            this.optionGroupName = Codegen.ofNullable(optionGroupName);
-            return this;
+
+        public Builder optionGroupName(String optionGroupName) {
+            return optionGroupName(Output.of(optionGroupName));
         }
+
         public Builder parameterGroupName(@Nullable Output<String> parameterGroupName) {
-            this.parameterGroupName = parameterGroupName;
+            $.parameterGroupName = parameterGroupName;
             return this;
         }
-        public Builder parameterGroupName(@Nullable String parameterGroupName) {
-            this.parameterGroupName = Codegen.ofNullable(parameterGroupName);
-            return this;
+
+        public Builder parameterGroupName(String parameterGroupName) {
+            return parameterGroupName(Output.of(parameterGroupName));
         }
+
         public Builder password(@Nullable Output<String> password) {
-            this.password = password;
+            $.password = password;
             return this;
         }
-        public Builder password(@Nullable String password) {
-            this.password = Codegen.ofNullable(password);
-            return this;
+
+        public Builder password(String password) {
+            return password(Output.of(password));
         }
+
         public Builder performanceInsightsEnabled(@Nullable Output<Boolean> performanceInsightsEnabled) {
-            this.performanceInsightsEnabled = performanceInsightsEnabled;
+            $.performanceInsightsEnabled = performanceInsightsEnabled;
             return this;
         }
-        public Builder performanceInsightsEnabled(@Nullable Boolean performanceInsightsEnabled) {
-            this.performanceInsightsEnabled = Codegen.ofNullable(performanceInsightsEnabled);
-            return this;
+
+        public Builder performanceInsightsEnabled(Boolean performanceInsightsEnabled) {
+            return performanceInsightsEnabled(Output.of(performanceInsightsEnabled));
         }
+
         public Builder performanceInsightsKmsKeyId(@Nullable Output<String> performanceInsightsKmsKeyId) {
-            this.performanceInsightsKmsKeyId = performanceInsightsKmsKeyId;
+            $.performanceInsightsKmsKeyId = performanceInsightsKmsKeyId;
             return this;
         }
-        public Builder performanceInsightsKmsKeyId(@Nullable String performanceInsightsKmsKeyId) {
-            this.performanceInsightsKmsKeyId = Codegen.ofNullable(performanceInsightsKmsKeyId);
-            return this;
+
+        public Builder performanceInsightsKmsKeyId(String performanceInsightsKmsKeyId) {
+            return performanceInsightsKmsKeyId(Output.of(performanceInsightsKmsKeyId));
         }
+
         public Builder performanceInsightsRetentionPeriod(@Nullable Output<Integer> performanceInsightsRetentionPeriod) {
-            this.performanceInsightsRetentionPeriod = performanceInsightsRetentionPeriod;
+            $.performanceInsightsRetentionPeriod = performanceInsightsRetentionPeriod;
             return this;
         }
-        public Builder performanceInsightsRetentionPeriod(@Nullable Integer performanceInsightsRetentionPeriod) {
-            this.performanceInsightsRetentionPeriod = Codegen.ofNullable(performanceInsightsRetentionPeriod);
-            return this;
+
+        public Builder performanceInsightsRetentionPeriod(Integer performanceInsightsRetentionPeriod) {
+            return performanceInsightsRetentionPeriod(Output.of(performanceInsightsRetentionPeriod));
         }
+
         public Builder port(@Nullable Output<Integer> port) {
-            this.port = port;
+            $.port = port;
             return this;
         }
-        public Builder port(@Nullable Integer port) {
-            this.port = Codegen.ofNullable(port);
-            return this;
+
+        public Builder port(Integer port) {
+            return port(Output.of(port));
         }
+
         public Builder publiclyAccessible(@Nullable Output<Boolean> publiclyAccessible) {
-            this.publiclyAccessible = publiclyAccessible;
+            $.publiclyAccessible = publiclyAccessible;
             return this;
         }
-        public Builder publiclyAccessible(@Nullable Boolean publiclyAccessible) {
-            this.publiclyAccessible = Codegen.ofNullable(publiclyAccessible);
-            return this;
+
+        public Builder publiclyAccessible(Boolean publiclyAccessible) {
+            return publiclyAccessible(Output.of(publiclyAccessible));
         }
+
         public Builder replicaMode(@Nullable Output<String> replicaMode) {
-            this.replicaMode = replicaMode;
+            $.replicaMode = replicaMode;
             return this;
         }
-        public Builder replicaMode(@Nullable String replicaMode) {
-            this.replicaMode = Codegen.ofNullable(replicaMode);
-            return this;
+
+        public Builder replicaMode(String replicaMode) {
+            return replicaMode(Output.of(replicaMode));
         }
+
         public Builder replicas(@Nullable Output<List<String>> replicas) {
-            this.replicas = replicas;
+            $.replicas = replicas;
             return this;
         }
-        public Builder replicas(@Nullable List<String> replicas) {
-            this.replicas = Codegen.ofNullable(replicas);
-            return this;
+
+        public Builder replicas(List<String> replicas) {
+            return replicas(Output.of(replicas));
         }
+
         public Builder replicas(String... replicas) {
             return replicas(List.of(replicas));
         }
+
         public Builder replicateSourceDb(@Nullable Output<String> replicateSourceDb) {
-            this.replicateSourceDb = replicateSourceDb;
+            $.replicateSourceDb = replicateSourceDb;
             return this;
         }
-        public Builder replicateSourceDb(@Nullable String replicateSourceDb) {
-            this.replicateSourceDb = Codegen.ofNullable(replicateSourceDb);
-            return this;
+
+        public Builder replicateSourceDb(String replicateSourceDb) {
+            return replicateSourceDb(Output.of(replicateSourceDb));
         }
+
         public Builder resourceId(@Nullable Output<String> resourceId) {
-            this.resourceId = resourceId;
+            $.resourceId = resourceId;
             return this;
         }
-        public Builder resourceId(@Nullable String resourceId) {
-            this.resourceId = Codegen.ofNullable(resourceId);
-            return this;
+
+        public Builder resourceId(String resourceId) {
+            return resourceId(Output.of(resourceId));
         }
+
         public Builder restoreToPointInTime(@Nullable Output<InstanceRestoreToPointInTimeGetArgs> restoreToPointInTime) {
-            this.restoreToPointInTime = restoreToPointInTime;
+            $.restoreToPointInTime = restoreToPointInTime;
             return this;
         }
-        public Builder restoreToPointInTime(@Nullable InstanceRestoreToPointInTimeGetArgs restoreToPointInTime) {
-            this.restoreToPointInTime = Codegen.ofNullable(restoreToPointInTime);
-            return this;
+
+        public Builder restoreToPointInTime(InstanceRestoreToPointInTimeGetArgs restoreToPointInTime) {
+            return restoreToPointInTime(Output.of(restoreToPointInTime));
         }
+
         public Builder s3Import(@Nullable Output<InstanceS3ImportGetArgs> s3Import) {
-            this.s3Import = s3Import;
+            $.s3Import = s3Import;
             return this;
         }
-        public Builder s3Import(@Nullable InstanceS3ImportGetArgs s3Import) {
-            this.s3Import = Codegen.ofNullable(s3Import);
-            return this;
+
+        public Builder s3Import(InstanceS3ImportGetArgs s3Import) {
+            return s3Import(Output.of(s3Import));
         }
+
         public Builder securityGroupNames(@Nullable Output<List<String>> securityGroupNames) {
-            this.securityGroupNames = securityGroupNames;
+            $.securityGroupNames = securityGroupNames;
             return this;
         }
-        public Builder securityGroupNames(@Nullable List<String> securityGroupNames) {
-            this.securityGroupNames = Codegen.ofNullable(securityGroupNames);
-            return this;
+
+        public Builder securityGroupNames(List<String> securityGroupNames) {
+            return securityGroupNames(Output.of(securityGroupNames));
         }
+
         public Builder securityGroupNames(String... securityGroupNames) {
             return securityGroupNames(List.of(securityGroupNames));
         }
+
         public Builder skipFinalSnapshot(@Nullable Output<Boolean> skipFinalSnapshot) {
-            this.skipFinalSnapshot = skipFinalSnapshot;
+            $.skipFinalSnapshot = skipFinalSnapshot;
             return this;
         }
-        public Builder skipFinalSnapshot(@Nullable Boolean skipFinalSnapshot) {
-            this.skipFinalSnapshot = Codegen.ofNullable(skipFinalSnapshot);
-            return this;
+
+        public Builder skipFinalSnapshot(Boolean skipFinalSnapshot) {
+            return skipFinalSnapshot(Output.of(skipFinalSnapshot));
         }
+
         public Builder snapshotIdentifier(@Nullable Output<String> snapshotIdentifier) {
-            this.snapshotIdentifier = snapshotIdentifier;
+            $.snapshotIdentifier = snapshotIdentifier;
             return this;
         }
-        public Builder snapshotIdentifier(@Nullable String snapshotIdentifier) {
-            this.snapshotIdentifier = Codegen.ofNullable(snapshotIdentifier);
-            return this;
+
+        public Builder snapshotIdentifier(String snapshotIdentifier) {
+            return snapshotIdentifier(Output.of(snapshotIdentifier));
         }
+
         public Builder status(@Nullable Output<String> status) {
-            this.status = status;
+            $.status = status;
             return this;
         }
-        public Builder status(@Nullable String status) {
-            this.status = Codegen.ofNullable(status);
-            return this;
+
+        public Builder status(String status) {
+            return status(Output.of(status));
         }
+
         public Builder storageEncrypted(@Nullable Output<Boolean> storageEncrypted) {
-            this.storageEncrypted = storageEncrypted;
+            $.storageEncrypted = storageEncrypted;
             return this;
         }
-        public Builder storageEncrypted(@Nullable Boolean storageEncrypted) {
-            this.storageEncrypted = Codegen.ofNullable(storageEncrypted);
-            return this;
+
+        public Builder storageEncrypted(Boolean storageEncrypted) {
+            return storageEncrypted(Output.of(storageEncrypted));
         }
+
         public Builder storageType(@Nullable Output<Either<String,StorageType>> storageType) {
-            this.storageType = storageType;
+            $.storageType = storageType;
             return this;
         }
-        public Builder storageType(@Nullable Either<String,StorageType> storageType) {
-            this.storageType = Codegen.ofNullable(storageType);
-            return this;
+
+        public Builder storageType(Either<String,StorageType> storageType) {
+            return storageType(Output.of(storageType));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
-            this.tagsAll = tagsAll;
+            $.tagsAll = tagsAll;
             return this;
         }
-        public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Codegen.ofNullable(tagsAll);
-            return this;
+
+        public Builder tagsAll(Map<String,String> tagsAll) {
+            return tagsAll(Output.of(tagsAll));
         }
+
         public Builder timezone(@Nullable Output<String> timezone) {
-            this.timezone = timezone;
+            $.timezone = timezone;
             return this;
         }
-        public Builder timezone(@Nullable String timezone) {
-            this.timezone = Codegen.ofNullable(timezone);
-            return this;
+
+        public Builder timezone(String timezone) {
+            return timezone(Output.of(timezone));
         }
+
         public Builder username(@Nullable Output<String> username) {
-            this.username = username;
+            $.username = username;
             return this;
         }
-        public Builder username(@Nullable String username) {
-            this.username = Codegen.ofNullable(username);
-            return this;
+
+        public Builder username(String username) {
+            return username(Output.of(username));
         }
+
         public Builder vpcSecurityGroupIds(@Nullable Output<List<String>> vpcSecurityGroupIds) {
-            this.vpcSecurityGroupIds = vpcSecurityGroupIds;
+            $.vpcSecurityGroupIds = vpcSecurityGroupIds;
             return this;
         }
-        public Builder vpcSecurityGroupIds(@Nullable List<String> vpcSecurityGroupIds) {
-            this.vpcSecurityGroupIds = Codegen.ofNullable(vpcSecurityGroupIds);
-            return this;
+
+        public Builder vpcSecurityGroupIds(List<String> vpcSecurityGroupIds) {
+            return vpcSecurityGroupIds(Output.of(vpcSecurityGroupIds));
         }
+
         public Builder vpcSecurityGroupIds(String... vpcSecurityGroupIds) {
             return vpcSecurityGroupIds(List.of(vpcSecurityGroupIds));
-        }        public InstanceState build() {
-            return new InstanceState(address, allocatedStorage, allowMajorVersionUpgrade, applyImmediately, arn, autoMinorVersionUpgrade, availabilityZone, backupRetentionPeriod, backupWindow, caCertIdentifier, characterSetName, copyTagsToSnapshot, customerOwnedIpEnabled, dbSubnetGroupName, deleteAutomatedBackups, deletionProtection, domain, domainIamRoleName, enabledCloudwatchLogsExports, endpoint, engine, engineVersion, engineVersionActual, finalSnapshotIdentifier, hostedZoneId, iamDatabaseAuthenticationEnabled, identifier, identifierPrefix, instanceClass, iops, kmsKeyId, latestRestorableTime, licenseModel, maintenanceWindow, maxAllocatedStorage, monitoringInterval, monitoringRoleArn, multiAz, name, ncharCharacterSetName, optionGroupName, parameterGroupName, password, performanceInsightsEnabled, performanceInsightsKmsKeyId, performanceInsightsRetentionPeriod, port, publiclyAccessible, replicaMode, replicas, replicateSourceDb, resourceId, restoreToPointInTime, s3Import, securityGroupNames, skipFinalSnapshot, snapshotIdentifier, status, storageEncrypted, storageType, tags, tagsAll, timezone, username, vpcSecurityGroupIds);
+        }
+
+        public InstanceState build() {
+            return $;
         }
     }
+
 }

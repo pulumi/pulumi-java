@@ -6,10 +6,10 @@ package com.pulumi.awsnative.iotsitewise;
 import com.pulumi.awsnative.iotsitewise.inputs.ProjectTagArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class ProjectArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="assetIds")
-      private final @Nullable Output<List<String>> assetIds;
+    private @Nullable Output<List<String>> assetIds;
 
-    public Output<List<String>> assetIds() {
-        return this.assetIds == null ? Codegen.empty() : this.assetIds;
+    public Optional<Output<List<String>>> assetIds() {
+        return Optional.ofNullable(this.assetIds);
     }
 
     /**
@@ -33,7 +33,7 @@ public final class ProjectArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="portalId", required=true)
-      private final Output<String> portalId;
+    private Output<String> portalId;
 
     public Output<String> portalId() {
         return this.portalId;
@@ -44,10 +44,10 @@ public final class ProjectArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="projectDescription")
-      private final @Nullable Output<String> projectDescription;
+    private @Nullable Output<String> projectDescription;
 
-    public Output<String> projectDescription() {
-        return this.projectDescription == null ? Codegen.empty() : this.projectDescription;
+    public Optional<Output<String>> projectDescription() {
+        return Optional.ofNullable(this.projectDescription);
     }
 
     /**
@@ -55,10 +55,10 @@ public final class ProjectArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="projectName")
-      private final @Nullable Output<String> projectName;
+    private @Nullable Output<String> projectName;
 
-    public Output<String> projectName() {
-        return this.projectName == null ? Codegen.empty() : this.projectName;
+    public Optional<Output<String>> projectName() {
+        return Optional.ofNullable(this.projectName);
     }
 
     /**
@@ -66,108 +66,97 @@ public final class ProjectArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<List<ProjectTagArgs>> tags;
+    private @Nullable Output<List<ProjectTagArgs>> tags;
 
-    public Output<List<ProjectTagArgs>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<List<ProjectTagArgs>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public ProjectArgs(
-        @Nullable Output<List<String>> assetIds,
-        Output<String> portalId,
-        @Nullable Output<String> projectDescription,
-        @Nullable Output<String> projectName,
-        @Nullable Output<List<ProjectTagArgs>> tags) {
-        this.assetIds = assetIds;
-        this.portalId = Objects.requireNonNull(portalId, "expected parameter 'portalId' to be non-null");
-        this.projectDescription = projectDescription;
-        this.projectName = projectName;
-        this.tags = tags;
-    }
+    private ProjectArgs() {}
 
-    private ProjectArgs() {
-        this.assetIds = Codegen.empty();
-        this.portalId = Codegen.empty();
-        this.projectDescription = Codegen.empty();
-        this.projectName = Codegen.empty();
-        this.tags = Codegen.empty();
+    private ProjectArgs(ProjectArgs $) {
+        this.assetIds = $.assetIds;
+        this.portalId = $.portalId;
+        this.projectDescription = $.projectDescription;
+        this.projectName = $.projectName;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ProjectArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> assetIds;
-        private Output<String> portalId;
-        private @Nullable Output<String> projectDescription;
-        private @Nullable Output<String> projectName;
-        private @Nullable Output<List<ProjectTagArgs>> tags;
+        private ProjectArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ProjectArgs();
         }
 
         public Builder(ProjectArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.assetIds = defaults.assetIds;
-    	      this.portalId = defaults.portalId;
-    	      this.projectDescription = defaults.projectDescription;
-    	      this.projectName = defaults.projectName;
-    	      this.tags = defaults.tags;
+            $ = new ProjectArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder assetIds(@Nullable Output<List<String>> assetIds) {
-            this.assetIds = assetIds;
+            $.assetIds = assetIds;
             return this;
         }
-        public Builder assetIds(@Nullable List<String> assetIds) {
-            this.assetIds = Codegen.ofNullable(assetIds);
-            return this;
+
+        public Builder assetIds(List<String> assetIds) {
+            return assetIds(Output.of(assetIds));
         }
+
         public Builder assetIds(String... assetIds) {
             return assetIds(List.of(assetIds));
         }
+
         public Builder portalId(Output<String> portalId) {
-            this.portalId = Objects.requireNonNull(portalId);
+            $.portalId = portalId;
             return this;
         }
+
         public Builder portalId(String portalId) {
-            this.portalId = Output.of(Objects.requireNonNull(portalId));
-            return this;
+            return portalId(Output.of(portalId));
         }
+
         public Builder projectDescription(@Nullable Output<String> projectDescription) {
-            this.projectDescription = projectDescription;
+            $.projectDescription = projectDescription;
             return this;
         }
-        public Builder projectDescription(@Nullable String projectDescription) {
-            this.projectDescription = Codegen.ofNullable(projectDescription);
-            return this;
+
+        public Builder projectDescription(String projectDescription) {
+            return projectDescription(Output.of(projectDescription));
         }
+
         public Builder projectName(@Nullable Output<String> projectName) {
-            this.projectName = projectName;
+            $.projectName = projectName;
             return this;
         }
-        public Builder projectName(@Nullable String projectName) {
-            this.projectName = Codegen.ofNullable(projectName);
-            return this;
+
+        public Builder projectName(String projectName) {
+            return projectName(Output.of(projectName));
         }
+
         public Builder tags(@Nullable Output<List<ProjectTagArgs>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable List<ProjectTagArgs> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(List<ProjectTagArgs> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tags(ProjectTagArgs... tags) {
             return tags(List.of(tags));
-        }        public ProjectArgs build() {
-            return new ProjectArgs(assetIds, portalId, projectDescription, projectName, tags);
+        }
+
+        public ProjectArgs build() {
+            $.portalId = Objects.requireNonNull($.portalId, "expected parameter 'portalId' to be non-null");
+            return $;
         }
     }
+
 }

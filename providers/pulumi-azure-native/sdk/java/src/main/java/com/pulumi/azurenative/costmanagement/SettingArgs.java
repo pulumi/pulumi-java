@@ -6,10 +6,10 @@ package com.pulumi.azurenative.costmanagement;
 import com.pulumi.azurenative.costmanagement.inputs.SettingsPropertiesCacheArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class SettingArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="cache")
-      private final @Nullable Output<List<SettingsPropertiesCacheArgs>> cache;
+    private @Nullable Output<List<SettingsPropertiesCacheArgs>> cache;
 
-    public Output<List<SettingsPropertiesCacheArgs>> cache() {
-        return this.cache == null ? Codegen.empty() : this.cache;
+    public Optional<Output<List<SettingsPropertiesCacheArgs>>> cache() {
+        return Optional.ofNullable(this.cache);
     }
 
     /**
@@ -33,7 +33,7 @@ public final class SettingArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="scope", required=true)
-      private final Output<String> scope;
+    private Output<String> scope;
 
     public Output<String> scope() {
         return this.scope;
@@ -44,10 +44,10 @@ public final class SettingArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="settingName")
-      private final @Nullable Output<String> settingName;
+    private @Nullable Output<String> settingName;
 
-    public Output<String> settingName() {
-        return this.settingName == null ? Codegen.empty() : this.settingName;
+    public Optional<Output<String>> settingName() {
+        return Optional.ofNullable(this.settingName);
     }
 
     /**
@@ -55,92 +55,83 @@ public final class SettingArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="startOn")
-      private final @Nullable Output<String> startOn;
+    private @Nullable Output<String> startOn;
 
-    public Output<String> startOn() {
-        return this.startOn == null ? Codegen.empty() : this.startOn;
+    public Optional<Output<String>> startOn() {
+        return Optional.ofNullable(this.startOn);
     }
 
-    public SettingArgs(
-        @Nullable Output<List<SettingsPropertiesCacheArgs>> cache,
-        Output<String> scope,
-        @Nullable Output<String> settingName,
-        @Nullable Output<String> startOn) {
-        this.cache = cache;
-        this.scope = Objects.requireNonNull(scope, "expected parameter 'scope' to be non-null");
-        this.settingName = settingName;
-        this.startOn = startOn;
-    }
+    private SettingArgs() {}
 
-    private SettingArgs() {
-        this.cache = Codegen.empty();
-        this.scope = Codegen.empty();
-        this.settingName = Codegen.empty();
-        this.startOn = Codegen.empty();
+    private SettingArgs(SettingArgs $) {
+        this.cache = $.cache;
+        this.scope = $.scope;
+        this.settingName = $.settingName;
+        this.startOn = $.startOn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SettingArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<SettingsPropertiesCacheArgs>> cache;
-        private Output<String> scope;
-        private @Nullable Output<String> settingName;
-        private @Nullable Output<String> startOn;
+        private SettingArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SettingArgs();
         }
 
         public Builder(SettingArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cache = defaults.cache;
-    	      this.scope = defaults.scope;
-    	      this.settingName = defaults.settingName;
-    	      this.startOn = defaults.startOn;
+            $ = new SettingArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder cache(@Nullable Output<List<SettingsPropertiesCacheArgs>> cache) {
-            this.cache = cache;
+            $.cache = cache;
             return this;
         }
-        public Builder cache(@Nullable List<SettingsPropertiesCacheArgs> cache) {
-            this.cache = Codegen.ofNullable(cache);
-            return this;
+
+        public Builder cache(List<SettingsPropertiesCacheArgs> cache) {
+            return cache(Output.of(cache));
         }
+
         public Builder cache(SettingsPropertiesCacheArgs... cache) {
             return cache(List.of(cache));
         }
+
         public Builder scope(Output<String> scope) {
-            this.scope = Objects.requireNonNull(scope);
+            $.scope = scope;
             return this;
         }
+
         public Builder scope(String scope) {
-            this.scope = Output.of(Objects.requireNonNull(scope));
-            return this;
+            return scope(Output.of(scope));
         }
+
         public Builder settingName(@Nullable Output<String> settingName) {
-            this.settingName = settingName;
+            $.settingName = settingName;
             return this;
         }
-        public Builder settingName(@Nullable String settingName) {
-            this.settingName = Codegen.ofNullable(settingName);
-            return this;
+
+        public Builder settingName(String settingName) {
+            return settingName(Output.of(settingName));
         }
+
         public Builder startOn(@Nullable Output<String> startOn) {
-            this.startOn = startOn;
+            $.startOn = startOn;
             return this;
         }
-        public Builder startOn(@Nullable String startOn) {
-            this.startOn = Codegen.ofNullable(startOn);
-            return this;
-        }        public SettingArgs build() {
-            return new SettingArgs(cache, scope, settingName, startOn);
+
+        public Builder startOn(String startOn) {
+            return startOn(Output.of(startOn));
+        }
+
+        public SettingArgs build() {
+            $.scope = Objects.requireNonNull($.scope, "expected parameter 'scope' to be non-null");
+            return $;
         }
     }
+
 }

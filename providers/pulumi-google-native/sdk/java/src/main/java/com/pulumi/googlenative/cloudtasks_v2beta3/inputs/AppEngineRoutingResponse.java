@@ -21,7 +21,7 @@ public final class AppEngineRoutingResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="host", required=true)
-      private final String host;
+    private String host;
 
     public String host() {
         return this.host;
@@ -32,7 +32,7 @@ public final class AppEngineRoutingResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="instance", required=true)
-      private final String instance;
+    private String instance;
 
     public String instance() {
         return this.instance;
@@ -43,7 +43,7 @@ public final class AppEngineRoutingResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="service", required=true)
-      private final String service;
+    private String service;
 
     public String service() {
         return this.service;
@@ -54,73 +54,66 @@ public final class AppEngineRoutingResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="version", required=true)
-      private final String version;
+    private String version;
 
     public String version() {
         return this.version;
     }
 
-    public AppEngineRoutingResponse(
-        String host,
-        String instance,
-        String service,
-        String version) {
-        this.host = Objects.requireNonNull(host, "expected parameter 'host' to be non-null");
-        this.instance = Objects.requireNonNull(instance, "expected parameter 'instance' to be non-null");
-        this.service = Objects.requireNonNull(service, "expected parameter 'service' to be non-null");
-        this.version = Objects.requireNonNull(version, "expected parameter 'version' to be non-null");
-    }
+    private AppEngineRoutingResponse() {}
 
-    private AppEngineRoutingResponse() {
-        this.host = null;
-        this.instance = null;
-        this.service = null;
-        this.version = null;
+    private AppEngineRoutingResponse(AppEngineRoutingResponse $) {
+        this.host = $.host;
+        this.instance = $.instance;
+        this.service = $.service;
+        this.version = $.version;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AppEngineRoutingResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String host;
-        private String instance;
-        private String service;
-        private String version;
+        private AppEngineRoutingResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AppEngineRoutingResponse();
         }
 
         public Builder(AppEngineRoutingResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.host = defaults.host;
-    	      this.instance = defaults.instance;
-    	      this.service = defaults.service;
-    	      this.version = defaults.version;
+            $ = new AppEngineRoutingResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder host(String host) {
-            this.host = Objects.requireNonNull(host);
+            $.host = host;
             return this;
         }
+
         public Builder instance(String instance) {
-            this.instance = Objects.requireNonNull(instance);
+            $.instance = instance;
             return this;
         }
+
         public Builder service(String service) {
-            this.service = Objects.requireNonNull(service);
+            $.service = service;
             return this;
         }
+
         public Builder version(String version) {
-            this.version = Objects.requireNonNull(version);
+            $.version = version;
             return this;
-        }        public AppEngineRoutingResponse build() {
-            return new AppEngineRoutingResponse(host, instance, service, version);
+        }
+
+        public AppEngineRoutingResponse build() {
+            $.host = Objects.requireNonNull($.host, "expected parameter 'host' to be non-null");
+            $.instance = Objects.requireNonNull($.instance, "expected parameter 'instance' to be non-null");
+            $.service = Objects.requireNonNull($.service, "expected parameter 'service' to be non-null");
+            $.version = Objects.requireNonNull($.version, "expected parameter 'version' to be non-null");
+            return $;
         }
     }
+
 }

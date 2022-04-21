@@ -17,7 +17,7 @@ public final class GetVirtualHubArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -28,55 +28,52 @@ public final class GetVirtualHubArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="virtualHubName", required=true)
-      private final String virtualHubName;
+    private String virtualHubName;
 
     public String virtualHubName() {
         return this.virtualHubName;
     }
 
-    public GetVirtualHubArgs(
-        String resourceGroupName,
-        String virtualHubName) {
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.virtualHubName = Objects.requireNonNull(virtualHubName, "expected parameter 'virtualHubName' to be non-null");
-    }
+    private GetVirtualHubArgs() {}
 
-    private GetVirtualHubArgs() {
-        this.resourceGroupName = null;
-        this.virtualHubName = null;
+    private GetVirtualHubArgs(GetVirtualHubArgs $) {
+        this.resourceGroupName = $.resourceGroupName;
+        this.virtualHubName = $.virtualHubName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetVirtualHubArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String resourceGroupName;
-        private String virtualHubName;
+        private GetVirtualHubArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetVirtualHubArgs();
         }
 
         public Builder(GetVirtualHubArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.virtualHubName = defaults.virtualHubName;
+            $ = new GetVirtualHubArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder virtualHubName(String virtualHubName) {
-            this.virtualHubName = Objects.requireNonNull(virtualHubName);
+            $.virtualHubName = virtualHubName;
             return this;
-        }        public GetVirtualHubArgs build() {
-            return new GetVirtualHubArgs(resourceGroupName, virtualHubName);
+        }
+
+        public GetVirtualHubArgs build() {
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.virtualHubName = Objects.requireNonNull($.virtualHubName, "expected parameter 'virtualHubName' to be non-null");
+            return $;
         }
     }
+
 }

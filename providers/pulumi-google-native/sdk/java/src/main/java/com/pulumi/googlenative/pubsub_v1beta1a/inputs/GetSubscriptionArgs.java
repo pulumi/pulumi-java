@@ -13,45 +13,45 @@ public final class GetSubscriptionArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetSubscriptionArgs Empty = new GetSubscriptionArgs();
 
     @Import(name="subscriptionId", required=true)
-      private final String subscriptionId;
+    private String subscriptionId;
 
     public String subscriptionId() {
         return this.subscriptionId;
     }
 
-    public GetSubscriptionArgs(String subscriptionId) {
-        this.subscriptionId = Objects.requireNonNull(subscriptionId, "expected parameter 'subscriptionId' to be non-null");
-    }
+    private GetSubscriptionArgs() {}
 
-    private GetSubscriptionArgs() {
-        this.subscriptionId = null;
+    private GetSubscriptionArgs(GetSubscriptionArgs $) {
+        this.subscriptionId = $.subscriptionId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetSubscriptionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String subscriptionId;
+        private GetSubscriptionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetSubscriptionArgs();
         }
 
         public Builder(GetSubscriptionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.subscriptionId = defaults.subscriptionId;
+            $ = new GetSubscriptionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder subscriptionId(String subscriptionId) {
-            this.subscriptionId = Objects.requireNonNull(subscriptionId);
+            $.subscriptionId = subscriptionId;
             return this;
-        }        public GetSubscriptionArgs build() {
-            return new GetSubscriptionArgs(subscriptionId);
+        }
+
+        public GetSubscriptionArgs build() {
+            $.subscriptionId = Objects.requireNonNull($.subscriptionId, "expected parameter 'subscriptionId' to be non-null");
+            return $;
         }
     }
+
 }

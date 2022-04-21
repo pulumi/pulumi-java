@@ -17,45 +17,45 @@ public final class GetNodeGroupsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="clusterName", required=true)
-      private final String clusterName;
+    private String clusterName;
 
     public String clusterName() {
         return this.clusterName;
     }
 
-    public GetNodeGroupsArgs(String clusterName) {
-        this.clusterName = Objects.requireNonNull(clusterName, "expected parameter 'clusterName' to be non-null");
-    }
+    private GetNodeGroupsArgs() {}
 
-    private GetNodeGroupsArgs() {
-        this.clusterName = null;
+    private GetNodeGroupsArgs(GetNodeGroupsArgs $) {
+        this.clusterName = $.clusterName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetNodeGroupsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String clusterName;
+        private GetNodeGroupsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetNodeGroupsArgs();
         }
 
         public Builder(GetNodeGroupsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.clusterName = defaults.clusterName;
+            $ = new GetNodeGroupsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder clusterName(String clusterName) {
-            this.clusterName = Objects.requireNonNull(clusterName);
+            $.clusterName = clusterName;
             return this;
-        }        public GetNodeGroupsArgs build() {
-            return new GetNodeGroupsArgs(clusterName);
+        }
+
+        public GetNodeGroupsArgs build() {
+            $.clusterName = Objects.requireNonNull($.clusterName, "expected parameter 'clusterName' to be non-null");
+            return $;
         }
     }
+
 }

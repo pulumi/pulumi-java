@@ -5,10 +5,10 @@ package com.pulumi.aws.schemas;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class DiscovererArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -32,7 +32,7 @@ public final class DiscovererArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="sourceArn", required=true)
-      private final Output<String> sourceArn;
+    private Output<String> sourceArn;
 
     public Output<String> sourceArn() {
         return this.sourceArn;
@@ -43,76 +43,69 @@ public final class DiscovererArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public DiscovererArgs(
-        @Nullable Output<String> description,
-        Output<String> sourceArn,
-        @Nullable Output<Map<String,String>> tags) {
-        this.description = description;
-        this.sourceArn = Objects.requireNonNull(sourceArn, "expected parameter 'sourceArn' to be non-null");
-        this.tags = tags;
-    }
+    private DiscovererArgs() {}
 
-    private DiscovererArgs() {
-        this.description = Codegen.empty();
-        this.sourceArn = Codegen.empty();
-        this.tags = Codegen.empty();
+    private DiscovererArgs(DiscovererArgs $) {
+        this.description = $.description;
+        this.sourceArn = $.sourceArn;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DiscovererArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> description;
-        private Output<String> sourceArn;
-        private @Nullable Output<Map<String,String>> tags;
+        private DiscovererArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DiscovererArgs();
         }
 
         public Builder(DiscovererArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.description = defaults.description;
-    	      this.sourceArn = defaults.sourceArn;
-    	      this.tags = defaults.tags;
+            $ = new DiscovererArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder sourceArn(Output<String> sourceArn) {
-            this.sourceArn = Objects.requireNonNull(sourceArn);
+            $.sourceArn = sourceArn;
             return this;
         }
+
         public Builder sourceArn(String sourceArn) {
-            this.sourceArn = Output.of(Objects.requireNonNull(sourceArn));
-            return this;
+            return sourceArn(Output.of(sourceArn));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
-        }        public DiscovererArgs build() {
-            return new DiscovererArgs(description, sourceArn, tags);
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
+        }
+
+        public DiscovererArgs build() {
+            $.sourceArn = Objects.requireNonNull($.sourceArn, "expected parameter 'sourceArn' to be non-null");
+            return $;
         }
     }
+
 }

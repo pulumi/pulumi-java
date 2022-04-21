@@ -5,7 +5,6 @@ package com.pulumi.aws.elasticsearch.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.Objects;
 
@@ -19,49 +18,49 @@ public final class DomainNodeToNodeEncryptionGetArgs extends com.pulumi.resource
      * 
      */
     @Import(name="enabled", required=true)
-      private final Output<Boolean> enabled;
+    private Output<Boolean> enabled;
 
     public Output<Boolean> enabled() {
         return this.enabled;
     }
 
-    public DomainNodeToNodeEncryptionGetArgs(Output<Boolean> enabled) {
-        this.enabled = Objects.requireNonNull(enabled, "expected parameter 'enabled' to be non-null");
-    }
+    private DomainNodeToNodeEncryptionGetArgs() {}
 
-    private DomainNodeToNodeEncryptionGetArgs() {
-        this.enabled = Codegen.empty();
+    private DomainNodeToNodeEncryptionGetArgs(DomainNodeToNodeEncryptionGetArgs $) {
+        this.enabled = $.enabled;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DomainNodeToNodeEncryptionGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Boolean> enabled;
+        private DomainNodeToNodeEncryptionGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DomainNodeToNodeEncryptionGetArgs();
         }
 
         public Builder(DomainNodeToNodeEncryptionGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.enabled = defaults.enabled;
+            $ = new DomainNodeToNodeEncryptionGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder enabled(Output<Boolean> enabled) {
-            this.enabled = Objects.requireNonNull(enabled);
+            $.enabled = enabled;
             return this;
         }
+
         public Builder enabled(Boolean enabled) {
-            this.enabled = Output.of(Objects.requireNonNull(enabled));
-            return this;
-        }        public DomainNodeToNodeEncryptionGetArgs build() {
-            return new DomainNodeToNodeEncryptionGetArgs(enabled);
+            return enabled(Output.of(enabled));
+        }
+
+        public DomainNodeToNodeEncryptionGetArgs build() {
+            $.enabled = Objects.requireNonNull($.enabled, "expected parameter 'enabled' to be non-null");
+            return $;
         }
     }
+
 }

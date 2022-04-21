@@ -25,10 +25,10 @@ public final class RestorePointSourceVMStorageProfileResponse extends com.pulumi
      * 
      */
     @Import(name="dataDisks")
-      private final @Nullable List<RestorePointSourceVMDataDiskResponse> dataDisks;
+    private @Nullable List<RestorePointSourceVMDataDiskResponse> dataDisks;
 
-    public List<RestorePointSourceVMDataDiskResponse> dataDisks() {
-        return this.dataDisks == null ? List.of() : this.dataDisks;
+    public Optional<List<RestorePointSourceVMDataDiskResponse>> dataDisks() {
+        return Optional.ofNullable(this.dataDisks);
     }
 
     /**
@@ -36,58 +36,54 @@ public final class RestorePointSourceVMStorageProfileResponse extends com.pulumi
      * 
      */
     @Import(name="osDisk")
-      private final @Nullable RestorePointSourceVMOSDiskResponse osDisk;
+    private @Nullable RestorePointSourceVMOSDiskResponse osDisk;
 
     public Optional<RestorePointSourceVMOSDiskResponse> osDisk() {
-        return this.osDisk == null ? Optional.empty() : Optional.ofNullable(this.osDisk);
+        return Optional.ofNullable(this.osDisk);
     }
 
-    public RestorePointSourceVMStorageProfileResponse(
-        @Nullable List<RestorePointSourceVMDataDiskResponse> dataDisks,
-        @Nullable RestorePointSourceVMOSDiskResponse osDisk) {
-        this.dataDisks = dataDisks;
-        this.osDisk = osDisk;
-    }
+    private RestorePointSourceVMStorageProfileResponse() {}
 
-    private RestorePointSourceVMStorageProfileResponse() {
-        this.dataDisks = List.of();
-        this.osDisk = null;
+    private RestorePointSourceVMStorageProfileResponse(RestorePointSourceVMStorageProfileResponse $) {
+        this.dataDisks = $.dataDisks;
+        this.osDisk = $.osDisk;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RestorePointSourceVMStorageProfileResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<RestorePointSourceVMDataDiskResponse> dataDisks;
-        private @Nullable RestorePointSourceVMOSDiskResponse osDisk;
+        private RestorePointSourceVMStorageProfileResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new RestorePointSourceVMStorageProfileResponse();
         }
 
         public Builder(RestorePointSourceVMStorageProfileResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dataDisks = defaults.dataDisks;
-    	      this.osDisk = defaults.osDisk;
+            $ = new RestorePointSourceVMStorageProfileResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder dataDisks(@Nullable List<RestorePointSourceVMDataDiskResponse> dataDisks) {
-            this.dataDisks = dataDisks;
+            $.dataDisks = dataDisks;
             return this;
         }
+
         public Builder dataDisks(RestorePointSourceVMDataDiskResponse... dataDisks) {
             return dataDisks(List.of(dataDisks));
         }
+
         public Builder osDisk(@Nullable RestorePointSourceVMOSDiskResponse osDisk) {
-            this.osDisk = osDisk;
+            $.osDisk = osDisk;
             return this;
-        }        public RestorePointSourceVMStorageProfileResponse build() {
-            return new RestorePointSourceVMStorageProfileResponse(dataDisks, osDisk);
+        }
+
+        public RestorePointSourceVMStorageProfileResponse build() {
+            return $;
         }
     }
+
 }

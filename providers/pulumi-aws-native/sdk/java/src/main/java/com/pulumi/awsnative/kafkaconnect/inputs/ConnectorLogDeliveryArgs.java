@@ -6,7 +6,6 @@ package com.pulumi.awsnative.kafkaconnect.inputs;
 import com.pulumi.awsnative.kafkaconnect.inputs.ConnectorWorkerLogDeliveryArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
 
 
@@ -19,49 +18,49 @@ public final class ConnectorLogDeliveryArgs extends com.pulumi.resources.Resourc
     public static final ConnectorLogDeliveryArgs Empty = new ConnectorLogDeliveryArgs();
 
     @Import(name="workerLogDelivery", required=true)
-      private final Output<ConnectorWorkerLogDeliveryArgs> workerLogDelivery;
+    private Output<ConnectorWorkerLogDeliveryArgs> workerLogDelivery;
 
     public Output<ConnectorWorkerLogDeliveryArgs> workerLogDelivery() {
         return this.workerLogDelivery;
     }
 
-    public ConnectorLogDeliveryArgs(Output<ConnectorWorkerLogDeliveryArgs> workerLogDelivery) {
-        this.workerLogDelivery = Objects.requireNonNull(workerLogDelivery, "expected parameter 'workerLogDelivery' to be non-null");
-    }
+    private ConnectorLogDeliveryArgs() {}
 
-    private ConnectorLogDeliveryArgs() {
-        this.workerLogDelivery = Codegen.empty();
+    private ConnectorLogDeliveryArgs(ConnectorLogDeliveryArgs $) {
+        this.workerLogDelivery = $.workerLogDelivery;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ConnectorLogDeliveryArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<ConnectorWorkerLogDeliveryArgs> workerLogDelivery;
+        private ConnectorLogDeliveryArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ConnectorLogDeliveryArgs();
         }
 
         public Builder(ConnectorLogDeliveryArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.workerLogDelivery = defaults.workerLogDelivery;
+            $ = new ConnectorLogDeliveryArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder workerLogDelivery(Output<ConnectorWorkerLogDeliveryArgs> workerLogDelivery) {
-            this.workerLogDelivery = Objects.requireNonNull(workerLogDelivery);
+            $.workerLogDelivery = workerLogDelivery;
             return this;
         }
+
         public Builder workerLogDelivery(ConnectorWorkerLogDeliveryArgs workerLogDelivery) {
-            this.workerLogDelivery = Output.of(Objects.requireNonNull(workerLogDelivery));
-            return this;
-        }        public ConnectorLogDeliveryArgs build() {
-            return new ConnectorLogDeliveryArgs(workerLogDelivery);
+            return workerLogDelivery(Output.of(workerLogDelivery));
+        }
+
+        public ConnectorLogDeliveryArgs build() {
+            $.workerLogDelivery = Objects.requireNonNull($.workerLogDelivery, "expected parameter 'workerLogDelivery' to be non-null");
+            return $;
         }
     }
+
 }

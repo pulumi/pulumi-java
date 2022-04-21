@@ -14,62 +14,59 @@ public final class FilterStringFilter extends com.pulumi.resources.InvokeArgs {
     public static final FilterStringFilter Empty = new FilterStringFilter();
 
     @Import(name="comparison", required=true)
-      private final FilterStringComparison comparison;
+    private FilterStringComparison comparison;
 
     public FilterStringComparison comparison() {
         return this.comparison;
     }
 
     @Import(name="value", required=true)
-      private final String value;
+    private String value;
 
     public String value() {
         return this.value;
     }
 
-    public FilterStringFilter(
-        FilterStringComparison comparison,
-        String value) {
-        this.comparison = Objects.requireNonNull(comparison, "expected parameter 'comparison' to be non-null");
-        this.value = Objects.requireNonNull(value, "expected parameter 'value' to be non-null");
-    }
+    private FilterStringFilter() {}
 
-    private FilterStringFilter() {
-        this.comparison = null;
-        this.value = null;
+    private FilterStringFilter(FilterStringFilter $) {
+        this.comparison = $.comparison;
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FilterStringFilter defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private FilterStringComparison comparison;
-        private String value;
+        private FilterStringFilter $;
 
         public Builder() {
-    	      // Empty
+            $ = new FilterStringFilter();
         }
 
         public Builder(FilterStringFilter defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.comparison = defaults.comparison;
-    	      this.value = defaults.value;
+            $ = new FilterStringFilter(Objects.requireNonNull(defaults));
         }
 
         public Builder comparison(FilterStringComparison comparison) {
-            this.comparison = Objects.requireNonNull(comparison);
+            $.comparison = comparison;
             return this;
         }
+
         public Builder value(String value) {
-            this.value = Objects.requireNonNull(value);
+            $.value = value;
             return this;
-        }        public FilterStringFilter build() {
-            return new FilterStringFilter(comparison, value);
+        }
+
+        public FilterStringFilter build() {
+            $.comparison = Objects.requireNonNull($.comparison, "expected parameter 'comparison' to be non-null");
+            $.value = Objects.requireNonNull($.value, "expected parameter 'value' to be non-null");
+            return $;
         }
     }
+
 }

@@ -28,10 +28,10 @@ public final class FlowLogResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="enabled")
-      private final @Nullable Boolean enabled;
+    private @Nullable Boolean enabled;
 
     public Optional<Boolean> enabled() {
-        return this.enabled == null ? Optional.empty() : Optional.ofNullable(this.enabled);
+        return Optional.ofNullable(this.enabled);
     }
 
     /**
@@ -39,7 +39,7 @@ public final class FlowLogResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="etag", required=true)
-      private final String etag;
+    private String etag;
 
     public String etag() {
         return this.etag;
@@ -50,10 +50,10 @@ public final class FlowLogResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="flowAnalyticsConfiguration")
-      private final @Nullable TrafficAnalyticsPropertiesResponse flowAnalyticsConfiguration;
+    private @Nullable TrafficAnalyticsPropertiesResponse flowAnalyticsConfiguration;
 
     public Optional<TrafficAnalyticsPropertiesResponse> flowAnalyticsConfiguration() {
-        return this.flowAnalyticsConfiguration == null ? Optional.empty() : Optional.ofNullable(this.flowAnalyticsConfiguration);
+        return Optional.ofNullable(this.flowAnalyticsConfiguration);
     }
 
     /**
@@ -61,10 +61,10 @@ public final class FlowLogResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="format")
-      private final @Nullable FlowLogFormatParametersResponse format;
+    private @Nullable FlowLogFormatParametersResponse format;
 
     public Optional<FlowLogFormatParametersResponse> format() {
-        return this.format == null ? Optional.empty() : Optional.ofNullable(this.format);
+        return Optional.ofNullable(this.format);
     }
 
     /**
@@ -72,10 +72,10 @@ public final class FlowLogResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="id")
-      private final @Nullable String id;
+    private @Nullable String id;
 
     public Optional<String> id() {
-        return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
+        return Optional.ofNullable(this.id);
     }
 
     /**
@@ -83,10 +83,10 @@ public final class FlowLogResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="location")
-      private final @Nullable String location;
+    private @Nullable String location;
 
     public Optional<String> location() {
-        return this.location == null ? Optional.empty() : Optional.ofNullable(this.location);
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -94,7 +94,7 @@ public final class FlowLogResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -105,7 +105,7 @@ public final class FlowLogResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="provisioningState", required=true)
-      private final String provisioningState;
+    private String provisioningState;
 
     public String provisioningState() {
         return this.provisioningState;
@@ -116,10 +116,10 @@ public final class FlowLogResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="retentionPolicy")
-      private final @Nullable RetentionPolicyParametersResponse retentionPolicy;
+    private @Nullable RetentionPolicyParametersResponse retentionPolicy;
 
     public Optional<RetentionPolicyParametersResponse> retentionPolicy() {
-        return this.retentionPolicy == null ? Optional.empty() : Optional.ofNullable(this.retentionPolicy);
+        return Optional.ofNullable(this.retentionPolicy);
     }
 
     /**
@@ -127,7 +127,7 @@ public final class FlowLogResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="storageId", required=true)
-      private final String storageId;
+    private String storageId;
 
     public String storageId() {
         return this.storageId;
@@ -138,10 +138,10 @@ public final class FlowLogResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Map<String,String> tags;
+    private @Nullable Map<String,String> tags;
 
-    public Map<String,String> tags() {
-        return this.tags == null ? Map.of() : this.tags;
+    public Optional<Map<String,String>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -149,7 +149,7 @@ public final class FlowLogResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="targetResourceGuid", required=true)
-      private final String targetResourceGuid;
+    private String targetResourceGuid;
 
     public String targetResourceGuid() {
         return this.targetResourceGuid;
@@ -160,7 +160,7 @@ public final class FlowLogResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="targetResourceId", required=true)
-      private final String targetResourceId;
+    private String targetResourceId;
 
     public String targetResourceId() {
         return this.targetResourceId;
@@ -171,163 +171,129 @@ public final class FlowLogResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
     }
 
-    public FlowLogResponse(
-        @Nullable Boolean enabled,
-        String etag,
-        @Nullable TrafficAnalyticsPropertiesResponse flowAnalyticsConfiguration,
-        @Nullable FlowLogFormatParametersResponse format,
-        @Nullable String id,
-        @Nullable String location,
-        String name,
-        String provisioningState,
-        @Nullable RetentionPolicyParametersResponse retentionPolicy,
-        String storageId,
-        @Nullable Map<String,String> tags,
-        String targetResourceGuid,
-        String targetResourceId,
-        String type) {
-        this.enabled = enabled;
-        this.etag = Objects.requireNonNull(etag, "expected parameter 'etag' to be non-null");
-        this.flowAnalyticsConfiguration = flowAnalyticsConfiguration;
-        this.format = format;
-        this.id = id;
-        this.location = location;
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.provisioningState = Objects.requireNonNull(provisioningState, "expected parameter 'provisioningState' to be non-null");
-        this.retentionPolicy = retentionPolicy;
-        this.storageId = Objects.requireNonNull(storageId, "expected parameter 'storageId' to be non-null");
-        this.tags = tags;
-        this.targetResourceGuid = Objects.requireNonNull(targetResourceGuid, "expected parameter 'targetResourceGuid' to be non-null");
-        this.targetResourceId = Objects.requireNonNull(targetResourceId, "expected parameter 'targetResourceId' to be non-null");
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private FlowLogResponse() {}
 
-    private FlowLogResponse() {
-        this.enabled = null;
-        this.etag = null;
-        this.flowAnalyticsConfiguration = null;
-        this.format = null;
-        this.id = null;
-        this.location = null;
-        this.name = null;
-        this.provisioningState = null;
-        this.retentionPolicy = null;
-        this.storageId = null;
-        this.tags = Map.of();
-        this.targetResourceGuid = null;
-        this.targetResourceId = null;
-        this.type = null;
+    private FlowLogResponse(FlowLogResponse $) {
+        this.enabled = $.enabled;
+        this.etag = $.etag;
+        this.flowAnalyticsConfiguration = $.flowAnalyticsConfiguration;
+        this.format = $.format;
+        this.id = $.id;
+        this.location = $.location;
+        this.name = $.name;
+        this.provisioningState = $.provisioningState;
+        this.retentionPolicy = $.retentionPolicy;
+        this.storageId = $.storageId;
+        this.tags = $.tags;
+        this.targetResourceGuid = $.targetResourceGuid;
+        this.targetResourceId = $.targetResourceId;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FlowLogResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Boolean enabled;
-        private String etag;
-        private @Nullable TrafficAnalyticsPropertiesResponse flowAnalyticsConfiguration;
-        private @Nullable FlowLogFormatParametersResponse format;
-        private @Nullable String id;
-        private @Nullable String location;
-        private String name;
-        private String provisioningState;
-        private @Nullable RetentionPolicyParametersResponse retentionPolicy;
-        private String storageId;
-        private @Nullable Map<String,String> tags;
-        private String targetResourceGuid;
-        private String targetResourceId;
-        private String type;
+        private FlowLogResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new FlowLogResponse();
         }
 
         public Builder(FlowLogResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.enabled = defaults.enabled;
-    	      this.etag = defaults.etag;
-    	      this.flowAnalyticsConfiguration = defaults.flowAnalyticsConfiguration;
-    	      this.format = defaults.format;
-    	      this.id = defaults.id;
-    	      this.location = defaults.location;
-    	      this.name = defaults.name;
-    	      this.provisioningState = defaults.provisioningState;
-    	      this.retentionPolicy = defaults.retentionPolicy;
-    	      this.storageId = defaults.storageId;
-    	      this.tags = defaults.tags;
-    	      this.targetResourceGuid = defaults.targetResourceGuid;
-    	      this.targetResourceId = defaults.targetResourceId;
-    	      this.type = defaults.type;
+            $ = new FlowLogResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = enabled;
+            $.enabled = enabled;
             return this;
         }
+
         public Builder etag(String etag) {
-            this.etag = Objects.requireNonNull(etag);
+            $.etag = etag;
             return this;
         }
+
         public Builder flowAnalyticsConfiguration(@Nullable TrafficAnalyticsPropertiesResponse flowAnalyticsConfiguration) {
-            this.flowAnalyticsConfiguration = flowAnalyticsConfiguration;
+            $.flowAnalyticsConfiguration = flowAnalyticsConfiguration;
             return this;
         }
+
         public Builder format(@Nullable FlowLogFormatParametersResponse format) {
-            this.format = format;
+            $.format = format;
             return this;
         }
+
         public Builder id(@Nullable String id) {
-            this.id = id;
+            $.id = id;
             return this;
         }
+
         public Builder location(@Nullable String location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder provisioningState(String provisioningState) {
-            this.provisioningState = Objects.requireNonNull(provisioningState);
+            $.provisioningState = provisioningState;
             return this;
         }
+
         public Builder retentionPolicy(@Nullable RetentionPolicyParametersResponse retentionPolicy) {
-            this.retentionPolicy = retentionPolicy;
+            $.retentionPolicy = retentionPolicy;
             return this;
         }
+
         public Builder storageId(String storageId) {
-            this.storageId = Objects.requireNonNull(storageId);
+            $.storageId = storageId;
             return this;
         }
+
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
+
         public Builder targetResourceGuid(String targetResourceGuid) {
-            this.targetResourceGuid = Objects.requireNonNull(targetResourceGuid);
+            $.targetResourceGuid = targetResourceGuid;
             return this;
         }
+
         public Builder targetResourceId(String targetResourceId) {
-            this.targetResourceId = Objects.requireNonNull(targetResourceId);
+            $.targetResourceId = targetResourceId;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
-        }        public FlowLogResponse build() {
-            return new FlowLogResponse(enabled, etag, flowAnalyticsConfiguration, format, id, location, name, provisioningState, retentionPolicy, storageId, tags, targetResourceGuid, targetResourceId, type);
+        }
+
+        public FlowLogResponse build() {
+            $.etag = Objects.requireNonNull($.etag, "expected parameter 'etag' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.provisioningState = Objects.requireNonNull($.provisioningState, "expected parameter 'provisioningState' to be non-null");
+            $.storageId = Objects.requireNonNull($.storageId, "expected parameter 'storageId' to be non-null");
+            $.targetResourceGuid = Objects.requireNonNull($.targetResourceGuid, "expected parameter 'targetResourceGuid' to be non-null");
+            $.targetResourceId = Objects.requireNonNull($.targetResourceId, "expected parameter 'targetResourceId' to be non-null");
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,10 +5,10 @@ package com.pulumi.googlenative.containeranalysis_v1alpha1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.containeranalysis_v1alpha1.enums.ExternalRefCategory;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class ExternalRefArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="category")
-      private final @Nullable Output<ExternalRefCategory> category;
+    private @Nullable Output<ExternalRefCategory> category;
 
-    public Output<ExternalRefCategory> category() {
-        return this.category == null ? Codegen.empty() : this.category;
+    public Optional<Output<ExternalRefCategory>> category() {
+        return Optional.ofNullable(this.category);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class ExternalRefArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="comment")
-      private final @Nullable Output<String> comment;
+    private @Nullable Output<String> comment;
 
-    public Output<String> comment() {
-        return this.comment == null ? Codegen.empty() : this.comment;
+    public Optional<Output<String>> comment() {
+        return Optional.ofNullable(this.comment);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class ExternalRefArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="locator")
-      private final @Nullable Output<String> locator;
+    private @Nullable Output<String> locator;
 
-    public Output<String> locator() {
-        return this.locator == null ? Codegen.empty() : this.locator;
+    public Optional<Output<String>> locator() {
+        return Optional.ofNullable(this.locator);
     }
 
     /**
@@ -58,89 +58,78 @@ public final class ExternalRefArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="type")
-      private final @Nullable Output<String> type;
+    private @Nullable Output<String> type;
 
-    public Output<String> type() {
-        return this.type == null ? Codegen.empty() : this.type;
+    public Optional<Output<String>> type() {
+        return Optional.ofNullable(this.type);
     }
 
-    public ExternalRefArgs(
-        @Nullable Output<ExternalRefCategory> category,
-        @Nullable Output<String> comment,
-        @Nullable Output<String> locator,
-        @Nullable Output<String> type) {
-        this.category = category;
-        this.comment = comment;
-        this.locator = locator;
-        this.type = type;
-    }
+    private ExternalRefArgs() {}
 
-    private ExternalRefArgs() {
-        this.category = Codegen.empty();
-        this.comment = Codegen.empty();
-        this.locator = Codegen.empty();
-        this.type = Codegen.empty();
+    private ExternalRefArgs(ExternalRefArgs $) {
+        this.category = $.category;
+        this.comment = $.comment;
+        this.locator = $.locator;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ExternalRefArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<ExternalRefCategory> category;
-        private @Nullable Output<String> comment;
-        private @Nullable Output<String> locator;
-        private @Nullable Output<String> type;
+        private ExternalRefArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ExternalRefArgs();
         }
 
         public Builder(ExternalRefArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.category = defaults.category;
-    	      this.comment = defaults.comment;
-    	      this.locator = defaults.locator;
-    	      this.type = defaults.type;
+            $ = new ExternalRefArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder category(@Nullable Output<ExternalRefCategory> category) {
-            this.category = category;
+            $.category = category;
             return this;
         }
-        public Builder category(@Nullable ExternalRefCategory category) {
-            this.category = Codegen.ofNullable(category);
-            return this;
+
+        public Builder category(ExternalRefCategory category) {
+            return category(Output.of(category));
         }
+
         public Builder comment(@Nullable Output<String> comment) {
-            this.comment = comment;
+            $.comment = comment;
             return this;
         }
-        public Builder comment(@Nullable String comment) {
-            this.comment = Codegen.ofNullable(comment);
-            return this;
+
+        public Builder comment(String comment) {
+            return comment(Output.of(comment));
         }
+
         public Builder locator(@Nullable Output<String> locator) {
-            this.locator = locator;
+            $.locator = locator;
             return this;
         }
-        public Builder locator(@Nullable String locator) {
-            this.locator = Codegen.ofNullable(locator);
-            return this;
+
+        public Builder locator(String locator) {
+            return locator(Output.of(locator));
         }
+
         public Builder type(@Nullable Output<String> type) {
-            this.type = type;
+            $.type = type;
             return this;
         }
-        public Builder type(@Nullable String type) {
-            this.type = Codegen.ofNullable(type);
-            return this;
-        }        public ExternalRefArgs build() {
-            return new ExternalRefArgs(category, comment, locator, type);
+
+        public Builder type(String type) {
+            return type(Output.of(type));
+        }
+
+        public ExternalRefArgs build() {
+            return $;
         }
     }
+
 }

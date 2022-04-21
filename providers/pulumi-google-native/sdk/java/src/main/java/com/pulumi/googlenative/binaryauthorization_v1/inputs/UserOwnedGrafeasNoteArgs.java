@@ -5,11 +5,11 @@ package com.pulumi.googlenative.binaryauthorization_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.binaryauthorization_v1.inputs.AttestorPublicKeyArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,7 +26,7 @@ public final class UserOwnedGrafeasNoteArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="noteReference", required=true)
-      private final Output<String> noteReference;
+    private Output<String> noteReference;
 
     public Output<String> noteReference() {
         return this.noteReference;
@@ -37,66 +37,63 @@ public final class UserOwnedGrafeasNoteArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="publicKeys")
-      private final @Nullable Output<List<AttestorPublicKeyArgs>> publicKeys;
+    private @Nullable Output<List<AttestorPublicKeyArgs>> publicKeys;
 
-    public Output<List<AttestorPublicKeyArgs>> publicKeys() {
-        return this.publicKeys == null ? Codegen.empty() : this.publicKeys;
+    public Optional<Output<List<AttestorPublicKeyArgs>>> publicKeys() {
+        return Optional.ofNullable(this.publicKeys);
     }
 
-    public UserOwnedGrafeasNoteArgs(
-        Output<String> noteReference,
-        @Nullable Output<List<AttestorPublicKeyArgs>> publicKeys) {
-        this.noteReference = Objects.requireNonNull(noteReference, "expected parameter 'noteReference' to be non-null");
-        this.publicKeys = publicKeys;
-    }
+    private UserOwnedGrafeasNoteArgs() {}
 
-    private UserOwnedGrafeasNoteArgs() {
-        this.noteReference = Codegen.empty();
-        this.publicKeys = Codegen.empty();
+    private UserOwnedGrafeasNoteArgs(UserOwnedGrafeasNoteArgs $) {
+        this.noteReference = $.noteReference;
+        this.publicKeys = $.publicKeys;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(UserOwnedGrafeasNoteArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> noteReference;
-        private @Nullable Output<List<AttestorPublicKeyArgs>> publicKeys;
+        private UserOwnedGrafeasNoteArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new UserOwnedGrafeasNoteArgs();
         }
 
         public Builder(UserOwnedGrafeasNoteArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.noteReference = defaults.noteReference;
-    	      this.publicKeys = defaults.publicKeys;
+            $ = new UserOwnedGrafeasNoteArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder noteReference(Output<String> noteReference) {
-            this.noteReference = Objects.requireNonNull(noteReference);
+            $.noteReference = noteReference;
             return this;
         }
+
         public Builder noteReference(String noteReference) {
-            this.noteReference = Output.of(Objects.requireNonNull(noteReference));
-            return this;
+            return noteReference(Output.of(noteReference));
         }
+
         public Builder publicKeys(@Nullable Output<List<AttestorPublicKeyArgs>> publicKeys) {
-            this.publicKeys = publicKeys;
+            $.publicKeys = publicKeys;
             return this;
         }
-        public Builder publicKeys(@Nullable List<AttestorPublicKeyArgs> publicKeys) {
-            this.publicKeys = Codegen.ofNullable(publicKeys);
-            return this;
+
+        public Builder publicKeys(List<AttestorPublicKeyArgs> publicKeys) {
+            return publicKeys(Output.of(publicKeys));
         }
+
         public Builder publicKeys(AttestorPublicKeyArgs... publicKeys) {
             return publicKeys(List.of(publicKeys));
-        }        public UserOwnedGrafeasNoteArgs build() {
-            return new UserOwnedGrafeasNoteArgs(noteReference, publicKeys);
+        }
+
+        public UserOwnedGrafeasNoteArgs build() {
+            $.noteReference = Objects.requireNonNull($.noteReference, "expected parameter 'noteReference' to be non-null");
+            return $;
         }
     }
+
 }

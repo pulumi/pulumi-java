@@ -6,9 +6,9 @@ package com.pulumi.awsnative.sagemaker.inputs;
 import com.pulumi.awsnative.sagemaker.enums.DomainResourceSpecInstanceType;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class DomainResourceSpecArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="instanceType")
-      private final @Nullable Output<DomainResourceSpecInstanceType> instanceType;
+    private @Nullable Output<DomainResourceSpecInstanceType> instanceType;
 
-    public Output<DomainResourceSpecInstanceType> instanceType() {
-        return this.instanceType == null ? Codegen.empty() : this.instanceType;
+    public Optional<Output<DomainResourceSpecInstanceType>> instanceType() {
+        return Optional.ofNullable(this.instanceType);
     }
 
     /**
@@ -32,10 +32,10 @@ public final class DomainResourceSpecArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="sageMakerImageArn")
-      private final @Nullable Output<String> sageMakerImageArn;
+    private @Nullable Output<String> sageMakerImageArn;
 
-    public Output<String> sageMakerImageArn() {
-        return this.sageMakerImageArn == null ? Codegen.empty() : this.sageMakerImageArn;
+    public Optional<Output<String>> sageMakerImageArn() {
+        return Optional.ofNullable(this.sageMakerImageArn);
     }
 
     /**
@@ -43,76 +43,68 @@ public final class DomainResourceSpecArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="sageMakerImageVersionArn")
-      private final @Nullable Output<String> sageMakerImageVersionArn;
+    private @Nullable Output<String> sageMakerImageVersionArn;
 
-    public Output<String> sageMakerImageVersionArn() {
-        return this.sageMakerImageVersionArn == null ? Codegen.empty() : this.sageMakerImageVersionArn;
+    public Optional<Output<String>> sageMakerImageVersionArn() {
+        return Optional.ofNullable(this.sageMakerImageVersionArn);
     }
 
-    public DomainResourceSpecArgs(
-        @Nullable Output<DomainResourceSpecInstanceType> instanceType,
-        @Nullable Output<String> sageMakerImageArn,
-        @Nullable Output<String> sageMakerImageVersionArn) {
-        this.instanceType = instanceType;
-        this.sageMakerImageArn = sageMakerImageArn;
-        this.sageMakerImageVersionArn = sageMakerImageVersionArn;
-    }
+    private DomainResourceSpecArgs() {}
 
-    private DomainResourceSpecArgs() {
-        this.instanceType = Codegen.empty();
-        this.sageMakerImageArn = Codegen.empty();
-        this.sageMakerImageVersionArn = Codegen.empty();
+    private DomainResourceSpecArgs(DomainResourceSpecArgs $) {
+        this.instanceType = $.instanceType;
+        this.sageMakerImageArn = $.sageMakerImageArn;
+        this.sageMakerImageVersionArn = $.sageMakerImageVersionArn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DomainResourceSpecArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<DomainResourceSpecInstanceType> instanceType;
-        private @Nullable Output<String> sageMakerImageArn;
-        private @Nullable Output<String> sageMakerImageVersionArn;
+        private DomainResourceSpecArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DomainResourceSpecArgs();
         }
 
         public Builder(DomainResourceSpecArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.instanceType = defaults.instanceType;
-    	      this.sageMakerImageArn = defaults.sageMakerImageArn;
-    	      this.sageMakerImageVersionArn = defaults.sageMakerImageVersionArn;
+            $ = new DomainResourceSpecArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder instanceType(@Nullable Output<DomainResourceSpecInstanceType> instanceType) {
-            this.instanceType = instanceType;
+            $.instanceType = instanceType;
             return this;
         }
-        public Builder instanceType(@Nullable DomainResourceSpecInstanceType instanceType) {
-            this.instanceType = Codegen.ofNullable(instanceType);
-            return this;
+
+        public Builder instanceType(DomainResourceSpecInstanceType instanceType) {
+            return instanceType(Output.of(instanceType));
         }
+
         public Builder sageMakerImageArn(@Nullable Output<String> sageMakerImageArn) {
-            this.sageMakerImageArn = sageMakerImageArn;
+            $.sageMakerImageArn = sageMakerImageArn;
             return this;
         }
-        public Builder sageMakerImageArn(@Nullable String sageMakerImageArn) {
-            this.sageMakerImageArn = Codegen.ofNullable(sageMakerImageArn);
-            return this;
+
+        public Builder sageMakerImageArn(String sageMakerImageArn) {
+            return sageMakerImageArn(Output.of(sageMakerImageArn));
         }
+
         public Builder sageMakerImageVersionArn(@Nullable Output<String> sageMakerImageVersionArn) {
-            this.sageMakerImageVersionArn = sageMakerImageVersionArn;
+            $.sageMakerImageVersionArn = sageMakerImageVersionArn;
             return this;
         }
-        public Builder sageMakerImageVersionArn(@Nullable String sageMakerImageVersionArn) {
-            this.sageMakerImageVersionArn = Codegen.ofNullable(sageMakerImageVersionArn);
-            return this;
-        }        public DomainResourceSpecArgs build() {
-            return new DomainResourceSpecArgs(instanceType, sageMakerImageArn, sageMakerImageVersionArn);
+
+        public Builder sageMakerImageVersionArn(String sageMakerImageVersionArn) {
+            return sageMakerImageVersionArn(Output.of(sageMakerImageVersionArn));
+        }
+
+        public DomainResourceSpecArgs build() {
+            return $;
         }
     }
+
 }

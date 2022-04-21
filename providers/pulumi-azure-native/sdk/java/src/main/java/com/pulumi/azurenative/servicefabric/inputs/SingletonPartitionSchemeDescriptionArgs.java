@@ -24,49 +24,49 @@ public final class SingletonPartitionSchemeDescriptionArgs extends com.pulumi.re
      * 
      */
     @Import(name="partitionScheme", required=true)
-      private final Output<String> partitionScheme;
+    private Output<String> partitionScheme;
 
     public Output<String> partitionScheme() {
         return this.partitionScheme;
     }
 
-    public SingletonPartitionSchemeDescriptionArgs(Output<String> partitionScheme) {
-        this.partitionScheme = Codegen.stringProp("partitionScheme").output().arg(partitionScheme).require();
-    }
+    private SingletonPartitionSchemeDescriptionArgs() {}
 
-    private SingletonPartitionSchemeDescriptionArgs() {
-        this.partitionScheme = Codegen.empty();
+    private SingletonPartitionSchemeDescriptionArgs(SingletonPartitionSchemeDescriptionArgs $) {
+        this.partitionScheme = $.partitionScheme;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SingletonPartitionSchemeDescriptionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> partitionScheme;
+        private SingletonPartitionSchemeDescriptionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SingletonPartitionSchemeDescriptionArgs();
         }
 
         public Builder(SingletonPartitionSchemeDescriptionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.partitionScheme = defaults.partitionScheme;
+            $ = new SingletonPartitionSchemeDescriptionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder partitionScheme(Output<String> partitionScheme) {
-            this.partitionScheme = Objects.requireNonNull(partitionScheme);
+            $.partitionScheme = partitionScheme;
             return this;
         }
+
         public Builder partitionScheme(String partitionScheme) {
-            this.partitionScheme = Output.of(Objects.requireNonNull(partitionScheme));
-            return this;
-        }        public SingletonPartitionSchemeDescriptionArgs build() {
-            return new SingletonPartitionSchemeDescriptionArgs(partitionScheme);
+            return partitionScheme(Output.of(partitionScheme));
+        }
+
+        public SingletonPartitionSchemeDescriptionArgs build() {
+            $.partitionScheme = Codegen.stringProp("partitionScheme").output().arg($.partitionScheme).require();
+            return $;
         }
     }
+
 }

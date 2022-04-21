@@ -14,6 +14,7 @@ import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -30,10 +31,10 @@ public final class BotPropertiesArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="allSettings")
-      private final @Nullable Output<Map<String,String>> allSettings;
+    private @Nullable Output<Map<String,String>> allSettings;
 
-    public Output<Map<String,String>> allSettings() {
-        return this.allSettings == null ? Codegen.empty() : this.allSettings;
+    public Optional<Output<Map<String,String>>> allSettings() {
+        return Optional.ofNullable(this.allSettings);
     }
 
     /**
@@ -41,10 +42,10 @@ public final class BotPropertiesArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="appPasswordHint")
-      private final @Nullable Output<String> appPasswordHint;
+    private @Nullable Output<String> appPasswordHint;
 
-    public Output<String> appPasswordHint() {
-        return this.appPasswordHint == null ? Codegen.empty() : this.appPasswordHint;
+    public Optional<Output<String>> appPasswordHint() {
+        return Optional.ofNullable(this.appPasswordHint);
     }
 
     /**
@@ -52,10 +53,10 @@ public final class BotPropertiesArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="cmekKeyVaultUrl")
-      private final @Nullable Output<String> cmekKeyVaultUrl;
+    private @Nullable Output<String> cmekKeyVaultUrl;
 
-    public Output<String> cmekKeyVaultUrl() {
-        return this.cmekKeyVaultUrl == null ? Codegen.empty() : this.cmekKeyVaultUrl;
+    public Optional<Output<String>> cmekKeyVaultUrl() {
+        return Optional.ofNullable(this.cmekKeyVaultUrl);
     }
 
     /**
@@ -63,10 +64,10 @@ public final class BotPropertiesArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -74,10 +75,10 @@ public final class BotPropertiesArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="developerAppInsightKey")
-      private final @Nullable Output<String> developerAppInsightKey;
+    private @Nullable Output<String> developerAppInsightKey;
 
-    public Output<String> developerAppInsightKey() {
-        return this.developerAppInsightKey == null ? Codegen.empty() : this.developerAppInsightKey;
+    public Optional<Output<String>> developerAppInsightKey() {
+        return Optional.ofNullable(this.developerAppInsightKey);
     }
 
     /**
@@ -85,10 +86,10 @@ public final class BotPropertiesArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="developerAppInsightsApiKey")
-      private final @Nullable Output<String> developerAppInsightsApiKey;
+    private @Nullable Output<String> developerAppInsightsApiKey;
 
-    public Output<String> developerAppInsightsApiKey() {
-        return this.developerAppInsightsApiKey == null ? Codegen.empty() : this.developerAppInsightsApiKey;
+    public Optional<Output<String>> developerAppInsightsApiKey() {
+        return Optional.ofNullable(this.developerAppInsightsApiKey);
     }
 
     /**
@@ -96,10 +97,10 @@ public final class BotPropertiesArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="developerAppInsightsApplicationId")
-      private final @Nullable Output<String> developerAppInsightsApplicationId;
+    private @Nullable Output<String> developerAppInsightsApplicationId;
 
-    public Output<String> developerAppInsightsApplicationId() {
-        return this.developerAppInsightsApplicationId == null ? Codegen.empty() : this.developerAppInsightsApplicationId;
+    public Optional<Output<String>> developerAppInsightsApplicationId() {
+        return Optional.ofNullable(this.developerAppInsightsApplicationId);
     }
 
     /**
@@ -107,10 +108,10 @@ public final class BotPropertiesArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="disableLocalAuth")
-      private final @Nullable Output<Boolean> disableLocalAuth;
+    private @Nullable Output<Boolean> disableLocalAuth;
 
-    public Output<Boolean> disableLocalAuth() {
-        return this.disableLocalAuth == null ? Codegen.empty() : this.disableLocalAuth;
+    public Optional<Output<Boolean>> disableLocalAuth() {
+        return Optional.ofNullable(this.disableLocalAuth);
     }
 
     /**
@@ -118,7 +119,7 @@ public final class BotPropertiesArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="displayName", required=true)
-      private final Output<String> displayName;
+    private Output<String> displayName;
 
     public Output<String> displayName() {
         return this.displayName;
@@ -129,7 +130,7 @@ public final class BotPropertiesArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="endpoint", required=true)
-      private final Output<String> endpoint;
+    private Output<String> endpoint;
 
     public Output<String> endpoint() {
         return this.endpoint;
@@ -140,10 +141,10 @@ public final class BotPropertiesArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="iconUrl")
-      private final @Nullable Output<String> iconUrl;
+    private @Nullable Output<String> iconUrl;
 
-    public Output<String> iconUrl() {
-        return this.iconUrl == null ? Codegen.empty() : this.iconUrl;
+    public Optional<Output<String>> iconUrl() {
+        return Optional.ofNullable(this.iconUrl);
     }
 
     /**
@@ -151,10 +152,10 @@ public final class BotPropertiesArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="isCmekEnabled")
-      private final @Nullable Output<Boolean> isCmekEnabled;
+    private @Nullable Output<Boolean> isCmekEnabled;
 
-    public Output<Boolean> isCmekEnabled() {
-        return this.isCmekEnabled == null ? Codegen.empty() : this.isCmekEnabled;
+    public Optional<Output<Boolean>> isCmekEnabled() {
+        return Optional.ofNullable(this.isCmekEnabled);
     }
 
     /**
@@ -162,10 +163,10 @@ public final class BotPropertiesArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="isStreamingSupported")
-      private final @Nullable Output<Boolean> isStreamingSupported;
+    private @Nullable Output<Boolean> isStreamingSupported;
 
-    public Output<Boolean> isStreamingSupported() {
-        return this.isStreamingSupported == null ? Codegen.empty() : this.isStreamingSupported;
+    public Optional<Output<Boolean>> isStreamingSupported() {
+        return Optional.ofNullable(this.isStreamingSupported);
     }
 
     /**
@@ -173,10 +174,10 @@ public final class BotPropertiesArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="luisAppIds")
-      private final @Nullable Output<List<String>> luisAppIds;
+    private @Nullable Output<List<String>> luisAppIds;
 
-    public Output<List<String>> luisAppIds() {
-        return this.luisAppIds == null ? Codegen.empty() : this.luisAppIds;
+    public Optional<Output<List<String>>> luisAppIds() {
+        return Optional.ofNullable(this.luisAppIds);
     }
 
     /**
@@ -184,10 +185,10 @@ public final class BotPropertiesArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="luisKey")
-      private final @Nullable Output<String> luisKey;
+    private @Nullable Output<String> luisKey;
 
-    public Output<String> luisKey() {
-        return this.luisKey == null ? Codegen.empty() : this.luisKey;
+    public Optional<Output<String>> luisKey() {
+        return Optional.ofNullable(this.luisKey);
     }
 
     /**
@@ -195,10 +196,10 @@ public final class BotPropertiesArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="manifestUrl")
-      private final @Nullable Output<String> manifestUrl;
+    private @Nullable Output<String> manifestUrl;
 
-    public Output<String> manifestUrl() {
-        return this.manifestUrl == null ? Codegen.empty() : this.manifestUrl;
+    public Optional<Output<String>> manifestUrl() {
+        return Optional.ofNullable(this.manifestUrl);
     }
 
     /**
@@ -206,7 +207,7 @@ public final class BotPropertiesArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="msaAppId", required=true)
-      private final Output<String> msaAppId;
+    private Output<String> msaAppId;
 
     public Output<String> msaAppId() {
         return this.msaAppId;
@@ -217,10 +218,10 @@ public final class BotPropertiesArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="msaAppMSIResourceId")
-      private final @Nullable Output<String> msaAppMSIResourceId;
+    private @Nullable Output<String> msaAppMSIResourceId;
 
-    public Output<String> msaAppMSIResourceId() {
-        return this.msaAppMSIResourceId == null ? Codegen.empty() : this.msaAppMSIResourceId;
+    public Optional<Output<String>> msaAppMSIResourceId() {
+        return Optional.ofNullable(this.msaAppMSIResourceId);
     }
 
     /**
@@ -228,10 +229,10 @@ public final class BotPropertiesArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="msaAppTenantId")
-      private final @Nullable Output<String> msaAppTenantId;
+    private @Nullable Output<String> msaAppTenantId;
 
-    public Output<String> msaAppTenantId() {
-        return this.msaAppTenantId == null ? Codegen.empty() : this.msaAppTenantId;
+    public Optional<Output<String>> msaAppTenantId() {
+        return Optional.ofNullable(this.msaAppTenantId);
     }
 
     /**
@@ -239,10 +240,10 @@ public final class BotPropertiesArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="msaAppType")
-      private final @Nullable Output<Either<String,MsaAppType>> msaAppType;
+    private @Nullable Output<Either<String,MsaAppType>> msaAppType;
 
-    public Output<Either<String,MsaAppType>> msaAppType() {
-        return this.msaAppType == null ? Codegen.empty() : this.msaAppType;
+    public Optional<Output<Either<String,MsaAppType>>> msaAppType() {
+        return Optional.ofNullable(this.msaAppType);
     }
 
     /**
@@ -250,10 +251,10 @@ public final class BotPropertiesArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="openWithHint")
-      private final @Nullable Output<String> openWithHint;
+    private @Nullable Output<String> openWithHint;
 
-    public Output<String> openWithHint() {
-        return this.openWithHint == null ? Codegen.empty() : this.openWithHint;
+    public Optional<Output<String>> openWithHint() {
+        return Optional.ofNullable(this.openWithHint);
     }
 
     /**
@@ -261,10 +262,10 @@ public final class BotPropertiesArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="parameters")
-      private final @Nullable Output<Map<String,String>> parameters;
+    private @Nullable Output<Map<String,String>> parameters;
 
-    public Output<Map<String,String>> parameters() {
-        return this.parameters == null ? Codegen.empty() : this.parameters;
+    public Optional<Output<Map<String,String>>> parameters() {
+        return Optional.ofNullable(this.parameters);
     }
 
     /**
@@ -272,10 +273,10 @@ public final class BotPropertiesArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="publicNetworkAccess")
-      private final @Nullable Output<Either<String,PublicNetworkAccess>> publicNetworkAccess;
+    private @Nullable Output<Either<String,PublicNetworkAccess>> publicNetworkAccess;
 
-    public Output<Either<String,PublicNetworkAccess>> publicNetworkAccess() {
-        return this.publicNetworkAccess == null ? Codegen.empty() : this.publicNetworkAccess;
+    public Optional<Output<Either<String,PublicNetworkAccess>>> publicNetworkAccess() {
+        return Optional.ofNullable(this.publicNetworkAccess);
     }
 
     /**
@@ -283,10 +284,10 @@ public final class BotPropertiesArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="publishingCredentials")
-      private final @Nullable Output<String> publishingCredentials;
+    private @Nullable Output<String> publishingCredentials;
 
-    public Output<String> publishingCredentials() {
-        return this.publishingCredentials == null ? Codegen.empty() : this.publishingCredentials;
+    public Optional<Output<String>> publishingCredentials() {
+        return Optional.ofNullable(this.publishingCredentials);
     }
 
     /**
@@ -294,10 +295,10 @@ public final class BotPropertiesArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="schemaTransformationVersion")
-      private final @Nullable Output<String> schemaTransformationVersion;
+    private @Nullable Output<String> schemaTransformationVersion;
 
-    public Output<String> schemaTransformationVersion() {
-        return this.schemaTransformationVersion == null ? Codegen.empty() : this.schemaTransformationVersion;
+    public Optional<Output<String>> schemaTransformationVersion() {
+        return Optional.ofNullable(this.schemaTransformationVersion);
     }
 
     /**
@@ -305,378 +306,307 @@ public final class BotPropertiesArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="storageResourceId")
-      private final @Nullable Output<String> storageResourceId;
+    private @Nullable Output<String> storageResourceId;
 
-    public Output<String> storageResourceId() {
-        return this.storageResourceId == null ? Codegen.empty() : this.storageResourceId;
+    public Optional<Output<String>> storageResourceId() {
+        return Optional.ofNullable(this.storageResourceId);
     }
 
-    public BotPropertiesArgs(
-        @Nullable Output<Map<String,String>> allSettings,
-        @Nullable Output<String> appPasswordHint,
-        @Nullable Output<String> cmekKeyVaultUrl,
-        @Nullable Output<String> description,
-        @Nullable Output<String> developerAppInsightKey,
-        @Nullable Output<String> developerAppInsightsApiKey,
-        @Nullable Output<String> developerAppInsightsApplicationId,
-        @Nullable Output<Boolean> disableLocalAuth,
-        Output<String> displayName,
-        Output<String> endpoint,
-        @Nullable Output<String> iconUrl,
-        @Nullable Output<Boolean> isCmekEnabled,
-        @Nullable Output<Boolean> isStreamingSupported,
-        @Nullable Output<List<String>> luisAppIds,
-        @Nullable Output<String> luisKey,
-        @Nullable Output<String> manifestUrl,
-        Output<String> msaAppId,
-        @Nullable Output<String> msaAppMSIResourceId,
-        @Nullable Output<String> msaAppTenantId,
-        @Nullable Output<Either<String,MsaAppType>> msaAppType,
-        @Nullable Output<String> openWithHint,
-        @Nullable Output<Map<String,String>> parameters,
-        @Nullable Output<Either<String,PublicNetworkAccess>> publicNetworkAccess,
-        @Nullable Output<String> publishingCredentials,
-        @Nullable Output<String> schemaTransformationVersion,
-        @Nullable Output<String> storageResourceId) {
-        this.allSettings = allSettings;
-        this.appPasswordHint = appPasswordHint;
-        this.cmekKeyVaultUrl = cmekKeyVaultUrl;
-        this.description = description;
-        this.developerAppInsightKey = developerAppInsightKey;
-        this.developerAppInsightsApiKey = developerAppInsightsApiKey;
-        this.developerAppInsightsApplicationId = developerAppInsightsApplicationId;
-        this.disableLocalAuth = disableLocalAuth;
-        this.displayName = Objects.requireNonNull(displayName, "expected parameter 'displayName' to be non-null");
-        this.endpoint = Objects.requireNonNull(endpoint, "expected parameter 'endpoint' to be non-null");
-        this.iconUrl = iconUrl;
-        this.isCmekEnabled = isCmekEnabled;
-        this.isStreamingSupported = Codegen.booleanProp("isStreamingSupported").output().arg(isStreamingSupported).def(false).getNullable();
-        this.luisAppIds = luisAppIds;
-        this.luisKey = luisKey;
-        this.manifestUrl = manifestUrl;
-        this.msaAppId = Objects.requireNonNull(msaAppId, "expected parameter 'msaAppId' to be non-null");
-        this.msaAppMSIResourceId = msaAppMSIResourceId;
-        this.msaAppTenantId = msaAppTenantId;
-        this.msaAppType = msaAppType;
-        this.openWithHint = openWithHint;
-        this.parameters = parameters;
-        this.publicNetworkAccess = Codegen.stringProp("publicNetworkAccess").left(PublicNetworkAccess.class).output().arg(publicNetworkAccess).def("Enabled").getNullable();
-        this.publishingCredentials = publishingCredentials;
-        this.schemaTransformationVersion = schemaTransformationVersion;
-        this.storageResourceId = storageResourceId;
-    }
+    private BotPropertiesArgs() {}
 
-    private BotPropertiesArgs() {
-        this.allSettings = Codegen.empty();
-        this.appPasswordHint = Codegen.empty();
-        this.cmekKeyVaultUrl = Codegen.empty();
-        this.description = Codegen.empty();
-        this.developerAppInsightKey = Codegen.empty();
-        this.developerAppInsightsApiKey = Codegen.empty();
-        this.developerAppInsightsApplicationId = Codegen.empty();
-        this.disableLocalAuth = Codegen.empty();
-        this.displayName = Codegen.empty();
-        this.endpoint = Codegen.empty();
-        this.iconUrl = Codegen.empty();
-        this.isCmekEnabled = Codegen.empty();
-        this.isStreamingSupported = Codegen.empty();
-        this.luisAppIds = Codegen.empty();
-        this.luisKey = Codegen.empty();
-        this.manifestUrl = Codegen.empty();
-        this.msaAppId = Codegen.empty();
-        this.msaAppMSIResourceId = Codegen.empty();
-        this.msaAppTenantId = Codegen.empty();
-        this.msaAppType = Codegen.empty();
-        this.openWithHint = Codegen.empty();
-        this.parameters = Codegen.empty();
-        this.publicNetworkAccess = Codegen.empty();
-        this.publishingCredentials = Codegen.empty();
-        this.schemaTransformationVersion = Codegen.empty();
-        this.storageResourceId = Codegen.empty();
+    private BotPropertiesArgs(BotPropertiesArgs $) {
+        this.allSettings = $.allSettings;
+        this.appPasswordHint = $.appPasswordHint;
+        this.cmekKeyVaultUrl = $.cmekKeyVaultUrl;
+        this.description = $.description;
+        this.developerAppInsightKey = $.developerAppInsightKey;
+        this.developerAppInsightsApiKey = $.developerAppInsightsApiKey;
+        this.developerAppInsightsApplicationId = $.developerAppInsightsApplicationId;
+        this.disableLocalAuth = $.disableLocalAuth;
+        this.displayName = $.displayName;
+        this.endpoint = $.endpoint;
+        this.iconUrl = $.iconUrl;
+        this.isCmekEnabled = $.isCmekEnabled;
+        this.isStreamingSupported = $.isStreamingSupported;
+        this.luisAppIds = $.luisAppIds;
+        this.luisKey = $.luisKey;
+        this.manifestUrl = $.manifestUrl;
+        this.msaAppId = $.msaAppId;
+        this.msaAppMSIResourceId = $.msaAppMSIResourceId;
+        this.msaAppTenantId = $.msaAppTenantId;
+        this.msaAppType = $.msaAppType;
+        this.openWithHint = $.openWithHint;
+        this.parameters = $.parameters;
+        this.publicNetworkAccess = $.publicNetworkAccess;
+        this.publishingCredentials = $.publishingCredentials;
+        this.schemaTransformationVersion = $.schemaTransformationVersion;
+        this.storageResourceId = $.storageResourceId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BotPropertiesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Map<String,String>> allSettings;
-        private @Nullable Output<String> appPasswordHint;
-        private @Nullable Output<String> cmekKeyVaultUrl;
-        private @Nullable Output<String> description;
-        private @Nullable Output<String> developerAppInsightKey;
-        private @Nullable Output<String> developerAppInsightsApiKey;
-        private @Nullable Output<String> developerAppInsightsApplicationId;
-        private @Nullable Output<Boolean> disableLocalAuth;
-        private Output<String> displayName;
-        private Output<String> endpoint;
-        private @Nullable Output<String> iconUrl;
-        private @Nullable Output<Boolean> isCmekEnabled;
-        private @Nullable Output<Boolean> isStreamingSupported;
-        private @Nullable Output<List<String>> luisAppIds;
-        private @Nullable Output<String> luisKey;
-        private @Nullable Output<String> manifestUrl;
-        private Output<String> msaAppId;
-        private @Nullable Output<String> msaAppMSIResourceId;
-        private @Nullable Output<String> msaAppTenantId;
-        private @Nullable Output<Either<String,MsaAppType>> msaAppType;
-        private @Nullable Output<String> openWithHint;
-        private @Nullable Output<Map<String,String>> parameters;
-        private @Nullable Output<Either<String,PublicNetworkAccess>> publicNetworkAccess;
-        private @Nullable Output<String> publishingCredentials;
-        private @Nullable Output<String> schemaTransformationVersion;
-        private @Nullable Output<String> storageResourceId;
+        private BotPropertiesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new BotPropertiesArgs();
         }
 
         public Builder(BotPropertiesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.allSettings = defaults.allSettings;
-    	      this.appPasswordHint = defaults.appPasswordHint;
-    	      this.cmekKeyVaultUrl = defaults.cmekKeyVaultUrl;
-    	      this.description = defaults.description;
-    	      this.developerAppInsightKey = defaults.developerAppInsightKey;
-    	      this.developerAppInsightsApiKey = defaults.developerAppInsightsApiKey;
-    	      this.developerAppInsightsApplicationId = defaults.developerAppInsightsApplicationId;
-    	      this.disableLocalAuth = defaults.disableLocalAuth;
-    	      this.displayName = defaults.displayName;
-    	      this.endpoint = defaults.endpoint;
-    	      this.iconUrl = defaults.iconUrl;
-    	      this.isCmekEnabled = defaults.isCmekEnabled;
-    	      this.isStreamingSupported = defaults.isStreamingSupported;
-    	      this.luisAppIds = defaults.luisAppIds;
-    	      this.luisKey = defaults.luisKey;
-    	      this.manifestUrl = defaults.manifestUrl;
-    	      this.msaAppId = defaults.msaAppId;
-    	      this.msaAppMSIResourceId = defaults.msaAppMSIResourceId;
-    	      this.msaAppTenantId = defaults.msaAppTenantId;
-    	      this.msaAppType = defaults.msaAppType;
-    	      this.openWithHint = defaults.openWithHint;
-    	      this.parameters = defaults.parameters;
-    	      this.publicNetworkAccess = defaults.publicNetworkAccess;
-    	      this.publishingCredentials = defaults.publishingCredentials;
-    	      this.schemaTransformationVersion = defaults.schemaTransformationVersion;
-    	      this.storageResourceId = defaults.storageResourceId;
+            $ = new BotPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder allSettings(@Nullable Output<Map<String,String>> allSettings) {
-            this.allSettings = allSettings;
+            $.allSettings = allSettings;
             return this;
         }
-        public Builder allSettings(@Nullable Map<String,String> allSettings) {
-            this.allSettings = Codegen.ofNullable(allSettings);
-            return this;
+
+        public Builder allSettings(Map<String,String> allSettings) {
+            return allSettings(Output.of(allSettings));
         }
+
         public Builder appPasswordHint(@Nullable Output<String> appPasswordHint) {
-            this.appPasswordHint = appPasswordHint;
+            $.appPasswordHint = appPasswordHint;
             return this;
         }
-        public Builder appPasswordHint(@Nullable String appPasswordHint) {
-            this.appPasswordHint = Codegen.ofNullable(appPasswordHint);
-            return this;
+
+        public Builder appPasswordHint(String appPasswordHint) {
+            return appPasswordHint(Output.of(appPasswordHint));
         }
+
         public Builder cmekKeyVaultUrl(@Nullable Output<String> cmekKeyVaultUrl) {
-            this.cmekKeyVaultUrl = cmekKeyVaultUrl;
+            $.cmekKeyVaultUrl = cmekKeyVaultUrl;
             return this;
         }
-        public Builder cmekKeyVaultUrl(@Nullable String cmekKeyVaultUrl) {
-            this.cmekKeyVaultUrl = Codegen.ofNullable(cmekKeyVaultUrl);
-            return this;
+
+        public Builder cmekKeyVaultUrl(String cmekKeyVaultUrl) {
+            return cmekKeyVaultUrl(Output.of(cmekKeyVaultUrl));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder developerAppInsightKey(@Nullable Output<String> developerAppInsightKey) {
-            this.developerAppInsightKey = developerAppInsightKey;
+            $.developerAppInsightKey = developerAppInsightKey;
             return this;
         }
-        public Builder developerAppInsightKey(@Nullable String developerAppInsightKey) {
-            this.developerAppInsightKey = Codegen.ofNullable(developerAppInsightKey);
-            return this;
+
+        public Builder developerAppInsightKey(String developerAppInsightKey) {
+            return developerAppInsightKey(Output.of(developerAppInsightKey));
         }
+
         public Builder developerAppInsightsApiKey(@Nullable Output<String> developerAppInsightsApiKey) {
-            this.developerAppInsightsApiKey = developerAppInsightsApiKey;
+            $.developerAppInsightsApiKey = developerAppInsightsApiKey;
             return this;
         }
-        public Builder developerAppInsightsApiKey(@Nullable String developerAppInsightsApiKey) {
-            this.developerAppInsightsApiKey = Codegen.ofNullable(developerAppInsightsApiKey);
-            return this;
+
+        public Builder developerAppInsightsApiKey(String developerAppInsightsApiKey) {
+            return developerAppInsightsApiKey(Output.of(developerAppInsightsApiKey));
         }
+
         public Builder developerAppInsightsApplicationId(@Nullable Output<String> developerAppInsightsApplicationId) {
-            this.developerAppInsightsApplicationId = developerAppInsightsApplicationId;
+            $.developerAppInsightsApplicationId = developerAppInsightsApplicationId;
             return this;
         }
-        public Builder developerAppInsightsApplicationId(@Nullable String developerAppInsightsApplicationId) {
-            this.developerAppInsightsApplicationId = Codegen.ofNullable(developerAppInsightsApplicationId);
-            return this;
+
+        public Builder developerAppInsightsApplicationId(String developerAppInsightsApplicationId) {
+            return developerAppInsightsApplicationId(Output.of(developerAppInsightsApplicationId));
         }
+
         public Builder disableLocalAuth(@Nullable Output<Boolean> disableLocalAuth) {
-            this.disableLocalAuth = disableLocalAuth;
+            $.disableLocalAuth = disableLocalAuth;
             return this;
         }
-        public Builder disableLocalAuth(@Nullable Boolean disableLocalAuth) {
-            this.disableLocalAuth = Codegen.ofNullable(disableLocalAuth);
-            return this;
+
+        public Builder disableLocalAuth(Boolean disableLocalAuth) {
+            return disableLocalAuth(Output.of(disableLocalAuth));
         }
+
         public Builder displayName(Output<String> displayName) {
-            this.displayName = Objects.requireNonNull(displayName);
+            $.displayName = displayName;
             return this;
         }
+
         public Builder displayName(String displayName) {
-            this.displayName = Output.of(Objects.requireNonNull(displayName));
-            return this;
+            return displayName(Output.of(displayName));
         }
+
         public Builder endpoint(Output<String> endpoint) {
-            this.endpoint = Objects.requireNonNull(endpoint);
+            $.endpoint = endpoint;
             return this;
         }
+
         public Builder endpoint(String endpoint) {
-            this.endpoint = Output.of(Objects.requireNonNull(endpoint));
-            return this;
+            return endpoint(Output.of(endpoint));
         }
+
         public Builder iconUrl(@Nullable Output<String> iconUrl) {
-            this.iconUrl = iconUrl;
+            $.iconUrl = iconUrl;
             return this;
         }
-        public Builder iconUrl(@Nullable String iconUrl) {
-            this.iconUrl = Codegen.ofNullable(iconUrl);
-            return this;
+
+        public Builder iconUrl(String iconUrl) {
+            return iconUrl(Output.of(iconUrl));
         }
+
         public Builder isCmekEnabled(@Nullable Output<Boolean> isCmekEnabled) {
-            this.isCmekEnabled = isCmekEnabled;
+            $.isCmekEnabled = isCmekEnabled;
             return this;
         }
-        public Builder isCmekEnabled(@Nullable Boolean isCmekEnabled) {
-            this.isCmekEnabled = Codegen.ofNullable(isCmekEnabled);
-            return this;
+
+        public Builder isCmekEnabled(Boolean isCmekEnabled) {
+            return isCmekEnabled(Output.of(isCmekEnabled));
         }
+
         public Builder isStreamingSupported(@Nullable Output<Boolean> isStreamingSupported) {
-            this.isStreamingSupported = isStreamingSupported;
+            $.isStreamingSupported = isStreamingSupported;
             return this;
         }
-        public Builder isStreamingSupported(@Nullable Boolean isStreamingSupported) {
-            this.isStreamingSupported = Codegen.ofNullable(isStreamingSupported);
-            return this;
+
+        public Builder isStreamingSupported(Boolean isStreamingSupported) {
+            return isStreamingSupported(Output.of(isStreamingSupported));
         }
+
         public Builder luisAppIds(@Nullable Output<List<String>> luisAppIds) {
-            this.luisAppIds = luisAppIds;
+            $.luisAppIds = luisAppIds;
             return this;
         }
-        public Builder luisAppIds(@Nullable List<String> luisAppIds) {
-            this.luisAppIds = Codegen.ofNullable(luisAppIds);
-            return this;
+
+        public Builder luisAppIds(List<String> luisAppIds) {
+            return luisAppIds(Output.of(luisAppIds));
         }
+
         public Builder luisAppIds(String... luisAppIds) {
             return luisAppIds(List.of(luisAppIds));
         }
+
         public Builder luisKey(@Nullable Output<String> luisKey) {
-            this.luisKey = luisKey;
+            $.luisKey = luisKey;
             return this;
         }
-        public Builder luisKey(@Nullable String luisKey) {
-            this.luisKey = Codegen.ofNullable(luisKey);
-            return this;
+
+        public Builder luisKey(String luisKey) {
+            return luisKey(Output.of(luisKey));
         }
+
         public Builder manifestUrl(@Nullable Output<String> manifestUrl) {
-            this.manifestUrl = manifestUrl;
+            $.manifestUrl = manifestUrl;
             return this;
         }
-        public Builder manifestUrl(@Nullable String manifestUrl) {
-            this.manifestUrl = Codegen.ofNullable(manifestUrl);
-            return this;
+
+        public Builder manifestUrl(String manifestUrl) {
+            return manifestUrl(Output.of(manifestUrl));
         }
+
         public Builder msaAppId(Output<String> msaAppId) {
-            this.msaAppId = Objects.requireNonNull(msaAppId);
+            $.msaAppId = msaAppId;
             return this;
         }
+
         public Builder msaAppId(String msaAppId) {
-            this.msaAppId = Output.of(Objects.requireNonNull(msaAppId));
-            return this;
+            return msaAppId(Output.of(msaAppId));
         }
+
         public Builder msaAppMSIResourceId(@Nullable Output<String> msaAppMSIResourceId) {
-            this.msaAppMSIResourceId = msaAppMSIResourceId;
+            $.msaAppMSIResourceId = msaAppMSIResourceId;
             return this;
         }
-        public Builder msaAppMSIResourceId(@Nullable String msaAppMSIResourceId) {
-            this.msaAppMSIResourceId = Codegen.ofNullable(msaAppMSIResourceId);
-            return this;
+
+        public Builder msaAppMSIResourceId(String msaAppMSIResourceId) {
+            return msaAppMSIResourceId(Output.of(msaAppMSIResourceId));
         }
+
         public Builder msaAppTenantId(@Nullable Output<String> msaAppTenantId) {
-            this.msaAppTenantId = msaAppTenantId;
+            $.msaAppTenantId = msaAppTenantId;
             return this;
         }
-        public Builder msaAppTenantId(@Nullable String msaAppTenantId) {
-            this.msaAppTenantId = Codegen.ofNullable(msaAppTenantId);
-            return this;
+
+        public Builder msaAppTenantId(String msaAppTenantId) {
+            return msaAppTenantId(Output.of(msaAppTenantId));
         }
+
         public Builder msaAppType(@Nullable Output<Either<String,MsaAppType>> msaAppType) {
-            this.msaAppType = msaAppType;
+            $.msaAppType = msaAppType;
             return this;
         }
-        public Builder msaAppType(@Nullable Either<String,MsaAppType> msaAppType) {
-            this.msaAppType = Codegen.ofNullable(msaAppType);
-            return this;
+
+        public Builder msaAppType(Either<String,MsaAppType> msaAppType) {
+            return msaAppType(Output.of(msaAppType));
         }
+
         public Builder openWithHint(@Nullable Output<String> openWithHint) {
-            this.openWithHint = openWithHint;
+            $.openWithHint = openWithHint;
             return this;
         }
-        public Builder openWithHint(@Nullable String openWithHint) {
-            this.openWithHint = Codegen.ofNullable(openWithHint);
-            return this;
+
+        public Builder openWithHint(String openWithHint) {
+            return openWithHint(Output.of(openWithHint));
         }
+
         public Builder parameters(@Nullable Output<Map<String,String>> parameters) {
-            this.parameters = parameters;
+            $.parameters = parameters;
             return this;
         }
-        public Builder parameters(@Nullable Map<String,String> parameters) {
-            this.parameters = Codegen.ofNullable(parameters);
-            return this;
+
+        public Builder parameters(Map<String,String> parameters) {
+            return parameters(Output.of(parameters));
         }
+
         public Builder publicNetworkAccess(@Nullable Output<Either<String,PublicNetworkAccess>> publicNetworkAccess) {
-            this.publicNetworkAccess = publicNetworkAccess;
+            $.publicNetworkAccess = publicNetworkAccess;
             return this;
         }
-        public Builder publicNetworkAccess(@Nullable Either<String,PublicNetworkAccess> publicNetworkAccess) {
-            this.publicNetworkAccess = Codegen.ofNullable(publicNetworkAccess);
-            return this;
+
+        public Builder publicNetworkAccess(Either<String,PublicNetworkAccess> publicNetworkAccess) {
+            return publicNetworkAccess(Output.of(publicNetworkAccess));
         }
+
         public Builder publishingCredentials(@Nullable Output<String> publishingCredentials) {
-            this.publishingCredentials = publishingCredentials;
+            $.publishingCredentials = publishingCredentials;
             return this;
         }
-        public Builder publishingCredentials(@Nullable String publishingCredentials) {
-            this.publishingCredentials = Codegen.ofNullable(publishingCredentials);
-            return this;
+
+        public Builder publishingCredentials(String publishingCredentials) {
+            return publishingCredentials(Output.of(publishingCredentials));
         }
+
         public Builder schemaTransformationVersion(@Nullable Output<String> schemaTransformationVersion) {
-            this.schemaTransformationVersion = schemaTransformationVersion;
+            $.schemaTransformationVersion = schemaTransformationVersion;
             return this;
         }
-        public Builder schemaTransformationVersion(@Nullable String schemaTransformationVersion) {
-            this.schemaTransformationVersion = Codegen.ofNullable(schemaTransformationVersion);
-            return this;
+
+        public Builder schemaTransformationVersion(String schemaTransformationVersion) {
+            return schemaTransformationVersion(Output.of(schemaTransformationVersion));
         }
+
         public Builder storageResourceId(@Nullable Output<String> storageResourceId) {
-            this.storageResourceId = storageResourceId;
+            $.storageResourceId = storageResourceId;
             return this;
         }
-        public Builder storageResourceId(@Nullable String storageResourceId) {
-            this.storageResourceId = Codegen.ofNullable(storageResourceId);
-            return this;
-        }        public BotPropertiesArgs build() {
-            return new BotPropertiesArgs(allSettings, appPasswordHint, cmekKeyVaultUrl, description, developerAppInsightKey, developerAppInsightsApiKey, developerAppInsightsApplicationId, disableLocalAuth, displayName, endpoint, iconUrl, isCmekEnabled, isStreamingSupported, luisAppIds, luisKey, manifestUrl, msaAppId, msaAppMSIResourceId, msaAppTenantId, msaAppType, openWithHint, parameters, publicNetworkAccess, publishingCredentials, schemaTransformationVersion, storageResourceId);
+
+        public Builder storageResourceId(String storageResourceId) {
+            return storageResourceId(Output.of(storageResourceId));
+        }
+
+        public BotPropertiesArgs build() {
+            $.displayName = Objects.requireNonNull($.displayName, "expected parameter 'displayName' to be non-null");
+            $.endpoint = Objects.requireNonNull($.endpoint, "expected parameter 'endpoint' to be non-null");
+            $.isStreamingSupported = Codegen.booleanProp("isStreamingSupported").output().arg($.isStreamingSupported).def(false).getNullable();
+            $.msaAppId = Objects.requireNonNull($.msaAppId, "expected parameter 'msaAppId' to be non-null");
+            $.publicNetworkAccess = Codegen.stringProp("publicNetworkAccess").left(PublicNetworkAccess.class).output().arg($.publicNetworkAccess).def("Enabled").getNullable();
+            return $;
         }
     }
+
 }

@@ -5,11 +5,11 @@ package com.pulumi.gcp.compute;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.compute.inputs.RegionPerInstanceConfigPreservedStateArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +27,10 @@ public final class RegionPerInstanceConfigArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="minimalAction")
-      private final @Nullable Output<String> minimalAction;
+    private @Nullable Output<String> minimalAction;
 
-    public Output<String> minimalAction() {
-        return this.minimalAction == null ? Codegen.empty() : this.minimalAction;
+    public Optional<Output<String>> minimalAction() {
+        return Optional.ofNullable(this.minimalAction);
     }
 
     /**
@@ -43,10 +43,10 @@ public final class RegionPerInstanceConfigArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="mostDisruptiveAllowedAction")
-      private final @Nullable Output<String> mostDisruptiveAllowedAction;
+    private @Nullable Output<String> mostDisruptiveAllowedAction;
 
-    public Output<String> mostDisruptiveAllowedAction() {
-        return this.mostDisruptiveAllowedAction == null ? Codegen.empty() : this.mostDisruptiveAllowedAction;
+    public Optional<Output<String>> mostDisruptiveAllowedAction() {
+        return Optional.ofNullable(this.mostDisruptiveAllowedAction);
     }
 
     /**
@@ -54,10 +54,10 @@ public final class RegionPerInstanceConfigArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -66,10 +66,10 @@ public final class RegionPerInstanceConfigArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="preservedState")
-      private final @Nullable Output<RegionPerInstanceConfigPreservedStateArgs> preservedState;
+    private @Nullable Output<RegionPerInstanceConfigPreservedStateArgs> preservedState;
 
-    public Output<RegionPerInstanceConfigPreservedStateArgs> preservedState() {
-        return this.preservedState == null ? Codegen.empty() : this.preservedState;
+    public Optional<Output<RegionPerInstanceConfigPreservedStateArgs>> preservedState() {
+        return Optional.ofNullable(this.preservedState);
     }
 
     /**
@@ -78,10 +78,10 @@ public final class RegionPerInstanceConfigArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -89,10 +89,10 @@ public final class RegionPerInstanceConfigArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="region")
-      private final @Nullable Output<String> region;
+    private @Nullable Output<String> region;
 
-    public Output<String> region() {
-        return this.region == null ? Codegen.empty() : this.region;
+    public Optional<Output<String>> region() {
+        return Optional.ofNullable(this.region);
     }
 
     /**
@@ -100,7 +100,7 @@ public final class RegionPerInstanceConfigArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="regionInstanceGroupManager", required=true)
-      private final Output<String> regionInstanceGroupManager;
+    private Output<String> regionInstanceGroupManager;
 
     public Output<String> regionInstanceGroupManager() {
         return this.regionInstanceGroupManager;
@@ -113,141 +113,119 @@ public final class RegionPerInstanceConfigArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="removeInstanceStateOnDestroy")
-      private final @Nullable Output<Boolean> removeInstanceStateOnDestroy;
+    private @Nullable Output<Boolean> removeInstanceStateOnDestroy;
 
-    public Output<Boolean> removeInstanceStateOnDestroy() {
-        return this.removeInstanceStateOnDestroy == null ? Codegen.empty() : this.removeInstanceStateOnDestroy;
+    public Optional<Output<Boolean>> removeInstanceStateOnDestroy() {
+        return Optional.ofNullable(this.removeInstanceStateOnDestroy);
     }
 
-    public RegionPerInstanceConfigArgs(
-        @Nullable Output<String> minimalAction,
-        @Nullable Output<String> mostDisruptiveAllowedAction,
-        @Nullable Output<String> name,
-        @Nullable Output<RegionPerInstanceConfigPreservedStateArgs> preservedState,
-        @Nullable Output<String> project,
-        @Nullable Output<String> region,
-        Output<String> regionInstanceGroupManager,
-        @Nullable Output<Boolean> removeInstanceStateOnDestroy) {
-        this.minimalAction = minimalAction;
-        this.mostDisruptiveAllowedAction = mostDisruptiveAllowedAction;
-        this.name = name;
-        this.preservedState = preservedState;
-        this.project = project;
-        this.region = region;
-        this.regionInstanceGroupManager = Objects.requireNonNull(regionInstanceGroupManager, "expected parameter 'regionInstanceGroupManager' to be non-null");
-        this.removeInstanceStateOnDestroy = removeInstanceStateOnDestroy;
-    }
+    private RegionPerInstanceConfigArgs() {}
 
-    private RegionPerInstanceConfigArgs() {
-        this.minimalAction = Codegen.empty();
-        this.mostDisruptiveAllowedAction = Codegen.empty();
-        this.name = Codegen.empty();
-        this.preservedState = Codegen.empty();
-        this.project = Codegen.empty();
-        this.region = Codegen.empty();
-        this.regionInstanceGroupManager = Codegen.empty();
-        this.removeInstanceStateOnDestroy = Codegen.empty();
+    private RegionPerInstanceConfigArgs(RegionPerInstanceConfigArgs $) {
+        this.minimalAction = $.minimalAction;
+        this.mostDisruptiveAllowedAction = $.mostDisruptiveAllowedAction;
+        this.name = $.name;
+        this.preservedState = $.preservedState;
+        this.project = $.project;
+        this.region = $.region;
+        this.regionInstanceGroupManager = $.regionInstanceGroupManager;
+        this.removeInstanceStateOnDestroy = $.removeInstanceStateOnDestroy;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RegionPerInstanceConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> minimalAction;
-        private @Nullable Output<String> mostDisruptiveAllowedAction;
-        private @Nullable Output<String> name;
-        private @Nullable Output<RegionPerInstanceConfigPreservedStateArgs> preservedState;
-        private @Nullable Output<String> project;
-        private @Nullable Output<String> region;
-        private Output<String> regionInstanceGroupManager;
-        private @Nullable Output<Boolean> removeInstanceStateOnDestroy;
+        private RegionPerInstanceConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RegionPerInstanceConfigArgs();
         }
 
         public Builder(RegionPerInstanceConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.minimalAction = defaults.minimalAction;
-    	      this.mostDisruptiveAllowedAction = defaults.mostDisruptiveAllowedAction;
-    	      this.name = defaults.name;
-    	      this.preservedState = defaults.preservedState;
-    	      this.project = defaults.project;
-    	      this.region = defaults.region;
-    	      this.regionInstanceGroupManager = defaults.regionInstanceGroupManager;
-    	      this.removeInstanceStateOnDestroy = defaults.removeInstanceStateOnDestroy;
+            $ = new RegionPerInstanceConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder minimalAction(@Nullable Output<String> minimalAction) {
-            this.minimalAction = minimalAction;
+            $.minimalAction = minimalAction;
             return this;
         }
-        public Builder minimalAction(@Nullable String minimalAction) {
-            this.minimalAction = Codegen.ofNullable(minimalAction);
-            return this;
+
+        public Builder minimalAction(String minimalAction) {
+            return minimalAction(Output.of(minimalAction));
         }
+
         public Builder mostDisruptiveAllowedAction(@Nullable Output<String> mostDisruptiveAllowedAction) {
-            this.mostDisruptiveAllowedAction = mostDisruptiveAllowedAction;
+            $.mostDisruptiveAllowedAction = mostDisruptiveAllowedAction;
             return this;
         }
-        public Builder mostDisruptiveAllowedAction(@Nullable String mostDisruptiveAllowedAction) {
-            this.mostDisruptiveAllowedAction = Codegen.ofNullable(mostDisruptiveAllowedAction);
-            return this;
+
+        public Builder mostDisruptiveAllowedAction(String mostDisruptiveAllowedAction) {
+            return mostDisruptiveAllowedAction(Output.of(mostDisruptiveAllowedAction));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder preservedState(@Nullable Output<RegionPerInstanceConfigPreservedStateArgs> preservedState) {
-            this.preservedState = preservedState;
+            $.preservedState = preservedState;
             return this;
         }
-        public Builder preservedState(@Nullable RegionPerInstanceConfigPreservedStateArgs preservedState) {
-            this.preservedState = Codegen.ofNullable(preservedState);
-            return this;
+
+        public Builder preservedState(RegionPerInstanceConfigPreservedStateArgs preservedState) {
+            return preservedState(Output.of(preservedState));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder region(@Nullable Output<String> region) {
-            this.region = region;
+            $.region = region;
             return this;
         }
-        public Builder region(@Nullable String region) {
-            this.region = Codegen.ofNullable(region);
-            return this;
+
+        public Builder region(String region) {
+            return region(Output.of(region));
         }
+
         public Builder regionInstanceGroupManager(Output<String> regionInstanceGroupManager) {
-            this.regionInstanceGroupManager = Objects.requireNonNull(regionInstanceGroupManager);
+            $.regionInstanceGroupManager = regionInstanceGroupManager;
             return this;
         }
+
         public Builder regionInstanceGroupManager(String regionInstanceGroupManager) {
-            this.regionInstanceGroupManager = Output.of(Objects.requireNonNull(regionInstanceGroupManager));
-            return this;
+            return regionInstanceGroupManager(Output.of(regionInstanceGroupManager));
         }
+
         public Builder removeInstanceStateOnDestroy(@Nullable Output<Boolean> removeInstanceStateOnDestroy) {
-            this.removeInstanceStateOnDestroy = removeInstanceStateOnDestroy;
+            $.removeInstanceStateOnDestroy = removeInstanceStateOnDestroy;
             return this;
         }
-        public Builder removeInstanceStateOnDestroy(@Nullable Boolean removeInstanceStateOnDestroy) {
-            this.removeInstanceStateOnDestroy = Codegen.ofNullable(removeInstanceStateOnDestroy);
-            return this;
-        }        public RegionPerInstanceConfigArgs build() {
-            return new RegionPerInstanceConfigArgs(minimalAction, mostDisruptiveAllowedAction, name, preservedState, project, region, regionInstanceGroupManager, removeInstanceStateOnDestroy);
+
+        public Builder removeInstanceStateOnDestroy(Boolean removeInstanceStateOnDestroy) {
+            return removeInstanceStateOnDestroy(Output.of(removeInstanceStateOnDestroy));
+        }
+
+        public RegionPerInstanceConfigArgs build() {
+            $.regionInstanceGroupManager = Objects.requireNonNull($.regionInstanceGroupManager, "expected parameter 'regionInstanceGroupManager' to be non-null");
+            return $;
         }
     }
+
 }

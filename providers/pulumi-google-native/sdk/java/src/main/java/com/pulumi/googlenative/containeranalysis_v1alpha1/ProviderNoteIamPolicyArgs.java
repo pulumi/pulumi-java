@@ -5,12 +5,12 @@ package com.pulumi.googlenative.containeranalysis_v1alpha1;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.containeranalysis_v1alpha1.inputs.BindingArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,10 @@ public final class ProviderNoteIamPolicyArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="bindings")
-      private final @Nullable Output<List<BindingArgs>> bindings;
+    private @Nullable Output<List<BindingArgs>> bindings;
 
-    public Output<List<BindingArgs>> bindings() {
-        return this.bindings == null ? Codegen.empty() : this.bindings;
+    public Optional<Output<List<BindingArgs>>> bindings() {
+        return Optional.ofNullable(this.bindings);
     }
 
     /**
@@ -34,21 +34,21 @@ public final class ProviderNoteIamPolicyArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="etag")
-      private final @Nullable Output<String> etag;
+    private @Nullable Output<String> etag;
 
-    public Output<String> etag() {
-        return this.etag == null ? Codegen.empty() : this.etag;
+    public Optional<Output<String>> etag() {
+        return Optional.ofNullable(this.etag);
     }
 
     @Import(name="noteId", required=true)
-      private final Output<String> noteId;
+    private Output<String> noteId;
 
     public Output<String> noteId() {
         return this.noteId;
     }
 
     @Import(name="providerId", required=true)
-      private final Output<String> providerId;
+    private Output<String> providerId;
 
     public Output<String> providerId() {
         return this.providerId;
@@ -59,105 +59,94 @@ public final class ProviderNoteIamPolicyArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="version")
-      private final @Nullable Output<Integer> version;
+    private @Nullable Output<Integer> version;
 
-    public Output<Integer> version() {
-        return this.version == null ? Codegen.empty() : this.version;
+    public Optional<Output<Integer>> version() {
+        return Optional.ofNullable(this.version);
     }
 
-    public ProviderNoteIamPolicyArgs(
-        @Nullable Output<List<BindingArgs>> bindings,
-        @Nullable Output<String> etag,
-        Output<String> noteId,
-        Output<String> providerId,
-        @Nullable Output<Integer> version) {
-        this.bindings = bindings;
-        this.etag = etag;
-        this.noteId = Objects.requireNonNull(noteId, "expected parameter 'noteId' to be non-null");
-        this.providerId = Objects.requireNonNull(providerId, "expected parameter 'providerId' to be non-null");
-        this.version = version;
-    }
+    private ProviderNoteIamPolicyArgs() {}
 
-    private ProviderNoteIamPolicyArgs() {
-        this.bindings = Codegen.empty();
-        this.etag = Codegen.empty();
-        this.noteId = Codegen.empty();
-        this.providerId = Codegen.empty();
-        this.version = Codegen.empty();
+    private ProviderNoteIamPolicyArgs(ProviderNoteIamPolicyArgs $) {
+        this.bindings = $.bindings;
+        this.etag = $.etag;
+        this.noteId = $.noteId;
+        this.providerId = $.providerId;
+        this.version = $.version;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ProviderNoteIamPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<BindingArgs>> bindings;
-        private @Nullable Output<String> etag;
-        private Output<String> noteId;
-        private Output<String> providerId;
-        private @Nullable Output<Integer> version;
+        private ProviderNoteIamPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ProviderNoteIamPolicyArgs();
         }
 
         public Builder(ProviderNoteIamPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.bindings = defaults.bindings;
-    	      this.etag = defaults.etag;
-    	      this.noteId = defaults.noteId;
-    	      this.providerId = defaults.providerId;
-    	      this.version = defaults.version;
+            $ = new ProviderNoteIamPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder bindings(@Nullable Output<List<BindingArgs>> bindings) {
-            this.bindings = bindings;
+            $.bindings = bindings;
             return this;
         }
-        public Builder bindings(@Nullable List<BindingArgs> bindings) {
-            this.bindings = Codegen.ofNullable(bindings);
-            return this;
+
+        public Builder bindings(List<BindingArgs> bindings) {
+            return bindings(Output.of(bindings));
         }
+
         public Builder bindings(BindingArgs... bindings) {
             return bindings(List.of(bindings));
         }
+
         public Builder etag(@Nullable Output<String> etag) {
-            this.etag = etag;
+            $.etag = etag;
             return this;
         }
-        public Builder etag(@Nullable String etag) {
-            this.etag = Codegen.ofNullable(etag);
-            return this;
+
+        public Builder etag(String etag) {
+            return etag(Output.of(etag));
         }
+
         public Builder noteId(Output<String> noteId) {
-            this.noteId = Objects.requireNonNull(noteId);
+            $.noteId = noteId;
             return this;
         }
+
         public Builder noteId(String noteId) {
-            this.noteId = Output.of(Objects.requireNonNull(noteId));
-            return this;
+            return noteId(Output.of(noteId));
         }
+
         public Builder providerId(Output<String> providerId) {
-            this.providerId = Objects.requireNonNull(providerId);
+            $.providerId = providerId;
             return this;
         }
+
         public Builder providerId(String providerId) {
-            this.providerId = Output.of(Objects.requireNonNull(providerId));
-            return this;
+            return providerId(Output.of(providerId));
         }
+
         public Builder version(@Nullable Output<Integer> version) {
-            this.version = version;
+            $.version = version;
             return this;
         }
-        public Builder version(@Nullable Integer version) {
-            this.version = Codegen.ofNullable(version);
-            return this;
-        }        public ProviderNoteIamPolicyArgs build() {
-            return new ProviderNoteIamPolicyArgs(bindings, etag, noteId, providerId, version);
+
+        public Builder version(Integer version) {
+            return version(Output.of(version));
+        }
+
+        public ProviderNoteIamPolicyArgs build() {
+            $.noteId = Objects.requireNonNull($.noteId, "expected parameter 'noteId' to be non-null");
+            $.providerId = Objects.requireNonNull($.providerId, "expected parameter 'providerId' to be non-null");
+            return $;
         }
     }
+
 }

@@ -13,45 +13,45 @@ public final class AnomalyDetectorCloudwatchConfig extends com.pulumi.resources.
     public static final AnomalyDetectorCloudwatchConfig Empty = new AnomalyDetectorCloudwatchConfig();
 
     @Import(name="roleArn", required=true)
-      private final String roleArn;
+    private String roleArn;
 
     public String roleArn() {
         return this.roleArn;
     }
 
-    public AnomalyDetectorCloudwatchConfig(String roleArn) {
-        this.roleArn = Objects.requireNonNull(roleArn, "expected parameter 'roleArn' to be non-null");
-    }
+    private AnomalyDetectorCloudwatchConfig() {}
 
-    private AnomalyDetectorCloudwatchConfig() {
-        this.roleArn = null;
+    private AnomalyDetectorCloudwatchConfig(AnomalyDetectorCloudwatchConfig $) {
+        this.roleArn = $.roleArn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AnomalyDetectorCloudwatchConfig defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String roleArn;
+        private AnomalyDetectorCloudwatchConfig $;
 
         public Builder() {
-    	      // Empty
+            $ = new AnomalyDetectorCloudwatchConfig();
         }
 
         public Builder(AnomalyDetectorCloudwatchConfig defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.roleArn = defaults.roleArn;
+            $ = new AnomalyDetectorCloudwatchConfig(Objects.requireNonNull(defaults));
         }
 
         public Builder roleArn(String roleArn) {
-            this.roleArn = Objects.requireNonNull(roleArn);
+            $.roleArn = roleArn;
             return this;
-        }        public AnomalyDetectorCloudwatchConfig build() {
-            return new AnomalyDetectorCloudwatchConfig(roleArn);
+        }
+
+        public AnomalyDetectorCloudwatchConfig build() {
+            $.roleArn = Objects.requireNonNull($.roleArn, "expected parameter 'roleArn' to be non-null");
+            return $;
         }
     }
+
 }

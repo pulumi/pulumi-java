@@ -17,7 +17,7 @@ public final class GetSqlResourceSqlDatabaseArgs extends com.pulumi.resources.In
      * 
      */
     @Import(name="accountName", required=true)
-      private final String accountName;
+    private String accountName;
 
     public String accountName() {
         return this.accountName;
@@ -28,7 +28,7 @@ public final class GetSqlResourceSqlDatabaseArgs extends com.pulumi.resources.In
      * 
      */
     @Import(name="databaseName", required=true)
-      private final String databaseName;
+    private String databaseName;
 
     public String databaseName() {
         return this.databaseName;
@@ -39,64 +39,59 @@ public final class GetSqlResourceSqlDatabaseArgs extends com.pulumi.resources.In
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public GetSqlResourceSqlDatabaseArgs(
-        String accountName,
-        String databaseName,
-        String resourceGroupName) {
-        this.accountName = Objects.requireNonNull(accountName, "expected parameter 'accountName' to be non-null");
-        this.databaseName = Objects.requireNonNull(databaseName, "expected parameter 'databaseName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private GetSqlResourceSqlDatabaseArgs() {}
 
-    private GetSqlResourceSqlDatabaseArgs() {
-        this.accountName = null;
-        this.databaseName = null;
-        this.resourceGroupName = null;
+    private GetSqlResourceSqlDatabaseArgs(GetSqlResourceSqlDatabaseArgs $) {
+        this.accountName = $.accountName;
+        this.databaseName = $.databaseName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetSqlResourceSqlDatabaseArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String accountName;
-        private String databaseName;
-        private String resourceGroupName;
+        private GetSqlResourceSqlDatabaseArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetSqlResourceSqlDatabaseArgs();
         }
 
         public Builder(GetSqlResourceSqlDatabaseArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accountName = defaults.accountName;
-    	      this.databaseName = defaults.databaseName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new GetSqlResourceSqlDatabaseArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder accountName(String accountName) {
-            this.accountName = Objects.requireNonNull(accountName);
+            $.accountName = accountName;
             return this;
         }
+
         public Builder databaseName(String databaseName) {
-            this.databaseName = Objects.requireNonNull(databaseName);
+            $.databaseName = databaseName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public GetSqlResourceSqlDatabaseArgs build() {
-            return new GetSqlResourceSqlDatabaseArgs(accountName, databaseName, resourceGroupName);
+        }
+
+        public GetSqlResourceSqlDatabaseArgs build() {
+            $.accountName = Objects.requireNonNull($.accountName, "expected parameter 'accountName' to be non-null");
+            $.databaseName = Objects.requireNonNull($.databaseName, "expected parameter 'databaseName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

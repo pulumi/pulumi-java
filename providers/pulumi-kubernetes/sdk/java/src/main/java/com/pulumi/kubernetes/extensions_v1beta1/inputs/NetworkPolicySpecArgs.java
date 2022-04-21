@@ -5,13 +5,13 @@ package com.pulumi.kubernetes.extensions_v1beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.kubernetes.extensions_v1beta1.inputs.NetworkPolicyEgressRuleArgs;
 import com.pulumi.kubernetes.extensions_v1beta1.inputs.NetworkPolicyIngressRuleArgs;
 import com.pulumi.kubernetes.meta_v1.inputs.LabelSelectorArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -28,10 +28,10 @@ public final class NetworkPolicySpecArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="egress")
-      private final @Nullable Output<List<NetworkPolicyEgressRuleArgs>> egress;
+    private @Nullable Output<List<NetworkPolicyEgressRuleArgs>> egress;
 
-    public Output<List<NetworkPolicyEgressRuleArgs>> egress() {
-        return this.egress == null ? Codegen.empty() : this.egress;
+    public Optional<Output<List<NetworkPolicyEgressRuleArgs>>> egress() {
+        return Optional.ofNullable(this.egress);
     }
 
     /**
@@ -39,10 +39,10 @@ public final class NetworkPolicySpecArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="ingress")
-      private final @Nullable Output<List<NetworkPolicyIngressRuleArgs>> ingress;
+    private @Nullable Output<List<NetworkPolicyIngressRuleArgs>> ingress;
 
-    public Output<List<NetworkPolicyIngressRuleArgs>> ingress() {
-        return this.ingress == null ? Codegen.empty() : this.ingress;
+    public Optional<Output<List<NetworkPolicyIngressRuleArgs>>> ingress() {
+        return Optional.ofNullable(this.ingress);
     }
 
     /**
@@ -50,7 +50,7 @@ public final class NetworkPolicySpecArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="podSelector", required=true)
-      private final Output<LabelSelectorArgs> podSelector;
+    private Output<LabelSelectorArgs> podSelector;
 
     public Output<LabelSelectorArgs> podSelector() {
         return this.podSelector;
@@ -61,98 +61,91 @@ public final class NetworkPolicySpecArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="policyTypes")
-      private final @Nullable Output<List<String>> policyTypes;
+    private @Nullable Output<List<String>> policyTypes;
 
-    public Output<List<String>> policyTypes() {
-        return this.policyTypes == null ? Codegen.empty() : this.policyTypes;
+    public Optional<Output<List<String>>> policyTypes() {
+        return Optional.ofNullable(this.policyTypes);
     }
 
-    public NetworkPolicySpecArgs(
-        @Nullable Output<List<NetworkPolicyEgressRuleArgs>> egress,
-        @Nullable Output<List<NetworkPolicyIngressRuleArgs>> ingress,
-        Output<LabelSelectorArgs> podSelector,
-        @Nullable Output<List<String>> policyTypes) {
-        this.egress = egress;
-        this.ingress = ingress;
-        this.podSelector = Objects.requireNonNull(podSelector, "expected parameter 'podSelector' to be non-null");
-        this.policyTypes = policyTypes;
-    }
+    private NetworkPolicySpecArgs() {}
 
-    private NetworkPolicySpecArgs() {
-        this.egress = Codegen.empty();
-        this.ingress = Codegen.empty();
-        this.podSelector = Codegen.empty();
-        this.policyTypes = Codegen.empty();
+    private NetworkPolicySpecArgs(NetworkPolicySpecArgs $) {
+        this.egress = $.egress;
+        this.ingress = $.ingress;
+        this.podSelector = $.podSelector;
+        this.policyTypes = $.policyTypes;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NetworkPolicySpecArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<NetworkPolicyEgressRuleArgs>> egress;
-        private @Nullable Output<List<NetworkPolicyIngressRuleArgs>> ingress;
-        private Output<LabelSelectorArgs> podSelector;
-        private @Nullable Output<List<String>> policyTypes;
+        private NetworkPolicySpecArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new NetworkPolicySpecArgs();
         }
 
         public Builder(NetworkPolicySpecArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.egress = defaults.egress;
-    	      this.ingress = defaults.ingress;
-    	      this.podSelector = defaults.podSelector;
-    	      this.policyTypes = defaults.policyTypes;
+            $ = new NetworkPolicySpecArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder egress(@Nullable Output<List<NetworkPolicyEgressRuleArgs>> egress) {
-            this.egress = egress;
+            $.egress = egress;
             return this;
         }
-        public Builder egress(@Nullable List<NetworkPolicyEgressRuleArgs> egress) {
-            this.egress = Codegen.ofNullable(egress);
-            return this;
+
+        public Builder egress(List<NetworkPolicyEgressRuleArgs> egress) {
+            return egress(Output.of(egress));
         }
+
         public Builder egress(NetworkPolicyEgressRuleArgs... egress) {
             return egress(List.of(egress));
         }
+
         public Builder ingress(@Nullable Output<List<NetworkPolicyIngressRuleArgs>> ingress) {
-            this.ingress = ingress;
+            $.ingress = ingress;
             return this;
         }
-        public Builder ingress(@Nullable List<NetworkPolicyIngressRuleArgs> ingress) {
-            this.ingress = Codegen.ofNullable(ingress);
-            return this;
+
+        public Builder ingress(List<NetworkPolicyIngressRuleArgs> ingress) {
+            return ingress(Output.of(ingress));
         }
+
         public Builder ingress(NetworkPolicyIngressRuleArgs... ingress) {
             return ingress(List.of(ingress));
         }
+
         public Builder podSelector(Output<LabelSelectorArgs> podSelector) {
-            this.podSelector = Objects.requireNonNull(podSelector);
+            $.podSelector = podSelector;
             return this;
         }
+
         public Builder podSelector(LabelSelectorArgs podSelector) {
-            this.podSelector = Output.of(Objects.requireNonNull(podSelector));
-            return this;
+            return podSelector(Output.of(podSelector));
         }
+
         public Builder policyTypes(@Nullable Output<List<String>> policyTypes) {
-            this.policyTypes = policyTypes;
+            $.policyTypes = policyTypes;
             return this;
         }
-        public Builder policyTypes(@Nullable List<String> policyTypes) {
-            this.policyTypes = Codegen.ofNullable(policyTypes);
-            return this;
+
+        public Builder policyTypes(List<String> policyTypes) {
+            return policyTypes(Output.of(policyTypes));
         }
+
         public Builder policyTypes(String... policyTypes) {
             return policyTypes(List.of(policyTypes));
-        }        public NetworkPolicySpecArgs build() {
-            return new NetworkPolicySpecArgs(egress, ingress, podSelector, policyTypes);
+        }
+
+        public NetworkPolicySpecArgs build() {
+            $.podSelector = Objects.requireNonNull($.podSelector, "expected parameter 'podSelector' to be non-null");
+            return $;
         }
     }
+
 }

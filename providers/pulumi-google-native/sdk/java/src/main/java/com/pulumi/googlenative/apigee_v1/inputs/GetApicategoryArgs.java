@@ -13,78 +13,73 @@ public final class GetApicategoryArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetApicategoryArgs Empty = new GetApicategoryArgs();
 
     @Import(name="apicategoryId", required=true)
-      private final String apicategoryId;
+    private String apicategoryId;
 
     public String apicategoryId() {
         return this.apicategoryId;
     }
 
     @Import(name="organizationId", required=true)
-      private final String organizationId;
+    private String organizationId;
 
     public String organizationId() {
         return this.organizationId;
     }
 
     @Import(name="siteId", required=true)
-      private final String siteId;
+    private String siteId;
 
     public String siteId() {
         return this.siteId;
     }
 
-    public GetApicategoryArgs(
-        String apicategoryId,
-        String organizationId,
-        String siteId) {
-        this.apicategoryId = Objects.requireNonNull(apicategoryId, "expected parameter 'apicategoryId' to be non-null");
-        this.organizationId = Objects.requireNonNull(organizationId, "expected parameter 'organizationId' to be non-null");
-        this.siteId = Objects.requireNonNull(siteId, "expected parameter 'siteId' to be non-null");
-    }
+    private GetApicategoryArgs() {}
 
-    private GetApicategoryArgs() {
-        this.apicategoryId = null;
-        this.organizationId = null;
-        this.siteId = null;
+    private GetApicategoryArgs(GetApicategoryArgs $) {
+        this.apicategoryId = $.apicategoryId;
+        this.organizationId = $.organizationId;
+        this.siteId = $.siteId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetApicategoryArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String apicategoryId;
-        private String organizationId;
-        private String siteId;
+        private GetApicategoryArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetApicategoryArgs();
         }
 
         public Builder(GetApicategoryArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.apicategoryId = defaults.apicategoryId;
-    	      this.organizationId = defaults.organizationId;
-    	      this.siteId = defaults.siteId;
+            $ = new GetApicategoryArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder apicategoryId(String apicategoryId) {
-            this.apicategoryId = Objects.requireNonNull(apicategoryId);
+            $.apicategoryId = apicategoryId;
             return this;
         }
+
         public Builder organizationId(String organizationId) {
-            this.organizationId = Objects.requireNonNull(organizationId);
+            $.organizationId = organizationId;
             return this;
         }
+
         public Builder siteId(String siteId) {
-            this.siteId = Objects.requireNonNull(siteId);
+            $.siteId = siteId;
             return this;
-        }        public GetApicategoryArgs build() {
-            return new GetApicategoryArgs(apicategoryId, organizationId, siteId);
+        }
+
+        public GetApicategoryArgs build() {
+            $.apicategoryId = Objects.requireNonNull($.apicategoryId, "expected parameter 'apicategoryId' to be non-null");
+            $.organizationId = Objects.requireNonNull($.organizationId, "expected parameter 'organizationId' to be non-null");
+            $.siteId = Objects.requireNonNull($.siteId, "expected parameter 'siteId' to be non-null");
+            return $;
         }
     }
+
 }

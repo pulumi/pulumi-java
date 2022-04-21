@@ -6,9 +6,9 @@ package com.pulumi.aws.servicecatalog.inputs;
 import com.pulumi.aws.servicecatalog.inputs.ServiceActionDefinitionGetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class ServiceActionState extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="acceptLanguage")
-      private final @Nullable Output<String> acceptLanguage;
+    private @Nullable Output<String> acceptLanguage;
 
-    public Output<String> acceptLanguage() {
-        return this.acceptLanguage == null ? Codegen.empty() : this.acceptLanguage;
+    public Optional<Output<String>> acceptLanguage() {
+        return Optional.ofNullable(this.acceptLanguage);
     }
 
     /**
@@ -32,10 +32,10 @@ public final class ServiceActionState extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="definition")
-      private final @Nullable Output<ServiceActionDefinitionGetArgs> definition;
+    private @Nullable Output<ServiceActionDefinitionGetArgs> definition;
 
-    public Output<ServiceActionDefinitionGetArgs> definition() {
-        return this.definition == null ? Codegen.empty() : this.definition;
+    public Optional<Output<ServiceActionDefinitionGetArgs>> definition() {
+        return Optional.ofNullable(this.definition);
     }
 
     /**
@@ -43,10 +43,10 @@ public final class ServiceActionState extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -54,89 +54,78 @@ public final class ServiceActionState extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
-    public ServiceActionState(
-        @Nullable Output<String> acceptLanguage,
-        @Nullable Output<ServiceActionDefinitionGetArgs> definition,
-        @Nullable Output<String> description,
-        @Nullable Output<String> name) {
-        this.acceptLanguage = acceptLanguage;
-        this.definition = definition;
-        this.description = description;
-        this.name = name;
-    }
+    private ServiceActionState() {}
 
-    private ServiceActionState() {
-        this.acceptLanguage = Codegen.empty();
-        this.definition = Codegen.empty();
-        this.description = Codegen.empty();
-        this.name = Codegen.empty();
+    private ServiceActionState(ServiceActionState $) {
+        this.acceptLanguage = $.acceptLanguage;
+        this.definition = $.definition;
+        this.description = $.description;
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ServiceActionState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> acceptLanguage;
-        private @Nullable Output<ServiceActionDefinitionGetArgs> definition;
-        private @Nullable Output<String> description;
-        private @Nullable Output<String> name;
+        private ServiceActionState $;
 
         public Builder() {
-    	      // Empty
+            $ = new ServiceActionState();
         }
 
         public Builder(ServiceActionState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.acceptLanguage = defaults.acceptLanguage;
-    	      this.definition = defaults.definition;
-    	      this.description = defaults.description;
-    	      this.name = defaults.name;
+            $ = new ServiceActionState(Objects.requireNonNull(defaults));
         }
 
         public Builder acceptLanguage(@Nullable Output<String> acceptLanguage) {
-            this.acceptLanguage = acceptLanguage;
+            $.acceptLanguage = acceptLanguage;
             return this;
         }
-        public Builder acceptLanguage(@Nullable String acceptLanguage) {
-            this.acceptLanguage = Codegen.ofNullable(acceptLanguage);
-            return this;
+
+        public Builder acceptLanguage(String acceptLanguage) {
+            return acceptLanguage(Output.of(acceptLanguage));
         }
+
         public Builder definition(@Nullable Output<ServiceActionDefinitionGetArgs> definition) {
-            this.definition = definition;
+            $.definition = definition;
             return this;
         }
-        public Builder definition(@Nullable ServiceActionDefinitionGetArgs definition) {
-            this.definition = Codegen.ofNullable(definition);
-            return this;
+
+        public Builder definition(ServiceActionDefinitionGetArgs definition) {
+            return definition(Output.of(definition));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
-        }        public ServiceActionState build() {
-            return new ServiceActionState(acceptLanguage, definition, description, name);
+
+        public Builder name(String name) {
+            return name(Output.of(name));
+        }
+
+        public ServiceActionState build() {
+            return $;
         }
     }
+
 }

@@ -5,7 +5,6 @@ package com.pulumi.aws.inspector;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -20,49 +19,49 @@ public final class ResourceGroupArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags", required=true)
-      private final Output<Map<String,String>> tags;
+    private Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> tags() {
         return this.tags;
     }
 
-    public ResourceGroupArgs(Output<Map<String,String>> tags) {
-        this.tags = Objects.requireNonNull(tags, "expected parameter 'tags' to be non-null");
-    }
+    private ResourceGroupArgs() {}
 
-    private ResourceGroupArgs() {
-        this.tags = Codegen.empty();
+    private ResourceGroupArgs(ResourceGroupArgs $) {
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ResourceGroupArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Map<String,String>> tags;
+        private ResourceGroupArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ResourceGroupArgs();
         }
 
         public Builder(ResourceGroupArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.tags = defaults.tags;
+            $ = new ResourceGroupArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder tags(Output<Map<String,String>> tags) {
-            this.tags = Objects.requireNonNull(tags);
+            $.tags = tags;
             return this;
         }
+
         public Builder tags(Map<String,String> tags) {
-            this.tags = Output.of(Objects.requireNonNull(tags));
-            return this;
-        }        public ResourceGroupArgs build() {
-            return new ResourceGroupArgs(tags);
+            return tags(Output.of(tags));
+        }
+
+        public ResourceGroupArgs build() {
+            $.tags = Objects.requireNonNull($.tags, "expected parameter 'tags' to be non-null");
+            return $;
         }
     }
+
 }

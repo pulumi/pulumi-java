@@ -7,8 +7,8 @@ import com.pulumi.awsnative.amplifyuibuilder.inputs.ComponentOverridesArgs;
 import com.pulumi.awsnative.amplifyuibuilder.inputs.ComponentVariantValuesArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -17,70 +17,65 @@ public final class ComponentVariantArgs extends com.pulumi.resources.ResourceArg
     public static final ComponentVariantArgs Empty = new ComponentVariantArgs();
 
     @Import(name="overrides")
-      private final @Nullable Output<ComponentOverridesArgs> overrides;
+    private @Nullable Output<ComponentOverridesArgs> overrides;
 
-    public Output<ComponentOverridesArgs> overrides() {
-        return this.overrides == null ? Codegen.empty() : this.overrides;
+    public Optional<Output<ComponentOverridesArgs>> overrides() {
+        return Optional.ofNullable(this.overrides);
     }
 
     @Import(name="variantValues")
-      private final @Nullable Output<ComponentVariantValuesArgs> variantValues;
+    private @Nullable Output<ComponentVariantValuesArgs> variantValues;
 
-    public Output<ComponentVariantValuesArgs> variantValues() {
-        return this.variantValues == null ? Codegen.empty() : this.variantValues;
+    public Optional<Output<ComponentVariantValuesArgs>> variantValues() {
+        return Optional.ofNullable(this.variantValues);
     }
 
-    public ComponentVariantArgs(
-        @Nullable Output<ComponentOverridesArgs> overrides,
-        @Nullable Output<ComponentVariantValuesArgs> variantValues) {
-        this.overrides = overrides;
-        this.variantValues = variantValues;
-    }
+    private ComponentVariantArgs() {}
 
-    private ComponentVariantArgs() {
-        this.overrides = Codegen.empty();
-        this.variantValues = Codegen.empty();
+    private ComponentVariantArgs(ComponentVariantArgs $) {
+        this.overrides = $.overrides;
+        this.variantValues = $.variantValues;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ComponentVariantArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<ComponentOverridesArgs> overrides;
-        private @Nullable Output<ComponentVariantValuesArgs> variantValues;
+        private ComponentVariantArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ComponentVariantArgs();
         }
 
         public Builder(ComponentVariantArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.overrides = defaults.overrides;
-    	      this.variantValues = defaults.variantValues;
+            $ = new ComponentVariantArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder overrides(@Nullable Output<ComponentOverridesArgs> overrides) {
-            this.overrides = overrides;
+            $.overrides = overrides;
             return this;
         }
-        public Builder overrides(@Nullable ComponentOverridesArgs overrides) {
-            this.overrides = Codegen.ofNullable(overrides);
-            return this;
+
+        public Builder overrides(ComponentOverridesArgs overrides) {
+            return overrides(Output.of(overrides));
         }
+
         public Builder variantValues(@Nullable Output<ComponentVariantValuesArgs> variantValues) {
-            this.variantValues = variantValues;
+            $.variantValues = variantValues;
             return this;
         }
-        public Builder variantValues(@Nullable ComponentVariantValuesArgs variantValues) {
-            this.variantValues = Codegen.ofNullable(variantValues);
-            return this;
-        }        public ComponentVariantArgs build() {
-            return new ComponentVariantArgs(overrides, variantValues);
+
+        public Builder variantValues(ComponentVariantValuesArgs variantValues) {
+            return variantValues(Output.of(variantValues));
+        }
+
+        public ComponentVariantArgs build() {
+            return $;
         }
     }
+
 }

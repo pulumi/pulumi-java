@@ -5,10 +5,10 @@ package com.pulumi.aws.rds.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class InstanceRestoreToPointInTimeGetArgs extends com.pulumi.resour
      * 
      */
     @Import(name="restoreTime")
-      private final @Nullable Output<String> restoreTime;
+    private @Nullable Output<String> restoreTime;
 
-    public Output<String> restoreTime() {
-        return this.restoreTime == null ? Codegen.empty() : this.restoreTime;
+    public Optional<Output<String>> restoreTime() {
+        return Optional.ofNullable(this.restoreTime);
     }
 
     /**
@@ -32,10 +32,10 @@ public final class InstanceRestoreToPointInTimeGetArgs extends com.pulumi.resour
      * 
      */
     @Import(name="sourceDbInstanceIdentifier")
-      private final @Nullable Output<String> sourceDbInstanceIdentifier;
+    private @Nullable Output<String> sourceDbInstanceIdentifier;
 
-    public Output<String> sourceDbInstanceIdentifier() {
-        return this.sourceDbInstanceIdentifier == null ? Codegen.empty() : this.sourceDbInstanceIdentifier;
+    public Optional<Output<String>> sourceDbInstanceIdentifier() {
+        return Optional.ofNullable(this.sourceDbInstanceIdentifier);
     }
 
     /**
@@ -43,10 +43,10 @@ public final class InstanceRestoreToPointInTimeGetArgs extends com.pulumi.resour
      * 
      */
     @Import(name="sourceDbiResourceId")
-      private final @Nullable Output<String> sourceDbiResourceId;
+    private @Nullable Output<String> sourceDbiResourceId;
 
-    public Output<String> sourceDbiResourceId() {
-        return this.sourceDbiResourceId == null ? Codegen.empty() : this.sourceDbiResourceId;
+    public Optional<Output<String>> sourceDbiResourceId() {
+        return Optional.ofNullable(this.sourceDbiResourceId);
     }
 
     /**
@@ -54,89 +54,78 @@ public final class InstanceRestoreToPointInTimeGetArgs extends com.pulumi.resour
      * 
      */
     @Import(name="useLatestRestorableTime")
-      private final @Nullable Output<Boolean> useLatestRestorableTime;
+    private @Nullable Output<Boolean> useLatestRestorableTime;
 
-    public Output<Boolean> useLatestRestorableTime() {
-        return this.useLatestRestorableTime == null ? Codegen.empty() : this.useLatestRestorableTime;
+    public Optional<Output<Boolean>> useLatestRestorableTime() {
+        return Optional.ofNullable(this.useLatestRestorableTime);
     }
 
-    public InstanceRestoreToPointInTimeGetArgs(
-        @Nullable Output<String> restoreTime,
-        @Nullable Output<String> sourceDbInstanceIdentifier,
-        @Nullable Output<String> sourceDbiResourceId,
-        @Nullable Output<Boolean> useLatestRestorableTime) {
-        this.restoreTime = restoreTime;
-        this.sourceDbInstanceIdentifier = sourceDbInstanceIdentifier;
-        this.sourceDbiResourceId = sourceDbiResourceId;
-        this.useLatestRestorableTime = useLatestRestorableTime;
-    }
+    private InstanceRestoreToPointInTimeGetArgs() {}
 
-    private InstanceRestoreToPointInTimeGetArgs() {
-        this.restoreTime = Codegen.empty();
-        this.sourceDbInstanceIdentifier = Codegen.empty();
-        this.sourceDbiResourceId = Codegen.empty();
-        this.useLatestRestorableTime = Codegen.empty();
+    private InstanceRestoreToPointInTimeGetArgs(InstanceRestoreToPointInTimeGetArgs $) {
+        this.restoreTime = $.restoreTime;
+        this.sourceDbInstanceIdentifier = $.sourceDbInstanceIdentifier;
+        this.sourceDbiResourceId = $.sourceDbiResourceId;
+        this.useLatestRestorableTime = $.useLatestRestorableTime;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(InstanceRestoreToPointInTimeGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> restoreTime;
-        private @Nullable Output<String> sourceDbInstanceIdentifier;
-        private @Nullable Output<String> sourceDbiResourceId;
-        private @Nullable Output<Boolean> useLatestRestorableTime;
+        private InstanceRestoreToPointInTimeGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new InstanceRestoreToPointInTimeGetArgs();
         }
 
         public Builder(InstanceRestoreToPointInTimeGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.restoreTime = defaults.restoreTime;
-    	      this.sourceDbInstanceIdentifier = defaults.sourceDbInstanceIdentifier;
-    	      this.sourceDbiResourceId = defaults.sourceDbiResourceId;
-    	      this.useLatestRestorableTime = defaults.useLatestRestorableTime;
+            $ = new InstanceRestoreToPointInTimeGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder restoreTime(@Nullable Output<String> restoreTime) {
-            this.restoreTime = restoreTime;
+            $.restoreTime = restoreTime;
             return this;
         }
-        public Builder restoreTime(@Nullable String restoreTime) {
-            this.restoreTime = Codegen.ofNullable(restoreTime);
-            return this;
+
+        public Builder restoreTime(String restoreTime) {
+            return restoreTime(Output.of(restoreTime));
         }
+
         public Builder sourceDbInstanceIdentifier(@Nullable Output<String> sourceDbInstanceIdentifier) {
-            this.sourceDbInstanceIdentifier = sourceDbInstanceIdentifier;
+            $.sourceDbInstanceIdentifier = sourceDbInstanceIdentifier;
             return this;
         }
-        public Builder sourceDbInstanceIdentifier(@Nullable String sourceDbInstanceIdentifier) {
-            this.sourceDbInstanceIdentifier = Codegen.ofNullable(sourceDbInstanceIdentifier);
-            return this;
+
+        public Builder sourceDbInstanceIdentifier(String sourceDbInstanceIdentifier) {
+            return sourceDbInstanceIdentifier(Output.of(sourceDbInstanceIdentifier));
         }
+
         public Builder sourceDbiResourceId(@Nullable Output<String> sourceDbiResourceId) {
-            this.sourceDbiResourceId = sourceDbiResourceId;
+            $.sourceDbiResourceId = sourceDbiResourceId;
             return this;
         }
-        public Builder sourceDbiResourceId(@Nullable String sourceDbiResourceId) {
-            this.sourceDbiResourceId = Codegen.ofNullable(sourceDbiResourceId);
-            return this;
+
+        public Builder sourceDbiResourceId(String sourceDbiResourceId) {
+            return sourceDbiResourceId(Output.of(sourceDbiResourceId));
         }
+
         public Builder useLatestRestorableTime(@Nullable Output<Boolean> useLatestRestorableTime) {
-            this.useLatestRestorableTime = useLatestRestorableTime;
+            $.useLatestRestorableTime = useLatestRestorableTime;
             return this;
         }
-        public Builder useLatestRestorableTime(@Nullable Boolean useLatestRestorableTime) {
-            this.useLatestRestorableTime = Codegen.ofNullable(useLatestRestorableTime);
-            return this;
-        }        public InstanceRestoreToPointInTimeGetArgs build() {
-            return new InstanceRestoreToPointInTimeGetArgs(restoreTime, sourceDbInstanceIdentifier, sourceDbiResourceId, useLatestRestorableTime);
+
+        public Builder useLatestRestorableTime(Boolean useLatestRestorableTime) {
+            return useLatestRestorableTime(Output.of(useLatestRestorableTime));
+        }
+
+        public InstanceRestoreToPointInTimeGetArgs build() {
+            return $;
         }
     }
+
 }

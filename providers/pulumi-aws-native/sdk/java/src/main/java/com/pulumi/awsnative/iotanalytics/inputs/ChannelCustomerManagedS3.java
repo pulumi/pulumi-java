@@ -15,78 +15,72 @@ public final class ChannelCustomerManagedS3 extends com.pulumi.resources.InvokeA
     public static final ChannelCustomerManagedS3 Empty = new ChannelCustomerManagedS3();
 
     @Import(name="bucket", required=true)
-      private final String bucket;
+    private String bucket;
 
     public String bucket() {
         return this.bucket;
     }
 
     @Import(name="keyPrefix")
-      private final @Nullable String keyPrefix;
+    private @Nullable String keyPrefix;
 
     public Optional<String> keyPrefix() {
-        return this.keyPrefix == null ? Optional.empty() : Optional.ofNullable(this.keyPrefix);
+        return Optional.ofNullable(this.keyPrefix);
     }
 
     @Import(name="roleArn", required=true)
-      private final String roleArn;
+    private String roleArn;
 
     public String roleArn() {
         return this.roleArn;
     }
 
-    public ChannelCustomerManagedS3(
-        String bucket,
-        @Nullable String keyPrefix,
-        String roleArn) {
-        this.bucket = Objects.requireNonNull(bucket, "expected parameter 'bucket' to be non-null");
-        this.keyPrefix = keyPrefix;
-        this.roleArn = Objects.requireNonNull(roleArn, "expected parameter 'roleArn' to be non-null");
-    }
+    private ChannelCustomerManagedS3() {}
 
-    private ChannelCustomerManagedS3() {
-        this.bucket = null;
-        this.keyPrefix = null;
-        this.roleArn = null;
+    private ChannelCustomerManagedS3(ChannelCustomerManagedS3 $) {
+        this.bucket = $.bucket;
+        this.keyPrefix = $.keyPrefix;
+        this.roleArn = $.roleArn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ChannelCustomerManagedS3 defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String bucket;
-        private @Nullable String keyPrefix;
-        private String roleArn;
+        private ChannelCustomerManagedS3 $;
 
         public Builder() {
-    	      // Empty
+            $ = new ChannelCustomerManagedS3();
         }
 
         public Builder(ChannelCustomerManagedS3 defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.bucket = defaults.bucket;
-    	      this.keyPrefix = defaults.keyPrefix;
-    	      this.roleArn = defaults.roleArn;
+            $ = new ChannelCustomerManagedS3(Objects.requireNonNull(defaults));
         }
 
         public Builder bucket(String bucket) {
-            this.bucket = Objects.requireNonNull(bucket);
+            $.bucket = bucket;
             return this;
         }
+
         public Builder keyPrefix(@Nullable String keyPrefix) {
-            this.keyPrefix = keyPrefix;
+            $.keyPrefix = keyPrefix;
             return this;
         }
+
         public Builder roleArn(String roleArn) {
-            this.roleArn = Objects.requireNonNull(roleArn);
+            $.roleArn = roleArn;
             return this;
-        }        public ChannelCustomerManagedS3 build() {
-            return new ChannelCustomerManagedS3(bucket, keyPrefix, roleArn);
+        }
+
+        public ChannelCustomerManagedS3 build() {
+            $.bucket = Objects.requireNonNull($.bucket, "expected parameter 'bucket' to be non-null");
+            $.roleArn = Objects.requireNonNull($.roleArn, "expected parameter 'roleArn' to be non-null");
+            return $;
         }
     }
+
 }

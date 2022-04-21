@@ -5,7 +5,6 @@ package com.pulumi.googlenative.servicemanagement_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.servicemanagement_v1.enums.EnumSyntax;
 import com.pulumi.googlenative.servicemanagement_v1.inputs.EnumValueArgs;
 import com.pulumi.googlenative.servicemanagement_v1.inputs.OptionArgs;
@@ -13,6 +12,7 @@ import com.pulumi.googlenative.servicemanagement_v1.inputs.SourceContextArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -29,10 +29,10 @@ public final class EnumArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="enumvalue")
-      private final @Nullable Output<List<EnumValueArgs>> enumvalue;
+    private @Nullable Output<List<EnumValueArgs>> enumvalue;
 
-    public Output<List<EnumValueArgs>> enumvalue() {
-        return this.enumvalue == null ? Codegen.empty() : this.enumvalue;
+    public Optional<Output<List<EnumValueArgs>>> enumvalue() {
+        return Optional.ofNullable(this.enumvalue);
     }
 
     /**
@@ -40,10 +40,10 @@ public final class EnumArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -51,10 +51,10 @@ public final class EnumArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="options")
-      private final @Nullable Output<List<OptionArgs>> options;
+    private @Nullable Output<List<OptionArgs>> options;
 
-    public Output<List<OptionArgs>> options() {
-        return this.options == null ? Codegen.empty() : this.options;
+    public Optional<Output<List<OptionArgs>>> options() {
+        return Optional.ofNullable(this.options);
     }
 
     /**
@@ -62,10 +62,10 @@ public final class EnumArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="sourceContext")
-      private final @Nullable Output<SourceContextArgs> sourceContext;
+    private @Nullable Output<SourceContextArgs> sourceContext;
 
-    public Output<SourceContextArgs> sourceContext() {
-        return this.sourceContext == null ? Codegen.empty() : this.sourceContext;
+    public Optional<Output<SourceContextArgs>> sourceContext() {
+        return Optional.ofNullable(this.sourceContext);
     }
 
     /**
@@ -73,108 +73,96 @@ public final class EnumArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="syntax")
-      private final @Nullable Output<EnumSyntax> syntax;
+    private @Nullable Output<EnumSyntax> syntax;
 
-    public Output<EnumSyntax> syntax() {
-        return this.syntax == null ? Codegen.empty() : this.syntax;
+    public Optional<Output<EnumSyntax>> syntax() {
+        return Optional.ofNullable(this.syntax);
     }
 
-    public EnumArgs(
-        @Nullable Output<List<EnumValueArgs>> enumvalue,
-        @Nullable Output<String> name,
-        @Nullable Output<List<OptionArgs>> options,
-        @Nullable Output<SourceContextArgs> sourceContext,
-        @Nullable Output<EnumSyntax> syntax) {
-        this.enumvalue = enumvalue;
-        this.name = name;
-        this.options = options;
-        this.sourceContext = sourceContext;
-        this.syntax = syntax;
-    }
+    private EnumArgs() {}
 
-    private EnumArgs() {
-        this.enumvalue = Codegen.empty();
-        this.name = Codegen.empty();
-        this.options = Codegen.empty();
-        this.sourceContext = Codegen.empty();
-        this.syntax = Codegen.empty();
+    private EnumArgs(EnumArgs $) {
+        this.enumvalue = $.enumvalue;
+        this.name = $.name;
+        this.options = $.options;
+        this.sourceContext = $.sourceContext;
+        this.syntax = $.syntax;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EnumArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<EnumValueArgs>> enumvalue;
-        private @Nullable Output<String> name;
-        private @Nullable Output<List<OptionArgs>> options;
-        private @Nullable Output<SourceContextArgs> sourceContext;
-        private @Nullable Output<EnumSyntax> syntax;
+        private EnumArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new EnumArgs();
         }
 
         public Builder(EnumArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.enumvalue = defaults.enumvalue;
-    	      this.name = defaults.name;
-    	      this.options = defaults.options;
-    	      this.sourceContext = defaults.sourceContext;
-    	      this.syntax = defaults.syntax;
+            $ = new EnumArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder enumvalue(@Nullable Output<List<EnumValueArgs>> enumvalue) {
-            this.enumvalue = enumvalue;
+            $.enumvalue = enumvalue;
             return this;
         }
-        public Builder enumvalue(@Nullable List<EnumValueArgs> enumvalue) {
-            this.enumvalue = Codegen.ofNullable(enumvalue);
-            return this;
+
+        public Builder enumvalue(List<EnumValueArgs> enumvalue) {
+            return enumvalue(Output.of(enumvalue));
         }
+
         public Builder enumvalue(EnumValueArgs... enumvalue) {
             return enumvalue(List.of(enumvalue));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder options(@Nullable Output<List<OptionArgs>> options) {
-            this.options = options;
+            $.options = options;
             return this;
         }
-        public Builder options(@Nullable List<OptionArgs> options) {
-            this.options = Codegen.ofNullable(options);
-            return this;
+
+        public Builder options(List<OptionArgs> options) {
+            return options(Output.of(options));
         }
+
         public Builder options(OptionArgs... options) {
             return options(List.of(options));
         }
+
         public Builder sourceContext(@Nullable Output<SourceContextArgs> sourceContext) {
-            this.sourceContext = sourceContext;
+            $.sourceContext = sourceContext;
             return this;
         }
-        public Builder sourceContext(@Nullable SourceContextArgs sourceContext) {
-            this.sourceContext = Codegen.ofNullable(sourceContext);
-            return this;
+
+        public Builder sourceContext(SourceContextArgs sourceContext) {
+            return sourceContext(Output.of(sourceContext));
         }
+
         public Builder syntax(@Nullable Output<EnumSyntax> syntax) {
-            this.syntax = syntax;
+            $.syntax = syntax;
             return this;
         }
-        public Builder syntax(@Nullable EnumSyntax syntax) {
-            this.syntax = Codegen.ofNullable(syntax);
-            return this;
-        }        public EnumArgs build() {
-            return new EnumArgs(enumvalue, name, options, sourceContext, syntax);
+
+        public Builder syntax(EnumSyntax syntax) {
+            return syntax(Output.of(syntax));
+        }
+
+        public EnumArgs build() {
+            return $;
         }
     }
+
 }

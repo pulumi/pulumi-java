@@ -22,7 +22,7 @@ public final class ProgressMetricsResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="completedDatapointCount", required=true)
-      private final Double completedDatapointCount;
+    private Double completedDatapointCount;
 
     public Double completedDatapointCount() {
         return this.completedDatapointCount;
@@ -33,7 +33,7 @@ public final class ProgressMetricsResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="incrementalDatasetLastRefreshTime", required=true)
-      private final String incrementalDatasetLastRefreshTime;
+    private String incrementalDatasetLastRefreshTime;
 
     public String incrementalDatasetLastRefreshTime() {
         return this.incrementalDatasetLastRefreshTime;
@@ -44,7 +44,7 @@ public final class ProgressMetricsResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="skippedDatapointCount", required=true)
-      private final Double skippedDatapointCount;
+    private Double skippedDatapointCount;
 
     public Double skippedDatapointCount() {
         return this.skippedDatapointCount;
@@ -55,73 +55,66 @@ public final class ProgressMetricsResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="totalDatapointCount", required=true)
-      private final Double totalDatapointCount;
+    private Double totalDatapointCount;
 
     public Double totalDatapointCount() {
         return this.totalDatapointCount;
     }
 
-    public ProgressMetricsResponse(
-        Double completedDatapointCount,
-        String incrementalDatasetLastRefreshTime,
-        Double skippedDatapointCount,
-        Double totalDatapointCount) {
-        this.completedDatapointCount = Objects.requireNonNull(completedDatapointCount, "expected parameter 'completedDatapointCount' to be non-null");
-        this.incrementalDatasetLastRefreshTime = Objects.requireNonNull(incrementalDatasetLastRefreshTime, "expected parameter 'incrementalDatasetLastRefreshTime' to be non-null");
-        this.skippedDatapointCount = Objects.requireNonNull(skippedDatapointCount, "expected parameter 'skippedDatapointCount' to be non-null");
-        this.totalDatapointCount = Objects.requireNonNull(totalDatapointCount, "expected parameter 'totalDatapointCount' to be non-null");
-    }
+    private ProgressMetricsResponse() {}
 
-    private ProgressMetricsResponse() {
-        this.completedDatapointCount = null;
-        this.incrementalDatasetLastRefreshTime = null;
-        this.skippedDatapointCount = null;
-        this.totalDatapointCount = null;
+    private ProgressMetricsResponse(ProgressMetricsResponse $) {
+        this.completedDatapointCount = $.completedDatapointCount;
+        this.incrementalDatasetLastRefreshTime = $.incrementalDatasetLastRefreshTime;
+        this.skippedDatapointCount = $.skippedDatapointCount;
+        this.totalDatapointCount = $.totalDatapointCount;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ProgressMetricsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Double completedDatapointCount;
-        private String incrementalDatasetLastRefreshTime;
-        private Double skippedDatapointCount;
-        private Double totalDatapointCount;
+        private ProgressMetricsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ProgressMetricsResponse();
         }
 
         public Builder(ProgressMetricsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.completedDatapointCount = defaults.completedDatapointCount;
-    	      this.incrementalDatasetLastRefreshTime = defaults.incrementalDatasetLastRefreshTime;
-    	      this.skippedDatapointCount = defaults.skippedDatapointCount;
-    	      this.totalDatapointCount = defaults.totalDatapointCount;
+            $ = new ProgressMetricsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder completedDatapointCount(Double completedDatapointCount) {
-            this.completedDatapointCount = Objects.requireNonNull(completedDatapointCount);
+            $.completedDatapointCount = completedDatapointCount;
             return this;
         }
+
         public Builder incrementalDatasetLastRefreshTime(String incrementalDatasetLastRefreshTime) {
-            this.incrementalDatasetLastRefreshTime = Objects.requireNonNull(incrementalDatasetLastRefreshTime);
+            $.incrementalDatasetLastRefreshTime = incrementalDatasetLastRefreshTime;
             return this;
         }
+
         public Builder skippedDatapointCount(Double skippedDatapointCount) {
-            this.skippedDatapointCount = Objects.requireNonNull(skippedDatapointCount);
+            $.skippedDatapointCount = skippedDatapointCount;
             return this;
         }
+
         public Builder totalDatapointCount(Double totalDatapointCount) {
-            this.totalDatapointCount = Objects.requireNonNull(totalDatapointCount);
+            $.totalDatapointCount = totalDatapointCount;
             return this;
-        }        public ProgressMetricsResponse build() {
-            return new ProgressMetricsResponse(completedDatapointCount, incrementalDatasetLastRefreshTime, skippedDatapointCount, totalDatapointCount);
+        }
+
+        public ProgressMetricsResponse build() {
+            $.completedDatapointCount = Objects.requireNonNull($.completedDatapointCount, "expected parameter 'completedDatapointCount' to be non-null");
+            $.incrementalDatasetLastRefreshTime = Objects.requireNonNull($.incrementalDatasetLastRefreshTime, "expected parameter 'incrementalDatasetLastRefreshTime' to be non-null");
+            $.skippedDatapointCount = Objects.requireNonNull($.skippedDatapointCount, "expected parameter 'skippedDatapointCount' to be non-null");
+            $.totalDatapointCount = Objects.requireNonNull($.totalDatapointCount, "expected parameter 'totalDatapointCount' to be non-null");
+            return $;
         }
     }
+
 }

@@ -21,45 +21,45 @@ public final class GoogleCloudDialogflowCxV3EntityTypeExcludedPhraseResponse ext
      * 
      */
     @Import(name="value", required=true)
-      private final String value;
+    private String value;
 
     public String value() {
         return this.value;
     }
 
-    public GoogleCloudDialogflowCxV3EntityTypeExcludedPhraseResponse(String value) {
-        this.value = Objects.requireNonNull(value, "expected parameter 'value' to be non-null");
-    }
+    private GoogleCloudDialogflowCxV3EntityTypeExcludedPhraseResponse() {}
 
-    private GoogleCloudDialogflowCxV3EntityTypeExcludedPhraseResponse() {
-        this.value = null;
+    private GoogleCloudDialogflowCxV3EntityTypeExcludedPhraseResponse(GoogleCloudDialogflowCxV3EntityTypeExcludedPhraseResponse $) {
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudDialogflowCxV3EntityTypeExcludedPhraseResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String value;
+        private GoogleCloudDialogflowCxV3EntityTypeExcludedPhraseResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudDialogflowCxV3EntityTypeExcludedPhraseResponse();
         }
 
         public Builder(GoogleCloudDialogflowCxV3EntityTypeExcludedPhraseResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.value = defaults.value;
+            $ = new GoogleCloudDialogflowCxV3EntityTypeExcludedPhraseResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder value(String value) {
-            this.value = Objects.requireNonNull(value);
+            $.value = value;
             return this;
-        }        public GoogleCloudDialogflowCxV3EntityTypeExcludedPhraseResponse build() {
-            return new GoogleCloudDialogflowCxV3EntityTypeExcludedPhraseResponse(value);
+        }
+
+        public GoogleCloudDialogflowCxV3EntityTypeExcludedPhraseResponse build() {
+            $.value = Objects.requireNonNull($.value, "expected parameter 'value' to be non-null");
+            return $;
         }
     }
+
 }

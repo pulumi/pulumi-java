@@ -18,7 +18,7 @@ public final class GetRouteTableAssociation extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="gatewayId", required=true)
-      private final String gatewayId;
+    private String gatewayId;
 
     public String gatewayId() {
         return this.gatewayId;
@@ -29,7 +29,7 @@ public final class GetRouteTableAssociation extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="main", required=true)
-      private final Boolean main;
+    private Boolean main;
 
     public Boolean main() {
         return this.main;
@@ -40,7 +40,7 @@ public final class GetRouteTableAssociation extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="routeTableAssociationId", required=true)
-      private final String routeTableAssociationId;
+    private String routeTableAssociationId;
 
     public String routeTableAssociationId() {
         return this.routeTableAssociationId;
@@ -51,7 +51,7 @@ public final class GetRouteTableAssociation extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="routeTableId", required=true)
-      private final String routeTableId;
+    private String routeTableId;
 
     public String routeTableId() {
         return this.routeTableId;
@@ -62,82 +62,73 @@ public final class GetRouteTableAssociation extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="subnetId", required=true)
-      private final String subnetId;
+    private String subnetId;
 
     public String subnetId() {
         return this.subnetId;
     }
 
-    public GetRouteTableAssociation(
-        String gatewayId,
-        Boolean main,
-        String routeTableAssociationId,
-        String routeTableId,
-        String subnetId) {
-        this.gatewayId = Objects.requireNonNull(gatewayId, "expected parameter 'gatewayId' to be non-null");
-        this.main = Objects.requireNonNull(main, "expected parameter 'main' to be non-null");
-        this.routeTableAssociationId = Objects.requireNonNull(routeTableAssociationId, "expected parameter 'routeTableAssociationId' to be non-null");
-        this.routeTableId = Objects.requireNonNull(routeTableId, "expected parameter 'routeTableId' to be non-null");
-        this.subnetId = Objects.requireNonNull(subnetId, "expected parameter 'subnetId' to be non-null");
-    }
+    private GetRouteTableAssociation() {}
 
-    private GetRouteTableAssociation() {
-        this.gatewayId = null;
-        this.main = null;
-        this.routeTableAssociationId = null;
-        this.routeTableId = null;
-        this.subnetId = null;
+    private GetRouteTableAssociation(GetRouteTableAssociation $) {
+        this.gatewayId = $.gatewayId;
+        this.main = $.main;
+        this.routeTableAssociationId = $.routeTableAssociationId;
+        this.routeTableId = $.routeTableId;
+        this.subnetId = $.subnetId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetRouteTableAssociation defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String gatewayId;
-        private Boolean main;
-        private String routeTableAssociationId;
-        private String routeTableId;
-        private String subnetId;
+        private GetRouteTableAssociation $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetRouteTableAssociation();
         }
 
         public Builder(GetRouteTableAssociation defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.gatewayId = defaults.gatewayId;
-    	      this.main = defaults.main;
-    	      this.routeTableAssociationId = defaults.routeTableAssociationId;
-    	      this.routeTableId = defaults.routeTableId;
-    	      this.subnetId = defaults.subnetId;
+            $ = new GetRouteTableAssociation(Objects.requireNonNull(defaults));
         }
 
         public Builder gatewayId(String gatewayId) {
-            this.gatewayId = Objects.requireNonNull(gatewayId);
+            $.gatewayId = gatewayId;
             return this;
         }
+
         public Builder main(Boolean main) {
-            this.main = Objects.requireNonNull(main);
+            $.main = main;
             return this;
         }
+
         public Builder routeTableAssociationId(String routeTableAssociationId) {
-            this.routeTableAssociationId = Objects.requireNonNull(routeTableAssociationId);
+            $.routeTableAssociationId = routeTableAssociationId;
             return this;
         }
+
         public Builder routeTableId(String routeTableId) {
-            this.routeTableId = Objects.requireNonNull(routeTableId);
+            $.routeTableId = routeTableId;
             return this;
         }
+
         public Builder subnetId(String subnetId) {
-            this.subnetId = Objects.requireNonNull(subnetId);
+            $.subnetId = subnetId;
             return this;
-        }        public GetRouteTableAssociation build() {
-            return new GetRouteTableAssociation(gatewayId, main, routeTableAssociationId, routeTableId, subnetId);
+        }
+
+        public GetRouteTableAssociation build() {
+            $.gatewayId = Objects.requireNonNull($.gatewayId, "expected parameter 'gatewayId' to be non-null");
+            $.main = Objects.requireNonNull($.main, "expected parameter 'main' to be non-null");
+            $.routeTableAssociationId = Objects.requireNonNull($.routeTableAssociationId, "expected parameter 'routeTableAssociationId' to be non-null");
+            $.routeTableId = Objects.requireNonNull($.routeTableId, "expected parameter 'routeTableId' to be non-null");
+            $.subnetId = Objects.requireNonNull($.subnetId, "expected parameter 'subnetId' to be non-null");
+            return $;
         }
     }
+
 }

@@ -17,45 +17,45 @@ public final class GetPackagingConfigurationArgs extends com.pulumi.resources.In
      * 
      */
     @Import(name="id", required=true)
-      private final String id;
+    private String id;
 
     public String id() {
         return this.id;
     }
 
-    public GetPackagingConfigurationArgs(String id) {
-        this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
-    }
+    private GetPackagingConfigurationArgs() {}
 
-    private GetPackagingConfigurationArgs() {
-        this.id = null;
+    private GetPackagingConfigurationArgs(GetPackagingConfigurationArgs $) {
+        this.id = $.id;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetPackagingConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String id;
+        private GetPackagingConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetPackagingConfigurationArgs();
         }
 
         public Builder(GetPackagingConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.id = defaults.id;
+            $ = new GetPackagingConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder id(String id) {
-            this.id = Objects.requireNonNull(id);
+            $.id = id;
             return this;
-        }        public GetPackagingConfigurationArgs build() {
-            return new GetPackagingConfigurationArgs(id);
+        }
+
+        public GetPackagingConfigurationArgs build() {
+            $.id = Objects.requireNonNull($.id, "expected parameter 'id' to be non-null");
+            return $;
         }
     }
+
 }

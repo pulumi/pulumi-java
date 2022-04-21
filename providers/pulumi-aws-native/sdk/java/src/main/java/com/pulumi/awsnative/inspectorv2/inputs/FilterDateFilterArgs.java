@@ -5,9 +5,9 @@ package com.pulumi.awsnative.inspectorv2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -16,70 +16,65 @@ public final class FilterDateFilterArgs extends com.pulumi.resources.ResourceArg
     public static final FilterDateFilterArgs Empty = new FilterDateFilterArgs();
 
     @Import(name="endInclusive")
-      private final @Nullable Output<Integer> endInclusive;
+    private @Nullable Output<Integer> endInclusive;
 
-    public Output<Integer> endInclusive() {
-        return this.endInclusive == null ? Codegen.empty() : this.endInclusive;
+    public Optional<Output<Integer>> endInclusive() {
+        return Optional.ofNullable(this.endInclusive);
     }
 
     @Import(name="startInclusive")
-      private final @Nullable Output<Integer> startInclusive;
+    private @Nullable Output<Integer> startInclusive;
 
-    public Output<Integer> startInclusive() {
-        return this.startInclusive == null ? Codegen.empty() : this.startInclusive;
+    public Optional<Output<Integer>> startInclusive() {
+        return Optional.ofNullable(this.startInclusive);
     }
 
-    public FilterDateFilterArgs(
-        @Nullable Output<Integer> endInclusive,
-        @Nullable Output<Integer> startInclusive) {
-        this.endInclusive = endInclusive;
-        this.startInclusive = startInclusive;
-    }
+    private FilterDateFilterArgs() {}
 
-    private FilterDateFilterArgs() {
-        this.endInclusive = Codegen.empty();
-        this.startInclusive = Codegen.empty();
+    private FilterDateFilterArgs(FilterDateFilterArgs $) {
+        this.endInclusive = $.endInclusive;
+        this.startInclusive = $.startInclusive;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FilterDateFilterArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> endInclusive;
-        private @Nullable Output<Integer> startInclusive;
+        private FilterDateFilterArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new FilterDateFilterArgs();
         }
 
         public Builder(FilterDateFilterArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.endInclusive = defaults.endInclusive;
-    	      this.startInclusive = defaults.startInclusive;
+            $ = new FilterDateFilterArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder endInclusive(@Nullable Output<Integer> endInclusive) {
-            this.endInclusive = endInclusive;
+            $.endInclusive = endInclusive;
             return this;
         }
-        public Builder endInclusive(@Nullable Integer endInclusive) {
-            this.endInclusive = Codegen.ofNullable(endInclusive);
-            return this;
+
+        public Builder endInclusive(Integer endInclusive) {
+            return endInclusive(Output.of(endInclusive));
         }
+
         public Builder startInclusive(@Nullable Output<Integer> startInclusive) {
-            this.startInclusive = startInclusive;
+            $.startInclusive = startInclusive;
             return this;
         }
-        public Builder startInclusive(@Nullable Integer startInclusive) {
-            this.startInclusive = Codegen.ofNullable(startInclusive);
-            return this;
-        }        public FilterDateFilterArgs build() {
-            return new FilterDateFilterArgs(endInclusive, startInclusive);
+
+        public Builder startInclusive(Integer startInclusive) {
+            return startInclusive(Output.of(startInclusive));
+        }
+
+        public FilterDateFilterArgs build() {
+            return $;
         }
     }
+
 }

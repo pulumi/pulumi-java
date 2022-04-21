@@ -9,9 +9,9 @@ import com.pulumi.azurenative.network.inputs.RedirectConfigurationArgs;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -28,10 +28,10 @@ public final class RulesEngineActionArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="requestHeaderActions")
-      private final @Nullable Output<List<HeaderActionArgs>> requestHeaderActions;
+    private @Nullable Output<List<HeaderActionArgs>> requestHeaderActions;
 
-    public Output<List<HeaderActionArgs>> requestHeaderActions() {
-        return this.requestHeaderActions == null ? Codegen.empty() : this.requestHeaderActions;
+    public Optional<Output<List<HeaderActionArgs>>> requestHeaderActions() {
+        return Optional.ofNullable(this.requestHeaderActions);
     }
 
     /**
@@ -39,10 +39,10 @@ public final class RulesEngineActionArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="responseHeaderActions")
-      private final @Nullable Output<List<HeaderActionArgs>> responseHeaderActions;
+    private @Nullable Output<List<HeaderActionArgs>> responseHeaderActions;
 
-    public Output<List<HeaderActionArgs>> responseHeaderActions() {
-        return this.responseHeaderActions == null ? Codegen.empty() : this.responseHeaderActions;
+    public Optional<Output<List<HeaderActionArgs>>> responseHeaderActions() {
+        return Optional.ofNullable(this.responseHeaderActions);
     }
 
     /**
@@ -50,82 +50,76 @@ public final class RulesEngineActionArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="routeConfigurationOverride")
-      private final @Nullable Output<Either<ForwardingConfigurationArgs,RedirectConfigurationArgs>> routeConfigurationOverride;
+    private @Nullable Output<Either<ForwardingConfigurationArgs,RedirectConfigurationArgs>> routeConfigurationOverride;
 
-    public Output<Either<ForwardingConfigurationArgs,RedirectConfigurationArgs>> routeConfigurationOverride() {
-        return this.routeConfigurationOverride == null ? Codegen.empty() : this.routeConfigurationOverride;
+    public Optional<Output<Either<ForwardingConfigurationArgs,RedirectConfigurationArgs>>> routeConfigurationOverride() {
+        return Optional.ofNullable(this.routeConfigurationOverride);
     }
 
-    public RulesEngineActionArgs(
-        @Nullable Output<List<HeaderActionArgs>> requestHeaderActions,
-        @Nullable Output<List<HeaderActionArgs>> responseHeaderActions,
-        @Nullable Output<Either<ForwardingConfigurationArgs,RedirectConfigurationArgs>> routeConfigurationOverride) {
-        this.requestHeaderActions = requestHeaderActions;
-        this.responseHeaderActions = responseHeaderActions;
-        this.routeConfigurationOverride = routeConfigurationOverride;
-    }
+    private RulesEngineActionArgs() {}
 
-    private RulesEngineActionArgs() {
-        this.requestHeaderActions = Codegen.empty();
-        this.responseHeaderActions = Codegen.empty();
-        this.routeConfigurationOverride = Codegen.empty();
+    private RulesEngineActionArgs(RulesEngineActionArgs $) {
+        this.requestHeaderActions = $.requestHeaderActions;
+        this.responseHeaderActions = $.responseHeaderActions;
+        this.routeConfigurationOverride = $.routeConfigurationOverride;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RulesEngineActionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<HeaderActionArgs>> requestHeaderActions;
-        private @Nullable Output<List<HeaderActionArgs>> responseHeaderActions;
-        private @Nullable Output<Either<ForwardingConfigurationArgs,RedirectConfigurationArgs>> routeConfigurationOverride;
+        private RulesEngineActionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RulesEngineActionArgs();
         }
 
         public Builder(RulesEngineActionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.requestHeaderActions = defaults.requestHeaderActions;
-    	      this.responseHeaderActions = defaults.responseHeaderActions;
-    	      this.routeConfigurationOverride = defaults.routeConfigurationOverride;
+            $ = new RulesEngineActionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder requestHeaderActions(@Nullable Output<List<HeaderActionArgs>> requestHeaderActions) {
-            this.requestHeaderActions = requestHeaderActions;
+            $.requestHeaderActions = requestHeaderActions;
             return this;
         }
-        public Builder requestHeaderActions(@Nullable List<HeaderActionArgs> requestHeaderActions) {
-            this.requestHeaderActions = Codegen.ofNullable(requestHeaderActions);
-            return this;
+
+        public Builder requestHeaderActions(List<HeaderActionArgs> requestHeaderActions) {
+            return requestHeaderActions(Output.of(requestHeaderActions));
         }
+
         public Builder requestHeaderActions(HeaderActionArgs... requestHeaderActions) {
             return requestHeaderActions(List.of(requestHeaderActions));
         }
+
         public Builder responseHeaderActions(@Nullable Output<List<HeaderActionArgs>> responseHeaderActions) {
-            this.responseHeaderActions = responseHeaderActions;
+            $.responseHeaderActions = responseHeaderActions;
             return this;
         }
-        public Builder responseHeaderActions(@Nullable List<HeaderActionArgs> responseHeaderActions) {
-            this.responseHeaderActions = Codegen.ofNullable(responseHeaderActions);
-            return this;
+
+        public Builder responseHeaderActions(List<HeaderActionArgs> responseHeaderActions) {
+            return responseHeaderActions(Output.of(responseHeaderActions));
         }
+
         public Builder responseHeaderActions(HeaderActionArgs... responseHeaderActions) {
             return responseHeaderActions(List.of(responseHeaderActions));
         }
+
         public Builder routeConfigurationOverride(@Nullable Output<Either<ForwardingConfigurationArgs,RedirectConfigurationArgs>> routeConfigurationOverride) {
-            this.routeConfigurationOverride = routeConfigurationOverride;
+            $.routeConfigurationOverride = routeConfigurationOverride;
             return this;
         }
-        public Builder routeConfigurationOverride(@Nullable Either<ForwardingConfigurationArgs,RedirectConfigurationArgs> routeConfigurationOverride) {
-            this.routeConfigurationOverride = Codegen.ofNullable(routeConfigurationOverride);
-            return this;
-        }        public RulesEngineActionArgs build() {
-            return new RulesEngineActionArgs(requestHeaderActions, responseHeaderActions, routeConfigurationOverride);
+
+        public Builder routeConfigurationOverride(Either<ForwardingConfigurationArgs,RedirectConfigurationArgs> routeConfigurationOverride) {
+            return routeConfigurationOverride(Output.of(routeConfigurationOverride));
+        }
+
+        public RulesEngineActionArgs build() {
+            return $;
         }
     }
+
 }

@@ -27,10 +27,10 @@ public final class SelfHostedIntegrationRuntimeResponse extends com.pulumi.resou
      * 
      */
     @Import(name="description")
-      private final @Nullable String description;
+    private @Nullable String description;
 
     public Optional<String> description() {
-        return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -38,10 +38,10 @@ public final class SelfHostedIntegrationRuntimeResponse extends com.pulumi.resou
      * 
      */
     @Import(name="linkedInfo")
-      private final @Nullable Either<LinkedIntegrationRuntimeKeyAuthorizationResponse,LinkedIntegrationRuntimeRbacAuthorizationResponse> linkedInfo;
+    private @Nullable Either<LinkedIntegrationRuntimeKeyAuthorizationResponse,LinkedIntegrationRuntimeRbacAuthorizationResponse> linkedInfo;
 
-    public Either<LinkedIntegrationRuntimeKeyAuthorizationResponse,LinkedIntegrationRuntimeRbacAuthorizationResponse> linkedInfo() {
-        return this.linkedInfo == null ? null : this.linkedInfo;
+    public Optional<Either<LinkedIntegrationRuntimeKeyAuthorizationResponse,LinkedIntegrationRuntimeRbacAuthorizationResponse>> linkedInfo() {
+        return Optional.ofNullable(this.linkedInfo);
     }
 
     /**
@@ -50,64 +50,57 @@ public final class SelfHostedIntegrationRuntimeResponse extends com.pulumi.resou
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
     }
 
-    public SelfHostedIntegrationRuntimeResponse(
-        @Nullable String description,
-        @Nullable Either<LinkedIntegrationRuntimeKeyAuthorizationResponse,LinkedIntegrationRuntimeRbacAuthorizationResponse> linkedInfo,
-        String type) {
-        this.description = description;
-        this.linkedInfo = linkedInfo;
-        this.type = Codegen.stringProp("type").arg(type).require();
-    }
+    private SelfHostedIntegrationRuntimeResponse() {}
 
-    private SelfHostedIntegrationRuntimeResponse() {
-        this.description = null;
-        this.linkedInfo = null;
-        this.type = null;
+    private SelfHostedIntegrationRuntimeResponse(SelfHostedIntegrationRuntimeResponse $) {
+        this.description = $.description;
+        this.linkedInfo = $.linkedInfo;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SelfHostedIntegrationRuntimeResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String description;
-        private @Nullable Either<LinkedIntegrationRuntimeKeyAuthorizationResponse,LinkedIntegrationRuntimeRbacAuthorizationResponse> linkedInfo;
-        private String type;
+        private SelfHostedIntegrationRuntimeResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new SelfHostedIntegrationRuntimeResponse();
         }
 
         public Builder(SelfHostedIntegrationRuntimeResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.description = defaults.description;
-    	      this.linkedInfo = defaults.linkedInfo;
-    	      this.type = defaults.type;
+            $ = new SelfHostedIntegrationRuntimeResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder description(@Nullable String description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
+
         public Builder linkedInfo(@Nullable Either<LinkedIntegrationRuntimeKeyAuthorizationResponse,LinkedIntegrationRuntimeRbacAuthorizationResponse> linkedInfo) {
-            this.linkedInfo = linkedInfo;
+            $.linkedInfo = linkedInfo;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
-        }        public SelfHostedIntegrationRuntimeResponse build() {
-            return new SelfHostedIntegrationRuntimeResponse(description, linkedInfo, type);
+        }
+
+        public SelfHostedIntegrationRuntimeResponse build() {
+            $.type = Codegen.stringProp("type").arg($.type).require();
+            return $;
         }
     }
+
 }

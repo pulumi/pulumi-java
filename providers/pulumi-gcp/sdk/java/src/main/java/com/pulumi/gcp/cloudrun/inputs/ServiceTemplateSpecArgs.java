@@ -5,13 +5,13 @@ package com.pulumi.gcp.cloudrun.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.cloudrun.inputs.ServiceTemplateSpecContainerArgs;
 import com.pulumi.gcp.cloudrun.inputs.ServiceTemplateSpecVolumeArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class ServiceTemplateSpecArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="containerConcurrency")
-      private final @Nullable Output<Integer> containerConcurrency;
+    private @Nullable Output<Integer> containerConcurrency;
 
-    public Output<Integer> containerConcurrency() {
-        return this.containerConcurrency == null ? Codegen.empty() : this.containerConcurrency;
+    public Optional<Output<Integer>> containerConcurrency() {
+        return Optional.ofNullable(this.containerConcurrency);
     }
 
     /**
@@ -41,10 +41,10 @@ public final class ServiceTemplateSpecArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="containers")
-      private final @Nullable Output<List<ServiceTemplateSpecContainerArgs>> containers;
+    private @Nullable Output<List<ServiceTemplateSpecContainerArgs>> containers;
 
-    public Output<List<ServiceTemplateSpecContainerArgs>> containers() {
-        return this.containers == null ? Codegen.empty() : this.containers;
+    public Optional<Output<List<ServiceTemplateSpecContainerArgs>>> containers() {
+        return Optional.ofNullable(this.containers);
     }
 
     /**
@@ -55,10 +55,10 @@ public final class ServiceTemplateSpecArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="serviceAccountName")
-      private final @Nullable Output<String> serviceAccountName;
+    private @Nullable Output<String> serviceAccountName;
 
-    public Output<String> serviceAccountName() {
-        return this.serviceAccountName == null ? Codegen.empty() : this.serviceAccountName;
+    public Optional<Output<String>> serviceAccountName() {
+        return Optional.ofNullable(this.serviceAccountName);
     }
 
     /**
@@ -74,11 +74,11 @@ public final class ServiceTemplateSpecArgs extends com.pulumi.resources.Resource
      */
     @Deprecated /* Not supported by Cloud Run fully managed */
     @Import(name="servingState")
-      private final @Nullable Output<String> servingState;
+    private @Nullable Output<String> servingState;
 
     @Deprecated /* Not supported by Cloud Run fully managed */
-    public Output<String> servingState() {
-        return this.servingState == null ? Codegen.empty() : this.servingState;
+    public Optional<Output<String>> servingState() {
+        return Optional.ofNullable(this.servingState);
     }
 
     /**
@@ -86,10 +86,10 @@ public final class ServiceTemplateSpecArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="timeoutSeconds")
-      private final @Nullable Output<Integer> timeoutSeconds;
+    private @Nullable Output<Integer> timeoutSeconds;
 
-    public Output<Integer> timeoutSeconds() {
-        return this.timeoutSeconds == null ? Codegen.empty() : this.timeoutSeconds;
+    public Optional<Output<Integer>> timeoutSeconds() {
+        return Optional.ofNullable(this.timeoutSeconds);
     }
 
     /**
@@ -98,121 +98,106 @@ public final class ServiceTemplateSpecArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="volumes")
-      private final @Nullable Output<List<ServiceTemplateSpecVolumeArgs>> volumes;
+    private @Nullable Output<List<ServiceTemplateSpecVolumeArgs>> volumes;
 
-    public Output<List<ServiceTemplateSpecVolumeArgs>> volumes() {
-        return this.volumes == null ? Codegen.empty() : this.volumes;
+    public Optional<Output<List<ServiceTemplateSpecVolumeArgs>>> volumes() {
+        return Optional.ofNullable(this.volumes);
     }
 
-    public ServiceTemplateSpecArgs(
-        @Nullable Output<Integer> containerConcurrency,
-        @Nullable Output<List<ServiceTemplateSpecContainerArgs>> containers,
-        @Nullable Output<String> serviceAccountName,
-        @Nullable Output<String> servingState,
-        @Nullable Output<Integer> timeoutSeconds,
-        @Nullable Output<List<ServiceTemplateSpecVolumeArgs>> volumes) {
-        this.containerConcurrency = containerConcurrency;
-        this.containers = containers;
-        this.serviceAccountName = serviceAccountName;
-        this.servingState = servingState;
-        this.timeoutSeconds = timeoutSeconds;
-        this.volumes = volumes;
-    }
+    private ServiceTemplateSpecArgs() {}
 
-    private ServiceTemplateSpecArgs() {
-        this.containerConcurrency = Codegen.empty();
-        this.containers = Codegen.empty();
-        this.serviceAccountName = Codegen.empty();
-        this.servingState = Codegen.empty();
-        this.timeoutSeconds = Codegen.empty();
-        this.volumes = Codegen.empty();
+    private ServiceTemplateSpecArgs(ServiceTemplateSpecArgs $) {
+        this.containerConcurrency = $.containerConcurrency;
+        this.containers = $.containers;
+        this.serviceAccountName = $.serviceAccountName;
+        this.servingState = $.servingState;
+        this.timeoutSeconds = $.timeoutSeconds;
+        this.volumes = $.volumes;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ServiceTemplateSpecArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> containerConcurrency;
-        private @Nullable Output<List<ServiceTemplateSpecContainerArgs>> containers;
-        private @Nullable Output<String> serviceAccountName;
-        private @Nullable Output<String> servingState;
-        private @Nullable Output<Integer> timeoutSeconds;
-        private @Nullable Output<List<ServiceTemplateSpecVolumeArgs>> volumes;
+        private ServiceTemplateSpecArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ServiceTemplateSpecArgs();
         }
 
         public Builder(ServiceTemplateSpecArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.containerConcurrency = defaults.containerConcurrency;
-    	      this.containers = defaults.containers;
-    	      this.serviceAccountName = defaults.serviceAccountName;
-    	      this.servingState = defaults.servingState;
-    	      this.timeoutSeconds = defaults.timeoutSeconds;
-    	      this.volumes = defaults.volumes;
+            $ = new ServiceTemplateSpecArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder containerConcurrency(@Nullable Output<Integer> containerConcurrency) {
-            this.containerConcurrency = containerConcurrency;
+            $.containerConcurrency = containerConcurrency;
             return this;
         }
-        public Builder containerConcurrency(@Nullable Integer containerConcurrency) {
-            this.containerConcurrency = Codegen.ofNullable(containerConcurrency);
-            return this;
+
+        public Builder containerConcurrency(Integer containerConcurrency) {
+            return containerConcurrency(Output.of(containerConcurrency));
         }
+
         public Builder containers(@Nullable Output<List<ServiceTemplateSpecContainerArgs>> containers) {
-            this.containers = containers;
+            $.containers = containers;
             return this;
         }
-        public Builder containers(@Nullable List<ServiceTemplateSpecContainerArgs> containers) {
-            this.containers = Codegen.ofNullable(containers);
-            return this;
+
+        public Builder containers(List<ServiceTemplateSpecContainerArgs> containers) {
+            return containers(Output.of(containers));
         }
+
         public Builder containers(ServiceTemplateSpecContainerArgs... containers) {
             return containers(List.of(containers));
         }
+
         public Builder serviceAccountName(@Nullable Output<String> serviceAccountName) {
-            this.serviceAccountName = serviceAccountName;
+            $.serviceAccountName = serviceAccountName;
             return this;
         }
-        public Builder serviceAccountName(@Nullable String serviceAccountName) {
-            this.serviceAccountName = Codegen.ofNullable(serviceAccountName);
-            return this;
+
+        public Builder serviceAccountName(String serviceAccountName) {
+            return serviceAccountName(Output.of(serviceAccountName));
         }
+
         public Builder servingState(@Nullable Output<String> servingState) {
-            this.servingState = servingState;
+            $.servingState = servingState;
             return this;
         }
-        public Builder servingState(@Nullable String servingState) {
-            this.servingState = Codegen.ofNullable(servingState);
-            return this;
+
+        public Builder servingState(String servingState) {
+            return servingState(Output.of(servingState));
         }
+
         public Builder timeoutSeconds(@Nullable Output<Integer> timeoutSeconds) {
-            this.timeoutSeconds = timeoutSeconds;
+            $.timeoutSeconds = timeoutSeconds;
             return this;
         }
-        public Builder timeoutSeconds(@Nullable Integer timeoutSeconds) {
-            this.timeoutSeconds = Codegen.ofNullable(timeoutSeconds);
-            return this;
+
+        public Builder timeoutSeconds(Integer timeoutSeconds) {
+            return timeoutSeconds(Output.of(timeoutSeconds));
         }
+
         public Builder volumes(@Nullable Output<List<ServiceTemplateSpecVolumeArgs>> volumes) {
-            this.volumes = volumes;
+            $.volumes = volumes;
             return this;
         }
-        public Builder volumes(@Nullable List<ServiceTemplateSpecVolumeArgs> volumes) {
-            this.volumes = Codegen.ofNullable(volumes);
-            return this;
+
+        public Builder volumes(List<ServiceTemplateSpecVolumeArgs> volumes) {
+            return volumes(Output.of(volumes));
         }
+
         public Builder volumes(ServiceTemplateSpecVolumeArgs... volumes) {
             return volumes(List.of(volumes));
-        }        public ServiceTemplateSpecArgs build() {
-            return new ServiceTemplateSpecArgs(containerConcurrency, containers, serviceAccountName, servingState, timeoutSeconds, volumes);
+        }
+
+        public ServiceTemplateSpecArgs build() {
+            return $;
         }
     }
+
 }

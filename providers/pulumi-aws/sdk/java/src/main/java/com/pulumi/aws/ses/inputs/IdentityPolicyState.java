@@ -5,9 +5,9 @@ package com.pulumi.aws.ses.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class IdentityPolicyState extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="identity")
-      private final @Nullable Output<String> identity;
+    private @Nullable Output<String> identity;
 
-    public Output<String> identity() {
-        return this.identity == null ? Codegen.empty() : this.identity;
+    public Optional<Output<String>> identity() {
+        return Optional.ofNullable(this.identity);
     }
 
     /**
@@ -31,10 +31,10 @@ public final class IdentityPolicyState extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -42,76 +42,68 @@ public final class IdentityPolicyState extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="policy")
-      private final @Nullable Output<String> policy;
+    private @Nullable Output<String> policy;
 
-    public Output<String> policy() {
-        return this.policy == null ? Codegen.empty() : this.policy;
+    public Optional<Output<String>> policy() {
+        return Optional.ofNullable(this.policy);
     }
 
-    public IdentityPolicyState(
-        @Nullable Output<String> identity,
-        @Nullable Output<String> name,
-        @Nullable Output<String> policy) {
-        this.identity = identity;
-        this.name = name;
-        this.policy = policy;
-    }
+    private IdentityPolicyState() {}
 
-    private IdentityPolicyState() {
-        this.identity = Codegen.empty();
-        this.name = Codegen.empty();
-        this.policy = Codegen.empty();
+    private IdentityPolicyState(IdentityPolicyState $) {
+        this.identity = $.identity;
+        this.name = $.name;
+        this.policy = $.policy;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(IdentityPolicyState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> identity;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> policy;
+        private IdentityPolicyState $;
 
         public Builder() {
-    	      // Empty
+            $ = new IdentityPolicyState();
         }
 
         public Builder(IdentityPolicyState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.identity = defaults.identity;
-    	      this.name = defaults.name;
-    	      this.policy = defaults.policy;
+            $ = new IdentityPolicyState(Objects.requireNonNull(defaults));
         }
 
         public Builder identity(@Nullable Output<String> identity) {
-            this.identity = identity;
+            $.identity = identity;
             return this;
         }
-        public Builder identity(@Nullable String identity) {
-            this.identity = Codegen.ofNullable(identity);
-            return this;
+
+        public Builder identity(String identity) {
+            return identity(Output.of(identity));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder policy(@Nullable Output<String> policy) {
-            this.policy = policy;
+            $.policy = policy;
             return this;
         }
-        public Builder policy(@Nullable String policy) {
-            this.policy = Codegen.ofNullable(policy);
-            return this;
-        }        public IdentityPolicyState build() {
-            return new IdentityPolicyState(identity, name, policy);
+
+        public Builder policy(String policy) {
+            return policy(Output.of(policy));
+        }
+
+        public IdentityPolicyState build() {
+            return $;
         }
     }
+
 }

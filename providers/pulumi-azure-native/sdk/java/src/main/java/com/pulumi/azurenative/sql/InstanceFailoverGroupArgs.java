@@ -9,10 +9,10 @@ import com.pulumi.azurenative.sql.inputs.ManagedInstancePairInfoArgs;
 import com.pulumi.azurenative.sql.inputs.PartnerRegionInfoArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class InstanceFailoverGroupArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="failoverGroupName")
-      private final @Nullable Output<String> failoverGroupName;
+    private @Nullable Output<String> failoverGroupName;
 
-    public Output<String> failoverGroupName() {
-        return this.failoverGroupName == null ? Codegen.empty() : this.failoverGroupName;
+    public Optional<Output<String>> failoverGroupName() {
+        return Optional.ofNullable(this.failoverGroupName);
     }
 
     /**
@@ -36,7 +36,7 @@ public final class InstanceFailoverGroupArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="locationName", required=true)
-      private final Output<String> locationName;
+    private Output<String> locationName;
 
     public Output<String> locationName() {
         return this.locationName;
@@ -47,7 +47,7 @@ public final class InstanceFailoverGroupArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="managedInstancePairs", required=true)
-      private final Output<List<ManagedInstancePairInfoArgs>> managedInstancePairs;
+    private Output<List<ManagedInstancePairInfoArgs>> managedInstancePairs;
 
     public Output<List<ManagedInstancePairInfoArgs>> managedInstancePairs() {
         return this.managedInstancePairs;
@@ -58,7 +58,7 @@ public final class InstanceFailoverGroupArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="partnerRegions", required=true)
-      private final Output<List<PartnerRegionInfoArgs>> partnerRegions;
+    private Output<List<PartnerRegionInfoArgs>> partnerRegions;
 
     public Output<List<PartnerRegionInfoArgs>> partnerRegions() {
         return this.partnerRegions;
@@ -69,10 +69,10 @@ public final class InstanceFailoverGroupArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="readOnlyEndpoint")
-      private final @Nullable Output<InstanceFailoverGroupReadOnlyEndpointArgs> readOnlyEndpoint;
+    private @Nullable Output<InstanceFailoverGroupReadOnlyEndpointArgs> readOnlyEndpoint;
 
-    public Output<InstanceFailoverGroupReadOnlyEndpointArgs> readOnlyEndpoint() {
-        return this.readOnlyEndpoint == null ? Codegen.empty() : this.readOnlyEndpoint;
+    public Optional<Output<InstanceFailoverGroupReadOnlyEndpointArgs>> readOnlyEndpoint() {
+        return Optional.ofNullable(this.readOnlyEndpoint);
     }
 
     /**
@@ -80,7 +80,7 @@ public final class InstanceFailoverGroupArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="readWriteEndpoint", required=true)
-      private final Output<InstanceFailoverGroupReadWriteEndpointArgs> readWriteEndpoint;
+    private Output<InstanceFailoverGroupReadWriteEndpointArgs> readWriteEndpoint;
 
     public Output<InstanceFailoverGroupReadWriteEndpointArgs> readWriteEndpoint() {
         return this.readWriteEndpoint;
@@ -91,134 +91,121 @@ public final class InstanceFailoverGroupArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public InstanceFailoverGroupArgs(
-        @Nullable Output<String> failoverGroupName,
-        Output<String> locationName,
-        Output<List<ManagedInstancePairInfoArgs>> managedInstancePairs,
-        Output<List<PartnerRegionInfoArgs>> partnerRegions,
-        @Nullable Output<InstanceFailoverGroupReadOnlyEndpointArgs> readOnlyEndpoint,
-        Output<InstanceFailoverGroupReadWriteEndpointArgs> readWriteEndpoint,
-        Output<String> resourceGroupName) {
-        this.failoverGroupName = failoverGroupName;
-        this.locationName = Objects.requireNonNull(locationName, "expected parameter 'locationName' to be non-null");
-        this.managedInstancePairs = Objects.requireNonNull(managedInstancePairs, "expected parameter 'managedInstancePairs' to be non-null");
-        this.partnerRegions = Objects.requireNonNull(partnerRegions, "expected parameter 'partnerRegions' to be non-null");
-        this.readOnlyEndpoint = readOnlyEndpoint;
-        this.readWriteEndpoint = Objects.requireNonNull(readWriteEndpoint, "expected parameter 'readWriteEndpoint' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private InstanceFailoverGroupArgs() {}
 
-    private InstanceFailoverGroupArgs() {
-        this.failoverGroupName = Codegen.empty();
-        this.locationName = Codegen.empty();
-        this.managedInstancePairs = Codegen.empty();
-        this.partnerRegions = Codegen.empty();
-        this.readOnlyEndpoint = Codegen.empty();
-        this.readWriteEndpoint = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
+    private InstanceFailoverGroupArgs(InstanceFailoverGroupArgs $) {
+        this.failoverGroupName = $.failoverGroupName;
+        this.locationName = $.locationName;
+        this.managedInstancePairs = $.managedInstancePairs;
+        this.partnerRegions = $.partnerRegions;
+        this.readOnlyEndpoint = $.readOnlyEndpoint;
+        this.readWriteEndpoint = $.readWriteEndpoint;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(InstanceFailoverGroupArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> failoverGroupName;
-        private Output<String> locationName;
-        private Output<List<ManagedInstancePairInfoArgs>> managedInstancePairs;
-        private Output<List<PartnerRegionInfoArgs>> partnerRegions;
-        private @Nullable Output<InstanceFailoverGroupReadOnlyEndpointArgs> readOnlyEndpoint;
-        private Output<InstanceFailoverGroupReadWriteEndpointArgs> readWriteEndpoint;
-        private Output<String> resourceGroupName;
+        private InstanceFailoverGroupArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new InstanceFailoverGroupArgs();
         }
 
         public Builder(InstanceFailoverGroupArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.failoverGroupName = defaults.failoverGroupName;
-    	      this.locationName = defaults.locationName;
-    	      this.managedInstancePairs = defaults.managedInstancePairs;
-    	      this.partnerRegions = defaults.partnerRegions;
-    	      this.readOnlyEndpoint = defaults.readOnlyEndpoint;
-    	      this.readWriteEndpoint = defaults.readWriteEndpoint;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new InstanceFailoverGroupArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder failoverGroupName(@Nullable Output<String> failoverGroupName) {
-            this.failoverGroupName = failoverGroupName;
+            $.failoverGroupName = failoverGroupName;
             return this;
         }
-        public Builder failoverGroupName(@Nullable String failoverGroupName) {
-            this.failoverGroupName = Codegen.ofNullable(failoverGroupName);
-            return this;
+
+        public Builder failoverGroupName(String failoverGroupName) {
+            return failoverGroupName(Output.of(failoverGroupName));
         }
+
         public Builder locationName(Output<String> locationName) {
-            this.locationName = Objects.requireNonNull(locationName);
+            $.locationName = locationName;
             return this;
         }
+
         public Builder locationName(String locationName) {
-            this.locationName = Output.of(Objects.requireNonNull(locationName));
-            return this;
+            return locationName(Output.of(locationName));
         }
+
         public Builder managedInstancePairs(Output<List<ManagedInstancePairInfoArgs>> managedInstancePairs) {
-            this.managedInstancePairs = Objects.requireNonNull(managedInstancePairs);
+            $.managedInstancePairs = managedInstancePairs;
             return this;
         }
+
         public Builder managedInstancePairs(List<ManagedInstancePairInfoArgs> managedInstancePairs) {
-            this.managedInstancePairs = Output.of(Objects.requireNonNull(managedInstancePairs));
-            return this;
+            return managedInstancePairs(Output.of(managedInstancePairs));
         }
+
         public Builder managedInstancePairs(ManagedInstancePairInfoArgs... managedInstancePairs) {
             return managedInstancePairs(List.of(managedInstancePairs));
         }
+
         public Builder partnerRegions(Output<List<PartnerRegionInfoArgs>> partnerRegions) {
-            this.partnerRegions = Objects.requireNonNull(partnerRegions);
+            $.partnerRegions = partnerRegions;
             return this;
         }
+
         public Builder partnerRegions(List<PartnerRegionInfoArgs> partnerRegions) {
-            this.partnerRegions = Output.of(Objects.requireNonNull(partnerRegions));
-            return this;
+            return partnerRegions(Output.of(partnerRegions));
         }
+
         public Builder partnerRegions(PartnerRegionInfoArgs... partnerRegions) {
             return partnerRegions(List.of(partnerRegions));
         }
+
         public Builder readOnlyEndpoint(@Nullable Output<InstanceFailoverGroupReadOnlyEndpointArgs> readOnlyEndpoint) {
-            this.readOnlyEndpoint = readOnlyEndpoint;
+            $.readOnlyEndpoint = readOnlyEndpoint;
             return this;
         }
-        public Builder readOnlyEndpoint(@Nullable InstanceFailoverGroupReadOnlyEndpointArgs readOnlyEndpoint) {
-            this.readOnlyEndpoint = Codegen.ofNullable(readOnlyEndpoint);
-            return this;
+
+        public Builder readOnlyEndpoint(InstanceFailoverGroupReadOnlyEndpointArgs readOnlyEndpoint) {
+            return readOnlyEndpoint(Output.of(readOnlyEndpoint));
         }
+
         public Builder readWriteEndpoint(Output<InstanceFailoverGroupReadWriteEndpointArgs> readWriteEndpoint) {
-            this.readWriteEndpoint = Objects.requireNonNull(readWriteEndpoint);
+            $.readWriteEndpoint = readWriteEndpoint;
             return this;
         }
+
         public Builder readWriteEndpoint(InstanceFailoverGroupReadWriteEndpointArgs readWriteEndpoint) {
-            this.readWriteEndpoint = Output.of(Objects.requireNonNull(readWriteEndpoint));
-            return this;
+            return readWriteEndpoint(Output.of(readWriteEndpoint));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
-        }        public InstanceFailoverGroupArgs build() {
-            return new InstanceFailoverGroupArgs(failoverGroupName, locationName, managedInstancePairs, partnerRegions, readOnlyEndpoint, readWriteEndpoint, resourceGroupName);
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        public InstanceFailoverGroupArgs build() {
+            $.locationName = Objects.requireNonNull($.locationName, "expected parameter 'locationName' to be non-null");
+            $.managedInstancePairs = Objects.requireNonNull($.managedInstancePairs, "expected parameter 'managedInstancePairs' to be non-null");
+            $.partnerRegions = Objects.requireNonNull($.partnerRegions, "expected parameter 'partnerRegions' to be non-null");
+            $.readWriteEndpoint = Objects.requireNonNull($.readWriteEndpoint, "expected parameter 'readWriteEndpoint' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

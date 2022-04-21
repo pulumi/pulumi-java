@@ -5,10 +5,10 @@ package com.pulumi.googlenative.metastore_v1beta.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.metastore_v1beta.enums.MaintenanceWindowDayOfWeek;
 import java.lang.Integer;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class MaintenanceWindowArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="dayOfWeek")
-      private final @Nullable Output<MaintenanceWindowDayOfWeek> dayOfWeek;
+    private @Nullable Output<MaintenanceWindowDayOfWeek> dayOfWeek;
 
-    public Output<MaintenanceWindowDayOfWeek> dayOfWeek() {
-        return this.dayOfWeek == null ? Codegen.empty() : this.dayOfWeek;
+    public Optional<Output<MaintenanceWindowDayOfWeek>> dayOfWeek() {
+        return Optional.ofNullable(this.dayOfWeek);
     }
 
     /**
@@ -36,63 +36,58 @@ public final class MaintenanceWindowArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="hourOfDay")
-      private final @Nullable Output<Integer> hourOfDay;
+    private @Nullable Output<Integer> hourOfDay;
 
-    public Output<Integer> hourOfDay() {
-        return this.hourOfDay == null ? Codegen.empty() : this.hourOfDay;
+    public Optional<Output<Integer>> hourOfDay() {
+        return Optional.ofNullable(this.hourOfDay);
     }
 
-    public MaintenanceWindowArgs(
-        @Nullable Output<MaintenanceWindowDayOfWeek> dayOfWeek,
-        @Nullable Output<Integer> hourOfDay) {
-        this.dayOfWeek = dayOfWeek;
-        this.hourOfDay = hourOfDay;
-    }
+    private MaintenanceWindowArgs() {}
 
-    private MaintenanceWindowArgs() {
-        this.dayOfWeek = Codegen.empty();
-        this.hourOfDay = Codegen.empty();
+    private MaintenanceWindowArgs(MaintenanceWindowArgs $) {
+        this.dayOfWeek = $.dayOfWeek;
+        this.hourOfDay = $.hourOfDay;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MaintenanceWindowArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<MaintenanceWindowDayOfWeek> dayOfWeek;
-        private @Nullable Output<Integer> hourOfDay;
+        private MaintenanceWindowArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new MaintenanceWindowArgs();
         }
 
         public Builder(MaintenanceWindowArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dayOfWeek = defaults.dayOfWeek;
-    	      this.hourOfDay = defaults.hourOfDay;
+            $ = new MaintenanceWindowArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder dayOfWeek(@Nullable Output<MaintenanceWindowDayOfWeek> dayOfWeek) {
-            this.dayOfWeek = dayOfWeek;
+            $.dayOfWeek = dayOfWeek;
             return this;
         }
-        public Builder dayOfWeek(@Nullable MaintenanceWindowDayOfWeek dayOfWeek) {
-            this.dayOfWeek = Codegen.ofNullable(dayOfWeek);
-            return this;
+
+        public Builder dayOfWeek(MaintenanceWindowDayOfWeek dayOfWeek) {
+            return dayOfWeek(Output.of(dayOfWeek));
         }
+
         public Builder hourOfDay(@Nullable Output<Integer> hourOfDay) {
-            this.hourOfDay = hourOfDay;
+            $.hourOfDay = hourOfDay;
             return this;
         }
-        public Builder hourOfDay(@Nullable Integer hourOfDay) {
-            this.hourOfDay = Codegen.ofNullable(hourOfDay);
-            return this;
-        }        public MaintenanceWindowArgs build() {
-            return new MaintenanceWindowArgs(dayOfWeek, hourOfDay);
+
+        public Builder hourOfDay(Integer hourOfDay) {
+            return hourOfDay(Output.of(hourOfDay));
+        }
+
+        public MaintenanceWindowArgs build() {
+            return $;
         }
     }
+
 }

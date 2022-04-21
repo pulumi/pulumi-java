@@ -22,7 +22,7 @@ public final class DeploymentResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="address", required=true)
-      private final String address;
+    private String address;
 
     public String address() {
         return this.address;
@@ -33,7 +33,7 @@ public final class DeploymentResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="config", required=true)
-      private final String config;
+    private String config;
 
     public String config() {
         return this.config;
@@ -44,7 +44,7 @@ public final class DeploymentResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="deployTime", required=true)
-      private final String deployTime;
+    private String deployTime;
 
     public String deployTime() {
         return this.deployTime;
@@ -55,7 +55,7 @@ public final class DeploymentResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="platform", required=true)
-      private final String platform;
+    private String platform;
 
     public String platform() {
         return this.platform;
@@ -66,7 +66,7 @@ public final class DeploymentResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceUri", required=true)
-      private final List<String> resourceUri;
+    private List<String> resourceUri;
 
     public List<String> resourceUri() {
         return this.resourceUri;
@@ -77,7 +77,7 @@ public final class DeploymentResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="undeployTime", required=true)
-      private final String undeployTime;
+    private String undeployTime;
 
     public String undeployTime() {
         return this.undeployTime;
@@ -88,103 +88,91 @@ public final class DeploymentResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="userEmail", required=true)
-      private final String userEmail;
+    private String userEmail;
 
     public String userEmail() {
         return this.userEmail;
     }
 
-    public DeploymentResponse(
-        String address,
-        String config,
-        String deployTime,
-        String platform,
-        List<String> resourceUri,
-        String undeployTime,
-        String userEmail) {
-        this.address = Objects.requireNonNull(address, "expected parameter 'address' to be non-null");
-        this.config = Objects.requireNonNull(config, "expected parameter 'config' to be non-null");
-        this.deployTime = Objects.requireNonNull(deployTime, "expected parameter 'deployTime' to be non-null");
-        this.platform = Objects.requireNonNull(platform, "expected parameter 'platform' to be non-null");
-        this.resourceUri = Objects.requireNonNull(resourceUri, "expected parameter 'resourceUri' to be non-null");
-        this.undeployTime = Objects.requireNonNull(undeployTime, "expected parameter 'undeployTime' to be non-null");
-        this.userEmail = Objects.requireNonNull(userEmail, "expected parameter 'userEmail' to be non-null");
-    }
+    private DeploymentResponse() {}
 
-    private DeploymentResponse() {
-        this.address = null;
-        this.config = null;
-        this.deployTime = null;
-        this.platform = null;
-        this.resourceUri = List.of();
-        this.undeployTime = null;
-        this.userEmail = null;
+    private DeploymentResponse(DeploymentResponse $) {
+        this.address = $.address;
+        this.config = $.config;
+        this.deployTime = $.deployTime;
+        this.platform = $.platform;
+        this.resourceUri = $.resourceUri;
+        this.undeployTime = $.undeployTime;
+        this.userEmail = $.userEmail;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DeploymentResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String address;
-        private String config;
-        private String deployTime;
-        private String platform;
-        private List<String> resourceUri;
-        private String undeployTime;
-        private String userEmail;
+        private DeploymentResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new DeploymentResponse();
         }
 
         public Builder(DeploymentResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.address = defaults.address;
-    	      this.config = defaults.config;
-    	      this.deployTime = defaults.deployTime;
-    	      this.platform = defaults.platform;
-    	      this.resourceUri = defaults.resourceUri;
-    	      this.undeployTime = defaults.undeployTime;
-    	      this.userEmail = defaults.userEmail;
+            $ = new DeploymentResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder address(String address) {
-            this.address = Objects.requireNonNull(address);
+            $.address = address;
             return this;
         }
+
         public Builder config(String config) {
-            this.config = Objects.requireNonNull(config);
+            $.config = config;
             return this;
         }
+
         public Builder deployTime(String deployTime) {
-            this.deployTime = Objects.requireNonNull(deployTime);
+            $.deployTime = deployTime;
             return this;
         }
+
         public Builder platform(String platform) {
-            this.platform = Objects.requireNonNull(platform);
+            $.platform = platform;
             return this;
         }
+
         public Builder resourceUri(List<String> resourceUri) {
-            this.resourceUri = Objects.requireNonNull(resourceUri);
+            $.resourceUri = resourceUri;
             return this;
         }
+
         public Builder resourceUri(String... resourceUri) {
             return resourceUri(List.of(resourceUri));
         }
+
         public Builder undeployTime(String undeployTime) {
-            this.undeployTime = Objects.requireNonNull(undeployTime);
+            $.undeployTime = undeployTime;
             return this;
         }
+
         public Builder userEmail(String userEmail) {
-            this.userEmail = Objects.requireNonNull(userEmail);
+            $.userEmail = userEmail;
             return this;
-        }        public DeploymentResponse build() {
-            return new DeploymentResponse(address, config, deployTime, platform, resourceUri, undeployTime, userEmail);
+        }
+
+        public DeploymentResponse build() {
+            $.address = Objects.requireNonNull($.address, "expected parameter 'address' to be non-null");
+            $.config = Objects.requireNonNull($.config, "expected parameter 'config' to be non-null");
+            $.deployTime = Objects.requireNonNull($.deployTime, "expected parameter 'deployTime' to be non-null");
+            $.platform = Objects.requireNonNull($.platform, "expected parameter 'platform' to be non-null");
+            $.resourceUri = Objects.requireNonNull($.resourceUri, "expected parameter 'resourceUri' to be non-null");
+            $.undeployTime = Objects.requireNonNull($.undeployTime, "expected parameter 'undeployTime' to be non-null");
+            $.userEmail = Objects.requireNonNull($.userEmail, "expected parameter 'userEmail' to be non-null");
+            return $;
         }
     }
+
 }

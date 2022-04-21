@@ -22,7 +22,7 @@ public final class OidcResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="allowedAudiences", required=true)
-      private final List<String> allowedAudiences;
+    private List<String> allowedAudiences;
 
     public List<String> allowedAudiences() {
         return this.allowedAudiences;
@@ -33,58 +33,56 @@ public final class OidcResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="issuerUri", required=true)
-      private final String issuerUri;
+    private String issuerUri;
 
     public String issuerUri() {
         return this.issuerUri;
     }
 
-    public OidcResponse(
-        List<String> allowedAudiences,
-        String issuerUri) {
-        this.allowedAudiences = Objects.requireNonNull(allowedAudiences, "expected parameter 'allowedAudiences' to be non-null");
-        this.issuerUri = Objects.requireNonNull(issuerUri, "expected parameter 'issuerUri' to be non-null");
-    }
+    private OidcResponse() {}
 
-    private OidcResponse() {
-        this.allowedAudiences = List.of();
-        this.issuerUri = null;
+    private OidcResponse(OidcResponse $) {
+        this.allowedAudiences = $.allowedAudiences;
+        this.issuerUri = $.issuerUri;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(OidcResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<String> allowedAudiences;
-        private String issuerUri;
+        private OidcResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new OidcResponse();
         }
 
         public Builder(OidcResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.allowedAudiences = defaults.allowedAudiences;
-    	      this.issuerUri = defaults.issuerUri;
+            $ = new OidcResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder allowedAudiences(List<String> allowedAudiences) {
-            this.allowedAudiences = Objects.requireNonNull(allowedAudiences);
+            $.allowedAudiences = allowedAudiences;
             return this;
         }
+
         public Builder allowedAudiences(String... allowedAudiences) {
             return allowedAudiences(List.of(allowedAudiences));
         }
+
         public Builder issuerUri(String issuerUri) {
-            this.issuerUri = Objects.requireNonNull(issuerUri);
+            $.issuerUri = issuerUri;
             return this;
-        }        public OidcResponse build() {
-            return new OidcResponse(allowedAudiences, issuerUri);
+        }
+
+        public OidcResponse build() {
+            $.allowedAudiences = Objects.requireNonNull($.allowedAudiences, "expected parameter 'allowedAudiences' to be non-null");
+            $.issuerUri = Objects.requireNonNull($.issuerUri, "expected parameter 'issuerUri' to be non-null");
+            return $;
         }
     }
+
 }

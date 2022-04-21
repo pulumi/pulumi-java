@@ -6,9 +6,9 @@ package com.pulumi.aws.codebuild.inputs;
 import com.pulumi.aws.codebuild.inputs.ReportGroupExportConfigS3DestinationGetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class ReportGroupExportConfigGetArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="s3Destination")
-      private final @Nullable Output<ReportGroupExportConfigS3DestinationGetArgs> s3Destination;
+    private @Nullable Output<ReportGroupExportConfigS3DestinationGetArgs> s3Destination;
 
-    public Output<ReportGroupExportConfigS3DestinationGetArgs> s3Destination() {
-        return this.s3Destination == null ? Codegen.empty() : this.s3Destination;
+    public Optional<Output<ReportGroupExportConfigS3DestinationGetArgs>> s3Destination() {
+        return Optional.ofNullable(this.s3Destination);
     }
 
     /**
@@ -32,63 +32,59 @@ public final class ReportGroupExportConfigGetArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="type", required=true)
-      private final Output<String> type;
+    private Output<String> type;
 
     public Output<String> type() {
         return this.type;
     }
 
-    public ReportGroupExportConfigGetArgs(
-        @Nullable Output<ReportGroupExportConfigS3DestinationGetArgs> s3Destination,
-        Output<String> type) {
-        this.s3Destination = s3Destination;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private ReportGroupExportConfigGetArgs() {}
 
-    private ReportGroupExportConfigGetArgs() {
-        this.s3Destination = Codegen.empty();
-        this.type = Codegen.empty();
+    private ReportGroupExportConfigGetArgs(ReportGroupExportConfigGetArgs $) {
+        this.s3Destination = $.s3Destination;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ReportGroupExportConfigGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<ReportGroupExportConfigS3DestinationGetArgs> s3Destination;
-        private Output<String> type;
+        private ReportGroupExportConfigGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ReportGroupExportConfigGetArgs();
         }
 
         public Builder(ReportGroupExportConfigGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.s3Destination = defaults.s3Destination;
-    	      this.type = defaults.type;
+            $ = new ReportGroupExportConfigGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder s3Destination(@Nullable Output<ReportGroupExportConfigS3DestinationGetArgs> s3Destination) {
-            this.s3Destination = s3Destination;
+            $.s3Destination = s3Destination;
             return this;
         }
-        public Builder s3Destination(@Nullable ReportGroupExportConfigS3DestinationGetArgs s3Destination) {
-            this.s3Destination = Codegen.ofNullable(s3Destination);
-            return this;
+
+        public Builder s3Destination(ReportGroupExportConfigS3DestinationGetArgs s3Destination) {
+            return s3Destination(Output.of(s3Destination));
         }
+
         public Builder type(Output<String> type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Output.of(Objects.requireNonNull(type));
-            return this;
-        }        public ReportGroupExportConfigGetArgs build() {
-            return new ReportGroupExportConfigGetArgs(s3Destination, type);
+            return type(Output.of(type));
+        }
+
+        public ReportGroupExportConfigGetArgs build() {
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

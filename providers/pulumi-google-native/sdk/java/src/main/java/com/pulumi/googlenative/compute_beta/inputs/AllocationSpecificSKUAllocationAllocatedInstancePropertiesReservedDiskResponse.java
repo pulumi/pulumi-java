@@ -17,7 +17,7 @@ public final class AllocationSpecificSKUAllocationAllocatedInstancePropertiesRes
      * 
      */
     @Import(name="diskSizeGb", required=true)
-      private final String diskSizeGb;
+    private String diskSizeGb;
 
     public String diskSizeGb() {
         return this.diskSizeGb;
@@ -28,55 +28,52 @@ public final class AllocationSpecificSKUAllocationAllocatedInstancePropertiesRes
      * 
      */
     @Import(name="interface", required=true)
-      private final String interface_;
+    private String interface_;
 
     public String interface_() {
         return this.interface_;
     }
 
-    public AllocationSpecificSKUAllocationAllocatedInstancePropertiesReservedDiskResponse(
-        String diskSizeGb,
-        String interface_) {
-        this.diskSizeGb = Objects.requireNonNull(diskSizeGb, "expected parameter 'diskSizeGb' to be non-null");
-        this.interface_ = Objects.requireNonNull(interface_, "expected parameter 'interface' to be non-null");
-    }
+    private AllocationSpecificSKUAllocationAllocatedInstancePropertiesReservedDiskResponse() {}
 
-    private AllocationSpecificSKUAllocationAllocatedInstancePropertiesReservedDiskResponse() {
-        this.diskSizeGb = null;
-        this.interface_ = null;
+    private AllocationSpecificSKUAllocationAllocatedInstancePropertiesReservedDiskResponse(AllocationSpecificSKUAllocationAllocatedInstancePropertiesReservedDiskResponse $) {
+        this.diskSizeGb = $.diskSizeGb;
+        this.interface_ = $.interface_;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AllocationSpecificSKUAllocationAllocatedInstancePropertiesReservedDiskResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String diskSizeGb;
-        private String interface_;
+        private AllocationSpecificSKUAllocationAllocatedInstancePropertiesReservedDiskResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AllocationSpecificSKUAllocationAllocatedInstancePropertiesReservedDiskResponse();
         }
 
         public Builder(AllocationSpecificSKUAllocationAllocatedInstancePropertiesReservedDiskResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.diskSizeGb = defaults.diskSizeGb;
-    	      this.interface_ = defaults.interface_;
+            $ = new AllocationSpecificSKUAllocationAllocatedInstancePropertiesReservedDiskResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder diskSizeGb(String diskSizeGb) {
-            this.diskSizeGb = Objects.requireNonNull(diskSizeGb);
+            $.diskSizeGb = diskSizeGb;
             return this;
         }
+
         public Builder interface_(String interface_) {
-            this.interface_ = Objects.requireNonNull(interface_);
+            $.interface_ = interface_;
             return this;
-        }        public AllocationSpecificSKUAllocationAllocatedInstancePropertiesReservedDiskResponse build() {
-            return new AllocationSpecificSKUAllocationAllocatedInstancePropertiesReservedDiskResponse(diskSizeGb, interface_);
+        }
+
+        public AllocationSpecificSKUAllocationAllocatedInstancePropertiesReservedDiskResponse build() {
+            $.diskSizeGb = Objects.requireNonNull($.diskSizeGb, "expected parameter 'diskSizeGb' to be non-null");
+            $.interface_ = Objects.requireNonNull($.interface_, "expected parameter 'interface' to be non-null");
+            return $;
         }
     }
+
 }

@@ -20,7 +20,7 @@ public final class MigrateSqlServerSqlDbSyncTaskOutputDatabaseLevelResponse exte
      * 
      */
     @Import(name="appliedChanges", required=true)
-      private final Double appliedChanges;
+    private Double appliedChanges;
 
     public Double appliedChanges() {
         return this.appliedChanges;
@@ -31,7 +31,7 @@ public final class MigrateSqlServerSqlDbSyncTaskOutputDatabaseLevelResponse exte
      * 
      */
     @Import(name="cdcDeleteCounter", required=true)
-      private final Double cdcDeleteCounter;
+    private Double cdcDeleteCounter;
 
     public Double cdcDeleteCounter() {
         return this.cdcDeleteCounter;
@@ -42,7 +42,7 @@ public final class MigrateSqlServerSqlDbSyncTaskOutputDatabaseLevelResponse exte
      * 
      */
     @Import(name="cdcInsertCounter", required=true)
-      private final Double cdcInsertCounter;
+    private Double cdcInsertCounter;
 
     public Double cdcInsertCounter() {
         return this.cdcInsertCounter;
@@ -53,7 +53,7 @@ public final class MigrateSqlServerSqlDbSyncTaskOutputDatabaseLevelResponse exte
      * 
      */
     @Import(name="cdcUpdateCounter", required=true)
-      private final Double cdcUpdateCounter;
+    private Double cdcUpdateCounter;
 
     public Double cdcUpdateCounter() {
         return this.cdcUpdateCounter;
@@ -64,7 +64,7 @@ public final class MigrateSqlServerSqlDbSyncTaskOutputDatabaseLevelResponse exte
      * 
      */
     @Import(name="databaseName", required=true)
-      private final String databaseName;
+    private String databaseName;
 
     public String databaseName() {
         return this.databaseName;
@@ -75,7 +75,7 @@ public final class MigrateSqlServerSqlDbSyncTaskOutputDatabaseLevelResponse exte
      * 
      */
     @Import(name="endedOn", required=true)
-      private final String endedOn;
+    private String endedOn;
 
     public String endedOn() {
         return this.endedOn;
@@ -86,7 +86,7 @@ public final class MigrateSqlServerSqlDbSyncTaskOutputDatabaseLevelResponse exte
      * 
      */
     @Import(name="fullLoadCompletedTables", required=true)
-      private final Double fullLoadCompletedTables;
+    private Double fullLoadCompletedTables;
 
     public Double fullLoadCompletedTables() {
         return this.fullLoadCompletedTables;
@@ -97,7 +97,7 @@ public final class MigrateSqlServerSqlDbSyncTaskOutputDatabaseLevelResponse exte
      * 
      */
     @Import(name="fullLoadErroredTables", required=true)
-      private final Double fullLoadErroredTables;
+    private Double fullLoadErroredTables;
 
     public Double fullLoadErroredTables() {
         return this.fullLoadErroredTables;
@@ -108,7 +108,7 @@ public final class MigrateSqlServerSqlDbSyncTaskOutputDatabaseLevelResponse exte
      * 
      */
     @Import(name="fullLoadLoadingTables", required=true)
-      private final Double fullLoadLoadingTables;
+    private Double fullLoadLoadingTables;
 
     public Double fullLoadLoadingTables() {
         return this.fullLoadLoadingTables;
@@ -119,7 +119,7 @@ public final class MigrateSqlServerSqlDbSyncTaskOutputDatabaseLevelResponse exte
      * 
      */
     @Import(name="fullLoadQueuedTables", required=true)
-      private final Double fullLoadQueuedTables;
+    private Double fullLoadQueuedTables;
 
     public Double fullLoadQueuedTables() {
         return this.fullLoadQueuedTables;
@@ -130,7 +130,7 @@ public final class MigrateSqlServerSqlDbSyncTaskOutputDatabaseLevelResponse exte
      * 
      */
     @Import(name="id", required=true)
-      private final String id;
+    private String id;
 
     public String id() {
         return this.id;
@@ -141,7 +141,7 @@ public final class MigrateSqlServerSqlDbSyncTaskOutputDatabaseLevelResponse exte
      * 
      */
     @Import(name="incomingChanges", required=true)
-      private final Double incomingChanges;
+    private Double incomingChanges;
 
     public Double incomingChanges() {
         return this.incomingChanges;
@@ -152,7 +152,7 @@ public final class MigrateSqlServerSqlDbSyncTaskOutputDatabaseLevelResponse exte
      * 
      */
     @Import(name="initializationCompleted", required=true)
-      private final Boolean initializationCompleted;
+    private Boolean initializationCompleted;
 
     public Boolean initializationCompleted() {
         return this.initializationCompleted;
@@ -163,7 +163,7 @@ public final class MigrateSqlServerSqlDbSyncTaskOutputDatabaseLevelResponse exte
      * 
      */
     @Import(name="latency", required=true)
-      private final Double latency;
+    private Double latency;
 
     public Double latency() {
         return this.latency;
@@ -174,7 +174,7 @@ public final class MigrateSqlServerSqlDbSyncTaskOutputDatabaseLevelResponse exte
      * 
      */
     @Import(name="migrationState", required=true)
-      private final String migrationState;
+    private String migrationState;
 
     public String migrationState() {
         return this.migrationState;
@@ -186,7 +186,7 @@ public final class MigrateSqlServerSqlDbSyncTaskOutputDatabaseLevelResponse exte
      * 
      */
     @Import(name="resultType", required=true)
-      private final String resultType;
+    private String resultType;
 
     public String resultType() {
         return this.resultType;
@@ -197,190 +197,157 @@ public final class MigrateSqlServerSqlDbSyncTaskOutputDatabaseLevelResponse exte
      * 
      */
     @Import(name="startedOn", required=true)
-      private final String startedOn;
+    private String startedOn;
 
     public String startedOn() {
         return this.startedOn;
     }
 
-    public MigrateSqlServerSqlDbSyncTaskOutputDatabaseLevelResponse(
-        Double appliedChanges,
-        Double cdcDeleteCounter,
-        Double cdcInsertCounter,
-        Double cdcUpdateCounter,
-        String databaseName,
-        String endedOn,
-        Double fullLoadCompletedTables,
-        Double fullLoadErroredTables,
-        Double fullLoadLoadingTables,
-        Double fullLoadQueuedTables,
-        String id,
-        Double incomingChanges,
-        Boolean initializationCompleted,
-        Double latency,
-        String migrationState,
-        String resultType,
-        String startedOn) {
-        this.appliedChanges = Objects.requireNonNull(appliedChanges, "expected parameter 'appliedChanges' to be non-null");
-        this.cdcDeleteCounter = Objects.requireNonNull(cdcDeleteCounter, "expected parameter 'cdcDeleteCounter' to be non-null");
-        this.cdcInsertCounter = Objects.requireNonNull(cdcInsertCounter, "expected parameter 'cdcInsertCounter' to be non-null");
-        this.cdcUpdateCounter = Objects.requireNonNull(cdcUpdateCounter, "expected parameter 'cdcUpdateCounter' to be non-null");
-        this.databaseName = Objects.requireNonNull(databaseName, "expected parameter 'databaseName' to be non-null");
-        this.endedOn = Objects.requireNonNull(endedOn, "expected parameter 'endedOn' to be non-null");
-        this.fullLoadCompletedTables = Objects.requireNonNull(fullLoadCompletedTables, "expected parameter 'fullLoadCompletedTables' to be non-null");
-        this.fullLoadErroredTables = Objects.requireNonNull(fullLoadErroredTables, "expected parameter 'fullLoadErroredTables' to be non-null");
-        this.fullLoadLoadingTables = Objects.requireNonNull(fullLoadLoadingTables, "expected parameter 'fullLoadLoadingTables' to be non-null");
-        this.fullLoadQueuedTables = Objects.requireNonNull(fullLoadQueuedTables, "expected parameter 'fullLoadQueuedTables' to be non-null");
-        this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
-        this.incomingChanges = Objects.requireNonNull(incomingChanges, "expected parameter 'incomingChanges' to be non-null");
-        this.initializationCompleted = Objects.requireNonNull(initializationCompleted, "expected parameter 'initializationCompleted' to be non-null");
-        this.latency = Objects.requireNonNull(latency, "expected parameter 'latency' to be non-null");
-        this.migrationState = Objects.requireNonNull(migrationState, "expected parameter 'migrationState' to be non-null");
-        this.resultType = Codegen.stringProp("resultType").arg(resultType).require();
-        this.startedOn = Objects.requireNonNull(startedOn, "expected parameter 'startedOn' to be non-null");
-    }
+    private MigrateSqlServerSqlDbSyncTaskOutputDatabaseLevelResponse() {}
 
-    private MigrateSqlServerSqlDbSyncTaskOutputDatabaseLevelResponse() {
-        this.appliedChanges = null;
-        this.cdcDeleteCounter = null;
-        this.cdcInsertCounter = null;
-        this.cdcUpdateCounter = null;
-        this.databaseName = null;
-        this.endedOn = null;
-        this.fullLoadCompletedTables = null;
-        this.fullLoadErroredTables = null;
-        this.fullLoadLoadingTables = null;
-        this.fullLoadQueuedTables = null;
-        this.id = null;
-        this.incomingChanges = null;
-        this.initializationCompleted = null;
-        this.latency = null;
-        this.migrationState = null;
-        this.resultType = null;
-        this.startedOn = null;
+    private MigrateSqlServerSqlDbSyncTaskOutputDatabaseLevelResponse(MigrateSqlServerSqlDbSyncTaskOutputDatabaseLevelResponse $) {
+        this.appliedChanges = $.appliedChanges;
+        this.cdcDeleteCounter = $.cdcDeleteCounter;
+        this.cdcInsertCounter = $.cdcInsertCounter;
+        this.cdcUpdateCounter = $.cdcUpdateCounter;
+        this.databaseName = $.databaseName;
+        this.endedOn = $.endedOn;
+        this.fullLoadCompletedTables = $.fullLoadCompletedTables;
+        this.fullLoadErroredTables = $.fullLoadErroredTables;
+        this.fullLoadLoadingTables = $.fullLoadLoadingTables;
+        this.fullLoadQueuedTables = $.fullLoadQueuedTables;
+        this.id = $.id;
+        this.incomingChanges = $.incomingChanges;
+        this.initializationCompleted = $.initializationCompleted;
+        this.latency = $.latency;
+        this.migrationState = $.migrationState;
+        this.resultType = $.resultType;
+        this.startedOn = $.startedOn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MigrateSqlServerSqlDbSyncTaskOutputDatabaseLevelResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Double appliedChanges;
-        private Double cdcDeleteCounter;
-        private Double cdcInsertCounter;
-        private Double cdcUpdateCounter;
-        private String databaseName;
-        private String endedOn;
-        private Double fullLoadCompletedTables;
-        private Double fullLoadErroredTables;
-        private Double fullLoadLoadingTables;
-        private Double fullLoadQueuedTables;
-        private String id;
-        private Double incomingChanges;
-        private Boolean initializationCompleted;
-        private Double latency;
-        private String migrationState;
-        private String resultType;
-        private String startedOn;
+        private MigrateSqlServerSqlDbSyncTaskOutputDatabaseLevelResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new MigrateSqlServerSqlDbSyncTaskOutputDatabaseLevelResponse();
         }
 
         public Builder(MigrateSqlServerSqlDbSyncTaskOutputDatabaseLevelResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.appliedChanges = defaults.appliedChanges;
-    	      this.cdcDeleteCounter = defaults.cdcDeleteCounter;
-    	      this.cdcInsertCounter = defaults.cdcInsertCounter;
-    	      this.cdcUpdateCounter = defaults.cdcUpdateCounter;
-    	      this.databaseName = defaults.databaseName;
-    	      this.endedOn = defaults.endedOn;
-    	      this.fullLoadCompletedTables = defaults.fullLoadCompletedTables;
-    	      this.fullLoadErroredTables = defaults.fullLoadErroredTables;
-    	      this.fullLoadLoadingTables = defaults.fullLoadLoadingTables;
-    	      this.fullLoadQueuedTables = defaults.fullLoadQueuedTables;
-    	      this.id = defaults.id;
-    	      this.incomingChanges = defaults.incomingChanges;
-    	      this.initializationCompleted = defaults.initializationCompleted;
-    	      this.latency = defaults.latency;
-    	      this.migrationState = defaults.migrationState;
-    	      this.resultType = defaults.resultType;
-    	      this.startedOn = defaults.startedOn;
+            $ = new MigrateSqlServerSqlDbSyncTaskOutputDatabaseLevelResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder appliedChanges(Double appliedChanges) {
-            this.appliedChanges = Objects.requireNonNull(appliedChanges);
+            $.appliedChanges = appliedChanges;
             return this;
         }
+
         public Builder cdcDeleteCounter(Double cdcDeleteCounter) {
-            this.cdcDeleteCounter = Objects.requireNonNull(cdcDeleteCounter);
+            $.cdcDeleteCounter = cdcDeleteCounter;
             return this;
         }
+
         public Builder cdcInsertCounter(Double cdcInsertCounter) {
-            this.cdcInsertCounter = Objects.requireNonNull(cdcInsertCounter);
+            $.cdcInsertCounter = cdcInsertCounter;
             return this;
         }
+
         public Builder cdcUpdateCounter(Double cdcUpdateCounter) {
-            this.cdcUpdateCounter = Objects.requireNonNull(cdcUpdateCounter);
+            $.cdcUpdateCounter = cdcUpdateCounter;
             return this;
         }
+
         public Builder databaseName(String databaseName) {
-            this.databaseName = Objects.requireNonNull(databaseName);
+            $.databaseName = databaseName;
             return this;
         }
+
         public Builder endedOn(String endedOn) {
-            this.endedOn = Objects.requireNonNull(endedOn);
+            $.endedOn = endedOn;
             return this;
         }
+
         public Builder fullLoadCompletedTables(Double fullLoadCompletedTables) {
-            this.fullLoadCompletedTables = Objects.requireNonNull(fullLoadCompletedTables);
+            $.fullLoadCompletedTables = fullLoadCompletedTables;
             return this;
         }
+
         public Builder fullLoadErroredTables(Double fullLoadErroredTables) {
-            this.fullLoadErroredTables = Objects.requireNonNull(fullLoadErroredTables);
+            $.fullLoadErroredTables = fullLoadErroredTables;
             return this;
         }
+
         public Builder fullLoadLoadingTables(Double fullLoadLoadingTables) {
-            this.fullLoadLoadingTables = Objects.requireNonNull(fullLoadLoadingTables);
+            $.fullLoadLoadingTables = fullLoadLoadingTables;
             return this;
         }
+
         public Builder fullLoadQueuedTables(Double fullLoadQueuedTables) {
-            this.fullLoadQueuedTables = Objects.requireNonNull(fullLoadQueuedTables);
+            $.fullLoadQueuedTables = fullLoadQueuedTables;
             return this;
         }
+
         public Builder id(String id) {
-            this.id = Objects.requireNonNull(id);
+            $.id = id;
             return this;
         }
+
         public Builder incomingChanges(Double incomingChanges) {
-            this.incomingChanges = Objects.requireNonNull(incomingChanges);
+            $.incomingChanges = incomingChanges;
             return this;
         }
+
         public Builder initializationCompleted(Boolean initializationCompleted) {
-            this.initializationCompleted = Objects.requireNonNull(initializationCompleted);
+            $.initializationCompleted = initializationCompleted;
             return this;
         }
+
         public Builder latency(Double latency) {
-            this.latency = Objects.requireNonNull(latency);
+            $.latency = latency;
             return this;
         }
+
         public Builder migrationState(String migrationState) {
-            this.migrationState = Objects.requireNonNull(migrationState);
+            $.migrationState = migrationState;
             return this;
         }
+
         public Builder resultType(String resultType) {
-            this.resultType = Objects.requireNonNull(resultType);
+            $.resultType = resultType;
             return this;
         }
+
         public Builder startedOn(String startedOn) {
-            this.startedOn = Objects.requireNonNull(startedOn);
+            $.startedOn = startedOn;
             return this;
-        }        public MigrateSqlServerSqlDbSyncTaskOutputDatabaseLevelResponse build() {
-            return new MigrateSqlServerSqlDbSyncTaskOutputDatabaseLevelResponse(appliedChanges, cdcDeleteCounter, cdcInsertCounter, cdcUpdateCounter, databaseName, endedOn, fullLoadCompletedTables, fullLoadErroredTables, fullLoadLoadingTables, fullLoadQueuedTables, id, incomingChanges, initializationCompleted, latency, migrationState, resultType, startedOn);
+        }
+
+        public MigrateSqlServerSqlDbSyncTaskOutputDatabaseLevelResponse build() {
+            $.appliedChanges = Objects.requireNonNull($.appliedChanges, "expected parameter 'appliedChanges' to be non-null");
+            $.cdcDeleteCounter = Objects.requireNonNull($.cdcDeleteCounter, "expected parameter 'cdcDeleteCounter' to be non-null");
+            $.cdcInsertCounter = Objects.requireNonNull($.cdcInsertCounter, "expected parameter 'cdcInsertCounter' to be non-null");
+            $.cdcUpdateCounter = Objects.requireNonNull($.cdcUpdateCounter, "expected parameter 'cdcUpdateCounter' to be non-null");
+            $.databaseName = Objects.requireNonNull($.databaseName, "expected parameter 'databaseName' to be non-null");
+            $.endedOn = Objects.requireNonNull($.endedOn, "expected parameter 'endedOn' to be non-null");
+            $.fullLoadCompletedTables = Objects.requireNonNull($.fullLoadCompletedTables, "expected parameter 'fullLoadCompletedTables' to be non-null");
+            $.fullLoadErroredTables = Objects.requireNonNull($.fullLoadErroredTables, "expected parameter 'fullLoadErroredTables' to be non-null");
+            $.fullLoadLoadingTables = Objects.requireNonNull($.fullLoadLoadingTables, "expected parameter 'fullLoadLoadingTables' to be non-null");
+            $.fullLoadQueuedTables = Objects.requireNonNull($.fullLoadQueuedTables, "expected parameter 'fullLoadQueuedTables' to be non-null");
+            $.id = Objects.requireNonNull($.id, "expected parameter 'id' to be non-null");
+            $.incomingChanges = Objects.requireNonNull($.incomingChanges, "expected parameter 'incomingChanges' to be non-null");
+            $.initializationCompleted = Objects.requireNonNull($.initializationCompleted, "expected parameter 'initializationCompleted' to be non-null");
+            $.latency = Objects.requireNonNull($.latency, "expected parameter 'latency' to be non-null");
+            $.migrationState = Objects.requireNonNull($.migrationState, "expected parameter 'migrationState' to be non-null");
+            $.resultType = Codegen.stringProp("resultType").arg($.resultType).require();
+            $.startedOn = Objects.requireNonNull($.startedOn, "expected parameter 'startedOn' to be non-null");
+            return $;
         }
     }
+
 }

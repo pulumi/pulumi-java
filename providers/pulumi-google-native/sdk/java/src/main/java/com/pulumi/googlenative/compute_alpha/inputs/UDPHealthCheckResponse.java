@@ -18,7 +18,7 @@ public final class UDPHealthCheckResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="port", required=true)
-      private final Integer port;
+    private Integer port;
 
     public Integer port() {
         return this.port;
@@ -29,7 +29,7 @@ public final class UDPHealthCheckResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="portName", required=true)
-      private final String portName;
+    private String portName;
 
     public String portName() {
         return this.portName;
@@ -40,7 +40,7 @@ public final class UDPHealthCheckResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="request", required=true)
-      private final String request;
+    private String request;
 
     public String request() {
         return this.request;
@@ -51,73 +51,66 @@ public final class UDPHealthCheckResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="response", required=true)
-      private final String response;
+    private String response;
 
     public String response() {
         return this.response;
     }
 
-    public UDPHealthCheckResponse(
-        Integer port,
-        String portName,
-        String request,
-        String response) {
-        this.port = Objects.requireNonNull(port, "expected parameter 'port' to be non-null");
-        this.portName = Objects.requireNonNull(portName, "expected parameter 'portName' to be non-null");
-        this.request = Objects.requireNonNull(request, "expected parameter 'request' to be non-null");
-        this.response = Objects.requireNonNull(response, "expected parameter 'response' to be non-null");
-    }
+    private UDPHealthCheckResponse() {}
 
-    private UDPHealthCheckResponse() {
-        this.port = null;
-        this.portName = null;
-        this.request = null;
-        this.response = null;
+    private UDPHealthCheckResponse(UDPHealthCheckResponse $) {
+        this.port = $.port;
+        this.portName = $.portName;
+        this.request = $.request;
+        this.response = $.response;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(UDPHealthCheckResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Integer port;
-        private String portName;
-        private String request;
-        private String response;
+        private UDPHealthCheckResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new UDPHealthCheckResponse();
         }
 
         public Builder(UDPHealthCheckResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.port = defaults.port;
-    	      this.portName = defaults.portName;
-    	      this.request = defaults.request;
-    	      this.response = defaults.response;
+            $ = new UDPHealthCheckResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder port(Integer port) {
-            this.port = Objects.requireNonNull(port);
+            $.port = port;
             return this;
         }
+
         public Builder portName(String portName) {
-            this.portName = Objects.requireNonNull(portName);
+            $.portName = portName;
             return this;
         }
+
         public Builder request(String request) {
-            this.request = Objects.requireNonNull(request);
+            $.request = request;
             return this;
         }
+
         public Builder response(String response) {
-            this.response = Objects.requireNonNull(response);
+            $.response = response;
             return this;
-        }        public UDPHealthCheckResponse build() {
-            return new UDPHealthCheckResponse(port, portName, request, response);
+        }
+
+        public UDPHealthCheckResponse build() {
+            $.port = Objects.requireNonNull($.port, "expected parameter 'port' to be non-null");
+            $.portName = Objects.requireNonNull($.portName, "expected parameter 'portName' to be non-null");
+            $.request = Objects.requireNonNull($.request, "expected parameter 'request' to be non-null");
+            $.response = Objects.requireNonNull($.response, "expected parameter 'response' to be non-null");
+            return $;
         }
     }
+
 }

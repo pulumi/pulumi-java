@@ -21,7 +21,7 @@ public final class DataLakeStoreAccountInformationResponse extends com.pulumi.re
      * 
      */
     @Import(name="id", required=true)
-      private final String id;
+    private String id;
 
     public String id() {
         return this.id;
@@ -32,7 +32,7 @@ public final class DataLakeStoreAccountInformationResponse extends com.pulumi.re
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -43,7 +43,7 @@ public final class DataLakeStoreAccountInformationResponse extends com.pulumi.re
      * 
      */
     @Import(name="suffix", required=true)
-      private final String suffix;
+    private String suffix;
 
     public String suffix() {
         return this.suffix;
@@ -54,73 +54,66 @@ public final class DataLakeStoreAccountInformationResponse extends com.pulumi.re
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
     }
 
-    public DataLakeStoreAccountInformationResponse(
-        String id,
-        String name,
-        String suffix,
-        String type) {
-        this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.suffix = Objects.requireNonNull(suffix, "expected parameter 'suffix' to be non-null");
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private DataLakeStoreAccountInformationResponse() {}
 
-    private DataLakeStoreAccountInformationResponse() {
-        this.id = null;
-        this.name = null;
-        this.suffix = null;
-        this.type = null;
+    private DataLakeStoreAccountInformationResponse(DataLakeStoreAccountInformationResponse $) {
+        this.id = $.id;
+        this.name = $.name;
+        this.suffix = $.suffix;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DataLakeStoreAccountInformationResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String id;
-        private String name;
-        private String suffix;
-        private String type;
+        private DataLakeStoreAccountInformationResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new DataLakeStoreAccountInformationResponse();
         }
 
         public Builder(DataLakeStoreAccountInformationResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.id = defaults.id;
-    	      this.name = defaults.name;
-    	      this.suffix = defaults.suffix;
-    	      this.type = defaults.type;
+            $ = new DataLakeStoreAccountInformationResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder id(String id) {
-            this.id = Objects.requireNonNull(id);
+            $.id = id;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder suffix(String suffix) {
-            this.suffix = Objects.requireNonNull(suffix);
+            $.suffix = suffix;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
-        }        public DataLakeStoreAccountInformationResponse build() {
-            return new DataLakeStoreAccountInformationResponse(id, name, suffix, type);
+        }
+
+        public DataLakeStoreAccountInformationResponse build() {
+            $.id = Objects.requireNonNull($.id, "expected parameter 'id' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.suffix = Objects.requireNonNull($.suffix, "expected parameter 'suffix' to be non-null");
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

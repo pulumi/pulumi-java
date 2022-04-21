@@ -24,7 +24,7 @@ public final class UrlRewriteActionResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -35,55 +35,52 @@ public final class UrlRewriteActionResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="parameters", required=true)
-      private final UrlRewriteActionParametersResponse parameters;
+    private UrlRewriteActionParametersResponse parameters;
 
     public UrlRewriteActionParametersResponse parameters() {
         return this.parameters;
     }
 
-    public UrlRewriteActionResponse(
-        String name,
-        UrlRewriteActionParametersResponse parameters) {
-        this.name = Codegen.stringProp("name").arg(name).require();
-        this.parameters = Objects.requireNonNull(parameters, "expected parameter 'parameters' to be non-null");
-    }
+    private UrlRewriteActionResponse() {}
 
-    private UrlRewriteActionResponse() {
-        this.name = null;
-        this.parameters = null;
+    private UrlRewriteActionResponse(UrlRewriteActionResponse $) {
+        this.name = $.name;
+        this.parameters = $.parameters;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(UrlRewriteActionResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String name;
-        private UrlRewriteActionParametersResponse parameters;
+        private UrlRewriteActionResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new UrlRewriteActionResponse();
         }
 
         public Builder(UrlRewriteActionResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.parameters = defaults.parameters;
+            $ = new UrlRewriteActionResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder parameters(UrlRewriteActionParametersResponse parameters) {
-            this.parameters = Objects.requireNonNull(parameters);
+            $.parameters = parameters;
             return this;
-        }        public UrlRewriteActionResponse build() {
-            return new UrlRewriteActionResponse(name, parameters);
+        }
+
+        public UrlRewriteActionResponse build() {
+            $.name = Codegen.stringProp("name").arg($.name).require();
+            $.parameters = Objects.requireNonNull($.parameters, "expected parameter 'parameters' to be non-null");
+            return $;
         }
     }
+
 }

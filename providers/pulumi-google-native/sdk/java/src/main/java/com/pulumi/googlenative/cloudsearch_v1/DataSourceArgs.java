@@ -5,12 +5,12 @@ package com.pulumi.googlenative.cloudsearch_v1;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.cloudsearch_v1.inputs.GSuitePrincipalArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,10 @@ public final class DataSourceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="disableModifications")
-      private final @Nullable Output<Boolean> disableModifications;
+    private @Nullable Output<Boolean> disableModifications;
 
-    public Output<Boolean> disableModifications() {
-        return this.disableModifications == null ? Codegen.empty() : this.disableModifications;
+    public Optional<Output<Boolean>> disableModifications() {
+        return Optional.ofNullable(this.disableModifications);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class DataSourceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="disableServing")
-      private final @Nullable Output<Boolean> disableServing;
+    private @Nullable Output<Boolean> disableServing;
 
-    public Output<Boolean> disableServing() {
-        return this.disableServing == null ? Codegen.empty() : this.disableServing;
+    public Optional<Output<Boolean>> disableServing() {
+        return Optional.ofNullable(this.disableServing);
     }
 
     /**
@@ -45,7 +45,7 @@ public final class DataSourceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="displayName", required=true)
-      private final Output<String> displayName;
+    private Output<String> displayName;
 
     public Output<String> displayName() {
         return this.displayName;
@@ -56,10 +56,10 @@ public final class DataSourceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="indexingServiceAccounts")
-      private final @Nullable Output<List<String>> indexingServiceAccounts;
+    private @Nullable Output<List<String>> indexingServiceAccounts;
 
-    public Output<List<String>> indexingServiceAccounts() {
-        return this.indexingServiceAccounts == null ? Codegen.empty() : this.indexingServiceAccounts;
+    public Optional<Output<List<String>>> indexingServiceAccounts() {
+        return Optional.ofNullable(this.indexingServiceAccounts);
     }
 
     /**
@@ -67,10 +67,10 @@ public final class DataSourceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="itemsVisibility")
-      private final @Nullable Output<List<GSuitePrincipalArgs>> itemsVisibility;
+    private @Nullable Output<List<GSuitePrincipalArgs>> itemsVisibility;
 
-    public Output<List<GSuitePrincipalArgs>> itemsVisibility() {
-        return this.itemsVisibility == null ? Codegen.empty() : this.itemsVisibility;
+    public Optional<Output<List<GSuitePrincipalArgs>>> itemsVisibility() {
+        return Optional.ofNullable(this.itemsVisibility);
     }
 
     /**
@@ -78,10 +78,10 @@ public final class DataSourceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -89,10 +89,10 @@ public final class DataSourceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="operationIds")
-      private final @Nullable Output<List<String>> operationIds;
+    private @Nullable Output<List<String>> operationIds;
 
-    public Output<List<String>> operationIds() {
-        return this.operationIds == null ? Codegen.empty() : this.operationIds;
+    public Optional<Output<List<String>>> operationIds() {
+        return Optional.ofNullable(this.operationIds);
     }
 
     /**
@@ -100,10 +100,10 @@ public final class DataSourceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="returnThumbnailUrls")
-      private final @Nullable Output<Boolean> returnThumbnailUrls;
+    private @Nullable Output<Boolean> returnThumbnailUrls;
 
-    public Output<Boolean> returnThumbnailUrls() {
-        return this.returnThumbnailUrls == null ? Codegen.empty() : this.returnThumbnailUrls;
+    public Optional<Output<Boolean>> returnThumbnailUrls() {
+        return Optional.ofNullable(this.returnThumbnailUrls);
     }
 
     /**
@@ -111,163 +111,141 @@ public final class DataSourceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="shortName")
-      private final @Nullable Output<String> shortName;
+    private @Nullable Output<String> shortName;
 
-    public Output<String> shortName() {
-        return this.shortName == null ? Codegen.empty() : this.shortName;
+    public Optional<Output<String>> shortName() {
+        return Optional.ofNullable(this.shortName);
     }
 
-    public DataSourceArgs(
-        @Nullable Output<Boolean> disableModifications,
-        @Nullable Output<Boolean> disableServing,
-        Output<String> displayName,
-        @Nullable Output<List<String>> indexingServiceAccounts,
-        @Nullable Output<List<GSuitePrincipalArgs>> itemsVisibility,
-        @Nullable Output<String> name,
-        @Nullable Output<List<String>> operationIds,
-        @Nullable Output<Boolean> returnThumbnailUrls,
-        @Nullable Output<String> shortName) {
-        this.disableModifications = disableModifications;
-        this.disableServing = disableServing;
-        this.displayName = Objects.requireNonNull(displayName, "expected parameter 'displayName' to be non-null");
-        this.indexingServiceAccounts = indexingServiceAccounts;
-        this.itemsVisibility = itemsVisibility;
-        this.name = name;
-        this.operationIds = operationIds;
-        this.returnThumbnailUrls = returnThumbnailUrls;
-        this.shortName = shortName;
-    }
+    private DataSourceArgs() {}
 
-    private DataSourceArgs() {
-        this.disableModifications = Codegen.empty();
-        this.disableServing = Codegen.empty();
-        this.displayName = Codegen.empty();
-        this.indexingServiceAccounts = Codegen.empty();
-        this.itemsVisibility = Codegen.empty();
-        this.name = Codegen.empty();
-        this.operationIds = Codegen.empty();
-        this.returnThumbnailUrls = Codegen.empty();
-        this.shortName = Codegen.empty();
+    private DataSourceArgs(DataSourceArgs $) {
+        this.disableModifications = $.disableModifications;
+        this.disableServing = $.disableServing;
+        this.displayName = $.displayName;
+        this.indexingServiceAccounts = $.indexingServiceAccounts;
+        this.itemsVisibility = $.itemsVisibility;
+        this.name = $.name;
+        this.operationIds = $.operationIds;
+        this.returnThumbnailUrls = $.returnThumbnailUrls;
+        this.shortName = $.shortName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DataSourceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> disableModifications;
-        private @Nullable Output<Boolean> disableServing;
-        private Output<String> displayName;
-        private @Nullable Output<List<String>> indexingServiceAccounts;
-        private @Nullable Output<List<GSuitePrincipalArgs>> itemsVisibility;
-        private @Nullable Output<String> name;
-        private @Nullable Output<List<String>> operationIds;
-        private @Nullable Output<Boolean> returnThumbnailUrls;
-        private @Nullable Output<String> shortName;
+        private DataSourceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DataSourceArgs();
         }
 
         public Builder(DataSourceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.disableModifications = defaults.disableModifications;
-    	      this.disableServing = defaults.disableServing;
-    	      this.displayName = defaults.displayName;
-    	      this.indexingServiceAccounts = defaults.indexingServiceAccounts;
-    	      this.itemsVisibility = defaults.itemsVisibility;
-    	      this.name = defaults.name;
-    	      this.operationIds = defaults.operationIds;
-    	      this.returnThumbnailUrls = defaults.returnThumbnailUrls;
-    	      this.shortName = defaults.shortName;
+            $ = new DataSourceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder disableModifications(@Nullable Output<Boolean> disableModifications) {
-            this.disableModifications = disableModifications;
+            $.disableModifications = disableModifications;
             return this;
         }
-        public Builder disableModifications(@Nullable Boolean disableModifications) {
-            this.disableModifications = Codegen.ofNullable(disableModifications);
-            return this;
+
+        public Builder disableModifications(Boolean disableModifications) {
+            return disableModifications(Output.of(disableModifications));
         }
+
         public Builder disableServing(@Nullable Output<Boolean> disableServing) {
-            this.disableServing = disableServing;
+            $.disableServing = disableServing;
             return this;
         }
-        public Builder disableServing(@Nullable Boolean disableServing) {
-            this.disableServing = Codegen.ofNullable(disableServing);
-            return this;
+
+        public Builder disableServing(Boolean disableServing) {
+            return disableServing(Output.of(disableServing));
         }
+
         public Builder displayName(Output<String> displayName) {
-            this.displayName = Objects.requireNonNull(displayName);
+            $.displayName = displayName;
             return this;
         }
+
         public Builder displayName(String displayName) {
-            this.displayName = Output.of(Objects.requireNonNull(displayName));
-            return this;
+            return displayName(Output.of(displayName));
         }
+
         public Builder indexingServiceAccounts(@Nullable Output<List<String>> indexingServiceAccounts) {
-            this.indexingServiceAccounts = indexingServiceAccounts;
+            $.indexingServiceAccounts = indexingServiceAccounts;
             return this;
         }
-        public Builder indexingServiceAccounts(@Nullable List<String> indexingServiceAccounts) {
-            this.indexingServiceAccounts = Codegen.ofNullable(indexingServiceAccounts);
-            return this;
+
+        public Builder indexingServiceAccounts(List<String> indexingServiceAccounts) {
+            return indexingServiceAccounts(Output.of(indexingServiceAccounts));
         }
+
         public Builder indexingServiceAccounts(String... indexingServiceAccounts) {
             return indexingServiceAccounts(List.of(indexingServiceAccounts));
         }
+
         public Builder itemsVisibility(@Nullable Output<List<GSuitePrincipalArgs>> itemsVisibility) {
-            this.itemsVisibility = itemsVisibility;
+            $.itemsVisibility = itemsVisibility;
             return this;
         }
-        public Builder itemsVisibility(@Nullable List<GSuitePrincipalArgs> itemsVisibility) {
-            this.itemsVisibility = Codegen.ofNullable(itemsVisibility);
-            return this;
+
+        public Builder itemsVisibility(List<GSuitePrincipalArgs> itemsVisibility) {
+            return itemsVisibility(Output.of(itemsVisibility));
         }
+
         public Builder itemsVisibility(GSuitePrincipalArgs... itemsVisibility) {
             return itemsVisibility(List.of(itemsVisibility));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder operationIds(@Nullable Output<List<String>> operationIds) {
-            this.operationIds = operationIds;
+            $.operationIds = operationIds;
             return this;
         }
-        public Builder operationIds(@Nullable List<String> operationIds) {
-            this.operationIds = Codegen.ofNullable(operationIds);
-            return this;
+
+        public Builder operationIds(List<String> operationIds) {
+            return operationIds(Output.of(operationIds));
         }
+
         public Builder operationIds(String... operationIds) {
             return operationIds(List.of(operationIds));
         }
+
         public Builder returnThumbnailUrls(@Nullable Output<Boolean> returnThumbnailUrls) {
-            this.returnThumbnailUrls = returnThumbnailUrls;
+            $.returnThumbnailUrls = returnThumbnailUrls;
             return this;
         }
-        public Builder returnThumbnailUrls(@Nullable Boolean returnThumbnailUrls) {
-            this.returnThumbnailUrls = Codegen.ofNullable(returnThumbnailUrls);
-            return this;
+
+        public Builder returnThumbnailUrls(Boolean returnThumbnailUrls) {
+            return returnThumbnailUrls(Output.of(returnThumbnailUrls));
         }
+
         public Builder shortName(@Nullable Output<String> shortName) {
-            this.shortName = shortName;
+            $.shortName = shortName;
             return this;
         }
-        public Builder shortName(@Nullable String shortName) {
-            this.shortName = Codegen.ofNullable(shortName);
-            return this;
-        }        public DataSourceArgs build() {
-            return new DataSourceArgs(disableModifications, disableServing, displayName, indexingServiceAccounts, itemsVisibility, name, operationIds, returnThumbnailUrls, shortName);
+
+        public Builder shortName(String shortName) {
+            return shortName(Output.of(shortName));
+        }
+
+        public DataSourceArgs build() {
+            $.displayName = Objects.requireNonNull($.displayName, "expected parameter 'displayName' to be non-null");
+            return $;
         }
     }
+
 }

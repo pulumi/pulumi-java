@@ -20,14 +20,14 @@ public final class ManagedZonePrivateVisibilityConfigResponse extends com.pulumi
      * 
      */
     @Import(name="gkeClusters", required=true)
-      private final List<ManagedZonePrivateVisibilityConfigGKEClusterResponse> gkeClusters;
+    private List<ManagedZonePrivateVisibilityConfigGKEClusterResponse> gkeClusters;
 
     public List<ManagedZonePrivateVisibilityConfigGKEClusterResponse> gkeClusters() {
         return this.gkeClusters;
     }
 
     @Import(name="kind", required=true)
-      private final String kind;
+    private String kind;
 
     public String kind() {
         return this.kind;
@@ -38,70 +38,67 @@ public final class ManagedZonePrivateVisibilityConfigResponse extends com.pulumi
      * 
      */
     @Import(name="networks", required=true)
-      private final List<ManagedZonePrivateVisibilityConfigNetworkResponse> networks;
+    private List<ManagedZonePrivateVisibilityConfigNetworkResponse> networks;
 
     public List<ManagedZonePrivateVisibilityConfigNetworkResponse> networks() {
         return this.networks;
     }
 
-    public ManagedZonePrivateVisibilityConfigResponse(
-        List<ManagedZonePrivateVisibilityConfigGKEClusterResponse> gkeClusters,
-        String kind,
-        List<ManagedZonePrivateVisibilityConfigNetworkResponse> networks) {
-        this.gkeClusters = Objects.requireNonNull(gkeClusters, "expected parameter 'gkeClusters' to be non-null");
-        this.kind = Objects.requireNonNull(kind, "expected parameter 'kind' to be non-null");
-        this.networks = Objects.requireNonNull(networks, "expected parameter 'networks' to be non-null");
-    }
+    private ManagedZonePrivateVisibilityConfigResponse() {}
 
-    private ManagedZonePrivateVisibilityConfigResponse() {
-        this.gkeClusters = List.of();
-        this.kind = null;
-        this.networks = List.of();
+    private ManagedZonePrivateVisibilityConfigResponse(ManagedZonePrivateVisibilityConfigResponse $) {
+        this.gkeClusters = $.gkeClusters;
+        this.kind = $.kind;
+        this.networks = $.networks;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ManagedZonePrivateVisibilityConfigResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<ManagedZonePrivateVisibilityConfigGKEClusterResponse> gkeClusters;
-        private String kind;
-        private List<ManagedZonePrivateVisibilityConfigNetworkResponse> networks;
+        private ManagedZonePrivateVisibilityConfigResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ManagedZonePrivateVisibilityConfigResponse();
         }
 
         public Builder(ManagedZonePrivateVisibilityConfigResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.gkeClusters = defaults.gkeClusters;
-    	      this.kind = defaults.kind;
-    	      this.networks = defaults.networks;
+            $ = new ManagedZonePrivateVisibilityConfigResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder gkeClusters(List<ManagedZonePrivateVisibilityConfigGKEClusterResponse> gkeClusters) {
-            this.gkeClusters = Objects.requireNonNull(gkeClusters);
+            $.gkeClusters = gkeClusters;
             return this;
         }
+
         public Builder gkeClusters(ManagedZonePrivateVisibilityConfigGKEClusterResponse... gkeClusters) {
             return gkeClusters(List.of(gkeClusters));
         }
+
         public Builder kind(String kind) {
-            this.kind = Objects.requireNonNull(kind);
+            $.kind = kind;
             return this;
         }
+
         public Builder networks(List<ManagedZonePrivateVisibilityConfigNetworkResponse> networks) {
-            this.networks = Objects.requireNonNull(networks);
+            $.networks = networks;
             return this;
         }
+
         public Builder networks(ManagedZonePrivateVisibilityConfigNetworkResponse... networks) {
             return networks(List.of(networks));
-        }        public ManagedZonePrivateVisibilityConfigResponse build() {
-            return new ManagedZonePrivateVisibilityConfigResponse(gkeClusters, kind, networks);
+        }
+
+        public ManagedZonePrivateVisibilityConfigResponse build() {
+            $.gkeClusters = Objects.requireNonNull($.gkeClusters, "expected parameter 'gkeClusters' to be non-null");
+            $.kind = Objects.requireNonNull($.kind, "expected parameter 'kind' to be non-null");
+            $.networks = Objects.requireNonNull($.networks, "expected parameter 'networks' to be non-null");
+            return $;
         }
     }
+
 }

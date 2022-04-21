@@ -23,10 +23,10 @@ public final class ApplicationClientDetailsResponse extends com.pulumi.resources
      * 
      */
     @Import(name="applicationId")
-      private final @Nullable String applicationId;
+    private @Nullable String applicationId;
 
     public Optional<String> applicationId() {
-        return this.applicationId == null ? Optional.empty() : Optional.ofNullable(this.applicationId);
+        return Optional.ofNullable(this.applicationId);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class ApplicationClientDetailsResponse extends com.pulumi.resources
      * 
      */
     @Import(name="oid")
-      private final @Nullable String oid;
+    private @Nullable String oid;
 
     public Optional<String> oid() {
-        return this.oid == null ? Optional.empty() : Optional.ofNullable(this.oid);
+        return Optional.ofNullable(this.oid);
     }
 
     /**
@@ -45,64 +45,56 @@ public final class ApplicationClientDetailsResponse extends com.pulumi.resources
      * 
      */
     @Import(name="puid")
-      private final @Nullable String puid;
+    private @Nullable String puid;
 
     public Optional<String> puid() {
-        return this.puid == null ? Optional.empty() : Optional.ofNullable(this.puid);
+        return Optional.ofNullable(this.puid);
     }
 
-    public ApplicationClientDetailsResponse(
-        @Nullable String applicationId,
-        @Nullable String oid,
-        @Nullable String puid) {
-        this.applicationId = applicationId;
-        this.oid = oid;
-        this.puid = puid;
-    }
+    private ApplicationClientDetailsResponse() {}
 
-    private ApplicationClientDetailsResponse() {
-        this.applicationId = null;
-        this.oid = null;
-        this.puid = null;
+    private ApplicationClientDetailsResponse(ApplicationClientDetailsResponse $) {
+        this.applicationId = $.applicationId;
+        this.oid = $.oid;
+        this.puid = $.puid;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ApplicationClientDetailsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String applicationId;
-        private @Nullable String oid;
-        private @Nullable String puid;
+        private ApplicationClientDetailsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ApplicationClientDetailsResponse();
         }
 
         public Builder(ApplicationClientDetailsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.applicationId = defaults.applicationId;
-    	      this.oid = defaults.oid;
-    	      this.puid = defaults.puid;
+            $ = new ApplicationClientDetailsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder applicationId(@Nullable String applicationId) {
-            this.applicationId = applicationId;
+            $.applicationId = applicationId;
             return this;
         }
+
         public Builder oid(@Nullable String oid) {
-            this.oid = oid;
+            $.oid = oid;
             return this;
         }
+
         public Builder puid(@Nullable String puid) {
-            this.puid = puid;
+            $.puid = puid;
             return this;
-        }        public ApplicationClientDetailsResponse build() {
-            return new ApplicationClientDetailsResponse(applicationId, oid, puid);
+        }
+
+        public ApplicationClientDetailsResponse build() {
+            return $;
         }
     }
+
 }

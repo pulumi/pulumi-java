@@ -7,11 +7,11 @@ import com.pulumi.aws.ecr.inputs.RepositoryEncryptionConfigurationGetArgs;
 import com.pulumi.aws.ecr.inputs.RepositoryImageScanningConfigurationGetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class RepositoryState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="arn")
-      private final @Nullable Output<String> arn;
+    private @Nullable Output<String> arn;
 
-    public Output<String> arn() {
-        return this.arn == null ? Codegen.empty() : this.arn;
+    public Optional<Output<String>> arn() {
+        return Optional.ofNullable(this.arn);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class RepositoryState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="encryptionConfigurations")
-      private final @Nullable Output<List<RepositoryEncryptionConfigurationGetArgs>> encryptionConfigurations;
+    private @Nullable Output<List<RepositoryEncryptionConfigurationGetArgs>> encryptionConfigurations;
 
-    public Output<List<RepositoryEncryptionConfigurationGetArgs>> encryptionConfigurations() {
-        return this.encryptionConfigurations == null ? Codegen.empty() : this.encryptionConfigurations;
+    public Optional<Output<List<RepositoryEncryptionConfigurationGetArgs>>> encryptionConfigurations() {
+        return Optional.ofNullable(this.encryptionConfigurations);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class RepositoryState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="imageScanningConfiguration")
-      private final @Nullable Output<RepositoryImageScanningConfigurationGetArgs> imageScanningConfiguration;
+    private @Nullable Output<RepositoryImageScanningConfigurationGetArgs> imageScanningConfiguration;
 
-    public Output<RepositoryImageScanningConfigurationGetArgs> imageScanningConfiguration() {
-        return this.imageScanningConfiguration == null ? Codegen.empty() : this.imageScanningConfiguration;
+    public Optional<Output<RepositoryImageScanningConfigurationGetArgs>> imageScanningConfiguration() {
+        return Optional.ofNullable(this.imageScanningConfiguration);
     }
 
     /**
@@ -57,10 +57,10 @@ public final class RepositoryState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="imageTagMutability")
-      private final @Nullable Output<String> imageTagMutability;
+    private @Nullable Output<String> imageTagMutability;
 
-    public Output<String> imageTagMutability() {
-        return this.imageTagMutability == null ? Codegen.empty() : this.imageTagMutability;
+    public Optional<Output<String>> imageTagMutability() {
+        return Optional.ofNullable(this.imageTagMutability);
     }
 
     /**
@@ -68,10 +68,10 @@ public final class RepositoryState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -79,10 +79,10 @@ public final class RepositoryState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="registryId")
-      private final @Nullable Output<String> registryId;
+    private @Nullable Output<String> registryId;
 
-    public Output<String> registryId() {
-        return this.registryId == null ? Codegen.empty() : this.registryId;
+    public Optional<Output<String>> registryId() {
+        return Optional.ofNullable(this.registryId);
     }
 
     /**
@@ -90,10 +90,10 @@ public final class RepositoryState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="repositoryUrl")
-      private final @Nullable Output<String> repositoryUrl;
+    private @Nullable Output<String> repositoryUrl;
 
-    public Output<String> repositoryUrl() {
-        return this.repositoryUrl == null ? Codegen.empty() : this.repositoryUrl;
+    public Optional<Output<String>> repositoryUrl() {
+        return Optional.ofNullable(this.repositoryUrl);
     }
 
     /**
@@ -101,10 +101,10 @@ public final class RepositoryState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -112,157 +112,132 @@ public final class RepositoryState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tagsAll")
-      private final @Nullable Output<Map<String,String>> tagsAll;
+    private @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> tagsAll() {
-        return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
+    public Optional<Output<Map<String,String>>> tagsAll() {
+        return Optional.ofNullable(this.tagsAll);
     }
 
-    public RepositoryState(
-        @Nullable Output<String> arn,
-        @Nullable Output<List<RepositoryEncryptionConfigurationGetArgs>> encryptionConfigurations,
-        @Nullable Output<RepositoryImageScanningConfigurationGetArgs> imageScanningConfiguration,
-        @Nullable Output<String> imageTagMutability,
-        @Nullable Output<String> name,
-        @Nullable Output<String> registryId,
-        @Nullable Output<String> repositoryUrl,
-        @Nullable Output<Map<String,String>> tags,
-        @Nullable Output<Map<String,String>> tagsAll) {
-        this.arn = arn;
-        this.encryptionConfigurations = encryptionConfigurations;
-        this.imageScanningConfiguration = imageScanningConfiguration;
-        this.imageTagMutability = imageTagMutability;
-        this.name = name;
-        this.registryId = registryId;
-        this.repositoryUrl = repositoryUrl;
-        this.tags = tags;
-        this.tagsAll = tagsAll;
-    }
+    private RepositoryState() {}
 
-    private RepositoryState() {
-        this.arn = Codegen.empty();
-        this.encryptionConfigurations = Codegen.empty();
-        this.imageScanningConfiguration = Codegen.empty();
-        this.imageTagMutability = Codegen.empty();
-        this.name = Codegen.empty();
-        this.registryId = Codegen.empty();
-        this.repositoryUrl = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.tagsAll = Codegen.empty();
+    private RepositoryState(RepositoryState $) {
+        this.arn = $.arn;
+        this.encryptionConfigurations = $.encryptionConfigurations;
+        this.imageScanningConfiguration = $.imageScanningConfiguration;
+        this.imageTagMutability = $.imageTagMutability;
+        this.name = $.name;
+        this.registryId = $.registryId;
+        this.repositoryUrl = $.repositoryUrl;
+        this.tags = $.tags;
+        this.tagsAll = $.tagsAll;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RepositoryState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> arn;
-        private @Nullable Output<List<RepositoryEncryptionConfigurationGetArgs>> encryptionConfigurations;
-        private @Nullable Output<RepositoryImageScanningConfigurationGetArgs> imageScanningConfiguration;
-        private @Nullable Output<String> imageTagMutability;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> registryId;
-        private @Nullable Output<String> repositoryUrl;
-        private @Nullable Output<Map<String,String>> tags;
-        private @Nullable Output<Map<String,String>> tagsAll;
+        private RepositoryState $;
 
         public Builder() {
-    	      // Empty
+            $ = new RepositoryState();
         }
 
         public Builder(RepositoryState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.arn = defaults.arn;
-    	      this.encryptionConfigurations = defaults.encryptionConfigurations;
-    	      this.imageScanningConfiguration = defaults.imageScanningConfiguration;
-    	      this.imageTagMutability = defaults.imageTagMutability;
-    	      this.name = defaults.name;
-    	      this.registryId = defaults.registryId;
-    	      this.repositoryUrl = defaults.repositoryUrl;
-    	      this.tags = defaults.tags;
-    	      this.tagsAll = defaults.tagsAll;
+            $ = new RepositoryState(Objects.requireNonNull(defaults));
         }
 
         public Builder arn(@Nullable Output<String> arn) {
-            this.arn = arn;
+            $.arn = arn;
             return this;
         }
-        public Builder arn(@Nullable String arn) {
-            this.arn = Codegen.ofNullable(arn);
-            return this;
+
+        public Builder arn(String arn) {
+            return arn(Output.of(arn));
         }
+
         public Builder encryptionConfigurations(@Nullable Output<List<RepositoryEncryptionConfigurationGetArgs>> encryptionConfigurations) {
-            this.encryptionConfigurations = encryptionConfigurations;
+            $.encryptionConfigurations = encryptionConfigurations;
             return this;
         }
-        public Builder encryptionConfigurations(@Nullable List<RepositoryEncryptionConfigurationGetArgs> encryptionConfigurations) {
-            this.encryptionConfigurations = Codegen.ofNullable(encryptionConfigurations);
-            return this;
+
+        public Builder encryptionConfigurations(List<RepositoryEncryptionConfigurationGetArgs> encryptionConfigurations) {
+            return encryptionConfigurations(Output.of(encryptionConfigurations));
         }
+
         public Builder encryptionConfigurations(RepositoryEncryptionConfigurationGetArgs... encryptionConfigurations) {
             return encryptionConfigurations(List.of(encryptionConfigurations));
         }
+
         public Builder imageScanningConfiguration(@Nullable Output<RepositoryImageScanningConfigurationGetArgs> imageScanningConfiguration) {
-            this.imageScanningConfiguration = imageScanningConfiguration;
+            $.imageScanningConfiguration = imageScanningConfiguration;
             return this;
         }
-        public Builder imageScanningConfiguration(@Nullable RepositoryImageScanningConfigurationGetArgs imageScanningConfiguration) {
-            this.imageScanningConfiguration = Codegen.ofNullable(imageScanningConfiguration);
-            return this;
+
+        public Builder imageScanningConfiguration(RepositoryImageScanningConfigurationGetArgs imageScanningConfiguration) {
+            return imageScanningConfiguration(Output.of(imageScanningConfiguration));
         }
+
         public Builder imageTagMutability(@Nullable Output<String> imageTagMutability) {
-            this.imageTagMutability = imageTagMutability;
+            $.imageTagMutability = imageTagMutability;
             return this;
         }
-        public Builder imageTagMutability(@Nullable String imageTagMutability) {
-            this.imageTagMutability = Codegen.ofNullable(imageTagMutability);
-            return this;
+
+        public Builder imageTagMutability(String imageTagMutability) {
+            return imageTagMutability(Output.of(imageTagMutability));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder registryId(@Nullable Output<String> registryId) {
-            this.registryId = registryId;
+            $.registryId = registryId;
             return this;
         }
-        public Builder registryId(@Nullable String registryId) {
-            this.registryId = Codegen.ofNullable(registryId);
-            return this;
+
+        public Builder registryId(String registryId) {
+            return registryId(Output.of(registryId));
         }
+
         public Builder repositoryUrl(@Nullable Output<String> repositoryUrl) {
-            this.repositoryUrl = repositoryUrl;
+            $.repositoryUrl = repositoryUrl;
             return this;
         }
-        public Builder repositoryUrl(@Nullable String repositoryUrl) {
-            this.repositoryUrl = Codegen.ofNullable(repositoryUrl);
-            return this;
+
+        public Builder repositoryUrl(String repositoryUrl) {
+            return repositoryUrl(Output.of(repositoryUrl));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
-            this.tagsAll = tagsAll;
+            $.tagsAll = tagsAll;
             return this;
         }
-        public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Codegen.ofNullable(tagsAll);
-            return this;
-        }        public RepositoryState build() {
-            return new RepositoryState(arn, encryptionConfigurations, imageScanningConfiguration, imageTagMutability, name, registryId, repositoryUrl, tags, tagsAll);
+
+        public Builder tagsAll(Map<String,String> tagsAll) {
+            return tagsAll(Output.of(tagsAll));
+        }
+
+        public RepositoryState build() {
+            return $;
         }
     }
+
 }

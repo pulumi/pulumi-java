@@ -23,7 +23,7 @@ public final class GooglePrivacyDlpV2HotwordRuleResponse extends com.pulumi.reso
      * 
      */
     @Import(name="hotwordRegex", required=true)
-      private final GooglePrivacyDlpV2RegexResponse hotwordRegex;
+    private GooglePrivacyDlpV2RegexResponse hotwordRegex;
 
     public GooglePrivacyDlpV2RegexResponse hotwordRegex() {
         return this.hotwordRegex;
@@ -34,7 +34,7 @@ public final class GooglePrivacyDlpV2HotwordRuleResponse extends com.pulumi.reso
      * 
      */
     @Import(name="likelihoodAdjustment", required=true)
-      private final GooglePrivacyDlpV2LikelihoodAdjustmentResponse likelihoodAdjustment;
+    private GooglePrivacyDlpV2LikelihoodAdjustmentResponse likelihoodAdjustment;
 
     public GooglePrivacyDlpV2LikelihoodAdjustmentResponse likelihoodAdjustment() {
         return this.likelihoodAdjustment;
@@ -45,64 +45,59 @@ public final class GooglePrivacyDlpV2HotwordRuleResponse extends com.pulumi.reso
      * 
      */
     @Import(name="proximity", required=true)
-      private final GooglePrivacyDlpV2ProximityResponse proximity;
+    private GooglePrivacyDlpV2ProximityResponse proximity;
 
     public GooglePrivacyDlpV2ProximityResponse proximity() {
         return this.proximity;
     }
 
-    public GooglePrivacyDlpV2HotwordRuleResponse(
-        GooglePrivacyDlpV2RegexResponse hotwordRegex,
-        GooglePrivacyDlpV2LikelihoodAdjustmentResponse likelihoodAdjustment,
-        GooglePrivacyDlpV2ProximityResponse proximity) {
-        this.hotwordRegex = Objects.requireNonNull(hotwordRegex, "expected parameter 'hotwordRegex' to be non-null");
-        this.likelihoodAdjustment = Objects.requireNonNull(likelihoodAdjustment, "expected parameter 'likelihoodAdjustment' to be non-null");
-        this.proximity = Objects.requireNonNull(proximity, "expected parameter 'proximity' to be non-null");
-    }
+    private GooglePrivacyDlpV2HotwordRuleResponse() {}
 
-    private GooglePrivacyDlpV2HotwordRuleResponse() {
-        this.hotwordRegex = null;
-        this.likelihoodAdjustment = null;
-        this.proximity = null;
+    private GooglePrivacyDlpV2HotwordRuleResponse(GooglePrivacyDlpV2HotwordRuleResponse $) {
+        this.hotwordRegex = $.hotwordRegex;
+        this.likelihoodAdjustment = $.likelihoodAdjustment;
+        this.proximity = $.proximity;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GooglePrivacyDlpV2HotwordRuleResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private GooglePrivacyDlpV2RegexResponse hotwordRegex;
-        private GooglePrivacyDlpV2LikelihoodAdjustmentResponse likelihoodAdjustment;
-        private GooglePrivacyDlpV2ProximityResponse proximity;
+        private GooglePrivacyDlpV2HotwordRuleResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GooglePrivacyDlpV2HotwordRuleResponse();
         }
 
         public Builder(GooglePrivacyDlpV2HotwordRuleResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.hotwordRegex = defaults.hotwordRegex;
-    	      this.likelihoodAdjustment = defaults.likelihoodAdjustment;
-    	      this.proximity = defaults.proximity;
+            $ = new GooglePrivacyDlpV2HotwordRuleResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder hotwordRegex(GooglePrivacyDlpV2RegexResponse hotwordRegex) {
-            this.hotwordRegex = Objects.requireNonNull(hotwordRegex);
+            $.hotwordRegex = hotwordRegex;
             return this;
         }
+
         public Builder likelihoodAdjustment(GooglePrivacyDlpV2LikelihoodAdjustmentResponse likelihoodAdjustment) {
-            this.likelihoodAdjustment = Objects.requireNonNull(likelihoodAdjustment);
+            $.likelihoodAdjustment = likelihoodAdjustment;
             return this;
         }
+
         public Builder proximity(GooglePrivacyDlpV2ProximityResponse proximity) {
-            this.proximity = Objects.requireNonNull(proximity);
+            $.proximity = proximity;
             return this;
-        }        public GooglePrivacyDlpV2HotwordRuleResponse build() {
-            return new GooglePrivacyDlpV2HotwordRuleResponse(hotwordRegex, likelihoodAdjustment, proximity);
+        }
+
+        public GooglePrivacyDlpV2HotwordRuleResponse build() {
+            $.hotwordRegex = Objects.requireNonNull($.hotwordRegex, "expected parameter 'hotwordRegex' to be non-null");
+            $.likelihoodAdjustment = Objects.requireNonNull($.likelihoodAdjustment, "expected parameter 'likelihoodAdjustment' to be non-null");
+            $.proximity = Objects.requireNonNull($.proximity, "expected parameter 'proximity' to be non-null");
+            return $;
         }
     }
+
 }

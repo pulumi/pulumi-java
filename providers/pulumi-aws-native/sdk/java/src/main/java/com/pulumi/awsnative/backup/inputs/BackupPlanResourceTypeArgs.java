@@ -7,10 +7,10 @@ import com.pulumi.awsnative.backup.inputs.BackupPlanAdvancedBackupSettingResourc
 import com.pulumi.awsnative.backup.inputs.BackupPlanBackupRuleResourceTypeArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -19,96 +19,92 @@ public final class BackupPlanResourceTypeArgs extends com.pulumi.resources.Resou
     public static final BackupPlanResourceTypeArgs Empty = new BackupPlanResourceTypeArgs();
 
     @Import(name="advancedBackupSettings")
-      private final @Nullable Output<List<BackupPlanAdvancedBackupSettingResourceTypeArgs>> advancedBackupSettings;
+    private @Nullable Output<List<BackupPlanAdvancedBackupSettingResourceTypeArgs>> advancedBackupSettings;
 
-    public Output<List<BackupPlanAdvancedBackupSettingResourceTypeArgs>> advancedBackupSettings() {
-        return this.advancedBackupSettings == null ? Codegen.empty() : this.advancedBackupSettings;
+    public Optional<Output<List<BackupPlanAdvancedBackupSettingResourceTypeArgs>>> advancedBackupSettings() {
+        return Optional.ofNullable(this.advancedBackupSettings);
     }
 
     @Import(name="backupPlanName", required=true)
-      private final Output<String> backupPlanName;
+    private Output<String> backupPlanName;
 
     public Output<String> backupPlanName() {
         return this.backupPlanName;
     }
 
     @Import(name="backupPlanRule", required=true)
-      private final Output<List<BackupPlanBackupRuleResourceTypeArgs>> backupPlanRule;
+    private Output<List<BackupPlanBackupRuleResourceTypeArgs>> backupPlanRule;
 
     public Output<List<BackupPlanBackupRuleResourceTypeArgs>> backupPlanRule() {
         return this.backupPlanRule;
     }
 
-    public BackupPlanResourceTypeArgs(
-        @Nullable Output<List<BackupPlanAdvancedBackupSettingResourceTypeArgs>> advancedBackupSettings,
-        Output<String> backupPlanName,
-        Output<List<BackupPlanBackupRuleResourceTypeArgs>> backupPlanRule) {
-        this.advancedBackupSettings = advancedBackupSettings;
-        this.backupPlanName = Objects.requireNonNull(backupPlanName, "expected parameter 'backupPlanName' to be non-null");
-        this.backupPlanRule = Objects.requireNonNull(backupPlanRule, "expected parameter 'backupPlanRule' to be non-null");
-    }
+    private BackupPlanResourceTypeArgs() {}
 
-    private BackupPlanResourceTypeArgs() {
-        this.advancedBackupSettings = Codegen.empty();
-        this.backupPlanName = Codegen.empty();
-        this.backupPlanRule = Codegen.empty();
+    private BackupPlanResourceTypeArgs(BackupPlanResourceTypeArgs $) {
+        this.advancedBackupSettings = $.advancedBackupSettings;
+        this.backupPlanName = $.backupPlanName;
+        this.backupPlanRule = $.backupPlanRule;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BackupPlanResourceTypeArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<BackupPlanAdvancedBackupSettingResourceTypeArgs>> advancedBackupSettings;
-        private Output<String> backupPlanName;
-        private Output<List<BackupPlanBackupRuleResourceTypeArgs>> backupPlanRule;
+        private BackupPlanResourceTypeArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new BackupPlanResourceTypeArgs();
         }
 
         public Builder(BackupPlanResourceTypeArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.advancedBackupSettings = defaults.advancedBackupSettings;
-    	      this.backupPlanName = defaults.backupPlanName;
-    	      this.backupPlanRule = defaults.backupPlanRule;
+            $ = new BackupPlanResourceTypeArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder advancedBackupSettings(@Nullable Output<List<BackupPlanAdvancedBackupSettingResourceTypeArgs>> advancedBackupSettings) {
-            this.advancedBackupSettings = advancedBackupSettings;
+            $.advancedBackupSettings = advancedBackupSettings;
             return this;
         }
-        public Builder advancedBackupSettings(@Nullable List<BackupPlanAdvancedBackupSettingResourceTypeArgs> advancedBackupSettings) {
-            this.advancedBackupSettings = Codegen.ofNullable(advancedBackupSettings);
-            return this;
+
+        public Builder advancedBackupSettings(List<BackupPlanAdvancedBackupSettingResourceTypeArgs> advancedBackupSettings) {
+            return advancedBackupSettings(Output.of(advancedBackupSettings));
         }
+
         public Builder advancedBackupSettings(BackupPlanAdvancedBackupSettingResourceTypeArgs... advancedBackupSettings) {
             return advancedBackupSettings(List.of(advancedBackupSettings));
         }
+
         public Builder backupPlanName(Output<String> backupPlanName) {
-            this.backupPlanName = Objects.requireNonNull(backupPlanName);
+            $.backupPlanName = backupPlanName;
             return this;
         }
+
         public Builder backupPlanName(String backupPlanName) {
-            this.backupPlanName = Output.of(Objects.requireNonNull(backupPlanName));
-            return this;
+            return backupPlanName(Output.of(backupPlanName));
         }
+
         public Builder backupPlanRule(Output<List<BackupPlanBackupRuleResourceTypeArgs>> backupPlanRule) {
-            this.backupPlanRule = Objects.requireNonNull(backupPlanRule);
+            $.backupPlanRule = backupPlanRule;
             return this;
         }
+
         public Builder backupPlanRule(List<BackupPlanBackupRuleResourceTypeArgs> backupPlanRule) {
-            this.backupPlanRule = Output.of(Objects.requireNonNull(backupPlanRule));
-            return this;
+            return backupPlanRule(Output.of(backupPlanRule));
         }
+
         public Builder backupPlanRule(BackupPlanBackupRuleResourceTypeArgs... backupPlanRule) {
             return backupPlanRule(List.of(backupPlanRule));
-        }        public BackupPlanResourceTypeArgs build() {
-            return new BackupPlanResourceTypeArgs(advancedBackupSettings, backupPlanName, backupPlanRule);
+        }
+
+        public BackupPlanResourceTypeArgs build() {
+            $.backupPlanName = Objects.requireNonNull($.backupPlanName, "expected parameter 'backupPlanName' to be non-null");
+            $.backupPlanRule = Objects.requireNonNull($.backupPlanRule, "expected parameter 'backupPlanRule' to be non-null");
+            return $;
         }
     }
+
 }

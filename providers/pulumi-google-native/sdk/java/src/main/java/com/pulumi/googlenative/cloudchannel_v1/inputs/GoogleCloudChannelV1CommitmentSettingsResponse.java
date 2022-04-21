@@ -22,7 +22,7 @@ public final class GoogleCloudChannelV1CommitmentSettingsResponse extends com.pu
      * 
      */
     @Import(name="endTime", required=true)
-      private final String endTime;
+    private String endTime;
 
     public String endTime() {
         return this.endTime;
@@ -33,7 +33,7 @@ public final class GoogleCloudChannelV1CommitmentSettingsResponse extends com.pu
      * 
      */
     @Import(name="renewalSettings", required=true)
-      private final GoogleCloudChannelV1RenewalSettingsResponse renewalSettings;
+    private GoogleCloudChannelV1RenewalSettingsResponse renewalSettings;
 
     public GoogleCloudChannelV1RenewalSettingsResponse renewalSettings() {
         return this.renewalSettings;
@@ -44,64 +44,59 @@ public final class GoogleCloudChannelV1CommitmentSettingsResponse extends com.pu
      * 
      */
     @Import(name="startTime", required=true)
-      private final String startTime;
+    private String startTime;
 
     public String startTime() {
         return this.startTime;
     }
 
-    public GoogleCloudChannelV1CommitmentSettingsResponse(
-        String endTime,
-        GoogleCloudChannelV1RenewalSettingsResponse renewalSettings,
-        String startTime) {
-        this.endTime = Objects.requireNonNull(endTime, "expected parameter 'endTime' to be non-null");
-        this.renewalSettings = Objects.requireNonNull(renewalSettings, "expected parameter 'renewalSettings' to be non-null");
-        this.startTime = Objects.requireNonNull(startTime, "expected parameter 'startTime' to be non-null");
-    }
+    private GoogleCloudChannelV1CommitmentSettingsResponse() {}
 
-    private GoogleCloudChannelV1CommitmentSettingsResponse() {
-        this.endTime = null;
-        this.renewalSettings = null;
-        this.startTime = null;
+    private GoogleCloudChannelV1CommitmentSettingsResponse(GoogleCloudChannelV1CommitmentSettingsResponse $) {
+        this.endTime = $.endTime;
+        this.renewalSettings = $.renewalSettings;
+        this.startTime = $.startTime;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudChannelV1CommitmentSettingsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String endTime;
-        private GoogleCloudChannelV1RenewalSettingsResponse renewalSettings;
-        private String startTime;
+        private GoogleCloudChannelV1CommitmentSettingsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudChannelV1CommitmentSettingsResponse();
         }
 
         public Builder(GoogleCloudChannelV1CommitmentSettingsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.endTime = defaults.endTime;
-    	      this.renewalSettings = defaults.renewalSettings;
-    	      this.startTime = defaults.startTime;
+            $ = new GoogleCloudChannelV1CommitmentSettingsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder endTime(String endTime) {
-            this.endTime = Objects.requireNonNull(endTime);
+            $.endTime = endTime;
             return this;
         }
+
         public Builder renewalSettings(GoogleCloudChannelV1RenewalSettingsResponse renewalSettings) {
-            this.renewalSettings = Objects.requireNonNull(renewalSettings);
+            $.renewalSettings = renewalSettings;
             return this;
         }
+
         public Builder startTime(String startTime) {
-            this.startTime = Objects.requireNonNull(startTime);
+            $.startTime = startTime;
             return this;
-        }        public GoogleCloudChannelV1CommitmentSettingsResponse build() {
-            return new GoogleCloudChannelV1CommitmentSettingsResponse(endTime, renewalSettings, startTime);
+        }
+
+        public GoogleCloudChannelV1CommitmentSettingsResponse build() {
+            $.endTime = Objects.requireNonNull($.endTime, "expected parameter 'endTime' to be non-null");
+            $.renewalSettings = Objects.requireNonNull($.renewalSettings, "expected parameter 'renewalSettings' to be non-null");
+            $.startTime = Objects.requireNonNull($.startTime, "expected parameter 'startTime' to be non-null");
+            return $;
         }
     }
+
 }

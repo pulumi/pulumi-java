@@ -5,7 +5,6 @@ package com.pulumi.azurenative.documentdb.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,49 +22,49 @@ public final class SqlDatabaseResourceArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="id", required=true)
-      private final Output<String> id;
+    private Output<String> id;
 
     public Output<String> id() {
         return this.id;
     }
 
-    public SqlDatabaseResourceArgs(Output<String> id) {
-        this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
-    }
+    private SqlDatabaseResourceArgs() {}
 
-    private SqlDatabaseResourceArgs() {
-        this.id = Codegen.empty();
+    private SqlDatabaseResourceArgs(SqlDatabaseResourceArgs $) {
+        this.id = $.id;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SqlDatabaseResourceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> id;
+        private SqlDatabaseResourceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SqlDatabaseResourceArgs();
         }
 
         public Builder(SqlDatabaseResourceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.id = defaults.id;
+            $ = new SqlDatabaseResourceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder id(Output<String> id) {
-            this.id = Objects.requireNonNull(id);
+            $.id = id;
             return this;
         }
+
         public Builder id(String id) {
-            this.id = Output.of(Objects.requireNonNull(id));
-            return this;
-        }        public SqlDatabaseResourceArgs build() {
-            return new SqlDatabaseResourceArgs(id);
+            return id(Output.of(id));
+        }
+
+        public SqlDatabaseResourceArgs build() {
+            $.id = Objects.requireNonNull($.id, "expected parameter 'id' to be non-null");
+            return $;
         }
     }
+
 }

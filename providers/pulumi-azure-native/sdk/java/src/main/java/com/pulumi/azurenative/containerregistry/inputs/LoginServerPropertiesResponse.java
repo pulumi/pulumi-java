@@ -22,7 +22,7 @@ public final class LoginServerPropertiesResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="host", required=true)
-      private final String host;
+    private String host;
 
     public String host() {
         return this.host;
@@ -33,55 +33,52 @@ public final class LoginServerPropertiesResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="tls", required=true)
-      private final TlsPropertiesResponse tls;
+    private TlsPropertiesResponse tls;
 
     public TlsPropertiesResponse tls() {
         return this.tls;
     }
 
-    public LoginServerPropertiesResponse(
-        String host,
-        TlsPropertiesResponse tls) {
-        this.host = Objects.requireNonNull(host, "expected parameter 'host' to be non-null");
-        this.tls = Objects.requireNonNull(tls, "expected parameter 'tls' to be non-null");
-    }
+    private LoginServerPropertiesResponse() {}
 
-    private LoginServerPropertiesResponse() {
-        this.host = null;
-        this.tls = null;
+    private LoginServerPropertiesResponse(LoginServerPropertiesResponse $) {
+        this.host = $.host;
+        this.tls = $.tls;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LoginServerPropertiesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String host;
-        private TlsPropertiesResponse tls;
+        private LoginServerPropertiesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new LoginServerPropertiesResponse();
         }
 
         public Builder(LoginServerPropertiesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.host = defaults.host;
-    	      this.tls = defaults.tls;
+            $ = new LoginServerPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder host(String host) {
-            this.host = Objects.requireNonNull(host);
+            $.host = host;
             return this;
         }
+
         public Builder tls(TlsPropertiesResponse tls) {
-            this.tls = Objects.requireNonNull(tls);
+            $.tls = tls;
             return this;
-        }        public LoginServerPropertiesResponse build() {
-            return new LoginServerPropertiesResponse(host, tls);
+        }
+
+        public LoginServerPropertiesResponse build() {
+            $.host = Objects.requireNonNull($.host, "expected parameter 'host' to be non-null");
+            $.tls = Objects.requireNonNull($.tls, "expected parameter 'tls' to be non-null");
+            return $;
         }
     }
+
 }

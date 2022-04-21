@@ -5,10 +5,10 @@ package com.pulumi.gcp.composer.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.composer.inputs.EnvironmentConfigWebServerNetworkAccessControlAllowedIpRangeArgs;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -17,52 +17,52 @@ public final class EnvironmentConfigWebServerNetworkAccessControlArgs extends co
     public static final EnvironmentConfigWebServerNetworkAccessControlArgs Empty = new EnvironmentConfigWebServerNetworkAccessControlArgs();
 
     @Import(name="allowedIpRanges")
-      private final @Nullable Output<List<EnvironmentConfigWebServerNetworkAccessControlAllowedIpRangeArgs>> allowedIpRanges;
+    private @Nullable Output<List<EnvironmentConfigWebServerNetworkAccessControlAllowedIpRangeArgs>> allowedIpRanges;
 
-    public Output<List<EnvironmentConfigWebServerNetworkAccessControlAllowedIpRangeArgs>> allowedIpRanges() {
-        return this.allowedIpRanges == null ? Codegen.empty() : this.allowedIpRanges;
+    public Optional<Output<List<EnvironmentConfigWebServerNetworkAccessControlAllowedIpRangeArgs>>> allowedIpRanges() {
+        return Optional.ofNullable(this.allowedIpRanges);
     }
 
-    public EnvironmentConfigWebServerNetworkAccessControlArgs(@Nullable Output<List<EnvironmentConfigWebServerNetworkAccessControlAllowedIpRangeArgs>> allowedIpRanges) {
-        this.allowedIpRanges = allowedIpRanges;
-    }
+    private EnvironmentConfigWebServerNetworkAccessControlArgs() {}
 
-    private EnvironmentConfigWebServerNetworkAccessControlArgs() {
-        this.allowedIpRanges = Codegen.empty();
+    private EnvironmentConfigWebServerNetworkAccessControlArgs(EnvironmentConfigWebServerNetworkAccessControlArgs $) {
+        this.allowedIpRanges = $.allowedIpRanges;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EnvironmentConfigWebServerNetworkAccessControlArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<EnvironmentConfigWebServerNetworkAccessControlAllowedIpRangeArgs>> allowedIpRanges;
+        private EnvironmentConfigWebServerNetworkAccessControlArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new EnvironmentConfigWebServerNetworkAccessControlArgs();
         }
 
         public Builder(EnvironmentConfigWebServerNetworkAccessControlArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.allowedIpRanges = defaults.allowedIpRanges;
+            $ = new EnvironmentConfigWebServerNetworkAccessControlArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder allowedIpRanges(@Nullable Output<List<EnvironmentConfigWebServerNetworkAccessControlAllowedIpRangeArgs>> allowedIpRanges) {
-            this.allowedIpRanges = allowedIpRanges;
+            $.allowedIpRanges = allowedIpRanges;
             return this;
         }
-        public Builder allowedIpRanges(@Nullable List<EnvironmentConfigWebServerNetworkAccessControlAllowedIpRangeArgs> allowedIpRanges) {
-            this.allowedIpRanges = Codegen.ofNullable(allowedIpRanges);
-            return this;
+
+        public Builder allowedIpRanges(List<EnvironmentConfigWebServerNetworkAccessControlAllowedIpRangeArgs> allowedIpRanges) {
+            return allowedIpRanges(Output.of(allowedIpRanges));
         }
+
         public Builder allowedIpRanges(EnvironmentConfigWebServerNetworkAccessControlAllowedIpRangeArgs... allowedIpRanges) {
             return allowedIpRanges(List.of(allowedIpRanges));
-        }        public EnvironmentConfigWebServerNetworkAccessControlArgs build() {
-            return new EnvironmentConfigWebServerNetworkAccessControlArgs(allowedIpRanges);
+        }
+
+        public EnvironmentConfigWebServerNetworkAccessControlArgs build() {
+            return $;
         }
     }
+
 }

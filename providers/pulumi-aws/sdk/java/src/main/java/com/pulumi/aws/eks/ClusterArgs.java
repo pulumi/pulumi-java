@@ -8,11 +8,11 @@ import com.pulumi.aws.eks.inputs.ClusterKubernetesNetworkConfigArgs;
 import com.pulumi.aws.eks.inputs.ClusterVpcConfigArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="enabledClusterLogTypes")
-      private final @Nullable Output<List<String>> enabledClusterLogTypes;
+    private @Nullable Output<List<String>> enabledClusterLogTypes;
 
-    public Output<List<String>> enabledClusterLogTypes() {
-        return this.enabledClusterLogTypes == null ? Codegen.empty() : this.enabledClusterLogTypes;
+    public Optional<Output<List<String>>> enabledClusterLogTypes() {
+        return Optional.ofNullable(this.enabledClusterLogTypes);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="encryptionConfig")
-      private final @Nullable Output<ClusterEncryptionConfigArgs> encryptionConfig;
+    private @Nullable Output<ClusterEncryptionConfigArgs> encryptionConfig;
 
-    public Output<ClusterEncryptionConfigArgs> encryptionConfig() {
-        return this.encryptionConfig == null ? Codegen.empty() : this.encryptionConfig;
+    public Optional<Output<ClusterEncryptionConfigArgs>> encryptionConfig() {
+        return Optional.ofNullable(this.encryptionConfig);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="kubernetesNetworkConfig")
-      private final @Nullable Output<ClusterKubernetesNetworkConfigArgs> kubernetesNetworkConfig;
+    private @Nullable Output<ClusterKubernetesNetworkConfigArgs> kubernetesNetworkConfig;
 
-    public Output<ClusterKubernetesNetworkConfigArgs> kubernetesNetworkConfig() {
-        return this.kubernetesNetworkConfig == null ? Codegen.empty() : this.kubernetesNetworkConfig;
+    public Optional<Output<ClusterKubernetesNetworkConfigArgs>> kubernetesNetworkConfig() {
+        return Optional.ofNullable(this.kubernetesNetworkConfig);
     }
 
     /**
@@ -58,10 +58,10 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -69,7 +69,7 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="roleArn", required=true)
-      private final Output<String> roleArn;
+    private Output<String> roleArn;
 
     public Output<String> roleArn() {
         return this.roleArn;
@@ -80,10 +80,10 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -91,10 +91,10 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="version")
-      private final @Nullable Output<String> version;
+    private @Nullable Output<String> version;
 
-    public Output<String> version() {
-        return this.version == null ? Codegen.empty() : this.version;
+    public Optional<Output<String>> version() {
+        return Optional.ofNullable(this.version);
     }
 
     /**
@@ -102,144 +102,124 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="vpcConfig", required=true)
-      private final Output<ClusterVpcConfigArgs> vpcConfig;
+    private Output<ClusterVpcConfigArgs> vpcConfig;
 
     public Output<ClusterVpcConfigArgs> vpcConfig() {
         return this.vpcConfig;
     }
 
-    public ClusterArgs(
-        @Nullable Output<List<String>> enabledClusterLogTypes,
-        @Nullable Output<ClusterEncryptionConfigArgs> encryptionConfig,
-        @Nullable Output<ClusterKubernetesNetworkConfigArgs> kubernetesNetworkConfig,
-        @Nullable Output<String> name,
-        Output<String> roleArn,
-        @Nullable Output<Map<String,String>> tags,
-        @Nullable Output<String> version,
-        Output<ClusterVpcConfigArgs> vpcConfig) {
-        this.enabledClusterLogTypes = enabledClusterLogTypes;
-        this.encryptionConfig = encryptionConfig;
-        this.kubernetesNetworkConfig = kubernetesNetworkConfig;
-        this.name = name;
-        this.roleArn = Objects.requireNonNull(roleArn, "expected parameter 'roleArn' to be non-null");
-        this.tags = tags;
-        this.version = version;
-        this.vpcConfig = Objects.requireNonNull(vpcConfig, "expected parameter 'vpcConfig' to be non-null");
-    }
+    private ClusterArgs() {}
 
-    private ClusterArgs() {
-        this.enabledClusterLogTypes = Codegen.empty();
-        this.encryptionConfig = Codegen.empty();
-        this.kubernetesNetworkConfig = Codegen.empty();
-        this.name = Codegen.empty();
-        this.roleArn = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.version = Codegen.empty();
-        this.vpcConfig = Codegen.empty();
+    private ClusterArgs(ClusterArgs $) {
+        this.enabledClusterLogTypes = $.enabledClusterLogTypes;
+        this.encryptionConfig = $.encryptionConfig;
+        this.kubernetesNetworkConfig = $.kubernetesNetworkConfig;
+        this.name = $.name;
+        this.roleArn = $.roleArn;
+        this.tags = $.tags;
+        this.version = $.version;
+        this.vpcConfig = $.vpcConfig;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ClusterArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> enabledClusterLogTypes;
-        private @Nullable Output<ClusterEncryptionConfigArgs> encryptionConfig;
-        private @Nullable Output<ClusterKubernetesNetworkConfigArgs> kubernetesNetworkConfig;
-        private @Nullable Output<String> name;
-        private Output<String> roleArn;
-        private @Nullable Output<Map<String,String>> tags;
-        private @Nullable Output<String> version;
-        private Output<ClusterVpcConfigArgs> vpcConfig;
+        private ClusterArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ClusterArgs();
         }
 
         public Builder(ClusterArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.enabledClusterLogTypes = defaults.enabledClusterLogTypes;
-    	      this.encryptionConfig = defaults.encryptionConfig;
-    	      this.kubernetesNetworkConfig = defaults.kubernetesNetworkConfig;
-    	      this.name = defaults.name;
-    	      this.roleArn = defaults.roleArn;
-    	      this.tags = defaults.tags;
-    	      this.version = defaults.version;
-    	      this.vpcConfig = defaults.vpcConfig;
+            $ = new ClusterArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder enabledClusterLogTypes(@Nullable Output<List<String>> enabledClusterLogTypes) {
-            this.enabledClusterLogTypes = enabledClusterLogTypes;
+            $.enabledClusterLogTypes = enabledClusterLogTypes;
             return this;
         }
-        public Builder enabledClusterLogTypes(@Nullable List<String> enabledClusterLogTypes) {
-            this.enabledClusterLogTypes = Codegen.ofNullable(enabledClusterLogTypes);
-            return this;
+
+        public Builder enabledClusterLogTypes(List<String> enabledClusterLogTypes) {
+            return enabledClusterLogTypes(Output.of(enabledClusterLogTypes));
         }
+
         public Builder enabledClusterLogTypes(String... enabledClusterLogTypes) {
             return enabledClusterLogTypes(List.of(enabledClusterLogTypes));
         }
+
         public Builder encryptionConfig(@Nullable Output<ClusterEncryptionConfigArgs> encryptionConfig) {
-            this.encryptionConfig = encryptionConfig;
+            $.encryptionConfig = encryptionConfig;
             return this;
         }
-        public Builder encryptionConfig(@Nullable ClusterEncryptionConfigArgs encryptionConfig) {
-            this.encryptionConfig = Codegen.ofNullable(encryptionConfig);
-            return this;
+
+        public Builder encryptionConfig(ClusterEncryptionConfigArgs encryptionConfig) {
+            return encryptionConfig(Output.of(encryptionConfig));
         }
+
         public Builder kubernetesNetworkConfig(@Nullable Output<ClusterKubernetesNetworkConfigArgs> kubernetesNetworkConfig) {
-            this.kubernetesNetworkConfig = kubernetesNetworkConfig;
+            $.kubernetesNetworkConfig = kubernetesNetworkConfig;
             return this;
         }
-        public Builder kubernetesNetworkConfig(@Nullable ClusterKubernetesNetworkConfigArgs kubernetesNetworkConfig) {
-            this.kubernetesNetworkConfig = Codegen.ofNullable(kubernetesNetworkConfig);
-            return this;
+
+        public Builder kubernetesNetworkConfig(ClusterKubernetesNetworkConfigArgs kubernetesNetworkConfig) {
+            return kubernetesNetworkConfig(Output.of(kubernetesNetworkConfig));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder roleArn(Output<String> roleArn) {
-            this.roleArn = Objects.requireNonNull(roleArn);
+            $.roleArn = roleArn;
             return this;
         }
+
         public Builder roleArn(String roleArn) {
-            this.roleArn = Output.of(Objects.requireNonNull(roleArn));
-            return this;
+            return roleArn(Output.of(roleArn));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder version(@Nullable Output<String> version) {
-            this.version = version;
+            $.version = version;
             return this;
         }
-        public Builder version(@Nullable String version) {
-            this.version = Codegen.ofNullable(version);
-            return this;
+
+        public Builder version(String version) {
+            return version(Output.of(version));
         }
+
         public Builder vpcConfig(Output<ClusterVpcConfigArgs> vpcConfig) {
-            this.vpcConfig = Objects.requireNonNull(vpcConfig);
+            $.vpcConfig = vpcConfig;
             return this;
         }
+
         public Builder vpcConfig(ClusterVpcConfigArgs vpcConfig) {
-            this.vpcConfig = Output.of(Objects.requireNonNull(vpcConfig));
-            return this;
-        }        public ClusterArgs build() {
-            return new ClusterArgs(enabledClusterLogTypes, encryptionConfig, kubernetesNetworkConfig, name, roleArn, tags, version, vpcConfig);
+            return vpcConfig(Output.of(vpcConfig));
+        }
+
+        public ClusterArgs build() {
+            $.roleArn = Objects.requireNonNull($.roleArn, "expected parameter 'roleArn' to be non-null");
+            $.vpcConfig = Objects.requireNonNull($.vpcConfig, "expected parameter 'vpcConfig' to be non-null");
+            return $;
         }
     }
+
 }

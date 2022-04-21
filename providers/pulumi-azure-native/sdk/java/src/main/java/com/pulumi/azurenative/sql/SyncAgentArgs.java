@@ -5,9 +5,9 @@ package com.pulumi.azurenative.sql;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,7 +20,7 @@ public final class SyncAgentArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -31,7 +31,7 @@ public final class SyncAgentArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="serverName", required=true)
-      private final Output<String> serverName;
+    private Output<String> serverName;
 
     public Output<String> serverName() {
         return this.serverName;
@@ -42,10 +42,10 @@ public final class SyncAgentArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="syncAgentName")
-      private final @Nullable Output<String> syncAgentName;
+    private @Nullable Output<String> syncAgentName;
 
-    public Output<String> syncAgentName() {
-        return this.syncAgentName == null ? Codegen.empty() : this.syncAgentName;
+    public Optional<Output<String>> syncAgentName() {
+        return Optional.ofNullable(this.syncAgentName);
     }
 
     /**
@@ -53,89 +53,80 @@ public final class SyncAgentArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="syncDatabaseId")
-      private final @Nullable Output<String> syncDatabaseId;
+    private @Nullable Output<String> syncDatabaseId;
 
-    public Output<String> syncDatabaseId() {
-        return this.syncDatabaseId == null ? Codegen.empty() : this.syncDatabaseId;
+    public Optional<Output<String>> syncDatabaseId() {
+        return Optional.ofNullable(this.syncDatabaseId);
     }
 
-    public SyncAgentArgs(
-        Output<String> resourceGroupName,
-        Output<String> serverName,
-        @Nullable Output<String> syncAgentName,
-        @Nullable Output<String> syncDatabaseId) {
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.serverName = Objects.requireNonNull(serverName, "expected parameter 'serverName' to be non-null");
-        this.syncAgentName = syncAgentName;
-        this.syncDatabaseId = syncDatabaseId;
-    }
+    private SyncAgentArgs() {}
 
-    private SyncAgentArgs() {
-        this.resourceGroupName = Codegen.empty();
-        this.serverName = Codegen.empty();
-        this.syncAgentName = Codegen.empty();
-        this.syncDatabaseId = Codegen.empty();
+    private SyncAgentArgs(SyncAgentArgs $) {
+        this.resourceGroupName = $.resourceGroupName;
+        this.serverName = $.serverName;
+        this.syncAgentName = $.syncAgentName;
+        this.syncDatabaseId = $.syncDatabaseId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SyncAgentArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> resourceGroupName;
-        private Output<String> serverName;
-        private @Nullable Output<String> syncAgentName;
-        private @Nullable Output<String> syncDatabaseId;
+        private SyncAgentArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SyncAgentArgs();
         }
 
         public Builder(SyncAgentArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.serverName = defaults.serverName;
-    	      this.syncAgentName = defaults.syncAgentName;
-    	      this.syncDatabaseId = defaults.syncDatabaseId;
+            $ = new SyncAgentArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder serverName(Output<String> serverName) {
-            this.serverName = Objects.requireNonNull(serverName);
+            $.serverName = serverName;
             return this;
         }
+
         public Builder serverName(String serverName) {
-            this.serverName = Output.of(Objects.requireNonNull(serverName));
-            return this;
+            return serverName(Output.of(serverName));
         }
+
         public Builder syncAgentName(@Nullable Output<String> syncAgentName) {
-            this.syncAgentName = syncAgentName;
+            $.syncAgentName = syncAgentName;
             return this;
         }
-        public Builder syncAgentName(@Nullable String syncAgentName) {
-            this.syncAgentName = Codegen.ofNullable(syncAgentName);
-            return this;
+
+        public Builder syncAgentName(String syncAgentName) {
+            return syncAgentName(Output.of(syncAgentName));
         }
+
         public Builder syncDatabaseId(@Nullable Output<String> syncDatabaseId) {
-            this.syncDatabaseId = syncDatabaseId;
+            $.syncDatabaseId = syncDatabaseId;
             return this;
         }
-        public Builder syncDatabaseId(@Nullable String syncDatabaseId) {
-            this.syncDatabaseId = Codegen.ofNullable(syncDatabaseId);
-            return this;
-        }        public SyncAgentArgs build() {
-            return new SyncAgentArgs(resourceGroupName, serverName, syncAgentName, syncDatabaseId);
+
+        public Builder syncDatabaseId(String syncDatabaseId) {
+            return syncDatabaseId(Output.of(syncDatabaseId));
+        }
+
+        public SyncAgentArgs build() {
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.serverName = Objects.requireNonNull($.serverName, "expected parameter 'serverName' to be non-null");
+            return $;
         }
     }
+
 }

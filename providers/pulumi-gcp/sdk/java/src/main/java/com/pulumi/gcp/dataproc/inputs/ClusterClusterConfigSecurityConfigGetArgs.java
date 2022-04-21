@@ -5,7 +5,6 @@ package com.pulumi.gcp.dataproc.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.dataproc.inputs.ClusterClusterConfigSecurityConfigKerberosConfigGetArgs;
 import java.util.Objects;
 
@@ -19,49 +18,49 @@ public final class ClusterClusterConfigSecurityConfigGetArgs extends com.pulumi.
      * 
      */
     @Import(name="kerberosConfig", required=true)
-      private final Output<ClusterClusterConfigSecurityConfigKerberosConfigGetArgs> kerberosConfig;
+    private Output<ClusterClusterConfigSecurityConfigKerberosConfigGetArgs> kerberosConfig;
 
     public Output<ClusterClusterConfigSecurityConfigKerberosConfigGetArgs> kerberosConfig() {
         return this.kerberosConfig;
     }
 
-    public ClusterClusterConfigSecurityConfigGetArgs(Output<ClusterClusterConfigSecurityConfigKerberosConfigGetArgs> kerberosConfig) {
-        this.kerberosConfig = Objects.requireNonNull(kerberosConfig, "expected parameter 'kerberosConfig' to be non-null");
-    }
+    private ClusterClusterConfigSecurityConfigGetArgs() {}
 
-    private ClusterClusterConfigSecurityConfigGetArgs() {
-        this.kerberosConfig = Codegen.empty();
+    private ClusterClusterConfigSecurityConfigGetArgs(ClusterClusterConfigSecurityConfigGetArgs $) {
+        this.kerberosConfig = $.kerberosConfig;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ClusterClusterConfigSecurityConfigGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<ClusterClusterConfigSecurityConfigKerberosConfigGetArgs> kerberosConfig;
+        private ClusterClusterConfigSecurityConfigGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ClusterClusterConfigSecurityConfigGetArgs();
         }
 
         public Builder(ClusterClusterConfigSecurityConfigGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.kerberosConfig = defaults.kerberosConfig;
+            $ = new ClusterClusterConfigSecurityConfigGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder kerberosConfig(Output<ClusterClusterConfigSecurityConfigKerberosConfigGetArgs> kerberosConfig) {
-            this.kerberosConfig = Objects.requireNonNull(kerberosConfig);
+            $.kerberosConfig = kerberosConfig;
             return this;
         }
+
         public Builder kerberosConfig(ClusterClusterConfigSecurityConfigKerberosConfigGetArgs kerberosConfig) {
-            this.kerberosConfig = Output.of(Objects.requireNonNull(kerberosConfig));
-            return this;
-        }        public ClusterClusterConfigSecurityConfigGetArgs build() {
-            return new ClusterClusterConfigSecurityConfigGetArgs(kerberosConfig);
+            return kerberosConfig(Output.of(kerberosConfig));
+        }
+
+        public ClusterClusterConfigSecurityConfigGetArgs build() {
+            $.kerberosConfig = Objects.requireNonNull($.kerberosConfig, "expected parameter 'kerberosConfig' to be non-null");
+            return $;
         }
     }
+
 }

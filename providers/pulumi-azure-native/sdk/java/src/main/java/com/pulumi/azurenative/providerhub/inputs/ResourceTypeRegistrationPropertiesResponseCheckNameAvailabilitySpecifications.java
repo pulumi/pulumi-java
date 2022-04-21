@@ -17,65 +17,61 @@ public final class ResourceTypeRegistrationPropertiesResponseCheckNameAvailabili
     public static final ResourceTypeRegistrationPropertiesResponseCheckNameAvailabilitySpecifications Empty = new ResourceTypeRegistrationPropertiesResponseCheckNameAvailabilitySpecifications();
 
     @Import(name="enableDefaultValidation")
-      private final @Nullable Boolean enableDefaultValidation;
+    private @Nullable Boolean enableDefaultValidation;
 
     public Optional<Boolean> enableDefaultValidation() {
-        return this.enableDefaultValidation == null ? Optional.empty() : Optional.ofNullable(this.enableDefaultValidation);
+        return Optional.ofNullable(this.enableDefaultValidation);
     }
 
     @Import(name="resourceTypesWithCustomValidation")
-      private final @Nullable List<String> resourceTypesWithCustomValidation;
+    private @Nullable List<String> resourceTypesWithCustomValidation;
 
-    public List<String> resourceTypesWithCustomValidation() {
-        return this.resourceTypesWithCustomValidation == null ? List.of() : this.resourceTypesWithCustomValidation;
+    public Optional<List<String>> resourceTypesWithCustomValidation() {
+        return Optional.ofNullable(this.resourceTypesWithCustomValidation);
     }
 
-    public ResourceTypeRegistrationPropertiesResponseCheckNameAvailabilitySpecifications(
-        @Nullable Boolean enableDefaultValidation,
-        @Nullable List<String> resourceTypesWithCustomValidation) {
-        this.enableDefaultValidation = enableDefaultValidation;
-        this.resourceTypesWithCustomValidation = resourceTypesWithCustomValidation;
-    }
+    private ResourceTypeRegistrationPropertiesResponseCheckNameAvailabilitySpecifications() {}
 
-    private ResourceTypeRegistrationPropertiesResponseCheckNameAvailabilitySpecifications() {
-        this.enableDefaultValidation = null;
-        this.resourceTypesWithCustomValidation = List.of();
+    private ResourceTypeRegistrationPropertiesResponseCheckNameAvailabilitySpecifications(ResourceTypeRegistrationPropertiesResponseCheckNameAvailabilitySpecifications $) {
+        this.enableDefaultValidation = $.enableDefaultValidation;
+        this.resourceTypesWithCustomValidation = $.resourceTypesWithCustomValidation;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ResourceTypeRegistrationPropertiesResponseCheckNameAvailabilitySpecifications defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Boolean enableDefaultValidation;
-        private @Nullable List<String> resourceTypesWithCustomValidation;
+        private ResourceTypeRegistrationPropertiesResponseCheckNameAvailabilitySpecifications $;
 
         public Builder() {
-    	      // Empty
+            $ = new ResourceTypeRegistrationPropertiesResponseCheckNameAvailabilitySpecifications();
         }
 
         public Builder(ResourceTypeRegistrationPropertiesResponseCheckNameAvailabilitySpecifications defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.enableDefaultValidation = defaults.enableDefaultValidation;
-    	      this.resourceTypesWithCustomValidation = defaults.resourceTypesWithCustomValidation;
+            $ = new ResourceTypeRegistrationPropertiesResponseCheckNameAvailabilitySpecifications(Objects.requireNonNull(defaults));
         }
 
         public Builder enableDefaultValidation(@Nullable Boolean enableDefaultValidation) {
-            this.enableDefaultValidation = enableDefaultValidation;
+            $.enableDefaultValidation = enableDefaultValidation;
             return this;
         }
+
         public Builder resourceTypesWithCustomValidation(@Nullable List<String> resourceTypesWithCustomValidation) {
-            this.resourceTypesWithCustomValidation = resourceTypesWithCustomValidation;
+            $.resourceTypesWithCustomValidation = resourceTypesWithCustomValidation;
             return this;
         }
+
         public Builder resourceTypesWithCustomValidation(String... resourceTypesWithCustomValidation) {
             return resourceTypesWithCustomValidation(List.of(resourceTypesWithCustomValidation));
-        }        public ResourceTypeRegistrationPropertiesResponseCheckNameAvailabilitySpecifications build() {
-            return new ResourceTypeRegistrationPropertiesResponseCheckNameAvailabilitySpecifications(enableDefaultValidation, resourceTypesWithCustomValidation);
+        }
+
+        public ResourceTypeRegistrationPropertiesResponseCheckNameAvailabilitySpecifications build() {
+            return $;
         }
     }
+
 }

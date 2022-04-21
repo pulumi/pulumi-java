@@ -5,7 +5,6 @@ package com.pulumi.awsnative.connect.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -23,7 +22,7 @@ public final class HoursOfOperationTimeSliceArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="hours", required=true)
-      private final Output<Integer> hours;
+    private Output<Integer> hours;
 
     public Output<Integer> hours() {
         return this.hours;
@@ -34,63 +33,60 @@ public final class HoursOfOperationTimeSliceArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="minutes", required=true)
-      private final Output<Integer> minutes;
+    private Output<Integer> minutes;
 
     public Output<Integer> minutes() {
         return this.minutes;
     }
 
-    public HoursOfOperationTimeSliceArgs(
-        Output<Integer> hours,
-        Output<Integer> minutes) {
-        this.hours = Objects.requireNonNull(hours, "expected parameter 'hours' to be non-null");
-        this.minutes = Objects.requireNonNull(minutes, "expected parameter 'minutes' to be non-null");
-    }
+    private HoursOfOperationTimeSliceArgs() {}
 
-    private HoursOfOperationTimeSliceArgs() {
-        this.hours = Codegen.empty();
-        this.minutes = Codegen.empty();
+    private HoursOfOperationTimeSliceArgs(HoursOfOperationTimeSliceArgs $) {
+        this.hours = $.hours;
+        this.minutes = $.minutes;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(HoursOfOperationTimeSliceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Integer> hours;
-        private Output<Integer> minutes;
+        private HoursOfOperationTimeSliceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new HoursOfOperationTimeSliceArgs();
         }
 
         public Builder(HoursOfOperationTimeSliceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.hours = defaults.hours;
-    	      this.minutes = defaults.minutes;
+            $ = new HoursOfOperationTimeSliceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder hours(Output<Integer> hours) {
-            this.hours = Objects.requireNonNull(hours);
+            $.hours = hours;
             return this;
         }
+
         public Builder hours(Integer hours) {
-            this.hours = Output.of(Objects.requireNonNull(hours));
-            return this;
+            return hours(Output.of(hours));
         }
+
         public Builder minutes(Output<Integer> minutes) {
-            this.minutes = Objects.requireNonNull(minutes);
+            $.minutes = minutes;
             return this;
         }
+
         public Builder minutes(Integer minutes) {
-            this.minutes = Output.of(Objects.requireNonNull(minutes));
-            return this;
-        }        public HoursOfOperationTimeSliceArgs build() {
-            return new HoursOfOperationTimeSliceArgs(hours, minutes);
+            return minutes(Output.of(minutes));
+        }
+
+        public HoursOfOperationTimeSliceArgs build() {
+            $.hours = Objects.requireNonNull($.hours, "expected parameter 'hours' to be non-null");
+            $.minutes = Objects.requireNonNull($.minutes, "expected parameter 'minutes' to be non-null");
+            return $;
         }
     }
+
 }

@@ -23,7 +23,7 @@ public final class TemplateContentsResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="imports", required=true)
-      private final List<ImportFileResponse> imports;
+    private List<ImportFileResponse> imports;
 
     public List<ImportFileResponse> imports() {
         return this.imports;
@@ -34,7 +34,7 @@ public final class TemplateContentsResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="interpreter", required=true)
-      private final String interpreter;
+    private String interpreter;
 
     public String interpreter() {
         return this.interpreter;
@@ -45,7 +45,7 @@ public final class TemplateContentsResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="mainTemplate", required=true)
-      private final String mainTemplate;
+    private String mainTemplate;
 
     public String mainTemplate() {
         return this.mainTemplate;
@@ -56,7 +56,7 @@ public final class TemplateContentsResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="schema", required=true)
-      private final String schema;
+    private String schema;
 
     public String schema() {
         return this.schema;
@@ -67,85 +67,77 @@ public final class TemplateContentsResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="template", required=true)
-      private final String template;
+    private String template;
 
     public String template() {
         return this.template;
     }
 
-    public TemplateContentsResponse(
-        List<ImportFileResponse> imports,
-        String interpreter,
-        String mainTemplate,
-        String schema,
-        String template) {
-        this.imports = Objects.requireNonNull(imports, "expected parameter 'imports' to be non-null");
-        this.interpreter = Objects.requireNonNull(interpreter, "expected parameter 'interpreter' to be non-null");
-        this.mainTemplate = Objects.requireNonNull(mainTemplate, "expected parameter 'mainTemplate' to be non-null");
-        this.schema = Objects.requireNonNull(schema, "expected parameter 'schema' to be non-null");
-        this.template = Objects.requireNonNull(template, "expected parameter 'template' to be non-null");
-    }
+    private TemplateContentsResponse() {}
 
-    private TemplateContentsResponse() {
-        this.imports = List.of();
-        this.interpreter = null;
-        this.mainTemplate = null;
-        this.schema = null;
-        this.template = null;
+    private TemplateContentsResponse(TemplateContentsResponse $) {
+        this.imports = $.imports;
+        this.interpreter = $.interpreter;
+        this.mainTemplate = $.mainTemplate;
+        this.schema = $.schema;
+        this.template = $.template;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TemplateContentsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<ImportFileResponse> imports;
-        private String interpreter;
-        private String mainTemplate;
-        private String schema;
-        private String template;
+        private TemplateContentsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new TemplateContentsResponse();
         }
 
         public Builder(TemplateContentsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.imports = defaults.imports;
-    	      this.interpreter = defaults.interpreter;
-    	      this.mainTemplate = defaults.mainTemplate;
-    	      this.schema = defaults.schema;
-    	      this.template = defaults.template;
+            $ = new TemplateContentsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder imports(List<ImportFileResponse> imports) {
-            this.imports = Objects.requireNonNull(imports);
+            $.imports = imports;
             return this;
         }
+
         public Builder imports(ImportFileResponse... imports) {
             return imports(List.of(imports));
         }
+
         public Builder interpreter(String interpreter) {
-            this.interpreter = Objects.requireNonNull(interpreter);
+            $.interpreter = interpreter;
             return this;
         }
+
         public Builder mainTemplate(String mainTemplate) {
-            this.mainTemplate = Objects.requireNonNull(mainTemplate);
+            $.mainTemplate = mainTemplate;
             return this;
         }
+
         public Builder schema(String schema) {
-            this.schema = Objects.requireNonNull(schema);
+            $.schema = schema;
             return this;
         }
+
         public Builder template(String template) {
-            this.template = Objects.requireNonNull(template);
+            $.template = template;
             return this;
-        }        public TemplateContentsResponse build() {
-            return new TemplateContentsResponse(imports, interpreter, mainTemplate, schema, template);
+        }
+
+        public TemplateContentsResponse build() {
+            $.imports = Objects.requireNonNull($.imports, "expected parameter 'imports' to be non-null");
+            $.interpreter = Objects.requireNonNull($.interpreter, "expected parameter 'interpreter' to be non-null");
+            $.mainTemplate = Objects.requireNonNull($.mainTemplate, "expected parameter 'mainTemplate' to be non-null");
+            $.schema = Objects.requireNonNull($.schema, "expected parameter 'schema' to be non-null");
+            $.template = Objects.requireNonNull($.template, "expected parameter 'template' to be non-null");
+            return $;
         }
     }
+
 }

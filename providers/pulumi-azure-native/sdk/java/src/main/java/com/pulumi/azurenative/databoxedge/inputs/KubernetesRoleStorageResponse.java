@@ -25,10 +25,10 @@ public final class KubernetesRoleStorageResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="endpoints")
-      private final @Nullable List<MountPointMapResponse> endpoints;
+    private @Nullable List<MountPointMapResponse> endpoints;
 
-    public List<MountPointMapResponse> endpoints() {
-        return this.endpoints == null ? List.of() : this.endpoints;
+    public Optional<List<MountPointMapResponse>> endpoints() {
+        return Optional.ofNullable(this.endpoints);
     }
 
     /**
@@ -36,61 +36,59 @@ public final class KubernetesRoleStorageResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="storageClasses", required=true)
-      private final List<KubernetesRoleStorageClassInfoResponse> storageClasses;
+    private List<KubernetesRoleStorageClassInfoResponse> storageClasses;
 
     public List<KubernetesRoleStorageClassInfoResponse> storageClasses() {
         return this.storageClasses;
     }
 
-    public KubernetesRoleStorageResponse(
-        @Nullable List<MountPointMapResponse> endpoints,
-        List<KubernetesRoleStorageClassInfoResponse> storageClasses) {
-        this.endpoints = endpoints;
-        this.storageClasses = Objects.requireNonNull(storageClasses, "expected parameter 'storageClasses' to be non-null");
-    }
+    private KubernetesRoleStorageResponse() {}
 
-    private KubernetesRoleStorageResponse() {
-        this.endpoints = List.of();
-        this.storageClasses = List.of();
+    private KubernetesRoleStorageResponse(KubernetesRoleStorageResponse $) {
+        this.endpoints = $.endpoints;
+        this.storageClasses = $.storageClasses;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(KubernetesRoleStorageResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<MountPointMapResponse> endpoints;
-        private List<KubernetesRoleStorageClassInfoResponse> storageClasses;
+        private KubernetesRoleStorageResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new KubernetesRoleStorageResponse();
         }
 
         public Builder(KubernetesRoleStorageResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.endpoints = defaults.endpoints;
-    	      this.storageClasses = defaults.storageClasses;
+            $ = new KubernetesRoleStorageResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder endpoints(@Nullable List<MountPointMapResponse> endpoints) {
-            this.endpoints = endpoints;
+            $.endpoints = endpoints;
             return this;
         }
+
         public Builder endpoints(MountPointMapResponse... endpoints) {
             return endpoints(List.of(endpoints));
         }
+
         public Builder storageClasses(List<KubernetesRoleStorageClassInfoResponse> storageClasses) {
-            this.storageClasses = Objects.requireNonNull(storageClasses);
+            $.storageClasses = storageClasses;
             return this;
         }
+
         public Builder storageClasses(KubernetesRoleStorageClassInfoResponse... storageClasses) {
             return storageClasses(List.of(storageClasses));
-        }        public KubernetesRoleStorageResponse build() {
-            return new KubernetesRoleStorageResponse(endpoints, storageClasses);
+        }
+
+        public KubernetesRoleStorageResponse build() {
+            $.storageClasses = Objects.requireNonNull($.storageClasses, "expected parameter 'storageClasses' to be non-null");
+            return $;
         }
     }
+
 }

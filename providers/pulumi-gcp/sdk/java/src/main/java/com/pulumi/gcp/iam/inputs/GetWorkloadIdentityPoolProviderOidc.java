@@ -14,65 +14,63 @@ public final class GetWorkloadIdentityPoolProviderOidc extends com.pulumi.resour
     public static final GetWorkloadIdentityPoolProviderOidc Empty = new GetWorkloadIdentityPoolProviderOidc();
 
     @Import(name="allowedAudiences", required=true)
-      private final List<String> allowedAudiences;
+    private List<String> allowedAudiences;
 
     public List<String> allowedAudiences() {
         return this.allowedAudiences;
     }
 
     @Import(name="issuerUri", required=true)
-      private final String issuerUri;
+    private String issuerUri;
 
     public String issuerUri() {
         return this.issuerUri;
     }
 
-    public GetWorkloadIdentityPoolProviderOidc(
-        List<String> allowedAudiences,
-        String issuerUri) {
-        this.allowedAudiences = Objects.requireNonNull(allowedAudiences, "expected parameter 'allowedAudiences' to be non-null");
-        this.issuerUri = Objects.requireNonNull(issuerUri, "expected parameter 'issuerUri' to be non-null");
-    }
+    private GetWorkloadIdentityPoolProviderOidc() {}
 
-    private GetWorkloadIdentityPoolProviderOidc() {
-        this.allowedAudiences = List.of();
-        this.issuerUri = null;
+    private GetWorkloadIdentityPoolProviderOidc(GetWorkloadIdentityPoolProviderOidc $) {
+        this.allowedAudiences = $.allowedAudiences;
+        this.issuerUri = $.issuerUri;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetWorkloadIdentityPoolProviderOidc defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<String> allowedAudiences;
-        private String issuerUri;
+        private GetWorkloadIdentityPoolProviderOidc $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetWorkloadIdentityPoolProviderOidc();
         }
 
         public Builder(GetWorkloadIdentityPoolProviderOidc defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.allowedAudiences = defaults.allowedAudiences;
-    	      this.issuerUri = defaults.issuerUri;
+            $ = new GetWorkloadIdentityPoolProviderOidc(Objects.requireNonNull(defaults));
         }
 
         public Builder allowedAudiences(List<String> allowedAudiences) {
-            this.allowedAudiences = Objects.requireNonNull(allowedAudiences);
+            $.allowedAudiences = allowedAudiences;
             return this;
         }
+
         public Builder allowedAudiences(String... allowedAudiences) {
             return allowedAudiences(List.of(allowedAudiences));
         }
+
         public Builder issuerUri(String issuerUri) {
-            this.issuerUri = Objects.requireNonNull(issuerUri);
+            $.issuerUri = issuerUri;
             return this;
-        }        public GetWorkloadIdentityPoolProviderOidc build() {
-            return new GetWorkloadIdentityPoolProviderOidc(allowedAudiences, issuerUri);
+        }
+
+        public GetWorkloadIdentityPoolProviderOidc build() {
+            $.allowedAudiences = Objects.requireNonNull($.allowedAudiences, "expected parameter 'allowedAudiences' to be non-null");
+            $.issuerUri = Objects.requireNonNull($.issuerUri, "expected parameter 'issuerUri' to be non-null");
+            return $;
         }
     }
+
 }

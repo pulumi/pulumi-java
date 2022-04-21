@@ -18,7 +18,7 @@ public final class GetImageVersionsImageVersion extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="imageVersionId", required=true)
-      private final String imageVersionId;
+    private String imageVersionId;
 
     public String imageVersionId() {
         return this.imageVersionId;
@@ -29,58 +29,56 @@ public final class GetImageVersionsImageVersion extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="supportedPythonVersions", required=true)
-      private final List<String> supportedPythonVersions;
+    private List<String> supportedPythonVersions;
 
     public List<String> supportedPythonVersions() {
         return this.supportedPythonVersions;
     }
 
-    public GetImageVersionsImageVersion(
-        String imageVersionId,
-        List<String> supportedPythonVersions) {
-        this.imageVersionId = Objects.requireNonNull(imageVersionId, "expected parameter 'imageVersionId' to be non-null");
-        this.supportedPythonVersions = Objects.requireNonNull(supportedPythonVersions, "expected parameter 'supportedPythonVersions' to be non-null");
-    }
+    private GetImageVersionsImageVersion() {}
 
-    private GetImageVersionsImageVersion() {
-        this.imageVersionId = null;
-        this.supportedPythonVersions = List.of();
+    private GetImageVersionsImageVersion(GetImageVersionsImageVersion $) {
+        this.imageVersionId = $.imageVersionId;
+        this.supportedPythonVersions = $.supportedPythonVersions;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetImageVersionsImageVersion defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String imageVersionId;
-        private List<String> supportedPythonVersions;
+        private GetImageVersionsImageVersion $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetImageVersionsImageVersion();
         }
 
         public Builder(GetImageVersionsImageVersion defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.imageVersionId = defaults.imageVersionId;
-    	      this.supportedPythonVersions = defaults.supportedPythonVersions;
+            $ = new GetImageVersionsImageVersion(Objects.requireNonNull(defaults));
         }
 
         public Builder imageVersionId(String imageVersionId) {
-            this.imageVersionId = Objects.requireNonNull(imageVersionId);
+            $.imageVersionId = imageVersionId;
             return this;
         }
+
         public Builder supportedPythonVersions(List<String> supportedPythonVersions) {
-            this.supportedPythonVersions = Objects.requireNonNull(supportedPythonVersions);
+            $.supportedPythonVersions = supportedPythonVersions;
             return this;
         }
+
         public Builder supportedPythonVersions(String... supportedPythonVersions) {
             return supportedPythonVersions(List.of(supportedPythonVersions));
-        }        public GetImageVersionsImageVersion build() {
-            return new GetImageVersionsImageVersion(imageVersionId, supportedPythonVersions);
+        }
+
+        public GetImageVersionsImageVersion build() {
+            $.imageVersionId = Objects.requireNonNull($.imageVersionId, "expected parameter 'imageVersionId' to be non-null");
+            $.supportedPythonVersions = Objects.requireNonNull($.supportedPythonVersions, "expected parameter 'supportedPythonVersions' to be non-null");
+            return $;
         }
     }
+
 }

@@ -21,45 +21,45 @@ public final class HorizontalPodAutoscalingResponse extends com.pulumi.resources
      * 
      */
     @Import(name="disabled", required=true)
-      private final Boolean disabled;
+    private Boolean disabled;
 
     public Boolean disabled() {
         return this.disabled;
     }
 
-    public HorizontalPodAutoscalingResponse(Boolean disabled) {
-        this.disabled = Objects.requireNonNull(disabled, "expected parameter 'disabled' to be non-null");
-    }
+    private HorizontalPodAutoscalingResponse() {}
 
-    private HorizontalPodAutoscalingResponse() {
-        this.disabled = null;
+    private HorizontalPodAutoscalingResponse(HorizontalPodAutoscalingResponse $) {
+        this.disabled = $.disabled;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(HorizontalPodAutoscalingResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Boolean disabled;
+        private HorizontalPodAutoscalingResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new HorizontalPodAutoscalingResponse();
         }
 
         public Builder(HorizontalPodAutoscalingResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.disabled = defaults.disabled;
+            $ = new HorizontalPodAutoscalingResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder disabled(Boolean disabled) {
-            this.disabled = Objects.requireNonNull(disabled);
+            $.disabled = disabled;
             return this;
-        }        public HorizontalPodAutoscalingResponse build() {
-            return new HorizontalPodAutoscalingResponse(disabled);
+        }
+
+        public HorizontalPodAutoscalingResponse build() {
+            $.disabled = Objects.requireNonNull($.disabled, "expected parameter 'disabled' to be non-null");
+            return $;
         }
     }
+
 }

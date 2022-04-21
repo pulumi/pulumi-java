@@ -27,10 +27,10 @@ public final class ClusterHealthPolicyResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="applicationHealthPolicies")
-      private final @Nullable Map<String,ApplicationHealthPolicyResponse> applicationHealthPolicies;
+    private @Nullable Map<String,ApplicationHealthPolicyResponse> applicationHealthPolicies;
 
-    public Map<String,ApplicationHealthPolicyResponse> applicationHealthPolicies() {
-        return this.applicationHealthPolicies == null ? Map.of() : this.applicationHealthPolicies;
+    public Optional<Map<String,ApplicationHealthPolicyResponse>> applicationHealthPolicies() {
+        return Optional.ofNullable(this.applicationHealthPolicies);
     }
 
     /**
@@ -43,10 +43,10 @@ public final class ClusterHealthPolicyResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="maxPercentUnhealthyApplications")
-      private final @Nullable Integer maxPercentUnhealthyApplications;
+    private @Nullable Integer maxPercentUnhealthyApplications;
 
     public Optional<Integer> maxPercentUnhealthyApplications() {
-        return this.maxPercentUnhealthyApplications == null ? Optional.empty() : Optional.ofNullable(this.maxPercentUnhealthyApplications);
+        return Optional.ofNullable(this.maxPercentUnhealthyApplications);
     }
 
     /**
@@ -61,64 +61,58 @@ public final class ClusterHealthPolicyResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="maxPercentUnhealthyNodes")
-      private final @Nullable Integer maxPercentUnhealthyNodes;
+    private @Nullable Integer maxPercentUnhealthyNodes;
 
     public Optional<Integer> maxPercentUnhealthyNodes() {
-        return this.maxPercentUnhealthyNodes == null ? Optional.empty() : Optional.ofNullable(this.maxPercentUnhealthyNodes);
+        return Optional.ofNullable(this.maxPercentUnhealthyNodes);
     }
 
-    public ClusterHealthPolicyResponse(
-        @Nullable Map<String,ApplicationHealthPolicyResponse> applicationHealthPolicies,
-        @Nullable Integer maxPercentUnhealthyApplications,
-        @Nullable Integer maxPercentUnhealthyNodes) {
-        this.applicationHealthPolicies = applicationHealthPolicies;
-        this.maxPercentUnhealthyApplications = Codegen.integerProp("maxPercentUnhealthyApplications").arg(maxPercentUnhealthyApplications).def(0).getNullable();
-        this.maxPercentUnhealthyNodes = Codegen.integerProp("maxPercentUnhealthyNodes").arg(maxPercentUnhealthyNodes).def(0).getNullable();
-    }
+    private ClusterHealthPolicyResponse() {}
 
-    private ClusterHealthPolicyResponse() {
-        this.applicationHealthPolicies = Map.of();
-        this.maxPercentUnhealthyApplications = null;
-        this.maxPercentUnhealthyNodes = null;
+    private ClusterHealthPolicyResponse(ClusterHealthPolicyResponse $) {
+        this.applicationHealthPolicies = $.applicationHealthPolicies;
+        this.maxPercentUnhealthyApplications = $.maxPercentUnhealthyApplications;
+        this.maxPercentUnhealthyNodes = $.maxPercentUnhealthyNodes;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ClusterHealthPolicyResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Map<String,ApplicationHealthPolicyResponse> applicationHealthPolicies;
-        private @Nullable Integer maxPercentUnhealthyApplications;
-        private @Nullable Integer maxPercentUnhealthyNodes;
+        private ClusterHealthPolicyResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ClusterHealthPolicyResponse();
         }
 
         public Builder(ClusterHealthPolicyResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.applicationHealthPolicies = defaults.applicationHealthPolicies;
-    	      this.maxPercentUnhealthyApplications = defaults.maxPercentUnhealthyApplications;
-    	      this.maxPercentUnhealthyNodes = defaults.maxPercentUnhealthyNodes;
+            $ = new ClusterHealthPolicyResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder applicationHealthPolicies(@Nullable Map<String,ApplicationHealthPolicyResponse> applicationHealthPolicies) {
-            this.applicationHealthPolicies = applicationHealthPolicies;
+            $.applicationHealthPolicies = applicationHealthPolicies;
             return this;
         }
+
         public Builder maxPercentUnhealthyApplications(@Nullable Integer maxPercentUnhealthyApplications) {
-            this.maxPercentUnhealthyApplications = maxPercentUnhealthyApplications;
+            $.maxPercentUnhealthyApplications = maxPercentUnhealthyApplications;
             return this;
         }
+
         public Builder maxPercentUnhealthyNodes(@Nullable Integer maxPercentUnhealthyNodes) {
-            this.maxPercentUnhealthyNodes = maxPercentUnhealthyNodes;
+            $.maxPercentUnhealthyNodes = maxPercentUnhealthyNodes;
             return this;
-        }        public ClusterHealthPolicyResponse build() {
-            return new ClusterHealthPolicyResponse(applicationHealthPolicies, maxPercentUnhealthyApplications, maxPercentUnhealthyNodes);
+        }
+
+        public ClusterHealthPolicyResponse build() {
+            $.maxPercentUnhealthyApplications = Codegen.integerProp("maxPercentUnhealthyApplications").arg($.maxPercentUnhealthyApplications).def(0).getNullable();
+            $.maxPercentUnhealthyNodes = Codegen.integerProp("maxPercentUnhealthyNodes").arg($.maxPercentUnhealthyNodes).def(0).getNullable();
+            return $;
         }
     }
+
 }

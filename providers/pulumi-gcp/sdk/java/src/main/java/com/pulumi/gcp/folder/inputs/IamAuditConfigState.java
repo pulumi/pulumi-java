@@ -5,11 +5,11 @@ package com.pulumi.gcp.folder.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.folder.inputs.IamAuditConfigAuditLogConfigGetArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class IamAuditConfigState extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="auditLogConfigs")
-      private final @Nullable Output<List<IamAuditConfigAuditLogConfigGetArgs>> auditLogConfigs;
+    private @Nullable Output<List<IamAuditConfigAuditLogConfigGetArgs>> auditLogConfigs;
 
-    public Output<List<IamAuditConfigAuditLogConfigGetArgs>> auditLogConfigs() {
-        return this.auditLogConfigs == null ? Codegen.empty() : this.auditLogConfigs;
+    public Optional<Output<List<IamAuditConfigAuditLogConfigGetArgs>>> auditLogConfigs() {
+        return Optional.ofNullable(this.auditLogConfigs);
     }
 
     /**
@@ -33,17 +33,17 @@ public final class IamAuditConfigState extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="etag")
-      private final @Nullable Output<String> etag;
+    private @Nullable Output<String> etag;
 
-    public Output<String> etag() {
-        return this.etag == null ? Codegen.empty() : this.etag;
+    public Optional<Output<String>> etag() {
+        return Optional.ofNullable(this.etag);
     }
 
     @Import(name="folder")
-      private final @Nullable Output<String> folder;
+    private @Nullable Output<String> folder;
 
-    public Output<String> folder() {
-        return this.folder == null ? Codegen.empty() : this.folder;
+    public Optional<Output<String>> folder() {
+        return Optional.ofNullable(this.folder);
     }
 
     /**
@@ -51,92 +51,82 @@ public final class IamAuditConfigState extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="service")
-      private final @Nullable Output<String> service;
+    private @Nullable Output<String> service;
 
-    public Output<String> service() {
-        return this.service == null ? Codegen.empty() : this.service;
+    public Optional<Output<String>> service() {
+        return Optional.ofNullable(this.service);
     }
 
-    public IamAuditConfigState(
-        @Nullable Output<List<IamAuditConfigAuditLogConfigGetArgs>> auditLogConfigs,
-        @Nullable Output<String> etag,
-        @Nullable Output<String> folder,
-        @Nullable Output<String> service) {
-        this.auditLogConfigs = auditLogConfigs;
-        this.etag = etag;
-        this.folder = folder;
-        this.service = service;
-    }
+    private IamAuditConfigState() {}
 
-    private IamAuditConfigState() {
-        this.auditLogConfigs = Codegen.empty();
-        this.etag = Codegen.empty();
-        this.folder = Codegen.empty();
-        this.service = Codegen.empty();
+    private IamAuditConfigState(IamAuditConfigState $) {
+        this.auditLogConfigs = $.auditLogConfigs;
+        this.etag = $.etag;
+        this.folder = $.folder;
+        this.service = $.service;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(IamAuditConfigState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<IamAuditConfigAuditLogConfigGetArgs>> auditLogConfigs;
-        private @Nullable Output<String> etag;
-        private @Nullable Output<String> folder;
-        private @Nullable Output<String> service;
+        private IamAuditConfigState $;
 
         public Builder() {
-    	      // Empty
+            $ = new IamAuditConfigState();
         }
 
         public Builder(IamAuditConfigState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.auditLogConfigs = defaults.auditLogConfigs;
-    	      this.etag = defaults.etag;
-    	      this.folder = defaults.folder;
-    	      this.service = defaults.service;
+            $ = new IamAuditConfigState(Objects.requireNonNull(defaults));
         }
 
         public Builder auditLogConfigs(@Nullable Output<List<IamAuditConfigAuditLogConfigGetArgs>> auditLogConfigs) {
-            this.auditLogConfigs = auditLogConfigs;
+            $.auditLogConfigs = auditLogConfigs;
             return this;
         }
-        public Builder auditLogConfigs(@Nullable List<IamAuditConfigAuditLogConfigGetArgs> auditLogConfigs) {
-            this.auditLogConfigs = Codegen.ofNullable(auditLogConfigs);
-            return this;
+
+        public Builder auditLogConfigs(List<IamAuditConfigAuditLogConfigGetArgs> auditLogConfigs) {
+            return auditLogConfigs(Output.of(auditLogConfigs));
         }
+
         public Builder auditLogConfigs(IamAuditConfigAuditLogConfigGetArgs... auditLogConfigs) {
             return auditLogConfigs(List.of(auditLogConfigs));
         }
+
         public Builder etag(@Nullable Output<String> etag) {
-            this.etag = etag;
+            $.etag = etag;
             return this;
         }
-        public Builder etag(@Nullable String etag) {
-            this.etag = Codegen.ofNullable(etag);
-            return this;
+
+        public Builder etag(String etag) {
+            return etag(Output.of(etag));
         }
+
         public Builder folder(@Nullable Output<String> folder) {
-            this.folder = folder;
+            $.folder = folder;
             return this;
         }
-        public Builder folder(@Nullable String folder) {
-            this.folder = Codegen.ofNullable(folder);
-            return this;
+
+        public Builder folder(String folder) {
+            return folder(Output.of(folder));
         }
+
         public Builder service(@Nullable Output<String> service) {
-            this.service = service;
+            $.service = service;
             return this;
         }
-        public Builder service(@Nullable String service) {
-            this.service = Codegen.ofNullable(service);
-            return this;
-        }        public IamAuditConfigState build() {
-            return new IamAuditConfigState(auditLogConfigs, etag, folder, service);
+
+        public Builder service(String service) {
+            return service(Output.of(service));
+        }
+
+        public IamAuditConfigState build() {
+            return $;
         }
     }
+
 }

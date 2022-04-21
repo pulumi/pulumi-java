@@ -22,48 +22,49 @@ public final class FilterTrackSelectionResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="trackSelections", required=true)
-      private final List<FilterTrackPropertyConditionResponse> trackSelections;
+    private List<FilterTrackPropertyConditionResponse> trackSelections;
 
     public List<FilterTrackPropertyConditionResponse> trackSelections() {
         return this.trackSelections;
     }
 
-    public FilterTrackSelectionResponse(List<FilterTrackPropertyConditionResponse> trackSelections) {
-        this.trackSelections = Objects.requireNonNull(trackSelections, "expected parameter 'trackSelections' to be non-null");
-    }
+    private FilterTrackSelectionResponse() {}
 
-    private FilterTrackSelectionResponse() {
-        this.trackSelections = List.of();
+    private FilterTrackSelectionResponse(FilterTrackSelectionResponse $) {
+        this.trackSelections = $.trackSelections;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FilterTrackSelectionResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<FilterTrackPropertyConditionResponse> trackSelections;
+        private FilterTrackSelectionResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new FilterTrackSelectionResponse();
         }
 
         public Builder(FilterTrackSelectionResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.trackSelections = defaults.trackSelections;
+            $ = new FilterTrackSelectionResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder trackSelections(List<FilterTrackPropertyConditionResponse> trackSelections) {
-            this.trackSelections = Objects.requireNonNull(trackSelections);
+            $.trackSelections = trackSelections;
             return this;
         }
+
         public Builder trackSelections(FilterTrackPropertyConditionResponse... trackSelections) {
             return trackSelections(List.of(trackSelections));
-        }        public FilterTrackSelectionResponse build() {
-            return new FilterTrackSelectionResponse(trackSelections);
+        }
+
+        public FilterTrackSelectionResponse build() {
+            $.trackSelections = Objects.requireNonNull($.trackSelections, "expected parameter 'trackSelections' to be non-null");
+            return $;
         }
     }
+
 }

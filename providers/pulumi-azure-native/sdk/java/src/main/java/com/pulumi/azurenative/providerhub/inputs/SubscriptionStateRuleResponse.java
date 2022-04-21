@@ -16,65 +16,61 @@ public final class SubscriptionStateRuleResponse extends com.pulumi.resources.In
     public static final SubscriptionStateRuleResponse Empty = new SubscriptionStateRuleResponse();
 
     @Import(name="allowedActions")
-      private final @Nullable List<String> allowedActions;
+    private @Nullable List<String> allowedActions;
 
-    public List<String> allowedActions() {
-        return this.allowedActions == null ? List.of() : this.allowedActions;
+    public Optional<List<String>> allowedActions() {
+        return Optional.ofNullable(this.allowedActions);
     }
 
     @Import(name="state")
-      private final @Nullable String state;
+    private @Nullable String state;
 
     public Optional<String> state() {
-        return this.state == null ? Optional.empty() : Optional.ofNullable(this.state);
+        return Optional.ofNullable(this.state);
     }
 
-    public SubscriptionStateRuleResponse(
-        @Nullable List<String> allowedActions,
-        @Nullable String state) {
-        this.allowedActions = allowedActions;
-        this.state = state;
-    }
+    private SubscriptionStateRuleResponse() {}
 
-    private SubscriptionStateRuleResponse() {
-        this.allowedActions = List.of();
-        this.state = null;
+    private SubscriptionStateRuleResponse(SubscriptionStateRuleResponse $) {
+        this.allowedActions = $.allowedActions;
+        this.state = $.state;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SubscriptionStateRuleResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<String> allowedActions;
-        private @Nullable String state;
+        private SubscriptionStateRuleResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new SubscriptionStateRuleResponse();
         }
 
         public Builder(SubscriptionStateRuleResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.allowedActions = defaults.allowedActions;
-    	      this.state = defaults.state;
+            $ = new SubscriptionStateRuleResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder allowedActions(@Nullable List<String> allowedActions) {
-            this.allowedActions = allowedActions;
+            $.allowedActions = allowedActions;
             return this;
         }
+
         public Builder allowedActions(String... allowedActions) {
             return allowedActions(List.of(allowedActions));
         }
+
         public Builder state(@Nullable String state) {
-            this.state = state;
+            $.state = state;
             return this;
-        }        public SubscriptionStateRuleResponse build() {
-            return new SubscriptionStateRuleResponse(allowedActions, state);
+        }
+
+        public SubscriptionStateRuleResponse build() {
+            return $;
         }
     }
+
 }

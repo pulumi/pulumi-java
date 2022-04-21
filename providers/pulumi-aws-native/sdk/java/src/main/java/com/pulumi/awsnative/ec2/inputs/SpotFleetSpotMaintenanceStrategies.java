@@ -15,45 +15,44 @@ public final class SpotFleetSpotMaintenanceStrategies extends com.pulumi.resourc
     public static final SpotFleetSpotMaintenanceStrategies Empty = new SpotFleetSpotMaintenanceStrategies();
 
     @Import(name="capacityRebalance")
-      private final @Nullable SpotFleetSpotCapacityRebalance capacityRebalance;
+    private @Nullable SpotFleetSpotCapacityRebalance capacityRebalance;
 
     public Optional<SpotFleetSpotCapacityRebalance> capacityRebalance() {
-        return this.capacityRebalance == null ? Optional.empty() : Optional.ofNullable(this.capacityRebalance);
+        return Optional.ofNullable(this.capacityRebalance);
     }
 
-    public SpotFleetSpotMaintenanceStrategies(@Nullable SpotFleetSpotCapacityRebalance capacityRebalance) {
-        this.capacityRebalance = capacityRebalance;
-    }
+    private SpotFleetSpotMaintenanceStrategies() {}
 
-    private SpotFleetSpotMaintenanceStrategies() {
-        this.capacityRebalance = null;
+    private SpotFleetSpotMaintenanceStrategies(SpotFleetSpotMaintenanceStrategies $) {
+        this.capacityRebalance = $.capacityRebalance;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SpotFleetSpotMaintenanceStrategies defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable SpotFleetSpotCapacityRebalance capacityRebalance;
+        private SpotFleetSpotMaintenanceStrategies $;
 
         public Builder() {
-    	      // Empty
+            $ = new SpotFleetSpotMaintenanceStrategies();
         }
 
         public Builder(SpotFleetSpotMaintenanceStrategies defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.capacityRebalance = defaults.capacityRebalance;
+            $ = new SpotFleetSpotMaintenanceStrategies(Objects.requireNonNull(defaults));
         }
 
         public Builder capacityRebalance(@Nullable SpotFleetSpotCapacityRebalance capacityRebalance) {
-            this.capacityRebalance = capacityRebalance;
+            $.capacityRebalance = capacityRebalance;
             return this;
-        }        public SpotFleetSpotMaintenanceStrategies build() {
-            return new SpotFleetSpotMaintenanceStrategies(capacityRebalance);
+        }
+
+        public SpotFleetSpotMaintenanceStrategies build() {
+            return $;
         }
     }
+
 }

@@ -24,10 +24,10 @@ public final class StackSetDeploymentTargets extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="accounts")
-      private final @Nullable List<String> accounts;
+    private @Nullable List<String> accounts;
 
-    public List<String> accounts() {
-        return this.accounts == null ? List.of() : this.accounts;
+    public Optional<List<String>> accounts() {
+        return Optional.ofNullable(this.accounts);
     }
 
     /**
@@ -35,61 +35,58 @@ public final class StackSetDeploymentTargets extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="organizationalUnitIds")
-      private final @Nullable List<String> organizationalUnitIds;
+    private @Nullable List<String> organizationalUnitIds;
 
-    public List<String> organizationalUnitIds() {
-        return this.organizationalUnitIds == null ? List.of() : this.organizationalUnitIds;
+    public Optional<List<String>> organizationalUnitIds() {
+        return Optional.ofNullable(this.organizationalUnitIds);
     }
 
-    public StackSetDeploymentTargets(
-        @Nullable List<String> accounts,
-        @Nullable List<String> organizationalUnitIds) {
-        this.accounts = accounts;
-        this.organizationalUnitIds = organizationalUnitIds;
-    }
+    private StackSetDeploymentTargets() {}
 
-    private StackSetDeploymentTargets() {
-        this.accounts = List.of();
-        this.organizationalUnitIds = List.of();
+    private StackSetDeploymentTargets(StackSetDeploymentTargets $) {
+        this.accounts = $.accounts;
+        this.organizationalUnitIds = $.organizationalUnitIds;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(StackSetDeploymentTargets defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<String> accounts;
-        private @Nullable List<String> organizationalUnitIds;
+        private StackSetDeploymentTargets $;
 
         public Builder() {
-    	      // Empty
+            $ = new StackSetDeploymentTargets();
         }
 
         public Builder(StackSetDeploymentTargets defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accounts = defaults.accounts;
-    	      this.organizationalUnitIds = defaults.organizationalUnitIds;
+            $ = new StackSetDeploymentTargets(Objects.requireNonNull(defaults));
         }
 
         public Builder accounts(@Nullable List<String> accounts) {
-            this.accounts = accounts;
+            $.accounts = accounts;
             return this;
         }
+
         public Builder accounts(String... accounts) {
             return accounts(List.of(accounts));
         }
+
         public Builder organizationalUnitIds(@Nullable List<String> organizationalUnitIds) {
-            this.organizationalUnitIds = organizationalUnitIds;
+            $.organizationalUnitIds = organizationalUnitIds;
             return this;
         }
+
         public Builder organizationalUnitIds(String... organizationalUnitIds) {
             return organizationalUnitIds(List.of(organizationalUnitIds));
-        }        public StackSetDeploymentTargets build() {
-            return new StackSetDeploymentTargets(accounts, organizationalUnitIds);
+        }
+
+        public StackSetDeploymentTargets build() {
+            return $;
         }
     }
+
 }

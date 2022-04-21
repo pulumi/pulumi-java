@@ -5,10 +5,10 @@ package com.pulumi.azurenative.network.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class DnsConfigArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="relativeName")
-      private final @Nullable Output<String> relativeName;
+    private @Nullable Output<String> relativeName;
 
-    public Output<String> relativeName() {
-        return this.relativeName == null ? Codegen.empty() : this.relativeName;
+    public Optional<Output<String>> relativeName() {
+        return Optional.ofNullable(this.relativeName);
     }
 
     /**
@@ -36,63 +36,58 @@ public final class DnsConfigArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="ttl")
-      private final @Nullable Output<Double> ttl;
+    private @Nullable Output<Double> ttl;
 
-    public Output<Double> ttl() {
-        return this.ttl == null ? Codegen.empty() : this.ttl;
+    public Optional<Output<Double>> ttl() {
+        return Optional.ofNullable(this.ttl);
     }
 
-    public DnsConfigArgs(
-        @Nullable Output<String> relativeName,
-        @Nullable Output<Double> ttl) {
-        this.relativeName = relativeName;
-        this.ttl = ttl;
-    }
+    private DnsConfigArgs() {}
 
-    private DnsConfigArgs() {
-        this.relativeName = Codegen.empty();
-        this.ttl = Codegen.empty();
+    private DnsConfigArgs(DnsConfigArgs $) {
+        this.relativeName = $.relativeName;
+        this.ttl = $.ttl;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DnsConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> relativeName;
-        private @Nullable Output<Double> ttl;
+        private DnsConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DnsConfigArgs();
         }
 
         public Builder(DnsConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.relativeName = defaults.relativeName;
-    	      this.ttl = defaults.ttl;
+            $ = new DnsConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder relativeName(@Nullable Output<String> relativeName) {
-            this.relativeName = relativeName;
+            $.relativeName = relativeName;
             return this;
         }
-        public Builder relativeName(@Nullable String relativeName) {
-            this.relativeName = Codegen.ofNullable(relativeName);
-            return this;
+
+        public Builder relativeName(String relativeName) {
+            return relativeName(Output.of(relativeName));
         }
+
         public Builder ttl(@Nullable Output<Double> ttl) {
-            this.ttl = ttl;
+            $.ttl = ttl;
             return this;
         }
-        public Builder ttl(@Nullable Double ttl) {
-            this.ttl = Codegen.ofNullable(ttl);
-            return this;
-        }        public DnsConfigArgs build() {
-            return new DnsConfigArgs(relativeName, ttl);
+
+        public Builder ttl(Double ttl) {
+            return ttl(Output.of(ttl));
+        }
+
+        public DnsConfigArgs build() {
+            return $;
         }
     }
+
 }

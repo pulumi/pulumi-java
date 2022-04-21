@@ -5,9 +5,9 @@ package com.pulumi.azurenative.synapse.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class LibraryRequirementsArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="content")
-      private final @Nullable Output<String> content;
+    private @Nullable Output<String> content;
 
-    public Output<String> content() {
-        return this.content == null ? Codegen.empty() : this.content;
+    public Optional<Output<String>> content() {
+        return Optional.ofNullable(this.content);
     }
 
     /**
@@ -35,63 +35,58 @@ public final class LibraryRequirementsArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="filename")
-      private final @Nullable Output<String> filename;
+    private @Nullable Output<String> filename;
 
-    public Output<String> filename() {
-        return this.filename == null ? Codegen.empty() : this.filename;
+    public Optional<Output<String>> filename() {
+        return Optional.ofNullable(this.filename);
     }
 
-    public LibraryRequirementsArgs(
-        @Nullable Output<String> content,
-        @Nullable Output<String> filename) {
-        this.content = content;
-        this.filename = filename;
-    }
+    private LibraryRequirementsArgs() {}
 
-    private LibraryRequirementsArgs() {
-        this.content = Codegen.empty();
-        this.filename = Codegen.empty();
+    private LibraryRequirementsArgs(LibraryRequirementsArgs $) {
+        this.content = $.content;
+        this.filename = $.filename;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LibraryRequirementsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> content;
-        private @Nullable Output<String> filename;
+        private LibraryRequirementsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new LibraryRequirementsArgs();
         }
 
         public Builder(LibraryRequirementsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.content = defaults.content;
-    	      this.filename = defaults.filename;
+            $ = new LibraryRequirementsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder content(@Nullable Output<String> content) {
-            this.content = content;
+            $.content = content;
             return this;
         }
-        public Builder content(@Nullable String content) {
-            this.content = Codegen.ofNullable(content);
-            return this;
+
+        public Builder content(String content) {
+            return content(Output.of(content));
         }
+
         public Builder filename(@Nullable Output<String> filename) {
-            this.filename = filename;
+            $.filename = filename;
             return this;
         }
-        public Builder filename(@Nullable String filename) {
-            this.filename = Codegen.ofNullable(filename);
-            return this;
-        }        public LibraryRequirementsArgs build() {
-            return new LibraryRequirementsArgs(content, filename);
+
+        public Builder filename(String filename) {
+            return filename(Output.of(filename));
+        }
+
+        public LibraryRequirementsArgs build() {
+            return $;
         }
     }
+
 }

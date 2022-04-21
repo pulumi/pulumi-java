@@ -5,9 +5,9 @@ package com.pulumi.azurenative.recoveryservices.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class DiskEncryptionKeyInfoArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="keyVaultResourceArmId")
-      private final @Nullable Output<String> keyVaultResourceArmId;
+    private @Nullable Output<String> keyVaultResourceArmId;
 
-    public Output<String> keyVaultResourceArmId() {
-        return this.keyVaultResourceArmId == null ? Codegen.empty() : this.keyVaultResourceArmId;
+    public Optional<Output<String>> keyVaultResourceArmId() {
+        return Optional.ofNullable(this.keyVaultResourceArmId);
     }
 
     /**
@@ -35,63 +35,58 @@ public final class DiskEncryptionKeyInfoArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="secretIdentifier")
-      private final @Nullable Output<String> secretIdentifier;
+    private @Nullable Output<String> secretIdentifier;
 
-    public Output<String> secretIdentifier() {
-        return this.secretIdentifier == null ? Codegen.empty() : this.secretIdentifier;
+    public Optional<Output<String>> secretIdentifier() {
+        return Optional.ofNullable(this.secretIdentifier);
     }
 
-    public DiskEncryptionKeyInfoArgs(
-        @Nullable Output<String> keyVaultResourceArmId,
-        @Nullable Output<String> secretIdentifier) {
-        this.keyVaultResourceArmId = keyVaultResourceArmId;
-        this.secretIdentifier = secretIdentifier;
-    }
+    private DiskEncryptionKeyInfoArgs() {}
 
-    private DiskEncryptionKeyInfoArgs() {
-        this.keyVaultResourceArmId = Codegen.empty();
-        this.secretIdentifier = Codegen.empty();
+    private DiskEncryptionKeyInfoArgs(DiskEncryptionKeyInfoArgs $) {
+        this.keyVaultResourceArmId = $.keyVaultResourceArmId;
+        this.secretIdentifier = $.secretIdentifier;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DiskEncryptionKeyInfoArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> keyVaultResourceArmId;
-        private @Nullable Output<String> secretIdentifier;
+        private DiskEncryptionKeyInfoArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DiskEncryptionKeyInfoArgs();
         }
 
         public Builder(DiskEncryptionKeyInfoArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.keyVaultResourceArmId = defaults.keyVaultResourceArmId;
-    	      this.secretIdentifier = defaults.secretIdentifier;
+            $ = new DiskEncryptionKeyInfoArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder keyVaultResourceArmId(@Nullable Output<String> keyVaultResourceArmId) {
-            this.keyVaultResourceArmId = keyVaultResourceArmId;
+            $.keyVaultResourceArmId = keyVaultResourceArmId;
             return this;
         }
-        public Builder keyVaultResourceArmId(@Nullable String keyVaultResourceArmId) {
-            this.keyVaultResourceArmId = Codegen.ofNullable(keyVaultResourceArmId);
-            return this;
+
+        public Builder keyVaultResourceArmId(String keyVaultResourceArmId) {
+            return keyVaultResourceArmId(Output.of(keyVaultResourceArmId));
         }
+
         public Builder secretIdentifier(@Nullable Output<String> secretIdentifier) {
-            this.secretIdentifier = secretIdentifier;
+            $.secretIdentifier = secretIdentifier;
             return this;
         }
-        public Builder secretIdentifier(@Nullable String secretIdentifier) {
-            this.secretIdentifier = Codegen.ofNullable(secretIdentifier);
-            return this;
-        }        public DiskEncryptionKeyInfoArgs build() {
-            return new DiskEncryptionKeyInfoArgs(keyVaultResourceArmId, secretIdentifier);
+
+        public Builder secretIdentifier(String secretIdentifier) {
+            return secretIdentifier(Output.of(secretIdentifier));
+        }
+
+        public DiskEncryptionKeyInfoArgs build() {
+            return $;
         }
     }
+
 }

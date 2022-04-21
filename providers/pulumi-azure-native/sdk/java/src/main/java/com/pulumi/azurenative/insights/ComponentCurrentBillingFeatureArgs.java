@@ -6,10 +6,10 @@ package com.pulumi.azurenative.insights;
 import com.pulumi.azurenative.insights.inputs.ApplicationInsightsComponentDataVolumeCapArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class ComponentCurrentBillingFeatureArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="currentBillingFeatures")
-      private final @Nullable Output<List<String>> currentBillingFeatures;
+    private @Nullable Output<List<String>> currentBillingFeatures;
 
-    public Output<List<String>> currentBillingFeatures() {
-        return this.currentBillingFeatures == null ? Codegen.empty() : this.currentBillingFeatures;
+    public Optional<Output<List<String>>> currentBillingFeatures() {
+        return Optional.ofNullable(this.currentBillingFeatures);
     }
 
     /**
@@ -33,10 +33,10 @@ public final class ComponentCurrentBillingFeatureArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="dataVolumeCap")
-      private final @Nullable Output<ApplicationInsightsComponentDataVolumeCapArgs> dataVolumeCap;
+    private @Nullable Output<ApplicationInsightsComponentDataVolumeCapArgs> dataVolumeCap;
 
-    public Output<ApplicationInsightsComponentDataVolumeCapArgs> dataVolumeCap() {
-        return this.dataVolumeCap == null ? Codegen.empty() : this.dataVolumeCap;
+    public Optional<Output<ApplicationInsightsComponentDataVolumeCapArgs>> dataVolumeCap() {
+        return Optional.ofNullable(this.dataVolumeCap);
     }
 
     /**
@@ -44,7 +44,7 @@ public final class ComponentCurrentBillingFeatureArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -55,92 +55,84 @@ public final class ComponentCurrentBillingFeatureArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="resourceName", required=true)
-      private final Output<String> resourceName;
+    private Output<String> resourceName;
 
     public Output<String> resourceName() {
         return this.resourceName;
     }
 
-    public ComponentCurrentBillingFeatureArgs(
-        @Nullable Output<List<String>> currentBillingFeatures,
-        @Nullable Output<ApplicationInsightsComponentDataVolumeCapArgs> dataVolumeCap,
-        Output<String> resourceGroupName,
-        Output<String> resourceName) {
-        this.currentBillingFeatures = currentBillingFeatures;
-        this.dataVolumeCap = dataVolumeCap;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.resourceName = Objects.requireNonNull(resourceName, "expected parameter 'resourceName' to be non-null");
-    }
+    private ComponentCurrentBillingFeatureArgs() {}
 
-    private ComponentCurrentBillingFeatureArgs() {
-        this.currentBillingFeatures = Codegen.empty();
-        this.dataVolumeCap = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.resourceName = Codegen.empty();
+    private ComponentCurrentBillingFeatureArgs(ComponentCurrentBillingFeatureArgs $) {
+        this.currentBillingFeatures = $.currentBillingFeatures;
+        this.dataVolumeCap = $.dataVolumeCap;
+        this.resourceGroupName = $.resourceGroupName;
+        this.resourceName = $.resourceName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ComponentCurrentBillingFeatureArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> currentBillingFeatures;
-        private @Nullable Output<ApplicationInsightsComponentDataVolumeCapArgs> dataVolumeCap;
-        private Output<String> resourceGroupName;
-        private Output<String> resourceName;
+        private ComponentCurrentBillingFeatureArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ComponentCurrentBillingFeatureArgs();
         }
 
         public Builder(ComponentCurrentBillingFeatureArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.currentBillingFeatures = defaults.currentBillingFeatures;
-    	      this.dataVolumeCap = defaults.dataVolumeCap;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.resourceName = defaults.resourceName;
+            $ = new ComponentCurrentBillingFeatureArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder currentBillingFeatures(@Nullable Output<List<String>> currentBillingFeatures) {
-            this.currentBillingFeatures = currentBillingFeatures;
+            $.currentBillingFeatures = currentBillingFeatures;
             return this;
         }
-        public Builder currentBillingFeatures(@Nullable List<String> currentBillingFeatures) {
-            this.currentBillingFeatures = Codegen.ofNullable(currentBillingFeatures);
-            return this;
+
+        public Builder currentBillingFeatures(List<String> currentBillingFeatures) {
+            return currentBillingFeatures(Output.of(currentBillingFeatures));
         }
+
         public Builder currentBillingFeatures(String... currentBillingFeatures) {
             return currentBillingFeatures(List.of(currentBillingFeatures));
         }
+
         public Builder dataVolumeCap(@Nullable Output<ApplicationInsightsComponentDataVolumeCapArgs> dataVolumeCap) {
-            this.dataVolumeCap = dataVolumeCap;
+            $.dataVolumeCap = dataVolumeCap;
             return this;
         }
-        public Builder dataVolumeCap(@Nullable ApplicationInsightsComponentDataVolumeCapArgs dataVolumeCap) {
-            this.dataVolumeCap = Codegen.ofNullable(dataVolumeCap);
-            return this;
+
+        public Builder dataVolumeCap(ApplicationInsightsComponentDataVolumeCapArgs dataVolumeCap) {
+            return dataVolumeCap(Output.of(dataVolumeCap));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder resourceName(Output<String> resourceName) {
-            this.resourceName = Objects.requireNonNull(resourceName);
+            $.resourceName = resourceName;
             return this;
         }
+
         public Builder resourceName(String resourceName) {
-            this.resourceName = Output.of(Objects.requireNonNull(resourceName));
-            return this;
-        }        public ComponentCurrentBillingFeatureArgs build() {
-            return new ComponentCurrentBillingFeatureArgs(currentBillingFeatures, dataVolumeCap, resourceGroupName, resourceName);
+            return resourceName(Output.of(resourceName));
+        }
+
+        public ComponentCurrentBillingFeatureArgs build() {
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.resourceName = Objects.requireNonNull($.resourceName, "expected parameter 'resourceName' to be non-null");
+            return $;
         }
     }
+
 }

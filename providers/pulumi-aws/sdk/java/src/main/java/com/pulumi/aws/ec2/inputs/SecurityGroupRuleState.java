@@ -7,12 +7,12 @@ import com.pulumi.aws.ec2.enums.ProtocolType;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class SecurityGroupRuleState extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="cidrBlocks")
-      private final @Nullable Output<List<String>> cidrBlocks;
+    private @Nullable Output<List<String>> cidrBlocks;
 
-    public Output<List<String>> cidrBlocks() {
-        return this.cidrBlocks == null ? Codegen.empty() : this.cidrBlocks;
+    public Optional<Output<List<String>>> cidrBlocks() {
+        return Optional.ofNullable(this.cidrBlocks);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class SecurityGroupRuleState extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class SecurityGroupRuleState extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="fromPort")
-      private final @Nullable Output<Integer> fromPort;
+    private @Nullable Output<Integer> fromPort;
 
-    public Output<Integer> fromPort() {
-        return this.fromPort == null ? Codegen.empty() : this.fromPort;
+    public Optional<Output<Integer>> fromPort() {
+        return Optional.ofNullable(this.fromPort);
     }
 
     /**
@@ -58,10 +58,10 @@ public final class SecurityGroupRuleState extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="ipv6CidrBlocks")
-      private final @Nullable Output<List<String>> ipv6CidrBlocks;
+    private @Nullable Output<List<String>> ipv6CidrBlocks;
 
-    public Output<List<String>> ipv6CidrBlocks() {
-        return this.ipv6CidrBlocks == null ? Codegen.empty() : this.ipv6CidrBlocks;
+    public Optional<Output<List<String>>> ipv6CidrBlocks() {
+        return Optional.ofNullable(this.ipv6CidrBlocks);
     }
 
     /**
@@ -69,10 +69,10 @@ public final class SecurityGroupRuleState extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="prefixListIds")
-      private final @Nullable Output<List<String>> prefixListIds;
+    private @Nullable Output<List<String>> prefixListIds;
 
-    public Output<List<String>> prefixListIds() {
-        return this.prefixListIds == null ? Codegen.empty() : this.prefixListIds;
+    public Optional<Output<List<String>>> prefixListIds() {
+        return Optional.ofNullable(this.prefixListIds);
     }
 
     /**
@@ -80,10 +80,10 @@ public final class SecurityGroupRuleState extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="protocol")
-      private final @Nullable Output<Either<String,ProtocolType>> protocol;
+    private @Nullable Output<Either<String,ProtocolType>> protocol;
 
-    public Output<Either<String,ProtocolType>> protocol() {
-        return this.protocol == null ? Codegen.empty() : this.protocol;
+    public Optional<Output<Either<String,ProtocolType>>> protocol() {
+        return Optional.ofNullable(this.protocol);
     }
 
     /**
@@ -91,10 +91,10 @@ public final class SecurityGroupRuleState extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="securityGroupId")
-      private final @Nullable Output<String> securityGroupId;
+    private @Nullable Output<String> securityGroupId;
 
-    public Output<String> securityGroupId() {
-        return this.securityGroupId == null ? Codegen.empty() : this.securityGroupId;
+    public Optional<Output<String>> securityGroupId() {
+        return Optional.ofNullable(this.securityGroupId);
     }
 
     /**
@@ -102,10 +102,10 @@ public final class SecurityGroupRuleState extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="self")
-      private final @Nullable Output<Boolean> self;
+    private @Nullable Output<Boolean> self;
 
-    public Output<Boolean> self() {
-        return this.self == null ? Codegen.empty() : this.self;
+    public Optional<Output<Boolean>> self() {
+        return Optional.ofNullable(this.self);
     }
 
     /**
@@ -113,10 +113,10 @@ public final class SecurityGroupRuleState extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="sourceSecurityGroupId")
-      private final @Nullable Output<String> sourceSecurityGroupId;
+    private @Nullable Output<String> sourceSecurityGroupId;
 
-    public Output<String> sourceSecurityGroupId() {
-        return this.sourceSecurityGroupId == null ? Codegen.empty() : this.sourceSecurityGroupId;
+    public Optional<Output<String>> sourceSecurityGroupId() {
+        return Optional.ofNullable(this.sourceSecurityGroupId);
     }
 
     /**
@@ -124,10 +124,10 @@ public final class SecurityGroupRuleState extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="toPort")
-      private final @Nullable Output<Integer> toPort;
+    private @Nullable Output<Integer> toPort;
 
-    public Output<Integer> toPort() {
-        return this.toPort == null ? Codegen.empty() : this.toPort;
+    public Optional<Output<Integer>> toPort() {
+        return Optional.ofNullable(this.toPort);
     }
 
     /**
@@ -136,189 +136,160 @@ public final class SecurityGroupRuleState extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="type")
-      private final @Nullable Output<String> type;
+    private @Nullable Output<String> type;
 
-    public Output<String> type() {
-        return this.type == null ? Codegen.empty() : this.type;
+    public Optional<Output<String>> type() {
+        return Optional.ofNullable(this.type);
     }
 
-    public SecurityGroupRuleState(
-        @Nullable Output<List<String>> cidrBlocks,
-        @Nullable Output<String> description,
-        @Nullable Output<Integer> fromPort,
-        @Nullable Output<List<String>> ipv6CidrBlocks,
-        @Nullable Output<List<String>> prefixListIds,
-        @Nullable Output<Either<String,ProtocolType>> protocol,
-        @Nullable Output<String> securityGroupId,
-        @Nullable Output<Boolean> self,
-        @Nullable Output<String> sourceSecurityGroupId,
-        @Nullable Output<Integer> toPort,
-        @Nullable Output<String> type) {
-        this.cidrBlocks = cidrBlocks;
-        this.description = description;
-        this.fromPort = fromPort;
-        this.ipv6CidrBlocks = ipv6CidrBlocks;
-        this.prefixListIds = prefixListIds;
-        this.protocol = protocol;
-        this.securityGroupId = securityGroupId;
-        this.self = self;
-        this.sourceSecurityGroupId = sourceSecurityGroupId;
-        this.toPort = toPort;
-        this.type = type;
-    }
+    private SecurityGroupRuleState() {}
 
-    private SecurityGroupRuleState() {
-        this.cidrBlocks = Codegen.empty();
-        this.description = Codegen.empty();
-        this.fromPort = Codegen.empty();
-        this.ipv6CidrBlocks = Codegen.empty();
-        this.prefixListIds = Codegen.empty();
-        this.protocol = Codegen.empty();
-        this.securityGroupId = Codegen.empty();
-        this.self = Codegen.empty();
-        this.sourceSecurityGroupId = Codegen.empty();
-        this.toPort = Codegen.empty();
-        this.type = Codegen.empty();
+    private SecurityGroupRuleState(SecurityGroupRuleState $) {
+        this.cidrBlocks = $.cidrBlocks;
+        this.description = $.description;
+        this.fromPort = $.fromPort;
+        this.ipv6CidrBlocks = $.ipv6CidrBlocks;
+        this.prefixListIds = $.prefixListIds;
+        this.protocol = $.protocol;
+        this.securityGroupId = $.securityGroupId;
+        this.self = $.self;
+        this.sourceSecurityGroupId = $.sourceSecurityGroupId;
+        this.toPort = $.toPort;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SecurityGroupRuleState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> cidrBlocks;
-        private @Nullable Output<String> description;
-        private @Nullable Output<Integer> fromPort;
-        private @Nullable Output<List<String>> ipv6CidrBlocks;
-        private @Nullable Output<List<String>> prefixListIds;
-        private @Nullable Output<Either<String,ProtocolType>> protocol;
-        private @Nullable Output<String> securityGroupId;
-        private @Nullable Output<Boolean> self;
-        private @Nullable Output<String> sourceSecurityGroupId;
-        private @Nullable Output<Integer> toPort;
-        private @Nullable Output<String> type;
+        private SecurityGroupRuleState $;
 
         public Builder() {
-    	      // Empty
+            $ = new SecurityGroupRuleState();
         }
 
         public Builder(SecurityGroupRuleState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cidrBlocks = defaults.cidrBlocks;
-    	      this.description = defaults.description;
-    	      this.fromPort = defaults.fromPort;
-    	      this.ipv6CidrBlocks = defaults.ipv6CidrBlocks;
-    	      this.prefixListIds = defaults.prefixListIds;
-    	      this.protocol = defaults.protocol;
-    	      this.securityGroupId = defaults.securityGroupId;
-    	      this.self = defaults.self;
-    	      this.sourceSecurityGroupId = defaults.sourceSecurityGroupId;
-    	      this.toPort = defaults.toPort;
-    	      this.type = defaults.type;
+            $ = new SecurityGroupRuleState(Objects.requireNonNull(defaults));
         }
 
         public Builder cidrBlocks(@Nullable Output<List<String>> cidrBlocks) {
-            this.cidrBlocks = cidrBlocks;
+            $.cidrBlocks = cidrBlocks;
             return this;
         }
-        public Builder cidrBlocks(@Nullable List<String> cidrBlocks) {
-            this.cidrBlocks = Codegen.ofNullable(cidrBlocks);
-            return this;
+
+        public Builder cidrBlocks(List<String> cidrBlocks) {
+            return cidrBlocks(Output.of(cidrBlocks));
         }
+
         public Builder cidrBlocks(String... cidrBlocks) {
             return cidrBlocks(List.of(cidrBlocks));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder fromPort(@Nullable Output<Integer> fromPort) {
-            this.fromPort = fromPort;
+            $.fromPort = fromPort;
             return this;
         }
-        public Builder fromPort(@Nullable Integer fromPort) {
-            this.fromPort = Codegen.ofNullable(fromPort);
-            return this;
+
+        public Builder fromPort(Integer fromPort) {
+            return fromPort(Output.of(fromPort));
         }
+
         public Builder ipv6CidrBlocks(@Nullable Output<List<String>> ipv6CidrBlocks) {
-            this.ipv6CidrBlocks = ipv6CidrBlocks;
+            $.ipv6CidrBlocks = ipv6CidrBlocks;
             return this;
         }
-        public Builder ipv6CidrBlocks(@Nullable List<String> ipv6CidrBlocks) {
-            this.ipv6CidrBlocks = Codegen.ofNullable(ipv6CidrBlocks);
-            return this;
+
+        public Builder ipv6CidrBlocks(List<String> ipv6CidrBlocks) {
+            return ipv6CidrBlocks(Output.of(ipv6CidrBlocks));
         }
+
         public Builder ipv6CidrBlocks(String... ipv6CidrBlocks) {
             return ipv6CidrBlocks(List.of(ipv6CidrBlocks));
         }
+
         public Builder prefixListIds(@Nullable Output<List<String>> prefixListIds) {
-            this.prefixListIds = prefixListIds;
+            $.prefixListIds = prefixListIds;
             return this;
         }
-        public Builder prefixListIds(@Nullable List<String> prefixListIds) {
-            this.prefixListIds = Codegen.ofNullable(prefixListIds);
-            return this;
+
+        public Builder prefixListIds(List<String> prefixListIds) {
+            return prefixListIds(Output.of(prefixListIds));
         }
+
         public Builder prefixListIds(String... prefixListIds) {
             return prefixListIds(List.of(prefixListIds));
         }
+
         public Builder protocol(@Nullable Output<Either<String,ProtocolType>> protocol) {
-            this.protocol = protocol;
+            $.protocol = protocol;
             return this;
         }
-        public Builder protocol(@Nullable Either<String,ProtocolType> protocol) {
-            this.protocol = Codegen.ofNullable(protocol);
-            return this;
+
+        public Builder protocol(Either<String,ProtocolType> protocol) {
+            return protocol(Output.of(protocol));
         }
+
         public Builder securityGroupId(@Nullable Output<String> securityGroupId) {
-            this.securityGroupId = securityGroupId;
+            $.securityGroupId = securityGroupId;
             return this;
         }
-        public Builder securityGroupId(@Nullable String securityGroupId) {
-            this.securityGroupId = Codegen.ofNullable(securityGroupId);
-            return this;
+
+        public Builder securityGroupId(String securityGroupId) {
+            return securityGroupId(Output.of(securityGroupId));
         }
+
         public Builder self(@Nullable Output<Boolean> self) {
-            this.self = self;
+            $.self = self;
             return this;
         }
-        public Builder self(@Nullable Boolean self) {
-            this.self = Codegen.ofNullable(self);
-            return this;
+
+        public Builder self(Boolean self) {
+            return self(Output.of(self));
         }
+
         public Builder sourceSecurityGroupId(@Nullable Output<String> sourceSecurityGroupId) {
-            this.sourceSecurityGroupId = sourceSecurityGroupId;
+            $.sourceSecurityGroupId = sourceSecurityGroupId;
             return this;
         }
-        public Builder sourceSecurityGroupId(@Nullable String sourceSecurityGroupId) {
-            this.sourceSecurityGroupId = Codegen.ofNullable(sourceSecurityGroupId);
-            return this;
+
+        public Builder sourceSecurityGroupId(String sourceSecurityGroupId) {
+            return sourceSecurityGroupId(Output.of(sourceSecurityGroupId));
         }
+
         public Builder toPort(@Nullable Output<Integer> toPort) {
-            this.toPort = toPort;
+            $.toPort = toPort;
             return this;
         }
-        public Builder toPort(@Nullable Integer toPort) {
-            this.toPort = Codegen.ofNullable(toPort);
-            return this;
+
+        public Builder toPort(Integer toPort) {
+            return toPort(Output.of(toPort));
         }
+
         public Builder type(@Nullable Output<String> type) {
-            this.type = type;
+            $.type = type;
             return this;
         }
-        public Builder type(@Nullable String type) {
-            this.type = Codegen.ofNullable(type);
-            return this;
-        }        public SecurityGroupRuleState build() {
-            return new SecurityGroupRuleState(cidrBlocks, description, fromPort, ipv6CidrBlocks, prefixListIds, protocol, securityGroupId, self, sourceSecurityGroupId, toPort, type);
+
+        public Builder type(String type) {
+            return type(Output.of(type));
+        }
+
+        public SecurityGroupRuleState build() {
+            return $;
         }
     }
+
 }

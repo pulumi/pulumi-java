@@ -5,10 +5,10 @@ package com.pulumi.googlenative.compute_beta.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.compute_beta.enums.RouterBgpPeerBfdSessionInitializationMode;
 import java.lang.Integer;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class RouterBgpPeerBfdArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="minReceiveInterval")
-      private final @Nullable Output<Integer> minReceiveInterval;
+    private @Nullable Output<Integer> minReceiveInterval;
 
-    public Output<Integer> minReceiveInterval() {
-        return this.minReceiveInterval == null ? Codegen.empty() : this.minReceiveInterval;
+    public Optional<Output<Integer>> minReceiveInterval() {
+        return Optional.ofNullable(this.minReceiveInterval);
     }
 
     /**
@@ -32,10 +32,10 @@ public final class RouterBgpPeerBfdArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="minTransmitInterval")
-      private final @Nullable Output<Integer> minTransmitInterval;
+    private @Nullable Output<Integer> minTransmitInterval;
 
-    public Output<Integer> minTransmitInterval() {
-        return this.minTransmitInterval == null ? Codegen.empty() : this.minTransmitInterval;
+    public Optional<Output<Integer>> minTransmitInterval() {
+        return Optional.ofNullable(this.minTransmitInterval);
     }
 
     /**
@@ -43,10 +43,10 @@ public final class RouterBgpPeerBfdArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="multiplier")
-      private final @Nullable Output<Integer> multiplier;
+    private @Nullable Output<Integer> multiplier;
 
-    public Output<Integer> multiplier() {
-        return this.multiplier == null ? Codegen.empty() : this.multiplier;
+    public Optional<Output<Integer>> multiplier() {
+        return Optional.ofNullable(this.multiplier);
     }
 
     /**
@@ -54,89 +54,78 @@ public final class RouterBgpPeerBfdArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="sessionInitializationMode")
-      private final @Nullable Output<RouterBgpPeerBfdSessionInitializationMode> sessionInitializationMode;
+    private @Nullable Output<RouterBgpPeerBfdSessionInitializationMode> sessionInitializationMode;
 
-    public Output<RouterBgpPeerBfdSessionInitializationMode> sessionInitializationMode() {
-        return this.sessionInitializationMode == null ? Codegen.empty() : this.sessionInitializationMode;
+    public Optional<Output<RouterBgpPeerBfdSessionInitializationMode>> sessionInitializationMode() {
+        return Optional.ofNullable(this.sessionInitializationMode);
     }
 
-    public RouterBgpPeerBfdArgs(
-        @Nullable Output<Integer> minReceiveInterval,
-        @Nullable Output<Integer> minTransmitInterval,
-        @Nullable Output<Integer> multiplier,
-        @Nullable Output<RouterBgpPeerBfdSessionInitializationMode> sessionInitializationMode) {
-        this.minReceiveInterval = minReceiveInterval;
-        this.minTransmitInterval = minTransmitInterval;
-        this.multiplier = multiplier;
-        this.sessionInitializationMode = sessionInitializationMode;
-    }
+    private RouterBgpPeerBfdArgs() {}
 
-    private RouterBgpPeerBfdArgs() {
-        this.minReceiveInterval = Codegen.empty();
-        this.minTransmitInterval = Codegen.empty();
-        this.multiplier = Codegen.empty();
-        this.sessionInitializationMode = Codegen.empty();
+    private RouterBgpPeerBfdArgs(RouterBgpPeerBfdArgs $) {
+        this.minReceiveInterval = $.minReceiveInterval;
+        this.minTransmitInterval = $.minTransmitInterval;
+        this.multiplier = $.multiplier;
+        this.sessionInitializationMode = $.sessionInitializationMode;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RouterBgpPeerBfdArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> minReceiveInterval;
-        private @Nullable Output<Integer> minTransmitInterval;
-        private @Nullable Output<Integer> multiplier;
-        private @Nullable Output<RouterBgpPeerBfdSessionInitializationMode> sessionInitializationMode;
+        private RouterBgpPeerBfdArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RouterBgpPeerBfdArgs();
         }
 
         public Builder(RouterBgpPeerBfdArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.minReceiveInterval = defaults.minReceiveInterval;
-    	      this.minTransmitInterval = defaults.minTransmitInterval;
-    	      this.multiplier = defaults.multiplier;
-    	      this.sessionInitializationMode = defaults.sessionInitializationMode;
+            $ = new RouterBgpPeerBfdArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder minReceiveInterval(@Nullable Output<Integer> minReceiveInterval) {
-            this.minReceiveInterval = minReceiveInterval;
+            $.minReceiveInterval = minReceiveInterval;
             return this;
         }
-        public Builder minReceiveInterval(@Nullable Integer minReceiveInterval) {
-            this.minReceiveInterval = Codegen.ofNullable(minReceiveInterval);
-            return this;
+
+        public Builder minReceiveInterval(Integer minReceiveInterval) {
+            return minReceiveInterval(Output.of(minReceiveInterval));
         }
+
         public Builder minTransmitInterval(@Nullable Output<Integer> minTransmitInterval) {
-            this.minTransmitInterval = minTransmitInterval;
+            $.minTransmitInterval = minTransmitInterval;
             return this;
         }
-        public Builder minTransmitInterval(@Nullable Integer minTransmitInterval) {
-            this.minTransmitInterval = Codegen.ofNullable(minTransmitInterval);
-            return this;
+
+        public Builder minTransmitInterval(Integer minTransmitInterval) {
+            return minTransmitInterval(Output.of(minTransmitInterval));
         }
+
         public Builder multiplier(@Nullable Output<Integer> multiplier) {
-            this.multiplier = multiplier;
+            $.multiplier = multiplier;
             return this;
         }
-        public Builder multiplier(@Nullable Integer multiplier) {
-            this.multiplier = Codegen.ofNullable(multiplier);
-            return this;
+
+        public Builder multiplier(Integer multiplier) {
+            return multiplier(Output.of(multiplier));
         }
+
         public Builder sessionInitializationMode(@Nullable Output<RouterBgpPeerBfdSessionInitializationMode> sessionInitializationMode) {
-            this.sessionInitializationMode = sessionInitializationMode;
+            $.sessionInitializationMode = sessionInitializationMode;
             return this;
         }
-        public Builder sessionInitializationMode(@Nullable RouterBgpPeerBfdSessionInitializationMode sessionInitializationMode) {
-            this.sessionInitializationMode = Codegen.ofNullable(sessionInitializationMode);
-            return this;
-        }        public RouterBgpPeerBfdArgs build() {
-            return new RouterBgpPeerBfdArgs(minReceiveInterval, minTransmitInterval, multiplier, sessionInitializationMode);
+
+        public Builder sessionInitializationMode(RouterBgpPeerBfdSessionInitializationMode sessionInitializationMode) {
+            return sessionInitializationMode(Output.of(sessionInitializationMode));
+        }
+
+        public RouterBgpPeerBfdArgs build() {
+            return $;
         }
     }
+
 }

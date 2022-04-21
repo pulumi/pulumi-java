@@ -15,62 +15,58 @@ public final class ExperimentTemplateStopCondition extends com.pulumi.resources.
     public static final ExperimentTemplateStopCondition Empty = new ExperimentTemplateStopCondition();
 
     @Import(name="source", required=true)
-      private final String source;
+    private String source;
 
     public String source() {
         return this.source;
     }
 
     @Import(name="value")
-      private final @Nullable String value;
+    private @Nullable String value;
 
     public Optional<String> value() {
-        return this.value == null ? Optional.empty() : Optional.ofNullable(this.value);
+        return Optional.ofNullable(this.value);
     }
 
-    public ExperimentTemplateStopCondition(
-        String source,
-        @Nullable String value) {
-        this.source = Objects.requireNonNull(source, "expected parameter 'source' to be non-null");
-        this.value = value;
-    }
+    private ExperimentTemplateStopCondition() {}
 
-    private ExperimentTemplateStopCondition() {
-        this.source = null;
-        this.value = null;
+    private ExperimentTemplateStopCondition(ExperimentTemplateStopCondition $) {
+        this.source = $.source;
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ExperimentTemplateStopCondition defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String source;
-        private @Nullable String value;
+        private ExperimentTemplateStopCondition $;
 
         public Builder() {
-    	      // Empty
+            $ = new ExperimentTemplateStopCondition();
         }
 
         public Builder(ExperimentTemplateStopCondition defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.source = defaults.source;
-    	      this.value = defaults.value;
+            $ = new ExperimentTemplateStopCondition(Objects.requireNonNull(defaults));
         }
 
         public Builder source(String source) {
-            this.source = Objects.requireNonNull(source);
+            $.source = source;
             return this;
         }
+
         public Builder value(@Nullable String value) {
-            this.value = value;
+            $.value = value;
             return this;
-        }        public ExperimentTemplateStopCondition build() {
-            return new ExperimentTemplateStopCondition(source, value);
+        }
+
+        public ExperimentTemplateStopCondition build() {
+            $.source = Objects.requireNonNull($.source, "expected parameter 'source' to be non-null");
+            return $;
         }
     }
+
 }

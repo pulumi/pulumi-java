@@ -5,10 +5,10 @@ package com.pulumi.googlenative.dlp_v2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2InfoTypeArgs;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,52 +25,52 @@ public final class GooglePrivacyDlpV2ExcludeInfoTypesArgs extends com.pulumi.res
      * 
      */
     @Import(name="infoTypes")
-      private final @Nullable Output<List<GooglePrivacyDlpV2InfoTypeArgs>> infoTypes;
+    private @Nullable Output<List<GooglePrivacyDlpV2InfoTypeArgs>> infoTypes;
 
-    public Output<List<GooglePrivacyDlpV2InfoTypeArgs>> infoTypes() {
-        return this.infoTypes == null ? Codegen.empty() : this.infoTypes;
+    public Optional<Output<List<GooglePrivacyDlpV2InfoTypeArgs>>> infoTypes() {
+        return Optional.ofNullable(this.infoTypes);
     }
 
-    public GooglePrivacyDlpV2ExcludeInfoTypesArgs(@Nullable Output<List<GooglePrivacyDlpV2InfoTypeArgs>> infoTypes) {
-        this.infoTypes = infoTypes;
-    }
+    private GooglePrivacyDlpV2ExcludeInfoTypesArgs() {}
 
-    private GooglePrivacyDlpV2ExcludeInfoTypesArgs() {
-        this.infoTypes = Codegen.empty();
+    private GooglePrivacyDlpV2ExcludeInfoTypesArgs(GooglePrivacyDlpV2ExcludeInfoTypesArgs $) {
+        this.infoTypes = $.infoTypes;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GooglePrivacyDlpV2ExcludeInfoTypesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<GooglePrivacyDlpV2InfoTypeArgs>> infoTypes;
+        private GooglePrivacyDlpV2ExcludeInfoTypesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GooglePrivacyDlpV2ExcludeInfoTypesArgs();
         }
 
         public Builder(GooglePrivacyDlpV2ExcludeInfoTypesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.infoTypes = defaults.infoTypes;
+            $ = new GooglePrivacyDlpV2ExcludeInfoTypesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder infoTypes(@Nullable Output<List<GooglePrivacyDlpV2InfoTypeArgs>> infoTypes) {
-            this.infoTypes = infoTypes;
+            $.infoTypes = infoTypes;
             return this;
         }
-        public Builder infoTypes(@Nullable List<GooglePrivacyDlpV2InfoTypeArgs> infoTypes) {
-            this.infoTypes = Codegen.ofNullable(infoTypes);
-            return this;
+
+        public Builder infoTypes(List<GooglePrivacyDlpV2InfoTypeArgs> infoTypes) {
+            return infoTypes(Output.of(infoTypes));
         }
+
         public Builder infoTypes(GooglePrivacyDlpV2InfoTypeArgs... infoTypes) {
             return infoTypes(List.of(infoTypes));
-        }        public GooglePrivacyDlpV2ExcludeInfoTypesArgs build() {
-            return new GooglePrivacyDlpV2ExcludeInfoTypesArgs(infoTypes);
+        }
+
+        public GooglePrivacyDlpV2ExcludeInfoTypesArgs build() {
+            return $;
         }
     }
+
 }

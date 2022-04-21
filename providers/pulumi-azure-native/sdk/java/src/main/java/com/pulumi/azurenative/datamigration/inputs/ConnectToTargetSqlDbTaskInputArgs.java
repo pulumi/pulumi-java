@@ -6,7 +6,6 @@ package com.pulumi.azurenative.datamigration.inputs;
 import com.pulumi.azurenative.datamigration.inputs.SqlConnectionInfoArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
 
 
@@ -23,49 +22,49 @@ public final class ConnectToTargetSqlDbTaskInputArgs extends com.pulumi.resource
      * 
      */
     @Import(name="targetConnectionInfo", required=true)
-      private final Output<SqlConnectionInfoArgs> targetConnectionInfo;
+    private Output<SqlConnectionInfoArgs> targetConnectionInfo;
 
     public Output<SqlConnectionInfoArgs> targetConnectionInfo() {
         return this.targetConnectionInfo;
     }
 
-    public ConnectToTargetSqlDbTaskInputArgs(Output<SqlConnectionInfoArgs> targetConnectionInfo) {
-        this.targetConnectionInfo = Objects.requireNonNull(targetConnectionInfo, "expected parameter 'targetConnectionInfo' to be non-null");
-    }
+    private ConnectToTargetSqlDbTaskInputArgs() {}
 
-    private ConnectToTargetSqlDbTaskInputArgs() {
-        this.targetConnectionInfo = Codegen.empty();
+    private ConnectToTargetSqlDbTaskInputArgs(ConnectToTargetSqlDbTaskInputArgs $) {
+        this.targetConnectionInfo = $.targetConnectionInfo;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ConnectToTargetSqlDbTaskInputArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<SqlConnectionInfoArgs> targetConnectionInfo;
+        private ConnectToTargetSqlDbTaskInputArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ConnectToTargetSqlDbTaskInputArgs();
         }
 
         public Builder(ConnectToTargetSqlDbTaskInputArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.targetConnectionInfo = defaults.targetConnectionInfo;
+            $ = new ConnectToTargetSqlDbTaskInputArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder targetConnectionInfo(Output<SqlConnectionInfoArgs> targetConnectionInfo) {
-            this.targetConnectionInfo = Objects.requireNonNull(targetConnectionInfo);
+            $.targetConnectionInfo = targetConnectionInfo;
             return this;
         }
+
         public Builder targetConnectionInfo(SqlConnectionInfoArgs targetConnectionInfo) {
-            this.targetConnectionInfo = Output.of(Objects.requireNonNull(targetConnectionInfo));
-            return this;
-        }        public ConnectToTargetSqlDbTaskInputArgs build() {
-            return new ConnectToTargetSqlDbTaskInputArgs(targetConnectionInfo);
+            return targetConnectionInfo(Output.of(targetConnectionInfo));
+        }
+
+        public ConnectToTargetSqlDbTaskInputArgs build() {
+            $.targetConnectionInfo = Objects.requireNonNull($.targetConnectionInfo, "expected parameter 'targetConnectionInfo' to be non-null");
+            return $;
         }
     }
+
 }

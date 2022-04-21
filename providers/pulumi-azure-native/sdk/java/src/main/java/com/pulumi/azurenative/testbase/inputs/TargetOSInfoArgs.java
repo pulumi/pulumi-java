@@ -5,7 +5,6 @@ package com.pulumi.azurenative.testbase.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +23,7 @@ public final class TargetOSInfoArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="osUpdateType", required=true)
-      private final Output<String> osUpdateType;
+    private Output<String> osUpdateType;
 
     public Output<String> osUpdateType() {
         return this.osUpdateType;
@@ -35,66 +34,64 @@ public final class TargetOSInfoArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="targetOSs", required=true)
-      private final Output<List<String>> targetOSs;
+    private Output<List<String>> targetOSs;
 
     public Output<List<String>> targetOSs() {
         return this.targetOSs;
     }
 
-    public TargetOSInfoArgs(
-        Output<String> osUpdateType,
-        Output<List<String>> targetOSs) {
-        this.osUpdateType = Objects.requireNonNull(osUpdateType, "expected parameter 'osUpdateType' to be non-null");
-        this.targetOSs = Objects.requireNonNull(targetOSs, "expected parameter 'targetOSs' to be non-null");
-    }
+    private TargetOSInfoArgs() {}
 
-    private TargetOSInfoArgs() {
-        this.osUpdateType = Codegen.empty();
-        this.targetOSs = Codegen.empty();
+    private TargetOSInfoArgs(TargetOSInfoArgs $) {
+        this.osUpdateType = $.osUpdateType;
+        this.targetOSs = $.targetOSs;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TargetOSInfoArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> osUpdateType;
-        private Output<List<String>> targetOSs;
+        private TargetOSInfoArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TargetOSInfoArgs();
         }
 
         public Builder(TargetOSInfoArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.osUpdateType = defaults.osUpdateType;
-    	      this.targetOSs = defaults.targetOSs;
+            $ = new TargetOSInfoArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder osUpdateType(Output<String> osUpdateType) {
-            this.osUpdateType = Objects.requireNonNull(osUpdateType);
+            $.osUpdateType = osUpdateType;
             return this;
         }
+
         public Builder osUpdateType(String osUpdateType) {
-            this.osUpdateType = Output.of(Objects.requireNonNull(osUpdateType));
-            return this;
+            return osUpdateType(Output.of(osUpdateType));
         }
+
         public Builder targetOSs(Output<List<String>> targetOSs) {
-            this.targetOSs = Objects.requireNonNull(targetOSs);
+            $.targetOSs = targetOSs;
             return this;
         }
+
         public Builder targetOSs(List<String> targetOSs) {
-            this.targetOSs = Output.of(Objects.requireNonNull(targetOSs));
-            return this;
+            return targetOSs(Output.of(targetOSs));
         }
+
         public Builder targetOSs(String... targetOSs) {
             return targetOSs(List.of(targetOSs));
-        }        public TargetOSInfoArgs build() {
-            return new TargetOSInfoArgs(osUpdateType, targetOSs);
+        }
+
+        public TargetOSInfoArgs build() {
+            $.osUpdateType = Objects.requireNonNull($.osUpdateType, "expected parameter 'osUpdateType' to be non-null");
+            $.targetOSs = Objects.requireNonNull($.targetOSs, "expected parameter 'targetOSs' to be non-null");
+            return $;
         }
     }
+
 }

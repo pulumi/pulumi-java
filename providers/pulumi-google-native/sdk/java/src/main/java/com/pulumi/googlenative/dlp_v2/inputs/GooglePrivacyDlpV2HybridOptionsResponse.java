@@ -24,7 +24,7 @@ public final class GooglePrivacyDlpV2HybridOptionsResponse extends com.pulumi.re
      * 
      */
     @Import(name="description", required=true)
-      private final String description;
+    private String description;
 
     public String description() {
         return this.description;
@@ -35,7 +35,7 @@ public final class GooglePrivacyDlpV2HybridOptionsResponse extends com.pulumi.re
      * 
      */
     @Import(name="labels", required=true)
-      private final Map<String,String> labels;
+    private Map<String,String> labels;
 
     public Map<String,String> labels() {
         return this.labels;
@@ -46,7 +46,7 @@ public final class GooglePrivacyDlpV2HybridOptionsResponse extends com.pulumi.re
      * 
      */
     @Import(name="requiredFindingLabelKeys", required=true)
-      private final List<String> requiredFindingLabelKeys;
+    private List<String> requiredFindingLabelKeys;
 
     public List<String> requiredFindingLabelKeys() {
         return this.requiredFindingLabelKeys;
@@ -57,76 +57,70 @@ public final class GooglePrivacyDlpV2HybridOptionsResponse extends com.pulumi.re
      * 
      */
     @Import(name="tableOptions", required=true)
-      private final GooglePrivacyDlpV2TableOptionsResponse tableOptions;
+    private GooglePrivacyDlpV2TableOptionsResponse tableOptions;
 
     public GooglePrivacyDlpV2TableOptionsResponse tableOptions() {
         return this.tableOptions;
     }
 
-    public GooglePrivacyDlpV2HybridOptionsResponse(
-        String description,
-        Map<String,String> labels,
-        List<String> requiredFindingLabelKeys,
-        GooglePrivacyDlpV2TableOptionsResponse tableOptions) {
-        this.description = Objects.requireNonNull(description, "expected parameter 'description' to be non-null");
-        this.labels = Objects.requireNonNull(labels, "expected parameter 'labels' to be non-null");
-        this.requiredFindingLabelKeys = Objects.requireNonNull(requiredFindingLabelKeys, "expected parameter 'requiredFindingLabelKeys' to be non-null");
-        this.tableOptions = Objects.requireNonNull(tableOptions, "expected parameter 'tableOptions' to be non-null");
-    }
+    private GooglePrivacyDlpV2HybridOptionsResponse() {}
 
-    private GooglePrivacyDlpV2HybridOptionsResponse() {
-        this.description = null;
-        this.labels = Map.of();
-        this.requiredFindingLabelKeys = List.of();
-        this.tableOptions = null;
+    private GooglePrivacyDlpV2HybridOptionsResponse(GooglePrivacyDlpV2HybridOptionsResponse $) {
+        this.description = $.description;
+        this.labels = $.labels;
+        this.requiredFindingLabelKeys = $.requiredFindingLabelKeys;
+        this.tableOptions = $.tableOptions;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GooglePrivacyDlpV2HybridOptionsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String description;
-        private Map<String,String> labels;
-        private List<String> requiredFindingLabelKeys;
-        private GooglePrivacyDlpV2TableOptionsResponse tableOptions;
+        private GooglePrivacyDlpV2HybridOptionsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GooglePrivacyDlpV2HybridOptionsResponse();
         }
 
         public Builder(GooglePrivacyDlpV2HybridOptionsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.description = defaults.description;
-    	      this.labels = defaults.labels;
-    	      this.requiredFindingLabelKeys = defaults.requiredFindingLabelKeys;
-    	      this.tableOptions = defaults.tableOptions;
+            $ = new GooglePrivacyDlpV2HybridOptionsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder description(String description) {
-            this.description = Objects.requireNonNull(description);
+            $.description = description;
             return this;
         }
+
         public Builder labels(Map<String,String> labels) {
-            this.labels = Objects.requireNonNull(labels);
+            $.labels = labels;
             return this;
         }
+
         public Builder requiredFindingLabelKeys(List<String> requiredFindingLabelKeys) {
-            this.requiredFindingLabelKeys = Objects.requireNonNull(requiredFindingLabelKeys);
+            $.requiredFindingLabelKeys = requiredFindingLabelKeys;
             return this;
         }
+
         public Builder requiredFindingLabelKeys(String... requiredFindingLabelKeys) {
             return requiredFindingLabelKeys(List.of(requiredFindingLabelKeys));
         }
+
         public Builder tableOptions(GooglePrivacyDlpV2TableOptionsResponse tableOptions) {
-            this.tableOptions = Objects.requireNonNull(tableOptions);
+            $.tableOptions = tableOptions;
             return this;
-        }        public GooglePrivacyDlpV2HybridOptionsResponse build() {
-            return new GooglePrivacyDlpV2HybridOptionsResponse(description, labels, requiredFindingLabelKeys, tableOptions);
+        }
+
+        public GooglePrivacyDlpV2HybridOptionsResponse build() {
+            $.description = Objects.requireNonNull($.description, "expected parameter 'description' to be non-null");
+            $.labels = Objects.requireNonNull($.labels, "expected parameter 'labels' to be non-null");
+            $.requiredFindingLabelKeys = Objects.requireNonNull($.requiredFindingLabelKeys, "expected parameter 'requiredFindingLabelKeys' to be non-null");
+            $.tableOptions = Objects.requireNonNull($.tableOptions, "expected parameter 'tableOptions' to be non-null");
+            return $;
         }
     }
+
 }

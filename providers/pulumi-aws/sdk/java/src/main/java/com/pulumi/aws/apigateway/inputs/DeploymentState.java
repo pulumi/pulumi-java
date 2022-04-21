@@ -5,10 +5,10 @@ package com.pulumi.aws.apigateway.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class DeploymentState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="createdDate")
-      private final @Nullable Output<String> createdDate;
+    private @Nullable Output<String> createdDate;
 
-    public Output<String> createdDate() {
-        return this.createdDate == null ? Codegen.empty() : this.createdDate;
+    public Optional<Output<String>> createdDate() {
+        return Optional.ofNullable(this.createdDate);
     }
 
     /**
@@ -32,10 +32,10 @@ public final class DeploymentState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -45,10 +45,10 @@ public final class DeploymentState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="executionArn")
-      private final @Nullable Output<String> executionArn;
+    private @Nullable Output<String> executionArn;
 
-    public Output<String> executionArn() {
-        return this.executionArn == null ? Codegen.empty() : this.executionArn;
+    public Optional<Output<String>> executionArn() {
+        return Optional.ofNullable(this.executionArn);
     }
 
     /**
@@ -57,10 +57,10 @@ public final class DeploymentState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="invokeUrl")
-      private final @Nullable Output<String> invokeUrl;
+    private @Nullable Output<String> invokeUrl;
 
-    public Output<String> invokeUrl() {
-        return this.invokeUrl == null ? Codegen.empty() : this.invokeUrl;
+    public Optional<Output<String>> invokeUrl() {
+        return Optional.ofNullable(this.invokeUrl);
     }
 
     /**
@@ -68,10 +68,10 @@ public final class DeploymentState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="restApi")
-      private final @Nullable Output<String> restApi;
+    private @Nullable Output<String> restApi;
 
-    public Output<String> restApi() {
-        return this.restApi == null ? Codegen.empty() : this.restApi;
+    public Optional<Output<String>> restApi() {
+        return Optional.ofNullable(this.restApi);
     }
 
     /**
@@ -79,10 +79,10 @@ public final class DeploymentState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="stageDescription")
-      private final @Nullable Output<String> stageDescription;
+    private @Nullable Output<String> stageDescription;
 
-    public Output<String> stageDescription() {
-        return this.stageDescription == null ? Codegen.empty() : this.stageDescription;
+    public Optional<Output<String>> stageDescription() {
+        return Optional.ofNullable(this.stageDescription);
     }
 
     /**
@@ -90,10 +90,10 @@ public final class DeploymentState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="stageName")
-      private final @Nullable Output<String> stageName;
+    private @Nullable Output<String> stageName;
 
-    public Output<String> stageName() {
-        return this.stageName == null ? Codegen.empty() : this.stageName;
+    public Optional<Output<String>> stageName() {
+        return Optional.ofNullable(this.stageName);
     }
 
     /**
@@ -101,10 +101,10 @@ public final class DeploymentState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="triggers")
-      private final @Nullable Output<Map<String,String>> triggers;
+    private @Nullable Output<Map<String,String>> triggers;
 
-    public Output<Map<String,String>> triggers() {
-        return this.triggers == null ? Codegen.empty() : this.triggers;
+    public Optional<Output<Map<String,String>>> triggers() {
+        return Optional.ofNullable(this.triggers);
     }
 
     /**
@@ -112,150 +112,128 @@ public final class DeploymentState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="variables")
-      private final @Nullable Output<Map<String,String>> variables;
+    private @Nullable Output<Map<String,String>> variables;
 
-    public Output<Map<String,String>> variables() {
-        return this.variables == null ? Codegen.empty() : this.variables;
+    public Optional<Output<Map<String,String>>> variables() {
+        return Optional.ofNullable(this.variables);
     }
 
-    public DeploymentState(
-        @Nullable Output<String> createdDate,
-        @Nullable Output<String> description,
-        @Nullable Output<String> executionArn,
-        @Nullable Output<String> invokeUrl,
-        @Nullable Output<String> restApi,
-        @Nullable Output<String> stageDescription,
-        @Nullable Output<String> stageName,
-        @Nullable Output<Map<String,String>> triggers,
-        @Nullable Output<Map<String,String>> variables) {
-        this.createdDate = createdDate;
-        this.description = description;
-        this.executionArn = executionArn;
-        this.invokeUrl = invokeUrl;
-        this.restApi = restApi;
-        this.stageDescription = stageDescription;
-        this.stageName = stageName;
-        this.triggers = triggers;
-        this.variables = variables;
-    }
+    private DeploymentState() {}
 
-    private DeploymentState() {
-        this.createdDate = Codegen.empty();
-        this.description = Codegen.empty();
-        this.executionArn = Codegen.empty();
-        this.invokeUrl = Codegen.empty();
-        this.restApi = Codegen.empty();
-        this.stageDescription = Codegen.empty();
-        this.stageName = Codegen.empty();
-        this.triggers = Codegen.empty();
-        this.variables = Codegen.empty();
+    private DeploymentState(DeploymentState $) {
+        this.createdDate = $.createdDate;
+        this.description = $.description;
+        this.executionArn = $.executionArn;
+        this.invokeUrl = $.invokeUrl;
+        this.restApi = $.restApi;
+        this.stageDescription = $.stageDescription;
+        this.stageName = $.stageName;
+        this.triggers = $.triggers;
+        this.variables = $.variables;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DeploymentState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> createdDate;
-        private @Nullable Output<String> description;
-        private @Nullable Output<String> executionArn;
-        private @Nullable Output<String> invokeUrl;
-        private @Nullable Output<String> restApi;
-        private @Nullable Output<String> stageDescription;
-        private @Nullable Output<String> stageName;
-        private @Nullable Output<Map<String,String>> triggers;
-        private @Nullable Output<Map<String,String>> variables;
+        private DeploymentState $;
 
         public Builder() {
-    	      // Empty
+            $ = new DeploymentState();
         }
 
         public Builder(DeploymentState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.createdDate = defaults.createdDate;
-    	      this.description = defaults.description;
-    	      this.executionArn = defaults.executionArn;
-    	      this.invokeUrl = defaults.invokeUrl;
-    	      this.restApi = defaults.restApi;
-    	      this.stageDescription = defaults.stageDescription;
-    	      this.stageName = defaults.stageName;
-    	      this.triggers = defaults.triggers;
-    	      this.variables = defaults.variables;
+            $ = new DeploymentState(Objects.requireNonNull(defaults));
         }
 
         public Builder createdDate(@Nullable Output<String> createdDate) {
-            this.createdDate = createdDate;
+            $.createdDate = createdDate;
             return this;
         }
-        public Builder createdDate(@Nullable String createdDate) {
-            this.createdDate = Codegen.ofNullable(createdDate);
-            return this;
+
+        public Builder createdDate(String createdDate) {
+            return createdDate(Output.of(createdDate));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder executionArn(@Nullable Output<String> executionArn) {
-            this.executionArn = executionArn;
+            $.executionArn = executionArn;
             return this;
         }
-        public Builder executionArn(@Nullable String executionArn) {
-            this.executionArn = Codegen.ofNullable(executionArn);
-            return this;
+
+        public Builder executionArn(String executionArn) {
+            return executionArn(Output.of(executionArn));
         }
+
         public Builder invokeUrl(@Nullable Output<String> invokeUrl) {
-            this.invokeUrl = invokeUrl;
+            $.invokeUrl = invokeUrl;
             return this;
         }
-        public Builder invokeUrl(@Nullable String invokeUrl) {
-            this.invokeUrl = Codegen.ofNullable(invokeUrl);
-            return this;
+
+        public Builder invokeUrl(String invokeUrl) {
+            return invokeUrl(Output.of(invokeUrl));
         }
+
         public Builder restApi(@Nullable Output<String> restApi) {
-            this.restApi = restApi;
+            $.restApi = restApi;
             return this;
         }
+
+        public Builder restApi(String restApi) {
+            return restApi(Output.of(restApi));
+        }
+
         public Builder stageDescription(@Nullable Output<String> stageDescription) {
-            this.stageDescription = stageDescription;
+            $.stageDescription = stageDescription;
             return this;
         }
-        public Builder stageDescription(@Nullable String stageDescription) {
-            this.stageDescription = Codegen.ofNullable(stageDescription);
-            return this;
+
+        public Builder stageDescription(String stageDescription) {
+            return stageDescription(Output.of(stageDescription));
         }
+
         public Builder stageName(@Nullable Output<String> stageName) {
-            this.stageName = stageName;
+            $.stageName = stageName;
             return this;
         }
-        public Builder stageName(@Nullable String stageName) {
-            this.stageName = Codegen.ofNullable(stageName);
-            return this;
+
+        public Builder stageName(String stageName) {
+            return stageName(Output.of(stageName));
         }
+
         public Builder triggers(@Nullable Output<Map<String,String>> triggers) {
-            this.triggers = triggers;
+            $.triggers = triggers;
             return this;
         }
-        public Builder triggers(@Nullable Map<String,String> triggers) {
-            this.triggers = Codegen.ofNullable(triggers);
-            return this;
+
+        public Builder triggers(Map<String,String> triggers) {
+            return triggers(Output.of(triggers));
         }
+
         public Builder variables(@Nullable Output<Map<String,String>> variables) {
-            this.variables = variables;
+            $.variables = variables;
             return this;
         }
-        public Builder variables(@Nullable Map<String,String> variables) {
-            this.variables = Codegen.ofNullable(variables);
-            return this;
-        }        public DeploymentState build() {
-            return new DeploymentState(createdDate, description, executionArn, invokeUrl, restApi, stageDescription, stageName, triggers, variables);
+
+        public Builder variables(Map<String,String> variables) {
+            return variables(Output.of(variables));
+        }
+
+        public DeploymentState build() {
+            return $;
         }
     }
+
 }

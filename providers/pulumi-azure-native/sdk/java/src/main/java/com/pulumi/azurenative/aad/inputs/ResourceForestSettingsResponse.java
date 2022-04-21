@@ -25,10 +25,10 @@ public final class ResourceForestSettingsResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="resourceForest")
-      private final @Nullable String resourceForest;
+    private @Nullable String resourceForest;
 
     public Optional<String> resourceForest() {
-        return this.resourceForest == null ? Optional.empty() : Optional.ofNullable(this.resourceForest);
+        return Optional.ofNullable(this.resourceForest);
     }
 
     /**
@@ -36,58 +36,54 @@ public final class ResourceForestSettingsResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="settings")
-      private final @Nullable List<ForestTrustResponse> settings;
+    private @Nullable List<ForestTrustResponse> settings;
 
-    public List<ForestTrustResponse> settings() {
-        return this.settings == null ? List.of() : this.settings;
+    public Optional<List<ForestTrustResponse>> settings() {
+        return Optional.ofNullable(this.settings);
     }
 
-    public ResourceForestSettingsResponse(
-        @Nullable String resourceForest,
-        @Nullable List<ForestTrustResponse> settings) {
-        this.resourceForest = resourceForest;
-        this.settings = settings;
-    }
+    private ResourceForestSettingsResponse() {}
 
-    private ResourceForestSettingsResponse() {
-        this.resourceForest = null;
-        this.settings = List.of();
+    private ResourceForestSettingsResponse(ResourceForestSettingsResponse $) {
+        this.resourceForest = $.resourceForest;
+        this.settings = $.settings;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ResourceForestSettingsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String resourceForest;
-        private @Nullable List<ForestTrustResponse> settings;
+        private ResourceForestSettingsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ResourceForestSettingsResponse();
         }
 
         public Builder(ResourceForestSettingsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.resourceForest = defaults.resourceForest;
-    	      this.settings = defaults.settings;
+            $ = new ResourceForestSettingsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder resourceForest(@Nullable String resourceForest) {
-            this.resourceForest = resourceForest;
+            $.resourceForest = resourceForest;
             return this;
         }
+
         public Builder settings(@Nullable List<ForestTrustResponse> settings) {
-            this.settings = settings;
+            $.settings = settings;
             return this;
         }
+
         public Builder settings(ForestTrustResponse... settings) {
             return settings(List.of(settings));
-        }        public ResourceForestSettingsResponse build() {
-            return new ResourceForestSettingsResponse(resourceForest, settings);
+        }
+
+        public ResourceForestSettingsResponse build() {
+            return $;
         }
     }
+
 }

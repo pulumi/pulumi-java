@@ -5,13 +5,13 @@ package com.pulumi.gcp.appengine.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.appengine.inputs.ApplicationFeatureSettingsGetArgs;
 import com.pulumi.gcp.appengine.inputs.ApplicationIapGetArgs;
 import com.pulumi.gcp.appengine.inputs.ApplicationUrlDispatchRuleGetArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class ApplicationState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="appId")
-      private final @Nullable Output<String> appId;
+    private @Nullable Output<String> appId;
 
-    public Output<String> appId() {
-        return this.appId == null ? Codegen.empty() : this.appId;
+    public Optional<Output<String>> appId() {
+        return Optional.ofNullable(this.appId);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class ApplicationState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="authDomain")
-      private final @Nullable Output<String> authDomain;
+    private @Nullable Output<String> authDomain;
 
-    public Output<String> authDomain() {
-        return this.authDomain == null ? Codegen.empty() : this.authDomain;
+    public Optional<Output<String>> authDomain() {
+        return Optional.ofNullable(this.authDomain);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class ApplicationState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="codeBucket")
-      private final @Nullable Output<String> codeBucket;
+    private @Nullable Output<String> codeBucket;
 
-    public Output<String> codeBucket() {
-        return this.codeBucket == null ? Codegen.empty() : this.codeBucket;
+    public Optional<Output<String>> codeBucket() {
+        return Optional.ofNullable(this.codeBucket);
     }
 
     /**
@@ -60,10 +60,10 @@ public final class ApplicationState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="databaseType")
-      private final @Nullable Output<String> databaseType;
+    private @Nullable Output<String> databaseType;
 
-    public Output<String> databaseType() {
-        return this.databaseType == null ? Codegen.empty() : this.databaseType;
+    public Optional<Output<String>> databaseType() {
+        return Optional.ofNullable(this.databaseType);
     }
 
     /**
@@ -71,10 +71,10 @@ public final class ApplicationState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="defaultBucket")
-      private final @Nullable Output<String> defaultBucket;
+    private @Nullable Output<String> defaultBucket;
 
-    public Output<String> defaultBucket() {
-        return this.defaultBucket == null ? Codegen.empty() : this.defaultBucket;
+    public Optional<Output<String>> defaultBucket() {
+        return Optional.ofNullable(this.defaultBucket);
     }
 
     /**
@@ -82,10 +82,10 @@ public final class ApplicationState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="defaultHostname")
-      private final @Nullable Output<String> defaultHostname;
+    private @Nullable Output<String> defaultHostname;
 
-    public Output<String> defaultHostname() {
-        return this.defaultHostname == null ? Codegen.empty() : this.defaultHostname;
+    public Optional<Output<String>> defaultHostname() {
+        return Optional.ofNullable(this.defaultHostname);
     }
 
     /**
@@ -93,10 +93,10 @@ public final class ApplicationState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="featureSettings")
-      private final @Nullable Output<ApplicationFeatureSettingsGetArgs> featureSettings;
+    private @Nullable Output<ApplicationFeatureSettingsGetArgs> featureSettings;
 
-    public Output<ApplicationFeatureSettingsGetArgs> featureSettings() {
-        return this.featureSettings == null ? Codegen.empty() : this.featureSettings;
+    public Optional<Output<ApplicationFeatureSettingsGetArgs>> featureSettings() {
+        return Optional.ofNullable(this.featureSettings);
     }
 
     /**
@@ -104,10 +104,10 @@ public final class ApplicationState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="gcrDomain")
-      private final @Nullable Output<String> gcrDomain;
+    private @Nullable Output<String> gcrDomain;
 
-    public Output<String> gcrDomain() {
-        return this.gcrDomain == null ? Codegen.empty() : this.gcrDomain;
+    public Optional<Output<String>> gcrDomain() {
+        return Optional.ofNullable(this.gcrDomain);
     }
 
     /**
@@ -115,10 +115,10 @@ public final class ApplicationState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="iap")
-      private final @Nullable Output<ApplicationIapGetArgs> iap;
+    private @Nullable Output<ApplicationIapGetArgs> iap;
 
-    public Output<ApplicationIapGetArgs> iap() {
-        return this.iap == null ? Codegen.empty() : this.iap;
+    public Optional<Output<ApplicationIapGetArgs>> iap() {
+        return Optional.ofNullable(this.iap);
     }
 
     /**
@@ -127,10 +127,10 @@ public final class ApplicationState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="locationId")
-      private final @Nullable Output<String> locationId;
+    private @Nullable Output<String> locationId;
 
-    public Output<String> locationId() {
-        return this.locationId == null ? Codegen.empty() : this.locationId;
+    public Optional<Output<String>> locationId() {
+        return Optional.ofNullable(this.locationId);
     }
 
     /**
@@ -138,10 +138,10 @@ public final class ApplicationState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -151,10 +151,10 @@ public final class ApplicationState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -162,10 +162,10 @@ public final class ApplicationState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="servingStatus")
-      private final @Nullable Output<String> servingStatus;
+    private @Nullable Output<String> servingStatus;
 
-    public Output<String> servingStatus() {
-        return this.servingStatus == null ? Codegen.empty() : this.servingStatus;
+    public Optional<Output<String>> servingStatus() {
+        return Optional.ofNullable(this.servingStatus);
     }
 
     /**
@@ -173,222 +173,182 @@ public final class ApplicationState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="urlDispatchRules")
-      private final @Nullable Output<List<ApplicationUrlDispatchRuleGetArgs>> urlDispatchRules;
+    private @Nullable Output<List<ApplicationUrlDispatchRuleGetArgs>> urlDispatchRules;
 
-    public Output<List<ApplicationUrlDispatchRuleGetArgs>> urlDispatchRules() {
-        return this.urlDispatchRules == null ? Codegen.empty() : this.urlDispatchRules;
+    public Optional<Output<List<ApplicationUrlDispatchRuleGetArgs>>> urlDispatchRules() {
+        return Optional.ofNullable(this.urlDispatchRules);
     }
 
-    public ApplicationState(
-        @Nullable Output<String> appId,
-        @Nullable Output<String> authDomain,
-        @Nullable Output<String> codeBucket,
-        @Nullable Output<String> databaseType,
-        @Nullable Output<String> defaultBucket,
-        @Nullable Output<String> defaultHostname,
-        @Nullable Output<ApplicationFeatureSettingsGetArgs> featureSettings,
-        @Nullable Output<String> gcrDomain,
-        @Nullable Output<ApplicationIapGetArgs> iap,
-        @Nullable Output<String> locationId,
-        @Nullable Output<String> name,
-        @Nullable Output<String> project,
-        @Nullable Output<String> servingStatus,
-        @Nullable Output<List<ApplicationUrlDispatchRuleGetArgs>> urlDispatchRules) {
-        this.appId = appId;
-        this.authDomain = authDomain;
-        this.codeBucket = codeBucket;
-        this.databaseType = databaseType;
-        this.defaultBucket = defaultBucket;
-        this.defaultHostname = defaultHostname;
-        this.featureSettings = featureSettings;
-        this.gcrDomain = gcrDomain;
-        this.iap = iap;
-        this.locationId = locationId;
-        this.name = name;
-        this.project = project;
-        this.servingStatus = servingStatus;
-        this.urlDispatchRules = urlDispatchRules;
-    }
+    private ApplicationState() {}
 
-    private ApplicationState() {
-        this.appId = Codegen.empty();
-        this.authDomain = Codegen.empty();
-        this.codeBucket = Codegen.empty();
-        this.databaseType = Codegen.empty();
-        this.defaultBucket = Codegen.empty();
-        this.defaultHostname = Codegen.empty();
-        this.featureSettings = Codegen.empty();
-        this.gcrDomain = Codegen.empty();
-        this.iap = Codegen.empty();
-        this.locationId = Codegen.empty();
-        this.name = Codegen.empty();
-        this.project = Codegen.empty();
-        this.servingStatus = Codegen.empty();
-        this.urlDispatchRules = Codegen.empty();
+    private ApplicationState(ApplicationState $) {
+        this.appId = $.appId;
+        this.authDomain = $.authDomain;
+        this.codeBucket = $.codeBucket;
+        this.databaseType = $.databaseType;
+        this.defaultBucket = $.defaultBucket;
+        this.defaultHostname = $.defaultHostname;
+        this.featureSettings = $.featureSettings;
+        this.gcrDomain = $.gcrDomain;
+        this.iap = $.iap;
+        this.locationId = $.locationId;
+        this.name = $.name;
+        this.project = $.project;
+        this.servingStatus = $.servingStatus;
+        this.urlDispatchRules = $.urlDispatchRules;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ApplicationState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> appId;
-        private @Nullable Output<String> authDomain;
-        private @Nullable Output<String> codeBucket;
-        private @Nullable Output<String> databaseType;
-        private @Nullable Output<String> defaultBucket;
-        private @Nullable Output<String> defaultHostname;
-        private @Nullable Output<ApplicationFeatureSettingsGetArgs> featureSettings;
-        private @Nullable Output<String> gcrDomain;
-        private @Nullable Output<ApplicationIapGetArgs> iap;
-        private @Nullable Output<String> locationId;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> project;
-        private @Nullable Output<String> servingStatus;
-        private @Nullable Output<List<ApplicationUrlDispatchRuleGetArgs>> urlDispatchRules;
+        private ApplicationState $;
 
         public Builder() {
-    	      // Empty
+            $ = new ApplicationState();
         }
 
         public Builder(ApplicationState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.appId = defaults.appId;
-    	      this.authDomain = defaults.authDomain;
-    	      this.codeBucket = defaults.codeBucket;
-    	      this.databaseType = defaults.databaseType;
-    	      this.defaultBucket = defaults.defaultBucket;
-    	      this.defaultHostname = defaults.defaultHostname;
-    	      this.featureSettings = defaults.featureSettings;
-    	      this.gcrDomain = defaults.gcrDomain;
-    	      this.iap = defaults.iap;
-    	      this.locationId = defaults.locationId;
-    	      this.name = defaults.name;
-    	      this.project = defaults.project;
-    	      this.servingStatus = defaults.servingStatus;
-    	      this.urlDispatchRules = defaults.urlDispatchRules;
+            $ = new ApplicationState(Objects.requireNonNull(defaults));
         }
 
         public Builder appId(@Nullable Output<String> appId) {
-            this.appId = appId;
+            $.appId = appId;
             return this;
         }
-        public Builder appId(@Nullable String appId) {
-            this.appId = Codegen.ofNullable(appId);
-            return this;
+
+        public Builder appId(String appId) {
+            return appId(Output.of(appId));
         }
+
         public Builder authDomain(@Nullable Output<String> authDomain) {
-            this.authDomain = authDomain;
+            $.authDomain = authDomain;
             return this;
         }
-        public Builder authDomain(@Nullable String authDomain) {
-            this.authDomain = Codegen.ofNullable(authDomain);
-            return this;
+
+        public Builder authDomain(String authDomain) {
+            return authDomain(Output.of(authDomain));
         }
+
         public Builder codeBucket(@Nullable Output<String> codeBucket) {
-            this.codeBucket = codeBucket;
+            $.codeBucket = codeBucket;
             return this;
         }
-        public Builder codeBucket(@Nullable String codeBucket) {
-            this.codeBucket = Codegen.ofNullable(codeBucket);
-            return this;
+
+        public Builder codeBucket(String codeBucket) {
+            return codeBucket(Output.of(codeBucket));
         }
+
         public Builder databaseType(@Nullable Output<String> databaseType) {
-            this.databaseType = databaseType;
+            $.databaseType = databaseType;
             return this;
         }
-        public Builder databaseType(@Nullable String databaseType) {
-            this.databaseType = Codegen.ofNullable(databaseType);
-            return this;
+
+        public Builder databaseType(String databaseType) {
+            return databaseType(Output.of(databaseType));
         }
+
         public Builder defaultBucket(@Nullable Output<String> defaultBucket) {
-            this.defaultBucket = defaultBucket;
+            $.defaultBucket = defaultBucket;
             return this;
         }
-        public Builder defaultBucket(@Nullable String defaultBucket) {
-            this.defaultBucket = Codegen.ofNullable(defaultBucket);
-            return this;
+
+        public Builder defaultBucket(String defaultBucket) {
+            return defaultBucket(Output.of(defaultBucket));
         }
+
         public Builder defaultHostname(@Nullable Output<String> defaultHostname) {
-            this.defaultHostname = defaultHostname;
+            $.defaultHostname = defaultHostname;
             return this;
         }
-        public Builder defaultHostname(@Nullable String defaultHostname) {
-            this.defaultHostname = Codegen.ofNullable(defaultHostname);
-            return this;
+
+        public Builder defaultHostname(String defaultHostname) {
+            return defaultHostname(Output.of(defaultHostname));
         }
+
         public Builder featureSettings(@Nullable Output<ApplicationFeatureSettingsGetArgs> featureSettings) {
-            this.featureSettings = featureSettings;
+            $.featureSettings = featureSettings;
             return this;
         }
-        public Builder featureSettings(@Nullable ApplicationFeatureSettingsGetArgs featureSettings) {
-            this.featureSettings = Codegen.ofNullable(featureSettings);
-            return this;
+
+        public Builder featureSettings(ApplicationFeatureSettingsGetArgs featureSettings) {
+            return featureSettings(Output.of(featureSettings));
         }
+
         public Builder gcrDomain(@Nullable Output<String> gcrDomain) {
-            this.gcrDomain = gcrDomain;
+            $.gcrDomain = gcrDomain;
             return this;
         }
-        public Builder gcrDomain(@Nullable String gcrDomain) {
-            this.gcrDomain = Codegen.ofNullable(gcrDomain);
-            return this;
+
+        public Builder gcrDomain(String gcrDomain) {
+            return gcrDomain(Output.of(gcrDomain));
         }
+
         public Builder iap(@Nullable Output<ApplicationIapGetArgs> iap) {
-            this.iap = iap;
+            $.iap = iap;
             return this;
         }
-        public Builder iap(@Nullable ApplicationIapGetArgs iap) {
-            this.iap = Codegen.ofNullable(iap);
-            return this;
+
+        public Builder iap(ApplicationIapGetArgs iap) {
+            return iap(Output.of(iap));
         }
+
         public Builder locationId(@Nullable Output<String> locationId) {
-            this.locationId = locationId;
+            $.locationId = locationId;
             return this;
         }
-        public Builder locationId(@Nullable String locationId) {
-            this.locationId = Codegen.ofNullable(locationId);
-            return this;
+
+        public Builder locationId(String locationId) {
+            return locationId(Output.of(locationId));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder servingStatus(@Nullable Output<String> servingStatus) {
-            this.servingStatus = servingStatus;
+            $.servingStatus = servingStatus;
             return this;
         }
-        public Builder servingStatus(@Nullable String servingStatus) {
-            this.servingStatus = Codegen.ofNullable(servingStatus);
-            return this;
+
+        public Builder servingStatus(String servingStatus) {
+            return servingStatus(Output.of(servingStatus));
         }
+
         public Builder urlDispatchRules(@Nullable Output<List<ApplicationUrlDispatchRuleGetArgs>> urlDispatchRules) {
-            this.urlDispatchRules = urlDispatchRules;
+            $.urlDispatchRules = urlDispatchRules;
             return this;
         }
-        public Builder urlDispatchRules(@Nullable List<ApplicationUrlDispatchRuleGetArgs> urlDispatchRules) {
-            this.urlDispatchRules = Codegen.ofNullable(urlDispatchRules);
-            return this;
+
+        public Builder urlDispatchRules(List<ApplicationUrlDispatchRuleGetArgs> urlDispatchRules) {
+            return urlDispatchRules(Output.of(urlDispatchRules));
         }
+
         public Builder urlDispatchRules(ApplicationUrlDispatchRuleGetArgs... urlDispatchRules) {
             return urlDispatchRules(List.of(urlDispatchRules));
-        }        public ApplicationState build() {
-            return new ApplicationState(appId, authDomain, codeBucket, databaseType, defaultBucket, defaultHostname, featureSettings, gcrDomain, iap, locationId, name, project, servingStatus, urlDispatchRules);
+        }
+
+        public ApplicationState build() {
+            return $;
         }
     }
+
 }

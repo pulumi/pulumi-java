@@ -5,9 +5,9 @@ package com.pulumi.kubernetes.core_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class SeccompProfileArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="localhostProfile")
-      private final @Nullable Output<String> localhostProfile;
+    private @Nullable Output<String> localhostProfile;
 
-    public Output<String> localhostProfile() {
-        return this.localhostProfile == null ? Codegen.empty() : this.localhostProfile;
+    public Optional<Output<String>> localhostProfile() {
+        return Optional.ofNullable(this.localhostProfile);
     }
 
     /**
@@ -42,63 +42,59 @@ public final class SeccompProfileArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="type", required=true)
-      private final Output<String> type;
+    private Output<String> type;
 
     public Output<String> type() {
         return this.type;
     }
 
-    public SeccompProfileArgs(
-        @Nullable Output<String> localhostProfile,
-        Output<String> type) {
-        this.localhostProfile = localhostProfile;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private SeccompProfileArgs() {}
 
-    private SeccompProfileArgs() {
-        this.localhostProfile = Codegen.empty();
-        this.type = Codegen.empty();
+    private SeccompProfileArgs(SeccompProfileArgs $) {
+        this.localhostProfile = $.localhostProfile;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SeccompProfileArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> localhostProfile;
-        private Output<String> type;
+        private SeccompProfileArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SeccompProfileArgs();
         }
 
         public Builder(SeccompProfileArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.localhostProfile = defaults.localhostProfile;
-    	      this.type = defaults.type;
+            $ = new SeccompProfileArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder localhostProfile(@Nullable Output<String> localhostProfile) {
-            this.localhostProfile = localhostProfile;
+            $.localhostProfile = localhostProfile;
             return this;
         }
-        public Builder localhostProfile(@Nullable String localhostProfile) {
-            this.localhostProfile = Codegen.ofNullable(localhostProfile);
-            return this;
+
+        public Builder localhostProfile(String localhostProfile) {
+            return localhostProfile(Output.of(localhostProfile));
         }
+
         public Builder type(Output<String> type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Output.of(Objects.requireNonNull(type));
-            return this;
-        }        public SeccompProfileArgs build() {
-            return new SeccompProfileArgs(localhostProfile, type);
+            return type(Output.of(type));
+        }
+
+        public SeccompProfileArgs build() {
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

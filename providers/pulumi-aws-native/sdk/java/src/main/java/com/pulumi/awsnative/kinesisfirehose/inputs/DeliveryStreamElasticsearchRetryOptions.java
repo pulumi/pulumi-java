@@ -15,45 +15,44 @@ public final class DeliveryStreamElasticsearchRetryOptions extends com.pulumi.re
     public static final DeliveryStreamElasticsearchRetryOptions Empty = new DeliveryStreamElasticsearchRetryOptions();
 
     @Import(name="durationInSeconds")
-      private final @Nullable Integer durationInSeconds;
+    private @Nullable Integer durationInSeconds;
 
     public Optional<Integer> durationInSeconds() {
-        return this.durationInSeconds == null ? Optional.empty() : Optional.ofNullable(this.durationInSeconds);
+        return Optional.ofNullable(this.durationInSeconds);
     }
 
-    public DeliveryStreamElasticsearchRetryOptions(@Nullable Integer durationInSeconds) {
-        this.durationInSeconds = durationInSeconds;
-    }
+    private DeliveryStreamElasticsearchRetryOptions() {}
 
-    private DeliveryStreamElasticsearchRetryOptions() {
-        this.durationInSeconds = null;
+    private DeliveryStreamElasticsearchRetryOptions(DeliveryStreamElasticsearchRetryOptions $) {
+        this.durationInSeconds = $.durationInSeconds;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DeliveryStreamElasticsearchRetryOptions defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Integer durationInSeconds;
+        private DeliveryStreamElasticsearchRetryOptions $;
 
         public Builder() {
-    	      // Empty
+            $ = new DeliveryStreamElasticsearchRetryOptions();
         }
 
         public Builder(DeliveryStreamElasticsearchRetryOptions defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.durationInSeconds = defaults.durationInSeconds;
+            $ = new DeliveryStreamElasticsearchRetryOptions(Objects.requireNonNull(defaults));
         }
 
         public Builder durationInSeconds(@Nullable Integer durationInSeconds) {
-            this.durationInSeconds = durationInSeconds;
+            $.durationInSeconds = durationInSeconds;
             return this;
-        }        public DeliveryStreamElasticsearchRetryOptions build() {
-            return new DeliveryStreamElasticsearchRetryOptions(durationInSeconds);
+        }
+
+        public DeliveryStreamElasticsearchRetryOptions build() {
+            return $;
         }
     }
+
 }

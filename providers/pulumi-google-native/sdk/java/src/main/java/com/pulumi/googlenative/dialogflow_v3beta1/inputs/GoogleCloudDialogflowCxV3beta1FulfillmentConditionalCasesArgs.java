@@ -5,10 +5,10 @@ package com.pulumi.googlenative.dialogflow_v3beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.dialogflow_v3beta1.inputs.GoogleCloudDialogflowCxV3beta1FulfillmentConditionalCasesCaseArgs;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,52 +25,52 @@ public final class GoogleCloudDialogflowCxV3beta1FulfillmentConditionalCasesArgs
      * 
      */
     @Import(name="cases")
-      private final @Nullable Output<List<GoogleCloudDialogflowCxV3beta1FulfillmentConditionalCasesCaseArgs>> cases;
+    private @Nullable Output<List<GoogleCloudDialogflowCxV3beta1FulfillmentConditionalCasesCaseArgs>> cases;
 
-    public Output<List<GoogleCloudDialogflowCxV3beta1FulfillmentConditionalCasesCaseArgs>> cases() {
-        return this.cases == null ? Codegen.empty() : this.cases;
+    public Optional<Output<List<GoogleCloudDialogflowCxV3beta1FulfillmentConditionalCasesCaseArgs>>> cases() {
+        return Optional.ofNullable(this.cases);
     }
 
-    public GoogleCloudDialogflowCxV3beta1FulfillmentConditionalCasesArgs(@Nullable Output<List<GoogleCloudDialogflowCxV3beta1FulfillmentConditionalCasesCaseArgs>> cases) {
-        this.cases = cases;
-    }
+    private GoogleCloudDialogflowCxV3beta1FulfillmentConditionalCasesArgs() {}
 
-    private GoogleCloudDialogflowCxV3beta1FulfillmentConditionalCasesArgs() {
-        this.cases = Codegen.empty();
+    private GoogleCloudDialogflowCxV3beta1FulfillmentConditionalCasesArgs(GoogleCloudDialogflowCxV3beta1FulfillmentConditionalCasesArgs $) {
+        this.cases = $.cases;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudDialogflowCxV3beta1FulfillmentConditionalCasesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<GoogleCloudDialogflowCxV3beta1FulfillmentConditionalCasesCaseArgs>> cases;
+        private GoogleCloudDialogflowCxV3beta1FulfillmentConditionalCasesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudDialogflowCxV3beta1FulfillmentConditionalCasesArgs();
         }
 
         public Builder(GoogleCloudDialogflowCxV3beta1FulfillmentConditionalCasesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cases = defaults.cases;
+            $ = new GoogleCloudDialogflowCxV3beta1FulfillmentConditionalCasesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder cases(@Nullable Output<List<GoogleCloudDialogflowCxV3beta1FulfillmentConditionalCasesCaseArgs>> cases) {
-            this.cases = cases;
+            $.cases = cases;
             return this;
         }
-        public Builder cases(@Nullable List<GoogleCloudDialogflowCxV3beta1FulfillmentConditionalCasesCaseArgs> cases) {
-            this.cases = Codegen.ofNullable(cases);
-            return this;
+
+        public Builder cases(List<GoogleCloudDialogflowCxV3beta1FulfillmentConditionalCasesCaseArgs> cases) {
+            return cases(Output.of(cases));
         }
+
         public Builder cases(GoogleCloudDialogflowCxV3beta1FulfillmentConditionalCasesCaseArgs... cases) {
             return cases(List.of(cases));
-        }        public GoogleCloudDialogflowCxV3beta1FulfillmentConditionalCasesArgs build() {
-            return new GoogleCloudDialogflowCxV3beta1FulfillmentConditionalCasesArgs(cases);
+        }
+
+        public GoogleCloudDialogflowCxV3beta1FulfillmentConditionalCasesArgs build() {
+            return $;
         }
     }
+
 }

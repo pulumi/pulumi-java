@@ -22,7 +22,7 @@ public final class ContainerServiceLinuxProfileResponse extends com.pulumi.resou
      * 
      */
     @Import(name="adminUsername", required=true)
-      private final String adminUsername;
+    private String adminUsername;
 
     public String adminUsername() {
         return this.adminUsername;
@@ -33,55 +33,52 @@ public final class ContainerServiceLinuxProfileResponse extends com.pulumi.resou
      * 
      */
     @Import(name="ssh", required=true)
-      private final ContainerServiceSshConfigurationResponse ssh;
+    private ContainerServiceSshConfigurationResponse ssh;
 
     public ContainerServiceSshConfigurationResponse ssh() {
         return this.ssh;
     }
 
-    public ContainerServiceLinuxProfileResponse(
-        String adminUsername,
-        ContainerServiceSshConfigurationResponse ssh) {
-        this.adminUsername = Objects.requireNonNull(adminUsername, "expected parameter 'adminUsername' to be non-null");
-        this.ssh = Objects.requireNonNull(ssh, "expected parameter 'ssh' to be non-null");
-    }
+    private ContainerServiceLinuxProfileResponse() {}
 
-    private ContainerServiceLinuxProfileResponse() {
-        this.adminUsername = null;
-        this.ssh = null;
+    private ContainerServiceLinuxProfileResponse(ContainerServiceLinuxProfileResponse $) {
+        this.adminUsername = $.adminUsername;
+        this.ssh = $.ssh;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ContainerServiceLinuxProfileResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String adminUsername;
-        private ContainerServiceSshConfigurationResponse ssh;
+        private ContainerServiceLinuxProfileResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ContainerServiceLinuxProfileResponse();
         }
 
         public Builder(ContainerServiceLinuxProfileResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.adminUsername = defaults.adminUsername;
-    	      this.ssh = defaults.ssh;
+            $ = new ContainerServiceLinuxProfileResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder adminUsername(String adminUsername) {
-            this.adminUsername = Objects.requireNonNull(adminUsername);
+            $.adminUsername = adminUsername;
             return this;
         }
+
         public Builder ssh(ContainerServiceSshConfigurationResponse ssh) {
-            this.ssh = Objects.requireNonNull(ssh);
+            $.ssh = ssh;
             return this;
-        }        public ContainerServiceLinuxProfileResponse build() {
-            return new ContainerServiceLinuxProfileResponse(adminUsername, ssh);
+        }
+
+        public ContainerServiceLinuxProfileResponse build() {
+            $.adminUsername = Objects.requireNonNull($.adminUsername, "expected parameter 'adminUsername' to be non-null");
+            $.ssh = Objects.requireNonNull($.ssh, "expected parameter 'ssh' to be non-null");
+            return $;
         }
     }
+
 }

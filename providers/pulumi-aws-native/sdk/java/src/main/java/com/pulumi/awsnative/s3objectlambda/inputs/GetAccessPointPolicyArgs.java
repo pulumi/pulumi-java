@@ -17,45 +17,45 @@ public final class GetAccessPointPolicyArgs extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="objectLambdaAccessPoint", required=true)
-      private final String objectLambdaAccessPoint;
+    private String objectLambdaAccessPoint;
 
     public String objectLambdaAccessPoint() {
         return this.objectLambdaAccessPoint;
     }
 
-    public GetAccessPointPolicyArgs(String objectLambdaAccessPoint) {
-        this.objectLambdaAccessPoint = Objects.requireNonNull(objectLambdaAccessPoint, "expected parameter 'objectLambdaAccessPoint' to be non-null");
-    }
+    private GetAccessPointPolicyArgs() {}
 
-    private GetAccessPointPolicyArgs() {
-        this.objectLambdaAccessPoint = null;
+    private GetAccessPointPolicyArgs(GetAccessPointPolicyArgs $) {
+        this.objectLambdaAccessPoint = $.objectLambdaAccessPoint;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetAccessPointPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String objectLambdaAccessPoint;
+        private GetAccessPointPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetAccessPointPolicyArgs();
         }
 
         public Builder(GetAccessPointPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.objectLambdaAccessPoint = defaults.objectLambdaAccessPoint;
+            $ = new GetAccessPointPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder objectLambdaAccessPoint(String objectLambdaAccessPoint) {
-            this.objectLambdaAccessPoint = Objects.requireNonNull(objectLambdaAccessPoint);
+            $.objectLambdaAccessPoint = objectLambdaAccessPoint;
             return this;
-        }        public GetAccessPointPolicyArgs build() {
-            return new GetAccessPointPolicyArgs(objectLambdaAccessPoint);
+        }
+
+        public GetAccessPointPolicyArgs build() {
+            $.objectLambdaAccessPoint = Objects.requireNonNull($.objectLambdaAccessPoint, "expected parameter 'objectLambdaAccessPoint' to be non-null");
+            return $;
         }
     }
+
 }

@@ -21,7 +21,7 @@ public final class ManagedHsmSkuResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="family", required=true)
-      private final String family;
+    private String family;
 
     public String family() {
         return this.family;
@@ -32,55 +32,52 @@ public final class ManagedHsmSkuResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
     }
 
-    public ManagedHsmSkuResponse(
-        String family,
-        String name) {
-        this.family = Objects.requireNonNull(family, "expected parameter 'family' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-    }
+    private ManagedHsmSkuResponse() {}
 
-    private ManagedHsmSkuResponse() {
-        this.family = null;
-        this.name = null;
+    private ManagedHsmSkuResponse(ManagedHsmSkuResponse $) {
+        this.family = $.family;
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ManagedHsmSkuResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String family;
-        private String name;
+        private ManagedHsmSkuResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ManagedHsmSkuResponse();
         }
 
         public Builder(ManagedHsmSkuResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.family = defaults.family;
-    	      this.name = defaults.name;
+            $ = new ManagedHsmSkuResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder family(String family) {
-            this.family = Objects.requireNonNull(family);
+            $.family = family;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
-        }        public ManagedHsmSkuResponse build() {
-            return new ManagedHsmSkuResponse(family, name);
+        }
+
+        public ManagedHsmSkuResponse build() {
+            $.family = Objects.requireNonNull($.family, "expected parameter 'family' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            return $;
         }
     }
+
 }

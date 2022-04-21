@@ -7,12 +7,12 @@ import com.pulumi.awsnative.ec2.inputs.IPAMPoolProvisionedCidrArgs;
 import com.pulumi.awsnative.ec2.inputs.IPAMPoolTagArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,7 +25,7 @@ public final class IPAMPoolArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="addressFamily", required=true)
-      private final Output<String> addressFamily;
+    private Output<String> addressFamily;
 
     public Output<String> addressFamily() {
         return this.addressFamily;
@@ -36,10 +36,10 @@ public final class IPAMPoolArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="allocationDefaultNetmaskLength")
-      private final @Nullable Output<Integer> allocationDefaultNetmaskLength;
+    private @Nullable Output<Integer> allocationDefaultNetmaskLength;
 
-    public Output<Integer> allocationDefaultNetmaskLength() {
-        return this.allocationDefaultNetmaskLength == null ? Codegen.empty() : this.allocationDefaultNetmaskLength;
+    public Optional<Output<Integer>> allocationDefaultNetmaskLength() {
+        return Optional.ofNullable(this.allocationDefaultNetmaskLength);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class IPAMPoolArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="allocationMaxNetmaskLength")
-      private final @Nullable Output<Integer> allocationMaxNetmaskLength;
+    private @Nullable Output<Integer> allocationMaxNetmaskLength;
 
-    public Output<Integer> allocationMaxNetmaskLength() {
-        return this.allocationMaxNetmaskLength == null ? Codegen.empty() : this.allocationMaxNetmaskLength;
+    public Optional<Output<Integer>> allocationMaxNetmaskLength() {
+        return Optional.ofNullable(this.allocationMaxNetmaskLength);
     }
 
     /**
@@ -58,10 +58,10 @@ public final class IPAMPoolArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="allocationMinNetmaskLength")
-      private final @Nullable Output<Integer> allocationMinNetmaskLength;
+    private @Nullable Output<Integer> allocationMinNetmaskLength;
 
-    public Output<Integer> allocationMinNetmaskLength() {
-        return this.allocationMinNetmaskLength == null ? Codegen.empty() : this.allocationMinNetmaskLength;
+    public Optional<Output<Integer>> allocationMinNetmaskLength() {
+        return Optional.ofNullable(this.allocationMinNetmaskLength);
     }
 
     /**
@@ -69,10 +69,10 @@ public final class IPAMPoolArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="allocationResourceTags")
-      private final @Nullable Output<List<IPAMPoolTagArgs>> allocationResourceTags;
+    private @Nullable Output<List<IPAMPoolTagArgs>> allocationResourceTags;
 
-    public Output<List<IPAMPoolTagArgs>> allocationResourceTags() {
-        return this.allocationResourceTags == null ? Codegen.empty() : this.allocationResourceTags;
+    public Optional<Output<List<IPAMPoolTagArgs>>> allocationResourceTags() {
+        return Optional.ofNullable(this.allocationResourceTags);
     }
 
     /**
@@ -80,17 +80,17 @@ public final class IPAMPoolArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="autoImport")
-      private final @Nullable Output<Boolean> autoImport;
+    private @Nullable Output<Boolean> autoImport;
 
-    public Output<Boolean> autoImport() {
-        return this.autoImport == null ? Codegen.empty() : this.autoImport;
+    public Optional<Output<Boolean>> autoImport() {
+        return Optional.ofNullable(this.autoImport);
     }
 
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -98,7 +98,7 @@ public final class IPAMPoolArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="ipamScopeId", required=true)
-      private final Output<String> ipamScopeId;
+    private Output<String> ipamScopeId;
 
     public Output<String> ipamScopeId() {
         return this.ipamScopeId;
@@ -109,10 +109,10 @@ public final class IPAMPoolArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="locale")
-      private final @Nullable Output<String> locale;
+    private @Nullable Output<String> locale;
 
-    public Output<String> locale() {
-        return this.locale == null ? Codegen.empty() : this.locale;
+    public Optional<Output<String>> locale() {
+        return Optional.ofNullable(this.locale);
     }
 
     /**
@@ -120,10 +120,10 @@ public final class IPAMPoolArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="provisionedCidrs")
-      private final @Nullable Output<List<IPAMPoolProvisionedCidrArgs>> provisionedCidrs;
+    private @Nullable Output<List<IPAMPoolProvisionedCidrArgs>> provisionedCidrs;
 
-    public Output<List<IPAMPoolProvisionedCidrArgs>> provisionedCidrs() {
-        return this.provisionedCidrs == null ? Codegen.empty() : this.provisionedCidrs;
+    public Optional<Output<List<IPAMPoolProvisionedCidrArgs>>> provisionedCidrs() {
+        return Optional.ofNullable(this.provisionedCidrs);
     }
 
     /**
@@ -131,10 +131,10 @@ public final class IPAMPoolArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="publiclyAdvertisable")
-      private final @Nullable Output<Boolean> publiclyAdvertisable;
+    private @Nullable Output<Boolean> publiclyAdvertisable;
 
-    public Output<Boolean> publiclyAdvertisable() {
-        return this.publiclyAdvertisable == null ? Codegen.empty() : this.publiclyAdvertisable;
+    public Optional<Output<Boolean>> publiclyAdvertisable() {
+        return Optional.ofNullable(this.publiclyAdvertisable);
     }
 
     /**
@@ -142,10 +142,10 @@ public final class IPAMPoolArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="sourceIpamPoolId")
-      private final @Nullable Output<String> sourceIpamPoolId;
+    private @Nullable Output<String> sourceIpamPoolId;
 
-    public Output<String> sourceIpamPoolId() {
-        return this.sourceIpamPoolId == null ? Codegen.empty() : this.sourceIpamPoolId;
+    public Optional<Output<String>> sourceIpamPoolId() {
+        return Optional.ofNullable(this.sourceIpamPoolId);
     }
 
     /**
@@ -153,215 +153,182 @@ public final class IPAMPoolArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<List<IPAMPoolTagArgs>> tags;
+    private @Nullable Output<List<IPAMPoolTagArgs>> tags;
 
-    public Output<List<IPAMPoolTagArgs>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<List<IPAMPoolTagArgs>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public IPAMPoolArgs(
-        Output<String> addressFamily,
-        @Nullable Output<Integer> allocationDefaultNetmaskLength,
-        @Nullable Output<Integer> allocationMaxNetmaskLength,
-        @Nullable Output<Integer> allocationMinNetmaskLength,
-        @Nullable Output<List<IPAMPoolTagArgs>> allocationResourceTags,
-        @Nullable Output<Boolean> autoImport,
-        @Nullable Output<String> description,
-        Output<String> ipamScopeId,
-        @Nullable Output<String> locale,
-        @Nullable Output<List<IPAMPoolProvisionedCidrArgs>> provisionedCidrs,
-        @Nullable Output<Boolean> publiclyAdvertisable,
-        @Nullable Output<String> sourceIpamPoolId,
-        @Nullable Output<List<IPAMPoolTagArgs>> tags) {
-        this.addressFamily = Objects.requireNonNull(addressFamily, "expected parameter 'addressFamily' to be non-null");
-        this.allocationDefaultNetmaskLength = allocationDefaultNetmaskLength;
-        this.allocationMaxNetmaskLength = allocationMaxNetmaskLength;
-        this.allocationMinNetmaskLength = allocationMinNetmaskLength;
-        this.allocationResourceTags = allocationResourceTags;
-        this.autoImport = autoImport;
-        this.description = description;
-        this.ipamScopeId = Objects.requireNonNull(ipamScopeId, "expected parameter 'ipamScopeId' to be non-null");
-        this.locale = locale;
-        this.provisionedCidrs = provisionedCidrs;
-        this.publiclyAdvertisable = publiclyAdvertisable;
-        this.sourceIpamPoolId = sourceIpamPoolId;
-        this.tags = tags;
-    }
+    private IPAMPoolArgs() {}
 
-    private IPAMPoolArgs() {
-        this.addressFamily = Codegen.empty();
-        this.allocationDefaultNetmaskLength = Codegen.empty();
-        this.allocationMaxNetmaskLength = Codegen.empty();
-        this.allocationMinNetmaskLength = Codegen.empty();
-        this.allocationResourceTags = Codegen.empty();
-        this.autoImport = Codegen.empty();
-        this.description = Codegen.empty();
-        this.ipamScopeId = Codegen.empty();
-        this.locale = Codegen.empty();
-        this.provisionedCidrs = Codegen.empty();
-        this.publiclyAdvertisable = Codegen.empty();
-        this.sourceIpamPoolId = Codegen.empty();
-        this.tags = Codegen.empty();
+    private IPAMPoolArgs(IPAMPoolArgs $) {
+        this.addressFamily = $.addressFamily;
+        this.allocationDefaultNetmaskLength = $.allocationDefaultNetmaskLength;
+        this.allocationMaxNetmaskLength = $.allocationMaxNetmaskLength;
+        this.allocationMinNetmaskLength = $.allocationMinNetmaskLength;
+        this.allocationResourceTags = $.allocationResourceTags;
+        this.autoImport = $.autoImport;
+        this.description = $.description;
+        this.ipamScopeId = $.ipamScopeId;
+        this.locale = $.locale;
+        this.provisionedCidrs = $.provisionedCidrs;
+        this.publiclyAdvertisable = $.publiclyAdvertisable;
+        this.sourceIpamPoolId = $.sourceIpamPoolId;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(IPAMPoolArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> addressFamily;
-        private @Nullable Output<Integer> allocationDefaultNetmaskLength;
-        private @Nullable Output<Integer> allocationMaxNetmaskLength;
-        private @Nullable Output<Integer> allocationMinNetmaskLength;
-        private @Nullable Output<List<IPAMPoolTagArgs>> allocationResourceTags;
-        private @Nullable Output<Boolean> autoImport;
-        private @Nullable Output<String> description;
-        private Output<String> ipamScopeId;
-        private @Nullable Output<String> locale;
-        private @Nullable Output<List<IPAMPoolProvisionedCidrArgs>> provisionedCidrs;
-        private @Nullable Output<Boolean> publiclyAdvertisable;
-        private @Nullable Output<String> sourceIpamPoolId;
-        private @Nullable Output<List<IPAMPoolTagArgs>> tags;
+        private IPAMPoolArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new IPAMPoolArgs();
         }
 
         public Builder(IPAMPoolArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.addressFamily = defaults.addressFamily;
-    	      this.allocationDefaultNetmaskLength = defaults.allocationDefaultNetmaskLength;
-    	      this.allocationMaxNetmaskLength = defaults.allocationMaxNetmaskLength;
-    	      this.allocationMinNetmaskLength = defaults.allocationMinNetmaskLength;
-    	      this.allocationResourceTags = defaults.allocationResourceTags;
-    	      this.autoImport = defaults.autoImport;
-    	      this.description = defaults.description;
-    	      this.ipamScopeId = defaults.ipamScopeId;
-    	      this.locale = defaults.locale;
-    	      this.provisionedCidrs = defaults.provisionedCidrs;
-    	      this.publiclyAdvertisable = defaults.publiclyAdvertisable;
-    	      this.sourceIpamPoolId = defaults.sourceIpamPoolId;
-    	      this.tags = defaults.tags;
+            $ = new IPAMPoolArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder addressFamily(Output<String> addressFamily) {
-            this.addressFamily = Objects.requireNonNull(addressFamily);
+            $.addressFamily = addressFamily;
             return this;
         }
+
         public Builder addressFamily(String addressFamily) {
-            this.addressFamily = Output.of(Objects.requireNonNull(addressFamily));
-            return this;
+            return addressFamily(Output.of(addressFamily));
         }
+
         public Builder allocationDefaultNetmaskLength(@Nullable Output<Integer> allocationDefaultNetmaskLength) {
-            this.allocationDefaultNetmaskLength = allocationDefaultNetmaskLength;
+            $.allocationDefaultNetmaskLength = allocationDefaultNetmaskLength;
             return this;
         }
-        public Builder allocationDefaultNetmaskLength(@Nullable Integer allocationDefaultNetmaskLength) {
-            this.allocationDefaultNetmaskLength = Codegen.ofNullable(allocationDefaultNetmaskLength);
-            return this;
+
+        public Builder allocationDefaultNetmaskLength(Integer allocationDefaultNetmaskLength) {
+            return allocationDefaultNetmaskLength(Output.of(allocationDefaultNetmaskLength));
         }
+
         public Builder allocationMaxNetmaskLength(@Nullable Output<Integer> allocationMaxNetmaskLength) {
-            this.allocationMaxNetmaskLength = allocationMaxNetmaskLength;
+            $.allocationMaxNetmaskLength = allocationMaxNetmaskLength;
             return this;
         }
-        public Builder allocationMaxNetmaskLength(@Nullable Integer allocationMaxNetmaskLength) {
-            this.allocationMaxNetmaskLength = Codegen.ofNullable(allocationMaxNetmaskLength);
-            return this;
+
+        public Builder allocationMaxNetmaskLength(Integer allocationMaxNetmaskLength) {
+            return allocationMaxNetmaskLength(Output.of(allocationMaxNetmaskLength));
         }
+
         public Builder allocationMinNetmaskLength(@Nullable Output<Integer> allocationMinNetmaskLength) {
-            this.allocationMinNetmaskLength = allocationMinNetmaskLength;
+            $.allocationMinNetmaskLength = allocationMinNetmaskLength;
             return this;
         }
-        public Builder allocationMinNetmaskLength(@Nullable Integer allocationMinNetmaskLength) {
-            this.allocationMinNetmaskLength = Codegen.ofNullable(allocationMinNetmaskLength);
-            return this;
+
+        public Builder allocationMinNetmaskLength(Integer allocationMinNetmaskLength) {
+            return allocationMinNetmaskLength(Output.of(allocationMinNetmaskLength));
         }
+
         public Builder allocationResourceTags(@Nullable Output<List<IPAMPoolTagArgs>> allocationResourceTags) {
-            this.allocationResourceTags = allocationResourceTags;
+            $.allocationResourceTags = allocationResourceTags;
             return this;
         }
-        public Builder allocationResourceTags(@Nullable List<IPAMPoolTagArgs> allocationResourceTags) {
-            this.allocationResourceTags = Codegen.ofNullable(allocationResourceTags);
-            return this;
+
+        public Builder allocationResourceTags(List<IPAMPoolTagArgs> allocationResourceTags) {
+            return allocationResourceTags(Output.of(allocationResourceTags));
         }
+
         public Builder allocationResourceTags(IPAMPoolTagArgs... allocationResourceTags) {
             return allocationResourceTags(List.of(allocationResourceTags));
         }
+
         public Builder autoImport(@Nullable Output<Boolean> autoImport) {
-            this.autoImport = autoImport;
+            $.autoImport = autoImport;
             return this;
         }
-        public Builder autoImport(@Nullable Boolean autoImport) {
-            this.autoImport = Codegen.ofNullable(autoImport);
-            return this;
+
+        public Builder autoImport(Boolean autoImport) {
+            return autoImport(Output.of(autoImport));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder ipamScopeId(Output<String> ipamScopeId) {
-            this.ipamScopeId = Objects.requireNonNull(ipamScopeId);
+            $.ipamScopeId = ipamScopeId;
             return this;
         }
+
         public Builder ipamScopeId(String ipamScopeId) {
-            this.ipamScopeId = Output.of(Objects.requireNonNull(ipamScopeId));
-            return this;
+            return ipamScopeId(Output.of(ipamScopeId));
         }
+
         public Builder locale(@Nullable Output<String> locale) {
-            this.locale = locale;
+            $.locale = locale;
             return this;
         }
-        public Builder locale(@Nullable String locale) {
-            this.locale = Codegen.ofNullable(locale);
-            return this;
+
+        public Builder locale(String locale) {
+            return locale(Output.of(locale));
         }
+
         public Builder provisionedCidrs(@Nullable Output<List<IPAMPoolProvisionedCidrArgs>> provisionedCidrs) {
-            this.provisionedCidrs = provisionedCidrs;
+            $.provisionedCidrs = provisionedCidrs;
             return this;
         }
-        public Builder provisionedCidrs(@Nullable List<IPAMPoolProvisionedCidrArgs> provisionedCidrs) {
-            this.provisionedCidrs = Codegen.ofNullable(provisionedCidrs);
-            return this;
+
+        public Builder provisionedCidrs(List<IPAMPoolProvisionedCidrArgs> provisionedCidrs) {
+            return provisionedCidrs(Output.of(provisionedCidrs));
         }
+
         public Builder provisionedCidrs(IPAMPoolProvisionedCidrArgs... provisionedCidrs) {
             return provisionedCidrs(List.of(provisionedCidrs));
         }
+
         public Builder publiclyAdvertisable(@Nullable Output<Boolean> publiclyAdvertisable) {
-            this.publiclyAdvertisable = publiclyAdvertisable;
+            $.publiclyAdvertisable = publiclyAdvertisable;
             return this;
         }
-        public Builder publiclyAdvertisable(@Nullable Boolean publiclyAdvertisable) {
-            this.publiclyAdvertisable = Codegen.ofNullable(publiclyAdvertisable);
-            return this;
+
+        public Builder publiclyAdvertisable(Boolean publiclyAdvertisable) {
+            return publiclyAdvertisable(Output.of(publiclyAdvertisable));
         }
+
         public Builder sourceIpamPoolId(@Nullable Output<String> sourceIpamPoolId) {
-            this.sourceIpamPoolId = sourceIpamPoolId;
+            $.sourceIpamPoolId = sourceIpamPoolId;
             return this;
         }
-        public Builder sourceIpamPoolId(@Nullable String sourceIpamPoolId) {
-            this.sourceIpamPoolId = Codegen.ofNullable(sourceIpamPoolId);
-            return this;
+
+        public Builder sourceIpamPoolId(String sourceIpamPoolId) {
+            return sourceIpamPoolId(Output.of(sourceIpamPoolId));
         }
+
         public Builder tags(@Nullable Output<List<IPAMPoolTagArgs>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable List<IPAMPoolTagArgs> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(List<IPAMPoolTagArgs> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tags(IPAMPoolTagArgs... tags) {
             return tags(List.of(tags));
-        }        public IPAMPoolArgs build() {
-            return new IPAMPoolArgs(addressFamily, allocationDefaultNetmaskLength, allocationMaxNetmaskLength, allocationMinNetmaskLength, allocationResourceTags, autoImport, description, ipamScopeId, locale, provisionedCidrs, publiclyAdvertisable, sourceIpamPoolId, tags);
+        }
+
+        public IPAMPoolArgs build() {
+            $.addressFamily = Objects.requireNonNull($.addressFamily, "expected parameter 'addressFamily' to be non-null");
+            $.ipamScopeId = Objects.requireNonNull($.ipamScopeId, "expected parameter 'ipamScopeId' to be non-null");
+            return $;
         }
     }
+
 }

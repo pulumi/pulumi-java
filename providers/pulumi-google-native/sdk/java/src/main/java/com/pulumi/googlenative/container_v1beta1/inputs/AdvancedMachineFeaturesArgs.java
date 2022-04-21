@@ -5,9 +5,9 @@ package com.pulumi.googlenative.container_v1beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class AdvancedMachineFeaturesArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="threadsPerCore")
-      private final @Nullable Output<String> threadsPerCore;
+    private @Nullable Output<String> threadsPerCore;
 
-    public Output<String> threadsPerCore() {
-        return this.threadsPerCore == null ? Codegen.empty() : this.threadsPerCore;
+    public Optional<Output<String>> threadsPerCore() {
+        return Optional.ofNullable(this.threadsPerCore);
     }
 
-    public AdvancedMachineFeaturesArgs(@Nullable Output<String> threadsPerCore) {
-        this.threadsPerCore = threadsPerCore;
-    }
+    private AdvancedMachineFeaturesArgs() {}
 
-    private AdvancedMachineFeaturesArgs() {
-        this.threadsPerCore = Codegen.empty();
+    private AdvancedMachineFeaturesArgs(AdvancedMachineFeaturesArgs $) {
+        this.threadsPerCore = $.threadsPerCore;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AdvancedMachineFeaturesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> threadsPerCore;
+        private AdvancedMachineFeaturesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AdvancedMachineFeaturesArgs();
         }
 
         public Builder(AdvancedMachineFeaturesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.threadsPerCore = defaults.threadsPerCore;
+            $ = new AdvancedMachineFeaturesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder threadsPerCore(@Nullable Output<String> threadsPerCore) {
-            this.threadsPerCore = threadsPerCore;
+            $.threadsPerCore = threadsPerCore;
             return this;
         }
-        public Builder threadsPerCore(@Nullable String threadsPerCore) {
-            this.threadsPerCore = Codegen.ofNullable(threadsPerCore);
-            return this;
-        }        public AdvancedMachineFeaturesArgs build() {
-            return new AdvancedMachineFeaturesArgs(threadsPerCore);
+
+        public Builder threadsPerCore(String threadsPerCore) {
+            return threadsPerCore(Output.of(threadsPerCore));
+        }
+
+        public AdvancedMachineFeaturesArgs build() {
+            return $;
         }
     }
+
 }

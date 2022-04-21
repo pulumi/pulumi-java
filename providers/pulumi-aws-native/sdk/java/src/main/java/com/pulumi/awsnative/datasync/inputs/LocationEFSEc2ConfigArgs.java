@@ -5,7 +5,6 @@ package com.pulumi.awsnative.datasync.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +23,7 @@ public final class LocationEFSEc2ConfigArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="securityGroupArns", required=true)
-      private final Output<List<String>> securityGroupArns;
+    private Output<List<String>> securityGroupArns;
 
     public Output<List<String>> securityGroupArns() {
         return this.securityGroupArns;
@@ -35,66 +34,64 @@ public final class LocationEFSEc2ConfigArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="subnetArn", required=true)
-      private final Output<String> subnetArn;
+    private Output<String> subnetArn;
 
     public Output<String> subnetArn() {
         return this.subnetArn;
     }
 
-    public LocationEFSEc2ConfigArgs(
-        Output<List<String>> securityGroupArns,
-        Output<String> subnetArn) {
-        this.securityGroupArns = Objects.requireNonNull(securityGroupArns, "expected parameter 'securityGroupArns' to be non-null");
-        this.subnetArn = Objects.requireNonNull(subnetArn, "expected parameter 'subnetArn' to be non-null");
-    }
+    private LocationEFSEc2ConfigArgs() {}
 
-    private LocationEFSEc2ConfigArgs() {
-        this.securityGroupArns = Codegen.empty();
-        this.subnetArn = Codegen.empty();
+    private LocationEFSEc2ConfigArgs(LocationEFSEc2ConfigArgs $) {
+        this.securityGroupArns = $.securityGroupArns;
+        this.subnetArn = $.subnetArn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LocationEFSEc2ConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<List<String>> securityGroupArns;
-        private Output<String> subnetArn;
+        private LocationEFSEc2ConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new LocationEFSEc2ConfigArgs();
         }
 
         public Builder(LocationEFSEc2ConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.securityGroupArns = defaults.securityGroupArns;
-    	      this.subnetArn = defaults.subnetArn;
+            $ = new LocationEFSEc2ConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder securityGroupArns(Output<List<String>> securityGroupArns) {
-            this.securityGroupArns = Objects.requireNonNull(securityGroupArns);
+            $.securityGroupArns = securityGroupArns;
             return this;
         }
+
         public Builder securityGroupArns(List<String> securityGroupArns) {
-            this.securityGroupArns = Output.of(Objects.requireNonNull(securityGroupArns));
-            return this;
+            return securityGroupArns(Output.of(securityGroupArns));
         }
+
         public Builder securityGroupArns(String... securityGroupArns) {
             return securityGroupArns(List.of(securityGroupArns));
         }
+
         public Builder subnetArn(Output<String> subnetArn) {
-            this.subnetArn = Objects.requireNonNull(subnetArn);
+            $.subnetArn = subnetArn;
             return this;
         }
+
         public Builder subnetArn(String subnetArn) {
-            this.subnetArn = Output.of(Objects.requireNonNull(subnetArn));
-            return this;
-        }        public LocationEFSEc2ConfigArgs build() {
-            return new LocationEFSEc2ConfigArgs(securityGroupArns, subnetArn);
+            return subnetArn(Output.of(subnetArn));
+        }
+
+        public LocationEFSEc2ConfigArgs build() {
+            $.securityGroupArns = Objects.requireNonNull($.securityGroupArns, "expected parameter 'securityGroupArns' to be non-null");
+            $.subnetArn = Objects.requireNonNull($.subnetArn, "expected parameter 'subnetArn' to be non-null");
+            return $;
         }
     }
+
 }

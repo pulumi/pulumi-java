@@ -22,7 +22,7 @@ public final class DataDiskImageResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="lun", required=true)
-      private final Integer lun;
+    private Integer lun;
 
     public Integer lun() {
         return this.lun;
@@ -33,55 +33,52 @@ public final class DataDiskImageResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="sourceBlobSasUri", required=true)
-      private final String sourceBlobSasUri;
+    private String sourceBlobSasUri;
 
     public String sourceBlobSasUri() {
         return this.sourceBlobSasUri;
     }
 
-    public DataDiskImageResponse(
-        Integer lun,
-        String sourceBlobSasUri) {
-        this.lun = Objects.requireNonNull(lun, "expected parameter 'lun' to be non-null");
-        this.sourceBlobSasUri = Objects.requireNonNull(sourceBlobSasUri, "expected parameter 'sourceBlobSasUri' to be non-null");
-    }
+    private DataDiskImageResponse() {}
 
-    private DataDiskImageResponse() {
-        this.lun = null;
-        this.sourceBlobSasUri = null;
+    private DataDiskImageResponse(DataDiskImageResponse $) {
+        this.lun = $.lun;
+        this.sourceBlobSasUri = $.sourceBlobSasUri;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DataDiskImageResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Integer lun;
-        private String sourceBlobSasUri;
+        private DataDiskImageResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new DataDiskImageResponse();
         }
 
         public Builder(DataDiskImageResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.lun = defaults.lun;
-    	      this.sourceBlobSasUri = defaults.sourceBlobSasUri;
+            $ = new DataDiskImageResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder lun(Integer lun) {
-            this.lun = Objects.requireNonNull(lun);
+            $.lun = lun;
             return this;
         }
+
         public Builder sourceBlobSasUri(String sourceBlobSasUri) {
-            this.sourceBlobSasUri = Objects.requireNonNull(sourceBlobSasUri);
+            $.sourceBlobSasUri = sourceBlobSasUri;
             return this;
-        }        public DataDiskImageResponse build() {
-            return new DataDiskImageResponse(lun, sourceBlobSasUri);
+        }
+
+        public DataDiskImageResponse build() {
+            $.lun = Objects.requireNonNull($.lun, "expected parameter 'lun' to be non-null");
+            $.sourceBlobSasUri = Objects.requireNonNull($.sourceBlobSasUri, "expected parameter 'sourceBlobSasUri' to be non-null");
+            return $;
         }
     }
+
 }

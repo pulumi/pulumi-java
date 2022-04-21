@@ -21,7 +21,7 @@ public final class CloudRunRewriteResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="region", required=true)
-      private final String region;
+    private String region;
 
     public String region() {
         return this.region;
@@ -32,55 +32,52 @@ public final class CloudRunRewriteResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="serviceId", required=true)
-      private final String serviceId;
+    private String serviceId;
 
     public String serviceId() {
         return this.serviceId;
     }
 
-    public CloudRunRewriteResponse(
-        String region,
-        String serviceId) {
-        this.region = Objects.requireNonNull(region, "expected parameter 'region' to be non-null");
-        this.serviceId = Objects.requireNonNull(serviceId, "expected parameter 'serviceId' to be non-null");
-    }
+    private CloudRunRewriteResponse() {}
 
-    private CloudRunRewriteResponse() {
-        this.region = null;
-        this.serviceId = null;
+    private CloudRunRewriteResponse(CloudRunRewriteResponse $) {
+        this.region = $.region;
+        this.serviceId = $.serviceId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CloudRunRewriteResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String region;
-        private String serviceId;
+        private CloudRunRewriteResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new CloudRunRewriteResponse();
         }
 
         public Builder(CloudRunRewriteResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.region = defaults.region;
-    	      this.serviceId = defaults.serviceId;
+            $ = new CloudRunRewriteResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder region(String region) {
-            this.region = Objects.requireNonNull(region);
+            $.region = region;
             return this;
         }
+
         public Builder serviceId(String serviceId) {
-            this.serviceId = Objects.requireNonNull(serviceId);
+            $.serviceId = serviceId;
             return this;
-        }        public CloudRunRewriteResponse build() {
-            return new CloudRunRewriteResponse(region, serviceId);
+        }
+
+        public CloudRunRewriteResponse build() {
+            $.region = Objects.requireNonNull($.region, "expected parameter 'region' to be non-null");
+            $.serviceId = Objects.requireNonNull($.serviceId, "expected parameter 'serviceId' to be non-null");
+            return $;
         }
     }
+
 }

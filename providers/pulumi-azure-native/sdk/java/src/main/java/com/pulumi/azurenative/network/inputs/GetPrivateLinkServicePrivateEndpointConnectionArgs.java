@@ -19,10 +19,10 @@ public final class GetPrivateLinkServicePrivateEndpointConnectionArgs extends co
      * 
      */
     @Import(name="expand")
-      private final @Nullable String expand;
+    private @Nullable String expand;
 
     public Optional<String> expand() {
-        return this.expand == null ? Optional.empty() : Optional.ofNullable(this.expand);
+        return Optional.ofNullable(this.expand);
     }
 
     /**
@@ -30,7 +30,7 @@ public final class GetPrivateLinkServicePrivateEndpointConnectionArgs extends co
      * 
      */
     @Import(name="peConnectionName", required=true)
-      private final String peConnectionName;
+    private String peConnectionName;
 
     public String peConnectionName() {
         return this.peConnectionName;
@@ -41,7 +41,7 @@ public final class GetPrivateLinkServicePrivateEndpointConnectionArgs extends co
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -52,73 +52,65 @@ public final class GetPrivateLinkServicePrivateEndpointConnectionArgs extends co
      * 
      */
     @Import(name="serviceName", required=true)
-      private final String serviceName;
+    private String serviceName;
 
     public String serviceName() {
         return this.serviceName;
     }
 
-    public GetPrivateLinkServicePrivateEndpointConnectionArgs(
-        @Nullable String expand,
-        String peConnectionName,
-        String resourceGroupName,
-        String serviceName) {
-        this.expand = expand;
-        this.peConnectionName = Objects.requireNonNull(peConnectionName, "expected parameter 'peConnectionName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.serviceName = Objects.requireNonNull(serviceName, "expected parameter 'serviceName' to be non-null");
-    }
+    private GetPrivateLinkServicePrivateEndpointConnectionArgs() {}
 
-    private GetPrivateLinkServicePrivateEndpointConnectionArgs() {
-        this.expand = null;
-        this.peConnectionName = null;
-        this.resourceGroupName = null;
-        this.serviceName = null;
+    private GetPrivateLinkServicePrivateEndpointConnectionArgs(GetPrivateLinkServicePrivateEndpointConnectionArgs $) {
+        this.expand = $.expand;
+        this.peConnectionName = $.peConnectionName;
+        this.resourceGroupName = $.resourceGroupName;
+        this.serviceName = $.serviceName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetPrivateLinkServicePrivateEndpointConnectionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String expand;
-        private String peConnectionName;
-        private String resourceGroupName;
-        private String serviceName;
+        private GetPrivateLinkServicePrivateEndpointConnectionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetPrivateLinkServicePrivateEndpointConnectionArgs();
         }
 
         public Builder(GetPrivateLinkServicePrivateEndpointConnectionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.expand = defaults.expand;
-    	      this.peConnectionName = defaults.peConnectionName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.serviceName = defaults.serviceName;
+            $ = new GetPrivateLinkServicePrivateEndpointConnectionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder expand(@Nullable String expand) {
-            this.expand = expand;
+            $.expand = expand;
             return this;
         }
+
         public Builder peConnectionName(String peConnectionName) {
-            this.peConnectionName = Objects.requireNonNull(peConnectionName);
+            $.peConnectionName = peConnectionName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder serviceName(String serviceName) {
-            this.serviceName = Objects.requireNonNull(serviceName);
+            $.serviceName = serviceName;
             return this;
-        }        public GetPrivateLinkServicePrivateEndpointConnectionArgs build() {
-            return new GetPrivateLinkServicePrivateEndpointConnectionArgs(expand, peConnectionName, resourceGroupName, serviceName);
+        }
+
+        public GetPrivateLinkServicePrivateEndpointConnectionArgs build() {
+            $.peConnectionName = Objects.requireNonNull($.peConnectionName, "expected parameter 'peConnectionName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.serviceName = Objects.requireNonNull($.serviceName, "expected parameter 'serviceName' to be non-null");
+            return $;
         }
     }
+
 }

@@ -22,7 +22,7 @@ public final class TlsValidationContextResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="certificatePath", required=true)
-      private final String certificatePath;
+    private String certificatePath;
 
     public String certificatePath() {
         return this.certificatePath;
@@ -33,7 +33,7 @@ public final class TlsValidationContextResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="sdsConfig", required=true)
-      private final SdsConfigResponse sdsConfig;
+    private SdsConfigResponse sdsConfig;
 
     public SdsConfigResponse sdsConfig() {
         return this.sdsConfig;
@@ -44,64 +44,59 @@ public final class TlsValidationContextResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="validationSource", required=true)
-      private final String validationSource;
+    private String validationSource;
 
     public String validationSource() {
         return this.validationSource;
     }
 
-    public TlsValidationContextResponse(
-        String certificatePath,
-        SdsConfigResponse sdsConfig,
-        String validationSource) {
-        this.certificatePath = Objects.requireNonNull(certificatePath, "expected parameter 'certificatePath' to be non-null");
-        this.sdsConfig = Objects.requireNonNull(sdsConfig, "expected parameter 'sdsConfig' to be non-null");
-        this.validationSource = Objects.requireNonNull(validationSource, "expected parameter 'validationSource' to be non-null");
-    }
+    private TlsValidationContextResponse() {}
 
-    private TlsValidationContextResponse() {
-        this.certificatePath = null;
-        this.sdsConfig = null;
-        this.validationSource = null;
+    private TlsValidationContextResponse(TlsValidationContextResponse $) {
+        this.certificatePath = $.certificatePath;
+        this.sdsConfig = $.sdsConfig;
+        this.validationSource = $.validationSource;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TlsValidationContextResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String certificatePath;
-        private SdsConfigResponse sdsConfig;
-        private String validationSource;
+        private TlsValidationContextResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new TlsValidationContextResponse();
         }
 
         public Builder(TlsValidationContextResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.certificatePath = defaults.certificatePath;
-    	      this.sdsConfig = defaults.sdsConfig;
-    	      this.validationSource = defaults.validationSource;
+            $ = new TlsValidationContextResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder certificatePath(String certificatePath) {
-            this.certificatePath = Objects.requireNonNull(certificatePath);
+            $.certificatePath = certificatePath;
             return this;
         }
+
         public Builder sdsConfig(SdsConfigResponse sdsConfig) {
-            this.sdsConfig = Objects.requireNonNull(sdsConfig);
+            $.sdsConfig = sdsConfig;
             return this;
         }
+
         public Builder validationSource(String validationSource) {
-            this.validationSource = Objects.requireNonNull(validationSource);
+            $.validationSource = validationSource;
             return this;
-        }        public TlsValidationContextResponse build() {
-            return new TlsValidationContextResponse(certificatePath, sdsConfig, validationSource);
+        }
+
+        public TlsValidationContextResponse build() {
+            $.certificatePath = Objects.requireNonNull($.certificatePath, "expected parameter 'certificatePath' to be non-null");
+            $.sdsConfig = Objects.requireNonNull($.sdsConfig, "expected parameter 'sdsConfig' to be non-null");
+            $.validationSource = Objects.requireNonNull($.validationSource, "expected parameter 'validationSource' to be non-null");
+            return $;
         }
     }
+
 }

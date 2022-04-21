@@ -5,7 +5,6 @@ package com.pulumi.awsnative.events.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -15,70 +14,67 @@ public final class ConnectionApiKeyAuthParametersArgs extends com.pulumi.resourc
     public static final ConnectionApiKeyAuthParametersArgs Empty = new ConnectionApiKeyAuthParametersArgs();
 
     @Import(name="apiKeyName", required=true)
-      private final Output<String> apiKeyName;
+    private Output<String> apiKeyName;
 
     public Output<String> apiKeyName() {
         return this.apiKeyName;
     }
 
     @Import(name="apiKeyValue", required=true)
-      private final Output<String> apiKeyValue;
+    private Output<String> apiKeyValue;
 
     public Output<String> apiKeyValue() {
         return this.apiKeyValue;
     }
 
-    public ConnectionApiKeyAuthParametersArgs(
-        Output<String> apiKeyName,
-        Output<String> apiKeyValue) {
-        this.apiKeyName = Objects.requireNonNull(apiKeyName, "expected parameter 'apiKeyName' to be non-null");
-        this.apiKeyValue = Objects.requireNonNull(apiKeyValue, "expected parameter 'apiKeyValue' to be non-null");
-    }
+    private ConnectionApiKeyAuthParametersArgs() {}
 
-    private ConnectionApiKeyAuthParametersArgs() {
-        this.apiKeyName = Codegen.empty();
-        this.apiKeyValue = Codegen.empty();
+    private ConnectionApiKeyAuthParametersArgs(ConnectionApiKeyAuthParametersArgs $) {
+        this.apiKeyName = $.apiKeyName;
+        this.apiKeyValue = $.apiKeyValue;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ConnectionApiKeyAuthParametersArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> apiKeyName;
-        private Output<String> apiKeyValue;
+        private ConnectionApiKeyAuthParametersArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ConnectionApiKeyAuthParametersArgs();
         }
 
         public Builder(ConnectionApiKeyAuthParametersArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.apiKeyName = defaults.apiKeyName;
-    	      this.apiKeyValue = defaults.apiKeyValue;
+            $ = new ConnectionApiKeyAuthParametersArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder apiKeyName(Output<String> apiKeyName) {
-            this.apiKeyName = Objects.requireNonNull(apiKeyName);
+            $.apiKeyName = apiKeyName;
             return this;
         }
+
         public Builder apiKeyName(String apiKeyName) {
-            this.apiKeyName = Output.of(Objects.requireNonNull(apiKeyName));
-            return this;
+            return apiKeyName(Output.of(apiKeyName));
         }
+
         public Builder apiKeyValue(Output<String> apiKeyValue) {
-            this.apiKeyValue = Objects.requireNonNull(apiKeyValue);
+            $.apiKeyValue = apiKeyValue;
             return this;
         }
+
         public Builder apiKeyValue(String apiKeyValue) {
-            this.apiKeyValue = Output.of(Objects.requireNonNull(apiKeyValue));
-            return this;
-        }        public ConnectionApiKeyAuthParametersArgs build() {
-            return new ConnectionApiKeyAuthParametersArgs(apiKeyName, apiKeyValue);
+            return apiKeyValue(Output.of(apiKeyValue));
+        }
+
+        public ConnectionApiKeyAuthParametersArgs build() {
+            $.apiKeyName = Objects.requireNonNull($.apiKeyName, "expected parameter 'apiKeyName' to be non-null");
+            $.apiKeyValue = Objects.requireNonNull($.apiKeyValue, "expected parameter 'apiKeyValue' to be non-null");
+            return $;
         }
     }
+
 }

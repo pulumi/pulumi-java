@@ -13,78 +13,73 @@ public final class GetBackendServiceIap extends com.pulumi.resources.InvokeArgs 
     public static final GetBackendServiceIap Empty = new GetBackendServiceIap();
 
     @Import(name="oauth2ClientId", required=true)
-      private final String oauth2ClientId;
+    private String oauth2ClientId;
 
     public String oauth2ClientId() {
         return this.oauth2ClientId;
     }
 
     @Import(name="oauth2ClientSecret", required=true)
-      private final String oauth2ClientSecret;
+    private String oauth2ClientSecret;
 
     public String oauth2ClientSecret() {
         return this.oauth2ClientSecret;
     }
 
     @Import(name="oauth2ClientSecretSha256", required=true)
-      private final String oauth2ClientSecretSha256;
+    private String oauth2ClientSecretSha256;
 
     public String oauth2ClientSecretSha256() {
         return this.oauth2ClientSecretSha256;
     }
 
-    public GetBackendServiceIap(
-        String oauth2ClientId,
-        String oauth2ClientSecret,
-        String oauth2ClientSecretSha256) {
-        this.oauth2ClientId = Objects.requireNonNull(oauth2ClientId, "expected parameter 'oauth2ClientId' to be non-null");
-        this.oauth2ClientSecret = Objects.requireNonNull(oauth2ClientSecret, "expected parameter 'oauth2ClientSecret' to be non-null");
-        this.oauth2ClientSecretSha256 = Objects.requireNonNull(oauth2ClientSecretSha256, "expected parameter 'oauth2ClientSecretSha256' to be non-null");
-    }
+    private GetBackendServiceIap() {}
 
-    private GetBackendServiceIap() {
-        this.oauth2ClientId = null;
-        this.oauth2ClientSecret = null;
-        this.oauth2ClientSecretSha256 = null;
+    private GetBackendServiceIap(GetBackendServiceIap $) {
+        this.oauth2ClientId = $.oauth2ClientId;
+        this.oauth2ClientSecret = $.oauth2ClientSecret;
+        this.oauth2ClientSecretSha256 = $.oauth2ClientSecretSha256;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetBackendServiceIap defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String oauth2ClientId;
-        private String oauth2ClientSecret;
-        private String oauth2ClientSecretSha256;
+        private GetBackendServiceIap $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetBackendServiceIap();
         }
 
         public Builder(GetBackendServiceIap defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.oauth2ClientId = defaults.oauth2ClientId;
-    	      this.oauth2ClientSecret = defaults.oauth2ClientSecret;
-    	      this.oauth2ClientSecretSha256 = defaults.oauth2ClientSecretSha256;
+            $ = new GetBackendServiceIap(Objects.requireNonNull(defaults));
         }
 
         public Builder oauth2ClientId(String oauth2ClientId) {
-            this.oauth2ClientId = Objects.requireNonNull(oauth2ClientId);
+            $.oauth2ClientId = oauth2ClientId;
             return this;
         }
+
         public Builder oauth2ClientSecret(String oauth2ClientSecret) {
-            this.oauth2ClientSecret = Objects.requireNonNull(oauth2ClientSecret);
+            $.oauth2ClientSecret = oauth2ClientSecret;
             return this;
         }
+
         public Builder oauth2ClientSecretSha256(String oauth2ClientSecretSha256) {
-            this.oauth2ClientSecretSha256 = Objects.requireNonNull(oauth2ClientSecretSha256);
+            $.oauth2ClientSecretSha256 = oauth2ClientSecretSha256;
             return this;
-        }        public GetBackendServiceIap build() {
-            return new GetBackendServiceIap(oauth2ClientId, oauth2ClientSecret, oauth2ClientSecretSha256);
+        }
+
+        public GetBackendServiceIap build() {
+            $.oauth2ClientId = Objects.requireNonNull($.oauth2ClientId, "expected parameter 'oauth2ClientId' to be non-null");
+            $.oauth2ClientSecret = Objects.requireNonNull($.oauth2ClientSecret, "expected parameter 'oauth2ClientSecret' to be non-null");
+            $.oauth2ClientSecretSha256 = Objects.requireNonNull($.oauth2ClientSecretSha256, "expected parameter 'oauth2ClientSecretSha256' to be non-null");
+            return $;
         }
     }
+
 }

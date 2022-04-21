@@ -5,9 +5,9 @@ package com.pulumi.aws.codebuild.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class ProjectLogsConfigCloudwatchLogsGetArgs extends com.pulumi.res
      * 
      */
     @Import(name="groupName")
-      private final @Nullable Output<String> groupName;
+    private @Nullable Output<String> groupName;
 
-    public Output<String> groupName() {
-        return this.groupName == null ? Codegen.empty() : this.groupName;
+    public Optional<Output<String>> groupName() {
+        return Optional.ofNullable(this.groupName);
     }
 
     /**
@@ -31,10 +31,10 @@ public final class ProjectLogsConfigCloudwatchLogsGetArgs extends com.pulumi.res
      * 
      */
     @Import(name="status")
-      private final @Nullable Output<String> status;
+    private @Nullable Output<String> status;
 
-    public Output<String> status() {
-        return this.status == null ? Codegen.empty() : this.status;
+    public Optional<Output<String>> status() {
+        return Optional.ofNullable(this.status);
     }
 
     /**
@@ -42,76 +42,68 @@ public final class ProjectLogsConfigCloudwatchLogsGetArgs extends com.pulumi.res
      * 
      */
     @Import(name="streamName")
-      private final @Nullable Output<String> streamName;
+    private @Nullable Output<String> streamName;
 
-    public Output<String> streamName() {
-        return this.streamName == null ? Codegen.empty() : this.streamName;
+    public Optional<Output<String>> streamName() {
+        return Optional.ofNullable(this.streamName);
     }
 
-    public ProjectLogsConfigCloudwatchLogsGetArgs(
-        @Nullable Output<String> groupName,
-        @Nullable Output<String> status,
-        @Nullable Output<String> streamName) {
-        this.groupName = groupName;
-        this.status = status;
-        this.streamName = streamName;
-    }
+    private ProjectLogsConfigCloudwatchLogsGetArgs() {}
 
-    private ProjectLogsConfigCloudwatchLogsGetArgs() {
-        this.groupName = Codegen.empty();
-        this.status = Codegen.empty();
-        this.streamName = Codegen.empty();
+    private ProjectLogsConfigCloudwatchLogsGetArgs(ProjectLogsConfigCloudwatchLogsGetArgs $) {
+        this.groupName = $.groupName;
+        this.status = $.status;
+        this.streamName = $.streamName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ProjectLogsConfigCloudwatchLogsGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> groupName;
-        private @Nullable Output<String> status;
-        private @Nullable Output<String> streamName;
+        private ProjectLogsConfigCloudwatchLogsGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ProjectLogsConfigCloudwatchLogsGetArgs();
         }
 
         public Builder(ProjectLogsConfigCloudwatchLogsGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.groupName = defaults.groupName;
-    	      this.status = defaults.status;
-    	      this.streamName = defaults.streamName;
+            $ = new ProjectLogsConfigCloudwatchLogsGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder groupName(@Nullable Output<String> groupName) {
-            this.groupName = groupName;
+            $.groupName = groupName;
             return this;
         }
-        public Builder groupName(@Nullable String groupName) {
-            this.groupName = Codegen.ofNullable(groupName);
-            return this;
+
+        public Builder groupName(String groupName) {
+            return groupName(Output.of(groupName));
         }
+
         public Builder status(@Nullable Output<String> status) {
-            this.status = status;
+            $.status = status;
             return this;
         }
-        public Builder status(@Nullable String status) {
-            this.status = Codegen.ofNullable(status);
-            return this;
+
+        public Builder status(String status) {
+            return status(Output.of(status));
         }
+
         public Builder streamName(@Nullable Output<String> streamName) {
-            this.streamName = streamName;
+            $.streamName = streamName;
             return this;
         }
-        public Builder streamName(@Nullable String streamName) {
-            this.streamName = Codegen.ofNullable(streamName);
-            return this;
-        }        public ProjectLogsConfigCloudwatchLogsGetArgs build() {
-            return new ProjectLogsConfigCloudwatchLogsGetArgs(groupName, status, streamName);
+
+        public Builder streamName(String streamName) {
+            return streamName(Output.of(streamName));
+        }
+
+        public ProjectLogsConfigCloudwatchLogsGetArgs build() {
+            return $;
         }
     }
+
 }

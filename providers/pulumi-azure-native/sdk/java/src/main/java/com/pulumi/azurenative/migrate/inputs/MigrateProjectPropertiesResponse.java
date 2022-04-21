@@ -28,7 +28,7 @@ public final class MigrateProjectPropertiesResponse extends com.pulumi.resources
      * 
      */
     @Import(name="lastSummaryRefreshedTime", required=true)
-      private final String lastSummaryRefreshedTime;
+    private String lastSummaryRefreshedTime;
 
     public String lastSummaryRefreshedTime() {
         return this.lastSummaryRefreshedTime;
@@ -39,10 +39,10 @@ public final class MigrateProjectPropertiesResponse extends com.pulumi.resources
      * 
      */
     @Import(name="provisioningState")
-      private final @Nullable String provisioningState;
+    private @Nullable String provisioningState;
 
     public Optional<String> provisioningState() {
-        return this.provisioningState == null ? Optional.empty() : Optional.ofNullable(this.provisioningState);
+        return Optional.ofNullable(this.provisioningState);
     }
 
     /**
@@ -50,7 +50,7 @@ public final class MigrateProjectPropertiesResponse extends com.pulumi.resources
      * 
      */
     @Import(name="refreshSummaryState", required=true)
-      private final String refreshSummaryState;
+    private String refreshSummaryState;
 
     public String refreshSummaryState() {
         return this.refreshSummaryState;
@@ -61,10 +61,10 @@ public final class MigrateProjectPropertiesResponse extends com.pulumi.resources
      * 
      */
     @Import(name="registeredTools")
-      private final @Nullable List<String> registeredTools;
+    private @Nullable List<String> registeredTools;
 
-    public List<String> registeredTools() {
-        return this.registeredTools == null ? List.of() : this.registeredTools;
+    public Optional<List<String>> registeredTools() {
+        return Optional.ofNullable(this.registeredTools);
     }
 
     /**
@@ -72,85 +72,75 @@ public final class MigrateProjectPropertiesResponse extends com.pulumi.resources
      * 
      */
     @Import(name="summary", required=true)
-      private final Map<String,Either<DatabaseProjectSummaryResponse,ServersProjectSummaryResponse>> summary;
+    private Map<String,Either<DatabaseProjectSummaryResponse,ServersProjectSummaryResponse>> summary;
 
     public Map<String,Either<DatabaseProjectSummaryResponse,ServersProjectSummaryResponse>> summary() {
         return this.summary;
     }
 
-    public MigrateProjectPropertiesResponse(
-        String lastSummaryRefreshedTime,
-        @Nullable String provisioningState,
-        String refreshSummaryState,
-        @Nullable List<String> registeredTools,
-        Map<String,Either<DatabaseProjectSummaryResponse,ServersProjectSummaryResponse>> summary) {
-        this.lastSummaryRefreshedTime = Objects.requireNonNull(lastSummaryRefreshedTime, "expected parameter 'lastSummaryRefreshedTime' to be non-null");
-        this.provisioningState = provisioningState;
-        this.refreshSummaryState = Objects.requireNonNull(refreshSummaryState, "expected parameter 'refreshSummaryState' to be non-null");
-        this.registeredTools = registeredTools;
-        this.summary = Objects.requireNonNull(summary, "expected parameter 'summary' to be non-null");
-    }
+    private MigrateProjectPropertiesResponse() {}
 
-    private MigrateProjectPropertiesResponse() {
-        this.lastSummaryRefreshedTime = null;
-        this.provisioningState = null;
-        this.refreshSummaryState = null;
-        this.registeredTools = List.of();
-        this.summary = Map.of();
+    private MigrateProjectPropertiesResponse(MigrateProjectPropertiesResponse $) {
+        this.lastSummaryRefreshedTime = $.lastSummaryRefreshedTime;
+        this.provisioningState = $.provisioningState;
+        this.refreshSummaryState = $.refreshSummaryState;
+        this.registeredTools = $.registeredTools;
+        this.summary = $.summary;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MigrateProjectPropertiesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String lastSummaryRefreshedTime;
-        private @Nullable String provisioningState;
-        private String refreshSummaryState;
-        private @Nullable List<String> registeredTools;
-        private Map<String,Either<DatabaseProjectSummaryResponse,ServersProjectSummaryResponse>> summary;
+        private MigrateProjectPropertiesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new MigrateProjectPropertiesResponse();
         }
 
         public Builder(MigrateProjectPropertiesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.lastSummaryRefreshedTime = defaults.lastSummaryRefreshedTime;
-    	      this.provisioningState = defaults.provisioningState;
-    	      this.refreshSummaryState = defaults.refreshSummaryState;
-    	      this.registeredTools = defaults.registeredTools;
-    	      this.summary = defaults.summary;
+            $ = new MigrateProjectPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder lastSummaryRefreshedTime(String lastSummaryRefreshedTime) {
-            this.lastSummaryRefreshedTime = Objects.requireNonNull(lastSummaryRefreshedTime);
+            $.lastSummaryRefreshedTime = lastSummaryRefreshedTime;
             return this;
         }
+
         public Builder provisioningState(@Nullable String provisioningState) {
-            this.provisioningState = provisioningState;
+            $.provisioningState = provisioningState;
             return this;
         }
+
         public Builder refreshSummaryState(String refreshSummaryState) {
-            this.refreshSummaryState = Objects.requireNonNull(refreshSummaryState);
+            $.refreshSummaryState = refreshSummaryState;
             return this;
         }
+
         public Builder registeredTools(@Nullable List<String> registeredTools) {
-            this.registeredTools = registeredTools;
+            $.registeredTools = registeredTools;
             return this;
         }
+
         public Builder registeredTools(String... registeredTools) {
             return registeredTools(List.of(registeredTools));
         }
+
         public Builder summary(Map<String,Either<DatabaseProjectSummaryResponse,ServersProjectSummaryResponse>> summary) {
-            this.summary = Objects.requireNonNull(summary);
+            $.summary = summary;
             return this;
-        }        public MigrateProjectPropertiesResponse build() {
-            return new MigrateProjectPropertiesResponse(lastSummaryRefreshedTime, provisioningState, refreshSummaryState, registeredTools, summary);
+        }
+
+        public MigrateProjectPropertiesResponse build() {
+            $.lastSummaryRefreshedTime = Objects.requireNonNull($.lastSummaryRefreshedTime, "expected parameter 'lastSummaryRefreshedTime' to be non-null");
+            $.refreshSummaryState = Objects.requireNonNull($.refreshSummaryState, "expected parameter 'refreshSummaryState' to be non-null");
+            $.summary = Objects.requireNonNull($.summary, "expected parameter 'summary' to be non-null");
+            return $;
         }
     }
+
 }

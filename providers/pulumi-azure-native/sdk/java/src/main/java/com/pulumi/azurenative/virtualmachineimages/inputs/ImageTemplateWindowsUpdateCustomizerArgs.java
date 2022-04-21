@@ -10,6 +10,7 @@ import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +27,10 @@ public final class ImageTemplateWindowsUpdateCustomizerArgs extends com.pulumi.r
      * 
      */
     @Import(name="filters")
-      private final @Nullable Output<List<String>> filters;
+    private @Nullable Output<List<String>> filters;
 
-    public Output<List<String>> filters() {
-        return this.filters == null ? Codegen.empty() : this.filters;
+    public Optional<Output<List<String>>> filters() {
+        return Optional.ofNullable(this.filters);
     }
 
     /**
@@ -37,10 +38,10 @@ public final class ImageTemplateWindowsUpdateCustomizerArgs extends com.pulumi.r
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -48,10 +49,10 @@ public final class ImageTemplateWindowsUpdateCustomizerArgs extends com.pulumi.r
      * 
      */
     @Import(name="searchCriteria")
-      private final @Nullable Output<String> searchCriteria;
+    private @Nullable Output<String> searchCriteria;
 
-    public Output<String> searchCriteria() {
-        return this.searchCriteria == null ? Codegen.empty() : this.searchCriteria;
+    public Optional<Output<String>> searchCriteria() {
+        return Optional.ofNullable(this.searchCriteria);
     }
 
     /**
@@ -60,7 +61,7 @@ public final class ImageTemplateWindowsUpdateCustomizerArgs extends com.pulumi.r
      * 
      */
     @Import(name="type", required=true)
-      private final Output<String> type;
+    private Output<String> type;
 
     public Output<String> type() {
         return this.type;
@@ -71,105 +72,93 @@ public final class ImageTemplateWindowsUpdateCustomizerArgs extends com.pulumi.r
      * 
      */
     @Import(name="updateLimit")
-      private final @Nullable Output<Integer> updateLimit;
+    private @Nullable Output<Integer> updateLimit;
 
-    public Output<Integer> updateLimit() {
-        return this.updateLimit == null ? Codegen.empty() : this.updateLimit;
+    public Optional<Output<Integer>> updateLimit() {
+        return Optional.ofNullable(this.updateLimit);
     }
 
-    public ImageTemplateWindowsUpdateCustomizerArgs(
-        @Nullable Output<List<String>> filters,
-        @Nullable Output<String> name,
-        @Nullable Output<String> searchCriteria,
-        Output<String> type,
-        @Nullable Output<Integer> updateLimit) {
-        this.filters = filters;
-        this.name = name;
-        this.searchCriteria = searchCriteria;
-        this.type = Codegen.stringProp("type").output().arg(type).require();
-        this.updateLimit = updateLimit;
-    }
+    private ImageTemplateWindowsUpdateCustomizerArgs() {}
 
-    private ImageTemplateWindowsUpdateCustomizerArgs() {
-        this.filters = Codegen.empty();
-        this.name = Codegen.empty();
-        this.searchCriteria = Codegen.empty();
-        this.type = Codegen.empty();
-        this.updateLimit = Codegen.empty();
+    private ImageTemplateWindowsUpdateCustomizerArgs(ImageTemplateWindowsUpdateCustomizerArgs $) {
+        this.filters = $.filters;
+        this.name = $.name;
+        this.searchCriteria = $.searchCriteria;
+        this.type = $.type;
+        this.updateLimit = $.updateLimit;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ImageTemplateWindowsUpdateCustomizerArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> filters;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> searchCriteria;
-        private Output<String> type;
-        private @Nullable Output<Integer> updateLimit;
+        private ImageTemplateWindowsUpdateCustomizerArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ImageTemplateWindowsUpdateCustomizerArgs();
         }
 
         public Builder(ImageTemplateWindowsUpdateCustomizerArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.filters = defaults.filters;
-    	      this.name = defaults.name;
-    	      this.searchCriteria = defaults.searchCriteria;
-    	      this.type = defaults.type;
-    	      this.updateLimit = defaults.updateLimit;
+            $ = new ImageTemplateWindowsUpdateCustomizerArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder filters(@Nullable Output<List<String>> filters) {
-            this.filters = filters;
+            $.filters = filters;
             return this;
         }
-        public Builder filters(@Nullable List<String> filters) {
-            this.filters = Codegen.ofNullable(filters);
-            return this;
+
+        public Builder filters(List<String> filters) {
+            return filters(Output.of(filters));
         }
+
         public Builder filters(String... filters) {
             return filters(List.of(filters));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder searchCriteria(@Nullable Output<String> searchCriteria) {
-            this.searchCriteria = searchCriteria;
+            $.searchCriteria = searchCriteria;
             return this;
         }
-        public Builder searchCriteria(@Nullable String searchCriteria) {
-            this.searchCriteria = Codegen.ofNullable(searchCriteria);
-            return this;
+
+        public Builder searchCriteria(String searchCriteria) {
+            return searchCriteria(Output.of(searchCriteria));
         }
+
         public Builder type(Output<String> type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Output.of(Objects.requireNonNull(type));
-            return this;
+            return type(Output.of(type));
         }
+
         public Builder updateLimit(@Nullable Output<Integer> updateLimit) {
-            this.updateLimit = updateLimit;
+            $.updateLimit = updateLimit;
             return this;
         }
-        public Builder updateLimit(@Nullable Integer updateLimit) {
-            this.updateLimit = Codegen.ofNullable(updateLimit);
-            return this;
-        }        public ImageTemplateWindowsUpdateCustomizerArgs build() {
-            return new ImageTemplateWindowsUpdateCustomizerArgs(filters, name, searchCriteria, type, updateLimit);
+
+        public Builder updateLimit(Integer updateLimit) {
+            return updateLimit(Output.of(updateLimit));
+        }
+
+        public ImageTemplateWindowsUpdateCustomizerArgs build() {
+            $.type = Codegen.stringProp("type").output().arg($.type).require();
+            return $;
         }
     }
+
 }

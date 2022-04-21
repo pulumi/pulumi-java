@@ -5,10 +5,10 @@ package com.pulumi.docker.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -17,99 +17,95 @@ public final class ServiceTaskSpecContainerSpecDnsConfigArgs extends com.pulumi.
     public static final ServiceTaskSpecContainerSpecDnsConfigArgs Empty = new ServiceTaskSpecContainerSpecDnsConfigArgs();
 
     @Import(name="nameservers", required=true)
-      private final Output<List<String>> nameservers;
+    private Output<List<String>> nameservers;
 
     public Output<List<String>> nameservers() {
         return this.nameservers;
     }
 
     @Import(name="options")
-      private final @Nullable Output<List<String>> options;
+    private @Nullable Output<List<String>> options;
 
-    public Output<List<String>> options() {
-        return this.options == null ? Codegen.empty() : this.options;
+    public Optional<Output<List<String>>> options() {
+        return Optional.ofNullable(this.options);
     }
 
     @Import(name="searches")
-      private final @Nullable Output<List<String>> searches;
+    private @Nullable Output<List<String>> searches;
 
-    public Output<List<String>> searches() {
-        return this.searches == null ? Codegen.empty() : this.searches;
+    public Optional<Output<List<String>>> searches() {
+        return Optional.ofNullable(this.searches);
     }
 
-    public ServiceTaskSpecContainerSpecDnsConfigArgs(
-        Output<List<String>> nameservers,
-        @Nullable Output<List<String>> options,
-        @Nullable Output<List<String>> searches) {
-        this.nameservers = Objects.requireNonNull(nameservers, "expected parameter 'nameservers' to be non-null");
-        this.options = options;
-        this.searches = searches;
-    }
+    private ServiceTaskSpecContainerSpecDnsConfigArgs() {}
 
-    private ServiceTaskSpecContainerSpecDnsConfigArgs() {
-        this.nameservers = Codegen.empty();
-        this.options = Codegen.empty();
-        this.searches = Codegen.empty();
+    private ServiceTaskSpecContainerSpecDnsConfigArgs(ServiceTaskSpecContainerSpecDnsConfigArgs $) {
+        this.nameservers = $.nameservers;
+        this.options = $.options;
+        this.searches = $.searches;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ServiceTaskSpecContainerSpecDnsConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<List<String>> nameservers;
-        private @Nullable Output<List<String>> options;
-        private @Nullable Output<List<String>> searches;
+        private ServiceTaskSpecContainerSpecDnsConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ServiceTaskSpecContainerSpecDnsConfigArgs();
         }
 
         public Builder(ServiceTaskSpecContainerSpecDnsConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.nameservers = defaults.nameservers;
-    	      this.options = defaults.options;
-    	      this.searches = defaults.searches;
+            $ = new ServiceTaskSpecContainerSpecDnsConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder nameservers(Output<List<String>> nameservers) {
-            this.nameservers = Objects.requireNonNull(nameservers);
+            $.nameservers = nameservers;
             return this;
         }
+
         public Builder nameservers(List<String> nameservers) {
-            this.nameservers = Output.of(Objects.requireNonNull(nameservers));
-            return this;
+            return nameservers(Output.of(nameservers));
         }
+
         public Builder nameservers(String... nameservers) {
             return nameservers(List.of(nameservers));
         }
+
         public Builder options(@Nullable Output<List<String>> options) {
-            this.options = options;
+            $.options = options;
             return this;
         }
-        public Builder options(@Nullable List<String> options) {
-            this.options = Codegen.ofNullable(options);
-            return this;
+
+        public Builder options(List<String> options) {
+            return options(Output.of(options));
         }
+
         public Builder options(String... options) {
             return options(List.of(options));
         }
+
         public Builder searches(@Nullable Output<List<String>> searches) {
-            this.searches = searches;
+            $.searches = searches;
             return this;
         }
-        public Builder searches(@Nullable List<String> searches) {
-            this.searches = Codegen.ofNullable(searches);
-            return this;
+
+        public Builder searches(List<String> searches) {
+            return searches(Output.of(searches));
         }
+
         public Builder searches(String... searches) {
             return searches(List.of(searches));
-        }        public ServiceTaskSpecContainerSpecDnsConfigArgs build() {
-            return new ServiceTaskSpecContainerSpecDnsConfigArgs(nameservers, options, searches);
+        }
+
+        public ServiceTaskSpecContainerSpecDnsConfigArgs build() {
+            $.nameservers = Objects.requireNonNull($.nameservers, "expected parameter 'nameservers' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,9 +5,9 @@ package com.pulumi.gcp.certificateauthority.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,7 +20,7 @@ public final class AuthorityConfigSubjectConfigSubjectArgs extends com.pulumi.re
      * 
      */
     @Import(name="commonName", required=true)
-      private final Output<String> commonName;
+    private Output<String> commonName;
 
     public Output<String> commonName() {
         return this.commonName;
@@ -31,10 +31,10 @@ public final class AuthorityConfigSubjectConfigSubjectArgs extends com.pulumi.re
      * 
      */
     @Import(name="countryCode")
-      private final @Nullable Output<String> countryCode;
+    private @Nullable Output<String> countryCode;
 
-    public Output<String> countryCode() {
-        return this.countryCode == null ? Codegen.empty() : this.countryCode;
+    public Optional<Output<String>> countryCode() {
+        return Optional.ofNullable(this.countryCode);
     }
 
     /**
@@ -42,10 +42,10 @@ public final class AuthorityConfigSubjectConfigSubjectArgs extends com.pulumi.re
      * 
      */
     @Import(name="locality")
-      private final @Nullable Output<String> locality;
+    private @Nullable Output<String> locality;
 
-    public Output<String> locality() {
-        return this.locality == null ? Codegen.empty() : this.locality;
+    public Optional<Output<String>> locality() {
+        return Optional.ofNullable(this.locality);
     }
 
     /**
@@ -53,7 +53,7 @@ public final class AuthorityConfigSubjectConfigSubjectArgs extends com.pulumi.re
      * 
      */
     @Import(name="organization", required=true)
-      private final Output<String> organization;
+    private Output<String> organization;
 
     public Output<String> organization() {
         return this.organization;
@@ -64,10 +64,10 @@ public final class AuthorityConfigSubjectConfigSubjectArgs extends com.pulumi.re
      * 
      */
     @Import(name="organizationalUnit")
-      private final @Nullable Output<String> organizationalUnit;
+    private @Nullable Output<String> organizationalUnit;
 
-    public Output<String> organizationalUnit() {
-        return this.organizationalUnit == null ? Codegen.empty() : this.organizationalUnit;
+    public Optional<Output<String>> organizationalUnit() {
+        return Optional.ofNullable(this.organizationalUnit);
     }
 
     /**
@@ -75,10 +75,10 @@ public final class AuthorityConfigSubjectConfigSubjectArgs extends com.pulumi.re
      * 
      */
     @Import(name="postalCode")
-      private final @Nullable Output<String> postalCode;
+    private @Nullable Output<String> postalCode;
 
-    public Output<String> postalCode() {
-        return this.postalCode == null ? Codegen.empty() : this.postalCode;
+    public Optional<Output<String>> postalCode() {
+        return Optional.ofNullable(this.postalCode);
     }
 
     /**
@@ -86,10 +86,10 @@ public final class AuthorityConfigSubjectConfigSubjectArgs extends com.pulumi.re
      * 
      */
     @Import(name="province")
-      private final @Nullable Output<String> province;
+    private @Nullable Output<String> province;
 
-    public Output<String> province() {
-        return this.province == null ? Codegen.empty() : this.province;
+    public Optional<Output<String>> province() {
+        return Optional.ofNullable(this.province);
     }
 
     /**
@@ -97,141 +97,120 @@ public final class AuthorityConfigSubjectConfigSubjectArgs extends com.pulumi.re
      * 
      */
     @Import(name="streetAddress")
-      private final @Nullable Output<String> streetAddress;
+    private @Nullable Output<String> streetAddress;
 
-    public Output<String> streetAddress() {
-        return this.streetAddress == null ? Codegen.empty() : this.streetAddress;
+    public Optional<Output<String>> streetAddress() {
+        return Optional.ofNullable(this.streetAddress);
     }
 
-    public AuthorityConfigSubjectConfigSubjectArgs(
-        Output<String> commonName,
-        @Nullable Output<String> countryCode,
-        @Nullable Output<String> locality,
-        Output<String> organization,
-        @Nullable Output<String> organizationalUnit,
-        @Nullable Output<String> postalCode,
-        @Nullable Output<String> province,
-        @Nullable Output<String> streetAddress) {
-        this.commonName = Objects.requireNonNull(commonName, "expected parameter 'commonName' to be non-null");
-        this.countryCode = countryCode;
-        this.locality = locality;
-        this.organization = Objects.requireNonNull(organization, "expected parameter 'organization' to be non-null");
-        this.organizationalUnit = organizationalUnit;
-        this.postalCode = postalCode;
-        this.province = province;
-        this.streetAddress = streetAddress;
-    }
+    private AuthorityConfigSubjectConfigSubjectArgs() {}
 
-    private AuthorityConfigSubjectConfigSubjectArgs() {
-        this.commonName = Codegen.empty();
-        this.countryCode = Codegen.empty();
-        this.locality = Codegen.empty();
-        this.organization = Codegen.empty();
-        this.organizationalUnit = Codegen.empty();
-        this.postalCode = Codegen.empty();
-        this.province = Codegen.empty();
-        this.streetAddress = Codegen.empty();
+    private AuthorityConfigSubjectConfigSubjectArgs(AuthorityConfigSubjectConfigSubjectArgs $) {
+        this.commonName = $.commonName;
+        this.countryCode = $.countryCode;
+        this.locality = $.locality;
+        this.organization = $.organization;
+        this.organizationalUnit = $.organizationalUnit;
+        this.postalCode = $.postalCode;
+        this.province = $.province;
+        this.streetAddress = $.streetAddress;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AuthorityConfigSubjectConfigSubjectArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> commonName;
-        private @Nullable Output<String> countryCode;
-        private @Nullable Output<String> locality;
-        private Output<String> organization;
-        private @Nullable Output<String> organizationalUnit;
-        private @Nullable Output<String> postalCode;
-        private @Nullable Output<String> province;
-        private @Nullable Output<String> streetAddress;
+        private AuthorityConfigSubjectConfigSubjectArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AuthorityConfigSubjectConfigSubjectArgs();
         }
 
         public Builder(AuthorityConfigSubjectConfigSubjectArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.commonName = defaults.commonName;
-    	      this.countryCode = defaults.countryCode;
-    	      this.locality = defaults.locality;
-    	      this.organization = defaults.organization;
-    	      this.organizationalUnit = defaults.organizationalUnit;
-    	      this.postalCode = defaults.postalCode;
-    	      this.province = defaults.province;
-    	      this.streetAddress = defaults.streetAddress;
+            $ = new AuthorityConfigSubjectConfigSubjectArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder commonName(Output<String> commonName) {
-            this.commonName = Objects.requireNonNull(commonName);
+            $.commonName = commonName;
             return this;
         }
+
         public Builder commonName(String commonName) {
-            this.commonName = Output.of(Objects.requireNonNull(commonName));
-            return this;
+            return commonName(Output.of(commonName));
         }
+
         public Builder countryCode(@Nullable Output<String> countryCode) {
-            this.countryCode = countryCode;
+            $.countryCode = countryCode;
             return this;
         }
-        public Builder countryCode(@Nullable String countryCode) {
-            this.countryCode = Codegen.ofNullable(countryCode);
-            return this;
+
+        public Builder countryCode(String countryCode) {
+            return countryCode(Output.of(countryCode));
         }
+
         public Builder locality(@Nullable Output<String> locality) {
-            this.locality = locality;
+            $.locality = locality;
             return this;
         }
-        public Builder locality(@Nullable String locality) {
-            this.locality = Codegen.ofNullable(locality);
-            return this;
+
+        public Builder locality(String locality) {
+            return locality(Output.of(locality));
         }
+
         public Builder organization(Output<String> organization) {
-            this.organization = Objects.requireNonNull(organization);
+            $.organization = organization;
             return this;
         }
+
         public Builder organization(String organization) {
-            this.organization = Output.of(Objects.requireNonNull(organization));
-            return this;
+            return organization(Output.of(organization));
         }
+
         public Builder organizationalUnit(@Nullable Output<String> organizationalUnit) {
-            this.organizationalUnit = organizationalUnit;
+            $.organizationalUnit = organizationalUnit;
             return this;
         }
-        public Builder organizationalUnit(@Nullable String organizationalUnit) {
-            this.organizationalUnit = Codegen.ofNullable(organizationalUnit);
-            return this;
+
+        public Builder organizationalUnit(String organizationalUnit) {
+            return organizationalUnit(Output.of(organizationalUnit));
         }
+
         public Builder postalCode(@Nullable Output<String> postalCode) {
-            this.postalCode = postalCode;
+            $.postalCode = postalCode;
             return this;
         }
-        public Builder postalCode(@Nullable String postalCode) {
-            this.postalCode = Codegen.ofNullable(postalCode);
-            return this;
+
+        public Builder postalCode(String postalCode) {
+            return postalCode(Output.of(postalCode));
         }
+
         public Builder province(@Nullable Output<String> province) {
-            this.province = province;
+            $.province = province;
             return this;
         }
-        public Builder province(@Nullable String province) {
-            this.province = Codegen.ofNullable(province);
-            return this;
+
+        public Builder province(String province) {
+            return province(Output.of(province));
         }
+
         public Builder streetAddress(@Nullable Output<String> streetAddress) {
-            this.streetAddress = streetAddress;
+            $.streetAddress = streetAddress;
             return this;
         }
-        public Builder streetAddress(@Nullable String streetAddress) {
-            this.streetAddress = Codegen.ofNullable(streetAddress);
-            return this;
-        }        public AuthorityConfigSubjectConfigSubjectArgs build() {
-            return new AuthorityConfigSubjectConfigSubjectArgs(commonName, countryCode, locality, organization, organizationalUnit, postalCode, province, streetAddress);
+
+        public Builder streetAddress(String streetAddress) {
+            return streetAddress(Output.of(streetAddress));
+        }
+
+        public AuthorityConfigSubjectConfigSubjectArgs build() {
+            $.commonName = Objects.requireNonNull($.commonName, "expected parameter 'commonName' to be non-null");
+            $.organization = Objects.requireNonNull($.organization, "expected parameter 'organization' to be non-null");
+            return $;
         }
     }
+
 }

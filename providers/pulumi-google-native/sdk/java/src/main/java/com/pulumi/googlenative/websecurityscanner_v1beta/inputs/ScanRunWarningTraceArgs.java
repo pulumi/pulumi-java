@@ -5,9 +5,9 @@ package com.pulumi.googlenative.websecurityscanner_v1beta.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.websecurityscanner_v1beta.enums.ScanRunWarningTraceCode;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class ScanRunWarningTraceArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="code")
-      private final @Nullable Output<ScanRunWarningTraceCode> code;
+    private @Nullable Output<ScanRunWarningTraceCode> code;
 
-    public Output<ScanRunWarningTraceCode> code() {
-        return this.code == null ? Codegen.empty() : this.code;
+    public Optional<Output<ScanRunWarningTraceCode>> code() {
+        return Optional.ofNullable(this.code);
     }
 
-    public ScanRunWarningTraceArgs(@Nullable Output<ScanRunWarningTraceCode> code) {
-        this.code = code;
-    }
+    private ScanRunWarningTraceArgs() {}
 
-    private ScanRunWarningTraceArgs() {
-        this.code = Codegen.empty();
+    private ScanRunWarningTraceArgs(ScanRunWarningTraceArgs $) {
+        this.code = $.code;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ScanRunWarningTraceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<ScanRunWarningTraceCode> code;
+        private ScanRunWarningTraceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ScanRunWarningTraceArgs();
         }
 
         public Builder(ScanRunWarningTraceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.code = defaults.code;
+            $ = new ScanRunWarningTraceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder code(@Nullable Output<ScanRunWarningTraceCode> code) {
-            this.code = code;
+            $.code = code;
             return this;
         }
-        public Builder code(@Nullable ScanRunWarningTraceCode code) {
-            this.code = Codegen.ofNullable(code);
-            return this;
-        }        public ScanRunWarningTraceArgs build() {
-            return new ScanRunWarningTraceArgs(code);
+
+        public Builder code(ScanRunWarningTraceCode code) {
+            return code(Output.of(code));
+        }
+
+        public ScanRunWarningTraceArgs build() {
+            return $;
         }
     }
+
 }

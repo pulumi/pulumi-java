@@ -5,7 +5,6 @@ package com.pulumi.aws.sagemaker.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,52 +19,53 @@ public final class WorkteamMemberDefinitionOidcMemberDefinitionArgs extends com.
      * 
      */
     @Import(name="groups", required=true)
-      private final Output<List<String>> groups;
+    private Output<List<String>> groups;
 
     public Output<List<String>> groups() {
         return this.groups;
     }
 
-    public WorkteamMemberDefinitionOidcMemberDefinitionArgs(Output<List<String>> groups) {
-        this.groups = Objects.requireNonNull(groups, "expected parameter 'groups' to be non-null");
-    }
+    private WorkteamMemberDefinitionOidcMemberDefinitionArgs() {}
 
-    private WorkteamMemberDefinitionOidcMemberDefinitionArgs() {
-        this.groups = Codegen.empty();
+    private WorkteamMemberDefinitionOidcMemberDefinitionArgs(WorkteamMemberDefinitionOidcMemberDefinitionArgs $) {
+        this.groups = $.groups;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WorkteamMemberDefinitionOidcMemberDefinitionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<List<String>> groups;
+        private WorkteamMemberDefinitionOidcMemberDefinitionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new WorkteamMemberDefinitionOidcMemberDefinitionArgs();
         }
 
         public Builder(WorkteamMemberDefinitionOidcMemberDefinitionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.groups = defaults.groups;
+            $ = new WorkteamMemberDefinitionOidcMemberDefinitionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder groups(Output<List<String>> groups) {
-            this.groups = Objects.requireNonNull(groups);
+            $.groups = groups;
             return this;
         }
+
         public Builder groups(List<String> groups) {
-            this.groups = Output.of(Objects.requireNonNull(groups));
-            return this;
+            return groups(Output.of(groups));
         }
+
         public Builder groups(String... groups) {
             return groups(List.of(groups));
-        }        public WorkteamMemberDefinitionOidcMemberDefinitionArgs build() {
-            return new WorkteamMemberDefinitionOidcMemberDefinitionArgs(groups);
+        }
+
+        public WorkteamMemberDefinitionOidcMemberDefinitionArgs build() {
+            $.groups = Objects.requireNonNull($.groups, "expected parameter 'groups' to be non-null");
+            return $;
         }
     }
+
 }

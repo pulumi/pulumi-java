@@ -17,45 +17,45 @@ public final class GetVirtualServiceSpecProviderVirtualRouter extends com.pulumi
      * 
      */
     @Import(name="virtualRouterName", required=true)
-      private final String virtualRouterName;
+    private String virtualRouterName;
 
     public String virtualRouterName() {
         return this.virtualRouterName;
     }
 
-    public GetVirtualServiceSpecProviderVirtualRouter(String virtualRouterName) {
-        this.virtualRouterName = Objects.requireNonNull(virtualRouterName, "expected parameter 'virtualRouterName' to be non-null");
-    }
+    private GetVirtualServiceSpecProviderVirtualRouter() {}
 
-    private GetVirtualServiceSpecProviderVirtualRouter() {
-        this.virtualRouterName = null;
+    private GetVirtualServiceSpecProviderVirtualRouter(GetVirtualServiceSpecProviderVirtualRouter $) {
+        this.virtualRouterName = $.virtualRouterName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetVirtualServiceSpecProviderVirtualRouter defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String virtualRouterName;
+        private GetVirtualServiceSpecProviderVirtualRouter $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetVirtualServiceSpecProviderVirtualRouter();
         }
 
         public Builder(GetVirtualServiceSpecProviderVirtualRouter defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.virtualRouterName = defaults.virtualRouterName;
+            $ = new GetVirtualServiceSpecProviderVirtualRouter(Objects.requireNonNull(defaults));
         }
 
         public Builder virtualRouterName(String virtualRouterName) {
-            this.virtualRouterName = Objects.requireNonNull(virtualRouterName);
+            $.virtualRouterName = virtualRouterName;
             return this;
-        }        public GetVirtualServiceSpecProviderVirtualRouter build() {
-            return new GetVirtualServiceSpecProviderVirtualRouter(virtualRouterName);
+        }
+
+        public GetVirtualServiceSpecProviderVirtualRouter build() {
+            $.virtualRouterName = Objects.requireNonNull($.virtualRouterName, "expected parameter 'virtualRouterName' to be non-null");
+            return $;
         }
     }
+
 }

@@ -17,7 +17,7 @@ public final class GetBlobContainerImmutabilityPolicyArgs extends com.pulumi.res
      * 
      */
     @Import(name="accountName", required=true)
-      private final String accountName;
+    private String accountName;
 
     public String accountName() {
         return this.accountName;
@@ -28,7 +28,7 @@ public final class GetBlobContainerImmutabilityPolicyArgs extends com.pulumi.res
      * 
      */
     @Import(name="containerName", required=true)
-      private final String containerName;
+    private String containerName;
 
     public String containerName() {
         return this.containerName;
@@ -39,7 +39,7 @@ public final class GetBlobContainerImmutabilityPolicyArgs extends com.pulumi.res
      * 
      */
     @Import(name="immutabilityPolicyName", required=true)
-      private final String immutabilityPolicyName;
+    private String immutabilityPolicyName;
 
     public String immutabilityPolicyName() {
         return this.immutabilityPolicyName;
@@ -50,73 +50,66 @@ public final class GetBlobContainerImmutabilityPolicyArgs extends com.pulumi.res
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public GetBlobContainerImmutabilityPolicyArgs(
-        String accountName,
-        String containerName,
-        String immutabilityPolicyName,
-        String resourceGroupName) {
-        this.accountName = Objects.requireNonNull(accountName, "expected parameter 'accountName' to be non-null");
-        this.containerName = Objects.requireNonNull(containerName, "expected parameter 'containerName' to be non-null");
-        this.immutabilityPolicyName = Objects.requireNonNull(immutabilityPolicyName, "expected parameter 'immutabilityPolicyName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private GetBlobContainerImmutabilityPolicyArgs() {}
 
-    private GetBlobContainerImmutabilityPolicyArgs() {
-        this.accountName = null;
-        this.containerName = null;
-        this.immutabilityPolicyName = null;
-        this.resourceGroupName = null;
+    private GetBlobContainerImmutabilityPolicyArgs(GetBlobContainerImmutabilityPolicyArgs $) {
+        this.accountName = $.accountName;
+        this.containerName = $.containerName;
+        this.immutabilityPolicyName = $.immutabilityPolicyName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetBlobContainerImmutabilityPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String accountName;
-        private String containerName;
-        private String immutabilityPolicyName;
-        private String resourceGroupName;
+        private GetBlobContainerImmutabilityPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetBlobContainerImmutabilityPolicyArgs();
         }
 
         public Builder(GetBlobContainerImmutabilityPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accountName = defaults.accountName;
-    	      this.containerName = defaults.containerName;
-    	      this.immutabilityPolicyName = defaults.immutabilityPolicyName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new GetBlobContainerImmutabilityPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder accountName(String accountName) {
-            this.accountName = Objects.requireNonNull(accountName);
+            $.accountName = accountName;
             return this;
         }
+
         public Builder containerName(String containerName) {
-            this.containerName = Objects.requireNonNull(containerName);
+            $.containerName = containerName;
             return this;
         }
+
         public Builder immutabilityPolicyName(String immutabilityPolicyName) {
-            this.immutabilityPolicyName = Objects.requireNonNull(immutabilityPolicyName);
+            $.immutabilityPolicyName = immutabilityPolicyName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public GetBlobContainerImmutabilityPolicyArgs build() {
-            return new GetBlobContainerImmutabilityPolicyArgs(accountName, containerName, immutabilityPolicyName, resourceGroupName);
+        }
+
+        public GetBlobContainerImmutabilityPolicyArgs build() {
+            $.accountName = Objects.requireNonNull($.accountName, "expected parameter 'accountName' to be non-null");
+            $.containerName = Objects.requireNonNull($.containerName, "expected parameter 'containerName' to be non-null");
+            $.immutabilityPolicyName = Objects.requireNonNull($.immutabilityPolicyName, "expected parameter 'immutabilityPolicyName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

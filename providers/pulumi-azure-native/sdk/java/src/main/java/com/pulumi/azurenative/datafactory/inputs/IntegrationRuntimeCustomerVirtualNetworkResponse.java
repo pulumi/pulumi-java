@@ -23,45 +23,44 @@ public final class IntegrationRuntimeCustomerVirtualNetworkResponse extends com.
      * 
      */
     @Import(name="subnetId")
-      private final @Nullable String subnetId;
+    private @Nullable String subnetId;
 
     public Optional<String> subnetId() {
-        return this.subnetId == null ? Optional.empty() : Optional.ofNullable(this.subnetId);
+        return Optional.ofNullable(this.subnetId);
     }
 
-    public IntegrationRuntimeCustomerVirtualNetworkResponse(@Nullable String subnetId) {
-        this.subnetId = subnetId;
-    }
+    private IntegrationRuntimeCustomerVirtualNetworkResponse() {}
 
-    private IntegrationRuntimeCustomerVirtualNetworkResponse() {
-        this.subnetId = null;
+    private IntegrationRuntimeCustomerVirtualNetworkResponse(IntegrationRuntimeCustomerVirtualNetworkResponse $) {
+        this.subnetId = $.subnetId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(IntegrationRuntimeCustomerVirtualNetworkResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String subnetId;
+        private IntegrationRuntimeCustomerVirtualNetworkResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new IntegrationRuntimeCustomerVirtualNetworkResponse();
         }
 
         public Builder(IntegrationRuntimeCustomerVirtualNetworkResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.subnetId = defaults.subnetId;
+            $ = new IntegrationRuntimeCustomerVirtualNetworkResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder subnetId(@Nullable String subnetId) {
-            this.subnetId = subnetId;
+            $.subnetId = subnetId;
             return this;
-        }        public IntegrationRuntimeCustomerVirtualNetworkResponse build() {
-            return new IntegrationRuntimeCustomerVirtualNetworkResponse(subnetId);
+        }
+
+        public IntegrationRuntimeCustomerVirtualNetworkResponse build() {
+            return $;
         }
     }
+
 }

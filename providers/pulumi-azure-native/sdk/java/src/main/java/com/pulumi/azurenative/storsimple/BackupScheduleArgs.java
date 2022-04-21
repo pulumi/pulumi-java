@@ -9,10 +9,10 @@ import com.pulumi.azurenative.storsimple.enums.ScheduleStatus;
 import com.pulumi.azurenative.storsimple.inputs.ScheduleRecurrenceArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,7 +25,7 @@ public final class BackupScheduleArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="backupPolicyName", required=true)
-      private final Output<String> backupPolicyName;
+    private Output<String> backupPolicyName;
 
     public Output<String> backupPolicyName() {
         return this.backupPolicyName;
@@ -36,10 +36,10 @@ public final class BackupScheduleArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="backupScheduleName")
-      private final @Nullable Output<String> backupScheduleName;
+    private @Nullable Output<String> backupScheduleName;
 
-    public Output<String> backupScheduleName() {
-        return this.backupScheduleName == null ? Codegen.empty() : this.backupScheduleName;
+    public Optional<Output<String>> backupScheduleName() {
+        return Optional.ofNullable(this.backupScheduleName);
     }
 
     /**
@@ -47,7 +47,7 @@ public final class BackupScheduleArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="backupType", required=true)
-      private final Output<BackupType> backupType;
+    private Output<BackupType> backupType;
 
     public Output<BackupType> backupType() {
         return this.backupType;
@@ -58,7 +58,7 @@ public final class BackupScheduleArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="deviceName", required=true)
-      private final Output<String> deviceName;
+    private Output<String> deviceName;
 
     public Output<String> deviceName() {
         return this.deviceName;
@@ -69,10 +69,10 @@ public final class BackupScheduleArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="kind")
-      private final @Nullable Output<Kind> kind;
+    private @Nullable Output<Kind> kind;
 
-    public Output<Kind> kind() {
-        return this.kind == null ? Codegen.empty() : this.kind;
+    public Optional<Output<Kind>> kind() {
+        return Optional.ofNullable(this.kind);
     }
 
     /**
@@ -80,7 +80,7 @@ public final class BackupScheduleArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="managerName", required=true)
-      private final Output<String> managerName;
+    private Output<String> managerName;
 
     public Output<String> managerName() {
         return this.managerName;
@@ -91,7 +91,7 @@ public final class BackupScheduleArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -102,7 +102,7 @@ public final class BackupScheduleArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="retentionCount", required=true)
-      private final Output<Double> retentionCount;
+    private Output<Double> retentionCount;
 
     public Output<Double> retentionCount() {
         return this.retentionCount;
@@ -113,7 +113,7 @@ public final class BackupScheduleArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="scheduleRecurrence", required=true)
-      private final Output<ScheduleRecurrenceArgs> scheduleRecurrence;
+    private Output<ScheduleRecurrenceArgs> scheduleRecurrence;
 
     public Output<ScheduleRecurrenceArgs> scheduleRecurrence() {
         return this.scheduleRecurrence;
@@ -124,7 +124,7 @@ public final class BackupScheduleArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="scheduleStatus", required=true)
-      private final Output<ScheduleStatus> scheduleStatus;
+    private Output<ScheduleStatus> scheduleStatus;
 
     public Output<ScheduleStatus> scheduleStatus() {
         return this.scheduleStatus;
@@ -135,180 +135,157 @@ public final class BackupScheduleArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="startTime", required=true)
-      private final Output<String> startTime;
+    private Output<String> startTime;
 
     public Output<String> startTime() {
         return this.startTime;
     }
 
-    public BackupScheduleArgs(
-        Output<String> backupPolicyName,
-        @Nullable Output<String> backupScheduleName,
-        Output<BackupType> backupType,
-        Output<String> deviceName,
-        @Nullable Output<Kind> kind,
-        Output<String> managerName,
-        Output<String> resourceGroupName,
-        Output<Double> retentionCount,
-        Output<ScheduleRecurrenceArgs> scheduleRecurrence,
-        Output<ScheduleStatus> scheduleStatus,
-        Output<String> startTime) {
-        this.backupPolicyName = Objects.requireNonNull(backupPolicyName, "expected parameter 'backupPolicyName' to be non-null");
-        this.backupScheduleName = backupScheduleName;
-        this.backupType = Objects.requireNonNull(backupType, "expected parameter 'backupType' to be non-null");
-        this.deviceName = Objects.requireNonNull(deviceName, "expected parameter 'deviceName' to be non-null");
-        this.kind = kind;
-        this.managerName = Objects.requireNonNull(managerName, "expected parameter 'managerName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.retentionCount = Objects.requireNonNull(retentionCount, "expected parameter 'retentionCount' to be non-null");
-        this.scheduleRecurrence = Objects.requireNonNull(scheduleRecurrence, "expected parameter 'scheduleRecurrence' to be non-null");
-        this.scheduleStatus = Objects.requireNonNull(scheduleStatus, "expected parameter 'scheduleStatus' to be non-null");
-        this.startTime = Objects.requireNonNull(startTime, "expected parameter 'startTime' to be non-null");
-    }
+    private BackupScheduleArgs() {}
 
-    private BackupScheduleArgs() {
-        this.backupPolicyName = Codegen.empty();
-        this.backupScheduleName = Codegen.empty();
-        this.backupType = Codegen.empty();
-        this.deviceName = Codegen.empty();
-        this.kind = Codegen.empty();
-        this.managerName = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.retentionCount = Codegen.empty();
-        this.scheduleRecurrence = Codegen.empty();
-        this.scheduleStatus = Codegen.empty();
-        this.startTime = Codegen.empty();
+    private BackupScheduleArgs(BackupScheduleArgs $) {
+        this.backupPolicyName = $.backupPolicyName;
+        this.backupScheduleName = $.backupScheduleName;
+        this.backupType = $.backupType;
+        this.deviceName = $.deviceName;
+        this.kind = $.kind;
+        this.managerName = $.managerName;
+        this.resourceGroupName = $.resourceGroupName;
+        this.retentionCount = $.retentionCount;
+        this.scheduleRecurrence = $.scheduleRecurrence;
+        this.scheduleStatus = $.scheduleStatus;
+        this.startTime = $.startTime;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BackupScheduleArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> backupPolicyName;
-        private @Nullable Output<String> backupScheduleName;
-        private Output<BackupType> backupType;
-        private Output<String> deviceName;
-        private @Nullable Output<Kind> kind;
-        private Output<String> managerName;
-        private Output<String> resourceGroupName;
-        private Output<Double> retentionCount;
-        private Output<ScheduleRecurrenceArgs> scheduleRecurrence;
-        private Output<ScheduleStatus> scheduleStatus;
-        private Output<String> startTime;
+        private BackupScheduleArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new BackupScheduleArgs();
         }
 
         public Builder(BackupScheduleArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.backupPolicyName = defaults.backupPolicyName;
-    	      this.backupScheduleName = defaults.backupScheduleName;
-    	      this.backupType = defaults.backupType;
-    	      this.deviceName = defaults.deviceName;
-    	      this.kind = defaults.kind;
-    	      this.managerName = defaults.managerName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.retentionCount = defaults.retentionCount;
-    	      this.scheduleRecurrence = defaults.scheduleRecurrence;
-    	      this.scheduleStatus = defaults.scheduleStatus;
-    	      this.startTime = defaults.startTime;
+            $ = new BackupScheduleArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder backupPolicyName(Output<String> backupPolicyName) {
-            this.backupPolicyName = Objects.requireNonNull(backupPolicyName);
+            $.backupPolicyName = backupPolicyName;
             return this;
         }
+
         public Builder backupPolicyName(String backupPolicyName) {
-            this.backupPolicyName = Output.of(Objects.requireNonNull(backupPolicyName));
-            return this;
+            return backupPolicyName(Output.of(backupPolicyName));
         }
+
         public Builder backupScheduleName(@Nullable Output<String> backupScheduleName) {
-            this.backupScheduleName = backupScheduleName;
+            $.backupScheduleName = backupScheduleName;
             return this;
         }
-        public Builder backupScheduleName(@Nullable String backupScheduleName) {
-            this.backupScheduleName = Codegen.ofNullable(backupScheduleName);
-            return this;
+
+        public Builder backupScheduleName(String backupScheduleName) {
+            return backupScheduleName(Output.of(backupScheduleName));
         }
+
         public Builder backupType(Output<BackupType> backupType) {
-            this.backupType = Objects.requireNonNull(backupType);
+            $.backupType = backupType;
             return this;
         }
+
         public Builder backupType(BackupType backupType) {
-            this.backupType = Output.of(Objects.requireNonNull(backupType));
-            return this;
+            return backupType(Output.of(backupType));
         }
+
         public Builder deviceName(Output<String> deviceName) {
-            this.deviceName = Objects.requireNonNull(deviceName);
+            $.deviceName = deviceName;
             return this;
         }
+
         public Builder deviceName(String deviceName) {
-            this.deviceName = Output.of(Objects.requireNonNull(deviceName));
-            return this;
+            return deviceName(Output.of(deviceName));
         }
+
         public Builder kind(@Nullable Output<Kind> kind) {
-            this.kind = kind;
+            $.kind = kind;
             return this;
         }
-        public Builder kind(@Nullable Kind kind) {
-            this.kind = Codegen.ofNullable(kind);
-            return this;
+
+        public Builder kind(Kind kind) {
+            return kind(Output.of(kind));
         }
+
         public Builder managerName(Output<String> managerName) {
-            this.managerName = Objects.requireNonNull(managerName);
+            $.managerName = managerName;
             return this;
         }
+
         public Builder managerName(String managerName) {
-            this.managerName = Output.of(Objects.requireNonNull(managerName));
-            return this;
+            return managerName(Output.of(managerName));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder retentionCount(Output<Double> retentionCount) {
-            this.retentionCount = Objects.requireNonNull(retentionCount);
+            $.retentionCount = retentionCount;
             return this;
         }
+
         public Builder retentionCount(Double retentionCount) {
-            this.retentionCount = Output.of(Objects.requireNonNull(retentionCount));
-            return this;
+            return retentionCount(Output.of(retentionCount));
         }
+
         public Builder scheduleRecurrence(Output<ScheduleRecurrenceArgs> scheduleRecurrence) {
-            this.scheduleRecurrence = Objects.requireNonNull(scheduleRecurrence);
+            $.scheduleRecurrence = scheduleRecurrence;
             return this;
         }
+
         public Builder scheduleRecurrence(ScheduleRecurrenceArgs scheduleRecurrence) {
-            this.scheduleRecurrence = Output.of(Objects.requireNonNull(scheduleRecurrence));
-            return this;
+            return scheduleRecurrence(Output.of(scheduleRecurrence));
         }
+
         public Builder scheduleStatus(Output<ScheduleStatus> scheduleStatus) {
-            this.scheduleStatus = Objects.requireNonNull(scheduleStatus);
+            $.scheduleStatus = scheduleStatus;
             return this;
         }
+
         public Builder scheduleStatus(ScheduleStatus scheduleStatus) {
-            this.scheduleStatus = Output.of(Objects.requireNonNull(scheduleStatus));
-            return this;
+            return scheduleStatus(Output.of(scheduleStatus));
         }
+
         public Builder startTime(Output<String> startTime) {
-            this.startTime = Objects.requireNonNull(startTime);
+            $.startTime = startTime;
             return this;
         }
+
         public Builder startTime(String startTime) {
-            this.startTime = Output.of(Objects.requireNonNull(startTime));
-            return this;
-        }        public BackupScheduleArgs build() {
-            return new BackupScheduleArgs(backupPolicyName, backupScheduleName, backupType, deviceName, kind, managerName, resourceGroupName, retentionCount, scheduleRecurrence, scheduleStatus, startTime);
+            return startTime(Output.of(startTime));
+        }
+
+        public BackupScheduleArgs build() {
+            $.backupPolicyName = Objects.requireNonNull($.backupPolicyName, "expected parameter 'backupPolicyName' to be non-null");
+            $.backupType = Objects.requireNonNull($.backupType, "expected parameter 'backupType' to be non-null");
+            $.deviceName = Objects.requireNonNull($.deviceName, "expected parameter 'deviceName' to be non-null");
+            $.managerName = Objects.requireNonNull($.managerName, "expected parameter 'managerName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.retentionCount = Objects.requireNonNull($.retentionCount, "expected parameter 'retentionCount' to be non-null");
+            $.scheduleRecurrence = Objects.requireNonNull($.scheduleRecurrence, "expected parameter 'scheduleRecurrence' to be non-null");
+            $.scheduleStatus = Objects.requireNonNull($.scheduleStatus, "expected parameter 'scheduleStatus' to be non-null");
+            $.startTime = Objects.requireNonNull($.startTime, "expected parameter 'startTime' to be non-null");
+            return $;
         }
     }
+
 }

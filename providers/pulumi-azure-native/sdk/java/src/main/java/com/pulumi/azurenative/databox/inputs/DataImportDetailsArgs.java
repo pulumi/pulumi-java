@@ -8,7 +8,6 @@ import com.pulumi.azurenative.databox.inputs.StorageAccountDetailsArgs;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
 
 
@@ -25,49 +24,49 @@ public final class DataImportDetailsArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="accountDetails", required=true)
-      private final Output<Either<ManagedDiskDetailsArgs,StorageAccountDetailsArgs>> accountDetails;
+    private Output<Either<ManagedDiskDetailsArgs,StorageAccountDetailsArgs>> accountDetails;
 
     public Output<Either<ManagedDiskDetailsArgs,StorageAccountDetailsArgs>> accountDetails() {
         return this.accountDetails;
     }
 
-    public DataImportDetailsArgs(Output<Either<ManagedDiskDetailsArgs,StorageAccountDetailsArgs>> accountDetails) {
-        this.accountDetails = Objects.requireNonNull(accountDetails, "expected parameter 'accountDetails' to be non-null");
-    }
+    private DataImportDetailsArgs() {}
 
-    private DataImportDetailsArgs() {
-        this.accountDetails = Codegen.empty();
+    private DataImportDetailsArgs(DataImportDetailsArgs $) {
+        this.accountDetails = $.accountDetails;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DataImportDetailsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Either<ManagedDiskDetailsArgs,StorageAccountDetailsArgs>> accountDetails;
+        private DataImportDetailsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DataImportDetailsArgs();
         }
 
         public Builder(DataImportDetailsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accountDetails = defaults.accountDetails;
+            $ = new DataImportDetailsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder accountDetails(Output<Either<ManagedDiskDetailsArgs,StorageAccountDetailsArgs>> accountDetails) {
-            this.accountDetails = Objects.requireNonNull(accountDetails);
+            $.accountDetails = accountDetails;
             return this;
         }
+
         public Builder accountDetails(Either<ManagedDiskDetailsArgs,StorageAccountDetailsArgs> accountDetails) {
-            this.accountDetails = Output.of(Objects.requireNonNull(accountDetails));
-            return this;
-        }        public DataImportDetailsArgs build() {
-            return new DataImportDetailsArgs(accountDetails);
+            return accountDetails(Output.of(accountDetails));
+        }
+
+        public DataImportDetailsArgs build() {
+            $.accountDetails = Objects.requireNonNull($.accountDetails, "expected parameter 'accountDetails' to be non-null");
+            return $;
         }
     }
+
 }

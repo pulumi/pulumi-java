@@ -20,10 +20,10 @@ public final class GetPolicyArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="arn")
-      private final @Nullable String arn;
+    private @Nullable String arn;
 
     public Optional<String> arn() {
-        return this.arn == null ? Optional.empty() : Optional.ofNullable(this.arn);
+        return Optional.ofNullable(this.arn);
     }
 
     /**
@@ -31,10 +31,10 @@ public final class GetPolicyArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable String name;
+    private @Nullable String name;
 
     public Optional<String> name() {
-        return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -42,10 +42,10 @@ public final class GetPolicyArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="pathPrefix")
-      private final @Nullable String pathPrefix;
+    private @Nullable String pathPrefix;
 
     public Optional<String> pathPrefix() {
-        return this.pathPrefix == null ? Optional.empty() : Optional.ofNullable(this.pathPrefix);
+        return Optional.ofNullable(this.pathPrefix);
     }
 
     /**
@@ -53,73 +53,62 @@ public final class GetPolicyArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Map<String,String> tags;
+    private @Nullable Map<String,String> tags;
 
-    public Map<String,String> tags() {
-        return this.tags == null ? Map.of() : this.tags;
+    public Optional<Map<String,String>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public GetPolicyArgs(
-        @Nullable String arn,
-        @Nullable String name,
-        @Nullable String pathPrefix,
-        @Nullable Map<String,String> tags) {
-        this.arn = arn;
-        this.name = name;
-        this.pathPrefix = pathPrefix;
-        this.tags = tags;
-    }
+    private GetPolicyArgs() {}
 
-    private GetPolicyArgs() {
-        this.arn = null;
-        this.name = null;
-        this.pathPrefix = null;
-        this.tags = Map.of();
+    private GetPolicyArgs(GetPolicyArgs $) {
+        this.arn = $.arn;
+        this.name = $.name;
+        this.pathPrefix = $.pathPrefix;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String arn;
-        private @Nullable String name;
-        private @Nullable String pathPrefix;
-        private @Nullable Map<String,String> tags;
+        private GetPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetPolicyArgs();
         }
 
         public Builder(GetPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.arn = defaults.arn;
-    	      this.name = defaults.name;
-    	      this.pathPrefix = defaults.pathPrefix;
-    	      this.tags = defaults.tags;
+            $ = new GetPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder arn(@Nullable String arn) {
-            this.arn = arn;
+            $.arn = arn;
             return this;
         }
+
         public Builder name(@Nullable String name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
+
         public Builder pathPrefix(@Nullable String pathPrefix) {
-            this.pathPrefix = pathPrefix;
+            $.pathPrefix = pathPrefix;
             return this;
         }
+
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
-        }        public GetPolicyArgs build() {
-            return new GetPolicyArgs(arn, name, pathPrefix, tags);
+        }
+
+        public GetPolicyArgs build() {
+            return $;
         }
     }
+
 }

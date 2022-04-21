@@ -5,10 +5,10 @@ package com.pulumi.awsnative.opensearchservice.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -17,70 +17,65 @@ public final class DomainEncryptionAtRestOptionsArgs extends com.pulumi.resource
     public static final DomainEncryptionAtRestOptionsArgs Empty = new DomainEncryptionAtRestOptionsArgs();
 
     @Import(name="enabled")
-      private final @Nullable Output<Boolean> enabled;
+    private @Nullable Output<Boolean> enabled;
 
-    public Output<Boolean> enabled() {
-        return this.enabled == null ? Codegen.empty() : this.enabled;
+    public Optional<Output<Boolean>> enabled() {
+        return Optional.ofNullable(this.enabled);
     }
 
     @Import(name="kmsKeyId")
-      private final @Nullable Output<String> kmsKeyId;
+    private @Nullable Output<String> kmsKeyId;
 
-    public Output<String> kmsKeyId() {
-        return this.kmsKeyId == null ? Codegen.empty() : this.kmsKeyId;
+    public Optional<Output<String>> kmsKeyId() {
+        return Optional.ofNullable(this.kmsKeyId);
     }
 
-    public DomainEncryptionAtRestOptionsArgs(
-        @Nullable Output<Boolean> enabled,
-        @Nullable Output<String> kmsKeyId) {
-        this.enabled = enabled;
-        this.kmsKeyId = kmsKeyId;
-    }
+    private DomainEncryptionAtRestOptionsArgs() {}
 
-    private DomainEncryptionAtRestOptionsArgs() {
-        this.enabled = Codegen.empty();
-        this.kmsKeyId = Codegen.empty();
+    private DomainEncryptionAtRestOptionsArgs(DomainEncryptionAtRestOptionsArgs $) {
+        this.enabled = $.enabled;
+        this.kmsKeyId = $.kmsKeyId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DomainEncryptionAtRestOptionsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> enabled;
-        private @Nullable Output<String> kmsKeyId;
+        private DomainEncryptionAtRestOptionsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DomainEncryptionAtRestOptionsArgs();
         }
 
         public Builder(DomainEncryptionAtRestOptionsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.enabled = defaults.enabled;
-    	      this.kmsKeyId = defaults.kmsKeyId;
+            $ = new DomainEncryptionAtRestOptionsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder enabled(@Nullable Output<Boolean> enabled) {
-            this.enabled = enabled;
+            $.enabled = enabled;
             return this;
         }
-        public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Codegen.ofNullable(enabled);
-            return this;
+
+        public Builder enabled(Boolean enabled) {
+            return enabled(Output.of(enabled));
         }
+
         public Builder kmsKeyId(@Nullable Output<String> kmsKeyId) {
-            this.kmsKeyId = kmsKeyId;
+            $.kmsKeyId = kmsKeyId;
             return this;
         }
-        public Builder kmsKeyId(@Nullable String kmsKeyId) {
-            this.kmsKeyId = Codegen.ofNullable(kmsKeyId);
-            return this;
-        }        public DomainEncryptionAtRestOptionsArgs build() {
-            return new DomainEncryptionAtRestOptionsArgs(enabled, kmsKeyId);
+
+        public Builder kmsKeyId(String kmsKeyId) {
+            return kmsKeyId(Output.of(kmsKeyId));
+        }
+
+        public DomainEncryptionAtRestOptionsArgs build() {
+            return $;
         }
     }
+
 }

@@ -5,9 +5,9 @@ package com.pulumi.azurenative.network.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class ApplicationGatewayTrustedClientCertificateArgs extends com.pu
      * 
      */
     @Import(name="data")
-      private final @Nullable Output<String> data;
+    private @Nullable Output<String> data;
 
-    public Output<String> data() {
-        return this.data == null ? Codegen.empty() : this.data;
+    public Optional<Output<String>> data() {
+        return Optional.ofNullable(this.data);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class ApplicationGatewayTrustedClientCertificateArgs extends com.pu
      * 
      */
     @Import(name="id")
-      private final @Nullable Output<String> id;
+    private @Nullable Output<String> id;
 
-    public Output<String> id() {
-        return this.id == null ? Codegen.empty() : this.id;
+    public Optional<Output<String>> id() {
+        return Optional.ofNullable(this.id);
     }
 
     /**
@@ -46,76 +46,68 @@ public final class ApplicationGatewayTrustedClientCertificateArgs extends com.pu
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
-    public ApplicationGatewayTrustedClientCertificateArgs(
-        @Nullable Output<String> data,
-        @Nullable Output<String> id,
-        @Nullable Output<String> name) {
-        this.data = data;
-        this.id = id;
-        this.name = name;
-    }
+    private ApplicationGatewayTrustedClientCertificateArgs() {}
 
-    private ApplicationGatewayTrustedClientCertificateArgs() {
-        this.data = Codegen.empty();
-        this.id = Codegen.empty();
-        this.name = Codegen.empty();
+    private ApplicationGatewayTrustedClientCertificateArgs(ApplicationGatewayTrustedClientCertificateArgs $) {
+        this.data = $.data;
+        this.id = $.id;
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ApplicationGatewayTrustedClientCertificateArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> data;
-        private @Nullable Output<String> id;
-        private @Nullable Output<String> name;
+        private ApplicationGatewayTrustedClientCertificateArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ApplicationGatewayTrustedClientCertificateArgs();
         }
 
         public Builder(ApplicationGatewayTrustedClientCertificateArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.data = defaults.data;
-    	      this.id = defaults.id;
-    	      this.name = defaults.name;
+            $ = new ApplicationGatewayTrustedClientCertificateArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder data(@Nullable Output<String> data) {
-            this.data = data;
+            $.data = data;
             return this;
         }
-        public Builder data(@Nullable String data) {
-            this.data = Codegen.ofNullable(data);
-            return this;
+
+        public Builder data(String data) {
+            return data(Output.of(data));
         }
+
         public Builder id(@Nullable Output<String> id) {
-            this.id = id;
+            $.id = id;
             return this;
         }
-        public Builder id(@Nullable String id) {
-            this.id = Codegen.ofNullable(id);
-            return this;
+
+        public Builder id(String id) {
+            return id(Output.of(id));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
-        }        public ApplicationGatewayTrustedClientCertificateArgs build() {
-            return new ApplicationGatewayTrustedClientCertificateArgs(data, id, name);
+
+        public Builder name(String name) {
+            return name(Output.of(name));
+        }
+
+        public ApplicationGatewayTrustedClientCertificateArgs build() {
+            return $;
         }
     }
+
 }

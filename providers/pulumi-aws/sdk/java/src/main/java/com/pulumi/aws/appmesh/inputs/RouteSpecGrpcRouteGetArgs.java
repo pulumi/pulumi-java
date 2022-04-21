@@ -9,8 +9,8 @@ import com.pulumi.aws.appmesh.inputs.RouteSpecGrpcRouteRetryPolicyGetArgs;
 import com.pulumi.aws.appmesh.inputs.RouteSpecGrpcRouteTimeoutGetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,7 +23,7 @@ public final class RouteSpecGrpcRouteGetArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="action", required=true)
-      private final Output<RouteSpecGrpcRouteActionGetArgs> action;
+    private Output<RouteSpecGrpcRouteActionGetArgs> action;
 
     public Output<RouteSpecGrpcRouteActionGetArgs> action() {
         return this.action;
@@ -34,10 +34,10 @@ public final class RouteSpecGrpcRouteGetArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="match")
-      private final @Nullable Output<RouteSpecGrpcRouteMatchGetArgs> match;
+    private @Nullable Output<RouteSpecGrpcRouteMatchGetArgs> match;
 
-    public Output<RouteSpecGrpcRouteMatchGetArgs> match() {
-        return this.match == null ? Codegen.empty() : this.match;
+    public Optional<Output<RouteSpecGrpcRouteMatchGetArgs>> match() {
+        return Optional.ofNullable(this.match);
     }
 
     /**
@@ -45,10 +45,10 @@ public final class RouteSpecGrpcRouteGetArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="retryPolicy")
-      private final @Nullable Output<RouteSpecGrpcRouteRetryPolicyGetArgs> retryPolicy;
+    private @Nullable Output<RouteSpecGrpcRouteRetryPolicyGetArgs> retryPolicy;
 
-    public Output<RouteSpecGrpcRouteRetryPolicyGetArgs> retryPolicy() {
-        return this.retryPolicy == null ? Codegen.empty() : this.retryPolicy;
+    public Optional<Output<RouteSpecGrpcRouteRetryPolicyGetArgs>> retryPolicy() {
+        return Optional.ofNullable(this.retryPolicy);
     }
 
     /**
@@ -56,89 +56,79 @@ public final class RouteSpecGrpcRouteGetArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="timeout")
-      private final @Nullable Output<RouteSpecGrpcRouteTimeoutGetArgs> timeout;
+    private @Nullable Output<RouteSpecGrpcRouteTimeoutGetArgs> timeout;
 
-    public Output<RouteSpecGrpcRouteTimeoutGetArgs> timeout() {
-        return this.timeout == null ? Codegen.empty() : this.timeout;
+    public Optional<Output<RouteSpecGrpcRouteTimeoutGetArgs>> timeout() {
+        return Optional.ofNullable(this.timeout);
     }
 
-    public RouteSpecGrpcRouteGetArgs(
-        Output<RouteSpecGrpcRouteActionGetArgs> action,
-        @Nullable Output<RouteSpecGrpcRouteMatchGetArgs> match,
-        @Nullable Output<RouteSpecGrpcRouteRetryPolicyGetArgs> retryPolicy,
-        @Nullable Output<RouteSpecGrpcRouteTimeoutGetArgs> timeout) {
-        this.action = Objects.requireNonNull(action, "expected parameter 'action' to be non-null");
-        this.match = match;
-        this.retryPolicy = retryPolicy;
-        this.timeout = timeout;
-    }
+    private RouteSpecGrpcRouteGetArgs() {}
 
-    private RouteSpecGrpcRouteGetArgs() {
-        this.action = Codegen.empty();
-        this.match = Codegen.empty();
-        this.retryPolicy = Codegen.empty();
-        this.timeout = Codegen.empty();
+    private RouteSpecGrpcRouteGetArgs(RouteSpecGrpcRouteGetArgs $) {
+        this.action = $.action;
+        this.match = $.match;
+        this.retryPolicy = $.retryPolicy;
+        this.timeout = $.timeout;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RouteSpecGrpcRouteGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<RouteSpecGrpcRouteActionGetArgs> action;
-        private @Nullable Output<RouteSpecGrpcRouteMatchGetArgs> match;
-        private @Nullable Output<RouteSpecGrpcRouteRetryPolicyGetArgs> retryPolicy;
-        private @Nullable Output<RouteSpecGrpcRouteTimeoutGetArgs> timeout;
+        private RouteSpecGrpcRouteGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RouteSpecGrpcRouteGetArgs();
         }
 
         public Builder(RouteSpecGrpcRouteGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.action = defaults.action;
-    	      this.match = defaults.match;
-    	      this.retryPolicy = defaults.retryPolicy;
-    	      this.timeout = defaults.timeout;
+            $ = new RouteSpecGrpcRouteGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder action(Output<RouteSpecGrpcRouteActionGetArgs> action) {
-            this.action = Objects.requireNonNull(action);
+            $.action = action;
             return this;
         }
+
         public Builder action(RouteSpecGrpcRouteActionGetArgs action) {
-            this.action = Output.of(Objects.requireNonNull(action));
-            return this;
+            return action(Output.of(action));
         }
+
         public Builder match(@Nullable Output<RouteSpecGrpcRouteMatchGetArgs> match) {
-            this.match = match;
+            $.match = match;
             return this;
         }
-        public Builder match(@Nullable RouteSpecGrpcRouteMatchGetArgs match) {
-            this.match = Codegen.ofNullable(match);
-            return this;
+
+        public Builder match(RouteSpecGrpcRouteMatchGetArgs match) {
+            return match(Output.of(match));
         }
+
         public Builder retryPolicy(@Nullable Output<RouteSpecGrpcRouteRetryPolicyGetArgs> retryPolicy) {
-            this.retryPolicy = retryPolicy;
+            $.retryPolicy = retryPolicy;
             return this;
         }
-        public Builder retryPolicy(@Nullable RouteSpecGrpcRouteRetryPolicyGetArgs retryPolicy) {
-            this.retryPolicy = Codegen.ofNullable(retryPolicy);
-            return this;
+
+        public Builder retryPolicy(RouteSpecGrpcRouteRetryPolicyGetArgs retryPolicy) {
+            return retryPolicy(Output.of(retryPolicy));
         }
+
         public Builder timeout(@Nullable Output<RouteSpecGrpcRouteTimeoutGetArgs> timeout) {
-            this.timeout = timeout;
+            $.timeout = timeout;
             return this;
         }
-        public Builder timeout(@Nullable RouteSpecGrpcRouteTimeoutGetArgs timeout) {
-            this.timeout = Codegen.ofNullable(timeout);
-            return this;
-        }        public RouteSpecGrpcRouteGetArgs build() {
-            return new RouteSpecGrpcRouteGetArgs(action, match, retryPolicy, timeout);
+
+        public Builder timeout(RouteSpecGrpcRouteTimeoutGetArgs timeout) {
+            return timeout(Output.of(timeout));
+        }
+
+        public RouteSpecGrpcRouteGetArgs build() {
+            $.action = Objects.requireNonNull($.action, "expected parameter 'action' to be non-null");
+            return $;
         }
     }
+
 }

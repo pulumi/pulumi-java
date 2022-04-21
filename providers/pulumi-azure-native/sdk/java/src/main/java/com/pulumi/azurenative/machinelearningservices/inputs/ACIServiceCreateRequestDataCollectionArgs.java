@@ -5,9 +5,9 @@ package com.pulumi.azurenative.machinelearningservices.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class ACIServiceCreateRequestDataCollectionArgs extends com.pulumi.
      * 
      */
     @Import(name="eventHubEnabled")
-      private final @Nullable Output<Boolean> eventHubEnabled;
+    private @Nullable Output<Boolean> eventHubEnabled;
 
-    public Output<Boolean> eventHubEnabled() {
-        return this.eventHubEnabled == null ? Codegen.empty() : this.eventHubEnabled;
+    public Optional<Output<Boolean>> eventHubEnabled() {
+        return Optional.ofNullable(this.eventHubEnabled);
     }
 
     /**
@@ -35,63 +35,58 @@ public final class ACIServiceCreateRequestDataCollectionArgs extends com.pulumi.
      * 
      */
     @Import(name="storageEnabled")
-      private final @Nullable Output<Boolean> storageEnabled;
+    private @Nullable Output<Boolean> storageEnabled;
 
-    public Output<Boolean> storageEnabled() {
-        return this.storageEnabled == null ? Codegen.empty() : this.storageEnabled;
+    public Optional<Output<Boolean>> storageEnabled() {
+        return Optional.ofNullable(this.storageEnabled);
     }
 
-    public ACIServiceCreateRequestDataCollectionArgs(
-        @Nullable Output<Boolean> eventHubEnabled,
-        @Nullable Output<Boolean> storageEnabled) {
-        this.eventHubEnabled = eventHubEnabled;
-        this.storageEnabled = storageEnabled;
-    }
+    private ACIServiceCreateRequestDataCollectionArgs() {}
 
-    private ACIServiceCreateRequestDataCollectionArgs() {
-        this.eventHubEnabled = Codegen.empty();
-        this.storageEnabled = Codegen.empty();
+    private ACIServiceCreateRequestDataCollectionArgs(ACIServiceCreateRequestDataCollectionArgs $) {
+        this.eventHubEnabled = $.eventHubEnabled;
+        this.storageEnabled = $.storageEnabled;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ACIServiceCreateRequestDataCollectionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> eventHubEnabled;
-        private @Nullable Output<Boolean> storageEnabled;
+        private ACIServiceCreateRequestDataCollectionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ACIServiceCreateRequestDataCollectionArgs();
         }
 
         public Builder(ACIServiceCreateRequestDataCollectionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.eventHubEnabled = defaults.eventHubEnabled;
-    	      this.storageEnabled = defaults.storageEnabled;
+            $ = new ACIServiceCreateRequestDataCollectionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder eventHubEnabled(@Nullable Output<Boolean> eventHubEnabled) {
-            this.eventHubEnabled = eventHubEnabled;
+            $.eventHubEnabled = eventHubEnabled;
             return this;
         }
-        public Builder eventHubEnabled(@Nullable Boolean eventHubEnabled) {
-            this.eventHubEnabled = Codegen.ofNullable(eventHubEnabled);
-            return this;
+
+        public Builder eventHubEnabled(Boolean eventHubEnabled) {
+            return eventHubEnabled(Output.of(eventHubEnabled));
         }
+
         public Builder storageEnabled(@Nullable Output<Boolean> storageEnabled) {
-            this.storageEnabled = storageEnabled;
+            $.storageEnabled = storageEnabled;
             return this;
         }
-        public Builder storageEnabled(@Nullable Boolean storageEnabled) {
-            this.storageEnabled = Codegen.ofNullable(storageEnabled);
-            return this;
-        }        public ACIServiceCreateRequestDataCollectionArgs build() {
-            return new ACIServiceCreateRequestDataCollectionArgs(eventHubEnabled, storageEnabled);
+
+        public Builder storageEnabled(Boolean storageEnabled) {
+            return storageEnabled(Output.of(storageEnabled));
+        }
+
+        public ACIServiceCreateRequestDataCollectionArgs build() {
+            return $;
         }
     }
+
 }

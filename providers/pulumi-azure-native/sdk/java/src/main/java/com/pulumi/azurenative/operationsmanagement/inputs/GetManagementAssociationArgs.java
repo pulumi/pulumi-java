@@ -17,7 +17,7 @@ public final class GetManagementAssociationArgs extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="managementAssociationName", required=true)
-      private final String managementAssociationName;
+    private String managementAssociationName;
 
     public String managementAssociationName() {
         return this.managementAssociationName;
@@ -28,7 +28,7 @@ public final class GetManagementAssociationArgs extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="providerName", required=true)
-      private final String providerName;
+    private String providerName;
 
     public String providerName() {
         return this.providerName;
@@ -39,7 +39,7 @@ public final class GetManagementAssociationArgs extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -50,7 +50,7 @@ public final class GetManagementAssociationArgs extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="resourceName", required=true)
-      private final String resourceName;
+    private String resourceName;
 
     public String resourceName() {
         return this.resourceName;
@@ -61,82 +61,73 @@ public final class GetManagementAssociationArgs extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="resourceType", required=true)
-      private final String resourceType;
+    private String resourceType;
 
     public String resourceType() {
         return this.resourceType;
     }
 
-    public GetManagementAssociationArgs(
-        String managementAssociationName,
-        String providerName,
-        String resourceGroupName,
-        String resourceName,
-        String resourceType) {
-        this.managementAssociationName = Objects.requireNonNull(managementAssociationName, "expected parameter 'managementAssociationName' to be non-null");
-        this.providerName = Objects.requireNonNull(providerName, "expected parameter 'providerName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.resourceName = Objects.requireNonNull(resourceName, "expected parameter 'resourceName' to be non-null");
-        this.resourceType = Objects.requireNonNull(resourceType, "expected parameter 'resourceType' to be non-null");
-    }
+    private GetManagementAssociationArgs() {}
 
-    private GetManagementAssociationArgs() {
-        this.managementAssociationName = null;
-        this.providerName = null;
-        this.resourceGroupName = null;
-        this.resourceName = null;
-        this.resourceType = null;
+    private GetManagementAssociationArgs(GetManagementAssociationArgs $) {
+        this.managementAssociationName = $.managementAssociationName;
+        this.providerName = $.providerName;
+        this.resourceGroupName = $.resourceGroupName;
+        this.resourceName = $.resourceName;
+        this.resourceType = $.resourceType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetManagementAssociationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String managementAssociationName;
-        private String providerName;
-        private String resourceGroupName;
-        private String resourceName;
-        private String resourceType;
+        private GetManagementAssociationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetManagementAssociationArgs();
         }
 
         public Builder(GetManagementAssociationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.managementAssociationName = defaults.managementAssociationName;
-    	      this.providerName = defaults.providerName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.resourceName = defaults.resourceName;
-    	      this.resourceType = defaults.resourceType;
+            $ = new GetManagementAssociationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder managementAssociationName(String managementAssociationName) {
-            this.managementAssociationName = Objects.requireNonNull(managementAssociationName);
+            $.managementAssociationName = managementAssociationName;
             return this;
         }
+
         public Builder providerName(String providerName) {
-            this.providerName = Objects.requireNonNull(providerName);
+            $.providerName = providerName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceName(String resourceName) {
-            this.resourceName = Objects.requireNonNull(resourceName);
+            $.resourceName = resourceName;
             return this;
         }
+
         public Builder resourceType(String resourceType) {
-            this.resourceType = Objects.requireNonNull(resourceType);
+            $.resourceType = resourceType;
             return this;
-        }        public GetManagementAssociationArgs build() {
-            return new GetManagementAssociationArgs(managementAssociationName, providerName, resourceGroupName, resourceName, resourceType);
+        }
+
+        public GetManagementAssociationArgs build() {
+            $.managementAssociationName = Objects.requireNonNull($.managementAssociationName, "expected parameter 'managementAssociationName' to be non-null");
+            $.providerName = Objects.requireNonNull($.providerName, "expected parameter 'providerName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.resourceName = Objects.requireNonNull($.resourceName, "expected parameter 'resourceName' to be non-null");
+            $.resourceType = Objects.requireNonNull($.resourceType, "expected parameter 'resourceType' to be non-null");
+            return $;
         }
     }
+
 }

@@ -23,45 +23,44 @@ public final class FirewallPolicyNatRuleActionResponse extends com.pulumi.resour
      * 
      */
     @Import(name="type")
-      private final @Nullable String type;
+    private @Nullable String type;
 
     public Optional<String> type() {
-        return this.type == null ? Optional.empty() : Optional.ofNullable(this.type);
+        return Optional.ofNullable(this.type);
     }
 
-    public FirewallPolicyNatRuleActionResponse(@Nullable String type) {
-        this.type = type;
-    }
+    private FirewallPolicyNatRuleActionResponse() {}
 
-    private FirewallPolicyNatRuleActionResponse() {
-        this.type = null;
+    private FirewallPolicyNatRuleActionResponse(FirewallPolicyNatRuleActionResponse $) {
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FirewallPolicyNatRuleActionResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String type;
+        private FirewallPolicyNatRuleActionResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new FirewallPolicyNatRuleActionResponse();
         }
 
         public Builder(FirewallPolicyNatRuleActionResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.type = defaults.type;
+            $ = new FirewallPolicyNatRuleActionResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder type(@Nullable String type) {
-            this.type = type;
+            $.type = type;
             return this;
-        }        public FirewallPolicyNatRuleActionResponse build() {
-            return new FirewallPolicyNatRuleActionResponse(type);
+        }
+
+        public FirewallPolicyNatRuleActionResponse build() {
+            return $;
         }
     }
+
 }

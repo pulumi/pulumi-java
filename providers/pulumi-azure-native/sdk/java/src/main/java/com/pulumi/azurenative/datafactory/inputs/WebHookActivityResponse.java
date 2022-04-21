@@ -29,10 +29,10 @@ public final class WebHookActivityResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="authentication")
-      private final @Nullable WebActivityAuthenticationResponse authentication;
+    private @Nullable WebActivityAuthenticationResponse authentication;
 
     public Optional<WebActivityAuthenticationResponse> authentication() {
-        return this.authentication == null ? Optional.empty() : Optional.ofNullable(this.authentication);
+        return Optional.ofNullable(this.authentication);
     }
 
     /**
@@ -40,10 +40,10 @@ public final class WebHookActivityResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="body")
-      private final @Nullable Object body;
+    private @Nullable Object body;
 
     public Optional<Object> body() {
-        return this.body == null ? Optional.empty() : Optional.ofNullable(this.body);
+        return Optional.ofNullable(this.body);
     }
 
     /**
@@ -51,10 +51,10 @@ public final class WebHookActivityResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="dependsOn")
-      private final @Nullable List<ActivityDependencyResponse> dependsOn;
+    private @Nullable List<ActivityDependencyResponse> dependsOn;
 
-    public List<ActivityDependencyResponse> dependsOn() {
-        return this.dependsOn == null ? List.of() : this.dependsOn;
+    public Optional<List<ActivityDependencyResponse>> dependsOn() {
+        return Optional.ofNullable(this.dependsOn);
     }
 
     /**
@@ -62,10 +62,10 @@ public final class WebHookActivityResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="description")
-      private final @Nullable String description;
+    private @Nullable String description;
 
     public Optional<String> description() {
-        return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -73,10 +73,10 @@ public final class WebHookActivityResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="headers")
-      private final @Nullable Object headers;
+    private @Nullable Object headers;
 
     public Optional<Object> headers() {
-        return this.headers == null ? Optional.empty() : Optional.ofNullable(this.headers);
+        return Optional.ofNullable(this.headers);
     }
 
     /**
@@ -84,7 +84,7 @@ public final class WebHookActivityResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="method", required=true)
-      private final String method;
+    private String method;
 
     public String method() {
         return this.method;
@@ -95,7 +95,7 @@ public final class WebHookActivityResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -106,10 +106,10 @@ public final class WebHookActivityResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="reportStatusOnCallBack")
-      private final @Nullable Object reportStatusOnCallBack;
+    private @Nullable Object reportStatusOnCallBack;
 
     public Optional<Object> reportStatusOnCallBack() {
-        return this.reportStatusOnCallBack == null ? Optional.empty() : Optional.ofNullable(this.reportStatusOnCallBack);
+        return Optional.ofNullable(this.reportStatusOnCallBack);
     }
 
     /**
@@ -117,10 +117,10 @@ public final class WebHookActivityResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="timeout")
-      private final @Nullable String timeout;
+    private @Nullable String timeout;
 
     public Optional<String> timeout() {
-        return this.timeout == null ? Optional.empty() : Optional.ofNullable(this.timeout);
+        return Optional.ofNullable(this.timeout);
     }
 
     /**
@@ -129,7 +129,7 @@ public final class WebHookActivityResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
@@ -140,7 +140,7 @@ public final class WebHookActivityResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="url", required=true)
-      private final Object url;
+    private Object url;
 
     public Object url() {
         return this.url;
@@ -151,151 +151,122 @@ public final class WebHookActivityResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="userProperties")
-      private final @Nullable List<UserPropertyResponse> userProperties;
+    private @Nullable List<UserPropertyResponse> userProperties;
 
-    public List<UserPropertyResponse> userProperties() {
-        return this.userProperties == null ? List.of() : this.userProperties;
+    public Optional<List<UserPropertyResponse>> userProperties() {
+        return Optional.ofNullable(this.userProperties);
     }
 
-    public WebHookActivityResponse(
-        @Nullable WebActivityAuthenticationResponse authentication,
-        @Nullable Object body,
-        @Nullable List<ActivityDependencyResponse> dependsOn,
-        @Nullable String description,
-        @Nullable Object headers,
-        String method,
-        String name,
-        @Nullable Object reportStatusOnCallBack,
-        @Nullable String timeout,
-        String type,
-        Object url,
-        @Nullable List<UserPropertyResponse> userProperties) {
-        this.authentication = authentication;
-        this.body = body;
-        this.dependsOn = dependsOn;
-        this.description = description;
-        this.headers = headers;
-        this.method = Objects.requireNonNull(method, "expected parameter 'method' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.reportStatusOnCallBack = reportStatusOnCallBack;
-        this.timeout = timeout;
-        this.type = Codegen.stringProp("type").arg(type).require();
-        this.url = Objects.requireNonNull(url, "expected parameter 'url' to be non-null");
-        this.userProperties = userProperties;
-    }
+    private WebHookActivityResponse() {}
 
-    private WebHookActivityResponse() {
-        this.authentication = null;
-        this.body = null;
-        this.dependsOn = List.of();
-        this.description = null;
-        this.headers = null;
-        this.method = null;
-        this.name = null;
-        this.reportStatusOnCallBack = null;
-        this.timeout = null;
-        this.type = null;
-        this.url = null;
-        this.userProperties = List.of();
+    private WebHookActivityResponse(WebHookActivityResponse $) {
+        this.authentication = $.authentication;
+        this.body = $.body;
+        this.dependsOn = $.dependsOn;
+        this.description = $.description;
+        this.headers = $.headers;
+        this.method = $.method;
+        this.name = $.name;
+        this.reportStatusOnCallBack = $.reportStatusOnCallBack;
+        this.timeout = $.timeout;
+        this.type = $.type;
+        this.url = $.url;
+        this.userProperties = $.userProperties;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WebHookActivityResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable WebActivityAuthenticationResponse authentication;
-        private @Nullable Object body;
-        private @Nullable List<ActivityDependencyResponse> dependsOn;
-        private @Nullable String description;
-        private @Nullable Object headers;
-        private String method;
-        private String name;
-        private @Nullable Object reportStatusOnCallBack;
-        private @Nullable String timeout;
-        private String type;
-        private Object url;
-        private @Nullable List<UserPropertyResponse> userProperties;
+        private WebHookActivityResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new WebHookActivityResponse();
         }
 
         public Builder(WebHookActivityResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.authentication = defaults.authentication;
-    	      this.body = defaults.body;
-    	      this.dependsOn = defaults.dependsOn;
-    	      this.description = defaults.description;
-    	      this.headers = defaults.headers;
-    	      this.method = defaults.method;
-    	      this.name = defaults.name;
-    	      this.reportStatusOnCallBack = defaults.reportStatusOnCallBack;
-    	      this.timeout = defaults.timeout;
-    	      this.type = defaults.type;
-    	      this.url = defaults.url;
-    	      this.userProperties = defaults.userProperties;
+            $ = new WebHookActivityResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder authentication(@Nullable WebActivityAuthenticationResponse authentication) {
-            this.authentication = authentication;
+            $.authentication = authentication;
             return this;
         }
+
         public Builder body(@Nullable Object body) {
-            this.body = body;
+            $.body = body;
             return this;
         }
+
         public Builder dependsOn(@Nullable List<ActivityDependencyResponse> dependsOn) {
-            this.dependsOn = dependsOn;
+            $.dependsOn = dependsOn;
             return this;
         }
+
         public Builder dependsOn(ActivityDependencyResponse... dependsOn) {
             return dependsOn(List.of(dependsOn));
         }
+
         public Builder description(@Nullable String description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
+
         public Builder headers(@Nullable Object headers) {
-            this.headers = headers;
+            $.headers = headers;
             return this;
         }
+
         public Builder method(String method) {
-            this.method = Objects.requireNonNull(method);
+            $.method = method;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder reportStatusOnCallBack(@Nullable Object reportStatusOnCallBack) {
-            this.reportStatusOnCallBack = reportStatusOnCallBack;
+            $.reportStatusOnCallBack = reportStatusOnCallBack;
             return this;
         }
+
         public Builder timeout(@Nullable String timeout) {
-            this.timeout = timeout;
+            $.timeout = timeout;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder url(Object url) {
-            this.url = Objects.requireNonNull(url);
+            $.url = url;
             return this;
         }
+
         public Builder userProperties(@Nullable List<UserPropertyResponse> userProperties) {
-            this.userProperties = userProperties;
+            $.userProperties = userProperties;
             return this;
         }
+
         public Builder userProperties(UserPropertyResponse... userProperties) {
             return userProperties(List.of(userProperties));
-        }        public WebHookActivityResponse build() {
-            return new WebHookActivityResponse(authentication, body, dependsOn, description, headers, method, name, reportStatusOnCallBack, timeout, type, url, userProperties);
+        }
+
+        public WebHookActivityResponse build() {
+            $.method = Objects.requireNonNull($.method, "expected parameter 'method' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.type = Codegen.stringProp("type").arg($.type).require();
+            $.url = Objects.requireNonNull($.url, "expected parameter 'url' to be non-null");
+            return $;
         }
     }
+
 }

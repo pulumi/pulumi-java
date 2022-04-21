@@ -15,45 +15,44 @@ public final class ConfigTrackingConfig extends com.pulumi.resources.InvokeArgs 
     public static final ConfigTrackingConfig Empty = new ConfigTrackingConfig();
 
     @Import(name="autotrack")
-      private final @Nullable ConfigTrackingConfigAutotrack autotrack;
+    private @Nullable ConfigTrackingConfigAutotrack autotrack;
 
     public Optional<ConfigTrackingConfigAutotrack> autotrack() {
-        return this.autotrack == null ? Optional.empty() : Optional.ofNullable(this.autotrack);
+        return Optional.ofNullable(this.autotrack);
     }
 
-    public ConfigTrackingConfig(@Nullable ConfigTrackingConfigAutotrack autotrack) {
-        this.autotrack = autotrack;
-    }
+    private ConfigTrackingConfig() {}
 
-    private ConfigTrackingConfig() {
-        this.autotrack = null;
+    private ConfigTrackingConfig(ConfigTrackingConfig $) {
+        this.autotrack = $.autotrack;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ConfigTrackingConfig defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable ConfigTrackingConfigAutotrack autotrack;
+        private ConfigTrackingConfig $;
 
         public Builder() {
-    	      // Empty
+            $ = new ConfigTrackingConfig();
         }
 
         public Builder(ConfigTrackingConfig defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.autotrack = defaults.autotrack;
+            $ = new ConfigTrackingConfig(Objects.requireNonNull(defaults));
         }
 
         public Builder autotrack(@Nullable ConfigTrackingConfigAutotrack autotrack) {
-            this.autotrack = autotrack;
+            $.autotrack = autotrack;
             return this;
-        }        public ConfigTrackingConfig build() {
-            return new ConfigTrackingConfig(autotrack);
+        }
+
+        public ConfigTrackingConfig build() {
+            return $;
         }
     }
+
 }

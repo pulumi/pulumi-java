@@ -5,10 +5,10 @@ package com.pulumi.awsnative.iot.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -17,70 +17,65 @@ public final class DomainConfigurationAuthorizerConfigArgs extends com.pulumi.re
     public static final DomainConfigurationAuthorizerConfigArgs Empty = new DomainConfigurationAuthorizerConfigArgs();
 
     @Import(name="allowAuthorizerOverride")
-      private final @Nullable Output<Boolean> allowAuthorizerOverride;
+    private @Nullable Output<Boolean> allowAuthorizerOverride;
 
-    public Output<Boolean> allowAuthorizerOverride() {
-        return this.allowAuthorizerOverride == null ? Codegen.empty() : this.allowAuthorizerOverride;
+    public Optional<Output<Boolean>> allowAuthorizerOverride() {
+        return Optional.ofNullable(this.allowAuthorizerOverride);
     }
 
     @Import(name="defaultAuthorizerName")
-      private final @Nullable Output<String> defaultAuthorizerName;
+    private @Nullable Output<String> defaultAuthorizerName;
 
-    public Output<String> defaultAuthorizerName() {
-        return this.defaultAuthorizerName == null ? Codegen.empty() : this.defaultAuthorizerName;
+    public Optional<Output<String>> defaultAuthorizerName() {
+        return Optional.ofNullable(this.defaultAuthorizerName);
     }
 
-    public DomainConfigurationAuthorizerConfigArgs(
-        @Nullable Output<Boolean> allowAuthorizerOverride,
-        @Nullable Output<String> defaultAuthorizerName) {
-        this.allowAuthorizerOverride = allowAuthorizerOverride;
-        this.defaultAuthorizerName = defaultAuthorizerName;
-    }
+    private DomainConfigurationAuthorizerConfigArgs() {}
 
-    private DomainConfigurationAuthorizerConfigArgs() {
-        this.allowAuthorizerOverride = Codegen.empty();
-        this.defaultAuthorizerName = Codegen.empty();
+    private DomainConfigurationAuthorizerConfigArgs(DomainConfigurationAuthorizerConfigArgs $) {
+        this.allowAuthorizerOverride = $.allowAuthorizerOverride;
+        this.defaultAuthorizerName = $.defaultAuthorizerName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DomainConfigurationAuthorizerConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> allowAuthorizerOverride;
-        private @Nullable Output<String> defaultAuthorizerName;
+        private DomainConfigurationAuthorizerConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DomainConfigurationAuthorizerConfigArgs();
         }
 
         public Builder(DomainConfigurationAuthorizerConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.allowAuthorizerOverride = defaults.allowAuthorizerOverride;
-    	      this.defaultAuthorizerName = defaults.defaultAuthorizerName;
+            $ = new DomainConfigurationAuthorizerConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder allowAuthorizerOverride(@Nullable Output<Boolean> allowAuthorizerOverride) {
-            this.allowAuthorizerOverride = allowAuthorizerOverride;
+            $.allowAuthorizerOverride = allowAuthorizerOverride;
             return this;
         }
-        public Builder allowAuthorizerOverride(@Nullable Boolean allowAuthorizerOverride) {
-            this.allowAuthorizerOverride = Codegen.ofNullable(allowAuthorizerOverride);
-            return this;
+
+        public Builder allowAuthorizerOverride(Boolean allowAuthorizerOverride) {
+            return allowAuthorizerOverride(Output.of(allowAuthorizerOverride));
         }
+
         public Builder defaultAuthorizerName(@Nullable Output<String> defaultAuthorizerName) {
-            this.defaultAuthorizerName = defaultAuthorizerName;
+            $.defaultAuthorizerName = defaultAuthorizerName;
             return this;
         }
-        public Builder defaultAuthorizerName(@Nullable String defaultAuthorizerName) {
-            this.defaultAuthorizerName = Codegen.ofNullable(defaultAuthorizerName);
-            return this;
-        }        public DomainConfigurationAuthorizerConfigArgs build() {
-            return new DomainConfigurationAuthorizerConfigArgs(allowAuthorizerOverride, defaultAuthorizerName);
+
+        public Builder defaultAuthorizerName(String defaultAuthorizerName) {
+            return defaultAuthorizerName(Output.of(defaultAuthorizerName));
+        }
+
+        public DomainConfigurationAuthorizerConfigArgs build() {
+            return $;
         }
     }
+
 }

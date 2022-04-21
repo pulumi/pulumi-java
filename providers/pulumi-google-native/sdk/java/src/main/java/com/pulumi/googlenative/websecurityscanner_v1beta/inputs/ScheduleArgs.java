@@ -5,10 +5,10 @@ package com.pulumi.googlenative.websecurityscanner_v1beta.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,7 +25,7 @@ public final class ScheduleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="intervalDurationDays", required=true)
-      private final Output<Integer> intervalDurationDays;
+    private Output<Integer> intervalDurationDays;
 
     public Output<Integer> intervalDurationDays() {
         return this.intervalDurationDays;
@@ -36,63 +36,59 @@ public final class ScheduleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="scheduleTime")
-      private final @Nullable Output<String> scheduleTime;
+    private @Nullable Output<String> scheduleTime;
 
-    public Output<String> scheduleTime() {
-        return this.scheduleTime == null ? Codegen.empty() : this.scheduleTime;
+    public Optional<Output<String>> scheduleTime() {
+        return Optional.ofNullable(this.scheduleTime);
     }
 
-    public ScheduleArgs(
-        Output<Integer> intervalDurationDays,
-        @Nullable Output<String> scheduleTime) {
-        this.intervalDurationDays = Objects.requireNonNull(intervalDurationDays, "expected parameter 'intervalDurationDays' to be non-null");
-        this.scheduleTime = scheduleTime;
-    }
+    private ScheduleArgs() {}
 
-    private ScheduleArgs() {
-        this.intervalDurationDays = Codegen.empty();
-        this.scheduleTime = Codegen.empty();
+    private ScheduleArgs(ScheduleArgs $) {
+        this.intervalDurationDays = $.intervalDurationDays;
+        this.scheduleTime = $.scheduleTime;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ScheduleArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Integer> intervalDurationDays;
-        private @Nullable Output<String> scheduleTime;
+        private ScheduleArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ScheduleArgs();
         }
 
         public Builder(ScheduleArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.intervalDurationDays = defaults.intervalDurationDays;
-    	      this.scheduleTime = defaults.scheduleTime;
+            $ = new ScheduleArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder intervalDurationDays(Output<Integer> intervalDurationDays) {
-            this.intervalDurationDays = Objects.requireNonNull(intervalDurationDays);
+            $.intervalDurationDays = intervalDurationDays;
             return this;
         }
+
         public Builder intervalDurationDays(Integer intervalDurationDays) {
-            this.intervalDurationDays = Output.of(Objects.requireNonNull(intervalDurationDays));
-            return this;
+            return intervalDurationDays(Output.of(intervalDurationDays));
         }
+
         public Builder scheduleTime(@Nullable Output<String> scheduleTime) {
-            this.scheduleTime = scheduleTime;
+            $.scheduleTime = scheduleTime;
             return this;
         }
-        public Builder scheduleTime(@Nullable String scheduleTime) {
-            this.scheduleTime = Codegen.ofNullable(scheduleTime);
-            return this;
-        }        public ScheduleArgs build() {
-            return new ScheduleArgs(intervalDurationDays, scheduleTime);
+
+        public Builder scheduleTime(String scheduleTime) {
+            return scheduleTime(Output.of(scheduleTime));
+        }
+
+        public ScheduleArgs build() {
+            $.intervalDurationDays = Objects.requireNonNull($.intervalDurationDays, "expected parameter 'intervalDurationDays' to be non-null");
+            return $;
         }
     }
+
 }

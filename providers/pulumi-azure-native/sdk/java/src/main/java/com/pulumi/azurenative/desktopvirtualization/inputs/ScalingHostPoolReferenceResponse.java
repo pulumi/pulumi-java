@@ -24,10 +24,10 @@ public final class ScalingHostPoolReferenceResponse extends com.pulumi.resources
      * 
      */
     @Import(name="hostPoolArmPath")
-      private final @Nullable String hostPoolArmPath;
+    private @Nullable String hostPoolArmPath;
 
     public Optional<String> hostPoolArmPath() {
-        return this.hostPoolArmPath == null ? Optional.empty() : Optional.ofNullable(this.hostPoolArmPath);
+        return Optional.ofNullable(this.hostPoolArmPath);
     }
 
     /**
@@ -35,55 +35,50 @@ public final class ScalingHostPoolReferenceResponse extends com.pulumi.resources
      * 
      */
     @Import(name="scalingPlanEnabled")
-      private final @Nullable Boolean scalingPlanEnabled;
+    private @Nullable Boolean scalingPlanEnabled;
 
     public Optional<Boolean> scalingPlanEnabled() {
-        return this.scalingPlanEnabled == null ? Optional.empty() : Optional.ofNullable(this.scalingPlanEnabled);
+        return Optional.ofNullable(this.scalingPlanEnabled);
     }
 
-    public ScalingHostPoolReferenceResponse(
-        @Nullable String hostPoolArmPath,
-        @Nullable Boolean scalingPlanEnabled) {
-        this.hostPoolArmPath = hostPoolArmPath;
-        this.scalingPlanEnabled = scalingPlanEnabled;
-    }
+    private ScalingHostPoolReferenceResponse() {}
 
-    private ScalingHostPoolReferenceResponse() {
-        this.hostPoolArmPath = null;
-        this.scalingPlanEnabled = null;
+    private ScalingHostPoolReferenceResponse(ScalingHostPoolReferenceResponse $) {
+        this.hostPoolArmPath = $.hostPoolArmPath;
+        this.scalingPlanEnabled = $.scalingPlanEnabled;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ScalingHostPoolReferenceResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String hostPoolArmPath;
-        private @Nullable Boolean scalingPlanEnabled;
+        private ScalingHostPoolReferenceResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ScalingHostPoolReferenceResponse();
         }
 
         public Builder(ScalingHostPoolReferenceResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.hostPoolArmPath = defaults.hostPoolArmPath;
-    	      this.scalingPlanEnabled = defaults.scalingPlanEnabled;
+            $ = new ScalingHostPoolReferenceResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder hostPoolArmPath(@Nullable String hostPoolArmPath) {
-            this.hostPoolArmPath = hostPoolArmPath;
+            $.hostPoolArmPath = hostPoolArmPath;
             return this;
         }
+
         public Builder scalingPlanEnabled(@Nullable Boolean scalingPlanEnabled) {
-            this.scalingPlanEnabled = scalingPlanEnabled;
+            $.scalingPlanEnabled = scalingPlanEnabled;
             return this;
-        }        public ScalingHostPoolReferenceResponse build() {
-            return new ScalingHostPoolReferenceResponse(hostPoolArmPath, scalingPlanEnabled);
+        }
+
+        public ScalingHostPoolReferenceResponse build() {
+            return $;
         }
     }
+
 }

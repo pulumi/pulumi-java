@@ -5,9 +5,9 @@ package com.pulumi.aws.guardduty.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class PublishingDestinationState extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="destinationArn")
-      private final @Nullable Output<String> destinationArn;
+    private @Nullable Output<String> destinationArn;
 
-    public Output<String> destinationArn() {
-        return this.destinationArn == null ? Codegen.empty() : this.destinationArn;
+    public Optional<Output<String>> destinationArn() {
+        return Optional.ofNullable(this.destinationArn);
     }
 
     /**
@@ -31,10 +31,10 @@ public final class PublishingDestinationState extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="destinationType")
-      private final @Nullable Output<String> destinationType;
+    private @Nullable Output<String> destinationType;
 
-    public Output<String> destinationType() {
-        return this.destinationType == null ? Codegen.empty() : this.destinationType;
+    public Optional<Output<String>> destinationType() {
+        return Optional.ofNullable(this.destinationType);
     }
 
     /**
@@ -42,10 +42,10 @@ public final class PublishingDestinationState extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="detectorId")
-      private final @Nullable Output<String> detectorId;
+    private @Nullable Output<String> detectorId;
 
-    public Output<String> detectorId() {
-        return this.detectorId == null ? Codegen.empty() : this.detectorId;
+    public Optional<Output<String>> detectorId() {
+        return Optional.ofNullable(this.detectorId);
     }
 
     /**
@@ -53,89 +53,78 @@ public final class PublishingDestinationState extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="kmsKeyArn")
-      private final @Nullable Output<String> kmsKeyArn;
+    private @Nullable Output<String> kmsKeyArn;
 
-    public Output<String> kmsKeyArn() {
-        return this.kmsKeyArn == null ? Codegen.empty() : this.kmsKeyArn;
+    public Optional<Output<String>> kmsKeyArn() {
+        return Optional.ofNullable(this.kmsKeyArn);
     }
 
-    public PublishingDestinationState(
-        @Nullable Output<String> destinationArn,
-        @Nullable Output<String> destinationType,
-        @Nullable Output<String> detectorId,
-        @Nullable Output<String> kmsKeyArn) {
-        this.destinationArn = destinationArn;
-        this.destinationType = destinationType;
-        this.detectorId = detectorId;
-        this.kmsKeyArn = kmsKeyArn;
-    }
+    private PublishingDestinationState() {}
 
-    private PublishingDestinationState() {
-        this.destinationArn = Codegen.empty();
-        this.destinationType = Codegen.empty();
-        this.detectorId = Codegen.empty();
-        this.kmsKeyArn = Codegen.empty();
+    private PublishingDestinationState(PublishingDestinationState $) {
+        this.destinationArn = $.destinationArn;
+        this.destinationType = $.destinationType;
+        this.detectorId = $.detectorId;
+        this.kmsKeyArn = $.kmsKeyArn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PublishingDestinationState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> destinationArn;
-        private @Nullable Output<String> destinationType;
-        private @Nullable Output<String> detectorId;
-        private @Nullable Output<String> kmsKeyArn;
+        private PublishingDestinationState $;
 
         public Builder() {
-    	      // Empty
+            $ = new PublishingDestinationState();
         }
 
         public Builder(PublishingDestinationState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.destinationArn = defaults.destinationArn;
-    	      this.destinationType = defaults.destinationType;
-    	      this.detectorId = defaults.detectorId;
-    	      this.kmsKeyArn = defaults.kmsKeyArn;
+            $ = new PublishingDestinationState(Objects.requireNonNull(defaults));
         }
 
         public Builder destinationArn(@Nullable Output<String> destinationArn) {
-            this.destinationArn = destinationArn;
+            $.destinationArn = destinationArn;
             return this;
         }
-        public Builder destinationArn(@Nullable String destinationArn) {
-            this.destinationArn = Codegen.ofNullable(destinationArn);
-            return this;
+
+        public Builder destinationArn(String destinationArn) {
+            return destinationArn(Output.of(destinationArn));
         }
+
         public Builder destinationType(@Nullable Output<String> destinationType) {
-            this.destinationType = destinationType;
+            $.destinationType = destinationType;
             return this;
         }
-        public Builder destinationType(@Nullable String destinationType) {
-            this.destinationType = Codegen.ofNullable(destinationType);
-            return this;
+
+        public Builder destinationType(String destinationType) {
+            return destinationType(Output.of(destinationType));
         }
+
         public Builder detectorId(@Nullable Output<String> detectorId) {
-            this.detectorId = detectorId;
+            $.detectorId = detectorId;
             return this;
         }
-        public Builder detectorId(@Nullable String detectorId) {
-            this.detectorId = Codegen.ofNullable(detectorId);
-            return this;
+
+        public Builder detectorId(String detectorId) {
+            return detectorId(Output.of(detectorId));
         }
+
         public Builder kmsKeyArn(@Nullable Output<String> kmsKeyArn) {
-            this.kmsKeyArn = kmsKeyArn;
+            $.kmsKeyArn = kmsKeyArn;
             return this;
         }
-        public Builder kmsKeyArn(@Nullable String kmsKeyArn) {
-            this.kmsKeyArn = Codegen.ofNullable(kmsKeyArn);
-            return this;
-        }        public PublishingDestinationState build() {
-            return new PublishingDestinationState(destinationArn, destinationType, detectorId, kmsKeyArn);
+
+        public Builder kmsKeyArn(String kmsKeyArn) {
+            return kmsKeyArn(Output.of(kmsKeyArn));
+        }
+
+        public PublishingDestinationState build() {
+            return $;
         }
     }
+
 }

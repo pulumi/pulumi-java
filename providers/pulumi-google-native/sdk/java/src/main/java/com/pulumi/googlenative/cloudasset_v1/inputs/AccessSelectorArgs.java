@@ -5,10 +5,10 @@ package com.pulumi.googlenative.cloudasset_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class AccessSelectorArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="permissions")
-      private final @Nullable Output<List<String>> permissions;
+    private @Nullable Output<List<String>> permissions;
 
-    public Output<List<String>> permissions() {
-        return this.permissions == null ? Codegen.empty() : this.permissions;
+    public Optional<Output<List<String>>> permissions() {
+        return Optional.ofNullable(this.permissions);
     }
 
     /**
@@ -36,69 +36,66 @@ public final class AccessSelectorArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="roles")
-      private final @Nullable Output<List<String>> roles;
+    private @Nullable Output<List<String>> roles;
 
-    public Output<List<String>> roles() {
-        return this.roles == null ? Codegen.empty() : this.roles;
+    public Optional<Output<List<String>>> roles() {
+        return Optional.ofNullable(this.roles);
     }
 
-    public AccessSelectorArgs(
-        @Nullable Output<List<String>> permissions,
-        @Nullable Output<List<String>> roles) {
-        this.permissions = permissions;
-        this.roles = roles;
-    }
+    private AccessSelectorArgs() {}
 
-    private AccessSelectorArgs() {
-        this.permissions = Codegen.empty();
-        this.roles = Codegen.empty();
+    private AccessSelectorArgs(AccessSelectorArgs $) {
+        this.permissions = $.permissions;
+        this.roles = $.roles;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AccessSelectorArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> permissions;
-        private @Nullable Output<List<String>> roles;
+        private AccessSelectorArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AccessSelectorArgs();
         }
 
         public Builder(AccessSelectorArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.permissions = defaults.permissions;
-    	      this.roles = defaults.roles;
+            $ = new AccessSelectorArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder permissions(@Nullable Output<List<String>> permissions) {
-            this.permissions = permissions;
+            $.permissions = permissions;
             return this;
         }
-        public Builder permissions(@Nullable List<String> permissions) {
-            this.permissions = Codegen.ofNullable(permissions);
-            return this;
+
+        public Builder permissions(List<String> permissions) {
+            return permissions(Output.of(permissions));
         }
+
         public Builder permissions(String... permissions) {
             return permissions(List.of(permissions));
         }
+
         public Builder roles(@Nullable Output<List<String>> roles) {
-            this.roles = roles;
+            $.roles = roles;
             return this;
         }
-        public Builder roles(@Nullable List<String> roles) {
-            this.roles = Codegen.ofNullable(roles);
-            return this;
+
+        public Builder roles(List<String> roles) {
+            return roles(Output.of(roles));
         }
+
         public Builder roles(String... roles) {
             return roles(List.of(roles));
-        }        public AccessSelectorArgs build() {
-            return new AccessSelectorArgs(permissions, roles);
+        }
+
+        public AccessSelectorArgs build() {
+            return $;
         }
     }
+
 }

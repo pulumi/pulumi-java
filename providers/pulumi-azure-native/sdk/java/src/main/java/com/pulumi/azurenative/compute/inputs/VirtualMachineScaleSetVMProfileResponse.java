@@ -31,10 +31,10 @@ public final class VirtualMachineScaleSetVMProfileResponse extends com.pulumi.re
      * 
      */
     @Import(name="billingProfile")
-      private final @Nullable BillingProfileResponse billingProfile;
+    private @Nullable BillingProfileResponse billingProfile;
 
     public Optional<BillingProfileResponse> billingProfile() {
-        return this.billingProfile == null ? Optional.empty() : Optional.ofNullable(this.billingProfile);
+        return Optional.ofNullable(this.billingProfile);
     }
 
     /**
@@ -42,10 +42,10 @@ public final class VirtualMachineScaleSetVMProfileResponse extends com.pulumi.re
      * 
      */
     @Import(name="diagnosticsProfile")
-      private final @Nullable DiagnosticsProfileResponse diagnosticsProfile;
+    private @Nullable DiagnosticsProfileResponse diagnosticsProfile;
 
     public Optional<DiagnosticsProfileResponse> diagnosticsProfile() {
-        return this.diagnosticsProfile == null ? Optional.empty() : Optional.ofNullable(this.diagnosticsProfile);
+        return Optional.ofNullable(this.diagnosticsProfile);
     }
 
     /**
@@ -53,10 +53,10 @@ public final class VirtualMachineScaleSetVMProfileResponse extends com.pulumi.re
      * 
      */
     @Import(name="evictionPolicy")
-      private final @Nullable String evictionPolicy;
+    private @Nullable String evictionPolicy;
 
     public Optional<String> evictionPolicy() {
-        return this.evictionPolicy == null ? Optional.empty() : Optional.ofNullable(this.evictionPolicy);
+        return Optional.ofNullable(this.evictionPolicy);
     }
 
     /**
@@ -64,10 +64,10 @@ public final class VirtualMachineScaleSetVMProfileResponse extends com.pulumi.re
      * 
      */
     @Import(name="extensionProfile")
-      private final @Nullable VirtualMachineScaleSetExtensionProfileResponse extensionProfile;
+    private @Nullable VirtualMachineScaleSetExtensionProfileResponse extensionProfile;
 
     public Optional<VirtualMachineScaleSetExtensionProfileResponse> extensionProfile() {
-        return this.extensionProfile == null ? Optional.empty() : Optional.ofNullable(this.extensionProfile);
+        return Optional.ofNullable(this.extensionProfile);
     }
 
     /**
@@ -75,10 +75,10 @@ public final class VirtualMachineScaleSetVMProfileResponse extends com.pulumi.re
      * 
      */
     @Import(name="licenseType")
-      private final @Nullable String licenseType;
+    private @Nullable String licenseType;
 
     public Optional<String> licenseType() {
-        return this.licenseType == null ? Optional.empty() : Optional.ofNullable(this.licenseType);
+        return Optional.ofNullable(this.licenseType);
     }
 
     /**
@@ -86,10 +86,10 @@ public final class VirtualMachineScaleSetVMProfileResponse extends com.pulumi.re
      * 
      */
     @Import(name="networkProfile")
-      private final @Nullable VirtualMachineScaleSetNetworkProfileResponse networkProfile;
+    private @Nullable VirtualMachineScaleSetNetworkProfileResponse networkProfile;
 
     public Optional<VirtualMachineScaleSetNetworkProfileResponse> networkProfile() {
-        return this.networkProfile == null ? Optional.empty() : Optional.ofNullable(this.networkProfile);
+        return Optional.ofNullable(this.networkProfile);
     }
 
     /**
@@ -97,10 +97,10 @@ public final class VirtualMachineScaleSetVMProfileResponse extends com.pulumi.re
      * 
      */
     @Import(name="osProfile")
-      private final @Nullable VirtualMachineScaleSetOSProfileResponse osProfile;
+    private @Nullable VirtualMachineScaleSetOSProfileResponse osProfile;
 
     public Optional<VirtualMachineScaleSetOSProfileResponse> osProfile() {
-        return this.osProfile == null ? Optional.empty() : Optional.ofNullable(this.osProfile);
+        return Optional.ofNullable(this.osProfile);
     }
 
     /**
@@ -108,10 +108,10 @@ public final class VirtualMachineScaleSetVMProfileResponse extends com.pulumi.re
      * 
      */
     @Import(name="priority")
-      private final @Nullable String priority;
+    private @Nullable String priority;
 
     public Optional<String> priority() {
-        return this.priority == null ? Optional.empty() : Optional.ofNullable(this.priority);
+        return Optional.ofNullable(this.priority);
     }
 
     /**
@@ -119,10 +119,10 @@ public final class VirtualMachineScaleSetVMProfileResponse extends com.pulumi.re
      * 
      */
     @Import(name="scheduledEventsProfile")
-      private final @Nullable ScheduledEventsProfileResponse scheduledEventsProfile;
+    private @Nullable ScheduledEventsProfileResponse scheduledEventsProfile;
 
     public Optional<ScheduledEventsProfileResponse> scheduledEventsProfile() {
-        return this.scheduledEventsProfile == null ? Optional.empty() : Optional.ofNullable(this.scheduledEventsProfile);
+        return Optional.ofNullable(this.scheduledEventsProfile);
     }
 
     /**
@@ -130,10 +130,10 @@ public final class VirtualMachineScaleSetVMProfileResponse extends com.pulumi.re
      * 
      */
     @Import(name="securityProfile")
-      private final @Nullable SecurityProfileResponse securityProfile;
+    private @Nullable SecurityProfileResponse securityProfile;
 
     public Optional<SecurityProfileResponse> securityProfile() {
-        return this.securityProfile == null ? Optional.empty() : Optional.ofNullable(this.securityProfile);
+        return Optional.ofNullable(this.securityProfile);
     }
 
     /**
@@ -141,10 +141,10 @@ public final class VirtualMachineScaleSetVMProfileResponse extends com.pulumi.re
      * 
      */
     @Import(name="storageProfile")
-      private final @Nullable VirtualMachineScaleSetStorageProfileResponse storageProfile;
+    private @Nullable VirtualMachineScaleSetStorageProfileResponse storageProfile;
 
     public Optional<VirtualMachineScaleSetStorageProfileResponse> storageProfile() {
-        return this.storageProfile == null ? Optional.empty() : Optional.ofNullable(this.storageProfile);
+        return Optional.ofNullable(this.storageProfile);
     }
 
     /**
@@ -152,145 +152,110 @@ public final class VirtualMachineScaleSetVMProfileResponse extends com.pulumi.re
      * 
      */
     @Import(name="userData")
-      private final @Nullable String userData;
+    private @Nullable String userData;
 
     public Optional<String> userData() {
-        return this.userData == null ? Optional.empty() : Optional.ofNullable(this.userData);
+        return Optional.ofNullable(this.userData);
     }
 
-    public VirtualMachineScaleSetVMProfileResponse(
-        @Nullable BillingProfileResponse billingProfile,
-        @Nullable DiagnosticsProfileResponse diagnosticsProfile,
-        @Nullable String evictionPolicy,
-        @Nullable VirtualMachineScaleSetExtensionProfileResponse extensionProfile,
-        @Nullable String licenseType,
-        @Nullable VirtualMachineScaleSetNetworkProfileResponse networkProfile,
-        @Nullable VirtualMachineScaleSetOSProfileResponse osProfile,
-        @Nullable String priority,
-        @Nullable ScheduledEventsProfileResponse scheduledEventsProfile,
-        @Nullable SecurityProfileResponse securityProfile,
-        @Nullable VirtualMachineScaleSetStorageProfileResponse storageProfile,
-        @Nullable String userData) {
-        this.billingProfile = billingProfile;
-        this.diagnosticsProfile = diagnosticsProfile;
-        this.evictionPolicy = evictionPolicy;
-        this.extensionProfile = extensionProfile;
-        this.licenseType = licenseType;
-        this.networkProfile = networkProfile;
-        this.osProfile = osProfile;
-        this.priority = priority;
-        this.scheduledEventsProfile = scheduledEventsProfile;
-        this.securityProfile = securityProfile;
-        this.storageProfile = storageProfile;
-        this.userData = userData;
-    }
+    private VirtualMachineScaleSetVMProfileResponse() {}
 
-    private VirtualMachineScaleSetVMProfileResponse() {
-        this.billingProfile = null;
-        this.diagnosticsProfile = null;
-        this.evictionPolicy = null;
-        this.extensionProfile = null;
-        this.licenseType = null;
-        this.networkProfile = null;
-        this.osProfile = null;
-        this.priority = null;
-        this.scheduledEventsProfile = null;
-        this.securityProfile = null;
-        this.storageProfile = null;
-        this.userData = null;
+    private VirtualMachineScaleSetVMProfileResponse(VirtualMachineScaleSetVMProfileResponse $) {
+        this.billingProfile = $.billingProfile;
+        this.diagnosticsProfile = $.diagnosticsProfile;
+        this.evictionPolicy = $.evictionPolicy;
+        this.extensionProfile = $.extensionProfile;
+        this.licenseType = $.licenseType;
+        this.networkProfile = $.networkProfile;
+        this.osProfile = $.osProfile;
+        this.priority = $.priority;
+        this.scheduledEventsProfile = $.scheduledEventsProfile;
+        this.securityProfile = $.securityProfile;
+        this.storageProfile = $.storageProfile;
+        this.userData = $.userData;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VirtualMachineScaleSetVMProfileResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable BillingProfileResponse billingProfile;
-        private @Nullable DiagnosticsProfileResponse diagnosticsProfile;
-        private @Nullable String evictionPolicy;
-        private @Nullable VirtualMachineScaleSetExtensionProfileResponse extensionProfile;
-        private @Nullable String licenseType;
-        private @Nullable VirtualMachineScaleSetNetworkProfileResponse networkProfile;
-        private @Nullable VirtualMachineScaleSetOSProfileResponse osProfile;
-        private @Nullable String priority;
-        private @Nullable ScheduledEventsProfileResponse scheduledEventsProfile;
-        private @Nullable SecurityProfileResponse securityProfile;
-        private @Nullable VirtualMachineScaleSetStorageProfileResponse storageProfile;
-        private @Nullable String userData;
+        private VirtualMachineScaleSetVMProfileResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new VirtualMachineScaleSetVMProfileResponse();
         }
 
         public Builder(VirtualMachineScaleSetVMProfileResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.billingProfile = defaults.billingProfile;
-    	      this.diagnosticsProfile = defaults.diagnosticsProfile;
-    	      this.evictionPolicy = defaults.evictionPolicy;
-    	      this.extensionProfile = defaults.extensionProfile;
-    	      this.licenseType = defaults.licenseType;
-    	      this.networkProfile = defaults.networkProfile;
-    	      this.osProfile = defaults.osProfile;
-    	      this.priority = defaults.priority;
-    	      this.scheduledEventsProfile = defaults.scheduledEventsProfile;
-    	      this.securityProfile = defaults.securityProfile;
-    	      this.storageProfile = defaults.storageProfile;
-    	      this.userData = defaults.userData;
+            $ = new VirtualMachineScaleSetVMProfileResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder billingProfile(@Nullable BillingProfileResponse billingProfile) {
-            this.billingProfile = billingProfile;
+            $.billingProfile = billingProfile;
             return this;
         }
+
         public Builder diagnosticsProfile(@Nullable DiagnosticsProfileResponse diagnosticsProfile) {
-            this.diagnosticsProfile = diagnosticsProfile;
+            $.diagnosticsProfile = diagnosticsProfile;
             return this;
         }
+
         public Builder evictionPolicy(@Nullable String evictionPolicy) {
-            this.evictionPolicy = evictionPolicy;
+            $.evictionPolicy = evictionPolicy;
             return this;
         }
+
         public Builder extensionProfile(@Nullable VirtualMachineScaleSetExtensionProfileResponse extensionProfile) {
-            this.extensionProfile = extensionProfile;
+            $.extensionProfile = extensionProfile;
             return this;
         }
+
         public Builder licenseType(@Nullable String licenseType) {
-            this.licenseType = licenseType;
+            $.licenseType = licenseType;
             return this;
         }
+
         public Builder networkProfile(@Nullable VirtualMachineScaleSetNetworkProfileResponse networkProfile) {
-            this.networkProfile = networkProfile;
+            $.networkProfile = networkProfile;
             return this;
         }
+
         public Builder osProfile(@Nullable VirtualMachineScaleSetOSProfileResponse osProfile) {
-            this.osProfile = osProfile;
+            $.osProfile = osProfile;
             return this;
         }
+
         public Builder priority(@Nullable String priority) {
-            this.priority = priority;
+            $.priority = priority;
             return this;
         }
+
         public Builder scheduledEventsProfile(@Nullable ScheduledEventsProfileResponse scheduledEventsProfile) {
-            this.scheduledEventsProfile = scheduledEventsProfile;
+            $.scheduledEventsProfile = scheduledEventsProfile;
             return this;
         }
+
         public Builder securityProfile(@Nullable SecurityProfileResponse securityProfile) {
-            this.securityProfile = securityProfile;
+            $.securityProfile = securityProfile;
             return this;
         }
+
         public Builder storageProfile(@Nullable VirtualMachineScaleSetStorageProfileResponse storageProfile) {
-            this.storageProfile = storageProfile;
+            $.storageProfile = storageProfile;
             return this;
         }
+
         public Builder userData(@Nullable String userData) {
-            this.userData = userData;
+            $.userData = userData;
             return this;
-        }        public VirtualMachineScaleSetVMProfileResponse build() {
-            return new VirtualMachineScaleSetVMProfileResponse(billingProfile, diagnosticsProfile, evictionPolicy, extensionProfile, licenseType, networkProfile, osProfile, priority, scheduledEventsProfile, securityProfile, storageProfile, userData);
+        }
+
+        public VirtualMachineScaleSetVMProfileResponse build() {
+            return $;
         }
     }
+
 }

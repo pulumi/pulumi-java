@@ -21,7 +21,7 @@ public final class ApprovalResultResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="approvalTime", required=true)
-      private final String approvalTime;
+    private String approvalTime;
 
     public String approvalTime() {
         return this.approvalTime;
@@ -32,7 +32,7 @@ public final class ApprovalResultResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="approverAccount", required=true)
-      private final String approverAccount;
+    private String approverAccount;
 
     public String approverAccount() {
         return this.approverAccount;
@@ -43,7 +43,7 @@ public final class ApprovalResultResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="comment", required=true)
-      private final String comment;
+    private String comment;
 
     public String comment() {
         return this.comment;
@@ -54,7 +54,7 @@ public final class ApprovalResultResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="decision", required=true)
-      private final String decision;
+    private String decision;
 
     public String decision() {
         return this.decision;
@@ -65,82 +65,73 @@ public final class ApprovalResultResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="url", required=true)
-      private final String url;
+    private String url;
 
     public String url() {
         return this.url;
     }
 
-    public ApprovalResultResponse(
-        String approvalTime,
-        String approverAccount,
-        String comment,
-        String decision,
-        String url) {
-        this.approvalTime = Objects.requireNonNull(approvalTime, "expected parameter 'approvalTime' to be non-null");
-        this.approverAccount = Objects.requireNonNull(approverAccount, "expected parameter 'approverAccount' to be non-null");
-        this.comment = Objects.requireNonNull(comment, "expected parameter 'comment' to be non-null");
-        this.decision = Objects.requireNonNull(decision, "expected parameter 'decision' to be non-null");
-        this.url = Objects.requireNonNull(url, "expected parameter 'url' to be non-null");
-    }
+    private ApprovalResultResponse() {}
 
-    private ApprovalResultResponse() {
-        this.approvalTime = null;
-        this.approverAccount = null;
-        this.comment = null;
-        this.decision = null;
-        this.url = null;
+    private ApprovalResultResponse(ApprovalResultResponse $) {
+        this.approvalTime = $.approvalTime;
+        this.approverAccount = $.approverAccount;
+        this.comment = $.comment;
+        this.decision = $.decision;
+        this.url = $.url;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ApprovalResultResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String approvalTime;
-        private String approverAccount;
-        private String comment;
-        private String decision;
-        private String url;
+        private ApprovalResultResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ApprovalResultResponse();
         }
 
         public Builder(ApprovalResultResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.approvalTime = defaults.approvalTime;
-    	      this.approverAccount = defaults.approverAccount;
-    	      this.comment = defaults.comment;
-    	      this.decision = defaults.decision;
-    	      this.url = defaults.url;
+            $ = new ApprovalResultResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder approvalTime(String approvalTime) {
-            this.approvalTime = Objects.requireNonNull(approvalTime);
+            $.approvalTime = approvalTime;
             return this;
         }
+
         public Builder approverAccount(String approverAccount) {
-            this.approverAccount = Objects.requireNonNull(approverAccount);
+            $.approverAccount = approverAccount;
             return this;
         }
+
         public Builder comment(String comment) {
-            this.comment = Objects.requireNonNull(comment);
+            $.comment = comment;
             return this;
         }
+
         public Builder decision(String decision) {
-            this.decision = Objects.requireNonNull(decision);
+            $.decision = decision;
             return this;
         }
+
         public Builder url(String url) {
-            this.url = Objects.requireNonNull(url);
+            $.url = url;
             return this;
-        }        public ApprovalResultResponse build() {
-            return new ApprovalResultResponse(approvalTime, approverAccount, comment, decision, url);
+        }
+
+        public ApprovalResultResponse build() {
+            $.approvalTime = Objects.requireNonNull($.approvalTime, "expected parameter 'approvalTime' to be non-null");
+            $.approverAccount = Objects.requireNonNull($.approverAccount, "expected parameter 'approverAccount' to be non-null");
+            $.comment = Objects.requireNonNull($.comment, "expected parameter 'comment' to be non-null");
+            $.decision = Objects.requireNonNull($.decision, "expected parameter 'decision' to be non-null");
+            $.url = Objects.requireNonNull($.url, "expected parameter 'url' to be non-null");
+            return $;
         }
     }
+
 }

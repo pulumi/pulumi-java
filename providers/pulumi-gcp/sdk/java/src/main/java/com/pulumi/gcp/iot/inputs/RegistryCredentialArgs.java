@@ -5,7 +5,6 @@ package com.pulumi.gcp.iot.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Map;
@@ -21,49 +20,49 @@ public final class RegistryCredentialArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="publicKeyCertificate", required=true)
-      private final Output<Map<String,Object>> publicKeyCertificate;
+    private Output<Map<String,Object>> publicKeyCertificate;
 
     public Output<Map<String,Object>> publicKeyCertificate() {
         return this.publicKeyCertificate;
     }
 
-    public RegistryCredentialArgs(Output<Map<String,Object>> publicKeyCertificate) {
-        this.publicKeyCertificate = Objects.requireNonNull(publicKeyCertificate, "expected parameter 'publicKeyCertificate' to be non-null");
-    }
+    private RegistryCredentialArgs() {}
 
-    private RegistryCredentialArgs() {
-        this.publicKeyCertificate = Codegen.empty();
+    private RegistryCredentialArgs(RegistryCredentialArgs $) {
+        this.publicKeyCertificate = $.publicKeyCertificate;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RegistryCredentialArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Map<String,Object>> publicKeyCertificate;
+        private RegistryCredentialArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RegistryCredentialArgs();
         }
 
         public Builder(RegistryCredentialArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.publicKeyCertificate = defaults.publicKeyCertificate;
+            $ = new RegistryCredentialArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder publicKeyCertificate(Output<Map<String,Object>> publicKeyCertificate) {
-            this.publicKeyCertificate = Objects.requireNonNull(publicKeyCertificate);
+            $.publicKeyCertificate = publicKeyCertificate;
             return this;
         }
+
         public Builder publicKeyCertificate(Map<String,Object> publicKeyCertificate) {
-            this.publicKeyCertificate = Output.of(Objects.requireNonNull(publicKeyCertificate));
-            return this;
-        }        public RegistryCredentialArgs build() {
-            return new RegistryCredentialArgs(publicKeyCertificate);
+            return publicKeyCertificate(Output.of(publicKeyCertificate));
+        }
+
+        public RegistryCredentialArgs build() {
+            $.publicKeyCertificate = Objects.requireNonNull($.publicKeyCertificate, "expected parameter 'publicKeyCertificate' to be non-null");
+            return $;
         }
     }
+
 }

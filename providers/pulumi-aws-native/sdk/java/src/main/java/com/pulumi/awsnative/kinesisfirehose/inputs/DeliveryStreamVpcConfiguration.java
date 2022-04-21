@@ -14,84 +14,81 @@ public final class DeliveryStreamVpcConfiguration extends com.pulumi.resources.I
     public static final DeliveryStreamVpcConfiguration Empty = new DeliveryStreamVpcConfiguration();
 
     @Import(name="roleARN", required=true)
-      private final String roleARN;
+    private String roleARN;
 
     public String roleARN() {
         return this.roleARN;
     }
 
     @Import(name="securityGroupIds", required=true)
-      private final List<String> securityGroupIds;
+    private List<String> securityGroupIds;
 
     public List<String> securityGroupIds() {
         return this.securityGroupIds;
     }
 
     @Import(name="subnetIds", required=true)
-      private final List<String> subnetIds;
+    private List<String> subnetIds;
 
     public List<String> subnetIds() {
         return this.subnetIds;
     }
 
-    public DeliveryStreamVpcConfiguration(
-        String roleARN,
-        List<String> securityGroupIds,
-        List<String> subnetIds) {
-        this.roleARN = Objects.requireNonNull(roleARN, "expected parameter 'roleARN' to be non-null");
-        this.securityGroupIds = Objects.requireNonNull(securityGroupIds, "expected parameter 'securityGroupIds' to be non-null");
-        this.subnetIds = Objects.requireNonNull(subnetIds, "expected parameter 'subnetIds' to be non-null");
-    }
+    private DeliveryStreamVpcConfiguration() {}
 
-    private DeliveryStreamVpcConfiguration() {
-        this.roleARN = null;
-        this.securityGroupIds = List.of();
-        this.subnetIds = List.of();
+    private DeliveryStreamVpcConfiguration(DeliveryStreamVpcConfiguration $) {
+        this.roleARN = $.roleARN;
+        this.securityGroupIds = $.securityGroupIds;
+        this.subnetIds = $.subnetIds;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DeliveryStreamVpcConfiguration defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String roleARN;
-        private List<String> securityGroupIds;
-        private List<String> subnetIds;
+        private DeliveryStreamVpcConfiguration $;
 
         public Builder() {
-    	      // Empty
+            $ = new DeliveryStreamVpcConfiguration();
         }
 
         public Builder(DeliveryStreamVpcConfiguration defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.roleARN = defaults.roleARN;
-    	      this.securityGroupIds = defaults.securityGroupIds;
-    	      this.subnetIds = defaults.subnetIds;
+            $ = new DeliveryStreamVpcConfiguration(Objects.requireNonNull(defaults));
         }
 
         public Builder roleARN(String roleARN) {
-            this.roleARN = Objects.requireNonNull(roleARN);
+            $.roleARN = roleARN;
             return this;
         }
+
         public Builder securityGroupIds(List<String> securityGroupIds) {
-            this.securityGroupIds = Objects.requireNonNull(securityGroupIds);
+            $.securityGroupIds = securityGroupIds;
             return this;
         }
+
         public Builder securityGroupIds(String... securityGroupIds) {
             return securityGroupIds(List.of(securityGroupIds));
         }
+
         public Builder subnetIds(List<String> subnetIds) {
-            this.subnetIds = Objects.requireNonNull(subnetIds);
+            $.subnetIds = subnetIds;
             return this;
         }
+
         public Builder subnetIds(String... subnetIds) {
             return subnetIds(List.of(subnetIds));
-        }        public DeliveryStreamVpcConfiguration build() {
-            return new DeliveryStreamVpcConfiguration(roleARN, securityGroupIds, subnetIds);
+        }
+
+        public DeliveryStreamVpcConfiguration build() {
+            $.roleARN = Objects.requireNonNull($.roleARN, "expected parameter 'roleARN' to be non-null");
+            $.securityGroupIds = Objects.requireNonNull($.securityGroupIds, "expected parameter 'securityGroupIds' to be non-null");
+            $.subnetIds = Objects.requireNonNull($.subnetIds, "expected parameter 'subnetIds' to be non-null");
+            return $;
         }
     }
+
 }

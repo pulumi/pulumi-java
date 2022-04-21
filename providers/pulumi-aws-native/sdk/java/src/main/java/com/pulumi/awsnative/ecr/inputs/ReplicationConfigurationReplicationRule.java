@@ -25,7 +25,7 @@ public final class ReplicationConfigurationReplicationRule extends com.pulumi.re
      * 
      */
     @Import(name="destinations", required=true)
-      private final List<ReplicationConfigurationReplicationDestination> destinations;
+    private List<ReplicationConfigurationReplicationDestination> destinations;
 
     public List<ReplicationConfigurationReplicationDestination> destinations() {
         return this.destinations;
@@ -36,61 +36,59 @@ public final class ReplicationConfigurationReplicationRule extends com.pulumi.re
      * 
      */
     @Import(name="repositoryFilters")
-      private final @Nullable List<ReplicationConfigurationRepositoryFilter> repositoryFilters;
+    private @Nullable List<ReplicationConfigurationRepositoryFilter> repositoryFilters;
 
-    public List<ReplicationConfigurationRepositoryFilter> repositoryFilters() {
-        return this.repositoryFilters == null ? List.of() : this.repositoryFilters;
+    public Optional<List<ReplicationConfigurationRepositoryFilter>> repositoryFilters() {
+        return Optional.ofNullable(this.repositoryFilters);
     }
 
-    public ReplicationConfigurationReplicationRule(
-        List<ReplicationConfigurationReplicationDestination> destinations,
-        @Nullable List<ReplicationConfigurationRepositoryFilter> repositoryFilters) {
-        this.destinations = Objects.requireNonNull(destinations, "expected parameter 'destinations' to be non-null");
-        this.repositoryFilters = repositoryFilters;
-    }
+    private ReplicationConfigurationReplicationRule() {}
 
-    private ReplicationConfigurationReplicationRule() {
-        this.destinations = List.of();
-        this.repositoryFilters = List.of();
+    private ReplicationConfigurationReplicationRule(ReplicationConfigurationReplicationRule $) {
+        this.destinations = $.destinations;
+        this.repositoryFilters = $.repositoryFilters;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ReplicationConfigurationReplicationRule defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<ReplicationConfigurationReplicationDestination> destinations;
-        private @Nullable List<ReplicationConfigurationRepositoryFilter> repositoryFilters;
+        private ReplicationConfigurationReplicationRule $;
 
         public Builder() {
-    	      // Empty
+            $ = new ReplicationConfigurationReplicationRule();
         }
 
         public Builder(ReplicationConfigurationReplicationRule defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.destinations = defaults.destinations;
-    	      this.repositoryFilters = defaults.repositoryFilters;
+            $ = new ReplicationConfigurationReplicationRule(Objects.requireNonNull(defaults));
         }
 
         public Builder destinations(List<ReplicationConfigurationReplicationDestination> destinations) {
-            this.destinations = Objects.requireNonNull(destinations);
+            $.destinations = destinations;
             return this;
         }
+
         public Builder destinations(ReplicationConfigurationReplicationDestination... destinations) {
             return destinations(List.of(destinations));
         }
+
         public Builder repositoryFilters(@Nullable List<ReplicationConfigurationRepositoryFilter> repositoryFilters) {
-            this.repositoryFilters = repositoryFilters;
+            $.repositoryFilters = repositoryFilters;
             return this;
         }
+
         public Builder repositoryFilters(ReplicationConfigurationRepositoryFilter... repositoryFilters) {
             return repositoryFilters(List.of(repositoryFilters));
-        }        public ReplicationConfigurationReplicationRule build() {
-            return new ReplicationConfigurationReplicationRule(destinations, repositoryFilters);
+        }
+
+        public ReplicationConfigurationReplicationRule build() {
+            $.destinations = Objects.requireNonNull($.destinations, "expected parameter 'destinations' to be non-null");
+            return $;
         }
     }
+
 }

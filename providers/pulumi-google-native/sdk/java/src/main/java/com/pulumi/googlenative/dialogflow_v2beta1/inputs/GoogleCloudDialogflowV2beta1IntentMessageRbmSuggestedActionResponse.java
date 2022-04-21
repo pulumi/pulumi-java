@@ -24,7 +24,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionRe
      * 
      */
     @Import(name="dial", required=true)
-      private final GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionRbmSuggestedActionDialResponse dial;
+    private GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionRbmSuggestedActionDialResponse dial;
 
     public GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionRbmSuggestedActionDialResponse dial() {
         return this.dial;
@@ -35,7 +35,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionRe
      * 
      */
     @Import(name="openUrl", required=true)
-      private final GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionRbmSuggestedActionOpenUriResponse openUrl;
+    private GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionRbmSuggestedActionOpenUriResponse openUrl;
 
     public GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionRbmSuggestedActionOpenUriResponse openUrl() {
         return this.openUrl;
@@ -46,7 +46,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionRe
      * 
      */
     @Import(name="postbackData", required=true)
-      private final String postbackData;
+    private String postbackData;
 
     public String postbackData() {
         return this.postbackData;
@@ -57,7 +57,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionRe
      * 
      */
     @Import(name="shareLocation", required=true)
-      private final GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionRbmSuggestedActionShareLocationResponse shareLocation;
+    private GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionRbmSuggestedActionShareLocationResponse shareLocation;
 
     public GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionRbmSuggestedActionShareLocationResponse shareLocation() {
         return this.shareLocation;
@@ -68,82 +68,73 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionRe
      * 
      */
     @Import(name="text", required=true)
-      private final String text;
+    private String text;
 
     public String text() {
         return this.text;
     }
 
-    public GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionResponse(
-        GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionRbmSuggestedActionDialResponse dial,
-        GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionRbmSuggestedActionOpenUriResponse openUrl,
-        String postbackData,
-        GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionRbmSuggestedActionShareLocationResponse shareLocation,
-        String text) {
-        this.dial = Objects.requireNonNull(dial, "expected parameter 'dial' to be non-null");
-        this.openUrl = Objects.requireNonNull(openUrl, "expected parameter 'openUrl' to be non-null");
-        this.postbackData = Objects.requireNonNull(postbackData, "expected parameter 'postbackData' to be non-null");
-        this.shareLocation = Objects.requireNonNull(shareLocation, "expected parameter 'shareLocation' to be non-null");
-        this.text = Objects.requireNonNull(text, "expected parameter 'text' to be non-null");
-    }
+    private GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionResponse() {}
 
-    private GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionResponse() {
-        this.dial = null;
-        this.openUrl = null;
-        this.postbackData = null;
-        this.shareLocation = null;
-        this.text = null;
+    private GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionResponse(GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionResponse $) {
+        this.dial = $.dial;
+        this.openUrl = $.openUrl;
+        this.postbackData = $.postbackData;
+        this.shareLocation = $.shareLocation;
+        this.text = $.text;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionRbmSuggestedActionDialResponse dial;
-        private GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionRbmSuggestedActionOpenUriResponse openUrl;
-        private String postbackData;
-        private GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionRbmSuggestedActionShareLocationResponse shareLocation;
-        private String text;
+        private GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionResponse();
         }
 
         public Builder(GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dial = defaults.dial;
-    	      this.openUrl = defaults.openUrl;
-    	      this.postbackData = defaults.postbackData;
-    	      this.shareLocation = defaults.shareLocation;
-    	      this.text = defaults.text;
+            $ = new GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder dial(GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionRbmSuggestedActionDialResponse dial) {
-            this.dial = Objects.requireNonNull(dial);
+            $.dial = dial;
             return this;
         }
+
         public Builder openUrl(GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionRbmSuggestedActionOpenUriResponse openUrl) {
-            this.openUrl = Objects.requireNonNull(openUrl);
+            $.openUrl = openUrl;
             return this;
         }
+
         public Builder postbackData(String postbackData) {
-            this.postbackData = Objects.requireNonNull(postbackData);
+            $.postbackData = postbackData;
             return this;
         }
+
         public Builder shareLocation(GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionRbmSuggestedActionShareLocationResponse shareLocation) {
-            this.shareLocation = Objects.requireNonNull(shareLocation);
+            $.shareLocation = shareLocation;
             return this;
         }
+
         public Builder text(String text) {
-            this.text = Objects.requireNonNull(text);
+            $.text = text;
             return this;
-        }        public GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionResponse build() {
-            return new GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionResponse(dial, openUrl, postbackData, shareLocation, text);
+        }
+
+        public GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionResponse build() {
+            $.dial = Objects.requireNonNull($.dial, "expected parameter 'dial' to be non-null");
+            $.openUrl = Objects.requireNonNull($.openUrl, "expected parameter 'openUrl' to be non-null");
+            $.postbackData = Objects.requireNonNull($.postbackData, "expected parameter 'postbackData' to be non-null");
+            $.shareLocation = Objects.requireNonNull($.shareLocation, "expected parameter 'shareLocation' to be non-null");
+            $.text = Objects.requireNonNull($.text, "expected parameter 'text' to be non-null");
+            return $;
         }
     }
+
 }

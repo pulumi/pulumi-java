@@ -24,10 +24,10 @@ public final class DistributionConfigurationTargetContainerRepository extends co
      * 
      */
     @Import(name="repositoryName")
-      private final @Nullable String repositoryName;
+    private @Nullable String repositoryName;
 
     public Optional<String> repositoryName() {
-        return this.repositoryName == null ? Optional.empty() : Optional.ofNullable(this.repositoryName);
+        return Optional.ofNullable(this.repositoryName);
     }
 
     /**
@@ -35,55 +35,50 @@ public final class DistributionConfigurationTargetContainerRepository extends co
      * 
      */
     @Import(name="service")
-      private final @Nullable DistributionConfigurationTargetContainerRepositoryService service;
+    private @Nullable DistributionConfigurationTargetContainerRepositoryService service;
 
     public Optional<DistributionConfigurationTargetContainerRepositoryService> service() {
-        return this.service == null ? Optional.empty() : Optional.ofNullable(this.service);
+        return Optional.ofNullable(this.service);
     }
 
-    public DistributionConfigurationTargetContainerRepository(
-        @Nullable String repositoryName,
-        @Nullable DistributionConfigurationTargetContainerRepositoryService service) {
-        this.repositoryName = repositoryName;
-        this.service = service;
-    }
+    private DistributionConfigurationTargetContainerRepository() {}
 
-    private DistributionConfigurationTargetContainerRepository() {
-        this.repositoryName = null;
-        this.service = null;
+    private DistributionConfigurationTargetContainerRepository(DistributionConfigurationTargetContainerRepository $) {
+        this.repositoryName = $.repositoryName;
+        this.service = $.service;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DistributionConfigurationTargetContainerRepository defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String repositoryName;
-        private @Nullable DistributionConfigurationTargetContainerRepositoryService service;
+        private DistributionConfigurationTargetContainerRepository $;
 
         public Builder() {
-    	      // Empty
+            $ = new DistributionConfigurationTargetContainerRepository();
         }
 
         public Builder(DistributionConfigurationTargetContainerRepository defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.repositoryName = defaults.repositoryName;
-    	      this.service = defaults.service;
+            $ = new DistributionConfigurationTargetContainerRepository(Objects.requireNonNull(defaults));
         }
 
         public Builder repositoryName(@Nullable String repositoryName) {
-            this.repositoryName = repositoryName;
+            $.repositoryName = repositoryName;
             return this;
         }
+
         public Builder service(@Nullable DistributionConfigurationTargetContainerRepositoryService service) {
-            this.service = service;
+            $.service = service;
             return this;
-        }        public DistributionConfigurationTargetContainerRepository build() {
-            return new DistributionConfigurationTargetContainerRepository(repositoryName, service);
+        }
+
+        public DistributionConfigurationTargetContainerRepository build() {
+            return $;
         }
     }
+
 }

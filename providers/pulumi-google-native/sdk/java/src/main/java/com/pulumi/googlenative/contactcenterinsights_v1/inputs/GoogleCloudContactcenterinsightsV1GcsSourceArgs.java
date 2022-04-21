@@ -5,9 +5,9 @@ package com.pulumi.googlenative.contactcenterinsights_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class GoogleCloudContactcenterinsightsV1GcsSourceArgs extends com.p
      * 
      */
     @Import(name="audioUri")
-      private final @Nullable Output<String> audioUri;
+    private @Nullable Output<String> audioUri;
 
-    public Output<String> audioUri() {
-        return this.audioUri == null ? Codegen.empty() : this.audioUri;
+    public Optional<Output<String>> audioUri() {
+        return Optional.ofNullable(this.audioUri);
     }
 
     /**
@@ -35,63 +35,58 @@ public final class GoogleCloudContactcenterinsightsV1GcsSourceArgs extends com.p
      * 
      */
     @Import(name="transcriptUri")
-      private final @Nullable Output<String> transcriptUri;
+    private @Nullable Output<String> transcriptUri;
 
-    public Output<String> transcriptUri() {
-        return this.transcriptUri == null ? Codegen.empty() : this.transcriptUri;
+    public Optional<Output<String>> transcriptUri() {
+        return Optional.ofNullable(this.transcriptUri);
     }
 
-    public GoogleCloudContactcenterinsightsV1GcsSourceArgs(
-        @Nullable Output<String> audioUri,
-        @Nullable Output<String> transcriptUri) {
-        this.audioUri = audioUri;
-        this.transcriptUri = transcriptUri;
-    }
+    private GoogleCloudContactcenterinsightsV1GcsSourceArgs() {}
 
-    private GoogleCloudContactcenterinsightsV1GcsSourceArgs() {
-        this.audioUri = Codegen.empty();
-        this.transcriptUri = Codegen.empty();
+    private GoogleCloudContactcenterinsightsV1GcsSourceArgs(GoogleCloudContactcenterinsightsV1GcsSourceArgs $) {
+        this.audioUri = $.audioUri;
+        this.transcriptUri = $.transcriptUri;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudContactcenterinsightsV1GcsSourceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> audioUri;
-        private @Nullable Output<String> transcriptUri;
+        private GoogleCloudContactcenterinsightsV1GcsSourceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudContactcenterinsightsV1GcsSourceArgs();
         }
 
         public Builder(GoogleCloudContactcenterinsightsV1GcsSourceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.audioUri = defaults.audioUri;
-    	      this.transcriptUri = defaults.transcriptUri;
+            $ = new GoogleCloudContactcenterinsightsV1GcsSourceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder audioUri(@Nullable Output<String> audioUri) {
-            this.audioUri = audioUri;
+            $.audioUri = audioUri;
             return this;
         }
-        public Builder audioUri(@Nullable String audioUri) {
-            this.audioUri = Codegen.ofNullable(audioUri);
-            return this;
+
+        public Builder audioUri(String audioUri) {
+            return audioUri(Output.of(audioUri));
         }
+
         public Builder transcriptUri(@Nullable Output<String> transcriptUri) {
-            this.transcriptUri = transcriptUri;
+            $.transcriptUri = transcriptUri;
             return this;
         }
-        public Builder transcriptUri(@Nullable String transcriptUri) {
-            this.transcriptUri = Codegen.ofNullable(transcriptUri);
-            return this;
-        }        public GoogleCloudContactcenterinsightsV1GcsSourceArgs build() {
-            return new GoogleCloudContactcenterinsightsV1GcsSourceArgs(audioUri, transcriptUri);
+
+        public Builder transcriptUri(String transcriptUri) {
+            return transcriptUri(Output.of(transcriptUri));
+        }
+
+        public GoogleCloudContactcenterinsightsV1GcsSourceArgs build() {
+            return $;
         }
     }
+
 }

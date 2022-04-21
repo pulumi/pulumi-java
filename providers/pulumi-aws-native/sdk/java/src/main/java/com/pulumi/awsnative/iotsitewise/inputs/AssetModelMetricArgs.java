@@ -7,7 +7,6 @@ import com.pulumi.awsnative.iotsitewise.inputs.AssetModelExpressionVariableArgs;
 import com.pulumi.awsnative.iotsitewise.inputs.AssetModelMetricWindowArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -22,7 +21,7 @@ public final class AssetModelMetricArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="expression", required=true)
-      private final Output<String> expression;
+    private Output<String> expression;
 
     public Output<String> expression() {
         return this.expression;
@@ -33,7 +32,7 @@ public final class AssetModelMetricArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="variables", required=true)
-      private final Output<List<AssetModelExpressionVariableArgs>> variables;
+    private Output<List<AssetModelExpressionVariableArgs>> variables;
 
     public Output<List<AssetModelExpressionVariableArgs>> variables() {
         return this.variables;
@@ -44,79 +43,75 @@ public final class AssetModelMetricArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="window", required=true)
-      private final Output<AssetModelMetricWindowArgs> window;
+    private Output<AssetModelMetricWindowArgs> window;
 
     public Output<AssetModelMetricWindowArgs> window() {
         return this.window;
     }
 
-    public AssetModelMetricArgs(
-        Output<String> expression,
-        Output<List<AssetModelExpressionVariableArgs>> variables,
-        Output<AssetModelMetricWindowArgs> window) {
-        this.expression = Objects.requireNonNull(expression, "expected parameter 'expression' to be non-null");
-        this.variables = Objects.requireNonNull(variables, "expected parameter 'variables' to be non-null");
-        this.window = Objects.requireNonNull(window, "expected parameter 'window' to be non-null");
-    }
+    private AssetModelMetricArgs() {}
 
-    private AssetModelMetricArgs() {
-        this.expression = Codegen.empty();
-        this.variables = Codegen.empty();
-        this.window = Codegen.empty();
+    private AssetModelMetricArgs(AssetModelMetricArgs $) {
+        this.expression = $.expression;
+        this.variables = $.variables;
+        this.window = $.window;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AssetModelMetricArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> expression;
-        private Output<List<AssetModelExpressionVariableArgs>> variables;
-        private Output<AssetModelMetricWindowArgs> window;
+        private AssetModelMetricArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AssetModelMetricArgs();
         }
 
         public Builder(AssetModelMetricArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.expression = defaults.expression;
-    	      this.variables = defaults.variables;
-    	      this.window = defaults.window;
+            $ = new AssetModelMetricArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder expression(Output<String> expression) {
-            this.expression = Objects.requireNonNull(expression);
+            $.expression = expression;
             return this;
         }
+
         public Builder expression(String expression) {
-            this.expression = Output.of(Objects.requireNonNull(expression));
-            return this;
+            return expression(Output.of(expression));
         }
+
         public Builder variables(Output<List<AssetModelExpressionVariableArgs>> variables) {
-            this.variables = Objects.requireNonNull(variables);
+            $.variables = variables;
             return this;
         }
+
         public Builder variables(List<AssetModelExpressionVariableArgs> variables) {
-            this.variables = Output.of(Objects.requireNonNull(variables));
-            return this;
+            return variables(Output.of(variables));
         }
+
         public Builder variables(AssetModelExpressionVariableArgs... variables) {
             return variables(List.of(variables));
         }
+
         public Builder window(Output<AssetModelMetricWindowArgs> window) {
-            this.window = Objects.requireNonNull(window);
+            $.window = window;
             return this;
         }
+
         public Builder window(AssetModelMetricWindowArgs window) {
-            this.window = Output.of(Objects.requireNonNull(window));
-            return this;
-        }        public AssetModelMetricArgs build() {
-            return new AssetModelMetricArgs(expression, variables, window);
+            return window(Output.of(window));
+        }
+
+        public AssetModelMetricArgs build() {
+            $.expression = Objects.requireNonNull($.expression, "expected parameter 'expression' to be non-null");
+            $.variables = Objects.requireNonNull($.variables, "expected parameter 'variables' to be non-null");
+            $.window = Objects.requireNonNull($.window, "expected parameter 'window' to be non-null");
+            return $;
         }
     }
+
 }

@@ -17,7 +17,7 @@ public final class GetJobScheduleArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="automationAccountName", required=true)
-      private final String automationAccountName;
+    private String automationAccountName;
 
     public String automationAccountName() {
         return this.automationAccountName;
@@ -28,7 +28,7 @@ public final class GetJobScheduleArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="jobScheduleId", required=true)
-      private final String jobScheduleId;
+    private String jobScheduleId;
 
     public String jobScheduleId() {
         return this.jobScheduleId;
@@ -39,64 +39,59 @@ public final class GetJobScheduleArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public GetJobScheduleArgs(
-        String automationAccountName,
-        String jobScheduleId,
-        String resourceGroupName) {
-        this.automationAccountName = Objects.requireNonNull(automationAccountName, "expected parameter 'automationAccountName' to be non-null");
-        this.jobScheduleId = Objects.requireNonNull(jobScheduleId, "expected parameter 'jobScheduleId' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private GetJobScheduleArgs() {}
 
-    private GetJobScheduleArgs() {
-        this.automationAccountName = null;
-        this.jobScheduleId = null;
-        this.resourceGroupName = null;
+    private GetJobScheduleArgs(GetJobScheduleArgs $) {
+        this.automationAccountName = $.automationAccountName;
+        this.jobScheduleId = $.jobScheduleId;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetJobScheduleArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String automationAccountName;
-        private String jobScheduleId;
-        private String resourceGroupName;
+        private GetJobScheduleArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetJobScheduleArgs();
         }
 
         public Builder(GetJobScheduleArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.automationAccountName = defaults.automationAccountName;
-    	      this.jobScheduleId = defaults.jobScheduleId;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new GetJobScheduleArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder automationAccountName(String automationAccountName) {
-            this.automationAccountName = Objects.requireNonNull(automationAccountName);
+            $.automationAccountName = automationAccountName;
             return this;
         }
+
         public Builder jobScheduleId(String jobScheduleId) {
-            this.jobScheduleId = Objects.requireNonNull(jobScheduleId);
+            $.jobScheduleId = jobScheduleId;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public GetJobScheduleArgs build() {
-            return new GetJobScheduleArgs(automationAccountName, jobScheduleId, resourceGroupName);
+        }
+
+        public GetJobScheduleArgs build() {
+            $.automationAccountName = Objects.requireNonNull($.automationAccountName, "expected parameter 'automationAccountName' to be non-null");
+            $.jobScheduleId = Objects.requireNonNull($.jobScheduleId, "expected parameter 'jobScheduleId' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

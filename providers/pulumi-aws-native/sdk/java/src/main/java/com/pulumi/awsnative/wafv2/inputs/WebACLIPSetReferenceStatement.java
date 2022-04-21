@@ -16,62 +16,58 @@ public final class WebACLIPSetReferenceStatement extends com.pulumi.resources.In
     public static final WebACLIPSetReferenceStatement Empty = new WebACLIPSetReferenceStatement();
 
     @Import(name="arn", required=true)
-      private final String arn;
+    private String arn;
 
     public String arn() {
         return this.arn;
     }
 
     @Import(name="iPSetForwardedIPConfig")
-      private final @Nullable WebACLIPSetForwardedIPConfiguration iPSetForwardedIPConfig;
+    private @Nullable WebACLIPSetForwardedIPConfiguration iPSetForwardedIPConfig;
 
     public Optional<WebACLIPSetForwardedIPConfiguration> iPSetForwardedIPConfig() {
-        return this.iPSetForwardedIPConfig == null ? Optional.empty() : Optional.ofNullable(this.iPSetForwardedIPConfig);
+        return Optional.ofNullable(this.iPSetForwardedIPConfig);
     }
 
-    public WebACLIPSetReferenceStatement(
-        String arn,
-        @Nullable WebACLIPSetForwardedIPConfiguration iPSetForwardedIPConfig) {
-        this.arn = Objects.requireNonNull(arn, "expected parameter 'arn' to be non-null");
-        this.iPSetForwardedIPConfig = iPSetForwardedIPConfig;
-    }
+    private WebACLIPSetReferenceStatement() {}
 
-    private WebACLIPSetReferenceStatement() {
-        this.arn = null;
-        this.iPSetForwardedIPConfig = null;
+    private WebACLIPSetReferenceStatement(WebACLIPSetReferenceStatement $) {
+        this.arn = $.arn;
+        this.iPSetForwardedIPConfig = $.iPSetForwardedIPConfig;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WebACLIPSetReferenceStatement defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String arn;
-        private @Nullable WebACLIPSetForwardedIPConfiguration iPSetForwardedIPConfig;
+        private WebACLIPSetReferenceStatement $;
 
         public Builder() {
-    	      // Empty
+            $ = new WebACLIPSetReferenceStatement();
         }
 
         public Builder(WebACLIPSetReferenceStatement defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.arn = defaults.arn;
-    	      this.iPSetForwardedIPConfig = defaults.iPSetForwardedIPConfig;
+            $ = new WebACLIPSetReferenceStatement(Objects.requireNonNull(defaults));
         }
 
         public Builder arn(String arn) {
-            this.arn = Objects.requireNonNull(arn);
+            $.arn = arn;
             return this;
         }
+
         public Builder iPSetForwardedIPConfig(@Nullable WebACLIPSetForwardedIPConfiguration iPSetForwardedIPConfig) {
-            this.iPSetForwardedIPConfig = iPSetForwardedIPConfig;
+            $.iPSetForwardedIPConfig = iPSetForwardedIPConfig;
             return this;
-        }        public WebACLIPSetReferenceStatement build() {
-            return new WebACLIPSetReferenceStatement(arn, iPSetForwardedIPConfig);
+        }
+
+        public WebACLIPSetReferenceStatement build() {
+            $.arn = Objects.requireNonNull($.arn, "expected parameter 'arn' to be non-null");
+            return $;
         }
     }
+
 }

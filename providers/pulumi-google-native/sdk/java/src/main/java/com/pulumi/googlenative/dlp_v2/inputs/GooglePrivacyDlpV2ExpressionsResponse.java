@@ -22,7 +22,7 @@ public final class GooglePrivacyDlpV2ExpressionsResponse extends com.pulumi.reso
      * 
      */
     @Import(name="conditions", required=true)
-      private final GooglePrivacyDlpV2ConditionsResponse conditions;
+    private GooglePrivacyDlpV2ConditionsResponse conditions;
 
     public GooglePrivacyDlpV2ConditionsResponse conditions() {
         return this.conditions;
@@ -33,55 +33,52 @@ public final class GooglePrivacyDlpV2ExpressionsResponse extends com.pulumi.reso
      * 
      */
     @Import(name="logicalOperator", required=true)
-      private final String logicalOperator;
+    private String logicalOperator;
 
     public String logicalOperator() {
         return this.logicalOperator;
     }
 
-    public GooglePrivacyDlpV2ExpressionsResponse(
-        GooglePrivacyDlpV2ConditionsResponse conditions,
-        String logicalOperator) {
-        this.conditions = Objects.requireNonNull(conditions, "expected parameter 'conditions' to be non-null");
-        this.logicalOperator = Objects.requireNonNull(logicalOperator, "expected parameter 'logicalOperator' to be non-null");
-    }
+    private GooglePrivacyDlpV2ExpressionsResponse() {}
 
-    private GooglePrivacyDlpV2ExpressionsResponse() {
-        this.conditions = null;
-        this.logicalOperator = null;
+    private GooglePrivacyDlpV2ExpressionsResponse(GooglePrivacyDlpV2ExpressionsResponse $) {
+        this.conditions = $.conditions;
+        this.logicalOperator = $.logicalOperator;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GooglePrivacyDlpV2ExpressionsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private GooglePrivacyDlpV2ConditionsResponse conditions;
-        private String logicalOperator;
+        private GooglePrivacyDlpV2ExpressionsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GooglePrivacyDlpV2ExpressionsResponse();
         }
 
         public Builder(GooglePrivacyDlpV2ExpressionsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.conditions = defaults.conditions;
-    	      this.logicalOperator = defaults.logicalOperator;
+            $ = new GooglePrivacyDlpV2ExpressionsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder conditions(GooglePrivacyDlpV2ConditionsResponse conditions) {
-            this.conditions = Objects.requireNonNull(conditions);
+            $.conditions = conditions;
             return this;
         }
+
         public Builder logicalOperator(String logicalOperator) {
-            this.logicalOperator = Objects.requireNonNull(logicalOperator);
+            $.logicalOperator = logicalOperator;
             return this;
-        }        public GooglePrivacyDlpV2ExpressionsResponse build() {
-            return new GooglePrivacyDlpV2ExpressionsResponse(conditions, logicalOperator);
+        }
+
+        public GooglePrivacyDlpV2ExpressionsResponse build() {
+            $.conditions = Objects.requireNonNull($.conditions, "expected parameter 'conditions' to be non-null");
+            $.logicalOperator = Objects.requireNonNull($.logicalOperator, "expected parameter 'logicalOperator' to be non-null");
+            return $;
         }
     }
+
 }

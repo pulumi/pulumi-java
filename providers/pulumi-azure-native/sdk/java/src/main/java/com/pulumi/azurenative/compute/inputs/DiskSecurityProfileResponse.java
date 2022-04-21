@@ -23,45 +23,44 @@ public final class DiskSecurityProfileResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="securityType")
-      private final @Nullable String securityType;
+    private @Nullable String securityType;
 
     public Optional<String> securityType() {
-        return this.securityType == null ? Optional.empty() : Optional.ofNullable(this.securityType);
+        return Optional.ofNullable(this.securityType);
     }
 
-    public DiskSecurityProfileResponse(@Nullable String securityType) {
-        this.securityType = securityType;
-    }
+    private DiskSecurityProfileResponse() {}
 
-    private DiskSecurityProfileResponse() {
-        this.securityType = null;
+    private DiskSecurityProfileResponse(DiskSecurityProfileResponse $) {
+        this.securityType = $.securityType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DiskSecurityProfileResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String securityType;
+        private DiskSecurityProfileResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new DiskSecurityProfileResponse();
         }
 
         public Builder(DiskSecurityProfileResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.securityType = defaults.securityType;
+            $ = new DiskSecurityProfileResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder securityType(@Nullable String securityType) {
-            this.securityType = securityType;
+            $.securityType = securityType;
             return this;
-        }        public DiskSecurityProfileResponse build() {
-            return new DiskSecurityProfileResponse(securityType);
+        }
+
+        public DiskSecurityProfileResponse build() {
+            return $;
         }
     }
+
 }

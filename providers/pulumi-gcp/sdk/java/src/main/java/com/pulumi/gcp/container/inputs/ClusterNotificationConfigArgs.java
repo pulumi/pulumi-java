@@ -5,7 +5,6 @@ package com.pulumi.gcp.container.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.container.inputs.ClusterNotificationConfigPubsubArgs;
 import java.util.Objects;
 
@@ -19,49 +18,49 @@ public final class ClusterNotificationConfigArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="pubsub", required=true)
-      private final Output<ClusterNotificationConfigPubsubArgs> pubsub;
+    private Output<ClusterNotificationConfigPubsubArgs> pubsub;
 
     public Output<ClusterNotificationConfigPubsubArgs> pubsub() {
         return this.pubsub;
     }
 
-    public ClusterNotificationConfigArgs(Output<ClusterNotificationConfigPubsubArgs> pubsub) {
-        this.pubsub = Objects.requireNonNull(pubsub, "expected parameter 'pubsub' to be non-null");
-    }
+    private ClusterNotificationConfigArgs() {}
 
-    private ClusterNotificationConfigArgs() {
-        this.pubsub = Codegen.empty();
+    private ClusterNotificationConfigArgs(ClusterNotificationConfigArgs $) {
+        this.pubsub = $.pubsub;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ClusterNotificationConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<ClusterNotificationConfigPubsubArgs> pubsub;
+        private ClusterNotificationConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ClusterNotificationConfigArgs();
         }
 
         public Builder(ClusterNotificationConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.pubsub = defaults.pubsub;
+            $ = new ClusterNotificationConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder pubsub(Output<ClusterNotificationConfigPubsubArgs> pubsub) {
-            this.pubsub = Objects.requireNonNull(pubsub);
+            $.pubsub = pubsub;
             return this;
         }
+
         public Builder pubsub(ClusterNotificationConfigPubsubArgs pubsub) {
-            this.pubsub = Output.of(Objects.requireNonNull(pubsub));
-            return this;
-        }        public ClusterNotificationConfigArgs build() {
-            return new ClusterNotificationConfigArgs(pubsub);
+            return pubsub(Output.of(pubsub));
+        }
+
+        public ClusterNotificationConfigArgs build() {
+            $.pubsub = Objects.requireNonNull($.pubsub, "expected parameter 'pubsub' to be non-null");
+            return $;
         }
     }
+
 }

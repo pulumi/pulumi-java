@@ -9,9 +9,9 @@ import com.pulumi.azurenative.datadog.inputs.UserInfoArgs;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -28,10 +28,10 @@ public final class MonitorPropertiesArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="datadogOrganizationProperties")
-      private final @Nullable Output<DatadogOrganizationPropertiesArgs> datadogOrganizationProperties;
+    private @Nullable Output<DatadogOrganizationPropertiesArgs> datadogOrganizationProperties;
 
-    public Output<DatadogOrganizationPropertiesArgs> datadogOrganizationProperties() {
-        return this.datadogOrganizationProperties == null ? Codegen.empty() : this.datadogOrganizationProperties;
+    public Optional<Output<DatadogOrganizationPropertiesArgs>> datadogOrganizationProperties() {
+        return Optional.ofNullable(this.datadogOrganizationProperties);
     }
 
     /**
@@ -39,10 +39,10 @@ public final class MonitorPropertiesArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="monitoringStatus")
-      private final @Nullable Output<Either<String,MonitoringStatus>> monitoringStatus;
+    private @Nullable Output<Either<String,MonitoringStatus>> monitoringStatus;
 
-    public Output<Either<String,MonitoringStatus>> monitoringStatus() {
-        return this.monitoringStatus == null ? Codegen.empty() : this.monitoringStatus;
+    public Optional<Output<Either<String,MonitoringStatus>>> monitoringStatus() {
+        return Optional.ofNullable(this.monitoringStatus);
     }
 
     /**
@@ -50,76 +50,68 @@ public final class MonitorPropertiesArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="userInfo")
-      private final @Nullable Output<UserInfoArgs> userInfo;
+    private @Nullable Output<UserInfoArgs> userInfo;
 
-    public Output<UserInfoArgs> userInfo() {
-        return this.userInfo == null ? Codegen.empty() : this.userInfo;
+    public Optional<Output<UserInfoArgs>> userInfo() {
+        return Optional.ofNullable(this.userInfo);
     }
 
-    public MonitorPropertiesArgs(
-        @Nullable Output<DatadogOrganizationPropertiesArgs> datadogOrganizationProperties,
-        @Nullable Output<Either<String,MonitoringStatus>> monitoringStatus,
-        @Nullable Output<UserInfoArgs> userInfo) {
-        this.datadogOrganizationProperties = datadogOrganizationProperties;
-        this.monitoringStatus = monitoringStatus;
-        this.userInfo = userInfo;
-    }
+    private MonitorPropertiesArgs() {}
 
-    private MonitorPropertiesArgs() {
-        this.datadogOrganizationProperties = Codegen.empty();
-        this.monitoringStatus = Codegen.empty();
-        this.userInfo = Codegen.empty();
+    private MonitorPropertiesArgs(MonitorPropertiesArgs $) {
+        this.datadogOrganizationProperties = $.datadogOrganizationProperties;
+        this.monitoringStatus = $.monitoringStatus;
+        this.userInfo = $.userInfo;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MonitorPropertiesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<DatadogOrganizationPropertiesArgs> datadogOrganizationProperties;
-        private @Nullable Output<Either<String,MonitoringStatus>> monitoringStatus;
-        private @Nullable Output<UserInfoArgs> userInfo;
+        private MonitorPropertiesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new MonitorPropertiesArgs();
         }
 
         public Builder(MonitorPropertiesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.datadogOrganizationProperties = defaults.datadogOrganizationProperties;
-    	      this.monitoringStatus = defaults.monitoringStatus;
-    	      this.userInfo = defaults.userInfo;
+            $ = new MonitorPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder datadogOrganizationProperties(@Nullable Output<DatadogOrganizationPropertiesArgs> datadogOrganizationProperties) {
-            this.datadogOrganizationProperties = datadogOrganizationProperties;
+            $.datadogOrganizationProperties = datadogOrganizationProperties;
             return this;
         }
-        public Builder datadogOrganizationProperties(@Nullable DatadogOrganizationPropertiesArgs datadogOrganizationProperties) {
-            this.datadogOrganizationProperties = Codegen.ofNullable(datadogOrganizationProperties);
-            return this;
+
+        public Builder datadogOrganizationProperties(DatadogOrganizationPropertiesArgs datadogOrganizationProperties) {
+            return datadogOrganizationProperties(Output.of(datadogOrganizationProperties));
         }
+
         public Builder monitoringStatus(@Nullable Output<Either<String,MonitoringStatus>> monitoringStatus) {
-            this.monitoringStatus = monitoringStatus;
+            $.monitoringStatus = monitoringStatus;
             return this;
         }
-        public Builder monitoringStatus(@Nullable Either<String,MonitoringStatus> monitoringStatus) {
-            this.monitoringStatus = Codegen.ofNullable(monitoringStatus);
-            return this;
+
+        public Builder monitoringStatus(Either<String,MonitoringStatus> monitoringStatus) {
+            return monitoringStatus(Output.of(monitoringStatus));
         }
+
         public Builder userInfo(@Nullable Output<UserInfoArgs> userInfo) {
-            this.userInfo = userInfo;
+            $.userInfo = userInfo;
             return this;
         }
-        public Builder userInfo(@Nullable UserInfoArgs userInfo) {
-            this.userInfo = Codegen.ofNullable(userInfo);
-            return this;
-        }        public MonitorPropertiesArgs build() {
-            return new MonitorPropertiesArgs(datadogOrganizationProperties, monitoringStatus, userInfo);
+
+        public Builder userInfo(UserInfoArgs userInfo) {
+            return userInfo(Output.of(userInfo));
+        }
+
+        public MonitorPropertiesArgs build() {
+            return $;
         }
     }
+
 }

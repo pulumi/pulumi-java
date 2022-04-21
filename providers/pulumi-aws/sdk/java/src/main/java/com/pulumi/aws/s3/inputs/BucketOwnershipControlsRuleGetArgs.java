@@ -5,7 +5,6 @@ package com.pulumi.aws.s3.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,49 +18,49 @@ public final class BucketOwnershipControlsRuleGetArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="objectOwnership", required=true)
-      private final Output<String> objectOwnership;
+    private Output<String> objectOwnership;
 
     public Output<String> objectOwnership() {
         return this.objectOwnership;
     }
 
-    public BucketOwnershipControlsRuleGetArgs(Output<String> objectOwnership) {
-        this.objectOwnership = Objects.requireNonNull(objectOwnership, "expected parameter 'objectOwnership' to be non-null");
-    }
+    private BucketOwnershipControlsRuleGetArgs() {}
 
-    private BucketOwnershipControlsRuleGetArgs() {
-        this.objectOwnership = Codegen.empty();
+    private BucketOwnershipControlsRuleGetArgs(BucketOwnershipControlsRuleGetArgs $) {
+        this.objectOwnership = $.objectOwnership;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BucketOwnershipControlsRuleGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> objectOwnership;
+        private BucketOwnershipControlsRuleGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new BucketOwnershipControlsRuleGetArgs();
         }
 
         public Builder(BucketOwnershipControlsRuleGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.objectOwnership = defaults.objectOwnership;
+            $ = new BucketOwnershipControlsRuleGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder objectOwnership(Output<String> objectOwnership) {
-            this.objectOwnership = Objects.requireNonNull(objectOwnership);
+            $.objectOwnership = objectOwnership;
             return this;
         }
+
         public Builder objectOwnership(String objectOwnership) {
-            this.objectOwnership = Output.of(Objects.requireNonNull(objectOwnership));
-            return this;
-        }        public BucketOwnershipControlsRuleGetArgs build() {
-            return new BucketOwnershipControlsRuleGetArgs(objectOwnership);
+            return objectOwnership(Output.of(objectOwnership));
+        }
+
+        public BucketOwnershipControlsRuleGetArgs build() {
+            $.objectOwnership = Objects.requireNonNull($.objectOwnership, "expected parameter 'objectOwnership' to be non-null");
+            return $;
         }
     }
+
 }

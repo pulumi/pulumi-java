@@ -22,7 +22,7 @@ public final class DelayActionResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="duration", required=true)
-      private final String duration;
+    private String duration;
 
     public String duration() {
         return this.duration;
@@ -33,7 +33,7 @@ public final class DelayActionResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -45,64 +45,59 @@ public final class DelayActionResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
     }
 
-    public DelayActionResponse(
-        String duration,
-        String name,
-        String type) {
-        this.duration = Objects.requireNonNull(duration, "expected parameter 'duration' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.type = Codegen.stringProp("type").arg(type).require();
-    }
+    private DelayActionResponse() {}
 
-    private DelayActionResponse() {
-        this.duration = null;
-        this.name = null;
-        this.type = null;
+    private DelayActionResponse(DelayActionResponse $) {
+        this.duration = $.duration;
+        this.name = $.name;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DelayActionResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String duration;
-        private String name;
-        private String type;
+        private DelayActionResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new DelayActionResponse();
         }
 
         public Builder(DelayActionResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.duration = defaults.duration;
-    	      this.name = defaults.name;
-    	      this.type = defaults.type;
+            $ = new DelayActionResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder duration(String duration) {
-            this.duration = Objects.requireNonNull(duration);
+            $.duration = duration;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
-        }        public DelayActionResponse build() {
-            return new DelayActionResponse(duration, name, type);
+        }
+
+        public DelayActionResponse build() {
+            $.duration = Objects.requireNonNull($.duration, "expected parameter 'duration' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.type = Codegen.stringProp("type").arg($.type).require();
+            return $;
         }
     }
+
 }

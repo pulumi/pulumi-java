@@ -18,6 +18,7 @@ import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -30,10 +31,10 @@ public final class VirtualNetworkArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="addressSpace")
-      private final @Nullable Output<AddressSpaceArgs> addressSpace;
+    private @Nullable Output<AddressSpaceArgs> addressSpace;
 
-    public Output<AddressSpaceArgs> addressSpace() {
-        return this.addressSpace == null ? Codegen.empty() : this.addressSpace;
+    public Optional<Output<AddressSpaceArgs>> addressSpace() {
+        return Optional.ofNullable(this.addressSpace);
     }
 
     /**
@@ -41,10 +42,10 @@ public final class VirtualNetworkArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="bgpCommunities")
-      private final @Nullable Output<VirtualNetworkBgpCommunitiesArgs> bgpCommunities;
+    private @Nullable Output<VirtualNetworkBgpCommunitiesArgs> bgpCommunities;
 
-    public Output<VirtualNetworkBgpCommunitiesArgs> bgpCommunities() {
-        return this.bgpCommunities == null ? Codegen.empty() : this.bgpCommunities;
+    public Optional<Output<VirtualNetworkBgpCommunitiesArgs>> bgpCommunities() {
+        return Optional.ofNullable(this.bgpCommunities);
     }
 
     /**
@@ -52,10 +53,10 @@ public final class VirtualNetworkArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="ddosProtectionPlan")
-      private final @Nullable Output<SubResourceArgs> ddosProtectionPlan;
+    private @Nullable Output<SubResourceArgs> ddosProtectionPlan;
 
-    public Output<SubResourceArgs> ddosProtectionPlan() {
-        return this.ddosProtectionPlan == null ? Codegen.empty() : this.ddosProtectionPlan;
+    public Optional<Output<SubResourceArgs>> ddosProtectionPlan() {
+        return Optional.ofNullable(this.ddosProtectionPlan);
     }
 
     /**
@@ -63,10 +64,10 @@ public final class VirtualNetworkArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="dhcpOptions")
-      private final @Nullable Output<DhcpOptionsArgs> dhcpOptions;
+    private @Nullable Output<DhcpOptionsArgs> dhcpOptions;
 
-    public Output<DhcpOptionsArgs> dhcpOptions() {
-        return this.dhcpOptions == null ? Codegen.empty() : this.dhcpOptions;
+    public Optional<Output<DhcpOptionsArgs>> dhcpOptions() {
+        return Optional.ofNullable(this.dhcpOptions);
     }
 
     /**
@@ -74,10 +75,10 @@ public final class VirtualNetworkArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="enableDdosProtection")
-      private final @Nullable Output<Boolean> enableDdosProtection;
+    private @Nullable Output<Boolean> enableDdosProtection;
 
-    public Output<Boolean> enableDdosProtection() {
-        return this.enableDdosProtection == null ? Codegen.empty() : this.enableDdosProtection;
+    public Optional<Output<Boolean>> enableDdosProtection() {
+        return Optional.ofNullable(this.enableDdosProtection);
     }
 
     /**
@@ -85,10 +86,10 @@ public final class VirtualNetworkArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="enableVmProtection")
-      private final @Nullable Output<Boolean> enableVmProtection;
+    private @Nullable Output<Boolean> enableVmProtection;
 
-    public Output<Boolean> enableVmProtection() {
-        return this.enableVmProtection == null ? Codegen.empty() : this.enableVmProtection;
+    public Optional<Output<Boolean>> enableVmProtection() {
+        return Optional.ofNullable(this.enableVmProtection);
     }
 
     /**
@@ -96,10 +97,10 @@ public final class VirtualNetworkArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="extendedLocation")
-      private final @Nullable Output<ExtendedLocationArgs> extendedLocation;
+    private @Nullable Output<ExtendedLocationArgs> extendedLocation;
 
-    public Output<ExtendedLocationArgs> extendedLocation() {
-        return this.extendedLocation == null ? Codegen.empty() : this.extendedLocation;
+    public Optional<Output<ExtendedLocationArgs>> extendedLocation() {
+        return Optional.ofNullable(this.extendedLocation);
     }
 
     /**
@@ -107,10 +108,10 @@ public final class VirtualNetworkArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="id")
-      private final @Nullable Output<String> id;
+    private @Nullable Output<String> id;
 
-    public Output<String> id() {
-        return this.id == null ? Codegen.empty() : this.id;
+    public Optional<Output<String>> id() {
+        return Optional.ofNullable(this.id);
     }
 
     /**
@@ -118,10 +119,10 @@ public final class VirtualNetworkArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="ipAllocations")
-      private final @Nullable Output<List<SubResourceArgs>> ipAllocations;
+    private @Nullable Output<List<SubResourceArgs>> ipAllocations;
 
-    public Output<List<SubResourceArgs>> ipAllocations() {
-        return this.ipAllocations == null ? Codegen.empty() : this.ipAllocations;
+    public Optional<Output<List<SubResourceArgs>>> ipAllocations() {
+        return Optional.ofNullable(this.ipAllocations);
     }
 
     /**
@@ -129,10 +130,10 @@ public final class VirtualNetworkArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -140,7 +141,7 @@ public final class VirtualNetworkArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -151,10 +152,10 @@ public final class VirtualNetworkArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="subnets")
-      private final @Nullable Output<List<SubnetArgs>> subnets;
+    private @Nullable Output<List<SubnetArgs>> subnets;
 
-    public Output<List<SubnetArgs>> subnets() {
-        return this.subnets == null ? Codegen.empty() : this.subnets;
+    public Optional<Output<List<SubnetArgs>>> subnets() {
+        return Optional.ofNullable(this.subnets);
     }
 
     /**
@@ -162,10 +163,10 @@ public final class VirtualNetworkArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -173,10 +174,10 @@ public final class VirtualNetworkArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="virtualNetworkName")
-      private final @Nullable Output<String> virtualNetworkName;
+    private @Nullable Output<String> virtualNetworkName;
 
-    public Output<String> virtualNetworkName() {
-        return this.virtualNetworkName == null ? Codegen.empty() : this.virtualNetworkName;
+    public Optional<Output<String>> virtualNetworkName() {
+        return Optional.ofNullable(this.virtualNetworkName);
     }
 
     /**
@@ -184,241 +185,203 @@ public final class VirtualNetworkArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="virtualNetworkPeerings")
-      private final @Nullable Output<List<VirtualNetworkPeeringArgs>> virtualNetworkPeerings;
+    private @Nullable Output<List<VirtualNetworkPeeringArgs>> virtualNetworkPeerings;
 
-    public Output<List<VirtualNetworkPeeringArgs>> virtualNetworkPeerings() {
-        return this.virtualNetworkPeerings == null ? Codegen.empty() : this.virtualNetworkPeerings;
+    public Optional<Output<List<VirtualNetworkPeeringArgs>>> virtualNetworkPeerings() {
+        return Optional.ofNullable(this.virtualNetworkPeerings);
     }
 
-    public VirtualNetworkArgs(
-        @Nullable Output<AddressSpaceArgs> addressSpace,
-        @Nullable Output<VirtualNetworkBgpCommunitiesArgs> bgpCommunities,
-        @Nullable Output<SubResourceArgs> ddosProtectionPlan,
-        @Nullable Output<DhcpOptionsArgs> dhcpOptions,
-        @Nullable Output<Boolean> enableDdosProtection,
-        @Nullable Output<Boolean> enableVmProtection,
-        @Nullable Output<ExtendedLocationArgs> extendedLocation,
-        @Nullable Output<String> id,
-        @Nullable Output<List<SubResourceArgs>> ipAllocations,
-        @Nullable Output<String> location,
-        Output<String> resourceGroupName,
-        @Nullable Output<List<SubnetArgs>> subnets,
-        @Nullable Output<Map<String,String>> tags,
-        @Nullable Output<String> virtualNetworkName,
-        @Nullable Output<List<VirtualNetworkPeeringArgs>> virtualNetworkPeerings) {
-        this.addressSpace = addressSpace;
-        this.bgpCommunities = bgpCommunities;
-        this.ddosProtectionPlan = ddosProtectionPlan;
-        this.dhcpOptions = dhcpOptions;
-        this.enableDdosProtection = Codegen.booleanProp("enableDdosProtection").output().arg(enableDdosProtection).def(false).getNullable();
-        this.enableVmProtection = Codegen.booleanProp("enableVmProtection").output().arg(enableVmProtection).def(false).getNullable();
-        this.extendedLocation = extendedLocation;
-        this.id = id;
-        this.ipAllocations = ipAllocations;
-        this.location = location;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.subnets = subnets;
-        this.tags = tags;
-        this.virtualNetworkName = virtualNetworkName;
-        this.virtualNetworkPeerings = virtualNetworkPeerings;
-    }
+    private VirtualNetworkArgs() {}
 
-    private VirtualNetworkArgs() {
-        this.addressSpace = Codegen.empty();
-        this.bgpCommunities = Codegen.empty();
-        this.ddosProtectionPlan = Codegen.empty();
-        this.dhcpOptions = Codegen.empty();
-        this.enableDdosProtection = Codegen.empty();
-        this.enableVmProtection = Codegen.empty();
-        this.extendedLocation = Codegen.empty();
-        this.id = Codegen.empty();
-        this.ipAllocations = Codegen.empty();
-        this.location = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.subnets = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.virtualNetworkName = Codegen.empty();
-        this.virtualNetworkPeerings = Codegen.empty();
+    private VirtualNetworkArgs(VirtualNetworkArgs $) {
+        this.addressSpace = $.addressSpace;
+        this.bgpCommunities = $.bgpCommunities;
+        this.ddosProtectionPlan = $.ddosProtectionPlan;
+        this.dhcpOptions = $.dhcpOptions;
+        this.enableDdosProtection = $.enableDdosProtection;
+        this.enableVmProtection = $.enableVmProtection;
+        this.extendedLocation = $.extendedLocation;
+        this.id = $.id;
+        this.ipAllocations = $.ipAllocations;
+        this.location = $.location;
+        this.resourceGroupName = $.resourceGroupName;
+        this.subnets = $.subnets;
+        this.tags = $.tags;
+        this.virtualNetworkName = $.virtualNetworkName;
+        this.virtualNetworkPeerings = $.virtualNetworkPeerings;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VirtualNetworkArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<AddressSpaceArgs> addressSpace;
-        private @Nullable Output<VirtualNetworkBgpCommunitiesArgs> bgpCommunities;
-        private @Nullable Output<SubResourceArgs> ddosProtectionPlan;
-        private @Nullable Output<DhcpOptionsArgs> dhcpOptions;
-        private @Nullable Output<Boolean> enableDdosProtection;
-        private @Nullable Output<Boolean> enableVmProtection;
-        private @Nullable Output<ExtendedLocationArgs> extendedLocation;
-        private @Nullable Output<String> id;
-        private @Nullable Output<List<SubResourceArgs>> ipAllocations;
-        private @Nullable Output<String> location;
-        private Output<String> resourceGroupName;
-        private @Nullable Output<List<SubnetArgs>> subnets;
-        private @Nullable Output<Map<String,String>> tags;
-        private @Nullable Output<String> virtualNetworkName;
-        private @Nullable Output<List<VirtualNetworkPeeringArgs>> virtualNetworkPeerings;
+        private VirtualNetworkArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new VirtualNetworkArgs();
         }
 
         public Builder(VirtualNetworkArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.addressSpace = defaults.addressSpace;
-    	      this.bgpCommunities = defaults.bgpCommunities;
-    	      this.ddosProtectionPlan = defaults.ddosProtectionPlan;
-    	      this.dhcpOptions = defaults.dhcpOptions;
-    	      this.enableDdosProtection = defaults.enableDdosProtection;
-    	      this.enableVmProtection = defaults.enableVmProtection;
-    	      this.extendedLocation = defaults.extendedLocation;
-    	      this.id = defaults.id;
-    	      this.ipAllocations = defaults.ipAllocations;
-    	      this.location = defaults.location;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.subnets = defaults.subnets;
-    	      this.tags = defaults.tags;
-    	      this.virtualNetworkName = defaults.virtualNetworkName;
-    	      this.virtualNetworkPeerings = defaults.virtualNetworkPeerings;
+            $ = new VirtualNetworkArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder addressSpace(@Nullable Output<AddressSpaceArgs> addressSpace) {
-            this.addressSpace = addressSpace;
+            $.addressSpace = addressSpace;
             return this;
         }
-        public Builder addressSpace(@Nullable AddressSpaceArgs addressSpace) {
-            this.addressSpace = Codegen.ofNullable(addressSpace);
-            return this;
+
+        public Builder addressSpace(AddressSpaceArgs addressSpace) {
+            return addressSpace(Output.of(addressSpace));
         }
+
         public Builder bgpCommunities(@Nullable Output<VirtualNetworkBgpCommunitiesArgs> bgpCommunities) {
-            this.bgpCommunities = bgpCommunities;
+            $.bgpCommunities = bgpCommunities;
             return this;
         }
-        public Builder bgpCommunities(@Nullable VirtualNetworkBgpCommunitiesArgs bgpCommunities) {
-            this.bgpCommunities = Codegen.ofNullable(bgpCommunities);
-            return this;
+
+        public Builder bgpCommunities(VirtualNetworkBgpCommunitiesArgs bgpCommunities) {
+            return bgpCommunities(Output.of(bgpCommunities));
         }
+
         public Builder ddosProtectionPlan(@Nullable Output<SubResourceArgs> ddosProtectionPlan) {
-            this.ddosProtectionPlan = ddosProtectionPlan;
+            $.ddosProtectionPlan = ddosProtectionPlan;
             return this;
         }
-        public Builder ddosProtectionPlan(@Nullable SubResourceArgs ddosProtectionPlan) {
-            this.ddosProtectionPlan = Codegen.ofNullable(ddosProtectionPlan);
-            return this;
+
+        public Builder ddosProtectionPlan(SubResourceArgs ddosProtectionPlan) {
+            return ddosProtectionPlan(Output.of(ddosProtectionPlan));
         }
+
         public Builder dhcpOptions(@Nullable Output<DhcpOptionsArgs> dhcpOptions) {
-            this.dhcpOptions = dhcpOptions;
+            $.dhcpOptions = dhcpOptions;
             return this;
         }
-        public Builder dhcpOptions(@Nullable DhcpOptionsArgs dhcpOptions) {
-            this.dhcpOptions = Codegen.ofNullable(dhcpOptions);
-            return this;
+
+        public Builder dhcpOptions(DhcpOptionsArgs dhcpOptions) {
+            return dhcpOptions(Output.of(dhcpOptions));
         }
+
         public Builder enableDdosProtection(@Nullable Output<Boolean> enableDdosProtection) {
-            this.enableDdosProtection = enableDdosProtection;
+            $.enableDdosProtection = enableDdosProtection;
             return this;
         }
-        public Builder enableDdosProtection(@Nullable Boolean enableDdosProtection) {
-            this.enableDdosProtection = Codegen.ofNullable(enableDdosProtection);
-            return this;
+
+        public Builder enableDdosProtection(Boolean enableDdosProtection) {
+            return enableDdosProtection(Output.of(enableDdosProtection));
         }
+
         public Builder enableVmProtection(@Nullable Output<Boolean> enableVmProtection) {
-            this.enableVmProtection = enableVmProtection;
+            $.enableVmProtection = enableVmProtection;
             return this;
         }
-        public Builder enableVmProtection(@Nullable Boolean enableVmProtection) {
-            this.enableVmProtection = Codegen.ofNullable(enableVmProtection);
-            return this;
+
+        public Builder enableVmProtection(Boolean enableVmProtection) {
+            return enableVmProtection(Output.of(enableVmProtection));
         }
+
         public Builder extendedLocation(@Nullable Output<ExtendedLocationArgs> extendedLocation) {
-            this.extendedLocation = extendedLocation;
+            $.extendedLocation = extendedLocation;
             return this;
         }
-        public Builder extendedLocation(@Nullable ExtendedLocationArgs extendedLocation) {
-            this.extendedLocation = Codegen.ofNullable(extendedLocation);
-            return this;
+
+        public Builder extendedLocation(ExtendedLocationArgs extendedLocation) {
+            return extendedLocation(Output.of(extendedLocation));
         }
+
         public Builder id(@Nullable Output<String> id) {
-            this.id = id;
+            $.id = id;
             return this;
         }
-        public Builder id(@Nullable String id) {
-            this.id = Codegen.ofNullable(id);
-            return this;
+
+        public Builder id(String id) {
+            return id(Output.of(id));
         }
+
         public Builder ipAllocations(@Nullable Output<List<SubResourceArgs>> ipAllocations) {
-            this.ipAllocations = ipAllocations;
+            $.ipAllocations = ipAllocations;
             return this;
         }
-        public Builder ipAllocations(@Nullable List<SubResourceArgs> ipAllocations) {
-            this.ipAllocations = Codegen.ofNullable(ipAllocations);
-            return this;
+
+        public Builder ipAllocations(List<SubResourceArgs> ipAllocations) {
+            return ipAllocations(Output.of(ipAllocations));
         }
+
         public Builder ipAllocations(SubResourceArgs... ipAllocations) {
             return ipAllocations(List.of(ipAllocations));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder subnets(@Nullable Output<List<SubnetArgs>> subnets) {
-            this.subnets = subnets;
+            $.subnets = subnets;
             return this;
         }
-        public Builder subnets(@Nullable List<SubnetArgs> subnets) {
-            this.subnets = Codegen.ofNullable(subnets);
-            return this;
+
+        public Builder subnets(List<SubnetArgs> subnets) {
+            return subnets(Output.of(subnets));
         }
+
         public Builder subnets(SubnetArgs... subnets) {
             return subnets(List.of(subnets));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder virtualNetworkName(@Nullable Output<String> virtualNetworkName) {
-            this.virtualNetworkName = virtualNetworkName;
+            $.virtualNetworkName = virtualNetworkName;
             return this;
         }
-        public Builder virtualNetworkName(@Nullable String virtualNetworkName) {
-            this.virtualNetworkName = Codegen.ofNullable(virtualNetworkName);
-            return this;
+
+        public Builder virtualNetworkName(String virtualNetworkName) {
+            return virtualNetworkName(Output.of(virtualNetworkName));
         }
+
         public Builder virtualNetworkPeerings(@Nullable Output<List<VirtualNetworkPeeringArgs>> virtualNetworkPeerings) {
-            this.virtualNetworkPeerings = virtualNetworkPeerings;
+            $.virtualNetworkPeerings = virtualNetworkPeerings;
             return this;
         }
-        public Builder virtualNetworkPeerings(@Nullable List<VirtualNetworkPeeringArgs> virtualNetworkPeerings) {
-            this.virtualNetworkPeerings = Codegen.ofNullable(virtualNetworkPeerings);
-            return this;
+
+        public Builder virtualNetworkPeerings(List<VirtualNetworkPeeringArgs> virtualNetworkPeerings) {
+            return virtualNetworkPeerings(Output.of(virtualNetworkPeerings));
         }
+
         public Builder virtualNetworkPeerings(VirtualNetworkPeeringArgs... virtualNetworkPeerings) {
             return virtualNetworkPeerings(List.of(virtualNetworkPeerings));
-        }        public VirtualNetworkArgs build() {
-            return new VirtualNetworkArgs(addressSpace, bgpCommunities, ddosProtectionPlan, dhcpOptions, enableDdosProtection, enableVmProtection, extendedLocation, id, ipAllocations, location, resourceGroupName, subnets, tags, virtualNetworkName, virtualNetworkPeerings);
+        }
+
+        public VirtualNetworkArgs build() {
+            $.enableDdosProtection = Codegen.booleanProp("enableDdosProtection").output().arg($.enableDdosProtection).def(false).getNullable();
+            $.enableVmProtection = Codegen.booleanProp("enableVmProtection").output().arg($.enableVmProtection).def(false).getNullable();
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

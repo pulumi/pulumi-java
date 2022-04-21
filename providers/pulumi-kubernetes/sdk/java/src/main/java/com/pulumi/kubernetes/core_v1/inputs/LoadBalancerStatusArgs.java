@@ -5,10 +5,10 @@ package com.pulumi.kubernetes.core_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.kubernetes.core_v1.inputs.LoadBalancerIngressArgs;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,52 +25,52 @@ public final class LoadBalancerStatusArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="ingress")
-      private final @Nullable Output<List<LoadBalancerIngressArgs>> ingress;
+    private @Nullable Output<List<LoadBalancerIngressArgs>> ingress;
 
-    public Output<List<LoadBalancerIngressArgs>> ingress() {
-        return this.ingress == null ? Codegen.empty() : this.ingress;
+    public Optional<Output<List<LoadBalancerIngressArgs>>> ingress() {
+        return Optional.ofNullable(this.ingress);
     }
 
-    public LoadBalancerStatusArgs(@Nullable Output<List<LoadBalancerIngressArgs>> ingress) {
-        this.ingress = ingress;
-    }
+    private LoadBalancerStatusArgs() {}
 
-    private LoadBalancerStatusArgs() {
-        this.ingress = Codegen.empty();
+    private LoadBalancerStatusArgs(LoadBalancerStatusArgs $) {
+        this.ingress = $.ingress;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LoadBalancerStatusArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<LoadBalancerIngressArgs>> ingress;
+        private LoadBalancerStatusArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new LoadBalancerStatusArgs();
         }
 
         public Builder(LoadBalancerStatusArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.ingress = defaults.ingress;
+            $ = new LoadBalancerStatusArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder ingress(@Nullable Output<List<LoadBalancerIngressArgs>> ingress) {
-            this.ingress = ingress;
+            $.ingress = ingress;
             return this;
         }
-        public Builder ingress(@Nullable List<LoadBalancerIngressArgs> ingress) {
-            this.ingress = Codegen.ofNullable(ingress);
-            return this;
+
+        public Builder ingress(List<LoadBalancerIngressArgs> ingress) {
+            return ingress(Output.of(ingress));
         }
+
         public Builder ingress(LoadBalancerIngressArgs... ingress) {
             return ingress(List.of(ingress));
-        }        public LoadBalancerStatusArgs build() {
-            return new LoadBalancerStatusArgs(ingress);
+        }
+
+        public LoadBalancerStatusArgs build() {
+            return $;
         }
     }
+
 }

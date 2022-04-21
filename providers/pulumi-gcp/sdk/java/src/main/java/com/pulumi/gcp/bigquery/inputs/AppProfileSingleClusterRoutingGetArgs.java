@@ -5,10 +5,10 @@ package com.pulumi.gcp.bigquery.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class AppProfileSingleClusterRoutingGetArgs extends com.pulumi.reso
      * 
      */
     @Import(name="allowTransactionalWrites")
-      private final @Nullable Output<Boolean> allowTransactionalWrites;
+    private @Nullable Output<Boolean> allowTransactionalWrites;
 
-    public Output<Boolean> allowTransactionalWrites() {
-        return this.allowTransactionalWrites == null ? Codegen.empty() : this.allowTransactionalWrites;
+    public Optional<Output<Boolean>> allowTransactionalWrites() {
+        return Optional.ofNullable(this.allowTransactionalWrites);
     }
 
     /**
@@ -33,63 +33,59 @@ public final class AppProfileSingleClusterRoutingGetArgs extends com.pulumi.reso
      * 
      */
     @Import(name="clusterId", required=true)
-      private final Output<String> clusterId;
+    private Output<String> clusterId;
 
     public Output<String> clusterId() {
         return this.clusterId;
     }
 
-    public AppProfileSingleClusterRoutingGetArgs(
-        @Nullable Output<Boolean> allowTransactionalWrites,
-        Output<String> clusterId) {
-        this.allowTransactionalWrites = allowTransactionalWrites;
-        this.clusterId = Objects.requireNonNull(clusterId, "expected parameter 'clusterId' to be non-null");
-    }
+    private AppProfileSingleClusterRoutingGetArgs() {}
 
-    private AppProfileSingleClusterRoutingGetArgs() {
-        this.allowTransactionalWrites = Codegen.empty();
-        this.clusterId = Codegen.empty();
+    private AppProfileSingleClusterRoutingGetArgs(AppProfileSingleClusterRoutingGetArgs $) {
+        this.allowTransactionalWrites = $.allowTransactionalWrites;
+        this.clusterId = $.clusterId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AppProfileSingleClusterRoutingGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> allowTransactionalWrites;
-        private Output<String> clusterId;
+        private AppProfileSingleClusterRoutingGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AppProfileSingleClusterRoutingGetArgs();
         }
 
         public Builder(AppProfileSingleClusterRoutingGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.allowTransactionalWrites = defaults.allowTransactionalWrites;
-    	      this.clusterId = defaults.clusterId;
+            $ = new AppProfileSingleClusterRoutingGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder allowTransactionalWrites(@Nullable Output<Boolean> allowTransactionalWrites) {
-            this.allowTransactionalWrites = allowTransactionalWrites;
+            $.allowTransactionalWrites = allowTransactionalWrites;
             return this;
         }
-        public Builder allowTransactionalWrites(@Nullable Boolean allowTransactionalWrites) {
-            this.allowTransactionalWrites = Codegen.ofNullable(allowTransactionalWrites);
-            return this;
+
+        public Builder allowTransactionalWrites(Boolean allowTransactionalWrites) {
+            return allowTransactionalWrites(Output.of(allowTransactionalWrites));
         }
+
         public Builder clusterId(Output<String> clusterId) {
-            this.clusterId = Objects.requireNonNull(clusterId);
+            $.clusterId = clusterId;
             return this;
         }
+
         public Builder clusterId(String clusterId) {
-            this.clusterId = Output.of(Objects.requireNonNull(clusterId));
-            return this;
-        }        public AppProfileSingleClusterRoutingGetArgs build() {
-            return new AppProfileSingleClusterRoutingGetArgs(allowTransactionalWrites, clusterId);
+            return clusterId(Output.of(clusterId));
+        }
+
+        public AppProfileSingleClusterRoutingGetArgs build() {
+            $.clusterId = Objects.requireNonNull($.clusterId, "expected parameter 'clusterId' to be non-null");
+            return $;
         }
     }
+
 }

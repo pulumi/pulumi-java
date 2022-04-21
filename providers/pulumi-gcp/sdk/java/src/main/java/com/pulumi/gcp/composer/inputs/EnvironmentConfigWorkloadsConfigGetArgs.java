@@ -5,11 +5,11 @@ package com.pulumi.gcp.composer.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.composer.inputs.EnvironmentConfigWorkloadsConfigSchedulerGetArgs;
 import com.pulumi.gcp.composer.inputs.EnvironmentConfigWorkloadsConfigWebServerGetArgs;
 import com.pulumi.gcp.composer.inputs.EnvironmentConfigWorkloadsConfigWorkerGetArgs;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -18,90 +18,82 @@ public final class EnvironmentConfigWorkloadsConfigGetArgs extends com.pulumi.re
     public static final EnvironmentConfigWorkloadsConfigGetArgs Empty = new EnvironmentConfigWorkloadsConfigGetArgs();
 
     @Import(name="scheduler")
-      private final @Nullable Output<EnvironmentConfigWorkloadsConfigSchedulerGetArgs> scheduler;
+    private @Nullable Output<EnvironmentConfigWorkloadsConfigSchedulerGetArgs> scheduler;
 
-    public Output<EnvironmentConfigWorkloadsConfigSchedulerGetArgs> scheduler() {
-        return this.scheduler == null ? Codegen.empty() : this.scheduler;
+    public Optional<Output<EnvironmentConfigWorkloadsConfigSchedulerGetArgs>> scheduler() {
+        return Optional.ofNullable(this.scheduler);
     }
 
     @Import(name="webServer")
-      private final @Nullable Output<EnvironmentConfigWorkloadsConfigWebServerGetArgs> webServer;
+    private @Nullable Output<EnvironmentConfigWorkloadsConfigWebServerGetArgs> webServer;
 
-    public Output<EnvironmentConfigWorkloadsConfigWebServerGetArgs> webServer() {
-        return this.webServer == null ? Codegen.empty() : this.webServer;
+    public Optional<Output<EnvironmentConfigWorkloadsConfigWebServerGetArgs>> webServer() {
+        return Optional.ofNullable(this.webServer);
     }
 
     @Import(name="worker")
-      private final @Nullable Output<EnvironmentConfigWorkloadsConfigWorkerGetArgs> worker;
+    private @Nullable Output<EnvironmentConfigWorkloadsConfigWorkerGetArgs> worker;
 
-    public Output<EnvironmentConfigWorkloadsConfigWorkerGetArgs> worker() {
-        return this.worker == null ? Codegen.empty() : this.worker;
+    public Optional<Output<EnvironmentConfigWorkloadsConfigWorkerGetArgs>> worker() {
+        return Optional.ofNullable(this.worker);
     }
 
-    public EnvironmentConfigWorkloadsConfigGetArgs(
-        @Nullable Output<EnvironmentConfigWorkloadsConfigSchedulerGetArgs> scheduler,
-        @Nullable Output<EnvironmentConfigWorkloadsConfigWebServerGetArgs> webServer,
-        @Nullable Output<EnvironmentConfigWorkloadsConfigWorkerGetArgs> worker) {
-        this.scheduler = scheduler;
-        this.webServer = webServer;
-        this.worker = worker;
-    }
+    private EnvironmentConfigWorkloadsConfigGetArgs() {}
 
-    private EnvironmentConfigWorkloadsConfigGetArgs() {
-        this.scheduler = Codegen.empty();
-        this.webServer = Codegen.empty();
-        this.worker = Codegen.empty();
+    private EnvironmentConfigWorkloadsConfigGetArgs(EnvironmentConfigWorkloadsConfigGetArgs $) {
+        this.scheduler = $.scheduler;
+        this.webServer = $.webServer;
+        this.worker = $.worker;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EnvironmentConfigWorkloadsConfigGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<EnvironmentConfigWorkloadsConfigSchedulerGetArgs> scheduler;
-        private @Nullable Output<EnvironmentConfigWorkloadsConfigWebServerGetArgs> webServer;
-        private @Nullable Output<EnvironmentConfigWorkloadsConfigWorkerGetArgs> worker;
+        private EnvironmentConfigWorkloadsConfigGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new EnvironmentConfigWorkloadsConfigGetArgs();
         }
 
         public Builder(EnvironmentConfigWorkloadsConfigGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.scheduler = defaults.scheduler;
-    	      this.webServer = defaults.webServer;
-    	      this.worker = defaults.worker;
+            $ = new EnvironmentConfigWorkloadsConfigGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder scheduler(@Nullable Output<EnvironmentConfigWorkloadsConfigSchedulerGetArgs> scheduler) {
-            this.scheduler = scheduler;
+            $.scheduler = scheduler;
             return this;
         }
-        public Builder scheduler(@Nullable EnvironmentConfigWorkloadsConfigSchedulerGetArgs scheduler) {
-            this.scheduler = Codegen.ofNullable(scheduler);
-            return this;
+
+        public Builder scheduler(EnvironmentConfigWorkloadsConfigSchedulerGetArgs scheduler) {
+            return scheduler(Output.of(scheduler));
         }
+
         public Builder webServer(@Nullable Output<EnvironmentConfigWorkloadsConfigWebServerGetArgs> webServer) {
-            this.webServer = webServer;
+            $.webServer = webServer;
             return this;
         }
-        public Builder webServer(@Nullable EnvironmentConfigWorkloadsConfigWebServerGetArgs webServer) {
-            this.webServer = Codegen.ofNullable(webServer);
-            return this;
+
+        public Builder webServer(EnvironmentConfigWorkloadsConfigWebServerGetArgs webServer) {
+            return webServer(Output.of(webServer));
         }
+
         public Builder worker(@Nullable Output<EnvironmentConfigWorkloadsConfigWorkerGetArgs> worker) {
-            this.worker = worker;
+            $.worker = worker;
             return this;
         }
-        public Builder worker(@Nullable EnvironmentConfigWorkloadsConfigWorkerGetArgs worker) {
-            this.worker = Codegen.ofNullable(worker);
-            return this;
-        }        public EnvironmentConfigWorkloadsConfigGetArgs build() {
-            return new EnvironmentConfigWorkloadsConfigGetArgs(scheduler, webServer, worker);
+
+        public Builder worker(EnvironmentConfigWorkloadsConfigWorkerGetArgs worker) {
+            return worker(Output.of(worker));
+        }
+
+        public EnvironmentConfigWorkloadsConfigGetArgs build() {
+            return $;
         }
     }
+
 }

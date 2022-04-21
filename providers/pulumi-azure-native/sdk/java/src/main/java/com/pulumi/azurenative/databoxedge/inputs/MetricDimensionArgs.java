@@ -5,7 +5,6 @@ package com.pulumi.azurenative.databoxedge.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,7 +22,7 @@ public final class MetricDimensionArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="sourceName", required=true)
-      private final Output<String> sourceName;
+    private Output<String> sourceName;
 
     public Output<String> sourceName() {
         return this.sourceName;
@@ -34,63 +33,60 @@ public final class MetricDimensionArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="sourceType", required=true)
-      private final Output<String> sourceType;
+    private Output<String> sourceType;
 
     public Output<String> sourceType() {
         return this.sourceType;
     }
 
-    public MetricDimensionArgs(
-        Output<String> sourceName,
-        Output<String> sourceType) {
-        this.sourceName = Objects.requireNonNull(sourceName, "expected parameter 'sourceName' to be non-null");
-        this.sourceType = Objects.requireNonNull(sourceType, "expected parameter 'sourceType' to be non-null");
-    }
+    private MetricDimensionArgs() {}
 
-    private MetricDimensionArgs() {
-        this.sourceName = Codegen.empty();
-        this.sourceType = Codegen.empty();
+    private MetricDimensionArgs(MetricDimensionArgs $) {
+        this.sourceName = $.sourceName;
+        this.sourceType = $.sourceType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MetricDimensionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> sourceName;
-        private Output<String> sourceType;
+        private MetricDimensionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new MetricDimensionArgs();
         }
 
         public Builder(MetricDimensionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.sourceName = defaults.sourceName;
-    	      this.sourceType = defaults.sourceType;
+            $ = new MetricDimensionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder sourceName(Output<String> sourceName) {
-            this.sourceName = Objects.requireNonNull(sourceName);
+            $.sourceName = sourceName;
             return this;
         }
+
         public Builder sourceName(String sourceName) {
-            this.sourceName = Output.of(Objects.requireNonNull(sourceName));
-            return this;
+            return sourceName(Output.of(sourceName));
         }
+
         public Builder sourceType(Output<String> sourceType) {
-            this.sourceType = Objects.requireNonNull(sourceType);
+            $.sourceType = sourceType;
             return this;
         }
+
         public Builder sourceType(String sourceType) {
-            this.sourceType = Output.of(Objects.requireNonNull(sourceType));
-            return this;
-        }        public MetricDimensionArgs build() {
-            return new MetricDimensionArgs(sourceName, sourceType);
+            return sourceType(Output.of(sourceType));
+        }
+
+        public MetricDimensionArgs build() {
+            $.sourceName = Objects.requireNonNull($.sourceName, "expected parameter 'sourceName' to be non-null");
+            $.sourceType = Objects.requireNonNull($.sourceType, "expected parameter 'sourceType' to be non-null");
+            return $;
         }
     }
+
 }

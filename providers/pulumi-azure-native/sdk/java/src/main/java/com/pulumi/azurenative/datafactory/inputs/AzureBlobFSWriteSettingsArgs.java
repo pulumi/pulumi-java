@@ -9,6 +9,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +26,10 @@ public final class AzureBlobFSWriteSettingsArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="blockSizeInMB")
-      private final @Nullable Output<Object> blockSizeInMB;
+    private @Nullable Output<Object> blockSizeInMB;
 
-    public Output<Object> blockSizeInMB() {
-        return this.blockSizeInMB == null ? Codegen.empty() : this.blockSizeInMB;
+    public Optional<Output<Object>> blockSizeInMB() {
+        return Optional.ofNullable(this.blockSizeInMB);
     }
 
     /**
@@ -36,10 +37,10 @@ public final class AzureBlobFSWriteSettingsArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="copyBehavior")
-      private final @Nullable Output<Object> copyBehavior;
+    private @Nullable Output<Object> copyBehavior;
 
-    public Output<Object> copyBehavior() {
-        return this.copyBehavior == null ? Codegen.empty() : this.copyBehavior;
+    public Optional<Output<Object>> copyBehavior() {
+        return Optional.ofNullable(this.copyBehavior);
     }
 
     /**
@@ -47,10 +48,10 @@ public final class AzureBlobFSWriteSettingsArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="disableMetricsCollection")
-      private final @Nullable Output<Object> disableMetricsCollection;
+    private @Nullable Output<Object> disableMetricsCollection;
 
-    public Output<Object> disableMetricsCollection() {
-        return this.disableMetricsCollection == null ? Codegen.empty() : this.disableMetricsCollection;
+    public Optional<Output<Object>> disableMetricsCollection() {
+        return Optional.ofNullable(this.disableMetricsCollection);
     }
 
     /**
@@ -58,10 +59,10 @@ public final class AzureBlobFSWriteSettingsArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="maxConcurrentConnections")
-      private final @Nullable Output<Object> maxConcurrentConnections;
+    private @Nullable Output<Object> maxConcurrentConnections;
 
-    public Output<Object> maxConcurrentConnections() {
-        return this.maxConcurrentConnections == null ? Codegen.empty() : this.maxConcurrentConnections;
+    public Optional<Output<Object>> maxConcurrentConnections() {
+        return Optional.ofNullable(this.maxConcurrentConnections);
     }
 
     /**
@@ -70,102 +71,89 @@ public final class AzureBlobFSWriteSettingsArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="type", required=true)
-      private final Output<String> type;
+    private Output<String> type;
 
     public Output<String> type() {
         return this.type;
     }
 
-    public AzureBlobFSWriteSettingsArgs(
-        @Nullable Output<Object> blockSizeInMB,
-        @Nullable Output<Object> copyBehavior,
-        @Nullable Output<Object> disableMetricsCollection,
-        @Nullable Output<Object> maxConcurrentConnections,
-        Output<String> type) {
-        this.blockSizeInMB = blockSizeInMB;
-        this.copyBehavior = copyBehavior;
-        this.disableMetricsCollection = disableMetricsCollection;
-        this.maxConcurrentConnections = maxConcurrentConnections;
-        this.type = Codegen.stringProp("type").output().arg(type).require();
-    }
+    private AzureBlobFSWriteSettingsArgs() {}
 
-    private AzureBlobFSWriteSettingsArgs() {
-        this.blockSizeInMB = Codegen.empty();
-        this.copyBehavior = Codegen.empty();
-        this.disableMetricsCollection = Codegen.empty();
-        this.maxConcurrentConnections = Codegen.empty();
-        this.type = Codegen.empty();
+    private AzureBlobFSWriteSettingsArgs(AzureBlobFSWriteSettingsArgs $) {
+        this.blockSizeInMB = $.blockSizeInMB;
+        this.copyBehavior = $.copyBehavior;
+        this.disableMetricsCollection = $.disableMetricsCollection;
+        this.maxConcurrentConnections = $.maxConcurrentConnections;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AzureBlobFSWriteSettingsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Object> blockSizeInMB;
-        private @Nullable Output<Object> copyBehavior;
-        private @Nullable Output<Object> disableMetricsCollection;
-        private @Nullable Output<Object> maxConcurrentConnections;
-        private Output<String> type;
+        private AzureBlobFSWriteSettingsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AzureBlobFSWriteSettingsArgs();
         }
 
         public Builder(AzureBlobFSWriteSettingsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.blockSizeInMB = defaults.blockSizeInMB;
-    	      this.copyBehavior = defaults.copyBehavior;
-    	      this.disableMetricsCollection = defaults.disableMetricsCollection;
-    	      this.maxConcurrentConnections = defaults.maxConcurrentConnections;
-    	      this.type = defaults.type;
+            $ = new AzureBlobFSWriteSettingsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder blockSizeInMB(@Nullable Output<Object> blockSizeInMB) {
-            this.blockSizeInMB = blockSizeInMB;
+            $.blockSizeInMB = blockSizeInMB;
             return this;
         }
-        public Builder blockSizeInMB(@Nullable Object blockSizeInMB) {
-            this.blockSizeInMB = Codegen.ofNullable(blockSizeInMB);
-            return this;
+
+        public Builder blockSizeInMB(Object blockSizeInMB) {
+            return blockSizeInMB(Output.of(blockSizeInMB));
         }
+
         public Builder copyBehavior(@Nullable Output<Object> copyBehavior) {
-            this.copyBehavior = copyBehavior;
+            $.copyBehavior = copyBehavior;
             return this;
         }
-        public Builder copyBehavior(@Nullable Object copyBehavior) {
-            this.copyBehavior = Codegen.ofNullable(copyBehavior);
-            return this;
+
+        public Builder copyBehavior(Object copyBehavior) {
+            return copyBehavior(Output.of(copyBehavior));
         }
+
         public Builder disableMetricsCollection(@Nullable Output<Object> disableMetricsCollection) {
-            this.disableMetricsCollection = disableMetricsCollection;
+            $.disableMetricsCollection = disableMetricsCollection;
             return this;
         }
-        public Builder disableMetricsCollection(@Nullable Object disableMetricsCollection) {
-            this.disableMetricsCollection = Codegen.ofNullable(disableMetricsCollection);
-            return this;
+
+        public Builder disableMetricsCollection(Object disableMetricsCollection) {
+            return disableMetricsCollection(Output.of(disableMetricsCollection));
         }
+
         public Builder maxConcurrentConnections(@Nullable Output<Object> maxConcurrentConnections) {
-            this.maxConcurrentConnections = maxConcurrentConnections;
+            $.maxConcurrentConnections = maxConcurrentConnections;
             return this;
         }
-        public Builder maxConcurrentConnections(@Nullable Object maxConcurrentConnections) {
-            this.maxConcurrentConnections = Codegen.ofNullable(maxConcurrentConnections);
-            return this;
+
+        public Builder maxConcurrentConnections(Object maxConcurrentConnections) {
+            return maxConcurrentConnections(Output.of(maxConcurrentConnections));
         }
+
         public Builder type(Output<String> type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Output.of(Objects.requireNonNull(type));
-            return this;
-        }        public AzureBlobFSWriteSettingsArgs build() {
-            return new AzureBlobFSWriteSettingsArgs(blockSizeInMB, copyBehavior, disableMetricsCollection, maxConcurrentConnections, type);
+            return type(Output.of(type));
+        }
+
+        public AzureBlobFSWriteSettingsArgs build() {
+            $.type = Codegen.stringProp("type").output().arg($.type).require();
+            return $;
         }
     }
+
 }

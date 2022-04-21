@@ -18,8 +18,8 @@ import com.pulumi.awsnative.iotevents.inputs.DetectorModelSnsArgs;
 import com.pulumi.awsnative.iotevents.inputs.DetectorModelSqsArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -32,290 +32,252 @@ public final class DetectorModelActionArgs extends com.pulumi.resources.Resource
     public static final DetectorModelActionArgs Empty = new DetectorModelActionArgs();
 
     @Import(name="clearTimer")
-      private final @Nullable Output<DetectorModelClearTimerArgs> clearTimer;
+    private @Nullable Output<DetectorModelClearTimerArgs> clearTimer;
 
-    public Output<DetectorModelClearTimerArgs> clearTimer() {
-        return this.clearTimer == null ? Codegen.empty() : this.clearTimer;
+    public Optional<Output<DetectorModelClearTimerArgs>> clearTimer() {
+        return Optional.ofNullable(this.clearTimer);
     }
 
     @Import(name="dynamoDB")
-      private final @Nullable Output<DetectorModelDynamoDBArgs> dynamoDB;
+    private @Nullable Output<DetectorModelDynamoDBArgs> dynamoDB;
 
-    public Output<DetectorModelDynamoDBArgs> dynamoDB() {
-        return this.dynamoDB == null ? Codegen.empty() : this.dynamoDB;
+    public Optional<Output<DetectorModelDynamoDBArgs>> dynamoDB() {
+        return Optional.ofNullable(this.dynamoDB);
     }
 
     @Import(name="dynamoDBv2")
-      private final @Nullable Output<DetectorModelDynamoDBv2Args> dynamoDBv2;
+    private @Nullable Output<DetectorModelDynamoDBv2Args> dynamoDBv2;
 
-    public Output<DetectorModelDynamoDBv2Args> dynamoDBv2() {
-        return this.dynamoDBv2 == null ? Codegen.empty() : this.dynamoDBv2;
+    public Optional<Output<DetectorModelDynamoDBv2Args>> dynamoDBv2() {
+        return Optional.ofNullable(this.dynamoDBv2);
     }
 
     @Import(name="firehose")
-      private final @Nullable Output<DetectorModelFirehoseArgs> firehose;
+    private @Nullable Output<DetectorModelFirehoseArgs> firehose;
 
-    public Output<DetectorModelFirehoseArgs> firehose() {
-        return this.firehose == null ? Codegen.empty() : this.firehose;
+    public Optional<Output<DetectorModelFirehoseArgs>> firehose() {
+        return Optional.ofNullable(this.firehose);
     }
 
     @Import(name="iotEvents")
-      private final @Nullable Output<DetectorModelIotEventsArgs> iotEvents;
+    private @Nullable Output<DetectorModelIotEventsArgs> iotEvents;
 
-    public Output<DetectorModelIotEventsArgs> iotEvents() {
-        return this.iotEvents == null ? Codegen.empty() : this.iotEvents;
+    public Optional<Output<DetectorModelIotEventsArgs>> iotEvents() {
+        return Optional.ofNullable(this.iotEvents);
     }
 
     @Import(name="iotSiteWise")
-      private final @Nullable Output<DetectorModelIotSiteWiseArgs> iotSiteWise;
+    private @Nullable Output<DetectorModelIotSiteWiseArgs> iotSiteWise;
 
-    public Output<DetectorModelIotSiteWiseArgs> iotSiteWise() {
-        return this.iotSiteWise == null ? Codegen.empty() : this.iotSiteWise;
+    public Optional<Output<DetectorModelIotSiteWiseArgs>> iotSiteWise() {
+        return Optional.ofNullable(this.iotSiteWise);
     }
 
     @Import(name="iotTopicPublish")
-      private final @Nullable Output<DetectorModelIotTopicPublishArgs> iotTopicPublish;
+    private @Nullable Output<DetectorModelIotTopicPublishArgs> iotTopicPublish;
 
-    public Output<DetectorModelIotTopicPublishArgs> iotTopicPublish() {
-        return this.iotTopicPublish == null ? Codegen.empty() : this.iotTopicPublish;
+    public Optional<Output<DetectorModelIotTopicPublishArgs>> iotTopicPublish() {
+        return Optional.ofNullable(this.iotTopicPublish);
     }
 
     @Import(name="lambda")
-      private final @Nullable Output<DetectorModelLambdaArgs> lambda;
+    private @Nullable Output<DetectorModelLambdaArgs> lambda;
 
-    public Output<DetectorModelLambdaArgs> lambda() {
-        return this.lambda == null ? Codegen.empty() : this.lambda;
+    public Optional<Output<DetectorModelLambdaArgs>> lambda() {
+        return Optional.ofNullable(this.lambda);
     }
 
     @Import(name="resetTimer")
-      private final @Nullable Output<DetectorModelResetTimerArgs> resetTimer;
+    private @Nullable Output<DetectorModelResetTimerArgs> resetTimer;
 
-    public Output<DetectorModelResetTimerArgs> resetTimer() {
-        return this.resetTimer == null ? Codegen.empty() : this.resetTimer;
+    public Optional<Output<DetectorModelResetTimerArgs>> resetTimer() {
+        return Optional.ofNullable(this.resetTimer);
     }
 
     @Import(name="setTimer")
-      private final @Nullable Output<DetectorModelSetTimerArgs> setTimer;
+    private @Nullable Output<DetectorModelSetTimerArgs> setTimer;
 
-    public Output<DetectorModelSetTimerArgs> setTimer() {
-        return this.setTimer == null ? Codegen.empty() : this.setTimer;
+    public Optional<Output<DetectorModelSetTimerArgs>> setTimer() {
+        return Optional.ofNullable(this.setTimer);
     }
 
     @Import(name="setVariable")
-      private final @Nullable Output<DetectorModelSetVariableArgs> setVariable;
+    private @Nullable Output<DetectorModelSetVariableArgs> setVariable;
 
-    public Output<DetectorModelSetVariableArgs> setVariable() {
-        return this.setVariable == null ? Codegen.empty() : this.setVariable;
+    public Optional<Output<DetectorModelSetVariableArgs>> setVariable() {
+        return Optional.ofNullable(this.setVariable);
     }
 
     @Import(name="sns")
-      private final @Nullable Output<DetectorModelSnsArgs> sns;
+    private @Nullable Output<DetectorModelSnsArgs> sns;
 
-    public Output<DetectorModelSnsArgs> sns() {
-        return this.sns == null ? Codegen.empty() : this.sns;
+    public Optional<Output<DetectorModelSnsArgs>> sns() {
+        return Optional.ofNullable(this.sns);
     }
 
     @Import(name="sqs")
-      private final @Nullable Output<DetectorModelSqsArgs> sqs;
+    private @Nullable Output<DetectorModelSqsArgs> sqs;
 
-    public Output<DetectorModelSqsArgs> sqs() {
-        return this.sqs == null ? Codegen.empty() : this.sqs;
+    public Optional<Output<DetectorModelSqsArgs>> sqs() {
+        return Optional.ofNullable(this.sqs);
     }
 
-    public DetectorModelActionArgs(
-        @Nullable Output<DetectorModelClearTimerArgs> clearTimer,
-        @Nullable Output<DetectorModelDynamoDBArgs> dynamoDB,
-        @Nullable Output<DetectorModelDynamoDBv2Args> dynamoDBv2,
-        @Nullable Output<DetectorModelFirehoseArgs> firehose,
-        @Nullable Output<DetectorModelIotEventsArgs> iotEvents,
-        @Nullable Output<DetectorModelIotSiteWiseArgs> iotSiteWise,
-        @Nullable Output<DetectorModelIotTopicPublishArgs> iotTopicPublish,
-        @Nullable Output<DetectorModelLambdaArgs> lambda,
-        @Nullable Output<DetectorModelResetTimerArgs> resetTimer,
-        @Nullable Output<DetectorModelSetTimerArgs> setTimer,
-        @Nullable Output<DetectorModelSetVariableArgs> setVariable,
-        @Nullable Output<DetectorModelSnsArgs> sns,
-        @Nullable Output<DetectorModelSqsArgs> sqs) {
-        this.clearTimer = clearTimer;
-        this.dynamoDB = dynamoDB;
-        this.dynamoDBv2 = dynamoDBv2;
-        this.firehose = firehose;
-        this.iotEvents = iotEvents;
-        this.iotSiteWise = iotSiteWise;
-        this.iotTopicPublish = iotTopicPublish;
-        this.lambda = lambda;
-        this.resetTimer = resetTimer;
-        this.setTimer = setTimer;
-        this.setVariable = setVariable;
-        this.sns = sns;
-        this.sqs = sqs;
-    }
+    private DetectorModelActionArgs() {}
 
-    private DetectorModelActionArgs() {
-        this.clearTimer = Codegen.empty();
-        this.dynamoDB = Codegen.empty();
-        this.dynamoDBv2 = Codegen.empty();
-        this.firehose = Codegen.empty();
-        this.iotEvents = Codegen.empty();
-        this.iotSiteWise = Codegen.empty();
-        this.iotTopicPublish = Codegen.empty();
-        this.lambda = Codegen.empty();
-        this.resetTimer = Codegen.empty();
-        this.setTimer = Codegen.empty();
-        this.setVariable = Codegen.empty();
-        this.sns = Codegen.empty();
-        this.sqs = Codegen.empty();
+    private DetectorModelActionArgs(DetectorModelActionArgs $) {
+        this.clearTimer = $.clearTimer;
+        this.dynamoDB = $.dynamoDB;
+        this.dynamoDBv2 = $.dynamoDBv2;
+        this.firehose = $.firehose;
+        this.iotEvents = $.iotEvents;
+        this.iotSiteWise = $.iotSiteWise;
+        this.iotTopicPublish = $.iotTopicPublish;
+        this.lambda = $.lambda;
+        this.resetTimer = $.resetTimer;
+        this.setTimer = $.setTimer;
+        this.setVariable = $.setVariable;
+        this.sns = $.sns;
+        this.sqs = $.sqs;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DetectorModelActionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<DetectorModelClearTimerArgs> clearTimer;
-        private @Nullable Output<DetectorModelDynamoDBArgs> dynamoDB;
-        private @Nullable Output<DetectorModelDynamoDBv2Args> dynamoDBv2;
-        private @Nullable Output<DetectorModelFirehoseArgs> firehose;
-        private @Nullable Output<DetectorModelIotEventsArgs> iotEvents;
-        private @Nullable Output<DetectorModelIotSiteWiseArgs> iotSiteWise;
-        private @Nullable Output<DetectorModelIotTopicPublishArgs> iotTopicPublish;
-        private @Nullable Output<DetectorModelLambdaArgs> lambda;
-        private @Nullable Output<DetectorModelResetTimerArgs> resetTimer;
-        private @Nullable Output<DetectorModelSetTimerArgs> setTimer;
-        private @Nullable Output<DetectorModelSetVariableArgs> setVariable;
-        private @Nullable Output<DetectorModelSnsArgs> sns;
-        private @Nullable Output<DetectorModelSqsArgs> sqs;
+        private DetectorModelActionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DetectorModelActionArgs();
         }
 
         public Builder(DetectorModelActionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.clearTimer = defaults.clearTimer;
-    	      this.dynamoDB = defaults.dynamoDB;
-    	      this.dynamoDBv2 = defaults.dynamoDBv2;
-    	      this.firehose = defaults.firehose;
-    	      this.iotEvents = defaults.iotEvents;
-    	      this.iotSiteWise = defaults.iotSiteWise;
-    	      this.iotTopicPublish = defaults.iotTopicPublish;
-    	      this.lambda = defaults.lambda;
-    	      this.resetTimer = defaults.resetTimer;
-    	      this.setTimer = defaults.setTimer;
-    	      this.setVariable = defaults.setVariable;
-    	      this.sns = defaults.sns;
-    	      this.sqs = defaults.sqs;
+            $ = new DetectorModelActionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder clearTimer(@Nullable Output<DetectorModelClearTimerArgs> clearTimer) {
-            this.clearTimer = clearTimer;
+            $.clearTimer = clearTimer;
             return this;
         }
-        public Builder clearTimer(@Nullable DetectorModelClearTimerArgs clearTimer) {
-            this.clearTimer = Codegen.ofNullable(clearTimer);
-            return this;
+
+        public Builder clearTimer(DetectorModelClearTimerArgs clearTimer) {
+            return clearTimer(Output.of(clearTimer));
         }
+
         public Builder dynamoDB(@Nullable Output<DetectorModelDynamoDBArgs> dynamoDB) {
-            this.dynamoDB = dynamoDB;
+            $.dynamoDB = dynamoDB;
             return this;
         }
-        public Builder dynamoDB(@Nullable DetectorModelDynamoDBArgs dynamoDB) {
-            this.dynamoDB = Codegen.ofNullable(dynamoDB);
-            return this;
+
+        public Builder dynamoDB(DetectorModelDynamoDBArgs dynamoDB) {
+            return dynamoDB(Output.of(dynamoDB));
         }
+
         public Builder dynamoDBv2(@Nullable Output<DetectorModelDynamoDBv2Args> dynamoDBv2) {
-            this.dynamoDBv2 = dynamoDBv2;
+            $.dynamoDBv2 = dynamoDBv2;
             return this;
         }
-        public Builder dynamoDBv2(@Nullable DetectorModelDynamoDBv2Args dynamoDBv2) {
-            this.dynamoDBv2 = Codegen.ofNullable(dynamoDBv2);
-            return this;
+
+        public Builder dynamoDBv2(DetectorModelDynamoDBv2Args dynamoDBv2) {
+            return dynamoDBv2(Output.of(dynamoDBv2));
         }
+
         public Builder firehose(@Nullable Output<DetectorModelFirehoseArgs> firehose) {
-            this.firehose = firehose;
+            $.firehose = firehose;
             return this;
         }
-        public Builder firehose(@Nullable DetectorModelFirehoseArgs firehose) {
-            this.firehose = Codegen.ofNullable(firehose);
-            return this;
+
+        public Builder firehose(DetectorModelFirehoseArgs firehose) {
+            return firehose(Output.of(firehose));
         }
+
         public Builder iotEvents(@Nullable Output<DetectorModelIotEventsArgs> iotEvents) {
-            this.iotEvents = iotEvents;
+            $.iotEvents = iotEvents;
             return this;
         }
-        public Builder iotEvents(@Nullable DetectorModelIotEventsArgs iotEvents) {
-            this.iotEvents = Codegen.ofNullable(iotEvents);
-            return this;
+
+        public Builder iotEvents(DetectorModelIotEventsArgs iotEvents) {
+            return iotEvents(Output.of(iotEvents));
         }
+
         public Builder iotSiteWise(@Nullable Output<DetectorModelIotSiteWiseArgs> iotSiteWise) {
-            this.iotSiteWise = iotSiteWise;
+            $.iotSiteWise = iotSiteWise;
             return this;
         }
-        public Builder iotSiteWise(@Nullable DetectorModelIotSiteWiseArgs iotSiteWise) {
-            this.iotSiteWise = Codegen.ofNullable(iotSiteWise);
-            return this;
+
+        public Builder iotSiteWise(DetectorModelIotSiteWiseArgs iotSiteWise) {
+            return iotSiteWise(Output.of(iotSiteWise));
         }
+
         public Builder iotTopicPublish(@Nullable Output<DetectorModelIotTopicPublishArgs> iotTopicPublish) {
-            this.iotTopicPublish = iotTopicPublish;
+            $.iotTopicPublish = iotTopicPublish;
             return this;
         }
-        public Builder iotTopicPublish(@Nullable DetectorModelIotTopicPublishArgs iotTopicPublish) {
-            this.iotTopicPublish = Codegen.ofNullable(iotTopicPublish);
-            return this;
+
+        public Builder iotTopicPublish(DetectorModelIotTopicPublishArgs iotTopicPublish) {
+            return iotTopicPublish(Output.of(iotTopicPublish));
         }
+
         public Builder lambda(@Nullable Output<DetectorModelLambdaArgs> lambda) {
-            this.lambda = lambda;
+            $.lambda = lambda;
             return this;
         }
-        public Builder lambda(@Nullable DetectorModelLambdaArgs lambda) {
-            this.lambda = Codegen.ofNullable(lambda);
-            return this;
+
+        public Builder lambda(DetectorModelLambdaArgs lambda) {
+            return lambda(Output.of(lambda));
         }
+
         public Builder resetTimer(@Nullable Output<DetectorModelResetTimerArgs> resetTimer) {
-            this.resetTimer = resetTimer;
+            $.resetTimer = resetTimer;
             return this;
         }
-        public Builder resetTimer(@Nullable DetectorModelResetTimerArgs resetTimer) {
-            this.resetTimer = Codegen.ofNullable(resetTimer);
-            return this;
+
+        public Builder resetTimer(DetectorModelResetTimerArgs resetTimer) {
+            return resetTimer(Output.of(resetTimer));
         }
+
         public Builder setTimer(@Nullable Output<DetectorModelSetTimerArgs> setTimer) {
-            this.setTimer = setTimer;
+            $.setTimer = setTimer;
             return this;
         }
-        public Builder setTimer(@Nullable DetectorModelSetTimerArgs setTimer) {
-            this.setTimer = Codegen.ofNullable(setTimer);
-            return this;
+
+        public Builder setTimer(DetectorModelSetTimerArgs setTimer) {
+            return setTimer(Output.of(setTimer));
         }
+
         public Builder setVariable(@Nullable Output<DetectorModelSetVariableArgs> setVariable) {
-            this.setVariable = setVariable;
+            $.setVariable = setVariable;
             return this;
         }
-        public Builder setVariable(@Nullable DetectorModelSetVariableArgs setVariable) {
-            this.setVariable = Codegen.ofNullable(setVariable);
-            return this;
+
+        public Builder setVariable(DetectorModelSetVariableArgs setVariable) {
+            return setVariable(Output.of(setVariable));
         }
+
         public Builder sns(@Nullable Output<DetectorModelSnsArgs> sns) {
-            this.sns = sns;
+            $.sns = sns;
             return this;
         }
-        public Builder sns(@Nullable DetectorModelSnsArgs sns) {
-            this.sns = Codegen.ofNullable(sns);
-            return this;
+
+        public Builder sns(DetectorModelSnsArgs sns) {
+            return sns(Output.of(sns));
         }
+
         public Builder sqs(@Nullable Output<DetectorModelSqsArgs> sqs) {
-            this.sqs = sqs;
+            $.sqs = sqs;
             return this;
         }
-        public Builder sqs(@Nullable DetectorModelSqsArgs sqs) {
-            this.sqs = Codegen.ofNullable(sqs);
-            return this;
-        }        public DetectorModelActionArgs build() {
-            return new DetectorModelActionArgs(clearTimer, dynamoDB, dynamoDBv2, firehose, iotEvents, iotSiteWise, iotTopicPublish, lambda, resetTimer, setTimer, setVariable, sns, sqs);
+
+        public Builder sqs(DetectorModelSqsArgs sqs) {
+            return sqs(Output.of(sqs));
+        }
+
+        public DetectorModelActionArgs build() {
+            return $;
         }
     }
+
 }

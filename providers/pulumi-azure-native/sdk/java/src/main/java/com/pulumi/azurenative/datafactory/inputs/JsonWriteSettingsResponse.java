@@ -25,10 +25,10 @@ public final class JsonWriteSettingsResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="filePattern")
-      private final @Nullable Object filePattern;
+    private @Nullable Object filePattern;
 
     public Optional<Object> filePattern() {
-        return this.filePattern == null ? Optional.empty() : Optional.ofNullable(this.filePattern);
+        return Optional.ofNullable(this.filePattern);
     }
 
     /**
@@ -37,55 +37,51 @@ public final class JsonWriteSettingsResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
     }
 
-    public JsonWriteSettingsResponse(
-        @Nullable Object filePattern,
-        String type) {
-        this.filePattern = filePattern;
-        this.type = Codegen.stringProp("type").arg(type).require();
-    }
+    private JsonWriteSettingsResponse() {}
 
-    private JsonWriteSettingsResponse() {
-        this.filePattern = null;
-        this.type = null;
+    private JsonWriteSettingsResponse(JsonWriteSettingsResponse $) {
+        this.filePattern = $.filePattern;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(JsonWriteSettingsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Object filePattern;
-        private String type;
+        private JsonWriteSettingsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new JsonWriteSettingsResponse();
         }
 
         public Builder(JsonWriteSettingsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.filePattern = defaults.filePattern;
-    	      this.type = defaults.type;
+            $ = new JsonWriteSettingsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder filePattern(@Nullable Object filePattern) {
-            this.filePattern = filePattern;
+            $.filePattern = filePattern;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
-        }        public JsonWriteSettingsResponse build() {
-            return new JsonWriteSettingsResponse(filePattern, type);
+        }
+
+        public JsonWriteSettingsResponse build() {
+            $.type = Codegen.stringProp("type").arg($.type).require();
+            return $;
         }
     }
+
 }

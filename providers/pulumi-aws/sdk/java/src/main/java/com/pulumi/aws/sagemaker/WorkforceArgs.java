@@ -8,9 +8,9 @@ import com.pulumi.aws.sagemaker.inputs.WorkforceOidcConfigArgs;
 import com.pulumi.aws.sagemaker.inputs.WorkforceSourceIpConfigArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,10 @@ public final class WorkforceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="cognitoConfig")
-      private final @Nullable Output<WorkforceCognitoConfigArgs> cognitoConfig;
+    private @Nullable Output<WorkforceCognitoConfigArgs> cognitoConfig;
 
-    public Output<WorkforceCognitoConfigArgs> cognitoConfig() {
-        return this.cognitoConfig == null ? Codegen.empty() : this.cognitoConfig;
+    public Optional<Output<WorkforceCognitoConfigArgs>> cognitoConfig() {
+        return Optional.ofNullable(this.cognitoConfig);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class WorkforceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="oidcConfig")
-      private final @Nullable Output<WorkforceOidcConfigArgs> oidcConfig;
+    private @Nullable Output<WorkforceOidcConfigArgs> oidcConfig;
 
-    public Output<WorkforceOidcConfigArgs> oidcConfig() {
-        return this.oidcConfig == null ? Codegen.empty() : this.oidcConfig;
+    public Optional<Output<WorkforceOidcConfigArgs>> oidcConfig() {
+        return Optional.ofNullable(this.oidcConfig);
     }
 
     /**
@@ -45,10 +45,10 @@ public final class WorkforceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="sourceIpConfig")
-      private final @Nullable Output<WorkforceSourceIpConfigArgs> sourceIpConfig;
+    private @Nullable Output<WorkforceSourceIpConfigArgs> sourceIpConfig;
 
-    public Output<WorkforceSourceIpConfigArgs> sourceIpConfig() {
-        return this.sourceIpConfig == null ? Codegen.empty() : this.sourceIpConfig;
+    public Optional<Output<WorkforceSourceIpConfigArgs>> sourceIpConfig() {
+        return Optional.ofNullable(this.sourceIpConfig);
     }
 
     /**
@@ -56,89 +56,79 @@ public final class WorkforceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="workforceName", required=true)
-      private final Output<String> workforceName;
+    private Output<String> workforceName;
 
     public Output<String> workforceName() {
         return this.workforceName;
     }
 
-    public WorkforceArgs(
-        @Nullable Output<WorkforceCognitoConfigArgs> cognitoConfig,
-        @Nullable Output<WorkforceOidcConfigArgs> oidcConfig,
-        @Nullable Output<WorkforceSourceIpConfigArgs> sourceIpConfig,
-        Output<String> workforceName) {
-        this.cognitoConfig = cognitoConfig;
-        this.oidcConfig = oidcConfig;
-        this.sourceIpConfig = sourceIpConfig;
-        this.workforceName = Objects.requireNonNull(workforceName, "expected parameter 'workforceName' to be non-null");
-    }
+    private WorkforceArgs() {}
 
-    private WorkforceArgs() {
-        this.cognitoConfig = Codegen.empty();
-        this.oidcConfig = Codegen.empty();
-        this.sourceIpConfig = Codegen.empty();
-        this.workforceName = Codegen.empty();
+    private WorkforceArgs(WorkforceArgs $) {
+        this.cognitoConfig = $.cognitoConfig;
+        this.oidcConfig = $.oidcConfig;
+        this.sourceIpConfig = $.sourceIpConfig;
+        this.workforceName = $.workforceName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WorkforceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<WorkforceCognitoConfigArgs> cognitoConfig;
-        private @Nullable Output<WorkforceOidcConfigArgs> oidcConfig;
-        private @Nullable Output<WorkforceSourceIpConfigArgs> sourceIpConfig;
-        private Output<String> workforceName;
+        private WorkforceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new WorkforceArgs();
         }
 
         public Builder(WorkforceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cognitoConfig = defaults.cognitoConfig;
-    	      this.oidcConfig = defaults.oidcConfig;
-    	      this.sourceIpConfig = defaults.sourceIpConfig;
-    	      this.workforceName = defaults.workforceName;
+            $ = new WorkforceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder cognitoConfig(@Nullable Output<WorkforceCognitoConfigArgs> cognitoConfig) {
-            this.cognitoConfig = cognitoConfig;
+            $.cognitoConfig = cognitoConfig;
             return this;
         }
-        public Builder cognitoConfig(@Nullable WorkforceCognitoConfigArgs cognitoConfig) {
-            this.cognitoConfig = Codegen.ofNullable(cognitoConfig);
-            return this;
+
+        public Builder cognitoConfig(WorkforceCognitoConfigArgs cognitoConfig) {
+            return cognitoConfig(Output.of(cognitoConfig));
         }
+
         public Builder oidcConfig(@Nullable Output<WorkforceOidcConfigArgs> oidcConfig) {
-            this.oidcConfig = oidcConfig;
+            $.oidcConfig = oidcConfig;
             return this;
         }
-        public Builder oidcConfig(@Nullable WorkforceOidcConfigArgs oidcConfig) {
-            this.oidcConfig = Codegen.ofNullable(oidcConfig);
-            return this;
+
+        public Builder oidcConfig(WorkforceOidcConfigArgs oidcConfig) {
+            return oidcConfig(Output.of(oidcConfig));
         }
+
         public Builder sourceIpConfig(@Nullable Output<WorkforceSourceIpConfigArgs> sourceIpConfig) {
-            this.sourceIpConfig = sourceIpConfig;
+            $.sourceIpConfig = sourceIpConfig;
             return this;
         }
-        public Builder sourceIpConfig(@Nullable WorkforceSourceIpConfigArgs sourceIpConfig) {
-            this.sourceIpConfig = Codegen.ofNullable(sourceIpConfig);
-            return this;
+
+        public Builder sourceIpConfig(WorkforceSourceIpConfigArgs sourceIpConfig) {
+            return sourceIpConfig(Output.of(sourceIpConfig));
         }
+
         public Builder workforceName(Output<String> workforceName) {
-            this.workforceName = Objects.requireNonNull(workforceName);
+            $.workforceName = workforceName;
             return this;
         }
+
         public Builder workforceName(String workforceName) {
-            this.workforceName = Output.of(Objects.requireNonNull(workforceName));
-            return this;
-        }        public WorkforceArgs build() {
-            return new WorkforceArgs(cognitoConfig, oidcConfig, sourceIpConfig, workforceName);
+            return workforceName(Output.of(workforceName));
+        }
+
+        public WorkforceArgs build() {
+            $.workforceName = Objects.requireNonNull($.workforceName, "expected parameter 'workforceName' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,10 +5,10 @@ package com.pulumi.googlenative.containeranalysis_v1alpha1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class MaterialArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="digest")
-      private final @Nullable Output<Map<String,String>> digest;
+    private @Nullable Output<Map<String,String>> digest;
 
-    public Output<Map<String,String>> digest() {
-        return this.digest == null ? Codegen.empty() : this.digest;
+    public Optional<Output<Map<String,String>>> digest() {
+        return Optional.ofNullable(this.digest);
     }
 
     /**
@@ -36,63 +36,58 @@ public final class MaterialArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="uri")
-      private final @Nullable Output<String> uri;
+    private @Nullable Output<String> uri;
 
-    public Output<String> uri() {
-        return this.uri == null ? Codegen.empty() : this.uri;
+    public Optional<Output<String>> uri() {
+        return Optional.ofNullable(this.uri);
     }
 
-    public MaterialArgs(
-        @Nullable Output<Map<String,String>> digest,
-        @Nullable Output<String> uri) {
-        this.digest = digest;
-        this.uri = uri;
-    }
+    private MaterialArgs() {}
 
-    private MaterialArgs() {
-        this.digest = Codegen.empty();
-        this.uri = Codegen.empty();
+    private MaterialArgs(MaterialArgs $) {
+        this.digest = $.digest;
+        this.uri = $.uri;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MaterialArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Map<String,String>> digest;
-        private @Nullable Output<String> uri;
+        private MaterialArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new MaterialArgs();
         }
 
         public Builder(MaterialArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.digest = defaults.digest;
-    	      this.uri = defaults.uri;
+            $ = new MaterialArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder digest(@Nullable Output<Map<String,String>> digest) {
-            this.digest = digest;
+            $.digest = digest;
             return this;
         }
-        public Builder digest(@Nullable Map<String,String> digest) {
-            this.digest = Codegen.ofNullable(digest);
-            return this;
+
+        public Builder digest(Map<String,String> digest) {
+            return digest(Output.of(digest));
         }
+
         public Builder uri(@Nullable Output<String> uri) {
-            this.uri = uri;
+            $.uri = uri;
             return this;
         }
-        public Builder uri(@Nullable String uri) {
-            this.uri = Codegen.ofNullable(uri);
-            return this;
-        }        public MaterialArgs build() {
-            return new MaterialArgs(digest, uri);
+
+        public Builder uri(String uri) {
+            return uri(Output.of(uri));
+        }
+
+        public MaterialArgs build() {
+            return $;
         }
     }
+
 }

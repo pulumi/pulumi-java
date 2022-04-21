@@ -5,9 +5,9 @@ package com.pulumi.azurenative.customproviders;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class AssociationArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="associationName")
-      private final @Nullable Output<String> associationName;
+    private @Nullable Output<String> associationName;
 
-    public Output<String> associationName() {
-        return this.associationName == null ? Codegen.empty() : this.associationName;
+    public Optional<Output<String>> associationName() {
+        return Optional.ofNullable(this.associationName);
     }
 
     /**
@@ -31,7 +31,7 @@ public final class AssociationArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="scope", required=true)
-      private final Output<String> scope;
+    private Output<String> scope;
 
     public Output<String> scope() {
         return this.scope;
@@ -42,76 +42,69 @@ public final class AssociationArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="targetResourceId")
-      private final @Nullable Output<String> targetResourceId;
+    private @Nullable Output<String> targetResourceId;
 
-    public Output<String> targetResourceId() {
-        return this.targetResourceId == null ? Codegen.empty() : this.targetResourceId;
+    public Optional<Output<String>> targetResourceId() {
+        return Optional.ofNullable(this.targetResourceId);
     }
 
-    public AssociationArgs(
-        @Nullable Output<String> associationName,
-        Output<String> scope,
-        @Nullable Output<String> targetResourceId) {
-        this.associationName = associationName;
-        this.scope = Objects.requireNonNull(scope, "expected parameter 'scope' to be non-null");
-        this.targetResourceId = targetResourceId;
-    }
+    private AssociationArgs() {}
 
-    private AssociationArgs() {
-        this.associationName = Codegen.empty();
-        this.scope = Codegen.empty();
-        this.targetResourceId = Codegen.empty();
+    private AssociationArgs(AssociationArgs $) {
+        this.associationName = $.associationName;
+        this.scope = $.scope;
+        this.targetResourceId = $.targetResourceId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AssociationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> associationName;
-        private Output<String> scope;
-        private @Nullable Output<String> targetResourceId;
+        private AssociationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AssociationArgs();
         }
 
         public Builder(AssociationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.associationName = defaults.associationName;
-    	      this.scope = defaults.scope;
-    	      this.targetResourceId = defaults.targetResourceId;
+            $ = new AssociationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder associationName(@Nullable Output<String> associationName) {
-            this.associationName = associationName;
+            $.associationName = associationName;
             return this;
         }
-        public Builder associationName(@Nullable String associationName) {
-            this.associationName = Codegen.ofNullable(associationName);
-            return this;
+
+        public Builder associationName(String associationName) {
+            return associationName(Output.of(associationName));
         }
+
         public Builder scope(Output<String> scope) {
-            this.scope = Objects.requireNonNull(scope);
+            $.scope = scope;
             return this;
         }
+
         public Builder scope(String scope) {
-            this.scope = Output.of(Objects.requireNonNull(scope));
-            return this;
+            return scope(Output.of(scope));
         }
+
         public Builder targetResourceId(@Nullable Output<String> targetResourceId) {
-            this.targetResourceId = targetResourceId;
+            $.targetResourceId = targetResourceId;
             return this;
         }
-        public Builder targetResourceId(@Nullable String targetResourceId) {
-            this.targetResourceId = Codegen.ofNullable(targetResourceId);
-            return this;
-        }        public AssociationArgs build() {
-            return new AssociationArgs(associationName, scope, targetResourceId);
+
+        public Builder targetResourceId(String targetResourceId) {
+            return targetResourceId(Output.of(targetResourceId));
+        }
+
+        public AssociationArgs build() {
+            $.scope = Objects.requireNonNull($.scope, "expected parameter 'scope' to be non-null");
+            return $;
         }
     }
+
 }

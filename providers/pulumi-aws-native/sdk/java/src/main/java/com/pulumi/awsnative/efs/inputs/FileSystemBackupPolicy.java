@@ -13,45 +13,45 @@ public final class FileSystemBackupPolicy extends com.pulumi.resources.InvokeArg
     public static final FileSystemBackupPolicy Empty = new FileSystemBackupPolicy();
 
     @Import(name="status", required=true)
-      private final String status;
+    private String status;
 
     public String status() {
         return this.status;
     }
 
-    public FileSystemBackupPolicy(String status) {
-        this.status = Objects.requireNonNull(status, "expected parameter 'status' to be non-null");
-    }
+    private FileSystemBackupPolicy() {}
 
-    private FileSystemBackupPolicy() {
-        this.status = null;
+    private FileSystemBackupPolicy(FileSystemBackupPolicy $) {
+        this.status = $.status;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FileSystemBackupPolicy defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String status;
+        private FileSystemBackupPolicy $;
 
         public Builder() {
-    	      // Empty
+            $ = new FileSystemBackupPolicy();
         }
 
         public Builder(FileSystemBackupPolicy defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.status = defaults.status;
+            $ = new FileSystemBackupPolicy(Objects.requireNonNull(defaults));
         }
 
         public Builder status(String status) {
-            this.status = Objects.requireNonNull(status);
+            $.status = status;
             return this;
-        }        public FileSystemBackupPolicy build() {
-            return new FileSystemBackupPolicy(status);
+        }
+
+        public FileSystemBackupPolicy build() {
+            $.status = Objects.requireNonNull($.status, "expected parameter 'status' to be non-null");
+            return $;
         }
     }
+
 }

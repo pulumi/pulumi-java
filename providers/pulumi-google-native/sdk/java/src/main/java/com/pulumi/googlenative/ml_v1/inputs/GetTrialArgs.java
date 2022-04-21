@@ -15,94 +15,86 @@ public final class GetTrialArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetTrialArgs Empty = new GetTrialArgs();
 
     @Import(name="location", required=true)
-      private final String location;
+    private String location;
 
     public String location() {
         return this.location;
     }
 
     @Import(name="project")
-      private final @Nullable String project;
+    private @Nullable String project;
 
     public Optional<String> project() {
-        return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
+        return Optional.ofNullable(this.project);
     }
 
     @Import(name="studyId", required=true)
-      private final String studyId;
+    private String studyId;
 
     public String studyId() {
         return this.studyId;
     }
 
     @Import(name="trialId", required=true)
-      private final String trialId;
+    private String trialId;
 
     public String trialId() {
         return this.trialId;
     }
 
-    public GetTrialArgs(
-        String location,
-        @Nullable String project,
-        String studyId,
-        String trialId) {
-        this.location = Objects.requireNonNull(location, "expected parameter 'location' to be non-null");
-        this.project = project;
-        this.studyId = Objects.requireNonNull(studyId, "expected parameter 'studyId' to be non-null");
-        this.trialId = Objects.requireNonNull(trialId, "expected parameter 'trialId' to be non-null");
-    }
+    private GetTrialArgs() {}
 
-    private GetTrialArgs() {
-        this.location = null;
-        this.project = null;
-        this.studyId = null;
-        this.trialId = null;
+    private GetTrialArgs(GetTrialArgs $) {
+        this.location = $.location;
+        this.project = $.project;
+        this.studyId = $.studyId;
+        this.trialId = $.trialId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetTrialArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String location;
-        private @Nullable String project;
-        private String studyId;
-        private String trialId;
+        private GetTrialArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetTrialArgs();
         }
 
         public Builder(GetTrialArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.location = defaults.location;
-    	      this.project = defaults.project;
-    	      this.studyId = defaults.studyId;
-    	      this.trialId = defaults.trialId;
+            $ = new GetTrialArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder location(String location) {
-            this.location = Objects.requireNonNull(location);
+            $.location = location;
             return this;
         }
+
         public Builder project(@Nullable String project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
+
         public Builder studyId(String studyId) {
-            this.studyId = Objects.requireNonNull(studyId);
+            $.studyId = studyId;
             return this;
         }
+
         public Builder trialId(String trialId) {
-            this.trialId = Objects.requireNonNull(trialId);
+            $.trialId = trialId;
             return this;
-        }        public GetTrialArgs build() {
-            return new GetTrialArgs(location, project, studyId, trialId);
+        }
+
+        public GetTrialArgs build() {
+            $.location = Objects.requireNonNull($.location, "expected parameter 'location' to be non-null");
+            $.studyId = Objects.requireNonNull($.studyId, "expected parameter 'studyId' to be non-null");
+            $.trialId = Objects.requireNonNull($.trialId, "expected parameter 'trialId' to be non-null");
+            return $;
         }
     }
+
 }

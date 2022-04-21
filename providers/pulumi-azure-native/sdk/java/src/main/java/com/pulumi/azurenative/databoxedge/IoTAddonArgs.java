@@ -9,6 +9,7 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +22,10 @@ public final class IoTAddonArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="addonName")
-      private final @Nullable Output<String> addonName;
+    private @Nullable Output<String> addonName;
 
-    public Output<String> addonName() {
-        return this.addonName == null ? Codegen.empty() : this.addonName;
+    public Optional<Output<String>> addonName() {
+        return Optional.ofNullable(this.addonName);
     }
 
     /**
@@ -32,7 +33,7 @@ public final class IoTAddonArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="deviceName", required=true)
-      private final Output<String> deviceName;
+    private Output<String> deviceName;
 
     public Output<String> deviceName() {
         return this.deviceName;
@@ -43,7 +44,7 @@ public final class IoTAddonArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="ioTDeviceDetails", required=true)
-      private final Output<IoTDeviceInfoArgs> ioTDeviceDetails;
+    private Output<IoTDeviceInfoArgs> ioTDeviceDetails;
 
     public Output<IoTDeviceInfoArgs> ioTDeviceDetails() {
         return this.ioTDeviceDetails;
@@ -54,7 +55,7 @@ public final class IoTAddonArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="ioTEdgeDeviceDetails", required=true)
-      private final Output<IoTDeviceInfoArgs> ioTEdgeDeviceDetails;
+    private Output<IoTDeviceInfoArgs> ioTEdgeDeviceDetails;
 
     public Output<IoTDeviceInfoArgs> ioTEdgeDeviceDetails() {
         return this.ioTEdgeDeviceDetails;
@@ -66,7 +67,7 @@ public final class IoTAddonArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="kind", required=true)
-      private final Output<String> kind;
+    private Output<String> kind;
 
     public Output<String> kind() {
         return this.kind;
@@ -77,7 +78,7 @@ public final class IoTAddonArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -88,128 +89,114 @@ public final class IoTAddonArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="roleName", required=true)
-      private final Output<String> roleName;
+    private Output<String> roleName;
 
     public Output<String> roleName() {
         return this.roleName;
     }
 
-    public IoTAddonArgs(
-        @Nullable Output<String> addonName,
-        Output<String> deviceName,
-        Output<IoTDeviceInfoArgs> ioTDeviceDetails,
-        Output<IoTDeviceInfoArgs> ioTEdgeDeviceDetails,
-        Output<String> kind,
-        Output<String> resourceGroupName,
-        Output<String> roleName) {
-        this.addonName = addonName;
-        this.deviceName = Objects.requireNonNull(deviceName, "expected parameter 'deviceName' to be non-null");
-        this.ioTDeviceDetails = Objects.requireNonNull(ioTDeviceDetails, "expected parameter 'ioTDeviceDetails' to be non-null");
-        this.ioTEdgeDeviceDetails = Objects.requireNonNull(ioTEdgeDeviceDetails, "expected parameter 'ioTEdgeDeviceDetails' to be non-null");
-        this.kind = Codegen.stringProp("kind").output().arg(kind).require();
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.roleName = Objects.requireNonNull(roleName, "expected parameter 'roleName' to be non-null");
-    }
+    private IoTAddonArgs() {}
 
-    private IoTAddonArgs() {
-        this.addonName = Codegen.empty();
-        this.deviceName = Codegen.empty();
-        this.ioTDeviceDetails = Codegen.empty();
-        this.ioTEdgeDeviceDetails = Codegen.empty();
-        this.kind = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.roleName = Codegen.empty();
+    private IoTAddonArgs(IoTAddonArgs $) {
+        this.addonName = $.addonName;
+        this.deviceName = $.deviceName;
+        this.ioTDeviceDetails = $.ioTDeviceDetails;
+        this.ioTEdgeDeviceDetails = $.ioTEdgeDeviceDetails;
+        this.kind = $.kind;
+        this.resourceGroupName = $.resourceGroupName;
+        this.roleName = $.roleName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(IoTAddonArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> addonName;
-        private Output<String> deviceName;
-        private Output<IoTDeviceInfoArgs> ioTDeviceDetails;
-        private Output<IoTDeviceInfoArgs> ioTEdgeDeviceDetails;
-        private Output<String> kind;
-        private Output<String> resourceGroupName;
-        private Output<String> roleName;
+        private IoTAddonArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new IoTAddonArgs();
         }
 
         public Builder(IoTAddonArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.addonName = defaults.addonName;
-    	      this.deviceName = defaults.deviceName;
-    	      this.ioTDeviceDetails = defaults.ioTDeviceDetails;
-    	      this.ioTEdgeDeviceDetails = defaults.ioTEdgeDeviceDetails;
-    	      this.kind = defaults.kind;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.roleName = defaults.roleName;
+            $ = new IoTAddonArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder addonName(@Nullable Output<String> addonName) {
-            this.addonName = addonName;
+            $.addonName = addonName;
             return this;
         }
-        public Builder addonName(@Nullable String addonName) {
-            this.addonName = Codegen.ofNullable(addonName);
-            return this;
+
+        public Builder addonName(String addonName) {
+            return addonName(Output.of(addonName));
         }
+
         public Builder deviceName(Output<String> deviceName) {
-            this.deviceName = Objects.requireNonNull(deviceName);
+            $.deviceName = deviceName;
             return this;
         }
+
         public Builder deviceName(String deviceName) {
-            this.deviceName = Output.of(Objects.requireNonNull(deviceName));
-            return this;
+            return deviceName(Output.of(deviceName));
         }
+
         public Builder ioTDeviceDetails(Output<IoTDeviceInfoArgs> ioTDeviceDetails) {
-            this.ioTDeviceDetails = Objects.requireNonNull(ioTDeviceDetails);
+            $.ioTDeviceDetails = ioTDeviceDetails;
             return this;
         }
+
         public Builder ioTDeviceDetails(IoTDeviceInfoArgs ioTDeviceDetails) {
-            this.ioTDeviceDetails = Output.of(Objects.requireNonNull(ioTDeviceDetails));
-            return this;
+            return ioTDeviceDetails(Output.of(ioTDeviceDetails));
         }
+
         public Builder ioTEdgeDeviceDetails(Output<IoTDeviceInfoArgs> ioTEdgeDeviceDetails) {
-            this.ioTEdgeDeviceDetails = Objects.requireNonNull(ioTEdgeDeviceDetails);
+            $.ioTEdgeDeviceDetails = ioTEdgeDeviceDetails;
             return this;
         }
+
         public Builder ioTEdgeDeviceDetails(IoTDeviceInfoArgs ioTEdgeDeviceDetails) {
-            this.ioTEdgeDeviceDetails = Output.of(Objects.requireNonNull(ioTEdgeDeviceDetails));
-            return this;
+            return ioTEdgeDeviceDetails(Output.of(ioTEdgeDeviceDetails));
         }
+
         public Builder kind(Output<String> kind) {
-            this.kind = Objects.requireNonNull(kind);
+            $.kind = kind;
             return this;
         }
+
         public Builder kind(String kind) {
-            this.kind = Output.of(Objects.requireNonNull(kind));
-            return this;
+            return kind(Output.of(kind));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder roleName(Output<String> roleName) {
-            this.roleName = Objects.requireNonNull(roleName);
+            $.roleName = roleName;
             return this;
         }
+
         public Builder roleName(String roleName) {
-            this.roleName = Output.of(Objects.requireNonNull(roleName));
-            return this;
-        }        public IoTAddonArgs build() {
-            return new IoTAddonArgs(addonName, deviceName, ioTDeviceDetails, ioTEdgeDeviceDetails, kind, resourceGroupName, roleName);
+            return roleName(Output.of(roleName));
+        }
+
+        public IoTAddonArgs build() {
+            $.deviceName = Objects.requireNonNull($.deviceName, "expected parameter 'deviceName' to be non-null");
+            $.ioTDeviceDetails = Objects.requireNonNull($.ioTDeviceDetails, "expected parameter 'ioTDeviceDetails' to be non-null");
+            $.ioTEdgeDeviceDetails = Objects.requireNonNull($.ioTEdgeDeviceDetails, "expected parameter 'ioTEdgeDeviceDetails' to be non-null");
+            $.kind = Codegen.stringProp("kind").output().arg($.kind).require();
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.roleName = Objects.requireNonNull($.roleName, "expected parameter 'roleName' to be non-null");
+            return $;
         }
     }
+
 }

@@ -23,7 +23,7 @@ public final class LogConfigResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="cloudAudit", required=true)
-      private final CloudAuditOptionsResponse cloudAudit;
+    private CloudAuditOptionsResponse cloudAudit;
 
     public CloudAuditOptionsResponse cloudAudit() {
         return this.cloudAudit;
@@ -34,7 +34,7 @@ public final class LogConfigResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="counter", required=true)
-      private final CounterOptionsResponse counter;
+    private CounterOptionsResponse counter;
 
     public CounterOptionsResponse counter() {
         return this.counter;
@@ -45,64 +45,59 @@ public final class LogConfigResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="dataAccess", required=true)
-      private final DataAccessOptionsResponse dataAccess;
+    private DataAccessOptionsResponse dataAccess;
 
     public DataAccessOptionsResponse dataAccess() {
         return this.dataAccess;
     }
 
-    public LogConfigResponse(
-        CloudAuditOptionsResponse cloudAudit,
-        CounterOptionsResponse counter,
-        DataAccessOptionsResponse dataAccess) {
-        this.cloudAudit = Objects.requireNonNull(cloudAudit, "expected parameter 'cloudAudit' to be non-null");
-        this.counter = Objects.requireNonNull(counter, "expected parameter 'counter' to be non-null");
-        this.dataAccess = Objects.requireNonNull(dataAccess, "expected parameter 'dataAccess' to be non-null");
-    }
+    private LogConfigResponse() {}
 
-    private LogConfigResponse() {
-        this.cloudAudit = null;
-        this.counter = null;
-        this.dataAccess = null;
+    private LogConfigResponse(LogConfigResponse $) {
+        this.cloudAudit = $.cloudAudit;
+        this.counter = $.counter;
+        this.dataAccess = $.dataAccess;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LogConfigResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private CloudAuditOptionsResponse cloudAudit;
-        private CounterOptionsResponse counter;
-        private DataAccessOptionsResponse dataAccess;
+        private LogConfigResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new LogConfigResponse();
         }
 
         public Builder(LogConfigResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cloudAudit = defaults.cloudAudit;
-    	      this.counter = defaults.counter;
-    	      this.dataAccess = defaults.dataAccess;
+            $ = new LogConfigResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder cloudAudit(CloudAuditOptionsResponse cloudAudit) {
-            this.cloudAudit = Objects.requireNonNull(cloudAudit);
+            $.cloudAudit = cloudAudit;
             return this;
         }
+
         public Builder counter(CounterOptionsResponse counter) {
-            this.counter = Objects.requireNonNull(counter);
+            $.counter = counter;
             return this;
         }
+
         public Builder dataAccess(DataAccessOptionsResponse dataAccess) {
-            this.dataAccess = Objects.requireNonNull(dataAccess);
+            $.dataAccess = dataAccess;
             return this;
-        }        public LogConfigResponse build() {
-            return new LogConfigResponse(cloudAudit, counter, dataAccess);
+        }
+
+        public LogConfigResponse build() {
+            $.cloudAudit = Objects.requireNonNull($.cloudAudit, "expected parameter 'cloudAudit' to be non-null");
+            $.counter = Objects.requireNonNull($.counter, "expected parameter 'counter' to be non-null");
+            $.dataAccess = Objects.requireNonNull($.dataAccess, "expected parameter 'dataAccess' to be non-null");
+            return $;
         }
     }
+
 }

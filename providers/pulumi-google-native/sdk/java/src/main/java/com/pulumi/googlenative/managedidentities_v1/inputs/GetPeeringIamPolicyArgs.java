@@ -15,78 +15,71 @@ public final class GetPeeringIamPolicyArgs extends com.pulumi.resources.InvokeAr
     public static final GetPeeringIamPolicyArgs Empty = new GetPeeringIamPolicyArgs();
 
     @Import(name="optionsRequestedPolicyVersion")
-      private final @Nullable String optionsRequestedPolicyVersion;
+    private @Nullable String optionsRequestedPolicyVersion;
 
     public Optional<String> optionsRequestedPolicyVersion() {
-        return this.optionsRequestedPolicyVersion == null ? Optional.empty() : Optional.ofNullable(this.optionsRequestedPolicyVersion);
+        return Optional.ofNullable(this.optionsRequestedPolicyVersion);
     }
 
     @Import(name="peeringId", required=true)
-      private final String peeringId;
+    private String peeringId;
 
     public String peeringId() {
         return this.peeringId;
     }
 
     @Import(name="project")
-      private final @Nullable String project;
+    private @Nullable String project;
 
     public Optional<String> project() {
-        return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
+        return Optional.ofNullable(this.project);
     }
 
-    public GetPeeringIamPolicyArgs(
-        @Nullable String optionsRequestedPolicyVersion,
-        String peeringId,
-        @Nullable String project) {
-        this.optionsRequestedPolicyVersion = optionsRequestedPolicyVersion;
-        this.peeringId = Objects.requireNonNull(peeringId, "expected parameter 'peeringId' to be non-null");
-        this.project = project;
-    }
+    private GetPeeringIamPolicyArgs() {}
 
-    private GetPeeringIamPolicyArgs() {
-        this.optionsRequestedPolicyVersion = null;
-        this.peeringId = null;
-        this.project = null;
+    private GetPeeringIamPolicyArgs(GetPeeringIamPolicyArgs $) {
+        this.optionsRequestedPolicyVersion = $.optionsRequestedPolicyVersion;
+        this.peeringId = $.peeringId;
+        this.project = $.project;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetPeeringIamPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String optionsRequestedPolicyVersion;
-        private String peeringId;
-        private @Nullable String project;
+        private GetPeeringIamPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetPeeringIamPolicyArgs();
         }
 
         public Builder(GetPeeringIamPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.optionsRequestedPolicyVersion = defaults.optionsRequestedPolicyVersion;
-    	      this.peeringId = defaults.peeringId;
-    	      this.project = defaults.project;
+            $ = new GetPeeringIamPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder optionsRequestedPolicyVersion(@Nullable String optionsRequestedPolicyVersion) {
-            this.optionsRequestedPolicyVersion = optionsRequestedPolicyVersion;
+            $.optionsRequestedPolicyVersion = optionsRequestedPolicyVersion;
             return this;
         }
+
         public Builder peeringId(String peeringId) {
-            this.peeringId = Objects.requireNonNull(peeringId);
+            $.peeringId = peeringId;
             return this;
         }
+
         public Builder project(@Nullable String project) {
-            this.project = project;
+            $.project = project;
             return this;
-        }        public GetPeeringIamPolicyArgs build() {
-            return new GetPeeringIamPolicyArgs(optionsRequestedPolicyVersion, peeringId, project);
+        }
+
+        public GetPeeringIamPolicyArgs build() {
+            $.peeringId = Objects.requireNonNull($.peeringId, "expected parameter 'peeringId' to be non-null");
+            return $;
         }
     }
+
 }

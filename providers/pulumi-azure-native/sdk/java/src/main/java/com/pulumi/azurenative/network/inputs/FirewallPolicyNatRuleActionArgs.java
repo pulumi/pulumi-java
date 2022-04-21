@@ -7,9 +7,9 @@ import com.pulumi.azurenative.network.enums.FirewallPolicyNatRuleActionType;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,49 +26,48 @@ public final class FirewallPolicyNatRuleActionArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="type")
-      private final @Nullable Output<Either<String,FirewallPolicyNatRuleActionType>> type;
+    private @Nullable Output<Either<String,FirewallPolicyNatRuleActionType>> type;
 
-    public Output<Either<String,FirewallPolicyNatRuleActionType>> type() {
-        return this.type == null ? Codegen.empty() : this.type;
+    public Optional<Output<Either<String,FirewallPolicyNatRuleActionType>>> type() {
+        return Optional.ofNullable(this.type);
     }
 
-    public FirewallPolicyNatRuleActionArgs(@Nullable Output<Either<String,FirewallPolicyNatRuleActionType>> type) {
-        this.type = type;
-    }
+    private FirewallPolicyNatRuleActionArgs() {}
 
-    private FirewallPolicyNatRuleActionArgs() {
-        this.type = Codegen.empty();
+    private FirewallPolicyNatRuleActionArgs(FirewallPolicyNatRuleActionArgs $) {
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FirewallPolicyNatRuleActionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Either<String,FirewallPolicyNatRuleActionType>> type;
+        private FirewallPolicyNatRuleActionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new FirewallPolicyNatRuleActionArgs();
         }
 
         public Builder(FirewallPolicyNatRuleActionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.type = defaults.type;
+            $ = new FirewallPolicyNatRuleActionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder type(@Nullable Output<Either<String,FirewallPolicyNatRuleActionType>> type) {
-            this.type = type;
+            $.type = type;
             return this;
         }
-        public Builder type(@Nullable Either<String,FirewallPolicyNatRuleActionType> type) {
-            this.type = Codegen.ofNullable(type);
-            return this;
-        }        public FirewallPolicyNatRuleActionArgs build() {
-            return new FirewallPolicyNatRuleActionArgs(type);
+
+        public Builder type(Either<String,FirewallPolicyNatRuleActionType> type) {
+            return type(Output.of(type));
+        }
+
+        public FirewallPolicyNatRuleActionArgs build() {
+            return $;
         }
     }
+
 }

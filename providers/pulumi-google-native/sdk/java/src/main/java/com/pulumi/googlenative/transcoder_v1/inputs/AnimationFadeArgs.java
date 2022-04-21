@@ -5,11 +5,11 @@ package com.pulumi.googlenative.transcoder_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.transcoder_v1.enums.AnimationFadeFadeType;
 import com.pulumi.googlenative.transcoder_v1.inputs.NormalizedCoordinateArgs;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class AnimationFadeArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="endTimeOffset")
-      private final @Nullable Output<String> endTimeOffset;
+    private @Nullable Output<String> endTimeOffset;
 
-    public Output<String> endTimeOffset() {
-        return this.endTimeOffset == null ? Codegen.empty() : this.endTimeOffset;
+    public Optional<Output<String>> endTimeOffset() {
+        return Optional.ofNullable(this.endTimeOffset);
     }
 
     /**
@@ -37,7 +37,7 @@ public final class AnimationFadeArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="fadeType", required=true)
-      private final Output<AnimationFadeFadeType> fadeType;
+    private Output<AnimationFadeFadeType> fadeType;
 
     public Output<AnimationFadeFadeType> fadeType() {
         return this.fadeType;
@@ -48,10 +48,10 @@ public final class AnimationFadeArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="startTimeOffset")
-      private final @Nullable Output<String> startTimeOffset;
+    private @Nullable Output<String> startTimeOffset;
 
-    public Output<String> startTimeOffset() {
-        return this.startTimeOffset == null ? Codegen.empty() : this.startTimeOffset;
+    public Optional<Output<String>> startTimeOffset() {
+        return Optional.ofNullable(this.startTimeOffset);
     }
 
     /**
@@ -59,89 +59,79 @@ public final class AnimationFadeArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="xy")
-      private final @Nullable Output<NormalizedCoordinateArgs> xy;
+    private @Nullable Output<NormalizedCoordinateArgs> xy;
 
-    public Output<NormalizedCoordinateArgs> xy() {
-        return this.xy == null ? Codegen.empty() : this.xy;
+    public Optional<Output<NormalizedCoordinateArgs>> xy() {
+        return Optional.ofNullable(this.xy);
     }
 
-    public AnimationFadeArgs(
-        @Nullable Output<String> endTimeOffset,
-        Output<AnimationFadeFadeType> fadeType,
-        @Nullable Output<String> startTimeOffset,
-        @Nullable Output<NormalizedCoordinateArgs> xy) {
-        this.endTimeOffset = endTimeOffset;
-        this.fadeType = Objects.requireNonNull(fadeType, "expected parameter 'fadeType' to be non-null");
-        this.startTimeOffset = startTimeOffset;
-        this.xy = xy;
-    }
+    private AnimationFadeArgs() {}
 
-    private AnimationFadeArgs() {
-        this.endTimeOffset = Codegen.empty();
-        this.fadeType = Codegen.empty();
-        this.startTimeOffset = Codegen.empty();
-        this.xy = Codegen.empty();
+    private AnimationFadeArgs(AnimationFadeArgs $) {
+        this.endTimeOffset = $.endTimeOffset;
+        this.fadeType = $.fadeType;
+        this.startTimeOffset = $.startTimeOffset;
+        this.xy = $.xy;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AnimationFadeArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> endTimeOffset;
-        private Output<AnimationFadeFadeType> fadeType;
-        private @Nullable Output<String> startTimeOffset;
-        private @Nullable Output<NormalizedCoordinateArgs> xy;
+        private AnimationFadeArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AnimationFadeArgs();
         }
 
         public Builder(AnimationFadeArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.endTimeOffset = defaults.endTimeOffset;
-    	      this.fadeType = defaults.fadeType;
-    	      this.startTimeOffset = defaults.startTimeOffset;
-    	      this.xy = defaults.xy;
+            $ = new AnimationFadeArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder endTimeOffset(@Nullable Output<String> endTimeOffset) {
-            this.endTimeOffset = endTimeOffset;
+            $.endTimeOffset = endTimeOffset;
             return this;
         }
-        public Builder endTimeOffset(@Nullable String endTimeOffset) {
-            this.endTimeOffset = Codegen.ofNullable(endTimeOffset);
-            return this;
+
+        public Builder endTimeOffset(String endTimeOffset) {
+            return endTimeOffset(Output.of(endTimeOffset));
         }
+
         public Builder fadeType(Output<AnimationFadeFadeType> fadeType) {
-            this.fadeType = Objects.requireNonNull(fadeType);
+            $.fadeType = fadeType;
             return this;
         }
+
         public Builder fadeType(AnimationFadeFadeType fadeType) {
-            this.fadeType = Output.of(Objects.requireNonNull(fadeType));
-            return this;
+            return fadeType(Output.of(fadeType));
         }
+
         public Builder startTimeOffset(@Nullable Output<String> startTimeOffset) {
-            this.startTimeOffset = startTimeOffset;
+            $.startTimeOffset = startTimeOffset;
             return this;
         }
-        public Builder startTimeOffset(@Nullable String startTimeOffset) {
-            this.startTimeOffset = Codegen.ofNullable(startTimeOffset);
-            return this;
+
+        public Builder startTimeOffset(String startTimeOffset) {
+            return startTimeOffset(Output.of(startTimeOffset));
         }
+
         public Builder xy(@Nullable Output<NormalizedCoordinateArgs> xy) {
-            this.xy = xy;
+            $.xy = xy;
             return this;
         }
-        public Builder xy(@Nullable NormalizedCoordinateArgs xy) {
-            this.xy = Codegen.ofNullable(xy);
-            return this;
-        }        public AnimationFadeArgs build() {
-            return new AnimationFadeArgs(endTimeOffset, fadeType, startTimeOffset, xy);
+
+        public Builder xy(NormalizedCoordinateArgs xy) {
+            return xy(Output.of(xy));
+        }
+
+        public AnimationFadeArgs build() {
+            $.fadeType = Objects.requireNonNull($.fadeType, "expected parameter 'fadeType' to be non-null");
+            return $;
         }
     }
+
 }

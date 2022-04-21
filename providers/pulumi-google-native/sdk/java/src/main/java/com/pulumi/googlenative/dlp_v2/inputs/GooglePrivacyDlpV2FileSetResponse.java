@@ -22,7 +22,7 @@ public final class GooglePrivacyDlpV2FileSetResponse extends com.pulumi.resource
      * 
      */
     @Import(name="regexFileSet", required=true)
-      private final GooglePrivacyDlpV2CloudStorageRegexFileSetResponse regexFileSet;
+    private GooglePrivacyDlpV2CloudStorageRegexFileSetResponse regexFileSet;
 
     public GooglePrivacyDlpV2CloudStorageRegexFileSetResponse regexFileSet() {
         return this.regexFileSet;
@@ -33,55 +33,52 @@ public final class GooglePrivacyDlpV2FileSetResponse extends com.pulumi.resource
      * 
      */
     @Import(name="url", required=true)
-      private final String url;
+    private String url;
 
     public String url() {
         return this.url;
     }
 
-    public GooglePrivacyDlpV2FileSetResponse(
-        GooglePrivacyDlpV2CloudStorageRegexFileSetResponse regexFileSet,
-        String url) {
-        this.regexFileSet = Objects.requireNonNull(regexFileSet, "expected parameter 'regexFileSet' to be non-null");
-        this.url = Objects.requireNonNull(url, "expected parameter 'url' to be non-null");
-    }
+    private GooglePrivacyDlpV2FileSetResponse() {}
 
-    private GooglePrivacyDlpV2FileSetResponse() {
-        this.regexFileSet = null;
-        this.url = null;
+    private GooglePrivacyDlpV2FileSetResponse(GooglePrivacyDlpV2FileSetResponse $) {
+        this.regexFileSet = $.regexFileSet;
+        this.url = $.url;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GooglePrivacyDlpV2FileSetResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private GooglePrivacyDlpV2CloudStorageRegexFileSetResponse regexFileSet;
-        private String url;
+        private GooglePrivacyDlpV2FileSetResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GooglePrivacyDlpV2FileSetResponse();
         }
 
         public Builder(GooglePrivacyDlpV2FileSetResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.regexFileSet = defaults.regexFileSet;
-    	      this.url = defaults.url;
+            $ = new GooglePrivacyDlpV2FileSetResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder regexFileSet(GooglePrivacyDlpV2CloudStorageRegexFileSetResponse regexFileSet) {
-            this.regexFileSet = Objects.requireNonNull(regexFileSet);
+            $.regexFileSet = regexFileSet;
             return this;
         }
+
         public Builder url(String url) {
-            this.url = Objects.requireNonNull(url);
+            $.url = url;
             return this;
-        }        public GooglePrivacyDlpV2FileSetResponse build() {
-            return new GooglePrivacyDlpV2FileSetResponse(regexFileSet, url);
+        }
+
+        public GooglePrivacyDlpV2FileSetResponse build() {
+            $.regexFileSet = Objects.requireNonNull($.regexFileSet, "expected parameter 'regexFileSet' to be non-null");
+            $.url = Objects.requireNonNull($.url, "expected parameter 'url' to be non-null");
+            return $;
         }
     }
+
 }

@@ -21,7 +21,7 @@ public final class MetricDimensionResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="sourceName", required=true)
-      private final String sourceName;
+    private String sourceName;
 
     public String sourceName() {
         return this.sourceName;
@@ -32,55 +32,52 @@ public final class MetricDimensionResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="sourceType", required=true)
-      private final String sourceType;
+    private String sourceType;
 
     public String sourceType() {
         return this.sourceType;
     }
 
-    public MetricDimensionResponse(
-        String sourceName,
-        String sourceType) {
-        this.sourceName = Objects.requireNonNull(sourceName, "expected parameter 'sourceName' to be non-null");
-        this.sourceType = Objects.requireNonNull(sourceType, "expected parameter 'sourceType' to be non-null");
-    }
+    private MetricDimensionResponse() {}
 
-    private MetricDimensionResponse() {
-        this.sourceName = null;
-        this.sourceType = null;
+    private MetricDimensionResponse(MetricDimensionResponse $) {
+        this.sourceName = $.sourceName;
+        this.sourceType = $.sourceType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MetricDimensionResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String sourceName;
-        private String sourceType;
+        private MetricDimensionResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new MetricDimensionResponse();
         }
 
         public Builder(MetricDimensionResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.sourceName = defaults.sourceName;
-    	      this.sourceType = defaults.sourceType;
+            $ = new MetricDimensionResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder sourceName(String sourceName) {
-            this.sourceName = Objects.requireNonNull(sourceName);
+            $.sourceName = sourceName;
             return this;
         }
+
         public Builder sourceType(String sourceType) {
-            this.sourceType = Objects.requireNonNull(sourceType);
+            $.sourceType = sourceType;
             return this;
-        }        public MetricDimensionResponse build() {
-            return new MetricDimensionResponse(sourceName, sourceType);
+        }
+
+        public MetricDimensionResponse build() {
+            $.sourceName = Objects.requireNonNull($.sourceName, "expected parameter 'sourceName' to be non-null");
+            $.sourceType = Objects.requireNonNull($.sourceType, "expected parameter 'sourceType' to be non-null");
+            return $;
         }
     }
+
 }

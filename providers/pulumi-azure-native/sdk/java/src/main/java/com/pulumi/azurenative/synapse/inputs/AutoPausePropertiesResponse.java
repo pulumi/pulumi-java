@@ -24,10 +24,10 @@ public final class AutoPausePropertiesResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="delayInMinutes")
-      private final @Nullable Integer delayInMinutes;
+    private @Nullable Integer delayInMinutes;
 
     public Optional<Integer> delayInMinutes() {
-        return this.delayInMinutes == null ? Optional.empty() : Optional.ofNullable(this.delayInMinutes);
+        return Optional.ofNullable(this.delayInMinutes);
     }
 
     /**
@@ -35,55 +35,50 @@ public final class AutoPausePropertiesResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="enabled")
-      private final @Nullable Boolean enabled;
+    private @Nullable Boolean enabled;
 
     public Optional<Boolean> enabled() {
-        return this.enabled == null ? Optional.empty() : Optional.ofNullable(this.enabled);
+        return Optional.ofNullable(this.enabled);
     }
 
-    public AutoPausePropertiesResponse(
-        @Nullable Integer delayInMinutes,
-        @Nullable Boolean enabled) {
-        this.delayInMinutes = delayInMinutes;
-        this.enabled = enabled;
-    }
+    private AutoPausePropertiesResponse() {}
 
-    private AutoPausePropertiesResponse() {
-        this.delayInMinutes = null;
-        this.enabled = null;
+    private AutoPausePropertiesResponse(AutoPausePropertiesResponse $) {
+        this.delayInMinutes = $.delayInMinutes;
+        this.enabled = $.enabled;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AutoPausePropertiesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Integer delayInMinutes;
-        private @Nullable Boolean enabled;
+        private AutoPausePropertiesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AutoPausePropertiesResponse();
         }
 
         public Builder(AutoPausePropertiesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.delayInMinutes = defaults.delayInMinutes;
-    	      this.enabled = defaults.enabled;
+            $ = new AutoPausePropertiesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder delayInMinutes(@Nullable Integer delayInMinutes) {
-            this.delayInMinutes = delayInMinutes;
+            $.delayInMinutes = delayInMinutes;
             return this;
         }
+
         public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = enabled;
+            $.enabled = enabled;
             return this;
-        }        public AutoPausePropertiesResponse build() {
-            return new AutoPausePropertiesResponse(delayInMinutes, enabled);
+        }
+
+        public AutoPausePropertiesResponse build() {
+            return $;
         }
     }
+
 }

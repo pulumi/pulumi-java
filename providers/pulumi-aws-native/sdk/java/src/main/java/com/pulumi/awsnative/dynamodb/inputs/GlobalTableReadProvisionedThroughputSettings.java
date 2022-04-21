@@ -16,62 +16,57 @@ public final class GlobalTableReadProvisionedThroughputSettings extends com.pulu
     public static final GlobalTableReadProvisionedThroughputSettings Empty = new GlobalTableReadProvisionedThroughputSettings();
 
     @Import(name="readCapacityAutoScalingSettings")
-      private final @Nullable GlobalTableCapacityAutoScalingSettings readCapacityAutoScalingSettings;
+    private @Nullable GlobalTableCapacityAutoScalingSettings readCapacityAutoScalingSettings;
 
     public Optional<GlobalTableCapacityAutoScalingSettings> readCapacityAutoScalingSettings() {
-        return this.readCapacityAutoScalingSettings == null ? Optional.empty() : Optional.ofNullable(this.readCapacityAutoScalingSettings);
+        return Optional.ofNullable(this.readCapacityAutoScalingSettings);
     }
 
     @Import(name="readCapacityUnits")
-      private final @Nullable Integer readCapacityUnits;
+    private @Nullable Integer readCapacityUnits;
 
     public Optional<Integer> readCapacityUnits() {
-        return this.readCapacityUnits == null ? Optional.empty() : Optional.ofNullable(this.readCapacityUnits);
+        return Optional.ofNullable(this.readCapacityUnits);
     }
 
-    public GlobalTableReadProvisionedThroughputSettings(
-        @Nullable GlobalTableCapacityAutoScalingSettings readCapacityAutoScalingSettings,
-        @Nullable Integer readCapacityUnits) {
-        this.readCapacityAutoScalingSettings = readCapacityAutoScalingSettings;
-        this.readCapacityUnits = readCapacityUnits;
-    }
+    private GlobalTableReadProvisionedThroughputSettings() {}
 
-    private GlobalTableReadProvisionedThroughputSettings() {
-        this.readCapacityAutoScalingSettings = null;
-        this.readCapacityUnits = null;
+    private GlobalTableReadProvisionedThroughputSettings(GlobalTableReadProvisionedThroughputSettings $) {
+        this.readCapacityAutoScalingSettings = $.readCapacityAutoScalingSettings;
+        this.readCapacityUnits = $.readCapacityUnits;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GlobalTableReadProvisionedThroughputSettings defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable GlobalTableCapacityAutoScalingSettings readCapacityAutoScalingSettings;
-        private @Nullable Integer readCapacityUnits;
+        private GlobalTableReadProvisionedThroughputSettings $;
 
         public Builder() {
-    	      // Empty
+            $ = new GlobalTableReadProvisionedThroughputSettings();
         }
 
         public Builder(GlobalTableReadProvisionedThroughputSettings defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.readCapacityAutoScalingSettings = defaults.readCapacityAutoScalingSettings;
-    	      this.readCapacityUnits = defaults.readCapacityUnits;
+            $ = new GlobalTableReadProvisionedThroughputSettings(Objects.requireNonNull(defaults));
         }
 
         public Builder readCapacityAutoScalingSettings(@Nullable GlobalTableCapacityAutoScalingSettings readCapacityAutoScalingSettings) {
-            this.readCapacityAutoScalingSettings = readCapacityAutoScalingSettings;
+            $.readCapacityAutoScalingSettings = readCapacityAutoScalingSettings;
             return this;
         }
+
         public Builder readCapacityUnits(@Nullable Integer readCapacityUnits) {
-            this.readCapacityUnits = readCapacityUnits;
+            $.readCapacityUnits = readCapacityUnits;
             return this;
-        }        public GlobalTableReadProvisionedThroughputSettings build() {
-            return new GlobalTableReadProvisionedThroughputSettings(readCapacityAutoScalingSettings, readCapacityUnits);
+        }
+
+        public GlobalTableReadProvisionedThroughputSettings build() {
+            return $;
         }
     }
+
 }

@@ -17,7 +17,7 @@ public final class GetGatewayArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="gatewayId", required=true)
-      private final String gatewayId;
+    private String gatewayId;
 
     public String gatewayId() {
         return this.gatewayId;
@@ -28,7 +28,7 @@ public final class GetGatewayArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -39,64 +39,59 @@ public final class GetGatewayArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="serviceName", required=true)
-      private final String serviceName;
+    private String serviceName;
 
     public String serviceName() {
         return this.serviceName;
     }
 
-    public GetGatewayArgs(
-        String gatewayId,
-        String resourceGroupName,
-        String serviceName) {
-        this.gatewayId = Objects.requireNonNull(gatewayId, "expected parameter 'gatewayId' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.serviceName = Objects.requireNonNull(serviceName, "expected parameter 'serviceName' to be non-null");
-    }
+    private GetGatewayArgs() {}
 
-    private GetGatewayArgs() {
-        this.gatewayId = null;
-        this.resourceGroupName = null;
-        this.serviceName = null;
+    private GetGatewayArgs(GetGatewayArgs $) {
+        this.gatewayId = $.gatewayId;
+        this.resourceGroupName = $.resourceGroupName;
+        this.serviceName = $.serviceName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetGatewayArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String gatewayId;
-        private String resourceGroupName;
-        private String serviceName;
+        private GetGatewayArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetGatewayArgs();
         }
 
         public Builder(GetGatewayArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.gatewayId = defaults.gatewayId;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.serviceName = defaults.serviceName;
+            $ = new GetGatewayArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder gatewayId(String gatewayId) {
-            this.gatewayId = Objects.requireNonNull(gatewayId);
+            $.gatewayId = gatewayId;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder serviceName(String serviceName) {
-            this.serviceName = Objects.requireNonNull(serviceName);
+            $.serviceName = serviceName;
             return this;
-        }        public GetGatewayArgs build() {
-            return new GetGatewayArgs(gatewayId, resourceGroupName, serviceName);
+        }
+
+        public GetGatewayArgs build() {
+            $.gatewayId = Objects.requireNonNull($.gatewayId, "expected parameter 'gatewayId' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.serviceName = Objects.requireNonNull($.serviceName, "expected parameter 'serviceName' to be non-null");
+            return $;
         }
     }
+
 }

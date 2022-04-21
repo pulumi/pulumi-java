@@ -5,11 +5,11 @@ package com.pulumi.googlenative.apigee_v1;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -18,10 +18,10 @@ public final class AliasArgs extends com.pulumi.resources.ResourceArgs {
     public static final AliasArgs Empty = new AliasArgs();
 
     @Import(name="alias")
-      private final @Nullable Output<String> alias;
+    private @Nullable Output<String> alias;
 
-    public Output<String> alias() {
-        return this.alias == null ? Codegen.empty() : this.alias;
+    public Optional<Output<String>> alias() {
+        return Optional.ofNullable(this.alias);
     }
 
     /**
@@ -29,10 +29,10 @@ public final class AliasArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="contentType")
-      private final @Nullable Output<String> contentType;
+    private @Nullable Output<String> contentType;
 
-    public Output<String> contentType() {
-        return this.contentType == null ? Codegen.empty() : this.contentType;
+    public Optional<Output<String>> contentType() {
+        return Optional.ofNullable(this.contentType);
     }
 
     /**
@@ -40,14 +40,14 @@ public final class AliasArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="data")
-      private final @Nullable Output<String> data;
+    private @Nullable Output<String> data;
 
-    public Output<String> data() {
-        return this.data == null ? Codegen.empty() : this.data;
+    public Optional<Output<String>> data() {
+        return Optional.ofNullable(this.data);
     }
 
     @Import(name="environmentId", required=true)
-      private final Output<String> environmentId;
+    private Output<String> environmentId;
 
     public Output<String> environmentId() {
         return this.environmentId;
@@ -58,202 +58,181 @@ public final class AliasArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="extensions")
-      private final @Nullable Output<List<Map<String,String>>> extensions;
+    private @Nullable Output<List<Map<String,String>>> extensions;
 
-    public Output<List<Map<String,String>>> extensions() {
-        return this.extensions == null ? Codegen.empty() : this.extensions;
+    public Optional<Output<List<Map<String,String>>>> extensions() {
+        return Optional.ofNullable(this.extensions);
     }
 
     @Import(name="format", required=true)
-      private final Output<String> format;
+    private Output<String> format;
 
     public Output<String> format() {
         return this.format;
     }
 
     @Import(name="ignoreExpiryValidation")
-      private final @Nullable Output<String> ignoreExpiryValidation;
+    private @Nullable Output<String> ignoreExpiryValidation;
 
-    public Output<String> ignoreExpiryValidation() {
-        return this.ignoreExpiryValidation == null ? Codegen.empty() : this.ignoreExpiryValidation;
+    public Optional<Output<String>> ignoreExpiryValidation() {
+        return Optional.ofNullable(this.ignoreExpiryValidation);
     }
 
     @Import(name="ignoreNewlineValidation")
-      private final @Nullable Output<String> ignoreNewlineValidation;
+    private @Nullable Output<String> ignoreNewlineValidation;
 
-    public Output<String> ignoreNewlineValidation() {
-        return this.ignoreNewlineValidation == null ? Codegen.empty() : this.ignoreNewlineValidation;
+    public Optional<Output<String>> ignoreNewlineValidation() {
+        return Optional.ofNullable(this.ignoreNewlineValidation);
     }
 
     @Import(name="keystoreId", required=true)
-      private final Output<String> keystoreId;
+    private Output<String> keystoreId;
 
     public Output<String> keystoreId() {
         return this.keystoreId;
     }
 
     @Import(name="organizationId", required=true)
-      private final Output<String> organizationId;
+    private Output<String> organizationId;
 
     public Output<String> organizationId() {
         return this.organizationId;
     }
 
-    public AliasArgs(
-        @Nullable Output<String> alias,
-        @Nullable Output<String> contentType,
-        @Nullable Output<String> data,
-        Output<String> environmentId,
-        @Nullable Output<List<Map<String,String>>> extensions,
-        Output<String> format,
-        @Nullable Output<String> ignoreExpiryValidation,
-        @Nullable Output<String> ignoreNewlineValidation,
-        Output<String> keystoreId,
-        Output<String> organizationId) {
-        this.alias = alias;
-        this.contentType = contentType;
-        this.data = data;
-        this.environmentId = Objects.requireNonNull(environmentId, "expected parameter 'environmentId' to be non-null");
-        this.extensions = extensions;
-        this.format = Objects.requireNonNull(format, "expected parameter 'format' to be non-null");
-        this.ignoreExpiryValidation = ignoreExpiryValidation;
-        this.ignoreNewlineValidation = ignoreNewlineValidation;
-        this.keystoreId = Objects.requireNonNull(keystoreId, "expected parameter 'keystoreId' to be non-null");
-        this.organizationId = Objects.requireNonNull(organizationId, "expected parameter 'organizationId' to be non-null");
-    }
+    private AliasArgs() {}
 
-    private AliasArgs() {
-        this.alias = Codegen.empty();
-        this.contentType = Codegen.empty();
-        this.data = Codegen.empty();
-        this.environmentId = Codegen.empty();
-        this.extensions = Codegen.empty();
-        this.format = Codegen.empty();
-        this.ignoreExpiryValidation = Codegen.empty();
-        this.ignoreNewlineValidation = Codegen.empty();
-        this.keystoreId = Codegen.empty();
-        this.organizationId = Codegen.empty();
+    private AliasArgs(AliasArgs $) {
+        this.alias = $.alias;
+        this.contentType = $.contentType;
+        this.data = $.data;
+        this.environmentId = $.environmentId;
+        this.extensions = $.extensions;
+        this.format = $.format;
+        this.ignoreExpiryValidation = $.ignoreExpiryValidation;
+        this.ignoreNewlineValidation = $.ignoreNewlineValidation;
+        this.keystoreId = $.keystoreId;
+        this.organizationId = $.organizationId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AliasArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> alias;
-        private @Nullable Output<String> contentType;
-        private @Nullable Output<String> data;
-        private Output<String> environmentId;
-        private @Nullable Output<List<Map<String,String>>> extensions;
-        private Output<String> format;
-        private @Nullable Output<String> ignoreExpiryValidation;
-        private @Nullable Output<String> ignoreNewlineValidation;
-        private Output<String> keystoreId;
-        private Output<String> organizationId;
+        private AliasArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AliasArgs();
         }
 
         public Builder(AliasArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.alias = defaults.alias;
-    	      this.contentType = defaults.contentType;
-    	      this.data = defaults.data;
-    	      this.environmentId = defaults.environmentId;
-    	      this.extensions = defaults.extensions;
-    	      this.format = defaults.format;
-    	      this.ignoreExpiryValidation = defaults.ignoreExpiryValidation;
-    	      this.ignoreNewlineValidation = defaults.ignoreNewlineValidation;
-    	      this.keystoreId = defaults.keystoreId;
-    	      this.organizationId = defaults.organizationId;
+            $ = new AliasArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder alias(@Nullable Output<String> alias) {
-            this.alias = alias;
+            $.alias = alias;
             return this;
         }
-        public Builder alias(@Nullable String alias) {
-            this.alias = Codegen.ofNullable(alias);
-            return this;
+
+        public Builder alias(String alias) {
+            return alias(Output.of(alias));
         }
+
         public Builder contentType(@Nullable Output<String> contentType) {
-            this.contentType = contentType;
+            $.contentType = contentType;
             return this;
         }
-        public Builder contentType(@Nullable String contentType) {
-            this.contentType = Codegen.ofNullable(contentType);
-            return this;
+
+        public Builder contentType(String contentType) {
+            return contentType(Output.of(contentType));
         }
+
         public Builder data(@Nullable Output<String> data) {
-            this.data = data;
+            $.data = data;
             return this;
         }
-        public Builder data(@Nullable String data) {
-            this.data = Codegen.ofNullable(data);
-            return this;
+
+        public Builder data(String data) {
+            return data(Output.of(data));
         }
+
         public Builder environmentId(Output<String> environmentId) {
-            this.environmentId = Objects.requireNonNull(environmentId);
+            $.environmentId = environmentId;
             return this;
         }
+
         public Builder environmentId(String environmentId) {
-            this.environmentId = Output.of(Objects.requireNonNull(environmentId));
-            return this;
+            return environmentId(Output.of(environmentId));
         }
+
         public Builder extensions(@Nullable Output<List<Map<String,String>>> extensions) {
-            this.extensions = extensions;
+            $.extensions = extensions;
             return this;
         }
-        public Builder extensions(@Nullable List<Map<String,String>> extensions) {
-            this.extensions = Codegen.ofNullable(extensions);
-            return this;
+
+        public Builder extensions(List<Map<String,String>> extensions) {
+            return extensions(Output.of(extensions));
         }
+
+        public Builder extensions(Map<String,String>... extensions) {
+            return extensions(List.of(extensions));
+        }
+
         public Builder format(Output<String> format) {
-            this.format = Objects.requireNonNull(format);
+            $.format = format;
             return this;
         }
+
         public Builder format(String format) {
-            this.format = Output.of(Objects.requireNonNull(format));
-            return this;
+            return format(Output.of(format));
         }
+
         public Builder ignoreExpiryValidation(@Nullable Output<String> ignoreExpiryValidation) {
-            this.ignoreExpiryValidation = ignoreExpiryValidation;
+            $.ignoreExpiryValidation = ignoreExpiryValidation;
             return this;
         }
-        public Builder ignoreExpiryValidation(@Nullable String ignoreExpiryValidation) {
-            this.ignoreExpiryValidation = Codegen.ofNullable(ignoreExpiryValidation);
-            return this;
+
+        public Builder ignoreExpiryValidation(String ignoreExpiryValidation) {
+            return ignoreExpiryValidation(Output.of(ignoreExpiryValidation));
         }
+
         public Builder ignoreNewlineValidation(@Nullable Output<String> ignoreNewlineValidation) {
-            this.ignoreNewlineValidation = ignoreNewlineValidation;
+            $.ignoreNewlineValidation = ignoreNewlineValidation;
             return this;
         }
-        public Builder ignoreNewlineValidation(@Nullable String ignoreNewlineValidation) {
-            this.ignoreNewlineValidation = Codegen.ofNullable(ignoreNewlineValidation);
-            return this;
+
+        public Builder ignoreNewlineValidation(String ignoreNewlineValidation) {
+            return ignoreNewlineValidation(Output.of(ignoreNewlineValidation));
         }
+
         public Builder keystoreId(Output<String> keystoreId) {
-            this.keystoreId = Objects.requireNonNull(keystoreId);
+            $.keystoreId = keystoreId;
             return this;
         }
+
         public Builder keystoreId(String keystoreId) {
-            this.keystoreId = Output.of(Objects.requireNonNull(keystoreId));
-            return this;
+            return keystoreId(Output.of(keystoreId));
         }
+
         public Builder organizationId(Output<String> organizationId) {
-            this.organizationId = Objects.requireNonNull(organizationId);
+            $.organizationId = organizationId;
             return this;
         }
+
         public Builder organizationId(String organizationId) {
-            this.organizationId = Output.of(Objects.requireNonNull(organizationId));
-            return this;
-        }        public AliasArgs build() {
-            return new AliasArgs(alias, contentType, data, environmentId, extensions, format, ignoreExpiryValidation, ignoreNewlineValidation, keystoreId, organizationId);
+            return organizationId(Output.of(organizationId));
+        }
+
+        public AliasArgs build() {
+            $.environmentId = Objects.requireNonNull($.environmentId, "expected parameter 'environmentId' to be non-null");
+            $.format = Objects.requireNonNull($.format, "expected parameter 'format' to be non-null");
+            $.keystoreId = Objects.requireNonNull($.keystoreId, "expected parameter 'keystoreId' to be non-null");
+            $.organizationId = Objects.requireNonNull($.organizationId, "expected parameter 'organizationId' to be non-null");
+            return $;
         }
     }
+
 }

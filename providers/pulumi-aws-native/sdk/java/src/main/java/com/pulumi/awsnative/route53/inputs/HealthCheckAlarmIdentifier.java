@@ -21,7 +21,7 @@ public final class HealthCheckAlarmIdentifier extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -32,55 +32,52 @@ public final class HealthCheckAlarmIdentifier extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="region", required=true)
-      private final String region;
+    private String region;
 
     public String region() {
         return this.region;
     }
 
-    public HealthCheckAlarmIdentifier(
-        String name,
-        String region) {
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.region = Objects.requireNonNull(region, "expected parameter 'region' to be non-null");
-    }
+    private HealthCheckAlarmIdentifier() {}
 
-    private HealthCheckAlarmIdentifier() {
-        this.name = null;
-        this.region = null;
+    private HealthCheckAlarmIdentifier(HealthCheckAlarmIdentifier $) {
+        this.name = $.name;
+        this.region = $.region;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(HealthCheckAlarmIdentifier defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String name;
-        private String region;
+        private HealthCheckAlarmIdentifier $;
 
         public Builder() {
-    	      // Empty
+            $ = new HealthCheckAlarmIdentifier();
         }
 
         public Builder(HealthCheckAlarmIdentifier defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.region = defaults.region;
+            $ = new HealthCheckAlarmIdentifier(Objects.requireNonNull(defaults));
         }
 
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder region(String region) {
-            this.region = Objects.requireNonNull(region);
+            $.region = region;
             return this;
-        }        public HealthCheckAlarmIdentifier build() {
-            return new HealthCheckAlarmIdentifier(name, region);
+        }
+
+        public HealthCheckAlarmIdentifier build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.region = Objects.requireNonNull($.region, "expected parameter 'region' to be non-null");
+            return $;
         }
     }
+
 }

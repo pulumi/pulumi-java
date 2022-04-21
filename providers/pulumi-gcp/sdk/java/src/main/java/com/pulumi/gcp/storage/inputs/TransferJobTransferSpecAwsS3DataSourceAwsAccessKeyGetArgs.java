@@ -5,7 +5,6 @@ package com.pulumi.gcp.storage.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,7 +18,7 @@ public final class TransferJobTransferSpecAwsS3DataSourceAwsAccessKeyGetArgs ext
      * 
      */
     @Import(name="accessKeyId", required=true)
-      private final Output<String> accessKeyId;
+    private Output<String> accessKeyId;
 
     public Output<String> accessKeyId() {
         return this.accessKeyId;
@@ -30,63 +29,60 @@ public final class TransferJobTransferSpecAwsS3DataSourceAwsAccessKeyGetArgs ext
      * 
      */
     @Import(name="secretAccessKey", required=true)
-      private final Output<String> secretAccessKey;
+    private Output<String> secretAccessKey;
 
     public Output<String> secretAccessKey() {
         return this.secretAccessKey;
     }
 
-    public TransferJobTransferSpecAwsS3DataSourceAwsAccessKeyGetArgs(
-        Output<String> accessKeyId,
-        Output<String> secretAccessKey) {
-        this.accessKeyId = Objects.requireNonNull(accessKeyId, "expected parameter 'accessKeyId' to be non-null");
-        this.secretAccessKey = Objects.requireNonNull(secretAccessKey, "expected parameter 'secretAccessKey' to be non-null");
-    }
+    private TransferJobTransferSpecAwsS3DataSourceAwsAccessKeyGetArgs() {}
 
-    private TransferJobTransferSpecAwsS3DataSourceAwsAccessKeyGetArgs() {
-        this.accessKeyId = Codegen.empty();
-        this.secretAccessKey = Codegen.empty();
+    private TransferJobTransferSpecAwsS3DataSourceAwsAccessKeyGetArgs(TransferJobTransferSpecAwsS3DataSourceAwsAccessKeyGetArgs $) {
+        this.accessKeyId = $.accessKeyId;
+        this.secretAccessKey = $.secretAccessKey;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TransferJobTransferSpecAwsS3DataSourceAwsAccessKeyGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> accessKeyId;
-        private Output<String> secretAccessKey;
+        private TransferJobTransferSpecAwsS3DataSourceAwsAccessKeyGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TransferJobTransferSpecAwsS3DataSourceAwsAccessKeyGetArgs();
         }
 
         public Builder(TransferJobTransferSpecAwsS3DataSourceAwsAccessKeyGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accessKeyId = defaults.accessKeyId;
-    	      this.secretAccessKey = defaults.secretAccessKey;
+            $ = new TransferJobTransferSpecAwsS3DataSourceAwsAccessKeyGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder accessKeyId(Output<String> accessKeyId) {
-            this.accessKeyId = Objects.requireNonNull(accessKeyId);
+            $.accessKeyId = accessKeyId;
             return this;
         }
+
         public Builder accessKeyId(String accessKeyId) {
-            this.accessKeyId = Output.of(Objects.requireNonNull(accessKeyId));
-            return this;
+            return accessKeyId(Output.of(accessKeyId));
         }
+
         public Builder secretAccessKey(Output<String> secretAccessKey) {
-            this.secretAccessKey = Objects.requireNonNull(secretAccessKey);
+            $.secretAccessKey = secretAccessKey;
             return this;
         }
+
         public Builder secretAccessKey(String secretAccessKey) {
-            this.secretAccessKey = Output.of(Objects.requireNonNull(secretAccessKey));
-            return this;
-        }        public TransferJobTransferSpecAwsS3DataSourceAwsAccessKeyGetArgs build() {
-            return new TransferJobTransferSpecAwsS3DataSourceAwsAccessKeyGetArgs(accessKeyId, secretAccessKey);
+            return secretAccessKey(Output.of(secretAccessKey));
+        }
+
+        public TransferJobTransferSpecAwsS3DataSourceAwsAccessKeyGetArgs build() {
+            $.accessKeyId = Objects.requireNonNull($.accessKeyId, "expected parameter 'accessKeyId' to be non-null");
+            $.secretAccessKey = Objects.requireNonNull($.secretAccessKey, "expected parameter 'secretAccessKey' to be non-null");
+            return $;
         }
     }
+
 }

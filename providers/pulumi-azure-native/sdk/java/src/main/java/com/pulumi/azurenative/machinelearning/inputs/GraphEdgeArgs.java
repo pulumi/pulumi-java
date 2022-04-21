@@ -5,9 +5,9 @@ package com.pulumi.azurenative.machinelearning.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class GraphEdgeArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="sourceNodeId")
-      private final @Nullable Output<String> sourceNodeId;
+    private @Nullable Output<String> sourceNodeId;
 
-    public Output<String> sourceNodeId() {
-        return this.sourceNodeId == null ? Codegen.empty() : this.sourceNodeId;
+    public Optional<Output<String>> sourceNodeId() {
+        return Optional.ofNullable(this.sourceNodeId);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class GraphEdgeArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="sourcePortId")
-      private final @Nullable Output<String> sourcePortId;
+    private @Nullable Output<String> sourcePortId;
 
-    public Output<String> sourcePortId() {
-        return this.sourcePortId == null ? Codegen.empty() : this.sourcePortId;
+    public Optional<Output<String>> sourcePortId() {
+        return Optional.ofNullable(this.sourcePortId);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class GraphEdgeArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="targetNodeId")
-      private final @Nullable Output<String> targetNodeId;
+    private @Nullable Output<String> targetNodeId;
 
-    public Output<String> targetNodeId() {
-        return this.targetNodeId == null ? Codegen.empty() : this.targetNodeId;
+    public Optional<Output<String>> targetNodeId() {
+        return Optional.ofNullable(this.targetNodeId);
     }
 
     /**
@@ -57,89 +57,78 @@ public final class GraphEdgeArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="targetPortId")
-      private final @Nullable Output<String> targetPortId;
+    private @Nullable Output<String> targetPortId;
 
-    public Output<String> targetPortId() {
-        return this.targetPortId == null ? Codegen.empty() : this.targetPortId;
+    public Optional<Output<String>> targetPortId() {
+        return Optional.ofNullable(this.targetPortId);
     }
 
-    public GraphEdgeArgs(
-        @Nullable Output<String> sourceNodeId,
-        @Nullable Output<String> sourcePortId,
-        @Nullable Output<String> targetNodeId,
-        @Nullable Output<String> targetPortId) {
-        this.sourceNodeId = sourceNodeId;
-        this.sourcePortId = sourcePortId;
-        this.targetNodeId = targetNodeId;
-        this.targetPortId = targetPortId;
-    }
+    private GraphEdgeArgs() {}
 
-    private GraphEdgeArgs() {
-        this.sourceNodeId = Codegen.empty();
-        this.sourcePortId = Codegen.empty();
-        this.targetNodeId = Codegen.empty();
-        this.targetPortId = Codegen.empty();
+    private GraphEdgeArgs(GraphEdgeArgs $) {
+        this.sourceNodeId = $.sourceNodeId;
+        this.sourcePortId = $.sourcePortId;
+        this.targetNodeId = $.targetNodeId;
+        this.targetPortId = $.targetPortId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GraphEdgeArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> sourceNodeId;
-        private @Nullable Output<String> sourcePortId;
-        private @Nullable Output<String> targetNodeId;
-        private @Nullable Output<String> targetPortId;
+        private GraphEdgeArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GraphEdgeArgs();
         }
 
         public Builder(GraphEdgeArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.sourceNodeId = defaults.sourceNodeId;
-    	      this.sourcePortId = defaults.sourcePortId;
-    	      this.targetNodeId = defaults.targetNodeId;
-    	      this.targetPortId = defaults.targetPortId;
+            $ = new GraphEdgeArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder sourceNodeId(@Nullable Output<String> sourceNodeId) {
-            this.sourceNodeId = sourceNodeId;
+            $.sourceNodeId = sourceNodeId;
             return this;
         }
-        public Builder sourceNodeId(@Nullable String sourceNodeId) {
-            this.sourceNodeId = Codegen.ofNullable(sourceNodeId);
-            return this;
+
+        public Builder sourceNodeId(String sourceNodeId) {
+            return sourceNodeId(Output.of(sourceNodeId));
         }
+
         public Builder sourcePortId(@Nullable Output<String> sourcePortId) {
-            this.sourcePortId = sourcePortId;
+            $.sourcePortId = sourcePortId;
             return this;
         }
-        public Builder sourcePortId(@Nullable String sourcePortId) {
-            this.sourcePortId = Codegen.ofNullable(sourcePortId);
-            return this;
+
+        public Builder sourcePortId(String sourcePortId) {
+            return sourcePortId(Output.of(sourcePortId));
         }
+
         public Builder targetNodeId(@Nullable Output<String> targetNodeId) {
-            this.targetNodeId = targetNodeId;
+            $.targetNodeId = targetNodeId;
             return this;
         }
-        public Builder targetNodeId(@Nullable String targetNodeId) {
-            this.targetNodeId = Codegen.ofNullable(targetNodeId);
-            return this;
+
+        public Builder targetNodeId(String targetNodeId) {
+            return targetNodeId(Output.of(targetNodeId));
         }
+
         public Builder targetPortId(@Nullable Output<String> targetPortId) {
-            this.targetPortId = targetPortId;
+            $.targetPortId = targetPortId;
             return this;
         }
-        public Builder targetPortId(@Nullable String targetPortId) {
-            this.targetPortId = Codegen.ofNullable(targetPortId);
-            return this;
-        }        public GraphEdgeArgs build() {
-            return new GraphEdgeArgs(sourceNodeId, sourcePortId, targetNodeId, targetPortId);
+
+        public Builder targetPortId(String targetPortId) {
+            return targetPortId(Output.of(targetPortId));
+        }
+
+        public GraphEdgeArgs build() {
+            return $;
         }
     }
+
 }

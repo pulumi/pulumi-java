@@ -25,10 +25,10 @@ public final class GenericContainerExtendedInfoResponse extends com.pulumi.resou
      * 
      */
     @Import(name="containerIdentityInfo")
-      private final @Nullable ContainerIdentityInfoResponse containerIdentityInfo;
+    private @Nullable ContainerIdentityInfoResponse containerIdentityInfo;
 
     public Optional<ContainerIdentityInfoResponse> containerIdentityInfo() {
-        return this.containerIdentityInfo == null ? Optional.empty() : Optional.ofNullable(this.containerIdentityInfo);
+        return Optional.ofNullable(this.containerIdentityInfo);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class GenericContainerExtendedInfoResponse extends com.pulumi.resou
      * 
      */
     @Import(name="rawCertData")
-      private final @Nullable String rawCertData;
+    private @Nullable String rawCertData;
 
     public Optional<String> rawCertData() {
-        return this.rawCertData == null ? Optional.empty() : Optional.ofNullable(this.rawCertData);
+        return Optional.ofNullable(this.rawCertData);
     }
 
     /**
@@ -47,64 +47,56 @@ public final class GenericContainerExtendedInfoResponse extends com.pulumi.resou
      * 
      */
     @Import(name="serviceEndpoints")
-      private final @Nullable Map<String,String> serviceEndpoints;
+    private @Nullable Map<String,String> serviceEndpoints;
 
-    public Map<String,String> serviceEndpoints() {
-        return this.serviceEndpoints == null ? Map.of() : this.serviceEndpoints;
+    public Optional<Map<String,String>> serviceEndpoints() {
+        return Optional.ofNullable(this.serviceEndpoints);
     }
 
-    public GenericContainerExtendedInfoResponse(
-        @Nullable ContainerIdentityInfoResponse containerIdentityInfo,
-        @Nullable String rawCertData,
-        @Nullable Map<String,String> serviceEndpoints) {
-        this.containerIdentityInfo = containerIdentityInfo;
-        this.rawCertData = rawCertData;
-        this.serviceEndpoints = serviceEndpoints;
-    }
+    private GenericContainerExtendedInfoResponse() {}
 
-    private GenericContainerExtendedInfoResponse() {
-        this.containerIdentityInfo = null;
-        this.rawCertData = null;
-        this.serviceEndpoints = Map.of();
+    private GenericContainerExtendedInfoResponse(GenericContainerExtendedInfoResponse $) {
+        this.containerIdentityInfo = $.containerIdentityInfo;
+        this.rawCertData = $.rawCertData;
+        this.serviceEndpoints = $.serviceEndpoints;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GenericContainerExtendedInfoResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable ContainerIdentityInfoResponse containerIdentityInfo;
-        private @Nullable String rawCertData;
-        private @Nullable Map<String,String> serviceEndpoints;
+        private GenericContainerExtendedInfoResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GenericContainerExtendedInfoResponse();
         }
 
         public Builder(GenericContainerExtendedInfoResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.containerIdentityInfo = defaults.containerIdentityInfo;
-    	      this.rawCertData = defaults.rawCertData;
-    	      this.serviceEndpoints = defaults.serviceEndpoints;
+            $ = new GenericContainerExtendedInfoResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder containerIdentityInfo(@Nullable ContainerIdentityInfoResponse containerIdentityInfo) {
-            this.containerIdentityInfo = containerIdentityInfo;
+            $.containerIdentityInfo = containerIdentityInfo;
             return this;
         }
+
         public Builder rawCertData(@Nullable String rawCertData) {
-            this.rawCertData = rawCertData;
+            $.rawCertData = rawCertData;
             return this;
         }
+
         public Builder serviceEndpoints(@Nullable Map<String,String> serviceEndpoints) {
-            this.serviceEndpoints = serviceEndpoints;
+            $.serviceEndpoints = serviceEndpoints;
             return this;
-        }        public GenericContainerExtendedInfoResponse build() {
-            return new GenericContainerExtendedInfoResponse(containerIdentityInfo, rawCertData, serviceEndpoints);
+        }
+
+        public GenericContainerExtendedInfoResponse build() {
+            return $;
         }
     }
+
 }

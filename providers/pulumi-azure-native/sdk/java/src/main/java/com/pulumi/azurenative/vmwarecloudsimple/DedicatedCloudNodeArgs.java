@@ -6,11 +6,11 @@ package com.pulumi.azurenative.vmwarecloudsimple;
 import com.pulumi.azurenative.vmwarecloudsimple.inputs.SkuArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,7 +23,7 @@ public final class DedicatedCloudNodeArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="availabilityZoneId", required=true)
-      private final Output<String> availabilityZoneId;
+    private Output<String> availabilityZoneId;
 
     public Output<String> availabilityZoneId() {
         return this.availabilityZoneId;
@@ -34,10 +34,10 @@ public final class DedicatedCloudNodeArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="dedicatedCloudNodeName")
-      private final @Nullable Output<String> dedicatedCloudNodeName;
+    private @Nullable Output<String> dedicatedCloudNodeName;
 
-    public Output<String> dedicatedCloudNodeName() {
-        return this.dedicatedCloudNodeName == null ? Codegen.empty() : this.dedicatedCloudNodeName;
+    public Optional<Output<String>> dedicatedCloudNodeName() {
+        return Optional.ofNullable(this.dedicatedCloudNodeName);
     }
 
     /**
@@ -45,7 +45,7 @@ public final class DedicatedCloudNodeArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="id", required=true)
-      private final Output<String> id;
+    private Output<String> id;
 
     public Output<String> id() {
         return this.id;
@@ -56,10 +56,10 @@ public final class DedicatedCloudNodeArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -67,7 +67,7 @@ public final class DedicatedCloudNodeArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="name", required=true)
-      private final Output<String> name;
+    private Output<String> name;
 
     public Output<String> name() {
         return this.name;
@@ -78,7 +78,7 @@ public final class DedicatedCloudNodeArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="nodesCount", required=true)
-      private final Output<Integer> nodesCount;
+    private Output<Integer> nodesCount;
 
     public Output<Integer> nodesCount() {
         return this.nodesCount;
@@ -89,7 +89,7 @@ public final class DedicatedCloudNodeArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="placementGroupId", required=true)
-      private final Output<String> placementGroupId;
+    private Output<String> placementGroupId;
 
     public Output<String> placementGroupId() {
         return this.placementGroupId;
@@ -100,7 +100,7 @@ public final class DedicatedCloudNodeArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="purchaseId", required=true)
-      private final Output<String> purchaseId;
+    private Output<String> purchaseId;
 
     public Output<String> purchaseId() {
         return this.purchaseId;
@@ -111,7 +111,7 @@ public final class DedicatedCloudNodeArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -122,10 +122,10 @@ public final class DedicatedCloudNodeArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="sku")
-      private final @Nullable Output<SkuArgs> sku;
+    private @Nullable Output<SkuArgs> sku;
 
-    public Output<SkuArgs> sku() {
-        return this.sku == null ? Codegen.empty() : this.sku;
+    public Optional<Output<SkuArgs>> sku() {
+        return Optional.ofNullable(this.sku);
     }
 
     /**
@@ -133,180 +133,155 @@ public final class DedicatedCloudNodeArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public DedicatedCloudNodeArgs(
-        Output<String> availabilityZoneId,
-        @Nullable Output<String> dedicatedCloudNodeName,
-        Output<String> id,
-        @Nullable Output<String> location,
-        Output<String> name,
-        Output<Integer> nodesCount,
-        Output<String> placementGroupId,
-        Output<String> purchaseId,
-        Output<String> resourceGroupName,
-        @Nullable Output<SkuArgs> sku,
-        @Nullable Output<Map<String,String>> tags) {
-        this.availabilityZoneId = Objects.requireNonNull(availabilityZoneId, "expected parameter 'availabilityZoneId' to be non-null");
-        this.dedicatedCloudNodeName = dedicatedCloudNodeName;
-        this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
-        this.location = location;
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.nodesCount = Objects.requireNonNull(nodesCount, "expected parameter 'nodesCount' to be non-null");
-        this.placementGroupId = Objects.requireNonNull(placementGroupId, "expected parameter 'placementGroupId' to be non-null");
-        this.purchaseId = Objects.requireNonNull(purchaseId, "expected parameter 'purchaseId' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.sku = sku;
-        this.tags = tags;
-    }
+    private DedicatedCloudNodeArgs() {}
 
-    private DedicatedCloudNodeArgs() {
-        this.availabilityZoneId = Codegen.empty();
-        this.dedicatedCloudNodeName = Codegen.empty();
-        this.id = Codegen.empty();
-        this.location = Codegen.empty();
-        this.name = Codegen.empty();
-        this.nodesCount = Codegen.empty();
-        this.placementGroupId = Codegen.empty();
-        this.purchaseId = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.sku = Codegen.empty();
-        this.tags = Codegen.empty();
+    private DedicatedCloudNodeArgs(DedicatedCloudNodeArgs $) {
+        this.availabilityZoneId = $.availabilityZoneId;
+        this.dedicatedCloudNodeName = $.dedicatedCloudNodeName;
+        this.id = $.id;
+        this.location = $.location;
+        this.name = $.name;
+        this.nodesCount = $.nodesCount;
+        this.placementGroupId = $.placementGroupId;
+        this.purchaseId = $.purchaseId;
+        this.resourceGroupName = $.resourceGroupName;
+        this.sku = $.sku;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DedicatedCloudNodeArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> availabilityZoneId;
-        private @Nullable Output<String> dedicatedCloudNodeName;
-        private Output<String> id;
-        private @Nullable Output<String> location;
-        private Output<String> name;
-        private Output<Integer> nodesCount;
-        private Output<String> placementGroupId;
-        private Output<String> purchaseId;
-        private Output<String> resourceGroupName;
-        private @Nullable Output<SkuArgs> sku;
-        private @Nullable Output<Map<String,String>> tags;
+        private DedicatedCloudNodeArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DedicatedCloudNodeArgs();
         }
 
         public Builder(DedicatedCloudNodeArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.availabilityZoneId = defaults.availabilityZoneId;
-    	      this.dedicatedCloudNodeName = defaults.dedicatedCloudNodeName;
-    	      this.id = defaults.id;
-    	      this.location = defaults.location;
-    	      this.name = defaults.name;
-    	      this.nodesCount = defaults.nodesCount;
-    	      this.placementGroupId = defaults.placementGroupId;
-    	      this.purchaseId = defaults.purchaseId;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.sku = defaults.sku;
-    	      this.tags = defaults.tags;
+            $ = new DedicatedCloudNodeArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder availabilityZoneId(Output<String> availabilityZoneId) {
-            this.availabilityZoneId = Objects.requireNonNull(availabilityZoneId);
+            $.availabilityZoneId = availabilityZoneId;
             return this;
         }
+
         public Builder availabilityZoneId(String availabilityZoneId) {
-            this.availabilityZoneId = Output.of(Objects.requireNonNull(availabilityZoneId));
-            return this;
+            return availabilityZoneId(Output.of(availabilityZoneId));
         }
+
         public Builder dedicatedCloudNodeName(@Nullable Output<String> dedicatedCloudNodeName) {
-            this.dedicatedCloudNodeName = dedicatedCloudNodeName;
+            $.dedicatedCloudNodeName = dedicatedCloudNodeName;
             return this;
         }
-        public Builder dedicatedCloudNodeName(@Nullable String dedicatedCloudNodeName) {
-            this.dedicatedCloudNodeName = Codegen.ofNullable(dedicatedCloudNodeName);
-            return this;
+
+        public Builder dedicatedCloudNodeName(String dedicatedCloudNodeName) {
+            return dedicatedCloudNodeName(Output.of(dedicatedCloudNodeName));
         }
+
         public Builder id(Output<String> id) {
-            this.id = Objects.requireNonNull(id);
+            $.id = id;
             return this;
         }
+
         public Builder id(String id) {
-            this.id = Output.of(Objects.requireNonNull(id));
-            return this;
+            return id(Output.of(id));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder name(Output<String> name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Output.of(Objects.requireNonNull(name));
-            return this;
+            return name(Output.of(name));
         }
+
         public Builder nodesCount(Output<Integer> nodesCount) {
-            this.nodesCount = Objects.requireNonNull(nodesCount);
+            $.nodesCount = nodesCount;
             return this;
         }
+
         public Builder nodesCount(Integer nodesCount) {
-            this.nodesCount = Output.of(Objects.requireNonNull(nodesCount));
-            return this;
+            return nodesCount(Output.of(nodesCount));
         }
+
         public Builder placementGroupId(Output<String> placementGroupId) {
-            this.placementGroupId = Objects.requireNonNull(placementGroupId);
+            $.placementGroupId = placementGroupId;
             return this;
         }
+
         public Builder placementGroupId(String placementGroupId) {
-            this.placementGroupId = Output.of(Objects.requireNonNull(placementGroupId));
-            return this;
+            return placementGroupId(Output.of(placementGroupId));
         }
+
         public Builder purchaseId(Output<String> purchaseId) {
-            this.purchaseId = Objects.requireNonNull(purchaseId);
+            $.purchaseId = purchaseId;
             return this;
         }
+
         public Builder purchaseId(String purchaseId) {
-            this.purchaseId = Output.of(Objects.requireNonNull(purchaseId));
-            return this;
+            return purchaseId(Output.of(purchaseId));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder sku(@Nullable Output<SkuArgs> sku) {
-            this.sku = sku;
+            $.sku = sku;
             return this;
         }
-        public Builder sku(@Nullable SkuArgs sku) {
-            this.sku = Codegen.ofNullable(sku);
-            return this;
+
+        public Builder sku(SkuArgs sku) {
+            return sku(Output.of(sku));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
-        }        public DedicatedCloudNodeArgs build() {
-            return new DedicatedCloudNodeArgs(availabilityZoneId, dedicatedCloudNodeName, id, location, name, nodesCount, placementGroupId, purchaseId, resourceGroupName, sku, tags);
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
+        }
+
+        public DedicatedCloudNodeArgs build() {
+            $.availabilityZoneId = Objects.requireNonNull($.availabilityZoneId, "expected parameter 'availabilityZoneId' to be non-null");
+            $.id = Objects.requireNonNull($.id, "expected parameter 'id' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.nodesCount = Objects.requireNonNull($.nodesCount, "expected parameter 'nodesCount' to be non-null");
+            $.placementGroupId = Objects.requireNonNull($.placementGroupId, "expected parameter 'placementGroupId' to be non-null");
+            $.purchaseId = Objects.requireNonNull($.purchaseId, "expected parameter 'purchaseId' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

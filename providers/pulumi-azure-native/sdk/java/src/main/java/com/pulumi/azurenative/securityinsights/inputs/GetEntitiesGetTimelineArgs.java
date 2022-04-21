@@ -23,7 +23,7 @@ public final class GetEntitiesGetTimelineArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="endTime", required=true)
-      private final String endTime;
+    private String endTime;
 
     public String endTime() {
         return this.endTime;
@@ -34,7 +34,7 @@ public final class GetEntitiesGetTimelineArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="entityId", required=true)
-      private final String entityId;
+    private String entityId;
 
     public String entityId() {
         return this.entityId;
@@ -45,10 +45,10 @@ public final class GetEntitiesGetTimelineArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="kinds")
-      private final @Nullable List<Either<String,EntityTimelineKind>> kinds;
+    private @Nullable List<Either<String,EntityTimelineKind>> kinds;
 
-    public List<Either<String,EntityTimelineKind>> kinds() {
-        return this.kinds == null ? List.of() : this.kinds;
+    public Optional<List<Either<String,EntityTimelineKind>>> kinds() {
+        return Optional.ofNullable(this.kinds);
     }
 
     /**
@@ -56,10 +56,10 @@ public final class GetEntitiesGetTimelineArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="numberOfBucket")
-      private final @Nullable Integer numberOfBucket;
+    private @Nullable Integer numberOfBucket;
 
     public Optional<Integer> numberOfBucket() {
-        return this.numberOfBucket == null ? Optional.empty() : Optional.ofNullable(this.numberOfBucket);
+        return Optional.ofNullable(this.numberOfBucket);
     }
 
     /**
@@ -67,7 +67,7 @@ public final class GetEntitiesGetTimelineArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="operationalInsightsResourceProvider", required=true)
-      private final String operationalInsightsResourceProvider;
+    private String operationalInsightsResourceProvider;
 
     public String operationalInsightsResourceProvider() {
         return this.operationalInsightsResourceProvider;
@@ -78,7 +78,7 @@ public final class GetEntitiesGetTimelineArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -89,7 +89,7 @@ public final class GetEntitiesGetTimelineArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="startTime", required=true)
-      private final String startTime;
+    private String startTime;
 
     public String startTime() {
         return this.startTime;
@@ -100,112 +100,96 @@ public final class GetEntitiesGetTimelineArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="workspaceName", required=true)
-      private final String workspaceName;
+    private String workspaceName;
 
     public String workspaceName() {
         return this.workspaceName;
     }
 
-    public GetEntitiesGetTimelineArgs(
-        String endTime,
-        String entityId,
-        @Nullable List<Either<String,EntityTimelineKind>> kinds,
-        @Nullable Integer numberOfBucket,
-        String operationalInsightsResourceProvider,
-        String resourceGroupName,
-        String startTime,
-        String workspaceName) {
-        this.endTime = Objects.requireNonNull(endTime, "expected parameter 'endTime' to be non-null");
-        this.entityId = Objects.requireNonNull(entityId, "expected parameter 'entityId' to be non-null");
-        this.kinds = kinds;
-        this.numberOfBucket = numberOfBucket;
-        this.operationalInsightsResourceProvider = Objects.requireNonNull(operationalInsightsResourceProvider, "expected parameter 'operationalInsightsResourceProvider' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.startTime = Objects.requireNonNull(startTime, "expected parameter 'startTime' to be non-null");
-        this.workspaceName = Objects.requireNonNull(workspaceName, "expected parameter 'workspaceName' to be non-null");
-    }
+    private GetEntitiesGetTimelineArgs() {}
 
-    private GetEntitiesGetTimelineArgs() {
-        this.endTime = null;
-        this.entityId = null;
-        this.kinds = List.of();
-        this.numberOfBucket = null;
-        this.operationalInsightsResourceProvider = null;
-        this.resourceGroupName = null;
-        this.startTime = null;
-        this.workspaceName = null;
+    private GetEntitiesGetTimelineArgs(GetEntitiesGetTimelineArgs $) {
+        this.endTime = $.endTime;
+        this.entityId = $.entityId;
+        this.kinds = $.kinds;
+        this.numberOfBucket = $.numberOfBucket;
+        this.operationalInsightsResourceProvider = $.operationalInsightsResourceProvider;
+        this.resourceGroupName = $.resourceGroupName;
+        this.startTime = $.startTime;
+        this.workspaceName = $.workspaceName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetEntitiesGetTimelineArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String endTime;
-        private String entityId;
-        private @Nullable List<Either<String,EntityTimelineKind>> kinds;
-        private @Nullable Integer numberOfBucket;
-        private String operationalInsightsResourceProvider;
-        private String resourceGroupName;
-        private String startTime;
-        private String workspaceName;
+        private GetEntitiesGetTimelineArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetEntitiesGetTimelineArgs();
         }
 
         public Builder(GetEntitiesGetTimelineArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.endTime = defaults.endTime;
-    	      this.entityId = defaults.entityId;
-    	      this.kinds = defaults.kinds;
-    	      this.numberOfBucket = defaults.numberOfBucket;
-    	      this.operationalInsightsResourceProvider = defaults.operationalInsightsResourceProvider;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.startTime = defaults.startTime;
-    	      this.workspaceName = defaults.workspaceName;
+            $ = new GetEntitiesGetTimelineArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder endTime(String endTime) {
-            this.endTime = Objects.requireNonNull(endTime);
+            $.endTime = endTime;
             return this;
         }
+
         public Builder entityId(String entityId) {
-            this.entityId = Objects.requireNonNull(entityId);
+            $.entityId = entityId;
             return this;
         }
+
         public Builder kinds(@Nullable List<Either<String,EntityTimelineKind>> kinds) {
-            this.kinds = kinds;
+            $.kinds = kinds;
             return this;
         }
+
         public Builder kinds(Either<String,EntityTimelineKind>... kinds) {
             return kinds(List.of(kinds));
         }
+
         public Builder numberOfBucket(@Nullable Integer numberOfBucket) {
-            this.numberOfBucket = numberOfBucket;
+            $.numberOfBucket = numberOfBucket;
             return this;
         }
+
         public Builder operationalInsightsResourceProvider(String operationalInsightsResourceProvider) {
-            this.operationalInsightsResourceProvider = Objects.requireNonNull(operationalInsightsResourceProvider);
+            $.operationalInsightsResourceProvider = operationalInsightsResourceProvider;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder startTime(String startTime) {
-            this.startTime = Objects.requireNonNull(startTime);
+            $.startTime = startTime;
             return this;
         }
+
         public Builder workspaceName(String workspaceName) {
-            this.workspaceName = Objects.requireNonNull(workspaceName);
+            $.workspaceName = workspaceName;
             return this;
-        }        public GetEntitiesGetTimelineArgs build() {
-            return new GetEntitiesGetTimelineArgs(endTime, entityId, kinds, numberOfBucket, operationalInsightsResourceProvider, resourceGroupName, startTime, workspaceName);
+        }
+
+        public GetEntitiesGetTimelineArgs build() {
+            $.endTime = Objects.requireNonNull($.endTime, "expected parameter 'endTime' to be non-null");
+            $.entityId = Objects.requireNonNull($.entityId, "expected parameter 'entityId' to be non-null");
+            $.operationalInsightsResourceProvider = Objects.requireNonNull($.operationalInsightsResourceProvider, "expected parameter 'operationalInsightsResourceProvider' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.startTime = Objects.requireNonNull($.startTime, "expected parameter 'startTime' to be non-null");
+            $.workspaceName = Objects.requireNonNull($.workspaceName, "expected parameter 'workspaceName' to be non-null");
+            return $;
         }
     }
+
 }

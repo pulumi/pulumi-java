@@ -6,8 +6,8 @@ package com.pulumi.aws.ec2.inputs;
 import com.pulumi.aws.ec2.inputs.FleetSpotOptionsMaintenanceStrategiesCapacityRebalanceGetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,49 +20,48 @@ public final class FleetSpotOptionsMaintenanceStrategiesGetArgs extends com.pulu
      * 
      */
     @Import(name="capacityRebalance")
-      private final @Nullable Output<FleetSpotOptionsMaintenanceStrategiesCapacityRebalanceGetArgs> capacityRebalance;
+    private @Nullable Output<FleetSpotOptionsMaintenanceStrategiesCapacityRebalanceGetArgs> capacityRebalance;
 
-    public Output<FleetSpotOptionsMaintenanceStrategiesCapacityRebalanceGetArgs> capacityRebalance() {
-        return this.capacityRebalance == null ? Codegen.empty() : this.capacityRebalance;
+    public Optional<Output<FleetSpotOptionsMaintenanceStrategiesCapacityRebalanceGetArgs>> capacityRebalance() {
+        return Optional.ofNullable(this.capacityRebalance);
     }
 
-    public FleetSpotOptionsMaintenanceStrategiesGetArgs(@Nullable Output<FleetSpotOptionsMaintenanceStrategiesCapacityRebalanceGetArgs> capacityRebalance) {
-        this.capacityRebalance = capacityRebalance;
-    }
+    private FleetSpotOptionsMaintenanceStrategiesGetArgs() {}
 
-    private FleetSpotOptionsMaintenanceStrategiesGetArgs() {
-        this.capacityRebalance = Codegen.empty();
+    private FleetSpotOptionsMaintenanceStrategiesGetArgs(FleetSpotOptionsMaintenanceStrategiesGetArgs $) {
+        this.capacityRebalance = $.capacityRebalance;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FleetSpotOptionsMaintenanceStrategiesGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<FleetSpotOptionsMaintenanceStrategiesCapacityRebalanceGetArgs> capacityRebalance;
+        private FleetSpotOptionsMaintenanceStrategiesGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new FleetSpotOptionsMaintenanceStrategiesGetArgs();
         }
 
         public Builder(FleetSpotOptionsMaintenanceStrategiesGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.capacityRebalance = defaults.capacityRebalance;
+            $ = new FleetSpotOptionsMaintenanceStrategiesGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder capacityRebalance(@Nullable Output<FleetSpotOptionsMaintenanceStrategiesCapacityRebalanceGetArgs> capacityRebalance) {
-            this.capacityRebalance = capacityRebalance;
+            $.capacityRebalance = capacityRebalance;
             return this;
         }
-        public Builder capacityRebalance(@Nullable FleetSpotOptionsMaintenanceStrategiesCapacityRebalanceGetArgs capacityRebalance) {
-            this.capacityRebalance = Codegen.ofNullable(capacityRebalance);
-            return this;
-        }        public FleetSpotOptionsMaintenanceStrategiesGetArgs build() {
-            return new FleetSpotOptionsMaintenanceStrategiesGetArgs(capacityRebalance);
+
+        public Builder capacityRebalance(FleetSpotOptionsMaintenanceStrategiesCapacityRebalanceGetArgs capacityRebalance) {
+            return capacityRebalance(Output.of(capacityRebalance));
+        }
+
+        public FleetSpotOptionsMaintenanceStrategiesGetArgs build() {
+            return $;
         }
     }
+
 }

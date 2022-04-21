@@ -3,35 +3,26 @@
 
 package com.pulumi.awsnative.databrew.inputs;
 
-import java.util.Objects;
+
 
 
 public final class RecipeParameterMapArgs extends com.pulumi.resources.ResourceArgs {
 
     public static final RecipeParameterMapArgs Empty = new RecipeParameterMapArgs();
 
-    public RecipeParameterMapArgs() {
-    }
-
     public static Builder builder() {
         return new Builder();
     }
 
-    public static Builder builder(RecipeParameterMapArgs defaults) {
-        return new Builder(defaults);
-    }
-
     public static final class Builder {
+        private RecipeParameterMapArgs $;
 
         public Builder() {
-    	      // Empty
-        }
-
-        public Builder(RecipeParameterMapArgs defaults) {
-    	      Objects.requireNonNull(defaults);
+            $ = new RecipeParameterMapArgs();
         }
         public RecipeParameterMapArgs build() {
-            return new RecipeParameterMapArgs();
+            return $;
         }
     }
+
 }

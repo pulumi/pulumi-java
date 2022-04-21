@@ -23,7 +23,7 @@ public final class IosXcTestResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="appBundleId", required=true)
-      private final String appBundleId;
+    private String appBundleId;
 
     public String appBundleId() {
         return this.appBundleId;
@@ -34,7 +34,7 @@ public final class IosXcTestResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="testSpecialEntitlements", required=true)
-      private final Boolean testSpecialEntitlements;
+    private Boolean testSpecialEntitlements;
 
     public Boolean testSpecialEntitlements() {
         return this.testSpecialEntitlements;
@@ -45,7 +45,7 @@ public final class IosXcTestResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="testsZip", required=true)
-      private final FileReferenceResponse testsZip;
+    private FileReferenceResponse testsZip;
 
     public FileReferenceResponse testsZip() {
         return this.testsZip;
@@ -56,7 +56,7 @@ public final class IosXcTestResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="xcodeVersion", required=true)
-      private final String xcodeVersion;
+    private String xcodeVersion;
 
     public String xcodeVersion() {
         return this.xcodeVersion;
@@ -67,82 +67,73 @@ public final class IosXcTestResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="xctestrun", required=true)
-      private final FileReferenceResponse xctestrun;
+    private FileReferenceResponse xctestrun;
 
     public FileReferenceResponse xctestrun() {
         return this.xctestrun;
     }
 
-    public IosXcTestResponse(
-        String appBundleId,
-        Boolean testSpecialEntitlements,
-        FileReferenceResponse testsZip,
-        String xcodeVersion,
-        FileReferenceResponse xctestrun) {
-        this.appBundleId = Objects.requireNonNull(appBundleId, "expected parameter 'appBundleId' to be non-null");
-        this.testSpecialEntitlements = Objects.requireNonNull(testSpecialEntitlements, "expected parameter 'testSpecialEntitlements' to be non-null");
-        this.testsZip = Objects.requireNonNull(testsZip, "expected parameter 'testsZip' to be non-null");
-        this.xcodeVersion = Objects.requireNonNull(xcodeVersion, "expected parameter 'xcodeVersion' to be non-null");
-        this.xctestrun = Objects.requireNonNull(xctestrun, "expected parameter 'xctestrun' to be non-null");
-    }
+    private IosXcTestResponse() {}
 
-    private IosXcTestResponse() {
-        this.appBundleId = null;
-        this.testSpecialEntitlements = null;
-        this.testsZip = null;
-        this.xcodeVersion = null;
-        this.xctestrun = null;
+    private IosXcTestResponse(IosXcTestResponse $) {
+        this.appBundleId = $.appBundleId;
+        this.testSpecialEntitlements = $.testSpecialEntitlements;
+        this.testsZip = $.testsZip;
+        this.xcodeVersion = $.xcodeVersion;
+        this.xctestrun = $.xctestrun;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(IosXcTestResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String appBundleId;
-        private Boolean testSpecialEntitlements;
-        private FileReferenceResponse testsZip;
-        private String xcodeVersion;
-        private FileReferenceResponse xctestrun;
+        private IosXcTestResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new IosXcTestResponse();
         }
 
         public Builder(IosXcTestResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.appBundleId = defaults.appBundleId;
-    	      this.testSpecialEntitlements = defaults.testSpecialEntitlements;
-    	      this.testsZip = defaults.testsZip;
-    	      this.xcodeVersion = defaults.xcodeVersion;
-    	      this.xctestrun = defaults.xctestrun;
+            $ = new IosXcTestResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder appBundleId(String appBundleId) {
-            this.appBundleId = Objects.requireNonNull(appBundleId);
+            $.appBundleId = appBundleId;
             return this;
         }
+
         public Builder testSpecialEntitlements(Boolean testSpecialEntitlements) {
-            this.testSpecialEntitlements = Objects.requireNonNull(testSpecialEntitlements);
+            $.testSpecialEntitlements = testSpecialEntitlements;
             return this;
         }
+
         public Builder testsZip(FileReferenceResponse testsZip) {
-            this.testsZip = Objects.requireNonNull(testsZip);
+            $.testsZip = testsZip;
             return this;
         }
+
         public Builder xcodeVersion(String xcodeVersion) {
-            this.xcodeVersion = Objects.requireNonNull(xcodeVersion);
+            $.xcodeVersion = xcodeVersion;
             return this;
         }
+
         public Builder xctestrun(FileReferenceResponse xctestrun) {
-            this.xctestrun = Objects.requireNonNull(xctestrun);
+            $.xctestrun = xctestrun;
             return this;
-        }        public IosXcTestResponse build() {
-            return new IosXcTestResponse(appBundleId, testSpecialEntitlements, testsZip, xcodeVersion, xctestrun);
+        }
+
+        public IosXcTestResponse build() {
+            $.appBundleId = Objects.requireNonNull($.appBundleId, "expected parameter 'appBundleId' to be non-null");
+            $.testSpecialEntitlements = Objects.requireNonNull($.testSpecialEntitlements, "expected parameter 'testSpecialEntitlements' to be non-null");
+            $.testsZip = Objects.requireNonNull($.testsZip, "expected parameter 'testsZip' to be non-null");
+            $.xcodeVersion = Objects.requireNonNull($.xcodeVersion, "expected parameter 'xcodeVersion' to be non-null");
+            $.xctestrun = Objects.requireNonNull($.xctestrun, "expected parameter 'xctestrun' to be non-null");
+            return $;
         }
     }
+
 }

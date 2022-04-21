@@ -25,10 +25,10 @@ public final class ImageTemplateVhdDistributorResponse extends com.pulumi.resour
      * 
      */
     @Import(name="artifactTags")
-      private final @Nullable Map<String,String> artifactTags;
+    private @Nullable Map<String,String> artifactTags;
 
-    public Map<String,String> artifactTags() {
-        return this.artifactTags == null ? Map.of() : this.artifactTags;
+    public Optional<Map<String,String>> artifactTags() {
+        return Optional.ofNullable(this.artifactTags);
     }
 
     /**
@@ -36,7 +36,7 @@ public final class ImageTemplateVhdDistributorResponse extends com.pulumi.resour
      * 
      */
     @Import(name="runOutputName", required=true)
-      private final String runOutputName;
+    private String runOutputName;
 
     public String runOutputName() {
         return this.runOutputName;
@@ -48,64 +48,58 @@ public final class ImageTemplateVhdDistributorResponse extends com.pulumi.resour
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
     }
 
-    public ImageTemplateVhdDistributorResponse(
-        @Nullable Map<String,String> artifactTags,
-        String runOutputName,
-        String type) {
-        this.artifactTags = artifactTags;
-        this.runOutputName = Objects.requireNonNull(runOutputName, "expected parameter 'runOutputName' to be non-null");
-        this.type = Codegen.stringProp("type").arg(type).require();
-    }
+    private ImageTemplateVhdDistributorResponse() {}
 
-    private ImageTemplateVhdDistributorResponse() {
-        this.artifactTags = Map.of();
-        this.runOutputName = null;
-        this.type = null;
+    private ImageTemplateVhdDistributorResponse(ImageTemplateVhdDistributorResponse $) {
+        this.artifactTags = $.artifactTags;
+        this.runOutputName = $.runOutputName;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ImageTemplateVhdDistributorResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Map<String,String> artifactTags;
-        private String runOutputName;
-        private String type;
+        private ImageTemplateVhdDistributorResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ImageTemplateVhdDistributorResponse();
         }
 
         public Builder(ImageTemplateVhdDistributorResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.artifactTags = defaults.artifactTags;
-    	      this.runOutputName = defaults.runOutputName;
-    	      this.type = defaults.type;
+            $ = new ImageTemplateVhdDistributorResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder artifactTags(@Nullable Map<String,String> artifactTags) {
-            this.artifactTags = artifactTags;
+            $.artifactTags = artifactTags;
             return this;
         }
+
         public Builder runOutputName(String runOutputName) {
-            this.runOutputName = Objects.requireNonNull(runOutputName);
+            $.runOutputName = runOutputName;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
-        }        public ImageTemplateVhdDistributorResponse build() {
-            return new ImageTemplateVhdDistributorResponse(artifactTags, runOutputName, type);
+        }
+
+        public ImageTemplateVhdDistributorResponse build() {
+            $.runOutputName = Objects.requireNonNull($.runOutputName, "expected parameter 'runOutputName' to be non-null");
+            $.type = Codegen.stringProp("type").arg($.type).require();
+            return $;
         }
     }
+
 }

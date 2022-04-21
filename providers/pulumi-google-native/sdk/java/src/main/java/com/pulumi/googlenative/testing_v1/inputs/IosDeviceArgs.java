@@ -5,7 +5,6 @@ package com.pulumi.googlenative.testing_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,7 +22,7 @@ public final class IosDeviceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="iosModelId", required=true)
-      private final Output<String> iosModelId;
+    private Output<String> iosModelId;
 
     public Output<String> iosModelId() {
         return this.iosModelId;
@@ -34,7 +33,7 @@ public final class IosDeviceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="iosVersionId", required=true)
-      private final Output<String> iosVersionId;
+    private Output<String> iosVersionId;
 
     public Output<String> iosVersionId() {
         return this.iosVersionId;
@@ -45,7 +44,7 @@ public final class IosDeviceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="locale", required=true)
-      private final Output<String> locale;
+    private Output<String> locale;
 
     public Output<String> locale() {
         return this.locale;
@@ -56,89 +55,82 @@ public final class IosDeviceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="orientation", required=true)
-      private final Output<String> orientation;
+    private Output<String> orientation;
 
     public Output<String> orientation() {
         return this.orientation;
     }
 
-    public IosDeviceArgs(
-        Output<String> iosModelId,
-        Output<String> iosVersionId,
-        Output<String> locale,
-        Output<String> orientation) {
-        this.iosModelId = Objects.requireNonNull(iosModelId, "expected parameter 'iosModelId' to be non-null");
-        this.iosVersionId = Objects.requireNonNull(iosVersionId, "expected parameter 'iosVersionId' to be non-null");
-        this.locale = Objects.requireNonNull(locale, "expected parameter 'locale' to be non-null");
-        this.orientation = Objects.requireNonNull(orientation, "expected parameter 'orientation' to be non-null");
-    }
+    private IosDeviceArgs() {}
 
-    private IosDeviceArgs() {
-        this.iosModelId = Codegen.empty();
-        this.iosVersionId = Codegen.empty();
-        this.locale = Codegen.empty();
-        this.orientation = Codegen.empty();
+    private IosDeviceArgs(IosDeviceArgs $) {
+        this.iosModelId = $.iosModelId;
+        this.iosVersionId = $.iosVersionId;
+        this.locale = $.locale;
+        this.orientation = $.orientation;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(IosDeviceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> iosModelId;
-        private Output<String> iosVersionId;
-        private Output<String> locale;
-        private Output<String> orientation;
+        private IosDeviceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new IosDeviceArgs();
         }
 
         public Builder(IosDeviceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.iosModelId = defaults.iosModelId;
-    	      this.iosVersionId = defaults.iosVersionId;
-    	      this.locale = defaults.locale;
-    	      this.orientation = defaults.orientation;
+            $ = new IosDeviceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder iosModelId(Output<String> iosModelId) {
-            this.iosModelId = Objects.requireNonNull(iosModelId);
+            $.iosModelId = iosModelId;
             return this;
         }
+
         public Builder iosModelId(String iosModelId) {
-            this.iosModelId = Output.of(Objects.requireNonNull(iosModelId));
-            return this;
+            return iosModelId(Output.of(iosModelId));
         }
+
         public Builder iosVersionId(Output<String> iosVersionId) {
-            this.iosVersionId = Objects.requireNonNull(iosVersionId);
+            $.iosVersionId = iosVersionId;
             return this;
         }
+
         public Builder iosVersionId(String iosVersionId) {
-            this.iosVersionId = Output.of(Objects.requireNonNull(iosVersionId));
-            return this;
+            return iosVersionId(Output.of(iosVersionId));
         }
+
         public Builder locale(Output<String> locale) {
-            this.locale = Objects.requireNonNull(locale);
+            $.locale = locale;
             return this;
         }
+
         public Builder locale(String locale) {
-            this.locale = Output.of(Objects.requireNonNull(locale));
-            return this;
+            return locale(Output.of(locale));
         }
+
         public Builder orientation(Output<String> orientation) {
-            this.orientation = Objects.requireNonNull(orientation);
+            $.orientation = orientation;
             return this;
         }
+
         public Builder orientation(String orientation) {
-            this.orientation = Output.of(Objects.requireNonNull(orientation));
-            return this;
-        }        public IosDeviceArgs build() {
-            return new IosDeviceArgs(iosModelId, iosVersionId, locale, orientation);
+            return orientation(Output.of(orientation));
+        }
+
+        public IosDeviceArgs build() {
+            $.iosModelId = Objects.requireNonNull($.iosModelId, "expected parameter 'iosModelId' to be non-null");
+            $.iosVersionId = Objects.requireNonNull($.iosVersionId, "expected parameter 'iosVersionId' to be non-null");
+            $.locale = Objects.requireNonNull($.locale, "expected parameter 'locale' to be non-null");
+            $.orientation = Objects.requireNonNull($.orientation, "expected parameter 'orientation' to be non-null");
+            return $;
         }
     }
+
 }

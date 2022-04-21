@@ -7,9 +7,9 @@ import com.pulumi.awsnative.ec2.inputs.NetworkInsightsAccessScopePathStatementRe
 import com.pulumi.awsnative.ec2.inputs.NetworkInsightsAccessScopeThroughResourcesStatementRequestArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -18,93 +18,86 @@ public final class NetworkInsightsAccessScopeAccessScopePathRequestArgs extends 
     public static final NetworkInsightsAccessScopeAccessScopePathRequestArgs Empty = new NetworkInsightsAccessScopeAccessScopePathRequestArgs();
 
     @Import(name="destination")
-      private final @Nullable Output<NetworkInsightsAccessScopePathStatementRequestArgs> destination;
+    private @Nullable Output<NetworkInsightsAccessScopePathStatementRequestArgs> destination;
 
-    public Output<NetworkInsightsAccessScopePathStatementRequestArgs> destination() {
-        return this.destination == null ? Codegen.empty() : this.destination;
+    public Optional<Output<NetworkInsightsAccessScopePathStatementRequestArgs>> destination() {
+        return Optional.ofNullable(this.destination);
     }
 
     @Import(name="source")
-      private final @Nullable Output<NetworkInsightsAccessScopePathStatementRequestArgs> source;
+    private @Nullable Output<NetworkInsightsAccessScopePathStatementRequestArgs> source;
 
-    public Output<NetworkInsightsAccessScopePathStatementRequestArgs> source() {
-        return this.source == null ? Codegen.empty() : this.source;
+    public Optional<Output<NetworkInsightsAccessScopePathStatementRequestArgs>> source() {
+        return Optional.ofNullable(this.source);
     }
 
     @Import(name="throughResources")
-      private final @Nullable Output<List<NetworkInsightsAccessScopeThroughResourcesStatementRequestArgs>> throughResources;
+    private @Nullable Output<List<NetworkInsightsAccessScopeThroughResourcesStatementRequestArgs>> throughResources;
 
-    public Output<List<NetworkInsightsAccessScopeThroughResourcesStatementRequestArgs>> throughResources() {
-        return this.throughResources == null ? Codegen.empty() : this.throughResources;
+    public Optional<Output<List<NetworkInsightsAccessScopeThroughResourcesStatementRequestArgs>>> throughResources() {
+        return Optional.ofNullable(this.throughResources);
     }
 
-    public NetworkInsightsAccessScopeAccessScopePathRequestArgs(
-        @Nullable Output<NetworkInsightsAccessScopePathStatementRequestArgs> destination,
-        @Nullable Output<NetworkInsightsAccessScopePathStatementRequestArgs> source,
-        @Nullable Output<List<NetworkInsightsAccessScopeThroughResourcesStatementRequestArgs>> throughResources) {
-        this.destination = destination;
-        this.source = source;
-        this.throughResources = throughResources;
-    }
+    private NetworkInsightsAccessScopeAccessScopePathRequestArgs() {}
 
-    private NetworkInsightsAccessScopeAccessScopePathRequestArgs() {
-        this.destination = Codegen.empty();
-        this.source = Codegen.empty();
-        this.throughResources = Codegen.empty();
+    private NetworkInsightsAccessScopeAccessScopePathRequestArgs(NetworkInsightsAccessScopeAccessScopePathRequestArgs $) {
+        this.destination = $.destination;
+        this.source = $.source;
+        this.throughResources = $.throughResources;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NetworkInsightsAccessScopeAccessScopePathRequestArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<NetworkInsightsAccessScopePathStatementRequestArgs> destination;
-        private @Nullable Output<NetworkInsightsAccessScopePathStatementRequestArgs> source;
-        private @Nullable Output<List<NetworkInsightsAccessScopeThroughResourcesStatementRequestArgs>> throughResources;
+        private NetworkInsightsAccessScopeAccessScopePathRequestArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new NetworkInsightsAccessScopeAccessScopePathRequestArgs();
         }
 
         public Builder(NetworkInsightsAccessScopeAccessScopePathRequestArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.destination = defaults.destination;
-    	      this.source = defaults.source;
-    	      this.throughResources = defaults.throughResources;
+            $ = new NetworkInsightsAccessScopeAccessScopePathRequestArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder destination(@Nullable Output<NetworkInsightsAccessScopePathStatementRequestArgs> destination) {
-            this.destination = destination;
+            $.destination = destination;
             return this;
         }
-        public Builder destination(@Nullable NetworkInsightsAccessScopePathStatementRequestArgs destination) {
-            this.destination = Codegen.ofNullable(destination);
-            return this;
+
+        public Builder destination(NetworkInsightsAccessScopePathStatementRequestArgs destination) {
+            return destination(Output.of(destination));
         }
+
         public Builder source(@Nullable Output<NetworkInsightsAccessScopePathStatementRequestArgs> source) {
-            this.source = source;
+            $.source = source;
             return this;
         }
-        public Builder source(@Nullable NetworkInsightsAccessScopePathStatementRequestArgs source) {
-            this.source = Codegen.ofNullable(source);
-            return this;
+
+        public Builder source(NetworkInsightsAccessScopePathStatementRequestArgs source) {
+            return source(Output.of(source));
         }
+
         public Builder throughResources(@Nullable Output<List<NetworkInsightsAccessScopeThroughResourcesStatementRequestArgs>> throughResources) {
-            this.throughResources = throughResources;
+            $.throughResources = throughResources;
             return this;
         }
-        public Builder throughResources(@Nullable List<NetworkInsightsAccessScopeThroughResourcesStatementRequestArgs> throughResources) {
-            this.throughResources = Codegen.ofNullable(throughResources);
-            return this;
+
+        public Builder throughResources(List<NetworkInsightsAccessScopeThroughResourcesStatementRequestArgs> throughResources) {
+            return throughResources(Output.of(throughResources));
         }
+
         public Builder throughResources(NetworkInsightsAccessScopeThroughResourcesStatementRequestArgs... throughResources) {
             return throughResources(List.of(throughResources));
-        }        public NetworkInsightsAccessScopeAccessScopePathRequestArgs build() {
-            return new NetworkInsightsAccessScopeAccessScopePathRequestArgs(destination, source, throughResources);
+        }
+
+        public NetworkInsightsAccessScopeAccessScopePathRequestArgs build() {
+            return $;
         }
     }
+
 }

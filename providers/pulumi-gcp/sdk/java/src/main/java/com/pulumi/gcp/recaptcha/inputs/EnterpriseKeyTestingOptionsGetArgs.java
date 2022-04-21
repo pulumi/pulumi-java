@@ -5,10 +5,10 @@ package com.pulumi.gcp.recaptcha.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class EnterpriseKeyTestingOptionsGetArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="testingChallenge")
-      private final @Nullable Output<String> testingChallenge;
+    private @Nullable Output<String> testingChallenge;
 
-    public Output<String> testingChallenge() {
-        return this.testingChallenge == null ? Codegen.empty() : this.testingChallenge;
+    public Optional<Output<String>> testingChallenge() {
+        return Optional.ofNullable(this.testingChallenge);
     }
 
     /**
@@ -32,63 +32,58 @@ public final class EnterpriseKeyTestingOptionsGetArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="testingScore")
-      private final @Nullable Output<Double> testingScore;
+    private @Nullable Output<Double> testingScore;
 
-    public Output<Double> testingScore() {
-        return this.testingScore == null ? Codegen.empty() : this.testingScore;
+    public Optional<Output<Double>> testingScore() {
+        return Optional.ofNullable(this.testingScore);
     }
 
-    public EnterpriseKeyTestingOptionsGetArgs(
-        @Nullable Output<String> testingChallenge,
-        @Nullable Output<Double> testingScore) {
-        this.testingChallenge = testingChallenge;
-        this.testingScore = testingScore;
-    }
+    private EnterpriseKeyTestingOptionsGetArgs() {}
 
-    private EnterpriseKeyTestingOptionsGetArgs() {
-        this.testingChallenge = Codegen.empty();
-        this.testingScore = Codegen.empty();
+    private EnterpriseKeyTestingOptionsGetArgs(EnterpriseKeyTestingOptionsGetArgs $) {
+        this.testingChallenge = $.testingChallenge;
+        this.testingScore = $.testingScore;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EnterpriseKeyTestingOptionsGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> testingChallenge;
-        private @Nullable Output<Double> testingScore;
+        private EnterpriseKeyTestingOptionsGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new EnterpriseKeyTestingOptionsGetArgs();
         }
 
         public Builder(EnterpriseKeyTestingOptionsGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.testingChallenge = defaults.testingChallenge;
-    	      this.testingScore = defaults.testingScore;
+            $ = new EnterpriseKeyTestingOptionsGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder testingChallenge(@Nullable Output<String> testingChallenge) {
-            this.testingChallenge = testingChallenge;
+            $.testingChallenge = testingChallenge;
             return this;
         }
-        public Builder testingChallenge(@Nullable String testingChallenge) {
-            this.testingChallenge = Codegen.ofNullable(testingChallenge);
-            return this;
+
+        public Builder testingChallenge(String testingChallenge) {
+            return testingChallenge(Output.of(testingChallenge));
         }
+
         public Builder testingScore(@Nullable Output<Double> testingScore) {
-            this.testingScore = testingScore;
+            $.testingScore = testingScore;
             return this;
         }
-        public Builder testingScore(@Nullable Double testingScore) {
-            this.testingScore = Codegen.ofNullable(testingScore);
-            return this;
-        }        public EnterpriseKeyTestingOptionsGetArgs build() {
-            return new EnterpriseKeyTestingOptionsGetArgs(testingChallenge, testingScore);
+
+        public Builder testingScore(Double testingScore) {
+            return testingScore(Output.of(testingScore));
+        }
+
+        public EnterpriseKeyTestingOptionsGetArgs build() {
+            return $;
         }
     }
+
 }

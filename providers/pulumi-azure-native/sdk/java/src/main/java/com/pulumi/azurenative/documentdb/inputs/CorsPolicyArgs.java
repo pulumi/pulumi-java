@@ -5,10 +5,10 @@ package com.pulumi.azurenative.documentdb.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class CorsPolicyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="allowedHeaders")
-      private final @Nullable Output<String> allowedHeaders;
+    private @Nullable Output<String> allowedHeaders;
 
-    public Output<String> allowedHeaders() {
-        return this.allowedHeaders == null ? Codegen.empty() : this.allowedHeaders;
+    public Optional<Output<String>> allowedHeaders() {
+        return Optional.ofNullable(this.allowedHeaders);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class CorsPolicyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="allowedMethods")
-      private final @Nullable Output<String> allowedMethods;
+    private @Nullable Output<String> allowedMethods;
 
-    public Output<String> allowedMethods() {
-        return this.allowedMethods == null ? Codegen.empty() : this.allowedMethods;
+    public Optional<Output<String>> allowedMethods() {
+        return Optional.ofNullable(this.allowedMethods);
     }
 
     /**
@@ -47,7 +47,7 @@ public final class CorsPolicyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="allowedOrigins", required=true)
-      private final Output<String> allowedOrigins;
+    private Output<String> allowedOrigins;
 
     public Output<String> allowedOrigins() {
         return this.allowedOrigins;
@@ -58,10 +58,10 @@ public final class CorsPolicyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="exposedHeaders")
-      private final @Nullable Output<String> exposedHeaders;
+    private @Nullable Output<String> exposedHeaders;
 
-    public Output<String> exposedHeaders() {
-        return this.exposedHeaders == null ? Codegen.empty() : this.exposedHeaders;
+    public Optional<Output<String>> exposedHeaders() {
+        return Optional.ofNullable(this.exposedHeaders);
     }
 
     /**
@@ -69,102 +69,89 @@ public final class CorsPolicyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="maxAgeInSeconds")
-      private final @Nullable Output<Double> maxAgeInSeconds;
+    private @Nullable Output<Double> maxAgeInSeconds;
 
-    public Output<Double> maxAgeInSeconds() {
-        return this.maxAgeInSeconds == null ? Codegen.empty() : this.maxAgeInSeconds;
+    public Optional<Output<Double>> maxAgeInSeconds() {
+        return Optional.ofNullable(this.maxAgeInSeconds);
     }
 
-    public CorsPolicyArgs(
-        @Nullable Output<String> allowedHeaders,
-        @Nullable Output<String> allowedMethods,
-        Output<String> allowedOrigins,
-        @Nullable Output<String> exposedHeaders,
-        @Nullable Output<Double> maxAgeInSeconds) {
-        this.allowedHeaders = allowedHeaders;
-        this.allowedMethods = allowedMethods;
-        this.allowedOrigins = Objects.requireNonNull(allowedOrigins, "expected parameter 'allowedOrigins' to be non-null");
-        this.exposedHeaders = exposedHeaders;
-        this.maxAgeInSeconds = maxAgeInSeconds;
-    }
+    private CorsPolicyArgs() {}
 
-    private CorsPolicyArgs() {
-        this.allowedHeaders = Codegen.empty();
-        this.allowedMethods = Codegen.empty();
-        this.allowedOrigins = Codegen.empty();
-        this.exposedHeaders = Codegen.empty();
-        this.maxAgeInSeconds = Codegen.empty();
+    private CorsPolicyArgs(CorsPolicyArgs $) {
+        this.allowedHeaders = $.allowedHeaders;
+        this.allowedMethods = $.allowedMethods;
+        this.allowedOrigins = $.allowedOrigins;
+        this.exposedHeaders = $.exposedHeaders;
+        this.maxAgeInSeconds = $.maxAgeInSeconds;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CorsPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> allowedHeaders;
-        private @Nullable Output<String> allowedMethods;
-        private Output<String> allowedOrigins;
-        private @Nullable Output<String> exposedHeaders;
-        private @Nullable Output<Double> maxAgeInSeconds;
+        private CorsPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CorsPolicyArgs();
         }
 
         public Builder(CorsPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.allowedHeaders = defaults.allowedHeaders;
-    	      this.allowedMethods = defaults.allowedMethods;
-    	      this.allowedOrigins = defaults.allowedOrigins;
-    	      this.exposedHeaders = defaults.exposedHeaders;
-    	      this.maxAgeInSeconds = defaults.maxAgeInSeconds;
+            $ = new CorsPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder allowedHeaders(@Nullable Output<String> allowedHeaders) {
-            this.allowedHeaders = allowedHeaders;
+            $.allowedHeaders = allowedHeaders;
             return this;
         }
-        public Builder allowedHeaders(@Nullable String allowedHeaders) {
-            this.allowedHeaders = Codegen.ofNullable(allowedHeaders);
-            return this;
+
+        public Builder allowedHeaders(String allowedHeaders) {
+            return allowedHeaders(Output.of(allowedHeaders));
         }
+
         public Builder allowedMethods(@Nullable Output<String> allowedMethods) {
-            this.allowedMethods = allowedMethods;
+            $.allowedMethods = allowedMethods;
             return this;
         }
-        public Builder allowedMethods(@Nullable String allowedMethods) {
-            this.allowedMethods = Codegen.ofNullable(allowedMethods);
-            return this;
+
+        public Builder allowedMethods(String allowedMethods) {
+            return allowedMethods(Output.of(allowedMethods));
         }
+
         public Builder allowedOrigins(Output<String> allowedOrigins) {
-            this.allowedOrigins = Objects.requireNonNull(allowedOrigins);
+            $.allowedOrigins = allowedOrigins;
             return this;
         }
+
         public Builder allowedOrigins(String allowedOrigins) {
-            this.allowedOrigins = Output.of(Objects.requireNonNull(allowedOrigins));
-            return this;
+            return allowedOrigins(Output.of(allowedOrigins));
         }
+
         public Builder exposedHeaders(@Nullable Output<String> exposedHeaders) {
-            this.exposedHeaders = exposedHeaders;
+            $.exposedHeaders = exposedHeaders;
             return this;
         }
-        public Builder exposedHeaders(@Nullable String exposedHeaders) {
-            this.exposedHeaders = Codegen.ofNullable(exposedHeaders);
-            return this;
+
+        public Builder exposedHeaders(String exposedHeaders) {
+            return exposedHeaders(Output.of(exposedHeaders));
         }
+
         public Builder maxAgeInSeconds(@Nullable Output<Double> maxAgeInSeconds) {
-            this.maxAgeInSeconds = maxAgeInSeconds;
+            $.maxAgeInSeconds = maxAgeInSeconds;
             return this;
         }
-        public Builder maxAgeInSeconds(@Nullable Double maxAgeInSeconds) {
-            this.maxAgeInSeconds = Codegen.ofNullable(maxAgeInSeconds);
-            return this;
-        }        public CorsPolicyArgs build() {
-            return new CorsPolicyArgs(allowedHeaders, allowedMethods, allowedOrigins, exposedHeaders, maxAgeInSeconds);
+
+        public Builder maxAgeInSeconds(Double maxAgeInSeconds) {
+            return maxAgeInSeconds(Output.of(maxAgeInSeconds));
+        }
+
+        public CorsPolicyArgs build() {
+            $.allowedOrigins = Objects.requireNonNull($.allowedOrigins, "expected parameter 'allowedOrigins' to be non-null");
+            return $;
         }
     }
+
 }

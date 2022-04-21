@@ -13,62 +13,59 @@ public final class GetBudgetArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetBudgetArgs Empty = new GetBudgetArgs();
 
     @Import(name="billingAccountId", required=true)
-      private final String billingAccountId;
+    private String billingAccountId;
 
     public String billingAccountId() {
         return this.billingAccountId;
     }
 
     @Import(name="budgetId", required=true)
-      private final String budgetId;
+    private String budgetId;
 
     public String budgetId() {
         return this.budgetId;
     }
 
-    public GetBudgetArgs(
-        String billingAccountId,
-        String budgetId) {
-        this.billingAccountId = Objects.requireNonNull(billingAccountId, "expected parameter 'billingAccountId' to be non-null");
-        this.budgetId = Objects.requireNonNull(budgetId, "expected parameter 'budgetId' to be non-null");
-    }
+    private GetBudgetArgs() {}
 
-    private GetBudgetArgs() {
-        this.billingAccountId = null;
-        this.budgetId = null;
+    private GetBudgetArgs(GetBudgetArgs $) {
+        this.billingAccountId = $.billingAccountId;
+        this.budgetId = $.budgetId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetBudgetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String billingAccountId;
-        private String budgetId;
+        private GetBudgetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetBudgetArgs();
         }
 
         public Builder(GetBudgetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.billingAccountId = defaults.billingAccountId;
-    	      this.budgetId = defaults.budgetId;
+            $ = new GetBudgetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder billingAccountId(String billingAccountId) {
-            this.billingAccountId = Objects.requireNonNull(billingAccountId);
+            $.billingAccountId = billingAccountId;
             return this;
         }
+
         public Builder budgetId(String budgetId) {
-            this.budgetId = Objects.requireNonNull(budgetId);
+            $.budgetId = budgetId;
             return this;
-        }        public GetBudgetArgs build() {
-            return new GetBudgetArgs(billingAccountId, budgetId);
+        }
+
+        public GetBudgetArgs build() {
+            $.billingAccountId = Objects.requireNonNull($.billingAccountId, "expected parameter 'billingAccountId' to be non-null");
+            $.budgetId = Objects.requireNonNull($.budgetId, "expected parameter 'budgetId' to be non-null");
+            return $;
         }
     }
+
 }

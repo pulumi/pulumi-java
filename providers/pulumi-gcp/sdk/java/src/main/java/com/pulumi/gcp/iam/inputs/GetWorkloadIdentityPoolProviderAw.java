@@ -13,45 +13,45 @@ public final class GetWorkloadIdentityPoolProviderAw extends com.pulumi.resource
     public static final GetWorkloadIdentityPoolProviderAw Empty = new GetWorkloadIdentityPoolProviderAw();
 
     @Import(name="accountId", required=true)
-      private final String accountId;
+    private String accountId;
 
     public String accountId() {
         return this.accountId;
     }
 
-    public GetWorkloadIdentityPoolProviderAw(String accountId) {
-        this.accountId = Objects.requireNonNull(accountId, "expected parameter 'accountId' to be non-null");
-    }
+    private GetWorkloadIdentityPoolProviderAw() {}
 
-    private GetWorkloadIdentityPoolProviderAw() {
-        this.accountId = null;
+    private GetWorkloadIdentityPoolProviderAw(GetWorkloadIdentityPoolProviderAw $) {
+        this.accountId = $.accountId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetWorkloadIdentityPoolProviderAw defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String accountId;
+        private GetWorkloadIdentityPoolProviderAw $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetWorkloadIdentityPoolProviderAw();
         }
 
         public Builder(GetWorkloadIdentityPoolProviderAw defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accountId = defaults.accountId;
+            $ = new GetWorkloadIdentityPoolProviderAw(Objects.requireNonNull(defaults));
         }
 
         public Builder accountId(String accountId) {
-            this.accountId = Objects.requireNonNull(accountId);
+            $.accountId = accountId;
             return this;
-        }        public GetWorkloadIdentityPoolProviderAw build() {
-            return new GetWorkloadIdentityPoolProviderAw(accountId);
+        }
+
+        public GetWorkloadIdentityPoolProviderAw build() {
+            $.accountId = Objects.requireNonNull($.accountId, "expected parameter 'accountId' to be non-null");
+            return $;
         }
     }
+
 }

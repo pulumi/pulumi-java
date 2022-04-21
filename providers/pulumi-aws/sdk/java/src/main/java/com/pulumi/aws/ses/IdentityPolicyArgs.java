@@ -5,9 +5,9 @@ package com.pulumi.aws.ses;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,7 +20,7 @@ public final class IdentityPolicyArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="identity", required=true)
-      private final Output<String> identity;
+    private Output<String> identity;
 
     public Output<String> identity() {
         return this.identity;
@@ -31,10 +31,10 @@ public final class IdentityPolicyArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -42,76 +42,70 @@ public final class IdentityPolicyArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="policy", required=true)
-      private final Output<String> policy;
+    private Output<String> policy;
 
     public Output<String> policy() {
         return this.policy;
     }
 
-    public IdentityPolicyArgs(
-        Output<String> identity,
-        @Nullable Output<String> name,
-        Output<String> policy) {
-        this.identity = Objects.requireNonNull(identity, "expected parameter 'identity' to be non-null");
-        this.name = name;
-        this.policy = Objects.requireNonNull(policy, "expected parameter 'policy' to be non-null");
-    }
+    private IdentityPolicyArgs() {}
 
-    private IdentityPolicyArgs() {
-        this.identity = Codegen.empty();
-        this.name = Codegen.empty();
-        this.policy = Codegen.empty();
+    private IdentityPolicyArgs(IdentityPolicyArgs $) {
+        this.identity = $.identity;
+        this.name = $.name;
+        this.policy = $.policy;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(IdentityPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> identity;
-        private @Nullable Output<String> name;
-        private Output<String> policy;
+        private IdentityPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new IdentityPolicyArgs();
         }
 
         public Builder(IdentityPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.identity = defaults.identity;
-    	      this.name = defaults.name;
-    	      this.policy = defaults.policy;
+            $ = new IdentityPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder identity(Output<String> identity) {
-            this.identity = Objects.requireNonNull(identity);
+            $.identity = identity;
             return this;
         }
+
         public Builder identity(String identity) {
-            this.identity = Output.of(Objects.requireNonNull(identity));
-            return this;
+            return identity(Output.of(identity));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder policy(Output<String> policy) {
-            this.policy = Objects.requireNonNull(policy);
+            $.policy = policy;
             return this;
         }
+
         public Builder policy(String policy) {
-            this.policy = Output.of(Objects.requireNonNull(policy));
-            return this;
-        }        public IdentityPolicyArgs build() {
-            return new IdentityPolicyArgs(identity, name, policy);
+            return policy(Output.of(policy));
+        }
+
+        public IdentityPolicyArgs build() {
+            $.identity = Objects.requireNonNull($.identity, "expected parameter 'identity' to be non-null");
+            $.policy = Objects.requireNonNull($.policy, "expected parameter 'policy' to be non-null");
+            return $;
         }
     }
+
 }

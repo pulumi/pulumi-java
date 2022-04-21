@@ -21,7 +21,7 @@ public final class GetBastionShareableLinkArgs extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="bastionHostName", required=true)
-      private final String bastionHostName;
+    private String bastionHostName;
 
     public String bastionHostName() {
         return this.bastionHostName;
@@ -32,7 +32,7 @@ public final class GetBastionShareableLinkArgs extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -43,67 +43,62 @@ public final class GetBastionShareableLinkArgs extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="vms")
-      private final @Nullable List<BastionShareableLink> vms;
+    private @Nullable List<BastionShareableLink> vms;
 
-    public List<BastionShareableLink> vms() {
-        return this.vms == null ? List.of() : this.vms;
+    public Optional<List<BastionShareableLink>> vms() {
+        return Optional.ofNullable(this.vms);
     }
 
-    public GetBastionShareableLinkArgs(
-        String bastionHostName,
-        String resourceGroupName,
-        @Nullable List<BastionShareableLink> vms) {
-        this.bastionHostName = Objects.requireNonNull(bastionHostName, "expected parameter 'bastionHostName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.vms = vms;
-    }
+    private GetBastionShareableLinkArgs() {}
 
-    private GetBastionShareableLinkArgs() {
-        this.bastionHostName = null;
-        this.resourceGroupName = null;
-        this.vms = List.of();
+    private GetBastionShareableLinkArgs(GetBastionShareableLinkArgs $) {
+        this.bastionHostName = $.bastionHostName;
+        this.resourceGroupName = $.resourceGroupName;
+        this.vms = $.vms;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetBastionShareableLinkArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String bastionHostName;
-        private String resourceGroupName;
-        private @Nullable List<BastionShareableLink> vms;
+        private GetBastionShareableLinkArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetBastionShareableLinkArgs();
         }
 
         public Builder(GetBastionShareableLinkArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.bastionHostName = defaults.bastionHostName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.vms = defaults.vms;
+            $ = new GetBastionShareableLinkArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder bastionHostName(String bastionHostName) {
-            this.bastionHostName = Objects.requireNonNull(bastionHostName);
+            $.bastionHostName = bastionHostName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder vms(@Nullable List<BastionShareableLink> vms) {
-            this.vms = vms;
+            $.vms = vms;
             return this;
         }
+
         public Builder vms(BastionShareableLink... vms) {
             return vms(List.of(vms));
-        }        public GetBastionShareableLinkArgs build() {
-            return new GetBastionShareableLinkArgs(bastionHostName, resourceGroupName, vms);
+        }
+
+        public GetBastionShareableLinkArgs build() {
+            $.bastionHostName = Objects.requireNonNull($.bastionHostName, "expected parameter 'bastionHostName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

@@ -6,10 +6,10 @@ package com.pulumi.azurenative.datamigration;
 import com.pulumi.azurenative.datamigration.inputs.ServiceSkuArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,7 +22,7 @@ public final class ServiceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="groupName", required=true)
-      private final Output<String> groupName;
+    private Output<String> groupName;
 
     public Output<String> groupName() {
         return this.groupName;
@@ -33,10 +33,10 @@ public final class ServiceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="kind")
-      private final @Nullable Output<String> kind;
+    private @Nullable Output<String> kind;
 
-    public Output<String> kind() {
-        return this.kind == null ? Codegen.empty() : this.kind;
+    public Optional<Output<String>> kind() {
+        return Optional.ofNullable(this.kind);
     }
 
     /**
@@ -44,10 +44,10 @@ public final class ServiceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -55,10 +55,10 @@ public final class ServiceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="publicKey")
-      private final @Nullable Output<String> publicKey;
+    private @Nullable Output<String> publicKey;
 
-    public Output<String> publicKey() {
-        return this.publicKey == null ? Codegen.empty() : this.publicKey;
+    public Optional<Output<String>> publicKey() {
+        return Optional.ofNullable(this.publicKey);
     }
 
     /**
@@ -66,10 +66,10 @@ public final class ServiceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="serviceName")
-      private final @Nullable Output<String> serviceName;
+    private @Nullable Output<String> serviceName;
 
-    public Output<String> serviceName() {
-        return this.serviceName == null ? Codegen.empty() : this.serviceName;
+    public Optional<Output<String>> serviceName() {
+        return Optional.ofNullable(this.serviceName);
     }
 
     /**
@@ -77,10 +77,10 @@ public final class ServiceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="sku")
-      private final @Nullable Output<ServiceSkuArgs> sku;
+    private @Nullable Output<ServiceSkuArgs> sku;
 
-    public Output<ServiceSkuArgs> sku() {
-        return this.sku == null ? Codegen.empty() : this.sku;
+    public Optional<Output<ServiceSkuArgs>> sku() {
+        return Optional.ofNullable(this.sku);
     }
 
     /**
@@ -88,10 +88,10 @@ public final class ServiceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -99,141 +99,120 @@ public final class ServiceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="virtualSubnetId", required=true)
-      private final Output<String> virtualSubnetId;
+    private Output<String> virtualSubnetId;
 
     public Output<String> virtualSubnetId() {
         return this.virtualSubnetId;
     }
 
-    public ServiceArgs(
-        Output<String> groupName,
-        @Nullable Output<String> kind,
-        @Nullable Output<String> location,
-        @Nullable Output<String> publicKey,
-        @Nullable Output<String> serviceName,
-        @Nullable Output<ServiceSkuArgs> sku,
-        @Nullable Output<Map<String,String>> tags,
-        Output<String> virtualSubnetId) {
-        this.groupName = Objects.requireNonNull(groupName, "expected parameter 'groupName' to be non-null");
-        this.kind = kind;
-        this.location = location;
-        this.publicKey = publicKey;
-        this.serviceName = serviceName;
-        this.sku = sku;
-        this.tags = tags;
-        this.virtualSubnetId = Objects.requireNonNull(virtualSubnetId, "expected parameter 'virtualSubnetId' to be non-null");
-    }
+    private ServiceArgs() {}
 
-    private ServiceArgs() {
-        this.groupName = Codegen.empty();
-        this.kind = Codegen.empty();
-        this.location = Codegen.empty();
-        this.publicKey = Codegen.empty();
-        this.serviceName = Codegen.empty();
-        this.sku = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.virtualSubnetId = Codegen.empty();
+    private ServiceArgs(ServiceArgs $) {
+        this.groupName = $.groupName;
+        this.kind = $.kind;
+        this.location = $.location;
+        this.publicKey = $.publicKey;
+        this.serviceName = $.serviceName;
+        this.sku = $.sku;
+        this.tags = $.tags;
+        this.virtualSubnetId = $.virtualSubnetId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ServiceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> groupName;
-        private @Nullable Output<String> kind;
-        private @Nullable Output<String> location;
-        private @Nullable Output<String> publicKey;
-        private @Nullable Output<String> serviceName;
-        private @Nullable Output<ServiceSkuArgs> sku;
-        private @Nullable Output<Map<String,String>> tags;
-        private Output<String> virtualSubnetId;
+        private ServiceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ServiceArgs();
         }
 
         public Builder(ServiceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.groupName = defaults.groupName;
-    	      this.kind = defaults.kind;
-    	      this.location = defaults.location;
-    	      this.publicKey = defaults.publicKey;
-    	      this.serviceName = defaults.serviceName;
-    	      this.sku = defaults.sku;
-    	      this.tags = defaults.tags;
-    	      this.virtualSubnetId = defaults.virtualSubnetId;
+            $ = new ServiceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder groupName(Output<String> groupName) {
-            this.groupName = Objects.requireNonNull(groupName);
+            $.groupName = groupName;
             return this;
         }
+
         public Builder groupName(String groupName) {
-            this.groupName = Output.of(Objects.requireNonNull(groupName));
-            return this;
+            return groupName(Output.of(groupName));
         }
+
         public Builder kind(@Nullable Output<String> kind) {
-            this.kind = kind;
+            $.kind = kind;
             return this;
         }
-        public Builder kind(@Nullable String kind) {
-            this.kind = Codegen.ofNullable(kind);
-            return this;
+
+        public Builder kind(String kind) {
+            return kind(Output.of(kind));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder publicKey(@Nullable Output<String> publicKey) {
-            this.publicKey = publicKey;
+            $.publicKey = publicKey;
             return this;
         }
-        public Builder publicKey(@Nullable String publicKey) {
-            this.publicKey = Codegen.ofNullable(publicKey);
-            return this;
+
+        public Builder publicKey(String publicKey) {
+            return publicKey(Output.of(publicKey));
         }
+
         public Builder serviceName(@Nullable Output<String> serviceName) {
-            this.serviceName = serviceName;
+            $.serviceName = serviceName;
             return this;
         }
-        public Builder serviceName(@Nullable String serviceName) {
-            this.serviceName = Codegen.ofNullable(serviceName);
-            return this;
+
+        public Builder serviceName(String serviceName) {
+            return serviceName(Output.of(serviceName));
         }
+
         public Builder sku(@Nullable Output<ServiceSkuArgs> sku) {
-            this.sku = sku;
+            $.sku = sku;
             return this;
         }
-        public Builder sku(@Nullable ServiceSkuArgs sku) {
-            this.sku = Codegen.ofNullable(sku);
-            return this;
+
+        public Builder sku(ServiceSkuArgs sku) {
+            return sku(Output.of(sku));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder virtualSubnetId(Output<String> virtualSubnetId) {
-            this.virtualSubnetId = Objects.requireNonNull(virtualSubnetId);
+            $.virtualSubnetId = virtualSubnetId;
             return this;
         }
+
         public Builder virtualSubnetId(String virtualSubnetId) {
-            this.virtualSubnetId = Output.of(Objects.requireNonNull(virtualSubnetId));
-            return this;
-        }        public ServiceArgs build() {
-            return new ServiceArgs(groupName, kind, location, publicKey, serviceName, sku, tags, virtualSubnetId);
+            return virtualSubnetId(Output.of(virtualSubnetId));
+        }
+
+        public ServiceArgs build() {
+            $.groupName = Objects.requireNonNull($.groupName, "expected parameter 'groupName' to be non-null");
+            $.virtualSubnetId = Objects.requireNonNull($.virtualSubnetId, "expected parameter 'virtualSubnetId' to be non-null");
+            return $;
         }
     }
+
 }

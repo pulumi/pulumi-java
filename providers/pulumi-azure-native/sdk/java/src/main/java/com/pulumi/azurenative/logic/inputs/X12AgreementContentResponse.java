@@ -21,7 +21,7 @@ public final class X12AgreementContentResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="receiveAgreement", required=true)
-      private final X12OneWayAgreementResponse receiveAgreement;
+    private X12OneWayAgreementResponse receiveAgreement;
 
     public X12OneWayAgreementResponse receiveAgreement() {
         return this.receiveAgreement;
@@ -32,55 +32,52 @@ public final class X12AgreementContentResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="sendAgreement", required=true)
-      private final X12OneWayAgreementResponse sendAgreement;
+    private X12OneWayAgreementResponse sendAgreement;
 
     public X12OneWayAgreementResponse sendAgreement() {
         return this.sendAgreement;
     }
 
-    public X12AgreementContentResponse(
-        X12OneWayAgreementResponse receiveAgreement,
-        X12OneWayAgreementResponse sendAgreement) {
-        this.receiveAgreement = Objects.requireNonNull(receiveAgreement, "expected parameter 'receiveAgreement' to be non-null");
-        this.sendAgreement = Objects.requireNonNull(sendAgreement, "expected parameter 'sendAgreement' to be non-null");
-    }
+    private X12AgreementContentResponse() {}
 
-    private X12AgreementContentResponse() {
-        this.receiveAgreement = null;
-        this.sendAgreement = null;
+    private X12AgreementContentResponse(X12AgreementContentResponse $) {
+        this.receiveAgreement = $.receiveAgreement;
+        this.sendAgreement = $.sendAgreement;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(X12AgreementContentResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private X12OneWayAgreementResponse receiveAgreement;
-        private X12OneWayAgreementResponse sendAgreement;
+        private X12AgreementContentResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new X12AgreementContentResponse();
         }
 
         public Builder(X12AgreementContentResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.receiveAgreement = defaults.receiveAgreement;
-    	      this.sendAgreement = defaults.sendAgreement;
+            $ = new X12AgreementContentResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder receiveAgreement(X12OneWayAgreementResponse receiveAgreement) {
-            this.receiveAgreement = Objects.requireNonNull(receiveAgreement);
+            $.receiveAgreement = receiveAgreement;
             return this;
         }
+
         public Builder sendAgreement(X12OneWayAgreementResponse sendAgreement) {
-            this.sendAgreement = Objects.requireNonNull(sendAgreement);
+            $.sendAgreement = sendAgreement;
             return this;
-        }        public X12AgreementContentResponse build() {
-            return new X12AgreementContentResponse(receiveAgreement, sendAgreement);
+        }
+
+        public X12AgreementContentResponse build() {
+            $.receiveAgreement = Objects.requireNonNull($.receiveAgreement, "expected parameter 'receiveAgreement' to be non-null");
+            $.sendAgreement = Objects.requireNonNull($.sendAgreement, "expected parameter 'sendAgreement' to be non-null");
+            return $;
         }
     }
+
 }

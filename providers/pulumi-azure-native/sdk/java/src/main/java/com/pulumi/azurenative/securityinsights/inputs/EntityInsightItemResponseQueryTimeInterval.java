@@ -23,10 +23,10 @@ public final class EntityInsightItemResponseQueryTimeInterval extends com.pulumi
      * 
      */
     @Import(name="endTime")
-      private final @Nullable String endTime;
+    private @Nullable String endTime;
 
     public Optional<String> endTime() {
-        return this.endTime == null ? Optional.empty() : Optional.ofNullable(this.endTime);
+        return Optional.ofNullable(this.endTime);
     }
 
     /**
@@ -34,55 +34,50 @@ public final class EntityInsightItemResponseQueryTimeInterval extends com.pulumi
      * 
      */
     @Import(name="startTime")
-      private final @Nullable String startTime;
+    private @Nullable String startTime;
 
     public Optional<String> startTime() {
-        return this.startTime == null ? Optional.empty() : Optional.ofNullable(this.startTime);
+        return Optional.ofNullable(this.startTime);
     }
 
-    public EntityInsightItemResponseQueryTimeInterval(
-        @Nullable String endTime,
-        @Nullable String startTime) {
-        this.endTime = endTime;
-        this.startTime = startTime;
-    }
+    private EntityInsightItemResponseQueryTimeInterval() {}
 
-    private EntityInsightItemResponseQueryTimeInterval() {
-        this.endTime = null;
-        this.startTime = null;
+    private EntityInsightItemResponseQueryTimeInterval(EntityInsightItemResponseQueryTimeInterval $) {
+        this.endTime = $.endTime;
+        this.startTime = $.startTime;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EntityInsightItemResponseQueryTimeInterval defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String endTime;
-        private @Nullable String startTime;
+        private EntityInsightItemResponseQueryTimeInterval $;
 
         public Builder() {
-    	      // Empty
+            $ = new EntityInsightItemResponseQueryTimeInterval();
         }
 
         public Builder(EntityInsightItemResponseQueryTimeInterval defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.endTime = defaults.endTime;
-    	      this.startTime = defaults.startTime;
+            $ = new EntityInsightItemResponseQueryTimeInterval(Objects.requireNonNull(defaults));
         }
 
         public Builder endTime(@Nullable String endTime) {
-            this.endTime = endTime;
+            $.endTime = endTime;
             return this;
         }
+
         public Builder startTime(@Nullable String startTime) {
-            this.startTime = startTime;
+            $.startTime = startTime;
             return this;
-        }        public EntityInsightItemResponseQueryTimeInterval build() {
-            return new EntityInsightItemResponseQueryTimeInterval(endTime, startTime);
+        }
+
+        public EntityInsightItemResponseQueryTimeInterval build() {
+            return $;
         }
     }
+
 }

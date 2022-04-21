@@ -5,12 +5,12 @@ package com.pulumi.gcp.cloudasset;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.cloudasset.inputs.FolderFeedConditionArgs;
 import com.pulumi.gcp.cloudasset.inputs.FolderFeedFeedOutputConfigArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class FolderFeedArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="assetNames")
-      private final @Nullable Output<List<String>> assetNames;
+    private @Nullable Output<List<String>> assetNames;
 
-    public Output<List<String>> assetNames() {
-        return this.assetNames == null ? Codegen.empty() : this.assetNames;
+    public Optional<Output<List<String>>> assetNames() {
+        return Optional.ofNullable(this.assetNames);
     }
 
     /**
@@ -41,10 +41,10 @@ public final class FolderFeedArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="assetTypes")
-      private final @Nullable Output<List<String>> assetTypes;
+    private @Nullable Output<List<String>> assetTypes;
 
-    public Output<List<String>> assetTypes() {
-        return this.assetTypes == null ? Codegen.empty() : this.assetTypes;
+    public Optional<Output<List<String>>> assetTypes() {
+        return Optional.ofNullable(this.assetTypes);
     }
 
     /**
@@ -54,7 +54,7 @@ public final class FolderFeedArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="billingProject", required=true)
-      private final Output<String> billingProject;
+    private Output<String> billingProject;
 
     public Output<String> billingProject() {
         return this.billingProject;
@@ -70,10 +70,10 @@ public final class FolderFeedArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="condition")
-      private final @Nullable Output<FolderFeedConditionArgs> condition;
+    private @Nullable Output<FolderFeedConditionArgs> condition;
 
-    public Output<FolderFeedConditionArgs> condition() {
-        return this.condition == null ? Codegen.empty() : this.condition;
+    public Optional<Output<FolderFeedConditionArgs>> condition() {
+        return Optional.ofNullable(this.condition);
     }
 
     /**
@@ -82,10 +82,10 @@ public final class FolderFeedArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="contentType")
-      private final @Nullable Output<String> contentType;
+    private @Nullable Output<String> contentType;
 
-    public Output<String> contentType() {
-        return this.contentType == null ? Codegen.empty() : this.contentType;
+    public Optional<Output<String>> contentType() {
+        return Optional.ofNullable(this.contentType);
     }
 
     /**
@@ -93,7 +93,7 @@ public final class FolderFeedArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="feedId", required=true)
-      private final Output<String> feedId;
+    private Output<String> feedId;
 
     public Output<String> feedId() {
         return this.feedId;
@@ -105,7 +105,7 @@ public final class FolderFeedArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="feedOutputConfig", required=true)
-      private final Output<FolderFeedFeedOutputConfigArgs> feedOutputConfig;
+    private Output<FolderFeedFeedOutputConfigArgs> feedOutputConfig;
 
     public Output<FolderFeedFeedOutputConfigArgs> feedOutputConfig() {
         return this.feedOutputConfig;
@@ -116,147 +116,130 @@ public final class FolderFeedArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="folder", required=true)
-      private final Output<String> folder;
+    private Output<String> folder;
 
     public Output<String> folder() {
         return this.folder;
     }
 
-    public FolderFeedArgs(
-        @Nullable Output<List<String>> assetNames,
-        @Nullable Output<List<String>> assetTypes,
-        Output<String> billingProject,
-        @Nullable Output<FolderFeedConditionArgs> condition,
-        @Nullable Output<String> contentType,
-        Output<String> feedId,
-        Output<FolderFeedFeedOutputConfigArgs> feedOutputConfig,
-        Output<String> folder) {
-        this.assetNames = assetNames;
-        this.assetTypes = assetTypes;
-        this.billingProject = Objects.requireNonNull(billingProject, "expected parameter 'billingProject' to be non-null");
-        this.condition = condition;
-        this.contentType = contentType;
-        this.feedId = Objects.requireNonNull(feedId, "expected parameter 'feedId' to be non-null");
-        this.feedOutputConfig = Objects.requireNonNull(feedOutputConfig, "expected parameter 'feedOutputConfig' to be non-null");
-        this.folder = Objects.requireNonNull(folder, "expected parameter 'folder' to be non-null");
-    }
+    private FolderFeedArgs() {}
 
-    private FolderFeedArgs() {
-        this.assetNames = Codegen.empty();
-        this.assetTypes = Codegen.empty();
-        this.billingProject = Codegen.empty();
-        this.condition = Codegen.empty();
-        this.contentType = Codegen.empty();
-        this.feedId = Codegen.empty();
-        this.feedOutputConfig = Codegen.empty();
-        this.folder = Codegen.empty();
+    private FolderFeedArgs(FolderFeedArgs $) {
+        this.assetNames = $.assetNames;
+        this.assetTypes = $.assetTypes;
+        this.billingProject = $.billingProject;
+        this.condition = $.condition;
+        this.contentType = $.contentType;
+        this.feedId = $.feedId;
+        this.feedOutputConfig = $.feedOutputConfig;
+        this.folder = $.folder;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FolderFeedArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> assetNames;
-        private @Nullable Output<List<String>> assetTypes;
-        private Output<String> billingProject;
-        private @Nullable Output<FolderFeedConditionArgs> condition;
-        private @Nullable Output<String> contentType;
-        private Output<String> feedId;
-        private Output<FolderFeedFeedOutputConfigArgs> feedOutputConfig;
-        private Output<String> folder;
+        private FolderFeedArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new FolderFeedArgs();
         }
 
         public Builder(FolderFeedArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.assetNames = defaults.assetNames;
-    	      this.assetTypes = defaults.assetTypes;
-    	      this.billingProject = defaults.billingProject;
-    	      this.condition = defaults.condition;
-    	      this.contentType = defaults.contentType;
-    	      this.feedId = defaults.feedId;
-    	      this.feedOutputConfig = defaults.feedOutputConfig;
-    	      this.folder = defaults.folder;
+            $ = new FolderFeedArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder assetNames(@Nullable Output<List<String>> assetNames) {
-            this.assetNames = assetNames;
+            $.assetNames = assetNames;
             return this;
         }
-        public Builder assetNames(@Nullable List<String> assetNames) {
-            this.assetNames = Codegen.ofNullable(assetNames);
-            return this;
+
+        public Builder assetNames(List<String> assetNames) {
+            return assetNames(Output.of(assetNames));
         }
+
         public Builder assetNames(String... assetNames) {
             return assetNames(List.of(assetNames));
         }
+
         public Builder assetTypes(@Nullable Output<List<String>> assetTypes) {
-            this.assetTypes = assetTypes;
+            $.assetTypes = assetTypes;
             return this;
         }
-        public Builder assetTypes(@Nullable List<String> assetTypes) {
-            this.assetTypes = Codegen.ofNullable(assetTypes);
-            return this;
+
+        public Builder assetTypes(List<String> assetTypes) {
+            return assetTypes(Output.of(assetTypes));
         }
+
         public Builder assetTypes(String... assetTypes) {
             return assetTypes(List.of(assetTypes));
         }
+
         public Builder billingProject(Output<String> billingProject) {
-            this.billingProject = Objects.requireNonNull(billingProject);
+            $.billingProject = billingProject;
             return this;
         }
+
         public Builder billingProject(String billingProject) {
-            this.billingProject = Output.of(Objects.requireNonNull(billingProject));
-            return this;
+            return billingProject(Output.of(billingProject));
         }
+
         public Builder condition(@Nullable Output<FolderFeedConditionArgs> condition) {
-            this.condition = condition;
+            $.condition = condition;
             return this;
         }
-        public Builder condition(@Nullable FolderFeedConditionArgs condition) {
-            this.condition = Codegen.ofNullable(condition);
-            return this;
+
+        public Builder condition(FolderFeedConditionArgs condition) {
+            return condition(Output.of(condition));
         }
+
         public Builder contentType(@Nullable Output<String> contentType) {
-            this.contentType = contentType;
+            $.contentType = contentType;
             return this;
         }
-        public Builder contentType(@Nullable String contentType) {
-            this.contentType = Codegen.ofNullable(contentType);
-            return this;
+
+        public Builder contentType(String contentType) {
+            return contentType(Output.of(contentType));
         }
+
         public Builder feedId(Output<String> feedId) {
-            this.feedId = Objects.requireNonNull(feedId);
+            $.feedId = feedId;
             return this;
         }
+
         public Builder feedId(String feedId) {
-            this.feedId = Output.of(Objects.requireNonNull(feedId));
-            return this;
+            return feedId(Output.of(feedId));
         }
+
         public Builder feedOutputConfig(Output<FolderFeedFeedOutputConfigArgs> feedOutputConfig) {
-            this.feedOutputConfig = Objects.requireNonNull(feedOutputConfig);
+            $.feedOutputConfig = feedOutputConfig;
             return this;
         }
+
         public Builder feedOutputConfig(FolderFeedFeedOutputConfigArgs feedOutputConfig) {
-            this.feedOutputConfig = Output.of(Objects.requireNonNull(feedOutputConfig));
-            return this;
+            return feedOutputConfig(Output.of(feedOutputConfig));
         }
+
         public Builder folder(Output<String> folder) {
-            this.folder = Objects.requireNonNull(folder);
+            $.folder = folder;
             return this;
         }
+
         public Builder folder(String folder) {
-            this.folder = Output.of(Objects.requireNonNull(folder));
-            return this;
-        }        public FolderFeedArgs build() {
-            return new FolderFeedArgs(assetNames, assetTypes, billingProject, condition, contentType, feedId, feedOutputConfig, folder);
+            return folder(Output.of(folder));
+        }
+
+        public FolderFeedArgs build() {
+            $.billingProject = Objects.requireNonNull($.billingProject, "expected parameter 'billingProject' to be non-null");
+            $.feedId = Objects.requireNonNull($.feedId, "expected parameter 'feedId' to be non-null");
+            $.feedOutputConfig = Objects.requireNonNull($.feedOutputConfig, "expected parameter 'feedOutputConfig' to be non-null");
+            $.folder = Objects.requireNonNull($.folder, "expected parameter 'folder' to be non-null");
+            return $;
         }
     }
+
 }

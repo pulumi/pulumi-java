@@ -5,9 +5,9 @@ package com.pulumi.awsnative.backup.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -16,70 +16,65 @@ public final class BackupPlanLifecycleResourceTypeArgs extends com.pulumi.resour
     public static final BackupPlanLifecycleResourceTypeArgs Empty = new BackupPlanLifecycleResourceTypeArgs();
 
     @Import(name="deleteAfterDays")
-      private final @Nullable Output<Double> deleteAfterDays;
+    private @Nullable Output<Double> deleteAfterDays;
 
-    public Output<Double> deleteAfterDays() {
-        return this.deleteAfterDays == null ? Codegen.empty() : this.deleteAfterDays;
+    public Optional<Output<Double>> deleteAfterDays() {
+        return Optional.ofNullable(this.deleteAfterDays);
     }
 
     @Import(name="moveToColdStorageAfterDays")
-      private final @Nullable Output<Double> moveToColdStorageAfterDays;
+    private @Nullable Output<Double> moveToColdStorageAfterDays;
 
-    public Output<Double> moveToColdStorageAfterDays() {
-        return this.moveToColdStorageAfterDays == null ? Codegen.empty() : this.moveToColdStorageAfterDays;
+    public Optional<Output<Double>> moveToColdStorageAfterDays() {
+        return Optional.ofNullable(this.moveToColdStorageAfterDays);
     }
 
-    public BackupPlanLifecycleResourceTypeArgs(
-        @Nullable Output<Double> deleteAfterDays,
-        @Nullable Output<Double> moveToColdStorageAfterDays) {
-        this.deleteAfterDays = deleteAfterDays;
-        this.moveToColdStorageAfterDays = moveToColdStorageAfterDays;
-    }
+    private BackupPlanLifecycleResourceTypeArgs() {}
 
-    private BackupPlanLifecycleResourceTypeArgs() {
-        this.deleteAfterDays = Codegen.empty();
-        this.moveToColdStorageAfterDays = Codegen.empty();
+    private BackupPlanLifecycleResourceTypeArgs(BackupPlanLifecycleResourceTypeArgs $) {
+        this.deleteAfterDays = $.deleteAfterDays;
+        this.moveToColdStorageAfterDays = $.moveToColdStorageAfterDays;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BackupPlanLifecycleResourceTypeArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Double> deleteAfterDays;
-        private @Nullable Output<Double> moveToColdStorageAfterDays;
+        private BackupPlanLifecycleResourceTypeArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new BackupPlanLifecycleResourceTypeArgs();
         }
 
         public Builder(BackupPlanLifecycleResourceTypeArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.deleteAfterDays = defaults.deleteAfterDays;
-    	      this.moveToColdStorageAfterDays = defaults.moveToColdStorageAfterDays;
+            $ = new BackupPlanLifecycleResourceTypeArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder deleteAfterDays(@Nullable Output<Double> deleteAfterDays) {
-            this.deleteAfterDays = deleteAfterDays;
+            $.deleteAfterDays = deleteAfterDays;
             return this;
         }
-        public Builder deleteAfterDays(@Nullable Double deleteAfterDays) {
-            this.deleteAfterDays = Codegen.ofNullable(deleteAfterDays);
-            return this;
+
+        public Builder deleteAfterDays(Double deleteAfterDays) {
+            return deleteAfterDays(Output.of(deleteAfterDays));
         }
+
         public Builder moveToColdStorageAfterDays(@Nullable Output<Double> moveToColdStorageAfterDays) {
-            this.moveToColdStorageAfterDays = moveToColdStorageAfterDays;
+            $.moveToColdStorageAfterDays = moveToColdStorageAfterDays;
             return this;
         }
-        public Builder moveToColdStorageAfterDays(@Nullable Double moveToColdStorageAfterDays) {
-            this.moveToColdStorageAfterDays = Codegen.ofNullable(moveToColdStorageAfterDays);
-            return this;
-        }        public BackupPlanLifecycleResourceTypeArgs build() {
-            return new BackupPlanLifecycleResourceTypeArgs(deleteAfterDays, moveToColdStorageAfterDays);
+
+        public Builder moveToColdStorageAfterDays(Double moveToColdStorageAfterDays) {
+            return moveToColdStorageAfterDays(Output.of(moveToColdStorageAfterDays));
+        }
+
+        public BackupPlanLifecycleResourceTypeArgs build() {
+            return $;
         }
     }
+
 }

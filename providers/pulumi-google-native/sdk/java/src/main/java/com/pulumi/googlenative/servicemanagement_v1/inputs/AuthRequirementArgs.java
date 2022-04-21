@@ -5,9 +5,9 @@ package com.pulumi.googlenative.servicemanagement_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class AuthRequirementArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="audiences")
-      private final @Nullable Output<String> audiences;
+    private @Nullable Output<String> audiences;
 
-    public Output<String> audiences() {
-        return this.audiences == null ? Codegen.empty() : this.audiences;
+    public Optional<Output<String>> audiences() {
+        return Optional.ofNullable(this.audiences);
     }
 
     /**
@@ -35,63 +35,58 @@ public final class AuthRequirementArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="providerId")
-      private final @Nullable Output<String> providerId;
+    private @Nullable Output<String> providerId;
 
-    public Output<String> providerId() {
-        return this.providerId == null ? Codegen.empty() : this.providerId;
+    public Optional<Output<String>> providerId() {
+        return Optional.ofNullable(this.providerId);
     }
 
-    public AuthRequirementArgs(
-        @Nullable Output<String> audiences,
-        @Nullable Output<String> providerId) {
-        this.audiences = audiences;
-        this.providerId = providerId;
-    }
+    private AuthRequirementArgs() {}
 
-    private AuthRequirementArgs() {
-        this.audiences = Codegen.empty();
-        this.providerId = Codegen.empty();
+    private AuthRequirementArgs(AuthRequirementArgs $) {
+        this.audiences = $.audiences;
+        this.providerId = $.providerId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AuthRequirementArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> audiences;
-        private @Nullable Output<String> providerId;
+        private AuthRequirementArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AuthRequirementArgs();
         }
 
         public Builder(AuthRequirementArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.audiences = defaults.audiences;
-    	      this.providerId = defaults.providerId;
+            $ = new AuthRequirementArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder audiences(@Nullable Output<String> audiences) {
-            this.audiences = audiences;
+            $.audiences = audiences;
             return this;
         }
-        public Builder audiences(@Nullable String audiences) {
-            this.audiences = Codegen.ofNullable(audiences);
-            return this;
+
+        public Builder audiences(String audiences) {
+            return audiences(Output.of(audiences));
         }
+
         public Builder providerId(@Nullable Output<String> providerId) {
-            this.providerId = providerId;
+            $.providerId = providerId;
             return this;
         }
-        public Builder providerId(@Nullable String providerId) {
-            this.providerId = Codegen.ofNullable(providerId);
-            return this;
-        }        public AuthRequirementArgs build() {
-            return new AuthRequirementArgs(audiences, providerId);
+
+        public Builder providerId(String providerId) {
+            return providerId(Output.of(providerId));
+        }
+
+        public AuthRequirementArgs build() {
+            return $;
         }
     }
+
 }

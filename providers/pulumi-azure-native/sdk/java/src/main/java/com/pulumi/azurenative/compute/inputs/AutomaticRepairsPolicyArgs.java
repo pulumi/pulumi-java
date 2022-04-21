@@ -5,10 +5,10 @@ package com.pulumi.azurenative.compute.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class AutomaticRepairsPolicyArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="enabled")
-      private final @Nullable Output<Boolean> enabled;
+    private @Nullable Output<Boolean> enabled;
 
-    public Output<Boolean> enabled() {
-        return this.enabled == null ? Codegen.empty() : this.enabled;
+    public Optional<Output<Boolean>> enabled() {
+        return Optional.ofNullable(this.enabled);
     }
 
     /**
@@ -36,63 +36,58 @@ public final class AutomaticRepairsPolicyArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="gracePeriod")
-      private final @Nullable Output<String> gracePeriod;
+    private @Nullable Output<String> gracePeriod;
 
-    public Output<String> gracePeriod() {
-        return this.gracePeriod == null ? Codegen.empty() : this.gracePeriod;
+    public Optional<Output<String>> gracePeriod() {
+        return Optional.ofNullable(this.gracePeriod);
     }
 
-    public AutomaticRepairsPolicyArgs(
-        @Nullable Output<Boolean> enabled,
-        @Nullable Output<String> gracePeriod) {
-        this.enabled = enabled;
-        this.gracePeriod = gracePeriod;
-    }
+    private AutomaticRepairsPolicyArgs() {}
 
-    private AutomaticRepairsPolicyArgs() {
-        this.enabled = Codegen.empty();
-        this.gracePeriod = Codegen.empty();
+    private AutomaticRepairsPolicyArgs(AutomaticRepairsPolicyArgs $) {
+        this.enabled = $.enabled;
+        this.gracePeriod = $.gracePeriod;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AutomaticRepairsPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> enabled;
-        private @Nullable Output<String> gracePeriod;
+        private AutomaticRepairsPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AutomaticRepairsPolicyArgs();
         }
 
         public Builder(AutomaticRepairsPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.enabled = defaults.enabled;
-    	      this.gracePeriod = defaults.gracePeriod;
+            $ = new AutomaticRepairsPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder enabled(@Nullable Output<Boolean> enabled) {
-            this.enabled = enabled;
+            $.enabled = enabled;
             return this;
         }
-        public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Codegen.ofNullable(enabled);
-            return this;
+
+        public Builder enabled(Boolean enabled) {
+            return enabled(Output.of(enabled));
         }
+
         public Builder gracePeriod(@Nullable Output<String> gracePeriod) {
-            this.gracePeriod = gracePeriod;
+            $.gracePeriod = gracePeriod;
             return this;
         }
-        public Builder gracePeriod(@Nullable String gracePeriod) {
-            this.gracePeriod = Codegen.ofNullable(gracePeriod);
-            return this;
-        }        public AutomaticRepairsPolicyArgs build() {
-            return new AutomaticRepairsPolicyArgs(enabled, gracePeriod);
+
+        public Builder gracePeriod(String gracePeriod) {
+            return gracePeriod(Output.of(gracePeriod));
+        }
+
+        public AutomaticRepairsPolicyArgs build() {
+            return $;
         }
     }
+
 }

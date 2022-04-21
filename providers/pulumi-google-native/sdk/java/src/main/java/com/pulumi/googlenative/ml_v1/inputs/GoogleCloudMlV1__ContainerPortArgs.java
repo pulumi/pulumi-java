@@ -5,9 +5,9 @@ package com.pulumi.googlenative.ml_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class GoogleCloudMlV1__ContainerPortArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="containerPort")
-      private final @Nullable Output<Integer> containerPort;
+    private @Nullable Output<Integer> containerPort;
 
-    public Output<Integer> containerPort() {
-        return this.containerPort == null ? Codegen.empty() : this.containerPort;
+    public Optional<Output<Integer>> containerPort() {
+        return Optional.ofNullable(this.containerPort);
     }
 
-    public GoogleCloudMlV1__ContainerPortArgs(@Nullable Output<Integer> containerPort) {
-        this.containerPort = containerPort;
-    }
+    private GoogleCloudMlV1__ContainerPortArgs() {}
 
-    private GoogleCloudMlV1__ContainerPortArgs() {
-        this.containerPort = Codegen.empty();
+    private GoogleCloudMlV1__ContainerPortArgs(GoogleCloudMlV1__ContainerPortArgs $) {
+        this.containerPort = $.containerPort;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudMlV1__ContainerPortArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> containerPort;
+        private GoogleCloudMlV1__ContainerPortArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudMlV1__ContainerPortArgs();
         }
 
         public Builder(GoogleCloudMlV1__ContainerPortArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.containerPort = defaults.containerPort;
+            $ = new GoogleCloudMlV1__ContainerPortArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder containerPort(@Nullable Output<Integer> containerPort) {
-            this.containerPort = containerPort;
+            $.containerPort = containerPort;
             return this;
         }
-        public Builder containerPort(@Nullable Integer containerPort) {
-            this.containerPort = Codegen.ofNullable(containerPort);
-            return this;
-        }        public GoogleCloudMlV1__ContainerPortArgs build() {
-            return new GoogleCloudMlV1__ContainerPortArgs(containerPort);
+
+        public Builder containerPort(Integer containerPort) {
+            return containerPort(Output.of(containerPort));
+        }
+
+        public GoogleCloudMlV1__ContainerPortArgs build() {
+            return $;
         }
     }
+
 }

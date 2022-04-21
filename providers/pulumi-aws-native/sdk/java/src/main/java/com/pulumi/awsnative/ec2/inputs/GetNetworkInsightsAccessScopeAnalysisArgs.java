@@ -13,45 +13,45 @@ public final class GetNetworkInsightsAccessScopeAnalysisArgs extends com.pulumi.
     public static final GetNetworkInsightsAccessScopeAnalysisArgs Empty = new GetNetworkInsightsAccessScopeAnalysisArgs();
 
     @Import(name="networkInsightsAccessScopeAnalysisId", required=true)
-      private final String networkInsightsAccessScopeAnalysisId;
+    private String networkInsightsAccessScopeAnalysisId;
 
     public String networkInsightsAccessScopeAnalysisId() {
         return this.networkInsightsAccessScopeAnalysisId;
     }
 
-    public GetNetworkInsightsAccessScopeAnalysisArgs(String networkInsightsAccessScopeAnalysisId) {
-        this.networkInsightsAccessScopeAnalysisId = Objects.requireNonNull(networkInsightsAccessScopeAnalysisId, "expected parameter 'networkInsightsAccessScopeAnalysisId' to be non-null");
-    }
+    private GetNetworkInsightsAccessScopeAnalysisArgs() {}
 
-    private GetNetworkInsightsAccessScopeAnalysisArgs() {
-        this.networkInsightsAccessScopeAnalysisId = null;
+    private GetNetworkInsightsAccessScopeAnalysisArgs(GetNetworkInsightsAccessScopeAnalysisArgs $) {
+        this.networkInsightsAccessScopeAnalysisId = $.networkInsightsAccessScopeAnalysisId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetNetworkInsightsAccessScopeAnalysisArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String networkInsightsAccessScopeAnalysisId;
+        private GetNetworkInsightsAccessScopeAnalysisArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetNetworkInsightsAccessScopeAnalysisArgs();
         }
 
         public Builder(GetNetworkInsightsAccessScopeAnalysisArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.networkInsightsAccessScopeAnalysisId = defaults.networkInsightsAccessScopeAnalysisId;
+            $ = new GetNetworkInsightsAccessScopeAnalysisArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder networkInsightsAccessScopeAnalysisId(String networkInsightsAccessScopeAnalysisId) {
-            this.networkInsightsAccessScopeAnalysisId = Objects.requireNonNull(networkInsightsAccessScopeAnalysisId);
+            $.networkInsightsAccessScopeAnalysisId = networkInsightsAccessScopeAnalysisId;
             return this;
-        }        public GetNetworkInsightsAccessScopeAnalysisArgs build() {
-            return new GetNetworkInsightsAccessScopeAnalysisArgs(networkInsightsAccessScopeAnalysisId);
+        }
+
+        public GetNetworkInsightsAccessScopeAnalysisArgs build() {
+            $.networkInsightsAccessScopeAnalysisId = Objects.requireNonNull($.networkInsightsAccessScopeAnalysisId, "expected parameter 'networkInsightsAccessScopeAnalysisId' to be non-null");
+            return $;
         }
     }
+
 }

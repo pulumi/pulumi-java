@@ -19,7 +19,7 @@ public final class GetSecretVersionArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="secretId", required=true)
-      private final String secretId;
+    private String secretId;
 
     public String secretId() {
         return this.secretId;
@@ -30,10 +30,10 @@ public final class GetSecretVersionArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="versionId")
-      private final @Nullable String versionId;
+    private @Nullable String versionId;
 
     public Optional<String> versionId() {
-        return this.versionId == null ? Optional.empty() : Optional.ofNullable(this.versionId);
+        return Optional.ofNullable(this.versionId);
     }
 
     /**
@@ -41,64 +41,57 @@ public final class GetSecretVersionArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="versionStage")
-      private final @Nullable String versionStage;
+    private @Nullable String versionStage;
 
     public Optional<String> versionStage() {
-        return this.versionStage == null ? Optional.empty() : Optional.ofNullable(this.versionStage);
+        return Optional.ofNullable(this.versionStage);
     }
 
-    public GetSecretVersionArgs(
-        String secretId,
-        @Nullable String versionId,
-        @Nullable String versionStage) {
-        this.secretId = Objects.requireNonNull(secretId, "expected parameter 'secretId' to be non-null");
-        this.versionId = versionId;
-        this.versionStage = versionStage;
-    }
+    private GetSecretVersionArgs() {}
 
-    private GetSecretVersionArgs() {
-        this.secretId = null;
-        this.versionId = null;
-        this.versionStage = null;
+    private GetSecretVersionArgs(GetSecretVersionArgs $) {
+        this.secretId = $.secretId;
+        this.versionId = $.versionId;
+        this.versionStage = $.versionStage;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetSecretVersionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String secretId;
-        private @Nullable String versionId;
-        private @Nullable String versionStage;
+        private GetSecretVersionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetSecretVersionArgs();
         }
 
         public Builder(GetSecretVersionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.secretId = defaults.secretId;
-    	      this.versionId = defaults.versionId;
-    	      this.versionStage = defaults.versionStage;
+            $ = new GetSecretVersionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder secretId(String secretId) {
-            this.secretId = Objects.requireNonNull(secretId);
+            $.secretId = secretId;
             return this;
         }
+
         public Builder versionId(@Nullable String versionId) {
-            this.versionId = versionId;
+            $.versionId = versionId;
             return this;
         }
+
         public Builder versionStage(@Nullable String versionStage) {
-            this.versionStage = versionStage;
+            $.versionStage = versionStage;
             return this;
-        }        public GetSecretVersionArgs build() {
-            return new GetSecretVersionArgs(secretId, versionId, versionStage);
+        }
+
+        public GetSecretVersionArgs build() {
+            $.secretId = Objects.requireNonNull($.secretId, "expected parameter 'secretId' to be non-null");
+            return $;
         }
     }
+
 }

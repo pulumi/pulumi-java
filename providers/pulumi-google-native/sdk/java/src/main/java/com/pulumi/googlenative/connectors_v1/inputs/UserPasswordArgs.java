@@ -5,10 +5,10 @@ package com.pulumi.googlenative.connectors_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.connectors_v1.inputs.SecretArgs;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class UserPasswordArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="password")
-      private final @Nullable Output<SecretArgs> password;
+    private @Nullable Output<SecretArgs> password;
 
-    public Output<SecretArgs> password() {
-        return this.password == null ? Codegen.empty() : this.password;
+    public Optional<Output<SecretArgs>> password() {
+        return Optional.ofNullable(this.password);
     }
 
     /**
@@ -36,63 +36,58 @@ public final class UserPasswordArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="username")
-      private final @Nullable Output<String> username;
+    private @Nullable Output<String> username;
 
-    public Output<String> username() {
-        return this.username == null ? Codegen.empty() : this.username;
+    public Optional<Output<String>> username() {
+        return Optional.ofNullable(this.username);
     }
 
-    public UserPasswordArgs(
-        @Nullable Output<SecretArgs> password,
-        @Nullable Output<String> username) {
-        this.password = password;
-        this.username = username;
-    }
+    private UserPasswordArgs() {}
 
-    private UserPasswordArgs() {
-        this.password = Codegen.empty();
-        this.username = Codegen.empty();
+    private UserPasswordArgs(UserPasswordArgs $) {
+        this.password = $.password;
+        this.username = $.username;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(UserPasswordArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<SecretArgs> password;
-        private @Nullable Output<String> username;
+        private UserPasswordArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new UserPasswordArgs();
         }
 
         public Builder(UserPasswordArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.password = defaults.password;
-    	      this.username = defaults.username;
+            $ = new UserPasswordArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder password(@Nullable Output<SecretArgs> password) {
-            this.password = password;
+            $.password = password;
             return this;
         }
-        public Builder password(@Nullable SecretArgs password) {
-            this.password = Codegen.ofNullable(password);
-            return this;
+
+        public Builder password(SecretArgs password) {
+            return password(Output.of(password));
         }
+
         public Builder username(@Nullable Output<String> username) {
-            this.username = username;
+            $.username = username;
             return this;
         }
-        public Builder username(@Nullable String username) {
-            this.username = Codegen.ofNullable(username);
-            return this;
-        }        public UserPasswordArgs build() {
-            return new UserPasswordArgs(password, username);
+
+        public Builder username(String username) {
+            return username(Output.of(username));
+        }
+
+        public UserPasswordArgs build() {
+            return $;
         }
     }
+
 }

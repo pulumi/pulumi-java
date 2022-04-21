@@ -23,7 +23,7 @@ public final class OSPolicyResourceGroupResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="inventoryFilters", required=true)
-      private final List<OSPolicyInventoryFilterResponse> inventoryFilters;
+    private List<OSPolicyInventoryFilterResponse> inventoryFilters;
 
     public List<OSPolicyInventoryFilterResponse> inventoryFilters() {
         return this.inventoryFilters;
@@ -34,61 +34,60 @@ public final class OSPolicyResourceGroupResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="resources", required=true)
-      private final List<OSPolicyResourceResponse> resources;
+    private List<OSPolicyResourceResponse> resources;
 
     public List<OSPolicyResourceResponse> resources() {
         return this.resources;
     }
 
-    public OSPolicyResourceGroupResponse(
-        List<OSPolicyInventoryFilterResponse> inventoryFilters,
-        List<OSPolicyResourceResponse> resources) {
-        this.inventoryFilters = Objects.requireNonNull(inventoryFilters, "expected parameter 'inventoryFilters' to be non-null");
-        this.resources = Objects.requireNonNull(resources, "expected parameter 'resources' to be non-null");
-    }
+    private OSPolicyResourceGroupResponse() {}
 
-    private OSPolicyResourceGroupResponse() {
-        this.inventoryFilters = List.of();
-        this.resources = List.of();
+    private OSPolicyResourceGroupResponse(OSPolicyResourceGroupResponse $) {
+        this.inventoryFilters = $.inventoryFilters;
+        this.resources = $.resources;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(OSPolicyResourceGroupResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<OSPolicyInventoryFilterResponse> inventoryFilters;
-        private List<OSPolicyResourceResponse> resources;
+        private OSPolicyResourceGroupResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new OSPolicyResourceGroupResponse();
         }
 
         public Builder(OSPolicyResourceGroupResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.inventoryFilters = defaults.inventoryFilters;
-    	      this.resources = defaults.resources;
+            $ = new OSPolicyResourceGroupResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder inventoryFilters(List<OSPolicyInventoryFilterResponse> inventoryFilters) {
-            this.inventoryFilters = Objects.requireNonNull(inventoryFilters);
+            $.inventoryFilters = inventoryFilters;
             return this;
         }
+
         public Builder inventoryFilters(OSPolicyInventoryFilterResponse... inventoryFilters) {
             return inventoryFilters(List.of(inventoryFilters));
         }
+
         public Builder resources(List<OSPolicyResourceResponse> resources) {
-            this.resources = Objects.requireNonNull(resources);
+            $.resources = resources;
             return this;
         }
+
         public Builder resources(OSPolicyResourceResponse... resources) {
             return resources(List.of(resources));
-        }        public OSPolicyResourceGroupResponse build() {
-            return new OSPolicyResourceGroupResponse(inventoryFilters, resources);
+        }
+
+        public OSPolicyResourceGroupResponse build() {
+            $.inventoryFilters = Objects.requireNonNull($.inventoryFilters, "expected parameter 'inventoryFilters' to be non-null");
+            $.resources = Objects.requireNonNull($.resources, "expected parameter 'resources' to be non-null");
+            return $;
         }
     }
+
 }

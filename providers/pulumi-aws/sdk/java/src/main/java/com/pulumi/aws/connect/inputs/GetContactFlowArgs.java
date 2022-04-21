@@ -20,10 +20,10 @@ public final class GetContactFlowArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="contactFlowId")
-      private final @Nullable String contactFlowId;
+    private @Nullable String contactFlowId;
 
     public Optional<String> contactFlowId() {
-        return this.contactFlowId == null ? Optional.empty() : Optional.ofNullable(this.contactFlowId);
+        return Optional.ofNullable(this.contactFlowId);
     }
 
     /**
@@ -31,7 +31,7 @@ public final class GetContactFlowArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="instanceId", required=true)
-      private final String instanceId;
+    private String instanceId;
 
     public String instanceId() {
         return this.instanceId;
@@ -42,10 +42,10 @@ public final class GetContactFlowArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable String name;
+    private @Nullable String name;
 
     public Optional<String> name() {
-        return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -53,10 +53,10 @@ public final class GetContactFlowArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Map<String,String> tags;
+    private @Nullable Map<String,String> tags;
 
-    public Map<String,String> tags() {
-        return this.tags == null ? Map.of() : this.tags;
+    public Optional<Map<String,String>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -64,82 +64,69 @@ public final class GetContactFlowArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="type")
-      private final @Nullable String type;
+    private @Nullable String type;
 
     public Optional<String> type() {
-        return this.type == null ? Optional.empty() : Optional.ofNullable(this.type);
+        return Optional.ofNullable(this.type);
     }
 
-    public GetContactFlowArgs(
-        @Nullable String contactFlowId,
-        String instanceId,
-        @Nullable String name,
-        @Nullable Map<String,String> tags,
-        @Nullable String type) {
-        this.contactFlowId = contactFlowId;
-        this.instanceId = Objects.requireNonNull(instanceId, "expected parameter 'instanceId' to be non-null");
-        this.name = name;
-        this.tags = tags;
-        this.type = type;
-    }
+    private GetContactFlowArgs() {}
 
-    private GetContactFlowArgs() {
-        this.contactFlowId = null;
-        this.instanceId = null;
-        this.name = null;
-        this.tags = Map.of();
-        this.type = null;
+    private GetContactFlowArgs(GetContactFlowArgs $) {
+        this.contactFlowId = $.contactFlowId;
+        this.instanceId = $.instanceId;
+        this.name = $.name;
+        this.tags = $.tags;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetContactFlowArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String contactFlowId;
-        private String instanceId;
-        private @Nullable String name;
-        private @Nullable Map<String,String> tags;
-        private @Nullable String type;
+        private GetContactFlowArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetContactFlowArgs();
         }
 
         public Builder(GetContactFlowArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.contactFlowId = defaults.contactFlowId;
-    	      this.instanceId = defaults.instanceId;
-    	      this.name = defaults.name;
-    	      this.tags = defaults.tags;
-    	      this.type = defaults.type;
+            $ = new GetContactFlowArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder contactFlowId(@Nullable String contactFlowId) {
-            this.contactFlowId = contactFlowId;
+            $.contactFlowId = contactFlowId;
             return this;
         }
+
         public Builder instanceId(String instanceId) {
-            this.instanceId = Objects.requireNonNull(instanceId);
+            $.instanceId = instanceId;
             return this;
         }
+
         public Builder name(@Nullable String name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
+
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
+
         public Builder type(@Nullable String type) {
-            this.type = type;
+            $.type = type;
             return this;
-        }        public GetContactFlowArgs build() {
-            return new GetContactFlowArgs(contactFlowId, instanceId, name, tags, type);
+        }
+
+        public GetContactFlowArgs build() {
+            $.instanceId = Objects.requireNonNull($.instanceId, "expected parameter 'instanceId' to be non-null");
+            return $;
         }
     }
+
 }

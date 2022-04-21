@@ -26,10 +26,10 @@ public final class BackendServiceFabricClusterPropertiesResponse extends com.pul
      * 
      */
     @Import(name="clientCertificateId")
-      private final @Nullable String clientCertificateId;
+    private @Nullable String clientCertificateId;
 
     public Optional<String> clientCertificateId() {
-        return this.clientCertificateId == null ? Optional.empty() : Optional.ofNullable(this.clientCertificateId);
+        return Optional.ofNullable(this.clientCertificateId);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class BackendServiceFabricClusterPropertiesResponse extends com.pul
      * 
      */
     @Import(name="clientCertificatethumbprint")
-      private final @Nullable String clientCertificatethumbprint;
+    private @Nullable String clientCertificatethumbprint;
 
     public Optional<String> clientCertificatethumbprint() {
-        return this.clientCertificatethumbprint == null ? Optional.empty() : Optional.ofNullable(this.clientCertificatethumbprint);
+        return Optional.ofNullable(this.clientCertificatethumbprint);
     }
 
     /**
@@ -48,7 +48,7 @@ public final class BackendServiceFabricClusterPropertiesResponse extends com.pul
      * 
      */
     @Import(name="managementEndpoints", required=true)
-      private final List<String> managementEndpoints;
+    private List<String> managementEndpoints;
 
     public List<String> managementEndpoints() {
         return this.managementEndpoints;
@@ -59,10 +59,10 @@ public final class BackendServiceFabricClusterPropertiesResponse extends com.pul
      * 
      */
     @Import(name="maxPartitionResolutionRetries")
-      private final @Nullable Integer maxPartitionResolutionRetries;
+    private @Nullable Integer maxPartitionResolutionRetries;
 
     public Optional<Integer> maxPartitionResolutionRetries() {
-        return this.maxPartitionResolutionRetries == null ? Optional.empty() : Optional.ofNullable(this.maxPartitionResolutionRetries);
+        return Optional.ofNullable(this.maxPartitionResolutionRetries);
     }
 
     /**
@@ -70,10 +70,10 @@ public final class BackendServiceFabricClusterPropertiesResponse extends com.pul
      * 
      */
     @Import(name="serverCertificateThumbprints")
-      private final @Nullable List<String> serverCertificateThumbprints;
+    private @Nullable List<String> serverCertificateThumbprints;
 
-    public List<String> serverCertificateThumbprints() {
-        return this.serverCertificateThumbprints == null ? List.of() : this.serverCertificateThumbprints;
+    public Optional<List<String>> serverCertificateThumbprints() {
+        return Optional.ofNullable(this.serverCertificateThumbprints);
     }
 
     /**
@@ -81,100 +81,87 @@ public final class BackendServiceFabricClusterPropertiesResponse extends com.pul
      * 
      */
     @Import(name="serverX509Names")
-      private final @Nullable List<X509CertificateNameResponse> serverX509Names;
+    private @Nullable List<X509CertificateNameResponse> serverX509Names;
 
-    public List<X509CertificateNameResponse> serverX509Names() {
-        return this.serverX509Names == null ? List.of() : this.serverX509Names;
+    public Optional<List<X509CertificateNameResponse>> serverX509Names() {
+        return Optional.ofNullable(this.serverX509Names);
     }
 
-    public BackendServiceFabricClusterPropertiesResponse(
-        @Nullable String clientCertificateId,
-        @Nullable String clientCertificatethumbprint,
-        List<String> managementEndpoints,
-        @Nullable Integer maxPartitionResolutionRetries,
-        @Nullable List<String> serverCertificateThumbprints,
-        @Nullable List<X509CertificateNameResponse> serverX509Names) {
-        this.clientCertificateId = clientCertificateId;
-        this.clientCertificatethumbprint = clientCertificatethumbprint;
-        this.managementEndpoints = Objects.requireNonNull(managementEndpoints, "expected parameter 'managementEndpoints' to be non-null");
-        this.maxPartitionResolutionRetries = maxPartitionResolutionRetries;
-        this.serverCertificateThumbprints = serverCertificateThumbprints;
-        this.serverX509Names = serverX509Names;
-    }
+    private BackendServiceFabricClusterPropertiesResponse() {}
 
-    private BackendServiceFabricClusterPropertiesResponse() {
-        this.clientCertificateId = null;
-        this.clientCertificatethumbprint = null;
-        this.managementEndpoints = List.of();
-        this.maxPartitionResolutionRetries = null;
-        this.serverCertificateThumbprints = List.of();
-        this.serverX509Names = List.of();
+    private BackendServiceFabricClusterPropertiesResponse(BackendServiceFabricClusterPropertiesResponse $) {
+        this.clientCertificateId = $.clientCertificateId;
+        this.clientCertificatethumbprint = $.clientCertificatethumbprint;
+        this.managementEndpoints = $.managementEndpoints;
+        this.maxPartitionResolutionRetries = $.maxPartitionResolutionRetries;
+        this.serverCertificateThumbprints = $.serverCertificateThumbprints;
+        this.serverX509Names = $.serverX509Names;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BackendServiceFabricClusterPropertiesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String clientCertificateId;
-        private @Nullable String clientCertificatethumbprint;
-        private List<String> managementEndpoints;
-        private @Nullable Integer maxPartitionResolutionRetries;
-        private @Nullable List<String> serverCertificateThumbprints;
-        private @Nullable List<X509CertificateNameResponse> serverX509Names;
+        private BackendServiceFabricClusterPropertiesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new BackendServiceFabricClusterPropertiesResponse();
         }
 
         public Builder(BackendServiceFabricClusterPropertiesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.clientCertificateId = defaults.clientCertificateId;
-    	      this.clientCertificatethumbprint = defaults.clientCertificatethumbprint;
-    	      this.managementEndpoints = defaults.managementEndpoints;
-    	      this.maxPartitionResolutionRetries = defaults.maxPartitionResolutionRetries;
-    	      this.serverCertificateThumbprints = defaults.serverCertificateThumbprints;
-    	      this.serverX509Names = defaults.serverX509Names;
+            $ = new BackendServiceFabricClusterPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder clientCertificateId(@Nullable String clientCertificateId) {
-            this.clientCertificateId = clientCertificateId;
+            $.clientCertificateId = clientCertificateId;
             return this;
         }
+
         public Builder clientCertificatethumbprint(@Nullable String clientCertificatethumbprint) {
-            this.clientCertificatethumbprint = clientCertificatethumbprint;
+            $.clientCertificatethumbprint = clientCertificatethumbprint;
             return this;
         }
+
         public Builder managementEndpoints(List<String> managementEndpoints) {
-            this.managementEndpoints = Objects.requireNonNull(managementEndpoints);
+            $.managementEndpoints = managementEndpoints;
             return this;
         }
+
         public Builder managementEndpoints(String... managementEndpoints) {
             return managementEndpoints(List.of(managementEndpoints));
         }
+
         public Builder maxPartitionResolutionRetries(@Nullable Integer maxPartitionResolutionRetries) {
-            this.maxPartitionResolutionRetries = maxPartitionResolutionRetries;
+            $.maxPartitionResolutionRetries = maxPartitionResolutionRetries;
             return this;
         }
+
         public Builder serverCertificateThumbprints(@Nullable List<String> serverCertificateThumbprints) {
-            this.serverCertificateThumbprints = serverCertificateThumbprints;
+            $.serverCertificateThumbprints = serverCertificateThumbprints;
             return this;
         }
+
         public Builder serverCertificateThumbprints(String... serverCertificateThumbprints) {
             return serverCertificateThumbprints(List.of(serverCertificateThumbprints));
         }
+
         public Builder serverX509Names(@Nullable List<X509CertificateNameResponse> serverX509Names) {
-            this.serverX509Names = serverX509Names;
+            $.serverX509Names = serverX509Names;
             return this;
         }
+
         public Builder serverX509Names(X509CertificateNameResponse... serverX509Names) {
             return serverX509Names(List.of(serverX509Names));
-        }        public BackendServiceFabricClusterPropertiesResponse build() {
-            return new BackendServiceFabricClusterPropertiesResponse(clientCertificateId, clientCertificatethumbprint, managementEndpoints, maxPartitionResolutionRetries, serverCertificateThumbprints, serverX509Names);
+        }
+
+        public BackendServiceFabricClusterPropertiesResponse build() {
+            $.managementEndpoints = Objects.requireNonNull($.managementEndpoints, "expected parameter 'managementEndpoints' to be non-null");
+            return $;
         }
     }
+
 }

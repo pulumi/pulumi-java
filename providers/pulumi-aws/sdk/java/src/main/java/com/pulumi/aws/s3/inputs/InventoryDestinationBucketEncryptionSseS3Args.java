@@ -3,35 +3,26 @@
 
 package com.pulumi.aws.s3.inputs;
 
-import java.util.Objects;
+
 
 
 public final class InventoryDestinationBucketEncryptionSseS3Args extends com.pulumi.resources.ResourceArgs {
 
     public static final InventoryDestinationBucketEncryptionSseS3Args Empty = new InventoryDestinationBucketEncryptionSseS3Args();
 
-    public InventoryDestinationBucketEncryptionSseS3Args() {
-    }
-
     public static Builder builder() {
         return new Builder();
     }
 
-    public static Builder builder(InventoryDestinationBucketEncryptionSseS3Args defaults) {
-        return new Builder(defaults);
-    }
-
     public static final class Builder {
+        private InventoryDestinationBucketEncryptionSseS3Args $;
 
         public Builder() {
-    	      // Empty
-        }
-
-        public Builder(InventoryDestinationBucketEncryptionSseS3Args defaults) {
-    	      Objects.requireNonNull(defaults);
+            $ = new InventoryDestinationBucketEncryptionSseS3Args();
         }
         public InventoryDestinationBucketEncryptionSseS3Args build() {
-            return new InventoryDestinationBucketEncryptionSseS3Args();
+            return $;
         }
     }
+
 }

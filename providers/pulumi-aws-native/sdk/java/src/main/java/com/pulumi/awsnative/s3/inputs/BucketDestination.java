@@ -24,10 +24,10 @@ public final class BucketDestination extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="bucketAccountId")
-      private final @Nullable String bucketAccountId;
+    private @Nullable String bucketAccountId;
 
     public Optional<String> bucketAccountId() {
-        return this.bucketAccountId == null ? Optional.empty() : Optional.ofNullable(this.bucketAccountId);
+        return Optional.ofNullable(this.bucketAccountId);
     }
 
     /**
@@ -35,7 +35,7 @@ public final class BucketDestination extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="bucketArn", required=true)
-      private final String bucketArn;
+    private String bucketArn;
 
     public String bucketArn() {
         return this.bucketArn;
@@ -46,7 +46,7 @@ public final class BucketDestination extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="format", required=true)
-      private final BucketDestinationFormat format;
+    private BucketDestinationFormat format;
 
     public BucketDestinationFormat format() {
         return this.format;
@@ -57,73 +57,64 @@ public final class BucketDestination extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="prefix")
-      private final @Nullable String prefix;
+    private @Nullable String prefix;
 
     public Optional<String> prefix() {
-        return this.prefix == null ? Optional.empty() : Optional.ofNullable(this.prefix);
+        return Optional.ofNullable(this.prefix);
     }
 
-    public BucketDestination(
-        @Nullable String bucketAccountId,
-        String bucketArn,
-        BucketDestinationFormat format,
-        @Nullable String prefix) {
-        this.bucketAccountId = bucketAccountId;
-        this.bucketArn = Objects.requireNonNull(bucketArn, "expected parameter 'bucketArn' to be non-null");
-        this.format = Objects.requireNonNull(format, "expected parameter 'format' to be non-null");
-        this.prefix = prefix;
-    }
+    private BucketDestination() {}
 
-    private BucketDestination() {
-        this.bucketAccountId = null;
-        this.bucketArn = null;
-        this.format = null;
-        this.prefix = null;
+    private BucketDestination(BucketDestination $) {
+        this.bucketAccountId = $.bucketAccountId;
+        this.bucketArn = $.bucketArn;
+        this.format = $.format;
+        this.prefix = $.prefix;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BucketDestination defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String bucketAccountId;
-        private String bucketArn;
-        private BucketDestinationFormat format;
-        private @Nullable String prefix;
+        private BucketDestination $;
 
         public Builder() {
-    	      // Empty
+            $ = new BucketDestination();
         }
 
         public Builder(BucketDestination defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.bucketAccountId = defaults.bucketAccountId;
-    	      this.bucketArn = defaults.bucketArn;
-    	      this.format = defaults.format;
-    	      this.prefix = defaults.prefix;
+            $ = new BucketDestination(Objects.requireNonNull(defaults));
         }
 
         public Builder bucketAccountId(@Nullable String bucketAccountId) {
-            this.bucketAccountId = bucketAccountId;
+            $.bucketAccountId = bucketAccountId;
             return this;
         }
+
         public Builder bucketArn(String bucketArn) {
-            this.bucketArn = Objects.requireNonNull(bucketArn);
+            $.bucketArn = bucketArn;
             return this;
         }
+
         public Builder format(BucketDestinationFormat format) {
-            this.format = Objects.requireNonNull(format);
+            $.format = format;
             return this;
         }
+
         public Builder prefix(@Nullable String prefix) {
-            this.prefix = prefix;
+            $.prefix = prefix;
             return this;
-        }        public BucketDestination build() {
-            return new BucketDestination(bucketAccountId, bucketArn, format, prefix);
+        }
+
+        public BucketDestination build() {
+            $.bucketArn = Objects.requireNonNull($.bucketArn, "expected parameter 'bucketArn' to be non-null");
+            $.format = Objects.requireNonNull($.format, "expected parameter 'format' to be non-null");
+            return $;
         }
     }
+
 }

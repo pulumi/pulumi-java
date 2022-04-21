@@ -13,6 +13,7 @@ import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -29,10 +30,10 @@ public final class H264LayerArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="adaptiveBFrame")
-      private final @Nullable Output<Boolean> adaptiveBFrame;
+    private @Nullable Output<Boolean> adaptiveBFrame;
 
-    public Output<Boolean> adaptiveBFrame() {
-        return this.adaptiveBFrame == null ? Codegen.empty() : this.adaptiveBFrame;
+    public Optional<Output<Boolean>> adaptiveBFrame() {
+        return Optional.ofNullable(this.adaptiveBFrame);
     }
 
     /**
@@ -40,10 +41,10 @@ public final class H264LayerArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="bFrames")
-      private final @Nullable Output<Integer> bFrames;
+    private @Nullable Output<Integer> bFrames;
 
-    public Output<Integer> bFrames() {
-        return this.bFrames == null ? Codegen.empty() : this.bFrames;
+    public Optional<Output<Integer>> bFrames() {
+        return Optional.ofNullable(this.bFrames);
     }
 
     /**
@@ -51,7 +52,7 @@ public final class H264LayerArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="bitrate", required=true)
-      private final Output<Integer> bitrate;
+    private Output<Integer> bitrate;
 
     public Output<Integer> bitrate() {
         return this.bitrate;
@@ -62,10 +63,10 @@ public final class H264LayerArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="bufferWindow")
-      private final @Nullable Output<String> bufferWindow;
+    private @Nullable Output<String> bufferWindow;
 
-    public Output<String> bufferWindow() {
-        return this.bufferWindow == null ? Codegen.empty() : this.bufferWindow;
+    public Optional<Output<String>> bufferWindow() {
+        return Optional.ofNullable(this.bufferWindow);
     }
 
     /**
@@ -73,10 +74,10 @@ public final class H264LayerArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="entropyMode")
-      private final @Nullable Output<Either<String,EntropyMode>> entropyMode;
+    private @Nullable Output<Either<String,EntropyMode>> entropyMode;
 
-    public Output<Either<String,EntropyMode>> entropyMode() {
-        return this.entropyMode == null ? Codegen.empty() : this.entropyMode;
+    public Optional<Output<Either<String,EntropyMode>>> entropyMode() {
+        return Optional.ofNullable(this.entropyMode);
     }
 
     /**
@@ -84,10 +85,10 @@ public final class H264LayerArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="frameRate")
-      private final @Nullable Output<String> frameRate;
+    private @Nullable Output<String> frameRate;
 
-    public Output<String> frameRate() {
-        return this.frameRate == null ? Codegen.empty() : this.frameRate;
+    public Optional<Output<String>> frameRate() {
+        return Optional.ofNullable(this.frameRate);
     }
 
     /**
@@ -95,10 +96,10 @@ public final class H264LayerArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="height")
-      private final @Nullable Output<String> height;
+    private @Nullable Output<String> height;
 
-    public Output<String> height() {
-        return this.height == null ? Codegen.empty() : this.height;
+    public Optional<Output<String>> height() {
+        return Optional.ofNullable(this.height);
     }
 
     /**
@@ -106,10 +107,10 @@ public final class H264LayerArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="label")
-      private final @Nullable Output<String> label;
+    private @Nullable Output<String> label;
 
-    public Output<String> label() {
-        return this.label == null ? Codegen.empty() : this.label;
+    public Optional<Output<String>> label() {
+        return Optional.ofNullable(this.label);
     }
 
     /**
@@ -117,10 +118,10 @@ public final class H264LayerArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="level")
-      private final @Nullable Output<String> level;
+    private @Nullable Output<String> level;
 
-    public Output<String> level() {
-        return this.level == null ? Codegen.empty() : this.level;
+    public Optional<Output<String>> level() {
+        return Optional.ofNullable(this.level);
     }
 
     /**
@@ -128,10 +129,10 @@ public final class H264LayerArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="maxBitrate")
-      private final @Nullable Output<Integer> maxBitrate;
+    private @Nullable Output<Integer> maxBitrate;
 
-    public Output<Integer> maxBitrate() {
-        return this.maxBitrate == null ? Codegen.empty() : this.maxBitrate;
+    public Optional<Output<Integer>> maxBitrate() {
+        return Optional.ofNullable(this.maxBitrate);
     }
 
     /**
@@ -140,7 +141,7 @@ public final class H264LayerArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="odataType", required=true)
-      private final Output<String> odataType;
+    private Output<String> odataType;
 
     public Output<String> odataType() {
         return this.odataType;
@@ -151,10 +152,10 @@ public final class H264LayerArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="profile")
-      private final @Nullable Output<Either<String,H264VideoProfile>> profile;
+    private @Nullable Output<Either<String,H264VideoProfile>> profile;
 
-    public Output<Either<String,H264VideoProfile>> profile() {
-        return this.profile == null ? Codegen.empty() : this.profile;
+    public Optional<Output<Either<String,H264VideoProfile>>> profile() {
+        return Optional.ofNullable(this.profile);
     }
 
     /**
@@ -162,10 +163,10 @@ public final class H264LayerArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="referenceFrames")
-      private final @Nullable Output<Integer> referenceFrames;
+    private @Nullable Output<Integer> referenceFrames;
 
-    public Output<Integer> referenceFrames() {
-        return this.referenceFrames == null ? Codegen.empty() : this.referenceFrames;
+    public Optional<Output<Integer>> referenceFrames() {
+        return Optional.ofNullable(this.referenceFrames);
     }
 
     /**
@@ -173,10 +174,10 @@ public final class H264LayerArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="slices")
-      private final @Nullable Output<Integer> slices;
+    private @Nullable Output<Integer> slices;
 
-    public Output<Integer> slices() {
-        return this.slices == null ? Codegen.empty() : this.slices;
+    public Optional<Output<Integer>> slices() {
+        return Optional.ofNullable(this.slices);
     }
 
     /**
@@ -184,232 +185,190 @@ public final class H264LayerArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="width")
-      private final @Nullable Output<String> width;
+    private @Nullable Output<String> width;
 
-    public Output<String> width() {
-        return this.width == null ? Codegen.empty() : this.width;
+    public Optional<Output<String>> width() {
+        return Optional.ofNullable(this.width);
     }
 
-    public H264LayerArgs(
-        @Nullable Output<Boolean> adaptiveBFrame,
-        @Nullable Output<Integer> bFrames,
-        Output<Integer> bitrate,
-        @Nullable Output<String> bufferWindow,
-        @Nullable Output<Either<String,EntropyMode>> entropyMode,
-        @Nullable Output<String> frameRate,
-        @Nullable Output<String> height,
-        @Nullable Output<String> label,
-        @Nullable Output<String> level,
-        @Nullable Output<Integer> maxBitrate,
-        Output<String> odataType,
-        @Nullable Output<Either<String,H264VideoProfile>> profile,
-        @Nullable Output<Integer> referenceFrames,
-        @Nullable Output<Integer> slices,
-        @Nullable Output<String> width) {
-        this.adaptiveBFrame = adaptiveBFrame;
-        this.bFrames = bFrames;
-        this.bitrate = Objects.requireNonNull(bitrate, "expected parameter 'bitrate' to be non-null");
-        this.bufferWindow = bufferWindow;
-        this.entropyMode = entropyMode;
-        this.frameRate = frameRate;
-        this.height = height;
-        this.label = label;
-        this.level = level;
-        this.maxBitrate = maxBitrate;
-        this.odataType = Codegen.stringProp("odataType").output().arg(odataType).require();
-        this.profile = profile;
-        this.referenceFrames = referenceFrames;
-        this.slices = slices;
-        this.width = width;
-    }
+    private H264LayerArgs() {}
 
-    private H264LayerArgs() {
-        this.adaptiveBFrame = Codegen.empty();
-        this.bFrames = Codegen.empty();
-        this.bitrate = Codegen.empty();
-        this.bufferWindow = Codegen.empty();
-        this.entropyMode = Codegen.empty();
-        this.frameRate = Codegen.empty();
-        this.height = Codegen.empty();
-        this.label = Codegen.empty();
-        this.level = Codegen.empty();
-        this.maxBitrate = Codegen.empty();
-        this.odataType = Codegen.empty();
-        this.profile = Codegen.empty();
-        this.referenceFrames = Codegen.empty();
-        this.slices = Codegen.empty();
-        this.width = Codegen.empty();
+    private H264LayerArgs(H264LayerArgs $) {
+        this.adaptiveBFrame = $.adaptiveBFrame;
+        this.bFrames = $.bFrames;
+        this.bitrate = $.bitrate;
+        this.bufferWindow = $.bufferWindow;
+        this.entropyMode = $.entropyMode;
+        this.frameRate = $.frameRate;
+        this.height = $.height;
+        this.label = $.label;
+        this.level = $.level;
+        this.maxBitrate = $.maxBitrate;
+        this.odataType = $.odataType;
+        this.profile = $.profile;
+        this.referenceFrames = $.referenceFrames;
+        this.slices = $.slices;
+        this.width = $.width;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(H264LayerArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> adaptiveBFrame;
-        private @Nullable Output<Integer> bFrames;
-        private Output<Integer> bitrate;
-        private @Nullable Output<String> bufferWindow;
-        private @Nullable Output<Either<String,EntropyMode>> entropyMode;
-        private @Nullable Output<String> frameRate;
-        private @Nullable Output<String> height;
-        private @Nullable Output<String> label;
-        private @Nullable Output<String> level;
-        private @Nullable Output<Integer> maxBitrate;
-        private Output<String> odataType;
-        private @Nullable Output<Either<String,H264VideoProfile>> profile;
-        private @Nullable Output<Integer> referenceFrames;
-        private @Nullable Output<Integer> slices;
-        private @Nullable Output<String> width;
+        private H264LayerArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new H264LayerArgs();
         }
 
         public Builder(H264LayerArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.adaptiveBFrame = defaults.adaptiveBFrame;
-    	      this.bFrames = defaults.bFrames;
-    	      this.bitrate = defaults.bitrate;
-    	      this.bufferWindow = defaults.bufferWindow;
-    	      this.entropyMode = defaults.entropyMode;
-    	      this.frameRate = defaults.frameRate;
-    	      this.height = defaults.height;
-    	      this.label = defaults.label;
-    	      this.level = defaults.level;
-    	      this.maxBitrate = defaults.maxBitrate;
-    	      this.odataType = defaults.odataType;
-    	      this.profile = defaults.profile;
-    	      this.referenceFrames = defaults.referenceFrames;
-    	      this.slices = defaults.slices;
-    	      this.width = defaults.width;
+            $ = new H264LayerArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder adaptiveBFrame(@Nullable Output<Boolean> adaptiveBFrame) {
-            this.adaptiveBFrame = adaptiveBFrame;
+            $.adaptiveBFrame = adaptiveBFrame;
             return this;
         }
-        public Builder adaptiveBFrame(@Nullable Boolean adaptiveBFrame) {
-            this.adaptiveBFrame = Codegen.ofNullable(adaptiveBFrame);
-            return this;
+
+        public Builder adaptiveBFrame(Boolean adaptiveBFrame) {
+            return adaptiveBFrame(Output.of(adaptiveBFrame));
         }
+
         public Builder bFrames(@Nullable Output<Integer> bFrames) {
-            this.bFrames = bFrames;
+            $.bFrames = bFrames;
             return this;
         }
-        public Builder bFrames(@Nullable Integer bFrames) {
-            this.bFrames = Codegen.ofNullable(bFrames);
-            return this;
+
+        public Builder bFrames(Integer bFrames) {
+            return bFrames(Output.of(bFrames));
         }
+
         public Builder bitrate(Output<Integer> bitrate) {
-            this.bitrate = Objects.requireNonNull(bitrate);
+            $.bitrate = bitrate;
             return this;
         }
+
         public Builder bitrate(Integer bitrate) {
-            this.bitrate = Output.of(Objects.requireNonNull(bitrate));
-            return this;
+            return bitrate(Output.of(bitrate));
         }
+
         public Builder bufferWindow(@Nullable Output<String> bufferWindow) {
-            this.bufferWindow = bufferWindow;
+            $.bufferWindow = bufferWindow;
             return this;
         }
-        public Builder bufferWindow(@Nullable String bufferWindow) {
-            this.bufferWindow = Codegen.ofNullable(bufferWindow);
-            return this;
+
+        public Builder bufferWindow(String bufferWindow) {
+            return bufferWindow(Output.of(bufferWindow));
         }
+
         public Builder entropyMode(@Nullable Output<Either<String,EntropyMode>> entropyMode) {
-            this.entropyMode = entropyMode;
+            $.entropyMode = entropyMode;
             return this;
         }
-        public Builder entropyMode(@Nullable Either<String,EntropyMode> entropyMode) {
-            this.entropyMode = Codegen.ofNullable(entropyMode);
-            return this;
+
+        public Builder entropyMode(Either<String,EntropyMode> entropyMode) {
+            return entropyMode(Output.of(entropyMode));
         }
+
         public Builder frameRate(@Nullable Output<String> frameRate) {
-            this.frameRate = frameRate;
+            $.frameRate = frameRate;
             return this;
         }
-        public Builder frameRate(@Nullable String frameRate) {
-            this.frameRate = Codegen.ofNullable(frameRate);
-            return this;
+
+        public Builder frameRate(String frameRate) {
+            return frameRate(Output.of(frameRate));
         }
+
         public Builder height(@Nullable Output<String> height) {
-            this.height = height;
+            $.height = height;
             return this;
         }
-        public Builder height(@Nullable String height) {
-            this.height = Codegen.ofNullable(height);
-            return this;
+
+        public Builder height(String height) {
+            return height(Output.of(height));
         }
+
         public Builder label(@Nullable Output<String> label) {
-            this.label = label;
+            $.label = label;
             return this;
         }
-        public Builder label(@Nullable String label) {
-            this.label = Codegen.ofNullable(label);
-            return this;
+
+        public Builder label(String label) {
+            return label(Output.of(label));
         }
+
         public Builder level(@Nullable Output<String> level) {
-            this.level = level;
+            $.level = level;
             return this;
         }
-        public Builder level(@Nullable String level) {
-            this.level = Codegen.ofNullable(level);
-            return this;
+
+        public Builder level(String level) {
+            return level(Output.of(level));
         }
+
         public Builder maxBitrate(@Nullable Output<Integer> maxBitrate) {
-            this.maxBitrate = maxBitrate;
+            $.maxBitrate = maxBitrate;
             return this;
         }
-        public Builder maxBitrate(@Nullable Integer maxBitrate) {
-            this.maxBitrate = Codegen.ofNullable(maxBitrate);
-            return this;
+
+        public Builder maxBitrate(Integer maxBitrate) {
+            return maxBitrate(Output.of(maxBitrate));
         }
+
         public Builder odataType(Output<String> odataType) {
-            this.odataType = Objects.requireNonNull(odataType);
+            $.odataType = odataType;
             return this;
         }
+
         public Builder odataType(String odataType) {
-            this.odataType = Output.of(Objects.requireNonNull(odataType));
-            return this;
+            return odataType(Output.of(odataType));
         }
+
         public Builder profile(@Nullable Output<Either<String,H264VideoProfile>> profile) {
-            this.profile = profile;
+            $.profile = profile;
             return this;
         }
-        public Builder profile(@Nullable Either<String,H264VideoProfile> profile) {
-            this.profile = Codegen.ofNullable(profile);
-            return this;
+
+        public Builder profile(Either<String,H264VideoProfile> profile) {
+            return profile(Output.of(profile));
         }
+
         public Builder referenceFrames(@Nullable Output<Integer> referenceFrames) {
-            this.referenceFrames = referenceFrames;
+            $.referenceFrames = referenceFrames;
             return this;
         }
-        public Builder referenceFrames(@Nullable Integer referenceFrames) {
-            this.referenceFrames = Codegen.ofNullable(referenceFrames);
-            return this;
+
+        public Builder referenceFrames(Integer referenceFrames) {
+            return referenceFrames(Output.of(referenceFrames));
         }
+
         public Builder slices(@Nullable Output<Integer> slices) {
-            this.slices = slices;
+            $.slices = slices;
             return this;
         }
-        public Builder slices(@Nullable Integer slices) {
-            this.slices = Codegen.ofNullable(slices);
-            return this;
+
+        public Builder slices(Integer slices) {
+            return slices(Output.of(slices));
         }
+
         public Builder width(@Nullable Output<String> width) {
-            this.width = width;
+            $.width = width;
             return this;
         }
-        public Builder width(@Nullable String width) {
-            this.width = Codegen.ofNullable(width);
-            return this;
-        }        public H264LayerArgs build() {
-            return new H264LayerArgs(adaptiveBFrame, bFrames, bitrate, bufferWindow, entropyMode, frameRate, height, label, level, maxBitrate, odataType, profile, referenceFrames, slices, width);
+
+        public Builder width(String width) {
+            return width(Output.of(width));
+        }
+
+        public H264LayerArgs build() {
+            $.bitrate = Objects.requireNonNull($.bitrate, "expected parameter 'bitrate' to be non-null");
+            $.odataType = Codegen.stringProp("odataType").output().arg($.odataType).require();
+            return $;
         }
     }
+
 }

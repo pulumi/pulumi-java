@@ -5,10 +5,10 @@ package com.pulumi.aws.opsworks.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class PermissionState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="allowSsh")
-      private final @Nullable Output<Boolean> allowSsh;
+    private @Nullable Output<Boolean> allowSsh;
 
-    public Output<Boolean> allowSsh() {
-        return this.allowSsh == null ? Codegen.empty() : this.allowSsh;
+    public Optional<Output<Boolean>> allowSsh() {
+        return Optional.ofNullable(this.allowSsh);
     }
 
     /**
@@ -32,10 +32,10 @@ public final class PermissionState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="allowSudo")
-      private final @Nullable Output<Boolean> allowSudo;
+    private @Nullable Output<Boolean> allowSudo;
 
-    public Output<Boolean> allowSudo() {
-        return this.allowSudo == null ? Codegen.empty() : this.allowSudo;
+    public Optional<Output<Boolean>> allowSudo() {
+        return Optional.ofNullable(this.allowSudo);
     }
 
     /**
@@ -43,10 +43,10 @@ public final class PermissionState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="level")
-      private final @Nullable Output<String> level;
+    private @Nullable Output<String> level;
 
-    public Output<String> level() {
-        return this.level == null ? Codegen.empty() : this.level;
+    public Optional<Output<String>> level() {
+        return Optional.ofNullable(this.level);
     }
 
     /**
@@ -54,10 +54,10 @@ public final class PermissionState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="stackId")
-      private final @Nullable Output<String> stackId;
+    private @Nullable Output<String> stackId;
 
-    public Output<String> stackId() {
-        return this.stackId == null ? Codegen.empty() : this.stackId;
+    public Optional<Output<String>> stackId() {
+        return Optional.ofNullable(this.stackId);
     }
 
     /**
@@ -65,102 +65,88 @@ public final class PermissionState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="userArn")
-      private final @Nullable Output<String> userArn;
+    private @Nullable Output<String> userArn;
 
-    public Output<String> userArn() {
-        return this.userArn == null ? Codegen.empty() : this.userArn;
+    public Optional<Output<String>> userArn() {
+        return Optional.ofNullable(this.userArn);
     }
 
-    public PermissionState(
-        @Nullable Output<Boolean> allowSsh,
-        @Nullable Output<Boolean> allowSudo,
-        @Nullable Output<String> level,
-        @Nullable Output<String> stackId,
-        @Nullable Output<String> userArn) {
-        this.allowSsh = allowSsh;
-        this.allowSudo = allowSudo;
-        this.level = level;
-        this.stackId = stackId;
-        this.userArn = userArn;
-    }
+    private PermissionState() {}
 
-    private PermissionState() {
-        this.allowSsh = Codegen.empty();
-        this.allowSudo = Codegen.empty();
-        this.level = Codegen.empty();
-        this.stackId = Codegen.empty();
-        this.userArn = Codegen.empty();
+    private PermissionState(PermissionState $) {
+        this.allowSsh = $.allowSsh;
+        this.allowSudo = $.allowSudo;
+        this.level = $.level;
+        this.stackId = $.stackId;
+        this.userArn = $.userArn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PermissionState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> allowSsh;
-        private @Nullable Output<Boolean> allowSudo;
-        private @Nullable Output<String> level;
-        private @Nullable Output<String> stackId;
-        private @Nullable Output<String> userArn;
+        private PermissionState $;
 
         public Builder() {
-    	      // Empty
+            $ = new PermissionState();
         }
 
         public Builder(PermissionState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.allowSsh = defaults.allowSsh;
-    	      this.allowSudo = defaults.allowSudo;
-    	      this.level = defaults.level;
-    	      this.stackId = defaults.stackId;
-    	      this.userArn = defaults.userArn;
+            $ = new PermissionState(Objects.requireNonNull(defaults));
         }
 
         public Builder allowSsh(@Nullable Output<Boolean> allowSsh) {
-            this.allowSsh = allowSsh;
+            $.allowSsh = allowSsh;
             return this;
         }
-        public Builder allowSsh(@Nullable Boolean allowSsh) {
-            this.allowSsh = Codegen.ofNullable(allowSsh);
-            return this;
+
+        public Builder allowSsh(Boolean allowSsh) {
+            return allowSsh(Output.of(allowSsh));
         }
+
         public Builder allowSudo(@Nullable Output<Boolean> allowSudo) {
-            this.allowSudo = allowSudo;
+            $.allowSudo = allowSudo;
             return this;
         }
-        public Builder allowSudo(@Nullable Boolean allowSudo) {
-            this.allowSudo = Codegen.ofNullable(allowSudo);
-            return this;
+
+        public Builder allowSudo(Boolean allowSudo) {
+            return allowSudo(Output.of(allowSudo));
         }
+
         public Builder level(@Nullable Output<String> level) {
-            this.level = level;
+            $.level = level;
             return this;
         }
-        public Builder level(@Nullable String level) {
-            this.level = Codegen.ofNullable(level);
-            return this;
+
+        public Builder level(String level) {
+            return level(Output.of(level));
         }
+
         public Builder stackId(@Nullable Output<String> stackId) {
-            this.stackId = stackId;
+            $.stackId = stackId;
             return this;
         }
-        public Builder stackId(@Nullable String stackId) {
-            this.stackId = Codegen.ofNullable(stackId);
-            return this;
+
+        public Builder stackId(String stackId) {
+            return stackId(Output.of(stackId));
         }
+
         public Builder userArn(@Nullable Output<String> userArn) {
-            this.userArn = userArn;
+            $.userArn = userArn;
             return this;
         }
-        public Builder userArn(@Nullable String userArn) {
-            this.userArn = Codegen.ofNullable(userArn);
-            return this;
-        }        public PermissionState build() {
-            return new PermissionState(allowSsh, allowSudo, level, stackId, userArn);
+
+        public Builder userArn(String userArn) {
+            return userArn(Output.of(userArn));
+        }
+
+        public PermissionState build() {
+            return $;
         }
     }
+
 }

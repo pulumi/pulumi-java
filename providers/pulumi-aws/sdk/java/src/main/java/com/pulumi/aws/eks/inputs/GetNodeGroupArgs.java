@@ -20,7 +20,7 @@ public final class GetNodeGroupArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="clusterName", required=true)
-      private final String clusterName;
+    private String clusterName;
 
     public String clusterName() {
         return this.clusterName;
@@ -31,7 +31,7 @@ public final class GetNodeGroupArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="nodeGroupName", required=true)
-      private final String nodeGroupName;
+    private String nodeGroupName;
 
     public String nodeGroupName() {
         return this.nodeGroupName;
@@ -42,64 +42,58 @@ public final class GetNodeGroupArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Map<String,String> tags;
+    private @Nullable Map<String,String> tags;
 
-    public Map<String,String> tags() {
-        return this.tags == null ? Map.of() : this.tags;
+    public Optional<Map<String,String>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public GetNodeGroupArgs(
-        String clusterName,
-        String nodeGroupName,
-        @Nullable Map<String,String> tags) {
-        this.clusterName = Objects.requireNonNull(clusterName, "expected parameter 'clusterName' to be non-null");
-        this.nodeGroupName = Objects.requireNonNull(nodeGroupName, "expected parameter 'nodeGroupName' to be non-null");
-        this.tags = tags;
-    }
+    private GetNodeGroupArgs() {}
 
-    private GetNodeGroupArgs() {
-        this.clusterName = null;
-        this.nodeGroupName = null;
-        this.tags = Map.of();
+    private GetNodeGroupArgs(GetNodeGroupArgs $) {
+        this.clusterName = $.clusterName;
+        this.nodeGroupName = $.nodeGroupName;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetNodeGroupArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String clusterName;
-        private String nodeGroupName;
-        private @Nullable Map<String,String> tags;
+        private GetNodeGroupArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetNodeGroupArgs();
         }
 
         public Builder(GetNodeGroupArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.clusterName = defaults.clusterName;
-    	      this.nodeGroupName = defaults.nodeGroupName;
-    	      this.tags = defaults.tags;
+            $ = new GetNodeGroupArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder clusterName(String clusterName) {
-            this.clusterName = Objects.requireNonNull(clusterName);
+            $.clusterName = clusterName;
             return this;
         }
+
         public Builder nodeGroupName(String nodeGroupName) {
-            this.nodeGroupName = Objects.requireNonNull(nodeGroupName);
+            $.nodeGroupName = nodeGroupName;
             return this;
         }
+
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
-        }        public GetNodeGroupArgs build() {
-            return new GetNodeGroupArgs(clusterName, nodeGroupName, tags);
+        }
+
+        public GetNodeGroupArgs build() {
+            $.clusterName = Objects.requireNonNull($.clusterName, "expected parameter 'clusterName' to be non-null");
+            $.nodeGroupName = Objects.requireNonNull($.nodeGroupName, "expected parameter 'nodeGroupName' to be non-null");
+            return $;
         }
     }
+
 }

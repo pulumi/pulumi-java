@@ -20,10 +20,10 @@ public final class GetResolverRuleArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="domainName")
-      private final @Nullable String domainName;
+    private @Nullable String domainName;
 
     public Optional<String> domainName() {
-        return this.domainName == null ? Optional.empty() : Optional.ofNullable(this.domainName);
+        return Optional.ofNullable(this.domainName);
     }
 
     /**
@@ -31,10 +31,10 @@ public final class GetResolverRuleArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable String name;
+    private @Nullable String name;
 
     public Optional<String> name() {
-        return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -42,10 +42,10 @@ public final class GetResolverRuleArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resolverEndpointId")
-      private final @Nullable String resolverEndpointId;
+    private @Nullable String resolverEndpointId;
 
     public Optional<String> resolverEndpointId() {
-        return this.resolverEndpointId == null ? Optional.empty() : Optional.ofNullable(this.resolverEndpointId);
+        return Optional.ofNullable(this.resolverEndpointId);
     }
 
     /**
@@ -53,10 +53,10 @@ public final class GetResolverRuleArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resolverRuleId")
-      private final @Nullable String resolverRuleId;
+    private @Nullable String resolverRuleId;
 
     public Optional<String> resolverRuleId() {
-        return this.resolverRuleId == null ? Optional.empty() : Optional.ofNullable(this.resolverRuleId);
+        return Optional.ofNullable(this.resolverRuleId);
     }
 
     /**
@@ -64,10 +64,10 @@ public final class GetResolverRuleArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="ruleType")
-      private final @Nullable String ruleType;
+    private @Nullable String ruleType;
 
     public Optional<String> ruleType() {
-        return this.ruleType == null ? Optional.empty() : Optional.ofNullable(this.ruleType);
+        return Optional.ofNullable(this.ruleType);
     }
 
     /**
@@ -75,91 +75,74 @@ public final class GetResolverRuleArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Map<String,String> tags;
+    private @Nullable Map<String,String> tags;
 
-    public Map<String,String> tags() {
-        return this.tags == null ? Map.of() : this.tags;
+    public Optional<Map<String,String>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public GetResolverRuleArgs(
-        @Nullable String domainName,
-        @Nullable String name,
-        @Nullable String resolverEndpointId,
-        @Nullable String resolverRuleId,
-        @Nullable String ruleType,
-        @Nullable Map<String,String> tags) {
-        this.domainName = domainName;
-        this.name = name;
-        this.resolverEndpointId = resolverEndpointId;
-        this.resolverRuleId = resolverRuleId;
-        this.ruleType = ruleType;
-        this.tags = tags;
-    }
+    private GetResolverRuleArgs() {}
 
-    private GetResolverRuleArgs() {
-        this.domainName = null;
-        this.name = null;
-        this.resolverEndpointId = null;
-        this.resolverRuleId = null;
-        this.ruleType = null;
-        this.tags = Map.of();
+    private GetResolverRuleArgs(GetResolverRuleArgs $) {
+        this.domainName = $.domainName;
+        this.name = $.name;
+        this.resolverEndpointId = $.resolverEndpointId;
+        this.resolverRuleId = $.resolverRuleId;
+        this.ruleType = $.ruleType;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetResolverRuleArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String domainName;
-        private @Nullable String name;
-        private @Nullable String resolverEndpointId;
-        private @Nullable String resolverRuleId;
-        private @Nullable String ruleType;
-        private @Nullable Map<String,String> tags;
+        private GetResolverRuleArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetResolverRuleArgs();
         }
 
         public Builder(GetResolverRuleArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.domainName = defaults.domainName;
-    	      this.name = defaults.name;
-    	      this.resolverEndpointId = defaults.resolverEndpointId;
-    	      this.resolverRuleId = defaults.resolverRuleId;
-    	      this.ruleType = defaults.ruleType;
-    	      this.tags = defaults.tags;
+            $ = new GetResolverRuleArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder domainName(@Nullable String domainName) {
-            this.domainName = domainName;
+            $.domainName = domainName;
             return this;
         }
+
         public Builder name(@Nullable String name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
+
         public Builder resolverEndpointId(@Nullable String resolverEndpointId) {
-            this.resolverEndpointId = resolverEndpointId;
+            $.resolverEndpointId = resolverEndpointId;
             return this;
         }
+
         public Builder resolverRuleId(@Nullable String resolverRuleId) {
-            this.resolverRuleId = resolverRuleId;
+            $.resolverRuleId = resolverRuleId;
             return this;
         }
+
         public Builder ruleType(@Nullable String ruleType) {
-            this.ruleType = ruleType;
+            $.ruleType = ruleType;
             return this;
         }
+
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
-        }        public GetResolverRuleArgs build() {
-            return new GetResolverRuleArgs(domainName, name, resolverEndpointId, resolverRuleId, ruleType, tags);
+        }
+
+        public GetResolverRuleArgs build() {
+            return $;
         }
     }
+
 }

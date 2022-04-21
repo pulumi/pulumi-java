@@ -5,11 +5,11 @@ package com.pulumi.gcp.accesscontextmanager.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.accesscontextmanager.inputs.AccessLevelsAccessLevelBasicGetArgs;
 import com.pulumi.gcp.accesscontextmanager.inputs.AccessLevelsAccessLevelCustomGetArgs;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,10 @@ public final class AccessLevelsAccessLevelGetArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="basic")
-      private final @Nullable Output<AccessLevelsAccessLevelBasicGetArgs> basic;
+    private @Nullable Output<AccessLevelsAccessLevelBasicGetArgs> basic;
 
-    public Output<AccessLevelsAccessLevelBasicGetArgs> basic() {
-        return this.basic == null ? Codegen.empty() : this.basic;
+    public Optional<Output<AccessLevelsAccessLevelBasicGetArgs>> basic() {
+        return Optional.ofNullable(this.basic);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class AccessLevelsAccessLevelGetArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="custom")
-      private final @Nullable Output<AccessLevelsAccessLevelCustomGetArgs> custom;
+    private @Nullable Output<AccessLevelsAccessLevelCustomGetArgs> custom;
 
-    public Output<AccessLevelsAccessLevelCustomGetArgs> custom() {
-        return this.custom == null ? Codegen.empty() : this.custom;
+    public Optional<Output<AccessLevelsAccessLevelCustomGetArgs>> custom() {
+        return Optional.ofNullable(this.custom);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class AccessLevelsAccessLevelGetArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -60,7 +60,7 @@ public final class AccessLevelsAccessLevelGetArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="name", required=true)
-      private final Output<String> name;
+    private Output<String> name;
 
     public Output<String> name() {
         return this.name;
@@ -71,102 +71,90 @@ public final class AccessLevelsAccessLevelGetArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="title", required=true)
-      private final Output<String> title;
+    private Output<String> title;
 
     public Output<String> title() {
         return this.title;
     }
 
-    public AccessLevelsAccessLevelGetArgs(
-        @Nullable Output<AccessLevelsAccessLevelBasicGetArgs> basic,
-        @Nullable Output<AccessLevelsAccessLevelCustomGetArgs> custom,
-        @Nullable Output<String> description,
-        Output<String> name,
-        Output<String> title) {
-        this.basic = basic;
-        this.custom = custom;
-        this.description = description;
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.title = Objects.requireNonNull(title, "expected parameter 'title' to be non-null");
-    }
+    private AccessLevelsAccessLevelGetArgs() {}
 
-    private AccessLevelsAccessLevelGetArgs() {
-        this.basic = Codegen.empty();
-        this.custom = Codegen.empty();
-        this.description = Codegen.empty();
-        this.name = Codegen.empty();
-        this.title = Codegen.empty();
+    private AccessLevelsAccessLevelGetArgs(AccessLevelsAccessLevelGetArgs $) {
+        this.basic = $.basic;
+        this.custom = $.custom;
+        this.description = $.description;
+        this.name = $.name;
+        this.title = $.title;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AccessLevelsAccessLevelGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<AccessLevelsAccessLevelBasicGetArgs> basic;
-        private @Nullable Output<AccessLevelsAccessLevelCustomGetArgs> custom;
-        private @Nullable Output<String> description;
-        private Output<String> name;
-        private Output<String> title;
+        private AccessLevelsAccessLevelGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AccessLevelsAccessLevelGetArgs();
         }
 
         public Builder(AccessLevelsAccessLevelGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.basic = defaults.basic;
-    	      this.custom = defaults.custom;
-    	      this.description = defaults.description;
-    	      this.name = defaults.name;
-    	      this.title = defaults.title;
+            $ = new AccessLevelsAccessLevelGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder basic(@Nullable Output<AccessLevelsAccessLevelBasicGetArgs> basic) {
-            this.basic = basic;
+            $.basic = basic;
             return this;
         }
-        public Builder basic(@Nullable AccessLevelsAccessLevelBasicGetArgs basic) {
-            this.basic = Codegen.ofNullable(basic);
-            return this;
+
+        public Builder basic(AccessLevelsAccessLevelBasicGetArgs basic) {
+            return basic(Output.of(basic));
         }
+
         public Builder custom(@Nullable Output<AccessLevelsAccessLevelCustomGetArgs> custom) {
-            this.custom = custom;
+            $.custom = custom;
             return this;
         }
-        public Builder custom(@Nullable AccessLevelsAccessLevelCustomGetArgs custom) {
-            this.custom = Codegen.ofNullable(custom);
-            return this;
+
+        public Builder custom(AccessLevelsAccessLevelCustomGetArgs custom) {
+            return custom(Output.of(custom));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder name(Output<String> name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Output.of(Objects.requireNonNull(name));
-            return this;
+            return name(Output.of(name));
         }
+
         public Builder title(Output<String> title) {
-            this.title = Objects.requireNonNull(title);
+            $.title = title;
             return this;
         }
+
         public Builder title(String title) {
-            this.title = Output.of(Objects.requireNonNull(title));
-            return this;
-        }        public AccessLevelsAccessLevelGetArgs build() {
-            return new AccessLevelsAccessLevelGetArgs(basic, custom, description, name, title);
+            return title(Output.of(title));
+        }
+
+        public AccessLevelsAccessLevelGetArgs build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.title = Objects.requireNonNull($.title, "expected parameter 'title' to be non-null");
+            return $;
         }
     }
+
 }

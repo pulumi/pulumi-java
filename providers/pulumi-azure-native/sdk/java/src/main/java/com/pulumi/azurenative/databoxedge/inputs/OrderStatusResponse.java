@@ -26,7 +26,7 @@ public final class OrderStatusResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="additionalOrderDetails", required=true)
-      private final Map<String,String> additionalOrderDetails;
+    private Map<String,String> additionalOrderDetails;
 
     public Map<String,String> additionalOrderDetails() {
         return this.additionalOrderDetails;
@@ -37,10 +37,10 @@ public final class OrderStatusResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="comments")
-      private final @Nullable String comments;
+    private @Nullable String comments;
 
     public Optional<String> comments() {
-        return this.comments == null ? Optional.empty() : Optional.ofNullable(this.comments);
+        return Optional.ofNullable(this.comments);
     }
 
     /**
@@ -48,7 +48,7 @@ public final class OrderStatusResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="status", required=true)
-      private final String status;
+    private String status;
 
     public String status() {
         return this.status;
@@ -59,7 +59,7 @@ public final class OrderStatusResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="trackingInformation", required=true)
-      private final TrackingInfoResponse trackingInformation;
+    private TrackingInfoResponse trackingInformation;
 
     public TrackingInfoResponse trackingInformation() {
         return this.trackingInformation;
@@ -70,82 +70,72 @@ public final class OrderStatusResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="updateDateTime", required=true)
-      private final String updateDateTime;
+    private String updateDateTime;
 
     public String updateDateTime() {
         return this.updateDateTime;
     }
 
-    public OrderStatusResponse(
-        Map<String,String> additionalOrderDetails,
-        @Nullable String comments,
-        String status,
-        TrackingInfoResponse trackingInformation,
-        String updateDateTime) {
-        this.additionalOrderDetails = Objects.requireNonNull(additionalOrderDetails, "expected parameter 'additionalOrderDetails' to be non-null");
-        this.comments = comments;
-        this.status = Objects.requireNonNull(status, "expected parameter 'status' to be non-null");
-        this.trackingInformation = Objects.requireNonNull(trackingInformation, "expected parameter 'trackingInformation' to be non-null");
-        this.updateDateTime = Objects.requireNonNull(updateDateTime, "expected parameter 'updateDateTime' to be non-null");
-    }
+    private OrderStatusResponse() {}
 
-    private OrderStatusResponse() {
-        this.additionalOrderDetails = Map.of();
-        this.comments = null;
-        this.status = null;
-        this.trackingInformation = null;
-        this.updateDateTime = null;
+    private OrderStatusResponse(OrderStatusResponse $) {
+        this.additionalOrderDetails = $.additionalOrderDetails;
+        this.comments = $.comments;
+        this.status = $.status;
+        this.trackingInformation = $.trackingInformation;
+        this.updateDateTime = $.updateDateTime;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(OrderStatusResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Map<String,String> additionalOrderDetails;
-        private @Nullable String comments;
-        private String status;
-        private TrackingInfoResponse trackingInformation;
-        private String updateDateTime;
+        private OrderStatusResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new OrderStatusResponse();
         }
 
         public Builder(OrderStatusResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.additionalOrderDetails = defaults.additionalOrderDetails;
-    	      this.comments = defaults.comments;
-    	      this.status = defaults.status;
-    	      this.trackingInformation = defaults.trackingInformation;
-    	      this.updateDateTime = defaults.updateDateTime;
+            $ = new OrderStatusResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder additionalOrderDetails(Map<String,String> additionalOrderDetails) {
-            this.additionalOrderDetails = Objects.requireNonNull(additionalOrderDetails);
+            $.additionalOrderDetails = additionalOrderDetails;
             return this;
         }
+
         public Builder comments(@Nullable String comments) {
-            this.comments = comments;
+            $.comments = comments;
             return this;
         }
+
         public Builder status(String status) {
-            this.status = Objects.requireNonNull(status);
+            $.status = status;
             return this;
         }
+
         public Builder trackingInformation(TrackingInfoResponse trackingInformation) {
-            this.trackingInformation = Objects.requireNonNull(trackingInformation);
+            $.trackingInformation = trackingInformation;
             return this;
         }
+
         public Builder updateDateTime(String updateDateTime) {
-            this.updateDateTime = Objects.requireNonNull(updateDateTime);
+            $.updateDateTime = updateDateTime;
             return this;
-        }        public OrderStatusResponse build() {
-            return new OrderStatusResponse(additionalOrderDetails, comments, status, trackingInformation, updateDateTime);
+        }
+
+        public OrderStatusResponse build() {
+            $.additionalOrderDetails = Objects.requireNonNull($.additionalOrderDetails, "expected parameter 'additionalOrderDetails' to be non-null");
+            $.status = Objects.requireNonNull($.status, "expected parameter 'status' to be non-null");
+            $.trackingInformation = Objects.requireNonNull($.trackingInformation, "expected parameter 'trackingInformation' to be non-null");
+            $.updateDateTime = Objects.requireNonNull($.updateDateTime, "expected parameter 'updateDateTime' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,9 +5,9 @@ package com.pulumi.aws.securityhub.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class InsightFiltersConfidenceArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="eq")
-      private final @Nullable Output<String> eq;
+    private @Nullable Output<String> eq;
 
-    public Output<String> eq() {
-        return this.eq == null ? Codegen.empty() : this.eq;
+    public Optional<Output<String>> eq() {
+        return Optional.ofNullable(this.eq);
     }
 
     /**
@@ -31,10 +31,10 @@ public final class InsightFiltersConfidenceArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="gte")
-      private final @Nullable Output<String> gte;
+    private @Nullable Output<String> gte;
 
-    public Output<String> gte() {
-        return this.gte == null ? Codegen.empty() : this.gte;
+    public Optional<Output<String>> gte() {
+        return Optional.ofNullable(this.gte);
     }
 
     /**
@@ -42,76 +42,68 @@ public final class InsightFiltersConfidenceArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="lte")
-      private final @Nullable Output<String> lte;
+    private @Nullable Output<String> lte;
 
-    public Output<String> lte() {
-        return this.lte == null ? Codegen.empty() : this.lte;
+    public Optional<Output<String>> lte() {
+        return Optional.ofNullable(this.lte);
     }
 
-    public InsightFiltersConfidenceArgs(
-        @Nullable Output<String> eq,
-        @Nullable Output<String> gte,
-        @Nullable Output<String> lte) {
-        this.eq = eq;
-        this.gte = gte;
-        this.lte = lte;
-    }
+    private InsightFiltersConfidenceArgs() {}
 
-    private InsightFiltersConfidenceArgs() {
-        this.eq = Codegen.empty();
-        this.gte = Codegen.empty();
-        this.lte = Codegen.empty();
+    private InsightFiltersConfidenceArgs(InsightFiltersConfidenceArgs $) {
+        this.eq = $.eq;
+        this.gte = $.gte;
+        this.lte = $.lte;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(InsightFiltersConfidenceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> eq;
-        private @Nullable Output<String> gte;
-        private @Nullable Output<String> lte;
+        private InsightFiltersConfidenceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new InsightFiltersConfidenceArgs();
         }
 
         public Builder(InsightFiltersConfidenceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.eq = defaults.eq;
-    	      this.gte = defaults.gte;
-    	      this.lte = defaults.lte;
+            $ = new InsightFiltersConfidenceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder eq(@Nullable Output<String> eq) {
-            this.eq = eq;
+            $.eq = eq;
             return this;
         }
-        public Builder eq(@Nullable String eq) {
-            this.eq = Codegen.ofNullable(eq);
-            return this;
+
+        public Builder eq(String eq) {
+            return eq(Output.of(eq));
         }
+
         public Builder gte(@Nullable Output<String> gte) {
-            this.gte = gte;
+            $.gte = gte;
             return this;
         }
-        public Builder gte(@Nullable String gte) {
-            this.gte = Codegen.ofNullable(gte);
-            return this;
+
+        public Builder gte(String gte) {
+            return gte(Output.of(gte));
         }
+
         public Builder lte(@Nullable Output<String> lte) {
-            this.lte = lte;
+            $.lte = lte;
             return this;
         }
-        public Builder lte(@Nullable String lte) {
-            this.lte = Codegen.ofNullable(lte);
-            return this;
-        }        public InsightFiltersConfidenceArgs build() {
-            return new InsightFiltersConfidenceArgs(eq, gte, lte);
+
+        public Builder lte(String lte) {
+            return lte(Output.of(lte));
+        }
+
+        public InsightFiltersConfidenceArgs build() {
+            return $;
         }
     }
+
 }

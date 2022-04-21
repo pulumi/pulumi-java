@@ -5,7 +5,6 @@ package com.pulumi.awsnative.iotanalytics.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -15,49 +14,49 @@ public final class DatasetDeltaTimeSessionWindowConfigurationArgs extends com.pu
     public static final DatasetDeltaTimeSessionWindowConfigurationArgs Empty = new DatasetDeltaTimeSessionWindowConfigurationArgs();
 
     @Import(name="timeoutInMinutes", required=true)
-      private final Output<Integer> timeoutInMinutes;
+    private Output<Integer> timeoutInMinutes;
 
     public Output<Integer> timeoutInMinutes() {
         return this.timeoutInMinutes;
     }
 
-    public DatasetDeltaTimeSessionWindowConfigurationArgs(Output<Integer> timeoutInMinutes) {
-        this.timeoutInMinutes = Objects.requireNonNull(timeoutInMinutes, "expected parameter 'timeoutInMinutes' to be non-null");
-    }
+    private DatasetDeltaTimeSessionWindowConfigurationArgs() {}
 
-    private DatasetDeltaTimeSessionWindowConfigurationArgs() {
-        this.timeoutInMinutes = Codegen.empty();
+    private DatasetDeltaTimeSessionWindowConfigurationArgs(DatasetDeltaTimeSessionWindowConfigurationArgs $) {
+        this.timeoutInMinutes = $.timeoutInMinutes;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DatasetDeltaTimeSessionWindowConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Integer> timeoutInMinutes;
+        private DatasetDeltaTimeSessionWindowConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DatasetDeltaTimeSessionWindowConfigurationArgs();
         }
 
         public Builder(DatasetDeltaTimeSessionWindowConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.timeoutInMinutes = defaults.timeoutInMinutes;
+            $ = new DatasetDeltaTimeSessionWindowConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder timeoutInMinutes(Output<Integer> timeoutInMinutes) {
-            this.timeoutInMinutes = Objects.requireNonNull(timeoutInMinutes);
+            $.timeoutInMinutes = timeoutInMinutes;
             return this;
         }
+
         public Builder timeoutInMinutes(Integer timeoutInMinutes) {
-            this.timeoutInMinutes = Output.of(Objects.requireNonNull(timeoutInMinutes));
-            return this;
-        }        public DatasetDeltaTimeSessionWindowConfigurationArgs build() {
-            return new DatasetDeltaTimeSessionWindowConfigurationArgs(timeoutInMinutes);
+            return timeoutInMinutes(Output.of(timeoutInMinutes));
+        }
+
+        public DatasetDeltaTimeSessionWindowConfigurationArgs build() {
+            $.timeoutInMinutes = Objects.requireNonNull($.timeoutInMinutes, "expected parameter 'timeoutInMinutes' to be non-null");
+            return $;
         }
     }
+
 }

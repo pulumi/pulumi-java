@@ -6,10 +6,10 @@ package com.pulumi.awsnative.sagemaker;
 import com.pulumi.awsnative.sagemaker.inputs.ImageTagArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -18,28 +18,28 @@ public final class ImageArgs extends com.pulumi.resources.ResourceArgs {
     public static final ImageArgs Empty = new ImageArgs();
 
     @Import(name="imageDescription")
-      private final @Nullable Output<String> imageDescription;
+    private @Nullable Output<String> imageDescription;
 
-    public Output<String> imageDescription() {
-        return this.imageDescription == null ? Codegen.empty() : this.imageDescription;
+    public Optional<Output<String>> imageDescription() {
+        return Optional.ofNullable(this.imageDescription);
     }
 
     @Import(name="imageDisplayName")
-      private final @Nullable Output<String> imageDisplayName;
+    private @Nullable Output<String> imageDisplayName;
 
-    public Output<String> imageDisplayName() {
-        return this.imageDisplayName == null ? Codegen.empty() : this.imageDisplayName;
+    public Optional<Output<String>> imageDisplayName() {
+        return Optional.ofNullable(this.imageDisplayName);
     }
 
     @Import(name="imageName")
-      private final @Nullable Output<String> imageName;
+    private @Nullable Output<String> imageName;
 
-    public Output<String> imageName() {
-        return this.imageName == null ? Codegen.empty() : this.imageName;
+    public Optional<Output<String>> imageName() {
+        return Optional.ofNullable(this.imageName);
     }
 
     @Import(name="imageRoleArn", required=true)
-      private final Output<String> imageRoleArn;
+    private Output<String> imageRoleArn;
 
     public Output<String> imageRoleArn() {
         return this.imageRoleArn;
@@ -50,105 +50,93 @@ public final class ImageArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<List<ImageTagArgs>> tags;
+    private @Nullable Output<List<ImageTagArgs>> tags;
 
-    public Output<List<ImageTagArgs>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<List<ImageTagArgs>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public ImageArgs(
-        @Nullable Output<String> imageDescription,
-        @Nullable Output<String> imageDisplayName,
-        @Nullable Output<String> imageName,
-        Output<String> imageRoleArn,
-        @Nullable Output<List<ImageTagArgs>> tags) {
-        this.imageDescription = imageDescription;
-        this.imageDisplayName = imageDisplayName;
-        this.imageName = imageName;
-        this.imageRoleArn = Objects.requireNonNull(imageRoleArn, "expected parameter 'imageRoleArn' to be non-null");
-        this.tags = tags;
-    }
+    private ImageArgs() {}
 
-    private ImageArgs() {
-        this.imageDescription = Codegen.empty();
-        this.imageDisplayName = Codegen.empty();
-        this.imageName = Codegen.empty();
-        this.imageRoleArn = Codegen.empty();
-        this.tags = Codegen.empty();
+    private ImageArgs(ImageArgs $) {
+        this.imageDescription = $.imageDescription;
+        this.imageDisplayName = $.imageDisplayName;
+        this.imageName = $.imageName;
+        this.imageRoleArn = $.imageRoleArn;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ImageArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> imageDescription;
-        private @Nullable Output<String> imageDisplayName;
-        private @Nullable Output<String> imageName;
-        private Output<String> imageRoleArn;
-        private @Nullable Output<List<ImageTagArgs>> tags;
+        private ImageArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ImageArgs();
         }
 
         public Builder(ImageArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.imageDescription = defaults.imageDescription;
-    	      this.imageDisplayName = defaults.imageDisplayName;
-    	      this.imageName = defaults.imageName;
-    	      this.imageRoleArn = defaults.imageRoleArn;
-    	      this.tags = defaults.tags;
+            $ = new ImageArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder imageDescription(@Nullable Output<String> imageDescription) {
-            this.imageDescription = imageDescription;
+            $.imageDescription = imageDescription;
             return this;
         }
-        public Builder imageDescription(@Nullable String imageDescription) {
-            this.imageDescription = Codegen.ofNullable(imageDescription);
-            return this;
+
+        public Builder imageDescription(String imageDescription) {
+            return imageDescription(Output.of(imageDescription));
         }
+
         public Builder imageDisplayName(@Nullable Output<String> imageDisplayName) {
-            this.imageDisplayName = imageDisplayName;
+            $.imageDisplayName = imageDisplayName;
             return this;
         }
-        public Builder imageDisplayName(@Nullable String imageDisplayName) {
-            this.imageDisplayName = Codegen.ofNullable(imageDisplayName);
-            return this;
+
+        public Builder imageDisplayName(String imageDisplayName) {
+            return imageDisplayName(Output.of(imageDisplayName));
         }
+
         public Builder imageName(@Nullable Output<String> imageName) {
-            this.imageName = imageName;
+            $.imageName = imageName;
             return this;
         }
-        public Builder imageName(@Nullable String imageName) {
-            this.imageName = Codegen.ofNullable(imageName);
-            return this;
+
+        public Builder imageName(String imageName) {
+            return imageName(Output.of(imageName));
         }
+
         public Builder imageRoleArn(Output<String> imageRoleArn) {
-            this.imageRoleArn = Objects.requireNonNull(imageRoleArn);
+            $.imageRoleArn = imageRoleArn;
             return this;
         }
+
         public Builder imageRoleArn(String imageRoleArn) {
-            this.imageRoleArn = Output.of(Objects.requireNonNull(imageRoleArn));
-            return this;
+            return imageRoleArn(Output.of(imageRoleArn));
         }
+
         public Builder tags(@Nullable Output<List<ImageTagArgs>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable List<ImageTagArgs> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(List<ImageTagArgs> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tags(ImageTagArgs... tags) {
             return tags(List.of(tags));
-        }        public ImageArgs build() {
-            return new ImageArgs(imageDescription, imageDisplayName, imageName, imageRoleArn, tags);
+        }
+
+        public ImageArgs build() {
+            $.imageRoleArn = Objects.requireNonNull($.imageRoleArn, "expected parameter 'imageRoleArn' to be non-null");
+            return $;
         }
     }
+
 }

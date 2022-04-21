@@ -33,270 +33,226 @@ public final class FlowSourceConnectorProperties extends com.pulumi.resources.In
     public static final FlowSourceConnectorProperties Empty = new FlowSourceConnectorProperties();
 
     @Import(name="amplitude")
-      private final @Nullable FlowAmplitudeSourceProperties amplitude;
+    private @Nullable FlowAmplitudeSourceProperties amplitude;
 
     public Optional<FlowAmplitudeSourceProperties> amplitude() {
-        return this.amplitude == null ? Optional.empty() : Optional.ofNullable(this.amplitude);
+        return Optional.ofNullable(this.amplitude);
     }
 
     @Import(name="datadog")
-      private final @Nullable FlowDatadogSourceProperties datadog;
+    private @Nullable FlowDatadogSourceProperties datadog;
 
     public Optional<FlowDatadogSourceProperties> datadog() {
-        return this.datadog == null ? Optional.empty() : Optional.ofNullable(this.datadog);
+        return Optional.ofNullable(this.datadog);
     }
 
     @Import(name="dynatrace")
-      private final @Nullable FlowDynatraceSourceProperties dynatrace;
+    private @Nullable FlowDynatraceSourceProperties dynatrace;
 
     public Optional<FlowDynatraceSourceProperties> dynatrace() {
-        return this.dynatrace == null ? Optional.empty() : Optional.ofNullable(this.dynatrace);
+        return Optional.ofNullable(this.dynatrace);
     }
 
     @Import(name="googleAnalytics")
-      private final @Nullable FlowGoogleAnalyticsSourceProperties googleAnalytics;
+    private @Nullable FlowGoogleAnalyticsSourceProperties googleAnalytics;
 
     public Optional<FlowGoogleAnalyticsSourceProperties> googleAnalytics() {
-        return this.googleAnalytics == null ? Optional.empty() : Optional.ofNullable(this.googleAnalytics);
+        return Optional.ofNullable(this.googleAnalytics);
     }
 
     @Import(name="inforNexus")
-      private final @Nullable FlowInforNexusSourceProperties inforNexus;
+    private @Nullable FlowInforNexusSourceProperties inforNexus;
 
     public Optional<FlowInforNexusSourceProperties> inforNexus() {
-        return this.inforNexus == null ? Optional.empty() : Optional.ofNullable(this.inforNexus);
+        return Optional.ofNullable(this.inforNexus);
     }
 
     @Import(name="marketo")
-      private final @Nullable FlowMarketoSourceProperties marketo;
+    private @Nullable FlowMarketoSourceProperties marketo;
 
     public Optional<FlowMarketoSourceProperties> marketo() {
-        return this.marketo == null ? Optional.empty() : Optional.ofNullable(this.marketo);
+        return Optional.ofNullable(this.marketo);
     }
 
     @Import(name="s3")
-      private final @Nullable FlowS3SourceProperties s3;
+    private @Nullable FlowS3SourceProperties s3;
 
     public Optional<FlowS3SourceProperties> s3() {
-        return this.s3 == null ? Optional.empty() : Optional.ofNullable(this.s3);
+        return Optional.ofNullable(this.s3);
     }
 
     @Import(name="sAPOData")
-      private final @Nullable FlowSAPODataSourceProperties sAPOData;
+    private @Nullable FlowSAPODataSourceProperties sAPOData;
 
     public Optional<FlowSAPODataSourceProperties> sAPOData() {
-        return this.sAPOData == null ? Optional.empty() : Optional.ofNullable(this.sAPOData);
+        return Optional.ofNullable(this.sAPOData);
     }
 
     @Import(name="salesforce")
-      private final @Nullable FlowSalesforceSourceProperties salesforce;
+    private @Nullable FlowSalesforceSourceProperties salesforce;
 
     public Optional<FlowSalesforceSourceProperties> salesforce() {
-        return this.salesforce == null ? Optional.empty() : Optional.ofNullable(this.salesforce);
+        return Optional.ofNullable(this.salesforce);
     }
 
     @Import(name="serviceNow")
-      private final @Nullable FlowServiceNowSourceProperties serviceNow;
+    private @Nullable FlowServiceNowSourceProperties serviceNow;
 
     public Optional<FlowServiceNowSourceProperties> serviceNow() {
-        return this.serviceNow == null ? Optional.empty() : Optional.ofNullable(this.serviceNow);
+        return Optional.ofNullable(this.serviceNow);
     }
 
     @Import(name="singular")
-      private final @Nullable FlowSingularSourceProperties singular;
+    private @Nullable FlowSingularSourceProperties singular;
 
     public Optional<FlowSingularSourceProperties> singular() {
-        return this.singular == null ? Optional.empty() : Optional.ofNullable(this.singular);
+        return Optional.ofNullable(this.singular);
     }
 
     @Import(name="slack")
-      private final @Nullable FlowSlackSourceProperties slack;
+    private @Nullable FlowSlackSourceProperties slack;
 
     public Optional<FlowSlackSourceProperties> slack() {
-        return this.slack == null ? Optional.empty() : Optional.ofNullable(this.slack);
+        return Optional.ofNullable(this.slack);
     }
 
     @Import(name="trendmicro")
-      private final @Nullable FlowTrendmicroSourceProperties trendmicro;
+    private @Nullable FlowTrendmicroSourceProperties trendmicro;
 
     public Optional<FlowTrendmicroSourceProperties> trendmicro() {
-        return this.trendmicro == null ? Optional.empty() : Optional.ofNullable(this.trendmicro);
+        return Optional.ofNullable(this.trendmicro);
     }
 
     @Import(name="veeva")
-      private final @Nullable FlowVeevaSourceProperties veeva;
+    private @Nullable FlowVeevaSourceProperties veeva;
 
     public Optional<FlowVeevaSourceProperties> veeva() {
-        return this.veeva == null ? Optional.empty() : Optional.ofNullable(this.veeva);
+        return Optional.ofNullable(this.veeva);
     }
 
     @Import(name="zendesk")
-      private final @Nullable FlowZendeskSourceProperties zendesk;
+    private @Nullable FlowZendeskSourceProperties zendesk;
 
     public Optional<FlowZendeskSourceProperties> zendesk() {
-        return this.zendesk == null ? Optional.empty() : Optional.ofNullable(this.zendesk);
+        return Optional.ofNullable(this.zendesk);
     }
 
-    public FlowSourceConnectorProperties(
-        @Nullable FlowAmplitudeSourceProperties amplitude,
-        @Nullable FlowDatadogSourceProperties datadog,
-        @Nullable FlowDynatraceSourceProperties dynatrace,
-        @Nullable FlowGoogleAnalyticsSourceProperties googleAnalytics,
-        @Nullable FlowInforNexusSourceProperties inforNexus,
-        @Nullable FlowMarketoSourceProperties marketo,
-        @Nullable FlowS3SourceProperties s3,
-        @Nullable FlowSAPODataSourceProperties sAPOData,
-        @Nullable FlowSalesforceSourceProperties salesforce,
-        @Nullable FlowServiceNowSourceProperties serviceNow,
-        @Nullable FlowSingularSourceProperties singular,
-        @Nullable FlowSlackSourceProperties slack,
-        @Nullable FlowTrendmicroSourceProperties trendmicro,
-        @Nullable FlowVeevaSourceProperties veeva,
-        @Nullable FlowZendeskSourceProperties zendesk) {
-        this.amplitude = amplitude;
-        this.datadog = datadog;
-        this.dynatrace = dynatrace;
-        this.googleAnalytics = googleAnalytics;
-        this.inforNexus = inforNexus;
-        this.marketo = marketo;
-        this.s3 = s3;
-        this.sAPOData = sAPOData;
-        this.salesforce = salesforce;
-        this.serviceNow = serviceNow;
-        this.singular = singular;
-        this.slack = slack;
-        this.trendmicro = trendmicro;
-        this.veeva = veeva;
-        this.zendesk = zendesk;
-    }
+    private FlowSourceConnectorProperties() {}
 
-    private FlowSourceConnectorProperties() {
-        this.amplitude = null;
-        this.datadog = null;
-        this.dynatrace = null;
-        this.googleAnalytics = null;
-        this.inforNexus = null;
-        this.marketo = null;
-        this.s3 = null;
-        this.sAPOData = null;
-        this.salesforce = null;
-        this.serviceNow = null;
-        this.singular = null;
-        this.slack = null;
-        this.trendmicro = null;
-        this.veeva = null;
-        this.zendesk = null;
+    private FlowSourceConnectorProperties(FlowSourceConnectorProperties $) {
+        this.amplitude = $.amplitude;
+        this.datadog = $.datadog;
+        this.dynatrace = $.dynatrace;
+        this.googleAnalytics = $.googleAnalytics;
+        this.inforNexus = $.inforNexus;
+        this.marketo = $.marketo;
+        this.s3 = $.s3;
+        this.sAPOData = $.sAPOData;
+        this.salesforce = $.salesforce;
+        this.serviceNow = $.serviceNow;
+        this.singular = $.singular;
+        this.slack = $.slack;
+        this.trendmicro = $.trendmicro;
+        this.veeva = $.veeva;
+        this.zendesk = $.zendesk;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FlowSourceConnectorProperties defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable FlowAmplitudeSourceProperties amplitude;
-        private @Nullable FlowDatadogSourceProperties datadog;
-        private @Nullable FlowDynatraceSourceProperties dynatrace;
-        private @Nullable FlowGoogleAnalyticsSourceProperties googleAnalytics;
-        private @Nullable FlowInforNexusSourceProperties inforNexus;
-        private @Nullable FlowMarketoSourceProperties marketo;
-        private @Nullable FlowS3SourceProperties s3;
-        private @Nullable FlowSAPODataSourceProperties sAPOData;
-        private @Nullable FlowSalesforceSourceProperties salesforce;
-        private @Nullable FlowServiceNowSourceProperties serviceNow;
-        private @Nullable FlowSingularSourceProperties singular;
-        private @Nullable FlowSlackSourceProperties slack;
-        private @Nullable FlowTrendmicroSourceProperties trendmicro;
-        private @Nullable FlowVeevaSourceProperties veeva;
-        private @Nullable FlowZendeskSourceProperties zendesk;
+        private FlowSourceConnectorProperties $;
 
         public Builder() {
-    	      // Empty
+            $ = new FlowSourceConnectorProperties();
         }
 
         public Builder(FlowSourceConnectorProperties defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.amplitude = defaults.amplitude;
-    	      this.datadog = defaults.datadog;
-    	      this.dynatrace = defaults.dynatrace;
-    	      this.googleAnalytics = defaults.googleAnalytics;
-    	      this.inforNexus = defaults.inforNexus;
-    	      this.marketo = defaults.marketo;
-    	      this.s3 = defaults.s3;
-    	      this.sAPOData = defaults.sAPOData;
-    	      this.salesforce = defaults.salesforce;
-    	      this.serviceNow = defaults.serviceNow;
-    	      this.singular = defaults.singular;
-    	      this.slack = defaults.slack;
-    	      this.trendmicro = defaults.trendmicro;
-    	      this.veeva = defaults.veeva;
-    	      this.zendesk = defaults.zendesk;
+            $ = new FlowSourceConnectorProperties(Objects.requireNonNull(defaults));
         }
 
         public Builder amplitude(@Nullable FlowAmplitudeSourceProperties amplitude) {
-            this.amplitude = amplitude;
+            $.amplitude = amplitude;
             return this;
         }
+
         public Builder datadog(@Nullable FlowDatadogSourceProperties datadog) {
-            this.datadog = datadog;
+            $.datadog = datadog;
             return this;
         }
+
         public Builder dynatrace(@Nullable FlowDynatraceSourceProperties dynatrace) {
-            this.dynatrace = dynatrace;
+            $.dynatrace = dynatrace;
             return this;
         }
+
         public Builder googleAnalytics(@Nullable FlowGoogleAnalyticsSourceProperties googleAnalytics) {
-            this.googleAnalytics = googleAnalytics;
+            $.googleAnalytics = googleAnalytics;
             return this;
         }
+
         public Builder inforNexus(@Nullable FlowInforNexusSourceProperties inforNexus) {
-            this.inforNexus = inforNexus;
+            $.inforNexus = inforNexus;
             return this;
         }
+
         public Builder marketo(@Nullable FlowMarketoSourceProperties marketo) {
-            this.marketo = marketo;
+            $.marketo = marketo;
             return this;
         }
+
         public Builder s3(@Nullable FlowS3SourceProperties s3) {
-            this.s3 = s3;
+            $.s3 = s3;
             return this;
         }
+
         public Builder sAPOData(@Nullable FlowSAPODataSourceProperties sAPOData) {
-            this.sAPOData = sAPOData;
+            $.sAPOData = sAPOData;
             return this;
         }
+
         public Builder salesforce(@Nullable FlowSalesforceSourceProperties salesforce) {
-            this.salesforce = salesforce;
+            $.salesforce = salesforce;
             return this;
         }
+
         public Builder serviceNow(@Nullable FlowServiceNowSourceProperties serviceNow) {
-            this.serviceNow = serviceNow;
+            $.serviceNow = serviceNow;
             return this;
         }
+
         public Builder singular(@Nullable FlowSingularSourceProperties singular) {
-            this.singular = singular;
+            $.singular = singular;
             return this;
         }
+
         public Builder slack(@Nullable FlowSlackSourceProperties slack) {
-            this.slack = slack;
+            $.slack = slack;
             return this;
         }
+
         public Builder trendmicro(@Nullable FlowTrendmicroSourceProperties trendmicro) {
-            this.trendmicro = trendmicro;
+            $.trendmicro = trendmicro;
             return this;
         }
+
         public Builder veeva(@Nullable FlowVeevaSourceProperties veeva) {
-            this.veeva = veeva;
+            $.veeva = veeva;
             return this;
         }
+
         public Builder zendesk(@Nullable FlowZendeskSourceProperties zendesk) {
-            this.zendesk = zendesk;
+            $.zendesk = zendesk;
             return this;
-        }        public FlowSourceConnectorProperties build() {
-            return new FlowSourceConnectorProperties(amplitude, datadog, dynatrace, googleAnalytics, inforNexus, marketo, s3, sAPOData, salesforce, serviceNow, singular, slack, trendmicro, veeva, zendesk);
+        }
+
+        public FlowSourceConnectorProperties build() {
+            return $;
         }
     }
+
 }

@@ -37,10 +37,10 @@ public final class OutputResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="datasource")
-      private final @Nullable Object datasource;
+    private @Nullable Object datasource;
 
-    public Object datasource() {
-        return this.datasource == null ? null : this.datasource;
+    public Optional<Object> datasource() {
+        return Optional.ofNullable(this.datasource);
     }
 
     /**
@@ -48,7 +48,7 @@ public final class OutputResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="diagnostics", required=true)
-      private final DiagnosticsResponse diagnostics;
+    private DiagnosticsResponse diagnostics;
 
     public DiagnosticsResponse diagnostics() {
         return this.diagnostics;
@@ -59,7 +59,7 @@ public final class OutputResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="etag", required=true)
-      private final String etag;
+    private String etag;
 
     public String etag() {
         return this.etag;
@@ -70,7 +70,7 @@ public final class OutputResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="id", required=true)
-      private final String id;
+    private String id;
 
     public String id() {
         return this.id;
@@ -81,10 +81,10 @@ public final class OutputResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable String name;
+    private @Nullable String name;
 
     public Optional<String> name() {
-        return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -92,10 +92,10 @@ public final class OutputResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="serialization")
-      private final @Nullable Object serialization;
+    private @Nullable Object serialization;
 
-    public Object serialization() {
-        return this.serialization == null ? null : this.serialization;
+    public Optional<Object> serialization() {
+        return Optional.ofNullable(this.serialization);
     }
 
     /**
@@ -103,100 +103,84 @@ public final class OutputResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
     }
 
-    public OutputResponse(
-        @Nullable Object datasource,
-        DiagnosticsResponse diagnostics,
-        String etag,
-        String id,
-        @Nullable String name,
-        @Nullable Object serialization,
-        String type) {
-        this.datasource = datasource;
-        this.diagnostics = Objects.requireNonNull(diagnostics, "expected parameter 'diagnostics' to be non-null");
-        this.etag = Objects.requireNonNull(etag, "expected parameter 'etag' to be non-null");
-        this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
-        this.name = name;
-        this.serialization = serialization;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private OutputResponse() {}
 
-    private OutputResponse() {
-        this.datasource = null;
-        this.diagnostics = null;
-        this.etag = null;
-        this.id = null;
-        this.name = null;
-        this.serialization = null;
-        this.type = null;
+    private OutputResponse(OutputResponse $) {
+        this.datasource = $.datasource;
+        this.diagnostics = $.diagnostics;
+        this.etag = $.etag;
+        this.id = $.id;
+        this.name = $.name;
+        this.serialization = $.serialization;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(OutputResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Object datasource;
-        private DiagnosticsResponse diagnostics;
-        private String etag;
-        private String id;
-        private @Nullable String name;
-        private @Nullable Object serialization;
-        private String type;
+        private OutputResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new OutputResponse();
         }
 
         public Builder(OutputResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.datasource = defaults.datasource;
-    	      this.diagnostics = defaults.diagnostics;
-    	      this.etag = defaults.etag;
-    	      this.id = defaults.id;
-    	      this.name = defaults.name;
-    	      this.serialization = defaults.serialization;
-    	      this.type = defaults.type;
+            $ = new OutputResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder datasource(@Nullable Object datasource) {
-            this.datasource = datasource;
+            $.datasource = datasource;
             return this;
         }
+
         public Builder diagnostics(DiagnosticsResponse diagnostics) {
-            this.diagnostics = Objects.requireNonNull(diagnostics);
+            $.diagnostics = diagnostics;
             return this;
         }
+
         public Builder etag(String etag) {
-            this.etag = Objects.requireNonNull(etag);
+            $.etag = etag;
             return this;
         }
+
         public Builder id(String id) {
-            this.id = Objects.requireNonNull(id);
+            $.id = id;
             return this;
         }
+
         public Builder name(@Nullable String name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
+
         public Builder serialization(@Nullable Object serialization) {
-            this.serialization = serialization;
+            $.serialization = serialization;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
-        }        public OutputResponse build() {
-            return new OutputResponse(datasource, diagnostics, etag, id, name, serialization, type);
+        }
+
+        public OutputResponse build() {
+            $.diagnostics = Objects.requireNonNull($.diagnostics, "expected parameter 'diagnostics' to be non-null");
+            $.etag = Objects.requireNonNull($.etag, "expected parameter 'etag' to be non-null");
+            $.id = Objects.requireNonNull($.id, "expected parameter 'id' to be non-null");
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

@@ -6,9 +6,9 @@ package com.pulumi.aws.cloudwatch;
 import com.pulumi.aws.cloudwatch.inputs.EventPermissionConditionArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class EventPermissionArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="action")
-      private final @Nullable Output<String> action;
+    private @Nullable Output<String> action;
 
-    public Output<String> action() {
-        return this.action == null ? Codegen.empty() : this.action;
+    public Optional<Output<String>> action() {
+        return Optional.ofNullable(this.action);
     }
 
     /**
@@ -32,10 +32,10 @@ public final class EventPermissionArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="condition")
-      private final @Nullable Output<EventPermissionConditionArgs> condition;
+    private @Nullable Output<EventPermissionConditionArgs> condition;
 
-    public Output<EventPermissionConditionArgs> condition() {
-        return this.condition == null ? Codegen.empty() : this.condition;
+    public Optional<Output<EventPermissionConditionArgs>> condition() {
+        return Optional.ofNullable(this.condition);
     }
 
     /**
@@ -43,10 +43,10 @@ public final class EventPermissionArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="eventBusName")
-      private final @Nullable Output<String> eventBusName;
+    private @Nullable Output<String> eventBusName;
 
-    public Output<String> eventBusName() {
-        return this.eventBusName == null ? Codegen.empty() : this.eventBusName;
+    public Optional<Output<String>> eventBusName() {
+        return Optional.ofNullable(this.eventBusName);
     }
 
     /**
@@ -54,7 +54,7 @@ public final class EventPermissionArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="principal", required=true)
-      private final Output<String> principal;
+    private Output<String> principal;
 
     public Output<String> principal() {
         return this.principal;
@@ -65,102 +65,90 @@ public final class EventPermissionArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="statementId", required=true)
-      private final Output<String> statementId;
+    private Output<String> statementId;
 
     public Output<String> statementId() {
         return this.statementId;
     }
 
-    public EventPermissionArgs(
-        @Nullable Output<String> action,
-        @Nullable Output<EventPermissionConditionArgs> condition,
-        @Nullable Output<String> eventBusName,
-        Output<String> principal,
-        Output<String> statementId) {
-        this.action = action;
-        this.condition = condition;
-        this.eventBusName = eventBusName;
-        this.principal = Objects.requireNonNull(principal, "expected parameter 'principal' to be non-null");
-        this.statementId = Objects.requireNonNull(statementId, "expected parameter 'statementId' to be non-null");
-    }
+    private EventPermissionArgs() {}
 
-    private EventPermissionArgs() {
-        this.action = Codegen.empty();
-        this.condition = Codegen.empty();
-        this.eventBusName = Codegen.empty();
-        this.principal = Codegen.empty();
-        this.statementId = Codegen.empty();
+    private EventPermissionArgs(EventPermissionArgs $) {
+        this.action = $.action;
+        this.condition = $.condition;
+        this.eventBusName = $.eventBusName;
+        this.principal = $.principal;
+        this.statementId = $.statementId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EventPermissionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> action;
-        private @Nullable Output<EventPermissionConditionArgs> condition;
-        private @Nullable Output<String> eventBusName;
-        private Output<String> principal;
-        private Output<String> statementId;
+        private EventPermissionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new EventPermissionArgs();
         }
 
         public Builder(EventPermissionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.action = defaults.action;
-    	      this.condition = defaults.condition;
-    	      this.eventBusName = defaults.eventBusName;
-    	      this.principal = defaults.principal;
-    	      this.statementId = defaults.statementId;
+            $ = new EventPermissionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder action(@Nullable Output<String> action) {
-            this.action = action;
+            $.action = action;
             return this;
         }
-        public Builder action(@Nullable String action) {
-            this.action = Codegen.ofNullable(action);
-            return this;
+
+        public Builder action(String action) {
+            return action(Output.of(action));
         }
+
         public Builder condition(@Nullable Output<EventPermissionConditionArgs> condition) {
-            this.condition = condition;
+            $.condition = condition;
             return this;
         }
-        public Builder condition(@Nullable EventPermissionConditionArgs condition) {
-            this.condition = Codegen.ofNullable(condition);
-            return this;
+
+        public Builder condition(EventPermissionConditionArgs condition) {
+            return condition(Output.of(condition));
         }
+
         public Builder eventBusName(@Nullable Output<String> eventBusName) {
-            this.eventBusName = eventBusName;
+            $.eventBusName = eventBusName;
             return this;
         }
-        public Builder eventBusName(@Nullable String eventBusName) {
-            this.eventBusName = Codegen.ofNullable(eventBusName);
-            return this;
+
+        public Builder eventBusName(String eventBusName) {
+            return eventBusName(Output.of(eventBusName));
         }
+
         public Builder principal(Output<String> principal) {
-            this.principal = Objects.requireNonNull(principal);
+            $.principal = principal;
             return this;
         }
+
         public Builder principal(String principal) {
-            this.principal = Output.of(Objects.requireNonNull(principal));
-            return this;
+            return principal(Output.of(principal));
         }
+
         public Builder statementId(Output<String> statementId) {
-            this.statementId = Objects.requireNonNull(statementId);
+            $.statementId = statementId;
             return this;
         }
+
         public Builder statementId(String statementId) {
-            this.statementId = Output.of(Objects.requireNonNull(statementId));
-            return this;
-        }        public EventPermissionArgs build() {
-            return new EventPermissionArgs(action, condition, eventBusName, principal, statementId);
+            return statementId(Output.of(statementId));
+        }
+
+        public EventPermissionArgs build() {
+            $.principal = Objects.requireNonNull($.principal, "expected parameter 'principal' to be non-null");
+            $.statementId = Objects.requireNonNull($.statementId, "expected parameter 'statementId' to be non-null");
+            return $;
         }
     }
+
 }

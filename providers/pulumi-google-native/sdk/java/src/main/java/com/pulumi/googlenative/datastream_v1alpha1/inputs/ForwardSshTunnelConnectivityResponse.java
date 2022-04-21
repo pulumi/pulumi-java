@@ -22,7 +22,7 @@ public final class ForwardSshTunnelConnectivityResponse extends com.pulumi.resou
      * 
      */
     @Import(name="hostname", required=true)
-      private final String hostname;
+    private String hostname;
 
     public String hostname() {
         return this.hostname;
@@ -33,7 +33,7 @@ public final class ForwardSshTunnelConnectivityResponse extends com.pulumi.resou
      * 
      */
     @Import(name="password", required=true)
-      private final String password;
+    private String password;
 
     public String password() {
         return this.password;
@@ -44,7 +44,7 @@ public final class ForwardSshTunnelConnectivityResponse extends com.pulumi.resou
      * 
      */
     @Import(name="port", required=true)
-      private final Integer port;
+    private Integer port;
 
     public Integer port() {
         return this.port;
@@ -55,7 +55,7 @@ public final class ForwardSshTunnelConnectivityResponse extends com.pulumi.resou
      * 
      */
     @Import(name="privateKey", required=true)
-      private final String privateKey;
+    private String privateKey;
 
     public String privateKey() {
         return this.privateKey;
@@ -66,82 +66,73 @@ public final class ForwardSshTunnelConnectivityResponse extends com.pulumi.resou
      * 
      */
     @Import(name="username", required=true)
-      private final String username;
+    private String username;
 
     public String username() {
         return this.username;
     }
 
-    public ForwardSshTunnelConnectivityResponse(
-        String hostname,
-        String password,
-        Integer port,
-        String privateKey,
-        String username) {
-        this.hostname = Objects.requireNonNull(hostname, "expected parameter 'hostname' to be non-null");
-        this.password = Objects.requireNonNull(password, "expected parameter 'password' to be non-null");
-        this.port = Objects.requireNonNull(port, "expected parameter 'port' to be non-null");
-        this.privateKey = Objects.requireNonNull(privateKey, "expected parameter 'privateKey' to be non-null");
-        this.username = Objects.requireNonNull(username, "expected parameter 'username' to be non-null");
-    }
+    private ForwardSshTunnelConnectivityResponse() {}
 
-    private ForwardSshTunnelConnectivityResponse() {
-        this.hostname = null;
-        this.password = null;
-        this.port = null;
-        this.privateKey = null;
-        this.username = null;
+    private ForwardSshTunnelConnectivityResponse(ForwardSshTunnelConnectivityResponse $) {
+        this.hostname = $.hostname;
+        this.password = $.password;
+        this.port = $.port;
+        this.privateKey = $.privateKey;
+        this.username = $.username;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ForwardSshTunnelConnectivityResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String hostname;
-        private String password;
-        private Integer port;
-        private String privateKey;
-        private String username;
+        private ForwardSshTunnelConnectivityResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ForwardSshTunnelConnectivityResponse();
         }
 
         public Builder(ForwardSshTunnelConnectivityResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.hostname = defaults.hostname;
-    	      this.password = defaults.password;
-    	      this.port = defaults.port;
-    	      this.privateKey = defaults.privateKey;
-    	      this.username = defaults.username;
+            $ = new ForwardSshTunnelConnectivityResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder hostname(String hostname) {
-            this.hostname = Objects.requireNonNull(hostname);
+            $.hostname = hostname;
             return this;
         }
+
         public Builder password(String password) {
-            this.password = Objects.requireNonNull(password);
+            $.password = password;
             return this;
         }
+
         public Builder port(Integer port) {
-            this.port = Objects.requireNonNull(port);
+            $.port = port;
             return this;
         }
+
         public Builder privateKey(String privateKey) {
-            this.privateKey = Objects.requireNonNull(privateKey);
+            $.privateKey = privateKey;
             return this;
         }
+
         public Builder username(String username) {
-            this.username = Objects.requireNonNull(username);
+            $.username = username;
             return this;
-        }        public ForwardSshTunnelConnectivityResponse build() {
-            return new ForwardSshTunnelConnectivityResponse(hostname, password, port, privateKey, username);
+        }
+
+        public ForwardSshTunnelConnectivityResponse build() {
+            $.hostname = Objects.requireNonNull($.hostname, "expected parameter 'hostname' to be non-null");
+            $.password = Objects.requireNonNull($.password, "expected parameter 'password' to be non-null");
+            $.port = Objects.requireNonNull($.port, "expected parameter 'port' to be non-null");
+            $.privateKey = Objects.requireNonNull($.privateKey, "expected parameter 'privateKey' to be non-null");
+            $.username = Objects.requireNonNull($.username, "expected parameter 'username' to be non-null");
+            return $;
         }
     }
+
 }

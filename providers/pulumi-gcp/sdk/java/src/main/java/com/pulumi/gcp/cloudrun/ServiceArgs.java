@@ -5,7 +5,6 @@ package com.pulumi.gcp.cloudrun;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.cloudrun.inputs.ServiceMetadataArgs;
 import com.pulumi.gcp.cloudrun.inputs.ServiceTemplateArgs;
 import com.pulumi.gcp.cloudrun.inputs.ServiceTrafficArgs;
@@ -13,6 +12,7 @@ import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -29,10 +29,10 @@ public final class ServiceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="autogenerateRevisionName")
-      private final @Nullable Output<Boolean> autogenerateRevisionName;
+    private @Nullable Output<Boolean> autogenerateRevisionName;
 
-    public Output<Boolean> autogenerateRevisionName() {
-        return this.autogenerateRevisionName == null ? Codegen.empty() : this.autogenerateRevisionName;
+    public Optional<Output<Boolean>> autogenerateRevisionName() {
+        return Optional.ofNullable(this.autogenerateRevisionName);
     }
 
     /**
@@ -40,7 +40,7 @@ public final class ServiceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="location", required=true)
-      private final Output<String> location;
+    private Output<String> location;
 
     public Output<String> location() {
         return this.location;
@@ -53,10 +53,10 @@ public final class ServiceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="metadata")
-      private final @Nullable Output<ServiceMetadataArgs> metadata;
+    private @Nullable Output<ServiceMetadataArgs> metadata;
 
-    public Output<ServiceMetadataArgs> metadata() {
-        return this.metadata == null ? Codegen.empty() : this.metadata;
+    public Optional<Output<ServiceMetadataArgs>> metadata() {
+        return Optional.ofNullable(this.metadata);
     }
 
     /**
@@ -64,10 +64,10 @@ public final class ServiceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -76,10 +76,10 @@ public final class ServiceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -96,10 +96,10 @@ public final class ServiceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="template")
-      private final @Nullable Output<ServiceTemplateArgs> template;
+    private @Nullable Output<ServiceTemplateArgs> template;
 
-    public Output<ServiceTemplateArgs> template() {
-        return this.template == null ? Codegen.empty() : this.template;
+    public Optional<Output<ServiceTemplateArgs>> template() {
+        return Optional.ofNullable(this.template);
     }
 
     /**
@@ -109,131 +109,113 @@ public final class ServiceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="traffics")
-      private final @Nullable Output<List<ServiceTrafficArgs>> traffics;
+    private @Nullable Output<List<ServiceTrafficArgs>> traffics;
 
-    public Output<List<ServiceTrafficArgs>> traffics() {
-        return this.traffics == null ? Codegen.empty() : this.traffics;
+    public Optional<Output<List<ServiceTrafficArgs>>> traffics() {
+        return Optional.ofNullable(this.traffics);
     }
 
-    public ServiceArgs(
-        @Nullable Output<Boolean> autogenerateRevisionName,
-        Output<String> location,
-        @Nullable Output<ServiceMetadataArgs> metadata,
-        @Nullable Output<String> name,
-        @Nullable Output<String> project,
-        @Nullable Output<ServiceTemplateArgs> template,
-        @Nullable Output<List<ServiceTrafficArgs>> traffics) {
-        this.autogenerateRevisionName = autogenerateRevisionName;
-        this.location = Objects.requireNonNull(location, "expected parameter 'location' to be non-null");
-        this.metadata = metadata;
-        this.name = name;
-        this.project = project;
-        this.template = template;
-        this.traffics = traffics;
-    }
+    private ServiceArgs() {}
 
-    private ServiceArgs() {
-        this.autogenerateRevisionName = Codegen.empty();
-        this.location = Codegen.empty();
-        this.metadata = Codegen.empty();
-        this.name = Codegen.empty();
-        this.project = Codegen.empty();
-        this.template = Codegen.empty();
-        this.traffics = Codegen.empty();
+    private ServiceArgs(ServiceArgs $) {
+        this.autogenerateRevisionName = $.autogenerateRevisionName;
+        this.location = $.location;
+        this.metadata = $.metadata;
+        this.name = $.name;
+        this.project = $.project;
+        this.template = $.template;
+        this.traffics = $.traffics;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ServiceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> autogenerateRevisionName;
-        private Output<String> location;
-        private @Nullable Output<ServiceMetadataArgs> metadata;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> project;
-        private @Nullable Output<ServiceTemplateArgs> template;
-        private @Nullable Output<List<ServiceTrafficArgs>> traffics;
+        private ServiceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ServiceArgs();
         }
 
         public Builder(ServiceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.autogenerateRevisionName = defaults.autogenerateRevisionName;
-    	      this.location = defaults.location;
-    	      this.metadata = defaults.metadata;
-    	      this.name = defaults.name;
-    	      this.project = defaults.project;
-    	      this.template = defaults.template;
-    	      this.traffics = defaults.traffics;
+            $ = new ServiceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder autogenerateRevisionName(@Nullable Output<Boolean> autogenerateRevisionName) {
-            this.autogenerateRevisionName = autogenerateRevisionName;
+            $.autogenerateRevisionName = autogenerateRevisionName;
             return this;
         }
-        public Builder autogenerateRevisionName(@Nullable Boolean autogenerateRevisionName) {
-            this.autogenerateRevisionName = Codegen.ofNullable(autogenerateRevisionName);
-            return this;
+
+        public Builder autogenerateRevisionName(Boolean autogenerateRevisionName) {
+            return autogenerateRevisionName(Output.of(autogenerateRevisionName));
         }
+
         public Builder location(Output<String> location) {
-            this.location = Objects.requireNonNull(location);
+            $.location = location;
             return this;
         }
+
         public Builder location(String location) {
-            this.location = Output.of(Objects.requireNonNull(location));
-            return this;
+            return location(Output.of(location));
         }
+
         public Builder metadata(@Nullable Output<ServiceMetadataArgs> metadata) {
-            this.metadata = metadata;
+            $.metadata = metadata;
             return this;
         }
-        public Builder metadata(@Nullable ServiceMetadataArgs metadata) {
-            this.metadata = Codegen.ofNullable(metadata);
-            return this;
+
+        public Builder metadata(ServiceMetadataArgs metadata) {
+            return metadata(Output.of(metadata));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder template(@Nullable Output<ServiceTemplateArgs> template) {
-            this.template = template;
+            $.template = template;
             return this;
         }
-        public Builder template(@Nullable ServiceTemplateArgs template) {
-            this.template = Codegen.ofNullable(template);
-            return this;
+
+        public Builder template(ServiceTemplateArgs template) {
+            return template(Output.of(template));
         }
+
         public Builder traffics(@Nullable Output<List<ServiceTrafficArgs>> traffics) {
-            this.traffics = traffics;
+            $.traffics = traffics;
             return this;
         }
-        public Builder traffics(@Nullable List<ServiceTrafficArgs> traffics) {
-            this.traffics = Codegen.ofNullable(traffics);
-            return this;
+
+        public Builder traffics(List<ServiceTrafficArgs> traffics) {
+            return traffics(Output.of(traffics));
         }
+
         public Builder traffics(ServiceTrafficArgs... traffics) {
             return traffics(List.of(traffics));
-        }        public ServiceArgs build() {
-            return new ServiceArgs(autogenerateRevisionName, location, metadata, name, project, template, traffics);
+        }
+
+        public ServiceArgs build() {
+            $.location = Objects.requireNonNull($.location, "expected parameter 'location' to be non-null");
+            return $;
         }
     }
+
 }

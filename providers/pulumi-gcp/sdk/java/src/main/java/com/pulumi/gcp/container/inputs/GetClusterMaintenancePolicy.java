@@ -16,87 +16,85 @@ public final class GetClusterMaintenancePolicy extends com.pulumi.resources.Invo
     public static final GetClusterMaintenancePolicy Empty = new GetClusterMaintenancePolicy();
 
     @Import(name="dailyMaintenanceWindows", required=true)
-      private final List<GetClusterMaintenancePolicyDailyMaintenanceWindow> dailyMaintenanceWindows;
+    private List<GetClusterMaintenancePolicyDailyMaintenanceWindow> dailyMaintenanceWindows;
 
     public List<GetClusterMaintenancePolicyDailyMaintenanceWindow> dailyMaintenanceWindows() {
         return this.dailyMaintenanceWindows;
     }
 
     @Import(name="maintenanceExclusions", required=true)
-      private final List<GetClusterMaintenancePolicyMaintenanceExclusion> maintenanceExclusions;
+    private List<GetClusterMaintenancePolicyMaintenanceExclusion> maintenanceExclusions;
 
     public List<GetClusterMaintenancePolicyMaintenanceExclusion> maintenanceExclusions() {
         return this.maintenanceExclusions;
     }
 
     @Import(name="recurringWindows", required=true)
-      private final List<GetClusterMaintenancePolicyRecurringWindow> recurringWindows;
+    private List<GetClusterMaintenancePolicyRecurringWindow> recurringWindows;
 
     public List<GetClusterMaintenancePolicyRecurringWindow> recurringWindows() {
         return this.recurringWindows;
     }
 
-    public GetClusterMaintenancePolicy(
-        List<GetClusterMaintenancePolicyDailyMaintenanceWindow> dailyMaintenanceWindows,
-        List<GetClusterMaintenancePolicyMaintenanceExclusion> maintenanceExclusions,
-        List<GetClusterMaintenancePolicyRecurringWindow> recurringWindows) {
-        this.dailyMaintenanceWindows = Objects.requireNonNull(dailyMaintenanceWindows, "expected parameter 'dailyMaintenanceWindows' to be non-null");
-        this.maintenanceExclusions = Objects.requireNonNull(maintenanceExclusions, "expected parameter 'maintenanceExclusions' to be non-null");
-        this.recurringWindows = Objects.requireNonNull(recurringWindows, "expected parameter 'recurringWindows' to be non-null");
-    }
+    private GetClusterMaintenancePolicy() {}
 
-    private GetClusterMaintenancePolicy() {
-        this.dailyMaintenanceWindows = List.of();
-        this.maintenanceExclusions = List.of();
-        this.recurringWindows = List.of();
+    private GetClusterMaintenancePolicy(GetClusterMaintenancePolicy $) {
+        this.dailyMaintenanceWindows = $.dailyMaintenanceWindows;
+        this.maintenanceExclusions = $.maintenanceExclusions;
+        this.recurringWindows = $.recurringWindows;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetClusterMaintenancePolicy defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<GetClusterMaintenancePolicyDailyMaintenanceWindow> dailyMaintenanceWindows;
-        private List<GetClusterMaintenancePolicyMaintenanceExclusion> maintenanceExclusions;
-        private List<GetClusterMaintenancePolicyRecurringWindow> recurringWindows;
+        private GetClusterMaintenancePolicy $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetClusterMaintenancePolicy();
         }
 
         public Builder(GetClusterMaintenancePolicy defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dailyMaintenanceWindows = defaults.dailyMaintenanceWindows;
-    	      this.maintenanceExclusions = defaults.maintenanceExclusions;
-    	      this.recurringWindows = defaults.recurringWindows;
+            $ = new GetClusterMaintenancePolicy(Objects.requireNonNull(defaults));
         }
 
         public Builder dailyMaintenanceWindows(List<GetClusterMaintenancePolicyDailyMaintenanceWindow> dailyMaintenanceWindows) {
-            this.dailyMaintenanceWindows = Objects.requireNonNull(dailyMaintenanceWindows);
+            $.dailyMaintenanceWindows = dailyMaintenanceWindows;
             return this;
         }
+
         public Builder dailyMaintenanceWindows(GetClusterMaintenancePolicyDailyMaintenanceWindow... dailyMaintenanceWindows) {
             return dailyMaintenanceWindows(List.of(dailyMaintenanceWindows));
         }
+
         public Builder maintenanceExclusions(List<GetClusterMaintenancePolicyMaintenanceExclusion> maintenanceExclusions) {
-            this.maintenanceExclusions = Objects.requireNonNull(maintenanceExclusions);
+            $.maintenanceExclusions = maintenanceExclusions;
             return this;
         }
+
         public Builder maintenanceExclusions(GetClusterMaintenancePolicyMaintenanceExclusion... maintenanceExclusions) {
             return maintenanceExclusions(List.of(maintenanceExclusions));
         }
+
         public Builder recurringWindows(List<GetClusterMaintenancePolicyRecurringWindow> recurringWindows) {
-            this.recurringWindows = Objects.requireNonNull(recurringWindows);
+            $.recurringWindows = recurringWindows;
             return this;
         }
+
         public Builder recurringWindows(GetClusterMaintenancePolicyRecurringWindow... recurringWindows) {
             return recurringWindows(List.of(recurringWindows));
-        }        public GetClusterMaintenancePolicy build() {
-            return new GetClusterMaintenancePolicy(dailyMaintenanceWindows, maintenanceExclusions, recurringWindows);
+        }
+
+        public GetClusterMaintenancePolicy build() {
+            $.dailyMaintenanceWindows = Objects.requireNonNull($.dailyMaintenanceWindows, "expected parameter 'dailyMaintenanceWindows' to be non-null");
+            $.maintenanceExclusions = Objects.requireNonNull($.maintenanceExclusions, "expected parameter 'maintenanceExclusions' to be non-null");
+            $.recurringWindows = Objects.requireNonNull($.recurringWindows, "expected parameter 'recurringWindows' to be non-null");
+            return $;
         }
     }
+
 }

@@ -21,45 +21,45 @@ public final class LogAnalyticsOutputResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="output", required=true)
-      private final String output;
+    private String output;
 
     public String output() {
         return this.output;
     }
 
-    public LogAnalyticsOutputResponse(String output) {
-        this.output = Objects.requireNonNull(output, "expected parameter 'output' to be non-null");
-    }
+    private LogAnalyticsOutputResponse() {}
 
-    private LogAnalyticsOutputResponse() {
-        this.output = null;
+    private LogAnalyticsOutputResponse(LogAnalyticsOutputResponse $) {
+        this.output = $.output;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LogAnalyticsOutputResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String output;
+        private LogAnalyticsOutputResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new LogAnalyticsOutputResponse();
         }
 
         public Builder(LogAnalyticsOutputResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.output = defaults.output;
+            $ = new LogAnalyticsOutputResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder output(String output) {
-            this.output = Objects.requireNonNull(output);
+            $.output = output;
             return this;
-        }        public LogAnalyticsOutputResponse build() {
-            return new LogAnalyticsOutputResponse(output);
+        }
+
+        public LogAnalyticsOutputResponse build() {
+            $.output = Objects.requireNonNull($.output, "expected parameter 'output' to be non-null");
+            return $;
         }
     }
+
 }

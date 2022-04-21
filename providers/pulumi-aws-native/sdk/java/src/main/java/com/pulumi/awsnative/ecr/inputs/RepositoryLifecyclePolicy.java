@@ -19,62 +19,57 @@ public final class RepositoryLifecyclePolicy extends com.pulumi.resources.Invoke
     public static final RepositoryLifecyclePolicy Empty = new RepositoryLifecyclePolicy();
 
     @Import(name="lifecyclePolicyText")
-      private final @Nullable String lifecyclePolicyText;
+    private @Nullable String lifecyclePolicyText;
 
     public Optional<String> lifecyclePolicyText() {
-        return this.lifecyclePolicyText == null ? Optional.empty() : Optional.ofNullable(this.lifecyclePolicyText);
+        return Optional.ofNullable(this.lifecyclePolicyText);
     }
 
     @Import(name="registryId")
-      private final @Nullable String registryId;
+    private @Nullable String registryId;
 
     public Optional<String> registryId() {
-        return this.registryId == null ? Optional.empty() : Optional.ofNullable(this.registryId);
+        return Optional.ofNullable(this.registryId);
     }
 
-    public RepositoryLifecyclePolicy(
-        @Nullable String lifecyclePolicyText,
-        @Nullable String registryId) {
-        this.lifecyclePolicyText = lifecyclePolicyText;
-        this.registryId = registryId;
-    }
+    private RepositoryLifecyclePolicy() {}
 
-    private RepositoryLifecyclePolicy() {
-        this.lifecyclePolicyText = null;
-        this.registryId = null;
+    private RepositoryLifecyclePolicy(RepositoryLifecyclePolicy $) {
+        this.lifecyclePolicyText = $.lifecyclePolicyText;
+        this.registryId = $.registryId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RepositoryLifecyclePolicy defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String lifecyclePolicyText;
-        private @Nullable String registryId;
+        private RepositoryLifecyclePolicy $;
 
         public Builder() {
-    	      // Empty
+            $ = new RepositoryLifecyclePolicy();
         }
 
         public Builder(RepositoryLifecyclePolicy defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.lifecyclePolicyText = defaults.lifecyclePolicyText;
-    	      this.registryId = defaults.registryId;
+            $ = new RepositoryLifecyclePolicy(Objects.requireNonNull(defaults));
         }
 
         public Builder lifecyclePolicyText(@Nullable String lifecyclePolicyText) {
-            this.lifecyclePolicyText = lifecyclePolicyText;
+            $.lifecyclePolicyText = lifecyclePolicyText;
             return this;
         }
+
         public Builder registryId(@Nullable String registryId) {
-            this.registryId = registryId;
+            $.registryId = registryId;
             return this;
-        }        public RepositoryLifecyclePolicy build() {
-            return new RepositoryLifecyclePolicy(lifecyclePolicyText, registryId);
+        }
+
+        public RepositoryLifecyclePolicy build() {
+            return $;
         }
     }
+
 }

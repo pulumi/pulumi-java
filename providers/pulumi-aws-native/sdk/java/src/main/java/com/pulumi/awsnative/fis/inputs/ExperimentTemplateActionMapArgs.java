@@ -3,7 +3,7 @@
 
 package com.pulumi.awsnative.fis.inputs;
 
-import java.util.Objects;
+
 
 
 /**
@@ -14,28 +14,19 @@ public final class ExperimentTemplateActionMapArgs extends com.pulumi.resources.
 
     public static final ExperimentTemplateActionMapArgs Empty = new ExperimentTemplateActionMapArgs();
 
-    public ExperimentTemplateActionMapArgs() {
-    }
-
     public static Builder builder() {
         return new Builder();
     }
 
-    public static Builder builder(ExperimentTemplateActionMapArgs defaults) {
-        return new Builder(defaults);
-    }
-
     public static final class Builder {
+        private ExperimentTemplateActionMapArgs $;
 
         public Builder() {
-    	      // Empty
-        }
-
-        public Builder(ExperimentTemplateActionMapArgs defaults) {
-    	      Objects.requireNonNull(defaults);
+            $ = new ExperimentTemplateActionMapArgs();
         }
         public ExperimentTemplateActionMapArgs build() {
-            return new ExperimentTemplateActionMapArgs();
+            return $;
         }
     }
+
 }

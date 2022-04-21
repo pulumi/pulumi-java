@@ -12,6 +12,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -28,10 +29,10 @@ public final class JsonReadSettingsArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="compressionProperties")
-      private final @Nullable Output<Object> compressionProperties;
+    private @Nullable Output<Object> compressionProperties;
 
-    public Output<Object> compressionProperties() {
-        return this.compressionProperties == null ? Codegen.empty() : this.compressionProperties;
+    public Optional<Output<Object>> compressionProperties() {
+        return Optional.ofNullable(this.compressionProperties);
     }
 
     /**
@@ -40,63 +41,59 @@ public final class JsonReadSettingsArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="type", required=true)
-      private final Output<String> type;
+    private Output<String> type;
 
     public Output<String> type() {
         return this.type;
     }
 
-    public JsonReadSettingsArgs(
-        @Nullable Output<Object> compressionProperties,
-        Output<String> type) {
-        this.compressionProperties = compressionProperties;
-        this.type = Codegen.stringProp("type").output().arg(type).require();
-    }
+    private JsonReadSettingsArgs() {}
 
-    private JsonReadSettingsArgs() {
-        this.compressionProperties = Codegen.empty();
-        this.type = Codegen.empty();
+    private JsonReadSettingsArgs(JsonReadSettingsArgs $) {
+        this.compressionProperties = $.compressionProperties;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(JsonReadSettingsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Object> compressionProperties;
-        private Output<String> type;
+        private JsonReadSettingsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new JsonReadSettingsArgs();
         }
 
         public Builder(JsonReadSettingsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.compressionProperties = defaults.compressionProperties;
-    	      this.type = defaults.type;
+            $ = new JsonReadSettingsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder compressionProperties(@Nullable Output<Object> compressionProperties) {
-            this.compressionProperties = compressionProperties;
+            $.compressionProperties = compressionProperties;
             return this;
         }
-        public Builder compressionProperties(@Nullable Object compressionProperties) {
-            this.compressionProperties = Codegen.ofNullable(compressionProperties);
-            return this;
+
+        public Builder compressionProperties(Object compressionProperties) {
+            return compressionProperties(Output.of(compressionProperties));
         }
+
         public Builder type(Output<String> type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Output.of(Objects.requireNonNull(type));
-            return this;
-        }        public JsonReadSettingsArgs build() {
-            return new JsonReadSettingsArgs(compressionProperties, type);
+            return type(Output.of(type));
+        }
+
+        public JsonReadSettingsArgs build() {
+            $.type = Codegen.stringProp("type").output().arg($.type).require();
+            return $;
         }
     }
+
 }

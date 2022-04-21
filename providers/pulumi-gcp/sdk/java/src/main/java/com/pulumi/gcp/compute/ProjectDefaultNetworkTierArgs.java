@@ -5,9 +5,9 @@ package com.pulumi.gcp.compute;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,7 +21,7 @@ public final class ProjectDefaultNetworkTierArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="networkTier", required=true)
-      private final Output<String> networkTier;
+    private Output<String> networkTier;
 
     public Output<String> networkTier() {
         return this.networkTier;
@@ -33,63 +33,59 @@ public final class ProjectDefaultNetworkTierArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
-    public ProjectDefaultNetworkTierArgs(
-        Output<String> networkTier,
-        @Nullable Output<String> project) {
-        this.networkTier = Objects.requireNonNull(networkTier, "expected parameter 'networkTier' to be non-null");
-        this.project = project;
-    }
+    private ProjectDefaultNetworkTierArgs() {}
 
-    private ProjectDefaultNetworkTierArgs() {
-        this.networkTier = Codegen.empty();
-        this.project = Codegen.empty();
+    private ProjectDefaultNetworkTierArgs(ProjectDefaultNetworkTierArgs $) {
+        this.networkTier = $.networkTier;
+        this.project = $.project;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ProjectDefaultNetworkTierArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> networkTier;
-        private @Nullable Output<String> project;
+        private ProjectDefaultNetworkTierArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ProjectDefaultNetworkTierArgs();
         }
 
         public Builder(ProjectDefaultNetworkTierArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.networkTier = defaults.networkTier;
-    	      this.project = defaults.project;
+            $ = new ProjectDefaultNetworkTierArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder networkTier(Output<String> networkTier) {
-            this.networkTier = Objects.requireNonNull(networkTier);
+            $.networkTier = networkTier;
             return this;
         }
+
         public Builder networkTier(String networkTier) {
-            this.networkTier = Output.of(Objects.requireNonNull(networkTier));
-            return this;
+            return networkTier(Output.of(networkTier));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
-        }        public ProjectDefaultNetworkTierArgs build() {
-            return new ProjectDefaultNetworkTierArgs(networkTier, project);
+
+        public Builder project(String project) {
+            return project(Output.of(project));
+        }
+
+        public ProjectDefaultNetworkTierArgs build() {
+            $.networkTier = Objects.requireNonNull($.networkTier, "expected parameter 'networkTier' to be non-null");
+            return $;
         }
     }
+
 }

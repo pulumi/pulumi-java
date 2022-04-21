@@ -21,45 +21,45 @@ public final class MHSMVirtualNetworkRuleResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="id", required=true)
-      private final String id;
+    private String id;
 
     public String id() {
         return this.id;
     }
 
-    public MHSMVirtualNetworkRuleResponse(String id) {
-        this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
-    }
+    private MHSMVirtualNetworkRuleResponse() {}
 
-    private MHSMVirtualNetworkRuleResponse() {
-        this.id = null;
+    private MHSMVirtualNetworkRuleResponse(MHSMVirtualNetworkRuleResponse $) {
+        this.id = $.id;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MHSMVirtualNetworkRuleResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String id;
+        private MHSMVirtualNetworkRuleResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new MHSMVirtualNetworkRuleResponse();
         }
 
         public Builder(MHSMVirtualNetworkRuleResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.id = defaults.id;
+            $ = new MHSMVirtualNetworkRuleResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder id(String id) {
-            this.id = Objects.requireNonNull(id);
+            $.id = id;
             return this;
-        }        public MHSMVirtualNetworkRuleResponse build() {
-            return new MHSMVirtualNetworkRuleResponse(id);
+        }
+
+        public MHSMVirtualNetworkRuleResponse build() {
+            $.id = Objects.requireNonNull($.id, "expected parameter 'id' to be non-null");
+            return $;
         }
     }
+
 }

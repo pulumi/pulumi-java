@@ -20,62 +20,58 @@ public final class GetLoadBalancerArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
     }
 
     @Import(name="tags")
-      private final @Nullable Map<String,String> tags;
+    private @Nullable Map<String,String> tags;
 
-    public Map<String,String> tags() {
-        return this.tags == null ? Map.of() : this.tags;
+    public Optional<Map<String,String>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public GetLoadBalancerArgs(
-        String name,
-        @Nullable Map<String,String> tags) {
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.tags = tags;
-    }
+    private GetLoadBalancerArgs() {}
 
-    private GetLoadBalancerArgs() {
-        this.name = null;
-        this.tags = Map.of();
+    private GetLoadBalancerArgs(GetLoadBalancerArgs $) {
+        this.name = $.name;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetLoadBalancerArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String name;
-        private @Nullable Map<String,String> tags;
+        private GetLoadBalancerArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetLoadBalancerArgs();
         }
 
         public Builder(GetLoadBalancerArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.tags = defaults.tags;
+            $ = new GetLoadBalancerArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
-        }        public GetLoadBalancerArgs build() {
-            return new GetLoadBalancerArgs(name, tags);
+        }
+
+        public GetLoadBalancerArgs build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            return $;
         }
     }
+
 }

@@ -15,94 +15,85 @@ public final class GetServiceBindingIamPolicyArgs extends com.pulumi.resources.I
     public static final GetServiceBindingIamPolicyArgs Empty = new GetServiceBindingIamPolicyArgs();
 
     @Import(name="location", required=true)
-      private final String location;
+    private String location;
 
     public String location() {
         return this.location;
     }
 
     @Import(name="optionsRequestedPolicyVersion")
-      private final @Nullable String optionsRequestedPolicyVersion;
+    private @Nullable String optionsRequestedPolicyVersion;
 
     public Optional<String> optionsRequestedPolicyVersion() {
-        return this.optionsRequestedPolicyVersion == null ? Optional.empty() : Optional.ofNullable(this.optionsRequestedPolicyVersion);
+        return Optional.ofNullable(this.optionsRequestedPolicyVersion);
     }
 
     @Import(name="project")
-      private final @Nullable String project;
+    private @Nullable String project;
 
     public Optional<String> project() {
-        return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
+        return Optional.ofNullable(this.project);
     }
 
     @Import(name="serviceBindingId", required=true)
-      private final String serviceBindingId;
+    private String serviceBindingId;
 
     public String serviceBindingId() {
         return this.serviceBindingId;
     }
 
-    public GetServiceBindingIamPolicyArgs(
-        String location,
-        @Nullable String optionsRequestedPolicyVersion,
-        @Nullable String project,
-        String serviceBindingId) {
-        this.location = Objects.requireNonNull(location, "expected parameter 'location' to be non-null");
-        this.optionsRequestedPolicyVersion = optionsRequestedPolicyVersion;
-        this.project = project;
-        this.serviceBindingId = Objects.requireNonNull(serviceBindingId, "expected parameter 'serviceBindingId' to be non-null");
-    }
+    private GetServiceBindingIamPolicyArgs() {}
 
-    private GetServiceBindingIamPolicyArgs() {
-        this.location = null;
-        this.optionsRequestedPolicyVersion = null;
-        this.project = null;
-        this.serviceBindingId = null;
+    private GetServiceBindingIamPolicyArgs(GetServiceBindingIamPolicyArgs $) {
+        this.location = $.location;
+        this.optionsRequestedPolicyVersion = $.optionsRequestedPolicyVersion;
+        this.project = $.project;
+        this.serviceBindingId = $.serviceBindingId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetServiceBindingIamPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String location;
-        private @Nullable String optionsRequestedPolicyVersion;
-        private @Nullable String project;
-        private String serviceBindingId;
+        private GetServiceBindingIamPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetServiceBindingIamPolicyArgs();
         }
 
         public Builder(GetServiceBindingIamPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.location = defaults.location;
-    	      this.optionsRequestedPolicyVersion = defaults.optionsRequestedPolicyVersion;
-    	      this.project = defaults.project;
-    	      this.serviceBindingId = defaults.serviceBindingId;
+            $ = new GetServiceBindingIamPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder location(String location) {
-            this.location = Objects.requireNonNull(location);
+            $.location = location;
             return this;
         }
+
         public Builder optionsRequestedPolicyVersion(@Nullable String optionsRequestedPolicyVersion) {
-            this.optionsRequestedPolicyVersion = optionsRequestedPolicyVersion;
+            $.optionsRequestedPolicyVersion = optionsRequestedPolicyVersion;
             return this;
         }
+
         public Builder project(@Nullable String project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
+
         public Builder serviceBindingId(String serviceBindingId) {
-            this.serviceBindingId = Objects.requireNonNull(serviceBindingId);
+            $.serviceBindingId = serviceBindingId;
             return this;
-        }        public GetServiceBindingIamPolicyArgs build() {
-            return new GetServiceBindingIamPolicyArgs(location, optionsRequestedPolicyVersion, project, serviceBindingId);
+        }
+
+        public GetServiceBindingIamPolicyArgs build() {
+            $.location = Objects.requireNonNull($.location, "expected parameter 'location' to be non-null");
+            $.serviceBindingId = Objects.requireNonNull($.serviceBindingId, "expected parameter 'serviceBindingId' to be non-null");
+            return $;
         }
     }
+
 }

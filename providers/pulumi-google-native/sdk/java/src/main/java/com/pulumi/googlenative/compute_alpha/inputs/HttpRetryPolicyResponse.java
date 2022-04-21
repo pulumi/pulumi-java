@@ -24,7 +24,7 @@ public final class HttpRetryPolicyResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="numRetries", required=true)
-      private final Integer numRetries;
+    private Integer numRetries;
 
     public Integer numRetries() {
         return this.numRetries;
@@ -35,7 +35,7 @@ public final class HttpRetryPolicyResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="perTryTimeout", required=true)
-      private final DurationResponse perTryTimeout;
+    private DurationResponse perTryTimeout;
 
     public DurationResponse perTryTimeout() {
         return this.perTryTimeout;
@@ -46,67 +46,63 @@ public final class HttpRetryPolicyResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="retryConditions", required=true)
-      private final List<String> retryConditions;
+    private List<String> retryConditions;
 
     public List<String> retryConditions() {
         return this.retryConditions;
     }
 
-    public HttpRetryPolicyResponse(
-        Integer numRetries,
-        DurationResponse perTryTimeout,
-        List<String> retryConditions) {
-        this.numRetries = Objects.requireNonNull(numRetries, "expected parameter 'numRetries' to be non-null");
-        this.perTryTimeout = Objects.requireNonNull(perTryTimeout, "expected parameter 'perTryTimeout' to be non-null");
-        this.retryConditions = Objects.requireNonNull(retryConditions, "expected parameter 'retryConditions' to be non-null");
-    }
+    private HttpRetryPolicyResponse() {}
 
-    private HttpRetryPolicyResponse() {
-        this.numRetries = null;
-        this.perTryTimeout = null;
-        this.retryConditions = List.of();
+    private HttpRetryPolicyResponse(HttpRetryPolicyResponse $) {
+        this.numRetries = $.numRetries;
+        this.perTryTimeout = $.perTryTimeout;
+        this.retryConditions = $.retryConditions;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(HttpRetryPolicyResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Integer numRetries;
-        private DurationResponse perTryTimeout;
-        private List<String> retryConditions;
+        private HttpRetryPolicyResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new HttpRetryPolicyResponse();
         }
 
         public Builder(HttpRetryPolicyResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.numRetries = defaults.numRetries;
-    	      this.perTryTimeout = defaults.perTryTimeout;
-    	      this.retryConditions = defaults.retryConditions;
+            $ = new HttpRetryPolicyResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder numRetries(Integer numRetries) {
-            this.numRetries = Objects.requireNonNull(numRetries);
+            $.numRetries = numRetries;
             return this;
         }
+
         public Builder perTryTimeout(DurationResponse perTryTimeout) {
-            this.perTryTimeout = Objects.requireNonNull(perTryTimeout);
+            $.perTryTimeout = perTryTimeout;
             return this;
         }
+
         public Builder retryConditions(List<String> retryConditions) {
-            this.retryConditions = Objects.requireNonNull(retryConditions);
+            $.retryConditions = retryConditions;
             return this;
         }
+
         public Builder retryConditions(String... retryConditions) {
             return retryConditions(List.of(retryConditions));
-        }        public HttpRetryPolicyResponse build() {
-            return new HttpRetryPolicyResponse(numRetries, perTryTimeout, retryConditions);
+        }
+
+        public HttpRetryPolicyResponse build() {
+            $.numRetries = Objects.requireNonNull($.numRetries, "expected parameter 'numRetries' to be non-null");
+            $.perTryTimeout = Objects.requireNonNull($.perTryTimeout, "expected parameter 'perTryTimeout' to be non-null");
+            $.retryConditions = Objects.requireNonNull($.retryConditions, "expected parameter 'retryConditions' to be non-null");
+            return $;
         }
     }
+
 }

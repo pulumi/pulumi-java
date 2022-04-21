@@ -6,10 +6,10 @@ package com.pulumi.azurenative.insights.inputs;
 import com.pulumi.azurenative.insights.inputs.RetentionPolicyArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class LogSettingsArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="category")
-      private final @Nullable Output<String> category;
+    private @Nullable Output<String> category;
 
-    public Output<String> category() {
-        return this.category == null ? Codegen.empty() : this.category;
+    public Optional<Output<String>> category() {
+        return Optional.ofNullable(this.category);
     }
 
     /**
@@ -37,7 +37,7 @@ public final class LogSettingsArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="enabled", required=true)
-      private final Output<Boolean> enabled;
+    private Output<Boolean> enabled;
 
     public Output<Boolean> enabled() {
         return this.enabled;
@@ -48,76 +48,69 @@ public final class LogSettingsArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="retentionPolicy")
-      private final @Nullable Output<RetentionPolicyArgs> retentionPolicy;
+    private @Nullable Output<RetentionPolicyArgs> retentionPolicy;
 
-    public Output<RetentionPolicyArgs> retentionPolicy() {
-        return this.retentionPolicy == null ? Codegen.empty() : this.retentionPolicy;
+    public Optional<Output<RetentionPolicyArgs>> retentionPolicy() {
+        return Optional.ofNullable(this.retentionPolicy);
     }
 
-    public LogSettingsArgs(
-        @Nullable Output<String> category,
-        Output<Boolean> enabled,
-        @Nullable Output<RetentionPolicyArgs> retentionPolicy) {
-        this.category = category;
-        this.enabled = Objects.requireNonNull(enabled, "expected parameter 'enabled' to be non-null");
-        this.retentionPolicy = retentionPolicy;
-    }
+    private LogSettingsArgs() {}
 
-    private LogSettingsArgs() {
-        this.category = Codegen.empty();
-        this.enabled = Codegen.empty();
-        this.retentionPolicy = Codegen.empty();
+    private LogSettingsArgs(LogSettingsArgs $) {
+        this.category = $.category;
+        this.enabled = $.enabled;
+        this.retentionPolicy = $.retentionPolicy;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LogSettingsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> category;
-        private Output<Boolean> enabled;
-        private @Nullable Output<RetentionPolicyArgs> retentionPolicy;
+        private LogSettingsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new LogSettingsArgs();
         }
 
         public Builder(LogSettingsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.category = defaults.category;
-    	      this.enabled = defaults.enabled;
-    	      this.retentionPolicy = defaults.retentionPolicy;
+            $ = new LogSettingsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder category(@Nullable Output<String> category) {
-            this.category = category;
+            $.category = category;
             return this;
         }
-        public Builder category(@Nullable String category) {
-            this.category = Codegen.ofNullable(category);
-            return this;
+
+        public Builder category(String category) {
+            return category(Output.of(category));
         }
+
         public Builder enabled(Output<Boolean> enabled) {
-            this.enabled = Objects.requireNonNull(enabled);
+            $.enabled = enabled;
             return this;
         }
+
         public Builder enabled(Boolean enabled) {
-            this.enabled = Output.of(Objects.requireNonNull(enabled));
-            return this;
+            return enabled(Output.of(enabled));
         }
+
         public Builder retentionPolicy(@Nullable Output<RetentionPolicyArgs> retentionPolicy) {
-            this.retentionPolicy = retentionPolicy;
+            $.retentionPolicy = retentionPolicy;
             return this;
         }
-        public Builder retentionPolicy(@Nullable RetentionPolicyArgs retentionPolicy) {
-            this.retentionPolicy = Codegen.ofNullable(retentionPolicy);
-            return this;
-        }        public LogSettingsArgs build() {
-            return new LogSettingsArgs(category, enabled, retentionPolicy);
+
+        public Builder retentionPolicy(RetentionPolicyArgs retentionPolicy) {
+            return retentionPolicy(Output.of(retentionPolicy));
+        }
+
+        public LogSettingsArgs build() {
+            $.enabled = Objects.requireNonNull($.enabled, "expected parameter 'enabled' to be non-null");
+            return $;
         }
     }
+
 }

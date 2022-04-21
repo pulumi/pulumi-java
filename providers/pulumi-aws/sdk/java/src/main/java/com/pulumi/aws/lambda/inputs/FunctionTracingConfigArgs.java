@@ -5,7 +5,6 @@ package com.pulumi.aws.lambda.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,49 +18,49 @@ public final class FunctionTracingConfigArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="mode", required=true)
-      private final Output<String> mode;
+    private Output<String> mode;
 
     public Output<String> mode() {
         return this.mode;
     }
 
-    public FunctionTracingConfigArgs(Output<String> mode) {
-        this.mode = Objects.requireNonNull(mode, "expected parameter 'mode' to be non-null");
-    }
+    private FunctionTracingConfigArgs() {}
 
-    private FunctionTracingConfigArgs() {
-        this.mode = Codegen.empty();
+    private FunctionTracingConfigArgs(FunctionTracingConfigArgs $) {
+        this.mode = $.mode;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FunctionTracingConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> mode;
+        private FunctionTracingConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new FunctionTracingConfigArgs();
         }
 
         public Builder(FunctionTracingConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.mode = defaults.mode;
+            $ = new FunctionTracingConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder mode(Output<String> mode) {
-            this.mode = Objects.requireNonNull(mode);
+            $.mode = mode;
             return this;
         }
+
         public Builder mode(String mode) {
-            this.mode = Output.of(Objects.requireNonNull(mode));
-            return this;
-        }        public FunctionTracingConfigArgs build() {
-            return new FunctionTracingConfigArgs(mode);
+            return mode(Output.of(mode));
+        }
+
+        public FunctionTracingConfigArgs build() {
+            $.mode = Objects.requireNonNull($.mode, "expected parameter 'mode' to be non-null");
+            return $;
         }
     }
+
 }

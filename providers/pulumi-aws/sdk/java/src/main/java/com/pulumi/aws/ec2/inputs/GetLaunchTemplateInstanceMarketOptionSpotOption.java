@@ -14,110 +14,101 @@ public final class GetLaunchTemplateInstanceMarketOptionSpotOption extends com.p
     public static final GetLaunchTemplateInstanceMarketOptionSpotOption Empty = new GetLaunchTemplateInstanceMarketOptionSpotOption();
 
     @Import(name="blockDurationMinutes", required=true)
-      private final Integer blockDurationMinutes;
+    private Integer blockDurationMinutes;
 
     public Integer blockDurationMinutes() {
         return this.blockDurationMinutes;
     }
 
     @Import(name="instanceInterruptionBehavior", required=true)
-      private final String instanceInterruptionBehavior;
+    private String instanceInterruptionBehavior;
 
     public String instanceInterruptionBehavior() {
         return this.instanceInterruptionBehavior;
     }
 
     @Import(name="maxPrice", required=true)
-      private final String maxPrice;
+    private String maxPrice;
 
     public String maxPrice() {
         return this.maxPrice;
     }
 
     @Import(name="spotInstanceType", required=true)
-      private final String spotInstanceType;
+    private String spotInstanceType;
 
     public String spotInstanceType() {
         return this.spotInstanceType;
     }
 
     @Import(name="validUntil", required=true)
-      private final String validUntil;
+    private String validUntil;
 
     public String validUntil() {
         return this.validUntil;
     }
 
-    public GetLaunchTemplateInstanceMarketOptionSpotOption(
-        Integer blockDurationMinutes,
-        String instanceInterruptionBehavior,
-        String maxPrice,
-        String spotInstanceType,
-        String validUntil) {
-        this.blockDurationMinutes = Objects.requireNonNull(blockDurationMinutes, "expected parameter 'blockDurationMinutes' to be non-null");
-        this.instanceInterruptionBehavior = Objects.requireNonNull(instanceInterruptionBehavior, "expected parameter 'instanceInterruptionBehavior' to be non-null");
-        this.maxPrice = Objects.requireNonNull(maxPrice, "expected parameter 'maxPrice' to be non-null");
-        this.spotInstanceType = Objects.requireNonNull(spotInstanceType, "expected parameter 'spotInstanceType' to be non-null");
-        this.validUntil = Objects.requireNonNull(validUntil, "expected parameter 'validUntil' to be non-null");
-    }
+    private GetLaunchTemplateInstanceMarketOptionSpotOption() {}
 
-    private GetLaunchTemplateInstanceMarketOptionSpotOption() {
-        this.blockDurationMinutes = null;
-        this.instanceInterruptionBehavior = null;
-        this.maxPrice = null;
-        this.spotInstanceType = null;
-        this.validUntil = null;
+    private GetLaunchTemplateInstanceMarketOptionSpotOption(GetLaunchTemplateInstanceMarketOptionSpotOption $) {
+        this.blockDurationMinutes = $.blockDurationMinutes;
+        this.instanceInterruptionBehavior = $.instanceInterruptionBehavior;
+        this.maxPrice = $.maxPrice;
+        this.spotInstanceType = $.spotInstanceType;
+        this.validUntil = $.validUntil;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetLaunchTemplateInstanceMarketOptionSpotOption defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Integer blockDurationMinutes;
-        private String instanceInterruptionBehavior;
-        private String maxPrice;
-        private String spotInstanceType;
-        private String validUntil;
+        private GetLaunchTemplateInstanceMarketOptionSpotOption $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetLaunchTemplateInstanceMarketOptionSpotOption();
         }
 
         public Builder(GetLaunchTemplateInstanceMarketOptionSpotOption defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.blockDurationMinutes = defaults.blockDurationMinutes;
-    	      this.instanceInterruptionBehavior = defaults.instanceInterruptionBehavior;
-    	      this.maxPrice = defaults.maxPrice;
-    	      this.spotInstanceType = defaults.spotInstanceType;
-    	      this.validUntil = defaults.validUntil;
+            $ = new GetLaunchTemplateInstanceMarketOptionSpotOption(Objects.requireNonNull(defaults));
         }
 
         public Builder blockDurationMinutes(Integer blockDurationMinutes) {
-            this.blockDurationMinutes = Objects.requireNonNull(blockDurationMinutes);
+            $.blockDurationMinutes = blockDurationMinutes;
             return this;
         }
+
         public Builder instanceInterruptionBehavior(String instanceInterruptionBehavior) {
-            this.instanceInterruptionBehavior = Objects.requireNonNull(instanceInterruptionBehavior);
+            $.instanceInterruptionBehavior = instanceInterruptionBehavior;
             return this;
         }
+
         public Builder maxPrice(String maxPrice) {
-            this.maxPrice = Objects.requireNonNull(maxPrice);
+            $.maxPrice = maxPrice;
             return this;
         }
+
         public Builder spotInstanceType(String spotInstanceType) {
-            this.spotInstanceType = Objects.requireNonNull(spotInstanceType);
+            $.spotInstanceType = spotInstanceType;
             return this;
         }
+
         public Builder validUntil(String validUntil) {
-            this.validUntil = Objects.requireNonNull(validUntil);
+            $.validUntil = validUntil;
             return this;
-        }        public GetLaunchTemplateInstanceMarketOptionSpotOption build() {
-            return new GetLaunchTemplateInstanceMarketOptionSpotOption(blockDurationMinutes, instanceInterruptionBehavior, maxPrice, spotInstanceType, validUntil);
+        }
+
+        public GetLaunchTemplateInstanceMarketOptionSpotOption build() {
+            $.blockDurationMinutes = Objects.requireNonNull($.blockDurationMinutes, "expected parameter 'blockDurationMinutes' to be non-null");
+            $.instanceInterruptionBehavior = Objects.requireNonNull($.instanceInterruptionBehavior, "expected parameter 'instanceInterruptionBehavior' to be non-null");
+            $.maxPrice = Objects.requireNonNull($.maxPrice, "expected parameter 'maxPrice' to be non-null");
+            $.spotInstanceType = Objects.requireNonNull($.spotInstanceType, "expected parameter 'spotInstanceType' to be non-null");
+            $.validUntil = Objects.requireNonNull($.validUntil, "expected parameter 'validUntil' to be non-null");
+            return $;
         }
     }
+
 }

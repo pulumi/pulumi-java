@@ -23,10 +23,10 @@ public final class ManagedRuleOverrideResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="action")
-      private final @Nullable String action;
+    private @Nullable String action;
 
     public Optional<String> action() {
-        return this.action == null ? Optional.empty() : Optional.ofNullable(this.action);
+        return Optional.ofNullable(this.action);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class ManagedRuleOverrideResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="enabledState")
-      private final @Nullable String enabledState;
+    private @Nullable String enabledState;
 
     public Optional<String> enabledState() {
-        return this.enabledState == null ? Optional.empty() : Optional.ofNullable(this.enabledState);
+        return Optional.ofNullable(this.enabledState);
     }
 
     /**
@@ -45,64 +45,57 @@ public final class ManagedRuleOverrideResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="ruleId", required=true)
-      private final String ruleId;
+    private String ruleId;
 
     public String ruleId() {
         return this.ruleId;
     }
 
-    public ManagedRuleOverrideResponse(
-        @Nullable String action,
-        @Nullable String enabledState,
-        String ruleId) {
-        this.action = action;
-        this.enabledState = enabledState;
-        this.ruleId = Objects.requireNonNull(ruleId, "expected parameter 'ruleId' to be non-null");
-    }
+    private ManagedRuleOverrideResponse() {}
 
-    private ManagedRuleOverrideResponse() {
-        this.action = null;
-        this.enabledState = null;
-        this.ruleId = null;
+    private ManagedRuleOverrideResponse(ManagedRuleOverrideResponse $) {
+        this.action = $.action;
+        this.enabledState = $.enabledState;
+        this.ruleId = $.ruleId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ManagedRuleOverrideResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String action;
-        private @Nullable String enabledState;
-        private String ruleId;
+        private ManagedRuleOverrideResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ManagedRuleOverrideResponse();
         }
 
         public Builder(ManagedRuleOverrideResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.action = defaults.action;
-    	      this.enabledState = defaults.enabledState;
-    	      this.ruleId = defaults.ruleId;
+            $ = new ManagedRuleOverrideResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder action(@Nullable String action) {
-            this.action = action;
+            $.action = action;
             return this;
         }
+
         public Builder enabledState(@Nullable String enabledState) {
-            this.enabledState = enabledState;
+            $.enabledState = enabledState;
             return this;
         }
+
         public Builder ruleId(String ruleId) {
-            this.ruleId = Objects.requireNonNull(ruleId);
+            $.ruleId = ruleId;
             return this;
-        }        public ManagedRuleOverrideResponse build() {
-            return new ManagedRuleOverrideResponse(action, enabledState, ruleId);
+        }
+
+        public ManagedRuleOverrideResponse build() {
+            $.ruleId = Objects.requireNonNull($.ruleId, "expected parameter 'ruleId' to be non-null");
+            return $;
         }
     }
+
 }

@@ -17,7 +17,7 @@ public final class GetDpsCertificateArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="certificateName", required=true)
-      private final String certificateName;
+    private String certificateName;
 
     public String certificateName() {
         return this.certificateName;
@@ -28,7 +28,7 @@ public final class GetDpsCertificateArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="provisioningServiceName", required=true)
-      private final String provisioningServiceName;
+    private String provisioningServiceName;
 
     public String provisioningServiceName() {
         return this.provisioningServiceName;
@@ -39,64 +39,59 @@ public final class GetDpsCertificateArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public GetDpsCertificateArgs(
-        String certificateName,
-        String provisioningServiceName,
-        String resourceGroupName) {
-        this.certificateName = Objects.requireNonNull(certificateName, "expected parameter 'certificateName' to be non-null");
-        this.provisioningServiceName = Objects.requireNonNull(provisioningServiceName, "expected parameter 'provisioningServiceName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private GetDpsCertificateArgs() {}
 
-    private GetDpsCertificateArgs() {
-        this.certificateName = null;
-        this.provisioningServiceName = null;
-        this.resourceGroupName = null;
+    private GetDpsCertificateArgs(GetDpsCertificateArgs $) {
+        this.certificateName = $.certificateName;
+        this.provisioningServiceName = $.provisioningServiceName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetDpsCertificateArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String certificateName;
-        private String provisioningServiceName;
-        private String resourceGroupName;
+        private GetDpsCertificateArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetDpsCertificateArgs();
         }
 
         public Builder(GetDpsCertificateArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.certificateName = defaults.certificateName;
-    	      this.provisioningServiceName = defaults.provisioningServiceName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new GetDpsCertificateArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder certificateName(String certificateName) {
-            this.certificateName = Objects.requireNonNull(certificateName);
+            $.certificateName = certificateName;
             return this;
         }
+
         public Builder provisioningServiceName(String provisioningServiceName) {
-            this.provisioningServiceName = Objects.requireNonNull(provisioningServiceName);
+            $.provisioningServiceName = provisioningServiceName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public GetDpsCertificateArgs build() {
-            return new GetDpsCertificateArgs(certificateName, provisioningServiceName, resourceGroupName);
+        }
+
+        public GetDpsCertificateArgs build() {
+            $.certificateName = Objects.requireNonNull($.certificateName, "expected parameter 'certificateName' to be non-null");
+            $.provisioningServiceName = Objects.requireNonNull($.provisioningServiceName, "expected parameter 'provisioningServiceName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

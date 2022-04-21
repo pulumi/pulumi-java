@@ -17,7 +17,7 @@ public final class GetDatastoreArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="clusterName", required=true)
-      private final String clusterName;
+    private String clusterName;
 
     public String clusterName() {
         return this.clusterName;
@@ -28,7 +28,7 @@ public final class GetDatastoreArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="datastoreName", required=true)
-      private final String datastoreName;
+    private String datastoreName;
 
     public String datastoreName() {
         return this.datastoreName;
@@ -39,7 +39,7 @@ public final class GetDatastoreArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="privateCloudName", required=true)
-      private final String privateCloudName;
+    private String privateCloudName;
 
     public String privateCloudName() {
         return this.privateCloudName;
@@ -50,73 +50,66 @@ public final class GetDatastoreArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public GetDatastoreArgs(
-        String clusterName,
-        String datastoreName,
-        String privateCloudName,
-        String resourceGroupName) {
-        this.clusterName = Objects.requireNonNull(clusterName, "expected parameter 'clusterName' to be non-null");
-        this.datastoreName = Objects.requireNonNull(datastoreName, "expected parameter 'datastoreName' to be non-null");
-        this.privateCloudName = Objects.requireNonNull(privateCloudName, "expected parameter 'privateCloudName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private GetDatastoreArgs() {}
 
-    private GetDatastoreArgs() {
-        this.clusterName = null;
-        this.datastoreName = null;
-        this.privateCloudName = null;
-        this.resourceGroupName = null;
+    private GetDatastoreArgs(GetDatastoreArgs $) {
+        this.clusterName = $.clusterName;
+        this.datastoreName = $.datastoreName;
+        this.privateCloudName = $.privateCloudName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetDatastoreArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String clusterName;
-        private String datastoreName;
-        private String privateCloudName;
-        private String resourceGroupName;
+        private GetDatastoreArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetDatastoreArgs();
         }
 
         public Builder(GetDatastoreArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.clusterName = defaults.clusterName;
-    	      this.datastoreName = defaults.datastoreName;
-    	      this.privateCloudName = defaults.privateCloudName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new GetDatastoreArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder clusterName(String clusterName) {
-            this.clusterName = Objects.requireNonNull(clusterName);
+            $.clusterName = clusterName;
             return this;
         }
+
         public Builder datastoreName(String datastoreName) {
-            this.datastoreName = Objects.requireNonNull(datastoreName);
+            $.datastoreName = datastoreName;
             return this;
         }
+
         public Builder privateCloudName(String privateCloudName) {
-            this.privateCloudName = Objects.requireNonNull(privateCloudName);
+            $.privateCloudName = privateCloudName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public GetDatastoreArgs build() {
-            return new GetDatastoreArgs(clusterName, datastoreName, privateCloudName, resourceGroupName);
+        }
+
+        public GetDatastoreArgs build() {
+            $.clusterName = Objects.requireNonNull($.clusterName, "expected parameter 'clusterName' to be non-null");
+            $.datastoreName = Objects.requireNonNull($.datastoreName, "expected parameter 'datastoreName' to be non-null");
+            $.privateCloudName = Objects.requireNonNull($.privateCloudName, "expected parameter 'privateCloudName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

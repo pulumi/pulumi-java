@@ -21,7 +21,7 @@ public final class UserAccessRightResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="accessType", required=true)
-      private final String accessType;
+    private String accessType;
 
     public String accessType() {
         return this.accessType;
@@ -32,55 +32,52 @@ public final class UserAccessRightResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="userId", required=true)
-      private final String userId;
+    private String userId;
 
     public String userId() {
         return this.userId;
     }
 
-    public UserAccessRightResponse(
-        String accessType,
-        String userId) {
-        this.accessType = Objects.requireNonNull(accessType, "expected parameter 'accessType' to be non-null");
-        this.userId = Objects.requireNonNull(userId, "expected parameter 'userId' to be non-null");
-    }
+    private UserAccessRightResponse() {}
 
-    private UserAccessRightResponse() {
-        this.accessType = null;
-        this.userId = null;
+    private UserAccessRightResponse(UserAccessRightResponse $) {
+        this.accessType = $.accessType;
+        this.userId = $.userId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(UserAccessRightResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String accessType;
-        private String userId;
+        private UserAccessRightResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new UserAccessRightResponse();
         }
 
         public Builder(UserAccessRightResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accessType = defaults.accessType;
-    	      this.userId = defaults.userId;
+            $ = new UserAccessRightResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder accessType(String accessType) {
-            this.accessType = Objects.requireNonNull(accessType);
+            $.accessType = accessType;
             return this;
         }
+
         public Builder userId(String userId) {
-            this.userId = Objects.requireNonNull(userId);
+            $.userId = userId;
             return this;
-        }        public UserAccessRightResponse build() {
-            return new UserAccessRightResponse(accessType, userId);
+        }
+
+        public UserAccessRightResponse build() {
+            $.accessType = Objects.requireNonNull($.accessType, "expected parameter 'accessType' to be non-null");
+            $.userId = Objects.requireNonNull($.userId, "expected parameter 'userId' to be non-null");
+            return $;
         }
     }
+
 }

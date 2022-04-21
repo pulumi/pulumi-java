@@ -6,8 +6,8 @@ package com.pulumi.awsnative.timestream.inputs;
 import com.pulumi.awsnative.timestream.inputs.MagneticStoreWritePropertiesPropertiesMagneticStoreRejectedDataLocationPropertiesS3ConfigurationPropertiesArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class MagneticStoreWritePropertiesPropertiesMagneticStoreRejectedDa
      * 
      */
     @Import(name="s3Configuration")
-      private final @Nullable Output<MagneticStoreWritePropertiesPropertiesMagneticStoreRejectedDataLocationPropertiesS3ConfigurationPropertiesArgs> s3Configuration;
+    private @Nullable Output<MagneticStoreWritePropertiesPropertiesMagneticStoreRejectedDataLocationPropertiesS3ConfigurationPropertiesArgs> s3Configuration;
 
-    public Output<MagneticStoreWritePropertiesPropertiesMagneticStoreRejectedDataLocationPropertiesS3ConfigurationPropertiesArgs> s3Configuration() {
-        return this.s3Configuration == null ? Codegen.empty() : this.s3Configuration;
+    public Optional<Output<MagneticStoreWritePropertiesPropertiesMagneticStoreRejectedDataLocationPropertiesS3ConfigurationPropertiesArgs>> s3Configuration() {
+        return Optional.ofNullable(this.s3Configuration);
     }
 
-    public MagneticStoreWritePropertiesPropertiesMagneticStoreRejectedDataLocationPropertiesArgs(@Nullable Output<MagneticStoreWritePropertiesPropertiesMagneticStoreRejectedDataLocationPropertiesS3ConfigurationPropertiesArgs> s3Configuration) {
-        this.s3Configuration = s3Configuration;
-    }
+    private MagneticStoreWritePropertiesPropertiesMagneticStoreRejectedDataLocationPropertiesArgs() {}
 
-    private MagneticStoreWritePropertiesPropertiesMagneticStoreRejectedDataLocationPropertiesArgs() {
-        this.s3Configuration = Codegen.empty();
+    private MagneticStoreWritePropertiesPropertiesMagneticStoreRejectedDataLocationPropertiesArgs(MagneticStoreWritePropertiesPropertiesMagneticStoreRejectedDataLocationPropertiesArgs $) {
+        this.s3Configuration = $.s3Configuration;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MagneticStoreWritePropertiesPropertiesMagneticStoreRejectedDataLocationPropertiesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<MagneticStoreWritePropertiesPropertiesMagneticStoreRejectedDataLocationPropertiesS3ConfigurationPropertiesArgs> s3Configuration;
+        private MagneticStoreWritePropertiesPropertiesMagneticStoreRejectedDataLocationPropertiesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new MagneticStoreWritePropertiesPropertiesMagneticStoreRejectedDataLocationPropertiesArgs();
         }
 
         public Builder(MagneticStoreWritePropertiesPropertiesMagneticStoreRejectedDataLocationPropertiesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.s3Configuration = defaults.s3Configuration;
+            $ = new MagneticStoreWritePropertiesPropertiesMagneticStoreRejectedDataLocationPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder s3Configuration(@Nullable Output<MagneticStoreWritePropertiesPropertiesMagneticStoreRejectedDataLocationPropertiesS3ConfigurationPropertiesArgs> s3Configuration) {
-            this.s3Configuration = s3Configuration;
+            $.s3Configuration = s3Configuration;
             return this;
         }
-        public Builder s3Configuration(@Nullable MagneticStoreWritePropertiesPropertiesMagneticStoreRejectedDataLocationPropertiesS3ConfigurationPropertiesArgs s3Configuration) {
-            this.s3Configuration = Codegen.ofNullable(s3Configuration);
-            return this;
-        }        public MagneticStoreWritePropertiesPropertiesMagneticStoreRejectedDataLocationPropertiesArgs build() {
-            return new MagneticStoreWritePropertiesPropertiesMagneticStoreRejectedDataLocationPropertiesArgs(s3Configuration);
+
+        public Builder s3Configuration(MagneticStoreWritePropertiesPropertiesMagneticStoreRejectedDataLocationPropertiesS3ConfigurationPropertiesArgs s3Configuration) {
+            return s3Configuration(Output.of(s3Configuration));
+        }
+
+        public MagneticStoreWritePropertiesPropertiesMagneticStoreRejectedDataLocationPropertiesArgs build() {
+            return $;
         }
     }
+
 }

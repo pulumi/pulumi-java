@@ -5,7 +5,6 @@ package com.pulumi.awsnative.cassandra.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -15,70 +14,67 @@ public final class TableColumnArgs extends com.pulumi.resources.ResourceArgs {
     public static final TableColumnArgs Empty = new TableColumnArgs();
 
     @Import(name="columnName", required=true)
-      private final Output<String> columnName;
+    private Output<String> columnName;
 
     public Output<String> columnName() {
         return this.columnName;
     }
 
     @Import(name="columnType", required=true)
-      private final Output<String> columnType;
+    private Output<String> columnType;
 
     public Output<String> columnType() {
         return this.columnType;
     }
 
-    public TableColumnArgs(
-        Output<String> columnName,
-        Output<String> columnType) {
-        this.columnName = Objects.requireNonNull(columnName, "expected parameter 'columnName' to be non-null");
-        this.columnType = Objects.requireNonNull(columnType, "expected parameter 'columnType' to be non-null");
-    }
+    private TableColumnArgs() {}
 
-    private TableColumnArgs() {
-        this.columnName = Codegen.empty();
-        this.columnType = Codegen.empty();
+    private TableColumnArgs(TableColumnArgs $) {
+        this.columnName = $.columnName;
+        this.columnType = $.columnType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TableColumnArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> columnName;
-        private Output<String> columnType;
+        private TableColumnArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TableColumnArgs();
         }
 
         public Builder(TableColumnArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.columnName = defaults.columnName;
-    	      this.columnType = defaults.columnType;
+            $ = new TableColumnArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder columnName(Output<String> columnName) {
-            this.columnName = Objects.requireNonNull(columnName);
+            $.columnName = columnName;
             return this;
         }
+
         public Builder columnName(String columnName) {
-            this.columnName = Output.of(Objects.requireNonNull(columnName));
-            return this;
+            return columnName(Output.of(columnName));
         }
+
         public Builder columnType(Output<String> columnType) {
-            this.columnType = Objects.requireNonNull(columnType);
+            $.columnType = columnType;
             return this;
         }
+
         public Builder columnType(String columnType) {
-            this.columnType = Output.of(Objects.requireNonNull(columnType));
-            return this;
-        }        public TableColumnArgs build() {
-            return new TableColumnArgs(columnName, columnType);
+            return columnType(Output.of(columnType));
+        }
+
+        public TableColumnArgs build() {
+            $.columnName = Objects.requireNonNull($.columnName, "expected parameter 'columnName' to be non-null");
+            $.columnType = Objects.requireNonNull($.columnType, "expected parameter 'columnType' to be non-null");
+            return $;
         }
     }
+
 }

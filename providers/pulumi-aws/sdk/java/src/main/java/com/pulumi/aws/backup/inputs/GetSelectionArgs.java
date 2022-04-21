@@ -17,7 +17,7 @@ public final class GetSelectionArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="planId", required=true)
-      private final String planId;
+    private String planId;
 
     public String planId() {
         return this.planId;
@@ -28,55 +28,52 @@ public final class GetSelectionArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="selectionId", required=true)
-      private final String selectionId;
+    private String selectionId;
 
     public String selectionId() {
         return this.selectionId;
     }
 
-    public GetSelectionArgs(
-        String planId,
-        String selectionId) {
-        this.planId = Objects.requireNonNull(planId, "expected parameter 'planId' to be non-null");
-        this.selectionId = Objects.requireNonNull(selectionId, "expected parameter 'selectionId' to be non-null");
-    }
+    private GetSelectionArgs() {}
 
-    private GetSelectionArgs() {
-        this.planId = null;
-        this.selectionId = null;
+    private GetSelectionArgs(GetSelectionArgs $) {
+        this.planId = $.planId;
+        this.selectionId = $.selectionId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetSelectionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String planId;
-        private String selectionId;
+        private GetSelectionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetSelectionArgs();
         }
 
         public Builder(GetSelectionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.planId = defaults.planId;
-    	      this.selectionId = defaults.selectionId;
+            $ = new GetSelectionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder planId(String planId) {
-            this.planId = Objects.requireNonNull(planId);
+            $.planId = planId;
             return this;
         }
+
         public Builder selectionId(String selectionId) {
-            this.selectionId = Objects.requireNonNull(selectionId);
+            $.selectionId = selectionId;
             return this;
-        }        public GetSelectionArgs build() {
-            return new GetSelectionArgs(planId, selectionId);
+        }
+
+        public GetSelectionArgs build() {
+            $.planId = Objects.requireNonNull($.planId, "expected parameter 'planId' to be non-null");
+            $.selectionId = Objects.requireNonNull($.selectionId, "expected parameter 'selectionId' to be non-null");
+            return $;
         }
     }
+
 }

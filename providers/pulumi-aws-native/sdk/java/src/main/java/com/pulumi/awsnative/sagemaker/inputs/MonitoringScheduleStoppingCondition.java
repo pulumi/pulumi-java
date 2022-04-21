@@ -21,45 +21,45 @@ public final class MonitoringScheduleStoppingCondition extends com.pulumi.resour
      * 
      */
     @Import(name="maxRuntimeInSeconds", required=true)
-      private final Integer maxRuntimeInSeconds;
+    private Integer maxRuntimeInSeconds;
 
     public Integer maxRuntimeInSeconds() {
         return this.maxRuntimeInSeconds;
     }
 
-    public MonitoringScheduleStoppingCondition(Integer maxRuntimeInSeconds) {
-        this.maxRuntimeInSeconds = Objects.requireNonNull(maxRuntimeInSeconds, "expected parameter 'maxRuntimeInSeconds' to be non-null");
-    }
+    private MonitoringScheduleStoppingCondition() {}
 
-    private MonitoringScheduleStoppingCondition() {
-        this.maxRuntimeInSeconds = null;
+    private MonitoringScheduleStoppingCondition(MonitoringScheduleStoppingCondition $) {
+        this.maxRuntimeInSeconds = $.maxRuntimeInSeconds;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MonitoringScheduleStoppingCondition defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Integer maxRuntimeInSeconds;
+        private MonitoringScheduleStoppingCondition $;
 
         public Builder() {
-    	      // Empty
+            $ = new MonitoringScheduleStoppingCondition();
         }
 
         public Builder(MonitoringScheduleStoppingCondition defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.maxRuntimeInSeconds = defaults.maxRuntimeInSeconds;
+            $ = new MonitoringScheduleStoppingCondition(Objects.requireNonNull(defaults));
         }
 
         public Builder maxRuntimeInSeconds(Integer maxRuntimeInSeconds) {
-            this.maxRuntimeInSeconds = Objects.requireNonNull(maxRuntimeInSeconds);
+            $.maxRuntimeInSeconds = maxRuntimeInSeconds;
             return this;
-        }        public MonitoringScheduleStoppingCondition build() {
-            return new MonitoringScheduleStoppingCondition(maxRuntimeInSeconds);
+        }
+
+        public MonitoringScheduleStoppingCondition build() {
+            $.maxRuntimeInSeconds = Objects.requireNonNull($.maxRuntimeInSeconds, "expected parameter 'maxRuntimeInSeconds' to be non-null");
+            return $;
         }
     }
+
 }

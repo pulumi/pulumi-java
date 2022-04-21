@@ -25,7 +25,7 @@ public final class SparkSqlJobResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="jarFileUris", required=true)
-      private final List<String> jarFileUris;
+    private List<String> jarFileUris;
 
     public List<String> jarFileUris() {
         return this.jarFileUris;
@@ -36,7 +36,7 @@ public final class SparkSqlJobResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="loggingConfig", required=true)
-      private final LoggingConfigResponse loggingConfig;
+    private LoggingConfigResponse loggingConfig;
 
     public LoggingConfigResponse loggingConfig() {
         return this.loggingConfig;
@@ -47,7 +47,7 @@ public final class SparkSqlJobResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="properties", required=true)
-      private final Map<String,String> properties;
+    private Map<String,String> properties;
 
     public Map<String,String> properties() {
         return this.properties;
@@ -58,7 +58,7 @@ public final class SparkSqlJobResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="queryFileUri", required=true)
-      private final String queryFileUri;
+    private String queryFileUri;
 
     public String queryFileUri() {
         return this.queryFileUri;
@@ -69,7 +69,7 @@ public final class SparkSqlJobResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="queryList", required=true)
-      private final QueryListResponse queryList;
+    private QueryListResponse queryList;
 
     public QueryListResponse queryList() {
         return this.queryList;
@@ -80,94 +80,84 @@ public final class SparkSqlJobResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="scriptVariables", required=true)
-      private final Map<String,String> scriptVariables;
+    private Map<String,String> scriptVariables;
 
     public Map<String,String> scriptVariables() {
         return this.scriptVariables;
     }
 
-    public SparkSqlJobResponse(
-        List<String> jarFileUris,
-        LoggingConfigResponse loggingConfig,
-        Map<String,String> properties,
-        String queryFileUri,
-        QueryListResponse queryList,
-        Map<String,String> scriptVariables) {
-        this.jarFileUris = Objects.requireNonNull(jarFileUris, "expected parameter 'jarFileUris' to be non-null");
-        this.loggingConfig = Objects.requireNonNull(loggingConfig, "expected parameter 'loggingConfig' to be non-null");
-        this.properties = Objects.requireNonNull(properties, "expected parameter 'properties' to be non-null");
-        this.queryFileUri = Objects.requireNonNull(queryFileUri, "expected parameter 'queryFileUri' to be non-null");
-        this.queryList = Objects.requireNonNull(queryList, "expected parameter 'queryList' to be non-null");
-        this.scriptVariables = Objects.requireNonNull(scriptVariables, "expected parameter 'scriptVariables' to be non-null");
-    }
+    private SparkSqlJobResponse() {}
 
-    private SparkSqlJobResponse() {
-        this.jarFileUris = List.of();
-        this.loggingConfig = null;
-        this.properties = Map.of();
-        this.queryFileUri = null;
-        this.queryList = null;
-        this.scriptVariables = Map.of();
+    private SparkSqlJobResponse(SparkSqlJobResponse $) {
+        this.jarFileUris = $.jarFileUris;
+        this.loggingConfig = $.loggingConfig;
+        this.properties = $.properties;
+        this.queryFileUri = $.queryFileUri;
+        this.queryList = $.queryList;
+        this.scriptVariables = $.scriptVariables;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SparkSqlJobResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<String> jarFileUris;
-        private LoggingConfigResponse loggingConfig;
-        private Map<String,String> properties;
-        private String queryFileUri;
-        private QueryListResponse queryList;
-        private Map<String,String> scriptVariables;
+        private SparkSqlJobResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new SparkSqlJobResponse();
         }
 
         public Builder(SparkSqlJobResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.jarFileUris = defaults.jarFileUris;
-    	      this.loggingConfig = defaults.loggingConfig;
-    	      this.properties = defaults.properties;
-    	      this.queryFileUri = defaults.queryFileUri;
-    	      this.queryList = defaults.queryList;
-    	      this.scriptVariables = defaults.scriptVariables;
+            $ = new SparkSqlJobResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder jarFileUris(List<String> jarFileUris) {
-            this.jarFileUris = Objects.requireNonNull(jarFileUris);
+            $.jarFileUris = jarFileUris;
             return this;
         }
+
         public Builder jarFileUris(String... jarFileUris) {
             return jarFileUris(List.of(jarFileUris));
         }
+
         public Builder loggingConfig(LoggingConfigResponse loggingConfig) {
-            this.loggingConfig = Objects.requireNonNull(loggingConfig);
+            $.loggingConfig = loggingConfig;
             return this;
         }
+
         public Builder properties(Map<String,String> properties) {
-            this.properties = Objects.requireNonNull(properties);
+            $.properties = properties;
             return this;
         }
+
         public Builder queryFileUri(String queryFileUri) {
-            this.queryFileUri = Objects.requireNonNull(queryFileUri);
+            $.queryFileUri = queryFileUri;
             return this;
         }
+
         public Builder queryList(QueryListResponse queryList) {
-            this.queryList = Objects.requireNonNull(queryList);
+            $.queryList = queryList;
             return this;
         }
+
         public Builder scriptVariables(Map<String,String> scriptVariables) {
-            this.scriptVariables = Objects.requireNonNull(scriptVariables);
+            $.scriptVariables = scriptVariables;
             return this;
-        }        public SparkSqlJobResponse build() {
-            return new SparkSqlJobResponse(jarFileUris, loggingConfig, properties, queryFileUri, queryList, scriptVariables);
+        }
+
+        public SparkSqlJobResponse build() {
+            $.jarFileUris = Objects.requireNonNull($.jarFileUris, "expected parameter 'jarFileUris' to be non-null");
+            $.loggingConfig = Objects.requireNonNull($.loggingConfig, "expected parameter 'loggingConfig' to be non-null");
+            $.properties = Objects.requireNonNull($.properties, "expected parameter 'properties' to be non-null");
+            $.queryFileUri = Objects.requireNonNull($.queryFileUri, "expected parameter 'queryFileUri' to be non-null");
+            $.queryList = Objects.requireNonNull($.queryList, "expected parameter 'queryList' to be non-null");
+            $.scriptVariables = Objects.requireNonNull($.scriptVariables, "expected parameter 'scriptVariables' to be non-null");
+            return $;
         }
     }
+
 }

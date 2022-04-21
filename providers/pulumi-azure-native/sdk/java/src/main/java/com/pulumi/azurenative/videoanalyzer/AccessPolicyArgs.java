@@ -8,9 +8,9 @@ import com.pulumi.azurenative.videoanalyzer.inputs.JwtAuthenticationArgs;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,10 @@ public final class AccessPolicyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="accessPolicyName")
-      private final @Nullable Output<String> accessPolicyName;
+    private @Nullable Output<String> accessPolicyName;
 
-    public Output<String> accessPolicyName() {
-        return this.accessPolicyName == null ? Codegen.empty() : this.accessPolicyName;
+    public Optional<Output<String>> accessPolicyName() {
+        return Optional.ofNullable(this.accessPolicyName);
     }
 
     /**
@@ -34,7 +34,7 @@ public final class AccessPolicyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="accountName", required=true)
-      private final Output<String> accountName;
+    private Output<String> accountName;
 
     public Output<String> accountName() {
         return this.accountName;
@@ -45,10 +45,10 @@ public final class AccessPolicyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="authentication")
-      private final @Nullable Output<JwtAuthenticationArgs> authentication;
+    private @Nullable Output<JwtAuthenticationArgs> authentication;
 
-    public Output<JwtAuthenticationArgs> authentication() {
-        return this.authentication == null ? Codegen.empty() : this.authentication;
+    public Optional<Output<JwtAuthenticationArgs>> authentication() {
+        return Optional.ofNullable(this.authentication);
     }
 
     /**
@@ -56,7 +56,7 @@ public final class AccessPolicyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -67,102 +67,90 @@ public final class AccessPolicyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="role")
-      private final @Nullable Output<Either<String,AccessPolicyRole>> role;
+    private @Nullable Output<Either<String,AccessPolicyRole>> role;
 
-    public Output<Either<String,AccessPolicyRole>> role() {
-        return this.role == null ? Codegen.empty() : this.role;
+    public Optional<Output<Either<String,AccessPolicyRole>>> role() {
+        return Optional.ofNullable(this.role);
     }
 
-    public AccessPolicyArgs(
-        @Nullable Output<String> accessPolicyName,
-        Output<String> accountName,
-        @Nullable Output<JwtAuthenticationArgs> authentication,
-        Output<String> resourceGroupName,
-        @Nullable Output<Either<String,AccessPolicyRole>> role) {
-        this.accessPolicyName = accessPolicyName;
-        this.accountName = Objects.requireNonNull(accountName, "expected parameter 'accountName' to be non-null");
-        this.authentication = authentication;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.role = role;
-    }
+    private AccessPolicyArgs() {}
 
-    private AccessPolicyArgs() {
-        this.accessPolicyName = Codegen.empty();
-        this.accountName = Codegen.empty();
-        this.authentication = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.role = Codegen.empty();
+    private AccessPolicyArgs(AccessPolicyArgs $) {
+        this.accessPolicyName = $.accessPolicyName;
+        this.accountName = $.accountName;
+        this.authentication = $.authentication;
+        this.resourceGroupName = $.resourceGroupName;
+        this.role = $.role;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AccessPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> accessPolicyName;
-        private Output<String> accountName;
-        private @Nullable Output<JwtAuthenticationArgs> authentication;
-        private Output<String> resourceGroupName;
-        private @Nullable Output<Either<String,AccessPolicyRole>> role;
+        private AccessPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AccessPolicyArgs();
         }
 
         public Builder(AccessPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accessPolicyName = defaults.accessPolicyName;
-    	      this.accountName = defaults.accountName;
-    	      this.authentication = defaults.authentication;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.role = defaults.role;
+            $ = new AccessPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder accessPolicyName(@Nullable Output<String> accessPolicyName) {
-            this.accessPolicyName = accessPolicyName;
+            $.accessPolicyName = accessPolicyName;
             return this;
         }
-        public Builder accessPolicyName(@Nullable String accessPolicyName) {
-            this.accessPolicyName = Codegen.ofNullable(accessPolicyName);
-            return this;
+
+        public Builder accessPolicyName(String accessPolicyName) {
+            return accessPolicyName(Output.of(accessPolicyName));
         }
+
         public Builder accountName(Output<String> accountName) {
-            this.accountName = Objects.requireNonNull(accountName);
+            $.accountName = accountName;
             return this;
         }
+
         public Builder accountName(String accountName) {
-            this.accountName = Output.of(Objects.requireNonNull(accountName));
-            return this;
+            return accountName(Output.of(accountName));
         }
+
         public Builder authentication(@Nullable Output<JwtAuthenticationArgs> authentication) {
-            this.authentication = authentication;
+            $.authentication = authentication;
             return this;
         }
-        public Builder authentication(@Nullable JwtAuthenticationArgs authentication) {
-            this.authentication = Codegen.ofNullable(authentication);
-            return this;
+
+        public Builder authentication(JwtAuthenticationArgs authentication) {
+            return authentication(Output.of(authentication));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder role(@Nullable Output<Either<String,AccessPolicyRole>> role) {
-            this.role = role;
+            $.role = role;
             return this;
         }
-        public Builder role(@Nullable Either<String,AccessPolicyRole> role) {
-            this.role = Codegen.ofNullable(role);
-            return this;
-        }        public AccessPolicyArgs build() {
-            return new AccessPolicyArgs(accessPolicyName, accountName, authentication, resourceGroupName, role);
+
+        public Builder role(Either<String,AccessPolicyRole> role) {
+            return role(Output.of(role));
+        }
+
+        public AccessPolicyArgs build() {
+            $.accountName = Objects.requireNonNull($.accountName, "expected parameter 'accountName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,10 +5,10 @@ package com.pulumi.kubernetes.autoscaling_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.kubernetes.autoscaling_v1.inputs.CrossVersionObjectReferenceArgs;
 import java.lang.Integer;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,7 +25,7 @@ public final class HorizontalPodAutoscalerSpecArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="maxReplicas", required=true)
-      private final Output<Integer> maxReplicas;
+    private Output<Integer> maxReplicas;
 
     public Output<Integer> maxReplicas() {
         return this.maxReplicas;
@@ -36,10 +36,10 @@ public final class HorizontalPodAutoscalerSpecArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="minReplicas")
-      private final @Nullable Output<Integer> minReplicas;
+    private @Nullable Output<Integer> minReplicas;
 
-    public Output<Integer> minReplicas() {
-        return this.minReplicas == null ? Codegen.empty() : this.minReplicas;
+    public Optional<Output<Integer>> minReplicas() {
+        return Optional.ofNullable(this.minReplicas);
     }
 
     /**
@@ -47,7 +47,7 @@ public final class HorizontalPodAutoscalerSpecArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="scaleTargetRef", required=true)
-      private final Output<CrossVersionObjectReferenceArgs> scaleTargetRef;
+    private Output<CrossVersionObjectReferenceArgs> scaleTargetRef;
 
     public Output<CrossVersionObjectReferenceArgs> scaleTargetRef() {
         return this.scaleTargetRef;
@@ -58,89 +58,80 @@ public final class HorizontalPodAutoscalerSpecArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="targetCPUUtilizationPercentage")
-      private final @Nullable Output<Integer> targetCPUUtilizationPercentage;
+    private @Nullable Output<Integer> targetCPUUtilizationPercentage;
 
-    public Output<Integer> targetCPUUtilizationPercentage() {
-        return this.targetCPUUtilizationPercentage == null ? Codegen.empty() : this.targetCPUUtilizationPercentage;
+    public Optional<Output<Integer>> targetCPUUtilizationPercentage() {
+        return Optional.ofNullable(this.targetCPUUtilizationPercentage);
     }
 
-    public HorizontalPodAutoscalerSpecArgs(
-        Output<Integer> maxReplicas,
-        @Nullable Output<Integer> minReplicas,
-        Output<CrossVersionObjectReferenceArgs> scaleTargetRef,
-        @Nullable Output<Integer> targetCPUUtilizationPercentage) {
-        this.maxReplicas = Objects.requireNonNull(maxReplicas, "expected parameter 'maxReplicas' to be non-null");
-        this.minReplicas = minReplicas;
-        this.scaleTargetRef = Objects.requireNonNull(scaleTargetRef, "expected parameter 'scaleTargetRef' to be non-null");
-        this.targetCPUUtilizationPercentage = targetCPUUtilizationPercentage;
-    }
+    private HorizontalPodAutoscalerSpecArgs() {}
 
-    private HorizontalPodAutoscalerSpecArgs() {
-        this.maxReplicas = Codegen.empty();
-        this.minReplicas = Codegen.empty();
-        this.scaleTargetRef = Codegen.empty();
-        this.targetCPUUtilizationPercentage = Codegen.empty();
+    private HorizontalPodAutoscalerSpecArgs(HorizontalPodAutoscalerSpecArgs $) {
+        this.maxReplicas = $.maxReplicas;
+        this.minReplicas = $.minReplicas;
+        this.scaleTargetRef = $.scaleTargetRef;
+        this.targetCPUUtilizationPercentage = $.targetCPUUtilizationPercentage;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(HorizontalPodAutoscalerSpecArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Integer> maxReplicas;
-        private @Nullable Output<Integer> minReplicas;
-        private Output<CrossVersionObjectReferenceArgs> scaleTargetRef;
-        private @Nullable Output<Integer> targetCPUUtilizationPercentage;
+        private HorizontalPodAutoscalerSpecArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new HorizontalPodAutoscalerSpecArgs();
         }
 
         public Builder(HorizontalPodAutoscalerSpecArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.maxReplicas = defaults.maxReplicas;
-    	      this.minReplicas = defaults.minReplicas;
-    	      this.scaleTargetRef = defaults.scaleTargetRef;
-    	      this.targetCPUUtilizationPercentage = defaults.targetCPUUtilizationPercentage;
+            $ = new HorizontalPodAutoscalerSpecArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder maxReplicas(Output<Integer> maxReplicas) {
-            this.maxReplicas = Objects.requireNonNull(maxReplicas);
+            $.maxReplicas = maxReplicas;
             return this;
         }
+
         public Builder maxReplicas(Integer maxReplicas) {
-            this.maxReplicas = Output.of(Objects.requireNonNull(maxReplicas));
-            return this;
+            return maxReplicas(Output.of(maxReplicas));
         }
+
         public Builder minReplicas(@Nullable Output<Integer> minReplicas) {
-            this.minReplicas = minReplicas;
+            $.minReplicas = minReplicas;
             return this;
         }
-        public Builder minReplicas(@Nullable Integer minReplicas) {
-            this.minReplicas = Codegen.ofNullable(minReplicas);
-            return this;
+
+        public Builder minReplicas(Integer minReplicas) {
+            return minReplicas(Output.of(minReplicas));
         }
+
         public Builder scaleTargetRef(Output<CrossVersionObjectReferenceArgs> scaleTargetRef) {
-            this.scaleTargetRef = Objects.requireNonNull(scaleTargetRef);
+            $.scaleTargetRef = scaleTargetRef;
             return this;
         }
+
         public Builder scaleTargetRef(CrossVersionObjectReferenceArgs scaleTargetRef) {
-            this.scaleTargetRef = Output.of(Objects.requireNonNull(scaleTargetRef));
-            return this;
+            return scaleTargetRef(Output.of(scaleTargetRef));
         }
+
         public Builder targetCPUUtilizationPercentage(@Nullable Output<Integer> targetCPUUtilizationPercentage) {
-            this.targetCPUUtilizationPercentage = targetCPUUtilizationPercentage;
+            $.targetCPUUtilizationPercentage = targetCPUUtilizationPercentage;
             return this;
         }
-        public Builder targetCPUUtilizationPercentage(@Nullable Integer targetCPUUtilizationPercentage) {
-            this.targetCPUUtilizationPercentage = Codegen.ofNullable(targetCPUUtilizationPercentage);
-            return this;
-        }        public HorizontalPodAutoscalerSpecArgs build() {
-            return new HorizontalPodAutoscalerSpecArgs(maxReplicas, minReplicas, scaleTargetRef, targetCPUUtilizationPercentage);
+
+        public Builder targetCPUUtilizationPercentage(Integer targetCPUUtilizationPercentage) {
+            return targetCPUUtilizationPercentage(Output.of(targetCPUUtilizationPercentage));
+        }
+
+        public HorizontalPodAutoscalerSpecArgs build() {
+            $.maxReplicas = Objects.requireNonNull($.maxReplicas, "expected parameter 'maxReplicas' to be non-null");
+            $.scaleTargetRef = Objects.requireNonNull($.scaleTargetRef, "expected parameter 'scaleTargetRef' to be non-null");
+            return $;
         }
     }
+
 }

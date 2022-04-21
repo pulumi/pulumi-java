@@ -22,7 +22,7 @@ public final class GoogleCloudContactcenterinsightsV1EntityMentionDataResponse e
      * 
      */
     @Import(name="entityUniqueId", required=true)
-      private final String entityUniqueId;
+    private String entityUniqueId;
 
     public String entityUniqueId() {
         return this.entityUniqueId;
@@ -33,7 +33,7 @@ public final class GoogleCloudContactcenterinsightsV1EntityMentionDataResponse e
      * 
      */
     @Import(name="sentiment", required=true)
-      private final GoogleCloudContactcenterinsightsV1SentimentDataResponse sentiment;
+    private GoogleCloudContactcenterinsightsV1SentimentDataResponse sentiment;
 
     public GoogleCloudContactcenterinsightsV1SentimentDataResponse sentiment() {
         return this.sentiment;
@@ -44,64 +44,59 @@ public final class GoogleCloudContactcenterinsightsV1EntityMentionDataResponse e
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
     }
 
-    public GoogleCloudContactcenterinsightsV1EntityMentionDataResponse(
-        String entityUniqueId,
-        GoogleCloudContactcenterinsightsV1SentimentDataResponse sentiment,
-        String type) {
-        this.entityUniqueId = Objects.requireNonNull(entityUniqueId, "expected parameter 'entityUniqueId' to be non-null");
-        this.sentiment = Objects.requireNonNull(sentiment, "expected parameter 'sentiment' to be non-null");
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private GoogleCloudContactcenterinsightsV1EntityMentionDataResponse() {}
 
-    private GoogleCloudContactcenterinsightsV1EntityMentionDataResponse() {
-        this.entityUniqueId = null;
-        this.sentiment = null;
-        this.type = null;
+    private GoogleCloudContactcenterinsightsV1EntityMentionDataResponse(GoogleCloudContactcenterinsightsV1EntityMentionDataResponse $) {
+        this.entityUniqueId = $.entityUniqueId;
+        this.sentiment = $.sentiment;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudContactcenterinsightsV1EntityMentionDataResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String entityUniqueId;
-        private GoogleCloudContactcenterinsightsV1SentimentDataResponse sentiment;
-        private String type;
+        private GoogleCloudContactcenterinsightsV1EntityMentionDataResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudContactcenterinsightsV1EntityMentionDataResponse();
         }
 
         public Builder(GoogleCloudContactcenterinsightsV1EntityMentionDataResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.entityUniqueId = defaults.entityUniqueId;
-    	      this.sentiment = defaults.sentiment;
-    	      this.type = defaults.type;
+            $ = new GoogleCloudContactcenterinsightsV1EntityMentionDataResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder entityUniqueId(String entityUniqueId) {
-            this.entityUniqueId = Objects.requireNonNull(entityUniqueId);
+            $.entityUniqueId = entityUniqueId;
             return this;
         }
+
         public Builder sentiment(GoogleCloudContactcenterinsightsV1SentimentDataResponse sentiment) {
-            this.sentiment = Objects.requireNonNull(sentiment);
+            $.sentiment = sentiment;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
-        }        public GoogleCloudContactcenterinsightsV1EntityMentionDataResponse build() {
-            return new GoogleCloudContactcenterinsightsV1EntityMentionDataResponse(entityUniqueId, sentiment, type);
+        }
+
+        public GoogleCloudContactcenterinsightsV1EntityMentionDataResponse build() {
+            $.entityUniqueId = Objects.requireNonNull($.entityUniqueId, "expected parameter 'entityUniqueId' to be non-null");
+            $.sentiment = Objects.requireNonNull($.sentiment, "expected parameter 'sentiment' to be non-null");
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

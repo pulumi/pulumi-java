@@ -5,12 +5,12 @@ package com.pulumi.gcp.compute.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.compute.inputs.URLMapHeaderActionRequestHeadersToAddGetArgs;
 import com.pulumi.gcp.compute.inputs.URLMapHeaderActionResponseHeadersToAddGetArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class URLMapHeaderActionGetArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="requestHeadersToAdds")
-      private final @Nullable Output<List<URLMapHeaderActionRequestHeadersToAddGetArgs>> requestHeadersToAdds;
+    private @Nullable Output<List<URLMapHeaderActionRequestHeadersToAddGetArgs>> requestHeadersToAdds;
 
-    public Output<List<URLMapHeaderActionRequestHeadersToAddGetArgs>> requestHeadersToAdds() {
-        return this.requestHeadersToAdds == null ? Codegen.empty() : this.requestHeadersToAdds;
+    public Optional<Output<List<URLMapHeaderActionRequestHeadersToAddGetArgs>>> requestHeadersToAdds() {
+        return Optional.ofNullable(this.requestHeadersToAdds);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class URLMapHeaderActionGetArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="requestHeadersToRemoves")
-      private final @Nullable Output<List<String>> requestHeadersToRemoves;
+    private @Nullable Output<List<String>> requestHeadersToRemoves;
 
-    public Output<List<String>> requestHeadersToRemoves() {
-        return this.requestHeadersToRemoves == null ? Codegen.empty() : this.requestHeadersToRemoves;
+    public Optional<Output<List<String>>> requestHeadersToRemoves() {
+        return Optional.ofNullable(this.requestHeadersToRemoves);
     }
 
     /**
@@ -48,10 +48,10 @@ public final class URLMapHeaderActionGetArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="responseHeadersToAdds")
-      private final @Nullable Output<List<URLMapHeaderActionResponseHeadersToAddGetArgs>> responseHeadersToAdds;
+    private @Nullable Output<List<URLMapHeaderActionResponseHeadersToAddGetArgs>> responseHeadersToAdds;
 
-    public Output<List<URLMapHeaderActionResponseHeadersToAddGetArgs>> responseHeadersToAdds() {
-        return this.responseHeadersToAdds == null ? Codegen.empty() : this.responseHeadersToAdds;
+    public Optional<Output<List<URLMapHeaderActionResponseHeadersToAddGetArgs>>> responseHeadersToAdds() {
+        return Optional.ofNullable(this.responseHeadersToAdds);
     }
 
     /**
@@ -60,101 +60,94 @@ public final class URLMapHeaderActionGetArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="responseHeadersToRemoves")
-      private final @Nullable Output<List<String>> responseHeadersToRemoves;
+    private @Nullable Output<List<String>> responseHeadersToRemoves;
 
-    public Output<List<String>> responseHeadersToRemoves() {
-        return this.responseHeadersToRemoves == null ? Codegen.empty() : this.responseHeadersToRemoves;
+    public Optional<Output<List<String>>> responseHeadersToRemoves() {
+        return Optional.ofNullable(this.responseHeadersToRemoves);
     }
 
-    public URLMapHeaderActionGetArgs(
-        @Nullable Output<List<URLMapHeaderActionRequestHeadersToAddGetArgs>> requestHeadersToAdds,
-        @Nullable Output<List<String>> requestHeadersToRemoves,
-        @Nullable Output<List<URLMapHeaderActionResponseHeadersToAddGetArgs>> responseHeadersToAdds,
-        @Nullable Output<List<String>> responseHeadersToRemoves) {
-        this.requestHeadersToAdds = requestHeadersToAdds;
-        this.requestHeadersToRemoves = requestHeadersToRemoves;
-        this.responseHeadersToAdds = responseHeadersToAdds;
-        this.responseHeadersToRemoves = responseHeadersToRemoves;
-    }
+    private URLMapHeaderActionGetArgs() {}
 
-    private URLMapHeaderActionGetArgs() {
-        this.requestHeadersToAdds = Codegen.empty();
-        this.requestHeadersToRemoves = Codegen.empty();
-        this.responseHeadersToAdds = Codegen.empty();
-        this.responseHeadersToRemoves = Codegen.empty();
+    private URLMapHeaderActionGetArgs(URLMapHeaderActionGetArgs $) {
+        this.requestHeadersToAdds = $.requestHeadersToAdds;
+        this.requestHeadersToRemoves = $.requestHeadersToRemoves;
+        this.responseHeadersToAdds = $.responseHeadersToAdds;
+        this.responseHeadersToRemoves = $.responseHeadersToRemoves;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(URLMapHeaderActionGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<URLMapHeaderActionRequestHeadersToAddGetArgs>> requestHeadersToAdds;
-        private @Nullable Output<List<String>> requestHeadersToRemoves;
-        private @Nullable Output<List<URLMapHeaderActionResponseHeadersToAddGetArgs>> responseHeadersToAdds;
-        private @Nullable Output<List<String>> responseHeadersToRemoves;
+        private URLMapHeaderActionGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new URLMapHeaderActionGetArgs();
         }
 
         public Builder(URLMapHeaderActionGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.requestHeadersToAdds = defaults.requestHeadersToAdds;
-    	      this.requestHeadersToRemoves = defaults.requestHeadersToRemoves;
-    	      this.responseHeadersToAdds = defaults.responseHeadersToAdds;
-    	      this.responseHeadersToRemoves = defaults.responseHeadersToRemoves;
+            $ = new URLMapHeaderActionGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder requestHeadersToAdds(@Nullable Output<List<URLMapHeaderActionRequestHeadersToAddGetArgs>> requestHeadersToAdds) {
-            this.requestHeadersToAdds = requestHeadersToAdds;
+            $.requestHeadersToAdds = requestHeadersToAdds;
             return this;
         }
-        public Builder requestHeadersToAdds(@Nullable List<URLMapHeaderActionRequestHeadersToAddGetArgs> requestHeadersToAdds) {
-            this.requestHeadersToAdds = Codegen.ofNullable(requestHeadersToAdds);
-            return this;
+
+        public Builder requestHeadersToAdds(List<URLMapHeaderActionRequestHeadersToAddGetArgs> requestHeadersToAdds) {
+            return requestHeadersToAdds(Output.of(requestHeadersToAdds));
         }
+
         public Builder requestHeadersToAdds(URLMapHeaderActionRequestHeadersToAddGetArgs... requestHeadersToAdds) {
             return requestHeadersToAdds(List.of(requestHeadersToAdds));
         }
+
         public Builder requestHeadersToRemoves(@Nullable Output<List<String>> requestHeadersToRemoves) {
-            this.requestHeadersToRemoves = requestHeadersToRemoves;
+            $.requestHeadersToRemoves = requestHeadersToRemoves;
             return this;
         }
-        public Builder requestHeadersToRemoves(@Nullable List<String> requestHeadersToRemoves) {
-            this.requestHeadersToRemoves = Codegen.ofNullable(requestHeadersToRemoves);
-            return this;
+
+        public Builder requestHeadersToRemoves(List<String> requestHeadersToRemoves) {
+            return requestHeadersToRemoves(Output.of(requestHeadersToRemoves));
         }
+
         public Builder requestHeadersToRemoves(String... requestHeadersToRemoves) {
             return requestHeadersToRemoves(List.of(requestHeadersToRemoves));
         }
+
         public Builder responseHeadersToAdds(@Nullable Output<List<URLMapHeaderActionResponseHeadersToAddGetArgs>> responseHeadersToAdds) {
-            this.responseHeadersToAdds = responseHeadersToAdds;
+            $.responseHeadersToAdds = responseHeadersToAdds;
             return this;
         }
-        public Builder responseHeadersToAdds(@Nullable List<URLMapHeaderActionResponseHeadersToAddGetArgs> responseHeadersToAdds) {
-            this.responseHeadersToAdds = Codegen.ofNullable(responseHeadersToAdds);
-            return this;
+
+        public Builder responseHeadersToAdds(List<URLMapHeaderActionResponseHeadersToAddGetArgs> responseHeadersToAdds) {
+            return responseHeadersToAdds(Output.of(responseHeadersToAdds));
         }
+
         public Builder responseHeadersToAdds(URLMapHeaderActionResponseHeadersToAddGetArgs... responseHeadersToAdds) {
             return responseHeadersToAdds(List.of(responseHeadersToAdds));
         }
+
         public Builder responseHeadersToRemoves(@Nullable Output<List<String>> responseHeadersToRemoves) {
-            this.responseHeadersToRemoves = responseHeadersToRemoves;
+            $.responseHeadersToRemoves = responseHeadersToRemoves;
             return this;
         }
-        public Builder responseHeadersToRemoves(@Nullable List<String> responseHeadersToRemoves) {
-            this.responseHeadersToRemoves = Codegen.ofNullable(responseHeadersToRemoves);
-            return this;
+
+        public Builder responseHeadersToRemoves(List<String> responseHeadersToRemoves) {
+            return responseHeadersToRemoves(Output.of(responseHeadersToRemoves));
         }
+
         public Builder responseHeadersToRemoves(String... responseHeadersToRemoves) {
             return responseHeadersToRemoves(List.of(responseHeadersToRemoves));
-        }        public URLMapHeaderActionGetArgs build() {
-            return new URLMapHeaderActionGetArgs(requestHeadersToAdds, requestHeadersToRemoves, responseHeadersToAdds, responseHeadersToRemoves);
+        }
+
+        public URLMapHeaderActionGetArgs build() {
+            return $;
         }
     }
+
 }

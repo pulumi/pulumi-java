@@ -27,10 +27,10 @@ public final class AlertingActionResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="aznsAction")
-      private final @Nullable AzNsActionGroupResponse aznsAction;
+    private @Nullable AzNsActionGroupResponse aznsAction;
 
     public Optional<AzNsActionGroupResponse> aznsAction() {
-        return this.aznsAction == null ? Optional.empty() : Optional.ofNullable(this.aznsAction);
+        return Optional.ofNullable(this.aznsAction);
     }
 
     /**
@@ -39,7 +39,7 @@ public final class AlertingActionResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="odataType", required=true)
-      private final String odataType;
+    private String odataType;
 
     public String odataType() {
         return this.odataType;
@@ -50,7 +50,7 @@ public final class AlertingActionResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="severity", required=true)
-      private final String severity;
+    private String severity;
 
     public String severity() {
         return this.severity;
@@ -61,10 +61,10 @@ public final class AlertingActionResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="throttlingInMin")
-      private final @Nullable Integer throttlingInMin;
+    private @Nullable Integer throttlingInMin;
 
     public Optional<Integer> throttlingInMin() {
-        return this.throttlingInMin == null ? Optional.empty() : Optional.ofNullable(this.throttlingInMin);
+        return Optional.ofNullable(this.throttlingInMin);
     }
 
     /**
@@ -72,82 +72,71 @@ public final class AlertingActionResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="trigger", required=true)
-      private final TriggerConditionResponse trigger;
+    private TriggerConditionResponse trigger;
 
     public TriggerConditionResponse trigger() {
         return this.trigger;
     }
 
-    public AlertingActionResponse(
-        @Nullable AzNsActionGroupResponse aznsAction,
-        String odataType,
-        String severity,
-        @Nullable Integer throttlingInMin,
-        TriggerConditionResponse trigger) {
-        this.aznsAction = aznsAction;
-        this.odataType = Codegen.stringProp("odataType").arg(odataType).require();
-        this.severity = Objects.requireNonNull(severity, "expected parameter 'severity' to be non-null");
-        this.throttlingInMin = throttlingInMin;
-        this.trigger = Objects.requireNonNull(trigger, "expected parameter 'trigger' to be non-null");
-    }
+    private AlertingActionResponse() {}
 
-    private AlertingActionResponse() {
-        this.aznsAction = null;
-        this.odataType = null;
-        this.severity = null;
-        this.throttlingInMin = null;
-        this.trigger = null;
+    private AlertingActionResponse(AlertingActionResponse $) {
+        this.aznsAction = $.aznsAction;
+        this.odataType = $.odataType;
+        this.severity = $.severity;
+        this.throttlingInMin = $.throttlingInMin;
+        this.trigger = $.trigger;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AlertingActionResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable AzNsActionGroupResponse aznsAction;
-        private String odataType;
-        private String severity;
-        private @Nullable Integer throttlingInMin;
-        private TriggerConditionResponse trigger;
+        private AlertingActionResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AlertingActionResponse();
         }
 
         public Builder(AlertingActionResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.aznsAction = defaults.aznsAction;
-    	      this.odataType = defaults.odataType;
-    	      this.severity = defaults.severity;
-    	      this.throttlingInMin = defaults.throttlingInMin;
-    	      this.trigger = defaults.trigger;
+            $ = new AlertingActionResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder aznsAction(@Nullable AzNsActionGroupResponse aznsAction) {
-            this.aznsAction = aznsAction;
+            $.aznsAction = aznsAction;
             return this;
         }
+
         public Builder odataType(String odataType) {
-            this.odataType = Objects.requireNonNull(odataType);
+            $.odataType = odataType;
             return this;
         }
+
         public Builder severity(String severity) {
-            this.severity = Objects.requireNonNull(severity);
+            $.severity = severity;
             return this;
         }
+
         public Builder throttlingInMin(@Nullable Integer throttlingInMin) {
-            this.throttlingInMin = throttlingInMin;
+            $.throttlingInMin = throttlingInMin;
             return this;
         }
+
         public Builder trigger(TriggerConditionResponse trigger) {
-            this.trigger = Objects.requireNonNull(trigger);
+            $.trigger = trigger;
             return this;
-        }        public AlertingActionResponse build() {
-            return new AlertingActionResponse(aznsAction, odataType, severity, throttlingInMin, trigger);
+        }
+
+        public AlertingActionResponse build() {
+            $.odataType = Codegen.stringProp("odataType").arg($.odataType).require();
+            $.severity = Objects.requireNonNull($.severity, "expected parameter 'severity' to be non-null");
+            $.trigger = Objects.requireNonNull($.trigger, "expected parameter 'trigger' to be non-null");
+            return $;
         }
     }
+
 }

@@ -22,7 +22,7 @@ public final class DiskInstantiationConfigResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="autoDelete", required=true)
-      private final Boolean autoDelete;
+    private Boolean autoDelete;
 
     public Boolean autoDelete() {
         return this.autoDelete;
@@ -33,7 +33,7 @@ public final class DiskInstantiationConfigResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="customImage", required=true)
-      private final String customImage;
+    private String customImage;
 
     public String customImage() {
         return this.customImage;
@@ -44,7 +44,7 @@ public final class DiskInstantiationConfigResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="deviceName", required=true)
-      private final String deviceName;
+    private String deviceName;
 
     public String deviceName() {
         return this.deviceName;
@@ -55,73 +55,66 @@ public final class DiskInstantiationConfigResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="instantiateFrom", required=true)
-      private final String instantiateFrom;
+    private String instantiateFrom;
 
     public String instantiateFrom() {
         return this.instantiateFrom;
     }
 
-    public DiskInstantiationConfigResponse(
-        Boolean autoDelete,
-        String customImage,
-        String deviceName,
-        String instantiateFrom) {
-        this.autoDelete = Objects.requireNonNull(autoDelete, "expected parameter 'autoDelete' to be non-null");
-        this.customImage = Objects.requireNonNull(customImage, "expected parameter 'customImage' to be non-null");
-        this.deviceName = Objects.requireNonNull(deviceName, "expected parameter 'deviceName' to be non-null");
-        this.instantiateFrom = Objects.requireNonNull(instantiateFrom, "expected parameter 'instantiateFrom' to be non-null");
-    }
+    private DiskInstantiationConfigResponse() {}
 
-    private DiskInstantiationConfigResponse() {
-        this.autoDelete = null;
-        this.customImage = null;
-        this.deviceName = null;
-        this.instantiateFrom = null;
+    private DiskInstantiationConfigResponse(DiskInstantiationConfigResponse $) {
+        this.autoDelete = $.autoDelete;
+        this.customImage = $.customImage;
+        this.deviceName = $.deviceName;
+        this.instantiateFrom = $.instantiateFrom;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DiskInstantiationConfigResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Boolean autoDelete;
-        private String customImage;
-        private String deviceName;
-        private String instantiateFrom;
+        private DiskInstantiationConfigResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new DiskInstantiationConfigResponse();
         }
 
         public Builder(DiskInstantiationConfigResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.autoDelete = defaults.autoDelete;
-    	      this.customImage = defaults.customImage;
-    	      this.deviceName = defaults.deviceName;
-    	      this.instantiateFrom = defaults.instantiateFrom;
+            $ = new DiskInstantiationConfigResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder autoDelete(Boolean autoDelete) {
-            this.autoDelete = Objects.requireNonNull(autoDelete);
+            $.autoDelete = autoDelete;
             return this;
         }
+
         public Builder customImage(String customImage) {
-            this.customImage = Objects.requireNonNull(customImage);
+            $.customImage = customImage;
             return this;
         }
+
         public Builder deviceName(String deviceName) {
-            this.deviceName = Objects.requireNonNull(deviceName);
+            $.deviceName = deviceName;
             return this;
         }
+
         public Builder instantiateFrom(String instantiateFrom) {
-            this.instantiateFrom = Objects.requireNonNull(instantiateFrom);
+            $.instantiateFrom = instantiateFrom;
             return this;
-        }        public DiskInstantiationConfigResponse build() {
-            return new DiskInstantiationConfigResponse(autoDelete, customImage, deviceName, instantiateFrom);
+        }
+
+        public DiskInstantiationConfigResponse build() {
+            $.autoDelete = Objects.requireNonNull($.autoDelete, "expected parameter 'autoDelete' to be non-null");
+            $.customImage = Objects.requireNonNull($.customImage, "expected parameter 'customImage' to be non-null");
+            $.deviceName = Objects.requireNonNull($.deviceName, "expected parameter 'deviceName' to be non-null");
+            $.instantiateFrom = Objects.requireNonNull($.instantiateFrom, "expected parameter 'instantiateFrom' to be non-null");
+            return $;
         }
     }
+
 }

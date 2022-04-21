@@ -5,7 +5,6 @@ package com.pulumi.gcp.dns.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.dns.inputs.ManagedZoneForwardingConfigTargetNameServerGetArgs;
 import java.util.List;
 import java.util.Objects;
@@ -23,52 +22,53 @@ public final class ManagedZoneForwardingConfigGetArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="targetNameServers", required=true)
-      private final Output<List<ManagedZoneForwardingConfigTargetNameServerGetArgs>> targetNameServers;
+    private Output<List<ManagedZoneForwardingConfigTargetNameServerGetArgs>> targetNameServers;
 
     public Output<List<ManagedZoneForwardingConfigTargetNameServerGetArgs>> targetNameServers() {
         return this.targetNameServers;
     }
 
-    public ManagedZoneForwardingConfigGetArgs(Output<List<ManagedZoneForwardingConfigTargetNameServerGetArgs>> targetNameServers) {
-        this.targetNameServers = Objects.requireNonNull(targetNameServers, "expected parameter 'targetNameServers' to be non-null");
-    }
+    private ManagedZoneForwardingConfigGetArgs() {}
 
-    private ManagedZoneForwardingConfigGetArgs() {
-        this.targetNameServers = Codegen.empty();
+    private ManagedZoneForwardingConfigGetArgs(ManagedZoneForwardingConfigGetArgs $) {
+        this.targetNameServers = $.targetNameServers;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ManagedZoneForwardingConfigGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<List<ManagedZoneForwardingConfigTargetNameServerGetArgs>> targetNameServers;
+        private ManagedZoneForwardingConfigGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ManagedZoneForwardingConfigGetArgs();
         }
 
         public Builder(ManagedZoneForwardingConfigGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.targetNameServers = defaults.targetNameServers;
+            $ = new ManagedZoneForwardingConfigGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder targetNameServers(Output<List<ManagedZoneForwardingConfigTargetNameServerGetArgs>> targetNameServers) {
-            this.targetNameServers = Objects.requireNonNull(targetNameServers);
+            $.targetNameServers = targetNameServers;
             return this;
         }
+
         public Builder targetNameServers(List<ManagedZoneForwardingConfigTargetNameServerGetArgs> targetNameServers) {
-            this.targetNameServers = Output.of(Objects.requireNonNull(targetNameServers));
-            return this;
+            return targetNameServers(Output.of(targetNameServers));
         }
+
         public Builder targetNameServers(ManagedZoneForwardingConfigTargetNameServerGetArgs... targetNameServers) {
             return targetNameServers(List.of(targetNameServers));
-        }        public ManagedZoneForwardingConfigGetArgs build() {
-            return new ManagedZoneForwardingConfigGetArgs(targetNameServers);
+        }
+
+        public ManagedZoneForwardingConfigGetArgs build() {
+            $.targetNameServers = Objects.requireNonNull($.targetNameServers, "expected parameter 'targetNameServers' to be non-null");
+            return $;
         }
     }
+
 }

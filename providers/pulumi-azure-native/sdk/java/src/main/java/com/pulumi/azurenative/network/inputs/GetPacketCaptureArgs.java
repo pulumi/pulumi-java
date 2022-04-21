@@ -17,7 +17,7 @@ public final class GetPacketCaptureArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="networkWatcherName", required=true)
-      private final String networkWatcherName;
+    private String networkWatcherName;
 
     public String networkWatcherName() {
         return this.networkWatcherName;
@@ -28,7 +28,7 @@ public final class GetPacketCaptureArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="packetCaptureName", required=true)
-      private final String packetCaptureName;
+    private String packetCaptureName;
 
     public String packetCaptureName() {
         return this.packetCaptureName;
@@ -39,64 +39,59 @@ public final class GetPacketCaptureArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public GetPacketCaptureArgs(
-        String networkWatcherName,
-        String packetCaptureName,
-        String resourceGroupName) {
-        this.networkWatcherName = Objects.requireNonNull(networkWatcherName, "expected parameter 'networkWatcherName' to be non-null");
-        this.packetCaptureName = Objects.requireNonNull(packetCaptureName, "expected parameter 'packetCaptureName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private GetPacketCaptureArgs() {}
 
-    private GetPacketCaptureArgs() {
-        this.networkWatcherName = null;
-        this.packetCaptureName = null;
-        this.resourceGroupName = null;
+    private GetPacketCaptureArgs(GetPacketCaptureArgs $) {
+        this.networkWatcherName = $.networkWatcherName;
+        this.packetCaptureName = $.packetCaptureName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetPacketCaptureArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String networkWatcherName;
-        private String packetCaptureName;
-        private String resourceGroupName;
+        private GetPacketCaptureArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetPacketCaptureArgs();
         }
 
         public Builder(GetPacketCaptureArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.networkWatcherName = defaults.networkWatcherName;
-    	      this.packetCaptureName = defaults.packetCaptureName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new GetPacketCaptureArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder networkWatcherName(String networkWatcherName) {
-            this.networkWatcherName = Objects.requireNonNull(networkWatcherName);
+            $.networkWatcherName = networkWatcherName;
             return this;
         }
+
         public Builder packetCaptureName(String packetCaptureName) {
-            this.packetCaptureName = Objects.requireNonNull(packetCaptureName);
+            $.packetCaptureName = packetCaptureName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public GetPacketCaptureArgs build() {
-            return new GetPacketCaptureArgs(networkWatcherName, packetCaptureName, resourceGroupName);
+        }
+
+        public GetPacketCaptureArgs build() {
+            $.networkWatcherName = Objects.requireNonNull($.networkWatcherName, "expected parameter 'networkWatcherName' to be non-null");
+            $.packetCaptureName = Objects.requireNonNull($.packetCaptureName, "expected parameter 'packetCaptureName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

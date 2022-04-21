@@ -25,10 +25,10 @@ public final class RetentionPolicyResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="days")
-      private final @Nullable Integer days;
+    private @Nullable Integer days;
 
     public Optional<Integer> days() {
-        return this.days == null ? Optional.empty() : Optional.ofNullable(this.days);
+        return Optional.ofNullable(this.days);
     }
 
     /**
@@ -36,7 +36,7 @@ public final class RetentionPolicyResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="lastUpdatedTime", required=true)
-      private final String lastUpdatedTime;
+    private String lastUpdatedTime;
 
     public String lastUpdatedTime() {
         return this.lastUpdatedTime;
@@ -47,64 +47,59 @@ public final class RetentionPolicyResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="status")
-      private final @Nullable String status;
+    private @Nullable String status;
 
     public Optional<String> status() {
-        return this.status == null ? Optional.empty() : Optional.ofNullable(this.status);
+        return Optional.ofNullable(this.status);
     }
 
-    public RetentionPolicyResponse(
-        @Nullable Integer days,
-        String lastUpdatedTime,
-        @Nullable String status) {
-        this.days = Codegen.integerProp("days").arg(days).def(7).getNullable();
-        this.lastUpdatedTime = Objects.requireNonNull(lastUpdatedTime, "expected parameter 'lastUpdatedTime' to be non-null");
-        this.status = Codegen.stringProp("status").arg(status).def("disabled").getNullable();
-    }
+    private RetentionPolicyResponse() {}
 
-    private RetentionPolicyResponse() {
-        this.days = null;
-        this.lastUpdatedTime = null;
-        this.status = null;
+    private RetentionPolicyResponse(RetentionPolicyResponse $) {
+        this.days = $.days;
+        this.lastUpdatedTime = $.lastUpdatedTime;
+        this.status = $.status;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RetentionPolicyResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Integer days;
-        private String lastUpdatedTime;
-        private @Nullable String status;
+        private RetentionPolicyResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new RetentionPolicyResponse();
         }
 
         public Builder(RetentionPolicyResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.days = defaults.days;
-    	      this.lastUpdatedTime = defaults.lastUpdatedTime;
-    	      this.status = defaults.status;
+            $ = new RetentionPolicyResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder days(@Nullable Integer days) {
-            this.days = days;
+            $.days = days;
             return this;
         }
+
         public Builder lastUpdatedTime(String lastUpdatedTime) {
-            this.lastUpdatedTime = Objects.requireNonNull(lastUpdatedTime);
+            $.lastUpdatedTime = lastUpdatedTime;
             return this;
         }
+
         public Builder status(@Nullable String status) {
-            this.status = status;
+            $.status = status;
             return this;
-        }        public RetentionPolicyResponse build() {
-            return new RetentionPolicyResponse(days, lastUpdatedTime, status);
+        }
+
+        public RetentionPolicyResponse build() {
+            $.days = Codegen.integerProp("days").arg($.days).def(7).getNullable();
+            $.lastUpdatedTime = Objects.requireNonNull($.lastUpdatedTime, "expected parameter 'lastUpdatedTime' to be non-null");
+            $.status = Codegen.stringProp("status").arg($.status).def("disabled").getNullable();
+            return $;
         }
     }
+
 }

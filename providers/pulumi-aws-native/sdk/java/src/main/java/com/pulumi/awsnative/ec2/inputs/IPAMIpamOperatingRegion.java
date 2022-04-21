@@ -21,45 +21,45 @@ public final class IPAMIpamOperatingRegion extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="regionName", required=true)
-      private final String regionName;
+    private String regionName;
 
     public String regionName() {
         return this.regionName;
     }
 
-    public IPAMIpamOperatingRegion(String regionName) {
-        this.regionName = Objects.requireNonNull(regionName, "expected parameter 'regionName' to be non-null");
-    }
+    private IPAMIpamOperatingRegion() {}
 
-    private IPAMIpamOperatingRegion() {
-        this.regionName = null;
+    private IPAMIpamOperatingRegion(IPAMIpamOperatingRegion $) {
+        this.regionName = $.regionName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(IPAMIpamOperatingRegion defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String regionName;
+        private IPAMIpamOperatingRegion $;
 
         public Builder() {
-    	      // Empty
+            $ = new IPAMIpamOperatingRegion();
         }
 
         public Builder(IPAMIpamOperatingRegion defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.regionName = defaults.regionName;
+            $ = new IPAMIpamOperatingRegion(Objects.requireNonNull(defaults));
         }
 
         public Builder regionName(String regionName) {
-            this.regionName = Objects.requireNonNull(regionName);
+            $.regionName = regionName;
             return this;
-        }        public IPAMIpamOperatingRegion build() {
-            return new IPAMIpamOperatingRegion(regionName);
+        }
+
+        public IPAMIpamOperatingRegion build() {
+            $.regionName = Objects.requireNonNull($.regionName, "expected parameter 'regionName' to be non-null");
+            return $;
         }
     }
+
 }

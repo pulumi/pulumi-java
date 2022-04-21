@@ -21,45 +21,45 @@ public final class AppDevExperienceFeatureStateResponse extends com.pulumi.resou
      * 
      */
     @Import(name="networkingInstallSucceeded", required=true)
-      private final StatusResponse networkingInstallSucceeded;
+    private StatusResponse networkingInstallSucceeded;
 
     public StatusResponse networkingInstallSucceeded() {
         return this.networkingInstallSucceeded;
     }
 
-    public AppDevExperienceFeatureStateResponse(StatusResponse networkingInstallSucceeded) {
-        this.networkingInstallSucceeded = Objects.requireNonNull(networkingInstallSucceeded, "expected parameter 'networkingInstallSucceeded' to be non-null");
-    }
+    private AppDevExperienceFeatureStateResponse() {}
 
-    private AppDevExperienceFeatureStateResponse() {
-        this.networkingInstallSucceeded = null;
+    private AppDevExperienceFeatureStateResponse(AppDevExperienceFeatureStateResponse $) {
+        this.networkingInstallSucceeded = $.networkingInstallSucceeded;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AppDevExperienceFeatureStateResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private StatusResponse networkingInstallSucceeded;
+        private AppDevExperienceFeatureStateResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AppDevExperienceFeatureStateResponse();
         }
 
         public Builder(AppDevExperienceFeatureStateResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.networkingInstallSucceeded = defaults.networkingInstallSucceeded;
+            $ = new AppDevExperienceFeatureStateResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder networkingInstallSucceeded(StatusResponse networkingInstallSucceeded) {
-            this.networkingInstallSucceeded = Objects.requireNonNull(networkingInstallSucceeded);
+            $.networkingInstallSucceeded = networkingInstallSucceeded;
             return this;
-        }        public AppDevExperienceFeatureStateResponse build() {
-            return new AppDevExperienceFeatureStateResponse(networkingInstallSucceeded);
+        }
+
+        public AppDevExperienceFeatureStateResponse build() {
+            $.networkingInstallSucceeded = Objects.requireNonNull($.networkingInstallSucceeded, "expected parameter 'networkingInstallSucceeded' to be non-null");
+            return $;
         }
     }
+
 }

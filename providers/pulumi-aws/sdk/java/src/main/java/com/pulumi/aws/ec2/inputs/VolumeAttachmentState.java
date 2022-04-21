@@ -5,10 +5,10 @@ package com.pulumi.aws.ec2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class VolumeAttachmentState extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="deviceName")
-      private final @Nullable Output<String> deviceName;
+    private @Nullable Output<String> deviceName;
 
-    public Output<String> deviceName() {
-        return this.deviceName == null ? Codegen.empty() : this.deviceName;
+    public Optional<Output<String>> deviceName() {
+        return Optional.ofNullable(this.deviceName);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class VolumeAttachmentState extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="forceDetach")
-      private final @Nullable Output<Boolean> forceDetach;
+    private @Nullable Output<Boolean> forceDetach;
 
-    public Output<Boolean> forceDetach() {
-        return this.forceDetach == null ? Codegen.empty() : this.forceDetach;
+    public Optional<Output<Boolean>> forceDetach() {
+        return Optional.ofNullable(this.forceDetach);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class VolumeAttachmentState extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="instanceId")
-      private final @Nullable Output<String> instanceId;
+    private @Nullable Output<String> instanceId;
 
-    public Output<String> instanceId() {
-        return this.instanceId == null ? Codegen.empty() : this.instanceId;
+    public Optional<Output<String>> instanceId() {
+        return Optional.ofNullable(this.instanceId);
     }
 
     /**
@@ -62,10 +62,10 @@ public final class VolumeAttachmentState extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="skipDestroy")
-      private final @Nullable Output<Boolean> skipDestroy;
+    private @Nullable Output<Boolean> skipDestroy;
 
-    public Output<Boolean> skipDestroy() {
-        return this.skipDestroy == null ? Codegen.empty() : this.skipDestroy;
+    public Optional<Output<Boolean>> skipDestroy() {
+        return Optional.ofNullable(this.skipDestroy);
     }
 
     /**
@@ -74,10 +74,10 @@ public final class VolumeAttachmentState extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="stopInstanceBeforeDetaching")
-      private final @Nullable Output<Boolean> stopInstanceBeforeDetaching;
+    private @Nullable Output<Boolean> stopInstanceBeforeDetaching;
 
-    public Output<Boolean> stopInstanceBeforeDetaching() {
-        return this.stopInstanceBeforeDetaching == null ? Codegen.empty() : this.stopInstanceBeforeDetaching;
+    public Optional<Output<Boolean>> stopInstanceBeforeDetaching() {
+        return Optional.ofNullable(this.stopInstanceBeforeDetaching);
     }
 
     /**
@@ -85,115 +85,98 @@ public final class VolumeAttachmentState extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="volumeId")
-      private final @Nullable Output<String> volumeId;
+    private @Nullable Output<String> volumeId;
 
-    public Output<String> volumeId() {
-        return this.volumeId == null ? Codegen.empty() : this.volumeId;
+    public Optional<Output<String>> volumeId() {
+        return Optional.ofNullable(this.volumeId);
     }
 
-    public VolumeAttachmentState(
-        @Nullable Output<String> deviceName,
-        @Nullable Output<Boolean> forceDetach,
-        @Nullable Output<String> instanceId,
-        @Nullable Output<Boolean> skipDestroy,
-        @Nullable Output<Boolean> stopInstanceBeforeDetaching,
-        @Nullable Output<String> volumeId) {
-        this.deviceName = deviceName;
-        this.forceDetach = forceDetach;
-        this.instanceId = instanceId;
-        this.skipDestroy = skipDestroy;
-        this.stopInstanceBeforeDetaching = stopInstanceBeforeDetaching;
-        this.volumeId = volumeId;
-    }
+    private VolumeAttachmentState() {}
 
-    private VolumeAttachmentState() {
-        this.deviceName = Codegen.empty();
-        this.forceDetach = Codegen.empty();
-        this.instanceId = Codegen.empty();
-        this.skipDestroy = Codegen.empty();
-        this.stopInstanceBeforeDetaching = Codegen.empty();
-        this.volumeId = Codegen.empty();
+    private VolumeAttachmentState(VolumeAttachmentState $) {
+        this.deviceName = $.deviceName;
+        this.forceDetach = $.forceDetach;
+        this.instanceId = $.instanceId;
+        this.skipDestroy = $.skipDestroy;
+        this.stopInstanceBeforeDetaching = $.stopInstanceBeforeDetaching;
+        this.volumeId = $.volumeId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VolumeAttachmentState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> deviceName;
-        private @Nullable Output<Boolean> forceDetach;
-        private @Nullable Output<String> instanceId;
-        private @Nullable Output<Boolean> skipDestroy;
-        private @Nullable Output<Boolean> stopInstanceBeforeDetaching;
-        private @Nullable Output<String> volumeId;
+        private VolumeAttachmentState $;
 
         public Builder() {
-    	      // Empty
+            $ = new VolumeAttachmentState();
         }
 
         public Builder(VolumeAttachmentState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.deviceName = defaults.deviceName;
-    	      this.forceDetach = defaults.forceDetach;
-    	      this.instanceId = defaults.instanceId;
-    	      this.skipDestroy = defaults.skipDestroy;
-    	      this.stopInstanceBeforeDetaching = defaults.stopInstanceBeforeDetaching;
-    	      this.volumeId = defaults.volumeId;
+            $ = new VolumeAttachmentState(Objects.requireNonNull(defaults));
         }
 
         public Builder deviceName(@Nullable Output<String> deviceName) {
-            this.deviceName = deviceName;
+            $.deviceName = deviceName;
             return this;
         }
-        public Builder deviceName(@Nullable String deviceName) {
-            this.deviceName = Codegen.ofNullable(deviceName);
-            return this;
+
+        public Builder deviceName(String deviceName) {
+            return deviceName(Output.of(deviceName));
         }
+
         public Builder forceDetach(@Nullable Output<Boolean> forceDetach) {
-            this.forceDetach = forceDetach;
+            $.forceDetach = forceDetach;
             return this;
         }
-        public Builder forceDetach(@Nullable Boolean forceDetach) {
-            this.forceDetach = Codegen.ofNullable(forceDetach);
-            return this;
+
+        public Builder forceDetach(Boolean forceDetach) {
+            return forceDetach(Output.of(forceDetach));
         }
+
         public Builder instanceId(@Nullable Output<String> instanceId) {
-            this.instanceId = instanceId;
+            $.instanceId = instanceId;
             return this;
         }
-        public Builder instanceId(@Nullable String instanceId) {
-            this.instanceId = Codegen.ofNullable(instanceId);
-            return this;
+
+        public Builder instanceId(String instanceId) {
+            return instanceId(Output.of(instanceId));
         }
+
         public Builder skipDestroy(@Nullable Output<Boolean> skipDestroy) {
-            this.skipDestroy = skipDestroy;
+            $.skipDestroy = skipDestroy;
             return this;
         }
-        public Builder skipDestroy(@Nullable Boolean skipDestroy) {
-            this.skipDestroy = Codegen.ofNullable(skipDestroy);
-            return this;
+
+        public Builder skipDestroy(Boolean skipDestroy) {
+            return skipDestroy(Output.of(skipDestroy));
         }
+
         public Builder stopInstanceBeforeDetaching(@Nullable Output<Boolean> stopInstanceBeforeDetaching) {
-            this.stopInstanceBeforeDetaching = stopInstanceBeforeDetaching;
+            $.stopInstanceBeforeDetaching = stopInstanceBeforeDetaching;
             return this;
         }
-        public Builder stopInstanceBeforeDetaching(@Nullable Boolean stopInstanceBeforeDetaching) {
-            this.stopInstanceBeforeDetaching = Codegen.ofNullable(stopInstanceBeforeDetaching);
-            return this;
+
+        public Builder stopInstanceBeforeDetaching(Boolean stopInstanceBeforeDetaching) {
+            return stopInstanceBeforeDetaching(Output.of(stopInstanceBeforeDetaching));
         }
+
         public Builder volumeId(@Nullable Output<String> volumeId) {
-            this.volumeId = volumeId;
+            $.volumeId = volumeId;
             return this;
         }
-        public Builder volumeId(@Nullable String volumeId) {
-            this.volumeId = Codegen.ofNullable(volumeId);
-            return this;
-        }        public VolumeAttachmentState build() {
-            return new VolumeAttachmentState(deviceName, forceDetach, instanceId, skipDestroy, stopInstanceBeforeDetaching, volumeId);
+
+        public Builder volumeId(String volumeId) {
+            return volumeId(Output.of(volumeId));
+        }
+
+        public VolumeAttachmentState build() {
+            return $;
         }
     }
+
 }

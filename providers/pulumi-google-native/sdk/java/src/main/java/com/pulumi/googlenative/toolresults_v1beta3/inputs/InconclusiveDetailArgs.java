@@ -5,9 +5,9 @@ package com.pulumi.googlenative.toolresults_v1beta3.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class InconclusiveDetailArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="abortedByUser")
-      private final @Nullable Output<Boolean> abortedByUser;
+    private @Nullable Output<Boolean> abortedByUser;
 
-    public Output<Boolean> abortedByUser() {
-        return this.abortedByUser == null ? Codegen.empty() : this.abortedByUser;
+    public Optional<Output<Boolean>> abortedByUser() {
+        return Optional.ofNullable(this.abortedByUser);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class InconclusiveDetailArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="hasErrorLogs")
-      private final @Nullable Output<Boolean> hasErrorLogs;
+    private @Nullable Output<Boolean> hasErrorLogs;
 
-    public Output<Boolean> hasErrorLogs() {
-        return this.hasErrorLogs == null ? Codegen.empty() : this.hasErrorLogs;
+    public Optional<Output<Boolean>> hasErrorLogs() {
+        return Optional.ofNullable(this.hasErrorLogs);
     }
 
     /**
@@ -46,76 +46,68 @@ public final class InconclusiveDetailArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="infrastructureFailure")
-      private final @Nullable Output<Boolean> infrastructureFailure;
+    private @Nullable Output<Boolean> infrastructureFailure;
 
-    public Output<Boolean> infrastructureFailure() {
-        return this.infrastructureFailure == null ? Codegen.empty() : this.infrastructureFailure;
+    public Optional<Output<Boolean>> infrastructureFailure() {
+        return Optional.ofNullable(this.infrastructureFailure);
     }
 
-    public InconclusiveDetailArgs(
-        @Nullable Output<Boolean> abortedByUser,
-        @Nullable Output<Boolean> hasErrorLogs,
-        @Nullable Output<Boolean> infrastructureFailure) {
-        this.abortedByUser = abortedByUser;
-        this.hasErrorLogs = hasErrorLogs;
-        this.infrastructureFailure = infrastructureFailure;
-    }
+    private InconclusiveDetailArgs() {}
 
-    private InconclusiveDetailArgs() {
-        this.abortedByUser = Codegen.empty();
-        this.hasErrorLogs = Codegen.empty();
-        this.infrastructureFailure = Codegen.empty();
+    private InconclusiveDetailArgs(InconclusiveDetailArgs $) {
+        this.abortedByUser = $.abortedByUser;
+        this.hasErrorLogs = $.hasErrorLogs;
+        this.infrastructureFailure = $.infrastructureFailure;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(InconclusiveDetailArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> abortedByUser;
-        private @Nullable Output<Boolean> hasErrorLogs;
-        private @Nullable Output<Boolean> infrastructureFailure;
+        private InconclusiveDetailArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new InconclusiveDetailArgs();
         }
 
         public Builder(InconclusiveDetailArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.abortedByUser = defaults.abortedByUser;
-    	      this.hasErrorLogs = defaults.hasErrorLogs;
-    	      this.infrastructureFailure = defaults.infrastructureFailure;
+            $ = new InconclusiveDetailArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder abortedByUser(@Nullable Output<Boolean> abortedByUser) {
-            this.abortedByUser = abortedByUser;
+            $.abortedByUser = abortedByUser;
             return this;
         }
-        public Builder abortedByUser(@Nullable Boolean abortedByUser) {
-            this.abortedByUser = Codegen.ofNullable(abortedByUser);
-            return this;
+
+        public Builder abortedByUser(Boolean abortedByUser) {
+            return abortedByUser(Output.of(abortedByUser));
         }
+
         public Builder hasErrorLogs(@Nullable Output<Boolean> hasErrorLogs) {
-            this.hasErrorLogs = hasErrorLogs;
+            $.hasErrorLogs = hasErrorLogs;
             return this;
         }
-        public Builder hasErrorLogs(@Nullable Boolean hasErrorLogs) {
-            this.hasErrorLogs = Codegen.ofNullable(hasErrorLogs);
-            return this;
+
+        public Builder hasErrorLogs(Boolean hasErrorLogs) {
+            return hasErrorLogs(Output.of(hasErrorLogs));
         }
+
         public Builder infrastructureFailure(@Nullable Output<Boolean> infrastructureFailure) {
-            this.infrastructureFailure = infrastructureFailure;
+            $.infrastructureFailure = infrastructureFailure;
             return this;
         }
-        public Builder infrastructureFailure(@Nullable Boolean infrastructureFailure) {
-            this.infrastructureFailure = Codegen.ofNullable(infrastructureFailure);
-            return this;
-        }        public InconclusiveDetailArgs build() {
-            return new InconclusiveDetailArgs(abortedByUser, hasErrorLogs, infrastructureFailure);
+
+        public Builder infrastructureFailure(Boolean infrastructureFailure) {
+            return infrastructureFailure(Output.of(infrastructureFailure));
+        }
+
+        public InconclusiveDetailArgs build() {
+            return $;
         }
     }
+
 }

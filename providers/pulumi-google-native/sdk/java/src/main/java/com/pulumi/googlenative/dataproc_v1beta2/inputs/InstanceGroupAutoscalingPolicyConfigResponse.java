@@ -21,7 +21,7 @@ public final class InstanceGroupAutoscalingPolicyConfigResponse extends com.pulu
      * 
      */
     @Import(name="maxInstances", required=true)
-      private final Integer maxInstances;
+    private Integer maxInstances;
 
     public Integer maxInstances() {
         return this.maxInstances;
@@ -32,7 +32,7 @@ public final class InstanceGroupAutoscalingPolicyConfigResponse extends com.pulu
      * 
      */
     @Import(name="minInstances", required=true)
-      private final Integer minInstances;
+    private Integer minInstances;
 
     public Integer minInstances() {
         return this.minInstances;
@@ -43,64 +43,59 @@ public final class InstanceGroupAutoscalingPolicyConfigResponse extends com.pulu
      * 
      */
     @Import(name="weight", required=true)
-      private final Integer weight;
+    private Integer weight;
 
     public Integer weight() {
         return this.weight;
     }
 
-    public InstanceGroupAutoscalingPolicyConfigResponse(
-        Integer maxInstances,
-        Integer minInstances,
-        Integer weight) {
-        this.maxInstances = Objects.requireNonNull(maxInstances, "expected parameter 'maxInstances' to be non-null");
-        this.minInstances = Objects.requireNonNull(minInstances, "expected parameter 'minInstances' to be non-null");
-        this.weight = Objects.requireNonNull(weight, "expected parameter 'weight' to be non-null");
-    }
+    private InstanceGroupAutoscalingPolicyConfigResponse() {}
 
-    private InstanceGroupAutoscalingPolicyConfigResponse() {
-        this.maxInstances = null;
-        this.minInstances = null;
-        this.weight = null;
+    private InstanceGroupAutoscalingPolicyConfigResponse(InstanceGroupAutoscalingPolicyConfigResponse $) {
+        this.maxInstances = $.maxInstances;
+        this.minInstances = $.minInstances;
+        this.weight = $.weight;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(InstanceGroupAutoscalingPolicyConfigResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Integer maxInstances;
-        private Integer minInstances;
-        private Integer weight;
+        private InstanceGroupAutoscalingPolicyConfigResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new InstanceGroupAutoscalingPolicyConfigResponse();
         }
 
         public Builder(InstanceGroupAutoscalingPolicyConfigResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.maxInstances = defaults.maxInstances;
-    	      this.minInstances = defaults.minInstances;
-    	      this.weight = defaults.weight;
+            $ = new InstanceGroupAutoscalingPolicyConfigResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder maxInstances(Integer maxInstances) {
-            this.maxInstances = Objects.requireNonNull(maxInstances);
+            $.maxInstances = maxInstances;
             return this;
         }
+
         public Builder minInstances(Integer minInstances) {
-            this.minInstances = Objects.requireNonNull(minInstances);
+            $.minInstances = minInstances;
             return this;
         }
+
         public Builder weight(Integer weight) {
-            this.weight = Objects.requireNonNull(weight);
+            $.weight = weight;
             return this;
-        }        public InstanceGroupAutoscalingPolicyConfigResponse build() {
-            return new InstanceGroupAutoscalingPolicyConfigResponse(maxInstances, minInstances, weight);
+        }
+
+        public InstanceGroupAutoscalingPolicyConfigResponse build() {
+            $.maxInstances = Objects.requireNonNull($.maxInstances, "expected parameter 'maxInstances' to be non-null");
+            $.minInstances = Objects.requireNonNull($.minInstances, "expected parameter 'minInstances' to be non-null");
+            $.weight = Objects.requireNonNull($.weight, "expected parameter 'weight' to be non-null");
+            return $;
         }
     }
+
 }

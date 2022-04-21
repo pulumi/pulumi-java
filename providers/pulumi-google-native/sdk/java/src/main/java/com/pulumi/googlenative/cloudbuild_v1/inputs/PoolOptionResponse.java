@@ -21,45 +21,45 @@ public final class PoolOptionResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
     }
 
-    public PoolOptionResponse(String name) {
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-    }
+    private PoolOptionResponse() {}
 
-    private PoolOptionResponse() {
-        this.name = null;
+    private PoolOptionResponse(PoolOptionResponse $) {
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PoolOptionResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String name;
+        private PoolOptionResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new PoolOptionResponse();
         }
 
         public Builder(PoolOptionResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
+            $ = new PoolOptionResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
-        }        public PoolOptionResponse build() {
-            return new PoolOptionResponse(name);
+        }
+
+        public PoolOptionResponse build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            return $;
         }
     }
+
 }

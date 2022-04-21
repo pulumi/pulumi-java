@@ -11,10 +11,10 @@ import com.pulumi.awsnative.dynamodb.inputs.GlobalTableReplicaSSESpecificationAr
 import com.pulumi.awsnative.dynamodb.inputs.GlobalTableTagArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,176 +23,159 @@ public final class GlobalTableReplicaSpecificationArgs extends com.pulumi.resour
     public static final GlobalTableReplicaSpecificationArgs Empty = new GlobalTableReplicaSpecificationArgs();
 
     @Import(name="contributorInsightsSpecification")
-      private final @Nullable Output<GlobalTableContributorInsightsSpecificationArgs> contributorInsightsSpecification;
+    private @Nullable Output<GlobalTableContributorInsightsSpecificationArgs> contributorInsightsSpecification;
 
-    public Output<GlobalTableContributorInsightsSpecificationArgs> contributorInsightsSpecification() {
-        return this.contributorInsightsSpecification == null ? Codegen.empty() : this.contributorInsightsSpecification;
+    public Optional<Output<GlobalTableContributorInsightsSpecificationArgs>> contributorInsightsSpecification() {
+        return Optional.ofNullable(this.contributorInsightsSpecification);
     }
 
     @Import(name="globalSecondaryIndexes")
-      private final @Nullable Output<List<GlobalTableReplicaGlobalSecondaryIndexSpecificationArgs>> globalSecondaryIndexes;
+    private @Nullable Output<List<GlobalTableReplicaGlobalSecondaryIndexSpecificationArgs>> globalSecondaryIndexes;
 
-    public Output<List<GlobalTableReplicaGlobalSecondaryIndexSpecificationArgs>> globalSecondaryIndexes() {
-        return this.globalSecondaryIndexes == null ? Codegen.empty() : this.globalSecondaryIndexes;
+    public Optional<Output<List<GlobalTableReplicaGlobalSecondaryIndexSpecificationArgs>>> globalSecondaryIndexes() {
+        return Optional.ofNullable(this.globalSecondaryIndexes);
     }
 
     @Import(name="pointInTimeRecoverySpecification")
-      private final @Nullable Output<GlobalTablePointInTimeRecoverySpecificationArgs> pointInTimeRecoverySpecification;
+    private @Nullable Output<GlobalTablePointInTimeRecoverySpecificationArgs> pointInTimeRecoverySpecification;
 
-    public Output<GlobalTablePointInTimeRecoverySpecificationArgs> pointInTimeRecoverySpecification() {
-        return this.pointInTimeRecoverySpecification == null ? Codegen.empty() : this.pointInTimeRecoverySpecification;
+    public Optional<Output<GlobalTablePointInTimeRecoverySpecificationArgs>> pointInTimeRecoverySpecification() {
+        return Optional.ofNullable(this.pointInTimeRecoverySpecification);
     }
 
     @Import(name="readProvisionedThroughputSettings")
-      private final @Nullable Output<GlobalTableReadProvisionedThroughputSettingsArgs> readProvisionedThroughputSettings;
+    private @Nullable Output<GlobalTableReadProvisionedThroughputSettingsArgs> readProvisionedThroughputSettings;
 
-    public Output<GlobalTableReadProvisionedThroughputSettingsArgs> readProvisionedThroughputSettings() {
-        return this.readProvisionedThroughputSettings == null ? Codegen.empty() : this.readProvisionedThroughputSettings;
+    public Optional<Output<GlobalTableReadProvisionedThroughputSettingsArgs>> readProvisionedThroughputSettings() {
+        return Optional.ofNullable(this.readProvisionedThroughputSettings);
     }
 
     @Import(name="region", required=true)
-      private final Output<String> region;
+    private Output<String> region;
 
     public Output<String> region() {
         return this.region;
     }
 
     @Import(name="sSESpecification")
-      private final @Nullable Output<GlobalTableReplicaSSESpecificationArgs> sSESpecification;
+    private @Nullable Output<GlobalTableReplicaSSESpecificationArgs> sSESpecification;
 
-    public Output<GlobalTableReplicaSSESpecificationArgs> sSESpecification() {
-        return this.sSESpecification == null ? Codegen.empty() : this.sSESpecification;
+    public Optional<Output<GlobalTableReplicaSSESpecificationArgs>> sSESpecification() {
+        return Optional.ofNullable(this.sSESpecification);
     }
 
     @Import(name="tags")
-      private final @Nullable Output<List<GlobalTableTagArgs>> tags;
+    private @Nullable Output<List<GlobalTableTagArgs>> tags;
 
-    public Output<List<GlobalTableTagArgs>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<List<GlobalTableTagArgs>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public GlobalTableReplicaSpecificationArgs(
-        @Nullable Output<GlobalTableContributorInsightsSpecificationArgs> contributorInsightsSpecification,
-        @Nullable Output<List<GlobalTableReplicaGlobalSecondaryIndexSpecificationArgs>> globalSecondaryIndexes,
-        @Nullable Output<GlobalTablePointInTimeRecoverySpecificationArgs> pointInTimeRecoverySpecification,
-        @Nullable Output<GlobalTableReadProvisionedThroughputSettingsArgs> readProvisionedThroughputSettings,
-        Output<String> region,
-        @Nullable Output<GlobalTableReplicaSSESpecificationArgs> sSESpecification,
-        @Nullable Output<List<GlobalTableTagArgs>> tags) {
-        this.contributorInsightsSpecification = contributorInsightsSpecification;
-        this.globalSecondaryIndexes = globalSecondaryIndexes;
-        this.pointInTimeRecoverySpecification = pointInTimeRecoverySpecification;
-        this.readProvisionedThroughputSettings = readProvisionedThroughputSettings;
-        this.region = Objects.requireNonNull(region, "expected parameter 'region' to be non-null");
-        this.sSESpecification = sSESpecification;
-        this.tags = tags;
-    }
+    private GlobalTableReplicaSpecificationArgs() {}
 
-    private GlobalTableReplicaSpecificationArgs() {
-        this.contributorInsightsSpecification = Codegen.empty();
-        this.globalSecondaryIndexes = Codegen.empty();
-        this.pointInTimeRecoverySpecification = Codegen.empty();
-        this.readProvisionedThroughputSettings = Codegen.empty();
-        this.region = Codegen.empty();
-        this.sSESpecification = Codegen.empty();
-        this.tags = Codegen.empty();
+    private GlobalTableReplicaSpecificationArgs(GlobalTableReplicaSpecificationArgs $) {
+        this.contributorInsightsSpecification = $.contributorInsightsSpecification;
+        this.globalSecondaryIndexes = $.globalSecondaryIndexes;
+        this.pointInTimeRecoverySpecification = $.pointInTimeRecoverySpecification;
+        this.readProvisionedThroughputSettings = $.readProvisionedThroughputSettings;
+        this.region = $.region;
+        this.sSESpecification = $.sSESpecification;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GlobalTableReplicaSpecificationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<GlobalTableContributorInsightsSpecificationArgs> contributorInsightsSpecification;
-        private @Nullable Output<List<GlobalTableReplicaGlobalSecondaryIndexSpecificationArgs>> globalSecondaryIndexes;
-        private @Nullable Output<GlobalTablePointInTimeRecoverySpecificationArgs> pointInTimeRecoverySpecification;
-        private @Nullable Output<GlobalTableReadProvisionedThroughputSettingsArgs> readProvisionedThroughputSettings;
-        private Output<String> region;
-        private @Nullable Output<GlobalTableReplicaSSESpecificationArgs> sSESpecification;
-        private @Nullable Output<List<GlobalTableTagArgs>> tags;
+        private GlobalTableReplicaSpecificationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GlobalTableReplicaSpecificationArgs();
         }
 
         public Builder(GlobalTableReplicaSpecificationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.contributorInsightsSpecification = defaults.contributorInsightsSpecification;
-    	      this.globalSecondaryIndexes = defaults.globalSecondaryIndexes;
-    	      this.pointInTimeRecoverySpecification = defaults.pointInTimeRecoverySpecification;
-    	      this.readProvisionedThroughputSettings = defaults.readProvisionedThroughputSettings;
-    	      this.region = defaults.region;
-    	      this.sSESpecification = defaults.sSESpecification;
-    	      this.tags = defaults.tags;
+            $ = new GlobalTableReplicaSpecificationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder contributorInsightsSpecification(@Nullable Output<GlobalTableContributorInsightsSpecificationArgs> contributorInsightsSpecification) {
-            this.contributorInsightsSpecification = contributorInsightsSpecification;
+            $.contributorInsightsSpecification = contributorInsightsSpecification;
             return this;
         }
-        public Builder contributorInsightsSpecification(@Nullable GlobalTableContributorInsightsSpecificationArgs contributorInsightsSpecification) {
-            this.contributorInsightsSpecification = Codegen.ofNullable(contributorInsightsSpecification);
-            return this;
+
+        public Builder contributorInsightsSpecification(GlobalTableContributorInsightsSpecificationArgs contributorInsightsSpecification) {
+            return contributorInsightsSpecification(Output.of(contributorInsightsSpecification));
         }
+
         public Builder globalSecondaryIndexes(@Nullable Output<List<GlobalTableReplicaGlobalSecondaryIndexSpecificationArgs>> globalSecondaryIndexes) {
-            this.globalSecondaryIndexes = globalSecondaryIndexes;
+            $.globalSecondaryIndexes = globalSecondaryIndexes;
             return this;
         }
-        public Builder globalSecondaryIndexes(@Nullable List<GlobalTableReplicaGlobalSecondaryIndexSpecificationArgs> globalSecondaryIndexes) {
-            this.globalSecondaryIndexes = Codegen.ofNullable(globalSecondaryIndexes);
-            return this;
+
+        public Builder globalSecondaryIndexes(List<GlobalTableReplicaGlobalSecondaryIndexSpecificationArgs> globalSecondaryIndexes) {
+            return globalSecondaryIndexes(Output.of(globalSecondaryIndexes));
         }
+
         public Builder globalSecondaryIndexes(GlobalTableReplicaGlobalSecondaryIndexSpecificationArgs... globalSecondaryIndexes) {
             return globalSecondaryIndexes(List.of(globalSecondaryIndexes));
         }
+
         public Builder pointInTimeRecoverySpecification(@Nullable Output<GlobalTablePointInTimeRecoverySpecificationArgs> pointInTimeRecoverySpecification) {
-            this.pointInTimeRecoverySpecification = pointInTimeRecoverySpecification;
+            $.pointInTimeRecoverySpecification = pointInTimeRecoverySpecification;
             return this;
         }
-        public Builder pointInTimeRecoverySpecification(@Nullable GlobalTablePointInTimeRecoverySpecificationArgs pointInTimeRecoverySpecification) {
-            this.pointInTimeRecoverySpecification = Codegen.ofNullable(pointInTimeRecoverySpecification);
-            return this;
+
+        public Builder pointInTimeRecoverySpecification(GlobalTablePointInTimeRecoverySpecificationArgs pointInTimeRecoverySpecification) {
+            return pointInTimeRecoverySpecification(Output.of(pointInTimeRecoverySpecification));
         }
+
         public Builder readProvisionedThroughputSettings(@Nullable Output<GlobalTableReadProvisionedThroughputSettingsArgs> readProvisionedThroughputSettings) {
-            this.readProvisionedThroughputSettings = readProvisionedThroughputSettings;
+            $.readProvisionedThroughputSettings = readProvisionedThroughputSettings;
             return this;
         }
-        public Builder readProvisionedThroughputSettings(@Nullable GlobalTableReadProvisionedThroughputSettingsArgs readProvisionedThroughputSettings) {
-            this.readProvisionedThroughputSettings = Codegen.ofNullable(readProvisionedThroughputSettings);
-            return this;
+
+        public Builder readProvisionedThroughputSettings(GlobalTableReadProvisionedThroughputSettingsArgs readProvisionedThroughputSettings) {
+            return readProvisionedThroughputSettings(Output.of(readProvisionedThroughputSettings));
         }
+
         public Builder region(Output<String> region) {
-            this.region = Objects.requireNonNull(region);
+            $.region = region;
             return this;
         }
+
         public Builder region(String region) {
-            this.region = Output.of(Objects.requireNonNull(region));
-            return this;
+            return region(Output.of(region));
         }
+
         public Builder sSESpecification(@Nullable Output<GlobalTableReplicaSSESpecificationArgs> sSESpecification) {
-            this.sSESpecification = sSESpecification;
+            $.sSESpecification = sSESpecification;
             return this;
         }
-        public Builder sSESpecification(@Nullable GlobalTableReplicaSSESpecificationArgs sSESpecification) {
-            this.sSESpecification = Codegen.ofNullable(sSESpecification);
-            return this;
+
+        public Builder sSESpecification(GlobalTableReplicaSSESpecificationArgs sSESpecification) {
+            return sSESpecification(Output.of(sSESpecification));
         }
+
         public Builder tags(@Nullable Output<List<GlobalTableTagArgs>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable List<GlobalTableTagArgs> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(List<GlobalTableTagArgs> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tags(GlobalTableTagArgs... tags) {
             return tags(List.of(tags));
-        }        public GlobalTableReplicaSpecificationArgs build() {
-            return new GlobalTableReplicaSpecificationArgs(contributorInsightsSpecification, globalSecondaryIndexes, pointInTimeRecoverySpecification, readProvisionedThroughputSettings, region, sSESpecification, tags);
+        }
+
+        public GlobalTableReplicaSpecificationArgs build() {
+            $.region = Objects.requireNonNull($.region, "expected parameter 'region' to be non-null");
+            return $;
         }
     }
+
 }

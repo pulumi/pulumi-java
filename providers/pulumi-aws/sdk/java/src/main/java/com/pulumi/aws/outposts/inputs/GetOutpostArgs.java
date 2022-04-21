@@ -19,10 +19,10 @@ public final class GetOutpostArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="arn")
-      private final @Nullable String arn;
+    private @Nullable String arn;
 
     public Optional<String> arn() {
-        return this.arn == null ? Optional.empty() : Optional.ofNullable(this.arn);
+        return Optional.ofNullable(this.arn);
     }
 
     /**
@@ -30,10 +30,10 @@ public final class GetOutpostArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="id")
-      private final @Nullable String id;
+    private @Nullable String id;
 
     public Optional<String> id() {
-        return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
+        return Optional.ofNullable(this.id);
     }
 
     /**
@@ -41,10 +41,10 @@ public final class GetOutpostArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable String name;
+    private @Nullable String name;
 
     public Optional<String> name() {
-        return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -52,73 +52,62 @@ public final class GetOutpostArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="ownerId")
-      private final @Nullable String ownerId;
+    private @Nullable String ownerId;
 
     public Optional<String> ownerId() {
-        return this.ownerId == null ? Optional.empty() : Optional.ofNullable(this.ownerId);
+        return Optional.ofNullable(this.ownerId);
     }
 
-    public GetOutpostArgs(
-        @Nullable String arn,
-        @Nullable String id,
-        @Nullable String name,
-        @Nullable String ownerId) {
-        this.arn = arn;
-        this.id = id;
-        this.name = name;
-        this.ownerId = ownerId;
-    }
+    private GetOutpostArgs() {}
 
-    private GetOutpostArgs() {
-        this.arn = null;
-        this.id = null;
-        this.name = null;
-        this.ownerId = null;
+    private GetOutpostArgs(GetOutpostArgs $) {
+        this.arn = $.arn;
+        this.id = $.id;
+        this.name = $.name;
+        this.ownerId = $.ownerId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetOutpostArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String arn;
-        private @Nullable String id;
-        private @Nullable String name;
-        private @Nullable String ownerId;
+        private GetOutpostArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetOutpostArgs();
         }
 
         public Builder(GetOutpostArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.arn = defaults.arn;
-    	      this.id = defaults.id;
-    	      this.name = defaults.name;
-    	      this.ownerId = defaults.ownerId;
+            $ = new GetOutpostArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder arn(@Nullable String arn) {
-            this.arn = arn;
+            $.arn = arn;
             return this;
         }
+
         public Builder id(@Nullable String id) {
-            this.id = id;
+            $.id = id;
             return this;
         }
+
         public Builder name(@Nullable String name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
+
         public Builder ownerId(@Nullable String ownerId) {
-            this.ownerId = ownerId;
+            $.ownerId = ownerId;
             return this;
-        }        public GetOutpostArgs build() {
-            return new GetOutpostArgs(arn, id, name, ownerId);
+        }
+
+        public GetOutpostArgs build() {
+            return $;
         }
     }
+
 }

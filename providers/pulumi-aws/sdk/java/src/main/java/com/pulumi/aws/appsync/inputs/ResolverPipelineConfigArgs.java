@@ -5,10 +5,10 @@ package com.pulumi.aws.appsync.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,52 +21,52 @@ public final class ResolverPipelineConfigArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="functions")
-      private final @Nullable Output<List<String>> functions;
+    private @Nullable Output<List<String>> functions;
 
-    public Output<List<String>> functions() {
-        return this.functions == null ? Codegen.empty() : this.functions;
+    public Optional<Output<List<String>>> functions() {
+        return Optional.ofNullable(this.functions);
     }
 
-    public ResolverPipelineConfigArgs(@Nullable Output<List<String>> functions) {
-        this.functions = functions;
-    }
+    private ResolverPipelineConfigArgs() {}
 
-    private ResolverPipelineConfigArgs() {
-        this.functions = Codegen.empty();
+    private ResolverPipelineConfigArgs(ResolverPipelineConfigArgs $) {
+        this.functions = $.functions;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ResolverPipelineConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> functions;
+        private ResolverPipelineConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ResolverPipelineConfigArgs();
         }
 
         public Builder(ResolverPipelineConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.functions = defaults.functions;
+            $ = new ResolverPipelineConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder functions(@Nullable Output<List<String>> functions) {
-            this.functions = functions;
+            $.functions = functions;
             return this;
         }
-        public Builder functions(@Nullable List<String> functions) {
-            this.functions = Codegen.ofNullable(functions);
-            return this;
+
+        public Builder functions(List<String> functions) {
+            return functions(Output.of(functions));
         }
+
         public Builder functions(String... functions) {
             return functions(List.of(functions));
-        }        public ResolverPipelineConfigArgs build() {
-            return new ResolverPipelineConfigArgs(functions);
+        }
+
+        public ResolverPipelineConfigArgs build() {
+            return $;
         }
     }
+
 }

@@ -5,11 +5,11 @@ package com.pulumi.googlenative.transcoder_v1;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.transcoder_v1.inputs.JobConfigArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class JobArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="config")
-      private final @Nullable Output<JobConfigArgs> config;
+    private @Nullable Output<JobConfigArgs> config;
 
-    public Output<JobConfigArgs> config() {
-        return this.config == null ? Codegen.empty() : this.config;
+    public Optional<Output<JobConfigArgs>> config() {
+        return Optional.ofNullable(this.config);
     }
 
     /**
@@ -33,17 +33,17 @@ public final class JobArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="inputUri")
-      private final @Nullable Output<String> inputUri;
+    private @Nullable Output<String> inputUri;
 
-    public Output<String> inputUri() {
-        return this.inputUri == null ? Codegen.empty() : this.inputUri;
+    public Optional<Output<String>> inputUri() {
+        return Optional.ofNullable(this.inputUri);
     }
 
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -51,10 +51,10 @@ public final class JobArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -62,17 +62,17 @@ public final class JobArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="outputUri")
-      private final @Nullable Output<String> outputUri;
+    private @Nullable Output<String> outputUri;
 
-    public Output<String> outputUri() {
-        return this.outputUri == null ? Codegen.empty() : this.outputUri;
+    public Optional<Output<String>> outputUri() {
+        return Optional.ofNullable(this.outputUri);
     }
 
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -80,10 +80,10 @@ public final class JobArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="templateId")
-      private final @Nullable Output<String> templateId;
+    private @Nullable Output<String> templateId;
 
-    public Output<String> templateId() {
-        return this.templateId == null ? Codegen.empty() : this.templateId;
+    public Optional<Output<String>> templateId() {
+        return Optional.ofNullable(this.templateId);
     }
 
     /**
@@ -91,141 +91,118 @@ public final class JobArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="ttlAfterCompletionDays")
-      private final @Nullable Output<Integer> ttlAfterCompletionDays;
+    private @Nullable Output<Integer> ttlAfterCompletionDays;
 
-    public Output<Integer> ttlAfterCompletionDays() {
-        return this.ttlAfterCompletionDays == null ? Codegen.empty() : this.ttlAfterCompletionDays;
+    public Optional<Output<Integer>> ttlAfterCompletionDays() {
+        return Optional.ofNullable(this.ttlAfterCompletionDays);
     }
 
-    public JobArgs(
-        @Nullable Output<JobConfigArgs> config,
-        @Nullable Output<String> inputUri,
-        @Nullable Output<String> location,
-        @Nullable Output<String> name,
-        @Nullable Output<String> outputUri,
-        @Nullable Output<String> project,
-        @Nullable Output<String> templateId,
-        @Nullable Output<Integer> ttlAfterCompletionDays) {
-        this.config = config;
-        this.inputUri = inputUri;
-        this.location = location;
-        this.name = name;
-        this.outputUri = outputUri;
-        this.project = project;
-        this.templateId = templateId;
-        this.ttlAfterCompletionDays = ttlAfterCompletionDays;
-    }
+    private JobArgs() {}
 
-    private JobArgs() {
-        this.config = Codegen.empty();
-        this.inputUri = Codegen.empty();
-        this.location = Codegen.empty();
-        this.name = Codegen.empty();
-        this.outputUri = Codegen.empty();
-        this.project = Codegen.empty();
-        this.templateId = Codegen.empty();
-        this.ttlAfterCompletionDays = Codegen.empty();
+    private JobArgs(JobArgs $) {
+        this.config = $.config;
+        this.inputUri = $.inputUri;
+        this.location = $.location;
+        this.name = $.name;
+        this.outputUri = $.outputUri;
+        this.project = $.project;
+        this.templateId = $.templateId;
+        this.ttlAfterCompletionDays = $.ttlAfterCompletionDays;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(JobArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<JobConfigArgs> config;
-        private @Nullable Output<String> inputUri;
-        private @Nullable Output<String> location;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> outputUri;
-        private @Nullable Output<String> project;
-        private @Nullable Output<String> templateId;
-        private @Nullable Output<Integer> ttlAfterCompletionDays;
+        private JobArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new JobArgs();
         }
 
         public Builder(JobArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.config = defaults.config;
-    	      this.inputUri = defaults.inputUri;
-    	      this.location = defaults.location;
-    	      this.name = defaults.name;
-    	      this.outputUri = defaults.outputUri;
-    	      this.project = defaults.project;
-    	      this.templateId = defaults.templateId;
-    	      this.ttlAfterCompletionDays = defaults.ttlAfterCompletionDays;
+            $ = new JobArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder config(@Nullable Output<JobConfigArgs> config) {
-            this.config = config;
+            $.config = config;
             return this;
         }
-        public Builder config(@Nullable JobConfigArgs config) {
-            this.config = Codegen.ofNullable(config);
-            return this;
+
+        public Builder config(JobConfigArgs config) {
+            return config(Output.of(config));
         }
+
         public Builder inputUri(@Nullable Output<String> inputUri) {
-            this.inputUri = inputUri;
+            $.inputUri = inputUri;
             return this;
         }
-        public Builder inputUri(@Nullable String inputUri) {
-            this.inputUri = Codegen.ofNullable(inputUri);
-            return this;
+
+        public Builder inputUri(String inputUri) {
+            return inputUri(Output.of(inputUri));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder outputUri(@Nullable Output<String> outputUri) {
-            this.outputUri = outputUri;
+            $.outputUri = outputUri;
             return this;
         }
-        public Builder outputUri(@Nullable String outputUri) {
-            this.outputUri = Codegen.ofNullable(outputUri);
-            return this;
+
+        public Builder outputUri(String outputUri) {
+            return outputUri(Output.of(outputUri));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder templateId(@Nullable Output<String> templateId) {
-            this.templateId = templateId;
+            $.templateId = templateId;
             return this;
         }
-        public Builder templateId(@Nullable String templateId) {
-            this.templateId = Codegen.ofNullable(templateId);
-            return this;
+
+        public Builder templateId(String templateId) {
+            return templateId(Output.of(templateId));
         }
+
         public Builder ttlAfterCompletionDays(@Nullable Output<Integer> ttlAfterCompletionDays) {
-            this.ttlAfterCompletionDays = ttlAfterCompletionDays;
+            $.ttlAfterCompletionDays = ttlAfterCompletionDays;
             return this;
         }
-        public Builder ttlAfterCompletionDays(@Nullable Integer ttlAfterCompletionDays) {
-            this.ttlAfterCompletionDays = Codegen.ofNullable(ttlAfterCompletionDays);
-            return this;
-        }        public JobArgs build() {
-            return new JobArgs(config, inputUri, location, name, outputUri, project, templateId, ttlAfterCompletionDays);
+
+        public Builder ttlAfterCompletionDays(Integer ttlAfterCompletionDays) {
+            return ttlAfterCompletionDays(Output.of(ttlAfterCompletionDays));
+        }
+
+        public JobArgs build() {
+            return $;
         }
     }
+
 }

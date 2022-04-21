@@ -25,10 +25,10 @@ public final class SettingsResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="isCompression")
-      private final @Nullable Boolean isCompression;
+    private @Nullable Boolean isCompression;
 
     public Optional<Boolean> isCompression() {
-        return this.isCompression == null ? Optional.empty() : Optional.ofNullable(this.isCompression);
+        return Optional.ofNullable(this.isCompression);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class SettingsResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="issqlcompression")
-      private final @Nullable Boolean issqlcompression;
+    private @Nullable Boolean issqlcompression;
 
     public Optional<Boolean> issqlcompression() {
-        return this.issqlcompression == null ? Optional.empty() : Optional.ofNullable(this.issqlcompression);
+        return Optional.ofNullable(this.issqlcompression);
     }
 
     /**
@@ -47,64 +47,56 @@ public final class SettingsResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="timeZone")
-      private final @Nullable String timeZone;
+    private @Nullable String timeZone;
 
     public Optional<String> timeZone() {
-        return this.timeZone == null ? Optional.empty() : Optional.ofNullable(this.timeZone);
+        return Optional.ofNullable(this.timeZone);
     }
 
-    public SettingsResponse(
-        @Nullable Boolean isCompression,
-        @Nullable Boolean issqlcompression,
-        @Nullable String timeZone) {
-        this.isCompression = isCompression;
-        this.issqlcompression = issqlcompression;
-        this.timeZone = timeZone;
-    }
+    private SettingsResponse() {}
 
-    private SettingsResponse() {
-        this.isCompression = null;
-        this.issqlcompression = null;
-        this.timeZone = null;
+    private SettingsResponse(SettingsResponse $) {
+        this.isCompression = $.isCompression;
+        this.issqlcompression = $.issqlcompression;
+        this.timeZone = $.timeZone;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SettingsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Boolean isCompression;
-        private @Nullable Boolean issqlcompression;
-        private @Nullable String timeZone;
+        private SettingsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new SettingsResponse();
         }
 
         public Builder(SettingsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.isCompression = defaults.isCompression;
-    	      this.issqlcompression = defaults.issqlcompression;
-    	      this.timeZone = defaults.timeZone;
+            $ = new SettingsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder isCompression(@Nullable Boolean isCompression) {
-            this.isCompression = isCompression;
+            $.isCompression = isCompression;
             return this;
         }
+
         public Builder issqlcompression(@Nullable Boolean issqlcompression) {
-            this.issqlcompression = issqlcompression;
+            $.issqlcompression = issqlcompression;
             return this;
         }
+
         public Builder timeZone(@Nullable String timeZone) {
-            this.timeZone = timeZone;
+            $.timeZone = timeZone;
             return this;
-        }        public SettingsResponse build() {
-            return new SettingsResponse(isCompression, issqlcompression, timeZone);
+        }
+
+        public SettingsResponse build() {
+            return $;
         }
     }
+
 }

@@ -15,78 +15,72 @@ public final class GetAutoscalerArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetAutoscalerArgs Empty = new GetAutoscalerArgs();
 
     @Import(name="autoscaler", required=true)
-      private final String autoscaler;
+    private String autoscaler;
 
     public String autoscaler() {
         return this.autoscaler;
     }
 
     @Import(name="project")
-      private final @Nullable String project;
+    private @Nullable String project;
 
     public Optional<String> project() {
-        return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
+        return Optional.ofNullable(this.project);
     }
 
     @Import(name="zone", required=true)
-      private final String zone;
+    private String zone;
 
     public String zone() {
         return this.zone;
     }
 
-    public GetAutoscalerArgs(
-        String autoscaler,
-        @Nullable String project,
-        String zone) {
-        this.autoscaler = Objects.requireNonNull(autoscaler, "expected parameter 'autoscaler' to be non-null");
-        this.project = project;
-        this.zone = Objects.requireNonNull(zone, "expected parameter 'zone' to be non-null");
-    }
+    private GetAutoscalerArgs() {}
 
-    private GetAutoscalerArgs() {
-        this.autoscaler = null;
-        this.project = null;
-        this.zone = null;
+    private GetAutoscalerArgs(GetAutoscalerArgs $) {
+        this.autoscaler = $.autoscaler;
+        this.project = $.project;
+        this.zone = $.zone;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetAutoscalerArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String autoscaler;
-        private @Nullable String project;
-        private String zone;
+        private GetAutoscalerArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetAutoscalerArgs();
         }
 
         public Builder(GetAutoscalerArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.autoscaler = defaults.autoscaler;
-    	      this.project = defaults.project;
-    	      this.zone = defaults.zone;
+            $ = new GetAutoscalerArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder autoscaler(String autoscaler) {
-            this.autoscaler = Objects.requireNonNull(autoscaler);
+            $.autoscaler = autoscaler;
             return this;
         }
+
         public Builder project(@Nullable String project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
+
         public Builder zone(String zone) {
-            this.zone = Objects.requireNonNull(zone);
+            $.zone = zone;
             return this;
-        }        public GetAutoscalerArgs build() {
-            return new GetAutoscalerArgs(autoscaler, project, zone);
+        }
+
+        public GetAutoscalerArgs build() {
+            $.autoscaler = Objects.requireNonNull($.autoscaler, "expected parameter 'autoscaler' to be non-null");
+            $.zone = Objects.requireNonNull($.zone, "expected parameter 'zone' to be non-null");
+            return $;
         }
     }
+
 }

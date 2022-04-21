@@ -26,10 +26,10 @@ public final class HttpReadSettingsResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="additionalHeaders")
-      private final @Nullable Object additionalHeaders;
+    private @Nullable Object additionalHeaders;
 
     public Optional<Object> additionalHeaders() {
-        return this.additionalHeaders == null ? Optional.empty() : Optional.ofNullable(this.additionalHeaders);
+        return Optional.ofNullable(this.additionalHeaders);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class HttpReadSettingsResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="disableMetricsCollection")
-      private final @Nullable Object disableMetricsCollection;
+    private @Nullable Object disableMetricsCollection;
 
     public Optional<Object> disableMetricsCollection() {
-        return this.disableMetricsCollection == null ? Optional.empty() : Optional.ofNullable(this.disableMetricsCollection);
+        return Optional.ofNullable(this.disableMetricsCollection);
     }
 
     /**
@@ -48,10 +48,10 @@ public final class HttpReadSettingsResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="enablePartitionDiscovery")
-      private final @Nullable Boolean enablePartitionDiscovery;
+    private @Nullable Boolean enablePartitionDiscovery;
 
     public Optional<Boolean> enablePartitionDiscovery() {
-        return this.enablePartitionDiscovery == null ? Optional.empty() : Optional.ofNullable(this.enablePartitionDiscovery);
+        return Optional.ofNullable(this.enablePartitionDiscovery);
     }
 
     /**
@@ -59,10 +59,10 @@ public final class HttpReadSettingsResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="maxConcurrentConnections")
-      private final @Nullable Object maxConcurrentConnections;
+    private @Nullable Object maxConcurrentConnections;
 
     public Optional<Object> maxConcurrentConnections() {
-        return this.maxConcurrentConnections == null ? Optional.empty() : Optional.ofNullable(this.maxConcurrentConnections);
+        return Optional.ofNullable(this.maxConcurrentConnections);
     }
 
     /**
@@ -70,10 +70,10 @@ public final class HttpReadSettingsResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="partitionRootPath")
-      private final @Nullable Object partitionRootPath;
+    private @Nullable Object partitionRootPath;
 
     public Optional<Object> partitionRootPath() {
-        return this.partitionRootPath == null ? Optional.empty() : Optional.ofNullable(this.partitionRootPath);
+        return Optional.ofNullable(this.partitionRootPath);
     }
 
     /**
@@ -81,10 +81,10 @@ public final class HttpReadSettingsResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="requestBody")
-      private final @Nullable Object requestBody;
+    private @Nullable Object requestBody;
 
     public Optional<Object> requestBody() {
-        return this.requestBody == null ? Optional.empty() : Optional.ofNullable(this.requestBody);
+        return Optional.ofNullable(this.requestBody);
     }
 
     /**
@@ -92,10 +92,10 @@ public final class HttpReadSettingsResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="requestMethod")
-      private final @Nullable Object requestMethod;
+    private @Nullable Object requestMethod;
 
     public Optional<Object> requestMethod() {
-        return this.requestMethod == null ? Optional.empty() : Optional.ofNullable(this.requestMethod);
+        return Optional.ofNullable(this.requestMethod);
     }
 
     /**
@@ -103,10 +103,10 @@ public final class HttpReadSettingsResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="requestTimeout")
-      private final @Nullable Object requestTimeout;
+    private @Nullable Object requestTimeout;
 
     public Optional<Object> requestTimeout() {
-        return this.requestTimeout == null ? Optional.empty() : Optional.ofNullable(this.requestTimeout);
+        return Optional.ofNullable(this.requestTimeout);
     }
 
     /**
@@ -115,118 +115,93 @@ public final class HttpReadSettingsResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
     }
 
-    public HttpReadSettingsResponse(
-        @Nullable Object additionalHeaders,
-        @Nullable Object disableMetricsCollection,
-        @Nullable Boolean enablePartitionDiscovery,
-        @Nullable Object maxConcurrentConnections,
-        @Nullable Object partitionRootPath,
-        @Nullable Object requestBody,
-        @Nullable Object requestMethod,
-        @Nullable Object requestTimeout,
-        String type) {
-        this.additionalHeaders = additionalHeaders;
-        this.disableMetricsCollection = disableMetricsCollection;
-        this.enablePartitionDiscovery = enablePartitionDiscovery;
-        this.maxConcurrentConnections = maxConcurrentConnections;
-        this.partitionRootPath = partitionRootPath;
-        this.requestBody = requestBody;
-        this.requestMethod = requestMethod;
-        this.requestTimeout = requestTimeout;
-        this.type = Codegen.stringProp("type").arg(type).require();
-    }
+    private HttpReadSettingsResponse() {}
 
-    private HttpReadSettingsResponse() {
-        this.additionalHeaders = null;
-        this.disableMetricsCollection = null;
-        this.enablePartitionDiscovery = null;
-        this.maxConcurrentConnections = null;
-        this.partitionRootPath = null;
-        this.requestBody = null;
-        this.requestMethod = null;
-        this.requestTimeout = null;
-        this.type = null;
+    private HttpReadSettingsResponse(HttpReadSettingsResponse $) {
+        this.additionalHeaders = $.additionalHeaders;
+        this.disableMetricsCollection = $.disableMetricsCollection;
+        this.enablePartitionDiscovery = $.enablePartitionDiscovery;
+        this.maxConcurrentConnections = $.maxConcurrentConnections;
+        this.partitionRootPath = $.partitionRootPath;
+        this.requestBody = $.requestBody;
+        this.requestMethod = $.requestMethod;
+        this.requestTimeout = $.requestTimeout;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(HttpReadSettingsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Object additionalHeaders;
-        private @Nullable Object disableMetricsCollection;
-        private @Nullable Boolean enablePartitionDiscovery;
-        private @Nullable Object maxConcurrentConnections;
-        private @Nullable Object partitionRootPath;
-        private @Nullable Object requestBody;
-        private @Nullable Object requestMethod;
-        private @Nullable Object requestTimeout;
-        private String type;
+        private HttpReadSettingsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new HttpReadSettingsResponse();
         }
 
         public Builder(HttpReadSettingsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.additionalHeaders = defaults.additionalHeaders;
-    	      this.disableMetricsCollection = defaults.disableMetricsCollection;
-    	      this.enablePartitionDiscovery = defaults.enablePartitionDiscovery;
-    	      this.maxConcurrentConnections = defaults.maxConcurrentConnections;
-    	      this.partitionRootPath = defaults.partitionRootPath;
-    	      this.requestBody = defaults.requestBody;
-    	      this.requestMethod = defaults.requestMethod;
-    	      this.requestTimeout = defaults.requestTimeout;
-    	      this.type = defaults.type;
+            $ = new HttpReadSettingsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder additionalHeaders(@Nullable Object additionalHeaders) {
-            this.additionalHeaders = additionalHeaders;
+            $.additionalHeaders = additionalHeaders;
             return this;
         }
+
         public Builder disableMetricsCollection(@Nullable Object disableMetricsCollection) {
-            this.disableMetricsCollection = disableMetricsCollection;
+            $.disableMetricsCollection = disableMetricsCollection;
             return this;
         }
+
         public Builder enablePartitionDiscovery(@Nullable Boolean enablePartitionDiscovery) {
-            this.enablePartitionDiscovery = enablePartitionDiscovery;
+            $.enablePartitionDiscovery = enablePartitionDiscovery;
             return this;
         }
+
         public Builder maxConcurrentConnections(@Nullable Object maxConcurrentConnections) {
-            this.maxConcurrentConnections = maxConcurrentConnections;
+            $.maxConcurrentConnections = maxConcurrentConnections;
             return this;
         }
+
         public Builder partitionRootPath(@Nullable Object partitionRootPath) {
-            this.partitionRootPath = partitionRootPath;
+            $.partitionRootPath = partitionRootPath;
             return this;
         }
+
         public Builder requestBody(@Nullable Object requestBody) {
-            this.requestBody = requestBody;
+            $.requestBody = requestBody;
             return this;
         }
+
         public Builder requestMethod(@Nullable Object requestMethod) {
-            this.requestMethod = requestMethod;
+            $.requestMethod = requestMethod;
             return this;
         }
+
         public Builder requestTimeout(@Nullable Object requestTimeout) {
-            this.requestTimeout = requestTimeout;
+            $.requestTimeout = requestTimeout;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
-        }        public HttpReadSettingsResponse build() {
-            return new HttpReadSettingsResponse(additionalHeaders, disableMetricsCollection, enablePartitionDiscovery, maxConcurrentConnections, partitionRootPath, requestBody, requestMethod, requestTimeout, type);
+        }
+
+        public HttpReadSettingsResponse build() {
+            $.type = Codegen.stringProp("type").arg($.type).require();
+            return $;
         }
     }
+
 }

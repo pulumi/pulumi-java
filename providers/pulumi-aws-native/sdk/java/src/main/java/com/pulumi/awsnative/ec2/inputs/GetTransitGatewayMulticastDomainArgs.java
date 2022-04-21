@@ -17,45 +17,45 @@ public final class GetTransitGatewayMulticastDomainArgs extends com.pulumi.resou
      * 
      */
     @Import(name="transitGatewayMulticastDomainId", required=true)
-      private final String transitGatewayMulticastDomainId;
+    private String transitGatewayMulticastDomainId;
 
     public String transitGatewayMulticastDomainId() {
         return this.transitGatewayMulticastDomainId;
     }
 
-    public GetTransitGatewayMulticastDomainArgs(String transitGatewayMulticastDomainId) {
-        this.transitGatewayMulticastDomainId = Objects.requireNonNull(transitGatewayMulticastDomainId, "expected parameter 'transitGatewayMulticastDomainId' to be non-null");
-    }
+    private GetTransitGatewayMulticastDomainArgs() {}
 
-    private GetTransitGatewayMulticastDomainArgs() {
-        this.transitGatewayMulticastDomainId = null;
+    private GetTransitGatewayMulticastDomainArgs(GetTransitGatewayMulticastDomainArgs $) {
+        this.transitGatewayMulticastDomainId = $.transitGatewayMulticastDomainId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetTransitGatewayMulticastDomainArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String transitGatewayMulticastDomainId;
+        private GetTransitGatewayMulticastDomainArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetTransitGatewayMulticastDomainArgs();
         }
 
         public Builder(GetTransitGatewayMulticastDomainArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.transitGatewayMulticastDomainId = defaults.transitGatewayMulticastDomainId;
+            $ = new GetTransitGatewayMulticastDomainArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder transitGatewayMulticastDomainId(String transitGatewayMulticastDomainId) {
-            this.transitGatewayMulticastDomainId = Objects.requireNonNull(transitGatewayMulticastDomainId);
+            $.transitGatewayMulticastDomainId = transitGatewayMulticastDomainId;
             return this;
-        }        public GetTransitGatewayMulticastDomainArgs build() {
-            return new GetTransitGatewayMulticastDomainArgs(transitGatewayMulticastDomainId);
+        }
+
+        public GetTransitGatewayMulticastDomainArgs build() {
+            $.transitGatewayMulticastDomainId = Objects.requireNonNull($.transitGatewayMulticastDomainId, "expected parameter 'transitGatewayMulticastDomainId' to be non-null");
+            return $;
         }
     }
+
 }

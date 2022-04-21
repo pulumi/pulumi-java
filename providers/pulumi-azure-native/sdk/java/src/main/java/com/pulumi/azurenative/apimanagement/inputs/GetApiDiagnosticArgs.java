@@ -17,7 +17,7 @@ public final class GetApiDiagnosticArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="apiId", required=true)
-      private final String apiId;
+    private String apiId;
 
     public String apiId() {
         return this.apiId;
@@ -28,7 +28,7 @@ public final class GetApiDiagnosticArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="diagnosticId", required=true)
-      private final String diagnosticId;
+    private String diagnosticId;
 
     public String diagnosticId() {
         return this.diagnosticId;
@@ -39,7 +39,7 @@ public final class GetApiDiagnosticArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -50,73 +50,66 @@ public final class GetApiDiagnosticArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="serviceName", required=true)
-      private final String serviceName;
+    private String serviceName;
 
     public String serviceName() {
         return this.serviceName;
     }
 
-    public GetApiDiagnosticArgs(
-        String apiId,
-        String diagnosticId,
-        String resourceGroupName,
-        String serviceName) {
-        this.apiId = Objects.requireNonNull(apiId, "expected parameter 'apiId' to be non-null");
-        this.diagnosticId = Objects.requireNonNull(diagnosticId, "expected parameter 'diagnosticId' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.serviceName = Objects.requireNonNull(serviceName, "expected parameter 'serviceName' to be non-null");
-    }
+    private GetApiDiagnosticArgs() {}
 
-    private GetApiDiagnosticArgs() {
-        this.apiId = null;
-        this.diagnosticId = null;
-        this.resourceGroupName = null;
-        this.serviceName = null;
+    private GetApiDiagnosticArgs(GetApiDiagnosticArgs $) {
+        this.apiId = $.apiId;
+        this.diagnosticId = $.diagnosticId;
+        this.resourceGroupName = $.resourceGroupName;
+        this.serviceName = $.serviceName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetApiDiagnosticArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String apiId;
-        private String diagnosticId;
-        private String resourceGroupName;
-        private String serviceName;
+        private GetApiDiagnosticArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetApiDiagnosticArgs();
         }
 
         public Builder(GetApiDiagnosticArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.apiId = defaults.apiId;
-    	      this.diagnosticId = defaults.diagnosticId;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.serviceName = defaults.serviceName;
+            $ = new GetApiDiagnosticArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder apiId(String apiId) {
-            this.apiId = Objects.requireNonNull(apiId);
+            $.apiId = apiId;
             return this;
         }
+
         public Builder diagnosticId(String diagnosticId) {
-            this.diagnosticId = Objects.requireNonNull(diagnosticId);
+            $.diagnosticId = diagnosticId;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder serviceName(String serviceName) {
-            this.serviceName = Objects.requireNonNull(serviceName);
+            $.serviceName = serviceName;
             return this;
-        }        public GetApiDiagnosticArgs build() {
-            return new GetApiDiagnosticArgs(apiId, diagnosticId, resourceGroupName, serviceName);
+        }
+
+        public GetApiDiagnosticArgs build() {
+            $.apiId = Objects.requireNonNull($.apiId, "expected parameter 'apiId' to be non-null");
+            $.diagnosticId = Objects.requireNonNull($.diagnosticId, "expected parameter 'diagnosticId' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.serviceName = Objects.requireNonNull($.serviceName, "expected parameter 'serviceName' to be non-null");
+            return $;
         }
     }
+
 }

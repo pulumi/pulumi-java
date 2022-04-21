@@ -8,7 +8,6 @@ import com.pulumi.awsnative.wafv2.inputs.WebACLFieldToMatchArgs;
 import com.pulumi.awsnative.wafv2.inputs.WebACLTextTransformationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.util.List;
 import java.util.Objects;
@@ -23,113 +22,107 @@ public final class WebACLSizeConstraintStatementArgs extends com.pulumi.resource
     public static final WebACLSizeConstraintStatementArgs Empty = new WebACLSizeConstraintStatementArgs();
 
     @Import(name="comparisonOperator", required=true)
-      private final Output<WebACLSizeConstraintStatementComparisonOperator> comparisonOperator;
+    private Output<WebACLSizeConstraintStatementComparisonOperator> comparisonOperator;
 
     public Output<WebACLSizeConstraintStatementComparisonOperator> comparisonOperator() {
         return this.comparisonOperator;
     }
 
     @Import(name="fieldToMatch", required=true)
-      private final Output<WebACLFieldToMatchArgs> fieldToMatch;
+    private Output<WebACLFieldToMatchArgs> fieldToMatch;
 
     public Output<WebACLFieldToMatchArgs> fieldToMatch() {
         return this.fieldToMatch;
     }
 
     @Import(name="size", required=true)
-      private final Output<Double> size;
+    private Output<Double> size;
 
     public Output<Double> size() {
         return this.size;
     }
 
     @Import(name="textTransformations", required=true)
-      private final Output<List<WebACLTextTransformationArgs>> textTransformations;
+    private Output<List<WebACLTextTransformationArgs>> textTransformations;
 
     public Output<List<WebACLTextTransformationArgs>> textTransformations() {
         return this.textTransformations;
     }
 
-    public WebACLSizeConstraintStatementArgs(
-        Output<WebACLSizeConstraintStatementComparisonOperator> comparisonOperator,
-        Output<WebACLFieldToMatchArgs> fieldToMatch,
-        Output<Double> size,
-        Output<List<WebACLTextTransformationArgs>> textTransformations) {
-        this.comparisonOperator = Objects.requireNonNull(comparisonOperator, "expected parameter 'comparisonOperator' to be non-null");
-        this.fieldToMatch = Objects.requireNonNull(fieldToMatch, "expected parameter 'fieldToMatch' to be non-null");
-        this.size = Objects.requireNonNull(size, "expected parameter 'size' to be non-null");
-        this.textTransformations = Objects.requireNonNull(textTransformations, "expected parameter 'textTransformations' to be non-null");
-    }
+    private WebACLSizeConstraintStatementArgs() {}
 
-    private WebACLSizeConstraintStatementArgs() {
-        this.comparisonOperator = Codegen.empty();
-        this.fieldToMatch = Codegen.empty();
-        this.size = Codegen.empty();
-        this.textTransformations = Codegen.empty();
+    private WebACLSizeConstraintStatementArgs(WebACLSizeConstraintStatementArgs $) {
+        this.comparisonOperator = $.comparisonOperator;
+        this.fieldToMatch = $.fieldToMatch;
+        this.size = $.size;
+        this.textTransformations = $.textTransformations;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WebACLSizeConstraintStatementArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<WebACLSizeConstraintStatementComparisonOperator> comparisonOperator;
-        private Output<WebACLFieldToMatchArgs> fieldToMatch;
-        private Output<Double> size;
-        private Output<List<WebACLTextTransformationArgs>> textTransformations;
+        private WebACLSizeConstraintStatementArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new WebACLSizeConstraintStatementArgs();
         }
 
         public Builder(WebACLSizeConstraintStatementArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.comparisonOperator = defaults.comparisonOperator;
-    	      this.fieldToMatch = defaults.fieldToMatch;
-    	      this.size = defaults.size;
-    	      this.textTransformations = defaults.textTransformations;
+            $ = new WebACLSizeConstraintStatementArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder comparisonOperator(Output<WebACLSizeConstraintStatementComparisonOperator> comparisonOperator) {
-            this.comparisonOperator = Objects.requireNonNull(comparisonOperator);
+            $.comparisonOperator = comparisonOperator;
             return this;
         }
+
         public Builder comparisonOperator(WebACLSizeConstraintStatementComparisonOperator comparisonOperator) {
-            this.comparisonOperator = Output.of(Objects.requireNonNull(comparisonOperator));
-            return this;
+            return comparisonOperator(Output.of(comparisonOperator));
         }
+
         public Builder fieldToMatch(Output<WebACLFieldToMatchArgs> fieldToMatch) {
-            this.fieldToMatch = Objects.requireNonNull(fieldToMatch);
+            $.fieldToMatch = fieldToMatch;
             return this;
         }
+
         public Builder fieldToMatch(WebACLFieldToMatchArgs fieldToMatch) {
-            this.fieldToMatch = Output.of(Objects.requireNonNull(fieldToMatch));
-            return this;
+            return fieldToMatch(Output.of(fieldToMatch));
         }
+
         public Builder size(Output<Double> size) {
-            this.size = Objects.requireNonNull(size);
+            $.size = size;
             return this;
         }
+
         public Builder size(Double size) {
-            this.size = Output.of(Objects.requireNonNull(size));
-            return this;
+            return size(Output.of(size));
         }
+
         public Builder textTransformations(Output<List<WebACLTextTransformationArgs>> textTransformations) {
-            this.textTransformations = Objects.requireNonNull(textTransformations);
+            $.textTransformations = textTransformations;
             return this;
         }
+
         public Builder textTransformations(List<WebACLTextTransformationArgs> textTransformations) {
-            this.textTransformations = Output.of(Objects.requireNonNull(textTransformations));
-            return this;
+            return textTransformations(Output.of(textTransformations));
         }
+
         public Builder textTransformations(WebACLTextTransformationArgs... textTransformations) {
             return textTransformations(List.of(textTransformations));
-        }        public WebACLSizeConstraintStatementArgs build() {
-            return new WebACLSizeConstraintStatementArgs(comparisonOperator, fieldToMatch, size, textTransformations);
+        }
+
+        public WebACLSizeConstraintStatementArgs build() {
+            $.comparisonOperator = Objects.requireNonNull($.comparisonOperator, "expected parameter 'comparisonOperator' to be non-null");
+            $.fieldToMatch = Objects.requireNonNull($.fieldToMatch, "expected parameter 'fieldToMatch' to be non-null");
+            $.size = Objects.requireNonNull($.size, "expected parameter 'size' to be non-null");
+            $.textTransformations = Objects.requireNonNull($.textTransformations, "expected parameter 'textTransformations' to be non-null");
+            return $;
         }
     }
+
 }

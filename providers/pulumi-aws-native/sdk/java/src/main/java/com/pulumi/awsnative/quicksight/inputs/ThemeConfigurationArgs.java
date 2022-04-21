@@ -9,8 +9,8 @@ import com.pulumi.awsnative.quicksight.inputs.ThemeTypographyArgs;
 import com.pulumi.awsnative.quicksight.inputs.ThemeUIColorPaletteArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,110 +24,99 @@ public final class ThemeConfigurationArgs extends com.pulumi.resources.ResourceA
     public static final ThemeConfigurationArgs Empty = new ThemeConfigurationArgs();
 
     @Import(name="dataColorPalette")
-      private final @Nullable Output<ThemeDataColorPaletteArgs> dataColorPalette;
+    private @Nullable Output<ThemeDataColorPaletteArgs> dataColorPalette;
 
-    public Output<ThemeDataColorPaletteArgs> dataColorPalette() {
-        return this.dataColorPalette == null ? Codegen.empty() : this.dataColorPalette;
+    public Optional<Output<ThemeDataColorPaletteArgs>> dataColorPalette() {
+        return Optional.ofNullable(this.dataColorPalette);
     }
 
     @Import(name="sheet")
-      private final @Nullable Output<ThemeSheetStyleArgs> sheet;
+    private @Nullable Output<ThemeSheetStyleArgs> sheet;
 
-    public Output<ThemeSheetStyleArgs> sheet() {
-        return this.sheet == null ? Codegen.empty() : this.sheet;
+    public Optional<Output<ThemeSheetStyleArgs>> sheet() {
+        return Optional.ofNullable(this.sheet);
     }
 
     @Import(name="typography")
-      private final @Nullable Output<ThemeTypographyArgs> typography;
+    private @Nullable Output<ThemeTypographyArgs> typography;
 
-    public Output<ThemeTypographyArgs> typography() {
-        return this.typography == null ? Codegen.empty() : this.typography;
+    public Optional<Output<ThemeTypographyArgs>> typography() {
+        return Optional.ofNullable(this.typography);
     }
 
     @Import(name="uIColorPalette")
-      private final @Nullable Output<ThemeUIColorPaletteArgs> uIColorPalette;
+    private @Nullable Output<ThemeUIColorPaletteArgs> uIColorPalette;
 
-    public Output<ThemeUIColorPaletteArgs> uIColorPalette() {
-        return this.uIColorPalette == null ? Codegen.empty() : this.uIColorPalette;
+    public Optional<Output<ThemeUIColorPaletteArgs>> uIColorPalette() {
+        return Optional.ofNullable(this.uIColorPalette);
     }
 
-    public ThemeConfigurationArgs(
-        @Nullable Output<ThemeDataColorPaletteArgs> dataColorPalette,
-        @Nullable Output<ThemeSheetStyleArgs> sheet,
-        @Nullable Output<ThemeTypographyArgs> typography,
-        @Nullable Output<ThemeUIColorPaletteArgs> uIColorPalette) {
-        this.dataColorPalette = dataColorPalette;
-        this.sheet = sheet;
-        this.typography = typography;
-        this.uIColorPalette = uIColorPalette;
-    }
+    private ThemeConfigurationArgs() {}
 
-    private ThemeConfigurationArgs() {
-        this.dataColorPalette = Codegen.empty();
-        this.sheet = Codegen.empty();
-        this.typography = Codegen.empty();
-        this.uIColorPalette = Codegen.empty();
+    private ThemeConfigurationArgs(ThemeConfigurationArgs $) {
+        this.dataColorPalette = $.dataColorPalette;
+        this.sheet = $.sheet;
+        this.typography = $.typography;
+        this.uIColorPalette = $.uIColorPalette;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ThemeConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<ThemeDataColorPaletteArgs> dataColorPalette;
-        private @Nullable Output<ThemeSheetStyleArgs> sheet;
-        private @Nullable Output<ThemeTypographyArgs> typography;
-        private @Nullable Output<ThemeUIColorPaletteArgs> uIColorPalette;
+        private ThemeConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ThemeConfigurationArgs();
         }
 
         public Builder(ThemeConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dataColorPalette = defaults.dataColorPalette;
-    	      this.sheet = defaults.sheet;
-    	      this.typography = defaults.typography;
-    	      this.uIColorPalette = defaults.uIColorPalette;
+            $ = new ThemeConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder dataColorPalette(@Nullable Output<ThemeDataColorPaletteArgs> dataColorPalette) {
-            this.dataColorPalette = dataColorPalette;
+            $.dataColorPalette = dataColorPalette;
             return this;
         }
-        public Builder dataColorPalette(@Nullable ThemeDataColorPaletteArgs dataColorPalette) {
-            this.dataColorPalette = Codegen.ofNullable(dataColorPalette);
-            return this;
+
+        public Builder dataColorPalette(ThemeDataColorPaletteArgs dataColorPalette) {
+            return dataColorPalette(Output.of(dataColorPalette));
         }
+
         public Builder sheet(@Nullable Output<ThemeSheetStyleArgs> sheet) {
-            this.sheet = sheet;
+            $.sheet = sheet;
             return this;
         }
-        public Builder sheet(@Nullable ThemeSheetStyleArgs sheet) {
-            this.sheet = Codegen.ofNullable(sheet);
-            return this;
+
+        public Builder sheet(ThemeSheetStyleArgs sheet) {
+            return sheet(Output.of(sheet));
         }
+
         public Builder typography(@Nullable Output<ThemeTypographyArgs> typography) {
-            this.typography = typography;
+            $.typography = typography;
             return this;
         }
-        public Builder typography(@Nullable ThemeTypographyArgs typography) {
-            this.typography = Codegen.ofNullable(typography);
-            return this;
+
+        public Builder typography(ThemeTypographyArgs typography) {
+            return typography(Output.of(typography));
         }
+
         public Builder uIColorPalette(@Nullable Output<ThemeUIColorPaletteArgs> uIColorPalette) {
-            this.uIColorPalette = uIColorPalette;
+            $.uIColorPalette = uIColorPalette;
             return this;
         }
-        public Builder uIColorPalette(@Nullable ThemeUIColorPaletteArgs uIColorPalette) {
-            this.uIColorPalette = Codegen.ofNullable(uIColorPalette);
-            return this;
-        }        public ThemeConfigurationArgs build() {
-            return new ThemeConfigurationArgs(dataColorPalette, sheet, typography, uIColorPalette);
+
+        public Builder uIColorPalette(ThemeUIColorPaletteArgs uIColorPalette) {
+            return uIColorPalette(Output.of(uIColorPalette));
+        }
+
+        public ThemeConfigurationArgs build() {
+            return $;
         }
     }
+
 }

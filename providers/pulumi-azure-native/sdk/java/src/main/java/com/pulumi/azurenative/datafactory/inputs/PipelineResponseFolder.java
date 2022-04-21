@@ -23,45 +23,44 @@ public final class PipelineResponseFolder extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="name")
-      private final @Nullable String name;
+    private @Nullable String name;
 
     public Optional<String> name() {
-        return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
+        return Optional.ofNullable(this.name);
     }
 
-    public PipelineResponseFolder(@Nullable String name) {
-        this.name = name;
-    }
+    private PipelineResponseFolder() {}
 
-    private PipelineResponseFolder() {
-        this.name = null;
+    private PipelineResponseFolder(PipelineResponseFolder $) {
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PipelineResponseFolder defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String name;
+        private PipelineResponseFolder $;
 
         public Builder() {
-    	      // Empty
+            $ = new PipelineResponseFolder();
         }
 
         public Builder(PipelineResponseFolder defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
+            $ = new PipelineResponseFolder(Objects.requireNonNull(defaults));
         }
 
         public Builder name(@Nullable String name) {
-            this.name = name;
+            $.name = name;
             return this;
-        }        public PipelineResponseFolder build() {
-            return new PipelineResponseFolder(name);
+        }
+
+        public PipelineResponseFolder build() {
+            return $;
         }
     }
+
 }

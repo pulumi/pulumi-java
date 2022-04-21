@@ -7,7 +7,6 @@ import com.pulumi.awsnative.iotsitewise.inputs.AccessPolicyIdentityArgs;
 import com.pulumi.awsnative.iotsitewise.inputs.AccessPolicyResourceArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +20,7 @@ public final class AccessPolicyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="accessPolicyIdentity", required=true)
-      private final Output<AccessPolicyIdentityArgs> accessPolicyIdentity;
+    private Output<AccessPolicyIdentityArgs> accessPolicyIdentity;
 
     public Output<AccessPolicyIdentityArgs> accessPolicyIdentity() {
         return this.accessPolicyIdentity;
@@ -32,7 +31,7 @@ public final class AccessPolicyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="accessPolicyPermission", required=true)
-      private final Output<String> accessPolicyPermission;
+    private Output<String> accessPolicyPermission;
 
     public Output<String> accessPolicyPermission() {
         return this.accessPolicyPermission;
@@ -43,76 +42,71 @@ public final class AccessPolicyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="accessPolicyResource", required=true)
-      private final Output<AccessPolicyResourceArgs> accessPolicyResource;
+    private Output<AccessPolicyResourceArgs> accessPolicyResource;
 
     public Output<AccessPolicyResourceArgs> accessPolicyResource() {
         return this.accessPolicyResource;
     }
 
-    public AccessPolicyArgs(
-        Output<AccessPolicyIdentityArgs> accessPolicyIdentity,
-        Output<String> accessPolicyPermission,
-        Output<AccessPolicyResourceArgs> accessPolicyResource) {
-        this.accessPolicyIdentity = Objects.requireNonNull(accessPolicyIdentity, "expected parameter 'accessPolicyIdentity' to be non-null");
-        this.accessPolicyPermission = Objects.requireNonNull(accessPolicyPermission, "expected parameter 'accessPolicyPermission' to be non-null");
-        this.accessPolicyResource = Objects.requireNonNull(accessPolicyResource, "expected parameter 'accessPolicyResource' to be non-null");
-    }
+    private AccessPolicyArgs() {}
 
-    private AccessPolicyArgs() {
-        this.accessPolicyIdentity = Codegen.empty();
-        this.accessPolicyPermission = Codegen.empty();
-        this.accessPolicyResource = Codegen.empty();
+    private AccessPolicyArgs(AccessPolicyArgs $) {
+        this.accessPolicyIdentity = $.accessPolicyIdentity;
+        this.accessPolicyPermission = $.accessPolicyPermission;
+        this.accessPolicyResource = $.accessPolicyResource;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AccessPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<AccessPolicyIdentityArgs> accessPolicyIdentity;
-        private Output<String> accessPolicyPermission;
-        private Output<AccessPolicyResourceArgs> accessPolicyResource;
+        private AccessPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AccessPolicyArgs();
         }
 
         public Builder(AccessPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accessPolicyIdentity = defaults.accessPolicyIdentity;
-    	      this.accessPolicyPermission = defaults.accessPolicyPermission;
-    	      this.accessPolicyResource = defaults.accessPolicyResource;
+            $ = new AccessPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder accessPolicyIdentity(Output<AccessPolicyIdentityArgs> accessPolicyIdentity) {
-            this.accessPolicyIdentity = Objects.requireNonNull(accessPolicyIdentity);
+            $.accessPolicyIdentity = accessPolicyIdentity;
             return this;
         }
+
         public Builder accessPolicyIdentity(AccessPolicyIdentityArgs accessPolicyIdentity) {
-            this.accessPolicyIdentity = Output.of(Objects.requireNonNull(accessPolicyIdentity));
-            return this;
+            return accessPolicyIdentity(Output.of(accessPolicyIdentity));
         }
+
         public Builder accessPolicyPermission(Output<String> accessPolicyPermission) {
-            this.accessPolicyPermission = Objects.requireNonNull(accessPolicyPermission);
+            $.accessPolicyPermission = accessPolicyPermission;
             return this;
         }
+
         public Builder accessPolicyPermission(String accessPolicyPermission) {
-            this.accessPolicyPermission = Output.of(Objects.requireNonNull(accessPolicyPermission));
-            return this;
+            return accessPolicyPermission(Output.of(accessPolicyPermission));
         }
+
         public Builder accessPolicyResource(Output<AccessPolicyResourceArgs> accessPolicyResource) {
-            this.accessPolicyResource = Objects.requireNonNull(accessPolicyResource);
+            $.accessPolicyResource = accessPolicyResource;
             return this;
         }
+
         public Builder accessPolicyResource(AccessPolicyResourceArgs accessPolicyResource) {
-            this.accessPolicyResource = Output.of(Objects.requireNonNull(accessPolicyResource));
-            return this;
-        }        public AccessPolicyArgs build() {
-            return new AccessPolicyArgs(accessPolicyIdentity, accessPolicyPermission, accessPolicyResource);
+            return accessPolicyResource(Output.of(accessPolicyResource));
+        }
+
+        public AccessPolicyArgs build() {
+            $.accessPolicyIdentity = Objects.requireNonNull($.accessPolicyIdentity, "expected parameter 'accessPolicyIdentity' to be non-null");
+            $.accessPolicyPermission = Objects.requireNonNull($.accessPolicyPermission, "expected parameter 'accessPolicyPermission' to be non-null");
+            $.accessPolicyResource = Objects.requireNonNull($.accessPolicyResource, "expected parameter 'accessPolicyResource' to be non-null");
+            return $;
         }
     }
+
 }

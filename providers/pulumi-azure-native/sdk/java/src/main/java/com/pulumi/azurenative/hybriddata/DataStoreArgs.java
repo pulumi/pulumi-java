@@ -7,11 +7,11 @@ import com.pulumi.azurenative.hybriddata.enums.State;
 import com.pulumi.azurenative.hybriddata.inputs.CustomerSecretArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class DataStoreArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="customerSecrets")
-      private final @Nullable Output<List<CustomerSecretArgs>> customerSecrets;
+    private @Nullable Output<List<CustomerSecretArgs>> customerSecrets;
 
-    public Output<List<CustomerSecretArgs>> customerSecrets() {
-        return this.customerSecrets == null ? Codegen.empty() : this.customerSecrets;
+    public Optional<Output<List<CustomerSecretArgs>>> customerSecrets() {
+        return Optional.ofNullable(this.customerSecrets);
     }
 
     /**
@@ -35,7 +35,7 @@ public final class DataStoreArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="dataManagerName", required=true)
-      private final Output<String> dataManagerName;
+    private Output<String> dataManagerName;
 
     public Output<String> dataManagerName() {
         return this.dataManagerName;
@@ -46,10 +46,10 @@ public final class DataStoreArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="dataStoreName")
-      private final @Nullable Output<String> dataStoreName;
+    private @Nullable Output<String> dataStoreName;
 
-    public Output<String> dataStoreName() {
-        return this.dataStoreName == null ? Codegen.empty() : this.dataStoreName;
+    public Optional<Output<String>> dataStoreName() {
+        return Optional.ofNullable(this.dataStoreName);
     }
 
     /**
@@ -57,7 +57,7 @@ public final class DataStoreArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="dataStoreTypeId", required=true)
-      private final Output<String> dataStoreTypeId;
+    private Output<String> dataStoreTypeId;
 
     public Output<String> dataStoreTypeId() {
         return this.dataStoreTypeId;
@@ -68,10 +68,10 @@ public final class DataStoreArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="extendedProperties")
-      private final @Nullable Output<Object> extendedProperties;
+    private @Nullable Output<Object> extendedProperties;
 
-    public Output<Object> extendedProperties() {
-        return this.extendedProperties == null ? Codegen.empty() : this.extendedProperties;
+    public Optional<Output<Object>> extendedProperties() {
+        return Optional.ofNullable(this.extendedProperties);
     }
 
     /**
@@ -79,10 +79,10 @@ public final class DataStoreArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="repositoryId")
-      private final @Nullable Output<String> repositoryId;
+    private @Nullable Output<String> repositoryId;
 
-    public Output<String> repositoryId() {
-        return this.repositoryId == null ? Codegen.empty() : this.repositoryId;
+    public Optional<Output<String>> repositoryId() {
+        return Optional.ofNullable(this.repositoryId);
     }
 
     /**
@@ -90,7 +90,7 @@ public final class DataStoreArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -101,144 +101,126 @@ public final class DataStoreArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="state", required=true)
-      private final Output<State> state;
+    private Output<State> state;
 
     public Output<State> state() {
         return this.state;
     }
 
-    public DataStoreArgs(
-        @Nullable Output<List<CustomerSecretArgs>> customerSecrets,
-        Output<String> dataManagerName,
-        @Nullable Output<String> dataStoreName,
-        Output<String> dataStoreTypeId,
-        @Nullable Output<Object> extendedProperties,
-        @Nullable Output<String> repositoryId,
-        Output<String> resourceGroupName,
-        Output<State> state) {
-        this.customerSecrets = customerSecrets;
-        this.dataManagerName = Objects.requireNonNull(dataManagerName, "expected parameter 'dataManagerName' to be non-null");
-        this.dataStoreName = dataStoreName;
-        this.dataStoreTypeId = Objects.requireNonNull(dataStoreTypeId, "expected parameter 'dataStoreTypeId' to be non-null");
-        this.extendedProperties = extendedProperties;
-        this.repositoryId = repositoryId;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.state = Objects.requireNonNull(state, "expected parameter 'state' to be non-null");
-    }
+    private DataStoreArgs() {}
 
-    private DataStoreArgs() {
-        this.customerSecrets = Codegen.empty();
-        this.dataManagerName = Codegen.empty();
-        this.dataStoreName = Codegen.empty();
-        this.dataStoreTypeId = Codegen.empty();
-        this.extendedProperties = Codegen.empty();
-        this.repositoryId = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.state = Codegen.empty();
+    private DataStoreArgs(DataStoreArgs $) {
+        this.customerSecrets = $.customerSecrets;
+        this.dataManagerName = $.dataManagerName;
+        this.dataStoreName = $.dataStoreName;
+        this.dataStoreTypeId = $.dataStoreTypeId;
+        this.extendedProperties = $.extendedProperties;
+        this.repositoryId = $.repositoryId;
+        this.resourceGroupName = $.resourceGroupName;
+        this.state = $.state;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DataStoreArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<CustomerSecretArgs>> customerSecrets;
-        private Output<String> dataManagerName;
-        private @Nullable Output<String> dataStoreName;
-        private Output<String> dataStoreTypeId;
-        private @Nullable Output<Object> extendedProperties;
-        private @Nullable Output<String> repositoryId;
-        private Output<String> resourceGroupName;
-        private Output<State> state;
+        private DataStoreArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DataStoreArgs();
         }
 
         public Builder(DataStoreArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.customerSecrets = defaults.customerSecrets;
-    	      this.dataManagerName = defaults.dataManagerName;
-    	      this.dataStoreName = defaults.dataStoreName;
-    	      this.dataStoreTypeId = defaults.dataStoreTypeId;
-    	      this.extendedProperties = defaults.extendedProperties;
-    	      this.repositoryId = defaults.repositoryId;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.state = defaults.state;
+            $ = new DataStoreArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder customerSecrets(@Nullable Output<List<CustomerSecretArgs>> customerSecrets) {
-            this.customerSecrets = customerSecrets;
+            $.customerSecrets = customerSecrets;
             return this;
         }
-        public Builder customerSecrets(@Nullable List<CustomerSecretArgs> customerSecrets) {
-            this.customerSecrets = Codegen.ofNullable(customerSecrets);
-            return this;
+
+        public Builder customerSecrets(List<CustomerSecretArgs> customerSecrets) {
+            return customerSecrets(Output.of(customerSecrets));
         }
+
         public Builder customerSecrets(CustomerSecretArgs... customerSecrets) {
             return customerSecrets(List.of(customerSecrets));
         }
+
         public Builder dataManagerName(Output<String> dataManagerName) {
-            this.dataManagerName = Objects.requireNonNull(dataManagerName);
+            $.dataManagerName = dataManagerName;
             return this;
         }
+
         public Builder dataManagerName(String dataManagerName) {
-            this.dataManagerName = Output.of(Objects.requireNonNull(dataManagerName));
-            return this;
+            return dataManagerName(Output.of(dataManagerName));
         }
+
         public Builder dataStoreName(@Nullable Output<String> dataStoreName) {
-            this.dataStoreName = dataStoreName;
+            $.dataStoreName = dataStoreName;
             return this;
         }
-        public Builder dataStoreName(@Nullable String dataStoreName) {
-            this.dataStoreName = Codegen.ofNullable(dataStoreName);
-            return this;
+
+        public Builder dataStoreName(String dataStoreName) {
+            return dataStoreName(Output.of(dataStoreName));
         }
+
         public Builder dataStoreTypeId(Output<String> dataStoreTypeId) {
-            this.dataStoreTypeId = Objects.requireNonNull(dataStoreTypeId);
+            $.dataStoreTypeId = dataStoreTypeId;
             return this;
         }
+
         public Builder dataStoreTypeId(String dataStoreTypeId) {
-            this.dataStoreTypeId = Output.of(Objects.requireNonNull(dataStoreTypeId));
-            return this;
+            return dataStoreTypeId(Output.of(dataStoreTypeId));
         }
+
         public Builder extendedProperties(@Nullable Output<Object> extendedProperties) {
-            this.extendedProperties = extendedProperties;
+            $.extendedProperties = extendedProperties;
             return this;
         }
-        public Builder extendedProperties(@Nullable Object extendedProperties) {
-            this.extendedProperties = Codegen.ofNullable(extendedProperties);
-            return this;
+
+        public Builder extendedProperties(Object extendedProperties) {
+            return extendedProperties(Output.of(extendedProperties));
         }
+
         public Builder repositoryId(@Nullable Output<String> repositoryId) {
-            this.repositoryId = repositoryId;
+            $.repositoryId = repositoryId;
             return this;
         }
-        public Builder repositoryId(@Nullable String repositoryId) {
-            this.repositoryId = Codegen.ofNullable(repositoryId);
-            return this;
+
+        public Builder repositoryId(String repositoryId) {
+            return repositoryId(Output.of(repositoryId));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder state(Output<State> state) {
-            this.state = Objects.requireNonNull(state);
+            $.state = state;
             return this;
         }
+
         public Builder state(State state) {
-            this.state = Output.of(Objects.requireNonNull(state));
-            return this;
-        }        public DataStoreArgs build() {
-            return new DataStoreArgs(customerSecrets, dataManagerName, dataStoreName, dataStoreTypeId, extendedProperties, repositoryId, resourceGroupName, state);
+            return state(Output.of(state));
+        }
+
+        public DataStoreArgs build() {
+            $.dataManagerName = Objects.requireNonNull($.dataManagerName, "expected parameter 'dataManagerName' to be non-null");
+            $.dataStoreTypeId = Objects.requireNonNull($.dataStoreTypeId, "expected parameter 'dataStoreTypeId' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.state = Objects.requireNonNull($.state, "expected parameter 'state' to be non-null");
+            return $;
         }
     }
+
 }

@@ -24,7 +24,7 @@ public final class ResultStorageResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="googleCloudStorage", required=true)
-      private final GoogleCloudStorageResponse googleCloudStorage;
+    private GoogleCloudStorageResponse googleCloudStorage;
 
     public GoogleCloudStorageResponse googleCloudStorage() {
         return this.googleCloudStorage;
@@ -35,7 +35,7 @@ public final class ResultStorageResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="resultsUrl", required=true)
-      private final String resultsUrl;
+    private String resultsUrl;
 
     public String resultsUrl() {
         return this.resultsUrl;
@@ -46,7 +46,7 @@ public final class ResultStorageResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="toolResultsExecution", required=true)
-      private final ToolResultsExecutionResponse toolResultsExecution;
+    private ToolResultsExecutionResponse toolResultsExecution;
 
     public ToolResultsExecutionResponse toolResultsExecution() {
         return this.toolResultsExecution;
@@ -57,73 +57,66 @@ public final class ResultStorageResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="toolResultsHistory", required=true)
-      private final ToolResultsHistoryResponse toolResultsHistory;
+    private ToolResultsHistoryResponse toolResultsHistory;
 
     public ToolResultsHistoryResponse toolResultsHistory() {
         return this.toolResultsHistory;
     }
 
-    public ResultStorageResponse(
-        GoogleCloudStorageResponse googleCloudStorage,
-        String resultsUrl,
-        ToolResultsExecutionResponse toolResultsExecution,
-        ToolResultsHistoryResponse toolResultsHistory) {
-        this.googleCloudStorage = Objects.requireNonNull(googleCloudStorage, "expected parameter 'googleCloudStorage' to be non-null");
-        this.resultsUrl = Objects.requireNonNull(resultsUrl, "expected parameter 'resultsUrl' to be non-null");
-        this.toolResultsExecution = Objects.requireNonNull(toolResultsExecution, "expected parameter 'toolResultsExecution' to be non-null");
-        this.toolResultsHistory = Objects.requireNonNull(toolResultsHistory, "expected parameter 'toolResultsHistory' to be non-null");
-    }
+    private ResultStorageResponse() {}
 
-    private ResultStorageResponse() {
-        this.googleCloudStorage = null;
-        this.resultsUrl = null;
-        this.toolResultsExecution = null;
-        this.toolResultsHistory = null;
+    private ResultStorageResponse(ResultStorageResponse $) {
+        this.googleCloudStorage = $.googleCloudStorage;
+        this.resultsUrl = $.resultsUrl;
+        this.toolResultsExecution = $.toolResultsExecution;
+        this.toolResultsHistory = $.toolResultsHistory;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ResultStorageResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private GoogleCloudStorageResponse googleCloudStorage;
-        private String resultsUrl;
-        private ToolResultsExecutionResponse toolResultsExecution;
-        private ToolResultsHistoryResponse toolResultsHistory;
+        private ResultStorageResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ResultStorageResponse();
         }
 
         public Builder(ResultStorageResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.googleCloudStorage = defaults.googleCloudStorage;
-    	      this.resultsUrl = defaults.resultsUrl;
-    	      this.toolResultsExecution = defaults.toolResultsExecution;
-    	      this.toolResultsHistory = defaults.toolResultsHistory;
+            $ = new ResultStorageResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder googleCloudStorage(GoogleCloudStorageResponse googleCloudStorage) {
-            this.googleCloudStorage = Objects.requireNonNull(googleCloudStorage);
+            $.googleCloudStorage = googleCloudStorage;
             return this;
         }
+
         public Builder resultsUrl(String resultsUrl) {
-            this.resultsUrl = Objects.requireNonNull(resultsUrl);
+            $.resultsUrl = resultsUrl;
             return this;
         }
+
         public Builder toolResultsExecution(ToolResultsExecutionResponse toolResultsExecution) {
-            this.toolResultsExecution = Objects.requireNonNull(toolResultsExecution);
+            $.toolResultsExecution = toolResultsExecution;
             return this;
         }
+
         public Builder toolResultsHistory(ToolResultsHistoryResponse toolResultsHistory) {
-            this.toolResultsHistory = Objects.requireNonNull(toolResultsHistory);
+            $.toolResultsHistory = toolResultsHistory;
             return this;
-        }        public ResultStorageResponse build() {
-            return new ResultStorageResponse(googleCloudStorage, resultsUrl, toolResultsExecution, toolResultsHistory);
+        }
+
+        public ResultStorageResponse build() {
+            $.googleCloudStorage = Objects.requireNonNull($.googleCloudStorage, "expected parameter 'googleCloudStorage' to be non-null");
+            $.resultsUrl = Objects.requireNonNull($.resultsUrl, "expected parameter 'resultsUrl' to be non-null");
+            $.toolResultsExecution = Objects.requireNonNull($.toolResultsExecution, "expected parameter 'toolResultsExecution' to be non-null");
+            $.toolResultsHistory = Objects.requireNonNull($.toolResultsHistory, "expected parameter 'toolResultsHistory' to be non-null");
+            return $;
         }
     }
+
 }

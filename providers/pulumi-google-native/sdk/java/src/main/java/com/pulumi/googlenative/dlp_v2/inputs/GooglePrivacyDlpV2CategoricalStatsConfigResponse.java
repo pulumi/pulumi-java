@@ -21,45 +21,45 @@ public final class GooglePrivacyDlpV2CategoricalStatsConfigResponse extends com.
      * 
      */
     @Import(name="field", required=true)
-      private final GooglePrivacyDlpV2FieldIdResponse field;
+    private GooglePrivacyDlpV2FieldIdResponse field;
 
     public GooglePrivacyDlpV2FieldIdResponse field() {
         return this.field;
     }
 
-    public GooglePrivacyDlpV2CategoricalStatsConfigResponse(GooglePrivacyDlpV2FieldIdResponse field) {
-        this.field = Objects.requireNonNull(field, "expected parameter 'field' to be non-null");
-    }
+    private GooglePrivacyDlpV2CategoricalStatsConfigResponse() {}
 
-    private GooglePrivacyDlpV2CategoricalStatsConfigResponse() {
-        this.field = null;
+    private GooglePrivacyDlpV2CategoricalStatsConfigResponse(GooglePrivacyDlpV2CategoricalStatsConfigResponse $) {
+        this.field = $.field;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GooglePrivacyDlpV2CategoricalStatsConfigResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private GooglePrivacyDlpV2FieldIdResponse field;
+        private GooglePrivacyDlpV2CategoricalStatsConfigResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GooglePrivacyDlpV2CategoricalStatsConfigResponse();
         }
 
         public Builder(GooglePrivacyDlpV2CategoricalStatsConfigResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.field = defaults.field;
+            $ = new GooglePrivacyDlpV2CategoricalStatsConfigResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder field(GooglePrivacyDlpV2FieldIdResponse field) {
-            this.field = Objects.requireNonNull(field);
+            $.field = field;
             return this;
-        }        public GooglePrivacyDlpV2CategoricalStatsConfigResponse build() {
-            return new GooglePrivacyDlpV2CategoricalStatsConfigResponse(field);
+        }
+
+        public GooglePrivacyDlpV2CategoricalStatsConfigResponse build() {
+            $.field = Objects.requireNonNull($.field, "expected parameter 'field' to be non-null");
+            return $;
         }
     }
+
 }

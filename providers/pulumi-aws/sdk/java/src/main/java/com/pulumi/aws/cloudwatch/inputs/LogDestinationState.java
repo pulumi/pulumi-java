@@ -5,9 +5,9 @@ package com.pulumi.aws.cloudwatch.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class LogDestinationState extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="arn")
-      private final @Nullable Output<String> arn;
+    private @Nullable Output<String> arn;
 
-    public Output<String> arn() {
-        return this.arn == null ? Codegen.empty() : this.arn;
+    public Optional<Output<String>> arn() {
+        return Optional.ofNullable(this.arn);
     }
 
     /**
@@ -31,10 +31,10 @@ public final class LogDestinationState extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -42,10 +42,10 @@ public final class LogDestinationState extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="roleArn")
-      private final @Nullable Output<String> roleArn;
+    private @Nullable Output<String> roleArn;
 
-    public Output<String> roleArn() {
-        return this.roleArn == null ? Codegen.empty() : this.roleArn;
+    public Optional<Output<String>> roleArn() {
+        return Optional.ofNullable(this.roleArn);
     }
 
     /**
@@ -53,89 +53,78 @@ public final class LogDestinationState extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="targetArn")
-      private final @Nullable Output<String> targetArn;
+    private @Nullable Output<String> targetArn;
 
-    public Output<String> targetArn() {
-        return this.targetArn == null ? Codegen.empty() : this.targetArn;
+    public Optional<Output<String>> targetArn() {
+        return Optional.ofNullable(this.targetArn);
     }
 
-    public LogDestinationState(
-        @Nullable Output<String> arn,
-        @Nullable Output<String> name,
-        @Nullable Output<String> roleArn,
-        @Nullable Output<String> targetArn) {
-        this.arn = arn;
-        this.name = name;
-        this.roleArn = roleArn;
-        this.targetArn = targetArn;
-    }
+    private LogDestinationState() {}
 
-    private LogDestinationState() {
-        this.arn = Codegen.empty();
-        this.name = Codegen.empty();
-        this.roleArn = Codegen.empty();
-        this.targetArn = Codegen.empty();
+    private LogDestinationState(LogDestinationState $) {
+        this.arn = $.arn;
+        this.name = $.name;
+        this.roleArn = $.roleArn;
+        this.targetArn = $.targetArn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LogDestinationState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> arn;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> roleArn;
-        private @Nullable Output<String> targetArn;
+        private LogDestinationState $;
 
         public Builder() {
-    	      // Empty
+            $ = new LogDestinationState();
         }
 
         public Builder(LogDestinationState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.arn = defaults.arn;
-    	      this.name = defaults.name;
-    	      this.roleArn = defaults.roleArn;
-    	      this.targetArn = defaults.targetArn;
+            $ = new LogDestinationState(Objects.requireNonNull(defaults));
         }
 
         public Builder arn(@Nullable Output<String> arn) {
-            this.arn = arn;
+            $.arn = arn;
             return this;
         }
-        public Builder arn(@Nullable String arn) {
-            this.arn = Codegen.ofNullable(arn);
-            return this;
+
+        public Builder arn(String arn) {
+            return arn(Output.of(arn));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder roleArn(@Nullable Output<String> roleArn) {
-            this.roleArn = roleArn;
+            $.roleArn = roleArn;
             return this;
         }
-        public Builder roleArn(@Nullable String roleArn) {
-            this.roleArn = Codegen.ofNullable(roleArn);
-            return this;
+
+        public Builder roleArn(String roleArn) {
+            return roleArn(Output.of(roleArn));
         }
+
         public Builder targetArn(@Nullable Output<String> targetArn) {
-            this.targetArn = targetArn;
+            $.targetArn = targetArn;
             return this;
         }
-        public Builder targetArn(@Nullable String targetArn) {
-            this.targetArn = Codegen.ofNullable(targetArn);
-            return this;
-        }        public LogDestinationState build() {
-            return new LogDestinationState(arn, name, roleArn, targetArn);
+
+        public Builder targetArn(String targetArn) {
+            return targetArn(Output.of(targetArn));
+        }
+
+        public LogDestinationState build() {
+            return $;
         }
     }
+
 }

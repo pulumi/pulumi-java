@@ -5,9 +5,9 @@ package com.pulumi.gcp.apigateway;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,14 +21,14 @@ public final class ApiConfigIamPolicyArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="api", required=true)
-      private final Output<String> api;
+    private Output<String> api;
 
     public Output<String> api() {
         return this.api;
     }
 
     @Import(name="apiConfig", required=true)
-      private final Output<String> apiConfig;
+    private Output<String> apiConfig;
 
     public Output<String> apiConfig() {
         return this.apiConfig;
@@ -40,7 +40,7 @@ public final class ApiConfigIamPolicyArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="policyData", required=true)
-      private final Output<String> policyData;
+    private Output<String> policyData;
 
     public Output<String> policyData() {
         return this.policyData;
@@ -52,89 +52,81 @@ public final class ApiConfigIamPolicyArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
-    public ApiConfigIamPolicyArgs(
-        Output<String> api,
-        Output<String> apiConfig,
-        Output<String> policyData,
-        @Nullable Output<String> project) {
-        this.api = Objects.requireNonNull(api, "expected parameter 'api' to be non-null");
-        this.apiConfig = Objects.requireNonNull(apiConfig, "expected parameter 'apiConfig' to be non-null");
-        this.policyData = Objects.requireNonNull(policyData, "expected parameter 'policyData' to be non-null");
-        this.project = project;
-    }
+    private ApiConfigIamPolicyArgs() {}
 
-    private ApiConfigIamPolicyArgs() {
-        this.api = Codegen.empty();
-        this.apiConfig = Codegen.empty();
-        this.policyData = Codegen.empty();
-        this.project = Codegen.empty();
+    private ApiConfigIamPolicyArgs(ApiConfigIamPolicyArgs $) {
+        this.api = $.api;
+        this.apiConfig = $.apiConfig;
+        this.policyData = $.policyData;
+        this.project = $.project;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ApiConfigIamPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> api;
-        private Output<String> apiConfig;
-        private Output<String> policyData;
-        private @Nullable Output<String> project;
+        private ApiConfigIamPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ApiConfigIamPolicyArgs();
         }
 
         public Builder(ApiConfigIamPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.api = defaults.api;
-    	      this.apiConfig = defaults.apiConfig;
-    	      this.policyData = defaults.policyData;
-    	      this.project = defaults.project;
+            $ = new ApiConfigIamPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder api(Output<String> api) {
-            this.api = Objects.requireNonNull(api);
+            $.api = api;
             return this;
         }
+
         public Builder api(String api) {
-            this.api = Output.of(Objects.requireNonNull(api));
-            return this;
+            return api(Output.of(api));
         }
+
         public Builder apiConfig(Output<String> apiConfig) {
-            this.apiConfig = Objects.requireNonNull(apiConfig);
+            $.apiConfig = apiConfig;
             return this;
         }
+
         public Builder apiConfig(String apiConfig) {
-            this.apiConfig = Output.of(Objects.requireNonNull(apiConfig));
-            return this;
+            return apiConfig(Output.of(apiConfig));
         }
+
         public Builder policyData(Output<String> policyData) {
-            this.policyData = Objects.requireNonNull(policyData);
+            $.policyData = policyData;
             return this;
         }
+
         public Builder policyData(String policyData) {
-            this.policyData = Output.of(Objects.requireNonNull(policyData));
-            return this;
+            return policyData(Output.of(policyData));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
-        }        public ApiConfigIamPolicyArgs build() {
-            return new ApiConfigIamPolicyArgs(api, apiConfig, policyData, project);
+
+        public Builder project(String project) {
+            return project(Output.of(project));
+        }
+
+        public ApiConfigIamPolicyArgs build() {
+            $.api = Objects.requireNonNull($.api, "expected parameter 'api' to be non-null");
+            $.apiConfig = Objects.requireNonNull($.apiConfig, "expected parameter 'apiConfig' to be non-null");
+            $.policyData = Objects.requireNonNull($.policyData, "expected parameter 'policyData' to be non-null");
+            return $;
         }
     }
+
 }

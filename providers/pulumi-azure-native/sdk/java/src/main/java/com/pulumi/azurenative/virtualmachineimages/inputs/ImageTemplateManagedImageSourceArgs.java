@@ -23,7 +23,7 @@ public final class ImageTemplateManagedImageSourceArgs extends com.pulumi.resour
      * 
      */
     @Import(name="imageId", required=true)
-      private final Output<String> imageId;
+    private Output<String> imageId;
 
     public Output<String> imageId() {
         return this.imageId;
@@ -35,63 +35,60 @@ public final class ImageTemplateManagedImageSourceArgs extends com.pulumi.resour
      * 
      */
     @Import(name="type", required=true)
-      private final Output<String> type;
+    private Output<String> type;
 
     public Output<String> type() {
         return this.type;
     }
 
-    public ImageTemplateManagedImageSourceArgs(
-        Output<String> imageId,
-        Output<String> type) {
-        this.imageId = Objects.requireNonNull(imageId, "expected parameter 'imageId' to be non-null");
-        this.type = Codegen.stringProp("type").output().arg(type).require();
-    }
+    private ImageTemplateManagedImageSourceArgs() {}
 
-    private ImageTemplateManagedImageSourceArgs() {
-        this.imageId = Codegen.empty();
-        this.type = Codegen.empty();
+    private ImageTemplateManagedImageSourceArgs(ImageTemplateManagedImageSourceArgs $) {
+        this.imageId = $.imageId;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ImageTemplateManagedImageSourceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> imageId;
-        private Output<String> type;
+        private ImageTemplateManagedImageSourceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ImageTemplateManagedImageSourceArgs();
         }
 
         public Builder(ImageTemplateManagedImageSourceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.imageId = defaults.imageId;
-    	      this.type = defaults.type;
+            $ = new ImageTemplateManagedImageSourceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder imageId(Output<String> imageId) {
-            this.imageId = Objects.requireNonNull(imageId);
+            $.imageId = imageId;
             return this;
         }
+
         public Builder imageId(String imageId) {
-            this.imageId = Output.of(Objects.requireNonNull(imageId));
-            return this;
+            return imageId(Output.of(imageId));
         }
+
         public Builder type(Output<String> type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Output.of(Objects.requireNonNull(type));
-            return this;
-        }        public ImageTemplateManagedImageSourceArgs build() {
-            return new ImageTemplateManagedImageSourceArgs(imageId, type);
+            return type(Output.of(type));
+        }
+
+        public ImageTemplateManagedImageSourceArgs build() {
+            $.imageId = Objects.requireNonNull($.imageId, "expected parameter 'imageId' to be non-null");
+            $.type = Codegen.stringProp("type").output().arg($.type).require();
+            return $;
         }
     }
+
 }

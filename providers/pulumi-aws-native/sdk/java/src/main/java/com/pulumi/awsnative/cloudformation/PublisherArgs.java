@@ -5,10 +5,10 @@ package com.pulumi.awsnative.cloudformation;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,7 +21,7 @@ public final class PublisherArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="acceptTermsAndConditions", required=true)
-      private final Output<Boolean> acceptTermsAndConditions;
+    private Output<Boolean> acceptTermsAndConditions;
 
     public Output<Boolean> acceptTermsAndConditions() {
         return this.acceptTermsAndConditions;
@@ -32,63 +32,59 @@ public final class PublisherArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="connectionArn")
-      private final @Nullable Output<String> connectionArn;
+    private @Nullable Output<String> connectionArn;
 
-    public Output<String> connectionArn() {
-        return this.connectionArn == null ? Codegen.empty() : this.connectionArn;
+    public Optional<Output<String>> connectionArn() {
+        return Optional.ofNullable(this.connectionArn);
     }
 
-    public PublisherArgs(
-        Output<Boolean> acceptTermsAndConditions,
-        @Nullable Output<String> connectionArn) {
-        this.acceptTermsAndConditions = Objects.requireNonNull(acceptTermsAndConditions, "expected parameter 'acceptTermsAndConditions' to be non-null");
-        this.connectionArn = connectionArn;
-    }
+    private PublisherArgs() {}
 
-    private PublisherArgs() {
-        this.acceptTermsAndConditions = Codegen.empty();
-        this.connectionArn = Codegen.empty();
+    private PublisherArgs(PublisherArgs $) {
+        this.acceptTermsAndConditions = $.acceptTermsAndConditions;
+        this.connectionArn = $.connectionArn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PublisherArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Boolean> acceptTermsAndConditions;
-        private @Nullable Output<String> connectionArn;
+        private PublisherArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PublisherArgs();
         }
 
         public Builder(PublisherArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.acceptTermsAndConditions = defaults.acceptTermsAndConditions;
-    	      this.connectionArn = defaults.connectionArn;
+            $ = new PublisherArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder acceptTermsAndConditions(Output<Boolean> acceptTermsAndConditions) {
-            this.acceptTermsAndConditions = Objects.requireNonNull(acceptTermsAndConditions);
+            $.acceptTermsAndConditions = acceptTermsAndConditions;
             return this;
         }
+
         public Builder acceptTermsAndConditions(Boolean acceptTermsAndConditions) {
-            this.acceptTermsAndConditions = Output.of(Objects.requireNonNull(acceptTermsAndConditions));
-            return this;
+            return acceptTermsAndConditions(Output.of(acceptTermsAndConditions));
         }
+
         public Builder connectionArn(@Nullable Output<String> connectionArn) {
-            this.connectionArn = connectionArn;
+            $.connectionArn = connectionArn;
             return this;
         }
-        public Builder connectionArn(@Nullable String connectionArn) {
-            this.connectionArn = Codegen.ofNullable(connectionArn);
-            return this;
-        }        public PublisherArgs build() {
-            return new PublisherArgs(acceptTermsAndConditions, connectionArn);
+
+        public Builder connectionArn(String connectionArn) {
+            return connectionArn(Output.of(connectionArn));
+        }
+
+        public PublisherArgs build() {
+            $.acceptTermsAndConditions = Objects.requireNonNull($.acceptTermsAndConditions, "expected parameter 'acceptTermsAndConditions' to be non-null");
+            return $;
         }
     }
+
 }

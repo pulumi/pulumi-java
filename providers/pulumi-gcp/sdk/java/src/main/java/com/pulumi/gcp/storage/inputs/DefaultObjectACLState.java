@@ -5,10 +5,10 @@ package com.pulumi.gcp.storage.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class DefaultObjectACLState extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="bucket")
-      private final @Nullable Output<String> bucket;
+    private @Nullable Output<String> bucket;
 
-    public Output<String> bucket() {
-        return this.bucket == null ? Codegen.empty() : this.bucket;
+    public Optional<Output<String>> bucket() {
+        return Optional.ofNullable(this.bucket);
     }
 
     /**
@@ -34,66 +34,62 @@ public final class DefaultObjectACLState extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="roleEntities")
-      private final @Nullable Output<List<String>> roleEntities;
+    private @Nullable Output<List<String>> roleEntities;
 
-    public Output<List<String>> roleEntities() {
-        return this.roleEntities == null ? Codegen.empty() : this.roleEntities;
+    public Optional<Output<List<String>>> roleEntities() {
+        return Optional.ofNullable(this.roleEntities);
     }
 
-    public DefaultObjectACLState(
-        @Nullable Output<String> bucket,
-        @Nullable Output<List<String>> roleEntities) {
-        this.bucket = bucket;
-        this.roleEntities = roleEntities;
-    }
+    private DefaultObjectACLState() {}
 
-    private DefaultObjectACLState() {
-        this.bucket = Codegen.empty();
-        this.roleEntities = Codegen.empty();
+    private DefaultObjectACLState(DefaultObjectACLState $) {
+        this.bucket = $.bucket;
+        this.roleEntities = $.roleEntities;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DefaultObjectACLState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> bucket;
-        private @Nullable Output<List<String>> roleEntities;
+        private DefaultObjectACLState $;
 
         public Builder() {
-    	      // Empty
+            $ = new DefaultObjectACLState();
         }
 
         public Builder(DefaultObjectACLState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.bucket = defaults.bucket;
-    	      this.roleEntities = defaults.roleEntities;
+            $ = new DefaultObjectACLState(Objects.requireNonNull(defaults));
         }
 
         public Builder bucket(@Nullable Output<String> bucket) {
-            this.bucket = bucket;
+            $.bucket = bucket;
             return this;
         }
-        public Builder bucket(@Nullable String bucket) {
-            this.bucket = Codegen.ofNullable(bucket);
-            return this;
+
+        public Builder bucket(String bucket) {
+            return bucket(Output.of(bucket));
         }
+
         public Builder roleEntities(@Nullable Output<List<String>> roleEntities) {
-            this.roleEntities = roleEntities;
+            $.roleEntities = roleEntities;
             return this;
         }
-        public Builder roleEntities(@Nullable List<String> roleEntities) {
-            this.roleEntities = Codegen.ofNullable(roleEntities);
-            return this;
+
+        public Builder roleEntities(List<String> roleEntities) {
+            return roleEntities(Output.of(roleEntities));
         }
+
         public Builder roleEntities(String... roleEntities) {
             return roleEntities(List.of(roleEntities));
-        }        public DefaultObjectACLState build() {
-            return new DefaultObjectACLState(bucket, roleEntities);
+        }
+
+        public DefaultObjectACLState build() {
+            return $;
         }
     }
+
 }

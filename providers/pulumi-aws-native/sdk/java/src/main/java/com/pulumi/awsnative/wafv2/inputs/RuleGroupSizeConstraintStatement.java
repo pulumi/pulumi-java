@@ -21,97 +21,91 @@ public final class RuleGroupSizeConstraintStatement extends com.pulumi.resources
     public static final RuleGroupSizeConstraintStatement Empty = new RuleGroupSizeConstraintStatement();
 
     @Import(name="comparisonOperator", required=true)
-      private final RuleGroupSizeConstraintStatementComparisonOperator comparisonOperator;
+    private RuleGroupSizeConstraintStatementComparisonOperator comparisonOperator;
 
     public RuleGroupSizeConstraintStatementComparisonOperator comparisonOperator() {
         return this.comparisonOperator;
     }
 
     @Import(name="fieldToMatch", required=true)
-      private final RuleGroupFieldToMatch fieldToMatch;
+    private RuleGroupFieldToMatch fieldToMatch;
 
     public RuleGroupFieldToMatch fieldToMatch() {
         return this.fieldToMatch;
     }
 
     @Import(name="size", required=true)
-      private final Double size;
+    private Double size;
 
     public Double size() {
         return this.size;
     }
 
     @Import(name="textTransformations", required=true)
-      private final List<RuleGroupTextTransformation> textTransformations;
+    private List<RuleGroupTextTransformation> textTransformations;
 
     public List<RuleGroupTextTransformation> textTransformations() {
         return this.textTransformations;
     }
 
-    public RuleGroupSizeConstraintStatement(
-        RuleGroupSizeConstraintStatementComparisonOperator comparisonOperator,
-        RuleGroupFieldToMatch fieldToMatch,
-        Double size,
-        List<RuleGroupTextTransformation> textTransformations) {
-        this.comparisonOperator = Objects.requireNonNull(comparisonOperator, "expected parameter 'comparisonOperator' to be non-null");
-        this.fieldToMatch = Objects.requireNonNull(fieldToMatch, "expected parameter 'fieldToMatch' to be non-null");
-        this.size = Objects.requireNonNull(size, "expected parameter 'size' to be non-null");
-        this.textTransformations = Objects.requireNonNull(textTransformations, "expected parameter 'textTransformations' to be non-null");
-    }
+    private RuleGroupSizeConstraintStatement() {}
 
-    private RuleGroupSizeConstraintStatement() {
-        this.comparisonOperator = null;
-        this.fieldToMatch = null;
-        this.size = null;
-        this.textTransformations = List.of();
+    private RuleGroupSizeConstraintStatement(RuleGroupSizeConstraintStatement $) {
+        this.comparisonOperator = $.comparisonOperator;
+        this.fieldToMatch = $.fieldToMatch;
+        this.size = $.size;
+        this.textTransformations = $.textTransformations;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RuleGroupSizeConstraintStatement defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private RuleGroupSizeConstraintStatementComparisonOperator comparisonOperator;
-        private RuleGroupFieldToMatch fieldToMatch;
-        private Double size;
-        private List<RuleGroupTextTransformation> textTransformations;
+        private RuleGroupSizeConstraintStatement $;
 
         public Builder() {
-    	      // Empty
+            $ = new RuleGroupSizeConstraintStatement();
         }
 
         public Builder(RuleGroupSizeConstraintStatement defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.comparisonOperator = defaults.comparisonOperator;
-    	      this.fieldToMatch = defaults.fieldToMatch;
-    	      this.size = defaults.size;
-    	      this.textTransformations = defaults.textTransformations;
+            $ = new RuleGroupSizeConstraintStatement(Objects.requireNonNull(defaults));
         }
 
         public Builder comparisonOperator(RuleGroupSizeConstraintStatementComparisonOperator comparisonOperator) {
-            this.comparisonOperator = Objects.requireNonNull(comparisonOperator);
+            $.comparisonOperator = comparisonOperator;
             return this;
         }
+
         public Builder fieldToMatch(RuleGroupFieldToMatch fieldToMatch) {
-            this.fieldToMatch = Objects.requireNonNull(fieldToMatch);
+            $.fieldToMatch = fieldToMatch;
             return this;
         }
+
         public Builder size(Double size) {
-            this.size = Objects.requireNonNull(size);
+            $.size = size;
             return this;
         }
+
         public Builder textTransformations(List<RuleGroupTextTransformation> textTransformations) {
-            this.textTransformations = Objects.requireNonNull(textTransformations);
+            $.textTransformations = textTransformations;
             return this;
         }
+
         public Builder textTransformations(RuleGroupTextTransformation... textTransformations) {
             return textTransformations(List.of(textTransformations));
-        }        public RuleGroupSizeConstraintStatement build() {
-            return new RuleGroupSizeConstraintStatement(comparisonOperator, fieldToMatch, size, textTransformations);
+        }
+
+        public RuleGroupSizeConstraintStatement build() {
+            $.comparisonOperator = Objects.requireNonNull($.comparisonOperator, "expected parameter 'comparisonOperator' to be non-null");
+            $.fieldToMatch = Objects.requireNonNull($.fieldToMatch, "expected parameter 'fieldToMatch' to be non-null");
+            $.size = Objects.requireNonNull($.size, "expected parameter 'size' to be non-null");
+            $.textTransformations = Objects.requireNonNull($.textTransformations, "expected parameter 'textTransformations' to be non-null");
+            return $;
         }
     }
+
 }

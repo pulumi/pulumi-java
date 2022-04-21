@@ -15,6 +15,7 @@ import java.lang.Object;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -31,10 +32,10 @@ public final class FirewallPolicyFilterRuleArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="action")
-      private final @Nullable Output<FirewallPolicyFilterRuleActionArgs> action;
+    private @Nullable Output<FirewallPolicyFilterRuleActionArgs> action;
 
-    public Output<FirewallPolicyFilterRuleActionArgs> action() {
-        return this.action == null ? Codegen.empty() : this.action;
+    public Optional<Output<FirewallPolicyFilterRuleActionArgs>> action() {
+        return Optional.ofNullable(this.action);
     }
 
     /**
@@ -42,10 +43,10 @@ public final class FirewallPolicyFilterRuleArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -53,10 +54,10 @@ public final class FirewallPolicyFilterRuleArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="priority")
-      private final @Nullable Output<Integer> priority;
+    private @Nullable Output<Integer> priority;
 
-    public Output<Integer> priority() {
-        return this.priority == null ? Codegen.empty() : this.priority;
+    public Optional<Output<Integer>> priority() {
+        return Optional.ofNullable(this.priority);
     }
 
     /**
@@ -64,10 +65,10 @@ public final class FirewallPolicyFilterRuleArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="ruleConditions")
-      private final @Nullable Output<List<Object>> ruleConditions;
+    private @Nullable Output<List<Object>> ruleConditions;
 
-    public Output<List<Object>> ruleConditions() {
-        return this.ruleConditions == null ? Codegen.empty() : this.ruleConditions;
+    public Optional<Output<List<Object>>> ruleConditions() {
+        return Optional.ofNullable(this.ruleConditions);
     }
 
     /**
@@ -76,105 +77,93 @@ public final class FirewallPolicyFilterRuleArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="ruleType", required=true)
-      private final Output<String> ruleType;
+    private Output<String> ruleType;
 
     public Output<String> ruleType() {
         return this.ruleType;
     }
 
-    public FirewallPolicyFilterRuleArgs(
-        @Nullable Output<FirewallPolicyFilterRuleActionArgs> action,
-        @Nullable Output<String> name,
-        @Nullable Output<Integer> priority,
-        @Nullable Output<List<Object>> ruleConditions,
-        Output<String> ruleType) {
-        this.action = action;
-        this.name = name;
-        this.priority = priority;
-        this.ruleConditions = ruleConditions;
-        this.ruleType = Codegen.stringProp("ruleType").output().arg(ruleType).require();
-    }
+    private FirewallPolicyFilterRuleArgs() {}
 
-    private FirewallPolicyFilterRuleArgs() {
-        this.action = Codegen.empty();
-        this.name = Codegen.empty();
-        this.priority = Codegen.empty();
-        this.ruleConditions = Codegen.empty();
-        this.ruleType = Codegen.empty();
+    private FirewallPolicyFilterRuleArgs(FirewallPolicyFilterRuleArgs $) {
+        this.action = $.action;
+        this.name = $.name;
+        this.priority = $.priority;
+        this.ruleConditions = $.ruleConditions;
+        this.ruleType = $.ruleType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FirewallPolicyFilterRuleArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<FirewallPolicyFilterRuleActionArgs> action;
-        private @Nullable Output<String> name;
-        private @Nullable Output<Integer> priority;
-        private @Nullable Output<List<Object>> ruleConditions;
-        private Output<String> ruleType;
+        private FirewallPolicyFilterRuleArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new FirewallPolicyFilterRuleArgs();
         }
 
         public Builder(FirewallPolicyFilterRuleArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.action = defaults.action;
-    	      this.name = defaults.name;
-    	      this.priority = defaults.priority;
-    	      this.ruleConditions = defaults.ruleConditions;
-    	      this.ruleType = defaults.ruleType;
+            $ = new FirewallPolicyFilterRuleArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder action(@Nullable Output<FirewallPolicyFilterRuleActionArgs> action) {
-            this.action = action;
+            $.action = action;
             return this;
         }
-        public Builder action(@Nullable FirewallPolicyFilterRuleActionArgs action) {
-            this.action = Codegen.ofNullable(action);
-            return this;
+
+        public Builder action(FirewallPolicyFilterRuleActionArgs action) {
+            return action(Output.of(action));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder priority(@Nullable Output<Integer> priority) {
-            this.priority = priority;
+            $.priority = priority;
             return this;
         }
-        public Builder priority(@Nullable Integer priority) {
-            this.priority = Codegen.ofNullable(priority);
-            return this;
+
+        public Builder priority(Integer priority) {
+            return priority(Output.of(priority));
         }
+
         public Builder ruleConditions(@Nullable Output<List<Object>> ruleConditions) {
-            this.ruleConditions = ruleConditions;
+            $.ruleConditions = ruleConditions;
             return this;
         }
-        public Builder ruleConditions(@Nullable List<Object> ruleConditions) {
-            this.ruleConditions = Codegen.ofNullable(ruleConditions);
-            return this;
+
+        public Builder ruleConditions(List<Object> ruleConditions) {
+            return ruleConditions(Output.of(ruleConditions));
         }
+
         public Builder ruleConditions(Object... ruleConditions) {
             return ruleConditions(List.of(ruleConditions));
         }
+
         public Builder ruleType(Output<String> ruleType) {
-            this.ruleType = Objects.requireNonNull(ruleType);
+            $.ruleType = ruleType;
             return this;
         }
+
         public Builder ruleType(String ruleType) {
-            this.ruleType = Output.of(Objects.requireNonNull(ruleType));
-            return this;
-        }        public FirewallPolicyFilterRuleArgs build() {
-            return new FirewallPolicyFilterRuleArgs(action, name, priority, ruleConditions, ruleType);
+            return ruleType(Output.of(ruleType));
+        }
+
+        public FirewallPolicyFilterRuleArgs build() {
+            $.ruleType = Codegen.stringProp("ruleType").output().arg($.ruleType).require();
+            return $;
         }
     }
+
 }

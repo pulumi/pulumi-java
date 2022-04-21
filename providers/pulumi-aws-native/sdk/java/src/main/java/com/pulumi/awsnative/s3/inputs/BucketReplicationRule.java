@@ -25,24 +25,24 @@ public final class BucketReplicationRule extends com.pulumi.resources.InvokeArgs
     public static final BucketReplicationRule Empty = new BucketReplicationRule();
 
     @Import(name="deleteMarkerReplication")
-      private final @Nullable BucketDeleteMarkerReplication deleteMarkerReplication;
+    private @Nullable BucketDeleteMarkerReplication deleteMarkerReplication;
 
     public Optional<BucketDeleteMarkerReplication> deleteMarkerReplication() {
-        return this.deleteMarkerReplication == null ? Optional.empty() : Optional.ofNullable(this.deleteMarkerReplication);
+        return Optional.ofNullable(this.deleteMarkerReplication);
     }
 
     @Import(name="destination", required=true)
-      private final BucketReplicationDestination destination;
+    private BucketReplicationDestination destination;
 
     public BucketReplicationDestination destination() {
         return this.destination;
     }
 
     @Import(name="filter")
-      private final @Nullable BucketReplicationRuleFilter filter;
+    private @Nullable BucketReplicationRuleFilter filter;
 
     public Optional<BucketReplicationRuleFilter> filter() {
-        return this.filter == null ? Optional.empty() : Optional.ofNullable(this.filter);
+        return Optional.ofNullable(this.filter);
     }
 
     /**
@@ -50,10 +50,10 @@ public final class BucketReplicationRule extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="id")
-      private final @Nullable String id;
+    private @Nullable String id;
 
     public Optional<String> id() {
-        return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
+        return Optional.ofNullable(this.id);
     }
 
     /**
@@ -61,24 +61,24 @@ public final class BucketReplicationRule extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="prefix")
-      private final @Nullable String prefix;
+    private @Nullable String prefix;
 
     public Optional<String> prefix() {
-        return this.prefix == null ? Optional.empty() : Optional.ofNullable(this.prefix);
+        return Optional.ofNullable(this.prefix);
     }
 
     @Import(name="priority")
-      private final @Nullable Integer priority;
+    private @Nullable Integer priority;
 
     public Optional<Integer> priority() {
-        return this.priority == null ? Optional.empty() : Optional.ofNullable(this.priority);
+        return Optional.ofNullable(this.priority);
     }
 
     @Import(name="sourceSelectionCriteria")
-      private final @Nullable BucketSourceSelectionCriteria sourceSelectionCriteria;
+    private @Nullable BucketSourceSelectionCriteria sourceSelectionCriteria;
 
     public Optional<BucketSourceSelectionCriteria> sourceSelectionCriteria() {
-        return this.sourceSelectionCriteria == null ? Optional.empty() : Optional.ofNullable(this.sourceSelectionCriteria);
+        return Optional.ofNullable(this.sourceSelectionCriteria);
     }
 
     /**
@@ -86,109 +86,88 @@ public final class BucketReplicationRule extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="status", required=true)
-      private final BucketReplicationRuleStatus status;
+    private BucketReplicationRuleStatus status;
 
     public BucketReplicationRuleStatus status() {
         return this.status;
     }
 
-    public BucketReplicationRule(
-        @Nullable BucketDeleteMarkerReplication deleteMarkerReplication,
-        BucketReplicationDestination destination,
-        @Nullable BucketReplicationRuleFilter filter,
-        @Nullable String id,
-        @Nullable String prefix,
-        @Nullable Integer priority,
-        @Nullable BucketSourceSelectionCriteria sourceSelectionCriteria,
-        BucketReplicationRuleStatus status) {
-        this.deleteMarkerReplication = deleteMarkerReplication;
-        this.destination = Objects.requireNonNull(destination, "expected parameter 'destination' to be non-null");
-        this.filter = filter;
-        this.id = id;
-        this.prefix = prefix;
-        this.priority = priority;
-        this.sourceSelectionCriteria = sourceSelectionCriteria;
-        this.status = Objects.requireNonNull(status, "expected parameter 'status' to be non-null");
-    }
+    private BucketReplicationRule() {}
 
-    private BucketReplicationRule() {
-        this.deleteMarkerReplication = null;
-        this.destination = null;
-        this.filter = null;
-        this.id = null;
-        this.prefix = null;
-        this.priority = null;
-        this.sourceSelectionCriteria = null;
-        this.status = null;
+    private BucketReplicationRule(BucketReplicationRule $) {
+        this.deleteMarkerReplication = $.deleteMarkerReplication;
+        this.destination = $.destination;
+        this.filter = $.filter;
+        this.id = $.id;
+        this.prefix = $.prefix;
+        this.priority = $.priority;
+        this.sourceSelectionCriteria = $.sourceSelectionCriteria;
+        this.status = $.status;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BucketReplicationRule defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable BucketDeleteMarkerReplication deleteMarkerReplication;
-        private BucketReplicationDestination destination;
-        private @Nullable BucketReplicationRuleFilter filter;
-        private @Nullable String id;
-        private @Nullable String prefix;
-        private @Nullable Integer priority;
-        private @Nullable BucketSourceSelectionCriteria sourceSelectionCriteria;
-        private BucketReplicationRuleStatus status;
+        private BucketReplicationRule $;
 
         public Builder() {
-    	      // Empty
+            $ = new BucketReplicationRule();
         }
 
         public Builder(BucketReplicationRule defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.deleteMarkerReplication = defaults.deleteMarkerReplication;
-    	      this.destination = defaults.destination;
-    	      this.filter = defaults.filter;
-    	      this.id = defaults.id;
-    	      this.prefix = defaults.prefix;
-    	      this.priority = defaults.priority;
-    	      this.sourceSelectionCriteria = defaults.sourceSelectionCriteria;
-    	      this.status = defaults.status;
+            $ = new BucketReplicationRule(Objects.requireNonNull(defaults));
         }
 
         public Builder deleteMarkerReplication(@Nullable BucketDeleteMarkerReplication deleteMarkerReplication) {
-            this.deleteMarkerReplication = deleteMarkerReplication;
+            $.deleteMarkerReplication = deleteMarkerReplication;
             return this;
         }
+
         public Builder destination(BucketReplicationDestination destination) {
-            this.destination = Objects.requireNonNull(destination);
+            $.destination = destination;
             return this;
         }
+
         public Builder filter(@Nullable BucketReplicationRuleFilter filter) {
-            this.filter = filter;
+            $.filter = filter;
             return this;
         }
+
         public Builder id(@Nullable String id) {
-            this.id = id;
+            $.id = id;
             return this;
         }
+
         public Builder prefix(@Nullable String prefix) {
-            this.prefix = prefix;
+            $.prefix = prefix;
             return this;
         }
+
         public Builder priority(@Nullable Integer priority) {
-            this.priority = priority;
+            $.priority = priority;
             return this;
         }
+
         public Builder sourceSelectionCriteria(@Nullable BucketSourceSelectionCriteria sourceSelectionCriteria) {
-            this.sourceSelectionCriteria = sourceSelectionCriteria;
+            $.sourceSelectionCriteria = sourceSelectionCriteria;
             return this;
         }
+
         public Builder status(BucketReplicationRuleStatus status) {
-            this.status = Objects.requireNonNull(status);
+            $.status = status;
             return this;
-        }        public BucketReplicationRule build() {
-            return new BucketReplicationRule(deleteMarkerReplication, destination, filter, id, prefix, priority, sourceSelectionCriteria, status);
+        }
+
+        public BucketReplicationRule build() {
+            $.destination = Objects.requireNonNull($.destination, "expected parameter 'destination' to be non-null");
+            $.status = Objects.requireNonNull($.status, "expected parameter 'status' to be non-null");
+            return $;
         }
     }
+
 }

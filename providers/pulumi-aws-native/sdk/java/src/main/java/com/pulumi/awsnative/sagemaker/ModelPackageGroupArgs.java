@@ -6,11 +6,11 @@ package com.pulumi.awsnative.sagemaker;
 import com.pulumi.awsnative.sagemaker.inputs.ModelPackageGroupTagArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -19,24 +19,24 @@ public final class ModelPackageGroupArgs extends com.pulumi.resources.ResourceAr
     public static final ModelPackageGroupArgs Empty = new ModelPackageGroupArgs();
 
     @Import(name="modelPackageGroupDescription")
-      private final @Nullable Output<String> modelPackageGroupDescription;
+    private @Nullable Output<String> modelPackageGroupDescription;
 
-    public Output<String> modelPackageGroupDescription() {
-        return this.modelPackageGroupDescription == null ? Codegen.empty() : this.modelPackageGroupDescription;
+    public Optional<Output<String>> modelPackageGroupDescription() {
+        return Optional.ofNullable(this.modelPackageGroupDescription);
     }
 
     @Import(name="modelPackageGroupName")
-      private final @Nullable Output<String> modelPackageGroupName;
+    private @Nullable Output<String> modelPackageGroupName;
 
-    public Output<String> modelPackageGroupName() {
-        return this.modelPackageGroupName == null ? Codegen.empty() : this.modelPackageGroupName;
+    public Optional<Output<String>> modelPackageGroupName() {
+        return Optional.ofNullable(this.modelPackageGroupName);
     }
 
     @Import(name="modelPackageGroupPolicy")
-      private final @Nullable Output<Object> modelPackageGroupPolicy;
+    private @Nullable Output<Object> modelPackageGroupPolicy;
 
-    public Output<Object> modelPackageGroupPolicy() {
-        return this.modelPackageGroupPolicy == null ? Codegen.empty() : this.modelPackageGroupPolicy;
+    public Optional<Output<Object>> modelPackageGroupPolicy() {
+        return Optional.ofNullable(this.modelPackageGroupPolicy);
     }
 
     /**
@@ -44,92 +44,82 @@ public final class ModelPackageGroupArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<List<ModelPackageGroupTagArgs>> tags;
+    private @Nullable Output<List<ModelPackageGroupTagArgs>> tags;
 
-    public Output<List<ModelPackageGroupTagArgs>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<List<ModelPackageGroupTagArgs>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public ModelPackageGroupArgs(
-        @Nullable Output<String> modelPackageGroupDescription,
-        @Nullable Output<String> modelPackageGroupName,
-        @Nullable Output<Object> modelPackageGroupPolicy,
-        @Nullable Output<List<ModelPackageGroupTagArgs>> tags) {
-        this.modelPackageGroupDescription = modelPackageGroupDescription;
-        this.modelPackageGroupName = modelPackageGroupName;
-        this.modelPackageGroupPolicy = modelPackageGroupPolicy;
-        this.tags = tags;
-    }
+    private ModelPackageGroupArgs() {}
 
-    private ModelPackageGroupArgs() {
-        this.modelPackageGroupDescription = Codegen.empty();
-        this.modelPackageGroupName = Codegen.empty();
-        this.modelPackageGroupPolicy = Codegen.empty();
-        this.tags = Codegen.empty();
+    private ModelPackageGroupArgs(ModelPackageGroupArgs $) {
+        this.modelPackageGroupDescription = $.modelPackageGroupDescription;
+        this.modelPackageGroupName = $.modelPackageGroupName;
+        this.modelPackageGroupPolicy = $.modelPackageGroupPolicy;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ModelPackageGroupArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> modelPackageGroupDescription;
-        private @Nullable Output<String> modelPackageGroupName;
-        private @Nullable Output<Object> modelPackageGroupPolicy;
-        private @Nullable Output<List<ModelPackageGroupTagArgs>> tags;
+        private ModelPackageGroupArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ModelPackageGroupArgs();
         }
 
         public Builder(ModelPackageGroupArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.modelPackageGroupDescription = defaults.modelPackageGroupDescription;
-    	      this.modelPackageGroupName = defaults.modelPackageGroupName;
-    	      this.modelPackageGroupPolicy = defaults.modelPackageGroupPolicy;
-    	      this.tags = defaults.tags;
+            $ = new ModelPackageGroupArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder modelPackageGroupDescription(@Nullable Output<String> modelPackageGroupDescription) {
-            this.modelPackageGroupDescription = modelPackageGroupDescription;
+            $.modelPackageGroupDescription = modelPackageGroupDescription;
             return this;
         }
-        public Builder modelPackageGroupDescription(@Nullable String modelPackageGroupDescription) {
-            this.modelPackageGroupDescription = Codegen.ofNullable(modelPackageGroupDescription);
-            return this;
+
+        public Builder modelPackageGroupDescription(String modelPackageGroupDescription) {
+            return modelPackageGroupDescription(Output.of(modelPackageGroupDescription));
         }
+
         public Builder modelPackageGroupName(@Nullable Output<String> modelPackageGroupName) {
-            this.modelPackageGroupName = modelPackageGroupName;
+            $.modelPackageGroupName = modelPackageGroupName;
             return this;
         }
-        public Builder modelPackageGroupName(@Nullable String modelPackageGroupName) {
-            this.modelPackageGroupName = Codegen.ofNullable(modelPackageGroupName);
-            return this;
+
+        public Builder modelPackageGroupName(String modelPackageGroupName) {
+            return modelPackageGroupName(Output.of(modelPackageGroupName));
         }
+
         public Builder modelPackageGroupPolicy(@Nullable Output<Object> modelPackageGroupPolicy) {
-            this.modelPackageGroupPolicy = modelPackageGroupPolicy;
+            $.modelPackageGroupPolicy = modelPackageGroupPolicy;
             return this;
         }
-        public Builder modelPackageGroupPolicy(@Nullable Object modelPackageGroupPolicy) {
-            this.modelPackageGroupPolicy = Codegen.ofNullable(modelPackageGroupPolicy);
-            return this;
+
+        public Builder modelPackageGroupPolicy(Object modelPackageGroupPolicy) {
+            return modelPackageGroupPolicy(Output.of(modelPackageGroupPolicy));
         }
+
         public Builder tags(@Nullable Output<List<ModelPackageGroupTagArgs>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable List<ModelPackageGroupTagArgs> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(List<ModelPackageGroupTagArgs> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tags(ModelPackageGroupTagArgs... tags) {
             return tags(List.of(tags));
-        }        public ModelPackageGroupArgs build() {
-            return new ModelPackageGroupArgs(modelPackageGroupDescription, modelPackageGroupName, modelPackageGroupPolicy, tags);
+        }
+
+        public ModelPackageGroupArgs build() {
+            return $;
         }
     }
+
 }

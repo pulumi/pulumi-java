@@ -22,7 +22,7 @@ public final class PrivateEndpointConnectionResponse extends com.pulumi.resource
      * 
      */
     @Import(name="id", required=true)
-      private final String id;
+    private String id;
 
     public String id() {
         return this.id;
@@ -33,7 +33,7 @@ public final class PrivateEndpointConnectionResponse extends com.pulumi.resource
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -44,7 +44,7 @@ public final class PrivateEndpointConnectionResponse extends com.pulumi.resource
      * 
      */
     @Import(name="properties", required=true)
-      private final PrivateEndpointConnectionPropertiesResponse properties;
+    private PrivateEndpointConnectionPropertiesResponse properties;
 
     public PrivateEndpointConnectionPropertiesResponse properties() {
         return this.properties;
@@ -55,73 +55,66 @@ public final class PrivateEndpointConnectionResponse extends com.pulumi.resource
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
     }
 
-    public PrivateEndpointConnectionResponse(
-        String id,
-        String name,
-        PrivateEndpointConnectionPropertiesResponse properties,
-        String type) {
-        this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.properties = Objects.requireNonNull(properties, "expected parameter 'properties' to be non-null");
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private PrivateEndpointConnectionResponse() {}
 
-    private PrivateEndpointConnectionResponse() {
-        this.id = null;
-        this.name = null;
-        this.properties = null;
-        this.type = null;
+    private PrivateEndpointConnectionResponse(PrivateEndpointConnectionResponse $) {
+        this.id = $.id;
+        this.name = $.name;
+        this.properties = $.properties;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PrivateEndpointConnectionResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String id;
-        private String name;
-        private PrivateEndpointConnectionPropertiesResponse properties;
-        private String type;
+        private PrivateEndpointConnectionResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new PrivateEndpointConnectionResponse();
         }
 
         public Builder(PrivateEndpointConnectionResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.id = defaults.id;
-    	      this.name = defaults.name;
-    	      this.properties = defaults.properties;
-    	      this.type = defaults.type;
+            $ = new PrivateEndpointConnectionResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder id(String id) {
-            this.id = Objects.requireNonNull(id);
+            $.id = id;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder properties(PrivateEndpointConnectionPropertiesResponse properties) {
-            this.properties = Objects.requireNonNull(properties);
+            $.properties = properties;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
-        }        public PrivateEndpointConnectionResponse build() {
-            return new PrivateEndpointConnectionResponse(id, name, properties, type);
+        }
+
+        public PrivateEndpointConnectionResponse build() {
+            $.id = Objects.requireNonNull($.id, "expected parameter 'id' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.properties = Objects.requireNonNull($.properties, "expected parameter 'properties' to be non-null");
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

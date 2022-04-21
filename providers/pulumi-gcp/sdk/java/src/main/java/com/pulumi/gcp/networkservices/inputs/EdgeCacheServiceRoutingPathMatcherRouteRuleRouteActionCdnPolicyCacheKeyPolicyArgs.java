@@ -5,11 +5,11 @@ package com.pulumi.gcp.networkservices.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,10 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPoli
      * 
      */
     @Import(name="excludeHost")
-      private final @Nullable Output<Boolean> excludeHost;
+    private @Nullable Output<Boolean> excludeHost;
 
-    public Output<Boolean> excludeHost() {
-        return this.excludeHost == null ? Codegen.empty() : this.excludeHost;
+    public Optional<Output<Boolean>> excludeHost() {
+        return Optional.ofNullable(this.excludeHost);
     }
 
     /**
@@ -39,10 +39,10 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPoli
      * 
      */
     @Import(name="excludeQueryString")
-      private final @Nullable Output<Boolean> excludeQueryString;
+    private @Nullable Output<Boolean> excludeQueryString;
 
-    public Output<Boolean> excludeQueryString() {
-        return this.excludeQueryString == null ? Codegen.empty() : this.excludeQueryString;
+    public Optional<Output<Boolean>> excludeQueryString() {
+        return Optional.ofNullable(this.excludeQueryString);
     }
 
     /**
@@ -51,10 +51,10 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPoli
      * 
      */
     @Import(name="excludedQueryParameters")
-      private final @Nullable Output<List<String>> excludedQueryParameters;
+    private @Nullable Output<List<String>> excludedQueryParameters;
 
-    public Output<List<String>> excludedQueryParameters() {
-        return this.excludedQueryParameters == null ? Codegen.empty() : this.excludedQueryParameters;
+    public Optional<Output<List<String>>> excludedQueryParameters() {
+        return Optional.ofNullable(this.excludedQueryParameters);
     }
 
     /**
@@ -62,10 +62,10 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPoli
      * 
      */
     @Import(name="includeProtocol")
-      private final @Nullable Output<Boolean> includeProtocol;
+    private @Nullable Output<Boolean> includeProtocol;
 
-    public Output<Boolean> includeProtocol() {
-        return this.includeProtocol == null ? Codegen.empty() : this.includeProtocol;
+    public Optional<Output<Boolean>> includeProtocol() {
+        return Optional.ofNullable(this.includeProtocol);
     }
 
     /**
@@ -77,10 +77,10 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPoli
      * 
      */
     @Import(name="includedHeaderNames")
-      private final @Nullable Output<List<String>> includedHeaderNames;
+    private @Nullable Output<List<String>> includedHeaderNames;
 
-    public Output<List<String>> includedHeaderNames() {
-        return this.includedHeaderNames == null ? Codegen.empty() : this.includedHeaderNames;
+    public Optional<Output<List<String>>> includedHeaderNames() {
+        return Optional.ofNullable(this.includedHeaderNames);
     }
 
     /**
@@ -89,124 +89,110 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPoli
      * 
      */
     @Import(name="includedQueryParameters")
-      private final @Nullable Output<List<String>> includedQueryParameters;
+    private @Nullable Output<List<String>> includedQueryParameters;
 
-    public Output<List<String>> includedQueryParameters() {
-        return this.includedQueryParameters == null ? Codegen.empty() : this.includedQueryParameters;
+    public Optional<Output<List<String>>> includedQueryParameters() {
+        return Optional.ofNullable(this.includedQueryParameters);
     }
 
-    public EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPolicyCacheKeyPolicyArgs(
-        @Nullable Output<Boolean> excludeHost,
-        @Nullable Output<Boolean> excludeQueryString,
-        @Nullable Output<List<String>> excludedQueryParameters,
-        @Nullable Output<Boolean> includeProtocol,
-        @Nullable Output<List<String>> includedHeaderNames,
-        @Nullable Output<List<String>> includedQueryParameters) {
-        this.excludeHost = excludeHost;
-        this.excludeQueryString = excludeQueryString;
-        this.excludedQueryParameters = excludedQueryParameters;
-        this.includeProtocol = includeProtocol;
-        this.includedHeaderNames = includedHeaderNames;
-        this.includedQueryParameters = includedQueryParameters;
-    }
+    private EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPolicyCacheKeyPolicyArgs() {}
 
-    private EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPolicyCacheKeyPolicyArgs() {
-        this.excludeHost = Codegen.empty();
-        this.excludeQueryString = Codegen.empty();
-        this.excludedQueryParameters = Codegen.empty();
-        this.includeProtocol = Codegen.empty();
-        this.includedHeaderNames = Codegen.empty();
-        this.includedQueryParameters = Codegen.empty();
+    private EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPolicyCacheKeyPolicyArgs(EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPolicyCacheKeyPolicyArgs $) {
+        this.excludeHost = $.excludeHost;
+        this.excludeQueryString = $.excludeQueryString;
+        this.excludedQueryParameters = $.excludedQueryParameters;
+        this.includeProtocol = $.includeProtocol;
+        this.includedHeaderNames = $.includedHeaderNames;
+        this.includedQueryParameters = $.includedQueryParameters;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPolicyCacheKeyPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> excludeHost;
-        private @Nullable Output<Boolean> excludeQueryString;
-        private @Nullable Output<List<String>> excludedQueryParameters;
-        private @Nullable Output<Boolean> includeProtocol;
-        private @Nullable Output<List<String>> includedHeaderNames;
-        private @Nullable Output<List<String>> includedQueryParameters;
+        private EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPolicyCacheKeyPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPolicyCacheKeyPolicyArgs();
         }
 
         public Builder(EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPolicyCacheKeyPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.excludeHost = defaults.excludeHost;
-    	      this.excludeQueryString = defaults.excludeQueryString;
-    	      this.excludedQueryParameters = defaults.excludedQueryParameters;
-    	      this.includeProtocol = defaults.includeProtocol;
-    	      this.includedHeaderNames = defaults.includedHeaderNames;
-    	      this.includedQueryParameters = defaults.includedQueryParameters;
+            $ = new EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPolicyCacheKeyPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder excludeHost(@Nullable Output<Boolean> excludeHost) {
-            this.excludeHost = excludeHost;
+            $.excludeHost = excludeHost;
             return this;
         }
-        public Builder excludeHost(@Nullable Boolean excludeHost) {
-            this.excludeHost = Codegen.ofNullable(excludeHost);
-            return this;
+
+        public Builder excludeHost(Boolean excludeHost) {
+            return excludeHost(Output.of(excludeHost));
         }
+
         public Builder excludeQueryString(@Nullable Output<Boolean> excludeQueryString) {
-            this.excludeQueryString = excludeQueryString;
+            $.excludeQueryString = excludeQueryString;
             return this;
         }
-        public Builder excludeQueryString(@Nullable Boolean excludeQueryString) {
-            this.excludeQueryString = Codegen.ofNullable(excludeQueryString);
-            return this;
+
+        public Builder excludeQueryString(Boolean excludeQueryString) {
+            return excludeQueryString(Output.of(excludeQueryString));
         }
+
         public Builder excludedQueryParameters(@Nullable Output<List<String>> excludedQueryParameters) {
-            this.excludedQueryParameters = excludedQueryParameters;
+            $.excludedQueryParameters = excludedQueryParameters;
             return this;
         }
-        public Builder excludedQueryParameters(@Nullable List<String> excludedQueryParameters) {
-            this.excludedQueryParameters = Codegen.ofNullable(excludedQueryParameters);
-            return this;
+
+        public Builder excludedQueryParameters(List<String> excludedQueryParameters) {
+            return excludedQueryParameters(Output.of(excludedQueryParameters));
         }
+
         public Builder excludedQueryParameters(String... excludedQueryParameters) {
             return excludedQueryParameters(List.of(excludedQueryParameters));
         }
+
         public Builder includeProtocol(@Nullable Output<Boolean> includeProtocol) {
-            this.includeProtocol = includeProtocol;
+            $.includeProtocol = includeProtocol;
             return this;
         }
-        public Builder includeProtocol(@Nullable Boolean includeProtocol) {
-            this.includeProtocol = Codegen.ofNullable(includeProtocol);
-            return this;
+
+        public Builder includeProtocol(Boolean includeProtocol) {
+            return includeProtocol(Output.of(includeProtocol));
         }
+
         public Builder includedHeaderNames(@Nullable Output<List<String>> includedHeaderNames) {
-            this.includedHeaderNames = includedHeaderNames;
+            $.includedHeaderNames = includedHeaderNames;
             return this;
         }
-        public Builder includedHeaderNames(@Nullable List<String> includedHeaderNames) {
-            this.includedHeaderNames = Codegen.ofNullable(includedHeaderNames);
-            return this;
+
+        public Builder includedHeaderNames(List<String> includedHeaderNames) {
+            return includedHeaderNames(Output.of(includedHeaderNames));
         }
+
         public Builder includedHeaderNames(String... includedHeaderNames) {
             return includedHeaderNames(List.of(includedHeaderNames));
         }
+
         public Builder includedQueryParameters(@Nullable Output<List<String>> includedQueryParameters) {
-            this.includedQueryParameters = includedQueryParameters;
+            $.includedQueryParameters = includedQueryParameters;
             return this;
         }
-        public Builder includedQueryParameters(@Nullable List<String> includedQueryParameters) {
-            this.includedQueryParameters = Codegen.ofNullable(includedQueryParameters);
-            return this;
+
+        public Builder includedQueryParameters(List<String> includedQueryParameters) {
+            return includedQueryParameters(Output.of(includedQueryParameters));
         }
+
         public Builder includedQueryParameters(String... includedQueryParameters) {
             return includedQueryParameters(List.of(includedQueryParameters));
-        }        public EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPolicyCacheKeyPolicyArgs build() {
-            return new EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPolicyCacheKeyPolicyArgs(excludeHost, excludeQueryString, excludedQueryParameters, includeProtocol, includedHeaderNames, includedQueryParameters);
+        }
+
+        public EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPolicyCacheKeyPolicyArgs build() {
+            return $;
         }
     }
+
 }

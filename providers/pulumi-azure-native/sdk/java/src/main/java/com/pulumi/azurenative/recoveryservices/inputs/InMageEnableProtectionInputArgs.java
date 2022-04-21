@@ -10,6 +10,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +27,10 @@ public final class InMageEnableProtectionInputArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="datastoreName")
-      private final @Nullable Output<String> datastoreName;
+    private @Nullable Output<String> datastoreName;
 
-    public Output<String> datastoreName() {
-        return this.datastoreName == null ? Codegen.empty() : this.datastoreName;
+    public Optional<Output<String>> datastoreName() {
+        return Optional.ofNullable(this.datastoreName);
     }
 
     /**
@@ -37,10 +38,10 @@ public final class InMageEnableProtectionInputArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="diskExclusionInput")
-      private final @Nullable Output<InMageDiskExclusionInputArgs> diskExclusionInput;
+    private @Nullable Output<InMageDiskExclusionInputArgs> diskExclusionInput;
 
-    public Output<InMageDiskExclusionInputArgs> diskExclusionInput() {
-        return this.diskExclusionInput == null ? Codegen.empty() : this.diskExclusionInput;
+    public Optional<Output<InMageDiskExclusionInputArgs>> diskExclusionInput() {
+        return Optional.ofNullable(this.diskExclusionInput);
     }
 
     /**
@@ -48,10 +49,10 @@ public final class InMageEnableProtectionInputArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="disksToInclude")
-      private final @Nullable Output<List<String>> disksToInclude;
+    private @Nullable Output<List<String>> disksToInclude;
 
-    public Output<List<String>> disksToInclude() {
-        return this.disksToInclude == null ? Codegen.empty() : this.disksToInclude;
+    public Optional<Output<List<String>>> disksToInclude() {
+        return Optional.ofNullable(this.disksToInclude);
     }
 
     /**
@@ -60,10 +61,10 @@ public final class InMageEnableProtectionInputArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="instanceType")
-      private final @Nullable Output<String> instanceType;
+    private @Nullable Output<String> instanceType;
 
-    public Output<String> instanceType() {
-        return this.instanceType == null ? Codegen.empty() : this.instanceType;
+    public Optional<Output<String>> instanceType() {
+        return Optional.ofNullable(this.instanceType);
     }
 
     /**
@@ -71,7 +72,7 @@ public final class InMageEnableProtectionInputArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="masterTargetId", required=true)
-      private final Output<String> masterTargetId;
+    private Output<String> masterTargetId;
 
     public Output<String> masterTargetId() {
         return this.masterTargetId;
@@ -82,7 +83,7 @@ public final class InMageEnableProtectionInputArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="multiVmGroupId", required=true)
-      private final Output<String> multiVmGroupId;
+    private Output<String> multiVmGroupId;
 
     public Output<String> multiVmGroupId() {
         return this.multiVmGroupId;
@@ -93,7 +94,7 @@ public final class InMageEnableProtectionInputArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="multiVmGroupName", required=true)
-      private final Output<String> multiVmGroupName;
+    private Output<String> multiVmGroupName;
 
     public Output<String> multiVmGroupName() {
         return this.multiVmGroupName;
@@ -104,7 +105,7 @@ public final class InMageEnableProtectionInputArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="processServerId", required=true)
-      private final Output<String> processServerId;
+    private Output<String> processServerId;
 
     public Output<String> processServerId() {
         return this.processServerId;
@@ -115,7 +116,7 @@ public final class InMageEnableProtectionInputArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="retentionDrive", required=true)
-      private final Output<String> retentionDrive;
+    private Output<String> retentionDrive;
 
     public Output<String> retentionDrive() {
         return this.retentionDrive;
@@ -126,10 +127,10 @@ public final class InMageEnableProtectionInputArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="runAsAccountId")
-      private final @Nullable Output<String> runAsAccountId;
+    private @Nullable Output<String> runAsAccountId;
 
-    public Output<String> runAsAccountId() {
-        return this.runAsAccountId == null ? Codegen.empty() : this.runAsAccountId;
+    public Optional<Output<String>> runAsAccountId() {
+        return Optional.ofNullable(this.runAsAccountId);
     }
 
     /**
@@ -137,183 +138,158 @@ public final class InMageEnableProtectionInputArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="vmFriendlyName")
-      private final @Nullable Output<String> vmFriendlyName;
+    private @Nullable Output<String> vmFriendlyName;
 
-    public Output<String> vmFriendlyName() {
-        return this.vmFriendlyName == null ? Codegen.empty() : this.vmFriendlyName;
+    public Optional<Output<String>> vmFriendlyName() {
+        return Optional.ofNullable(this.vmFriendlyName);
     }
 
-    public InMageEnableProtectionInputArgs(
-        @Nullable Output<String> datastoreName,
-        @Nullable Output<InMageDiskExclusionInputArgs> diskExclusionInput,
-        @Nullable Output<List<String>> disksToInclude,
-        @Nullable Output<String> instanceType,
-        Output<String> masterTargetId,
-        Output<String> multiVmGroupId,
-        Output<String> multiVmGroupName,
-        Output<String> processServerId,
-        Output<String> retentionDrive,
-        @Nullable Output<String> runAsAccountId,
-        @Nullable Output<String> vmFriendlyName) {
-        this.datastoreName = datastoreName;
-        this.diskExclusionInput = diskExclusionInput;
-        this.disksToInclude = disksToInclude;
-        this.instanceType = Codegen.stringProp("instanceType").output().arg(instanceType).getNullable();
-        this.masterTargetId = Objects.requireNonNull(masterTargetId, "expected parameter 'masterTargetId' to be non-null");
-        this.multiVmGroupId = Objects.requireNonNull(multiVmGroupId, "expected parameter 'multiVmGroupId' to be non-null");
-        this.multiVmGroupName = Objects.requireNonNull(multiVmGroupName, "expected parameter 'multiVmGroupName' to be non-null");
-        this.processServerId = Objects.requireNonNull(processServerId, "expected parameter 'processServerId' to be non-null");
-        this.retentionDrive = Objects.requireNonNull(retentionDrive, "expected parameter 'retentionDrive' to be non-null");
-        this.runAsAccountId = runAsAccountId;
-        this.vmFriendlyName = vmFriendlyName;
-    }
+    private InMageEnableProtectionInputArgs() {}
 
-    private InMageEnableProtectionInputArgs() {
-        this.datastoreName = Codegen.empty();
-        this.diskExclusionInput = Codegen.empty();
-        this.disksToInclude = Codegen.empty();
-        this.instanceType = Codegen.empty();
-        this.masterTargetId = Codegen.empty();
-        this.multiVmGroupId = Codegen.empty();
-        this.multiVmGroupName = Codegen.empty();
-        this.processServerId = Codegen.empty();
-        this.retentionDrive = Codegen.empty();
-        this.runAsAccountId = Codegen.empty();
-        this.vmFriendlyName = Codegen.empty();
+    private InMageEnableProtectionInputArgs(InMageEnableProtectionInputArgs $) {
+        this.datastoreName = $.datastoreName;
+        this.diskExclusionInput = $.diskExclusionInput;
+        this.disksToInclude = $.disksToInclude;
+        this.instanceType = $.instanceType;
+        this.masterTargetId = $.masterTargetId;
+        this.multiVmGroupId = $.multiVmGroupId;
+        this.multiVmGroupName = $.multiVmGroupName;
+        this.processServerId = $.processServerId;
+        this.retentionDrive = $.retentionDrive;
+        this.runAsAccountId = $.runAsAccountId;
+        this.vmFriendlyName = $.vmFriendlyName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(InMageEnableProtectionInputArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> datastoreName;
-        private @Nullable Output<InMageDiskExclusionInputArgs> diskExclusionInput;
-        private @Nullable Output<List<String>> disksToInclude;
-        private @Nullable Output<String> instanceType;
-        private Output<String> masterTargetId;
-        private Output<String> multiVmGroupId;
-        private Output<String> multiVmGroupName;
-        private Output<String> processServerId;
-        private Output<String> retentionDrive;
-        private @Nullable Output<String> runAsAccountId;
-        private @Nullable Output<String> vmFriendlyName;
+        private InMageEnableProtectionInputArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new InMageEnableProtectionInputArgs();
         }
 
         public Builder(InMageEnableProtectionInputArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.datastoreName = defaults.datastoreName;
-    	      this.diskExclusionInput = defaults.diskExclusionInput;
-    	      this.disksToInclude = defaults.disksToInclude;
-    	      this.instanceType = defaults.instanceType;
-    	      this.masterTargetId = defaults.masterTargetId;
-    	      this.multiVmGroupId = defaults.multiVmGroupId;
-    	      this.multiVmGroupName = defaults.multiVmGroupName;
-    	      this.processServerId = defaults.processServerId;
-    	      this.retentionDrive = defaults.retentionDrive;
-    	      this.runAsAccountId = defaults.runAsAccountId;
-    	      this.vmFriendlyName = defaults.vmFriendlyName;
+            $ = new InMageEnableProtectionInputArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder datastoreName(@Nullable Output<String> datastoreName) {
-            this.datastoreName = datastoreName;
+            $.datastoreName = datastoreName;
             return this;
         }
-        public Builder datastoreName(@Nullable String datastoreName) {
-            this.datastoreName = Codegen.ofNullable(datastoreName);
-            return this;
+
+        public Builder datastoreName(String datastoreName) {
+            return datastoreName(Output.of(datastoreName));
         }
+
         public Builder diskExclusionInput(@Nullable Output<InMageDiskExclusionInputArgs> diskExclusionInput) {
-            this.diskExclusionInput = diskExclusionInput;
+            $.diskExclusionInput = diskExclusionInput;
             return this;
         }
-        public Builder diskExclusionInput(@Nullable InMageDiskExclusionInputArgs diskExclusionInput) {
-            this.diskExclusionInput = Codegen.ofNullable(diskExclusionInput);
-            return this;
+
+        public Builder diskExclusionInput(InMageDiskExclusionInputArgs diskExclusionInput) {
+            return diskExclusionInput(Output.of(diskExclusionInput));
         }
+
         public Builder disksToInclude(@Nullable Output<List<String>> disksToInclude) {
-            this.disksToInclude = disksToInclude;
+            $.disksToInclude = disksToInclude;
             return this;
         }
-        public Builder disksToInclude(@Nullable List<String> disksToInclude) {
-            this.disksToInclude = Codegen.ofNullable(disksToInclude);
-            return this;
+
+        public Builder disksToInclude(List<String> disksToInclude) {
+            return disksToInclude(Output.of(disksToInclude));
         }
+
         public Builder disksToInclude(String... disksToInclude) {
             return disksToInclude(List.of(disksToInclude));
         }
+
         public Builder instanceType(@Nullable Output<String> instanceType) {
-            this.instanceType = instanceType;
+            $.instanceType = instanceType;
             return this;
         }
-        public Builder instanceType(@Nullable String instanceType) {
-            this.instanceType = Codegen.ofNullable(instanceType);
-            return this;
+
+        public Builder instanceType(String instanceType) {
+            return instanceType(Output.of(instanceType));
         }
+
         public Builder masterTargetId(Output<String> masterTargetId) {
-            this.masterTargetId = Objects.requireNonNull(masterTargetId);
+            $.masterTargetId = masterTargetId;
             return this;
         }
+
         public Builder masterTargetId(String masterTargetId) {
-            this.masterTargetId = Output.of(Objects.requireNonNull(masterTargetId));
-            return this;
+            return masterTargetId(Output.of(masterTargetId));
         }
+
         public Builder multiVmGroupId(Output<String> multiVmGroupId) {
-            this.multiVmGroupId = Objects.requireNonNull(multiVmGroupId);
+            $.multiVmGroupId = multiVmGroupId;
             return this;
         }
+
         public Builder multiVmGroupId(String multiVmGroupId) {
-            this.multiVmGroupId = Output.of(Objects.requireNonNull(multiVmGroupId));
-            return this;
+            return multiVmGroupId(Output.of(multiVmGroupId));
         }
+
         public Builder multiVmGroupName(Output<String> multiVmGroupName) {
-            this.multiVmGroupName = Objects.requireNonNull(multiVmGroupName);
+            $.multiVmGroupName = multiVmGroupName;
             return this;
         }
+
         public Builder multiVmGroupName(String multiVmGroupName) {
-            this.multiVmGroupName = Output.of(Objects.requireNonNull(multiVmGroupName));
-            return this;
+            return multiVmGroupName(Output.of(multiVmGroupName));
         }
+
         public Builder processServerId(Output<String> processServerId) {
-            this.processServerId = Objects.requireNonNull(processServerId);
+            $.processServerId = processServerId;
             return this;
         }
+
         public Builder processServerId(String processServerId) {
-            this.processServerId = Output.of(Objects.requireNonNull(processServerId));
-            return this;
+            return processServerId(Output.of(processServerId));
         }
+
         public Builder retentionDrive(Output<String> retentionDrive) {
-            this.retentionDrive = Objects.requireNonNull(retentionDrive);
+            $.retentionDrive = retentionDrive;
             return this;
         }
+
         public Builder retentionDrive(String retentionDrive) {
-            this.retentionDrive = Output.of(Objects.requireNonNull(retentionDrive));
-            return this;
+            return retentionDrive(Output.of(retentionDrive));
         }
+
         public Builder runAsAccountId(@Nullable Output<String> runAsAccountId) {
-            this.runAsAccountId = runAsAccountId;
+            $.runAsAccountId = runAsAccountId;
             return this;
         }
-        public Builder runAsAccountId(@Nullable String runAsAccountId) {
-            this.runAsAccountId = Codegen.ofNullable(runAsAccountId);
-            return this;
+
+        public Builder runAsAccountId(String runAsAccountId) {
+            return runAsAccountId(Output.of(runAsAccountId));
         }
+
         public Builder vmFriendlyName(@Nullable Output<String> vmFriendlyName) {
-            this.vmFriendlyName = vmFriendlyName;
+            $.vmFriendlyName = vmFriendlyName;
             return this;
         }
-        public Builder vmFriendlyName(@Nullable String vmFriendlyName) {
-            this.vmFriendlyName = Codegen.ofNullable(vmFriendlyName);
-            return this;
-        }        public InMageEnableProtectionInputArgs build() {
-            return new InMageEnableProtectionInputArgs(datastoreName, diskExclusionInput, disksToInclude, instanceType, masterTargetId, multiVmGroupId, multiVmGroupName, processServerId, retentionDrive, runAsAccountId, vmFriendlyName);
+
+        public Builder vmFriendlyName(String vmFriendlyName) {
+            return vmFriendlyName(Output.of(vmFriendlyName));
+        }
+
+        public InMageEnableProtectionInputArgs build() {
+            $.instanceType = Codegen.stringProp("instanceType").output().arg($.instanceType).getNullable();
+            $.masterTargetId = Objects.requireNonNull($.masterTargetId, "expected parameter 'masterTargetId' to be non-null");
+            $.multiVmGroupId = Objects.requireNonNull($.multiVmGroupId, "expected parameter 'multiVmGroupId' to be non-null");
+            $.multiVmGroupName = Objects.requireNonNull($.multiVmGroupName, "expected parameter 'multiVmGroupName' to be non-null");
+            $.processServerId = Objects.requireNonNull($.processServerId, "expected parameter 'processServerId' to be non-null");
+            $.retentionDrive = Objects.requireNonNull($.retentionDrive, "expected parameter 'retentionDrive' to be non-null");
+            return $;
         }
     }
+
 }

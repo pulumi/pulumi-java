@@ -19,45 +19,44 @@ public final class PackagingGroupLogConfiguration extends com.pulumi.resources.I
      * 
      */
     @Import(name="logGroupName")
-      private final @Nullable String logGroupName;
+    private @Nullable String logGroupName;
 
     public Optional<String> logGroupName() {
-        return this.logGroupName == null ? Optional.empty() : Optional.ofNullable(this.logGroupName);
+        return Optional.ofNullable(this.logGroupName);
     }
 
-    public PackagingGroupLogConfiguration(@Nullable String logGroupName) {
-        this.logGroupName = logGroupName;
-    }
+    private PackagingGroupLogConfiguration() {}
 
-    private PackagingGroupLogConfiguration() {
-        this.logGroupName = null;
+    private PackagingGroupLogConfiguration(PackagingGroupLogConfiguration $) {
+        this.logGroupName = $.logGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PackagingGroupLogConfiguration defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String logGroupName;
+        private PackagingGroupLogConfiguration $;
 
         public Builder() {
-    	      // Empty
+            $ = new PackagingGroupLogConfiguration();
         }
 
         public Builder(PackagingGroupLogConfiguration defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.logGroupName = defaults.logGroupName;
+            $ = new PackagingGroupLogConfiguration(Objects.requireNonNull(defaults));
         }
 
         public Builder logGroupName(@Nullable String logGroupName) {
-            this.logGroupName = logGroupName;
+            $.logGroupName = logGroupName;
             return this;
-        }        public PackagingGroupLogConfiguration build() {
-            return new PackagingGroupLogConfiguration(logGroupName);
+        }
+
+        public PackagingGroupLogConfiguration build() {
+            return $;
         }
     }
+
 }

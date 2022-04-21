@@ -5,11 +5,11 @@ package com.pulumi.googlenative.containeranalysis_v1beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.containeranalysis_v1beta1.inputs.LicenseArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class FileOccurrenceArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="attributions")
-      private final @Nullable Output<List<String>> attributions;
+    private @Nullable Output<List<String>> attributions;
 
-    public Output<List<String>> attributions() {
-        return this.attributions == null ? Codegen.empty() : this.attributions;
+    public Optional<Output<List<String>>> attributions() {
+        return Optional.ofNullable(this.attributions);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class FileOccurrenceArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="comment")
-      private final @Nullable Output<String> comment;
+    private @Nullable Output<String> comment;
 
-    public Output<String> comment() {
-        return this.comment == null ? Codegen.empty() : this.comment;
+    public Optional<Output<String>> comment() {
+        return Optional.ofNullable(this.comment);
     }
 
     /**
@@ -48,10 +48,10 @@ public final class FileOccurrenceArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="contributors")
-      private final @Nullable Output<List<String>> contributors;
+    private @Nullable Output<List<String>> contributors;
 
-    public Output<List<String>> contributors() {
-        return this.contributors == null ? Codegen.empty() : this.contributors;
+    public Optional<Output<List<String>>> contributors() {
+        return Optional.ofNullable(this.contributors);
     }
 
     /**
@@ -59,10 +59,10 @@ public final class FileOccurrenceArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="copyright")
-      private final @Nullable Output<String> copyright;
+    private @Nullable Output<String> copyright;
 
-    public Output<String> copyright() {
-        return this.copyright == null ? Codegen.empty() : this.copyright;
+    public Optional<Output<String>> copyright() {
+        return Optional.ofNullable(this.copyright);
     }
 
     /**
@@ -70,10 +70,10 @@ public final class FileOccurrenceArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="filesLicenseInfo")
-      private final @Nullable Output<List<String>> filesLicenseInfo;
+    private @Nullable Output<List<String>> filesLicenseInfo;
 
-    public Output<List<String>> filesLicenseInfo() {
-        return this.filesLicenseInfo == null ? Codegen.empty() : this.filesLicenseInfo;
+    public Optional<Output<List<String>>> filesLicenseInfo() {
+        return Optional.ofNullable(this.filesLicenseInfo);
     }
 
     /**
@@ -81,10 +81,10 @@ public final class FileOccurrenceArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="id")
-      private final @Nullable Output<String> id;
+    private @Nullable Output<String> id;
 
-    public Output<String> id() {
-        return this.id == null ? Codegen.empty() : this.id;
+    public Optional<Output<String>> id() {
+        return Optional.ofNullable(this.id);
     }
 
     /**
@@ -92,10 +92,10 @@ public final class FileOccurrenceArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="licenseConcluded")
-      private final @Nullable Output<LicenseArgs> licenseConcluded;
+    private @Nullable Output<LicenseArgs> licenseConcluded;
 
-    public Output<LicenseArgs> licenseConcluded() {
-        return this.licenseConcluded == null ? Codegen.empty() : this.licenseConcluded;
+    public Optional<Output<LicenseArgs>> licenseConcluded() {
+        return Optional.ofNullable(this.licenseConcluded);
     }
 
     /**
@@ -103,150 +103,130 @@ public final class FileOccurrenceArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="notice")
-      private final @Nullable Output<String> notice;
+    private @Nullable Output<String> notice;
 
-    public Output<String> notice() {
-        return this.notice == null ? Codegen.empty() : this.notice;
+    public Optional<Output<String>> notice() {
+        return Optional.ofNullable(this.notice);
     }
 
-    public FileOccurrenceArgs(
-        @Nullable Output<List<String>> attributions,
-        @Nullable Output<String> comment,
-        @Nullable Output<List<String>> contributors,
-        @Nullable Output<String> copyright,
-        @Nullable Output<List<String>> filesLicenseInfo,
-        @Nullable Output<String> id,
-        @Nullable Output<LicenseArgs> licenseConcluded,
-        @Nullable Output<String> notice) {
-        this.attributions = attributions;
-        this.comment = comment;
-        this.contributors = contributors;
-        this.copyright = copyright;
-        this.filesLicenseInfo = filesLicenseInfo;
-        this.id = id;
-        this.licenseConcluded = licenseConcluded;
-        this.notice = notice;
-    }
+    private FileOccurrenceArgs() {}
 
-    private FileOccurrenceArgs() {
-        this.attributions = Codegen.empty();
-        this.comment = Codegen.empty();
-        this.contributors = Codegen.empty();
-        this.copyright = Codegen.empty();
-        this.filesLicenseInfo = Codegen.empty();
-        this.id = Codegen.empty();
-        this.licenseConcluded = Codegen.empty();
-        this.notice = Codegen.empty();
+    private FileOccurrenceArgs(FileOccurrenceArgs $) {
+        this.attributions = $.attributions;
+        this.comment = $.comment;
+        this.contributors = $.contributors;
+        this.copyright = $.copyright;
+        this.filesLicenseInfo = $.filesLicenseInfo;
+        this.id = $.id;
+        this.licenseConcluded = $.licenseConcluded;
+        this.notice = $.notice;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FileOccurrenceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> attributions;
-        private @Nullable Output<String> comment;
-        private @Nullable Output<List<String>> contributors;
-        private @Nullable Output<String> copyright;
-        private @Nullable Output<List<String>> filesLicenseInfo;
-        private @Nullable Output<String> id;
-        private @Nullable Output<LicenseArgs> licenseConcluded;
-        private @Nullable Output<String> notice;
+        private FileOccurrenceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new FileOccurrenceArgs();
         }
 
         public Builder(FileOccurrenceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.attributions = defaults.attributions;
-    	      this.comment = defaults.comment;
-    	      this.contributors = defaults.contributors;
-    	      this.copyright = defaults.copyright;
-    	      this.filesLicenseInfo = defaults.filesLicenseInfo;
-    	      this.id = defaults.id;
-    	      this.licenseConcluded = defaults.licenseConcluded;
-    	      this.notice = defaults.notice;
+            $ = new FileOccurrenceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder attributions(@Nullable Output<List<String>> attributions) {
-            this.attributions = attributions;
+            $.attributions = attributions;
             return this;
         }
-        public Builder attributions(@Nullable List<String> attributions) {
-            this.attributions = Codegen.ofNullable(attributions);
-            return this;
+
+        public Builder attributions(List<String> attributions) {
+            return attributions(Output.of(attributions));
         }
+
         public Builder attributions(String... attributions) {
             return attributions(List.of(attributions));
         }
+
         public Builder comment(@Nullable Output<String> comment) {
-            this.comment = comment;
+            $.comment = comment;
             return this;
         }
-        public Builder comment(@Nullable String comment) {
-            this.comment = Codegen.ofNullable(comment);
-            return this;
+
+        public Builder comment(String comment) {
+            return comment(Output.of(comment));
         }
+
         public Builder contributors(@Nullable Output<List<String>> contributors) {
-            this.contributors = contributors;
+            $.contributors = contributors;
             return this;
         }
-        public Builder contributors(@Nullable List<String> contributors) {
-            this.contributors = Codegen.ofNullable(contributors);
-            return this;
+
+        public Builder contributors(List<String> contributors) {
+            return contributors(Output.of(contributors));
         }
+
         public Builder contributors(String... contributors) {
             return contributors(List.of(contributors));
         }
+
         public Builder copyright(@Nullable Output<String> copyright) {
-            this.copyright = copyright;
+            $.copyright = copyright;
             return this;
         }
-        public Builder copyright(@Nullable String copyright) {
-            this.copyright = Codegen.ofNullable(copyright);
-            return this;
+
+        public Builder copyright(String copyright) {
+            return copyright(Output.of(copyright));
         }
+
         public Builder filesLicenseInfo(@Nullable Output<List<String>> filesLicenseInfo) {
-            this.filesLicenseInfo = filesLicenseInfo;
+            $.filesLicenseInfo = filesLicenseInfo;
             return this;
         }
-        public Builder filesLicenseInfo(@Nullable List<String> filesLicenseInfo) {
-            this.filesLicenseInfo = Codegen.ofNullable(filesLicenseInfo);
-            return this;
+
+        public Builder filesLicenseInfo(List<String> filesLicenseInfo) {
+            return filesLicenseInfo(Output.of(filesLicenseInfo));
         }
+
         public Builder filesLicenseInfo(String... filesLicenseInfo) {
             return filesLicenseInfo(List.of(filesLicenseInfo));
         }
+
         public Builder id(@Nullable Output<String> id) {
-            this.id = id;
+            $.id = id;
             return this;
         }
-        public Builder id(@Nullable String id) {
-            this.id = Codegen.ofNullable(id);
-            return this;
+
+        public Builder id(String id) {
+            return id(Output.of(id));
         }
+
         public Builder licenseConcluded(@Nullable Output<LicenseArgs> licenseConcluded) {
-            this.licenseConcluded = licenseConcluded;
+            $.licenseConcluded = licenseConcluded;
             return this;
         }
-        public Builder licenseConcluded(@Nullable LicenseArgs licenseConcluded) {
-            this.licenseConcluded = Codegen.ofNullable(licenseConcluded);
-            return this;
+
+        public Builder licenseConcluded(LicenseArgs licenseConcluded) {
+            return licenseConcluded(Output.of(licenseConcluded));
         }
+
         public Builder notice(@Nullable Output<String> notice) {
-            this.notice = notice;
+            $.notice = notice;
             return this;
         }
-        public Builder notice(@Nullable String notice) {
-            this.notice = Codegen.ofNullable(notice);
-            return this;
-        }        public FileOccurrenceArgs build() {
-            return new FileOccurrenceArgs(attributions, comment, contributors, copyright, filesLicenseInfo, id, licenseConcluded, notice);
+
+        public Builder notice(String notice) {
+            return notice(Output.of(notice));
+        }
+
+        public FileOccurrenceArgs build() {
+            return $;
         }
     }
+
 }

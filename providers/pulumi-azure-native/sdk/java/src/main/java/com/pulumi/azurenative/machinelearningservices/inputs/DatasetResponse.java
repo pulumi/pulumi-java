@@ -27,7 +27,7 @@ public final class DatasetResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="createdTime", required=true)
-      private final String createdTime;
+    private String createdTime;
 
     public String createdTime() {
         return this.createdTime;
@@ -38,7 +38,7 @@ public final class DatasetResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="datasetId", required=true)
-      private final String datasetId;
+    private String datasetId;
 
     public String datasetId() {
         return this.datasetId;
@@ -49,10 +49,10 @@ public final class DatasetResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="datasetState")
-      private final @Nullable DatasetStateResponse datasetState;
+    private @Nullable DatasetStateResponse datasetState;
 
     public Optional<DatasetStateResponse> datasetState() {
-        return this.datasetState == null ? Optional.empty() : Optional.ofNullable(this.datasetState);
+        return Optional.ofNullable(this.datasetState);
     }
 
     /**
@@ -60,7 +60,7 @@ public final class DatasetResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="datasetType", required=true)
-      private final String datasetType;
+    private String datasetType;
 
     public String datasetType() {
         return this.datasetType;
@@ -71,7 +71,7 @@ public final class DatasetResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="defaultCompute", required=true)
-      private final String defaultCompute;
+    private String defaultCompute;
 
     public String defaultCompute() {
         return this.defaultCompute;
@@ -82,7 +82,7 @@ public final class DatasetResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="description", required=true)
-      private final String description;
+    private String description;
 
     public String description() {
         return this.description;
@@ -93,7 +93,7 @@ public final class DatasetResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="etag", required=true)
-      private final String etag;
+    private String etag;
 
     public String etag() {
         return this.etag;
@@ -104,7 +104,7 @@ public final class DatasetResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="isVisible", required=true)
-      private final Boolean isVisible;
+    private Boolean isVisible;
 
     public Boolean isVisible() {
         return this.isVisible;
@@ -115,10 +115,10 @@ public final class DatasetResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="latest")
-      private final @Nullable DatasetResponseLatest latest;
+    private @Nullable DatasetResponseLatest latest;
 
     public Optional<DatasetResponseLatest> latest() {
-        return this.latest == null ? Optional.empty() : Optional.ofNullable(this.latest);
+        return Optional.ofNullable(this.latest);
     }
 
     /**
@@ -126,7 +126,7 @@ public final class DatasetResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="modifiedTime", required=true)
-      private final String modifiedTime;
+    private String modifiedTime;
 
     public String modifiedTime() {
         return this.modifiedTime;
@@ -137,7 +137,7 @@ public final class DatasetResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -148,145 +148,120 @@ public final class DatasetResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="tags", required=true)
-      private final Map<String,String> tags;
+    private Map<String,String> tags;
 
     public Map<String,String> tags() {
         return this.tags;
     }
 
-    public DatasetResponse(
-        String createdTime,
-        String datasetId,
-        @Nullable DatasetStateResponse datasetState,
-        String datasetType,
-        String defaultCompute,
-        String description,
-        String etag,
-        Boolean isVisible,
-        @Nullable DatasetResponseLatest latest,
-        String modifiedTime,
-        String name,
-        Map<String,String> tags) {
-        this.createdTime = Objects.requireNonNull(createdTime, "expected parameter 'createdTime' to be non-null");
-        this.datasetId = Objects.requireNonNull(datasetId, "expected parameter 'datasetId' to be non-null");
-        this.datasetState = datasetState;
-        this.datasetType = Objects.requireNonNull(datasetType, "expected parameter 'datasetType' to be non-null");
-        this.defaultCompute = Objects.requireNonNull(defaultCompute, "expected parameter 'defaultCompute' to be non-null");
-        this.description = Objects.requireNonNull(description, "expected parameter 'description' to be non-null");
-        this.etag = Objects.requireNonNull(etag, "expected parameter 'etag' to be non-null");
-        this.isVisible = Objects.requireNonNull(isVisible, "expected parameter 'isVisible' to be non-null");
-        this.latest = latest;
-        this.modifiedTime = Objects.requireNonNull(modifiedTime, "expected parameter 'modifiedTime' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.tags = Objects.requireNonNull(tags, "expected parameter 'tags' to be non-null");
-    }
+    private DatasetResponse() {}
 
-    private DatasetResponse() {
-        this.createdTime = null;
-        this.datasetId = null;
-        this.datasetState = null;
-        this.datasetType = null;
-        this.defaultCompute = null;
-        this.description = null;
-        this.etag = null;
-        this.isVisible = null;
-        this.latest = null;
-        this.modifiedTime = null;
-        this.name = null;
-        this.tags = Map.of();
+    private DatasetResponse(DatasetResponse $) {
+        this.createdTime = $.createdTime;
+        this.datasetId = $.datasetId;
+        this.datasetState = $.datasetState;
+        this.datasetType = $.datasetType;
+        this.defaultCompute = $.defaultCompute;
+        this.description = $.description;
+        this.etag = $.etag;
+        this.isVisible = $.isVisible;
+        this.latest = $.latest;
+        this.modifiedTime = $.modifiedTime;
+        this.name = $.name;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DatasetResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String createdTime;
-        private String datasetId;
-        private @Nullable DatasetStateResponse datasetState;
-        private String datasetType;
-        private String defaultCompute;
-        private String description;
-        private String etag;
-        private Boolean isVisible;
-        private @Nullable DatasetResponseLatest latest;
-        private String modifiedTime;
-        private String name;
-        private Map<String,String> tags;
+        private DatasetResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new DatasetResponse();
         }
 
         public Builder(DatasetResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.createdTime = defaults.createdTime;
-    	      this.datasetId = defaults.datasetId;
-    	      this.datasetState = defaults.datasetState;
-    	      this.datasetType = defaults.datasetType;
-    	      this.defaultCompute = defaults.defaultCompute;
-    	      this.description = defaults.description;
-    	      this.etag = defaults.etag;
-    	      this.isVisible = defaults.isVisible;
-    	      this.latest = defaults.latest;
-    	      this.modifiedTime = defaults.modifiedTime;
-    	      this.name = defaults.name;
-    	      this.tags = defaults.tags;
+            $ = new DatasetResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder createdTime(String createdTime) {
-            this.createdTime = Objects.requireNonNull(createdTime);
+            $.createdTime = createdTime;
             return this;
         }
+
         public Builder datasetId(String datasetId) {
-            this.datasetId = Objects.requireNonNull(datasetId);
+            $.datasetId = datasetId;
             return this;
         }
+
         public Builder datasetState(@Nullable DatasetStateResponse datasetState) {
-            this.datasetState = datasetState;
+            $.datasetState = datasetState;
             return this;
         }
+
         public Builder datasetType(String datasetType) {
-            this.datasetType = Objects.requireNonNull(datasetType);
+            $.datasetType = datasetType;
             return this;
         }
+
         public Builder defaultCompute(String defaultCompute) {
-            this.defaultCompute = Objects.requireNonNull(defaultCompute);
+            $.defaultCompute = defaultCompute;
             return this;
         }
+
         public Builder description(String description) {
-            this.description = Objects.requireNonNull(description);
+            $.description = description;
             return this;
         }
+
         public Builder etag(String etag) {
-            this.etag = Objects.requireNonNull(etag);
+            $.etag = etag;
             return this;
         }
+
         public Builder isVisible(Boolean isVisible) {
-            this.isVisible = Objects.requireNonNull(isVisible);
+            $.isVisible = isVisible;
             return this;
         }
+
         public Builder latest(@Nullable DatasetResponseLatest latest) {
-            this.latest = latest;
+            $.latest = latest;
             return this;
         }
+
         public Builder modifiedTime(String modifiedTime) {
-            this.modifiedTime = Objects.requireNonNull(modifiedTime);
+            $.modifiedTime = modifiedTime;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder tags(Map<String,String> tags) {
-            this.tags = Objects.requireNonNull(tags);
+            $.tags = tags;
             return this;
-        }        public DatasetResponse build() {
-            return new DatasetResponse(createdTime, datasetId, datasetState, datasetType, defaultCompute, description, etag, isVisible, latest, modifiedTime, name, tags);
+        }
+
+        public DatasetResponse build() {
+            $.createdTime = Objects.requireNonNull($.createdTime, "expected parameter 'createdTime' to be non-null");
+            $.datasetId = Objects.requireNonNull($.datasetId, "expected parameter 'datasetId' to be non-null");
+            $.datasetType = Objects.requireNonNull($.datasetType, "expected parameter 'datasetType' to be non-null");
+            $.defaultCompute = Objects.requireNonNull($.defaultCompute, "expected parameter 'defaultCompute' to be non-null");
+            $.description = Objects.requireNonNull($.description, "expected parameter 'description' to be non-null");
+            $.etag = Objects.requireNonNull($.etag, "expected parameter 'etag' to be non-null");
+            $.isVisible = Objects.requireNonNull($.isVisible, "expected parameter 'isVisible' to be non-null");
+            $.modifiedTime = Objects.requireNonNull($.modifiedTime, "expected parameter 'modifiedTime' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.tags = Objects.requireNonNull($.tags, "expected parameter 'tags' to be non-null");
+            return $;
         }
     }
+
 }

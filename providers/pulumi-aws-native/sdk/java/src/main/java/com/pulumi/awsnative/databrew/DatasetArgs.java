@@ -10,10 +10,10 @@ import com.pulumi.awsnative.databrew.inputs.DatasetPathOptionsArgs;
 import com.pulumi.awsnative.databrew.inputs.DatasetTagArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class DatasetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="format")
-      private final @Nullable Output<DatasetFormat> format;
+    private @Nullable Output<DatasetFormat> format;
 
-    public Output<DatasetFormat> format() {
-        return this.format == null ? Codegen.empty() : this.format;
+    public Optional<Output<DatasetFormat>> format() {
+        return Optional.ofNullable(this.format);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class DatasetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="formatOptions")
-      private final @Nullable Output<DatasetFormatOptionsArgs> formatOptions;
+    private @Nullable Output<DatasetFormatOptionsArgs> formatOptions;
 
-    public Output<DatasetFormatOptionsArgs> formatOptions() {
-        return this.formatOptions == null ? Codegen.empty() : this.formatOptions;
+    public Optional<Output<DatasetFormatOptionsArgs>> formatOptions() {
+        return Optional.ofNullable(this.formatOptions);
     }
 
     /**
@@ -48,7 +48,7 @@ public final class DatasetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="input", required=true)
-      private final Output<DatasetInputArgs> input;
+    private Output<DatasetInputArgs> input;
 
     public Output<DatasetInputArgs> input() {
         return this.input;
@@ -59,10 +59,10 @@ public final class DatasetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -70,125 +70,110 @@ public final class DatasetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="pathOptions")
-      private final @Nullable Output<DatasetPathOptionsArgs> pathOptions;
+    private @Nullable Output<DatasetPathOptionsArgs> pathOptions;
 
-    public Output<DatasetPathOptionsArgs> pathOptions() {
-        return this.pathOptions == null ? Codegen.empty() : this.pathOptions;
+    public Optional<Output<DatasetPathOptionsArgs>> pathOptions() {
+        return Optional.ofNullable(this.pathOptions);
     }
 
     @Import(name="tags")
-      private final @Nullable Output<List<DatasetTagArgs>> tags;
+    private @Nullable Output<List<DatasetTagArgs>> tags;
 
-    public Output<List<DatasetTagArgs>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<List<DatasetTagArgs>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public DatasetArgs(
-        @Nullable Output<DatasetFormat> format,
-        @Nullable Output<DatasetFormatOptionsArgs> formatOptions,
-        Output<DatasetInputArgs> input,
-        @Nullable Output<String> name,
-        @Nullable Output<DatasetPathOptionsArgs> pathOptions,
-        @Nullable Output<List<DatasetTagArgs>> tags) {
-        this.format = format;
-        this.formatOptions = formatOptions;
-        this.input = Objects.requireNonNull(input, "expected parameter 'input' to be non-null");
-        this.name = name;
-        this.pathOptions = pathOptions;
-        this.tags = tags;
-    }
+    private DatasetArgs() {}
 
-    private DatasetArgs() {
-        this.format = Codegen.empty();
-        this.formatOptions = Codegen.empty();
-        this.input = Codegen.empty();
-        this.name = Codegen.empty();
-        this.pathOptions = Codegen.empty();
-        this.tags = Codegen.empty();
+    private DatasetArgs(DatasetArgs $) {
+        this.format = $.format;
+        this.formatOptions = $.formatOptions;
+        this.input = $.input;
+        this.name = $.name;
+        this.pathOptions = $.pathOptions;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DatasetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<DatasetFormat> format;
-        private @Nullable Output<DatasetFormatOptionsArgs> formatOptions;
-        private Output<DatasetInputArgs> input;
-        private @Nullable Output<String> name;
-        private @Nullable Output<DatasetPathOptionsArgs> pathOptions;
-        private @Nullable Output<List<DatasetTagArgs>> tags;
+        private DatasetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DatasetArgs();
         }
 
         public Builder(DatasetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.format = defaults.format;
-    	      this.formatOptions = defaults.formatOptions;
-    	      this.input = defaults.input;
-    	      this.name = defaults.name;
-    	      this.pathOptions = defaults.pathOptions;
-    	      this.tags = defaults.tags;
+            $ = new DatasetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder format(@Nullable Output<DatasetFormat> format) {
-            this.format = format;
+            $.format = format;
             return this;
         }
-        public Builder format(@Nullable DatasetFormat format) {
-            this.format = Codegen.ofNullable(format);
-            return this;
+
+        public Builder format(DatasetFormat format) {
+            return format(Output.of(format));
         }
+
         public Builder formatOptions(@Nullable Output<DatasetFormatOptionsArgs> formatOptions) {
-            this.formatOptions = formatOptions;
+            $.formatOptions = formatOptions;
             return this;
         }
-        public Builder formatOptions(@Nullable DatasetFormatOptionsArgs formatOptions) {
-            this.formatOptions = Codegen.ofNullable(formatOptions);
-            return this;
+
+        public Builder formatOptions(DatasetFormatOptionsArgs formatOptions) {
+            return formatOptions(Output.of(formatOptions));
         }
+
         public Builder input(Output<DatasetInputArgs> input) {
-            this.input = Objects.requireNonNull(input);
+            $.input = input;
             return this;
         }
+
         public Builder input(DatasetInputArgs input) {
-            this.input = Output.of(Objects.requireNonNull(input));
-            return this;
+            return input(Output.of(input));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder pathOptions(@Nullable Output<DatasetPathOptionsArgs> pathOptions) {
-            this.pathOptions = pathOptions;
+            $.pathOptions = pathOptions;
             return this;
         }
-        public Builder pathOptions(@Nullable DatasetPathOptionsArgs pathOptions) {
-            this.pathOptions = Codegen.ofNullable(pathOptions);
-            return this;
+
+        public Builder pathOptions(DatasetPathOptionsArgs pathOptions) {
+            return pathOptions(Output.of(pathOptions));
         }
+
         public Builder tags(@Nullable Output<List<DatasetTagArgs>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable List<DatasetTagArgs> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(List<DatasetTagArgs> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tags(DatasetTagArgs... tags) {
             return tags(List.of(tags));
-        }        public DatasetArgs build() {
-            return new DatasetArgs(format, formatOptions, input, name, pathOptions, tags);
+        }
+
+        public DatasetArgs build() {
+            $.input = Objects.requireNonNull($.input, "expected parameter 'input' to be non-null");
+            return $;
         }
     }
+
 }

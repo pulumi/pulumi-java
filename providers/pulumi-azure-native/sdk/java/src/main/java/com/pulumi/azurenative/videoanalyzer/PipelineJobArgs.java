@@ -6,10 +6,10 @@ package com.pulumi.azurenative.videoanalyzer;
 import com.pulumi.azurenative.videoanalyzer.inputs.ParameterDefinitionArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,7 +22,7 @@ public final class PipelineJobArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="accountName", required=true)
-      private final Output<String> accountName;
+    private Output<String> accountName;
 
     public Output<String> accountName() {
         return this.accountName;
@@ -33,10 +33,10 @@ public final class PipelineJobArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -44,10 +44,10 @@ public final class PipelineJobArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="parameters")
-      private final @Nullable Output<List<ParameterDefinitionArgs>> parameters;
+    private @Nullable Output<List<ParameterDefinitionArgs>> parameters;
 
-    public Output<List<ParameterDefinitionArgs>> parameters() {
-        return this.parameters == null ? Codegen.empty() : this.parameters;
+    public Optional<Output<List<ParameterDefinitionArgs>>> parameters() {
+        return Optional.ofNullable(this.parameters);
     }
 
     /**
@@ -55,10 +55,10 @@ public final class PipelineJobArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="pipelineJobName")
-      private final @Nullable Output<String> pipelineJobName;
+    private @Nullable Output<String> pipelineJobName;
 
-    public Output<String> pipelineJobName() {
-        return this.pipelineJobName == null ? Codegen.empty() : this.pipelineJobName;
+    public Optional<Output<String>> pipelineJobName() {
+        return Optional.ofNullable(this.pipelineJobName);
     }
 
     /**
@@ -66,7 +66,7 @@ public final class PipelineJobArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -77,118 +77,105 @@ public final class PipelineJobArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="topologyName", required=true)
-      private final Output<String> topologyName;
+    private Output<String> topologyName;
 
     public Output<String> topologyName() {
         return this.topologyName;
     }
 
-    public PipelineJobArgs(
-        Output<String> accountName,
-        @Nullable Output<String> description,
-        @Nullable Output<List<ParameterDefinitionArgs>> parameters,
-        @Nullable Output<String> pipelineJobName,
-        Output<String> resourceGroupName,
-        Output<String> topologyName) {
-        this.accountName = Objects.requireNonNull(accountName, "expected parameter 'accountName' to be non-null");
-        this.description = description;
-        this.parameters = parameters;
-        this.pipelineJobName = pipelineJobName;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.topologyName = Objects.requireNonNull(topologyName, "expected parameter 'topologyName' to be non-null");
-    }
+    private PipelineJobArgs() {}
 
-    private PipelineJobArgs() {
-        this.accountName = Codegen.empty();
-        this.description = Codegen.empty();
-        this.parameters = Codegen.empty();
-        this.pipelineJobName = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.topologyName = Codegen.empty();
+    private PipelineJobArgs(PipelineJobArgs $) {
+        this.accountName = $.accountName;
+        this.description = $.description;
+        this.parameters = $.parameters;
+        this.pipelineJobName = $.pipelineJobName;
+        this.resourceGroupName = $.resourceGroupName;
+        this.topologyName = $.topologyName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PipelineJobArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> accountName;
-        private @Nullable Output<String> description;
-        private @Nullable Output<List<ParameterDefinitionArgs>> parameters;
-        private @Nullable Output<String> pipelineJobName;
-        private Output<String> resourceGroupName;
-        private Output<String> topologyName;
+        private PipelineJobArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PipelineJobArgs();
         }
 
         public Builder(PipelineJobArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accountName = defaults.accountName;
-    	      this.description = defaults.description;
-    	      this.parameters = defaults.parameters;
-    	      this.pipelineJobName = defaults.pipelineJobName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.topologyName = defaults.topologyName;
+            $ = new PipelineJobArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder accountName(Output<String> accountName) {
-            this.accountName = Objects.requireNonNull(accountName);
+            $.accountName = accountName;
             return this;
         }
+
         public Builder accountName(String accountName) {
-            this.accountName = Output.of(Objects.requireNonNull(accountName));
-            return this;
+            return accountName(Output.of(accountName));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder parameters(@Nullable Output<List<ParameterDefinitionArgs>> parameters) {
-            this.parameters = parameters;
+            $.parameters = parameters;
             return this;
         }
-        public Builder parameters(@Nullable List<ParameterDefinitionArgs> parameters) {
-            this.parameters = Codegen.ofNullable(parameters);
-            return this;
+
+        public Builder parameters(List<ParameterDefinitionArgs> parameters) {
+            return parameters(Output.of(parameters));
         }
+
         public Builder parameters(ParameterDefinitionArgs... parameters) {
             return parameters(List.of(parameters));
         }
+
         public Builder pipelineJobName(@Nullable Output<String> pipelineJobName) {
-            this.pipelineJobName = pipelineJobName;
+            $.pipelineJobName = pipelineJobName;
             return this;
         }
-        public Builder pipelineJobName(@Nullable String pipelineJobName) {
-            this.pipelineJobName = Codegen.ofNullable(pipelineJobName);
-            return this;
+
+        public Builder pipelineJobName(String pipelineJobName) {
+            return pipelineJobName(Output.of(pipelineJobName));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder topologyName(Output<String> topologyName) {
-            this.topologyName = Objects.requireNonNull(topologyName);
+            $.topologyName = topologyName;
             return this;
         }
+
         public Builder topologyName(String topologyName) {
-            this.topologyName = Output.of(Objects.requireNonNull(topologyName));
-            return this;
-        }        public PipelineJobArgs build() {
-            return new PipelineJobArgs(accountName, description, parameters, pipelineJobName, resourceGroupName, topologyName);
+            return topologyName(Output.of(topologyName));
+        }
+
+        public PipelineJobArgs build() {
+            $.accountName = Objects.requireNonNull($.accountName, "expected parameter 'accountName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.topologyName = Objects.requireNonNull($.topologyName, "expected parameter 'topologyName' to be non-null");
+            return $;
         }
     }
+
 }

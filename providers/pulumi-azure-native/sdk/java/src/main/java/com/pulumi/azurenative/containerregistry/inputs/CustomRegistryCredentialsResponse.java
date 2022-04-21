@@ -28,10 +28,10 @@ public final class CustomRegistryCredentialsResponse extends com.pulumi.resource
      * 
      */
     @Import(name="identity")
-      private final @Nullable String identity;
+    private @Nullable String identity;
 
     public Optional<String> identity() {
-        return this.identity == null ? Optional.empty() : Optional.ofNullable(this.identity);
+        return Optional.ofNullable(this.identity);
     }
 
     /**
@@ -40,10 +40,10 @@ public final class CustomRegistryCredentialsResponse extends com.pulumi.resource
      * 
      */
     @Import(name="password")
-      private final @Nullable SecretObjectResponse password;
+    private @Nullable SecretObjectResponse password;
 
     public Optional<SecretObjectResponse> password() {
-        return this.password == null ? Optional.empty() : Optional.ofNullable(this.password);
+        return Optional.ofNullable(this.password);
     }
 
     /**
@@ -51,64 +51,56 @@ public final class CustomRegistryCredentialsResponse extends com.pulumi.resource
      * 
      */
     @Import(name="userName")
-      private final @Nullable SecretObjectResponse userName;
+    private @Nullable SecretObjectResponse userName;
 
     public Optional<SecretObjectResponse> userName() {
-        return this.userName == null ? Optional.empty() : Optional.ofNullable(this.userName);
+        return Optional.ofNullable(this.userName);
     }
 
-    public CustomRegistryCredentialsResponse(
-        @Nullable String identity,
-        @Nullable SecretObjectResponse password,
-        @Nullable SecretObjectResponse userName) {
-        this.identity = identity;
-        this.password = password;
-        this.userName = userName;
-    }
+    private CustomRegistryCredentialsResponse() {}
 
-    private CustomRegistryCredentialsResponse() {
-        this.identity = null;
-        this.password = null;
-        this.userName = null;
+    private CustomRegistryCredentialsResponse(CustomRegistryCredentialsResponse $) {
+        this.identity = $.identity;
+        this.password = $.password;
+        this.userName = $.userName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CustomRegistryCredentialsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String identity;
-        private @Nullable SecretObjectResponse password;
-        private @Nullable SecretObjectResponse userName;
+        private CustomRegistryCredentialsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new CustomRegistryCredentialsResponse();
         }
 
         public Builder(CustomRegistryCredentialsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.identity = defaults.identity;
-    	      this.password = defaults.password;
-    	      this.userName = defaults.userName;
+            $ = new CustomRegistryCredentialsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder identity(@Nullable String identity) {
-            this.identity = identity;
+            $.identity = identity;
             return this;
         }
+
         public Builder password(@Nullable SecretObjectResponse password) {
-            this.password = password;
+            $.password = password;
             return this;
         }
+
         public Builder userName(@Nullable SecretObjectResponse userName) {
-            this.userName = userName;
+            $.userName = userName;
             return this;
-        }        public CustomRegistryCredentialsResponse build() {
-            return new CustomRegistryCredentialsResponse(identity, password, userName);
+        }
+
+        public CustomRegistryCredentialsResponse build() {
+            return $;
         }
     }
+
 }

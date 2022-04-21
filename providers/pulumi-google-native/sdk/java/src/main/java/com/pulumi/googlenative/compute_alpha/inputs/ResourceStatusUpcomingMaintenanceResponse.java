@@ -17,45 +17,45 @@ public final class ResourceStatusUpcomingMaintenanceResponse extends com.pulumi.
      * 
      */
     @Import(name="canReschedule", required=true)
-      private final Boolean canReschedule;
+    private Boolean canReschedule;
 
     public Boolean canReschedule() {
         return this.canReschedule;
     }
 
-    public ResourceStatusUpcomingMaintenanceResponse(Boolean canReschedule) {
-        this.canReschedule = Objects.requireNonNull(canReschedule, "expected parameter 'canReschedule' to be non-null");
-    }
+    private ResourceStatusUpcomingMaintenanceResponse() {}
 
-    private ResourceStatusUpcomingMaintenanceResponse() {
-        this.canReschedule = null;
+    private ResourceStatusUpcomingMaintenanceResponse(ResourceStatusUpcomingMaintenanceResponse $) {
+        this.canReschedule = $.canReschedule;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ResourceStatusUpcomingMaintenanceResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Boolean canReschedule;
+        private ResourceStatusUpcomingMaintenanceResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ResourceStatusUpcomingMaintenanceResponse();
         }
 
         public Builder(ResourceStatusUpcomingMaintenanceResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.canReschedule = defaults.canReschedule;
+            $ = new ResourceStatusUpcomingMaintenanceResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder canReschedule(Boolean canReschedule) {
-            this.canReschedule = Objects.requireNonNull(canReschedule);
+            $.canReschedule = canReschedule;
             return this;
-        }        public ResourceStatusUpcomingMaintenanceResponse build() {
-            return new ResourceStatusUpcomingMaintenanceResponse(canReschedule);
+        }
+
+        public ResourceStatusUpcomingMaintenanceResponse build() {
+            $.canReschedule = Objects.requireNonNull($.canReschedule, "expected parameter 'canReschedule' to be non-null");
+            return $;
         }
     }
+
 }

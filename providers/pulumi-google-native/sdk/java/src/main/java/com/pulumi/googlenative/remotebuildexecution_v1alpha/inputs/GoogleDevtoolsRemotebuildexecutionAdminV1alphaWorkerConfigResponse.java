@@ -24,7 +24,7 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerConfigRes
      * 
      */
     @Import(name="accelerator", required=true)
-      private final GoogleDevtoolsRemotebuildexecutionAdminV1alphaAcceleratorConfigResponse accelerator;
+    private GoogleDevtoolsRemotebuildexecutionAdminV1alphaAcceleratorConfigResponse accelerator;
 
     public GoogleDevtoolsRemotebuildexecutionAdminV1alphaAcceleratorConfigResponse accelerator() {
         return this.accelerator;
@@ -35,7 +35,7 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerConfigRes
      * 
      */
     @Import(name="diskSizeGb", required=true)
-      private final String diskSizeGb;
+    private String diskSizeGb;
 
     public String diskSizeGb() {
         return this.diskSizeGb;
@@ -46,7 +46,7 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerConfigRes
      * 
      */
     @Import(name="diskType", required=true)
-      private final String diskType;
+    private String diskType;
 
     public String diskType() {
         return this.diskType;
@@ -57,7 +57,7 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerConfigRes
      * 
      */
     @Import(name="labels", required=true)
-      private final Map<String,String> labels;
+    private Map<String,String> labels;
 
     public Map<String,String> labels() {
         return this.labels;
@@ -68,7 +68,7 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerConfigRes
      * 
      */
     @Import(name="machineType", required=true)
-      private final String machineType;
+    private String machineType;
 
     public String machineType() {
         return this.machineType;
@@ -79,7 +79,7 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerConfigRes
      * 
      */
     @Import(name="maxConcurrentActions", required=true)
-      private final String maxConcurrentActions;
+    private String maxConcurrentActions;
 
     public String maxConcurrentActions() {
         return this.maxConcurrentActions;
@@ -90,7 +90,7 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerConfigRes
      * 
      */
     @Import(name="minCpuPlatform", required=true)
-      private final String minCpuPlatform;
+    private String minCpuPlatform;
 
     public String minCpuPlatform() {
         return this.minCpuPlatform;
@@ -101,7 +101,7 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerConfigRes
      * 
      */
     @Import(name="networkAccess", required=true)
-      private final String networkAccess;
+    private String networkAccess;
 
     public String networkAccess() {
         return this.networkAccess;
@@ -112,7 +112,7 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerConfigRes
      * 
      */
     @Import(name="reserved", required=true)
-      private final Boolean reserved;
+    private Boolean reserved;
 
     public Boolean reserved() {
         return this.reserved;
@@ -123,7 +123,7 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerConfigRes
      * 
      */
     @Import(name="soleTenantNodeType", required=true)
-      private final String soleTenantNodeType;
+    private String soleTenantNodeType;
 
     public String soleTenantNodeType() {
         return this.soleTenantNodeType;
@@ -134,136 +134,115 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerConfigRes
      * 
      */
     @Import(name="vmImage", required=true)
-      private final String vmImage;
+    private String vmImage;
 
     public String vmImage() {
         return this.vmImage;
     }
 
-    public GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerConfigResponse(
-        GoogleDevtoolsRemotebuildexecutionAdminV1alphaAcceleratorConfigResponse accelerator,
-        String diskSizeGb,
-        String diskType,
-        Map<String,String> labels,
-        String machineType,
-        String maxConcurrentActions,
-        String minCpuPlatform,
-        String networkAccess,
-        Boolean reserved,
-        String soleTenantNodeType,
-        String vmImage) {
-        this.accelerator = Objects.requireNonNull(accelerator, "expected parameter 'accelerator' to be non-null");
-        this.diskSizeGb = Objects.requireNonNull(diskSizeGb, "expected parameter 'diskSizeGb' to be non-null");
-        this.diskType = Objects.requireNonNull(diskType, "expected parameter 'diskType' to be non-null");
-        this.labels = Objects.requireNonNull(labels, "expected parameter 'labels' to be non-null");
-        this.machineType = Objects.requireNonNull(machineType, "expected parameter 'machineType' to be non-null");
-        this.maxConcurrentActions = Objects.requireNonNull(maxConcurrentActions, "expected parameter 'maxConcurrentActions' to be non-null");
-        this.minCpuPlatform = Objects.requireNonNull(minCpuPlatform, "expected parameter 'minCpuPlatform' to be non-null");
-        this.networkAccess = Objects.requireNonNull(networkAccess, "expected parameter 'networkAccess' to be non-null");
-        this.reserved = Objects.requireNonNull(reserved, "expected parameter 'reserved' to be non-null");
-        this.soleTenantNodeType = Objects.requireNonNull(soleTenantNodeType, "expected parameter 'soleTenantNodeType' to be non-null");
-        this.vmImage = Objects.requireNonNull(vmImage, "expected parameter 'vmImage' to be non-null");
-    }
+    private GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerConfigResponse() {}
 
-    private GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerConfigResponse() {
-        this.accelerator = null;
-        this.diskSizeGb = null;
-        this.diskType = null;
-        this.labels = Map.of();
-        this.machineType = null;
-        this.maxConcurrentActions = null;
-        this.minCpuPlatform = null;
-        this.networkAccess = null;
-        this.reserved = null;
-        this.soleTenantNodeType = null;
-        this.vmImage = null;
+    private GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerConfigResponse(GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerConfigResponse $) {
+        this.accelerator = $.accelerator;
+        this.diskSizeGb = $.diskSizeGb;
+        this.diskType = $.diskType;
+        this.labels = $.labels;
+        this.machineType = $.machineType;
+        this.maxConcurrentActions = $.maxConcurrentActions;
+        this.minCpuPlatform = $.minCpuPlatform;
+        this.networkAccess = $.networkAccess;
+        this.reserved = $.reserved;
+        this.soleTenantNodeType = $.soleTenantNodeType;
+        this.vmImage = $.vmImage;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerConfigResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private GoogleDevtoolsRemotebuildexecutionAdminV1alphaAcceleratorConfigResponse accelerator;
-        private String diskSizeGb;
-        private String diskType;
-        private Map<String,String> labels;
-        private String machineType;
-        private String maxConcurrentActions;
-        private String minCpuPlatform;
-        private String networkAccess;
-        private Boolean reserved;
-        private String soleTenantNodeType;
-        private String vmImage;
+        private GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerConfigResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerConfigResponse();
         }
 
         public Builder(GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerConfigResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accelerator = defaults.accelerator;
-    	      this.diskSizeGb = defaults.diskSizeGb;
-    	      this.diskType = defaults.diskType;
-    	      this.labels = defaults.labels;
-    	      this.machineType = defaults.machineType;
-    	      this.maxConcurrentActions = defaults.maxConcurrentActions;
-    	      this.minCpuPlatform = defaults.minCpuPlatform;
-    	      this.networkAccess = defaults.networkAccess;
-    	      this.reserved = defaults.reserved;
-    	      this.soleTenantNodeType = defaults.soleTenantNodeType;
-    	      this.vmImage = defaults.vmImage;
+            $ = new GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerConfigResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder accelerator(GoogleDevtoolsRemotebuildexecutionAdminV1alphaAcceleratorConfigResponse accelerator) {
-            this.accelerator = Objects.requireNonNull(accelerator);
+            $.accelerator = accelerator;
             return this;
         }
+
         public Builder diskSizeGb(String diskSizeGb) {
-            this.diskSizeGb = Objects.requireNonNull(diskSizeGb);
+            $.diskSizeGb = diskSizeGb;
             return this;
         }
+
         public Builder diskType(String diskType) {
-            this.diskType = Objects.requireNonNull(diskType);
+            $.diskType = diskType;
             return this;
         }
+
         public Builder labels(Map<String,String> labels) {
-            this.labels = Objects.requireNonNull(labels);
+            $.labels = labels;
             return this;
         }
+
         public Builder machineType(String machineType) {
-            this.machineType = Objects.requireNonNull(machineType);
+            $.machineType = machineType;
             return this;
         }
+
         public Builder maxConcurrentActions(String maxConcurrentActions) {
-            this.maxConcurrentActions = Objects.requireNonNull(maxConcurrentActions);
+            $.maxConcurrentActions = maxConcurrentActions;
             return this;
         }
+
         public Builder minCpuPlatform(String minCpuPlatform) {
-            this.minCpuPlatform = Objects.requireNonNull(minCpuPlatform);
+            $.minCpuPlatform = minCpuPlatform;
             return this;
         }
+
         public Builder networkAccess(String networkAccess) {
-            this.networkAccess = Objects.requireNonNull(networkAccess);
+            $.networkAccess = networkAccess;
             return this;
         }
+
         public Builder reserved(Boolean reserved) {
-            this.reserved = Objects.requireNonNull(reserved);
+            $.reserved = reserved;
             return this;
         }
+
         public Builder soleTenantNodeType(String soleTenantNodeType) {
-            this.soleTenantNodeType = Objects.requireNonNull(soleTenantNodeType);
+            $.soleTenantNodeType = soleTenantNodeType;
             return this;
         }
+
         public Builder vmImage(String vmImage) {
-            this.vmImage = Objects.requireNonNull(vmImage);
+            $.vmImage = vmImage;
             return this;
-        }        public GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerConfigResponse build() {
-            return new GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerConfigResponse(accelerator, diskSizeGb, diskType, labels, machineType, maxConcurrentActions, minCpuPlatform, networkAccess, reserved, soleTenantNodeType, vmImage);
+        }
+
+        public GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerConfigResponse build() {
+            $.accelerator = Objects.requireNonNull($.accelerator, "expected parameter 'accelerator' to be non-null");
+            $.diskSizeGb = Objects.requireNonNull($.diskSizeGb, "expected parameter 'diskSizeGb' to be non-null");
+            $.diskType = Objects.requireNonNull($.diskType, "expected parameter 'diskType' to be non-null");
+            $.labels = Objects.requireNonNull($.labels, "expected parameter 'labels' to be non-null");
+            $.machineType = Objects.requireNonNull($.machineType, "expected parameter 'machineType' to be non-null");
+            $.maxConcurrentActions = Objects.requireNonNull($.maxConcurrentActions, "expected parameter 'maxConcurrentActions' to be non-null");
+            $.minCpuPlatform = Objects.requireNonNull($.minCpuPlatform, "expected parameter 'minCpuPlatform' to be non-null");
+            $.networkAccess = Objects.requireNonNull($.networkAccess, "expected parameter 'networkAccess' to be non-null");
+            $.reserved = Objects.requireNonNull($.reserved, "expected parameter 'reserved' to be non-null");
+            $.soleTenantNodeType = Objects.requireNonNull($.soleTenantNodeType, "expected parameter 'soleTenantNodeType' to be non-null");
+            $.vmImage = Objects.requireNonNull($.vmImage, "expected parameter 'vmImage' to be non-null");
+            return $;
         }
     }
+
 }

@@ -21,45 +21,45 @@ public final class AttestationNoteResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="hint", required=true)
-      private final HintResponse hint;
+    private HintResponse hint;
 
     public HintResponse hint() {
         return this.hint;
     }
 
-    public AttestationNoteResponse(HintResponse hint) {
-        this.hint = Objects.requireNonNull(hint, "expected parameter 'hint' to be non-null");
-    }
+    private AttestationNoteResponse() {}
 
-    private AttestationNoteResponse() {
-        this.hint = null;
+    private AttestationNoteResponse(AttestationNoteResponse $) {
+        this.hint = $.hint;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AttestationNoteResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private HintResponse hint;
+        private AttestationNoteResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AttestationNoteResponse();
         }
 
         public Builder(AttestationNoteResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.hint = defaults.hint;
+            $ = new AttestationNoteResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder hint(HintResponse hint) {
-            this.hint = Objects.requireNonNull(hint);
+            $.hint = hint;
             return this;
-        }        public AttestationNoteResponse build() {
-            return new AttestationNoteResponse(hint);
+        }
+
+        public AttestationNoteResponse build() {
+            $.hint = Objects.requireNonNull($.hint, "expected parameter 'hint' to be non-null");
+            return $;
         }
     }
+
 }

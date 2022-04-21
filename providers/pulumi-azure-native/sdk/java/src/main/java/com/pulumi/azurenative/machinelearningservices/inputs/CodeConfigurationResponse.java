@@ -23,10 +23,10 @@ public final class CodeConfigurationResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="codeId")
-      private final @Nullable String codeId;
+    private @Nullable String codeId;
 
     public Optional<String> codeId() {
-        return this.codeId == null ? Optional.empty() : Optional.ofNullable(this.codeId);
+        return Optional.ofNullable(this.codeId);
     }
 
     /**
@@ -34,55 +34,51 @@ public final class CodeConfigurationResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="scoringScript", required=true)
-      private final String scoringScript;
+    private String scoringScript;
 
     public String scoringScript() {
         return this.scoringScript;
     }
 
-    public CodeConfigurationResponse(
-        @Nullable String codeId,
-        String scoringScript) {
-        this.codeId = codeId;
-        this.scoringScript = Objects.requireNonNull(scoringScript, "expected parameter 'scoringScript' to be non-null");
-    }
+    private CodeConfigurationResponse() {}
 
-    private CodeConfigurationResponse() {
-        this.codeId = null;
-        this.scoringScript = null;
+    private CodeConfigurationResponse(CodeConfigurationResponse $) {
+        this.codeId = $.codeId;
+        this.scoringScript = $.scoringScript;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CodeConfigurationResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String codeId;
-        private String scoringScript;
+        private CodeConfigurationResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new CodeConfigurationResponse();
         }
 
         public Builder(CodeConfigurationResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.codeId = defaults.codeId;
-    	      this.scoringScript = defaults.scoringScript;
+            $ = new CodeConfigurationResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder codeId(@Nullable String codeId) {
-            this.codeId = codeId;
+            $.codeId = codeId;
             return this;
         }
+
         public Builder scoringScript(String scoringScript) {
-            this.scoringScript = Objects.requireNonNull(scoringScript);
+            $.scoringScript = scoringScript;
             return this;
-        }        public CodeConfigurationResponse build() {
-            return new CodeConfigurationResponse(codeId, scoringScript);
+        }
+
+        public CodeConfigurationResponse build() {
+            $.scoringScript = Objects.requireNonNull($.scoringScript, "expected parameter 'scoringScript' to be non-null");
+            return $;
         }
     }
+
 }

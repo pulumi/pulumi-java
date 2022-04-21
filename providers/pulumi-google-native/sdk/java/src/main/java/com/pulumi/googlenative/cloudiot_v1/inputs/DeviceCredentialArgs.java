@@ -5,10 +5,10 @@ package com.pulumi.googlenative.cloudiot_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.cloudiot_v1.inputs.PublicKeyCredentialArgs;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class DeviceCredentialArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="expirationTime")
-      private final @Nullable Output<String> expirationTime;
+    private @Nullable Output<String> expirationTime;
 
-    public Output<String> expirationTime() {
-        return this.expirationTime == null ? Codegen.empty() : this.expirationTime;
+    public Optional<Output<String>> expirationTime() {
+        return Optional.ofNullable(this.expirationTime);
     }
 
     /**
@@ -36,63 +36,58 @@ public final class DeviceCredentialArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="publicKey")
-      private final @Nullable Output<PublicKeyCredentialArgs> publicKey;
+    private @Nullable Output<PublicKeyCredentialArgs> publicKey;
 
-    public Output<PublicKeyCredentialArgs> publicKey() {
-        return this.publicKey == null ? Codegen.empty() : this.publicKey;
+    public Optional<Output<PublicKeyCredentialArgs>> publicKey() {
+        return Optional.ofNullable(this.publicKey);
     }
 
-    public DeviceCredentialArgs(
-        @Nullable Output<String> expirationTime,
-        @Nullable Output<PublicKeyCredentialArgs> publicKey) {
-        this.expirationTime = expirationTime;
-        this.publicKey = publicKey;
-    }
+    private DeviceCredentialArgs() {}
 
-    private DeviceCredentialArgs() {
-        this.expirationTime = Codegen.empty();
-        this.publicKey = Codegen.empty();
+    private DeviceCredentialArgs(DeviceCredentialArgs $) {
+        this.expirationTime = $.expirationTime;
+        this.publicKey = $.publicKey;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DeviceCredentialArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> expirationTime;
-        private @Nullable Output<PublicKeyCredentialArgs> publicKey;
+        private DeviceCredentialArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DeviceCredentialArgs();
         }
 
         public Builder(DeviceCredentialArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.expirationTime = defaults.expirationTime;
-    	      this.publicKey = defaults.publicKey;
+            $ = new DeviceCredentialArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder expirationTime(@Nullable Output<String> expirationTime) {
-            this.expirationTime = expirationTime;
+            $.expirationTime = expirationTime;
             return this;
         }
-        public Builder expirationTime(@Nullable String expirationTime) {
-            this.expirationTime = Codegen.ofNullable(expirationTime);
-            return this;
+
+        public Builder expirationTime(String expirationTime) {
+            return expirationTime(Output.of(expirationTime));
         }
+
         public Builder publicKey(@Nullable Output<PublicKeyCredentialArgs> publicKey) {
-            this.publicKey = publicKey;
+            $.publicKey = publicKey;
             return this;
         }
-        public Builder publicKey(@Nullable PublicKeyCredentialArgs publicKey) {
-            this.publicKey = Codegen.ofNullable(publicKey);
-            return this;
-        }        public DeviceCredentialArgs build() {
-            return new DeviceCredentialArgs(expirationTime, publicKey);
+
+        public Builder publicKey(PublicKeyCredentialArgs publicKey) {
+            return publicKey(Output.of(publicKey));
+        }
+
+        public DeviceCredentialArgs build() {
+            return $;
         }
     }
+
 }

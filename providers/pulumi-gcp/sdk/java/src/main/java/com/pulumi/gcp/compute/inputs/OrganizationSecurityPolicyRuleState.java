@@ -5,13 +5,13 @@ package com.pulumi.gcp.compute.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.compute.inputs.OrganizationSecurityPolicyRuleMatchGetArgs;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class OrganizationSecurityPolicyRuleState extends com.pulumi.resour
      * 
      */
     @Import(name="action")
-      private final @Nullable Output<String> action;
+    private @Nullable Output<String> action;
 
-    public Output<String> action() {
-        return this.action == null ? Codegen.empty() : this.action;
+    public Optional<Output<String>> action() {
+        return Optional.ofNullable(this.action);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class OrganizationSecurityPolicyRuleState extends com.pulumi.resour
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -48,10 +48,10 @@ public final class OrganizationSecurityPolicyRuleState extends com.pulumi.resour
      * 
      */
     @Import(name="direction")
-      private final @Nullable Output<String> direction;
+    private @Nullable Output<String> direction;
 
-    public Output<String> direction() {
-        return this.direction == null ? Codegen.empty() : this.direction;
+    public Optional<Output<String>> direction() {
+        return Optional.ofNullable(this.direction);
     }
 
     /**
@@ -61,10 +61,10 @@ public final class OrganizationSecurityPolicyRuleState extends com.pulumi.resour
      * 
      */
     @Import(name="enableLogging")
-      private final @Nullable Output<Boolean> enableLogging;
+    private @Nullable Output<Boolean> enableLogging;
 
-    public Output<Boolean> enableLogging() {
-        return this.enableLogging == null ? Codegen.empty() : this.enableLogging;
+    public Optional<Output<Boolean>> enableLogging() {
+        return Optional.ofNullable(this.enableLogging);
     }
 
     /**
@@ -73,10 +73,10 @@ public final class OrganizationSecurityPolicyRuleState extends com.pulumi.resour
      * 
      */
     @Import(name="match")
-      private final @Nullable Output<OrganizationSecurityPolicyRuleMatchGetArgs> match;
+    private @Nullable Output<OrganizationSecurityPolicyRuleMatchGetArgs> match;
 
-    public Output<OrganizationSecurityPolicyRuleMatchGetArgs> match() {
-        return this.match == null ? Codegen.empty() : this.match;
+    public Optional<Output<OrganizationSecurityPolicyRuleMatchGetArgs>> match() {
+        return Optional.ofNullable(this.match);
     }
 
     /**
@@ -84,10 +84,10 @@ public final class OrganizationSecurityPolicyRuleState extends com.pulumi.resour
      * 
      */
     @Import(name="policyId")
-      private final @Nullable Output<String> policyId;
+    private @Nullable Output<String> policyId;
 
-    public Output<String> policyId() {
-        return this.policyId == null ? Codegen.empty() : this.policyId;
+    public Optional<Output<String>> policyId() {
+        return Optional.ofNullable(this.policyId);
     }
 
     /**
@@ -95,10 +95,10 @@ public final class OrganizationSecurityPolicyRuleState extends com.pulumi.resour
      * 
      */
     @Import(name="preview")
-      private final @Nullable Output<Boolean> preview;
+    private @Nullable Output<Boolean> preview;
 
-    public Output<Boolean> preview() {
-        return this.preview == null ? Codegen.empty() : this.preview;
+    public Optional<Output<Boolean>> preview() {
+        return Optional.ofNullable(this.preview);
     }
 
     /**
@@ -108,10 +108,10 @@ public final class OrganizationSecurityPolicyRuleState extends com.pulumi.resour
      * 
      */
     @Import(name="priority")
-      private final @Nullable Output<Integer> priority;
+    private @Nullable Output<Integer> priority;
 
-    public Output<Integer> priority() {
-        return this.priority == null ? Codegen.empty() : this.priority;
+    public Optional<Output<Integer>> priority() {
+        return Optional.ofNullable(this.priority);
     }
 
     /**
@@ -122,10 +122,10 @@ public final class OrganizationSecurityPolicyRuleState extends com.pulumi.resour
      * 
      */
     @Import(name="targetResources")
-      private final @Nullable Output<List<String>> targetResources;
+    private @Nullable Output<List<String>> targetResources;
 
-    public Output<List<String>> targetResources() {
-        return this.targetResources == null ? Codegen.empty() : this.targetResources;
+    public Optional<Output<List<String>>> targetResources() {
+        return Optional.ofNullable(this.targetResources);
     }
 
     /**
@@ -134,173 +134,146 @@ public final class OrganizationSecurityPolicyRuleState extends com.pulumi.resour
      * 
      */
     @Import(name="targetServiceAccounts")
-      private final @Nullable Output<List<String>> targetServiceAccounts;
+    private @Nullable Output<List<String>> targetServiceAccounts;
 
-    public Output<List<String>> targetServiceAccounts() {
-        return this.targetServiceAccounts == null ? Codegen.empty() : this.targetServiceAccounts;
+    public Optional<Output<List<String>>> targetServiceAccounts() {
+        return Optional.ofNullable(this.targetServiceAccounts);
     }
 
-    public OrganizationSecurityPolicyRuleState(
-        @Nullable Output<String> action,
-        @Nullable Output<String> description,
-        @Nullable Output<String> direction,
-        @Nullable Output<Boolean> enableLogging,
-        @Nullable Output<OrganizationSecurityPolicyRuleMatchGetArgs> match,
-        @Nullable Output<String> policyId,
-        @Nullable Output<Boolean> preview,
-        @Nullable Output<Integer> priority,
-        @Nullable Output<List<String>> targetResources,
-        @Nullable Output<List<String>> targetServiceAccounts) {
-        this.action = action;
-        this.description = description;
-        this.direction = direction;
-        this.enableLogging = enableLogging;
-        this.match = match;
-        this.policyId = policyId;
-        this.preview = preview;
-        this.priority = priority;
-        this.targetResources = targetResources;
-        this.targetServiceAccounts = targetServiceAccounts;
-    }
+    private OrganizationSecurityPolicyRuleState() {}
 
-    private OrganizationSecurityPolicyRuleState() {
-        this.action = Codegen.empty();
-        this.description = Codegen.empty();
-        this.direction = Codegen.empty();
-        this.enableLogging = Codegen.empty();
-        this.match = Codegen.empty();
-        this.policyId = Codegen.empty();
-        this.preview = Codegen.empty();
-        this.priority = Codegen.empty();
-        this.targetResources = Codegen.empty();
-        this.targetServiceAccounts = Codegen.empty();
+    private OrganizationSecurityPolicyRuleState(OrganizationSecurityPolicyRuleState $) {
+        this.action = $.action;
+        this.description = $.description;
+        this.direction = $.direction;
+        this.enableLogging = $.enableLogging;
+        this.match = $.match;
+        this.policyId = $.policyId;
+        this.preview = $.preview;
+        this.priority = $.priority;
+        this.targetResources = $.targetResources;
+        this.targetServiceAccounts = $.targetServiceAccounts;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(OrganizationSecurityPolicyRuleState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> action;
-        private @Nullable Output<String> description;
-        private @Nullable Output<String> direction;
-        private @Nullable Output<Boolean> enableLogging;
-        private @Nullable Output<OrganizationSecurityPolicyRuleMatchGetArgs> match;
-        private @Nullable Output<String> policyId;
-        private @Nullable Output<Boolean> preview;
-        private @Nullable Output<Integer> priority;
-        private @Nullable Output<List<String>> targetResources;
-        private @Nullable Output<List<String>> targetServiceAccounts;
+        private OrganizationSecurityPolicyRuleState $;
 
         public Builder() {
-    	      // Empty
+            $ = new OrganizationSecurityPolicyRuleState();
         }
 
         public Builder(OrganizationSecurityPolicyRuleState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.action = defaults.action;
-    	      this.description = defaults.description;
-    	      this.direction = defaults.direction;
-    	      this.enableLogging = defaults.enableLogging;
-    	      this.match = defaults.match;
-    	      this.policyId = defaults.policyId;
-    	      this.preview = defaults.preview;
-    	      this.priority = defaults.priority;
-    	      this.targetResources = defaults.targetResources;
-    	      this.targetServiceAccounts = defaults.targetServiceAccounts;
+            $ = new OrganizationSecurityPolicyRuleState(Objects.requireNonNull(defaults));
         }
 
         public Builder action(@Nullable Output<String> action) {
-            this.action = action;
+            $.action = action;
             return this;
         }
-        public Builder action(@Nullable String action) {
-            this.action = Codegen.ofNullable(action);
-            return this;
+
+        public Builder action(String action) {
+            return action(Output.of(action));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder direction(@Nullable Output<String> direction) {
-            this.direction = direction;
+            $.direction = direction;
             return this;
         }
-        public Builder direction(@Nullable String direction) {
-            this.direction = Codegen.ofNullable(direction);
-            return this;
+
+        public Builder direction(String direction) {
+            return direction(Output.of(direction));
         }
+
         public Builder enableLogging(@Nullable Output<Boolean> enableLogging) {
-            this.enableLogging = enableLogging;
+            $.enableLogging = enableLogging;
             return this;
         }
-        public Builder enableLogging(@Nullable Boolean enableLogging) {
-            this.enableLogging = Codegen.ofNullable(enableLogging);
-            return this;
+
+        public Builder enableLogging(Boolean enableLogging) {
+            return enableLogging(Output.of(enableLogging));
         }
+
         public Builder match(@Nullable Output<OrganizationSecurityPolicyRuleMatchGetArgs> match) {
-            this.match = match;
+            $.match = match;
             return this;
         }
-        public Builder match(@Nullable OrganizationSecurityPolicyRuleMatchGetArgs match) {
-            this.match = Codegen.ofNullable(match);
-            return this;
+
+        public Builder match(OrganizationSecurityPolicyRuleMatchGetArgs match) {
+            return match(Output.of(match));
         }
+
         public Builder policyId(@Nullable Output<String> policyId) {
-            this.policyId = policyId;
+            $.policyId = policyId;
             return this;
         }
-        public Builder policyId(@Nullable String policyId) {
-            this.policyId = Codegen.ofNullable(policyId);
-            return this;
+
+        public Builder policyId(String policyId) {
+            return policyId(Output.of(policyId));
         }
+
         public Builder preview(@Nullable Output<Boolean> preview) {
-            this.preview = preview;
+            $.preview = preview;
             return this;
         }
-        public Builder preview(@Nullable Boolean preview) {
-            this.preview = Codegen.ofNullable(preview);
-            return this;
+
+        public Builder preview(Boolean preview) {
+            return preview(Output.of(preview));
         }
+
         public Builder priority(@Nullable Output<Integer> priority) {
-            this.priority = priority;
+            $.priority = priority;
             return this;
         }
-        public Builder priority(@Nullable Integer priority) {
-            this.priority = Codegen.ofNullable(priority);
-            return this;
+
+        public Builder priority(Integer priority) {
+            return priority(Output.of(priority));
         }
+
         public Builder targetResources(@Nullable Output<List<String>> targetResources) {
-            this.targetResources = targetResources;
+            $.targetResources = targetResources;
             return this;
         }
-        public Builder targetResources(@Nullable List<String> targetResources) {
-            this.targetResources = Codegen.ofNullable(targetResources);
-            return this;
+
+        public Builder targetResources(List<String> targetResources) {
+            return targetResources(Output.of(targetResources));
         }
+
         public Builder targetResources(String... targetResources) {
             return targetResources(List.of(targetResources));
         }
+
         public Builder targetServiceAccounts(@Nullable Output<List<String>> targetServiceAccounts) {
-            this.targetServiceAccounts = targetServiceAccounts;
+            $.targetServiceAccounts = targetServiceAccounts;
             return this;
         }
-        public Builder targetServiceAccounts(@Nullable List<String> targetServiceAccounts) {
-            this.targetServiceAccounts = Codegen.ofNullable(targetServiceAccounts);
-            return this;
+
+        public Builder targetServiceAccounts(List<String> targetServiceAccounts) {
+            return targetServiceAccounts(Output.of(targetServiceAccounts));
         }
+
         public Builder targetServiceAccounts(String... targetServiceAccounts) {
             return targetServiceAccounts(List.of(targetServiceAccounts));
-        }        public OrganizationSecurityPolicyRuleState build() {
-            return new OrganizationSecurityPolicyRuleState(action, description, direction, enableLogging, match, policyId, preview, priority, targetResources, targetServiceAccounts);
+        }
+
+        public OrganizationSecurityPolicyRuleState build() {
+            return $;
         }
     }
+
 }

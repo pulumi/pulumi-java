@@ -20,62 +20,57 @@ public final class CertificateAuthorityOcspConfiguration extends com.pulumi.reso
     public static final CertificateAuthorityOcspConfiguration Empty = new CertificateAuthorityOcspConfiguration();
 
     @Import(name="enabled")
-      private final @Nullable Boolean enabled;
+    private @Nullable Boolean enabled;
 
     public Optional<Boolean> enabled() {
-        return this.enabled == null ? Optional.empty() : Optional.ofNullable(this.enabled);
+        return Optional.ofNullable(this.enabled);
     }
 
     @Import(name="ocspCustomCname")
-      private final @Nullable String ocspCustomCname;
+    private @Nullable String ocspCustomCname;
 
     public Optional<String> ocspCustomCname() {
-        return this.ocspCustomCname == null ? Optional.empty() : Optional.ofNullable(this.ocspCustomCname);
+        return Optional.ofNullable(this.ocspCustomCname);
     }
 
-    public CertificateAuthorityOcspConfiguration(
-        @Nullable Boolean enabled,
-        @Nullable String ocspCustomCname) {
-        this.enabled = enabled;
-        this.ocspCustomCname = ocspCustomCname;
-    }
+    private CertificateAuthorityOcspConfiguration() {}
 
-    private CertificateAuthorityOcspConfiguration() {
-        this.enabled = null;
-        this.ocspCustomCname = null;
+    private CertificateAuthorityOcspConfiguration(CertificateAuthorityOcspConfiguration $) {
+        this.enabled = $.enabled;
+        this.ocspCustomCname = $.ocspCustomCname;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CertificateAuthorityOcspConfiguration defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Boolean enabled;
-        private @Nullable String ocspCustomCname;
+        private CertificateAuthorityOcspConfiguration $;
 
         public Builder() {
-    	      // Empty
+            $ = new CertificateAuthorityOcspConfiguration();
         }
 
         public Builder(CertificateAuthorityOcspConfiguration defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.enabled = defaults.enabled;
-    	      this.ocspCustomCname = defaults.ocspCustomCname;
+            $ = new CertificateAuthorityOcspConfiguration(Objects.requireNonNull(defaults));
         }
 
         public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = enabled;
+            $.enabled = enabled;
             return this;
         }
+
         public Builder ocspCustomCname(@Nullable String ocspCustomCname) {
-            this.ocspCustomCname = ocspCustomCname;
+            $.ocspCustomCname = ocspCustomCname;
             return this;
-        }        public CertificateAuthorityOcspConfiguration build() {
-            return new CertificateAuthorityOcspConfiguration(enabled, ocspCustomCname);
+        }
+
+        public CertificateAuthorityOcspConfiguration build() {
+            return $;
         }
     }
+
 }

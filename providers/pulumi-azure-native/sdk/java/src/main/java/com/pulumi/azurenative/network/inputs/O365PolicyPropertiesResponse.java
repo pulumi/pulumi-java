@@ -23,45 +23,44 @@ public final class O365PolicyPropertiesResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="breakOutCategories")
-      private final @Nullable O365BreakOutCategoryPoliciesResponse breakOutCategories;
+    private @Nullable O365BreakOutCategoryPoliciesResponse breakOutCategories;
 
     public Optional<O365BreakOutCategoryPoliciesResponse> breakOutCategories() {
-        return this.breakOutCategories == null ? Optional.empty() : Optional.ofNullable(this.breakOutCategories);
+        return Optional.ofNullable(this.breakOutCategories);
     }
 
-    public O365PolicyPropertiesResponse(@Nullable O365BreakOutCategoryPoliciesResponse breakOutCategories) {
-        this.breakOutCategories = breakOutCategories;
-    }
+    private O365PolicyPropertiesResponse() {}
 
-    private O365PolicyPropertiesResponse() {
-        this.breakOutCategories = null;
+    private O365PolicyPropertiesResponse(O365PolicyPropertiesResponse $) {
+        this.breakOutCategories = $.breakOutCategories;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(O365PolicyPropertiesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable O365BreakOutCategoryPoliciesResponse breakOutCategories;
+        private O365PolicyPropertiesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new O365PolicyPropertiesResponse();
         }
 
         public Builder(O365PolicyPropertiesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.breakOutCategories = defaults.breakOutCategories;
+            $ = new O365PolicyPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder breakOutCategories(@Nullable O365BreakOutCategoryPoliciesResponse breakOutCategories) {
-            this.breakOutCategories = breakOutCategories;
+            $.breakOutCategories = breakOutCategories;
             return this;
-        }        public O365PolicyPropertiesResponse build() {
-            return new O365PolicyPropertiesResponse(breakOutCategories);
+        }
+
+        public O365PolicyPropertiesResponse build() {
+            return $;
         }
     }
+
 }

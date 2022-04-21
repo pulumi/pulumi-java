@@ -3,35 +3,26 @@
 
 package com.pulumi.awsnative.amplifyuibuilder.inputs;
 
-import java.util.Objects;
+
 
 
 public final class ComponentTagsArgs extends com.pulumi.resources.ResourceArgs {
 
     public static final ComponentTagsArgs Empty = new ComponentTagsArgs();
 
-    public ComponentTagsArgs() {
-    }
-
     public static Builder builder() {
         return new Builder();
     }
 
-    public static Builder builder(ComponentTagsArgs defaults) {
-        return new Builder(defaults);
-    }
-
     public static final class Builder {
+        private ComponentTagsArgs $;
 
         public Builder() {
-    	      // Empty
-        }
-
-        public Builder(ComponentTagsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
+            $ = new ComponentTagsArgs();
         }
         public ComponentTagsArgs build() {
-            return new ComponentTagsArgs();
+            return $;
         }
     }
+
 }

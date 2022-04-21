@@ -11,6 +11,7 @@ import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +24,10 @@ public final class ChannelState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="arn")
-      private final @Nullable Output<String> arn;
+    private @Nullable Output<String> arn;
 
-    public Output<String> arn() {
-        return this.arn == null ? Codegen.empty() : this.arn;
+    public Optional<Output<String>> arn() {
+        return Optional.ofNullable(this.arn);
     }
 
     /**
@@ -34,10 +35,10 @@ public final class ChannelState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="channelId")
-      private final @Nullable Output<String> channelId;
+    private @Nullable Output<String> channelId;
 
-    public Output<String> channelId() {
-        return this.channelId == null ? Codegen.empty() : this.channelId;
+    public Optional<Output<String>> channelId() {
+        return Optional.ofNullable(this.channelId);
     }
 
     /**
@@ -45,10 +46,10 @@ public final class ChannelState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -56,10 +57,10 @@ public final class ChannelState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="hlsIngests")
-      private final @Nullable Output<List<ChannelHlsIngestGetArgs>> hlsIngests;
+    private @Nullable Output<List<ChannelHlsIngestGetArgs>> hlsIngests;
 
-    public Output<List<ChannelHlsIngestGetArgs>> hlsIngests() {
-        return this.hlsIngests == null ? Codegen.empty() : this.hlsIngests;
+    public Optional<Output<List<ChannelHlsIngestGetArgs>>> hlsIngests() {
+        return Optional.ofNullable(this.hlsIngests);
     }
 
     /**
@@ -67,10 +68,10 @@ public final class ChannelState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -78,118 +79,103 @@ public final class ChannelState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tagsAll")
-      private final @Nullable Output<Map<String,String>> tagsAll;
+    private @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> tagsAll() {
-        return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
+    public Optional<Output<Map<String,String>>> tagsAll() {
+        return Optional.ofNullable(this.tagsAll);
     }
 
-    public ChannelState(
-        @Nullable Output<String> arn,
-        @Nullable Output<String> channelId,
-        @Nullable Output<String> description,
-        @Nullable Output<List<ChannelHlsIngestGetArgs>> hlsIngests,
-        @Nullable Output<Map<String,String>> tags,
-        @Nullable Output<Map<String,String>> tagsAll) {
-        this.arn = arn;
-        this.channelId = channelId;
-        this.description = Codegen.stringProp("description").output().arg(description).def("Managed by Pulumi").getNullable();
-        this.hlsIngests = hlsIngests;
-        this.tags = tags;
-        this.tagsAll = tagsAll;
-    }
+    private ChannelState() {}
 
-    private ChannelState() {
-        this.arn = Codegen.empty();
-        this.channelId = Codegen.empty();
-        this.description = Codegen.empty();
-        this.hlsIngests = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.tagsAll = Codegen.empty();
+    private ChannelState(ChannelState $) {
+        this.arn = $.arn;
+        this.channelId = $.channelId;
+        this.description = $.description;
+        this.hlsIngests = $.hlsIngests;
+        this.tags = $.tags;
+        this.tagsAll = $.tagsAll;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ChannelState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> arn;
-        private @Nullable Output<String> channelId;
-        private @Nullable Output<String> description;
-        private @Nullable Output<List<ChannelHlsIngestGetArgs>> hlsIngests;
-        private @Nullable Output<Map<String,String>> tags;
-        private @Nullable Output<Map<String,String>> tagsAll;
+        private ChannelState $;
 
         public Builder() {
-    	      // Empty
+            $ = new ChannelState();
         }
 
         public Builder(ChannelState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.arn = defaults.arn;
-    	      this.channelId = defaults.channelId;
-    	      this.description = defaults.description;
-    	      this.hlsIngests = defaults.hlsIngests;
-    	      this.tags = defaults.tags;
-    	      this.tagsAll = defaults.tagsAll;
+            $ = new ChannelState(Objects.requireNonNull(defaults));
         }
 
         public Builder arn(@Nullable Output<String> arn) {
-            this.arn = arn;
+            $.arn = arn;
             return this;
         }
-        public Builder arn(@Nullable String arn) {
-            this.arn = Codegen.ofNullable(arn);
-            return this;
+
+        public Builder arn(String arn) {
+            return arn(Output.of(arn));
         }
+
         public Builder channelId(@Nullable Output<String> channelId) {
-            this.channelId = channelId;
+            $.channelId = channelId;
             return this;
         }
-        public Builder channelId(@Nullable String channelId) {
-            this.channelId = Codegen.ofNullable(channelId);
-            return this;
+
+        public Builder channelId(String channelId) {
+            return channelId(Output.of(channelId));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder hlsIngests(@Nullable Output<List<ChannelHlsIngestGetArgs>> hlsIngests) {
-            this.hlsIngests = hlsIngests;
+            $.hlsIngests = hlsIngests;
             return this;
         }
-        public Builder hlsIngests(@Nullable List<ChannelHlsIngestGetArgs> hlsIngests) {
-            this.hlsIngests = Codegen.ofNullable(hlsIngests);
-            return this;
+
+        public Builder hlsIngests(List<ChannelHlsIngestGetArgs> hlsIngests) {
+            return hlsIngests(Output.of(hlsIngests));
         }
+
         public Builder hlsIngests(ChannelHlsIngestGetArgs... hlsIngests) {
             return hlsIngests(List.of(hlsIngests));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
-            this.tagsAll = tagsAll;
+            $.tagsAll = tagsAll;
             return this;
         }
-        public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Codegen.ofNullable(tagsAll);
-            return this;
-        }        public ChannelState build() {
-            return new ChannelState(arn, channelId, description, hlsIngests, tags, tagsAll);
+
+        public Builder tagsAll(Map<String,String> tagsAll) {
+            return tagsAll(Output.of(tagsAll));
+        }
+
+        public ChannelState build() {
+            $.description = Codegen.stringProp("description").output().arg($.description).def("Managed by Pulumi").getNullable();
+            return $;
         }
     }
+
 }

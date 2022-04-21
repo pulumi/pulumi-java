@@ -22,7 +22,7 @@ public final class ParameterValidationResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="regex", required=true)
-      private final RegexValidationResponse regex;
+    private RegexValidationResponse regex;
 
     public RegexValidationResponse regex() {
         return this.regex;
@@ -33,55 +33,52 @@ public final class ParameterValidationResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="values", required=true)
-      private final ValueValidationResponse values;
+    private ValueValidationResponse values;
 
     public ValueValidationResponse values() {
         return this.values;
     }
 
-    public ParameterValidationResponse(
-        RegexValidationResponse regex,
-        ValueValidationResponse values) {
-        this.regex = Objects.requireNonNull(regex, "expected parameter 'regex' to be non-null");
-        this.values = Objects.requireNonNull(values, "expected parameter 'values' to be non-null");
-    }
+    private ParameterValidationResponse() {}
 
-    private ParameterValidationResponse() {
-        this.regex = null;
-        this.values = null;
+    private ParameterValidationResponse(ParameterValidationResponse $) {
+        this.regex = $.regex;
+        this.values = $.values;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ParameterValidationResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private RegexValidationResponse regex;
-        private ValueValidationResponse values;
+        private ParameterValidationResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ParameterValidationResponse();
         }
 
         public Builder(ParameterValidationResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.regex = defaults.regex;
-    	      this.values = defaults.values;
+            $ = new ParameterValidationResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder regex(RegexValidationResponse regex) {
-            this.regex = Objects.requireNonNull(regex);
+            $.regex = regex;
             return this;
         }
+
         public Builder values(ValueValidationResponse values) {
-            this.values = Objects.requireNonNull(values);
+            $.values = values;
             return this;
-        }        public ParameterValidationResponse build() {
-            return new ParameterValidationResponse(regex, values);
+        }
+
+        public ParameterValidationResponse build() {
+            $.regex = Objects.requireNonNull($.regex, "expected parameter 'regex' to be non-null");
+            $.values = Objects.requireNonNull($.values, "expected parameter 'values' to be non-null");
+            return $;
         }
     }
+
 }

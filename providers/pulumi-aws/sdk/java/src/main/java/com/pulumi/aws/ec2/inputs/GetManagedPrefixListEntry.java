@@ -13,62 +13,59 @@ public final class GetManagedPrefixListEntry extends com.pulumi.resources.Invoke
     public static final GetManagedPrefixListEntry Empty = new GetManagedPrefixListEntry();
 
     @Import(name="cidr", required=true)
-      private final String cidr;
+    private String cidr;
 
     public String cidr() {
         return this.cidr;
     }
 
     @Import(name="description", required=true)
-      private final String description;
+    private String description;
 
     public String description() {
         return this.description;
     }
 
-    public GetManagedPrefixListEntry(
-        String cidr,
-        String description) {
-        this.cidr = Objects.requireNonNull(cidr, "expected parameter 'cidr' to be non-null");
-        this.description = Objects.requireNonNull(description, "expected parameter 'description' to be non-null");
-    }
+    private GetManagedPrefixListEntry() {}
 
-    private GetManagedPrefixListEntry() {
-        this.cidr = null;
-        this.description = null;
+    private GetManagedPrefixListEntry(GetManagedPrefixListEntry $) {
+        this.cidr = $.cidr;
+        this.description = $.description;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetManagedPrefixListEntry defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String cidr;
-        private String description;
+        private GetManagedPrefixListEntry $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetManagedPrefixListEntry();
         }
 
         public Builder(GetManagedPrefixListEntry defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cidr = defaults.cidr;
-    	      this.description = defaults.description;
+            $ = new GetManagedPrefixListEntry(Objects.requireNonNull(defaults));
         }
 
         public Builder cidr(String cidr) {
-            this.cidr = Objects.requireNonNull(cidr);
+            $.cidr = cidr;
             return this;
         }
+
         public Builder description(String description) {
-            this.description = Objects.requireNonNull(description);
+            $.description = description;
             return this;
-        }        public GetManagedPrefixListEntry build() {
-            return new GetManagedPrefixListEntry(cidr, description);
+        }
+
+        public GetManagedPrefixListEntry build() {
+            $.cidr = Objects.requireNonNull($.cidr, "expected parameter 'cidr' to be non-null");
+            $.description = Objects.requireNonNull($.description, "expected parameter 'description' to be non-null");
+            return $;
         }
     }
+
 }

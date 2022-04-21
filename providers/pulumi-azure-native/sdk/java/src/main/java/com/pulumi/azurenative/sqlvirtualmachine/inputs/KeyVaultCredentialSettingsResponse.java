@@ -24,10 +24,10 @@ public final class KeyVaultCredentialSettingsResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="azureKeyVaultUrl")
-      private final @Nullable String azureKeyVaultUrl;
+    private @Nullable String azureKeyVaultUrl;
 
     public Optional<String> azureKeyVaultUrl() {
-        return this.azureKeyVaultUrl == null ? Optional.empty() : Optional.ofNullable(this.azureKeyVaultUrl);
+        return Optional.ofNullable(this.azureKeyVaultUrl);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class KeyVaultCredentialSettingsResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="credentialName")
-      private final @Nullable String credentialName;
+    private @Nullable String credentialName;
 
     public Optional<String> credentialName() {
-        return this.credentialName == null ? Optional.empty() : Optional.ofNullable(this.credentialName);
+        return Optional.ofNullable(this.credentialName);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class KeyVaultCredentialSettingsResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="enable")
-      private final @Nullable Boolean enable;
+    private @Nullable Boolean enable;
 
     public Optional<Boolean> enable() {
-        return this.enable == null ? Optional.empty() : Optional.ofNullable(this.enable);
+        return Optional.ofNullable(this.enable);
     }
 
     /**
@@ -57,73 +57,62 @@ public final class KeyVaultCredentialSettingsResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="servicePrincipalName")
-      private final @Nullable String servicePrincipalName;
+    private @Nullable String servicePrincipalName;
 
     public Optional<String> servicePrincipalName() {
-        return this.servicePrincipalName == null ? Optional.empty() : Optional.ofNullable(this.servicePrincipalName);
+        return Optional.ofNullable(this.servicePrincipalName);
     }
 
-    public KeyVaultCredentialSettingsResponse(
-        @Nullable String azureKeyVaultUrl,
-        @Nullable String credentialName,
-        @Nullable Boolean enable,
-        @Nullable String servicePrincipalName) {
-        this.azureKeyVaultUrl = azureKeyVaultUrl;
-        this.credentialName = credentialName;
-        this.enable = enable;
-        this.servicePrincipalName = servicePrincipalName;
-    }
+    private KeyVaultCredentialSettingsResponse() {}
 
-    private KeyVaultCredentialSettingsResponse() {
-        this.azureKeyVaultUrl = null;
-        this.credentialName = null;
-        this.enable = null;
-        this.servicePrincipalName = null;
+    private KeyVaultCredentialSettingsResponse(KeyVaultCredentialSettingsResponse $) {
+        this.azureKeyVaultUrl = $.azureKeyVaultUrl;
+        this.credentialName = $.credentialName;
+        this.enable = $.enable;
+        this.servicePrincipalName = $.servicePrincipalName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(KeyVaultCredentialSettingsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String azureKeyVaultUrl;
-        private @Nullable String credentialName;
-        private @Nullable Boolean enable;
-        private @Nullable String servicePrincipalName;
+        private KeyVaultCredentialSettingsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new KeyVaultCredentialSettingsResponse();
         }
 
         public Builder(KeyVaultCredentialSettingsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.azureKeyVaultUrl = defaults.azureKeyVaultUrl;
-    	      this.credentialName = defaults.credentialName;
-    	      this.enable = defaults.enable;
-    	      this.servicePrincipalName = defaults.servicePrincipalName;
+            $ = new KeyVaultCredentialSettingsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder azureKeyVaultUrl(@Nullable String azureKeyVaultUrl) {
-            this.azureKeyVaultUrl = azureKeyVaultUrl;
+            $.azureKeyVaultUrl = azureKeyVaultUrl;
             return this;
         }
+
         public Builder credentialName(@Nullable String credentialName) {
-            this.credentialName = credentialName;
+            $.credentialName = credentialName;
             return this;
         }
+
         public Builder enable(@Nullable Boolean enable) {
-            this.enable = enable;
+            $.enable = enable;
             return this;
         }
+
         public Builder servicePrincipalName(@Nullable String servicePrincipalName) {
-            this.servicePrincipalName = servicePrincipalName;
+            $.servicePrincipalName = servicePrincipalName;
             return this;
-        }        public KeyVaultCredentialSettingsResponse build() {
-            return new KeyVaultCredentialSettingsResponse(azureKeyVaultUrl, credentialName, enable, servicePrincipalName);
+        }
+
+        public KeyVaultCredentialSettingsResponse build() {
+            return $;
         }
     }
+
 }

@@ -5,9 +5,9 @@ package com.pulumi.azurenative.web.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class GitHubActionContainerConfigurationArgs extends com.pulumi.res
      * 
      */
     @Import(name="imageName")
-      private final @Nullable Output<String> imageName;
+    private @Nullable Output<String> imageName;
 
-    public Output<String> imageName() {
-        return this.imageName == null ? Codegen.empty() : this.imageName;
+    public Optional<Output<String>> imageName() {
+        return Optional.ofNullable(this.imageName);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class GitHubActionContainerConfigurationArgs extends com.pulumi.res
      * 
      */
     @Import(name="password")
-      private final @Nullable Output<String> password;
+    private @Nullable Output<String> password;
 
-    public Output<String> password() {
-        return this.password == null ? Codegen.empty() : this.password;
+    public Optional<Output<String>> password() {
+        return Optional.ofNullable(this.password);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class GitHubActionContainerConfigurationArgs extends com.pulumi.res
      * 
      */
     @Import(name="serverUrl")
-      private final @Nullable Output<String> serverUrl;
+    private @Nullable Output<String> serverUrl;
 
-    public Output<String> serverUrl() {
-        return this.serverUrl == null ? Codegen.empty() : this.serverUrl;
+    public Optional<Output<String>> serverUrl() {
+        return Optional.ofNullable(this.serverUrl);
     }
 
     /**
@@ -57,89 +57,78 @@ public final class GitHubActionContainerConfigurationArgs extends com.pulumi.res
      * 
      */
     @Import(name="username")
-      private final @Nullable Output<String> username;
+    private @Nullable Output<String> username;
 
-    public Output<String> username() {
-        return this.username == null ? Codegen.empty() : this.username;
+    public Optional<Output<String>> username() {
+        return Optional.ofNullable(this.username);
     }
 
-    public GitHubActionContainerConfigurationArgs(
-        @Nullable Output<String> imageName,
-        @Nullable Output<String> password,
-        @Nullable Output<String> serverUrl,
-        @Nullable Output<String> username) {
-        this.imageName = imageName;
-        this.password = password;
-        this.serverUrl = serverUrl;
-        this.username = username;
-    }
+    private GitHubActionContainerConfigurationArgs() {}
 
-    private GitHubActionContainerConfigurationArgs() {
-        this.imageName = Codegen.empty();
-        this.password = Codegen.empty();
-        this.serverUrl = Codegen.empty();
-        this.username = Codegen.empty();
+    private GitHubActionContainerConfigurationArgs(GitHubActionContainerConfigurationArgs $) {
+        this.imageName = $.imageName;
+        this.password = $.password;
+        this.serverUrl = $.serverUrl;
+        this.username = $.username;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GitHubActionContainerConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> imageName;
-        private @Nullable Output<String> password;
-        private @Nullable Output<String> serverUrl;
-        private @Nullable Output<String> username;
+        private GitHubActionContainerConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GitHubActionContainerConfigurationArgs();
         }
 
         public Builder(GitHubActionContainerConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.imageName = defaults.imageName;
-    	      this.password = defaults.password;
-    	      this.serverUrl = defaults.serverUrl;
-    	      this.username = defaults.username;
+            $ = new GitHubActionContainerConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder imageName(@Nullable Output<String> imageName) {
-            this.imageName = imageName;
+            $.imageName = imageName;
             return this;
         }
-        public Builder imageName(@Nullable String imageName) {
-            this.imageName = Codegen.ofNullable(imageName);
-            return this;
+
+        public Builder imageName(String imageName) {
+            return imageName(Output.of(imageName));
         }
+
         public Builder password(@Nullable Output<String> password) {
-            this.password = password;
+            $.password = password;
             return this;
         }
-        public Builder password(@Nullable String password) {
-            this.password = Codegen.ofNullable(password);
-            return this;
+
+        public Builder password(String password) {
+            return password(Output.of(password));
         }
+
         public Builder serverUrl(@Nullable Output<String> serverUrl) {
-            this.serverUrl = serverUrl;
+            $.serverUrl = serverUrl;
             return this;
         }
-        public Builder serverUrl(@Nullable String serverUrl) {
-            this.serverUrl = Codegen.ofNullable(serverUrl);
-            return this;
+
+        public Builder serverUrl(String serverUrl) {
+            return serverUrl(Output.of(serverUrl));
         }
+
         public Builder username(@Nullable Output<String> username) {
-            this.username = username;
+            $.username = username;
             return this;
         }
-        public Builder username(@Nullable String username) {
-            this.username = Codegen.ofNullable(username);
-            return this;
-        }        public GitHubActionContainerConfigurationArgs build() {
-            return new GitHubActionContainerConfigurationArgs(imageName, password, serverUrl, username);
+
+        public Builder username(String username) {
+            return username(Output.of(username));
+        }
+
+        public GitHubActionContainerConfigurationArgs build() {
+            return $;
         }
     }
+
 }

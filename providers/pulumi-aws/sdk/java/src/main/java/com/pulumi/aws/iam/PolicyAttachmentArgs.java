@@ -5,10 +5,10 @@ package com.pulumi.aws.iam;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class PolicyAttachmentArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="groups")
-      private final @Nullable Output<List<String>> groups;
+    private @Nullable Output<List<String>> groups;
 
-    public Output<List<String>> groups() {
-        return this.groups == null ? Codegen.empty() : this.groups;
+    public Optional<Output<List<String>>> groups() {
+        return Optional.ofNullable(this.groups);
     }
 
     /**
@@ -32,10 +32,10 @@ public final class PolicyAttachmentArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -43,7 +43,7 @@ public final class PolicyAttachmentArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="policyArn", required=true)
-      private final Output<String> policyArn;
+    private Output<String> policyArn;
 
     public Output<String> policyArn() {
         return this.policyArn;
@@ -54,10 +54,10 @@ public final class PolicyAttachmentArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="roles")
-      private final @Nullable Output<List<String>> roles;
+    private @Nullable Output<List<String>> roles;
 
-    public Output<List<String>> roles() {
-        return this.roles == null ? Codegen.empty() : this.roles;
+    public Optional<Output<List<String>>> roles() {
+        return Optional.ofNullable(this.roles);
     }
 
     /**
@@ -65,111 +65,101 @@ public final class PolicyAttachmentArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="users")
-      private final @Nullable Output<List<String>> users;
+    private @Nullable Output<List<String>> users;
 
-    public Output<List<String>> users() {
-        return this.users == null ? Codegen.empty() : this.users;
+    public Optional<Output<List<String>>> users() {
+        return Optional.ofNullable(this.users);
     }
 
-    public PolicyAttachmentArgs(
-        @Nullable Output<List<String>> groups,
-        @Nullable Output<String> name,
-        Output<String> policyArn,
-        @Nullable Output<List<String>> roles,
-        @Nullable Output<List<String>> users) {
-        this.groups = groups;
-        this.name = name;
-        this.policyArn = Objects.requireNonNull(policyArn, "expected parameter 'policyArn' to be non-null");
-        this.roles = roles;
-        this.users = users;
-    }
+    private PolicyAttachmentArgs() {}
 
-    private PolicyAttachmentArgs() {
-        this.groups = Codegen.empty();
-        this.name = Codegen.empty();
-        this.policyArn = Codegen.empty();
-        this.roles = Codegen.empty();
-        this.users = Codegen.empty();
+    private PolicyAttachmentArgs(PolicyAttachmentArgs $) {
+        this.groups = $.groups;
+        this.name = $.name;
+        this.policyArn = $.policyArn;
+        this.roles = $.roles;
+        this.users = $.users;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PolicyAttachmentArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> groups;
-        private @Nullable Output<String> name;
-        private Output<String> policyArn;
-        private @Nullable Output<List<String>> roles;
-        private @Nullable Output<List<String>> users;
+        private PolicyAttachmentArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PolicyAttachmentArgs();
         }
 
         public Builder(PolicyAttachmentArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.groups = defaults.groups;
-    	      this.name = defaults.name;
-    	      this.policyArn = defaults.policyArn;
-    	      this.roles = defaults.roles;
-    	      this.users = defaults.users;
+            $ = new PolicyAttachmentArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder groups(@Nullable Output<List<String>> groups) {
-            this.groups = groups;
+            $.groups = groups;
             return this;
         }
-        public Builder groups(@Nullable List<String> groups) {
-            this.groups = Codegen.ofNullable(groups);
-            return this;
+
+        public Builder groups(List<String> groups) {
+            return groups(Output.of(groups));
         }
+
         public Builder groups(String... groups) {
             return groups(List.of(groups));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder policyArn(Output<String> policyArn) {
-            this.policyArn = Objects.requireNonNull(policyArn);
+            $.policyArn = policyArn;
             return this;
         }
+
         public Builder policyArn(String policyArn) {
-            this.policyArn = Output.of(Objects.requireNonNull(policyArn));
-            return this;
+            return policyArn(Output.of(policyArn));
         }
+
         public Builder roles(@Nullable Output<List<String>> roles) {
-            this.roles = roles;
+            $.roles = roles;
             return this;
         }
-        public Builder roles(@Nullable List<String> roles) {
-            this.roles = Codegen.ofNullable(roles);
-            return this;
+
+        public Builder roles(List<String> roles) {
+            return roles(Output.of(roles));
         }
+
         public Builder roles(String... roles) {
             return roles(List.of(roles));
         }
+
         public Builder users(@Nullable Output<List<String>> users) {
-            this.users = users;
+            $.users = users;
             return this;
         }
-        public Builder users(@Nullable List<String> users) {
-            this.users = Codegen.ofNullable(users);
-            return this;
+
+        public Builder users(List<String> users) {
+            return users(Output.of(users));
         }
+
         public Builder users(String... users) {
             return users(List.of(users));
-        }        public PolicyAttachmentArgs build() {
-            return new PolicyAttachmentArgs(groups, name, policyArn, roles, users);
+        }
+
+        public PolicyAttachmentArgs build() {
+            $.policyArn = Objects.requireNonNull($.policyArn, "expected parameter 'policyArn' to be non-null");
+            return $;
         }
     }
+
 }

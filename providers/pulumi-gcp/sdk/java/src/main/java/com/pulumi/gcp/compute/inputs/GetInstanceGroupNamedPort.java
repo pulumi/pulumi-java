@@ -18,62 +18,59 @@ public final class GetInstanceGroupNamedPort extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
     }
 
     @Import(name="port", required=true)
-      private final Integer port;
+    private Integer port;
 
     public Integer port() {
         return this.port;
     }
 
-    public GetInstanceGroupNamedPort(
-        String name,
-        Integer port) {
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.port = Objects.requireNonNull(port, "expected parameter 'port' to be non-null");
-    }
+    private GetInstanceGroupNamedPort() {}
 
-    private GetInstanceGroupNamedPort() {
-        this.name = null;
-        this.port = null;
+    private GetInstanceGroupNamedPort(GetInstanceGroupNamedPort $) {
+        this.name = $.name;
+        this.port = $.port;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetInstanceGroupNamedPort defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String name;
-        private Integer port;
+        private GetInstanceGroupNamedPort $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetInstanceGroupNamedPort();
         }
 
         public Builder(GetInstanceGroupNamedPort defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.port = defaults.port;
+            $ = new GetInstanceGroupNamedPort(Objects.requireNonNull(defaults));
         }
 
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder port(Integer port) {
-            this.port = Objects.requireNonNull(port);
+            $.port = port;
             return this;
-        }        public GetInstanceGroupNamedPort build() {
-            return new GetInstanceGroupNamedPort(name, port);
+        }
+
+        public GetInstanceGroupNamedPort build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.port = Objects.requireNonNull($.port, "expected parameter 'port' to be non-null");
+            return $;
         }
     }
+
 }

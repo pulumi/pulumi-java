@@ -5,7 +5,6 @@ package com.pulumi.aws.sagemaker.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,49 +18,49 @@ public final class FlowDefinitionHumanLoopActivationConfigHumanLoopActivationCon
      * 
      */
     @Import(name="humanLoopActivationConditions", required=true)
-      private final Output<String> humanLoopActivationConditions;
+    private Output<String> humanLoopActivationConditions;
 
     public Output<String> humanLoopActivationConditions() {
         return this.humanLoopActivationConditions;
     }
 
-    public FlowDefinitionHumanLoopActivationConfigHumanLoopActivationConditionsConfigGetArgs(Output<String> humanLoopActivationConditions) {
-        this.humanLoopActivationConditions = Objects.requireNonNull(humanLoopActivationConditions, "expected parameter 'humanLoopActivationConditions' to be non-null");
-    }
+    private FlowDefinitionHumanLoopActivationConfigHumanLoopActivationConditionsConfigGetArgs() {}
 
-    private FlowDefinitionHumanLoopActivationConfigHumanLoopActivationConditionsConfigGetArgs() {
-        this.humanLoopActivationConditions = Codegen.empty();
+    private FlowDefinitionHumanLoopActivationConfigHumanLoopActivationConditionsConfigGetArgs(FlowDefinitionHumanLoopActivationConfigHumanLoopActivationConditionsConfigGetArgs $) {
+        this.humanLoopActivationConditions = $.humanLoopActivationConditions;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FlowDefinitionHumanLoopActivationConfigHumanLoopActivationConditionsConfigGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> humanLoopActivationConditions;
+        private FlowDefinitionHumanLoopActivationConfigHumanLoopActivationConditionsConfigGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new FlowDefinitionHumanLoopActivationConfigHumanLoopActivationConditionsConfigGetArgs();
         }
 
         public Builder(FlowDefinitionHumanLoopActivationConfigHumanLoopActivationConditionsConfigGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.humanLoopActivationConditions = defaults.humanLoopActivationConditions;
+            $ = new FlowDefinitionHumanLoopActivationConfigHumanLoopActivationConditionsConfigGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder humanLoopActivationConditions(Output<String> humanLoopActivationConditions) {
-            this.humanLoopActivationConditions = Objects.requireNonNull(humanLoopActivationConditions);
+            $.humanLoopActivationConditions = humanLoopActivationConditions;
             return this;
         }
+
         public Builder humanLoopActivationConditions(String humanLoopActivationConditions) {
-            this.humanLoopActivationConditions = Output.of(Objects.requireNonNull(humanLoopActivationConditions));
-            return this;
-        }        public FlowDefinitionHumanLoopActivationConfigHumanLoopActivationConditionsConfigGetArgs build() {
-            return new FlowDefinitionHumanLoopActivationConfigHumanLoopActivationConditionsConfigGetArgs(humanLoopActivationConditions);
+            return humanLoopActivationConditions(Output.of(humanLoopActivationConditions));
+        }
+
+        public FlowDefinitionHumanLoopActivationConfigHumanLoopActivationConditionsConfigGetArgs build() {
+            $.humanLoopActivationConditions = Objects.requireNonNull($.humanLoopActivationConditions, "expected parameter 'humanLoopActivationConditions' to be non-null");
+            return $;
         }
     }
+
 }

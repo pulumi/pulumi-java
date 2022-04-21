@@ -24,10 +24,10 @@ public final class DistributionConfigurationLaunchTemplateConfiguration extends 
      * 
      */
     @Import(name="accountId")
-      private final @Nullable String accountId;
+    private @Nullable String accountId;
 
     public Optional<String> accountId() {
-        return this.accountId == null ? Optional.empty() : Optional.ofNullable(this.accountId);
+        return Optional.ofNullable(this.accountId);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class DistributionConfigurationLaunchTemplateConfiguration extends 
      * 
      */
     @Import(name="launchTemplateId")
-      private final @Nullable String launchTemplateId;
+    private @Nullable String launchTemplateId;
 
     public Optional<String> launchTemplateId() {
-        return this.launchTemplateId == null ? Optional.empty() : Optional.ofNullable(this.launchTemplateId);
+        return Optional.ofNullable(this.launchTemplateId);
     }
 
     /**
@@ -46,64 +46,56 @@ public final class DistributionConfigurationLaunchTemplateConfiguration extends 
      * 
      */
     @Import(name="setDefaultVersion")
-      private final @Nullable Boolean setDefaultVersion;
+    private @Nullable Boolean setDefaultVersion;
 
     public Optional<Boolean> setDefaultVersion() {
-        return this.setDefaultVersion == null ? Optional.empty() : Optional.ofNullable(this.setDefaultVersion);
+        return Optional.ofNullable(this.setDefaultVersion);
     }
 
-    public DistributionConfigurationLaunchTemplateConfiguration(
-        @Nullable String accountId,
-        @Nullable String launchTemplateId,
-        @Nullable Boolean setDefaultVersion) {
-        this.accountId = accountId;
-        this.launchTemplateId = launchTemplateId;
-        this.setDefaultVersion = setDefaultVersion;
-    }
+    private DistributionConfigurationLaunchTemplateConfiguration() {}
 
-    private DistributionConfigurationLaunchTemplateConfiguration() {
-        this.accountId = null;
-        this.launchTemplateId = null;
-        this.setDefaultVersion = null;
+    private DistributionConfigurationLaunchTemplateConfiguration(DistributionConfigurationLaunchTemplateConfiguration $) {
+        this.accountId = $.accountId;
+        this.launchTemplateId = $.launchTemplateId;
+        this.setDefaultVersion = $.setDefaultVersion;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DistributionConfigurationLaunchTemplateConfiguration defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String accountId;
-        private @Nullable String launchTemplateId;
-        private @Nullable Boolean setDefaultVersion;
+        private DistributionConfigurationLaunchTemplateConfiguration $;
 
         public Builder() {
-    	      // Empty
+            $ = new DistributionConfigurationLaunchTemplateConfiguration();
         }
 
         public Builder(DistributionConfigurationLaunchTemplateConfiguration defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accountId = defaults.accountId;
-    	      this.launchTemplateId = defaults.launchTemplateId;
-    	      this.setDefaultVersion = defaults.setDefaultVersion;
+            $ = new DistributionConfigurationLaunchTemplateConfiguration(Objects.requireNonNull(defaults));
         }
 
         public Builder accountId(@Nullable String accountId) {
-            this.accountId = accountId;
+            $.accountId = accountId;
             return this;
         }
+
         public Builder launchTemplateId(@Nullable String launchTemplateId) {
-            this.launchTemplateId = launchTemplateId;
+            $.launchTemplateId = launchTemplateId;
             return this;
         }
+
         public Builder setDefaultVersion(@Nullable Boolean setDefaultVersion) {
-            this.setDefaultVersion = setDefaultVersion;
+            $.setDefaultVersion = setDefaultVersion;
             return this;
-        }        public DistributionConfigurationLaunchTemplateConfiguration build() {
-            return new DistributionConfigurationLaunchTemplateConfiguration(accountId, launchTemplateId, setDefaultVersion);
+        }
+
+        public DistributionConfigurationLaunchTemplateConfiguration build() {
+            return $;
         }
     }
+
 }

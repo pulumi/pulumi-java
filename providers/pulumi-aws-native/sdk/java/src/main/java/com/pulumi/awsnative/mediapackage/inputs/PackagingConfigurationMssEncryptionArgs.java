@@ -6,7 +6,6 @@ package com.pulumi.awsnative.mediapackage.inputs;
 import com.pulumi.awsnative.mediapackage.inputs.PackagingConfigurationSpekeKeyProviderArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
 
 
@@ -19,49 +18,49 @@ public final class PackagingConfigurationMssEncryptionArgs extends com.pulumi.re
     public static final PackagingConfigurationMssEncryptionArgs Empty = new PackagingConfigurationMssEncryptionArgs();
 
     @Import(name="spekeKeyProvider", required=true)
-      private final Output<PackagingConfigurationSpekeKeyProviderArgs> spekeKeyProvider;
+    private Output<PackagingConfigurationSpekeKeyProviderArgs> spekeKeyProvider;
 
     public Output<PackagingConfigurationSpekeKeyProviderArgs> spekeKeyProvider() {
         return this.spekeKeyProvider;
     }
 
-    public PackagingConfigurationMssEncryptionArgs(Output<PackagingConfigurationSpekeKeyProviderArgs> spekeKeyProvider) {
-        this.spekeKeyProvider = Objects.requireNonNull(spekeKeyProvider, "expected parameter 'spekeKeyProvider' to be non-null");
-    }
+    private PackagingConfigurationMssEncryptionArgs() {}
 
-    private PackagingConfigurationMssEncryptionArgs() {
-        this.spekeKeyProvider = Codegen.empty();
+    private PackagingConfigurationMssEncryptionArgs(PackagingConfigurationMssEncryptionArgs $) {
+        this.spekeKeyProvider = $.spekeKeyProvider;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PackagingConfigurationMssEncryptionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<PackagingConfigurationSpekeKeyProviderArgs> spekeKeyProvider;
+        private PackagingConfigurationMssEncryptionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PackagingConfigurationMssEncryptionArgs();
         }
 
         public Builder(PackagingConfigurationMssEncryptionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.spekeKeyProvider = defaults.spekeKeyProvider;
+            $ = new PackagingConfigurationMssEncryptionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder spekeKeyProvider(Output<PackagingConfigurationSpekeKeyProviderArgs> spekeKeyProvider) {
-            this.spekeKeyProvider = Objects.requireNonNull(spekeKeyProvider);
+            $.spekeKeyProvider = spekeKeyProvider;
             return this;
         }
+
         public Builder spekeKeyProvider(PackagingConfigurationSpekeKeyProviderArgs spekeKeyProvider) {
-            this.spekeKeyProvider = Output.of(Objects.requireNonNull(spekeKeyProvider));
-            return this;
-        }        public PackagingConfigurationMssEncryptionArgs build() {
-            return new PackagingConfigurationMssEncryptionArgs(spekeKeyProvider);
+            return spekeKeyProvider(Output.of(spekeKeyProvider));
+        }
+
+        public PackagingConfigurationMssEncryptionArgs build() {
+            $.spekeKeyProvider = Objects.requireNonNull($.spekeKeyProvider, "expected parameter 'spekeKeyProvider' to be non-null");
+            return $;
         }
     }
+
 }

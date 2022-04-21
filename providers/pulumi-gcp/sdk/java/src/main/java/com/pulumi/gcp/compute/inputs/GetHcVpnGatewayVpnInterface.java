@@ -14,78 +14,73 @@ public final class GetHcVpnGatewayVpnInterface extends com.pulumi.resources.Invo
     public static final GetHcVpnGatewayVpnInterface Empty = new GetHcVpnGatewayVpnInterface();
 
     @Import(name="id", required=true)
-      private final Integer id;
+    private Integer id;
 
     public Integer id() {
         return this.id;
     }
 
     @Import(name="interconnectAttachment", required=true)
-      private final String interconnectAttachment;
+    private String interconnectAttachment;
 
     public String interconnectAttachment() {
         return this.interconnectAttachment;
     }
 
     @Import(name="ipAddress", required=true)
-      private final String ipAddress;
+    private String ipAddress;
 
     public String ipAddress() {
         return this.ipAddress;
     }
 
-    public GetHcVpnGatewayVpnInterface(
-        Integer id,
-        String interconnectAttachment,
-        String ipAddress) {
-        this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
-        this.interconnectAttachment = Objects.requireNonNull(interconnectAttachment, "expected parameter 'interconnectAttachment' to be non-null");
-        this.ipAddress = Objects.requireNonNull(ipAddress, "expected parameter 'ipAddress' to be non-null");
-    }
+    private GetHcVpnGatewayVpnInterface() {}
 
-    private GetHcVpnGatewayVpnInterface() {
-        this.id = null;
-        this.interconnectAttachment = null;
-        this.ipAddress = null;
+    private GetHcVpnGatewayVpnInterface(GetHcVpnGatewayVpnInterface $) {
+        this.id = $.id;
+        this.interconnectAttachment = $.interconnectAttachment;
+        this.ipAddress = $.ipAddress;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetHcVpnGatewayVpnInterface defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Integer id;
-        private String interconnectAttachment;
-        private String ipAddress;
+        private GetHcVpnGatewayVpnInterface $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetHcVpnGatewayVpnInterface();
         }
 
         public Builder(GetHcVpnGatewayVpnInterface defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.id = defaults.id;
-    	      this.interconnectAttachment = defaults.interconnectAttachment;
-    	      this.ipAddress = defaults.ipAddress;
+            $ = new GetHcVpnGatewayVpnInterface(Objects.requireNonNull(defaults));
         }
 
         public Builder id(Integer id) {
-            this.id = Objects.requireNonNull(id);
+            $.id = id;
             return this;
         }
+
         public Builder interconnectAttachment(String interconnectAttachment) {
-            this.interconnectAttachment = Objects.requireNonNull(interconnectAttachment);
+            $.interconnectAttachment = interconnectAttachment;
             return this;
         }
+
         public Builder ipAddress(String ipAddress) {
-            this.ipAddress = Objects.requireNonNull(ipAddress);
+            $.ipAddress = ipAddress;
             return this;
-        }        public GetHcVpnGatewayVpnInterface build() {
-            return new GetHcVpnGatewayVpnInterface(id, interconnectAttachment, ipAddress);
+        }
+
+        public GetHcVpnGatewayVpnInterface build() {
+            $.id = Objects.requireNonNull($.id, "expected parameter 'id' to be non-null");
+            $.interconnectAttachment = Objects.requireNonNull($.interconnectAttachment, "expected parameter 'interconnectAttachment' to be non-null");
+            $.ipAddress = Objects.requireNonNull($.ipAddress, "expected parameter 'ipAddress' to be non-null");
+            return $;
         }
     }
+
 }

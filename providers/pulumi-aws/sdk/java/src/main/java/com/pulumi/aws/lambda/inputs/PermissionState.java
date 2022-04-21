@@ -5,9 +5,9 @@ package com.pulumi.aws.lambda.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class PermissionState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="action")
-      private final @Nullable Output<String> action;
+    private @Nullable Output<String> action;
 
-    public Output<String> action() {
-        return this.action == null ? Codegen.empty() : this.action;
+    public Optional<Output<String>> action() {
+        return Optional.ofNullable(this.action);
     }
 
     /**
@@ -31,10 +31,10 @@ public final class PermissionState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="eventSourceToken")
-      private final @Nullable Output<String> eventSourceToken;
+    private @Nullable Output<String> eventSourceToken;
 
-    public Output<String> eventSourceToken() {
-        return this.eventSourceToken == null ? Codegen.empty() : this.eventSourceToken;
+    public Optional<Output<String>> eventSourceToken() {
+        return Optional.ofNullable(this.eventSourceToken);
     }
 
     /**
@@ -42,10 +42,10 @@ public final class PermissionState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="function")
-      private final @Nullable Output<String> function;
+    private @Nullable Output<String> function;
 
-    public Output<String> function() {
-        return this.function == null ? Codegen.empty() : this.function;
+    public Optional<Output<String>> function() {
+        return Optional.ofNullable(this.function);
     }
 
     /**
@@ -53,10 +53,10 @@ public final class PermissionState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="principal")
-      private final @Nullable Output<String> principal;
+    private @Nullable Output<String> principal;
 
-    public Output<String> principal() {
-        return this.principal == null ? Codegen.empty() : this.principal;
+    public Optional<Output<String>> principal() {
+        return Optional.ofNullable(this.principal);
     }
 
     /**
@@ -64,10 +64,10 @@ public final class PermissionState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="qualifier")
-      private final @Nullable Output<String> qualifier;
+    private @Nullable Output<String> qualifier;
 
-    public Output<String> qualifier() {
-        return this.qualifier == null ? Codegen.empty() : this.qualifier;
+    public Optional<Output<String>> qualifier() {
+        return Optional.ofNullable(this.qualifier);
     }
 
     /**
@@ -75,10 +75,10 @@ public final class PermissionState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="sourceAccount")
-      private final @Nullable Output<String> sourceAccount;
+    private @Nullable Output<String> sourceAccount;
 
-    public Output<String> sourceAccount() {
-        return this.sourceAccount == null ? Codegen.empty() : this.sourceAccount;
+    public Optional<Output<String>> sourceAccount() {
+        return Optional.ofNullable(this.sourceAccount);
     }
 
     /**
@@ -90,10 +90,10 @@ public final class PermissionState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="sourceArn")
-      private final @Nullable Output<String> sourceArn;
+    private @Nullable Output<String> sourceArn;
 
-    public Output<String> sourceArn() {
-        return this.sourceArn == null ? Codegen.empty() : this.sourceArn;
+    public Optional<Output<String>> sourceArn() {
+        return Optional.ofNullable(this.sourceArn);
     }
 
     /**
@@ -101,10 +101,10 @@ public final class PermissionState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="statementId")
-      private final @Nullable Output<String> statementId;
+    private @Nullable Output<String> statementId;
 
-    public Output<String> statementId() {
-        return this.statementId == null ? Codegen.empty() : this.statementId;
+    public Optional<Output<String>> statementId() {
+        return Optional.ofNullable(this.statementId);
     }
 
     /**
@@ -112,150 +112,128 @@ public final class PermissionState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="statementIdPrefix")
-      private final @Nullable Output<String> statementIdPrefix;
+    private @Nullable Output<String> statementIdPrefix;
 
-    public Output<String> statementIdPrefix() {
-        return this.statementIdPrefix == null ? Codegen.empty() : this.statementIdPrefix;
+    public Optional<Output<String>> statementIdPrefix() {
+        return Optional.ofNullable(this.statementIdPrefix);
     }
 
-    public PermissionState(
-        @Nullable Output<String> action,
-        @Nullable Output<String> eventSourceToken,
-        @Nullable Output<String> function,
-        @Nullable Output<String> principal,
-        @Nullable Output<String> qualifier,
-        @Nullable Output<String> sourceAccount,
-        @Nullable Output<String> sourceArn,
-        @Nullable Output<String> statementId,
-        @Nullable Output<String> statementIdPrefix) {
-        this.action = action;
-        this.eventSourceToken = eventSourceToken;
-        this.function = function;
-        this.principal = principal;
-        this.qualifier = qualifier;
-        this.sourceAccount = sourceAccount;
-        this.sourceArn = sourceArn;
-        this.statementId = statementId;
-        this.statementIdPrefix = statementIdPrefix;
-    }
+    private PermissionState() {}
 
-    private PermissionState() {
-        this.action = Codegen.empty();
-        this.eventSourceToken = Codegen.empty();
-        this.function = Codegen.empty();
-        this.principal = Codegen.empty();
-        this.qualifier = Codegen.empty();
-        this.sourceAccount = Codegen.empty();
-        this.sourceArn = Codegen.empty();
-        this.statementId = Codegen.empty();
-        this.statementIdPrefix = Codegen.empty();
+    private PermissionState(PermissionState $) {
+        this.action = $.action;
+        this.eventSourceToken = $.eventSourceToken;
+        this.function = $.function;
+        this.principal = $.principal;
+        this.qualifier = $.qualifier;
+        this.sourceAccount = $.sourceAccount;
+        this.sourceArn = $.sourceArn;
+        this.statementId = $.statementId;
+        this.statementIdPrefix = $.statementIdPrefix;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PermissionState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> action;
-        private @Nullable Output<String> eventSourceToken;
-        private @Nullable Output<String> function;
-        private @Nullable Output<String> principal;
-        private @Nullable Output<String> qualifier;
-        private @Nullable Output<String> sourceAccount;
-        private @Nullable Output<String> sourceArn;
-        private @Nullable Output<String> statementId;
-        private @Nullable Output<String> statementIdPrefix;
+        private PermissionState $;
 
         public Builder() {
-    	      // Empty
+            $ = new PermissionState();
         }
 
         public Builder(PermissionState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.action = defaults.action;
-    	      this.eventSourceToken = defaults.eventSourceToken;
-    	      this.function = defaults.function;
-    	      this.principal = defaults.principal;
-    	      this.qualifier = defaults.qualifier;
-    	      this.sourceAccount = defaults.sourceAccount;
-    	      this.sourceArn = defaults.sourceArn;
-    	      this.statementId = defaults.statementId;
-    	      this.statementIdPrefix = defaults.statementIdPrefix;
+            $ = new PermissionState(Objects.requireNonNull(defaults));
         }
 
         public Builder action(@Nullable Output<String> action) {
-            this.action = action;
+            $.action = action;
             return this;
         }
-        public Builder action(@Nullable String action) {
-            this.action = Codegen.ofNullable(action);
-            return this;
+
+        public Builder action(String action) {
+            return action(Output.of(action));
         }
+
         public Builder eventSourceToken(@Nullable Output<String> eventSourceToken) {
-            this.eventSourceToken = eventSourceToken;
+            $.eventSourceToken = eventSourceToken;
             return this;
         }
-        public Builder eventSourceToken(@Nullable String eventSourceToken) {
-            this.eventSourceToken = Codegen.ofNullable(eventSourceToken);
-            return this;
+
+        public Builder eventSourceToken(String eventSourceToken) {
+            return eventSourceToken(Output.of(eventSourceToken));
         }
+
         public Builder function(@Nullable Output<String> function) {
-            this.function = function;
+            $.function = function;
             return this;
         }
+
+        public Builder function(String function) {
+            return function(Output.of(function));
+        }
+
         public Builder principal(@Nullable Output<String> principal) {
-            this.principal = principal;
+            $.principal = principal;
             return this;
         }
-        public Builder principal(@Nullable String principal) {
-            this.principal = Codegen.ofNullable(principal);
-            return this;
+
+        public Builder principal(String principal) {
+            return principal(Output.of(principal));
         }
+
         public Builder qualifier(@Nullable Output<String> qualifier) {
-            this.qualifier = qualifier;
+            $.qualifier = qualifier;
             return this;
         }
-        public Builder qualifier(@Nullable String qualifier) {
-            this.qualifier = Codegen.ofNullable(qualifier);
-            return this;
+
+        public Builder qualifier(String qualifier) {
+            return qualifier(Output.of(qualifier));
         }
+
         public Builder sourceAccount(@Nullable Output<String> sourceAccount) {
-            this.sourceAccount = sourceAccount;
+            $.sourceAccount = sourceAccount;
             return this;
         }
-        public Builder sourceAccount(@Nullable String sourceAccount) {
-            this.sourceAccount = Codegen.ofNullable(sourceAccount);
-            return this;
+
+        public Builder sourceAccount(String sourceAccount) {
+            return sourceAccount(Output.of(sourceAccount));
         }
+
         public Builder sourceArn(@Nullable Output<String> sourceArn) {
-            this.sourceArn = sourceArn;
+            $.sourceArn = sourceArn;
             return this;
         }
-        public Builder sourceArn(@Nullable String sourceArn) {
-            this.sourceArn = Codegen.ofNullable(sourceArn);
-            return this;
+
+        public Builder sourceArn(String sourceArn) {
+            return sourceArn(Output.of(sourceArn));
         }
+
         public Builder statementId(@Nullable Output<String> statementId) {
-            this.statementId = statementId;
+            $.statementId = statementId;
             return this;
         }
-        public Builder statementId(@Nullable String statementId) {
-            this.statementId = Codegen.ofNullable(statementId);
-            return this;
+
+        public Builder statementId(String statementId) {
+            return statementId(Output.of(statementId));
         }
+
         public Builder statementIdPrefix(@Nullable Output<String> statementIdPrefix) {
-            this.statementIdPrefix = statementIdPrefix;
+            $.statementIdPrefix = statementIdPrefix;
             return this;
         }
-        public Builder statementIdPrefix(@Nullable String statementIdPrefix) {
-            this.statementIdPrefix = Codegen.ofNullable(statementIdPrefix);
-            return this;
-        }        public PermissionState build() {
-            return new PermissionState(action, eventSourceToken, function, principal, qualifier, sourceAccount, sourceArn, statementId, statementIdPrefix);
+
+        public Builder statementIdPrefix(String statementIdPrefix) {
+            return statementIdPrefix(Output.of(statementIdPrefix));
+        }
+
+        public PermissionState build() {
+            return $;
         }
     }
+
 }

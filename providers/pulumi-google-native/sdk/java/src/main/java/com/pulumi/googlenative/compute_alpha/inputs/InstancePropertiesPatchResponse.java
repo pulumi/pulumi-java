@@ -22,7 +22,7 @@ public final class InstancePropertiesPatchResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="labels", required=true)
-      private final Map<String,String> labels;
+    private Map<String,String> labels;
 
     public Map<String,String> labels() {
         return this.labels;
@@ -33,55 +33,52 @@ public final class InstancePropertiesPatchResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="metadata", required=true)
-      private final Map<String,String> metadata;
+    private Map<String,String> metadata;
 
     public Map<String,String> metadata() {
         return this.metadata;
     }
 
-    public InstancePropertiesPatchResponse(
-        Map<String,String> labels,
-        Map<String,String> metadata) {
-        this.labels = Objects.requireNonNull(labels, "expected parameter 'labels' to be non-null");
-        this.metadata = Objects.requireNonNull(metadata, "expected parameter 'metadata' to be non-null");
-    }
+    private InstancePropertiesPatchResponse() {}
 
-    private InstancePropertiesPatchResponse() {
-        this.labels = Map.of();
-        this.metadata = Map.of();
+    private InstancePropertiesPatchResponse(InstancePropertiesPatchResponse $) {
+        this.labels = $.labels;
+        this.metadata = $.metadata;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(InstancePropertiesPatchResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Map<String,String> labels;
-        private Map<String,String> metadata;
+        private InstancePropertiesPatchResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new InstancePropertiesPatchResponse();
         }
 
         public Builder(InstancePropertiesPatchResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.labels = defaults.labels;
-    	      this.metadata = defaults.metadata;
+            $ = new InstancePropertiesPatchResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder labels(Map<String,String> labels) {
-            this.labels = Objects.requireNonNull(labels);
+            $.labels = labels;
             return this;
         }
+
         public Builder metadata(Map<String,String> metadata) {
-            this.metadata = Objects.requireNonNull(metadata);
+            $.metadata = metadata;
             return this;
-        }        public InstancePropertiesPatchResponse build() {
-            return new InstancePropertiesPatchResponse(labels, metadata);
+        }
+
+        public InstancePropertiesPatchResponse build() {
+            $.labels = Objects.requireNonNull($.labels, "expected parameter 'labels' to be non-null");
+            $.metadata = Objects.requireNonNull($.metadata, "expected parameter 'metadata' to be non-null");
+            return $;
         }
     }
+
 }

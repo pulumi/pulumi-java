@@ -15,45 +15,44 @@ public final class DatastoreParquetConfiguration extends com.pulumi.resources.In
     public static final DatastoreParquetConfiguration Empty = new DatastoreParquetConfiguration();
 
     @Import(name="schemaDefinition")
-      private final @Nullable DatastoreSchemaDefinition schemaDefinition;
+    private @Nullable DatastoreSchemaDefinition schemaDefinition;
 
     public Optional<DatastoreSchemaDefinition> schemaDefinition() {
-        return this.schemaDefinition == null ? Optional.empty() : Optional.ofNullable(this.schemaDefinition);
+        return Optional.ofNullable(this.schemaDefinition);
     }
 
-    public DatastoreParquetConfiguration(@Nullable DatastoreSchemaDefinition schemaDefinition) {
-        this.schemaDefinition = schemaDefinition;
-    }
+    private DatastoreParquetConfiguration() {}
 
-    private DatastoreParquetConfiguration() {
-        this.schemaDefinition = null;
+    private DatastoreParquetConfiguration(DatastoreParquetConfiguration $) {
+        this.schemaDefinition = $.schemaDefinition;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DatastoreParquetConfiguration defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable DatastoreSchemaDefinition schemaDefinition;
+        private DatastoreParquetConfiguration $;
 
         public Builder() {
-    	      // Empty
+            $ = new DatastoreParquetConfiguration();
         }
 
         public Builder(DatastoreParquetConfiguration defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.schemaDefinition = defaults.schemaDefinition;
+            $ = new DatastoreParquetConfiguration(Objects.requireNonNull(defaults));
         }
 
         public Builder schemaDefinition(@Nullable DatastoreSchemaDefinition schemaDefinition) {
-            this.schemaDefinition = schemaDefinition;
+            $.schemaDefinition = schemaDefinition;
             return this;
-        }        public DatastoreParquetConfiguration build() {
-            return new DatastoreParquetConfiguration(schemaDefinition);
+        }
+
+        public DatastoreParquetConfiguration build() {
+            return $;
         }
     }
+
 }

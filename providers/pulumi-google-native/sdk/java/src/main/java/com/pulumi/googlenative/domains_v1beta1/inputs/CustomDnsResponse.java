@@ -23,7 +23,7 @@ public final class CustomDnsResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="dsRecords", required=true)
-      private final List<DsRecordResponse> dsRecords;
+    private List<DsRecordResponse> dsRecords;
 
     public List<DsRecordResponse> dsRecords() {
         return this.dsRecords;
@@ -34,61 +34,60 @@ public final class CustomDnsResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="nameServers", required=true)
-      private final List<String> nameServers;
+    private List<String> nameServers;
 
     public List<String> nameServers() {
         return this.nameServers;
     }
 
-    public CustomDnsResponse(
-        List<DsRecordResponse> dsRecords,
-        List<String> nameServers) {
-        this.dsRecords = Objects.requireNonNull(dsRecords, "expected parameter 'dsRecords' to be non-null");
-        this.nameServers = Objects.requireNonNull(nameServers, "expected parameter 'nameServers' to be non-null");
-    }
+    private CustomDnsResponse() {}
 
-    private CustomDnsResponse() {
-        this.dsRecords = List.of();
-        this.nameServers = List.of();
+    private CustomDnsResponse(CustomDnsResponse $) {
+        this.dsRecords = $.dsRecords;
+        this.nameServers = $.nameServers;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CustomDnsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<DsRecordResponse> dsRecords;
-        private List<String> nameServers;
+        private CustomDnsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new CustomDnsResponse();
         }
 
         public Builder(CustomDnsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dsRecords = defaults.dsRecords;
-    	      this.nameServers = defaults.nameServers;
+            $ = new CustomDnsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder dsRecords(List<DsRecordResponse> dsRecords) {
-            this.dsRecords = Objects.requireNonNull(dsRecords);
+            $.dsRecords = dsRecords;
             return this;
         }
+
         public Builder dsRecords(DsRecordResponse... dsRecords) {
             return dsRecords(List.of(dsRecords));
         }
+
         public Builder nameServers(List<String> nameServers) {
-            this.nameServers = Objects.requireNonNull(nameServers);
+            $.nameServers = nameServers;
             return this;
         }
+
         public Builder nameServers(String... nameServers) {
             return nameServers(List.of(nameServers));
-        }        public CustomDnsResponse build() {
-            return new CustomDnsResponse(dsRecords, nameServers);
+        }
+
+        public CustomDnsResponse build() {
+            $.dsRecords = Objects.requireNonNull($.dsRecords, "expected parameter 'dsRecords' to be non-null");
+            $.nameServers = Objects.requireNonNull($.nameServers, "expected parameter 'nameServers' to be non-null");
+            return $;
         }
     }
+
 }

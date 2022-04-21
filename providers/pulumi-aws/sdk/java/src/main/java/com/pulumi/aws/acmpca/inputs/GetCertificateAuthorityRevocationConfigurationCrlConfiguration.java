@@ -15,110 +15,101 @@ public final class GetCertificateAuthorityRevocationConfigurationCrlConfiguratio
     public static final GetCertificateAuthorityRevocationConfigurationCrlConfiguration Empty = new GetCertificateAuthorityRevocationConfigurationCrlConfiguration();
 
     @Import(name="customCname", required=true)
-      private final String customCname;
+    private String customCname;
 
     public String customCname() {
         return this.customCname;
     }
 
     @Import(name="enabled", required=true)
-      private final Boolean enabled;
+    private Boolean enabled;
 
     public Boolean enabled() {
         return this.enabled;
     }
 
     @Import(name="expirationInDays", required=true)
-      private final Integer expirationInDays;
+    private Integer expirationInDays;
 
     public Integer expirationInDays() {
         return this.expirationInDays;
     }
 
     @Import(name="s3BucketName", required=true)
-      private final String s3BucketName;
+    private String s3BucketName;
 
     public String s3BucketName() {
         return this.s3BucketName;
     }
 
     @Import(name="s3ObjectAcl", required=true)
-      private final String s3ObjectAcl;
+    private String s3ObjectAcl;
 
     public String s3ObjectAcl() {
         return this.s3ObjectAcl;
     }
 
-    public GetCertificateAuthorityRevocationConfigurationCrlConfiguration(
-        String customCname,
-        Boolean enabled,
-        Integer expirationInDays,
-        String s3BucketName,
-        String s3ObjectAcl) {
-        this.customCname = Objects.requireNonNull(customCname, "expected parameter 'customCname' to be non-null");
-        this.enabled = Objects.requireNonNull(enabled, "expected parameter 'enabled' to be non-null");
-        this.expirationInDays = Objects.requireNonNull(expirationInDays, "expected parameter 'expirationInDays' to be non-null");
-        this.s3BucketName = Objects.requireNonNull(s3BucketName, "expected parameter 's3BucketName' to be non-null");
-        this.s3ObjectAcl = Objects.requireNonNull(s3ObjectAcl, "expected parameter 's3ObjectAcl' to be non-null");
-    }
+    private GetCertificateAuthorityRevocationConfigurationCrlConfiguration() {}
 
-    private GetCertificateAuthorityRevocationConfigurationCrlConfiguration() {
-        this.customCname = null;
-        this.enabled = null;
-        this.expirationInDays = null;
-        this.s3BucketName = null;
-        this.s3ObjectAcl = null;
+    private GetCertificateAuthorityRevocationConfigurationCrlConfiguration(GetCertificateAuthorityRevocationConfigurationCrlConfiguration $) {
+        this.customCname = $.customCname;
+        this.enabled = $.enabled;
+        this.expirationInDays = $.expirationInDays;
+        this.s3BucketName = $.s3BucketName;
+        this.s3ObjectAcl = $.s3ObjectAcl;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetCertificateAuthorityRevocationConfigurationCrlConfiguration defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String customCname;
-        private Boolean enabled;
-        private Integer expirationInDays;
-        private String s3BucketName;
-        private String s3ObjectAcl;
+        private GetCertificateAuthorityRevocationConfigurationCrlConfiguration $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetCertificateAuthorityRevocationConfigurationCrlConfiguration();
         }
 
         public Builder(GetCertificateAuthorityRevocationConfigurationCrlConfiguration defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.customCname = defaults.customCname;
-    	      this.enabled = defaults.enabled;
-    	      this.expirationInDays = defaults.expirationInDays;
-    	      this.s3BucketName = defaults.s3BucketName;
-    	      this.s3ObjectAcl = defaults.s3ObjectAcl;
+            $ = new GetCertificateAuthorityRevocationConfigurationCrlConfiguration(Objects.requireNonNull(defaults));
         }
 
         public Builder customCname(String customCname) {
-            this.customCname = Objects.requireNonNull(customCname);
+            $.customCname = customCname;
             return this;
         }
+
         public Builder enabled(Boolean enabled) {
-            this.enabled = Objects.requireNonNull(enabled);
+            $.enabled = enabled;
             return this;
         }
+
         public Builder expirationInDays(Integer expirationInDays) {
-            this.expirationInDays = Objects.requireNonNull(expirationInDays);
+            $.expirationInDays = expirationInDays;
             return this;
         }
+
         public Builder s3BucketName(String s3BucketName) {
-            this.s3BucketName = Objects.requireNonNull(s3BucketName);
+            $.s3BucketName = s3BucketName;
             return this;
         }
+
         public Builder s3ObjectAcl(String s3ObjectAcl) {
-            this.s3ObjectAcl = Objects.requireNonNull(s3ObjectAcl);
+            $.s3ObjectAcl = s3ObjectAcl;
             return this;
-        }        public GetCertificateAuthorityRevocationConfigurationCrlConfiguration build() {
-            return new GetCertificateAuthorityRevocationConfigurationCrlConfiguration(customCname, enabled, expirationInDays, s3BucketName, s3ObjectAcl);
+        }
+
+        public GetCertificateAuthorityRevocationConfigurationCrlConfiguration build() {
+            $.customCname = Objects.requireNonNull($.customCname, "expected parameter 'customCname' to be non-null");
+            $.enabled = Objects.requireNonNull($.enabled, "expected parameter 'enabled' to be non-null");
+            $.expirationInDays = Objects.requireNonNull($.expirationInDays, "expected parameter 'expirationInDays' to be non-null");
+            $.s3BucketName = Objects.requireNonNull($.s3BucketName, "expected parameter 's3BucketName' to be non-null");
+            $.s3ObjectAcl = Objects.requireNonNull($.s3ObjectAcl, "expected parameter 's3ObjectAcl' to be non-null");
+            return $;
         }
     }
+
 }

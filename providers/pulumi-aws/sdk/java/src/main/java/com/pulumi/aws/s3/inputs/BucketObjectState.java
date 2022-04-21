@@ -6,11 +6,11 @@ package com.pulumi.aws.s3.inputs;
 import com.pulumi.asset.AssetOrArchive;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,10 @@ public final class BucketObjectState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="acl")
-      private final @Nullable Output<String> acl;
+    private @Nullable Output<String> acl;
 
-    public Output<String> acl() {
-        return this.acl == null ? Codegen.empty() : this.acl;
+    public Optional<Output<String>> acl() {
+        return Optional.ofNullable(this.acl);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class BucketObjectState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="bucket")
-      private final @Nullable Output<String> bucket;
+    private @Nullable Output<String> bucket;
 
-    public Output<String> bucket() {
-        return this.bucket == null ? Codegen.empty() : this.bucket;
+    public Optional<Output<String>> bucket() {
+        return Optional.ofNullable(this.bucket);
     }
 
     /**
@@ -45,10 +45,10 @@ public final class BucketObjectState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="bucketKeyEnabled")
-      private final @Nullable Output<Boolean> bucketKeyEnabled;
+    private @Nullable Output<Boolean> bucketKeyEnabled;
 
-    public Output<Boolean> bucketKeyEnabled() {
-        return this.bucketKeyEnabled == null ? Codegen.empty() : this.bucketKeyEnabled;
+    public Optional<Output<Boolean>> bucketKeyEnabled() {
+        return Optional.ofNullable(this.bucketKeyEnabled);
     }
 
     /**
@@ -56,10 +56,10 @@ public final class BucketObjectState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="cacheControl")
-      private final @Nullable Output<String> cacheControl;
+    private @Nullable Output<String> cacheControl;
 
-    public Output<String> cacheControl() {
-        return this.cacheControl == null ? Codegen.empty() : this.cacheControl;
+    public Optional<Output<String>> cacheControl() {
+        return Optional.ofNullable(this.cacheControl);
     }
 
     /**
@@ -67,10 +67,10 @@ public final class BucketObjectState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="content")
-      private final @Nullable Output<String> content;
+    private @Nullable Output<String> content;
 
-    public Output<String> content() {
-        return this.content == null ? Codegen.empty() : this.content;
+    public Optional<Output<String>> content() {
+        return Optional.ofNullable(this.content);
     }
 
     /**
@@ -78,10 +78,10 @@ public final class BucketObjectState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="contentBase64")
-      private final @Nullable Output<String> contentBase64;
+    private @Nullable Output<String> contentBase64;
 
-    public Output<String> contentBase64() {
-        return this.contentBase64 == null ? Codegen.empty() : this.contentBase64;
+    public Optional<Output<String>> contentBase64() {
+        return Optional.ofNullable(this.contentBase64);
     }
 
     /**
@@ -89,10 +89,10 @@ public final class BucketObjectState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="contentDisposition")
-      private final @Nullable Output<String> contentDisposition;
+    private @Nullable Output<String> contentDisposition;
 
-    public Output<String> contentDisposition() {
-        return this.contentDisposition == null ? Codegen.empty() : this.contentDisposition;
+    public Optional<Output<String>> contentDisposition() {
+        return Optional.ofNullable(this.contentDisposition);
     }
 
     /**
@@ -100,10 +100,10 @@ public final class BucketObjectState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="contentEncoding")
-      private final @Nullable Output<String> contentEncoding;
+    private @Nullable Output<String> contentEncoding;
 
-    public Output<String> contentEncoding() {
-        return this.contentEncoding == null ? Codegen.empty() : this.contentEncoding;
+    public Optional<Output<String>> contentEncoding() {
+        return Optional.ofNullable(this.contentEncoding);
     }
 
     /**
@@ -111,10 +111,10 @@ public final class BucketObjectState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="contentLanguage")
-      private final @Nullable Output<String> contentLanguage;
+    private @Nullable Output<String> contentLanguage;
 
-    public Output<String> contentLanguage() {
-        return this.contentLanguage == null ? Codegen.empty() : this.contentLanguage;
+    public Optional<Output<String>> contentLanguage() {
+        return Optional.ofNullable(this.contentLanguage);
     }
 
     /**
@@ -122,10 +122,10 @@ public final class BucketObjectState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="contentType")
-      private final @Nullable Output<String> contentType;
+    private @Nullable Output<String> contentType;
 
-    public Output<String> contentType() {
-        return this.contentType == null ? Codegen.empty() : this.contentType;
+    public Optional<Output<String>> contentType() {
+        return Optional.ofNullable(this.contentType);
     }
 
     /**
@@ -133,10 +133,10 @@ public final class BucketObjectState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="etag")
-      private final @Nullable Output<String> etag;
+    private @Nullable Output<String> etag;
 
-    public Output<String> etag() {
-        return this.etag == null ? Codegen.empty() : this.etag;
+    public Optional<Output<String>> etag() {
+        return Optional.ofNullable(this.etag);
     }
 
     /**
@@ -144,10 +144,10 @@ public final class BucketObjectState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="forceDestroy")
-      private final @Nullable Output<Boolean> forceDestroy;
+    private @Nullable Output<Boolean> forceDestroy;
 
-    public Output<Boolean> forceDestroy() {
-        return this.forceDestroy == null ? Codegen.empty() : this.forceDestroy;
+    public Optional<Output<Boolean>> forceDestroy() {
+        return Optional.ofNullable(this.forceDestroy);
     }
 
     /**
@@ -155,10 +155,10 @@ public final class BucketObjectState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="key")
-      private final @Nullable Output<String> key;
+    private @Nullable Output<String> key;
 
-    public Output<String> key() {
-        return this.key == null ? Codegen.empty() : this.key;
+    public Optional<Output<String>> key() {
+        return Optional.ofNullable(this.key);
     }
 
     /**
@@ -166,10 +166,10 @@ public final class BucketObjectState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="kmsKeyId")
-      private final @Nullable Output<String> kmsKeyId;
+    private @Nullable Output<String> kmsKeyId;
 
-    public Output<String> kmsKeyId() {
-        return this.kmsKeyId == null ? Codegen.empty() : this.kmsKeyId;
+    public Optional<Output<String>> kmsKeyId() {
+        return Optional.ofNullable(this.kmsKeyId);
     }
 
     /**
@@ -177,10 +177,10 @@ public final class BucketObjectState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="metadata")
-      private final @Nullable Output<Map<String,String>> metadata;
+    private @Nullable Output<Map<String,String>> metadata;
 
-    public Output<Map<String,String>> metadata() {
-        return this.metadata == null ? Codegen.empty() : this.metadata;
+    public Optional<Output<Map<String,String>>> metadata() {
+        return Optional.ofNullable(this.metadata);
     }
 
     /**
@@ -188,10 +188,10 @@ public final class BucketObjectState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="objectLockLegalHoldStatus")
-      private final @Nullable Output<String> objectLockLegalHoldStatus;
+    private @Nullable Output<String> objectLockLegalHoldStatus;
 
-    public Output<String> objectLockLegalHoldStatus() {
-        return this.objectLockLegalHoldStatus == null ? Codegen.empty() : this.objectLockLegalHoldStatus;
+    public Optional<Output<String>> objectLockLegalHoldStatus() {
+        return Optional.ofNullable(this.objectLockLegalHoldStatus);
     }
 
     /**
@@ -199,10 +199,10 @@ public final class BucketObjectState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="objectLockMode")
-      private final @Nullable Output<String> objectLockMode;
+    private @Nullable Output<String> objectLockMode;
 
-    public Output<String> objectLockMode() {
-        return this.objectLockMode == null ? Codegen.empty() : this.objectLockMode;
+    public Optional<Output<String>> objectLockMode() {
+        return Optional.ofNullable(this.objectLockMode);
     }
 
     /**
@@ -210,10 +210,10 @@ public final class BucketObjectState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="objectLockRetainUntilDate")
-      private final @Nullable Output<String> objectLockRetainUntilDate;
+    private @Nullable Output<String> objectLockRetainUntilDate;
 
-    public Output<String> objectLockRetainUntilDate() {
-        return this.objectLockRetainUntilDate == null ? Codegen.empty() : this.objectLockRetainUntilDate;
+    public Optional<Output<String>> objectLockRetainUntilDate() {
+        return Optional.ofNullable(this.objectLockRetainUntilDate);
     }
 
     /**
@@ -221,10 +221,10 @@ public final class BucketObjectState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="serverSideEncryption")
-      private final @Nullable Output<String> serverSideEncryption;
+    private @Nullable Output<String> serverSideEncryption;
 
-    public Output<String> serverSideEncryption() {
-        return this.serverSideEncryption == null ? Codegen.empty() : this.serverSideEncryption;
+    public Optional<Output<String>> serverSideEncryption() {
+        return Optional.ofNullable(this.serverSideEncryption);
     }
 
     /**
@@ -232,10 +232,10 @@ public final class BucketObjectState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="source")
-      private final @Nullable Output<AssetOrArchive> source;
+    private @Nullable Output<AssetOrArchive> source;
 
-    public Output<AssetOrArchive> source() {
-        return this.source == null ? Codegen.empty() : this.source;
+    public Optional<Output<AssetOrArchive>> source() {
+        return Optional.ofNullable(this.source);
     }
 
     /**
@@ -243,10 +243,10 @@ public final class BucketObjectState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="sourceHash")
-      private final @Nullable Output<String> sourceHash;
+    private @Nullable Output<String> sourceHash;
 
-    public Output<String> sourceHash() {
-        return this.sourceHash == null ? Codegen.empty() : this.sourceHash;
+    public Optional<Output<String>> sourceHash() {
+        return Optional.ofNullable(this.sourceHash);
     }
 
     /**
@@ -254,10 +254,10 @@ public final class BucketObjectState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="storageClass")
-      private final @Nullable Output<String> storageClass;
+    private @Nullable Output<String> storageClass;
 
-    public Output<String> storageClass() {
-        return this.storageClass == null ? Codegen.empty() : this.storageClass;
+    public Optional<Output<String>> storageClass() {
+        return Optional.ofNullable(this.storageClass);
     }
 
     /**
@@ -265,10 +265,10 @@ public final class BucketObjectState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -276,10 +276,10 @@ public final class BucketObjectState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tagsAll")
-      private final @Nullable Output<Map<String,String>> tagsAll;
+    private @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> tagsAll() {
-        return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
+    public Optional<Output<Map<String,String>>> tagsAll() {
+        return Optional.ofNullable(this.tagsAll);
     }
 
     /**
@@ -287,10 +287,10 @@ public final class BucketObjectState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="versionId")
-      private final @Nullable Output<String> versionId;
+    private @Nullable Output<String> versionId;
 
-    public Output<String> versionId() {
-        return this.versionId == null ? Codegen.empty() : this.versionId;
+    public Optional<Output<String>> versionId() {
+        return Optional.ofNullable(this.versionId);
     }
 
     /**
@@ -298,371 +298,298 @@ public final class BucketObjectState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="websiteRedirect")
-      private final @Nullable Output<String> websiteRedirect;
+    private @Nullable Output<String> websiteRedirect;
 
-    public Output<String> websiteRedirect() {
-        return this.websiteRedirect == null ? Codegen.empty() : this.websiteRedirect;
+    public Optional<Output<String>> websiteRedirect() {
+        return Optional.ofNullable(this.websiteRedirect);
     }
 
-    public BucketObjectState(
-        @Nullable Output<String> acl,
-        @Nullable Output<String> bucket,
-        @Nullable Output<Boolean> bucketKeyEnabled,
-        @Nullable Output<String> cacheControl,
-        @Nullable Output<String> content,
-        @Nullable Output<String> contentBase64,
-        @Nullable Output<String> contentDisposition,
-        @Nullable Output<String> contentEncoding,
-        @Nullable Output<String> contentLanguage,
-        @Nullable Output<String> contentType,
-        @Nullable Output<String> etag,
-        @Nullable Output<Boolean> forceDestroy,
-        @Nullable Output<String> key,
-        @Nullable Output<String> kmsKeyId,
-        @Nullable Output<Map<String,String>> metadata,
-        @Nullable Output<String> objectLockLegalHoldStatus,
-        @Nullable Output<String> objectLockMode,
-        @Nullable Output<String> objectLockRetainUntilDate,
-        @Nullable Output<String> serverSideEncryption,
-        @Nullable Output<AssetOrArchive> source,
-        @Nullable Output<String> sourceHash,
-        @Nullable Output<String> storageClass,
-        @Nullable Output<Map<String,String>> tags,
-        @Nullable Output<Map<String,String>> tagsAll,
-        @Nullable Output<String> versionId,
-        @Nullable Output<String> websiteRedirect) {
-        this.acl = acl;
-        this.bucket = bucket;
-        this.bucketKeyEnabled = bucketKeyEnabled;
-        this.cacheControl = cacheControl;
-        this.content = content;
-        this.contentBase64 = contentBase64;
-        this.contentDisposition = contentDisposition;
-        this.contentEncoding = contentEncoding;
-        this.contentLanguage = contentLanguage;
-        this.contentType = contentType;
-        this.etag = etag;
-        this.forceDestroy = forceDestroy;
-        this.key = key;
-        this.kmsKeyId = kmsKeyId;
-        this.metadata = metadata;
-        this.objectLockLegalHoldStatus = objectLockLegalHoldStatus;
-        this.objectLockMode = objectLockMode;
-        this.objectLockRetainUntilDate = objectLockRetainUntilDate;
-        this.serverSideEncryption = serverSideEncryption;
-        this.source = source;
-        this.sourceHash = sourceHash;
-        this.storageClass = storageClass;
-        this.tags = tags;
-        this.tagsAll = tagsAll;
-        this.versionId = versionId;
-        this.websiteRedirect = websiteRedirect;
-    }
+    private BucketObjectState() {}
 
-    private BucketObjectState() {
-        this.acl = Codegen.empty();
-        this.bucket = Codegen.empty();
-        this.bucketKeyEnabled = Codegen.empty();
-        this.cacheControl = Codegen.empty();
-        this.content = Codegen.empty();
-        this.contentBase64 = Codegen.empty();
-        this.contentDisposition = Codegen.empty();
-        this.contentEncoding = Codegen.empty();
-        this.contentLanguage = Codegen.empty();
-        this.contentType = Codegen.empty();
-        this.etag = Codegen.empty();
-        this.forceDestroy = Codegen.empty();
-        this.key = Codegen.empty();
-        this.kmsKeyId = Codegen.empty();
-        this.metadata = Codegen.empty();
-        this.objectLockLegalHoldStatus = Codegen.empty();
-        this.objectLockMode = Codegen.empty();
-        this.objectLockRetainUntilDate = Codegen.empty();
-        this.serverSideEncryption = Codegen.empty();
-        this.source = Codegen.empty();
-        this.sourceHash = Codegen.empty();
-        this.storageClass = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.tagsAll = Codegen.empty();
-        this.versionId = Codegen.empty();
-        this.websiteRedirect = Codegen.empty();
+    private BucketObjectState(BucketObjectState $) {
+        this.acl = $.acl;
+        this.bucket = $.bucket;
+        this.bucketKeyEnabled = $.bucketKeyEnabled;
+        this.cacheControl = $.cacheControl;
+        this.content = $.content;
+        this.contentBase64 = $.contentBase64;
+        this.contentDisposition = $.contentDisposition;
+        this.contentEncoding = $.contentEncoding;
+        this.contentLanguage = $.contentLanguage;
+        this.contentType = $.contentType;
+        this.etag = $.etag;
+        this.forceDestroy = $.forceDestroy;
+        this.key = $.key;
+        this.kmsKeyId = $.kmsKeyId;
+        this.metadata = $.metadata;
+        this.objectLockLegalHoldStatus = $.objectLockLegalHoldStatus;
+        this.objectLockMode = $.objectLockMode;
+        this.objectLockRetainUntilDate = $.objectLockRetainUntilDate;
+        this.serverSideEncryption = $.serverSideEncryption;
+        this.source = $.source;
+        this.sourceHash = $.sourceHash;
+        this.storageClass = $.storageClass;
+        this.tags = $.tags;
+        this.tagsAll = $.tagsAll;
+        this.versionId = $.versionId;
+        this.websiteRedirect = $.websiteRedirect;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BucketObjectState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> acl;
-        private @Nullable Output<String> bucket;
-        private @Nullable Output<Boolean> bucketKeyEnabled;
-        private @Nullable Output<String> cacheControl;
-        private @Nullable Output<String> content;
-        private @Nullable Output<String> contentBase64;
-        private @Nullable Output<String> contentDisposition;
-        private @Nullable Output<String> contentEncoding;
-        private @Nullable Output<String> contentLanguage;
-        private @Nullable Output<String> contentType;
-        private @Nullable Output<String> etag;
-        private @Nullable Output<Boolean> forceDestroy;
-        private @Nullable Output<String> key;
-        private @Nullable Output<String> kmsKeyId;
-        private @Nullable Output<Map<String,String>> metadata;
-        private @Nullable Output<String> objectLockLegalHoldStatus;
-        private @Nullable Output<String> objectLockMode;
-        private @Nullable Output<String> objectLockRetainUntilDate;
-        private @Nullable Output<String> serverSideEncryption;
-        private @Nullable Output<AssetOrArchive> source;
-        private @Nullable Output<String> sourceHash;
-        private @Nullable Output<String> storageClass;
-        private @Nullable Output<Map<String,String>> tags;
-        private @Nullable Output<Map<String,String>> tagsAll;
-        private @Nullable Output<String> versionId;
-        private @Nullable Output<String> websiteRedirect;
+        private BucketObjectState $;
 
         public Builder() {
-    	      // Empty
+            $ = new BucketObjectState();
         }
 
         public Builder(BucketObjectState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.acl = defaults.acl;
-    	      this.bucket = defaults.bucket;
-    	      this.bucketKeyEnabled = defaults.bucketKeyEnabled;
-    	      this.cacheControl = defaults.cacheControl;
-    	      this.content = defaults.content;
-    	      this.contentBase64 = defaults.contentBase64;
-    	      this.contentDisposition = defaults.contentDisposition;
-    	      this.contentEncoding = defaults.contentEncoding;
-    	      this.contentLanguage = defaults.contentLanguage;
-    	      this.contentType = defaults.contentType;
-    	      this.etag = defaults.etag;
-    	      this.forceDestroy = defaults.forceDestroy;
-    	      this.key = defaults.key;
-    	      this.kmsKeyId = defaults.kmsKeyId;
-    	      this.metadata = defaults.metadata;
-    	      this.objectLockLegalHoldStatus = defaults.objectLockLegalHoldStatus;
-    	      this.objectLockMode = defaults.objectLockMode;
-    	      this.objectLockRetainUntilDate = defaults.objectLockRetainUntilDate;
-    	      this.serverSideEncryption = defaults.serverSideEncryption;
-    	      this.source = defaults.source;
-    	      this.sourceHash = defaults.sourceHash;
-    	      this.storageClass = defaults.storageClass;
-    	      this.tags = defaults.tags;
-    	      this.tagsAll = defaults.tagsAll;
-    	      this.versionId = defaults.versionId;
-    	      this.websiteRedirect = defaults.websiteRedirect;
+            $ = new BucketObjectState(Objects.requireNonNull(defaults));
         }
 
         public Builder acl(@Nullable Output<String> acl) {
-            this.acl = acl;
+            $.acl = acl;
             return this;
         }
-        public Builder acl(@Nullable String acl) {
-            this.acl = Codegen.ofNullable(acl);
-            return this;
+
+        public Builder acl(String acl) {
+            return acl(Output.of(acl));
         }
+
         public Builder bucket(@Nullable Output<String> bucket) {
-            this.bucket = bucket;
+            $.bucket = bucket;
             return this;
         }
+
+        public Builder bucket(String bucket) {
+            return bucket(Output.of(bucket));
+        }
+
         public Builder bucketKeyEnabled(@Nullable Output<Boolean> bucketKeyEnabled) {
-            this.bucketKeyEnabled = bucketKeyEnabled;
+            $.bucketKeyEnabled = bucketKeyEnabled;
             return this;
         }
-        public Builder bucketKeyEnabled(@Nullable Boolean bucketKeyEnabled) {
-            this.bucketKeyEnabled = Codegen.ofNullable(bucketKeyEnabled);
-            return this;
+
+        public Builder bucketKeyEnabled(Boolean bucketKeyEnabled) {
+            return bucketKeyEnabled(Output.of(bucketKeyEnabled));
         }
+
         public Builder cacheControl(@Nullable Output<String> cacheControl) {
-            this.cacheControl = cacheControl;
+            $.cacheControl = cacheControl;
             return this;
         }
-        public Builder cacheControl(@Nullable String cacheControl) {
-            this.cacheControl = Codegen.ofNullable(cacheControl);
-            return this;
+
+        public Builder cacheControl(String cacheControl) {
+            return cacheControl(Output.of(cacheControl));
         }
+
         public Builder content(@Nullable Output<String> content) {
-            this.content = content;
+            $.content = content;
             return this;
         }
-        public Builder content(@Nullable String content) {
-            this.content = Codegen.ofNullable(content);
-            return this;
+
+        public Builder content(String content) {
+            return content(Output.of(content));
         }
+
         public Builder contentBase64(@Nullable Output<String> contentBase64) {
-            this.contentBase64 = contentBase64;
+            $.contentBase64 = contentBase64;
             return this;
         }
-        public Builder contentBase64(@Nullable String contentBase64) {
-            this.contentBase64 = Codegen.ofNullable(contentBase64);
-            return this;
+
+        public Builder contentBase64(String contentBase64) {
+            return contentBase64(Output.of(contentBase64));
         }
+
         public Builder contentDisposition(@Nullable Output<String> contentDisposition) {
-            this.contentDisposition = contentDisposition;
+            $.contentDisposition = contentDisposition;
             return this;
         }
-        public Builder contentDisposition(@Nullable String contentDisposition) {
-            this.contentDisposition = Codegen.ofNullable(contentDisposition);
-            return this;
+
+        public Builder contentDisposition(String contentDisposition) {
+            return contentDisposition(Output.of(contentDisposition));
         }
+
         public Builder contentEncoding(@Nullable Output<String> contentEncoding) {
-            this.contentEncoding = contentEncoding;
+            $.contentEncoding = contentEncoding;
             return this;
         }
-        public Builder contentEncoding(@Nullable String contentEncoding) {
-            this.contentEncoding = Codegen.ofNullable(contentEncoding);
-            return this;
+
+        public Builder contentEncoding(String contentEncoding) {
+            return contentEncoding(Output.of(contentEncoding));
         }
+
         public Builder contentLanguage(@Nullable Output<String> contentLanguage) {
-            this.contentLanguage = contentLanguage;
+            $.contentLanguage = contentLanguage;
             return this;
         }
-        public Builder contentLanguage(@Nullable String contentLanguage) {
-            this.contentLanguage = Codegen.ofNullable(contentLanguage);
-            return this;
+
+        public Builder contentLanguage(String contentLanguage) {
+            return contentLanguage(Output.of(contentLanguage));
         }
+
         public Builder contentType(@Nullable Output<String> contentType) {
-            this.contentType = contentType;
+            $.contentType = contentType;
             return this;
         }
-        public Builder contentType(@Nullable String contentType) {
-            this.contentType = Codegen.ofNullable(contentType);
-            return this;
+
+        public Builder contentType(String contentType) {
+            return contentType(Output.of(contentType));
         }
+
         public Builder etag(@Nullable Output<String> etag) {
-            this.etag = etag;
+            $.etag = etag;
             return this;
         }
-        public Builder etag(@Nullable String etag) {
-            this.etag = Codegen.ofNullable(etag);
-            return this;
+
+        public Builder etag(String etag) {
+            return etag(Output.of(etag));
         }
+
         public Builder forceDestroy(@Nullable Output<Boolean> forceDestroy) {
-            this.forceDestroy = forceDestroy;
+            $.forceDestroy = forceDestroy;
             return this;
         }
-        public Builder forceDestroy(@Nullable Boolean forceDestroy) {
-            this.forceDestroy = Codegen.ofNullable(forceDestroy);
-            return this;
+
+        public Builder forceDestroy(Boolean forceDestroy) {
+            return forceDestroy(Output.of(forceDestroy));
         }
+
         public Builder key(@Nullable Output<String> key) {
-            this.key = key;
+            $.key = key;
             return this;
         }
-        public Builder key(@Nullable String key) {
-            this.key = Codegen.ofNullable(key);
-            return this;
+
+        public Builder key(String key) {
+            return key(Output.of(key));
         }
+
         public Builder kmsKeyId(@Nullable Output<String> kmsKeyId) {
-            this.kmsKeyId = kmsKeyId;
+            $.kmsKeyId = kmsKeyId;
             return this;
         }
-        public Builder kmsKeyId(@Nullable String kmsKeyId) {
-            this.kmsKeyId = Codegen.ofNullable(kmsKeyId);
-            return this;
+
+        public Builder kmsKeyId(String kmsKeyId) {
+            return kmsKeyId(Output.of(kmsKeyId));
         }
+
         public Builder metadata(@Nullable Output<Map<String,String>> metadata) {
-            this.metadata = metadata;
+            $.metadata = metadata;
             return this;
         }
-        public Builder metadata(@Nullable Map<String,String> metadata) {
-            this.metadata = Codegen.ofNullable(metadata);
-            return this;
+
+        public Builder metadata(Map<String,String> metadata) {
+            return metadata(Output.of(metadata));
         }
+
         public Builder objectLockLegalHoldStatus(@Nullable Output<String> objectLockLegalHoldStatus) {
-            this.objectLockLegalHoldStatus = objectLockLegalHoldStatus;
+            $.objectLockLegalHoldStatus = objectLockLegalHoldStatus;
             return this;
         }
-        public Builder objectLockLegalHoldStatus(@Nullable String objectLockLegalHoldStatus) {
-            this.objectLockLegalHoldStatus = Codegen.ofNullable(objectLockLegalHoldStatus);
-            return this;
+
+        public Builder objectLockLegalHoldStatus(String objectLockLegalHoldStatus) {
+            return objectLockLegalHoldStatus(Output.of(objectLockLegalHoldStatus));
         }
+
         public Builder objectLockMode(@Nullable Output<String> objectLockMode) {
-            this.objectLockMode = objectLockMode;
+            $.objectLockMode = objectLockMode;
             return this;
         }
-        public Builder objectLockMode(@Nullable String objectLockMode) {
-            this.objectLockMode = Codegen.ofNullable(objectLockMode);
-            return this;
+
+        public Builder objectLockMode(String objectLockMode) {
+            return objectLockMode(Output.of(objectLockMode));
         }
+
         public Builder objectLockRetainUntilDate(@Nullable Output<String> objectLockRetainUntilDate) {
-            this.objectLockRetainUntilDate = objectLockRetainUntilDate;
+            $.objectLockRetainUntilDate = objectLockRetainUntilDate;
             return this;
         }
-        public Builder objectLockRetainUntilDate(@Nullable String objectLockRetainUntilDate) {
-            this.objectLockRetainUntilDate = Codegen.ofNullable(objectLockRetainUntilDate);
-            return this;
+
+        public Builder objectLockRetainUntilDate(String objectLockRetainUntilDate) {
+            return objectLockRetainUntilDate(Output.of(objectLockRetainUntilDate));
         }
+
         public Builder serverSideEncryption(@Nullable Output<String> serverSideEncryption) {
-            this.serverSideEncryption = serverSideEncryption;
+            $.serverSideEncryption = serverSideEncryption;
             return this;
         }
-        public Builder serverSideEncryption(@Nullable String serverSideEncryption) {
-            this.serverSideEncryption = Codegen.ofNullable(serverSideEncryption);
-            return this;
+
+        public Builder serverSideEncryption(String serverSideEncryption) {
+            return serverSideEncryption(Output.of(serverSideEncryption));
         }
+
         public Builder source(@Nullable Output<AssetOrArchive> source) {
-            this.source = source;
+            $.source = source;
             return this;
         }
-        public Builder source(@Nullable AssetOrArchive source) {
-            this.source = Codegen.ofNullable(source);
-            return this;
+
+        public Builder source(AssetOrArchive source) {
+            return source(Output.of(source));
         }
+
         public Builder sourceHash(@Nullable Output<String> sourceHash) {
-            this.sourceHash = sourceHash;
+            $.sourceHash = sourceHash;
             return this;
         }
-        public Builder sourceHash(@Nullable String sourceHash) {
-            this.sourceHash = Codegen.ofNullable(sourceHash);
-            return this;
+
+        public Builder sourceHash(String sourceHash) {
+            return sourceHash(Output.of(sourceHash));
         }
+
         public Builder storageClass(@Nullable Output<String> storageClass) {
-            this.storageClass = storageClass;
+            $.storageClass = storageClass;
             return this;
         }
-        public Builder storageClass(@Nullable String storageClass) {
-            this.storageClass = Codegen.ofNullable(storageClass);
-            return this;
+
+        public Builder storageClass(String storageClass) {
+            return storageClass(Output.of(storageClass));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
-            this.tagsAll = tagsAll;
+            $.tagsAll = tagsAll;
             return this;
         }
-        public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Codegen.ofNullable(tagsAll);
-            return this;
+
+        public Builder tagsAll(Map<String,String> tagsAll) {
+            return tagsAll(Output.of(tagsAll));
         }
+
         public Builder versionId(@Nullable Output<String> versionId) {
-            this.versionId = versionId;
+            $.versionId = versionId;
             return this;
         }
-        public Builder versionId(@Nullable String versionId) {
-            this.versionId = Codegen.ofNullable(versionId);
-            return this;
+
+        public Builder versionId(String versionId) {
+            return versionId(Output.of(versionId));
         }
+
         public Builder websiteRedirect(@Nullable Output<String> websiteRedirect) {
-            this.websiteRedirect = websiteRedirect;
+            $.websiteRedirect = websiteRedirect;
             return this;
         }
-        public Builder websiteRedirect(@Nullable String websiteRedirect) {
-            this.websiteRedirect = Codegen.ofNullable(websiteRedirect);
-            return this;
-        }        public BucketObjectState build() {
-            return new BucketObjectState(acl, bucket, bucketKeyEnabled, cacheControl, content, contentBase64, contentDisposition, contentEncoding, contentLanguage, contentType, etag, forceDestroy, key, kmsKeyId, metadata, objectLockLegalHoldStatus, objectLockMode, objectLockRetainUntilDate, serverSideEncryption, source, sourceHash, storageClass, tags, tagsAll, versionId, websiteRedirect);
+
+        public Builder websiteRedirect(String websiteRedirect) {
+            return websiteRedirect(Output.of(websiteRedirect));
+        }
+
+        public BucketObjectState build() {
+            return $;
         }
     }
+
 }

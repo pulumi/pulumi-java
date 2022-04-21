@@ -5,7 +5,6 @@ package com.pulumi.kubernetes.core_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.kubernetes.core_v1.inputs.AttachedVolumeArgs;
 import com.pulumi.kubernetes.core_v1.inputs.ContainerImageArgs;
 import com.pulumi.kubernetes.core_v1.inputs.NodeAddressArgs;
@@ -17,6 +16,7 @@ import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -33,10 +33,10 @@ public final class NodeStatusArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="addresses")
-      private final @Nullable Output<List<NodeAddressArgs>> addresses;
+    private @Nullable Output<List<NodeAddressArgs>> addresses;
 
-    public Output<List<NodeAddressArgs>> addresses() {
-        return this.addresses == null ? Codegen.empty() : this.addresses;
+    public Optional<Output<List<NodeAddressArgs>>> addresses() {
+        return Optional.ofNullable(this.addresses);
     }
 
     /**
@@ -44,10 +44,10 @@ public final class NodeStatusArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="allocatable")
-      private final @Nullable Output<Map<String,String>> allocatable;
+    private @Nullable Output<Map<String,String>> allocatable;
 
-    public Output<Map<String,String>> allocatable() {
-        return this.allocatable == null ? Codegen.empty() : this.allocatable;
+    public Optional<Output<Map<String,String>>> allocatable() {
+        return Optional.ofNullable(this.allocatable);
     }
 
     /**
@@ -55,10 +55,10 @@ public final class NodeStatusArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="capacity")
-      private final @Nullable Output<Map<String,String>> capacity;
+    private @Nullable Output<Map<String,String>> capacity;
 
-    public Output<Map<String,String>> capacity() {
-        return this.capacity == null ? Codegen.empty() : this.capacity;
+    public Optional<Output<Map<String,String>>> capacity() {
+        return Optional.ofNullable(this.capacity);
     }
 
     /**
@@ -66,10 +66,10 @@ public final class NodeStatusArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="conditions")
-      private final @Nullable Output<List<NodeConditionArgs>> conditions;
+    private @Nullable Output<List<NodeConditionArgs>> conditions;
 
-    public Output<List<NodeConditionArgs>> conditions() {
-        return this.conditions == null ? Codegen.empty() : this.conditions;
+    public Optional<Output<List<NodeConditionArgs>>> conditions() {
+        return Optional.ofNullable(this.conditions);
     }
 
     /**
@@ -77,10 +77,10 @@ public final class NodeStatusArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="config")
-      private final @Nullable Output<NodeConfigStatusArgs> config;
+    private @Nullable Output<NodeConfigStatusArgs> config;
 
-    public Output<NodeConfigStatusArgs> config() {
-        return this.config == null ? Codegen.empty() : this.config;
+    public Optional<Output<NodeConfigStatusArgs>> config() {
+        return Optional.ofNullable(this.config);
     }
 
     /**
@@ -88,10 +88,10 @@ public final class NodeStatusArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="daemonEndpoints")
-      private final @Nullable Output<NodeDaemonEndpointsArgs> daemonEndpoints;
+    private @Nullable Output<NodeDaemonEndpointsArgs> daemonEndpoints;
 
-    public Output<NodeDaemonEndpointsArgs> daemonEndpoints() {
-        return this.daemonEndpoints == null ? Codegen.empty() : this.daemonEndpoints;
+    public Optional<Output<NodeDaemonEndpointsArgs>> daemonEndpoints() {
+        return Optional.ofNullable(this.daemonEndpoints);
     }
 
     /**
@@ -99,10 +99,10 @@ public final class NodeStatusArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="images")
-      private final @Nullable Output<List<ContainerImageArgs>> images;
+    private @Nullable Output<List<ContainerImageArgs>> images;
 
-    public Output<List<ContainerImageArgs>> images() {
-        return this.images == null ? Codegen.empty() : this.images;
+    public Optional<Output<List<ContainerImageArgs>>> images() {
+        return Optional.ofNullable(this.images);
     }
 
     /**
@@ -110,10 +110,10 @@ public final class NodeStatusArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="nodeInfo")
-      private final @Nullable Output<NodeSystemInfoArgs> nodeInfo;
+    private @Nullable Output<NodeSystemInfoArgs> nodeInfo;
 
-    public Output<NodeSystemInfoArgs> nodeInfo() {
-        return this.nodeInfo == null ? Codegen.empty() : this.nodeInfo;
+    public Optional<Output<NodeSystemInfoArgs>> nodeInfo() {
+        return Optional.ofNullable(this.nodeInfo);
     }
 
     /**
@@ -126,10 +126,10 @@ public final class NodeStatusArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="phase")
-      private final @Nullable Output<String> phase;
+    private @Nullable Output<String> phase;
 
-    public Output<String> phase() {
-        return this.phase == null ? Codegen.empty() : this.phase;
+    public Optional<Output<String>> phase() {
+        return Optional.ofNullable(this.phase);
     }
 
     /**
@@ -137,10 +137,10 @@ public final class NodeStatusArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="volumesAttached")
-      private final @Nullable Output<List<AttachedVolumeArgs>> volumesAttached;
+    private @Nullable Output<List<AttachedVolumeArgs>> volumesAttached;
 
-    public Output<List<AttachedVolumeArgs>> volumesAttached() {
-        return this.volumesAttached == null ? Codegen.empty() : this.volumesAttached;
+    public Optional<Output<List<AttachedVolumeArgs>>> volumesAttached() {
+        return Optional.ofNullable(this.volumesAttached);
     }
 
     /**
@@ -148,195 +148,168 @@ public final class NodeStatusArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="volumesInUse")
-      private final @Nullable Output<List<String>> volumesInUse;
+    private @Nullable Output<List<String>> volumesInUse;
 
-    public Output<List<String>> volumesInUse() {
-        return this.volumesInUse == null ? Codegen.empty() : this.volumesInUse;
+    public Optional<Output<List<String>>> volumesInUse() {
+        return Optional.ofNullable(this.volumesInUse);
     }
 
-    public NodeStatusArgs(
-        @Nullable Output<List<NodeAddressArgs>> addresses,
-        @Nullable Output<Map<String,String>> allocatable,
-        @Nullable Output<Map<String,String>> capacity,
-        @Nullable Output<List<NodeConditionArgs>> conditions,
-        @Nullable Output<NodeConfigStatusArgs> config,
-        @Nullable Output<NodeDaemonEndpointsArgs> daemonEndpoints,
-        @Nullable Output<List<ContainerImageArgs>> images,
-        @Nullable Output<NodeSystemInfoArgs> nodeInfo,
-        @Nullable Output<String> phase,
-        @Nullable Output<List<AttachedVolumeArgs>> volumesAttached,
-        @Nullable Output<List<String>> volumesInUse) {
-        this.addresses = addresses;
-        this.allocatable = allocatable;
-        this.capacity = capacity;
-        this.conditions = conditions;
-        this.config = config;
-        this.daemonEndpoints = daemonEndpoints;
-        this.images = images;
-        this.nodeInfo = nodeInfo;
-        this.phase = phase;
-        this.volumesAttached = volumesAttached;
-        this.volumesInUse = volumesInUse;
-    }
+    private NodeStatusArgs() {}
 
-    private NodeStatusArgs() {
-        this.addresses = Codegen.empty();
-        this.allocatable = Codegen.empty();
-        this.capacity = Codegen.empty();
-        this.conditions = Codegen.empty();
-        this.config = Codegen.empty();
-        this.daemonEndpoints = Codegen.empty();
-        this.images = Codegen.empty();
-        this.nodeInfo = Codegen.empty();
-        this.phase = Codegen.empty();
-        this.volumesAttached = Codegen.empty();
-        this.volumesInUse = Codegen.empty();
+    private NodeStatusArgs(NodeStatusArgs $) {
+        this.addresses = $.addresses;
+        this.allocatable = $.allocatable;
+        this.capacity = $.capacity;
+        this.conditions = $.conditions;
+        this.config = $.config;
+        this.daemonEndpoints = $.daemonEndpoints;
+        this.images = $.images;
+        this.nodeInfo = $.nodeInfo;
+        this.phase = $.phase;
+        this.volumesAttached = $.volumesAttached;
+        this.volumesInUse = $.volumesInUse;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NodeStatusArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<NodeAddressArgs>> addresses;
-        private @Nullable Output<Map<String,String>> allocatable;
-        private @Nullable Output<Map<String,String>> capacity;
-        private @Nullable Output<List<NodeConditionArgs>> conditions;
-        private @Nullable Output<NodeConfigStatusArgs> config;
-        private @Nullable Output<NodeDaemonEndpointsArgs> daemonEndpoints;
-        private @Nullable Output<List<ContainerImageArgs>> images;
-        private @Nullable Output<NodeSystemInfoArgs> nodeInfo;
-        private @Nullable Output<String> phase;
-        private @Nullable Output<List<AttachedVolumeArgs>> volumesAttached;
-        private @Nullable Output<List<String>> volumesInUse;
+        private NodeStatusArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new NodeStatusArgs();
         }
 
         public Builder(NodeStatusArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.addresses = defaults.addresses;
-    	      this.allocatable = defaults.allocatable;
-    	      this.capacity = defaults.capacity;
-    	      this.conditions = defaults.conditions;
-    	      this.config = defaults.config;
-    	      this.daemonEndpoints = defaults.daemonEndpoints;
-    	      this.images = defaults.images;
-    	      this.nodeInfo = defaults.nodeInfo;
-    	      this.phase = defaults.phase;
-    	      this.volumesAttached = defaults.volumesAttached;
-    	      this.volumesInUse = defaults.volumesInUse;
+            $ = new NodeStatusArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder addresses(@Nullable Output<List<NodeAddressArgs>> addresses) {
-            this.addresses = addresses;
+            $.addresses = addresses;
             return this;
         }
-        public Builder addresses(@Nullable List<NodeAddressArgs> addresses) {
-            this.addresses = Codegen.ofNullable(addresses);
-            return this;
+
+        public Builder addresses(List<NodeAddressArgs> addresses) {
+            return addresses(Output.of(addresses));
         }
+
         public Builder addresses(NodeAddressArgs... addresses) {
             return addresses(List.of(addresses));
         }
+
         public Builder allocatable(@Nullable Output<Map<String,String>> allocatable) {
-            this.allocatable = allocatable;
+            $.allocatable = allocatable;
             return this;
         }
-        public Builder allocatable(@Nullable Map<String,String> allocatable) {
-            this.allocatable = Codegen.ofNullable(allocatable);
-            return this;
+
+        public Builder allocatable(Map<String,String> allocatable) {
+            return allocatable(Output.of(allocatable));
         }
+
         public Builder capacity(@Nullable Output<Map<String,String>> capacity) {
-            this.capacity = capacity;
+            $.capacity = capacity;
             return this;
         }
-        public Builder capacity(@Nullable Map<String,String> capacity) {
-            this.capacity = Codegen.ofNullable(capacity);
-            return this;
+
+        public Builder capacity(Map<String,String> capacity) {
+            return capacity(Output.of(capacity));
         }
+
         public Builder conditions(@Nullable Output<List<NodeConditionArgs>> conditions) {
-            this.conditions = conditions;
+            $.conditions = conditions;
             return this;
         }
-        public Builder conditions(@Nullable List<NodeConditionArgs> conditions) {
-            this.conditions = Codegen.ofNullable(conditions);
-            return this;
+
+        public Builder conditions(List<NodeConditionArgs> conditions) {
+            return conditions(Output.of(conditions));
         }
+
         public Builder conditions(NodeConditionArgs... conditions) {
             return conditions(List.of(conditions));
         }
+
         public Builder config(@Nullable Output<NodeConfigStatusArgs> config) {
-            this.config = config;
+            $.config = config;
             return this;
         }
-        public Builder config(@Nullable NodeConfigStatusArgs config) {
-            this.config = Codegen.ofNullable(config);
-            return this;
+
+        public Builder config(NodeConfigStatusArgs config) {
+            return config(Output.of(config));
         }
+
         public Builder daemonEndpoints(@Nullable Output<NodeDaemonEndpointsArgs> daemonEndpoints) {
-            this.daemonEndpoints = daemonEndpoints;
+            $.daemonEndpoints = daemonEndpoints;
             return this;
         }
-        public Builder daemonEndpoints(@Nullable NodeDaemonEndpointsArgs daemonEndpoints) {
-            this.daemonEndpoints = Codegen.ofNullable(daemonEndpoints);
-            return this;
+
+        public Builder daemonEndpoints(NodeDaemonEndpointsArgs daemonEndpoints) {
+            return daemonEndpoints(Output.of(daemonEndpoints));
         }
+
         public Builder images(@Nullable Output<List<ContainerImageArgs>> images) {
-            this.images = images;
+            $.images = images;
             return this;
         }
-        public Builder images(@Nullable List<ContainerImageArgs> images) {
-            this.images = Codegen.ofNullable(images);
-            return this;
+
+        public Builder images(List<ContainerImageArgs> images) {
+            return images(Output.of(images));
         }
+
         public Builder images(ContainerImageArgs... images) {
             return images(List.of(images));
         }
+
         public Builder nodeInfo(@Nullable Output<NodeSystemInfoArgs> nodeInfo) {
-            this.nodeInfo = nodeInfo;
+            $.nodeInfo = nodeInfo;
             return this;
         }
-        public Builder nodeInfo(@Nullable NodeSystemInfoArgs nodeInfo) {
-            this.nodeInfo = Codegen.ofNullable(nodeInfo);
-            return this;
+
+        public Builder nodeInfo(NodeSystemInfoArgs nodeInfo) {
+            return nodeInfo(Output.of(nodeInfo));
         }
+
         public Builder phase(@Nullable Output<String> phase) {
-            this.phase = phase;
+            $.phase = phase;
             return this;
         }
-        public Builder phase(@Nullable String phase) {
-            this.phase = Codegen.ofNullable(phase);
-            return this;
+
+        public Builder phase(String phase) {
+            return phase(Output.of(phase));
         }
+
         public Builder volumesAttached(@Nullable Output<List<AttachedVolumeArgs>> volumesAttached) {
-            this.volumesAttached = volumesAttached;
+            $.volumesAttached = volumesAttached;
             return this;
         }
-        public Builder volumesAttached(@Nullable List<AttachedVolumeArgs> volumesAttached) {
-            this.volumesAttached = Codegen.ofNullable(volumesAttached);
-            return this;
+
+        public Builder volumesAttached(List<AttachedVolumeArgs> volumesAttached) {
+            return volumesAttached(Output.of(volumesAttached));
         }
+
         public Builder volumesAttached(AttachedVolumeArgs... volumesAttached) {
             return volumesAttached(List.of(volumesAttached));
         }
+
         public Builder volumesInUse(@Nullable Output<List<String>> volumesInUse) {
-            this.volumesInUse = volumesInUse;
+            $.volumesInUse = volumesInUse;
             return this;
         }
-        public Builder volumesInUse(@Nullable List<String> volumesInUse) {
-            this.volumesInUse = Codegen.ofNullable(volumesInUse);
-            return this;
+
+        public Builder volumesInUse(List<String> volumesInUse) {
+            return volumesInUse(Output.of(volumesInUse));
         }
+
         public Builder volumesInUse(String... volumesInUse) {
             return volumesInUse(List.of(volumesInUse));
-        }        public NodeStatusArgs build() {
-            return new NodeStatusArgs(addresses, allocatable, capacity, conditions, config, daemonEndpoints, images, nodeInfo, phase, volumesAttached, volumesInUse);
+        }
+
+        public NodeStatusArgs build() {
+            return $;
         }
     }
+
 }

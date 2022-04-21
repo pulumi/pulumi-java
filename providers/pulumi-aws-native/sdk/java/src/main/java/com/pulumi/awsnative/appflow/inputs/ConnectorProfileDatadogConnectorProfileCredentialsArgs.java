@@ -5,7 +5,6 @@ package com.pulumi.awsnative.appflow.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,7 +18,7 @@ public final class ConnectorProfileDatadogConnectorProfileCredentialsArgs extend
      * 
      */
     @Import(name="apiKey", required=true)
-      private final Output<String> apiKey;
+    private Output<String> apiKey;
 
     public Output<String> apiKey() {
         return this.apiKey;
@@ -30,63 +29,60 @@ public final class ConnectorProfileDatadogConnectorProfileCredentialsArgs extend
      * 
      */
     @Import(name="applicationKey", required=true)
-      private final Output<String> applicationKey;
+    private Output<String> applicationKey;
 
     public Output<String> applicationKey() {
         return this.applicationKey;
     }
 
-    public ConnectorProfileDatadogConnectorProfileCredentialsArgs(
-        Output<String> apiKey,
-        Output<String> applicationKey) {
-        this.apiKey = Objects.requireNonNull(apiKey, "expected parameter 'apiKey' to be non-null");
-        this.applicationKey = Objects.requireNonNull(applicationKey, "expected parameter 'applicationKey' to be non-null");
-    }
+    private ConnectorProfileDatadogConnectorProfileCredentialsArgs() {}
 
-    private ConnectorProfileDatadogConnectorProfileCredentialsArgs() {
-        this.apiKey = Codegen.empty();
-        this.applicationKey = Codegen.empty();
+    private ConnectorProfileDatadogConnectorProfileCredentialsArgs(ConnectorProfileDatadogConnectorProfileCredentialsArgs $) {
+        this.apiKey = $.apiKey;
+        this.applicationKey = $.applicationKey;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ConnectorProfileDatadogConnectorProfileCredentialsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> apiKey;
-        private Output<String> applicationKey;
+        private ConnectorProfileDatadogConnectorProfileCredentialsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ConnectorProfileDatadogConnectorProfileCredentialsArgs();
         }
 
         public Builder(ConnectorProfileDatadogConnectorProfileCredentialsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.apiKey = defaults.apiKey;
-    	      this.applicationKey = defaults.applicationKey;
+            $ = new ConnectorProfileDatadogConnectorProfileCredentialsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder apiKey(Output<String> apiKey) {
-            this.apiKey = Objects.requireNonNull(apiKey);
+            $.apiKey = apiKey;
             return this;
         }
+
         public Builder apiKey(String apiKey) {
-            this.apiKey = Output.of(Objects.requireNonNull(apiKey));
-            return this;
+            return apiKey(Output.of(apiKey));
         }
+
         public Builder applicationKey(Output<String> applicationKey) {
-            this.applicationKey = Objects.requireNonNull(applicationKey);
+            $.applicationKey = applicationKey;
             return this;
         }
+
         public Builder applicationKey(String applicationKey) {
-            this.applicationKey = Output.of(Objects.requireNonNull(applicationKey));
-            return this;
-        }        public ConnectorProfileDatadogConnectorProfileCredentialsArgs build() {
-            return new ConnectorProfileDatadogConnectorProfileCredentialsArgs(apiKey, applicationKey);
+            return applicationKey(Output.of(applicationKey));
+        }
+
+        public ConnectorProfileDatadogConnectorProfileCredentialsArgs build() {
+            $.apiKey = Objects.requireNonNull($.apiKey, "expected parameter 'apiKey' to be non-null");
+            $.applicationKey = Objects.requireNonNull($.applicationKey, "expected parameter 'applicationKey' to be non-null");
+            return $;
         }
     }
+
 }

@@ -17,45 +17,45 @@ public final class GetRateBasedRuleArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
     }
 
-    public GetRateBasedRuleArgs(String name) {
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-    }
+    private GetRateBasedRuleArgs() {}
 
-    private GetRateBasedRuleArgs() {
-        this.name = null;
+    private GetRateBasedRuleArgs(GetRateBasedRuleArgs $) {
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetRateBasedRuleArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String name;
+        private GetRateBasedRuleArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetRateBasedRuleArgs();
         }
 
         public Builder(GetRateBasedRuleArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
+            $ = new GetRateBasedRuleArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
-        }        public GetRateBasedRuleArgs build() {
-            return new GetRateBasedRuleArgs(name);
+        }
+
+        public GetRateBasedRuleArgs build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            return $;
         }
     }
+
 }

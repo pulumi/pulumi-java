@@ -5,7 +5,6 @@ package com.pulumi.gcp.organizations;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.organizations.inputs.IamAuditConfigAuditLogConfigArgs;
 import java.lang.String;
 import java.util.List;
@@ -21,7 +20,7 @@ public final class IamAuditConfigArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="auditLogConfigs", required=true)
-      private final Output<List<IamAuditConfigAuditLogConfigArgs>> auditLogConfigs;
+    private Output<List<IamAuditConfigAuditLogConfigArgs>> auditLogConfigs;
 
     public Output<List<IamAuditConfigAuditLogConfigArgs>> auditLogConfigs() {
         return this.auditLogConfigs;
@@ -32,7 +31,7 @@ public final class IamAuditConfigArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="orgId", required=true)
-      private final Output<String> orgId;
+    private Output<String> orgId;
 
     public Output<String> orgId() {
         return this.orgId;
@@ -43,79 +42,75 @@ public final class IamAuditConfigArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="service", required=true)
-      private final Output<String> service;
+    private Output<String> service;
 
     public Output<String> service() {
         return this.service;
     }
 
-    public IamAuditConfigArgs(
-        Output<List<IamAuditConfigAuditLogConfigArgs>> auditLogConfigs,
-        Output<String> orgId,
-        Output<String> service) {
-        this.auditLogConfigs = Objects.requireNonNull(auditLogConfigs, "expected parameter 'auditLogConfigs' to be non-null");
-        this.orgId = Objects.requireNonNull(orgId, "expected parameter 'orgId' to be non-null");
-        this.service = Objects.requireNonNull(service, "expected parameter 'service' to be non-null");
-    }
+    private IamAuditConfigArgs() {}
 
-    private IamAuditConfigArgs() {
-        this.auditLogConfigs = Codegen.empty();
-        this.orgId = Codegen.empty();
-        this.service = Codegen.empty();
+    private IamAuditConfigArgs(IamAuditConfigArgs $) {
+        this.auditLogConfigs = $.auditLogConfigs;
+        this.orgId = $.orgId;
+        this.service = $.service;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(IamAuditConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<List<IamAuditConfigAuditLogConfigArgs>> auditLogConfigs;
-        private Output<String> orgId;
-        private Output<String> service;
+        private IamAuditConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new IamAuditConfigArgs();
         }
 
         public Builder(IamAuditConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.auditLogConfigs = defaults.auditLogConfigs;
-    	      this.orgId = defaults.orgId;
-    	      this.service = defaults.service;
+            $ = new IamAuditConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder auditLogConfigs(Output<List<IamAuditConfigAuditLogConfigArgs>> auditLogConfigs) {
-            this.auditLogConfigs = Objects.requireNonNull(auditLogConfigs);
+            $.auditLogConfigs = auditLogConfigs;
             return this;
         }
+
         public Builder auditLogConfigs(List<IamAuditConfigAuditLogConfigArgs> auditLogConfigs) {
-            this.auditLogConfigs = Output.of(Objects.requireNonNull(auditLogConfigs));
-            return this;
+            return auditLogConfigs(Output.of(auditLogConfigs));
         }
+
         public Builder auditLogConfigs(IamAuditConfigAuditLogConfigArgs... auditLogConfigs) {
             return auditLogConfigs(List.of(auditLogConfigs));
         }
+
         public Builder orgId(Output<String> orgId) {
-            this.orgId = Objects.requireNonNull(orgId);
+            $.orgId = orgId;
             return this;
         }
+
         public Builder orgId(String orgId) {
-            this.orgId = Output.of(Objects.requireNonNull(orgId));
-            return this;
+            return orgId(Output.of(orgId));
         }
+
         public Builder service(Output<String> service) {
-            this.service = Objects.requireNonNull(service);
+            $.service = service;
             return this;
         }
+
         public Builder service(String service) {
-            this.service = Output.of(Objects.requireNonNull(service));
-            return this;
-        }        public IamAuditConfigArgs build() {
-            return new IamAuditConfigArgs(auditLogConfigs, orgId, service);
+            return service(Output.of(service));
+        }
+
+        public IamAuditConfigArgs build() {
+            $.auditLogConfigs = Objects.requireNonNull($.auditLogConfigs, "expected parameter 'auditLogConfigs' to be non-null");
+            $.orgId = Objects.requireNonNull($.orgId, "expected parameter 'orgId' to be non-null");
+            $.service = Objects.requireNonNull($.service, "expected parameter 'service' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,9 +5,9 @@ package com.pulumi.docker.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -16,49 +16,48 @@ public final class ServiceTaskSpecContainerSpecMountBindOptionsGetArgs extends c
     public static final ServiceTaskSpecContainerSpecMountBindOptionsGetArgs Empty = new ServiceTaskSpecContainerSpecMountBindOptionsGetArgs();
 
     @Import(name="propagation")
-      private final @Nullable Output<String> propagation;
+    private @Nullable Output<String> propagation;
 
-    public Output<String> propagation() {
-        return this.propagation == null ? Codegen.empty() : this.propagation;
+    public Optional<Output<String>> propagation() {
+        return Optional.ofNullable(this.propagation);
     }
 
-    public ServiceTaskSpecContainerSpecMountBindOptionsGetArgs(@Nullable Output<String> propagation) {
-        this.propagation = propagation;
-    }
+    private ServiceTaskSpecContainerSpecMountBindOptionsGetArgs() {}
 
-    private ServiceTaskSpecContainerSpecMountBindOptionsGetArgs() {
-        this.propagation = Codegen.empty();
+    private ServiceTaskSpecContainerSpecMountBindOptionsGetArgs(ServiceTaskSpecContainerSpecMountBindOptionsGetArgs $) {
+        this.propagation = $.propagation;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ServiceTaskSpecContainerSpecMountBindOptionsGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> propagation;
+        private ServiceTaskSpecContainerSpecMountBindOptionsGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ServiceTaskSpecContainerSpecMountBindOptionsGetArgs();
         }
 
         public Builder(ServiceTaskSpecContainerSpecMountBindOptionsGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.propagation = defaults.propagation;
+            $ = new ServiceTaskSpecContainerSpecMountBindOptionsGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder propagation(@Nullable Output<String> propagation) {
-            this.propagation = propagation;
+            $.propagation = propagation;
             return this;
         }
-        public Builder propagation(@Nullable String propagation) {
-            this.propagation = Codegen.ofNullable(propagation);
-            return this;
-        }        public ServiceTaskSpecContainerSpecMountBindOptionsGetArgs build() {
-            return new ServiceTaskSpecContainerSpecMountBindOptionsGetArgs(propagation);
+
+        public Builder propagation(String propagation) {
+            return propagation(Output.of(propagation));
+        }
+
+        public ServiceTaskSpecContainerSpecMountBindOptionsGetArgs build() {
+            return $;
         }
     }
+
 }

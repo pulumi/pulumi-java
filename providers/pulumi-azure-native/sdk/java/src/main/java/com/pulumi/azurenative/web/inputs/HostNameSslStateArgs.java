@@ -7,10 +7,10 @@ import com.pulumi.azurenative.web.enums.HostType;
 import com.pulumi.azurenative.web.enums.SslState;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +27,10 @@ public final class HostNameSslStateArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="hostType")
-      private final @Nullable Output<HostType> hostType;
+    private @Nullable Output<HostType> hostType;
 
-    public Output<HostType> hostType() {
-        return this.hostType == null ? Codegen.empty() : this.hostType;
+    public Optional<Output<HostType>> hostType() {
+        return Optional.ofNullable(this.hostType);
     }
 
     /**
@@ -38,10 +38,10 @@ public final class HostNameSslStateArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -49,10 +49,10 @@ public final class HostNameSslStateArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="sslState")
-      private final @Nullable Output<SslState> sslState;
+    private @Nullable Output<SslState> sslState;
 
-    public Output<SslState> sslState() {
-        return this.sslState == null ? Codegen.empty() : this.sslState;
+    public Optional<Output<SslState>> sslState() {
+        return Optional.ofNullable(this.sslState);
     }
 
     /**
@@ -60,10 +60,10 @@ public final class HostNameSslStateArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="thumbprint")
-      private final @Nullable Output<String> thumbprint;
+    private @Nullable Output<String> thumbprint;
 
-    public Output<String> thumbprint() {
-        return this.thumbprint == null ? Codegen.empty() : this.thumbprint;
+    public Optional<Output<String>> thumbprint() {
+        return Optional.ofNullable(this.thumbprint);
     }
 
     /**
@@ -71,10 +71,10 @@ public final class HostNameSslStateArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="toUpdate")
-      private final @Nullable Output<Boolean> toUpdate;
+    private @Nullable Output<Boolean> toUpdate;
 
-    public Output<Boolean> toUpdate() {
-        return this.toUpdate == null ? Codegen.empty() : this.toUpdate;
+    public Optional<Output<Boolean>> toUpdate() {
+        return Optional.ofNullable(this.toUpdate);
     }
 
     /**
@@ -82,115 +82,98 @@ public final class HostNameSslStateArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="virtualIP")
-      private final @Nullable Output<String> virtualIP;
+    private @Nullable Output<String> virtualIP;
 
-    public Output<String> virtualIP() {
-        return this.virtualIP == null ? Codegen.empty() : this.virtualIP;
+    public Optional<Output<String>> virtualIP() {
+        return Optional.ofNullable(this.virtualIP);
     }
 
-    public HostNameSslStateArgs(
-        @Nullable Output<HostType> hostType,
-        @Nullable Output<String> name,
-        @Nullable Output<SslState> sslState,
-        @Nullable Output<String> thumbprint,
-        @Nullable Output<Boolean> toUpdate,
-        @Nullable Output<String> virtualIP) {
-        this.hostType = hostType;
-        this.name = name;
-        this.sslState = sslState;
-        this.thumbprint = thumbprint;
-        this.toUpdate = toUpdate;
-        this.virtualIP = virtualIP;
-    }
+    private HostNameSslStateArgs() {}
 
-    private HostNameSslStateArgs() {
-        this.hostType = Codegen.empty();
-        this.name = Codegen.empty();
-        this.sslState = Codegen.empty();
-        this.thumbprint = Codegen.empty();
-        this.toUpdate = Codegen.empty();
-        this.virtualIP = Codegen.empty();
+    private HostNameSslStateArgs(HostNameSslStateArgs $) {
+        this.hostType = $.hostType;
+        this.name = $.name;
+        this.sslState = $.sslState;
+        this.thumbprint = $.thumbprint;
+        this.toUpdate = $.toUpdate;
+        this.virtualIP = $.virtualIP;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(HostNameSslStateArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<HostType> hostType;
-        private @Nullable Output<String> name;
-        private @Nullable Output<SslState> sslState;
-        private @Nullable Output<String> thumbprint;
-        private @Nullable Output<Boolean> toUpdate;
-        private @Nullable Output<String> virtualIP;
+        private HostNameSslStateArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new HostNameSslStateArgs();
         }
 
         public Builder(HostNameSslStateArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.hostType = defaults.hostType;
-    	      this.name = defaults.name;
-    	      this.sslState = defaults.sslState;
-    	      this.thumbprint = defaults.thumbprint;
-    	      this.toUpdate = defaults.toUpdate;
-    	      this.virtualIP = defaults.virtualIP;
+            $ = new HostNameSslStateArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder hostType(@Nullable Output<HostType> hostType) {
-            this.hostType = hostType;
+            $.hostType = hostType;
             return this;
         }
-        public Builder hostType(@Nullable HostType hostType) {
-            this.hostType = Codegen.ofNullable(hostType);
-            return this;
+
+        public Builder hostType(HostType hostType) {
+            return hostType(Output.of(hostType));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder sslState(@Nullable Output<SslState> sslState) {
-            this.sslState = sslState;
+            $.sslState = sslState;
             return this;
         }
-        public Builder sslState(@Nullable SslState sslState) {
-            this.sslState = Codegen.ofNullable(sslState);
-            return this;
+
+        public Builder sslState(SslState sslState) {
+            return sslState(Output.of(sslState));
         }
+
         public Builder thumbprint(@Nullable Output<String> thumbprint) {
-            this.thumbprint = thumbprint;
+            $.thumbprint = thumbprint;
             return this;
         }
-        public Builder thumbprint(@Nullable String thumbprint) {
-            this.thumbprint = Codegen.ofNullable(thumbprint);
-            return this;
+
+        public Builder thumbprint(String thumbprint) {
+            return thumbprint(Output.of(thumbprint));
         }
+
         public Builder toUpdate(@Nullable Output<Boolean> toUpdate) {
-            this.toUpdate = toUpdate;
+            $.toUpdate = toUpdate;
             return this;
         }
-        public Builder toUpdate(@Nullable Boolean toUpdate) {
-            this.toUpdate = Codegen.ofNullable(toUpdate);
-            return this;
+
+        public Builder toUpdate(Boolean toUpdate) {
+            return toUpdate(Output.of(toUpdate));
         }
+
         public Builder virtualIP(@Nullable Output<String> virtualIP) {
-            this.virtualIP = virtualIP;
+            $.virtualIP = virtualIP;
             return this;
         }
-        public Builder virtualIP(@Nullable String virtualIP) {
-            this.virtualIP = Codegen.ofNullable(virtualIP);
-            return this;
-        }        public HostNameSslStateArgs build() {
-            return new HostNameSslStateArgs(hostType, name, sslState, thumbprint, toUpdate, virtualIP);
+
+        public Builder virtualIP(String virtualIP) {
+            return virtualIP(Output.of(virtualIP));
+        }
+
+        public HostNameSslStateArgs build() {
+            return $;
         }
     }
+
 }

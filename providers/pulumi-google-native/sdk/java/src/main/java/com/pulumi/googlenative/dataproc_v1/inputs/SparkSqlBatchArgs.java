@@ -5,11 +5,11 @@ package com.pulumi.googlenative.dataproc_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class SparkSqlBatchArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="jarFileUris")
-      private final @Nullable Output<List<String>> jarFileUris;
+    private @Nullable Output<List<String>> jarFileUris;
 
-    public Output<List<String>> jarFileUris() {
-        return this.jarFileUris == null ? Codegen.empty() : this.jarFileUris;
+    public Optional<Output<List<String>>> jarFileUris() {
+        return Optional.ofNullable(this.jarFileUris);
     }
 
     /**
@@ -37,7 +37,7 @@ public final class SparkSqlBatchArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="queryFileUri", required=true)
-      private final Output<String> queryFileUri;
+    private Output<String> queryFileUri;
 
     public Output<String> queryFileUri() {
         return this.queryFileUri;
@@ -48,79 +48,73 @@ public final class SparkSqlBatchArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="queryVariables")
-      private final @Nullable Output<Map<String,String>> queryVariables;
+    private @Nullable Output<Map<String,String>> queryVariables;
 
-    public Output<Map<String,String>> queryVariables() {
-        return this.queryVariables == null ? Codegen.empty() : this.queryVariables;
+    public Optional<Output<Map<String,String>>> queryVariables() {
+        return Optional.ofNullable(this.queryVariables);
     }
 
-    public SparkSqlBatchArgs(
-        @Nullable Output<List<String>> jarFileUris,
-        Output<String> queryFileUri,
-        @Nullable Output<Map<String,String>> queryVariables) {
-        this.jarFileUris = jarFileUris;
-        this.queryFileUri = Objects.requireNonNull(queryFileUri, "expected parameter 'queryFileUri' to be non-null");
-        this.queryVariables = queryVariables;
-    }
+    private SparkSqlBatchArgs() {}
 
-    private SparkSqlBatchArgs() {
-        this.jarFileUris = Codegen.empty();
-        this.queryFileUri = Codegen.empty();
-        this.queryVariables = Codegen.empty();
+    private SparkSqlBatchArgs(SparkSqlBatchArgs $) {
+        this.jarFileUris = $.jarFileUris;
+        this.queryFileUri = $.queryFileUri;
+        this.queryVariables = $.queryVariables;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SparkSqlBatchArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> jarFileUris;
-        private Output<String> queryFileUri;
-        private @Nullable Output<Map<String,String>> queryVariables;
+        private SparkSqlBatchArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SparkSqlBatchArgs();
         }
 
         public Builder(SparkSqlBatchArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.jarFileUris = defaults.jarFileUris;
-    	      this.queryFileUri = defaults.queryFileUri;
-    	      this.queryVariables = defaults.queryVariables;
+            $ = new SparkSqlBatchArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder jarFileUris(@Nullable Output<List<String>> jarFileUris) {
-            this.jarFileUris = jarFileUris;
+            $.jarFileUris = jarFileUris;
             return this;
         }
-        public Builder jarFileUris(@Nullable List<String> jarFileUris) {
-            this.jarFileUris = Codegen.ofNullable(jarFileUris);
-            return this;
+
+        public Builder jarFileUris(List<String> jarFileUris) {
+            return jarFileUris(Output.of(jarFileUris));
         }
+
         public Builder jarFileUris(String... jarFileUris) {
             return jarFileUris(List.of(jarFileUris));
         }
+
         public Builder queryFileUri(Output<String> queryFileUri) {
-            this.queryFileUri = Objects.requireNonNull(queryFileUri);
+            $.queryFileUri = queryFileUri;
             return this;
         }
+
         public Builder queryFileUri(String queryFileUri) {
-            this.queryFileUri = Output.of(Objects.requireNonNull(queryFileUri));
-            return this;
+            return queryFileUri(Output.of(queryFileUri));
         }
+
         public Builder queryVariables(@Nullable Output<Map<String,String>> queryVariables) {
-            this.queryVariables = queryVariables;
+            $.queryVariables = queryVariables;
             return this;
         }
-        public Builder queryVariables(@Nullable Map<String,String> queryVariables) {
-            this.queryVariables = Codegen.ofNullable(queryVariables);
-            return this;
-        }        public SparkSqlBatchArgs build() {
-            return new SparkSqlBatchArgs(jarFileUris, queryFileUri, queryVariables);
+
+        public Builder queryVariables(Map<String,String> queryVariables) {
+            return queryVariables(Output.of(queryVariables));
+        }
+
+        public SparkSqlBatchArgs build() {
+            $.queryFileUri = Objects.requireNonNull($.queryFileUri, "expected parameter 'queryFileUri' to be non-null");
+            return $;
         }
     }
+
 }

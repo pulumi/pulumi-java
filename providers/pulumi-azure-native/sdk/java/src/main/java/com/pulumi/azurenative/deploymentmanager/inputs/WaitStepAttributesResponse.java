@@ -21,45 +21,45 @@ public final class WaitStepAttributesResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="duration", required=true)
-      private final String duration;
+    private String duration;
 
     public String duration() {
         return this.duration;
     }
 
-    public WaitStepAttributesResponse(String duration) {
-        this.duration = Objects.requireNonNull(duration, "expected parameter 'duration' to be non-null");
-    }
+    private WaitStepAttributesResponse() {}
 
-    private WaitStepAttributesResponse() {
-        this.duration = null;
+    private WaitStepAttributesResponse(WaitStepAttributesResponse $) {
+        this.duration = $.duration;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WaitStepAttributesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String duration;
+        private WaitStepAttributesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new WaitStepAttributesResponse();
         }
 
         public Builder(WaitStepAttributesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.duration = defaults.duration;
+            $ = new WaitStepAttributesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder duration(String duration) {
-            this.duration = Objects.requireNonNull(duration);
+            $.duration = duration;
             return this;
-        }        public WaitStepAttributesResponse build() {
-            return new WaitStepAttributesResponse(duration);
+        }
+
+        public WaitStepAttributesResponse build() {
+            $.duration = Objects.requireNonNull($.duration, "expected parameter 'duration' to be non-null");
+            return $;
         }
     }
+
 }

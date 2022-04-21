@@ -16,65 +16,62 @@ public final class RuleGroupRuleOption extends com.pulumi.resources.InvokeArgs {
     public static final RuleGroupRuleOption Empty = new RuleGroupRuleOption();
 
     @Import(name="keyword", required=true)
-      private final String keyword;
+    private String keyword;
 
     public String keyword() {
         return this.keyword;
     }
 
     @Import(name="settings")
-      private final @Nullable List<String> settings;
+    private @Nullable List<String> settings;
 
-    public List<String> settings() {
-        return this.settings == null ? List.of() : this.settings;
+    public Optional<List<String>> settings() {
+        return Optional.ofNullable(this.settings);
     }
 
-    public RuleGroupRuleOption(
-        String keyword,
-        @Nullable List<String> settings) {
-        this.keyword = Objects.requireNonNull(keyword, "expected parameter 'keyword' to be non-null");
-        this.settings = settings;
-    }
+    private RuleGroupRuleOption() {}
 
-    private RuleGroupRuleOption() {
-        this.keyword = null;
-        this.settings = List.of();
+    private RuleGroupRuleOption(RuleGroupRuleOption $) {
+        this.keyword = $.keyword;
+        this.settings = $.settings;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RuleGroupRuleOption defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String keyword;
-        private @Nullable List<String> settings;
+        private RuleGroupRuleOption $;
 
         public Builder() {
-    	      // Empty
+            $ = new RuleGroupRuleOption();
         }
 
         public Builder(RuleGroupRuleOption defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.keyword = defaults.keyword;
-    	      this.settings = defaults.settings;
+            $ = new RuleGroupRuleOption(Objects.requireNonNull(defaults));
         }
 
         public Builder keyword(String keyword) {
-            this.keyword = Objects.requireNonNull(keyword);
+            $.keyword = keyword;
             return this;
         }
+
         public Builder settings(@Nullable List<String> settings) {
-            this.settings = settings;
+            $.settings = settings;
             return this;
         }
+
         public Builder settings(String... settings) {
             return settings(List.of(settings));
-        }        public RuleGroupRuleOption build() {
-            return new RuleGroupRuleOption(keyword, settings);
+        }
+
+        public RuleGroupRuleOption build() {
+            $.keyword = Objects.requireNonNull($.keyword, "expected parameter 'keyword' to be non-null");
+            return $;
         }
     }
+
 }

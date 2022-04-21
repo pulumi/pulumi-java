@@ -6,11 +6,11 @@ package com.pulumi.aws.route53recoverycontrol;
 import com.pulumi.aws.route53recoverycontrol.inputs.SafetyRuleRuleConfigArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,10 @@ public final class SafetyRuleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="assertedControls")
-      private final @Nullable Output<List<String>> assertedControls;
+    private @Nullable Output<List<String>> assertedControls;
 
-    public Output<List<String>> assertedControls() {
-        return this.assertedControls == null ? Codegen.empty() : this.assertedControls;
+    public Optional<Output<List<String>>> assertedControls() {
+        return Optional.ofNullable(this.assertedControls);
     }
 
     /**
@@ -34,7 +34,7 @@ public final class SafetyRuleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="controlPanelArn", required=true)
-      private final Output<String> controlPanelArn;
+    private Output<String> controlPanelArn;
 
     public Output<String> controlPanelArn() {
         return this.controlPanelArn;
@@ -45,10 +45,10 @@ public final class SafetyRuleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="gatingControls")
-      private final @Nullable Output<List<String>> gatingControls;
+    private @Nullable Output<List<String>> gatingControls;
 
-    public Output<List<String>> gatingControls() {
-        return this.gatingControls == null ? Codegen.empty() : this.gatingControls;
+    public Optional<Output<List<String>>> gatingControls() {
+        return Optional.ofNullable(this.gatingControls);
     }
 
     /**
@@ -56,10 +56,10 @@ public final class SafetyRuleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -67,7 +67,7 @@ public final class SafetyRuleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="ruleConfig", required=true)
-      private final Output<SafetyRuleRuleConfigArgs> ruleConfig;
+    private Output<SafetyRuleRuleConfigArgs> ruleConfig;
 
     public Output<SafetyRuleRuleConfigArgs> ruleConfig() {
         return this.ruleConfig;
@@ -78,10 +78,10 @@ public final class SafetyRuleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="targetControls")
-      private final @Nullable Output<List<String>> targetControls;
+    private @Nullable Output<List<String>> targetControls;
 
-    public Output<List<String>> targetControls() {
-        return this.targetControls == null ? Codegen.empty() : this.targetControls;
+    public Optional<Output<List<String>>> targetControls() {
+        return Optional.ofNullable(this.targetControls);
     }
 
     /**
@@ -89,137 +89,123 @@ public final class SafetyRuleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="waitPeriodMs", required=true)
-      private final Output<Integer> waitPeriodMs;
+    private Output<Integer> waitPeriodMs;
 
     public Output<Integer> waitPeriodMs() {
         return this.waitPeriodMs;
     }
 
-    public SafetyRuleArgs(
-        @Nullable Output<List<String>> assertedControls,
-        Output<String> controlPanelArn,
-        @Nullable Output<List<String>> gatingControls,
-        @Nullable Output<String> name,
-        Output<SafetyRuleRuleConfigArgs> ruleConfig,
-        @Nullable Output<List<String>> targetControls,
-        Output<Integer> waitPeriodMs) {
-        this.assertedControls = assertedControls;
-        this.controlPanelArn = Objects.requireNonNull(controlPanelArn, "expected parameter 'controlPanelArn' to be non-null");
-        this.gatingControls = gatingControls;
-        this.name = name;
-        this.ruleConfig = Objects.requireNonNull(ruleConfig, "expected parameter 'ruleConfig' to be non-null");
-        this.targetControls = targetControls;
-        this.waitPeriodMs = Objects.requireNonNull(waitPeriodMs, "expected parameter 'waitPeriodMs' to be non-null");
-    }
+    private SafetyRuleArgs() {}
 
-    private SafetyRuleArgs() {
-        this.assertedControls = Codegen.empty();
-        this.controlPanelArn = Codegen.empty();
-        this.gatingControls = Codegen.empty();
-        this.name = Codegen.empty();
-        this.ruleConfig = Codegen.empty();
-        this.targetControls = Codegen.empty();
-        this.waitPeriodMs = Codegen.empty();
+    private SafetyRuleArgs(SafetyRuleArgs $) {
+        this.assertedControls = $.assertedControls;
+        this.controlPanelArn = $.controlPanelArn;
+        this.gatingControls = $.gatingControls;
+        this.name = $.name;
+        this.ruleConfig = $.ruleConfig;
+        this.targetControls = $.targetControls;
+        this.waitPeriodMs = $.waitPeriodMs;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SafetyRuleArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> assertedControls;
-        private Output<String> controlPanelArn;
-        private @Nullable Output<List<String>> gatingControls;
-        private @Nullable Output<String> name;
-        private Output<SafetyRuleRuleConfigArgs> ruleConfig;
-        private @Nullable Output<List<String>> targetControls;
-        private Output<Integer> waitPeriodMs;
+        private SafetyRuleArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SafetyRuleArgs();
         }
 
         public Builder(SafetyRuleArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.assertedControls = defaults.assertedControls;
-    	      this.controlPanelArn = defaults.controlPanelArn;
-    	      this.gatingControls = defaults.gatingControls;
-    	      this.name = defaults.name;
-    	      this.ruleConfig = defaults.ruleConfig;
-    	      this.targetControls = defaults.targetControls;
-    	      this.waitPeriodMs = defaults.waitPeriodMs;
+            $ = new SafetyRuleArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder assertedControls(@Nullable Output<List<String>> assertedControls) {
-            this.assertedControls = assertedControls;
+            $.assertedControls = assertedControls;
             return this;
         }
-        public Builder assertedControls(@Nullable List<String> assertedControls) {
-            this.assertedControls = Codegen.ofNullable(assertedControls);
-            return this;
+
+        public Builder assertedControls(List<String> assertedControls) {
+            return assertedControls(Output.of(assertedControls));
         }
+
         public Builder assertedControls(String... assertedControls) {
             return assertedControls(List.of(assertedControls));
         }
+
         public Builder controlPanelArn(Output<String> controlPanelArn) {
-            this.controlPanelArn = Objects.requireNonNull(controlPanelArn);
+            $.controlPanelArn = controlPanelArn;
             return this;
         }
+
         public Builder controlPanelArn(String controlPanelArn) {
-            this.controlPanelArn = Output.of(Objects.requireNonNull(controlPanelArn));
-            return this;
+            return controlPanelArn(Output.of(controlPanelArn));
         }
+
         public Builder gatingControls(@Nullable Output<List<String>> gatingControls) {
-            this.gatingControls = gatingControls;
+            $.gatingControls = gatingControls;
             return this;
         }
-        public Builder gatingControls(@Nullable List<String> gatingControls) {
-            this.gatingControls = Codegen.ofNullable(gatingControls);
-            return this;
+
+        public Builder gatingControls(List<String> gatingControls) {
+            return gatingControls(Output.of(gatingControls));
         }
+
         public Builder gatingControls(String... gatingControls) {
             return gatingControls(List.of(gatingControls));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder ruleConfig(Output<SafetyRuleRuleConfigArgs> ruleConfig) {
-            this.ruleConfig = Objects.requireNonNull(ruleConfig);
+            $.ruleConfig = ruleConfig;
             return this;
         }
+
         public Builder ruleConfig(SafetyRuleRuleConfigArgs ruleConfig) {
-            this.ruleConfig = Output.of(Objects.requireNonNull(ruleConfig));
-            return this;
+            return ruleConfig(Output.of(ruleConfig));
         }
+
         public Builder targetControls(@Nullable Output<List<String>> targetControls) {
-            this.targetControls = targetControls;
+            $.targetControls = targetControls;
             return this;
         }
-        public Builder targetControls(@Nullable List<String> targetControls) {
-            this.targetControls = Codegen.ofNullable(targetControls);
-            return this;
+
+        public Builder targetControls(List<String> targetControls) {
+            return targetControls(Output.of(targetControls));
         }
+
         public Builder targetControls(String... targetControls) {
             return targetControls(List.of(targetControls));
         }
+
         public Builder waitPeriodMs(Output<Integer> waitPeriodMs) {
-            this.waitPeriodMs = Objects.requireNonNull(waitPeriodMs);
+            $.waitPeriodMs = waitPeriodMs;
             return this;
         }
+
         public Builder waitPeriodMs(Integer waitPeriodMs) {
-            this.waitPeriodMs = Output.of(Objects.requireNonNull(waitPeriodMs));
-            return this;
-        }        public SafetyRuleArgs build() {
-            return new SafetyRuleArgs(assertedControls, controlPanelArn, gatingControls, name, ruleConfig, targetControls, waitPeriodMs);
+            return waitPeriodMs(Output.of(waitPeriodMs));
+        }
+
+        public SafetyRuleArgs build() {
+            $.controlPanelArn = Objects.requireNonNull($.controlPanelArn, "expected parameter 'controlPanelArn' to be non-null");
+            $.ruleConfig = Objects.requireNonNull($.ruleConfig, "expected parameter 'ruleConfig' to be non-null");
+            $.waitPeriodMs = Objects.requireNonNull($.waitPeriodMs, "expected parameter 'waitPeriodMs' to be non-null");
+            return $;
         }
     }
+
 }

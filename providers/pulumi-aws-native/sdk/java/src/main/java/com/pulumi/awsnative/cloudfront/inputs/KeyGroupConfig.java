@@ -16,81 +16,76 @@ public final class KeyGroupConfig extends com.pulumi.resources.InvokeArgs {
     public static final KeyGroupConfig Empty = new KeyGroupConfig();
 
     @Import(name="comment")
-      private final @Nullable String comment;
+    private @Nullable String comment;
 
     public Optional<String> comment() {
-        return this.comment == null ? Optional.empty() : Optional.ofNullable(this.comment);
+        return Optional.ofNullable(this.comment);
     }
 
     @Import(name="items", required=true)
-      private final List<String> items;
+    private List<String> items;
 
     public List<String> items() {
         return this.items;
     }
 
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
     }
 
-    public KeyGroupConfig(
-        @Nullable String comment,
-        List<String> items,
-        String name) {
-        this.comment = comment;
-        this.items = Objects.requireNonNull(items, "expected parameter 'items' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-    }
+    private KeyGroupConfig() {}
 
-    private KeyGroupConfig() {
-        this.comment = null;
-        this.items = List.of();
-        this.name = null;
+    private KeyGroupConfig(KeyGroupConfig $) {
+        this.comment = $.comment;
+        this.items = $.items;
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(KeyGroupConfig defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String comment;
-        private List<String> items;
-        private String name;
+        private KeyGroupConfig $;
 
         public Builder() {
-    	      // Empty
+            $ = new KeyGroupConfig();
         }
 
         public Builder(KeyGroupConfig defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.comment = defaults.comment;
-    	      this.items = defaults.items;
-    	      this.name = defaults.name;
+            $ = new KeyGroupConfig(Objects.requireNonNull(defaults));
         }
 
         public Builder comment(@Nullable String comment) {
-            this.comment = comment;
+            $.comment = comment;
             return this;
         }
+
         public Builder items(List<String> items) {
-            this.items = Objects.requireNonNull(items);
+            $.items = items;
             return this;
         }
+
         public Builder items(String... items) {
             return items(List.of(items));
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
-        }        public KeyGroupConfig build() {
-            return new KeyGroupConfig(comment, items, name);
+        }
+
+        public KeyGroupConfig build() {
+            $.items = Objects.requireNonNull($.items, "expected parameter 'items' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            return $;
         }
     }
+
 }

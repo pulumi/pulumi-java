@@ -14,62 +14,59 @@ public final class GetBrokerConfiguration extends com.pulumi.resources.InvokeArg
     public static final GetBrokerConfiguration Empty = new GetBrokerConfiguration();
 
     @Import(name="id", required=true)
-      private final String id;
+    private String id;
 
     public String id() {
         return this.id;
     }
 
     @Import(name="revision", required=true)
-      private final Integer revision;
+    private Integer revision;
 
     public Integer revision() {
         return this.revision;
     }
 
-    public GetBrokerConfiguration(
-        String id,
-        Integer revision) {
-        this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
-        this.revision = Objects.requireNonNull(revision, "expected parameter 'revision' to be non-null");
-    }
+    private GetBrokerConfiguration() {}
 
-    private GetBrokerConfiguration() {
-        this.id = null;
-        this.revision = null;
+    private GetBrokerConfiguration(GetBrokerConfiguration $) {
+        this.id = $.id;
+        this.revision = $.revision;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetBrokerConfiguration defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String id;
-        private Integer revision;
+        private GetBrokerConfiguration $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetBrokerConfiguration();
         }
 
         public Builder(GetBrokerConfiguration defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.id = defaults.id;
-    	      this.revision = defaults.revision;
+            $ = new GetBrokerConfiguration(Objects.requireNonNull(defaults));
         }
 
         public Builder id(String id) {
-            this.id = Objects.requireNonNull(id);
+            $.id = id;
             return this;
         }
+
         public Builder revision(Integer revision) {
-            this.revision = Objects.requireNonNull(revision);
+            $.revision = revision;
             return this;
-        }        public GetBrokerConfiguration build() {
-            return new GetBrokerConfiguration(id, revision);
+        }
+
+        public GetBrokerConfiguration build() {
+            $.id = Objects.requireNonNull($.id, "expected parameter 'id' to be non-null");
+            $.revision = Objects.requireNonNull($.revision, "expected parameter 'revision' to be non-null");
+            return $;
         }
     }
+
 }

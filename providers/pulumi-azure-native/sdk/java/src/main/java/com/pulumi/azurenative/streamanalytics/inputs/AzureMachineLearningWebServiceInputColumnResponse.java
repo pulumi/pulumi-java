@@ -24,10 +24,10 @@ public final class AzureMachineLearningWebServiceInputColumnResponse extends com
      * 
      */
     @Import(name="dataType")
-      private final @Nullable String dataType;
+    private @Nullable String dataType;
 
     public Optional<String> dataType() {
-        return this.dataType == null ? Optional.empty() : Optional.ofNullable(this.dataType);
+        return Optional.ofNullable(this.dataType);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class AzureMachineLearningWebServiceInputColumnResponse extends com
      * 
      */
     @Import(name="mapTo")
-      private final @Nullable Integer mapTo;
+    private @Nullable Integer mapTo;
 
     public Optional<Integer> mapTo() {
-        return this.mapTo == null ? Optional.empty() : Optional.ofNullable(this.mapTo);
+        return Optional.ofNullable(this.mapTo);
     }
 
     /**
@@ -46,64 +46,56 @@ public final class AzureMachineLearningWebServiceInputColumnResponse extends com
      * 
      */
     @Import(name="name")
-      private final @Nullable String name;
+    private @Nullable String name;
 
     public Optional<String> name() {
-        return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
+        return Optional.ofNullable(this.name);
     }
 
-    public AzureMachineLearningWebServiceInputColumnResponse(
-        @Nullable String dataType,
-        @Nullable Integer mapTo,
-        @Nullable String name) {
-        this.dataType = dataType;
-        this.mapTo = mapTo;
-        this.name = name;
-    }
+    private AzureMachineLearningWebServiceInputColumnResponse() {}
 
-    private AzureMachineLearningWebServiceInputColumnResponse() {
-        this.dataType = null;
-        this.mapTo = null;
-        this.name = null;
+    private AzureMachineLearningWebServiceInputColumnResponse(AzureMachineLearningWebServiceInputColumnResponse $) {
+        this.dataType = $.dataType;
+        this.mapTo = $.mapTo;
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AzureMachineLearningWebServiceInputColumnResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String dataType;
-        private @Nullable Integer mapTo;
-        private @Nullable String name;
+        private AzureMachineLearningWebServiceInputColumnResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AzureMachineLearningWebServiceInputColumnResponse();
         }
 
         public Builder(AzureMachineLearningWebServiceInputColumnResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dataType = defaults.dataType;
-    	      this.mapTo = defaults.mapTo;
-    	      this.name = defaults.name;
+            $ = new AzureMachineLearningWebServiceInputColumnResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder dataType(@Nullable String dataType) {
-            this.dataType = dataType;
+            $.dataType = dataType;
             return this;
         }
+
         public Builder mapTo(@Nullable Integer mapTo) {
-            this.mapTo = mapTo;
+            $.mapTo = mapTo;
             return this;
         }
+
         public Builder name(@Nullable String name) {
-            this.name = name;
+            $.name = name;
             return this;
-        }        public AzureMachineLearningWebServiceInputColumnResponse build() {
-            return new AzureMachineLearningWebServiceInputColumnResponse(dataType, mapTo, name);
+        }
+
+        public AzureMachineLearningWebServiceInputColumnResponse build() {
+            return $;
         }
     }
+
 }

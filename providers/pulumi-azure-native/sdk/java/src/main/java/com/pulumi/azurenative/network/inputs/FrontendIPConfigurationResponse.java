@@ -27,7 +27,7 @@ public final class FrontendIPConfigurationResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="etag", required=true)
-      private final String etag;
+    private String etag;
 
     public String etag() {
         return this.etag;
@@ -38,10 +38,10 @@ public final class FrontendIPConfigurationResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="id")
-      private final @Nullable String id;
+    private @Nullable String id;
 
     public Optional<String> id() {
-        return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
+        return Optional.ofNullable(this.id);
     }
 
     /**
@@ -49,7 +49,7 @@ public final class FrontendIPConfigurationResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="inboundNatPools", required=true)
-      private final List<SubResourceResponse> inboundNatPools;
+    private List<SubResourceResponse> inboundNatPools;
 
     public List<SubResourceResponse> inboundNatPools() {
         return this.inboundNatPools;
@@ -60,7 +60,7 @@ public final class FrontendIPConfigurationResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="inboundNatRules", required=true)
-      private final List<SubResourceResponse> inboundNatRules;
+    private List<SubResourceResponse> inboundNatRules;
 
     public List<SubResourceResponse> inboundNatRules() {
         return this.inboundNatRules;
@@ -71,7 +71,7 @@ public final class FrontendIPConfigurationResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="loadBalancingRules", required=true)
-      private final List<SubResourceResponse> loadBalancingRules;
+    private List<SubResourceResponse> loadBalancingRules;
 
     public List<SubResourceResponse> loadBalancingRules() {
         return this.loadBalancingRules;
@@ -82,10 +82,10 @@ public final class FrontendIPConfigurationResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="name")
-      private final @Nullable String name;
+    private @Nullable String name;
 
     public Optional<String> name() {
-        return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -93,7 +93,7 @@ public final class FrontendIPConfigurationResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="outboundRules", required=true)
-      private final List<SubResourceResponse> outboundRules;
+    private List<SubResourceResponse> outboundRules;
 
     public List<SubResourceResponse> outboundRules() {
         return this.outboundRules;
@@ -104,10 +104,10 @@ public final class FrontendIPConfigurationResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="privateIPAddress")
-      private final @Nullable String privateIPAddress;
+    private @Nullable String privateIPAddress;
 
     public Optional<String> privateIPAddress() {
-        return this.privateIPAddress == null ? Optional.empty() : Optional.ofNullable(this.privateIPAddress);
+        return Optional.ofNullable(this.privateIPAddress);
     }
 
     /**
@@ -115,10 +115,10 @@ public final class FrontendIPConfigurationResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="privateIPAddressVersion")
-      private final @Nullable String privateIPAddressVersion;
+    private @Nullable String privateIPAddressVersion;
 
     public Optional<String> privateIPAddressVersion() {
-        return this.privateIPAddressVersion == null ? Optional.empty() : Optional.ofNullable(this.privateIPAddressVersion);
+        return Optional.ofNullable(this.privateIPAddressVersion);
     }
 
     /**
@@ -126,10 +126,10 @@ public final class FrontendIPConfigurationResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="privateIPAllocationMethod")
-      private final @Nullable String privateIPAllocationMethod;
+    private @Nullable String privateIPAllocationMethod;
 
     public Optional<String> privateIPAllocationMethod() {
-        return this.privateIPAllocationMethod == null ? Optional.empty() : Optional.ofNullable(this.privateIPAllocationMethod);
+        return Optional.ofNullable(this.privateIPAllocationMethod);
     }
 
     /**
@@ -137,7 +137,7 @@ public final class FrontendIPConfigurationResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="provisioningState", required=true)
-      private final String provisioningState;
+    private String provisioningState;
 
     public String provisioningState() {
         return this.provisioningState;
@@ -148,10 +148,10 @@ public final class FrontendIPConfigurationResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="publicIPAddress")
-      private final @Nullable PublicIPAddressResponse publicIPAddress;
+    private @Nullable PublicIPAddressResponse publicIPAddress;
 
     public Optional<PublicIPAddressResponse> publicIPAddress() {
-        return this.publicIPAddress == null ? Optional.empty() : Optional.ofNullable(this.publicIPAddress);
+        return Optional.ofNullable(this.publicIPAddress);
     }
 
     /**
@@ -159,10 +159,10 @@ public final class FrontendIPConfigurationResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="publicIPPrefix")
-      private final @Nullable SubResourceResponse publicIPPrefix;
+    private @Nullable SubResourceResponse publicIPPrefix;
 
     public Optional<SubResourceResponse> publicIPPrefix() {
-        return this.publicIPPrefix == null ? Optional.empty() : Optional.ofNullable(this.publicIPPrefix);
+        return Optional.ofNullable(this.publicIPPrefix);
     }
 
     /**
@@ -170,10 +170,10 @@ public final class FrontendIPConfigurationResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="subnet")
-      private final @Nullable SubnetResponse subnet;
+    private @Nullable SubnetResponse subnet;
 
     public Optional<SubnetResponse> subnet() {
-        return this.subnet == null ? Optional.empty() : Optional.ofNullable(this.subnet);
+        return Optional.ofNullable(this.subnet);
     }
 
     /**
@@ -181,7 +181,7 @@ public final class FrontendIPConfigurationResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
@@ -192,196 +192,161 @@ public final class FrontendIPConfigurationResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="zones")
-      private final @Nullable List<String> zones;
+    private @Nullable List<String> zones;
 
-    public List<String> zones() {
-        return this.zones == null ? List.of() : this.zones;
+    public Optional<List<String>> zones() {
+        return Optional.ofNullable(this.zones);
     }
 
-    public FrontendIPConfigurationResponse(
-        String etag,
-        @Nullable String id,
-        List<SubResourceResponse> inboundNatPools,
-        List<SubResourceResponse> inboundNatRules,
-        List<SubResourceResponse> loadBalancingRules,
-        @Nullable String name,
-        List<SubResourceResponse> outboundRules,
-        @Nullable String privateIPAddress,
-        @Nullable String privateIPAddressVersion,
-        @Nullable String privateIPAllocationMethod,
-        String provisioningState,
-        @Nullable PublicIPAddressResponse publicIPAddress,
-        @Nullable SubResourceResponse publicIPPrefix,
-        @Nullable SubnetResponse subnet,
-        String type,
-        @Nullable List<String> zones) {
-        this.etag = Objects.requireNonNull(etag, "expected parameter 'etag' to be non-null");
-        this.id = id;
-        this.inboundNatPools = Objects.requireNonNull(inboundNatPools, "expected parameter 'inboundNatPools' to be non-null");
-        this.inboundNatRules = Objects.requireNonNull(inboundNatRules, "expected parameter 'inboundNatRules' to be non-null");
-        this.loadBalancingRules = Objects.requireNonNull(loadBalancingRules, "expected parameter 'loadBalancingRules' to be non-null");
-        this.name = name;
-        this.outboundRules = Objects.requireNonNull(outboundRules, "expected parameter 'outboundRules' to be non-null");
-        this.privateIPAddress = privateIPAddress;
-        this.privateIPAddressVersion = privateIPAddressVersion;
-        this.privateIPAllocationMethod = privateIPAllocationMethod;
-        this.provisioningState = Objects.requireNonNull(provisioningState, "expected parameter 'provisioningState' to be non-null");
-        this.publicIPAddress = publicIPAddress;
-        this.publicIPPrefix = publicIPPrefix;
-        this.subnet = subnet;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-        this.zones = zones;
-    }
+    private FrontendIPConfigurationResponse() {}
 
-    private FrontendIPConfigurationResponse() {
-        this.etag = null;
-        this.id = null;
-        this.inboundNatPools = List.of();
-        this.inboundNatRules = List.of();
-        this.loadBalancingRules = List.of();
-        this.name = null;
-        this.outboundRules = List.of();
-        this.privateIPAddress = null;
-        this.privateIPAddressVersion = null;
-        this.privateIPAllocationMethod = null;
-        this.provisioningState = null;
-        this.publicIPAddress = null;
-        this.publicIPPrefix = null;
-        this.subnet = null;
-        this.type = null;
-        this.zones = List.of();
+    private FrontendIPConfigurationResponse(FrontendIPConfigurationResponse $) {
+        this.etag = $.etag;
+        this.id = $.id;
+        this.inboundNatPools = $.inboundNatPools;
+        this.inboundNatRules = $.inboundNatRules;
+        this.loadBalancingRules = $.loadBalancingRules;
+        this.name = $.name;
+        this.outboundRules = $.outboundRules;
+        this.privateIPAddress = $.privateIPAddress;
+        this.privateIPAddressVersion = $.privateIPAddressVersion;
+        this.privateIPAllocationMethod = $.privateIPAllocationMethod;
+        this.provisioningState = $.provisioningState;
+        this.publicIPAddress = $.publicIPAddress;
+        this.publicIPPrefix = $.publicIPPrefix;
+        this.subnet = $.subnet;
+        this.type = $.type;
+        this.zones = $.zones;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FrontendIPConfigurationResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String etag;
-        private @Nullable String id;
-        private List<SubResourceResponse> inboundNatPools;
-        private List<SubResourceResponse> inboundNatRules;
-        private List<SubResourceResponse> loadBalancingRules;
-        private @Nullable String name;
-        private List<SubResourceResponse> outboundRules;
-        private @Nullable String privateIPAddress;
-        private @Nullable String privateIPAddressVersion;
-        private @Nullable String privateIPAllocationMethod;
-        private String provisioningState;
-        private @Nullable PublicIPAddressResponse publicIPAddress;
-        private @Nullable SubResourceResponse publicIPPrefix;
-        private @Nullable SubnetResponse subnet;
-        private String type;
-        private @Nullable List<String> zones;
+        private FrontendIPConfigurationResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new FrontendIPConfigurationResponse();
         }
 
         public Builder(FrontendIPConfigurationResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.etag = defaults.etag;
-    	      this.id = defaults.id;
-    	      this.inboundNatPools = defaults.inboundNatPools;
-    	      this.inboundNatRules = defaults.inboundNatRules;
-    	      this.loadBalancingRules = defaults.loadBalancingRules;
-    	      this.name = defaults.name;
-    	      this.outboundRules = defaults.outboundRules;
-    	      this.privateIPAddress = defaults.privateIPAddress;
-    	      this.privateIPAddressVersion = defaults.privateIPAddressVersion;
-    	      this.privateIPAllocationMethod = defaults.privateIPAllocationMethod;
-    	      this.provisioningState = defaults.provisioningState;
-    	      this.publicIPAddress = defaults.publicIPAddress;
-    	      this.publicIPPrefix = defaults.publicIPPrefix;
-    	      this.subnet = defaults.subnet;
-    	      this.type = defaults.type;
-    	      this.zones = defaults.zones;
+            $ = new FrontendIPConfigurationResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder etag(String etag) {
-            this.etag = Objects.requireNonNull(etag);
+            $.etag = etag;
             return this;
         }
+
         public Builder id(@Nullable String id) {
-            this.id = id;
+            $.id = id;
             return this;
         }
+
         public Builder inboundNatPools(List<SubResourceResponse> inboundNatPools) {
-            this.inboundNatPools = Objects.requireNonNull(inboundNatPools);
+            $.inboundNatPools = inboundNatPools;
             return this;
         }
+
         public Builder inboundNatPools(SubResourceResponse... inboundNatPools) {
             return inboundNatPools(List.of(inboundNatPools));
         }
+
         public Builder inboundNatRules(List<SubResourceResponse> inboundNatRules) {
-            this.inboundNatRules = Objects.requireNonNull(inboundNatRules);
+            $.inboundNatRules = inboundNatRules;
             return this;
         }
+
         public Builder inboundNatRules(SubResourceResponse... inboundNatRules) {
             return inboundNatRules(List.of(inboundNatRules));
         }
+
         public Builder loadBalancingRules(List<SubResourceResponse> loadBalancingRules) {
-            this.loadBalancingRules = Objects.requireNonNull(loadBalancingRules);
+            $.loadBalancingRules = loadBalancingRules;
             return this;
         }
+
         public Builder loadBalancingRules(SubResourceResponse... loadBalancingRules) {
             return loadBalancingRules(List.of(loadBalancingRules));
         }
+
         public Builder name(@Nullable String name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
+
         public Builder outboundRules(List<SubResourceResponse> outboundRules) {
-            this.outboundRules = Objects.requireNonNull(outboundRules);
+            $.outboundRules = outboundRules;
             return this;
         }
+
         public Builder outboundRules(SubResourceResponse... outboundRules) {
             return outboundRules(List.of(outboundRules));
         }
+
         public Builder privateIPAddress(@Nullable String privateIPAddress) {
-            this.privateIPAddress = privateIPAddress;
+            $.privateIPAddress = privateIPAddress;
             return this;
         }
+
         public Builder privateIPAddressVersion(@Nullable String privateIPAddressVersion) {
-            this.privateIPAddressVersion = privateIPAddressVersion;
+            $.privateIPAddressVersion = privateIPAddressVersion;
             return this;
         }
+
         public Builder privateIPAllocationMethod(@Nullable String privateIPAllocationMethod) {
-            this.privateIPAllocationMethod = privateIPAllocationMethod;
+            $.privateIPAllocationMethod = privateIPAllocationMethod;
             return this;
         }
+
         public Builder provisioningState(String provisioningState) {
-            this.provisioningState = Objects.requireNonNull(provisioningState);
+            $.provisioningState = provisioningState;
             return this;
         }
+
         public Builder publicIPAddress(@Nullable PublicIPAddressResponse publicIPAddress) {
-            this.publicIPAddress = publicIPAddress;
+            $.publicIPAddress = publicIPAddress;
             return this;
         }
+
         public Builder publicIPPrefix(@Nullable SubResourceResponse publicIPPrefix) {
-            this.publicIPPrefix = publicIPPrefix;
+            $.publicIPPrefix = publicIPPrefix;
             return this;
         }
+
         public Builder subnet(@Nullable SubnetResponse subnet) {
-            this.subnet = subnet;
+            $.subnet = subnet;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder zones(@Nullable List<String> zones) {
-            this.zones = zones;
+            $.zones = zones;
             return this;
         }
+
         public Builder zones(String... zones) {
             return zones(List.of(zones));
-        }        public FrontendIPConfigurationResponse build() {
-            return new FrontendIPConfigurationResponse(etag, id, inboundNatPools, inboundNatRules, loadBalancingRules, name, outboundRules, privateIPAddress, privateIPAddressVersion, privateIPAllocationMethod, provisioningState, publicIPAddress, publicIPPrefix, subnet, type, zones);
+        }
+
+        public FrontendIPConfigurationResponse build() {
+            $.etag = Objects.requireNonNull($.etag, "expected parameter 'etag' to be non-null");
+            $.inboundNatPools = Objects.requireNonNull($.inboundNatPools, "expected parameter 'inboundNatPools' to be non-null");
+            $.inboundNatRules = Objects.requireNonNull($.inboundNatRules, "expected parameter 'inboundNatRules' to be non-null");
+            $.loadBalancingRules = Objects.requireNonNull($.loadBalancingRules, "expected parameter 'loadBalancingRules' to be non-null");
+            $.outboundRules = Objects.requireNonNull($.outboundRules, "expected parameter 'outboundRules' to be non-null");
+            $.provisioningState = Objects.requireNonNull($.provisioningState, "expected parameter 'provisioningState' to be non-null");
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

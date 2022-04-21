@@ -24,10 +24,10 @@ public final class LoadBalancerConfigurationResponse extends com.pulumi.resource
      * 
      */
     @Import(name="id")
-      private final @Nullable String id;
+    private @Nullable String id;
 
     public Optional<String> id() {
-        return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
+        return Optional.ofNullable(this.id);
     }
 
     /**
@@ -35,7 +35,7 @@ public final class LoadBalancerConfigurationResponse extends com.pulumi.resource
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -46,64 +46,58 @@ public final class LoadBalancerConfigurationResponse extends com.pulumi.resource
      * 
      */
     @Import(name="properties", required=true)
-      private final LoadBalancerConfigurationPropertiesResponse properties;
+    private LoadBalancerConfigurationPropertiesResponse properties;
 
     public LoadBalancerConfigurationPropertiesResponse properties() {
         return this.properties;
     }
 
-    public LoadBalancerConfigurationResponse(
-        @Nullable String id,
-        String name,
-        LoadBalancerConfigurationPropertiesResponse properties) {
-        this.id = id;
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.properties = Objects.requireNonNull(properties, "expected parameter 'properties' to be non-null");
-    }
+    private LoadBalancerConfigurationResponse() {}
 
-    private LoadBalancerConfigurationResponse() {
-        this.id = null;
-        this.name = null;
-        this.properties = null;
+    private LoadBalancerConfigurationResponse(LoadBalancerConfigurationResponse $) {
+        this.id = $.id;
+        this.name = $.name;
+        this.properties = $.properties;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LoadBalancerConfigurationResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String id;
-        private String name;
-        private LoadBalancerConfigurationPropertiesResponse properties;
+        private LoadBalancerConfigurationResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new LoadBalancerConfigurationResponse();
         }
 
         public Builder(LoadBalancerConfigurationResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.id = defaults.id;
-    	      this.name = defaults.name;
-    	      this.properties = defaults.properties;
+            $ = new LoadBalancerConfigurationResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder id(@Nullable String id) {
-            this.id = id;
+            $.id = id;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder properties(LoadBalancerConfigurationPropertiesResponse properties) {
-            this.properties = Objects.requireNonNull(properties);
+            $.properties = properties;
             return this;
-        }        public LoadBalancerConfigurationResponse build() {
-            return new LoadBalancerConfigurationResponse(id, name, properties);
+        }
+
+        public LoadBalancerConfigurationResponse build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.properties = Objects.requireNonNull($.properties, "expected parameter 'properties' to be non-null");
+            return $;
         }
     }
+
 }

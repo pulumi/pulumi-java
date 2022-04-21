@@ -25,10 +25,10 @@ public final class InsightsTableResultResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="columns")
-      private final @Nullable List<InsightsTableResultResponseColumns> columns;
+    private @Nullable List<InsightsTableResultResponseColumns> columns;
 
-    public List<InsightsTableResultResponseColumns> columns() {
-        return this.columns == null ? List.of() : this.columns;
+    public Optional<List<InsightsTableResultResponseColumns>> columns() {
+        return Optional.ofNullable(this.columns);
     }
 
     /**
@@ -36,58 +36,58 @@ public final class InsightsTableResultResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="rows")
-      private final @Nullable List<List<String>> rows;
+    private @Nullable List<List<String>> rows;
 
-    public List<List<String>> rows() {
-        return this.rows == null ? List.of() : this.rows;
+    public Optional<List<List<String>>> rows() {
+        return Optional.ofNullable(this.rows);
     }
 
-    public InsightsTableResultResponse(
-        @Nullable List<InsightsTableResultResponseColumns> columns,
-        @Nullable List<List<String>> rows) {
-        this.columns = columns;
-        this.rows = rows;
-    }
+    private InsightsTableResultResponse() {}
 
-    private InsightsTableResultResponse() {
-        this.columns = List.of();
-        this.rows = List.of();
+    private InsightsTableResultResponse(InsightsTableResultResponse $) {
+        this.columns = $.columns;
+        this.rows = $.rows;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(InsightsTableResultResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<InsightsTableResultResponseColumns> columns;
-        private @Nullable List<List<String>> rows;
+        private InsightsTableResultResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new InsightsTableResultResponse();
         }
 
         public Builder(InsightsTableResultResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.columns = defaults.columns;
-    	      this.rows = defaults.rows;
+            $ = new InsightsTableResultResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder columns(@Nullable List<InsightsTableResultResponseColumns> columns) {
-            this.columns = columns;
+            $.columns = columns;
             return this;
         }
+
         public Builder columns(InsightsTableResultResponseColumns... columns) {
             return columns(List.of(columns));
         }
+
         public Builder rows(@Nullable List<List<String>> rows) {
-            this.rows = rows;
+            $.rows = rows;
             return this;
-        }        public InsightsTableResultResponse build() {
-            return new InsightsTableResultResponse(columns, rows);
+        }
+
+        public Builder rows(List<String>... rows) {
+            return rows(List.of(rows));
+        }
+
+        public InsightsTableResultResponse build() {
+            return $;
         }
     }
+
 }

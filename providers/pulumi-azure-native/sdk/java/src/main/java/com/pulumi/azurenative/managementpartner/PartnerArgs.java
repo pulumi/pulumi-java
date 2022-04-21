@@ -5,9 +5,9 @@ package com.pulumi.azurenative.managementpartner;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,49 +20,48 @@ public final class PartnerArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="partnerId")
-      private final @Nullable Output<String> partnerId;
+    private @Nullable Output<String> partnerId;
 
-    public Output<String> partnerId() {
-        return this.partnerId == null ? Codegen.empty() : this.partnerId;
+    public Optional<Output<String>> partnerId() {
+        return Optional.ofNullable(this.partnerId);
     }
 
-    public PartnerArgs(@Nullable Output<String> partnerId) {
-        this.partnerId = partnerId;
-    }
+    private PartnerArgs() {}
 
-    private PartnerArgs() {
-        this.partnerId = Codegen.empty();
+    private PartnerArgs(PartnerArgs $) {
+        this.partnerId = $.partnerId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PartnerArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> partnerId;
+        private PartnerArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PartnerArgs();
         }
 
         public Builder(PartnerArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.partnerId = defaults.partnerId;
+            $ = new PartnerArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder partnerId(@Nullable Output<String> partnerId) {
-            this.partnerId = partnerId;
+            $.partnerId = partnerId;
             return this;
         }
-        public Builder partnerId(@Nullable String partnerId) {
-            this.partnerId = Codegen.ofNullable(partnerId);
-            return this;
-        }        public PartnerArgs build() {
-            return new PartnerArgs(partnerId);
+
+        public Builder partnerId(String partnerId) {
+            return partnerId(Output.of(partnerId));
+        }
+
+        public PartnerArgs build() {
+            return $;
         }
     }
+
 }

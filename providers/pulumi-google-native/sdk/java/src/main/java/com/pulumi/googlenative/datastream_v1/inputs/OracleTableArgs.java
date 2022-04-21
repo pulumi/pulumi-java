@@ -5,11 +5,11 @@ package com.pulumi.googlenative.datastream_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.datastream_v1.inputs.OracleColumnArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class OracleTableArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="oracleColumns")
-      private final @Nullable Output<List<OracleColumnArgs>> oracleColumns;
+    private @Nullable Output<List<OracleColumnArgs>> oracleColumns;
 
-    public Output<List<OracleColumnArgs>> oracleColumns() {
-        return this.oracleColumns == null ? Codegen.empty() : this.oracleColumns;
+    public Optional<Output<List<OracleColumnArgs>>> oracleColumns() {
+        return Optional.ofNullable(this.oracleColumns);
     }
 
     /**
@@ -37,66 +37,62 @@ public final class OracleTableArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="table")
-      private final @Nullable Output<String> table;
+    private @Nullable Output<String> table;
 
-    public Output<String> table() {
-        return this.table == null ? Codegen.empty() : this.table;
+    public Optional<Output<String>> table() {
+        return Optional.ofNullable(this.table);
     }
 
-    public OracleTableArgs(
-        @Nullable Output<List<OracleColumnArgs>> oracleColumns,
-        @Nullable Output<String> table) {
-        this.oracleColumns = oracleColumns;
-        this.table = table;
-    }
+    private OracleTableArgs() {}
 
-    private OracleTableArgs() {
-        this.oracleColumns = Codegen.empty();
-        this.table = Codegen.empty();
+    private OracleTableArgs(OracleTableArgs $) {
+        this.oracleColumns = $.oracleColumns;
+        this.table = $.table;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(OracleTableArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<OracleColumnArgs>> oracleColumns;
-        private @Nullable Output<String> table;
+        private OracleTableArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new OracleTableArgs();
         }
 
         public Builder(OracleTableArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.oracleColumns = defaults.oracleColumns;
-    	      this.table = defaults.table;
+            $ = new OracleTableArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder oracleColumns(@Nullable Output<List<OracleColumnArgs>> oracleColumns) {
-            this.oracleColumns = oracleColumns;
+            $.oracleColumns = oracleColumns;
             return this;
         }
-        public Builder oracleColumns(@Nullable List<OracleColumnArgs> oracleColumns) {
-            this.oracleColumns = Codegen.ofNullable(oracleColumns);
-            return this;
+
+        public Builder oracleColumns(List<OracleColumnArgs> oracleColumns) {
+            return oracleColumns(Output.of(oracleColumns));
         }
+
         public Builder oracleColumns(OracleColumnArgs... oracleColumns) {
             return oracleColumns(List.of(oracleColumns));
         }
+
         public Builder table(@Nullable Output<String> table) {
-            this.table = table;
+            $.table = table;
             return this;
         }
-        public Builder table(@Nullable String table) {
-            this.table = Codegen.ofNullable(table);
-            return this;
-        }        public OracleTableArgs build() {
-            return new OracleTableArgs(oracleColumns, table);
+
+        public Builder table(String table) {
+            return table(Output.of(table));
+        }
+
+        public OracleTableArgs build() {
+            return $;
         }
     }
+
 }

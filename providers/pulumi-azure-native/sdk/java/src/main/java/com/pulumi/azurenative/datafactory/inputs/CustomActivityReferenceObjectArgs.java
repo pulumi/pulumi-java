@@ -7,9 +7,9 @@ import com.pulumi.azurenative.datafactory.inputs.DatasetReferenceArgs;
 import com.pulumi.azurenative.datafactory.inputs.LinkedServiceReferenceArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class CustomActivityReferenceObjectArgs extends com.pulumi.resource
      * 
      */
     @Import(name="datasets")
-      private final @Nullable Output<List<DatasetReferenceArgs>> datasets;
+    private @Nullable Output<List<DatasetReferenceArgs>> datasets;
 
-    public Output<List<DatasetReferenceArgs>> datasets() {
-        return this.datasets == null ? Codegen.empty() : this.datasets;
+    public Optional<Output<List<DatasetReferenceArgs>>> datasets() {
+        return Optional.ofNullable(this.datasets);
     }
 
     /**
@@ -37,69 +37,66 @@ public final class CustomActivityReferenceObjectArgs extends com.pulumi.resource
      * 
      */
     @Import(name="linkedServices")
-      private final @Nullable Output<List<LinkedServiceReferenceArgs>> linkedServices;
+    private @Nullable Output<List<LinkedServiceReferenceArgs>> linkedServices;
 
-    public Output<List<LinkedServiceReferenceArgs>> linkedServices() {
-        return this.linkedServices == null ? Codegen.empty() : this.linkedServices;
+    public Optional<Output<List<LinkedServiceReferenceArgs>>> linkedServices() {
+        return Optional.ofNullable(this.linkedServices);
     }
 
-    public CustomActivityReferenceObjectArgs(
-        @Nullable Output<List<DatasetReferenceArgs>> datasets,
-        @Nullable Output<List<LinkedServiceReferenceArgs>> linkedServices) {
-        this.datasets = datasets;
-        this.linkedServices = linkedServices;
-    }
+    private CustomActivityReferenceObjectArgs() {}
 
-    private CustomActivityReferenceObjectArgs() {
-        this.datasets = Codegen.empty();
-        this.linkedServices = Codegen.empty();
+    private CustomActivityReferenceObjectArgs(CustomActivityReferenceObjectArgs $) {
+        this.datasets = $.datasets;
+        this.linkedServices = $.linkedServices;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CustomActivityReferenceObjectArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<DatasetReferenceArgs>> datasets;
-        private @Nullable Output<List<LinkedServiceReferenceArgs>> linkedServices;
+        private CustomActivityReferenceObjectArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CustomActivityReferenceObjectArgs();
         }
 
         public Builder(CustomActivityReferenceObjectArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.datasets = defaults.datasets;
-    	      this.linkedServices = defaults.linkedServices;
+            $ = new CustomActivityReferenceObjectArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder datasets(@Nullable Output<List<DatasetReferenceArgs>> datasets) {
-            this.datasets = datasets;
+            $.datasets = datasets;
             return this;
         }
-        public Builder datasets(@Nullable List<DatasetReferenceArgs> datasets) {
-            this.datasets = Codegen.ofNullable(datasets);
-            return this;
+
+        public Builder datasets(List<DatasetReferenceArgs> datasets) {
+            return datasets(Output.of(datasets));
         }
+
         public Builder datasets(DatasetReferenceArgs... datasets) {
             return datasets(List.of(datasets));
         }
+
         public Builder linkedServices(@Nullable Output<List<LinkedServiceReferenceArgs>> linkedServices) {
-            this.linkedServices = linkedServices;
+            $.linkedServices = linkedServices;
             return this;
         }
-        public Builder linkedServices(@Nullable List<LinkedServiceReferenceArgs> linkedServices) {
-            this.linkedServices = Codegen.ofNullable(linkedServices);
-            return this;
+
+        public Builder linkedServices(List<LinkedServiceReferenceArgs> linkedServices) {
+            return linkedServices(Output.of(linkedServices));
         }
+
         public Builder linkedServices(LinkedServiceReferenceArgs... linkedServices) {
             return linkedServices(List.of(linkedServices));
-        }        public CustomActivityReferenceObjectArgs build() {
-            return new CustomActivityReferenceObjectArgs(datasets, linkedServices);
+        }
+
+        public CustomActivityReferenceObjectArgs build() {
+            return $;
         }
     }
+
 }

@@ -7,10 +7,10 @@ import com.pulumi.azurenative.logic.inputs.RosettaNetPipActivitySettingsArgs;
 import com.pulumi.azurenative.logic.inputs.RosettaNetPipRoleSettingsArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,7 +23,7 @@ public final class RosettaNetProcessConfigurationArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="activitySettings", required=true)
-      private final Output<RosettaNetPipActivitySettingsArgs> activitySettings;
+    private Output<RosettaNetPipActivitySettingsArgs> activitySettings;
 
     public Output<RosettaNetPipActivitySettingsArgs> activitySettings() {
         return this.activitySettings;
@@ -34,10 +34,10 @@ public final class RosettaNetProcessConfigurationArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -45,7 +45,7 @@ public final class RosettaNetProcessConfigurationArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="initiatorRoleSettings", required=true)
-      private final Output<RosettaNetPipRoleSettingsArgs> initiatorRoleSettings;
+    private Output<RosettaNetPipRoleSettingsArgs> initiatorRoleSettings;
 
     public Output<RosettaNetPipRoleSettingsArgs> initiatorRoleSettings() {
         return this.initiatorRoleSettings;
@@ -56,7 +56,7 @@ public final class RosettaNetProcessConfigurationArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="integrationAccountName", required=true)
-      private final Output<String> integrationAccountName;
+    private Output<String> integrationAccountName;
 
     public Output<String> integrationAccountName() {
         return this.integrationAccountName;
@@ -67,10 +67,10 @@ public final class RosettaNetProcessConfigurationArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -78,10 +78,10 @@ public final class RosettaNetProcessConfigurationArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="metadata")
-      private final @Nullable Output<Map<String,String>> metadata;
+    private @Nullable Output<Map<String,String>> metadata;
 
-    public Output<Map<String,String>> metadata() {
-        return this.metadata == null ? Codegen.empty() : this.metadata;
+    public Optional<Output<Map<String,String>>> metadata() {
+        return Optional.ofNullable(this.metadata);
     }
 
     /**
@@ -89,7 +89,7 @@ public final class RosettaNetProcessConfigurationArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="processCode", required=true)
-      private final Output<String> processCode;
+    private Output<String> processCode;
 
     public Output<String> processCode() {
         return this.processCode;
@@ -100,7 +100,7 @@ public final class RosettaNetProcessConfigurationArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="processName", required=true)
-      private final Output<String> processName;
+    private Output<String> processName;
 
     public Output<String> processName() {
         return this.processName;
@@ -111,7 +111,7 @@ public final class RosettaNetProcessConfigurationArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="processVersion", required=true)
-      private final Output<String> processVersion;
+    private Output<String> processVersion;
 
     public Output<String> processVersion() {
         return this.processVersion;
@@ -122,7 +122,7 @@ public final class RosettaNetProcessConfigurationArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -133,7 +133,7 @@ public final class RosettaNetProcessConfigurationArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="responderRoleSettings", required=true)
-      private final Output<RosettaNetPipRoleSettingsArgs> responderRoleSettings;
+    private Output<RosettaNetPipRoleSettingsArgs> responderRoleSettings;
 
     public Output<RosettaNetPipRoleSettingsArgs> responderRoleSettings() {
         return this.responderRoleSettings;
@@ -144,10 +144,10 @@ public final class RosettaNetProcessConfigurationArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="rosettaNetProcessConfigurationName")
-      private final @Nullable Output<String> rosettaNetProcessConfigurationName;
+    private @Nullable Output<String> rosettaNetProcessConfigurationName;
 
-    public Output<String> rosettaNetProcessConfigurationName() {
-        return this.rosettaNetProcessConfigurationName == null ? Codegen.empty() : this.rosettaNetProcessConfigurationName;
+    public Optional<Output<String>> rosettaNetProcessConfigurationName() {
+        return Optional.ofNullable(this.rosettaNetProcessConfigurationName);
     }
 
     /**
@@ -155,206 +155,176 @@ public final class RosettaNetProcessConfigurationArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public RosettaNetProcessConfigurationArgs(
-        Output<RosettaNetPipActivitySettingsArgs> activitySettings,
-        @Nullable Output<String> description,
-        Output<RosettaNetPipRoleSettingsArgs> initiatorRoleSettings,
-        Output<String> integrationAccountName,
-        @Nullable Output<String> location,
-        @Nullable Output<Map<String,String>> metadata,
-        Output<String> processCode,
-        Output<String> processName,
-        Output<String> processVersion,
-        Output<String> resourceGroupName,
-        Output<RosettaNetPipRoleSettingsArgs> responderRoleSettings,
-        @Nullable Output<String> rosettaNetProcessConfigurationName,
-        @Nullable Output<Map<String,String>> tags) {
-        this.activitySettings = Objects.requireNonNull(activitySettings, "expected parameter 'activitySettings' to be non-null");
-        this.description = description;
-        this.initiatorRoleSettings = Objects.requireNonNull(initiatorRoleSettings, "expected parameter 'initiatorRoleSettings' to be non-null");
-        this.integrationAccountName = Objects.requireNonNull(integrationAccountName, "expected parameter 'integrationAccountName' to be non-null");
-        this.location = location;
-        this.metadata = metadata;
-        this.processCode = Objects.requireNonNull(processCode, "expected parameter 'processCode' to be non-null");
-        this.processName = Objects.requireNonNull(processName, "expected parameter 'processName' to be non-null");
-        this.processVersion = Objects.requireNonNull(processVersion, "expected parameter 'processVersion' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.responderRoleSettings = Objects.requireNonNull(responderRoleSettings, "expected parameter 'responderRoleSettings' to be non-null");
-        this.rosettaNetProcessConfigurationName = rosettaNetProcessConfigurationName;
-        this.tags = tags;
-    }
+    private RosettaNetProcessConfigurationArgs() {}
 
-    private RosettaNetProcessConfigurationArgs() {
-        this.activitySettings = Codegen.empty();
-        this.description = Codegen.empty();
-        this.initiatorRoleSettings = Codegen.empty();
-        this.integrationAccountName = Codegen.empty();
-        this.location = Codegen.empty();
-        this.metadata = Codegen.empty();
-        this.processCode = Codegen.empty();
-        this.processName = Codegen.empty();
-        this.processVersion = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.responderRoleSettings = Codegen.empty();
-        this.rosettaNetProcessConfigurationName = Codegen.empty();
-        this.tags = Codegen.empty();
+    private RosettaNetProcessConfigurationArgs(RosettaNetProcessConfigurationArgs $) {
+        this.activitySettings = $.activitySettings;
+        this.description = $.description;
+        this.initiatorRoleSettings = $.initiatorRoleSettings;
+        this.integrationAccountName = $.integrationAccountName;
+        this.location = $.location;
+        this.metadata = $.metadata;
+        this.processCode = $.processCode;
+        this.processName = $.processName;
+        this.processVersion = $.processVersion;
+        this.resourceGroupName = $.resourceGroupName;
+        this.responderRoleSettings = $.responderRoleSettings;
+        this.rosettaNetProcessConfigurationName = $.rosettaNetProcessConfigurationName;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RosettaNetProcessConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<RosettaNetPipActivitySettingsArgs> activitySettings;
-        private @Nullable Output<String> description;
-        private Output<RosettaNetPipRoleSettingsArgs> initiatorRoleSettings;
-        private Output<String> integrationAccountName;
-        private @Nullable Output<String> location;
-        private @Nullable Output<Map<String,String>> metadata;
-        private Output<String> processCode;
-        private Output<String> processName;
-        private Output<String> processVersion;
-        private Output<String> resourceGroupName;
-        private Output<RosettaNetPipRoleSettingsArgs> responderRoleSettings;
-        private @Nullable Output<String> rosettaNetProcessConfigurationName;
-        private @Nullable Output<Map<String,String>> tags;
+        private RosettaNetProcessConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RosettaNetProcessConfigurationArgs();
         }
 
         public Builder(RosettaNetProcessConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.activitySettings = defaults.activitySettings;
-    	      this.description = defaults.description;
-    	      this.initiatorRoleSettings = defaults.initiatorRoleSettings;
-    	      this.integrationAccountName = defaults.integrationAccountName;
-    	      this.location = defaults.location;
-    	      this.metadata = defaults.metadata;
-    	      this.processCode = defaults.processCode;
-    	      this.processName = defaults.processName;
-    	      this.processVersion = defaults.processVersion;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.responderRoleSettings = defaults.responderRoleSettings;
-    	      this.rosettaNetProcessConfigurationName = defaults.rosettaNetProcessConfigurationName;
-    	      this.tags = defaults.tags;
+            $ = new RosettaNetProcessConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder activitySettings(Output<RosettaNetPipActivitySettingsArgs> activitySettings) {
-            this.activitySettings = Objects.requireNonNull(activitySettings);
+            $.activitySettings = activitySettings;
             return this;
         }
+
         public Builder activitySettings(RosettaNetPipActivitySettingsArgs activitySettings) {
-            this.activitySettings = Output.of(Objects.requireNonNull(activitySettings));
-            return this;
+            return activitySettings(Output.of(activitySettings));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder initiatorRoleSettings(Output<RosettaNetPipRoleSettingsArgs> initiatorRoleSettings) {
-            this.initiatorRoleSettings = Objects.requireNonNull(initiatorRoleSettings);
+            $.initiatorRoleSettings = initiatorRoleSettings;
             return this;
         }
+
         public Builder initiatorRoleSettings(RosettaNetPipRoleSettingsArgs initiatorRoleSettings) {
-            this.initiatorRoleSettings = Output.of(Objects.requireNonNull(initiatorRoleSettings));
-            return this;
+            return initiatorRoleSettings(Output.of(initiatorRoleSettings));
         }
+
         public Builder integrationAccountName(Output<String> integrationAccountName) {
-            this.integrationAccountName = Objects.requireNonNull(integrationAccountName);
+            $.integrationAccountName = integrationAccountName;
             return this;
         }
+
         public Builder integrationAccountName(String integrationAccountName) {
-            this.integrationAccountName = Output.of(Objects.requireNonNull(integrationAccountName));
-            return this;
+            return integrationAccountName(Output.of(integrationAccountName));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder metadata(@Nullable Output<Map<String,String>> metadata) {
-            this.metadata = metadata;
+            $.metadata = metadata;
             return this;
         }
-        public Builder metadata(@Nullable Map<String,String> metadata) {
-            this.metadata = Codegen.ofNullable(metadata);
-            return this;
+
+        public Builder metadata(Map<String,String> metadata) {
+            return metadata(Output.of(metadata));
         }
+
         public Builder processCode(Output<String> processCode) {
-            this.processCode = Objects.requireNonNull(processCode);
+            $.processCode = processCode;
             return this;
         }
+
         public Builder processCode(String processCode) {
-            this.processCode = Output.of(Objects.requireNonNull(processCode));
-            return this;
+            return processCode(Output.of(processCode));
         }
+
         public Builder processName(Output<String> processName) {
-            this.processName = Objects.requireNonNull(processName);
+            $.processName = processName;
             return this;
         }
+
         public Builder processName(String processName) {
-            this.processName = Output.of(Objects.requireNonNull(processName));
-            return this;
+            return processName(Output.of(processName));
         }
+
         public Builder processVersion(Output<String> processVersion) {
-            this.processVersion = Objects.requireNonNull(processVersion);
+            $.processVersion = processVersion;
             return this;
         }
+
         public Builder processVersion(String processVersion) {
-            this.processVersion = Output.of(Objects.requireNonNull(processVersion));
-            return this;
+            return processVersion(Output.of(processVersion));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder responderRoleSettings(Output<RosettaNetPipRoleSettingsArgs> responderRoleSettings) {
-            this.responderRoleSettings = Objects.requireNonNull(responderRoleSettings);
+            $.responderRoleSettings = responderRoleSettings;
             return this;
         }
+
         public Builder responderRoleSettings(RosettaNetPipRoleSettingsArgs responderRoleSettings) {
-            this.responderRoleSettings = Output.of(Objects.requireNonNull(responderRoleSettings));
-            return this;
+            return responderRoleSettings(Output.of(responderRoleSettings));
         }
+
         public Builder rosettaNetProcessConfigurationName(@Nullable Output<String> rosettaNetProcessConfigurationName) {
-            this.rosettaNetProcessConfigurationName = rosettaNetProcessConfigurationName;
+            $.rosettaNetProcessConfigurationName = rosettaNetProcessConfigurationName;
             return this;
         }
-        public Builder rosettaNetProcessConfigurationName(@Nullable String rosettaNetProcessConfigurationName) {
-            this.rosettaNetProcessConfigurationName = Codegen.ofNullable(rosettaNetProcessConfigurationName);
-            return this;
+
+        public Builder rosettaNetProcessConfigurationName(String rosettaNetProcessConfigurationName) {
+            return rosettaNetProcessConfigurationName(Output.of(rosettaNetProcessConfigurationName));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
-        }        public RosettaNetProcessConfigurationArgs build() {
-            return new RosettaNetProcessConfigurationArgs(activitySettings, description, initiatorRoleSettings, integrationAccountName, location, metadata, processCode, processName, processVersion, resourceGroupName, responderRoleSettings, rosettaNetProcessConfigurationName, tags);
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
+        }
+
+        public RosettaNetProcessConfigurationArgs build() {
+            $.activitySettings = Objects.requireNonNull($.activitySettings, "expected parameter 'activitySettings' to be non-null");
+            $.initiatorRoleSettings = Objects.requireNonNull($.initiatorRoleSettings, "expected parameter 'initiatorRoleSettings' to be non-null");
+            $.integrationAccountName = Objects.requireNonNull($.integrationAccountName, "expected parameter 'integrationAccountName' to be non-null");
+            $.processCode = Objects.requireNonNull($.processCode, "expected parameter 'processCode' to be non-null");
+            $.processName = Objects.requireNonNull($.processName, "expected parameter 'processName' to be non-null");
+            $.processVersion = Objects.requireNonNull($.processVersion, "expected parameter 'processVersion' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.responderRoleSettings = Objects.requireNonNull($.responderRoleSettings, "expected parameter 'responderRoleSettings' to be non-null");
+            return $;
         }
     }
+
 }

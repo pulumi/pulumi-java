@@ -15,78 +15,72 @@ public final class GetServiceAttachmentArgs extends com.pulumi.resources.InvokeA
     public static final GetServiceAttachmentArgs Empty = new GetServiceAttachmentArgs();
 
     @Import(name="project")
-      private final @Nullable String project;
+    private @Nullable String project;
 
     public Optional<String> project() {
-        return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
+        return Optional.ofNullable(this.project);
     }
 
     @Import(name="region", required=true)
-      private final String region;
+    private String region;
 
     public String region() {
         return this.region;
     }
 
     @Import(name="serviceAttachment", required=true)
-      private final String serviceAttachment;
+    private String serviceAttachment;
 
     public String serviceAttachment() {
         return this.serviceAttachment;
     }
 
-    public GetServiceAttachmentArgs(
-        @Nullable String project,
-        String region,
-        String serviceAttachment) {
-        this.project = project;
-        this.region = Objects.requireNonNull(region, "expected parameter 'region' to be non-null");
-        this.serviceAttachment = Objects.requireNonNull(serviceAttachment, "expected parameter 'serviceAttachment' to be non-null");
-    }
+    private GetServiceAttachmentArgs() {}
 
-    private GetServiceAttachmentArgs() {
-        this.project = null;
-        this.region = null;
-        this.serviceAttachment = null;
+    private GetServiceAttachmentArgs(GetServiceAttachmentArgs $) {
+        this.project = $.project;
+        this.region = $.region;
+        this.serviceAttachment = $.serviceAttachment;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetServiceAttachmentArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String project;
-        private String region;
-        private String serviceAttachment;
+        private GetServiceAttachmentArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetServiceAttachmentArgs();
         }
 
         public Builder(GetServiceAttachmentArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.project = defaults.project;
-    	      this.region = defaults.region;
-    	      this.serviceAttachment = defaults.serviceAttachment;
+            $ = new GetServiceAttachmentArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder project(@Nullable String project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
+
         public Builder region(String region) {
-            this.region = Objects.requireNonNull(region);
+            $.region = region;
             return this;
         }
+
         public Builder serviceAttachment(String serviceAttachment) {
-            this.serviceAttachment = Objects.requireNonNull(serviceAttachment);
+            $.serviceAttachment = serviceAttachment;
             return this;
-        }        public GetServiceAttachmentArgs build() {
-            return new GetServiceAttachmentArgs(project, region, serviceAttachment);
+        }
+
+        public GetServiceAttachmentArgs build() {
+            $.region = Objects.requireNonNull($.region, "expected parameter 'region' to be non-null");
+            $.serviceAttachment = Objects.requireNonNull($.serviceAttachment, "expected parameter 'serviceAttachment' to be non-null");
+            return $;
         }
     }
+
 }

@@ -24,10 +24,10 @@ public final class RedirectConfigurationResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="customFragment")
-      private final @Nullable String customFragment;
+    private @Nullable String customFragment;
 
     public Optional<String> customFragment() {
-        return this.customFragment == null ? Optional.empty() : Optional.ofNullable(this.customFragment);
+        return Optional.ofNullable(this.customFragment);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class RedirectConfigurationResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="customHost")
-      private final @Nullable String customHost;
+    private @Nullable String customHost;
 
     public Optional<String> customHost() {
-        return this.customHost == null ? Optional.empty() : Optional.ofNullable(this.customHost);
+        return Optional.ofNullable(this.customHost);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class RedirectConfigurationResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="customPath")
-      private final @Nullable String customPath;
+    private @Nullable String customPath;
 
     public Optional<String> customPath() {
-        return this.customPath == null ? Optional.empty() : Optional.ofNullable(this.customPath);
+        return Optional.ofNullable(this.customPath);
     }
 
     /**
@@ -57,10 +57,10 @@ public final class RedirectConfigurationResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="customQueryString")
-      private final @Nullable String customQueryString;
+    private @Nullable String customQueryString;
 
     public Optional<String> customQueryString() {
-        return this.customQueryString == null ? Optional.empty() : Optional.ofNullable(this.customQueryString);
+        return Optional.ofNullable(this.customQueryString);
     }
 
     /**
@@ -68,7 +68,7 @@ public final class RedirectConfigurationResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="odataType", required=true)
-      private final String odataType;
+    private String odataType;
 
     public String odataType() {
         return this.odataType;
@@ -79,10 +79,10 @@ public final class RedirectConfigurationResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="redirectProtocol")
-      private final @Nullable String redirectProtocol;
+    private @Nullable String redirectProtocol;
 
     public Optional<String> redirectProtocol() {
-        return this.redirectProtocol == null ? Optional.empty() : Optional.ofNullable(this.redirectProtocol);
+        return Optional.ofNullable(this.redirectProtocol);
     }
 
     /**
@@ -90,100 +90,81 @@ public final class RedirectConfigurationResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="redirectType")
-      private final @Nullable String redirectType;
+    private @Nullable String redirectType;
 
     public Optional<String> redirectType() {
-        return this.redirectType == null ? Optional.empty() : Optional.ofNullable(this.redirectType);
+        return Optional.ofNullable(this.redirectType);
     }
 
-    public RedirectConfigurationResponse(
-        @Nullable String customFragment,
-        @Nullable String customHost,
-        @Nullable String customPath,
-        @Nullable String customQueryString,
-        String odataType,
-        @Nullable String redirectProtocol,
-        @Nullable String redirectType) {
-        this.customFragment = customFragment;
-        this.customHost = customHost;
-        this.customPath = customPath;
-        this.customQueryString = customQueryString;
-        this.odataType = Codegen.stringProp("odataType").arg(odataType).require();
-        this.redirectProtocol = redirectProtocol;
-        this.redirectType = redirectType;
-    }
+    private RedirectConfigurationResponse() {}
 
-    private RedirectConfigurationResponse() {
-        this.customFragment = null;
-        this.customHost = null;
-        this.customPath = null;
-        this.customQueryString = null;
-        this.odataType = null;
-        this.redirectProtocol = null;
-        this.redirectType = null;
+    private RedirectConfigurationResponse(RedirectConfigurationResponse $) {
+        this.customFragment = $.customFragment;
+        this.customHost = $.customHost;
+        this.customPath = $.customPath;
+        this.customQueryString = $.customQueryString;
+        this.odataType = $.odataType;
+        this.redirectProtocol = $.redirectProtocol;
+        this.redirectType = $.redirectType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RedirectConfigurationResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String customFragment;
-        private @Nullable String customHost;
-        private @Nullable String customPath;
-        private @Nullable String customQueryString;
-        private String odataType;
-        private @Nullable String redirectProtocol;
-        private @Nullable String redirectType;
+        private RedirectConfigurationResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new RedirectConfigurationResponse();
         }
 
         public Builder(RedirectConfigurationResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.customFragment = defaults.customFragment;
-    	      this.customHost = defaults.customHost;
-    	      this.customPath = defaults.customPath;
-    	      this.customQueryString = defaults.customQueryString;
-    	      this.odataType = defaults.odataType;
-    	      this.redirectProtocol = defaults.redirectProtocol;
-    	      this.redirectType = defaults.redirectType;
+            $ = new RedirectConfigurationResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder customFragment(@Nullable String customFragment) {
-            this.customFragment = customFragment;
+            $.customFragment = customFragment;
             return this;
         }
+
         public Builder customHost(@Nullable String customHost) {
-            this.customHost = customHost;
+            $.customHost = customHost;
             return this;
         }
+
         public Builder customPath(@Nullable String customPath) {
-            this.customPath = customPath;
+            $.customPath = customPath;
             return this;
         }
+
         public Builder customQueryString(@Nullable String customQueryString) {
-            this.customQueryString = customQueryString;
+            $.customQueryString = customQueryString;
             return this;
         }
+
         public Builder odataType(String odataType) {
-            this.odataType = Objects.requireNonNull(odataType);
+            $.odataType = odataType;
             return this;
         }
+
         public Builder redirectProtocol(@Nullable String redirectProtocol) {
-            this.redirectProtocol = redirectProtocol;
+            $.redirectProtocol = redirectProtocol;
             return this;
         }
+
         public Builder redirectType(@Nullable String redirectType) {
-            this.redirectType = redirectType;
+            $.redirectType = redirectType;
             return this;
-        }        public RedirectConfigurationResponse build() {
-            return new RedirectConfigurationResponse(customFragment, customHost, customPath, customQueryString, odataType, redirectProtocol, redirectType);
+        }
+
+        public RedirectConfigurationResponse build() {
+            $.odataType = Codegen.stringProp("odataType").arg($.odataType).require();
+            return $;
         }
     }
+
 }

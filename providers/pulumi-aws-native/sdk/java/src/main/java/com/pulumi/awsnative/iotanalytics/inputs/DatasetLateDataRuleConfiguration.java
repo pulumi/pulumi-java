@@ -15,45 +15,44 @@ public final class DatasetLateDataRuleConfiguration extends com.pulumi.resources
     public static final DatasetLateDataRuleConfiguration Empty = new DatasetLateDataRuleConfiguration();
 
     @Import(name="deltaTimeSessionWindowConfiguration")
-      private final @Nullable DatasetDeltaTimeSessionWindowConfiguration deltaTimeSessionWindowConfiguration;
+    private @Nullable DatasetDeltaTimeSessionWindowConfiguration deltaTimeSessionWindowConfiguration;
 
     public Optional<DatasetDeltaTimeSessionWindowConfiguration> deltaTimeSessionWindowConfiguration() {
-        return this.deltaTimeSessionWindowConfiguration == null ? Optional.empty() : Optional.ofNullable(this.deltaTimeSessionWindowConfiguration);
+        return Optional.ofNullable(this.deltaTimeSessionWindowConfiguration);
     }
 
-    public DatasetLateDataRuleConfiguration(@Nullable DatasetDeltaTimeSessionWindowConfiguration deltaTimeSessionWindowConfiguration) {
-        this.deltaTimeSessionWindowConfiguration = deltaTimeSessionWindowConfiguration;
-    }
+    private DatasetLateDataRuleConfiguration() {}
 
-    private DatasetLateDataRuleConfiguration() {
-        this.deltaTimeSessionWindowConfiguration = null;
+    private DatasetLateDataRuleConfiguration(DatasetLateDataRuleConfiguration $) {
+        this.deltaTimeSessionWindowConfiguration = $.deltaTimeSessionWindowConfiguration;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DatasetLateDataRuleConfiguration defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable DatasetDeltaTimeSessionWindowConfiguration deltaTimeSessionWindowConfiguration;
+        private DatasetLateDataRuleConfiguration $;
 
         public Builder() {
-    	      // Empty
+            $ = new DatasetLateDataRuleConfiguration();
         }
 
         public Builder(DatasetLateDataRuleConfiguration defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.deltaTimeSessionWindowConfiguration = defaults.deltaTimeSessionWindowConfiguration;
+            $ = new DatasetLateDataRuleConfiguration(Objects.requireNonNull(defaults));
         }
 
         public Builder deltaTimeSessionWindowConfiguration(@Nullable DatasetDeltaTimeSessionWindowConfiguration deltaTimeSessionWindowConfiguration) {
-            this.deltaTimeSessionWindowConfiguration = deltaTimeSessionWindowConfiguration;
+            $.deltaTimeSessionWindowConfiguration = deltaTimeSessionWindowConfiguration;
             return this;
-        }        public DatasetLateDataRuleConfiguration build() {
-            return new DatasetLateDataRuleConfiguration(deltaTimeSessionWindowConfiguration);
+        }
+
+        public DatasetLateDataRuleConfiguration build() {
+            return $;
         }
     }
+
 }

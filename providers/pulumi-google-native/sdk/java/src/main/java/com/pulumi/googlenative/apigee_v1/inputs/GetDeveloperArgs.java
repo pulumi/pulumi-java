@@ -15,78 +15,72 @@ public final class GetDeveloperArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetDeveloperArgs Empty = new GetDeveloperArgs();
 
     @Import(name="action")
-      private final @Nullable String action;
+    private @Nullable String action;
 
     public Optional<String> action() {
-        return this.action == null ? Optional.empty() : Optional.ofNullable(this.action);
+        return Optional.ofNullable(this.action);
     }
 
     @Import(name="developerId", required=true)
-      private final String developerId;
+    private String developerId;
 
     public String developerId() {
         return this.developerId;
     }
 
     @Import(name="organizationId", required=true)
-      private final String organizationId;
+    private String organizationId;
 
     public String organizationId() {
         return this.organizationId;
     }
 
-    public GetDeveloperArgs(
-        @Nullable String action,
-        String developerId,
-        String organizationId) {
-        this.action = action;
-        this.developerId = Objects.requireNonNull(developerId, "expected parameter 'developerId' to be non-null");
-        this.organizationId = Objects.requireNonNull(organizationId, "expected parameter 'organizationId' to be non-null");
-    }
+    private GetDeveloperArgs() {}
 
-    private GetDeveloperArgs() {
-        this.action = null;
-        this.developerId = null;
-        this.organizationId = null;
+    private GetDeveloperArgs(GetDeveloperArgs $) {
+        this.action = $.action;
+        this.developerId = $.developerId;
+        this.organizationId = $.organizationId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetDeveloperArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String action;
-        private String developerId;
-        private String organizationId;
+        private GetDeveloperArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetDeveloperArgs();
         }
 
         public Builder(GetDeveloperArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.action = defaults.action;
-    	      this.developerId = defaults.developerId;
-    	      this.organizationId = defaults.organizationId;
+            $ = new GetDeveloperArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder action(@Nullable String action) {
-            this.action = action;
+            $.action = action;
             return this;
         }
+
         public Builder developerId(String developerId) {
-            this.developerId = Objects.requireNonNull(developerId);
+            $.developerId = developerId;
             return this;
         }
+
         public Builder organizationId(String organizationId) {
-            this.organizationId = Objects.requireNonNull(organizationId);
+            $.organizationId = organizationId;
             return this;
-        }        public GetDeveloperArgs build() {
-            return new GetDeveloperArgs(action, developerId, organizationId);
+        }
+
+        public GetDeveloperArgs build() {
+            $.developerId = Objects.requireNonNull($.developerId, "expected parameter 'developerId' to be non-null");
+            $.organizationId = Objects.requireNonNull($.organizationId, "expected parameter 'organizationId' to be non-null");
+            return $;
         }
     }
+
 }

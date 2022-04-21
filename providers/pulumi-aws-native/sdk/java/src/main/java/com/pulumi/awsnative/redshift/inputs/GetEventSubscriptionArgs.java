@@ -17,45 +17,45 @@ public final class GetEventSubscriptionArgs extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="subscriptionName", required=true)
-      private final String subscriptionName;
+    private String subscriptionName;
 
     public String subscriptionName() {
         return this.subscriptionName;
     }
 
-    public GetEventSubscriptionArgs(String subscriptionName) {
-        this.subscriptionName = Objects.requireNonNull(subscriptionName, "expected parameter 'subscriptionName' to be non-null");
-    }
+    private GetEventSubscriptionArgs() {}
 
-    private GetEventSubscriptionArgs() {
-        this.subscriptionName = null;
+    private GetEventSubscriptionArgs(GetEventSubscriptionArgs $) {
+        this.subscriptionName = $.subscriptionName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetEventSubscriptionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String subscriptionName;
+        private GetEventSubscriptionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetEventSubscriptionArgs();
         }
 
         public Builder(GetEventSubscriptionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.subscriptionName = defaults.subscriptionName;
+            $ = new GetEventSubscriptionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder subscriptionName(String subscriptionName) {
-            this.subscriptionName = Objects.requireNonNull(subscriptionName);
+            $.subscriptionName = subscriptionName;
             return this;
-        }        public GetEventSubscriptionArgs build() {
-            return new GetEventSubscriptionArgs(subscriptionName);
+        }
+
+        public GetEventSubscriptionArgs build() {
+            $.subscriptionName = Objects.requireNonNull($.subscriptionName, "expected parameter 'subscriptionName' to be non-null");
+            return $;
         }
     }
+
 }

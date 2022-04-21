@@ -5,7 +5,6 @@ package com.pulumi.gcp.compute.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -15,49 +14,49 @@ public final class InstanceFromMachineImageScratchDiskGetArgs extends com.pulumi
     public static final InstanceFromMachineImageScratchDiskGetArgs Empty = new InstanceFromMachineImageScratchDiskGetArgs();
 
     @Import(name="interface", required=true)
-      private final Output<String> interface_;
+    private Output<String> interface_;
 
     public Output<String> interface_() {
         return this.interface_;
     }
 
-    public InstanceFromMachineImageScratchDiskGetArgs(Output<String> interface_) {
-        this.interface_ = Objects.requireNonNull(interface_, "expected parameter 'interface' to be non-null");
-    }
+    private InstanceFromMachineImageScratchDiskGetArgs() {}
 
-    private InstanceFromMachineImageScratchDiskGetArgs() {
-        this.interface_ = Codegen.empty();
+    private InstanceFromMachineImageScratchDiskGetArgs(InstanceFromMachineImageScratchDiskGetArgs $) {
+        this.interface_ = $.interface_;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(InstanceFromMachineImageScratchDiskGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> interface_;
+        private InstanceFromMachineImageScratchDiskGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new InstanceFromMachineImageScratchDiskGetArgs();
         }
 
         public Builder(InstanceFromMachineImageScratchDiskGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.interface_ = defaults.interface_;
+            $ = new InstanceFromMachineImageScratchDiskGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder interface_(Output<String> interface_) {
-            this.interface_ = Objects.requireNonNull(interface_);
+            $.interface_ = interface_;
             return this;
         }
+
         public Builder interface_(String interface_) {
-            this.interface_ = Output.of(Objects.requireNonNull(interface_));
-            return this;
-        }        public InstanceFromMachineImageScratchDiskGetArgs build() {
-            return new InstanceFromMachineImageScratchDiskGetArgs(interface_);
+            return interface_(Output.of(interface_));
+        }
+
+        public InstanceFromMachineImageScratchDiskGetArgs build() {
+            $.interface_ = Objects.requireNonNull($.interface_, "expected parameter 'interface' to be non-null");
+            return $;
         }
     }
+
 }

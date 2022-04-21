@@ -5,7 +5,6 @@ package com.pulumi.aws.sagemaker.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,52 +19,53 @@ public final class WorkforceSourceIpConfigGetArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="cidrs", required=true)
-      private final Output<List<String>> cidrs;
+    private Output<List<String>> cidrs;
 
     public Output<List<String>> cidrs() {
         return this.cidrs;
     }
 
-    public WorkforceSourceIpConfigGetArgs(Output<List<String>> cidrs) {
-        this.cidrs = Objects.requireNonNull(cidrs, "expected parameter 'cidrs' to be non-null");
-    }
+    private WorkforceSourceIpConfigGetArgs() {}
 
-    private WorkforceSourceIpConfigGetArgs() {
-        this.cidrs = Codegen.empty();
+    private WorkforceSourceIpConfigGetArgs(WorkforceSourceIpConfigGetArgs $) {
+        this.cidrs = $.cidrs;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WorkforceSourceIpConfigGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<List<String>> cidrs;
+        private WorkforceSourceIpConfigGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new WorkforceSourceIpConfigGetArgs();
         }
 
         public Builder(WorkforceSourceIpConfigGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cidrs = defaults.cidrs;
+            $ = new WorkforceSourceIpConfigGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder cidrs(Output<List<String>> cidrs) {
-            this.cidrs = Objects.requireNonNull(cidrs);
+            $.cidrs = cidrs;
             return this;
         }
+
         public Builder cidrs(List<String> cidrs) {
-            this.cidrs = Output.of(Objects.requireNonNull(cidrs));
-            return this;
+            return cidrs(Output.of(cidrs));
         }
+
         public Builder cidrs(String... cidrs) {
             return cidrs(List.of(cidrs));
-        }        public WorkforceSourceIpConfigGetArgs build() {
-            return new WorkforceSourceIpConfigGetArgs(cidrs);
+        }
+
+        public WorkforceSourceIpConfigGetArgs build() {
+            $.cidrs = Objects.requireNonNull($.cidrs, "expected parameter 'cidrs' to be non-null");
+            return $;
         }
     }
+
 }

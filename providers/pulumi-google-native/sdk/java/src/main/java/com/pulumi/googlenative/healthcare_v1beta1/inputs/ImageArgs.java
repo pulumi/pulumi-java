@@ -5,9 +5,9 @@ package com.pulumi.googlenative.healthcare_v1beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class ImageArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="gcsUri")
-      private final @Nullable Output<String> gcsUri;
+    private @Nullable Output<String> gcsUri;
 
-    public Output<String> gcsUri() {
-        return this.gcsUri == null ? Codegen.empty() : this.gcsUri;
+    public Optional<Output<String>> gcsUri() {
+        return Optional.ofNullable(this.gcsUri);
     }
 
     /**
@@ -35,63 +35,58 @@ public final class ImageArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="rawBytes")
-      private final @Nullable Output<String> rawBytes;
+    private @Nullable Output<String> rawBytes;
 
-    public Output<String> rawBytes() {
-        return this.rawBytes == null ? Codegen.empty() : this.rawBytes;
+    public Optional<Output<String>> rawBytes() {
+        return Optional.ofNullable(this.rawBytes);
     }
 
-    public ImageArgs(
-        @Nullable Output<String> gcsUri,
-        @Nullable Output<String> rawBytes) {
-        this.gcsUri = gcsUri;
-        this.rawBytes = rawBytes;
-    }
+    private ImageArgs() {}
 
-    private ImageArgs() {
-        this.gcsUri = Codegen.empty();
-        this.rawBytes = Codegen.empty();
+    private ImageArgs(ImageArgs $) {
+        this.gcsUri = $.gcsUri;
+        this.rawBytes = $.rawBytes;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ImageArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> gcsUri;
-        private @Nullable Output<String> rawBytes;
+        private ImageArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ImageArgs();
         }
 
         public Builder(ImageArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.gcsUri = defaults.gcsUri;
-    	      this.rawBytes = defaults.rawBytes;
+            $ = new ImageArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder gcsUri(@Nullable Output<String> gcsUri) {
-            this.gcsUri = gcsUri;
+            $.gcsUri = gcsUri;
             return this;
         }
-        public Builder gcsUri(@Nullable String gcsUri) {
-            this.gcsUri = Codegen.ofNullable(gcsUri);
-            return this;
+
+        public Builder gcsUri(String gcsUri) {
+            return gcsUri(Output.of(gcsUri));
         }
+
         public Builder rawBytes(@Nullable Output<String> rawBytes) {
-            this.rawBytes = rawBytes;
+            $.rawBytes = rawBytes;
             return this;
         }
-        public Builder rawBytes(@Nullable String rawBytes) {
-            this.rawBytes = Codegen.ofNullable(rawBytes);
-            return this;
-        }        public ImageArgs build() {
-            return new ImageArgs(gcsUri, rawBytes);
+
+        public Builder rawBytes(String rawBytes) {
+            return rawBytes(Output.of(rawBytes));
+        }
+
+        public ImageArgs build() {
+            return $;
         }
     }
+
 }

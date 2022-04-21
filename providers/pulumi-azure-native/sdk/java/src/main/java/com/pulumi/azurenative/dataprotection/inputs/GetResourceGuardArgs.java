@@ -17,7 +17,7 @@ public final class GetResourceGuardArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -28,55 +28,52 @@ public final class GetResourceGuardArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="resourceGuardsName", required=true)
-      private final String resourceGuardsName;
+    private String resourceGuardsName;
 
     public String resourceGuardsName() {
         return this.resourceGuardsName;
     }
 
-    public GetResourceGuardArgs(
-        String resourceGroupName,
-        String resourceGuardsName) {
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.resourceGuardsName = Objects.requireNonNull(resourceGuardsName, "expected parameter 'resourceGuardsName' to be non-null");
-    }
+    private GetResourceGuardArgs() {}
 
-    private GetResourceGuardArgs() {
-        this.resourceGroupName = null;
-        this.resourceGuardsName = null;
+    private GetResourceGuardArgs(GetResourceGuardArgs $) {
+        this.resourceGroupName = $.resourceGroupName;
+        this.resourceGuardsName = $.resourceGuardsName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetResourceGuardArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String resourceGroupName;
-        private String resourceGuardsName;
+        private GetResourceGuardArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetResourceGuardArgs();
         }
 
         public Builder(GetResourceGuardArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.resourceGuardsName = defaults.resourceGuardsName;
+            $ = new GetResourceGuardArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGuardsName(String resourceGuardsName) {
-            this.resourceGuardsName = Objects.requireNonNull(resourceGuardsName);
+            $.resourceGuardsName = resourceGuardsName;
             return this;
-        }        public GetResourceGuardArgs build() {
-            return new GetResourceGuardArgs(resourceGroupName, resourceGuardsName);
+        }
+
+        public GetResourceGuardArgs build() {
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.resourceGuardsName = Objects.requireNonNull($.resourceGuardsName, "expected parameter 'resourceGuardsName' to be non-null");
+            return $;
         }
     }
+
 }

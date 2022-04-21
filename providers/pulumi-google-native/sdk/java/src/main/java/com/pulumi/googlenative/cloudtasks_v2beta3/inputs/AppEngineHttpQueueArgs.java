@@ -5,9 +5,9 @@ package com.pulumi.googlenative.cloudtasks_v2beta3.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.cloudtasks_v2beta3.inputs.AppEngineRoutingArgs;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class AppEngineHttpQueueArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="appEngineRoutingOverride")
-      private final @Nullable Output<AppEngineRoutingArgs> appEngineRoutingOverride;
+    private @Nullable Output<AppEngineRoutingArgs> appEngineRoutingOverride;
 
-    public Output<AppEngineRoutingArgs> appEngineRoutingOverride() {
-        return this.appEngineRoutingOverride == null ? Codegen.empty() : this.appEngineRoutingOverride;
+    public Optional<Output<AppEngineRoutingArgs>> appEngineRoutingOverride() {
+        return Optional.ofNullable(this.appEngineRoutingOverride);
     }
 
-    public AppEngineHttpQueueArgs(@Nullable Output<AppEngineRoutingArgs> appEngineRoutingOverride) {
-        this.appEngineRoutingOverride = appEngineRoutingOverride;
-    }
+    private AppEngineHttpQueueArgs() {}
 
-    private AppEngineHttpQueueArgs() {
-        this.appEngineRoutingOverride = Codegen.empty();
+    private AppEngineHttpQueueArgs(AppEngineHttpQueueArgs $) {
+        this.appEngineRoutingOverride = $.appEngineRoutingOverride;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AppEngineHttpQueueArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<AppEngineRoutingArgs> appEngineRoutingOverride;
+        private AppEngineHttpQueueArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AppEngineHttpQueueArgs();
         }
 
         public Builder(AppEngineHttpQueueArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.appEngineRoutingOverride = defaults.appEngineRoutingOverride;
+            $ = new AppEngineHttpQueueArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder appEngineRoutingOverride(@Nullable Output<AppEngineRoutingArgs> appEngineRoutingOverride) {
-            this.appEngineRoutingOverride = appEngineRoutingOverride;
+            $.appEngineRoutingOverride = appEngineRoutingOverride;
             return this;
         }
-        public Builder appEngineRoutingOverride(@Nullable AppEngineRoutingArgs appEngineRoutingOverride) {
-            this.appEngineRoutingOverride = Codegen.ofNullable(appEngineRoutingOverride);
-            return this;
-        }        public AppEngineHttpQueueArgs build() {
-            return new AppEngineHttpQueueArgs(appEngineRoutingOverride);
+
+        public Builder appEngineRoutingOverride(AppEngineRoutingArgs appEngineRoutingOverride) {
+            return appEngineRoutingOverride(Output.of(appEngineRoutingOverride));
+        }
+
+        public AppEngineHttpQueueArgs build() {
+            return $;
         }
     }
+
 }

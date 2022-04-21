@@ -12,11 +12,11 @@ import com.pulumi.azurenative.logic.inputs.WorkflowParameterArgs;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -29,10 +29,10 @@ public final class WorkflowArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="accessControl")
-      private final @Nullable Output<FlowAccessControlConfigurationArgs> accessControl;
+    private @Nullable Output<FlowAccessControlConfigurationArgs> accessControl;
 
-    public Output<FlowAccessControlConfigurationArgs> accessControl() {
-        return this.accessControl == null ? Codegen.empty() : this.accessControl;
+    public Optional<Output<FlowAccessControlConfigurationArgs>> accessControl() {
+        return Optional.ofNullable(this.accessControl);
     }
 
     /**
@@ -40,10 +40,10 @@ public final class WorkflowArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="definition")
-      private final @Nullable Output<Object> definition;
+    private @Nullable Output<Object> definition;
 
-    public Output<Object> definition() {
-        return this.definition == null ? Codegen.empty() : this.definition;
+    public Optional<Output<Object>> definition() {
+        return Optional.ofNullable(this.definition);
     }
 
     /**
@@ -51,10 +51,10 @@ public final class WorkflowArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="endpointsConfiguration")
-      private final @Nullable Output<FlowEndpointsConfigurationArgs> endpointsConfiguration;
+    private @Nullable Output<FlowEndpointsConfigurationArgs> endpointsConfiguration;
 
-    public Output<FlowEndpointsConfigurationArgs> endpointsConfiguration() {
-        return this.endpointsConfiguration == null ? Codegen.empty() : this.endpointsConfiguration;
+    public Optional<Output<FlowEndpointsConfigurationArgs>> endpointsConfiguration() {
+        return Optional.ofNullable(this.endpointsConfiguration);
     }
 
     /**
@@ -62,10 +62,10 @@ public final class WorkflowArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="identity")
-      private final @Nullable Output<ManagedServiceIdentityArgs> identity;
+    private @Nullable Output<ManagedServiceIdentityArgs> identity;
 
-    public Output<ManagedServiceIdentityArgs> identity() {
-        return this.identity == null ? Codegen.empty() : this.identity;
+    public Optional<Output<ManagedServiceIdentityArgs>> identity() {
+        return Optional.ofNullable(this.identity);
     }
 
     /**
@@ -73,10 +73,10 @@ public final class WorkflowArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="integrationAccount")
-      private final @Nullable Output<ResourceReferenceArgs> integrationAccount;
+    private @Nullable Output<ResourceReferenceArgs> integrationAccount;
 
-    public Output<ResourceReferenceArgs> integrationAccount() {
-        return this.integrationAccount == null ? Codegen.empty() : this.integrationAccount;
+    public Optional<Output<ResourceReferenceArgs>> integrationAccount() {
+        return Optional.ofNullable(this.integrationAccount);
     }
 
     /**
@@ -84,10 +84,10 @@ public final class WorkflowArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="integrationServiceEnvironment")
-      private final @Nullable Output<ResourceReferenceArgs> integrationServiceEnvironment;
+    private @Nullable Output<ResourceReferenceArgs> integrationServiceEnvironment;
 
-    public Output<ResourceReferenceArgs> integrationServiceEnvironment() {
-        return this.integrationServiceEnvironment == null ? Codegen.empty() : this.integrationServiceEnvironment;
+    public Optional<Output<ResourceReferenceArgs>> integrationServiceEnvironment() {
+        return Optional.ofNullable(this.integrationServiceEnvironment);
     }
 
     /**
@@ -95,10 +95,10 @@ public final class WorkflowArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -106,10 +106,10 @@ public final class WorkflowArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="parameters")
-      private final @Nullable Output<Map<String,WorkflowParameterArgs>> parameters;
+    private @Nullable Output<Map<String,WorkflowParameterArgs>> parameters;
 
-    public Output<Map<String,WorkflowParameterArgs>> parameters() {
-        return this.parameters == null ? Codegen.empty() : this.parameters;
+    public Optional<Output<Map<String,WorkflowParameterArgs>>> parameters() {
+        return Optional.ofNullable(this.parameters);
     }
 
     /**
@@ -117,7 +117,7 @@ public final class WorkflowArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -128,10 +128,10 @@ public final class WorkflowArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="state")
-      private final @Nullable Output<Either<String,WorkflowState>> state;
+    private @Nullable Output<Either<String,WorkflowState>> state;
 
-    public Output<Either<String,WorkflowState>> state() {
-        return this.state == null ? Codegen.empty() : this.state;
+    public Optional<Output<Either<String,WorkflowState>>> state() {
+        return Optional.ofNullable(this.state);
     }
 
     /**
@@ -139,10 +139,10 @@ public final class WorkflowArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -150,193 +150,159 @@ public final class WorkflowArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="workflowName")
-      private final @Nullable Output<String> workflowName;
+    private @Nullable Output<String> workflowName;
 
-    public Output<String> workflowName() {
-        return this.workflowName == null ? Codegen.empty() : this.workflowName;
+    public Optional<Output<String>> workflowName() {
+        return Optional.ofNullable(this.workflowName);
     }
 
-    public WorkflowArgs(
-        @Nullable Output<FlowAccessControlConfigurationArgs> accessControl,
-        @Nullable Output<Object> definition,
-        @Nullable Output<FlowEndpointsConfigurationArgs> endpointsConfiguration,
-        @Nullable Output<ManagedServiceIdentityArgs> identity,
-        @Nullable Output<ResourceReferenceArgs> integrationAccount,
-        @Nullable Output<ResourceReferenceArgs> integrationServiceEnvironment,
-        @Nullable Output<String> location,
-        @Nullable Output<Map<String,WorkflowParameterArgs>> parameters,
-        Output<String> resourceGroupName,
-        @Nullable Output<Either<String,WorkflowState>> state,
-        @Nullable Output<Map<String,String>> tags,
-        @Nullable Output<String> workflowName) {
-        this.accessControl = accessControl;
-        this.definition = definition;
-        this.endpointsConfiguration = endpointsConfiguration;
-        this.identity = identity;
-        this.integrationAccount = integrationAccount;
-        this.integrationServiceEnvironment = integrationServiceEnvironment;
-        this.location = location;
-        this.parameters = parameters;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.state = state;
-        this.tags = tags;
-        this.workflowName = workflowName;
-    }
+    private WorkflowArgs() {}
 
-    private WorkflowArgs() {
-        this.accessControl = Codegen.empty();
-        this.definition = Codegen.empty();
-        this.endpointsConfiguration = Codegen.empty();
-        this.identity = Codegen.empty();
-        this.integrationAccount = Codegen.empty();
-        this.integrationServiceEnvironment = Codegen.empty();
-        this.location = Codegen.empty();
-        this.parameters = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.state = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.workflowName = Codegen.empty();
+    private WorkflowArgs(WorkflowArgs $) {
+        this.accessControl = $.accessControl;
+        this.definition = $.definition;
+        this.endpointsConfiguration = $.endpointsConfiguration;
+        this.identity = $.identity;
+        this.integrationAccount = $.integrationAccount;
+        this.integrationServiceEnvironment = $.integrationServiceEnvironment;
+        this.location = $.location;
+        this.parameters = $.parameters;
+        this.resourceGroupName = $.resourceGroupName;
+        this.state = $.state;
+        this.tags = $.tags;
+        this.workflowName = $.workflowName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WorkflowArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<FlowAccessControlConfigurationArgs> accessControl;
-        private @Nullable Output<Object> definition;
-        private @Nullable Output<FlowEndpointsConfigurationArgs> endpointsConfiguration;
-        private @Nullable Output<ManagedServiceIdentityArgs> identity;
-        private @Nullable Output<ResourceReferenceArgs> integrationAccount;
-        private @Nullable Output<ResourceReferenceArgs> integrationServiceEnvironment;
-        private @Nullable Output<String> location;
-        private @Nullable Output<Map<String,WorkflowParameterArgs>> parameters;
-        private Output<String> resourceGroupName;
-        private @Nullable Output<Either<String,WorkflowState>> state;
-        private @Nullable Output<Map<String,String>> tags;
-        private @Nullable Output<String> workflowName;
+        private WorkflowArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new WorkflowArgs();
         }
 
         public Builder(WorkflowArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accessControl = defaults.accessControl;
-    	      this.definition = defaults.definition;
-    	      this.endpointsConfiguration = defaults.endpointsConfiguration;
-    	      this.identity = defaults.identity;
-    	      this.integrationAccount = defaults.integrationAccount;
-    	      this.integrationServiceEnvironment = defaults.integrationServiceEnvironment;
-    	      this.location = defaults.location;
-    	      this.parameters = defaults.parameters;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.state = defaults.state;
-    	      this.tags = defaults.tags;
-    	      this.workflowName = defaults.workflowName;
+            $ = new WorkflowArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder accessControl(@Nullable Output<FlowAccessControlConfigurationArgs> accessControl) {
-            this.accessControl = accessControl;
+            $.accessControl = accessControl;
             return this;
         }
-        public Builder accessControl(@Nullable FlowAccessControlConfigurationArgs accessControl) {
-            this.accessControl = Codegen.ofNullable(accessControl);
-            return this;
+
+        public Builder accessControl(FlowAccessControlConfigurationArgs accessControl) {
+            return accessControl(Output.of(accessControl));
         }
+
         public Builder definition(@Nullable Output<Object> definition) {
-            this.definition = definition;
+            $.definition = definition;
             return this;
         }
-        public Builder definition(@Nullable Object definition) {
-            this.definition = Codegen.ofNullable(definition);
-            return this;
+
+        public Builder definition(Object definition) {
+            return definition(Output.of(definition));
         }
+
         public Builder endpointsConfiguration(@Nullable Output<FlowEndpointsConfigurationArgs> endpointsConfiguration) {
-            this.endpointsConfiguration = endpointsConfiguration;
+            $.endpointsConfiguration = endpointsConfiguration;
             return this;
         }
-        public Builder endpointsConfiguration(@Nullable FlowEndpointsConfigurationArgs endpointsConfiguration) {
-            this.endpointsConfiguration = Codegen.ofNullable(endpointsConfiguration);
-            return this;
+
+        public Builder endpointsConfiguration(FlowEndpointsConfigurationArgs endpointsConfiguration) {
+            return endpointsConfiguration(Output.of(endpointsConfiguration));
         }
+
         public Builder identity(@Nullable Output<ManagedServiceIdentityArgs> identity) {
-            this.identity = identity;
+            $.identity = identity;
             return this;
         }
-        public Builder identity(@Nullable ManagedServiceIdentityArgs identity) {
-            this.identity = Codegen.ofNullable(identity);
-            return this;
+
+        public Builder identity(ManagedServiceIdentityArgs identity) {
+            return identity(Output.of(identity));
         }
+
         public Builder integrationAccount(@Nullable Output<ResourceReferenceArgs> integrationAccount) {
-            this.integrationAccount = integrationAccount;
+            $.integrationAccount = integrationAccount;
             return this;
         }
-        public Builder integrationAccount(@Nullable ResourceReferenceArgs integrationAccount) {
-            this.integrationAccount = Codegen.ofNullable(integrationAccount);
-            return this;
+
+        public Builder integrationAccount(ResourceReferenceArgs integrationAccount) {
+            return integrationAccount(Output.of(integrationAccount));
         }
+
         public Builder integrationServiceEnvironment(@Nullable Output<ResourceReferenceArgs> integrationServiceEnvironment) {
-            this.integrationServiceEnvironment = integrationServiceEnvironment;
+            $.integrationServiceEnvironment = integrationServiceEnvironment;
             return this;
         }
-        public Builder integrationServiceEnvironment(@Nullable ResourceReferenceArgs integrationServiceEnvironment) {
-            this.integrationServiceEnvironment = Codegen.ofNullable(integrationServiceEnvironment);
-            return this;
+
+        public Builder integrationServiceEnvironment(ResourceReferenceArgs integrationServiceEnvironment) {
+            return integrationServiceEnvironment(Output.of(integrationServiceEnvironment));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder parameters(@Nullable Output<Map<String,WorkflowParameterArgs>> parameters) {
-            this.parameters = parameters;
+            $.parameters = parameters;
             return this;
         }
-        public Builder parameters(@Nullable Map<String,WorkflowParameterArgs> parameters) {
-            this.parameters = Codegen.ofNullable(parameters);
-            return this;
+
+        public Builder parameters(Map<String,WorkflowParameterArgs> parameters) {
+            return parameters(Output.of(parameters));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder state(@Nullable Output<Either<String,WorkflowState>> state) {
-            this.state = state;
+            $.state = state;
             return this;
         }
-        public Builder state(@Nullable Either<String,WorkflowState> state) {
-            this.state = Codegen.ofNullable(state);
-            return this;
+
+        public Builder state(Either<String,WorkflowState> state) {
+            return state(Output.of(state));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder workflowName(@Nullable Output<String> workflowName) {
-            this.workflowName = workflowName;
+            $.workflowName = workflowName;
             return this;
         }
-        public Builder workflowName(@Nullable String workflowName) {
-            this.workflowName = Codegen.ofNullable(workflowName);
-            return this;
-        }        public WorkflowArgs build() {
-            return new WorkflowArgs(accessControl, definition, endpointsConfiguration, identity, integrationAccount, integrationServiceEnvironment, location, parameters, resourceGroupName, state, tags, workflowName);
+
+        public Builder workflowName(String workflowName) {
+            return workflowName(Output.of(workflowName));
+        }
+
+        public WorkflowArgs build() {
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

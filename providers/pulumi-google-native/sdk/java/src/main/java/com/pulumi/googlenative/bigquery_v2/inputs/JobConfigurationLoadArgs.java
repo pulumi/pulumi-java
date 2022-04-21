@@ -5,7 +5,6 @@ package com.pulumi.googlenative.bigquery_v2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.bigquery_v2.inputs.ClusteringArgs;
 import com.pulumi.googlenative.bigquery_v2.inputs.DestinationTablePropertiesArgs;
 import com.pulumi.googlenative.bigquery_v2.inputs.EncryptionConfigurationArgs;
@@ -20,6 +19,7 @@ import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -32,10 +32,10 @@ public final class JobConfigurationLoadArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="allowJaggedRows")
-      private final @Nullable Output<Boolean> allowJaggedRows;
+    private @Nullable Output<Boolean> allowJaggedRows;
 
-    public Output<Boolean> allowJaggedRows() {
-        return this.allowJaggedRows == null ? Codegen.empty() : this.allowJaggedRows;
+    public Optional<Output<Boolean>> allowJaggedRows() {
+        return Optional.ofNullable(this.allowJaggedRows);
     }
 
     /**
@@ -43,10 +43,10 @@ public final class JobConfigurationLoadArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="allowQuotedNewlines")
-      private final @Nullable Output<Boolean> allowQuotedNewlines;
+    private @Nullable Output<Boolean> allowQuotedNewlines;
 
-    public Output<Boolean> allowQuotedNewlines() {
-        return this.allowQuotedNewlines == null ? Codegen.empty() : this.allowQuotedNewlines;
+    public Optional<Output<Boolean>> allowQuotedNewlines() {
+        return Optional.ofNullable(this.allowQuotedNewlines);
     }
 
     /**
@@ -54,10 +54,10 @@ public final class JobConfigurationLoadArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="autodetect")
-      private final @Nullable Output<Boolean> autodetect;
+    private @Nullable Output<Boolean> autodetect;
 
-    public Output<Boolean> autodetect() {
-        return this.autodetect == null ? Codegen.empty() : this.autodetect;
+    public Optional<Output<Boolean>> autodetect() {
+        return Optional.ofNullable(this.autodetect);
     }
 
     /**
@@ -65,10 +65,10 @@ public final class JobConfigurationLoadArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="clustering")
-      private final @Nullable Output<ClusteringArgs> clustering;
+    private @Nullable Output<ClusteringArgs> clustering;
 
-    public Output<ClusteringArgs> clustering() {
-        return this.clustering == null ? Codegen.empty() : this.clustering;
+    public Optional<Output<ClusteringArgs>> clustering() {
+        return Optional.ofNullable(this.clustering);
     }
 
     /**
@@ -76,10 +76,10 @@ public final class JobConfigurationLoadArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="createDisposition")
-      private final @Nullable Output<String> createDisposition;
+    private @Nullable Output<String> createDisposition;
 
-    public Output<String> createDisposition() {
-        return this.createDisposition == null ? Codegen.empty() : this.createDisposition;
+    public Optional<Output<String>> createDisposition() {
+        return Optional.ofNullable(this.createDisposition);
     }
 
     /**
@@ -87,10 +87,10 @@ public final class JobConfigurationLoadArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="decimalTargetTypes")
-      private final @Nullable Output<List<String>> decimalTargetTypes;
+    private @Nullable Output<List<String>> decimalTargetTypes;
 
-    public Output<List<String>> decimalTargetTypes() {
-        return this.decimalTargetTypes == null ? Codegen.empty() : this.decimalTargetTypes;
+    public Optional<Output<List<String>>> decimalTargetTypes() {
+        return Optional.ofNullable(this.decimalTargetTypes);
     }
 
     /**
@@ -98,10 +98,10 @@ public final class JobConfigurationLoadArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="destinationEncryptionConfiguration")
-      private final @Nullable Output<EncryptionConfigurationArgs> destinationEncryptionConfiguration;
+    private @Nullable Output<EncryptionConfigurationArgs> destinationEncryptionConfiguration;
 
-    public Output<EncryptionConfigurationArgs> destinationEncryptionConfiguration() {
-        return this.destinationEncryptionConfiguration == null ? Codegen.empty() : this.destinationEncryptionConfiguration;
+    public Optional<Output<EncryptionConfigurationArgs>> destinationEncryptionConfiguration() {
+        return Optional.ofNullable(this.destinationEncryptionConfiguration);
     }
 
     /**
@@ -109,10 +109,10 @@ public final class JobConfigurationLoadArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="destinationTable")
-      private final @Nullable Output<TableReferenceArgs> destinationTable;
+    private @Nullable Output<TableReferenceArgs> destinationTable;
 
-    public Output<TableReferenceArgs> destinationTable() {
-        return this.destinationTable == null ? Codegen.empty() : this.destinationTable;
+    public Optional<Output<TableReferenceArgs>> destinationTable() {
+        return Optional.ofNullable(this.destinationTable);
     }
 
     /**
@@ -120,10 +120,10 @@ public final class JobConfigurationLoadArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="destinationTableProperties")
-      private final @Nullable Output<DestinationTablePropertiesArgs> destinationTableProperties;
+    private @Nullable Output<DestinationTablePropertiesArgs> destinationTableProperties;
 
-    public Output<DestinationTablePropertiesArgs> destinationTableProperties() {
-        return this.destinationTableProperties == null ? Codegen.empty() : this.destinationTableProperties;
+    public Optional<Output<DestinationTablePropertiesArgs>> destinationTableProperties() {
+        return Optional.ofNullable(this.destinationTableProperties);
     }
 
     /**
@@ -131,10 +131,10 @@ public final class JobConfigurationLoadArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="encoding")
-      private final @Nullable Output<String> encoding;
+    private @Nullable Output<String> encoding;
 
-    public Output<String> encoding() {
-        return this.encoding == null ? Codegen.empty() : this.encoding;
+    public Optional<Output<String>> encoding() {
+        return Optional.ofNullable(this.encoding);
     }
 
     /**
@@ -142,10 +142,10 @@ public final class JobConfigurationLoadArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="fieldDelimiter")
-      private final @Nullable Output<String> fieldDelimiter;
+    private @Nullable Output<String> fieldDelimiter;
 
-    public Output<String> fieldDelimiter() {
-        return this.fieldDelimiter == null ? Codegen.empty() : this.fieldDelimiter;
+    public Optional<Output<String>> fieldDelimiter() {
+        return Optional.ofNullable(this.fieldDelimiter);
     }
 
     /**
@@ -153,10 +153,10 @@ public final class JobConfigurationLoadArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="hivePartitioningOptions")
-      private final @Nullable Output<HivePartitioningOptionsArgs> hivePartitioningOptions;
+    private @Nullable Output<HivePartitioningOptionsArgs> hivePartitioningOptions;
 
-    public Output<HivePartitioningOptionsArgs> hivePartitioningOptions() {
-        return this.hivePartitioningOptions == null ? Codegen.empty() : this.hivePartitioningOptions;
+    public Optional<Output<HivePartitioningOptionsArgs>> hivePartitioningOptions() {
+        return Optional.ofNullable(this.hivePartitioningOptions);
     }
 
     /**
@@ -164,10 +164,10 @@ public final class JobConfigurationLoadArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="ignoreUnknownValues")
-      private final @Nullable Output<Boolean> ignoreUnknownValues;
+    private @Nullable Output<Boolean> ignoreUnknownValues;
 
-    public Output<Boolean> ignoreUnknownValues() {
-        return this.ignoreUnknownValues == null ? Codegen.empty() : this.ignoreUnknownValues;
+    public Optional<Output<Boolean>> ignoreUnknownValues() {
+        return Optional.ofNullable(this.ignoreUnknownValues);
     }
 
     /**
@@ -175,10 +175,10 @@ public final class JobConfigurationLoadArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="jsonExtension")
-      private final @Nullable Output<String> jsonExtension;
+    private @Nullable Output<String> jsonExtension;
 
-    public Output<String> jsonExtension() {
-        return this.jsonExtension == null ? Codegen.empty() : this.jsonExtension;
+    public Optional<Output<String>> jsonExtension() {
+        return Optional.ofNullable(this.jsonExtension);
     }
 
     /**
@@ -186,10 +186,10 @@ public final class JobConfigurationLoadArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="maxBadRecords")
-      private final @Nullable Output<Integer> maxBadRecords;
+    private @Nullable Output<Integer> maxBadRecords;
 
-    public Output<Integer> maxBadRecords() {
-        return this.maxBadRecords == null ? Codegen.empty() : this.maxBadRecords;
+    public Optional<Output<Integer>> maxBadRecords() {
+        return Optional.ofNullable(this.maxBadRecords);
     }
 
     /**
@@ -197,10 +197,10 @@ public final class JobConfigurationLoadArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="nullMarker")
-      private final @Nullable Output<String> nullMarker;
+    private @Nullable Output<String> nullMarker;
 
-    public Output<String> nullMarker() {
-        return this.nullMarker == null ? Codegen.empty() : this.nullMarker;
+    public Optional<Output<String>> nullMarker() {
+        return Optional.ofNullable(this.nullMarker);
     }
 
     /**
@@ -208,10 +208,10 @@ public final class JobConfigurationLoadArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="parquetOptions")
-      private final @Nullable Output<ParquetOptionsArgs> parquetOptions;
+    private @Nullable Output<ParquetOptionsArgs> parquetOptions;
 
-    public Output<ParquetOptionsArgs> parquetOptions() {
-        return this.parquetOptions == null ? Codegen.empty() : this.parquetOptions;
+    public Optional<Output<ParquetOptionsArgs>> parquetOptions() {
+        return Optional.ofNullable(this.parquetOptions);
     }
 
     /**
@@ -219,10 +219,10 @@ public final class JobConfigurationLoadArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="projectionFields")
-      private final @Nullable Output<List<String>> projectionFields;
+    private @Nullable Output<List<String>> projectionFields;
 
-    public Output<List<String>> projectionFields() {
-        return this.projectionFields == null ? Codegen.empty() : this.projectionFields;
+    public Optional<Output<List<String>>> projectionFields() {
+        return Optional.ofNullable(this.projectionFields);
     }
 
     /**
@@ -230,10 +230,10 @@ public final class JobConfigurationLoadArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="quote")
-      private final @Nullable Output<String> quote;
+    private @Nullable Output<String> quote;
 
-    public Output<String> quote() {
-        return this.quote == null ? Codegen.empty() : this.quote;
+    public Optional<Output<String>> quote() {
+        return Optional.ofNullable(this.quote);
     }
 
     /**
@@ -241,10 +241,10 @@ public final class JobConfigurationLoadArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="rangePartitioning")
-      private final @Nullable Output<RangePartitioningArgs> rangePartitioning;
+    private @Nullable Output<RangePartitioningArgs> rangePartitioning;
 
-    public Output<RangePartitioningArgs> rangePartitioning() {
-        return this.rangePartitioning == null ? Codegen.empty() : this.rangePartitioning;
+    public Optional<Output<RangePartitioningArgs>> rangePartitioning() {
+        return Optional.ofNullable(this.rangePartitioning);
     }
 
     /**
@@ -252,10 +252,10 @@ public final class JobConfigurationLoadArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="schema")
-      private final @Nullable Output<TableSchemaArgs> schema;
+    private @Nullable Output<TableSchemaArgs> schema;
 
-    public Output<TableSchemaArgs> schema() {
-        return this.schema == null ? Codegen.empty() : this.schema;
+    public Optional<Output<TableSchemaArgs>> schema() {
+        return Optional.ofNullable(this.schema);
     }
 
     /**
@@ -263,10 +263,10 @@ public final class JobConfigurationLoadArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="schemaUpdateOptions")
-      private final @Nullable Output<List<String>> schemaUpdateOptions;
+    private @Nullable Output<List<String>> schemaUpdateOptions;
 
-    public Output<List<String>> schemaUpdateOptions() {
-        return this.schemaUpdateOptions == null ? Codegen.empty() : this.schemaUpdateOptions;
+    public Optional<Output<List<String>>> schemaUpdateOptions() {
+        return Optional.ofNullable(this.schemaUpdateOptions);
     }
 
     /**
@@ -274,10 +274,10 @@ public final class JobConfigurationLoadArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="skipLeadingRows")
-      private final @Nullable Output<Integer> skipLeadingRows;
+    private @Nullable Output<Integer> skipLeadingRows;
 
-    public Output<Integer> skipLeadingRows() {
-        return this.skipLeadingRows == null ? Codegen.empty() : this.skipLeadingRows;
+    public Optional<Output<Integer>> skipLeadingRows() {
+        return Optional.ofNullable(this.skipLeadingRows);
     }
 
     /**
@@ -285,10 +285,10 @@ public final class JobConfigurationLoadArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="sourceFormat")
-      private final @Nullable Output<String> sourceFormat;
+    private @Nullable Output<String> sourceFormat;
 
-    public Output<String> sourceFormat() {
-        return this.sourceFormat == null ? Codegen.empty() : this.sourceFormat;
+    public Optional<Output<String>> sourceFormat() {
+        return Optional.ofNullable(this.sourceFormat);
     }
 
     /**
@@ -296,10 +296,10 @@ public final class JobConfigurationLoadArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="sourceUris")
-      private final @Nullable Output<List<String>> sourceUris;
+    private @Nullable Output<List<String>> sourceUris;
 
-    public Output<List<String>> sourceUris() {
-        return this.sourceUris == null ? Codegen.empty() : this.sourceUris;
+    public Optional<Output<List<String>>> sourceUris() {
+        return Optional.ofNullable(this.sourceUris);
     }
 
     /**
@@ -307,10 +307,10 @@ public final class JobConfigurationLoadArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="timePartitioning")
-      private final @Nullable Output<TimePartitioningArgs> timePartitioning;
+    private @Nullable Output<TimePartitioningArgs> timePartitioning;
 
-    public Output<TimePartitioningArgs> timePartitioning() {
-        return this.timePartitioning == null ? Codegen.empty() : this.timePartitioning;
+    public Optional<Output<TimePartitioningArgs>> timePartitioning() {
+        return Optional.ofNullable(this.timePartitioning);
     }
 
     /**
@@ -318,10 +318,10 @@ public final class JobConfigurationLoadArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="useAvroLogicalTypes")
-      private final @Nullable Output<Boolean> useAvroLogicalTypes;
+    private @Nullable Output<Boolean> useAvroLogicalTypes;
 
-    public Output<Boolean> useAvroLogicalTypes() {
-        return this.useAvroLogicalTypes == null ? Codegen.empty() : this.useAvroLogicalTypes;
+    public Optional<Output<Boolean>> useAvroLogicalTypes() {
+        return Optional.ofNullable(this.useAvroLogicalTypes);
     }
 
     /**
@@ -329,413 +329,334 @@ public final class JobConfigurationLoadArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="writeDisposition")
-      private final @Nullable Output<String> writeDisposition;
+    private @Nullable Output<String> writeDisposition;
 
-    public Output<String> writeDisposition() {
-        return this.writeDisposition == null ? Codegen.empty() : this.writeDisposition;
+    public Optional<Output<String>> writeDisposition() {
+        return Optional.ofNullable(this.writeDisposition);
     }
 
-    public JobConfigurationLoadArgs(
-        @Nullable Output<Boolean> allowJaggedRows,
-        @Nullable Output<Boolean> allowQuotedNewlines,
-        @Nullable Output<Boolean> autodetect,
-        @Nullable Output<ClusteringArgs> clustering,
-        @Nullable Output<String> createDisposition,
-        @Nullable Output<List<String>> decimalTargetTypes,
-        @Nullable Output<EncryptionConfigurationArgs> destinationEncryptionConfiguration,
-        @Nullable Output<TableReferenceArgs> destinationTable,
-        @Nullable Output<DestinationTablePropertiesArgs> destinationTableProperties,
-        @Nullable Output<String> encoding,
-        @Nullable Output<String> fieldDelimiter,
-        @Nullable Output<HivePartitioningOptionsArgs> hivePartitioningOptions,
-        @Nullable Output<Boolean> ignoreUnknownValues,
-        @Nullable Output<String> jsonExtension,
-        @Nullable Output<Integer> maxBadRecords,
-        @Nullable Output<String> nullMarker,
-        @Nullable Output<ParquetOptionsArgs> parquetOptions,
-        @Nullable Output<List<String>> projectionFields,
-        @Nullable Output<String> quote,
-        @Nullable Output<RangePartitioningArgs> rangePartitioning,
-        @Nullable Output<TableSchemaArgs> schema,
-        @Nullable Output<List<String>> schemaUpdateOptions,
-        @Nullable Output<Integer> skipLeadingRows,
-        @Nullable Output<String> sourceFormat,
-        @Nullable Output<List<String>> sourceUris,
-        @Nullable Output<TimePartitioningArgs> timePartitioning,
-        @Nullable Output<Boolean> useAvroLogicalTypes,
-        @Nullable Output<String> writeDisposition) {
-        this.allowJaggedRows = allowJaggedRows;
-        this.allowQuotedNewlines = allowQuotedNewlines;
-        this.autodetect = autodetect;
-        this.clustering = clustering;
-        this.createDisposition = createDisposition;
-        this.decimalTargetTypes = decimalTargetTypes;
-        this.destinationEncryptionConfiguration = destinationEncryptionConfiguration;
-        this.destinationTable = destinationTable;
-        this.destinationTableProperties = destinationTableProperties;
-        this.encoding = encoding;
-        this.fieldDelimiter = fieldDelimiter;
-        this.hivePartitioningOptions = hivePartitioningOptions;
-        this.ignoreUnknownValues = ignoreUnknownValues;
-        this.jsonExtension = jsonExtension;
-        this.maxBadRecords = maxBadRecords;
-        this.nullMarker = nullMarker;
-        this.parquetOptions = parquetOptions;
-        this.projectionFields = projectionFields;
-        this.quote = quote;
-        this.rangePartitioning = rangePartitioning;
-        this.schema = schema;
-        this.schemaUpdateOptions = schemaUpdateOptions;
-        this.skipLeadingRows = skipLeadingRows;
-        this.sourceFormat = sourceFormat;
-        this.sourceUris = sourceUris;
-        this.timePartitioning = timePartitioning;
-        this.useAvroLogicalTypes = useAvroLogicalTypes;
-        this.writeDisposition = writeDisposition;
-    }
+    private JobConfigurationLoadArgs() {}
 
-    private JobConfigurationLoadArgs() {
-        this.allowJaggedRows = Codegen.empty();
-        this.allowQuotedNewlines = Codegen.empty();
-        this.autodetect = Codegen.empty();
-        this.clustering = Codegen.empty();
-        this.createDisposition = Codegen.empty();
-        this.decimalTargetTypes = Codegen.empty();
-        this.destinationEncryptionConfiguration = Codegen.empty();
-        this.destinationTable = Codegen.empty();
-        this.destinationTableProperties = Codegen.empty();
-        this.encoding = Codegen.empty();
-        this.fieldDelimiter = Codegen.empty();
-        this.hivePartitioningOptions = Codegen.empty();
-        this.ignoreUnknownValues = Codegen.empty();
-        this.jsonExtension = Codegen.empty();
-        this.maxBadRecords = Codegen.empty();
-        this.nullMarker = Codegen.empty();
-        this.parquetOptions = Codegen.empty();
-        this.projectionFields = Codegen.empty();
-        this.quote = Codegen.empty();
-        this.rangePartitioning = Codegen.empty();
-        this.schema = Codegen.empty();
-        this.schemaUpdateOptions = Codegen.empty();
-        this.skipLeadingRows = Codegen.empty();
-        this.sourceFormat = Codegen.empty();
-        this.sourceUris = Codegen.empty();
-        this.timePartitioning = Codegen.empty();
-        this.useAvroLogicalTypes = Codegen.empty();
-        this.writeDisposition = Codegen.empty();
+    private JobConfigurationLoadArgs(JobConfigurationLoadArgs $) {
+        this.allowJaggedRows = $.allowJaggedRows;
+        this.allowQuotedNewlines = $.allowQuotedNewlines;
+        this.autodetect = $.autodetect;
+        this.clustering = $.clustering;
+        this.createDisposition = $.createDisposition;
+        this.decimalTargetTypes = $.decimalTargetTypes;
+        this.destinationEncryptionConfiguration = $.destinationEncryptionConfiguration;
+        this.destinationTable = $.destinationTable;
+        this.destinationTableProperties = $.destinationTableProperties;
+        this.encoding = $.encoding;
+        this.fieldDelimiter = $.fieldDelimiter;
+        this.hivePartitioningOptions = $.hivePartitioningOptions;
+        this.ignoreUnknownValues = $.ignoreUnknownValues;
+        this.jsonExtension = $.jsonExtension;
+        this.maxBadRecords = $.maxBadRecords;
+        this.nullMarker = $.nullMarker;
+        this.parquetOptions = $.parquetOptions;
+        this.projectionFields = $.projectionFields;
+        this.quote = $.quote;
+        this.rangePartitioning = $.rangePartitioning;
+        this.schema = $.schema;
+        this.schemaUpdateOptions = $.schemaUpdateOptions;
+        this.skipLeadingRows = $.skipLeadingRows;
+        this.sourceFormat = $.sourceFormat;
+        this.sourceUris = $.sourceUris;
+        this.timePartitioning = $.timePartitioning;
+        this.useAvroLogicalTypes = $.useAvroLogicalTypes;
+        this.writeDisposition = $.writeDisposition;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(JobConfigurationLoadArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> allowJaggedRows;
-        private @Nullable Output<Boolean> allowQuotedNewlines;
-        private @Nullable Output<Boolean> autodetect;
-        private @Nullable Output<ClusteringArgs> clustering;
-        private @Nullable Output<String> createDisposition;
-        private @Nullable Output<List<String>> decimalTargetTypes;
-        private @Nullable Output<EncryptionConfigurationArgs> destinationEncryptionConfiguration;
-        private @Nullable Output<TableReferenceArgs> destinationTable;
-        private @Nullable Output<DestinationTablePropertiesArgs> destinationTableProperties;
-        private @Nullable Output<String> encoding;
-        private @Nullable Output<String> fieldDelimiter;
-        private @Nullable Output<HivePartitioningOptionsArgs> hivePartitioningOptions;
-        private @Nullable Output<Boolean> ignoreUnknownValues;
-        private @Nullable Output<String> jsonExtension;
-        private @Nullable Output<Integer> maxBadRecords;
-        private @Nullable Output<String> nullMarker;
-        private @Nullable Output<ParquetOptionsArgs> parquetOptions;
-        private @Nullable Output<List<String>> projectionFields;
-        private @Nullable Output<String> quote;
-        private @Nullable Output<RangePartitioningArgs> rangePartitioning;
-        private @Nullable Output<TableSchemaArgs> schema;
-        private @Nullable Output<List<String>> schemaUpdateOptions;
-        private @Nullable Output<Integer> skipLeadingRows;
-        private @Nullable Output<String> sourceFormat;
-        private @Nullable Output<List<String>> sourceUris;
-        private @Nullable Output<TimePartitioningArgs> timePartitioning;
-        private @Nullable Output<Boolean> useAvroLogicalTypes;
-        private @Nullable Output<String> writeDisposition;
+        private JobConfigurationLoadArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new JobConfigurationLoadArgs();
         }
 
         public Builder(JobConfigurationLoadArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.allowJaggedRows = defaults.allowJaggedRows;
-    	      this.allowQuotedNewlines = defaults.allowQuotedNewlines;
-    	      this.autodetect = defaults.autodetect;
-    	      this.clustering = defaults.clustering;
-    	      this.createDisposition = defaults.createDisposition;
-    	      this.decimalTargetTypes = defaults.decimalTargetTypes;
-    	      this.destinationEncryptionConfiguration = defaults.destinationEncryptionConfiguration;
-    	      this.destinationTable = defaults.destinationTable;
-    	      this.destinationTableProperties = defaults.destinationTableProperties;
-    	      this.encoding = defaults.encoding;
-    	      this.fieldDelimiter = defaults.fieldDelimiter;
-    	      this.hivePartitioningOptions = defaults.hivePartitioningOptions;
-    	      this.ignoreUnknownValues = defaults.ignoreUnknownValues;
-    	      this.jsonExtension = defaults.jsonExtension;
-    	      this.maxBadRecords = defaults.maxBadRecords;
-    	      this.nullMarker = defaults.nullMarker;
-    	      this.parquetOptions = defaults.parquetOptions;
-    	      this.projectionFields = defaults.projectionFields;
-    	      this.quote = defaults.quote;
-    	      this.rangePartitioning = defaults.rangePartitioning;
-    	      this.schema = defaults.schema;
-    	      this.schemaUpdateOptions = defaults.schemaUpdateOptions;
-    	      this.skipLeadingRows = defaults.skipLeadingRows;
-    	      this.sourceFormat = defaults.sourceFormat;
-    	      this.sourceUris = defaults.sourceUris;
-    	      this.timePartitioning = defaults.timePartitioning;
-    	      this.useAvroLogicalTypes = defaults.useAvroLogicalTypes;
-    	      this.writeDisposition = defaults.writeDisposition;
+            $ = new JobConfigurationLoadArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder allowJaggedRows(@Nullable Output<Boolean> allowJaggedRows) {
-            this.allowJaggedRows = allowJaggedRows;
+            $.allowJaggedRows = allowJaggedRows;
             return this;
         }
-        public Builder allowJaggedRows(@Nullable Boolean allowJaggedRows) {
-            this.allowJaggedRows = Codegen.ofNullable(allowJaggedRows);
-            return this;
+
+        public Builder allowJaggedRows(Boolean allowJaggedRows) {
+            return allowJaggedRows(Output.of(allowJaggedRows));
         }
+
         public Builder allowQuotedNewlines(@Nullable Output<Boolean> allowQuotedNewlines) {
-            this.allowQuotedNewlines = allowQuotedNewlines;
+            $.allowQuotedNewlines = allowQuotedNewlines;
             return this;
         }
-        public Builder allowQuotedNewlines(@Nullable Boolean allowQuotedNewlines) {
-            this.allowQuotedNewlines = Codegen.ofNullable(allowQuotedNewlines);
-            return this;
+
+        public Builder allowQuotedNewlines(Boolean allowQuotedNewlines) {
+            return allowQuotedNewlines(Output.of(allowQuotedNewlines));
         }
+
         public Builder autodetect(@Nullable Output<Boolean> autodetect) {
-            this.autodetect = autodetect;
+            $.autodetect = autodetect;
             return this;
         }
-        public Builder autodetect(@Nullable Boolean autodetect) {
-            this.autodetect = Codegen.ofNullable(autodetect);
-            return this;
+
+        public Builder autodetect(Boolean autodetect) {
+            return autodetect(Output.of(autodetect));
         }
+
         public Builder clustering(@Nullable Output<ClusteringArgs> clustering) {
-            this.clustering = clustering;
+            $.clustering = clustering;
             return this;
         }
-        public Builder clustering(@Nullable ClusteringArgs clustering) {
-            this.clustering = Codegen.ofNullable(clustering);
-            return this;
+
+        public Builder clustering(ClusteringArgs clustering) {
+            return clustering(Output.of(clustering));
         }
+
         public Builder createDisposition(@Nullable Output<String> createDisposition) {
-            this.createDisposition = createDisposition;
+            $.createDisposition = createDisposition;
             return this;
         }
-        public Builder createDisposition(@Nullable String createDisposition) {
-            this.createDisposition = Codegen.ofNullable(createDisposition);
-            return this;
+
+        public Builder createDisposition(String createDisposition) {
+            return createDisposition(Output.of(createDisposition));
         }
+
         public Builder decimalTargetTypes(@Nullable Output<List<String>> decimalTargetTypes) {
-            this.decimalTargetTypes = decimalTargetTypes;
+            $.decimalTargetTypes = decimalTargetTypes;
             return this;
         }
-        public Builder decimalTargetTypes(@Nullable List<String> decimalTargetTypes) {
-            this.decimalTargetTypes = Codegen.ofNullable(decimalTargetTypes);
-            return this;
+
+        public Builder decimalTargetTypes(List<String> decimalTargetTypes) {
+            return decimalTargetTypes(Output.of(decimalTargetTypes));
         }
+
         public Builder decimalTargetTypes(String... decimalTargetTypes) {
             return decimalTargetTypes(List.of(decimalTargetTypes));
         }
+
         public Builder destinationEncryptionConfiguration(@Nullable Output<EncryptionConfigurationArgs> destinationEncryptionConfiguration) {
-            this.destinationEncryptionConfiguration = destinationEncryptionConfiguration;
+            $.destinationEncryptionConfiguration = destinationEncryptionConfiguration;
             return this;
         }
-        public Builder destinationEncryptionConfiguration(@Nullable EncryptionConfigurationArgs destinationEncryptionConfiguration) {
-            this.destinationEncryptionConfiguration = Codegen.ofNullable(destinationEncryptionConfiguration);
-            return this;
+
+        public Builder destinationEncryptionConfiguration(EncryptionConfigurationArgs destinationEncryptionConfiguration) {
+            return destinationEncryptionConfiguration(Output.of(destinationEncryptionConfiguration));
         }
+
         public Builder destinationTable(@Nullable Output<TableReferenceArgs> destinationTable) {
-            this.destinationTable = destinationTable;
+            $.destinationTable = destinationTable;
             return this;
         }
-        public Builder destinationTable(@Nullable TableReferenceArgs destinationTable) {
-            this.destinationTable = Codegen.ofNullable(destinationTable);
-            return this;
+
+        public Builder destinationTable(TableReferenceArgs destinationTable) {
+            return destinationTable(Output.of(destinationTable));
         }
+
         public Builder destinationTableProperties(@Nullable Output<DestinationTablePropertiesArgs> destinationTableProperties) {
-            this.destinationTableProperties = destinationTableProperties;
+            $.destinationTableProperties = destinationTableProperties;
             return this;
         }
-        public Builder destinationTableProperties(@Nullable DestinationTablePropertiesArgs destinationTableProperties) {
-            this.destinationTableProperties = Codegen.ofNullable(destinationTableProperties);
-            return this;
+
+        public Builder destinationTableProperties(DestinationTablePropertiesArgs destinationTableProperties) {
+            return destinationTableProperties(Output.of(destinationTableProperties));
         }
+
         public Builder encoding(@Nullable Output<String> encoding) {
-            this.encoding = encoding;
+            $.encoding = encoding;
             return this;
         }
-        public Builder encoding(@Nullable String encoding) {
-            this.encoding = Codegen.ofNullable(encoding);
-            return this;
+
+        public Builder encoding(String encoding) {
+            return encoding(Output.of(encoding));
         }
+
         public Builder fieldDelimiter(@Nullable Output<String> fieldDelimiter) {
-            this.fieldDelimiter = fieldDelimiter;
+            $.fieldDelimiter = fieldDelimiter;
             return this;
         }
-        public Builder fieldDelimiter(@Nullable String fieldDelimiter) {
-            this.fieldDelimiter = Codegen.ofNullable(fieldDelimiter);
-            return this;
+
+        public Builder fieldDelimiter(String fieldDelimiter) {
+            return fieldDelimiter(Output.of(fieldDelimiter));
         }
+
         public Builder hivePartitioningOptions(@Nullable Output<HivePartitioningOptionsArgs> hivePartitioningOptions) {
-            this.hivePartitioningOptions = hivePartitioningOptions;
+            $.hivePartitioningOptions = hivePartitioningOptions;
             return this;
         }
-        public Builder hivePartitioningOptions(@Nullable HivePartitioningOptionsArgs hivePartitioningOptions) {
-            this.hivePartitioningOptions = Codegen.ofNullable(hivePartitioningOptions);
-            return this;
+
+        public Builder hivePartitioningOptions(HivePartitioningOptionsArgs hivePartitioningOptions) {
+            return hivePartitioningOptions(Output.of(hivePartitioningOptions));
         }
+
         public Builder ignoreUnknownValues(@Nullable Output<Boolean> ignoreUnknownValues) {
-            this.ignoreUnknownValues = ignoreUnknownValues;
+            $.ignoreUnknownValues = ignoreUnknownValues;
             return this;
         }
-        public Builder ignoreUnknownValues(@Nullable Boolean ignoreUnknownValues) {
-            this.ignoreUnknownValues = Codegen.ofNullable(ignoreUnknownValues);
-            return this;
+
+        public Builder ignoreUnknownValues(Boolean ignoreUnknownValues) {
+            return ignoreUnknownValues(Output.of(ignoreUnknownValues));
         }
+
         public Builder jsonExtension(@Nullable Output<String> jsonExtension) {
-            this.jsonExtension = jsonExtension;
+            $.jsonExtension = jsonExtension;
             return this;
         }
-        public Builder jsonExtension(@Nullable String jsonExtension) {
-            this.jsonExtension = Codegen.ofNullable(jsonExtension);
-            return this;
+
+        public Builder jsonExtension(String jsonExtension) {
+            return jsonExtension(Output.of(jsonExtension));
         }
+
         public Builder maxBadRecords(@Nullable Output<Integer> maxBadRecords) {
-            this.maxBadRecords = maxBadRecords;
+            $.maxBadRecords = maxBadRecords;
             return this;
         }
-        public Builder maxBadRecords(@Nullable Integer maxBadRecords) {
-            this.maxBadRecords = Codegen.ofNullable(maxBadRecords);
-            return this;
+
+        public Builder maxBadRecords(Integer maxBadRecords) {
+            return maxBadRecords(Output.of(maxBadRecords));
         }
+
         public Builder nullMarker(@Nullable Output<String> nullMarker) {
-            this.nullMarker = nullMarker;
+            $.nullMarker = nullMarker;
             return this;
         }
-        public Builder nullMarker(@Nullable String nullMarker) {
-            this.nullMarker = Codegen.ofNullable(nullMarker);
-            return this;
+
+        public Builder nullMarker(String nullMarker) {
+            return nullMarker(Output.of(nullMarker));
         }
+
         public Builder parquetOptions(@Nullable Output<ParquetOptionsArgs> parquetOptions) {
-            this.parquetOptions = parquetOptions;
+            $.parquetOptions = parquetOptions;
             return this;
         }
-        public Builder parquetOptions(@Nullable ParquetOptionsArgs parquetOptions) {
-            this.parquetOptions = Codegen.ofNullable(parquetOptions);
-            return this;
+
+        public Builder parquetOptions(ParquetOptionsArgs parquetOptions) {
+            return parquetOptions(Output.of(parquetOptions));
         }
+
         public Builder projectionFields(@Nullable Output<List<String>> projectionFields) {
-            this.projectionFields = projectionFields;
+            $.projectionFields = projectionFields;
             return this;
         }
-        public Builder projectionFields(@Nullable List<String> projectionFields) {
-            this.projectionFields = Codegen.ofNullable(projectionFields);
-            return this;
+
+        public Builder projectionFields(List<String> projectionFields) {
+            return projectionFields(Output.of(projectionFields));
         }
+
         public Builder projectionFields(String... projectionFields) {
             return projectionFields(List.of(projectionFields));
         }
+
         public Builder quote(@Nullable Output<String> quote) {
-            this.quote = quote;
+            $.quote = quote;
             return this;
         }
-        public Builder quote(@Nullable String quote) {
-            this.quote = Codegen.ofNullable(quote);
-            return this;
+
+        public Builder quote(String quote) {
+            return quote(Output.of(quote));
         }
+
         public Builder rangePartitioning(@Nullable Output<RangePartitioningArgs> rangePartitioning) {
-            this.rangePartitioning = rangePartitioning;
+            $.rangePartitioning = rangePartitioning;
             return this;
         }
-        public Builder rangePartitioning(@Nullable RangePartitioningArgs rangePartitioning) {
-            this.rangePartitioning = Codegen.ofNullable(rangePartitioning);
-            return this;
+
+        public Builder rangePartitioning(RangePartitioningArgs rangePartitioning) {
+            return rangePartitioning(Output.of(rangePartitioning));
         }
+
         public Builder schema(@Nullable Output<TableSchemaArgs> schema) {
-            this.schema = schema;
+            $.schema = schema;
             return this;
         }
-        public Builder schema(@Nullable TableSchemaArgs schema) {
-            this.schema = Codegen.ofNullable(schema);
-            return this;
+
+        public Builder schema(TableSchemaArgs schema) {
+            return schema(Output.of(schema));
         }
+
         public Builder schemaUpdateOptions(@Nullable Output<List<String>> schemaUpdateOptions) {
-            this.schemaUpdateOptions = schemaUpdateOptions;
+            $.schemaUpdateOptions = schemaUpdateOptions;
             return this;
         }
-        public Builder schemaUpdateOptions(@Nullable List<String> schemaUpdateOptions) {
-            this.schemaUpdateOptions = Codegen.ofNullable(schemaUpdateOptions);
-            return this;
+
+        public Builder schemaUpdateOptions(List<String> schemaUpdateOptions) {
+            return schemaUpdateOptions(Output.of(schemaUpdateOptions));
         }
+
         public Builder schemaUpdateOptions(String... schemaUpdateOptions) {
             return schemaUpdateOptions(List.of(schemaUpdateOptions));
         }
+
         public Builder skipLeadingRows(@Nullable Output<Integer> skipLeadingRows) {
-            this.skipLeadingRows = skipLeadingRows;
+            $.skipLeadingRows = skipLeadingRows;
             return this;
         }
-        public Builder skipLeadingRows(@Nullable Integer skipLeadingRows) {
-            this.skipLeadingRows = Codegen.ofNullable(skipLeadingRows);
-            return this;
+
+        public Builder skipLeadingRows(Integer skipLeadingRows) {
+            return skipLeadingRows(Output.of(skipLeadingRows));
         }
+
         public Builder sourceFormat(@Nullable Output<String> sourceFormat) {
-            this.sourceFormat = sourceFormat;
+            $.sourceFormat = sourceFormat;
             return this;
         }
-        public Builder sourceFormat(@Nullable String sourceFormat) {
-            this.sourceFormat = Codegen.ofNullable(sourceFormat);
-            return this;
+
+        public Builder sourceFormat(String sourceFormat) {
+            return sourceFormat(Output.of(sourceFormat));
         }
+
         public Builder sourceUris(@Nullable Output<List<String>> sourceUris) {
-            this.sourceUris = sourceUris;
+            $.sourceUris = sourceUris;
             return this;
         }
-        public Builder sourceUris(@Nullable List<String> sourceUris) {
-            this.sourceUris = Codegen.ofNullable(sourceUris);
-            return this;
+
+        public Builder sourceUris(List<String> sourceUris) {
+            return sourceUris(Output.of(sourceUris));
         }
+
         public Builder sourceUris(String... sourceUris) {
             return sourceUris(List.of(sourceUris));
         }
+
         public Builder timePartitioning(@Nullable Output<TimePartitioningArgs> timePartitioning) {
-            this.timePartitioning = timePartitioning;
+            $.timePartitioning = timePartitioning;
             return this;
         }
-        public Builder timePartitioning(@Nullable TimePartitioningArgs timePartitioning) {
-            this.timePartitioning = Codegen.ofNullable(timePartitioning);
-            return this;
+
+        public Builder timePartitioning(TimePartitioningArgs timePartitioning) {
+            return timePartitioning(Output.of(timePartitioning));
         }
+
         public Builder useAvroLogicalTypes(@Nullable Output<Boolean> useAvroLogicalTypes) {
-            this.useAvroLogicalTypes = useAvroLogicalTypes;
+            $.useAvroLogicalTypes = useAvroLogicalTypes;
             return this;
         }
-        public Builder useAvroLogicalTypes(@Nullable Boolean useAvroLogicalTypes) {
-            this.useAvroLogicalTypes = Codegen.ofNullable(useAvroLogicalTypes);
-            return this;
+
+        public Builder useAvroLogicalTypes(Boolean useAvroLogicalTypes) {
+            return useAvroLogicalTypes(Output.of(useAvroLogicalTypes));
         }
+
         public Builder writeDisposition(@Nullable Output<String> writeDisposition) {
-            this.writeDisposition = writeDisposition;
+            $.writeDisposition = writeDisposition;
             return this;
         }
-        public Builder writeDisposition(@Nullable String writeDisposition) {
-            this.writeDisposition = Codegen.ofNullable(writeDisposition);
-            return this;
-        }        public JobConfigurationLoadArgs build() {
-            return new JobConfigurationLoadArgs(allowJaggedRows, allowQuotedNewlines, autodetect, clustering, createDisposition, decimalTargetTypes, destinationEncryptionConfiguration, destinationTable, destinationTableProperties, encoding, fieldDelimiter, hivePartitioningOptions, ignoreUnknownValues, jsonExtension, maxBadRecords, nullMarker, parquetOptions, projectionFields, quote, rangePartitioning, schema, schemaUpdateOptions, skipLeadingRows, sourceFormat, sourceUris, timePartitioning, useAvroLogicalTypes, writeDisposition);
+
+        public Builder writeDisposition(String writeDisposition) {
+            return writeDisposition(Output.of(writeDisposition));
+        }
+
+        public JobConfigurationLoadArgs build() {
+            return $;
         }
     }
+
 }

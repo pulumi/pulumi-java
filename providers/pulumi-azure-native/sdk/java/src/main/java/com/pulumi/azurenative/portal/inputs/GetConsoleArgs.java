@@ -17,45 +17,45 @@ public final class GetConsoleArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="consoleName", required=true)
-      private final String consoleName;
+    private String consoleName;
 
     public String consoleName() {
         return this.consoleName;
     }
 
-    public GetConsoleArgs(String consoleName) {
-        this.consoleName = Objects.requireNonNull(consoleName, "expected parameter 'consoleName' to be non-null");
-    }
+    private GetConsoleArgs() {}
 
-    private GetConsoleArgs() {
-        this.consoleName = null;
+    private GetConsoleArgs(GetConsoleArgs $) {
+        this.consoleName = $.consoleName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetConsoleArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String consoleName;
+        private GetConsoleArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetConsoleArgs();
         }
 
         public Builder(GetConsoleArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.consoleName = defaults.consoleName;
+            $ = new GetConsoleArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder consoleName(String consoleName) {
-            this.consoleName = Objects.requireNonNull(consoleName);
+            $.consoleName = consoleName;
             return this;
-        }        public GetConsoleArgs build() {
-            return new GetConsoleArgs(consoleName);
+        }
+
+        public GetConsoleArgs build() {
+            $.consoleName = Objects.requireNonNull($.consoleName, "expected parameter 'consoleName' to be non-null");
+            return $;
         }
     }
+
 }

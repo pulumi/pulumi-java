@@ -5,9 +5,9 @@ package com.pulumi.googlenative.compute_alpha.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class RouterAdvertisedIpRangeArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -35,63 +35,58 @@ public final class RouterAdvertisedIpRangeArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="range")
-      private final @Nullable Output<String> range;
+    private @Nullable Output<String> range;
 
-    public Output<String> range() {
-        return this.range == null ? Codegen.empty() : this.range;
+    public Optional<Output<String>> range() {
+        return Optional.ofNullable(this.range);
     }
 
-    public RouterAdvertisedIpRangeArgs(
-        @Nullable Output<String> description,
-        @Nullable Output<String> range) {
-        this.description = description;
-        this.range = range;
-    }
+    private RouterAdvertisedIpRangeArgs() {}
 
-    private RouterAdvertisedIpRangeArgs() {
-        this.description = Codegen.empty();
-        this.range = Codegen.empty();
+    private RouterAdvertisedIpRangeArgs(RouterAdvertisedIpRangeArgs $) {
+        this.description = $.description;
+        this.range = $.range;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RouterAdvertisedIpRangeArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> description;
-        private @Nullable Output<String> range;
+        private RouterAdvertisedIpRangeArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RouterAdvertisedIpRangeArgs();
         }
 
         public Builder(RouterAdvertisedIpRangeArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.description = defaults.description;
-    	      this.range = defaults.range;
+            $ = new RouterAdvertisedIpRangeArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder range(@Nullable Output<String> range) {
-            this.range = range;
+            $.range = range;
             return this;
         }
-        public Builder range(@Nullable String range) {
-            this.range = Codegen.ofNullable(range);
-            return this;
-        }        public RouterAdvertisedIpRangeArgs build() {
-            return new RouterAdvertisedIpRangeArgs(description, range);
+
+        public Builder range(String range) {
+            return range(Output.of(range));
+        }
+
+        public RouterAdvertisedIpRangeArgs build() {
+            return $;
         }
     }
+
 }

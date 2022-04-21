@@ -7,12 +7,12 @@ import com.pulumi.azurenative.compute.enums.DedicatedHostLicenseTypes;
 import com.pulumi.azurenative.compute.inputs.SkuArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class DedicatedHostArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="autoReplaceOnFailure")
-      private final @Nullable Output<Boolean> autoReplaceOnFailure;
+    private @Nullable Output<Boolean> autoReplaceOnFailure;
 
-    public Output<Boolean> autoReplaceOnFailure() {
-        return this.autoReplaceOnFailure == null ? Codegen.empty() : this.autoReplaceOnFailure;
+    public Optional<Output<Boolean>> autoReplaceOnFailure() {
+        return Optional.ofNullable(this.autoReplaceOnFailure);
     }
 
     /**
@@ -36,7 +36,7 @@ public final class DedicatedHostArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="hostGroupName", required=true)
-      private final Output<String> hostGroupName;
+    private Output<String> hostGroupName;
 
     public Output<String> hostGroupName() {
         return this.hostGroupName;
@@ -47,10 +47,10 @@ public final class DedicatedHostArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="hostName")
-      private final @Nullable Output<String> hostName;
+    private @Nullable Output<String> hostName;
 
-    public Output<String> hostName() {
-        return this.hostName == null ? Codegen.empty() : this.hostName;
+    public Optional<Output<String>> hostName() {
+        return Optional.ofNullable(this.hostName);
     }
 
     /**
@@ -58,10 +58,10 @@ public final class DedicatedHostArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="licenseType")
-      private final @Nullable Output<DedicatedHostLicenseTypes> licenseType;
+    private @Nullable Output<DedicatedHostLicenseTypes> licenseType;
 
-    public Output<DedicatedHostLicenseTypes> licenseType() {
-        return this.licenseType == null ? Codegen.empty() : this.licenseType;
+    public Optional<Output<DedicatedHostLicenseTypes>> licenseType() {
+        return Optional.ofNullable(this.licenseType);
     }
 
     /**
@@ -69,10 +69,10 @@ public final class DedicatedHostArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -80,10 +80,10 @@ public final class DedicatedHostArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="platformFaultDomain")
-      private final @Nullable Output<Integer> platformFaultDomain;
+    private @Nullable Output<Integer> platformFaultDomain;
 
-    public Output<Integer> platformFaultDomain() {
-        return this.platformFaultDomain == null ? Codegen.empty() : this.platformFaultDomain;
+    public Optional<Output<Integer>> platformFaultDomain() {
+        return Optional.ofNullable(this.platformFaultDomain);
     }
 
     /**
@@ -91,7 +91,7 @@ public final class DedicatedHostArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -102,7 +102,7 @@ public final class DedicatedHostArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="sku", required=true)
-      private final Output<SkuArgs> sku;
+    private Output<SkuArgs> sku;
 
     public Output<SkuArgs> sku() {
         return this.sku;
@@ -113,154 +113,131 @@ public final class DedicatedHostArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public DedicatedHostArgs(
-        @Nullable Output<Boolean> autoReplaceOnFailure,
-        Output<String> hostGroupName,
-        @Nullable Output<String> hostName,
-        @Nullable Output<DedicatedHostLicenseTypes> licenseType,
-        @Nullable Output<String> location,
-        @Nullable Output<Integer> platformFaultDomain,
-        Output<String> resourceGroupName,
-        Output<SkuArgs> sku,
-        @Nullable Output<Map<String,String>> tags) {
-        this.autoReplaceOnFailure = autoReplaceOnFailure;
-        this.hostGroupName = Objects.requireNonNull(hostGroupName, "expected parameter 'hostGroupName' to be non-null");
-        this.hostName = hostName;
-        this.licenseType = licenseType;
-        this.location = location;
-        this.platformFaultDomain = platformFaultDomain;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.sku = Objects.requireNonNull(sku, "expected parameter 'sku' to be non-null");
-        this.tags = tags;
-    }
+    private DedicatedHostArgs() {}
 
-    private DedicatedHostArgs() {
-        this.autoReplaceOnFailure = Codegen.empty();
-        this.hostGroupName = Codegen.empty();
-        this.hostName = Codegen.empty();
-        this.licenseType = Codegen.empty();
-        this.location = Codegen.empty();
-        this.platformFaultDomain = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.sku = Codegen.empty();
-        this.tags = Codegen.empty();
+    private DedicatedHostArgs(DedicatedHostArgs $) {
+        this.autoReplaceOnFailure = $.autoReplaceOnFailure;
+        this.hostGroupName = $.hostGroupName;
+        this.hostName = $.hostName;
+        this.licenseType = $.licenseType;
+        this.location = $.location;
+        this.platformFaultDomain = $.platformFaultDomain;
+        this.resourceGroupName = $.resourceGroupName;
+        this.sku = $.sku;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DedicatedHostArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> autoReplaceOnFailure;
-        private Output<String> hostGroupName;
-        private @Nullable Output<String> hostName;
-        private @Nullable Output<DedicatedHostLicenseTypes> licenseType;
-        private @Nullable Output<String> location;
-        private @Nullable Output<Integer> platformFaultDomain;
-        private Output<String> resourceGroupName;
-        private Output<SkuArgs> sku;
-        private @Nullable Output<Map<String,String>> tags;
+        private DedicatedHostArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DedicatedHostArgs();
         }
 
         public Builder(DedicatedHostArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.autoReplaceOnFailure = defaults.autoReplaceOnFailure;
-    	      this.hostGroupName = defaults.hostGroupName;
-    	      this.hostName = defaults.hostName;
-    	      this.licenseType = defaults.licenseType;
-    	      this.location = defaults.location;
-    	      this.platformFaultDomain = defaults.platformFaultDomain;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.sku = defaults.sku;
-    	      this.tags = defaults.tags;
+            $ = new DedicatedHostArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder autoReplaceOnFailure(@Nullable Output<Boolean> autoReplaceOnFailure) {
-            this.autoReplaceOnFailure = autoReplaceOnFailure;
+            $.autoReplaceOnFailure = autoReplaceOnFailure;
             return this;
         }
-        public Builder autoReplaceOnFailure(@Nullable Boolean autoReplaceOnFailure) {
-            this.autoReplaceOnFailure = Codegen.ofNullable(autoReplaceOnFailure);
-            return this;
+
+        public Builder autoReplaceOnFailure(Boolean autoReplaceOnFailure) {
+            return autoReplaceOnFailure(Output.of(autoReplaceOnFailure));
         }
+
         public Builder hostGroupName(Output<String> hostGroupName) {
-            this.hostGroupName = Objects.requireNonNull(hostGroupName);
+            $.hostGroupName = hostGroupName;
             return this;
         }
+
         public Builder hostGroupName(String hostGroupName) {
-            this.hostGroupName = Output.of(Objects.requireNonNull(hostGroupName));
-            return this;
+            return hostGroupName(Output.of(hostGroupName));
         }
+
         public Builder hostName(@Nullable Output<String> hostName) {
-            this.hostName = hostName;
+            $.hostName = hostName;
             return this;
         }
-        public Builder hostName(@Nullable String hostName) {
-            this.hostName = Codegen.ofNullable(hostName);
-            return this;
+
+        public Builder hostName(String hostName) {
+            return hostName(Output.of(hostName));
         }
+
         public Builder licenseType(@Nullable Output<DedicatedHostLicenseTypes> licenseType) {
-            this.licenseType = licenseType;
+            $.licenseType = licenseType;
             return this;
         }
-        public Builder licenseType(@Nullable DedicatedHostLicenseTypes licenseType) {
-            this.licenseType = Codegen.ofNullable(licenseType);
-            return this;
+
+        public Builder licenseType(DedicatedHostLicenseTypes licenseType) {
+            return licenseType(Output.of(licenseType));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder platformFaultDomain(@Nullable Output<Integer> platformFaultDomain) {
-            this.platformFaultDomain = platformFaultDomain;
+            $.platformFaultDomain = platformFaultDomain;
             return this;
         }
-        public Builder platformFaultDomain(@Nullable Integer platformFaultDomain) {
-            this.platformFaultDomain = Codegen.ofNullable(platformFaultDomain);
-            return this;
+
+        public Builder platformFaultDomain(Integer platformFaultDomain) {
+            return platformFaultDomain(Output.of(platformFaultDomain));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder sku(Output<SkuArgs> sku) {
-            this.sku = Objects.requireNonNull(sku);
+            $.sku = sku;
             return this;
         }
+
         public Builder sku(SkuArgs sku) {
-            this.sku = Output.of(Objects.requireNonNull(sku));
-            return this;
+            return sku(Output.of(sku));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
-        }        public DedicatedHostArgs build() {
-            return new DedicatedHostArgs(autoReplaceOnFailure, hostGroupName, hostName, licenseType, location, platformFaultDomain, resourceGroupName, sku, tags);
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
+        }
+
+        public DedicatedHostArgs build() {
+            $.hostGroupName = Objects.requireNonNull($.hostGroupName, "expected parameter 'hostGroupName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.sku = Objects.requireNonNull($.sku, "expected parameter 'sku' to be non-null");
+            return $;
         }
     }
+
 }

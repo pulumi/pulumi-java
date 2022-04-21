@@ -5,9 +5,9 @@ package com.pulumi.awsnative.groundstation.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -16,70 +16,65 @@ public final class ConfigTagArgs extends com.pulumi.resources.ResourceArgs {
     public static final ConfigTagArgs Empty = new ConfigTagArgs();
 
     @Import(name="key")
-      private final @Nullable Output<String> key;
+    private @Nullable Output<String> key;
 
-    public Output<String> key() {
-        return this.key == null ? Codegen.empty() : this.key;
+    public Optional<Output<String>> key() {
+        return Optional.ofNullable(this.key);
     }
 
     @Import(name="value")
-      private final @Nullable Output<String> value;
+    private @Nullable Output<String> value;
 
-    public Output<String> value() {
-        return this.value == null ? Codegen.empty() : this.value;
+    public Optional<Output<String>> value() {
+        return Optional.ofNullable(this.value);
     }
 
-    public ConfigTagArgs(
-        @Nullable Output<String> key,
-        @Nullable Output<String> value) {
-        this.key = key;
-        this.value = value;
-    }
+    private ConfigTagArgs() {}
 
-    private ConfigTagArgs() {
-        this.key = Codegen.empty();
-        this.value = Codegen.empty();
+    private ConfigTagArgs(ConfigTagArgs $) {
+        this.key = $.key;
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ConfigTagArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> key;
-        private @Nullable Output<String> value;
+        private ConfigTagArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ConfigTagArgs();
         }
 
         public Builder(ConfigTagArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.key = defaults.key;
-    	      this.value = defaults.value;
+            $ = new ConfigTagArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder key(@Nullable Output<String> key) {
-            this.key = key;
+            $.key = key;
             return this;
         }
-        public Builder key(@Nullable String key) {
-            this.key = Codegen.ofNullable(key);
-            return this;
+
+        public Builder key(String key) {
+            return key(Output.of(key));
         }
+
         public Builder value(@Nullable Output<String> value) {
-            this.value = value;
+            $.value = value;
             return this;
         }
-        public Builder value(@Nullable String value) {
-            this.value = Codegen.ofNullable(value);
-            return this;
-        }        public ConfigTagArgs build() {
-            return new ConfigTagArgs(key, value);
+
+        public Builder value(String value) {
+            return value(Output.of(value));
+        }
+
+        public ConfigTagArgs build() {
+            return $;
         }
     }
+
 }

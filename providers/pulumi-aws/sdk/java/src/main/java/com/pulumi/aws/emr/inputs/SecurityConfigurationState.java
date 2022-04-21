@@ -5,9 +5,9 @@ package com.pulumi.aws.emr.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class SecurityConfigurationState extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="configuration")
-      private final @Nullable Output<String> configuration;
+    private @Nullable Output<String> configuration;
 
-    public Output<String> configuration() {
-        return this.configuration == null ? Codegen.empty() : this.configuration;
+    public Optional<Output<String>> configuration() {
+        return Optional.ofNullable(this.configuration);
     }
 
     /**
@@ -31,10 +31,10 @@ public final class SecurityConfigurationState extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="creationDate")
-      private final @Nullable Output<String> creationDate;
+    private @Nullable Output<String> creationDate;
 
-    public Output<String> creationDate() {
-        return this.creationDate == null ? Codegen.empty() : this.creationDate;
+    public Optional<Output<String>> creationDate() {
+        return Optional.ofNullable(this.creationDate);
     }
 
     /**
@@ -42,10 +42,10 @@ public final class SecurityConfigurationState extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -54,89 +54,78 @@ public final class SecurityConfigurationState extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="namePrefix")
-      private final @Nullable Output<String> namePrefix;
+    private @Nullable Output<String> namePrefix;
 
-    public Output<String> namePrefix() {
-        return this.namePrefix == null ? Codegen.empty() : this.namePrefix;
+    public Optional<Output<String>> namePrefix() {
+        return Optional.ofNullable(this.namePrefix);
     }
 
-    public SecurityConfigurationState(
-        @Nullable Output<String> configuration,
-        @Nullable Output<String> creationDate,
-        @Nullable Output<String> name,
-        @Nullable Output<String> namePrefix) {
-        this.configuration = configuration;
-        this.creationDate = creationDate;
-        this.name = name;
-        this.namePrefix = namePrefix;
-    }
+    private SecurityConfigurationState() {}
 
-    private SecurityConfigurationState() {
-        this.configuration = Codegen.empty();
-        this.creationDate = Codegen.empty();
-        this.name = Codegen.empty();
-        this.namePrefix = Codegen.empty();
+    private SecurityConfigurationState(SecurityConfigurationState $) {
+        this.configuration = $.configuration;
+        this.creationDate = $.creationDate;
+        this.name = $.name;
+        this.namePrefix = $.namePrefix;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SecurityConfigurationState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> configuration;
-        private @Nullable Output<String> creationDate;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> namePrefix;
+        private SecurityConfigurationState $;
 
         public Builder() {
-    	      // Empty
+            $ = new SecurityConfigurationState();
         }
 
         public Builder(SecurityConfigurationState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.configuration = defaults.configuration;
-    	      this.creationDate = defaults.creationDate;
-    	      this.name = defaults.name;
-    	      this.namePrefix = defaults.namePrefix;
+            $ = new SecurityConfigurationState(Objects.requireNonNull(defaults));
         }
 
         public Builder configuration(@Nullable Output<String> configuration) {
-            this.configuration = configuration;
+            $.configuration = configuration;
             return this;
         }
-        public Builder configuration(@Nullable String configuration) {
-            this.configuration = Codegen.ofNullable(configuration);
-            return this;
+
+        public Builder configuration(String configuration) {
+            return configuration(Output.of(configuration));
         }
+
         public Builder creationDate(@Nullable Output<String> creationDate) {
-            this.creationDate = creationDate;
+            $.creationDate = creationDate;
             return this;
         }
-        public Builder creationDate(@Nullable String creationDate) {
-            this.creationDate = Codegen.ofNullable(creationDate);
-            return this;
+
+        public Builder creationDate(String creationDate) {
+            return creationDate(Output.of(creationDate));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder namePrefix(@Nullable Output<String> namePrefix) {
-            this.namePrefix = namePrefix;
+            $.namePrefix = namePrefix;
             return this;
         }
-        public Builder namePrefix(@Nullable String namePrefix) {
-            this.namePrefix = Codegen.ofNullable(namePrefix);
-            return this;
-        }        public SecurityConfigurationState build() {
-            return new SecurityConfigurationState(configuration, creationDate, name, namePrefix);
+
+        public Builder namePrefix(String namePrefix) {
+            return namePrefix(Output.of(namePrefix));
+        }
+
+        public SecurityConfigurationState build() {
+            return $;
         }
     }
+
 }

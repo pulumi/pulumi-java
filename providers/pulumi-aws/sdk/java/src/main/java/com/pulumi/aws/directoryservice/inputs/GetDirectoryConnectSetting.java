@@ -14,7 +14,7 @@ public final class GetDirectoryConnectSetting extends com.pulumi.resources.Invok
     public static final GetDirectoryConnectSetting Empty = new GetDirectoryConnectSetting();
 
     @Import(name="availabilityZones", required=true)
-      private final List<String> availabilityZones;
+    private List<String> availabilityZones;
 
     public List<String> availabilityZones() {
         return this.availabilityZones;
@@ -25,7 +25,7 @@ public final class GetDirectoryConnectSetting extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="connectIps", required=true)
-      private final List<String> connectIps;
+    private List<String> connectIps;
 
     public List<String> connectIps() {
         return this.connectIps;
@@ -36,7 +36,7 @@ public final class GetDirectoryConnectSetting extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="customerDnsIps", required=true)
-      private final List<String> customerDnsIps;
+    private List<String> customerDnsIps;
 
     public List<String> customerDnsIps() {
         return this.customerDnsIps;
@@ -47,7 +47,7 @@ public final class GetDirectoryConnectSetting extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="customerUsername", required=true)
-      private final String customerUsername;
+    private String customerUsername;
 
     public String customerUsername() {
         return this.customerUsername;
@@ -58,7 +58,7 @@ public final class GetDirectoryConnectSetting extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="subnetIds", required=true)
-      private final List<String> subnetIds;
+    private List<String> subnetIds;
 
     public List<String> subnetIds() {
         return this.subnetIds;
@@ -69,103 +69,96 @@ public final class GetDirectoryConnectSetting extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="vpcId", required=true)
-      private final String vpcId;
+    private String vpcId;
 
     public String vpcId() {
         return this.vpcId;
     }
 
-    public GetDirectoryConnectSetting(
-        List<String> availabilityZones,
-        List<String> connectIps,
-        List<String> customerDnsIps,
-        String customerUsername,
-        List<String> subnetIds,
-        String vpcId) {
-        this.availabilityZones = Objects.requireNonNull(availabilityZones, "expected parameter 'availabilityZones' to be non-null");
-        this.connectIps = Objects.requireNonNull(connectIps, "expected parameter 'connectIps' to be non-null");
-        this.customerDnsIps = Objects.requireNonNull(customerDnsIps, "expected parameter 'customerDnsIps' to be non-null");
-        this.customerUsername = Objects.requireNonNull(customerUsername, "expected parameter 'customerUsername' to be non-null");
-        this.subnetIds = Objects.requireNonNull(subnetIds, "expected parameter 'subnetIds' to be non-null");
-        this.vpcId = Objects.requireNonNull(vpcId, "expected parameter 'vpcId' to be non-null");
-    }
+    private GetDirectoryConnectSetting() {}
 
-    private GetDirectoryConnectSetting() {
-        this.availabilityZones = List.of();
-        this.connectIps = List.of();
-        this.customerDnsIps = List.of();
-        this.customerUsername = null;
-        this.subnetIds = List.of();
-        this.vpcId = null;
+    private GetDirectoryConnectSetting(GetDirectoryConnectSetting $) {
+        this.availabilityZones = $.availabilityZones;
+        this.connectIps = $.connectIps;
+        this.customerDnsIps = $.customerDnsIps;
+        this.customerUsername = $.customerUsername;
+        this.subnetIds = $.subnetIds;
+        this.vpcId = $.vpcId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetDirectoryConnectSetting defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<String> availabilityZones;
-        private List<String> connectIps;
-        private List<String> customerDnsIps;
-        private String customerUsername;
-        private List<String> subnetIds;
-        private String vpcId;
+        private GetDirectoryConnectSetting $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetDirectoryConnectSetting();
         }
 
         public Builder(GetDirectoryConnectSetting defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.availabilityZones = defaults.availabilityZones;
-    	      this.connectIps = defaults.connectIps;
-    	      this.customerDnsIps = defaults.customerDnsIps;
-    	      this.customerUsername = defaults.customerUsername;
-    	      this.subnetIds = defaults.subnetIds;
-    	      this.vpcId = defaults.vpcId;
+            $ = new GetDirectoryConnectSetting(Objects.requireNonNull(defaults));
         }
 
         public Builder availabilityZones(List<String> availabilityZones) {
-            this.availabilityZones = Objects.requireNonNull(availabilityZones);
+            $.availabilityZones = availabilityZones;
             return this;
         }
+
         public Builder availabilityZones(String... availabilityZones) {
             return availabilityZones(List.of(availabilityZones));
         }
+
         public Builder connectIps(List<String> connectIps) {
-            this.connectIps = Objects.requireNonNull(connectIps);
+            $.connectIps = connectIps;
             return this;
         }
+
         public Builder connectIps(String... connectIps) {
             return connectIps(List.of(connectIps));
         }
+
         public Builder customerDnsIps(List<String> customerDnsIps) {
-            this.customerDnsIps = Objects.requireNonNull(customerDnsIps);
+            $.customerDnsIps = customerDnsIps;
             return this;
         }
+
         public Builder customerDnsIps(String... customerDnsIps) {
             return customerDnsIps(List.of(customerDnsIps));
         }
+
         public Builder customerUsername(String customerUsername) {
-            this.customerUsername = Objects.requireNonNull(customerUsername);
+            $.customerUsername = customerUsername;
             return this;
         }
+
         public Builder subnetIds(List<String> subnetIds) {
-            this.subnetIds = Objects.requireNonNull(subnetIds);
+            $.subnetIds = subnetIds;
             return this;
         }
+
         public Builder subnetIds(String... subnetIds) {
             return subnetIds(List.of(subnetIds));
         }
+
         public Builder vpcId(String vpcId) {
-            this.vpcId = Objects.requireNonNull(vpcId);
+            $.vpcId = vpcId;
             return this;
-        }        public GetDirectoryConnectSetting build() {
-            return new GetDirectoryConnectSetting(availabilityZones, connectIps, customerDnsIps, customerUsername, subnetIds, vpcId);
+        }
+
+        public GetDirectoryConnectSetting build() {
+            $.availabilityZones = Objects.requireNonNull($.availabilityZones, "expected parameter 'availabilityZones' to be non-null");
+            $.connectIps = Objects.requireNonNull($.connectIps, "expected parameter 'connectIps' to be non-null");
+            $.customerDnsIps = Objects.requireNonNull($.customerDnsIps, "expected parameter 'customerDnsIps' to be non-null");
+            $.customerUsername = Objects.requireNonNull($.customerUsername, "expected parameter 'customerUsername' to be non-null");
+            $.subnetIds = Objects.requireNonNull($.subnetIds, "expected parameter 'subnetIds' to be non-null");
+            $.vpcId = Objects.requireNonNull($.vpcId, "expected parameter 'vpcId' to be non-null");
+            return $;
         }
     }
+
 }

@@ -22,7 +22,7 @@ public final class ServiceMeshAnalysisMessageBaseResponse extends com.pulumi.res
      * 
      */
     @Import(name="documentationUrl", required=true)
-      private final String documentationUrl;
+    private String documentationUrl;
 
     public String documentationUrl() {
         return this.documentationUrl;
@@ -33,7 +33,7 @@ public final class ServiceMeshAnalysisMessageBaseResponse extends com.pulumi.res
      * 
      */
     @Import(name="level", required=true)
-      private final String level;
+    private String level;
 
     public String level() {
         return this.level;
@@ -44,64 +44,59 @@ public final class ServiceMeshAnalysisMessageBaseResponse extends com.pulumi.res
      * 
      */
     @Import(name="type", required=true)
-      private final ServiceMeshTypeResponse type;
+    private ServiceMeshTypeResponse type;
 
     public ServiceMeshTypeResponse type() {
         return this.type;
     }
 
-    public ServiceMeshAnalysisMessageBaseResponse(
-        String documentationUrl,
-        String level,
-        ServiceMeshTypeResponse type) {
-        this.documentationUrl = Objects.requireNonNull(documentationUrl, "expected parameter 'documentationUrl' to be non-null");
-        this.level = Objects.requireNonNull(level, "expected parameter 'level' to be non-null");
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private ServiceMeshAnalysisMessageBaseResponse() {}
 
-    private ServiceMeshAnalysisMessageBaseResponse() {
-        this.documentationUrl = null;
-        this.level = null;
-        this.type = null;
+    private ServiceMeshAnalysisMessageBaseResponse(ServiceMeshAnalysisMessageBaseResponse $) {
+        this.documentationUrl = $.documentationUrl;
+        this.level = $.level;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ServiceMeshAnalysisMessageBaseResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String documentationUrl;
-        private String level;
-        private ServiceMeshTypeResponse type;
+        private ServiceMeshAnalysisMessageBaseResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ServiceMeshAnalysisMessageBaseResponse();
         }
 
         public Builder(ServiceMeshAnalysisMessageBaseResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.documentationUrl = defaults.documentationUrl;
-    	      this.level = defaults.level;
-    	      this.type = defaults.type;
+            $ = new ServiceMeshAnalysisMessageBaseResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder documentationUrl(String documentationUrl) {
-            this.documentationUrl = Objects.requireNonNull(documentationUrl);
+            $.documentationUrl = documentationUrl;
             return this;
         }
+
         public Builder level(String level) {
-            this.level = Objects.requireNonNull(level);
+            $.level = level;
             return this;
         }
+
         public Builder type(ServiceMeshTypeResponse type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
-        }        public ServiceMeshAnalysisMessageBaseResponse build() {
-            return new ServiceMeshAnalysisMessageBaseResponse(documentationUrl, level, type);
+        }
+
+        public ServiceMeshAnalysisMessageBaseResponse build() {
+            $.documentationUrl = Objects.requireNonNull($.documentationUrl, "expected parameter 'documentationUrl' to be non-null");
+            $.level = Objects.requireNonNull($.level, "expected parameter 'level' to be non-null");
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

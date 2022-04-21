@@ -15,94 +15,86 @@ public final class GetWebhookArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetWebhookArgs Empty = new GetWebhookArgs();
 
     @Import(name="agentId", required=true)
-      private final String agentId;
+    private String agentId;
 
     public String agentId() {
         return this.agentId;
     }
 
     @Import(name="location", required=true)
-      private final String location;
+    private String location;
 
     public String location() {
         return this.location;
     }
 
     @Import(name="project")
-      private final @Nullable String project;
+    private @Nullable String project;
 
     public Optional<String> project() {
-        return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
+        return Optional.ofNullable(this.project);
     }
 
     @Import(name="webhookId", required=true)
-      private final String webhookId;
+    private String webhookId;
 
     public String webhookId() {
         return this.webhookId;
     }
 
-    public GetWebhookArgs(
-        String agentId,
-        String location,
-        @Nullable String project,
-        String webhookId) {
-        this.agentId = Objects.requireNonNull(agentId, "expected parameter 'agentId' to be non-null");
-        this.location = Objects.requireNonNull(location, "expected parameter 'location' to be non-null");
-        this.project = project;
-        this.webhookId = Objects.requireNonNull(webhookId, "expected parameter 'webhookId' to be non-null");
-    }
+    private GetWebhookArgs() {}
 
-    private GetWebhookArgs() {
-        this.agentId = null;
-        this.location = null;
-        this.project = null;
-        this.webhookId = null;
+    private GetWebhookArgs(GetWebhookArgs $) {
+        this.agentId = $.agentId;
+        this.location = $.location;
+        this.project = $.project;
+        this.webhookId = $.webhookId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetWebhookArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String agentId;
-        private String location;
-        private @Nullable String project;
-        private String webhookId;
+        private GetWebhookArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetWebhookArgs();
         }
 
         public Builder(GetWebhookArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.agentId = defaults.agentId;
-    	      this.location = defaults.location;
-    	      this.project = defaults.project;
-    	      this.webhookId = defaults.webhookId;
+            $ = new GetWebhookArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder agentId(String agentId) {
-            this.agentId = Objects.requireNonNull(agentId);
+            $.agentId = agentId;
             return this;
         }
+
         public Builder location(String location) {
-            this.location = Objects.requireNonNull(location);
+            $.location = location;
             return this;
         }
+
         public Builder project(@Nullable String project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
+
         public Builder webhookId(String webhookId) {
-            this.webhookId = Objects.requireNonNull(webhookId);
+            $.webhookId = webhookId;
             return this;
-        }        public GetWebhookArgs build() {
-            return new GetWebhookArgs(agentId, location, project, webhookId);
+        }
+
+        public GetWebhookArgs build() {
+            $.agentId = Objects.requireNonNull($.agentId, "expected parameter 'agentId' to be non-null");
+            $.location = Objects.requireNonNull($.location, "expected parameter 'location' to be non-null");
+            $.webhookId = Objects.requireNonNull($.webhookId, "expected parameter 'webhookId' to be non-null");
+            return $;
         }
     }
+
 }

@@ -6,8 +6,8 @@ package com.pulumi.awsnative.dynamodb.inputs;
 import com.pulumi.awsnative.dynamodb.inputs.GlobalTableCapacityAutoScalingSettingsArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -16,49 +16,48 @@ public final class GlobalTableWriteProvisionedThroughputSettingsArgs extends com
     public static final GlobalTableWriteProvisionedThroughputSettingsArgs Empty = new GlobalTableWriteProvisionedThroughputSettingsArgs();
 
     @Import(name="writeCapacityAutoScalingSettings")
-      private final @Nullable Output<GlobalTableCapacityAutoScalingSettingsArgs> writeCapacityAutoScalingSettings;
+    private @Nullable Output<GlobalTableCapacityAutoScalingSettingsArgs> writeCapacityAutoScalingSettings;
 
-    public Output<GlobalTableCapacityAutoScalingSettingsArgs> writeCapacityAutoScalingSettings() {
-        return this.writeCapacityAutoScalingSettings == null ? Codegen.empty() : this.writeCapacityAutoScalingSettings;
+    public Optional<Output<GlobalTableCapacityAutoScalingSettingsArgs>> writeCapacityAutoScalingSettings() {
+        return Optional.ofNullable(this.writeCapacityAutoScalingSettings);
     }
 
-    public GlobalTableWriteProvisionedThroughputSettingsArgs(@Nullable Output<GlobalTableCapacityAutoScalingSettingsArgs> writeCapacityAutoScalingSettings) {
-        this.writeCapacityAutoScalingSettings = writeCapacityAutoScalingSettings;
-    }
+    private GlobalTableWriteProvisionedThroughputSettingsArgs() {}
 
-    private GlobalTableWriteProvisionedThroughputSettingsArgs() {
-        this.writeCapacityAutoScalingSettings = Codegen.empty();
+    private GlobalTableWriteProvisionedThroughputSettingsArgs(GlobalTableWriteProvisionedThroughputSettingsArgs $) {
+        this.writeCapacityAutoScalingSettings = $.writeCapacityAutoScalingSettings;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GlobalTableWriteProvisionedThroughputSettingsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<GlobalTableCapacityAutoScalingSettingsArgs> writeCapacityAutoScalingSettings;
+        private GlobalTableWriteProvisionedThroughputSettingsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GlobalTableWriteProvisionedThroughputSettingsArgs();
         }
 
         public Builder(GlobalTableWriteProvisionedThroughputSettingsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.writeCapacityAutoScalingSettings = defaults.writeCapacityAutoScalingSettings;
+            $ = new GlobalTableWriteProvisionedThroughputSettingsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder writeCapacityAutoScalingSettings(@Nullable Output<GlobalTableCapacityAutoScalingSettingsArgs> writeCapacityAutoScalingSettings) {
-            this.writeCapacityAutoScalingSettings = writeCapacityAutoScalingSettings;
+            $.writeCapacityAutoScalingSettings = writeCapacityAutoScalingSettings;
             return this;
         }
-        public Builder writeCapacityAutoScalingSettings(@Nullable GlobalTableCapacityAutoScalingSettingsArgs writeCapacityAutoScalingSettings) {
-            this.writeCapacityAutoScalingSettings = Codegen.ofNullable(writeCapacityAutoScalingSettings);
-            return this;
-        }        public GlobalTableWriteProvisionedThroughputSettingsArgs build() {
-            return new GlobalTableWriteProvisionedThroughputSettingsArgs(writeCapacityAutoScalingSettings);
+
+        public Builder writeCapacityAutoScalingSettings(GlobalTableCapacityAutoScalingSettingsArgs writeCapacityAutoScalingSettings) {
+            return writeCapacityAutoScalingSettings(Output.of(writeCapacityAutoScalingSettings));
+        }
+
+        public GlobalTableWriteProvisionedThroughputSettingsArgs build() {
+            return $;
         }
     }
+
 }

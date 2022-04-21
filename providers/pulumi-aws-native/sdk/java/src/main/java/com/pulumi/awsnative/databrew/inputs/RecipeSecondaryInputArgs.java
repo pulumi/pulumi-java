@@ -7,8 +7,8 @@ import com.pulumi.awsnative.databrew.inputs.RecipeDataCatalogInputDefinitionArgs
 import com.pulumi.awsnative.databrew.inputs.RecipeS3LocationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,70 +21,65 @@ public final class RecipeSecondaryInputArgs extends com.pulumi.resources.Resourc
     public static final RecipeSecondaryInputArgs Empty = new RecipeSecondaryInputArgs();
 
     @Import(name="dataCatalogInputDefinition")
-      private final @Nullable Output<RecipeDataCatalogInputDefinitionArgs> dataCatalogInputDefinition;
+    private @Nullable Output<RecipeDataCatalogInputDefinitionArgs> dataCatalogInputDefinition;
 
-    public Output<RecipeDataCatalogInputDefinitionArgs> dataCatalogInputDefinition() {
-        return this.dataCatalogInputDefinition == null ? Codegen.empty() : this.dataCatalogInputDefinition;
+    public Optional<Output<RecipeDataCatalogInputDefinitionArgs>> dataCatalogInputDefinition() {
+        return Optional.ofNullable(this.dataCatalogInputDefinition);
     }
 
     @Import(name="s3InputDefinition")
-      private final @Nullable Output<RecipeS3LocationArgs> s3InputDefinition;
+    private @Nullable Output<RecipeS3LocationArgs> s3InputDefinition;
 
-    public Output<RecipeS3LocationArgs> s3InputDefinition() {
-        return this.s3InputDefinition == null ? Codegen.empty() : this.s3InputDefinition;
+    public Optional<Output<RecipeS3LocationArgs>> s3InputDefinition() {
+        return Optional.ofNullable(this.s3InputDefinition);
     }
 
-    public RecipeSecondaryInputArgs(
-        @Nullable Output<RecipeDataCatalogInputDefinitionArgs> dataCatalogInputDefinition,
-        @Nullable Output<RecipeS3LocationArgs> s3InputDefinition) {
-        this.dataCatalogInputDefinition = dataCatalogInputDefinition;
-        this.s3InputDefinition = s3InputDefinition;
-    }
+    private RecipeSecondaryInputArgs() {}
 
-    private RecipeSecondaryInputArgs() {
-        this.dataCatalogInputDefinition = Codegen.empty();
-        this.s3InputDefinition = Codegen.empty();
+    private RecipeSecondaryInputArgs(RecipeSecondaryInputArgs $) {
+        this.dataCatalogInputDefinition = $.dataCatalogInputDefinition;
+        this.s3InputDefinition = $.s3InputDefinition;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RecipeSecondaryInputArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<RecipeDataCatalogInputDefinitionArgs> dataCatalogInputDefinition;
-        private @Nullable Output<RecipeS3LocationArgs> s3InputDefinition;
+        private RecipeSecondaryInputArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RecipeSecondaryInputArgs();
         }
 
         public Builder(RecipeSecondaryInputArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dataCatalogInputDefinition = defaults.dataCatalogInputDefinition;
-    	      this.s3InputDefinition = defaults.s3InputDefinition;
+            $ = new RecipeSecondaryInputArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder dataCatalogInputDefinition(@Nullable Output<RecipeDataCatalogInputDefinitionArgs> dataCatalogInputDefinition) {
-            this.dataCatalogInputDefinition = dataCatalogInputDefinition;
+            $.dataCatalogInputDefinition = dataCatalogInputDefinition;
             return this;
         }
-        public Builder dataCatalogInputDefinition(@Nullable RecipeDataCatalogInputDefinitionArgs dataCatalogInputDefinition) {
-            this.dataCatalogInputDefinition = Codegen.ofNullable(dataCatalogInputDefinition);
-            return this;
+
+        public Builder dataCatalogInputDefinition(RecipeDataCatalogInputDefinitionArgs dataCatalogInputDefinition) {
+            return dataCatalogInputDefinition(Output.of(dataCatalogInputDefinition));
         }
+
         public Builder s3InputDefinition(@Nullable Output<RecipeS3LocationArgs> s3InputDefinition) {
-            this.s3InputDefinition = s3InputDefinition;
+            $.s3InputDefinition = s3InputDefinition;
             return this;
         }
-        public Builder s3InputDefinition(@Nullable RecipeS3LocationArgs s3InputDefinition) {
-            this.s3InputDefinition = Codegen.ofNullable(s3InputDefinition);
-            return this;
-        }        public RecipeSecondaryInputArgs build() {
-            return new RecipeSecondaryInputArgs(dataCatalogInputDefinition, s3InputDefinition);
+
+        public Builder s3InputDefinition(RecipeS3LocationArgs s3InputDefinition) {
+            return s3InputDefinition(Output.of(s3InputDefinition));
+        }
+
+        public RecipeSecondaryInputArgs build() {
+            return $;
         }
     }
+
 }

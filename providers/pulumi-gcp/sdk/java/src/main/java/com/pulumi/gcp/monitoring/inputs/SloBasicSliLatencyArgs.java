@@ -5,7 +5,6 @@ package com.pulumi.gcp.monitoring.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,49 +20,49 @@ public final class SloBasicSliLatencyArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="threshold", required=true)
-      private final Output<String> threshold;
+    private Output<String> threshold;
 
     public Output<String> threshold() {
         return this.threshold;
     }
 
-    public SloBasicSliLatencyArgs(Output<String> threshold) {
-        this.threshold = Objects.requireNonNull(threshold, "expected parameter 'threshold' to be non-null");
-    }
+    private SloBasicSliLatencyArgs() {}
 
-    private SloBasicSliLatencyArgs() {
-        this.threshold = Codegen.empty();
+    private SloBasicSliLatencyArgs(SloBasicSliLatencyArgs $) {
+        this.threshold = $.threshold;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SloBasicSliLatencyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> threshold;
+        private SloBasicSliLatencyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SloBasicSliLatencyArgs();
         }
 
         public Builder(SloBasicSliLatencyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.threshold = defaults.threshold;
+            $ = new SloBasicSliLatencyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder threshold(Output<String> threshold) {
-            this.threshold = Objects.requireNonNull(threshold);
+            $.threshold = threshold;
             return this;
         }
+
         public Builder threshold(String threshold) {
-            this.threshold = Output.of(Objects.requireNonNull(threshold));
-            return this;
-        }        public SloBasicSliLatencyArgs build() {
-            return new SloBasicSliLatencyArgs(threshold);
+            return threshold(Output.of(threshold));
+        }
+
+        public SloBasicSliLatencyArgs build() {
+            $.threshold = Objects.requireNonNull($.threshold, "expected parameter 'threshold' to be non-null");
+            return $;
         }
     }
+
 }

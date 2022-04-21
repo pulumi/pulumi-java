@@ -17,7 +17,7 @@ public final class GetDicomServiceArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="dicomServiceName", required=true)
-      private final String dicomServiceName;
+    private String dicomServiceName;
 
     public String dicomServiceName() {
         return this.dicomServiceName;
@@ -28,7 +28,7 @@ public final class GetDicomServiceArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -39,64 +39,59 @@ public final class GetDicomServiceArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="workspaceName", required=true)
-      private final String workspaceName;
+    private String workspaceName;
 
     public String workspaceName() {
         return this.workspaceName;
     }
 
-    public GetDicomServiceArgs(
-        String dicomServiceName,
-        String resourceGroupName,
-        String workspaceName) {
-        this.dicomServiceName = Objects.requireNonNull(dicomServiceName, "expected parameter 'dicomServiceName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.workspaceName = Objects.requireNonNull(workspaceName, "expected parameter 'workspaceName' to be non-null");
-    }
+    private GetDicomServiceArgs() {}
 
-    private GetDicomServiceArgs() {
-        this.dicomServiceName = null;
-        this.resourceGroupName = null;
-        this.workspaceName = null;
+    private GetDicomServiceArgs(GetDicomServiceArgs $) {
+        this.dicomServiceName = $.dicomServiceName;
+        this.resourceGroupName = $.resourceGroupName;
+        this.workspaceName = $.workspaceName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetDicomServiceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String dicomServiceName;
-        private String resourceGroupName;
-        private String workspaceName;
+        private GetDicomServiceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetDicomServiceArgs();
         }
 
         public Builder(GetDicomServiceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dicomServiceName = defaults.dicomServiceName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.workspaceName = defaults.workspaceName;
+            $ = new GetDicomServiceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder dicomServiceName(String dicomServiceName) {
-            this.dicomServiceName = Objects.requireNonNull(dicomServiceName);
+            $.dicomServiceName = dicomServiceName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder workspaceName(String workspaceName) {
-            this.workspaceName = Objects.requireNonNull(workspaceName);
+            $.workspaceName = workspaceName;
             return this;
-        }        public GetDicomServiceArgs build() {
-            return new GetDicomServiceArgs(dicomServiceName, resourceGroupName, workspaceName);
+        }
+
+        public GetDicomServiceArgs build() {
+            $.dicomServiceName = Objects.requireNonNull($.dicomServiceName, "expected parameter 'dicomServiceName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.workspaceName = Objects.requireNonNull($.workspaceName, "expected parameter 'workspaceName' to be non-null");
+            return $;
         }
     }
+
 }

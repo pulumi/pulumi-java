@@ -5,9 +5,9 @@ package com.pulumi.googlenative.container_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class AcceleratorConfigArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="acceleratorCount")
-      private final @Nullable Output<String> acceleratorCount;
+    private @Nullable Output<String> acceleratorCount;
 
-    public Output<String> acceleratorCount() {
-        return this.acceleratorCount == null ? Codegen.empty() : this.acceleratorCount;
+    public Optional<Output<String>> acceleratorCount() {
+        return Optional.ofNullable(this.acceleratorCount);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class AcceleratorConfigArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="acceleratorType")
-      private final @Nullable Output<String> acceleratorType;
+    private @Nullable Output<String> acceleratorType;
 
-    public Output<String> acceleratorType() {
-        return this.acceleratorType == null ? Codegen.empty() : this.acceleratorType;
+    public Optional<Output<String>> acceleratorType() {
+        return Optional.ofNullable(this.acceleratorType);
     }
 
     /**
@@ -46,76 +46,68 @@ public final class AcceleratorConfigArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="gpuPartitionSize")
-      private final @Nullable Output<String> gpuPartitionSize;
+    private @Nullable Output<String> gpuPartitionSize;
 
-    public Output<String> gpuPartitionSize() {
-        return this.gpuPartitionSize == null ? Codegen.empty() : this.gpuPartitionSize;
+    public Optional<Output<String>> gpuPartitionSize() {
+        return Optional.ofNullable(this.gpuPartitionSize);
     }
 
-    public AcceleratorConfigArgs(
-        @Nullable Output<String> acceleratorCount,
-        @Nullable Output<String> acceleratorType,
-        @Nullable Output<String> gpuPartitionSize) {
-        this.acceleratorCount = acceleratorCount;
-        this.acceleratorType = acceleratorType;
-        this.gpuPartitionSize = gpuPartitionSize;
-    }
+    private AcceleratorConfigArgs() {}
 
-    private AcceleratorConfigArgs() {
-        this.acceleratorCount = Codegen.empty();
-        this.acceleratorType = Codegen.empty();
-        this.gpuPartitionSize = Codegen.empty();
+    private AcceleratorConfigArgs(AcceleratorConfigArgs $) {
+        this.acceleratorCount = $.acceleratorCount;
+        this.acceleratorType = $.acceleratorType;
+        this.gpuPartitionSize = $.gpuPartitionSize;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AcceleratorConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> acceleratorCount;
-        private @Nullable Output<String> acceleratorType;
-        private @Nullable Output<String> gpuPartitionSize;
+        private AcceleratorConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AcceleratorConfigArgs();
         }
 
         public Builder(AcceleratorConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.acceleratorCount = defaults.acceleratorCount;
-    	      this.acceleratorType = defaults.acceleratorType;
-    	      this.gpuPartitionSize = defaults.gpuPartitionSize;
+            $ = new AcceleratorConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder acceleratorCount(@Nullable Output<String> acceleratorCount) {
-            this.acceleratorCount = acceleratorCount;
+            $.acceleratorCount = acceleratorCount;
             return this;
         }
-        public Builder acceleratorCount(@Nullable String acceleratorCount) {
-            this.acceleratorCount = Codegen.ofNullable(acceleratorCount);
-            return this;
+
+        public Builder acceleratorCount(String acceleratorCount) {
+            return acceleratorCount(Output.of(acceleratorCount));
         }
+
         public Builder acceleratorType(@Nullable Output<String> acceleratorType) {
-            this.acceleratorType = acceleratorType;
+            $.acceleratorType = acceleratorType;
             return this;
         }
-        public Builder acceleratorType(@Nullable String acceleratorType) {
-            this.acceleratorType = Codegen.ofNullable(acceleratorType);
-            return this;
+
+        public Builder acceleratorType(String acceleratorType) {
+            return acceleratorType(Output.of(acceleratorType));
         }
+
         public Builder gpuPartitionSize(@Nullable Output<String> gpuPartitionSize) {
-            this.gpuPartitionSize = gpuPartitionSize;
+            $.gpuPartitionSize = gpuPartitionSize;
             return this;
         }
-        public Builder gpuPartitionSize(@Nullable String gpuPartitionSize) {
-            this.gpuPartitionSize = Codegen.ofNullable(gpuPartitionSize);
-            return this;
-        }        public AcceleratorConfigArgs build() {
-            return new AcceleratorConfigArgs(acceleratorCount, acceleratorType, gpuPartitionSize);
+
+        public Builder gpuPartitionSize(String gpuPartitionSize) {
+            return gpuPartitionSize(Output.of(gpuPartitionSize));
+        }
+
+        public AcceleratorConfigArgs build() {
+            return $;
         }
     }
+
 }

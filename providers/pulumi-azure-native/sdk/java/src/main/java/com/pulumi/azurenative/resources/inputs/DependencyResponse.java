@@ -25,10 +25,10 @@ public final class DependencyResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="dependsOn")
-      private final @Nullable List<BasicDependencyResponse> dependsOn;
+    private @Nullable List<BasicDependencyResponse> dependsOn;
 
-    public List<BasicDependencyResponse> dependsOn() {
-        return this.dependsOn == null ? List.of() : this.dependsOn;
+    public Optional<List<BasicDependencyResponse>> dependsOn() {
+        return Optional.ofNullable(this.dependsOn);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class DependencyResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="id")
-      private final @Nullable String id;
+    private @Nullable String id;
 
     public Optional<String> id() {
-        return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
+        return Optional.ofNullable(this.id);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class DependencyResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceName")
-      private final @Nullable String resourceName;
+    private @Nullable String resourceName;
 
     public Optional<String> resourceName() {
-        return this.resourceName == null ? Optional.empty() : Optional.ofNullable(this.resourceName);
+        return Optional.ofNullable(this.resourceName);
     }
 
     /**
@@ -58,76 +58,66 @@ public final class DependencyResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceType")
-      private final @Nullable String resourceType;
+    private @Nullable String resourceType;
 
     public Optional<String> resourceType() {
-        return this.resourceType == null ? Optional.empty() : Optional.ofNullable(this.resourceType);
+        return Optional.ofNullable(this.resourceType);
     }
 
-    public DependencyResponse(
-        @Nullable List<BasicDependencyResponse> dependsOn,
-        @Nullable String id,
-        @Nullable String resourceName,
-        @Nullable String resourceType) {
-        this.dependsOn = dependsOn;
-        this.id = id;
-        this.resourceName = resourceName;
-        this.resourceType = resourceType;
-    }
+    private DependencyResponse() {}
 
-    private DependencyResponse() {
-        this.dependsOn = List.of();
-        this.id = null;
-        this.resourceName = null;
-        this.resourceType = null;
+    private DependencyResponse(DependencyResponse $) {
+        this.dependsOn = $.dependsOn;
+        this.id = $.id;
+        this.resourceName = $.resourceName;
+        this.resourceType = $.resourceType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DependencyResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<BasicDependencyResponse> dependsOn;
-        private @Nullable String id;
-        private @Nullable String resourceName;
-        private @Nullable String resourceType;
+        private DependencyResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new DependencyResponse();
         }
 
         public Builder(DependencyResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dependsOn = defaults.dependsOn;
-    	      this.id = defaults.id;
-    	      this.resourceName = defaults.resourceName;
-    	      this.resourceType = defaults.resourceType;
+            $ = new DependencyResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder dependsOn(@Nullable List<BasicDependencyResponse> dependsOn) {
-            this.dependsOn = dependsOn;
+            $.dependsOn = dependsOn;
             return this;
         }
+
         public Builder dependsOn(BasicDependencyResponse... dependsOn) {
             return dependsOn(List.of(dependsOn));
         }
+
         public Builder id(@Nullable String id) {
-            this.id = id;
+            $.id = id;
             return this;
         }
+
         public Builder resourceName(@Nullable String resourceName) {
-            this.resourceName = resourceName;
+            $.resourceName = resourceName;
             return this;
         }
+
         public Builder resourceType(@Nullable String resourceType) {
-            this.resourceType = resourceType;
+            $.resourceType = resourceType;
             return this;
-        }        public DependencyResponse build() {
-            return new DependencyResponse(dependsOn, id, resourceName, resourceType);
+        }
+
+        public DependencyResponse build() {
+            return $;
         }
     }
+
 }

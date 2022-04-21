@@ -5,9 +5,9 @@ package com.pulumi.gcp.osconfig.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,7 +20,7 @@ public final class GuestPoliciesRecipeUpdateStepArchiveExtractionGetArgs extends
      * 
      */
     @Import(name="artifactId", required=true)
-      private final Output<String> artifactId;
+    private Output<String> artifactId;
 
     public Output<String> artifactId() {
         return this.artifactId;
@@ -31,10 +31,10 @@ public final class GuestPoliciesRecipeUpdateStepArchiveExtractionGetArgs extends
      * 
      */
     @Import(name="destination")
-      private final @Nullable Output<String> destination;
+    private @Nullable Output<String> destination;
 
-    public Output<String> destination() {
-        return this.destination == null ? Codegen.empty() : this.destination;
+    public Optional<Output<String>> destination() {
+        return Optional.ofNullable(this.destination);
     }
 
     /**
@@ -43,76 +43,70 @@ public final class GuestPoliciesRecipeUpdateStepArchiveExtractionGetArgs extends
      * 
      */
     @Import(name="type", required=true)
-      private final Output<String> type;
+    private Output<String> type;
 
     public Output<String> type() {
         return this.type;
     }
 
-    public GuestPoliciesRecipeUpdateStepArchiveExtractionGetArgs(
-        Output<String> artifactId,
-        @Nullable Output<String> destination,
-        Output<String> type) {
-        this.artifactId = Objects.requireNonNull(artifactId, "expected parameter 'artifactId' to be non-null");
-        this.destination = destination;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private GuestPoliciesRecipeUpdateStepArchiveExtractionGetArgs() {}
 
-    private GuestPoliciesRecipeUpdateStepArchiveExtractionGetArgs() {
-        this.artifactId = Codegen.empty();
-        this.destination = Codegen.empty();
-        this.type = Codegen.empty();
+    private GuestPoliciesRecipeUpdateStepArchiveExtractionGetArgs(GuestPoliciesRecipeUpdateStepArchiveExtractionGetArgs $) {
+        this.artifactId = $.artifactId;
+        this.destination = $.destination;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GuestPoliciesRecipeUpdateStepArchiveExtractionGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> artifactId;
-        private @Nullable Output<String> destination;
-        private Output<String> type;
+        private GuestPoliciesRecipeUpdateStepArchiveExtractionGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GuestPoliciesRecipeUpdateStepArchiveExtractionGetArgs();
         }
 
         public Builder(GuestPoliciesRecipeUpdateStepArchiveExtractionGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.artifactId = defaults.artifactId;
-    	      this.destination = defaults.destination;
-    	      this.type = defaults.type;
+            $ = new GuestPoliciesRecipeUpdateStepArchiveExtractionGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder artifactId(Output<String> artifactId) {
-            this.artifactId = Objects.requireNonNull(artifactId);
+            $.artifactId = artifactId;
             return this;
         }
+
         public Builder artifactId(String artifactId) {
-            this.artifactId = Output.of(Objects.requireNonNull(artifactId));
-            return this;
+            return artifactId(Output.of(artifactId));
         }
+
         public Builder destination(@Nullable Output<String> destination) {
-            this.destination = destination;
+            $.destination = destination;
             return this;
         }
-        public Builder destination(@Nullable String destination) {
-            this.destination = Codegen.ofNullable(destination);
-            return this;
+
+        public Builder destination(String destination) {
+            return destination(Output.of(destination));
         }
+
         public Builder type(Output<String> type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Output.of(Objects.requireNonNull(type));
-            return this;
-        }        public GuestPoliciesRecipeUpdateStepArchiveExtractionGetArgs build() {
-            return new GuestPoliciesRecipeUpdateStepArchiveExtractionGetArgs(artifactId, destination, type);
+            return type(Output.of(type));
+        }
+
+        public GuestPoliciesRecipeUpdateStepArchiveExtractionGetArgs build() {
+            $.artifactId = Objects.requireNonNull($.artifactId, "expected parameter 'artifactId' to be non-null");
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

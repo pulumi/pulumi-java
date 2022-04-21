@@ -5,10 +5,10 @@ package com.pulumi.awsnative.qldb.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -17,70 +17,65 @@ public final class StreamKinesisConfigurationArgs extends com.pulumi.resources.R
     public static final StreamKinesisConfigurationArgs Empty = new StreamKinesisConfigurationArgs();
 
     @Import(name="aggregationEnabled")
-      private final @Nullable Output<Boolean> aggregationEnabled;
+    private @Nullable Output<Boolean> aggregationEnabled;
 
-    public Output<Boolean> aggregationEnabled() {
-        return this.aggregationEnabled == null ? Codegen.empty() : this.aggregationEnabled;
+    public Optional<Output<Boolean>> aggregationEnabled() {
+        return Optional.ofNullable(this.aggregationEnabled);
     }
 
     @Import(name="streamArn")
-      private final @Nullable Output<String> streamArn;
+    private @Nullable Output<String> streamArn;
 
-    public Output<String> streamArn() {
-        return this.streamArn == null ? Codegen.empty() : this.streamArn;
+    public Optional<Output<String>> streamArn() {
+        return Optional.ofNullable(this.streamArn);
     }
 
-    public StreamKinesisConfigurationArgs(
-        @Nullable Output<Boolean> aggregationEnabled,
-        @Nullable Output<String> streamArn) {
-        this.aggregationEnabled = aggregationEnabled;
-        this.streamArn = streamArn;
-    }
+    private StreamKinesisConfigurationArgs() {}
 
-    private StreamKinesisConfigurationArgs() {
-        this.aggregationEnabled = Codegen.empty();
-        this.streamArn = Codegen.empty();
+    private StreamKinesisConfigurationArgs(StreamKinesisConfigurationArgs $) {
+        this.aggregationEnabled = $.aggregationEnabled;
+        this.streamArn = $.streamArn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(StreamKinesisConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> aggregationEnabled;
-        private @Nullable Output<String> streamArn;
+        private StreamKinesisConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new StreamKinesisConfigurationArgs();
         }
 
         public Builder(StreamKinesisConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.aggregationEnabled = defaults.aggregationEnabled;
-    	      this.streamArn = defaults.streamArn;
+            $ = new StreamKinesisConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder aggregationEnabled(@Nullable Output<Boolean> aggregationEnabled) {
-            this.aggregationEnabled = aggregationEnabled;
+            $.aggregationEnabled = aggregationEnabled;
             return this;
         }
-        public Builder aggregationEnabled(@Nullable Boolean aggregationEnabled) {
-            this.aggregationEnabled = Codegen.ofNullable(aggregationEnabled);
-            return this;
+
+        public Builder aggregationEnabled(Boolean aggregationEnabled) {
+            return aggregationEnabled(Output.of(aggregationEnabled));
         }
+
         public Builder streamArn(@Nullable Output<String> streamArn) {
-            this.streamArn = streamArn;
+            $.streamArn = streamArn;
             return this;
         }
-        public Builder streamArn(@Nullable String streamArn) {
-            this.streamArn = Codegen.ofNullable(streamArn);
-            return this;
-        }        public StreamKinesisConfigurationArgs build() {
-            return new StreamKinesisConfigurationArgs(aggregationEnabled, streamArn);
+
+        public Builder streamArn(String streamArn) {
+            return streamArn(Output.of(streamArn));
+        }
+
+        public StreamKinesisConfigurationArgs build() {
+            return $;
         }
     }
+
 }

@@ -21,45 +21,45 @@ public final class ConfidentialInstanceConfigResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="enableConfidentialCompute", required=true)
-      private final Boolean enableConfidentialCompute;
+    private Boolean enableConfidentialCompute;
 
     public Boolean enableConfidentialCompute() {
         return this.enableConfidentialCompute;
     }
 
-    public ConfidentialInstanceConfigResponse(Boolean enableConfidentialCompute) {
-        this.enableConfidentialCompute = Objects.requireNonNull(enableConfidentialCompute, "expected parameter 'enableConfidentialCompute' to be non-null");
-    }
+    private ConfidentialInstanceConfigResponse() {}
 
-    private ConfidentialInstanceConfigResponse() {
-        this.enableConfidentialCompute = null;
+    private ConfidentialInstanceConfigResponse(ConfidentialInstanceConfigResponse $) {
+        this.enableConfidentialCompute = $.enableConfidentialCompute;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ConfidentialInstanceConfigResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Boolean enableConfidentialCompute;
+        private ConfidentialInstanceConfigResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ConfidentialInstanceConfigResponse();
         }
 
         public Builder(ConfidentialInstanceConfigResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.enableConfidentialCompute = defaults.enableConfidentialCompute;
+            $ = new ConfidentialInstanceConfigResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder enableConfidentialCompute(Boolean enableConfidentialCompute) {
-            this.enableConfidentialCompute = Objects.requireNonNull(enableConfidentialCompute);
+            $.enableConfidentialCompute = enableConfidentialCompute;
             return this;
-        }        public ConfidentialInstanceConfigResponse build() {
-            return new ConfidentialInstanceConfigResponse(enableConfidentialCompute);
+        }
+
+        public ConfidentialInstanceConfigResponse build() {
+            $.enableConfidentialCompute = Objects.requireNonNull($.enableConfidentialCompute, "expected parameter 'enableConfidentialCompute' to be non-null");
+            return $;
         }
     }
+
 }

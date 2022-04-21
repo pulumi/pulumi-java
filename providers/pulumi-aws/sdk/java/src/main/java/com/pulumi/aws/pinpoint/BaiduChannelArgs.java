@@ -5,10 +5,10 @@ package com.pulumi.aws.pinpoint;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,7 +21,7 @@ public final class BaiduChannelArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="apiKey", required=true)
-      private final Output<String> apiKey;
+    private Output<String> apiKey;
 
     public Output<String> apiKey() {
         return this.apiKey;
@@ -32,7 +32,7 @@ public final class BaiduChannelArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="applicationId", required=true)
-      private final Output<String> applicationId;
+    private Output<String> applicationId;
 
     public Output<String> applicationId() {
         return this.applicationId;
@@ -43,10 +43,10 @@ public final class BaiduChannelArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="enabled")
-      private final @Nullable Output<Boolean> enabled;
+    private @Nullable Output<Boolean> enabled;
 
-    public Output<Boolean> enabled() {
-        return this.enabled == null ? Codegen.empty() : this.enabled;
+    public Optional<Output<Boolean>> enabled() {
+        return Optional.ofNullable(this.enabled);
     }
 
     /**
@@ -54,89 +54,81 @@ public final class BaiduChannelArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="secretKey", required=true)
-      private final Output<String> secretKey;
+    private Output<String> secretKey;
 
     public Output<String> secretKey() {
         return this.secretKey;
     }
 
-    public BaiduChannelArgs(
-        Output<String> apiKey,
-        Output<String> applicationId,
-        @Nullable Output<Boolean> enabled,
-        Output<String> secretKey) {
-        this.apiKey = Objects.requireNonNull(apiKey, "expected parameter 'apiKey' to be non-null");
-        this.applicationId = Objects.requireNonNull(applicationId, "expected parameter 'applicationId' to be non-null");
-        this.enabled = enabled;
-        this.secretKey = Objects.requireNonNull(secretKey, "expected parameter 'secretKey' to be non-null");
-    }
+    private BaiduChannelArgs() {}
 
-    private BaiduChannelArgs() {
-        this.apiKey = Codegen.empty();
-        this.applicationId = Codegen.empty();
-        this.enabled = Codegen.empty();
-        this.secretKey = Codegen.empty();
+    private BaiduChannelArgs(BaiduChannelArgs $) {
+        this.apiKey = $.apiKey;
+        this.applicationId = $.applicationId;
+        this.enabled = $.enabled;
+        this.secretKey = $.secretKey;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BaiduChannelArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> apiKey;
-        private Output<String> applicationId;
-        private @Nullable Output<Boolean> enabled;
-        private Output<String> secretKey;
+        private BaiduChannelArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new BaiduChannelArgs();
         }
 
         public Builder(BaiduChannelArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.apiKey = defaults.apiKey;
-    	      this.applicationId = defaults.applicationId;
-    	      this.enabled = defaults.enabled;
-    	      this.secretKey = defaults.secretKey;
+            $ = new BaiduChannelArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder apiKey(Output<String> apiKey) {
-            this.apiKey = Objects.requireNonNull(apiKey);
+            $.apiKey = apiKey;
             return this;
         }
+
         public Builder apiKey(String apiKey) {
-            this.apiKey = Output.of(Objects.requireNonNull(apiKey));
-            return this;
+            return apiKey(Output.of(apiKey));
         }
+
         public Builder applicationId(Output<String> applicationId) {
-            this.applicationId = Objects.requireNonNull(applicationId);
+            $.applicationId = applicationId;
             return this;
         }
+
         public Builder applicationId(String applicationId) {
-            this.applicationId = Output.of(Objects.requireNonNull(applicationId));
-            return this;
+            return applicationId(Output.of(applicationId));
         }
+
         public Builder enabled(@Nullable Output<Boolean> enabled) {
-            this.enabled = enabled;
+            $.enabled = enabled;
             return this;
         }
-        public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Codegen.ofNullable(enabled);
-            return this;
+
+        public Builder enabled(Boolean enabled) {
+            return enabled(Output.of(enabled));
         }
+
         public Builder secretKey(Output<String> secretKey) {
-            this.secretKey = Objects.requireNonNull(secretKey);
+            $.secretKey = secretKey;
             return this;
         }
+
         public Builder secretKey(String secretKey) {
-            this.secretKey = Output.of(Objects.requireNonNull(secretKey));
-            return this;
-        }        public BaiduChannelArgs build() {
-            return new BaiduChannelArgs(apiKey, applicationId, enabled, secretKey);
+            return secretKey(Output.of(secretKey));
+        }
+
+        public BaiduChannelArgs build() {
+            $.apiKey = Objects.requireNonNull($.apiKey, "expected parameter 'apiKey' to be non-null");
+            $.applicationId = Objects.requireNonNull($.applicationId, "expected parameter 'applicationId' to be non-null");
+            $.secretKey = Objects.requireNonNull($.secretKey, "expected parameter 'secretKey' to be non-null");
+            return $;
         }
     }
+
 }

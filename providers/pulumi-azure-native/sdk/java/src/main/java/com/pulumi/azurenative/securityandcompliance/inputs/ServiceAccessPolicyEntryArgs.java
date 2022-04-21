@@ -5,7 +5,6 @@ package com.pulumi.azurenative.securityandcompliance.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,49 +22,49 @@ public final class ServiceAccessPolicyEntryArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="objectId", required=true)
-      private final Output<String> objectId;
+    private Output<String> objectId;
 
     public Output<String> objectId() {
         return this.objectId;
     }
 
-    public ServiceAccessPolicyEntryArgs(Output<String> objectId) {
-        this.objectId = Objects.requireNonNull(objectId, "expected parameter 'objectId' to be non-null");
-    }
+    private ServiceAccessPolicyEntryArgs() {}
 
-    private ServiceAccessPolicyEntryArgs() {
-        this.objectId = Codegen.empty();
+    private ServiceAccessPolicyEntryArgs(ServiceAccessPolicyEntryArgs $) {
+        this.objectId = $.objectId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ServiceAccessPolicyEntryArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> objectId;
+        private ServiceAccessPolicyEntryArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ServiceAccessPolicyEntryArgs();
         }
 
         public Builder(ServiceAccessPolicyEntryArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.objectId = defaults.objectId;
+            $ = new ServiceAccessPolicyEntryArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder objectId(Output<String> objectId) {
-            this.objectId = Objects.requireNonNull(objectId);
+            $.objectId = objectId;
             return this;
         }
+
         public Builder objectId(String objectId) {
-            this.objectId = Output.of(Objects.requireNonNull(objectId));
-            return this;
-        }        public ServiceAccessPolicyEntryArgs build() {
-            return new ServiceAccessPolicyEntryArgs(objectId);
+            return objectId(Output.of(objectId));
+        }
+
+        public ServiceAccessPolicyEntryArgs build() {
+            $.objectId = Objects.requireNonNull($.objectId, "expected parameter 'objectId' to be non-null");
+            return $;
         }
     }
+
 }

@@ -16,62 +16,58 @@ public final class DatasetContentDeliveryRule extends com.pulumi.resources.Invok
     public static final DatasetContentDeliveryRule Empty = new DatasetContentDeliveryRule();
 
     @Import(name="destination", required=true)
-      private final DatasetContentDeliveryRuleDestination destination;
+    private DatasetContentDeliveryRuleDestination destination;
 
     public DatasetContentDeliveryRuleDestination destination() {
         return this.destination;
     }
 
     @Import(name="entryName")
-      private final @Nullable String entryName;
+    private @Nullable String entryName;
 
     public Optional<String> entryName() {
-        return this.entryName == null ? Optional.empty() : Optional.ofNullable(this.entryName);
+        return Optional.ofNullable(this.entryName);
     }
 
-    public DatasetContentDeliveryRule(
-        DatasetContentDeliveryRuleDestination destination,
-        @Nullable String entryName) {
-        this.destination = Objects.requireNonNull(destination, "expected parameter 'destination' to be non-null");
-        this.entryName = entryName;
-    }
+    private DatasetContentDeliveryRule() {}
 
-    private DatasetContentDeliveryRule() {
-        this.destination = null;
-        this.entryName = null;
+    private DatasetContentDeliveryRule(DatasetContentDeliveryRule $) {
+        this.destination = $.destination;
+        this.entryName = $.entryName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DatasetContentDeliveryRule defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private DatasetContentDeliveryRuleDestination destination;
-        private @Nullable String entryName;
+        private DatasetContentDeliveryRule $;
 
         public Builder() {
-    	      // Empty
+            $ = new DatasetContentDeliveryRule();
         }
 
         public Builder(DatasetContentDeliveryRule defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.destination = defaults.destination;
-    	      this.entryName = defaults.entryName;
+            $ = new DatasetContentDeliveryRule(Objects.requireNonNull(defaults));
         }
 
         public Builder destination(DatasetContentDeliveryRuleDestination destination) {
-            this.destination = Objects.requireNonNull(destination);
+            $.destination = destination;
             return this;
         }
+
         public Builder entryName(@Nullable String entryName) {
-            this.entryName = entryName;
+            $.entryName = entryName;
             return this;
-        }        public DatasetContentDeliveryRule build() {
-            return new DatasetContentDeliveryRule(destination, entryName);
+        }
+
+        public DatasetContentDeliveryRule build() {
+            $.destination = Objects.requireNonNull($.destination, "expected parameter 'destination' to be non-null");
+            return $;
         }
     }
+
 }

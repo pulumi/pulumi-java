@@ -17,45 +17,45 @@ public final class GetGrantArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="grantArn", required=true)
-      private final String grantArn;
+    private String grantArn;
 
     public String grantArn() {
         return this.grantArn;
     }
 
-    public GetGrantArgs(String grantArn) {
-        this.grantArn = Objects.requireNonNull(grantArn, "expected parameter 'grantArn' to be non-null");
-    }
+    private GetGrantArgs() {}
 
-    private GetGrantArgs() {
-        this.grantArn = null;
+    private GetGrantArgs(GetGrantArgs $) {
+        this.grantArn = $.grantArn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetGrantArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String grantArn;
+        private GetGrantArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetGrantArgs();
         }
 
         public Builder(GetGrantArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.grantArn = defaults.grantArn;
+            $ = new GetGrantArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder grantArn(String grantArn) {
-            this.grantArn = Objects.requireNonNull(grantArn);
+            $.grantArn = grantArn;
             return this;
-        }        public GetGrantArgs build() {
-            return new GetGrantArgs(grantArn);
+        }
+
+        public GetGrantArgs build() {
+            $.grantArn = Objects.requireNonNull($.grantArn, "expected parameter 'grantArn' to be non-null");
+            return $;
         }
     }
+
 }

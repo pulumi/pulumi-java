@@ -13,78 +13,73 @@ public final class GetEntitlementArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetEntitlementArgs Empty = new GetEntitlementArgs();
 
     @Import(name="accountId", required=true)
-      private final String accountId;
+    private String accountId;
 
     public String accountId() {
         return this.accountId;
     }
 
     @Import(name="customerId", required=true)
-      private final String customerId;
+    private String customerId;
 
     public String customerId() {
         return this.customerId;
     }
 
     @Import(name="entitlementId", required=true)
-      private final String entitlementId;
+    private String entitlementId;
 
     public String entitlementId() {
         return this.entitlementId;
     }
 
-    public GetEntitlementArgs(
-        String accountId,
-        String customerId,
-        String entitlementId) {
-        this.accountId = Objects.requireNonNull(accountId, "expected parameter 'accountId' to be non-null");
-        this.customerId = Objects.requireNonNull(customerId, "expected parameter 'customerId' to be non-null");
-        this.entitlementId = Objects.requireNonNull(entitlementId, "expected parameter 'entitlementId' to be non-null");
-    }
+    private GetEntitlementArgs() {}
 
-    private GetEntitlementArgs() {
-        this.accountId = null;
-        this.customerId = null;
-        this.entitlementId = null;
+    private GetEntitlementArgs(GetEntitlementArgs $) {
+        this.accountId = $.accountId;
+        this.customerId = $.customerId;
+        this.entitlementId = $.entitlementId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetEntitlementArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String accountId;
-        private String customerId;
-        private String entitlementId;
+        private GetEntitlementArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetEntitlementArgs();
         }
 
         public Builder(GetEntitlementArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accountId = defaults.accountId;
-    	      this.customerId = defaults.customerId;
-    	      this.entitlementId = defaults.entitlementId;
+            $ = new GetEntitlementArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder accountId(String accountId) {
-            this.accountId = Objects.requireNonNull(accountId);
+            $.accountId = accountId;
             return this;
         }
+
         public Builder customerId(String customerId) {
-            this.customerId = Objects.requireNonNull(customerId);
+            $.customerId = customerId;
             return this;
         }
+
         public Builder entitlementId(String entitlementId) {
-            this.entitlementId = Objects.requireNonNull(entitlementId);
+            $.entitlementId = entitlementId;
             return this;
-        }        public GetEntitlementArgs build() {
-            return new GetEntitlementArgs(accountId, customerId, entitlementId);
+        }
+
+        public GetEntitlementArgs build() {
+            $.accountId = Objects.requireNonNull($.accountId, "expected parameter 'accountId' to be non-null");
+            $.customerId = Objects.requireNonNull($.customerId, "expected parameter 'customerId' to be non-null");
+            $.entitlementId = Objects.requireNonNull($.entitlementId, "expected parameter 'entitlementId' to be non-null");
+            return $;
         }
     }
+
 }

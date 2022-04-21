@@ -24,10 +24,10 @@ public final class PolybaseSettingsResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="rejectSampleValue")
-      private final @Nullable Object rejectSampleValue;
+    private @Nullable Object rejectSampleValue;
 
     public Optional<Object> rejectSampleValue() {
-        return this.rejectSampleValue == null ? Optional.empty() : Optional.ofNullable(this.rejectSampleValue);
+        return Optional.ofNullable(this.rejectSampleValue);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class PolybaseSettingsResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="rejectType")
-      private final @Nullable String rejectType;
+    private @Nullable String rejectType;
 
     public Optional<String> rejectType() {
-        return this.rejectType == null ? Optional.empty() : Optional.ofNullable(this.rejectType);
+        return Optional.ofNullable(this.rejectType);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class PolybaseSettingsResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="rejectValue")
-      private final @Nullable Object rejectValue;
+    private @Nullable Object rejectValue;
 
     public Optional<Object> rejectValue() {
-        return this.rejectValue == null ? Optional.empty() : Optional.ofNullable(this.rejectValue);
+        return Optional.ofNullable(this.rejectValue);
     }
 
     /**
@@ -57,73 +57,62 @@ public final class PolybaseSettingsResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="useTypeDefault")
-      private final @Nullable Object useTypeDefault;
+    private @Nullable Object useTypeDefault;
 
     public Optional<Object> useTypeDefault() {
-        return this.useTypeDefault == null ? Optional.empty() : Optional.ofNullable(this.useTypeDefault);
+        return Optional.ofNullable(this.useTypeDefault);
     }
 
-    public PolybaseSettingsResponse(
-        @Nullable Object rejectSampleValue,
-        @Nullable String rejectType,
-        @Nullable Object rejectValue,
-        @Nullable Object useTypeDefault) {
-        this.rejectSampleValue = rejectSampleValue;
-        this.rejectType = rejectType;
-        this.rejectValue = rejectValue;
-        this.useTypeDefault = useTypeDefault;
-    }
+    private PolybaseSettingsResponse() {}
 
-    private PolybaseSettingsResponse() {
-        this.rejectSampleValue = null;
-        this.rejectType = null;
-        this.rejectValue = null;
-        this.useTypeDefault = null;
+    private PolybaseSettingsResponse(PolybaseSettingsResponse $) {
+        this.rejectSampleValue = $.rejectSampleValue;
+        this.rejectType = $.rejectType;
+        this.rejectValue = $.rejectValue;
+        this.useTypeDefault = $.useTypeDefault;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PolybaseSettingsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Object rejectSampleValue;
-        private @Nullable String rejectType;
-        private @Nullable Object rejectValue;
-        private @Nullable Object useTypeDefault;
+        private PolybaseSettingsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new PolybaseSettingsResponse();
         }
 
         public Builder(PolybaseSettingsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.rejectSampleValue = defaults.rejectSampleValue;
-    	      this.rejectType = defaults.rejectType;
-    	      this.rejectValue = defaults.rejectValue;
-    	      this.useTypeDefault = defaults.useTypeDefault;
+            $ = new PolybaseSettingsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder rejectSampleValue(@Nullable Object rejectSampleValue) {
-            this.rejectSampleValue = rejectSampleValue;
+            $.rejectSampleValue = rejectSampleValue;
             return this;
         }
+
         public Builder rejectType(@Nullable String rejectType) {
-            this.rejectType = rejectType;
+            $.rejectType = rejectType;
             return this;
         }
+
         public Builder rejectValue(@Nullable Object rejectValue) {
-            this.rejectValue = rejectValue;
+            $.rejectValue = rejectValue;
             return this;
         }
+
         public Builder useTypeDefault(@Nullable Object useTypeDefault) {
-            this.useTypeDefault = useTypeDefault;
+            $.useTypeDefault = useTypeDefault;
             return this;
-        }        public PolybaseSettingsResponse build() {
-            return new PolybaseSettingsResponse(rejectSampleValue, rejectType, rejectValue, useTypeDefault);
+        }
+
+        public PolybaseSettingsResponse build() {
+            return $;
         }
     }
+
 }

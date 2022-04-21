@@ -13,45 +13,45 @@ public final class GetPublicKeyArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetPublicKeyArgs Empty = new GetPublicKeyArgs();
 
     @Import(name="id", required=true)
-      private final String id;
+    private String id;
 
     public String id() {
         return this.id;
     }
 
-    public GetPublicKeyArgs(String id) {
-        this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
-    }
+    private GetPublicKeyArgs() {}
 
-    private GetPublicKeyArgs() {
-        this.id = null;
+    private GetPublicKeyArgs(GetPublicKeyArgs $) {
+        this.id = $.id;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetPublicKeyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String id;
+        private GetPublicKeyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetPublicKeyArgs();
         }
 
         public Builder(GetPublicKeyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.id = defaults.id;
+            $ = new GetPublicKeyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder id(String id) {
-            this.id = Objects.requireNonNull(id);
+            $.id = id;
             return this;
-        }        public GetPublicKeyArgs build() {
-            return new GetPublicKeyArgs(id);
+        }
+
+        public GetPublicKeyArgs build() {
+            $.id = Objects.requireNonNull($.id, "expected parameter 'id' to be non-null");
+            return $;
         }
     }
+
 }

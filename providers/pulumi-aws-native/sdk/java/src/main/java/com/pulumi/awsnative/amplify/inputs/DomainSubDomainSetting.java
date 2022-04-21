@@ -13,62 +13,59 @@ public final class DomainSubDomainSetting extends com.pulumi.resources.InvokeArg
     public static final DomainSubDomainSetting Empty = new DomainSubDomainSetting();
 
     @Import(name="branchName", required=true)
-      private final String branchName;
+    private String branchName;
 
     public String branchName() {
         return this.branchName;
     }
 
     @Import(name="prefix", required=true)
-      private final String prefix;
+    private String prefix;
 
     public String prefix() {
         return this.prefix;
     }
 
-    public DomainSubDomainSetting(
-        String branchName,
-        String prefix) {
-        this.branchName = Objects.requireNonNull(branchName, "expected parameter 'branchName' to be non-null");
-        this.prefix = Objects.requireNonNull(prefix, "expected parameter 'prefix' to be non-null");
-    }
+    private DomainSubDomainSetting() {}
 
-    private DomainSubDomainSetting() {
-        this.branchName = null;
-        this.prefix = null;
+    private DomainSubDomainSetting(DomainSubDomainSetting $) {
+        this.branchName = $.branchName;
+        this.prefix = $.prefix;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DomainSubDomainSetting defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String branchName;
-        private String prefix;
+        private DomainSubDomainSetting $;
 
         public Builder() {
-    	      // Empty
+            $ = new DomainSubDomainSetting();
         }
 
         public Builder(DomainSubDomainSetting defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.branchName = defaults.branchName;
-    	      this.prefix = defaults.prefix;
+            $ = new DomainSubDomainSetting(Objects.requireNonNull(defaults));
         }
 
         public Builder branchName(String branchName) {
-            this.branchName = Objects.requireNonNull(branchName);
+            $.branchName = branchName;
             return this;
         }
+
         public Builder prefix(String prefix) {
-            this.prefix = Objects.requireNonNull(prefix);
+            $.prefix = prefix;
             return this;
-        }        public DomainSubDomainSetting build() {
-            return new DomainSubDomainSetting(branchName, prefix);
+        }
+
+        public DomainSubDomainSetting build() {
+            $.branchName = Objects.requireNonNull($.branchName, "expected parameter 'branchName' to be non-null");
+            $.prefix = Objects.requireNonNull($.prefix, "expected parameter 'prefix' to be non-null");
+            return $;
         }
     }
+
 }

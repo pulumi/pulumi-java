@@ -23,7 +23,7 @@ public final class CertificateConfigResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="publicKey", required=true)
-      private final PublicKeyResponse publicKey;
+    private PublicKeyResponse publicKey;
 
     public PublicKeyResponse publicKey() {
         return this.publicKey;
@@ -34,7 +34,7 @@ public final class CertificateConfigResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="subjectConfig", required=true)
-      private final SubjectConfigResponse subjectConfig;
+    private SubjectConfigResponse subjectConfig;
 
     public SubjectConfigResponse subjectConfig() {
         return this.subjectConfig;
@@ -45,64 +45,59 @@ public final class CertificateConfigResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="x509Config", required=true)
-      private final X509ParametersResponse x509Config;
+    private X509ParametersResponse x509Config;
 
     public X509ParametersResponse x509Config() {
         return this.x509Config;
     }
 
-    public CertificateConfigResponse(
-        PublicKeyResponse publicKey,
-        SubjectConfigResponse subjectConfig,
-        X509ParametersResponse x509Config) {
-        this.publicKey = Objects.requireNonNull(publicKey, "expected parameter 'publicKey' to be non-null");
-        this.subjectConfig = Objects.requireNonNull(subjectConfig, "expected parameter 'subjectConfig' to be non-null");
-        this.x509Config = Objects.requireNonNull(x509Config, "expected parameter 'x509Config' to be non-null");
-    }
+    private CertificateConfigResponse() {}
 
-    private CertificateConfigResponse() {
-        this.publicKey = null;
-        this.subjectConfig = null;
-        this.x509Config = null;
+    private CertificateConfigResponse(CertificateConfigResponse $) {
+        this.publicKey = $.publicKey;
+        this.subjectConfig = $.subjectConfig;
+        this.x509Config = $.x509Config;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CertificateConfigResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private PublicKeyResponse publicKey;
-        private SubjectConfigResponse subjectConfig;
-        private X509ParametersResponse x509Config;
+        private CertificateConfigResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new CertificateConfigResponse();
         }
 
         public Builder(CertificateConfigResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.publicKey = defaults.publicKey;
-    	      this.subjectConfig = defaults.subjectConfig;
-    	      this.x509Config = defaults.x509Config;
+            $ = new CertificateConfigResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder publicKey(PublicKeyResponse publicKey) {
-            this.publicKey = Objects.requireNonNull(publicKey);
+            $.publicKey = publicKey;
             return this;
         }
+
         public Builder subjectConfig(SubjectConfigResponse subjectConfig) {
-            this.subjectConfig = Objects.requireNonNull(subjectConfig);
+            $.subjectConfig = subjectConfig;
             return this;
         }
+
         public Builder x509Config(X509ParametersResponse x509Config) {
-            this.x509Config = Objects.requireNonNull(x509Config);
+            $.x509Config = x509Config;
             return this;
-        }        public CertificateConfigResponse build() {
-            return new CertificateConfigResponse(publicKey, subjectConfig, x509Config);
+        }
+
+        public CertificateConfigResponse build() {
+            $.publicKey = Objects.requireNonNull($.publicKey, "expected parameter 'publicKey' to be non-null");
+            $.subjectConfig = Objects.requireNonNull($.subjectConfig, "expected parameter 'subjectConfig' to be non-null");
+            $.x509Config = Objects.requireNonNull($.x509Config, "expected parameter 'x509Config' to be non-null");
+            return $;
         }
     }
+
 }

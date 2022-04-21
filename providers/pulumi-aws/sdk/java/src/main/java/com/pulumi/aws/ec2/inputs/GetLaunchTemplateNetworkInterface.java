@@ -18,24 +18,24 @@ public final class GetLaunchTemplateNetworkInterface extends com.pulumi.resource
     public static final GetLaunchTemplateNetworkInterface Empty = new GetLaunchTemplateNetworkInterface();
 
     @Import(name="associateCarrierIpAddress", required=true)
-      private final String associateCarrierIpAddress;
+    private String associateCarrierIpAddress;
 
     public String associateCarrierIpAddress() {
         return this.associateCarrierIpAddress;
     }
 
     @Import(name="associatePublicIpAddress")
-      private final @Nullable Boolean associatePublicIpAddress;
+    private @Nullable Boolean associatePublicIpAddress;
 
     public Optional<Boolean> associatePublicIpAddress() {
-        return this.associatePublicIpAddress == null ? Optional.empty() : Optional.ofNullable(this.associatePublicIpAddress);
+        return Optional.ofNullable(this.associatePublicIpAddress);
     }
 
     @Import(name="deleteOnTermination")
-      private final @Nullable Boolean deleteOnTermination;
+    private @Nullable Boolean deleteOnTermination;
 
     public Optional<Boolean> deleteOnTermination() {
-        return this.deleteOnTermination == null ? Optional.empty() : Optional.ofNullable(this.deleteOnTermination);
+        return Optional.ofNullable(this.deleteOnTermination);
     }
 
     /**
@@ -43,258 +43,229 @@ public final class GetLaunchTemplateNetworkInterface extends com.pulumi.resource
      * 
      */
     @Import(name="description", required=true)
-      private final String description;
+    private String description;
 
     public String description() {
         return this.description;
     }
 
     @Import(name="deviceIndex", required=true)
-      private final Integer deviceIndex;
+    private Integer deviceIndex;
 
     public Integer deviceIndex() {
         return this.deviceIndex;
     }
 
     @Import(name="interfaceType", required=true)
-      private final String interfaceType;
+    private String interfaceType;
 
     public String interfaceType() {
         return this.interfaceType;
     }
 
     @Import(name="ipv4AddressCount", required=true)
-      private final Integer ipv4AddressCount;
+    private Integer ipv4AddressCount;
 
     public Integer ipv4AddressCount() {
         return this.ipv4AddressCount;
     }
 
     @Import(name="ipv4Addresses", required=true)
-      private final List<String> ipv4Addresses;
+    private List<String> ipv4Addresses;
 
     public List<String> ipv4Addresses() {
         return this.ipv4Addresses;
     }
 
     @Import(name="ipv6AddressCount", required=true)
-      private final Integer ipv6AddressCount;
+    private Integer ipv6AddressCount;
 
     public Integer ipv6AddressCount() {
         return this.ipv6AddressCount;
     }
 
     @Import(name="ipv6Addresses", required=true)
-      private final List<String> ipv6Addresses;
+    private List<String> ipv6Addresses;
 
     public List<String> ipv6Addresses() {
         return this.ipv6Addresses;
     }
 
     @Import(name="networkCardIndex")
-      private final @Nullable Integer networkCardIndex;
+    private @Nullable Integer networkCardIndex;
 
     public Optional<Integer> networkCardIndex() {
-        return this.networkCardIndex == null ? Optional.empty() : Optional.ofNullable(this.networkCardIndex);
+        return Optional.ofNullable(this.networkCardIndex);
     }
 
     @Import(name="networkInterfaceId", required=true)
-      private final String networkInterfaceId;
+    private String networkInterfaceId;
 
     public String networkInterfaceId() {
         return this.networkInterfaceId;
     }
 
     @Import(name="privateIpAddress", required=true)
-      private final String privateIpAddress;
+    private String privateIpAddress;
 
     public String privateIpAddress() {
         return this.privateIpAddress;
     }
 
     @Import(name="securityGroups", required=true)
-      private final List<String> securityGroups;
+    private List<String> securityGroups;
 
     public List<String> securityGroups() {
         return this.securityGroups;
     }
 
     @Import(name="subnetId", required=true)
-      private final String subnetId;
+    private String subnetId;
 
     public String subnetId() {
         return this.subnetId;
     }
 
-    public GetLaunchTemplateNetworkInterface(
-        String associateCarrierIpAddress,
-        @Nullable Boolean associatePublicIpAddress,
-        @Nullable Boolean deleteOnTermination,
-        String description,
-        Integer deviceIndex,
-        String interfaceType,
-        Integer ipv4AddressCount,
-        List<String> ipv4Addresses,
-        Integer ipv6AddressCount,
-        List<String> ipv6Addresses,
-        @Nullable Integer networkCardIndex,
-        String networkInterfaceId,
-        String privateIpAddress,
-        List<String> securityGroups,
-        String subnetId) {
-        this.associateCarrierIpAddress = Objects.requireNonNull(associateCarrierIpAddress, "expected parameter 'associateCarrierIpAddress' to be non-null");
-        this.associatePublicIpAddress = associatePublicIpAddress;
-        this.deleteOnTermination = deleteOnTermination;
-        this.description = Objects.requireNonNull(description, "expected parameter 'description' to be non-null");
-        this.deviceIndex = Objects.requireNonNull(deviceIndex, "expected parameter 'deviceIndex' to be non-null");
-        this.interfaceType = Objects.requireNonNull(interfaceType, "expected parameter 'interfaceType' to be non-null");
-        this.ipv4AddressCount = Objects.requireNonNull(ipv4AddressCount, "expected parameter 'ipv4AddressCount' to be non-null");
-        this.ipv4Addresses = Objects.requireNonNull(ipv4Addresses, "expected parameter 'ipv4Addresses' to be non-null");
-        this.ipv6AddressCount = Objects.requireNonNull(ipv6AddressCount, "expected parameter 'ipv6AddressCount' to be non-null");
-        this.ipv6Addresses = Objects.requireNonNull(ipv6Addresses, "expected parameter 'ipv6Addresses' to be non-null");
-        this.networkCardIndex = networkCardIndex;
-        this.networkInterfaceId = Objects.requireNonNull(networkInterfaceId, "expected parameter 'networkInterfaceId' to be non-null");
-        this.privateIpAddress = Objects.requireNonNull(privateIpAddress, "expected parameter 'privateIpAddress' to be non-null");
-        this.securityGroups = Objects.requireNonNull(securityGroups, "expected parameter 'securityGroups' to be non-null");
-        this.subnetId = Objects.requireNonNull(subnetId, "expected parameter 'subnetId' to be non-null");
-    }
+    private GetLaunchTemplateNetworkInterface() {}
 
-    private GetLaunchTemplateNetworkInterface() {
-        this.associateCarrierIpAddress = null;
-        this.associatePublicIpAddress = null;
-        this.deleteOnTermination = null;
-        this.description = null;
-        this.deviceIndex = null;
-        this.interfaceType = null;
-        this.ipv4AddressCount = null;
-        this.ipv4Addresses = List.of();
-        this.ipv6AddressCount = null;
-        this.ipv6Addresses = List.of();
-        this.networkCardIndex = null;
-        this.networkInterfaceId = null;
-        this.privateIpAddress = null;
-        this.securityGroups = List.of();
-        this.subnetId = null;
+    private GetLaunchTemplateNetworkInterface(GetLaunchTemplateNetworkInterface $) {
+        this.associateCarrierIpAddress = $.associateCarrierIpAddress;
+        this.associatePublicIpAddress = $.associatePublicIpAddress;
+        this.deleteOnTermination = $.deleteOnTermination;
+        this.description = $.description;
+        this.deviceIndex = $.deviceIndex;
+        this.interfaceType = $.interfaceType;
+        this.ipv4AddressCount = $.ipv4AddressCount;
+        this.ipv4Addresses = $.ipv4Addresses;
+        this.ipv6AddressCount = $.ipv6AddressCount;
+        this.ipv6Addresses = $.ipv6Addresses;
+        this.networkCardIndex = $.networkCardIndex;
+        this.networkInterfaceId = $.networkInterfaceId;
+        this.privateIpAddress = $.privateIpAddress;
+        this.securityGroups = $.securityGroups;
+        this.subnetId = $.subnetId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetLaunchTemplateNetworkInterface defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String associateCarrierIpAddress;
-        private @Nullable Boolean associatePublicIpAddress;
-        private @Nullable Boolean deleteOnTermination;
-        private String description;
-        private Integer deviceIndex;
-        private String interfaceType;
-        private Integer ipv4AddressCount;
-        private List<String> ipv4Addresses;
-        private Integer ipv6AddressCount;
-        private List<String> ipv6Addresses;
-        private @Nullable Integer networkCardIndex;
-        private String networkInterfaceId;
-        private String privateIpAddress;
-        private List<String> securityGroups;
-        private String subnetId;
+        private GetLaunchTemplateNetworkInterface $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetLaunchTemplateNetworkInterface();
         }
 
         public Builder(GetLaunchTemplateNetworkInterface defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.associateCarrierIpAddress = defaults.associateCarrierIpAddress;
-    	      this.associatePublicIpAddress = defaults.associatePublicIpAddress;
-    	      this.deleteOnTermination = defaults.deleteOnTermination;
-    	      this.description = defaults.description;
-    	      this.deviceIndex = defaults.deviceIndex;
-    	      this.interfaceType = defaults.interfaceType;
-    	      this.ipv4AddressCount = defaults.ipv4AddressCount;
-    	      this.ipv4Addresses = defaults.ipv4Addresses;
-    	      this.ipv6AddressCount = defaults.ipv6AddressCount;
-    	      this.ipv6Addresses = defaults.ipv6Addresses;
-    	      this.networkCardIndex = defaults.networkCardIndex;
-    	      this.networkInterfaceId = defaults.networkInterfaceId;
-    	      this.privateIpAddress = defaults.privateIpAddress;
-    	      this.securityGroups = defaults.securityGroups;
-    	      this.subnetId = defaults.subnetId;
+            $ = new GetLaunchTemplateNetworkInterface(Objects.requireNonNull(defaults));
         }
 
         public Builder associateCarrierIpAddress(String associateCarrierIpAddress) {
-            this.associateCarrierIpAddress = Objects.requireNonNull(associateCarrierIpAddress);
+            $.associateCarrierIpAddress = associateCarrierIpAddress;
             return this;
         }
+
         public Builder associatePublicIpAddress(@Nullable Boolean associatePublicIpAddress) {
-            this.associatePublicIpAddress = associatePublicIpAddress;
+            $.associatePublicIpAddress = associatePublicIpAddress;
             return this;
         }
+
         public Builder deleteOnTermination(@Nullable Boolean deleteOnTermination) {
-            this.deleteOnTermination = deleteOnTermination;
+            $.deleteOnTermination = deleteOnTermination;
             return this;
         }
+
         public Builder description(String description) {
-            this.description = Objects.requireNonNull(description);
+            $.description = description;
             return this;
         }
+
         public Builder deviceIndex(Integer deviceIndex) {
-            this.deviceIndex = Objects.requireNonNull(deviceIndex);
+            $.deviceIndex = deviceIndex;
             return this;
         }
+
         public Builder interfaceType(String interfaceType) {
-            this.interfaceType = Objects.requireNonNull(interfaceType);
+            $.interfaceType = interfaceType;
             return this;
         }
+
         public Builder ipv4AddressCount(Integer ipv4AddressCount) {
-            this.ipv4AddressCount = Objects.requireNonNull(ipv4AddressCount);
+            $.ipv4AddressCount = ipv4AddressCount;
             return this;
         }
+
         public Builder ipv4Addresses(List<String> ipv4Addresses) {
-            this.ipv4Addresses = Objects.requireNonNull(ipv4Addresses);
+            $.ipv4Addresses = ipv4Addresses;
             return this;
         }
+
         public Builder ipv4Addresses(String... ipv4Addresses) {
             return ipv4Addresses(List.of(ipv4Addresses));
         }
+
         public Builder ipv6AddressCount(Integer ipv6AddressCount) {
-            this.ipv6AddressCount = Objects.requireNonNull(ipv6AddressCount);
+            $.ipv6AddressCount = ipv6AddressCount;
             return this;
         }
+
         public Builder ipv6Addresses(List<String> ipv6Addresses) {
-            this.ipv6Addresses = Objects.requireNonNull(ipv6Addresses);
+            $.ipv6Addresses = ipv6Addresses;
             return this;
         }
+
         public Builder ipv6Addresses(String... ipv6Addresses) {
             return ipv6Addresses(List.of(ipv6Addresses));
         }
+
         public Builder networkCardIndex(@Nullable Integer networkCardIndex) {
-            this.networkCardIndex = networkCardIndex;
+            $.networkCardIndex = networkCardIndex;
             return this;
         }
+
         public Builder networkInterfaceId(String networkInterfaceId) {
-            this.networkInterfaceId = Objects.requireNonNull(networkInterfaceId);
+            $.networkInterfaceId = networkInterfaceId;
             return this;
         }
+
         public Builder privateIpAddress(String privateIpAddress) {
-            this.privateIpAddress = Objects.requireNonNull(privateIpAddress);
+            $.privateIpAddress = privateIpAddress;
             return this;
         }
+
         public Builder securityGroups(List<String> securityGroups) {
-            this.securityGroups = Objects.requireNonNull(securityGroups);
+            $.securityGroups = securityGroups;
             return this;
         }
+
         public Builder securityGroups(String... securityGroups) {
             return securityGroups(List.of(securityGroups));
         }
+
         public Builder subnetId(String subnetId) {
-            this.subnetId = Objects.requireNonNull(subnetId);
+            $.subnetId = subnetId;
             return this;
-        }        public GetLaunchTemplateNetworkInterface build() {
-            return new GetLaunchTemplateNetworkInterface(associateCarrierIpAddress, associatePublicIpAddress, deleteOnTermination, description, deviceIndex, interfaceType, ipv4AddressCount, ipv4Addresses, ipv6AddressCount, ipv6Addresses, networkCardIndex, networkInterfaceId, privateIpAddress, securityGroups, subnetId);
+        }
+
+        public GetLaunchTemplateNetworkInterface build() {
+            $.associateCarrierIpAddress = Objects.requireNonNull($.associateCarrierIpAddress, "expected parameter 'associateCarrierIpAddress' to be non-null");
+            $.description = Objects.requireNonNull($.description, "expected parameter 'description' to be non-null");
+            $.deviceIndex = Objects.requireNonNull($.deviceIndex, "expected parameter 'deviceIndex' to be non-null");
+            $.interfaceType = Objects.requireNonNull($.interfaceType, "expected parameter 'interfaceType' to be non-null");
+            $.ipv4AddressCount = Objects.requireNonNull($.ipv4AddressCount, "expected parameter 'ipv4AddressCount' to be non-null");
+            $.ipv4Addresses = Objects.requireNonNull($.ipv4Addresses, "expected parameter 'ipv4Addresses' to be non-null");
+            $.ipv6AddressCount = Objects.requireNonNull($.ipv6AddressCount, "expected parameter 'ipv6AddressCount' to be non-null");
+            $.ipv6Addresses = Objects.requireNonNull($.ipv6Addresses, "expected parameter 'ipv6Addresses' to be non-null");
+            $.networkInterfaceId = Objects.requireNonNull($.networkInterfaceId, "expected parameter 'networkInterfaceId' to be non-null");
+            $.privateIpAddress = Objects.requireNonNull($.privateIpAddress, "expected parameter 'privateIpAddress' to be non-null");
+            $.securityGroups = Objects.requireNonNull($.securityGroups, "expected parameter 'securityGroups' to be non-null");
+            $.subnetId = Objects.requireNonNull($.subnetId, "expected parameter 'subnetId' to be non-null");
+            return $;
         }
     }
+
 }

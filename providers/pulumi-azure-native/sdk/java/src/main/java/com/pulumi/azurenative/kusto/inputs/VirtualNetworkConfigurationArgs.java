@@ -5,7 +5,6 @@ package com.pulumi.azurenative.kusto.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,7 +22,7 @@ public final class VirtualNetworkConfigurationArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="dataManagementPublicIpId", required=true)
-      private final Output<String> dataManagementPublicIpId;
+    private Output<String> dataManagementPublicIpId;
 
     public Output<String> dataManagementPublicIpId() {
         return this.dataManagementPublicIpId;
@@ -34,7 +33,7 @@ public final class VirtualNetworkConfigurationArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="enginePublicIpId", required=true)
-      private final Output<String> enginePublicIpId;
+    private Output<String> enginePublicIpId;
 
     public Output<String> enginePublicIpId() {
         return this.enginePublicIpId;
@@ -45,76 +44,71 @@ public final class VirtualNetworkConfigurationArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="subnetId", required=true)
-      private final Output<String> subnetId;
+    private Output<String> subnetId;
 
     public Output<String> subnetId() {
         return this.subnetId;
     }
 
-    public VirtualNetworkConfigurationArgs(
-        Output<String> dataManagementPublicIpId,
-        Output<String> enginePublicIpId,
-        Output<String> subnetId) {
-        this.dataManagementPublicIpId = Objects.requireNonNull(dataManagementPublicIpId, "expected parameter 'dataManagementPublicIpId' to be non-null");
-        this.enginePublicIpId = Objects.requireNonNull(enginePublicIpId, "expected parameter 'enginePublicIpId' to be non-null");
-        this.subnetId = Objects.requireNonNull(subnetId, "expected parameter 'subnetId' to be non-null");
-    }
+    private VirtualNetworkConfigurationArgs() {}
 
-    private VirtualNetworkConfigurationArgs() {
-        this.dataManagementPublicIpId = Codegen.empty();
-        this.enginePublicIpId = Codegen.empty();
-        this.subnetId = Codegen.empty();
+    private VirtualNetworkConfigurationArgs(VirtualNetworkConfigurationArgs $) {
+        this.dataManagementPublicIpId = $.dataManagementPublicIpId;
+        this.enginePublicIpId = $.enginePublicIpId;
+        this.subnetId = $.subnetId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VirtualNetworkConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> dataManagementPublicIpId;
-        private Output<String> enginePublicIpId;
-        private Output<String> subnetId;
+        private VirtualNetworkConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new VirtualNetworkConfigurationArgs();
         }
 
         public Builder(VirtualNetworkConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dataManagementPublicIpId = defaults.dataManagementPublicIpId;
-    	      this.enginePublicIpId = defaults.enginePublicIpId;
-    	      this.subnetId = defaults.subnetId;
+            $ = new VirtualNetworkConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder dataManagementPublicIpId(Output<String> dataManagementPublicIpId) {
-            this.dataManagementPublicIpId = Objects.requireNonNull(dataManagementPublicIpId);
+            $.dataManagementPublicIpId = dataManagementPublicIpId;
             return this;
         }
+
         public Builder dataManagementPublicIpId(String dataManagementPublicIpId) {
-            this.dataManagementPublicIpId = Output.of(Objects.requireNonNull(dataManagementPublicIpId));
-            return this;
+            return dataManagementPublicIpId(Output.of(dataManagementPublicIpId));
         }
+
         public Builder enginePublicIpId(Output<String> enginePublicIpId) {
-            this.enginePublicIpId = Objects.requireNonNull(enginePublicIpId);
+            $.enginePublicIpId = enginePublicIpId;
             return this;
         }
+
         public Builder enginePublicIpId(String enginePublicIpId) {
-            this.enginePublicIpId = Output.of(Objects.requireNonNull(enginePublicIpId));
-            return this;
+            return enginePublicIpId(Output.of(enginePublicIpId));
         }
+
         public Builder subnetId(Output<String> subnetId) {
-            this.subnetId = Objects.requireNonNull(subnetId);
+            $.subnetId = subnetId;
             return this;
         }
+
         public Builder subnetId(String subnetId) {
-            this.subnetId = Output.of(Objects.requireNonNull(subnetId));
-            return this;
-        }        public VirtualNetworkConfigurationArgs build() {
-            return new VirtualNetworkConfigurationArgs(dataManagementPublicIpId, enginePublicIpId, subnetId);
+            return subnetId(Output.of(subnetId));
+        }
+
+        public VirtualNetworkConfigurationArgs build() {
+            $.dataManagementPublicIpId = Objects.requireNonNull($.dataManagementPublicIpId, "expected parameter 'dataManagementPublicIpId' to be non-null");
+            $.enginePublicIpId = Objects.requireNonNull($.enginePublicIpId, "expected parameter 'enginePublicIpId' to be non-null");
+            $.subnetId = Objects.requireNonNull($.subnetId, "expected parameter 'subnetId' to be non-null");
+            return $;
         }
     }
+
 }

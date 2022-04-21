@@ -13,45 +13,45 @@ public final class GetConnectionAliasArgs extends com.pulumi.resources.InvokeArg
     public static final GetConnectionAliasArgs Empty = new GetConnectionAliasArgs();
 
     @Import(name="aliasId", required=true)
-      private final String aliasId;
+    private String aliasId;
 
     public String aliasId() {
         return this.aliasId;
     }
 
-    public GetConnectionAliasArgs(String aliasId) {
-        this.aliasId = Objects.requireNonNull(aliasId, "expected parameter 'aliasId' to be non-null");
-    }
+    private GetConnectionAliasArgs() {}
 
-    private GetConnectionAliasArgs() {
-        this.aliasId = null;
+    private GetConnectionAliasArgs(GetConnectionAliasArgs $) {
+        this.aliasId = $.aliasId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetConnectionAliasArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String aliasId;
+        private GetConnectionAliasArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetConnectionAliasArgs();
         }
 
         public Builder(GetConnectionAliasArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.aliasId = defaults.aliasId;
+            $ = new GetConnectionAliasArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder aliasId(String aliasId) {
-            this.aliasId = Objects.requireNonNull(aliasId);
+            $.aliasId = aliasId;
             return this;
-        }        public GetConnectionAliasArgs build() {
-            return new GetConnectionAliasArgs(aliasId);
+        }
+
+        public GetConnectionAliasArgs build() {
+            $.aliasId = Objects.requireNonNull($.aliasId, "expected parameter 'aliasId' to be non-null");
+            return $;
         }
     }
+
 }

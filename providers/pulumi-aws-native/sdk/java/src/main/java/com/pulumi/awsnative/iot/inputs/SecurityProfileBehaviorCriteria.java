@@ -27,10 +27,10 @@ public final class SecurityProfileBehaviorCriteria extends com.pulumi.resources.
      * 
      */
     @Import(name="comparisonOperator")
-      private final @Nullable SecurityProfileBehaviorCriteriaComparisonOperator comparisonOperator;
+    private @Nullable SecurityProfileBehaviorCriteriaComparisonOperator comparisonOperator;
 
     public Optional<SecurityProfileBehaviorCriteriaComparisonOperator> comparisonOperator() {
-        return this.comparisonOperator == null ? Optional.empty() : Optional.ofNullable(this.comparisonOperator);
+        return Optional.ofNullable(this.comparisonOperator);
     }
 
     /**
@@ -38,10 +38,10 @@ public final class SecurityProfileBehaviorCriteria extends com.pulumi.resources.
      * 
      */
     @Import(name="consecutiveDatapointsToAlarm")
-      private final @Nullable Integer consecutiveDatapointsToAlarm;
+    private @Nullable Integer consecutiveDatapointsToAlarm;
 
     public Optional<Integer> consecutiveDatapointsToAlarm() {
-        return this.consecutiveDatapointsToAlarm == null ? Optional.empty() : Optional.ofNullable(this.consecutiveDatapointsToAlarm);
+        return Optional.ofNullable(this.consecutiveDatapointsToAlarm);
     }
 
     /**
@@ -49,10 +49,10 @@ public final class SecurityProfileBehaviorCriteria extends com.pulumi.resources.
      * 
      */
     @Import(name="consecutiveDatapointsToClear")
-      private final @Nullable Integer consecutiveDatapointsToClear;
+    private @Nullable Integer consecutiveDatapointsToClear;
 
     public Optional<Integer> consecutiveDatapointsToClear() {
-        return this.consecutiveDatapointsToClear == null ? Optional.empty() : Optional.ofNullable(this.consecutiveDatapointsToClear);
+        return Optional.ofNullable(this.consecutiveDatapointsToClear);
     }
 
     /**
@@ -60,121 +60,101 @@ public final class SecurityProfileBehaviorCriteria extends com.pulumi.resources.
      * 
      */
     @Import(name="durationSeconds")
-      private final @Nullable Integer durationSeconds;
+    private @Nullable Integer durationSeconds;
 
     public Optional<Integer> durationSeconds() {
-        return this.durationSeconds == null ? Optional.empty() : Optional.ofNullable(this.durationSeconds);
+        return Optional.ofNullable(this.durationSeconds);
     }
 
     @Import(name="mlDetectionConfig")
-      private final @Nullable SecurityProfileMachineLearningDetectionConfig mlDetectionConfig;
+    private @Nullable SecurityProfileMachineLearningDetectionConfig mlDetectionConfig;
 
     public Optional<SecurityProfileMachineLearningDetectionConfig> mlDetectionConfig() {
-        return this.mlDetectionConfig == null ? Optional.empty() : Optional.ofNullable(this.mlDetectionConfig);
+        return Optional.ofNullable(this.mlDetectionConfig);
     }
 
     @Import(name="statisticalThreshold")
-      private final @Nullable SecurityProfileStatisticalThreshold statisticalThreshold;
+    private @Nullable SecurityProfileStatisticalThreshold statisticalThreshold;
 
     public Optional<SecurityProfileStatisticalThreshold> statisticalThreshold() {
-        return this.statisticalThreshold == null ? Optional.empty() : Optional.ofNullable(this.statisticalThreshold);
+        return Optional.ofNullable(this.statisticalThreshold);
     }
 
     @Import(name="value")
-      private final @Nullable SecurityProfileMetricValue value;
+    private @Nullable SecurityProfileMetricValue value;
 
     public Optional<SecurityProfileMetricValue> value() {
-        return this.value == null ? Optional.empty() : Optional.ofNullable(this.value);
+        return Optional.ofNullable(this.value);
     }
 
-    public SecurityProfileBehaviorCriteria(
-        @Nullable SecurityProfileBehaviorCriteriaComparisonOperator comparisonOperator,
-        @Nullable Integer consecutiveDatapointsToAlarm,
-        @Nullable Integer consecutiveDatapointsToClear,
-        @Nullable Integer durationSeconds,
-        @Nullable SecurityProfileMachineLearningDetectionConfig mlDetectionConfig,
-        @Nullable SecurityProfileStatisticalThreshold statisticalThreshold,
-        @Nullable SecurityProfileMetricValue value) {
-        this.comparisonOperator = comparisonOperator;
-        this.consecutiveDatapointsToAlarm = consecutiveDatapointsToAlarm;
-        this.consecutiveDatapointsToClear = consecutiveDatapointsToClear;
-        this.durationSeconds = durationSeconds;
-        this.mlDetectionConfig = mlDetectionConfig;
-        this.statisticalThreshold = statisticalThreshold;
-        this.value = value;
-    }
+    private SecurityProfileBehaviorCriteria() {}
 
-    private SecurityProfileBehaviorCriteria() {
-        this.comparisonOperator = null;
-        this.consecutiveDatapointsToAlarm = null;
-        this.consecutiveDatapointsToClear = null;
-        this.durationSeconds = null;
-        this.mlDetectionConfig = null;
-        this.statisticalThreshold = null;
-        this.value = null;
+    private SecurityProfileBehaviorCriteria(SecurityProfileBehaviorCriteria $) {
+        this.comparisonOperator = $.comparisonOperator;
+        this.consecutiveDatapointsToAlarm = $.consecutiveDatapointsToAlarm;
+        this.consecutiveDatapointsToClear = $.consecutiveDatapointsToClear;
+        this.durationSeconds = $.durationSeconds;
+        this.mlDetectionConfig = $.mlDetectionConfig;
+        this.statisticalThreshold = $.statisticalThreshold;
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SecurityProfileBehaviorCriteria defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable SecurityProfileBehaviorCriteriaComparisonOperator comparisonOperator;
-        private @Nullable Integer consecutiveDatapointsToAlarm;
-        private @Nullable Integer consecutiveDatapointsToClear;
-        private @Nullable Integer durationSeconds;
-        private @Nullable SecurityProfileMachineLearningDetectionConfig mlDetectionConfig;
-        private @Nullable SecurityProfileStatisticalThreshold statisticalThreshold;
-        private @Nullable SecurityProfileMetricValue value;
+        private SecurityProfileBehaviorCriteria $;
 
         public Builder() {
-    	      // Empty
+            $ = new SecurityProfileBehaviorCriteria();
         }
 
         public Builder(SecurityProfileBehaviorCriteria defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.comparisonOperator = defaults.comparisonOperator;
-    	      this.consecutiveDatapointsToAlarm = defaults.consecutiveDatapointsToAlarm;
-    	      this.consecutiveDatapointsToClear = defaults.consecutiveDatapointsToClear;
-    	      this.durationSeconds = defaults.durationSeconds;
-    	      this.mlDetectionConfig = defaults.mlDetectionConfig;
-    	      this.statisticalThreshold = defaults.statisticalThreshold;
-    	      this.value = defaults.value;
+            $ = new SecurityProfileBehaviorCriteria(Objects.requireNonNull(defaults));
         }
 
         public Builder comparisonOperator(@Nullable SecurityProfileBehaviorCriteriaComparisonOperator comparisonOperator) {
-            this.comparisonOperator = comparisonOperator;
+            $.comparisonOperator = comparisonOperator;
             return this;
         }
+
         public Builder consecutiveDatapointsToAlarm(@Nullable Integer consecutiveDatapointsToAlarm) {
-            this.consecutiveDatapointsToAlarm = consecutiveDatapointsToAlarm;
+            $.consecutiveDatapointsToAlarm = consecutiveDatapointsToAlarm;
             return this;
         }
+
         public Builder consecutiveDatapointsToClear(@Nullable Integer consecutiveDatapointsToClear) {
-            this.consecutiveDatapointsToClear = consecutiveDatapointsToClear;
+            $.consecutiveDatapointsToClear = consecutiveDatapointsToClear;
             return this;
         }
+
         public Builder durationSeconds(@Nullable Integer durationSeconds) {
-            this.durationSeconds = durationSeconds;
+            $.durationSeconds = durationSeconds;
             return this;
         }
+
         public Builder mlDetectionConfig(@Nullable SecurityProfileMachineLearningDetectionConfig mlDetectionConfig) {
-            this.mlDetectionConfig = mlDetectionConfig;
+            $.mlDetectionConfig = mlDetectionConfig;
             return this;
         }
+
         public Builder statisticalThreshold(@Nullable SecurityProfileStatisticalThreshold statisticalThreshold) {
-            this.statisticalThreshold = statisticalThreshold;
+            $.statisticalThreshold = statisticalThreshold;
             return this;
         }
+
         public Builder value(@Nullable SecurityProfileMetricValue value) {
-            this.value = value;
+            $.value = value;
             return this;
-        }        public SecurityProfileBehaviorCriteria build() {
-            return new SecurityProfileBehaviorCriteria(comparisonOperator, consecutiveDatapointsToAlarm, consecutiveDatapointsToClear, durationSeconds, mlDetectionConfig, statisticalThreshold, value);
+        }
+
+        public SecurityProfileBehaviorCriteria build() {
+            return $;
         }
     }
+
 }

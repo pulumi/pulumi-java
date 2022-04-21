@@ -23,45 +23,44 @@ public final class DataSourceAthenaParameters extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="workGroup")
-      private final @Nullable String workGroup;
+    private @Nullable String workGroup;
 
     public Optional<String> workGroup() {
-        return this.workGroup == null ? Optional.empty() : Optional.ofNullable(this.workGroup);
+        return Optional.ofNullable(this.workGroup);
     }
 
-    public DataSourceAthenaParameters(@Nullable String workGroup) {
-        this.workGroup = workGroup;
-    }
+    private DataSourceAthenaParameters() {}
 
-    private DataSourceAthenaParameters() {
-        this.workGroup = null;
+    private DataSourceAthenaParameters(DataSourceAthenaParameters $) {
+        this.workGroup = $.workGroup;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DataSourceAthenaParameters defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String workGroup;
+        private DataSourceAthenaParameters $;
 
         public Builder() {
-    	      // Empty
+            $ = new DataSourceAthenaParameters();
         }
 
         public Builder(DataSourceAthenaParameters defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.workGroup = defaults.workGroup;
+            $ = new DataSourceAthenaParameters(Objects.requireNonNull(defaults));
         }
 
         public Builder workGroup(@Nullable String workGroup) {
-            this.workGroup = workGroup;
+            $.workGroup = workGroup;
             return this;
-        }        public DataSourceAthenaParameters build() {
-            return new DataSourceAthenaParameters(workGroup);
+        }
+
+        public DataSourceAthenaParameters build() {
+            return $;
         }
     }
+
 }

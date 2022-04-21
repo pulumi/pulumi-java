@@ -5,9 +5,9 @@ package com.pulumi.kubernetes.core_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class ContainerStateRunningArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="startedAt")
-      private final @Nullable Output<String> startedAt;
+    private @Nullable Output<String> startedAt;
 
-    public Output<String> startedAt() {
-        return this.startedAt == null ? Codegen.empty() : this.startedAt;
+    public Optional<Output<String>> startedAt() {
+        return Optional.ofNullable(this.startedAt);
     }
 
-    public ContainerStateRunningArgs(@Nullable Output<String> startedAt) {
-        this.startedAt = startedAt;
-    }
+    private ContainerStateRunningArgs() {}
 
-    private ContainerStateRunningArgs() {
-        this.startedAt = Codegen.empty();
+    private ContainerStateRunningArgs(ContainerStateRunningArgs $) {
+        this.startedAt = $.startedAt;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ContainerStateRunningArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> startedAt;
+        private ContainerStateRunningArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ContainerStateRunningArgs();
         }
 
         public Builder(ContainerStateRunningArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.startedAt = defaults.startedAt;
+            $ = new ContainerStateRunningArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder startedAt(@Nullable Output<String> startedAt) {
-            this.startedAt = startedAt;
+            $.startedAt = startedAt;
             return this;
         }
-        public Builder startedAt(@Nullable String startedAt) {
-            this.startedAt = Codegen.ofNullable(startedAt);
-            return this;
-        }        public ContainerStateRunningArgs build() {
-            return new ContainerStateRunningArgs(startedAt);
+
+        public Builder startedAt(String startedAt) {
+            return startedAt(Output.of(startedAt));
+        }
+
+        public ContainerStateRunningArgs build() {
+            return $;
         }
     }
+
 }

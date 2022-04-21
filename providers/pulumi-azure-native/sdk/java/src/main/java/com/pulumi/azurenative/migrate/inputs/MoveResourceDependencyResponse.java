@@ -25,10 +25,10 @@ public final class MoveResourceDependencyResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="automaticResolution")
-      private final @Nullable AutomaticResolutionPropertiesResponse automaticResolution;
+    private @Nullable AutomaticResolutionPropertiesResponse automaticResolution;
 
     public Optional<AutomaticResolutionPropertiesResponse> automaticResolution() {
-        return this.automaticResolution == null ? Optional.empty() : Optional.ofNullable(this.automaticResolution);
+        return Optional.ofNullable(this.automaticResolution);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class MoveResourceDependencyResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="dependencyType")
-      private final @Nullable String dependencyType;
+    private @Nullable String dependencyType;
 
     public Optional<String> dependencyType() {
-        return this.dependencyType == null ? Optional.empty() : Optional.ofNullable(this.dependencyType);
+        return Optional.ofNullable(this.dependencyType);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class MoveResourceDependencyResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="id")
-      private final @Nullable String id;
+    private @Nullable String id;
 
     public Optional<String> id() {
-        return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
+        return Optional.ofNullable(this.id);
     }
 
     /**
@@ -58,10 +58,10 @@ public final class MoveResourceDependencyResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="isOptional")
-      private final @Nullable String isOptional;
+    private @Nullable String isOptional;
 
     public Optional<String> isOptional() {
-        return this.isOptional == null ? Optional.empty() : Optional.ofNullable(this.isOptional);
+        return Optional.ofNullable(this.isOptional);
     }
 
     /**
@@ -69,10 +69,10 @@ public final class MoveResourceDependencyResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="manualResolution")
-      private final @Nullable ManualResolutionPropertiesResponse manualResolution;
+    private @Nullable ManualResolutionPropertiesResponse manualResolution;
 
     public Optional<ManualResolutionPropertiesResponse> manualResolution() {
-        return this.manualResolution == null ? Optional.empty() : Optional.ofNullable(this.manualResolution);
+        return Optional.ofNullable(this.manualResolution);
     }
 
     /**
@@ -80,10 +80,10 @@ public final class MoveResourceDependencyResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="resolutionStatus")
-      private final @Nullable String resolutionStatus;
+    private @Nullable String resolutionStatus;
 
     public Optional<String> resolutionStatus() {
-        return this.resolutionStatus == null ? Optional.empty() : Optional.ofNullable(this.resolutionStatus);
+        return Optional.ofNullable(this.resolutionStatus);
     }
 
     /**
@@ -91,100 +91,80 @@ public final class MoveResourceDependencyResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="resolutionType")
-      private final @Nullable String resolutionType;
+    private @Nullable String resolutionType;
 
     public Optional<String> resolutionType() {
-        return this.resolutionType == null ? Optional.empty() : Optional.ofNullable(this.resolutionType);
+        return Optional.ofNullable(this.resolutionType);
     }
 
-    public MoveResourceDependencyResponse(
-        @Nullable AutomaticResolutionPropertiesResponse automaticResolution,
-        @Nullable String dependencyType,
-        @Nullable String id,
-        @Nullable String isOptional,
-        @Nullable ManualResolutionPropertiesResponse manualResolution,
-        @Nullable String resolutionStatus,
-        @Nullable String resolutionType) {
-        this.automaticResolution = automaticResolution;
-        this.dependencyType = dependencyType;
-        this.id = id;
-        this.isOptional = isOptional;
-        this.manualResolution = manualResolution;
-        this.resolutionStatus = resolutionStatus;
-        this.resolutionType = resolutionType;
-    }
+    private MoveResourceDependencyResponse() {}
 
-    private MoveResourceDependencyResponse() {
-        this.automaticResolution = null;
-        this.dependencyType = null;
-        this.id = null;
-        this.isOptional = null;
-        this.manualResolution = null;
-        this.resolutionStatus = null;
-        this.resolutionType = null;
+    private MoveResourceDependencyResponse(MoveResourceDependencyResponse $) {
+        this.automaticResolution = $.automaticResolution;
+        this.dependencyType = $.dependencyType;
+        this.id = $.id;
+        this.isOptional = $.isOptional;
+        this.manualResolution = $.manualResolution;
+        this.resolutionStatus = $.resolutionStatus;
+        this.resolutionType = $.resolutionType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MoveResourceDependencyResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable AutomaticResolutionPropertiesResponse automaticResolution;
-        private @Nullable String dependencyType;
-        private @Nullable String id;
-        private @Nullable String isOptional;
-        private @Nullable ManualResolutionPropertiesResponse manualResolution;
-        private @Nullable String resolutionStatus;
-        private @Nullable String resolutionType;
+        private MoveResourceDependencyResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new MoveResourceDependencyResponse();
         }
 
         public Builder(MoveResourceDependencyResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.automaticResolution = defaults.automaticResolution;
-    	      this.dependencyType = defaults.dependencyType;
-    	      this.id = defaults.id;
-    	      this.isOptional = defaults.isOptional;
-    	      this.manualResolution = defaults.manualResolution;
-    	      this.resolutionStatus = defaults.resolutionStatus;
-    	      this.resolutionType = defaults.resolutionType;
+            $ = new MoveResourceDependencyResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder automaticResolution(@Nullable AutomaticResolutionPropertiesResponse automaticResolution) {
-            this.automaticResolution = automaticResolution;
+            $.automaticResolution = automaticResolution;
             return this;
         }
+
         public Builder dependencyType(@Nullable String dependencyType) {
-            this.dependencyType = dependencyType;
+            $.dependencyType = dependencyType;
             return this;
         }
+
         public Builder id(@Nullable String id) {
-            this.id = id;
+            $.id = id;
             return this;
         }
+
         public Builder isOptional(@Nullable String isOptional) {
-            this.isOptional = isOptional;
+            $.isOptional = isOptional;
             return this;
         }
+
         public Builder manualResolution(@Nullable ManualResolutionPropertiesResponse manualResolution) {
-            this.manualResolution = manualResolution;
+            $.manualResolution = manualResolution;
             return this;
         }
+
         public Builder resolutionStatus(@Nullable String resolutionStatus) {
-            this.resolutionStatus = resolutionStatus;
+            $.resolutionStatus = resolutionStatus;
             return this;
         }
+
         public Builder resolutionType(@Nullable String resolutionType) {
-            this.resolutionType = resolutionType;
+            $.resolutionType = resolutionType;
             return this;
-        }        public MoveResourceDependencyResponse build() {
-            return new MoveResourceDependencyResponse(automaticResolution, dependencyType, id, isOptional, manualResolution, resolutionStatus, resolutionType);
+        }
+
+        public MoveResourceDependencyResponse build() {
+            return $;
         }
     }
+
 }

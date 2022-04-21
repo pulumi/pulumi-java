@@ -24,7 +24,7 @@ public final class KeyVaultKeyReferenceResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="keyName", required=true)
-      private final String keyName;
+    private String keyName;
 
     public String keyName() {
         return this.keyName;
@@ -35,7 +35,7 @@ public final class KeyVaultKeyReferenceResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="keyVault", required=true)
-      private final KeyVaultKeyReferenceResponseKeyVault keyVault;
+    private KeyVaultKeyReferenceResponseKeyVault keyVault;
 
     public KeyVaultKeyReferenceResponseKeyVault keyVault() {
         return this.keyVault;
@@ -46,64 +46,58 @@ public final class KeyVaultKeyReferenceResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="keyVersion")
-      private final @Nullable String keyVersion;
+    private @Nullable String keyVersion;
 
     public Optional<String> keyVersion() {
-        return this.keyVersion == null ? Optional.empty() : Optional.ofNullable(this.keyVersion);
+        return Optional.ofNullable(this.keyVersion);
     }
 
-    public KeyVaultKeyReferenceResponse(
-        String keyName,
-        KeyVaultKeyReferenceResponseKeyVault keyVault,
-        @Nullable String keyVersion) {
-        this.keyName = Objects.requireNonNull(keyName, "expected parameter 'keyName' to be non-null");
-        this.keyVault = Objects.requireNonNull(keyVault, "expected parameter 'keyVault' to be non-null");
-        this.keyVersion = keyVersion;
-    }
+    private KeyVaultKeyReferenceResponse() {}
 
-    private KeyVaultKeyReferenceResponse() {
-        this.keyName = null;
-        this.keyVault = null;
-        this.keyVersion = null;
+    private KeyVaultKeyReferenceResponse(KeyVaultKeyReferenceResponse $) {
+        this.keyName = $.keyName;
+        this.keyVault = $.keyVault;
+        this.keyVersion = $.keyVersion;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(KeyVaultKeyReferenceResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String keyName;
-        private KeyVaultKeyReferenceResponseKeyVault keyVault;
-        private @Nullable String keyVersion;
+        private KeyVaultKeyReferenceResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new KeyVaultKeyReferenceResponse();
         }
 
         public Builder(KeyVaultKeyReferenceResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.keyName = defaults.keyName;
-    	      this.keyVault = defaults.keyVault;
-    	      this.keyVersion = defaults.keyVersion;
+            $ = new KeyVaultKeyReferenceResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder keyName(String keyName) {
-            this.keyName = Objects.requireNonNull(keyName);
+            $.keyName = keyName;
             return this;
         }
+
         public Builder keyVault(KeyVaultKeyReferenceResponseKeyVault keyVault) {
-            this.keyVault = Objects.requireNonNull(keyVault);
+            $.keyVault = keyVault;
             return this;
         }
+
         public Builder keyVersion(@Nullable String keyVersion) {
-            this.keyVersion = keyVersion;
+            $.keyVersion = keyVersion;
             return this;
-        }        public KeyVaultKeyReferenceResponse build() {
-            return new KeyVaultKeyReferenceResponse(keyName, keyVault, keyVersion);
+        }
+
+        public KeyVaultKeyReferenceResponse build() {
+            $.keyName = Objects.requireNonNull($.keyName, "expected parameter 'keyName' to be non-null");
+            $.keyVault = Objects.requireNonNull($.keyVault, "expected parameter 'keyVault' to be non-null");
+            return $;
         }
     }
+
 }

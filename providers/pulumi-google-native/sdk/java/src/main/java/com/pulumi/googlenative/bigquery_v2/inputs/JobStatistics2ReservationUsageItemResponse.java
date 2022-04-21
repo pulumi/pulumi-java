@@ -17,7 +17,7 @@ public final class JobStatistics2ReservationUsageItemResponse extends com.pulumi
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -28,55 +28,52 @@ public final class JobStatistics2ReservationUsageItemResponse extends com.pulumi
      * 
      */
     @Import(name="slotMs", required=true)
-      private final String slotMs;
+    private String slotMs;
 
     public String slotMs() {
         return this.slotMs;
     }
 
-    public JobStatistics2ReservationUsageItemResponse(
-        String name,
-        String slotMs) {
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.slotMs = Objects.requireNonNull(slotMs, "expected parameter 'slotMs' to be non-null");
-    }
+    private JobStatistics2ReservationUsageItemResponse() {}
 
-    private JobStatistics2ReservationUsageItemResponse() {
-        this.name = null;
-        this.slotMs = null;
+    private JobStatistics2ReservationUsageItemResponse(JobStatistics2ReservationUsageItemResponse $) {
+        this.name = $.name;
+        this.slotMs = $.slotMs;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(JobStatistics2ReservationUsageItemResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String name;
-        private String slotMs;
+        private JobStatistics2ReservationUsageItemResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new JobStatistics2ReservationUsageItemResponse();
         }
 
         public Builder(JobStatistics2ReservationUsageItemResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.slotMs = defaults.slotMs;
+            $ = new JobStatistics2ReservationUsageItemResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder slotMs(String slotMs) {
-            this.slotMs = Objects.requireNonNull(slotMs);
+            $.slotMs = slotMs;
             return this;
-        }        public JobStatistics2ReservationUsageItemResponse build() {
-            return new JobStatistics2ReservationUsageItemResponse(name, slotMs);
+        }
+
+        public JobStatistics2ReservationUsageItemResponse build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.slotMs = Objects.requireNonNull($.slotMs, "expected parameter 'slotMs' to be non-null");
+            return $;
         }
     }
+
 }

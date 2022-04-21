@@ -5,12 +5,12 @@ package com.pulumi.googlenative.storagetransfer_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.storagetransfer_v1.enums.LoggingConfigLogActionStatesItem;
 import com.pulumi.googlenative.storagetransfer_v1.enums.LoggingConfigLogActionsItem;
 import java.lang.Boolean;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +27,10 @@ public final class LoggingConfigArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="enableOnpremGcsTransferLogs")
-      private final @Nullable Output<Boolean> enableOnpremGcsTransferLogs;
+    private @Nullable Output<Boolean> enableOnpremGcsTransferLogs;
 
-    public Output<Boolean> enableOnpremGcsTransferLogs() {
-        return this.enableOnpremGcsTransferLogs == null ? Codegen.empty() : this.enableOnpremGcsTransferLogs;
+    public Optional<Output<Boolean>> enableOnpremGcsTransferLogs() {
+        return Optional.ofNullable(this.enableOnpremGcsTransferLogs);
     }
 
     /**
@@ -38,10 +38,10 @@ public final class LoggingConfigArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="logActionStates")
-      private final @Nullable Output<List<LoggingConfigLogActionStatesItem>> logActionStates;
+    private @Nullable Output<List<LoggingConfigLogActionStatesItem>> logActionStates;
 
-    public Output<List<LoggingConfigLogActionStatesItem>> logActionStates() {
-        return this.logActionStates == null ? Codegen.empty() : this.logActionStates;
+    public Optional<Output<List<LoggingConfigLogActionStatesItem>>> logActionStates() {
+        return Optional.ofNullable(this.logActionStates);
     }
 
     /**
@@ -49,82 +49,76 @@ public final class LoggingConfigArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="logActions")
-      private final @Nullable Output<List<LoggingConfigLogActionsItem>> logActions;
+    private @Nullable Output<List<LoggingConfigLogActionsItem>> logActions;
 
-    public Output<List<LoggingConfigLogActionsItem>> logActions() {
-        return this.logActions == null ? Codegen.empty() : this.logActions;
+    public Optional<Output<List<LoggingConfigLogActionsItem>>> logActions() {
+        return Optional.ofNullable(this.logActions);
     }
 
-    public LoggingConfigArgs(
-        @Nullable Output<Boolean> enableOnpremGcsTransferLogs,
-        @Nullable Output<List<LoggingConfigLogActionStatesItem>> logActionStates,
-        @Nullable Output<List<LoggingConfigLogActionsItem>> logActions) {
-        this.enableOnpremGcsTransferLogs = enableOnpremGcsTransferLogs;
-        this.logActionStates = logActionStates;
-        this.logActions = logActions;
-    }
+    private LoggingConfigArgs() {}
 
-    private LoggingConfigArgs() {
-        this.enableOnpremGcsTransferLogs = Codegen.empty();
-        this.logActionStates = Codegen.empty();
-        this.logActions = Codegen.empty();
+    private LoggingConfigArgs(LoggingConfigArgs $) {
+        this.enableOnpremGcsTransferLogs = $.enableOnpremGcsTransferLogs;
+        this.logActionStates = $.logActionStates;
+        this.logActions = $.logActions;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LoggingConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> enableOnpremGcsTransferLogs;
-        private @Nullable Output<List<LoggingConfigLogActionStatesItem>> logActionStates;
-        private @Nullable Output<List<LoggingConfigLogActionsItem>> logActions;
+        private LoggingConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new LoggingConfigArgs();
         }
 
         public Builder(LoggingConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.enableOnpremGcsTransferLogs = defaults.enableOnpremGcsTransferLogs;
-    	      this.logActionStates = defaults.logActionStates;
-    	      this.logActions = defaults.logActions;
+            $ = new LoggingConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder enableOnpremGcsTransferLogs(@Nullable Output<Boolean> enableOnpremGcsTransferLogs) {
-            this.enableOnpremGcsTransferLogs = enableOnpremGcsTransferLogs;
+            $.enableOnpremGcsTransferLogs = enableOnpremGcsTransferLogs;
             return this;
         }
-        public Builder enableOnpremGcsTransferLogs(@Nullable Boolean enableOnpremGcsTransferLogs) {
-            this.enableOnpremGcsTransferLogs = Codegen.ofNullable(enableOnpremGcsTransferLogs);
-            return this;
+
+        public Builder enableOnpremGcsTransferLogs(Boolean enableOnpremGcsTransferLogs) {
+            return enableOnpremGcsTransferLogs(Output.of(enableOnpremGcsTransferLogs));
         }
+
         public Builder logActionStates(@Nullable Output<List<LoggingConfigLogActionStatesItem>> logActionStates) {
-            this.logActionStates = logActionStates;
+            $.logActionStates = logActionStates;
             return this;
         }
-        public Builder logActionStates(@Nullable List<LoggingConfigLogActionStatesItem> logActionStates) {
-            this.logActionStates = Codegen.ofNullable(logActionStates);
-            return this;
+
+        public Builder logActionStates(List<LoggingConfigLogActionStatesItem> logActionStates) {
+            return logActionStates(Output.of(logActionStates));
         }
+
         public Builder logActionStates(LoggingConfigLogActionStatesItem... logActionStates) {
             return logActionStates(List.of(logActionStates));
         }
+
         public Builder logActions(@Nullable Output<List<LoggingConfigLogActionsItem>> logActions) {
-            this.logActions = logActions;
+            $.logActions = logActions;
             return this;
         }
-        public Builder logActions(@Nullable List<LoggingConfigLogActionsItem> logActions) {
-            this.logActions = Codegen.ofNullable(logActions);
-            return this;
+
+        public Builder logActions(List<LoggingConfigLogActionsItem> logActions) {
+            return logActions(Output.of(logActions));
         }
+
         public Builder logActions(LoggingConfigLogActionsItem... logActions) {
             return logActions(List.of(logActions));
-        }        public LoggingConfigArgs build() {
-            return new LoggingConfigArgs(enableOnpremGcsTransferLogs, logActionStates, logActions);
+        }
+
+        public LoggingConfigArgs build() {
+            return $;
         }
     }
+
 }

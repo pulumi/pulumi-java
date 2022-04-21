@@ -17,7 +17,7 @@ public final class GetDeploymentAtScopeArgs extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="deploymentName", required=true)
-      private final String deploymentName;
+    private String deploymentName;
 
     public String deploymentName() {
         return this.deploymentName;
@@ -28,55 +28,52 @@ public final class GetDeploymentAtScopeArgs extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="scope", required=true)
-      private final String scope;
+    private String scope;
 
     public String scope() {
         return this.scope;
     }
 
-    public GetDeploymentAtScopeArgs(
-        String deploymentName,
-        String scope) {
-        this.deploymentName = Objects.requireNonNull(deploymentName, "expected parameter 'deploymentName' to be non-null");
-        this.scope = Objects.requireNonNull(scope, "expected parameter 'scope' to be non-null");
-    }
+    private GetDeploymentAtScopeArgs() {}
 
-    private GetDeploymentAtScopeArgs() {
-        this.deploymentName = null;
-        this.scope = null;
+    private GetDeploymentAtScopeArgs(GetDeploymentAtScopeArgs $) {
+        this.deploymentName = $.deploymentName;
+        this.scope = $.scope;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetDeploymentAtScopeArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String deploymentName;
-        private String scope;
+        private GetDeploymentAtScopeArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetDeploymentAtScopeArgs();
         }
 
         public Builder(GetDeploymentAtScopeArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.deploymentName = defaults.deploymentName;
-    	      this.scope = defaults.scope;
+            $ = new GetDeploymentAtScopeArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder deploymentName(String deploymentName) {
-            this.deploymentName = Objects.requireNonNull(deploymentName);
+            $.deploymentName = deploymentName;
             return this;
         }
+
         public Builder scope(String scope) {
-            this.scope = Objects.requireNonNull(scope);
+            $.scope = scope;
             return this;
-        }        public GetDeploymentAtScopeArgs build() {
-            return new GetDeploymentAtScopeArgs(deploymentName, scope);
+        }
+
+        public GetDeploymentAtScopeArgs build() {
+            $.deploymentName = Objects.requireNonNull($.deploymentName, "expected parameter 'deploymentName' to be non-null");
+            $.scope = Objects.requireNonNull($.scope, "expected parameter 'scope' to be non-null");
+            return $;
         }
     }
+
 }

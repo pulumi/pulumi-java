@@ -7,10 +7,10 @@ import com.pulumi.azurenative.compute.inputs.GalleryImageVersionPublishingProfil
 import com.pulumi.azurenative.compute.inputs.GalleryImageVersionStorageProfileArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,7 +23,7 @@ public final class GalleryImageVersionArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="galleryImageName", required=true)
-      private final Output<String> galleryImageName;
+    private Output<String> galleryImageName;
 
     public Output<String> galleryImageName() {
         return this.galleryImageName;
@@ -34,10 +34,10 @@ public final class GalleryImageVersionArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="galleryImageVersionName")
-      private final @Nullable Output<String> galleryImageVersionName;
+    private @Nullable Output<String> galleryImageVersionName;
 
-    public Output<String> galleryImageVersionName() {
-        return this.galleryImageVersionName == null ? Codegen.empty() : this.galleryImageVersionName;
+    public Optional<Output<String>> galleryImageVersionName() {
+        return Optional.ofNullable(this.galleryImageVersionName);
     }
 
     /**
@@ -45,7 +45,7 @@ public final class GalleryImageVersionArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="galleryName", required=true)
-      private final Output<String> galleryName;
+    private Output<String> galleryName;
 
     public Output<String> galleryName() {
         return this.galleryName;
@@ -56,10 +56,10 @@ public final class GalleryImageVersionArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -67,10 +67,10 @@ public final class GalleryImageVersionArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="publishingProfile")
-      private final @Nullable Output<GalleryImageVersionPublishingProfileArgs> publishingProfile;
+    private @Nullable Output<GalleryImageVersionPublishingProfileArgs> publishingProfile;
 
-    public Output<GalleryImageVersionPublishingProfileArgs> publishingProfile() {
-        return this.publishingProfile == null ? Codegen.empty() : this.publishingProfile;
+    public Optional<Output<GalleryImageVersionPublishingProfileArgs>> publishingProfile() {
+        return Optional.ofNullable(this.publishingProfile);
     }
 
     /**
@@ -78,7 +78,7 @@ public final class GalleryImageVersionArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -89,7 +89,7 @@ public final class GalleryImageVersionArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="storageProfile", required=true)
-      private final Output<GalleryImageVersionStorageProfileArgs> storageProfile;
+    private Output<GalleryImageVersionStorageProfileArgs> storageProfile;
 
     public Output<GalleryImageVersionStorageProfileArgs> storageProfile() {
         return this.storageProfile;
@@ -100,141 +100,122 @@ public final class GalleryImageVersionArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public GalleryImageVersionArgs(
-        Output<String> galleryImageName,
-        @Nullable Output<String> galleryImageVersionName,
-        Output<String> galleryName,
-        @Nullable Output<String> location,
-        @Nullable Output<GalleryImageVersionPublishingProfileArgs> publishingProfile,
-        Output<String> resourceGroupName,
-        Output<GalleryImageVersionStorageProfileArgs> storageProfile,
-        @Nullable Output<Map<String,String>> tags) {
-        this.galleryImageName = Objects.requireNonNull(galleryImageName, "expected parameter 'galleryImageName' to be non-null");
-        this.galleryImageVersionName = galleryImageVersionName;
-        this.galleryName = Objects.requireNonNull(galleryName, "expected parameter 'galleryName' to be non-null");
-        this.location = location;
-        this.publishingProfile = publishingProfile;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.storageProfile = Objects.requireNonNull(storageProfile, "expected parameter 'storageProfile' to be non-null");
-        this.tags = tags;
-    }
+    private GalleryImageVersionArgs() {}
 
-    private GalleryImageVersionArgs() {
-        this.galleryImageName = Codegen.empty();
-        this.galleryImageVersionName = Codegen.empty();
-        this.galleryName = Codegen.empty();
-        this.location = Codegen.empty();
-        this.publishingProfile = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.storageProfile = Codegen.empty();
-        this.tags = Codegen.empty();
+    private GalleryImageVersionArgs(GalleryImageVersionArgs $) {
+        this.galleryImageName = $.galleryImageName;
+        this.galleryImageVersionName = $.galleryImageVersionName;
+        this.galleryName = $.galleryName;
+        this.location = $.location;
+        this.publishingProfile = $.publishingProfile;
+        this.resourceGroupName = $.resourceGroupName;
+        this.storageProfile = $.storageProfile;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GalleryImageVersionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> galleryImageName;
-        private @Nullable Output<String> galleryImageVersionName;
-        private Output<String> galleryName;
-        private @Nullable Output<String> location;
-        private @Nullable Output<GalleryImageVersionPublishingProfileArgs> publishingProfile;
-        private Output<String> resourceGroupName;
-        private Output<GalleryImageVersionStorageProfileArgs> storageProfile;
-        private @Nullable Output<Map<String,String>> tags;
+        private GalleryImageVersionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GalleryImageVersionArgs();
         }
 
         public Builder(GalleryImageVersionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.galleryImageName = defaults.galleryImageName;
-    	      this.galleryImageVersionName = defaults.galleryImageVersionName;
-    	      this.galleryName = defaults.galleryName;
-    	      this.location = defaults.location;
-    	      this.publishingProfile = defaults.publishingProfile;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.storageProfile = defaults.storageProfile;
-    	      this.tags = defaults.tags;
+            $ = new GalleryImageVersionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder galleryImageName(Output<String> galleryImageName) {
-            this.galleryImageName = Objects.requireNonNull(galleryImageName);
+            $.galleryImageName = galleryImageName;
             return this;
         }
+
         public Builder galleryImageName(String galleryImageName) {
-            this.galleryImageName = Output.of(Objects.requireNonNull(galleryImageName));
-            return this;
+            return galleryImageName(Output.of(galleryImageName));
         }
+
         public Builder galleryImageVersionName(@Nullable Output<String> galleryImageVersionName) {
-            this.galleryImageVersionName = galleryImageVersionName;
+            $.galleryImageVersionName = galleryImageVersionName;
             return this;
         }
-        public Builder galleryImageVersionName(@Nullable String galleryImageVersionName) {
-            this.galleryImageVersionName = Codegen.ofNullable(galleryImageVersionName);
-            return this;
+
+        public Builder galleryImageVersionName(String galleryImageVersionName) {
+            return galleryImageVersionName(Output.of(galleryImageVersionName));
         }
+
         public Builder galleryName(Output<String> galleryName) {
-            this.galleryName = Objects.requireNonNull(galleryName);
+            $.galleryName = galleryName;
             return this;
         }
+
         public Builder galleryName(String galleryName) {
-            this.galleryName = Output.of(Objects.requireNonNull(galleryName));
-            return this;
+            return galleryName(Output.of(galleryName));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder publishingProfile(@Nullable Output<GalleryImageVersionPublishingProfileArgs> publishingProfile) {
-            this.publishingProfile = publishingProfile;
+            $.publishingProfile = publishingProfile;
             return this;
         }
-        public Builder publishingProfile(@Nullable GalleryImageVersionPublishingProfileArgs publishingProfile) {
-            this.publishingProfile = Codegen.ofNullable(publishingProfile);
-            return this;
+
+        public Builder publishingProfile(GalleryImageVersionPublishingProfileArgs publishingProfile) {
+            return publishingProfile(Output.of(publishingProfile));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder storageProfile(Output<GalleryImageVersionStorageProfileArgs> storageProfile) {
-            this.storageProfile = Objects.requireNonNull(storageProfile);
+            $.storageProfile = storageProfile;
             return this;
         }
+
         public Builder storageProfile(GalleryImageVersionStorageProfileArgs storageProfile) {
-            this.storageProfile = Output.of(Objects.requireNonNull(storageProfile));
-            return this;
+            return storageProfile(Output.of(storageProfile));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
-        }        public GalleryImageVersionArgs build() {
-            return new GalleryImageVersionArgs(galleryImageName, galleryImageVersionName, galleryName, location, publishingProfile, resourceGroupName, storageProfile, tags);
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
+        }
+
+        public GalleryImageVersionArgs build() {
+            $.galleryImageName = Objects.requireNonNull($.galleryImageName, "expected parameter 'galleryImageName' to be non-null");
+            $.galleryName = Objects.requireNonNull($.galleryName, "expected parameter 'galleryName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.storageProfile = Objects.requireNonNull($.storageProfile, "expected parameter 'storageProfile' to be non-null");
+            return $;
         }
     }
+
 }

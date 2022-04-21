@@ -23,7 +23,7 @@ public final class TargetCostAllocationResourceResponse extends com.pulumi.resou
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -34,7 +34,7 @@ public final class TargetCostAllocationResourceResponse extends com.pulumi.resou
      * 
      */
     @Import(name="policyType", required=true)
-      private final String policyType;
+    private String policyType;
 
     public String policyType() {
         return this.policyType;
@@ -45,7 +45,7 @@ public final class TargetCostAllocationResourceResponse extends com.pulumi.resou
      * 
      */
     @Import(name="resourceType", required=true)
-      private final String resourceType;
+    private String resourceType;
 
     public String resourceType() {
         return this.resourceType;
@@ -56,76 +56,70 @@ public final class TargetCostAllocationResourceResponse extends com.pulumi.resou
      * 
      */
     @Import(name="values", required=true)
-      private final List<CostAllocationProportionResponse> values;
+    private List<CostAllocationProportionResponse> values;
 
     public List<CostAllocationProportionResponse> values() {
         return this.values;
     }
 
-    public TargetCostAllocationResourceResponse(
-        String name,
-        String policyType,
-        String resourceType,
-        List<CostAllocationProportionResponse> values) {
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.policyType = Objects.requireNonNull(policyType, "expected parameter 'policyType' to be non-null");
-        this.resourceType = Objects.requireNonNull(resourceType, "expected parameter 'resourceType' to be non-null");
-        this.values = Objects.requireNonNull(values, "expected parameter 'values' to be non-null");
-    }
+    private TargetCostAllocationResourceResponse() {}
 
-    private TargetCostAllocationResourceResponse() {
-        this.name = null;
-        this.policyType = null;
-        this.resourceType = null;
-        this.values = List.of();
+    private TargetCostAllocationResourceResponse(TargetCostAllocationResourceResponse $) {
+        this.name = $.name;
+        this.policyType = $.policyType;
+        this.resourceType = $.resourceType;
+        this.values = $.values;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TargetCostAllocationResourceResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String name;
-        private String policyType;
-        private String resourceType;
-        private List<CostAllocationProportionResponse> values;
+        private TargetCostAllocationResourceResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new TargetCostAllocationResourceResponse();
         }
 
         public Builder(TargetCostAllocationResourceResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.policyType = defaults.policyType;
-    	      this.resourceType = defaults.resourceType;
-    	      this.values = defaults.values;
+            $ = new TargetCostAllocationResourceResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder policyType(String policyType) {
-            this.policyType = Objects.requireNonNull(policyType);
+            $.policyType = policyType;
             return this;
         }
+
         public Builder resourceType(String resourceType) {
-            this.resourceType = Objects.requireNonNull(resourceType);
+            $.resourceType = resourceType;
             return this;
         }
+
         public Builder values(List<CostAllocationProportionResponse> values) {
-            this.values = Objects.requireNonNull(values);
+            $.values = values;
             return this;
         }
+
         public Builder values(CostAllocationProportionResponse... values) {
             return values(List.of(values));
-        }        public TargetCostAllocationResourceResponse build() {
-            return new TargetCostAllocationResourceResponse(name, policyType, resourceType, values);
+        }
+
+        public TargetCostAllocationResourceResponse build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.policyType = Objects.requireNonNull($.policyType, "expected parameter 'policyType' to be non-null");
+            $.resourceType = Objects.requireNonNull($.resourceType, "expected parameter 'resourceType' to be non-null");
+            $.values = Objects.requireNonNull($.values, "expected parameter 'values' to be non-null");
+            return $;
         }
     }
+
 }

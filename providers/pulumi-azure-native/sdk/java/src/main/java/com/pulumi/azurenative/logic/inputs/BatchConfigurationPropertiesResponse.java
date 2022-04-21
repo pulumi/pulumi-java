@@ -25,7 +25,7 @@ public final class BatchConfigurationPropertiesResponse extends com.pulumi.resou
      * 
      */
     @Import(name="batchGroupName", required=true)
-      private final String batchGroupName;
+    private String batchGroupName;
 
     public String batchGroupName() {
         return this.batchGroupName;
@@ -36,10 +36,10 @@ public final class BatchConfigurationPropertiesResponse extends com.pulumi.resou
      * 
      */
     @Import(name="changedTime")
-      private final @Nullable String changedTime;
+    private @Nullable String changedTime;
 
     public Optional<String> changedTime() {
-        return this.changedTime == null ? Optional.empty() : Optional.ofNullable(this.changedTime);
+        return Optional.ofNullable(this.changedTime);
     }
 
     /**
@@ -47,17 +47,17 @@ public final class BatchConfigurationPropertiesResponse extends com.pulumi.resou
      * 
      */
     @Import(name="createdTime")
-      private final @Nullable String createdTime;
+    private @Nullable String createdTime;
 
     public Optional<String> createdTime() {
-        return this.createdTime == null ? Optional.empty() : Optional.ofNullable(this.createdTime);
+        return Optional.ofNullable(this.createdTime);
     }
 
     @Import(name="metadata")
-      private final @Nullable Object metadata;
+    private @Nullable Object metadata;
 
     public Optional<Object> metadata() {
-        return this.metadata == null ? Optional.empty() : Optional.ofNullable(this.metadata);
+        return Optional.ofNullable(this.metadata);
     }
 
     /**
@@ -65,82 +65,70 @@ public final class BatchConfigurationPropertiesResponse extends com.pulumi.resou
      * 
      */
     @Import(name="releaseCriteria", required=true)
-      private final BatchReleaseCriteriaResponse releaseCriteria;
+    private BatchReleaseCriteriaResponse releaseCriteria;
 
     public BatchReleaseCriteriaResponse releaseCriteria() {
         return this.releaseCriteria;
     }
 
-    public BatchConfigurationPropertiesResponse(
-        String batchGroupName,
-        @Nullable String changedTime,
-        @Nullable String createdTime,
-        @Nullable Object metadata,
-        BatchReleaseCriteriaResponse releaseCriteria) {
-        this.batchGroupName = Objects.requireNonNull(batchGroupName, "expected parameter 'batchGroupName' to be non-null");
-        this.changedTime = changedTime;
-        this.createdTime = createdTime;
-        this.metadata = metadata;
-        this.releaseCriteria = Objects.requireNonNull(releaseCriteria, "expected parameter 'releaseCriteria' to be non-null");
-    }
+    private BatchConfigurationPropertiesResponse() {}
 
-    private BatchConfigurationPropertiesResponse() {
-        this.batchGroupName = null;
-        this.changedTime = null;
-        this.createdTime = null;
-        this.metadata = null;
-        this.releaseCriteria = null;
+    private BatchConfigurationPropertiesResponse(BatchConfigurationPropertiesResponse $) {
+        this.batchGroupName = $.batchGroupName;
+        this.changedTime = $.changedTime;
+        this.createdTime = $.createdTime;
+        this.metadata = $.metadata;
+        this.releaseCriteria = $.releaseCriteria;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BatchConfigurationPropertiesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String batchGroupName;
-        private @Nullable String changedTime;
-        private @Nullable String createdTime;
-        private @Nullable Object metadata;
-        private BatchReleaseCriteriaResponse releaseCriteria;
+        private BatchConfigurationPropertiesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new BatchConfigurationPropertiesResponse();
         }
 
         public Builder(BatchConfigurationPropertiesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.batchGroupName = defaults.batchGroupName;
-    	      this.changedTime = defaults.changedTime;
-    	      this.createdTime = defaults.createdTime;
-    	      this.metadata = defaults.metadata;
-    	      this.releaseCriteria = defaults.releaseCriteria;
+            $ = new BatchConfigurationPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder batchGroupName(String batchGroupName) {
-            this.batchGroupName = Objects.requireNonNull(batchGroupName);
+            $.batchGroupName = batchGroupName;
             return this;
         }
+
         public Builder changedTime(@Nullable String changedTime) {
-            this.changedTime = changedTime;
+            $.changedTime = changedTime;
             return this;
         }
+
         public Builder createdTime(@Nullable String createdTime) {
-            this.createdTime = createdTime;
+            $.createdTime = createdTime;
             return this;
         }
+
         public Builder metadata(@Nullable Object metadata) {
-            this.metadata = metadata;
+            $.metadata = metadata;
             return this;
         }
+
         public Builder releaseCriteria(BatchReleaseCriteriaResponse releaseCriteria) {
-            this.releaseCriteria = Objects.requireNonNull(releaseCriteria);
+            $.releaseCriteria = releaseCriteria;
             return this;
-        }        public BatchConfigurationPropertiesResponse build() {
-            return new BatchConfigurationPropertiesResponse(batchGroupName, changedTime, createdTime, metadata, releaseCriteria);
+        }
+
+        public BatchConfigurationPropertiesResponse build() {
+            $.batchGroupName = Objects.requireNonNull($.batchGroupName, "expected parameter 'batchGroupName' to be non-null");
+            $.releaseCriteria = Objects.requireNonNull($.releaseCriteria, "expected parameter 'releaseCriteria' to be non-null");
+            return $;
         }
     }
+
 }

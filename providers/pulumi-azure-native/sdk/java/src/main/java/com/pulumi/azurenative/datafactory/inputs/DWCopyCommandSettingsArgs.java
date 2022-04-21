@@ -6,11 +6,11 @@ package com.pulumi.azurenative.datafactory.inputs;
 import com.pulumi.azurenative.datafactory.inputs.DWCopyCommandDefaultValueArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +27,10 @@ public final class DWCopyCommandSettingsArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="additionalOptions")
-      private final @Nullable Output<Map<String,String>> additionalOptions;
+    private @Nullable Output<Map<String,String>> additionalOptions;
 
-    public Output<Map<String,String>> additionalOptions() {
-        return this.additionalOptions == null ? Codegen.empty() : this.additionalOptions;
+    public Optional<Output<Map<String,String>>> additionalOptions() {
+        return Optional.ofNullable(this.additionalOptions);
     }
 
     /**
@@ -38,66 +38,62 @@ public final class DWCopyCommandSettingsArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="defaultValues")
-      private final @Nullable Output<List<DWCopyCommandDefaultValueArgs>> defaultValues;
+    private @Nullable Output<List<DWCopyCommandDefaultValueArgs>> defaultValues;
 
-    public Output<List<DWCopyCommandDefaultValueArgs>> defaultValues() {
-        return this.defaultValues == null ? Codegen.empty() : this.defaultValues;
+    public Optional<Output<List<DWCopyCommandDefaultValueArgs>>> defaultValues() {
+        return Optional.ofNullable(this.defaultValues);
     }
 
-    public DWCopyCommandSettingsArgs(
-        @Nullable Output<Map<String,String>> additionalOptions,
-        @Nullable Output<List<DWCopyCommandDefaultValueArgs>> defaultValues) {
-        this.additionalOptions = additionalOptions;
-        this.defaultValues = defaultValues;
-    }
+    private DWCopyCommandSettingsArgs() {}
 
-    private DWCopyCommandSettingsArgs() {
-        this.additionalOptions = Codegen.empty();
-        this.defaultValues = Codegen.empty();
+    private DWCopyCommandSettingsArgs(DWCopyCommandSettingsArgs $) {
+        this.additionalOptions = $.additionalOptions;
+        this.defaultValues = $.defaultValues;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DWCopyCommandSettingsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Map<String,String>> additionalOptions;
-        private @Nullable Output<List<DWCopyCommandDefaultValueArgs>> defaultValues;
+        private DWCopyCommandSettingsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DWCopyCommandSettingsArgs();
         }
 
         public Builder(DWCopyCommandSettingsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.additionalOptions = defaults.additionalOptions;
-    	      this.defaultValues = defaults.defaultValues;
+            $ = new DWCopyCommandSettingsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder additionalOptions(@Nullable Output<Map<String,String>> additionalOptions) {
-            this.additionalOptions = additionalOptions;
+            $.additionalOptions = additionalOptions;
             return this;
         }
-        public Builder additionalOptions(@Nullable Map<String,String> additionalOptions) {
-            this.additionalOptions = Codegen.ofNullable(additionalOptions);
-            return this;
+
+        public Builder additionalOptions(Map<String,String> additionalOptions) {
+            return additionalOptions(Output.of(additionalOptions));
         }
+
         public Builder defaultValues(@Nullable Output<List<DWCopyCommandDefaultValueArgs>> defaultValues) {
-            this.defaultValues = defaultValues;
+            $.defaultValues = defaultValues;
             return this;
         }
-        public Builder defaultValues(@Nullable List<DWCopyCommandDefaultValueArgs> defaultValues) {
-            this.defaultValues = Codegen.ofNullable(defaultValues);
-            return this;
+
+        public Builder defaultValues(List<DWCopyCommandDefaultValueArgs> defaultValues) {
+            return defaultValues(Output.of(defaultValues));
         }
+
         public Builder defaultValues(DWCopyCommandDefaultValueArgs... defaultValues) {
             return defaultValues(List.of(defaultValues));
-        }        public DWCopyCommandSettingsArgs build() {
-            return new DWCopyCommandSettingsArgs(additionalOptions, defaultValues);
+        }
+
+        public DWCopyCommandSettingsArgs build() {
+            return $;
         }
     }
+
 }

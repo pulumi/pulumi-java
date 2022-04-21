@@ -5,9 +5,9 @@ package com.pulumi.awsnative.iot.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -16,70 +16,65 @@ public final class ProvisioningTemplateProvisioningHookArgs extends com.pulumi.r
     public static final ProvisioningTemplateProvisioningHookArgs Empty = new ProvisioningTemplateProvisioningHookArgs();
 
     @Import(name="payloadVersion")
-      private final @Nullable Output<String> payloadVersion;
+    private @Nullable Output<String> payloadVersion;
 
-    public Output<String> payloadVersion() {
-        return this.payloadVersion == null ? Codegen.empty() : this.payloadVersion;
+    public Optional<Output<String>> payloadVersion() {
+        return Optional.ofNullable(this.payloadVersion);
     }
 
     @Import(name="targetArn")
-      private final @Nullable Output<String> targetArn;
+    private @Nullable Output<String> targetArn;
 
-    public Output<String> targetArn() {
-        return this.targetArn == null ? Codegen.empty() : this.targetArn;
+    public Optional<Output<String>> targetArn() {
+        return Optional.ofNullable(this.targetArn);
     }
 
-    public ProvisioningTemplateProvisioningHookArgs(
-        @Nullable Output<String> payloadVersion,
-        @Nullable Output<String> targetArn) {
-        this.payloadVersion = payloadVersion;
-        this.targetArn = targetArn;
-    }
+    private ProvisioningTemplateProvisioningHookArgs() {}
 
-    private ProvisioningTemplateProvisioningHookArgs() {
-        this.payloadVersion = Codegen.empty();
-        this.targetArn = Codegen.empty();
+    private ProvisioningTemplateProvisioningHookArgs(ProvisioningTemplateProvisioningHookArgs $) {
+        this.payloadVersion = $.payloadVersion;
+        this.targetArn = $.targetArn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ProvisioningTemplateProvisioningHookArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> payloadVersion;
-        private @Nullable Output<String> targetArn;
+        private ProvisioningTemplateProvisioningHookArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ProvisioningTemplateProvisioningHookArgs();
         }
 
         public Builder(ProvisioningTemplateProvisioningHookArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.payloadVersion = defaults.payloadVersion;
-    	      this.targetArn = defaults.targetArn;
+            $ = new ProvisioningTemplateProvisioningHookArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder payloadVersion(@Nullable Output<String> payloadVersion) {
-            this.payloadVersion = payloadVersion;
+            $.payloadVersion = payloadVersion;
             return this;
         }
-        public Builder payloadVersion(@Nullable String payloadVersion) {
-            this.payloadVersion = Codegen.ofNullable(payloadVersion);
-            return this;
+
+        public Builder payloadVersion(String payloadVersion) {
+            return payloadVersion(Output.of(payloadVersion));
         }
+
         public Builder targetArn(@Nullable Output<String> targetArn) {
-            this.targetArn = targetArn;
+            $.targetArn = targetArn;
             return this;
         }
-        public Builder targetArn(@Nullable String targetArn) {
-            this.targetArn = Codegen.ofNullable(targetArn);
-            return this;
-        }        public ProvisioningTemplateProvisioningHookArgs build() {
-            return new ProvisioningTemplateProvisioningHookArgs(payloadVersion, targetArn);
+
+        public Builder targetArn(String targetArn) {
+            return targetArn(Output.of(targetArn));
+        }
+
+        public ProvisioningTemplateProvisioningHookArgs build() {
+            return $;
         }
     }
+
 }

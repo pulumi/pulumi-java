@@ -5,7 +5,6 @@ package com.pulumi.azurenative.machinelearningcompute.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,7 +22,7 @@ public final class ServicePrincipalPropertiesArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="clientId", required=true)
-      private final Output<String> clientId;
+    private Output<String> clientId;
 
     public Output<String> clientId() {
         return this.clientId;
@@ -34,63 +33,60 @@ public final class ServicePrincipalPropertiesArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="secret", required=true)
-      private final Output<String> secret;
+    private Output<String> secret;
 
     public Output<String> secret() {
         return this.secret;
     }
 
-    public ServicePrincipalPropertiesArgs(
-        Output<String> clientId,
-        Output<String> secret) {
-        this.clientId = Objects.requireNonNull(clientId, "expected parameter 'clientId' to be non-null");
-        this.secret = Objects.requireNonNull(secret, "expected parameter 'secret' to be non-null");
-    }
+    private ServicePrincipalPropertiesArgs() {}
 
-    private ServicePrincipalPropertiesArgs() {
-        this.clientId = Codegen.empty();
-        this.secret = Codegen.empty();
+    private ServicePrincipalPropertiesArgs(ServicePrincipalPropertiesArgs $) {
+        this.clientId = $.clientId;
+        this.secret = $.secret;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ServicePrincipalPropertiesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> clientId;
-        private Output<String> secret;
+        private ServicePrincipalPropertiesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ServicePrincipalPropertiesArgs();
         }
 
         public Builder(ServicePrincipalPropertiesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.clientId = defaults.clientId;
-    	      this.secret = defaults.secret;
+            $ = new ServicePrincipalPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder clientId(Output<String> clientId) {
-            this.clientId = Objects.requireNonNull(clientId);
+            $.clientId = clientId;
             return this;
         }
+
         public Builder clientId(String clientId) {
-            this.clientId = Output.of(Objects.requireNonNull(clientId));
-            return this;
+            return clientId(Output.of(clientId));
         }
+
         public Builder secret(Output<String> secret) {
-            this.secret = Objects.requireNonNull(secret);
+            $.secret = secret;
             return this;
         }
+
         public Builder secret(String secret) {
-            this.secret = Output.of(Objects.requireNonNull(secret));
-            return this;
-        }        public ServicePrincipalPropertiesArgs build() {
-            return new ServicePrincipalPropertiesArgs(clientId, secret);
+            return secret(Output.of(secret));
+        }
+
+        public ServicePrincipalPropertiesArgs build() {
+            $.clientId = Objects.requireNonNull($.clientId, "expected parameter 'clientId' to be non-null");
+            $.secret = Objects.requireNonNull($.secret, "expected parameter 'secret' to be non-null");
+            return $;
         }
     }
+
 }

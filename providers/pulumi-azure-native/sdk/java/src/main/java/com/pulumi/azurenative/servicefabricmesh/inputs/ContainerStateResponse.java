@@ -23,10 +23,10 @@ public final class ContainerStateResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="detailStatus")
-      private final @Nullable String detailStatus;
+    private @Nullable String detailStatus;
 
     public Optional<String> detailStatus() {
-        return this.detailStatus == null ? Optional.empty() : Optional.ofNullable(this.detailStatus);
+        return Optional.ofNullable(this.detailStatus);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class ContainerStateResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="exitCode")
-      private final @Nullable String exitCode;
+    private @Nullable String exitCode;
 
     public Optional<String> exitCode() {
-        return this.exitCode == null ? Optional.empty() : Optional.ofNullable(this.exitCode);
+        return Optional.ofNullable(this.exitCode);
     }
 
     /**
@@ -45,10 +45,10 @@ public final class ContainerStateResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="finishTime")
-      private final @Nullable String finishTime;
+    private @Nullable String finishTime;
 
     public Optional<String> finishTime() {
-        return this.finishTime == null ? Optional.empty() : Optional.ofNullable(this.finishTime);
+        return Optional.ofNullable(this.finishTime);
     }
 
     /**
@@ -56,10 +56,10 @@ public final class ContainerStateResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="startTime")
-      private final @Nullable String startTime;
+    private @Nullable String startTime;
 
     public Optional<String> startTime() {
-        return this.startTime == null ? Optional.empty() : Optional.ofNullable(this.startTime);
+        return Optional.ofNullable(this.startTime);
     }
 
     /**
@@ -67,82 +67,68 @@ public final class ContainerStateResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="state")
-      private final @Nullable String state;
+    private @Nullable String state;
 
     public Optional<String> state() {
-        return this.state == null ? Optional.empty() : Optional.ofNullable(this.state);
+        return Optional.ofNullable(this.state);
     }
 
-    public ContainerStateResponse(
-        @Nullable String detailStatus,
-        @Nullable String exitCode,
-        @Nullable String finishTime,
-        @Nullable String startTime,
-        @Nullable String state) {
-        this.detailStatus = detailStatus;
-        this.exitCode = exitCode;
-        this.finishTime = finishTime;
-        this.startTime = startTime;
-        this.state = state;
-    }
+    private ContainerStateResponse() {}
 
-    private ContainerStateResponse() {
-        this.detailStatus = null;
-        this.exitCode = null;
-        this.finishTime = null;
-        this.startTime = null;
-        this.state = null;
+    private ContainerStateResponse(ContainerStateResponse $) {
+        this.detailStatus = $.detailStatus;
+        this.exitCode = $.exitCode;
+        this.finishTime = $.finishTime;
+        this.startTime = $.startTime;
+        this.state = $.state;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ContainerStateResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String detailStatus;
-        private @Nullable String exitCode;
-        private @Nullable String finishTime;
-        private @Nullable String startTime;
-        private @Nullable String state;
+        private ContainerStateResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ContainerStateResponse();
         }
 
         public Builder(ContainerStateResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.detailStatus = defaults.detailStatus;
-    	      this.exitCode = defaults.exitCode;
-    	      this.finishTime = defaults.finishTime;
-    	      this.startTime = defaults.startTime;
-    	      this.state = defaults.state;
+            $ = new ContainerStateResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder detailStatus(@Nullable String detailStatus) {
-            this.detailStatus = detailStatus;
+            $.detailStatus = detailStatus;
             return this;
         }
+
         public Builder exitCode(@Nullable String exitCode) {
-            this.exitCode = exitCode;
+            $.exitCode = exitCode;
             return this;
         }
+
         public Builder finishTime(@Nullable String finishTime) {
-            this.finishTime = finishTime;
+            $.finishTime = finishTime;
             return this;
         }
+
         public Builder startTime(@Nullable String startTime) {
-            this.startTime = startTime;
+            $.startTime = startTime;
             return this;
         }
+
         public Builder state(@Nullable String state) {
-            this.state = state;
+            $.state = state;
             return this;
-        }        public ContainerStateResponse build() {
-            return new ContainerStateResponse(detailStatus, exitCode, finishTime, startTime, state);
+        }
+
+        public ContainerStateResponse build() {
+            return $;
         }
     }
+
 }

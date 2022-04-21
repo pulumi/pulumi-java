@@ -6,12 +6,12 @@ package com.pulumi.aws.apigatewayv2;
 import com.pulumi.aws.apigatewayv2.inputs.RouteRequestParameterArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,7 +24,7 @@ public final class RouteArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="apiId", required=true)
-      private final Output<String> apiId;
+    private Output<String> apiId;
 
     public Output<String> apiId() {
         return this.apiId;
@@ -35,10 +35,10 @@ public final class RouteArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="apiKeyRequired")
-      private final @Nullable Output<Boolean> apiKeyRequired;
+    private @Nullable Output<Boolean> apiKeyRequired;
 
-    public Output<Boolean> apiKeyRequired() {
-        return this.apiKeyRequired == null ? Codegen.empty() : this.apiKeyRequired;
+    public Optional<Output<Boolean>> apiKeyRequired() {
+        return Optional.ofNullable(this.apiKeyRequired);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class RouteArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="authorizationScopes")
-      private final @Nullable Output<List<String>> authorizationScopes;
+    private @Nullable Output<List<String>> authorizationScopes;
 
-    public Output<List<String>> authorizationScopes() {
-        return this.authorizationScopes == null ? Codegen.empty() : this.authorizationScopes;
+    public Optional<Output<List<String>>> authorizationScopes() {
+        return Optional.ofNullable(this.authorizationScopes);
     }
 
     /**
@@ -60,10 +60,10 @@ public final class RouteArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="authorizationType")
-      private final @Nullable Output<String> authorizationType;
+    private @Nullable Output<String> authorizationType;
 
-    public Output<String> authorizationType() {
-        return this.authorizationType == null ? Codegen.empty() : this.authorizationType;
+    public Optional<Output<String>> authorizationType() {
+        return Optional.ofNullable(this.authorizationType);
     }
 
     /**
@@ -71,10 +71,10 @@ public final class RouteArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="authorizerId")
-      private final @Nullable Output<String> authorizerId;
+    private @Nullable Output<String> authorizerId;
 
-    public Output<String> authorizerId() {
-        return this.authorizerId == null ? Codegen.empty() : this.authorizerId;
+    public Optional<Output<String>> authorizerId() {
+        return Optional.ofNullable(this.authorizerId);
     }
 
     /**
@@ -82,10 +82,10 @@ public final class RouteArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="modelSelectionExpression")
-      private final @Nullable Output<String> modelSelectionExpression;
+    private @Nullable Output<String> modelSelectionExpression;
 
-    public Output<String> modelSelectionExpression() {
-        return this.modelSelectionExpression == null ? Codegen.empty() : this.modelSelectionExpression;
+    public Optional<Output<String>> modelSelectionExpression() {
+        return Optional.ofNullable(this.modelSelectionExpression);
     }
 
     /**
@@ -93,10 +93,10 @@ public final class RouteArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="operationName")
-      private final @Nullable Output<String> operationName;
+    private @Nullable Output<String> operationName;
 
-    public Output<String> operationName() {
-        return this.operationName == null ? Codegen.empty() : this.operationName;
+    public Optional<Output<String>> operationName() {
+        return Optional.ofNullable(this.operationName);
     }
 
     /**
@@ -104,10 +104,10 @@ public final class RouteArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="requestModels")
-      private final @Nullable Output<Map<String,String>> requestModels;
+    private @Nullable Output<Map<String,String>> requestModels;
 
-    public Output<Map<String,String>> requestModels() {
-        return this.requestModels == null ? Codegen.empty() : this.requestModels;
+    public Optional<Output<Map<String,String>>> requestModels() {
+        return Optional.ofNullable(this.requestModels);
     }
 
     /**
@@ -115,10 +115,10 @@ public final class RouteArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="requestParameters")
-      private final @Nullable Output<List<RouteRequestParameterArgs>> requestParameters;
+    private @Nullable Output<List<RouteRequestParameterArgs>> requestParameters;
 
-    public Output<List<RouteRequestParameterArgs>> requestParameters() {
-        return this.requestParameters == null ? Codegen.empty() : this.requestParameters;
+    public Optional<Output<List<RouteRequestParameterArgs>>> requestParameters() {
+        return Optional.ofNullable(this.requestParameters);
     }
 
     /**
@@ -126,7 +126,7 @@ public final class RouteArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="routeKey", required=true)
-      private final Output<String> routeKey;
+    private Output<String> routeKey;
 
     public Output<String> routeKey() {
         return this.routeKey;
@@ -137,10 +137,10 @@ public final class RouteArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="routeResponseSelectionExpression")
-      private final @Nullable Output<String> routeResponseSelectionExpression;
+    private @Nullable Output<String> routeResponseSelectionExpression;
 
-    public Output<String> routeResponseSelectionExpression() {
-        return this.routeResponseSelectionExpression == null ? Codegen.empty() : this.routeResponseSelectionExpression;
+    public Optional<Output<String>> routeResponseSelectionExpression() {
+        return Optional.ofNullable(this.routeResponseSelectionExpression);
     }
 
     /**
@@ -148,199 +148,168 @@ public final class RouteArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="target")
-      private final @Nullable Output<String> target;
+    private @Nullable Output<String> target;
 
-    public Output<String> target() {
-        return this.target == null ? Codegen.empty() : this.target;
+    public Optional<Output<String>> target() {
+        return Optional.ofNullable(this.target);
     }
 
-    public RouteArgs(
-        Output<String> apiId,
-        @Nullable Output<Boolean> apiKeyRequired,
-        @Nullable Output<List<String>> authorizationScopes,
-        @Nullable Output<String> authorizationType,
-        @Nullable Output<String> authorizerId,
-        @Nullable Output<String> modelSelectionExpression,
-        @Nullable Output<String> operationName,
-        @Nullable Output<Map<String,String>> requestModels,
-        @Nullable Output<List<RouteRequestParameterArgs>> requestParameters,
-        Output<String> routeKey,
-        @Nullable Output<String> routeResponseSelectionExpression,
-        @Nullable Output<String> target) {
-        this.apiId = Objects.requireNonNull(apiId, "expected parameter 'apiId' to be non-null");
-        this.apiKeyRequired = apiKeyRequired;
-        this.authorizationScopes = authorizationScopes;
-        this.authorizationType = authorizationType;
-        this.authorizerId = authorizerId;
-        this.modelSelectionExpression = modelSelectionExpression;
-        this.operationName = operationName;
-        this.requestModels = requestModels;
-        this.requestParameters = requestParameters;
-        this.routeKey = Objects.requireNonNull(routeKey, "expected parameter 'routeKey' to be non-null");
-        this.routeResponseSelectionExpression = routeResponseSelectionExpression;
-        this.target = target;
-    }
+    private RouteArgs() {}
 
-    private RouteArgs() {
-        this.apiId = Codegen.empty();
-        this.apiKeyRequired = Codegen.empty();
-        this.authorizationScopes = Codegen.empty();
-        this.authorizationType = Codegen.empty();
-        this.authorizerId = Codegen.empty();
-        this.modelSelectionExpression = Codegen.empty();
-        this.operationName = Codegen.empty();
-        this.requestModels = Codegen.empty();
-        this.requestParameters = Codegen.empty();
-        this.routeKey = Codegen.empty();
-        this.routeResponseSelectionExpression = Codegen.empty();
-        this.target = Codegen.empty();
+    private RouteArgs(RouteArgs $) {
+        this.apiId = $.apiId;
+        this.apiKeyRequired = $.apiKeyRequired;
+        this.authorizationScopes = $.authorizationScopes;
+        this.authorizationType = $.authorizationType;
+        this.authorizerId = $.authorizerId;
+        this.modelSelectionExpression = $.modelSelectionExpression;
+        this.operationName = $.operationName;
+        this.requestModels = $.requestModels;
+        this.requestParameters = $.requestParameters;
+        this.routeKey = $.routeKey;
+        this.routeResponseSelectionExpression = $.routeResponseSelectionExpression;
+        this.target = $.target;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RouteArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> apiId;
-        private @Nullable Output<Boolean> apiKeyRequired;
-        private @Nullable Output<List<String>> authorizationScopes;
-        private @Nullable Output<String> authorizationType;
-        private @Nullable Output<String> authorizerId;
-        private @Nullable Output<String> modelSelectionExpression;
-        private @Nullable Output<String> operationName;
-        private @Nullable Output<Map<String,String>> requestModels;
-        private @Nullable Output<List<RouteRequestParameterArgs>> requestParameters;
-        private Output<String> routeKey;
-        private @Nullable Output<String> routeResponseSelectionExpression;
-        private @Nullable Output<String> target;
+        private RouteArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RouteArgs();
         }
 
         public Builder(RouteArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.apiId = defaults.apiId;
-    	      this.apiKeyRequired = defaults.apiKeyRequired;
-    	      this.authorizationScopes = defaults.authorizationScopes;
-    	      this.authorizationType = defaults.authorizationType;
-    	      this.authorizerId = defaults.authorizerId;
-    	      this.modelSelectionExpression = defaults.modelSelectionExpression;
-    	      this.operationName = defaults.operationName;
-    	      this.requestModels = defaults.requestModels;
-    	      this.requestParameters = defaults.requestParameters;
-    	      this.routeKey = defaults.routeKey;
-    	      this.routeResponseSelectionExpression = defaults.routeResponseSelectionExpression;
-    	      this.target = defaults.target;
+            $ = new RouteArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder apiId(Output<String> apiId) {
-            this.apiId = Objects.requireNonNull(apiId);
+            $.apiId = apiId;
             return this;
         }
+
         public Builder apiId(String apiId) {
-            this.apiId = Output.of(Objects.requireNonNull(apiId));
-            return this;
+            return apiId(Output.of(apiId));
         }
+
         public Builder apiKeyRequired(@Nullable Output<Boolean> apiKeyRequired) {
-            this.apiKeyRequired = apiKeyRequired;
+            $.apiKeyRequired = apiKeyRequired;
             return this;
         }
-        public Builder apiKeyRequired(@Nullable Boolean apiKeyRequired) {
-            this.apiKeyRequired = Codegen.ofNullable(apiKeyRequired);
-            return this;
+
+        public Builder apiKeyRequired(Boolean apiKeyRequired) {
+            return apiKeyRequired(Output.of(apiKeyRequired));
         }
+
         public Builder authorizationScopes(@Nullable Output<List<String>> authorizationScopes) {
-            this.authorizationScopes = authorizationScopes;
+            $.authorizationScopes = authorizationScopes;
             return this;
         }
-        public Builder authorizationScopes(@Nullable List<String> authorizationScopes) {
-            this.authorizationScopes = Codegen.ofNullable(authorizationScopes);
-            return this;
+
+        public Builder authorizationScopes(List<String> authorizationScopes) {
+            return authorizationScopes(Output.of(authorizationScopes));
         }
+
         public Builder authorizationScopes(String... authorizationScopes) {
             return authorizationScopes(List.of(authorizationScopes));
         }
+
         public Builder authorizationType(@Nullable Output<String> authorizationType) {
-            this.authorizationType = authorizationType;
+            $.authorizationType = authorizationType;
             return this;
         }
-        public Builder authorizationType(@Nullable String authorizationType) {
-            this.authorizationType = Codegen.ofNullable(authorizationType);
-            return this;
+
+        public Builder authorizationType(String authorizationType) {
+            return authorizationType(Output.of(authorizationType));
         }
+
         public Builder authorizerId(@Nullable Output<String> authorizerId) {
-            this.authorizerId = authorizerId;
+            $.authorizerId = authorizerId;
             return this;
         }
-        public Builder authorizerId(@Nullable String authorizerId) {
-            this.authorizerId = Codegen.ofNullable(authorizerId);
-            return this;
+
+        public Builder authorizerId(String authorizerId) {
+            return authorizerId(Output.of(authorizerId));
         }
+
         public Builder modelSelectionExpression(@Nullable Output<String> modelSelectionExpression) {
-            this.modelSelectionExpression = modelSelectionExpression;
+            $.modelSelectionExpression = modelSelectionExpression;
             return this;
         }
-        public Builder modelSelectionExpression(@Nullable String modelSelectionExpression) {
-            this.modelSelectionExpression = Codegen.ofNullable(modelSelectionExpression);
-            return this;
+
+        public Builder modelSelectionExpression(String modelSelectionExpression) {
+            return modelSelectionExpression(Output.of(modelSelectionExpression));
         }
+
         public Builder operationName(@Nullable Output<String> operationName) {
-            this.operationName = operationName;
+            $.operationName = operationName;
             return this;
         }
-        public Builder operationName(@Nullable String operationName) {
-            this.operationName = Codegen.ofNullable(operationName);
-            return this;
+
+        public Builder operationName(String operationName) {
+            return operationName(Output.of(operationName));
         }
+
         public Builder requestModels(@Nullable Output<Map<String,String>> requestModels) {
-            this.requestModels = requestModels;
+            $.requestModels = requestModels;
             return this;
         }
-        public Builder requestModels(@Nullable Map<String,String> requestModels) {
-            this.requestModels = Codegen.ofNullable(requestModels);
-            return this;
+
+        public Builder requestModels(Map<String,String> requestModels) {
+            return requestModels(Output.of(requestModels));
         }
+
         public Builder requestParameters(@Nullable Output<List<RouteRequestParameterArgs>> requestParameters) {
-            this.requestParameters = requestParameters;
+            $.requestParameters = requestParameters;
             return this;
         }
-        public Builder requestParameters(@Nullable List<RouteRequestParameterArgs> requestParameters) {
-            this.requestParameters = Codegen.ofNullable(requestParameters);
-            return this;
+
+        public Builder requestParameters(List<RouteRequestParameterArgs> requestParameters) {
+            return requestParameters(Output.of(requestParameters));
         }
+
         public Builder requestParameters(RouteRequestParameterArgs... requestParameters) {
             return requestParameters(List.of(requestParameters));
         }
+
         public Builder routeKey(Output<String> routeKey) {
-            this.routeKey = Objects.requireNonNull(routeKey);
+            $.routeKey = routeKey;
             return this;
         }
+
         public Builder routeKey(String routeKey) {
-            this.routeKey = Output.of(Objects.requireNonNull(routeKey));
-            return this;
+            return routeKey(Output.of(routeKey));
         }
+
         public Builder routeResponseSelectionExpression(@Nullable Output<String> routeResponseSelectionExpression) {
-            this.routeResponseSelectionExpression = routeResponseSelectionExpression;
+            $.routeResponseSelectionExpression = routeResponseSelectionExpression;
             return this;
         }
-        public Builder routeResponseSelectionExpression(@Nullable String routeResponseSelectionExpression) {
-            this.routeResponseSelectionExpression = Codegen.ofNullable(routeResponseSelectionExpression);
-            return this;
+
+        public Builder routeResponseSelectionExpression(String routeResponseSelectionExpression) {
+            return routeResponseSelectionExpression(Output.of(routeResponseSelectionExpression));
         }
+
         public Builder target(@Nullable Output<String> target) {
-            this.target = target;
+            $.target = target;
             return this;
         }
-        public Builder target(@Nullable String target) {
-            this.target = Codegen.ofNullable(target);
-            return this;
-        }        public RouteArgs build() {
-            return new RouteArgs(apiId, apiKeyRequired, authorizationScopes, authorizationType, authorizerId, modelSelectionExpression, operationName, requestModels, requestParameters, routeKey, routeResponseSelectionExpression, target);
+
+        public Builder target(String target) {
+            return target(Output.of(target));
+        }
+
+        public RouteArgs build() {
+            $.apiId = Objects.requireNonNull($.apiId, "expected parameter 'apiId' to be non-null");
+            $.routeKey = Objects.requireNonNull($.routeKey, "expected parameter 'routeKey' to be non-null");
+            return $;
         }
     }
+
 }

@@ -26,7 +26,7 @@ public final class LocalDiskResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="autoDelete", required=true)
-      private final Boolean autoDelete;
+    private Boolean autoDelete;
 
     public Boolean autoDelete() {
         return this.autoDelete;
@@ -37,7 +37,7 @@ public final class LocalDiskResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="boot", required=true)
-      private final Boolean boot;
+    private Boolean boot;
 
     public Boolean boot() {
         return this.boot;
@@ -48,7 +48,7 @@ public final class LocalDiskResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="deviceName", required=true)
-      private final String deviceName;
+    private String deviceName;
 
     public String deviceName() {
         return this.deviceName;
@@ -59,7 +59,7 @@ public final class LocalDiskResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="guestOsFeatures", required=true)
-      private final List<RuntimeGuestOsFeatureResponse> guestOsFeatures;
+    private List<RuntimeGuestOsFeatureResponse> guestOsFeatures;
 
     public List<RuntimeGuestOsFeatureResponse> guestOsFeatures() {
         return this.guestOsFeatures;
@@ -70,7 +70,7 @@ public final class LocalDiskResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="index", required=true)
-      private final Integer index;
+    private Integer index;
 
     public Integer index() {
         return this.index;
@@ -81,7 +81,7 @@ public final class LocalDiskResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="initializeParams", required=true)
-      private final LocalDiskInitializeParamsResponse initializeParams;
+    private LocalDiskInitializeParamsResponse initializeParams;
 
     public LocalDiskInitializeParamsResponse initializeParams() {
         return this.initializeParams;
@@ -92,7 +92,7 @@ public final class LocalDiskResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="interface", required=true)
-      private final String interface_;
+    private String interface_;
 
     public String interface_() {
         return this.interface_;
@@ -103,7 +103,7 @@ public final class LocalDiskResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="kind", required=true)
-      private final String kind;
+    private String kind;
 
     public String kind() {
         return this.kind;
@@ -114,7 +114,7 @@ public final class LocalDiskResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="licenses", required=true)
-      private final List<String> licenses;
+    private List<String> licenses;
 
     public List<String> licenses() {
         return this.licenses;
@@ -125,7 +125,7 @@ public final class LocalDiskResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="mode", required=true)
-      private final String mode;
+    private String mode;
 
     public String mode() {
         return this.mode;
@@ -136,7 +136,7 @@ public final class LocalDiskResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="source", required=true)
-      private final String source;
+    private String source;
 
     public String source() {
         return this.source;
@@ -147,151 +147,130 @@ public final class LocalDiskResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
     }
 
-    public LocalDiskResponse(
-        Boolean autoDelete,
-        Boolean boot,
-        String deviceName,
-        List<RuntimeGuestOsFeatureResponse> guestOsFeatures,
-        Integer index,
-        LocalDiskInitializeParamsResponse initializeParams,
-        String interface_,
-        String kind,
-        List<String> licenses,
-        String mode,
-        String source,
-        String type) {
-        this.autoDelete = Objects.requireNonNull(autoDelete, "expected parameter 'autoDelete' to be non-null");
-        this.boot = Objects.requireNonNull(boot, "expected parameter 'boot' to be non-null");
-        this.deviceName = Objects.requireNonNull(deviceName, "expected parameter 'deviceName' to be non-null");
-        this.guestOsFeatures = Objects.requireNonNull(guestOsFeatures, "expected parameter 'guestOsFeatures' to be non-null");
-        this.index = Objects.requireNonNull(index, "expected parameter 'index' to be non-null");
-        this.initializeParams = Objects.requireNonNull(initializeParams, "expected parameter 'initializeParams' to be non-null");
-        this.interface_ = Objects.requireNonNull(interface_, "expected parameter 'interface' to be non-null");
-        this.kind = Objects.requireNonNull(kind, "expected parameter 'kind' to be non-null");
-        this.licenses = Objects.requireNonNull(licenses, "expected parameter 'licenses' to be non-null");
-        this.mode = Objects.requireNonNull(mode, "expected parameter 'mode' to be non-null");
-        this.source = Objects.requireNonNull(source, "expected parameter 'source' to be non-null");
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private LocalDiskResponse() {}
 
-    private LocalDiskResponse() {
-        this.autoDelete = null;
-        this.boot = null;
-        this.deviceName = null;
-        this.guestOsFeatures = List.of();
-        this.index = null;
-        this.initializeParams = null;
-        this.interface_ = null;
-        this.kind = null;
-        this.licenses = List.of();
-        this.mode = null;
-        this.source = null;
-        this.type = null;
+    private LocalDiskResponse(LocalDiskResponse $) {
+        this.autoDelete = $.autoDelete;
+        this.boot = $.boot;
+        this.deviceName = $.deviceName;
+        this.guestOsFeatures = $.guestOsFeatures;
+        this.index = $.index;
+        this.initializeParams = $.initializeParams;
+        this.interface_ = $.interface_;
+        this.kind = $.kind;
+        this.licenses = $.licenses;
+        this.mode = $.mode;
+        this.source = $.source;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LocalDiskResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Boolean autoDelete;
-        private Boolean boot;
-        private String deviceName;
-        private List<RuntimeGuestOsFeatureResponse> guestOsFeatures;
-        private Integer index;
-        private LocalDiskInitializeParamsResponse initializeParams;
-        private String interface_;
-        private String kind;
-        private List<String> licenses;
-        private String mode;
-        private String source;
-        private String type;
+        private LocalDiskResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new LocalDiskResponse();
         }
 
         public Builder(LocalDiskResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.autoDelete = defaults.autoDelete;
-    	      this.boot = defaults.boot;
-    	      this.deviceName = defaults.deviceName;
-    	      this.guestOsFeatures = defaults.guestOsFeatures;
-    	      this.index = defaults.index;
-    	      this.initializeParams = defaults.initializeParams;
-    	      this.interface_ = defaults.interface_;
-    	      this.kind = defaults.kind;
-    	      this.licenses = defaults.licenses;
-    	      this.mode = defaults.mode;
-    	      this.source = defaults.source;
-    	      this.type = defaults.type;
+            $ = new LocalDiskResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder autoDelete(Boolean autoDelete) {
-            this.autoDelete = Objects.requireNonNull(autoDelete);
+            $.autoDelete = autoDelete;
             return this;
         }
+
         public Builder boot(Boolean boot) {
-            this.boot = Objects.requireNonNull(boot);
+            $.boot = boot;
             return this;
         }
+
         public Builder deviceName(String deviceName) {
-            this.deviceName = Objects.requireNonNull(deviceName);
+            $.deviceName = deviceName;
             return this;
         }
+
         public Builder guestOsFeatures(List<RuntimeGuestOsFeatureResponse> guestOsFeatures) {
-            this.guestOsFeatures = Objects.requireNonNull(guestOsFeatures);
+            $.guestOsFeatures = guestOsFeatures;
             return this;
         }
+
         public Builder guestOsFeatures(RuntimeGuestOsFeatureResponse... guestOsFeatures) {
             return guestOsFeatures(List.of(guestOsFeatures));
         }
+
         public Builder index(Integer index) {
-            this.index = Objects.requireNonNull(index);
+            $.index = index;
             return this;
         }
+
         public Builder initializeParams(LocalDiskInitializeParamsResponse initializeParams) {
-            this.initializeParams = Objects.requireNonNull(initializeParams);
+            $.initializeParams = initializeParams;
             return this;
         }
+
         public Builder interface_(String interface_) {
-            this.interface_ = Objects.requireNonNull(interface_);
+            $.interface_ = interface_;
             return this;
         }
+
         public Builder kind(String kind) {
-            this.kind = Objects.requireNonNull(kind);
+            $.kind = kind;
             return this;
         }
+
         public Builder licenses(List<String> licenses) {
-            this.licenses = Objects.requireNonNull(licenses);
+            $.licenses = licenses;
             return this;
         }
+
         public Builder licenses(String... licenses) {
             return licenses(List.of(licenses));
         }
+
         public Builder mode(String mode) {
-            this.mode = Objects.requireNonNull(mode);
+            $.mode = mode;
             return this;
         }
+
         public Builder source(String source) {
-            this.source = Objects.requireNonNull(source);
+            $.source = source;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
-        }        public LocalDiskResponse build() {
-            return new LocalDiskResponse(autoDelete, boot, deviceName, guestOsFeatures, index, initializeParams, interface_, kind, licenses, mode, source, type);
+        }
+
+        public LocalDiskResponse build() {
+            $.autoDelete = Objects.requireNonNull($.autoDelete, "expected parameter 'autoDelete' to be non-null");
+            $.boot = Objects.requireNonNull($.boot, "expected parameter 'boot' to be non-null");
+            $.deviceName = Objects.requireNonNull($.deviceName, "expected parameter 'deviceName' to be non-null");
+            $.guestOsFeatures = Objects.requireNonNull($.guestOsFeatures, "expected parameter 'guestOsFeatures' to be non-null");
+            $.index = Objects.requireNonNull($.index, "expected parameter 'index' to be non-null");
+            $.initializeParams = Objects.requireNonNull($.initializeParams, "expected parameter 'initializeParams' to be non-null");
+            $.interface_ = Objects.requireNonNull($.interface_, "expected parameter 'interface' to be non-null");
+            $.kind = Objects.requireNonNull($.kind, "expected parameter 'kind' to be non-null");
+            $.licenses = Objects.requireNonNull($.licenses, "expected parameter 'licenses' to be non-null");
+            $.mode = Objects.requireNonNull($.mode, "expected parameter 'mode' to be non-null");
+            $.source = Objects.requireNonNull($.source, "expected parameter 'source' to be non-null");
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

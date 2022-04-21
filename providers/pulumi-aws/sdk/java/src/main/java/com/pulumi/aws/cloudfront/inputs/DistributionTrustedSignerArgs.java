@@ -6,10 +6,10 @@ package com.pulumi.aws.cloudfront.inputs;
 import com.pulumi.aws.cloudfront.inputs.DistributionTrustedSignerItemArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class DistributionTrustedSignerArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="enabled")
-      private final @Nullable Output<Boolean> enabled;
+    private @Nullable Output<Boolean> enabled;
 
-    public Output<Boolean> enabled() {
-        return this.enabled == null ? Codegen.empty() : this.enabled;
+    public Optional<Output<Boolean>> enabled() {
+        return Optional.ofNullable(this.enabled);
     }
 
     /**
@@ -33,66 +33,62 @@ public final class DistributionTrustedSignerArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="items")
-      private final @Nullable Output<List<DistributionTrustedSignerItemArgs>> items;
+    private @Nullable Output<List<DistributionTrustedSignerItemArgs>> items;
 
-    public Output<List<DistributionTrustedSignerItemArgs>> items() {
-        return this.items == null ? Codegen.empty() : this.items;
+    public Optional<Output<List<DistributionTrustedSignerItemArgs>>> items() {
+        return Optional.ofNullable(this.items);
     }
 
-    public DistributionTrustedSignerArgs(
-        @Nullable Output<Boolean> enabled,
-        @Nullable Output<List<DistributionTrustedSignerItemArgs>> items) {
-        this.enabled = enabled;
-        this.items = items;
-    }
+    private DistributionTrustedSignerArgs() {}
 
-    private DistributionTrustedSignerArgs() {
-        this.enabled = Codegen.empty();
-        this.items = Codegen.empty();
+    private DistributionTrustedSignerArgs(DistributionTrustedSignerArgs $) {
+        this.enabled = $.enabled;
+        this.items = $.items;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DistributionTrustedSignerArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> enabled;
-        private @Nullable Output<List<DistributionTrustedSignerItemArgs>> items;
+        private DistributionTrustedSignerArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DistributionTrustedSignerArgs();
         }
 
         public Builder(DistributionTrustedSignerArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.enabled = defaults.enabled;
-    	      this.items = defaults.items;
+            $ = new DistributionTrustedSignerArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder enabled(@Nullable Output<Boolean> enabled) {
-            this.enabled = enabled;
+            $.enabled = enabled;
             return this;
         }
-        public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Codegen.ofNullable(enabled);
-            return this;
+
+        public Builder enabled(Boolean enabled) {
+            return enabled(Output.of(enabled));
         }
+
         public Builder items(@Nullable Output<List<DistributionTrustedSignerItemArgs>> items) {
-            this.items = items;
+            $.items = items;
             return this;
         }
-        public Builder items(@Nullable List<DistributionTrustedSignerItemArgs> items) {
-            this.items = Codegen.ofNullable(items);
-            return this;
+
+        public Builder items(List<DistributionTrustedSignerItemArgs> items) {
+            return items(Output.of(items));
         }
+
         public Builder items(DistributionTrustedSignerItemArgs... items) {
             return items(List.of(items));
-        }        public DistributionTrustedSignerArgs build() {
-            return new DistributionTrustedSignerArgs(enabled, items);
+        }
+
+        public DistributionTrustedSignerArgs build() {
+            return $;
         }
     }
+
 }

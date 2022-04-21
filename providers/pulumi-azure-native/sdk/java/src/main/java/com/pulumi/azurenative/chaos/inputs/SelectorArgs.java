@@ -7,7 +7,6 @@ import com.pulumi.azurenative.chaos.enums.SelectorType;
 import com.pulumi.azurenative.chaos.inputs.TargetReferenceArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -26,7 +25,7 @@ public final class SelectorArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="id", required=true)
-      private final Output<String> id;
+    private Output<String> id;
 
     public Output<String> id() {
         return this.id;
@@ -37,7 +36,7 @@ public final class SelectorArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="targets", required=true)
-      private final Output<List<TargetReferenceArgs>> targets;
+    private Output<List<TargetReferenceArgs>> targets;
 
     public Output<List<TargetReferenceArgs>> targets() {
         return this.targets;
@@ -48,79 +47,75 @@ public final class SelectorArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="type", required=true)
-      private final Output<SelectorType> type;
+    private Output<SelectorType> type;
 
     public Output<SelectorType> type() {
         return this.type;
     }
 
-    public SelectorArgs(
-        Output<String> id,
-        Output<List<TargetReferenceArgs>> targets,
-        Output<SelectorType> type) {
-        this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
-        this.targets = Objects.requireNonNull(targets, "expected parameter 'targets' to be non-null");
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private SelectorArgs() {}
 
-    private SelectorArgs() {
-        this.id = Codegen.empty();
-        this.targets = Codegen.empty();
-        this.type = Codegen.empty();
+    private SelectorArgs(SelectorArgs $) {
+        this.id = $.id;
+        this.targets = $.targets;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SelectorArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> id;
-        private Output<List<TargetReferenceArgs>> targets;
-        private Output<SelectorType> type;
+        private SelectorArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SelectorArgs();
         }
 
         public Builder(SelectorArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.id = defaults.id;
-    	      this.targets = defaults.targets;
-    	      this.type = defaults.type;
+            $ = new SelectorArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder id(Output<String> id) {
-            this.id = Objects.requireNonNull(id);
+            $.id = id;
             return this;
         }
+
         public Builder id(String id) {
-            this.id = Output.of(Objects.requireNonNull(id));
-            return this;
+            return id(Output.of(id));
         }
+
         public Builder targets(Output<List<TargetReferenceArgs>> targets) {
-            this.targets = Objects.requireNonNull(targets);
+            $.targets = targets;
             return this;
         }
+
         public Builder targets(List<TargetReferenceArgs> targets) {
-            this.targets = Output.of(Objects.requireNonNull(targets));
-            return this;
+            return targets(Output.of(targets));
         }
+
         public Builder targets(TargetReferenceArgs... targets) {
             return targets(List.of(targets));
         }
+
         public Builder type(Output<SelectorType> type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder type(SelectorType type) {
-            this.type = Output.of(Objects.requireNonNull(type));
-            return this;
-        }        public SelectorArgs build() {
-            return new SelectorArgs(id, targets, type);
+            return type(Output.of(type));
+        }
+
+        public SelectorArgs build() {
+            $.id = Objects.requireNonNull($.id, "expected parameter 'id' to be non-null");
+            $.targets = Objects.requireNonNull($.targets, "expected parameter 'targets' to be non-null");
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

@@ -23,10 +23,10 @@ public final class Device extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable String description;
+    private @Nullable String description;
 
     public Optional<String> description() {
-        return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -34,7 +34,7 @@ public final class Device extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="deviceName", required=true)
-      private final String deviceName;
+    private String deviceName;
 
     public String deviceName() {
         return this.deviceName;
@@ -45,64 +45,57 @@ public final class Device extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="iotThingName")
-      private final @Nullable String iotThingName;
+    private @Nullable String iotThingName;
 
     public Optional<String> iotThingName() {
-        return this.iotThingName == null ? Optional.empty() : Optional.ofNullable(this.iotThingName);
+        return Optional.ofNullable(this.iotThingName);
     }
 
-    public Device(
-        @Nullable String description,
-        String deviceName,
-        @Nullable String iotThingName) {
-        this.description = description;
-        this.deviceName = Objects.requireNonNull(deviceName, "expected parameter 'deviceName' to be non-null");
-        this.iotThingName = iotThingName;
-    }
+    private Device() {}
 
-    private Device() {
-        this.description = null;
-        this.deviceName = null;
-        this.iotThingName = null;
+    private Device(Device $) {
+        this.description = $.description;
+        this.deviceName = $.deviceName;
+        this.iotThingName = $.iotThingName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(Device defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String description;
-        private String deviceName;
-        private @Nullable String iotThingName;
+        private Device $;
 
         public Builder() {
-    	      // Empty
+            $ = new Device();
         }
 
         public Builder(Device defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.description = defaults.description;
-    	      this.deviceName = defaults.deviceName;
-    	      this.iotThingName = defaults.iotThingName;
+            $ = new Device(Objects.requireNonNull(defaults));
         }
 
         public Builder description(@Nullable String description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
+
         public Builder deviceName(String deviceName) {
-            this.deviceName = Objects.requireNonNull(deviceName);
+            $.deviceName = deviceName;
             return this;
         }
+
         public Builder iotThingName(@Nullable String iotThingName) {
-            this.iotThingName = iotThingName;
+            $.iotThingName = iotThingName;
             return this;
-        }        public Device build() {
-            return new Device(description, deviceName, iotThingName);
+        }
+
+        public Device build() {
+            $.deviceName = Objects.requireNonNull($.deviceName, "expected parameter 'deviceName' to be non-null");
+            return $;
         }
     }
+
 }

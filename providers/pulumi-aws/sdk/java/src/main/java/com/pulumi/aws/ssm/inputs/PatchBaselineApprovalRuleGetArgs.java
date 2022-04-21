@@ -6,12 +6,12 @@ package com.pulumi.aws.ssm.inputs;
 import com.pulumi.aws.ssm.inputs.PatchBaselineApprovalRulePatchFilterGetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class PatchBaselineApprovalRuleGetArgs extends com.pulumi.resources
      * 
      */
     @Import(name="approveAfterDays")
-      private final @Nullable Output<Integer> approveAfterDays;
+    private @Nullable Output<Integer> approveAfterDays;
 
-    public Output<Integer> approveAfterDays() {
-        return this.approveAfterDays == null ? Codegen.empty() : this.approveAfterDays;
+    public Optional<Output<Integer>> approveAfterDays() {
+        return Optional.ofNullable(this.approveAfterDays);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class PatchBaselineApprovalRuleGetArgs extends com.pulumi.resources
      * 
      */
     @Import(name="approveUntilDate")
-      private final @Nullable Output<String> approveUntilDate;
+    private @Nullable Output<String> approveUntilDate;
 
-    public Output<String> approveUntilDate() {
-        return this.approveUntilDate == null ? Codegen.empty() : this.approveUntilDate;
+    public Optional<Output<String>> approveUntilDate() {
+        return Optional.ofNullable(this.approveUntilDate);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class PatchBaselineApprovalRuleGetArgs extends com.pulumi.resources
      * 
      */
     @Import(name="complianceLevel")
-      private final @Nullable Output<String> complianceLevel;
+    private @Nullable Output<String> complianceLevel;
 
-    public Output<String> complianceLevel() {
-        return this.complianceLevel == null ? Codegen.empty() : this.complianceLevel;
+    public Optional<Output<String>> complianceLevel() {
+        return Optional.ofNullable(this.complianceLevel);
     }
 
     /**
@@ -57,10 +57,10 @@ public final class PatchBaselineApprovalRuleGetArgs extends com.pulumi.resources
      * 
      */
     @Import(name="enableNonSecurity")
-      private final @Nullable Output<Boolean> enableNonSecurity;
+    private @Nullable Output<Boolean> enableNonSecurity;
 
-    public Output<Boolean> enableNonSecurity() {
-        return this.enableNonSecurity == null ? Codegen.empty() : this.enableNonSecurity;
+    public Optional<Output<Boolean>> enableNonSecurity() {
+        return Optional.ofNullable(this.enableNonSecurity);
     }
 
     /**
@@ -68,105 +68,93 @@ public final class PatchBaselineApprovalRuleGetArgs extends com.pulumi.resources
      * 
      */
     @Import(name="patchFilters", required=true)
-      private final Output<List<PatchBaselineApprovalRulePatchFilterGetArgs>> patchFilters;
+    private Output<List<PatchBaselineApprovalRulePatchFilterGetArgs>> patchFilters;
 
     public Output<List<PatchBaselineApprovalRulePatchFilterGetArgs>> patchFilters() {
         return this.patchFilters;
     }
 
-    public PatchBaselineApprovalRuleGetArgs(
-        @Nullable Output<Integer> approveAfterDays,
-        @Nullable Output<String> approveUntilDate,
-        @Nullable Output<String> complianceLevel,
-        @Nullable Output<Boolean> enableNonSecurity,
-        Output<List<PatchBaselineApprovalRulePatchFilterGetArgs>> patchFilters) {
-        this.approveAfterDays = approveAfterDays;
-        this.approveUntilDate = approveUntilDate;
-        this.complianceLevel = complianceLevel;
-        this.enableNonSecurity = enableNonSecurity;
-        this.patchFilters = Objects.requireNonNull(patchFilters, "expected parameter 'patchFilters' to be non-null");
-    }
+    private PatchBaselineApprovalRuleGetArgs() {}
 
-    private PatchBaselineApprovalRuleGetArgs() {
-        this.approveAfterDays = Codegen.empty();
-        this.approveUntilDate = Codegen.empty();
-        this.complianceLevel = Codegen.empty();
-        this.enableNonSecurity = Codegen.empty();
-        this.patchFilters = Codegen.empty();
+    private PatchBaselineApprovalRuleGetArgs(PatchBaselineApprovalRuleGetArgs $) {
+        this.approveAfterDays = $.approveAfterDays;
+        this.approveUntilDate = $.approveUntilDate;
+        this.complianceLevel = $.complianceLevel;
+        this.enableNonSecurity = $.enableNonSecurity;
+        this.patchFilters = $.patchFilters;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PatchBaselineApprovalRuleGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> approveAfterDays;
-        private @Nullable Output<String> approveUntilDate;
-        private @Nullable Output<String> complianceLevel;
-        private @Nullable Output<Boolean> enableNonSecurity;
-        private Output<List<PatchBaselineApprovalRulePatchFilterGetArgs>> patchFilters;
+        private PatchBaselineApprovalRuleGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PatchBaselineApprovalRuleGetArgs();
         }
 
         public Builder(PatchBaselineApprovalRuleGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.approveAfterDays = defaults.approveAfterDays;
-    	      this.approveUntilDate = defaults.approveUntilDate;
-    	      this.complianceLevel = defaults.complianceLevel;
-    	      this.enableNonSecurity = defaults.enableNonSecurity;
-    	      this.patchFilters = defaults.patchFilters;
+            $ = new PatchBaselineApprovalRuleGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder approveAfterDays(@Nullable Output<Integer> approveAfterDays) {
-            this.approveAfterDays = approveAfterDays;
+            $.approveAfterDays = approveAfterDays;
             return this;
         }
-        public Builder approveAfterDays(@Nullable Integer approveAfterDays) {
-            this.approveAfterDays = Codegen.ofNullable(approveAfterDays);
-            return this;
+
+        public Builder approveAfterDays(Integer approveAfterDays) {
+            return approveAfterDays(Output.of(approveAfterDays));
         }
+
         public Builder approveUntilDate(@Nullable Output<String> approveUntilDate) {
-            this.approveUntilDate = approveUntilDate;
+            $.approveUntilDate = approveUntilDate;
             return this;
         }
-        public Builder approveUntilDate(@Nullable String approveUntilDate) {
-            this.approveUntilDate = Codegen.ofNullable(approveUntilDate);
-            return this;
+
+        public Builder approveUntilDate(String approveUntilDate) {
+            return approveUntilDate(Output.of(approveUntilDate));
         }
+
         public Builder complianceLevel(@Nullable Output<String> complianceLevel) {
-            this.complianceLevel = complianceLevel;
+            $.complianceLevel = complianceLevel;
             return this;
         }
-        public Builder complianceLevel(@Nullable String complianceLevel) {
-            this.complianceLevel = Codegen.ofNullable(complianceLevel);
-            return this;
+
+        public Builder complianceLevel(String complianceLevel) {
+            return complianceLevel(Output.of(complianceLevel));
         }
+
         public Builder enableNonSecurity(@Nullable Output<Boolean> enableNonSecurity) {
-            this.enableNonSecurity = enableNonSecurity;
+            $.enableNonSecurity = enableNonSecurity;
             return this;
         }
-        public Builder enableNonSecurity(@Nullable Boolean enableNonSecurity) {
-            this.enableNonSecurity = Codegen.ofNullable(enableNonSecurity);
-            return this;
+
+        public Builder enableNonSecurity(Boolean enableNonSecurity) {
+            return enableNonSecurity(Output.of(enableNonSecurity));
         }
+
         public Builder patchFilters(Output<List<PatchBaselineApprovalRulePatchFilterGetArgs>> patchFilters) {
-            this.patchFilters = Objects.requireNonNull(patchFilters);
+            $.patchFilters = patchFilters;
             return this;
         }
+
         public Builder patchFilters(List<PatchBaselineApprovalRulePatchFilterGetArgs> patchFilters) {
-            this.patchFilters = Output.of(Objects.requireNonNull(patchFilters));
-            return this;
+            return patchFilters(Output.of(patchFilters));
         }
+
         public Builder patchFilters(PatchBaselineApprovalRulePatchFilterGetArgs... patchFilters) {
             return patchFilters(List.of(patchFilters));
-        }        public PatchBaselineApprovalRuleGetArgs build() {
-            return new PatchBaselineApprovalRuleGetArgs(approveAfterDays, approveUntilDate, complianceLevel, enableNonSecurity, patchFilters);
+        }
+
+        public PatchBaselineApprovalRuleGetArgs build() {
+            $.patchFilters = Objects.requireNonNull($.patchFilters, "expected parameter 'patchFilters' to be non-null");
+            return $;
         }
     }
+
 }

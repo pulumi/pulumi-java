@@ -5,11 +5,11 @@ package com.pulumi.googlenative.dialogflow_v3beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.dialogflow_v3beta1.enums.GoogleCloudDialogflowCxV3beta1NluSettingsModelTrainingMode;
 import com.pulumi.googlenative.dialogflow_v3beta1.enums.GoogleCloudDialogflowCxV3beta1NluSettingsModelType;
 import java.lang.Double;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class GoogleCloudDialogflowCxV3beta1NluSettingsArgs extends com.pul
      * 
      */
     @Import(name="classificationThreshold")
-      private final @Nullable Output<Double> classificationThreshold;
+    private @Nullable Output<Double> classificationThreshold;
 
-    public Output<Double> classificationThreshold() {
-        return this.classificationThreshold == null ? Codegen.empty() : this.classificationThreshold;
+    public Optional<Output<Double>> classificationThreshold() {
+        return Optional.ofNullable(this.classificationThreshold);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class GoogleCloudDialogflowCxV3beta1NluSettingsArgs extends com.pul
      * 
      */
     @Import(name="modelTrainingMode")
-      private final @Nullable Output<GoogleCloudDialogflowCxV3beta1NluSettingsModelTrainingMode> modelTrainingMode;
+    private @Nullable Output<GoogleCloudDialogflowCxV3beta1NluSettingsModelTrainingMode> modelTrainingMode;
 
-    public Output<GoogleCloudDialogflowCxV3beta1NluSettingsModelTrainingMode> modelTrainingMode() {
-        return this.modelTrainingMode == null ? Codegen.empty() : this.modelTrainingMode;
+    public Optional<Output<GoogleCloudDialogflowCxV3beta1NluSettingsModelTrainingMode>> modelTrainingMode() {
+        return Optional.ofNullable(this.modelTrainingMode);
     }
 
     /**
@@ -48,76 +48,68 @@ public final class GoogleCloudDialogflowCxV3beta1NluSettingsArgs extends com.pul
      * 
      */
     @Import(name="modelType")
-      private final @Nullable Output<GoogleCloudDialogflowCxV3beta1NluSettingsModelType> modelType;
+    private @Nullable Output<GoogleCloudDialogflowCxV3beta1NluSettingsModelType> modelType;
 
-    public Output<GoogleCloudDialogflowCxV3beta1NluSettingsModelType> modelType() {
-        return this.modelType == null ? Codegen.empty() : this.modelType;
+    public Optional<Output<GoogleCloudDialogflowCxV3beta1NluSettingsModelType>> modelType() {
+        return Optional.ofNullable(this.modelType);
     }
 
-    public GoogleCloudDialogflowCxV3beta1NluSettingsArgs(
-        @Nullable Output<Double> classificationThreshold,
-        @Nullable Output<GoogleCloudDialogflowCxV3beta1NluSettingsModelTrainingMode> modelTrainingMode,
-        @Nullable Output<GoogleCloudDialogflowCxV3beta1NluSettingsModelType> modelType) {
-        this.classificationThreshold = classificationThreshold;
-        this.modelTrainingMode = modelTrainingMode;
-        this.modelType = modelType;
-    }
+    private GoogleCloudDialogflowCxV3beta1NluSettingsArgs() {}
 
-    private GoogleCloudDialogflowCxV3beta1NluSettingsArgs() {
-        this.classificationThreshold = Codegen.empty();
-        this.modelTrainingMode = Codegen.empty();
-        this.modelType = Codegen.empty();
+    private GoogleCloudDialogflowCxV3beta1NluSettingsArgs(GoogleCloudDialogflowCxV3beta1NluSettingsArgs $) {
+        this.classificationThreshold = $.classificationThreshold;
+        this.modelTrainingMode = $.modelTrainingMode;
+        this.modelType = $.modelType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudDialogflowCxV3beta1NluSettingsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Double> classificationThreshold;
-        private @Nullable Output<GoogleCloudDialogflowCxV3beta1NluSettingsModelTrainingMode> modelTrainingMode;
-        private @Nullable Output<GoogleCloudDialogflowCxV3beta1NluSettingsModelType> modelType;
+        private GoogleCloudDialogflowCxV3beta1NluSettingsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudDialogflowCxV3beta1NluSettingsArgs();
         }
 
         public Builder(GoogleCloudDialogflowCxV3beta1NluSettingsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.classificationThreshold = defaults.classificationThreshold;
-    	      this.modelTrainingMode = defaults.modelTrainingMode;
-    	      this.modelType = defaults.modelType;
+            $ = new GoogleCloudDialogflowCxV3beta1NluSettingsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder classificationThreshold(@Nullable Output<Double> classificationThreshold) {
-            this.classificationThreshold = classificationThreshold;
+            $.classificationThreshold = classificationThreshold;
             return this;
         }
-        public Builder classificationThreshold(@Nullable Double classificationThreshold) {
-            this.classificationThreshold = Codegen.ofNullable(classificationThreshold);
-            return this;
+
+        public Builder classificationThreshold(Double classificationThreshold) {
+            return classificationThreshold(Output.of(classificationThreshold));
         }
+
         public Builder modelTrainingMode(@Nullable Output<GoogleCloudDialogflowCxV3beta1NluSettingsModelTrainingMode> modelTrainingMode) {
-            this.modelTrainingMode = modelTrainingMode;
+            $.modelTrainingMode = modelTrainingMode;
             return this;
         }
-        public Builder modelTrainingMode(@Nullable GoogleCloudDialogflowCxV3beta1NluSettingsModelTrainingMode modelTrainingMode) {
-            this.modelTrainingMode = Codegen.ofNullable(modelTrainingMode);
-            return this;
+
+        public Builder modelTrainingMode(GoogleCloudDialogflowCxV3beta1NluSettingsModelTrainingMode modelTrainingMode) {
+            return modelTrainingMode(Output.of(modelTrainingMode));
         }
+
         public Builder modelType(@Nullable Output<GoogleCloudDialogflowCxV3beta1NluSettingsModelType> modelType) {
-            this.modelType = modelType;
+            $.modelType = modelType;
             return this;
         }
-        public Builder modelType(@Nullable GoogleCloudDialogflowCxV3beta1NluSettingsModelType modelType) {
-            this.modelType = Codegen.ofNullable(modelType);
-            return this;
-        }        public GoogleCloudDialogflowCxV3beta1NluSettingsArgs build() {
-            return new GoogleCloudDialogflowCxV3beta1NluSettingsArgs(classificationThreshold, modelTrainingMode, modelType);
+
+        public Builder modelType(GoogleCloudDialogflowCxV3beta1NluSettingsModelType modelType) {
+            return modelType(Output.of(modelType));
+        }
+
+        public GoogleCloudDialogflowCxV3beta1NluSettingsArgs build() {
+            return $;
         }
     }
+
 }

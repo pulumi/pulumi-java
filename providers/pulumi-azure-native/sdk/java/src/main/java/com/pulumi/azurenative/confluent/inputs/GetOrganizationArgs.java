@@ -17,7 +17,7 @@ public final class GetOrganizationArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="organizationName", required=true)
-      private final String organizationName;
+    private String organizationName;
 
     public String organizationName() {
         return this.organizationName;
@@ -28,55 +28,52 @@ public final class GetOrganizationArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public GetOrganizationArgs(
-        String organizationName,
-        String resourceGroupName) {
-        this.organizationName = Objects.requireNonNull(organizationName, "expected parameter 'organizationName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private GetOrganizationArgs() {}
 
-    private GetOrganizationArgs() {
-        this.organizationName = null;
-        this.resourceGroupName = null;
+    private GetOrganizationArgs(GetOrganizationArgs $) {
+        this.organizationName = $.organizationName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetOrganizationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String organizationName;
-        private String resourceGroupName;
+        private GetOrganizationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetOrganizationArgs();
         }
 
         public Builder(GetOrganizationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.organizationName = defaults.organizationName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new GetOrganizationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder organizationName(String organizationName) {
-            this.organizationName = Objects.requireNonNull(organizationName);
+            $.organizationName = organizationName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public GetOrganizationArgs build() {
-            return new GetOrganizationArgs(organizationName, resourceGroupName);
+        }
+
+        public GetOrganizationArgs build() {
+            $.organizationName = Objects.requireNonNull($.organizationName, "expected parameter 'organizationName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,10 +5,10 @@ package com.pulumi.awsnative.imagebuilder.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class DistributionConfigurationLaunchTemplateConfigurationArgs exte
      * 
      */
     @Import(name="accountId")
-      private final @Nullable Output<String> accountId;
+    private @Nullable Output<String> accountId;
 
-    public Output<String> accountId() {
-        return this.accountId == null ? Codegen.empty() : this.accountId;
+    public Optional<Output<String>> accountId() {
+        return Optional.ofNullable(this.accountId);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class DistributionConfigurationLaunchTemplateConfigurationArgs exte
      * 
      */
     @Import(name="launchTemplateId")
-      private final @Nullable Output<String> launchTemplateId;
+    private @Nullable Output<String> launchTemplateId;
 
-    public Output<String> launchTemplateId() {
-        return this.launchTemplateId == null ? Codegen.empty() : this.launchTemplateId;
+    public Optional<Output<String>> launchTemplateId() {
+        return Optional.ofNullable(this.launchTemplateId);
     }
 
     /**
@@ -47,76 +47,68 @@ public final class DistributionConfigurationLaunchTemplateConfigurationArgs exte
      * 
      */
     @Import(name="setDefaultVersion")
-      private final @Nullable Output<Boolean> setDefaultVersion;
+    private @Nullable Output<Boolean> setDefaultVersion;
 
-    public Output<Boolean> setDefaultVersion() {
-        return this.setDefaultVersion == null ? Codegen.empty() : this.setDefaultVersion;
+    public Optional<Output<Boolean>> setDefaultVersion() {
+        return Optional.ofNullable(this.setDefaultVersion);
     }
 
-    public DistributionConfigurationLaunchTemplateConfigurationArgs(
-        @Nullable Output<String> accountId,
-        @Nullable Output<String> launchTemplateId,
-        @Nullable Output<Boolean> setDefaultVersion) {
-        this.accountId = accountId;
-        this.launchTemplateId = launchTemplateId;
-        this.setDefaultVersion = setDefaultVersion;
-    }
+    private DistributionConfigurationLaunchTemplateConfigurationArgs() {}
 
-    private DistributionConfigurationLaunchTemplateConfigurationArgs() {
-        this.accountId = Codegen.empty();
-        this.launchTemplateId = Codegen.empty();
-        this.setDefaultVersion = Codegen.empty();
+    private DistributionConfigurationLaunchTemplateConfigurationArgs(DistributionConfigurationLaunchTemplateConfigurationArgs $) {
+        this.accountId = $.accountId;
+        this.launchTemplateId = $.launchTemplateId;
+        this.setDefaultVersion = $.setDefaultVersion;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DistributionConfigurationLaunchTemplateConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> accountId;
-        private @Nullable Output<String> launchTemplateId;
-        private @Nullable Output<Boolean> setDefaultVersion;
+        private DistributionConfigurationLaunchTemplateConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DistributionConfigurationLaunchTemplateConfigurationArgs();
         }
 
         public Builder(DistributionConfigurationLaunchTemplateConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accountId = defaults.accountId;
-    	      this.launchTemplateId = defaults.launchTemplateId;
-    	      this.setDefaultVersion = defaults.setDefaultVersion;
+            $ = new DistributionConfigurationLaunchTemplateConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder accountId(@Nullable Output<String> accountId) {
-            this.accountId = accountId;
+            $.accountId = accountId;
             return this;
         }
-        public Builder accountId(@Nullable String accountId) {
-            this.accountId = Codegen.ofNullable(accountId);
-            return this;
+
+        public Builder accountId(String accountId) {
+            return accountId(Output.of(accountId));
         }
+
         public Builder launchTemplateId(@Nullable Output<String> launchTemplateId) {
-            this.launchTemplateId = launchTemplateId;
+            $.launchTemplateId = launchTemplateId;
             return this;
         }
-        public Builder launchTemplateId(@Nullable String launchTemplateId) {
-            this.launchTemplateId = Codegen.ofNullable(launchTemplateId);
-            return this;
+
+        public Builder launchTemplateId(String launchTemplateId) {
+            return launchTemplateId(Output.of(launchTemplateId));
         }
+
         public Builder setDefaultVersion(@Nullable Output<Boolean> setDefaultVersion) {
-            this.setDefaultVersion = setDefaultVersion;
+            $.setDefaultVersion = setDefaultVersion;
             return this;
         }
-        public Builder setDefaultVersion(@Nullable Boolean setDefaultVersion) {
-            this.setDefaultVersion = Codegen.ofNullable(setDefaultVersion);
-            return this;
-        }        public DistributionConfigurationLaunchTemplateConfigurationArgs build() {
-            return new DistributionConfigurationLaunchTemplateConfigurationArgs(accountId, launchTemplateId, setDefaultVersion);
+
+        public Builder setDefaultVersion(Boolean setDefaultVersion) {
+            return setDefaultVersion(Output.of(setDefaultVersion));
+        }
+
+        public DistributionConfigurationLaunchTemplateConfigurationArgs build() {
+            return $;
         }
     }
+
 }

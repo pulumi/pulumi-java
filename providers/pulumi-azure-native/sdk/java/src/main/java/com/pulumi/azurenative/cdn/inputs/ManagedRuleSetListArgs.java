@@ -6,9 +6,9 @@ package com.pulumi.azurenative.cdn.inputs;
 import com.pulumi.azurenative.cdn.inputs.ManagedRuleSetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,52 +25,52 @@ public final class ManagedRuleSetListArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="managedRuleSets")
-      private final @Nullable Output<List<ManagedRuleSetArgs>> managedRuleSets;
+    private @Nullable Output<List<ManagedRuleSetArgs>> managedRuleSets;
 
-    public Output<List<ManagedRuleSetArgs>> managedRuleSets() {
-        return this.managedRuleSets == null ? Codegen.empty() : this.managedRuleSets;
+    public Optional<Output<List<ManagedRuleSetArgs>>> managedRuleSets() {
+        return Optional.ofNullable(this.managedRuleSets);
     }
 
-    public ManagedRuleSetListArgs(@Nullable Output<List<ManagedRuleSetArgs>> managedRuleSets) {
-        this.managedRuleSets = managedRuleSets;
-    }
+    private ManagedRuleSetListArgs() {}
 
-    private ManagedRuleSetListArgs() {
-        this.managedRuleSets = Codegen.empty();
+    private ManagedRuleSetListArgs(ManagedRuleSetListArgs $) {
+        this.managedRuleSets = $.managedRuleSets;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ManagedRuleSetListArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<ManagedRuleSetArgs>> managedRuleSets;
+        private ManagedRuleSetListArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ManagedRuleSetListArgs();
         }
 
         public Builder(ManagedRuleSetListArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.managedRuleSets = defaults.managedRuleSets;
+            $ = new ManagedRuleSetListArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder managedRuleSets(@Nullable Output<List<ManagedRuleSetArgs>> managedRuleSets) {
-            this.managedRuleSets = managedRuleSets;
+            $.managedRuleSets = managedRuleSets;
             return this;
         }
-        public Builder managedRuleSets(@Nullable List<ManagedRuleSetArgs> managedRuleSets) {
-            this.managedRuleSets = Codegen.ofNullable(managedRuleSets);
-            return this;
+
+        public Builder managedRuleSets(List<ManagedRuleSetArgs> managedRuleSets) {
+            return managedRuleSets(Output.of(managedRuleSets));
         }
+
         public Builder managedRuleSets(ManagedRuleSetArgs... managedRuleSets) {
             return managedRuleSets(List.of(managedRuleSets));
-        }        public ManagedRuleSetListArgs build() {
-            return new ManagedRuleSetListArgs(managedRuleSets);
+        }
+
+        public ManagedRuleSetListArgs build() {
+            return $;
         }
     }
+
 }

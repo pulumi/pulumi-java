@@ -22,7 +22,7 @@ public final class GoogleCloudDialogflowV2IntentMessageSelectItemInfoResponse ex
      * 
      */
     @Import(name="key", required=true)
-      private final String key;
+    private String key;
 
     public String key() {
         return this.key;
@@ -33,58 +33,56 @@ public final class GoogleCloudDialogflowV2IntentMessageSelectItemInfoResponse ex
      * 
      */
     @Import(name="synonyms", required=true)
-      private final List<String> synonyms;
+    private List<String> synonyms;
 
     public List<String> synonyms() {
         return this.synonyms;
     }
 
-    public GoogleCloudDialogflowV2IntentMessageSelectItemInfoResponse(
-        String key,
-        List<String> synonyms) {
-        this.key = Objects.requireNonNull(key, "expected parameter 'key' to be non-null");
-        this.synonyms = Objects.requireNonNull(synonyms, "expected parameter 'synonyms' to be non-null");
-    }
+    private GoogleCloudDialogflowV2IntentMessageSelectItemInfoResponse() {}
 
-    private GoogleCloudDialogflowV2IntentMessageSelectItemInfoResponse() {
-        this.key = null;
-        this.synonyms = List.of();
+    private GoogleCloudDialogflowV2IntentMessageSelectItemInfoResponse(GoogleCloudDialogflowV2IntentMessageSelectItemInfoResponse $) {
+        this.key = $.key;
+        this.synonyms = $.synonyms;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudDialogflowV2IntentMessageSelectItemInfoResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String key;
-        private List<String> synonyms;
+        private GoogleCloudDialogflowV2IntentMessageSelectItemInfoResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudDialogflowV2IntentMessageSelectItemInfoResponse();
         }
 
         public Builder(GoogleCloudDialogflowV2IntentMessageSelectItemInfoResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.key = defaults.key;
-    	      this.synonyms = defaults.synonyms;
+            $ = new GoogleCloudDialogflowV2IntentMessageSelectItemInfoResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder key(String key) {
-            this.key = Objects.requireNonNull(key);
+            $.key = key;
             return this;
         }
+
         public Builder synonyms(List<String> synonyms) {
-            this.synonyms = Objects.requireNonNull(synonyms);
+            $.synonyms = synonyms;
             return this;
         }
+
         public Builder synonyms(String... synonyms) {
             return synonyms(List.of(synonyms));
-        }        public GoogleCloudDialogflowV2IntentMessageSelectItemInfoResponse build() {
-            return new GoogleCloudDialogflowV2IntentMessageSelectItemInfoResponse(key, synonyms);
+        }
+
+        public GoogleCloudDialogflowV2IntentMessageSelectItemInfoResponse build() {
+            $.key = Objects.requireNonNull($.key, "expected parameter 'key' to be non-null");
+            $.synonyms = Objects.requireNonNull($.synonyms, "expected parameter 'synonyms' to be non-null");
+            return $;
         }
     }
+
 }

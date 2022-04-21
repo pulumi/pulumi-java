@@ -25,7 +25,7 @@ public final class DeliveryRuleHttpVersionConditionArgs extends com.pulumi.resou
      * 
      */
     @Import(name="name", required=true)
-      private final Output<String> name;
+    private Output<String> name;
 
     public Output<String> name() {
         return this.name;
@@ -36,63 +36,60 @@ public final class DeliveryRuleHttpVersionConditionArgs extends com.pulumi.resou
      * 
      */
     @Import(name="parameters", required=true)
-      private final Output<HttpVersionMatchConditionParametersArgs> parameters;
+    private Output<HttpVersionMatchConditionParametersArgs> parameters;
 
     public Output<HttpVersionMatchConditionParametersArgs> parameters() {
         return this.parameters;
     }
 
-    public DeliveryRuleHttpVersionConditionArgs(
-        Output<String> name,
-        Output<HttpVersionMatchConditionParametersArgs> parameters) {
-        this.name = Codegen.stringProp("name").output().arg(name).require();
-        this.parameters = Objects.requireNonNull(parameters, "expected parameter 'parameters' to be non-null");
-    }
+    private DeliveryRuleHttpVersionConditionArgs() {}
 
-    private DeliveryRuleHttpVersionConditionArgs() {
-        this.name = Codegen.empty();
-        this.parameters = Codegen.empty();
+    private DeliveryRuleHttpVersionConditionArgs(DeliveryRuleHttpVersionConditionArgs $) {
+        this.name = $.name;
+        this.parameters = $.parameters;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DeliveryRuleHttpVersionConditionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> name;
-        private Output<HttpVersionMatchConditionParametersArgs> parameters;
+        private DeliveryRuleHttpVersionConditionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DeliveryRuleHttpVersionConditionArgs();
         }
 
         public Builder(DeliveryRuleHttpVersionConditionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.parameters = defaults.parameters;
+            $ = new DeliveryRuleHttpVersionConditionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder name(Output<String> name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Output.of(Objects.requireNonNull(name));
-            return this;
+            return name(Output.of(name));
         }
+
         public Builder parameters(Output<HttpVersionMatchConditionParametersArgs> parameters) {
-            this.parameters = Objects.requireNonNull(parameters);
+            $.parameters = parameters;
             return this;
         }
+
         public Builder parameters(HttpVersionMatchConditionParametersArgs parameters) {
-            this.parameters = Output.of(Objects.requireNonNull(parameters));
-            return this;
-        }        public DeliveryRuleHttpVersionConditionArgs build() {
-            return new DeliveryRuleHttpVersionConditionArgs(name, parameters);
+            return parameters(Output.of(parameters));
+        }
+
+        public DeliveryRuleHttpVersionConditionArgs build() {
+            $.name = Codegen.stringProp("name").output().arg($.name).require();
+            $.parameters = Objects.requireNonNull($.parameters, "expected parameter 'parameters' to be non-null");
+            return $;
         }
     }
+
 }

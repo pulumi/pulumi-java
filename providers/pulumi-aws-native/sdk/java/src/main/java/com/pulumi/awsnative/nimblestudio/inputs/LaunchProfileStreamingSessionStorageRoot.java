@@ -24,10 +24,10 @@ public final class LaunchProfileStreamingSessionStorageRoot extends com.pulumi.r
      * 
      */
     @Import(name="linux")
-      private final @Nullable String linux;
+    private @Nullable String linux;
 
     public Optional<String> linux() {
-        return this.linux == null ? Optional.empty() : Optional.ofNullable(this.linux);
+        return Optional.ofNullable(this.linux);
     }
 
     /**
@@ -35,55 +35,50 @@ public final class LaunchProfileStreamingSessionStorageRoot extends com.pulumi.r
      * 
      */
     @Import(name="windows")
-      private final @Nullable String windows;
+    private @Nullable String windows;
 
     public Optional<String> windows() {
-        return this.windows == null ? Optional.empty() : Optional.ofNullable(this.windows);
+        return Optional.ofNullable(this.windows);
     }
 
-    public LaunchProfileStreamingSessionStorageRoot(
-        @Nullable String linux,
-        @Nullable String windows) {
-        this.linux = linux;
-        this.windows = windows;
-    }
+    private LaunchProfileStreamingSessionStorageRoot() {}
 
-    private LaunchProfileStreamingSessionStorageRoot() {
-        this.linux = null;
-        this.windows = null;
+    private LaunchProfileStreamingSessionStorageRoot(LaunchProfileStreamingSessionStorageRoot $) {
+        this.linux = $.linux;
+        this.windows = $.windows;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LaunchProfileStreamingSessionStorageRoot defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String linux;
-        private @Nullable String windows;
+        private LaunchProfileStreamingSessionStorageRoot $;
 
         public Builder() {
-    	      // Empty
+            $ = new LaunchProfileStreamingSessionStorageRoot();
         }
 
         public Builder(LaunchProfileStreamingSessionStorageRoot defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.linux = defaults.linux;
-    	      this.windows = defaults.windows;
+            $ = new LaunchProfileStreamingSessionStorageRoot(Objects.requireNonNull(defaults));
         }
 
         public Builder linux(@Nullable String linux) {
-            this.linux = linux;
+            $.linux = linux;
             return this;
         }
+
         public Builder windows(@Nullable String windows) {
-            this.windows = windows;
+            $.windows = windows;
             return this;
-        }        public LaunchProfileStreamingSessionStorageRoot build() {
-            return new LaunchProfileStreamingSessionStorageRoot(linux, windows);
+        }
+
+        public LaunchProfileStreamingSessionStorageRoot build() {
+            return $;
         }
     }
+
 }

@@ -14,158 +14,143 @@ public final class GetLaunchTemplateBlockDeviceMappingEb extends com.pulumi.reso
     public static final GetLaunchTemplateBlockDeviceMappingEb Empty = new GetLaunchTemplateBlockDeviceMappingEb();
 
     @Import(name="deleteOnTermination", required=true)
-      private final String deleteOnTermination;
+    private String deleteOnTermination;
 
     public String deleteOnTermination() {
         return this.deleteOnTermination;
     }
 
     @Import(name="encrypted", required=true)
-      private final String encrypted;
+    private String encrypted;
 
     public String encrypted() {
         return this.encrypted;
     }
 
     @Import(name="iops", required=true)
-      private final Integer iops;
+    private Integer iops;
 
     public Integer iops() {
         return this.iops;
     }
 
     @Import(name="kmsKeyId", required=true)
-      private final String kmsKeyId;
+    private String kmsKeyId;
 
     public String kmsKeyId() {
         return this.kmsKeyId;
     }
 
     @Import(name="snapshotId", required=true)
-      private final String snapshotId;
+    private String snapshotId;
 
     public String snapshotId() {
         return this.snapshotId;
     }
 
     @Import(name="throughput", required=true)
-      private final Integer throughput;
+    private Integer throughput;
 
     public Integer throughput() {
         return this.throughput;
     }
 
     @Import(name="volumeSize", required=true)
-      private final Integer volumeSize;
+    private Integer volumeSize;
 
     public Integer volumeSize() {
         return this.volumeSize;
     }
 
     @Import(name="volumeType", required=true)
-      private final String volumeType;
+    private String volumeType;
 
     public String volumeType() {
         return this.volumeType;
     }
 
-    public GetLaunchTemplateBlockDeviceMappingEb(
-        String deleteOnTermination,
-        String encrypted,
-        Integer iops,
-        String kmsKeyId,
-        String snapshotId,
-        Integer throughput,
-        Integer volumeSize,
-        String volumeType) {
-        this.deleteOnTermination = Objects.requireNonNull(deleteOnTermination, "expected parameter 'deleteOnTermination' to be non-null");
-        this.encrypted = Objects.requireNonNull(encrypted, "expected parameter 'encrypted' to be non-null");
-        this.iops = Objects.requireNonNull(iops, "expected parameter 'iops' to be non-null");
-        this.kmsKeyId = Objects.requireNonNull(kmsKeyId, "expected parameter 'kmsKeyId' to be non-null");
-        this.snapshotId = Objects.requireNonNull(snapshotId, "expected parameter 'snapshotId' to be non-null");
-        this.throughput = Objects.requireNonNull(throughput, "expected parameter 'throughput' to be non-null");
-        this.volumeSize = Objects.requireNonNull(volumeSize, "expected parameter 'volumeSize' to be non-null");
-        this.volumeType = Objects.requireNonNull(volumeType, "expected parameter 'volumeType' to be non-null");
-    }
+    private GetLaunchTemplateBlockDeviceMappingEb() {}
 
-    private GetLaunchTemplateBlockDeviceMappingEb() {
-        this.deleteOnTermination = null;
-        this.encrypted = null;
-        this.iops = null;
-        this.kmsKeyId = null;
-        this.snapshotId = null;
-        this.throughput = null;
-        this.volumeSize = null;
-        this.volumeType = null;
+    private GetLaunchTemplateBlockDeviceMappingEb(GetLaunchTemplateBlockDeviceMappingEb $) {
+        this.deleteOnTermination = $.deleteOnTermination;
+        this.encrypted = $.encrypted;
+        this.iops = $.iops;
+        this.kmsKeyId = $.kmsKeyId;
+        this.snapshotId = $.snapshotId;
+        this.throughput = $.throughput;
+        this.volumeSize = $.volumeSize;
+        this.volumeType = $.volumeType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetLaunchTemplateBlockDeviceMappingEb defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String deleteOnTermination;
-        private String encrypted;
-        private Integer iops;
-        private String kmsKeyId;
-        private String snapshotId;
-        private Integer throughput;
-        private Integer volumeSize;
-        private String volumeType;
+        private GetLaunchTemplateBlockDeviceMappingEb $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetLaunchTemplateBlockDeviceMappingEb();
         }
 
         public Builder(GetLaunchTemplateBlockDeviceMappingEb defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.deleteOnTermination = defaults.deleteOnTermination;
-    	      this.encrypted = defaults.encrypted;
-    	      this.iops = defaults.iops;
-    	      this.kmsKeyId = defaults.kmsKeyId;
-    	      this.snapshotId = defaults.snapshotId;
-    	      this.throughput = defaults.throughput;
-    	      this.volumeSize = defaults.volumeSize;
-    	      this.volumeType = defaults.volumeType;
+            $ = new GetLaunchTemplateBlockDeviceMappingEb(Objects.requireNonNull(defaults));
         }
 
         public Builder deleteOnTermination(String deleteOnTermination) {
-            this.deleteOnTermination = Objects.requireNonNull(deleteOnTermination);
+            $.deleteOnTermination = deleteOnTermination;
             return this;
         }
+
         public Builder encrypted(String encrypted) {
-            this.encrypted = Objects.requireNonNull(encrypted);
+            $.encrypted = encrypted;
             return this;
         }
+
         public Builder iops(Integer iops) {
-            this.iops = Objects.requireNonNull(iops);
+            $.iops = iops;
             return this;
         }
+
         public Builder kmsKeyId(String kmsKeyId) {
-            this.kmsKeyId = Objects.requireNonNull(kmsKeyId);
+            $.kmsKeyId = kmsKeyId;
             return this;
         }
+
         public Builder snapshotId(String snapshotId) {
-            this.snapshotId = Objects.requireNonNull(snapshotId);
+            $.snapshotId = snapshotId;
             return this;
         }
+
         public Builder throughput(Integer throughput) {
-            this.throughput = Objects.requireNonNull(throughput);
+            $.throughput = throughput;
             return this;
         }
+
         public Builder volumeSize(Integer volumeSize) {
-            this.volumeSize = Objects.requireNonNull(volumeSize);
+            $.volumeSize = volumeSize;
             return this;
         }
+
         public Builder volumeType(String volumeType) {
-            this.volumeType = Objects.requireNonNull(volumeType);
+            $.volumeType = volumeType;
             return this;
-        }        public GetLaunchTemplateBlockDeviceMappingEb build() {
-            return new GetLaunchTemplateBlockDeviceMappingEb(deleteOnTermination, encrypted, iops, kmsKeyId, snapshotId, throughput, volumeSize, volumeType);
+        }
+
+        public GetLaunchTemplateBlockDeviceMappingEb build() {
+            $.deleteOnTermination = Objects.requireNonNull($.deleteOnTermination, "expected parameter 'deleteOnTermination' to be non-null");
+            $.encrypted = Objects.requireNonNull($.encrypted, "expected parameter 'encrypted' to be non-null");
+            $.iops = Objects.requireNonNull($.iops, "expected parameter 'iops' to be non-null");
+            $.kmsKeyId = Objects.requireNonNull($.kmsKeyId, "expected parameter 'kmsKeyId' to be non-null");
+            $.snapshotId = Objects.requireNonNull($.snapshotId, "expected parameter 'snapshotId' to be non-null");
+            $.throughput = Objects.requireNonNull($.throughput, "expected parameter 'throughput' to be non-null");
+            $.volumeSize = Objects.requireNonNull($.volumeSize, "expected parameter 'volumeSize' to be non-null");
+            $.volumeType = Objects.requireNonNull($.volumeType, "expected parameter 'volumeType' to be non-null");
+            return $;
         }
     }
+
 }

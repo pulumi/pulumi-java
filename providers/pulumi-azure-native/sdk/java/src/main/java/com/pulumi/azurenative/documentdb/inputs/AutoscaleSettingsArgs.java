@@ -5,9 +5,9 @@ package com.pulumi.azurenative.documentdb.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,49 +20,48 @@ public final class AutoscaleSettingsArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="maxThroughput")
-      private final @Nullable Output<Integer> maxThroughput;
+    private @Nullable Output<Integer> maxThroughput;
 
-    public Output<Integer> maxThroughput() {
-        return this.maxThroughput == null ? Codegen.empty() : this.maxThroughput;
+    public Optional<Output<Integer>> maxThroughput() {
+        return Optional.ofNullable(this.maxThroughput);
     }
 
-    public AutoscaleSettingsArgs(@Nullable Output<Integer> maxThroughput) {
-        this.maxThroughput = maxThroughput;
-    }
+    private AutoscaleSettingsArgs() {}
 
-    private AutoscaleSettingsArgs() {
-        this.maxThroughput = Codegen.empty();
+    private AutoscaleSettingsArgs(AutoscaleSettingsArgs $) {
+        this.maxThroughput = $.maxThroughput;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AutoscaleSettingsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> maxThroughput;
+        private AutoscaleSettingsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AutoscaleSettingsArgs();
         }
 
         public Builder(AutoscaleSettingsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.maxThroughput = defaults.maxThroughput;
+            $ = new AutoscaleSettingsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder maxThroughput(@Nullable Output<Integer> maxThroughput) {
-            this.maxThroughput = maxThroughput;
+            $.maxThroughput = maxThroughput;
             return this;
         }
-        public Builder maxThroughput(@Nullable Integer maxThroughput) {
-            this.maxThroughput = Codegen.ofNullable(maxThroughput);
-            return this;
-        }        public AutoscaleSettingsArgs build() {
-            return new AutoscaleSettingsArgs(maxThroughput);
+
+        public Builder maxThroughput(Integer maxThroughput) {
+            return maxThroughput(Output.of(maxThroughput));
+        }
+
+        public AutoscaleSettingsArgs build() {
+            return $;
         }
     }
+
 }

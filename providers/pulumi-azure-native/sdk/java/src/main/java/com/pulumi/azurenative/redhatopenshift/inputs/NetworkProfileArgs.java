@@ -5,9 +5,9 @@ package com.pulumi.azurenative.redhatopenshift.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class NetworkProfileArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="podCidr")
-      private final @Nullable Output<String> podCidr;
+    private @Nullable Output<String> podCidr;
 
-    public Output<String> podCidr() {
-        return this.podCidr == null ? Codegen.empty() : this.podCidr;
+    public Optional<Output<String>> podCidr() {
+        return Optional.ofNullable(this.podCidr);
     }
 
     /**
@@ -35,63 +35,58 @@ public final class NetworkProfileArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="serviceCidr")
-      private final @Nullable Output<String> serviceCidr;
+    private @Nullable Output<String> serviceCidr;
 
-    public Output<String> serviceCidr() {
-        return this.serviceCidr == null ? Codegen.empty() : this.serviceCidr;
+    public Optional<Output<String>> serviceCidr() {
+        return Optional.ofNullable(this.serviceCidr);
     }
 
-    public NetworkProfileArgs(
-        @Nullable Output<String> podCidr,
-        @Nullable Output<String> serviceCidr) {
-        this.podCidr = podCidr;
-        this.serviceCidr = serviceCidr;
-    }
+    private NetworkProfileArgs() {}
 
-    private NetworkProfileArgs() {
-        this.podCidr = Codegen.empty();
-        this.serviceCidr = Codegen.empty();
+    private NetworkProfileArgs(NetworkProfileArgs $) {
+        this.podCidr = $.podCidr;
+        this.serviceCidr = $.serviceCidr;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NetworkProfileArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> podCidr;
-        private @Nullable Output<String> serviceCidr;
+        private NetworkProfileArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new NetworkProfileArgs();
         }
 
         public Builder(NetworkProfileArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.podCidr = defaults.podCidr;
-    	      this.serviceCidr = defaults.serviceCidr;
+            $ = new NetworkProfileArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder podCidr(@Nullable Output<String> podCidr) {
-            this.podCidr = podCidr;
+            $.podCidr = podCidr;
             return this;
         }
-        public Builder podCidr(@Nullable String podCidr) {
-            this.podCidr = Codegen.ofNullable(podCidr);
-            return this;
+
+        public Builder podCidr(String podCidr) {
+            return podCidr(Output.of(podCidr));
         }
+
         public Builder serviceCidr(@Nullable Output<String> serviceCidr) {
-            this.serviceCidr = serviceCidr;
+            $.serviceCidr = serviceCidr;
             return this;
         }
-        public Builder serviceCidr(@Nullable String serviceCidr) {
-            this.serviceCidr = Codegen.ofNullable(serviceCidr);
-            return this;
-        }        public NetworkProfileArgs build() {
-            return new NetworkProfileArgs(podCidr, serviceCidr);
+
+        public Builder serviceCidr(String serviceCidr) {
+            return serviceCidr(Output.of(serviceCidr));
+        }
+
+        public NetworkProfileArgs build() {
+            return $;
         }
     }
+
 }

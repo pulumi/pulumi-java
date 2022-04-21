@@ -14,6 +14,7 @@ import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +27,10 @@ public final class AppServicePlanArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="freeOfferExpirationTime")
-      private final @Nullable Output<String> freeOfferExpirationTime;
+    private @Nullable Output<String> freeOfferExpirationTime;
 
-    public Output<String> freeOfferExpirationTime() {
-        return this.freeOfferExpirationTime == null ? Codegen.empty() : this.freeOfferExpirationTime;
+    public Optional<Output<String>> freeOfferExpirationTime() {
+        return Optional.ofNullable(this.freeOfferExpirationTime);
     }
 
     /**
@@ -37,10 +38,10 @@ public final class AppServicePlanArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="hostingEnvironmentProfile")
-      private final @Nullable Output<HostingEnvironmentProfileArgs> hostingEnvironmentProfile;
+    private @Nullable Output<HostingEnvironmentProfileArgs> hostingEnvironmentProfile;
 
-    public Output<HostingEnvironmentProfileArgs> hostingEnvironmentProfile() {
-        return this.hostingEnvironmentProfile == null ? Codegen.empty() : this.hostingEnvironmentProfile;
+    public Optional<Output<HostingEnvironmentProfileArgs>> hostingEnvironmentProfile() {
+        return Optional.ofNullable(this.hostingEnvironmentProfile);
     }
 
     /**
@@ -48,10 +49,10 @@ public final class AppServicePlanArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="hyperV")
-      private final @Nullable Output<Boolean> hyperV;
+    private @Nullable Output<Boolean> hyperV;
 
-    public Output<Boolean> hyperV() {
-        return this.hyperV == null ? Codegen.empty() : this.hyperV;
+    public Optional<Output<Boolean>> hyperV() {
+        return Optional.ofNullable(this.hyperV);
     }
 
     /**
@@ -59,10 +60,10 @@ public final class AppServicePlanArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="isSpot")
-      private final @Nullable Output<Boolean> isSpot;
+    private @Nullable Output<Boolean> isSpot;
 
-    public Output<Boolean> isSpot() {
-        return this.isSpot == null ? Codegen.empty() : this.isSpot;
+    public Optional<Output<Boolean>> isSpot() {
+        return Optional.ofNullable(this.isSpot);
     }
 
     /**
@@ -70,10 +71,10 @@ public final class AppServicePlanArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="isXenon")
-      private final @Nullable Output<Boolean> isXenon;
+    private @Nullable Output<Boolean> isXenon;
 
-    public Output<Boolean> isXenon() {
-        return this.isXenon == null ? Codegen.empty() : this.isXenon;
+    public Optional<Output<Boolean>> isXenon() {
+        return Optional.ofNullable(this.isXenon);
     }
 
     /**
@@ -81,10 +82,10 @@ public final class AppServicePlanArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="kind")
-      private final @Nullable Output<String> kind;
+    private @Nullable Output<String> kind;
 
-    public Output<String> kind() {
-        return this.kind == null ? Codegen.empty() : this.kind;
+    public Optional<Output<String>> kind() {
+        return Optional.ofNullable(this.kind);
     }
 
     /**
@@ -92,10 +93,10 @@ public final class AppServicePlanArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="kubeEnvironmentProfile")
-      private final @Nullable Output<KubeEnvironmentProfileArgs> kubeEnvironmentProfile;
+    private @Nullable Output<KubeEnvironmentProfileArgs> kubeEnvironmentProfile;
 
-    public Output<KubeEnvironmentProfileArgs> kubeEnvironmentProfile() {
-        return this.kubeEnvironmentProfile == null ? Codegen.empty() : this.kubeEnvironmentProfile;
+    public Optional<Output<KubeEnvironmentProfileArgs>> kubeEnvironmentProfile() {
+        return Optional.ofNullable(this.kubeEnvironmentProfile);
     }
 
     /**
@@ -103,10 +104,10 @@ public final class AppServicePlanArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -114,10 +115,10 @@ public final class AppServicePlanArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="maximumElasticWorkerCount")
-      private final @Nullable Output<Integer> maximumElasticWorkerCount;
+    private @Nullable Output<Integer> maximumElasticWorkerCount;
 
-    public Output<Integer> maximumElasticWorkerCount() {
-        return this.maximumElasticWorkerCount == null ? Codegen.empty() : this.maximumElasticWorkerCount;
+    public Optional<Output<Integer>> maximumElasticWorkerCount() {
+        return Optional.ofNullable(this.maximumElasticWorkerCount);
     }
 
     /**
@@ -125,10 +126,10 @@ public final class AppServicePlanArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -137,10 +138,10 @@ public final class AppServicePlanArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="perSiteScaling")
-      private final @Nullable Output<Boolean> perSiteScaling;
+    private @Nullable Output<Boolean> perSiteScaling;
 
-    public Output<Boolean> perSiteScaling() {
-        return this.perSiteScaling == null ? Codegen.empty() : this.perSiteScaling;
+    public Optional<Output<Boolean>> perSiteScaling() {
+        return Optional.ofNullable(this.perSiteScaling);
     }
 
     /**
@@ -148,10 +149,10 @@ public final class AppServicePlanArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="reserved")
-      private final @Nullable Output<Boolean> reserved;
+    private @Nullable Output<Boolean> reserved;
 
-    public Output<Boolean> reserved() {
-        return this.reserved == null ? Codegen.empty() : this.reserved;
+    public Optional<Output<Boolean>> reserved() {
+        return Optional.ofNullable(this.reserved);
     }
 
     /**
@@ -159,7 +160,7 @@ public final class AppServicePlanArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -170,10 +171,10 @@ public final class AppServicePlanArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="sku")
-      private final @Nullable Output<SkuDescriptionArgs> sku;
+    private @Nullable Output<SkuDescriptionArgs> sku;
 
-    public Output<SkuDescriptionArgs> sku() {
-        return this.sku == null ? Codegen.empty() : this.sku;
+    public Optional<Output<SkuDescriptionArgs>> sku() {
+        return Optional.ofNullable(this.sku);
     }
 
     /**
@@ -181,10 +182,10 @@ public final class AppServicePlanArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="spotExpirationTime")
-      private final @Nullable Output<String> spotExpirationTime;
+    private @Nullable Output<String> spotExpirationTime;
 
-    public Output<String> spotExpirationTime() {
-        return this.spotExpirationTime == null ? Codegen.empty() : this.spotExpirationTime;
+    public Optional<Output<String>> spotExpirationTime() {
+        return Optional.ofNullable(this.spotExpirationTime);
     }
 
     /**
@@ -192,10 +193,10 @@ public final class AppServicePlanArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -203,10 +204,10 @@ public final class AppServicePlanArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="targetWorkerCount")
-      private final @Nullable Output<Integer> targetWorkerCount;
+    private @Nullable Output<Integer> targetWorkerCount;
 
-    public Output<Integer> targetWorkerCount() {
-        return this.targetWorkerCount == null ? Codegen.empty() : this.targetWorkerCount;
+    public Optional<Output<Integer>> targetWorkerCount() {
+        return Optional.ofNullable(this.targetWorkerCount);
     }
 
     /**
@@ -214,10 +215,10 @@ public final class AppServicePlanArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="targetWorkerSizeId")
-      private final @Nullable Output<Integer> targetWorkerSizeId;
+    private @Nullable Output<Integer> targetWorkerSizeId;
 
-    public Output<Integer> targetWorkerSizeId() {
-        return this.targetWorkerSizeId == null ? Codegen.empty() : this.targetWorkerSizeId;
+    public Optional<Output<Integer>> targetWorkerSizeId() {
+        return Optional.ofNullable(this.targetWorkerSizeId);
     }
 
     /**
@@ -225,284 +226,233 @@ public final class AppServicePlanArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="workerTierName")
-      private final @Nullable Output<String> workerTierName;
+    private @Nullable Output<String> workerTierName;
 
-    public Output<String> workerTierName() {
-        return this.workerTierName == null ? Codegen.empty() : this.workerTierName;
+    public Optional<Output<String>> workerTierName() {
+        return Optional.ofNullable(this.workerTierName);
     }
 
-    public AppServicePlanArgs(
-        @Nullable Output<String> freeOfferExpirationTime,
-        @Nullable Output<HostingEnvironmentProfileArgs> hostingEnvironmentProfile,
-        @Nullable Output<Boolean> hyperV,
-        @Nullable Output<Boolean> isSpot,
-        @Nullable Output<Boolean> isXenon,
-        @Nullable Output<String> kind,
-        @Nullable Output<KubeEnvironmentProfileArgs> kubeEnvironmentProfile,
-        @Nullable Output<String> location,
-        @Nullable Output<Integer> maximumElasticWorkerCount,
-        @Nullable Output<String> name,
-        @Nullable Output<Boolean> perSiteScaling,
-        @Nullable Output<Boolean> reserved,
-        Output<String> resourceGroupName,
-        @Nullable Output<SkuDescriptionArgs> sku,
-        @Nullable Output<String> spotExpirationTime,
-        @Nullable Output<Map<String,String>> tags,
-        @Nullable Output<Integer> targetWorkerCount,
-        @Nullable Output<Integer> targetWorkerSizeId,
-        @Nullable Output<String> workerTierName) {
-        this.freeOfferExpirationTime = freeOfferExpirationTime;
-        this.hostingEnvironmentProfile = hostingEnvironmentProfile;
-        this.hyperV = Codegen.booleanProp("hyperV").output().arg(hyperV).def(false).getNullable();
-        this.isSpot = isSpot;
-        this.isXenon = Codegen.booleanProp("isXenon").output().arg(isXenon).def(false).getNullable();
-        this.kind = kind;
-        this.kubeEnvironmentProfile = kubeEnvironmentProfile;
-        this.location = location;
-        this.maximumElasticWorkerCount = maximumElasticWorkerCount;
-        this.name = name;
-        this.perSiteScaling = Codegen.booleanProp("perSiteScaling").output().arg(perSiteScaling).def(false).getNullable();
-        this.reserved = Codegen.booleanProp("reserved").output().arg(reserved).def(false).getNullable();
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.sku = sku;
-        this.spotExpirationTime = spotExpirationTime;
-        this.tags = tags;
-        this.targetWorkerCount = targetWorkerCount;
-        this.targetWorkerSizeId = targetWorkerSizeId;
-        this.workerTierName = workerTierName;
-    }
+    private AppServicePlanArgs() {}
 
-    private AppServicePlanArgs() {
-        this.freeOfferExpirationTime = Codegen.empty();
-        this.hostingEnvironmentProfile = Codegen.empty();
-        this.hyperV = Codegen.empty();
-        this.isSpot = Codegen.empty();
-        this.isXenon = Codegen.empty();
-        this.kind = Codegen.empty();
-        this.kubeEnvironmentProfile = Codegen.empty();
-        this.location = Codegen.empty();
-        this.maximumElasticWorkerCount = Codegen.empty();
-        this.name = Codegen.empty();
-        this.perSiteScaling = Codegen.empty();
-        this.reserved = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.sku = Codegen.empty();
-        this.spotExpirationTime = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.targetWorkerCount = Codegen.empty();
-        this.targetWorkerSizeId = Codegen.empty();
-        this.workerTierName = Codegen.empty();
+    private AppServicePlanArgs(AppServicePlanArgs $) {
+        this.freeOfferExpirationTime = $.freeOfferExpirationTime;
+        this.hostingEnvironmentProfile = $.hostingEnvironmentProfile;
+        this.hyperV = $.hyperV;
+        this.isSpot = $.isSpot;
+        this.isXenon = $.isXenon;
+        this.kind = $.kind;
+        this.kubeEnvironmentProfile = $.kubeEnvironmentProfile;
+        this.location = $.location;
+        this.maximumElasticWorkerCount = $.maximumElasticWorkerCount;
+        this.name = $.name;
+        this.perSiteScaling = $.perSiteScaling;
+        this.reserved = $.reserved;
+        this.resourceGroupName = $.resourceGroupName;
+        this.sku = $.sku;
+        this.spotExpirationTime = $.spotExpirationTime;
+        this.tags = $.tags;
+        this.targetWorkerCount = $.targetWorkerCount;
+        this.targetWorkerSizeId = $.targetWorkerSizeId;
+        this.workerTierName = $.workerTierName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AppServicePlanArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> freeOfferExpirationTime;
-        private @Nullable Output<HostingEnvironmentProfileArgs> hostingEnvironmentProfile;
-        private @Nullable Output<Boolean> hyperV;
-        private @Nullable Output<Boolean> isSpot;
-        private @Nullable Output<Boolean> isXenon;
-        private @Nullable Output<String> kind;
-        private @Nullable Output<KubeEnvironmentProfileArgs> kubeEnvironmentProfile;
-        private @Nullable Output<String> location;
-        private @Nullable Output<Integer> maximumElasticWorkerCount;
-        private @Nullable Output<String> name;
-        private @Nullable Output<Boolean> perSiteScaling;
-        private @Nullable Output<Boolean> reserved;
-        private Output<String> resourceGroupName;
-        private @Nullable Output<SkuDescriptionArgs> sku;
-        private @Nullable Output<String> spotExpirationTime;
-        private @Nullable Output<Map<String,String>> tags;
-        private @Nullable Output<Integer> targetWorkerCount;
-        private @Nullable Output<Integer> targetWorkerSizeId;
-        private @Nullable Output<String> workerTierName;
+        private AppServicePlanArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AppServicePlanArgs();
         }
 
         public Builder(AppServicePlanArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.freeOfferExpirationTime = defaults.freeOfferExpirationTime;
-    	      this.hostingEnvironmentProfile = defaults.hostingEnvironmentProfile;
-    	      this.hyperV = defaults.hyperV;
-    	      this.isSpot = defaults.isSpot;
-    	      this.isXenon = defaults.isXenon;
-    	      this.kind = defaults.kind;
-    	      this.kubeEnvironmentProfile = defaults.kubeEnvironmentProfile;
-    	      this.location = defaults.location;
-    	      this.maximumElasticWorkerCount = defaults.maximumElasticWorkerCount;
-    	      this.name = defaults.name;
-    	      this.perSiteScaling = defaults.perSiteScaling;
-    	      this.reserved = defaults.reserved;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.sku = defaults.sku;
-    	      this.spotExpirationTime = defaults.spotExpirationTime;
-    	      this.tags = defaults.tags;
-    	      this.targetWorkerCount = defaults.targetWorkerCount;
-    	      this.targetWorkerSizeId = defaults.targetWorkerSizeId;
-    	      this.workerTierName = defaults.workerTierName;
+            $ = new AppServicePlanArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder freeOfferExpirationTime(@Nullable Output<String> freeOfferExpirationTime) {
-            this.freeOfferExpirationTime = freeOfferExpirationTime;
+            $.freeOfferExpirationTime = freeOfferExpirationTime;
             return this;
         }
-        public Builder freeOfferExpirationTime(@Nullable String freeOfferExpirationTime) {
-            this.freeOfferExpirationTime = Codegen.ofNullable(freeOfferExpirationTime);
-            return this;
+
+        public Builder freeOfferExpirationTime(String freeOfferExpirationTime) {
+            return freeOfferExpirationTime(Output.of(freeOfferExpirationTime));
         }
+
         public Builder hostingEnvironmentProfile(@Nullable Output<HostingEnvironmentProfileArgs> hostingEnvironmentProfile) {
-            this.hostingEnvironmentProfile = hostingEnvironmentProfile;
+            $.hostingEnvironmentProfile = hostingEnvironmentProfile;
             return this;
         }
-        public Builder hostingEnvironmentProfile(@Nullable HostingEnvironmentProfileArgs hostingEnvironmentProfile) {
-            this.hostingEnvironmentProfile = Codegen.ofNullable(hostingEnvironmentProfile);
-            return this;
+
+        public Builder hostingEnvironmentProfile(HostingEnvironmentProfileArgs hostingEnvironmentProfile) {
+            return hostingEnvironmentProfile(Output.of(hostingEnvironmentProfile));
         }
+
         public Builder hyperV(@Nullable Output<Boolean> hyperV) {
-            this.hyperV = hyperV;
+            $.hyperV = hyperV;
             return this;
         }
-        public Builder hyperV(@Nullable Boolean hyperV) {
-            this.hyperV = Codegen.ofNullable(hyperV);
-            return this;
+
+        public Builder hyperV(Boolean hyperV) {
+            return hyperV(Output.of(hyperV));
         }
+
         public Builder isSpot(@Nullable Output<Boolean> isSpot) {
-            this.isSpot = isSpot;
+            $.isSpot = isSpot;
             return this;
         }
-        public Builder isSpot(@Nullable Boolean isSpot) {
-            this.isSpot = Codegen.ofNullable(isSpot);
-            return this;
+
+        public Builder isSpot(Boolean isSpot) {
+            return isSpot(Output.of(isSpot));
         }
+
         public Builder isXenon(@Nullable Output<Boolean> isXenon) {
-            this.isXenon = isXenon;
+            $.isXenon = isXenon;
             return this;
         }
-        public Builder isXenon(@Nullable Boolean isXenon) {
-            this.isXenon = Codegen.ofNullable(isXenon);
-            return this;
+
+        public Builder isXenon(Boolean isXenon) {
+            return isXenon(Output.of(isXenon));
         }
+
         public Builder kind(@Nullable Output<String> kind) {
-            this.kind = kind;
+            $.kind = kind;
             return this;
         }
-        public Builder kind(@Nullable String kind) {
-            this.kind = Codegen.ofNullable(kind);
-            return this;
+
+        public Builder kind(String kind) {
+            return kind(Output.of(kind));
         }
+
         public Builder kubeEnvironmentProfile(@Nullable Output<KubeEnvironmentProfileArgs> kubeEnvironmentProfile) {
-            this.kubeEnvironmentProfile = kubeEnvironmentProfile;
+            $.kubeEnvironmentProfile = kubeEnvironmentProfile;
             return this;
         }
-        public Builder kubeEnvironmentProfile(@Nullable KubeEnvironmentProfileArgs kubeEnvironmentProfile) {
-            this.kubeEnvironmentProfile = Codegen.ofNullable(kubeEnvironmentProfile);
-            return this;
+
+        public Builder kubeEnvironmentProfile(KubeEnvironmentProfileArgs kubeEnvironmentProfile) {
+            return kubeEnvironmentProfile(Output.of(kubeEnvironmentProfile));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder maximumElasticWorkerCount(@Nullable Output<Integer> maximumElasticWorkerCount) {
-            this.maximumElasticWorkerCount = maximumElasticWorkerCount;
+            $.maximumElasticWorkerCount = maximumElasticWorkerCount;
             return this;
         }
-        public Builder maximumElasticWorkerCount(@Nullable Integer maximumElasticWorkerCount) {
-            this.maximumElasticWorkerCount = Codegen.ofNullable(maximumElasticWorkerCount);
-            return this;
+
+        public Builder maximumElasticWorkerCount(Integer maximumElasticWorkerCount) {
+            return maximumElasticWorkerCount(Output.of(maximumElasticWorkerCount));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder perSiteScaling(@Nullable Output<Boolean> perSiteScaling) {
-            this.perSiteScaling = perSiteScaling;
+            $.perSiteScaling = perSiteScaling;
             return this;
         }
-        public Builder perSiteScaling(@Nullable Boolean perSiteScaling) {
-            this.perSiteScaling = Codegen.ofNullable(perSiteScaling);
-            return this;
+
+        public Builder perSiteScaling(Boolean perSiteScaling) {
+            return perSiteScaling(Output.of(perSiteScaling));
         }
+
         public Builder reserved(@Nullable Output<Boolean> reserved) {
-            this.reserved = reserved;
+            $.reserved = reserved;
             return this;
         }
-        public Builder reserved(@Nullable Boolean reserved) {
-            this.reserved = Codegen.ofNullable(reserved);
-            return this;
+
+        public Builder reserved(Boolean reserved) {
+            return reserved(Output.of(reserved));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder sku(@Nullable Output<SkuDescriptionArgs> sku) {
-            this.sku = sku;
+            $.sku = sku;
             return this;
         }
-        public Builder sku(@Nullable SkuDescriptionArgs sku) {
-            this.sku = Codegen.ofNullable(sku);
-            return this;
+
+        public Builder sku(SkuDescriptionArgs sku) {
+            return sku(Output.of(sku));
         }
+
         public Builder spotExpirationTime(@Nullable Output<String> spotExpirationTime) {
-            this.spotExpirationTime = spotExpirationTime;
+            $.spotExpirationTime = spotExpirationTime;
             return this;
         }
-        public Builder spotExpirationTime(@Nullable String spotExpirationTime) {
-            this.spotExpirationTime = Codegen.ofNullable(spotExpirationTime);
-            return this;
+
+        public Builder spotExpirationTime(String spotExpirationTime) {
+            return spotExpirationTime(Output.of(spotExpirationTime));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder targetWorkerCount(@Nullable Output<Integer> targetWorkerCount) {
-            this.targetWorkerCount = targetWorkerCount;
+            $.targetWorkerCount = targetWorkerCount;
             return this;
         }
-        public Builder targetWorkerCount(@Nullable Integer targetWorkerCount) {
-            this.targetWorkerCount = Codegen.ofNullable(targetWorkerCount);
-            return this;
+
+        public Builder targetWorkerCount(Integer targetWorkerCount) {
+            return targetWorkerCount(Output.of(targetWorkerCount));
         }
+
         public Builder targetWorkerSizeId(@Nullable Output<Integer> targetWorkerSizeId) {
-            this.targetWorkerSizeId = targetWorkerSizeId;
+            $.targetWorkerSizeId = targetWorkerSizeId;
             return this;
         }
-        public Builder targetWorkerSizeId(@Nullable Integer targetWorkerSizeId) {
-            this.targetWorkerSizeId = Codegen.ofNullable(targetWorkerSizeId);
-            return this;
+
+        public Builder targetWorkerSizeId(Integer targetWorkerSizeId) {
+            return targetWorkerSizeId(Output.of(targetWorkerSizeId));
         }
+
         public Builder workerTierName(@Nullable Output<String> workerTierName) {
-            this.workerTierName = workerTierName;
+            $.workerTierName = workerTierName;
             return this;
         }
-        public Builder workerTierName(@Nullable String workerTierName) {
-            this.workerTierName = Codegen.ofNullable(workerTierName);
-            return this;
-        }        public AppServicePlanArgs build() {
-            return new AppServicePlanArgs(freeOfferExpirationTime, hostingEnvironmentProfile, hyperV, isSpot, isXenon, kind, kubeEnvironmentProfile, location, maximumElasticWorkerCount, name, perSiteScaling, reserved, resourceGroupName, sku, spotExpirationTime, tags, targetWorkerCount, targetWorkerSizeId, workerTierName);
+
+        public Builder workerTierName(String workerTierName) {
+            return workerTierName(Output.of(workerTierName));
+        }
+
+        public AppServicePlanArgs build() {
+            $.hyperV = Codegen.booleanProp("hyperV").output().arg($.hyperV).def(false).getNullable();
+            $.isXenon = Codegen.booleanProp("isXenon").output().arg($.isXenon).def(false).getNullable();
+            $.perSiteScaling = Codegen.booleanProp("perSiteScaling").output().arg($.perSiteScaling).def(false).getNullable();
+            $.reserved = Codegen.booleanProp("reserved").output().arg($.reserved).def(false).getNullable();
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

@@ -6,7 +6,6 @@ package com.pulumi.aws.networkfirewall.inputs;
 import com.pulumi.aws.networkfirewall.inputs.RuleGroupRuleGroupRuleVariablesPortSetPortSetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +19,7 @@ public final class RuleGroupRuleGroupRuleVariablesPortSetArgs extends com.pulumi
      * 
      */
     @Import(name="key", required=true)
-      private final Output<String> key;
+    private Output<String> key;
 
     public Output<String> key() {
         return this.key;
@@ -31,63 +30,60 @@ public final class RuleGroupRuleGroupRuleVariablesPortSetArgs extends com.pulumi
      * 
      */
     @Import(name="portSet", required=true)
-      private final Output<RuleGroupRuleGroupRuleVariablesPortSetPortSetArgs> portSet;
+    private Output<RuleGroupRuleGroupRuleVariablesPortSetPortSetArgs> portSet;
 
     public Output<RuleGroupRuleGroupRuleVariablesPortSetPortSetArgs> portSet() {
         return this.portSet;
     }
 
-    public RuleGroupRuleGroupRuleVariablesPortSetArgs(
-        Output<String> key,
-        Output<RuleGroupRuleGroupRuleVariablesPortSetPortSetArgs> portSet) {
-        this.key = Objects.requireNonNull(key, "expected parameter 'key' to be non-null");
-        this.portSet = Objects.requireNonNull(portSet, "expected parameter 'portSet' to be non-null");
-    }
+    private RuleGroupRuleGroupRuleVariablesPortSetArgs() {}
 
-    private RuleGroupRuleGroupRuleVariablesPortSetArgs() {
-        this.key = Codegen.empty();
-        this.portSet = Codegen.empty();
+    private RuleGroupRuleGroupRuleVariablesPortSetArgs(RuleGroupRuleGroupRuleVariablesPortSetArgs $) {
+        this.key = $.key;
+        this.portSet = $.portSet;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RuleGroupRuleGroupRuleVariablesPortSetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> key;
-        private Output<RuleGroupRuleGroupRuleVariablesPortSetPortSetArgs> portSet;
+        private RuleGroupRuleGroupRuleVariablesPortSetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RuleGroupRuleGroupRuleVariablesPortSetArgs();
         }
 
         public Builder(RuleGroupRuleGroupRuleVariablesPortSetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.key = defaults.key;
-    	      this.portSet = defaults.portSet;
+            $ = new RuleGroupRuleGroupRuleVariablesPortSetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder key(Output<String> key) {
-            this.key = Objects.requireNonNull(key);
+            $.key = key;
             return this;
         }
+
         public Builder key(String key) {
-            this.key = Output.of(Objects.requireNonNull(key));
-            return this;
+            return key(Output.of(key));
         }
+
         public Builder portSet(Output<RuleGroupRuleGroupRuleVariablesPortSetPortSetArgs> portSet) {
-            this.portSet = Objects.requireNonNull(portSet);
+            $.portSet = portSet;
             return this;
         }
+
         public Builder portSet(RuleGroupRuleGroupRuleVariablesPortSetPortSetArgs portSet) {
-            this.portSet = Output.of(Objects.requireNonNull(portSet));
-            return this;
-        }        public RuleGroupRuleGroupRuleVariablesPortSetArgs build() {
-            return new RuleGroupRuleGroupRuleVariablesPortSetArgs(key, portSet);
+            return portSet(Output.of(portSet));
+        }
+
+        public RuleGroupRuleGroupRuleVariablesPortSetArgs build() {
+            $.key = Objects.requireNonNull($.key, "expected parameter 'key' to be non-null");
+            $.portSet = Objects.requireNonNull($.portSet, "expected parameter 'portSet' to be non-null");
+            return $;
         }
     }
+
 }

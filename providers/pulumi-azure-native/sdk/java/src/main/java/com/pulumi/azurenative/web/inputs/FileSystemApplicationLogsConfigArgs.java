@@ -8,6 +8,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +25,49 @@ public final class FileSystemApplicationLogsConfigArgs extends com.pulumi.resour
      * 
      */
     @Import(name="level")
-      private final @Nullable Output<LogLevel> level;
+    private @Nullable Output<LogLevel> level;
 
-    public Output<LogLevel> level() {
-        return this.level == null ? Codegen.empty() : this.level;
+    public Optional<Output<LogLevel>> level() {
+        return Optional.ofNullable(this.level);
     }
 
-    public FileSystemApplicationLogsConfigArgs(@Nullable Output<LogLevel> level) {
-        this.level = Codegen.objectProp("level", LogLevel.class).output().arg(level).def(LogLevel.Off).getNullable();
-    }
+    private FileSystemApplicationLogsConfigArgs() {}
 
-    private FileSystemApplicationLogsConfigArgs() {
-        this.level = Codegen.empty();
+    private FileSystemApplicationLogsConfigArgs(FileSystemApplicationLogsConfigArgs $) {
+        this.level = $.level;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FileSystemApplicationLogsConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<LogLevel> level;
+        private FileSystemApplicationLogsConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new FileSystemApplicationLogsConfigArgs();
         }
 
         public Builder(FileSystemApplicationLogsConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.level = defaults.level;
+            $ = new FileSystemApplicationLogsConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder level(@Nullable Output<LogLevel> level) {
-            this.level = level;
+            $.level = level;
             return this;
         }
-        public Builder level(@Nullable LogLevel level) {
-            this.level = Codegen.ofNullable(level);
-            return this;
-        }        public FileSystemApplicationLogsConfigArgs build() {
-            return new FileSystemApplicationLogsConfigArgs(level);
+
+        public Builder level(LogLevel level) {
+            return level(Output.of(level));
+        }
+
+        public FileSystemApplicationLogsConfigArgs build() {
+            $.level = Codegen.objectProp("level", LogLevel.class).output().arg($.level).def(LogLevel.Off).getNullable();
+            return $;
         }
     }
+
 }

@@ -5,7 +5,6 @@ package com.pulumi.aws.elasticsearch;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,7 +18,7 @@ public final class DomainPolicyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="accessPolicies", required=true)
-      private final Output<String> accessPolicies;
+    private Output<String> accessPolicies;
 
     public Output<String> accessPolicies() {
         return this.accessPolicies;
@@ -30,59 +29,60 @@ public final class DomainPolicyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="domainName", required=true)
-      private final Output<String> domainName;
+    private Output<String> domainName;
 
     public Output<String> domainName() {
         return this.domainName;
     }
 
-    public DomainPolicyArgs(
-        Output<String> accessPolicies,
-        Output<String> domainName) {
-        this.accessPolicies = Objects.requireNonNull(accessPolicies, "expected parameter 'accessPolicies' to be non-null");
-        this.domainName = Objects.requireNonNull(domainName, "expected parameter 'domainName' to be non-null");
-    }
+    private DomainPolicyArgs() {}
 
-    private DomainPolicyArgs() {
-        this.accessPolicies = Codegen.empty();
-        this.domainName = Codegen.empty();
+    private DomainPolicyArgs(DomainPolicyArgs $) {
+        this.accessPolicies = $.accessPolicies;
+        this.domainName = $.domainName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DomainPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> accessPolicies;
-        private Output<String> domainName;
+        private DomainPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DomainPolicyArgs();
         }
 
         public Builder(DomainPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accessPolicies = defaults.accessPolicies;
-    	      this.domainName = defaults.domainName;
+            $ = new DomainPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder accessPolicies(Output<String> accessPolicies) {
-            this.accessPolicies = Objects.requireNonNull(accessPolicies);
+            $.accessPolicies = accessPolicies;
             return this;
         }
+
+        public Builder accessPolicies(String accessPolicies) {
+            return accessPolicies(Output.of(accessPolicies));
+        }
+
         public Builder domainName(Output<String> domainName) {
-            this.domainName = Objects.requireNonNull(domainName);
+            $.domainName = domainName;
             return this;
         }
+
         public Builder domainName(String domainName) {
-            this.domainName = Output.of(Objects.requireNonNull(domainName));
-            return this;
-        }        public DomainPolicyArgs build() {
-            return new DomainPolicyArgs(accessPolicies, domainName);
+            return domainName(Output.of(domainName));
+        }
+
+        public DomainPolicyArgs build() {
+            $.accessPolicies = Objects.requireNonNull($.accessPolicies, "expected parameter 'accessPolicies' to be non-null");
+            $.domainName = Objects.requireNonNull($.domainName, "expected parameter 'domainName' to be non-null");
+            return $;
         }
     }
+
 }

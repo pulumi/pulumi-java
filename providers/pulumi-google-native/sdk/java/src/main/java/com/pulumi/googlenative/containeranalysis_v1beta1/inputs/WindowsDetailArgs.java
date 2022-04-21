@@ -5,11 +5,11 @@ package com.pulumi.googlenative.containeranalysis_v1beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.containeranalysis_v1beta1.inputs.KnowledgeBaseArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,7 +22,7 @@ public final class WindowsDetailArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="cpeUri", required=true)
-      private final Output<String> cpeUri;
+    private Output<String> cpeUri;
 
     public Output<String> cpeUri() {
         return this.cpeUri;
@@ -33,10 +33,10 @@ public final class WindowsDetailArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -44,7 +44,7 @@ public final class WindowsDetailArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="fixingKbs", required=true)
-      private final Output<List<KnowledgeBaseArgs>> fixingKbs;
+    private Output<List<KnowledgeBaseArgs>> fixingKbs;
 
     public Output<List<KnowledgeBaseArgs>> fixingKbs() {
         return this.fixingKbs;
@@ -55,92 +55,85 @@ public final class WindowsDetailArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name", required=true)
-      private final Output<String> name;
+    private Output<String> name;
 
     public Output<String> name() {
         return this.name;
     }
 
-    public WindowsDetailArgs(
-        Output<String> cpeUri,
-        @Nullable Output<String> description,
-        Output<List<KnowledgeBaseArgs>> fixingKbs,
-        Output<String> name) {
-        this.cpeUri = Objects.requireNonNull(cpeUri, "expected parameter 'cpeUri' to be non-null");
-        this.description = description;
-        this.fixingKbs = Objects.requireNonNull(fixingKbs, "expected parameter 'fixingKbs' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-    }
+    private WindowsDetailArgs() {}
 
-    private WindowsDetailArgs() {
-        this.cpeUri = Codegen.empty();
-        this.description = Codegen.empty();
-        this.fixingKbs = Codegen.empty();
-        this.name = Codegen.empty();
+    private WindowsDetailArgs(WindowsDetailArgs $) {
+        this.cpeUri = $.cpeUri;
+        this.description = $.description;
+        this.fixingKbs = $.fixingKbs;
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WindowsDetailArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> cpeUri;
-        private @Nullable Output<String> description;
-        private Output<List<KnowledgeBaseArgs>> fixingKbs;
-        private Output<String> name;
+        private WindowsDetailArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new WindowsDetailArgs();
         }
 
         public Builder(WindowsDetailArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cpeUri = defaults.cpeUri;
-    	      this.description = defaults.description;
-    	      this.fixingKbs = defaults.fixingKbs;
-    	      this.name = defaults.name;
+            $ = new WindowsDetailArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder cpeUri(Output<String> cpeUri) {
-            this.cpeUri = Objects.requireNonNull(cpeUri);
+            $.cpeUri = cpeUri;
             return this;
         }
+
         public Builder cpeUri(String cpeUri) {
-            this.cpeUri = Output.of(Objects.requireNonNull(cpeUri));
-            return this;
+            return cpeUri(Output.of(cpeUri));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder fixingKbs(Output<List<KnowledgeBaseArgs>> fixingKbs) {
-            this.fixingKbs = Objects.requireNonNull(fixingKbs);
+            $.fixingKbs = fixingKbs;
             return this;
         }
+
         public Builder fixingKbs(List<KnowledgeBaseArgs> fixingKbs) {
-            this.fixingKbs = Output.of(Objects.requireNonNull(fixingKbs));
-            return this;
+            return fixingKbs(Output.of(fixingKbs));
         }
+
         public Builder fixingKbs(KnowledgeBaseArgs... fixingKbs) {
             return fixingKbs(List.of(fixingKbs));
         }
+
         public Builder name(Output<String> name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Output.of(Objects.requireNonNull(name));
-            return this;
-        }        public WindowsDetailArgs build() {
-            return new WindowsDetailArgs(cpeUri, description, fixingKbs, name);
+            return name(Output.of(name));
+        }
+
+        public WindowsDetailArgs build() {
+            $.cpeUri = Objects.requireNonNull($.cpeUri, "expected parameter 'cpeUri' to be non-null");
+            $.fixingKbs = Objects.requireNonNull($.fixingKbs, "expected parameter 'fixingKbs' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            return $;
         }
     }
+
 }

@@ -6,9 +6,9 @@ package com.pulumi.awsnative.ec2.inputs;
 import com.pulumi.awsnative.ec2.enums.SpotFleetSpotPlacementTenancy;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -17,90 +17,82 @@ public final class SpotFleetSpotPlacementArgs extends com.pulumi.resources.Resou
     public static final SpotFleetSpotPlacementArgs Empty = new SpotFleetSpotPlacementArgs();
 
     @Import(name="availabilityZone")
-      private final @Nullable Output<String> availabilityZone;
+    private @Nullable Output<String> availabilityZone;
 
-    public Output<String> availabilityZone() {
-        return this.availabilityZone == null ? Codegen.empty() : this.availabilityZone;
+    public Optional<Output<String>> availabilityZone() {
+        return Optional.ofNullable(this.availabilityZone);
     }
 
     @Import(name="groupName")
-      private final @Nullable Output<String> groupName;
+    private @Nullable Output<String> groupName;
 
-    public Output<String> groupName() {
-        return this.groupName == null ? Codegen.empty() : this.groupName;
+    public Optional<Output<String>> groupName() {
+        return Optional.ofNullable(this.groupName);
     }
 
     @Import(name="tenancy")
-      private final @Nullable Output<SpotFleetSpotPlacementTenancy> tenancy;
+    private @Nullable Output<SpotFleetSpotPlacementTenancy> tenancy;
 
-    public Output<SpotFleetSpotPlacementTenancy> tenancy() {
-        return this.tenancy == null ? Codegen.empty() : this.tenancy;
+    public Optional<Output<SpotFleetSpotPlacementTenancy>> tenancy() {
+        return Optional.ofNullable(this.tenancy);
     }
 
-    public SpotFleetSpotPlacementArgs(
-        @Nullable Output<String> availabilityZone,
-        @Nullable Output<String> groupName,
-        @Nullable Output<SpotFleetSpotPlacementTenancy> tenancy) {
-        this.availabilityZone = availabilityZone;
-        this.groupName = groupName;
-        this.tenancy = tenancy;
-    }
+    private SpotFleetSpotPlacementArgs() {}
 
-    private SpotFleetSpotPlacementArgs() {
-        this.availabilityZone = Codegen.empty();
-        this.groupName = Codegen.empty();
-        this.tenancy = Codegen.empty();
+    private SpotFleetSpotPlacementArgs(SpotFleetSpotPlacementArgs $) {
+        this.availabilityZone = $.availabilityZone;
+        this.groupName = $.groupName;
+        this.tenancy = $.tenancy;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SpotFleetSpotPlacementArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> availabilityZone;
-        private @Nullable Output<String> groupName;
-        private @Nullable Output<SpotFleetSpotPlacementTenancy> tenancy;
+        private SpotFleetSpotPlacementArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SpotFleetSpotPlacementArgs();
         }
 
         public Builder(SpotFleetSpotPlacementArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.availabilityZone = defaults.availabilityZone;
-    	      this.groupName = defaults.groupName;
-    	      this.tenancy = defaults.tenancy;
+            $ = new SpotFleetSpotPlacementArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder availabilityZone(@Nullable Output<String> availabilityZone) {
-            this.availabilityZone = availabilityZone;
+            $.availabilityZone = availabilityZone;
             return this;
         }
-        public Builder availabilityZone(@Nullable String availabilityZone) {
-            this.availabilityZone = Codegen.ofNullable(availabilityZone);
-            return this;
+
+        public Builder availabilityZone(String availabilityZone) {
+            return availabilityZone(Output.of(availabilityZone));
         }
+
         public Builder groupName(@Nullable Output<String> groupName) {
-            this.groupName = groupName;
+            $.groupName = groupName;
             return this;
         }
-        public Builder groupName(@Nullable String groupName) {
-            this.groupName = Codegen.ofNullable(groupName);
-            return this;
+
+        public Builder groupName(String groupName) {
+            return groupName(Output.of(groupName));
         }
+
         public Builder tenancy(@Nullable Output<SpotFleetSpotPlacementTenancy> tenancy) {
-            this.tenancy = tenancy;
+            $.tenancy = tenancy;
             return this;
         }
-        public Builder tenancy(@Nullable SpotFleetSpotPlacementTenancy tenancy) {
-            this.tenancy = Codegen.ofNullable(tenancy);
-            return this;
-        }        public SpotFleetSpotPlacementArgs build() {
-            return new SpotFleetSpotPlacementArgs(availabilityZone, groupName, tenancy);
+
+        public Builder tenancy(SpotFleetSpotPlacementTenancy tenancy) {
+            return tenancy(Output.of(tenancy));
+        }
+
+        public SpotFleetSpotPlacementArgs build() {
+            return $;
         }
     }
+
 }

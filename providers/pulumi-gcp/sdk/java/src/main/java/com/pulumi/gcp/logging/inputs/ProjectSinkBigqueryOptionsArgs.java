@@ -5,7 +5,6 @@ package com.pulumi.gcp.logging.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.Objects;
 
@@ -22,49 +21,49 @@ public final class ProjectSinkBigqueryOptionsArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="usePartitionedTables", required=true)
-      private final Output<Boolean> usePartitionedTables;
+    private Output<Boolean> usePartitionedTables;
 
     public Output<Boolean> usePartitionedTables() {
         return this.usePartitionedTables;
     }
 
-    public ProjectSinkBigqueryOptionsArgs(Output<Boolean> usePartitionedTables) {
-        this.usePartitionedTables = Objects.requireNonNull(usePartitionedTables, "expected parameter 'usePartitionedTables' to be non-null");
-    }
+    private ProjectSinkBigqueryOptionsArgs() {}
 
-    private ProjectSinkBigqueryOptionsArgs() {
-        this.usePartitionedTables = Codegen.empty();
+    private ProjectSinkBigqueryOptionsArgs(ProjectSinkBigqueryOptionsArgs $) {
+        this.usePartitionedTables = $.usePartitionedTables;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ProjectSinkBigqueryOptionsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Boolean> usePartitionedTables;
+        private ProjectSinkBigqueryOptionsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ProjectSinkBigqueryOptionsArgs();
         }
 
         public Builder(ProjectSinkBigqueryOptionsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.usePartitionedTables = defaults.usePartitionedTables;
+            $ = new ProjectSinkBigqueryOptionsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder usePartitionedTables(Output<Boolean> usePartitionedTables) {
-            this.usePartitionedTables = Objects.requireNonNull(usePartitionedTables);
+            $.usePartitionedTables = usePartitionedTables;
             return this;
         }
+
         public Builder usePartitionedTables(Boolean usePartitionedTables) {
-            this.usePartitionedTables = Output.of(Objects.requireNonNull(usePartitionedTables));
-            return this;
-        }        public ProjectSinkBigqueryOptionsArgs build() {
-            return new ProjectSinkBigqueryOptionsArgs(usePartitionedTables);
+            return usePartitionedTables(Output.of(usePartitionedTables));
+        }
+
+        public ProjectSinkBigqueryOptionsArgs build() {
+            $.usePartitionedTables = Objects.requireNonNull($.usePartitionedTables, "expected parameter 'usePartitionedTables' to be non-null");
+            return $;
         }
     }
+
 }

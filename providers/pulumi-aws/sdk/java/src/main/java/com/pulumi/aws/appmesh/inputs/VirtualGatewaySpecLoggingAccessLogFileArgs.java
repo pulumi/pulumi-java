@@ -5,7 +5,6 @@ package com.pulumi.aws.appmesh.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,49 +18,49 @@ public final class VirtualGatewaySpecLoggingAccessLogFileArgs extends com.pulumi
      * 
      */
     @Import(name="path", required=true)
-      private final Output<String> path;
+    private Output<String> path;
 
     public Output<String> path() {
         return this.path;
     }
 
-    public VirtualGatewaySpecLoggingAccessLogFileArgs(Output<String> path) {
-        this.path = Objects.requireNonNull(path, "expected parameter 'path' to be non-null");
-    }
+    private VirtualGatewaySpecLoggingAccessLogFileArgs() {}
 
-    private VirtualGatewaySpecLoggingAccessLogFileArgs() {
-        this.path = Codegen.empty();
+    private VirtualGatewaySpecLoggingAccessLogFileArgs(VirtualGatewaySpecLoggingAccessLogFileArgs $) {
+        this.path = $.path;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VirtualGatewaySpecLoggingAccessLogFileArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> path;
+        private VirtualGatewaySpecLoggingAccessLogFileArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new VirtualGatewaySpecLoggingAccessLogFileArgs();
         }
 
         public Builder(VirtualGatewaySpecLoggingAccessLogFileArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.path = defaults.path;
+            $ = new VirtualGatewaySpecLoggingAccessLogFileArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder path(Output<String> path) {
-            this.path = Objects.requireNonNull(path);
+            $.path = path;
             return this;
         }
+
         public Builder path(String path) {
-            this.path = Output.of(Objects.requireNonNull(path));
-            return this;
-        }        public VirtualGatewaySpecLoggingAccessLogFileArgs build() {
-            return new VirtualGatewaySpecLoggingAccessLogFileArgs(path);
+            return path(Output.of(path));
+        }
+
+        public VirtualGatewaySpecLoggingAccessLogFileArgs build() {
+            $.path = Objects.requireNonNull($.path, "expected parameter 'path' to be non-null");
+            return $;
         }
     }
+
 }

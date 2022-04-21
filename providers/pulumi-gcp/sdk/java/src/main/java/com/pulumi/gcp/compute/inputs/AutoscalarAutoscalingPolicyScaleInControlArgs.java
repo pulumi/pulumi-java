@@ -5,10 +5,10 @@ package com.pulumi.gcp.compute.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.compute.inputs.AutoscalarAutoscalingPolicyScaleInControlMaxScaledInReplicasArgs;
 import java.lang.Integer;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class AutoscalarAutoscalingPolicyScaleInControlArgs extends com.pul
      * 
      */
     @Import(name="maxScaledInReplicas")
-      private final @Nullable Output<AutoscalarAutoscalingPolicyScaleInControlMaxScaledInReplicasArgs> maxScaledInReplicas;
+    private @Nullable Output<AutoscalarAutoscalingPolicyScaleInControlMaxScaledInReplicasArgs> maxScaledInReplicas;
 
-    public Output<AutoscalarAutoscalingPolicyScaleInControlMaxScaledInReplicasArgs> maxScaledInReplicas() {
-        return this.maxScaledInReplicas == null ? Codegen.empty() : this.maxScaledInReplicas;
+    public Optional<Output<AutoscalarAutoscalingPolicyScaleInControlMaxScaledInReplicasArgs>> maxScaledInReplicas() {
+        return Optional.ofNullable(this.maxScaledInReplicas);
     }
 
     /**
@@ -34,63 +34,58 @@ public final class AutoscalarAutoscalingPolicyScaleInControlArgs extends com.pul
      * 
      */
     @Import(name="timeWindowSec")
-      private final @Nullable Output<Integer> timeWindowSec;
+    private @Nullable Output<Integer> timeWindowSec;
 
-    public Output<Integer> timeWindowSec() {
-        return this.timeWindowSec == null ? Codegen.empty() : this.timeWindowSec;
+    public Optional<Output<Integer>> timeWindowSec() {
+        return Optional.ofNullable(this.timeWindowSec);
     }
 
-    public AutoscalarAutoscalingPolicyScaleInControlArgs(
-        @Nullable Output<AutoscalarAutoscalingPolicyScaleInControlMaxScaledInReplicasArgs> maxScaledInReplicas,
-        @Nullable Output<Integer> timeWindowSec) {
-        this.maxScaledInReplicas = maxScaledInReplicas;
-        this.timeWindowSec = timeWindowSec;
-    }
+    private AutoscalarAutoscalingPolicyScaleInControlArgs() {}
 
-    private AutoscalarAutoscalingPolicyScaleInControlArgs() {
-        this.maxScaledInReplicas = Codegen.empty();
-        this.timeWindowSec = Codegen.empty();
+    private AutoscalarAutoscalingPolicyScaleInControlArgs(AutoscalarAutoscalingPolicyScaleInControlArgs $) {
+        this.maxScaledInReplicas = $.maxScaledInReplicas;
+        this.timeWindowSec = $.timeWindowSec;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AutoscalarAutoscalingPolicyScaleInControlArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<AutoscalarAutoscalingPolicyScaleInControlMaxScaledInReplicasArgs> maxScaledInReplicas;
-        private @Nullable Output<Integer> timeWindowSec;
+        private AutoscalarAutoscalingPolicyScaleInControlArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AutoscalarAutoscalingPolicyScaleInControlArgs();
         }
 
         public Builder(AutoscalarAutoscalingPolicyScaleInControlArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.maxScaledInReplicas = defaults.maxScaledInReplicas;
-    	      this.timeWindowSec = defaults.timeWindowSec;
+            $ = new AutoscalarAutoscalingPolicyScaleInControlArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder maxScaledInReplicas(@Nullable Output<AutoscalarAutoscalingPolicyScaleInControlMaxScaledInReplicasArgs> maxScaledInReplicas) {
-            this.maxScaledInReplicas = maxScaledInReplicas;
+            $.maxScaledInReplicas = maxScaledInReplicas;
             return this;
         }
-        public Builder maxScaledInReplicas(@Nullable AutoscalarAutoscalingPolicyScaleInControlMaxScaledInReplicasArgs maxScaledInReplicas) {
-            this.maxScaledInReplicas = Codegen.ofNullable(maxScaledInReplicas);
-            return this;
+
+        public Builder maxScaledInReplicas(AutoscalarAutoscalingPolicyScaleInControlMaxScaledInReplicasArgs maxScaledInReplicas) {
+            return maxScaledInReplicas(Output.of(maxScaledInReplicas));
         }
+
         public Builder timeWindowSec(@Nullable Output<Integer> timeWindowSec) {
-            this.timeWindowSec = timeWindowSec;
+            $.timeWindowSec = timeWindowSec;
             return this;
         }
-        public Builder timeWindowSec(@Nullable Integer timeWindowSec) {
-            this.timeWindowSec = Codegen.ofNullable(timeWindowSec);
-            return this;
-        }        public AutoscalarAutoscalingPolicyScaleInControlArgs build() {
-            return new AutoscalarAutoscalingPolicyScaleInControlArgs(maxScaledInReplicas, timeWindowSec);
+
+        public Builder timeWindowSec(Integer timeWindowSec) {
+            return timeWindowSec(Output.of(timeWindowSec));
+        }
+
+        public AutoscalarAutoscalingPolicyScaleInControlArgs build() {
+            return $;
         }
     }
+
 }

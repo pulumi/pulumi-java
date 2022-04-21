@@ -5,9 +5,9 @@ package com.pulumi.gcp.container.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,7 +20,7 @@ public final class AwsClusterControlPlaneAwsServicesAuthenticationArgs extends c
      * 
      */
     @Import(name="roleArn", required=true)
-      private final Output<String> roleArn;
+    private Output<String> roleArn;
 
     public Output<String> roleArn() {
         return this.roleArn;
@@ -31,63 +31,59 @@ public final class AwsClusterControlPlaneAwsServicesAuthenticationArgs extends c
      * 
      */
     @Import(name="roleSessionName")
-      private final @Nullable Output<String> roleSessionName;
+    private @Nullable Output<String> roleSessionName;
 
-    public Output<String> roleSessionName() {
-        return this.roleSessionName == null ? Codegen.empty() : this.roleSessionName;
+    public Optional<Output<String>> roleSessionName() {
+        return Optional.ofNullable(this.roleSessionName);
     }
 
-    public AwsClusterControlPlaneAwsServicesAuthenticationArgs(
-        Output<String> roleArn,
-        @Nullable Output<String> roleSessionName) {
-        this.roleArn = Objects.requireNonNull(roleArn, "expected parameter 'roleArn' to be non-null");
-        this.roleSessionName = roleSessionName;
-    }
+    private AwsClusterControlPlaneAwsServicesAuthenticationArgs() {}
 
-    private AwsClusterControlPlaneAwsServicesAuthenticationArgs() {
-        this.roleArn = Codegen.empty();
-        this.roleSessionName = Codegen.empty();
+    private AwsClusterControlPlaneAwsServicesAuthenticationArgs(AwsClusterControlPlaneAwsServicesAuthenticationArgs $) {
+        this.roleArn = $.roleArn;
+        this.roleSessionName = $.roleSessionName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AwsClusterControlPlaneAwsServicesAuthenticationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> roleArn;
-        private @Nullable Output<String> roleSessionName;
+        private AwsClusterControlPlaneAwsServicesAuthenticationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AwsClusterControlPlaneAwsServicesAuthenticationArgs();
         }
 
         public Builder(AwsClusterControlPlaneAwsServicesAuthenticationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.roleArn = defaults.roleArn;
-    	      this.roleSessionName = defaults.roleSessionName;
+            $ = new AwsClusterControlPlaneAwsServicesAuthenticationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder roleArn(Output<String> roleArn) {
-            this.roleArn = Objects.requireNonNull(roleArn);
+            $.roleArn = roleArn;
             return this;
         }
+
         public Builder roleArn(String roleArn) {
-            this.roleArn = Output.of(Objects.requireNonNull(roleArn));
-            return this;
+            return roleArn(Output.of(roleArn));
         }
+
         public Builder roleSessionName(@Nullable Output<String> roleSessionName) {
-            this.roleSessionName = roleSessionName;
+            $.roleSessionName = roleSessionName;
             return this;
         }
-        public Builder roleSessionName(@Nullable String roleSessionName) {
-            this.roleSessionName = Codegen.ofNullable(roleSessionName);
-            return this;
-        }        public AwsClusterControlPlaneAwsServicesAuthenticationArgs build() {
-            return new AwsClusterControlPlaneAwsServicesAuthenticationArgs(roleArn, roleSessionName);
+
+        public Builder roleSessionName(String roleSessionName) {
+            return roleSessionName(Output.of(roleSessionName));
+        }
+
+        public AwsClusterControlPlaneAwsServicesAuthenticationArgs build() {
+            $.roleArn = Objects.requireNonNull($.roleArn, "expected parameter 'roleArn' to be non-null");
+            return $;
         }
     }
+
 }

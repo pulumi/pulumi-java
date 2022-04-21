@@ -6,9 +6,9 @@ package com.pulumi.azurenative.domainregistration.inputs;
 import com.pulumi.azurenative.domainregistration.inputs.AddressArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class ContactArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="addressMailing")
-      private final @Nullable Output<AddressArgs> addressMailing;
+    private @Nullable Output<AddressArgs> addressMailing;
 
-    public Output<AddressArgs> addressMailing() {
-        return this.addressMailing == null ? Codegen.empty() : this.addressMailing;
+    public Optional<Output<AddressArgs>> addressMailing() {
+        return Optional.ofNullable(this.addressMailing);
     }
 
     /**
@@ -37,7 +37,7 @@ public final class ContactArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="email", required=true)
-      private final Output<String> email;
+    private Output<String> email;
 
     public Output<String> email() {
         return this.email;
@@ -48,10 +48,10 @@ public final class ContactArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="fax")
-      private final @Nullable Output<String> fax;
+    private @Nullable Output<String> fax;
 
-    public Output<String> fax() {
-        return this.fax == null ? Codegen.empty() : this.fax;
+    public Optional<Output<String>> fax() {
+        return Optional.ofNullable(this.fax);
     }
 
     /**
@@ -59,10 +59,10 @@ public final class ContactArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="jobTitle")
-      private final @Nullable Output<String> jobTitle;
+    private @Nullable Output<String> jobTitle;
 
-    public Output<String> jobTitle() {
-        return this.jobTitle == null ? Codegen.empty() : this.jobTitle;
+    public Optional<Output<String>> jobTitle() {
+        return Optional.ofNullable(this.jobTitle);
     }
 
     /**
@@ -70,7 +70,7 @@ public final class ContactArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="nameFirst", required=true)
-      private final Output<String> nameFirst;
+    private Output<String> nameFirst;
 
     public Output<String> nameFirst() {
         return this.nameFirst;
@@ -81,7 +81,7 @@ public final class ContactArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="nameLast", required=true)
-      private final Output<String> nameLast;
+    private Output<String> nameLast;
 
     public Output<String> nameLast() {
         return this.nameLast;
@@ -92,10 +92,10 @@ public final class ContactArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="nameMiddle")
-      private final @Nullable Output<String> nameMiddle;
+    private @Nullable Output<String> nameMiddle;
 
-    public Output<String> nameMiddle() {
-        return this.nameMiddle == null ? Codegen.empty() : this.nameMiddle;
+    public Optional<Output<String>> nameMiddle() {
+        return Optional.ofNullable(this.nameMiddle);
     }
 
     /**
@@ -103,10 +103,10 @@ public final class ContactArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="organization")
-      private final @Nullable Output<String> organization;
+    private @Nullable Output<String> organization;
 
-    public Output<String> organization() {
-        return this.organization == null ? Codegen.empty() : this.organization;
+    public Optional<Output<String>> organization() {
+        return Optional.ofNullable(this.organization);
     }
 
     /**
@@ -114,154 +114,132 @@ public final class ContactArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="phone", required=true)
-      private final Output<String> phone;
+    private Output<String> phone;
 
     public Output<String> phone() {
         return this.phone;
     }
 
-    public ContactArgs(
-        @Nullable Output<AddressArgs> addressMailing,
-        Output<String> email,
-        @Nullable Output<String> fax,
-        @Nullable Output<String> jobTitle,
-        Output<String> nameFirst,
-        Output<String> nameLast,
-        @Nullable Output<String> nameMiddle,
-        @Nullable Output<String> organization,
-        Output<String> phone) {
-        this.addressMailing = addressMailing;
-        this.email = Objects.requireNonNull(email, "expected parameter 'email' to be non-null");
-        this.fax = fax;
-        this.jobTitle = jobTitle;
-        this.nameFirst = Objects.requireNonNull(nameFirst, "expected parameter 'nameFirst' to be non-null");
-        this.nameLast = Objects.requireNonNull(nameLast, "expected parameter 'nameLast' to be non-null");
-        this.nameMiddle = nameMiddle;
-        this.organization = organization;
-        this.phone = Objects.requireNonNull(phone, "expected parameter 'phone' to be non-null");
-    }
+    private ContactArgs() {}
 
-    private ContactArgs() {
-        this.addressMailing = Codegen.empty();
-        this.email = Codegen.empty();
-        this.fax = Codegen.empty();
-        this.jobTitle = Codegen.empty();
-        this.nameFirst = Codegen.empty();
-        this.nameLast = Codegen.empty();
-        this.nameMiddle = Codegen.empty();
-        this.organization = Codegen.empty();
-        this.phone = Codegen.empty();
+    private ContactArgs(ContactArgs $) {
+        this.addressMailing = $.addressMailing;
+        this.email = $.email;
+        this.fax = $.fax;
+        this.jobTitle = $.jobTitle;
+        this.nameFirst = $.nameFirst;
+        this.nameLast = $.nameLast;
+        this.nameMiddle = $.nameMiddle;
+        this.organization = $.organization;
+        this.phone = $.phone;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ContactArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<AddressArgs> addressMailing;
-        private Output<String> email;
-        private @Nullable Output<String> fax;
-        private @Nullable Output<String> jobTitle;
-        private Output<String> nameFirst;
-        private Output<String> nameLast;
-        private @Nullable Output<String> nameMiddle;
-        private @Nullable Output<String> organization;
-        private Output<String> phone;
+        private ContactArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ContactArgs();
         }
 
         public Builder(ContactArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.addressMailing = defaults.addressMailing;
-    	      this.email = defaults.email;
-    	      this.fax = defaults.fax;
-    	      this.jobTitle = defaults.jobTitle;
-    	      this.nameFirst = defaults.nameFirst;
-    	      this.nameLast = defaults.nameLast;
-    	      this.nameMiddle = defaults.nameMiddle;
-    	      this.organization = defaults.organization;
-    	      this.phone = defaults.phone;
+            $ = new ContactArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder addressMailing(@Nullable Output<AddressArgs> addressMailing) {
-            this.addressMailing = addressMailing;
+            $.addressMailing = addressMailing;
             return this;
         }
-        public Builder addressMailing(@Nullable AddressArgs addressMailing) {
-            this.addressMailing = Codegen.ofNullable(addressMailing);
-            return this;
+
+        public Builder addressMailing(AddressArgs addressMailing) {
+            return addressMailing(Output.of(addressMailing));
         }
+
         public Builder email(Output<String> email) {
-            this.email = Objects.requireNonNull(email);
+            $.email = email;
             return this;
         }
+
         public Builder email(String email) {
-            this.email = Output.of(Objects.requireNonNull(email));
-            return this;
+            return email(Output.of(email));
         }
+
         public Builder fax(@Nullable Output<String> fax) {
-            this.fax = fax;
+            $.fax = fax;
             return this;
         }
-        public Builder fax(@Nullable String fax) {
-            this.fax = Codegen.ofNullable(fax);
-            return this;
+
+        public Builder fax(String fax) {
+            return fax(Output.of(fax));
         }
+
         public Builder jobTitle(@Nullable Output<String> jobTitle) {
-            this.jobTitle = jobTitle;
+            $.jobTitle = jobTitle;
             return this;
         }
-        public Builder jobTitle(@Nullable String jobTitle) {
-            this.jobTitle = Codegen.ofNullable(jobTitle);
-            return this;
+
+        public Builder jobTitle(String jobTitle) {
+            return jobTitle(Output.of(jobTitle));
         }
+
         public Builder nameFirst(Output<String> nameFirst) {
-            this.nameFirst = Objects.requireNonNull(nameFirst);
+            $.nameFirst = nameFirst;
             return this;
         }
+
         public Builder nameFirst(String nameFirst) {
-            this.nameFirst = Output.of(Objects.requireNonNull(nameFirst));
-            return this;
+            return nameFirst(Output.of(nameFirst));
         }
+
         public Builder nameLast(Output<String> nameLast) {
-            this.nameLast = Objects.requireNonNull(nameLast);
+            $.nameLast = nameLast;
             return this;
         }
+
         public Builder nameLast(String nameLast) {
-            this.nameLast = Output.of(Objects.requireNonNull(nameLast));
-            return this;
+            return nameLast(Output.of(nameLast));
         }
+
         public Builder nameMiddle(@Nullable Output<String> nameMiddle) {
-            this.nameMiddle = nameMiddle;
+            $.nameMiddle = nameMiddle;
             return this;
         }
-        public Builder nameMiddle(@Nullable String nameMiddle) {
-            this.nameMiddle = Codegen.ofNullable(nameMiddle);
-            return this;
+
+        public Builder nameMiddle(String nameMiddle) {
+            return nameMiddle(Output.of(nameMiddle));
         }
+
         public Builder organization(@Nullable Output<String> organization) {
-            this.organization = organization;
+            $.organization = organization;
             return this;
         }
-        public Builder organization(@Nullable String organization) {
-            this.organization = Codegen.ofNullable(organization);
-            return this;
+
+        public Builder organization(String organization) {
+            return organization(Output.of(organization));
         }
+
         public Builder phone(Output<String> phone) {
-            this.phone = Objects.requireNonNull(phone);
+            $.phone = phone;
             return this;
         }
+
         public Builder phone(String phone) {
-            this.phone = Output.of(Objects.requireNonNull(phone));
-            return this;
-        }        public ContactArgs build() {
-            return new ContactArgs(addressMailing, email, fax, jobTitle, nameFirst, nameLast, nameMiddle, organization, phone);
+            return phone(Output.of(phone));
+        }
+
+        public ContactArgs build() {
+            $.email = Objects.requireNonNull($.email, "expected parameter 'email' to be non-null");
+            $.nameFirst = Objects.requireNonNull($.nameFirst, "expected parameter 'nameFirst' to be non-null");
+            $.nameLast = Objects.requireNonNull($.nameLast, "expected parameter 'nameLast' to be non-null");
+            $.phone = Objects.requireNonNull($.phone, "expected parameter 'phone' to be non-null");
+            return $;
         }
     }
+
 }

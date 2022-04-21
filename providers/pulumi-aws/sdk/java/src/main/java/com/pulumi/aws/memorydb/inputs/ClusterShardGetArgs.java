@@ -6,11 +6,11 @@ package com.pulumi.aws.memorydb.inputs;
 import com.pulumi.aws.memorydb.inputs.ClusterShardNodeGetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class ClusterShardGetArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class ClusterShardGetArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="nodes")
-      private final @Nullable Output<List<ClusterShardNodeGetArgs>> nodes;
+    private @Nullable Output<List<ClusterShardNodeGetArgs>> nodes;
 
-    public Output<List<ClusterShardNodeGetArgs>> nodes() {
-        return this.nodes == null ? Codegen.empty() : this.nodes;
+    public Optional<Output<List<ClusterShardNodeGetArgs>>> nodes() {
+        return Optional.ofNullable(this.nodes);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class ClusterShardGetArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="numNodes")
-      private final @Nullable Output<Integer> numNodes;
+    private @Nullable Output<Integer> numNodes;
 
-    public Output<Integer> numNodes() {
-        return this.numNodes == null ? Codegen.empty() : this.numNodes;
+    public Optional<Output<Integer>> numNodes() {
+        return Optional.ofNullable(this.numNodes);
     }
 
     /**
@@ -57,92 +57,82 @@ public final class ClusterShardGetArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="slots")
-      private final @Nullable Output<String> slots;
+    private @Nullable Output<String> slots;
 
-    public Output<String> slots() {
-        return this.slots == null ? Codegen.empty() : this.slots;
+    public Optional<Output<String>> slots() {
+        return Optional.ofNullable(this.slots);
     }
 
-    public ClusterShardGetArgs(
-        @Nullable Output<String> name,
-        @Nullable Output<List<ClusterShardNodeGetArgs>> nodes,
-        @Nullable Output<Integer> numNodes,
-        @Nullable Output<String> slots) {
-        this.name = name;
-        this.nodes = nodes;
-        this.numNodes = numNodes;
-        this.slots = slots;
-    }
+    private ClusterShardGetArgs() {}
 
-    private ClusterShardGetArgs() {
-        this.name = Codegen.empty();
-        this.nodes = Codegen.empty();
-        this.numNodes = Codegen.empty();
-        this.slots = Codegen.empty();
+    private ClusterShardGetArgs(ClusterShardGetArgs $) {
+        this.name = $.name;
+        this.nodes = $.nodes;
+        this.numNodes = $.numNodes;
+        this.slots = $.slots;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ClusterShardGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> name;
-        private @Nullable Output<List<ClusterShardNodeGetArgs>> nodes;
-        private @Nullable Output<Integer> numNodes;
-        private @Nullable Output<String> slots;
+        private ClusterShardGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ClusterShardGetArgs();
         }
 
         public Builder(ClusterShardGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.nodes = defaults.nodes;
-    	      this.numNodes = defaults.numNodes;
-    	      this.slots = defaults.slots;
+            $ = new ClusterShardGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder nodes(@Nullable Output<List<ClusterShardNodeGetArgs>> nodes) {
-            this.nodes = nodes;
+            $.nodes = nodes;
             return this;
         }
-        public Builder nodes(@Nullable List<ClusterShardNodeGetArgs> nodes) {
-            this.nodes = Codegen.ofNullable(nodes);
-            return this;
+
+        public Builder nodes(List<ClusterShardNodeGetArgs> nodes) {
+            return nodes(Output.of(nodes));
         }
+
         public Builder nodes(ClusterShardNodeGetArgs... nodes) {
             return nodes(List.of(nodes));
         }
+
         public Builder numNodes(@Nullable Output<Integer> numNodes) {
-            this.numNodes = numNodes;
+            $.numNodes = numNodes;
             return this;
         }
-        public Builder numNodes(@Nullable Integer numNodes) {
-            this.numNodes = Codegen.ofNullable(numNodes);
-            return this;
+
+        public Builder numNodes(Integer numNodes) {
+            return numNodes(Output.of(numNodes));
         }
+
         public Builder slots(@Nullable Output<String> slots) {
-            this.slots = slots;
+            $.slots = slots;
             return this;
         }
-        public Builder slots(@Nullable String slots) {
-            this.slots = Codegen.ofNullable(slots);
-            return this;
-        }        public ClusterShardGetArgs build() {
-            return new ClusterShardGetArgs(name, nodes, numNodes, slots);
+
+        public Builder slots(String slots) {
+            return slots(Output.of(slots));
+        }
+
+        public ClusterShardGetArgs build() {
+            return $;
         }
     }
+
 }

@@ -5,12 +5,12 @@ package com.pulumi.kubernetes.flowcontrol.apiserver.k8s.io_v1beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.kubernetes.flowcontrol.apiserver.k8s.io_v1beta1.inputs.NonResourcePolicyRuleArgs;
 import com.pulumi.kubernetes.flowcontrol.apiserver.k8s.io_v1beta1.inputs.ResourcePolicyRuleArgs;
 import com.pulumi.kubernetes.flowcontrol.apiserver.k8s.io_v1beta1.inputs.SubjectArgs;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +27,10 @@ public final class PolicyRulesWithSubjectsArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="nonResourceRules")
-      private final @Nullable Output<List<NonResourcePolicyRuleArgs>> nonResourceRules;
+    private @Nullable Output<List<NonResourcePolicyRuleArgs>> nonResourceRules;
 
-    public Output<List<NonResourcePolicyRuleArgs>> nonResourceRules() {
-        return this.nonResourceRules == null ? Codegen.empty() : this.nonResourceRules;
+    public Optional<Output<List<NonResourcePolicyRuleArgs>>> nonResourceRules() {
+        return Optional.ofNullable(this.nonResourceRules);
     }
 
     /**
@@ -38,10 +38,10 @@ public final class PolicyRulesWithSubjectsArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="resourceRules")
-      private final @Nullable Output<List<ResourcePolicyRuleArgs>> resourceRules;
+    private @Nullable Output<List<ResourcePolicyRuleArgs>> resourceRules;
 
-    public Output<List<ResourcePolicyRuleArgs>> resourceRules() {
-        return this.resourceRules == null ? Codegen.empty() : this.resourceRules;
+    public Optional<Output<List<ResourcePolicyRuleArgs>>> resourceRules() {
+        return Optional.ofNullable(this.resourceRules);
     }
 
     /**
@@ -49,85 +49,81 @@ public final class PolicyRulesWithSubjectsArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="subjects", required=true)
-      private final Output<List<SubjectArgs>> subjects;
+    private Output<List<SubjectArgs>> subjects;
 
     public Output<List<SubjectArgs>> subjects() {
         return this.subjects;
     }
 
-    public PolicyRulesWithSubjectsArgs(
-        @Nullable Output<List<NonResourcePolicyRuleArgs>> nonResourceRules,
-        @Nullable Output<List<ResourcePolicyRuleArgs>> resourceRules,
-        Output<List<SubjectArgs>> subjects) {
-        this.nonResourceRules = nonResourceRules;
-        this.resourceRules = resourceRules;
-        this.subjects = Objects.requireNonNull(subjects, "expected parameter 'subjects' to be non-null");
-    }
+    private PolicyRulesWithSubjectsArgs() {}
 
-    private PolicyRulesWithSubjectsArgs() {
-        this.nonResourceRules = Codegen.empty();
-        this.resourceRules = Codegen.empty();
-        this.subjects = Codegen.empty();
+    private PolicyRulesWithSubjectsArgs(PolicyRulesWithSubjectsArgs $) {
+        this.nonResourceRules = $.nonResourceRules;
+        this.resourceRules = $.resourceRules;
+        this.subjects = $.subjects;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PolicyRulesWithSubjectsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<NonResourcePolicyRuleArgs>> nonResourceRules;
-        private @Nullable Output<List<ResourcePolicyRuleArgs>> resourceRules;
-        private Output<List<SubjectArgs>> subjects;
+        private PolicyRulesWithSubjectsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PolicyRulesWithSubjectsArgs();
         }
 
         public Builder(PolicyRulesWithSubjectsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.nonResourceRules = defaults.nonResourceRules;
-    	      this.resourceRules = defaults.resourceRules;
-    	      this.subjects = defaults.subjects;
+            $ = new PolicyRulesWithSubjectsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder nonResourceRules(@Nullable Output<List<NonResourcePolicyRuleArgs>> nonResourceRules) {
-            this.nonResourceRules = nonResourceRules;
+            $.nonResourceRules = nonResourceRules;
             return this;
         }
-        public Builder nonResourceRules(@Nullable List<NonResourcePolicyRuleArgs> nonResourceRules) {
-            this.nonResourceRules = Codegen.ofNullable(nonResourceRules);
-            return this;
+
+        public Builder nonResourceRules(List<NonResourcePolicyRuleArgs> nonResourceRules) {
+            return nonResourceRules(Output.of(nonResourceRules));
         }
+
         public Builder nonResourceRules(NonResourcePolicyRuleArgs... nonResourceRules) {
             return nonResourceRules(List.of(nonResourceRules));
         }
+
         public Builder resourceRules(@Nullable Output<List<ResourcePolicyRuleArgs>> resourceRules) {
-            this.resourceRules = resourceRules;
+            $.resourceRules = resourceRules;
             return this;
         }
-        public Builder resourceRules(@Nullable List<ResourcePolicyRuleArgs> resourceRules) {
-            this.resourceRules = Codegen.ofNullable(resourceRules);
-            return this;
+
+        public Builder resourceRules(List<ResourcePolicyRuleArgs> resourceRules) {
+            return resourceRules(Output.of(resourceRules));
         }
+
         public Builder resourceRules(ResourcePolicyRuleArgs... resourceRules) {
             return resourceRules(List.of(resourceRules));
         }
+
         public Builder subjects(Output<List<SubjectArgs>> subjects) {
-            this.subjects = Objects.requireNonNull(subjects);
+            $.subjects = subjects;
             return this;
         }
+
         public Builder subjects(List<SubjectArgs> subjects) {
-            this.subjects = Output.of(Objects.requireNonNull(subjects));
-            return this;
+            return subjects(Output.of(subjects));
         }
+
         public Builder subjects(SubjectArgs... subjects) {
             return subjects(List.of(subjects));
-        }        public PolicyRulesWithSubjectsArgs build() {
-            return new PolicyRulesWithSubjectsArgs(nonResourceRules, resourceRules, subjects);
+        }
+
+        public PolicyRulesWithSubjectsArgs build() {
+            $.subjects = Objects.requireNonNull($.subjects, "expected parameter 'subjects' to be non-null");
+            return $;
         }
     }
+
 }

@@ -22,7 +22,7 @@ public final class GoogleCloudPolicysimulatorV1beta1ReplayResultsSummaryResponse
      * 
      */
     @Import(name="differenceCount", required=true)
-      private final Integer differenceCount;
+    private Integer differenceCount;
 
     public Integer differenceCount() {
         return this.differenceCount;
@@ -33,7 +33,7 @@ public final class GoogleCloudPolicysimulatorV1beta1ReplayResultsSummaryResponse
      * 
      */
     @Import(name="errorCount", required=true)
-      private final Integer errorCount;
+    private Integer errorCount;
 
     public Integer errorCount() {
         return this.errorCount;
@@ -44,7 +44,7 @@ public final class GoogleCloudPolicysimulatorV1beta1ReplayResultsSummaryResponse
      * 
      */
     @Import(name="logCount", required=true)
-      private final Integer logCount;
+    private Integer logCount;
 
     public Integer logCount() {
         return this.logCount;
@@ -55,7 +55,7 @@ public final class GoogleCloudPolicysimulatorV1beta1ReplayResultsSummaryResponse
      * 
      */
     @Import(name="newestDate", required=true)
-      private final GoogleTypeDateResponse newestDate;
+    private GoogleTypeDateResponse newestDate;
 
     public GoogleTypeDateResponse newestDate() {
         return this.newestDate;
@@ -66,7 +66,7 @@ public final class GoogleCloudPolicysimulatorV1beta1ReplayResultsSummaryResponse
      * 
      */
     @Import(name="oldestDate", required=true)
-      private final GoogleTypeDateResponse oldestDate;
+    private GoogleTypeDateResponse oldestDate;
 
     public GoogleTypeDateResponse oldestDate() {
         return this.oldestDate;
@@ -77,91 +77,80 @@ public final class GoogleCloudPolicysimulatorV1beta1ReplayResultsSummaryResponse
      * 
      */
     @Import(name="unchangedCount", required=true)
-      private final Integer unchangedCount;
+    private Integer unchangedCount;
 
     public Integer unchangedCount() {
         return this.unchangedCount;
     }
 
-    public GoogleCloudPolicysimulatorV1beta1ReplayResultsSummaryResponse(
-        Integer differenceCount,
-        Integer errorCount,
-        Integer logCount,
-        GoogleTypeDateResponse newestDate,
-        GoogleTypeDateResponse oldestDate,
-        Integer unchangedCount) {
-        this.differenceCount = Objects.requireNonNull(differenceCount, "expected parameter 'differenceCount' to be non-null");
-        this.errorCount = Objects.requireNonNull(errorCount, "expected parameter 'errorCount' to be non-null");
-        this.logCount = Objects.requireNonNull(logCount, "expected parameter 'logCount' to be non-null");
-        this.newestDate = Objects.requireNonNull(newestDate, "expected parameter 'newestDate' to be non-null");
-        this.oldestDate = Objects.requireNonNull(oldestDate, "expected parameter 'oldestDate' to be non-null");
-        this.unchangedCount = Objects.requireNonNull(unchangedCount, "expected parameter 'unchangedCount' to be non-null");
-    }
+    private GoogleCloudPolicysimulatorV1beta1ReplayResultsSummaryResponse() {}
 
-    private GoogleCloudPolicysimulatorV1beta1ReplayResultsSummaryResponse() {
-        this.differenceCount = null;
-        this.errorCount = null;
-        this.logCount = null;
-        this.newestDate = null;
-        this.oldestDate = null;
-        this.unchangedCount = null;
+    private GoogleCloudPolicysimulatorV1beta1ReplayResultsSummaryResponse(GoogleCloudPolicysimulatorV1beta1ReplayResultsSummaryResponse $) {
+        this.differenceCount = $.differenceCount;
+        this.errorCount = $.errorCount;
+        this.logCount = $.logCount;
+        this.newestDate = $.newestDate;
+        this.oldestDate = $.oldestDate;
+        this.unchangedCount = $.unchangedCount;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudPolicysimulatorV1beta1ReplayResultsSummaryResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Integer differenceCount;
-        private Integer errorCount;
-        private Integer logCount;
-        private GoogleTypeDateResponse newestDate;
-        private GoogleTypeDateResponse oldestDate;
-        private Integer unchangedCount;
+        private GoogleCloudPolicysimulatorV1beta1ReplayResultsSummaryResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudPolicysimulatorV1beta1ReplayResultsSummaryResponse();
         }
 
         public Builder(GoogleCloudPolicysimulatorV1beta1ReplayResultsSummaryResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.differenceCount = defaults.differenceCount;
-    	      this.errorCount = defaults.errorCount;
-    	      this.logCount = defaults.logCount;
-    	      this.newestDate = defaults.newestDate;
-    	      this.oldestDate = defaults.oldestDate;
-    	      this.unchangedCount = defaults.unchangedCount;
+            $ = new GoogleCloudPolicysimulatorV1beta1ReplayResultsSummaryResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder differenceCount(Integer differenceCount) {
-            this.differenceCount = Objects.requireNonNull(differenceCount);
+            $.differenceCount = differenceCount;
             return this;
         }
+
         public Builder errorCount(Integer errorCount) {
-            this.errorCount = Objects.requireNonNull(errorCount);
+            $.errorCount = errorCount;
             return this;
         }
+
         public Builder logCount(Integer logCount) {
-            this.logCount = Objects.requireNonNull(logCount);
+            $.logCount = logCount;
             return this;
         }
+
         public Builder newestDate(GoogleTypeDateResponse newestDate) {
-            this.newestDate = Objects.requireNonNull(newestDate);
+            $.newestDate = newestDate;
             return this;
         }
+
         public Builder oldestDate(GoogleTypeDateResponse oldestDate) {
-            this.oldestDate = Objects.requireNonNull(oldestDate);
+            $.oldestDate = oldestDate;
             return this;
         }
+
         public Builder unchangedCount(Integer unchangedCount) {
-            this.unchangedCount = Objects.requireNonNull(unchangedCount);
+            $.unchangedCount = unchangedCount;
             return this;
-        }        public GoogleCloudPolicysimulatorV1beta1ReplayResultsSummaryResponse build() {
-            return new GoogleCloudPolicysimulatorV1beta1ReplayResultsSummaryResponse(differenceCount, errorCount, logCount, newestDate, oldestDate, unchangedCount);
+        }
+
+        public GoogleCloudPolicysimulatorV1beta1ReplayResultsSummaryResponse build() {
+            $.differenceCount = Objects.requireNonNull($.differenceCount, "expected parameter 'differenceCount' to be non-null");
+            $.errorCount = Objects.requireNonNull($.errorCount, "expected parameter 'errorCount' to be non-null");
+            $.logCount = Objects.requireNonNull($.logCount, "expected parameter 'logCount' to be non-null");
+            $.newestDate = Objects.requireNonNull($.newestDate, "expected parameter 'newestDate' to be non-null");
+            $.oldestDate = Objects.requireNonNull($.oldestDate, "expected parameter 'oldestDate' to be non-null");
+            $.unchangedCount = Objects.requireNonNull($.unchangedCount, "expected parameter 'unchangedCount' to be non-null");
+            return $;
         }
     }
+
 }

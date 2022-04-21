@@ -17,7 +17,7 @@ public final class GetTransitGatewayRegistrationArgs extends com.pulumi.resource
      * 
      */
     @Import(name="globalNetworkId", required=true)
-      private final String globalNetworkId;
+    private String globalNetworkId;
 
     public String globalNetworkId() {
         return this.globalNetworkId;
@@ -28,55 +28,52 @@ public final class GetTransitGatewayRegistrationArgs extends com.pulumi.resource
      * 
      */
     @Import(name="transitGatewayArn", required=true)
-      private final String transitGatewayArn;
+    private String transitGatewayArn;
 
     public String transitGatewayArn() {
         return this.transitGatewayArn;
     }
 
-    public GetTransitGatewayRegistrationArgs(
-        String globalNetworkId,
-        String transitGatewayArn) {
-        this.globalNetworkId = Objects.requireNonNull(globalNetworkId, "expected parameter 'globalNetworkId' to be non-null");
-        this.transitGatewayArn = Objects.requireNonNull(transitGatewayArn, "expected parameter 'transitGatewayArn' to be non-null");
-    }
+    private GetTransitGatewayRegistrationArgs() {}
 
-    private GetTransitGatewayRegistrationArgs() {
-        this.globalNetworkId = null;
-        this.transitGatewayArn = null;
+    private GetTransitGatewayRegistrationArgs(GetTransitGatewayRegistrationArgs $) {
+        this.globalNetworkId = $.globalNetworkId;
+        this.transitGatewayArn = $.transitGatewayArn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetTransitGatewayRegistrationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String globalNetworkId;
-        private String transitGatewayArn;
+        private GetTransitGatewayRegistrationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetTransitGatewayRegistrationArgs();
         }
 
         public Builder(GetTransitGatewayRegistrationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.globalNetworkId = defaults.globalNetworkId;
-    	      this.transitGatewayArn = defaults.transitGatewayArn;
+            $ = new GetTransitGatewayRegistrationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder globalNetworkId(String globalNetworkId) {
-            this.globalNetworkId = Objects.requireNonNull(globalNetworkId);
+            $.globalNetworkId = globalNetworkId;
             return this;
         }
+
         public Builder transitGatewayArn(String transitGatewayArn) {
-            this.transitGatewayArn = Objects.requireNonNull(transitGatewayArn);
+            $.transitGatewayArn = transitGatewayArn;
             return this;
-        }        public GetTransitGatewayRegistrationArgs build() {
-            return new GetTransitGatewayRegistrationArgs(globalNetworkId, transitGatewayArn);
+        }
+
+        public GetTransitGatewayRegistrationArgs build() {
+            $.globalNetworkId = Objects.requireNonNull($.globalNetworkId, "expected parameter 'globalNetworkId' to be non-null");
+            $.transitGatewayArn = Objects.requireNonNull($.transitGatewayArn, "expected parameter 'transitGatewayArn' to be non-null");
+            return $;
         }
     }
+
 }

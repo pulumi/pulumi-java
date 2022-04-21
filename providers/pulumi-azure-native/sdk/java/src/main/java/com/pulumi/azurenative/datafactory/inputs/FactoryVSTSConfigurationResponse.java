@@ -24,7 +24,7 @@ public final class FactoryVSTSConfigurationResponse extends com.pulumi.resources
      * 
      */
     @Import(name="accountName", required=true)
-      private final String accountName;
+    private String accountName;
 
     public String accountName() {
         return this.accountName;
@@ -35,7 +35,7 @@ public final class FactoryVSTSConfigurationResponse extends com.pulumi.resources
      * 
      */
     @Import(name="collaborationBranch", required=true)
-      private final String collaborationBranch;
+    private String collaborationBranch;
 
     public String collaborationBranch() {
         return this.collaborationBranch;
@@ -46,10 +46,10 @@ public final class FactoryVSTSConfigurationResponse extends com.pulumi.resources
      * 
      */
     @Import(name="lastCommitId")
-      private final @Nullable String lastCommitId;
+    private @Nullable String lastCommitId;
 
     public Optional<String> lastCommitId() {
-        return this.lastCommitId == null ? Optional.empty() : Optional.ofNullable(this.lastCommitId);
+        return Optional.ofNullable(this.lastCommitId);
     }
 
     /**
@@ -57,7 +57,7 @@ public final class FactoryVSTSConfigurationResponse extends com.pulumi.resources
      * 
      */
     @Import(name="projectName", required=true)
-      private final String projectName;
+    private String projectName;
 
     public String projectName() {
         return this.projectName;
@@ -68,7 +68,7 @@ public final class FactoryVSTSConfigurationResponse extends com.pulumi.resources
      * 
      */
     @Import(name="repositoryName", required=true)
-      private final String repositoryName;
+    private String repositoryName;
 
     public String repositoryName() {
         return this.repositoryName;
@@ -79,7 +79,7 @@ public final class FactoryVSTSConfigurationResponse extends com.pulumi.resources
      * 
      */
     @Import(name="rootFolder", required=true)
-      private final String rootFolder;
+    private String rootFolder;
 
     public String rootFolder() {
         return this.rootFolder;
@@ -90,10 +90,10 @@ public final class FactoryVSTSConfigurationResponse extends com.pulumi.resources
      * 
      */
     @Import(name="tenantId")
-      private final @Nullable String tenantId;
+    private @Nullable String tenantId;
 
     public Optional<String> tenantId() {
-        return this.tenantId == null ? Optional.empty() : Optional.ofNullable(this.tenantId);
+        return Optional.ofNullable(this.tenantId);
     }
 
     /**
@@ -102,109 +102,92 @@ public final class FactoryVSTSConfigurationResponse extends com.pulumi.resources
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
     }
 
-    public FactoryVSTSConfigurationResponse(
-        String accountName,
-        String collaborationBranch,
-        @Nullable String lastCommitId,
-        String projectName,
-        String repositoryName,
-        String rootFolder,
-        @Nullable String tenantId,
-        String type) {
-        this.accountName = Objects.requireNonNull(accountName, "expected parameter 'accountName' to be non-null");
-        this.collaborationBranch = Objects.requireNonNull(collaborationBranch, "expected parameter 'collaborationBranch' to be non-null");
-        this.lastCommitId = lastCommitId;
-        this.projectName = Objects.requireNonNull(projectName, "expected parameter 'projectName' to be non-null");
-        this.repositoryName = Objects.requireNonNull(repositoryName, "expected parameter 'repositoryName' to be non-null");
-        this.rootFolder = Objects.requireNonNull(rootFolder, "expected parameter 'rootFolder' to be non-null");
-        this.tenantId = tenantId;
-        this.type = Codegen.stringProp("type").arg(type).require();
-    }
+    private FactoryVSTSConfigurationResponse() {}
 
-    private FactoryVSTSConfigurationResponse() {
-        this.accountName = null;
-        this.collaborationBranch = null;
-        this.lastCommitId = null;
-        this.projectName = null;
-        this.repositoryName = null;
-        this.rootFolder = null;
-        this.tenantId = null;
-        this.type = null;
+    private FactoryVSTSConfigurationResponse(FactoryVSTSConfigurationResponse $) {
+        this.accountName = $.accountName;
+        this.collaborationBranch = $.collaborationBranch;
+        this.lastCommitId = $.lastCommitId;
+        this.projectName = $.projectName;
+        this.repositoryName = $.repositoryName;
+        this.rootFolder = $.rootFolder;
+        this.tenantId = $.tenantId;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FactoryVSTSConfigurationResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String accountName;
-        private String collaborationBranch;
-        private @Nullable String lastCommitId;
-        private String projectName;
-        private String repositoryName;
-        private String rootFolder;
-        private @Nullable String tenantId;
-        private String type;
+        private FactoryVSTSConfigurationResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new FactoryVSTSConfigurationResponse();
         }
 
         public Builder(FactoryVSTSConfigurationResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accountName = defaults.accountName;
-    	      this.collaborationBranch = defaults.collaborationBranch;
-    	      this.lastCommitId = defaults.lastCommitId;
-    	      this.projectName = defaults.projectName;
-    	      this.repositoryName = defaults.repositoryName;
-    	      this.rootFolder = defaults.rootFolder;
-    	      this.tenantId = defaults.tenantId;
-    	      this.type = defaults.type;
+            $ = new FactoryVSTSConfigurationResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder accountName(String accountName) {
-            this.accountName = Objects.requireNonNull(accountName);
+            $.accountName = accountName;
             return this;
         }
+
         public Builder collaborationBranch(String collaborationBranch) {
-            this.collaborationBranch = Objects.requireNonNull(collaborationBranch);
+            $.collaborationBranch = collaborationBranch;
             return this;
         }
+
         public Builder lastCommitId(@Nullable String lastCommitId) {
-            this.lastCommitId = lastCommitId;
+            $.lastCommitId = lastCommitId;
             return this;
         }
+
         public Builder projectName(String projectName) {
-            this.projectName = Objects.requireNonNull(projectName);
+            $.projectName = projectName;
             return this;
         }
+
         public Builder repositoryName(String repositoryName) {
-            this.repositoryName = Objects.requireNonNull(repositoryName);
+            $.repositoryName = repositoryName;
             return this;
         }
+
         public Builder rootFolder(String rootFolder) {
-            this.rootFolder = Objects.requireNonNull(rootFolder);
+            $.rootFolder = rootFolder;
             return this;
         }
+
         public Builder tenantId(@Nullable String tenantId) {
-            this.tenantId = tenantId;
+            $.tenantId = tenantId;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
-        }        public FactoryVSTSConfigurationResponse build() {
-            return new FactoryVSTSConfigurationResponse(accountName, collaborationBranch, lastCommitId, projectName, repositoryName, rootFolder, tenantId, type);
+        }
+
+        public FactoryVSTSConfigurationResponse build() {
+            $.accountName = Objects.requireNonNull($.accountName, "expected parameter 'accountName' to be non-null");
+            $.collaborationBranch = Objects.requireNonNull($.collaborationBranch, "expected parameter 'collaborationBranch' to be non-null");
+            $.projectName = Objects.requireNonNull($.projectName, "expected parameter 'projectName' to be non-null");
+            $.repositoryName = Objects.requireNonNull($.repositoryName, "expected parameter 'repositoryName' to be non-null");
+            $.rootFolder = Objects.requireNonNull($.rootFolder, "expected parameter 'rootFolder' to be non-null");
+            $.type = Codegen.stringProp("type").arg($.type).require();
+            return $;
         }
     }
+
 }

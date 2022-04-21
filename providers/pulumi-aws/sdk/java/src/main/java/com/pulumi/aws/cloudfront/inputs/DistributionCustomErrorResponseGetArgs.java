@@ -5,10 +5,10 @@ package com.pulumi.aws.cloudfront.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,10 @@ public final class DistributionCustomErrorResponseGetArgs extends com.pulumi.res
      * 
      */
     @Import(name="errorCachingMinTtl")
-      private final @Nullable Output<Integer> errorCachingMinTtl;
+    private @Nullable Output<Integer> errorCachingMinTtl;
 
-    public Output<Integer> errorCachingMinTtl() {
-        return this.errorCachingMinTtl == null ? Codegen.empty() : this.errorCachingMinTtl;
+    public Optional<Output<Integer>> errorCachingMinTtl() {
+        return Optional.ofNullable(this.errorCachingMinTtl);
     }
 
     /**
@@ -35,7 +35,7 @@ public final class DistributionCustomErrorResponseGetArgs extends com.pulumi.res
      * 
      */
     @Import(name="errorCode", required=true)
-      private final Output<Integer> errorCode;
+    private Output<Integer> errorCode;
 
     public Output<Integer> errorCode() {
         return this.errorCode;
@@ -47,10 +47,10 @@ public final class DistributionCustomErrorResponseGetArgs extends com.pulumi.res
      * 
      */
     @Import(name="responseCode")
-      private final @Nullable Output<Integer> responseCode;
+    private @Nullable Output<Integer> responseCode;
 
-    public Output<Integer> responseCode() {
-        return this.responseCode == null ? Codegen.empty() : this.responseCode;
+    public Optional<Output<Integer>> responseCode() {
+        return Optional.ofNullable(this.responseCode);
     }
 
     /**
@@ -59,89 +59,79 @@ public final class DistributionCustomErrorResponseGetArgs extends com.pulumi.res
      * 
      */
     @Import(name="responsePagePath")
-      private final @Nullable Output<String> responsePagePath;
+    private @Nullable Output<String> responsePagePath;
 
-    public Output<String> responsePagePath() {
-        return this.responsePagePath == null ? Codegen.empty() : this.responsePagePath;
+    public Optional<Output<String>> responsePagePath() {
+        return Optional.ofNullable(this.responsePagePath);
     }
 
-    public DistributionCustomErrorResponseGetArgs(
-        @Nullable Output<Integer> errorCachingMinTtl,
-        Output<Integer> errorCode,
-        @Nullable Output<Integer> responseCode,
-        @Nullable Output<String> responsePagePath) {
-        this.errorCachingMinTtl = errorCachingMinTtl;
-        this.errorCode = Objects.requireNonNull(errorCode, "expected parameter 'errorCode' to be non-null");
-        this.responseCode = responseCode;
-        this.responsePagePath = responsePagePath;
-    }
+    private DistributionCustomErrorResponseGetArgs() {}
 
-    private DistributionCustomErrorResponseGetArgs() {
-        this.errorCachingMinTtl = Codegen.empty();
-        this.errorCode = Codegen.empty();
-        this.responseCode = Codegen.empty();
-        this.responsePagePath = Codegen.empty();
+    private DistributionCustomErrorResponseGetArgs(DistributionCustomErrorResponseGetArgs $) {
+        this.errorCachingMinTtl = $.errorCachingMinTtl;
+        this.errorCode = $.errorCode;
+        this.responseCode = $.responseCode;
+        this.responsePagePath = $.responsePagePath;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DistributionCustomErrorResponseGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> errorCachingMinTtl;
-        private Output<Integer> errorCode;
-        private @Nullable Output<Integer> responseCode;
-        private @Nullable Output<String> responsePagePath;
+        private DistributionCustomErrorResponseGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DistributionCustomErrorResponseGetArgs();
         }
 
         public Builder(DistributionCustomErrorResponseGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.errorCachingMinTtl = defaults.errorCachingMinTtl;
-    	      this.errorCode = defaults.errorCode;
-    	      this.responseCode = defaults.responseCode;
-    	      this.responsePagePath = defaults.responsePagePath;
+            $ = new DistributionCustomErrorResponseGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder errorCachingMinTtl(@Nullable Output<Integer> errorCachingMinTtl) {
-            this.errorCachingMinTtl = errorCachingMinTtl;
+            $.errorCachingMinTtl = errorCachingMinTtl;
             return this;
         }
-        public Builder errorCachingMinTtl(@Nullable Integer errorCachingMinTtl) {
-            this.errorCachingMinTtl = Codegen.ofNullable(errorCachingMinTtl);
-            return this;
+
+        public Builder errorCachingMinTtl(Integer errorCachingMinTtl) {
+            return errorCachingMinTtl(Output.of(errorCachingMinTtl));
         }
+
         public Builder errorCode(Output<Integer> errorCode) {
-            this.errorCode = Objects.requireNonNull(errorCode);
+            $.errorCode = errorCode;
             return this;
         }
+
         public Builder errorCode(Integer errorCode) {
-            this.errorCode = Output.of(Objects.requireNonNull(errorCode));
-            return this;
+            return errorCode(Output.of(errorCode));
         }
+
         public Builder responseCode(@Nullable Output<Integer> responseCode) {
-            this.responseCode = responseCode;
+            $.responseCode = responseCode;
             return this;
         }
-        public Builder responseCode(@Nullable Integer responseCode) {
-            this.responseCode = Codegen.ofNullable(responseCode);
-            return this;
+
+        public Builder responseCode(Integer responseCode) {
+            return responseCode(Output.of(responseCode));
         }
+
         public Builder responsePagePath(@Nullable Output<String> responsePagePath) {
-            this.responsePagePath = responsePagePath;
+            $.responsePagePath = responsePagePath;
             return this;
         }
-        public Builder responsePagePath(@Nullable String responsePagePath) {
-            this.responsePagePath = Codegen.ofNullable(responsePagePath);
-            return this;
-        }        public DistributionCustomErrorResponseGetArgs build() {
-            return new DistributionCustomErrorResponseGetArgs(errorCachingMinTtl, errorCode, responseCode, responsePagePath);
+
+        public Builder responsePagePath(String responsePagePath) {
+            return responsePagePath(Output.of(responsePagePath));
+        }
+
+        public DistributionCustomErrorResponseGetArgs build() {
+            $.errorCode = Objects.requireNonNull($.errorCode, "expected parameter 'errorCode' to be non-null");
+            return $;
         }
     }
+
 }

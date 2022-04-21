@@ -25,10 +25,10 @@ public final class SecurityProfileResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="encryptionAtHost")
-      private final @Nullable Boolean encryptionAtHost;
+    private @Nullable Boolean encryptionAtHost;
 
     public Optional<Boolean> encryptionAtHost() {
-        return this.encryptionAtHost == null ? Optional.empty() : Optional.ofNullable(this.encryptionAtHost);
+        return Optional.ofNullable(this.encryptionAtHost);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class SecurityProfileResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="securityType")
-      private final @Nullable String securityType;
+    private @Nullable String securityType;
 
     public Optional<String> securityType() {
-        return this.securityType == null ? Optional.empty() : Optional.ofNullable(this.securityType);
+        return Optional.ofNullable(this.securityType);
     }
 
     /**
@@ -47,64 +47,56 @@ public final class SecurityProfileResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="uefiSettings")
-      private final @Nullable UefiSettingsResponse uefiSettings;
+    private @Nullable UefiSettingsResponse uefiSettings;
 
     public Optional<UefiSettingsResponse> uefiSettings() {
-        return this.uefiSettings == null ? Optional.empty() : Optional.ofNullable(this.uefiSettings);
+        return Optional.ofNullable(this.uefiSettings);
     }
 
-    public SecurityProfileResponse(
-        @Nullable Boolean encryptionAtHost,
-        @Nullable String securityType,
-        @Nullable UefiSettingsResponse uefiSettings) {
-        this.encryptionAtHost = encryptionAtHost;
-        this.securityType = securityType;
-        this.uefiSettings = uefiSettings;
-    }
+    private SecurityProfileResponse() {}
 
-    private SecurityProfileResponse() {
-        this.encryptionAtHost = null;
-        this.securityType = null;
-        this.uefiSettings = null;
+    private SecurityProfileResponse(SecurityProfileResponse $) {
+        this.encryptionAtHost = $.encryptionAtHost;
+        this.securityType = $.securityType;
+        this.uefiSettings = $.uefiSettings;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SecurityProfileResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Boolean encryptionAtHost;
-        private @Nullable String securityType;
-        private @Nullable UefiSettingsResponse uefiSettings;
+        private SecurityProfileResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new SecurityProfileResponse();
         }
 
         public Builder(SecurityProfileResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.encryptionAtHost = defaults.encryptionAtHost;
-    	      this.securityType = defaults.securityType;
-    	      this.uefiSettings = defaults.uefiSettings;
+            $ = new SecurityProfileResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder encryptionAtHost(@Nullable Boolean encryptionAtHost) {
-            this.encryptionAtHost = encryptionAtHost;
+            $.encryptionAtHost = encryptionAtHost;
             return this;
         }
+
         public Builder securityType(@Nullable String securityType) {
-            this.securityType = securityType;
+            $.securityType = securityType;
             return this;
         }
+
         public Builder uefiSettings(@Nullable UefiSettingsResponse uefiSettings) {
-            this.uefiSettings = uefiSettings;
+            $.uefiSettings = uefiSettings;
             return this;
-        }        public SecurityProfileResponse build() {
-            return new SecurityProfileResponse(encryptionAtHost, securityType, uefiSettings);
+        }
+
+        public SecurityProfileResponse build() {
+            return $;
         }
     }
+
 }

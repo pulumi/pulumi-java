@@ -23,45 +23,44 @@ public final class QuotaInfoResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="coresUsed")
-      private final @Nullable Integer coresUsed;
+    private @Nullable Integer coresUsed;
 
     public Optional<Integer> coresUsed() {
-        return this.coresUsed == null ? Optional.empty() : Optional.ofNullable(this.coresUsed);
+        return Optional.ofNullable(this.coresUsed);
     }
 
-    public QuotaInfoResponse(@Nullable Integer coresUsed) {
-        this.coresUsed = coresUsed;
-    }
+    private QuotaInfoResponse() {}
 
-    private QuotaInfoResponse() {
-        this.coresUsed = null;
+    private QuotaInfoResponse(QuotaInfoResponse $) {
+        this.coresUsed = $.coresUsed;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(QuotaInfoResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Integer coresUsed;
+        private QuotaInfoResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new QuotaInfoResponse();
         }
 
         public Builder(QuotaInfoResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.coresUsed = defaults.coresUsed;
+            $ = new QuotaInfoResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder coresUsed(@Nullable Integer coresUsed) {
-            this.coresUsed = coresUsed;
+            $.coresUsed = coresUsed;
             return this;
-        }        public QuotaInfoResponse build() {
-            return new QuotaInfoResponse(coresUsed);
+        }
+
+        public QuotaInfoResponse build() {
+            return $;
         }
     }
+
 }

@@ -18,7 +18,7 @@ public final class InstanceGroupManagerStatusStatefulResponse extends com.pulumi
      * 
      */
     @Import(name="hasStatefulConfig", required=true)
-      private final Boolean hasStatefulConfig;
+    private Boolean hasStatefulConfig;
 
     public Boolean hasStatefulConfig() {
         return this.hasStatefulConfig;
@@ -29,55 +29,52 @@ public final class InstanceGroupManagerStatusStatefulResponse extends com.pulumi
      * 
      */
     @Import(name="perInstanceConfigs", required=true)
-      private final InstanceGroupManagerStatusStatefulPerInstanceConfigsResponse perInstanceConfigs;
+    private InstanceGroupManagerStatusStatefulPerInstanceConfigsResponse perInstanceConfigs;
 
     public InstanceGroupManagerStatusStatefulPerInstanceConfigsResponse perInstanceConfigs() {
         return this.perInstanceConfigs;
     }
 
-    public InstanceGroupManagerStatusStatefulResponse(
-        Boolean hasStatefulConfig,
-        InstanceGroupManagerStatusStatefulPerInstanceConfigsResponse perInstanceConfigs) {
-        this.hasStatefulConfig = Objects.requireNonNull(hasStatefulConfig, "expected parameter 'hasStatefulConfig' to be non-null");
-        this.perInstanceConfigs = Objects.requireNonNull(perInstanceConfigs, "expected parameter 'perInstanceConfigs' to be non-null");
-    }
+    private InstanceGroupManagerStatusStatefulResponse() {}
 
-    private InstanceGroupManagerStatusStatefulResponse() {
-        this.hasStatefulConfig = null;
-        this.perInstanceConfigs = null;
+    private InstanceGroupManagerStatusStatefulResponse(InstanceGroupManagerStatusStatefulResponse $) {
+        this.hasStatefulConfig = $.hasStatefulConfig;
+        this.perInstanceConfigs = $.perInstanceConfigs;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(InstanceGroupManagerStatusStatefulResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Boolean hasStatefulConfig;
-        private InstanceGroupManagerStatusStatefulPerInstanceConfigsResponse perInstanceConfigs;
+        private InstanceGroupManagerStatusStatefulResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new InstanceGroupManagerStatusStatefulResponse();
         }
 
         public Builder(InstanceGroupManagerStatusStatefulResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.hasStatefulConfig = defaults.hasStatefulConfig;
-    	      this.perInstanceConfigs = defaults.perInstanceConfigs;
+            $ = new InstanceGroupManagerStatusStatefulResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder hasStatefulConfig(Boolean hasStatefulConfig) {
-            this.hasStatefulConfig = Objects.requireNonNull(hasStatefulConfig);
+            $.hasStatefulConfig = hasStatefulConfig;
             return this;
         }
+
         public Builder perInstanceConfigs(InstanceGroupManagerStatusStatefulPerInstanceConfigsResponse perInstanceConfigs) {
-            this.perInstanceConfigs = Objects.requireNonNull(perInstanceConfigs);
+            $.perInstanceConfigs = perInstanceConfigs;
             return this;
-        }        public InstanceGroupManagerStatusStatefulResponse build() {
-            return new InstanceGroupManagerStatusStatefulResponse(hasStatefulConfig, perInstanceConfigs);
+        }
+
+        public InstanceGroupManagerStatusStatefulResponse build() {
+            $.hasStatefulConfig = Objects.requireNonNull($.hasStatefulConfig, "expected parameter 'hasStatefulConfig' to be non-null");
+            $.perInstanceConfigs = Objects.requireNonNull($.perInstanceConfigs, "expected parameter 'perInstanceConfigs' to be non-null");
+            return $;
         }
     }
+
 }

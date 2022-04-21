@@ -5,10 +5,10 @@ package com.pulumi.aws.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -17,76 +17,73 @@ public final class ProviderIgnoreTagsArgs extends com.pulumi.resources.ResourceA
     public static final ProviderIgnoreTagsArgs Empty = new ProviderIgnoreTagsArgs();
 
     @Import(name="keyPrefixes")
-      private final @Nullable Output<List<String>> keyPrefixes;
+    private @Nullable Output<List<String>> keyPrefixes;
 
-    public Output<List<String>> keyPrefixes() {
-        return this.keyPrefixes == null ? Codegen.empty() : this.keyPrefixes;
+    public Optional<Output<List<String>>> keyPrefixes() {
+        return Optional.ofNullable(this.keyPrefixes);
     }
 
     @Import(name="keys")
-      private final @Nullable Output<List<String>> keys;
+    private @Nullable Output<List<String>> keys;
 
-    public Output<List<String>> keys() {
-        return this.keys == null ? Codegen.empty() : this.keys;
+    public Optional<Output<List<String>>> keys() {
+        return Optional.ofNullable(this.keys);
     }
 
-    public ProviderIgnoreTagsArgs(
-        @Nullable Output<List<String>> keyPrefixes,
-        @Nullable Output<List<String>> keys) {
-        this.keyPrefixes = keyPrefixes;
-        this.keys = keys;
-    }
+    private ProviderIgnoreTagsArgs() {}
 
-    private ProviderIgnoreTagsArgs() {
-        this.keyPrefixes = Codegen.empty();
-        this.keys = Codegen.empty();
+    private ProviderIgnoreTagsArgs(ProviderIgnoreTagsArgs $) {
+        this.keyPrefixes = $.keyPrefixes;
+        this.keys = $.keys;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ProviderIgnoreTagsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> keyPrefixes;
-        private @Nullable Output<List<String>> keys;
+        private ProviderIgnoreTagsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ProviderIgnoreTagsArgs();
         }
 
         public Builder(ProviderIgnoreTagsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.keyPrefixes = defaults.keyPrefixes;
-    	      this.keys = defaults.keys;
+            $ = new ProviderIgnoreTagsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder keyPrefixes(@Nullable Output<List<String>> keyPrefixes) {
-            this.keyPrefixes = keyPrefixes;
+            $.keyPrefixes = keyPrefixes;
             return this;
         }
-        public Builder keyPrefixes(@Nullable List<String> keyPrefixes) {
-            this.keyPrefixes = Codegen.ofNullable(keyPrefixes);
-            return this;
+
+        public Builder keyPrefixes(List<String> keyPrefixes) {
+            return keyPrefixes(Output.of(keyPrefixes));
         }
+
         public Builder keyPrefixes(String... keyPrefixes) {
             return keyPrefixes(List.of(keyPrefixes));
         }
+
         public Builder keys(@Nullable Output<List<String>> keys) {
-            this.keys = keys;
+            $.keys = keys;
             return this;
         }
-        public Builder keys(@Nullable List<String> keys) {
-            this.keys = Codegen.ofNullable(keys);
-            return this;
+
+        public Builder keys(List<String> keys) {
+            return keys(Output.of(keys));
         }
+
         public Builder keys(String... keys) {
             return keys(List.of(keys));
-        }        public ProviderIgnoreTagsArgs build() {
-            return new ProviderIgnoreTagsArgs(keyPrefixes, keys);
+        }
+
+        public ProviderIgnoreTagsArgs build() {
+            return $;
         }
     }
+
 }

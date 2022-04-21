@@ -19,45 +19,44 @@ public final class JobOutputFormatOptions extends com.pulumi.resources.InvokeArg
     public static final JobOutputFormatOptions Empty = new JobOutputFormatOptions();
 
     @Import(name="csv")
-      private final @Nullable JobCsvOutputOptions csv;
+    private @Nullable JobCsvOutputOptions csv;
 
     public Optional<JobCsvOutputOptions> csv() {
-        return this.csv == null ? Optional.empty() : Optional.ofNullable(this.csv);
+        return Optional.ofNullable(this.csv);
     }
 
-    public JobOutputFormatOptions(@Nullable JobCsvOutputOptions csv) {
-        this.csv = csv;
-    }
+    private JobOutputFormatOptions() {}
 
-    private JobOutputFormatOptions() {
-        this.csv = null;
+    private JobOutputFormatOptions(JobOutputFormatOptions $) {
+        this.csv = $.csv;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(JobOutputFormatOptions defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable JobCsvOutputOptions csv;
+        private JobOutputFormatOptions $;
 
         public Builder() {
-    	      // Empty
+            $ = new JobOutputFormatOptions();
         }
 
         public Builder(JobOutputFormatOptions defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.csv = defaults.csv;
+            $ = new JobOutputFormatOptions(Objects.requireNonNull(defaults));
         }
 
         public Builder csv(@Nullable JobCsvOutputOptions csv) {
-            this.csv = csv;
+            $.csv = csv;
             return this;
-        }        public JobOutputFormatOptions build() {
-            return new JobOutputFormatOptions(csv);
+        }
+
+        public JobOutputFormatOptions build() {
+            return $;
         }
     }
+
 }

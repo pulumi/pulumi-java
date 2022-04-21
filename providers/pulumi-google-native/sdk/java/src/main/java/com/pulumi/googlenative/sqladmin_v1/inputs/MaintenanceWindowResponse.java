@@ -22,7 +22,7 @@ public final class MaintenanceWindowResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="day", required=true)
-      private final Integer day;
+    private Integer day;
 
     public Integer day() {
         return this.day;
@@ -33,7 +33,7 @@ public final class MaintenanceWindowResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="hour", required=true)
-      private final Integer hour;
+    private Integer hour;
 
     public Integer hour() {
         return this.hour;
@@ -44,7 +44,7 @@ public final class MaintenanceWindowResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="kind", required=true)
-      private final String kind;
+    private String kind;
 
     public String kind() {
         return this.kind;
@@ -55,73 +55,66 @@ public final class MaintenanceWindowResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="updateTrack", required=true)
-      private final String updateTrack;
+    private String updateTrack;
 
     public String updateTrack() {
         return this.updateTrack;
     }
 
-    public MaintenanceWindowResponse(
-        Integer day,
-        Integer hour,
-        String kind,
-        String updateTrack) {
-        this.day = Objects.requireNonNull(day, "expected parameter 'day' to be non-null");
-        this.hour = Objects.requireNonNull(hour, "expected parameter 'hour' to be non-null");
-        this.kind = Objects.requireNonNull(kind, "expected parameter 'kind' to be non-null");
-        this.updateTrack = Objects.requireNonNull(updateTrack, "expected parameter 'updateTrack' to be non-null");
-    }
+    private MaintenanceWindowResponse() {}
 
-    private MaintenanceWindowResponse() {
-        this.day = null;
-        this.hour = null;
-        this.kind = null;
-        this.updateTrack = null;
+    private MaintenanceWindowResponse(MaintenanceWindowResponse $) {
+        this.day = $.day;
+        this.hour = $.hour;
+        this.kind = $.kind;
+        this.updateTrack = $.updateTrack;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MaintenanceWindowResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Integer day;
-        private Integer hour;
-        private String kind;
-        private String updateTrack;
+        private MaintenanceWindowResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new MaintenanceWindowResponse();
         }
 
         public Builder(MaintenanceWindowResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.day = defaults.day;
-    	      this.hour = defaults.hour;
-    	      this.kind = defaults.kind;
-    	      this.updateTrack = defaults.updateTrack;
+            $ = new MaintenanceWindowResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder day(Integer day) {
-            this.day = Objects.requireNonNull(day);
+            $.day = day;
             return this;
         }
+
         public Builder hour(Integer hour) {
-            this.hour = Objects.requireNonNull(hour);
+            $.hour = hour;
             return this;
         }
+
         public Builder kind(String kind) {
-            this.kind = Objects.requireNonNull(kind);
+            $.kind = kind;
             return this;
         }
+
         public Builder updateTrack(String updateTrack) {
-            this.updateTrack = Objects.requireNonNull(updateTrack);
+            $.updateTrack = updateTrack;
             return this;
-        }        public MaintenanceWindowResponse build() {
-            return new MaintenanceWindowResponse(day, hour, kind, updateTrack);
+        }
+
+        public MaintenanceWindowResponse build() {
+            $.day = Objects.requireNonNull($.day, "expected parameter 'day' to be non-null");
+            $.hour = Objects.requireNonNull($.hour, "expected parameter 'hour' to be non-null");
+            $.kind = Objects.requireNonNull($.kind, "expected parameter 'kind' to be non-null");
+            $.updateTrack = Objects.requireNonNull($.updateTrack, "expected parameter 'updateTrack' to be non-null");
+            return $;
         }
     }
+
 }

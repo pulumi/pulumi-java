@@ -15,45 +15,44 @@ public final class SpotFleetMonitoring extends com.pulumi.resources.InvokeArgs {
     public static final SpotFleetMonitoring Empty = new SpotFleetMonitoring();
 
     @Import(name="enabled")
-      private final @Nullable Boolean enabled;
+    private @Nullable Boolean enabled;
 
     public Optional<Boolean> enabled() {
-        return this.enabled == null ? Optional.empty() : Optional.ofNullable(this.enabled);
+        return Optional.ofNullable(this.enabled);
     }
 
-    public SpotFleetMonitoring(@Nullable Boolean enabled) {
-        this.enabled = enabled;
-    }
+    private SpotFleetMonitoring() {}
 
-    private SpotFleetMonitoring() {
-        this.enabled = null;
+    private SpotFleetMonitoring(SpotFleetMonitoring $) {
+        this.enabled = $.enabled;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SpotFleetMonitoring defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Boolean enabled;
+        private SpotFleetMonitoring $;
 
         public Builder() {
-    	      // Empty
+            $ = new SpotFleetMonitoring();
         }
 
         public Builder(SpotFleetMonitoring defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.enabled = defaults.enabled;
+            $ = new SpotFleetMonitoring(Objects.requireNonNull(defaults));
         }
 
         public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = enabled;
+            $.enabled = enabled;
             return this;
-        }        public SpotFleetMonitoring build() {
-            return new SpotFleetMonitoring(enabled);
+        }
+
+        public SpotFleetMonitoring build() {
+            return $;
         }
     }
+
 }

@@ -27,10 +27,10 @@ public final class ModelEnvironmentDefinitionResponseResponseR extends com.pulum
      * 
      */
     @Import(name="bioConductorPackages")
-      private final @Nullable List<String> bioConductorPackages;
+    private @Nullable List<String> bioConductorPackages;
 
-    public List<String> bioConductorPackages() {
-        return this.bioConductorPackages == null ? List.of() : this.bioConductorPackages;
+    public Optional<List<String>> bioConductorPackages() {
+        return Optional.ofNullable(this.bioConductorPackages);
     }
 
     /**
@@ -38,10 +38,10 @@ public final class ModelEnvironmentDefinitionResponseResponseR extends com.pulum
      * 
      */
     @Import(name="cranPackages")
-      private final @Nullable List<RCranPackageResponse> cranPackages;
+    private @Nullable List<RCranPackageResponse> cranPackages;
 
-    public List<RCranPackageResponse> cranPackages() {
-        return this.cranPackages == null ? List.of() : this.cranPackages;
+    public Optional<List<RCranPackageResponse>> cranPackages() {
+        return Optional.ofNullable(this.cranPackages);
     }
 
     /**
@@ -49,10 +49,10 @@ public final class ModelEnvironmentDefinitionResponseResponseR extends com.pulum
      * 
      */
     @Import(name="customUrlPackages")
-      private final @Nullable List<String> customUrlPackages;
+    private @Nullable List<String> customUrlPackages;
 
-    public List<String> customUrlPackages() {
-        return this.customUrlPackages == null ? List.of() : this.customUrlPackages;
+    public Optional<List<String>> customUrlPackages() {
+        return Optional.ofNullable(this.customUrlPackages);
     }
 
     /**
@@ -60,10 +60,10 @@ public final class ModelEnvironmentDefinitionResponseResponseR extends com.pulum
      * 
      */
     @Import(name="gitHubPackages")
-      private final @Nullable List<RGitHubPackageResponseResponse> gitHubPackages;
+    private @Nullable List<RGitHubPackageResponseResponse> gitHubPackages;
 
-    public List<RGitHubPackageResponseResponse> gitHubPackages() {
-        return this.gitHubPackages == null ? List.of() : this.gitHubPackages;
+    public Optional<List<RGitHubPackageResponseResponse>> gitHubPackages() {
+        return Optional.ofNullable(this.gitHubPackages);
     }
 
     /**
@@ -71,10 +71,10 @@ public final class ModelEnvironmentDefinitionResponseResponseR extends com.pulum
      * 
      */
     @Import(name="rVersion")
-      private final @Nullable String rVersion;
+    private @Nullable String rVersion;
 
     public Optional<String> rVersion() {
-        return this.rVersion == null ? Optional.empty() : Optional.ofNullable(this.rVersion);
+        return Optional.ofNullable(this.rVersion);
     }
 
     /**
@@ -83,10 +83,10 @@ public final class ModelEnvironmentDefinitionResponseResponseR extends com.pulum
      * 
      */
     @Import(name="rscriptPath")
-      private final @Nullable String rscriptPath;
+    private @Nullable String rscriptPath;
 
     public Optional<String> rscriptPath() {
-        return this.rscriptPath == null ? Optional.empty() : Optional.ofNullable(this.rscriptPath);
+        return Optional.ofNullable(this.rscriptPath);
     }
 
     /**
@@ -94,10 +94,10 @@ public final class ModelEnvironmentDefinitionResponseResponseR extends com.pulum
      * 
      */
     @Import(name="snapshotDate")
-      private final @Nullable String snapshotDate;
+    private @Nullable String snapshotDate;
 
     public Optional<String> snapshotDate() {
-        return this.snapshotDate == null ? Optional.empty() : Optional.ofNullable(this.snapshotDate);
+        return Optional.ofNullable(this.snapshotDate);
     }
 
     /**
@@ -105,121 +105,102 @@ public final class ModelEnvironmentDefinitionResponseResponseR extends com.pulum
      * 
      */
     @Import(name="userManaged")
-      private final @Nullable Boolean userManaged;
+    private @Nullable Boolean userManaged;
 
     public Optional<Boolean> userManaged() {
-        return this.userManaged == null ? Optional.empty() : Optional.ofNullable(this.userManaged);
+        return Optional.ofNullable(this.userManaged);
     }
 
-    public ModelEnvironmentDefinitionResponseResponseR(
-        @Nullable List<String> bioConductorPackages,
-        @Nullable List<RCranPackageResponse> cranPackages,
-        @Nullable List<String> customUrlPackages,
-        @Nullable List<RGitHubPackageResponseResponse> gitHubPackages,
-        @Nullable String rVersion,
-        @Nullable String rscriptPath,
-        @Nullable String snapshotDate,
-        @Nullable Boolean userManaged) {
-        this.bioConductorPackages = bioConductorPackages;
-        this.cranPackages = cranPackages;
-        this.customUrlPackages = customUrlPackages;
-        this.gitHubPackages = gitHubPackages;
-        this.rVersion = rVersion;
-        this.rscriptPath = rscriptPath;
-        this.snapshotDate = snapshotDate;
-        this.userManaged = userManaged;
-    }
+    private ModelEnvironmentDefinitionResponseResponseR() {}
 
-    private ModelEnvironmentDefinitionResponseResponseR() {
-        this.bioConductorPackages = List.of();
-        this.cranPackages = List.of();
-        this.customUrlPackages = List.of();
-        this.gitHubPackages = List.of();
-        this.rVersion = null;
-        this.rscriptPath = null;
-        this.snapshotDate = null;
-        this.userManaged = null;
+    private ModelEnvironmentDefinitionResponseResponseR(ModelEnvironmentDefinitionResponseResponseR $) {
+        this.bioConductorPackages = $.bioConductorPackages;
+        this.cranPackages = $.cranPackages;
+        this.customUrlPackages = $.customUrlPackages;
+        this.gitHubPackages = $.gitHubPackages;
+        this.rVersion = $.rVersion;
+        this.rscriptPath = $.rscriptPath;
+        this.snapshotDate = $.snapshotDate;
+        this.userManaged = $.userManaged;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ModelEnvironmentDefinitionResponseResponseR defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<String> bioConductorPackages;
-        private @Nullable List<RCranPackageResponse> cranPackages;
-        private @Nullable List<String> customUrlPackages;
-        private @Nullable List<RGitHubPackageResponseResponse> gitHubPackages;
-        private @Nullable String rVersion;
-        private @Nullable String rscriptPath;
-        private @Nullable String snapshotDate;
-        private @Nullable Boolean userManaged;
+        private ModelEnvironmentDefinitionResponseResponseR $;
 
         public Builder() {
-    	      // Empty
+            $ = new ModelEnvironmentDefinitionResponseResponseR();
         }
 
         public Builder(ModelEnvironmentDefinitionResponseResponseR defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.bioConductorPackages = defaults.bioConductorPackages;
-    	      this.cranPackages = defaults.cranPackages;
-    	      this.customUrlPackages = defaults.customUrlPackages;
-    	      this.gitHubPackages = defaults.gitHubPackages;
-    	      this.rVersion = defaults.rVersion;
-    	      this.rscriptPath = defaults.rscriptPath;
-    	      this.snapshotDate = defaults.snapshotDate;
-    	      this.userManaged = defaults.userManaged;
+            $ = new ModelEnvironmentDefinitionResponseResponseR(Objects.requireNonNull(defaults));
         }
 
         public Builder bioConductorPackages(@Nullable List<String> bioConductorPackages) {
-            this.bioConductorPackages = bioConductorPackages;
+            $.bioConductorPackages = bioConductorPackages;
             return this;
         }
+
         public Builder bioConductorPackages(String... bioConductorPackages) {
             return bioConductorPackages(List.of(bioConductorPackages));
         }
+
         public Builder cranPackages(@Nullable List<RCranPackageResponse> cranPackages) {
-            this.cranPackages = cranPackages;
+            $.cranPackages = cranPackages;
             return this;
         }
+
         public Builder cranPackages(RCranPackageResponse... cranPackages) {
             return cranPackages(List.of(cranPackages));
         }
+
         public Builder customUrlPackages(@Nullable List<String> customUrlPackages) {
-            this.customUrlPackages = customUrlPackages;
+            $.customUrlPackages = customUrlPackages;
             return this;
         }
+
         public Builder customUrlPackages(String... customUrlPackages) {
             return customUrlPackages(List.of(customUrlPackages));
         }
+
         public Builder gitHubPackages(@Nullable List<RGitHubPackageResponseResponse> gitHubPackages) {
-            this.gitHubPackages = gitHubPackages;
+            $.gitHubPackages = gitHubPackages;
             return this;
         }
+
         public Builder gitHubPackages(RGitHubPackageResponseResponse... gitHubPackages) {
             return gitHubPackages(List.of(gitHubPackages));
         }
+
         public Builder rVersion(@Nullable String rVersion) {
-            this.rVersion = rVersion;
+            $.rVersion = rVersion;
             return this;
         }
+
         public Builder rscriptPath(@Nullable String rscriptPath) {
-            this.rscriptPath = rscriptPath;
+            $.rscriptPath = rscriptPath;
             return this;
         }
+
         public Builder snapshotDate(@Nullable String snapshotDate) {
-            this.snapshotDate = snapshotDate;
+            $.snapshotDate = snapshotDate;
             return this;
         }
+
         public Builder userManaged(@Nullable Boolean userManaged) {
-            this.userManaged = userManaged;
+            $.userManaged = userManaged;
             return this;
-        }        public ModelEnvironmentDefinitionResponseResponseR build() {
-            return new ModelEnvironmentDefinitionResponseResponseR(bioConductorPackages, cranPackages, customUrlPackages, gitHubPackages, rVersion, rscriptPath, snapshotDate, userManaged);
+        }
+
+        public ModelEnvironmentDefinitionResponseResponseR build() {
+            return $;
         }
     }
+
 }

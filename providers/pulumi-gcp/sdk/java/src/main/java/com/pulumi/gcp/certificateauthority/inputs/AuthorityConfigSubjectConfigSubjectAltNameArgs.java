@@ -5,10 +5,10 @@ package com.pulumi.gcp.certificateauthority.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class AuthorityConfigSubjectConfigSubjectAltNameArgs extends com.pu
      * 
      */
     @Import(name="dnsNames")
-      private final @Nullable Output<List<String>> dnsNames;
+    private @Nullable Output<List<String>> dnsNames;
 
-    public Output<List<String>> dnsNames() {
-        return this.dnsNames == null ? Codegen.empty() : this.dnsNames;
+    public Optional<Output<List<String>>> dnsNames() {
+        return Optional.ofNullable(this.dnsNames);
     }
 
     /**
@@ -32,10 +32,10 @@ public final class AuthorityConfigSubjectConfigSubjectAltNameArgs extends com.pu
      * 
      */
     @Import(name="emailAddresses")
-      private final @Nullable Output<List<String>> emailAddresses;
+    private @Nullable Output<List<String>> emailAddresses;
 
-    public Output<List<String>> emailAddresses() {
-        return this.emailAddresses == null ? Codegen.empty() : this.emailAddresses;
+    public Optional<Output<List<String>>> emailAddresses() {
+        return Optional.ofNullable(this.emailAddresses);
     }
 
     /**
@@ -43,10 +43,10 @@ public final class AuthorityConfigSubjectConfigSubjectAltNameArgs extends com.pu
      * 
      */
     @Import(name="ipAddresses")
-      private final @Nullable Output<List<String>> ipAddresses;
+    private @Nullable Output<List<String>> ipAddresses;
 
-    public Output<List<String>> ipAddresses() {
-        return this.ipAddresses == null ? Codegen.empty() : this.ipAddresses;
+    public Optional<Output<List<String>>> ipAddresses() {
+        return Optional.ofNullable(this.ipAddresses);
     }
 
     /**
@@ -54,101 +54,94 @@ public final class AuthorityConfigSubjectConfigSubjectAltNameArgs extends com.pu
      * 
      */
     @Import(name="uris")
-      private final @Nullable Output<List<String>> uris;
+    private @Nullable Output<List<String>> uris;
 
-    public Output<List<String>> uris() {
-        return this.uris == null ? Codegen.empty() : this.uris;
+    public Optional<Output<List<String>>> uris() {
+        return Optional.ofNullable(this.uris);
     }
 
-    public AuthorityConfigSubjectConfigSubjectAltNameArgs(
-        @Nullable Output<List<String>> dnsNames,
-        @Nullable Output<List<String>> emailAddresses,
-        @Nullable Output<List<String>> ipAddresses,
-        @Nullable Output<List<String>> uris) {
-        this.dnsNames = dnsNames;
-        this.emailAddresses = emailAddresses;
-        this.ipAddresses = ipAddresses;
-        this.uris = uris;
-    }
+    private AuthorityConfigSubjectConfigSubjectAltNameArgs() {}
 
-    private AuthorityConfigSubjectConfigSubjectAltNameArgs() {
-        this.dnsNames = Codegen.empty();
-        this.emailAddresses = Codegen.empty();
-        this.ipAddresses = Codegen.empty();
-        this.uris = Codegen.empty();
+    private AuthorityConfigSubjectConfigSubjectAltNameArgs(AuthorityConfigSubjectConfigSubjectAltNameArgs $) {
+        this.dnsNames = $.dnsNames;
+        this.emailAddresses = $.emailAddresses;
+        this.ipAddresses = $.ipAddresses;
+        this.uris = $.uris;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AuthorityConfigSubjectConfigSubjectAltNameArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> dnsNames;
-        private @Nullable Output<List<String>> emailAddresses;
-        private @Nullable Output<List<String>> ipAddresses;
-        private @Nullable Output<List<String>> uris;
+        private AuthorityConfigSubjectConfigSubjectAltNameArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AuthorityConfigSubjectConfigSubjectAltNameArgs();
         }
 
         public Builder(AuthorityConfigSubjectConfigSubjectAltNameArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dnsNames = defaults.dnsNames;
-    	      this.emailAddresses = defaults.emailAddresses;
-    	      this.ipAddresses = defaults.ipAddresses;
-    	      this.uris = defaults.uris;
+            $ = new AuthorityConfigSubjectConfigSubjectAltNameArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder dnsNames(@Nullable Output<List<String>> dnsNames) {
-            this.dnsNames = dnsNames;
+            $.dnsNames = dnsNames;
             return this;
         }
-        public Builder dnsNames(@Nullable List<String> dnsNames) {
-            this.dnsNames = Codegen.ofNullable(dnsNames);
-            return this;
+
+        public Builder dnsNames(List<String> dnsNames) {
+            return dnsNames(Output.of(dnsNames));
         }
+
         public Builder dnsNames(String... dnsNames) {
             return dnsNames(List.of(dnsNames));
         }
+
         public Builder emailAddresses(@Nullable Output<List<String>> emailAddresses) {
-            this.emailAddresses = emailAddresses;
+            $.emailAddresses = emailAddresses;
             return this;
         }
-        public Builder emailAddresses(@Nullable List<String> emailAddresses) {
-            this.emailAddresses = Codegen.ofNullable(emailAddresses);
-            return this;
+
+        public Builder emailAddresses(List<String> emailAddresses) {
+            return emailAddresses(Output.of(emailAddresses));
         }
+
         public Builder emailAddresses(String... emailAddresses) {
             return emailAddresses(List.of(emailAddresses));
         }
+
         public Builder ipAddresses(@Nullable Output<List<String>> ipAddresses) {
-            this.ipAddresses = ipAddresses;
+            $.ipAddresses = ipAddresses;
             return this;
         }
-        public Builder ipAddresses(@Nullable List<String> ipAddresses) {
-            this.ipAddresses = Codegen.ofNullable(ipAddresses);
-            return this;
+
+        public Builder ipAddresses(List<String> ipAddresses) {
+            return ipAddresses(Output.of(ipAddresses));
         }
+
         public Builder ipAddresses(String... ipAddresses) {
             return ipAddresses(List.of(ipAddresses));
         }
+
         public Builder uris(@Nullable Output<List<String>> uris) {
-            this.uris = uris;
+            $.uris = uris;
             return this;
         }
-        public Builder uris(@Nullable List<String> uris) {
-            this.uris = Codegen.ofNullable(uris);
-            return this;
+
+        public Builder uris(List<String> uris) {
+            return uris(Output.of(uris));
         }
+
         public Builder uris(String... uris) {
             return uris(List.of(uris));
-        }        public AuthorityConfigSubjectConfigSubjectAltNameArgs build() {
-            return new AuthorityConfigSubjectConfigSubjectAltNameArgs(dnsNames, emailAddresses, ipAddresses, uris);
+        }
+
+        public AuthorityConfigSubjectConfigSubjectAltNameArgs build() {
+            return $;
         }
     }
+
 }

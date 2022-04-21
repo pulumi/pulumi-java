@@ -23,10 +23,10 @@ public final class VirtualMachineSshCredentialsResponse extends com.pulumi.resou
      * 
      */
     @Import(name="password")
-      private final @Nullable String password;
+    private @Nullable String password;
 
     public Optional<String> password() {
-        return this.password == null ? Optional.empty() : Optional.ofNullable(this.password);
+        return Optional.ofNullable(this.password);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class VirtualMachineSshCredentialsResponse extends com.pulumi.resou
      * 
      */
     @Import(name="privateKeyData")
-      private final @Nullable String privateKeyData;
+    private @Nullable String privateKeyData;
 
     public Optional<String> privateKeyData() {
-        return this.privateKeyData == null ? Optional.empty() : Optional.ofNullable(this.privateKeyData);
+        return Optional.ofNullable(this.privateKeyData);
     }
 
     /**
@@ -45,10 +45,10 @@ public final class VirtualMachineSshCredentialsResponse extends com.pulumi.resou
      * 
      */
     @Import(name="publicKeyData")
-      private final @Nullable String publicKeyData;
+    private @Nullable String publicKeyData;
 
     public Optional<String> publicKeyData() {
-        return this.publicKeyData == null ? Optional.empty() : Optional.ofNullable(this.publicKeyData);
+        return Optional.ofNullable(this.publicKeyData);
     }
 
     /**
@@ -56,73 +56,62 @@ public final class VirtualMachineSshCredentialsResponse extends com.pulumi.resou
      * 
      */
     @Import(name="username")
-      private final @Nullable String username;
+    private @Nullable String username;
 
     public Optional<String> username() {
-        return this.username == null ? Optional.empty() : Optional.ofNullable(this.username);
+        return Optional.ofNullable(this.username);
     }
 
-    public VirtualMachineSshCredentialsResponse(
-        @Nullable String password,
-        @Nullable String privateKeyData,
-        @Nullable String publicKeyData,
-        @Nullable String username) {
-        this.password = password;
-        this.privateKeyData = privateKeyData;
-        this.publicKeyData = publicKeyData;
-        this.username = username;
-    }
+    private VirtualMachineSshCredentialsResponse() {}
 
-    private VirtualMachineSshCredentialsResponse() {
-        this.password = null;
-        this.privateKeyData = null;
-        this.publicKeyData = null;
-        this.username = null;
+    private VirtualMachineSshCredentialsResponse(VirtualMachineSshCredentialsResponse $) {
+        this.password = $.password;
+        this.privateKeyData = $.privateKeyData;
+        this.publicKeyData = $.publicKeyData;
+        this.username = $.username;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VirtualMachineSshCredentialsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String password;
-        private @Nullable String privateKeyData;
-        private @Nullable String publicKeyData;
-        private @Nullable String username;
+        private VirtualMachineSshCredentialsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new VirtualMachineSshCredentialsResponse();
         }
 
         public Builder(VirtualMachineSshCredentialsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.password = defaults.password;
-    	      this.privateKeyData = defaults.privateKeyData;
-    	      this.publicKeyData = defaults.publicKeyData;
-    	      this.username = defaults.username;
+            $ = new VirtualMachineSshCredentialsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder password(@Nullable String password) {
-            this.password = password;
+            $.password = password;
             return this;
         }
+
         public Builder privateKeyData(@Nullable String privateKeyData) {
-            this.privateKeyData = privateKeyData;
+            $.privateKeyData = privateKeyData;
             return this;
         }
+
         public Builder publicKeyData(@Nullable String publicKeyData) {
-            this.publicKeyData = publicKeyData;
+            $.publicKeyData = publicKeyData;
             return this;
         }
+
         public Builder username(@Nullable String username) {
-            this.username = username;
+            $.username = username;
             return this;
-        }        public VirtualMachineSshCredentialsResponse build() {
-            return new VirtualMachineSshCredentialsResponse(password, privateKeyData, publicKeyData, username);
+        }
+
+        public VirtualMachineSshCredentialsResponse build() {
+            return $;
         }
     }
+
 }

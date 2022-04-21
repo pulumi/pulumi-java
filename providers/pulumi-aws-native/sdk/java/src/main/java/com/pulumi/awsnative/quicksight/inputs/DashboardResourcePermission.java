@@ -22,7 +22,7 @@ public final class DashboardResourcePermission extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="actions", required=true)
-      private final List<String> actions;
+    private List<String> actions;
 
     public List<String> actions() {
         return this.actions;
@@ -47,58 +47,56 @@ public final class DashboardResourcePermission extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="principal", required=true)
-      private final String principal;
+    private String principal;
 
     public String principal() {
         return this.principal;
     }
 
-    public DashboardResourcePermission(
-        List<String> actions,
-        String principal) {
-        this.actions = Objects.requireNonNull(actions, "expected parameter 'actions' to be non-null");
-        this.principal = Objects.requireNonNull(principal, "expected parameter 'principal' to be non-null");
-    }
+    private DashboardResourcePermission() {}
 
-    private DashboardResourcePermission() {
-        this.actions = List.of();
-        this.principal = null;
+    private DashboardResourcePermission(DashboardResourcePermission $) {
+        this.actions = $.actions;
+        this.principal = $.principal;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DashboardResourcePermission defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<String> actions;
-        private String principal;
+        private DashboardResourcePermission $;
 
         public Builder() {
-    	      // Empty
+            $ = new DashboardResourcePermission();
         }
 
         public Builder(DashboardResourcePermission defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.actions = defaults.actions;
-    	      this.principal = defaults.principal;
+            $ = new DashboardResourcePermission(Objects.requireNonNull(defaults));
         }
 
         public Builder actions(List<String> actions) {
-            this.actions = Objects.requireNonNull(actions);
+            $.actions = actions;
             return this;
         }
+
         public Builder actions(String... actions) {
             return actions(List.of(actions));
         }
+
         public Builder principal(String principal) {
-            this.principal = Objects.requireNonNull(principal);
+            $.principal = principal;
             return this;
-        }        public DashboardResourcePermission build() {
-            return new DashboardResourcePermission(actions, principal);
+        }
+
+        public DashboardResourcePermission build() {
+            $.actions = Objects.requireNonNull($.actions, "expected parameter 'actions' to be non-null");
+            $.principal = Objects.requireNonNull($.principal, "expected parameter 'principal' to be non-null");
+            return $;
         }
     }
+
 }

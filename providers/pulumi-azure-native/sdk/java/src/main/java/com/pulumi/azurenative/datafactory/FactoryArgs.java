@@ -12,10 +12,10 @@ import com.pulumi.azurenative.datafactory.inputs.GlobalParameterSpecificationArg
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -28,10 +28,10 @@ public final class FactoryArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="encryption")
-      private final @Nullable Output<EncryptionConfigurationArgs> encryption;
+    private @Nullable Output<EncryptionConfigurationArgs> encryption;
 
-    public Output<EncryptionConfigurationArgs> encryption() {
-        return this.encryption == null ? Codegen.empty() : this.encryption;
+    public Optional<Output<EncryptionConfigurationArgs>> encryption() {
+        return Optional.ofNullable(this.encryption);
     }
 
     /**
@@ -39,10 +39,10 @@ public final class FactoryArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="factoryName")
-      private final @Nullable Output<String> factoryName;
+    private @Nullable Output<String> factoryName;
 
-    public Output<String> factoryName() {
-        return this.factoryName == null ? Codegen.empty() : this.factoryName;
+    public Optional<Output<String>> factoryName() {
+        return Optional.ofNullable(this.factoryName);
     }
 
     /**
@@ -50,10 +50,10 @@ public final class FactoryArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="globalParameters")
-      private final @Nullable Output<Map<String,GlobalParameterSpecificationArgs>> globalParameters;
+    private @Nullable Output<Map<String,GlobalParameterSpecificationArgs>> globalParameters;
 
-    public Output<Map<String,GlobalParameterSpecificationArgs>> globalParameters() {
-        return this.globalParameters == null ? Codegen.empty() : this.globalParameters;
+    public Optional<Output<Map<String,GlobalParameterSpecificationArgs>>> globalParameters() {
+        return Optional.ofNullable(this.globalParameters);
     }
 
     /**
@@ -61,10 +61,10 @@ public final class FactoryArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="identity")
-      private final @Nullable Output<FactoryIdentityArgs> identity;
+    private @Nullable Output<FactoryIdentityArgs> identity;
 
-    public Output<FactoryIdentityArgs> identity() {
-        return this.identity == null ? Codegen.empty() : this.identity;
+    public Optional<Output<FactoryIdentityArgs>> identity() {
+        return Optional.ofNullable(this.identity);
     }
 
     /**
@@ -72,10 +72,10 @@ public final class FactoryArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -83,10 +83,10 @@ public final class FactoryArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="publicNetworkAccess")
-      private final @Nullable Output<Either<String,PublicNetworkAccess>> publicNetworkAccess;
+    private @Nullable Output<Either<String,PublicNetworkAccess>> publicNetworkAccess;
 
-    public Output<Either<String,PublicNetworkAccess>> publicNetworkAccess() {
-        return this.publicNetworkAccess == null ? Codegen.empty() : this.publicNetworkAccess;
+    public Optional<Output<Either<String,PublicNetworkAccess>>> publicNetworkAccess() {
+        return Optional.ofNullable(this.publicNetworkAccess);
     }
 
     /**
@@ -94,10 +94,10 @@ public final class FactoryArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="repoConfiguration")
-      private final @Nullable Output<Either<FactoryGitHubConfigurationArgs,FactoryVSTSConfigurationArgs>> repoConfiguration;
+    private @Nullable Output<Either<FactoryGitHubConfigurationArgs,FactoryVSTSConfigurationArgs>> repoConfiguration;
 
-    public Output<Either<FactoryGitHubConfigurationArgs,FactoryVSTSConfigurationArgs>> repoConfiguration() {
-        return this.repoConfiguration == null ? Codegen.empty() : this.repoConfiguration;
+    public Optional<Output<Either<FactoryGitHubConfigurationArgs,FactoryVSTSConfigurationArgs>>> repoConfiguration() {
+        return Optional.ofNullable(this.repoConfiguration);
     }
 
     /**
@@ -105,7 +105,7 @@ public final class FactoryArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -116,154 +116,129 @@ public final class FactoryArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public FactoryArgs(
-        @Nullable Output<EncryptionConfigurationArgs> encryption,
-        @Nullable Output<String> factoryName,
-        @Nullable Output<Map<String,GlobalParameterSpecificationArgs>> globalParameters,
-        @Nullable Output<FactoryIdentityArgs> identity,
-        @Nullable Output<String> location,
-        @Nullable Output<Either<String,PublicNetworkAccess>> publicNetworkAccess,
-        @Nullable Output<Either<FactoryGitHubConfigurationArgs,FactoryVSTSConfigurationArgs>> repoConfiguration,
-        Output<String> resourceGroupName,
-        @Nullable Output<Map<String,String>> tags) {
-        this.encryption = encryption;
-        this.factoryName = factoryName;
-        this.globalParameters = globalParameters;
-        this.identity = identity;
-        this.location = location;
-        this.publicNetworkAccess = publicNetworkAccess;
-        this.repoConfiguration = repoConfiguration;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.tags = tags;
-    }
+    private FactoryArgs() {}
 
-    private FactoryArgs() {
-        this.encryption = Codegen.empty();
-        this.factoryName = Codegen.empty();
-        this.globalParameters = Codegen.empty();
-        this.identity = Codegen.empty();
-        this.location = Codegen.empty();
-        this.publicNetworkAccess = Codegen.empty();
-        this.repoConfiguration = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.tags = Codegen.empty();
+    private FactoryArgs(FactoryArgs $) {
+        this.encryption = $.encryption;
+        this.factoryName = $.factoryName;
+        this.globalParameters = $.globalParameters;
+        this.identity = $.identity;
+        this.location = $.location;
+        this.publicNetworkAccess = $.publicNetworkAccess;
+        this.repoConfiguration = $.repoConfiguration;
+        this.resourceGroupName = $.resourceGroupName;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FactoryArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<EncryptionConfigurationArgs> encryption;
-        private @Nullable Output<String> factoryName;
-        private @Nullable Output<Map<String,GlobalParameterSpecificationArgs>> globalParameters;
-        private @Nullable Output<FactoryIdentityArgs> identity;
-        private @Nullable Output<String> location;
-        private @Nullable Output<Either<String,PublicNetworkAccess>> publicNetworkAccess;
-        private @Nullable Output<Either<FactoryGitHubConfigurationArgs,FactoryVSTSConfigurationArgs>> repoConfiguration;
-        private Output<String> resourceGroupName;
-        private @Nullable Output<Map<String,String>> tags;
+        private FactoryArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new FactoryArgs();
         }
 
         public Builder(FactoryArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.encryption = defaults.encryption;
-    	      this.factoryName = defaults.factoryName;
-    	      this.globalParameters = defaults.globalParameters;
-    	      this.identity = defaults.identity;
-    	      this.location = defaults.location;
-    	      this.publicNetworkAccess = defaults.publicNetworkAccess;
-    	      this.repoConfiguration = defaults.repoConfiguration;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.tags = defaults.tags;
+            $ = new FactoryArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder encryption(@Nullable Output<EncryptionConfigurationArgs> encryption) {
-            this.encryption = encryption;
+            $.encryption = encryption;
             return this;
         }
-        public Builder encryption(@Nullable EncryptionConfigurationArgs encryption) {
-            this.encryption = Codegen.ofNullable(encryption);
-            return this;
+
+        public Builder encryption(EncryptionConfigurationArgs encryption) {
+            return encryption(Output.of(encryption));
         }
+
         public Builder factoryName(@Nullable Output<String> factoryName) {
-            this.factoryName = factoryName;
+            $.factoryName = factoryName;
             return this;
         }
-        public Builder factoryName(@Nullable String factoryName) {
-            this.factoryName = Codegen.ofNullable(factoryName);
-            return this;
+
+        public Builder factoryName(String factoryName) {
+            return factoryName(Output.of(factoryName));
         }
+
         public Builder globalParameters(@Nullable Output<Map<String,GlobalParameterSpecificationArgs>> globalParameters) {
-            this.globalParameters = globalParameters;
+            $.globalParameters = globalParameters;
             return this;
         }
-        public Builder globalParameters(@Nullable Map<String,GlobalParameterSpecificationArgs> globalParameters) {
-            this.globalParameters = Codegen.ofNullable(globalParameters);
-            return this;
+
+        public Builder globalParameters(Map<String,GlobalParameterSpecificationArgs> globalParameters) {
+            return globalParameters(Output.of(globalParameters));
         }
+
         public Builder identity(@Nullable Output<FactoryIdentityArgs> identity) {
-            this.identity = identity;
+            $.identity = identity;
             return this;
         }
-        public Builder identity(@Nullable FactoryIdentityArgs identity) {
-            this.identity = Codegen.ofNullable(identity);
-            return this;
+
+        public Builder identity(FactoryIdentityArgs identity) {
+            return identity(Output.of(identity));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder publicNetworkAccess(@Nullable Output<Either<String,PublicNetworkAccess>> publicNetworkAccess) {
-            this.publicNetworkAccess = publicNetworkAccess;
+            $.publicNetworkAccess = publicNetworkAccess;
             return this;
         }
-        public Builder publicNetworkAccess(@Nullable Either<String,PublicNetworkAccess> publicNetworkAccess) {
-            this.publicNetworkAccess = Codegen.ofNullable(publicNetworkAccess);
-            return this;
+
+        public Builder publicNetworkAccess(Either<String,PublicNetworkAccess> publicNetworkAccess) {
+            return publicNetworkAccess(Output.of(publicNetworkAccess));
         }
+
         public Builder repoConfiguration(@Nullable Output<Either<FactoryGitHubConfigurationArgs,FactoryVSTSConfigurationArgs>> repoConfiguration) {
-            this.repoConfiguration = repoConfiguration;
+            $.repoConfiguration = repoConfiguration;
             return this;
         }
-        public Builder repoConfiguration(@Nullable Either<FactoryGitHubConfigurationArgs,FactoryVSTSConfigurationArgs> repoConfiguration) {
-            this.repoConfiguration = Codegen.ofNullable(repoConfiguration);
-            return this;
+
+        public Builder repoConfiguration(Either<FactoryGitHubConfigurationArgs,FactoryVSTSConfigurationArgs> repoConfiguration) {
+            return repoConfiguration(Output.of(repoConfiguration));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
-        }        public FactoryArgs build() {
-            return new FactoryArgs(encryption, factoryName, globalParameters, identity, location, publicNetworkAccess, repoConfiguration, resourceGroupName, tags);
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
+        }
+
+        public FactoryArgs build() {
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

@@ -9,12 +9,12 @@ import com.pulumi.aws.sagemaker.inputs.ModelPrimaryContainerGetArgs;
 import com.pulumi.aws.sagemaker.inputs.ModelVpcConfigGetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +27,10 @@ public final class ModelState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="arn")
-      private final @Nullable Output<String> arn;
+    private @Nullable Output<String> arn;
 
-    public Output<String> arn() {
-        return this.arn == null ? Codegen.empty() : this.arn;
+    public Optional<Output<String>> arn() {
+        return Optional.ofNullable(this.arn);
     }
 
     /**
@@ -38,10 +38,10 @@ public final class ModelState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="containers")
-      private final @Nullable Output<List<ModelContainerGetArgs>> containers;
+    private @Nullable Output<List<ModelContainerGetArgs>> containers;
 
-    public Output<List<ModelContainerGetArgs>> containers() {
-        return this.containers == null ? Codegen.empty() : this.containers;
+    public Optional<Output<List<ModelContainerGetArgs>>> containers() {
+        return Optional.ofNullable(this.containers);
     }
 
     /**
@@ -49,10 +49,10 @@ public final class ModelState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="enableNetworkIsolation")
-      private final @Nullable Output<Boolean> enableNetworkIsolation;
+    private @Nullable Output<Boolean> enableNetworkIsolation;
 
-    public Output<Boolean> enableNetworkIsolation() {
-        return this.enableNetworkIsolation == null ? Codegen.empty() : this.enableNetworkIsolation;
+    public Optional<Output<Boolean>> enableNetworkIsolation() {
+        return Optional.ofNullable(this.enableNetworkIsolation);
     }
 
     /**
@@ -60,10 +60,10 @@ public final class ModelState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="executionRoleArn")
-      private final @Nullable Output<String> executionRoleArn;
+    private @Nullable Output<String> executionRoleArn;
 
-    public Output<String> executionRoleArn() {
-        return this.executionRoleArn == null ? Codegen.empty() : this.executionRoleArn;
+    public Optional<Output<String>> executionRoleArn() {
+        return Optional.ofNullable(this.executionRoleArn);
     }
 
     /**
@@ -71,10 +71,10 @@ public final class ModelState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="inferenceExecutionConfig")
-      private final @Nullable Output<ModelInferenceExecutionConfigGetArgs> inferenceExecutionConfig;
+    private @Nullable Output<ModelInferenceExecutionConfigGetArgs> inferenceExecutionConfig;
 
-    public Output<ModelInferenceExecutionConfigGetArgs> inferenceExecutionConfig() {
-        return this.inferenceExecutionConfig == null ? Codegen.empty() : this.inferenceExecutionConfig;
+    public Optional<Output<ModelInferenceExecutionConfigGetArgs>> inferenceExecutionConfig() {
+        return Optional.ofNullable(this.inferenceExecutionConfig);
     }
 
     /**
@@ -82,10 +82,10 @@ public final class ModelState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -93,10 +93,10 @@ public final class ModelState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="primaryContainer")
-      private final @Nullable Output<ModelPrimaryContainerGetArgs> primaryContainer;
+    private @Nullable Output<ModelPrimaryContainerGetArgs> primaryContainer;
 
-    public Output<ModelPrimaryContainerGetArgs> primaryContainer() {
-        return this.primaryContainer == null ? Codegen.empty() : this.primaryContainer;
+    public Optional<Output<ModelPrimaryContainerGetArgs>> primaryContainer() {
+        return Optional.ofNullable(this.primaryContainer);
     }
 
     /**
@@ -104,10 +104,10 @@ public final class ModelState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -115,10 +115,10 @@ public final class ModelState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tagsAll")
-      private final @Nullable Output<Map<String,String>> tagsAll;
+    private @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> tagsAll() {
-        return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
+    public Optional<Output<Map<String,String>>> tagsAll() {
+        return Optional.ofNullable(this.tagsAll);
     }
 
     /**
@@ -126,170 +126,142 @@ public final class ModelState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="vpcConfig")
-      private final @Nullable Output<ModelVpcConfigGetArgs> vpcConfig;
+    private @Nullable Output<ModelVpcConfigGetArgs> vpcConfig;
 
-    public Output<ModelVpcConfigGetArgs> vpcConfig() {
-        return this.vpcConfig == null ? Codegen.empty() : this.vpcConfig;
+    public Optional<Output<ModelVpcConfigGetArgs>> vpcConfig() {
+        return Optional.ofNullable(this.vpcConfig);
     }
 
-    public ModelState(
-        @Nullable Output<String> arn,
-        @Nullable Output<List<ModelContainerGetArgs>> containers,
-        @Nullable Output<Boolean> enableNetworkIsolation,
-        @Nullable Output<String> executionRoleArn,
-        @Nullable Output<ModelInferenceExecutionConfigGetArgs> inferenceExecutionConfig,
-        @Nullable Output<String> name,
-        @Nullable Output<ModelPrimaryContainerGetArgs> primaryContainer,
-        @Nullable Output<Map<String,String>> tags,
-        @Nullable Output<Map<String,String>> tagsAll,
-        @Nullable Output<ModelVpcConfigGetArgs> vpcConfig) {
-        this.arn = arn;
-        this.containers = containers;
-        this.enableNetworkIsolation = enableNetworkIsolation;
-        this.executionRoleArn = executionRoleArn;
-        this.inferenceExecutionConfig = inferenceExecutionConfig;
-        this.name = name;
-        this.primaryContainer = primaryContainer;
-        this.tags = tags;
-        this.tagsAll = tagsAll;
-        this.vpcConfig = vpcConfig;
-    }
+    private ModelState() {}
 
-    private ModelState() {
-        this.arn = Codegen.empty();
-        this.containers = Codegen.empty();
-        this.enableNetworkIsolation = Codegen.empty();
-        this.executionRoleArn = Codegen.empty();
-        this.inferenceExecutionConfig = Codegen.empty();
-        this.name = Codegen.empty();
-        this.primaryContainer = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.tagsAll = Codegen.empty();
-        this.vpcConfig = Codegen.empty();
+    private ModelState(ModelState $) {
+        this.arn = $.arn;
+        this.containers = $.containers;
+        this.enableNetworkIsolation = $.enableNetworkIsolation;
+        this.executionRoleArn = $.executionRoleArn;
+        this.inferenceExecutionConfig = $.inferenceExecutionConfig;
+        this.name = $.name;
+        this.primaryContainer = $.primaryContainer;
+        this.tags = $.tags;
+        this.tagsAll = $.tagsAll;
+        this.vpcConfig = $.vpcConfig;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ModelState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> arn;
-        private @Nullable Output<List<ModelContainerGetArgs>> containers;
-        private @Nullable Output<Boolean> enableNetworkIsolation;
-        private @Nullable Output<String> executionRoleArn;
-        private @Nullable Output<ModelInferenceExecutionConfigGetArgs> inferenceExecutionConfig;
-        private @Nullable Output<String> name;
-        private @Nullable Output<ModelPrimaryContainerGetArgs> primaryContainer;
-        private @Nullable Output<Map<String,String>> tags;
-        private @Nullable Output<Map<String,String>> tagsAll;
-        private @Nullable Output<ModelVpcConfigGetArgs> vpcConfig;
+        private ModelState $;
 
         public Builder() {
-    	      // Empty
+            $ = new ModelState();
         }
 
         public Builder(ModelState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.arn = defaults.arn;
-    	      this.containers = defaults.containers;
-    	      this.enableNetworkIsolation = defaults.enableNetworkIsolation;
-    	      this.executionRoleArn = defaults.executionRoleArn;
-    	      this.inferenceExecutionConfig = defaults.inferenceExecutionConfig;
-    	      this.name = defaults.name;
-    	      this.primaryContainer = defaults.primaryContainer;
-    	      this.tags = defaults.tags;
-    	      this.tagsAll = defaults.tagsAll;
-    	      this.vpcConfig = defaults.vpcConfig;
+            $ = new ModelState(Objects.requireNonNull(defaults));
         }
 
         public Builder arn(@Nullable Output<String> arn) {
-            this.arn = arn;
+            $.arn = arn;
             return this;
         }
-        public Builder arn(@Nullable String arn) {
-            this.arn = Codegen.ofNullable(arn);
-            return this;
+
+        public Builder arn(String arn) {
+            return arn(Output.of(arn));
         }
+
         public Builder containers(@Nullable Output<List<ModelContainerGetArgs>> containers) {
-            this.containers = containers;
+            $.containers = containers;
             return this;
         }
-        public Builder containers(@Nullable List<ModelContainerGetArgs> containers) {
-            this.containers = Codegen.ofNullable(containers);
-            return this;
+
+        public Builder containers(List<ModelContainerGetArgs> containers) {
+            return containers(Output.of(containers));
         }
+
         public Builder containers(ModelContainerGetArgs... containers) {
             return containers(List.of(containers));
         }
+
         public Builder enableNetworkIsolation(@Nullable Output<Boolean> enableNetworkIsolation) {
-            this.enableNetworkIsolation = enableNetworkIsolation;
+            $.enableNetworkIsolation = enableNetworkIsolation;
             return this;
         }
-        public Builder enableNetworkIsolation(@Nullable Boolean enableNetworkIsolation) {
-            this.enableNetworkIsolation = Codegen.ofNullable(enableNetworkIsolation);
-            return this;
+
+        public Builder enableNetworkIsolation(Boolean enableNetworkIsolation) {
+            return enableNetworkIsolation(Output.of(enableNetworkIsolation));
         }
+
         public Builder executionRoleArn(@Nullable Output<String> executionRoleArn) {
-            this.executionRoleArn = executionRoleArn;
+            $.executionRoleArn = executionRoleArn;
             return this;
         }
-        public Builder executionRoleArn(@Nullable String executionRoleArn) {
-            this.executionRoleArn = Codegen.ofNullable(executionRoleArn);
-            return this;
+
+        public Builder executionRoleArn(String executionRoleArn) {
+            return executionRoleArn(Output.of(executionRoleArn));
         }
+
         public Builder inferenceExecutionConfig(@Nullable Output<ModelInferenceExecutionConfigGetArgs> inferenceExecutionConfig) {
-            this.inferenceExecutionConfig = inferenceExecutionConfig;
+            $.inferenceExecutionConfig = inferenceExecutionConfig;
             return this;
         }
-        public Builder inferenceExecutionConfig(@Nullable ModelInferenceExecutionConfigGetArgs inferenceExecutionConfig) {
-            this.inferenceExecutionConfig = Codegen.ofNullable(inferenceExecutionConfig);
-            return this;
+
+        public Builder inferenceExecutionConfig(ModelInferenceExecutionConfigGetArgs inferenceExecutionConfig) {
+            return inferenceExecutionConfig(Output.of(inferenceExecutionConfig));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder primaryContainer(@Nullable Output<ModelPrimaryContainerGetArgs> primaryContainer) {
-            this.primaryContainer = primaryContainer;
+            $.primaryContainer = primaryContainer;
             return this;
         }
-        public Builder primaryContainer(@Nullable ModelPrimaryContainerGetArgs primaryContainer) {
-            this.primaryContainer = Codegen.ofNullable(primaryContainer);
-            return this;
+
+        public Builder primaryContainer(ModelPrimaryContainerGetArgs primaryContainer) {
+            return primaryContainer(Output.of(primaryContainer));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
-            this.tagsAll = tagsAll;
+            $.tagsAll = tagsAll;
             return this;
         }
-        public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Codegen.ofNullable(tagsAll);
-            return this;
+
+        public Builder tagsAll(Map<String,String> tagsAll) {
+            return tagsAll(Output.of(tagsAll));
         }
+
         public Builder vpcConfig(@Nullable Output<ModelVpcConfigGetArgs> vpcConfig) {
-            this.vpcConfig = vpcConfig;
+            $.vpcConfig = vpcConfig;
             return this;
         }
-        public Builder vpcConfig(@Nullable ModelVpcConfigGetArgs vpcConfig) {
-            this.vpcConfig = Codegen.ofNullable(vpcConfig);
-            return this;
-        }        public ModelState build() {
-            return new ModelState(arn, containers, enableNetworkIsolation, executionRoleArn, inferenceExecutionConfig, name, primaryContainer, tags, tagsAll, vpcConfig);
+
+        public Builder vpcConfig(ModelVpcConfigGetArgs vpcConfig) {
+            return vpcConfig(Output.of(vpcConfig));
+        }
+
+        public ModelState build() {
+            return $;
         }
     }
+
 }

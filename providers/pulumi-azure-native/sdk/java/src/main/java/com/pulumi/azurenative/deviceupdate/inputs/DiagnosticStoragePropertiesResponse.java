@@ -23,7 +23,7 @@ public final class DiagnosticStoragePropertiesResponse extends com.pulumi.resour
      * 
      */
     @Import(name="authenticationType", required=true)
-      private final String authenticationType;
+    private String authenticationType;
 
     public String authenticationType() {
         return this.authenticationType;
@@ -34,10 +34,10 @@ public final class DiagnosticStoragePropertiesResponse extends com.pulumi.resour
      * 
      */
     @Import(name="connectionString")
-      private final @Nullable String connectionString;
+    private @Nullable String connectionString;
 
     public Optional<String> connectionString() {
-        return this.connectionString == null ? Optional.empty() : Optional.ofNullable(this.connectionString);
+        return Optional.ofNullable(this.connectionString);
     }
 
     /**
@@ -45,64 +45,58 @@ public final class DiagnosticStoragePropertiesResponse extends com.pulumi.resour
      * 
      */
     @Import(name="resourceId", required=true)
-      private final String resourceId;
+    private String resourceId;
 
     public String resourceId() {
         return this.resourceId;
     }
 
-    public DiagnosticStoragePropertiesResponse(
-        String authenticationType,
-        @Nullable String connectionString,
-        String resourceId) {
-        this.authenticationType = Objects.requireNonNull(authenticationType, "expected parameter 'authenticationType' to be non-null");
-        this.connectionString = connectionString;
-        this.resourceId = Objects.requireNonNull(resourceId, "expected parameter 'resourceId' to be non-null");
-    }
+    private DiagnosticStoragePropertiesResponse() {}
 
-    private DiagnosticStoragePropertiesResponse() {
-        this.authenticationType = null;
-        this.connectionString = null;
-        this.resourceId = null;
+    private DiagnosticStoragePropertiesResponse(DiagnosticStoragePropertiesResponse $) {
+        this.authenticationType = $.authenticationType;
+        this.connectionString = $.connectionString;
+        this.resourceId = $.resourceId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DiagnosticStoragePropertiesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String authenticationType;
-        private @Nullable String connectionString;
-        private String resourceId;
+        private DiagnosticStoragePropertiesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new DiagnosticStoragePropertiesResponse();
         }
 
         public Builder(DiagnosticStoragePropertiesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.authenticationType = defaults.authenticationType;
-    	      this.connectionString = defaults.connectionString;
-    	      this.resourceId = defaults.resourceId;
+            $ = new DiagnosticStoragePropertiesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder authenticationType(String authenticationType) {
-            this.authenticationType = Objects.requireNonNull(authenticationType);
+            $.authenticationType = authenticationType;
             return this;
         }
+
         public Builder connectionString(@Nullable String connectionString) {
-            this.connectionString = connectionString;
+            $.connectionString = connectionString;
             return this;
         }
+
         public Builder resourceId(String resourceId) {
-            this.resourceId = Objects.requireNonNull(resourceId);
+            $.resourceId = resourceId;
             return this;
-        }        public DiagnosticStoragePropertiesResponse build() {
-            return new DiagnosticStoragePropertiesResponse(authenticationType, connectionString, resourceId);
+        }
+
+        public DiagnosticStoragePropertiesResponse build() {
+            $.authenticationType = Objects.requireNonNull($.authenticationType, "expected parameter 'authenticationType' to be non-null");
+            $.resourceId = Objects.requireNonNull($.resourceId, "expected parameter 'resourceId' to be non-null");
+            return $;
         }
     }
+
 }

@@ -15,94 +15,86 @@ public final class GetDicomStoreArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetDicomStoreArgs Empty = new GetDicomStoreArgs();
 
     @Import(name="datasetId", required=true)
-      private final String datasetId;
+    private String datasetId;
 
     public String datasetId() {
         return this.datasetId;
     }
 
     @Import(name="dicomStoreId", required=true)
-      private final String dicomStoreId;
+    private String dicomStoreId;
 
     public String dicomStoreId() {
         return this.dicomStoreId;
     }
 
     @Import(name="location", required=true)
-      private final String location;
+    private String location;
 
     public String location() {
         return this.location;
     }
 
     @Import(name="project")
-      private final @Nullable String project;
+    private @Nullable String project;
 
     public Optional<String> project() {
-        return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
+        return Optional.ofNullable(this.project);
     }
 
-    public GetDicomStoreArgs(
-        String datasetId,
-        String dicomStoreId,
-        String location,
-        @Nullable String project) {
-        this.datasetId = Objects.requireNonNull(datasetId, "expected parameter 'datasetId' to be non-null");
-        this.dicomStoreId = Objects.requireNonNull(dicomStoreId, "expected parameter 'dicomStoreId' to be non-null");
-        this.location = Objects.requireNonNull(location, "expected parameter 'location' to be non-null");
-        this.project = project;
-    }
+    private GetDicomStoreArgs() {}
 
-    private GetDicomStoreArgs() {
-        this.datasetId = null;
-        this.dicomStoreId = null;
-        this.location = null;
-        this.project = null;
+    private GetDicomStoreArgs(GetDicomStoreArgs $) {
+        this.datasetId = $.datasetId;
+        this.dicomStoreId = $.dicomStoreId;
+        this.location = $.location;
+        this.project = $.project;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetDicomStoreArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String datasetId;
-        private String dicomStoreId;
-        private String location;
-        private @Nullable String project;
+        private GetDicomStoreArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetDicomStoreArgs();
         }
 
         public Builder(GetDicomStoreArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.datasetId = defaults.datasetId;
-    	      this.dicomStoreId = defaults.dicomStoreId;
-    	      this.location = defaults.location;
-    	      this.project = defaults.project;
+            $ = new GetDicomStoreArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder datasetId(String datasetId) {
-            this.datasetId = Objects.requireNonNull(datasetId);
+            $.datasetId = datasetId;
             return this;
         }
+
         public Builder dicomStoreId(String dicomStoreId) {
-            this.dicomStoreId = Objects.requireNonNull(dicomStoreId);
+            $.dicomStoreId = dicomStoreId;
             return this;
         }
+
         public Builder location(String location) {
-            this.location = Objects.requireNonNull(location);
+            $.location = location;
             return this;
         }
+
         public Builder project(@Nullable String project) {
-            this.project = project;
+            $.project = project;
             return this;
-        }        public GetDicomStoreArgs build() {
-            return new GetDicomStoreArgs(datasetId, dicomStoreId, location, project);
+        }
+
+        public GetDicomStoreArgs build() {
+            $.datasetId = Objects.requireNonNull($.datasetId, "expected parameter 'datasetId' to be non-null");
+            $.dicomStoreId = Objects.requireNonNull($.dicomStoreId, "expected parameter 'dicomStoreId' to be non-null");
+            $.location = Objects.requireNonNull($.location, "expected parameter 'location' to be non-null");
+            return $;
         }
     }
+
 }

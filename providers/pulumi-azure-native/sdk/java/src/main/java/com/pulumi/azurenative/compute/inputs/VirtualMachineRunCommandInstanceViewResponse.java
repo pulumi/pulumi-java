@@ -26,10 +26,10 @@ public final class VirtualMachineRunCommandInstanceViewResponse extends com.pulu
      * 
      */
     @Import(name="endTime")
-      private final @Nullable String endTime;
+    private @Nullable String endTime;
 
     public Optional<String> endTime() {
-        return this.endTime == null ? Optional.empty() : Optional.ofNullable(this.endTime);
+        return Optional.ofNullable(this.endTime);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class VirtualMachineRunCommandInstanceViewResponse extends com.pulu
      * 
      */
     @Import(name="error")
-      private final @Nullable String error;
+    private @Nullable String error;
 
     public Optional<String> error() {
-        return this.error == null ? Optional.empty() : Optional.ofNullable(this.error);
+        return Optional.ofNullable(this.error);
     }
 
     /**
@@ -48,10 +48,10 @@ public final class VirtualMachineRunCommandInstanceViewResponse extends com.pulu
      * 
      */
     @Import(name="executionMessage")
-      private final @Nullable String executionMessage;
+    private @Nullable String executionMessage;
 
     public Optional<String> executionMessage() {
-        return this.executionMessage == null ? Optional.empty() : Optional.ofNullable(this.executionMessage);
+        return Optional.ofNullable(this.executionMessage);
     }
 
     /**
@@ -59,10 +59,10 @@ public final class VirtualMachineRunCommandInstanceViewResponse extends com.pulu
      * 
      */
     @Import(name="executionState")
-      private final @Nullable String executionState;
+    private @Nullable String executionState;
 
     public Optional<String> executionState() {
-        return this.executionState == null ? Optional.empty() : Optional.ofNullable(this.executionState);
+        return Optional.ofNullable(this.executionState);
     }
 
     /**
@@ -70,10 +70,10 @@ public final class VirtualMachineRunCommandInstanceViewResponse extends com.pulu
      * 
      */
     @Import(name="exitCode")
-      private final @Nullable Integer exitCode;
+    private @Nullable Integer exitCode;
 
     public Optional<Integer> exitCode() {
-        return this.exitCode == null ? Optional.empty() : Optional.ofNullable(this.exitCode);
+        return Optional.ofNullable(this.exitCode);
     }
 
     /**
@@ -81,10 +81,10 @@ public final class VirtualMachineRunCommandInstanceViewResponse extends com.pulu
      * 
      */
     @Import(name="output")
-      private final @Nullable String output;
+    private @Nullable String output;
 
     public Optional<String> output() {
-        return this.output == null ? Optional.empty() : Optional.ofNullable(this.output);
+        return Optional.ofNullable(this.output);
     }
 
     /**
@@ -92,10 +92,10 @@ public final class VirtualMachineRunCommandInstanceViewResponse extends com.pulu
      * 
      */
     @Import(name="startTime")
-      private final @Nullable String startTime;
+    private @Nullable String startTime;
 
     public Optional<String> startTime() {
-        return this.startTime == null ? Optional.empty() : Optional.ofNullable(this.startTime);
+        return Optional.ofNullable(this.startTime);
     }
 
     /**
@@ -103,112 +103,90 @@ public final class VirtualMachineRunCommandInstanceViewResponse extends com.pulu
      * 
      */
     @Import(name="statuses")
-      private final @Nullable List<InstanceViewStatusResponse> statuses;
+    private @Nullable List<InstanceViewStatusResponse> statuses;
 
-    public List<InstanceViewStatusResponse> statuses() {
-        return this.statuses == null ? List.of() : this.statuses;
+    public Optional<List<InstanceViewStatusResponse>> statuses() {
+        return Optional.ofNullable(this.statuses);
     }
 
-    public VirtualMachineRunCommandInstanceViewResponse(
-        @Nullable String endTime,
-        @Nullable String error,
-        @Nullable String executionMessage,
-        @Nullable String executionState,
-        @Nullable Integer exitCode,
-        @Nullable String output,
-        @Nullable String startTime,
-        @Nullable List<InstanceViewStatusResponse> statuses) {
-        this.endTime = endTime;
-        this.error = error;
-        this.executionMessage = executionMessage;
-        this.executionState = executionState;
-        this.exitCode = exitCode;
-        this.output = output;
-        this.startTime = startTime;
-        this.statuses = statuses;
-    }
+    private VirtualMachineRunCommandInstanceViewResponse() {}
 
-    private VirtualMachineRunCommandInstanceViewResponse() {
-        this.endTime = null;
-        this.error = null;
-        this.executionMessage = null;
-        this.executionState = null;
-        this.exitCode = null;
-        this.output = null;
-        this.startTime = null;
-        this.statuses = List.of();
+    private VirtualMachineRunCommandInstanceViewResponse(VirtualMachineRunCommandInstanceViewResponse $) {
+        this.endTime = $.endTime;
+        this.error = $.error;
+        this.executionMessage = $.executionMessage;
+        this.executionState = $.executionState;
+        this.exitCode = $.exitCode;
+        this.output = $.output;
+        this.startTime = $.startTime;
+        this.statuses = $.statuses;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VirtualMachineRunCommandInstanceViewResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String endTime;
-        private @Nullable String error;
-        private @Nullable String executionMessage;
-        private @Nullable String executionState;
-        private @Nullable Integer exitCode;
-        private @Nullable String output;
-        private @Nullable String startTime;
-        private @Nullable List<InstanceViewStatusResponse> statuses;
+        private VirtualMachineRunCommandInstanceViewResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new VirtualMachineRunCommandInstanceViewResponse();
         }
 
         public Builder(VirtualMachineRunCommandInstanceViewResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.endTime = defaults.endTime;
-    	      this.error = defaults.error;
-    	      this.executionMessage = defaults.executionMessage;
-    	      this.executionState = defaults.executionState;
-    	      this.exitCode = defaults.exitCode;
-    	      this.output = defaults.output;
-    	      this.startTime = defaults.startTime;
-    	      this.statuses = defaults.statuses;
+            $ = new VirtualMachineRunCommandInstanceViewResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder endTime(@Nullable String endTime) {
-            this.endTime = endTime;
+            $.endTime = endTime;
             return this;
         }
+
         public Builder error(@Nullable String error) {
-            this.error = error;
+            $.error = error;
             return this;
         }
+
         public Builder executionMessage(@Nullable String executionMessage) {
-            this.executionMessage = executionMessage;
+            $.executionMessage = executionMessage;
             return this;
         }
+
         public Builder executionState(@Nullable String executionState) {
-            this.executionState = executionState;
+            $.executionState = executionState;
             return this;
         }
+
         public Builder exitCode(@Nullable Integer exitCode) {
-            this.exitCode = exitCode;
+            $.exitCode = exitCode;
             return this;
         }
+
         public Builder output(@Nullable String output) {
-            this.output = output;
+            $.output = output;
             return this;
         }
+
         public Builder startTime(@Nullable String startTime) {
-            this.startTime = startTime;
+            $.startTime = startTime;
             return this;
         }
+
         public Builder statuses(@Nullable List<InstanceViewStatusResponse> statuses) {
-            this.statuses = statuses;
+            $.statuses = statuses;
             return this;
         }
+
         public Builder statuses(InstanceViewStatusResponse... statuses) {
             return statuses(List.of(statuses));
-        }        public VirtualMachineRunCommandInstanceViewResponse build() {
-            return new VirtualMachineRunCommandInstanceViewResponse(endTime, error, executionMessage, executionState, exitCode, output, startTime, statuses);
+        }
+
+        public VirtualMachineRunCommandInstanceViewResponse build() {
+            return $;
         }
     }
+
 }

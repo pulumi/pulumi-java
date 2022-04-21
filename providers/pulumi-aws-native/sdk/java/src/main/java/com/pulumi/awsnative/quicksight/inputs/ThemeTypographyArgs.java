@@ -6,9 +6,9 @@ package com.pulumi.awsnative.quicksight.inputs;
 import com.pulumi.awsnative.quicksight.inputs.ThemeFontArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,52 +21,52 @@ public final class ThemeTypographyArgs extends com.pulumi.resources.ResourceArgs
     public static final ThemeTypographyArgs Empty = new ThemeTypographyArgs();
 
     @Import(name="fontFamilies")
-      private final @Nullable Output<List<ThemeFontArgs>> fontFamilies;
+    private @Nullable Output<List<ThemeFontArgs>> fontFamilies;
 
-    public Output<List<ThemeFontArgs>> fontFamilies() {
-        return this.fontFamilies == null ? Codegen.empty() : this.fontFamilies;
+    public Optional<Output<List<ThemeFontArgs>>> fontFamilies() {
+        return Optional.ofNullable(this.fontFamilies);
     }
 
-    public ThemeTypographyArgs(@Nullable Output<List<ThemeFontArgs>> fontFamilies) {
-        this.fontFamilies = fontFamilies;
-    }
+    private ThemeTypographyArgs() {}
 
-    private ThemeTypographyArgs() {
-        this.fontFamilies = Codegen.empty();
+    private ThemeTypographyArgs(ThemeTypographyArgs $) {
+        this.fontFamilies = $.fontFamilies;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ThemeTypographyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<ThemeFontArgs>> fontFamilies;
+        private ThemeTypographyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ThemeTypographyArgs();
         }
 
         public Builder(ThemeTypographyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.fontFamilies = defaults.fontFamilies;
+            $ = new ThemeTypographyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder fontFamilies(@Nullable Output<List<ThemeFontArgs>> fontFamilies) {
-            this.fontFamilies = fontFamilies;
+            $.fontFamilies = fontFamilies;
             return this;
         }
-        public Builder fontFamilies(@Nullable List<ThemeFontArgs> fontFamilies) {
-            this.fontFamilies = Codegen.ofNullable(fontFamilies);
-            return this;
+
+        public Builder fontFamilies(List<ThemeFontArgs> fontFamilies) {
+            return fontFamilies(Output.of(fontFamilies));
         }
+
         public Builder fontFamilies(ThemeFontArgs... fontFamilies) {
             return fontFamilies(List.of(fontFamilies));
-        }        public ThemeTypographyArgs build() {
-            return new ThemeTypographyArgs(fontFamilies);
+        }
+
+        public ThemeTypographyArgs build() {
+            return $;
         }
     }
+
 }

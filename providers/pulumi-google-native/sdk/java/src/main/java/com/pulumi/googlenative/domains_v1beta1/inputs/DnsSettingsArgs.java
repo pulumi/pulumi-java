@@ -5,12 +5,12 @@ package com.pulumi.googlenative.domains_v1beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.domains_v1beta1.inputs.CustomDnsArgs;
 import com.pulumi.googlenative.domains_v1beta1.inputs.GlueRecordArgs;
 import com.pulumi.googlenative.domains_v1beta1.inputs.GoogleDomainsDnsArgs;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +27,10 @@ public final class DnsSettingsArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="customDns")
-      private final @Nullable Output<CustomDnsArgs> customDns;
+    private @Nullable Output<CustomDnsArgs> customDns;
 
-    public Output<CustomDnsArgs> customDns() {
-        return this.customDns == null ? Codegen.empty() : this.customDns;
+    public Optional<Output<CustomDnsArgs>> customDns() {
+        return Optional.ofNullable(this.customDns);
     }
 
     /**
@@ -38,10 +38,10 @@ public final class DnsSettingsArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="glueRecords")
-      private final @Nullable Output<List<GlueRecordArgs>> glueRecords;
+    private @Nullable Output<List<GlueRecordArgs>> glueRecords;
 
-    public Output<List<GlueRecordArgs>> glueRecords() {
-        return this.glueRecords == null ? Codegen.empty() : this.glueRecords;
+    public Optional<Output<List<GlueRecordArgs>>> glueRecords() {
+        return Optional.ofNullable(this.glueRecords);
     }
 
     /**
@@ -49,79 +49,72 @@ public final class DnsSettingsArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="googleDomainsDns")
-      private final @Nullable Output<GoogleDomainsDnsArgs> googleDomainsDns;
+    private @Nullable Output<GoogleDomainsDnsArgs> googleDomainsDns;
 
-    public Output<GoogleDomainsDnsArgs> googleDomainsDns() {
-        return this.googleDomainsDns == null ? Codegen.empty() : this.googleDomainsDns;
+    public Optional<Output<GoogleDomainsDnsArgs>> googleDomainsDns() {
+        return Optional.ofNullable(this.googleDomainsDns);
     }
 
-    public DnsSettingsArgs(
-        @Nullable Output<CustomDnsArgs> customDns,
-        @Nullable Output<List<GlueRecordArgs>> glueRecords,
-        @Nullable Output<GoogleDomainsDnsArgs> googleDomainsDns) {
-        this.customDns = customDns;
-        this.glueRecords = glueRecords;
-        this.googleDomainsDns = googleDomainsDns;
-    }
+    private DnsSettingsArgs() {}
 
-    private DnsSettingsArgs() {
-        this.customDns = Codegen.empty();
-        this.glueRecords = Codegen.empty();
-        this.googleDomainsDns = Codegen.empty();
+    private DnsSettingsArgs(DnsSettingsArgs $) {
+        this.customDns = $.customDns;
+        this.glueRecords = $.glueRecords;
+        this.googleDomainsDns = $.googleDomainsDns;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DnsSettingsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<CustomDnsArgs> customDns;
-        private @Nullable Output<List<GlueRecordArgs>> glueRecords;
-        private @Nullable Output<GoogleDomainsDnsArgs> googleDomainsDns;
+        private DnsSettingsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DnsSettingsArgs();
         }
 
         public Builder(DnsSettingsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.customDns = defaults.customDns;
-    	      this.glueRecords = defaults.glueRecords;
-    	      this.googleDomainsDns = defaults.googleDomainsDns;
+            $ = new DnsSettingsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder customDns(@Nullable Output<CustomDnsArgs> customDns) {
-            this.customDns = customDns;
+            $.customDns = customDns;
             return this;
         }
-        public Builder customDns(@Nullable CustomDnsArgs customDns) {
-            this.customDns = Codegen.ofNullable(customDns);
-            return this;
+
+        public Builder customDns(CustomDnsArgs customDns) {
+            return customDns(Output.of(customDns));
         }
+
         public Builder glueRecords(@Nullable Output<List<GlueRecordArgs>> glueRecords) {
-            this.glueRecords = glueRecords;
+            $.glueRecords = glueRecords;
             return this;
         }
-        public Builder glueRecords(@Nullable List<GlueRecordArgs> glueRecords) {
-            this.glueRecords = Codegen.ofNullable(glueRecords);
-            return this;
+
+        public Builder glueRecords(List<GlueRecordArgs> glueRecords) {
+            return glueRecords(Output.of(glueRecords));
         }
+
         public Builder glueRecords(GlueRecordArgs... glueRecords) {
             return glueRecords(List.of(glueRecords));
         }
+
         public Builder googleDomainsDns(@Nullable Output<GoogleDomainsDnsArgs> googleDomainsDns) {
-            this.googleDomainsDns = googleDomainsDns;
+            $.googleDomainsDns = googleDomainsDns;
             return this;
         }
-        public Builder googleDomainsDns(@Nullable GoogleDomainsDnsArgs googleDomainsDns) {
-            this.googleDomainsDns = Codegen.ofNullable(googleDomainsDns);
-            return this;
-        }        public DnsSettingsArgs build() {
-            return new DnsSettingsArgs(customDns, glueRecords, googleDomainsDns);
+
+        public Builder googleDomainsDns(GoogleDomainsDnsArgs googleDomainsDns) {
+            return googleDomainsDns(Output.of(googleDomainsDns));
+        }
+
+        public DnsSettingsArgs build() {
+            return $;
         }
     }
+
 }

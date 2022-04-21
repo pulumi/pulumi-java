@@ -17,45 +17,45 @@ public final class GetDatasetGroupArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="datasetGroupArn", required=true)
-      private final String datasetGroupArn;
+    private String datasetGroupArn;
 
     public String datasetGroupArn() {
         return this.datasetGroupArn;
     }
 
-    public GetDatasetGroupArgs(String datasetGroupArn) {
-        this.datasetGroupArn = Objects.requireNonNull(datasetGroupArn, "expected parameter 'datasetGroupArn' to be non-null");
-    }
+    private GetDatasetGroupArgs() {}
 
-    private GetDatasetGroupArgs() {
-        this.datasetGroupArn = null;
+    private GetDatasetGroupArgs(GetDatasetGroupArgs $) {
+        this.datasetGroupArn = $.datasetGroupArn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetDatasetGroupArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String datasetGroupArn;
+        private GetDatasetGroupArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetDatasetGroupArgs();
         }
 
         public Builder(GetDatasetGroupArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.datasetGroupArn = defaults.datasetGroupArn;
+            $ = new GetDatasetGroupArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder datasetGroupArn(String datasetGroupArn) {
-            this.datasetGroupArn = Objects.requireNonNull(datasetGroupArn);
+            $.datasetGroupArn = datasetGroupArn;
             return this;
-        }        public GetDatasetGroupArgs build() {
-            return new GetDatasetGroupArgs(datasetGroupArn);
+        }
+
+        public GetDatasetGroupArgs build() {
+            $.datasetGroupArn = Objects.requireNonNull($.datasetGroupArn, "expected parameter 'datasetGroupArn' to be non-null");
+            return $;
         }
     }
+
 }

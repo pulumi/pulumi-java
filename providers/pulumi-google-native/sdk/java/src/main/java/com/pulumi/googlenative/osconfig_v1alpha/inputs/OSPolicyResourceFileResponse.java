@@ -24,7 +24,7 @@ public final class OSPolicyResourceFileResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="allowInsecure", required=true)
-      private final Boolean allowInsecure;
+    private Boolean allowInsecure;
 
     public Boolean allowInsecure() {
         return this.allowInsecure;
@@ -35,7 +35,7 @@ public final class OSPolicyResourceFileResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="gcs", required=true)
-      private final OSPolicyResourceFileGcsResponse gcs;
+    private OSPolicyResourceFileGcsResponse gcs;
 
     public OSPolicyResourceFileGcsResponse gcs() {
         return this.gcs;
@@ -46,7 +46,7 @@ public final class OSPolicyResourceFileResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="localPath", required=true)
-      private final String localPath;
+    private String localPath;
 
     public String localPath() {
         return this.localPath;
@@ -57,73 +57,66 @@ public final class OSPolicyResourceFileResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="remote", required=true)
-      private final OSPolicyResourceFileRemoteResponse remote;
+    private OSPolicyResourceFileRemoteResponse remote;
 
     public OSPolicyResourceFileRemoteResponse remote() {
         return this.remote;
     }
 
-    public OSPolicyResourceFileResponse(
-        Boolean allowInsecure,
-        OSPolicyResourceFileGcsResponse gcs,
-        String localPath,
-        OSPolicyResourceFileRemoteResponse remote) {
-        this.allowInsecure = Objects.requireNonNull(allowInsecure, "expected parameter 'allowInsecure' to be non-null");
-        this.gcs = Objects.requireNonNull(gcs, "expected parameter 'gcs' to be non-null");
-        this.localPath = Objects.requireNonNull(localPath, "expected parameter 'localPath' to be non-null");
-        this.remote = Objects.requireNonNull(remote, "expected parameter 'remote' to be non-null");
-    }
+    private OSPolicyResourceFileResponse() {}
 
-    private OSPolicyResourceFileResponse() {
-        this.allowInsecure = null;
-        this.gcs = null;
-        this.localPath = null;
-        this.remote = null;
+    private OSPolicyResourceFileResponse(OSPolicyResourceFileResponse $) {
+        this.allowInsecure = $.allowInsecure;
+        this.gcs = $.gcs;
+        this.localPath = $.localPath;
+        this.remote = $.remote;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(OSPolicyResourceFileResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Boolean allowInsecure;
-        private OSPolicyResourceFileGcsResponse gcs;
-        private String localPath;
-        private OSPolicyResourceFileRemoteResponse remote;
+        private OSPolicyResourceFileResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new OSPolicyResourceFileResponse();
         }
 
         public Builder(OSPolicyResourceFileResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.allowInsecure = defaults.allowInsecure;
-    	      this.gcs = defaults.gcs;
-    	      this.localPath = defaults.localPath;
-    	      this.remote = defaults.remote;
+            $ = new OSPolicyResourceFileResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder allowInsecure(Boolean allowInsecure) {
-            this.allowInsecure = Objects.requireNonNull(allowInsecure);
+            $.allowInsecure = allowInsecure;
             return this;
         }
+
         public Builder gcs(OSPolicyResourceFileGcsResponse gcs) {
-            this.gcs = Objects.requireNonNull(gcs);
+            $.gcs = gcs;
             return this;
         }
+
         public Builder localPath(String localPath) {
-            this.localPath = Objects.requireNonNull(localPath);
+            $.localPath = localPath;
             return this;
         }
+
         public Builder remote(OSPolicyResourceFileRemoteResponse remote) {
-            this.remote = Objects.requireNonNull(remote);
+            $.remote = remote;
             return this;
-        }        public OSPolicyResourceFileResponse build() {
-            return new OSPolicyResourceFileResponse(allowInsecure, gcs, localPath, remote);
+        }
+
+        public OSPolicyResourceFileResponse build() {
+            $.allowInsecure = Objects.requireNonNull($.allowInsecure, "expected parameter 'allowInsecure' to be non-null");
+            $.gcs = Objects.requireNonNull($.gcs, "expected parameter 'gcs' to be non-null");
+            $.localPath = Objects.requireNonNull($.localPath, "expected parameter 'localPath' to be non-null");
+            $.remote = Objects.requireNonNull($.remote, "expected parameter 'remote' to be non-null");
+            return $;
         }
     }
+
 }

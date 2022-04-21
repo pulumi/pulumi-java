@@ -17,45 +17,45 @@ public final class GetInstanceArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="instanceName", required=true)
-      private final String instanceName;
+    private String instanceName;
 
     public String instanceName() {
         return this.instanceName;
     }
 
-    public GetInstanceArgs(String instanceName) {
-        this.instanceName = Objects.requireNonNull(instanceName, "expected parameter 'instanceName' to be non-null");
-    }
+    private GetInstanceArgs() {}
 
-    private GetInstanceArgs() {
-        this.instanceName = null;
+    private GetInstanceArgs(GetInstanceArgs $) {
+        this.instanceName = $.instanceName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetInstanceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String instanceName;
+        private GetInstanceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetInstanceArgs();
         }
 
         public Builder(GetInstanceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.instanceName = defaults.instanceName;
+            $ = new GetInstanceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder instanceName(String instanceName) {
-            this.instanceName = Objects.requireNonNull(instanceName);
+            $.instanceName = instanceName;
             return this;
-        }        public GetInstanceArgs build() {
-            return new GetInstanceArgs(instanceName);
+        }
+
+        public GetInstanceArgs build() {
+            $.instanceName = Objects.requireNonNull($.instanceName, "expected parameter 'instanceName' to be non-null");
+            return $;
         }
     }
+
 }

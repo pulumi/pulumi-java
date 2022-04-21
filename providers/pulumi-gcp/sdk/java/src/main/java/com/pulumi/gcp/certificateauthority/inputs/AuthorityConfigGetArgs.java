@@ -5,7 +5,6 @@ package com.pulumi.gcp.certificateauthority.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.certificateauthority.inputs.AuthorityConfigSubjectConfigGetArgs;
 import com.pulumi.gcp.certificateauthority.inputs.AuthorityConfigX509ConfigGetArgs;
 import java.util.Objects;
@@ -21,7 +20,7 @@ public final class AuthorityConfigGetArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="subjectConfig", required=true)
-      private final Output<AuthorityConfigSubjectConfigGetArgs> subjectConfig;
+    private Output<AuthorityConfigSubjectConfigGetArgs> subjectConfig;
 
     public Output<AuthorityConfigSubjectConfigGetArgs> subjectConfig() {
         return this.subjectConfig;
@@ -33,63 +32,60 @@ public final class AuthorityConfigGetArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="x509Config", required=true)
-      private final Output<AuthorityConfigX509ConfigGetArgs> x509Config;
+    private Output<AuthorityConfigX509ConfigGetArgs> x509Config;
 
     public Output<AuthorityConfigX509ConfigGetArgs> x509Config() {
         return this.x509Config;
     }
 
-    public AuthorityConfigGetArgs(
-        Output<AuthorityConfigSubjectConfigGetArgs> subjectConfig,
-        Output<AuthorityConfigX509ConfigGetArgs> x509Config) {
-        this.subjectConfig = Objects.requireNonNull(subjectConfig, "expected parameter 'subjectConfig' to be non-null");
-        this.x509Config = Objects.requireNonNull(x509Config, "expected parameter 'x509Config' to be non-null");
-    }
+    private AuthorityConfigGetArgs() {}
 
-    private AuthorityConfigGetArgs() {
-        this.subjectConfig = Codegen.empty();
-        this.x509Config = Codegen.empty();
+    private AuthorityConfigGetArgs(AuthorityConfigGetArgs $) {
+        this.subjectConfig = $.subjectConfig;
+        this.x509Config = $.x509Config;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AuthorityConfigGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<AuthorityConfigSubjectConfigGetArgs> subjectConfig;
-        private Output<AuthorityConfigX509ConfigGetArgs> x509Config;
+        private AuthorityConfigGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AuthorityConfigGetArgs();
         }
 
         public Builder(AuthorityConfigGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.subjectConfig = defaults.subjectConfig;
-    	      this.x509Config = defaults.x509Config;
+            $ = new AuthorityConfigGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder subjectConfig(Output<AuthorityConfigSubjectConfigGetArgs> subjectConfig) {
-            this.subjectConfig = Objects.requireNonNull(subjectConfig);
+            $.subjectConfig = subjectConfig;
             return this;
         }
+
         public Builder subjectConfig(AuthorityConfigSubjectConfigGetArgs subjectConfig) {
-            this.subjectConfig = Output.of(Objects.requireNonNull(subjectConfig));
-            return this;
+            return subjectConfig(Output.of(subjectConfig));
         }
+
         public Builder x509Config(Output<AuthorityConfigX509ConfigGetArgs> x509Config) {
-            this.x509Config = Objects.requireNonNull(x509Config);
+            $.x509Config = x509Config;
             return this;
         }
+
         public Builder x509Config(AuthorityConfigX509ConfigGetArgs x509Config) {
-            this.x509Config = Output.of(Objects.requireNonNull(x509Config));
-            return this;
-        }        public AuthorityConfigGetArgs build() {
-            return new AuthorityConfigGetArgs(subjectConfig, x509Config);
+            return x509Config(Output.of(x509Config));
+        }
+
+        public AuthorityConfigGetArgs build() {
+            $.subjectConfig = Objects.requireNonNull($.subjectConfig, "expected parameter 'subjectConfig' to be non-null");
+            $.x509Config = Objects.requireNonNull($.x509Config, "expected parameter 'x509Config' to be non-null");
+            return $;
         }
     }
+
 }

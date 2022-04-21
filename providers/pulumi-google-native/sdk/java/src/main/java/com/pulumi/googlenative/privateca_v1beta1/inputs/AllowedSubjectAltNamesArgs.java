@@ -5,11 +5,11 @@ package com.pulumi.googlenative.privateca_v1beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class AllowedSubjectAltNamesArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="allowCustomSans")
-      private final @Nullable Output<Boolean> allowCustomSans;
+    private @Nullable Output<Boolean> allowCustomSans;
 
-    public Output<Boolean> allowCustomSans() {
-        return this.allowCustomSans == null ? Codegen.empty() : this.allowCustomSans;
+    public Optional<Output<Boolean>> allowCustomSans() {
+        return Optional.ofNullable(this.allowCustomSans);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class AllowedSubjectAltNamesArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="allowGlobbingDnsWildcards")
-      private final @Nullable Output<Boolean> allowGlobbingDnsWildcards;
+    private @Nullable Output<Boolean> allowGlobbingDnsWildcards;
 
-    public Output<Boolean> allowGlobbingDnsWildcards() {
-        return this.allowGlobbingDnsWildcards == null ? Codegen.empty() : this.allowGlobbingDnsWildcards;
+    public Optional<Output<Boolean>> allowGlobbingDnsWildcards() {
+        return Optional.ofNullable(this.allowGlobbingDnsWildcards);
     }
 
     /**
@@ -48,10 +48,10 @@ public final class AllowedSubjectAltNamesArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="allowedDnsNames")
-      private final @Nullable Output<List<String>> allowedDnsNames;
+    private @Nullable Output<List<String>> allowedDnsNames;
 
-    public Output<List<String>> allowedDnsNames() {
-        return this.allowedDnsNames == null ? Codegen.empty() : this.allowedDnsNames;
+    public Optional<Output<List<String>>> allowedDnsNames() {
+        return Optional.ofNullable(this.allowedDnsNames);
     }
 
     /**
@@ -59,10 +59,10 @@ public final class AllowedSubjectAltNamesArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="allowedEmailAddresses")
-      private final @Nullable Output<List<String>> allowedEmailAddresses;
+    private @Nullable Output<List<String>> allowedEmailAddresses;
 
-    public Output<List<String>> allowedEmailAddresses() {
-        return this.allowedEmailAddresses == null ? Codegen.empty() : this.allowedEmailAddresses;
+    public Optional<Output<List<String>>> allowedEmailAddresses() {
+        return Optional.ofNullable(this.allowedEmailAddresses);
     }
 
     /**
@@ -70,10 +70,10 @@ public final class AllowedSubjectAltNamesArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="allowedIps")
-      private final @Nullable Output<List<String>> allowedIps;
+    private @Nullable Output<List<String>> allowedIps;
 
-    public Output<List<String>> allowedIps() {
-        return this.allowedIps == null ? Codegen.empty() : this.allowedIps;
+    public Optional<Output<List<String>>> allowedIps() {
+        return Optional.ofNullable(this.allowedIps);
     }
 
     /**
@@ -81,127 +81,114 @@ public final class AllowedSubjectAltNamesArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="allowedUris")
-      private final @Nullable Output<List<String>> allowedUris;
+    private @Nullable Output<List<String>> allowedUris;
 
-    public Output<List<String>> allowedUris() {
-        return this.allowedUris == null ? Codegen.empty() : this.allowedUris;
+    public Optional<Output<List<String>>> allowedUris() {
+        return Optional.ofNullable(this.allowedUris);
     }
 
-    public AllowedSubjectAltNamesArgs(
-        @Nullable Output<Boolean> allowCustomSans,
-        @Nullable Output<Boolean> allowGlobbingDnsWildcards,
-        @Nullable Output<List<String>> allowedDnsNames,
-        @Nullable Output<List<String>> allowedEmailAddresses,
-        @Nullable Output<List<String>> allowedIps,
-        @Nullable Output<List<String>> allowedUris) {
-        this.allowCustomSans = allowCustomSans;
-        this.allowGlobbingDnsWildcards = allowGlobbingDnsWildcards;
-        this.allowedDnsNames = allowedDnsNames;
-        this.allowedEmailAddresses = allowedEmailAddresses;
-        this.allowedIps = allowedIps;
-        this.allowedUris = allowedUris;
-    }
+    private AllowedSubjectAltNamesArgs() {}
 
-    private AllowedSubjectAltNamesArgs() {
-        this.allowCustomSans = Codegen.empty();
-        this.allowGlobbingDnsWildcards = Codegen.empty();
-        this.allowedDnsNames = Codegen.empty();
-        this.allowedEmailAddresses = Codegen.empty();
-        this.allowedIps = Codegen.empty();
-        this.allowedUris = Codegen.empty();
+    private AllowedSubjectAltNamesArgs(AllowedSubjectAltNamesArgs $) {
+        this.allowCustomSans = $.allowCustomSans;
+        this.allowGlobbingDnsWildcards = $.allowGlobbingDnsWildcards;
+        this.allowedDnsNames = $.allowedDnsNames;
+        this.allowedEmailAddresses = $.allowedEmailAddresses;
+        this.allowedIps = $.allowedIps;
+        this.allowedUris = $.allowedUris;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AllowedSubjectAltNamesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> allowCustomSans;
-        private @Nullable Output<Boolean> allowGlobbingDnsWildcards;
-        private @Nullable Output<List<String>> allowedDnsNames;
-        private @Nullable Output<List<String>> allowedEmailAddresses;
-        private @Nullable Output<List<String>> allowedIps;
-        private @Nullable Output<List<String>> allowedUris;
+        private AllowedSubjectAltNamesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AllowedSubjectAltNamesArgs();
         }
 
         public Builder(AllowedSubjectAltNamesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.allowCustomSans = defaults.allowCustomSans;
-    	      this.allowGlobbingDnsWildcards = defaults.allowGlobbingDnsWildcards;
-    	      this.allowedDnsNames = defaults.allowedDnsNames;
-    	      this.allowedEmailAddresses = defaults.allowedEmailAddresses;
-    	      this.allowedIps = defaults.allowedIps;
-    	      this.allowedUris = defaults.allowedUris;
+            $ = new AllowedSubjectAltNamesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder allowCustomSans(@Nullable Output<Boolean> allowCustomSans) {
-            this.allowCustomSans = allowCustomSans;
+            $.allowCustomSans = allowCustomSans;
             return this;
         }
-        public Builder allowCustomSans(@Nullable Boolean allowCustomSans) {
-            this.allowCustomSans = Codegen.ofNullable(allowCustomSans);
-            return this;
+
+        public Builder allowCustomSans(Boolean allowCustomSans) {
+            return allowCustomSans(Output.of(allowCustomSans));
         }
+
         public Builder allowGlobbingDnsWildcards(@Nullable Output<Boolean> allowGlobbingDnsWildcards) {
-            this.allowGlobbingDnsWildcards = allowGlobbingDnsWildcards;
+            $.allowGlobbingDnsWildcards = allowGlobbingDnsWildcards;
             return this;
         }
-        public Builder allowGlobbingDnsWildcards(@Nullable Boolean allowGlobbingDnsWildcards) {
-            this.allowGlobbingDnsWildcards = Codegen.ofNullable(allowGlobbingDnsWildcards);
-            return this;
+
+        public Builder allowGlobbingDnsWildcards(Boolean allowGlobbingDnsWildcards) {
+            return allowGlobbingDnsWildcards(Output.of(allowGlobbingDnsWildcards));
         }
+
         public Builder allowedDnsNames(@Nullable Output<List<String>> allowedDnsNames) {
-            this.allowedDnsNames = allowedDnsNames;
+            $.allowedDnsNames = allowedDnsNames;
             return this;
         }
-        public Builder allowedDnsNames(@Nullable List<String> allowedDnsNames) {
-            this.allowedDnsNames = Codegen.ofNullable(allowedDnsNames);
-            return this;
+
+        public Builder allowedDnsNames(List<String> allowedDnsNames) {
+            return allowedDnsNames(Output.of(allowedDnsNames));
         }
+
         public Builder allowedDnsNames(String... allowedDnsNames) {
             return allowedDnsNames(List.of(allowedDnsNames));
         }
+
         public Builder allowedEmailAddresses(@Nullable Output<List<String>> allowedEmailAddresses) {
-            this.allowedEmailAddresses = allowedEmailAddresses;
+            $.allowedEmailAddresses = allowedEmailAddresses;
             return this;
         }
-        public Builder allowedEmailAddresses(@Nullable List<String> allowedEmailAddresses) {
-            this.allowedEmailAddresses = Codegen.ofNullable(allowedEmailAddresses);
-            return this;
+
+        public Builder allowedEmailAddresses(List<String> allowedEmailAddresses) {
+            return allowedEmailAddresses(Output.of(allowedEmailAddresses));
         }
+
         public Builder allowedEmailAddresses(String... allowedEmailAddresses) {
             return allowedEmailAddresses(List.of(allowedEmailAddresses));
         }
+
         public Builder allowedIps(@Nullable Output<List<String>> allowedIps) {
-            this.allowedIps = allowedIps;
+            $.allowedIps = allowedIps;
             return this;
         }
-        public Builder allowedIps(@Nullable List<String> allowedIps) {
-            this.allowedIps = Codegen.ofNullable(allowedIps);
-            return this;
+
+        public Builder allowedIps(List<String> allowedIps) {
+            return allowedIps(Output.of(allowedIps));
         }
+
         public Builder allowedIps(String... allowedIps) {
             return allowedIps(List.of(allowedIps));
         }
+
         public Builder allowedUris(@Nullable Output<List<String>> allowedUris) {
-            this.allowedUris = allowedUris;
+            $.allowedUris = allowedUris;
             return this;
         }
-        public Builder allowedUris(@Nullable List<String> allowedUris) {
-            this.allowedUris = Codegen.ofNullable(allowedUris);
-            return this;
+
+        public Builder allowedUris(List<String> allowedUris) {
+            return allowedUris(Output.of(allowedUris));
         }
+
         public Builder allowedUris(String... allowedUris) {
             return allowedUris(List.of(allowedUris));
-        }        public AllowedSubjectAltNamesArgs build() {
-            return new AllowedSubjectAltNamesArgs(allowCustomSans, allowGlobbingDnsWildcards, allowedDnsNames, allowedEmailAddresses, allowedIps, allowedUris);
+        }
+
+        public AllowedSubjectAltNamesArgs build() {
+            return $;
         }
     }
+
 }

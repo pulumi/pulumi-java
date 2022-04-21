@@ -13,10 +13,10 @@ import com.pulumi.azurenative.videoanalyzer.inputs.VideoSourceArgs;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -29,7 +29,7 @@ public final class PipelineTopologyArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="accountName", required=true)
-      private final Output<String> accountName;
+    private Output<String> accountName;
 
     public Output<String> accountName() {
         return this.accountName;
@@ -40,10 +40,10 @@ public final class PipelineTopologyArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -51,7 +51,7 @@ public final class PipelineTopologyArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="kind", required=true)
-      private final Output<Either<String,Kind>> kind;
+    private Output<Either<String,Kind>> kind;
 
     public Output<Either<String,Kind>> kind() {
         return this.kind;
@@ -62,10 +62,10 @@ public final class PipelineTopologyArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="parameters")
-      private final @Nullable Output<List<ParameterDeclarationArgs>> parameters;
+    private @Nullable Output<List<ParameterDeclarationArgs>> parameters;
 
-    public Output<List<ParameterDeclarationArgs>> parameters() {
-        return this.parameters == null ? Codegen.empty() : this.parameters;
+    public Optional<Output<List<ParameterDeclarationArgs>>> parameters() {
+        return Optional.ofNullable(this.parameters);
     }
 
     /**
@@ -73,10 +73,10 @@ public final class PipelineTopologyArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="pipelineTopologyName")
-      private final @Nullable Output<String> pipelineTopologyName;
+    private @Nullable Output<String> pipelineTopologyName;
 
-    public Output<String> pipelineTopologyName() {
-        return this.pipelineTopologyName == null ? Codegen.empty() : this.pipelineTopologyName;
+    public Optional<Output<String>> pipelineTopologyName() {
+        return Optional.ofNullable(this.pipelineTopologyName);
     }
 
     /**
@@ -84,10 +84,10 @@ public final class PipelineTopologyArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="processors")
-      private final @Nullable Output<List<EncoderProcessorArgs>> processors;
+    private @Nullable Output<List<EncoderProcessorArgs>> processors;
 
-    public Output<List<EncoderProcessorArgs>> processors() {
-        return this.processors == null ? Codegen.empty() : this.processors;
+    public Optional<Output<List<EncoderProcessorArgs>>> processors() {
+        return Optional.ofNullable(this.processors);
     }
 
     /**
@@ -95,7 +95,7 @@ public final class PipelineTopologyArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -106,7 +106,7 @@ public final class PipelineTopologyArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="sinks", required=true)
-      private final Output<List<VideoSinkArgs>> sinks;
+    private Output<List<VideoSinkArgs>> sinks;
 
     public Output<List<VideoSinkArgs>> sinks() {
         return this.sinks;
@@ -117,7 +117,7 @@ public final class PipelineTopologyArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="sku", required=true)
-      private final Output<SkuArgs> sku;
+    private Output<SkuArgs> sku;
 
     public Output<SkuArgs> sku() {
         return this.sku;
@@ -128,179 +128,160 @@ public final class PipelineTopologyArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="sources", required=true)
-      private final Output<List<Either<RtspSourceArgs,VideoSourceArgs>>> sources;
+    private Output<List<Either<RtspSourceArgs,VideoSourceArgs>>> sources;
 
     public Output<List<Either<RtspSourceArgs,VideoSourceArgs>>> sources() {
         return this.sources;
     }
 
-    public PipelineTopologyArgs(
-        Output<String> accountName,
-        @Nullable Output<String> description,
-        Output<Either<String,Kind>> kind,
-        @Nullable Output<List<ParameterDeclarationArgs>> parameters,
-        @Nullable Output<String> pipelineTopologyName,
-        @Nullable Output<List<EncoderProcessorArgs>> processors,
-        Output<String> resourceGroupName,
-        Output<List<VideoSinkArgs>> sinks,
-        Output<SkuArgs> sku,
-        Output<List<Either<RtspSourceArgs,VideoSourceArgs>>> sources) {
-        this.accountName = Objects.requireNonNull(accountName, "expected parameter 'accountName' to be non-null");
-        this.description = description;
-        this.kind = Objects.requireNonNull(kind, "expected parameter 'kind' to be non-null");
-        this.parameters = parameters;
-        this.pipelineTopologyName = pipelineTopologyName;
-        this.processors = processors;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.sinks = Objects.requireNonNull(sinks, "expected parameter 'sinks' to be non-null");
-        this.sku = Objects.requireNonNull(sku, "expected parameter 'sku' to be non-null");
-        this.sources = Objects.requireNonNull(sources, "expected parameter 'sources' to be non-null");
-    }
+    private PipelineTopologyArgs() {}
 
-    private PipelineTopologyArgs() {
-        this.accountName = Codegen.empty();
-        this.description = Codegen.empty();
-        this.kind = Codegen.empty();
-        this.parameters = Codegen.empty();
-        this.pipelineTopologyName = Codegen.empty();
-        this.processors = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.sinks = Codegen.empty();
-        this.sku = Codegen.empty();
-        this.sources = Codegen.empty();
+    private PipelineTopologyArgs(PipelineTopologyArgs $) {
+        this.accountName = $.accountName;
+        this.description = $.description;
+        this.kind = $.kind;
+        this.parameters = $.parameters;
+        this.pipelineTopologyName = $.pipelineTopologyName;
+        this.processors = $.processors;
+        this.resourceGroupName = $.resourceGroupName;
+        this.sinks = $.sinks;
+        this.sku = $.sku;
+        this.sources = $.sources;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PipelineTopologyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> accountName;
-        private @Nullable Output<String> description;
-        private Output<Either<String,Kind>> kind;
-        private @Nullable Output<List<ParameterDeclarationArgs>> parameters;
-        private @Nullable Output<String> pipelineTopologyName;
-        private @Nullable Output<List<EncoderProcessorArgs>> processors;
-        private Output<String> resourceGroupName;
-        private Output<List<VideoSinkArgs>> sinks;
-        private Output<SkuArgs> sku;
-        private Output<List<Either<RtspSourceArgs,VideoSourceArgs>>> sources;
+        private PipelineTopologyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PipelineTopologyArgs();
         }
 
         public Builder(PipelineTopologyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accountName = defaults.accountName;
-    	      this.description = defaults.description;
-    	      this.kind = defaults.kind;
-    	      this.parameters = defaults.parameters;
-    	      this.pipelineTopologyName = defaults.pipelineTopologyName;
-    	      this.processors = defaults.processors;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.sinks = defaults.sinks;
-    	      this.sku = defaults.sku;
-    	      this.sources = defaults.sources;
+            $ = new PipelineTopologyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder accountName(Output<String> accountName) {
-            this.accountName = Objects.requireNonNull(accountName);
+            $.accountName = accountName;
             return this;
         }
+
         public Builder accountName(String accountName) {
-            this.accountName = Output.of(Objects.requireNonNull(accountName));
-            return this;
+            return accountName(Output.of(accountName));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder kind(Output<Either<String,Kind>> kind) {
-            this.kind = Objects.requireNonNull(kind);
+            $.kind = kind;
             return this;
         }
+
         public Builder kind(Either<String,Kind> kind) {
-            this.kind = Output.of(Objects.requireNonNull(kind));
-            return this;
+            return kind(Output.of(kind));
         }
+
         public Builder parameters(@Nullable Output<List<ParameterDeclarationArgs>> parameters) {
-            this.parameters = parameters;
+            $.parameters = parameters;
             return this;
         }
-        public Builder parameters(@Nullable List<ParameterDeclarationArgs> parameters) {
-            this.parameters = Codegen.ofNullable(parameters);
-            return this;
+
+        public Builder parameters(List<ParameterDeclarationArgs> parameters) {
+            return parameters(Output.of(parameters));
         }
+
         public Builder parameters(ParameterDeclarationArgs... parameters) {
             return parameters(List.of(parameters));
         }
+
         public Builder pipelineTopologyName(@Nullable Output<String> pipelineTopologyName) {
-            this.pipelineTopologyName = pipelineTopologyName;
+            $.pipelineTopologyName = pipelineTopologyName;
             return this;
         }
-        public Builder pipelineTopologyName(@Nullable String pipelineTopologyName) {
-            this.pipelineTopologyName = Codegen.ofNullable(pipelineTopologyName);
-            return this;
+
+        public Builder pipelineTopologyName(String pipelineTopologyName) {
+            return pipelineTopologyName(Output.of(pipelineTopologyName));
         }
+
         public Builder processors(@Nullable Output<List<EncoderProcessorArgs>> processors) {
-            this.processors = processors;
+            $.processors = processors;
             return this;
         }
-        public Builder processors(@Nullable List<EncoderProcessorArgs> processors) {
-            this.processors = Codegen.ofNullable(processors);
-            return this;
+
+        public Builder processors(List<EncoderProcessorArgs> processors) {
+            return processors(Output.of(processors));
         }
+
         public Builder processors(EncoderProcessorArgs... processors) {
             return processors(List.of(processors));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder sinks(Output<List<VideoSinkArgs>> sinks) {
-            this.sinks = Objects.requireNonNull(sinks);
+            $.sinks = sinks;
             return this;
         }
+
         public Builder sinks(List<VideoSinkArgs> sinks) {
-            this.sinks = Output.of(Objects.requireNonNull(sinks));
-            return this;
+            return sinks(Output.of(sinks));
         }
+
         public Builder sinks(VideoSinkArgs... sinks) {
             return sinks(List.of(sinks));
         }
+
         public Builder sku(Output<SkuArgs> sku) {
-            this.sku = Objects.requireNonNull(sku);
+            $.sku = sku;
             return this;
         }
+
         public Builder sku(SkuArgs sku) {
-            this.sku = Output.of(Objects.requireNonNull(sku));
-            return this;
+            return sku(Output.of(sku));
         }
+
         public Builder sources(Output<List<Either<RtspSourceArgs,VideoSourceArgs>>> sources) {
-            this.sources = Objects.requireNonNull(sources);
+            $.sources = sources;
             return this;
         }
+
         public Builder sources(List<Either<RtspSourceArgs,VideoSourceArgs>> sources) {
-            this.sources = Output.of(Objects.requireNonNull(sources));
-            return this;
+            return sources(Output.of(sources));
         }
+
         public Builder sources(Either<RtspSourceArgs,VideoSourceArgs>... sources) {
             return sources(List.of(sources));
-        }        public PipelineTopologyArgs build() {
-            return new PipelineTopologyArgs(accountName, description, kind, parameters, pipelineTopologyName, processors, resourceGroupName, sinks, sku, sources);
+        }
+
+        public PipelineTopologyArgs build() {
+            $.accountName = Objects.requireNonNull($.accountName, "expected parameter 'accountName' to be non-null");
+            $.kind = Objects.requireNonNull($.kind, "expected parameter 'kind' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.sinks = Objects.requireNonNull($.sinks, "expected parameter 'sinks' to be non-null");
+            $.sku = Objects.requireNonNull($.sku, "expected parameter 'sku' to be non-null");
+            $.sources = Objects.requireNonNull($.sources, "expected parameter 'sources' to be non-null");
+            return $;
         }
     }
+
 }

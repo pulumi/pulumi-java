@@ -5,10 +5,10 @@ package com.pulumi.aws.appsync.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -17,90 +17,83 @@ public final class DataSourceDynamodbConfigDeltaSyncConfigArgs extends com.pulum
     public static final DataSourceDynamodbConfigDeltaSyncConfigArgs Empty = new DataSourceDynamodbConfigDeltaSyncConfigArgs();
 
     @Import(name="baseTableTtl")
-      private final @Nullable Output<Integer> baseTableTtl;
+    private @Nullable Output<Integer> baseTableTtl;
 
-    public Output<Integer> baseTableTtl() {
-        return this.baseTableTtl == null ? Codegen.empty() : this.baseTableTtl;
+    public Optional<Output<Integer>> baseTableTtl() {
+        return Optional.ofNullable(this.baseTableTtl);
     }
 
     @Import(name="deltaSyncTableName", required=true)
-      private final Output<String> deltaSyncTableName;
+    private Output<String> deltaSyncTableName;
 
     public Output<String> deltaSyncTableName() {
         return this.deltaSyncTableName;
     }
 
     @Import(name="deltaSyncTableTtl")
-      private final @Nullable Output<Integer> deltaSyncTableTtl;
+    private @Nullable Output<Integer> deltaSyncTableTtl;
 
-    public Output<Integer> deltaSyncTableTtl() {
-        return this.deltaSyncTableTtl == null ? Codegen.empty() : this.deltaSyncTableTtl;
+    public Optional<Output<Integer>> deltaSyncTableTtl() {
+        return Optional.ofNullable(this.deltaSyncTableTtl);
     }
 
-    public DataSourceDynamodbConfigDeltaSyncConfigArgs(
-        @Nullable Output<Integer> baseTableTtl,
-        Output<String> deltaSyncTableName,
-        @Nullable Output<Integer> deltaSyncTableTtl) {
-        this.baseTableTtl = baseTableTtl;
-        this.deltaSyncTableName = Objects.requireNonNull(deltaSyncTableName, "expected parameter 'deltaSyncTableName' to be non-null");
-        this.deltaSyncTableTtl = deltaSyncTableTtl;
-    }
+    private DataSourceDynamodbConfigDeltaSyncConfigArgs() {}
 
-    private DataSourceDynamodbConfigDeltaSyncConfigArgs() {
-        this.baseTableTtl = Codegen.empty();
-        this.deltaSyncTableName = Codegen.empty();
-        this.deltaSyncTableTtl = Codegen.empty();
+    private DataSourceDynamodbConfigDeltaSyncConfigArgs(DataSourceDynamodbConfigDeltaSyncConfigArgs $) {
+        this.baseTableTtl = $.baseTableTtl;
+        this.deltaSyncTableName = $.deltaSyncTableName;
+        this.deltaSyncTableTtl = $.deltaSyncTableTtl;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DataSourceDynamodbConfigDeltaSyncConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> baseTableTtl;
-        private Output<String> deltaSyncTableName;
-        private @Nullable Output<Integer> deltaSyncTableTtl;
+        private DataSourceDynamodbConfigDeltaSyncConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DataSourceDynamodbConfigDeltaSyncConfigArgs();
         }
 
         public Builder(DataSourceDynamodbConfigDeltaSyncConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.baseTableTtl = defaults.baseTableTtl;
-    	      this.deltaSyncTableName = defaults.deltaSyncTableName;
-    	      this.deltaSyncTableTtl = defaults.deltaSyncTableTtl;
+            $ = new DataSourceDynamodbConfigDeltaSyncConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder baseTableTtl(@Nullable Output<Integer> baseTableTtl) {
-            this.baseTableTtl = baseTableTtl;
+            $.baseTableTtl = baseTableTtl;
             return this;
         }
-        public Builder baseTableTtl(@Nullable Integer baseTableTtl) {
-            this.baseTableTtl = Codegen.ofNullable(baseTableTtl);
-            return this;
+
+        public Builder baseTableTtl(Integer baseTableTtl) {
+            return baseTableTtl(Output.of(baseTableTtl));
         }
+
         public Builder deltaSyncTableName(Output<String> deltaSyncTableName) {
-            this.deltaSyncTableName = Objects.requireNonNull(deltaSyncTableName);
+            $.deltaSyncTableName = deltaSyncTableName;
             return this;
         }
+
         public Builder deltaSyncTableName(String deltaSyncTableName) {
-            this.deltaSyncTableName = Output.of(Objects.requireNonNull(deltaSyncTableName));
-            return this;
+            return deltaSyncTableName(Output.of(deltaSyncTableName));
         }
+
         public Builder deltaSyncTableTtl(@Nullable Output<Integer> deltaSyncTableTtl) {
-            this.deltaSyncTableTtl = deltaSyncTableTtl;
+            $.deltaSyncTableTtl = deltaSyncTableTtl;
             return this;
         }
-        public Builder deltaSyncTableTtl(@Nullable Integer deltaSyncTableTtl) {
-            this.deltaSyncTableTtl = Codegen.ofNullable(deltaSyncTableTtl);
-            return this;
-        }        public DataSourceDynamodbConfigDeltaSyncConfigArgs build() {
-            return new DataSourceDynamodbConfigDeltaSyncConfigArgs(baseTableTtl, deltaSyncTableName, deltaSyncTableTtl);
+
+        public Builder deltaSyncTableTtl(Integer deltaSyncTableTtl) {
+            return deltaSyncTableTtl(Output.of(deltaSyncTableTtl));
+        }
+
+        public DataSourceDynamodbConfigDeltaSyncConfigArgs build() {
+            $.deltaSyncTableName = Objects.requireNonNull($.deltaSyncTableName, "expected parameter 'deltaSyncTableName' to be non-null");
+            return $;
         }
     }
+
 }

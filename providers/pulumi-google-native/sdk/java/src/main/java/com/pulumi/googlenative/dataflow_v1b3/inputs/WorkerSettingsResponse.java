@@ -22,7 +22,7 @@ public final class WorkerSettingsResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="baseUrl", required=true)
-      private final String baseUrl;
+    private String baseUrl;
 
     public String baseUrl() {
         return this.baseUrl;
@@ -33,7 +33,7 @@ public final class WorkerSettingsResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="reportingEnabled", required=true)
-      private final Boolean reportingEnabled;
+    private Boolean reportingEnabled;
 
     public Boolean reportingEnabled() {
         return this.reportingEnabled;
@@ -44,7 +44,7 @@ public final class WorkerSettingsResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="servicePath", required=true)
-      private final String servicePath;
+    private String servicePath;
 
     public String servicePath() {
         return this.servicePath;
@@ -55,7 +55,7 @@ public final class WorkerSettingsResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="shuffleServicePath", required=true)
-      private final String shuffleServicePath;
+    private String shuffleServicePath;
 
     public String shuffleServicePath() {
         return this.shuffleServicePath;
@@ -66,7 +66,7 @@ public final class WorkerSettingsResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="tempStoragePrefix", required=true)
-      private final String tempStoragePrefix;
+    private String tempStoragePrefix;
 
     public String tempStoragePrefix() {
         return this.tempStoragePrefix;
@@ -77,91 +77,80 @@ public final class WorkerSettingsResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="workerId", required=true)
-      private final String workerId;
+    private String workerId;
 
     public String workerId() {
         return this.workerId;
     }
 
-    public WorkerSettingsResponse(
-        String baseUrl,
-        Boolean reportingEnabled,
-        String servicePath,
-        String shuffleServicePath,
-        String tempStoragePrefix,
-        String workerId) {
-        this.baseUrl = Objects.requireNonNull(baseUrl, "expected parameter 'baseUrl' to be non-null");
-        this.reportingEnabled = Objects.requireNonNull(reportingEnabled, "expected parameter 'reportingEnabled' to be non-null");
-        this.servicePath = Objects.requireNonNull(servicePath, "expected parameter 'servicePath' to be non-null");
-        this.shuffleServicePath = Objects.requireNonNull(shuffleServicePath, "expected parameter 'shuffleServicePath' to be non-null");
-        this.tempStoragePrefix = Objects.requireNonNull(tempStoragePrefix, "expected parameter 'tempStoragePrefix' to be non-null");
-        this.workerId = Objects.requireNonNull(workerId, "expected parameter 'workerId' to be non-null");
-    }
+    private WorkerSettingsResponse() {}
 
-    private WorkerSettingsResponse() {
-        this.baseUrl = null;
-        this.reportingEnabled = null;
-        this.servicePath = null;
-        this.shuffleServicePath = null;
-        this.tempStoragePrefix = null;
-        this.workerId = null;
+    private WorkerSettingsResponse(WorkerSettingsResponse $) {
+        this.baseUrl = $.baseUrl;
+        this.reportingEnabled = $.reportingEnabled;
+        this.servicePath = $.servicePath;
+        this.shuffleServicePath = $.shuffleServicePath;
+        this.tempStoragePrefix = $.tempStoragePrefix;
+        this.workerId = $.workerId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WorkerSettingsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String baseUrl;
-        private Boolean reportingEnabled;
-        private String servicePath;
-        private String shuffleServicePath;
-        private String tempStoragePrefix;
-        private String workerId;
+        private WorkerSettingsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new WorkerSettingsResponse();
         }
 
         public Builder(WorkerSettingsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.baseUrl = defaults.baseUrl;
-    	      this.reportingEnabled = defaults.reportingEnabled;
-    	      this.servicePath = defaults.servicePath;
-    	      this.shuffleServicePath = defaults.shuffleServicePath;
-    	      this.tempStoragePrefix = defaults.tempStoragePrefix;
-    	      this.workerId = defaults.workerId;
+            $ = new WorkerSettingsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder baseUrl(String baseUrl) {
-            this.baseUrl = Objects.requireNonNull(baseUrl);
+            $.baseUrl = baseUrl;
             return this;
         }
+
         public Builder reportingEnabled(Boolean reportingEnabled) {
-            this.reportingEnabled = Objects.requireNonNull(reportingEnabled);
+            $.reportingEnabled = reportingEnabled;
             return this;
         }
+
         public Builder servicePath(String servicePath) {
-            this.servicePath = Objects.requireNonNull(servicePath);
+            $.servicePath = servicePath;
             return this;
         }
+
         public Builder shuffleServicePath(String shuffleServicePath) {
-            this.shuffleServicePath = Objects.requireNonNull(shuffleServicePath);
+            $.shuffleServicePath = shuffleServicePath;
             return this;
         }
+
         public Builder tempStoragePrefix(String tempStoragePrefix) {
-            this.tempStoragePrefix = Objects.requireNonNull(tempStoragePrefix);
+            $.tempStoragePrefix = tempStoragePrefix;
             return this;
         }
+
         public Builder workerId(String workerId) {
-            this.workerId = Objects.requireNonNull(workerId);
+            $.workerId = workerId;
             return this;
-        }        public WorkerSettingsResponse build() {
-            return new WorkerSettingsResponse(baseUrl, reportingEnabled, servicePath, shuffleServicePath, tempStoragePrefix, workerId);
+        }
+
+        public WorkerSettingsResponse build() {
+            $.baseUrl = Objects.requireNonNull($.baseUrl, "expected parameter 'baseUrl' to be non-null");
+            $.reportingEnabled = Objects.requireNonNull($.reportingEnabled, "expected parameter 'reportingEnabled' to be non-null");
+            $.servicePath = Objects.requireNonNull($.servicePath, "expected parameter 'servicePath' to be non-null");
+            $.shuffleServicePath = Objects.requireNonNull($.shuffleServicePath, "expected parameter 'shuffleServicePath' to be non-null");
+            $.tempStoragePrefix = Objects.requireNonNull($.tempStoragePrefix, "expected parameter 'tempStoragePrefix' to be non-null");
+            $.workerId = Objects.requireNonNull($.workerId, "expected parameter 'workerId' to be non-null");
+            return $;
         }
     }
+
 }

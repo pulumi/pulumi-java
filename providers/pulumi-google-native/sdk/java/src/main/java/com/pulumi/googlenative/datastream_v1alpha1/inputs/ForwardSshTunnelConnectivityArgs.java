@@ -5,10 +5,10 @@ package com.pulumi.googlenative.datastream_v1alpha1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,7 +25,7 @@ public final class ForwardSshTunnelConnectivityArgs extends com.pulumi.resources
      * 
      */
     @Import(name="hostname", required=true)
-      private final Output<String> hostname;
+    private Output<String> hostname;
 
     public Output<String> hostname() {
         return this.hostname;
@@ -36,10 +36,10 @@ public final class ForwardSshTunnelConnectivityArgs extends com.pulumi.resources
      * 
      */
     @Import(name="password")
-      private final @Nullable Output<String> password;
+    private @Nullable Output<String> password;
 
-    public Output<String> password() {
-        return this.password == null ? Codegen.empty() : this.password;
+    public Optional<Output<String>> password() {
+        return Optional.ofNullable(this.password);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class ForwardSshTunnelConnectivityArgs extends com.pulumi.resources
      * 
      */
     @Import(name="port")
-      private final @Nullable Output<Integer> port;
+    private @Nullable Output<Integer> port;
 
-    public Output<Integer> port() {
-        return this.port == null ? Codegen.empty() : this.port;
+    public Optional<Output<Integer>> port() {
+        return Optional.ofNullable(this.port);
     }
 
     /**
@@ -58,10 +58,10 @@ public final class ForwardSshTunnelConnectivityArgs extends com.pulumi.resources
      * 
      */
     @Import(name="privateKey")
-      private final @Nullable Output<String> privateKey;
+    private @Nullable Output<String> privateKey;
 
-    public Output<String> privateKey() {
-        return this.privateKey == null ? Codegen.empty() : this.privateKey;
+    public Optional<Output<String>> privateKey() {
+        return Optional.ofNullable(this.privateKey);
     }
 
     /**
@@ -69,102 +69,90 @@ public final class ForwardSshTunnelConnectivityArgs extends com.pulumi.resources
      * 
      */
     @Import(name="username", required=true)
-      private final Output<String> username;
+    private Output<String> username;
 
     public Output<String> username() {
         return this.username;
     }
 
-    public ForwardSshTunnelConnectivityArgs(
-        Output<String> hostname,
-        @Nullable Output<String> password,
-        @Nullable Output<Integer> port,
-        @Nullable Output<String> privateKey,
-        Output<String> username) {
-        this.hostname = Objects.requireNonNull(hostname, "expected parameter 'hostname' to be non-null");
-        this.password = password;
-        this.port = port;
-        this.privateKey = privateKey;
-        this.username = Objects.requireNonNull(username, "expected parameter 'username' to be non-null");
-    }
+    private ForwardSshTunnelConnectivityArgs() {}
 
-    private ForwardSshTunnelConnectivityArgs() {
-        this.hostname = Codegen.empty();
-        this.password = Codegen.empty();
-        this.port = Codegen.empty();
-        this.privateKey = Codegen.empty();
-        this.username = Codegen.empty();
+    private ForwardSshTunnelConnectivityArgs(ForwardSshTunnelConnectivityArgs $) {
+        this.hostname = $.hostname;
+        this.password = $.password;
+        this.port = $.port;
+        this.privateKey = $.privateKey;
+        this.username = $.username;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ForwardSshTunnelConnectivityArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> hostname;
-        private @Nullable Output<String> password;
-        private @Nullable Output<Integer> port;
-        private @Nullable Output<String> privateKey;
-        private Output<String> username;
+        private ForwardSshTunnelConnectivityArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ForwardSshTunnelConnectivityArgs();
         }
 
         public Builder(ForwardSshTunnelConnectivityArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.hostname = defaults.hostname;
-    	      this.password = defaults.password;
-    	      this.port = defaults.port;
-    	      this.privateKey = defaults.privateKey;
-    	      this.username = defaults.username;
+            $ = new ForwardSshTunnelConnectivityArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder hostname(Output<String> hostname) {
-            this.hostname = Objects.requireNonNull(hostname);
+            $.hostname = hostname;
             return this;
         }
+
         public Builder hostname(String hostname) {
-            this.hostname = Output.of(Objects.requireNonNull(hostname));
-            return this;
+            return hostname(Output.of(hostname));
         }
+
         public Builder password(@Nullable Output<String> password) {
-            this.password = password;
+            $.password = password;
             return this;
         }
-        public Builder password(@Nullable String password) {
-            this.password = Codegen.ofNullable(password);
-            return this;
+
+        public Builder password(String password) {
+            return password(Output.of(password));
         }
+
         public Builder port(@Nullable Output<Integer> port) {
-            this.port = port;
+            $.port = port;
             return this;
         }
-        public Builder port(@Nullable Integer port) {
-            this.port = Codegen.ofNullable(port);
-            return this;
+
+        public Builder port(Integer port) {
+            return port(Output.of(port));
         }
+
         public Builder privateKey(@Nullable Output<String> privateKey) {
-            this.privateKey = privateKey;
+            $.privateKey = privateKey;
             return this;
         }
-        public Builder privateKey(@Nullable String privateKey) {
-            this.privateKey = Codegen.ofNullable(privateKey);
-            return this;
+
+        public Builder privateKey(String privateKey) {
+            return privateKey(Output.of(privateKey));
         }
+
         public Builder username(Output<String> username) {
-            this.username = Objects.requireNonNull(username);
+            $.username = username;
             return this;
         }
+
         public Builder username(String username) {
-            this.username = Output.of(Objects.requireNonNull(username));
-            return this;
-        }        public ForwardSshTunnelConnectivityArgs build() {
-            return new ForwardSshTunnelConnectivityArgs(hostname, password, port, privateKey, username);
+            return username(Output.of(username));
+        }
+
+        public ForwardSshTunnelConnectivityArgs build() {
+            $.hostname = Objects.requireNonNull($.hostname, "expected parameter 'hostname' to be non-null");
+            $.username = Objects.requireNonNull($.username, "expected parameter 'username' to be non-null");
+            return $;
         }
     }
+
 }

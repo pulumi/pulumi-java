@@ -17,7 +17,7 @@ public final class GetTimeSeriesDatabaseConnectionArgs extends com.pulumi.resour
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -28,7 +28,7 @@ public final class GetTimeSeriesDatabaseConnectionArgs extends com.pulumi.resour
      * 
      */
     @Import(name="resourceName", required=true)
-      private final String resourceName;
+    private String resourceName;
 
     public String resourceName() {
         return this.resourceName;
@@ -39,64 +39,59 @@ public final class GetTimeSeriesDatabaseConnectionArgs extends com.pulumi.resour
      * 
      */
     @Import(name="timeSeriesDatabaseConnectionName", required=true)
-      private final String timeSeriesDatabaseConnectionName;
+    private String timeSeriesDatabaseConnectionName;
 
     public String timeSeriesDatabaseConnectionName() {
         return this.timeSeriesDatabaseConnectionName;
     }
 
-    public GetTimeSeriesDatabaseConnectionArgs(
-        String resourceGroupName,
-        String resourceName,
-        String timeSeriesDatabaseConnectionName) {
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.resourceName = Objects.requireNonNull(resourceName, "expected parameter 'resourceName' to be non-null");
-        this.timeSeriesDatabaseConnectionName = Objects.requireNonNull(timeSeriesDatabaseConnectionName, "expected parameter 'timeSeriesDatabaseConnectionName' to be non-null");
-    }
+    private GetTimeSeriesDatabaseConnectionArgs() {}
 
-    private GetTimeSeriesDatabaseConnectionArgs() {
-        this.resourceGroupName = null;
-        this.resourceName = null;
-        this.timeSeriesDatabaseConnectionName = null;
+    private GetTimeSeriesDatabaseConnectionArgs(GetTimeSeriesDatabaseConnectionArgs $) {
+        this.resourceGroupName = $.resourceGroupName;
+        this.resourceName = $.resourceName;
+        this.timeSeriesDatabaseConnectionName = $.timeSeriesDatabaseConnectionName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetTimeSeriesDatabaseConnectionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String resourceGroupName;
-        private String resourceName;
-        private String timeSeriesDatabaseConnectionName;
+        private GetTimeSeriesDatabaseConnectionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetTimeSeriesDatabaseConnectionArgs();
         }
 
         public Builder(GetTimeSeriesDatabaseConnectionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.resourceName = defaults.resourceName;
-    	      this.timeSeriesDatabaseConnectionName = defaults.timeSeriesDatabaseConnectionName;
+            $ = new GetTimeSeriesDatabaseConnectionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceName(String resourceName) {
-            this.resourceName = Objects.requireNonNull(resourceName);
+            $.resourceName = resourceName;
             return this;
         }
+
         public Builder timeSeriesDatabaseConnectionName(String timeSeriesDatabaseConnectionName) {
-            this.timeSeriesDatabaseConnectionName = Objects.requireNonNull(timeSeriesDatabaseConnectionName);
+            $.timeSeriesDatabaseConnectionName = timeSeriesDatabaseConnectionName;
             return this;
-        }        public GetTimeSeriesDatabaseConnectionArgs build() {
-            return new GetTimeSeriesDatabaseConnectionArgs(resourceGroupName, resourceName, timeSeriesDatabaseConnectionName);
+        }
+
+        public GetTimeSeriesDatabaseConnectionArgs build() {
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.resourceName = Objects.requireNonNull($.resourceName, "expected parameter 'resourceName' to be non-null");
+            $.timeSeriesDatabaseConnectionName = Objects.requireNonNull($.timeSeriesDatabaseConnectionName, "expected parameter 'timeSeriesDatabaseConnectionName' to be non-null");
+            return $;
         }
     }
+
 }

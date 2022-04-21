@@ -5,9 +5,9 @@ package com.pulumi.azurenative.machinelearningservices.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class RGitHubPackageArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="authToken")
-      private final @Nullable Output<String> authToken;
+    private @Nullable Output<String> authToken;
 
-    public Output<String> authToken() {
-        return this.authToken == null ? Codegen.empty() : this.authToken;
+    public Optional<Output<String>> authToken() {
+        return Optional.ofNullable(this.authToken);
     }
 
     /**
@@ -31,63 +31,58 @@ public final class RGitHubPackageArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="repository")
-      private final @Nullable Output<String> repository;
+    private @Nullable Output<String> repository;
 
-    public Output<String> repository() {
-        return this.repository == null ? Codegen.empty() : this.repository;
+    public Optional<Output<String>> repository() {
+        return Optional.ofNullable(this.repository);
     }
 
-    public RGitHubPackageArgs(
-        @Nullable Output<String> authToken,
-        @Nullable Output<String> repository) {
-        this.authToken = authToken;
-        this.repository = repository;
-    }
+    private RGitHubPackageArgs() {}
 
-    private RGitHubPackageArgs() {
-        this.authToken = Codegen.empty();
-        this.repository = Codegen.empty();
+    private RGitHubPackageArgs(RGitHubPackageArgs $) {
+        this.authToken = $.authToken;
+        this.repository = $.repository;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RGitHubPackageArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> authToken;
-        private @Nullable Output<String> repository;
+        private RGitHubPackageArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RGitHubPackageArgs();
         }
 
         public Builder(RGitHubPackageArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.authToken = defaults.authToken;
-    	      this.repository = defaults.repository;
+            $ = new RGitHubPackageArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder authToken(@Nullable Output<String> authToken) {
-            this.authToken = authToken;
+            $.authToken = authToken;
             return this;
         }
-        public Builder authToken(@Nullable String authToken) {
-            this.authToken = Codegen.ofNullable(authToken);
-            return this;
+
+        public Builder authToken(String authToken) {
+            return authToken(Output.of(authToken));
         }
+
         public Builder repository(@Nullable Output<String> repository) {
-            this.repository = repository;
+            $.repository = repository;
             return this;
         }
-        public Builder repository(@Nullable String repository) {
-            this.repository = Codegen.ofNullable(repository);
-            return this;
-        }        public RGitHubPackageArgs build() {
-            return new RGitHubPackageArgs(authToken, repository);
+
+        public Builder repository(String repository) {
+            return repository(Output.of(repository));
+        }
+
+        public RGitHubPackageArgs build() {
+            return $;
         }
     }
+
 }

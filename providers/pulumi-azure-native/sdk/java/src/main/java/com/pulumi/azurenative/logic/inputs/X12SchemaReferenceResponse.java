@@ -23,7 +23,7 @@ public final class X12SchemaReferenceResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="messageId", required=true)
-      private final String messageId;
+    private String messageId;
 
     public String messageId() {
         return this.messageId;
@@ -34,7 +34,7 @@ public final class X12SchemaReferenceResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="schemaName", required=true)
-      private final String schemaName;
+    private String schemaName;
 
     public String schemaName() {
         return this.schemaName;
@@ -45,7 +45,7 @@ public final class X12SchemaReferenceResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="schemaVersion", required=true)
-      private final String schemaVersion;
+    private String schemaVersion;
 
     public String schemaVersion() {
         return this.schemaVersion;
@@ -56,73 +56,65 @@ public final class X12SchemaReferenceResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="senderApplicationId")
-      private final @Nullable String senderApplicationId;
+    private @Nullable String senderApplicationId;
 
     public Optional<String> senderApplicationId() {
-        return this.senderApplicationId == null ? Optional.empty() : Optional.ofNullable(this.senderApplicationId);
+        return Optional.ofNullable(this.senderApplicationId);
     }
 
-    public X12SchemaReferenceResponse(
-        String messageId,
-        String schemaName,
-        String schemaVersion,
-        @Nullable String senderApplicationId) {
-        this.messageId = Objects.requireNonNull(messageId, "expected parameter 'messageId' to be non-null");
-        this.schemaName = Objects.requireNonNull(schemaName, "expected parameter 'schemaName' to be non-null");
-        this.schemaVersion = Objects.requireNonNull(schemaVersion, "expected parameter 'schemaVersion' to be non-null");
-        this.senderApplicationId = senderApplicationId;
-    }
+    private X12SchemaReferenceResponse() {}
 
-    private X12SchemaReferenceResponse() {
-        this.messageId = null;
-        this.schemaName = null;
-        this.schemaVersion = null;
-        this.senderApplicationId = null;
+    private X12SchemaReferenceResponse(X12SchemaReferenceResponse $) {
+        this.messageId = $.messageId;
+        this.schemaName = $.schemaName;
+        this.schemaVersion = $.schemaVersion;
+        this.senderApplicationId = $.senderApplicationId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(X12SchemaReferenceResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String messageId;
-        private String schemaName;
-        private String schemaVersion;
-        private @Nullable String senderApplicationId;
+        private X12SchemaReferenceResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new X12SchemaReferenceResponse();
         }
 
         public Builder(X12SchemaReferenceResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.messageId = defaults.messageId;
-    	      this.schemaName = defaults.schemaName;
-    	      this.schemaVersion = defaults.schemaVersion;
-    	      this.senderApplicationId = defaults.senderApplicationId;
+            $ = new X12SchemaReferenceResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder messageId(String messageId) {
-            this.messageId = Objects.requireNonNull(messageId);
+            $.messageId = messageId;
             return this;
         }
+
         public Builder schemaName(String schemaName) {
-            this.schemaName = Objects.requireNonNull(schemaName);
+            $.schemaName = schemaName;
             return this;
         }
+
         public Builder schemaVersion(String schemaVersion) {
-            this.schemaVersion = Objects.requireNonNull(schemaVersion);
+            $.schemaVersion = schemaVersion;
             return this;
         }
+
         public Builder senderApplicationId(@Nullable String senderApplicationId) {
-            this.senderApplicationId = senderApplicationId;
+            $.senderApplicationId = senderApplicationId;
             return this;
-        }        public X12SchemaReferenceResponse build() {
-            return new X12SchemaReferenceResponse(messageId, schemaName, schemaVersion, senderApplicationId);
+        }
+
+        public X12SchemaReferenceResponse build() {
+            $.messageId = Objects.requireNonNull($.messageId, "expected parameter 'messageId' to be non-null");
+            $.schemaName = Objects.requireNonNull($.schemaName, "expected parameter 'schemaName' to be non-null");
+            $.schemaVersion = Objects.requireNonNull($.schemaVersion, "expected parameter 'schemaVersion' to be non-null");
+            return $;
         }
     }
+
 }

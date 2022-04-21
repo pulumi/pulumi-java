@@ -5,11 +5,11 @@ package com.pulumi.googlenative.cloudfunctions_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.cloudfunctions_v1.inputs.SecretVersionArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class SecretVolumeArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="mountPath")
-      private final @Nullable Output<String> mountPath;
+    private @Nullable Output<String> mountPath;
 
-    public Output<String> mountPath() {
-        return this.mountPath == null ? Codegen.empty() : this.mountPath;
+    public Optional<Output<String>> mountPath() {
+        return Optional.ofNullable(this.mountPath);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class SecretVolumeArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -48,10 +48,10 @@ public final class SecretVolumeArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="secret")
-      private final @Nullable Output<String> secret;
+    private @Nullable Output<String> secret;
 
-    public Output<String> secret() {
-        return this.secret == null ? Codegen.empty() : this.secret;
+    public Optional<Output<String>> secret() {
+        return Optional.ofNullable(this.secret);
     }
 
     /**
@@ -59,92 +59,82 @@ public final class SecretVolumeArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="versions")
-      private final @Nullable Output<List<SecretVersionArgs>> versions;
+    private @Nullable Output<List<SecretVersionArgs>> versions;
 
-    public Output<List<SecretVersionArgs>> versions() {
-        return this.versions == null ? Codegen.empty() : this.versions;
+    public Optional<Output<List<SecretVersionArgs>>> versions() {
+        return Optional.ofNullable(this.versions);
     }
 
-    public SecretVolumeArgs(
-        @Nullable Output<String> mountPath,
-        @Nullable Output<String> project,
-        @Nullable Output<String> secret,
-        @Nullable Output<List<SecretVersionArgs>> versions) {
-        this.mountPath = mountPath;
-        this.project = project;
-        this.secret = secret;
-        this.versions = versions;
-    }
+    private SecretVolumeArgs() {}
 
-    private SecretVolumeArgs() {
-        this.mountPath = Codegen.empty();
-        this.project = Codegen.empty();
-        this.secret = Codegen.empty();
-        this.versions = Codegen.empty();
+    private SecretVolumeArgs(SecretVolumeArgs $) {
+        this.mountPath = $.mountPath;
+        this.project = $.project;
+        this.secret = $.secret;
+        this.versions = $.versions;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SecretVolumeArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> mountPath;
-        private @Nullable Output<String> project;
-        private @Nullable Output<String> secret;
-        private @Nullable Output<List<SecretVersionArgs>> versions;
+        private SecretVolumeArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SecretVolumeArgs();
         }
 
         public Builder(SecretVolumeArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.mountPath = defaults.mountPath;
-    	      this.project = defaults.project;
-    	      this.secret = defaults.secret;
-    	      this.versions = defaults.versions;
+            $ = new SecretVolumeArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder mountPath(@Nullable Output<String> mountPath) {
-            this.mountPath = mountPath;
+            $.mountPath = mountPath;
             return this;
         }
-        public Builder mountPath(@Nullable String mountPath) {
-            this.mountPath = Codegen.ofNullable(mountPath);
-            return this;
+
+        public Builder mountPath(String mountPath) {
+            return mountPath(Output.of(mountPath));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder secret(@Nullable Output<String> secret) {
-            this.secret = secret;
+            $.secret = secret;
             return this;
         }
-        public Builder secret(@Nullable String secret) {
-            this.secret = Codegen.ofNullable(secret);
-            return this;
+
+        public Builder secret(String secret) {
+            return secret(Output.of(secret));
         }
+
         public Builder versions(@Nullable Output<List<SecretVersionArgs>> versions) {
-            this.versions = versions;
+            $.versions = versions;
             return this;
         }
-        public Builder versions(@Nullable List<SecretVersionArgs> versions) {
-            this.versions = Codegen.ofNullable(versions);
-            return this;
+
+        public Builder versions(List<SecretVersionArgs> versions) {
+            return versions(Output.of(versions));
         }
+
         public Builder versions(SecretVersionArgs... versions) {
             return versions(List.of(versions));
-        }        public SecretVolumeArgs build() {
-            return new SecretVolumeArgs(mountPath, project, secret, versions);
+        }
+
+        public SecretVolumeArgs build() {
+            return $;
         }
     }
+
 }

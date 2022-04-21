@@ -18,7 +18,7 @@ public final class GSuitePrincipalResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="gsuiteDomain", required=true)
-      private final Boolean gsuiteDomain;
+    private Boolean gsuiteDomain;
 
     public Boolean gsuiteDomain() {
         return this.gsuiteDomain;
@@ -29,7 +29,7 @@ public final class GSuitePrincipalResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="gsuiteGroupEmail", required=true)
-      private final String gsuiteGroupEmail;
+    private String gsuiteGroupEmail;
 
     public String gsuiteGroupEmail() {
         return this.gsuiteGroupEmail;
@@ -40,64 +40,59 @@ public final class GSuitePrincipalResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="gsuiteUserEmail", required=true)
-      private final String gsuiteUserEmail;
+    private String gsuiteUserEmail;
 
     public String gsuiteUserEmail() {
         return this.gsuiteUserEmail;
     }
 
-    public GSuitePrincipalResponse(
-        Boolean gsuiteDomain,
-        String gsuiteGroupEmail,
-        String gsuiteUserEmail) {
-        this.gsuiteDomain = Objects.requireNonNull(gsuiteDomain, "expected parameter 'gsuiteDomain' to be non-null");
-        this.gsuiteGroupEmail = Objects.requireNonNull(gsuiteGroupEmail, "expected parameter 'gsuiteGroupEmail' to be non-null");
-        this.gsuiteUserEmail = Objects.requireNonNull(gsuiteUserEmail, "expected parameter 'gsuiteUserEmail' to be non-null");
-    }
+    private GSuitePrincipalResponse() {}
 
-    private GSuitePrincipalResponse() {
-        this.gsuiteDomain = null;
-        this.gsuiteGroupEmail = null;
-        this.gsuiteUserEmail = null;
+    private GSuitePrincipalResponse(GSuitePrincipalResponse $) {
+        this.gsuiteDomain = $.gsuiteDomain;
+        this.gsuiteGroupEmail = $.gsuiteGroupEmail;
+        this.gsuiteUserEmail = $.gsuiteUserEmail;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GSuitePrincipalResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Boolean gsuiteDomain;
-        private String gsuiteGroupEmail;
-        private String gsuiteUserEmail;
+        private GSuitePrincipalResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GSuitePrincipalResponse();
         }
 
         public Builder(GSuitePrincipalResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.gsuiteDomain = defaults.gsuiteDomain;
-    	      this.gsuiteGroupEmail = defaults.gsuiteGroupEmail;
-    	      this.gsuiteUserEmail = defaults.gsuiteUserEmail;
+            $ = new GSuitePrincipalResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder gsuiteDomain(Boolean gsuiteDomain) {
-            this.gsuiteDomain = Objects.requireNonNull(gsuiteDomain);
+            $.gsuiteDomain = gsuiteDomain;
             return this;
         }
+
         public Builder gsuiteGroupEmail(String gsuiteGroupEmail) {
-            this.gsuiteGroupEmail = Objects.requireNonNull(gsuiteGroupEmail);
+            $.gsuiteGroupEmail = gsuiteGroupEmail;
             return this;
         }
+
         public Builder gsuiteUserEmail(String gsuiteUserEmail) {
-            this.gsuiteUserEmail = Objects.requireNonNull(gsuiteUserEmail);
+            $.gsuiteUserEmail = gsuiteUserEmail;
             return this;
-        }        public GSuitePrincipalResponse build() {
-            return new GSuitePrincipalResponse(gsuiteDomain, gsuiteGroupEmail, gsuiteUserEmail);
+        }
+
+        public GSuitePrincipalResponse build() {
+            $.gsuiteDomain = Objects.requireNonNull($.gsuiteDomain, "expected parameter 'gsuiteDomain' to be non-null");
+            $.gsuiteGroupEmail = Objects.requireNonNull($.gsuiteGroupEmail, "expected parameter 'gsuiteGroupEmail' to be non-null");
+            $.gsuiteUserEmail = Objects.requireNonNull($.gsuiteUserEmail, "expected parameter 'gsuiteUserEmail' to be non-null");
+            return $;
         }
     }
+
 }

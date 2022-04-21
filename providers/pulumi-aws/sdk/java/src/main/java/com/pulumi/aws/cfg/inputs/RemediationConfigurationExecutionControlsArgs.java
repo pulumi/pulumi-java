@@ -6,8 +6,8 @@ package com.pulumi.aws.cfg.inputs;
 import com.pulumi.aws.cfg.inputs.RemediationConfigurationExecutionControlsSsmControlsArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,49 +20,48 @@ public final class RemediationConfigurationExecutionControlsArgs extends com.pul
      * 
      */
     @Import(name="ssmControls")
-      private final @Nullable Output<RemediationConfigurationExecutionControlsSsmControlsArgs> ssmControls;
+    private @Nullable Output<RemediationConfigurationExecutionControlsSsmControlsArgs> ssmControls;
 
-    public Output<RemediationConfigurationExecutionControlsSsmControlsArgs> ssmControls() {
-        return this.ssmControls == null ? Codegen.empty() : this.ssmControls;
+    public Optional<Output<RemediationConfigurationExecutionControlsSsmControlsArgs>> ssmControls() {
+        return Optional.ofNullable(this.ssmControls);
     }
 
-    public RemediationConfigurationExecutionControlsArgs(@Nullable Output<RemediationConfigurationExecutionControlsSsmControlsArgs> ssmControls) {
-        this.ssmControls = ssmControls;
-    }
+    private RemediationConfigurationExecutionControlsArgs() {}
 
-    private RemediationConfigurationExecutionControlsArgs() {
-        this.ssmControls = Codegen.empty();
+    private RemediationConfigurationExecutionControlsArgs(RemediationConfigurationExecutionControlsArgs $) {
+        this.ssmControls = $.ssmControls;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RemediationConfigurationExecutionControlsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<RemediationConfigurationExecutionControlsSsmControlsArgs> ssmControls;
+        private RemediationConfigurationExecutionControlsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RemediationConfigurationExecutionControlsArgs();
         }
 
         public Builder(RemediationConfigurationExecutionControlsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.ssmControls = defaults.ssmControls;
+            $ = new RemediationConfigurationExecutionControlsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder ssmControls(@Nullable Output<RemediationConfigurationExecutionControlsSsmControlsArgs> ssmControls) {
-            this.ssmControls = ssmControls;
+            $.ssmControls = ssmControls;
             return this;
         }
-        public Builder ssmControls(@Nullable RemediationConfigurationExecutionControlsSsmControlsArgs ssmControls) {
-            this.ssmControls = Codegen.ofNullable(ssmControls);
-            return this;
-        }        public RemediationConfigurationExecutionControlsArgs build() {
-            return new RemediationConfigurationExecutionControlsArgs(ssmControls);
+
+        public Builder ssmControls(RemediationConfigurationExecutionControlsSsmControlsArgs ssmControls) {
+            return ssmControls(Output.of(ssmControls));
+        }
+
+        public RemediationConfigurationExecutionControlsArgs build() {
+            return $;
         }
     }
+
 }

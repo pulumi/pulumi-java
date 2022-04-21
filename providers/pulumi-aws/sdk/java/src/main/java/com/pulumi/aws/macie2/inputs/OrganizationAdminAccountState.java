@@ -5,9 +5,9 @@ package com.pulumi.aws.macie2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,49 +20,48 @@ public final class OrganizationAdminAccountState extends com.pulumi.resources.Re
      * 
      */
     @Import(name="adminAccountId")
-      private final @Nullable Output<String> adminAccountId;
+    private @Nullable Output<String> adminAccountId;
 
-    public Output<String> adminAccountId() {
-        return this.adminAccountId == null ? Codegen.empty() : this.adminAccountId;
+    public Optional<Output<String>> adminAccountId() {
+        return Optional.ofNullable(this.adminAccountId);
     }
 
-    public OrganizationAdminAccountState(@Nullable Output<String> adminAccountId) {
-        this.adminAccountId = adminAccountId;
-    }
+    private OrganizationAdminAccountState() {}
 
-    private OrganizationAdminAccountState() {
-        this.adminAccountId = Codegen.empty();
+    private OrganizationAdminAccountState(OrganizationAdminAccountState $) {
+        this.adminAccountId = $.adminAccountId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(OrganizationAdminAccountState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> adminAccountId;
+        private OrganizationAdminAccountState $;
 
         public Builder() {
-    	      // Empty
+            $ = new OrganizationAdminAccountState();
         }
 
         public Builder(OrganizationAdminAccountState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.adminAccountId = defaults.adminAccountId;
+            $ = new OrganizationAdminAccountState(Objects.requireNonNull(defaults));
         }
 
         public Builder adminAccountId(@Nullable Output<String> adminAccountId) {
-            this.adminAccountId = adminAccountId;
+            $.adminAccountId = adminAccountId;
             return this;
         }
-        public Builder adminAccountId(@Nullable String adminAccountId) {
-            this.adminAccountId = Codegen.ofNullable(adminAccountId);
-            return this;
-        }        public OrganizationAdminAccountState build() {
-            return new OrganizationAdminAccountState(adminAccountId);
+
+        public Builder adminAccountId(String adminAccountId) {
+            return adminAccountId(Output.of(adminAccountId));
+        }
+
+        public OrganizationAdminAccountState build() {
+            return $;
         }
     }
+
 }

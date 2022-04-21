@@ -18,113 +18,100 @@ public final class DefaultRolloutPropertiesResponseStatus extends com.pulumi.res
     public static final DefaultRolloutPropertiesResponseStatus Empty = new DefaultRolloutPropertiesResponseStatus();
 
     @Import(name="completedRegions")
-      private final @Nullable List<String> completedRegions;
+    private @Nullable List<String> completedRegions;
 
-    public List<String> completedRegions() {
-        return this.completedRegions == null ? List.of() : this.completedRegions;
+    public Optional<List<String>> completedRegions() {
+        return Optional.ofNullable(this.completedRegions);
     }
 
     @Import(name="failedOrSkippedRegions")
-      private final @Nullable Map<String,ExtendedErrorInfoResponse> failedOrSkippedRegions;
+    private @Nullable Map<String,ExtendedErrorInfoResponse> failedOrSkippedRegions;
 
-    public Map<String,ExtendedErrorInfoResponse> failedOrSkippedRegions() {
-        return this.failedOrSkippedRegions == null ? Map.of() : this.failedOrSkippedRegions;
+    public Optional<Map<String,ExtendedErrorInfoResponse>> failedOrSkippedRegions() {
+        return Optional.ofNullable(this.failedOrSkippedRegions);
     }
 
     @Import(name="nextTrafficRegion")
-      private final @Nullable String nextTrafficRegion;
+    private @Nullable String nextTrafficRegion;
 
     public Optional<String> nextTrafficRegion() {
-        return this.nextTrafficRegion == null ? Optional.empty() : Optional.ofNullable(this.nextTrafficRegion);
+        return Optional.ofNullable(this.nextTrafficRegion);
     }
 
     @Import(name="nextTrafficRegionScheduledTime")
-      private final @Nullable String nextTrafficRegionScheduledTime;
+    private @Nullable String nextTrafficRegionScheduledTime;
 
     public Optional<String> nextTrafficRegionScheduledTime() {
-        return this.nextTrafficRegionScheduledTime == null ? Optional.empty() : Optional.ofNullable(this.nextTrafficRegionScheduledTime);
+        return Optional.ofNullable(this.nextTrafficRegionScheduledTime);
     }
 
     @Import(name="subscriptionReregistrationResult")
-      private final @Nullable String subscriptionReregistrationResult;
+    private @Nullable String subscriptionReregistrationResult;
 
     public Optional<String> subscriptionReregistrationResult() {
-        return this.subscriptionReregistrationResult == null ? Optional.empty() : Optional.ofNullable(this.subscriptionReregistrationResult);
+        return Optional.ofNullable(this.subscriptionReregistrationResult);
     }
 
-    public DefaultRolloutPropertiesResponseStatus(
-        @Nullable List<String> completedRegions,
-        @Nullable Map<String,ExtendedErrorInfoResponse> failedOrSkippedRegions,
-        @Nullable String nextTrafficRegion,
-        @Nullable String nextTrafficRegionScheduledTime,
-        @Nullable String subscriptionReregistrationResult) {
-        this.completedRegions = completedRegions;
-        this.failedOrSkippedRegions = failedOrSkippedRegions;
-        this.nextTrafficRegion = nextTrafficRegion;
-        this.nextTrafficRegionScheduledTime = nextTrafficRegionScheduledTime;
-        this.subscriptionReregistrationResult = subscriptionReregistrationResult;
-    }
+    private DefaultRolloutPropertiesResponseStatus() {}
 
-    private DefaultRolloutPropertiesResponseStatus() {
-        this.completedRegions = List.of();
-        this.failedOrSkippedRegions = Map.of();
-        this.nextTrafficRegion = null;
-        this.nextTrafficRegionScheduledTime = null;
-        this.subscriptionReregistrationResult = null;
+    private DefaultRolloutPropertiesResponseStatus(DefaultRolloutPropertiesResponseStatus $) {
+        this.completedRegions = $.completedRegions;
+        this.failedOrSkippedRegions = $.failedOrSkippedRegions;
+        this.nextTrafficRegion = $.nextTrafficRegion;
+        this.nextTrafficRegionScheduledTime = $.nextTrafficRegionScheduledTime;
+        this.subscriptionReregistrationResult = $.subscriptionReregistrationResult;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DefaultRolloutPropertiesResponseStatus defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<String> completedRegions;
-        private @Nullable Map<String,ExtendedErrorInfoResponse> failedOrSkippedRegions;
-        private @Nullable String nextTrafficRegion;
-        private @Nullable String nextTrafficRegionScheduledTime;
-        private @Nullable String subscriptionReregistrationResult;
+        private DefaultRolloutPropertiesResponseStatus $;
 
         public Builder() {
-    	      // Empty
+            $ = new DefaultRolloutPropertiesResponseStatus();
         }
 
         public Builder(DefaultRolloutPropertiesResponseStatus defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.completedRegions = defaults.completedRegions;
-    	      this.failedOrSkippedRegions = defaults.failedOrSkippedRegions;
-    	      this.nextTrafficRegion = defaults.nextTrafficRegion;
-    	      this.nextTrafficRegionScheduledTime = defaults.nextTrafficRegionScheduledTime;
-    	      this.subscriptionReregistrationResult = defaults.subscriptionReregistrationResult;
+            $ = new DefaultRolloutPropertiesResponseStatus(Objects.requireNonNull(defaults));
         }
 
         public Builder completedRegions(@Nullable List<String> completedRegions) {
-            this.completedRegions = completedRegions;
+            $.completedRegions = completedRegions;
             return this;
         }
+
         public Builder completedRegions(String... completedRegions) {
             return completedRegions(List.of(completedRegions));
         }
+
         public Builder failedOrSkippedRegions(@Nullable Map<String,ExtendedErrorInfoResponse> failedOrSkippedRegions) {
-            this.failedOrSkippedRegions = failedOrSkippedRegions;
+            $.failedOrSkippedRegions = failedOrSkippedRegions;
             return this;
         }
+
         public Builder nextTrafficRegion(@Nullable String nextTrafficRegion) {
-            this.nextTrafficRegion = nextTrafficRegion;
+            $.nextTrafficRegion = nextTrafficRegion;
             return this;
         }
+
         public Builder nextTrafficRegionScheduledTime(@Nullable String nextTrafficRegionScheduledTime) {
-            this.nextTrafficRegionScheduledTime = nextTrafficRegionScheduledTime;
+            $.nextTrafficRegionScheduledTime = nextTrafficRegionScheduledTime;
             return this;
         }
+
         public Builder subscriptionReregistrationResult(@Nullable String subscriptionReregistrationResult) {
-            this.subscriptionReregistrationResult = subscriptionReregistrationResult;
+            $.subscriptionReregistrationResult = subscriptionReregistrationResult;
             return this;
-        }        public DefaultRolloutPropertiesResponseStatus build() {
-            return new DefaultRolloutPropertiesResponseStatus(completedRegions, failedOrSkippedRegions, nextTrafficRegion, nextTrafficRegionScheduledTime, subscriptionReregistrationResult);
+        }
+
+        public DefaultRolloutPropertiesResponseStatus build() {
+            return $;
         }
     }
+
 }

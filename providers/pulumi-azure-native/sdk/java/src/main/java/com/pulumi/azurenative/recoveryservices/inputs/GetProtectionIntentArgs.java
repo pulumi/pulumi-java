@@ -17,7 +17,7 @@ public final class GetProtectionIntentArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="fabricName", required=true)
-      private final String fabricName;
+    private String fabricName;
 
     public String fabricName() {
         return this.fabricName;
@@ -28,7 +28,7 @@ public final class GetProtectionIntentArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="intentObjectName", required=true)
-      private final String intentObjectName;
+    private String intentObjectName;
 
     public String intentObjectName() {
         return this.intentObjectName;
@@ -39,7 +39,7 @@ public final class GetProtectionIntentArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -50,73 +50,66 @@ public final class GetProtectionIntentArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="vaultName", required=true)
-      private final String vaultName;
+    private String vaultName;
 
     public String vaultName() {
         return this.vaultName;
     }
 
-    public GetProtectionIntentArgs(
-        String fabricName,
-        String intentObjectName,
-        String resourceGroupName,
-        String vaultName) {
-        this.fabricName = Objects.requireNonNull(fabricName, "expected parameter 'fabricName' to be non-null");
-        this.intentObjectName = Objects.requireNonNull(intentObjectName, "expected parameter 'intentObjectName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.vaultName = Objects.requireNonNull(vaultName, "expected parameter 'vaultName' to be non-null");
-    }
+    private GetProtectionIntentArgs() {}
 
-    private GetProtectionIntentArgs() {
-        this.fabricName = null;
-        this.intentObjectName = null;
-        this.resourceGroupName = null;
-        this.vaultName = null;
+    private GetProtectionIntentArgs(GetProtectionIntentArgs $) {
+        this.fabricName = $.fabricName;
+        this.intentObjectName = $.intentObjectName;
+        this.resourceGroupName = $.resourceGroupName;
+        this.vaultName = $.vaultName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetProtectionIntentArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String fabricName;
-        private String intentObjectName;
-        private String resourceGroupName;
-        private String vaultName;
+        private GetProtectionIntentArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetProtectionIntentArgs();
         }
 
         public Builder(GetProtectionIntentArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.fabricName = defaults.fabricName;
-    	      this.intentObjectName = defaults.intentObjectName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.vaultName = defaults.vaultName;
+            $ = new GetProtectionIntentArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder fabricName(String fabricName) {
-            this.fabricName = Objects.requireNonNull(fabricName);
+            $.fabricName = fabricName;
             return this;
         }
+
         public Builder intentObjectName(String intentObjectName) {
-            this.intentObjectName = Objects.requireNonNull(intentObjectName);
+            $.intentObjectName = intentObjectName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder vaultName(String vaultName) {
-            this.vaultName = Objects.requireNonNull(vaultName);
+            $.vaultName = vaultName;
             return this;
-        }        public GetProtectionIntentArgs build() {
-            return new GetProtectionIntentArgs(fabricName, intentObjectName, resourceGroupName, vaultName);
+        }
+
+        public GetProtectionIntentArgs build() {
+            $.fabricName = Objects.requireNonNull($.fabricName, "expected parameter 'fabricName' to be non-null");
+            $.intentObjectName = Objects.requireNonNull($.intentObjectName, "expected parameter 'intentObjectName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.vaultName = Objects.requireNonNull($.vaultName, "expected parameter 'vaultName' to be non-null");
+            return $;
         }
     }
+
 }

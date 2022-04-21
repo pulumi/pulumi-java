@@ -22,48 +22,49 @@ public final class OperationErrorResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="errors", required=true)
-      private final List<OperationErrorErrorsItemResponse> errors;
+    private List<OperationErrorErrorsItemResponse> errors;
 
     public List<OperationErrorErrorsItemResponse> errors() {
         return this.errors;
     }
 
-    public OperationErrorResponse(List<OperationErrorErrorsItemResponse> errors) {
-        this.errors = Objects.requireNonNull(errors, "expected parameter 'errors' to be non-null");
-    }
+    private OperationErrorResponse() {}
 
-    private OperationErrorResponse() {
-        this.errors = List.of();
+    private OperationErrorResponse(OperationErrorResponse $) {
+        this.errors = $.errors;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(OperationErrorResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<OperationErrorErrorsItemResponse> errors;
+        private OperationErrorResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new OperationErrorResponse();
         }
 
         public Builder(OperationErrorResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.errors = defaults.errors;
+            $ = new OperationErrorResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder errors(List<OperationErrorErrorsItemResponse> errors) {
-            this.errors = Objects.requireNonNull(errors);
+            $.errors = errors;
             return this;
         }
+
         public Builder errors(OperationErrorErrorsItemResponse... errors) {
             return errors(List.of(errors));
-        }        public OperationErrorResponse build() {
-            return new OperationErrorResponse(errors);
+        }
+
+        public OperationErrorResponse build() {
+            $.errors = Objects.requireNonNull($.errors, "expected parameter 'errors' to be non-null");
+            return $;
         }
     }
+
 }

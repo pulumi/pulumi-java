@@ -5,10 +5,10 @@ package com.pulumi.gcp.compute.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.compute.inputs.InstanceFromMachineImageReservationAffinitySpecificReservationArgs;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -17,70 +17,66 @@ public final class InstanceFromMachineImageReservationAffinityArgs extends com.p
     public static final InstanceFromMachineImageReservationAffinityArgs Empty = new InstanceFromMachineImageReservationAffinityArgs();
 
     @Import(name="specificReservation")
-      private final @Nullable Output<InstanceFromMachineImageReservationAffinitySpecificReservationArgs> specificReservation;
+    private @Nullable Output<InstanceFromMachineImageReservationAffinitySpecificReservationArgs> specificReservation;
 
-    public Output<InstanceFromMachineImageReservationAffinitySpecificReservationArgs> specificReservation() {
-        return this.specificReservation == null ? Codegen.empty() : this.specificReservation;
+    public Optional<Output<InstanceFromMachineImageReservationAffinitySpecificReservationArgs>> specificReservation() {
+        return Optional.ofNullable(this.specificReservation);
     }
 
     @Import(name="type", required=true)
-      private final Output<String> type;
+    private Output<String> type;
 
     public Output<String> type() {
         return this.type;
     }
 
-    public InstanceFromMachineImageReservationAffinityArgs(
-        @Nullable Output<InstanceFromMachineImageReservationAffinitySpecificReservationArgs> specificReservation,
-        Output<String> type) {
-        this.specificReservation = specificReservation;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private InstanceFromMachineImageReservationAffinityArgs() {}
 
-    private InstanceFromMachineImageReservationAffinityArgs() {
-        this.specificReservation = Codegen.empty();
-        this.type = Codegen.empty();
+    private InstanceFromMachineImageReservationAffinityArgs(InstanceFromMachineImageReservationAffinityArgs $) {
+        this.specificReservation = $.specificReservation;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(InstanceFromMachineImageReservationAffinityArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<InstanceFromMachineImageReservationAffinitySpecificReservationArgs> specificReservation;
-        private Output<String> type;
+        private InstanceFromMachineImageReservationAffinityArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new InstanceFromMachineImageReservationAffinityArgs();
         }
 
         public Builder(InstanceFromMachineImageReservationAffinityArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.specificReservation = defaults.specificReservation;
-    	      this.type = defaults.type;
+            $ = new InstanceFromMachineImageReservationAffinityArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder specificReservation(@Nullable Output<InstanceFromMachineImageReservationAffinitySpecificReservationArgs> specificReservation) {
-            this.specificReservation = specificReservation;
+            $.specificReservation = specificReservation;
             return this;
         }
-        public Builder specificReservation(@Nullable InstanceFromMachineImageReservationAffinitySpecificReservationArgs specificReservation) {
-            this.specificReservation = Codegen.ofNullable(specificReservation);
-            return this;
+
+        public Builder specificReservation(InstanceFromMachineImageReservationAffinitySpecificReservationArgs specificReservation) {
+            return specificReservation(Output.of(specificReservation));
         }
+
         public Builder type(Output<String> type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Output.of(Objects.requireNonNull(type));
-            return this;
-        }        public InstanceFromMachineImageReservationAffinityArgs build() {
-            return new InstanceFromMachineImageReservationAffinityArgs(specificReservation, type);
+            return type(Output.of(type));
+        }
+
+        public InstanceFromMachineImageReservationAffinityArgs build() {
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

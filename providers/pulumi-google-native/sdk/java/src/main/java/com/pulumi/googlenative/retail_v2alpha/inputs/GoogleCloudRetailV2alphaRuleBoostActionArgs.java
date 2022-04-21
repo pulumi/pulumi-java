@@ -5,10 +5,10 @@ package com.pulumi.googlenative.retail_v2alpha.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class GoogleCloudRetailV2alphaRuleBoostActionArgs extends com.pulum
      * 
      */
     @Import(name="boost")
-      private final @Nullable Output<Double> boost;
+    private @Nullable Output<Double> boost;
 
-    public Output<Double> boost() {
-        return this.boost == null ? Codegen.empty() : this.boost;
+    public Optional<Output<Double>> boost() {
+        return Optional.ofNullable(this.boost);
     }
 
     /**
@@ -36,63 +36,58 @@ public final class GoogleCloudRetailV2alphaRuleBoostActionArgs extends com.pulum
      * 
      */
     @Import(name="productsFilter")
-      private final @Nullable Output<String> productsFilter;
+    private @Nullable Output<String> productsFilter;
 
-    public Output<String> productsFilter() {
-        return this.productsFilter == null ? Codegen.empty() : this.productsFilter;
+    public Optional<Output<String>> productsFilter() {
+        return Optional.ofNullable(this.productsFilter);
     }
 
-    public GoogleCloudRetailV2alphaRuleBoostActionArgs(
-        @Nullable Output<Double> boost,
-        @Nullable Output<String> productsFilter) {
-        this.boost = boost;
-        this.productsFilter = productsFilter;
-    }
+    private GoogleCloudRetailV2alphaRuleBoostActionArgs() {}
 
-    private GoogleCloudRetailV2alphaRuleBoostActionArgs() {
-        this.boost = Codegen.empty();
-        this.productsFilter = Codegen.empty();
+    private GoogleCloudRetailV2alphaRuleBoostActionArgs(GoogleCloudRetailV2alphaRuleBoostActionArgs $) {
+        this.boost = $.boost;
+        this.productsFilter = $.productsFilter;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudRetailV2alphaRuleBoostActionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Double> boost;
-        private @Nullable Output<String> productsFilter;
+        private GoogleCloudRetailV2alphaRuleBoostActionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudRetailV2alphaRuleBoostActionArgs();
         }
 
         public Builder(GoogleCloudRetailV2alphaRuleBoostActionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.boost = defaults.boost;
-    	      this.productsFilter = defaults.productsFilter;
+            $ = new GoogleCloudRetailV2alphaRuleBoostActionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder boost(@Nullable Output<Double> boost) {
-            this.boost = boost;
+            $.boost = boost;
             return this;
         }
-        public Builder boost(@Nullable Double boost) {
-            this.boost = Codegen.ofNullable(boost);
-            return this;
+
+        public Builder boost(Double boost) {
+            return boost(Output.of(boost));
         }
+
         public Builder productsFilter(@Nullable Output<String> productsFilter) {
-            this.productsFilter = productsFilter;
+            $.productsFilter = productsFilter;
             return this;
         }
-        public Builder productsFilter(@Nullable String productsFilter) {
-            this.productsFilter = Codegen.ofNullable(productsFilter);
-            return this;
-        }        public GoogleCloudRetailV2alphaRuleBoostActionArgs build() {
-            return new GoogleCloudRetailV2alphaRuleBoostActionArgs(boost, productsFilter);
+
+        public Builder productsFilter(String productsFilter) {
+            return productsFilter(Output.of(productsFilter));
+        }
+
+        public GoogleCloudRetailV2alphaRuleBoostActionArgs build() {
+            return $;
         }
     }
+
 }

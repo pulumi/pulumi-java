@@ -16,62 +16,57 @@ public final class SpotFleetSpotCapacityRebalance extends com.pulumi.resources.I
     public static final SpotFleetSpotCapacityRebalance Empty = new SpotFleetSpotCapacityRebalance();
 
     @Import(name="replacementStrategy")
-      private final @Nullable SpotFleetSpotCapacityRebalanceReplacementStrategy replacementStrategy;
+    private @Nullable SpotFleetSpotCapacityRebalanceReplacementStrategy replacementStrategy;
 
     public Optional<SpotFleetSpotCapacityRebalanceReplacementStrategy> replacementStrategy() {
-        return this.replacementStrategy == null ? Optional.empty() : Optional.ofNullable(this.replacementStrategy);
+        return Optional.ofNullable(this.replacementStrategy);
     }
 
     @Import(name="terminationDelay")
-      private final @Nullable Integer terminationDelay;
+    private @Nullable Integer terminationDelay;
 
     public Optional<Integer> terminationDelay() {
-        return this.terminationDelay == null ? Optional.empty() : Optional.ofNullable(this.terminationDelay);
+        return Optional.ofNullable(this.terminationDelay);
     }
 
-    public SpotFleetSpotCapacityRebalance(
-        @Nullable SpotFleetSpotCapacityRebalanceReplacementStrategy replacementStrategy,
-        @Nullable Integer terminationDelay) {
-        this.replacementStrategy = replacementStrategy;
-        this.terminationDelay = terminationDelay;
-    }
+    private SpotFleetSpotCapacityRebalance() {}
 
-    private SpotFleetSpotCapacityRebalance() {
-        this.replacementStrategy = null;
-        this.terminationDelay = null;
+    private SpotFleetSpotCapacityRebalance(SpotFleetSpotCapacityRebalance $) {
+        this.replacementStrategy = $.replacementStrategy;
+        this.terminationDelay = $.terminationDelay;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SpotFleetSpotCapacityRebalance defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable SpotFleetSpotCapacityRebalanceReplacementStrategy replacementStrategy;
-        private @Nullable Integer terminationDelay;
+        private SpotFleetSpotCapacityRebalance $;
 
         public Builder() {
-    	      // Empty
+            $ = new SpotFleetSpotCapacityRebalance();
         }
 
         public Builder(SpotFleetSpotCapacityRebalance defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.replacementStrategy = defaults.replacementStrategy;
-    	      this.terminationDelay = defaults.terminationDelay;
+            $ = new SpotFleetSpotCapacityRebalance(Objects.requireNonNull(defaults));
         }
 
         public Builder replacementStrategy(@Nullable SpotFleetSpotCapacityRebalanceReplacementStrategy replacementStrategy) {
-            this.replacementStrategy = replacementStrategy;
+            $.replacementStrategy = replacementStrategy;
             return this;
         }
+
         public Builder terminationDelay(@Nullable Integer terminationDelay) {
-            this.terminationDelay = terminationDelay;
+            $.terminationDelay = terminationDelay;
             return this;
-        }        public SpotFleetSpotCapacityRebalance build() {
-            return new SpotFleetSpotCapacityRebalance(replacementStrategy, terminationDelay);
+        }
+
+        public SpotFleetSpotCapacityRebalance build() {
+            return $;
         }
     }
+
 }

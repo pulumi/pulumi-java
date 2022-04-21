@@ -5,7 +5,6 @@ package com.pulumi.azurenative.dataprotection.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,52 +23,53 @@ public final class BackupScheduleArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="repeatingTimeIntervals", required=true)
-      private final Output<List<String>> repeatingTimeIntervals;
+    private Output<List<String>> repeatingTimeIntervals;
 
     public Output<List<String>> repeatingTimeIntervals() {
         return this.repeatingTimeIntervals;
     }
 
-    public BackupScheduleArgs(Output<List<String>> repeatingTimeIntervals) {
-        this.repeatingTimeIntervals = Objects.requireNonNull(repeatingTimeIntervals, "expected parameter 'repeatingTimeIntervals' to be non-null");
-    }
+    private BackupScheduleArgs() {}
 
-    private BackupScheduleArgs() {
-        this.repeatingTimeIntervals = Codegen.empty();
+    private BackupScheduleArgs(BackupScheduleArgs $) {
+        this.repeatingTimeIntervals = $.repeatingTimeIntervals;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BackupScheduleArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<List<String>> repeatingTimeIntervals;
+        private BackupScheduleArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new BackupScheduleArgs();
         }
 
         public Builder(BackupScheduleArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.repeatingTimeIntervals = defaults.repeatingTimeIntervals;
+            $ = new BackupScheduleArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder repeatingTimeIntervals(Output<List<String>> repeatingTimeIntervals) {
-            this.repeatingTimeIntervals = Objects.requireNonNull(repeatingTimeIntervals);
+            $.repeatingTimeIntervals = repeatingTimeIntervals;
             return this;
         }
+
         public Builder repeatingTimeIntervals(List<String> repeatingTimeIntervals) {
-            this.repeatingTimeIntervals = Output.of(Objects.requireNonNull(repeatingTimeIntervals));
-            return this;
+            return repeatingTimeIntervals(Output.of(repeatingTimeIntervals));
         }
+
         public Builder repeatingTimeIntervals(String... repeatingTimeIntervals) {
             return repeatingTimeIntervals(List.of(repeatingTimeIntervals));
-        }        public BackupScheduleArgs build() {
-            return new BackupScheduleArgs(repeatingTimeIntervals);
+        }
+
+        public BackupScheduleArgs build() {
+            $.repeatingTimeIntervals = Objects.requireNonNull($.repeatingTimeIntervals, "expected parameter 'repeatingTimeIntervals' to be non-null");
+            return $;
         }
     }
+
 }

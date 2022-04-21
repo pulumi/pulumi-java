@@ -17,45 +17,45 @@ public final class ParallelismConfigurationProperties extends com.pulumi.resourc
      * 
      */
     @Import(name="maxParallelExecutionSteps", required=true)
-      private final Integer maxParallelExecutionSteps;
+    private Integer maxParallelExecutionSteps;
 
     public Integer maxParallelExecutionSteps() {
         return this.maxParallelExecutionSteps;
     }
 
-    public ParallelismConfigurationProperties(Integer maxParallelExecutionSteps) {
-        this.maxParallelExecutionSteps = Objects.requireNonNull(maxParallelExecutionSteps, "expected parameter 'maxParallelExecutionSteps' to be non-null");
-    }
+    private ParallelismConfigurationProperties() {}
 
-    private ParallelismConfigurationProperties() {
-        this.maxParallelExecutionSteps = null;
+    private ParallelismConfigurationProperties(ParallelismConfigurationProperties $) {
+        this.maxParallelExecutionSteps = $.maxParallelExecutionSteps;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ParallelismConfigurationProperties defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Integer maxParallelExecutionSteps;
+        private ParallelismConfigurationProperties $;
 
         public Builder() {
-    	      // Empty
+            $ = new ParallelismConfigurationProperties();
         }
 
         public Builder(ParallelismConfigurationProperties defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.maxParallelExecutionSteps = defaults.maxParallelExecutionSteps;
+            $ = new ParallelismConfigurationProperties(Objects.requireNonNull(defaults));
         }
 
         public Builder maxParallelExecutionSteps(Integer maxParallelExecutionSteps) {
-            this.maxParallelExecutionSteps = Objects.requireNonNull(maxParallelExecutionSteps);
+            $.maxParallelExecutionSteps = maxParallelExecutionSteps;
             return this;
-        }        public ParallelismConfigurationProperties build() {
-            return new ParallelismConfigurationProperties(maxParallelExecutionSteps);
+        }
+
+        public ParallelismConfigurationProperties build() {
+            $.maxParallelExecutionSteps = Objects.requireNonNull($.maxParallelExecutionSteps, "expected parameter 'maxParallelExecutionSteps' to be non-null");
+            return $;
         }
     }
+
 }

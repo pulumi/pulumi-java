@@ -5,7 +5,6 @@ package com.pulumi.gcp.secretmanager.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.secretmanager.inputs.SecretReplicationUserManagedReplicaGetArgs;
 import java.util.List;
 import java.util.Objects;
@@ -21,52 +20,53 @@ public final class SecretReplicationUserManagedGetArgs extends com.pulumi.resour
      * 
      */
     @Import(name="replicas", required=true)
-      private final Output<List<SecretReplicationUserManagedReplicaGetArgs>> replicas;
+    private Output<List<SecretReplicationUserManagedReplicaGetArgs>> replicas;
 
     public Output<List<SecretReplicationUserManagedReplicaGetArgs>> replicas() {
         return this.replicas;
     }
 
-    public SecretReplicationUserManagedGetArgs(Output<List<SecretReplicationUserManagedReplicaGetArgs>> replicas) {
-        this.replicas = Objects.requireNonNull(replicas, "expected parameter 'replicas' to be non-null");
-    }
+    private SecretReplicationUserManagedGetArgs() {}
 
-    private SecretReplicationUserManagedGetArgs() {
-        this.replicas = Codegen.empty();
+    private SecretReplicationUserManagedGetArgs(SecretReplicationUserManagedGetArgs $) {
+        this.replicas = $.replicas;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SecretReplicationUserManagedGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<List<SecretReplicationUserManagedReplicaGetArgs>> replicas;
+        private SecretReplicationUserManagedGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SecretReplicationUserManagedGetArgs();
         }
 
         public Builder(SecretReplicationUserManagedGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.replicas = defaults.replicas;
+            $ = new SecretReplicationUserManagedGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder replicas(Output<List<SecretReplicationUserManagedReplicaGetArgs>> replicas) {
-            this.replicas = Objects.requireNonNull(replicas);
+            $.replicas = replicas;
             return this;
         }
+
         public Builder replicas(List<SecretReplicationUserManagedReplicaGetArgs> replicas) {
-            this.replicas = Output.of(Objects.requireNonNull(replicas));
-            return this;
+            return replicas(Output.of(replicas));
         }
+
         public Builder replicas(SecretReplicationUserManagedReplicaGetArgs... replicas) {
             return replicas(List.of(replicas));
-        }        public SecretReplicationUserManagedGetArgs build() {
-            return new SecretReplicationUserManagedGetArgs(replicas);
+        }
+
+        public SecretReplicationUserManagedGetArgs build() {
+            $.replicas = Objects.requireNonNull($.replicas, "expected parameter 'replicas' to be non-null");
+            return $;
         }
     }
+
 }

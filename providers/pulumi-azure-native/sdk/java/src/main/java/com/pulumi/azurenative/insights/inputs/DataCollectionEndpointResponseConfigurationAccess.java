@@ -21,45 +21,45 @@ public final class DataCollectionEndpointResponseConfigurationAccess extends com
      * 
      */
     @Import(name="endpoint", required=true)
-      private final String endpoint;
+    private String endpoint;
 
     public String endpoint() {
         return this.endpoint;
     }
 
-    public DataCollectionEndpointResponseConfigurationAccess(String endpoint) {
-        this.endpoint = Objects.requireNonNull(endpoint, "expected parameter 'endpoint' to be non-null");
-    }
+    private DataCollectionEndpointResponseConfigurationAccess() {}
 
-    private DataCollectionEndpointResponseConfigurationAccess() {
-        this.endpoint = null;
+    private DataCollectionEndpointResponseConfigurationAccess(DataCollectionEndpointResponseConfigurationAccess $) {
+        this.endpoint = $.endpoint;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DataCollectionEndpointResponseConfigurationAccess defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String endpoint;
+        private DataCollectionEndpointResponseConfigurationAccess $;
 
         public Builder() {
-    	      // Empty
+            $ = new DataCollectionEndpointResponseConfigurationAccess();
         }
 
         public Builder(DataCollectionEndpointResponseConfigurationAccess defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.endpoint = defaults.endpoint;
+            $ = new DataCollectionEndpointResponseConfigurationAccess(Objects.requireNonNull(defaults));
         }
 
         public Builder endpoint(String endpoint) {
-            this.endpoint = Objects.requireNonNull(endpoint);
+            $.endpoint = endpoint;
             return this;
-        }        public DataCollectionEndpointResponseConfigurationAccess build() {
-            return new DataCollectionEndpointResponseConfigurationAccess(endpoint);
+        }
+
+        public DataCollectionEndpointResponseConfigurationAccess build() {
+            $.endpoint = Objects.requireNonNull($.endpoint, "expected parameter 'endpoint' to be non-null");
+            return $;
         }
     }
+
 }

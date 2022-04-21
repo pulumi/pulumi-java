@@ -5,7 +5,6 @@ package com.pulumi.gcp.dataproc.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -16,49 +15,49 @@ public final class JobSparkConfigLoggingConfigGetArgs extends com.pulumi.resourc
     public static final JobSparkConfigLoggingConfigGetArgs Empty = new JobSparkConfigLoggingConfigGetArgs();
 
     @Import(name="driverLogLevels", required=true)
-      private final Output<Map<String,String>> driverLogLevels;
+    private Output<Map<String,String>> driverLogLevels;
 
     public Output<Map<String,String>> driverLogLevels() {
         return this.driverLogLevels;
     }
 
-    public JobSparkConfigLoggingConfigGetArgs(Output<Map<String,String>> driverLogLevels) {
-        this.driverLogLevels = Objects.requireNonNull(driverLogLevels, "expected parameter 'driverLogLevels' to be non-null");
-    }
+    private JobSparkConfigLoggingConfigGetArgs() {}
 
-    private JobSparkConfigLoggingConfigGetArgs() {
-        this.driverLogLevels = Codegen.empty();
+    private JobSparkConfigLoggingConfigGetArgs(JobSparkConfigLoggingConfigGetArgs $) {
+        this.driverLogLevels = $.driverLogLevels;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(JobSparkConfigLoggingConfigGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Map<String,String>> driverLogLevels;
+        private JobSparkConfigLoggingConfigGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new JobSparkConfigLoggingConfigGetArgs();
         }
 
         public Builder(JobSparkConfigLoggingConfigGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.driverLogLevels = defaults.driverLogLevels;
+            $ = new JobSparkConfigLoggingConfigGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder driverLogLevels(Output<Map<String,String>> driverLogLevels) {
-            this.driverLogLevels = Objects.requireNonNull(driverLogLevels);
+            $.driverLogLevels = driverLogLevels;
             return this;
         }
+
         public Builder driverLogLevels(Map<String,String> driverLogLevels) {
-            this.driverLogLevels = Output.of(Objects.requireNonNull(driverLogLevels));
-            return this;
-        }        public JobSparkConfigLoggingConfigGetArgs build() {
-            return new JobSparkConfigLoggingConfigGetArgs(driverLogLevels);
+            return driverLogLevels(Output.of(driverLogLevels));
+        }
+
+        public JobSparkConfigLoggingConfigGetArgs build() {
+            $.driverLogLevels = Objects.requireNonNull($.driverLogLevels, "expected parameter 'driverLogLevels' to be non-null");
+            return $;
         }
     }
+
 }

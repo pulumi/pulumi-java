@@ -24,7 +24,7 @@ public final class PackageRepositoryResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="apt", required=true)
-      private final AptRepositoryResponse apt;
+    private AptRepositoryResponse apt;
 
     public AptRepositoryResponse apt() {
         return this.apt;
@@ -35,7 +35,7 @@ public final class PackageRepositoryResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="goo", required=true)
-      private final GooRepositoryResponse goo;
+    private GooRepositoryResponse goo;
 
     public GooRepositoryResponse goo() {
         return this.goo;
@@ -46,7 +46,7 @@ public final class PackageRepositoryResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="yum", required=true)
-      private final YumRepositoryResponse yum;
+    private YumRepositoryResponse yum;
 
     public YumRepositoryResponse yum() {
         return this.yum;
@@ -57,73 +57,66 @@ public final class PackageRepositoryResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="zypper", required=true)
-      private final ZypperRepositoryResponse zypper;
+    private ZypperRepositoryResponse zypper;
 
     public ZypperRepositoryResponse zypper() {
         return this.zypper;
     }
 
-    public PackageRepositoryResponse(
-        AptRepositoryResponse apt,
-        GooRepositoryResponse goo,
-        YumRepositoryResponse yum,
-        ZypperRepositoryResponse zypper) {
-        this.apt = Objects.requireNonNull(apt, "expected parameter 'apt' to be non-null");
-        this.goo = Objects.requireNonNull(goo, "expected parameter 'goo' to be non-null");
-        this.yum = Objects.requireNonNull(yum, "expected parameter 'yum' to be non-null");
-        this.zypper = Objects.requireNonNull(zypper, "expected parameter 'zypper' to be non-null");
-    }
+    private PackageRepositoryResponse() {}
 
-    private PackageRepositoryResponse() {
-        this.apt = null;
-        this.goo = null;
-        this.yum = null;
-        this.zypper = null;
+    private PackageRepositoryResponse(PackageRepositoryResponse $) {
+        this.apt = $.apt;
+        this.goo = $.goo;
+        this.yum = $.yum;
+        this.zypper = $.zypper;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PackageRepositoryResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private AptRepositoryResponse apt;
-        private GooRepositoryResponse goo;
-        private YumRepositoryResponse yum;
-        private ZypperRepositoryResponse zypper;
+        private PackageRepositoryResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new PackageRepositoryResponse();
         }
 
         public Builder(PackageRepositoryResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.apt = defaults.apt;
-    	      this.goo = defaults.goo;
-    	      this.yum = defaults.yum;
-    	      this.zypper = defaults.zypper;
+            $ = new PackageRepositoryResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder apt(AptRepositoryResponse apt) {
-            this.apt = Objects.requireNonNull(apt);
+            $.apt = apt;
             return this;
         }
+
         public Builder goo(GooRepositoryResponse goo) {
-            this.goo = Objects.requireNonNull(goo);
+            $.goo = goo;
             return this;
         }
+
         public Builder yum(YumRepositoryResponse yum) {
-            this.yum = Objects.requireNonNull(yum);
+            $.yum = yum;
             return this;
         }
+
         public Builder zypper(ZypperRepositoryResponse zypper) {
-            this.zypper = Objects.requireNonNull(zypper);
+            $.zypper = zypper;
             return this;
-        }        public PackageRepositoryResponse build() {
-            return new PackageRepositoryResponse(apt, goo, yum, zypper);
+        }
+
+        public PackageRepositoryResponse build() {
+            $.apt = Objects.requireNonNull($.apt, "expected parameter 'apt' to be non-null");
+            $.goo = Objects.requireNonNull($.goo, "expected parameter 'goo' to be non-null");
+            $.yum = Objects.requireNonNull($.yum, "expected parameter 'yum' to be non-null");
+            $.zypper = Objects.requireNonNull($.zypper, "expected parameter 'zypper' to be non-null");
+            return $;
         }
     }
+
 }

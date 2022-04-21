@@ -5,12 +5,12 @@ package com.pulumi.gcp.orgpolicy.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.orgpolicy.inputs.PolicySpecRuleArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class PolicySpecArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="etag")
-      private final @Nullable Output<String> etag;
+    private @Nullable Output<String> etag;
 
-    public Output<String> etag() {
-        return this.etag == null ? Codegen.empty() : this.etag;
+    public Optional<Output<String>> etag() {
+        return Optional.ofNullable(this.etag);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class PolicySpecArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="inheritFromParent")
-      private final @Nullable Output<Boolean> inheritFromParent;
+    private @Nullable Output<Boolean> inheritFromParent;
 
-    public Output<Boolean> inheritFromParent() {
-        return this.inheritFromParent == null ? Codegen.empty() : this.inheritFromParent;
+    public Optional<Output<Boolean>> inheritFromParent() {
+        return Optional.ofNullable(this.inheritFromParent);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class PolicySpecArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="reset")
-      private final @Nullable Output<Boolean> reset;
+    private @Nullable Output<Boolean> reset;
 
-    public Output<Boolean> reset() {
-        return this.reset == null ? Codegen.empty() : this.reset;
+    public Optional<Output<Boolean>> reset() {
+        return Optional.ofNullable(this.reset);
     }
 
     /**
@@ -57,10 +57,10 @@ public final class PolicySpecArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="rules")
-      private final @Nullable Output<List<PolicySpecRuleArgs>> rules;
+    private @Nullable Output<List<PolicySpecRuleArgs>> rules;
 
-    public Output<List<PolicySpecRuleArgs>> rules() {
-        return this.rules == null ? Codegen.empty() : this.rules;
+    public Optional<Output<List<PolicySpecRuleArgs>>> rules() {
+        return Optional.ofNullable(this.rules);
     }
 
     /**
@@ -69,105 +69,92 @@ public final class PolicySpecArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="updateTime")
-      private final @Nullable Output<String> updateTime;
+    private @Nullable Output<String> updateTime;
 
-    public Output<String> updateTime() {
-        return this.updateTime == null ? Codegen.empty() : this.updateTime;
+    public Optional<Output<String>> updateTime() {
+        return Optional.ofNullable(this.updateTime);
     }
 
-    public PolicySpecArgs(
-        @Nullable Output<String> etag,
-        @Nullable Output<Boolean> inheritFromParent,
-        @Nullable Output<Boolean> reset,
-        @Nullable Output<List<PolicySpecRuleArgs>> rules,
-        @Nullable Output<String> updateTime) {
-        this.etag = etag;
-        this.inheritFromParent = inheritFromParent;
-        this.reset = reset;
-        this.rules = rules;
-        this.updateTime = updateTime;
-    }
+    private PolicySpecArgs() {}
 
-    private PolicySpecArgs() {
-        this.etag = Codegen.empty();
-        this.inheritFromParent = Codegen.empty();
-        this.reset = Codegen.empty();
-        this.rules = Codegen.empty();
-        this.updateTime = Codegen.empty();
+    private PolicySpecArgs(PolicySpecArgs $) {
+        this.etag = $.etag;
+        this.inheritFromParent = $.inheritFromParent;
+        this.reset = $.reset;
+        this.rules = $.rules;
+        this.updateTime = $.updateTime;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PolicySpecArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> etag;
-        private @Nullable Output<Boolean> inheritFromParent;
-        private @Nullable Output<Boolean> reset;
-        private @Nullable Output<List<PolicySpecRuleArgs>> rules;
-        private @Nullable Output<String> updateTime;
+        private PolicySpecArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PolicySpecArgs();
         }
 
         public Builder(PolicySpecArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.etag = defaults.etag;
-    	      this.inheritFromParent = defaults.inheritFromParent;
-    	      this.reset = defaults.reset;
-    	      this.rules = defaults.rules;
-    	      this.updateTime = defaults.updateTime;
+            $ = new PolicySpecArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder etag(@Nullable Output<String> etag) {
-            this.etag = etag;
+            $.etag = etag;
             return this;
         }
-        public Builder etag(@Nullable String etag) {
-            this.etag = Codegen.ofNullable(etag);
-            return this;
+
+        public Builder etag(String etag) {
+            return etag(Output.of(etag));
         }
+
         public Builder inheritFromParent(@Nullable Output<Boolean> inheritFromParent) {
-            this.inheritFromParent = inheritFromParent;
+            $.inheritFromParent = inheritFromParent;
             return this;
         }
-        public Builder inheritFromParent(@Nullable Boolean inheritFromParent) {
-            this.inheritFromParent = Codegen.ofNullable(inheritFromParent);
-            return this;
+
+        public Builder inheritFromParent(Boolean inheritFromParent) {
+            return inheritFromParent(Output.of(inheritFromParent));
         }
+
         public Builder reset(@Nullable Output<Boolean> reset) {
-            this.reset = reset;
+            $.reset = reset;
             return this;
         }
-        public Builder reset(@Nullable Boolean reset) {
-            this.reset = Codegen.ofNullable(reset);
-            return this;
+
+        public Builder reset(Boolean reset) {
+            return reset(Output.of(reset));
         }
+
         public Builder rules(@Nullable Output<List<PolicySpecRuleArgs>> rules) {
-            this.rules = rules;
+            $.rules = rules;
             return this;
         }
-        public Builder rules(@Nullable List<PolicySpecRuleArgs> rules) {
-            this.rules = Codegen.ofNullable(rules);
-            return this;
+
+        public Builder rules(List<PolicySpecRuleArgs> rules) {
+            return rules(Output.of(rules));
         }
+
         public Builder rules(PolicySpecRuleArgs... rules) {
             return rules(List.of(rules));
         }
+
         public Builder updateTime(@Nullable Output<String> updateTime) {
-            this.updateTime = updateTime;
+            $.updateTime = updateTime;
             return this;
         }
-        public Builder updateTime(@Nullable String updateTime) {
-            this.updateTime = Codegen.ofNullable(updateTime);
-            return this;
-        }        public PolicySpecArgs build() {
-            return new PolicySpecArgs(etag, inheritFromParent, reset, rules, updateTime);
+
+        public Builder updateTime(String updateTime) {
+            return updateTime(Output.of(updateTime));
+        }
+
+        public PolicySpecArgs build() {
+            return $;
         }
     }
+
 }

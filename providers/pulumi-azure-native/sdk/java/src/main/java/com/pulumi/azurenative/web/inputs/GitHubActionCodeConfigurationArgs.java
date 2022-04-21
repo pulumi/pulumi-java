@@ -5,9 +5,9 @@ package com.pulumi.azurenative.web.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class GitHubActionCodeConfigurationArgs extends com.pulumi.resource
      * 
      */
     @Import(name="runtimeStack")
-      private final @Nullable Output<String> runtimeStack;
+    private @Nullable Output<String> runtimeStack;
 
-    public Output<String> runtimeStack() {
-        return this.runtimeStack == null ? Codegen.empty() : this.runtimeStack;
+    public Optional<Output<String>> runtimeStack() {
+        return Optional.ofNullable(this.runtimeStack);
     }
 
     /**
@@ -35,63 +35,58 @@ public final class GitHubActionCodeConfigurationArgs extends com.pulumi.resource
      * 
      */
     @Import(name="runtimeVersion")
-      private final @Nullable Output<String> runtimeVersion;
+    private @Nullable Output<String> runtimeVersion;
 
-    public Output<String> runtimeVersion() {
-        return this.runtimeVersion == null ? Codegen.empty() : this.runtimeVersion;
+    public Optional<Output<String>> runtimeVersion() {
+        return Optional.ofNullable(this.runtimeVersion);
     }
 
-    public GitHubActionCodeConfigurationArgs(
-        @Nullable Output<String> runtimeStack,
-        @Nullable Output<String> runtimeVersion) {
-        this.runtimeStack = runtimeStack;
-        this.runtimeVersion = runtimeVersion;
-    }
+    private GitHubActionCodeConfigurationArgs() {}
 
-    private GitHubActionCodeConfigurationArgs() {
-        this.runtimeStack = Codegen.empty();
-        this.runtimeVersion = Codegen.empty();
+    private GitHubActionCodeConfigurationArgs(GitHubActionCodeConfigurationArgs $) {
+        this.runtimeStack = $.runtimeStack;
+        this.runtimeVersion = $.runtimeVersion;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GitHubActionCodeConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> runtimeStack;
-        private @Nullable Output<String> runtimeVersion;
+        private GitHubActionCodeConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GitHubActionCodeConfigurationArgs();
         }
 
         public Builder(GitHubActionCodeConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.runtimeStack = defaults.runtimeStack;
-    	      this.runtimeVersion = defaults.runtimeVersion;
+            $ = new GitHubActionCodeConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder runtimeStack(@Nullable Output<String> runtimeStack) {
-            this.runtimeStack = runtimeStack;
+            $.runtimeStack = runtimeStack;
             return this;
         }
-        public Builder runtimeStack(@Nullable String runtimeStack) {
-            this.runtimeStack = Codegen.ofNullable(runtimeStack);
-            return this;
+
+        public Builder runtimeStack(String runtimeStack) {
+            return runtimeStack(Output.of(runtimeStack));
         }
+
         public Builder runtimeVersion(@Nullable Output<String> runtimeVersion) {
-            this.runtimeVersion = runtimeVersion;
+            $.runtimeVersion = runtimeVersion;
             return this;
         }
-        public Builder runtimeVersion(@Nullable String runtimeVersion) {
-            this.runtimeVersion = Codegen.ofNullable(runtimeVersion);
-            return this;
-        }        public GitHubActionCodeConfigurationArgs build() {
-            return new GitHubActionCodeConfigurationArgs(runtimeStack, runtimeVersion);
+
+        public Builder runtimeVersion(String runtimeVersion) {
+            return runtimeVersion(Output.of(runtimeVersion));
+        }
+
+        public GitHubActionCodeConfigurationArgs build() {
+            return $;
         }
     }
+
 }

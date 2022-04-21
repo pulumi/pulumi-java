@@ -22,7 +22,7 @@ public final class MavenRepositoryConfigResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="allowSnapshotOverwrites", required=true)
-      private final Boolean allowSnapshotOverwrites;
+    private Boolean allowSnapshotOverwrites;
 
     public Boolean allowSnapshotOverwrites() {
         return this.allowSnapshotOverwrites;
@@ -33,55 +33,52 @@ public final class MavenRepositoryConfigResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="versionPolicy", required=true)
-      private final String versionPolicy;
+    private String versionPolicy;
 
     public String versionPolicy() {
         return this.versionPolicy;
     }
 
-    public MavenRepositoryConfigResponse(
-        Boolean allowSnapshotOverwrites,
-        String versionPolicy) {
-        this.allowSnapshotOverwrites = Objects.requireNonNull(allowSnapshotOverwrites, "expected parameter 'allowSnapshotOverwrites' to be non-null");
-        this.versionPolicy = Objects.requireNonNull(versionPolicy, "expected parameter 'versionPolicy' to be non-null");
-    }
+    private MavenRepositoryConfigResponse() {}
 
-    private MavenRepositoryConfigResponse() {
-        this.allowSnapshotOverwrites = null;
-        this.versionPolicy = null;
+    private MavenRepositoryConfigResponse(MavenRepositoryConfigResponse $) {
+        this.allowSnapshotOverwrites = $.allowSnapshotOverwrites;
+        this.versionPolicy = $.versionPolicy;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MavenRepositoryConfigResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Boolean allowSnapshotOverwrites;
-        private String versionPolicy;
+        private MavenRepositoryConfigResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new MavenRepositoryConfigResponse();
         }
 
         public Builder(MavenRepositoryConfigResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.allowSnapshotOverwrites = defaults.allowSnapshotOverwrites;
-    	      this.versionPolicy = defaults.versionPolicy;
+            $ = new MavenRepositoryConfigResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder allowSnapshotOverwrites(Boolean allowSnapshotOverwrites) {
-            this.allowSnapshotOverwrites = Objects.requireNonNull(allowSnapshotOverwrites);
+            $.allowSnapshotOverwrites = allowSnapshotOverwrites;
             return this;
         }
+
         public Builder versionPolicy(String versionPolicy) {
-            this.versionPolicy = Objects.requireNonNull(versionPolicy);
+            $.versionPolicy = versionPolicy;
             return this;
-        }        public MavenRepositoryConfigResponse build() {
-            return new MavenRepositoryConfigResponse(allowSnapshotOverwrites, versionPolicy);
+        }
+
+        public MavenRepositoryConfigResponse build() {
+            $.allowSnapshotOverwrites = Objects.requireNonNull($.allowSnapshotOverwrites, "expected parameter 'allowSnapshotOverwrites' to be non-null");
+            $.versionPolicy = Objects.requireNonNull($.versionPolicy, "expected parameter 'versionPolicy' to be non-null");
+            return $;
         }
     }
+
 }

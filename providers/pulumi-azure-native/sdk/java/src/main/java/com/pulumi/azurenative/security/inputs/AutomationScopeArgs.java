@@ -5,9 +5,9 @@ package com.pulumi.azurenative.security.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class AutomationScopeArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -35,63 +35,58 @@ public final class AutomationScopeArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="scopePath")
-      private final @Nullable Output<String> scopePath;
+    private @Nullable Output<String> scopePath;
 
-    public Output<String> scopePath() {
-        return this.scopePath == null ? Codegen.empty() : this.scopePath;
+    public Optional<Output<String>> scopePath() {
+        return Optional.ofNullable(this.scopePath);
     }
 
-    public AutomationScopeArgs(
-        @Nullable Output<String> description,
-        @Nullable Output<String> scopePath) {
-        this.description = description;
-        this.scopePath = scopePath;
-    }
+    private AutomationScopeArgs() {}
 
-    private AutomationScopeArgs() {
-        this.description = Codegen.empty();
-        this.scopePath = Codegen.empty();
+    private AutomationScopeArgs(AutomationScopeArgs $) {
+        this.description = $.description;
+        this.scopePath = $.scopePath;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AutomationScopeArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> description;
-        private @Nullable Output<String> scopePath;
+        private AutomationScopeArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AutomationScopeArgs();
         }
 
         public Builder(AutomationScopeArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.description = defaults.description;
-    	      this.scopePath = defaults.scopePath;
+            $ = new AutomationScopeArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder scopePath(@Nullable Output<String> scopePath) {
-            this.scopePath = scopePath;
+            $.scopePath = scopePath;
             return this;
         }
-        public Builder scopePath(@Nullable String scopePath) {
-            this.scopePath = Codegen.ofNullable(scopePath);
-            return this;
-        }        public AutomationScopeArgs build() {
-            return new AutomationScopeArgs(description, scopePath);
+
+        public Builder scopePath(String scopePath) {
+            return scopePath(Output.of(scopePath));
+        }
+
+        public AutomationScopeArgs build() {
+            return $;
         }
     }
+
 }

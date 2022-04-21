@@ -6,11 +6,11 @@ package com.pulumi.azurenative.network;
 import com.pulumi.azurenative.network.inputs.BastionHostIPConfigurationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,10 @@ public final class BastionHostArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="bastionHostName")
-      private final @Nullable Output<String> bastionHostName;
+    private @Nullable Output<String> bastionHostName;
 
-    public Output<String> bastionHostName() {
-        return this.bastionHostName == null ? Codegen.empty() : this.bastionHostName;
+    public Optional<Output<String>> bastionHostName() {
+        return Optional.ofNullable(this.bastionHostName);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class BastionHostArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="dnsName")
-      private final @Nullable Output<String> dnsName;
+    private @Nullable Output<String> dnsName;
 
-    public Output<String> dnsName() {
-        return this.dnsName == null ? Codegen.empty() : this.dnsName;
+    public Optional<Output<String>> dnsName() {
+        return Optional.ofNullable(this.dnsName);
     }
 
     /**
@@ -45,10 +45,10 @@ public final class BastionHostArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="id")
-      private final @Nullable Output<String> id;
+    private @Nullable Output<String> id;
 
-    public Output<String> id() {
-        return this.id == null ? Codegen.empty() : this.id;
+    public Optional<Output<String>> id() {
+        return Optional.ofNullable(this.id);
     }
 
     /**
@@ -56,10 +56,10 @@ public final class BastionHostArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="ipConfigurations")
-      private final @Nullable Output<List<BastionHostIPConfigurationArgs>> ipConfigurations;
+    private @Nullable Output<List<BastionHostIPConfigurationArgs>> ipConfigurations;
 
-    public Output<List<BastionHostIPConfigurationArgs>> ipConfigurations() {
-        return this.ipConfigurations == null ? Codegen.empty() : this.ipConfigurations;
+    public Optional<Output<List<BastionHostIPConfigurationArgs>>> ipConfigurations() {
+        return Optional.ofNullable(this.ipConfigurations);
     }
 
     /**
@@ -67,10 +67,10 @@ public final class BastionHostArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -78,7 +78,7 @@ public final class BastionHostArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -89,131 +89,113 @@ public final class BastionHostArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public BastionHostArgs(
-        @Nullable Output<String> bastionHostName,
-        @Nullable Output<String> dnsName,
-        @Nullable Output<String> id,
-        @Nullable Output<List<BastionHostIPConfigurationArgs>> ipConfigurations,
-        @Nullable Output<String> location,
-        Output<String> resourceGroupName,
-        @Nullable Output<Map<String,String>> tags) {
-        this.bastionHostName = bastionHostName;
-        this.dnsName = dnsName;
-        this.id = id;
-        this.ipConfigurations = ipConfigurations;
-        this.location = location;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.tags = tags;
-    }
+    private BastionHostArgs() {}
 
-    private BastionHostArgs() {
-        this.bastionHostName = Codegen.empty();
-        this.dnsName = Codegen.empty();
-        this.id = Codegen.empty();
-        this.ipConfigurations = Codegen.empty();
-        this.location = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.tags = Codegen.empty();
+    private BastionHostArgs(BastionHostArgs $) {
+        this.bastionHostName = $.bastionHostName;
+        this.dnsName = $.dnsName;
+        this.id = $.id;
+        this.ipConfigurations = $.ipConfigurations;
+        this.location = $.location;
+        this.resourceGroupName = $.resourceGroupName;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BastionHostArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> bastionHostName;
-        private @Nullable Output<String> dnsName;
-        private @Nullable Output<String> id;
-        private @Nullable Output<List<BastionHostIPConfigurationArgs>> ipConfigurations;
-        private @Nullable Output<String> location;
-        private Output<String> resourceGroupName;
-        private @Nullable Output<Map<String,String>> tags;
+        private BastionHostArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new BastionHostArgs();
         }
 
         public Builder(BastionHostArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.bastionHostName = defaults.bastionHostName;
-    	      this.dnsName = defaults.dnsName;
-    	      this.id = defaults.id;
-    	      this.ipConfigurations = defaults.ipConfigurations;
-    	      this.location = defaults.location;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.tags = defaults.tags;
+            $ = new BastionHostArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder bastionHostName(@Nullable Output<String> bastionHostName) {
-            this.bastionHostName = bastionHostName;
+            $.bastionHostName = bastionHostName;
             return this;
         }
-        public Builder bastionHostName(@Nullable String bastionHostName) {
-            this.bastionHostName = Codegen.ofNullable(bastionHostName);
-            return this;
+
+        public Builder bastionHostName(String bastionHostName) {
+            return bastionHostName(Output.of(bastionHostName));
         }
+
         public Builder dnsName(@Nullable Output<String> dnsName) {
-            this.dnsName = dnsName;
+            $.dnsName = dnsName;
             return this;
         }
-        public Builder dnsName(@Nullable String dnsName) {
-            this.dnsName = Codegen.ofNullable(dnsName);
-            return this;
+
+        public Builder dnsName(String dnsName) {
+            return dnsName(Output.of(dnsName));
         }
+
         public Builder id(@Nullable Output<String> id) {
-            this.id = id;
+            $.id = id;
             return this;
         }
-        public Builder id(@Nullable String id) {
-            this.id = Codegen.ofNullable(id);
-            return this;
+
+        public Builder id(String id) {
+            return id(Output.of(id));
         }
+
         public Builder ipConfigurations(@Nullable Output<List<BastionHostIPConfigurationArgs>> ipConfigurations) {
-            this.ipConfigurations = ipConfigurations;
+            $.ipConfigurations = ipConfigurations;
             return this;
         }
-        public Builder ipConfigurations(@Nullable List<BastionHostIPConfigurationArgs> ipConfigurations) {
-            this.ipConfigurations = Codegen.ofNullable(ipConfigurations);
-            return this;
+
+        public Builder ipConfigurations(List<BastionHostIPConfigurationArgs> ipConfigurations) {
+            return ipConfigurations(Output.of(ipConfigurations));
         }
+
         public Builder ipConfigurations(BastionHostIPConfigurationArgs... ipConfigurations) {
             return ipConfigurations(List.of(ipConfigurations));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
-        }        public BastionHostArgs build() {
-            return new BastionHostArgs(bastionHostName, dnsName, id, ipConfigurations, location, resourceGroupName, tags);
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
+        }
+
+        public BastionHostArgs build() {
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

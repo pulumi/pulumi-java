@@ -5,12 +5,12 @@ package com.pulumi.kubernetes.core_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.kubernetes.core_v1.inputs.SecretReferenceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,7 +27,7 @@ public final class CephFSPersistentVolumeSourceArgs extends com.pulumi.resources
      * 
      */
     @Import(name="monitors", required=true)
-      private final Output<List<String>> monitors;
+    private Output<List<String>> monitors;
 
     public Output<List<String>> monitors() {
         return this.monitors;
@@ -38,10 +38,10 @@ public final class CephFSPersistentVolumeSourceArgs extends com.pulumi.resources
      * 
      */
     @Import(name="path")
-      private final @Nullable Output<String> path;
+    private @Nullable Output<String> path;
 
-    public Output<String> path() {
-        return this.path == null ? Codegen.empty() : this.path;
+    public Optional<Output<String>> path() {
+        return Optional.ofNullable(this.path);
     }
 
     /**
@@ -49,10 +49,10 @@ public final class CephFSPersistentVolumeSourceArgs extends com.pulumi.resources
      * 
      */
     @Import(name="readOnly")
-      private final @Nullable Output<Boolean> readOnly;
+    private @Nullable Output<Boolean> readOnly;
 
-    public Output<Boolean> readOnly() {
-        return this.readOnly == null ? Codegen.empty() : this.readOnly;
+    public Optional<Output<Boolean>> readOnly() {
+        return Optional.ofNullable(this.readOnly);
     }
 
     /**
@@ -60,10 +60,10 @@ public final class CephFSPersistentVolumeSourceArgs extends com.pulumi.resources
      * 
      */
     @Import(name="secretFile")
-      private final @Nullable Output<String> secretFile;
+    private @Nullable Output<String> secretFile;
 
-    public Output<String> secretFile() {
-        return this.secretFile == null ? Codegen.empty() : this.secretFile;
+    public Optional<Output<String>> secretFile() {
+        return Optional.ofNullable(this.secretFile);
     }
 
     /**
@@ -71,10 +71,10 @@ public final class CephFSPersistentVolumeSourceArgs extends com.pulumi.resources
      * 
      */
     @Import(name="secretRef")
-      private final @Nullable Output<SecretReferenceArgs> secretRef;
+    private @Nullable Output<SecretReferenceArgs> secretRef;
 
-    public Output<SecretReferenceArgs> secretRef() {
-        return this.secretRef == null ? Codegen.empty() : this.secretRef;
+    public Optional<Output<SecretReferenceArgs>> secretRef() {
+        return Optional.ofNullable(this.secretRef);
     }
 
     /**
@@ -82,118 +82,103 @@ public final class CephFSPersistentVolumeSourceArgs extends com.pulumi.resources
      * 
      */
     @Import(name="user")
-      private final @Nullable Output<String> user;
+    private @Nullable Output<String> user;
 
-    public Output<String> user() {
-        return this.user == null ? Codegen.empty() : this.user;
+    public Optional<Output<String>> user() {
+        return Optional.ofNullable(this.user);
     }
 
-    public CephFSPersistentVolumeSourceArgs(
-        Output<List<String>> monitors,
-        @Nullable Output<String> path,
-        @Nullable Output<Boolean> readOnly,
-        @Nullable Output<String> secretFile,
-        @Nullable Output<SecretReferenceArgs> secretRef,
-        @Nullable Output<String> user) {
-        this.monitors = Objects.requireNonNull(monitors, "expected parameter 'monitors' to be non-null");
-        this.path = path;
-        this.readOnly = readOnly;
-        this.secretFile = secretFile;
-        this.secretRef = secretRef;
-        this.user = user;
-    }
+    private CephFSPersistentVolumeSourceArgs() {}
 
-    private CephFSPersistentVolumeSourceArgs() {
-        this.monitors = Codegen.empty();
-        this.path = Codegen.empty();
-        this.readOnly = Codegen.empty();
-        this.secretFile = Codegen.empty();
-        this.secretRef = Codegen.empty();
-        this.user = Codegen.empty();
+    private CephFSPersistentVolumeSourceArgs(CephFSPersistentVolumeSourceArgs $) {
+        this.monitors = $.monitors;
+        this.path = $.path;
+        this.readOnly = $.readOnly;
+        this.secretFile = $.secretFile;
+        this.secretRef = $.secretRef;
+        this.user = $.user;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CephFSPersistentVolumeSourceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<List<String>> monitors;
-        private @Nullable Output<String> path;
-        private @Nullable Output<Boolean> readOnly;
-        private @Nullable Output<String> secretFile;
-        private @Nullable Output<SecretReferenceArgs> secretRef;
-        private @Nullable Output<String> user;
+        private CephFSPersistentVolumeSourceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CephFSPersistentVolumeSourceArgs();
         }
 
         public Builder(CephFSPersistentVolumeSourceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.monitors = defaults.monitors;
-    	      this.path = defaults.path;
-    	      this.readOnly = defaults.readOnly;
-    	      this.secretFile = defaults.secretFile;
-    	      this.secretRef = defaults.secretRef;
-    	      this.user = defaults.user;
+            $ = new CephFSPersistentVolumeSourceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder monitors(Output<List<String>> monitors) {
-            this.monitors = Objects.requireNonNull(monitors);
+            $.monitors = monitors;
             return this;
         }
+
         public Builder monitors(List<String> monitors) {
-            this.monitors = Output.of(Objects.requireNonNull(monitors));
-            return this;
+            return monitors(Output.of(monitors));
         }
+
         public Builder monitors(String... monitors) {
             return monitors(List.of(monitors));
         }
+
         public Builder path(@Nullable Output<String> path) {
-            this.path = path;
+            $.path = path;
             return this;
         }
-        public Builder path(@Nullable String path) {
-            this.path = Codegen.ofNullable(path);
-            return this;
+
+        public Builder path(String path) {
+            return path(Output.of(path));
         }
+
         public Builder readOnly(@Nullable Output<Boolean> readOnly) {
-            this.readOnly = readOnly;
+            $.readOnly = readOnly;
             return this;
         }
-        public Builder readOnly(@Nullable Boolean readOnly) {
-            this.readOnly = Codegen.ofNullable(readOnly);
-            return this;
+
+        public Builder readOnly(Boolean readOnly) {
+            return readOnly(Output.of(readOnly));
         }
+
         public Builder secretFile(@Nullable Output<String> secretFile) {
-            this.secretFile = secretFile;
+            $.secretFile = secretFile;
             return this;
         }
-        public Builder secretFile(@Nullable String secretFile) {
-            this.secretFile = Codegen.ofNullable(secretFile);
-            return this;
+
+        public Builder secretFile(String secretFile) {
+            return secretFile(Output.of(secretFile));
         }
+
         public Builder secretRef(@Nullable Output<SecretReferenceArgs> secretRef) {
-            this.secretRef = secretRef;
+            $.secretRef = secretRef;
             return this;
         }
-        public Builder secretRef(@Nullable SecretReferenceArgs secretRef) {
-            this.secretRef = Codegen.ofNullable(secretRef);
-            return this;
+
+        public Builder secretRef(SecretReferenceArgs secretRef) {
+            return secretRef(Output.of(secretRef));
         }
+
         public Builder user(@Nullable Output<String> user) {
-            this.user = user;
+            $.user = user;
             return this;
         }
-        public Builder user(@Nullable String user) {
-            this.user = Codegen.ofNullable(user);
-            return this;
-        }        public CephFSPersistentVolumeSourceArgs build() {
-            return new CephFSPersistentVolumeSourceArgs(monitors, path, readOnly, secretFile, secretRef, user);
+
+        public Builder user(String user) {
+            return user(Output.of(user));
+        }
+
+        public CephFSPersistentVolumeSourceArgs build() {
+            $.monitors = Objects.requireNonNull($.monitors, "expected parameter 'monitors' to be non-null");
+            return $;
         }
     }
+
 }

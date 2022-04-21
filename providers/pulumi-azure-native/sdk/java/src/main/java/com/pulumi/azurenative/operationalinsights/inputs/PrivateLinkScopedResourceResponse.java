@@ -23,10 +23,10 @@ public final class PrivateLinkScopedResourceResponse extends com.pulumi.resource
      * 
      */
     @Import(name="resourceId")
-      private final @Nullable String resourceId;
+    private @Nullable String resourceId;
 
     public Optional<String> resourceId() {
-        return this.resourceId == null ? Optional.empty() : Optional.ofNullable(this.resourceId);
+        return Optional.ofNullable(this.resourceId);
     }
 
     /**
@@ -34,55 +34,50 @@ public final class PrivateLinkScopedResourceResponse extends com.pulumi.resource
      * 
      */
     @Import(name="scopeId")
-      private final @Nullable String scopeId;
+    private @Nullable String scopeId;
 
     public Optional<String> scopeId() {
-        return this.scopeId == null ? Optional.empty() : Optional.ofNullable(this.scopeId);
+        return Optional.ofNullable(this.scopeId);
     }
 
-    public PrivateLinkScopedResourceResponse(
-        @Nullable String resourceId,
-        @Nullable String scopeId) {
-        this.resourceId = resourceId;
-        this.scopeId = scopeId;
-    }
+    private PrivateLinkScopedResourceResponse() {}
 
-    private PrivateLinkScopedResourceResponse() {
-        this.resourceId = null;
-        this.scopeId = null;
+    private PrivateLinkScopedResourceResponse(PrivateLinkScopedResourceResponse $) {
+        this.resourceId = $.resourceId;
+        this.scopeId = $.scopeId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PrivateLinkScopedResourceResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String resourceId;
-        private @Nullable String scopeId;
+        private PrivateLinkScopedResourceResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new PrivateLinkScopedResourceResponse();
         }
 
         public Builder(PrivateLinkScopedResourceResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.resourceId = defaults.resourceId;
-    	      this.scopeId = defaults.scopeId;
+            $ = new PrivateLinkScopedResourceResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder resourceId(@Nullable String resourceId) {
-            this.resourceId = resourceId;
+            $.resourceId = resourceId;
             return this;
         }
+
         public Builder scopeId(@Nullable String scopeId) {
-            this.scopeId = scopeId;
+            $.scopeId = scopeId;
             return this;
-        }        public PrivateLinkScopedResourceResponse build() {
-            return new PrivateLinkScopedResourceResponse(resourceId, scopeId);
+        }
+
+        public PrivateLinkScopedResourceResponse build() {
+            return $;
         }
     }
+
 }

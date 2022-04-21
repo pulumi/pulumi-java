@@ -23,45 +23,44 @@ public final class ManagedClusterAutoUpgradeProfileResponse extends com.pulumi.r
      * 
      */
     @Import(name="upgradeChannel")
-      private final @Nullable String upgradeChannel;
+    private @Nullable String upgradeChannel;
 
     public Optional<String> upgradeChannel() {
-        return this.upgradeChannel == null ? Optional.empty() : Optional.ofNullable(this.upgradeChannel);
+        return Optional.ofNullable(this.upgradeChannel);
     }
 
-    public ManagedClusterAutoUpgradeProfileResponse(@Nullable String upgradeChannel) {
-        this.upgradeChannel = upgradeChannel;
-    }
+    private ManagedClusterAutoUpgradeProfileResponse() {}
 
-    private ManagedClusterAutoUpgradeProfileResponse() {
-        this.upgradeChannel = null;
+    private ManagedClusterAutoUpgradeProfileResponse(ManagedClusterAutoUpgradeProfileResponse $) {
+        this.upgradeChannel = $.upgradeChannel;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ManagedClusterAutoUpgradeProfileResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String upgradeChannel;
+        private ManagedClusterAutoUpgradeProfileResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ManagedClusterAutoUpgradeProfileResponse();
         }
 
         public Builder(ManagedClusterAutoUpgradeProfileResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.upgradeChannel = defaults.upgradeChannel;
+            $ = new ManagedClusterAutoUpgradeProfileResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder upgradeChannel(@Nullable String upgradeChannel) {
-            this.upgradeChannel = upgradeChannel;
+            $.upgradeChannel = upgradeChannel;
             return this;
-        }        public ManagedClusterAutoUpgradeProfileResponse build() {
-            return new ManagedClusterAutoUpgradeProfileResponse(upgradeChannel);
+        }
+
+        public ManagedClusterAutoUpgradeProfileResponse build() {
+            return $;
         }
     }
+
 }

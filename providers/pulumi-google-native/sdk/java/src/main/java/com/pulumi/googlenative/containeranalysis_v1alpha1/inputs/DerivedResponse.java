@@ -25,7 +25,7 @@ public final class DerivedResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="baseResourceUrl", required=true)
-      private final String baseResourceUrl;
+    private String baseResourceUrl;
 
     public String baseResourceUrl() {
         return this.baseResourceUrl;
@@ -36,7 +36,7 @@ public final class DerivedResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="distance", required=true)
-      private final Integer distance;
+    private Integer distance;
 
     public Integer distance() {
         return this.distance;
@@ -47,7 +47,7 @@ public final class DerivedResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="fingerprint", required=true)
-      private final FingerprintResponse fingerprint;
+    private FingerprintResponse fingerprint;
 
     public FingerprintResponse fingerprint() {
         return this.fingerprint;
@@ -58,76 +58,70 @@ public final class DerivedResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="layerInfo", required=true)
-      private final List<LayerResponse> layerInfo;
+    private List<LayerResponse> layerInfo;
 
     public List<LayerResponse> layerInfo() {
         return this.layerInfo;
     }
 
-    public DerivedResponse(
-        String baseResourceUrl,
-        Integer distance,
-        FingerprintResponse fingerprint,
-        List<LayerResponse> layerInfo) {
-        this.baseResourceUrl = Objects.requireNonNull(baseResourceUrl, "expected parameter 'baseResourceUrl' to be non-null");
-        this.distance = Objects.requireNonNull(distance, "expected parameter 'distance' to be non-null");
-        this.fingerprint = Objects.requireNonNull(fingerprint, "expected parameter 'fingerprint' to be non-null");
-        this.layerInfo = Objects.requireNonNull(layerInfo, "expected parameter 'layerInfo' to be non-null");
-    }
+    private DerivedResponse() {}
 
-    private DerivedResponse() {
-        this.baseResourceUrl = null;
-        this.distance = null;
-        this.fingerprint = null;
-        this.layerInfo = List.of();
+    private DerivedResponse(DerivedResponse $) {
+        this.baseResourceUrl = $.baseResourceUrl;
+        this.distance = $.distance;
+        this.fingerprint = $.fingerprint;
+        this.layerInfo = $.layerInfo;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DerivedResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String baseResourceUrl;
-        private Integer distance;
-        private FingerprintResponse fingerprint;
-        private List<LayerResponse> layerInfo;
+        private DerivedResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new DerivedResponse();
         }
 
         public Builder(DerivedResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.baseResourceUrl = defaults.baseResourceUrl;
-    	      this.distance = defaults.distance;
-    	      this.fingerprint = defaults.fingerprint;
-    	      this.layerInfo = defaults.layerInfo;
+            $ = new DerivedResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder baseResourceUrl(String baseResourceUrl) {
-            this.baseResourceUrl = Objects.requireNonNull(baseResourceUrl);
+            $.baseResourceUrl = baseResourceUrl;
             return this;
         }
+
         public Builder distance(Integer distance) {
-            this.distance = Objects.requireNonNull(distance);
+            $.distance = distance;
             return this;
         }
+
         public Builder fingerprint(FingerprintResponse fingerprint) {
-            this.fingerprint = Objects.requireNonNull(fingerprint);
+            $.fingerprint = fingerprint;
             return this;
         }
+
         public Builder layerInfo(List<LayerResponse> layerInfo) {
-            this.layerInfo = Objects.requireNonNull(layerInfo);
+            $.layerInfo = layerInfo;
             return this;
         }
+
         public Builder layerInfo(LayerResponse... layerInfo) {
             return layerInfo(List.of(layerInfo));
-        }        public DerivedResponse build() {
-            return new DerivedResponse(baseResourceUrl, distance, fingerprint, layerInfo);
+        }
+
+        public DerivedResponse build() {
+            $.baseResourceUrl = Objects.requireNonNull($.baseResourceUrl, "expected parameter 'baseResourceUrl' to be non-null");
+            $.distance = Objects.requireNonNull($.distance, "expected parameter 'distance' to be non-null");
+            $.fingerprint = Objects.requireNonNull($.fingerprint, "expected parameter 'fingerprint' to be non-null");
+            $.layerInfo = Objects.requireNonNull($.layerInfo, "expected parameter 'layerInfo' to be non-null");
+            return $;
         }
     }
+
 }

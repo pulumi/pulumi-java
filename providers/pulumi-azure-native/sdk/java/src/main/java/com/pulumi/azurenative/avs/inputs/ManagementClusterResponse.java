@@ -23,7 +23,7 @@ public final class ManagementClusterResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="clusterId", required=true)
-      private final Integer clusterId;
+    private Integer clusterId;
 
     public Integer clusterId() {
         return this.clusterId;
@@ -34,7 +34,7 @@ public final class ManagementClusterResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="clusterSize", required=true)
-      private final Integer clusterSize;
+    private Integer clusterSize;
 
     public Integer clusterSize() {
         return this.clusterSize;
@@ -45,7 +45,7 @@ public final class ManagementClusterResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="hosts", required=true)
-      private final List<String> hosts;
+    private List<String> hosts;
 
     public List<String> hosts() {
         return this.hosts;
@@ -56,76 +56,70 @@ public final class ManagementClusterResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="provisioningState", required=true)
-      private final String provisioningState;
+    private String provisioningState;
 
     public String provisioningState() {
         return this.provisioningState;
     }
 
-    public ManagementClusterResponse(
-        Integer clusterId,
-        Integer clusterSize,
-        List<String> hosts,
-        String provisioningState) {
-        this.clusterId = Objects.requireNonNull(clusterId, "expected parameter 'clusterId' to be non-null");
-        this.clusterSize = Objects.requireNonNull(clusterSize, "expected parameter 'clusterSize' to be non-null");
-        this.hosts = Objects.requireNonNull(hosts, "expected parameter 'hosts' to be non-null");
-        this.provisioningState = Objects.requireNonNull(provisioningState, "expected parameter 'provisioningState' to be non-null");
-    }
+    private ManagementClusterResponse() {}
 
-    private ManagementClusterResponse() {
-        this.clusterId = null;
-        this.clusterSize = null;
-        this.hosts = List.of();
-        this.provisioningState = null;
+    private ManagementClusterResponse(ManagementClusterResponse $) {
+        this.clusterId = $.clusterId;
+        this.clusterSize = $.clusterSize;
+        this.hosts = $.hosts;
+        this.provisioningState = $.provisioningState;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ManagementClusterResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Integer clusterId;
-        private Integer clusterSize;
-        private List<String> hosts;
-        private String provisioningState;
+        private ManagementClusterResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ManagementClusterResponse();
         }
 
         public Builder(ManagementClusterResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.clusterId = defaults.clusterId;
-    	      this.clusterSize = defaults.clusterSize;
-    	      this.hosts = defaults.hosts;
-    	      this.provisioningState = defaults.provisioningState;
+            $ = new ManagementClusterResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder clusterId(Integer clusterId) {
-            this.clusterId = Objects.requireNonNull(clusterId);
+            $.clusterId = clusterId;
             return this;
         }
+
         public Builder clusterSize(Integer clusterSize) {
-            this.clusterSize = Objects.requireNonNull(clusterSize);
+            $.clusterSize = clusterSize;
             return this;
         }
+
         public Builder hosts(List<String> hosts) {
-            this.hosts = Objects.requireNonNull(hosts);
+            $.hosts = hosts;
             return this;
         }
+
         public Builder hosts(String... hosts) {
             return hosts(List.of(hosts));
         }
+
         public Builder provisioningState(String provisioningState) {
-            this.provisioningState = Objects.requireNonNull(provisioningState);
+            $.provisioningState = provisioningState;
             return this;
-        }        public ManagementClusterResponse build() {
-            return new ManagementClusterResponse(clusterId, clusterSize, hosts, provisioningState);
+        }
+
+        public ManagementClusterResponse build() {
+            $.clusterId = Objects.requireNonNull($.clusterId, "expected parameter 'clusterId' to be non-null");
+            $.clusterSize = Objects.requireNonNull($.clusterSize, "expected parameter 'clusterSize' to be non-null");
+            $.hosts = Objects.requireNonNull($.hosts, "expected parameter 'hosts' to be non-null");
+            $.provisioningState = Objects.requireNonNull($.provisioningState, "expected parameter 'provisioningState' to be non-null");
+            return $;
         }
     }
+
 }

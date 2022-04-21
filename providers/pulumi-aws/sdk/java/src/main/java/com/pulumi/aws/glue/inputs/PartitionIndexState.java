@@ -6,9 +6,9 @@ package com.pulumi.aws.glue.inputs;
 import com.pulumi.aws.glue.inputs.PartitionIndexPartitionIndexGetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class PartitionIndexState extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="catalogId")
-      private final @Nullable Output<String> catalogId;
+    private @Nullable Output<String> catalogId;
 
-    public Output<String> catalogId() {
-        return this.catalogId == null ? Codegen.empty() : this.catalogId;
+    public Optional<Output<String>> catalogId() {
+        return Optional.ofNullable(this.catalogId);
     }
 
     /**
@@ -32,10 +32,10 @@ public final class PartitionIndexState extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="databaseName")
-      private final @Nullable Output<String> databaseName;
+    private @Nullable Output<String> databaseName;
 
-    public Output<String> databaseName() {
-        return this.databaseName == null ? Codegen.empty() : this.databaseName;
+    public Optional<Output<String>> databaseName() {
+        return Optional.ofNullable(this.databaseName);
     }
 
     /**
@@ -43,10 +43,10 @@ public final class PartitionIndexState extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="partitionIndex")
-      private final @Nullable Output<PartitionIndexPartitionIndexGetArgs> partitionIndex;
+    private @Nullable Output<PartitionIndexPartitionIndexGetArgs> partitionIndex;
 
-    public Output<PartitionIndexPartitionIndexGetArgs> partitionIndex() {
-        return this.partitionIndex == null ? Codegen.empty() : this.partitionIndex;
+    public Optional<Output<PartitionIndexPartitionIndexGetArgs>> partitionIndex() {
+        return Optional.ofNullable(this.partitionIndex);
     }
 
     /**
@@ -54,89 +54,78 @@ public final class PartitionIndexState extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="tableName")
-      private final @Nullable Output<String> tableName;
+    private @Nullable Output<String> tableName;
 
-    public Output<String> tableName() {
-        return this.tableName == null ? Codegen.empty() : this.tableName;
+    public Optional<Output<String>> tableName() {
+        return Optional.ofNullable(this.tableName);
     }
 
-    public PartitionIndexState(
-        @Nullable Output<String> catalogId,
-        @Nullable Output<String> databaseName,
-        @Nullable Output<PartitionIndexPartitionIndexGetArgs> partitionIndex,
-        @Nullable Output<String> tableName) {
-        this.catalogId = catalogId;
-        this.databaseName = databaseName;
-        this.partitionIndex = partitionIndex;
-        this.tableName = tableName;
-    }
+    private PartitionIndexState() {}
 
-    private PartitionIndexState() {
-        this.catalogId = Codegen.empty();
-        this.databaseName = Codegen.empty();
-        this.partitionIndex = Codegen.empty();
-        this.tableName = Codegen.empty();
+    private PartitionIndexState(PartitionIndexState $) {
+        this.catalogId = $.catalogId;
+        this.databaseName = $.databaseName;
+        this.partitionIndex = $.partitionIndex;
+        this.tableName = $.tableName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PartitionIndexState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> catalogId;
-        private @Nullable Output<String> databaseName;
-        private @Nullable Output<PartitionIndexPartitionIndexGetArgs> partitionIndex;
-        private @Nullable Output<String> tableName;
+        private PartitionIndexState $;
 
         public Builder() {
-    	      // Empty
+            $ = new PartitionIndexState();
         }
 
         public Builder(PartitionIndexState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.catalogId = defaults.catalogId;
-    	      this.databaseName = defaults.databaseName;
-    	      this.partitionIndex = defaults.partitionIndex;
-    	      this.tableName = defaults.tableName;
+            $ = new PartitionIndexState(Objects.requireNonNull(defaults));
         }
 
         public Builder catalogId(@Nullable Output<String> catalogId) {
-            this.catalogId = catalogId;
+            $.catalogId = catalogId;
             return this;
         }
-        public Builder catalogId(@Nullable String catalogId) {
-            this.catalogId = Codegen.ofNullable(catalogId);
-            return this;
+
+        public Builder catalogId(String catalogId) {
+            return catalogId(Output.of(catalogId));
         }
+
         public Builder databaseName(@Nullable Output<String> databaseName) {
-            this.databaseName = databaseName;
+            $.databaseName = databaseName;
             return this;
         }
-        public Builder databaseName(@Nullable String databaseName) {
-            this.databaseName = Codegen.ofNullable(databaseName);
-            return this;
+
+        public Builder databaseName(String databaseName) {
+            return databaseName(Output.of(databaseName));
         }
+
         public Builder partitionIndex(@Nullable Output<PartitionIndexPartitionIndexGetArgs> partitionIndex) {
-            this.partitionIndex = partitionIndex;
+            $.partitionIndex = partitionIndex;
             return this;
         }
-        public Builder partitionIndex(@Nullable PartitionIndexPartitionIndexGetArgs partitionIndex) {
-            this.partitionIndex = Codegen.ofNullable(partitionIndex);
-            return this;
+
+        public Builder partitionIndex(PartitionIndexPartitionIndexGetArgs partitionIndex) {
+            return partitionIndex(Output.of(partitionIndex));
         }
+
         public Builder tableName(@Nullable Output<String> tableName) {
-            this.tableName = tableName;
+            $.tableName = tableName;
             return this;
         }
-        public Builder tableName(@Nullable String tableName) {
-            this.tableName = Codegen.ofNullable(tableName);
-            return this;
-        }        public PartitionIndexState build() {
-            return new PartitionIndexState(catalogId, databaseName, partitionIndex, tableName);
+
+        public Builder tableName(String tableName) {
+            return tableName(Output.of(tableName));
+        }
+
+        public PartitionIndexState build() {
+            return $;
         }
     }
+
 }

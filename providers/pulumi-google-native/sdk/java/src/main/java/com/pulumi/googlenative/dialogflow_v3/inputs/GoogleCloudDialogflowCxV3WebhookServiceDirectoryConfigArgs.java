@@ -5,10 +5,10 @@ package com.pulumi.googlenative.dialogflow_v3.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.dialogflow_v3.inputs.GoogleCloudDialogflowCxV3WebhookGenericWebServiceArgs;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class GoogleCloudDialogflowCxV3WebhookServiceDirectoryConfigArgs ex
      * 
      */
     @Import(name="genericWebService")
-      private final @Nullable Output<GoogleCloudDialogflowCxV3WebhookGenericWebServiceArgs> genericWebService;
+    private @Nullable Output<GoogleCloudDialogflowCxV3WebhookGenericWebServiceArgs> genericWebService;
 
-    public Output<GoogleCloudDialogflowCxV3WebhookGenericWebServiceArgs> genericWebService() {
-        return this.genericWebService == null ? Codegen.empty() : this.genericWebService;
+    public Optional<Output<GoogleCloudDialogflowCxV3WebhookGenericWebServiceArgs>> genericWebService() {
+        return Optional.ofNullable(this.genericWebService);
     }
 
     /**
@@ -36,63 +36,59 @@ public final class GoogleCloudDialogflowCxV3WebhookServiceDirectoryConfigArgs ex
      * 
      */
     @Import(name="service", required=true)
-      private final Output<String> service;
+    private Output<String> service;
 
     public Output<String> service() {
         return this.service;
     }
 
-    public GoogleCloudDialogflowCxV3WebhookServiceDirectoryConfigArgs(
-        @Nullable Output<GoogleCloudDialogflowCxV3WebhookGenericWebServiceArgs> genericWebService,
-        Output<String> service) {
-        this.genericWebService = genericWebService;
-        this.service = Objects.requireNonNull(service, "expected parameter 'service' to be non-null");
-    }
+    private GoogleCloudDialogflowCxV3WebhookServiceDirectoryConfigArgs() {}
 
-    private GoogleCloudDialogflowCxV3WebhookServiceDirectoryConfigArgs() {
-        this.genericWebService = Codegen.empty();
-        this.service = Codegen.empty();
+    private GoogleCloudDialogflowCxV3WebhookServiceDirectoryConfigArgs(GoogleCloudDialogflowCxV3WebhookServiceDirectoryConfigArgs $) {
+        this.genericWebService = $.genericWebService;
+        this.service = $.service;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudDialogflowCxV3WebhookServiceDirectoryConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<GoogleCloudDialogflowCxV3WebhookGenericWebServiceArgs> genericWebService;
-        private Output<String> service;
+        private GoogleCloudDialogflowCxV3WebhookServiceDirectoryConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudDialogflowCxV3WebhookServiceDirectoryConfigArgs();
         }
 
         public Builder(GoogleCloudDialogflowCxV3WebhookServiceDirectoryConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.genericWebService = defaults.genericWebService;
-    	      this.service = defaults.service;
+            $ = new GoogleCloudDialogflowCxV3WebhookServiceDirectoryConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder genericWebService(@Nullable Output<GoogleCloudDialogflowCxV3WebhookGenericWebServiceArgs> genericWebService) {
-            this.genericWebService = genericWebService;
+            $.genericWebService = genericWebService;
             return this;
         }
-        public Builder genericWebService(@Nullable GoogleCloudDialogflowCxV3WebhookGenericWebServiceArgs genericWebService) {
-            this.genericWebService = Codegen.ofNullable(genericWebService);
-            return this;
+
+        public Builder genericWebService(GoogleCloudDialogflowCxV3WebhookGenericWebServiceArgs genericWebService) {
+            return genericWebService(Output.of(genericWebService));
         }
+
         public Builder service(Output<String> service) {
-            this.service = Objects.requireNonNull(service);
+            $.service = service;
             return this;
         }
+
         public Builder service(String service) {
-            this.service = Output.of(Objects.requireNonNull(service));
-            return this;
-        }        public GoogleCloudDialogflowCxV3WebhookServiceDirectoryConfigArgs build() {
-            return new GoogleCloudDialogflowCxV3WebhookServiceDirectoryConfigArgs(genericWebService, service);
+            return service(Output.of(service));
+        }
+
+        public GoogleCloudDialogflowCxV3WebhookServiceDirectoryConfigArgs build() {
+            $.service = Objects.requireNonNull($.service, "expected parameter 'service' to be non-null");
+            return $;
         }
     }
+
 }

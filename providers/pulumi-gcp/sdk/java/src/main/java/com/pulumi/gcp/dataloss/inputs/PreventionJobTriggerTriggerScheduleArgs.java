@@ -5,9 +5,9 @@ package com.pulumi.gcp.dataloss.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,49 +23,48 @@ public final class PreventionJobTriggerTriggerScheduleArgs extends com.pulumi.re
      * 
      */
     @Import(name="recurrencePeriodDuration")
-      private final @Nullable Output<String> recurrencePeriodDuration;
+    private @Nullable Output<String> recurrencePeriodDuration;
 
-    public Output<String> recurrencePeriodDuration() {
-        return this.recurrencePeriodDuration == null ? Codegen.empty() : this.recurrencePeriodDuration;
+    public Optional<Output<String>> recurrencePeriodDuration() {
+        return Optional.ofNullable(this.recurrencePeriodDuration);
     }
 
-    public PreventionJobTriggerTriggerScheduleArgs(@Nullable Output<String> recurrencePeriodDuration) {
-        this.recurrencePeriodDuration = recurrencePeriodDuration;
-    }
+    private PreventionJobTriggerTriggerScheduleArgs() {}
 
-    private PreventionJobTriggerTriggerScheduleArgs() {
-        this.recurrencePeriodDuration = Codegen.empty();
+    private PreventionJobTriggerTriggerScheduleArgs(PreventionJobTriggerTriggerScheduleArgs $) {
+        this.recurrencePeriodDuration = $.recurrencePeriodDuration;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PreventionJobTriggerTriggerScheduleArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> recurrencePeriodDuration;
+        private PreventionJobTriggerTriggerScheduleArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PreventionJobTriggerTriggerScheduleArgs();
         }
 
         public Builder(PreventionJobTriggerTriggerScheduleArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.recurrencePeriodDuration = defaults.recurrencePeriodDuration;
+            $ = new PreventionJobTriggerTriggerScheduleArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder recurrencePeriodDuration(@Nullable Output<String> recurrencePeriodDuration) {
-            this.recurrencePeriodDuration = recurrencePeriodDuration;
+            $.recurrencePeriodDuration = recurrencePeriodDuration;
             return this;
         }
-        public Builder recurrencePeriodDuration(@Nullable String recurrencePeriodDuration) {
-            this.recurrencePeriodDuration = Codegen.ofNullable(recurrencePeriodDuration);
-            return this;
-        }        public PreventionJobTriggerTriggerScheduleArgs build() {
-            return new PreventionJobTriggerTriggerScheduleArgs(recurrencePeriodDuration);
+
+        public Builder recurrencePeriodDuration(String recurrencePeriodDuration) {
+            return recurrencePeriodDuration(Output.of(recurrencePeriodDuration));
+        }
+
+        public PreventionJobTriggerTriggerScheduleArgs build() {
+            return $;
         }
     }
+
 }

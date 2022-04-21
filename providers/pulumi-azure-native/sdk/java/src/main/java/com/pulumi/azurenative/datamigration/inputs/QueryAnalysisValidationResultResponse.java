@@ -22,7 +22,7 @@ public final class QueryAnalysisValidationResultResponse extends com.pulumi.reso
      * 
      */
     @Import(name="queryResults", required=true)
-      private final QueryExecutionResultResponse queryResults;
+    private QueryExecutionResultResponse queryResults;
 
     public QueryExecutionResultResponse queryResults() {
         return this.queryResults;
@@ -33,55 +33,52 @@ public final class QueryAnalysisValidationResultResponse extends com.pulumi.reso
      * 
      */
     @Import(name="validationErrors", required=true)
-      private final ValidationErrorResponse validationErrors;
+    private ValidationErrorResponse validationErrors;
 
     public ValidationErrorResponse validationErrors() {
         return this.validationErrors;
     }
 
-    public QueryAnalysisValidationResultResponse(
-        QueryExecutionResultResponse queryResults,
-        ValidationErrorResponse validationErrors) {
-        this.queryResults = Objects.requireNonNull(queryResults, "expected parameter 'queryResults' to be non-null");
-        this.validationErrors = Objects.requireNonNull(validationErrors, "expected parameter 'validationErrors' to be non-null");
-    }
+    private QueryAnalysisValidationResultResponse() {}
 
-    private QueryAnalysisValidationResultResponse() {
-        this.queryResults = null;
-        this.validationErrors = null;
+    private QueryAnalysisValidationResultResponse(QueryAnalysisValidationResultResponse $) {
+        this.queryResults = $.queryResults;
+        this.validationErrors = $.validationErrors;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(QueryAnalysisValidationResultResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private QueryExecutionResultResponse queryResults;
-        private ValidationErrorResponse validationErrors;
+        private QueryAnalysisValidationResultResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new QueryAnalysisValidationResultResponse();
         }
 
         public Builder(QueryAnalysisValidationResultResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.queryResults = defaults.queryResults;
-    	      this.validationErrors = defaults.validationErrors;
+            $ = new QueryAnalysisValidationResultResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder queryResults(QueryExecutionResultResponse queryResults) {
-            this.queryResults = Objects.requireNonNull(queryResults);
+            $.queryResults = queryResults;
             return this;
         }
+
         public Builder validationErrors(ValidationErrorResponse validationErrors) {
-            this.validationErrors = Objects.requireNonNull(validationErrors);
+            $.validationErrors = validationErrors;
             return this;
-        }        public QueryAnalysisValidationResultResponse build() {
-            return new QueryAnalysisValidationResultResponse(queryResults, validationErrors);
+        }
+
+        public QueryAnalysisValidationResultResponse build() {
+            $.queryResults = Objects.requireNonNull($.queryResults, "expected parameter 'queryResults' to be non-null");
+            $.validationErrors = Objects.requireNonNull($.validationErrors, "expected parameter 'validationErrors' to be non-null");
+            return $;
         }
     }
+
 }

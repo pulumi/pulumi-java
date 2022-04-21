@@ -24,7 +24,7 @@ public final class EmailChannelPropertiesResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="emailAddress", required=true)
-      private final String emailAddress;
+    private String emailAddress;
 
     public String emailAddress() {
         return this.emailAddress;
@@ -35,7 +35,7 @@ public final class EmailChannelPropertiesResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="isEnabled", required=true)
-      private final Boolean isEnabled;
+    private Boolean isEnabled;
 
     public Boolean isEnabled() {
         return this.isEnabled;
@@ -46,64 +46,58 @@ public final class EmailChannelPropertiesResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="password")
-      private final @Nullable String password;
+    private @Nullable String password;
 
     public Optional<String> password() {
-        return this.password == null ? Optional.empty() : Optional.ofNullable(this.password);
+        return Optional.ofNullable(this.password);
     }
 
-    public EmailChannelPropertiesResponse(
-        String emailAddress,
-        Boolean isEnabled,
-        @Nullable String password) {
-        this.emailAddress = Objects.requireNonNull(emailAddress, "expected parameter 'emailAddress' to be non-null");
-        this.isEnabled = Objects.requireNonNull(isEnabled, "expected parameter 'isEnabled' to be non-null");
-        this.password = password;
-    }
+    private EmailChannelPropertiesResponse() {}
 
-    private EmailChannelPropertiesResponse() {
-        this.emailAddress = null;
-        this.isEnabled = null;
-        this.password = null;
+    private EmailChannelPropertiesResponse(EmailChannelPropertiesResponse $) {
+        this.emailAddress = $.emailAddress;
+        this.isEnabled = $.isEnabled;
+        this.password = $.password;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EmailChannelPropertiesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String emailAddress;
-        private Boolean isEnabled;
-        private @Nullable String password;
+        private EmailChannelPropertiesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new EmailChannelPropertiesResponse();
         }
 
         public Builder(EmailChannelPropertiesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.emailAddress = defaults.emailAddress;
-    	      this.isEnabled = defaults.isEnabled;
-    	      this.password = defaults.password;
+            $ = new EmailChannelPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder emailAddress(String emailAddress) {
-            this.emailAddress = Objects.requireNonNull(emailAddress);
+            $.emailAddress = emailAddress;
             return this;
         }
+
         public Builder isEnabled(Boolean isEnabled) {
-            this.isEnabled = Objects.requireNonNull(isEnabled);
+            $.isEnabled = isEnabled;
             return this;
         }
+
         public Builder password(@Nullable String password) {
-            this.password = password;
+            $.password = password;
             return this;
-        }        public EmailChannelPropertiesResponse build() {
-            return new EmailChannelPropertiesResponse(emailAddress, isEnabled, password);
+        }
+
+        public EmailChannelPropertiesResponse build() {
+            $.emailAddress = Objects.requireNonNull($.emailAddress, "expected parameter 'emailAddress' to be non-null");
+            $.isEnabled = Objects.requireNonNull($.isEnabled, "expected parameter 'isEnabled' to be non-null");
+            return $;
         }
     }
+
 }

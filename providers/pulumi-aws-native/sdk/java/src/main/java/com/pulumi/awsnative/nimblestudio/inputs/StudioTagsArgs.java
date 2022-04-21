@@ -3,35 +3,26 @@
 
 package com.pulumi.awsnative.nimblestudio.inputs;
 
-import java.util.Objects;
+
 
 
 public final class StudioTagsArgs extends com.pulumi.resources.ResourceArgs {
 
     public static final StudioTagsArgs Empty = new StudioTagsArgs();
 
-    public StudioTagsArgs() {
-    }
-
     public static Builder builder() {
         return new Builder();
     }
 
-    public static Builder builder(StudioTagsArgs defaults) {
-        return new Builder(defaults);
-    }
-
     public static final class Builder {
+        private StudioTagsArgs $;
 
         public Builder() {
-    	      // Empty
-        }
-
-        public Builder(StudioTagsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
+            $ = new StudioTagsArgs();
         }
         public StudioTagsArgs build() {
-            return new StudioTagsArgs();
+            return $;
         }
     }
+
 }

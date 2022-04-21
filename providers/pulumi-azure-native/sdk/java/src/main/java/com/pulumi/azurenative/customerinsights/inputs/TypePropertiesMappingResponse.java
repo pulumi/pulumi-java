@@ -23,10 +23,10 @@ public final class TypePropertiesMappingResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="linkType")
-      private final @Nullable String linkType;
+    private @Nullable String linkType;
 
     public Optional<String> linkType() {
-        return this.linkType == null ? Optional.empty() : Optional.ofNullable(this.linkType);
+        return Optional.ofNullable(this.linkType);
     }
 
     /**
@@ -34,7 +34,7 @@ public final class TypePropertiesMappingResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="sourcePropertyName", required=true)
-      private final String sourcePropertyName;
+    private String sourcePropertyName;
 
     public String sourcePropertyName() {
         return this.sourcePropertyName;
@@ -45,64 +45,58 @@ public final class TypePropertiesMappingResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="targetPropertyName", required=true)
-      private final String targetPropertyName;
+    private String targetPropertyName;
 
     public String targetPropertyName() {
         return this.targetPropertyName;
     }
 
-    public TypePropertiesMappingResponse(
-        @Nullable String linkType,
-        String sourcePropertyName,
-        String targetPropertyName) {
-        this.linkType = linkType;
-        this.sourcePropertyName = Objects.requireNonNull(sourcePropertyName, "expected parameter 'sourcePropertyName' to be non-null");
-        this.targetPropertyName = Objects.requireNonNull(targetPropertyName, "expected parameter 'targetPropertyName' to be non-null");
-    }
+    private TypePropertiesMappingResponse() {}
 
-    private TypePropertiesMappingResponse() {
-        this.linkType = null;
-        this.sourcePropertyName = null;
-        this.targetPropertyName = null;
+    private TypePropertiesMappingResponse(TypePropertiesMappingResponse $) {
+        this.linkType = $.linkType;
+        this.sourcePropertyName = $.sourcePropertyName;
+        this.targetPropertyName = $.targetPropertyName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TypePropertiesMappingResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String linkType;
-        private String sourcePropertyName;
-        private String targetPropertyName;
+        private TypePropertiesMappingResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new TypePropertiesMappingResponse();
         }
 
         public Builder(TypePropertiesMappingResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.linkType = defaults.linkType;
-    	      this.sourcePropertyName = defaults.sourcePropertyName;
-    	      this.targetPropertyName = defaults.targetPropertyName;
+            $ = new TypePropertiesMappingResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder linkType(@Nullable String linkType) {
-            this.linkType = linkType;
+            $.linkType = linkType;
             return this;
         }
+
         public Builder sourcePropertyName(String sourcePropertyName) {
-            this.sourcePropertyName = Objects.requireNonNull(sourcePropertyName);
+            $.sourcePropertyName = sourcePropertyName;
             return this;
         }
+
         public Builder targetPropertyName(String targetPropertyName) {
-            this.targetPropertyName = Objects.requireNonNull(targetPropertyName);
+            $.targetPropertyName = targetPropertyName;
             return this;
-        }        public TypePropertiesMappingResponse build() {
-            return new TypePropertiesMappingResponse(linkType, sourcePropertyName, targetPropertyName);
+        }
+
+        public TypePropertiesMappingResponse build() {
+            $.sourcePropertyName = Objects.requireNonNull($.sourcePropertyName, "expected parameter 'sourcePropertyName' to be non-null");
+            $.targetPropertyName = Objects.requireNonNull($.targetPropertyName, "expected parameter 'targetPropertyName' to be non-null");
+            return $;
         }
     }
+
 }

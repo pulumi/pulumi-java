@@ -23,10 +23,10 @@ public final class ImageReferenceResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="exactVersion")
-      private final @Nullable String exactVersion;
+    private @Nullable String exactVersion;
 
     public Optional<String> exactVersion() {
-        return this.exactVersion == null ? Optional.empty() : Optional.ofNullable(this.exactVersion);
+        return Optional.ofNullable(this.exactVersion);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class ImageReferenceResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="offer")
-      private final @Nullable String offer;
+    private @Nullable String offer;
 
     public Optional<String> offer() {
-        return this.offer == null ? Optional.empty() : Optional.ofNullable(this.offer);
+        return Optional.ofNullable(this.offer);
     }
 
     /**
@@ -45,10 +45,10 @@ public final class ImageReferenceResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="publisher")
-      private final @Nullable String publisher;
+    private @Nullable String publisher;
 
     public Optional<String> publisher() {
-        return this.publisher == null ? Optional.empty() : Optional.ofNullable(this.publisher);
+        return Optional.ofNullable(this.publisher);
     }
 
     /**
@@ -56,10 +56,10 @@ public final class ImageReferenceResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="sku")
-      private final @Nullable String sku;
+    private @Nullable String sku;
 
     public Optional<String> sku() {
-        return this.sku == null ? Optional.empty() : Optional.ofNullable(this.sku);
+        return Optional.ofNullable(this.sku);
     }
 
     /**
@@ -67,82 +67,68 @@ public final class ImageReferenceResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="version")
-      private final @Nullable String version;
+    private @Nullable String version;
 
     public Optional<String> version() {
-        return this.version == null ? Optional.empty() : Optional.ofNullable(this.version);
+        return Optional.ofNullable(this.version);
     }
 
-    public ImageReferenceResponse(
-        @Nullable String exactVersion,
-        @Nullable String offer,
-        @Nullable String publisher,
-        @Nullable String sku,
-        @Nullable String version) {
-        this.exactVersion = exactVersion;
-        this.offer = offer;
-        this.publisher = publisher;
-        this.sku = sku;
-        this.version = version;
-    }
+    private ImageReferenceResponse() {}
 
-    private ImageReferenceResponse() {
-        this.exactVersion = null;
-        this.offer = null;
-        this.publisher = null;
-        this.sku = null;
-        this.version = null;
+    private ImageReferenceResponse(ImageReferenceResponse $) {
+        this.exactVersion = $.exactVersion;
+        this.offer = $.offer;
+        this.publisher = $.publisher;
+        this.sku = $.sku;
+        this.version = $.version;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ImageReferenceResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String exactVersion;
-        private @Nullable String offer;
-        private @Nullable String publisher;
-        private @Nullable String sku;
-        private @Nullable String version;
+        private ImageReferenceResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ImageReferenceResponse();
         }
 
         public Builder(ImageReferenceResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.exactVersion = defaults.exactVersion;
-    	      this.offer = defaults.offer;
-    	      this.publisher = defaults.publisher;
-    	      this.sku = defaults.sku;
-    	      this.version = defaults.version;
+            $ = new ImageReferenceResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder exactVersion(@Nullable String exactVersion) {
-            this.exactVersion = exactVersion;
+            $.exactVersion = exactVersion;
             return this;
         }
+
         public Builder offer(@Nullable String offer) {
-            this.offer = offer;
+            $.offer = offer;
             return this;
         }
+
         public Builder publisher(@Nullable String publisher) {
-            this.publisher = publisher;
+            $.publisher = publisher;
             return this;
         }
+
         public Builder sku(@Nullable String sku) {
-            this.sku = sku;
+            $.sku = sku;
             return this;
         }
+
         public Builder version(@Nullable String version) {
-            this.version = version;
+            $.version = version;
             return this;
-        }        public ImageReferenceResponse build() {
-            return new ImageReferenceResponse(exactVersion, offer, publisher, sku, version);
+        }
+
+        public ImageReferenceResponse build() {
+            return $;
         }
     }
+
 }

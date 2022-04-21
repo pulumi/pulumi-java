@@ -5,12 +5,12 @@ package com.pulumi.gcp.compute.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.compute.inputs.PacketMirroringMirroredResourcesInstanceArgs;
 import com.pulumi.gcp.compute.inputs.PacketMirroringMirroredResourcesSubnetworkArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class PacketMirroringMirroredResourcesArgs extends com.pulumi.resou
      * 
      */
     @Import(name="instances")
-      private final @Nullable Output<List<PacketMirroringMirroredResourcesInstanceArgs>> instances;
+    private @Nullable Output<List<PacketMirroringMirroredResourcesInstanceArgs>> instances;
 
-    public Output<List<PacketMirroringMirroredResourcesInstanceArgs>> instances() {
-        return this.instances == null ? Codegen.empty() : this.instances;
+    public Optional<Output<List<PacketMirroringMirroredResourcesInstanceArgs>>> instances() {
+        return Optional.ofNullable(this.instances);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class PacketMirroringMirroredResourcesArgs extends com.pulumi.resou
      * 
      */
     @Import(name="subnetworks")
-      private final @Nullable Output<List<PacketMirroringMirroredResourcesSubnetworkArgs>> subnetworks;
+    private @Nullable Output<List<PacketMirroringMirroredResourcesSubnetworkArgs>> subnetworks;
 
-    public Output<List<PacketMirroringMirroredResourcesSubnetworkArgs>> subnetworks() {
-        return this.subnetworks == null ? Codegen.empty() : this.subnetworks;
+    public Optional<Output<List<PacketMirroringMirroredResourcesSubnetworkArgs>>> subnetworks() {
+        return Optional.ofNullable(this.subnetworks);
     }
 
     /**
@@ -47,85 +47,80 @@ public final class PacketMirroringMirroredResourcesArgs extends com.pulumi.resou
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<List<String>> tags;
+    private @Nullable Output<List<String>> tags;
 
-    public Output<List<String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<List<String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public PacketMirroringMirroredResourcesArgs(
-        @Nullable Output<List<PacketMirroringMirroredResourcesInstanceArgs>> instances,
-        @Nullable Output<List<PacketMirroringMirroredResourcesSubnetworkArgs>> subnetworks,
-        @Nullable Output<List<String>> tags) {
-        this.instances = instances;
-        this.subnetworks = subnetworks;
-        this.tags = tags;
-    }
+    private PacketMirroringMirroredResourcesArgs() {}
 
-    private PacketMirroringMirroredResourcesArgs() {
-        this.instances = Codegen.empty();
-        this.subnetworks = Codegen.empty();
-        this.tags = Codegen.empty();
+    private PacketMirroringMirroredResourcesArgs(PacketMirroringMirroredResourcesArgs $) {
+        this.instances = $.instances;
+        this.subnetworks = $.subnetworks;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PacketMirroringMirroredResourcesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<PacketMirroringMirroredResourcesInstanceArgs>> instances;
-        private @Nullable Output<List<PacketMirroringMirroredResourcesSubnetworkArgs>> subnetworks;
-        private @Nullable Output<List<String>> tags;
+        private PacketMirroringMirroredResourcesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PacketMirroringMirroredResourcesArgs();
         }
 
         public Builder(PacketMirroringMirroredResourcesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.instances = defaults.instances;
-    	      this.subnetworks = defaults.subnetworks;
-    	      this.tags = defaults.tags;
+            $ = new PacketMirroringMirroredResourcesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder instances(@Nullable Output<List<PacketMirroringMirroredResourcesInstanceArgs>> instances) {
-            this.instances = instances;
+            $.instances = instances;
             return this;
         }
-        public Builder instances(@Nullable List<PacketMirroringMirroredResourcesInstanceArgs> instances) {
-            this.instances = Codegen.ofNullable(instances);
-            return this;
+
+        public Builder instances(List<PacketMirroringMirroredResourcesInstanceArgs> instances) {
+            return instances(Output.of(instances));
         }
+
         public Builder instances(PacketMirroringMirroredResourcesInstanceArgs... instances) {
             return instances(List.of(instances));
         }
+
         public Builder subnetworks(@Nullable Output<List<PacketMirroringMirroredResourcesSubnetworkArgs>> subnetworks) {
-            this.subnetworks = subnetworks;
+            $.subnetworks = subnetworks;
             return this;
         }
-        public Builder subnetworks(@Nullable List<PacketMirroringMirroredResourcesSubnetworkArgs> subnetworks) {
-            this.subnetworks = Codegen.ofNullable(subnetworks);
-            return this;
+
+        public Builder subnetworks(List<PacketMirroringMirroredResourcesSubnetworkArgs> subnetworks) {
+            return subnetworks(Output.of(subnetworks));
         }
+
         public Builder subnetworks(PacketMirroringMirroredResourcesSubnetworkArgs... subnetworks) {
             return subnetworks(List.of(subnetworks));
         }
+
         public Builder tags(@Nullable Output<List<String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable List<String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(List<String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tags(String... tags) {
             return tags(List.of(tags));
-        }        public PacketMirroringMirroredResourcesArgs build() {
-            return new PacketMirroringMirroredResourcesArgs(instances, subnetworks, tags);
+        }
+
+        public PacketMirroringMirroredResourcesArgs build() {
+            return $;
         }
     }
+
 }

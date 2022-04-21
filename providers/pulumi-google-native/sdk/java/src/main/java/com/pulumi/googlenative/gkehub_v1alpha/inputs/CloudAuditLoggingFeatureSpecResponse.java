@@ -22,48 +22,49 @@ public final class CloudAuditLoggingFeatureSpecResponse extends com.pulumi.resou
      * 
      */
     @Import(name="allowlistedServiceAccounts", required=true)
-      private final List<String> allowlistedServiceAccounts;
+    private List<String> allowlistedServiceAccounts;
 
     public List<String> allowlistedServiceAccounts() {
         return this.allowlistedServiceAccounts;
     }
 
-    public CloudAuditLoggingFeatureSpecResponse(List<String> allowlistedServiceAccounts) {
-        this.allowlistedServiceAccounts = Objects.requireNonNull(allowlistedServiceAccounts, "expected parameter 'allowlistedServiceAccounts' to be non-null");
-    }
+    private CloudAuditLoggingFeatureSpecResponse() {}
 
-    private CloudAuditLoggingFeatureSpecResponse() {
-        this.allowlistedServiceAccounts = List.of();
+    private CloudAuditLoggingFeatureSpecResponse(CloudAuditLoggingFeatureSpecResponse $) {
+        this.allowlistedServiceAccounts = $.allowlistedServiceAccounts;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CloudAuditLoggingFeatureSpecResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<String> allowlistedServiceAccounts;
+        private CloudAuditLoggingFeatureSpecResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new CloudAuditLoggingFeatureSpecResponse();
         }
 
         public Builder(CloudAuditLoggingFeatureSpecResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.allowlistedServiceAccounts = defaults.allowlistedServiceAccounts;
+            $ = new CloudAuditLoggingFeatureSpecResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder allowlistedServiceAccounts(List<String> allowlistedServiceAccounts) {
-            this.allowlistedServiceAccounts = Objects.requireNonNull(allowlistedServiceAccounts);
+            $.allowlistedServiceAccounts = allowlistedServiceAccounts;
             return this;
         }
+
         public Builder allowlistedServiceAccounts(String... allowlistedServiceAccounts) {
             return allowlistedServiceAccounts(List.of(allowlistedServiceAccounts));
-        }        public CloudAuditLoggingFeatureSpecResponse build() {
-            return new CloudAuditLoggingFeatureSpecResponse(allowlistedServiceAccounts);
+        }
+
+        public CloudAuditLoggingFeatureSpecResponse build() {
+            $.allowlistedServiceAccounts = Objects.requireNonNull($.allowlistedServiceAccounts, "expected parameter 'allowlistedServiceAccounts' to be non-null");
+            return $;
         }
     }
+
 }

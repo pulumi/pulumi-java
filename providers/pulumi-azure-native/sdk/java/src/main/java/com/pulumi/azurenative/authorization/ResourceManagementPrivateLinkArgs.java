@@ -5,9 +5,9 @@ package com.pulumi.azurenative.authorization;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class ResourceManagementPrivateLinkArgs extends com.pulumi.resource
      * 
      */
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -31,7 +31,7 @@ public final class ResourceManagementPrivateLinkArgs extends com.pulumi.resource
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -42,76 +42,69 @@ public final class ResourceManagementPrivateLinkArgs extends com.pulumi.resource
      * 
      */
     @Import(name="rmplName")
-      private final @Nullable Output<String> rmplName;
+    private @Nullable Output<String> rmplName;
 
-    public Output<String> rmplName() {
-        return this.rmplName == null ? Codegen.empty() : this.rmplName;
+    public Optional<Output<String>> rmplName() {
+        return Optional.ofNullable(this.rmplName);
     }
 
-    public ResourceManagementPrivateLinkArgs(
-        @Nullable Output<String> location,
-        Output<String> resourceGroupName,
-        @Nullable Output<String> rmplName) {
-        this.location = location;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.rmplName = rmplName;
-    }
+    private ResourceManagementPrivateLinkArgs() {}
 
-    private ResourceManagementPrivateLinkArgs() {
-        this.location = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.rmplName = Codegen.empty();
+    private ResourceManagementPrivateLinkArgs(ResourceManagementPrivateLinkArgs $) {
+        this.location = $.location;
+        this.resourceGroupName = $.resourceGroupName;
+        this.rmplName = $.rmplName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ResourceManagementPrivateLinkArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> location;
-        private Output<String> resourceGroupName;
-        private @Nullable Output<String> rmplName;
+        private ResourceManagementPrivateLinkArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ResourceManagementPrivateLinkArgs();
         }
 
         public Builder(ResourceManagementPrivateLinkArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.location = defaults.location;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.rmplName = defaults.rmplName;
+            $ = new ResourceManagementPrivateLinkArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder rmplName(@Nullable Output<String> rmplName) {
-            this.rmplName = rmplName;
+            $.rmplName = rmplName;
             return this;
         }
-        public Builder rmplName(@Nullable String rmplName) {
-            this.rmplName = Codegen.ofNullable(rmplName);
-            return this;
-        }        public ResourceManagementPrivateLinkArgs build() {
-            return new ResourceManagementPrivateLinkArgs(location, resourceGroupName, rmplName);
+
+        public Builder rmplName(String rmplName) {
+            return rmplName(Output.of(rmplName));
+        }
+
+        public ResourceManagementPrivateLinkArgs build() {
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

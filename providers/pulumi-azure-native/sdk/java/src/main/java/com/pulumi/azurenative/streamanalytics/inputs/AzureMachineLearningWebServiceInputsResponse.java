@@ -25,10 +25,10 @@ public final class AzureMachineLearningWebServiceInputsResponse extends com.pulu
      * 
      */
     @Import(name="columnNames")
-      private final @Nullable List<AzureMachineLearningWebServiceInputColumnResponse> columnNames;
+    private @Nullable List<AzureMachineLearningWebServiceInputColumnResponse> columnNames;
 
-    public List<AzureMachineLearningWebServiceInputColumnResponse> columnNames() {
-        return this.columnNames == null ? List.of() : this.columnNames;
+    public Optional<List<AzureMachineLearningWebServiceInputColumnResponse>> columnNames() {
+        return Optional.ofNullable(this.columnNames);
     }
 
     /**
@@ -36,58 +36,54 @@ public final class AzureMachineLearningWebServiceInputsResponse extends com.pulu
      * 
      */
     @Import(name="name")
-      private final @Nullable String name;
+    private @Nullable String name;
 
     public Optional<String> name() {
-        return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
+        return Optional.ofNullable(this.name);
     }
 
-    public AzureMachineLearningWebServiceInputsResponse(
-        @Nullable List<AzureMachineLearningWebServiceInputColumnResponse> columnNames,
-        @Nullable String name) {
-        this.columnNames = columnNames;
-        this.name = name;
-    }
+    private AzureMachineLearningWebServiceInputsResponse() {}
 
-    private AzureMachineLearningWebServiceInputsResponse() {
-        this.columnNames = List.of();
-        this.name = null;
+    private AzureMachineLearningWebServiceInputsResponse(AzureMachineLearningWebServiceInputsResponse $) {
+        this.columnNames = $.columnNames;
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AzureMachineLearningWebServiceInputsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<AzureMachineLearningWebServiceInputColumnResponse> columnNames;
-        private @Nullable String name;
+        private AzureMachineLearningWebServiceInputsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AzureMachineLearningWebServiceInputsResponse();
         }
 
         public Builder(AzureMachineLearningWebServiceInputsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.columnNames = defaults.columnNames;
-    	      this.name = defaults.name;
+            $ = new AzureMachineLearningWebServiceInputsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder columnNames(@Nullable List<AzureMachineLearningWebServiceInputColumnResponse> columnNames) {
-            this.columnNames = columnNames;
+            $.columnNames = columnNames;
             return this;
         }
+
         public Builder columnNames(AzureMachineLearningWebServiceInputColumnResponse... columnNames) {
             return columnNames(List.of(columnNames));
         }
+
         public Builder name(@Nullable String name) {
-            this.name = name;
+            $.name = name;
             return this;
-        }        public AzureMachineLearningWebServiceInputsResponse build() {
-            return new AzureMachineLearningWebServiceInputsResponse(columnNames, name);
+        }
+
+        public AzureMachineLearningWebServiceInputsResponse build() {
+            return $;
         }
     }
+
 }

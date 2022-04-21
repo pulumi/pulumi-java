@@ -7,9 +7,9 @@ import com.pulumi.azurenative.network.enums.NatGatewaySkuName;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,49 +26,48 @@ public final class NatGatewaySkuArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<Either<String,NatGatewaySkuName>> name;
+    private @Nullable Output<Either<String,NatGatewaySkuName>> name;
 
-    public Output<Either<String,NatGatewaySkuName>> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<Either<String,NatGatewaySkuName>>> name() {
+        return Optional.ofNullable(this.name);
     }
 
-    public NatGatewaySkuArgs(@Nullable Output<Either<String,NatGatewaySkuName>> name) {
-        this.name = name;
-    }
+    private NatGatewaySkuArgs() {}
 
-    private NatGatewaySkuArgs() {
-        this.name = Codegen.empty();
+    private NatGatewaySkuArgs(NatGatewaySkuArgs $) {
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NatGatewaySkuArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Either<String,NatGatewaySkuName>> name;
+        private NatGatewaySkuArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new NatGatewaySkuArgs();
         }
 
         public Builder(NatGatewaySkuArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
+            $ = new NatGatewaySkuArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder name(@Nullable Output<Either<String,NatGatewaySkuName>> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable Either<String,NatGatewaySkuName> name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
-        }        public NatGatewaySkuArgs build() {
-            return new NatGatewaySkuArgs(name);
+
+        public Builder name(Either<String,NatGatewaySkuName> name) {
+            return name(Output.of(name));
+        }
+
+        public NatGatewaySkuArgs build() {
+            return $;
         }
     }
+
 }

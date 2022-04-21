@@ -5,9 +5,9 @@ package com.pulumi.aws.sagemaker.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,49 +20,48 @@ public final class FeatureGroupOnlineStoreConfigSecurityConfigGetArgs extends co
      * 
      */
     @Import(name="kmsKeyId")
-      private final @Nullable Output<String> kmsKeyId;
+    private @Nullable Output<String> kmsKeyId;
 
-    public Output<String> kmsKeyId() {
-        return this.kmsKeyId == null ? Codegen.empty() : this.kmsKeyId;
+    public Optional<Output<String>> kmsKeyId() {
+        return Optional.ofNullable(this.kmsKeyId);
     }
 
-    public FeatureGroupOnlineStoreConfigSecurityConfigGetArgs(@Nullable Output<String> kmsKeyId) {
-        this.kmsKeyId = kmsKeyId;
-    }
+    private FeatureGroupOnlineStoreConfigSecurityConfigGetArgs() {}
 
-    private FeatureGroupOnlineStoreConfigSecurityConfigGetArgs() {
-        this.kmsKeyId = Codegen.empty();
+    private FeatureGroupOnlineStoreConfigSecurityConfigGetArgs(FeatureGroupOnlineStoreConfigSecurityConfigGetArgs $) {
+        this.kmsKeyId = $.kmsKeyId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FeatureGroupOnlineStoreConfigSecurityConfigGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> kmsKeyId;
+        private FeatureGroupOnlineStoreConfigSecurityConfigGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new FeatureGroupOnlineStoreConfigSecurityConfigGetArgs();
         }
 
         public Builder(FeatureGroupOnlineStoreConfigSecurityConfigGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.kmsKeyId = defaults.kmsKeyId;
+            $ = new FeatureGroupOnlineStoreConfigSecurityConfigGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder kmsKeyId(@Nullable Output<String> kmsKeyId) {
-            this.kmsKeyId = kmsKeyId;
+            $.kmsKeyId = kmsKeyId;
             return this;
         }
-        public Builder kmsKeyId(@Nullable String kmsKeyId) {
-            this.kmsKeyId = Codegen.ofNullable(kmsKeyId);
-            return this;
-        }        public FeatureGroupOnlineStoreConfigSecurityConfigGetArgs build() {
-            return new FeatureGroupOnlineStoreConfigSecurityConfigGetArgs(kmsKeyId);
+
+        public Builder kmsKeyId(String kmsKeyId) {
+            return kmsKeyId(Output.of(kmsKeyId));
+        }
+
+        public FeatureGroupOnlineStoreConfigSecurityConfigGetArgs build() {
+            return $;
         }
     }
+
 }

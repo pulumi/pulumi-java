@@ -5,9 +5,9 @@ package com.pulumi.azurenative.securityinsights.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class IncidentOwnerInfoArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="assignedTo")
-      private final @Nullable Output<String> assignedTo;
+    private @Nullable Output<String> assignedTo;
 
-    public Output<String> assignedTo() {
-        return this.assignedTo == null ? Codegen.empty() : this.assignedTo;
+    public Optional<Output<String>> assignedTo() {
+        return Optional.ofNullable(this.assignedTo);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class IncidentOwnerInfoArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="email")
-      private final @Nullable Output<String> email;
+    private @Nullable Output<String> email;
 
-    public Output<String> email() {
-        return this.email == null ? Codegen.empty() : this.email;
+    public Optional<Output<String>> email() {
+        return Optional.ofNullable(this.email);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class IncidentOwnerInfoArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="objectId")
-      private final @Nullable Output<String> objectId;
+    private @Nullable Output<String> objectId;
 
-    public Output<String> objectId() {
-        return this.objectId == null ? Codegen.empty() : this.objectId;
+    public Optional<Output<String>> objectId() {
+        return Optional.ofNullable(this.objectId);
     }
 
     /**
@@ -57,89 +57,78 @@ public final class IncidentOwnerInfoArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="userPrincipalName")
-      private final @Nullable Output<String> userPrincipalName;
+    private @Nullable Output<String> userPrincipalName;
 
-    public Output<String> userPrincipalName() {
-        return this.userPrincipalName == null ? Codegen.empty() : this.userPrincipalName;
+    public Optional<Output<String>> userPrincipalName() {
+        return Optional.ofNullable(this.userPrincipalName);
     }
 
-    public IncidentOwnerInfoArgs(
-        @Nullable Output<String> assignedTo,
-        @Nullable Output<String> email,
-        @Nullable Output<String> objectId,
-        @Nullable Output<String> userPrincipalName) {
-        this.assignedTo = assignedTo;
-        this.email = email;
-        this.objectId = objectId;
-        this.userPrincipalName = userPrincipalName;
-    }
+    private IncidentOwnerInfoArgs() {}
 
-    private IncidentOwnerInfoArgs() {
-        this.assignedTo = Codegen.empty();
-        this.email = Codegen.empty();
-        this.objectId = Codegen.empty();
-        this.userPrincipalName = Codegen.empty();
+    private IncidentOwnerInfoArgs(IncidentOwnerInfoArgs $) {
+        this.assignedTo = $.assignedTo;
+        this.email = $.email;
+        this.objectId = $.objectId;
+        this.userPrincipalName = $.userPrincipalName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(IncidentOwnerInfoArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> assignedTo;
-        private @Nullable Output<String> email;
-        private @Nullable Output<String> objectId;
-        private @Nullable Output<String> userPrincipalName;
+        private IncidentOwnerInfoArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new IncidentOwnerInfoArgs();
         }
 
         public Builder(IncidentOwnerInfoArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.assignedTo = defaults.assignedTo;
-    	      this.email = defaults.email;
-    	      this.objectId = defaults.objectId;
-    	      this.userPrincipalName = defaults.userPrincipalName;
+            $ = new IncidentOwnerInfoArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder assignedTo(@Nullable Output<String> assignedTo) {
-            this.assignedTo = assignedTo;
+            $.assignedTo = assignedTo;
             return this;
         }
-        public Builder assignedTo(@Nullable String assignedTo) {
-            this.assignedTo = Codegen.ofNullable(assignedTo);
-            return this;
+
+        public Builder assignedTo(String assignedTo) {
+            return assignedTo(Output.of(assignedTo));
         }
+
         public Builder email(@Nullable Output<String> email) {
-            this.email = email;
+            $.email = email;
             return this;
         }
-        public Builder email(@Nullable String email) {
-            this.email = Codegen.ofNullable(email);
-            return this;
+
+        public Builder email(String email) {
+            return email(Output.of(email));
         }
+
         public Builder objectId(@Nullable Output<String> objectId) {
-            this.objectId = objectId;
+            $.objectId = objectId;
             return this;
         }
-        public Builder objectId(@Nullable String objectId) {
-            this.objectId = Codegen.ofNullable(objectId);
-            return this;
+
+        public Builder objectId(String objectId) {
+            return objectId(Output.of(objectId));
         }
+
         public Builder userPrincipalName(@Nullable Output<String> userPrincipalName) {
-            this.userPrincipalName = userPrincipalName;
+            $.userPrincipalName = userPrincipalName;
             return this;
         }
-        public Builder userPrincipalName(@Nullable String userPrincipalName) {
-            this.userPrincipalName = Codegen.ofNullable(userPrincipalName);
-            return this;
-        }        public IncidentOwnerInfoArgs build() {
-            return new IncidentOwnerInfoArgs(assignedTo, email, objectId, userPrincipalName);
+
+        public Builder userPrincipalName(String userPrincipalName) {
+            return userPrincipalName(Output.of(userPrincipalName));
+        }
+
+        public IncidentOwnerInfoArgs build() {
+            return $;
         }
     }
+
 }

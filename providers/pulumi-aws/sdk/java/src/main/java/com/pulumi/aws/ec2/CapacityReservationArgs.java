@@ -9,12 +9,12 @@ import com.pulumi.aws.ec2.enums.Tenancy;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,7 +27,7 @@ public final class CapacityReservationArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="availabilityZone", required=true)
-      private final Output<String> availabilityZone;
+    private Output<String> availabilityZone;
 
     public Output<String> availabilityZone() {
         return this.availabilityZone;
@@ -38,10 +38,10 @@ public final class CapacityReservationArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="ebsOptimized")
-      private final @Nullable Output<Boolean> ebsOptimized;
+    private @Nullable Output<Boolean> ebsOptimized;
 
-    public Output<Boolean> ebsOptimized() {
-        return this.ebsOptimized == null ? Codegen.empty() : this.ebsOptimized;
+    public Optional<Output<Boolean>> ebsOptimized() {
+        return Optional.ofNullable(this.ebsOptimized);
     }
 
     /**
@@ -49,10 +49,10 @@ public final class CapacityReservationArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="endDate")
-      private final @Nullable Output<String> endDate;
+    private @Nullable Output<String> endDate;
 
-    public Output<String> endDate() {
-        return this.endDate == null ? Codegen.empty() : this.endDate;
+    public Optional<Output<String>> endDate() {
+        return Optional.ofNullable(this.endDate);
     }
 
     /**
@@ -60,10 +60,10 @@ public final class CapacityReservationArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="endDateType")
-      private final @Nullable Output<String> endDateType;
+    private @Nullable Output<String> endDateType;
 
-    public Output<String> endDateType() {
-        return this.endDateType == null ? Codegen.empty() : this.endDateType;
+    public Optional<Output<String>> endDateType() {
+        return Optional.ofNullable(this.endDateType);
     }
 
     /**
@@ -71,10 +71,10 @@ public final class CapacityReservationArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="ephemeralStorage")
-      private final @Nullable Output<Boolean> ephemeralStorage;
+    private @Nullable Output<Boolean> ephemeralStorage;
 
-    public Output<Boolean> ephemeralStorage() {
-        return this.ephemeralStorage == null ? Codegen.empty() : this.ephemeralStorage;
+    public Optional<Output<Boolean>> ephemeralStorage() {
+        return Optional.ofNullable(this.ephemeralStorage);
     }
 
     /**
@@ -82,7 +82,7 @@ public final class CapacityReservationArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="instanceCount", required=true)
-      private final Output<Integer> instanceCount;
+    private Output<Integer> instanceCount;
 
     public Output<Integer> instanceCount() {
         return this.instanceCount;
@@ -93,10 +93,10 @@ public final class CapacityReservationArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="instanceMatchCriteria")
-      private final @Nullable Output<String> instanceMatchCriteria;
+    private @Nullable Output<String> instanceMatchCriteria;
 
-    public Output<String> instanceMatchCriteria() {
-        return this.instanceMatchCriteria == null ? Codegen.empty() : this.instanceMatchCriteria;
+    public Optional<Output<String>> instanceMatchCriteria() {
+        return Optional.ofNullable(this.instanceMatchCriteria);
     }
 
     /**
@@ -104,7 +104,7 @@ public final class CapacityReservationArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="instancePlatform", required=true)
-      private final Output<Either<String,InstancePlatform>> instancePlatform;
+    private Output<Either<String,InstancePlatform>> instancePlatform;
 
     public Output<Either<String,InstancePlatform>> instancePlatform() {
         return this.instancePlatform;
@@ -115,7 +115,7 @@ public final class CapacityReservationArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="instanceType", required=true)
-      private final Output<Either<String,InstanceType>> instanceType;
+    private Output<Either<String,InstanceType>> instanceType;
 
     public Output<Either<String,InstanceType>> instanceType() {
         return this.instanceType;
@@ -126,10 +126,10 @@ public final class CapacityReservationArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="outpostArn")
-      private final @Nullable Output<String> outpostArn;
+    private @Nullable Output<String> outpostArn;
 
-    public Output<String> outpostArn() {
-        return this.outpostArn == null ? Codegen.empty() : this.outpostArn;
+    public Optional<Output<String>> outpostArn() {
+        return Optional.ofNullable(this.outpostArn);
     }
 
     /**
@@ -137,10 +137,10 @@ public final class CapacityReservationArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -148,193 +148,162 @@ public final class CapacityReservationArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="tenancy")
-      private final @Nullable Output<Either<String,Tenancy>> tenancy;
+    private @Nullable Output<Either<String,Tenancy>> tenancy;
 
-    public Output<Either<String,Tenancy>> tenancy() {
-        return this.tenancy == null ? Codegen.empty() : this.tenancy;
+    public Optional<Output<Either<String,Tenancy>>> tenancy() {
+        return Optional.ofNullable(this.tenancy);
     }
 
-    public CapacityReservationArgs(
-        Output<String> availabilityZone,
-        @Nullable Output<Boolean> ebsOptimized,
-        @Nullable Output<String> endDate,
-        @Nullable Output<String> endDateType,
-        @Nullable Output<Boolean> ephemeralStorage,
-        Output<Integer> instanceCount,
-        @Nullable Output<String> instanceMatchCriteria,
-        Output<Either<String,InstancePlatform>> instancePlatform,
-        Output<Either<String,InstanceType>> instanceType,
-        @Nullable Output<String> outpostArn,
-        @Nullable Output<Map<String,String>> tags,
-        @Nullable Output<Either<String,Tenancy>> tenancy) {
-        this.availabilityZone = Objects.requireNonNull(availabilityZone, "expected parameter 'availabilityZone' to be non-null");
-        this.ebsOptimized = ebsOptimized;
-        this.endDate = endDate;
-        this.endDateType = endDateType;
-        this.ephemeralStorage = ephemeralStorage;
-        this.instanceCount = Objects.requireNonNull(instanceCount, "expected parameter 'instanceCount' to be non-null");
-        this.instanceMatchCriteria = instanceMatchCriteria;
-        this.instancePlatform = Objects.requireNonNull(instancePlatform, "expected parameter 'instancePlatform' to be non-null");
-        this.instanceType = Objects.requireNonNull(instanceType, "expected parameter 'instanceType' to be non-null");
-        this.outpostArn = outpostArn;
-        this.tags = tags;
-        this.tenancy = tenancy;
-    }
+    private CapacityReservationArgs() {}
 
-    private CapacityReservationArgs() {
-        this.availabilityZone = Codegen.empty();
-        this.ebsOptimized = Codegen.empty();
-        this.endDate = Codegen.empty();
-        this.endDateType = Codegen.empty();
-        this.ephemeralStorage = Codegen.empty();
-        this.instanceCount = Codegen.empty();
-        this.instanceMatchCriteria = Codegen.empty();
-        this.instancePlatform = Codegen.empty();
-        this.instanceType = Codegen.empty();
-        this.outpostArn = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.tenancy = Codegen.empty();
+    private CapacityReservationArgs(CapacityReservationArgs $) {
+        this.availabilityZone = $.availabilityZone;
+        this.ebsOptimized = $.ebsOptimized;
+        this.endDate = $.endDate;
+        this.endDateType = $.endDateType;
+        this.ephemeralStorage = $.ephemeralStorage;
+        this.instanceCount = $.instanceCount;
+        this.instanceMatchCriteria = $.instanceMatchCriteria;
+        this.instancePlatform = $.instancePlatform;
+        this.instanceType = $.instanceType;
+        this.outpostArn = $.outpostArn;
+        this.tags = $.tags;
+        this.tenancy = $.tenancy;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CapacityReservationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> availabilityZone;
-        private @Nullable Output<Boolean> ebsOptimized;
-        private @Nullable Output<String> endDate;
-        private @Nullable Output<String> endDateType;
-        private @Nullable Output<Boolean> ephemeralStorage;
-        private Output<Integer> instanceCount;
-        private @Nullable Output<String> instanceMatchCriteria;
-        private Output<Either<String,InstancePlatform>> instancePlatform;
-        private Output<Either<String,InstanceType>> instanceType;
-        private @Nullable Output<String> outpostArn;
-        private @Nullable Output<Map<String,String>> tags;
-        private @Nullable Output<Either<String,Tenancy>> tenancy;
+        private CapacityReservationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CapacityReservationArgs();
         }
 
         public Builder(CapacityReservationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.availabilityZone = defaults.availabilityZone;
-    	      this.ebsOptimized = defaults.ebsOptimized;
-    	      this.endDate = defaults.endDate;
-    	      this.endDateType = defaults.endDateType;
-    	      this.ephemeralStorage = defaults.ephemeralStorage;
-    	      this.instanceCount = defaults.instanceCount;
-    	      this.instanceMatchCriteria = defaults.instanceMatchCriteria;
-    	      this.instancePlatform = defaults.instancePlatform;
-    	      this.instanceType = defaults.instanceType;
-    	      this.outpostArn = defaults.outpostArn;
-    	      this.tags = defaults.tags;
-    	      this.tenancy = defaults.tenancy;
+            $ = new CapacityReservationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder availabilityZone(Output<String> availabilityZone) {
-            this.availabilityZone = Objects.requireNonNull(availabilityZone);
+            $.availabilityZone = availabilityZone;
             return this;
         }
+
         public Builder availabilityZone(String availabilityZone) {
-            this.availabilityZone = Output.of(Objects.requireNonNull(availabilityZone));
-            return this;
+            return availabilityZone(Output.of(availabilityZone));
         }
+
         public Builder ebsOptimized(@Nullable Output<Boolean> ebsOptimized) {
-            this.ebsOptimized = ebsOptimized;
+            $.ebsOptimized = ebsOptimized;
             return this;
         }
-        public Builder ebsOptimized(@Nullable Boolean ebsOptimized) {
-            this.ebsOptimized = Codegen.ofNullable(ebsOptimized);
-            return this;
+
+        public Builder ebsOptimized(Boolean ebsOptimized) {
+            return ebsOptimized(Output.of(ebsOptimized));
         }
+
         public Builder endDate(@Nullable Output<String> endDate) {
-            this.endDate = endDate;
+            $.endDate = endDate;
             return this;
         }
-        public Builder endDate(@Nullable String endDate) {
-            this.endDate = Codegen.ofNullable(endDate);
-            return this;
+
+        public Builder endDate(String endDate) {
+            return endDate(Output.of(endDate));
         }
+
         public Builder endDateType(@Nullable Output<String> endDateType) {
-            this.endDateType = endDateType;
+            $.endDateType = endDateType;
             return this;
         }
-        public Builder endDateType(@Nullable String endDateType) {
-            this.endDateType = Codegen.ofNullable(endDateType);
-            return this;
+
+        public Builder endDateType(String endDateType) {
+            return endDateType(Output.of(endDateType));
         }
+
         public Builder ephemeralStorage(@Nullable Output<Boolean> ephemeralStorage) {
-            this.ephemeralStorage = ephemeralStorage;
+            $.ephemeralStorage = ephemeralStorage;
             return this;
         }
-        public Builder ephemeralStorage(@Nullable Boolean ephemeralStorage) {
-            this.ephemeralStorage = Codegen.ofNullable(ephemeralStorage);
-            return this;
+
+        public Builder ephemeralStorage(Boolean ephemeralStorage) {
+            return ephemeralStorage(Output.of(ephemeralStorage));
         }
+
         public Builder instanceCount(Output<Integer> instanceCount) {
-            this.instanceCount = Objects.requireNonNull(instanceCount);
+            $.instanceCount = instanceCount;
             return this;
         }
+
         public Builder instanceCount(Integer instanceCount) {
-            this.instanceCount = Output.of(Objects.requireNonNull(instanceCount));
-            return this;
+            return instanceCount(Output.of(instanceCount));
         }
+
         public Builder instanceMatchCriteria(@Nullable Output<String> instanceMatchCriteria) {
-            this.instanceMatchCriteria = instanceMatchCriteria;
+            $.instanceMatchCriteria = instanceMatchCriteria;
             return this;
         }
-        public Builder instanceMatchCriteria(@Nullable String instanceMatchCriteria) {
-            this.instanceMatchCriteria = Codegen.ofNullable(instanceMatchCriteria);
-            return this;
+
+        public Builder instanceMatchCriteria(String instanceMatchCriteria) {
+            return instanceMatchCriteria(Output.of(instanceMatchCriteria));
         }
+
         public Builder instancePlatform(Output<Either<String,InstancePlatform>> instancePlatform) {
-            this.instancePlatform = Objects.requireNonNull(instancePlatform);
+            $.instancePlatform = instancePlatform;
             return this;
         }
+
         public Builder instancePlatform(Either<String,InstancePlatform> instancePlatform) {
-            this.instancePlatform = Output.of(Objects.requireNonNull(instancePlatform));
-            return this;
+            return instancePlatform(Output.of(instancePlatform));
         }
+
         public Builder instanceType(Output<Either<String,InstanceType>> instanceType) {
-            this.instanceType = Objects.requireNonNull(instanceType);
+            $.instanceType = instanceType;
             return this;
         }
+
         public Builder instanceType(Either<String,InstanceType> instanceType) {
-            this.instanceType = Output.of(Objects.requireNonNull(instanceType));
-            return this;
+            return instanceType(Output.of(instanceType));
         }
+
         public Builder outpostArn(@Nullable Output<String> outpostArn) {
-            this.outpostArn = outpostArn;
+            $.outpostArn = outpostArn;
             return this;
         }
-        public Builder outpostArn(@Nullable String outpostArn) {
-            this.outpostArn = Codegen.ofNullable(outpostArn);
-            return this;
+
+        public Builder outpostArn(String outpostArn) {
+            return outpostArn(Output.of(outpostArn));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tenancy(@Nullable Output<Either<String,Tenancy>> tenancy) {
-            this.tenancy = tenancy;
+            $.tenancy = tenancy;
             return this;
         }
-        public Builder tenancy(@Nullable Either<String,Tenancy> tenancy) {
-            this.tenancy = Codegen.ofNullable(tenancy);
-            return this;
-        }        public CapacityReservationArgs build() {
-            return new CapacityReservationArgs(availabilityZone, ebsOptimized, endDate, endDateType, ephemeralStorage, instanceCount, instanceMatchCriteria, instancePlatform, instanceType, outpostArn, tags, tenancy);
+
+        public Builder tenancy(Either<String,Tenancy> tenancy) {
+            return tenancy(Output.of(tenancy));
+        }
+
+        public CapacityReservationArgs build() {
+            $.availabilityZone = Objects.requireNonNull($.availabilityZone, "expected parameter 'availabilityZone' to be non-null");
+            $.instanceCount = Objects.requireNonNull($.instanceCount, "expected parameter 'instanceCount' to be non-null");
+            $.instancePlatform = Objects.requireNonNull($.instancePlatform, "expected parameter 'instancePlatform' to be non-null");
+            $.instanceType = Objects.requireNonNull($.instanceType, "expected parameter 'instanceType' to be non-null");
+            return $;
         }
     }
+
 }

@@ -25,10 +25,10 @@ public final class JobEndpointResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="endpoint")
-      private final @Nullable String endpoint;
+    private @Nullable String endpoint;
 
     public Optional<String> endpoint() {
-        return this.endpoint == null ? Optional.empty() : Optional.ofNullable(this.endpoint);
+        return Optional.ofNullable(this.endpoint);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class JobEndpointResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="jobEndpointType")
-      private final @Nullable String jobEndpointType;
+    private @Nullable String jobEndpointType;
 
     public Optional<String> jobEndpointType() {
-        return this.jobEndpointType == null ? Optional.empty() : Optional.ofNullable(this.jobEndpointType);
+        return Optional.ofNullable(this.jobEndpointType);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class JobEndpointResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="port")
-      private final @Nullable Integer port;
+    private @Nullable Integer port;
 
     public Optional<Integer> port() {
-        return this.port == null ? Optional.empty() : Optional.ofNullable(this.port);
+        return Optional.ofNullable(this.port);
     }
 
     /**
@@ -58,73 +58,62 @@ public final class JobEndpointResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="properties")
-      private final @Nullable Map<String,String> properties;
+    private @Nullable Map<String,String> properties;
 
-    public Map<String,String> properties() {
-        return this.properties == null ? Map.of() : this.properties;
+    public Optional<Map<String,String>> properties() {
+        return Optional.ofNullable(this.properties);
     }
 
-    public JobEndpointResponse(
-        @Nullable String endpoint,
-        @Nullable String jobEndpointType,
-        @Nullable Integer port,
-        @Nullable Map<String,String> properties) {
-        this.endpoint = endpoint;
-        this.jobEndpointType = jobEndpointType;
-        this.port = port;
-        this.properties = properties;
-    }
+    private JobEndpointResponse() {}
 
-    private JobEndpointResponse() {
-        this.endpoint = null;
-        this.jobEndpointType = null;
-        this.port = null;
-        this.properties = Map.of();
+    private JobEndpointResponse(JobEndpointResponse $) {
+        this.endpoint = $.endpoint;
+        this.jobEndpointType = $.jobEndpointType;
+        this.port = $.port;
+        this.properties = $.properties;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(JobEndpointResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String endpoint;
-        private @Nullable String jobEndpointType;
-        private @Nullable Integer port;
-        private @Nullable Map<String,String> properties;
+        private JobEndpointResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new JobEndpointResponse();
         }
 
         public Builder(JobEndpointResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.endpoint = defaults.endpoint;
-    	      this.jobEndpointType = defaults.jobEndpointType;
-    	      this.port = defaults.port;
-    	      this.properties = defaults.properties;
+            $ = new JobEndpointResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder endpoint(@Nullable String endpoint) {
-            this.endpoint = endpoint;
+            $.endpoint = endpoint;
             return this;
         }
+
         public Builder jobEndpointType(@Nullable String jobEndpointType) {
-            this.jobEndpointType = jobEndpointType;
+            $.jobEndpointType = jobEndpointType;
             return this;
         }
+
         public Builder port(@Nullable Integer port) {
-            this.port = port;
+            $.port = port;
             return this;
         }
+
         public Builder properties(@Nullable Map<String,String> properties) {
-            this.properties = properties;
+            $.properties = properties;
             return this;
-        }        public JobEndpointResponse build() {
-            return new JobEndpointResponse(endpoint, jobEndpointType, port, properties);
+        }
+
+        public JobEndpointResponse build() {
+            return $;
         }
     }
+
 }

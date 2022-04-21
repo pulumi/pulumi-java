@@ -5,10 +5,10 @@ package com.pulumi.googlenative.notebooks_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.notebooks_v1.inputs.LocalDiskInitializeParamsArgs;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class LocalDiskArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="initializeParams")
-      private final @Nullable Output<LocalDiskInitializeParamsArgs> initializeParams;
+    private @Nullable Output<LocalDiskInitializeParamsArgs> initializeParams;
 
-    public Output<LocalDiskInitializeParamsArgs> initializeParams() {
-        return this.initializeParams == null ? Codegen.empty() : this.initializeParams;
+    public Optional<Output<LocalDiskInitializeParamsArgs>> initializeParams() {
+        return Optional.ofNullable(this.initializeParams);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class LocalDiskArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="interface")
-      private final @Nullable Output<String> interface_;
+    private @Nullable Output<String> interface_;
 
-    public Output<String> interface_() {
-        return this.interface_ == null ? Codegen.empty() : this.interface_;
+    public Optional<Output<String>> interface_() {
+        return Optional.ofNullable(this.interface_);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class LocalDiskArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="mode")
-      private final @Nullable Output<String> mode;
+    private @Nullable Output<String> mode;
 
-    public Output<String> mode() {
-        return this.mode == null ? Codegen.empty() : this.mode;
+    public Optional<Output<String>> mode() {
+        return Optional.ofNullable(this.mode);
     }
 
     /**
@@ -58,10 +58,10 @@ public final class LocalDiskArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="source")
-      private final @Nullable Output<String> source;
+    private @Nullable Output<String> source;
 
-    public Output<String> source() {
-        return this.source == null ? Codegen.empty() : this.source;
+    public Optional<Output<String>> source() {
+        return Optional.ofNullable(this.source);
     }
 
     /**
@@ -69,102 +69,88 @@ public final class LocalDiskArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="type")
-      private final @Nullable Output<String> type;
+    private @Nullable Output<String> type;
 
-    public Output<String> type() {
-        return this.type == null ? Codegen.empty() : this.type;
+    public Optional<Output<String>> type() {
+        return Optional.ofNullable(this.type);
     }
 
-    public LocalDiskArgs(
-        @Nullable Output<LocalDiskInitializeParamsArgs> initializeParams,
-        @Nullable Output<String> interface_,
-        @Nullable Output<String> mode,
-        @Nullable Output<String> source,
-        @Nullable Output<String> type) {
-        this.initializeParams = initializeParams;
-        this.interface_ = interface_;
-        this.mode = mode;
-        this.source = source;
-        this.type = type;
-    }
+    private LocalDiskArgs() {}
 
-    private LocalDiskArgs() {
-        this.initializeParams = Codegen.empty();
-        this.interface_ = Codegen.empty();
-        this.mode = Codegen.empty();
-        this.source = Codegen.empty();
-        this.type = Codegen.empty();
+    private LocalDiskArgs(LocalDiskArgs $) {
+        this.initializeParams = $.initializeParams;
+        this.interface_ = $.interface_;
+        this.mode = $.mode;
+        this.source = $.source;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LocalDiskArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<LocalDiskInitializeParamsArgs> initializeParams;
-        private @Nullable Output<String> interface_;
-        private @Nullable Output<String> mode;
-        private @Nullable Output<String> source;
-        private @Nullable Output<String> type;
+        private LocalDiskArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new LocalDiskArgs();
         }
 
         public Builder(LocalDiskArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.initializeParams = defaults.initializeParams;
-    	      this.interface_ = defaults.interface_;
-    	      this.mode = defaults.mode;
-    	      this.source = defaults.source;
-    	      this.type = defaults.type;
+            $ = new LocalDiskArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder initializeParams(@Nullable Output<LocalDiskInitializeParamsArgs> initializeParams) {
-            this.initializeParams = initializeParams;
+            $.initializeParams = initializeParams;
             return this;
         }
-        public Builder initializeParams(@Nullable LocalDiskInitializeParamsArgs initializeParams) {
-            this.initializeParams = Codegen.ofNullable(initializeParams);
-            return this;
+
+        public Builder initializeParams(LocalDiskInitializeParamsArgs initializeParams) {
+            return initializeParams(Output.of(initializeParams));
         }
+
         public Builder interface_(@Nullable Output<String> interface_) {
-            this.interface_ = interface_;
+            $.interface_ = interface_;
             return this;
         }
-        public Builder interface_(@Nullable String interface_) {
-            this.interface_ = Codegen.ofNullable(interface_);
-            return this;
+
+        public Builder interface_(String interface_) {
+            return interface_(Output.of(interface_));
         }
+
         public Builder mode(@Nullable Output<String> mode) {
-            this.mode = mode;
+            $.mode = mode;
             return this;
         }
-        public Builder mode(@Nullable String mode) {
-            this.mode = Codegen.ofNullable(mode);
-            return this;
+
+        public Builder mode(String mode) {
+            return mode(Output.of(mode));
         }
+
         public Builder source(@Nullable Output<String> source) {
-            this.source = source;
+            $.source = source;
             return this;
         }
-        public Builder source(@Nullable String source) {
-            this.source = Codegen.ofNullable(source);
-            return this;
+
+        public Builder source(String source) {
+            return source(Output.of(source));
         }
+
         public Builder type(@Nullable Output<String> type) {
-            this.type = type;
+            $.type = type;
             return this;
         }
-        public Builder type(@Nullable String type) {
-            this.type = Codegen.ofNullable(type);
-            return this;
-        }        public LocalDiskArgs build() {
-            return new LocalDiskArgs(initializeParams, interface_, mode, source, type);
+
+        public Builder type(String type) {
+            return type(Output.of(type));
+        }
+
+        public LocalDiskArgs build() {
+            return $;
         }
     }
+
 }

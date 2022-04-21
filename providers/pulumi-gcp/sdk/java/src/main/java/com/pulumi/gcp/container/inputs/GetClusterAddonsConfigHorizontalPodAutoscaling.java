@@ -13,45 +13,45 @@ public final class GetClusterAddonsConfigHorizontalPodAutoscaling extends com.pu
     public static final GetClusterAddonsConfigHorizontalPodAutoscaling Empty = new GetClusterAddonsConfigHorizontalPodAutoscaling();
 
     @Import(name="disabled", required=true)
-      private final Boolean disabled;
+    private Boolean disabled;
 
     public Boolean disabled() {
         return this.disabled;
     }
 
-    public GetClusterAddonsConfigHorizontalPodAutoscaling(Boolean disabled) {
-        this.disabled = Objects.requireNonNull(disabled, "expected parameter 'disabled' to be non-null");
-    }
+    private GetClusterAddonsConfigHorizontalPodAutoscaling() {}
 
-    private GetClusterAddonsConfigHorizontalPodAutoscaling() {
-        this.disabled = null;
+    private GetClusterAddonsConfigHorizontalPodAutoscaling(GetClusterAddonsConfigHorizontalPodAutoscaling $) {
+        this.disabled = $.disabled;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetClusterAddonsConfigHorizontalPodAutoscaling defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Boolean disabled;
+        private GetClusterAddonsConfigHorizontalPodAutoscaling $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetClusterAddonsConfigHorizontalPodAutoscaling();
         }
 
         public Builder(GetClusterAddonsConfigHorizontalPodAutoscaling defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.disabled = defaults.disabled;
+            $ = new GetClusterAddonsConfigHorizontalPodAutoscaling(Objects.requireNonNull(defaults));
         }
 
         public Builder disabled(Boolean disabled) {
-            this.disabled = Objects.requireNonNull(disabled);
+            $.disabled = disabled;
             return this;
-        }        public GetClusterAddonsConfigHorizontalPodAutoscaling build() {
-            return new GetClusterAddonsConfigHorizontalPodAutoscaling(disabled);
+        }
+
+        public GetClusterAddonsConfigHorizontalPodAutoscaling build() {
+            $.disabled = Objects.requireNonNull($.disabled, "expected parameter 'disabled' to be non-null");
+            return $;
         }
     }
+
 }

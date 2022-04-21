@@ -17,7 +17,7 @@ public final class GetVendorSkuPreviewArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="previewSubscription", required=true)
-      private final String previewSubscription;
+    private String previewSubscription;
 
     public String previewSubscription() {
         return this.previewSubscription;
@@ -28,7 +28,7 @@ public final class GetVendorSkuPreviewArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="skuName", required=true)
-      private final String skuName;
+    private String skuName;
 
     public String skuName() {
         return this.skuName;
@@ -39,64 +39,59 @@ public final class GetVendorSkuPreviewArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="vendorName", required=true)
-      private final String vendorName;
+    private String vendorName;
 
     public String vendorName() {
         return this.vendorName;
     }
 
-    public GetVendorSkuPreviewArgs(
-        String previewSubscription,
-        String skuName,
-        String vendorName) {
-        this.previewSubscription = Objects.requireNonNull(previewSubscription, "expected parameter 'previewSubscription' to be non-null");
-        this.skuName = Objects.requireNonNull(skuName, "expected parameter 'skuName' to be non-null");
-        this.vendorName = Objects.requireNonNull(vendorName, "expected parameter 'vendorName' to be non-null");
-    }
+    private GetVendorSkuPreviewArgs() {}
 
-    private GetVendorSkuPreviewArgs() {
-        this.previewSubscription = null;
-        this.skuName = null;
-        this.vendorName = null;
+    private GetVendorSkuPreviewArgs(GetVendorSkuPreviewArgs $) {
+        this.previewSubscription = $.previewSubscription;
+        this.skuName = $.skuName;
+        this.vendorName = $.vendorName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetVendorSkuPreviewArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String previewSubscription;
-        private String skuName;
-        private String vendorName;
+        private GetVendorSkuPreviewArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetVendorSkuPreviewArgs();
         }
 
         public Builder(GetVendorSkuPreviewArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.previewSubscription = defaults.previewSubscription;
-    	      this.skuName = defaults.skuName;
-    	      this.vendorName = defaults.vendorName;
+            $ = new GetVendorSkuPreviewArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder previewSubscription(String previewSubscription) {
-            this.previewSubscription = Objects.requireNonNull(previewSubscription);
+            $.previewSubscription = previewSubscription;
             return this;
         }
+
         public Builder skuName(String skuName) {
-            this.skuName = Objects.requireNonNull(skuName);
+            $.skuName = skuName;
             return this;
         }
+
         public Builder vendorName(String vendorName) {
-            this.vendorName = Objects.requireNonNull(vendorName);
+            $.vendorName = vendorName;
             return this;
-        }        public GetVendorSkuPreviewArgs build() {
-            return new GetVendorSkuPreviewArgs(previewSubscription, skuName, vendorName);
+        }
+
+        public GetVendorSkuPreviewArgs build() {
+            $.previewSubscription = Objects.requireNonNull($.previewSubscription, "expected parameter 'previewSubscription' to be non-null");
+            $.skuName = Objects.requireNonNull($.skuName, "expected parameter 'skuName' to be non-null");
+            $.vendorName = Objects.requireNonNull($.vendorName, "expected parameter 'vendorName' to be non-null");
+            return $;
         }
     }
+
 }

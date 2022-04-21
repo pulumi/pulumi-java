@@ -5,11 +5,11 @@ package com.pulumi.gcp.osconfig.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.osconfig.inputs.OsPolicyAssignmentOsPolicyResourceGroupResourcePkgMsiSourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourcePkgMsiArgs ext
      * 
      */
     @Import(name="properties")
-      private final @Nullable Output<List<String>> properties;
+    private @Nullable Output<List<String>> properties;
 
-    public Output<List<String>> properties() {
-        return this.properties == null ? Codegen.empty() : this.properties;
+    public Optional<Output<List<String>>> properties() {
+        return Optional.ofNullable(this.properties);
     }
 
     /**
@@ -33,66 +33,63 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourcePkgMsiArgs ext
      * 
      */
     @Import(name="source", required=true)
-      private final Output<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgMsiSourceArgs> source;
+    private Output<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgMsiSourceArgs> source;
 
     public Output<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgMsiSourceArgs> source() {
         return this.source;
     }
 
-    public OsPolicyAssignmentOsPolicyResourceGroupResourcePkgMsiArgs(
-        @Nullable Output<List<String>> properties,
-        Output<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgMsiSourceArgs> source) {
-        this.properties = properties;
-        this.source = Objects.requireNonNull(source, "expected parameter 'source' to be non-null");
-    }
+    private OsPolicyAssignmentOsPolicyResourceGroupResourcePkgMsiArgs() {}
 
-    private OsPolicyAssignmentOsPolicyResourceGroupResourcePkgMsiArgs() {
-        this.properties = Codegen.empty();
-        this.source = Codegen.empty();
+    private OsPolicyAssignmentOsPolicyResourceGroupResourcePkgMsiArgs(OsPolicyAssignmentOsPolicyResourceGroupResourcePkgMsiArgs $) {
+        this.properties = $.properties;
+        this.source = $.source;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(OsPolicyAssignmentOsPolicyResourceGroupResourcePkgMsiArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> properties;
-        private Output<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgMsiSourceArgs> source;
+        private OsPolicyAssignmentOsPolicyResourceGroupResourcePkgMsiArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new OsPolicyAssignmentOsPolicyResourceGroupResourcePkgMsiArgs();
         }
 
         public Builder(OsPolicyAssignmentOsPolicyResourceGroupResourcePkgMsiArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.properties = defaults.properties;
-    	      this.source = defaults.source;
+            $ = new OsPolicyAssignmentOsPolicyResourceGroupResourcePkgMsiArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder properties(@Nullable Output<List<String>> properties) {
-            this.properties = properties;
+            $.properties = properties;
             return this;
         }
-        public Builder properties(@Nullable List<String> properties) {
-            this.properties = Codegen.ofNullable(properties);
-            return this;
+
+        public Builder properties(List<String> properties) {
+            return properties(Output.of(properties));
         }
+
         public Builder properties(String... properties) {
             return properties(List.of(properties));
         }
+
         public Builder source(Output<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgMsiSourceArgs> source) {
-            this.source = Objects.requireNonNull(source);
+            $.source = source;
             return this;
         }
+
         public Builder source(OsPolicyAssignmentOsPolicyResourceGroupResourcePkgMsiSourceArgs source) {
-            this.source = Output.of(Objects.requireNonNull(source));
-            return this;
-        }        public OsPolicyAssignmentOsPolicyResourceGroupResourcePkgMsiArgs build() {
-            return new OsPolicyAssignmentOsPolicyResourceGroupResourcePkgMsiArgs(properties, source);
+            return source(Output.of(source));
+        }
+
+        public OsPolicyAssignmentOsPolicyResourceGroupResourcePkgMsiArgs build() {
+            $.source = Objects.requireNonNull($.source, "expected parameter 'source' to be non-null");
+            return $;
         }
     }
+
 }

@@ -15,78 +15,72 @@ public final class GetNodeTemplateArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetNodeTemplateArgs Empty = new GetNodeTemplateArgs();
 
     @Import(name="nodeTemplate", required=true)
-      private final String nodeTemplate;
+    private String nodeTemplate;
 
     public String nodeTemplate() {
         return this.nodeTemplate;
     }
 
     @Import(name="project")
-      private final @Nullable String project;
+    private @Nullable String project;
 
     public Optional<String> project() {
-        return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
+        return Optional.ofNullable(this.project);
     }
 
     @Import(name="region", required=true)
-      private final String region;
+    private String region;
 
     public String region() {
         return this.region;
     }
 
-    public GetNodeTemplateArgs(
-        String nodeTemplate,
-        @Nullable String project,
-        String region) {
-        this.nodeTemplate = Objects.requireNonNull(nodeTemplate, "expected parameter 'nodeTemplate' to be non-null");
-        this.project = project;
-        this.region = Objects.requireNonNull(region, "expected parameter 'region' to be non-null");
-    }
+    private GetNodeTemplateArgs() {}
 
-    private GetNodeTemplateArgs() {
-        this.nodeTemplate = null;
-        this.project = null;
-        this.region = null;
+    private GetNodeTemplateArgs(GetNodeTemplateArgs $) {
+        this.nodeTemplate = $.nodeTemplate;
+        this.project = $.project;
+        this.region = $.region;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetNodeTemplateArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String nodeTemplate;
-        private @Nullable String project;
-        private String region;
+        private GetNodeTemplateArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetNodeTemplateArgs();
         }
 
         public Builder(GetNodeTemplateArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.nodeTemplate = defaults.nodeTemplate;
-    	      this.project = defaults.project;
-    	      this.region = defaults.region;
+            $ = new GetNodeTemplateArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder nodeTemplate(String nodeTemplate) {
-            this.nodeTemplate = Objects.requireNonNull(nodeTemplate);
+            $.nodeTemplate = nodeTemplate;
             return this;
         }
+
         public Builder project(@Nullable String project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
+
         public Builder region(String region) {
-            this.region = Objects.requireNonNull(region);
+            $.region = region;
             return this;
-        }        public GetNodeTemplateArgs build() {
-            return new GetNodeTemplateArgs(nodeTemplate, project, region);
+        }
+
+        public GetNodeTemplateArgs build() {
+            $.nodeTemplate = Objects.requireNonNull($.nodeTemplate, "expected parameter 'nodeTemplate' to be non-null");
+            $.region = Objects.requireNonNull($.region, "expected parameter 'region' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,9 +5,9 @@ package com.pulumi.azurenative.migrate.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class CollectorBodyAgentSpnPropertiesArgs extends com.pulumi.resour
      * 
      */
     @Import(name="applicationId")
-      private final @Nullable Output<String> applicationId;
+    private @Nullable Output<String> applicationId;
 
-    public Output<String> applicationId() {
-        return this.applicationId == null ? Codegen.empty() : this.applicationId;
+    public Optional<Output<String>> applicationId() {
+        return Optional.ofNullable(this.applicationId);
     }
 
     /**
@@ -31,10 +31,10 @@ public final class CollectorBodyAgentSpnPropertiesArgs extends com.pulumi.resour
      * 
      */
     @Import(name="audience")
-      private final @Nullable Output<String> audience;
+    private @Nullable Output<String> audience;
 
-    public Output<String> audience() {
-        return this.audience == null ? Codegen.empty() : this.audience;
+    public Optional<Output<String>> audience() {
+        return Optional.ofNullable(this.audience);
     }
 
     /**
@@ -42,10 +42,10 @@ public final class CollectorBodyAgentSpnPropertiesArgs extends com.pulumi.resour
      * 
      */
     @Import(name="authority")
-      private final @Nullable Output<String> authority;
+    private @Nullable Output<String> authority;
 
-    public Output<String> authority() {
-        return this.authority == null ? Codegen.empty() : this.authority;
+    public Optional<Output<String>> authority() {
+        return Optional.ofNullable(this.authority);
     }
 
     /**
@@ -53,10 +53,10 @@ public final class CollectorBodyAgentSpnPropertiesArgs extends com.pulumi.resour
      * 
      */
     @Import(name="objectId")
-      private final @Nullable Output<String> objectId;
+    private @Nullable Output<String> objectId;
 
-    public Output<String> objectId() {
-        return this.objectId == null ? Codegen.empty() : this.objectId;
+    public Optional<Output<String>> objectId() {
+        return Optional.ofNullable(this.objectId);
     }
 
     /**
@@ -64,102 +64,88 @@ public final class CollectorBodyAgentSpnPropertiesArgs extends com.pulumi.resour
      * 
      */
     @Import(name="tenantId")
-      private final @Nullable Output<String> tenantId;
+    private @Nullable Output<String> tenantId;
 
-    public Output<String> tenantId() {
-        return this.tenantId == null ? Codegen.empty() : this.tenantId;
+    public Optional<Output<String>> tenantId() {
+        return Optional.ofNullable(this.tenantId);
     }
 
-    public CollectorBodyAgentSpnPropertiesArgs(
-        @Nullable Output<String> applicationId,
-        @Nullable Output<String> audience,
-        @Nullable Output<String> authority,
-        @Nullable Output<String> objectId,
-        @Nullable Output<String> tenantId) {
-        this.applicationId = applicationId;
-        this.audience = audience;
-        this.authority = authority;
-        this.objectId = objectId;
-        this.tenantId = tenantId;
-    }
+    private CollectorBodyAgentSpnPropertiesArgs() {}
 
-    private CollectorBodyAgentSpnPropertiesArgs() {
-        this.applicationId = Codegen.empty();
-        this.audience = Codegen.empty();
-        this.authority = Codegen.empty();
-        this.objectId = Codegen.empty();
-        this.tenantId = Codegen.empty();
+    private CollectorBodyAgentSpnPropertiesArgs(CollectorBodyAgentSpnPropertiesArgs $) {
+        this.applicationId = $.applicationId;
+        this.audience = $.audience;
+        this.authority = $.authority;
+        this.objectId = $.objectId;
+        this.tenantId = $.tenantId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CollectorBodyAgentSpnPropertiesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> applicationId;
-        private @Nullable Output<String> audience;
-        private @Nullable Output<String> authority;
-        private @Nullable Output<String> objectId;
-        private @Nullable Output<String> tenantId;
+        private CollectorBodyAgentSpnPropertiesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CollectorBodyAgentSpnPropertiesArgs();
         }
 
         public Builder(CollectorBodyAgentSpnPropertiesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.applicationId = defaults.applicationId;
-    	      this.audience = defaults.audience;
-    	      this.authority = defaults.authority;
-    	      this.objectId = defaults.objectId;
-    	      this.tenantId = defaults.tenantId;
+            $ = new CollectorBodyAgentSpnPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder applicationId(@Nullable Output<String> applicationId) {
-            this.applicationId = applicationId;
+            $.applicationId = applicationId;
             return this;
         }
-        public Builder applicationId(@Nullable String applicationId) {
-            this.applicationId = Codegen.ofNullable(applicationId);
-            return this;
+
+        public Builder applicationId(String applicationId) {
+            return applicationId(Output.of(applicationId));
         }
+
         public Builder audience(@Nullable Output<String> audience) {
-            this.audience = audience;
+            $.audience = audience;
             return this;
         }
-        public Builder audience(@Nullable String audience) {
-            this.audience = Codegen.ofNullable(audience);
-            return this;
+
+        public Builder audience(String audience) {
+            return audience(Output.of(audience));
         }
+
         public Builder authority(@Nullable Output<String> authority) {
-            this.authority = authority;
+            $.authority = authority;
             return this;
         }
-        public Builder authority(@Nullable String authority) {
-            this.authority = Codegen.ofNullable(authority);
-            return this;
+
+        public Builder authority(String authority) {
+            return authority(Output.of(authority));
         }
+
         public Builder objectId(@Nullable Output<String> objectId) {
-            this.objectId = objectId;
+            $.objectId = objectId;
             return this;
         }
-        public Builder objectId(@Nullable String objectId) {
-            this.objectId = Codegen.ofNullable(objectId);
-            return this;
+
+        public Builder objectId(String objectId) {
+            return objectId(Output.of(objectId));
         }
+
         public Builder tenantId(@Nullable Output<String> tenantId) {
-            this.tenantId = tenantId;
+            $.tenantId = tenantId;
             return this;
         }
-        public Builder tenantId(@Nullable String tenantId) {
-            this.tenantId = Codegen.ofNullable(tenantId);
-            return this;
-        }        public CollectorBodyAgentSpnPropertiesArgs build() {
-            return new CollectorBodyAgentSpnPropertiesArgs(applicationId, audience, authority, objectId, tenantId);
+
+        public Builder tenantId(String tenantId) {
+            return tenantId(Output.of(tenantId));
+        }
+
+        public CollectorBodyAgentSpnPropertiesArgs build() {
+            return $;
         }
     }
+
 }

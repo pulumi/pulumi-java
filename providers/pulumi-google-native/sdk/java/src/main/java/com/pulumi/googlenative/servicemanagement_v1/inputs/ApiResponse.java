@@ -26,7 +26,7 @@ public final class ApiResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="methods", required=true)
-      private final List<MethodResponse> methods;
+    private List<MethodResponse> methods;
 
     public List<MethodResponse> methods() {
         return this.methods;
@@ -37,7 +37,7 @@ public final class ApiResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="mixins", required=true)
-      private final List<MixinResponse> mixins;
+    private List<MixinResponse> mixins;
 
     public List<MixinResponse> mixins() {
         return this.mixins;
@@ -48,7 +48,7 @@ public final class ApiResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -59,7 +59,7 @@ public final class ApiResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="options", required=true)
-      private final List<OptionResponse> options;
+    private List<OptionResponse> options;
 
     public List<OptionResponse> options() {
         return this.options;
@@ -70,7 +70,7 @@ public final class ApiResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="sourceContext", required=true)
-      private final SourceContextResponse sourceContext;
+    private SourceContextResponse sourceContext;
 
     public SourceContextResponse sourceContext() {
         return this.sourceContext;
@@ -81,7 +81,7 @@ public final class ApiResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="syntax", required=true)
-      private final String syntax;
+    private String syntax;
 
     public String syntax() {
         return this.syntax;
@@ -92,109 +92,99 @@ public final class ApiResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="version", required=true)
-      private final String version;
+    private String version;
 
     public String version() {
         return this.version;
     }
 
-    public ApiResponse(
-        List<MethodResponse> methods,
-        List<MixinResponse> mixins,
-        String name,
-        List<OptionResponse> options,
-        SourceContextResponse sourceContext,
-        String syntax,
-        String version) {
-        this.methods = Objects.requireNonNull(methods, "expected parameter 'methods' to be non-null");
-        this.mixins = Objects.requireNonNull(mixins, "expected parameter 'mixins' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.options = Objects.requireNonNull(options, "expected parameter 'options' to be non-null");
-        this.sourceContext = Objects.requireNonNull(sourceContext, "expected parameter 'sourceContext' to be non-null");
-        this.syntax = Objects.requireNonNull(syntax, "expected parameter 'syntax' to be non-null");
-        this.version = Objects.requireNonNull(version, "expected parameter 'version' to be non-null");
-    }
+    private ApiResponse() {}
 
-    private ApiResponse() {
-        this.methods = List.of();
-        this.mixins = List.of();
-        this.name = null;
-        this.options = List.of();
-        this.sourceContext = null;
-        this.syntax = null;
-        this.version = null;
+    private ApiResponse(ApiResponse $) {
+        this.methods = $.methods;
+        this.mixins = $.mixins;
+        this.name = $.name;
+        this.options = $.options;
+        this.sourceContext = $.sourceContext;
+        this.syntax = $.syntax;
+        this.version = $.version;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ApiResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<MethodResponse> methods;
-        private List<MixinResponse> mixins;
-        private String name;
-        private List<OptionResponse> options;
-        private SourceContextResponse sourceContext;
-        private String syntax;
-        private String version;
+        private ApiResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ApiResponse();
         }
 
         public Builder(ApiResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.methods = defaults.methods;
-    	      this.mixins = defaults.mixins;
-    	      this.name = defaults.name;
-    	      this.options = defaults.options;
-    	      this.sourceContext = defaults.sourceContext;
-    	      this.syntax = defaults.syntax;
-    	      this.version = defaults.version;
+            $ = new ApiResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder methods(List<MethodResponse> methods) {
-            this.methods = Objects.requireNonNull(methods);
+            $.methods = methods;
             return this;
         }
+
         public Builder methods(MethodResponse... methods) {
             return methods(List.of(methods));
         }
+
         public Builder mixins(List<MixinResponse> mixins) {
-            this.mixins = Objects.requireNonNull(mixins);
+            $.mixins = mixins;
             return this;
         }
+
         public Builder mixins(MixinResponse... mixins) {
             return mixins(List.of(mixins));
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder options(List<OptionResponse> options) {
-            this.options = Objects.requireNonNull(options);
+            $.options = options;
             return this;
         }
+
         public Builder options(OptionResponse... options) {
             return options(List.of(options));
         }
+
         public Builder sourceContext(SourceContextResponse sourceContext) {
-            this.sourceContext = Objects.requireNonNull(sourceContext);
+            $.sourceContext = sourceContext;
             return this;
         }
+
         public Builder syntax(String syntax) {
-            this.syntax = Objects.requireNonNull(syntax);
+            $.syntax = syntax;
             return this;
         }
+
         public Builder version(String version) {
-            this.version = Objects.requireNonNull(version);
+            $.version = version;
             return this;
-        }        public ApiResponse build() {
-            return new ApiResponse(methods, mixins, name, options, sourceContext, syntax, version);
+        }
+
+        public ApiResponse build() {
+            $.methods = Objects.requireNonNull($.methods, "expected parameter 'methods' to be non-null");
+            $.mixins = Objects.requireNonNull($.mixins, "expected parameter 'mixins' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.options = Objects.requireNonNull($.options, "expected parameter 'options' to be non-null");
+            $.sourceContext = Objects.requireNonNull($.sourceContext, "expected parameter 'sourceContext' to be non-null");
+            $.syntax = Objects.requireNonNull($.syntax, "expected parameter 'syntax' to be non-null");
+            $.version = Objects.requireNonNull($.version, "expected parameter 'version' to be non-null");
+            return $;
         }
     }
+
 }

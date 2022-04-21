@@ -21,7 +21,7 @@ public final class ServiceMeshTypeResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="code", required=true)
-      private final String code;
+    private String code;
 
     public String code() {
         return this.code;
@@ -32,55 +32,52 @@ public final class ServiceMeshTypeResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="displayName", required=true)
-      private final String displayName;
+    private String displayName;
 
     public String displayName() {
         return this.displayName;
     }
 
-    public ServiceMeshTypeResponse(
-        String code,
-        String displayName) {
-        this.code = Objects.requireNonNull(code, "expected parameter 'code' to be non-null");
-        this.displayName = Objects.requireNonNull(displayName, "expected parameter 'displayName' to be non-null");
-    }
+    private ServiceMeshTypeResponse() {}
 
-    private ServiceMeshTypeResponse() {
-        this.code = null;
-        this.displayName = null;
+    private ServiceMeshTypeResponse(ServiceMeshTypeResponse $) {
+        this.code = $.code;
+        this.displayName = $.displayName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ServiceMeshTypeResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String code;
-        private String displayName;
+        private ServiceMeshTypeResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ServiceMeshTypeResponse();
         }
 
         public Builder(ServiceMeshTypeResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.code = defaults.code;
-    	      this.displayName = defaults.displayName;
+            $ = new ServiceMeshTypeResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder code(String code) {
-            this.code = Objects.requireNonNull(code);
+            $.code = code;
             return this;
         }
+
         public Builder displayName(String displayName) {
-            this.displayName = Objects.requireNonNull(displayName);
+            $.displayName = displayName;
             return this;
-        }        public ServiceMeshTypeResponse build() {
-            return new ServiceMeshTypeResponse(code, displayName);
+        }
+
+        public ServiceMeshTypeResponse build() {
+            $.code = Objects.requireNonNull($.code, "expected parameter 'code' to be non-null");
+            $.displayName = Objects.requireNonNull($.displayName, "expected parameter 'displayName' to be non-null");
+            return $;
         }
     }
+
 }

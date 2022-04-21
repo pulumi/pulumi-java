@@ -24,48 +24,48 @@ public final class VolumePropertiesResponseExportPolicy extends com.pulumi.resou
      * 
      */
     @Import(name="rules")
-      private final @Nullable List<ExportPolicyRuleResponse> rules;
+    private @Nullable List<ExportPolicyRuleResponse> rules;
 
-    public List<ExportPolicyRuleResponse> rules() {
-        return this.rules == null ? List.of() : this.rules;
+    public Optional<List<ExportPolicyRuleResponse>> rules() {
+        return Optional.ofNullable(this.rules);
     }
 
-    public VolumePropertiesResponseExportPolicy(@Nullable List<ExportPolicyRuleResponse> rules) {
-        this.rules = rules;
-    }
+    private VolumePropertiesResponseExportPolicy() {}
 
-    private VolumePropertiesResponseExportPolicy() {
-        this.rules = List.of();
+    private VolumePropertiesResponseExportPolicy(VolumePropertiesResponseExportPolicy $) {
+        this.rules = $.rules;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VolumePropertiesResponseExportPolicy defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<ExportPolicyRuleResponse> rules;
+        private VolumePropertiesResponseExportPolicy $;
 
         public Builder() {
-    	      // Empty
+            $ = new VolumePropertiesResponseExportPolicy();
         }
 
         public Builder(VolumePropertiesResponseExportPolicy defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.rules = defaults.rules;
+            $ = new VolumePropertiesResponseExportPolicy(Objects.requireNonNull(defaults));
         }
 
         public Builder rules(@Nullable List<ExportPolicyRuleResponse> rules) {
-            this.rules = rules;
+            $.rules = rules;
             return this;
         }
+
         public Builder rules(ExportPolicyRuleResponse... rules) {
             return rules(List.of(rules));
-        }        public VolumePropertiesResponseExportPolicy build() {
-            return new VolumePropertiesResponseExportPolicy(rules);
+        }
+
+        public VolumePropertiesResponseExportPolicy build() {
+            return $;
         }
     }
+
 }

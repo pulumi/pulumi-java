@@ -23,7 +23,7 @@ public final class ConfigVariableResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="boolValue", required=true)
-      private final Boolean boolValue;
+    private Boolean boolValue;
 
     public Boolean boolValue() {
         return this.boolValue;
@@ -34,7 +34,7 @@ public final class ConfigVariableResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="intValue", required=true)
-      private final String intValue;
+    private String intValue;
 
     public String intValue() {
         return this.intValue;
@@ -45,7 +45,7 @@ public final class ConfigVariableResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="key", required=true)
-      private final String key;
+    private String key;
 
     public String key() {
         return this.key;
@@ -56,7 +56,7 @@ public final class ConfigVariableResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="secretValue", required=true)
-      private final SecretResponse secretValue;
+    private SecretResponse secretValue;
 
     public SecretResponse secretValue() {
         return this.secretValue;
@@ -67,82 +67,73 @@ public final class ConfigVariableResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="stringValue", required=true)
-      private final String stringValue;
+    private String stringValue;
 
     public String stringValue() {
         return this.stringValue;
     }
 
-    public ConfigVariableResponse(
-        Boolean boolValue,
-        String intValue,
-        String key,
-        SecretResponse secretValue,
-        String stringValue) {
-        this.boolValue = Objects.requireNonNull(boolValue, "expected parameter 'boolValue' to be non-null");
-        this.intValue = Objects.requireNonNull(intValue, "expected parameter 'intValue' to be non-null");
-        this.key = Objects.requireNonNull(key, "expected parameter 'key' to be non-null");
-        this.secretValue = Objects.requireNonNull(secretValue, "expected parameter 'secretValue' to be non-null");
-        this.stringValue = Objects.requireNonNull(stringValue, "expected parameter 'stringValue' to be non-null");
-    }
+    private ConfigVariableResponse() {}
 
-    private ConfigVariableResponse() {
-        this.boolValue = null;
-        this.intValue = null;
-        this.key = null;
-        this.secretValue = null;
-        this.stringValue = null;
+    private ConfigVariableResponse(ConfigVariableResponse $) {
+        this.boolValue = $.boolValue;
+        this.intValue = $.intValue;
+        this.key = $.key;
+        this.secretValue = $.secretValue;
+        this.stringValue = $.stringValue;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ConfigVariableResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Boolean boolValue;
-        private String intValue;
-        private String key;
-        private SecretResponse secretValue;
-        private String stringValue;
+        private ConfigVariableResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ConfigVariableResponse();
         }
 
         public Builder(ConfigVariableResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.boolValue = defaults.boolValue;
-    	      this.intValue = defaults.intValue;
-    	      this.key = defaults.key;
-    	      this.secretValue = defaults.secretValue;
-    	      this.stringValue = defaults.stringValue;
+            $ = new ConfigVariableResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder boolValue(Boolean boolValue) {
-            this.boolValue = Objects.requireNonNull(boolValue);
+            $.boolValue = boolValue;
             return this;
         }
+
         public Builder intValue(String intValue) {
-            this.intValue = Objects.requireNonNull(intValue);
+            $.intValue = intValue;
             return this;
         }
+
         public Builder key(String key) {
-            this.key = Objects.requireNonNull(key);
+            $.key = key;
             return this;
         }
+
         public Builder secretValue(SecretResponse secretValue) {
-            this.secretValue = Objects.requireNonNull(secretValue);
+            $.secretValue = secretValue;
             return this;
         }
+
         public Builder stringValue(String stringValue) {
-            this.stringValue = Objects.requireNonNull(stringValue);
+            $.stringValue = stringValue;
             return this;
-        }        public ConfigVariableResponse build() {
-            return new ConfigVariableResponse(boolValue, intValue, key, secretValue, stringValue);
+        }
+
+        public ConfigVariableResponse build() {
+            $.boolValue = Objects.requireNonNull($.boolValue, "expected parameter 'boolValue' to be non-null");
+            $.intValue = Objects.requireNonNull($.intValue, "expected parameter 'intValue' to be non-null");
+            $.key = Objects.requireNonNull($.key, "expected parameter 'key' to be non-null");
+            $.secretValue = Objects.requireNonNull($.secretValue, "expected parameter 'secretValue' to be non-null");
+            $.stringValue = Objects.requireNonNull($.stringValue, "expected parameter 'stringValue' to be non-null");
+            return $;
         }
     }
+
 }

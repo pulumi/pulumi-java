@@ -15,110 +15,99 @@ public final class GetResourceRecordSetArgs extends com.pulumi.resources.InvokeA
     public static final GetResourceRecordSetArgs Empty = new GetResourceRecordSetArgs();
 
     @Import(name="clientOperationId")
-      private final @Nullable String clientOperationId;
+    private @Nullable String clientOperationId;
 
     public Optional<String> clientOperationId() {
-        return this.clientOperationId == null ? Optional.empty() : Optional.ofNullable(this.clientOperationId);
+        return Optional.ofNullable(this.clientOperationId);
     }
 
     @Import(name="managedZone", required=true)
-      private final String managedZone;
+    private String managedZone;
 
     public String managedZone() {
         return this.managedZone;
     }
 
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
     }
 
     @Import(name="project")
-      private final @Nullable String project;
+    private @Nullable String project;
 
     public Optional<String> project() {
-        return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
+        return Optional.ofNullable(this.project);
     }
 
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
     }
 
-    public GetResourceRecordSetArgs(
-        @Nullable String clientOperationId,
-        String managedZone,
-        String name,
-        @Nullable String project,
-        String type) {
-        this.clientOperationId = clientOperationId;
-        this.managedZone = Objects.requireNonNull(managedZone, "expected parameter 'managedZone' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.project = project;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private GetResourceRecordSetArgs() {}
 
-    private GetResourceRecordSetArgs() {
-        this.clientOperationId = null;
-        this.managedZone = null;
-        this.name = null;
-        this.project = null;
-        this.type = null;
+    private GetResourceRecordSetArgs(GetResourceRecordSetArgs $) {
+        this.clientOperationId = $.clientOperationId;
+        this.managedZone = $.managedZone;
+        this.name = $.name;
+        this.project = $.project;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetResourceRecordSetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String clientOperationId;
-        private String managedZone;
-        private String name;
-        private @Nullable String project;
-        private String type;
+        private GetResourceRecordSetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetResourceRecordSetArgs();
         }
 
         public Builder(GetResourceRecordSetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.clientOperationId = defaults.clientOperationId;
-    	      this.managedZone = defaults.managedZone;
-    	      this.name = defaults.name;
-    	      this.project = defaults.project;
-    	      this.type = defaults.type;
+            $ = new GetResourceRecordSetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder clientOperationId(@Nullable String clientOperationId) {
-            this.clientOperationId = clientOperationId;
+            $.clientOperationId = clientOperationId;
             return this;
         }
+
         public Builder managedZone(String managedZone) {
-            this.managedZone = Objects.requireNonNull(managedZone);
+            $.managedZone = managedZone;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder project(@Nullable String project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
-        }        public GetResourceRecordSetArgs build() {
-            return new GetResourceRecordSetArgs(clientOperationId, managedZone, name, project, type);
+        }
+
+        public GetResourceRecordSetArgs build() {
+            $.managedZone = Objects.requireNonNull($.managedZone, "expected parameter 'managedZone' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

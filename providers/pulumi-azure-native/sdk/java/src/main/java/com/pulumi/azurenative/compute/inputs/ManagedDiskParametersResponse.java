@@ -24,10 +24,10 @@ public final class ManagedDiskParametersResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="diskEncryptionSet")
-      private final @Nullable DiskEncryptionSetParametersResponse diskEncryptionSet;
+    private @Nullable DiskEncryptionSetParametersResponse diskEncryptionSet;
 
     public Optional<DiskEncryptionSetParametersResponse> diskEncryptionSet() {
-        return this.diskEncryptionSet == null ? Optional.empty() : Optional.ofNullable(this.diskEncryptionSet);
+        return Optional.ofNullable(this.diskEncryptionSet);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class ManagedDiskParametersResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="id")
-      private final @Nullable String id;
+    private @Nullable String id;
 
     public Optional<String> id() {
-        return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
+        return Optional.ofNullable(this.id);
     }
 
     /**
@@ -46,64 +46,56 @@ public final class ManagedDiskParametersResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="storageAccountType")
-      private final @Nullable String storageAccountType;
+    private @Nullable String storageAccountType;
 
     public Optional<String> storageAccountType() {
-        return this.storageAccountType == null ? Optional.empty() : Optional.ofNullable(this.storageAccountType);
+        return Optional.ofNullable(this.storageAccountType);
     }
 
-    public ManagedDiskParametersResponse(
-        @Nullable DiskEncryptionSetParametersResponse diskEncryptionSet,
-        @Nullable String id,
-        @Nullable String storageAccountType) {
-        this.diskEncryptionSet = diskEncryptionSet;
-        this.id = id;
-        this.storageAccountType = storageAccountType;
-    }
+    private ManagedDiskParametersResponse() {}
 
-    private ManagedDiskParametersResponse() {
-        this.diskEncryptionSet = null;
-        this.id = null;
-        this.storageAccountType = null;
+    private ManagedDiskParametersResponse(ManagedDiskParametersResponse $) {
+        this.diskEncryptionSet = $.diskEncryptionSet;
+        this.id = $.id;
+        this.storageAccountType = $.storageAccountType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ManagedDiskParametersResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable DiskEncryptionSetParametersResponse diskEncryptionSet;
-        private @Nullable String id;
-        private @Nullable String storageAccountType;
+        private ManagedDiskParametersResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ManagedDiskParametersResponse();
         }
 
         public Builder(ManagedDiskParametersResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.diskEncryptionSet = defaults.diskEncryptionSet;
-    	      this.id = defaults.id;
-    	      this.storageAccountType = defaults.storageAccountType;
+            $ = new ManagedDiskParametersResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder diskEncryptionSet(@Nullable DiskEncryptionSetParametersResponse diskEncryptionSet) {
-            this.diskEncryptionSet = diskEncryptionSet;
+            $.diskEncryptionSet = diskEncryptionSet;
             return this;
         }
+
         public Builder id(@Nullable String id) {
-            this.id = id;
+            $.id = id;
             return this;
         }
+
         public Builder storageAccountType(@Nullable String storageAccountType) {
-            this.storageAccountType = storageAccountType;
+            $.storageAccountType = storageAccountType;
             return this;
-        }        public ManagedDiskParametersResponse build() {
-            return new ManagedDiskParametersResponse(diskEncryptionSet, id, storageAccountType);
+        }
+
+        public ManagedDiskParametersResponse build() {
+            return $;
         }
     }
+
 }

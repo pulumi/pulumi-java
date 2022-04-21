@@ -13,6 +13,7 @@ import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -29,10 +30,10 @@ public final class ServiceAccountArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="apiVersion")
-      private final @Nullable Output<String> apiVersion;
+    private @Nullable Output<String> apiVersion;
 
-    public Output<String> apiVersion() {
-        return this.apiVersion == null ? Codegen.empty() : this.apiVersion;
+    public Optional<Output<String>> apiVersion() {
+        return Optional.ofNullable(this.apiVersion);
     }
 
     /**
@@ -40,10 +41,10 @@ public final class ServiceAccountArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="automountServiceAccountToken")
-      private final @Nullable Output<Boolean> automountServiceAccountToken;
+    private @Nullable Output<Boolean> automountServiceAccountToken;
 
-    public Output<Boolean> automountServiceAccountToken() {
-        return this.automountServiceAccountToken == null ? Codegen.empty() : this.automountServiceAccountToken;
+    public Optional<Output<Boolean>> automountServiceAccountToken() {
+        return Optional.ofNullable(this.automountServiceAccountToken);
     }
 
     /**
@@ -51,10 +52,10 @@ public final class ServiceAccountArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="imagePullSecrets")
-      private final @Nullable Output<List<LocalObjectReferenceArgs>> imagePullSecrets;
+    private @Nullable Output<List<LocalObjectReferenceArgs>> imagePullSecrets;
 
-    public Output<List<LocalObjectReferenceArgs>> imagePullSecrets() {
-        return this.imagePullSecrets == null ? Codegen.empty() : this.imagePullSecrets;
+    public Optional<Output<List<LocalObjectReferenceArgs>>> imagePullSecrets() {
+        return Optional.ofNullable(this.imagePullSecrets);
     }
 
     /**
@@ -62,10 +63,10 @@ public final class ServiceAccountArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="kind")
-      private final @Nullable Output<String> kind;
+    private @Nullable Output<String> kind;
 
-    public Output<String> kind() {
-        return this.kind == null ? Codegen.empty() : this.kind;
+    public Optional<Output<String>> kind() {
+        return Optional.ofNullable(this.kind);
     }
 
     /**
@@ -73,10 +74,10 @@ public final class ServiceAccountArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="metadata")
-      private final @Nullable Output<ObjectMetaArgs> metadata;
+    private @Nullable Output<ObjectMetaArgs> metadata;
 
-    public Output<ObjectMetaArgs> metadata() {
-        return this.metadata == null ? Codegen.empty() : this.metadata;
+    public Optional<Output<ObjectMetaArgs>> metadata() {
+        return Optional.ofNullable(this.metadata);
     }
 
     /**
@@ -84,121 +85,108 @@ public final class ServiceAccountArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="secrets")
-      private final @Nullable Output<List<ObjectReferenceArgs>> secrets;
+    private @Nullable Output<List<ObjectReferenceArgs>> secrets;
 
-    public Output<List<ObjectReferenceArgs>> secrets() {
-        return this.secrets == null ? Codegen.empty() : this.secrets;
+    public Optional<Output<List<ObjectReferenceArgs>>> secrets() {
+        return Optional.ofNullable(this.secrets);
     }
 
-    public ServiceAccountArgs(
-        @Nullable Output<String> apiVersion,
-        @Nullable Output<Boolean> automountServiceAccountToken,
-        @Nullable Output<List<LocalObjectReferenceArgs>> imagePullSecrets,
-        @Nullable Output<String> kind,
-        @Nullable Output<ObjectMetaArgs> metadata,
-        @Nullable Output<List<ObjectReferenceArgs>> secrets) {
-        this.apiVersion = Codegen.stringProp("apiVersion").output().arg(apiVersion).getNullable();
-        this.automountServiceAccountToken = automountServiceAccountToken;
-        this.imagePullSecrets = imagePullSecrets;
-        this.kind = Codegen.stringProp("kind").output().arg(kind).getNullable();
-        this.metadata = metadata;
-        this.secrets = secrets;
-    }
+    private ServiceAccountArgs() {}
 
-    private ServiceAccountArgs() {
-        this.apiVersion = Codegen.empty();
-        this.automountServiceAccountToken = Codegen.empty();
-        this.imagePullSecrets = Codegen.empty();
-        this.kind = Codegen.empty();
-        this.metadata = Codegen.empty();
-        this.secrets = Codegen.empty();
+    private ServiceAccountArgs(ServiceAccountArgs $) {
+        this.apiVersion = $.apiVersion;
+        this.automountServiceAccountToken = $.automountServiceAccountToken;
+        this.imagePullSecrets = $.imagePullSecrets;
+        this.kind = $.kind;
+        this.metadata = $.metadata;
+        this.secrets = $.secrets;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ServiceAccountArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> apiVersion;
-        private @Nullable Output<Boolean> automountServiceAccountToken;
-        private @Nullable Output<List<LocalObjectReferenceArgs>> imagePullSecrets;
-        private @Nullable Output<String> kind;
-        private @Nullable Output<ObjectMetaArgs> metadata;
-        private @Nullable Output<List<ObjectReferenceArgs>> secrets;
+        private ServiceAccountArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ServiceAccountArgs();
         }
 
         public Builder(ServiceAccountArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.apiVersion = defaults.apiVersion;
-    	      this.automountServiceAccountToken = defaults.automountServiceAccountToken;
-    	      this.imagePullSecrets = defaults.imagePullSecrets;
-    	      this.kind = defaults.kind;
-    	      this.metadata = defaults.metadata;
-    	      this.secrets = defaults.secrets;
+            $ = new ServiceAccountArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder apiVersion(@Nullable Output<String> apiVersion) {
-            this.apiVersion = apiVersion;
+            $.apiVersion = apiVersion;
             return this;
         }
-        public Builder apiVersion(@Nullable String apiVersion) {
-            this.apiVersion = Codegen.ofNullable(apiVersion);
-            return this;
+
+        public Builder apiVersion(String apiVersion) {
+            return apiVersion(Output.of(apiVersion));
         }
+
         public Builder automountServiceAccountToken(@Nullable Output<Boolean> automountServiceAccountToken) {
-            this.automountServiceAccountToken = automountServiceAccountToken;
+            $.automountServiceAccountToken = automountServiceAccountToken;
             return this;
         }
-        public Builder automountServiceAccountToken(@Nullable Boolean automountServiceAccountToken) {
-            this.automountServiceAccountToken = Codegen.ofNullable(automountServiceAccountToken);
-            return this;
+
+        public Builder automountServiceAccountToken(Boolean automountServiceAccountToken) {
+            return automountServiceAccountToken(Output.of(automountServiceAccountToken));
         }
+
         public Builder imagePullSecrets(@Nullable Output<List<LocalObjectReferenceArgs>> imagePullSecrets) {
-            this.imagePullSecrets = imagePullSecrets;
+            $.imagePullSecrets = imagePullSecrets;
             return this;
         }
-        public Builder imagePullSecrets(@Nullable List<LocalObjectReferenceArgs> imagePullSecrets) {
-            this.imagePullSecrets = Codegen.ofNullable(imagePullSecrets);
-            return this;
+
+        public Builder imagePullSecrets(List<LocalObjectReferenceArgs> imagePullSecrets) {
+            return imagePullSecrets(Output.of(imagePullSecrets));
         }
+
         public Builder imagePullSecrets(LocalObjectReferenceArgs... imagePullSecrets) {
             return imagePullSecrets(List.of(imagePullSecrets));
         }
+
         public Builder kind(@Nullable Output<String> kind) {
-            this.kind = kind;
+            $.kind = kind;
             return this;
         }
-        public Builder kind(@Nullable String kind) {
-            this.kind = Codegen.ofNullable(kind);
-            return this;
+
+        public Builder kind(String kind) {
+            return kind(Output.of(kind));
         }
+
         public Builder metadata(@Nullable Output<ObjectMetaArgs> metadata) {
-            this.metadata = metadata;
+            $.metadata = metadata;
             return this;
         }
-        public Builder metadata(@Nullable ObjectMetaArgs metadata) {
-            this.metadata = Codegen.ofNullable(metadata);
-            return this;
+
+        public Builder metadata(ObjectMetaArgs metadata) {
+            return metadata(Output.of(metadata));
         }
+
         public Builder secrets(@Nullable Output<List<ObjectReferenceArgs>> secrets) {
-            this.secrets = secrets;
+            $.secrets = secrets;
             return this;
         }
-        public Builder secrets(@Nullable List<ObjectReferenceArgs> secrets) {
-            this.secrets = Codegen.ofNullable(secrets);
-            return this;
+
+        public Builder secrets(List<ObjectReferenceArgs> secrets) {
+            return secrets(Output.of(secrets));
         }
+
         public Builder secrets(ObjectReferenceArgs... secrets) {
             return secrets(List.of(secrets));
-        }        public ServiceAccountArgs build() {
-            return new ServiceAccountArgs(apiVersion, automountServiceAccountToken, imagePullSecrets, kind, metadata, secrets);
+        }
+
+        public ServiceAccountArgs build() {
+            $.apiVersion = Codegen.stringProp("apiVersion").output().arg($.apiVersion).getNullable();
+            $.kind = Codegen.stringProp("kind").output().arg($.kind).getNullable();
+            return $;
         }
     }
+
 }

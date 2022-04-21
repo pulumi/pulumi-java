@@ -19,7 +19,7 @@ public final class GetScriptDagEdge extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="source", required=true)
-      private final String source;
+    private String source;
 
     public String source() {
         return this.source;
@@ -30,7 +30,7 @@ public final class GetScriptDagEdge extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="target", required=true)
-      private final String target;
+    private String target;
 
     public String target() {
         return this.target;
@@ -41,64 +41,58 @@ public final class GetScriptDagEdge extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="targetParameter")
-      private final @Nullable String targetParameter;
+    private @Nullable String targetParameter;
 
     public Optional<String> targetParameter() {
-        return this.targetParameter == null ? Optional.empty() : Optional.ofNullable(this.targetParameter);
+        return Optional.ofNullable(this.targetParameter);
     }
 
-    public GetScriptDagEdge(
-        String source,
-        String target,
-        @Nullable String targetParameter) {
-        this.source = Objects.requireNonNull(source, "expected parameter 'source' to be non-null");
-        this.target = Objects.requireNonNull(target, "expected parameter 'target' to be non-null");
-        this.targetParameter = targetParameter;
-    }
+    private GetScriptDagEdge() {}
 
-    private GetScriptDagEdge() {
-        this.source = null;
-        this.target = null;
-        this.targetParameter = null;
+    private GetScriptDagEdge(GetScriptDagEdge $) {
+        this.source = $.source;
+        this.target = $.target;
+        this.targetParameter = $.targetParameter;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetScriptDagEdge defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String source;
-        private String target;
-        private @Nullable String targetParameter;
+        private GetScriptDagEdge $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetScriptDagEdge();
         }
 
         public Builder(GetScriptDagEdge defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.source = defaults.source;
-    	      this.target = defaults.target;
-    	      this.targetParameter = defaults.targetParameter;
+            $ = new GetScriptDagEdge(Objects.requireNonNull(defaults));
         }
 
         public Builder source(String source) {
-            this.source = Objects.requireNonNull(source);
+            $.source = source;
             return this;
         }
+
         public Builder target(String target) {
-            this.target = Objects.requireNonNull(target);
+            $.target = target;
             return this;
         }
+
         public Builder targetParameter(@Nullable String targetParameter) {
-            this.targetParameter = targetParameter;
+            $.targetParameter = targetParameter;
             return this;
-        }        public GetScriptDagEdge build() {
-            return new GetScriptDagEdge(source, target, targetParameter);
+        }
+
+        public GetScriptDagEdge build() {
+            $.source = Objects.requireNonNull($.source, "expected parameter 'source' to be non-null");
+            $.target = Objects.requireNonNull($.target, "expected parameter 'target' to be non-null");
+            return $;
         }
     }
+
 }

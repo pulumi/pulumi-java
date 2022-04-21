@@ -21,7 +21,7 @@ public final class GitSourceContextResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="revisionId", required=true)
-      private final String revisionId;
+    private String revisionId;
 
     public String revisionId() {
         return this.revisionId;
@@ -32,55 +32,52 @@ public final class GitSourceContextResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="url", required=true)
-      private final String url;
+    private String url;
 
     public String url() {
         return this.url;
     }
 
-    public GitSourceContextResponse(
-        String revisionId,
-        String url) {
-        this.revisionId = Objects.requireNonNull(revisionId, "expected parameter 'revisionId' to be non-null");
-        this.url = Objects.requireNonNull(url, "expected parameter 'url' to be non-null");
-    }
+    private GitSourceContextResponse() {}
 
-    private GitSourceContextResponse() {
-        this.revisionId = null;
-        this.url = null;
+    private GitSourceContextResponse(GitSourceContextResponse $) {
+        this.revisionId = $.revisionId;
+        this.url = $.url;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GitSourceContextResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String revisionId;
-        private String url;
+        private GitSourceContextResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GitSourceContextResponse();
         }
 
         public Builder(GitSourceContextResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.revisionId = defaults.revisionId;
-    	      this.url = defaults.url;
+            $ = new GitSourceContextResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder revisionId(String revisionId) {
-            this.revisionId = Objects.requireNonNull(revisionId);
+            $.revisionId = revisionId;
             return this;
         }
+
         public Builder url(String url) {
-            this.url = Objects.requireNonNull(url);
+            $.url = url;
             return this;
-        }        public GitSourceContextResponse build() {
-            return new GitSourceContextResponse(revisionId, url);
+        }
+
+        public GitSourceContextResponse build() {
+            $.revisionId = Objects.requireNonNull($.revisionId, "expected parameter 'revisionId' to be non-null");
+            $.url = Objects.requireNonNull($.url, "expected parameter 'url' to be non-null");
+            return $;
         }
     }
+
 }

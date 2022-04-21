@@ -5,12 +5,12 @@ package com.pulumi.kubernetes.flowcontrol.apiserver.k8s.io_v1alpha1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.kubernetes.flowcontrol.apiserver.k8s.io_v1alpha1.inputs.GroupSubjectArgs;
 import com.pulumi.kubernetes.flowcontrol.apiserver.k8s.io_v1alpha1.inputs.ServiceAccountSubjectArgs;
 import com.pulumi.kubernetes.flowcontrol.apiserver.k8s.io_v1alpha1.inputs.UserSubjectArgs;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,10 @@ public final class SubjectArgs extends com.pulumi.resources.ResourceArgs {
     public static final SubjectArgs Empty = new SubjectArgs();
 
     @Import(name="group")
-      private final @Nullable Output<GroupSubjectArgs> group;
+    private @Nullable Output<GroupSubjectArgs> group;
 
-    public Output<GroupSubjectArgs> group() {
-        return this.group == null ? Codegen.empty() : this.group;
+    public Optional<Output<GroupSubjectArgs>> group() {
+        return Optional.ofNullable(this.group);
     }
 
     /**
@@ -34,103 +34,93 @@ public final class SubjectArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="kind", required=true)
-      private final Output<String> kind;
+    private Output<String> kind;
 
     public Output<String> kind() {
         return this.kind;
     }
 
     @Import(name="serviceAccount")
-      private final @Nullable Output<ServiceAccountSubjectArgs> serviceAccount;
+    private @Nullable Output<ServiceAccountSubjectArgs> serviceAccount;
 
-    public Output<ServiceAccountSubjectArgs> serviceAccount() {
-        return this.serviceAccount == null ? Codegen.empty() : this.serviceAccount;
+    public Optional<Output<ServiceAccountSubjectArgs>> serviceAccount() {
+        return Optional.ofNullable(this.serviceAccount);
     }
 
     @Import(name="user")
-      private final @Nullable Output<UserSubjectArgs> user;
+    private @Nullable Output<UserSubjectArgs> user;
 
-    public Output<UserSubjectArgs> user() {
-        return this.user == null ? Codegen.empty() : this.user;
+    public Optional<Output<UserSubjectArgs>> user() {
+        return Optional.ofNullable(this.user);
     }
 
-    public SubjectArgs(
-        @Nullable Output<GroupSubjectArgs> group,
-        Output<String> kind,
-        @Nullable Output<ServiceAccountSubjectArgs> serviceAccount,
-        @Nullable Output<UserSubjectArgs> user) {
-        this.group = group;
-        this.kind = Objects.requireNonNull(kind, "expected parameter 'kind' to be non-null");
-        this.serviceAccount = serviceAccount;
-        this.user = user;
-    }
+    private SubjectArgs() {}
 
-    private SubjectArgs() {
-        this.group = Codegen.empty();
-        this.kind = Codegen.empty();
-        this.serviceAccount = Codegen.empty();
-        this.user = Codegen.empty();
+    private SubjectArgs(SubjectArgs $) {
+        this.group = $.group;
+        this.kind = $.kind;
+        this.serviceAccount = $.serviceAccount;
+        this.user = $.user;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SubjectArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<GroupSubjectArgs> group;
-        private Output<String> kind;
-        private @Nullable Output<ServiceAccountSubjectArgs> serviceAccount;
-        private @Nullable Output<UserSubjectArgs> user;
+        private SubjectArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SubjectArgs();
         }
 
         public Builder(SubjectArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.group = defaults.group;
-    	      this.kind = defaults.kind;
-    	      this.serviceAccount = defaults.serviceAccount;
-    	      this.user = defaults.user;
+            $ = new SubjectArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder group(@Nullable Output<GroupSubjectArgs> group) {
-            this.group = group;
+            $.group = group;
             return this;
         }
-        public Builder group(@Nullable GroupSubjectArgs group) {
-            this.group = Codegen.ofNullable(group);
-            return this;
+
+        public Builder group(GroupSubjectArgs group) {
+            return group(Output.of(group));
         }
+
         public Builder kind(Output<String> kind) {
-            this.kind = Objects.requireNonNull(kind);
+            $.kind = kind;
             return this;
         }
+
         public Builder kind(String kind) {
-            this.kind = Output.of(Objects.requireNonNull(kind));
-            return this;
+            return kind(Output.of(kind));
         }
+
         public Builder serviceAccount(@Nullable Output<ServiceAccountSubjectArgs> serviceAccount) {
-            this.serviceAccount = serviceAccount;
+            $.serviceAccount = serviceAccount;
             return this;
         }
-        public Builder serviceAccount(@Nullable ServiceAccountSubjectArgs serviceAccount) {
-            this.serviceAccount = Codegen.ofNullable(serviceAccount);
-            return this;
+
+        public Builder serviceAccount(ServiceAccountSubjectArgs serviceAccount) {
+            return serviceAccount(Output.of(serviceAccount));
         }
+
         public Builder user(@Nullable Output<UserSubjectArgs> user) {
-            this.user = user;
+            $.user = user;
             return this;
         }
-        public Builder user(@Nullable UserSubjectArgs user) {
-            this.user = Codegen.ofNullable(user);
-            return this;
-        }        public SubjectArgs build() {
-            return new SubjectArgs(group, kind, serviceAccount, user);
+
+        public Builder user(UserSubjectArgs user) {
+            return user(Output.of(user));
+        }
+
+        public SubjectArgs build() {
+            $.kind = Objects.requireNonNull($.kind, "expected parameter 'kind' to be non-null");
+            return $;
         }
     }
+
 }

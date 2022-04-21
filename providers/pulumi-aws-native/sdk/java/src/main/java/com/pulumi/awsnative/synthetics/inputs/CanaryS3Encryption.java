@@ -19,10 +19,10 @@ public final class CanaryS3Encryption extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="encryptionMode")
-      private final @Nullable String encryptionMode;
+    private @Nullable String encryptionMode;
 
     public Optional<String> encryptionMode() {
-        return this.encryptionMode == null ? Optional.empty() : Optional.ofNullable(this.encryptionMode);
+        return Optional.ofNullable(this.encryptionMode);
     }
 
     /**
@@ -30,55 +30,50 @@ public final class CanaryS3Encryption extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="kmsKeyArn")
-      private final @Nullable String kmsKeyArn;
+    private @Nullable String kmsKeyArn;
 
     public Optional<String> kmsKeyArn() {
-        return this.kmsKeyArn == null ? Optional.empty() : Optional.ofNullable(this.kmsKeyArn);
+        return Optional.ofNullable(this.kmsKeyArn);
     }
 
-    public CanaryS3Encryption(
-        @Nullable String encryptionMode,
-        @Nullable String kmsKeyArn) {
-        this.encryptionMode = encryptionMode;
-        this.kmsKeyArn = kmsKeyArn;
-    }
+    private CanaryS3Encryption() {}
 
-    private CanaryS3Encryption() {
-        this.encryptionMode = null;
-        this.kmsKeyArn = null;
+    private CanaryS3Encryption(CanaryS3Encryption $) {
+        this.encryptionMode = $.encryptionMode;
+        this.kmsKeyArn = $.kmsKeyArn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CanaryS3Encryption defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String encryptionMode;
-        private @Nullable String kmsKeyArn;
+        private CanaryS3Encryption $;
 
         public Builder() {
-    	      // Empty
+            $ = new CanaryS3Encryption();
         }
 
         public Builder(CanaryS3Encryption defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.encryptionMode = defaults.encryptionMode;
-    	      this.kmsKeyArn = defaults.kmsKeyArn;
+            $ = new CanaryS3Encryption(Objects.requireNonNull(defaults));
         }
 
         public Builder encryptionMode(@Nullable String encryptionMode) {
-            this.encryptionMode = encryptionMode;
+            $.encryptionMode = encryptionMode;
             return this;
         }
+
         public Builder kmsKeyArn(@Nullable String kmsKeyArn) {
-            this.kmsKeyArn = kmsKeyArn;
+            $.kmsKeyArn = kmsKeyArn;
             return this;
-        }        public CanaryS3Encryption build() {
-            return new CanaryS3Encryption(encryptionMode, kmsKeyArn);
+        }
+
+        public CanaryS3Encryption build() {
+            return $;
         }
     }
+
 }

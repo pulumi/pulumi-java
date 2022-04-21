@@ -13,45 +13,45 @@ public final class GetNetworkArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetNetworkArgs Empty = new GetNetworkArgs();
 
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
     }
 
-    public GetNetworkArgs(String name) {
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-    }
+    private GetNetworkArgs() {}
 
-    private GetNetworkArgs() {
-        this.name = null;
+    private GetNetworkArgs(GetNetworkArgs $) {
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetNetworkArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String name;
+        private GetNetworkArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetNetworkArgs();
         }
 
         public Builder(GetNetworkArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
+            $ = new GetNetworkArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
-        }        public GetNetworkArgs build() {
-            return new GetNetworkArgs(name);
+        }
+
+        public GetNetworkArgs build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            return $;
         }
     }
+
 }

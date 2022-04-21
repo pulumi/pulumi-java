@@ -21,45 +21,45 @@ public final class GooglePrivacyDlpV2CloudStorageFileSetResponse extends com.pul
      * 
      */
     @Import(name="url", required=true)
-      private final String url;
+    private String url;
 
     public String url() {
         return this.url;
     }
 
-    public GooglePrivacyDlpV2CloudStorageFileSetResponse(String url) {
-        this.url = Objects.requireNonNull(url, "expected parameter 'url' to be non-null");
-    }
+    private GooglePrivacyDlpV2CloudStorageFileSetResponse() {}
 
-    private GooglePrivacyDlpV2CloudStorageFileSetResponse() {
-        this.url = null;
+    private GooglePrivacyDlpV2CloudStorageFileSetResponse(GooglePrivacyDlpV2CloudStorageFileSetResponse $) {
+        this.url = $.url;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GooglePrivacyDlpV2CloudStorageFileSetResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String url;
+        private GooglePrivacyDlpV2CloudStorageFileSetResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GooglePrivacyDlpV2CloudStorageFileSetResponse();
         }
 
         public Builder(GooglePrivacyDlpV2CloudStorageFileSetResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.url = defaults.url;
+            $ = new GooglePrivacyDlpV2CloudStorageFileSetResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder url(String url) {
-            this.url = Objects.requireNonNull(url);
+            $.url = url;
             return this;
-        }        public GooglePrivacyDlpV2CloudStorageFileSetResponse build() {
-            return new GooglePrivacyDlpV2CloudStorageFileSetResponse(url);
+        }
+
+        public GooglePrivacyDlpV2CloudStorageFileSetResponse build() {
+            $.url = Objects.requireNonNull($.url, "expected parameter 'url' to be non-null");
+            return $;
         }
     }
+
 }

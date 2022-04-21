@@ -25,10 +25,10 @@ public final class RcmAzureMigrationPolicyDetailsResponse extends com.pulumi.res
      * 
      */
     @Import(name="appConsistentFrequencyInMinutes")
-      private final @Nullable Integer appConsistentFrequencyInMinutes;
+    private @Nullable Integer appConsistentFrequencyInMinutes;
 
     public Optional<Integer> appConsistentFrequencyInMinutes() {
-        return this.appConsistentFrequencyInMinutes == null ? Optional.empty() : Optional.ofNullable(this.appConsistentFrequencyInMinutes);
+        return Optional.ofNullable(this.appConsistentFrequencyInMinutes);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class RcmAzureMigrationPolicyDetailsResponse extends com.pulumi.res
      * 
      */
     @Import(name="crashConsistentFrequencyInMinutes")
-      private final @Nullable Integer crashConsistentFrequencyInMinutes;
+    private @Nullable Integer crashConsistentFrequencyInMinutes;
 
     public Optional<Integer> crashConsistentFrequencyInMinutes() {
-        return this.crashConsistentFrequencyInMinutes == null ? Optional.empty() : Optional.ofNullable(this.crashConsistentFrequencyInMinutes);
+        return Optional.ofNullable(this.crashConsistentFrequencyInMinutes);
     }
 
     /**
@@ -48,7 +48,7 @@ public final class RcmAzureMigrationPolicyDetailsResponse extends com.pulumi.res
      * 
      */
     @Import(name="instanceType", required=true)
-      private final String instanceType;
+    private String instanceType;
 
     public String instanceType() {
         return this.instanceType;
@@ -59,10 +59,10 @@ public final class RcmAzureMigrationPolicyDetailsResponse extends com.pulumi.res
      * 
      */
     @Import(name="multiVmSyncStatus")
-      private final @Nullable String multiVmSyncStatus;
+    private @Nullable String multiVmSyncStatus;
 
     public Optional<String> multiVmSyncStatus() {
-        return this.multiVmSyncStatus == null ? Optional.empty() : Optional.ofNullable(this.multiVmSyncStatus);
+        return Optional.ofNullable(this.multiVmSyncStatus);
     }
 
     /**
@@ -70,10 +70,10 @@ public final class RcmAzureMigrationPolicyDetailsResponse extends com.pulumi.res
      * 
      */
     @Import(name="recoveryPointHistory")
-      private final @Nullable Integer recoveryPointHistory;
+    private @Nullable Integer recoveryPointHistory;
 
     public Optional<Integer> recoveryPointHistory() {
-        return this.recoveryPointHistory == null ? Optional.empty() : Optional.ofNullable(this.recoveryPointHistory);
+        return Optional.ofNullable(this.recoveryPointHistory);
     }
 
     /**
@@ -81,91 +81,75 @@ public final class RcmAzureMigrationPolicyDetailsResponse extends com.pulumi.res
      * 
      */
     @Import(name="recoveryPointThresholdInMinutes")
-      private final @Nullable Integer recoveryPointThresholdInMinutes;
+    private @Nullable Integer recoveryPointThresholdInMinutes;
 
     public Optional<Integer> recoveryPointThresholdInMinutes() {
-        return this.recoveryPointThresholdInMinutes == null ? Optional.empty() : Optional.ofNullable(this.recoveryPointThresholdInMinutes);
+        return Optional.ofNullable(this.recoveryPointThresholdInMinutes);
     }
 
-    public RcmAzureMigrationPolicyDetailsResponse(
-        @Nullable Integer appConsistentFrequencyInMinutes,
-        @Nullable Integer crashConsistentFrequencyInMinutes,
-        String instanceType,
-        @Nullable String multiVmSyncStatus,
-        @Nullable Integer recoveryPointHistory,
-        @Nullable Integer recoveryPointThresholdInMinutes) {
-        this.appConsistentFrequencyInMinutes = appConsistentFrequencyInMinutes;
-        this.crashConsistentFrequencyInMinutes = crashConsistentFrequencyInMinutes;
-        this.instanceType = Codegen.stringProp("instanceType").arg(instanceType).require();
-        this.multiVmSyncStatus = multiVmSyncStatus;
-        this.recoveryPointHistory = recoveryPointHistory;
-        this.recoveryPointThresholdInMinutes = recoveryPointThresholdInMinutes;
-    }
+    private RcmAzureMigrationPolicyDetailsResponse() {}
 
-    private RcmAzureMigrationPolicyDetailsResponse() {
-        this.appConsistentFrequencyInMinutes = null;
-        this.crashConsistentFrequencyInMinutes = null;
-        this.instanceType = null;
-        this.multiVmSyncStatus = null;
-        this.recoveryPointHistory = null;
-        this.recoveryPointThresholdInMinutes = null;
+    private RcmAzureMigrationPolicyDetailsResponse(RcmAzureMigrationPolicyDetailsResponse $) {
+        this.appConsistentFrequencyInMinutes = $.appConsistentFrequencyInMinutes;
+        this.crashConsistentFrequencyInMinutes = $.crashConsistentFrequencyInMinutes;
+        this.instanceType = $.instanceType;
+        this.multiVmSyncStatus = $.multiVmSyncStatus;
+        this.recoveryPointHistory = $.recoveryPointHistory;
+        this.recoveryPointThresholdInMinutes = $.recoveryPointThresholdInMinutes;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RcmAzureMigrationPolicyDetailsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Integer appConsistentFrequencyInMinutes;
-        private @Nullable Integer crashConsistentFrequencyInMinutes;
-        private String instanceType;
-        private @Nullable String multiVmSyncStatus;
-        private @Nullable Integer recoveryPointHistory;
-        private @Nullable Integer recoveryPointThresholdInMinutes;
+        private RcmAzureMigrationPolicyDetailsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new RcmAzureMigrationPolicyDetailsResponse();
         }
 
         public Builder(RcmAzureMigrationPolicyDetailsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.appConsistentFrequencyInMinutes = defaults.appConsistentFrequencyInMinutes;
-    	      this.crashConsistentFrequencyInMinutes = defaults.crashConsistentFrequencyInMinutes;
-    	      this.instanceType = defaults.instanceType;
-    	      this.multiVmSyncStatus = defaults.multiVmSyncStatus;
-    	      this.recoveryPointHistory = defaults.recoveryPointHistory;
-    	      this.recoveryPointThresholdInMinutes = defaults.recoveryPointThresholdInMinutes;
+            $ = new RcmAzureMigrationPolicyDetailsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder appConsistentFrequencyInMinutes(@Nullable Integer appConsistentFrequencyInMinutes) {
-            this.appConsistentFrequencyInMinutes = appConsistentFrequencyInMinutes;
+            $.appConsistentFrequencyInMinutes = appConsistentFrequencyInMinutes;
             return this;
         }
+
         public Builder crashConsistentFrequencyInMinutes(@Nullable Integer crashConsistentFrequencyInMinutes) {
-            this.crashConsistentFrequencyInMinutes = crashConsistentFrequencyInMinutes;
+            $.crashConsistentFrequencyInMinutes = crashConsistentFrequencyInMinutes;
             return this;
         }
+
         public Builder instanceType(String instanceType) {
-            this.instanceType = Objects.requireNonNull(instanceType);
+            $.instanceType = instanceType;
             return this;
         }
+
         public Builder multiVmSyncStatus(@Nullable String multiVmSyncStatus) {
-            this.multiVmSyncStatus = multiVmSyncStatus;
+            $.multiVmSyncStatus = multiVmSyncStatus;
             return this;
         }
+
         public Builder recoveryPointHistory(@Nullable Integer recoveryPointHistory) {
-            this.recoveryPointHistory = recoveryPointHistory;
+            $.recoveryPointHistory = recoveryPointHistory;
             return this;
         }
+
         public Builder recoveryPointThresholdInMinutes(@Nullable Integer recoveryPointThresholdInMinutes) {
-            this.recoveryPointThresholdInMinutes = recoveryPointThresholdInMinutes;
+            $.recoveryPointThresholdInMinutes = recoveryPointThresholdInMinutes;
             return this;
-        }        public RcmAzureMigrationPolicyDetailsResponse build() {
-            return new RcmAzureMigrationPolicyDetailsResponse(appConsistentFrequencyInMinutes, crashConsistentFrequencyInMinutes, instanceType, multiVmSyncStatus, recoveryPointHistory, recoveryPointThresholdInMinutes);
+        }
+
+        public RcmAzureMigrationPolicyDetailsResponse build() {
+            $.instanceType = Codegen.stringProp("instanceType").arg($.instanceType).require();
+            return $;
         }
     }
+
 }

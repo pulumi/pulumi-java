@@ -8,9 +8,9 @@ import com.pulumi.azurenative.databoxedge.enums.SkuTier;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +27,10 @@ public final class SkuArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<Either<String,SkuName>> name;
+    private @Nullable Output<Either<String,SkuName>> name;
 
-    public Output<Either<String,SkuName>> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<Either<String,SkuName>>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -38,63 +38,58 @@ public final class SkuArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tier")
-      private final @Nullable Output<Either<String,SkuTier>> tier;
+    private @Nullable Output<Either<String,SkuTier>> tier;
 
-    public Output<Either<String,SkuTier>> tier() {
-        return this.tier == null ? Codegen.empty() : this.tier;
+    public Optional<Output<Either<String,SkuTier>>> tier() {
+        return Optional.ofNullable(this.tier);
     }
 
-    public SkuArgs(
-        @Nullable Output<Either<String,SkuName>> name,
-        @Nullable Output<Either<String,SkuTier>> tier) {
-        this.name = name;
-        this.tier = tier;
-    }
+    private SkuArgs() {}
 
-    private SkuArgs() {
-        this.name = Codegen.empty();
-        this.tier = Codegen.empty();
+    private SkuArgs(SkuArgs $) {
+        this.name = $.name;
+        this.tier = $.tier;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SkuArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Either<String,SkuName>> name;
-        private @Nullable Output<Either<String,SkuTier>> tier;
+        private SkuArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SkuArgs();
         }
 
         public Builder(SkuArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.tier = defaults.tier;
+            $ = new SkuArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder name(@Nullable Output<Either<String,SkuName>> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable Either<String,SkuName> name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(Either<String,SkuName> name) {
+            return name(Output.of(name));
         }
+
         public Builder tier(@Nullable Output<Either<String,SkuTier>> tier) {
-            this.tier = tier;
+            $.tier = tier;
             return this;
         }
-        public Builder tier(@Nullable Either<String,SkuTier> tier) {
-            this.tier = Codegen.ofNullable(tier);
-            return this;
-        }        public SkuArgs build() {
-            return new SkuArgs(name, tier);
+
+        public Builder tier(Either<String,SkuTier> tier) {
+            return tier(Output.of(tier));
+        }
+
+        public SkuArgs build() {
+            return $;
         }
     }
+
 }

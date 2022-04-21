@@ -14,62 +14,59 @@ public final class GetClusterAddonsConfigCloudrunConfig extends com.pulumi.resou
     public static final GetClusterAddonsConfigCloudrunConfig Empty = new GetClusterAddonsConfigCloudrunConfig();
 
     @Import(name="disabled", required=true)
-      private final Boolean disabled;
+    private Boolean disabled;
 
     public Boolean disabled() {
         return this.disabled;
     }
 
     @Import(name="loadBalancerType", required=true)
-      private final String loadBalancerType;
+    private String loadBalancerType;
 
     public String loadBalancerType() {
         return this.loadBalancerType;
     }
 
-    public GetClusterAddonsConfigCloudrunConfig(
-        Boolean disabled,
-        String loadBalancerType) {
-        this.disabled = Objects.requireNonNull(disabled, "expected parameter 'disabled' to be non-null");
-        this.loadBalancerType = Objects.requireNonNull(loadBalancerType, "expected parameter 'loadBalancerType' to be non-null");
-    }
+    private GetClusterAddonsConfigCloudrunConfig() {}
 
-    private GetClusterAddonsConfigCloudrunConfig() {
-        this.disabled = null;
-        this.loadBalancerType = null;
+    private GetClusterAddonsConfigCloudrunConfig(GetClusterAddonsConfigCloudrunConfig $) {
+        this.disabled = $.disabled;
+        this.loadBalancerType = $.loadBalancerType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetClusterAddonsConfigCloudrunConfig defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Boolean disabled;
-        private String loadBalancerType;
+        private GetClusterAddonsConfigCloudrunConfig $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetClusterAddonsConfigCloudrunConfig();
         }
 
         public Builder(GetClusterAddonsConfigCloudrunConfig defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.disabled = defaults.disabled;
-    	      this.loadBalancerType = defaults.loadBalancerType;
+            $ = new GetClusterAddonsConfigCloudrunConfig(Objects.requireNonNull(defaults));
         }
 
         public Builder disabled(Boolean disabled) {
-            this.disabled = Objects.requireNonNull(disabled);
+            $.disabled = disabled;
             return this;
         }
+
         public Builder loadBalancerType(String loadBalancerType) {
-            this.loadBalancerType = Objects.requireNonNull(loadBalancerType);
+            $.loadBalancerType = loadBalancerType;
             return this;
-        }        public GetClusterAddonsConfigCloudrunConfig build() {
-            return new GetClusterAddonsConfigCloudrunConfig(disabled, loadBalancerType);
+        }
+
+        public GetClusterAddonsConfigCloudrunConfig build() {
+            $.disabled = Objects.requireNonNull($.disabled, "expected parameter 'disabled' to be non-null");
+            $.loadBalancerType = Objects.requireNonNull($.loadBalancerType, "expected parameter 'loadBalancerType' to be non-null");
+            return $;
         }
     }
+
 }

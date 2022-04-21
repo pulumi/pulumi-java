@@ -6,9 +6,9 @@ package com.pulumi.awsnative.applicationinsights.inputs;
 import com.pulumi.awsnative.applicationinsights.enums.ApplicationAlarmSeverity;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,7 +25,7 @@ public final class ApplicationAlarmArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="alarmName", required=true)
-      private final Output<String> alarmName;
+    private Output<String> alarmName;
 
     public Output<String> alarmName() {
         return this.alarmName;
@@ -36,63 +36,59 @@ public final class ApplicationAlarmArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="severity")
-      private final @Nullable Output<ApplicationAlarmSeverity> severity;
+    private @Nullable Output<ApplicationAlarmSeverity> severity;
 
-    public Output<ApplicationAlarmSeverity> severity() {
-        return this.severity == null ? Codegen.empty() : this.severity;
+    public Optional<Output<ApplicationAlarmSeverity>> severity() {
+        return Optional.ofNullable(this.severity);
     }
 
-    public ApplicationAlarmArgs(
-        Output<String> alarmName,
-        @Nullable Output<ApplicationAlarmSeverity> severity) {
-        this.alarmName = Objects.requireNonNull(alarmName, "expected parameter 'alarmName' to be non-null");
-        this.severity = severity;
-    }
+    private ApplicationAlarmArgs() {}
 
-    private ApplicationAlarmArgs() {
-        this.alarmName = Codegen.empty();
-        this.severity = Codegen.empty();
+    private ApplicationAlarmArgs(ApplicationAlarmArgs $) {
+        this.alarmName = $.alarmName;
+        this.severity = $.severity;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ApplicationAlarmArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> alarmName;
-        private @Nullable Output<ApplicationAlarmSeverity> severity;
+        private ApplicationAlarmArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ApplicationAlarmArgs();
         }
 
         public Builder(ApplicationAlarmArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.alarmName = defaults.alarmName;
-    	      this.severity = defaults.severity;
+            $ = new ApplicationAlarmArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder alarmName(Output<String> alarmName) {
-            this.alarmName = Objects.requireNonNull(alarmName);
+            $.alarmName = alarmName;
             return this;
         }
+
         public Builder alarmName(String alarmName) {
-            this.alarmName = Output.of(Objects.requireNonNull(alarmName));
-            return this;
+            return alarmName(Output.of(alarmName));
         }
+
         public Builder severity(@Nullable Output<ApplicationAlarmSeverity> severity) {
-            this.severity = severity;
+            $.severity = severity;
             return this;
         }
-        public Builder severity(@Nullable ApplicationAlarmSeverity severity) {
-            this.severity = Codegen.ofNullable(severity);
-            return this;
-        }        public ApplicationAlarmArgs build() {
-            return new ApplicationAlarmArgs(alarmName, severity);
+
+        public Builder severity(ApplicationAlarmSeverity severity) {
+            return severity(Output.of(severity));
+        }
+
+        public ApplicationAlarmArgs build() {
+            $.alarmName = Objects.requireNonNull($.alarmName, "expected parameter 'alarmName' to be non-null");
+            return $;
         }
     }
+
 }

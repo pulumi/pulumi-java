@@ -17,7 +17,7 @@ public final class GetRoleAssignmentArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="assignmentName", required=true)
-      private final String assignmentName;
+    private String assignmentName;
 
     public String assignmentName() {
         return this.assignmentName;
@@ -28,7 +28,7 @@ public final class GetRoleAssignmentArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="hubName", required=true)
-      private final String hubName;
+    private String hubName;
 
     public String hubName() {
         return this.hubName;
@@ -39,64 +39,59 @@ public final class GetRoleAssignmentArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public GetRoleAssignmentArgs(
-        String assignmentName,
-        String hubName,
-        String resourceGroupName) {
-        this.assignmentName = Objects.requireNonNull(assignmentName, "expected parameter 'assignmentName' to be non-null");
-        this.hubName = Objects.requireNonNull(hubName, "expected parameter 'hubName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private GetRoleAssignmentArgs() {}
 
-    private GetRoleAssignmentArgs() {
-        this.assignmentName = null;
-        this.hubName = null;
-        this.resourceGroupName = null;
+    private GetRoleAssignmentArgs(GetRoleAssignmentArgs $) {
+        this.assignmentName = $.assignmentName;
+        this.hubName = $.hubName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetRoleAssignmentArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String assignmentName;
-        private String hubName;
-        private String resourceGroupName;
+        private GetRoleAssignmentArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetRoleAssignmentArgs();
         }
 
         public Builder(GetRoleAssignmentArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.assignmentName = defaults.assignmentName;
-    	      this.hubName = defaults.hubName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new GetRoleAssignmentArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder assignmentName(String assignmentName) {
-            this.assignmentName = Objects.requireNonNull(assignmentName);
+            $.assignmentName = assignmentName;
             return this;
         }
+
         public Builder hubName(String hubName) {
-            this.hubName = Objects.requireNonNull(hubName);
+            $.hubName = hubName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public GetRoleAssignmentArgs build() {
-            return new GetRoleAssignmentArgs(assignmentName, hubName, resourceGroupName);
+        }
+
+        public GetRoleAssignmentArgs build() {
+            $.assignmentName = Objects.requireNonNull($.assignmentName, "expected parameter 'assignmentName' to be non-null");
+            $.hubName = Objects.requireNonNull($.hubName, "expected parameter 'hubName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

@@ -24,10 +24,10 @@ public final class OpenIdAuthenticationSettingsContractResponse extends com.pulu
      * 
      */
     @Import(name="bearerTokenSendingMethods")
-      private final @Nullable List<String> bearerTokenSendingMethods;
+    private @Nullable List<String> bearerTokenSendingMethods;
 
-    public List<String> bearerTokenSendingMethods() {
-        return this.bearerTokenSendingMethods == null ? List.of() : this.bearerTokenSendingMethods;
+    public Optional<List<String>> bearerTokenSendingMethods() {
+        return Optional.ofNullable(this.bearerTokenSendingMethods);
     }
 
     /**
@@ -35,58 +35,54 @@ public final class OpenIdAuthenticationSettingsContractResponse extends com.pulu
      * 
      */
     @Import(name="openidProviderId")
-      private final @Nullable String openidProviderId;
+    private @Nullable String openidProviderId;
 
     public Optional<String> openidProviderId() {
-        return this.openidProviderId == null ? Optional.empty() : Optional.ofNullable(this.openidProviderId);
+        return Optional.ofNullable(this.openidProviderId);
     }
 
-    public OpenIdAuthenticationSettingsContractResponse(
-        @Nullable List<String> bearerTokenSendingMethods,
-        @Nullable String openidProviderId) {
-        this.bearerTokenSendingMethods = bearerTokenSendingMethods;
-        this.openidProviderId = openidProviderId;
-    }
+    private OpenIdAuthenticationSettingsContractResponse() {}
 
-    private OpenIdAuthenticationSettingsContractResponse() {
-        this.bearerTokenSendingMethods = List.of();
-        this.openidProviderId = null;
+    private OpenIdAuthenticationSettingsContractResponse(OpenIdAuthenticationSettingsContractResponse $) {
+        this.bearerTokenSendingMethods = $.bearerTokenSendingMethods;
+        this.openidProviderId = $.openidProviderId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(OpenIdAuthenticationSettingsContractResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<String> bearerTokenSendingMethods;
-        private @Nullable String openidProviderId;
+        private OpenIdAuthenticationSettingsContractResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new OpenIdAuthenticationSettingsContractResponse();
         }
 
         public Builder(OpenIdAuthenticationSettingsContractResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.bearerTokenSendingMethods = defaults.bearerTokenSendingMethods;
-    	      this.openidProviderId = defaults.openidProviderId;
+            $ = new OpenIdAuthenticationSettingsContractResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder bearerTokenSendingMethods(@Nullable List<String> bearerTokenSendingMethods) {
-            this.bearerTokenSendingMethods = bearerTokenSendingMethods;
+            $.bearerTokenSendingMethods = bearerTokenSendingMethods;
             return this;
         }
+
         public Builder bearerTokenSendingMethods(String... bearerTokenSendingMethods) {
             return bearerTokenSendingMethods(List.of(bearerTokenSendingMethods));
         }
+
         public Builder openidProviderId(@Nullable String openidProviderId) {
-            this.openidProviderId = openidProviderId;
+            $.openidProviderId = openidProviderId;
             return this;
-        }        public OpenIdAuthenticationSettingsContractResponse build() {
-            return new OpenIdAuthenticationSettingsContractResponse(bearerTokenSendingMethods, openidProviderId);
+        }
+
+        public OpenIdAuthenticationSettingsContractResponse build() {
+            return $;
         }
     }
+
 }

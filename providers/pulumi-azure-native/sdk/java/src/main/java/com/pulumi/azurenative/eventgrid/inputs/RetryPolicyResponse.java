@@ -23,10 +23,10 @@ public final class RetryPolicyResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="eventTimeToLiveInMinutes")
-      private final @Nullable Integer eventTimeToLiveInMinutes;
+    private @Nullable Integer eventTimeToLiveInMinutes;
 
     public Optional<Integer> eventTimeToLiveInMinutes() {
-        return this.eventTimeToLiveInMinutes == null ? Optional.empty() : Optional.ofNullable(this.eventTimeToLiveInMinutes);
+        return Optional.ofNullable(this.eventTimeToLiveInMinutes);
     }
 
     /**
@@ -34,55 +34,50 @@ public final class RetryPolicyResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="maxDeliveryAttempts")
-      private final @Nullable Integer maxDeliveryAttempts;
+    private @Nullable Integer maxDeliveryAttempts;
 
     public Optional<Integer> maxDeliveryAttempts() {
-        return this.maxDeliveryAttempts == null ? Optional.empty() : Optional.ofNullable(this.maxDeliveryAttempts);
+        return Optional.ofNullable(this.maxDeliveryAttempts);
     }
 
-    public RetryPolicyResponse(
-        @Nullable Integer eventTimeToLiveInMinutes,
-        @Nullable Integer maxDeliveryAttempts) {
-        this.eventTimeToLiveInMinutes = eventTimeToLiveInMinutes;
-        this.maxDeliveryAttempts = maxDeliveryAttempts;
-    }
+    private RetryPolicyResponse() {}
 
-    private RetryPolicyResponse() {
-        this.eventTimeToLiveInMinutes = null;
-        this.maxDeliveryAttempts = null;
+    private RetryPolicyResponse(RetryPolicyResponse $) {
+        this.eventTimeToLiveInMinutes = $.eventTimeToLiveInMinutes;
+        this.maxDeliveryAttempts = $.maxDeliveryAttempts;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RetryPolicyResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Integer eventTimeToLiveInMinutes;
-        private @Nullable Integer maxDeliveryAttempts;
+        private RetryPolicyResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new RetryPolicyResponse();
         }
 
         public Builder(RetryPolicyResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.eventTimeToLiveInMinutes = defaults.eventTimeToLiveInMinutes;
-    	      this.maxDeliveryAttempts = defaults.maxDeliveryAttempts;
+            $ = new RetryPolicyResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder eventTimeToLiveInMinutes(@Nullable Integer eventTimeToLiveInMinutes) {
-            this.eventTimeToLiveInMinutes = eventTimeToLiveInMinutes;
+            $.eventTimeToLiveInMinutes = eventTimeToLiveInMinutes;
             return this;
         }
+
         public Builder maxDeliveryAttempts(@Nullable Integer maxDeliveryAttempts) {
-            this.maxDeliveryAttempts = maxDeliveryAttempts;
+            $.maxDeliveryAttempts = maxDeliveryAttempts;
             return this;
-        }        public RetryPolicyResponse build() {
-            return new RetryPolicyResponse(eventTimeToLiveInMinutes, maxDeliveryAttempts);
+        }
+
+        public RetryPolicyResponse build() {
+            return $;
         }
     }
+
 }

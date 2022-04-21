@@ -22,7 +22,7 @@ public final class ApigatewayApiConfigGrpcServiceDefinitionResponse extends com.
      * 
      */
     @Import(name="fileDescriptorSet", required=true)
-      private final ApigatewayApiConfigFileResponse fileDescriptorSet;
+    private ApigatewayApiConfigFileResponse fileDescriptorSet;
 
     public ApigatewayApiConfigFileResponse fileDescriptorSet() {
         return this.fileDescriptorSet;
@@ -33,58 +33,56 @@ public final class ApigatewayApiConfigGrpcServiceDefinitionResponse extends com.
      * 
      */
     @Import(name="source", required=true)
-      private final List<ApigatewayApiConfigFileResponse> source;
+    private List<ApigatewayApiConfigFileResponse> source;
 
     public List<ApigatewayApiConfigFileResponse> source() {
         return this.source;
     }
 
-    public ApigatewayApiConfigGrpcServiceDefinitionResponse(
-        ApigatewayApiConfigFileResponse fileDescriptorSet,
-        List<ApigatewayApiConfigFileResponse> source) {
-        this.fileDescriptorSet = Objects.requireNonNull(fileDescriptorSet, "expected parameter 'fileDescriptorSet' to be non-null");
-        this.source = Objects.requireNonNull(source, "expected parameter 'source' to be non-null");
-    }
+    private ApigatewayApiConfigGrpcServiceDefinitionResponse() {}
 
-    private ApigatewayApiConfigGrpcServiceDefinitionResponse() {
-        this.fileDescriptorSet = null;
-        this.source = List.of();
+    private ApigatewayApiConfigGrpcServiceDefinitionResponse(ApigatewayApiConfigGrpcServiceDefinitionResponse $) {
+        this.fileDescriptorSet = $.fileDescriptorSet;
+        this.source = $.source;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ApigatewayApiConfigGrpcServiceDefinitionResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private ApigatewayApiConfigFileResponse fileDescriptorSet;
-        private List<ApigatewayApiConfigFileResponse> source;
+        private ApigatewayApiConfigGrpcServiceDefinitionResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ApigatewayApiConfigGrpcServiceDefinitionResponse();
         }
 
         public Builder(ApigatewayApiConfigGrpcServiceDefinitionResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.fileDescriptorSet = defaults.fileDescriptorSet;
-    	      this.source = defaults.source;
+            $ = new ApigatewayApiConfigGrpcServiceDefinitionResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder fileDescriptorSet(ApigatewayApiConfigFileResponse fileDescriptorSet) {
-            this.fileDescriptorSet = Objects.requireNonNull(fileDescriptorSet);
+            $.fileDescriptorSet = fileDescriptorSet;
             return this;
         }
+
         public Builder source(List<ApigatewayApiConfigFileResponse> source) {
-            this.source = Objects.requireNonNull(source);
+            $.source = source;
             return this;
         }
+
         public Builder source(ApigatewayApiConfigFileResponse... source) {
             return source(List.of(source));
-        }        public ApigatewayApiConfigGrpcServiceDefinitionResponse build() {
-            return new ApigatewayApiConfigGrpcServiceDefinitionResponse(fileDescriptorSet, source);
+        }
+
+        public ApigatewayApiConfigGrpcServiceDefinitionResponse build() {
+            $.fileDescriptorSet = Objects.requireNonNull($.fileDescriptorSet, "expected parameter 'fileDescriptorSet' to be non-null");
+            $.source = Objects.requireNonNull($.source, "expected parameter 'source' to be non-null");
+            return $;
         }
     }
+
 }

@@ -13,7 +13,7 @@ public final class ManagedZonePrivateVisibilityConfigNetworkResponse extends com
     public static final ManagedZonePrivateVisibilityConfigNetworkResponse Empty = new ManagedZonePrivateVisibilityConfigNetworkResponse();
 
     @Import(name="kind", required=true)
-      private final String kind;
+    private String kind;
 
     public String kind() {
         return this.kind;
@@ -24,55 +24,52 @@ public final class ManagedZonePrivateVisibilityConfigNetworkResponse extends com
      * 
      */
     @Import(name="networkUrl", required=true)
-      private final String networkUrl;
+    private String networkUrl;
 
     public String networkUrl() {
         return this.networkUrl;
     }
 
-    public ManagedZonePrivateVisibilityConfigNetworkResponse(
-        String kind,
-        String networkUrl) {
-        this.kind = Objects.requireNonNull(kind, "expected parameter 'kind' to be non-null");
-        this.networkUrl = Objects.requireNonNull(networkUrl, "expected parameter 'networkUrl' to be non-null");
-    }
+    private ManagedZonePrivateVisibilityConfigNetworkResponse() {}
 
-    private ManagedZonePrivateVisibilityConfigNetworkResponse() {
-        this.kind = null;
-        this.networkUrl = null;
+    private ManagedZonePrivateVisibilityConfigNetworkResponse(ManagedZonePrivateVisibilityConfigNetworkResponse $) {
+        this.kind = $.kind;
+        this.networkUrl = $.networkUrl;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ManagedZonePrivateVisibilityConfigNetworkResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String kind;
-        private String networkUrl;
+        private ManagedZonePrivateVisibilityConfigNetworkResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ManagedZonePrivateVisibilityConfigNetworkResponse();
         }
 
         public Builder(ManagedZonePrivateVisibilityConfigNetworkResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.kind = defaults.kind;
-    	      this.networkUrl = defaults.networkUrl;
+            $ = new ManagedZonePrivateVisibilityConfigNetworkResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder kind(String kind) {
-            this.kind = Objects.requireNonNull(kind);
+            $.kind = kind;
             return this;
         }
+
         public Builder networkUrl(String networkUrl) {
-            this.networkUrl = Objects.requireNonNull(networkUrl);
+            $.networkUrl = networkUrl;
             return this;
-        }        public ManagedZonePrivateVisibilityConfigNetworkResponse build() {
-            return new ManagedZonePrivateVisibilityConfigNetworkResponse(kind, networkUrl);
+        }
+
+        public ManagedZonePrivateVisibilityConfigNetworkResponse build() {
+            $.kind = Objects.requireNonNull($.kind, "expected parameter 'kind' to be non-null");
+            $.networkUrl = Objects.requireNonNull($.networkUrl, "expected parameter 'networkUrl' to be non-null");
+            return $;
         }
     }
+
 }

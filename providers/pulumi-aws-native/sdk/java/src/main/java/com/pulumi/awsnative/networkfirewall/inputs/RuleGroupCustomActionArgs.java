@@ -6,7 +6,6 @@ package com.pulumi.awsnative.networkfirewall.inputs;
 import com.pulumi.awsnative.networkfirewall.inputs.RuleGroupActionDefinitionArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,70 +15,67 @@ public final class RuleGroupCustomActionArgs extends com.pulumi.resources.Resour
     public static final RuleGroupCustomActionArgs Empty = new RuleGroupCustomActionArgs();
 
     @Import(name="actionDefinition", required=true)
-      private final Output<RuleGroupActionDefinitionArgs> actionDefinition;
+    private Output<RuleGroupActionDefinitionArgs> actionDefinition;
 
     public Output<RuleGroupActionDefinitionArgs> actionDefinition() {
         return this.actionDefinition;
     }
 
     @Import(name="actionName", required=true)
-      private final Output<String> actionName;
+    private Output<String> actionName;
 
     public Output<String> actionName() {
         return this.actionName;
     }
 
-    public RuleGroupCustomActionArgs(
-        Output<RuleGroupActionDefinitionArgs> actionDefinition,
-        Output<String> actionName) {
-        this.actionDefinition = Objects.requireNonNull(actionDefinition, "expected parameter 'actionDefinition' to be non-null");
-        this.actionName = Objects.requireNonNull(actionName, "expected parameter 'actionName' to be non-null");
-    }
+    private RuleGroupCustomActionArgs() {}
 
-    private RuleGroupCustomActionArgs() {
-        this.actionDefinition = Codegen.empty();
-        this.actionName = Codegen.empty();
+    private RuleGroupCustomActionArgs(RuleGroupCustomActionArgs $) {
+        this.actionDefinition = $.actionDefinition;
+        this.actionName = $.actionName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RuleGroupCustomActionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<RuleGroupActionDefinitionArgs> actionDefinition;
-        private Output<String> actionName;
+        private RuleGroupCustomActionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RuleGroupCustomActionArgs();
         }
 
         public Builder(RuleGroupCustomActionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.actionDefinition = defaults.actionDefinition;
-    	      this.actionName = defaults.actionName;
+            $ = new RuleGroupCustomActionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder actionDefinition(Output<RuleGroupActionDefinitionArgs> actionDefinition) {
-            this.actionDefinition = Objects.requireNonNull(actionDefinition);
+            $.actionDefinition = actionDefinition;
             return this;
         }
+
         public Builder actionDefinition(RuleGroupActionDefinitionArgs actionDefinition) {
-            this.actionDefinition = Output.of(Objects.requireNonNull(actionDefinition));
-            return this;
+            return actionDefinition(Output.of(actionDefinition));
         }
+
         public Builder actionName(Output<String> actionName) {
-            this.actionName = Objects.requireNonNull(actionName);
+            $.actionName = actionName;
             return this;
         }
+
         public Builder actionName(String actionName) {
-            this.actionName = Output.of(Objects.requireNonNull(actionName));
-            return this;
-        }        public RuleGroupCustomActionArgs build() {
-            return new RuleGroupCustomActionArgs(actionDefinition, actionName);
+            return actionName(Output.of(actionName));
+        }
+
+        public RuleGroupCustomActionArgs build() {
+            $.actionDefinition = Objects.requireNonNull($.actionDefinition, "expected parameter 'actionDefinition' to be non-null");
+            $.actionName = Objects.requireNonNull($.actionName, "expected parameter 'actionName' to be non-null");
+            return $;
         }
     }
+
 }

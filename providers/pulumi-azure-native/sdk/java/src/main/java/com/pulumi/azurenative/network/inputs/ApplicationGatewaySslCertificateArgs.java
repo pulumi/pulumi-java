@@ -5,9 +5,9 @@ package com.pulumi.azurenative.network.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class ApplicationGatewaySslCertificateArgs extends com.pulumi.resou
      * 
      */
     @Import(name="data")
-      private final @Nullable Output<String> data;
+    private @Nullable Output<String> data;
 
-    public Output<String> data() {
-        return this.data == null ? Codegen.empty() : this.data;
+    public Optional<Output<String>> data() {
+        return Optional.ofNullable(this.data);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class ApplicationGatewaySslCertificateArgs extends com.pulumi.resou
      * 
      */
     @Import(name="id")
-      private final @Nullable Output<String> id;
+    private @Nullable Output<String> id;
 
-    public Output<String> id() {
-        return this.id == null ? Codegen.empty() : this.id;
+    public Optional<Output<String>> id() {
+        return Optional.ofNullable(this.id);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class ApplicationGatewaySslCertificateArgs extends com.pulumi.resou
      * 
      */
     @Import(name="keyVaultSecretId")
-      private final @Nullable Output<String> keyVaultSecretId;
+    private @Nullable Output<String> keyVaultSecretId;
 
-    public Output<String> keyVaultSecretId() {
-        return this.keyVaultSecretId == null ? Codegen.empty() : this.keyVaultSecretId;
+    public Optional<Output<String>> keyVaultSecretId() {
+        return Optional.ofNullable(this.keyVaultSecretId);
     }
 
     /**
@@ -57,10 +57,10 @@ public final class ApplicationGatewaySslCertificateArgs extends com.pulumi.resou
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -68,102 +68,88 @@ public final class ApplicationGatewaySslCertificateArgs extends com.pulumi.resou
      * 
      */
     @Import(name="password")
-      private final @Nullable Output<String> password;
+    private @Nullable Output<String> password;
 
-    public Output<String> password() {
-        return this.password == null ? Codegen.empty() : this.password;
+    public Optional<Output<String>> password() {
+        return Optional.ofNullable(this.password);
     }
 
-    public ApplicationGatewaySslCertificateArgs(
-        @Nullable Output<String> data,
-        @Nullable Output<String> id,
-        @Nullable Output<String> keyVaultSecretId,
-        @Nullable Output<String> name,
-        @Nullable Output<String> password) {
-        this.data = data;
-        this.id = id;
-        this.keyVaultSecretId = keyVaultSecretId;
-        this.name = name;
-        this.password = password;
-    }
+    private ApplicationGatewaySslCertificateArgs() {}
 
-    private ApplicationGatewaySslCertificateArgs() {
-        this.data = Codegen.empty();
-        this.id = Codegen.empty();
-        this.keyVaultSecretId = Codegen.empty();
-        this.name = Codegen.empty();
-        this.password = Codegen.empty();
+    private ApplicationGatewaySslCertificateArgs(ApplicationGatewaySslCertificateArgs $) {
+        this.data = $.data;
+        this.id = $.id;
+        this.keyVaultSecretId = $.keyVaultSecretId;
+        this.name = $.name;
+        this.password = $.password;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ApplicationGatewaySslCertificateArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> data;
-        private @Nullable Output<String> id;
-        private @Nullable Output<String> keyVaultSecretId;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> password;
+        private ApplicationGatewaySslCertificateArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ApplicationGatewaySslCertificateArgs();
         }
 
         public Builder(ApplicationGatewaySslCertificateArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.data = defaults.data;
-    	      this.id = defaults.id;
-    	      this.keyVaultSecretId = defaults.keyVaultSecretId;
-    	      this.name = defaults.name;
-    	      this.password = defaults.password;
+            $ = new ApplicationGatewaySslCertificateArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder data(@Nullable Output<String> data) {
-            this.data = data;
+            $.data = data;
             return this;
         }
-        public Builder data(@Nullable String data) {
-            this.data = Codegen.ofNullable(data);
-            return this;
+
+        public Builder data(String data) {
+            return data(Output.of(data));
         }
+
         public Builder id(@Nullable Output<String> id) {
-            this.id = id;
+            $.id = id;
             return this;
         }
-        public Builder id(@Nullable String id) {
-            this.id = Codegen.ofNullable(id);
-            return this;
+
+        public Builder id(String id) {
+            return id(Output.of(id));
         }
+
         public Builder keyVaultSecretId(@Nullable Output<String> keyVaultSecretId) {
-            this.keyVaultSecretId = keyVaultSecretId;
+            $.keyVaultSecretId = keyVaultSecretId;
             return this;
         }
-        public Builder keyVaultSecretId(@Nullable String keyVaultSecretId) {
-            this.keyVaultSecretId = Codegen.ofNullable(keyVaultSecretId);
-            return this;
+
+        public Builder keyVaultSecretId(String keyVaultSecretId) {
+            return keyVaultSecretId(Output.of(keyVaultSecretId));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder password(@Nullable Output<String> password) {
-            this.password = password;
+            $.password = password;
             return this;
         }
-        public Builder password(@Nullable String password) {
-            this.password = Codegen.ofNullable(password);
-            return this;
-        }        public ApplicationGatewaySslCertificateArgs build() {
-            return new ApplicationGatewaySslCertificateArgs(data, id, keyVaultSecretId, name, password);
+
+        public Builder password(String password) {
+            return password(Output.of(password));
+        }
+
+        public ApplicationGatewaySslCertificateArgs build() {
+            return $;
         }
     }
+
 }

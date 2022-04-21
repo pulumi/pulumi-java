@@ -23,10 +23,10 @@ public final class AssessmentStatusResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="cause")
-      private final @Nullable String cause;
+    private @Nullable String cause;
 
     public Optional<String> cause() {
-        return this.cause == null ? Optional.empty() : Optional.ofNullable(this.cause);
+        return Optional.ofNullable(this.cause);
     }
 
     /**
@@ -34,7 +34,7 @@ public final class AssessmentStatusResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="code", required=true)
-      private final String code;
+    private String code;
 
     public String code() {
         return this.code;
@@ -45,64 +45,57 @@ public final class AssessmentStatusResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="description")
-      private final @Nullable String description;
+    private @Nullable String description;
 
     public Optional<String> description() {
-        return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
+        return Optional.ofNullable(this.description);
     }
 
-    public AssessmentStatusResponse(
-        @Nullable String cause,
-        String code,
-        @Nullable String description) {
-        this.cause = cause;
-        this.code = Objects.requireNonNull(code, "expected parameter 'code' to be non-null");
-        this.description = description;
-    }
+    private AssessmentStatusResponse() {}
 
-    private AssessmentStatusResponse() {
-        this.cause = null;
-        this.code = null;
-        this.description = null;
+    private AssessmentStatusResponse(AssessmentStatusResponse $) {
+        this.cause = $.cause;
+        this.code = $.code;
+        this.description = $.description;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AssessmentStatusResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String cause;
-        private String code;
-        private @Nullable String description;
+        private AssessmentStatusResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AssessmentStatusResponse();
         }
 
         public Builder(AssessmentStatusResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cause = defaults.cause;
-    	      this.code = defaults.code;
-    	      this.description = defaults.description;
+            $ = new AssessmentStatusResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder cause(@Nullable String cause) {
-            this.cause = cause;
+            $.cause = cause;
             return this;
         }
+
         public Builder code(String code) {
-            this.code = Objects.requireNonNull(code);
+            $.code = code;
             return this;
         }
+
         public Builder description(@Nullable String description) {
-            this.description = description;
+            $.description = description;
             return this;
-        }        public AssessmentStatusResponse build() {
-            return new AssessmentStatusResponse(cause, code, description);
+        }
+
+        public AssessmentStatusResponse build() {
+            $.code = Objects.requireNonNull($.code, "expected parameter 'code' to be non-null");
+            return $;
         }
     }
+
 }

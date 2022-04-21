@@ -5,7 +5,6 @@ package com.pulumi.gcp.monitoring;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.monitoring.inputs.SloBasicSliArgs;
 import com.pulumi.gcp.monitoring.inputs.SloRequestBasedSliArgs;
 import com.pulumi.gcp.monitoring.inputs.SloWindowsBasedSliArgs;
@@ -13,6 +12,7 @@ import java.lang.Double;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -31,10 +31,10 @@ public final class SloArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="basicSli")
-      private final @Nullable Output<SloBasicSliArgs> basicSli;
+    private @Nullable Output<SloBasicSliArgs> basicSli;
 
-    public Output<SloBasicSliArgs> basicSli() {
-        return this.basicSli == null ? Codegen.empty() : this.basicSli;
+    public Optional<Output<SloBasicSliArgs>> basicSli() {
+        return Optional.ofNullable(this.basicSli);
     }
 
     /**
@@ -44,10 +44,10 @@ public final class SloArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="calendarPeriod")
-      private final @Nullable Output<String> calendarPeriod;
+    private @Nullable Output<String> calendarPeriod;
 
-    public Output<String> calendarPeriod() {
-        return this.calendarPeriod == null ? Codegen.empty() : this.calendarPeriod;
+    public Optional<Output<String>> calendarPeriod() {
+        return Optional.ofNullable(this.calendarPeriod);
     }
 
     /**
@@ -55,10 +55,10 @@ public final class SloArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="displayName")
-      private final @Nullable Output<String> displayName;
+    private @Nullable Output<String> displayName;
 
-    public Output<String> displayName() {
-        return this.displayName == null ? Codegen.empty() : this.displayName;
+    public Optional<Output<String>> displayName() {
+        return Optional.ofNullable(this.displayName);
     }
 
     /**
@@ -67,7 +67,7 @@ public final class SloArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="goal", required=true)
-      private final Output<Double> goal;
+    private Output<Double> goal;
 
     public Output<Double> goal() {
         return this.goal;
@@ -79,10 +79,10 @@ public final class SloArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -97,10 +97,10 @@ public final class SloArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="requestBasedSli")
-      private final @Nullable Output<SloRequestBasedSliArgs> requestBasedSli;
+    private @Nullable Output<SloRequestBasedSliArgs> requestBasedSli;
 
-    public Output<SloRequestBasedSliArgs> requestBasedSli() {
-        return this.requestBasedSli == null ? Codegen.empty() : this.requestBasedSli;
+    public Optional<Output<SloRequestBasedSliArgs>> requestBasedSli() {
+        return Optional.ofNullable(this.requestBasedSli);
     }
 
     /**
@@ -109,10 +109,10 @@ public final class SloArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="rollingPeriodDays")
-      private final @Nullable Output<Integer> rollingPeriodDays;
+    private @Nullable Output<Integer> rollingPeriodDays;
 
-    public Output<Integer> rollingPeriodDays() {
-        return this.rollingPeriodDays == null ? Codegen.empty() : this.rollingPeriodDays;
+    public Optional<Output<Integer>> rollingPeriodDays() {
+        return Optional.ofNullable(this.rollingPeriodDays);
     }
 
     /**
@@ -120,7 +120,7 @@ public final class SloArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="service", required=true)
-      private final Output<String> service;
+    private Output<String> service;
 
     public Output<String> service() {
         return this.service;
@@ -131,10 +131,10 @@ public final class SloArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="sloId")
-      private final @Nullable Output<String> sloId;
+    private @Nullable Output<String> sloId;
 
-    public Output<String> sloId() {
-        return this.sloId == null ? Codegen.empty() : this.sloId;
+    public Optional<Output<String>> sloId() {
+        return Optional.ofNullable(this.sloId);
     }
 
     /**
@@ -150,167 +150,140 @@ public final class SloArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="windowsBasedSli")
-      private final @Nullable Output<SloWindowsBasedSliArgs> windowsBasedSli;
+    private @Nullable Output<SloWindowsBasedSliArgs> windowsBasedSli;
 
-    public Output<SloWindowsBasedSliArgs> windowsBasedSli() {
-        return this.windowsBasedSli == null ? Codegen.empty() : this.windowsBasedSli;
+    public Optional<Output<SloWindowsBasedSliArgs>> windowsBasedSli() {
+        return Optional.ofNullable(this.windowsBasedSli);
     }
 
-    public SloArgs(
-        @Nullable Output<SloBasicSliArgs> basicSli,
-        @Nullable Output<String> calendarPeriod,
-        @Nullable Output<String> displayName,
-        Output<Double> goal,
-        @Nullable Output<String> project,
-        @Nullable Output<SloRequestBasedSliArgs> requestBasedSli,
-        @Nullable Output<Integer> rollingPeriodDays,
-        Output<String> service,
-        @Nullable Output<String> sloId,
-        @Nullable Output<SloWindowsBasedSliArgs> windowsBasedSli) {
-        this.basicSli = basicSli;
-        this.calendarPeriod = calendarPeriod;
-        this.displayName = displayName;
-        this.goal = Objects.requireNonNull(goal, "expected parameter 'goal' to be non-null");
-        this.project = project;
-        this.requestBasedSli = requestBasedSli;
-        this.rollingPeriodDays = rollingPeriodDays;
-        this.service = Objects.requireNonNull(service, "expected parameter 'service' to be non-null");
-        this.sloId = sloId;
-        this.windowsBasedSli = windowsBasedSli;
-    }
+    private SloArgs() {}
 
-    private SloArgs() {
-        this.basicSli = Codegen.empty();
-        this.calendarPeriod = Codegen.empty();
-        this.displayName = Codegen.empty();
-        this.goal = Codegen.empty();
-        this.project = Codegen.empty();
-        this.requestBasedSli = Codegen.empty();
-        this.rollingPeriodDays = Codegen.empty();
-        this.service = Codegen.empty();
-        this.sloId = Codegen.empty();
-        this.windowsBasedSli = Codegen.empty();
+    private SloArgs(SloArgs $) {
+        this.basicSli = $.basicSli;
+        this.calendarPeriod = $.calendarPeriod;
+        this.displayName = $.displayName;
+        this.goal = $.goal;
+        this.project = $.project;
+        this.requestBasedSli = $.requestBasedSli;
+        this.rollingPeriodDays = $.rollingPeriodDays;
+        this.service = $.service;
+        this.sloId = $.sloId;
+        this.windowsBasedSli = $.windowsBasedSli;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SloArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<SloBasicSliArgs> basicSli;
-        private @Nullable Output<String> calendarPeriod;
-        private @Nullable Output<String> displayName;
-        private Output<Double> goal;
-        private @Nullable Output<String> project;
-        private @Nullable Output<SloRequestBasedSliArgs> requestBasedSli;
-        private @Nullable Output<Integer> rollingPeriodDays;
-        private Output<String> service;
-        private @Nullable Output<String> sloId;
-        private @Nullable Output<SloWindowsBasedSliArgs> windowsBasedSli;
+        private SloArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SloArgs();
         }
 
         public Builder(SloArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.basicSli = defaults.basicSli;
-    	      this.calendarPeriod = defaults.calendarPeriod;
-    	      this.displayName = defaults.displayName;
-    	      this.goal = defaults.goal;
-    	      this.project = defaults.project;
-    	      this.requestBasedSli = defaults.requestBasedSli;
-    	      this.rollingPeriodDays = defaults.rollingPeriodDays;
-    	      this.service = defaults.service;
-    	      this.sloId = defaults.sloId;
-    	      this.windowsBasedSli = defaults.windowsBasedSli;
+            $ = new SloArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder basicSli(@Nullable Output<SloBasicSliArgs> basicSli) {
-            this.basicSli = basicSli;
+            $.basicSli = basicSli;
             return this;
         }
-        public Builder basicSli(@Nullable SloBasicSliArgs basicSli) {
-            this.basicSli = Codegen.ofNullable(basicSli);
-            return this;
+
+        public Builder basicSli(SloBasicSliArgs basicSli) {
+            return basicSli(Output.of(basicSli));
         }
+
         public Builder calendarPeriod(@Nullable Output<String> calendarPeriod) {
-            this.calendarPeriod = calendarPeriod;
+            $.calendarPeriod = calendarPeriod;
             return this;
         }
-        public Builder calendarPeriod(@Nullable String calendarPeriod) {
-            this.calendarPeriod = Codegen.ofNullable(calendarPeriod);
-            return this;
+
+        public Builder calendarPeriod(String calendarPeriod) {
+            return calendarPeriod(Output.of(calendarPeriod));
         }
+
         public Builder displayName(@Nullable Output<String> displayName) {
-            this.displayName = displayName;
+            $.displayName = displayName;
             return this;
         }
-        public Builder displayName(@Nullable String displayName) {
-            this.displayName = Codegen.ofNullable(displayName);
-            return this;
+
+        public Builder displayName(String displayName) {
+            return displayName(Output.of(displayName));
         }
+
         public Builder goal(Output<Double> goal) {
-            this.goal = Objects.requireNonNull(goal);
+            $.goal = goal;
             return this;
         }
+
         public Builder goal(Double goal) {
-            this.goal = Output.of(Objects.requireNonNull(goal));
-            return this;
+            return goal(Output.of(goal));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder requestBasedSli(@Nullable Output<SloRequestBasedSliArgs> requestBasedSli) {
-            this.requestBasedSli = requestBasedSli;
+            $.requestBasedSli = requestBasedSli;
             return this;
         }
-        public Builder requestBasedSli(@Nullable SloRequestBasedSliArgs requestBasedSli) {
-            this.requestBasedSli = Codegen.ofNullable(requestBasedSli);
-            return this;
+
+        public Builder requestBasedSli(SloRequestBasedSliArgs requestBasedSli) {
+            return requestBasedSli(Output.of(requestBasedSli));
         }
+
         public Builder rollingPeriodDays(@Nullable Output<Integer> rollingPeriodDays) {
-            this.rollingPeriodDays = rollingPeriodDays;
+            $.rollingPeriodDays = rollingPeriodDays;
             return this;
         }
-        public Builder rollingPeriodDays(@Nullable Integer rollingPeriodDays) {
-            this.rollingPeriodDays = Codegen.ofNullable(rollingPeriodDays);
-            return this;
+
+        public Builder rollingPeriodDays(Integer rollingPeriodDays) {
+            return rollingPeriodDays(Output.of(rollingPeriodDays));
         }
+
         public Builder service(Output<String> service) {
-            this.service = Objects.requireNonNull(service);
+            $.service = service;
             return this;
         }
+
         public Builder service(String service) {
-            this.service = Output.of(Objects.requireNonNull(service));
-            return this;
+            return service(Output.of(service));
         }
+
         public Builder sloId(@Nullable Output<String> sloId) {
-            this.sloId = sloId;
+            $.sloId = sloId;
             return this;
         }
-        public Builder sloId(@Nullable String sloId) {
-            this.sloId = Codegen.ofNullable(sloId);
-            return this;
+
+        public Builder sloId(String sloId) {
+            return sloId(Output.of(sloId));
         }
+
         public Builder windowsBasedSli(@Nullable Output<SloWindowsBasedSliArgs> windowsBasedSli) {
-            this.windowsBasedSli = windowsBasedSli;
+            $.windowsBasedSli = windowsBasedSli;
             return this;
         }
-        public Builder windowsBasedSli(@Nullable SloWindowsBasedSliArgs windowsBasedSli) {
-            this.windowsBasedSli = Codegen.ofNullable(windowsBasedSli);
-            return this;
-        }        public SloArgs build() {
-            return new SloArgs(basicSli, calendarPeriod, displayName, goal, project, requestBasedSli, rollingPeriodDays, service, sloId, windowsBasedSli);
+
+        public Builder windowsBasedSli(SloWindowsBasedSliArgs windowsBasedSli) {
+            return windowsBasedSli(Output.of(windowsBasedSli));
+        }
+
+        public SloArgs build() {
+            $.goal = Objects.requireNonNull($.goal, "expected parameter 'goal' to be non-null");
+            $.service = Objects.requireNonNull($.service, "expected parameter 'service' to be non-null");
+            return $;
         }
     }
+
 }

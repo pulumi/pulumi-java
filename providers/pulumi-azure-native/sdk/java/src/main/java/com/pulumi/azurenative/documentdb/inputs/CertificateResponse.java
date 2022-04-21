@@ -19,45 +19,44 @@ public final class CertificateResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="pem")
-      private final @Nullable String pem;
+    private @Nullable String pem;
 
     public Optional<String> pem() {
-        return this.pem == null ? Optional.empty() : Optional.ofNullable(this.pem);
+        return Optional.ofNullable(this.pem);
     }
 
-    public CertificateResponse(@Nullable String pem) {
-        this.pem = pem;
-    }
+    private CertificateResponse() {}
 
-    private CertificateResponse() {
-        this.pem = null;
+    private CertificateResponse(CertificateResponse $) {
+        this.pem = $.pem;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CertificateResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String pem;
+        private CertificateResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new CertificateResponse();
         }
 
         public Builder(CertificateResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.pem = defaults.pem;
+            $ = new CertificateResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder pem(@Nullable String pem) {
-            this.pem = pem;
+            $.pem = pem;
             return this;
-        }        public CertificateResponse build() {
-            return new CertificateResponse(pem);
+        }
+
+        public CertificateResponse build() {
+            return $;
         }
     }
+
 }

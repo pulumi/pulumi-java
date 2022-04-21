@@ -24,7 +24,7 @@ public final class GoogleCloudMlV1__ReplicaConfigResponse extends com.pulumi.res
      * 
      */
     @Import(name="acceleratorConfig", required=true)
-      private final GoogleCloudMlV1__AcceleratorConfigResponse acceleratorConfig;
+    private GoogleCloudMlV1__AcceleratorConfigResponse acceleratorConfig;
 
     public GoogleCloudMlV1__AcceleratorConfigResponse acceleratorConfig() {
         return this.acceleratorConfig;
@@ -35,7 +35,7 @@ public final class GoogleCloudMlV1__ReplicaConfigResponse extends com.pulumi.res
      * 
      */
     @Import(name="containerArgs", required=true)
-      private final List<String> containerArgs;
+    private List<String> containerArgs;
 
     public List<String> containerArgs() {
         return this.containerArgs;
@@ -46,7 +46,7 @@ public final class GoogleCloudMlV1__ReplicaConfigResponse extends com.pulumi.res
      * 
      */
     @Import(name="containerCommand", required=true)
-      private final List<String> containerCommand;
+    private List<String> containerCommand;
 
     public List<String> containerCommand() {
         return this.containerCommand;
@@ -57,7 +57,7 @@ public final class GoogleCloudMlV1__ReplicaConfigResponse extends com.pulumi.res
      * 
      */
     @Import(name="diskConfig", required=true)
-      private final GoogleCloudMlV1__DiskConfigResponse diskConfig;
+    private GoogleCloudMlV1__DiskConfigResponse diskConfig;
 
     public GoogleCloudMlV1__DiskConfigResponse diskConfig() {
         return this.diskConfig;
@@ -68,7 +68,7 @@ public final class GoogleCloudMlV1__ReplicaConfigResponse extends com.pulumi.res
      * 
      */
     @Import(name="imageUri", required=true)
-      private final String imageUri;
+    private String imageUri;
 
     public String imageUri() {
         return this.imageUri;
@@ -79,97 +79,88 @@ public final class GoogleCloudMlV1__ReplicaConfigResponse extends com.pulumi.res
      * 
      */
     @Import(name="tpuTfVersion", required=true)
-      private final String tpuTfVersion;
+    private String tpuTfVersion;
 
     public String tpuTfVersion() {
         return this.tpuTfVersion;
     }
 
-    public GoogleCloudMlV1__ReplicaConfigResponse(
-        GoogleCloudMlV1__AcceleratorConfigResponse acceleratorConfig,
-        List<String> containerArgs,
-        List<String> containerCommand,
-        GoogleCloudMlV1__DiskConfigResponse diskConfig,
-        String imageUri,
-        String tpuTfVersion) {
-        this.acceleratorConfig = Objects.requireNonNull(acceleratorConfig, "expected parameter 'acceleratorConfig' to be non-null");
-        this.containerArgs = Objects.requireNonNull(containerArgs, "expected parameter 'containerArgs' to be non-null");
-        this.containerCommand = Objects.requireNonNull(containerCommand, "expected parameter 'containerCommand' to be non-null");
-        this.diskConfig = Objects.requireNonNull(diskConfig, "expected parameter 'diskConfig' to be non-null");
-        this.imageUri = Objects.requireNonNull(imageUri, "expected parameter 'imageUri' to be non-null");
-        this.tpuTfVersion = Objects.requireNonNull(tpuTfVersion, "expected parameter 'tpuTfVersion' to be non-null");
-    }
+    private GoogleCloudMlV1__ReplicaConfigResponse() {}
 
-    private GoogleCloudMlV1__ReplicaConfigResponse() {
-        this.acceleratorConfig = null;
-        this.containerArgs = List.of();
-        this.containerCommand = List.of();
-        this.diskConfig = null;
-        this.imageUri = null;
-        this.tpuTfVersion = null;
+    private GoogleCloudMlV1__ReplicaConfigResponse(GoogleCloudMlV1__ReplicaConfigResponse $) {
+        this.acceleratorConfig = $.acceleratorConfig;
+        this.containerArgs = $.containerArgs;
+        this.containerCommand = $.containerCommand;
+        this.diskConfig = $.diskConfig;
+        this.imageUri = $.imageUri;
+        this.tpuTfVersion = $.tpuTfVersion;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudMlV1__ReplicaConfigResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private GoogleCloudMlV1__AcceleratorConfigResponse acceleratorConfig;
-        private List<String> containerArgs;
-        private List<String> containerCommand;
-        private GoogleCloudMlV1__DiskConfigResponse diskConfig;
-        private String imageUri;
-        private String tpuTfVersion;
+        private GoogleCloudMlV1__ReplicaConfigResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudMlV1__ReplicaConfigResponse();
         }
 
         public Builder(GoogleCloudMlV1__ReplicaConfigResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.acceleratorConfig = defaults.acceleratorConfig;
-    	      this.containerArgs = defaults.containerArgs;
-    	      this.containerCommand = defaults.containerCommand;
-    	      this.diskConfig = defaults.diskConfig;
-    	      this.imageUri = defaults.imageUri;
-    	      this.tpuTfVersion = defaults.tpuTfVersion;
+            $ = new GoogleCloudMlV1__ReplicaConfigResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder acceleratorConfig(GoogleCloudMlV1__AcceleratorConfigResponse acceleratorConfig) {
-            this.acceleratorConfig = Objects.requireNonNull(acceleratorConfig);
+            $.acceleratorConfig = acceleratorConfig;
             return this;
         }
+
         public Builder containerArgs(List<String> containerArgs) {
-            this.containerArgs = Objects.requireNonNull(containerArgs);
+            $.containerArgs = containerArgs;
             return this;
         }
+
         public Builder containerArgs(String... containerArgs) {
             return containerArgs(List.of(containerArgs));
         }
+
         public Builder containerCommand(List<String> containerCommand) {
-            this.containerCommand = Objects.requireNonNull(containerCommand);
+            $.containerCommand = containerCommand;
             return this;
         }
+
         public Builder containerCommand(String... containerCommand) {
             return containerCommand(List.of(containerCommand));
         }
+
         public Builder diskConfig(GoogleCloudMlV1__DiskConfigResponse diskConfig) {
-            this.diskConfig = Objects.requireNonNull(diskConfig);
+            $.diskConfig = diskConfig;
             return this;
         }
+
         public Builder imageUri(String imageUri) {
-            this.imageUri = Objects.requireNonNull(imageUri);
+            $.imageUri = imageUri;
             return this;
         }
+
         public Builder tpuTfVersion(String tpuTfVersion) {
-            this.tpuTfVersion = Objects.requireNonNull(tpuTfVersion);
+            $.tpuTfVersion = tpuTfVersion;
             return this;
-        }        public GoogleCloudMlV1__ReplicaConfigResponse build() {
-            return new GoogleCloudMlV1__ReplicaConfigResponse(acceleratorConfig, containerArgs, containerCommand, diskConfig, imageUri, tpuTfVersion);
+        }
+
+        public GoogleCloudMlV1__ReplicaConfigResponse build() {
+            $.acceleratorConfig = Objects.requireNonNull($.acceleratorConfig, "expected parameter 'acceleratorConfig' to be non-null");
+            $.containerArgs = Objects.requireNonNull($.containerArgs, "expected parameter 'containerArgs' to be non-null");
+            $.containerCommand = Objects.requireNonNull($.containerCommand, "expected parameter 'containerCommand' to be non-null");
+            $.diskConfig = Objects.requireNonNull($.diskConfig, "expected parameter 'diskConfig' to be non-null");
+            $.imageUri = Objects.requireNonNull($.imageUri, "expected parameter 'imageUri' to be non-null");
+            $.tpuTfVersion = Objects.requireNonNull($.tpuTfVersion, "expected parameter 'tpuTfVersion' to be non-null");
+            return $;
         }
     }
+
 }

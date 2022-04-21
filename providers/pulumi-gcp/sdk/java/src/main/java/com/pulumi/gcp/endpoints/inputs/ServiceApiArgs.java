@@ -5,11 +5,11 @@ package com.pulumi.gcp.endpoints.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.endpoints.inputs.ServiceApiMethodArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -18,113 +18,103 @@ public final class ServiceApiArgs extends com.pulumi.resources.ResourceArgs {
     public static final ServiceApiArgs Empty = new ServiceApiArgs();
 
     @Import(name="methods")
-      private final @Nullable Output<List<ServiceApiMethodArgs>> methods;
+    private @Nullable Output<List<ServiceApiMethodArgs>> methods;
 
-    public Output<List<ServiceApiMethodArgs>> methods() {
-        return this.methods == null ? Codegen.empty() : this.methods;
+    public Optional<Output<List<ServiceApiMethodArgs>>> methods() {
+        return Optional.ofNullable(this.methods);
     }
 
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     @Import(name="syntax")
-      private final @Nullable Output<String> syntax;
+    private @Nullable Output<String> syntax;
 
-    public Output<String> syntax() {
-        return this.syntax == null ? Codegen.empty() : this.syntax;
+    public Optional<Output<String>> syntax() {
+        return Optional.ofNullable(this.syntax);
     }
 
     @Import(name="version")
-      private final @Nullable Output<String> version;
+    private @Nullable Output<String> version;
 
-    public Output<String> version() {
-        return this.version == null ? Codegen.empty() : this.version;
+    public Optional<Output<String>> version() {
+        return Optional.ofNullable(this.version);
     }
 
-    public ServiceApiArgs(
-        @Nullable Output<List<ServiceApiMethodArgs>> methods,
-        @Nullable Output<String> name,
-        @Nullable Output<String> syntax,
-        @Nullable Output<String> version) {
-        this.methods = methods;
-        this.name = name;
-        this.syntax = syntax;
-        this.version = version;
-    }
+    private ServiceApiArgs() {}
 
-    private ServiceApiArgs() {
-        this.methods = Codegen.empty();
-        this.name = Codegen.empty();
-        this.syntax = Codegen.empty();
-        this.version = Codegen.empty();
+    private ServiceApiArgs(ServiceApiArgs $) {
+        this.methods = $.methods;
+        this.name = $.name;
+        this.syntax = $.syntax;
+        this.version = $.version;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ServiceApiArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<ServiceApiMethodArgs>> methods;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> syntax;
-        private @Nullable Output<String> version;
+        private ServiceApiArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ServiceApiArgs();
         }
 
         public Builder(ServiceApiArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.methods = defaults.methods;
-    	      this.name = defaults.name;
-    	      this.syntax = defaults.syntax;
-    	      this.version = defaults.version;
+            $ = new ServiceApiArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder methods(@Nullable Output<List<ServiceApiMethodArgs>> methods) {
-            this.methods = methods;
+            $.methods = methods;
             return this;
         }
-        public Builder methods(@Nullable List<ServiceApiMethodArgs> methods) {
-            this.methods = Codegen.ofNullable(methods);
-            return this;
+
+        public Builder methods(List<ServiceApiMethodArgs> methods) {
+            return methods(Output.of(methods));
         }
+
         public Builder methods(ServiceApiMethodArgs... methods) {
             return methods(List.of(methods));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder syntax(@Nullable Output<String> syntax) {
-            this.syntax = syntax;
+            $.syntax = syntax;
             return this;
         }
-        public Builder syntax(@Nullable String syntax) {
-            this.syntax = Codegen.ofNullable(syntax);
-            return this;
+
+        public Builder syntax(String syntax) {
+            return syntax(Output.of(syntax));
         }
+
         public Builder version(@Nullable Output<String> version) {
-            this.version = version;
+            $.version = version;
             return this;
         }
-        public Builder version(@Nullable String version) {
-            this.version = Codegen.ofNullable(version);
-            return this;
-        }        public ServiceApiArgs build() {
-            return new ServiceApiArgs(methods, name, syntax, version);
+
+        public Builder version(String version) {
+            return version(Output.of(version));
+        }
+
+        public ServiceApiArgs build() {
+            return $;
         }
     }
+
 }

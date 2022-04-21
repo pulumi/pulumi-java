@@ -5,11 +5,11 @@ package com.pulumi.aws.shield.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class ProtectionGroupState extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="aggregation")
-      private final @Nullable Output<String> aggregation;
+    private @Nullable Output<String> aggregation;
 
-    public Output<String> aggregation() {
-        return this.aggregation == null ? Codegen.empty() : this.aggregation;
+    public Optional<Output<String>> aggregation() {
+        return Optional.ofNullable(this.aggregation);
     }
 
     /**
@@ -33,10 +33,10 @@ public final class ProtectionGroupState extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="members")
-      private final @Nullable Output<List<String>> members;
+    private @Nullable Output<List<String>> members;
 
-    public Output<List<String>> members() {
-        return this.members == null ? Codegen.empty() : this.members;
+    public Optional<Output<List<String>>> members() {
+        return Optional.ofNullable(this.members);
     }
 
     /**
@@ -44,10 +44,10 @@ public final class ProtectionGroupState extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="pattern")
-      private final @Nullable Output<String> pattern;
+    private @Nullable Output<String> pattern;
 
-    public Output<String> pattern() {
-        return this.pattern == null ? Codegen.empty() : this.pattern;
+    public Optional<Output<String>> pattern() {
+        return Optional.ofNullable(this.pattern);
     }
 
     /**
@@ -55,10 +55,10 @@ public final class ProtectionGroupState extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="protectionGroupArn")
-      private final @Nullable Output<String> protectionGroupArn;
+    private @Nullable Output<String> protectionGroupArn;
 
-    public Output<String> protectionGroupArn() {
-        return this.protectionGroupArn == null ? Codegen.empty() : this.protectionGroupArn;
+    public Optional<Output<String>> protectionGroupArn() {
+        return Optional.ofNullable(this.protectionGroupArn);
     }
 
     /**
@@ -66,10 +66,10 @@ public final class ProtectionGroupState extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="protectionGroupId")
-      private final @Nullable Output<String> protectionGroupId;
+    private @Nullable Output<String> protectionGroupId;
 
-    public Output<String> protectionGroupId() {
-        return this.protectionGroupId == null ? Codegen.empty() : this.protectionGroupId;
+    public Optional<Output<String>> protectionGroupId() {
+        return Optional.ofNullable(this.protectionGroupId);
     }
 
     /**
@@ -77,10 +77,10 @@ public final class ProtectionGroupState extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="resourceType")
-      private final @Nullable Output<String> resourceType;
+    private @Nullable Output<String> resourceType;
 
-    public Output<String> resourceType() {
-        return this.resourceType == null ? Codegen.empty() : this.resourceType;
+    public Optional<Output<String>> resourceType() {
+        return Optional.ofNullable(this.resourceType);
     }
 
     /**
@@ -88,10 +88,10 @@ public final class ProtectionGroupState extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -99,144 +99,122 @@ public final class ProtectionGroupState extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="tagsAll")
-      private final @Nullable Output<Map<String,String>> tagsAll;
+    private @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> tagsAll() {
-        return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
+    public Optional<Output<Map<String,String>>> tagsAll() {
+        return Optional.ofNullable(this.tagsAll);
     }
 
-    public ProtectionGroupState(
-        @Nullable Output<String> aggregation,
-        @Nullable Output<List<String>> members,
-        @Nullable Output<String> pattern,
-        @Nullable Output<String> protectionGroupArn,
-        @Nullable Output<String> protectionGroupId,
-        @Nullable Output<String> resourceType,
-        @Nullable Output<Map<String,String>> tags,
-        @Nullable Output<Map<String,String>> tagsAll) {
-        this.aggregation = aggregation;
-        this.members = members;
-        this.pattern = pattern;
-        this.protectionGroupArn = protectionGroupArn;
-        this.protectionGroupId = protectionGroupId;
-        this.resourceType = resourceType;
-        this.tags = tags;
-        this.tagsAll = tagsAll;
-    }
+    private ProtectionGroupState() {}
 
-    private ProtectionGroupState() {
-        this.aggregation = Codegen.empty();
-        this.members = Codegen.empty();
-        this.pattern = Codegen.empty();
-        this.protectionGroupArn = Codegen.empty();
-        this.protectionGroupId = Codegen.empty();
-        this.resourceType = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.tagsAll = Codegen.empty();
+    private ProtectionGroupState(ProtectionGroupState $) {
+        this.aggregation = $.aggregation;
+        this.members = $.members;
+        this.pattern = $.pattern;
+        this.protectionGroupArn = $.protectionGroupArn;
+        this.protectionGroupId = $.protectionGroupId;
+        this.resourceType = $.resourceType;
+        this.tags = $.tags;
+        this.tagsAll = $.tagsAll;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ProtectionGroupState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> aggregation;
-        private @Nullable Output<List<String>> members;
-        private @Nullable Output<String> pattern;
-        private @Nullable Output<String> protectionGroupArn;
-        private @Nullable Output<String> protectionGroupId;
-        private @Nullable Output<String> resourceType;
-        private @Nullable Output<Map<String,String>> tags;
-        private @Nullable Output<Map<String,String>> tagsAll;
+        private ProtectionGroupState $;
 
         public Builder() {
-    	      // Empty
+            $ = new ProtectionGroupState();
         }
 
         public Builder(ProtectionGroupState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.aggregation = defaults.aggregation;
-    	      this.members = defaults.members;
-    	      this.pattern = defaults.pattern;
-    	      this.protectionGroupArn = defaults.protectionGroupArn;
-    	      this.protectionGroupId = defaults.protectionGroupId;
-    	      this.resourceType = defaults.resourceType;
-    	      this.tags = defaults.tags;
-    	      this.tagsAll = defaults.tagsAll;
+            $ = new ProtectionGroupState(Objects.requireNonNull(defaults));
         }
 
         public Builder aggregation(@Nullable Output<String> aggregation) {
-            this.aggregation = aggregation;
+            $.aggregation = aggregation;
             return this;
         }
-        public Builder aggregation(@Nullable String aggregation) {
-            this.aggregation = Codegen.ofNullable(aggregation);
-            return this;
+
+        public Builder aggregation(String aggregation) {
+            return aggregation(Output.of(aggregation));
         }
+
         public Builder members(@Nullable Output<List<String>> members) {
-            this.members = members;
+            $.members = members;
             return this;
         }
-        public Builder members(@Nullable List<String> members) {
-            this.members = Codegen.ofNullable(members);
-            return this;
+
+        public Builder members(List<String> members) {
+            return members(Output.of(members));
         }
+
         public Builder members(String... members) {
             return members(List.of(members));
         }
+
         public Builder pattern(@Nullable Output<String> pattern) {
-            this.pattern = pattern;
+            $.pattern = pattern;
             return this;
         }
-        public Builder pattern(@Nullable String pattern) {
-            this.pattern = Codegen.ofNullable(pattern);
-            return this;
+
+        public Builder pattern(String pattern) {
+            return pattern(Output.of(pattern));
         }
+
         public Builder protectionGroupArn(@Nullable Output<String> protectionGroupArn) {
-            this.protectionGroupArn = protectionGroupArn;
+            $.protectionGroupArn = protectionGroupArn;
             return this;
         }
-        public Builder protectionGroupArn(@Nullable String protectionGroupArn) {
-            this.protectionGroupArn = Codegen.ofNullable(protectionGroupArn);
-            return this;
+
+        public Builder protectionGroupArn(String protectionGroupArn) {
+            return protectionGroupArn(Output.of(protectionGroupArn));
         }
+
         public Builder protectionGroupId(@Nullable Output<String> protectionGroupId) {
-            this.protectionGroupId = protectionGroupId;
+            $.protectionGroupId = protectionGroupId;
             return this;
         }
-        public Builder protectionGroupId(@Nullable String protectionGroupId) {
-            this.protectionGroupId = Codegen.ofNullable(protectionGroupId);
-            return this;
+
+        public Builder protectionGroupId(String protectionGroupId) {
+            return protectionGroupId(Output.of(protectionGroupId));
         }
+
         public Builder resourceType(@Nullable Output<String> resourceType) {
-            this.resourceType = resourceType;
+            $.resourceType = resourceType;
             return this;
         }
-        public Builder resourceType(@Nullable String resourceType) {
-            this.resourceType = Codegen.ofNullable(resourceType);
-            return this;
+
+        public Builder resourceType(String resourceType) {
+            return resourceType(Output.of(resourceType));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
-            this.tagsAll = tagsAll;
+            $.tagsAll = tagsAll;
             return this;
         }
-        public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Codegen.ofNullable(tagsAll);
-            return this;
-        }        public ProtectionGroupState build() {
-            return new ProtectionGroupState(aggregation, members, pattern, protectionGroupArn, protectionGroupId, resourceType, tags, tagsAll);
+
+        public Builder tagsAll(Map<String,String> tagsAll) {
+            return tagsAll(Output.of(tagsAll));
+        }
+
+        public ProtectionGroupState build() {
+            return $;
         }
     }
+
 }

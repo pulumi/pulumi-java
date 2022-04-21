@@ -5,12 +5,12 @@ package com.pulumi.googlenative.containeranalysis_v1alpha1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.containeranalysis_v1alpha1.enums.DiscoveredAnalysisStatus;
 import com.pulumi.googlenative.containeranalysis_v1alpha1.enums.DiscoveredContinuousAnalysis;
 import com.pulumi.googlenative.containeranalysis_v1alpha1.inputs.StatusArgs;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +27,10 @@ public final class DiscoveredArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="analysisStatus")
-      private final @Nullable Output<DiscoveredAnalysisStatus> analysisStatus;
+    private @Nullable Output<DiscoveredAnalysisStatus> analysisStatus;
 
-    public Output<DiscoveredAnalysisStatus> analysisStatus() {
-        return this.analysisStatus == null ? Codegen.empty() : this.analysisStatus;
+    public Optional<Output<DiscoveredAnalysisStatus>> analysisStatus() {
+        return Optional.ofNullable(this.analysisStatus);
     }
 
     /**
@@ -38,10 +38,10 @@ public final class DiscoveredArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="analysisStatusError")
-      private final @Nullable Output<StatusArgs> analysisStatusError;
+    private @Nullable Output<StatusArgs> analysisStatusError;
 
-    public Output<StatusArgs> analysisStatusError() {
-        return this.analysisStatusError == null ? Codegen.empty() : this.analysisStatusError;
+    public Optional<Output<StatusArgs>> analysisStatusError() {
+        return Optional.ofNullable(this.analysisStatusError);
     }
 
     /**
@@ -49,10 +49,10 @@ public final class DiscoveredArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="continuousAnalysis")
-      private final @Nullable Output<DiscoveredContinuousAnalysis> continuousAnalysis;
+    private @Nullable Output<DiscoveredContinuousAnalysis> continuousAnalysis;
 
-    public Output<DiscoveredContinuousAnalysis> continuousAnalysis() {
-        return this.continuousAnalysis == null ? Codegen.empty() : this.continuousAnalysis;
+    public Optional<Output<DiscoveredContinuousAnalysis>> continuousAnalysis() {
+        return Optional.ofNullable(this.continuousAnalysis);
     }
 
     /**
@@ -60,89 +60,78 @@ public final class DiscoveredArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="cpe")
-      private final @Nullable Output<String> cpe;
+    private @Nullable Output<String> cpe;
 
-    public Output<String> cpe() {
-        return this.cpe == null ? Codegen.empty() : this.cpe;
+    public Optional<Output<String>> cpe() {
+        return Optional.ofNullable(this.cpe);
     }
 
-    public DiscoveredArgs(
-        @Nullable Output<DiscoveredAnalysisStatus> analysisStatus,
-        @Nullable Output<StatusArgs> analysisStatusError,
-        @Nullable Output<DiscoveredContinuousAnalysis> continuousAnalysis,
-        @Nullable Output<String> cpe) {
-        this.analysisStatus = analysisStatus;
-        this.analysisStatusError = analysisStatusError;
-        this.continuousAnalysis = continuousAnalysis;
-        this.cpe = cpe;
-    }
+    private DiscoveredArgs() {}
 
-    private DiscoveredArgs() {
-        this.analysisStatus = Codegen.empty();
-        this.analysisStatusError = Codegen.empty();
-        this.continuousAnalysis = Codegen.empty();
-        this.cpe = Codegen.empty();
+    private DiscoveredArgs(DiscoveredArgs $) {
+        this.analysisStatus = $.analysisStatus;
+        this.analysisStatusError = $.analysisStatusError;
+        this.continuousAnalysis = $.continuousAnalysis;
+        this.cpe = $.cpe;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DiscoveredArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<DiscoveredAnalysisStatus> analysisStatus;
-        private @Nullable Output<StatusArgs> analysisStatusError;
-        private @Nullable Output<DiscoveredContinuousAnalysis> continuousAnalysis;
-        private @Nullable Output<String> cpe;
+        private DiscoveredArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DiscoveredArgs();
         }
 
         public Builder(DiscoveredArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.analysisStatus = defaults.analysisStatus;
-    	      this.analysisStatusError = defaults.analysisStatusError;
-    	      this.continuousAnalysis = defaults.continuousAnalysis;
-    	      this.cpe = defaults.cpe;
+            $ = new DiscoveredArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder analysisStatus(@Nullable Output<DiscoveredAnalysisStatus> analysisStatus) {
-            this.analysisStatus = analysisStatus;
+            $.analysisStatus = analysisStatus;
             return this;
         }
-        public Builder analysisStatus(@Nullable DiscoveredAnalysisStatus analysisStatus) {
-            this.analysisStatus = Codegen.ofNullable(analysisStatus);
-            return this;
+
+        public Builder analysisStatus(DiscoveredAnalysisStatus analysisStatus) {
+            return analysisStatus(Output.of(analysisStatus));
         }
+
         public Builder analysisStatusError(@Nullable Output<StatusArgs> analysisStatusError) {
-            this.analysisStatusError = analysisStatusError;
+            $.analysisStatusError = analysisStatusError;
             return this;
         }
-        public Builder analysisStatusError(@Nullable StatusArgs analysisStatusError) {
-            this.analysisStatusError = Codegen.ofNullable(analysisStatusError);
-            return this;
+
+        public Builder analysisStatusError(StatusArgs analysisStatusError) {
+            return analysisStatusError(Output.of(analysisStatusError));
         }
+
         public Builder continuousAnalysis(@Nullable Output<DiscoveredContinuousAnalysis> continuousAnalysis) {
-            this.continuousAnalysis = continuousAnalysis;
+            $.continuousAnalysis = continuousAnalysis;
             return this;
         }
-        public Builder continuousAnalysis(@Nullable DiscoveredContinuousAnalysis continuousAnalysis) {
-            this.continuousAnalysis = Codegen.ofNullable(continuousAnalysis);
-            return this;
+
+        public Builder continuousAnalysis(DiscoveredContinuousAnalysis continuousAnalysis) {
+            return continuousAnalysis(Output.of(continuousAnalysis));
         }
+
         public Builder cpe(@Nullable Output<String> cpe) {
-            this.cpe = cpe;
+            $.cpe = cpe;
             return this;
         }
-        public Builder cpe(@Nullable String cpe) {
-            this.cpe = Codegen.ofNullable(cpe);
-            return this;
-        }        public DiscoveredArgs build() {
-            return new DiscoveredArgs(analysisStatus, analysisStatusError, continuousAnalysis, cpe);
+
+        public Builder cpe(String cpe) {
+            return cpe(Output.of(cpe));
+        }
+
+        public DiscoveredArgs build() {
+            return $;
         }
     }
+
 }

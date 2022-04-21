@@ -5,7 +5,6 @@ package com.pulumi.awsnative.kafkaconnect.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -23,49 +22,49 @@ public final class ConnectorScaleOutPolicyArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="cpuUtilizationPercentage", required=true)
-      private final Output<Integer> cpuUtilizationPercentage;
+    private Output<Integer> cpuUtilizationPercentage;
 
     public Output<Integer> cpuUtilizationPercentage() {
         return this.cpuUtilizationPercentage;
     }
 
-    public ConnectorScaleOutPolicyArgs(Output<Integer> cpuUtilizationPercentage) {
-        this.cpuUtilizationPercentage = Objects.requireNonNull(cpuUtilizationPercentage, "expected parameter 'cpuUtilizationPercentage' to be non-null");
-    }
+    private ConnectorScaleOutPolicyArgs() {}
 
-    private ConnectorScaleOutPolicyArgs() {
-        this.cpuUtilizationPercentage = Codegen.empty();
+    private ConnectorScaleOutPolicyArgs(ConnectorScaleOutPolicyArgs $) {
+        this.cpuUtilizationPercentage = $.cpuUtilizationPercentage;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ConnectorScaleOutPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Integer> cpuUtilizationPercentage;
+        private ConnectorScaleOutPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ConnectorScaleOutPolicyArgs();
         }
 
         public Builder(ConnectorScaleOutPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cpuUtilizationPercentage = defaults.cpuUtilizationPercentage;
+            $ = new ConnectorScaleOutPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder cpuUtilizationPercentage(Output<Integer> cpuUtilizationPercentage) {
-            this.cpuUtilizationPercentage = Objects.requireNonNull(cpuUtilizationPercentage);
+            $.cpuUtilizationPercentage = cpuUtilizationPercentage;
             return this;
         }
+
         public Builder cpuUtilizationPercentage(Integer cpuUtilizationPercentage) {
-            this.cpuUtilizationPercentage = Output.of(Objects.requireNonNull(cpuUtilizationPercentage));
-            return this;
-        }        public ConnectorScaleOutPolicyArgs build() {
-            return new ConnectorScaleOutPolicyArgs(cpuUtilizationPercentage);
+            return cpuUtilizationPercentage(Output.of(cpuUtilizationPercentage));
+        }
+
+        public ConnectorScaleOutPolicyArgs build() {
+            $.cpuUtilizationPercentage = Objects.requireNonNull($.cpuUtilizationPercentage, "expected parameter 'cpuUtilizationPercentage' to be non-null");
+            return $;
         }
     }
+
 }

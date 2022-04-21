@@ -21,7 +21,7 @@ public final class IngestionConnectionStringResponse extends com.pulumi.resource
      * 
      */
     @Import(name="location", required=true)
-      private final String location;
+    private String location;
 
     public String location() {
         return this.location;
@@ -32,55 +32,52 @@ public final class IngestionConnectionStringResponse extends com.pulumi.resource
      * 
      */
     @Import(name="value", required=true)
-      private final String value;
+    private String value;
 
     public String value() {
         return this.value;
     }
 
-    public IngestionConnectionStringResponse(
-        String location,
-        String value) {
-        this.location = Objects.requireNonNull(location, "expected parameter 'location' to be non-null");
-        this.value = Objects.requireNonNull(value, "expected parameter 'value' to be non-null");
-    }
+    private IngestionConnectionStringResponse() {}
 
-    private IngestionConnectionStringResponse() {
-        this.location = null;
-        this.value = null;
+    private IngestionConnectionStringResponse(IngestionConnectionStringResponse $) {
+        this.location = $.location;
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(IngestionConnectionStringResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String location;
-        private String value;
+        private IngestionConnectionStringResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new IngestionConnectionStringResponse();
         }
 
         public Builder(IngestionConnectionStringResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.location = defaults.location;
-    	      this.value = defaults.value;
+            $ = new IngestionConnectionStringResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder location(String location) {
-            this.location = Objects.requireNonNull(location);
+            $.location = location;
             return this;
         }
+
         public Builder value(String value) {
-            this.value = Objects.requireNonNull(value);
+            $.value = value;
             return this;
-        }        public IngestionConnectionStringResponse build() {
-            return new IngestionConnectionStringResponse(location, value);
+        }
+
+        public IngestionConnectionStringResponse build() {
+            $.location = Objects.requireNonNull($.location, "expected parameter 'location' to be non-null");
+            $.value = Objects.requireNonNull($.value, "expected parameter 'value' to be non-null");
+            return $;
         }
     }
+
 }

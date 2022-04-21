@@ -22,7 +22,7 @@ public final class ManagementGroupLogSettingsResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="category", required=true)
-      private final String category;
+    private String category;
 
     public String category() {
         return this.category;
@@ -33,55 +33,52 @@ public final class ManagementGroupLogSettingsResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="enabled", required=true)
-      private final Boolean enabled;
+    private Boolean enabled;
 
     public Boolean enabled() {
         return this.enabled;
     }
 
-    public ManagementGroupLogSettingsResponse(
-        String category,
-        Boolean enabled) {
-        this.category = Objects.requireNonNull(category, "expected parameter 'category' to be non-null");
-        this.enabled = Objects.requireNonNull(enabled, "expected parameter 'enabled' to be non-null");
-    }
+    private ManagementGroupLogSettingsResponse() {}
 
-    private ManagementGroupLogSettingsResponse() {
-        this.category = null;
-        this.enabled = null;
+    private ManagementGroupLogSettingsResponse(ManagementGroupLogSettingsResponse $) {
+        this.category = $.category;
+        this.enabled = $.enabled;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ManagementGroupLogSettingsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String category;
-        private Boolean enabled;
+        private ManagementGroupLogSettingsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ManagementGroupLogSettingsResponse();
         }
 
         public Builder(ManagementGroupLogSettingsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.category = defaults.category;
-    	      this.enabled = defaults.enabled;
+            $ = new ManagementGroupLogSettingsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder category(String category) {
-            this.category = Objects.requireNonNull(category);
+            $.category = category;
             return this;
         }
+
         public Builder enabled(Boolean enabled) {
-            this.enabled = Objects.requireNonNull(enabled);
+            $.enabled = enabled;
             return this;
-        }        public ManagementGroupLogSettingsResponse build() {
-            return new ManagementGroupLogSettingsResponse(category, enabled);
+        }
+
+        public ManagementGroupLogSettingsResponse build() {
+            $.category = Objects.requireNonNull($.category, "expected parameter 'category' to be non-null");
+            $.enabled = Objects.requireNonNull($.enabled, "expected parameter 'enabled' to be non-null");
+            return $;
         }
     }
+
 }

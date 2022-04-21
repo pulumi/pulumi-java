@@ -5,9 +5,9 @@ package com.pulumi.aws.ssoadmin;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,7 +20,7 @@ public final class AccountAssignmentArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="instanceArn", required=true)
-      private final Output<String> instanceArn;
+    private Output<String> instanceArn;
 
     public Output<String> instanceArn() {
         return this.instanceArn;
@@ -31,7 +31,7 @@ public final class AccountAssignmentArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="permissionSetArn", required=true)
-      private final Output<String> permissionSetArn;
+    private Output<String> permissionSetArn;
 
     public Output<String> permissionSetArn() {
         return this.permissionSetArn;
@@ -42,7 +42,7 @@ public final class AccountAssignmentArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="principalId", required=true)
-      private final Output<String> principalId;
+    private Output<String> principalId;
 
     public Output<String> principalId() {
         return this.principalId;
@@ -53,7 +53,7 @@ public final class AccountAssignmentArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="principalType", required=true)
-      private final Output<String> principalType;
+    private Output<String> principalType;
 
     public Output<String> principalType() {
         return this.principalType;
@@ -64,7 +64,7 @@ public final class AccountAssignmentArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="targetId", required=true)
-      private final Output<String> targetId;
+    private Output<String> targetId;
 
     public Output<String> targetId() {
         return this.targetId;
@@ -75,115 +75,103 @@ public final class AccountAssignmentArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="targetType")
-      private final @Nullable Output<String> targetType;
+    private @Nullable Output<String> targetType;
 
-    public Output<String> targetType() {
-        return this.targetType == null ? Codegen.empty() : this.targetType;
+    public Optional<Output<String>> targetType() {
+        return Optional.ofNullable(this.targetType);
     }
 
-    public AccountAssignmentArgs(
-        Output<String> instanceArn,
-        Output<String> permissionSetArn,
-        Output<String> principalId,
-        Output<String> principalType,
-        Output<String> targetId,
-        @Nullable Output<String> targetType) {
-        this.instanceArn = Objects.requireNonNull(instanceArn, "expected parameter 'instanceArn' to be non-null");
-        this.permissionSetArn = Objects.requireNonNull(permissionSetArn, "expected parameter 'permissionSetArn' to be non-null");
-        this.principalId = Objects.requireNonNull(principalId, "expected parameter 'principalId' to be non-null");
-        this.principalType = Objects.requireNonNull(principalType, "expected parameter 'principalType' to be non-null");
-        this.targetId = Objects.requireNonNull(targetId, "expected parameter 'targetId' to be non-null");
-        this.targetType = targetType;
-    }
+    private AccountAssignmentArgs() {}
 
-    private AccountAssignmentArgs() {
-        this.instanceArn = Codegen.empty();
-        this.permissionSetArn = Codegen.empty();
-        this.principalId = Codegen.empty();
-        this.principalType = Codegen.empty();
-        this.targetId = Codegen.empty();
-        this.targetType = Codegen.empty();
+    private AccountAssignmentArgs(AccountAssignmentArgs $) {
+        this.instanceArn = $.instanceArn;
+        this.permissionSetArn = $.permissionSetArn;
+        this.principalId = $.principalId;
+        this.principalType = $.principalType;
+        this.targetId = $.targetId;
+        this.targetType = $.targetType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AccountAssignmentArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> instanceArn;
-        private Output<String> permissionSetArn;
-        private Output<String> principalId;
-        private Output<String> principalType;
-        private Output<String> targetId;
-        private @Nullable Output<String> targetType;
+        private AccountAssignmentArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AccountAssignmentArgs();
         }
 
         public Builder(AccountAssignmentArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.instanceArn = defaults.instanceArn;
-    	      this.permissionSetArn = defaults.permissionSetArn;
-    	      this.principalId = defaults.principalId;
-    	      this.principalType = defaults.principalType;
-    	      this.targetId = defaults.targetId;
-    	      this.targetType = defaults.targetType;
+            $ = new AccountAssignmentArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder instanceArn(Output<String> instanceArn) {
-            this.instanceArn = Objects.requireNonNull(instanceArn);
+            $.instanceArn = instanceArn;
             return this;
         }
+
         public Builder instanceArn(String instanceArn) {
-            this.instanceArn = Output.of(Objects.requireNonNull(instanceArn));
-            return this;
+            return instanceArn(Output.of(instanceArn));
         }
+
         public Builder permissionSetArn(Output<String> permissionSetArn) {
-            this.permissionSetArn = Objects.requireNonNull(permissionSetArn);
+            $.permissionSetArn = permissionSetArn;
             return this;
         }
+
         public Builder permissionSetArn(String permissionSetArn) {
-            this.permissionSetArn = Output.of(Objects.requireNonNull(permissionSetArn));
-            return this;
+            return permissionSetArn(Output.of(permissionSetArn));
         }
+
         public Builder principalId(Output<String> principalId) {
-            this.principalId = Objects.requireNonNull(principalId);
+            $.principalId = principalId;
             return this;
         }
+
         public Builder principalId(String principalId) {
-            this.principalId = Output.of(Objects.requireNonNull(principalId));
-            return this;
+            return principalId(Output.of(principalId));
         }
+
         public Builder principalType(Output<String> principalType) {
-            this.principalType = Objects.requireNonNull(principalType);
+            $.principalType = principalType;
             return this;
         }
+
         public Builder principalType(String principalType) {
-            this.principalType = Output.of(Objects.requireNonNull(principalType));
-            return this;
+            return principalType(Output.of(principalType));
         }
+
         public Builder targetId(Output<String> targetId) {
-            this.targetId = Objects.requireNonNull(targetId);
+            $.targetId = targetId;
             return this;
         }
+
         public Builder targetId(String targetId) {
-            this.targetId = Output.of(Objects.requireNonNull(targetId));
-            return this;
+            return targetId(Output.of(targetId));
         }
+
         public Builder targetType(@Nullable Output<String> targetType) {
-            this.targetType = targetType;
+            $.targetType = targetType;
             return this;
         }
-        public Builder targetType(@Nullable String targetType) {
-            this.targetType = Codegen.ofNullable(targetType);
-            return this;
-        }        public AccountAssignmentArgs build() {
-            return new AccountAssignmentArgs(instanceArn, permissionSetArn, principalId, principalType, targetId, targetType);
+
+        public Builder targetType(String targetType) {
+            return targetType(Output.of(targetType));
+        }
+
+        public AccountAssignmentArgs build() {
+            $.instanceArn = Objects.requireNonNull($.instanceArn, "expected parameter 'instanceArn' to be non-null");
+            $.permissionSetArn = Objects.requireNonNull($.permissionSetArn, "expected parameter 'permissionSetArn' to be non-null");
+            $.principalId = Objects.requireNonNull($.principalId, "expected parameter 'principalId' to be non-null");
+            $.principalType = Objects.requireNonNull($.principalType, "expected parameter 'principalType' to be non-null");
+            $.targetId = Objects.requireNonNull($.targetId, "expected parameter 'targetId' to be non-null");
+            return $;
         }
     }
+
 }

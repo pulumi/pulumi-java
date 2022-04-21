@@ -6,7 +6,6 @@ package com.pulumi.awsnative.iot.inputs;
 import com.pulumi.awsnative.iot.enums.MitigationActionReplaceDefaultPolicyVersionParamsTemplateName;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
 
 
@@ -19,49 +18,49 @@ public final class MitigationActionReplaceDefaultPolicyVersionParamsArgs extends
     public static final MitigationActionReplaceDefaultPolicyVersionParamsArgs Empty = new MitigationActionReplaceDefaultPolicyVersionParamsArgs();
 
     @Import(name="templateName", required=true)
-      private final Output<MitigationActionReplaceDefaultPolicyVersionParamsTemplateName> templateName;
+    private Output<MitigationActionReplaceDefaultPolicyVersionParamsTemplateName> templateName;
 
     public Output<MitigationActionReplaceDefaultPolicyVersionParamsTemplateName> templateName() {
         return this.templateName;
     }
 
-    public MitigationActionReplaceDefaultPolicyVersionParamsArgs(Output<MitigationActionReplaceDefaultPolicyVersionParamsTemplateName> templateName) {
-        this.templateName = Objects.requireNonNull(templateName, "expected parameter 'templateName' to be non-null");
-    }
+    private MitigationActionReplaceDefaultPolicyVersionParamsArgs() {}
 
-    private MitigationActionReplaceDefaultPolicyVersionParamsArgs() {
-        this.templateName = Codegen.empty();
+    private MitigationActionReplaceDefaultPolicyVersionParamsArgs(MitigationActionReplaceDefaultPolicyVersionParamsArgs $) {
+        this.templateName = $.templateName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MitigationActionReplaceDefaultPolicyVersionParamsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<MitigationActionReplaceDefaultPolicyVersionParamsTemplateName> templateName;
+        private MitigationActionReplaceDefaultPolicyVersionParamsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new MitigationActionReplaceDefaultPolicyVersionParamsArgs();
         }
 
         public Builder(MitigationActionReplaceDefaultPolicyVersionParamsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.templateName = defaults.templateName;
+            $ = new MitigationActionReplaceDefaultPolicyVersionParamsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder templateName(Output<MitigationActionReplaceDefaultPolicyVersionParamsTemplateName> templateName) {
-            this.templateName = Objects.requireNonNull(templateName);
+            $.templateName = templateName;
             return this;
         }
+
         public Builder templateName(MitigationActionReplaceDefaultPolicyVersionParamsTemplateName templateName) {
-            this.templateName = Output.of(Objects.requireNonNull(templateName));
-            return this;
-        }        public MitigationActionReplaceDefaultPolicyVersionParamsArgs build() {
-            return new MitigationActionReplaceDefaultPolicyVersionParamsArgs(templateName);
+            return templateName(Output.of(templateName));
+        }
+
+        public MitigationActionReplaceDefaultPolicyVersionParamsArgs build() {
+            $.templateName = Objects.requireNonNull($.templateName, "expected parameter 'templateName' to be non-null");
+            return $;
         }
     }
+
 }

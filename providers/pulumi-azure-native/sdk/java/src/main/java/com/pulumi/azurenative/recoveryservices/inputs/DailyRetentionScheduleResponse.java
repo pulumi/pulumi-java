@@ -25,10 +25,10 @@ public final class DailyRetentionScheduleResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="retentionDuration")
-      private final @Nullable RetentionDurationResponse retentionDuration;
+    private @Nullable RetentionDurationResponse retentionDuration;
 
     public Optional<RetentionDurationResponse> retentionDuration() {
-        return this.retentionDuration == null ? Optional.empty() : Optional.ofNullable(this.retentionDuration);
+        return Optional.ofNullable(this.retentionDuration);
     }
 
     /**
@@ -36,58 +36,54 @@ public final class DailyRetentionScheduleResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="retentionTimes")
-      private final @Nullable List<String> retentionTimes;
+    private @Nullable List<String> retentionTimes;
 
-    public List<String> retentionTimes() {
-        return this.retentionTimes == null ? List.of() : this.retentionTimes;
+    public Optional<List<String>> retentionTimes() {
+        return Optional.ofNullable(this.retentionTimes);
     }
 
-    public DailyRetentionScheduleResponse(
-        @Nullable RetentionDurationResponse retentionDuration,
-        @Nullable List<String> retentionTimes) {
-        this.retentionDuration = retentionDuration;
-        this.retentionTimes = retentionTimes;
-    }
+    private DailyRetentionScheduleResponse() {}
 
-    private DailyRetentionScheduleResponse() {
-        this.retentionDuration = null;
-        this.retentionTimes = List.of();
+    private DailyRetentionScheduleResponse(DailyRetentionScheduleResponse $) {
+        this.retentionDuration = $.retentionDuration;
+        this.retentionTimes = $.retentionTimes;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DailyRetentionScheduleResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable RetentionDurationResponse retentionDuration;
-        private @Nullable List<String> retentionTimes;
+        private DailyRetentionScheduleResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new DailyRetentionScheduleResponse();
         }
 
         public Builder(DailyRetentionScheduleResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.retentionDuration = defaults.retentionDuration;
-    	      this.retentionTimes = defaults.retentionTimes;
+            $ = new DailyRetentionScheduleResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder retentionDuration(@Nullable RetentionDurationResponse retentionDuration) {
-            this.retentionDuration = retentionDuration;
+            $.retentionDuration = retentionDuration;
             return this;
         }
+
         public Builder retentionTimes(@Nullable List<String> retentionTimes) {
-            this.retentionTimes = retentionTimes;
+            $.retentionTimes = retentionTimes;
             return this;
         }
+
         public Builder retentionTimes(String... retentionTimes) {
             return retentionTimes(List.of(retentionTimes));
-        }        public DailyRetentionScheduleResponse build() {
-            return new DailyRetentionScheduleResponse(retentionDuration, retentionTimes);
+        }
+
+        public DailyRetentionScheduleResponse build() {
+            return $;
         }
     }
+
 }

@@ -5,10 +5,10 @@ package com.pulumi.googlenative.dialogflow_v3.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class GoogleCloudDialogflowCxV3RolloutStateArgs extends com.pulumi.
      * 
      */
     @Import(name="startTime")
-      private final @Nullable Output<String> startTime;
+    private @Nullable Output<String> startTime;
 
-    public Output<String> startTime() {
-        return this.startTime == null ? Codegen.empty() : this.startTime;
+    public Optional<Output<String>> startTime() {
+        return Optional.ofNullable(this.startTime);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class GoogleCloudDialogflowCxV3RolloutStateArgs extends com.pulumi.
      * 
      */
     @Import(name="step")
-      private final @Nullable Output<String> step;
+    private @Nullable Output<String> step;
 
-    public Output<String> step() {
-        return this.step == null ? Codegen.empty() : this.step;
+    public Optional<Output<String>> step() {
+        return Optional.ofNullable(this.step);
     }
 
     /**
@@ -47,76 +47,68 @@ public final class GoogleCloudDialogflowCxV3RolloutStateArgs extends com.pulumi.
      * 
      */
     @Import(name="stepIndex")
-      private final @Nullable Output<Integer> stepIndex;
+    private @Nullable Output<Integer> stepIndex;
 
-    public Output<Integer> stepIndex() {
-        return this.stepIndex == null ? Codegen.empty() : this.stepIndex;
+    public Optional<Output<Integer>> stepIndex() {
+        return Optional.ofNullable(this.stepIndex);
     }
 
-    public GoogleCloudDialogflowCxV3RolloutStateArgs(
-        @Nullable Output<String> startTime,
-        @Nullable Output<String> step,
-        @Nullable Output<Integer> stepIndex) {
-        this.startTime = startTime;
-        this.step = step;
-        this.stepIndex = stepIndex;
-    }
+    private GoogleCloudDialogflowCxV3RolloutStateArgs() {}
 
-    private GoogleCloudDialogflowCxV3RolloutStateArgs() {
-        this.startTime = Codegen.empty();
-        this.step = Codegen.empty();
-        this.stepIndex = Codegen.empty();
+    private GoogleCloudDialogflowCxV3RolloutStateArgs(GoogleCloudDialogflowCxV3RolloutStateArgs $) {
+        this.startTime = $.startTime;
+        this.step = $.step;
+        this.stepIndex = $.stepIndex;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudDialogflowCxV3RolloutStateArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> startTime;
-        private @Nullable Output<String> step;
-        private @Nullable Output<Integer> stepIndex;
+        private GoogleCloudDialogflowCxV3RolloutStateArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudDialogflowCxV3RolloutStateArgs();
         }
 
         public Builder(GoogleCloudDialogflowCxV3RolloutStateArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.startTime = defaults.startTime;
-    	      this.step = defaults.step;
-    	      this.stepIndex = defaults.stepIndex;
+            $ = new GoogleCloudDialogflowCxV3RolloutStateArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder startTime(@Nullable Output<String> startTime) {
-            this.startTime = startTime;
+            $.startTime = startTime;
             return this;
         }
-        public Builder startTime(@Nullable String startTime) {
-            this.startTime = Codegen.ofNullable(startTime);
-            return this;
+
+        public Builder startTime(String startTime) {
+            return startTime(Output.of(startTime));
         }
+
         public Builder step(@Nullable Output<String> step) {
-            this.step = step;
+            $.step = step;
             return this;
         }
-        public Builder step(@Nullable String step) {
-            this.step = Codegen.ofNullable(step);
-            return this;
+
+        public Builder step(String step) {
+            return step(Output.of(step));
         }
+
         public Builder stepIndex(@Nullable Output<Integer> stepIndex) {
-            this.stepIndex = stepIndex;
+            $.stepIndex = stepIndex;
             return this;
         }
-        public Builder stepIndex(@Nullable Integer stepIndex) {
-            this.stepIndex = Codegen.ofNullable(stepIndex);
-            return this;
-        }        public GoogleCloudDialogflowCxV3RolloutStateArgs build() {
-            return new GoogleCloudDialogflowCxV3RolloutStateArgs(startTime, step, stepIndex);
+
+        public Builder stepIndex(Integer stepIndex) {
+            return stepIndex(Output.of(stepIndex));
+        }
+
+        public GoogleCloudDialogflowCxV3RolloutStateArgs build() {
+            return $;
         }
     }
+
 }

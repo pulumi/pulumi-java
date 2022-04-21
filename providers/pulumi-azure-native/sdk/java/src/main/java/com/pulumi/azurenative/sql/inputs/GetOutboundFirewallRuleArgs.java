@@ -13,7 +13,7 @@ public final class GetOutboundFirewallRuleArgs extends com.pulumi.resources.Invo
     public static final GetOutboundFirewallRuleArgs Empty = new GetOutboundFirewallRuleArgs();
 
     @Import(name="outboundRuleFqdn", required=true)
-      private final String outboundRuleFqdn;
+    private String outboundRuleFqdn;
 
     public String outboundRuleFqdn() {
         return this.outboundRuleFqdn;
@@ -24,7 +24,7 @@ public final class GetOutboundFirewallRuleArgs extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -35,64 +35,59 @@ public final class GetOutboundFirewallRuleArgs extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="serverName", required=true)
-      private final String serverName;
+    private String serverName;
 
     public String serverName() {
         return this.serverName;
     }
 
-    public GetOutboundFirewallRuleArgs(
-        String outboundRuleFqdn,
-        String resourceGroupName,
-        String serverName) {
-        this.outboundRuleFqdn = Objects.requireNonNull(outboundRuleFqdn, "expected parameter 'outboundRuleFqdn' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.serverName = Objects.requireNonNull(serverName, "expected parameter 'serverName' to be non-null");
-    }
+    private GetOutboundFirewallRuleArgs() {}
 
-    private GetOutboundFirewallRuleArgs() {
-        this.outboundRuleFqdn = null;
-        this.resourceGroupName = null;
-        this.serverName = null;
+    private GetOutboundFirewallRuleArgs(GetOutboundFirewallRuleArgs $) {
+        this.outboundRuleFqdn = $.outboundRuleFqdn;
+        this.resourceGroupName = $.resourceGroupName;
+        this.serverName = $.serverName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetOutboundFirewallRuleArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String outboundRuleFqdn;
-        private String resourceGroupName;
-        private String serverName;
+        private GetOutboundFirewallRuleArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetOutboundFirewallRuleArgs();
         }
 
         public Builder(GetOutboundFirewallRuleArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.outboundRuleFqdn = defaults.outboundRuleFqdn;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.serverName = defaults.serverName;
+            $ = new GetOutboundFirewallRuleArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder outboundRuleFqdn(String outboundRuleFqdn) {
-            this.outboundRuleFqdn = Objects.requireNonNull(outboundRuleFqdn);
+            $.outboundRuleFqdn = outboundRuleFqdn;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder serverName(String serverName) {
-            this.serverName = Objects.requireNonNull(serverName);
+            $.serverName = serverName;
             return this;
-        }        public GetOutboundFirewallRuleArgs build() {
-            return new GetOutboundFirewallRuleArgs(outboundRuleFqdn, resourceGroupName, serverName);
+        }
+
+        public GetOutboundFirewallRuleArgs build() {
+            $.outboundRuleFqdn = Objects.requireNonNull($.outboundRuleFqdn, "expected parameter 'outboundRuleFqdn' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.serverName = Objects.requireNonNull($.serverName, "expected parameter 'serverName' to be non-null");
+            return $;
         }
     }
+
 }

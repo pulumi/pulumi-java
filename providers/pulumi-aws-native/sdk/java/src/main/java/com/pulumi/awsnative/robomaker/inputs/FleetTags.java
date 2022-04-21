@@ -3,7 +3,7 @@
 
 package com.pulumi.awsnative.robomaker.inputs;
 
-import java.util.Objects;
+
 
 
 /**
@@ -14,28 +14,19 @@ public final class FleetTags extends com.pulumi.resources.InvokeArgs {
 
     public static final FleetTags Empty = new FleetTags();
 
-    public FleetTags() {
-    }
-
     public static Builder builder() {
         return new Builder();
     }
 
-    public static Builder builder(FleetTags defaults) {
-        return new Builder(defaults);
-    }
-
     public static final class Builder {
+        private FleetTags $;
 
         public Builder() {
-    	      // Empty
-        }
-
-        public Builder(FleetTags defaults) {
-    	      Objects.requireNonNull(defaults);
+            $ = new FleetTags();
         }
         public FleetTags build() {
-            return new FleetTags();
+            return $;
         }
     }
+
 }

@@ -5,9 +5,9 @@ package com.pulumi.googlenative.datacatalog_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.datacatalog_v1.enums.GoogleCloudDatacatalogV1DatabaseTableSpecType;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class GoogleCloudDatacatalogV1DatabaseTableSpecArgs extends com.pul
      * 
      */
     @Import(name="type")
-      private final @Nullable Output<GoogleCloudDatacatalogV1DatabaseTableSpecType> type;
+    private @Nullable Output<GoogleCloudDatacatalogV1DatabaseTableSpecType> type;
 
-    public Output<GoogleCloudDatacatalogV1DatabaseTableSpecType> type() {
-        return this.type == null ? Codegen.empty() : this.type;
+    public Optional<Output<GoogleCloudDatacatalogV1DatabaseTableSpecType>> type() {
+        return Optional.ofNullable(this.type);
     }
 
-    public GoogleCloudDatacatalogV1DatabaseTableSpecArgs(@Nullable Output<GoogleCloudDatacatalogV1DatabaseTableSpecType> type) {
-        this.type = type;
-    }
+    private GoogleCloudDatacatalogV1DatabaseTableSpecArgs() {}
 
-    private GoogleCloudDatacatalogV1DatabaseTableSpecArgs() {
-        this.type = Codegen.empty();
+    private GoogleCloudDatacatalogV1DatabaseTableSpecArgs(GoogleCloudDatacatalogV1DatabaseTableSpecArgs $) {
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudDatacatalogV1DatabaseTableSpecArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<GoogleCloudDatacatalogV1DatabaseTableSpecType> type;
+        private GoogleCloudDatacatalogV1DatabaseTableSpecArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudDatacatalogV1DatabaseTableSpecArgs();
         }
 
         public Builder(GoogleCloudDatacatalogV1DatabaseTableSpecArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.type = defaults.type;
+            $ = new GoogleCloudDatacatalogV1DatabaseTableSpecArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder type(@Nullable Output<GoogleCloudDatacatalogV1DatabaseTableSpecType> type) {
-            this.type = type;
+            $.type = type;
             return this;
         }
-        public Builder type(@Nullable GoogleCloudDatacatalogV1DatabaseTableSpecType type) {
-            this.type = Codegen.ofNullable(type);
-            return this;
-        }        public GoogleCloudDatacatalogV1DatabaseTableSpecArgs build() {
-            return new GoogleCloudDatacatalogV1DatabaseTableSpecArgs(type);
+
+        public Builder type(GoogleCloudDatacatalogV1DatabaseTableSpecType type) {
+            return type(Output.of(type));
+        }
+
+        public GoogleCloudDatacatalogV1DatabaseTableSpecArgs build() {
+            return $;
         }
     }
+
 }

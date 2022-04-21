@@ -20,7 +20,7 @@ public final class GetLogAnalyticExportThrottledRequestsArgs extends com.pulumi.
      * 
      */
     @Import(name="blobContainerSasUri", required=true)
-      private final String blobContainerSasUri;
+    private String blobContainerSasUri;
 
     public String blobContainerSasUri() {
         return this.blobContainerSasUri;
@@ -31,7 +31,7 @@ public final class GetLogAnalyticExportThrottledRequestsArgs extends com.pulumi.
      * 
      */
     @Import(name="fromTime", required=true)
-      private final String fromTime;
+    private String fromTime;
 
     public String fromTime() {
         return this.fromTime;
@@ -42,10 +42,10 @@ public final class GetLogAnalyticExportThrottledRequestsArgs extends com.pulumi.
      * 
      */
     @Import(name="groupByClientApplicationId")
-      private final @Nullable Boolean groupByClientApplicationId;
+    private @Nullable Boolean groupByClientApplicationId;
 
     public Optional<Boolean> groupByClientApplicationId() {
-        return this.groupByClientApplicationId == null ? Optional.empty() : Optional.ofNullable(this.groupByClientApplicationId);
+        return Optional.ofNullable(this.groupByClientApplicationId);
     }
 
     /**
@@ -53,10 +53,10 @@ public final class GetLogAnalyticExportThrottledRequestsArgs extends com.pulumi.
      * 
      */
     @Import(name="groupByOperationName")
-      private final @Nullable Boolean groupByOperationName;
+    private @Nullable Boolean groupByOperationName;
 
     public Optional<Boolean> groupByOperationName() {
-        return this.groupByOperationName == null ? Optional.empty() : Optional.ofNullable(this.groupByOperationName);
+        return Optional.ofNullable(this.groupByOperationName);
     }
 
     /**
@@ -64,10 +64,10 @@ public final class GetLogAnalyticExportThrottledRequestsArgs extends com.pulumi.
      * 
      */
     @Import(name="groupByResourceName")
-      private final @Nullable Boolean groupByResourceName;
+    private @Nullable Boolean groupByResourceName;
 
     public Optional<Boolean> groupByResourceName() {
-        return this.groupByResourceName == null ? Optional.empty() : Optional.ofNullable(this.groupByResourceName);
+        return Optional.ofNullable(this.groupByResourceName);
     }
 
     /**
@@ -75,10 +75,10 @@ public final class GetLogAnalyticExportThrottledRequestsArgs extends com.pulumi.
      * 
      */
     @Import(name="groupByThrottlePolicy")
-      private final @Nullable Boolean groupByThrottlePolicy;
+    private @Nullable Boolean groupByThrottlePolicy;
 
     public Optional<Boolean> groupByThrottlePolicy() {
-        return this.groupByThrottlePolicy == null ? Optional.empty() : Optional.ofNullable(this.groupByThrottlePolicy);
+        return Optional.ofNullable(this.groupByThrottlePolicy);
     }
 
     /**
@@ -86,10 +86,10 @@ public final class GetLogAnalyticExportThrottledRequestsArgs extends com.pulumi.
      * 
      */
     @Import(name="groupByUserAgent")
-      private final @Nullable Boolean groupByUserAgent;
+    private @Nullable Boolean groupByUserAgent;
 
     public Optional<Boolean> groupByUserAgent() {
-        return this.groupByUserAgent == null ? Optional.empty() : Optional.ofNullable(this.groupByUserAgent);
+        return Optional.ofNullable(this.groupByUserAgent);
     }
 
     /**
@@ -97,7 +97,7 @@ public final class GetLogAnalyticExportThrottledRequestsArgs extends com.pulumi.
      * 
      */
     @Import(name="location", required=true)
-      private final String location;
+    private String location;
 
     public String location() {
         return this.location;
@@ -108,118 +108,96 @@ public final class GetLogAnalyticExportThrottledRequestsArgs extends com.pulumi.
      * 
      */
     @Import(name="toTime", required=true)
-      private final String toTime;
+    private String toTime;
 
     public String toTime() {
         return this.toTime;
     }
 
-    public GetLogAnalyticExportThrottledRequestsArgs(
-        String blobContainerSasUri,
-        String fromTime,
-        @Nullable Boolean groupByClientApplicationId,
-        @Nullable Boolean groupByOperationName,
-        @Nullable Boolean groupByResourceName,
-        @Nullable Boolean groupByThrottlePolicy,
-        @Nullable Boolean groupByUserAgent,
-        String location,
-        String toTime) {
-        this.blobContainerSasUri = Objects.requireNonNull(blobContainerSasUri, "expected parameter 'blobContainerSasUri' to be non-null");
-        this.fromTime = Objects.requireNonNull(fromTime, "expected parameter 'fromTime' to be non-null");
-        this.groupByClientApplicationId = groupByClientApplicationId;
-        this.groupByOperationName = groupByOperationName;
-        this.groupByResourceName = groupByResourceName;
-        this.groupByThrottlePolicy = groupByThrottlePolicy;
-        this.groupByUserAgent = groupByUserAgent;
-        this.location = Objects.requireNonNull(location, "expected parameter 'location' to be non-null");
-        this.toTime = Objects.requireNonNull(toTime, "expected parameter 'toTime' to be non-null");
-    }
+    private GetLogAnalyticExportThrottledRequestsArgs() {}
 
-    private GetLogAnalyticExportThrottledRequestsArgs() {
-        this.blobContainerSasUri = null;
-        this.fromTime = null;
-        this.groupByClientApplicationId = null;
-        this.groupByOperationName = null;
-        this.groupByResourceName = null;
-        this.groupByThrottlePolicy = null;
-        this.groupByUserAgent = null;
-        this.location = null;
-        this.toTime = null;
+    private GetLogAnalyticExportThrottledRequestsArgs(GetLogAnalyticExportThrottledRequestsArgs $) {
+        this.blobContainerSasUri = $.blobContainerSasUri;
+        this.fromTime = $.fromTime;
+        this.groupByClientApplicationId = $.groupByClientApplicationId;
+        this.groupByOperationName = $.groupByOperationName;
+        this.groupByResourceName = $.groupByResourceName;
+        this.groupByThrottlePolicy = $.groupByThrottlePolicy;
+        this.groupByUserAgent = $.groupByUserAgent;
+        this.location = $.location;
+        this.toTime = $.toTime;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetLogAnalyticExportThrottledRequestsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String blobContainerSasUri;
-        private String fromTime;
-        private @Nullable Boolean groupByClientApplicationId;
-        private @Nullable Boolean groupByOperationName;
-        private @Nullable Boolean groupByResourceName;
-        private @Nullable Boolean groupByThrottlePolicy;
-        private @Nullable Boolean groupByUserAgent;
-        private String location;
-        private String toTime;
+        private GetLogAnalyticExportThrottledRequestsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetLogAnalyticExportThrottledRequestsArgs();
         }
 
         public Builder(GetLogAnalyticExportThrottledRequestsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.blobContainerSasUri = defaults.blobContainerSasUri;
-    	      this.fromTime = defaults.fromTime;
-    	      this.groupByClientApplicationId = defaults.groupByClientApplicationId;
-    	      this.groupByOperationName = defaults.groupByOperationName;
-    	      this.groupByResourceName = defaults.groupByResourceName;
-    	      this.groupByThrottlePolicy = defaults.groupByThrottlePolicy;
-    	      this.groupByUserAgent = defaults.groupByUserAgent;
-    	      this.location = defaults.location;
-    	      this.toTime = defaults.toTime;
+            $ = new GetLogAnalyticExportThrottledRequestsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder blobContainerSasUri(String blobContainerSasUri) {
-            this.blobContainerSasUri = Objects.requireNonNull(blobContainerSasUri);
+            $.blobContainerSasUri = blobContainerSasUri;
             return this;
         }
+
         public Builder fromTime(String fromTime) {
-            this.fromTime = Objects.requireNonNull(fromTime);
+            $.fromTime = fromTime;
             return this;
         }
+
         public Builder groupByClientApplicationId(@Nullable Boolean groupByClientApplicationId) {
-            this.groupByClientApplicationId = groupByClientApplicationId;
+            $.groupByClientApplicationId = groupByClientApplicationId;
             return this;
         }
+
         public Builder groupByOperationName(@Nullable Boolean groupByOperationName) {
-            this.groupByOperationName = groupByOperationName;
+            $.groupByOperationName = groupByOperationName;
             return this;
         }
+
         public Builder groupByResourceName(@Nullable Boolean groupByResourceName) {
-            this.groupByResourceName = groupByResourceName;
+            $.groupByResourceName = groupByResourceName;
             return this;
         }
+
         public Builder groupByThrottlePolicy(@Nullable Boolean groupByThrottlePolicy) {
-            this.groupByThrottlePolicy = groupByThrottlePolicy;
+            $.groupByThrottlePolicy = groupByThrottlePolicy;
             return this;
         }
+
         public Builder groupByUserAgent(@Nullable Boolean groupByUserAgent) {
-            this.groupByUserAgent = groupByUserAgent;
+            $.groupByUserAgent = groupByUserAgent;
             return this;
         }
+
         public Builder location(String location) {
-            this.location = Objects.requireNonNull(location);
+            $.location = location;
             return this;
         }
+
         public Builder toTime(String toTime) {
-            this.toTime = Objects.requireNonNull(toTime);
+            $.toTime = toTime;
             return this;
-        }        public GetLogAnalyticExportThrottledRequestsArgs build() {
-            return new GetLogAnalyticExportThrottledRequestsArgs(blobContainerSasUri, fromTime, groupByClientApplicationId, groupByOperationName, groupByResourceName, groupByThrottlePolicy, groupByUserAgent, location, toTime);
+        }
+
+        public GetLogAnalyticExportThrottledRequestsArgs build() {
+            $.blobContainerSasUri = Objects.requireNonNull($.blobContainerSasUri, "expected parameter 'blobContainerSasUri' to be non-null");
+            $.fromTime = Objects.requireNonNull($.fromTime, "expected parameter 'fromTime' to be non-null");
+            $.location = Objects.requireNonNull($.location, "expected parameter 'location' to be non-null");
+            $.toTime = Objects.requireNonNull($.toTime, "expected parameter 'toTime' to be non-null");
+            return $;
         }
     }
+
 }

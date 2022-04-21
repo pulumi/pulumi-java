@@ -6,9 +6,9 @@ package com.pulumi.azurenative.migrate.inputs;
 import com.pulumi.azurenative.migrate.inputs.SubnetReferenceArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class LBFrontendIPConfigurationResourceSettingsArgs extends com.pul
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class LBFrontendIPConfigurationResourceSettingsArgs extends com.pul
      * 
      */
     @Import(name="privateIpAddress")
-      private final @Nullable Output<String> privateIpAddress;
+    private @Nullable Output<String> privateIpAddress;
 
-    public Output<String> privateIpAddress() {
-        return this.privateIpAddress == null ? Codegen.empty() : this.privateIpAddress;
+    public Optional<Output<String>> privateIpAddress() {
+        return Optional.ofNullable(this.privateIpAddress);
     }
 
     /**
@@ -48,10 +48,10 @@ public final class LBFrontendIPConfigurationResourceSettingsArgs extends com.pul
      * 
      */
     @Import(name="privateIpAllocationMethod")
-      private final @Nullable Output<String> privateIpAllocationMethod;
+    private @Nullable Output<String> privateIpAllocationMethod;
 
-    public Output<String> privateIpAllocationMethod() {
-        return this.privateIpAllocationMethod == null ? Codegen.empty() : this.privateIpAllocationMethod;
+    public Optional<Output<String>> privateIpAllocationMethod() {
+        return Optional.ofNullable(this.privateIpAllocationMethod);
     }
 
     /**
@@ -59,10 +59,10 @@ public final class LBFrontendIPConfigurationResourceSettingsArgs extends com.pul
      * 
      */
     @Import(name="subnet")
-      private final @Nullable Output<SubnetReferenceArgs> subnet;
+    private @Nullable Output<SubnetReferenceArgs> subnet;
 
-    public Output<SubnetReferenceArgs> subnet() {
-        return this.subnet == null ? Codegen.empty() : this.subnet;
+    public Optional<Output<SubnetReferenceArgs>> subnet() {
+        return Optional.ofNullable(this.subnet);
     }
 
     /**
@@ -70,102 +70,88 @@ public final class LBFrontendIPConfigurationResourceSettingsArgs extends com.pul
      * 
      */
     @Import(name="zones")
-      private final @Nullable Output<String> zones;
+    private @Nullable Output<String> zones;
 
-    public Output<String> zones() {
-        return this.zones == null ? Codegen.empty() : this.zones;
+    public Optional<Output<String>> zones() {
+        return Optional.ofNullable(this.zones);
     }
 
-    public LBFrontendIPConfigurationResourceSettingsArgs(
-        @Nullable Output<String> name,
-        @Nullable Output<String> privateIpAddress,
-        @Nullable Output<String> privateIpAllocationMethod,
-        @Nullable Output<SubnetReferenceArgs> subnet,
-        @Nullable Output<String> zones) {
-        this.name = name;
-        this.privateIpAddress = privateIpAddress;
-        this.privateIpAllocationMethod = privateIpAllocationMethod;
-        this.subnet = subnet;
-        this.zones = zones;
-    }
+    private LBFrontendIPConfigurationResourceSettingsArgs() {}
 
-    private LBFrontendIPConfigurationResourceSettingsArgs() {
-        this.name = Codegen.empty();
-        this.privateIpAddress = Codegen.empty();
-        this.privateIpAllocationMethod = Codegen.empty();
-        this.subnet = Codegen.empty();
-        this.zones = Codegen.empty();
+    private LBFrontendIPConfigurationResourceSettingsArgs(LBFrontendIPConfigurationResourceSettingsArgs $) {
+        this.name = $.name;
+        this.privateIpAddress = $.privateIpAddress;
+        this.privateIpAllocationMethod = $.privateIpAllocationMethod;
+        this.subnet = $.subnet;
+        this.zones = $.zones;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LBFrontendIPConfigurationResourceSettingsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> privateIpAddress;
-        private @Nullable Output<String> privateIpAllocationMethod;
-        private @Nullable Output<SubnetReferenceArgs> subnet;
-        private @Nullable Output<String> zones;
+        private LBFrontendIPConfigurationResourceSettingsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new LBFrontendIPConfigurationResourceSettingsArgs();
         }
 
         public Builder(LBFrontendIPConfigurationResourceSettingsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.privateIpAddress = defaults.privateIpAddress;
-    	      this.privateIpAllocationMethod = defaults.privateIpAllocationMethod;
-    	      this.subnet = defaults.subnet;
-    	      this.zones = defaults.zones;
+            $ = new LBFrontendIPConfigurationResourceSettingsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder privateIpAddress(@Nullable Output<String> privateIpAddress) {
-            this.privateIpAddress = privateIpAddress;
+            $.privateIpAddress = privateIpAddress;
             return this;
         }
-        public Builder privateIpAddress(@Nullable String privateIpAddress) {
-            this.privateIpAddress = Codegen.ofNullable(privateIpAddress);
-            return this;
+
+        public Builder privateIpAddress(String privateIpAddress) {
+            return privateIpAddress(Output.of(privateIpAddress));
         }
+
         public Builder privateIpAllocationMethod(@Nullable Output<String> privateIpAllocationMethod) {
-            this.privateIpAllocationMethod = privateIpAllocationMethod;
+            $.privateIpAllocationMethod = privateIpAllocationMethod;
             return this;
         }
-        public Builder privateIpAllocationMethod(@Nullable String privateIpAllocationMethod) {
-            this.privateIpAllocationMethod = Codegen.ofNullable(privateIpAllocationMethod);
-            return this;
+
+        public Builder privateIpAllocationMethod(String privateIpAllocationMethod) {
+            return privateIpAllocationMethod(Output.of(privateIpAllocationMethod));
         }
+
         public Builder subnet(@Nullable Output<SubnetReferenceArgs> subnet) {
-            this.subnet = subnet;
+            $.subnet = subnet;
             return this;
         }
-        public Builder subnet(@Nullable SubnetReferenceArgs subnet) {
-            this.subnet = Codegen.ofNullable(subnet);
-            return this;
+
+        public Builder subnet(SubnetReferenceArgs subnet) {
+            return subnet(Output.of(subnet));
         }
+
         public Builder zones(@Nullable Output<String> zones) {
-            this.zones = zones;
+            $.zones = zones;
             return this;
         }
-        public Builder zones(@Nullable String zones) {
-            this.zones = Codegen.ofNullable(zones);
-            return this;
-        }        public LBFrontendIPConfigurationResourceSettingsArgs build() {
-            return new LBFrontendIPConfigurationResourceSettingsArgs(name, privateIpAddress, privateIpAllocationMethod, subnet, zones);
+
+        public Builder zones(String zones) {
+            return zones(Output.of(zones));
+        }
+
+        public LBFrontendIPConfigurationResourceSettingsArgs build() {
+            return $;
         }
     }
+
 }

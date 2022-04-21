@@ -21,7 +21,7 @@ public final class MessageResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="message", required=true)
-      private final String message;
+    private String message;
 
     public String message() {
         return this.message;
@@ -32,55 +32,52 @@ public final class MessageResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="timeStamp", required=true)
-      private final String timeStamp;
+    private String timeStamp;
 
     public String timeStamp() {
         return this.timeStamp;
     }
 
-    public MessageResponse(
-        String message,
-        String timeStamp) {
-        this.message = Objects.requireNonNull(message, "expected parameter 'message' to be non-null");
-        this.timeStamp = Objects.requireNonNull(timeStamp, "expected parameter 'timeStamp' to be non-null");
-    }
+    private MessageResponse() {}
 
-    private MessageResponse() {
-        this.message = null;
-        this.timeStamp = null;
+    private MessageResponse(MessageResponse $) {
+        this.message = $.message;
+        this.timeStamp = $.timeStamp;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MessageResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String message;
-        private String timeStamp;
+        private MessageResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new MessageResponse();
         }
 
         public Builder(MessageResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.message = defaults.message;
-    	      this.timeStamp = defaults.timeStamp;
+            $ = new MessageResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder message(String message) {
-            this.message = Objects.requireNonNull(message);
+            $.message = message;
             return this;
         }
+
         public Builder timeStamp(String timeStamp) {
-            this.timeStamp = Objects.requireNonNull(timeStamp);
+            $.timeStamp = timeStamp;
             return this;
-        }        public MessageResponse build() {
-            return new MessageResponse(message, timeStamp);
+        }
+
+        public MessageResponse build() {
+            $.message = Objects.requireNonNull($.message, "expected parameter 'message' to be non-null");
+            $.timeStamp = Objects.requireNonNull($.timeStamp, "expected parameter 'timeStamp' to be non-null");
+            return $;
         }
     }
+
 }

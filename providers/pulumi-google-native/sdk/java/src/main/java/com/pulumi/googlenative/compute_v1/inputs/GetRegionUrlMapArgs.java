@@ -15,78 +15,72 @@ public final class GetRegionUrlMapArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetRegionUrlMapArgs Empty = new GetRegionUrlMapArgs();
 
     @Import(name="project")
-      private final @Nullable String project;
+    private @Nullable String project;
 
     public Optional<String> project() {
-        return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
+        return Optional.ofNullable(this.project);
     }
 
     @Import(name="region", required=true)
-      private final String region;
+    private String region;
 
     public String region() {
         return this.region;
     }
 
     @Import(name="urlMap", required=true)
-      private final String urlMap;
+    private String urlMap;
 
     public String urlMap() {
         return this.urlMap;
     }
 
-    public GetRegionUrlMapArgs(
-        @Nullable String project,
-        String region,
-        String urlMap) {
-        this.project = project;
-        this.region = Objects.requireNonNull(region, "expected parameter 'region' to be non-null");
-        this.urlMap = Objects.requireNonNull(urlMap, "expected parameter 'urlMap' to be non-null");
-    }
+    private GetRegionUrlMapArgs() {}
 
-    private GetRegionUrlMapArgs() {
-        this.project = null;
-        this.region = null;
-        this.urlMap = null;
+    private GetRegionUrlMapArgs(GetRegionUrlMapArgs $) {
+        this.project = $.project;
+        this.region = $.region;
+        this.urlMap = $.urlMap;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetRegionUrlMapArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String project;
-        private String region;
-        private String urlMap;
+        private GetRegionUrlMapArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetRegionUrlMapArgs();
         }
 
         public Builder(GetRegionUrlMapArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.project = defaults.project;
-    	      this.region = defaults.region;
-    	      this.urlMap = defaults.urlMap;
+            $ = new GetRegionUrlMapArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder project(@Nullable String project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
+
         public Builder region(String region) {
-            this.region = Objects.requireNonNull(region);
+            $.region = region;
             return this;
         }
+
         public Builder urlMap(String urlMap) {
-            this.urlMap = Objects.requireNonNull(urlMap);
+            $.urlMap = urlMap;
             return this;
-        }        public GetRegionUrlMapArgs build() {
-            return new GetRegionUrlMapArgs(project, region, urlMap);
+        }
+
+        public GetRegionUrlMapArgs build() {
+            $.region = Objects.requireNonNull($.region, "expected parameter 'region' to be non-null");
+            $.urlMap = Objects.requireNonNull($.urlMap, "expected parameter 'urlMap' to be non-null");
+            return $;
         }
     }
+
 }

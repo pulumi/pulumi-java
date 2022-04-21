@@ -6,9 +6,9 @@ package com.pulumi.azurenative.web.inputs;
 import com.pulumi.azurenative.web.enums.LogLevel;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class AzureTableStorageApplicationLogsConfigArgs extends com.pulumi
      * 
      */
     @Import(name="level")
-      private final @Nullable Output<LogLevel> level;
+    private @Nullable Output<LogLevel> level;
 
-    public Output<LogLevel> level() {
-        return this.level == null ? Codegen.empty() : this.level;
+    public Optional<Output<LogLevel>> level() {
+        return Optional.ofNullable(this.level);
     }
 
     /**
@@ -36,63 +36,59 @@ public final class AzureTableStorageApplicationLogsConfigArgs extends com.pulumi
      * 
      */
     @Import(name="sasUrl", required=true)
-      private final Output<String> sasUrl;
+    private Output<String> sasUrl;
 
     public Output<String> sasUrl() {
         return this.sasUrl;
     }
 
-    public AzureTableStorageApplicationLogsConfigArgs(
-        @Nullable Output<LogLevel> level,
-        Output<String> sasUrl) {
-        this.level = level;
-        this.sasUrl = Objects.requireNonNull(sasUrl, "expected parameter 'sasUrl' to be non-null");
-    }
+    private AzureTableStorageApplicationLogsConfigArgs() {}
 
-    private AzureTableStorageApplicationLogsConfigArgs() {
-        this.level = Codegen.empty();
-        this.sasUrl = Codegen.empty();
+    private AzureTableStorageApplicationLogsConfigArgs(AzureTableStorageApplicationLogsConfigArgs $) {
+        this.level = $.level;
+        this.sasUrl = $.sasUrl;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AzureTableStorageApplicationLogsConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<LogLevel> level;
-        private Output<String> sasUrl;
+        private AzureTableStorageApplicationLogsConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AzureTableStorageApplicationLogsConfigArgs();
         }
 
         public Builder(AzureTableStorageApplicationLogsConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.level = defaults.level;
-    	      this.sasUrl = defaults.sasUrl;
+            $ = new AzureTableStorageApplicationLogsConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder level(@Nullable Output<LogLevel> level) {
-            this.level = level;
+            $.level = level;
             return this;
         }
-        public Builder level(@Nullable LogLevel level) {
-            this.level = Codegen.ofNullable(level);
-            return this;
+
+        public Builder level(LogLevel level) {
+            return level(Output.of(level));
         }
+
         public Builder sasUrl(Output<String> sasUrl) {
-            this.sasUrl = Objects.requireNonNull(sasUrl);
+            $.sasUrl = sasUrl;
             return this;
         }
+
         public Builder sasUrl(String sasUrl) {
-            this.sasUrl = Output.of(Objects.requireNonNull(sasUrl));
-            return this;
-        }        public AzureTableStorageApplicationLogsConfigArgs build() {
-            return new AzureTableStorageApplicationLogsConfigArgs(level, sasUrl);
+            return sasUrl(Output.of(sasUrl));
+        }
+
+        public AzureTableStorageApplicationLogsConfigArgs build() {
+            $.sasUrl = Objects.requireNonNull($.sasUrl, "expected parameter 'sasUrl' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,11 +5,11 @@ package com.pulumi.gcp.tags;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.tags.inputs.TagValueIamBindingConditionArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -18,14 +18,14 @@ public final class TagValueIamBindingArgs extends com.pulumi.resources.ResourceA
     public static final TagValueIamBindingArgs Empty = new TagValueIamBindingArgs();
 
     @Import(name="condition")
-      private final @Nullable Output<TagValueIamBindingConditionArgs> condition;
+    private @Nullable Output<TagValueIamBindingConditionArgs> condition;
 
-    public Output<TagValueIamBindingConditionArgs> condition() {
-        return this.condition == null ? Codegen.empty() : this.condition;
+    public Optional<Output<TagValueIamBindingConditionArgs>> condition() {
+        return Optional.ofNullable(this.condition);
     }
 
     @Import(name="members", required=true)
-      private final Output<List<String>> members;
+    private Output<List<String>> members;
 
     public Output<List<String>> members() {
         return this.members;
@@ -38,7 +38,7 @@ public final class TagValueIamBindingArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="role", required=true)
-      private final Output<String> role;
+    private Output<String> role;
 
     public Output<String> role() {
         return this.role;
@@ -49,92 +49,85 @@ public final class TagValueIamBindingArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="tagValue", required=true)
-      private final Output<String> tagValue;
+    private Output<String> tagValue;
 
     public Output<String> tagValue() {
         return this.tagValue;
     }
 
-    public TagValueIamBindingArgs(
-        @Nullable Output<TagValueIamBindingConditionArgs> condition,
-        Output<List<String>> members,
-        Output<String> role,
-        Output<String> tagValue) {
-        this.condition = condition;
-        this.members = Objects.requireNonNull(members, "expected parameter 'members' to be non-null");
-        this.role = Objects.requireNonNull(role, "expected parameter 'role' to be non-null");
-        this.tagValue = Objects.requireNonNull(tagValue, "expected parameter 'tagValue' to be non-null");
-    }
+    private TagValueIamBindingArgs() {}
 
-    private TagValueIamBindingArgs() {
-        this.condition = Codegen.empty();
-        this.members = Codegen.empty();
-        this.role = Codegen.empty();
-        this.tagValue = Codegen.empty();
+    private TagValueIamBindingArgs(TagValueIamBindingArgs $) {
+        this.condition = $.condition;
+        this.members = $.members;
+        this.role = $.role;
+        this.tagValue = $.tagValue;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TagValueIamBindingArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<TagValueIamBindingConditionArgs> condition;
-        private Output<List<String>> members;
-        private Output<String> role;
-        private Output<String> tagValue;
+        private TagValueIamBindingArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TagValueIamBindingArgs();
         }
 
         public Builder(TagValueIamBindingArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.condition = defaults.condition;
-    	      this.members = defaults.members;
-    	      this.role = defaults.role;
-    	      this.tagValue = defaults.tagValue;
+            $ = new TagValueIamBindingArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder condition(@Nullable Output<TagValueIamBindingConditionArgs> condition) {
-            this.condition = condition;
+            $.condition = condition;
             return this;
         }
-        public Builder condition(@Nullable TagValueIamBindingConditionArgs condition) {
-            this.condition = Codegen.ofNullable(condition);
-            return this;
+
+        public Builder condition(TagValueIamBindingConditionArgs condition) {
+            return condition(Output.of(condition));
         }
+
         public Builder members(Output<List<String>> members) {
-            this.members = Objects.requireNonNull(members);
+            $.members = members;
             return this;
         }
+
         public Builder members(List<String> members) {
-            this.members = Output.of(Objects.requireNonNull(members));
-            return this;
+            return members(Output.of(members));
         }
+
         public Builder members(String... members) {
             return members(List.of(members));
         }
+
         public Builder role(Output<String> role) {
-            this.role = Objects.requireNonNull(role);
+            $.role = role;
             return this;
         }
+
         public Builder role(String role) {
-            this.role = Output.of(Objects.requireNonNull(role));
-            return this;
+            return role(Output.of(role));
         }
+
         public Builder tagValue(Output<String> tagValue) {
-            this.tagValue = Objects.requireNonNull(tagValue);
+            $.tagValue = tagValue;
             return this;
         }
+
         public Builder tagValue(String tagValue) {
-            this.tagValue = Output.of(Objects.requireNonNull(tagValue));
-            return this;
-        }        public TagValueIamBindingArgs build() {
-            return new TagValueIamBindingArgs(condition, members, role, tagValue);
+            return tagValue(Output.of(tagValue));
+        }
+
+        public TagValueIamBindingArgs build() {
+            $.members = Objects.requireNonNull($.members, "expected parameter 'members' to be non-null");
+            $.role = Objects.requireNonNull($.role, "expected parameter 'role' to be non-null");
+            $.tagValue = Objects.requireNonNull($.tagValue, "expected parameter 'tagValue' to be non-null");
+            return $;
         }
     }
+
 }

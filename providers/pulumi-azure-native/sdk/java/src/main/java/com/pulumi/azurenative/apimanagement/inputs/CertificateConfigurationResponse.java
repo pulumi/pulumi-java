@@ -24,10 +24,10 @@ public final class CertificateConfigurationResponse extends com.pulumi.resources
      * 
      */
     @Import(name="certificate")
-      private final @Nullable CertificateInformationResponse certificate;
+    private @Nullable CertificateInformationResponse certificate;
 
     public Optional<CertificateInformationResponse> certificate() {
-        return this.certificate == null ? Optional.empty() : Optional.ofNullable(this.certificate);
+        return Optional.ofNullable(this.certificate);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class CertificateConfigurationResponse extends com.pulumi.resources
      * 
      */
     @Import(name="certificatePassword")
-      private final @Nullable String certificatePassword;
+    private @Nullable String certificatePassword;
 
     public Optional<String> certificatePassword() {
-        return this.certificatePassword == null ? Optional.empty() : Optional.ofNullable(this.certificatePassword);
+        return Optional.ofNullable(this.certificatePassword);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class CertificateConfigurationResponse extends com.pulumi.resources
      * 
      */
     @Import(name="encodedCertificate")
-      private final @Nullable String encodedCertificate;
+    private @Nullable String encodedCertificate;
 
     public Optional<String> encodedCertificate() {
-        return this.encodedCertificate == null ? Optional.empty() : Optional.ofNullable(this.encodedCertificate);
+        return Optional.ofNullable(this.encodedCertificate);
     }
 
     /**
@@ -57,73 +57,63 @@ public final class CertificateConfigurationResponse extends com.pulumi.resources
      * 
      */
     @Import(name="storeName", required=true)
-      private final String storeName;
+    private String storeName;
 
     public String storeName() {
         return this.storeName;
     }
 
-    public CertificateConfigurationResponse(
-        @Nullable CertificateInformationResponse certificate,
-        @Nullable String certificatePassword,
-        @Nullable String encodedCertificate,
-        String storeName) {
-        this.certificate = certificate;
-        this.certificatePassword = certificatePassword;
-        this.encodedCertificate = encodedCertificate;
-        this.storeName = Objects.requireNonNull(storeName, "expected parameter 'storeName' to be non-null");
-    }
+    private CertificateConfigurationResponse() {}
 
-    private CertificateConfigurationResponse() {
-        this.certificate = null;
-        this.certificatePassword = null;
-        this.encodedCertificate = null;
-        this.storeName = null;
+    private CertificateConfigurationResponse(CertificateConfigurationResponse $) {
+        this.certificate = $.certificate;
+        this.certificatePassword = $.certificatePassword;
+        this.encodedCertificate = $.encodedCertificate;
+        this.storeName = $.storeName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CertificateConfigurationResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable CertificateInformationResponse certificate;
-        private @Nullable String certificatePassword;
-        private @Nullable String encodedCertificate;
-        private String storeName;
+        private CertificateConfigurationResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new CertificateConfigurationResponse();
         }
 
         public Builder(CertificateConfigurationResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.certificate = defaults.certificate;
-    	      this.certificatePassword = defaults.certificatePassword;
-    	      this.encodedCertificate = defaults.encodedCertificate;
-    	      this.storeName = defaults.storeName;
+            $ = new CertificateConfigurationResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder certificate(@Nullable CertificateInformationResponse certificate) {
-            this.certificate = certificate;
+            $.certificate = certificate;
             return this;
         }
+
         public Builder certificatePassword(@Nullable String certificatePassword) {
-            this.certificatePassword = certificatePassword;
+            $.certificatePassword = certificatePassword;
             return this;
         }
+
         public Builder encodedCertificate(@Nullable String encodedCertificate) {
-            this.encodedCertificate = encodedCertificate;
+            $.encodedCertificate = encodedCertificate;
             return this;
         }
+
         public Builder storeName(String storeName) {
-            this.storeName = Objects.requireNonNull(storeName);
+            $.storeName = storeName;
             return this;
-        }        public CertificateConfigurationResponse build() {
-            return new CertificateConfigurationResponse(certificate, certificatePassword, encodedCertificate, storeName);
+        }
+
+        public CertificateConfigurationResponse build() {
+            $.storeName = Objects.requireNonNull($.storeName, "expected parameter 'storeName' to be non-null");
+            return $;
         }
     }
+
 }

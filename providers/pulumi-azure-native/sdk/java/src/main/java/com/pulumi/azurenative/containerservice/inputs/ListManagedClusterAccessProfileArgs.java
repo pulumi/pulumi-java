@@ -17,7 +17,7 @@ public final class ListManagedClusterAccessProfileArgs extends com.pulumi.resour
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -28,7 +28,7 @@ public final class ListManagedClusterAccessProfileArgs extends com.pulumi.resour
      * 
      */
     @Import(name="resourceName", required=true)
-      private final String resourceName;
+    private String resourceName;
 
     public String resourceName() {
         return this.resourceName;
@@ -39,64 +39,59 @@ public final class ListManagedClusterAccessProfileArgs extends com.pulumi.resour
      * 
      */
     @Import(name="roleName", required=true)
-      private final String roleName;
+    private String roleName;
 
     public String roleName() {
         return this.roleName;
     }
 
-    public ListManagedClusterAccessProfileArgs(
-        String resourceGroupName,
-        String resourceName,
-        String roleName) {
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.resourceName = Objects.requireNonNull(resourceName, "expected parameter 'resourceName' to be non-null");
-        this.roleName = Objects.requireNonNull(roleName, "expected parameter 'roleName' to be non-null");
-    }
+    private ListManagedClusterAccessProfileArgs() {}
 
-    private ListManagedClusterAccessProfileArgs() {
-        this.resourceGroupName = null;
-        this.resourceName = null;
-        this.roleName = null;
+    private ListManagedClusterAccessProfileArgs(ListManagedClusterAccessProfileArgs $) {
+        this.resourceGroupName = $.resourceGroupName;
+        this.resourceName = $.resourceName;
+        this.roleName = $.roleName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ListManagedClusterAccessProfileArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String resourceGroupName;
-        private String resourceName;
-        private String roleName;
+        private ListManagedClusterAccessProfileArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ListManagedClusterAccessProfileArgs();
         }
 
         public Builder(ListManagedClusterAccessProfileArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.resourceName = defaults.resourceName;
-    	      this.roleName = defaults.roleName;
+            $ = new ListManagedClusterAccessProfileArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceName(String resourceName) {
-            this.resourceName = Objects.requireNonNull(resourceName);
+            $.resourceName = resourceName;
             return this;
         }
+
         public Builder roleName(String roleName) {
-            this.roleName = Objects.requireNonNull(roleName);
+            $.roleName = roleName;
             return this;
-        }        public ListManagedClusterAccessProfileArgs build() {
-            return new ListManagedClusterAccessProfileArgs(resourceGroupName, resourceName, roleName);
+        }
+
+        public ListManagedClusterAccessProfileArgs build() {
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.resourceName = Objects.requireNonNull($.resourceName, "expected parameter 'resourceName' to be non-null");
+            $.roleName = Objects.requireNonNull($.roleName, "expected parameter 'roleName' to be non-null");
+            return $;
         }
     }
+
 }

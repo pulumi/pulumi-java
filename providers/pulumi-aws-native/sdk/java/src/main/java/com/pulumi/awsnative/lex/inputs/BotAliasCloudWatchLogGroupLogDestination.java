@@ -17,7 +17,7 @@ public final class BotAliasCloudWatchLogGroupLogDestination extends com.pulumi.r
      * 
      */
     @Import(name="cloudWatchLogGroupArn", required=true)
-      private final String cloudWatchLogGroupArn;
+    private String cloudWatchLogGroupArn;
 
     public String cloudWatchLogGroupArn() {
         return this.cloudWatchLogGroupArn;
@@ -28,55 +28,52 @@ public final class BotAliasCloudWatchLogGroupLogDestination extends com.pulumi.r
      * 
      */
     @Import(name="logPrefix", required=true)
-      private final String logPrefix;
+    private String logPrefix;
 
     public String logPrefix() {
         return this.logPrefix;
     }
 
-    public BotAliasCloudWatchLogGroupLogDestination(
-        String cloudWatchLogGroupArn,
-        String logPrefix) {
-        this.cloudWatchLogGroupArn = Objects.requireNonNull(cloudWatchLogGroupArn, "expected parameter 'cloudWatchLogGroupArn' to be non-null");
-        this.logPrefix = Objects.requireNonNull(logPrefix, "expected parameter 'logPrefix' to be non-null");
-    }
+    private BotAliasCloudWatchLogGroupLogDestination() {}
 
-    private BotAliasCloudWatchLogGroupLogDestination() {
-        this.cloudWatchLogGroupArn = null;
-        this.logPrefix = null;
+    private BotAliasCloudWatchLogGroupLogDestination(BotAliasCloudWatchLogGroupLogDestination $) {
+        this.cloudWatchLogGroupArn = $.cloudWatchLogGroupArn;
+        this.logPrefix = $.logPrefix;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BotAliasCloudWatchLogGroupLogDestination defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String cloudWatchLogGroupArn;
-        private String logPrefix;
+        private BotAliasCloudWatchLogGroupLogDestination $;
 
         public Builder() {
-    	      // Empty
+            $ = new BotAliasCloudWatchLogGroupLogDestination();
         }
 
         public Builder(BotAliasCloudWatchLogGroupLogDestination defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cloudWatchLogGroupArn = defaults.cloudWatchLogGroupArn;
-    	      this.logPrefix = defaults.logPrefix;
+            $ = new BotAliasCloudWatchLogGroupLogDestination(Objects.requireNonNull(defaults));
         }
 
         public Builder cloudWatchLogGroupArn(String cloudWatchLogGroupArn) {
-            this.cloudWatchLogGroupArn = Objects.requireNonNull(cloudWatchLogGroupArn);
+            $.cloudWatchLogGroupArn = cloudWatchLogGroupArn;
             return this;
         }
+
         public Builder logPrefix(String logPrefix) {
-            this.logPrefix = Objects.requireNonNull(logPrefix);
+            $.logPrefix = logPrefix;
             return this;
-        }        public BotAliasCloudWatchLogGroupLogDestination build() {
-            return new BotAliasCloudWatchLogGroupLogDestination(cloudWatchLogGroupArn, logPrefix);
+        }
+
+        public BotAliasCloudWatchLogGroupLogDestination build() {
+            $.cloudWatchLogGroupArn = Objects.requireNonNull($.cloudWatchLogGroupArn, "expected parameter 'cloudWatchLogGroupArn' to be non-null");
+            $.logPrefix = Objects.requireNonNull($.logPrefix, "expected parameter 'logPrefix' to be non-null");
+            return $;
         }
     }
+
 }

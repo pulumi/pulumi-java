@@ -7,11 +7,11 @@ import com.pulumi.azurenative.network.inputs.AzureFirewallApplicationRuleArgs;
 import com.pulumi.azurenative.network.inputs.AzureFirewallRCActionArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -28,10 +28,10 @@ public final class AzureFirewallApplicationRuleCollectionArgs extends com.pulumi
      * 
      */
     @Import(name="action")
-      private final @Nullable Output<AzureFirewallRCActionArgs> action;
+    private @Nullable Output<AzureFirewallRCActionArgs> action;
 
-    public Output<AzureFirewallRCActionArgs> action() {
-        return this.action == null ? Codegen.empty() : this.action;
+    public Optional<Output<AzureFirewallRCActionArgs>> action() {
+        return Optional.ofNullable(this.action);
     }
 
     /**
@@ -39,10 +39,10 @@ public final class AzureFirewallApplicationRuleCollectionArgs extends com.pulumi
      * 
      */
     @Import(name="id")
-      private final @Nullable Output<String> id;
+    private @Nullable Output<String> id;
 
-    public Output<String> id() {
-        return this.id == null ? Codegen.empty() : this.id;
+    public Optional<Output<String>> id() {
+        return Optional.ofNullable(this.id);
     }
 
     /**
@@ -50,10 +50,10 @@ public final class AzureFirewallApplicationRuleCollectionArgs extends com.pulumi
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -61,10 +61,10 @@ public final class AzureFirewallApplicationRuleCollectionArgs extends com.pulumi
      * 
      */
     @Import(name="priority")
-      private final @Nullable Output<Integer> priority;
+    private @Nullable Output<Integer> priority;
 
-    public Output<Integer> priority() {
-        return this.priority == null ? Codegen.empty() : this.priority;
+    public Optional<Output<Integer>> priority() {
+        return Optional.ofNullable(this.priority);
     }
 
     /**
@@ -72,105 +72,92 @@ public final class AzureFirewallApplicationRuleCollectionArgs extends com.pulumi
      * 
      */
     @Import(name="rules")
-      private final @Nullable Output<List<AzureFirewallApplicationRuleArgs>> rules;
+    private @Nullable Output<List<AzureFirewallApplicationRuleArgs>> rules;
 
-    public Output<List<AzureFirewallApplicationRuleArgs>> rules() {
-        return this.rules == null ? Codegen.empty() : this.rules;
+    public Optional<Output<List<AzureFirewallApplicationRuleArgs>>> rules() {
+        return Optional.ofNullable(this.rules);
     }
 
-    public AzureFirewallApplicationRuleCollectionArgs(
-        @Nullable Output<AzureFirewallRCActionArgs> action,
-        @Nullable Output<String> id,
-        @Nullable Output<String> name,
-        @Nullable Output<Integer> priority,
-        @Nullable Output<List<AzureFirewallApplicationRuleArgs>> rules) {
-        this.action = action;
-        this.id = id;
-        this.name = name;
-        this.priority = priority;
-        this.rules = rules;
-    }
+    private AzureFirewallApplicationRuleCollectionArgs() {}
 
-    private AzureFirewallApplicationRuleCollectionArgs() {
-        this.action = Codegen.empty();
-        this.id = Codegen.empty();
-        this.name = Codegen.empty();
-        this.priority = Codegen.empty();
-        this.rules = Codegen.empty();
+    private AzureFirewallApplicationRuleCollectionArgs(AzureFirewallApplicationRuleCollectionArgs $) {
+        this.action = $.action;
+        this.id = $.id;
+        this.name = $.name;
+        this.priority = $.priority;
+        this.rules = $.rules;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AzureFirewallApplicationRuleCollectionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<AzureFirewallRCActionArgs> action;
-        private @Nullable Output<String> id;
-        private @Nullable Output<String> name;
-        private @Nullable Output<Integer> priority;
-        private @Nullable Output<List<AzureFirewallApplicationRuleArgs>> rules;
+        private AzureFirewallApplicationRuleCollectionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AzureFirewallApplicationRuleCollectionArgs();
         }
 
         public Builder(AzureFirewallApplicationRuleCollectionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.action = defaults.action;
-    	      this.id = defaults.id;
-    	      this.name = defaults.name;
-    	      this.priority = defaults.priority;
-    	      this.rules = defaults.rules;
+            $ = new AzureFirewallApplicationRuleCollectionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder action(@Nullable Output<AzureFirewallRCActionArgs> action) {
-            this.action = action;
+            $.action = action;
             return this;
         }
-        public Builder action(@Nullable AzureFirewallRCActionArgs action) {
-            this.action = Codegen.ofNullable(action);
-            return this;
+
+        public Builder action(AzureFirewallRCActionArgs action) {
+            return action(Output.of(action));
         }
+
         public Builder id(@Nullable Output<String> id) {
-            this.id = id;
+            $.id = id;
             return this;
         }
-        public Builder id(@Nullable String id) {
-            this.id = Codegen.ofNullable(id);
-            return this;
+
+        public Builder id(String id) {
+            return id(Output.of(id));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder priority(@Nullable Output<Integer> priority) {
-            this.priority = priority;
+            $.priority = priority;
             return this;
         }
-        public Builder priority(@Nullable Integer priority) {
-            this.priority = Codegen.ofNullable(priority);
-            return this;
+
+        public Builder priority(Integer priority) {
+            return priority(Output.of(priority));
         }
+
         public Builder rules(@Nullable Output<List<AzureFirewallApplicationRuleArgs>> rules) {
-            this.rules = rules;
+            $.rules = rules;
             return this;
         }
-        public Builder rules(@Nullable List<AzureFirewallApplicationRuleArgs> rules) {
-            this.rules = Codegen.ofNullable(rules);
-            return this;
+
+        public Builder rules(List<AzureFirewallApplicationRuleArgs> rules) {
+            return rules(Output.of(rules));
         }
+
         public Builder rules(AzureFirewallApplicationRuleArgs... rules) {
             return rules(List.of(rules));
-        }        public AzureFirewallApplicationRuleCollectionArgs build() {
-            return new AzureFirewallApplicationRuleCollectionArgs(action, id, name, priority, rules);
+        }
+
+        public AzureFirewallApplicationRuleCollectionArgs build() {
+            return $;
         }
     }
+
 }

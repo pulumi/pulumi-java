@@ -5,7 +5,6 @@ package com.pulumi.aws.amp;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,7 +18,7 @@ public final class AlertManagerDefinitionArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="definition", required=true)
-      private final Output<String> definition;
+    private Output<String> definition;
 
     public Output<String> definition() {
         return this.definition;
@@ -30,63 +29,60 @@ public final class AlertManagerDefinitionArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="workspaceId", required=true)
-      private final Output<String> workspaceId;
+    private Output<String> workspaceId;
 
     public Output<String> workspaceId() {
         return this.workspaceId;
     }
 
-    public AlertManagerDefinitionArgs(
-        Output<String> definition,
-        Output<String> workspaceId) {
-        this.definition = Objects.requireNonNull(definition, "expected parameter 'definition' to be non-null");
-        this.workspaceId = Objects.requireNonNull(workspaceId, "expected parameter 'workspaceId' to be non-null");
-    }
+    private AlertManagerDefinitionArgs() {}
 
-    private AlertManagerDefinitionArgs() {
-        this.definition = Codegen.empty();
-        this.workspaceId = Codegen.empty();
+    private AlertManagerDefinitionArgs(AlertManagerDefinitionArgs $) {
+        this.definition = $.definition;
+        this.workspaceId = $.workspaceId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AlertManagerDefinitionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> definition;
-        private Output<String> workspaceId;
+        private AlertManagerDefinitionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AlertManagerDefinitionArgs();
         }
 
         public Builder(AlertManagerDefinitionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.definition = defaults.definition;
-    	      this.workspaceId = defaults.workspaceId;
+            $ = new AlertManagerDefinitionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder definition(Output<String> definition) {
-            this.definition = Objects.requireNonNull(definition);
+            $.definition = definition;
             return this;
         }
+
         public Builder definition(String definition) {
-            this.definition = Output.of(Objects.requireNonNull(definition));
-            return this;
+            return definition(Output.of(definition));
         }
+
         public Builder workspaceId(Output<String> workspaceId) {
-            this.workspaceId = Objects.requireNonNull(workspaceId);
+            $.workspaceId = workspaceId;
             return this;
         }
+
         public Builder workspaceId(String workspaceId) {
-            this.workspaceId = Output.of(Objects.requireNonNull(workspaceId));
-            return this;
-        }        public AlertManagerDefinitionArgs build() {
-            return new AlertManagerDefinitionArgs(definition, workspaceId);
+            return workspaceId(Output.of(workspaceId));
+        }
+
+        public AlertManagerDefinitionArgs build() {
+            $.definition = Objects.requireNonNull($.definition, "expected parameter 'definition' to be non-null");
+            $.workspaceId = Objects.requireNonNull($.workspaceId, "expected parameter 'workspaceId' to be non-null");
+            return $;
         }
     }
+
 }

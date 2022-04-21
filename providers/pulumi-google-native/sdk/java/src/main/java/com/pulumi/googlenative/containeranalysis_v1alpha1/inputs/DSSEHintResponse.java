@@ -21,45 +21,45 @@ public final class DSSEHintResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="humanReadableName", required=true)
-      private final String humanReadableName;
+    private String humanReadableName;
 
     public String humanReadableName() {
         return this.humanReadableName;
     }
 
-    public DSSEHintResponse(String humanReadableName) {
-        this.humanReadableName = Objects.requireNonNull(humanReadableName, "expected parameter 'humanReadableName' to be non-null");
-    }
+    private DSSEHintResponse() {}
 
-    private DSSEHintResponse() {
-        this.humanReadableName = null;
+    private DSSEHintResponse(DSSEHintResponse $) {
+        this.humanReadableName = $.humanReadableName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DSSEHintResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String humanReadableName;
+        private DSSEHintResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new DSSEHintResponse();
         }
 
         public Builder(DSSEHintResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.humanReadableName = defaults.humanReadableName;
+            $ = new DSSEHintResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder humanReadableName(String humanReadableName) {
-            this.humanReadableName = Objects.requireNonNull(humanReadableName);
+            $.humanReadableName = humanReadableName;
             return this;
-        }        public DSSEHintResponse build() {
-            return new DSSEHintResponse(humanReadableName);
+        }
+
+        public DSSEHintResponse build() {
+            $.humanReadableName = Objects.requireNonNull($.humanReadableName, "expected parameter 'humanReadableName' to be non-null");
+            return $;
         }
     }
+
 }

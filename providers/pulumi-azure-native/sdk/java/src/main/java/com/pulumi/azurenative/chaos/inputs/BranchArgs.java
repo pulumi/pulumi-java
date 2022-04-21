@@ -8,7 +8,6 @@ import com.pulumi.azurenative.chaos.inputs.DelayActionArgs;
 import com.pulumi.azurenative.chaos.inputs.DiscreteActionArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -28,7 +27,7 @@ public final class BranchArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="actions", required=true)
-      private final Output<List<Object>> actions;
+    private Output<List<Object>> actions;
 
     public Output<List<Object>> actions() {
         return this.actions;
@@ -39,66 +38,64 @@ public final class BranchArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name", required=true)
-      private final Output<String> name;
+    private Output<String> name;
 
     public Output<String> name() {
         return this.name;
     }
 
-    public BranchArgs(
-        Output<List<Object>> actions,
-        Output<String> name) {
-        this.actions = Objects.requireNonNull(actions, "expected parameter 'actions' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-    }
+    private BranchArgs() {}
 
-    private BranchArgs() {
-        this.actions = Codegen.empty();
-        this.name = Codegen.empty();
+    private BranchArgs(BranchArgs $) {
+        this.actions = $.actions;
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BranchArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<List<Object>> actions;
-        private Output<String> name;
+        private BranchArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new BranchArgs();
         }
 
         public Builder(BranchArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.actions = defaults.actions;
-    	      this.name = defaults.name;
+            $ = new BranchArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder actions(Output<List<Object>> actions) {
-            this.actions = Objects.requireNonNull(actions);
+            $.actions = actions;
             return this;
         }
+
         public Builder actions(List<Object> actions) {
-            this.actions = Output.of(Objects.requireNonNull(actions));
-            return this;
+            return actions(Output.of(actions));
         }
+
         public Builder actions(Object... actions) {
             return actions(List.of(actions));
         }
+
         public Builder name(Output<String> name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Output.of(Objects.requireNonNull(name));
-            return this;
-        }        public BranchArgs build() {
-            return new BranchArgs(actions, name);
+            return name(Output.of(name));
+        }
+
+        public BranchArgs build() {
+            $.actions = Objects.requireNonNull($.actions, "expected parameter 'actions' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            return $;
         }
     }
+
 }

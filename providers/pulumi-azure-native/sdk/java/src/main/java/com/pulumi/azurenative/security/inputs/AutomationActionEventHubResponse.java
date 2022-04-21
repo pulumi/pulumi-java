@@ -25,7 +25,7 @@ public final class AutomationActionEventHubResponse extends com.pulumi.resources
      * 
      */
     @Import(name="actionType", required=true)
-      private final String actionType;
+    private String actionType;
 
     public String actionType() {
         return this.actionType;
@@ -36,10 +36,10 @@ public final class AutomationActionEventHubResponse extends com.pulumi.resources
      * 
      */
     @Import(name="connectionString")
-      private final @Nullable String connectionString;
+    private @Nullable String connectionString;
 
     public Optional<String> connectionString() {
-        return this.connectionString == null ? Optional.empty() : Optional.ofNullable(this.connectionString);
+        return Optional.ofNullable(this.connectionString);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class AutomationActionEventHubResponse extends com.pulumi.resources
      * 
      */
     @Import(name="eventHubResourceId")
-      private final @Nullable String eventHubResourceId;
+    private @Nullable String eventHubResourceId;
 
     public Optional<String> eventHubResourceId() {
-        return this.eventHubResourceId == null ? Optional.empty() : Optional.ofNullable(this.eventHubResourceId);
+        return Optional.ofNullable(this.eventHubResourceId);
     }
 
     /**
@@ -58,73 +58,64 @@ public final class AutomationActionEventHubResponse extends com.pulumi.resources
      * 
      */
     @Import(name="sasPolicyName", required=true)
-      private final String sasPolicyName;
+    private String sasPolicyName;
 
     public String sasPolicyName() {
         return this.sasPolicyName;
     }
 
-    public AutomationActionEventHubResponse(
-        String actionType,
-        @Nullable String connectionString,
-        @Nullable String eventHubResourceId,
-        String sasPolicyName) {
-        this.actionType = Codegen.stringProp("actionType").arg(actionType).require();
-        this.connectionString = connectionString;
-        this.eventHubResourceId = eventHubResourceId;
-        this.sasPolicyName = Objects.requireNonNull(sasPolicyName, "expected parameter 'sasPolicyName' to be non-null");
-    }
+    private AutomationActionEventHubResponse() {}
 
-    private AutomationActionEventHubResponse() {
-        this.actionType = null;
-        this.connectionString = null;
-        this.eventHubResourceId = null;
-        this.sasPolicyName = null;
+    private AutomationActionEventHubResponse(AutomationActionEventHubResponse $) {
+        this.actionType = $.actionType;
+        this.connectionString = $.connectionString;
+        this.eventHubResourceId = $.eventHubResourceId;
+        this.sasPolicyName = $.sasPolicyName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AutomationActionEventHubResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String actionType;
-        private @Nullable String connectionString;
-        private @Nullable String eventHubResourceId;
-        private String sasPolicyName;
+        private AutomationActionEventHubResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AutomationActionEventHubResponse();
         }
 
         public Builder(AutomationActionEventHubResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.actionType = defaults.actionType;
-    	      this.connectionString = defaults.connectionString;
-    	      this.eventHubResourceId = defaults.eventHubResourceId;
-    	      this.sasPolicyName = defaults.sasPolicyName;
+            $ = new AutomationActionEventHubResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder actionType(String actionType) {
-            this.actionType = Objects.requireNonNull(actionType);
+            $.actionType = actionType;
             return this;
         }
+
         public Builder connectionString(@Nullable String connectionString) {
-            this.connectionString = connectionString;
+            $.connectionString = connectionString;
             return this;
         }
+
         public Builder eventHubResourceId(@Nullable String eventHubResourceId) {
-            this.eventHubResourceId = eventHubResourceId;
+            $.eventHubResourceId = eventHubResourceId;
             return this;
         }
+
         public Builder sasPolicyName(String sasPolicyName) {
-            this.sasPolicyName = Objects.requireNonNull(sasPolicyName);
+            $.sasPolicyName = sasPolicyName;
             return this;
-        }        public AutomationActionEventHubResponse build() {
-            return new AutomationActionEventHubResponse(actionType, connectionString, eventHubResourceId, sasPolicyName);
+        }
+
+        public AutomationActionEventHubResponse build() {
+            $.actionType = Codegen.stringProp("actionType").arg($.actionType).require();
+            $.sasPolicyName = Objects.requireNonNull($.sasPolicyName, "expected parameter 'sasPolicyName' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,10 +5,10 @@ package com.pulumi.googlenative.osconfig_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,7 +25,7 @@ public final class OSPolicyResourceRepositoryResourceZypperRepositoryArgs extend
      * 
      */
     @Import(name="baseUrl", required=true)
-      private final Output<String> baseUrl;
+    private Output<String> baseUrl;
 
     public Output<String> baseUrl() {
         return this.baseUrl;
@@ -36,10 +36,10 @@ public final class OSPolicyResourceRepositoryResourceZypperRepositoryArgs extend
      * 
      */
     @Import(name="displayName")
-      private final @Nullable Output<String> displayName;
+    private @Nullable Output<String> displayName;
 
-    public Output<String> displayName() {
-        return this.displayName == null ? Codegen.empty() : this.displayName;
+    public Optional<Output<String>> displayName() {
+        return Optional.ofNullable(this.displayName);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class OSPolicyResourceRepositoryResourceZypperRepositoryArgs extend
      * 
      */
     @Import(name="gpgKeys")
-      private final @Nullable Output<List<String>> gpgKeys;
+    private @Nullable Output<List<String>> gpgKeys;
 
-    public Output<List<String>> gpgKeys() {
-        return this.gpgKeys == null ? Codegen.empty() : this.gpgKeys;
+    public Optional<Output<List<String>>> gpgKeys() {
+        return Optional.ofNullable(this.gpgKeys);
     }
 
     /**
@@ -58,92 +58,84 @@ public final class OSPolicyResourceRepositoryResourceZypperRepositoryArgs extend
      * 
      */
     @Import(name="id", required=true)
-      private final Output<String> id;
+    private Output<String> id;
 
     public Output<String> id() {
         return this.id;
     }
 
-    public OSPolicyResourceRepositoryResourceZypperRepositoryArgs(
-        Output<String> baseUrl,
-        @Nullable Output<String> displayName,
-        @Nullable Output<List<String>> gpgKeys,
-        Output<String> id) {
-        this.baseUrl = Objects.requireNonNull(baseUrl, "expected parameter 'baseUrl' to be non-null");
-        this.displayName = displayName;
-        this.gpgKeys = gpgKeys;
-        this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
-    }
+    private OSPolicyResourceRepositoryResourceZypperRepositoryArgs() {}
 
-    private OSPolicyResourceRepositoryResourceZypperRepositoryArgs() {
-        this.baseUrl = Codegen.empty();
-        this.displayName = Codegen.empty();
-        this.gpgKeys = Codegen.empty();
-        this.id = Codegen.empty();
+    private OSPolicyResourceRepositoryResourceZypperRepositoryArgs(OSPolicyResourceRepositoryResourceZypperRepositoryArgs $) {
+        this.baseUrl = $.baseUrl;
+        this.displayName = $.displayName;
+        this.gpgKeys = $.gpgKeys;
+        this.id = $.id;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(OSPolicyResourceRepositoryResourceZypperRepositoryArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> baseUrl;
-        private @Nullable Output<String> displayName;
-        private @Nullable Output<List<String>> gpgKeys;
-        private Output<String> id;
+        private OSPolicyResourceRepositoryResourceZypperRepositoryArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new OSPolicyResourceRepositoryResourceZypperRepositoryArgs();
         }
 
         public Builder(OSPolicyResourceRepositoryResourceZypperRepositoryArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.baseUrl = defaults.baseUrl;
-    	      this.displayName = defaults.displayName;
-    	      this.gpgKeys = defaults.gpgKeys;
-    	      this.id = defaults.id;
+            $ = new OSPolicyResourceRepositoryResourceZypperRepositoryArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder baseUrl(Output<String> baseUrl) {
-            this.baseUrl = Objects.requireNonNull(baseUrl);
+            $.baseUrl = baseUrl;
             return this;
         }
+
         public Builder baseUrl(String baseUrl) {
-            this.baseUrl = Output.of(Objects.requireNonNull(baseUrl));
-            return this;
+            return baseUrl(Output.of(baseUrl));
         }
+
         public Builder displayName(@Nullable Output<String> displayName) {
-            this.displayName = displayName;
+            $.displayName = displayName;
             return this;
         }
-        public Builder displayName(@Nullable String displayName) {
-            this.displayName = Codegen.ofNullable(displayName);
-            return this;
+
+        public Builder displayName(String displayName) {
+            return displayName(Output.of(displayName));
         }
+
         public Builder gpgKeys(@Nullable Output<List<String>> gpgKeys) {
-            this.gpgKeys = gpgKeys;
+            $.gpgKeys = gpgKeys;
             return this;
         }
-        public Builder gpgKeys(@Nullable List<String> gpgKeys) {
-            this.gpgKeys = Codegen.ofNullable(gpgKeys);
-            return this;
+
+        public Builder gpgKeys(List<String> gpgKeys) {
+            return gpgKeys(Output.of(gpgKeys));
         }
+
         public Builder gpgKeys(String... gpgKeys) {
             return gpgKeys(List.of(gpgKeys));
         }
+
         public Builder id(Output<String> id) {
-            this.id = Objects.requireNonNull(id);
+            $.id = id;
             return this;
         }
+
         public Builder id(String id) {
-            this.id = Output.of(Objects.requireNonNull(id));
-            return this;
-        }        public OSPolicyResourceRepositoryResourceZypperRepositoryArgs build() {
-            return new OSPolicyResourceRepositoryResourceZypperRepositoryArgs(baseUrl, displayName, gpgKeys, id);
+            return id(Output.of(id));
+        }
+
+        public OSPolicyResourceRepositoryResourceZypperRepositoryArgs build() {
+            $.baseUrl = Objects.requireNonNull($.baseUrl, "expected parameter 'baseUrl' to be non-null");
+            $.id = Objects.requireNonNull($.id, "expected parameter 'id' to be non-null");
+            return $;
         }
     }
+
 }

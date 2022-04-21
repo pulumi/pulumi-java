@@ -7,8 +7,8 @@ import com.pulumi.aws.msk.inputs.ClusterClientAuthenticationSaslGetArgs;
 import com.pulumi.aws.msk.inputs.ClusterClientAuthenticationTlsGetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class ClusterClientAuthenticationGetArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="sasl")
-      private final @Nullable Output<ClusterClientAuthenticationSaslGetArgs> sasl;
+    private @Nullable Output<ClusterClientAuthenticationSaslGetArgs> sasl;
 
-    public Output<ClusterClientAuthenticationSaslGetArgs> sasl() {
-        return this.sasl == null ? Codegen.empty() : this.sasl;
+    public Optional<Output<ClusterClientAuthenticationSaslGetArgs>> sasl() {
+        return Optional.ofNullable(this.sasl);
     }
 
     /**
@@ -32,63 +32,58 @@ public final class ClusterClientAuthenticationGetArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="tls")
-      private final @Nullable Output<ClusterClientAuthenticationTlsGetArgs> tls;
+    private @Nullable Output<ClusterClientAuthenticationTlsGetArgs> tls;
 
-    public Output<ClusterClientAuthenticationTlsGetArgs> tls() {
-        return this.tls == null ? Codegen.empty() : this.tls;
+    public Optional<Output<ClusterClientAuthenticationTlsGetArgs>> tls() {
+        return Optional.ofNullable(this.tls);
     }
 
-    public ClusterClientAuthenticationGetArgs(
-        @Nullable Output<ClusterClientAuthenticationSaslGetArgs> sasl,
-        @Nullable Output<ClusterClientAuthenticationTlsGetArgs> tls) {
-        this.sasl = sasl;
-        this.tls = tls;
-    }
+    private ClusterClientAuthenticationGetArgs() {}
 
-    private ClusterClientAuthenticationGetArgs() {
-        this.sasl = Codegen.empty();
-        this.tls = Codegen.empty();
+    private ClusterClientAuthenticationGetArgs(ClusterClientAuthenticationGetArgs $) {
+        this.sasl = $.sasl;
+        this.tls = $.tls;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ClusterClientAuthenticationGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<ClusterClientAuthenticationSaslGetArgs> sasl;
-        private @Nullable Output<ClusterClientAuthenticationTlsGetArgs> tls;
+        private ClusterClientAuthenticationGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ClusterClientAuthenticationGetArgs();
         }
 
         public Builder(ClusterClientAuthenticationGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.sasl = defaults.sasl;
-    	      this.tls = defaults.tls;
+            $ = new ClusterClientAuthenticationGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder sasl(@Nullable Output<ClusterClientAuthenticationSaslGetArgs> sasl) {
-            this.sasl = sasl;
+            $.sasl = sasl;
             return this;
         }
-        public Builder sasl(@Nullable ClusterClientAuthenticationSaslGetArgs sasl) {
-            this.sasl = Codegen.ofNullable(sasl);
-            return this;
+
+        public Builder sasl(ClusterClientAuthenticationSaslGetArgs sasl) {
+            return sasl(Output.of(sasl));
         }
+
         public Builder tls(@Nullable Output<ClusterClientAuthenticationTlsGetArgs> tls) {
-            this.tls = tls;
+            $.tls = tls;
             return this;
         }
-        public Builder tls(@Nullable ClusterClientAuthenticationTlsGetArgs tls) {
-            this.tls = Codegen.ofNullable(tls);
-            return this;
-        }        public ClusterClientAuthenticationGetArgs build() {
-            return new ClusterClientAuthenticationGetArgs(sasl, tls);
+
+        public Builder tls(ClusterClientAuthenticationTlsGetArgs tls) {
+            return tls(Output.of(tls));
+        }
+
+        public ClusterClientAuthenticationGetArgs build() {
+            return $;
         }
     }
+
 }

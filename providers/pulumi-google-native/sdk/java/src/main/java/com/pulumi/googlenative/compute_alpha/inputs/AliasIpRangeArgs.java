@@ -5,9 +5,9 @@ package com.pulumi.googlenative.compute_alpha.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class AliasIpRangeArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="ipCidrRange")
-      private final @Nullable Output<String> ipCidrRange;
+    private @Nullable Output<String> ipCidrRange;
 
-    public Output<String> ipCidrRange() {
-        return this.ipCidrRange == null ? Codegen.empty() : this.ipCidrRange;
+    public Optional<Output<String>> ipCidrRange() {
+        return Optional.ofNullable(this.ipCidrRange);
     }
 
     /**
@@ -35,63 +35,58 @@ public final class AliasIpRangeArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="subnetworkRangeName")
-      private final @Nullable Output<String> subnetworkRangeName;
+    private @Nullable Output<String> subnetworkRangeName;
 
-    public Output<String> subnetworkRangeName() {
-        return this.subnetworkRangeName == null ? Codegen.empty() : this.subnetworkRangeName;
+    public Optional<Output<String>> subnetworkRangeName() {
+        return Optional.ofNullable(this.subnetworkRangeName);
     }
 
-    public AliasIpRangeArgs(
-        @Nullable Output<String> ipCidrRange,
-        @Nullable Output<String> subnetworkRangeName) {
-        this.ipCidrRange = ipCidrRange;
-        this.subnetworkRangeName = subnetworkRangeName;
-    }
+    private AliasIpRangeArgs() {}
 
-    private AliasIpRangeArgs() {
-        this.ipCidrRange = Codegen.empty();
-        this.subnetworkRangeName = Codegen.empty();
+    private AliasIpRangeArgs(AliasIpRangeArgs $) {
+        this.ipCidrRange = $.ipCidrRange;
+        this.subnetworkRangeName = $.subnetworkRangeName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AliasIpRangeArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> ipCidrRange;
-        private @Nullable Output<String> subnetworkRangeName;
+        private AliasIpRangeArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AliasIpRangeArgs();
         }
 
         public Builder(AliasIpRangeArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.ipCidrRange = defaults.ipCidrRange;
-    	      this.subnetworkRangeName = defaults.subnetworkRangeName;
+            $ = new AliasIpRangeArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder ipCidrRange(@Nullable Output<String> ipCidrRange) {
-            this.ipCidrRange = ipCidrRange;
+            $.ipCidrRange = ipCidrRange;
             return this;
         }
-        public Builder ipCidrRange(@Nullable String ipCidrRange) {
-            this.ipCidrRange = Codegen.ofNullable(ipCidrRange);
-            return this;
+
+        public Builder ipCidrRange(String ipCidrRange) {
+            return ipCidrRange(Output.of(ipCidrRange));
         }
+
         public Builder subnetworkRangeName(@Nullable Output<String> subnetworkRangeName) {
-            this.subnetworkRangeName = subnetworkRangeName;
+            $.subnetworkRangeName = subnetworkRangeName;
             return this;
         }
-        public Builder subnetworkRangeName(@Nullable String subnetworkRangeName) {
-            this.subnetworkRangeName = Codegen.ofNullable(subnetworkRangeName);
-            return this;
-        }        public AliasIpRangeArgs build() {
-            return new AliasIpRangeArgs(ipCidrRange, subnetworkRangeName);
+
+        public Builder subnetworkRangeName(String subnetworkRangeName) {
+            return subnetworkRangeName(Output.of(subnetworkRangeName));
+        }
+
+        public AliasIpRangeArgs build() {
+            return $;
         }
     }
+
 }

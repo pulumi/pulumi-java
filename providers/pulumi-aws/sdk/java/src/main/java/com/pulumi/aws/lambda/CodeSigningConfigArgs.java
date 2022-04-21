@@ -7,9 +7,9 @@ import com.pulumi.aws.lambda.inputs.CodeSigningConfigAllowedPublishersArgs;
 import com.pulumi.aws.lambda.inputs.CodeSigningConfigPoliciesArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,7 +22,7 @@ public final class CodeSigningConfigArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="allowedPublishers", required=true)
-      private final Output<CodeSigningConfigAllowedPublishersArgs> allowedPublishers;
+    private Output<CodeSigningConfigAllowedPublishersArgs> allowedPublishers;
 
     public Output<CodeSigningConfigAllowedPublishersArgs> allowedPublishers() {
         return this.allowedPublishers;
@@ -33,10 +33,10 @@ public final class CodeSigningConfigArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -44,76 +44,69 @@ public final class CodeSigningConfigArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="policies")
-      private final @Nullable Output<CodeSigningConfigPoliciesArgs> policies;
+    private @Nullable Output<CodeSigningConfigPoliciesArgs> policies;
 
-    public Output<CodeSigningConfigPoliciesArgs> policies() {
-        return this.policies == null ? Codegen.empty() : this.policies;
+    public Optional<Output<CodeSigningConfigPoliciesArgs>> policies() {
+        return Optional.ofNullable(this.policies);
     }
 
-    public CodeSigningConfigArgs(
-        Output<CodeSigningConfigAllowedPublishersArgs> allowedPublishers,
-        @Nullable Output<String> description,
-        @Nullable Output<CodeSigningConfigPoliciesArgs> policies) {
-        this.allowedPublishers = Objects.requireNonNull(allowedPublishers, "expected parameter 'allowedPublishers' to be non-null");
-        this.description = description;
-        this.policies = policies;
-    }
+    private CodeSigningConfigArgs() {}
 
-    private CodeSigningConfigArgs() {
-        this.allowedPublishers = Codegen.empty();
-        this.description = Codegen.empty();
-        this.policies = Codegen.empty();
+    private CodeSigningConfigArgs(CodeSigningConfigArgs $) {
+        this.allowedPublishers = $.allowedPublishers;
+        this.description = $.description;
+        this.policies = $.policies;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CodeSigningConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<CodeSigningConfigAllowedPublishersArgs> allowedPublishers;
-        private @Nullable Output<String> description;
-        private @Nullable Output<CodeSigningConfigPoliciesArgs> policies;
+        private CodeSigningConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CodeSigningConfigArgs();
         }
 
         public Builder(CodeSigningConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.allowedPublishers = defaults.allowedPublishers;
-    	      this.description = defaults.description;
-    	      this.policies = defaults.policies;
+            $ = new CodeSigningConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder allowedPublishers(Output<CodeSigningConfigAllowedPublishersArgs> allowedPublishers) {
-            this.allowedPublishers = Objects.requireNonNull(allowedPublishers);
+            $.allowedPublishers = allowedPublishers;
             return this;
         }
+
         public Builder allowedPublishers(CodeSigningConfigAllowedPublishersArgs allowedPublishers) {
-            this.allowedPublishers = Output.of(Objects.requireNonNull(allowedPublishers));
-            return this;
+            return allowedPublishers(Output.of(allowedPublishers));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder policies(@Nullable Output<CodeSigningConfigPoliciesArgs> policies) {
-            this.policies = policies;
+            $.policies = policies;
             return this;
         }
-        public Builder policies(@Nullable CodeSigningConfigPoliciesArgs policies) {
-            this.policies = Codegen.ofNullable(policies);
-            return this;
-        }        public CodeSigningConfigArgs build() {
-            return new CodeSigningConfigArgs(allowedPublishers, description, policies);
+
+        public Builder policies(CodeSigningConfigPoliciesArgs policies) {
+            return policies(Output.of(policies));
+        }
+
+        public CodeSigningConfigArgs build() {
+            $.allowedPublishers = Objects.requireNonNull($.allowedPublishers, "expected parameter 'allowedPublishers' to be non-null");
+            return $;
         }
     }
+
 }

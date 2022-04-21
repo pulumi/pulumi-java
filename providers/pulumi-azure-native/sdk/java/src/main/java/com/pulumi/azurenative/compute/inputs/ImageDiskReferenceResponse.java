@@ -24,7 +24,7 @@ public final class ImageDiskReferenceResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="id", required=true)
-      private final String id;
+    private String id;
 
     public String id() {
         return this.id;
@@ -35,55 +35,51 @@ public final class ImageDiskReferenceResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="lun")
-      private final @Nullable Integer lun;
+    private @Nullable Integer lun;
 
     public Optional<Integer> lun() {
-        return this.lun == null ? Optional.empty() : Optional.ofNullable(this.lun);
+        return Optional.ofNullable(this.lun);
     }
 
-    public ImageDiskReferenceResponse(
-        String id,
-        @Nullable Integer lun) {
-        this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
-        this.lun = lun;
-    }
+    private ImageDiskReferenceResponse() {}
 
-    private ImageDiskReferenceResponse() {
-        this.id = null;
-        this.lun = null;
+    private ImageDiskReferenceResponse(ImageDiskReferenceResponse $) {
+        this.id = $.id;
+        this.lun = $.lun;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ImageDiskReferenceResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String id;
-        private @Nullable Integer lun;
+        private ImageDiskReferenceResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ImageDiskReferenceResponse();
         }
 
         public Builder(ImageDiskReferenceResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.id = defaults.id;
-    	      this.lun = defaults.lun;
+            $ = new ImageDiskReferenceResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder id(String id) {
-            this.id = Objects.requireNonNull(id);
+            $.id = id;
             return this;
         }
+
         public Builder lun(@Nullable Integer lun) {
-            this.lun = lun;
+            $.lun = lun;
             return this;
-        }        public ImageDiskReferenceResponse build() {
-            return new ImageDiskReferenceResponse(id, lun);
+        }
+
+        public ImageDiskReferenceResponse build() {
+            $.id = Objects.requireNonNull($.id, "expected parameter 'id' to be non-null");
+            return $;
         }
     }
+
 }

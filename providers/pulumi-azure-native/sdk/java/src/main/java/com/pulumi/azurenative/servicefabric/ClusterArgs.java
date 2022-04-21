@@ -15,12 +15,12 @@ import com.pulumi.azurenative.servicefabric.inputs.ServerCertificateCommonNamesA
 import com.pulumi.azurenative.servicefabric.inputs.SettingsSectionDescriptionArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -33,10 +33,10 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="addOnFeatures")
-      private final @Nullable Output<List<String>> addOnFeatures;
+    private @Nullable Output<List<String>> addOnFeatures;
 
-    public Output<List<String>> addOnFeatures() {
-        return this.addOnFeatures == null ? Codegen.empty() : this.addOnFeatures;
+    public Optional<Output<List<String>>> addOnFeatures() {
+        return Optional.ofNullable(this.addOnFeatures);
     }
 
     /**
@@ -44,10 +44,10 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="applicationTypeVersionsCleanupPolicy")
-      private final @Nullable Output<ApplicationTypeVersionsCleanupPolicyArgs> applicationTypeVersionsCleanupPolicy;
+    private @Nullable Output<ApplicationTypeVersionsCleanupPolicyArgs> applicationTypeVersionsCleanupPolicy;
 
-    public Output<ApplicationTypeVersionsCleanupPolicyArgs> applicationTypeVersionsCleanupPolicy() {
-        return this.applicationTypeVersionsCleanupPolicy == null ? Codegen.empty() : this.applicationTypeVersionsCleanupPolicy;
+    public Optional<Output<ApplicationTypeVersionsCleanupPolicyArgs>> applicationTypeVersionsCleanupPolicy() {
+        return Optional.ofNullable(this.applicationTypeVersionsCleanupPolicy);
     }
 
     /**
@@ -55,10 +55,10 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="azureActiveDirectory")
-      private final @Nullable Output<AzureActiveDirectoryArgs> azureActiveDirectory;
+    private @Nullable Output<AzureActiveDirectoryArgs> azureActiveDirectory;
 
-    public Output<AzureActiveDirectoryArgs> azureActiveDirectory() {
-        return this.azureActiveDirectory == null ? Codegen.empty() : this.azureActiveDirectory;
+    public Optional<Output<AzureActiveDirectoryArgs>> azureActiveDirectory() {
+        return Optional.ofNullable(this.azureActiveDirectory);
     }
 
     /**
@@ -66,10 +66,10 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="certificate")
-      private final @Nullable Output<CertificateDescriptionArgs> certificate;
+    private @Nullable Output<CertificateDescriptionArgs> certificate;
 
-    public Output<CertificateDescriptionArgs> certificate() {
-        return this.certificate == null ? Codegen.empty() : this.certificate;
+    public Optional<Output<CertificateDescriptionArgs>> certificate() {
+        return Optional.ofNullable(this.certificate);
     }
 
     /**
@@ -77,10 +77,10 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="certificateCommonNames")
-      private final @Nullable Output<ServerCertificateCommonNamesArgs> certificateCommonNames;
+    private @Nullable Output<ServerCertificateCommonNamesArgs> certificateCommonNames;
 
-    public Output<ServerCertificateCommonNamesArgs> certificateCommonNames() {
-        return this.certificateCommonNames == null ? Codegen.empty() : this.certificateCommonNames;
+    public Optional<Output<ServerCertificateCommonNamesArgs>> certificateCommonNames() {
+        return Optional.ofNullable(this.certificateCommonNames);
     }
 
     /**
@@ -88,10 +88,10 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="clientCertificateCommonNames")
-      private final @Nullable Output<List<ClientCertificateCommonNameArgs>> clientCertificateCommonNames;
+    private @Nullable Output<List<ClientCertificateCommonNameArgs>> clientCertificateCommonNames;
 
-    public Output<List<ClientCertificateCommonNameArgs>> clientCertificateCommonNames() {
-        return this.clientCertificateCommonNames == null ? Codegen.empty() : this.clientCertificateCommonNames;
+    public Optional<Output<List<ClientCertificateCommonNameArgs>>> clientCertificateCommonNames() {
+        return Optional.ofNullable(this.clientCertificateCommonNames);
     }
 
     /**
@@ -99,10 +99,10 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="clientCertificateThumbprints")
-      private final @Nullable Output<List<ClientCertificateThumbprintArgs>> clientCertificateThumbprints;
+    private @Nullable Output<List<ClientCertificateThumbprintArgs>> clientCertificateThumbprints;
 
-    public Output<List<ClientCertificateThumbprintArgs>> clientCertificateThumbprints() {
-        return this.clientCertificateThumbprints == null ? Codegen.empty() : this.clientCertificateThumbprints;
+    public Optional<Output<List<ClientCertificateThumbprintArgs>>> clientCertificateThumbprints() {
+        return Optional.ofNullable(this.clientCertificateThumbprints);
     }
 
     /**
@@ -110,10 +110,10 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="clusterCodeVersion")
-      private final @Nullable Output<String> clusterCodeVersion;
+    private @Nullable Output<String> clusterCodeVersion;
 
-    public Output<String> clusterCodeVersion() {
-        return this.clusterCodeVersion == null ? Codegen.empty() : this.clusterCodeVersion;
+    public Optional<Output<String>> clusterCodeVersion() {
+        return Optional.ofNullable(this.clusterCodeVersion);
     }
 
     /**
@@ -121,10 +121,10 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="clusterName")
-      private final @Nullable Output<String> clusterName;
+    private @Nullable Output<String> clusterName;
 
-    public Output<String> clusterName() {
-        return this.clusterName == null ? Codegen.empty() : this.clusterName;
+    public Optional<Output<String>> clusterName() {
+        return Optional.ofNullable(this.clusterName);
     }
 
     /**
@@ -132,10 +132,10 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="diagnosticsStorageAccountConfig")
-      private final @Nullable Output<DiagnosticsStorageAccountConfigArgs> diagnosticsStorageAccountConfig;
+    private @Nullable Output<DiagnosticsStorageAccountConfigArgs> diagnosticsStorageAccountConfig;
 
-    public Output<DiagnosticsStorageAccountConfigArgs> diagnosticsStorageAccountConfig() {
-        return this.diagnosticsStorageAccountConfig == null ? Codegen.empty() : this.diagnosticsStorageAccountConfig;
+    public Optional<Output<DiagnosticsStorageAccountConfigArgs>> diagnosticsStorageAccountConfig() {
+        return Optional.ofNullable(this.diagnosticsStorageAccountConfig);
     }
 
     /**
@@ -143,10 +143,10 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="eventStoreServiceEnabled")
-      private final @Nullable Output<Boolean> eventStoreServiceEnabled;
+    private @Nullable Output<Boolean> eventStoreServiceEnabled;
 
-    public Output<Boolean> eventStoreServiceEnabled() {
-        return this.eventStoreServiceEnabled == null ? Codegen.empty() : this.eventStoreServiceEnabled;
+    public Optional<Output<Boolean>> eventStoreServiceEnabled() {
+        return Optional.ofNullable(this.eventStoreServiceEnabled);
     }
 
     /**
@@ -154,10 +154,10 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="fabricSettings")
-      private final @Nullable Output<List<SettingsSectionDescriptionArgs>> fabricSettings;
+    private @Nullable Output<List<SettingsSectionDescriptionArgs>> fabricSettings;
 
-    public Output<List<SettingsSectionDescriptionArgs>> fabricSettings() {
-        return this.fabricSettings == null ? Codegen.empty() : this.fabricSettings;
+    public Optional<Output<List<SettingsSectionDescriptionArgs>>> fabricSettings() {
+        return Optional.ofNullable(this.fabricSettings);
     }
 
     /**
@@ -165,10 +165,10 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -176,7 +176,7 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="managementEndpoint", required=true)
-      private final Output<String> managementEndpoint;
+    private Output<String> managementEndpoint;
 
     public Output<String> managementEndpoint() {
         return this.managementEndpoint;
@@ -187,7 +187,7 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="nodeTypes", required=true)
-      private final Output<List<NodeTypeDescriptionArgs>> nodeTypes;
+    private Output<List<NodeTypeDescriptionArgs>> nodeTypes;
 
     public Output<List<NodeTypeDescriptionArgs>> nodeTypes() {
         return this.nodeTypes;
@@ -204,10 +204,10 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="reliabilityLevel")
-      private final @Nullable Output<String> reliabilityLevel;
+    private @Nullable Output<String> reliabilityLevel;
 
-    public Output<String> reliabilityLevel() {
-        return this.reliabilityLevel == null ? Codegen.empty() : this.reliabilityLevel;
+    public Optional<Output<String>> reliabilityLevel() {
+        return Optional.ofNullable(this.reliabilityLevel);
     }
 
     /**
@@ -215,7 +215,7 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -226,10 +226,10 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="reverseProxyCertificate")
-      private final @Nullable Output<CertificateDescriptionArgs> reverseProxyCertificate;
+    private @Nullable Output<CertificateDescriptionArgs> reverseProxyCertificate;
 
-    public Output<CertificateDescriptionArgs> reverseProxyCertificate() {
-        return this.reverseProxyCertificate == null ? Codegen.empty() : this.reverseProxyCertificate;
+    public Optional<Output<CertificateDescriptionArgs>> reverseProxyCertificate() {
+        return Optional.ofNullable(this.reverseProxyCertificate);
     }
 
     /**
@@ -237,10 +237,10 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="reverseProxyCertificateCommonNames")
-      private final @Nullable Output<ServerCertificateCommonNamesArgs> reverseProxyCertificateCommonNames;
+    private @Nullable Output<ServerCertificateCommonNamesArgs> reverseProxyCertificateCommonNames;
 
-    public Output<ServerCertificateCommonNamesArgs> reverseProxyCertificateCommonNames() {
-        return this.reverseProxyCertificateCommonNames == null ? Codegen.empty() : this.reverseProxyCertificateCommonNames;
+    public Optional<Output<ServerCertificateCommonNamesArgs>> reverseProxyCertificateCommonNames() {
+        return Optional.ofNullable(this.reverseProxyCertificateCommonNames);
     }
 
     /**
@@ -248,10 +248,10 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -259,10 +259,10 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="upgradeDescription")
-      private final @Nullable Output<ClusterUpgradePolicyArgs> upgradeDescription;
+    private @Nullable Output<ClusterUpgradePolicyArgs> upgradeDescription;
 
-    public Output<ClusterUpgradePolicyArgs> upgradeDescription() {
-        return this.upgradeDescription == null ? Codegen.empty() : this.upgradeDescription;
+    public Optional<Output<ClusterUpgradePolicyArgs>> upgradeDescription() {
+        return Optional.ofNullable(this.upgradeDescription);
     }
 
     /**
@@ -273,10 +273,10 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="upgradeMode")
-      private final @Nullable Output<String> upgradeMode;
+    private @Nullable Output<String> upgradeMode;
 
-    public Output<String> upgradeMode() {
-        return this.upgradeMode == null ? Codegen.empty() : this.upgradeMode;
+    public Optional<Output<String>> upgradeMode() {
+        return Optional.ofNullable(this.upgradeMode);
     }
 
     /**
@@ -284,351 +284,291 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="vmImage")
-      private final @Nullable Output<String> vmImage;
+    private @Nullable Output<String> vmImage;
 
-    public Output<String> vmImage() {
-        return this.vmImage == null ? Codegen.empty() : this.vmImage;
+    public Optional<Output<String>> vmImage() {
+        return Optional.ofNullable(this.vmImage);
     }
 
-    public ClusterArgs(
-        @Nullable Output<List<String>> addOnFeatures,
-        @Nullable Output<ApplicationTypeVersionsCleanupPolicyArgs> applicationTypeVersionsCleanupPolicy,
-        @Nullable Output<AzureActiveDirectoryArgs> azureActiveDirectory,
-        @Nullable Output<CertificateDescriptionArgs> certificate,
-        @Nullable Output<ServerCertificateCommonNamesArgs> certificateCommonNames,
-        @Nullable Output<List<ClientCertificateCommonNameArgs>> clientCertificateCommonNames,
-        @Nullable Output<List<ClientCertificateThumbprintArgs>> clientCertificateThumbprints,
-        @Nullable Output<String> clusterCodeVersion,
-        @Nullable Output<String> clusterName,
-        @Nullable Output<DiagnosticsStorageAccountConfigArgs> diagnosticsStorageAccountConfig,
-        @Nullable Output<Boolean> eventStoreServiceEnabled,
-        @Nullable Output<List<SettingsSectionDescriptionArgs>> fabricSettings,
-        @Nullable Output<String> location,
-        Output<String> managementEndpoint,
-        Output<List<NodeTypeDescriptionArgs>> nodeTypes,
-        @Nullable Output<String> reliabilityLevel,
-        Output<String> resourceGroupName,
-        @Nullable Output<CertificateDescriptionArgs> reverseProxyCertificate,
-        @Nullable Output<ServerCertificateCommonNamesArgs> reverseProxyCertificateCommonNames,
-        @Nullable Output<Map<String,String>> tags,
-        @Nullable Output<ClusterUpgradePolicyArgs> upgradeDescription,
-        @Nullable Output<String> upgradeMode,
-        @Nullable Output<String> vmImage) {
-        this.addOnFeatures = addOnFeatures;
-        this.applicationTypeVersionsCleanupPolicy = applicationTypeVersionsCleanupPolicy;
-        this.azureActiveDirectory = azureActiveDirectory;
-        this.certificate = certificate;
-        this.certificateCommonNames = certificateCommonNames;
-        this.clientCertificateCommonNames = clientCertificateCommonNames;
-        this.clientCertificateThumbprints = clientCertificateThumbprints;
-        this.clusterCodeVersion = clusterCodeVersion;
-        this.clusterName = clusterName;
-        this.diagnosticsStorageAccountConfig = diagnosticsStorageAccountConfig;
-        this.eventStoreServiceEnabled = eventStoreServiceEnabled;
-        this.fabricSettings = fabricSettings;
-        this.location = location;
-        this.managementEndpoint = Objects.requireNonNull(managementEndpoint, "expected parameter 'managementEndpoint' to be non-null");
-        this.nodeTypes = Objects.requireNonNull(nodeTypes, "expected parameter 'nodeTypes' to be non-null");
-        this.reliabilityLevel = reliabilityLevel;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.reverseProxyCertificate = reverseProxyCertificate;
-        this.reverseProxyCertificateCommonNames = reverseProxyCertificateCommonNames;
-        this.tags = tags;
-        this.upgradeDescription = upgradeDescription;
-        this.upgradeMode = upgradeMode;
-        this.vmImage = vmImage;
-    }
+    private ClusterArgs() {}
 
-    private ClusterArgs() {
-        this.addOnFeatures = Codegen.empty();
-        this.applicationTypeVersionsCleanupPolicy = Codegen.empty();
-        this.azureActiveDirectory = Codegen.empty();
-        this.certificate = Codegen.empty();
-        this.certificateCommonNames = Codegen.empty();
-        this.clientCertificateCommonNames = Codegen.empty();
-        this.clientCertificateThumbprints = Codegen.empty();
-        this.clusterCodeVersion = Codegen.empty();
-        this.clusterName = Codegen.empty();
-        this.diagnosticsStorageAccountConfig = Codegen.empty();
-        this.eventStoreServiceEnabled = Codegen.empty();
-        this.fabricSettings = Codegen.empty();
-        this.location = Codegen.empty();
-        this.managementEndpoint = Codegen.empty();
-        this.nodeTypes = Codegen.empty();
-        this.reliabilityLevel = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.reverseProxyCertificate = Codegen.empty();
-        this.reverseProxyCertificateCommonNames = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.upgradeDescription = Codegen.empty();
-        this.upgradeMode = Codegen.empty();
-        this.vmImage = Codegen.empty();
+    private ClusterArgs(ClusterArgs $) {
+        this.addOnFeatures = $.addOnFeatures;
+        this.applicationTypeVersionsCleanupPolicy = $.applicationTypeVersionsCleanupPolicy;
+        this.azureActiveDirectory = $.azureActiveDirectory;
+        this.certificate = $.certificate;
+        this.certificateCommonNames = $.certificateCommonNames;
+        this.clientCertificateCommonNames = $.clientCertificateCommonNames;
+        this.clientCertificateThumbprints = $.clientCertificateThumbprints;
+        this.clusterCodeVersion = $.clusterCodeVersion;
+        this.clusterName = $.clusterName;
+        this.diagnosticsStorageAccountConfig = $.diagnosticsStorageAccountConfig;
+        this.eventStoreServiceEnabled = $.eventStoreServiceEnabled;
+        this.fabricSettings = $.fabricSettings;
+        this.location = $.location;
+        this.managementEndpoint = $.managementEndpoint;
+        this.nodeTypes = $.nodeTypes;
+        this.reliabilityLevel = $.reliabilityLevel;
+        this.resourceGroupName = $.resourceGroupName;
+        this.reverseProxyCertificate = $.reverseProxyCertificate;
+        this.reverseProxyCertificateCommonNames = $.reverseProxyCertificateCommonNames;
+        this.tags = $.tags;
+        this.upgradeDescription = $.upgradeDescription;
+        this.upgradeMode = $.upgradeMode;
+        this.vmImage = $.vmImage;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ClusterArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> addOnFeatures;
-        private @Nullable Output<ApplicationTypeVersionsCleanupPolicyArgs> applicationTypeVersionsCleanupPolicy;
-        private @Nullable Output<AzureActiveDirectoryArgs> azureActiveDirectory;
-        private @Nullable Output<CertificateDescriptionArgs> certificate;
-        private @Nullable Output<ServerCertificateCommonNamesArgs> certificateCommonNames;
-        private @Nullable Output<List<ClientCertificateCommonNameArgs>> clientCertificateCommonNames;
-        private @Nullable Output<List<ClientCertificateThumbprintArgs>> clientCertificateThumbprints;
-        private @Nullable Output<String> clusterCodeVersion;
-        private @Nullable Output<String> clusterName;
-        private @Nullable Output<DiagnosticsStorageAccountConfigArgs> diagnosticsStorageAccountConfig;
-        private @Nullable Output<Boolean> eventStoreServiceEnabled;
-        private @Nullable Output<List<SettingsSectionDescriptionArgs>> fabricSettings;
-        private @Nullable Output<String> location;
-        private Output<String> managementEndpoint;
-        private Output<List<NodeTypeDescriptionArgs>> nodeTypes;
-        private @Nullable Output<String> reliabilityLevel;
-        private Output<String> resourceGroupName;
-        private @Nullable Output<CertificateDescriptionArgs> reverseProxyCertificate;
-        private @Nullable Output<ServerCertificateCommonNamesArgs> reverseProxyCertificateCommonNames;
-        private @Nullable Output<Map<String,String>> tags;
-        private @Nullable Output<ClusterUpgradePolicyArgs> upgradeDescription;
-        private @Nullable Output<String> upgradeMode;
-        private @Nullable Output<String> vmImage;
+        private ClusterArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ClusterArgs();
         }
 
         public Builder(ClusterArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.addOnFeatures = defaults.addOnFeatures;
-    	      this.applicationTypeVersionsCleanupPolicy = defaults.applicationTypeVersionsCleanupPolicy;
-    	      this.azureActiveDirectory = defaults.azureActiveDirectory;
-    	      this.certificate = defaults.certificate;
-    	      this.certificateCommonNames = defaults.certificateCommonNames;
-    	      this.clientCertificateCommonNames = defaults.clientCertificateCommonNames;
-    	      this.clientCertificateThumbprints = defaults.clientCertificateThumbprints;
-    	      this.clusterCodeVersion = defaults.clusterCodeVersion;
-    	      this.clusterName = defaults.clusterName;
-    	      this.diagnosticsStorageAccountConfig = defaults.diagnosticsStorageAccountConfig;
-    	      this.eventStoreServiceEnabled = defaults.eventStoreServiceEnabled;
-    	      this.fabricSettings = defaults.fabricSettings;
-    	      this.location = defaults.location;
-    	      this.managementEndpoint = defaults.managementEndpoint;
-    	      this.nodeTypes = defaults.nodeTypes;
-    	      this.reliabilityLevel = defaults.reliabilityLevel;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.reverseProxyCertificate = defaults.reverseProxyCertificate;
-    	      this.reverseProxyCertificateCommonNames = defaults.reverseProxyCertificateCommonNames;
-    	      this.tags = defaults.tags;
-    	      this.upgradeDescription = defaults.upgradeDescription;
-    	      this.upgradeMode = defaults.upgradeMode;
-    	      this.vmImage = defaults.vmImage;
+            $ = new ClusterArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder addOnFeatures(@Nullable Output<List<String>> addOnFeatures) {
-            this.addOnFeatures = addOnFeatures;
+            $.addOnFeatures = addOnFeatures;
             return this;
         }
-        public Builder addOnFeatures(@Nullable List<String> addOnFeatures) {
-            this.addOnFeatures = Codegen.ofNullable(addOnFeatures);
-            return this;
+
+        public Builder addOnFeatures(List<String> addOnFeatures) {
+            return addOnFeatures(Output.of(addOnFeatures));
         }
+
         public Builder addOnFeatures(String... addOnFeatures) {
             return addOnFeatures(List.of(addOnFeatures));
         }
+
         public Builder applicationTypeVersionsCleanupPolicy(@Nullable Output<ApplicationTypeVersionsCleanupPolicyArgs> applicationTypeVersionsCleanupPolicy) {
-            this.applicationTypeVersionsCleanupPolicy = applicationTypeVersionsCleanupPolicy;
+            $.applicationTypeVersionsCleanupPolicy = applicationTypeVersionsCleanupPolicy;
             return this;
         }
-        public Builder applicationTypeVersionsCleanupPolicy(@Nullable ApplicationTypeVersionsCleanupPolicyArgs applicationTypeVersionsCleanupPolicy) {
-            this.applicationTypeVersionsCleanupPolicy = Codegen.ofNullable(applicationTypeVersionsCleanupPolicy);
-            return this;
+
+        public Builder applicationTypeVersionsCleanupPolicy(ApplicationTypeVersionsCleanupPolicyArgs applicationTypeVersionsCleanupPolicy) {
+            return applicationTypeVersionsCleanupPolicy(Output.of(applicationTypeVersionsCleanupPolicy));
         }
+
         public Builder azureActiveDirectory(@Nullable Output<AzureActiveDirectoryArgs> azureActiveDirectory) {
-            this.azureActiveDirectory = azureActiveDirectory;
+            $.azureActiveDirectory = azureActiveDirectory;
             return this;
         }
-        public Builder azureActiveDirectory(@Nullable AzureActiveDirectoryArgs azureActiveDirectory) {
-            this.azureActiveDirectory = Codegen.ofNullable(azureActiveDirectory);
-            return this;
+
+        public Builder azureActiveDirectory(AzureActiveDirectoryArgs azureActiveDirectory) {
+            return azureActiveDirectory(Output.of(azureActiveDirectory));
         }
+
         public Builder certificate(@Nullable Output<CertificateDescriptionArgs> certificate) {
-            this.certificate = certificate;
+            $.certificate = certificate;
             return this;
         }
-        public Builder certificate(@Nullable CertificateDescriptionArgs certificate) {
-            this.certificate = Codegen.ofNullable(certificate);
-            return this;
+
+        public Builder certificate(CertificateDescriptionArgs certificate) {
+            return certificate(Output.of(certificate));
         }
+
         public Builder certificateCommonNames(@Nullable Output<ServerCertificateCommonNamesArgs> certificateCommonNames) {
-            this.certificateCommonNames = certificateCommonNames;
+            $.certificateCommonNames = certificateCommonNames;
             return this;
         }
-        public Builder certificateCommonNames(@Nullable ServerCertificateCommonNamesArgs certificateCommonNames) {
-            this.certificateCommonNames = Codegen.ofNullable(certificateCommonNames);
-            return this;
+
+        public Builder certificateCommonNames(ServerCertificateCommonNamesArgs certificateCommonNames) {
+            return certificateCommonNames(Output.of(certificateCommonNames));
         }
+
         public Builder clientCertificateCommonNames(@Nullable Output<List<ClientCertificateCommonNameArgs>> clientCertificateCommonNames) {
-            this.clientCertificateCommonNames = clientCertificateCommonNames;
+            $.clientCertificateCommonNames = clientCertificateCommonNames;
             return this;
         }
-        public Builder clientCertificateCommonNames(@Nullable List<ClientCertificateCommonNameArgs> clientCertificateCommonNames) {
-            this.clientCertificateCommonNames = Codegen.ofNullable(clientCertificateCommonNames);
-            return this;
+
+        public Builder clientCertificateCommonNames(List<ClientCertificateCommonNameArgs> clientCertificateCommonNames) {
+            return clientCertificateCommonNames(Output.of(clientCertificateCommonNames));
         }
+
         public Builder clientCertificateCommonNames(ClientCertificateCommonNameArgs... clientCertificateCommonNames) {
             return clientCertificateCommonNames(List.of(clientCertificateCommonNames));
         }
+
         public Builder clientCertificateThumbprints(@Nullable Output<List<ClientCertificateThumbprintArgs>> clientCertificateThumbprints) {
-            this.clientCertificateThumbprints = clientCertificateThumbprints;
+            $.clientCertificateThumbprints = clientCertificateThumbprints;
             return this;
         }
-        public Builder clientCertificateThumbprints(@Nullable List<ClientCertificateThumbprintArgs> clientCertificateThumbprints) {
-            this.clientCertificateThumbprints = Codegen.ofNullable(clientCertificateThumbprints);
-            return this;
+
+        public Builder clientCertificateThumbprints(List<ClientCertificateThumbprintArgs> clientCertificateThumbprints) {
+            return clientCertificateThumbprints(Output.of(clientCertificateThumbprints));
         }
+
         public Builder clientCertificateThumbprints(ClientCertificateThumbprintArgs... clientCertificateThumbprints) {
             return clientCertificateThumbprints(List.of(clientCertificateThumbprints));
         }
+
         public Builder clusterCodeVersion(@Nullable Output<String> clusterCodeVersion) {
-            this.clusterCodeVersion = clusterCodeVersion;
+            $.clusterCodeVersion = clusterCodeVersion;
             return this;
         }
-        public Builder clusterCodeVersion(@Nullable String clusterCodeVersion) {
-            this.clusterCodeVersion = Codegen.ofNullable(clusterCodeVersion);
-            return this;
+
+        public Builder clusterCodeVersion(String clusterCodeVersion) {
+            return clusterCodeVersion(Output.of(clusterCodeVersion));
         }
+
         public Builder clusterName(@Nullable Output<String> clusterName) {
-            this.clusterName = clusterName;
+            $.clusterName = clusterName;
             return this;
         }
-        public Builder clusterName(@Nullable String clusterName) {
-            this.clusterName = Codegen.ofNullable(clusterName);
-            return this;
+
+        public Builder clusterName(String clusterName) {
+            return clusterName(Output.of(clusterName));
         }
+
         public Builder diagnosticsStorageAccountConfig(@Nullable Output<DiagnosticsStorageAccountConfigArgs> diagnosticsStorageAccountConfig) {
-            this.diagnosticsStorageAccountConfig = diagnosticsStorageAccountConfig;
+            $.diagnosticsStorageAccountConfig = diagnosticsStorageAccountConfig;
             return this;
         }
-        public Builder diagnosticsStorageAccountConfig(@Nullable DiagnosticsStorageAccountConfigArgs diagnosticsStorageAccountConfig) {
-            this.diagnosticsStorageAccountConfig = Codegen.ofNullable(diagnosticsStorageAccountConfig);
-            return this;
+
+        public Builder diagnosticsStorageAccountConfig(DiagnosticsStorageAccountConfigArgs diagnosticsStorageAccountConfig) {
+            return diagnosticsStorageAccountConfig(Output.of(diagnosticsStorageAccountConfig));
         }
+
         public Builder eventStoreServiceEnabled(@Nullable Output<Boolean> eventStoreServiceEnabled) {
-            this.eventStoreServiceEnabled = eventStoreServiceEnabled;
+            $.eventStoreServiceEnabled = eventStoreServiceEnabled;
             return this;
         }
-        public Builder eventStoreServiceEnabled(@Nullable Boolean eventStoreServiceEnabled) {
-            this.eventStoreServiceEnabled = Codegen.ofNullable(eventStoreServiceEnabled);
-            return this;
+
+        public Builder eventStoreServiceEnabled(Boolean eventStoreServiceEnabled) {
+            return eventStoreServiceEnabled(Output.of(eventStoreServiceEnabled));
         }
+
         public Builder fabricSettings(@Nullable Output<List<SettingsSectionDescriptionArgs>> fabricSettings) {
-            this.fabricSettings = fabricSettings;
+            $.fabricSettings = fabricSettings;
             return this;
         }
-        public Builder fabricSettings(@Nullable List<SettingsSectionDescriptionArgs> fabricSettings) {
-            this.fabricSettings = Codegen.ofNullable(fabricSettings);
-            return this;
+
+        public Builder fabricSettings(List<SettingsSectionDescriptionArgs> fabricSettings) {
+            return fabricSettings(Output.of(fabricSettings));
         }
+
         public Builder fabricSettings(SettingsSectionDescriptionArgs... fabricSettings) {
             return fabricSettings(List.of(fabricSettings));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder managementEndpoint(Output<String> managementEndpoint) {
-            this.managementEndpoint = Objects.requireNonNull(managementEndpoint);
+            $.managementEndpoint = managementEndpoint;
             return this;
         }
+
         public Builder managementEndpoint(String managementEndpoint) {
-            this.managementEndpoint = Output.of(Objects.requireNonNull(managementEndpoint));
-            return this;
+            return managementEndpoint(Output.of(managementEndpoint));
         }
+
         public Builder nodeTypes(Output<List<NodeTypeDescriptionArgs>> nodeTypes) {
-            this.nodeTypes = Objects.requireNonNull(nodeTypes);
+            $.nodeTypes = nodeTypes;
             return this;
         }
+
         public Builder nodeTypes(List<NodeTypeDescriptionArgs> nodeTypes) {
-            this.nodeTypes = Output.of(Objects.requireNonNull(nodeTypes));
-            return this;
+            return nodeTypes(Output.of(nodeTypes));
         }
+
         public Builder nodeTypes(NodeTypeDescriptionArgs... nodeTypes) {
             return nodeTypes(List.of(nodeTypes));
         }
+
         public Builder reliabilityLevel(@Nullable Output<String> reliabilityLevel) {
-            this.reliabilityLevel = reliabilityLevel;
+            $.reliabilityLevel = reliabilityLevel;
             return this;
         }
-        public Builder reliabilityLevel(@Nullable String reliabilityLevel) {
-            this.reliabilityLevel = Codegen.ofNullable(reliabilityLevel);
-            return this;
+
+        public Builder reliabilityLevel(String reliabilityLevel) {
+            return reliabilityLevel(Output.of(reliabilityLevel));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder reverseProxyCertificate(@Nullable Output<CertificateDescriptionArgs> reverseProxyCertificate) {
-            this.reverseProxyCertificate = reverseProxyCertificate;
+            $.reverseProxyCertificate = reverseProxyCertificate;
             return this;
         }
-        public Builder reverseProxyCertificate(@Nullable CertificateDescriptionArgs reverseProxyCertificate) {
-            this.reverseProxyCertificate = Codegen.ofNullable(reverseProxyCertificate);
-            return this;
+
+        public Builder reverseProxyCertificate(CertificateDescriptionArgs reverseProxyCertificate) {
+            return reverseProxyCertificate(Output.of(reverseProxyCertificate));
         }
+
         public Builder reverseProxyCertificateCommonNames(@Nullable Output<ServerCertificateCommonNamesArgs> reverseProxyCertificateCommonNames) {
-            this.reverseProxyCertificateCommonNames = reverseProxyCertificateCommonNames;
+            $.reverseProxyCertificateCommonNames = reverseProxyCertificateCommonNames;
             return this;
         }
-        public Builder reverseProxyCertificateCommonNames(@Nullable ServerCertificateCommonNamesArgs reverseProxyCertificateCommonNames) {
-            this.reverseProxyCertificateCommonNames = Codegen.ofNullable(reverseProxyCertificateCommonNames);
-            return this;
+
+        public Builder reverseProxyCertificateCommonNames(ServerCertificateCommonNamesArgs reverseProxyCertificateCommonNames) {
+            return reverseProxyCertificateCommonNames(Output.of(reverseProxyCertificateCommonNames));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder upgradeDescription(@Nullable Output<ClusterUpgradePolicyArgs> upgradeDescription) {
-            this.upgradeDescription = upgradeDescription;
+            $.upgradeDescription = upgradeDescription;
             return this;
         }
-        public Builder upgradeDescription(@Nullable ClusterUpgradePolicyArgs upgradeDescription) {
-            this.upgradeDescription = Codegen.ofNullable(upgradeDescription);
-            return this;
+
+        public Builder upgradeDescription(ClusterUpgradePolicyArgs upgradeDescription) {
+            return upgradeDescription(Output.of(upgradeDescription));
         }
+
         public Builder upgradeMode(@Nullable Output<String> upgradeMode) {
-            this.upgradeMode = upgradeMode;
+            $.upgradeMode = upgradeMode;
             return this;
         }
-        public Builder upgradeMode(@Nullable String upgradeMode) {
-            this.upgradeMode = Codegen.ofNullable(upgradeMode);
-            return this;
+
+        public Builder upgradeMode(String upgradeMode) {
+            return upgradeMode(Output.of(upgradeMode));
         }
+
         public Builder vmImage(@Nullable Output<String> vmImage) {
-            this.vmImage = vmImage;
+            $.vmImage = vmImage;
             return this;
         }
-        public Builder vmImage(@Nullable String vmImage) {
-            this.vmImage = Codegen.ofNullable(vmImage);
-            return this;
-        }        public ClusterArgs build() {
-            return new ClusterArgs(addOnFeatures, applicationTypeVersionsCleanupPolicy, azureActiveDirectory, certificate, certificateCommonNames, clientCertificateCommonNames, clientCertificateThumbprints, clusterCodeVersion, clusterName, diagnosticsStorageAccountConfig, eventStoreServiceEnabled, fabricSettings, location, managementEndpoint, nodeTypes, reliabilityLevel, resourceGroupName, reverseProxyCertificate, reverseProxyCertificateCommonNames, tags, upgradeDescription, upgradeMode, vmImage);
+
+        public Builder vmImage(String vmImage) {
+            return vmImage(Output.of(vmImage));
+        }
+
+        public ClusterArgs build() {
+            $.managementEndpoint = Objects.requireNonNull($.managementEndpoint, "expected parameter 'managementEndpoint' to be non-null");
+            $.nodeTypes = Objects.requireNonNull($.nodeTypes, "expected parameter 'nodeTypes' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

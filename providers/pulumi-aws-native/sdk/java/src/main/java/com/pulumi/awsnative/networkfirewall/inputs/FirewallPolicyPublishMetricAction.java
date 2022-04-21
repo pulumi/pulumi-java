@@ -14,48 +14,49 @@ public final class FirewallPolicyPublishMetricAction extends com.pulumi.resource
     public static final FirewallPolicyPublishMetricAction Empty = new FirewallPolicyPublishMetricAction();
 
     @Import(name="dimensions", required=true)
-      private final List<FirewallPolicyDimension> dimensions;
+    private List<FirewallPolicyDimension> dimensions;
 
     public List<FirewallPolicyDimension> dimensions() {
         return this.dimensions;
     }
 
-    public FirewallPolicyPublishMetricAction(List<FirewallPolicyDimension> dimensions) {
-        this.dimensions = Objects.requireNonNull(dimensions, "expected parameter 'dimensions' to be non-null");
-    }
+    private FirewallPolicyPublishMetricAction() {}
 
-    private FirewallPolicyPublishMetricAction() {
-        this.dimensions = List.of();
+    private FirewallPolicyPublishMetricAction(FirewallPolicyPublishMetricAction $) {
+        this.dimensions = $.dimensions;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FirewallPolicyPublishMetricAction defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<FirewallPolicyDimension> dimensions;
+        private FirewallPolicyPublishMetricAction $;
 
         public Builder() {
-    	      // Empty
+            $ = new FirewallPolicyPublishMetricAction();
         }
 
         public Builder(FirewallPolicyPublishMetricAction defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dimensions = defaults.dimensions;
+            $ = new FirewallPolicyPublishMetricAction(Objects.requireNonNull(defaults));
         }
 
         public Builder dimensions(List<FirewallPolicyDimension> dimensions) {
-            this.dimensions = Objects.requireNonNull(dimensions);
+            $.dimensions = dimensions;
             return this;
         }
+
         public Builder dimensions(FirewallPolicyDimension... dimensions) {
             return dimensions(List.of(dimensions));
-        }        public FirewallPolicyPublishMetricAction build() {
-            return new FirewallPolicyPublishMetricAction(dimensions);
+        }
+
+        public FirewallPolicyPublishMetricAction build() {
+            $.dimensions = Objects.requireNonNull($.dimensions, "expected parameter 'dimensions' to be non-null");
+            return $;
         }
     }
+
 }

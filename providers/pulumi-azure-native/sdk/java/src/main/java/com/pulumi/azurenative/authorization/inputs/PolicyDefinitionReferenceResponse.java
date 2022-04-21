@@ -26,10 +26,10 @@ public final class PolicyDefinitionReferenceResponse extends com.pulumi.resource
      * 
      */
     @Import(name="groupNames")
-      private final @Nullable List<String> groupNames;
+    private @Nullable List<String> groupNames;
 
-    public List<String> groupNames() {
-        return this.groupNames == null ? List.of() : this.groupNames;
+    public Optional<List<String>> groupNames() {
+        return Optional.ofNullable(this.groupNames);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class PolicyDefinitionReferenceResponse extends com.pulumi.resource
      * 
      */
     @Import(name="parameters")
-      private final @Nullable Map<String,ParameterValuesValueResponse> parameters;
+    private @Nullable Map<String,ParameterValuesValueResponse> parameters;
 
-    public Map<String,ParameterValuesValueResponse> parameters() {
-        return this.parameters == null ? Map.of() : this.parameters;
+    public Optional<Map<String,ParameterValuesValueResponse>> parameters() {
+        return Optional.ofNullable(this.parameters);
     }
 
     /**
@@ -48,7 +48,7 @@ public final class PolicyDefinitionReferenceResponse extends com.pulumi.resource
      * 
      */
     @Import(name="policyDefinitionId", required=true)
-      private final String policyDefinitionId;
+    private String policyDefinitionId;
 
     public String policyDefinitionId() {
         return this.policyDefinitionId;
@@ -59,76 +59,67 @@ public final class PolicyDefinitionReferenceResponse extends com.pulumi.resource
      * 
      */
     @Import(name="policyDefinitionReferenceId")
-      private final @Nullable String policyDefinitionReferenceId;
+    private @Nullable String policyDefinitionReferenceId;
 
     public Optional<String> policyDefinitionReferenceId() {
-        return this.policyDefinitionReferenceId == null ? Optional.empty() : Optional.ofNullable(this.policyDefinitionReferenceId);
+        return Optional.ofNullable(this.policyDefinitionReferenceId);
     }
 
-    public PolicyDefinitionReferenceResponse(
-        @Nullable List<String> groupNames,
-        @Nullable Map<String,ParameterValuesValueResponse> parameters,
-        String policyDefinitionId,
-        @Nullable String policyDefinitionReferenceId) {
-        this.groupNames = groupNames;
-        this.parameters = parameters;
-        this.policyDefinitionId = Objects.requireNonNull(policyDefinitionId, "expected parameter 'policyDefinitionId' to be non-null");
-        this.policyDefinitionReferenceId = policyDefinitionReferenceId;
-    }
+    private PolicyDefinitionReferenceResponse() {}
 
-    private PolicyDefinitionReferenceResponse() {
-        this.groupNames = List.of();
-        this.parameters = Map.of();
-        this.policyDefinitionId = null;
-        this.policyDefinitionReferenceId = null;
+    private PolicyDefinitionReferenceResponse(PolicyDefinitionReferenceResponse $) {
+        this.groupNames = $.groupNames;
+        this.parameters = $.parameters;
+        this.policyDefinitionId = $.policyDefinitionId;
+        this.policyDefinitionReferenceId = $.policyDefinitionReferenceId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PolicyDefinitionReferenceResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<String> groupNames;
-        private @Nullable Map<String,ParameterValuesValueResponse> parameters;
-        private String policyDefinitionId;
-        private @Nullable String policyDefinitionReferenceId;
+        private PolicyDefinitionReferenceResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new PolicyDefinitionReferenceResponse();
         }
 
         public Builder(PolicyDefinitionReferenceResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.groupNames = defaults.groupNames;
-    	      this.parameters = defaults.parameters;
-    	      this.policyDefinitionId = defaults.policyDefinitionId;
-    	      this.policyDefinitionReferenceId = defaults.policyDefinitionReferenceId;
+            $ = new PolicyDefinitionReferenceResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder groupNames(@Nullable List<String> groupNames) {
-            this.groupNames = groupNames;
+            $.groupNames = groupNames;
             return this;
         }
+
         public Builder groupNames(String... groupNames) {
             return groupNames(List.of(groupNames));
         }
+
         public Builder parameters(@Nullable Map<String,ParameterValuesValueResponse> parameters) {
-            this.parameters = parameters;
+            $.parameters = parameters;
             return this;
         }
+
         public Builder policyDefinitionId(String policyDefinitionId) {
-            this.policyDefinitionId = Objects.requireNonNull(policyDefinitionId);
+            $.policyDefinitionId = policyDefinitionId;
             return this;
         }
+
         public Builder policyDefinitionReferenceId(@Nullable String policyDefinitionReferenceId) {
-            this.policyDefinitionReferenceId = policyDefinitionReferenceId;
+            $.policyDefinitionReferenceId = policyDefinitionReferenceId;
             return this;
-        }        public PolicyDefinitionReferenceResponse build() {
-            return new PolicyDefinitionReferenceResponse(groupNames, parameters, policyDefinitionId, policyDefinitionReferenceId);
+        }
+
+        public PolicyDefinitionReferenceResponse build() {
+            $.policyDefinitionId = Objects.requireNonNull($.policyDefinitionId, "expected parameter 'policyDefinitionId' to be non-null");
+            return $;
         }
     }
+
 }

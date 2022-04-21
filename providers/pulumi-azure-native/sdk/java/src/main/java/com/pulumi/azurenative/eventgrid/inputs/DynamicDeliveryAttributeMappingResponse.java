@@ -24,10 +24,10 @@ public final class DynamicDeliveryAttributeMappingResponse extends com.pulumi.re
      * 
      */
     @Import(name="name")
-      private final @Nullable String name;
+    private @Nullable String name;
 
     public Optional<String> name() {
-        return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class DynamicDeliveryAttributeMappingResponse extends com.pulumi.re
      * 
      */
     @Import(name="sourceField")
-      private final @Nullable String sourceField;
+    private @Nullable String sourceField;
 
     public Optional<String> sourceField() {
-        return this.sourceField == null ? Optional.empty() : Optional.ofNullable(this.sourceField);
+        return Optional.ofNullable(this.sourceField);
     }
 
     /**
@@ -47,64 +47,57 @@ public final class DynamicDeliveryAttributeMappingResponse extends com.pulumi.re
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
     }
 
-    public DynamicDeliveryAttributeMappingResponse(
-        @Nullable String name,
-        @Nullable String sourceField,
-        String type) {
-        this.name = name;
-        this.sourceField = sourceField;
-        this.type = Codegen.stringProp("type").arg(type).require();
-    }
+    private DynamicDeliveryAttributeMappingResponse() {}
 
-    private DynamicDeliveryAttributeMappingResponse() {
-        this.name = null;
-        this.sourceField = null;
-        this.type = null;
+    private DynamicDeliveryAttributeMappingResponse(DynamicDeliveryAttributeMappingResponse $) {
+        this.name = $.name;
+        this.sourceField = $.sourceField;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DynamicDeliveryAttributeMappingResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String name;
-        private @Nullable String sourceField;
-        private String type;
+        private DynamicDeliveryAttributeMappingResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new DynamicDeliveryAttributeMappingResponse();
         }
 
         public Builder(DynamicDeliveryAttributeMappingResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.sourceField = defaults.sourceField;
-    	      this.type = defaults.type;
+            $ = new DynamicDeliveryAttributeMappingResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder name(@Nullable String name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
+
         public Builder sourceField(@Nullable String sourceField) {
-            this.sourceField = sourceField;
+            $.sourceField = sourceField;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
-        }        public DynamicDeliveryAttributeMappingResponse build() {
-            return new DynamicDeliveryAttributeMappingResponse(name, sourceField, type);
+        }
+
+        public DynamicDeliveryAttributeMappingResponse build() {
+            $.type = Codegen.stringProp("type").arg($.type).require();
+            return $;
         }
     }
+
 }

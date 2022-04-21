@@ -9,8 +9,8 @@ import com.pulumi.awsnative.wafv2.inputs.WebACLCaptchaActionArgs;
 import com.pulumi.awsnative.wafv2.inputs.WebACLCountActionArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,110 +23,99 @@ public final class WebACLRuleActionArgs extends com.pulumi.resources.ResourceArg
     public static final WebACLRuleActionArgs Empty = new WebACLRuleActionArgs();
 
     @Import(name="allow")
-      private final @Nullable Output<WebACLAllowActionArgs> allow;
+    private @Nullable Output<WebACLAllowActionArgs> allow;
 
-    public Output<WebACLAllowActionArgs> allow() {
-        return this.allow == null ? Codegen.empty() : this.allow;
+    public Optional<Output<WebACLAllowActionArgs>> allow() {
+        return Optional.ofNullable(this.allow);
     }
 
     @Import(name="block")
-      private final @Nullable Output<WebACLBlockActionArgs> block;
+    private @Nullable Output<WebACLBlockActionArgs> block;
 
-    public Output<WebACLBlockActionArgs> block() {
-        return this.block == null ? Codegen.empty() : this.block;
+    public Optional<Output<WebACLBlockActionArgs>> block() {
+        return Optional.ofNullable(this.block);
     }
 
     @Import(name="captcha")
-      private final @Nullable Output<WebACLCaptchaActionArgs> captcha;
+    private @Nullable Output<WebACLCaptchaActionArgs> captcha;
 
-    public Output<WebACLCaptchaActionArgs> captcha() {
-        return this.captcha == null ? Codegen.empty() : this.captcha;
+    public Optional<Output<WebACLCaptchaActionArgs>> captcha() {
+        return Optional.ofNullable(this.captcha);
     }
 
     @Import(name="count")
-      private final @Nullable Output<WebACLCountActionArgs> count;
+    private @Nullable Output<WebACLCountActionArgs> count;
 
-    public Output<WebACLCountActionArgs> count() {
-        return this.count == null ? Codegen.empty() : this.count;
+    public Optional<Output<WebACLCountActionArgs>> count() {
+        return Optional.ofNullable(this.count);
     }
 
-    public WebACLRuleActionArgs(
-        @Nullable Output<WebACLAllowActionArgs> allow,
-        @Nullable Output<WebACLBlockActionArgs> block,
-        @Nullable Output<WebACLCaptchaActionArgs> captcha,
-        @Nullable Output<WebACLCountActionArgs> count) {
-        this.allow = allow;
-        this.block = block;
-        this.captcha = captcha;
-        this.count = count;
-    }
+    private WebACLRuleActionArgs() {}
 
-    private WebACLRuleActionArgs() {
-        this.allow = Codegen.empty();
-        this.block = Codegen.empty();
-        this.captcha = Codegen.empty();
-        this.count = Codegen.empty();
+    private WebACLRuleActionArgs(WebACLRuleActionArgs $) {
+        this.allow = $.allow;
+        this.block = $.block;
+        this.captcha = $.captcha;
+        this.count = $.count;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WebACLRuleActionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<WebACLAllowActionArgs> allow;
-        private @Nullable Output<WebACLBlockActionArgs> block;
-        private @Nullable Output<WebACLCaptchaActionArgs> captcha;
-        private @Nullable Output<WebACLCountActionArgs> count;
+        private WebACLRuleActionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new WebACLRuleActionArgs();
         }
 
         public Builder(WebACLRuleActionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.allow = defaults.allow;
-    	      this.block = defaults.block;
-    	      this.captcha = defaults.captcha;
-    	      this.count = defaults.count;
+            $ = new WebACLRuleActionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder allow(@Nullable Output<WebACLAllowActionArgs> allow) {
-            this.allow = allow;
+            $.allow = allow;
             return this;
         }
-        public Builder allow(@Nullable WebACLAllowActionArgs allow) {
-            this.allow = Codegen.ofNullable(allow);
-            return this;
+
+        public Builder allow(WebACLAllowActionArgs allow) {
+            return allow(Output.of(allow));
         }
+
         public Builder block(@Nullable Output<WebACLBlockActionArgs> block) {
-            this.block = block;
+            $.block = block;
             return this;
         }
-        public Builder block(@Nullable WebACLBlockActionArgs block) {
-            this.block = Codegen.ofNullable(block);
-            return this;
+
+        public Builder block(WebACLBlockActionArgs block) {
+            return block(Output.of(block));
         }
+
         public Builder captcha(@Nullable Output<WebACLCaptchaActionArgs> captcha) {
-            this.captcha = captcha;
+            $.captcha = captcha;
             return this;
         }
-        public Builder captcha(@Nullable WebACLCaptchaActionArgs captcha) {
-            this.captcha = Codegen.ofNullable(captcha);
-            return this;
+
+        public Builder captcha(WebACLCaptchaActionArgs captcha) {
+            return captcha(Output.of(captcha));
         }
+
         public Builder count(@Nullable Output<WebACLCountActionArgs> count) {
-            this.count = count;
+            $.count = count;
             return this;
         }
-        public Builder count(@Nullable WebACLCountActionArgs count) {
-            this.count = Codegen.ofNullable(count);
-            return this;
-        }        public WebACLRuleActionArgs build() {
-            return new WebACLRuleActionArgs(allow, block, captcha, count);
+
+        public Builder count(WebACLCountActionArgs count) {
+            return count(Output.of(count));
+        }
+
+        public WebACLRuleActionArgs build() {
+            return $;
         }
     }
+
 }

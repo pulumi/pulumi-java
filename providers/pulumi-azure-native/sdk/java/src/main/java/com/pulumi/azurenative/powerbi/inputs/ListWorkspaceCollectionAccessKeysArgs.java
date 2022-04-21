@@ -17,7 +17,7 @@ public final class ListWorkspaceCollectionAccessKeysArgs extends com.pulumi.reso
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -28,55 +28,52 @@ public final class ListWorkspaceCollectionAccessKeysArgs extends com.pulumi.reso
      * 
      */
     @Import(name="workspaceCollectionName", required=true)
-      private final String workspaceCollectionName;
+    private String workspaceCollectionName;
 
     public String workspaceCollectionName() {
         return this.workspaceCollectionName;
     }
 
-    public ListWorkspaceCollectionAccessKeysArgs(
-        String resourceGroupName,
-        String workspaceCollectionName) {
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.workspaceCollectionName = Objects.requireNonNull(workspaceCollectionName, "expected parameter 'workspaceCollectionName' to be non-null");
-    }
+    private ListWorkspaceCollectionAccessKeysArgs() {}
 
-    private ListWorkspaceCollectionAccessKeysArgs() {
-        this.resourceGroupName = null;
-        this.workspaceCollectionName = null;
+    private ListWorkspaceCollectionAccessKeysArgs(ListWorkspaceCollectionAccessKeysArgs $) {
+        this.resourceGroupName = $.resourceGroupName;
+        this.workspaceCollectionName = $.workspaceCollectionName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ListWorkspaceCollectionAccessKeysArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String resourceGroupName;
-        private String workspaceCollectionName;
+        private ListWorkspaceCollectionAccessKeysArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ListWorkspaceCollectionAccessKeysArgs();
         }
 
         public Builder(ListWorkspaceCollectionAccessKeysArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.workspaceCollectionName = defaults.workspaceCollectionName;
+            $ = new ListWorkspaceCollectionAccessKeysArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder workspaceCollectionName(String workspaceCollectionName) {
-            this.workspaceCollectionName = Objects.requireNonNull(workspaceCollectionName);
+            $.workspaceCollectionName = workspaceCollectionName;
             return this;
-        }        public ListWorkspaceCollectionAccessKeysArgs build() {
-            return new ListWorkspaceCollectionAccessKeysArgs(resourceGroupName, workspaceCollectionName);
+        }
+
+        public ListWorkspaceCollectionAccessKeysArgs build() {
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.workspaceCollectionName = Objects.requireNonNull($.workspaceCollectionName, "expected parameter 'workspaceCollectionName' to be non-null");
+            return $;
         }
     }
+
 }

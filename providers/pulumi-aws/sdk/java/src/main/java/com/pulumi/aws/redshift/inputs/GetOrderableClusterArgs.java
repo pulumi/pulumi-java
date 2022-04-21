@@ -20,10 +20,10 @@ public final class GetOrderableClusterArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="clusterType")
-      private final @Nullable String clusterType;
+    private @Nullable String clusterType;
 
     public Optional<String> clusterType() {
-        return this.clusterType == null ? Optional.empty() : Optional.ofNullable(this.clusterType);
+        return Optional.ofNullable(this.clusterType);
     }
 
     /**
@@ -31,10 +31,10 @@ public final class GetOrderableClusterArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="clusterVersion")
-      private final @Nullable String clusterVersion;
+    private @Nullable String clusterVersion;
 
     public Optional<String> clusterVersion() {
-        return this.clusterVersion == null ? Optional.empty() : Optional.ofNullable(this.clusterVersion);
+        return Optional.ofNullable(this.clusterVersion);
     }
 
     /**
@@ -42,10 +42,10 @@ public final class GetOrderableClusterArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="nodeType")
-      private final @Nullable String nodeType;
+    private @Nullable String nodeType;
 
     public Optional<String> nodeType() {
-        return this.nodeType == null ? Optional.empty() : Optional.ofNullable(this.nodeType);
+        return Optional.ofNullable(this.nodeType);
     }
 
     /**
@@ -53,76 +53,66 @@ public final class GetOrderableClusterArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="preferredNodeTypes")
-      private final @Nullable List<String> preferredNodeTypes;
+    private @Nullable List<String> preferredNodeTypes;
 
-    public List<String> preferredNodeTypes() {
-        return this.preferredNodeTypes == null ? List.of() : this.preferredNodeTypes;
+    public Optional<List<String>> preferredNodeTypes() {
+        return Optional.ofNullable(this.preferredNodeTypes);
     }
 
-    public GetOrderableClusterArgs(
-        @Nullable String clusterType,
-        @Nullable String clusterVersion,
-        @Nullable String nodeType,
-        @Nullable List<String> preferredNodeTypes) {
-        this.clusterType = clusterType;
-        this.clusterVersion = clusterVersion;
-        this.nodeType = nodeType;
-        this.preferredNodeTypes = preferredNodeTypes;
-    }
+    private GetOrderableClusterArgs() {}
 
-    private GetOrderableClusterArgs() {
-        this.clusterType = null;
-        this.clusterVersion = null;
-        this.nodeType = null;
-        this.preferredNodeTypes = List.of();
+    private GetOrderableClusterArgs(GetOrderableClusterArgs $) {
+        this.clusterType = $.clusterType;
+        this.clusterVersion = $.clusterVersion;
+        this.nodeType = $.nodeType;
+        this.preferredNodeTypes = $.preferredNodeTypes;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetOrderableClusterArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String clusterType;
-        private @Nullable String clusterVersion;
-        private @Nullable String nodeType;
-        private @Nullable List<String> preferredNodeTypes;
+        private GetOrderableClusterArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetOrderableClusterArgs();
         }
 
         public Builder(GetOrderableClusterArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.clusterType = defaults.clusterType;
-    	      this.clusterVersion = defaults.clusterVersion;
-    	      this.nodeType = defaults.nodeType;
-    	      this.preferredNodeTypes = defaults.preferredNodeTypes;
+            $ = new GetOrderableClusterArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder clusterType(@Nullable String clusterType) {
-            this.clusterType = clusterType;
+            $.clusterType = clusterType;
             return this;
         }
+
         public Builder clusterVersion(@Nullable String clusterVersion) {
-            this.clusterVersion = clusterVersion;
+            $.clusterVersion = clusterVersion;
             return this;
         }
+
         public Builder nodeType(@Nullable String nodeType) {
-            this.nodeType = nodeType;
+            $.nodeType = nodeType;
             return this;
         }
+
         public Builder preferredNodeTypes(@Nullable List<String> preferredNodeTypes) {
-            this.preferredNodeTypes = preferredNodeTypes;
+            $.preferredNodeTypes = preferredNodeTypes;
             return this;
         }
+
         public Builder preferredNodeTypes(String... preferredNodeTypes) {
             return preferredNodeTypes(List.of(preferredNodeTypes));
-        }        public GetOrderableClusterArgs build() {
-            return new GetOrderableClusterArgs(clusterType, clusterVersion, nodeType, preferredNodeTypes);
+        }
+
+        public GetOrderableClusterArgs build() {
+            return $;
         }
     }
+
 }

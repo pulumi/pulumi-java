@@ -5,10 +5,10 @@ package com.pulumi.azurenative.insights.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class MetricAlertActionArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="actionGroupId")
-      private final @Nullable Output<String> actionGroupId;
+    private @Nullable Output<String> actionGroupId;
 
-    public Output<String> actionGroupId() {
-        return this.actionGroupId == null ? Codegen.empty() : this.actionGroupId;
+    public Optional<Output<String>> actionGroupId() {
+        return Optional.ofNullable(this.actionGroupId);
     }
 
     /**
@@ -36,63 +36,58 @@ public final class MetricAlertActionArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="webHookProperties")
-      private final @Nullable Output<Map<String,String>> webHookProperties;
+    private @Nullable Output<Map<String,String>> webHookProperties;
 
-    public Output<Map<String,String>> webHookProperties() {
-        return this.webHookProperties == null ? Codegen.empty() : this.webHookProperties;
+    public Optional<Output<Map<String,String>>> webHookProperties() {
+        return Optional.ofNullable(this.webHookProperties);
     }
 
-    public MetricAlertActionArgs(
-        @Nullable Output<String> actionGroupId,
-        @Nullable Output<Map<String,String>> webHookProperties) {
-        this.actionGroupId = actionGroupId;
-        this.webHookProperties = webHookProperties;
-    }
+    private MetricAlertActionArgs() {}
 
-    private MetricAlertActionArgs() {
-        this.actionGroupId = Codegen.empty();
-        this.webHookProperties = Codegen.empty();
+    private MetricAlertActionArgs(MetricAlertActionArgs $) {
+        this.actionGroupId = $.actionGroupId;
+        this.webHookProperties = $.webHookProperties;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MetricAlertActionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> actionGroupId;
-        private @Nullable Output<Map<String,String>> webHookProperties;
+        private MetricAlertActionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new MetricAlertActionArgs();
         }
 
         public Builder(MetricAlertActionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.actionGroupId = defaults.actionGroupId;
-    	      this.webHookProperties = defaults.webHookProperties;
+            $ = new MetricAlertActionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder actionGroupId(@Nullable Output<String> actionGroupId) {
-            this.actionGroupId = actionGroupId;
+            $.actionGroupId = actionGroupId;
             return this;
         }
-        public Builder actionGroupId(@Nullable String actionGroupId) {
-            this.actionGroupId = Codegen.ofNullable(actionGroupId);
-            return this;
+
+        public Builder actionGroupId(String actionGroupId) {
+            return actionGroupId(Output.of(actionGroupId));
         }
+
         public Builder webHookProperties(@Nullable Output<Map<String,String>> webHookProperties) {
-            this.webHookProperties = webHookProperties;
+            $.webHookProperties = webHookProperties;
             return this;
         }
-        public Builder webHookProperties(@Nullable Map<String,String> webHookProperties) {
-            this.webHookProperties = Codegen.ofNullable(webHookProperties);
-            return this;
-        }        public MetricAlertActionArgs build() {
-            return new MetricAlertActionArgs(actionGroupId, webHookProperties);
+
+        public Builder webHookProperties(Map<String,String> webHookProperties) {
+            return webHookProperties(Output.of(webHookProperties));
+        }
+
+        public MetricAlertActionArgs build() {
+            return $;
         }
     }
+
 }

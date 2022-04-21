@@ -5,12 +5,12 @@ package com.pulumi.googlenative.essentialcontacts_v1;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.essentialcontacts_v1.enums.ContactNotificationCategorySubscriptionsItem;
 import com.pulumi.googlenative.essentialcontacts_v1.enums.ContactValidationState;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,7 +23,7 @@ public final class ContactArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="email", required=true)
-      private final Output<String> email;
+    private Output<String> email;
 
     public Output<String> email() {
         return this.email;
@@ -34,10 +34,10 @@ public final class ContactArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="languageTag")
-      private final @Nullable Output<String> languageTag;
+    private @Nullable Output<String> languageTag;
 
-    public Output<String> languageTag() {
-        return this.languageTag == null ? Codegen.empty() : this.languageTag;
+    public Optional<Output<String>> languageTag() {
+        return Optional.ofNullable(this.languageTag);
     }
 
     /**
@@ -45,10 +45,10 @@ public final class ContactArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -56,17 +56,17 @@ public final class ContactArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="notificationCategorySubscriptions")
-      private final @Nullable Output<List<ContactNotificationCategorySubscriptionsItem>> notificationCategorySubscriptions;
+    private @Nullable Output<List<ContactNotificationCategorySubscriptionsItem>> notificationCategorySubscriptions;
 
-    public Output<List<ContactNotificationCategorySubscriptionsItem>> notificationCategorySubscriptions() {
-        return this.notificationCategorySubscriptions == null ? Codegen.empty() : this.notificationCategorySubscriptions;
+    public Optional<Output<List<ContactNotificationCategorySubscriptionsItem>>> notificationCategorySubscriptions() {
+        return Optional.ofNullable(this.notificationCategorySubscriptions);
     }
 
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -74,10 +74,10 @@ public final class ContactArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="validateTime")
-      private final @Nullable Output<String> validateTime;
+    private @Nullable Output<String> validateTime;
 
-    public Output<String> validateTime() {
-        return this.validateTime == null ? Codegen.empty() : this.validateTime;
+    public Optional<Output<String>> validateTime() {
+        return Optional.ofNullable(this.validateTime);
     }
 
     /**
@@ -85,131 +85,113 @@ public final class ContactArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="validationState")
-      private final @Nullable Output<ContactValidationState> validationState;
+    private @Nullable Output<ContactValidationState> validationState;
 
-    public Output<ContactValidationState> validationState() {
-        return this.validationState == null ? Codegen.empty() : this.validationState;
+    public Optional<Output<ContactValidationState>> validationState() {
+        return Optional.ofNullable(this.validationState);
     }
 
-    public ContactArgs(
-        Output<String> email,
-        @Nullable Output<String> languageTag,
-        @Nullable Output<String> name,
-        @Nullable Output<List<ContactNotificationCategorySubscriptionsItem>> notificationCategorySubscriptions,
-        @Nullable Output<String> project,
-        @Nullable Output<String> validateTime,
-        @Nullable Output<ContactValidationState> validationState) {
-        this.email = Objects.requireNonNull(email, "expected parameter 'email' to be non-null");
-        this.languageTag = languageTag;
-        this.name = name;
-        this.notificationCategorySubscriptions = notificationCategorySubscriptions;
-        this.project = project;
-        this.validateTime = validateTime;
-        this.validationState = validationState;
-    }
+    private ContactArgs() {}
 
-    private ContactArgs() {
-        this.email = Codegen.empty();
-        this.languageTag = Codegen.empty();
-        this.name = Codegen.empty();
-        this.notificationCategorySubscriptions = Codegen.empty();
-        this.project = Codegen.empty();
-        this.validateTime = Codegen.empty();
-        this.validationState = Codegen.empty();
+    private ContactArgs(ContactArgs $) {
+        this.email = $.email;
+        this.languageTag = $.languageTag;
+        this.name = $.name;
+        this.notificationCategorySubscriptions = $.notificationCategorySubscriptions;
+        this.project = $.project;
+        this.validateTime = $.validateTime;
+        this.validationState = $.validationState;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ContactArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> email;
-        private @Nullable Output<String> languageTag;
-        private @Nullable Output<String> name;
-        private @Nullable Output<List<ContactNotificationCategorySubscriptionsItem>> notificationCategorySubscriptions;
-        private @Nullable Output<String> project;
-        private @Nullable Output<String> validateTime;
-        private @Nullable Output<ContactValidationState> validationState;
+        private ContactArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ContactArgs();
         }
 
         public Builder(ContactArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.email = defaults.email;
-    	      this.languageTag = defaults.languageTag;
-    	      this.name = defaults.name;
-    	      this.notificationCategorySubscriptions = defaults.notificationCategorySubscriptions;
-    	      this.project = defaults.project;
-    	      this.validateTime = defaults.validateTime;
-    	      this.validationState = defaults.validationState;
+            $ = new ContactArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder email(Output<String> email) {
-            this.email = Objects.requireNonNull(email);
+            $.email = email;
             return this;
         }
+
         public Builder email(String email) {
-            this.email = Output.of(Objects.requireNonNull(email));
-            return this;
+            return email(Output.of(email));
         }
+
         public Builder languageTag(@Nullable Output<String> languageTag) {
-            this.languageTag = languageTag;
+            $.languageTag = languageTag;
             return this;
         }
-        public Builder languageTag(@Nullable String languageTag) {
-            this.languageTag = Codegen.ofNullable(languageTag);
-            return this;
+
+        public Builder languageTag(String languageTag) {
+            return languageTag(Output.of(languageTag));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder notificationCategorySubscriptions(@Nullable Output<List<ContactNotificationCategorySubscriptionsItem>> notificationCategorySubscriptions) {
-            this.notificationCategorySubscriptions = notificationCategorySubscriptions;
+            $.notificationCategorySubscriptions = notificationCategorySubscriptions;
             return this;
         }
-        public Builder notificationCategorySubscriptions(@Nullable List<ContactNotificationCategorySubscriptionsItem> notificationCategorySubscriptions) {
-            this.notificationCategorySubscriptions = Codegen.ofNullable(notificationCategorySubscriptions);
-            return this;
+
+        public Builder notificationCategorySubscriptions(List<ContactNotificationCategorySubscriptionsItem> notificationCategorySubscriptions) {
+            return notificationCategorySubscriptions(Output.of(notificationCategorySubscriptions));
         }
+
         public Builder notificationCategorySubscriptions(ContactNotificationCategorySubscriptionsItem... notificationCategorySubscriptions) {
             return notificationCategorySubscriptions(List.of(notificationCategorySubscriptions));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder validateTime(@Nullable Output<String> validateTime) {
-            this.validateTime = validateTime;
+            $.validateTime = validateTime;
             return this;
         }
-        public Builder validateTime(@Nullable String validateTime) {
-            this.validateTime = Codegen.ofNullable(validateTime);
-            return this;
+
+        public Builder validateTime(String validateTime) {
+            return validateTime(Output.of(validateTime));
         }
+
         public Builder validationState(@Nullable Output<ContactValidationState> validationState) {
-            this.validationState = validationState;
+            $.validationState = validationState;
             return this;
         }
-        public Builder validationState(@Nullable ContactValidationState validationState) {
-            this.validationState = Codegen.ofNullable(validationState);
-            return this;
-        }        public ContactArgs build() {
-            return new ContactArgs(email, languageTag, name, notificationCategorySubscriptions, project, validateTime, validationState);
+
+        public Builder validationState(ContactValidationState validationState) {
+            return validationState(Output.of(validationState));
+        }
+
+        public ContactArgs build() {
+            $.email = Objects.requireNonNull($.email, "expected parameter 'email' to be non-null");
+            return $;
         }
     }
+
 }

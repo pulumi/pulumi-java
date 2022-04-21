@@ -5,9 +5,9 @@ package com.pulumi.googlenative.compute_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class BackendServiceCdnPolicyBypassCacheOnRequestHeaderArgs extends
      * 
      */
     @Import(name="headerName")
-      private final @Nullable Output<String> headerName;
+    private @Nullable Output<String> headerName;
 
-    public Output<String> headerName() {
-        return this.headerName == null ? Codegen.empty() : this.headerName;
+    public Optional<Output<String>> headerName() {
+        return Optional.ofNullable(this.headerName);
     }
 
-    public BackendServiceCdnPolicyBypassCacheOnRequestHeaderArgs(@Nullable Output<String> headerName) {
-        this.headerName = headerName;
-    }
+    private BackendServiceCdnPolicyBypassCacheOnRequestHeaderArgs() {}
 
-    private BackendServiceCdnPolicyBypassCacheOnRequestHeaderArgs() {
-        this.headerName = Codegen.empty();
+    private BackendServiceCdnPolicyBypassCacheOnRequestHeaderArgs(BackendServiceCdnPolicyBypassCacheOnRequestHeaderArgs $) {
+        this.headerName = $.headerName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BackendServiceCdnPolicyBypassCacheOnRequestHeaderArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> headerName;
+        private BackendServiceCdnPolicyBypassCacheOnRequestHeaderArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new BackendServiceCdnPolicyBypassCacheOnRequestHeaderArgs();
         }
 
         public Builder(BackendServiceCdnPolicyBypassCacheOnRequestHeaderArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.headerName = defaults.headerName;
+            $ = new BackendServiceCdnPolicyBypassCacheOnRequestHeaderArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder headerName(@Nullable Output<String> headerName) {
-            this.headerName = headerName;
+            $.headerName = headerName;
             return this;
         }
-        public Builder headerName(@Nullable String headerName) {
-            this.headerName = Codegen.ofNullable(headerName);
-            return this;
-        }        public BackendServiceCdnPolicyBypassCacheOnRequestHeaderArgs build() {
-            return new BackendServiceCdnPolicyBypassCacheOnRequestHeaderArgs(headerName);
+
+        public Builder headerName(String headerName) {
+            return headerName(Output.of(headerName));
+        }
+
+        public BackendServiceCdnPolicyBypassCacheOnRequestHeaderArgs build() {
+            return $;
         }
     }
+
 }

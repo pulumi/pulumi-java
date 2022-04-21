@@ -21,7 +21,7 @@ public final class CustomHttpPatternResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="kind", required=true)
-      private final String kind;
+    private String kind;
 
     public String kind() {
         return this.kind;
@@ -32,55 +32,52 @@ public final class CustomHttpPatternResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="path", required=true)
-      private final String path;
+    private String path;
 
     public String path() {
         return this.path;
     }
 
-    public CustomHttpPatternResponse(
-        String kind,
-        String path) {
-        this.kind = Objects.requireNonNull(kind, "expected parameter 'kind' to be non-null");
-        this.path = Objects.requireNonNull(path, "expected parameter 'path' to be non-null");
-    }
+    private CustomHttpPatternResponse() {}
 
-    private CustomHttpPatternResponse() {
-        this.kind = null;
-        this.path = null;
+    private CustomHttpPatternResponse(CustomHttpPatternResponse $) {
+        this.kind = $.kind;
+        this.path = $.path;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CustomHttpPatternResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String kind;
-        private String path;
+        private CustomHttpPatternResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new CustomHttpPatternResponse();
         }
 
         public Builder(CustomHttpPatternResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.kind = defaults.kind;
-    	      this.path = defaults.path;
+            $ = new CustomHttpPatternResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder kind(String kind) {
-            this.kind = Objects.requireNonNull(kind);
+            $.kind = kind;
             return this;
         }
+
         public Builder path(String path) {
-            this.path = Objects.requireNonNull(path);
+            $.path = path;
             return this;
-        }        public CustomHttpPatternResponse build() {
-            return new CustomHttpPatternResponse(kind, path);
+        }
+
+        public CustomHttpPatternResponse build() {
+            $.kind = Objects.requireNonNull($.kind, "expected parameter 'kind' to be non-null");
+            $.path = Objects.requireNonNull($.path, "expected parameter 'path' to be non-null");
+            return $;
         }
     }
+
 }

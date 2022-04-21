@@ -21,45 +21,45 @@ public final class DataprocParametersResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="cluster", required=true)
-      private final String cluster;
+    private String cluster;
 
     public String cluster() {
         return this.cluster;
     }
 
-    public DataprocParametersResponse(String cluster) {
-        this.cluster = Objects.requireNonNull(cluster, "expected parameter 'cluster' to be non-null");
-    }
+    private DataprocParametersResponse() {}
 
-    private DataprocParametersResponse() {
-        this.cluster = null;
+    private DataprocParametersResponse(DataprocParametersResponse $) {
+        this.cluster = $.cluster;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DataprocParametersResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String cluster;
+        private DataprocParametersResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new DataprocParametersResponse();
         }
 
         public Builder(DataprocParametersResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cluster = defaults.cluster;
+            $ = new DataprocParametersResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder cluster(String cluster) {
-            this.cluster = Objects.requireNonNull(cluster);
+            $.cluster = cluster;
             return this;
-        }        public DataprocParametersResponse build() {
-            return new DataprocParametersResponse(cluster);
+        }
+
+        public DataprocParametersResponse build() {
+            $.cluster = Objects.requireNonNull($.cluster, "expected parameter 'cluster' to be non-null");
+            return $;
         }
     }
+
 }

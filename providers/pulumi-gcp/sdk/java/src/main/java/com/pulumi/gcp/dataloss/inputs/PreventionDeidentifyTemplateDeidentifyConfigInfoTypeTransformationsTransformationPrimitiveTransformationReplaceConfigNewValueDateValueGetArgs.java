@@ -5,9 +5,9 @@ package com.pulumi.gcp.dataloss.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
      * 
      */
     @Import(name="day")
-      private final @Nullable Output<Integer> day;
+    private @Nullable Output<Integer> day;
 
-    public Output<Integer> day() {
-        return this.day == null ? Codegen.empty() : this.day;
+    public Optional<Output<Integer>> day() {
+        return Optional.ofNullable(this.day);
     }
 
     /**
@@ -32,10 +32,10 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
      * 
      */
     @Import(name="month")
-      private final @Nullable Output<Integer> month;
+    private @Nullable Output<Integer> month;
 
-    public Output<Integer> month() {
-        return this.month == null ? Codegen.empty() : this.month;
+    public Optional<Output<Integer>> month() {
+        return Optional.ofNullable(this.month);
     }
 
     /**
@@ -43,76 +43,68 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
      * 
      */
     @Import(name="year")
-      private final @Nullable Output<Integer> year;
+    private @Nullable Output<Integer> year;
 
-    public Output<Integer> year() {
-        return this.year == null ? Codegen.empty() : this.year;
+    public Optional<Output<Integer>> year() {
+        return Optional.ofNullable(this.year);
     }
 
-    public PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationReplaceConfigNewValueDateValueGetArgs(
-        @Nullable Output<Integer> day,
-        @Nullable Output<Integer> month,
-        @Nullable Output<Integer> year) {
-        this.day = day;
-        this.month = month;
-        this.year = year;
-    }
+    private PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationReplaceConfigNewValueDateValueGetArgs() {}
 
-    private PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationReplaceConfigNewValueDateValueGetArgs() {
-        this.day = Codegen.empty();
-        this.month = Codegen.empty();
-        this.year = Codegen.empty();
+    private PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationReplaceConfigNewValueDateValueGetArgs(PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationReplaceConfigNewValueDateValueGetArgs $) {
+        this.day = $.day;
+        this.month = $.month;
+        this.year = $.year;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationReplaceConfigNewValueDateValueGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> day;
-        private @Nullable Output<Integer> month;
-        private @Nullable Output<Integer> year;
+        private PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationReplaceConfigNewValueDateValueGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationReplaceConfigNewValueDateValueGetArgs();
         }
 
         public Builder(PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationReplaceConfigNewValueDateValueGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.day = defaults.day;
-    	      this.month = defaults.month;
-    	      this.year = defaults.year;
+            $ = new PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationReplaceConfigNewValueDateValueGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder day(@Nullable Output<Integer> day) {
-            this.day = day;
+            $.day = day;
             return this;
         }
-        public Builder day(@Nullable Integer day) {
-            this.day = Codegen.ofNullable(day);
-            return this;
+
+        public Builder day(Integer day) {
+            return day(Output.of(day));
         }
+
         public Builder month(@Nullable Output<Integer> month) {
-            this.month = month;
+            $.month = month;
             return this;
         }
-        public Builder month(@Nullable Integer month) {
-            this.month = Codegen.ofNullable(month);
-            return this;
+
+        public Builder month(Integer month) {
+            return month(Output.of(month));
         }
+
         public Builder year(@Nullable Output<Integer> year) {
-            this.year = year;
+            $.year = year;
             return this;
         }
-        public Builder year(@Nullable Integer year) {
-            this.year = Codegen.ofNullable(year);
-            return this;
-        }        public PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationReplaceConfigNewValueDateValueGetArgs build() {
-            return new PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationReplaceConfigNewValueDateValueGetArgs(day, month, year);
+
+        public Builder year(Integer year) {
+            return year(Output.of(year));
+        }
+
+        public PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationReplaceConfigNewValueDateValueGetArgs build() {
+            return $;
         }
     }
+
 }

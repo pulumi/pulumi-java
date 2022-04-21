@@ -5,13 +5,13 @@ package com.pulumi.gcp.iot.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,90 +20,86 @@ public final class DeviceLastErrorStatusGetArgs extends com.pulumi.resources.Res
     public static final DeviceLastErrorStatusGetArgs Empty = new DeviceLastErrorStatusGetArgs();
 
     @Import(name="details")
-      private final @Nullable Output<List<Map<String,Object>>> details;
+    private @Nullable Output<List<Map<String,Object>>> details;
 
-    public Output<List<Map<String,Object>>> details() {
-        return this.details == null ? Codegen.empty() : this.details;
+    public Optional<Output<List<Map<String,Object>>>> details() {
+        return Optional.ofNullable(this.details);
     }
 
     @Import(name="message")
-      private final @Nullable Output<String> message;
+    private @Nullable Output<String> message;
 
-    public Output<String> message() {
-        return this.message == null ? Codegen.empty() : this.message;
+    public Optional<Output<String>> message() {
+        return Optional.ofNullable(this.message);
     }
 
     @Import(name="number")
-      private final @Nullable Output<Integer> number;
+    private @Nullable Output<Integer> number;
 
-    public Output<Integer> number() {
-        return this.number == null ? Codegen.empty() : this.number;
+    public Optional<Output<Integer>> number() {
+        return Optional.ofNullable(this.number);
     }
 
-    public DeviceLastErrorStatusGetArgs(
-        @Nullable Output<List<Map<String,Object>>> details,
-        @Nullable Output<String> message,
-        @Nullable Output<Integer> number) {
-        this.details = details;
-        this.message = message;
-        this.number = number;
-    }
+    private DeviceLastErrorStatusGetArgs() {}
 
-    private DeviceLastErrorStatusGetArgs() {
-        this.details = Codegen.empty();
-        this.message = Codegen.empty();
-        this.number = Codegen.empty();
+    private DeviceLastErrorStatusGetArgs(DeviceLastErrorStatusGetArgs $) {
+        this.details = $.details;
+        this.message = $.message;
+        this.number = $.number;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DeviceLastErrorStatusGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<Map<String,Object>>> details;
-        private @Nullable Output<String> message;
-        private @Nullable Output<Integer> number;
+        private DeviceLastErrorStatusGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DeviceLastErrorStatusGetArgs();
         }
 
         public Builder(DeviceLastErrorStatusGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.details = defaults.details;
-    	      this.message = defaults.message;
-    	      this.number = defaults.number;
+            $ = new DeviceLastErrorStatusGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder details(@Nullable Output<List<Map<String,Object>>> details) {
-            this.details = details;
+            $.details = details;
             return this;
         }
-        public Builder details(@Nullable List<Map<String,Object>> details) {
-            this.details = Codegen.ofNullable(details);
-            return this;
+
+        public Builder details(List<Map<String,Object>> details) {
+            return details(Output.of(details));
         }
+
+        public Builder details(Map<String,Object>... details) {
+            return details(List.of(details));
+        }
+
         public Builder message(@Nullable Output<String> message) {
-            this.message = message;
+            $.message = message;
             return this;
         }
-        public Builder message(@Nullable String message) {
-            this.message = Codegen.ofNullable(message);
-            return this;
+
+        public Builder message(String message) {
+            return message(Output.of(message));
         }
+
         public Builder number(@Nullable Output<Integer> number) {
-            this.number = number;
+            $.number = number;
             return this;
         }
-        public Builder number(@Nullable Integer number) {
-            this.number = Codegen.ofNullable(number);
-            return this;
-        }        public DeviceLastErrorStatusGetArgs build() {
-            return new DeviceLastErrorStatusGetArgs(details, message, number);
+
+        public Builder number(Integer number) {
+            return number(Output.of(number));
+        }
+
+        public DeviceLastErrorStatusGetArgs build() {
+            return $;
         }
     }
+
 }

@@ -26,10 +26,10 @@ public final class GitRepositoryDefinitionResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="httpsCAFile")
-      private final @Nullable String httpsCAFile;
+    private @Nullable String httpsCAFile;
 
     public Optional<String> httpsCAFile() {
-        return this.httpsCAFile == null ? Optional.empty() : Optional.ofNullable(this.httpsCAFile);
+        return Optional.ofNullable(this.httpsCAFile);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class GitRepositoryDefinitionResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="httpsUser")
-      private final @Nullable String httpsUser;
+    private @Nullable String httpsUser;
 
     public Optional<String> httpsUser() {
-        return this.httpsUser == null ? Optional.empty() : Optional.ofNullable(this.httpsUser);
+        return Optional.ofNullable(this.httpsUser);
     }
 
     /**
@@ -48,10 +48,10 @@ public final class GitRepositoryDefinitionResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="localAuthRef")
-      private final @Nullable String localAuthRef;
+    private @Nullable String localAuthRef;
 
     public Optional<String> localAuthRef() {
-        return this.localAuthRef == null ? Optional.empty() : Optional.ofNullable(this.localAuthRef);
+        return Optional.ofNullable(this.localAuthRef);
     }
 
     /**
@@ -59,10 +59,10 @@ public final class GitRepositoryDefinitionResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="repositoryRef")
-      private final @Nullable RepositoryRefDefinitionResponse repositoryRef;
+    private @Nullable RepositoryRefDefinitionResponse repositoryRef;
 
     public Optional<RepositoryRefDefinitionResponse> repositoryRef() {
-        return this.repositoryRef == null ? Optional.empty() : Optional.ofNullable(this.repositoryRef);
+        return Optional.ofNullable(this.repositoryRef);
     }
 
     /**
@@ -70,10 +70,10 @@ public final class GitRepositoryDefinitionResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="sshKnownHosts")
-      private final @Nullable String sshKnownHosts;
+    private @Nullable String sshKnownHosts;
 
     public Optional<String> sshKnownHosts() {
-        return this.sshKnownHosts == null ? Optional.empty() : Optional.ofNullable(this.sshKnownHosts);
+        return Optional.ofNullable(this.sshKnownHosts);
     }
 
     /**
@@ -81,10 +81,10 @@ public final class GitRepositoryDefinitionResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="syncIntervalInSeconds")
-      private final @Nullable Double syncIntervalInSeconds;
+    private @Nullable Double syncIntervalInSeconds;
 
     public Optional<Double> syncIntervalInSeconds() {
-        return this.syncIntervalInSeconds == null ? Optional.empty() : Optional.ofNullable(this.syncIntervalInSeconds);
+        return Optional.ofNullable(this.syncIntervalInSeconds);
     }
 
     /**
@@ -92,10 +92,10 @@ public final class GitRepositoryDefinitionResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="timeoutInSeconds")
-      private final @Nullable Double timeoutInSeconds;
+    private @Nullable Double timeoutInSeconds;
 
     public Optional<Double> timeoutInSeconds() {
-        return this.timeoutInSeconds == null ? Optional.empty() : Optional.ofNullable(this.timeoutInSeconds);
+        return Optional.ofNullable(this.timeoutInSeconds);
     }
 
     /**
@@ -103,109 +103,88 @@ public final class GitRepositoryDefinitionResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="url")
-      private final @Nullable String url;
+    private @Nullable String url;
 
     public Optional<String> url() {
-        return this.url == null ? Optional.empty() : Optional.ofNullable(this.url);
+        return Optional.ofNullable(this.url);
     }
 
-    public GitRepositoryDefinitionResponse(
-        @Nullable String httpsCAFile,
-        @Nullable String httpsUser,
-        @Nullable String localAuthRef,
-        @Nullable RepositoryRefDefinitionResponse repositoryRef,
-        @Nullable String sshKnownHosts,
-        @Nullable Double syncIntervalInSeconds,
-        @Nullable Double timeoutInSeconds,
-        @Nullable String url) {
-        this.httpsCAFile = httpsCAFile;
-        this.httpsUser = httpsUser;
-        this.localAuthRef = localAuthRef;
-        this.repositoryRef = repositoryRef;
-        this.sshKnownHosts = sshKnownHosts;
-        this.syncIntervalInSeconds = Codegen.doubleProp("syncIntervalInSeconds").arg(syncIntervalInSeconds).def(6e+02).getNullable();
-        this.timeoutInSeconds = Codegen.doubleProp("timeoutInSeconds").arg(timeoutInSeconds).def(6e+02).getNullable();
-        this.url = url;
-    }
+    private GitRepositoryDefinitionResponse() {}
 
-    private GitRepositoryDefinitionResponse() {
-        this.httpsCAFile = null;
-        this.httpsUser = null;
-        this.localAuthRef = null;
-        this.repositoryRef = null;
-        this.sshKnownHosts = null;
-        this.syncIntervalInSeconds = null;
-        this.timeoutInSeconds = null;
-        this.url = null;
+    private GitRepositoryDefinitionResponse(GitRepositoryDefinitionResponse $) {
+        this.httpsCAFile = $.httpsCAFile;
+        this.httpsUser = $.httpsUser;
+        this.localAuthRef = $.localAuthRef;
+        this.repositoryRef = $.repositoryRef;
+        this.sshKnownHosts = $.sshKnownHosts;
+        this.syncIntervalInSeconds = $.syncIntervalInSeconds;
+        this.timeoutInSeconds = $.timeoutInSeconds;
+        this.url = $.url;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GitRepositoryDefinitionResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String httpsCAFile;
-        private @Nullable String httpsUser;
-        private @Nullable String localAuthRef;
-        private @Nullable RepositoryRefDefinitionResponse repositoryRef;
-        private @Nullable String sshKnownHosts;
-        private @Nullable Double syncIntervalInSeconds;
-        private @Nullable Double timeoutInSeconds;
-        private @Nullable String url;
+        private GitRepositoryDefinitionResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GitRepositoryDefinitionResponse();
         }
 
         public Builder(GitRepositoryDefinitionResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.httpsCAFile = defaults.httpsCAFile;
-    	      this.httpsUser = defaults.httpsUser;
-    	      this.localAuthRef = defaults.localAuthRef;
-    	      this.repositoryRef = defaults.repositoryRef;
-    	      this.sshKnownHosts = defaults.sshKnownHosts;
-    	      this.syncIntervalInSeconds = defaults.syncIntervalInSeconds;
-    	      this.timeoutInSeconds = defaults.timeoutInSeconds;
-    	      this.url = defaults.url;
+            $ = new GitRepositoryDefinitionResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder httpsCAFile(@Nullable String httpsCAFile) {
-            this.httpsCAFile = httpsCAFile;
+            $.httpsCAFile = httpsCAFile;
             return this;
         }
+
         public Builder httpsUser(@Nullable String httpsUser) {
-            this.httpsUser = httpsUser;
+            $.httpsUser = httpsUser;
             return this;
         }
+
         public Builder localAuthRef(@Nullable String localAuthRef) {
-            this.localAuthRef = localAuthRef;
+            $.localAuthRef = localAuthRef;
             return this;
         }
+
         public Builder repositoryRef(@Nullable RepositoryRefDefinitionResponse repositoryRef) {
-            this.repositoryRef = repositoryRef;
+            $.repositoryRef = repositoryRef;
             return this;
         }
+
         public Builder sshKnownHosts(@Nullable String sshKnownHosts) {
-            this.sshKnownHosts = sshKnownHosts;
+            $.sshKnownHosts = sshKnownHosts;
             return this;
         }
+
         public Builder syncIntervalInSeconds(@Nullable Double syncIntervalInSeconds) {
-            this.syncIntervalInSeconds = syncIntervalInSeconds;
+            $.syncIntervalInSeconds = syncIntervalInSeconds;
             return this;
         }
+
         public Builder timeoutInSeconds(@Nullable Double timeoutInSeconds) {
-            this.timeoutInSeconds = timeoutInSeconds;
+            $.timeoutInSeconds = timeoutInSeconds;
             return this;
         }
+
         public Builder url(@Nullable String url) {
-            this.url = url;
+            $.url = url;
             return this;
-        }        public GitRepositoryDefinitionResponse build() {
-            return new GitRepositoryDefinitionResponse(httpsCAFile, httpsUser, localAuthRef, repositoryRef, sshKnownHosts, syncIntervalInSeconds, timeoutInSeconds, url);
+        }
+
+        public GitRepositoryDefinitionResponse build() {
+            $.syncIntervalInSeconds = Codegen.doubleProp("syncIntervalInSeconds").arg($.syncIntervalInSeconds).def(6e+02).getNullable();
+            $.timeoutInSeconds = Codegen.doubleProp("timeoutInSeconds").arg($.timeoutInSeconds).def(6e+02).getNullable();
+            return $;
         }
     }
+
 }

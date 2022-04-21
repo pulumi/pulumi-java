@@ -23,7 +23,7 @@ public final class TimeSeriesFilterRatioResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="denominator", required=true)
-      private final RatioPartResponse denominator;
+    private RatioPartResponse denominator;
 
     public RatioPartResponse denominator() {
         return this.denominator;
@@ -34,7 +34,7 @@ public final class TimeSeriesFilterRatioResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="numerator", required=true)
-      private final RatioPartResponse numerator;
+    private RatioPartResponse numerator;
 
     public RatioPartResponse numerator() {
         return this.numerator;
@@ -45,7 +45,7 @@ public final class TimeSeriesFilterRatioResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="pickTimeSeriesFilter", required=true)
-      private final PickTimeSeriesFilterResponse pickTimeSeriesFilter;
+    private PickTimeSeriesFilterResponse pickTimeSeriesFilter;
 
     public PickTimeSeriesFilterResponse pickTimeSeriesFilter() {
         return this.pickTimeSeriesFilter;
@@ -56,73 +56,66 @@ public final class TimeSeriesFilterRatioResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="secondaryAggregation", required=true)
-      private final AggregationResponse secondaryAggregation;
+    private AggregationResponse secondaryAggregation;
 
     public AggregationResponse secondaryAggregation() {
         return this.secondaryAggregation;
     }
 
-    public TimeSeriesFilterRatioResponse(
-        RatioPartResponse denominator,
-        RatioPartResponse numerator,
-        PickTimeSeriesFilterResponse pickTimeSeriesFilter,
-        AggregationResponse secondaryAggregation) {
-        this.denominator = Objects.requireNonNull(denominator, "expected parameter 'denominator' to be non-null");
-        this.numerator = Objects.requireNonNull(numerator, "expected parameter 'numerator' to be non-null");
-        this.pickTimeSeriesFilter = Objects.requireNonNull(pickTimeSeriesFilter, "expected parameter 'pickTimeSeriesFilter' to be non-null");
-        this.secondaryAggregation = Objects.requireNonNull(secondaryAggregation, "expected parameter 'secondaryAggregation' to be non-null");
-    }
+    private TimeSeriesFilterRatioResponse() {}
 
-    private TimeSeriesFilterRatioResponse() {
-        this.denominator = null;
-        this.numerator = null;
-        this.pickTimeSeriesFilter = null;
-        this.secondaryAggregation = null;
+    private TimeSeriesFilterRatioResponse(TimeSeriesFilterRatioResponse $) {
+        this.denominator = $.denominator;
+        this.numerator = $.numerator;
+        this.pickTimeSeriesFilter = $.pickTimeSeriesFilter;
+        this.secondaryAggregation = $.secondaryAggregation;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TimeSeriesFilterRatioResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private RatioPartResponse denominator;
-        private RatioPartResponse numerator;
-        private PickTimeSeriesFilterResponse pickTimeSeriesFilter;
-        private AggregationResponse secondaryAggregation;
+        private TimeSeriesFilterRatioResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new TimeSeriesFilterRatioResponse();
         }
 
         public Builder(TimeSeriesFilterRatioResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.denominator = defaults.denominator;
-    	      this.numerator = defaults.numerator;
-    	      this.pickTimeSeriesFilter = defaults.pickTimeSeriesFilter;
-    	      this.secondaryAggregation = defaults.secondaryAggregation;
+            $ = new TimeSeriesFilterRatioResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder denominator(RatioPartResponse denominator) {
-            this.denominator = Objects.requireNonNull(denominator);
+            $.denominator = denominator;
             return this;
         }
+
         public Builder numerator(RatioPartResponse numerator) {
-            this.numerator = Objects.requireNonNull(numerator);
+            $.numerator = numerator;
             return this;
         }
+
         public Builder pickTimeSeriesFilter(PickTimeSeriesFilterResponse pickTimeSeriesFilter) {
-            this.pickTimeSeriesFilter = Objects.requireNonNull(pickTimeSeriesFilter);
+            $.pickTimeSeriesFilter = pickTimeSeriesFilter;
             return this;
         }
+
         public Builder secondaryAggregation(AggregationResponse secondaryAggregation) {
-            this.secondaryAggregation = Objects.requireNonNull(secondaryAggregation);
+            $.secondaryAggregation = secondaryAggregation;
             return this;
-        }        public TimeSeriesFilterRatioResponse build() {
-            return new TimeSeriesFilterRatioResponse(denominator, numerator, pickTimeSeriesFilter, secondaryAggregation);
+        }
+
+        public TimeSeriesFilterRatioResponse build() {
+            $.denominator = Objects.requireNonNull($.denominator, "expected parameter 'denominator' to be non-null");
+            $.numerator = Objects.requireNonNull($.numerator, "expected parameter 'numerator' to be non-null");
+            $.pickTimeSeriesFilter = Objects.requireNonNull($.pickTimeSeriesFilter, "expected parameter 'pickTimeSeriesFilter' to be non-null");
+            $.secondaryAggregation = Objects.requireNonNull($.secondaryAggregation, "expected parameter 'secondaryAggregation' to be non-null");
+            return $;
         }
     }
+
 }

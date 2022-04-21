@@ -20,7 +20,7 @@ public final class ViewDefinitionResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="query", required=true)
-      private final String query;
+    private String query;
 
     public String query() {
         return this.query;
@@ -31,7 +31,7 @@ public final class ViewDefinitionResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="useExplicitColumnNames", required=true)
-      private final Boolean useExplicitColumnNames;
+    private Boolean useExplicitColumnNames;
 
     public Boolean useExplicitColumnNames() {
         return this.useExplicitColumnNames;
@@ -42,7 +42,7 @@ public final class ViewDefinitionResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="useLegacySql", required=true)
-      private final Boolean useLegacySql;
+    private Boolean useLegacySql;
 
     public Boolean useLegacySql() {
         return this.useLegacySql;
@@ -53,76 +53,70 @@ public final class ViewDefinitionResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="userDefinedFunctionResources", required=true)
-      private final List<UserDefinedFunctionResourceResponse> userDefinedFunctionResources;
+    private List<UserDefinedFunctionResourceResponse> userDefinedFunctionResources;
 
     public List<UserDefinedFunctionResourceResponse> userDefinedFunctionResources() {
         return this.userDefinedFunctionResources;
     }
 
-    public ViewDefinitionResponse(
-        String query,
-        Boolean useExplicitColumnNames,
-        Boolean useLegacySql,
-        List<UserDefinedFunctionResourceResponse> userDefinedFunctionResources) {
-        this.query = Objects.requireNonNull(query, "expected parameter 'query' to be non-null");
-        this.useExplicitColumnNames = Objects.requireNonNull(useExplicitColumnNames, "expected parameter 'useExplicitColumnNames' to be non-null");
-        this.useLegacySql = Objects.requireNonNull(useLegacySql, "expected parameter 'useLegacySql' to be non-null");
-        this.userDefinedFunctionResources = Objects.requireNonNull(userDefinedFunctionResources, "expected parameter 'userDefinedFunctionResources' to be non-null");
-    }
+    private ViewDefinitionResponse() {}
 
-    private ViewDefinitionResponse() {
-        this.query = null;
-        this.useExplicitColumnNames = null;
-        this.useLegacySql = null;
-        this.userDefinedFunctionResources = List.of();
+    private ViewDefinitionResponse(ViewDefinitionResponse $) {
+        this.query = $.query;
+        this.useExplicitColumnNames = $.useExplicitColumnNames;
+        this.useLegacySql = $.useLegacySql;
+        this.userDefinedFunctionResources = $.userDefinedFunctionResources;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ViewDefinitionResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String query;
-        private Boolean useExplicitColumnNames;
-        private Boolean useLegacySql;
-        private List<UserDefinedFunctionResourceResponse> userDefinedFunctionResources;
+        private ViewDefinitionResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ViewDefinitionResponse();
         }
 
         public Builder(ViewDefinitionResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.query = defaults.query;
-    	      this.useExplicitColumnNames = defaults.useExplicitColumnNames;
-    	      this.useLegacySql = defaults.useLegacySql;
-    	      this.userDefinedFunctionResources = defaults.userDefinedFunctionResources;
+            $ = new ViewDefinitionResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder query(String query) {
-            this.query = Objects.requireNonNull(query);
+            $.query = query;
             return this;
         }
+
         public Builder useExplicitColumnNames(Boolean useExplicitColumnNames) {
-            this.useExplicitColumnNames = Objects.requireNonNull(useExplicitColumnNames);
+            $.useExplicitColumnNames = useExplicitColumnNames;
             return this;
         }
+
         public Builder useLegacySql(Boolean useLegacySql) {
-            this.useLegacySql = Objects.requireNonNull(useLegacySql);
+            $.useLegacySql = useLegacySql;
             return this;
         }
+
         public Builder userDefinedFunctionResources(List<UserDefinedFunctionResourceResponse> userDefinedFunctionResources) {
-            this.userDefinedFunctionResources = Objects.requireNonNull(userDefinedFunctionResources);
+            $.userDefinedFunctionResources = userDefinedFunctionResources;
             return this;
         }
+
         public Builder userDefinedFunctionResources(UserDefinedFunctionResourceResponse... userDefinedFunctionResources) {
             return userDefinedFunctionResources(List.of(userDefinedFunctionResources));
-        }        public ViewDefinitionResponse build() {
-            return new ViewDefinitionResponse(query, useExplicitColumnNames, useLegacySql, userDefinedFunctionResources);
+        }
+
+        public ViewDefinitionResponse build() {
+            $.query = Objects.requireNonNull($.query, "expected parameter 'query' to be non-null");
+            $.useExplicitColumnNames = Objects.requireNonNull($.useExplicitColumnNames, "expected parameter 'useExplicitColumnNames' to be non-null");
+            $.useLegacySql = Objects.requireNonNull($.useLegacySql, "expected parameter 'useLegacySql' to be non-null");
+            $.userDefinedFunctionResources = Objects.requireNonNull($.userDefinedFunctionResources, "expected parameter 'userDefinedFunctionResources' to be non-null");
+            return $;
         }
     }
+
 }

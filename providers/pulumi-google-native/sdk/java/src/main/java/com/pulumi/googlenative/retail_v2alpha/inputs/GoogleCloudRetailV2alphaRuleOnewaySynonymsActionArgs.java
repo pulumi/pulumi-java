@@ -5,10 +5,10 @@ package com.pulumi.googlenative.retail_v2alpha.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class GoogleCloudRetailV2alphaRuleOnewaySynonymsActionArgs extends 
      * 
      */
     @Import(name="onewayTerms")
-      private final @Nullable Output<List<String>> onewayTerms;
+    private @Nullable Output<List<String>> onewayTerms;
 
-    public Output<List<String>> onewayTerms() {
-        return this.onewayTerms == null ? Codegen.empty() : this.onewayTerms;
+    public Optional<Output<List<String>>> onewayTerms() {
+        return Optional.ofNullable(this.onewayTerms);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class GoogleCloudRetailV2alphaRuleOnewaySynonymsActionArgs extends 
      * 
      */
     @Import(name="queryTerms")
-      private final @Nullable Output<List<String>> queryTerms;
+    private @Nullable Output<List<String>> queryTerms;
 
-    public Output<List<String>> queryTerms() {
-        return this.queryTerms == null ? Codegen.empty() : this.queryTerms;
+    public Optional<Output<List<String>>> queryTerms() {
+        return Optional.ofNullable(this.queryTerms);
     }
 
     /**
@@ -47,85 +47,80 @@ public final class GoogleCloudRetailV2alphaRuleOnewaySynonymsActionArgs extends 
      * 
      */
     @Import(name="synonyms")
-      private final @Nullable Output<List<String>> synonyms;
+    private @Nullable Output<List<String>> synonyms;
 
-    public Output<List<String>> synonyms() {
-        return this.synonyms == null ? Codegen.empty() : this.synonyms;
+    public Optional<Output<List<String>>> synonyms() {
+        return Optional.ofNullable(this.synonyms);
     }
 
-    public GoogleCloudRetailV2alphaRuleOnewaySynonymsActionArgs(
-        @Nullable Output<List<String>> onewayTerms,
-        @Nullable Output<List<String>> queryTerms,
-        @Nullable Output<List<String>> synonyms) {
-        this.onewayTerms = onewayTerms;
-        this.queryTerms = queryTerms;
-        this.synonyms = synonyms;
-    }
+    private GoogleCloudRetailV2alphaRuleOnewaySynonymsActionArgs() {}
 
-    private GoogleCloudRetailV2alphaRuleOnewaySynonymsActionArgs() {
-        this.onewayTerms = Codegen.empty();
-        this.queryTerms = Codegen.empty();
-        this.synonyms = Codegen.empty();
+    private GoogleCloudRetailV2alphaRuleOnewaySynonymsActionArgs(GoogleCloudRetailV2alphaRuleOnewaySynonymsActionArgs $) {
+        this.onewayTerms = $.onewayTerms;
+        this.queryTerms = $.queryTerms;
+        this.synonyms = $.synonyms;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudRetailV2alphaRuleOnewaySynonymsActionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> onewayTerms;
-        private @Nullable Output<List<String>> queryTerms;
-        private @Nullable Output<List<String>> synonyms;
+        private GoogleCloudRetailV2alphaRuleOnewaySynonymsActionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudRetailV2alphaRuleOnewaySynonymsActionArgs();
         }
 
         public Builder(GoogleCloudRetailV2alphaRuleOnewaySynonymsActionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.onewayTerms = defaults.onewayTerms;
-    	      this.queryTerms = defaults.queryTerms;
-    	      this.synonyms = defaults.synonyms;
+            $ = new GoogleCloudRetailV2alphaRuleOnewaySynonymsActionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder onewayTerms(@Nullable Output<List<String>> onewayTerms) {
-            this.onewayTerms = onewayTerms;
+            $.onewayTerms = onewayTerms;
             return this;
         }
-        public Builder onewayTerms(@Nullable List<String> onewayTerms) {
-            this.onewayTerms = Codegen.ofNullable(onewayTerms);
-            return this;
+
+        public Builder onewayTerms(List<String> onewayTerms) {
+            return onewayTerms(Output.of(onewayTerms));
         }
+
         public Builder onewayTerms(String... onewayTerms) {
             return onewayTerms(List.of(onewayTerms));
         }
+
         public Builder queryTerms(@Nullable Output<List<String>> queryTerms) {
-            this.queryTerms = queryTerms;
+            $.queryTerms = queryTerms;
             return this;
         }
-        public Builder queryTerms(@Nullable List<String> queryTerms) {
-            this.queryTerms = Codegen.ofNullable(queryTerms);
-            return this;
+
+        public Builder queryTerms(List<String> queryTerms) {
+            return queryTerms(Output.of(queryTerms));
         }
+
         public Builder queryTerms(String... queryTerms) {
             return queryTerms(List.of(queryTerms));
         }
+
         public Builder synonyms(@Nullable Output<List<String>> synonyms) {
-            this.synonyms = synonyms;
+            $.synonyms = synonyms;
             return this;
         }
-        public Builder synonyms(@Nullable List<String> synonyms) {
-            this.synonyms = Codegen.ofNullable(synonyms);
-            return this;
+
+        public Builder synonyms(List<String> synonyms) {
+            return synonyms(Output.of(synonyms));
         }
+
         public Builder synonyms(String... synonyms) {
             return synonyms(List.of(synonyms));
-        }        public GoogleCloudRetailV2alphaRuleOnewaySynonymsActionArgs build() {
-            return new GoogleCloudRetailV2alphaRuleOnewaySynonymsActionArgs(onewayTerms, queryTerms, synonyms);
+        }
+
+        public GoogleCloudRetailV2alphaRuleOnewaySynonymsActionArgs build() {
+            return $;
         }
     }
+
 }

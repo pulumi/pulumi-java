@@ -5,9 +5,9 @@ package com.pulumi.azurenative.edgeorder.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class ManagementResourcePreferencesArgs extends com.pulumi.resource
      * 
      */
     @Import(name="preferredManagementResourceId")
-      private final @Nullable Output<String> preferredManagementResourceId;
+    private @Nullable Output<String> preferredManagementResourceId;
 
-    public Output<String> preferredManagementResourceId() {
-        return this.preferredManagementResourceId == null ? Codegen.empty() : this.preferredManagementResourceId;
+    public Optional<Output<String>> preferredManagementResourceId() {
+        return Optional.ofNullable(this.preferredManagementResourceId);
     }
 
-    public ManagementResourcePreferencesArgs(@Nullable Output<String> preferredManagementResourceId) {
-        this.preferredManagementResourceId = preferredManagementResourceId;
-    }
+    private ManagementResourcePreferencesArgs() {}
 
-    private ManagementResourcePreferencesArgs() {
-        this.preferredManagementResourceId = Codegen.empty();
+    private ManagementResourcePreferencesArgs(ManagementResourcePreferencesArgs $) {
+        this.preferredManagementResourceId = $.preferredManagementResourceId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ManagementResourcePreferencesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> preferredManagementResourceId;
+        private ManagementResourcePreferencesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ManagementResourcePreferencesArgs();
         }
 
         public Builder(ManagementResourcePreferencesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.preferredManagementResourceId = defaults.preferredManagementResourceId;
+            $ = new ManagementResourcePreferencesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder preferredManagementResourceId(@Nullable Output<String> preferredManagementResourceId) {
-            this.preferredManagementResourceId = preferredManagementResourceId;
+            $.preferredManagementResourceId = preferredManagementResourceId;
             return this;
         }
-        public Builder preferredManagementResourceId(@Nullable String preferredManagementResourceId) {
-            this.preferredManagementResourceId = Codegen.ofNullable(preferredManagementResourceId);
-            return this;
-        }        public ManagementResourcePreferencesArgs build() {
-            return new ManagementResourcePreferencesArgs(preferredManagementResourceId);
+
+        public Builder preferredManagementResourceId(String preferredManagementResourceId) {
+            return preferredManagementResourceId(Output.of(preferredManagementResourceId));
+        }
+
+        public ManagementResourcePreferencesArgs build() {
+            return $;
         }
     }
+
 }

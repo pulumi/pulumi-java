@@ -5,12 +5,12 @@ package com.pulumi.gcp.cloudbuild.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.cloudbuild.inputs.WorkerPoolNetworkConfigGetArgs;
 import com.pulumi.gcp.cloudbuild.inputs.WorkerPoolWorkerConfigGetArgs;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class WorkerPoolState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="annotations")
-      private final @Nullable Output<Map<String,String>> annotations;
+    private @Nullable Output<Map<String,String>> annotations;
 
-    public Output<Map<String,String>> annotations() {
-        return this.annotations == null ? Codegen.empty() : this.annotations;
+    public Optional<Output<Map<String,String>>> annotations() {
+        return Optional.ofNullable(this.annotations);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class WorkerPoolState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="createTime")
-      private final @Nullable Output<String> createTime;
+    private @Nullable Output<String> createTime;
 
-    public Output<String> createTime() {
-        return this.createTime == null ? Codegen.empty() : this.createTime;
+    public Optional<Output<String>> createTime() {
+        return Optional.ofNullable(this.createTime);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class WorkerPoolState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="deleteTime")
-      private final @Nullable Output<String> deleteTime;
+    private @Nullable Output<String> deleteTime;
 
-    public Output<String> deleteTime() {
-        return this.deleteTime == null ? Codegen.empty() : this.deleteTime;
+    public Optional<Output<String>> deleteTime() {
+        return Optional.ofNullable(this.deleteTime);
     }
 
     /**
@@ -57,10 +57,10 @@ public final class WorkerPoolState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="displayName")
-      private final @Nullable Output<String> displayName;
+    private @Nullable Output<String> displayName;
 
-    public Output<String> displayName() {
-        return this.displayName == null ? Codegen.empty() : this.displayName;
+    public Optional<Output<String>> displayName() {
+        return Optional.ofNullable(this.displayName);
     }
 
     /**
@@ -68,10 +68,10 @@ public final class WorkerPoolState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -79,10 +79,10 @@ public final class WorkerPoolState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -90,10 +90,10 @@ public final class WorkerPoolState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="networkConfig")
-      private final @Nullable Output<WorkerPoolNetworkConfigGetArgs> networkConfig;
+    private @Nullable Output<WorkerPoolNetworkConfigGetArgs> networkConfig;
 
-    public Output<WorkerPoolNetworkConfigGetArgs> networkConfig() {
-        return this.networkConfig == null ? Codegen.empty() : this.networkConfig;
+    public Optional<Output<WorkerPoolNetworkConfigGetArgs>> networkConfig() {
+        return Optional.ofNullable(this.networkConfig);
     }
 
     /**
@@ -101,10 +101,10 @@ public final class WorkerPoolState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -112,10 +112,10 @@ public final class WorkerPoolState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="state")
-      private final @Nullable Output<String> state;
+    private @Nullable Output<String> state;
 
-    public Output<String> state() {
-        return this.state == null ? Codegen.empty() : this.state;
+    public Optional<Output<String>> state() {
+        return Optional.ofNullable(this.state);
     }
 
     /**
@@ -123,10 +123,10 @@ public final class WorkerPoolState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="uid")
-      private final @Nullable Output<String> uid;
+    private @Nullable Output<String> uid;
 
-    public Output<String> uid() {
-        return this.uid == null ? Codegen.empty() : this.uid;
+    public Optional<Output<String>> uid() {
+        return Optional.ofNullable(this.uid);
     }
 
     /**
@@ -134,10 +134,10 @@ public final class WorkerPoolState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="updateTime")
-      private final @Nullable Output<String> updateTime;
+    private @Nullable Output<String> updateTime;
 
-    public Output<String> updateTime() {
-        return this.updateTime == null ? Codegen.empty() : this.updateTime;
+    public Optional<Output<String>> updateTime() {
+        return Optional.ofNullable(this.updateTime);
     }
 
     /**
@@ -145,193 +145,158 @@ public final class WorkerPoolState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="workerConfig")
-      private final @Nullable Output<WorkerPoolWorkerConfigGetArgs> workerConfig;
+    private @Nullable Output<WorkerPoolWorkerConfigGetArgs> workerConfig;
 
-    public Output<WorkerPoolWorkerConfigGetArgs> workerConfig() {
-        return this.workerConfig == null ? Codegen.empty() : this.workerConfig;
+    public Optional<Output<WorkerPoolWorkerConfigGetArgs>> workerConfig() {
+        return Optional.ofNullable(this.workerConfig);
     }
 
-    public WorkerPoolState(
-        @Nullable Output<Map<String,String>> annotations,
-        @Nullable Output<String> createTime,
-        @Nullable Output<String> deleteTime,
-        @Nullable Output<String> displayName,
-        @Nullable Output<String> location,
-        @Nullable Output<String> name,
-        @Nullable Output<WorkerPoolNetworkConfigGetArgs> networkConfig,
-        @Nullable Output<String> project,
-        @Nullable Output<String> state,
-        @Nullable Output<String> uid,
-        @Nullable Output<String> updateTime,
-        @Nullable Output<WorkerPoolWorkerConfigGetArgs> workerConfig) {
-        this.annotations = annotations;
-        this.createTime = createTime;
-        this.deleteTime = deleteTime;
-        this.displayName = displayName;
-        this.location = location;
-        this.name = name;
-        this.networkConfig = networkConfig;
-        this.project = project;
-        this.state = state;
-        this.uid = uid;
-        this.updateTime = updateTime;
-        this.workerConfig = workerConfig;
-    }
+    private WorkerPoolState() {}
 
-    private WorkerPoolState() {
-        this.annotations = Codegen.empty();
-        this.createTime = Codegen.empty();
-        this.deleteTime = Codegen.empty();
-        this.displayName = Codegen.empty();
-        this.location = Codegen.empty();
-        this.name = Codegen.empty();
-        this.networkConfig = Codegen.empty();
-        this.project = Codegen.empty();
-        this.state = Codegen.empty();
-        this.uid = Codegen.empty();
-        this.updateTime = Codegen.empty();
-        this.workerConfig = Codegen.empty();
+    private WorkerPoolState(WorkerPoolState $) {
+        this.annotations = $.annotations;
+        this.createTime = $.createTime;
+        this.deleteTime = $.deleteTime;
+        this.displayName = $.displayName;
+        this.location = $.location;
+        this.name = $.name;
+        this.networkConfig = $.networkConfig;
+        this.project = $.project;
+        this.state = $.state;
+        this.uid = $.uid;
+        this.updateTime = $.updateTime;
+        this.workerConfig = $.workerConfig;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WorkerPoolState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Map<String,String>> annotations;
-        private @Nullable Output<String> createTime;
-        private @Nullable Output<String> deleteTime;
-        private @Nullable Output<String> displayName;
-        private @Nullable Output<String> location;
-        private @Nullable Output<String> name;
-        private @Nullable Output<WorkerPoolNetworkConfigGetArgs> networkConfig;
-        private @Nullable Output<String> project;
-        private @Nullable Output<String> state;
-        private @Nullable Output<String> uid;
-        private @Nullable Output<String> updateTime;
-        private @Nullable Output<WorkerPoolWorkerConfigGetArgs> workerConfig;
+        private WorkerPoolState $;
 
         public Builder() {
-    	      // Empty
+            $ = new WorkerPoolState();
         }
 
         public Builder(WorkerPoolState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.annotations = defaults.annotations;
-    	      this.createTime = defaults.createTime;
-    	      this.deleteTime = defaults.deleteTime;
-    	      this.displayName = defaults.displayName;
-    	      this.location = defaults.location;
-    	      this.name = defaults.name;
-    	      this.networkConfig = defaults.networkConfig;
-    	      this.project = defaults.project;
-    	      this.state = defaults.state;
-    	      this.uid = defaults.uid;
-    	      this.updateTime = defaults.updateTime;
-    	      this.workerConfig = defaults.workerConfig;
+            $ = new WorkerPoolState(Objects.requireNonNull(defaults));
         }
 
         public Builder annotations(@Nullable Output<Map<String,String>> annotations) {
-            this.annotations = annotations;
+            $.annotations = annotations;
             return this;
         }
-        public Builder annotations(@Nullable Map<String,String> annotations) {
-            this.annotations = Codegen.ofNullable(annotations);
-            return this;
+
+        public Builder annotations(Map<String,String> annotations) {
+            return annotations(Output.of(annotations));
         }
+
         public Builder createTime(@Nullable Output<String> createTime) {
-            this.createTime = createTime;
+            $.createTime = createTime;
             return this;
         }
-        public Builder createTime(@Nullable String createTime) {
-            this.createTime = Codegen.ofNullable(createTime);
-            return this;
+
+        public Builder createTime(String createTime) {
+            return createTime(Output.of(createTime));
         }
+
         public Builder deleteTime(@Nullable Output<String> deleteTime) {
-            this.deleteTime = deleteTime;
+            $.deleteTime = deleteTime;
             return this;
         }
-        public Builder deleteTime(@Nullable String deleteTime) {
-            this.deleteTime = Codegen.ofNullable(deleteTime);
-            return this;
+
+        public Builder deleteTime(String deleteTime) {
+            return deleteTime(Output.of(deleteTime));
         }
+
         public Builder displayName(@Nullable Output<String> displayName) {
-            this.displayName = displayName;
+            $.displayName = displayName;
             return this;
         }
-        public Builder displayName(@Nullable String displayName) {
-            this.displayName = Codegen.ofNullable(displayName);
-            return this;
+
+        public Builder displayName(String displayName) {
+            return displayName(Output.of(displayName));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder networkConfig(@Nullable Output<WorkerPoolNetworkConfigGetArgs> networkConfig) {
-            this.networkConfig = networkConfig;
+            $.networkConfig = networkConfig;
             return this;
         }
-        public Builder networkConfig(@Nullable WorkerPoolNetworkConfigGetArgs networkConfig) {
-            this.networkConfig = Codegen.ofNullable(networkConfig);
-            return this;
+
+        public Builder networkConfig(WorkerPoolNetworkConfigGetArgs networkConfig) {
+            return networkConfig(Output.of(networkConfig));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder state(@Nullable Output<String> state) {
-            this.state = state;
+            $.state = state;
             return this;
         }
-        public Builder state(@Nullable String state) {
-            this.state = Codegen.ofNullable(state);
-            return this;
+
+        public Builder state(String state) {
+            return state(Output.of(state));
         }
+
         public Builder uid(@Nullable Output<String> uid) {
-            this.uid = uid;
+            $.uid = uid;
             return this;
         }
-        public Builder uid(@Nullable String uid) {
-            this.uid = Codegen.ofNullable(uid);
-            return this;
+
+        public Builder uid(String uid) {
+            return uid(Output.of(uid));
         }
+
         public Builder updateTime(@Nullable Output<String> updateTime) {
-            this.updateTime = updateTime;
+            $.updateTime = updateTime;
             return this;
         }
-        public Builder updateTime(@Nullable String updateTime) {
-            this.updateTime = Codegen.ofNullable(updateTime);
-            return this;
+
+        public Builder updateTime(String updateTime) {
+            return updateTime(Output.of(updateTime));
         }
+
         public Builder workerConfig(@Nullable Output<WorkerPoolWorkerConfigGetArgs> workerConfig) {
-            this.workerConfig = workerConfig;
+            $.workerConfig = workerConfig;
             return this;
         }
-        public Builder workerConfig(@Nullable WorkerPoolWorkerConfigGetArgs workerConfig) {
-            this.workerConfig = Codegen.ofNullable(workerConfig);
-            return this;
-        }        public WorkerPoolState build() {
-            return new WorkerPoolState(annotations, createTime, deleteTime, displayName, location, name, networkConfig, project, state, uid, updateTime, workerConfig);
+
+        public Builder workerConfig(WorkerPoolWorkerConfigGetArgs workerConfig) {
+            return workerConfig(Output.of(workerConfig));
+        }
+
+        public WorkerPoolState build() {
+            return $;
         }
     }
+
 }

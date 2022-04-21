@@ -29,10 +29,10 @@ public final class MasterTargetServerResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="agentExpiryDate")
-      private final @Nullable String agentExpiryDate;
+    private @Nullable String agentExpiryDate;
 
     public Optional<String> agentExpiryDate() {
-        return this.agentExpiryDate == null ? Optional.empty() : Optional.ofNullable(this.agentExpiryDate);
+        return Optional.ofNullable(this.agentExpiryDate);
     }
 
     /**
@@ -40,10 +40,10 @@ public final class MasterTargetServerResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="agentVersion")
-      private final @Nullable String agentVersion;
+    private @Nullable String agentVersion;
 
     public Optional<String> agentVersion() {
-        return this.agentVersion == null ? Optional.empty() : Optional.ofNullable(this.agentVersion);
+        return Optional.ofNullable(this.agentVersion);
     }
 
     /**
@@ -51,10 +51,10 @@ public final class MasterTargetServerResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="agentVersionDetails")
-      private final @Nullable VersionDetailsResponse agentVersionDetails;
+    private @Nullable VersionDetailsResponse agentVersionDetails;
 
     public Optional<VersionDetailsResponse> agentVersionDetails() {
-        return this.agentVersionDetails == null ? Optional.empty() : Optional.ofNullable(this.agentVersionDetails);
+        return Optional.ofNullable(this.agentVersionDetails);
     }
 
     /**
@@ -62,10 +62,10 @@ public final class MasterTargetServerResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="dataStores")
-      private final @Nullable List<DataStoreResponse> dataStores;
+    private @Nullable List<DataStoreResponse> dataStores;
 
-    public List<DataStoreResponse> dataStores() {
-        return this.dataStores == null ? List.of() : this.dataStores;
+    public Optional<List<DataStoreResponse>> dataStores() {
+        return Optional.ofNullable(this.dataStores);
     }
 
     /**
@@ -73,10 +73,10 @@ public final class MasterTargetServerResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="diskCount")
-      private final @Nullable Integer diskCount;
+    private @Nullable Integer diskCount;
 
     public Optional<Integer> diskCount() {
-        return this.diskCount == null ? Optional.empty() : Optional.ofNullable(this.diskCount);
+        return Optional.ofNullable(this.diskCount);
     }
 
     /**
@@ -84,10 +84,10 @@ public final class MasterTargetServerResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="healthErrors")
-      private final @Nullable List<HealthErrorResponse> healthErrors;
+    private @Nullable List<HealthErrorResponse> healthErrors;
 
-    public List<HealthErrorResponse> healthErrors() {
-        return this.healthErrors == null ? List.of() : this.healthErrors;
+    public Optional<List<HealthErrorResponse>> healthErrors() {
+        return Optional.ofNullable(this.healthErrors);
     }
 
     /**
@@ -95,10 +95,10 @@ public final class MasterTargetServerResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="id")
-      private final @Nullable String id;
+    private @Nullable String id;
 
     public Optional<String> id() {
-        return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
+        return Optional.ofNullable(this.id);
     }
 
     /**
@@ -106,10 +106,10 @@ public final class MasterTargetServerResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="ipAddress")
-      private final @Nullable String ipAddress;
+    private @Nullable String ipAddress;
 
     public Optional<String> ipAddress() {
-        return this.ipAddress == null ? Optional.empty() : Optional.ofNullable(this.ipAddress);
+        return Optional.ofNullable(this.ipAddress);
     }
 
     /**
@@ -117,10 +117,10 @@ public final class MasterTargetServerResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="lastHeartbeat")
-      private final @Nullable String lastHeartbeat;
+    private @Nullable String lastHeartbeat;
 
     public Optional<String> lastHeartbeat() {
-        return this.lastHeartbeat == null ? Optional.empty() : Optional.ofNullable(this.lastHeartbeat);
+        return Optional.ofNullable(this.lastHeartbeat);
     }
 
     /**
@@ -128,10 +128,10 @@ public final class MasterTargetServerResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="marsAgentExpiryDate")
-      private final @Nullable String marsAgentExpiryDate;
+    private @Nullable String marsAgentExpiryDate;
 
     public Optional<String> marsAgentExpiryDate() {
-        return this.marsAgentExpiryDate == null ? Optional.empty() : Optional.ofNullable(this.marsAgentExpiryDate);
+        return Optional.ofNullable(this.marsAgentExpiryDate);
     }
 
     /**
@@ -139,10 +139,10 @@ public final class MasterTargetServerResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="marsAgentVersion")
-      private final @Nullable String marsAgentVersion;
+    private @Nullable String marsAgentVersion;
 
     public Optional<String> marsAgentVersion() {
-        return this.marsAgentVersion == null ? Optional.empty() : Optional.ofNullable(this.marsAgentVersion);
+        return Optional.ofNullable(this.marsAgentVersion);
     }
 
     /**
@@ -150,10 +150,10 @@ public final class MasterTargetServerResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="marsAgentVersionDetails")
-      private final @Nullable VersionDetailsResponse marsAgentVersionDetails;
+    private @Nullable VersionDetailsResponse marsAgentVersionDetails;
 
     public Optional<VersionDetailsResponse> marsAgentVersionDetails() {
-        return this.marsAgentVersionDetails == null ? Optional.empty() : Optional.ofNullable(this.marsAgentVersionDetails);
+        return Optional.ofNullable(this.marsAgentVersionDetails);
     }
 
     /**
@@ -161,10 +161,10 @@ public final class MasterTargetServerResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="name")
-      private final @Nullable String name;
+    private @Nullable String name;
 
     public Optional<String> name() {
-        return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -172,10 +172,10 @@ public final class MasterTargetServerResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="osType")
-      private final @Nullable String osType;
+    private @Nullable String osType;
 
     public Optional<String> osType() {
-        return this.osType == null ? Optional.empty() : Optional.ofNullable(this.osType);
+        return Optional.ofNullable(this.osType);
     }
 
     /**
@@ -183,10 +183,10 @@ public final class MasterTargetServerResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="osVersion")
-      private final @Nullable String osVersion;
+    private @Nullable String osVersion;
 
     public Optional<String> osVersion() {
-        return this.osVersion == null ? Optional.empty() : Optional.ofNullable(this.osVersion);
+        return Optional.ofNullable(this.osVersion);
     }
 
     /**
@@ -194,10 +194,10 @@ public final class MasterTargetServerResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="retentionVolumes")
-      private final @Nullable List<RetentionVolumeResponse> retentionVolumes;
+    private @Nullable List<RetentionVolumeResponse> retentionVolumes;
 
-    public List<RetentionVolumeResponse> retentionVolumes() {
-        return this.retentionVolumes == null ? List.of() : this.retentionVolumes;
+    public Optional<List<RetentionVolumeResponse>> retentionVolumes() {
+        return Optional.ofNullable(this.retentionVolumes);
     }
 
     /**
@@ -205,10 +205,10 @@ public final class MasterTargetServerResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="validationErrors")
-      private final @Nullable List<HealthErrorResponse> validationErrors;
+    private @Nullable List<HealthErrorResponse> validationErrors;
 
-    public List<HealthErrorResponse> validationErrors() {
-        return this.validationErrors == null ? List.of() : this.validationErrors;
+    public Optional<List<HealthErrorResponse>> validationErrors() {
+        return Optional.ofNullable(this.validationErrors);
     }
 
     /**
@@ -216,211 +216,162 @@ public final class MasterTargetServerResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="versionStatus")
-      private final @Nullable String versionStatus;
+    private @Nullable String versionStatus;
 
     public Optional<String> versionStatus() {
-        return this.versionStatus == null ? Optional.empty() : Optional.ofNullable(this.versionStatus);
+        return Optional.ofNullable(this.versionStatus);
     }
 
-    public MasterTargetServerResponse(
-        @Nullable String agentExpiryDate,
-        @Nullable String agentVersion,
-        @Nullable VersionDetailsResponse agentVersionDetails,
-        @Nullable List<DataStoreResponse> dataStores,
-        @Nullable Integer diskCount,
-        @Nullable List<HealthErrorResponse> healthErrors,
-        @Nullable String id,
-        @Nullable String ipAddress,
-        @Nullable String lastHeartbeat,
-        @Nullable String marsAgentExpiryDate,
-        @Nullable String marsAgentVersion,
-        @Nullable VersionDetailsResponse marsAgentVersionDetails,
-        @Nullable String name,
-        @Nullable String osType,
-        @Nullable String osVersion,
-        @Nullable List<RetentionVolumeResponse> retentionVolumes,
-        @Nullable List<HealthErrorResponse> validationErrors,
-        @Nullable String versionStatus) {
-        this.agentExpiryDate = agentExpiryDate;
-        this.agentVersion = agentVersion;
-        this.agentVersionDetails = agentVersionDetails;
-        this.dataStores = dataStores;
-        this.diskCount = diskCount;
-        this.healthErrors = healthErrors;
-        this.id = id;
-        this.ipAddress = ipAddress;
-        this.lastHeartbeat = lastHeartbeat;
-        this.marsAgentExpiryDate = marsAgentExpiryDate;
-        this.marsAgentVersion = marsAgentVersion;
-        this.marsAgentVersionDetails = marsAgentVersionDetails;
-        this.name = name;
-        this.osType = osType;
-        this.osVersion = osVersion;
-        this.retentionVolumes = retentionVolumes;
-        this.validationErrors = validationErrors;
-        this.versionStatus = versionStatus;
-    }
+    private MasterTargetServerResponse() {}
 
-    private MasterTargetServerResponse() {
-        this.agentExpiryDate = null;
-        this.agentVersion = null;
-        this.agentVersionDetails = null;
-        this.dataStores = List.of();
-        this.diskCount = null;
-        this.healthErrors = List.of();
-        this.id = null;
-        this.ipAddress = null;
-        this.lastHeartbeat = null;
-        this.marsAgentExpiryDate = null;
-        this.marsAgentVersion = null;
-        this.marsAgentVersionDetails = null;
-        this.name = null;
-        this.osType = null;
-        this.osVersion = null;
-        this.retentionVolumes = List.of();
-        this.validationErrors = List.of();
-        this.versionStatus = null;
+    private MasterTargetServerResponse(MasterTargetServerResponse $) {
+        this.agentExpiryDate = $.agentExpiryDate;
+        this.agentVersion = $.agentVersion;
+        this.agentVersionDetails = $.agentVersionDetails;
+        this.dataStores = $.dataStores;
+        this.diskCount = $.diskCount;
+        this.healthErrors = $.healthErrors;
+        this.id = $.id;
+        this.ipAddress = $.ipAddress;
+        this.lastHeartbeat = $.lastHeartbeat;
+        this.marsAgentExpiryDate = $.marsAgentExpiryDate;
+        this.marsAgentVersion = $.marsAgentVersion;
+        this.marsAgentVersionDetails = $.marsAgentVersionDetails;
+        this.name = $.name;
+        this.osType = $.osType;
+        this.osVersion = $.osVersion;
+        this.retentionVolumes = $.retentionVolumes;
+        this.validationErrors = $.validationErrors;
+        this.versionStatus = $.versionStatus;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MasterTargetServerResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String agentExpiryDate;
-        private @Nullable String agentVersion;
-        private @Nullable VersionDetailsResponse agentVersionDetails;
-        private @Nullable List<DataStoreResponse> dataStores;
-        private @Nullable Integer diskCount;
-        private @Nullable List<HealthErrorResponse> healthErrors;
-        private @Nullable String id;
-        private @Nullable String ipAddress;
-        private @Nullable String lastHeartbeat;
-        private @Nullable String marsAgentExpiryDate;
-        private @Nullable String marsAgentVersion;
-        private @Nullable VersionDetailsResponse marsAgentVersionDetails;
-        private @Nullable String name;
-        private @Nullable String osType;
-        private @Nullable String osVersion;
-        private @Nullable List<RetentionVolumeResponse> retentionVolumes;
-        private @Nullable List<HealthErrorResponse> validationErrors;
-        private @Nullable String versionStatus;
+        private MasterTargetServerResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new MasterTargetServerResponse();
         }
 
         public Builder(MasterTargetServerResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.agentExpiryDate = defaults.agentExpiryDate;
-    	      this.agentVersion = defaults.agentVersion;
-    	      this.agentVersionDetails = defaults.agentVersionDetails;
-    	      this.dataStores = defaults.dataStores;
-    	      this.diskCount = defaults.diskCount;
-    	      this.healthErrors = defaults.healthErrors;
-    	      this.id = defaults.id;
-    	      this.ipAddress = defaults.ipAddress;
-    	      this.lastHeartbeat = defaults.lastHeartbeat;
-    	      this.marsAgentExpiryDate = defaults.marsAgentExpiryDate;
-    	      this.marsAgentVersion = defaults.marsAgentVersion;
-    	      this.marsAgentVersionDetails = defaults.marsAgentVersionDetails;
-    	      this.name = defaults.name;
-    	      this.osType = defaults.osType;
-    	      this.osVersion = defaults.osVersion;
-    	      this.retentionVolumes = defaults.retentionVolumes;
-    	      this.validationErrors = defaults.validationErrors;
-    	      this.versionStatus = defaults.versionStatus;
+            $ = new MasterTargetServerResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder agentExpiryDate(@Nullable String agentExpiryDate) {
-            this.agentExpiryDate = agentExpiryDate;
+            $.agentExpiryDate = agentExpiryDate;
             return this;
         }
+
         public Builder agentVersion(@Nullable String agentVersion) {
-            this.agentVersion = agentVersion;
+            $.agentVersion = agentVersion;
             return this;
         }
+
         public Builder agentVersionDetails(@Nullable VersionDetailsResponse agentVersionDetails) {
-            this.agentVersionDetails = agentVersionDetails;
+            $.agentVersionDetails = agentVersionDetails;
             return this;
         }
+
         public Builder dataStores(@Nullable List<DataStoreResponse> dataStores) {
-            this.dataStores = dataStores;
+            $.dataStores = dataStores;
             return this;
         }
+
         public Builder dataStores(DataStoreResponse... dataStores) {
             return dataStores(List.of(dataStores));
         }
+
         public Builder diskCount(@Nullable Integer diskCount) {
-            this.diskCount = diskCount;
+            $.diskCount = diskCount;
             return this;
         }
+
         public Builder healthErrors(@Nullable List<HealthErrorResponse> healthErrors) {
-            this.healthErrors = healthErrors;
+            $.healthErrors = healthErrors;
             return this;
         }
+
         public Builder healthErrors(HealthErrorResponse... healthErrors) {
             return healthErrors(List.of(healthErrors));
         }
+
         public Builder id(@Nullable String id) {
-            this.id = id;
+            $.id = id;
             return this;
         }
+
         public Builder ipAddress(@Nullable String ipAddress) {
-            this.ipAddress = ipAddress;
+            $.ipAddress = ipAddress;
             return this;
         }
+
         public Builder lastHeartbeat(@Nullable String lastHeartbeat) {
-            this.lastHeartbeat = lastHeartbeat;
+            $.lastHeartbeat = lastHeartbeat;
             return this;
         }
+
         public Builder marsAgentExpiryDate(@Nullable String marsAgentExpiryDate) {
-            this.marsAgentExpiryDate = marsAgentExpiryDate;
+            $.marsAgentExpiryDate = marsAgentExpiryDate;
             return this;
         }
+
         public Builder marsAgentVersion(@Nullable String marsAgentVersion) {
-            this.marsAgentVersion = marsAgentVersion;
+            $.marsAgentVersion = marsAgentVersion;
             return this;
         }
+
         public Builder marsAgentVersionDetails(@Nullable VersionDetailsResponse marsAgentVersionDetails) {
-            this.marsAgentVersionDetails = marsAgentVersionDetails;
+            $.marsAgentVersionDetails = marsAgentVersionDetails;
             return this;
         }
+
         public Builder name(@Nullable String name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
+
         public Builder osType(@Nullable String osType) {
-            this.osType = osType;
+            $.osType = osType;
             return this;
         }
+
         public Builder osVersion(@Nullable String osVersion) {
-            this.osVersion = osVersion;
+            $.osVersion = osVersion;
             return this;
         }
+
         public Builder retentionVolumes(@Nullable List<RetentionVolumeResponse> retentionVolumes) {
-            this.retentionVolumes = retentionVolumes;
+            $.retentionVolumes = retentionVolumes;
             return this;
         }
+
         public Builder retentionVolumes(RetentionVolumeResponse... retentionVolumes) {
             return retentionVolumes(List.of(retentionVolumes));
         }
+
         public Builder validationErrors(@Nullable List<HealthErrorResponse> validationErrors) {
-            this.validationErrors = validationErrors;
+            $.validationErrors = validationErrors;
             return this;
         }
+
         public Builder validationErrors(HealthErrorResponse... validationErrors) {
             return validationErrors(List.of(validationErrors));
         }
+
         public Builder versionStatus(@Nullable String versionStatus) {
-            this.versionStatus = versionStatus;
+            $.versionStatus = versionStatus;
             return this;
-        }        public MasterTargetServerResponse build() {
-            return new MasterTargetServerResponse(agentExpiryDate, agentVersion, agentVersionDetails, dataStores, diskCount, healthErrors, id, ipAddress, lastHeartbeat, marsAgentExpiryDate, marsAgentVersion, marsAgentVersionDetails, name, osType, osVersion, retentionVolumes, validationErrors, versionStatus);
+        }
+
+        public MasterTargetServerResponse build() {
+            return $;
         }
     }
+
 }

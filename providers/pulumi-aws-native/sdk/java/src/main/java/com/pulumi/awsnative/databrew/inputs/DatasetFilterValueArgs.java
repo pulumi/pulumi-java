@@ -5,7 +5,6 @@ package com.pulumi.awsnative.databrew.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,7 +18,7 @@ public final class DatasetFilterValueArgs extends com.pulumi.resources.ResourceA
     public static final DatasetFilterValueArgs Empty = new DatasetFilterValueArgs();
 
     @Import(name="value", required=true)
-      private final Output<String> value;
+    private Output<String> value;
 
     public Output<String> value() {
         return this.value;
@@ -30,63 +29,60 @@ public final class DatasetFilterValueArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="valueReference", required=true)
-      private final Output<String> valueReference;
+    private Output<String> valueReference;
 
     public Output<String> valueReference() {
         return this.valueReference;
     }
 
-    public DatasetFilterValueArgs(
-        Output<String> value,
-        Output<String> valueReference) {
-        this.value = Objects.requireNonNull(value, "expected parameter 'value' to be non-null");
-        this.valueReference = Objects.requireNonNull(valueReference, "expected parameter 'valueReference' to be non-null");
-    }
+    private DatasetFilterValueArgs() {}
 
-    private DatasetFilterValueArgs() {
-        this.value = Codegen.empty();
-        this.valueReference = Codegen.empty();
+    private DatasetFilterValueArgs(DatasetFilterValueArgs $) {
+        this.value = $.value;
+        this.valueReference = $.valueReference;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DatasetFilterValueArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> value;
-        private Output<String> valueReference;
+        private DatasetFilterValueArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DatasetFilterValueArgs();
         }
 
         public Builder(DatasetFilterValueArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.value = defaults.value;
-    	      this.valueReference = defaults.valueReference;
+            $ = new DatasetFilterValueArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder value(Output<String> value) {
-            this.value = Objects.requireNonNull(value);
+            $.value = value;
             return this;
         }
+
         public Builder value(String value) {
-            this.value = Output.of(Objects.requireNonNull(value));
-            return this;
+            return value(Output.of(value));
         }
+
         public Builder valueReference(Output<String> valueReference) {
-            this.valueReference = Objects.requireNonNull(valueReference);
+            $.valueReference = valueReference;
             return this;
         }
+
         public Builder valueReference(String valueReference) {
-            this.valueReference = Output.of(Objects.requireNonNull(valueReference));
-            return this;
-        }        public DatasetFilterValueArgs build() {
-            return new DatasetFilterValueArgs(value, valueReference);
+            return valueReference(Output.of(valueReference));
+        }
+
+        public DatasetFilterValueArgs build() {
+            $.value = Objects.requireNonNull($.value, "expected parameter 'value' to be non-null");
+            $.valueReference = Objects.requireNonNull($.valueReference, "expected parameter 'valueReference' to be non-null");
+            return $;
         }
     }
+
 }

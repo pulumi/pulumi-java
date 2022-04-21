@@ -5,7 +5,6 @@ package com.pulumi.aws.ec2transitgateway;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,7 +18,7 @@ public final class RouteTablePropagationArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="transitGatewayAttachmentId", required=true)
-      private final Output<String> transitGatewayAttachmentId;
+    private Output<String> transitGatewayAttachmentId;
 
     public Output<String> transitGatewayAttachmentId() {
         return this.transitGatewayAttachmentId;
@@ -30,63 +29,60 @@ public final class RouteTablePropagationArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="transitGatewayRouteTableId", required=true)
-      private final Output<String> transitGatewayRouteTableId;
+    private Output<String> transitGatewayRouteTableId;
 
     public Output<String> transitGatewayRouteTableId() {
         return this.transitGatewayRouteTableId;
     }
 
-    public RouteTablePropagationArgs(
-        Output<String> transitGatewayAttachmentId,
-        Output<String> transitGatewayRouteTableId) {
-        this.transitGatewayAttachmentId = Objects.requireNonNull(transitGatewayAttachmentId, "expected parameter 'transitGatewayAttachmentId' to be non-null");
-        this.transitGatewayRouteTableId = Objects.requireNonNull(transitGatewayRouteTableId, "expected parameter 'transitGatewayRouteTableId' to be non-null");
-    }
+    private RouteTablePropagationArgs() {}
 
-    private RouteTablePropagationArgs() {
-        this.transitGatewayAttachmentId = Codegen.empty();
-        this.transitGatewayRouteTableId = Codegen.empty();
+    private RouteTablePropagationArgs(RouteTablePropagationArgs $) {
+        this.transitGatewayAttachmentId = $.transitGatewayAttachmentId;
+        this.transitGatewayRouteTableId = $.transitGatewayRouteTableId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RouteTablePropagationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> transitGatewayAttachmentId;
-        private Output<String> transitGatewayRouteTableId;
+        private RouteTablePropagationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RouteTablePropagationArgs();
         }
 
         public Builder(RouteTablePropagationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.transitGatewayAttachmentId = defaults.transitGatewayAttachmentId;
-    	      this.transitGatewayRouteTableId = defaults.transitGatewayRouteTableId;
+            $ = new RouteTablePropagationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder transitGatewayAttachmentId(Output<String> transitGatewayAttachmentId) {
-            this.transitGatewayAttachmentId = Objects.requireNonNull(transitGatewayAttachmentId);
+            $.transitGatewayAttachmentId = transitGatewayAttachmentId;
             return this;
         }
+
         public Builder transitGatewayAttachmentId(String transitGatewayAttachmentId) {
-            this.transitGatewayAttachmentId = Output.of(Objects.requireNonNull(transitGatewayAttachmentId));
-            return this;
+            return transitGatewayAttachmentId(Output.of(transitGatewayAttachmentId));
         }
+
         public Builder transitGatewayRouteTableId(Output<String> transitGatewayRouteTableId) {
-            this.transitGatewayRouteTableId = Objects.requireNonNull(transitGatewayRouteTableId);
+            $.transitGatewayRouteTableId = transitGatewayRouteTableId;
             return this;
         }
+
         public Builder transitGatewayRouteTableId(String transitGatewayRouteTableId) {
-            this.transitGatewayRouteTableId = Output.of(Objects.requireNonNull(transitGatewayRouteTableId));
-            return this;
-        }        public RouteTablePropagationArgs build() {
-            return new RouteTablePropagationArgs(transitGatewayAttachmentId, transitGatewayRouteTableId);
+            return transitGatewayRouteTableId(Output.of(transitGatewayRouteTableId));
+        }
+
+        public RouteTablePropagationArgs build() {
+            $.transitGatewayAttachmentId = Objects.requireNonNull($.transitGatewayAttachmentId, "expected parameter 'transitGatewayAttachmentId' to be non-null");
+            $.transitGatewayRouteTableId = Objects.requireNonNull($.transitGatewayRouteTableId, "expected parameter 'transitGatewayRouteTableId' to be non-null");
+            return $;
         }
     }
+
 }

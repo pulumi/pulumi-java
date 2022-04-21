@@ -8,9 +8,9 @@ import com.pulumi.azurenative.machinelearningservices.enums.MediaType;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,10 @@ public final class LabelingJobImagePropertiesArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="annotationType")
-      private final @Nullable Output<Either<String,ImageAnnotationType>> annotationType;
+    private @Nullable Output<Either<String,ImageAnnotationType>> annotationType;
 
-    public Output<Either<String,ImageAnnotationType>> annotationType() {
-        return this.annotationType == null ? Codegen.empty() : this.annotationType;
+    public Optional<Output<Either<String,ImageAnnotationType>>> annotationType() {
+        return Optional.ofNullable(this.annotationType);
     }
 
     /**
@@ -34,63 +34,59 @@ public final class LabelingJobImagePropertiesArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="mediaType", required=true)
-      private final Output<Either<String,MediaType>> mediaType;
+    private Output<Either<String,MediaType>> mediaType;
 
     public Output<Either<String,MediaType>> mediaType() {
         return this.mediaType;
     }
 
-    public LabelingJobImagePropertiesArgs(
-        @Nullable Output<Either<String,ImageAnnotationType>> annotationType,
-        Output<Either<String,MediaType>> mediaType) {
-        this.annotationType = annotationType;
-        this.mediaType = Objects.requireNonNull(mediaType, "expected parameter 'mediaType' to be non-null");
-    }
+    private LabelingJobImagePropertiesArgs() {}
 
-    private LabelingJobImagePropertiesArgs() {
-        this.annotationType = Codegen.empty();
-        this.mediaType = Codegen.empty();
+    private LabelingJobImagePropertiesArgs(LabelingJobImagePropertiesArgs $) {
+        this.annotationType = $.annotationType;
+        this.mediaType = $.mediaType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LabelingJobImagePropertiesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Either<String,ImageAnnotationType>> annotationType;
-        private Output<Either<String,MediaType>> mediaType;
+        private LabelingJobImagePropertiesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new LabelingJobImagePropertiesArgs();
         }
 
         public Builder(LabelingJobImagePropertiesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.annotationType = defaults.annotationType;
-    	      this.mediaType = defaults.mediaType;
+            $ = new LabelingJobImagePropertiesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder annotationType(@Nullable Output<Either<String,ImageAnnotationType>> annotationType) {
-            this.annotationType = annotationType;
+            $.annotationType = annotationType;
             return this;
         }
-        public Builder annotationType(@Nullable Either<String,ImageAnnotationType> annotationType) {
-            this.annotationType = Codegen.ofNullable(annotationType);
-            return this;
+
+        public Builder annotationType(Either<String,ImageAnnotationType> annotationType) {
+            return annotationType(Output.of(annotationType));
         }
+
         public Builder mediaType(Output<Either<String,MediaType>> mediaType) {
-            this.mediaType = Objects.requireNonNull(mediaType);
+            $.mediaType = mediaType;
             return this;
         }
+
         public Builder mediaType(Either<String,MediaType> mediaType) {
-            this.mediaType = Output.of(Objects.requireNonNull(mediaType));
-            return this;
-        }        public LabelingJobImagePropertiesArgs build() {
-            return new LabelingJobImagePropertiesArgs(annotationType, mediaType);
+            return mediaType(Output.of(mediaType));
+        }
+
+        public LabelingJobImagePropertiesArgs build() {
+            $.mediaType = Objects.requireNonNull($.mediaType, "expected parameter 'mediaType' to be non-null");
+            return $;
         }
     }
+
 }

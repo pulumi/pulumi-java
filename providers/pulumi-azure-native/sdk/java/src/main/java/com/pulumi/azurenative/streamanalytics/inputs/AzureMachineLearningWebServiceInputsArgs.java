@@ -6,10 +6,10 @@ package com.pulumi.azurenative.streamanalytics.inputs;
 import com.pulumi.azurenative.streamanalytics.inputs.AzureMachineLearningWebServiceInputColumnArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class AzureMachineLearningWebServiceInputsArgs extends com.pulumi.r
      * 
      */
     @Import(name="columnNames")
-      private final @Nullable Output<List<AzureMachineLearningWebServiceInputColumnArgs>> columnNames;
+    private @Nullable Output<List<AzureMachineLearningWebServiceInputColumnArgs>> columnNames;
 
-    public Output<List<AzureMachineLearningWebServiceInputColumnArgs>> columnNames() {
-        return this.columnNames == null ? Codegen.empty() : this.columnNames;
+    public Optional<Output<List<AzureMachineLearningWebServiceInputColumnArgs>>> columnNames() {
+        return Optional.ofNullable(this.columnNames);
     }
 
     /**
@@ -37,66 +37,62 @@ public final class AzureMachineLearningWebServiceInputsArgs extends com.pulumi.r
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
-    public AzureMachineLearningWebServiceInputsArgs(
-        @Nullable Output<List<AzureMachineLearningWebServiceInputColumnArgs>> columnNames,
-        @Nullable Output<String> name) {
-        this.columnNames = columnNames;
-        this.name = name;
-    }
+    private AzureMachineLearningWebServiceInputsArgs() {}
 
-    private AzureMachineLearningWebServiceInputsArgs() {
-        this.columnNames = Codegen.empty();
-        this.name = Codegen.empty();
+    private AzureMachineLearningWebServiceInputsArgs(AzureMachineLearningWebServiceInputsArgs $) {
+        this.columnNames = $.columnNames;
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AzureMachineLearningWebServiceInputsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<AzureMachineLearningWebServiceInputColumnArgs>> columnNames;
-        private @Nullable Output<String> name;
+        private AzureMachineLearningWebServiceInputsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AzureMachineLearningWebServiceInputsArgs();
         }
 
         public Builder(AzureMachineLearningWebServiceInputsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.columnNames = defaults.columnNames;
-    	      this.name = defaults.name;
+            $ = new AzureMachineLearningWebServiceInputsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder columnNames(@Nullable Output<List<AzureMachineLearningWebServiceInputColumnArgs>> columnNames) {
-            this.columnNames = columnNames;
+            $.columnNames = columnNames;
             return this;
         }
-        public Builder columnNames(@Nullable List<AzureMachineLearningWebServiceInputColumnArgs> columnNames) {
-            this.columnNames = Codegen.ofNullable(columnNames);
-            return this;
+
+        public Builder columnNames(List<AzureMachineLearningWebServiceInputColumnArgs> columnNames) {
+            return columnNames(Output.of(columnNames));
         }
+
         public Builder columnNames(AzureMachineLearningWebServiceInputColumnArgs... columnNames) {
             return columnNames(List.of(columnNames));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
-        }        public AzureMachineLearningWebServiceInputsArgs build() {
-            return new AzureMachineLearningWebServiceInputsArgs(columnNames, name);
+
+        public Builder name(String name) {
+            return name(Output.of(name));
+        }
+
+        public AzureMachineLearningWebServiceInputsArgs build() {
+            return $;
         }
     }
+
 }

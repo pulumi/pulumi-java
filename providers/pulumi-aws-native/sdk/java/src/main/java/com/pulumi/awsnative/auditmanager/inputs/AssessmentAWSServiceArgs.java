@@ -5,9 +5,9 @@ package com.pulumi.awsnative.auditmanager.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,49 +20,48 @@ public final class AssessmentAWSServiceArgs extends com.pulumi.resources.Resourc
     public static final AssessmentAWSServiceArgs Empty = new AssessmentAWSServiceArgs();
 
     @Import(name="serviceName")
-      private final @Nullable Output<String> serviceName;
+    private @Nullable Output<String> serviceName;
 
-    public Output<String> serviceName() {
-        return this.serviceName == null ? Codegen.empty() : this.serviceName;
+    public Optional<Output<String>> serviceName() {
+        return Optional.ofNullable(this.serviceName);
     }
 
-    public AssessmentAWSServiceArgs(@Nullable Output<String> serviceName) {
-        this.serviceName = serviceName;
-    }
+    private AssessmentAWSServiceArgs() {}
 
-    private AssessmentAWSServiceArgs() {
-        this.serviceName = Codegen.empty();
+    private AssessmentAWSServiceArgs(AssessmentAWSServiceArgs $) {
+        this.serviceName = $.serviceName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AssessmentAWSServiceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> serviceName;
+        private AssessmentAWSServiceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AssessmentAWSServiceArgs();
         }
 
         public Builder(AssessmentAWSServiceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.serviceName = defaults.serviceName;
+            $ = new AssessmentAWSServiceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder serviceName(@Nullable Output<String> serviceName) {
-            this.serviceName = serviceName;
+            $.serviceName = serviceName;
             return this;
         }
-        public Builder serviceName(@Nullable String serviceName) {
-            this.serviceName = Codegen.ofNullable(serviceName);
-            return this;
-        }        public AssessmentAWSServiceArgs build() {
-            return new AssessmentAWSServiceArgs(serviceName);
+
+        public Builder serviceName(String serviceName) {
+            return serviceName(Output.of(serviceName));
+        }
+
+        public AssessmentAWSServiceArgs build() {
+            return $;
         }
     }
+
 }

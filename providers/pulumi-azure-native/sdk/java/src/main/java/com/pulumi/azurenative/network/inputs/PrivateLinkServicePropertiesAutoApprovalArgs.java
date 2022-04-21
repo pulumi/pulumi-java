@@ -5,10 +5,10 @@ package com.pulumi.azurenative.network.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,52 +25,52 @@ public final class PrivateLinkServicePropertiesAutoApprovalArgs extends com.pulu
      * 
      */
     @Import(name="subscriptions")
-      private final @Nullable Output<List<String>> subscriptions;
+    private @Nullable Output<List<String>> subscriptions;
 
-    public Output<List<String>> subscriptions() {
-        return this.subscriptions == null ? Codegen.empty() : this.subscriptions;
+    public Optional<Output<List<String>>> subscriptions() {
+        return Optional.ofNullable(this.subscriptions);
     }
 
-    public PrivateLinkServicePropertiesAutoApprovalArgs(@Nullable Output<List<String>> subscriptions) {
-        this.subscriptions = subscriptions;
-    }
+    private PrivateLinkServicePropertiesAutoApprovalArgs() {}
 
-    private PrivateLinkServicePropertiesAutoApprovalArgs() {
-        this.subscriptions = Codegen.empty();
+    private PrivateLinkServicePropertiesAutoApprovalArgs(PrivateLinkServicePropertiesAutoApprovalArgs $) {
+        this.subscriptions = $.subscriptions;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PrivateLinkServicePropertiesAutoApprovalArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> subscriptions;
+        private PrivateLinkServicePropertiesAutoApprovalArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PrivateLinkServicePropertiesAutoApprovalArgs();
         }
 
         public Builder(PrivateLinkServicePropertiesAutoApprovalArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.subscriptions = defaults.subscriptions;
+            $ = new PrivateLinkServicePropertiesAutoApprovalArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder subscriptions(@Nullable Output<List<String>> subscriptions) {
-            this.subscriptions = subscriptions;
+            $.subscriptions = subscriptions;
             return this;
         }
-        public Builder subscriptions(@Nullable List<String> subscriptions) {
-            this.subscriptions = Codegen.ofNullable(subscriptions);
-            return this;
+
+        public Builder subscriptions(List<String> subscriptions) {
+            return subscriptions(Output.of(subscriptions));
         }
+
         public Builder subscriptions(String... subscriptions) {
             return subscriptions(List.of(subscriptions));
-        }        public PrivateLinkServicePropertiesAutoApprovalArgs build() {
-            return new PrivateLinkServicePropertiesAutoApprovalArgs(subscriptions);
+        }
+
+        public PrivateLinkServicePropertiesAutoApprovalArgs build() {
+            return $;
         }
     }
+
 }

@@ -24,10 +24,10 @@ public final class EncryptionResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="keyName")
-      private final @Nullable String keyName;
+    private @Nullable String keyName;
 
     public Optional<String> keyName() {
-        return this.keyName == null ? Optional.empty() : Optional.ofNullable(this.keyName);
+        return Optional.ofNullable(this.keyName);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class EncryptionResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="keySource")
-      private final @Nullable String keySource;
+    private @Nullable String keySource;
 
     public Optional<String> keySource() {
-        return this.keySource == null ? Optional.empty() : Optional.ofNullable(this.keySource);
+        return Optional.ofNullable(this.keySource);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class EncryptionResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="keyVaultUri")
-      private final @Nullable String keyVaultUri;
+    private @Nullable String keyVaultUri;
 
     public Optional<String> keyVaultUri() {
-        return this.keyVaultUri == null ? Optional.empty() : Optional.ofNullable(this.keyVaultUri);
+        return Optional.ofNullable(this.keyVaultUri);
     }
 
     /**
@@ -57,73 +57,63 @@ public final class EncryptionResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="keyVersion")
-      private final @Nullable String keyVersion;
+    private @Nullable String keyVersion;
 
     public Optional<String> keyVersion() {
-        return this.keyVersion == null ? Optional.empty() : Optional.ofNullable(this.keyVersion);
+        return Optional.ofNullable(this.keyVersion);
     }
 
-    public EncryptionResponse(
-        @Nullable String keyName,
-        @Nullable String keySource,
-        @Nullable String keyVaultUri,
-        @Nullable String keyVersion) {
-        this.keyName = keyName;
-        this.keySource = Codegen.stringProp("keySource").arg(keySource).def("Default").getNullable();
-        this.keyVaultUri = keyVaultUri;
-        this.keyVersion = keyVersion;
-    }
+    private EncryptionResponse() {}
 
-    private EncryptionResponse() {
-        this.keyName = null;
-        this.keySource = null;
-        this.keyVaultUri = null;
-        this.keyVersion = null;
+    private EncryptionResponse(EncryptionResponse $) {
+        this.keyName = $.keyName;
+        this.keySource = $.keySource;
+        this.keyVaultUri = $.keyVaultUri;
+        this.keyVersion = $.keyVersion;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EncryptionResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String keyName;
-        private @Nullable String keySource;
-        private @Nullable String keyVaultUri;
-        private @Nullable String keyVersion;
+        private EncryptionResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new EncryptionResponse();
         }
 
         public Builder(EncryptionResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.keyName = defaults.keyName;
-    	      this.keySource = defaults.keySource;
-    	      this.keyVaultUri = defaults.keyVaultUri;
-    	      this.keyVersion = defaults.keyVersion;
+            $ = new EncryptionResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder keyName(@Nullable String keyName) {
-            this.keyName = keyName;
+            $.keyName = keyName;
             return this;
         }
+
         public Builder keySource(@Nullable String keySource) {
-            this.keySource = keySource;
+            $.keySource = keySource;
             return this;
         }
+
         public Builder keyVaultUri(@Nullable String keyVaultUri) {
-            this.keyVaultUri = keyVaultUri;
+            $.keyVaultUri = keyVaultUri;
             return this;
         }
+
         public Builder keyVersion(@Nullable String keyVersion) {
-            this.keyVersion = keyVersion;
+            $.keyVersion = keyVersion;
             return this;
-        }        public EncryptionResponse build() {
-            return new EncryptionResponse(keyName, keySource, keyVaultUri, keyVersion);
+        }
+
+        public EncryptionResponse build() {
+            $.keySource = Codegen.stringProp("keySource").arg($.keySource).def("Default").getNullable();
+            return $;
         }
     }
+
 }

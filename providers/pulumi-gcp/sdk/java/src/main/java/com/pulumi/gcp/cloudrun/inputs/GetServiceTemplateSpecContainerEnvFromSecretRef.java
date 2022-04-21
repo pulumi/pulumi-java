@@ -15,65 +15,63 @@ public final class GetServiceTemplateSpecContainerEnvFromSecretRef extends com.p
     public static final GetServiceTemplateSpecContainerEnvFromSecretRef Empty = new GetServiceTemplateSpecContainerEnvFromSecretRef();
 
     @Import(name="localObjectReferences", required=true)
-      private final List<GetServiceTemplateSpecContainerEnvFromSecretRefLocalObjectReference> localObjectReferences;
+    private List<GetServiceTemplateSpecContainerEnvFromSecretRefLocalObjectReference> localObjectReferences;
 
     public List<GetServiceTemplateSpecContainerEnvFromSecretRefLocalObjectReference> localObjectReferences() {
         return this.localObjectReferences;
     }
 
     @Import(name="optional", required=true)
-      private final Boolean optional;
+    private Boolean optional;
 
     public Boolean optional() {
         return this.optional;
     }
 
-    public GetServiceTemplateSpecContainerEnvFromSecretRef(
-        List<GetServiceTemplateSpecContainerEnvFromSecretRefLocalObjectReference> localObjectReferences,
-        Boolean optional) {
-        this.localObjectReferences = Objects.requireNonNull(localObjectReferences, "expected parameter 'localObjectReferences' to be non-null");
-        this.optional = Objects.requireNonNull(optional, "expected parameter 'optional' to be non-null");
-    }
+    private GetServiceTemplateSpecContainerEnvFromSecretRef() {}
 
-    private GetServiceTemplateSpecContainerEnvFromSecretRef() {
-        this.localObjectReferences = List.of();
-        this.optional = null;
+    private GetServiceTemplateSpecContainerEnvFromSecretRef(GetServiceTemplateSpecContainerEnvFromSecretRef $) {
+        this.localObjectReferences = $.localObjectReferences;
+        this.optional = $.optional;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetServiceTemplateSpecContainerEnvFromSecretRef defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<GetServiceTemplateSpecContainerEnvFromSecretRefLocalObjectReference> localObjectReferences;
-        private Boolean optional;
+        private GetServiceTemplateSpecContainerEnvFromSecretRef $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetServiceTemplateSpecContainerEnvFromSecretRef();
         }
 
         public Builder(GetServiceTemplateSpecContainerEnvFromSecretRef defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.localObjectReferences = defaults.localObjectReferences;
-    	      this.optional = defaults.optional;
+            $ = new GetServiceTemplateSpecContainerEnvFromSecretRef(Objects.requireNonNull(defaults));
         }
 
         public Builder localObjectReferences(List<GetServiceTemplateSpecContainerEnvFromSecretRefLocalObjectReference> localObjectReferences) {
-            this.localObjectReferences = Objects.requireNonNull(localObjectReferences);
+            $.localObjectReferences = localObjectReferences;
             return this;
         }
+
         public Builder localObjectReferences(GetServiceTemplateSpecContainerEnvFromSecretRefLocalObjectReference... localObjectReferences) {
             return localObjectReferences(List.of(localObjectReferences));
         }
+
         public Builder optional(Boolean optional) {
-            this.optional = Objects.requireNonNull(optional);
+            $.optional = optional;
             return this;
-        }        public GetServiceTemplateSpecContainerEnvFromSecretRef build() {
-            return new GetServiceTemplateSpecContainerEnvFromSecretRef(localObjectReferences, optional);
+        }
+
+        public GetServiceTemplateSpecContainerEnvFromSecretRef build() {
+            $.localObjectReferences = Objects.requireNonNull($.localObjectReferences, "expected parameter 'localObjectReferences' to be non-null");
+            $.optional = Objects.requireNonNull($.optional, "expected parameter 'optional' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,7 +5,6 @@ package com.pulumi.aws.gamelift.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +19,7 @@ public final class FleetEc2InboundPermissionArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="fromPort", required=true)
-      private final Output<Integer> fromPort;
+    private Output<Integer> fromPort;
 
     public Output<Integer> fromPort() {
         return this.fromPort;
@@ -31,7 +30,7 @@ public final class FleetEc2InboundPermissionArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="ipRange", required=true)
-      private final Output<String> ipRange;
+    private Output<String> ipRange;
 
     public Output<String> ipRange() {
         return this.ipRange;
@@ -42,7 +41,7 @@ public final class FleetEc2InboundPermissionArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="protocol", required=true)
-      private final Output<String> protocol;
+    private Output<String> protocol;
 
     public Output<String> protocol() {
         return this.protocol;
@@ -53,89 +52,82 @@ public final class FleetEc2InboundPermissionArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="toPort", required=true)
-      private final Output<Integer> toPort;
+    private Output<Integer> toPort;
 
     public Output<Integer> toPort() {
         return this.toPort;
     }
 
-    public FleetEc2InboundPermissionArgs(
-        Output<Integer> fromPort,
-        Output<String> ipRange,
-        Output<String> protocol,
-        Output<Integer> toPort) {
-        this.fromPort = Objects.requireNonNull(fromPort, "expected parameter 'fromPort' to be non-null");
-        this.ipRange = Objects.requireNonNull(ipRange, "expected parameter 'ipRange' to be non-null");
-        this.protocol = Objects.requireNonNull(protocol, "expected parameter 'protocol' to be non-null");
-        this.toPort = Objects.requireNonNull(toPort, "expected parameter 'toPort' to be non-null");
-    }
+    private FleetEc2InboundPermissionArgs() {}
 
-    private FleetEc2InboundPermissionArgs() {
-        this.fromPort = Codegen.empty();
-        this.ipRange = Codegen.empty();
-        this.protocol = Codegen.empty();
-        this.toPort = Codegen.empty();
+    private FleetEc2InboundPermissionArgs(FleetEc2InboundPermissionArgs $) {
+        this.fromPort = $.fromPort;
+        this.ipRange = $.ipRange;
+        this.protocol = $.protocol;
+        this.toPort = $.toPort;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FleetEc2InboundPermissionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Integer> fromPort;
-        private Output<String> ipRange;
-        private Output<String> protocol;
-        private Output<Integer> toPort;
+        private FleetEc2InboundPermissionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new FleetEc2InboundPermissionArgs();
         }
 
         public Builder(FleetEc2InboundPermissionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.fromPort = defaults.fromPort;
-    	      this.ipRange = defaults.ipRange;
-    	      this.protocol = defaults.protocol;
-    	      this.toPort = defaults.toPort;
+            $ = new FleetEc2InboundPermissionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder fromPort(Output<Integer> fromPort) {
-            this.fromPort = Objects.requireNonNull(fromPort);
+            $.fromPort = fromPort;
             return this;
         }
+
         public Builder fromPort(Integer fromPort) {
-            this.fromPort = Output.of(Objects.requireNonNull(fromPort));
-            return this;
+            return fromPort(Output.of(fromPort));
         }
+
         public Builder ipRange(Output<String> ipRange) {
-            this.ipRange = Objects.requireNonNull(ipRange);
+            $.ipRange = ipRange;
             return this;
         }
+
         public Builder ipRange(String ipRange) {
-            this.ipRange = Output.of(Objects.requireNonNull(ipRange));
-            return this;
+            return ipRange(Output.of(ipRange));
         }
+
         public Builder protocol(Output<String> protocol) {
-            this.protocol = Objects.requireNonNull(protocol);
+            $.protocol = protocol;
             return this;
         }
+
         public Builder protocol(String protocol) {
-            this.protocol = Output.of(Objects.requireNonNull(protocol));
-            return this;
+            return protocol(Output.of(protocol));
         }
+
         public Builder toPort(Output<Integer> toPort) {
-            this.toPort = Objects.requireNonNull(toPort);
+            $.toPort = toPort;
             return this;
         }
+
         public Builder toPort(Integer toPort) {
-            this.toPort = Output.of(Objects.requireNonNull(toPort));
-            return this;
-        }        public FleetEc2InboundPermissionArgs build() {
-            return new FleetEc2InboundPermissionArgs(fromPort, ipRange, protocol, toPort);
+            return toPort(Output.of(toPort));
+        }
+
+        public FleetEc2InboundPermissionArgs build() {
+            $.fromPort = Objects.requireNonNull($.fromPort, "expected parameter 'fromPort' to be non-null");
+            $.ipRange = Objects.requireNonNull($.ipRange, "expected parameter 'ipRange' to be non-null");
+            $.protocol = Objects.requireNonNull($.protocol, "expected parameter 'protocol' to be non-null");
+            $.toPort = Objects.requireNonNull($.toPort, "expected parameter 'toPort' to be non-null");
+            return $;
         }
     }
+
 }

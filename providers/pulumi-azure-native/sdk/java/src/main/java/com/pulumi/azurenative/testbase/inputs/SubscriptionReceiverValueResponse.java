@@ -23,10 +23,10 @@ public final class SubscriptionReceiverValueResponse extends com.pulumi.resource
      * 
      */
     @Import(name="role")
-      private final @Nullable String role;
+    private @Nullable String role;
 
     public Optional<String> role() {
-        return this.role == null ? Optional.empty() : Optional.ofNullable(this.role);
+        return Optional.ofNullable(this.role);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class SubscriptionReceiverValueResponse extends com.pulumi.resource
      * 
      */
     @Import(name="subscriptionId")
-      private final @Nullable String subscriptionId;
+    private @Nullable String subscriptionId;
 
     public Optional<String> subscriptionId() {
-        return this.subscriptionId == null ? Optional.empty() : Optional.ofNullable(this.subscriptionId);
+        return Optional.ofNullable(this.subscriptionId);
     }
 
     /**
@@ -45,64 +45,56 @@ public final class SubscriptionReceiverValueResponse extends com.pulumi.resource
      * 
      */
     @Import(name="subscriptionName")
-      private final @Nullable String subscriptionName;
+    private @Nullable String subscriptionName;
 
     public Optional<String> subscriptionName() {
-        return this.subscriptionName == null ? Optional.empty() : Optional.ofNullable(this.subscriptionName);
+        return Optional.ofNullable(this.subscriptionName);
     }
 
-    public SubscriptionReceiverValueResponse(
-        @Nullable String role,
-        @Nullable String subscriptionId,
-        @Nullable String subscriptionName) {
-        this.role = role;
-        this.subscriptionId = subscriptionId;
-        this.subscriptionName = subscriptionName;
-    }
+    private SubscriptionReceiverValueResponse() {}
 
-    private SubscriptionReceiverValueResponse() {
-        this.role = null;
-        this.subscriptionId = null;
-        this.subscriptionName = null;
+    private SubscriptionReceiverValueResponse(SubscriptionReceiverValueResponse $) {
+        this.role = $.role;
+        this.subscriptionId = $.subscriptionId;
+        this.subscriptionName = $.subscriptionName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SubscriptionReceiverValueResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String role;
-        private @Nullable String subscriptionId;
-        private @Nullable String subscriptionName;
+        private SubscriptionReceiverValueResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new SubscriptionReceiverValueResponse();
         }
 
         public Builder(SubscriptionReceiverValueResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.role = defaults.role;
-    	      this.subscriptionId = defaults.subscriptionId;
-    	      this.subscriptionName = defaults.subscriptionName;
+            $ = new SubscriptionReceiverValueResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder role(@Nullable String role) {
-            this.role = role;
+            $.role = role;
             return this;
         }
+
         public Builder subscriptionId(@Nullable String subscriptionId) {
-            this.subscriptionId = subscriptionId;
+            $.subscriptionId = subscriptionId;
             return this;
         }
+
         public Builder subscriptionName(@Nullable String subscriptionName) {
-            this.subscriptionName = subscriptionName;
+            $.subscriptionName = subscriptionName;
             return this;
-        }        public SubscriptionReceiverValueResponse build() {
-            return new SubscriptionReceiverValueResponse(role, subscriptionId, subscriptionName);
+        }
+
+        public SubscriptionReceiverValueResponse build() {
+            return $;
         }
     }
+
 }

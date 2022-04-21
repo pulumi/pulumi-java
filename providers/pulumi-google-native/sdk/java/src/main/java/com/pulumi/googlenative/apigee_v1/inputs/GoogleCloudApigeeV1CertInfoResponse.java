@@ -23,7 +23,7 @@ public final class GoogleCloudApigeeV1CertInfoResponse extends com.pulumi.resour
      * 
      */
     @Import(name="basicConstraints", required=true)
-      private final String basicConstraints;
+    private String basicConstraints;
 
     public String basicConstraints() {
         return this.basicConstraints;
@@ -34,7 +34,7 @@ public final class GoogleCloudApigeeV1CertInfoResponse extends com.pulumi.resour
      * 
      */
     @Import(name="expiryDate", required=true)
-      private final String expiryDate;
+    private String expiryDate;
 
     public String expiryDate() {
         return this.expiryDate;
@@ -45,7 +45,7 @@ public final class GoogleCloudApigeeV1CertInfoResponse extends com.pulumi.resour
      * 
      */
     @Import(name="isValid", required=true)
-      private final String isValid;
+    private String isValid;
 
     public String isValid() {
         return this.isValid;
@@ -56,7 +56,7 @@ public final class GoogleCloudApigeeV1CertInfoResponse extends com.pulumi.resour
      * 
      */
     @Import(name="issuer", required=true)
-      private final String issuer;
+    private String issuer;
 
     public String issuer() {
         return this.issuer;
@@ -67,7 +67,7 @@ public final class GoogleCloudApigeeV1CertInfoResponse extends com.pulumi.resour
      * 
      */
     @Import(name="publicKey", required=true)
-      private final String publicKey;
+    private String publicKey;
 
     public String publicKey() {
         return this.publicKey;
@@ -78,7 +78,7 @@ public final class GoogleCloudApigeeV1CertInfoResponse extends com.pulumi.resour
      * 
      */
     @Import(name="serialNumber", required=true)
-      private final String serialNumber;
+    private String serialNumber;
 
     public String serialNumber() {
         return this.serialNumber;
@@ -89,7 +89,7 @@ public final class GoogleCloudApigeeV1CertInfoResponse extends com.pulumi.resour
      * 
      */
     @Import(name="sigAlgName", required=true)
-      private final String sigAlgName;
+    private String sigAlgName;
 
     public String sigAlgName() {
         return this.sigAlgName;
@@ -100,7 +100,7 @@ public final class GoogleCloudApigeeV1CertInfoResponse extends com.pulumi.resour
      * 
      */
     @Import(name="subject", required=true)
-      private final String subject;
+    private String subject;
 
     public String subject() {
         return this.subject;
@@ -111,7 +111,7 @@ public final class GoogleCloudApigeeV1CertInfoResponse extends com.pulumi.resour
      * 
      */
     @Import(name="subjectAlternativeNames", required=true)
-      private final List<String> subjectAlternativeNames;
+    private List<String> subjectAlternativeNames;
 
     public List<String> subjectAlternativeNames() {
         return this.subjectAlternativeNames;
@@ -122,7 +122,7 @@ public final class GoogleCloudApigeeV1CertInfoResponse extends com.pulumi.resour
      * 
      */
     @Import(name="validFrom", required=true)
-      private final String validFrom;
+    private String validFrom;
 
     public String validFrom() {
         return this.validFrom;
@@ -133,139 +133,119 @@ public final class GoogleCloudApigeeV1CertInfoResponse extends com.pulumi.resour
      * 
      */
     @Import(name="version", required=true)
-      private final Integer version;
+    private Integer version;
 
     public Integer version() {
         return this.version;
     }
 
-    public GoogleCloudApigeeV1CertInfoResponse(
-        String basicConstraints,
-        String expiryDate,
-        String isValid,
-        String issuer,
-        String publicKey,
-        String serialNumber,
-        String sigAlgName,
-        String subject,
-        List<String> subjectAlternativeNames,
-        String validFrom,
-        Integer version) {
-        this.basicConstraints = Objects.requireNonNull(basicConstraints, "expected parameter 'basicConstraints' to be non-null");
-        this.expiryDate = Objects.requireNonNull(expiryDate, "expected parameter 'expiryDate' to be non-null");
-        this.isValid = Objects.requireNonNull(isValid, "expected parameter 'isValid' to be non-null");
-        this.issuer = Objects.requireNonNull(issuer, "expected parameter 'issuer' to be non-null");
-        this.publicKey = Objects.requireNonNull(publicKey, "expected parameter 'publicKey' to be non-null");
-        this.serialNumber = Objects.requireNonNull(serialNumber, "expected parameter 'serialNumber' to be non-null");
-        this.sigAlgName = Objects.requireNonNull(sigAlgName, "expected parameter 'sigAlgName' to be non-null");
-        this.subject = Objects.requireNonNull(subject, "expected parameter 'subject' to be non-null");
-        this.subjectAlternativeNames = Objects.requireNonNull(subjectAlternativeNames, "expected parameter 'subjectAlternativeNames' to be non-null");
-        this.validFrom = Objects.requireNonNull(validFrom, "expected parameter 'validFrom' to be non-null");
-        this.version = Objects.requireNonNull(version, "expected parameter 'version' to be non-null");
-    }
+    private GoogleCloudApigeeV1CertInfoResponse() {}
 
-    private GoogleCloudApigeeV1CertInfoResponse() {
-        this.basicConstraints = null;
-        this.expiryDate = null;
-        this.isValid = null;
-        this.issuer = null;
-        this.publicKey = null;
-        this.serialNumber = null;
-        this.sigAlgName = null;
-        this.subject = null;
-        this.subjectAlternativeNames = List.of();
-        this.validFrom = null;
-        this.version = null;
+    private GoogleCloudApigeeV1CertInfoResponse(GoogleCloudApigeeV1CertInfoResponse $) {
+        this.basicConstraints = $.basicConstraints;
+        this.expiryDate = $.expiryDate;
+        this.isValid = $.isValid;
+        this.issuer = $.issuer;
+        this.publicKey = $.publicKey;
+        this.serialNumber = $.serialNumber;
+        this.sigAlgName = $.sigAlgName;
+        this.subject = $.subject;
+        this.subjectAlternativeNames = $.subjectAlternativeNames;
+        this.validFrom = $.validFrom;
+        this.version = $.version;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudApigeeV1CertInfoResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String basicConstraints;
-        private String expiryDate;
-        private String isValid;
-        private String issuer;
-        private String publicKey;
-        private String serialNumber;
-        private String sigAlgName;
-        private String subject;
-        private List<String> subjectAlternativeNames;
-        private String validFrom;
-        private Integer version;
+        private GoogleCloudApigeeV1CertInfoResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudApigeeV1CertInfoResponse();
         }
 
         public Builder(GoogleCloudApigeeV1CertInfoResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.basicConstraints = defaults.basicConstraints;
-    	      this.expiryDate = defaults.expiryDate;
-    	      this.isValid = defaults.isValid;
-    	      this.issuer = defaults.issuer;
-    	      this.publicKey = defaults.publicKey;
-    	      this.serialNumber = defaults.serialNumber;
-    	      this.sigAlgName = defaults.sigAlgName;
-    	      this.subject = defaults.subject;
-    	      this.subjectAlternativeNames = defaults.subjectAlternativeNames;
-    	      this.validFrom = defaults.validFrom;
-    	      this.version = defaults.version;
+            $ = new GoogleCloudApigeeV1CertInfoResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder basicConstraints(String basicConstraints) {
-            this.basicConstraints = Objects.requireNonNull(basicConstraints);
+            $.basicConstraints = basicConstraints;
             return this;
         }
+
         public Builder expiryDate(String expiryDate) {
-            this.expiryDate = Objects.requireNonNull(expiryDate);
+            $.expiryDate = expiryDate;
             return this;
         }
+
         public Builder isValid(String isValid) {
-            this.isValid = Objects.requireNonNull(isValid);
+            $.isValid = isValid;
             return this;
         }
+
         public Builder issuer(String issuer) {
-            this.issuer = Objects.requireNonNull(issuer);
+            $.issuer = issuer;
             return this;
         }
+
         public Builder publicKey(String publicKey) {
-            this.publicKey = Objects.requireNonNull(publicKey);
+            $.publicKey = publicKey;
             return this;
         }
+
         public Builder serialNumber(String serialNumber) {
-            this.serialNumber = Objects.requireNonNull(serialNumber);
+            $.serialNumber = serialNumber;
             return this;
         }
+
         public Builder sigAlgName(String sigAlgName) {
-            this.sigAlgName = Objects.requireNonNull(sigAlgName);
+            $.sigAlgName = sigAlgName;
             return this;
         }
+
         public Builder subject(String subject) {
-            this.subject = Objects.requireNonNull(subject);
+            $.subject = subject;
             return this;
         }
+
         public Builder subjectAlternativeNames(List<String> subjectAlternativeNames) {
-            this.subjectAlternativeNames = Objects.requireNonNull(subjectAlternativeNames);
+            $.subjectAlternativeNames = subjectAlternativeNames;
             return this;
         }
+
         public Builder subjectAlternativeNames(String... subjectAlternativeNames) {
             return subjectAlternativeNames(List.of(subjectAlternativeNames));
         }
+
         public Builder validFrom(String validFrom) {
-            this.validFrom = Objects.requireNonNull(validFrom);
+            $.validFrom = validFrom;
             return this;
         }
+
         public Builder version(Integer version) {
-            this.version = Objects.requireNonNull(version);
+            $.version = version;
             return this;
-        }        public GoogleCloudApigeeV1CertInfoResponse build() {
-            return new GoogleCloudApigeeV1CertInfoResponse(basicConstraints, expiryDate, isValid, issuer, publicKey, serialNumber, sigAlgName, subject, subjectAlternativeNames, validFrom, version);
+        }
+
+        public GoogleCloudApigeeV1CertInfoResponse build() {
+            $.basicConstraints = Objects.requireNonNull($.basicConstraints, "expected parameter 'basicConstraints' to be non-null");
+            $.expiryDate = Objects.requireNonNull($.expiryDate, "expected parameter 'expiryDate' to be non-null");
+            $.isValid = Objects.requireNonNull($.isValid, "expected parameter 'isValid' to be non-null");
+            $.issuer = Objects.requireNonNull($.issuer, "expected parameter 'issuer' to be non-null");
+            $.publicKey = Objects.requireNonNull($.publicKey, "expected parameter 'publicKey' to be non-null");
+            $.serialNumber = Objects.requireNonNull($.serialNumber, "expected parameter 'serialNumber' to be non-null");
+            $.sigAlgName = Objects.requireNonNull($.sigAlgName, "expected parameter 'sigAlgName' to be non-null");
+            $.subject = Objects.requireNonNull($.subject, "expected parameter 'subject' to be non-null");
+            $.subjectAlternativeNames = Objects.requireNonNull($.subjectAlternativeNames, "expected parameter 'subjectAlternativeNames' to be non-null");
+            $.validFrom = Objects.requireNonNull($.validFrom, "expected parameter 'validFrom' to be non-null");
+            $.version = Objects.requireNonNull($.version, "expected parameter 'version' to be non-null");
+            return $;
         }
     }
+
 }

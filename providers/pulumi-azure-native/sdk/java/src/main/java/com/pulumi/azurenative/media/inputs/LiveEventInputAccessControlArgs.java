@@ -6,8 +6,8 @@ package com.pulumi.azurenative.media.inputs;
 import com.pulumi.azurenative.media.inputs.IPAccessControlArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class LiveEventInputAccessControlArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="ip")
-      private final @Nullable Output<IPAccessControlArgs> ip;
+    private @Nullable Output<IPAccessControlArgs> ip;
 
-    public Output<IPAccessControlArgs> ip() {
-        return this.ip == null ? Codegen.empty() : this.ip;
+    public Optional<Output<IPAccessControlArgs>> ip() {
+        return Optional.ofNullable(this.ip);
     }
 
-    public LiveEventInputAccessControlArgs(@Nullable Output<IPAccessControlArgs> ip) {
-        this.ip = ip;
-    }
+    private LiveEventInputAccessControlArgs() {}
 
-    private LiveEventInputAccessControlArgs() {
-        this.ip = Codegen.empty();
+    private LiveEventInputAccessControlArgs(LiveEventInputAccessControlArgs $) {
+        this.ip = $.ip;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LiveEventInputAccessControlArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<IPAccessControlArgs> ip;
+        private LiveEventInputAccessControlArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new LiveEventInputAccessControlArgs();
         }
 
         public Builder(LiveEventInputAccessControlArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.ip = defaults.ip;
+            $ = new LiveEventInputAccessControlArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder ip(@Nullable Output<IPAccessControlArgs> ip) {
-            this.ip = ip;
+            $.ip = ip;
             return this;
         }
-        public Builder ip(@Nullable IPAccessControlArgs ip) {
-            this.ip = Codegen.ofNullable(ip);
-            return this;
-        }        public LiveEventInputAccessControlArgs build() {
-            return new LiveEventInputAccessControlArgs(ip);
+
+        public Builder ip(IPAccessControlArgs ip) {
+            return ip(Output.of(ip));
+        }
+
+        public LiveEventInputAccessControlArgs build() {
+            return $;
         }
     }
+
 }

@@ -5,11 +5,11 @@ package com.pulumi.aws.autoscaling.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class GroupInstanceRefreshPreferencesGetArgs extends com.pulumi.res
      * 
      */
     @Import(name="checkpointDelay")
-      private final @Nullable Output<String> checkpointDelay;
+    private @Nullable Output<String> checkpointDelay;
 
-    public Output<String> checkpointDelay() {
-        return this.checkpointDelay == null ? Codegen.empty() : this.checkpointDelay;
+    public Optional<Output<String>> checkpointDelay() {
+        return Optional.ofNullable(this.checkpointDelay);
     }
 
     /**
@@ -33,10 +33,10 @@ public final class GroupInstanceRefreshPreferencesGetArgs extends com.pulumi.res
      * 
      */
     @Import(name="checkpointPercentages")
-      private final @Nullable Output<List<Integer>> checkpointPercentages;
+    private @Nullable Output<List<Integer>> checkpointPercentages;
 
-    public Output<List<Integer>> checkpointPercentages() {
-        return this.checkpointPercentages == null ? Codegen.empty() : this.checkpointPercentages;
+    public Optional<Output<List<Integer>>> checkpointPercentages() {
+        return Optional.ofNullable(this.checkpointPercentages);
     }
 
     /**
@@ -44,10 +44,10 @@ public final class GroupInstanceRefreshPreferencesGetArgs extends com.pulumi.res
      * 
      */
     @Import(name="instanceWarmup")
-      private final @Nullable Output<String> instanceWarmup;
+    private @Nullable Output<String> instanceWarmup;
 
-    public Output<String> instanceWarmup() {
-        return this.instanceWarmup == null ? Codegen.empty() : this.instanceWarmup;
+    public Optional<Output<String>> instanceWarmup() {
+        return Optional.ofNullable(this.instanceWarmup);
     }
 
     /**
@@ -55,92 +55,82 @@ public final class GroupInstanceRefreshPreferencesGetArgs extends com.pulumi.res
      * 
      */
     @Import(name="minHealthyPercentage")
-      private final @Nullable Output<Integer> minHealthyPercentage;
+    private @Nullable Output<Integer> minHealthyPercentage;
 
-    public Output<Integer> minHealthyPercentage() {
-        return this.minHealthyPercentage == null ? Codegen.empty() : this.minHealthyPercentage;
+    public Optional<Output<Integer>> minHealthyPercentage() {
+        return Optional.ofNullable(this.minHealthyPercentage);
     }
 
-    public GroupInstanceRefreshPreferencesGetArgs(
-        @Nullable Output<String> checkpointDelay,
-        @Nullable Output<List<Integer>> checkpointPercentages,
-        @Nullable Output<String> instanceWarmup,
-        @Nullable Output<Integer> minHealthyPercentage) {
-        this.checkpointDelay = checkpointDelay;
-        this.checkpointPercentages = checkpointPercentages;
-        this.instanceWarmup = instanceWarmup;
-        this.minHealthyPercentage = minHealthyPercentage;
-    }
+    private GroupInstanceRefreshPreferencesGetArgs() {}
 
-    private GroupInstanceRefreshPreferencesGetArgs() {
-        this.checkpointDelay = Codegen.empty();
-        this.checkpointPercentages = Codegen.empty();
-        this.instanceWarmup = Codegen.empty();
-        this.minHealthyPercentage = Codegen.empty();
+    private GroupInstanceRefreshPreferencesGetArgs(GroupInstanceRefreshPreferencesGetArgs $) {
+        this.checkpointDelay = $.checkpointDelay;
+        this.checkpointPercentages = $.checkpointPercentages;
+        this.instanceWarmup = $.instanceWarmup;
+        this.minHealthyPercentage = $.minHealthyPercentage;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GroupInstanceRefreshPreferencesGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> checkpointDelay;
-        private @Nullable Output<List<Integer>> checkpointPercentages;
-        private @Nullable Output<String> instanceWarmup;
-        private @Nullable Output<Integer> minHealthyPercentage;
+        private GroupInstanceRefreshPreferencesGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GroupInstanceRefreshPreferencesGetArgs();
         }
 
         public Builder(GroupInstanceRefreshPreferencesGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.checkpointDelay = defaults.checkpointDelay;
-    	      this.checkpointPercentages = defaults.checkpointPercentages;
-    	      this.instanceWarmup = defaults.instanceWarmup;
-    	      this.minHealthyPercentage = defaults.minHealthyPercentage;
+            $ = new GroupInstanceRefreshPreferencesGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder checkpointDelay(@Nullable Output<String> checkpointDelay) {
-            this.checkpointDelay = checkpointDelay;
+            $.checkpointDelay = checkpointDelay;
             return this;
         }
-        public Builder checkpointDelay(@Nullable String checkpointDelay) {
-            this.checkpointDelay = Codegen.ofNullable(checkpointDelay);
-            return this;
+
+        public Builder checkpointDelay(String checkpointDelay) {
+            return checkpointDelay(Output.of(checkpointDelay));
         }
+
         public Builder checkpointPercentages(@Nullable Output<List<Integer>> checkpointPercentages) {
-            this.checkpointPercentages = checkpointPercentages;
+            $.checkpointPercentages = checkpointPercentages;
             return this;
         }
-        public Builder checkpointPercentages(@Nullable List<Integer> checkpointPercentages) {
-            this.checkpointPercentages = Codegen.ofNullable(checkpointPercentages);
-            return this;
+
+        public Builder checkpointPercentages(List<Integer> checkpointPercentages) {
+            return checkpointPercentages(Output.of(checkpointPercentages));
         }
+
         public Builder checkpointPercentages(Integer... checkpointPercentages) {
             return checkpointPercentages(List.of(checkpointPercentages));
         }
+
         public Builder instanceWarmup(@Nullable Output<String> instanceWarmup) {
-            this.instanceWarmup = instanceWarmup;
+            $.instanceWarmup = instanceWarmup;
             return this;
         }
-        public Builder instanceWarmup(@Nullable String instanceWarmup) {
-            this.instanceWarmup = Codegen.ofNullable(instanceWarmup);
-            return this;
+
+        public Builder instanceWarmup(String instanceWarmup) {
+            return instanceWarmup(Output.of(instanceWarmup));
         }
+
         public Builder minHealthyPercentage(@Nullable Output<Integer> minHealthyPercentage) {
-            this.minHealthyPercentage = minHealthyPercentage;
+            $.minHealthyPercentage = minHealthyPercentage;
             return this;
         }
-        public Builder minHealthyPercentage(@Nullable Integer minHealthyPercentage) {
-            this.minHealthyPercentage = Codegen.ofNullable(minHealthyPercentage);
-            return this;
-        }        public GroupInstanceRefreshPreferencesGetArgs build() {
-            return new GroupInstanceRefreshPreferencesGetArgs(checkpointDelay, checkpointPercentages, instanceWarmup, minHealthyPercentage);
+
+        public Builder minHealthyPercentage(Integer minHealthyPercentage) {
+            return minHealthyPercentage(Output.of(minHealthyPercentage));
+        }
+
+        public GroupInstanceRefreshPreferencesGetArgs build() {
+            return $;
         }
     }
+
 }

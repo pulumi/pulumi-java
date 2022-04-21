@@ -8,10 +8,10 @@ import com.pulumi.azurenative.managednetwork.inputs.ResourceIdArgs;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -28,10 +28,10 @@ public final class ManagedNetworkPeeringPolicyPropertiesArgs extends com.pulumi.
      * 
      */
     @Import(name="hub")
-      private final @Nullable Output<ResourceIdArgs> hub;
+    private @Nullable Output<ResourceIdArgs> hub;
 
-    public Output<ResourceIdArgs> hub() {
-        return this.hub == null ? Codegen.empty() : this.hub;
+    public Optional<Output<ResourceIdArgs>> hub() {
+        return Optional.ofNullable(this.hub);
     }
 
     /**
@@ -39,10 +39,10 @@ public final class ManagedNetworkPeeringPolicyPropertiesArgs extends com.pulumi.
      * 
      */
     @Import(name="mesh")
-      private final @Nullable Output<List<ResourceIdArgs>> mesh;
+    private @Nullable Output<List<ResourceIdArgs>> mesh;
 
-    public Output<List<ResourceIdArgs>> mesh() {
-        return this.mesh == null ? Codegen.empty() : this.mesh;
+    public Optional<Output<List<ResourceIdArgs>>> mesh() {
+        return Optional.ofNullable(this.mesh);
     }
 
     /**
@@ -50,10 +50,10 @@ public final class ManagedNetworkPeeringPolicyPropertiesArgs extends com.pulumi.
      * 
      */
     @Import(name="spokes")
-      private final @Nullable Output<List<ResourceIdArgs>> spokes;
+    private @Nullable Output<List<ResourceIdArgs>> spokes;
 
-    public Output<List<ResourceIdArgs>> spokes() {
-        return this.spokes == null ? Codegen.empty() : this.spokes;
+    public Optional<Output<List<ResourceIdArgs>>> spokes() {
+        return Optional.ofNullable(this.spokes);
     }
 
     /**
@@ -61,95 +61,87 @@ public final class ManagedNetworkPeeringPolicyPropertiesArgs extends com.pulumi.
      * 
      */
     @Import(name="type", required=true)
-      private final Output<Either<String,Type>> type;
+    private Output<Either<String,Type>> type;
 
     public Output<Either<String,Type>> type() {
         return this.type;
     }
 
-    public ManagedNetworkPeeringPolicyPropertiesArgs(
-        @Nullable Output<ResourceIdArgs> hub,
-        @Nullable Output<List<ResourceIdArgs>> mesh,
-        @Nullable Output<List<ResourceIdArgs>> spokes,
-        Output<Either<String,Type>> type) {
-        this.hub = hub;
-        this.mesh = mesh;
-        this.spokes = spokes;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private ManagedNetworkPeeringPolicyPropertiesArgs() {}
 
-    private ManagedNetworkPeeringPolicyPropertiesArgs() {
-        this.hub = Codegen.empty();
-        this.mesh = Codegen.empty();
-        this.spokes = Codegen.empty();
-        this.type = Codegen.empty();
+    private ManagedNetworkPeeringPolicyPropertiesArgs(ManagedNetworkPeeringPolicyPropertiesArgs $) {
+        this.hub = $.hub;
+        this.mesh = $.mesh;
+        this.spokes = $.spokes;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ManagedNetworkPeeringPolicyPropertiesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<ResourceIdArgs> hub;
-        private @Nullable Output<List<ResourceIdArgs>> mesh;
-        private @Nullable Output<List<ResourceIdArgs>> spokes;
-        private Output<Either<String,Type>> type;
+        private ManagedNetworkPeeringPolicyPropertiesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ManagedNetworkPeeringPolicyPropertiesArgs();
         }
 
         public Builder(ManagedNetworkPeeringPolicyPropertiesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.hub = defaults.hub;
-    	      this.mesh = defaults.mesh;
-    	      this.spokes = defaults.spokes;
-    	      this.type = defaults.type;
+            $ = new ManagedNetworkPeeringPolicyPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder hub(@Nullable Output<ResourceIdArgs> hub) {
-            this.hub = hub;
+            $.hub = hub;
             return this;
         }
-        public Builder hub(@Nullable ResourceIdArgs hub) {
-            this.hub = Codegen.ofNullable(hub);
-            return this;
+
+        public Builder hub(ResourceIdArgs hub) {
+            return hub(Output.of(hub));
         }
+
         public Builder mesh(@Nullable Output<List<ResourceIdArgs>> mesh) {
-            this.mesh = mesh;
+            $.mesh = mesh;
             return this;
         }
-        public Builder mesh(@Nullable List<ResourceIdArgs> mesh) {
-            this.mesh = Codegen.ofNullable(mesh);
-            return this;
+
+        public Builder mesh(List<ResourceIdArgs> mesh) {
+            return mesh(Output.of(mesh));
         }
+
         public Builder mesh(ResourceIdArgs... mesh) {
             return mesh(List.of(mesh));
         }
+
         public Builder spokes(@Nullable Output<List<ResourceIdArgs>> spokes) {
-            this.spokes = spokes;
+            $.spokes = spokes;
             return this;
         }
-        public Builder spokes(@Nullable List<ResourceIdArgs> spokes) {
-            this.spokes = Codegen.ofNullable(spokes);
-            return this;
+
+        public Builder spokes(List<ResourceIdArgs> spokes) {
+            return spokes(Output.of(spokes));
         }
+
         public Builder spokes(ResourceIdArgs... spokes) {
             return spokes(List.of(spokes));
         }
+
         public Builder type(Output<Either<String,Type>> type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder type(Either<String,Type> type) {
-            this.type = Output.of(Objects.requireNonNull(type));
-            return this;
-        }        public ManagedNetworkPeeringPolicyPropertiesArgs build() {
-            return new ManagedNetworkPeeringPolicyPropertiesArgs(hub, mesh, spokes, type);
+            return type(Output.of(type));
+        }
+
+        public ManagedNetworkPeeringPolicyPropertiesArgs build() {
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

@@ -15,110 +15,100 @@ public final class GetAttributeDefinitionArgs extends com.pulumi.resources.Invok
     public static final GetAttributeDefinitionArgs Empty = new GetAttributeDefinitionArgs();
 
     @Import(name="attributeDefinitionId", required=true)
-      private final String attributeDefinitionId;
+    private String attributeDefinitionId;
 
     public String attributeDefinitionId() {
         return this.attributeDefinitionId;
     }
 
     @Import(name="consentStoreId", required=true)
-      private final String consentStoreId;
+    private String consentStoreId;
 
     public String consentStoreId() {
         return this.consentStoreId;
     }
 
     @Import(name="datasetId", required=true)
-      private final String datasetId;
+    private String datasetId;
 
     public String datasetId() {
         return this.datasetId;
     }
 
     @Import(name="location", required=true)
-      private final String location;
+    private String location;
 
     public String location() {
         return this.location;
     }
 
     @Import(name="project")
-      private final @Nullable String project;
+    private @Nullable String project;
 
     public Optional<String> project() {
-        return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
+        return Optional.ofNullable(this.project);
     }
 
-    public GetAttributeDefinitionArgs(
-        String attributeDefinitionId,
-        String consentStoreId,
-        String datasetId,
-        String location,
-        @Nullable String project) {
-        this.attributeDefinitionId = Objects.requireNonNull(attributeDefinitionId, "expected parameter 'attributeDefinitionId' to be non-null");
-        this.consentStoreId = Objects.requireNonNull(consentStoreId, "expected parameter 'consentStoreId' to be non-null");
-        this.datasetId = Objects.requireNonNull(datasetId, "expected parameter 'datasetId' to be non-null");
-        this.location = Objects.requireNonNull(location, "expected parameter 'location' to be non-null");
-        this.project = project;
-    }
+    private GetAttributeDefinitionArgs() {}
 
-    private GetAttributeDefinitionArgs() {
-        this.attributeDefinitionId = null;
-        this.consentStoreId = null;
-        this.datasetId = null;
-        this.location = null;
-        this.project = null;
+    private GetAttributeDefinitionArgs(GetAttributeDefinitionArgs $) {
+        this.attributeDefinitionId = $.attributeDefinitionId;
+        this.consentStoreId = $.consentStoreId;
+        this.datasetId = $.datasetId;
+        this.location = $.location;
+        this.project = $.project;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetAttributeDefinitionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String attributeDefinitionId;
-        private String consentStoreId;
-        private String datasetId;
-        private String location;
-        private @Nullable String project;
+        private GetAttributeDefinitionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetAttributeDefinitionArgs();
         }
 
         public Builder(GetAttributeDefinitionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.attributeDefinitionId = defaults.attributeDefinitionId;
-    	      this.consentStoreId = defaults.consentStoreId;
-    	      this.datasetId = defaults.datasetId;
-    	      this.location = defaults.location;
-    	      this.project = defaults.project;
+            $ = new GetAttributeDefinitionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder attributeDefinitionId(String attributeDefinitionId) {
-            this.attributeDefinitionId = Objects.requireNonNull(attributeDefinitionId);
+            $.attributeDefinitionId = attributeDefinitionId;
             return this;
         }
+
         public Builder consentStoreId(String consentStoreId) {
-            this.consentStoreId = Objects.requireNonNull(consentStoreId);
+            $.consentStoreId = consentStoreId;
             return this;
         }
+
         public Builder datasetId(String datasetId) {
-            this.datasetId = Objects.requireNonNull(datasetId);
+            $.datasetId = datasetId;
             return this;
         }
+
         public Builder location(String location) {
-            this.location = Objects.requireNonNull(location);
+            $.location = location;
             return this;
         }
+
         public Builder project(@Nullable String project) {
-            this.project = project;
+            $.project = project;
             return this;
-        }        public GetAttributeDefinitionArgs build() {
-            return new GetAttributeDefinitionArgs(attributeDefinitionId, consentStoreId, datasetId, location, project);
+        }
+
+        public GetAttributeDefinitionArgs build() {
+            $.attributeDefinitionId = Objects.requireNonNull($.attributeDefinitionId, "expected parameter 'attributeDefinitionId' to be non-null");
+            $.consentStoreId = Objects.requireNonNull($.consentStoreId, "expected parameter 'consentStoreId' to be non-null");
+            $.datasetId = Objects.requireNonNull($.datasetId, "expected parameter 'datasetId' to be non-null");
+            $.location = Objects.requireNonNull($.location, "expected parameter 'location' to be non-null");
+            return $;
         }
     }
+
 }

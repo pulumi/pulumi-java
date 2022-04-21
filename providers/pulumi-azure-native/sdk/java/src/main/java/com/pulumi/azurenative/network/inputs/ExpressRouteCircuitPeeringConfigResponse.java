@@ -25,10 +25,10 @@ public final class ExpressRouteCircuitPeeringConfigResponse extends com.pulumi.r
      * 
      */
     @Import(name="advertisedCommunities")
-      private final @Nullable List<String> advertisedCommunities;
+    private @Nullable List<String> advertisedCommunities;
 
-    public List<String> advertisedCommunities() {
-        return this.advertisedCommunities == null ? List.of() : this.advertisedCommunities;
+    public Optional<List<String>> advertisedCommunities() {
+        return Optional.ofNullable(this.advertisedCommunities);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class ExpressRouteCircuitPeeringConfigResponse extends com.pulumi.r
      * 
      */
     @Import(name="advertisedPublicPrefixes")
-      private final @Nullable List<String> advertisedPublicPrefixes;
+    private @Nullable List<String> advertisedPublicPrefixes;
 
-    public List<String> advertisedPublicPrefixes() {
-        return this.advertisedPublicPrefixes == null ? List.of() : this.advertisedPublicPrefixes;
+    public Optional<List<String>> advertisedPublicPrefixes() {
+        return Optional.ofNullable(this.advertisedPublicPrefixes);
     }
 
     /**
@@ -47,7 +47,7 @@ public final class ExpressRouteCircuitPeeringConfigResponse extends com.pulumi.r
      * 
      */
     @Import(name="advertisedPublicPrefixesState", required=true)
-      private final String advertisedPublicPrefixesState;
+    private String advertisedPublicPrefixesState;
 
     public String advertisedPublicPrefixesState() {
         return this.advertisedPublicPrefixesState;
@@ -58,10 +58,10 @@ public final class ExpressRouteCircuitPeeringConfigResponse extends com.pulumi.r
      * 
      */
     @Import(name="customerASN")
-      private final @Nullable Integer customerASN;
+    private @Nullable Integer customerASN;
 
     public Optional<Integer> customerASN() {
-        return this.customerASN == null ? Optional.empty() : Optional.ofNullable(this.customerASN);
+        return Optional.ofNullable(this.customerASN);
     }
 
     /**
@@ -69,10 +69,10 @@ public final class ExpressRouteCircuitPeeringConfigResponse extends com.pulumi.r
      * 
      */
     @Import(name="legacyMode")
-      private final @Nullable Integer legacyMode;
+    private @Nullable Integer legacyMode;
 
     public Optional<Integer> legacyMode() {
-        return this.legacyMode == null ? Optional.empty() : Optional.ofNullable(this.legacyMode);
+        return Optional.ofNullable(this.legacyMode);
     }
 
     /**
@@ -80,97 +80,83 @@ public final class ExpressRouteCircuitPeeringConfigResponse extends com.pulumi.r
      * 
      */
     @Import(name="routingRegistryName")
-      private final @Nullable String routingRegistryName;
+    private @Nullable String routingRegistryName;
 
     public Optional<String> routingRegistryName() {
-        return this.routingRegistryName == null ? Optional.empty() : Optional.ofNullable(this.routingRegistryName);
+        return Optional.ofNullable(this.routingRegistryName);
     }
 
-    public ExpressRouteCircuitPeeringConfigResponse(
-        @Nullable List<String> advertisedCommunities,
-        @Nullable List<String> advertisedPublicPrefixes,
-        String advertisedPublicPrefixesState,
-        @Nullable Integer customerASN,
-        @Nullable Integer legacyMode,
-        @Nullable String routingRegistryName) {
-        this.advertisedCommunities = advertisedCommunities;
-        this.advertisedPublicPrefixes = advertisedPublicPrefixes;
-        this.advertisedPublicPrefixesState = Objects.requireNonNull(advertisedPublicPrefixesState, "expected parameter 'advertisedPublicPrefixesState' to be non-null");
-        this.customerASN = customerASN;
-        this.legacyMode = legacyMode;
-        this.routingRegistryName = routingRegistryName;
-    }
+    private ExpressRouteCircuitPeeringConfigResponse() {}
 
-    private ExpressRouteCircuitPeeringConfigResponse() {
-        this.advertisedCommunities = List.of();
-        this.advertisedPublicPrefixes = List.of();
-        this.advertisedPublicPrefixesState = null;
-        this.customerASN = null;
-        this.legacyMode = null;
-        this.routingRegistryName = null;
+    private ExpressRouteCircuitPeeringConfigResponse(ExpressRouteCircuitPeeringConfigResponse $) {
+        this.advertisedCommunities = $.advertisedCommunities;
+        this.advertisedPublicPrefixes = $.advertisedPublicPrefixes;
+        this.advertisedPublicPrefixesState = $.advertisedPublicPrefixesState;
+        this.customerASN = $.customerASN;
+        this.legacyMode = $.legacyMode;
+        this.routingRegistryName = $.routingRegistryName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ExpressRouteCircuitPeeringConfigResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<String> advertisedCommunities;
-        private @Nullable List<String> advertisedPublicPrefixes;
-        private String advertisedPublicPrefixesState;
-        private @Nullable Integer customerASN;
-        private @Nullable Integer legacyMode;
-        private @Nullable String routingRegistryName;
+        private ExpressRouteCircuitPeeringConfigResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ExpressRouteCircuitPeeringConfigResponse();
         }
 
         public Builder(ExpressRouteCircuitPeeringConfigResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.advertisedCommunities = defaults.advertisedCommunities;
-    	      this.advertisedPublicPrefixes = defaults.advertisedPublicPrefixes;
-    	      this.advertisedPublicPrefixesState = defaults.advertisedPublicPrefixesState;
-    	      this.customerASN = defaults.customerASN;
-    	      this.legacyMode = defaults.legacyMode;
-    	      this.routingRegistryName = defaults.routingRegistryName;
+            $ = new ExpressRouteCircuitPeeringConfigResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder advertisedCommunities(@Nullable List<String> advertisedCommunities) {
-            this.advertisedCommunities = advertisedCommunities;
+            $.advertisedCommunities = advertisedCommunities;
             return this;
         }
+
         public Builder advertisedCommunities(String... advertisedCommunities) {
             return advertisedCommunities(List.of(advertisedCommunities));
         }
+
         public Builder advertisedPublicPrefixes(@Nullable List<String> advertisedPublicPrefixes) {
-            this.advertisedPublicPrefixes = advertisedPublicPrefixes;
+            $.advertisedPublicPrefixes = advertisedPublicPrefixes;
             return this;
         }
+
         public Builder advertisedPublicPrefixes(String... advertisedPublicPrefixes) {
             return advertisedPublicPrefixes(List.of(advertisedPublicPrefixes));
         }
+
         public Builder advertisedPublicPrefixesState(String advertisedPublicPrefixesState) {
-            this.advertisedPublicPrefixesState = Objects.requireNonNull(advertisedPublicPrefixesState);
+            $.advertisedPublicPrefixesState = advertisedPublicPrefixesState;
             return this;
         }
+
         public Builder customerASN(@Nullable Integer customerASN) {
-            this.customerASN = customerASN;
+            $.customerASN = customerASN;
             return this;
         }
+
         public Builder legacyMode(@Nullable Integer legacyMode) {
-            this.legacyMode = legacyMode;
+            $.legacyMode = legacyMode;
             return this;
         }
+
         public Builder routingRegistryName(@Nullable String routingRegistryName) {
-            this.routingRegistryName = routingRegistryName;
+            $.routingRegistryName = routingRegistryName;
             return this;
-        }        public ExpressRouteCircuitPeeringConfigResponse build() {
-            return new ExpressRouteCircuitPeeringConfigResponse(advertisedCommunities, advertisedPublicPrefixes, advertisedPublicPrefixesState, customerASN, legacyMode, routingRegistryName);
+        }
+
+        public ExpressRouteCircuitPeeringConfigResponse build() {
+            $.advertisedPublicPrefixesState = Objects.requireNonNull($.advertisedPublicPrefixesState, "expected parameter 'advertisedPublicPrefixesState' to be non-null");
+            return $;
         }
     }
+
 }

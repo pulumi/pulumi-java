@@ -5,10 +5,10 @@ package com.pulumi.googlenative.dlp_v2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,52 +25,52 @@ public final class GooglePrivacyDlpV2WordListArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="words")
-      private final @Nullable Output<List<String>> words;
+    private @Nullable Output<List<String>> words;
 
-    public Output<List<String>> words() {
-        return this.words == null ? Codegen.empty() : this.words;
+    public Optional<Output<List<String>>> words() {
+        return Optional.ofNullable(this.words);
     }
 
-    public GooglePrivacyDlpV2WordListArgs(@Nullable Output<List<String>> words) {
-        this.words = words;
-    }
+    private GooglePrivacyDlpV2WordListArgs() {}
 
-    private GooglePrivacyDlpV2WordListArgs() {
-        this.words = Codegen.empty();
+    private GooglePrivacyDlpV2WordListArgs(GooglePrivacyDlpV2WordListArgs $) {
+        this.words = $.words;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GooglePrivacyDlpV2WordListArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> words;
+        private GooglePrivacyDlpV2WordListArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GooglePrivacyDlpV2WordListArgs();
         }
 
         public Builder(GooglePrivacyDlpV2WordListArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.words = defaults.words;
+            $ = new GooglePrivacyDlpV2WordListArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder words(@Nullable Output<List<String>> words) {
-            this.words = words;
+            $.words = words;
             return this;
         }
-        public Builder words(@Nullable List<String> words) {
-            this.words = Codegen.ofNullable(words);
-            return this;
+
+        public Builder words(List<String> words) {
+            return words(Output.of(words));
         }
+
         public Builder words(String... words) {
             return words(List.of(words));
-        }        public GooglePrivacyDlpV2WordListArgs build() {
-            return new GooglePrivacyDlpV2WordListArgs(words);
+        }
+
+        public GooglePrivacyDlpV2WordListArgs build() {
+            return $;
         }
     }
+
 }

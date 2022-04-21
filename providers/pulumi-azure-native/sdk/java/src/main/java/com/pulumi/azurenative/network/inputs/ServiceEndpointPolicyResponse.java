@@ -27,7 +27,7 @@ public final class ServiceEndpointPolicyResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="etag", required=true)
-      private final String etag;
+    private String etag;
 
     public String etag() {
         return this.etag;
@@ -38,10 +38,10 @@ public final class ServiceEndpointPolicyResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="id")
-      private final @Nullable String id;
+    private @Nullable String id;
 
     public Optional<String> id() {
-        return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
+        return Optional.ofNullable(this.id);
     }
 
     /**
@@ -49,7 +49,7 @@ public final class ServiceEndpointPolicyResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="kind", required=true)
-      private final String kind;
+    private String kind;
 
     public String kind() {
         return this.kind;
@@ -60,10 +60,10 @@ public final class ServiceEndpointPolicyResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="location")
-      private final @Nullable String location;
+    private @Nullable String location;
 
     public Optional<String> location() {
-        return this.location == null ? Optional.empty() : Optional.ofNullable(this.location);
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -71,7 +71,7 @@ public final class ServiceEndpointPolicyResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -82,7 +82,7 @@ public final class ServiceEndpointPolicyResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="provisioningState", required=true)
-      private final String provisioningState;
+    private String provisioningState;
 
     public String provisioningState() {
         return this.provisioningState;
@@ -93,7 +93,7 @@ public final class ServiceEndpointPolicyResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="resourceGuid", required=true)
-      private final String resourceGuid;
+    private String resourceGuid;
 
     public String resourceGuid() {
         return this.resourceGuid;
@@ -104,10 +104,10 @@ public final class ServiceEndpointPolicyResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="serviceEndpointPolicyDefinitions")
-      private final @Nullable List<ServiceEndpointPolicyDefinitionResponse> serviceEndpointPolicyDefinitions;
+    private @Nullable List<ServiceEndpointPolicyDefinitionResponse> serviceEndpointPolicyDefinitions;
 
-    public List<ServiceEndpointPolicyDefinitionResponse> serviceEndpointPolicyDefinitions() {
-        return this.serviceEndpointPolicyDefinitions == null ? List.of() : this.serviceEndpointPolicyDefinitions;
+    public Optional<List<ServiceEndpointPolicyDefinitionResponse>> serviceEndpointPolicyDefinitions() {
+        return Optional.ofNullable(this.serviceEndpointPolicyDefinitions);
     }
 
     /**
@@ -115,7 +115,7 @@ public final class ServiceEndpointPolicyResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="subnets", required=true)
-      private final List<SubnetResponse> subnets;
+    private List<SubnetResponse> subnets;
 
     public List<SubnetResponse> subnets() {
         return this.subnets;
@@ -126,10 +126,10 @@ public final class ServiceEndpointPolicyResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="tags")
-      private final @Nullable Map<String,String> tags;
+    private @Nullable Map<String,String> tags;
 
-    public Map<String,String> tags() {
-        return this.tags == null ? Map.of() : this.tags;
+    public Optional<Map<String,String>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -137,142 +137,119 @@ public final class ServiceEndpointPolicyResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
     }
 
-    public ServiceEndpointPolicyResponse(
-        String etag,
-        @Nullable String id,
-        String kind,
-        @Nullable String location,
-        String name,
-        String provisioningState,
-        String resourceGuid,
-        @Nullable List<ServiceEndpointPolicyDefinitionResponse> serviceEndpointPolicyDefinitions,
-        List<SubnetResponse> subnets,
-        @Nullable Map<String,String> tags,
-        String type) {
-        this.etag = Objects.requireNonNull(etag, "expected parameter 'etag' to be non-null");
-        this.id = id;
-        this.kind = Objects.requireNonNull(kind, "expected parameter 'kind' to be non-null");
-        this.location = location;
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.provisioningState = Objects.requireNonNull(provisioningState, "expected parameter 'provisioningState' to be non-null");
-        this.resourceGuid = Objects.requireNonNull(resourceGuid, "expected parameter 'resourceGuid' to be non-null");
-        this.serviceEndpointPolicyDefinitions = serviceEndpointPolicyDefinitions;
-        this.subnets = Objects.requireNonNull(subnets, "expected parameter 'subnets' to be non-null");
-        this.tags = tags;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private ServiceEndpointPolicyResponse() {}
 
-    private ServiceEndpointPolicyResponse() {
-        this.etag = null;
-        this.id = null;
-        this.kind = null;
-        this.location = null;
-        this.name = null;
-        this.provisioningState = null;
-        this.resourceGuid = null;
-        this.serviceEndpointPolicyDefinitions = List.of();
-        this.subnets = List.of();
-        this.tags = Map.of();
-        this.type = null;
+    private ServiceEndpointPolicyResponse(ServiceEndpointPolicyResponse $) {
+        this.etag = $.etag;
+        this.id = $.id;
+        this.kind = $.kind;
+        this.location = $.location;
+        this.name = $.name;
+        this.provisioningState = $.provisioningState;
+        this.resourceGuid = $.resourceGuid;
+        this.serviceEndpointPolicyDefinitions = $.serviceEndpointPolicyDefinitions;
+        this.subnets = $.subnets;
+        this.tags = $.tags;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ServiceEndpointPolicyResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String etag;
-        private @Nullable String id;
-        private String kind;
-        private @Nullable String location;
-        private String name;
-        private String provisioningState;
-        private String resourceGuid;
-        private @Nullable List<ServiceEndpointPolicyDefinitionResponse> serviceEndpointPolicyDefinitions;
-        private List<SubnetResponse> subnets;
-        private @Nullable Map<String,String> tags;
-        private String type;
+        private ServiceEndpointPolicyResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ServiceEndpointPolicyResponse();
         }
 
         public Builder(ServiceEndpointPolicyResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.etag = defaults.etag;
-    	      this.id = defaults.id;
-    	      this.kind = defaults.kind;
-    	      this.location = defaults.location;
-    	      this.name = defaults.name;
-    	      this.provisioningState = defaults.provisioningState;
-    	      this.resourceGuid = defaults.resourceGuid;
-    	      this.serviceEndpointPolicyDefinitions = defaults.serviceEndpointPolicyDefinitions;
-    	      this.subnets = defaults.subnets;
-    	      this.tags = defaults.tags;
-    	      this.type = defaults.type;
+            $ = new ServiceEndpointPolicyResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder etag(String etag) {
-            this.etag = Objects.requireNonNull(etag);
+            $.etag = etag;
             return this;
         }
+
         public Builder id(@Nullable String id) {
-            this.id = id;
+            $.id = id;
             return this;
         }
+
         public Builder kind(String kind) {
-            this.kind = Objects.requireNonNull(kind);
+            $.kind = kind;
             return this;
         }
+
         public Builder location(@Nullable String location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder provisioningState(String provisioningState) {
-            this.provisioningState = Objects.requireNonNull(provisioningState);
+            $.provisioningState = provisioningState;
             return this;
         }
+
         public Builder resourceGuid(String resourceGuid) {
-            this.resourceGuid = Objects.requireNonNull(resourceGuid);
+            $.resourceGuid = resourceGuid;
             return this;
         }
+
         public Builder serviceEndpointPolicyDefinitions(@Nullable List<ServiceEndpointPolicyDefinitionResponse> serviceEndpointPolicyDefinitions) {
-            this.serviceEndpointPolicyDefinitions = serviceEndpointPolicyDefinitions;
+            $.serviceEndpointPolicyDefinitions = serviceEndpointPolicyDefinitions;
             return this;
         }
+
         public Builder serviceEndpointPolicyDefinitions(ServiceEndpointPolicyDefinitionResponse... serviceEndpointPolicyDefinitions) {
             return serviceEndpointPolicyDefinitions(List.of(serviceEndpointPolicyDefinitions));
         }
+
         public Builder subnets(List<SubnetResponse> subnets) {
-            this.subnets = Objects.requireNonNull(subnets);
+            $.subnets = subnets;
             return this;
         }
+
         public Builder subnets(SubnetResponse... subnets) {
             return subnets(List.of(subnets));
         }
+
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
-        }        public ServiceEndpointPolicyResponse build() {
-            return new ServiceEndpointPolicyResponse(etag, id, kind, location, name, provisioningState, resourceGuid, serviceEndpointPolicyDefinitions, subnets, tags, type);
+        }
+
+        public ServiceEndpointPolicyResponse build() {
+            $.etag = Objects.requireNonNull($.etag, "expected parameter 'etag' to be non-null");
+            $.kind = Objects.requireNonNull($.kind, "expected parameter 'kind' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.provisioningState = Objects.requireNonNull($.provisioningState, "expected parameter 'provisioningState' to be non-null");
+            $.resourceGuid = Objects.requireNonNull($.resourceGuid, "expected parameter 'resourceGuid' to be non-null");
+            $.subnets = Objects.requireNonNull($.subnets, "expected parameter 'subnets' to be non-null");
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

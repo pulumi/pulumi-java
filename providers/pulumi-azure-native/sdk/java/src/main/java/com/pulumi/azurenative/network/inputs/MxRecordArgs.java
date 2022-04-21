@@ -5,10 +5,10 @@ package com.pulumi.azurenative.network.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class MxRecordArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="exchange")
-      private final @Nullable Output<String> exchange;
+    private @Nullable Output<String> exchange;
 
-    public Output<String> exchange() {
-        return this.exchange == null ? Codegen.empty() : this.exchange;
+    public Optional<Output<String>> exchange() {
+        return Optional.ofNullable(this.exchange);
     }
 
     /**
@@ -36,63 +36,58 @@ public final class MxRecordArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="preference")
-      private final @Nullable Output<Integer> preference;
+    private @Nullable Output<Integer> preference;
 
-    public Output<Integer> preference() {
-        return this.preference == null ? Codegen.empty() : this.preference;
+    public Optional<Output<Integer>> preference() {
+        return Optional.ofNullable(this.preference);
     }
 
-    public MxRecordArgs(
-        @Nullable Output<String> exchange,
-        @Nullable Output<Integer> preference) {
-        this.exchange = exchange;
-        this.preference = preference;
-    }
+    private MxRecordArgs() {}
 
-    private MxRecordArgs() {
-        this.exchange = Codegen.empty();
-        this.preference = Codegen.empty();
+    private MxRecordArgs(MxRecordArgs $) {
+        this.exchange = $.exchange;
+        this.preference = $.preference;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MxRecordArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> exchange;
-        private @Nullable Output<Integer> preference;
+        private MxRecordArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new MxRecordArgs();
         }
 
         public Builder(MxRecordArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.exchange = defaults.exchange;
-    	      this.preference = defaults.preference;
+            $ = new MxRecordArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder exchange(@Nullable Output<String> exchange) {
-            this.exchange = exchange;
+            $.exchange = exchange;
             return this;
         }
-        public Builder exchange(@Nullable String exchange) {
-            this.exchange = Codegen.ofNullable(exchange);
-            return this;
+
+        public Builder exchange(String exchange) {
+            return exchange(Output.of(exchange));
         }
+
         public Builder preference(@Nullable Output<Integer> preference) {
-            this.preference = preference;
+            $.preference = preference;
             return this;
         }
-        public Builder preference(@Nullable Integer preference) {
-            this.preference = Codegen.ofNullable(preference);
-            return this;
-        }        public MxRecordArgs build() {
-            return new MxRecordArgs(exchange, preference);
+
+        public Builder preference(Integer preference) {
+            return preference(Output.of(preference));
+        }
+
+        public MxRecordArgs build() {
+            return $;
         }
     }
+
 }

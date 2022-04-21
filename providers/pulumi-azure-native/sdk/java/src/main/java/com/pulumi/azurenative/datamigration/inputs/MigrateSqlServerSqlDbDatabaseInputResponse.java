@@ -25,10 +25,10 @@ public final class MigrateSqlServerSqlDbDatabaseInputResponse extends com.pulumi
      * 
      */
     @Import(name="makeSourceDbReadOnly")
-      private final @Nullable Boolean makeSourceDbReadOnly;
+    private @Nullable Boolean makeSourceDbReadOnly;
 
     public Optional<Boolean> makeSourceDbReadOnly() {
-        return this.makeSourceDbReadOnly == null ? Optional.empty() : Optional.ofNullable(this.makeSourceDbReadOnly);
+        return Optional.ofNullable(this.makeSourceDbReadOnly);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class MigrateSqlServerSqlDbDatabaseInputResponse extends com.pulumi
      * 
      */
     @Import(name="name")
-      private final @Nullable String name;
+    private @Nullable String name;
 
     public Optional<String> name() {
-        return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class MigrateSqlServerSqlDbDatabaseInputResponse extends com.pulumi
      * 
      */
     @Import(name="tableMap")
-      private final @Nullable Map<String,String> tableMap;
+    private @Nullable Map<String,String> tableMap;
 
-    public Map<String,String> tableMap() {
-        return this.tableMap == null ? Map.of() : this.tableMap;
+    public Optional<Map<String,String>> tableMap() {
+        return Optional.ofNullable(this.tableMap);
     }
 
     /**
@@ -58,73 +58,62 @@ public final class MigrateSqlServerSqlDbDatabaseInputResponse extends com.pulumi
      * 
      */
     @Import(name="targetDatabaseName")
-      private final @Nullable String targetDatabaseName;
+    private @Nullable String targetDatabaseName;
 
     public Optional<String> targetDatabaseName() {
-        return this.targetDatabaseName == null ? Optional.empty() : Optional.ofNullable(this.targetDatabaseName);
+        return Optional.ofNullable(this.targetDatabaseName);
     }
 
-    public MigrateSqlServerSqlDbDatabaseInputResponse(
-        @Nullable Boolean makeSourceDbReadOnly,
-        @Nullable String name,
-        @Nullable Map<String,String> tableMap,
-        @Nullable String targetDatabaseName) {
-        this.makeSourceDbReadOnly = makeSourceDbReadOnly;
-        this.name = name;
-        this.tableMap = tableMap;
-        this.targetDatabaseName = targetDatabaseName;
-    }
+    private MigrateSqlServerSqlDbDatabaseInputResponse() {}
 
-    private MigrateSqlServerSqlDbDatabaseInputResponse() {
-        this.makeSourceDbReadOnly = null;
-        this.name = null;
-        this.tableMap = Map.of();
-        this.targetDatabaseName = null;
+    private MigrateSqlServerSqlDbDatabaseInputResponse(MigrateSqlServerSqlDbDatabaseInputResponse $) {
+        this.makeSourceDbReadOnly = $.makeSourceDbReadOnly;
+        this.name = $.name;
+        this.tableMap = $.tableMap;
+        this.targetDatabaseName = $.targetDatabaseName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MigrateSqlServerSqlDbDatabaseInputResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Boolean makeSourceDbReadOnly;
-        private @Nullable String name;
-        private @Nullable Map<String,String> tableMap;
-        private @Nullable String targetDatabaseName;
+        private MigrateSqlServerSqlDbDatabaseInputResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new MigrateSqlServerSqlDbDatabaseInputResponse();
         }
 
         public Builder(MigrateSqlServerSqlDbDatabaseInputResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.makeSourceDbReadOnly = defaults.makeSourceDbReadOnly;
-    	      this.name = defaults.name;
-    	      this.tableMap = defaults.tableMap;
-    	      this.targetDatabaseName = defaults.targetDatabaseName;
+            $ = new MigrateSqlServerSqlDbDatabaseInputResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder makeSourceDbReadOnly(@Nullable Boolean makeSourceDbReadOnly) {
-            this.makeSourceDbReadOnly = makeSourceDbReadOnly;
+            $.makeSourceDbReadOnly = makeSourceDbReadOnly;
             return this;
         }
+
         public Builder name(@Nullable String name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
+
         public Builder tableMap(@Nullable Map<String,String> tableMap) {
-            this.tableMap = tableMap;
+            $.tableMap = tableMap;
             return this;
         }
+
         public Builder targetDatabaseName(@Nullable String targetDatabaseName) {
-            this.targetDatabaseName = targetDatabaseName;
+            $.targetDatabaseName = targetDatabaseName;
             return this;
-        }        public MigrateSqlServerSqlDbDatabaseInputResponse build() {
-            return new MigrateSqlServerSqlDbDatabaseInputResponse(makeSourceDbReadOnly, name, tableMap, targetDatabaseName);
+        }
+
+        public MigrateSqlServerSqlDbDatabaseInputResponse build() {
+            return $;
         }
     }
+
 }

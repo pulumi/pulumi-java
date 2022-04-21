@@ -22,7 +22,7 @@ public final class ConsistentHashLoadBalancerSettingsResponse extends com.pulumi
      * 
      */
     @Import(name="httpCookie", required=true)
-      private final ConsistentHashLoadBalancerSettingsHttpCookieResponse httpCookie;
+    private ConsistentHashLoadBalancerSettingsHttpCookieResponse httpCookie;
 
     public ConsistentHashLoadBalancerSettingsHttpCookieResponse httpCookie() {
         return this.httpCookie;
@@ -33,7 +33,7 @@ public final class ConsistentHashLoadBalancerSettingsResponse extends com.pulumi
      * 
      */
     @Import(name="httpHeaderName", required=true)
-      private final String httpHeaderName;
+    private String httpHeaderName;
 
     public String httpHeaderName() {
         return this.httpHeaderName;
@@ -44,64 +44,59 @@ public final class ConsistentHashLoadBalancerSettingsResponse extends com.pulumi
      * 
      */
     @Import(name="minimumRingSize", required=true)
-      private final String minimumRingSize;
+    private String minimumRingSize;
 
     public String minimumRingSize() {
         return this.minimumRingSize;
     }
 
-    public ConsistentHashLoadBalancerSettingsResponse(
-        ConsistentHashLoadBalancerSettingsHttpCookieResponse httpCookie,
-        String httpHeaderName,
-        String minimumRingSize) {
-        this.httpCookie = Objects.requireNonNull(httpCookie, "expected parameter 'httpCookie' to be non-null");
-        this.httpHeaderName = Objects.requireNonNull(httpHeaderName, "expected parameter 'httpHeaderName' to be non-null");
-        this.minimumRingSize = Objects.requireNonNull(minimumRingSize, "expected parameter 'minimumRingSize' to be non-null");
-    }
+    private ConsistentHashLoadBalancerSettingsResponse() {}
 
-    private ConsistentHashLoadBalancerSettingsResponse() {
-        this.httpCookie = null;
-        this.httpHeaderName = null;
-        this.minimumRingSize = null;
+    private ConsistentHashLoadBalancerSettingsResponse(ConsistentHashLoadBalancerSettingsResponse $) {
+        this.httpCookie = $.httpCookie;
+        this.httpHeaderName = $.httpHeaderName;
+        this.minimumRingSize = $.minimumRingSize;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ConsistentHashLoadBalancerSettingsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private ConsistentHashLoadBalancerSettingsHttpCookieResponse httpCookie;
-        private String httpHeaderName;
-        private String minimumRingSize;
+        private ConsistentHashLoadBalancerSettingsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ConsistentHashLoadBalancerSettingsResponse();
         }
 
         public Builder(ConsistentHashLoadBalancerSettingsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.httpCookie = defaults.httpCookie;
-    	      this.httpHeaderName = defaults.httpHeaderName;
-    	      this.minimumRingSize = defaults.minimumRingSize;
+            $ = new ConsistentHashLoadBalancerSettingsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder httpCookie(ConsistentHashLoadBalancerSettingsHttpCookieResponse httpCookie) {
-            this.httpCookie = Objects.requireNonNull(httpCookie);
+            $.httpCookie = httpCookie;
             return this;
         }
+
         public Builder httpHeaderName(String httpHeaderName) {
-            this.httpHeaderName = Objects.requireNonNull(httpHeaderName);
+            $.httpHeaderName = httpHeaderName;
             return this;
         }
+
         public Builder minimumRingSize(String minimumRingSize) {
-            this.minimumRingSize = Objects.requireNonNull(minimumRingSize);
+            $.minimumRingSize = minimumRingSize;
             return this;
-        }        public ConsistentHashLoadBalancerSettingsResponse build() {
-            return new ConsistentHashLoadBalancerSettingsResponse(httpCookie, httpHeaderName, minimumRingSize);
+        }
+
+        public ConsistentHashLoadBalancerSettingsResponse build() {
+            $.httpCookie = Objects.requireNonNull($.httpCookie, "expected parameter 'httpCookie' to be non-null");
+            $.httpHeaderName = Objects.requireNonNull($.httpHeaderName, "expected parameter 'httpHeaderName' to be non-null");
+            $.minimumRingSize = Objects.requireNonNull($.minimumRingSize, "expected parameter 'minimumRingSize' to be non-null");
+            return $;
         }
     }
+
 }

@@ -34,10 +34,10 @@ public final class PublicIPAddressResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="ddosSettings")
-      private final @Nullable DdosSettingsResponse ddosSettings;
+    private @Nullable DdosSettingsResponse ddosSettings;
 
     public Optional<DdosSettingsResponse> ddosSettings() {
-        return this.ddosSettings == null ? Optional.empty() : Optional.ofNullable(this.ddosSettings);
+        return Optional.ofNullable(this.ddosSettings);
     }
 
     /**
@@ -45,10 +45,10 @@ public final class PublicIPAddressResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="dnsSettings")
-      private final @Nullable PublicIPAddressDnsSettingsResponse dnsSettings;
+    private @Nullable PublicIPAddressDnsSettingsResponse dnsSettings;
 
     public Optional<PublicIPAddressDnsSettingsResponse> dnsSettings() {
-        return this.dnsSettings == null ? Optional.empty() : Optional.ofNullable(this.dnsSettings);
+        return Optional.ofNullable(this.dnsSettings);
     }
 
     /**
@@ -56,7 +56,7 @@ public final class PublicIPAddressResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="etag", required=true)
-      private final String etag;
+    private String etag;
 
     public String etag() {
         return this.etag;
@@ -67,10 +67,10 @@ public final class PublicIPAddressResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="extendedLocation")
-      private final @Nullable ExtendedLocationResponse extendedLocation;
+    private @Nullable ExtendedLocationResponse extendedLocation;
 
     public Optional<ExtendedLocationResponse> extendedLocation() {
-        return this.extendedLocation == null ? Optional.empty() : Optional.ofNullable(this.extendedLocation);
+        return Optional.ofNullable(this.extendedLocation);
     }
 
     /**
@@ -78,10 +78,10 @@ public final class PublicIPAddressResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="id")
-      private final @Nullable String id;
+    private @Nullable String id;
 
     public Optional<String> id() {
-        return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
+        return Optional.ofNullable(this.id);
     }
 
     /**
@@ -89,10 +89,10 @@ public final class PublicIPAddressResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="idleTimeoutInMinutes")
-      private final @Nullable Integer idleTimeoutInMinutes;
+    private @Nullable Integer idleTimeoutInMinutes;
 
     public Optional<Integer> idleTimeoutInMinutes() {
-        return this.idleTimeoutInMinutes == null ? Optional.empty() : Optional.ofNullable(this.idleTimeoutInMinutes);
+        return Optional.ofNullable(this.idleTimeoutInMinutes);
     }
 
     /**
@@ -100,10 +100,10 @@ public final class PublicIPAddressResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="ipAddress")
-      private final @Nullable String ipAddress;
+    private @Nullable String ipAddress;
 
     public Optional<String> ipAddress() {
-        return this.ipAddress == null ? Optional.empty() : Optional.ofNullable(this.ipAddress);
+        return Optional.ofNullable(this.ipAddress);
     }
 
     /**
@@ -111,7 +111,7 @@ public final class PublicIPAddressResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="ipConfiguration", required=true)
-      private final IPConfigurationResponse ipConfiguration;
+    private IPConfigurationResponse ipConfiguration;
 
     public IPConfigurationResponse ipConfiguration() {
         return this.ipConfiguration;
@@ -122,10 +122,10 @@ public final class PublicIPAddressResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="ipTags")
-      private final @Nullable List<IpTagResponse> ipTags;
+    private @Nullable List<IpTagResponse> ipTags;
 
-    public List<IpTagResponse> ipTags() {
-        return this.ipTags == null ? List.of() : this.ipTags;
+    public Optional<List<IpTagResponse>> ipTags() {
+        return Optional.ofNullable(this.ipTags);
     }
 
     /**
@@ -133,10 +133,10 @@ public final class PublicIPAddressResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="linkedPublicIPAddress")
-      private final @Nullable PublicIPAddressResponse linkedPublicIPAddress;
+    private @Nullable PublicIPAddressResponse linkedPublicIPAddress;
 
     public Optional<PublicIPAddressResponse> linkedPublicIPAddress() {
-        return this.linkedPublicIPAddress == null ? Optional.empty() : Optional.ofNullable(this.linkedPublicIPAddress);
+        return Optional.ofNullable(this.linkedPublicIPAddress);
     }
 
     /**
@@ -144,10 +144,10 @@ public final class PublicIPAddressResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="location")
-      private final @Nullable String location;
+    private @Nullable String location;
 
     public Optional<String> location() {
-        return this.location == null ? Optional.empty() : Optional.ofNullable(this.location);
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -155,10 +155,10 @@ public final class PublicIPAddressResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="migrationPhase")
-      private final @Nullable String migrationPhase;
+    private @Nullable String migrationPhase;
 
     public Optional<String> migrationPhase() {
-        return this.migrationPhase == null ? Optional.empty() : Optional.ofNullable(this.migrationPhase);
+        return Optional.ofNullable(this.migrationPhase);
     }
 
     /**
@@ -166,7 +166,7 @@ public final class PublicIPAddressResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -177,10 +177,10 @@ public final class PublicIPAddressResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="natGateway")
-      private final @Nullable NatGatewayResponse natGateway;
+    private @Nullable NatGatewayResponse natGateway;
 
     public Optional<NatGatewayResponse> natGateway() {
-        return this.natGateway == null ? Optional.empty() : Optional.ofNullable(this.natGateway);
+        return Optional.ofNullable(this.natGateway);
     }
 
     /**
@@ -188,7 +188,7 @@ public final class PublicIPAddressResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="provisioningState", required=true)
-      private final String provisioningState;
+    private String provisioningState;
 
     public String provisioningState() {
         return this.provisioningState;
@@ -199,10 +199,10 @@ public final class PublicIPAddressResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="publicIPAddressVersion")
-      private final @Nullable String publicIPAddressVersion;
+    private @Nullable String publicIPAddressVersion;
 
     public Optional<String> publicIPAddressVersion() {
-        return this.publicIPAddressVersion == null ? Optional.empty() : Optional.ofNullable(this.publicIPAddressVersion);
+        return Optional.ofNullable(this.publicIPAddressVersion);
     }
 
     /**
@@ -210,10 +210,10 @@ public final class PublicIPAddressResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="publicIPAllocationMethod")
-      private final @Nullable String publicIPAllocationMethod;
+    private @Nullable String publicIPAllocationMethod;
 
     public Optional<String> publicIPAllocationMethod() {
-        return this.publicIPAllocationMethod == null ? Optional.empty() : Optional.ofNullable(this.publicIPAllocationMethod);
+        return Optional.ofNullable(this.publicIPAllocationMethod);
     }
 
     /**
@@ -221,10 +221,10 @@ public final class PublicIPAddressResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="publicIPPrefix")
-      private final @Nullable SubResourceResponse publicIPPrefix;
+    private @Nullable SubResourceResponse publicIPPrefix;
 
     public Optional<SubResourceResponse> publicIPPrefix() {
-        return this.publicIPPrefix == null ? Optional.empty() : Optional.ofNullable(this.publicIPPrefix);
+        return Optional.ofNullable(this.publicIPPrefix);
     }
 
     /**
@@ -232,7 +232,7 @@ public final class PublicIPAddressResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="resourceGuid", required=true)
-      private final String resourceGuid;
+    private String resourceGuid;
 
     public String resourceGuid() {
         return this.resourceGuid;
@@ -243,10 +243,10 @@ public final class PublicIPAddressResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="servicePublicIPAddress")
-      private final @Nullable PublicIPAddressResponse servicePublicIPAddress;
+    private @Nullable PublicIPAddressResponse servicePublicIPAddress;
 
     public Optional<PublicIPAddressResponse> servicePublicIPAddress() {
-        return this.servicePublicIPAddress == null ? Optional.empty() : Optional.ofNullable(this.servicePublicIPAddress);
+        return Optional.ofNullable(this.servicePublicIPAddress);
     }
 
     /**
@@ -254,10 +254,10 @@ public final class PublicIPAddressResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="sku")
-      private final @Nullable PublicIPAddressSkuResponse sku;
+    private @Nullable PublicIPAddressSkuResponse sku;
 
     public Optional<PublicIPAddressSkuResponse> sku() {
-        return this.sku == null ? Optional.empty() : Optional.ofNullable(this.sku);
+        return Optional.ofNullable(this.sku);
     }
 
     /**
@@ -265,10 +265,10 @@ public final class PublicIPAddressResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="tags")
-      private final @Nullable Map<String,String> tags;
+    private @Nullable Map<String,String> tags;
 
-    public Map<String,String> tags() {
-        return this.tags == null ? Map.of() : this.tags;
+    public Optional<Map<String,String>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -276,7 +276,7 @@ public final class PublicIPAddressResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
@@ -287,259 +287,196 @@ public final class PublicIPAddressResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="zones")
-      private final @Nullable List<String> zones;
+    private @Nullable List<String> zones;
 
-    public List<String> zones() {
-        return this.zones == null ? List.of() : this.zones;
+    public Optional<List<String>> zones() {
+        return Optional.ofNullable(this.zones);
     }
 
-    public PublicIPAddressResponse(
-        @Nullable DdosSettingsResponse ddosSettings,
-        @Nullable PublicIPAddressDnsSettingsResponse dnsSettings,
-        String etag,
-        @Nullable ExtendedLocationResponse extendedLocation,
-        @Nullable String id,
-        @Nullable Integer idleTimeoutInMinutes,
-        @Nullable String ipAddress,
-        IPConfigurationResponse ipConfiguration,
-        @Nullable List<IpTagResponse> ipTags,
-        @Nullable PublicIPAddressResponse linkedPublicIPAddress,
-        @Nullable String location,
-        @Nullable String migrationPhase,
-        String name,
-        @Nullable NatGatewayResponse natGateway,
-        String provisioningState,
-        @Nullable String publicIPAddressVersion,
-        @Nullable String publicIPAllocationMethod,
-        @Nullable SubResourceResponse publicIPPrefix,
-        String resourceGuid,
-        @Nullable PublicIPAddressResponse servicePublicIPAddress,
-        @Nullable PublicIPAddressSkuResponse sku,
-        @Nullable Map<String,String> tags,
-        String type,
-        @Nullable List<String> zones) {
-        this.ddosSettings = ddosSettings;
-        this.dnsSettings = dnsSettings;
-        this.etag = Objects.requireNonNull(etag, "expected parameter 'etag' to be non-null");
-        this.extendedLocation = extendedLocation;
-        this.id = id;
-        this.idleTimeoutInMinutes = idleTimeoutInMinutes;
-        this.ipAddress = ipAddress;
-        this.ipConfiguration = Objects.requireNonNull(ipConfiguration, "expected parameter 'ipConfiguration' to be non-null");
-        this.ipTags = ipTags;
-        this.linkedPublicIPAddress = linkedPublicIPAddress;
-        this.location = location;
-        this.migrationPhase = migrationPhase;
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.natGateway = natGateway;
-        this.provisioningState = Objects.requireNonNull(provisioningState, "expected parameter 'provisioningState' to be non-null");
-        this.publicIPAddressVersion = publicIPAddressVersion;
-        this.publicIPAllocationMethod = publicIPAllocationMethod;
-        this.publicIPPrefix = publicIPPrefix;
-        this.resourceGuid = Objects.requireNonNull(resourceGuid, "expected parameter 'resourceGuid' to be non-null");
-        this.servicePublicIPAddress = servicePublicIPAddress;
-        this.sku = sku;
-        this.tags = tags;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-        this.zones = zones;
-    }
+    private PublicIPAddressResponse() {}
 
-    private PublicIPAddressResponse() {
-        this.ddosSettings = null;
-        this.dnsSettings = null;
-        this.etag = null;
-        this.extendedLocation = null;
-        this.id = null;
-        this.idleTimeoutInMinutes = null;
-        this.ipAddress = null;
-        this.ipConfiguration = null;
-        this.ipTags = List.of();
-        this.linkedPublicIPAddress = null;
-        this.location = null;
-        this.migrationPhase = null;
-        this.name = null;
-        this.natGateway = null;
-        this.provisioningState = null;
-        this.publicIPAddressVersion = null;
-        this.publicIPAllocationMethod = null;
-        this.publicIPPrefix = null;
-        this.resourceGuid = null;
-        this.servicePublicIPAddress = null;
-        this.sku = null;
-        this.tags = Map.of();
-        this.type = null;
-        this.zones = List.of();
+    private PublicIPAddressResponse(PublicIPAddressResponse $) {
+        this.ddosSettings = $.ddosSettings;
+        this.dnsSettings = $.dnsSettings;
+        this.etag = $.etag;
+        this.extendedLocation = $.extendedLocation;
+        this.id = $.id;
+        this.idleTimeoutInMinutes = $.idleTimeoutInMinutes;
+        this.ipAddress = $.ipAddress;
+        this.ipConfiguration = $.ipConfiguration;
+        this.ipTags = $.ipTags;
+        this.linkedPublicIPAddress = $.linkedPublicIPAddress;
+        this.location = $.location;
+        this.migrationPhase = $.migrationPhase;
+        this.name = $.name;
+        this.natGateway = $.natGateway;
+        this.provisioningState = $.provisioningState;
+        this.publicIPAddressVersion = $.publicIPAddressVersion;
+        this.publicIPAllocationMethod = $.publicIPAllocationMethod;
+        this.publicIPPrefix = $.publicIPPrefix;
+        this.resourceGuid = $.resourceGuid;
+        this.servicePublicIPAddress = $.servicePublicIPAddress;
+        this.sku = $.sku;
+        this.tags = $.tags;
+        this.type = $.type;
+        this.zones = $.zones;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PublicIPAddressResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable DdosSettingsResponse ddosSettings;
-        private @Nullable PublicIPAddressDnsSettingsResponse dnsSettings;
-        private String etag;
-        private @Nullable ExtendedLocationResponse extendedLocation;
-        private @Nullable String id;
-        private @Nullable Integer idleTimeoutInMinutes;
-        private @Nullable String ipAddress;
-        private IPConfigurationResponse ipConfiguration;
-        private @Nullable List<IpTagResponse> ipTags;
-        private @Nullable PublicIPAddressResponse linkedPublicIPAddress;
-        private @Nullable String location;
-        private @Nullable String migrationPhase;
-        private String name;
-        private @Nullable NatGatewayResponse natGateway;
-        private String provisioningState;
-        private @Nullable String publicIPAddressVersion;
-        private @Nullable String publicIPAllocationMethod;
-        private @Nullable SubResourceResponse publicIPPrefix;
-        private String resourceGuid;
-        private @Nullable PublicIPAddressResponse servicePublicIPAddress;
-        private @Nullable PublicIPAddressSkuResponse sku;
-        private @Nullable Map<String,String> tags;
-        private String type;
-        private @Nullable List<String> zones;
+        private PublicIPAddressResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new PublicIPAddressResponse();
         }
 
         public Builder(PublicIPAddressResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.ddosSettings = defaults.ddosSettings;
-    	      this.dnsSettings = defaults.dnsSettings;
-    	      this.etag = defaults.etag;
-    	      this.extendedLocation = defaults.extendedLocation;
-    	      this.id = defaults.id;
-    	      this.idleTimeoutInMinutes = defaults.idleTimeoutInMinutes;
-    	      this.ipAddress = defaults.ipAddress;
-    	      this.ipConfiguration = defaults.ipConfiguration;
-    	      this.ipTags = defaults.ipTags;
-    	      this.linkedPublicIPAddress = defaults.linkedPublicIPAddress;
-    	      this.location = defaults.location;
-    	      this.migrationPhase = defaults.migrationPhase;
-    	      this.name = defaults.name;
-    	      this.natGateway = defaults.natGateway;
-    	      this.provisioningState = defaults.provisioningState;
-    	      this.publicIPAddressVersion = defaults.publicIPAddressVersion;
-    	      this.publicIPAllocationMethod = defaults.publicIPAllocationMethod;
-    	      this.publicIPPrefix = defaults.publicIPPrefix;
-    	      this.resourceGuid = defaults.resourceGuid;
-    	      this.servicePublicIPAddress = defaults.servicePublicIPAddress;
-    	      this.sku = defaults.sku;
-    	      this.tags = defaults.tags;
-    	      this.type = defaults.type;
-    	      this.zones = defaults.zones;
+            $ = new PublicIPAddressResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder ddosSettings(@Nullable DdosSettingsResponse ddosSettings) {
-            this.ddosSettings = ddosSettings;
+            $.ddosSettings = ddosSettings;
             return this;
         }
+
         public Builder dnsSettings(@Nullable PublicIPAddressDnsSettingsResponse dnsSettings) {
-            this.dnsSettings = dnsSettings;
+            $.dnsSettings = dnsSettings;
             return this;
         }
+
         public Builder etag(String etag) {
-            this.etag = Objects.requireNonNull(etag);
+            $.etag = etag;
             return this;
         }
+
         public Builder extendedLocation(@Nullable ExtendedLocationResponse extendedLocation) {
-            this.extendedLocation = extendedLocation;
+            $.extendedLocation = extendedLocation;
             return this;
         }
+
         public Builder id(@Nullable String id) {
-            this.id = id;
+            $.id = id;
             return this;
         }
+
         public Builder idleTimeoutInMinutes(@Nullable Integer idleTimeoutInMinutes) {
-            this.idleTimeoutInMinutes = idleTimeoutInMinutes;
+            $.idleTimeoutInMinutes = idleTimeoutInMinutes;
             return this;
         }
+
         public Builder ipAddress(@Nullable String ipAddress) {
-            this.ipAddress = ipAddress;
+            $.ipAddress = ipAddress;
             return this;
         }
+
         public Builder ipConfiguration(IPConfigurationResponse ipConfiguration) {
-            this.ipConfiguration = Objects.requireNonNull(ipConfiguration);
+            $.ipConfiguration = ipConfiguration;
             return this;
         }
+
         public Builder ipTags(@Nullable List<IpTagResponse> ipTags) {
-            this.ipTags = ipTags;
+            $.ipTags = ipTags;
             return this;
         }
+
         public Builder ipTags(IpTagResponse... ipTags) {
             return ipTags(List.of(ipTags));
         }
+
         public Builder linkedPublicIPAddress(@Nullable PublicIPAddressResponse linkedPublicIPAddress) {
-            this.linkedPublicIPAddress = linkedPublicIPAddress;
+            $.linkedPublicIPAddress = linkedPublicIPAddress;
             return this;
         }
+
         public Builder location(@Nullable String location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
+
         public Builder migrationPhase(@Nullable String migrationPhase) {
-            this.migrationPhase = migrationPhase;
+            $.migrationPhase = migrationPhase;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder natGateway(@Nullable NatGatewayResponse natGateway) {
-            this.natGateway = natGateway;
+            $.natGateway = natGateway;
             return this;
         }
+
         public Builder provisioningState(String provisioningState) {
-            this.provisioningState = Objects.requireNonNull(provisioningState);
+            $.provisioningState = provisioningState;
             return this;
         }
+
         public Builder publicIPAddressVersion(@Nullable String publicIPAddressVersion) {
-            this.publicIPAddressVersion = publicIPAddressVersion;
+            $.publicIPAddressVersion = publicIPAddressVersion;
             return this;
         }
+
         public Builder publicIPAllocationMethod(@Nullable String publicIPAllocationMethod) {
-            this.publicIPAllocationMethod = publicIPAllocationMethod;
+            $.publicIPAllocationMethod = publicIPAllocationMethod;
             return this;
         }
+
         public Builder publicIPPrefix(@Nullable SubResourceResponse publicIPPrefix) {
-            this.publicIPPrefix = publicIPPrefix;
+            $.publicIPPrefix = publicIPPrefix;
             return this;
         }
+
         public Builder resourceGuid(String resourceGuid) {
-            this.resourceGuid = Objects.requireNonNull(resourceGuid);
+            $.resourceGuid = resourceGuid;
             return this;
         }
+
         public Builder servicePublicIPAddress(@Nullable PublicIPAddressResponse servicePublicIPAddress) {
-            this.servicePublicIPAddress = servicePublicIPAddress;
+            $.servicePublicIPAddress = servicePublicIPAddress;
             return this;
         }
+
         public Builder sku(@Nullable PublicIPAddressSkuResponse sku) {
-            this.sku = sku;
+            $.sku = sku;
             return this;
         }
+
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder zones(@Nullable List<String> zones) {
-            this.zones = zones;
+            $.zones = zones;
             return this;
         }
+
         public Builder zones(String... zones) {
             return zones(List.of(zones));
-        }        public PublicIPAddressResponse build() {
-            return new PublicIPAddressResponse(ddosSettings, dnsSettings, etag, extendedLocation, id, idleTimeoutInMinutes, ipAddress, ipConfiguration, ipTags, linkedPublicIPAddress, location, migrationPhase, name, natGateway, provisioningState, publicIPAddressVersion, publicIPAllocationMethod, publicIPPrefix, resourceGuid, servicePublicIPAddress, sku, tags, type, zones);
+        }
+
+        public PublicIPAddressResponse build() {
+            $.etag = Objects.requireNonNull($.etag, "expected parameter 'etag' to be non-null");
+            $.ipConfiguration = Objects.requireNonNull($.ipConfiguration, "expected parameter 'ipConfiguration' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.provisioningState = Objects.requireNonNull($.provisioningState, "expected parameter 'provisioningState' to be non-null");
+            $.resourceGuid = Objects.requireNonNull($.resourceGuid, "expected parameter 'resourceGuid' to be non-null");
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

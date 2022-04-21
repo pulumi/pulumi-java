@@ -5,11 +5,11 @@ package com.pulumi.googlenative.datastream_v1alpha1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.datastream_v1alpha1.inputs.OracleColumnArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class OracleTableArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="oracleColumns")
-      private final @Nullable Output<List<OracleColumnArgs>> oracleColumns;
+    private @Nullable Output<List<OracleColumnArgs>> oracleColumns;
 
-    public Output<List<OracleColumnArgs>> oracleColumns() {
-        return this.oracleColumns == null ? Codegen.empty() : this.oracleColumns;
+    public Optional<Output<List<OracleColumnArgs>>> oracleColumns() {
+        return Optional.ofNullable(this.oracleColumns);
     }
 
     /**
@@ -37,66 +37,62 @@ public final class OracleTableArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tableName")
-      private final @Nullable Output<String> tableName;
+    private @Nullable Output<String> tableName;
 
-    public Output<String> tableName() {
-        return this.tableName == null ? Codegen.empty() : this.tableName;
+    public Optional<Output<String>> tableName() {
+        return Optional.ofNullable(this.tableName);
     }
 
-    public OracleTableArgs(
-        @Nullable Output<List<OracleColumnArgs>> oracleColumns,
-        @Nullable Output<String> tableName) {
-        this.oracleColumns = oracleColumns;
-        this.tableName = tableName;
-    }
+    private OracleTableArgs() {}
 
-    private OracleTableArgs() {
-        this.oracleColumns = Codegen.empty();
-        this.tableName = Codegen.empty();
+    private OracleTableArgs(OracleTableArgs $) {
+        this.oracleColumns = $.oracleColumns;
+        this.tableName = $.tableName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(OracleTableArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<OracleColumnArgs>> oracleColumns;
-        private @Nullable Output<String> tableName;
+        private OracleTableArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new OracleTableArgs();
         }
 
         public Builder(OracleTableArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.oracleColumns = defaults.oracleColumns;
-    	      this.tableName = defaults.tableName;
+            $ = new OracleTableArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder oracleColumns(@Nullable Output<List<OracleColumnArgs>> oracleColumns) {
-            this.oracleColumns = oracleColumns;
+            $.oracleColumns = oracleColumns;
             return this;
         }
-        public Builder oracleColumns(@Nullable List<OracleColumnArgs> oracleColumns) {
-            this.oracleColumns = Codegen.ofNullable(oracleColumns);
-            return this;
+
+        public Builder oracleColumns(List<OracleColumnArgs> oracleColumns) {
+            return oracleColumns(Output.of(oracleColumns));
         }
+
         public Builder oracleColumns(OracleColumnArgs... oracleColumns) {
             return oracleColumns(List.of(oracleColumns));
         }
+
         public Builder tableName(@Nullable Output<String> tableName) {
-            this.tableName = tableName;
+            $.tableName = tableName;
             return this;
         }
-        public Builder tableName(@Nullable String tableName) {
-            this.tableName = Codegen.ofNullable(tableName);
-            return this;
-        }        public OracleTableArgs build() {
-            return new OracleTableArgs(oracleColumns, tableName);
+
+        public Builder tableName(String tableName) {
+            return tableName(Output.of(tableName));
+        }
+
+        public OracleTableArgs build() {
+            return $;
         }
     }
+
 }

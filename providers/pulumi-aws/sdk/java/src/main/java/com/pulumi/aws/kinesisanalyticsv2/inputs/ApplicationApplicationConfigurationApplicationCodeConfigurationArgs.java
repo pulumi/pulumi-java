@@ -6,9 +6,9 @@ package com.pulumi.aws.kinesisanalyticsv2.inputs;
 import com.pulumi.aws.kinesisanalyticsv2.inputs.ApplicationApplicationConfigurationApplicationCodeConfigurationCodeContentArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class ApplicationApplicationConfigurationApplicationCodeConfigurati
      * 
      */
     @Import(name="codeContent")
-      private final @Nullable Output<ApplicationApplicationConfigurationApplicationCodeConfigurationCodeContentArgs> codeContent;
+    private @Nullable Output<ApplicationApplicationConfigurationApplicationCodeConfigurationCodeContentArgs> codeContent;
 
-    public Output<ApplicationApplicationConfigurationApplicationCodeConfigurationCodeContentArgs> codeContent() {
-        return this.codeContent == null ? Codegen.empty() : this.codeContent;
+    public Optional<Output<ApplicationApplicationConfigurationApplicationCodeConfigurationCodeContentArgs>> codeContent() {
+        return Optional.ofNullable(this.codeContent);
     }
 
     /**
@@ -32,63 +32,59 @@ public final class ApplicationApplicationConfigurationApplicationCodeConfigurati
      * 
      */
     @Import(name="codeContentType", required=true)
-      private final Output<String> codeContentType;
+    private Output<String> codeContentType;
 
     public Output<String> codeContentType() {
         return this.codeContentType;
     }
 
-    public ApplicationApplicationConfigurationApplicationCodeConfigurationArgs(
-        @Nullable Output<ApplicationApplicationConfigurationApplicationCodeConfigurationCodeContentArgs> codeContent,
-        Output<String> codeContentType) {
-        this.codeContent = codeContent;
-        this.codeContentType = Objects.requireNonNull(codeContentType, "expected parameter 'codeContentType' to be non-null");
-    }
+    private ApplicationApplicationConfigurationApplicationCodeConfigurationArgs() {}
 
-    private ApplicationApplicationConfigurationApplicationCodeConfigurationArgs() {
-        this.codeContent = Codegen.empty();
-        this.codeContentType = Codegen.empty();
+    private ApplicationApplicationConfigurationApplicationCodeConfigurationArgs(ApplicationApplicationConfigurationApplicationCodeConfigurationArgs $) {
+        this.codeContent = $.codeContent;
+        this.codeContentType = $.codeContentType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ApplicationApplicationConfigurationApplicationCodeConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<ApplicationApplicationConfigurationApplicationCodeConfigurationCodeContentArgs> codeContent;
-        private Output<String> codeContentType;
+        private ApplicationApplicationConfigurationApplicationCodeConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ApplicationApplicationConfigurationApplicationCodeConfigurationArgs();
         }
 
         public Builder(ApplicationApplicationConfigurationApplicationCodeConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.codeContent = defaults.codeContent;
-    	      this.codeContentType = defaults.codeContentType;
+            $ = new ApplicationApplicationConfigurationApplicationCodeConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder codeContent(@Nullable Output<ApplicationApplicationConfigurationApplicationCodeConfigurationCodeContentArgs> codeContent) {
-            this.codeContent = codeContent;
+            $.codeContent = codeContent;
             return this;
         }
-        public Builder codeContent(@Nullable ApplicationApplicationConfigurationApplicationCodeConfigurationCodeContentArgs codeContent) {
-            this.codeContent = Codegen.ofNullable(codeContent);
-            return this;
+
+        public Builder codeContent(ApplicationApplicationConfigurationApplicationCodeConfigurationCodeContentArgs codeContent) {
+            return codeContent(Output.of(codeContent));
         }
+
         public Builder codeContentType(Output<String> codeContentType) {
-            this.codeContentType = Objects.requireNonNull(codeContentType);
+            $.codeContentType = codeContentType;
             return this;
         }
+
         public Builder codeContentType(String codeContentType) {
-            this.codeContentType = Output.of(Objects.requireNonNull(codeContentType));
-            return this;
-        }        public ApplicationApplicationConfigurationApplicationCodeConfigurationArgs build() {
-            return new ApplicationApplicationConfigurationApplicationCodeConfigurationArgs(codeContent, codeContentType);
+            return codeContentType(Output.of(codeContentType));
+        }
+
+        public ApplicationApplicationConfigurationApplicationCodeConfigurationArgs build() {
+            $.codeContentType = Objects.requireNonNull($.codeContentType, "expected parameter 'codeContentType' to be non-null");
+            return $;
         }
     }
+
 }

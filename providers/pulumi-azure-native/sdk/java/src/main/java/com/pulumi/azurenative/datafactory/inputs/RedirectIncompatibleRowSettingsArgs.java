@@ -5,9 +5,9 @@ package com.pulumi.azurenative.datafactory.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,7 +24,7 @@ public final class RedirectIncompatibleRowSettingsArgs extends com.pulumi.resour
      * 
      */
     @Import(name="linkedServiceName", required=true)
-      private final Output<Object> linkedServiceName;
+    private Output<Object> linkedServiceName;
 
     public Output<Object> linkedServiceName() {
         return this.linkedServiceName;
@@ -35,63 +35,59 @@ public final class RedirectIncompatibleRowSettingsArgs extends com.pulumi.resour
      * 
      */
     @Import(name="path")
-      private final @Nullable Output<Object> path;
+    private @Nullable Output<Object> path;
 
-    public Output<Object> path() {
-        return this.path == null ? Codegen.empty() : this.path;
+    public Optional<Output<Object>> path() {
+        return Optional.ofNullable(this.path);
     }
 
-    public RedirectIncompatibleRowSettingsArgs(
-        Output<Object> linkedServiceName,
-        @Nullable Output<Object> path) {
-        this.linkedServiceName = Objects.requireNonNull(linkedServiceName, "expected parameter 'linkedServiceName' to be non-null");
-        this.path = path;
-    }
+    private RedirectIncompatibleRowSettingsArgs() {}
 
-    private RedirectIncompatibleRowSettingsArgs() {
-        this.linkedServiceName = Codegen.empty();
-        this.path = Codegen.empty();
+    private RedirectIncompatibleRowSettingsArgs(RedirectIncompatibleRowSettingsArgs $) {
+        this.linkedServiceName = $.linkedServiceName;
+        this.path = $.path;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RedirectIncompatibleRowSettingsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Object> linkedServiceName;
-        private @Nullable Output<Object> path;
+        private RedirectIncompatibleRowSettingsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RedirectIncompatibleRowSettingsArgs();
         }
 
         public Builder(RedirectIncompatibleRowSettingsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.linkedServiceName = defaults.linkedServiceName;
-    	      this.path = defaults.path;
+            $ = new RedirectIncompatibleRowSettingsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder linkedServiceName(Output<Object> linkedServiceName) {
-            this.linkedServiceName = Objects.requireNonNull(linkedServiceName);
+            $.linkedServiceName = linkedServiceName;
             return this;
         }
+
         public Builder linkedServiceName(Object linkedServiceName) {
-            this.linkedServiceName = Output.of(Objects.requireNonNull(linkedServiceName));
-            return this;
+            return linkedServiceName(Output.of(linkedServiceName));
         }
+
         public Builder path(@Nullable Output<Object> path) {
-            this.path = path;
+            $.path = path;
             return this;
         }
-        public Builder path(@Nullable Object path) {
-            this.path = Codegen.ofNullable(path);
-            return this;
-        }        public RedirectIncompatibleRowSettingsArgs build() {
-            return new RedirectIncompatibleRowSettingsArgs(linkedServiceName, path);
+
+        public Builder path(Object path) {
+            return path(Output.of(path));
+        }
+
+        public RedirectIncompatibleRowSettingsArgs build() {
+            $.linkedServiceName = Objects.requireNonNull($.linkedServiceName, "expected parameter 'linkedServiceName' to be non-null");
+            return $;
         }
     }
+
 }

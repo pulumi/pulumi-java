@@ -23,45 +23,44 @@ public final class DefenderForContainersAwsOfferingResponseKinesisToS3 extends c
      * 
      */
     @Import(name="cloudRoleArn")
-      private final @Nullable String cloudRoleArn;
+    private @Nullable String cloudRoleArn;
 
     public Optional<String> cloudRoleArn() {
-        return this.cloudRoleArn == null ? Optional.empty() : Optional.ofNullable(this.cloudRoleArn);
+        return Optional.ofNullable(this.cloudRoleArn);
     }
 
-    public DefenderForContainersAwsOfferingResponseKinesisToS3(@Nullable String cloudRoleArn) {
-        this.cloudRoleArn = cloudRoleArn;
-    }
+    private DefenderForContainersAwsOfferingResponseKinesisToS3() {}
 
-    private DefenderForContainersAwsOfferingResponseKinesisToS3() {
-        this.cloudRoleArn = null;
+    private DefenderForContainersAwsOfferingResponseKinesisToS3(DefenderForContainersAwsOfferingResponseKinesisToS3 $) {
+        this.cloudRoleArn = $.cloudRoleArn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DefenderForContainersAwsOfferingResponseKinesisToS3 defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String cloudRoleArn;
+        private DefenderForContainersAwsOfferingResponseKinesisToS3 $;
 
         public Builder() {
-    	      // Empty
+            $ = new DefenderForContainersAwsOfferingResponseKinesisToS3();
         }
 
         public Builder(DefenderForContainersAwsOfferingResponseKinesisToS3 defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cloudRoleArn = defaults.cloudRoleArn;
+            $ = new DefenderForContainersAwsOfferingResponseKinesisToS3(Objects.requireNonNull(defaults));
         }
 
         public Builder cloudRoleArn(@Nullable String cloudRoleArn) {
-            this.cloudRoleArn = cloudRoleArn;
+            $.cloudRoleArn = cloudRoleArn;
             return this;
-        }        public DefenderForContainersAwsOfferingResponseKinesisToS3 build() {
-            return new DefenderForContainersAwsOfferingResponseKinesisToS3(cloudRoleArn);
+        }
+
+        public DefenderForContainersAwsOfferingResponseKinesisToS3 build() {
+            return $;
         }
     }
+
 }

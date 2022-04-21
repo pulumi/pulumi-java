@@ -6,10 +6,10 @@ package com.pulumi.awsnative.imagebuilder.inputs;
 import com.pulumi.awsnative.imagebuilder.inputs.ImageRecipeComponentParameterArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class ImageRecipeComponentConfigurationArgs extends com.pulumi.reso
      * 
      */
     @Import(name="componentArn")
-      private final @Nullable Output<String> componentArn;
+    private @Nullable Output<String> componentArn;
 
-    public Output<String> componentArn() {
-        return this.componentArn == null ? Codegen.empty() : this.componentArn;
+    public Optional<Output<String>> componentArn() {
+        return Optional.ofNullable(this.componentArn);
     }
 
     /**
@@ -37,66 +37,62 @@ public final class ImageRecipeComponentConfigurationArgs extends com.pulumi.reso
      * 
      */
     @Import(name="parameters")
-      private final @Nullable Output<List<ImageRecipeComponentParameterArgs>> parameters;
+    private @Nullable Output<List<ImageRecipeComponentParameterArgs>> parameters;
 
-    public Output<List<ImageRecipeComponentParameterArgs>> parameters() {
-        return this.parameters == null ? Codegen.empty() : this.parameters;
+    public Optional<Output<List<ImageRecipeComponentParameterArgs>>> parameters() {
+        return Optional.ofNullable(this.parameters);
     }
 
-    public ImageRecipeComponentConfigurationArgs(
-        @Nullable Output<String> componentArn,
-        @Nullable Output<List<ImageRecipeComponentParameterArgs>> parameters) {
-        this.componentArn = componentArn;
-        this.parameters = parameters;
-    }
+    private ImageRecipeComponentConfigurationArgs() {}
 
-    private ImageRecipeComponentConfigurationArgs() {
-        this.componentArn = Codegen.empty();
-        this.parameters = Codegen.empty();
+    private ImageRecipeComponentConfigurationArgs(ImageRecipeComponentConfigurationArgs $) {
+        this.componentArn = $.componentArn;
+        this.parameters = $.parameters;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ImageRecipeComponentConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> componentArn;
-        private @Nullable Output<List<ImageRecipeComponentParameterArgs>> parameters;
+        private ImageRecipeComponentConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ImageRecipeComponentConfigurationArgs();
         }
 
         public Builder(ImageRecipeComponentConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.componentArn = defaults.componentArn;
-    	      this.parameters = defaults.parameters;
+            $ = new ImageRecipeComponentConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder componentArn(@Nullable Output<String> componentArn) {
-            this.componentArn = componentArn;
+            $.componentArn = componentArn;
             return this;
         }
-        public Builder componentArn(@Nullable String componentArn) {
-            this.componentArn = Codegen.ofNullable(componentArn);
-            return this;
+
+        public Builder componentArn(String componentArn) {
+            return componentArn(Output.of(componentArn));
         }
+
         public Builder parameters(@Nullable Output<List<ImageRecipeComponentParameterArgs>> parameters) {
-            this.parameters = parameters;
+            $.parameters = parameters;
             return this;
         }
-        public Builder parameters(@Nullable List<ImageRecipeComponentParameterArgs> parameters) {
-            this.parameters = Codegen.ofNullable(parameters);
-            return this;
+
+        public Builder parameters(List<ImageRecipeComponentParameterArgs> parameters) {
+            return parameters(Output.of(parameters));
         }
+
         public Builder parameters(ImageRecipeComponentParameterArgs... parameters) {
             return parameters(List.of(parameters));
-        }        public ImageRecipeComponentConfigurationArgs build() {
-            return new ImageRecipeComponentConfigurationArgs(componentArn, parameters);
+        }
+
+        public ImageRecipeComponentConfigurationArgs build() {
+            return $;
         }
     }
+
 }

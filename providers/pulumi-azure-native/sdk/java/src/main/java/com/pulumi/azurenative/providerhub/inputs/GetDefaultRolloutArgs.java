@@ -17,7 +17,7 @@ public final class GetDefaultRolloutArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="providerNamespace", required=true)
-      private final String providerNamespace;
+    private String providerNamespace;
 
     public String providerNamespace() {
         return this.providerNamespace;
@@ -28,55 +28,52 @@ public final class GetDefaultRolloutArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="rolloutName", required=true)
-      private final String rolloutName;
+    private String rolloutName;
 
     public String rolloutName() {
         return this.rolloutName;
     }
 
-    public GetDefaultRolloutArgs(
-        String providerNamespace,
-        String rolloutName) {
-        this.providerNamespace = Objects.requireNonNull(providerNamespace, "expected parameter 'providerNamespace' to be non-null");
-        this.rolloutName = Objects.requireNonNull(rolloutName, "expected parameter 'rolloutName' to be non-null");
-    }
+    private GetDefaultRolloutArgs() {}
 
-    private GetDefaultRolloutArgs() {
-        this.providerNamespace = null;
-        this.rolloutName = null;
+    private GetDefaultRolloutArgs(GetDefaultRolloutArgs $) {
+        this.providerNamespace = $.providerNamespace;
+        this.rolloutName = $.rolloutName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetDefaultRolloutArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String providerNamespace;
-        private String rolloutName;
+        private GetDefaultRolloutArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetDefaultRolloutArgs();
         }
 
         public Builder(GetDefaultRolloutArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.providerNamespace = defaults.providerNamespace;
-    	      this.rolloutName = defaults.rolloutName;
+            $ = new GetDefaultRolloutArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder providerNamespace(String providerNamespace) {
-            this.providerNamespace = Objects.requireNonNull(providerNamespace);
+            $.providerNamespace = providerNamespace;
             return this;
         }
+
         public Builder rolloutName(String rolloutName) {
-            this.rolloutName = Objects.requireNonNull(rolloutName);
+            $.rolloutName = rolloutName;
             return this;
-        }        public GetDefaultRolloutArgs build() {
-            return new GetDefaultRolloutArgs(providerNamespace, rolloutName);
+        }
+
+        public GetDefaultRolloutArgs build() {
+            $.providerNamespace = Objects.requireNonNull($.providerNamespace, "expected parameter 'providerNamespace' to be non-null");
+            $.rolloutName = Objects.requireNonNull($.rolloutName, "expected parameter 'rolloutName' to be non-null");
+            return $;
         }
     }
+
 }

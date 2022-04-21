@@ -5,7 +5,6 @@ package com.pulumi.azurenative.databoxedge.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.lang.Integer;
 import java.util.Objects;
@@ -24,7 +23,7 @@ public final class ComputeResourceArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="memoryInGB", required=true)
-      private final Output<Double> memoryInGB;
+    private Output<Double> memoryInGB;
 
     public Output<Double> memoryInGB() {
         return this.memoryInGB;
@@ -35,63 +34,60 @@ public final class ComputeResourceArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="processorCount", required=true)
-      private final Output<Integer> processorCount;
+    private Output<Integer> processorCount;
 
     public Output<Integer> processorCount() {
         return this.processorCount;
     }
 
-    public ComputeResourceArgs(
-        Output<Double> memoryInGB,
-        Output<Integer> processorCount) {
-        this.memoryInGB = Objects.requireNonNull(memoryInGB, "expected parameter 'memoryInGB' to be non-null");
-        this.processorCount = Objects.requireNonNull(processorCount, "expected parameter 'processorCount' to be non-null");
-    }
+    private ComputeResourceArgs() {}
 
-    private ComputeResourceArgs() {
-        this.memoryInGB = Codegen.empty();
-        this.processorCount = Codegen.empty();
+    private ComputeResourceArgs(ComputeResourceArgs $) {
+        this.memoryInGB = $.memoryInGB;
+        this.processorCount = $.processorCount;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ComputeResourceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Double> memoryInGB;
-        private Output<Integer> processorCount;
+        private ComputeResourceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ComputeResourceArgs();
         }
 
         public Builder(ComputeResourceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.memoryInGB = defaults.memoryInGB;
-    	      this.processorCount = defaults.processorCount;
+            $ = new ComputeResourceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder memoryInGB(Output<Double> memoryInGB) {
-            this.memoryInGB = Objects.requireNonNull(memoryInGB);
+            $.memoryInGB = memoryInGB;
             return this;
         }
+
         public Builder memoryInGB(Double memoryInGB) {
-            this.memoryInGB = Output.of(Objects.requireNonNull(memoryInGB));
-            return this;
+            return memoryInGB(Output.of(memoryInGB));
         }
+
         public Builder processorCount(Output<Integer> processorCount) {
-            this.processorCount = Objects.requireNonNull(processorCount);
+            $.processorCount = processorCount;
             return this;
         }
+
         public Builder processorCount(Integer processorCount) {
-            this.processorCount = Output.of(Objects.requireNonNull(processorCount));
-            return this;
-        }        public ComputeResourceArgs build() {
-            return new ComputeResourceArgs(memoryInGB, processorCount);
+            return processorCount(Output.of(processorCount));
+        }
+
+        public ComputeResourceArgs build() {
+            $.memoryInGB = Objects.requireNonNull($.memoryInGB, "expected parameter 'memoryInGB' to be non-null");
+            $.processorCount = Objects.requireNonNull($.processorCount, "expected parameter 'processorCount' to be non-null");
+            return $;
         }
     }
+
 }

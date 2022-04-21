@@ -5,9 +5,9 @@ package com.pulumi.aws.eks.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,7 +20,7 @@ public final class NodeGroupTaintArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="effect", required=true)
-      private final Output<String> effect;
+    private Output<String> effect;
 
     public Output<String> effect() {
         return this.effect;
@@ -31,7 +31,7 @@ public final class NodeGroupTaintArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="key", required=true)
-      private final Output<String> key;
+    private Output<String> key;
 
     public Output<String> key() {
         return this.key;
@@ -42,76 +42,70 @@ public final class NodeGroupTaintArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="value")
-      private final @Nullable Output<String> value;
+    private @Nullable Output<String> value;
 
-    public Output<String> value() {
-        return this.value == null ? Codegen.empty() : this.value;
+    public Optional<Output<String>> value() {
+        return Optional.ofNullable(this.value);
     }
 
-    public NodeGroupTaintArgs(
-        Output<String> effect,
-        Output<String> key,
-        @Nullable Output<String> value) {
-        this.effect = Objects.requireNonNull(effect, "expected parameter 'effect' to be non-null");
-        this.key = Objects.requireNonNull(key, "expected parameter 'key' to be non-null");
-        this.value = value;
-    }
+    private NodeGroupTaintArgs() {}
 
-    private NodeGroupTaintArgs() {
-        this.effect = Codegen.empty();
-        this.key = Codegen.empty();
-        this.value = Codegen.empty();
+    private NodeGroupTaintArgs(NodeGroupTaintArgs $) {
+        this.effect = $.effect;
+        this.key = $.key;
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NodeGroupTaintArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> effect;
-        private Output<String> key;
-        private @Nullable Output<String> value;
+        private NodeGroupTaintArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new NodeGroupTaintArgs();
         }
 
         public Builder(NodeGroupTaintArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.effect = defaults.effect;
-    	      this.key = defaults.key;
-    	      this.value = defaults.value;
+            $ = new NodeGroupTaintArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder effect(Output<String> effect) {
-            this.effect = Objects.requireNonNull(effect);
+            $.effect = effect;
             return this;
         }
+
         public Builder effect(String effect) {
-            this.effect = Output.of(Objects.requireNonNull(effect));
-            return this;
+            return effect(Output.of(effect));
         }
+
         public Builder key(Output<String> key) {
-            this.key = Objects.requireNonNull(key);
+            $.key = key;
             return this;
         }
+
         public Builder key(String key) {
-            this.key = Output.of(Objects.requireNonNull(key));
-            return this;
+            return key(Output.of(key));
         }
+
         public Builder value(@Nullable Output<String> value) {
-            this.value = value;
+            $.value = value;
             return this;
         }
-        public Builder value(@Nullable String value) {
-            this.value = Codegen.ofNullable(value);
-            return this;
-        }        public NodeGroupTaintArgs build() {
-            return new NodeGroupTaintArgs(effect, key, value);
+
+        public Builder value(String value) {
+            return value(Output.of(value));
+        }
+
+        public NodeGroupTaintArgs build() {
+            $.effect = Objects.requireNonNull($.effect, "expected parameter 'effect' to be non-null");
+            $.key = Objects.requireNonNull($.key, "expected parameter 'key' to be non-null");
+            return $;
         }
     }
+
 }

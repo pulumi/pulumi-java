@@ -27,10 +27,10 @@ public final class ExpressionRootResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="error")
-      private final @Nullable AzureResourceErrorInfoResponse error;
+    private @Nullable AzureResourceErrorInfoResponse error;
 
     public Optional<AzureResourceErrorInfoResponse> error() {
-        return this.error == null ? Optional.empty() : Optional.ofNullable(this.error);
+        return Optional.ofNullable(this.error);
     }
 
     /**
@@ -38,10 +38,10 @@ public final class ExpressionRootResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="path")
-      private final @Nullable String path;
+    private @Nullable String path;
 
     public Optional<String> path() {
-        return this.path == null ? Optional.empty() : Optional.ofNullable(this.path);
+        return Optional.ofNullable(this.path);
     }
 
     /**
@@ -49,10 +49,10 @@ public final class ExpressionRootResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="subexpressions")
-      private final @Nullable List<ExpressionResponse> subexpressions;
+    private @Nullable List<ExpressionResponse> subexpressions;
 
-    public List<ExpressionResponse> subexpressions() {
-        return this.subexpressions == null ? List.of() : this.subexpressions;
+    public Optional<List<ExpressionResponse>> subexpressions() {
+        return Optional.ofNullable(this.subexpressions);
     }
 
     /**
@@ -60,92 +60,79 @@ public final class ExpressionRootResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="text")
-      private final @Nullable String text;
+    private @Nullable String text;
 
     public Optional<String> text() {
-        return this.text == null ? Optional.empty() : Optional.ofNullable(this.text);
+        return Optional.ofNullable(this.text);
     }
 
     @Import(name="value")
-      private final @Nullable Object value;
+    private @Nullable Object value;
 
     public Optional<Object> value() {
-        return this.value == null ? Optional.empty() : Optional.ofNullable(this.value);
+        return Optional.ofNullable(this.value);
     }
 
-    public ExpressionRootResponse(
-        @Nullable AzureResourceErrorInfoResponse error,
-        @Nullable String path,
-        @Nullable List<ExpressionResponse> subexpressions,
-        @Nullable String text,
-        @Nullable Object value) {
-        this.error = error;
-        this.path = path;
-        this.subexpressions = subexpressions;
-        this.text = text;
-        this.value = value;
-    }
+    private ExpressionRootResponse() {}
 
-    private ExpressionRootResponse() {
-        this.error = null;
-        this.path = null;
-        this.subexpressions = List.of();
-        this.text = null;
-        this.value = null;
+    private ExpressionRootResponse(ExpressionRootResponse $) {
+        this.error = $.error;
+        this.path = $.path;
+        this.subexpressions = $.subexpressions;
+        this.text = $.text;
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ExpressionRootResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable AzureResourceErrorInfoResponse error;
-        private @Nullable String path;
-        private @Nullable List<ExpressionResponse> subexpressions;
-        private @Nullable String text;
-        private @Nullable Object value;
+        private ExpressionRootResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ExpressionRootResponse();
         }
 
         public Builder(ExpressionRootResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.error = defaults.error;
-    	      this.path = defaults.path;
-    	      this.subexpressions = defaults.subexpressions;
-    	      this.text = defaults.text;
-    	      this.value = defaults.value;
+            $ = new ExpressionRootResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder error(@Nullable AzureResourceErrorInfoResponse error) {
-            this.error = error;
+            $.error = error;
             return this;
         }
+
         public Builder path(@Nullable String path) {
-            this.path = path;
+            $.path = path;
             return this;
         }
+
         public Builder subexpressions(@Nullable List<ExpressionResponse> subexpressions) {
-            this.subexpressions = subexpressions;
+            $.subexpressions = subexpressions;
             return this;
         }
+
         public Builder subexpressions(ExpressionResponse... subexpressions) {
             return subexpressions(List.of(subexpressions));
         }
+
         public Builder text(@Nullable String text) {
-            this.text = text;
+            $.text = text;
             return this;
         }
+
         public Builder value(@Nullable Object value) {
-            this.value = value;
+            $.value = value;
             return this;
-        }        public ExpressionRootResponse build() {
-            return new ExpressionRootResponse(error, path, subexpressions, text, value);
+        }
+
+        public ExpressionRootResponse build() {
+            return $;
         }
     }
+
 }

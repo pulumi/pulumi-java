@@ -5,9 +5,9 @@ package com.pulumi.awsnative.cloudformation.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class TypeActivationLoggingConfigArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="logGroupName")
-      private final @Nullable Output<String> logGroupName;
+    private @Nullable Output<String> logGroupName;
 
-    public Output<String> logGroupName() {
-        return this.logGroupName == null ? Codegen.empty() : this.logGroupName;
+    public Optional<Output<String>> logGroupName() {
+        return Optional.ofNullable(this.logGroupName);
     }
 
     /**
@@ -31,63 +31,58 @@ public final class TypeActivationLoggingConfigArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="logRoleArn")
-      private final @Nullable Output<String> logRoleArn;
+    private @Nullable Output<String> logRoleArn;
 
-    public Output<String> logRoleArn() {
-        return this.logRoleArn == null ? Codegen.empty() : this.logRoleArn;
+    public Optional<Output<String>> logRoleArn() {
+        return Optional.ofNullable(this.logRoleArn);
     }
 
-    public TypeActivationLoggingConfigArgs(
-        @Nullable Output<String> logGroupName,
-        @Nullable Output<String> logRoleArn) {
-        this.logGroupName = logGroupName;
-        this.logRoleArn = logRoleArn;
-    }
+    private TypeActivationLoggingConfigArgs() {}
 
-    private TypeActivationLoggingConfigArgs() {
-        this.logGroupName = Codegen.empty();
-        this.logRoleArn = Codegen.empty();
+    private TypeActivationLoggingConfigArgs(TypeActivationLoggingConfigArgs $) {
+        this.logGroupName = $.logGroupName;
+        this.logRoleArn = $.logRoleArn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TypeActivationLoggingConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> logGroupName;
-        private @Nullable Output<String> logRoleArn;
+        private TypeActivationLoggingConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TypeActivationLoggingConfigArgs();
         }
 
         public Builder(TypeActivationLoggingConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.logGroupName = defaults.logGroupName;
-    	      this.logRoleArn = defaults.logRoleArn;
+            $ = new TypeActivationLoggingConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder logGroupName(@Nullable Output<String> logGroupName) {
-            this.logGroupName = logGroupName;
+            $.logGroupName = logGroupName;
             return this;
         }
-        public Builder logGroupName(@Nullable String logGroupName) {
-            this.logGroupName = Codegen.ofNullable(logGroupName);
-            return this;
+
+        public Builder logGroupName(String logGroupName) {
+            return logGroupName(Output.of(logGroupName));
         }
+
         public Builder logRoleArn(@Nullable Output<String> logRoleArn) {
-            this.logRoleArn = logRoleArn;
+            $.logRoleArn = logRoleArn;
             return this;
         }
-        public Builder logRoleArn(@Nullable String logRoleArn) {
-            this.logRoleArn = Codegen.ofNullable(logRoleArn);
-            return this;
-        }        public TypeActivationLoggingConfigArgs build() {
-            return new TypeActivationLoggingConfigArgs(logGroupName, logRoleArn);
+
+        public Builder logRoleArn(String logRoleArn) {
+            return logRoleArn(Output.of(logRoleArn));
+        }
+
+        public TypeActivationLoggingConfigArgs build() {
+            return $;
         }
     }
+
 }

@@ -24,10 +24,10 @@ public final class NotificationEventReceiverResponse extends com.pulumi.resource
      * 
      */
     @Import(name="receiverType")
-      private final @Nullable String receiverType;
+    private @Nullable String receiverType;
 
     public Optional<String> receiverType() {
-        return this.receiverType == null ? Optional.empty() : Optional.ofNullable(this.receiverType);
+        return Optional.ofNullable(this.receiverType);
     }
 
     /**
@@ -35,55 +35,50 @@ public final class NotificationEventReceiverResponse extends com.pulumi.resource
      * 
      */
     @Import(name="receiverValue")
-      private final @Nullable NotificationReceiverValueResponse receiverValue;
+    private @Nullable NotificationReceiverValueResponse receiverValue;
 
     public Optional<NotificationReceiverValueResponse> receiverValue() {
-        return this.receiverValue == null ? Optional.empty() : Optional.ofNullable(this.receiverValue);
+        return Optional.ofNullable(this.receiverValue);
     }
 
-    public NotificationEventReceiverResponse(
-        @Nullable String receiverType,
-        @Nullable NotificationReceiverValueResponse receiverValue) {
-        this.receiverType = receiverType;
-        this.receiverValue = receiverValue;
-    }
+    private NotificationEventReceiverResponse() {}
 
-    private NotificationEventReceiverResponse() {
-        this.receiverType = null;
-        this.receiverValue = null;
+    private NotificationEventReceiverResponse(NotificationEventReceiverResponse $) {
+        this.receiverType = $.receiverType;
+        this.receiverValue = $.receiverValue;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NotificationEventReceiverResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String receiverType;
-        private @Nullable NotificationReceiverValueResponse receiverValue;
+        private NotificationEventReceiverResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new NotificationEventReceiverResponse();
         }
 
         public Builder(NotificationEventReceiverResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.receiverType = defaults.receiverType;
-    	      this.receiverValue = defaults.receiverValue;
+            $ = new NotificationEventReceiverResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder receiverType(@Nullable String receiverType) {
-            this.receiverType = receiverType;
+            $.receiverType = receiverType;
             return this;
         }
+
         public Builder receiverValue(@Nullable NotificationReceiverValueResponse receiverValue) {
-            this.receiverValue = receiverValue;
+            $.receiverValue = receiverValue;
             return this;
-        }        public NotificationEventReceiverResponse build() {
-            return new NotificationEventReceiverResponse(receiverType, receiverValue);
+        }
+
+        public NotificationEventReceiverResponse build() {
+            return $;
         }
     }
+
 }

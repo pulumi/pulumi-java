@@ -21,45 +21,45 @@ public final class GooglePrivacyDlpV2TimePartConfigResponse extends com.pulumi.r
      * 
      */
     @Import(name="partToExtract", required=true)
-      private final String partToExtract;
+    private String partToExtract;
 
     public String partToExtract() {
         return this.partToExtract;
     }
 
-    public GooglePrivacyDlpV2TimePartConfigResponse(String partToExtract) {
-        this.partToExtract = Objects.requireNonNull(partToExtract, "expected parameter 'partToExtract' to be non-null");
-    }
+    private GooglePrivacyDlpV2TimePartConfigResponse() {}
 
-    private GooglePrivacyDlpV2TimePartConfigResponse() {
-        this.partToExtract = null;
+    private GooglePrivacyDlpV2TimePartConfigResponse(GooglePrivacyDlpV2TimePartConfigResponse $) {
+        this.partToExtract = $.partToExtract;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GooglePrivacyDlpV2TimePartConfigResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String partToExtract;
+        private GooglePrivacyDlpV2TimePartConfigResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GooglePrivacyDlpV2TimePartConfigResponse();
         }
 
         public Builder(GooglePrivacyDlpV2TimePartConfigResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.partToExtract = defaults.partToExtract;
+            $ = new GooglePrivacyDlpV2TimePartConfigResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder partToExtract(String partToExtract) {
-            this.partToExtract = Objects.requireNonNull(partToExtract);
+            $.partToExtract = partToExtract;
             return this;
-        }        public GooglePrivacyDlpV2TimePartConfigResponse build() {
-            return new GooglePrivacyDlpV2TimePartConfigResponse(partToExtract);
+        }
+
+        public GooglePrivacyDlpV2TimePartConfigResponse build() {
+            $.partToExtract = Objects.requireNonNull($.partToExtract, "expected parameter 'partToExtract' to be non-null");
+            return $;
         }
     }
+
 }

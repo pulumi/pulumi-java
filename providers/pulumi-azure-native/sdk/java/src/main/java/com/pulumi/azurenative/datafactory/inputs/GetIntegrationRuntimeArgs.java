@@ -17,7 +17,7 @@ public final class GetIntegrationRuntimeArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="factoryName", required=true)
-      private final String factoryName;
+    private String factoryName;
 
     public String factoryName() {
         return this.factoryName;
@@ -28,7 +28,7 @@ public final class GetIntegrationRuntimeArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="integrationRuntimeName", required=true)
-      private final String integrationRuntimeName;
+    private String integrationRuntimeName;
 
     public String integrationRuntimeName() {
         return this.integrationRuntimeName;
@@ -39,64 +39,59 @@ public final class GetIntegrationRuntimeArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public GetIntegrationRuntimeArgs(
-        String factoryName,
-        String integrationRuntimeName,
-        String resourceGroupName) {
-        this.factoryName = Objects.requireNonNull(factoryName, "expected parameter 'factoryName' to be non-null");
-        this.integrationRuntimeName = Objects.requireNonNull(integrationRuntimeName, "expected parameter 'integrationRuntimeName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private GetIntegrationRuntimeArgs() {}
 
-    private GetIntegrationRuntimeArgs() {
-        this.factoryName = null;
-        this.integrationRuntimeName = null;
-        this.resourceGroupName = null;
+    private GetIntegrationRuntimeArgs(GetIntegrationRuntimeArgs $) {
+        this.factoryName = $.factoryName;
+        this.integrationRuntimeName = $.integrationRuntimeName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetIntegrationRuntimeArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String factoryName;
-        private String integrationRuntimeName;
-        private String resourceGroupName;
+        private GetIntegrationRuntimeArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetIntegrationRuntimeArgs();
         }
 
         public Builder(GetIntegrationRuntimeArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.factoryName = defaults.factoryName;
-    	      this.integrationRuntimeName = defaults.integrationRuntimeName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new GetIntegrationRuntimeArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder factoryName(String factoryName) {
-            this.factoryName = Objects.requireNonNull(factoryName);
+            $.factoryName = factoryName;
             return this;
         }
+
         public Builder integrationRuntimeName(String integrationRuntimeName) {
-            this.integrationRuntimeName = Objects.requireNonNull(integrationRuntimeName);
+            $.integrationRuntimeName = integrationRuntimeName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public GetIntegrationRuntimeArgs build() {
-            return new GetIntegrationRuntimeArgs(factoryName, integrationRuntimeName, resourceGroupName);
+        }
+
+        public GetIntegrationRuntimeArgs build() {
+            $.factoryName = Objects.requireNonNull($.factoryName, "expected parameter 'factoryName' to be non-null");
+            $.integrationRuntimeName = Objects.requireNonNull($.integrationRuntimeName, "expected parameter 'integrationRuntimeName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

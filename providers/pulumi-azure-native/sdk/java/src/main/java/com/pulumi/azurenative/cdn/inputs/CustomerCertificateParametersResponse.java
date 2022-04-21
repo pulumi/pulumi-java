@@ -27,10 +27,10 @@ public final class CustomerCertificateParametersResponse extends com.pulumi.reso
      * 
      */
     @Import(name="certificateAuthority")
-      private final @Nullable String certificateAuthority;
+    private @Nullable String certificateAuthority;
 
     public Optional<String> certificateAuthority() {
-        return this.certificateAuthority == null ? Optional.empty() : Optional.ofNullable(this.certificateAuthority);
+        return Optional.ofNullable(this.certificateAuthority);
     }
 
     /**
@@ -38,7 +38,7 @@ public final class CustomerCertificateParametersResponse extends com.pulumi.reso
      * 
      */
     @Import(name="secretSource", required=true)
-      private final ResourceReferenceResponse secretSource;
+    private ResourceReferenceResponse secretSource;
 
     public ResourceReferenceResponse secretSource() {
         return this.secretSource;
@@ -49,10 +49,10 @@ public final class CustomerCertificateParametersResponse extends com.pulumi.reso
      * 
      */
     @Import(name="secretVersion")
-      private final @Nullable String secretVersion;
+    private @Nullable String secretVersion;
 
     public Optional<String> secretVersion() {
-        return this.secretVersion == null ? Optional.empty() : Optional.ofNullable(this.secretVersion);
+        return Optional.ofNullable(this.secretVersion);
     }
 
     /**
@@ -60,10 +60,10 @@ public final class CustomerCertificateParametersResponse extends com.pulumi.reso
      * 
      */
     @Import(name="subjectAlternativeNames")
-      private final @Nullable List<String> subjectAlternativeNames;
+    private @Nullable List<String> subjectAlternativeNames;
 
-    public List<String> subjectAlternativeNames() {
-        return this.subjectAlternativeNames == null ? List.of() : this.subjectAlternativeNames;
+    public Optional<List<String>> subjectAlternativeNames() {
+        return Optional.ofNullable(this.subjectAlternativeNames);
     }
 
     /**
@@ -72,7 +72,7 @@ public final class CustomerCertificateParametersResponse extends com.pulumi.reso
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
@@ -83,94 +83,80 @@ public final class CustomerCertificateParametersResponse extends com.pulumi.reso
      * 
      */
     @Import(name="useLatestVersion")
-      private final @Nullable Boolean useLatestVersion;
+    private @Nullable Boolean useLatestVersion;
 
     public Optional<Boolean> useLatestVersion() {
-        return this.useLatestVersion == null ? Optional.empty() : Optional.ofNullable(this.useLatestVersion);
+        return Optional.ofNullable(this.useLatestVersion);
     }
 
-    public CustomerCertificateParametersResponse(
-        @Nullable String certificateAuthority,
-        ResourceReferenceResponse secretSource,
-        @Nullable String secretVersion,
-        @Nullable List<String> subjectAlternativeNames,
-        String type,
-        @Nullable Boolean useLatestVersion) {
-        this.certificateAuthority = certificateAuthority;
-        this.secretSource = Objects.requireNonNull(secretSource, "expected parameter 'secretSource' to be non-null");
-        this.secretVersion = secretVersion;
-        this.subjectAlternativeNames = subjectAlternativeNames;
-        this.type = Codegen.stringProp("type").arg(type).require();
-        this.useLatestVersion = useLatestVersion;
-    }
+    private CustomerCertificateParametersResponse() {}
 
-    private CustomerCertificateParametersResponse() {
-        this.certificateAuthority = null;
-        this.secretSource = null;
-        this.secretVersion = null;
-        this.subjectAlternativeNames = List.of();
-        this.type = null;
-        this.useLatestVersion = null;
+    private CustomerCertificateParametersResponse(CustomerCertificateParametersResponse $) {
+        this.certificateAuthority = $.certificateAuthority;
+        this.secretSource = $.secretSource;
+        this.secretVersion = $.secretVersion;
+        this.subjectAlternativeNames = $.subjectAlternativeNames;
+        this.type = $.type;
+        this.useLatestVersion = $.useLatestVersion;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CustomerCertificateParametersResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String certificateAuthority;
-        private ResourceReferenceResponse secretSource;
-        private @Nullable String secretVersion;
-        private @Nullable List<String> subjectAlternativeNames;
-        private String type;
-        private @Nullable Boolean useLatestVersion;
+        private CustomerCertificateParametersResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new CustomerCertificateParametersResponse();
         }
 
         public Builder(CustomerCertificateParametersResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.certificateAuthority = defaults.certificateAuthority;
-    	      this.secretSource = defaults.secretSource;
-    	      this.secretVersion = defaults.secretVersion;
-    	      this.subjectAlternativeNames = defaults.subjectAlternativeNames;
-    	      this.type = defaults.type;
-    	      this.useLatestVersion = defaults.useLatestVersion;
+            $ = new CustomerCertificateParametersResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder certificateAuthority(@Nullable String certificateAuthority) {
-            this.certificateAuthority = certificateAuthority;
+            $.certificateAuthority = certificateAuthority;
             return this;
         }
+
         public Builder secretSource(ResourceReferenceResponse secretSource) {
-            this.secretSource = Objects.requireNonNull(secretSource);
+            $.secretSource = secretSource;
             return this;
         }
+
         public Builder secretVersion(@Nullable String secretVersion) {
-            this.secretVersion = secretVersion;
+            $.secretVersion = secretVersion;
             return this;
         }
+
         public Builder subjectAlternativeNames(@Nullable List<String> subjectAlternativeNames) {
-            this.subjectAlternativeNames = subjectAlternativeNames;
+            $.subjectAlternativeNames = subjectAlternativeNames;
             return this;
         }
+
         public Builder subjectAlternativeNames(String... subjectAlternativeNames) {
             return subjectAlternativeNames(List.of(subjectAlternativeNames));
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder useLatestVersion(@Nullable Boolean useLatestVersion) {
-            this.useLatestVersion = useLatestVersion;
+            $.useLatestVersion = useLatestVersion;
             return this;
-        }        public CustomerCertificateParametersResponse build() {
-            return new CustomerCertificateParametersResponse(certificateAuthority, secretSource, secretVersion, subjectAlternativeNames, type, useLatestVersion);
+        }
+
+        public CustomerCertificateParametersResponse build() {
+            $.secretSource = Objects.requireNonNull($.secretSource, "expected parameter 'secretSource' to be non-null");
+            $.type = Codegen.stringProp("type").arg($.type).require();
+            return $;
         }
     }
+
 }

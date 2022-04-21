@@ -25,10 +25,10 @@ public final class CustomActivityReferenceObjectResponse extends com.pulumi.reso
      * 
      */
     @Import(name="datasets")
-      private final @Nullable List<DatasetReferenceResponse> datasets;
+    private @Nullable List<DatasetReferenceResponse> datasets;
 
-    public List<DatasetReferenceResponse> datasets() {
-        return this.datasets == null ? List.of() : this.datasets;
+    public Optional<List<DatasetReferenceResponse>> datasets() {
+        return Optional.ofNullable(this.datasets);
     }
 
     /**
@@ -36,61 +36,58 @@ public final class CustomActivityReferenceObjectResponse extends com.pulumi.reso
      * 
      */
     @Import(name="linkedServices")
-      private final @Nullable List<LinkedServiceReferenceResponse> linkedServices;
+    private @Nullable List<LinkedServiceReferenceResponse> linkedServices;
 
-    public List<LinkedServiceReferenceResponse> linkedServices() {
-        return this.linkedServices == null ? List.of() : this.linkedServices;
+    public Optional<List<LinkedServiceReferenceResponse>> linkedServices() {
+        return Optional.ofNullable(this.linkedServices);
     }
 
-    public CustomActivityReferenceObjectResponse(
-        @Nullable List<DatasetReferenceResponse> datasets,
-        @Nullable List<LinkedServiceReferenceResponse> linkedServices) {
-        this.datasets = datasets;
-        this.linkedServices = linkedServices;
-    }
+    private CustomActivityReferenceObjectResponse() {}
 
-    private CustomActivityReferenceObjectResponse() {
-        this.datasets = List.of();
-        this.linkedServices = List.of();
+    private CustomActivityReferenceObjectResponse(CustomActivityReferenceObjectResponse $) {
+        this.datasets = $.datasets;
+        this.linkedServices = $.linkedServices;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CustomActivityReferenceObjectResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<DatasetReferenceResponse> datasets;
-        private @Nullable List<LinkedServiceReferenceResponse> linkedServices;
+        private CustomActivityReferenceObjectResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new CustomActivityReferenceObjectResponse();
         }
 
         public Builder(CustomActivityReferenceObjectResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.datasets = defaults.datasets;
-    	      this.linkedServices = defaults.linkedServices;
+            $ = new CustomActivityReferenceObjectResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder datasets(@Nullable List<DatasetReferenceResponse> datasets) {
-            this.datasets = datasets;
+            $.datasets = datasets;
             return this;
         }
+
         public Builder datasets(DatasetReferenceResponse... datasets) {
             return datasets(List.of(datasets));
         }
+
         public Builder linkedServices(@Nullable List<LinkedServiceReferenceResponse> linkedServices) {
-            this.linkedServices = linkedServices;
+            $.linkedServices = linkedServices;
             return this;
         }
+
         public Builder linkedServices(LinkedServiceReferenceResponse... linkedServices) {
             return linkedServices(List.of(linkedServices));
-        }        public CustomActivityReferenceObjectResponse build() {
-            return new CustomActivityReferenceObjectResponse(datasets, linkedServices);
+        }
+
+        public CustomActivityReferenceObjectResponse build() {
+            return $;
         }
     }
+
 }

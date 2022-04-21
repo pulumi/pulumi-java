@@ -5,9 +5,9 @@ package com.pulumi.awsnative.ecs.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -16,70 +16,66 @@ public final class TaskDefinitionPlacementConstraintArgs extends com.pulumi.reso
     public static final TaskDefinitionPlacementConstraintArgs Empty = new TaskDefinitionPlacementConstraintArgs();
 
     @Import(name="expression")
-      private final @Nullable Output<String> expression;
+    private @Nullable Output<String> expression;
 
-    public Output<String> expression() {
-        return this.expression == null ? Codegen.empty() : this.expression;
+    public Optional<Output<String>> expression() {
+        return Optional.ofNullable(this.expression);
     }
 
     @Import(name="type", required=true)
-      private final Output<String> type;
+    private Output<String> type;
 
     public Output<String> type() {
         return this.type;
     }
 
-    public TaskDefinitionPlacementConstraintArgs(
-        @Nullable Output<String> expression,
-        Output<String> type) {
-        this.expression = expression;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private TaskDefinitionPlacementConstraintArgs() {}
 
-    private TaskDefinitionPlacementConstraintArgs() {
-        this.expression = Codegen.empty();
-        this.type = Codegen.empty();
+    private TaskDefinitionPlacementConstraintArgs(TaskDefinitionPlacementConstraintArgs $) {
+        this.expression = $.expression;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TaskDefinitionPlacementConstraintArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> expression;
-        private Output<String> type;
+        private TaskDefinitionPlacementConstraintArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TaskDefinitionPlacementConstraintArgs();
         }
 
         public Builder(TaskDefinitionPlacementConstraintArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.expression = defaults.expression;
-    	      this.type = defaults.type;
+            $ = new TaskDefinitionPlacementConstraintArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder expression(@Nullable Output<String> expression) {
-            this.expression = expression;
+            $.expression = expression;
             return this;
         }
-        public Builder expression(@Nullable String expression) {
-            this.expression = Codegen.ofNullable(expression);
-            return this;
+
+        public Builder expression(String expression) {
+            return expression(Output.of(expression));
         }
+
         public Builder type(Output<String> type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Output.of(Objects.requireNonNull(type));
-            return this;
-        }        public TaskDefinitionPlacementConstraintArgs build() {
-            return new TaskDefinitionPlacementConstraintArgs(expression, type);
+            return type(Output.of(type));
+        }
+
+        public TaskDefinitionPlacementConstraintArgs build() {
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

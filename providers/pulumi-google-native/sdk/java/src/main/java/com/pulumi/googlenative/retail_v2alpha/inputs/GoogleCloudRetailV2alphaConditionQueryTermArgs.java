@@ -5,10 +5,10 @@ package com.pulumi.googlenative.retail_v2alpha.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class GoogleCloudRetailV2alphaConditionQueryTermArgs extends com.pu
      * 
      */
     @Import(name="fullMatch")
-      private final @Nullable Output<Boolean> fullMatch;
+    private @Nullable Output<Boolean> fullMatch;
 
-    public Output<Boolean> fullMatch() {
-        return this.fullMatch == null ? Codegen.empty() : this.fullMatch;
+    public Optional<Output<Boolean>> fullMatch() {
+        return Optional.ofNullable(this.fullMatch);
     }
 
     /**
@@ -36,63 +36,58 @@ public final class GoogleCloudRetailV2alphaConditionQueryTermArgs extends com.pu
      * 
      */
     @Import(name="value")
-      private final @Nullable Output<String> value;
+    private @Nullable Output<String> value;
 
-    public Output<String> value() {
-        return this.value == null ? Codegen.empty() : this.value;
+    public Optional<Output<String>> value() {
+        return Optional.ofNullable(this.value);
     }
 
-    public GoogleCloudRetailV2alphaConditionQueryTermArgs(
-        @Nullable Output<Boolean> fullMatch,
-        @Nullable Output<String> value) {
-        this.fullMatch = fullMatch;
-        this.value = value;
-    }
+    private GoogleCloudRetailV2alphaConditionQueryTermArgs() {}
 
-    private GoogleCloudRetailV2alphaConditionQueryTermArgs() {
-        this.fullMatch = Codegen.empty();
-        this.value = Codegen.empty();
+    private GoogleCloudRetailV2alphaConditionQueryTermArgs(GoogleCloudRetailV2alphaConditionQueryTermArgs $) {
+        this.fullMatch = $.fullMatch;
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudRetailV2alphaConditionQueryTermArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> fullMatch;
-        private @Nullable Output<String> value;
+        private GoogleCloudRetailV2alphaConditionQueryTermArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudRetailV2alphaConditionQueryTermArgs();
         }
 
         public Builder(GoogleCloudRetailV2alphaConditionQueryTermArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.fullMatch = defaults.fullMatch;
-    	      this.value = defaults.value;
+            $ = new GoogleCloudRetailV2alphaConditionQueryTermArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder fullMatch(@Nullable Output<Boolean> fullMatch) {
-            this.fullMatch = fullMatch;
+            $.fullMatch = fullMatch;
             return this;
         }
-        public Builder fullMatch(@Nullable Boolean fullMatch) {
-            this.fullMatch = Codegen.ofNullable(fullMatch);
-            return this;
+
+        public Builder fullMatch(Boolean fullMatch) {
+            return fullMatch(Output.of(fullMatch));
         }
+
         public Builder value(@Nullable Output<String> value) {
-            this.value = value;
+            $.value = value;
             return this;
         }
-        public Builder value(@Nullable String value) {
-            this.value = Codegen.ofNullable(value);
-            return this;
-        }        public GoogleCloudRetailV2alphaConditionQueryTermArgs build() {
-            return new GoogleCloudRetailV2alphaConditionQueryTermArgs(fullMatch, value);
+
+        public Builder value(String value) {
+            return value(Output.of(value));
+        }
+
+        public GoogleCloudRetailV2alphaConditionQueryTermArgs build() {
+            return $;
         }
     }
+
 }

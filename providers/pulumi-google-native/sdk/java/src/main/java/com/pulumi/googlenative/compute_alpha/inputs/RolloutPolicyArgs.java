@@ -5,10 +5,10 @@ package com.pulumi.googlenative.compute_alpha.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class RolloutPolicyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="defaultRolloutTime")
-      private final @Nullable Output<String> defaultRolloutTime;
+    private @Nullable Output<String> defaultRolloutTime;
 
-    public Output<String> defaultRolloutTime() {
-        return this.defaultRolloutTime == null ? Codegen.empty() : this.defaultRolloutTime;
+    public Optional<Output<String>> defaultRolloutTime() {
+        return Optional.ofNullable(this.defaultRolloutTime);
     }
 
     /**
@@ -36,63 +36,58 @@ public final class RolloutPolicyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="locationRolloutPolicies")
-      private final @Nullable Output<Map<String,String>> locationRolloutPolicies;
+    private @Nullable Output<Map<String,String>> locationRolloutPolicies;
 
-    public Output<Map<String,String>> locationRolloutPolicies() {
-        return this.locationRolloutPolicies == null ? Codegen.empty() : this.locationRolloutPolicies;
+    public Optional<Output<Map<String,String>>> locationRolloutPolicies() {
+        return Optional.ofNullable(this.locationRolloutPolicies);
     }
 
-    public RolloutPolicyArgs(
-        @Nullable Output<String> defaultRolloutTime,
-        @Nullable Output<Map<String,String>> locationRolloutPolicies) {
-        this.defaultRolloutTime = defaultRolloutTime;
-        this.locationRolloutPolicies = locationRolloutPolicies;
-    }
+    private RolloutPolicyArgs() {}
 
-    private RolloutPolicyArgs() {
-        this.defaultRolloutTime = Codegen.empty();
-        this.locationRolloutPolicies = Codegen.empty();
+    private RolloutPolicyArgs(RolloutPolicyArgs $) {
+        this.defaultRolloutTime = $.defaultRolloutTime;
+        this.locationRolloutPolicies = $.locationRolloutPolicies;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RolloutPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> defaultRolloutTime;
-        private @Nullable Output<Map<String,String>> locationRolloutPolicies;
+        private RolloutPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RolloutPolicyArgs();
         }
 
         public Builder(RolloutPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.defaultRolloutTime = defaults.defaultRolloutTime;
-    	      this.locationRolloutPolicies = defaults.locationRolloutPolicies;
+            $ = new RolloutPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder defaultRolloutTime(@Nullable Output<String> defaultRolloutTime) {
-            this.defaultRolloutTime = defaultRolloutTime;
+            $.defaultRolloutTime = defaultRolloutTime;
             return this;
         }
-        public Builder defaultRolloutTime(@Nullable String defaultRolloutTime) {
-            this.defaultRolloutTime = Codegen.ofNullable(defaultRolloutTime);
-            return this;
+
+        public Builder defaultRolloutTime(String defaultRolloutTime) {
+            return defaultRolloutTime(Output.of(defaultRolloutTime));
         }
+
         public Builder locationRolloutPolicies(@Nullable Output<Map<String,String>> locationRolloutPolicies) {
-            this.locationRolloutPolicies = locationRolloutPolicies;
+            $.locationRolloutPolicies = locationRolloutPolicies;
             return this;
         }
-        public Builder locationRolloutPolicies(@Nullable Map<String,String> locationRolloutPolicies) {
-            this.locationRolloutPolicies = Codegen.ofNullable(locationRolloutPolicies);
-            return this;
-        }        public RolloutPolicyArgs build() {
-            return new RolloutPolicyArgs(defaultRolloutTime, locationRolloutPolicies);
+
+        public Builder locationRolloutPolicies(Map<String,String> locationRolloutPolicies) {
+            return locationRolloutPolicies(Output.of(locationRolloutPolicies));
+        }
+
+        public RolloutPolicyArgs build() {
+            return $;
         }
     }
+
 }

@@ -28,10 +28,10 @@ public final class ConnectionMonitorTestConfigurationResponse extends com.pulumi
      * 
      */
     @Import(name="httpConfiguration")
-      private final @Nullable ConnectionMonitorHttpConfigurationResponse httpConfiguration;
+    private @Nullable ConnectionMonitorHttpConfigurationResponse httpConfiguration;
 
     public Optional<ConnectionMonitorHttpConfigurationResponse> httpConfiguration() {
-        return this.httpConfiguration == null ? Optional.empty() : Optional.ofNullable(this.httpConfiguration);
+        return Optional.ofNullable(this.httpConfiguration);
     }
 
     /**
@@ -39,10 +39,10 @@ public final class ConnectionMonitorTestConfigurationResponse extends com.pulumi
      * 
      */
     @Import(name="icmpConfiguration")
-      private final @Nullable ConnectionMonitorIcmpConfigurationResponse icmpConfiguration;
+    private @Nullable ConnectionMonitorIcmpConfigurationResponse icmpConfiguration;
 
     public Optional<ConnectionMonitorIcmpConfigurationResponse> icmpConfiguration() {
-        return this.icmpConfiguration == null ? Optional.empty() : Optional.ofNullable(this.icmpConfiguration);
+        return Optional.ofNullable(this.icmpConfiguration);
     }
 
     /**
@@ -50,7 +50,7 @@ public final class ConnectionMonitorTestConfigurationResponse extends com.pulumi
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -61,10 +61,10 @@ public final class ConnectionMonitorTestConfigurationResponse extends com.pulumi
      * 
      */
     @Import(name="preferredIPVersion")
-      private final @Nullable String preferredIPVersion;
+    private @Nullable String preferredIPVersion;
 
     public Optional<String> preferredIPVersion() {
-        return this.preferredIPVersion == null ? Optional.empty() : Optional.ofNullable(this.preferredIPVersion);
+        return Optional.ofNullable(this.preferredIPVersion);
     }
 
     /**
@@ -72,7 +72,7 @@ public final class ConnectionMonitorTestConfigurationResponse extends com.pulumi
      * 
      */
     @Import(name="protocol", required=true)
-      private final String protocol;
+    private String protocol;
 
     public String protocol() {
         return this.protocol;
@@ -83,10 +83,10 @@ public final class ConnectionMonitorTestConfigurationResponse extends com.pulumi
      * 
      */
     @Import(name="successThreshold")
-      private final @Nullable ConnectionMonitorSuccessThresholdResponse successThreshold;
+    private @Nullable ConnectionMonitorSuccessThresholdResponse successThreshold;
 
     public Optional<ConnectionMonitorSuccessThresholdResponse> successThreshold() {
-        return this.successThreshold == null ? Optional.empty() : Optional.ofNullable(this.successThreshold);
+        return Optional.ofNullable(this.successThreshold);
     }
 
     /**
@@ -94,10 +94,10 @@ public final class ConnectionMonitorTestConfigurationResponse extends com.pulumi
      * 
      */
     @Import(name="tcpConfiguration")
-      private final @Nullable ConnectionMonitorTcpConfigurationResponse tcpConfiguration;
+    private @Nullable ConnectionMonitorTcpConfigurationResponse tcpConfiguration;
 
     public Optional<ConnectionMonitorTcpConfigurationResponse> tcpConfiguration() {
-        return this.tcpConfiguration == null ? Optional.empty() : Optional.ofNullable(this.tcpConfiguration);
+        return Optional.ofNullable(this.tcpConfiguration);
     }
 
     /**
@@ -105,109 +105,88 @@ public final class ConnectionMonitorTestConfigurationResponse extends com.pulumi
      * 
      */
     @Import(name="testFrequencySec")
-      private final @Nullable Integer testFrequencySec;
+    private @Nullable Integer testFrequencySec;
 
     public Optional<Integer> testFrequencySec() {
-        return this.testFrequencySec == null ? Optional.empty() : Optional.ofNullable(this.testFrequencySec);
+        return Optional.ofNullable(this.testFrequencySec);
     }
 
-    public ConnectionMonitorTestConfigurationResponse(
-        @Nullable ConnectionMonitorHttpConfigurationResponse httpConfiguration,
-        @Nullable ConnectionMonitorIcmpConfigurationResponse icmpConfiguration,
-        String name,
-        @Nullable String preferredIPVersion,
-        String protocol,
-        @Nullable ConnectionMonitorSuccessThresholdResponse successThreshold,
-        @Nullable ConnectionMonitorTcpConfigurationResponse tcpConfiguration,
-        @Nullable Integer testFrequencySec) {
-        this.httpConfiguration = httpConfiguration;
-        this.icmpConfiguration = icmpConfiguration;
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.preferredIPVersion = preferredIPVersion;
-        this.protocol = Objects.requireNonNull(protocol, "expected parameter 'protocol' to be non-null");
-        this.successThreshold = successThreshold;
-        this.tcpConfiguration = tcpConfiguration;
-        this.testFrequencySec = testFrequencySec;
-    }
+    private ConnectionMonitorTestConfigurationResponse() {}
 
-    private ConnectionMonitorTestConfigurationResponse() {
-        this.httpConfiguration = null;
-        this.icmpConfiguration = null;
-        this.name = null;
-        this.preferredIPVersion = null;
-        this.protocol = null;
-        this.successThreshold = null;
-        this.tcpConfiguration = null;
-        this.testFrequencySec = null;
+    private ConnectionMonitorTestConfigurationResponse(ConnectionMonitorTestConfigurationResponse $) {
+        this.httpConfiguration = $.httpConfiguration;
+        this.icmpConfiguration = $.icmpConfiguration;
+        this.name = $.name;
+        this.preferredIPVersion = $.preferredIPVersion;
+        this.protocol = $.protocol;
+        this.successThreshold = $.successThreshold;
+        this.tcpConfiguration = $.tcpConfiguration;
+        this.testFrequencySec = $.testFrequencySec;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ConnectionMonitorTestConfigurationResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable ConnectionMonitorHttpConfigurationResponse httpConfiguration;
-        private @Nullable ConnectionMonitorIcmpConfigurationResponse icmpConfiguration;
-        private String name;
-        private @Nullable String preferredIPVersion;
-        private String protocol;
-        private @Nullable ConnectionMonitorSuccessThresholdResponse successThreshold;
-        private @Nullable ConnectionMonitorTcpConfigurationResponse tcpConfiguration;
-        private @Nullable Integer testFrequencySec;
+        private ConnectionMonitorTestConfigurationResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ConnectionMonitorTestConfigurationResponse();
         }
 
         public Builder(ConnectionMonitorTestConfigurationResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.httpConfiguration = defaults.httpConfiguration;
-    	      this.icmpConfiguration = defaults.icmpConfiguration;
-    	      this.name = defaults.name;
-    	      this.preferredIPVersion = defaults.preferredIPVersion;
-    	      this.protocol = defaults.protocol;
-    	      this.successThreshold = defaults.successThreshold;
-    	      this.tcpConfiguration = defaults.tcpConfiguration;
-    	      this.testFrequencySec = defaults.testFrequencySec;
+            $ = new ConnectionMonitorTestConfigurationResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder httpConfiguration(@Nullable ConnectionMonitorHttpConfigurationResponse httpConfiguration) {
-            this.httpConfiguration = httpConfiguration;
+            $.httpConfiguration = httpConfiguration;
             return this;
         }
+
         public Builder icmpConfiguration(@Nullable ConnectionMonitorIcmpConfigurationResponse icmpConfiguration) {
-            this.icmpConfiguration = icmpConfiguration;
+            $.icmpConfiguration = icmpConfiguration;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder preferredIPVersion(@Nullable String preferredIPVersion) {
-            this.preferredIPVersion = preferredIPVersion;
+            $.preferredIPVersion = preferredIPVersion;
             return this;
         }
+
         public Builder protocol(String protocol) {
-            this.protocol = Objects.requireNonNull(protocol);
+            $.protocol = protocol;
             return this;
         }
+
         public Builder successThreshold(@Nullable ConnectionMonitorSuccessThresholdResponse successThreshold) {
-            this.successThreshold = successThreshold;
+            $.successThreshold = successThreshold;
             return this;
         }
+
         public Builder tcpConfiguration(@Nullable ConnectionMonitorTcpConfigurationResponse tcpConfiguration) {
-            this.tcpConfiguration = tcpConfiguration;
+            $.tcpConfiguration = tcpConfiguration;
             return this;
         }
+
         public Builder testFrequencySec(@Nullable Integer testFrequencySec) {
-            this.testFrequencySec = testFrequencySec;
+            $.testFrequencySec = testFrequencySec;
             return this;
-        }        public ConnectionMonitorTestConfigurationResponse build() {
-            return new ConnectionMonitorTestConfigurationResponse(httpConfiguration, icmpConfiguration, name, preferredIPVersion, protocol, successThreshold, tcpConfiguration, testFrequencySec);
+        }
+
+        public ConnectionMonitorTestConfigurationResponse build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.protocol = Objects.requireNonNull($.protocol, "expected parameter 'protocol' to be non-null");
+            return $;
         }
     }
+
 }

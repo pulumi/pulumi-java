@@ -5,10 +5,10 @@ package com.pulumi.gcp.dataproc.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.dataproc.inputs.WorkflowTemplateParameterValidationRegexArgs;
 import com.pulumi.gcp.dataproc.inputs.WorkflowTemplateParameterValidationValuesArgs;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class WorkflowTemplateParameterValidationArgs extends com.pulumi.re
      * 
      */
     @Import(name="regex")
-      private final @Nullable Output<WorkflowTemplateParameterValidationRegexArgs> regex;
+    private @Nullable Output<WorkflowTemplateParameterValidationRegexArgs> regex;
 
-    public Output<WorkflowTemplateParameterValidationRegexArgs> regex() {
-        return this.regex == null ? Codegen.empty() : this.regex;
+    public Optional<Output<WorkflowTemplateParameterValidationRegexArgs>> regex() {
+        return Optional.ofNullable(this.regex);
     }
 
     /**
@@ -32,63 +32,58 @@ public final class WorkflowTemplateParameterValidationArgs extends com.pulumi.re
      * 
      */
     @Import(name="values")
-      private final @Nullable Output<WorkflowTemplateParameterValidationValuesArgs> values;
+    private @Nullable Output<WorkflowTemplateParameterValidationValuesArgs> values;
 
-    public Output<WorkflowTemplateParameterValidationValuesArgs> values() {
-        return this.values == null ? Codegen.empty() : this.values;
+    public Optional<Output<WorkflowTemplateParameterValidationValuesArgs>> values() {
+        return Optional.ofNullable(this.values);
     }
 
-    public WorkflowTemplateParameterValidationArgs(
-        @Nullable Output<WorkflowTemplateParameterValidationRegexArgs> regex,
-        @Nullable Output<WorkflowTemplateParameterValidationValuesArgs> values) {
-        this.regex = regex;
-        this.values = values;
-    }
+    private WorkflowTemplateParameterValidationArgs() {}
 
-    private WorkflowTemplateParameterValidationArgs() {
-        this.regex = Codegen.empty();
-        this.values = Codegen.empty();
+    private WorkflowTemplateParameterValidationArgs(WorkflowTemplateParameterValidationArgs $) {
+        this.regex = $.regex;
+        this.values = $.values;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WorkflowTemplateParameterValidationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<WorkflowTemplateParameterValidationRegexArgs> regex;
-        private @Nullable Output<WorkflowTemplateParameterValidationValuesArgs> values;
+        private WorkflowTemplateParameterValidationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new WorkflowTemplateParameterValidationArgs();
         }
 
         public Builder(WorkflowTemplateParameterValidationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.regex = defaults.regex;
-    	      this.values = defaults.values;
+            $ = new WorkflowTemplateParameterValidationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder regex(@Nullable Output<WorkflowTemplateParameterValidationRegexArgs> regex) {
-            this.regex = regex;
+            $.regex = regex;
             return this;
         }
-        public Builder regex(@Nullable WorkflowTemplateParameterValidationRegexArgs regex) {
-            this.regex = Codegen.ofNullable(regex);
-            return this;
+
+        public Builder regex(WorkflowTemplateParameterValidationRegexArgs regex) {
+            return regex(Output.of(regex));
         }
+
         public Builder values(@Nullable Output<WorkflowTemplateParameterValidationValuesArgs> values) {
-            this.values = values;
+            $.values = values;
             return this;
         }
-        public Builder values(@Nullable WorkflowTemplateParameterValidationValuesArgs values) {
-            this.values = Codegen.ofNullable(values);
-            return this;
-        }        public WorkflowTemplateParameterValidationArgs build() {
-            return new WorkflowTemplateParameterValidationArgs(regex, values);
+
+        public Builder values(WorkflowTemplateParameterValidationValuesArgs values) {
+            return values(Output.of(values));
+        }
+
+        public WorkflowTemplateParameterValidationArgs build() {
+            return $;
         }
     }
+
 }

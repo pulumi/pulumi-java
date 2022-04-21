@@ -19,10 +19,10 @@ public final class GetRouteArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="carrierGatewayId")
-      private final @Nullable String carrierGatewayId;
+    private @Nullable String carrierGatewayId;
 
     public Optional<String> carrierGatewayId() {
-        return this.carrierGatewayId == null ? Optional.empty() : Optional.ofNullable(this.carrierGatewayId);
+        return Optional.ofNullable(this.carrierGatewayId);
     }
 
     /**
@@ -30,10 +30,10 @@ public final class GetRouteArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="destinationCidrBlock")
-      private final @Nullable String destinationCidrBlock;
+    private @Nullable String destinationCidrBlock;
 
     public Optional<String> destinationCidrBlock() {
-        return this.destinationCidrBlock == null ? Optional.empty() : Optional.ofNullable(this.destinationCidrBlock);
+        return Optional.ofNullable(this.destinationCidrBlock);
     }
 
     /**
@@ -41,10 +41,10 @@ public final class GetRouteArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="destinationIpv6CidrBlock")
-      private final @Nullable String destinationIpv6CidrBlock;
+    private @Nullable String destinationIpv6CidrBlock;
 
     public Optional<String> destinationIpv6CidrBlock() {
-        return this.destinationIpv6CidrBlock == null ? Optional.empty() : Optional.ofNullable(this.destinationIpv6CidrBlock);
+        return Optional.ofNullable(this.destinationIpv6CidrBlock);
     }
 
     /**
@@ -52,10 +52,10 @@ public final class GetRouteArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="destinationPrefixListId")
-      private final @Nullable String destinationPrefixListId;
+    private @Nullable String destinationPrefixListId;
 
     public Optional<String> destinationPrefixListId() {
-        return this.destinationPrefixListId == null ? Optional.empty() : Optional.ofNullable(this.destinationPrefixListId);
+        return Optional.ofNullable(this.destinationPrefixListId);
     }
 
     /**
@@ -63,10 +63,10 @@ public final class GetRouteArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="egressOnlyGatewayId")
-      private final @Nullable String egressOnlyGatewayId;
+    private @Nullable String egressOnlyGatewayId;
 
     public Optional<String> egressOnlyGatewayId() {
-        return this.egressOnlyGatewayId == null ? Optional.empty() : Optional.ofNullable(this.egressOnlyGatewayId);
+        return Optional.ofNullable(this.egressOnlyGatewayId);
     }
 
     /**
@@ -74,10 +74,10 @@ public final class GetRouteArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="gatewayId")
-      private final @Nullable String gatewayId;
+    private @Nullable String gatewayId;
 
     public Optional<String> gatewayId() {
-        return this.gatewayId == null ? Optional.empty() : Optional.ofNullable(this.gatewayId);
+        return Optional.ofNullable(this.gatewayId);
     }
 
     /**
@@ -85,10 +85,10 @@ public final class GetRouteArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="instanceId")
-      private final @Nullable String instanceId;
+    private @Nullable String instanceId;
 
     public Optional<String> instanceId() {
-        return this.instanceId == null ? Optional.empty() : Optional.ofNullable(this.instanceId);
+        return Optional.ofNullable(this.instanceId);
     }
 
     /**
@@ -96,10 +96,10 @@ public final class GetRouteArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="localGatewayId")
-      private final @Nullable String localGatewayId;
+    private @Nullable String localGatewayId;
 
     public Optional<String> localGatewayId() {
-        return this.localGatewayId == null ? Optional.empty() : Optional.ofNullable(this.localGatewayId);
+        return Optional.ofNullable(this.localGatewayId);
     }
 
     /**
@@ -107,10 +107,10 @@ public final class GetRouteArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="natGatewayId")
-      private final @Nullable String natGatewayId;
+    private @Nullable String natGatewayId;
 
     public Optional<String> natGatewayId() {
-        return this.natGatewayId == null ? Optional.empty() : Optional.ofNullable(this.natGatewayId);
+        return Optional.ofNullable(this.natGatewayId);
     }
 
     /**
@@ -118,10 +118,10 @@ public final class GetRouteArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="networkInterfaceId")
-      private final @Nullable String networkInterfaceId;
+    private @Nullable String networkInterfaceId;
 
     public Optional<String> networkInterfaceId() {
-        return this.networkInterfaceId == null ? Optional.empty() : Optional.ofNullable(this.networkInterfaceId);
+        return Optional.ofNullable(this.networkInterfaceId);
     }
 
     /**
@@ -129,7 +129,7 @@ public final class GetRouteArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="routeTableId", required=true)
-      private final String routeTableId;
+    private String routeTableId;
 
     public String routeTableId() {
         return this.routeTableId;
@@ -140,10 +140,10 @@ public final class GetRouteArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="transitGatewayId")
-      private final @Nullable String transitGatewayId;
+    private @Nullable String transitGatewayId;
 
     public Optional<String> transitGatewayId() {
-        return this.transitGatewayId == null ? Optional.empty() : Optional.ofNullable(this.transitGatewayId);
+        return Optional.ofNullable(this.transitGatewayId);
     }
 
     /**
@@ -151,154 +151,117 @@ public final class GetRouteArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="vpcPeeringConnectionId")
-      private final @Nullable String vpcPeeringConnectionId;
+    private @Nullable String vpcPeeringConnectionId;
 
     public Optional<String> vpcPeeringConnectionId() {
-        return this.vpcPeeringConnectionId == null ? Optional.empty() : Optional.ofNullable(this.vpcPeeringConnectionId);
+        return Optional.ofNullable(this.vpcPeeringConnectionId);
     }
 
-    public GetRouteArgs(
-        @Nullable String carrierGatewayId,
-        @Nullable String destinationCidrBlock,
-        @Nullable String destinationIpv6CidrBlock,
-        @Nullable String destinationPrefixListId,
-        @Nullable String egressOnlyGatewayId,
-        @Nullable String gatewayId,
-        @Nullable String instanceId,
-        @Nullable String localGatewayId,
-        @Nullable String natGatewayId,
-        @Nullable String networkInterfaceId,
-        String routeTableId,
-        @Nullable String transitGatewayId,
-        @Nullable String vpcPeeringConnectionId) {
-        this.carrierGatewayId = carrierGatewayId;
-        this.destinationCidrBlock = destinationCidrBlock;
-        this.destinationIpv6CidrBlock = destinationIpv6CidrBlock;
-        this.destinationPrefixListId = destinationPrefixListId;
-        this.egressOnlyGatewayId = egressOnlyGatewayId;
-        this.gatewayId = gatewayId;
-        this.instanceId = instanceId;
-        this.localGatewayId = localGatewayId;
-        this.natGatewayId = natGatewayId;
-        this.networkInterfaceId = networkInterfaceId;
-        this.routeTableId = Objects.requireNonNull(routeTableId, "expected parameter 'routeTableId' to be non-null");
-        this.transitGatewayId = transitGatewayId;
-        this.vpcPeeringConnectionId = vpcPeeringConnectionId;
-    }
+    private GetRouteArgs() {}
 
-    private GetRouteArgs() {
-        this.carrierGatewayId = null;
-        this.destinationCidrBlock = null;
-        this.destinationIpv6CidrBlock = null;
-        this.destinationPrefixListId = null;
-        this.egressOnlyGatewayId = null;
-        this.gatewayId = null;
-        this.instanceId = null;
-        this.localGatewayId = null;
-        this.natGatewayId = null;
-        this.networkInterfaceId = null;
-        this.routeTableId = null;
-        this.transitGatewayId = null;
-        this.vpcPeeringConnectionId = null;
+    private GetRouteArgs(GetRouteArgs $) {
+        this.carrierGatewayId = $.carrierGatewayId;
+        this.destinationCidrBlock = $.destinationCidrBlock;
+        this.destinationIpv6CidrBlock = $.destinationIpv6CidrBlock;
+        this.destinationPrefixListId = $.destinationPrefixListId;
+        this.egressOnlyGatewayId = $.egressOnlyGatewayId;
+        this.gatewayId = $.gatewayId;
+        this.instanceId = $.instanceId;
+        this.localGatewayId = $.localGatewayId;
+        this.natGatewayId = $.natGatewayId;
+        this.networkInterfaceId = $.networkInterfaceId;
+        this.routeTableId = $.routeTableId;
+        this.transitGatewayId = $.transitGatewayId;
+        this.vpcPeeringConnectionId = $.vpcPeeringConnectionId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetRouteArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String carrierGatewayId;
-        private @Nullable String destinationCidrBlock;
-        private @Nullable String destinationIpv6CidrBlock;
-        private @Nullable String destinationPrefixListId;
-        private @Nullable String egressOnlyGatewayId;
-        private @Nullable String gatewayId;
-        private @Nullable String instanceId;
-        private @Nullable String localGatewayId;
-        private @Nullable String natGatewayId;
-        private @Nullable String networkInterfaceId;
-        private String routeTableId;
-        private @Nullable String transitGatewayId;
-        private @Nullable String vpcPeeringConnectionId;
+        private GetRouteArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetRouteArgs();
         }
 
         public Builder(GetRouteArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.carrierGatewayId = defaults.carrierGatewayId;
-    	      this.destinationCidrBlock = defaults.destinationCidrBlock;
-    	      this.destinationIpv6CidrBlock = defaults.destinationIpv6CidrBlock;
-    	      this.destinationPrefixListId = defaults.destinationPrefixListId;
-    	      this.egressOnlyGatewayId = defaults.egressOnlyGatewayId;
-    	      this.gatewayId = defaults.gatewayId;
-    	      this.instanceId = defaults.instanceId;
-    	      this.localGatewayId = defaults.localGatewayId;
-    	      this.natGatewayId = defaults.natGatewayId;
-    	      this.networkInterfaceId = defaults.networkInterfaceId;
-    	      this.routeTableId = defaults.routeTableId;
-    	      this.transitGatewayId = defaults.transitGatewayId;
-    	      this.vpcPeeringConnectionId = defaults.vpcPeeringConnectionId;
+            $ = new GetRouteArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder carrierGatewayId(@Nullable String carrierGatewayId) {
-            this.carrierGatewayId = carrierGatewayId;
+            $.carrierGatewayId = carrierGatewayId;
             return this;
         }
+
         public Builder destinationCidrBlock(@Nullable String destinationCidrBlock) {
-            this.destinationCidrBlock = destinationCidrBlock;
+            $.destinationCidrBlock = destinationCidrBlock;
             return this;
         }
+
         public Builder destinationIpv6CidrBlock(@Nullable String destinationIpv6CidrBlock) {
-            this.destinationIpv6CidrBlock = destinationIpv6CidrBlock;
+            $.destinationIpv6CidrBlock = destinationIpv6CidrBlock;
             return this;
         }
+
         public Builder destinationPrefixListId(@Nullable String destinationPrefixListId) {
-            this.destinationPrefixListId = destinationPrefixListId;
+            $.destinationPrefixListId = destinationPrefixListId;
             return this;
         }
+
         public Builder egressOnlyGatewayId(@Nullable String egressOnlyGatewayId) {
-            this.egressOnlyGatewayId = egressOnlyGatewayId;
+            $.egressOnlyGatewayId = egressOnlyGatewayId;
             return this;
         }
+
         public Builder gatewayId(@Nullable String gatewayId) {
-            this.gatewayId = gatewayId;
+            $.gatewayId = gatewayId;
             return this;
         }
+
         public Builder instanceId(@Nullable String instanceId) {
-            this.instanceId = instanceId;
+            $.instanceId = instanceId;
             return this;
         }
+
         public Builder localGatewayId(@Nullable String localGatewayId) {
-            this.localGatewayId = localGatewayId;
+            $.localGatewayId = localGatewayId;
             return this;
         }
+
         public Builder natGatewayId(@Nullable String natGatewayId) {
-            this.natGatewayId = natGatewayId;
+            $.natGatewayId = natGatewayId;
             return this;
         }
+
         public Builder networkInterfaceId(@Nullable String networkInterfaceId) {
-            this.networkInterfaceId = networkInterfaceId;
+            $.networkInterfaceId = networkInterfaceId;
             return this;
         }
+
         public Builder routeTableId(String routeTableId) {
-            this.routeTableId = Objects.requireNonNull(routeTableId);
+            $.routeTableId = routeTableId;
             return this;
         }
+
         public Builder transitGatewayId(@Nullable String transitGatewayId) {
-            this.transitGatewayId = transitGatewayId;
+            $.transitGatewayId = transitGatewayId;
             return this;
         }
+
         public Builder vpcPeeringConnectionId(@Nullable String vpcPeeringConnectionId) {
-            this.vpcPeeringConnectionId = vpcPeeringConnectionId;
+            $.vpcPeeringConnectionId = vpcPeeringConnectionId;
             return this;
-        }        public GetRouteArgs build() {
-            return new GetRouteArgs(carrierGatewayId, destinationCidrBlock, destinationIpv6CidrBlock, destinationPrefixListId, egressOnlyGatewayId, gatewayId, instanceId, localGatewayId, natGatewayId, networkInterfaceId, routeTableId, transitGatewayId, vpcPeeringConnectionId);
+        }
+
+        public GetRouteArgs build() {
+            $.routeTableId = Objects.requireNonNull($.routeTableId, "expected parameter 'routeTableId' to be non-null");
+            return $;
         }
     }
+
 }

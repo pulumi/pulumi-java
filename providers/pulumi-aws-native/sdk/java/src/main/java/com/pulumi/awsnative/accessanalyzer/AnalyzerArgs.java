@@ -7,10 +7,10 @@ import com.pulumi.awsnative.accessanalyzer.inputs.AnalyzerArchiveRuleArgs;
 import com.pulumi.awsnative.accessanalyzer.inputs.AnalyzerTagArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,17 +23,17 @@ public final class AnalyzerArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="analyzerName")
-      private final @Nullable Output<String> analyzerName;
+    private @Nullable Output<String> analyzerName;
 
-    public Output<String> analyzerName() {
-        return this.analyzerName == null ? Codegen.empty() : this.analyzerName;
+    public Optional<Output<String>> analyzerName() {
+        return Optional.ofNullable(this.analyzerName);
     }
 
     @Import(name="archiveRules")
-      private final @Nullable Output<List<AnalyzerArchiveRuleArgs>> archiveRules;
+    private @Nullable Output<List<AnalyzerArchiveRuleArgs>> archiveRules;
 
-    public Output<List<AnalyzerArchiveRuleArgs>> archiveRules() {
-        return this.archiveRules == null ? Codegen.empty() : this.archiveRules;
+    public Optional<Output<List<AnalyzerArchiveRuleArgs>>> archiveRules() {
+        return Optional.ofNullable(this.archiveRules);
     }
 
     /**
@@ -41,10 +41,10 @@ public final class AnalyzerArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<List<AnalyzerTagArgs>> tags;
+    private @Nullable Output<List<AnalyzerTagArgs>> tags;
 
-    public Output<List<AnalyzerTagArgs>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<List<AnalyzerTagArgs>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -52,95 +52,87 @@ public final class AnalyzerArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="type", required=true)
-      private final Output<String> type;
+    private Output<String> type;
 
     public Output<String> type() {
         return this.type;
     }
 
-    public AnalyzerArgs(
-        @Nullable Output<String> analyzerName,
-        @Nullable Output<List<AnalyzerArchiveRuleArgs>> archiveRules,
-        @Nullable Output<List<AnalyzerTagArgs>> tags,
-        Output<String> type) {
-        this.analyzerName = analyzerName;
-        this.archiveRules = archiveRules;
-        this.tags = tags;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private AnalyzerArgs() {}
 
-    private AnalyzerArgs() {
-        this.analyzerName = Codegen.empty();
-        this.archiveRules = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.type = Codegen.empty();
+    private AnalyzerArgs(AnalyzerArgs $) {
+        this.analyzerName = $.analyzerName;
+        this.archiveRules = $.archiveRules;
+        this.tags = $.tags;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AnalyzerArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> analyzerName;
-        private @Nullable Output<List<AnalyzerArchiveRuleArgs>> archiveRules;
-        private @Nullable Output<List<AnalyzerTagArgs>> tags;
-        private Output<String> type;
+        private AnalyzerArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AnalyzerArgs();
         }
 
         public Builder(AnalyzerArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.analyzerName = defaults.analyzerName;
-    	      this.archiveRules = defaults.archiveRules;
-    	      this.tags = defaults.tags;
-    	      this.type = defaults.type;
+            $ = new AnalyzerArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder analyzerName(@Nullable Output<String> analyzerName) {
-            this.analyzerName = analyzerName;
+            $.analyzerName = analyzerName;
             return this;
         }
-        public Builder analyzerName(@Nullable String analyzerName) {
-            this.analyzerName = Codegen.ofNullable(analyzerName);
-            return this;
+
+        public Builder analyzerName(String analyzerName) {
+            return analyzerName(Output.of(analyzerName));
         }
+
         public Builder archiveRules(@Nullable Output<List<AnalyzerArchiveRuleArgs>> archiveRules) {
-            this.archiveRules = archiveRules;
+            $.archiveRules = archiveRules;
             return this;
         }
-        public Builder archiveRules(@Nullable List<AnalyzerArchiveRuleArgs> archiveRules) {
-            this.archiveRules = Codegen.ofNullable(archiveRules);
-            return this;
+
+        public Builder archiveRules(List<AnalyzerArchiveRuleArgs> archiveRules) {
+            return archiveRules(Output.of(archiveRules));
         }
+
         public Builder archiveRules(AnalyzerArchiveRuleArgs... archiveRules) {
             return archiveRules(List.of(archiveRules));
         }
+
         public Builder tags(@Nullable Output<List<AnalyzerTagArgs>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable List<AnalyzerTagArgs> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(List<AnalyzerTagArgs> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tags(AnalyzerTagArgs... tags) {
             return tags(List.of(tags));
         }
+
         public Builder type(Output<String> type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Output.of(Objects.requireNonNull(type));
-            return this;
-        }        public AnalyzerArgs build() {
-            return new AnalyzerArgs(analyzerName, archiveRules, tags, type);
+            return type(Output.of(type));
+        }
+
+        public AnalyzerArgs build() {
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

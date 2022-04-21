@@ -24,10 +24,10 @@ public final class AdditionalErrorInfoResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="info")
-      private final @Nullable Object info;
+    private @Nullable Object info;
 
     public Optional<Object> info() {
-        return this.info == null ? Optional.empty() : Optional.ofNullable(this.info);
+        return Optional.ofNullable(this.info);
     }
 
     /**
@@ -35,55 +35,50 @@ public final class AdditionalErrorInfoResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="type")
-      private final @Nullable String type;
+    private @Nullable String type;
 
     public Optional<String> type() {
-        return this.type == null ? Optional.empty() : Optional.ofNullable(this.type);
+        return Optional.ofNullable(this.type);
     }
 
-    public AdditionalErrorInfoResponse(
-        @Nullable Object info,
-        @Nullable String type) {
-        this.info = info;
-        this.type = type;
-    }
+    private AdditionalErrorInfoResponse() {}
 
-    private AdditionalErrorInfoResponse() {
-        this.info = null;
-        this.type = null;
+    private AdditionalErrorInfoResponse(AdditionalErrorInfoResponse $) {
+        this.info = $.info;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AdditionalErrorInfoResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Object info;
-        private @Nullable String type;
+        private AdditionalErrorInfoResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AdditionalErrorInfoResponse();
         }
 
         public Builder(AdditionalErrorInfoResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.info = defaults.info;
-    	      this.type = defaults.type;
+            $ = new AdditionalErrorInfoResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder info(@Nullable Object info) {
-            this.info = info;
+            $.info = info;
             return this;
         }
+
         public Builder type(@Nullable String type) {
-            this.type = type;
+            $.type = type;
             return this;
-        }        public AdditionalErrorInfoResponse build() {
-            return new AdditionalErrorInfoResponse(info, type);
+        }
+
+        public AdditionalErrorInfoResponse build() {
+            return $;
         }
     }
+
 }

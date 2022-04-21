@@ -9,11 +9,11 @@ import com.pulumi.azurenative.web.inputs.NonceArgs;
 import com.pulumi.azurenative.web.inputs.TokenStoreArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -32,10 +32,10 @@ public final class LoginArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="allowedExternalRedirectUrls")
-      private final @Nullable Output<List<String>> allowedExternalRedirectUrls;
+    private @Nullable Output<List<String>> allowedExternalRedirectUrls;
 
-    public Output<List<String>> allowedExternalRedirectUrls() {
-        return this.allowedExternalRedirectUrls == null ? Codegen.empty() : this.allowedExternalRedirectUrls;
+    public Optional<Output<List<String>>> allowedExternalRedirectUrls() {
+        return Optional.ofNullable(this.allowedExternalRedirectUrls);
     }
 
     /**
@@ -43,10 +43,10 @@ public final class LoginArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="cookieExpiration")
-      private final @Nullable Output<CookieExpirationArgs> cookieExpiration;
+    private @Nullable Output<CookieExpirationArgs> cookieExpiration;
 
-    public Output<CookieExpirationArgs> cookieExpiration() {
-        return this.cookieExpiration == null ? Codegen.empty() : this.cookieExpiration;
+    public Optional<Output<CookieExpirationArgs>> cookieExpiration() {
+        return Optional.ofNullable(this.cookieExpiration);
     }
 
     /**
@@ -54,10 +54,10 @@ public final class LoginArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="nonce")
-      private final @Nullable Output<NonceArgs> nonce;
+    private @Nullable Output<NonceArgs> nonce;
 
-    public Output<NonceArgs> nonce() {
-        return this.nonce == null ? Codegen.empty() : this.nonce;
+    public Optional<Output<NonceArgs>> nonce() {
+        return Optional.ofNullable(this.nonce);
     }
 
     /**
@@ -65,10 +65,10 @@ public final class LoginArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="preserveUrlFragmentsForLogins")
-      private final @Nullable Output<Boolean> preserveUrlFragmentsForLogins;
+    private @Nullable Output<Boolean> preserveUrlFragmentsForLogins;
 
-    public Output<Boolean> preserveUrlFragmentsForLogins() {
-        return this.preserveUrlFragmentsForLogins == null ? Codegen.empty() : this.preserveUrlFragmentsForLogins;
+    public Optional<Output<Boolean>> preserveUrlFragmentsForLogins() {
+        return Optional.ofNullable(this.preserveUrlFragmentsForLogins);
     }
 
     /**
@@ -76,10 +76,10 @@ public final class LoginArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="routes")
-      private final @Nullable Output<LoginRoutesArgs> routes;
+    private @Nullable Output<LoginRoutesArgs> routes;
 
-    public Output<LoginRoutesArgs> routes() {
-        return this.routes == null ? Codegen.empty() : this.routes;
+    public Optional<Output<LoginRoutesArgs>> routes() {
+        return Optional.ofNullable(this.routes);
     }
 
     /**
@@ -87,118 +87,102 @@ public final class LoginArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tokenStore")
-      private final @Nullable Output<TokenStoreArgs> tokenStore;
+    private @Nullable Output<TokenStoreArgs> tokenStore;
 
-    public Output<TokenStoreArgs> tokenStore() {
-        return this.tokenStore == null ? Codegen.empty() : this.tokenStore;
+    public Optional<Output<TokenStoreArgs>> tokenStore() {
+        return Optional.ofNullable(this.tokenStore);
     }
 
-    public LoginArgs(
-        @Nullable Output<List<String>> allowedExternalRedirectUrls,
-        @Nullable Output<CookieExpirationArgs> cookieExpiration,
-        @Nullable Output<NonceArgs> nonce,
-        @Nullable Output<Boolean> preserveUrlFragmentsForLogins,
-        @Nullable Output<LoginRoutesArgs> routes,
-        @Nullable Output<TokenStoreArgs> tokenStore) {
-        this.allowedExternalRedirectUrls = allowedExternalRedirectUrls;
-        this.cookieExpiration = cookieExpiration;
-        this.nonce = nonce;
-        this.preserveUrlFragmentsForLogins = preserveUrlFragmentsForLogins;
-        this.routes = routes;
-        this.tokenStore = tokenStore;
-    }
+    private LoginArgs() {}
 
-    private LoginArgs() {
-        this.allowedExternalRedirectUrls = Codegen.empty();
-        this.cookieExpiration = Codegen.empty();
-        this.nonce = Codegen.empty();
-        this.preserveUrlFragmentsForLogins = Codegen.empty();
-        this.routes = Codegen.empty();
-        this.tokenStore = Codegen.empty();
+    private LoginArgs(LoginArgs $) {
+        this.allowedExternalRedirectUrls = $.allowedExternalRedirectUrls;
+        this.cookieExpiration = $.cookieExpiration;
+        this.nonce = $.nonce;
+        this.preserveUrlFragmentsForLogins = $.preserveUrlFragmentsForLogins;
+        this.routes = $.routes;
+        this.tokenStore = $.tokenStore;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LoginArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> allowedExternalRedirectUrls;
-        private @Nullable Output<CookieExpirationArgs> cookieExpiration;
-        private @Nullable Output<NonceArgs> nonce;
-        private @Nullable Output<Boolean> preserveUrlFragmentsForLogins;
-        private @Nullable Output<LoginRoutesArgs> routes;
-        private @Nullable Output<TokenStoreArgs> tokenStore;
+        private LoginArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new LoginArgs();
         }
 
         public Builder(LoginArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.allowedExternalRedirectUrls = defaults.allowedExternalRedirectUrls;
-    	      this.cookieExpiration = defaults.cookieExpiration;
-    	      this.nonce = defaults.nonce;
-    	      this.preserveUrlFragmentsForLogins = defaults.preserveUrlFragmentsForLogins;
-    	      this.routes = defaults.routes;
-    	      this.tokenStore = defaults.tokenStore;
+            $ = new LoginArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder allowedExternalRedirectUrls(@Nullable Output<List<String>> allowedExternalRedirectUrls) {
-            this.allowedExternalRedirectUrls = allowedExternalRedirectUrls;
+            $.allowedExternalRedirectUrls = allowedExternalRedirectUrls;
             return this;
         }
-        public Builder allowedExternalRedirectUrls(@Nullable List<String> allowedExternalRedirectUrls) {
-            this.allowedExternalRedirectUrls = Codegen.ofNullable(allowedExternalRedirectUrls);
-            return this;
+
+        public Builder allowedExternalRedirectUrls(List<String> allowedExternalRedirectUrls) {
+            return allowedExternalRedirectUrls(Output.of(allowedExternalRedirectUrls));
         }
+
         public Builder allowedExternalRedirectUrls(String... allowedExternalRedirectUrls) {
             return allowedExternalRedirectUrls(List.of(allowedExternalRedirectUrls));
         }
+
         public Builder cookieExpiration(@Nullable Output<CookieExpirationArgs> cookieExpiration) {
-            this.cookieExpiration = cookieExpiration;
+            $.cookieExpiration = cookieExpiration;
             return this;
         }
-        public Builder cookieExpiration(@Nullable CookieExpirationArgs cookieExpiration) {
-            this.cookieExpiration = Codegen.ofNullable(cookieExpiration);
-            return this;
+
+        public Builder cookieExpiration(CookieExpirationArgs cookieExpiration) {
+            return cookieExpiration(Output.of(cookieExpiration));
         }
+
         public Builder nonce(@Nullable Output<NonceArgs> nonce) {
-            this.nonce = nonce;
+            $.nonce = nonce;
             return this;
         }
-        public Builder nonce(@Nullable NonceArgs nonce) {
-            this.nonce = Codegen.ofNullable(nonce);
-            return this;
+
+        public Builder nonce(NonceArgs nonce) {
+            return nonce(Output.of(nonce));
         }
+
         public Builder preserveUrlFragmentsForLogins(@Nullable Output<Boolean> preserveUrlFragmentsForLogins) {
-            this.preserveUrlFragmentsForLogins = preserveUrlFragmentsForLogins;
+            $.preserveUrlFragmentsForLogins = preserveUrlFragmentsForLogins;
             return this;
         }
-        public Builder preserveUrlFragmentsForLogins(@Nullable Boolean preserveUrlFragmentsForLogins) {
-            this.preserveUrlFragmentsForLogins = Codegen.ofNullable(preserveUrlFragmentsForLogins);
-            return this;
+
+        public Builder preserveUrlFragmentsForLogins(Boolean preserveUrlFragmentsForLogins) {
+            return preserveUrlFragmentsForLogins(Output.of(preserveUrlFragmentsForLogins));
         }
+
         public Builder routes(@Nullable Output<LoginRoutesArgs> routes) {
-            this.routes = routes;
+            $.routes = routes;
             return this;
         }
-        public Builder routes(@Nullable LoginRoutesArgs routes) {
-            this.routes = Codegen.ofNullable(routes);
-            return this;
+
+        public Builder routes(LoginRoutesArgs routes) {
+            return routes(Output.of(routes));
         }
+
         public Builder tokenStore(@Nullable Output<TokenStoreArgs> tokenStore) {
-            this.tokenStore = tokenStore;
+            $.tokenStore = tokenStore;
             return this;
         }
-        public Builder tokenStore(@Nullable TokenStoreArgs tokenStore) {
-            this.tokenStore = Codegen.ofNullable(tokenStore);
-            return this;
-        }        public LoginArgs build() {
-            return new LoginArgs(allowedExternalRedirectUrls, cookieExpiration, nonce, preserveUrlFragmentsForLogins, routes, tokenStore);
+
+        public Builder tokenStore(TokenStoreArgs tokenStore) {
+            return tokenStore(Output.of(tokenStore));
+        }
+
+        public LoginArgs build() {
+            return $;
         }
     }
+
 }

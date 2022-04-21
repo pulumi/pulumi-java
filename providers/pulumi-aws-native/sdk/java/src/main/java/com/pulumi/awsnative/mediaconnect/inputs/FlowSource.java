@@ -26,10 +26,10 @@ public final class FlowSource extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="decryption")
-      private final @Nullable FlowEncryption decryption;
+    private @Nullable FlowEncryption decryption;
 
     public Optional<FlowEncryption> decryption() {
-        return this.decryption == null ? Optional.empty() : Optional.ofNullable(this.decryption);
+        return Optional.ofNullable(this.decryption);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class FlowSource extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable String description;
+    private @Nullable String description;
 
     public Optional<String> description() {
-        return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -48,10 +48,10 @@ public final class FlowSource extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="entitlementArn")
-      private final @Nullable String entitlementArn;
+    private @Nullable String entitlementArn;
 
     public Optional<String> entitlementArn() {
-        return this.entitlementArn == null ? Optional.empty() : Optional.ofNullable(this.entitlementArn);
+        return Optional.ofNullable(this.entitlementArn);
     }
 
     /**
@@ -59,10 +59,10 @@ public final class FlowSource extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="ingestIp")
-      private final @Nullable String ingestIp;
+    private @Nullable String ingestIp;
 
     public Optional<String> ingestIp() {
-        return this.ingestIp == null ? Optional.empty() : Optional.ofNullable(this.ingestIp);
+        return Optional.ofNullable(this.ingestIp);
     }
 
     /**
@@ -70,10 +70,10 @@ public final class FlowSource extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="ingestPort")
-      private final @Nullable Integer ingestPort;
+    private @Nullable Integer ingestPort;
 
     public Optional<Integer> ingestPort() {
-        return this.ingestPort == null ? Optional.empty() : Optional.ofNullable(this.ingestPort);
+        return Optional.ofNullable(this.ingestPort);
     }
 
     /**
@@ -81,10 +81,10 @@ public final class FlowSource extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="maxBitrate")
-      private final @Nullable Integer maxBitrate;
+    private @Nullable Integer maxBitrate;
 
     public Optional<Integer> maxBitrate() {
-        return this.maxBitrate == null ? Optional.empty() : Optional.ofNullable(this.maxBitrate);
+        return Optional.ofNullable(this.maxBitrate);
     }
 
     /**
@@ -92,10 +92,10 @@ public final class FlowSource extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="maxLatency")
-      private final @Nullable Integer maxLatency;
+    private @Nullable Integer maxLatency;
 
     public Optional<Integer> maxLatency() {
-        return this.maxLatency == null ? Optional.empty() : Optional.ofNullable(this.maxLatency);
+        return Optional.ofNullable(this.maxLatency);
     }
 
     /**
@@ -103,10 +103,10 @@ public final class FlowSource extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="minLatency")
-      private final @Nullable Integer minLatency;
+    private @Nullable Integer minLatency;
 
     public Optional<Integer> minLatency() {
-        return this.minLatency == null ? Optional.empty() : Optional.ofNullable(this.minLatency);
+        return Optional.ofNullable(this.minLatency);
     }
 
     /**
@@ -114,10 +114,10 @@ public final class FlowSource extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable String name;
+    private @Nullable String name;
 
     public Optional<String> name() {
-        return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -125,10 +125,10 @@ public final class FlowSource extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="protocol")
-      private final @Nullable FlowSourceProtocol protocol;
+    private @Nullable FlowSourceProtocol protocol;
 
     public Optional<FlowSourceProtocol> protocol() {
-        return this.protocol == null ? Optional.empty() : Optional.ofNullable(this.protocol);
+        return Optional.ofNullable(this.protocol);
     }
 
     /**
@@ -136,10 +136,10 @@ public final class FlowSource extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="sourceArn")
-      private final @Nullable String sourceArn;
+    private @Nullable String sourceArn;
 
     public Optional<String> sourceArn() {
-        return this.sourceArn == null ? Optional.empty() : Optional.ofNullable(this.sourceArn);
+        return Optional.ofNullable(this.sourceArn);
     }
 
     /**
@@ -147,10 +147,10 @@ public final class FlowSource extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="sourceIngestPort")
-      private final @Nullable String sourceIngestPort;
+    private @Nullable String sourceIngestPort;
 
     public Optional<String> sourceIngestPort() {
-        return this.sourceIngestPort == null ? Optional.empty() : Optional.ofNullable(this.sourceIngestPort);
+        return Optional.ofNullable(this.sourceIngestPort);
     }
 
     /**
@@ -158,10 +158,10 @@ public final class FlowSource extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="streamId")
-      private final @Nullable String streamId;
+    private @Nullable String streamId;
 
     public Optional<String> streamId() {
-        return this.streamId == null ? Optional.empty() : Optional.ofNullable(this.streamId);
+        return Optional.ofNullable(this.streamId);
     }
 
     /**
@@ -169,10 +169,10 @@ public final class FlowSource extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="vpcInterfaceName")
-      private final @Nullable String vpcInterfaceName;
+    private @Nullable String vpcInterfaceName;
 
     public Optional<String> vpcInterfaceName() {
-        return this.vpcInterfaceName == null ? Optional.empty() : Optional.ofNullable(this.vpcInterfaceName);
+        return Optional.ofNullable(this.vpcInterfaceName);
     }
 
     /**
@@ -180,172 +180,128 @@ public final class FlowSource extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="whitelistCidr")
-      private final @Nullable String whitelistCidr;
+    private @Nullable String whitelistCidr;
 
     public Optional<String> whitelistCidr() {
-        return this.whitelistCidr == null ? Optional.empty() : Optional.ofNullable(this.whitelistCidr);
+        return Optional.ofNullable(this.whitelistCidr);
     }
 
-    public FlowSource(
-        @Nullable FlowEncryption decryption,
-        @Nullable String description,
-        @Nullable String entitlementArn,
-        @Nullable String ingestIp,
-        @Nullable Integer ingestPort,
-        @Nullable Integer maxBitrate,
-        @Nullable Integer maxLatency,
-        @Nullable Integer minLatency,
-        @Nullable String name,
-        @Nullable FlowSourceProtocol protocol,
-        @Nullable String sourceArn,
-        @Nullable String sourceIngestPort,
-        @Nullable String streamId,
-        @Nullable String vpcInterfaceName,
-        @Nullable String whitelistCidr) {
-        this.decryption = decryption;
-        this.description = description;
-        this.entitlementArn = entitlementArn;
-        this.ingestIp = ingestIp;
-        this.ingestPort = ingestPort;
-        this.maxBitrate = maxBitrate;
-        this.maxLatency = maxLatency;
-        this.minLatency = minLatency;
-        this.name = name;
-        this.protocol = protocol;
-        this.sourceArn = sourceArn;
-        this.sourceIngestPort = sourceIngestPort;
-        this.streamId = streamId;
-        this.vpcInterfaceName = vpcInterfaceName;
-        this.whitelistCidr = whitelistCidr;
-    }
+    private FlowSource() {}
 
-    private FlowSource() {
-        this.decryption = null;
-        this.description = null;
-        this.entitlementArn = null;
-        this.ingestIp = null;
-        this.ingestPort = null;
-        this.maxBitrate = null;
-        this.maxLatency = null;
-        this.minLatency = null;
-        this.name = null;
-        this.protocol = null;
-        this.sourceArn = null;
-        this.sourceIngestPort = null;
-        this.streamId = null;
-        this.vpcInterfaceName = null;
-        this.whitelistCidr = null;
+    private FlowSource(FlowSource $) {
+        this.decryption = $.decryption;
+        this.description = $.description;
+        this.entitlementArn = $.entitlementArn;
+        this.ingestIp = $.ingestIp;
+        this.ingestPort = $.ingestPort;
+        this.maxBitrate = $.maxBitrate;
+        this.maxLatency = $.maxLatency;
+        this.minLatency = $.minLatency;
+        this.name = $.name;
+        this.protocol = $.protocol;
+        this.sourceArn = $.sourceArn;
+        this.sourceIngestPort = $.sourceIngestPort;
+        this.streamId = $.streamId;
+        this.vpcInterfaceName = $.vpcInterfaceName;
+        this.whitelistCidr = $.whitelistCidr;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FlowSource defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable FlowEncryption decryption;
-        private @Nullable String description;
-        private @Nullable String entitlementArn;
-        private @Nullable String ingestIp;
-        private @Nullable Integer ingestPort;
-        private @Nullable Integer maxBitrate;
-        private @Nullable Integer maxLatency;
-        private @Nullable Integer minLatency;
-        private @Nullable String name;
-        private @Nullable FlowSourceProtocol protocol;
-        private @Nullable String sourceArn;
-        private @Nullable String sourceIngestPort;
-        private @Nullable String streamId;
-        private @Nullable String vpcInterfaceName;
-        private @Nullable String whitelistCidr;
+        private FlowSource $;
 
         public Builder() {
-    	      // Empty
+            $ = new FlowSource();
         }
 
         public Builder(FlowSource defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.decryption = defaults.decryption;
-    	      this.description = defaults.description;
-    	      this.entitlementArn = defaults.entitlementArn;
-    	      this.ingestIp = defaults.ingestIp;
-    	      this.ingestPort = defaults.ingestPort;
-    	      this.maxBitrate = defaults.maxBitrate;
-    	      this.maxLatency = defaults.maxLatency;
-    	      this.minLatency = defaults.minLatency;
-    	      this.name = defaults.name;
-    	      this.protocol = defaults.protocol;
-    	      this.sourceArn = defaults.sourceArn;
-    	      this.sourceIngestPort = defaults.sourceIngestPort;
-    	      this.streamId = defaults.streamId;
-    	      this.vpcInterfaceName = defaults.vpcInterfaceName;
-    	      this.whitelistCidr = defaults.whitelistCidr;
+            $ = new FlowSource(Objects.requireNonNull(defaults));
         }
 
         public Builder decryption(@Nullable FlowEncryption decryption) {
-            this.decryption = decryption;
+            $.decryption = decryption;
             return this;
         }
+
         public Builder description(@Nullable String description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
+
         public Builder entitlementArn(@Nullable String entitlementArn) {
-            this.entitlementArn = entitlementArn;
+            $.entitlementArn = entitlementArn;
             return this;
         }
+
         public Builder ingestIp(@Nullable String ingestIp) {
-            this.ingestIp = ingestIp;
+            $.ingestIp = ingestIp;
             return this;
         }
+
         public Builder ingestPort(@Nullable Integer ingestPort) {
-            this.ingestPort = ingestPort;
+            $.ingestPort = ingestPort;
             return this;
         }
+
         public Builder maxBitrate(@Nullable Integer maxBitrate) {
-            this.maxBitrate = maxBitrate;
+            $.maxBitrate = maxBitrate;
             return this;
         }
+
         public Builder maxLatency(@Nullable Integer maxLatency) {
-            this.maxLatency = maxLatency;
+            $.maxLatency = maxLatency;
             return this;
         }
+
         public Builder minLatency(@Nullable Integer minLatency) {
-            this.minLatency = minLatency;
+            $.minLatency = minLatency;
             return this;
         }
+
         public Builder name(@Nullable String name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
+
         public Builder protocol(@Nullable FlowSourceProtocol protocol) {
-            this.protocol = protocol;
+            $.protocol = protocol;
             return this;
         }
+
         public Builder sourceArn(@Nullable String sourceArn) {
-            this.sourceArn = sourceArn;
+            $.sourceArn = sourceArn;
             return this;
         }
+
         public Builder sourceIngestPort(@Nullable String sourceIngestPort) {
-            this.sourceIngestPort = sourceIngestPort;
+            $.sourceIngestPort = sourceIngestPort;
             return this;
         }
+
         public Builder streamId(@Nullable String streamId) {
-            this.streamId = streamId;
+            $.streamId = streamId;
             return this;
         }
+
         public Builder vpcInterfaceName(@Nullable String vpcInterfaceName) {
-            this.vpcInterfaceName = vpcInterfaceName;
+            $.vpcInterfaceName = vpcInterfaceName;
             return this;
         }
+
         public Builder whitelistCidr(@Nullable String whitelistCidr) {
-            this.whitelistCidr = whitelistCidr;
+            $.whitelistCidr = whitelistCidr;
             return this;
-        }        public FlowSource build() {
-            return new FlowSource(decryption, description, entitlementArn, ingestIp, ingestPort, maxBitrate, maxLatency, minLatency, name, protocol, sourceArn, sourceIngestPort, streamId, vpcInterfaceName, whitelistCidr);
+        }
+
+        public FlowSource build() {
+            return $;
         }
     }
+
 }

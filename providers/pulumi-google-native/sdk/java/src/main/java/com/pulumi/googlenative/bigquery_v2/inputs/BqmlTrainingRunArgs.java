@@ -5,12 +5,12 @@ package com.pulumi.googlenative.bigquery_v2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.bigquery_v2.inputs.BqmlIterationResultArgs;
 import com.pulumi.googlenative.bigquery_v2.inputs.BqmlTrainingRunTrainingOptionsArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,10 @@ public final class BqmlTrainingRunArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="iterationResults")
-      private final @Nullable Output<List<BqmlIterationResultArgs>> iterationResults;
+    private @Nullable Output<List<BqmlIterationResultArgs>> iterationResults;
 
-    public Output<List<BqmlIterationResultArgs>> iterationResults() {
-        return this.iterationResults == null ? Codegen.empty() : this.iterationResults;
+    public Optional<Output<List<BqmlIterationResultArgs>>> iterationResults() {
+        return Optional.ofNullable(this.iterationResults);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class BqmlTrainingRunArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="startTime")
-      private final @Nullable Output<String> startTime;
+    private @Nullable Output<String> startTime;
 
-    public Output<String> startTime() {
-        return this.startTime == null ? Codegen.empty() : this.startTime;
+    public Optional<Output<String>> startTime() {
+        return Optional.ofNullable(this.startTime);
     }
 
     /**
@@ -45,10 +45,10 @@ public final class BqmlTrainingRunArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="state")
-      private final @Nullable Output<String> state;
+    private @Nullable Output<String> state;
 
-    public Output<String> state() {
-        return this.state == null ? Codegen.empty() : this.state;
+    public Optional<Output<String>> state() {
+        return Optional.ofNullable(this.state);
     }
 
     /**
@@ -56,92 +56,82 @@ public final class BqmlTrainingRunArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="trainingOptions")
-      private final @Nullable Output<BqmlTrainingRunTrainingOptionsArgs> trainingOptions;
+    private @Nullable Output<BqmlTrainingRunTrainingOptionsArgs> trainingOptions;
 
-    public Output<BqmlTrainingRunTrainingOptionsArgs> trainingOptions() {
-        return this.trainingOptions == null ? Codegen.empty() : this.trainingOptions;
+    public Optional<Output<BqmlTrainingRunTrainingOptionsArgs>> trainingOptions() {
+        return Optional.ofNullable(this.trainingOptions);
     }
 
-    public BqmlTrainingRunArgs(
-        @Nullable Output<List<BqmlIterationResultArgs>> iterationResults,
-        @Nullable Output<String> startTime,
-        @Nullable Output<String> state,
-        @Nullable Output<BqmlTrainingRunTrainingOptionsArgs> trainingOptions) {
-        this.iterationResults = iterationResults;
-        this.startTime = startTime;
-        this.state = state;
-        this.trainingOptions = trainingOptions;
-    }
+    private BqmlTrainingRunArgs() {}
 
-    private BqmlTrainingRunArgs() {
-        this.iterationResults = Codegen.empty();
-        this.startTime = Codegen.empty();
-        this.state = Codegen.empty();
-        this.trainingOptions = Codegen.empty();
+    private BqmlTrainingRunArgs(BqmlTrainingRunArgs $) {
+        this.iterationResults = $.iterationResults;
+        this.startTime = $.startTime;
+        this.state = $.state;
+        this.trainingOptions = $.trainingOptions;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BqmlTrainingRunArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<BqmlIterationResultArgs>> iterationResults;
-        private @Nullable Output<String> startTime;
-        private @Nullable Output<String> state;
-        private @Nullable Output<BqmlTrainingRunTrainingOptionsArgs> trainingOptions;
+        private BqmlTrainingRunArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new BqmlTrainingRunArgs();
         }
 
         public Builder(BqmlTrainingRunArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.iterationResults = defaults.iterationResults;
-    	      this.startTime = defaults.startTime;
-    	      this.state = defaults.state;
-    	      this.trainingOptions = defaults.trainingOptions;
+            $ = new BqmlTrainingRunArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder iterationResults(@Nullable Output<List<BqmlIterationResultArgs>> iterationResults) {
-            this.iterationResults = iterationResults;
+            $.iterationResults = iterationResults;
             return this;
         }
-        public Builder iterationResults(@Nullable List<BqmlIterationResultArgs> iterationResults) {
-            this.iterationResults = Codegen.ofNullable(iterationResults);
-            return this;
+
+        public Builder iterationResults(List<BqmlIterationResultArgs> iterationResults) {
+            return iterationResults(Output.of(iterationResults));
         }
+
         public Builder iterationResults(BqmlIterationResultArgs... iterationResults) {
             return iterationResults(List.of(iterationResults));
         }
+
         public Builder startTime(@Nullable Output<String> startTime) {
-            this.startTime = startTime;
+            $.startTime = startTime;
             return this;
         }
-        public Builder startTime(@Nullable String startTime) {
-            this.startTime = Codegen.ofNullable(startTime);
-            return this;
+
+        public Builder startTime(String startTime) {
+            return startTime(Output.of(startTime));
         }
+
         public Builder state(@Nullable Output<String> state) {
-            this.state = state;
+            $.state = state;
             return this;
         }
-        public Builder state(@Nullable String state) {
-            this.state = Codegen.ofNullable(state);
-            return this;
+
+        public Builder state(String state) {
+            return state(Output.of(state));
         }
+
         public Builder trainingOptions(@Nullable Output<BqmlTrainingRunTrainingOptionsArgs> trainingOptions) {
-            this.trainingOptions = trainingOptions;
+            $.trainingOptions = trainingOptions;
             return this;
         }
-        public Builder trainingOptions(@Nullable BqmlTrainingRunTrainingOptionsArgs trainingOptions) {
-            this.trainingOptions = Codegen.ofNullable(trainingOptions);
-            return this;
-        }        public BqmlTrainingRunArgs build() {
-            return new BqmlTrainingRunArgs(iterationResults, startTime, state, trainingOptions);
+
+        public Builder trainingOptions(BqmlTrainingRunTrainingOptionsArgs trainingOptions) {
+            return trainingOptions(Output.of(trainingOptions));
+        }
+
+        public BqmlTrainingRunArgs build() {
+            return $;
         }
     }
+
 }

@@ -5,10 +5,10 @@ package com.pulumi.googlenative.jobs_v3.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.jobs_v3.inputs.CompensationEntryArgs;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,52 +25,52 @@ public final class CompensationInfoArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="entries")
-      private final @Nullable Output<List<CompensationEntryArgs>> entries;
+    private @Nullable Output<List<CompensationEntryArgs>> entries;
 
-    public Output<List<CompensationEntryArgs>> entries() {
-        return this.entries == null ? Codegen.empty() : this.entries;
+    public Optional<Output<List<CompensationEntryArgs>>> entries() {
+        return Optional.ofNullable(this.entries);
     }
 
-    public CompensationInfoArgs(@Nullable Output<List<CompensationEntryArgs>> entries) {
-        this.entries = entries;
-    }
+    private CompensationInfoArgs() {}
 
-    private CompensationInfoArgs() {
-        this.entries = Codegen.empty();
+    private CompensationInfoArgs(CompensationInfoArgs $) {
+        this.entries = $.entries;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CompensationInfoArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<CompensationEntryArgs>> entries;
+        private CompensationInfoArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CompensationInfoArgs();
         }
 
         public Builder(CompensationInfoArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.entries = defaults.entries;
+            $ = new CompensationInfoArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder entries(@Nullable Output<List<CompensationEntryArgs>> entries) {
-            this.entries = entries;
+            $.entries = entries;
             return this;
         }
-        public Builder entries(@Nullable List<CompensationEntryArgs> entries) {
-            this.entries = Codegen.ofNullable(entries);
-            return this;
+
+        public Builder entries(List<CompensationEntryArgs> entries) {
+            return entries(Output.of(entries));
         }
+
         public Builder entries(CompensationEntryArgs... entries) {
             return entries(List.of(entries));
-        }        public CompensationInfoArgs build() {
-            return new CompensationInfoArgs(entries);
+        }
+
+        public CompensationInfoArgs build() {
+            return $;
         }
     }
+
 }

@@ -5,9 +5,9 @@ package com.pulumi.azurenative.compute.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class BillingProfileArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="maxPrice")
-      private final @Nullable Output<Double> maxPrice;
+    private @Nullable Output<Double> maxPrice;
 
-    public Output<Double> maxPrice() {
-        return this.maxPrice == null ? Codegen.empty() : this.maxPrice;
+    public Optional<Output<Double>> maxPrice() {
+        return Optional.ofNullable(this.maxPrice);
     }
 
-    public BillingProfileArgs(@Nullable Output<Double> maxPrice) {
-        this.maxPrice = maxPrice;
-    }
+    private BillingProfileArgs() {}
 
-    private BillingProfileArgs() {
-        this.maxPrice = Codegen.empty();
+    private BillingProfileArgs(BillingProfileArgs $) {
+        this.maxPrice = $.maxPrice;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BillingProfileArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Double> maxPrice;
+        private BillingProfileArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new BillingProfileArgs();
         }
 
         public Builder(BillingProfileArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.maxPrice = defaults.maxPrice;
+            $ = new BillingProfileArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder maxPrice(@Nullable Output<Double> maxPrice) {
-            this.maxPrice = maxPrice;
+            $.maxPrice = maxPrice;
             return this;
         }
-        public Builder maxPrice(@Nullable Double maxPrice) {
-            this.maxPrice = Codegen.ofNullable(maxPrice);
-            return this;
-        }        public BillingProfileArgs build() {
-            return new BillingProfileArgs(maxPrice);
+
+        public Builder maxPrice(Double maxPrice) {
+            return maxPrice(Output.of(maxPrice));
+        }
+
+        public BillingProfileArgs build() {
+            return $;
         }
     }
+
 }

@@ -26,7 +26,7 @@ public final class TensorFlowResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="distributionType", required=true)
-      private final String distributionType;
+    private String distributionType;
 
     public String distributionType() {
         return this.distributionType;
@@ -37,10 +37,10 @@ public final class TensorFlowResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="parameterServerCount")
-      private final @Nullable Integer parameterServerCount;
+    private @Nullable Integer parameterServerCount;
 
     public Optional<Integer> parameterServerCount() {
-        return this.parameterServerCount == null ? Optional.empty() : Optional.ofNullable(this.parameterServerCount);
+        return Optional.ofNullable(this.parameterServerCount);
     }
 
     /**
@@ -48,64 +48,57 @@ public final class TensorFlowResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="workerCount")
-      private final @Nullable Integer workerCount;
+    private @Nullable Integer workerCount;
 
     public Optional<Integer> workerCount() {
-        return this.workerCount == null ? Optional.empty() : Optional.ofNullable(this.workerCount);
+        return Optional.ofNullable(this.workerCount);
     }
 
-    public TensorFlowResponse(
-        String distributionType,
-        @Nullable Integer parameterServerCount,
-        @Nullable Integer workerCount) {
-        this.distributionType = Codegen.stringProp("distributionType").arg(distributionType).require();
-        this.parameterServerCount = parameterServerCount;
-        this.workerCount = workerCount;
-    }
+    private TensorFlowResponse() {}
 
-    private TensorFlowResponse() {
-        this.distributionType = null;
-        this.parameterServerCount = null;
-        this.workerCount = null;
+    private TensorFlowResponse(TensorFlowResponse $) {
+        this.distributionType = $.distributionType;
+        this.parameterServerCount = $.parameterServerCount;
+        this.workerCount = $.workerCount;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TensorFlowResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String distributionType;
-        private @Nullable Integer parameterServerCount;
-        private @Nullable Integer workerCount;
+        private TensorFlowResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new TensorFlowResponse();
         }
 
         public Builder(TensorFlowResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.distributionType = defaults.distributionType;
-    	      this.parameterServerCount = defaults.parameterServerCount;
-    	      this.workerCount = defaults.workerCount;
+            $ = new TensorFlowResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder distributionType(String distributionType) {
-            this.distributionType = Objects.requireNonNull(distributionType);
+            $.distributionType = distributionType;
             return this;
         }
+
         public Builder parameterServerCount(@Nullable Integer parameterServerCount) {
-            this.parameterServerCount = parameterServerCount;
+            $.parameterServerCount = parameterServerCount;
             return this;
         }
+
         public Builder workerCount(@Nullable Integer workerCount) {
-            this.workerCount = workerCount;
+            $.workerCount = workerCount;
             return this;
-        }        public TensorFlowResponse build() {
-            return new TensorFlowResponse(distributionType, parameterServerCount, workerCount);
+        }
+
+        public TensorFlowResponse build() {
+            $.distributionType = Codegen.stringProp("distributionType").arg($.distributionType).require();
+            return $;
         }
     }
+
 }

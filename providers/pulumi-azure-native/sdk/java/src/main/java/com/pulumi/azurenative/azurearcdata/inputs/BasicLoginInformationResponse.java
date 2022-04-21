@@ -23,45 +23,44 @@ public final class BasicLoginInformationResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="username")
-      private final @Nullable String username;
+    private @Nullable String username;
 
     public Optional<String> username() {
-        return this.username == null ? Optional.empty() : Optional.ofNullable(this.username);
+        return Optional.ofNullable(this.username);
     }
 
-    public BasicLoginInformationResponse(@Nullable String username) {
-        this.username = username;
-    }
+    private BasicLoginInformationResponse() {}
 
-    private BasicLoginInformationResponse() {
-        this.username = null;
+    private BasicLoginInformationResponse(BasicLoginInformationResponse $) {
+        this.username = $.username;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BasicLoginInformationResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String username;
+        private BasicLoginInformationResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new BasicLoginInformationResponse();
         }
 
         public Builder(BasicLoginInformationResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.username = defaults.username;
+            $ = new BasicLoginInformationResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder username(@Nullable String username) {
-            this.username = username;
+            $.username = username;
             return this;
-        }        public BasicLoginInformationResponse build() {
-            return new BasicLoginInformationResponse(username);
+        }
+
+        public BasicLoginInformationResponse build() {
+            return $;
         }
     }
+
 }

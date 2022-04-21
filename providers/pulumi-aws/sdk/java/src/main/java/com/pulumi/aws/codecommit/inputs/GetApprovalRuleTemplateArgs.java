@@ -17,45 +17,45 @@ public final class GetApprovalRuleTemplateArgs extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
     }
 
-    public GetApprovalRuleTemplateArgs(String name) {
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-    }
+    private GetApprovalRuleTemplateArgs() {}
 
-    private GetApprovalRuleTemplateArgs() {
-        this.name = null;
+    private GetApprovalRuleTemplateArgs(GetApprovalRuleTemplateArgs $) {
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetApprovalRuleTemplateArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String name;
+        private GetApprovalRuleTemplateArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetApprovalRuleTemplateArgs();
         }
 
         public Builder(GetApprovalRuleTemplateArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
+            $ = new GetApprovalRuleTemplateArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
-        }        public GetApprovalRuleTemplateArgs build() {
-            return new GetApprovalRuleTemplateArgs(name);
+        }
+
+        public GetApprovalRuleTemplateArgs build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            return $;
         }
     }
+
 }

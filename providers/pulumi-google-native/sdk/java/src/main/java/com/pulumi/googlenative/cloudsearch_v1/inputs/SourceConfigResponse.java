@@ -23,7 +23,7 @@ public final class SourceConfigResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="crowdingConfig", required=true)
-      private final SourceCrowdingConfigResponse crowdingConfig;
+    private SourceCrowdingConfigResponse crowdingConfig;
 
     public SourceCrowdingConfigResponse crowdingConfig() {
         return this.crowdingConfig;
@@ -34,7 +34,7 @@ public final class SourceConfigResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="scoringConfig", required=true)
-      private final SourceScoringConfigResponse scoringConfig;
+    private SourceScoringConfigResponse scoringConfig;
 
     public SourceScoringConfigResponse scoringConfig() {
         return this.scoringConfig;
@@ -45,64 +45,59 @@ public final class SourceConfigResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="source", required=true)
-      private final SourceResponse source;
+    private SourceResponse source;
 
     public SourceResponse source() {
         return this.source;
     }
 
-    public SourceConfigResponse(
-        SourceCrowdingConfigResponse crowdingConfig,
-        SourceScoringConfigResponse scoringConfig,
-        SourceResponse source) {
-        this.crowdingConfig = Objects.requireNonNull(crowdingConfig, "expected parameter 'crowdingConfig' to be non-null");
-        this.scoringConfig = Objects.requireNonNull(scoringConfig, "expected parameter 'scoringConfig' to be non-null");
-        this.source = Objects.requireNonNull(source, "expected parameter 'source' to be non-null");
-    }
+    private SourceConfigResponse() {}
 
-    private SourceConfigResponse() {
-        this.crowdingConfig = null;
-        this.scoringConfig = null;
-        this.source = null;
+    private SourceConfigResponse(SourceConfigResponse $) {
+        this.crowdingConfig = $.crowdingConfig;
+        this.scoringConfig = $.scoringConfig;
+        this.source = $.source;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SourceConfigResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private SourceCrowdingConfigResponse crowdingConfig;
-        private SourceScoringConfigResponse scoringConfig;
-        private SourceResponse source;
+        private SourceConfigResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new SourceConfigResponse();
         }
 
         public Builder(SourceConfigResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.crowdingConfig = defaults.crowdingConfig;
-    	      this.scoringConfig = defaults.scoringConfig;
-    	      this.source = defaults.source;
+            $ = new SourceConfigResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder crowdingConfig(SourceCrowdingConfigResponse crowdingConfig) {
-            this.crowdingConfig = Objects.requireNonNull(crowdingConfig);
+            $.crowdingConfig = crowdingConfig;
             return this;
         }
+
         public Builder scoringConfig(SourceScoringConfigResponse scoringConfig) {
-            this.scoringConfig = Objects.requireNonNull(scoringConfig);
+            $.scoringConfig = scoringConfig;
             return this;
         }
+
         public Builder source(SourceResponse source) {
-            this.source = Objects.requireNonNull(source);
+            $.source = source;
             return this;
-        }        public SourceConfigResponse build() {
-            return new SourceConfigResponse(crowdingConfig, scoringConfig, source);
+        }
+
+        public SourceConfigResponse build() {
+            $.crowdingConfig = Objects.requireNonNull($.crowdingConfig, "expected parameter 'crowdingConfig' to be non-null");
+            $.scoringConfig = Objects.requireNonNull($.scoringConfig, "expected parameter 'scoringConfig' to be non-null");
+            $.source = Objects.requireNonNull($.source, "expected parameter 'source' to be non-null");
+            return $;
         }
     }
+
 }

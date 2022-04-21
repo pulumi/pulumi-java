@@ -6,7 +6,6 @@ package com.pulumi.awsnative.apigateway;
 import com.pulumi.awsnative.apigateway.enums.UsagePlanKeyKeyType;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +19,7 @@ public final class UsagePlanKeyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="keyId", required=true)
-      private final Output<String> keyId;
+    private Output<String> keyId;
 
     public Output<String> keyId() {
         return this.keyId;
@@ -31,7 +30,7 @@ public final class UsagePlanKeyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="keyType", required=true)
-      private final Output<UsagePlanKeyKeyType> keyType;
+    private Output<UsagePlanKeyKeyType> keyType;
 
     public Output<UsagePlanKeyKeyType> keyType() {
         return this.keyType;
@@ -42,76 +41,71 @@ public final class UsagePlanKeyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="usagePlanId", required=true)
-      private final Output<String> usagePlanId;
+    private Output<String> usagePlanId;
 
     public Output<String> usagePlanId() {
         return this.usagePlanId;
     }
 
-    public UsagePlanKeyArgs(
-        Output<String> keyId,
-        Output<UsagePlanKeyKeyType> keyType,
-        Output<String> usagePlanId) {
-        this.keyId = Objects.requireNonNull(keyId, "expected parameter 'keyId' to be non-null");
-        this.keyType = Objects.requireNonNull(keyType, "expected parameter 'keyType' to be non-null");
-        this.usagePlanId = Objects.requireNonNull(usagePlanId, "expected parameter 'usagePlanId' to be non-null");
-    }
+    private UsagePlanKeyArgs() {}
 
-    private UsagePlanKeyArgs() {
-        this.keyId = Codegen.empty();
-        this.keyType = Codegen.empty();
-        this.usagePlanId = Codegen.empty();
+    private UsagePlanKeyArgs(UsagePlanKeyArgs $) {
+        this.keyId = $.keyId;
+        this.keyType = $.keyType;
+        this.usagePlanId = $.usagePlanId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(UsagePlanKeyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> keyId;
-        private Output<UsagePlanKeyKeyType> keyType;
-        private Output<String> usagePlanId;
+        private UsagePlanKeyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new UsagePlanKeyArgs();
         }
 
         public Builder(UsagePlanKeyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.keyId = defaults.keyId;
-    	      this.keyType = defaults.keyType;
-    	      this.usagePlanId = defaults.usagePlanId;
+            $ = new UsagePlanKeyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder keyId(Output<String> keyId) {
-            this.keyId = Objects.requireNonNull(keyId);
+            $.keyId = keyId;
             return this;
         }
+
         public Builder keyId(String keyId) {
-            this.keyId = Output.of(Objects.requireNonNull(keyId));
-            return this;
+            return keyId(Output.of(keyId));
         }
+
         public Builder keyType(Output<UsagePlanKeyKeyType> keyType) {
-            this.keyType = Objects.requireNonNull(keyType);
+            $.keyType = keyType;
             return this;
         }
+
         public Builder keyType(UsagePlanKeyKeyType keyType) {
-            this.keyType = Output.of(Objects.requireNonNull(keyType));
-            return this;
+            return keyType(Output.of(keyType));
         }
+
         public Builder usagePlanId(Output<String> usagePlanId) {
-            this.usagePlanId = Objects.requireNonNull(usagePlanId);
+            $.usagePlanId = usagePlanId;
             return this;
         }
+
         public Builder usagePlanId(String usagePlanId) {
-            this.usagePlanId = Output.of(Objects.requireNonNull(usagePlanId));
-            return this;
-        }        public UsagePlanKeyArgs build() {
-            return new UsagePlanKeyArgs(keyId, keyType, usagePlanId);
+            return usagePlanId(Output.of(usagePlanId));
+        }
+
+        public UsagePlanKeyArgs build() {
+            $.keyId = Objects.requireNonNull($.keyId, "expected parameter 'keyId' to be non-null");
+            $.keyType = Objects.requireNonNull($.keyType, "expected parameter 'keyType' to be non-null");
+            $.usagePlanId = Objects.requireNonNull($.usagePlanId, "expected parameter 'usagePlanId' to be non-null");
+            return $;
         }
     }
+
 }

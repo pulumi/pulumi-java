@@ -5,7 +5,6 @@ package com.pulumi.awsnative.appflow.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,70 +18,67 @@ public final class ConnectorProfileAmplitudeConnectorProfileCredentialsArgs exte
      * 
      */
     @Import(name="apiKey", required=true)
-      private final Output<String> apiKey;
+    private Output<String> apiKey;
 
     public Output<String> apiKey() {
         return this.apiKey;
     }
 
     @Import(name="secretKey", required=true)
-      private final Output<String> secretKey;
+    private Output<String> secretKey;
 
     public Output<String> secretKey() {
         return this.secretKey;
     }
 
-    public ConnectorProfileAmplitudeConnectorProfileCredentialsArgs(
-        Output<String> apiKey,
-        Output<String> secretKey) {
-        this.apiKey = Objects.requireNonNull(apiKey, "expected parameter 'apiKey' to be non-null");
-        this.secretKey = Objects.requireNonNull(secretKey, "expected parameter 'secretKey' to be non-null");
-    }
+    private ConnectorProfileAmplitudeConnectorProfileCredentialsArgs() {}
 
-    private ConnectorProfileAmplitudeConnectorProfileCredentialsArgs() {
-        this.apiKey = Codegen.empty();
-        this.secretKey = Codegen.empty();
+    private ConnectorProfileAmplitudeConnectorProfileCredentialsArgs(ConnectorProfileAmplitudeConnectorProfileCredentialsArgs $) {
+        this.apiKey = $.apiKey;
+        this.secretKey = $.secretKey;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ConnectorProfileAmplitudeConnectorProfileCredentialsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> apiKey;
-        private Output<String> secretKey;
+        private ConnectorProfileAmplitudeConnectorProfileCredentialsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ConnectorProfileAmplitudeConnectorProfileCredentialsArgs();
         }
 
         public Builder(ConnectorProfileAmplitudeConnectorProfileCredentialsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.apiKey = defaults.apiKey;
-    	      this.secretKey = defaults.secretKey;
+            $ = new ConnectorProfileAmplitudeConnectorProfileCredentialsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder apiKey(Output<String> apiKey) {
-            this.apiKey = Objects.requireNonNull(apiKey);
+            $.apiKey = apiKey;
             return this;
         }
+
         public Builder apiKey(String apiKey) {
-            this.apiKey = Output.of(Objects.requireNonNull(apiKey));
-            return this;
+            return apiKey(Output.of(apiKey));
         }
+
         public Builder secretKey(Output<String> secretKey) {
-            this.secretKey = Objects.requireNonNull(secretKey);
+            $.secretKey = secretKey;
             return this;
         }
+
         public Builder secretKey(String secretKey) {
-            this.secretKey = Output.of(Objects.requireNonNull(secretKey));
-            return this;
-        }        public ConnectorProfileAmplitudeConnectorProfileCredentialsArgs build() {
-            return new ConnectorProfileAmplitudeConnectorProfileCredentialsArgs(apiKey, secretKey);
+            return secretKey(Output.of(secretKey));
+        }
+
+        public ConnectorProfileAmplitudeConnectorProfileCredentialsArgs build() {
+            $.apiKey = Objects.requireNonNull($.apiKey, "expected parameter 'apiKey' to be non-null");
+            $.secretKey = Objects.requireNonNull($.secretKey, "expected parameter 'secretKey' to be non-null");
+            return $;
         }
     }
+
 }

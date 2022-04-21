@@ -7,9 +7,9 @@ import com.pulumi.azurenative.costmanagement.enums.ConnectorBillingModel;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class CloudConnectorArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="billingModel")
-      private final @Nullable Output<Either<String,ConnectorBillingModel>> billingModel;
+    private @Nullable Output<Either<String,ConnectorBillingModel>> billingModel;
 
-    public Output<Either<String,ConnectorBillingModel>> billingModel() {
-        return this.billingModel == null ? Codegen.empty() : this.billingModel;
+    public Optional<Output<Either<String,ConnectorBillingModel>>> billingModel() {
+        return Optional.ofNullable(this.billingModel);
     }
 
     /**
@@ -33,10 +33,10 @@ public final class CloudConnectorArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="connectorName")
-      private final @Nullable Output<String> connectorName;
+    private @Nullable Output<String> connectorName;
 
-    public Output<String> connectorName() {
-        return this.connectorName == null ? Codegen.empty() : this.connectorName;
+    public Optional<Output<String>> connectorName() {
+        return Optional.ofNullable(this.connectorName);
     }
 
     /**
@@ -44,10 +44,10 @@ public final class CloudConnectorArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="credentialsKey")
-      private final @Nullable Output<String> credentialsKey;
+    private @Nullable Output<String> credentialsKey;
 
-    public Output<String> credentialsKey() {
-        return this.credentialsKey == null ? Codegen.empty() : this.credentialsKey;
+    public Optional<Output<String>> credentialsKey() {
+        return Optional.ofNullable(this.credentialsKey);
     }
 
     /**
@@ -55,10 +55,10 @@ public final class CloudConnectorArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="credentialsSecret")
-      private final @Nullable Output<String> credentialsSecret;
+    private @Nullable Output<String> credentialsSecret;
 
-    public Output<String> credentialsSecret() {
-        return this.credentialsSecret == null ? Codegen.empty() : this.credentialsSecret;
+    public Optional<Output<String>> credentialsSecret() {
+        return Optional.ofNullable(this.credentialsSecret);
     }
 
     /**
@@ -66,10 +66,10 @@ public final class CloudConnectorArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="defaultManagementGroupId")
-      private final @Nullable Output<String> defaultManagementGroupId;
+    private @Nullable Output<String> defaultManagementGroupId;
 
-    public Output<String> defaultManagementGroupId() {
-        return this.defaultManagementGroupId == null ? Codegen.empty() : this.defaultManagementGroupId;
+    public Optional<Output<String>> defaultManagementGroupId() {
+        return Optional.ofNullable(this.defaultManagementGroupId);
     }
 
     /**
@@ -77,10 +77,10 @@ public final class CloudConnectorArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="displayName")
-      private final @Nullable Output<String> displayName;
+    private @Nullable Output<String> displayName;
 
-    public Output<String> displayName() {
-        return this.displayName == null ? Codegen.empty() : this.displayName;
+    public Optional<Output<String>> displayName() {
+        return Optional.ofNullable(this.displayName);
     }
 
     /**
@@ -88,10 +88,10 @@ public final class CloudConnectorArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="kind")
-      private final @Nullable Output<String> kind;
+    private @Nullable Output<String> kind;
 
-    public Output<String> kind() {
-        return this.kind == null ? Codegen.empty() : this.kind;
+    public Optional<Output<String>> kind() {
+        return Optional.ofNullable(this.kind);
     }
 
     /**
@@ -99,10 +99,10 @@ public final class CloudConnectorArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="reportId")
-      private final @Nullable Output<String> reportId;
+    private @Nullable Output<String> reportId;
 
-    public Output<String> reportId() {
-        return this.reportId == null ? Codegen.empty() : this.reportId;
+    public Optional<Output<String>> reportId() {
+        return Optional.ofNullable(this.reportId);
     }
 
     /**
@@ -110,154 +110,128 @@ public final class CloudConnectorArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="subscriptionId")
-      private final @Nullable Output<String> subscriptionId;
+    private @Nullable Output<String> subscriptionId;
 
-    public Output<String> subscriptionId() {
-        return this.subscriptionId == null ? Codegen.empty() : this.subscriptionId;
+    public Optional<Output<String>> subscriptionId() {
+        return Optional.ofNullable(this.subscriptionId);
     }
 
-    public CloudConnectorArgs(
-        @Nullable Output<Either<String,ConnectorBillingModel>> billingModel,
-        @Nullable Output<String> connectorName,
-        @Nullable Output<String> credentialsKey,
-        @Nullable Output<String> credentialsSecret,
-        @Nullable Output<String> defaultManagementGroupId,
-        @Nullable Output<String> displayName,
-        @Nullable Output<String> kind,
-        @Nullable Output<String> reportId,
-        @Nullable Output<String> subscriptionId) {
-        this.billingModel = billingModel;
-        this.connectorName = connectorName;
-        this.credentialsKey = credentialsKey;
-        this.credentialsSecret = credentialsSecret;
-        this.defaultManagementGroupId = defaultManagementGroupId;
-        this.displayName = displayName;
-        this.kind = kind;
-        this.reportId = reportId;
-        this.subscriptionId = subscriptionId;
-    }
+    private CloudConnectorArgs() {}
 
-    private CloudConnectorArgs() {
-        this.billingModel = Codegen.empty();
-        this.connectorName = Codegen.empty();
-        this.credentialsKey = Codegen.empty();
-        this.credentialsSecret = Codegen.empty();
-        this.defaultManagementGroupId = Codegen.empty();
-        this.displayName = Codegen.empty();
-        this.kind = Codegen.empty();
-        this.reportId = Codegen.empty();
-        this.subscriptionId = Codegen.empty();
+    private CloudConnectorArgs(CloudConnectorArgs $) {
+        this.billingModel = $.billingModel;
+        this.connectorName = $.connectorName;
+        this.credentialsKey = $.credentialsKey;
+        this.credentialsSecret = $.credentialsSecret;
+        this.defaultManagementGroupId = $.defaultManagementGroupId;
+        this.displayName = $.displayName;
+        this.kind = $.kind;
+        this.reportId = $.reportId;
+        this.subscriptionId = $.subscriptionId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CloudConnectorArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Either<String,ConnectorBillingModel>> billingModel;
-        private @Nullable Output<String> connectorName;
-        private @Nullable Output<String> credentialsKey;
-        private @Nullable Output<String> credentialsSecret;
-        private @Nullable Output<String> defaultManagementGroupId;
-        private @Nullable Output<String> displayName;
-        private @Nullable Output<String> kind;
-        private @Nullable Output<String> reportId;
-        private @Nullable Output<String> subscriptionId;
+        private CloudConnectorArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CloudConnectorArgs();
         }
 
         public Builder(CloudConnectorArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.billingModel = defaults.billingModel;
-    	      this.connectorName = defaults.connectorName;
-    	      this.credentialsKey = defaults.credentialsKey;
-    	      this.credentialsSecret = defaults.credentialsSecret;
-    	      this.defaultManagementGroupId = defaults.defaultManagementGroupId;
-    	      this.displayName = defaults.displayName;
-    	      this.kind = defaults.kind;
-    	      this.reportId = defaults.reportId;
-    	      this.subscriptionId = defaults.subscriptionId;
+            $ = new CloudConnectorArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder billingModel(@Nullable Output<Either<String,ConnectorBillingModel>> billingModel) {
-            this.billingModel = billingModel;
+            $.billingModel = billingModel;
             return this;
         }
-        public Builder billingModel(@Nullable Either<String,ConnectorBillingModel> billingModel) {
-            this.billingModel = Codegen.ofNullable(billingModel);
-            return this;
+
+        public Builder billingModel(Either<String,ConnectorBillingModel> billingModel) {
+            return billingModel(Output.of(billingModel));
         }
+
         public Builder connectorName(@Nullable Output<String> connectorName) {
-            this.connectorName = connectorName;
+            $.connectorName = connectorName;
             return this;
         }
-        public Builder connectorName(@Nullable String connectorName) {
-            this.connectorName = Codegen.ofNullable(connectorName);
-            return this;
+
+        public Builder connectorName(String connectorName) {
+            return connectorName(Output.of(connectorName));
         }
+
         public Builder credentialsKey(@Nullable Output<String> credentialsKey) {
-            this.credentialsKey = credentialsKey;
+            $.credentialsKey = credentialsKey;
             return this;
         }
-        public Builder credentialsKey(@Nullable String credentialsKey) {
-            this.credentialsKey = Codegen.ofNullable(credentialsKey);
-            return this;
+
+        public Builder credentialsKey(String credentialsKey) {
+            return credentialsKey(Output.of(credentialsKey));
         }
+
         public Builder credentialsSecret(@Nullable Output<String> credentialsSecret) {
-            this.credentialsSecret = credentialsSecret;
+            $.credentialsSecret = credentialsSecret;
             return this;
         }
-        public Builder credentialsSecret(@Nullable String credentialsSecret) {
-            this.credentialsSecret = Codegen.ofNullable(credentialsSecret);
-            return this;
+
+        public Builder credentialsSecret(String credentialsSecret) {
+            return credentialsSecret(Output.of(credentialsSecret));
         }
+
         public Builder defaultManagementGroupId(@Nullable Output<String> defaultManagementGroupId) {
-            this.defaultManagementGroupId = defaultManagementGroupId;
+            $.defaultManagementGroupId = defaultManagementGroupId;
             return this;
         }
-        public Builder defaultManagementGroupId(@Nullable String defaultManagementGroupId) {
-            this.defaultManagementGroupId = Codegen.ofNullable(defaultManagementGroupId);
-            return this;
+
+        public Builder defaultManagementGroupId(String defaultManagementGroupId) {
+            return defaultManagementGroupId(Output.of(defaultManagementGroupId));
         }
+
         public Builder displayName(@Nullable Output<String> displayName) {
-            this.displayName = displayName;
+            $.displayName = displayName;
             return this;
         }
-        public Builder displayName(@Nullable String displayName) {
-            this.displayName = Codegen.ofNullable(displayName);
-            return this;
+
+        public Builder displayName(String displayName) {
+            return displayName(Output.of(displayName));
         }
+
         public Builder kind(@Nullable Output<String> kind) {
-            this.kind = kind;
+            $.kind = kind;
             return this;
         }
-        public Builder kind(@Nullable String kind) {
-            this.kind = Codegen.ofNullable(kind);
-            return this;
+
+        public Builder kind(String kind) {
+            return kind(Output.of(kind));
         }
+
         public Builder reportId(@Nullable Output<String> reportId) {
-            this.reportId = reportId;
+            $.reportId = reportId;
             return this;
         }
-        public Builder reportId(@Nullable String reportId) {
-            this.reportId = Codegen.ofNullable(reportId);
-            return this;
+
+        public Builder reportId(String reportId) {
+            return reportId(Output.of(reportId));
         }
+
         public Builder subscriptionId(@Nullable Output<String> subscriptionId) {
-            this.subscriptionId = subscriptionId;
+            $.subscriptionId = subscriptionId;
             return this;
         }
-        public Builder subscriptionId(@Nullable String subscriptionId) {
-            this.subscriptionId = Codegen.ofNullable(subscriptionId);
-            return this;
-        }        public CloudConnectorArgs build() {
-            return new CloudConnectorArgs(billingModel, connectorName, credentialsKey, credentialsSecret, defaultManagementGroupId, displayName, kind, reportId, subscriptionId);
+
+        public Builder subscriptionId(String subscriptionId) {
+            return subscriptionId(Output.of(subscriptionId));
+        }
+
+        public CloudConnectorArgs build() {
+            return $;
         }
     }
+
 }

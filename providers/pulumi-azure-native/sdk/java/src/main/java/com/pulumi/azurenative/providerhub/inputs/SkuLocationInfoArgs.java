@@ -6,10 +6,10 @@ package com.pulumi.azurenative.providerhub.inputs;
 import com.pulumi.azurenative.providerhub.inputs.SkuZoneDetailArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -18,139 +18,129 @@ public final class SkuLocationInfoArgs extends com.pulumi.resources.ResourceArgs
     public static final SkuLocationInfoArgs Empty = new SkuLocationInfoArgs();
 
     @Import(name="extendedLocations")
-      private final @Nullable Output<List<String>> extendedLocations;
+    private @Nullable Output<List<String>> extendedLocations;
 
-    public Output<List<String>> extendedLocations() {
-        return this.extendedLocations == null ? Codegen.empty() : this.extendedLocations;
+    public Optional<Output<List<String>>> extendedLocations() {
+        return Optional.ofNullable(this.extendedLocations);
     }
 
     @Import(name="location", required=true)
-      private final Output<String> location;
+    private Output<String> location;
 
     public Output<String> location() {
         return this.location;
     }
 
     @Import(name="type")
-      private final @Nullable Output<String> type;
+    private @Nullable Output<String> type;
 
-    public Output<String> type() {
-        return this.type == null ? Codegen.empty() : this.type;
+    public Optional<Output<String>> type() {
+        return Optional.ofNullable(this.type);
     }
 
     @Import(name="zoneDetails")
-      private final @Nullable Output<List<SkuZoneDetailArgs>> zoneDetails;
+    private @Nullable Output<List<SkuZoneDetailArgs>> zoneDetails;
 
-    public Output<List<SkuZoneDetailArgs>> zoneDetails() {
-        return this.zoneDetails == null ? Codegen.empty() : this.zoneDetails;
+    public Optional<Output<List<SkuZoneDetailArgs>>> zoneDetails() {
+        return Optional.ofNullable(this.zoneDetails);
     }
 
     @Import(name="zones")
-      private final @Nullable Output<List<String>> zones;
+    private @Nullable Output<List<String>> zones;
 
-    public Output<List<String>> zones() {
-        return this.zones == null ? Codegen.empty() : this.zones;
+    public Optional<Output<List<String>>> zones() {
+        return Optional.ofNullable(this.zones);
     }
 
-    public SkuLocationInfoArgs(
-        @Nullable Output<List<String>> extendedLocations,
-        Output<String> location,
-        @Nullable Output<String> type,
-        @Nullable Output<List<SkuZoneDetailArgs>> zoneDetails,
-        @Nullable Output<List<String>> zones) {
-        this.extendedLocations = extendedLocations;
-        this.location = Objects.requireNonNull(location, "expected parameter 'location' to be non-null");
-        this.type = type;
-        this.zoneDetails = zoneDetails;
-        this.zones = zones;
-    }
+    private SkuLocationInfoArgs() {}
 
-    private SkuLocationInfoArgs() {
-        this.extendedLocations = Codegen.empty();
-        this.location = Codegen.empty();
-        this.type = Codegen.empty();
-        this.zoneDetails = Codegen.empty();
-        this.zones = Codegen.empty();
+    private SkuLocationInfoArgs(SkuLocationInfoArgs $) {
+        this.extendedLocations = $.extendedLocations;
+        this.location = $.location;
+        this.type = $.type;
+        this.zoneDetails = $.zoneDetails;
+        this.zones = $.zones;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SkuLocationInfoArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> extendedLocations;
-        private Output<String> location;
-        private @Nullable Output<String> type;
-        private @Nullable Output<List<SkuZoneDetailArgs>> zoneDetails;
-        private @Nullable Output<List<String>> zones;
+        private SkuLocationInfoArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SkuLocationInfoArgs();
         }
 
         public Builder(SkuLocationInfoArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.extendedLocations = defaults.extendedLocations;
-    	      this.location = defaults.location;
-    	      this.type = defaults.type;
-    	      this.zoneDetails = defaults.zoneDetails;
-    	      this.zones = defaults.zones;
+            $ = new SkuLocationInfoArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder extendedLocations(@Nullable Output<List<String>> extendedLocations) {
-            this.extendedLocations = extendedLocations;
+            $.extendedLocations = extendedLocations;
             return this;
         }
-        public Builder extendedLocations(@Nullable List<String> extendedLocations) {
-            this.extendedLocations = Codegen.ofNullable(extendedLocations);
-            return this;
+
+        public Builder extendedLocations(List<String> extendedLocations) {
+            return extendedLocations(Output.of(extendedLocations));
         }
+
         public Builder extendedLocations(String... extendedLocations) {
             return extendedLocations(List.of(extendedLocations));
         }
+
         public Builder location(Output<String> location) {
-            this.location = Objects.requireNonNull(location);
+            $.location = location;
             return this;
         }
+
         public Builder location(String location) {
-            this.location = Output.of(Objects.requireNonNull(location));
-            return this;
+            return location(Output.of(location));
         }
+
         public Builder type(@Nullable Output<String> type) {
-            this.type = type;
+            $.type = type;
             return this;
         }
-        public Builder type(@Nullable String type) {
-            this.type = Codegen.ofNullable(type);
-            return this;
+
+        public Builder type(String type) {
+            return type(Output.of(type));
         }
+
         public Builder zoneDetails(@Nullable Output<List<SkuZoneDetailArgs>> zoneDetails) {
-            this.zoneDetails = zoneDetails;
+            $.zoneDetails = zoneDetails;
             return this;
         }
-        public Builder zoneDetails(@Nullable List<SkuZoneDetailArgs> zoneDetails) {
-            this.zoneDetails = Codegen.ofNullable(zoneDetails);
-            return this;
+
+        public Builder zoneDetails(List<SkuZoneDetailArgs> zoneDetails) {
+            return zoneDetails(Output.of(zoneDetails));
         }
+
         public Builder zoneDetails(SkuZoneDetailArgs... zoneDetails) {
             return zoneDetails(List.of(zoneDetails));
         }
+
         public Builder zones(@Nullable Output<List<String>> zones) {
-            this.zones = zones;
+            $.zones = zones;
             return this;
         }
-        public Builder zones(@Nullable List<String> zones) {
-            this.zones = Codegen.ofNullable(zones);
-            return this;
+
+        public Builder zones(List<String> zones) {
+            return zones(Output.of(zones));
         }
+
         public Builder zones(String... zones) {
             return zones(List.of(zones));
-        }        public SkuLocationInfoArgs build() {
-            return new SkuLocationInfoArgs(extendedLocations, location, type, zoneDetails, zones);
+        }
+
+        public SkuLocationInfoArgs build() {
+            $.location = Objects.requireNonNull($.location, "expected parameter 'location' to be non-null");
+            return $;
         }
     }
+
 }

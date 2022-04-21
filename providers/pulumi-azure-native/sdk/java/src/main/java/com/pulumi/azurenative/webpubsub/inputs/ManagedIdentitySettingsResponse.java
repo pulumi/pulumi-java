@@ -24,45 +24,44 @@ public final class ManagedIdentitySettingsResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="resource")
-      private final @Nullable String resource;
+    private @Nullable String resource;
 
     public Optional<String> resource() {
-        return this.resource == null ? Optional.empty() : Optional.ofNullable(this.resource);
+        return Optional.ofNullable(this.resource);
     }
 
-    public ManagedIdentitySettingsResponse(@Nullable String resource) {
-        this.resource = resource;
-    }
+    private ManagedIdentitySettingsResponse() {}
 
-    private ManagedIdentitySettingsResponse() {
-        this.resource = null;
+    private ManagedIdentitySettingsResponse(ManagedIdentitySettingsResponse $) {
+        this.resource = $.resource;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ManagedIdentitySettingsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String resource;
+        private ManagedIdentitySettingsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ManagedIdentitySettingsResponse();
         }
 
         public Builder(ManagedIdentitySettingsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.resource = defaults.resource;
+            $ = new ManagedIdentitySettingsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder resource(@Nullable String resource) {
-            this.resource = resource;
+            $.resource = resource;
             return this;
-        }        public ManagedIdentitySettingsResponse build() {
-            return new ManagedIdentitySettingsResponse(resource);
+        }
+
+        public ManagedIdentitySettingsResponse build() {
+            return $;
         }
     }
+
 }

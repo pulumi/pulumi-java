@@ -23,7 +23,7 @@ public final class MediaGraphUsernamePasswordCredentialsResponse extends com.pul
      * 
      */
     @Import(name="odataType", required=true)
-      private final String odataType;
+    private String odataType;
 
     public String odataType() {
         return this.odataType;
@@ -34,7 +34,7 @@ public final class MediaGraphUsernamePasswordCredentialsResponse extends com.pul
      * 
      */
     @Import(name="password", required=true)
-      private final String password;
+    private String password;
 
     public String password() {
         return this.password;
@@ -45,64 +45,59 @@ public final class MediaGraphUsernamePasswordCredentialsResponse extends com.pul
      * 
      */
     @Import(name="username", required=true)
-      private final String username;
+    private String username;
 
     public String username() {
         return this.username;
     }
 
-    public MediaGraphUsernamePasswordCredentialsResponse(
-        String odataType,
-        String password,
-        String username) {
-        this.odataType = Codegen.stringProp("odataType").arg(odataType).require();
-        this.password = Objects.requireNonNull(password, "expected parameter 'password' to be non-null");
-        this.username = Objects.requireNonNull(username, "expected parameter 'username' to be non-null");
-    }
+    private MediaGraphUsernamePasswordCredentialsResponse() {}
 
-    private MediaGraphUsernamePasswordCredentialsResponse() {
-        this.odataType = null;
-        this.password = null;
-        this.username = null;
+    private MediaGraphUsernamePasswordCredentialsResponse(MediaGraphUsernamePasswordCredentialsResponse $) {
+        this.odataType = $.odataType;
+        this.password = $.password;
+        this.username = $.username;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MediaGraphUsernamePasswordCredentialsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String odataType;
-        private String password;
-        private String username;
+        private MediaGraphUsernamePasswordCredentialsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new MediaGraphUsernamePasswordCredentialsResponse();
         }
 
         public Builder(MediaGraphUsernamePasswordCredentialsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.odataType = defaults.odataType;
-    	      this.password = defaults.password;
-    	      this.username = defaults.username;
+            $ = new MediaGraphUsernamePasswordCredentialsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder odataType(String odataType) {
-            this.odataType = Objects.requireNonNull(odataType);
+            $.odataType = odataType;
             return this;
         }
+
         public Builder password(String password) {
-            this.password = Objects.requireNonNull(password);
+            $.password = password;
             return this;
         }
+
         public Builder username(String username) {
-            this.username = Objects.requireNonNull(username);
+            $.username = username;
             return this;
-        }        public MediaGraphUsernamePasswordCredentialsResponse build() {
-            return new MediaGraphUsernamePasswordCredentialsResponse(odataType, password, username);
+        }
+
+        public MediaGraphUsernamePasswordCredentialsResponse build() {
+            $.odataType = Codegen.stringProp("odataType").arg($.odataType).require();
+            $.password = Objects.requireNonNull($.password, "expected parameter 'password' to be non-null");
+            $.username = Objects.requireNonNull($.username, "expected parameter 'username' to be non-null");
+            return $;
         }
     }
+
 }

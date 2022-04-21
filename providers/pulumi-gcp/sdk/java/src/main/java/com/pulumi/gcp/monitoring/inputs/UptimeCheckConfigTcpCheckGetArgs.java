@@ -5,7 +5,6 @@ package com.pulumi.gcp.monitoring.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -19,49 +18,49 @@ public final class UptimeCheckConfigTcpCheckGetArgs extends com.pulumi.resources
      * 
      */
     @Import(name="port", required=true)
-      private final Output<Integer> port;
+    private Output<Integer> port;
 
     public Output<Integer> port() {
         return this.port;
     }
 
-    public UptimeCheckConfigTcpCheckGetArgs(Output<Integer> port) {
-        this.port = Objects.requireNonNull(port, "expected parameter 'port' to be non-null");
-    }
+    private UptimeCheckConfigTcpCheckGetArgs() {}
 
-    private UptimeCheckConfigTcpCheckGetArgs() {
-        this.port = Codegen.empty();
+    private UptimeCheckConfigTcpCheckGetArgs(UptimeCheckConfigTcpCheckGetArgs $) {
+        this.port = $.port;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(UptimeCheckConfigTcpCheckGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Integer> port;
+        private UptimeCheckConfigTcpCheckGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new UptimeCheckConfigTcpCheckGetArgs();
         }
 
         public Builder(UptimeCheckConfigTcpCheckGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.port = defaults.port;
+            $ = new UptimeCheckConfigTcpCheckGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder port(Output<Integer> port) {
-            this.port = Objects.requireNonNull(port);
+            $.port = port;
             return this;
         }
+
         public Builder port(Integer port) {
-            this.port = Output.of(Objects.requireNonNull(port));
-            return this;
-        }        public UptimeCheckConfigTcpCheckGetArgs build() {
-            return new UptimeCheckConfigTcpCheckGetArgs(port);
+            return port(Output.of(port));
+        }
+
+        public UptimeCheckConfigTcpCheckGetArgs build() {
+            $.port = Objects.requireNonNull($.port, "expected parameter 'port' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,10 +5,10 @@ package com.pulumi.azurenative.automation.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class TaskPropertiesArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="parameters")
-      private final @Nullable Output<Map<String,String>> parameters;
+    private @Nullable Output<Map<String,String>> parameters;
 
-    public Output<Map<String,String>> parameters() {
-        return this.parameters == null ? Codegen.empty() : this.parameters;
+    public Optional<Output<Map<String,String>>> parameters() {
+        return Optional.ofNullable(this.parameters);
     }
 
     /**
@@ -36,63 +36,58 @@ public final class TaskPropertiesArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="source")
-      private final @Nullable Output<String> source;
+    private @Nullable Output<String> source;
 
-    public Output<String> source() {
-        return this.source == null ? Codegen.empty() : this.source;
+    public Optional<Output<String>> source() {
+        return Optional.ofNullable(this.source);
     }
 
-    public TaskPropertiesArgs(
-        @Nullable Output<Map<String,String>> parameters,
-        @Nullable Output<String> source) {
-        this.parameters = parameters;
-        this.source = source;
-    }
+    private TaskPropertiesArgs() {}
 
-    private TaskPropertiesArgs() {
-        this.parameters = Codegen.empty();
-        this.source = Codegen.empty();
+    private TaskPropertiesArgs(TaskPropertiesArgs $) {
+        this.parameters = $.parameters;
+        this.source = $.source;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TaskPropertiesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Map<String,String>> parameters;
-        private @Nullable Output<String> source;
+        private TaskPropertiesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TaskPropertiesArgs();
         }
 
         public Builder(TaskPropertiesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.parameters = defaults.parameters;
-    	      this.source = defaults.source;
+            $ = new TaskPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder parameters(@Nullable Output<Map<String,String>> parameters) {
-            this.parameters = parameters;
+            $.parameters = parameters;
             return this;
         }
-        public Builder parameters(@Nullable Map<String,String> parameters) {
-            this.parameters = Codegen.ofNullable(parameters);
-            return this;
+
+        public Builder parameters(Map<String,String> parameters) {
+            return parameters(Output.of(parameters));
         }
+
         public Builder source(@Nullable Output<String> source) {
-            this.source = source;
+            $.source = source;
             return this;
         }
-        public Builder source(@Nullable String source) {
-            this.source = Codegen.ofNullable(source);
-            return this;
-        }        public TaskPropertiesArgs build() {
-            return new TaskPropertiesArgs(parameters, source);
+
+        public Builder source(String source) {
+            return source(Output.of(source));
+        }
+
+        public TaskPropertiesArgs build() {
+            return $;
         }
     }
+
 }

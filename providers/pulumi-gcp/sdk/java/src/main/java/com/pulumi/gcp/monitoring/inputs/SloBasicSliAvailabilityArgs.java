@@ -5,9 +5,9 @@ package com.pulumi.gcp.monitoring.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,49 +20,48 @@ public final class SloBasicSliAvailabilityArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="enabled")
-      private final @Nullable Output<Boolean> enabled;
+    private @Nullable Output<Boolean> enabled;
 
-    public Output<Boolean> enabled() {
-        return this.enabled == null ? Codegen.empty() : this.enabled;
+    public Optional<Output<Boolean>> enabled() {
+        return Optional.ofNullable(this.enabled);
     }
 
-    public SloBasicSliAvailabilityArgs(@Nullable Output<Boolean> enabled) {
-        this.enabled = enabled;
-    }
+    private SloBasicSliAvailabilityArgs() {}
 
-    private SloBasicSliAvailabilityArgs() {
-        this.enabled = Codegen.empty();
+    private SloBasicSliAvailabilityArgs(SloBasicSliAvailabilityArgs $) {
+        this.enabled = $.enabled;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SloBasicSliAvailabilityArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> enabled;
+        private SloBasicSliAvailabilityArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SloBasicSliAvailabilityArgs();
         }
 
         public Builder(SloBasicSliAvailabilityArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.enabled = defaults.enabled;
+            $ = new SloBasicSliAvailabilityArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder enabled(@Nullable Output<Boolean> enabled) {
-            this.enabled = enabled;
+            $.enabled = enabled;
             return this;
         }
-        public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Codegen.ofNullable(enabled);
-            return this;
-        }        public SloBasicSliAvailabilityArgs build() {
-            return new SloBasicSliAvailabilityArgs(enabled);
+
+        public Builder enabled(Boolean enabled) {
+            return enabled(Output.of(enabled));
+        }
+
+        public SloBasicSliAvailabilityArgs build() {
+            return $;
         }
     }
+
 }

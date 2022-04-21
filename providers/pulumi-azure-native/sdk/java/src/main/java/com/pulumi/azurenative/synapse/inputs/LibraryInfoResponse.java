@@ -23,10 +23,10 @@ public final class LibraryInfoResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="containerName")
-      private final @Nullable String containerName;
+    private @Nullable String containerName;
 
     public Optional<String> containerName() {
-        return this.containerName == null ? Optional.empty() : Optional.ofNullable(this.containerName);
+        return Optional.ofNullable(this.containerName);
     }
 
     /**
@@ -34,7 +34,7 @@ public final class LibraryInfoResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="creatorId", required=true)
-      private final String creatorId;
+    private String creatorId;
 
     public String creatorId() {
         return this.creatorId;
@@ -45,10 +45,10 @@ public final class LibraryInfoResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable String name;
+    private @Nullable String name;
 
     public Optional<String> name() {
-        return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -56,10 +56,10 @@ public final class LibraryInfoResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="path")
-      private final @Nullable String path;
+    private @Nullable String path;
 
     public Optional<String> path() {
-        return this.path == null ? Optional.empty() : Optional.ofNullable(this.path);
+        return Optional.ofNullable(this.path);
     }
 
     /**
@@ -67,7 +67,7 @@ public final class LibraryInfoResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="provisioningStatus", required=true)
-      private final String provisioningStatus;
+    private String provisioningStatus;
 
     public String provisioningStatus() {
         return this.provisioningStatus;
@@ -78,10 +78,10 @@ public final class LibraryInfoResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="type")
-      private final @Nullable String type;
+    private @Nullable String type;
 
     public Optional<String> type() {
-        return this.type == null ? Optional.empty() : Optional.ofNullable(this.type);
+        return Optional.ofNullable(this.type);
     }
 
     /**
@@ -89,100 +89,83 @@ public final class LibraryInfoResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="uploadedTimestamp", required=true)
-      private final String uploadedTimestamp;
+    private String uploadedTimestamp;
 
     public String uploadedTimestamp() {
         return this.uploadedTimestamp;
     }
 
-    public LibraryInfoResponse(
-        @Nullable String containerName,
-        String creatorId,
-        @Nullable String name,
-        @Nullable String path,
-        String provisioningStatus,
-        @Nullable String type,
-        String uploadedTimestamp) {
-        this.containerName = containerName;
-        this.creatorId = Objects.requireNonNull(creatorId, "expected parameter 'creatorId' to be non-null");
-        this.name = name;
-        this.path = path;
-        this.provisioningStatus = Objects.requireNonNull(provisioningStatus, "expected parameter 'provisioningStatus' to be non-null");
-        this.type = type;
-        this.uploadedTimestamp = Objects.requireNonNull(uploadedTimestamp, "expected parameter 'uploadedTimestamp' to be non-null");
-    }
+    private LibraryInfoResponse() {}
 
-    private LibraryInfoResponse() {
-        this.containerName = null;
-        this.creatorId = null;
-        this.name = null;
-        this.path = null;
-        this.provisioningStatus = null;
-        this.type = null;
-        this.uploadedTimestamp = null;
+    private LibraryInfoResponse(LibraryInfoResponse $) {
+        this.containerName = $.containerName;
+        this.creatorId = $.creatorId;
+        this.name = $.name;
+        this.path = $.path;
+        this.provisioningStatus = $.provisioningStatus;
+        this.type = $.type;
+        this.uploadedTimestamp = $.uploadedTimestamp;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LibraryInfoResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String containerName;
-        private String creatorId;
-        private @Nullable String name;
-        private @Nullable String path;
-        private String provisioningStatus;
-        private @Nullable String type;
-        private String uploadedTimestamp;
+        private LibraryInfoResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new LibraryInfoResponse();
         }
 
         public Builder(LibraryInfoResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.containerName = defaults.containerName;
-    	      this.creatorId = defaults.creatorId;
-    	      this.name = defaults.name;
-    	      this.path = defaults.path;
-    	      this.provisioningStatus = defaults.provisioningStatus;
-    	      this.type = defaults.type;
-    	      this.uploadedTimestamp = defaults.uploadedTimestamp;
+            $ = new LibraryInfoResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder containerName(@Nullable String containerName) {
-            this.containerName = containerName;
+            $.containerName = containerName;
             return this;
         }
+
         public Builder creatorId(String creatorId) {
-            this.creatorId = Objects.requireNonNull(creatorId);
+            $.creatorId = creatorId;
             return this;
         }
+
         public Builder name(@Nullable String name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
+
         public Builder path(@Nullable String path) {
-            this.path = path;
+            $.path = path;
             return this;
         }
+
         public Builder provisioningStatus(String provisioningStatus) {
-            this.provisioningStatus = Objects.requireNonNull(provisioningStatus);
+            $.provisioningStatus = provisioningStatus;
             return this;
         }
+
         public Builder type(@Nullable String type) {
-            this.type = type;
+            $.type = type;
             return this;
         }
+
         public Builder uploadedTimestamp(String uploadedTimestamp) {
-            this.uploadedTimestamp = Objects.requireNonNull(uploadedTimestamp);
+            $.uploadedTimestamp = uploadedTimestamp;
             return this;
-        }        public LibraryInfoResponse build() {
-            return new LibraryInfoResponse(containerName, creatorId, name, path, provisioningStatus, type, uploadedTimestamp);
+        }
+
+        public LibraryInfoResponse build() {
+            $.creatorId = Objects.requireNonNull($.creatorId, "expected parameter 'creatorId' to be non-null");
+            $.provisioningStatus = Objects.requireNonNull($.provisioningStatus, "expected parameter 'provisioningStatus' to be non-null");
+            $.uploadedTimestamp = Objects.requireNonNull($.uploadedTimestamp, "expected parameter 'uploadedTimestamp' to be non-null");
+            return $;
         }
     }
+
 }

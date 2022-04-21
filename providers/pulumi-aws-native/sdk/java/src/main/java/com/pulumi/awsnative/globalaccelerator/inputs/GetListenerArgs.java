@@ -17,45 +17,45 @@ public final class GetListenerArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="listenerArn", required=true)
-      private final String listenerArn;
+    private String listenerArn;
 
     public String listenerArn() {
         return this.listenerArn;
     }
 
-    public GetListenerArgs(String listenerArn) {
-        this.listenerArn = Objects.requireNonNull(listenerArn, "expected parameter 'listenerArn' to be non-null");
-    }
+    private GetListenerArgs() {}
 
-    private GetListenerArgs() {
-        this.listenerArn = null;
+    private GetListenerArgs(GetListenerArgs $) {
+        this.listenerArn = $.listenerArn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetListenerArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String listenerArn;
+        private GetListenerArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetListenerArgs();
         }
 
         public Builder(GetListenerArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.listenerArn = defaults.listenerArn;
+            $ = new GetListenerArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder listenerArn(String listenerArn) {
-            this.listenerArn = Objects.requireNonNull(listenerArn);
+            $.listenerArn = listenerArn;
             return this;
-        }        public GetListenerArgs build() {
-            return new GetListenerArgs(listenerArn);
+        }
+
+        public GetListenerArgs build() {
+            $.listenerArn = Objects.requireNonNull($.listenerArn, "expected parameter 'listenerArn' to be non-null");
+            return $;
         }
     }
+
 }

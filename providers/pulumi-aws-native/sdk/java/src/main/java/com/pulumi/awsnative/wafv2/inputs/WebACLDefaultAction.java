@@ -20,62 +20,57 @@ public final class WebACLDefaultAction extends com.pulumi.resources.InvokeArgs {
     public static final WebACLDefaultAction Empty = new WebACLDefaultAction();
 
     @Import(name="allow")
-      private final @Nullable WebACLAllowAction allow;
+    private @Nullable WebACLAllowAction allow;
 
     public Optional<WebACLAllowAction> allow() {
-        return this.allow == null ? Optional.empty() : Optional.ofNullable(this.allow);
+        return Optional.ofNullable(this.allow);
     }
 
     @Import(name="block")
-      private final @Nullable WebACLBlockAction block;
+    private @Nullable WebACLBlockAction block;
 
     public Optional<WebACLBlockAction> block() {
-        return this.block == null ? Optional.empty() : Optional.ofNullable(this.block);
+        return Optional.ofNullable(this.block);
     }
 
-    public WebACLDefaultAction(
-        @Nullable WebACLAllowAction allow,
-        @Nullable WebACLBlockAction block) {
-        this.allow = allow;
-        this.block = block;
-    }
+    private WebACLDefaultAction() {}
 
-    private WebACLDefaultAction() {
-        this.allow = null;
-        this.block = null;
+    private WebACLDefaultAction(WebACLDefaultAction $) {
+        this.allow = $.allow;
+        this.block = $.block;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WebACLDefaultAction defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable WebACLAllowAction allow;
-        private @Nullable WebACLBlockAction block;
+        private WebACLDefaultAction $;
 
         public Builder() {
-    	      // Empty
+            $ = new WebACLDefaultAction();
         }
 
         public Builder(WebACLDefaultAction defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.allow = defaults.allow;
-    	      this.block = defaults.block;
+            $ = new WebACLDefaultAction(Objects.requireNonNull(defaults));
         }
 
         public Builder allow(@Nullable WebACLAllowAction allow) {
-            this.allow = allow;
+            $.allow = allow;
             return this;
         }
+
         public Builder block(@Nullable WebACLBlockAction block) {
-            this.block = block;
+            $.block = block;
             return this;
-        }        public WebACLDefaultAction build() {
-            return new WebACLDefaultAction(allow, block);
+        }
+
+        public WebACLDefaultAction build() {
+            return $;
         }
     }
+
 }

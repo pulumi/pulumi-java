@@ -12,6 +12,7 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -28,7 +29,7 @@ public final class ActionGroupArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="actionGroupId", required=true)
-      private final Output<String> actionGroupId;
+    private Output<String> actionGroupId;
 
     public Output<String> actionGroupId() {
         return this.actionGroupId;
@@ -39,10 +40,10 @@ public final class ActionGroupArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="conditions")
-      private final @Nullable Output<ConditionsArgs> conditions;
+    private @Nullable Output<ConditionsArgs> conditions;
 
-    public Output<ConditionsArgs> conditions() {
-        return this.conditions == null ? Codegen.empty() : this.conditions;
+    public Optional<Output<ConditionsArgs>> conditions() {
+        return Optional.ofNullable(this.conditions);
     }
 
     /**
@@ -50,10 +51,10 @@ public final class ActionGroupArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -61,10 +62,10 @@ public final class ActionGroupArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="scope")
-      private final @Nullable Output<ScopeArgs> scope;
+    private @Nullable Output<ScopeArgs> scope;
 
-    public Output<ScopeArgs> scope() {
-        return this.scope == null ? Codegen.empty() : this.scope;
+    public Optional<Output<ScopeArgs>> scope() {
+        return Optional.ofNullable(this.scope);
     }
 
     /**
@@ -72,10 +73,10 @@ public final class ActionGroupArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="status")
-      private final @Nullable Output<Either<String,ActionRuleStatus>> status;
+    private @Nullable Output<Either<String,ActionRuleStatus>> status;
 
-    public Output<Either<String,ActionRuleStatus>> status() {
-        return this.status == null ? Codegen.empty() : this.status;
+    public Optional<Output<Either<String,ActionRuleStatus>>> status() {
+        return Optional.ofNullable(this.status);
     }
 
     /**
@@ -84,115 +85,100 @@ public final class ActionGroupArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="type", required=true)
-      private final Output<String> type;
+    private Output<String> type;
 
     public Output<String> type() {
         return this.type;
     }
 
-    public ActionGroupArgs(
-        Output<String> actionGroupId,
-        @Nullable Output<ConditionsArgs> conditions,
-        @Nullable Output<String> description,
-        @Nullable Output<ScopeArgs> scope,
-        @Nullable Output<Either<String,ActionRuleStatus>> status,
-        Output<String> type) {
-        this.actionGroupId = Objects.requireNonNull(actionGroupId, "expected parameter 'actionGroupId' to be non-null");
-        this.conditions = conditions;
-        this.description = description;
-        this.scope = scope;
-        this.status = status;
-        this.type = Codegen.stringProp("type").output().arg(type).require();
-    }
+    private ActionGroupArgs() {}
 
-    private ActionGroupArgs() {
-        this.actionGroupId = Codegen.empty();
-        this.conditions = Codegen.empty();
-        this.description = Codegen.empty();
-        this.scope = Codegen.empty();
-        this.status = Codegen.empty();
-        this.type = Codegen.empty();
+    private ActionGroupArgs(ActionGroupArgs $) {
+        this.actionGroupId = $.actionGroupId;
+        this.conditions = $.conditions;
+        this.description = $.description;
+        this.scope = $.scope;
+        this.status = $.status;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ActionGroupArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> actionGroupId;
-        private @Nullable Output<ConditionsArgs> conditions;
-        private @Nullable Output<String> description;
-        private @Nullable Output<ScopeArgs> scope;
-        private @Nullable Output<Either<String,ActionRuleStatus>> status;
-        private Output<String> type;
+        private ActionGroupArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ActionGroupArgs();
         }
 
         public Builder(ActionGroupArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.actionGroupId = defaults.actionGroupId;
-    	      this.conditions = defaults.conditions;
-    	      this.description = defaults.description;
-    	      this.scope = defaults.scope;
-    	      this.status = defaults.status;
-    	      this.type = defaults.type;
+            $ = new ActionGroupArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder actionGroupId(Output<String> actionGroupId) {
-            this.actionGroupId = Objects.requireNonNull(actionGroupId);
+            $.actionGroupId = actionGroupId;
             return this;
         }
+
         public Builder actionGroupId(String actionGroupId) {
-            this.actionGroupId = Output.of(Objects.requireNonNull(actionGroupId));
-            return this;
+            return actionGroupId(Output.of(actionGroupId));
         }
+
         public Builder conditions(@Nullable Output<ConditionsArgs> conditions) {
-            this.conditions = conditions;
+            $.conditions = conditions;
             return this;
         }
-        public Builder conditions(@Nullable ConditionsArgs conditions) {
-            this.conditions = Codegen.ofNullable(conditions);
-            return this;
+
+        public Builder conditions(ConditionsArgs conditions) {
+            return conditions(Output.of(conditions));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder scope(@Nullable Output<ScopeArgs> scope) {
-            this.scope = scope;
+            $.scope = scope;
             return this;
         }
-        public Builder scope(@Nullable ScopeArgs scope) {
-            this.scope = Codegen.ofNullable(scope);
-            return this;
+
+        public Builder scope(ScopeArgs scope) {
+            return scope(Output.of(scope));
         }
+
         public Builder status(@Nullable Output<Either<String,ActionRuleStatus>> status) {
-            this.status = status;
+            $.status = status;
             return this;
         }
-        public Builder status(@Nullable Either<String,ActionRuleStatus> status) {
-            this.status = Codegen.ofNullable(status);
-            return this;
+
+        public Builder status(Either<String,ActionRuleStatus> status) {
+            return status(Output.of(status));
         }
+
         public Builder type(Output<String> type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Output.of(Objects.requireNonNull(type));
-            return this;
-        }        public ActionGroupArgs build() {
-            return new ActionGroupArgs(actionGroupId, conditions, description, scope, status, type);
+            return type(Output.of(type));
+        }
+
+        public ActionGroupArgs build() {
+            $.actionGroupId = Objects.requireNonNull($.actionGroupId, "expected parameter 'actionGroupId' to be non-null");
+            $.type = Codegen.stringProp("type").output().arg($.type).require();
+            return $;
         }
     }
+
 }

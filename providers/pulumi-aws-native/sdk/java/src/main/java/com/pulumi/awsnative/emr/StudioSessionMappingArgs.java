@@ -6,7 +6,6 @@ package com.pulumi.awsnative.emr;
 import com.pulumi.awsnative.emr.enums.StudioSessionMappingIdentityType;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +19,7 @@ public final class StudioSessionMappingArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="identityName", required=true)
-      private final Output<String> identityName;
+    private Output<String> identityName;
 
     public Output<String> identityName() {
         return this.identityName;
@@ -31,7 +30,7 @@ public final class StudioSessionMappingArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="identityType", required=true)
-      private final Output<StudioSessionMappingIdentityType> identityType;
+    private Output<StudioSessionMappingIdentityType> identityType;
 
     public Output<StudioSessionMappingIdentityType> identityType() {
         return this.identityType;
@@ -42,7 +41,7 @@ public final class StudioSessionMappingArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="sessionPolicyArn", required=true)
-      private final Output<String> sessionPolicyArn;
+    private Output<String> sessionPolicyArn;
 
     public Output<String> sessionPolicyArn() {
         return this.sessionPolicyArn;
@@ -53,89 +52,82 @@ public final class StudioSessionMappingArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="studioId", required=true)
-      private final Output<String> studioId;
+    private Output<String> studioId;
 
     public Output<String> studioId() {
         return this.studioId;
     }
 
-    public StudioSessionMappingArgs(
-        Output<String> identityName,
-        Output<StudioSessionMappingIdentityType> identityType,
-        Output<String> sessionPolicyArn,
-        Output<String> studioId) {
-        this.identityName = Objects.requireNonNull(identityName, "expected parameter 'identityName' to be non-null");
-        this.identityType = Objects.requireNonNull(identityType, "expected parameter 'identityType' to be non-null");
-        this.sessionPolicyArn = Objects.requireNonNull(sessionPolicyArn, "expected parameter 'sessionPolicyArn' to be non-null");
-        this.studioId = Objects.requireNonNull(studioId, "expected parameter 'studioId' to be non-null");
-    }
+    private StudioSessionMappingArgs() {}
 
-    private StudioSessionMappingArgs() {
-        this.identityName = Codegen.empty();
-        this.identityType = Codegen.empty();
-        this.sessionPolicyArn = Codegen.empty();
-        this.studioId = Codegen.empty();
+    private StudioSessionMappingArgs(StudioSessionMappingArgs $) {
+        this.identityName = $.identityName;
+        this.identityType = $.identityType;
+        this.sessionPolicyArn = $.sessionPolicyArn;
+        this.studioId = $.studioId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(StudioSessionMappingArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> identityName;
-        private Output<StudioSessionMappingIdentityType> identityType;
-        private Output<String> sessionPolicyArn;
-        private Output<String> studioId;
+        private StudioSessionMappingArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new StudioSessionMappingArgs();
         }
 
         public Builder(StudioSessionMappingArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.identityName = defaults.identityName;
-    	      this.identityType = defaults.identityType;
-    	      this.sessionPolicyArn = defaults.sessionPolicyArn;
-    	      this.studioId = defaults.studioId;
+            $ = new StudioSessionMappingArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder identityName(Output<String> identityName) {
-            this.identityName = Objects.requireNonNull(identityName);
+            $.identityName = identityName;
             return this;
         }
+
         public Builder identityName(String identityName) {
-            this.identityName = Output.of(Objects.requireNonNull(identityName));
-            return this;
+            return identityName(Output.of(identityName));
         }
+
         public Builder identityType(Output<StudioSessionMappingIdentityType> identityType) {
-            this.identityType = Objects.requireNonNull(identityType);
+            $.identityType = identityType;
             return this;
         }
+
         public Builder identityType(StudioSessionMappingIdentityType identityType) {
-            this.identityType = Output.of(Objects.requireNonNull(identityType));
-            return this;
+            return identityType(Output.of(identityType));
         }
+
         public Builder sessionPolicyArn(Output<String> sessionPolicyArn) {
-            this.sessionPolicyArn = Objects.requireNonNull(sessionPolicyArn);
+            $.sessionPolicyArn = sessionPolicyArn;
             return this;
         }
+
         public Builder sessionPolicyArn(String sessionPolicyArn) {
-            this.sessionPolicyArn = Output.of(Objects.requireNonNull(sessionPolicyArn));
-            return this;
+            return sessionPolicyArn(Output.of(sessionPolicyArn));
         }
+
         public Builder studioId(Output<String> studioId) {
-            this.studioId = Objects.requireNonNull(studioId);
+            $.studioId = studioId;
             return this;
         }
+
         public Builder studioId(String studioId) {
-            this.studioId = Output.of(Objects.requireNonNull(studioId));
-            return this;
-        }        public StudioSessionMappingArgs build() {
-            return new StudioSessionMappingArgs(identityName, identityType, sessionPolicyArn, studioId);
+            return studioId(Output.of(studioId));
+        }
+
+        public StudioSessionMappingArgs build() {
+            $.identityName = Objects.requireNonNull($.identityName, "expected parameter 'identityName' to be non-null");
+            $.identityType = Objects.requireNonNull($.identityType, "expected parameter 'identityType' to be non-null");
+            $.sessionPolicyArn = Objects.requireNonNull($.sessionPolicyArn, "expected parameter 'sessionPolicyArn' to be non-null");
+            $.studioId = Objects.requireNonNull($.studioId, "expected parameter 'studioId' to be non-null");
+            return $;
         }
     }
+
 }

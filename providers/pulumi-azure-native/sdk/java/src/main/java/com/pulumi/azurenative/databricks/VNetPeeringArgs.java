@@ -8,10 +8,10 @@ import com.pulumi.azurenative.databricks.inputs.VirtualNetworkPeeringPropertiesF
 import com.pulumi.azurenative.databricks.inputs.VirtualNetworkPeeringPropertiesFormatRemoteVirtualNetworkArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class VNetPeeringArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="allowForwardedTraffic")
-      private final @Nullable Output<Boolean> allowForwardedTraffic;
+    private @Nullable Output<Boolean> allowForwardedTraffic;
 
-    public Output<Boolean> allowForwardedTraffic() {
-        return this.allowForwardedTraffic == null ? Codegen.empty() : this.allowForwardedTraffic;
+    public Optional<Output<Boolean>> allowForwardedTraffic() {
+        return Optional.ofNullable(this.allowForwardedTraffic);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class VNetPeeringArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="allowGatewayTransit")
-      private final @Nullable Output<Boolean> allowGatewayTransit;
+    private @Nullable Output<Boolean> allowGatewayTransit;
 
-    public Output<Boolean> allowGatewayTransit() {
-        return this.allowGatewayTransit == null ? Codegen.empty() : this.allowGatewayTransit;
+    public Optional<Output<Boolean>> allowGatewayTransit() {
+        return Optional.ofNullable(this.allowGatewayTransit);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class VNetPeeringArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="allowVirtualNetworkAccess")
-      private final @Nullable Output<Boolean> allowVirtualNetworkAccess;
+    private @Nullable Output<Boolean> allowVirtualNetworkAccess;
 
-    public Output<Boolean> allowVirtualNetworkAccess() {
-        return this.allowVirtualNetworkAccess == null ? Codegen.empty() : this.allowVirtualNetworkAccess;
+    public Optional<Output<Boolean>> allowVirtualNetworkAccess() {
+        return Optional.ofNullable(this.allowVirtualNetworkAccess);
     }
 
     /**
@@ -57,10 +57,10 @@ public final class VNetPeeringArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="databricksAddressSpace")
-      private final @Nullable Output<AddressSpaceArgs> databricksAddressSpace;
+    private @Nullable Output<AddressSpaceArgs> databricksAddressSpace;
 
-    public Output<AddressSpaceArgs> databricksAddressSpace() {
-        return this.databricksAddressSpace == null ? Codegen.empty() : this.databricksAddressSpace;
+    public Optional<Output<AddressSpaceArgs>> databricksAddressSpace() {
+        return Optional.ofNullable(this.databricksAddressSpace);
     }
 
     /**
@@ -68,10 +68,10 @@ public final class VNetPeeringArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="databricksVirtualNetwork")
-      private final @Nullable Output<VirtualNetworkPeeringPropertiesFormatDatabricksVirtualNetworkArgs> databricksVirtualNetwork;
+    private @Nullable Output<VirtualNetworkPeeringPropertiesFormatDatabricksVirtualNetworkArgs> databricksVirtualNetwork;
 
-    public Output<VirtualNetworkPeeringPropertiesFormatDatabricksVirtualNetworkArgs> databricksVirtualNetwork() {
-        return this.databricksVirtualNetwork == null ? Codegen.empty() : this.databricksVirtualNetwork;
+    public Optional<Output<VirtualNetworkPeeringPropertiesFormatDatabricksVirtualNetworkArgs>> databricksVirtualNetwork() {
+        return Optional.ofNullable(this.databricksVirtualNetwork);
     }
 
     /**
@@ -79,10 +79,10 @@ public final class VNetPeeringArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="peeringName")
-      private final @Nullable Output<String> peeringName;
+    private @Nullable Output<String> peeringName;
 
-    public Output<String> peeringName() {
-        return this.peeringName == null ? Codegen.empty() : this.peeringName;
+    public Optional<Output<String>> peeringName() {
+        return Optional.ofNullable(this.peeringName);
     }
 
     /**
@@ -90,10 +90,10 @@ public final class VNetPeeringArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="remoteAddressSpace")
-      private final @Nullable Output<AddressSpaceArgs> remoteAddressSpace;
+    private @Nullable Output<AddressSpaceArgs> remoteAddressSpace;
 
-    public Output<AddressSpaceArgs> remoteAddressSpace() {
-        return this.remoteAddressSpace == null ? Codegen.empty() : this.remoteAddressSpace;
+    public Optional<Output<AddressSpaceArgs>> remoteAddressSpace() {
+        return Optional.ofNullable(this.remoteAddressSpace);
     }
 
     /**
@@ -101,7 +101,7 @@ public final class VNetPeeringArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="remoteVirtualNetwork", required=true)
-      private final Output<VirtualNetworkPeeringPropertiesFormatRemoteVirtualNetworkArgs> remoteVirtualNetwork;
+    private Output<VirtualNetworkPeeringPropertiesFormatRemoteVirtualNetworkArgs> remoteVirtualNetwork;
 
     public Output<VirtualNetworkPeeringPropertiesFormatRemoteVirtualNetworkArgs> remoteVirtualNetwork() {
         return this.remoteVirtualNetwork;
@@ -112,7 +112,7 @@ public final class VNetPeeringArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -123,10 +123,10 @@ public final class VNetPeeringArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="useRemoteGateways")
-      private final @Nullable Output<Boolean> useRemoteGateways;
+    private @Nullable Output<Boolean> useRemoteGateways;
 
-    public Output<Boolean> useRemoteGateways() {
-        return this.useRemoteGateways == null ? Codegen.empty() : this.useRemoteGateways;
+    public Optional<Output<Boolean>> useRemoteGateways() {
+        return Optional.ofNullable(this.useRemoteGateways);
     }
 
     /**
@@ -134,180 +134,151 @@ public final class VNetPeeringArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="workspaceName", required=true)
-      private final Output<String> workspaceName;
+    private Output<String> workspaceName;
 
     public Output<String> workspaceName() {
         return this.workspaceName;
     }
 
-    public VNetPeeringArgs(
-        @Nullable Output<Boolean> allowForwardedTraffic,
-        @Nullable Output<Boolean> allowGatewayTransit,
-        @Nullable Output<Boolean> allowVirtualNetworkAccess,
-        @Nullable Output<AddressSpaceArgs> databricksAddressSpace,
-        @Nullable Output<VirtualNetworkPeeringPropertiesFormatDatabricksVirtualNetworkArgs> databricksVirtualNetwork,
-        @Nullable Output<String> peeringName,
-        @Nullable Output<AddressSpaceArgs> remoteAddressSpace,
-        Output<VirtualNetworkPeeringPropertiesFormatRemoteVirtualNetworkArgs> remoteVirtualNetwork,
-        Output<String> resourceGroupName,
-        @Nullable Output<Boolean> useRemoteGateways,
-        Output<String> workspaceName) {
-        this.allowForwardedTraffic = allowForwardedTraffic;
-        this.allowGatewayTransit = allowGatewayTransit;
-        this.allowVirtualNetworkAccess = allowVirtualNetworkAccess;
-        this.databricksAddressSpace = databricksAddressSpace;
-        this.databricksVirtualNetwork = databricksVirtualNetwork;
-        this.peeringName = peeringName;
-        this.remoteAddressSpace = remoteAddressSpace;
-        this.remoteVirtualNetwork = Objects.requireNonNull(remoteVirtualNetwork, "expected parameter 'remoteVirtualNetwork' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.useRemoteGateways = useRemoteGateways;
-        this.workspaceName = Objects.requireNonNull(workspaceName, "expected parameter 'workspaceName' to be non-null");
-    }
+    private VNetPeeringArgs() {}
 
-    private VNetPeeringArgs() {
-        this.allowForwardedTraffic = Codegen.empty();
-        this.allowGatewayTransit = Codegen.empty();
-        this.allowVirtualNetworkAccess = Codegen.empty();
-        this.databricksAddressSpace = Codegen.empty();
-        this.databricksVirtualNetwork = Codegen.empty();
-        this.peeringName = Codegen.empty();
-        this.remoteAddressSpace = Codegen.empty();
-        this.remoteVirtualNetwork = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.useRemoteGateways = Codegen.empty();
-        this.workspaceName = Codegen.empty();
+    private VNetPeeringArgs(VNetPeeringArgs $) {
+        this.allowForwardedTraffic = $.allowForwardedTraffic;
+        this.allowGatewayTransit = $.allowGatewayTransit;
+        this.allowVirtualNetworkAccess = $.allowVirtualNetworkAccess;
+        this.databricksAddressSpace = $.databricksAddressSpace;
+        this.databricksVirtualNetwork = $.databricksVirtualNetwork;
+        this.peeringName = $.peeringName;
+        this.remoteAddressSpace = $.remoteAddressSpace;
+        this.remoteVirtualNetwork = $.remoteVirtualNetwork;
+        this.resourceGroupName = $.resourceGroupName;
+        this.useRemoteGateways = $.useRemoteGateways;
+        this.workspaceName = $.workspaceName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VNetPeeringArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> allowForwardedTraffic;
-        private @Nullable Output<Boolean> allowGatewayTransit;
-        private @Nullable Output<Boolean> allowVirtualNetworkAccess;
-        private @Nullable Output<AddressSpaceArgs> databricksAddressSpace;
-        private @Nullable Output<VirtualNetworkPeeringPropertiesFormatDatabricksVirtualNetworkArgs> databricksVirtualNetwork;
-        private @Nullable Output<String> peeringName;
-        private @Nullable Output<AddressSpaceArgs> remoteAddressSpace;
-        private Output<VirtualNetworkPeeringPropertiesFormatRemoteVirtualNetworkArgs> remoteVirtualNetwork;
-        private Output<String> resourceGroupName;
-        private @Nullable Output<Boolean> useRemoteGateways;
-        private Output<String> workspaceName;
+        private VNetPeeringArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new VNetPeeringArgs();
         }
 
         public Builder(VNetPeeringArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.allowForwardedTraffic = defaults.allowForwardedTraffic;
-    	      this.allowGatewayTransit = defaults.allowGatewayTransit;
-    	      this.allowVirtualNetworkAccess = defaults.allowVirtualNetworkAccess;
-    	      this.databricksAddressSpace = defaults.databricksAddressSpace;
-    	      this.databricksVirtualNetwork = defaults.databricksVirtualNetwork;
-    	      this.peeringName = defaults.peeringName;
-    	      this.remoteAddressSpace = defaults.remoteAddressSpace;
-    	      this.remoteVirtualNetwork = defaults.remoteVirtualNetwork;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.useRemoteGateways = defaults.useRemoteGateways;
-    	      this.workspaceName = defaults.workspaceName;
+            $ = new VNetPeeringArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder allowForwardedTraffic(@Nullable Output<Boolean> allowForwardedTraffic) {
-            this.allowForwardedTraffic = allowForwardedTraffic;
+            $.allowForwardedTraffic = allowForwardedTraffic;
             return this;
         }
-        public Builder allowForwardedTraffic(@Nullable Boolean allowForwardedTraffic) {
-            this.allowForwardedTraffic = Codegen.ofNullable(allowForwardedTraffic);
-            return this;
+
+        public Builder allowForwardedTraffic(Boolean allowForwardedTraffic) {
+            return allowForwardedTraffic(Output.of(allowForwardedTraffic));
         }
+
         public Builder allowGatewayTransit(@Nullable Output<Boolean> allowGatewayTransit) {
-            this.allowGatewayTransit = allowGatewayTransit;
+            $.allowGatewayTransit = allowGatewayTransit;
             return this;
         }
-        public Builder allowGatewayTransit(@Nullable Boolean allowGatewayTransit) {
-            this.allowGatewayTransit = Codegen.ofNullable(allowGatewayTransit);
-            return this;
+
+        public Builder allowGatewayTransit(Boolean allowGatewayTransit) {
+            return allowGatewayTransit(Output.of(allowGatewayTransit));
         }
+
         public Builder allowVirtualNetworkAccess(@Nullable Output<Boolean> allowVirtualNetworkAccess) {
-            this.allowVirtualNetworkAccess = allowVirtualNetworkAccess;
+            $.allowVirtualNetworkAccess = allowVirtualNetworkAccess;
             return this;
         }
-        public Builder allowVirtualNetworkAccess(@Nullable Boolean allowVirtualNetworkAccess) {
-            this.allowVirtualNetworkAccess = Codegen.ofNullable(allowVirtualNetworkAccess);
-            return this;
+
+        public Builder allowVirtualNetworkAccess(Boolean allowVirtualNetworkAccess) {
+            return allowVirtualNetworkAccess(Output.of(allowVirtualNetworkAccess));
         }
+
         public Builder databricksAddressSpace(@Nullable Output<AddressSpaceArgs> databricksAddressSpace) {
-            this.databricksAddressSpace = databricksAddressSpace;
+            $.databricksAddressSpace = databricksAddressSpace;
             return this;
         }
-        public Builder databricksAddressSpace(@Nullable AddressSpaceArgs databricksAddressSpace) {
-            this.databricksAddressSpace = Codegen.ofNullable(databricksAddressSpace);
-            return this;
+
+        public Builder databricksAddressSpace(AddressSpaceArgs databricksAddressSpace) {
+            return databricksAddressSpace(Output.of(databricksAddressSpace));
         }
+
         public Builder databricksVirtualNetwork(@Nullable Output<VirtualNetworkPeeringPropertiesFormatDatabricksVirtualNetworkArgs> databricksVirtualNetwork) {
-            this.databricksVirtualNetwork = databricksVirtualNetwork;
+            $.databricksVirtualNetwork = databricksVirtualNetwork;
             return this;
         }
-        public Builder databricksVirtualNetwork(@Nullable VirtualNetworkPeeringPropertiesFormatDatabricksVirtualNetworkArgs databricksVirtualNetwork) {
-            this.databricksVirtualNetwork = Codegen.ofNullable(databricksVirtualNetwork);
-            return this;
+
+        public Builder databricksVirtualNetwork(VirtualNetworkPeeringPropertiesFormatDatabricksVirtualNetworkArgs databricksVirtualNetwork) {
+            return databricksVirtualNetwork(Output.of(databricksVirtualNetwork));
         }
+
         public Builder peeringName(@Nullable Output<String> peeringName) {
-            this.peeringName = peeringName;
+            $.peeringName = peeringName;
             return this;
         }
-        public Builder peeringName(@Nullable String peeringName) {
-            this.peeringName = Codegen.ofNullable(peeringName);
-            return this;
+
+        public Builder peeringName(String peeringName) {
+            return peeringName(Output.of(peeringName));
         }
+
         public Builder remoteAddressSpace(@Nullable Output<AddressSpaceArgs> remoteAddressSpace) {
-            this.remoteAddressSpace = remoteAddressSpace;
+            $.remoteAddressSpace = remoteAddressSpace;
             return this;
         }
-        public Builder remoteAddressSpace(@Nullable AddressSpaceArgs remoteAddressSpace) {
-            this.remoteAddressSpace = Codegen.ofNullable(remoteAddressSpace);
-            return this;
+
+        public Builder remoteAddressSpace(AddressSpaceArgs remoteAddressSpace) {
+            return remoteAddressSpace(Output.of(remoteAddressSpace));
         }
+
         public Builder remoteVirtualNetwork(Output<VirtualNetworkPeeringPropertiesFormatRemoteVirtualNetworkArgs> remoteVirtualNetwork) {
-            this.remoteVirtualNetwork = Objects.requireNonNull(remoteVirtualNetwork);
+            $.remoteVirtualNetwork = remoteVirtualNetwork;
             return this;
         }
+
         public Builder remoteVirtualNetwork(VirtualNetworkPeeringPropertiesFormatRemoteVirtualNetworkArgs remoteVirtualNetwork) {
-            this.remoteVirtualNetwork = Output.of(Objects.requireNonNull(remoteVirtualNetwork));
-            return this;
+            return remoteVirtualNetwork(Output.of(remoteVirtualNetwork));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder useRemoteGateways(@Nullable Output<Boolean> useRemoteGateways) {
-            this.useRemoteGateways = useRemoteGateways;
+            $.useRemoteGateways = useRemoteGateways;
             return this;
         }
-        public Builder useRemoteGateways(@Nullable Boolean useRemoteGateways) {
-            this.useRemoteGateways = Codegen.ofNullable(useRemoteGateways);
-            return this;
+
+        public Builder useRemoteGateways(Boolean useRemoteGateways) {
+            return useRemoteGateways(Output.of(useRemoteGateways));
         }
+
         public Builder workspaceName(Output<String> workspaceName) {
-            this.workspaceName = Objects.requireNonNull(workspaceName);
+            $.workspaceName = workspaceName;
             return this;
         }
+
         public Builder workspaceName(String workspaceName) {
-            this.workspaceName = Output.of(Objects.requireNonNull(workspaceName));
-            return this;
-        }        public VNetPeeringArgs build() {
-            return new VNetPeeringArgs(allowForwardedTraffic, allowGatewayTransit, allowVirtualNetworkAccess, databricksAddressSpace, databricksVirtualNetwork, peeringName, remoteAddressSpace, remoteVirtualNetwork, resourceGroupName, useRemoteGateways, workspaceName);
+            return workspaceName(Output.of(workspaceName));
+        }
+
+        public VNetPeeringArgs build() {
+            $.remoteVirtualNetwork = Objects.requireNonNull($.remoteVirtualNetwork, "expected parameter 'remoteVirtualNetwork' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.workspaceName = Objects.requireNonNull($.workspaceName, "expected parameter 'workspaceName' to be non-null");
+            return $;
         }
     }
+
 }

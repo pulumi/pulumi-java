@@ -23,45 +23,44 @@ public final class A2AUnprotectedDiskDetailsResponse extends com.pulumi.resource
      * 
      */
     @Import(name="diskLunId")
-      private final @Nullable Integer diskLunId;
+    private @Nullable Integer diskLunId;
 
     public Optional<Integer> diskLunId() {
-        return this.diskLunId == null ? Optional.empty() : Optional.ofNullable(this.diskLunId);
+        return Optional.ofNullable(this.diskLunId);
     }
 
-    public A2AUnprotectedDiskDetailsResponse(@Nullable Integer diskLunId) {
-        this.diskLunId = diskLunId;
-    }
+    private A2AUnprotectedDiskDetailsResponse() {}
 
-    private A2AUnprotectedDiskDetailsResponse() {
-        this.diskLunId = null;
+    private A2AUnprotectedDiskDetailsResponse(A2AUnprotectedDiskDetailsResponse $) {
+        this.diskLunId = $.diskLunId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(A2AUnprotectedDiskDetailsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Integer diskLunId;
+        private A2AUnprotectedDiskDetailsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new A2AUnprotectedDiskDetailsResponse();
         }
 
         public Builder(A2AUnprotectedDiskDetailsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.diskLunId = defaults.diskLunId;
+            $ = new A2AUnprotectedDiskDetailsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder diskLunId(@Nullable Integer diskLunId) {
-            this.diskLunId = diskLunId;
+            $.diskLunId = diskLunId;
             return this;
-        }        public A2AUnprotectedDiskDetailsResponse build() {
-            return new A2AUnprotectedDiskDetailsResponse(diskLunId);
+        }
+
+        public A2AUnprotectedDiskDetailsResponse build() {
+            return $;
         }
     }
+
 }

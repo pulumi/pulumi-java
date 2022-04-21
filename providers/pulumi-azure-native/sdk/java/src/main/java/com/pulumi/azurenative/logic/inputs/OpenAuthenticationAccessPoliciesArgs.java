@@ -6,10 +6,10 @@ package com.pulumi.azurenative.logic.inputs;
 import com.pulumi.azurenative.logic.inputs.OpenAuthenticationAccessPolicyArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,49 +26,48 @@ public final class OpenAuthenticationAccessPoliciesArgs extends com.pulumi.resou
      * 
      */
     @Import(name="policies")
-      private final @Nullable Output<Map<String,OpenAuthenticationAccessPolicyArgs>> policies;
+    private @Nullable Output<Map<String,OpenAuthenticationAccessPolicyArgs>> policies;
 
-    public Output<Map<String,OpenAuthenticationAccessPolicyArgs>> policies() {
-        return this.policies == null ? Codegen.empty() : this.policies;
+    public Optional<Output<Map<String,OpenAuthenticationAccessPolicyArgs>>> policies() {
+        return Optional.ofNullable(this.policies);
     }
 
-    public OpenAuthenticationAccessPoliciesArgs(@Nullable Output<Map<String,OpenAuthenticationAccessPolicyArgs>> policies) {
-        this.policies = policies;
-    }
+    private OpenAuthenticationAccessPoliciesArgs() {}
 
-    private OpenAuthenticationAccessPoliciesArgs() {
-        this.policies = Codegen.empty();
+    private OpenAuthenticationAccessPoliciesArgs(OpenAuthenticationAccessPoliciesArgs $) {
+        this.policies = $.policies;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(OpenAuthenticationAccessPoliciesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Map<String,OpenAuthenticationAccessPolicyArgs>> policies;
+        private OpenAuthenticationAccessPoliciesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new OpenAuthenticationAccessPoliciesArgs();
         }
 
         public Builder(OpenAuthenticationAccessPoliciesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.policies = defaults.policies;
+            $ = new OpenAuthenticationAccessPoliciesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder policies(@Nullable Output<Map<String,OpenAuthenticationAccessPolicyArgs>> policies) {
-            this.policies = policies;
+            $.policies = policies;
             return this;
         }
-        public Builder policies(@Nullable Map<String,OpenAuthenticationAccessPolicyArgs> policies) {
-            this.policies = Codegen.ofNullable(policies);
-            return this;
-        }        public OpenAuthenticationAccessPoliciesArgs build() {
-            return new OpenAuthenticationAccessPoliciesArgs(policies);
+
+        public Builder policies(Map<String,OpenAuthenticationAccessPolicyArgs> policies) {
+            return policies(Output.of(policies));
+        }
+
+        public OpenAuthenticationAccessPoliciesArgs build() {
+            return $;
         }
     }
+
 }

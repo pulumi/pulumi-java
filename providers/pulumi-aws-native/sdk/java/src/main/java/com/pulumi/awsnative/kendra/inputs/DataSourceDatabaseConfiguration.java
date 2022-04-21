@@ -20,126 +20,112 @@ public final class DataSourceDatabaseConfiguration extends com.pulumi.resources.
     public static final DataSourceDatabaseConfiguration Empty = new DataSourceDatabaseConfiguration();
 
     @Import(name="aclConfiguration")
-      private final @Nullable DataSourceAclConfiguration aclConfiguration;
+    private @Nullable DataSourceAclConfiguration aclConfiguration;
 
     public Optional<DataSourceAclConfiguration> aclConfiguration() {
-        return this.aclConfiguration == null ? Optional.empty() : Optional.ofNullable(this.aclConfiguration);
+        return Optional.ofNullable(this.aclConfiguration);
     }
 
     @Import(name="columnConfiguration", required=true)
-      private final DataSourceColumnConfiguration columnConfiguration;
+    private DataSourceColumnConfiguration columnConfiguration;
 
     public DataSourceColumnConfiguration columnConfiguration() {
         return this.columnConfiguration;
     }
 
     @Import(name="connectionConfiguration", required=true)
-      private final DataSourceConnectionConfiguration connectionConfiguration;
+    private DataSourceConnectionConfiguration connectionConfiguration;
 
     public DataSourceConnectionConfiguration connectionConfiguration() {
         return this.connectionConfiguration;
     }
 
     @Import(name="databaseEngineType", required=true)
-      private final DataSourceDatabaseEngineType databaseEngineType;
+    private DataSourceDatabaseEngineType databaseEngineType;
 
     public DataSourceDatabaseEngineType databaseEngineType() {
         return this.databaseEngineType;
     }
 
     @Import(name="sqlConfiguration")
-      private final @Nullable DataSourceSqlConfiguration sqlConfiguration;
+    private @Nullable DataSourceSqlConfiguration sqlConfiguration;
 
     public Optional<DataSourceSqlConfiguration> sqlConfiguration() {
-        return this.sqlConfiguration == null ? Optional.empty() : Optional.ofNullable(this.sqlConfiguration);
+        return Optional.ofNullable(this.sqlConfiguration);
     }
 
     @Import(name="vpcConfiguration")
-      private final @Nullable DataSourceVpcConfiguration vpcConfiguration;
+    private @Nullable DataSourceVpcConfiguration vpcConfiguration;
 
     public Optional<DataSourceVpcConfiguration> vpcConfiguration() {
-        return this.vpcConfiguration == null ? Optional.empty() : Optional.ofNullable(this.vpcConfiguration);
+        return Optional.ofNullable(this.vpcConfiguration);
     }
 
-    public DataSourceDatabaseConfiguration(
-        @Nullable DataSourceAclConfiguration aclConfiguration,
-        DataSourceColumnConfiguration columnConfiguration,
-        DataSourceConnectionConfiguration connectionConfiguration,
-        DataSourceDatabaseEngineType databaseEngineType,
-        @Nullable DataSourceSqlConfiguration sqlConfiguration,
-        @Nullable DataSourceVpcConfiguration vpcConfiguration) {
-        this.aclConfiguration = aclConfiguration;
-        this.columnConfiguration = Objects.requireNonNull(columnConfiguration, "expected parameter 'columnConfiguration' to be non-null");
-        this.connectionConfiguration = Objects.requireNonNull(connectionConfiguration, "expected parameter 'connectionConfiguration' to be non-null");
-        this.databaseEngineType = Objects.requireNonNull(databaseEngineType, "expected parameter 'databaseEngineType' to be non-null");
-        this.sqlConfiguration = sqlConfiguration;
-        this.vpcConfiguration = vpcConfiguration;
-    }
+    private DataSourceDatabaseConfiguration() {}
 
-    private DataSourceDatabaseConfiguration() {
-        this.aclConfiguration = null;
-        this.columnConfiguration = null;
-        this.connectionConfiguration = null;
-        this.databaseEngineType = null;
-        this.sqlConfiguration = null;
-        this.vpcConfiguration = null;
+    private DataSourceDatabaseConfiguration(DataSourceDatabaseConfiguration $) {
+        this.aclConfiguration = $.aclConfiguration;
+        this.columnConfiguration = $.columnConfiguration;
+        this.connectionConfiguration = $.connectionConfiguration;
+        this.databaseEngineType = $.databaseEngineType;
+        this.sqlConfiguration = $.sqlConfiguration;
+        this.vpcConfiguration = $.vpcConfiguration;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DataSourceDatabaseConfiguration defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable DataSourceAclConfiguration aclConfiguration;
-        private DataSourceColumnConfiguration columnConfiguration;
-        private DataSourceConnectionConfiguration connectionConfiguration;
-        private DataSourceDatabaseEngineType databaseEngineType;
-        private @Nullable DataSourceSqlConfiguration sqlConfiguration;
-        private @Nullable DataSourceVpcConfiguration vpcConfiguration;
+        private DataSourceDatabaseConfiguration $;
 
         public Builder() {
-    	      // Empty
+            $ = new DataSourceDatabaseConfiguration();
         }
 
         public Builder(DataSourceDatabaseConfiguration defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.aclConfiguration = defaults.aclConfiguration;
-    	      this.columnConfiguration = defaults.columnConfiguration;
-    	      this.connectionConfiguration = defaults.connectionConfiguration;
-    	      this.databaseEngineType = defaults.databaseEngineType;
-    	      this.sqlConfiguration = defaults.sqlConfiguration;
-    	      this.vpcConfiguration = defaults.vpcConfiguration;
+            $ = new DataSourceDatabaseConfiguration(Objects.requireNonNull(defaults));
         }
 
         public Builder aclConfiguration(@Nullable DataSourceAclConfiguration aclConfiguration) {
-            this.aclConfiguration = aclConfiguration;
+            $.aclConfiguration = aclConfiguration;
             return this;
         }
+
         public Builder columnConfiguration(DataSourceColumnConfiguration columnConfiguration) {
-            this.columnConfiguration = Objects.requireNonNull(columnConfiguration);
+            $.columnConfiguration = columnConfiguration;
             return this;
         }
+
         public Builder connectionConfiguration(DataSourceConnectionConfiguration connectionConfiguration) {
-            this.connectionConfiguration = Objects.requireNonNull(connectionConfiguration);
+            $.connectionConfiguration = connectionConfiguration;
             return this;
         }
+
         public Builder databaseEngineType(DataSourceDatabaseEngineType databaseEngineType) {
-            this.databaseEngineType = Objects.requireNonNull(databaseEngineType);
+            $.databaseEngineType = databaseEngineType;
             return this;
         }
+
         public Builder sqlConfiguration(@Nullable DataSourceSqlConfiguration sqlConfiguration) {
-            this.sqlConfiguration = sqlConfiguration;
+            $.sqlConfiguration = sqlConfiguration;
             return this;
         }
+
         public Builder vpcConfiguration(@Nullable DataSourceVpcConfiguration vpcConfiguration) {
-            this.vpcConfiguration = vpcConfiguration;
+            $.vpcConfiguration = vpcConfiguration;
             return this;
-        }        public DataSourceDatabaseConfiguration build() {
-            return new DataSourceDatabaseConfiguration(aclConfiguration, columnConfiguration, connectionConfiguration, databaseEngineType, sqlConfiguration, vpcConfiguration);
+        }
+
+        public DataSourceDatabaseConfiguration build() {
+            $.columnConfiguration = Objects.requireNonNull($.columnConfiguration, "expected parameter 'columnConfiguration' to be non-null");
+            $.connectionConfiguration = Objects.requireNonNull($.connectionConfiguration, "expected parameter 'connectionConfiguration' to be non-null");
+            $.databaseEngineType = Objects.requireNonNull($.databaseEngineType, "expected parameter 'databaseEngineType' to be non-null");
+            return $;
         }
     }
+
 }

@@ -23,10 +23,10 @@ public final class RestorePointCollectionSourcePropertiesResponse extends com.pu
      * 
      */
     @Import(name="id")
-      private final @Nullable String id;
+    private @Nullable String id;
 
     public Optional<String> id() {
-        return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
+        return Optional.ofNullable(this.id);
     }
 
     /**
@@ -34,55 +34,51 @@ public final class RestorePointCollectionSourcePropertiesResponse extends com.pu
      * 
      */
     @Import(name="location", required=true)
-      private final String location;
+    private String location;
 
     public String location() {
         return this.location;
     }
 
-    public RestorePointCollectionSourcePropertiesResponse(
-        @Nullable String id,
-        String location) {
-        this.id = id;
-        this.location = Objects.requireNonNull(location, "expected parameter 'location' to be non-null");
-    }
+    private RestorePointCollectionSourcePropertiesResponse() {}
 
-    private RestorePointCollectionSourcePropertiesResponse() {
-        this.id = null;
-        this.location = null;
+    private RestorePointCollectionSourcePropertiesResponse(RestorePointCollectionSourcePropertiesResponse $) {
+        this.id = $.id;
+        this.location = $.location;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RestorePointCollectionSourcePropertiesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String id;
-        private String location;
+        private RestorePointCollectionSourcePropertiesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new RestorePointCollectionSourcePropertiesResponse();
         }
 
         public Builder(RestorePointCollectionSourcePropertiesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.id = defaults.id;
-    	      this.location = defaults.location;
+            $ = new RestorePointCollectionSourcePropertiesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder id(@Nullable String id) {
-            this.id = id;
+            $.id = id;
             return this;
         }
+
         public Builder location(String location) {
-            this.location = Objects.requireNonNull(location);
+            $.location = location;
             return this;
-        }        public RestorePointCollectionSourcePropertiesResponse build() {
-            return new RestorePointCollectionSourcePropertiesResponse(id, location);
+        }
+
+        public RestorePointCollectionSourcePropertiesResponse build() {
+            $.location = Objects.requireNonNull($.location, "expected parameter 'location' to be non-null");
+            return $;
         }
     }
+
 }

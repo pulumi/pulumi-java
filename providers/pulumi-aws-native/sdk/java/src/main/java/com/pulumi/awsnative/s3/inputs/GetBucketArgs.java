@@ -17,45 +17,45 @@ public final class GetBucketArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="bucketName", required=true)
-      private final String bucketName;
+    private String bucketName;
 
     public String bucketName() {
         return this.bucketName;
     }
 
-    public GetBucketArgs(String bucketName) {
-        this.bucketName = Objects.requireNonNull(bucketName, "expected parameter 'bucketName' to be non-null");
-    }
+    private GetBucketArgs() {}
 
-    private GetBucketArgs() {
-        this.bucketName = null;
+    private GetBucketArgs(GetBucketArgs $) {
+        this.bucketName = $.bucketName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetBucketArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String bucketName;
+        private GetBucketArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetBucketArgs();
         }
 
         public Builder(GetBucketArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.bucketName = defaults.bucketName;
+            $ = new GetBucketArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder bucketName(String bucketName) {
-            this.bucketName = Objects.requireNonNull(bucketName);
+            $.bucketName = bucketName;
             return this;
-        }        public GetBucketArgs build() {
-            return new GetBucketArgs(bucketName);
+        }
+
+        public GetBucketArgs build() {
+            $.bucketName = Objects.requireNonNull($.bucketName, "expected parameter 'bucketName' to be non-null");
+            return $;
         }
     }
+
 }

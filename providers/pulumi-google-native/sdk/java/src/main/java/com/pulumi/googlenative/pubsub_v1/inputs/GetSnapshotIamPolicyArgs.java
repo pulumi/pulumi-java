@@ -15,78 +15,71 @@ public final class GetSnapshotIamPolicyArgs extends com.pulumi.resources.InvokeA
     public static final GetSnapshotIamPolicyArgs Empty = new GetSnapshotIamPolicyArgs();
 
     @Import(name="optionsRequestedPolicyVersion")
-      private final @Nullable String optionsRequestedPolicyVersion;
+    private @Nullable String optionsRequestedPolicyVersion;
 
     public Optional<String> optionsRequestedPolicyVersion() {
-        return this.optionsRequestedPolicyVersion == null ? Optional.empty() : Optional.ofNullable(this.optionsRequestedPolicyVersion);
+        return Optional.ofNullable(this.optionsRequestedPolicyVersion);
     }
 
     @Import(name="project")
-      private final @Nullable String project;
+    private @Nullable String project;
 
     public Optional<String> project() {
-        return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
+        return Optional.ofNullable(this.project);
     }
 
     @Import(name="snapshotId", required=true)
-      private final String snapshotId;
+    private String snapshotId;
 
     public String snapshotId() {
         return this.snapshotId;
     }
 
-    public GetSnapshotIamPolicyArgs(
-        @Nullable String optionsRequestedPolicyVersion,
-        @Nullable String project,
-        String snapshotId) {
-        this.optionsRequestedPolicyVersion = optionsRequestedPolicyVersion;
-        this.project = project;
-        this.snapshotId = Objects.requireNonNull(snapshotId, "expected parameter 'snapshotId' to be non-null");
-    }
+    private GetSnapshotIamPolicyArgs() {}
 
-    private GetSnapshotIamPolicyArgs() {
-        this.optionsRequestedPolicyVersion = null;
-        this.project = null;
-        this.snapshotId = null;
+    private GetSnapshotIamPolicyArgs(GetSnapshotIamPolicyArgs $) {
+        this.optionsRequestedPolicyVersion = $.optionsRequestedPolicyVersion;
+        this.project = $.project;
+        this.snapshotId = $.snapshotId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetSnapshotIamPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String optionsRequestedPolicyVersion;
-        private @Nullable String project;
-        private String snapshotId;
+        private GetSnapshotIamPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetSnapshotIamPolicyArgs();
         }
 
         public Builder(GetSnapshotIamPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.optionsRequestedPolicyVersion = defaults.optionsRequestedPolicyVersion;
-    	      this.project = defaults.project;
-    	      this.snapshotId = defaults.snapshotId;
+            $ = new GetSnapshotIamPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder optionsRequestedPolicyVersion(@Nullable String optionsRequestedPolicyVersion) {
-            this.optionsRequestedPolicyVersion = optionsRequestedPolicyVersion;
+            $.optionsRequestedPolicyVersion = optionsRequestedPolicyVersion;
             return this;
         }
+
         public Builder project(@Nullable String project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
+
         public Builder snapshotId(String snapshotId) {
-            this.snapshotId = Objects.requireNonNull(snapshotId);
+            $.snapshotId = snapshotId;
             return this;
-        }        public GetSnapshotIamPolicyArgs build() {
-            return new GetSnapshotIamPolicyArgs(optionsRequestedPolicyVersion, project, snapshotId);
+        }
+
+        public GetSnapshotIamPolicyArgs build() {
+            $.snapshotId = Objects.requireNonNull($.snapshotId, "expected parameter 'snapshotId' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,9 +5,9 @@ package com.pulumi.awsnative.rekognition;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -16,49 +16,48 @@ public final class ProjectArgs extends com.pulumi.resources.ResourceArgs {
     public static final ProjectArgs Empty = new ProjectArgs();
 
     @Import(name="projectName")
-      private final @Nullable Output<String> projectName;
+    private @Nullable Output<String> projectName;
 
-    public Output<String> projectName() {
-        return this.projectName == null ? Codegen.empty() : this.projectName;
+    public Optional<Output<String>> projectName() {
+        return Optional.ofNullable(this.projectName);
     }
 
-    public ProjectArgs(@Nullable Output<String> projectName) {
-        this.projectName = projectName;
-    }
+    private ProjectArgs() {}
 
-    private ProjectArgs() {
-        this.projectName = Codegen.empty();
+    private ProjectArgs(ProjectArgs $) {
+        this.projectName = $.projectName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ProjectArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> projectName;
+        private ProjectArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ProjectArgs();
         }
 
         public Builder(ProjectArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.projectName = defaults.projectName;
+            $ = new ProjectArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder projectName(@Nullable Output<String> projectName) {
-            this.projectName = projectName;
+            $.projectName = projectName;
             return this;
         }
-        public Builder projectName(@Nullable String projectName) {
-            this.projectName = Codegen.ofNullable(projectName);
-            return this;
-        }        public ProjectArgs build() {
-            return new ProjectArgs(projectName);
+
+        public Builder projectName(String projectName) {
+            return projectName(Output.of(projectName));
+        }
+
+        public ProjectArgs build() {
+            return $;
         }
     }
+
 }

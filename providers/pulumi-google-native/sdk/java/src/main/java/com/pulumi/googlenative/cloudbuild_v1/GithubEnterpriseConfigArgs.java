@@ -5,10 +5,10 @@ package com.pulumi.googlenative.cloudbuild_v1;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.cloudbuild_v1.inputs.GitHubEnterpriseSecretsArgs;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,7 +21,7 @@ public final class GithubEnterpriseConfigArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="appId", required=true)
-      private final Output<String> appId;
+    private Output<String> appId;
 
     public Output<String> appId() {
         return this.appId;
@@ -32,17 +32,17 @@ public final class GithubEnterpriseConfigArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="displayName")
-      private final @Nullable Output<String> displayName;
+    private @Nullable Output<String> displayName;
 
-    public Output<String> displayName() {
-        return this.displayName == null ? Codegen.empty() : this.displayName;
+    public Optional<Output<String>> displayName() {
+        return Optional.ofNullable(this.displayName);
     }
 
     @Import(name="gheConfigId")
-      private final @Nullable Output<String> gheConfigId;
+    private @Nullable Output<String> gheConfigId;
 
-    public Output<String> gheConfigId() {
-        return this.gheConfigId == null ? Codegen.empty() : this.gheConfigId;
+    public Optional<Output<String>> gheConfigId() {
+        return Optional.ofNullable(this.gheConfigId);
     }
 
     /**
@@ -50,17 +50,17 @@ public final class GithubEnterpriseConfigArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="hostUrl")
-      private final @Nullable Output<String> hostUrl;
+    private @Nullable Output<String> hostUrl;
 
-    public Output<String> hostUrl() {
-        return this.hostUrl == null ? Codegen.empty() : this.hostUrl;
+    public Optional<Output<String>> hostUrl() {
+        return Optional.ofNullable(this.hostUrl);
     }
 
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -68,10 +68,10 @@ public final class GithubEnterpriseConfigArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -79,24 +79,24 @@ public final class GithubEnterpriseConfigArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="peeredNetwork")
-      private final @Nullable Output<String> peeredNetwork;
+    private @Nullable Output<String> peeredNetwork;
 
-    public Output<String> peeredNetwork() {
-        return this.peeredNetwork == null ? Codegen.empty() : this.peeredNetwork;
+    public Optional<Output<String>> peeredNetwork() {
+        return Optional.ofNullable(this.peeredNetwork);
     }
 
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     @Import(name="projectId")
-      private final @Nullable Output<String> projectId;
+    private @Nullable Output<String> projectId;
 
-    public Output<String> projectId() {
-        return this.projectId == null ? Codegen.empty() : this.projectId;
+    public Optional<Output<String>> projectId() {
+        return Optional.ofNullable(this.projectId);
     }
 
     /**
@@ -104,10 +104,10 @@ public final class GithubEnterpriseConfigArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="secrets")
-      private final @Nullable Output<GitHubEnterpriseSecretsArgs> secrets;
+    private @Nullable Output<GitHubEnterpriseSecretsArgs> secrets;
 
-    public Output<GitHubEnterpriseSecretsArgs> secrets() {
-        return this.secrets == null ? Codegen.empty() : this.secrets;
+    public Optional<Output<GitHubEnterpriseSecretsArgs>> secrets() {
+        return Optional.ofNullable(this.secrets);
     }
 
     /**
@@ -115,10 +115,10 @@ public final class GithubEnterpriseConfigArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="sslCa")
-      private final @Nullable Output<String> sslCa;
+    private @Nullable Output<String> sslCa;
 
-    public Output<String> sslCa() {
-        return this.sslCa == null ? Codegen.empty() : this.sslCa;
+    public Optional<Output<String>> sslCa() {
+        return Optional.ofNullable(this.sslCa);
     }
 
     /**
@@ -126,193 +126,159 @@ public final class GithubEnterpriseConfigArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="webhookKey")
-      private final @Nullable Output<String> webhookKey;
+    private @Nullable Output<String> webhookKey;
 
-    public Output<String> webhookKey() {
-        return this.webhookKey == null ? Codegen.empty() : this.webhookKey;
+    public Optional<Output<String>> webhookKey() {
+        return Optional.ofNullable(this.webhookKey);
     }
 
-    public GithubEnterpriseConfigArgs(
-        Output<String> appId,
-        @Nullable Output<String> displayName,
-        @Nullable Output<String> gheConfigId,
-        @Nullable Output<String> hostUrl,
-        @Nullable Output<String> location,
-        @Nullable Output<String> name,
-        @Nullable Output<String> peeredNetwork,
-        @Nullable Output<String> project,
-        @Nullable Output<String> projectId,
-        @Nullable Output<GitHubEnterpriseSecretsArgs> secrets,
-        @Nullable Output<String> sslCa,
-        @Nullable Output<String> webhookKey) {
-        this.appId = Objects.requireNonNull(appId, "expected parameter 'appId' to be non-null");
-        this.displayName = displayName;
-        this.gheConfigId = gheConfigId;
-        this.hostUrl = hostUrl;
-        this.location = location;
-        this.name = name;
-        this.peeredNetwork = peeredNetwork;
-        this.project = project;
-        this.projectId = projectId;
-        this.secrets = secrets;
-        this.sslCa = sslCa;
-        this.webhookKey = webhookKey;
-    }
+    private GithubEnterpriseConfigArgs() {}
 
-    private GithubEnterpriseConfigArgs() {
-        this.appId = Codegen.empty();
-        this.displayName = Codegen.empty();
-        this.gheConfigId = Codegen.empty();
-        this.hostUrl = Codegen.empty();
-        this.location = Codegen.empty();
-        this.name = Codegen.empty();
-        this.peeredNetwork = Codegen.empty();
-        this.project = Codegen.empty();
-        this.projectId = Codegen.empty();
-        this.secrets = Codegen.empty();
-        this.sslCa = Codegen.empty();
-        this.webhookKey = Codegen.empty();
+    private GithubEnterpriseConfigArgs(GithubEnterpriseConfigArgs $) {
+        this.appId = $.appId;
+        this.displayName = $.displayName;
+        this.gheConfigId = $.gheConfigId;
+        this.hostUrl = $.hostUrl;
+        this.location = $.location;
+        this.name = $.name;
+        this.peeredNetwork = $.peeredNetwork;
+        this.project = $.project;
+        this.projectId = $.projectId;
+        this.secrets = $.secrets;
+        this.sslCa = $.sslCa;
+        this.webhookKey = $.webhookKey;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GithubEnterpriseConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> appId;
-        private @Nullable Output<String> displayName;
-        private @Nullable Output<String> gheConfigId;
-        private @Nullable Output<String> hostUrl;
-        private @Nullable Output<String> location;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> peeredNetwork;
-        private @Nullable Output<String> project;
-        private @Nullable Output<String> projectId;
-        private @Nullable Output<GitHubEnterpriseSecretsArgs> secrets;
-        private @Nullable Output<String> sslCa;
-        private @Nullable Output<String> webhookKey;
+        private GithubEnterpriseConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GithubEnterpriseConfigArgs();
         }
 
         public Builder(GithubEnterpriseConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.appId = defaults.appId;
-    	      this.displayName = defaults.displayName;
-    	      this.gheConfigId = defaults.gheConfigId;
-    	      this.hostUrl = defaults.hostUrl;
-    	      this.location = defaults.location;
-    	      this.name = defaults.name;
-    	      this.peeredNetwork = defaults.peeredNetwork;
-    	      this.project = defaults.project;
-    	      this.projectId = defaults.projectId;
-    	      this.secrets = defaults.secrets;
-    	      this.sslCa = defaults.sslCa;
-    	      this.webhookKey = defaults.webhookKey;
+            $ = new GithubEnterpriseConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder appId(Output<String> appId) {
-            this.appId = Objects.requireNonNull(appId);
+            $.appId = appId;
             return this;
         }
+
         public Builder appId(String appId) {
-            this.appId = Output.of(Objects.requireNonNull(appId));
-            return this;
+            return appId(Output.of(appId));
         }
+
         public Builder displayName(@Nullable Output<String> displayName) {
-            this.displayName = displayName;
+            $.displayName = displayName;
             return this;
         }
-        public Builder displayName(@Nullable String displayName) {
-            this.displayName = Codegen.ofNullable(displayName);
-            return this;
+
+        public Builder displayName(String displayName) {
+            return displayName(Output.of(displayName));
         }
+
         public Builder gheConfigId(@Nullable Output<String> gheConfigId) {
-            this.gheConfigId = gheConfigId;
+            $.gheConfigId = gheConfigId;
             return this;
         }
-        public Builder gheConfigId(@Nullable String gheConfigId) {
-            this.gheConfigId = Codegen.ofNullable(gheConfigId);
-            return this;
+
+        public Builder gheConfigId(String gheConfigId) {
+            return gheConfigId(Output.of(gheConfigId));
         }
+
         public Builder hostUrl(@Nullable Output<String> hostUrl) {
-            this.hostUrl = hostUrl;
+            $.hostUrl = hostUrl;
             return this;
         }
-        public Builder hostUrl(@Nullable String hostUrl) {
-            this.hostUrl = Codegen.ofNullable(hostUrl);
-            return this;
+
+        public Builder hostUrl(String hostUrl) {
+            return hostUrl(Output.of(hostUrl));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder peeredNetwork(@Nullable Output<String> peeredNetwork) {
-            this.peeredNetwork = peeredNetwork;
+            $.peeredNetwork = peeredNetwork;
             return this;
         }
-        public Builder peeredNetwork(@Nullable String peeredNetwork) {
-            this.peeredNetwork = Codegen.ofNullable(peeredNetwork);
-            return this;
+
+        public Builder peeredNetwork(String peeredNetwork) {
+            return peeredNetwork(Output.of(peeredNetwork));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder projectId(@Nullable Output<String> projectId) {
-            this.projectId = projectId;
+            $.projectId = projectId;
             return this;
         }
-        public Builder projectId(@Nullable String projectId) {
-            this.projectId = Codegen.ofNullable(projectId);
-            return this;
+
+        public Builder projectId(String projectId) {
+            return projectId(Output.of(projectId));
         }
+
         public Builder secrets(@Nullable Output<GitHubEnterpriseSecretsArgs> secrets) {
-            this.secrets = secrets;
+            $.secrets = secrets;
             return this;
         }
-        public Builder secrets(@Nullable GitHubEnterpriseSecretsArgs secrets) {
-            this.secrets = Codegen.ofNullable(secrets);
-            return this;
+
+        public Builder secrets(GitHubEnterpriseSecretsArgs secrets) {
+            return secrets(Output.of(secrets));
         }
+
         public Builder sslCa(@Nullable Output<String> sslCa) {
-            this.sslCa = sslCa;
+            $.sslCa = sslCa;
             return this;
         }
-        public Builder sslCa(@Nullable String sslCa) {
-            this.sslCa = Codegen.ofNullable(sslCa);
-            return this;
+
+        public Builder sslCa(String sslCa) {
+            return sslCa(Output.of(sslCa));
         }
+
         public Builder webhookKey(@Nullable Output<String> webhookKey) {
-            this.webhookKey = webhookKey;
+            $.webhookKey = webhookKey;
             return this;
         }
-        public Builder webhookKey(@Nullable String webhookKey) {
-            this.webhookKey = Codegen.ofNullable(webhookKey);
-            return this;
-        }        public GithubEnterpriseConfigArgs build() {
-            return new GithubEnterpriseConfigArgs(appId, displayName, gheConfigId, hostUrl, location, name, peeredNetwork, project, projectId, secrets, sslCa, webhookKey);
+
+        public Builder webhookKey(String webhookKey) {
+            return webhookKey(Output.of(webhookKey));
+        }
+
+        public GithubEnterpriseConfigArgs build() {
+            $.appId = Objects.requireNonNull($.appId, "expected parameter 'appId' to be non-null");
+            return $;
         }
     }
+
 }

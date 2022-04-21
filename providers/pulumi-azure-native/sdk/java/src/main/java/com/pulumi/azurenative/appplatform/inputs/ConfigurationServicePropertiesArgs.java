@@ -6,8 +6,8 @@ package com.pulumi.azurenative.appplatform.inputs;
 import com.pulumi.azurenative.appplatform.inputs.ConfigurationServiceSettingsArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class ConfigurationServicePropertiesArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="settings")
-      private final @Nullable Output<ConfigurationServiceSettingsArgs> settings;
+    private @Nullable Output<ConfigurationServiceSettingsArgs> settings;
 
-    public Output<ConfigurationServiceSettingsArgs> settings() {
-        return this.settings == null ? Codegen.empty() : this.settings;
+    public Optional<Output<ConfigurationServiceSettingsArgs>> settings() {
+        return Optional.ofNullable(this.settings);
     }
 
-    public ConfigurationServicePropertiesArgs(@Nullable Output<ConfigurationServiceSettingsArgs> settings) {
-        this.settings = settings;
-    }
+    private ConfigurationServicePropertiesArgs() {}
 
-    private ConfigurationServicePropertiesArgs() {
-        this.settings = Codegen.empty();
+    private ConfigurationServicePropertiesArgs(ConfigurationServicePropertiesArgs $) {
+        this.settings = $.settings;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ConfigurationServicePropertiesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<ConfigurationServiceSettingsArgs> settings;
+        private ConfigurationServicePropertiesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ConfigurationServicePropertiesArgs();
         }
 
         public Builder(ConfigurationServicePropertiesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.settings = defaults.settings;
+            $ = new ConfigurationServicePropertiesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder settings(@Nullable Output<ConfigurationServiceSettingsArgs> settings) {
-            this.settings = settings;
+            $.settings = settings;
             return this;
         }
-        public Builder settings(@Nullable ConfigurationServiceSettingsArgs settings) {
-            this.settings = Codegen.ofNullable(settings);
-            return this;
-        }        public ConfigurationServicePropertiesArgs build() {
-            return new ConfigurationServicePropertiesArgs(settings);
+
+        public Builder settings(ConfigurationServiceSettingsArgs settings) {
+            return settings(Output.of(settings));
+        }
+
+        public ConfigurationServicePropertiesArgs build() {
+            return $;
         }
     }
+
 }

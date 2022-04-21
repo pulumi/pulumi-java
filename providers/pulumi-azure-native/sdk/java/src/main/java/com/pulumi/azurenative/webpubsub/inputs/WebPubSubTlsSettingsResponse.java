@@ -24,45 +24,45 @@ public final class WebPubSubTlsSettingsResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="clientCertEnabled")
-      private final @Nullable Boolean clientCertEnabled;
+    private @Nullable Boolean clientCertEnabled;
 
     public Optional<Boolean> clientCertEnabled() {
-        return this.clientCertEnabled == null ? Optional.empty() : Optional.ofNullable(this.clientCertEnabled);
+        return Optional.ofNullable(this.clientCertEnabled);
     }
 
-    public WebPubSubTlsSettingsResponse(@Nullable Boolean clientCertEnabled) {
-        this.clientCertEnabled = Codegen.booleanProp("clientCertEnabled").arg(clientCertEnabled).def(true).getNullable();
-    }
+    private WebPubSubTlsSettingsResponse() {}
 
-    private WebPubSubTlsSettingsResponse() {
-        this.clientCertEnabled = null;
+    private WebPubSubTlsSettingsResponse(WebPubSubTlsSettingsResponse $) {
+        this.clientCertEnabled = $.clientCertEnabled;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WebPubSubTlsSettingsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Boolean clientCertEnabled;
+        private WebPubSubTlsSettingsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new WebPubSubTlsSettingsResponse();
         }
 
         public Builder(WebPubSubTlsSettingsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.clientCertEnabled = defaults.clientCertEnabled;
+            $ = new WebPubSubTlsSettingsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder clientCertEnabled(@Nullable Boolean clientCertEnabled) {
-            this.clientCertEnabled = clientCertEnabled;
+            $.clientCertEnabled = clientCertEnabled;
             return this;
-        }        public WebPubSubTlsSettingsResponse build() {
-            return new WebPubSubTlsSettingsResponse(clientCertEnabled);
+        }
+
+        public WebPubSubTlsSettingsResponse build() {
+            $.clientCertEnabled = Codegen.booleanProp("clientCertEnabled").arg($.clientCertEnabled).def(true).getNullable();
+            return $;
         }
     }
+
 }

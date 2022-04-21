@@ -5,10 +5,10 @@ package com.pulumi.aws.securityhub.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class StandardsControlState extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="controlId")
-      private final @Nullable Output<String> controlId;
+    private @Nullable Output<String> controlId;
 
-    public Output<String> controlId() {
-        return this.controlId == null ? Codegen.empty() : this.controlId;
+    public Optional<Output<String>> controlId() {
+        return Optional.ofNullable(this.controlId);
     }
 
     /**
@@ -32,10 +32,10 @@ public final class StandardsControlState extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="controlStatus")
-      private final @Nullable Output<String> controlStatus;
+    private @Nullable Output<String> controlStatus;
 
-    public Output<String> controlStatus() {
-        return this.controlStatus == null ? Codegen.empty() : this.controlStatus;
+    public Optional<Output<String>> controlStatus() {
+        return Optional.ofNullable(this.controlStatus);
     }
 
     /**
@@ -43,10 +43,10 @@ public final class StandardsControlState extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="controlStatusUpdatedAt")
-      private final @Nullable Output<String> controlStatusUpdatedAt;
+    private @Nullable Output<String> controlStatusUpdatedAt;
 
-    public Output<String> controlStatusUpdatedAt() {
-        return this.controlStatusUpdatedAt == null ? Codegen.empty() : this.controlStatusUpdatedAt;
+    public Optional<Output<String>> controlStatusUpdatedAt() {
+        return Optional.ofNullable(this.controlStatusUpdatedAt);
     }
 
     /**
@@ -54,10 +54,10 @@ public final class StandardsControlState extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -65,10 +65,10 @@ public final class StandardsControlState extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="disabledReason")
-      private final @Nullable Output<String> disabledReason;
+    private @Nullable Output<String> disabledReason;
 
-    public Output<String> disabledReason() {
-        return this.disabledReason == null ? Codegen.empty() : this.disabledReason;
+    public Optional<Output<String>> disabledReason() {
+        return Optional.ofNullable(this.disabledReason);
     }
 
     /**
@@ -76,10 +76,10 @@ public final class StandardsControlState extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="relatedRequirements")
-      private final @Nullable Output<List<String>> relatedRequirements;
+    private @Nullable Output<List<String>> relatedRequirements;
 
-    public Output<List<String>> relatedRequirements() {
-        return this.relatedRequirements == null ? Codegen.empty() : this.relatedRequirements;
+    public Optional<Output<List<String>>> relatedRequirements() {
+        return Optional.ofNullable(this.relatedRequirements);
     }
 
     /**
@@ -87,10 +87,10 @@ public final class StandardsControlState extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="remediationUrl")
-      private final @Nullable Output<String> remediationUrl;
+    private @Nullable Output<String> remediationUrl;
 
-    public Output<String> remediationUrl() {
-        return this.remediationUrl == null ? Codegen.empty() : this.remediationUrl;
+    public Optional<Output<String>> remediationUrl() {
+        return Optional.ofNullable(this.remediationUrl);
     }
 
     /**
@@ -98,10 +98,10 @@ public final class StandardsControlState extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="severityRating")
-      private final @Nullable Output<String> severityRating;
+    private @Nullable Output<String> severityRating;
 
-    public Output<String> severityRating() {
-        return this.severityRating == null ? Codegen.empty() : this.severityRating;
+    public Optional<Output<String>> severityRating() {
+        return Optional.ofNullable(this.severityRating);
     }
 
     /**
@@ -109,10 +109,10 @@ public final class StandardsControlState extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="standardsControlArn")
-      private final @Nullable Output<String> standardsControlArn;
+    private @Nullable Output<String> standardsControlArn;
 
-    public Output<String> standardsControlArn() {
-        return this.standardsControlArn == null ? Codegen.empty() : this.standardsControlArn;
+    public Optional<Output<String>> standardsControlArn() {
+        return Optional.ofNullable(this.standardsControlArn);
     }
 
     /**
@@ -120,170 +120,142 @@ public final class StandardsControlState extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="title")
-      private final @Nullable Output<String> title;
+    private @Nullable Output<String> title;
 
-    public Output<String> title() {
-        return this.title == null ? Codegen.empty() : this.title;
+    public Optional<Output<String>> title() {
+        return Optional.ofNullable(this.title);
     }
 
-    public StandardsControlState(
-        @Nullable Output<String> controlId,
-        @Nullable Output<String> controlStatus,
-        @Nullable Output<String> controlStatusUpdatedAt,
-        @Nullable Output<String> description,
-        @Nullable Output<String> disabledReason,
-        @Nullable Output<List<String>> relatedRequirements,
-        @Nullable Output<String> remediationUrl,
-        @Nullable Output<String> severityRating,
-        @Nullable Output<String> standardsControlArn,
-        @Nullable Output<String> title) {
-        this.controlId = controlId;
-        this.controlStatus = controlStatus;
-        this.controlStatusUpdatedAt = controlStatusUpdatedAt;
-        this.description = description;
-        this.disabledReason = disabledReason;
-        this.relatedRequirements = relatedRequirements;
-        this.remediationUrl = remediationUrl;
-        this.severityRating = severityRating;
-        this.standardsControlArn = standardsControlArn;
-        this.title = title;
-    }
+    private StandardsControlState() {}
 
-    private StandardsControlState() {
-        this.controlId = Codegen.empty();
-        this.controlStatus = Codegen.empty();
-        this.controlStatusUpdatedAt = Codegen.empty();
-        this.description = Codegen.empty();
-        this.disabledReason = Codegen.empty();
-        this.relatedRequirements = Codegen.empty();
-        this.remediationUrl = Codegen.empty();
-        this.severityRating = Codegen.empty();
-        this.standardsControlArn = Codegen.empty();
-        this.title = Codegen.empty();
+    private StandardsControlState(StandardsControlState $) {
+        this.controlId = $.controlId;
+        this.controlStatus = $.controlStatus;
+        this.controlStatusUpdatedAt = $.controlStatusUpdatedAt;
+        this.description = $.description;
+        this.disabledReason = $.disabledReason;
+        this.relatedRequirements = $.relatedRequirements;
+        this.remediationUrl = $.remediationUrl;
+        this.severityRating = $.severityRating;
+        this.standardsControlArn = $.standardsControlArn;
+        this.title = $.title;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(StandardsControlState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> controlId;
-        private @Nullable Output<String> controlStatus;
-        private @Nullable Output<String> controlStatusUpdatedAt;
-        private @Nullable Output<String> description;
-        private @Nullable Output<String> disabledReason;
-        private @Nullable Output<List<String>> relatedRequirements;
-        private @Nullable Output<String> remediationUrl;
-        private @Nullable Output<String> severityRating;
-        private @Nullable Output<String> standardsControlArn;
-        private @Nullable Output<String> title;
+        private StandardsControlState $;
 
         public Builder() {
-    	      // Empty
+            $ = new StandardsControlState();
         }
 
         public Builder(StandardsControlState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.controlId = defaults.controlId;
-    	      this.controlStatus = defaults.controlStatus;
-    	      this.controlStatusUpdatedAt = defaults.controlStatusUpdatedAt;
-    	      this.description = defaults.description;
-    	      this.disabledReason = defaults.disabledReason;
-    	      this.relatedRequirements = defaults.relatedRequirements;
-    	      this.remediationUrl = defaults.remediationUrl;
-    	      this.severityRating = defaults.severityRating;
-    	      this.standardsControlArn = defaults.standardsControlArn;
-    	      this.title = defaults.title;
+            $ = new StandardsControlState(Objects.requireNonNull(defaults));
         }
 
         public Builder controlId(@Nullable Output<String> controlId) {
-            this.controlId = controlId;
+            $.controlId = controlId;
             return this;
         }
-        public Builder controlId(@Nullable String controlId) {
-            this.controlId = Codegen.ofNullable(controlId);
-            return this;
+
+        public Builder controlId(String controlId) {
+            return controlId(Output.of(controlId));
         }
+
         public Builder controlStatus(@Nullable Output<String> controlStatus) {
-            this.controlStatus = controlStatus;
+            $.controlStatus = controlStatus;
             return this;
         }
-        public Builder controlStatus(@Nullable String controlStatus) {
-            this.controlStatus = Codegen.ofNullable(controlStatus);
-            return this;
+
+        public Builder controlStatus(String controlStatus) {
+            return controlStatus(Output.of(controlStatus));
         }
+
         public Builder controlStatusUpdatedAt(@Nullable Output<String> controlStatusUpdatedAt) {
-            this.controlStatusUpdatedAt = controlStatusUpdatedAt;
+            $.controlStatusUpdatedAt = controlStatusUpdatedAt;
             return this;
         }
-        public Builder controlStatusUpdatedAt(@Nullable String controlStatusUpdatedAt) {
-            this.controlStatusUpdatedAt = Codegen.ofNullable(controlStatusUpdatedAt);
-            return this;
+
+        public Builder controlStatusUpdatedAt(String controlStatusUpdatedAt) {
+            return controlStatusUpdatedAt(Output.of(controlStatusUpdatedAt));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder disabledReason(@Nullable Output<String> disabledReason) {
-            this.disabledReason = disabledReason;
+            $.disabledReason = disabledReason;
             return this;
         }
-        public Builder disabledReason(@Nullable String disabledReason) {
-            this.disabledReason = Codegen.ofNullable(disabledReason);
-            return this;
+
+        public Builder disabledReason(String disabledReason) {
+            return disabledReason(Output.of(disabledReason));
         }
+
         public Builder relatedRequirements(@Nullable Output<List<String>> relatedRequirements) {
-            this.relatedRequirements = relatedRequirements;
+            $.relatedRequirements = relatedRequirements;
             return this;
         }
-        public Builder relatedRequirements(@Nullable List<String> relatedRequirements) {
-            this.relatedRequirements = Codegen.ofNullable(relatedRequirements);
-            return this;
+
+        public Builder relatedRequirements(List<String> relatedRequirements) {
+            return relatedRequirements(Output.of(relatedRequirements));
         }
+
         public Builder relatedRequirements(String... relatedRequirements) {
             return relatedRequirements(List.of(relatedRequirements));
         }
+
         public Builder remediationUrl(@Nullable Output<String> remediationUrl) {
-            this.remediationUrl = remediationUrl;
+            $.remediationUrl = remediationUrl;
             return this;
         }
-        public Builder remediationUrl(@Nullable String remediationUrl) {
-            this.remediationUrl = Codegen.ofNullable(remediationUrl);
-            return this;
+
+        public Builder remediationUrl(String remediationUrl) {
+            return remediationUrl(Output.of(remediationUrl));
         }
+
         public Builder severityRating(@Nullable Output<String> severityRating) {
-            this.severityRating = severityRating;
+            $.severityRating = severityRating;
             return this;
         }
-        public Builder severityRating(@Nullable String severityRating) {
-            this.severityRating = Codegen.ofNullable(severityRating);
-            return this;
+
+        public Builder severityRating(String severityRating) {
+            return severityRating(Output.of(severityRating));
         }
+
         public Builder standardsControlArn(@Nullable Output<String> standardsControlArn) {
-            this.standardsControlArn = standardsControlArn;
+            $.standardsControlArn = standardsControlArn;
             return this;
         }
-        public Builder standardsControlArn(@Nullable String standardsControlArn) {
-            this.standardsControlArn = Codegen.ofNullable(standardsControlArn);
-            return this;
+
+        public Builder standardsControlArn(String standardsControlArn) {
+            return standardsControlArn(Output.of(standardsControlArn));
         }
+
         public Builder title(@Nullable Output<String> title) {
-            this.title = title;
+            $.title = title;
             return this;
         }
-        public Builder title(@Nullable String title) {
-            this.title = Codegen.ofNullable(title);
-            return this;
-        }        public StandardsControlState build() {
-            return new StandardsControlState(controlId, controlStatus, controlStatusUpdatedAt, description, disabledReason, relatedRequirements, remediationUrl, severityRating, standardsControlArn, title);
+
+        public Builder title(String title) {
+            return title(Output.of(title));
+        }
+
+        public StandardsControlState build() {
+            return $;
         }
     }
+
 }

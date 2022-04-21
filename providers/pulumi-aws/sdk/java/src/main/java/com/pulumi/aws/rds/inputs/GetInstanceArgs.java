@@ -20,62 +20,58 @@ public final class GetInstanceArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="dbInstanceIdentifier", required=true)
-      private final String dbInstanceIdentifier;
+    private String dbInstanceIdentifier;
 
     public String dbInstanceIdentifier() {
         return this.dbInstanceIdentifier;
     }
 
     @Import(name="tags")
-      private final @Nullable Map<String,String> tags;
+    private @Nullable Map<String,String> tags;
 
-    public Map<String,String> tags() {
-        return this.tags == null ? Map.of() : this.tags;
+    public Optional<Map<String,String>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public GetInstanceArgs(
-        String dbInstanceIdentifier,
-        @Nullable Map<String,String> tags) {
-        this.dbInstanceIdentifier = Objects.requireNonNull(dbInstanceIdentifier, "expected parameter 'dbInstanceIdentifier' to be non-null");
-        this.tags = tags;
-    }
+    private GetInstanceArgs() {}
 
-    private GetInstanceArgs() {
-        this.dbInstanceIdentifier = null;
-        this.tags = Map.of();
+    private GetInstanceArgs(GetInstanceArgs $) {
+        this.dbInstanceIdentifier = $.dbInstanceIdentifier;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetInstanceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String dbInstanceIdentifier;
-        private @Nullable Map<String,String> tags;
+        private GetInstanceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetInstanceArgs();
         }
 
         public Builder(GetInstanceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dbInstanceIdentifier = defaults.dbInstanceIdentifier;
-    	      this.tags = defaults.tags;
+            $ = new GetInstanceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder dbInstanceIdentifier(String dbInstanceIdentifier) {
-            this.dbInstanceIdentifier = Objects.requireNonNull(dbInstanceIdentifier);
+            $.dbInstanceIdentifier = dbInstanceIdentifier;
             return this;
         }
+
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
-        }        public GetInstanceArgs build() {
-            return new GetInstanceArgs(dbInstanceIdentifier, tags);
+        }
+
+        public GetInstanceArgs build() {
+            $.dbInstanceIdentifier = Objects.requireNonNull($.dbInstanceIdentifier, "expected parameter 'dbInstanceIdentifier' to be non-null");
+            return $;
         }
     }
+
 }

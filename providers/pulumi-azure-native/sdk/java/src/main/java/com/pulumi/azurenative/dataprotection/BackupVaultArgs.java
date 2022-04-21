@@ -6,10 +6,10 @@ package com.pulumi.azurenative.dataprotection;
 import com.pulumi.azurenative.dataprotection.inputs.DppIdentityDetailsArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class BackupVaultArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="eTag")
-      private final @Nullable Output<String> eTag;
+    private @Nullable Output<String> eTag;
 
-    public Output<String> eTag() {
-        return this.eTag == null ? Codegen.empty() : this.eTag;
+    public Optional<Output<String>> eTag() {
+        return Optional.ofNullable(this.eTag);
     }
 
     /**
@@ -33,10 +33,10 @@ public final class BackupVaultArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="identity")
-      private final @Nullable Output<DppIdentityDetailsArgs> identity;
+    private @Nullable Output<DppIdentityDetailsArgs> identity;
 
-    public Output<DppIdentityDetailsArgs> identity() {
-        return this.identity == null ? Codegen.empty() : this.identity;
+    public Optional<Output<DppIdentityDetailsArgs>> identity() {
+        return Optional.ofNullable(this.identity);
     }
 
     /**
@@ -44,10 +44,10 @@ public final class BackupVaultArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -55,7 +55,7 @@ public final class BackupVaultArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="properties", required=true)
-      private final Output<com.pulumi.azurenative.dataprotection.inputs.BackupVaultArgs> properties;
+    private Output<com.pulumi.azurenative.dataprotection.inputs.BackupVaultArgs> properties;
 
     public Output<com.pulumi.azurenative.dataprotection.inputs.BackupVaultArgs> properties() {
         return this.properties;
@@ -66,7 +66,7 @@ public final class BackupVaultArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -77,10 +77,10 @@ public final class BackupVaultArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -88,128 +88,110 @@ public final class BackupVaultArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="vaultName")
-      private final @Nullable Output<String> vaultName;
+    private @Nullable Output<String> vaultName;
 
-    public Output<String> vaultName() {
-        return this.vaultName == null ? Codegen.empty() : this.vaultName;
+    public Optional<Output<String>> vaultName() {
+        return Optional.ofNullable(this.vaultName);
     }
 
-    public BackupVaultArgs(
-        @Nullable Output<String> eTag,
-        @Nullable Output<DppIdentityDetailsArgs> identity,
-        @Nullable Output<String> location,
-        Output<com.pulumi.azurenative.dataprotection.inputs.BackupVaultArgs> properties,
-        Output<String> resourceGroupName,
-        @Nullable Output<Map<String,String>> tags,
-        @Nullable Output<String> vaultName) {
-        this.eTag = eTag;
-        this.identity = identity;
-        this.location = location;
-        this.properties = Objects.requireNonNull(properties, "expected parameter 'properties' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.tags = tags;
-        this.vaultName = vaultName;
-    }
+    private BackupVaultArgs() {}
 
-    private BackupVaultArgs() {
-        this.eTag = Codegen.empty();
-        this.identity = Codegen.empty();
-        this.location = Codegen.empty();
-        this.properties = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.vaultName = Codegen.empty();
+    private BackupVaultArgs(BackupVaultArgs $) {
+        this.eTag = $.eTag;
+        this.identity = $.identity;
+        this.location = $.location;
+        this.properties = $.properties;
+        this.resourceGroupName = $.resourceGroupName;
+        this.tags = $.tags;
+        this.vaultName = $.vaultName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BackupVaultArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> eTag;
-        private @Nullable Output<DppIdentityDetailsArgs> identity;
-        private @Nullable Output<String> location;
-        private Output<com.pulumi.azurenative.dataprotection.inputs.BackupVaultArgs> properties;
-        private Output<String> resourceGroupName;
-        private @Nullable Output<Map<String,String>> tags;
-        private @Nullable Output<String> vaultName;
+        private BackupVaultArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new BackupVaultArgs();
         }
 
         public Builder(BackupVaultArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.eTag = defaults.eTag;
-    	      this.identity = defaults.identity;
-    	      this.location = defaults.location;
-    	      this.properties = defaults.properties;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.tags = defaults.tags;
-    	      this.vaultName = defaults.vaultName;
+            $ = new BackupVaultArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder eTag(@Nullable Output<String> eTag) {
-            this.eTag = eTag;
+            $.eTag = eTag;
             return this;
         }
-        public Builder eTag(@Nullable String eTag) {
-            this.eTag = Codegen.ofNullable(eTag);
-            return this;
+
+        public Builder eTag(String eTag) {
+            return eTag(Output.of(eTag));
         }
+
         public Builder identity(@Nullable Output<DppIdentityDetailsArgs> identity) {
-            this.identity = identity;
+            $.identity = identity;
             return this;
         }
-        public Builder identity(@Nullable DppIdentityDetailsArgs identity) {
-            this.identity = Codegen.ofNullable(identity);
-            return this;
+
+        public Builder identity(DppIdentityDetailsArgs identity) {
+            return identity(Output.of(identity));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder properties(Output<com.pulumi.azurenative.dataprotection.inputs.BackupVaultArgs> properties) {
-            this.properties = Objects.requireNonNull(properties);
+            $.properties = properties;
             return this;
         }
+
         public Builder properties(com.pulumi.azurenative.dataprotection.inputs.BackupVaultArgs properties) {
-            this.properties = Output.of(Objects.requireNonNull(properties));
-            return this;
+            return properties(Output.of(properties));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder vaultName(@Nullable Output<String> vaultName) {
-            this.vaultName = vaultName;
+            $.vaultName = vaultName;
             return this;
         }
-        public Builder vaultName(@Nullable String vaultName) {
-            this.vaultName = Codegen.ofNullable(vaultName);
-            return this;
-        }        public BackupVaultArgs build() {
-            return new BackupVaultArgs(eTag, identity, location, properties, resourceGroupName, tags, vaultName);
+
+        public Builder vaultName(String vaultName) {
+            return vaultName(Output.of(vaultName));
+        }
+
+        public BackupVaultArgs build() {
+            $.properties = Objects.requireNonNull($.properties, "expected parameter 'properties' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

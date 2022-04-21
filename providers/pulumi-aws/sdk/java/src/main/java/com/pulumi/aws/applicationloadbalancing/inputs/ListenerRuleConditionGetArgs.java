@@ -11,9 +11,9 @@ import com.pulumi.aws.applicationloadbalancing.inputs.ListenerRuleConditionQuery
 import com.pulumi.aws.applicationloadbalancing.inputs.ListenerRuleConditionSourceIpGetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class ListenerRuleConditionGetArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="hostHeader")
-      private final @Nullable Output<ListenerRuleConditionHostHeaderGetArgs> hostHeader;
+    private @Nullable Output<ListenerRuleConditionHostHeaderGetArgs> hostHeader;
 
-    public Output<ListenerRuleConditionHostHeaderGetArgs> hostHeader() {
-        return this.hostHeader == null ? Codegen.empty() : this.hostHeader;
+    public Optional<Output<ListenerRuleConditionHostHeaderGetArgs>> hostHeader() {
+        return Optional.ofNullable(this.hostHeader);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class ListenerRuleConditionGetArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="httpHeader")
-      private final @Nullable Output<ListenerRuleConditionHttpHeaderGetArgs> httpHeader;
+    private @Nullable Output<ListenerRuleConditionHttpHeaderGetArgs> httpHeader;
 
-    public Output<ListenerRuleConditionHttpHeaderGetArgs> httpHeader() {
-        return this.httpHeader == null ? Codegen.empty() : this.httpHeader;
+    public Optional<Output<ListenerRuleConditionHttpHeaderGetArgs>> httpHeader() {
+        return Optional.ofNullable(this.httpHeader);
     }
 
     /**
@@ -48,10 +48,10 @@ public final class ListenerRuleConditionGetArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="httpRequestMethod")
-      private final @Nullable Output<ListenerRuleConditionHttpRequestMethodGetArgs> httpRequestMethod;
+    private @Nullable Output<ListenerRuleConditionHttpRequestMethodGetArgs> httpRequestMethod;
 
-    public Output<ListenerRuleConditionHttpRequestMethodGetArgs> httpRequestMethod() {
-        return this.httpRequestMethod == null ? Codegen.empty() : this.httpRequestMethod;
+    public Optional<Output<ListenerRuleConditionHttpRequestMethodGetArgs>> httpRequestMethod() {
+        return Optional.ofNullable(this.httpRequestMethod);
     }
 
     /**
@@ -59,10 +59,10 @@ public final class ListenerRuleConditionGetArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="pathPattern")
-      private final @Nullable Output<ListenerRuleConditionPathPatternGetArgs> pathPattern;
+    private @Nullable Output<ListenerRuleConditionPathPatternGetArgs> pathPattern;
 
-    public Output<ListenerRuleConditionPathPatternGetArgs> pathPattern() {
-        return this.pathPattern == null ? Codegen.empty() : this.pathPattern;
+    public Optional<Output<ListenerRuleConditionPathPatternGetArgs>> pathPattern() {
+        return Optional.ofNullable(this.pathPattern);
     }
 
     /**
@@ -70,10 +70,10 @@ public final class ListenerRuleConditionGetArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="queryStrings")
-      private final @Nullable Output<List<ListenerRuleConditionQueryStringGetArgs>> queryStrings;
+    private @Nullable Output<List<ListenerRuleConditionQueryStringGetArgs>> queryStrings;
 
-    public Output<List<ListenerRuleConditionQueryStringGetArgs>> queryStrings() {
-        return this.queryStrings == null ? Codegen.empty() : this.queryStrings;
+    public Optional<Output<List<ListenerRuleConditionQueryStringGetArgs>>> queryStrings() {
+        return Optional.ofNullable(this.queryStrings);
     }
 
     /**
@@ -81,118 +81,102 @@ public final class ListenerRuleConditionGetArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="sourceIp")
-      private final @Nullable Output<ListenerRuleConditionSourceIpGetArgs> sourceIp;
+    private @Nullable Output<ListenerRuleConditionSourceIpGetArgs> sourceIp;
 
-    public Output<ListenerRuleConditionSourceIpGetArgs> sourceIp() {
-        return this.sourceIp == null ? Codegen.empty() : this.sourceIp;
+    public Optional<Output<ListenerRuleConditionSourceIpGetArgs>> sourceIp() {
+        return Optional.ofNullable(this.sourceIp);
     }
 
-    public ListenerRuleConditionGetArgs(
-        @Nullable Output<ListenerRuleConditionHostHeaderGetArgs> hostHeader,
-        @Nullable Output<ListenerRuleConditionHttpHeaderGetArgs> httpHeader,
-        @Nullable Output<ListenerRuleConditionHttpRequestMethodGetArgs> httpRequestMethod,
-        @Nullable Output<ListenerRuleConditionPathPatternGetArgs> pathPattern,
-        @Nullable Output<List<ListenerRuleConditionQueryStringGetArgs>> queryStrings,
-        @Nullable Output<ListenerRuleConditionSourceIpGetArgs> sourceIp) {
-        this.hostHeader = hostHeader;
-        this.httpHeader = httpHeader;
-        this.httpRequestMethod = httpRequestMethod;
-        this.pathPattern = pathPattern;
-        this.queryStrings = queryStrings;
-        this.sourceIp = sourceIp;
-    }
+    private ListenerRuleConditionGetArgs() {}
 
-    private ListenerRuleConditionGetArgs() {
-        this.hostHeader = Codegen.empty();
-        this.httpHeader = Codegen.empty();
-        this.httpRequestMethod = Codegen.empty();
-        this.pathPattern = Codegen.empty();
-        this.queryStrings = Codegen.empty();
-        this.sourceIp = Codegen.empty();
+    private ListenerRuleConditionGetArgs(ListenerRuleConditionGetArgs $) {
+        this.hostHeader = $.hostHeader;
+        this.httpHeader = $.httpHeader;
+        this.httpRequestMethod = $.httpRequestMethod;
+        this.pathPattern = $.pathPattern;
+        this.queryStrings = $.queryStrings;
+        this.sourceIp = $.sourceIp;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ListenerRuleConditionGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<ListenerRuleConditionHostHeaderGetArgs> hostHeader;
-        private @Nullable Output<ListenerRuleConditionHttpHeaderGetArgs> httpHeader;
-        private @Nullable Output<ListenerRuleConditionHttpRequestMethodGetArgs> httpRequestMethod;
-        private @Nullable Output<ListenerRuleConditionPathPatternGetArgs> pathPattern;
-        private @Nullable Output<List<ListenerRuleConditionQueryStringGetArgs>> queryStrings;
-        private @Nullable Output<ListenerRuleConditionSourceIpGetArgs> sourceIp;
+        private ListenerRuleConditionGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ListenerRuleConditionGetArgs();
         }
 
         public Builder(ListenerRuleConditionGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.hostHeader = defaults.hostHeader;
-    	      this.httpHeader = defaults.httpHeader;
-    	      this.httpRequestMethod = defaults.httpRequestMethod;
-    	      this.pathPattern = defaults.pathPattern;
-    	      this.queryStrings = defaults.queryStrings;
-    	      this.sourceIp = defaults.sourceIp;
+            $ = new ListenerRuleConditionGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder hostHeader(@Nullable Output<ListenerRuleConditionHostHeaderGetArgs> hostHeader) {
-            this.hostHeader = hostHeader;
+            $.hostHeader = hostHeader;
             return this;
         }
-        public Builder hostHeader(@Nullable ListenerRuleConditionHostHeaderGetArgs hostHeader) {
-            this.hostHeader = Codegen.ofNullable(hostHeader);
-            return this;
+
+        public Builder hostHeader(ListenerRuleConditionHostHeaderGetArgs hostHeader) {
+            return hostHeader(Output.of(hostHeader));
         }
+
         public Builder httpHeader(@Nullable Output<ListenerRuleConditionHttpHeaderGetArgs> httpHeader) {
-            this.httpHeader = httpHeader;
+            $.httpHeader = httpHeader;
             return this;
         }
-        public Builder httpHeader(@Nullable ListenerRuleConditionHttpHeaderGetArgs httpHeader) {
-            this.httpHeader = Codegen.ofNullable(httpHeader);
-            return this;
+
+        public Builder httpHeader(ListenerRuleConditionHttpHeaderGetArgs httpHeader) {
+            return httpHeader(Output.of(httpHeader));
         }
+
         public Builder httpRequestMethod(@Nullable Output<ListenerRuleConditionHttpRequestMethodGetArgs> httpRequestMethod) {
-            this.httpRequestMethod = httpRequestMethod;
+            $.httpRequestMethod = httpRequestMethod;
             return this;
         }
-        public Builder httpRequestMethod(@Nullable ListenerRuleConditionHttpRequestMethodGetArgs httpRequestMethod) {
-            this.httpRequestMethod = Codegen.ofNullable(httpRequestMethod);
-            return this;
+
+        public Builder httpRequestMethod(ListenerRuleConditionHttpRequestMethodGetArgs httpRequestMethod) {
+            return httpRequestMethod(Output.of(httpRequestMethod));
         }
+
         public Builder pathPattern(@Nullable Output<ListenerRuleConditionPathPatternGetArgs> pathPattern) {
-            this.pathPattern = pathPattern;
+            $.pathPattern = pathPattern;
             return this;
         }
-        public Builder pathPattern(@Nullable ListenerRuleConditionPathPatternGetArgs pathPattern) {
-            this.pathPattern = Codegen.ofNullable(pathPattern);
-            return this;
+
+        public Builder pathPattern(ListenerRuleConditionPathPatternGetArgs pathPattern) {
+            return pathPattern(Output.of(pathPattern));
         }
+
         public Builder queryStrings(@Nullable Output<List<ListenerRuleConditionQueryStringGetArgs>> queryStrings) {
-            this.queryStrings = queryStrings;
+            $.queryStrings = queryStrings;
             return this;
         }
-        public Builder queryStrings(@Nullable List<ListenerRuleConditionQueryStringGetArgs> queryStrings) {
-            this.queryStrings = Codegen.ofNullable(queryStrings);
-            return this;
+
+        public Builder queryStrings(List<ListenerRuleConditionQueryStringGetArgs> queryStrings) {
+            return queryStrings(Output.of(queryStrings));
         }
+
         public Builder queryStrings(ListenerRuleConditionQueryStringGetArgs... queryStrings) {
             return queryStrings(List.of(queryStrings));
         }
+
         public Builder sourceIp(@Nullable Output<ListenerRuleConditionSourceIpGetArgs> sourceIp) {
-            this.sourceIp = sourceIp;
+            $.sourceIp = sourceIp;
             return this;
         }
-        public Builder sourceIp(@Nullable ListenerRuleConditionSourceIpGetArgs sourceIp) {
-            this.sourceIp = Codegen.ofNullable(sourceIp);
-            return this;
-        }        public ListenerRuleConditionGetArgs build() {
-            return new ListenerRuleConditionGetArgs(hostHeader, httpHeader, httpRequestMethod, pathPattern, queryStrings, sourceIp);
+
+        public Builder sourceIp(ListenerRuleConditionSourceIpGetArgs sourceIp) {
+            return sourceIp(Output.of(sourceIp));
+        }
+
+        public ListenerRuleConditionGetArgs build() {
+            return $;
         }
     }
+
 }

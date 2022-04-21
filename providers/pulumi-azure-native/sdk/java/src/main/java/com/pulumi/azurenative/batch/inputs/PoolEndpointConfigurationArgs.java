@@ -6,7 +6,6 @@ package com.pulumi.azurenative.batch.inputs;
 import com.pulumi.azurenative.batch.inputs.InboundNatPoolArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
 
@@ -20,52 +19,53 @@ public final class PoolEndpointConfigurationArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="inboundNatPools", required=true)
-      private final Output<List<InboundNatPoolArgs>> inboundNatPools;
+    private Output<List<InboundNatPoolArgs>> inboundNatPools;
 
     public Output<List<InboundNatPoolArgs>> inboundNatPools() {
         return this.inboundNatPools;
     }
 
-    public PoolEndpointConfigurationArgs(Output<List<InboundNatPoolArgs>> inboundNatPools) {
-        this.inboundNatPools = Objects.requireNonNull(inboundNatPools, "expected parameter 'inboundNatPools' to be non-null");
-    }
+    private PoolEndpointConfigurationArgs() {}
 
-    private PoolEndpointConfigurationArgs() {
-        this.inboundNatPools = Codegen.empty();
+    private PoolEndpointConfigurationArgs(PoolEndpointConfigurationArgs $) {
+        this.inboundNatPools = $.inboundNatPools;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PoolEndpointConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<List<InboundNatPoolArgs>> inboundNatPools;
+        private PoolEndpointConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PoolEndpointConfigurationArgs();
         }
 
         public Builder(PoolEndpointConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.inboundNatPools = defaults.inboundNatPools;
+            $ = new PoolEndpointConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder inboundNatPools(Output<List<InboundNatPoolArgs>> inboundNatPools) {
-            this.inboundNatPools = Objects.requireNonNull(inboundNatPools);
+            $.inboundNatPools = inboundNatPools;
             return this;
         }
+
         public Builder inboundNatPools(List<InboundNatPoolArgs> inboundNatPools) {
-            this.inboundNatPools = Output.of(Objects.requireNonNull(inboundNatPools));
-            return this;
+            return inboundNatPools(Output.of(inboundNatPools));
         }
+
         public Builder inboundNatPools(InboundNatPoolArgs... inboundNatPools) {
             return inboundNatPools(List.of(inboundNatPools));
-        }        public PoolEndpointConfigurationArgs build() {
-            return new PoolEndpointConfigurationArgs(inboundNatPools);
+        }
+
+        public PoolEndpointConfigurationArgs build() {
+            $.inboundNatPools = Objects.requireNonNull($.inboundNatPools, "expected parameter 'inboundNatPools' to be non-null");
+            return $;
         }
     }
+
 }

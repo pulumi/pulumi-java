@@ -10,6 +10,7 @@ import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -18,84 +19,84 @@ public final class IoMAMPolicyByNameArgs extends com.pulumi.resources.ResourceAr
     public static final IoMAMPolicyByNameArgs Empty = new IoMAMPolicyByNameArgs();
 
     @Import(name="accessRecheckOfflineTimeout")
-      private final @Nullable Output<String> accessRecheckOfflineTimeout;
+    private @Nullable Output<String> accessRecheckOfflineTimeout;
 
-    public Output<String> accessRecheckOfflineTimeout() {
-        return this.accessRecheckOfflineTimeout == null ? Codegen.empty() : this.accessRecheckOfflineTimeout;
+    public Optional<Output<String>> accessRecheckOfflineTimeout() {
+        return Optional.ofNullable(this.accessRecheckOfflineTimeout);
     }
 
     @Import(name="accessRecheckOnlineTimeout")
-      private final @Nullable Output<String> accessRecheckOnlineTimeout;
+    private @Nullable Output<String> accessRecheckOnlineTimeout;
 
-    public Output<String> accessRecheckOnlineTimeout() {
-        return this.accessRecheckOnlineTimeout == null ? Codegen.empty() : this.accessRecheckOnlineTimeout;
+    public Optional<Output<String>> accessRecheckOnlineTimeout() {
+        return Optional.ofNullable(this.accessRecheckOnlineTimeout);
     }
 
     @Import(name="appSharingFromLevel")
-      private final @Nullable Output<String> appSharingFromLevel;
+    private @Nullable Output<String> appSharingFromLevel;
 
-    public Output<String> appSharingFromLevel() {
-        return this.appSharingFromLevel == null ? Codegen.empty() : this.appSharingFromLevel;
+    public Optional<Output<String>> appSharingFromLevel() {
+        return Optional.ofNullable(this.appSharingFromLevel);
     }
 
     @Import(name="appSharingToLevel")
-      private final @Nullable Output<String> appSharingToLevel;
+    private @Nullable Output<String> appSharingToLevel;
 
-    public Output<String> appSharingToLevel() {
-        return this.appSharingToLevel == null ? Codegen.empty() : this.appSharingToLevel;
+    public Optional<Output<String>> appSharingToLevel() {
+        return Optional.ofNullable(this.appSharingToLevel);
     }
 
     @Import(name="authentication")
-      private final @Nullable Output<String> authentication;
+    private @Nullable Output<String> authentication;
 
-    public Output<String> authentication() {
-        return this.authentication == null ? Codegen.empty() : this.authentication;
+    public Optional<Output<String>> authentication() {
+        return Optional.ofNullable(this.authentication);
     }
 
     @Import(name="clipboardSharingLevel")
-      private final @Nullable Output<String> clipboardSharingLevel;
+    private @Nullable Output<String> clipboardSharingLevel;
 
-    public Output<String> clipboardSharingLevel() {
-        return this.clipboardSharingLevel == null ? Codegen.empty() : this.clipboardSharingLevel;
+    public Optional<Output<String>> clipboardSharingLevel() {
+        return Optional.ofNullable(this.clipboardSharingLevel);
     }
 
     @Import(name="dataBackup")
-      private final @Nullable Output<String> dataBackup;
+    private @Nullable Output<String> dataBackup;
 
-    public Output<String> dataBackup() {
-        return this.dataBackup == null ? Codegen.empty() : this.dataBackup;
+    public Optional<Output<String>> dataBackup() {
+        return Optional.ofNullable(this.dataBackup);
     }
 
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     @Import(name="deviceCompliance")
-      private final @Nullable Output<String> deviceCompliance;
+    private @Nullable Output<String> deviceCompliance;
 
-    public Output<String> deviceCompliance() {
-        return this.deviceCompliance == null ? Codegen.empty() : this.deviceCompliance;
+    public Optional<Output<String>> deviceCompliance() {
+        return Optional.ofNullable(this.deviceCompliance);
     }
 
     @Import(name="fileEncryptionLevel")
-      private final @Nullable Output<String> fileEncryptionLevel;
+    private @Nullable Output<String> fileEncryptionLevel;
 
-    public Output<String> fileEncryptionLevel() {
-        return this.fileEncryptionLevel == null ? Codegen.empty() : this.fileEncryptionLevel;
+    public Optional<Output<String>> fileEncryptionLevel() {
+        return Optional.ofNullable(this.fileEncryptionLevel);
     }
 
     @Import(name="fileSharingSaveAs")
-      private final @Nullable Output<String> fileSharingSaveAs;
+    private @Nullable Output<String> fileSharingSaveAs;
 
-    public Output<String> fileSharingSaveAs() {
-        return this.fileSharingSaveAs == null ? Codegen.empty() : this.fileSharingSaveAs;
+    public Optional<Output<String>> fileSharingSaveAs() {
+        return Optional.ofNullable(this.fileSharingSaveAs);
     }
 
     @Import(name="friendlyName", required=true)
-      private final Output<String> friendlyName;
+    private Output<String> friendlyName;
 
     public Output<String> friendlyName() {
         return this.friendlyName;
@@ -106,7 +107,7 @@ public final class IoMAMPolicyByNameArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="hostName", required=true)
-      private final Output<String> hostName;
+    private Output<String> hostName;
 
     public Output<String> hostName() {
         return this.hostName;
@@ -117,38 +118,38 @@ public final class IoMAMPolicyByNameArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     @Import(name="managedBrowser")
-      private final @Nullable Output<String> managedBrowser;
+    private @Nullable Output<String> managedBrowser;
 
-    public Output<String> managedBrowser() {
-        return this.managedBrowser == null ? Codegen.empty() : this.managedBrowser;
+    public Optional<Output<String>> managedBrowser() {
+        return Optional.ofNullable(this.managedBrowser);
     }
 
     @Import(name="offlineWipeTimeout")
-      private final @Nullable Output<String> offlineWipeTimeout;
+    private @Nullable Output<String> offlineWipeTimeout;
 
-    public Output<String> offlineWipeTimeout() {
-        return this.offlineWipeTimeout == null ? Codegen.empty() : this.offlineWipeTimeout;
+    public Optional<Output<String>> offlineWipeTimeout() {
+        return Optional.ofNullable(this.offlineWipeTimeout);
     }
 
     @Import(name="pin")
-      private final @Nullable Output<String> pin;
+    private @Nullable Output<String> pin;
 
-    public Output<String> pin() {
-        return this.pin == null ? Codegen.empty() : this.pin;
+    public Optional<Output<String>> pin() {
+        return Optional.ofNullable(this.pin);
     }
 
     @Import(name="pinNumRetry")
-      private final @Nullable Output<Integer> pinNumRetry;
+    private @Nullable Output<Integer> pinNumRetry;
 
-    public Output<Integer> pinNumRetry() {
-        return this.pinNumRetry == null ? Codegen.empty() : this.pinNumRetry;
+    public Optional<Output<Integer>> pinNumRetry() {
+        return Optional.ofNullable(this.pinNumRetry);
     }
 
     /**
@@ -156,10 +157,10 @@ public final class IoMAMPolicyByNameArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="policyName")
-      private final @Nullable Output<String> policyName;
+    private @Nullable Output<String> policyName;
 
-    public Output<String> policyName() {
-        return this.policyName == null ? Codegen.empty() : this.policyName;
+    public Optional<Output<String>> policyName() {
+        return Optional.ofNullable(this.policyName);
     }
 
     /**
@@ -167,317 +168,268 @@ public final class IoMAMPolicyByNameArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     @Import(name="touchId")
-      private final @Nullable Output<String> touchId;
+    private @Nullable Output<String> touchId;
 
-    public Output<String> touchId() {
-        return this.touchId == null ? Codegen.empty() : this.touchId;
+    public Optional<Output<String>> touchId() {
+        return Optional.ofNullable(this.touchId);
     }
 
-    public IoMAMPolicyByNameArgs(
-        @Nullable Output<String> accessRecheckOfflineTimeout,
-        @Nullable Output<String> accessRecheckOnlineTimeout,
-        @Nullable Output<String> appSharingFromLevel,
-        @Nullable Output<String> appSharingToLevel,
-        @Nullable Output<String> authentication,
-        @Nullable Output<String> clipboardSharingLevel,
-        @Nullable Output<String> dataBackup,
-        @Nullable Output<String> description,
-        @Nullable Output<String> deviceCompliance,
-        @Nullable Output<String> fileEncryptionLevel,
-        @Nullable Output<String> fileSharingSaveAs,
-        Output<String> friendlyName,
-        Output<String> hostName,
-        @Nullable Output<String> location,
-        @Nullable Output<String> managedBrowser,
-        @Nullable Output<String> offlineWipeTimeout,
-        @Nullable Output<String> pin,
-        @Nullable Output<Integer> pinNumRetry,
-        @Nullable Output<String> policyName,
-        @Nullable Output<Map<String,String>> tags,
-        @Nullable Output<String> touchId) {
-        this.accessRecheckOfflineTimeout = accessRecheckOfflineTimeout;
-        this.accessRecheckOnlineTimeout = accessRecheckOnlineTimeout;
-        this.appSharingFromLevel = Codegen.stringProp("appSharingFromLevel").output().arg(appSharingFromLevel).def("none").getNullable();
-        this.appSharingToLevel = Codegen.stringProp("appSharingToLevel").output().arg(appSharingToLevel).def("none").getNullable();
-        this.authentication = Codegen.stringProp("authentication").output().arg(authentication).def("required").getNullable();
-        this.clipboardSharingLevel = Codegen.stringProp("clipboardSharingLevel").output().arg(clipboardSharingLevel).def("blocked").getNullable();
-        this.dataBackup = Codegen.stringProp("dataBackup").output().arg(dataBackup).def("allow").getNullable();
-        this.description = description;
-        this.deviceCompliance = Codegen.stringProp("deviceCompliance").output().arg(deviceCompliance).def("enable").getNullable();
-        this.fileEncryptionLevel = Codegen.stringProp("fileEncryptionLevel").output().arg(fileEncryptionLevel).def("deviceLocked").getNullable();
-        this.fileSharingSaveAs = Codegen.stringProp("fileSharingSaveAs").output().arg(fileSharingSaveAs).def("allow").getNullable();
-        this.friendlyName = Objects.requireNonNull(friendlyName, "expected parameter 'friendlyName' to be non-null");
-        this.hostName = Objects.requireNonNull(hostName, "expected parameter 'hostName' to be non-null");
-        this.location = location;
-        this.managedBrowser = Codegen.stringProp("managedBrowser").output().arg(managedBrowser).def("required").getNullable();
-        this.offlineWipeTimeout = offlineWipeTimeout;
-        this.pin = Codegen.stringProp("pin").output().arg(pin).def("required").getNullable();
-        this.pinNumRetry = pinNumRetry;
-        this.policyName = policyName;
-        this.tags = tags;
-        this.touchId = Codegen.stringProp("touchId").output().arg(touchId).def("enable").getNullable();
-    }
+    private IoMAMPolicyByNameArgs() {}
 
-    private IoMAMPolicyByNameArgs() {
-        this.accessRecheckOfflineTimeout = Codegen.empty();
-        this.accessRecheckOnlineTimeout = Codegen.empty();
-        this.appSharingFromLevel = Codegen.empty();
-        this.appSharingToLevel = Codegen.empty();
-        this.authentication = Codegen.empty();
-        this.clipboardSharingLevel = Codegen.empty();
-        this.dataBackup = Codegen.empty();
-        this.description = Codegen.empty();
-        this.deviceCompliance = Codegen.empty();
-        this.fileEncryptionLevel = Codegen.empty();
-        this.fileSharingSaveAs = Codegen.empty();
-        this.friendlyName = Codegen.empty();
-        this.hostName = Codegen.empty();
-        this.location = Codegen.empty();
-        this.managedBrowser = Codegen.empty();
-        this.offlineWipeTimeout = Codegen.empty();
-        this.pin = Codegen.empty();
-        this.pinNumRetry = Codegen.empty();
-        this.policyName = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.touchId = Codegen.empty();
+    private IoMAMPolicyByNameArgs(IoMAMPolicyByNameArgs $) {
+        this.accessRecheckOfflineTimeout = $.accessRecheckOfflineTimeout;
+        this.accessRecheckOnlineTimeout = $.accessRecheckOnlineTimeout;
+        this.appSharingFromLevel = $.appSharingFromLevel;
+        this.appSharingToLevel = $.appSharingToLevel;
+        this.authentication = $.authentication;
+        this.clipboardSharingLevel = $.clipboardSharingLevel;
+        this.dataBackup = $.dataBackup;
+        this.description = $.description;
+        this.deviceCompliance = $.deviceCompliance;
+        this.fileEncryptionLevel = $.fileEncryptionLevel;
+        this.fileSharingSaveAs = $.fileSharingSaveAs;
+        this.friendlyName = $.friendlyName;
+        this.hostName = $.hostName;
+        this.location = $.location;
+        this.managedBrowser = $.managedBrowser;
+        this.offlineWipeTimeout = $.offlineWipeTimeout;
+        this.pin = $.pin;
+        this.pinNumRetry = $.pinNumRetry;
+        this.policyName = $.policyName;
+        this.tags = $.tags;
+        this.touchId = $.touchId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(IoMAMPolicyByNameArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> accessRecheckOfflineTimeout;
-        private @Nullable Output<String> accessRecheckOnlineTimeout;
-        private @Nullable Output<String> appSharingFromLevel;
-        private @Nullable Output<String> appSharingToLevel;
-        private @Nullable Output<String> authentication;
-        private @Nullable Output<String> clipboardSharingLevel;
-        private @Nullable Output<String> dataBackup;
-        private @Nullable Output<String> description;
-        private @Nullable Output<String> deviceCompliance;
-        private @Nullable Output<String> fileEncryptionLevel;
-        private @Nullable Output<String> fileSharingSaveAs;
-        private Output<String> friendlyName;
-        private Output<String> hostName;
-        private @Nullable Output<String> location;
-        private @Nullable Output<String> managedBrowser;
-        private @Nullable Output<String> offlineWipeTimeout;
-        private @Nullable Output<String> pin;
-        private @Nullable Output<Integer> pinNumRetry;
-        private @Nullable Output<String> policyName;
-        private @Nullable Output<Map<String,String>> tags;
-        private @Nullable Output<String> touchId;
+        private IoMAMPolicyByNameArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new IoMAMPolicyByNameArgs();
         }
 
         public Builder(IoMAMPolicyByNameArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accessRecheckOfflineTimeout = defaults.accessRecheckOfflineTimeout;
-    	      this.accessRecheckOnlineTimeout = defaults.accessRecheckOnlineTimeout;
-    	      this.appSharingFromLevel = defaults.appSharingFromLevel;
-    	      this.appSharingToLevel = defaults.appSharingToLevel;
-    	      this.authentication = defaults.authentication;
-    	      this.clipboardSharingLevel = defaults.clipboardSharingLevel;
-    	      this.dataBackup = defaults.dataBackup;
-    	      this.description = defaults.description;
-    	      this.deviceCompliance = defaults.deviceCompliance;
-    	      this.fileEncryptionLevel = defaults.fileEncryptionLevel;
-    	      this.fileSharingSaveAs = defaults.fileSharingSaveAs;
-    	      this.friendlyName = defaults.friendlyName;
-    	      this.hostName = defaults.hostName;
-    	      this.location = defaults.location;
-    	      this.managedBrowser = defaults.managedBrowser;
-    	      this.offlineWipeTimeout = defaults.offlineWipeTimeout;
-    	      this.pin = defaults.pin;
-    	      this.pinNumRetry = defaults.pinNumRetry;
-    	      this.policyName = defaults.policyName;
-    	      this.tags = defaults.tags;
-    	      this.touchId = defaults.touchId;
+            $ = new IoMAMPolicyByNameArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder accessRecheckOfflineTimeout(@Nullable Output<String> accessRecheckOfflineTimeout) {
-            this.accessRecheckOfflineTimeout = accessRecheckOfflineTimeout;
+            $.accessRecheckOfflineTimeout = accessRecheckOfflineTimeout;
             return this;
         }
-        public Builder accessRecheckOfflineTimeout(@Nullable String accessRecheckOfflineTimeout) {
-            this.accessRecheckOfflineTimeout = Codegen.ofNullable(accessRecheckOfflineTimeout);
-            return this;
+
+        public Builder accessRecheckOfflineTimeout(String accessRecheckOfflineTimeout) {
+            return accessRecheckOfflineTimeout(Output.of(accessRecheckOfflineTimeout));
         }
+
         public Builder accessRecheckOnlineTimeout(@Nullable Output<String> accessRecheckOnlineTimeout) {
-            this.accessRecheckOnlineTimeout = accessRecheckOnlineTimeout;
+            $.accessRecheckOnlineTimeout = accessRecheckOnlineTimeout;
             return this;
         }
-        public Builder accessRecheckOnlineTimeout(@Nullable String accessRecheckOnlineTimeout) {
-            this.accessRecheckOnlineTimeout = Codegen.ofNullable(accessRecheckOnlineTimeout);
-            return this;
+
+        public Builder accessRecheckOnlineTimeout(String accessRecheckOnlineTimeout) {
+            return accessRecheckOnlineTimeout(Output.of(accessRecheckOnlineTimeout));
         }
+
         public Builder appSharingFromLevel(@Nullable Output<String> appSharingFromLevel) {
-            this.appSharingFromLevel = appSharingFromLevel;
+            $.appSharingFromLevel = appSharingFromLevel;
             return this;
         }
-        public Builder appSharingFromLevel(@Nullable String appSharingFromLevel) {
-            this.appSharingFromLevel = Codegen.ofNullable(appSharingFromLevel);
-            return this;
+
+        public Builder appSharingFromLevel(String appSharingFromLevel) {
+            return appSharingFromLevel(Output.of(appSharingFromLevel));
         }
+
         public Builder appSharingToLevel(@Nullable Output<String> appSharingToLevel) {
-            this.appSharingToLevel = appSharingToLevel;
+            $.appSharingToLevel = appSharingToLevel;
             return this;
         }
-        public Builder appSharingToLevel(@Nullable String appSharingToLevel) {
-            this.appSharingToLevel = Codegen.ofNullable(appSharingToLevel);
-            return this;
+
+        public Builder appSharingToLevel(String appSharingToLevel) {
+            return appSharingToLevel(Output.of(appSharingToLevel));
         }
+
         public Builder authentication(@Nullable Output<String> authentication) {
-            this.authentication = authentication;
+            $.authentication = authentication;
             return this;
         }
-        public Builder authentication(@Nullable String authentication) {
-            this.authentication = Codegen.ofNullable(authentication);
-            return this;
+
+        public Builder authentication(String authentication) {
+            return authentication(Output.of(authentication));
         }
+
         public Builder clipboardSharingLevel(@Nullable Output<String> clipboardSharingLevel) {
-            this.clipboardSharingLevel = clipboardSharingLevel;
+            $.clipboardSharingLevel = clipboardSharingLevel;
             return this;
         }
-        public Builder clipboardSharingLevel(@Nullable String clipboardSharingLevel) {
-            this.clipboardSharingLevel = Codegen.ofNullable(clipboardSharingLevel);
-            return this;
+
+        public Builder clipboardSharingLevel(String clipboardSharingLevel) {
+            return clipboardSharingLevel(Output.of(clipboardSharingLevel));
         }
+
         public Builder dataBackup(@Nullable Output<String> dataBackup) {
-            this.dataBackup = dataBackup;
+            $.dataBackup = dataBackup;
             return this;
         }
-        public Builder dataBackup(@Nullable String dataBackup) {
-            this.dataBackup = Codegen.ofNullable(dataBackup);
-            return this;
+
+        public Builder dataBackup(String dataBackup) {
+            return dataBackup(Output.of(dataBackup));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder deviceCompliance(@Nullable Output<String> deviceCompliance) {
-            this.deviceCompliance = deviceCompliance;
+            $.deviceCompliance = deviceCompliance;
             return this;
         }
-        public Builder deviceCompliance(@Nullable String deviceCompliance) {
-            this.deviceCompliance = Codegen.ofNullable(deviceCompliance);
-            return this;
+
+        public Builder deviceCompliance(String deviceCompliance) {
+            return deviceCompliance(Output.of(deviceCompliance));
         }
+
         public Builder fileEncryptionLevel(@Nullable Output<String> fileEncryptionLevel) {
-            this.fileEncryptionLevel = fileEncryptionLevel;
+            $.fileEncryptionLevel = fileEncryptionLevel;
             return this;
         }
-        public Builder fileEncryptionLevel(@Nullable String fileEncryptionLevel) {
-            this.fileEncryptionLevel = Codegen.ofNullable(fileEncryptionLevel);
-            return this;
+
+        public Builder fileEncryptionLevel(String fileEncryptionLevel) {
+            return fileEncryptionLevel(Output.of(fileEncryptionLevel));
         }
+
         public Builder fileSharingSaveAs(@Nullable Output<String> fileSharingSaveAs) {
-            this.fileSharingSaveAs = fileSharingSaveAs;
+            $.fileSharingSaveAs = fileSharingSaveAs;
             return this;
         }
-        public Builder fileSharingSaveAs(@Nullable String fileSharingSaveAs) {
-            this.fileSharingSaveAs = Codegen.ofNullable(fileSharingSaveAs);
-            return this;
+
+        public Builder fileSharingSaveAs(String fileSharingSaveAs) {
+            return fileSharingSaveAs(Output.of(fileSharingSaveAs));
         }
+
         public Builder friendlyName(Output<String> friendlyName) {
-            this.friendlyName = Objects.requireNonNull(friendlyName);
+            $.friendlyName = friendlyName;
             return this;
         }
+
         public Builder friendlyName(String friendlyName) {
-            this.friendlyName = Output.of(Objects.requireNonNull(friendlyName));
-            return this;
+            return friendlyName(Output.of(friendlyName));
         }
+
         public Builder hostName(Output<String> hostName) {
-            this.hostName = Objects.requireNonNull(hostName);
+            $.hostName = hostName;
             return this;
         }
+
         public Builder hostName(String hostName) {
-            this.hostName = Output.of(Objects.requireNonNull(hostName));
-            return this;
+            return hostName(Output.of(hostName));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder managedBrowser(@Nullable Output<String> managedBrowser) {
-            this.managedBrowser = managedBrowser;
+            $.managedBrowser = managedBrowser;
             return this;
         }
-        public Builder managedBrowser(@Nullable String managedBrowser) {
-            this.managedBrowser = Codegen.ofNullable(managedBrowser);
-            return this;
+
+        public Builder managedBrowser(String managedBrowser) {
+            return managedBrowser(Output.of(managedBrowser));
         }
+
         public Builder offlineWipeTimeout(@Nullable Output<String> offlineWipeTimeout) {
-            this.offlineWipeTimeout = offlineWipeTimeout;
+            $.offlineWipeTimeout = offlineWipeTimeout;
             return this;
         }
-        public Builder offlineWipeTimeout(@Nullable String offlineWipeTimeout) {
-            this.offlineWipeTimeout = Codegen.ofNullable(offlineWipeTimeout);
-            return this;
+
+        public Builder offlineWipeTimeout(String offlineWipeTimeout) {
+            return offlineWipeTimeout(Output.of(offlineWipeTimeout));
         }
+
         public Builder pin(@Nullable Output<String> pin) {
-            this.pin = pin;
+            $.pin = pin;
             return this;
         }
-        public Builder pin(@Nullable String pin) {
-            this.pin = Codegen.ofNullable(pin);
-            return this;
+
+        public Builder pin(String pin) {
+            return pin(Output.of(pin));
         }
+
         public Builder pinNumRetry(@Nullable Output<Integer> pinNumRetry) {
-            this.pinNumRetry = pinNumRetry;
+            $.pinNumRetry = pinNumRetry;
             return this;
         }
-        public Builder pinNumRetry(@Nullable Integer pinNumRetry) {
-            this.pinNumRetry = Codegen.ofNullable(pinNumRetry);
-            return this;
+
+        public Builder pinNumRetry(Integer pinNumRetry) {
+            return pinNumRetry(Output.of(pinNumRetry));
         }
+
         public Builder policyName(@Nullable Output<String> policyName) {
-            this.policyName = policyName;
+            $.policyName = policyName;
             return this;
         }
-        public Builder policyName(@Nullable String policyName) {
-            this.policyName = Codegen.ofNullable(policyName);
-            return this;
+
+        public Builder policyName(String policyName) {
+            return policyName(Output.of(policyName));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder touchId(@Nullable Output<String> touchId) {
-            this.touchId = touchId;
+            $.touchId = touchId;
             return this;
         }
-        public Builder touchId(@Nullable String touchId) {
-            this.touchId = Codegen.ofNullable(touchId);
-            return this;
-        }        public IoMAMPolicyByNameArgs build() {
-            return new IoMAMPolicyByNameArgs(accessRecheckOfflineTimeout, accessRecheckOnlineTimeout, appSharingFromLevel, appSharingToLevel, authentication, clipboardSharingLevel, dataBackup, description, deviceCompliance, fileEncryptionLevel, fileSharingSaveAs, friendlyName, hostName, location, managedBrowser, offlineWipeTimeout, pin, pinNumRetry, policyName, tags, touchId);
+
+        public Builder touchId(String touchId) {
+            return touchId(Output.of(touchId));
+        }
+
+        public IoMAMPolicyByNameArgs build() {
+            $.appSharingFromLevel = Codegen.stringProp("appSharingFromLevel").output().arg($.appSharingFromLevel).def("none").getNullable();
+            $.appSharingToLevel = Codegen.stringProp("appSharingToLevel").output().arg($.appSharingToLevel).def("none").getNullable();
+            $.authentication = Codegen.stringProp("authentication").output().arg($.authentication).def("required").getNullable();
+            $.clipboardSharingLevel = Codegen.stringProp("clipboardSharingLevel").output().arg($.clipboardSharingLevel).def("blocked").getNullable();
+            $.dataBackup = Codegen.stringProp("dataBackup").output().arg($.dataBackup).def("allow").getNullable();
+            $.deviceCompliance = Codegen.stringProp("deviceCompliance").output().arg($.deviceCompliance).def("enable").getNullable();
+            $.fileEncryptionLevel = Codegen.stringProp("fileEncryptionLevel").output().arg($.fileEncryptionLevel).def("deviceLocked").getNullable();
+            $.fileSharingSaveAs = Codegen.stringProp("fileSharingSaveAs").output().arg($.fileSharingSaveAs).def("allow").getNullable();
+            $.friendlyName = Objects.requireNonNull($.friendlyName, "expected parameter 'friendlyName' to be non-null");
+            $.hostName = Objects.requireNonNull($.hostName, "expected parameter 'hostName' to be non-null");
+            $.managedBrowser = Codegen.stringProp("managedBrowser").output().arg($.managedBrowser).def("required").getNullable();
+            $.pin = Codegen.stringProp("pin").output().arg($.pin).def("required").getNullable();
+            $.touchId = Codegen.stringProp("touchId").output().arg($.touchId).def("enable").getNullable();
+            return $;
         }
     }
+
 }

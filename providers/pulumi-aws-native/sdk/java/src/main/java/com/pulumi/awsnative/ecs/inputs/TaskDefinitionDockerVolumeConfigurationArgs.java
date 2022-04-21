@@ -5,11 +5,11 @@ package com.pulumi.awsnative.ecs.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -18,130 +18,116 @@ public final class TaskDefinitionDockerVolumeConfigurationArgs extends com.pulum
     public static final TaskDefinitionDockerVolumeConfigurationArgs Empty = new TaskDefinitionDockerVolumeConfigurationArgs();
 
     @Import(name="autoprovision")
-      private final @Nullable Output<Boolean> autoprovision;
+    private @Nullable Output<Boolean> autoprovision;
 
-    public Output<Boolean> autoprovision() {
-        return this.autoprovision == null ? Codegen.empty() : this.autoprovision;
+    public Optional<Output<Boolean>> autoprovision() {
+        return Optional.ofNullable(this.autoprovision);
     }
 
     @Import(name="driver")
-      private final @Nullable Output<String> driver;
+    private @Nullable Output<String> driver;
 
-    public Output<String> driver() {
-        return this.driver == null ? Codegen.empty() : this.driver;
+    public Optional<Output<String>> driver() {
+        return Optional.ofNullable(this.driver);
     }
 
     @Import(name="driverOpts")
-      private final @Nullable Output<Object> driverOpts;
+    private @Nullable Output<Object> driverOpts;
 
-    public Output<Object> driverOpts() {
-        return this.driverOpts == null ? Codegen.empty() : this.driverOpts;
+    public Optional<Output<Object>> driverOpts() {
+        return Optional.ofNullable(this.driverOpts);
     }
 
     @Import(name="labels")
-      private final @Nullable Output<Object> labels;
+    private @Nullable Output<Object> labels;
 
-    public Output<Object> labels() {
-        return this.labels == null ? Codegen.empty() : this.labels;
+    public Optional<Output<Object>> labels() {
+        return Optional.ofNullable(this.labels);
     }
 
     @Import(name="scope")
-      private final @Nullable Output<String> scope;
+    private @Nullable Output<String> scope;
 
-    public Output<String> scope() {
-        return this.scope == null ? Codegen.empty() : this.scope;
+    public Optional<Output<String>> scope() {
+        return Optional.ofNullable(this.scope);
     }
 
-    public TaskDefinitionDockerVolumeConfigurationArgs(
-        @Nullable Output<Boolean> autoprovision,
-        @Nullable Output<String> driver,
-        @Nullable Output<Object> driverOpts,
-        @Nullable Output<Object> labels,
-        @Nullable Output<String> scope) {
-        this.autoprovision = autoprovision;
-        this.driver = driver;
-        this.driverOpts = driverOpts;
-        this.labels = labels;
-        this.scope = scope;
-    }
+    private TaskDefinitionDockerVolumeConfigurationArgs() {}
 
-    private TaskDefinitionDockerVolumeConfigurationArgs() {
-        this.autoprovision = Codegen.empty();
-        this.driver = Codegen.empty();
-        this.driverOpts = Codegen.empty();
-        this.labels = Codegen.empty();
-        this.scope = Codegen.empty();
+    private TaskDefinitionDockerVolumeConfigurationArgs(TaskDefinitionDockerVolumeConfigurationArgs $) {
+        this.autoprovision = $.autoprovision;
+        this.driver = $.driver;
+        this.driverOpts = $.driverOpts;
+        this.labels = $.labels;
+        this.scope = $.scope;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TaskDefinitionDockerVolumeConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> autoprovision;
-        private @Nullable Output<String> driver;
-        private @Nullable Output<Object> driverOpts;
-        private @Nullable Output<Object> labels;
-        private @Nullable Output<String> scope;
+        private TaskDefinitionDockerVolumeConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TaskDefinitionDockerVolumeConfigurationArgs();
         }
 
         public Builder(TaskDefinitionDockerVolumeConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.autoprovision = defaults.autoprovision;
-    	      this.driver = defaults.driver;
-    	      this.driverOpts = defaults.driverOpts;
-    	      this.labels = defaults.labels;
-    	      this.scope = defaults.scope;
+            $ = new TaskDefinitionDockerVolumeConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder autoprovision(@Nullable Output<Boolean> autoprovision) {
-            this.autoprovision = autoprovision;
+            $.autoprovision = autoprovision;
             return this;
         }
-        public Builder autoprovision(@Nullable Boolean autoprovision) {
-            this.autoprovision = Codegen.ofNullable(autoprovision);
-            return this;
+
+        public Builder autoprovision(Boolean autoprovision) {
+            return autoprovision(Output.of(autoprovision));
         }
+
         public Builder driver(@Nullable Output<String> driver) {
-            this.driver = driver;
+            $.driver = driver;
             return this;
         }
-        public Builder driver(@Nullable String driver) {
-            this.driver = Codegen.ofNullable(driver);
-            return this;
+
+        public Builder driver(String driver) {
+            return driver(Output.of(driver));
         }
+
         public Builder driverOpts(@Nullable Output<Object> driverOpts) {
-            this.driverOpts = driverOpts;
+            $.driverOpts = driverOpts;
             return this;
         }
-        public Builder driverOpts(@Nullable Object driverOpts) {
-            this.driverOpts = Codegen.ofNullable(driverOpts);
-            return this;
+
+        public Builder driverOpts(Object driverOpts) {
+            return driverOpts(Output.of(driverOpts));
         }
+
         public Builder labels(@Nullable Output<Object> labels) {
-            this.labels = labels;
+            $.labels = labels;
             return this;
         }
-        public Builder labels(@Nullable Object labels) {
-            this.labels = Codegen.ofNullable(labels);
-            return this;
+
+        public Builder labels(Object labels) {
+            return labels(Output.of(labels));
         }
+
         public Builder scope(@Nullable Output<String> scope) {
-            this.scope = scope;
+            $.scope = scope;
             return this;
         }
-        public Builder scope(@Nullable String scope) {
-            this.scope = Codegen.ofNullable(scope);
-            return this;
-        }        public TaskDefinitionDockerVolumeConfigurationArgs build() {
-            return new TaskDefinitionDockerVolumeConfigurationArgs(autoprovision, driver, driverOpts, labels, scope);
+
+        public Builder scope(String scope) {
+            return scope(Output.of(scope));
+        }
+
+        public TaskDefinitionDockerVolumeConfigurationArgs build() {
+            return $;
         }
     }
+
 }

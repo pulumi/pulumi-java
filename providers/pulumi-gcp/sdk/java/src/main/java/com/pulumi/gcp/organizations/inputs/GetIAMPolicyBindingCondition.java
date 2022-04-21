@@ -19,10 +19,10 @@ public final class GetIAMPolicyBindingCondition extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="description")
-      private final @Nullable String description;
+    private @Nullable String description;
 
     public Optional<String> description() {
-        return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -30,7 +30,7 @@ public final class GetIAMPolicyBindingCondition extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="expression", required=true)
-      private final String expression;
+    private String expression;
 
     public String expression() {
         return this.expression;
@@ -41,64 +41,58 @@ public final class GetIAMPolicyBindingCondition extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="title", required=true)
-      private final String title;
+    private String title;
 
     public String title() {
         return this.title;
     }
 
-    public GetIAMPolicyBindingCondition(
-        @Nullable String description,
-        String expression,
-        String title) {
-        this.description = description;
-        this.expression = Objects.requireNonNull(expression, "expected parameter 'expression' to be non-null");
-        this.title = Objects.requireNonNull(title, "expected parameter 'title' to be non-null");
-    }
+    private GetIAMPolicyBindingCondition() {}
 
-    private GetIAMPolicyBindingCondition() {
-        this.description = null;
-        this.expression = null;
-        this.title = null;
+    private GetIAMPolicyBindingCondition(GetIAMPolicyBindingCondition $) {
+        this.description = $.description;
+        this.expression = $.expression;
+        this.title = $.title;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetIAMPolicyBindingCondition defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String description;
-        private String expression;
-        private String title;
+        private GetIAMPolicyBindingCondition $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetIAMPolicyBindingCondition();
         }
 
         public Builder(GetIAMPolicyBindingCondition defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.description = defaults.description;
-    	      this.expression = defaults.expression;
-    	      this.title = defaults.title;
+            $ = new GetIAMPolicyBindingCondition(Objects.requireNonNull(defaults));
         }
 
         public Builder description(@Nullable String description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
+
         public Builder expression(String expression) {
-            this.expression = Objects.requireNonNull(expression);
+            $.expression = expression;
             return this;
         }
+
         public Builder title(String title) {
-            this.title = Objects.requireNonNull(title);
+            $.title = title;
             return this;
-        }        public GetIAMPolicyBindingCondition build() {
-            return new GetIAMPolicyBindingCondition(description, expression, title);
+        }
+
+        public GetIAMPolicyBindingCondition build() {
+            $.expression = Objects.requireNonNull($.expression, "expected parameter 'expression' to be non-null");
+            $.title = Objects.requireNonNull($.title, "expected parameter 'title' to be non-null");
+            return $;
         }
     }
+
 }

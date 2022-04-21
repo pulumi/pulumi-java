@@ -7,10 +7,10 @@ import com.pulumi.awsnative.lookoutmetrics.inputs.AnomalyDetectorConfigArgs;
 import com.pulumi.awsnative.lookoutmetrics.inputs.AnomalyDetectorMetricSetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,7 +23,7 @@ public final class AnomalyDetectorArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="anomalyDetectorConfig", required=true)
-      private final Output<AnomalyDetectorConfigArgs> anomalyDetectorConfig;
+    private Output<AnomalyDetectorConfigArgs> anomalyDetectorConfig;
 
     public Output<AnomalyDetectorConfigArgs> anomalyDetectorConfig() {
         return this.anomalyDetectorConfig;
@@ -34,10 +34,10 @@ public final class AnomalyDetectorArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="anomalyDetectorDescription")
-      private final @Nullable Output<String> anomalyDetectorDescription;
+    private @Nullable Output<String> anomalyDetectorDescription;
 
-    public Output<String> anomalyDetectorDescription() {
-        return this.anomalyDetectorDescription == null ? Codegen.empty() : this.anomalyDetectorDescription;
+    public Optional<Output<String>> anomalyDetectorDescription() {
+        return Optional.ofNullable(this.anomalyDetectorDescription);
     }
 
     /**
@@ -45,10 +45,10 @@ public final class AnomalyDetectorArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="anomalyDetectorName")
-      private final @Nullable Output<String> anomalyDetectorName;
+    private @Nullable Output<String> anomalyDetectorName;
 
-    public Output<String> anomalyDetectorName() {
-        return this.anomalyDetectorName == null ? Codegen.empty() : this.anomalyDetectorName;
+    public Optional<Output<String>> anomalyDetectorName() {
+        return Optional.ofNullable(this.anomalyDetectorName);
     }
 
     /**
@@ -56,10 +56,10 @@ public final class AnomalyDetectorArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="kmsKeyArn")
-      private final @Nullable Output<String> kmsKeyArn;
+    private @Nullable Output<String> kmsKeyArn;
 
-    public Output<String> kmsKeyArn() {
-        return this.kmsKeyArn == null ? Codegen.empty() : this.kmsKeyArn;
+    public Optional<Output<String>> kmsKeyArn() {
+        return Optional.ofNullable(this.kmsKeyArn);
     }
 
     /**
@@ -67,105 +67,94 @@ public final class AnomalyDetectorArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="metricSetList", required=true)
-      private final Output<List<AnomalyDetectorMetricSetArgs>> metricSetList;
+    private Output<List<AnomalyDetectorMetricSetArgs>> metricSetList;
 
     public Output<List<AnomalyDetectorMetricSetArgs>> metricSetList() {
         return this.metricSetList;
     }
 
-    public AnomalyDetectorArgs(
-        Output<AnomalyDetectorConfigArgs> anomalyDetectorConfig,
-        @Nullable Output<String> anomalyDetectorDescription,
-        @Nullable Output<String> anomalyDetectorName,
-        @Nullable Output<String> kmsKeyArn,
-        Output<List<AnomalyDetectorMetricSetArgs>> metricSetList) {
-        this.anomalyDetectorConfig = Objects.requireNonNull(anomalyDetectorConfig, "expected parameter 'anomalyDetectorConfig' to be non-null");
-        this.anomalyDetectorDescription = anomalyDetectorDescription;
-        this.anomalyDetectorName = anomalyDetectorName;
-        this.kmsKeyArn = kmsKeyArn;
-        this.metricSetList = Objects.requireNonNull(metricSetList, "expected parameter 'metricSetList' to be non-null");
-    }
+    private AnomalyDetectorArgs() {}
 
-    private AnomalyDetectorArgs() {
-        this.anomalyDetectorConfig = Codegen.empty();
-        this.anomalyDetectorDescription = Codegen.empty();
-        this.anomalyDetectorName = Codegen.empty();
-        this.kmsKeyArn = Codegen.empty();
-        this.metricSetList = Codegen.empty();
+    private AnomalyDetectorArgs(AnomalyDetectorArgs $) {
+        this.anomalyDetectorConfig = $.anomalyDetectorConfig;
+        this.anomalyDetectorDescription = $.anomalyDetectorDescription;
+        this.anomalyDetectorName = $.anomalyDetectorName;
+        this.kmsKeyArn = $.kmsKeyArn;
+        this.metricSetList = $.metricSetList;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AnomalyDetectorArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<AnomalyDetectorConfigArgs> anomalyDetectorConfig;
-        private @Nullable Output<String> anomalyDetectorDescription;
-        private @Nullable Output<String> anomalyDetectorName;
-        private @Nullable Output<String> kmsKeyArn;
-        private Output<List<AnomalyDetectorMetricSetArgs>> metricSetList;
+        private AnomalyDetectorArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AnomalyDetectorArgs();
         }
 
         public Builder(AnomalyDetectorArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.anomalyDetectorConfig = defaults.anomalyDetectorConfig;
-    	      this.anomalyDetectorDescription = defaults.anomalyDetectorDescription;
-    	      this.anomalyDetectorName = defaults.anomalyDetectorName;
-    	      this.kmsKeyArn = defaults.kmsKeyArn;
-    	      this.metricSetList = defaults.metricSetList;
+            $ = new AnomalyDetectorArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder anomalyDetectorConfig(Output<AnomalyDetectorConfigArgs> anomalyDetectorConfig) {
-            this.anomalyDetectorConfig = Objects.requireNonNull(anomalyDetectorConfig);
+            $.anomalyDetectorConfig = anomalyDetectorConfig;
             return this;
         }
+
         public Builder anomalyDetectorConfig(AnomalyDetectorConfigArgs anomalyDetectorConfig) {
-            this.anomalyDetectorConfig = Output.of(Objects.requireNonNull(anomalyDetectorConfig));
-            return this;
+            return anomalyDetectorConfig(Output.of(anomalyDetectorConfig));
         }
+
         public Builder anomalyDetectorDescription(@Nullable Output<String> anomalyDetectorDescription) {
-            this.anomalyDetectorDescription = anomalyDetectorDescription;
+            $.anomalyDetectorDescription = anomalyDetectorDescription;
             return this;
         }
-        public Builder anomalyDetectorDescription(@Nullable String anomalyDetectorDescription) {
-            this.anomalyDetectorDescription = Codegen.ofNullable(anomalyDetectorDescription);
-            return this;
+
+        public Builder anomalyDetectorDescription(String anomalyDetectorDescription) {
+            return anomalyDetectorDescription(Output.of(anomalyDetectorDescription));
         }
+
         public Builder anomalyDetectorName(@Nullable Output<String> anomalyDetectorName) {
-            this.anomalyDetectorName = anomalyDetectorName;
+            $.anomalyDetectorName = anomalyDetectorName;
             return this;
         }
-        public Builder anomalyDetectorName(@Nullable String anomalyDetectorName) {
-            this.anomalyDetectorName = Codegen.ofNullable(anomalyDetectorName);
-            return this;
+
+        public Builder anomalyDetectorName(String anomalyDetectorName) {
+            return anomalyDetectorName(Output.of(anomalyDetectorName));
         }
+
         public Builder kmsKeyArn(@Nullable Output<String> kmsKeyArn) {
-            this.kmsKeyArn = kmsKeyArn;
+            $.kmsKeyArn = kmsKeyArn;
             return this;
         }
-        public Builder kmsKeyArn(@Nullable String kmsKeyArn) {
-            this.kmsKeyArn = Codegen.ofNullable(kmsKeyArn);
-            return this;
+
+        public Builder kmsKeyArn(String kmsKeyArn) {
+            return kmsKeyArn(Output.of(kmsKeyArn));
         }
+
         public Builder metricSetList(Output<List<AnomalyDetectorMetricSetArgs>> metricSetList) {
-            this.metricSetList = Objects.requireNonNull(metricSetList);
+            $.metricSetList = metricSetList;
             return this;
         }
+
         public Builder metricSetList(List<AnomalyDetectorMetricSetArgs> metricSetList) {
-            this.metricSetList = Output.of(Objects.requireNonNull(metricSetList));
-            return this;
+            return metricSetList(Output.of(metricSetList));
         }
+
         public Builder metricSetList(AnomalyDetectorMetricSetArgs... metricSetList) {
             return metricSetList(List.of(metricSetList));
-        }        public AnomalyDetectorArgs build() {
-            return new AnomalyDetectorArgs(anomalyDetectorConfig, anomalyDetectorDescription, anomalyDetectorName, kmsKeyArn, metricSetList);
+        }
+
+        public AnomalyDetectorArgs build() {
+            $.anomalyDetectorConfig = Objects.requireNonNull($.anomalyDetectorConfig, "expected parameter 'anomalyDetectorConfig' to be non-null");
+            $.metricSetList = Objects.requireNonNull($.metricSetList, "expected parameter 'metricSetList' to be non-null");
+            return $;
         }
     }
+
 }

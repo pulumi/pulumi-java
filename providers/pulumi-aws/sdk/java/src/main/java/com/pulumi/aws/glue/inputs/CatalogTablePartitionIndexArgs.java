@@ -5,10 +5,10 @@ package com.pulumi.aws.glue.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,17 +21,17 @@ public final class CatalogTablePartitionIndexArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="indexName", required=true)
-      private final Output<String> indexName;
+    private Output<String> indexName;
 
     public Output<String> indexName() {
         return this.indexName;
     }
 
     @Import(name="indexStatus")
-      private final @Nullable Output<String> indexStatus;
+    private @Nullable Output<String> indexStatus;
 
-    public Output<String> indexStatus() {
-        return this.indexStatus == null ? Codegen.empty() : this.indexStatus;
+    public Optional<Output<String>> indexStatus() {
+        return Optional.ofNullable(this.indexStatus);
     }
 
     /**
@@ -39,79 +39,74 @@ public final class CatalogTablePartitionIndexArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="keys", required=true)
-      private final Output<List<String>> keys;
+    private Output<List<String>> keys;
 
     public Output<List<String>> keys() {
         return this.keys;
     }
 
-    public CatalogTablePartitionIndexArgs(
-        Output<String> indexName,
-        @Nullable Output<String> indexStatus,
-        Output<List<String>> keys) {
-        this.indexName = Objects.requireNonNull(indexName, "expected parameter 'indexName' to be non-null");
-        this.indexStatus = indexStatus;
-        this.keys = Objects.requireNonNull(keys, "expected parameter 'keys' to be non-null");
-    }
+    private CatalogTablePartitionIndexArgs() {}
 
-    private CatalogTablePartitionIndexArgs() {
-        this.indexName = Codegen.empty();
-        this.indexStatus = Codegen.empty();
-        this.keys = Codegen.empty();
+    private CatalogTablePartitionIndexArgs(CatalogTablePartitionIndexArgs $) {
+        this.indexName = $.indexName;
+        this.indexStatus = $.indexStatus;
+        this.keys = $.keys;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CatalogTablePartitionIndexArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> indexName;
-        private @Nullable Output<String> indexStatus;
-        private Output<List<String>> keys;
+        private CatalogTablePartitionIndexArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CatalogTablePartitionIndexArgs();
         }
 
         public Builder(CatalogTablePartitionIndexArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.indexName = defaults.indexName;
-    	      this.indexStatus = defaults.indexStatus;
-    	      this.keys = defaults.keys;
+            $ = new CatalogTablePartitionIndexArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder indexName(Output<String> indexName) {
-            this.indexName = Objects.requireNonNull(indexName);
+            $.indexName = indexName;
             return this;
         }
+
         public Builder indexName(String indexName) {
-            this.indexName = Output.of(Objects.requireNonNull(indexName));
-            return this;
+            return indexName(Output.of(indexName));
         }
+
         public Builder indexStatus(@Nullable Output<String> indexStatus) {
-            this.indexStatus = indexStatus;
+            $.indexStatus = indexStatus;
             return this;
         }
-        public Builder indexStatus(@Nullable String indexStatus) {
-            this.indexStatus = Codegen.ofNullable(indexStatus);
-            return this;
+
+        public Builder indexStatus(String indexStatus) {
+            return indexStatus(Output.of(indexStatus));
         }
+
         public Builder keys(Output<List<String>> keys) {
-            this.keys = Objects.requireNonNull(keys);
+            $.keys = keys;
             return this;
         }
+
         public Builder keys(List<String> keys) {
-            this.keys = Output.of(Objects.requireNonNull(keys));
-            return this;
+            return keys(Output.of(keys));
         }
+
         public Builder keys(String... keys) {
             return keys(List.of(keys));
-        }        public CatalogTablePartitionIndexArgs build() {
-            return new CatalogTablePartitionIndexArgs(indexName, indexStatus, keys);
+        }
+
+        public CatalogTablePartitionIndexArgs build() {
+            $.indexName = Objects.requireNonNull($.indexName, "expected parameter 'indexName' to be non-null");
+            $.keys = Objects.requireNonNull($.keys, "expected parameter 'keys' to be non-null");
+            return $;
         }
     }
+
 }

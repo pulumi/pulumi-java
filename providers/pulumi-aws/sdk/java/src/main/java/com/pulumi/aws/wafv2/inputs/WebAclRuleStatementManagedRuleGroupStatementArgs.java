@@ -7,10 +7,10 @@ import com.pulumi.aws.wafv2.inputs.WebAclRuleStatementManagedRuleGroupStatementE
 import com.pulumi.aws.wafv2.inputs.WebAclRuleStatementManagedRuleGroupStatementScopeDownStatementArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,10 @@ public final class WebAclRuleStatementManagedRuleGroupStatementArgs extends com.
      * 
      */
     @Import(name="excludedRules")
-      private final @Nullable Output<List<WebAclRuleStatementManagedRuleGroupStatementExcludedRuleArgs>> excludedRules;
+    private @Nullable Output<List<WebAclRuleStatementManagedRuleGroupStatementExcludedRuleArgs>> excludedRules;
 
-    public Output<List<WebAclRuleStatementManagedRuleGroupStatementExcludedRuleArgs>> excludedRules() {
-        return this.excludedRules == null ? Codegen.empty() : this.excludedRules;
+    public Optional<Output<List<WebAclRuleStatementManagedRuleGroupStatementExcludedRuleArgs>>> excludedRules() {
+        return Optional.ofNullable(this.excludedRules);
     }
 
     /**
@@ -34,7 +34,7 @@ public final class WebAclRuleStatementManagedRuleGroupStatementArgs extends com.
      * 
      */
     @Import(name="name", required=true)
-      private final Output<String> name;
+    private Output<String> name;
 
     public Output<String> name() {
         return this.name;
@@ -45,10 +45,10 @@ public final class WebAclRuleStatementManagedRuleGroupStatementArgs extends com.
      * 
      */
     @Import(name="scopeDownStatement")
-      private final @Nullable Output<WebAclRuleStatementManagedRuleGroupStatementScopeDownStatementArgs> scopeDownStatement;
+    private @Nullable Output<WebAclRuleStatementManagedRuleGroupStatementScopeDownStatementArgs> scopeDownStatement;
 
-    public Output<WebAclRuleStatementManagedRuleGroupStatementScopeDownStatementArgs> scopeDownStatement() {
-        return this.scopeDownStatement == null ? Codegen.empty() : this.scopeDownStatement;
+    public Optional<Output<WebAclRuleStatementManagedRuleGroupStatementScopeDownStatementArgs>> scopeDownStatement() {
+        return Optional.ofNullable(this.scopeDownStatement);
     }
 
     /**
@@ -56,92 +56,84 @@ public final class WebAclRuleStatementManagedRuleGroupStatementArgs extends com.
      * 
      */
     @Import(name="vendorName", required=true)
-      private final Output<String> vendorName;
+    private Output<String> vendorName;
 
     public Output<String> vendorName() {
         return this.vendorName;
     }
 
-    public WebAclRuleStatementManagedRuleGroupStatementArgs(
-        @Nullable Output<List<WebAclRuleStatementManagedRuleGroupStatementExcludedRuleArgs>> excludedRules,
-        Output<String> name,
-        @Nullable Output<WebAclRuleStatementManagedRuleGroupStatementScopeDownStatementArgs> scopeDownStatement,
-        Output<String> vendorName) {
-        this.excludedRules = excludedRules;
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.scopeDownStatement = scopeDownStatement;
-        this.vendorName = Objects.requireNonNull(vendorName, "expected parameter 'vendorName' to be non-null");
-    }
+    private WebAclRuleStatementManagedRuleGroupStatementArgs() {}
 
-    private WebAclRuleStatementManagedRuleGroupStatementArgs() {
-        this.excludedRules = Codegen.empty();
-        this.name = Codegen.empty();
-        this.scopeDownStatement = Codegen.empty();
-        this.vendorName = Codegen.empty();
+    private WebAclRuleStatementManagedRuleGroupStatementArgs(WebAclRuleStatementManagedRuleGroupStatementArgs $) {
+        this.excludedRules = $.excludedRules;
+        this.name = $.name;
+        this.scopeDownStatement = $.scopeDownStatement;
+        this.vendorName = $.vendorName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WebAclRuleStatementManagedRuleGroupStatementArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<WebAclRuleStatementManagedRuleGroupStatementExcludedRuleArgs>> excludedRules;
-        private Output<String> name;
-        private @Nullable Output<WebAclRuleStatementManagedRuleGroupStatementScopeDownStatementArgs> scopeDownStatement;
-        private Output<String> vendorName;
+        private WebAclRuleStatementManagedRuleGroupStatementArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new WebAclRuleStatementManagedRuleGroupStatementArgs();
         }
 
         public Builder(WebAclRuleStatementManagedRuleGroupStatementArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.excludedRules = defaults.excludedRules;
-    	      this.name = defaults.name;
-    	      this.scopeDownStatement = defaults.scopeDownStatement;
-    	      this.vendorName = defaults.vendorName;
+            $ = new WebAclRuleStatementManagedRuleGroupStatementArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder excludedRules(@Nullable Output<List<WebAclRuleStatementManagedRuleGroupStatementExcludedRuleArgs>> excludedRules) {
-            this.excludedRules = excludedRules;
+            $.excludedRules = excludedRules;
             return this;
         }
-        public Builder excludedRules(@Nullable List<WebAclRuleStatementManagedRuleGroupStatementExcludedRuleArgs> excludedRules) {
-            this.excludedRules = Codegen.ofNullable(excludedRules);
-            return this;
+
+        public Builder excludedRules(List<WebAclRuleStatementManagedRuleGroupStatementExcludedRuleArgs> excludedRules) {
+            return excludedRules(Output.of(excludedRules));
         }
+
         public Builder excludedRules(WebAclRuleStatementManagedRuleGroupStatementExcludedRuleArgs... excludedRules) {
             return excludedRules(List.of(excludedRules));
         }
+
         public Builder name(Output<String> name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Output.of(Objects.requireNonNull(name));
-            return this;
+            return name(Output.of(name));
         }
+
         public Builder scopeDownStatement(@Nullable Output<WebAclRuleStatementManagedRuleGroupStatementScopeDownStatementArgs> scopeDownStatement) {
-            this.scopeDownStatement = scopeDownStatement;
+            $.scopeDownStatement = scopeDownStatement;
             return this;
         }
-        public Builder scopeDownStatement(@Nullable WebAclRuleStatementManagedRuleGroupStatementScopeDownStatementArgs scopeDownStatement) {
-            this.scopeDownStatement = Codegen.ofNullable(scopeDownStatement);
-            return this;
+
+        public Builder scopeDownStatement(WebAclRuleStatementManagedRuleGroupStatementScopeDownStatementArgs scopeDownStatement) {
+            return scopeDownStatement(Output.of(scopeDownStatement));
         }
+
         public Builder vendorName(Output<String> vendorName) {
-            this.vendorName = Objects.requireNonNull(vendorName);
+            $.vendorName = vendorName;
             return this;
         }
+
         public Builder vendorName(String vendorName) {
-            this.vendorName = Output.of(Objects.requireNonNull(vendorName));
-            return this;
-        }        public WebAclRuleStatementManagedRuleGroupStatementArgs build() {
-            return new WebAclRuleStatementManagedRuleGroupStatementArgs(excludedRules, name, scopeDownStatement, vendorName);
+            return vendorName(Output.of(vendorName));
+        }
+
+        public WebAclRuleStatementManagedRuleGroupStatementArgs build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.vendorName = Objects.requireNonNull($.vendorName, "expected parameter 'vendorName' to be non-null");
+            return $;
         }
     }
+
 }

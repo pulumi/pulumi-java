@@ -7,10 +7,10 @@ import com.pulumi.awsnative.iot.inputs.MitigationActionActionParamsArgs;
 import com.pulumi.awsnative.iot.inputs.MitigationActionTagArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,21 +23,21 @@ public final class MitigationActionArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="actionName")
-      private final @Nullable Output<String> actionName;
+    private @Nullable Output<String> actionName;
 
-    public Output<String> actionName() {
-        return this.actionName == null ? Codegen.empty() : this.actionName;
+    public Optional<Output<String>> actionName() {
+        return Optional.ofNullable(this.actionName);
     }
 
     @Import(name="actionParams", required=true)
-      private final Output<MitigationActionActionParamsArgs> actionParams;
+    private Output<MitigationActionActionParamsArgs> actionParams;
 
     public Output<MitigationActionActionParamsArgs> actionParams() {
         return this.actionParams;
     }
 
     @Import(name="roleArn", required=true)
-      private final Output<String> roleArn;
+    private Output<String> roleArn;
 
     public Output<String> roleArn() {
         return this.roleArn;
@@ -48,92 +48,84 @@ public final class MitigationActionArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<List<MitigationActionTagArgs>> tags;
+    private @Nullable Output<List<MitigationActionTagArgs>> tags;
 
-    public Output<List<MitigationActionTagArgs>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<List<MitigationActionTagArgs>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public MitigationActionArgs(
-        @Nullable Output<String> actionName,
-        Output<MitigationActionActionParamsArgs> actionParams,
-        Output<String> roleArn,
-        @Nullable Output<List<MitigationActionTagArgs>> tags) {
-        this.actionName = actionName;
-        this.actionParams = Objects.requireNonNull(actionParams, "expected parameter 'actionParams' to be non-null");
-        this.roleArn = Objects.requireNonNull(roleArn, "expected parameter 'roleArn' to be non-null");
-        this.tags = tags;
-    }
+    private MitigationActionArgs() {}
 
-    private MitigationActionArgs() {
-        this.actionName = Codegen.empty();
-        this.actionParams = Codegen.empty();
-        this.roleArn = Codegen.empty();
-        this.tags = Codegen.empty();
+    private MitigationActionArgs(MitigationActionArgs $) {
+        this.actionName = $.actionName;
+        this.actionParams = $.actionParams;
+        this.roleArn = $.roleArn;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MitigationActionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> actionName;
-        private Output<MitigationActionActionParamsArgs> actionParams;
-        private Output<String> roleArn;
-        private @Nullable Output<List<MitigationActionTagArgs>> tags;
+        private MitigationActionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new MitigationActionArgs();
         }
 
         public Builder(MitigationActionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.actionName = defaults.actionName;
-    	      this.actionParams = defaults.actionParams;
-    	      this.roleArn = defaults.roleArn;
-    	      this.tags = defaults.tags;
+            $ = new MitigationActionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder actionName(@Nullable Output<String> actionName) {
-            this.actionName = actionName;
+            $.actionName = actionName;
             return this;
         }
-        public Builder actionName(@Nullable String actionName) {
-            this.actionName = Codegen.ofNullable(actionName);
-            return this;
+
+        public Builder actionName(String actionName) {
+            return actionName(Output.of(actionName));
         }
+
         public Builder actionParams(Output<MitigationActionActionParamsArgs> actionParams) {
-            this.actionParams = Objects.requireNonNull(actionParams);
+            $.actionParams = actionParams;
             return this;
         }
+
         public Builder actionParams(MitigationActionActionParamsArgs actionParams) {
-            this.actionParams = Output.of(Objects.requireNonNull(actionParams));
-            return this;
+            return actionParams(Output.of(actionParams));
         }
+
         public Builder roleArn(Output<String> roleArn) {
-            this.roleArn = Objects.requireNonNull(roleArn);
+            $.roleArn = roleArn;
             return this;
         }
+
         public Builder roleArn(String roleArn) {
-            this.roleArn = Output.of(Objects.requireNonNull(roleArn));
-            return this;
+            return roleArn(Output.of(roleArn));
         }
+
         public Builder tags(@Nullable Output<List<MitigationActionTagArgs>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable List<MitigationActionTagArgs> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(List<MitigationActionTagArgs> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tags(MitigationActionTagArgs... tags) {
             return tags(List.of(tags));
-        }        public MitigationActionArgs build() {
-            return new MitigationActionArgs(actionName, actionParams, roleArn, tags);
+        }
+
+        public MitigationActionArgs build() {
+            $.actionParams = Objects.requireNonNull($.actionParams, "expected parameter 'actionParams' to be non-null");
+            $.roleArn = Objects.requireNonNull($.roleArn, "expected parameter 'roleArn' to be non-null");
+            return $;
         }
     }
+
 }

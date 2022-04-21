@@ -5,9 +5,9 @@ package com.pulumi.gcp.datacatalog;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class EntryGroupArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -31,10 +31,10 @@ public final class EntryGroupArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="displayName")
-      private final @Nullable Output<String> displayName;
+    private @Nullable Output<String> displayName;
 
-    public Output<String> displayName() {
-        return this.displayName == null ? Codegen.empty() : this.displayName;
+    public Optional<Output<String>> displayName() {
+        return Optional.ofNullable(this.displayName);
     }
 
     /**
@@ -43,7 +43,7 @@ public final class EntryGroupArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="entryGroupId", required=true)
-      private final Output<String> entryGroupId;
+    private Output<String> entryGroupId;
 
     public Output<String> entryGroupId() {
         return this.entryGroupId;
@@ -55,10 +55,10 @@ public final class EntryGroupArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -66,102 +66,89 @@ public final class EntryGroupArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="region")
-      private final @Nullable Output<String> region;
+    private @Nullable Output<String> region;
 
-    public Output<String> region() {
-        return this.region == null ? Codegen.empty() : this.region;
+    public Optional<Output<String>> region() {
+        return Optional.ofNullable(this.region);
     }
 
-    public EntryGroupArgs(
-        @Nullable Output<String> description,
-        @Nullable Output<String> displayName,
-        Output<String> entryGroupId,
-        @Nullable Output<String> project,
-        @Nullable Output<String> region) {
-        this.description = description;
-        this.displayName = displayName;
-        this.entryGroupId = Objects.requireNonNull(entryGroupId, "expected parameter 'entryGroupId' to be non-null");
-        this.project = project;
-        this.region = region;
-    }
+    private EntryGroupArgs() {}
 
-    private EntryGroupArgs() {
-        this.description = Codegen.empty();
-        this.displayName = Codegen.empty();
-        this.entryGroupId = Codegen.empty();
-        this.project = Codegen.empty();
-        this.region = Codegen.empty();
+    private EntryGroupArgs(EntryGroupArgs $) {
+        this.description = $.description;
+        this.displayName = $.displayName;
+        this.entryGroupId = $.entryGroupId;
+        this.project = $.project;
+        this.region = $.region;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EntryGroupArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> description;
-        private @Nullable Output<String> displayName;
-        private Output<String> entryGroupId;
-        private @Nullable Output<String> project;
-        private @Nullable Output<String> region;
+        private EntryGroupArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new EntryGroupArgs();
         }
 
         public Builder(EntryGroupArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.description = defaults.description;
-    	      this.displayName = defaults.displayName;
-    	      this.entryGroupId = defaults.entryGroupId;
-    	      this.project = defaults.project;
-    	      this.region = defaults.region;
+            $ = new EntryGroupArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder displayName(@Nullable Output<String> displayName) {
-            this.displayName = displayName;
+            $.displayName = displayName;
             return this;
         }
-        public Builder displayName(@Nullable String displayName) {
-            this.displayName = Codegen.ofNullable(displayName);
-            return this;
+
+        public Builder displayName(String displayName) {
+            return displayName(Output.of(displayName));
         }
+
         public Builder entryGroupId(Output<String> entryGroupId) {
-            this.entryGroupId = Objects.requireNonNull(entryGroupId);
+            $.entryGroupId = entryGroupId;
             return this;
         }
+
         public Builder entryGroupId(String entryGroupId) {
-            this.entryGroupId = Output.of(Objects.requireNonNull(entryGroupId));
-            return this;
+            return entryGroupId(Output.of(entryGroupId));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder region(@Nullable Output<String> region) {
-            this.region = region;
+            $.region = region;
             return this;
         }
-        public Builder region(@Nullable String region) {
-            this.region = Codegen.ofNullable(region);
-            return this;
-        }        public EntryGroupArgs build() {
-            return new EntryGroupArgs(description, displayName, entryGroupId, project, region);
+
+        public Builder region(String region) {
+            return region(Output.of(region));
+        }
+
+        public EntryGroupArgs build() {
+            $.entryGroupId = Objects.requireNonNull($.entryGroupId, "expected parameter 'entryGroupId' to be non-null");
+            return $;
         }
     }
+
 }

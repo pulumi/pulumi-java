@@ -24,7 +24,7 @@ public final class VirtualDiskResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="controllerId", required=true)
-      private final String controllerId;
+    private String controllerId;
 
     public String controllerId() {
         return this.controllerId;
@@ -35,7 +35,7 @@ public final class VirtualDiskResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="independenceMode", required=true)
-      private final String independenceMode;
+    private String independenceMode;
 
     public String independenceMode() {
         return this.independenceMode;
@@ -46,7 +46,7 @@ public final class VirtualDiskResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="totalSize", required=true)
-      private final Integer totalSize;
+    private Integer totalSize;
 
     public Integer totalSize() {
         return this.totalSize;
@@ -57,10 +57,10 @@ public final class VirtualDiskResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="virtualDiskId")
-      private final @Nullable String virtualDiskId;
+    private @Nullable String virtualDiskId;
 
     public Optional<String> virtualDiskId() {
-        return this.virtualDiskId == null ? Optional.empty() : Optional.ofNullable(this.virtualDiskId);
+        return Optional.ofNullable(this.virtualDiskId);
     }
 
     /**
@@ -68,82 +68,72 @@ public final class VirtualDiskResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="virtualDiskName", required=true)
-      private final String virtualDiskName;
+    private String virtualDiskName;
 
     public String virtualDiskName() {
         return this.virtualDiskName;
     }
 
-    public VirtualDiskResponse(
-        String controllerId,
-        String independenceMode,
-        Integer totalSize,
-        @Nullable String virtualDiskId,
-        String virtualDiskName) {
-        this.controllerId = Objects.requireNonNull(controllerId, "expected parameter 'controllerId' to be non-null");
-        this.independenceMode = Objects.requireNonNull(independenceMode, "expected parameter 'independenceMode' to be non-null");
-        this.totalSize = Objects.requireNonNull(totalSize, "expected parameter 'totalSize' to be non-null");
-        this.virtualDiskId = virtualDiskId;
-        this.virtualDiskName = Objects.requireNonNull(virtualDiskName, "expected parameter 'virtualDiskName' to be non-null");
-    }
+    private VirtualDiskResponse() {}
 
-    private VirtualDiskResponse() {
-        this.controllerId = null;
-        this.independenceMode = null;
-        this.totalSize = null;
-        this.virtualDiskId = null;
-        this.virtualDiskName = null;
+    private VirtualDiskResponse(VirtualDiskResponse $) {
+        this.controllerId = $.controllerId;
+        this.independenceMode = $.independenceMode;
+        this.totalSize = $.totalSize;
+        this.virtualDiskId = $.virtualDiskId;
+        this.virtualDiskName = $.virtualDiskName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VirtualDiskResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String controllerId;
-        private String independenceMode;
-        private Integer totalSize;
-        private @Nullable String virtualDiskId;
-        private String virtualDiskName;
+        private VirtualDiskResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new VirtualDiskResponse();
         }
 
         public Builder(VirtualDiskResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.controllerId = defaults.controllerId;
-    	      this.independenceMode = defaults.independenceMode;
-    	      this.totalSize = defaults.totalSize;
-    	      this.virtualDiskId = defaults.virtualDiskId;
-    	      this.virtualDiskName = defaults.virtualDiskName;
+            $ = new VirtualDiskResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder controllerId(String controllerId) {
-            this.controllerId = Objects.requireNonNull(controllerId);
+            $.controllerId = controllerId;
             return this;
         }
+
         public Builder independenceMode(String independenceMode) {
-            this.independenceMode = Objects.requireNonNull(independenceMode);
+            $.independenceMode = independenceMode;
             return this;
         }
+
         public Builder totalSize(Integer totalSize) {
-            this.totalSize = Objects.requireNonNull(totalSize);
+            $.totalSize = totalSize;
             return this;
         }
+
         public Builder virtualDiskId(@Nullable String virtualDiskId) {
-            this.virtualDiskId = virtualDiskId;
+            $.virtualDiskId = virtualDiskId;
             return this;
         }
+
         public Builder virtualDiskName(String virtualDiskName) {
-            this.virtualDiskName = Objects.requireNonNull(virtualDiskName);
+            $.virtualDiskName = virtualDiskName;
             return this;
-        }        public VirtualDiskResponse build() {
-            return new VirtualDiskResponse(controllerId, independenceMode, totalSize, virtualDiskId, virtualDiskName);
+        }
+
+        public VirtualDiskResponse build() {
+            $.controllerId = Objects.requireNonNull($.controllerId, "expected parameter 'controllerId' to be non-null");
+            $.independenceMode = Objects.requireNonNull($.independenceMode, "expected parameter 'independenceMode' to be non-null");
+            $.totalSize = Objects.requireNonNull($.totalSize, "expected parameter 'totalSize' to be non-null");
+            $.virtualDiskName = Objects.requireNonNull($.virtualDiskName, "expected parameter 'virtualDiskName' to be non-null");
+            return $;
         }
     }
+
 }

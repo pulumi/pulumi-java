@@ -9,9 +9,9 @@ import com.pulumi.azurenative.recoveryservices.inputs.CmkKeyVaultPropertiesArgs;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -28,10 +28,10 @@ public final class VaultPropertiesEncryptionArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="infrastructureEncryption")
-      private final @Nullable Output<Either<String,InfrastructureEncryptionState>> infrastructureEncryption;
+    private @Nullable Output<Either<String,InfrastructureEncryptionState>> infrastructureEncryption;
 
-    public Output<Either<String,InfrastructureEncryptionState>> infrastructureEncryption() {
-        return this.infrastructureEncryption == null ? Codegen.empty() : this.infrastructureEncryption;
+    public Optional<Output<Either<String,InfrastructureEncryptionState>>> infrastructureEncryption() {
+        return Optional.ofNullable(this.infrastructureEncryption);
     }
 
     /**
@@ -39,10 +39,10 @@ public final class VaultPropertiesEncryptionArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="kekIdentity")
-      private final @Nullable Output<CmkKekIdentityArgs> kekIdentity;
+    private @Nullable Output<CmkKekIdentityArgs> kekIdentity;
 
-    public Output<CmkKekIdentityArgs> kekIdentity() {
-        return this.kekIdentity == null ? Codegen.empty() : this.kekIdentity;
+    public Optional<Output<CmkKekIdentityArgs>> kekIdentity() {
+        return Optional.ofNullable(this.kekIdentity);
     }
 
     /**
@@ -50,76 +50,68 @@ public final class VaultPropertiesEncryptionArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="keyVaultProperties")
-      private final @Nullable Output<CmkKeyVaultPropertiesArgs> keyVaultProperties;
+    private @Nullable Output<CmkKeyVaultPropertiesArgs> keyVaultProperties;
 
-    public Output<CmkKeyVaultPropertiesArgs> keyVaultProperties() {
-        return this.keyVaultProperties == null ? Codegen.empty() : this.keyVaultProperties;
+    public Optional<Output<CmkKeyVaultPropertiesArgs>> keyVaultProperties() {
+        return Optional.ofNullable(this.keyVaultProperties);
     }
 
-    public VaultPropertiesEncryptionArgs(
-        @Nullable Output<Either<String,InfrastructureEncryptionState>> infrastructureEncryption,
-        @Nullable Output<CmkKekIdentityArgs> kekIdentity,
-        @Nullable Output<CmkKeyVaultPropertiesArgs> keyVaultProperties) {
-        this.infrastructureEncryption = infrastructureEncryption;
-        this.kekIdentity = kekIdentity;
-        this.keyVaultProperties = keyVaultProperties;
-    }
+    private VaultPropertiesEncryptionArgs() {}
 
-    private VaultPropertiesEncryptionArgs() {
-        this.infrastructureEncryption = Codegen.empty();
-        this.kekIdentity = Codegen.empty();
-        this.keyVaultProperties = Codegen.empty();
+    private VaultPropertiesEncryptionArgs(VaultPropertiesEncryptionArgs $) {
+        this.infrastructureEncryption = $.infrastructureEncryption;
+        this.kekIdentity = $.kekIdentity;
+        this.keyVaultProperties = $.keyVaultProperties;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VaultPropertiesEncryptionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Either<String,InfrastructureEncryptionState>> infrastructureEncryption;
-        private @Nullable Output<CmkKekIdentityArgs> kekIdentity;
-        private @Nullable Output<CmkKeyVaultPropertiesArgs> keyVaultProperties;
+        private VaultPropertiesEncryptionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new VaultPropertiesEncryptionArgs();
         }
 
         public Builder(VaultPropertiesEncryptionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.infrastructureEncryption = defaults.infrastructureEncryption;
-    	      this.kekIdentity = defaults.kekIdentity;
-    	      this.keyVaultProperties = defaults.keyVaultProperties;
+            $ = new VaultPropertiesEncryptionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder infrastructureEncryption(@Nullable Output<Either<String,InfrastructureEncryptionState>> infrastructureEncryption) {
-            this.infrastructureEncryption = infrastructureEncryption;
+            $.infrastructureEncryption = infrastructureEncryption;
             return this;
         }
-        public Builder infrastructureEncryption(@Nullable Either<String,InfrastructureEncryptionState> infrastructureEncryption) {
-            this.infrastructureEncryption = Codegen.ofNullable(infrastructureEncryption);
-            return this;
+
+        public Builder infrastructureEncryption(Either<String,InfrastructureEncryptionState> infrastructureEncryption) {
+            return infrastructureEncryption(Output.of(infrastructureEncryption));
         }
+
         public Builder kekIdentity(@Nullable Output<CmkKekIdentityArgs> kekIdentity) {
-            this.kekIdentity = kekIdentity;
+            $.kekIdentity = kekIdentity;
             return this;
         }
-        public Builder kekIdentity(@Nullable CmkKekIdentityArgs kekIdentity) {
-            this.kekIdentity = Codegen.ofNullable(kekIdentity);
-            return this;
+
+        public Builder kekIdentity(CmkKekIdentityArgs kekIdentity) {
+            return kekIdentity(Output.of(kekIdentity));
         }
+
         public Builder keyVaultProperties(@Nullable Output<CmkKeyVaultPropertiesArgs> keyVaultProperties) {
-            this.keyVaultProperties = keyVaultProperties;
+            $.keyVaultProperties = keyVaultProperties;
             return this;
         }
-        public Builder keyVaultProperties(@Nullable CmkKeyVaultPropertiesArgs keyVaultProperties) {
-            this.keyVaultProperties = Codegen.ofNullable(keyVaultProperties);
-            return this;
-        }        public VaultPropertiesEncryptionArgs build() {
-            return new VaultPropertiesEncryptionArgs(infrastructureEncryption, kekIdentity, keyVaultProperties);
+
+        public Builder keyVaultProperties(CmkKeyVaultPropertiesArgs keyVaultProperties) {
+            return keyVaultProperties(Output.of(keyVaultProperties));
+        }
+
+        public VaultPropertiesEncryptionArgs build() {
+            return $;
         }
     }
+
 }

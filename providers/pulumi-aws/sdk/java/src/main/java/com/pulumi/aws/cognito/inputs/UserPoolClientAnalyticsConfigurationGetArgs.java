@@ -5,10 +5,10 @@ package com.pulumi.aws.cognito.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class UserPoolClientAnalyticsConfigurationGetArgs extends com.pulum
      * 
      */
     @Import(name="applicationArn")
-      private final @Nullable Output<String> applicationArn;
+    private @Nullable Output<String> applicationArn;
 
-    public Output<String> applicationArn() {
-        return this.applicationArn == null ? Codegen.empty() : this.applicationArn;
+    public Optional<Output<String>> applicationArn() {
+        return Optional.ofNullable(this.applicationArn);
     }
 
     /**
@@ -32,10 +32,10 @@ public final class UserPoolClientAnalyticsConfigurationGetArgs extends com.pulum
      * 
      */
     @Import(name="applicationId")
-      private final @Nullable Output<String> applicationId;
+    private @Nullable Output<String> applicationId;
 
-    public Output<String> applicationId() {
-        return this.applicationId == null ? Codegen.empty() : this.applicationId;
+    public Optional<Output<String>> applicationId() {
+        return Optional.ofNullable(this.applicationId);
     }
 
     /**
@@ -43,10 +43,10 @@ public final class UserPoolClientAnalyticsConfigurationGetArgs extends com.pulum
      * 
      */
     @Import(name="externalId")
-      private final @Nullable Output<String> externalId;
+    private @Nullable Output<String> externalId;
 
-    public Output<String> externalId() {
-        return this.externalId == null ? Codegen.empty() : this.externalId;
+    public Optional<Output<String>> externalId() {
+        return Optional.ofNullable(this.externalId);
     }
 
     /**
@@ -54,10 +54,10 @@ public final class UserPoolClientAnalyticsConfigurationGetArgs extends com.pulum
      * 
      */
     @Import(name="roleArn")
-      private final @Nullable Output<String> roleArn;
+    private @Nullable Output<String> roleArn;
 
-    public Output<String> roleArn() {
-        return this.roleArn == null ? Codegen.empty() : this.roleArn;
+    public Optional<Output<String>> roleArn() {
+        return Optional.ofNullable(this.roleArn);
     }
 
     /**
@@ -65,102 +65,88 @@ public final class UserPoolClientAnalyticsConfigurationGetArgs extends com.pulum
      * 
      */
     @Import(name="userDataShared")
-      private final @Nullable Output<Boolean> userDataShared;
+    private @Nullable Output<Boolean> userDataShared;
 
-    public Output<Boolean> userDataShared() {
-        return this.userDataShared == null ? Codegen.empty() : this.userDataShared;
+    public Optional<Output<Boolean>> userDataShared() {
+        return Optional.ofNullable(this.userDataShared);
     }
 
-    public UserPoolClientAnalyticsConfigurationGetArgs(
-        @Nullable Output<String> applicationArn,
-        @Nullable Output<String> applicationId,
-        @Nullable Output<String> externalId,
-        @Nullable Output<String> roleArn,
-        @Nullable Output<Boolean> userDataShared) {
-        this.applicationArn = applicationArn;
-        this.applicationId = applicationId;
-        this.externalId = externalId;
-        this.roleArn = roleArn;
-        this.userDataShared = userDataShared;
-    }
+    private UserPoolClientAnalyticsConfigurationGetArgs() {}
 
-    private UserPoolClientAnalyticsConfigurationGetArgs() {
-        this.applicationArn = Codegen.empty();
-        this.applicationId = Codegen.empty();
-        this.externalId = Codegen.empty();
-        this.roleArn = Codegen.empty();
-        this.userDataShared = Codegen.empty();
+    private UserPoolClientAnalyticsConfigurationGetArgs(UserPoolClientAnalyticsConfigurationGetArgs $) {
+        this.applicationArn = $.applicationArn;
+        this.applicationId = $.applicationId;
+        this.externalId = $.externalId;
+        this.roleArn = $.roleArn;
+        this.userDataShared = $.userDataShared;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(UserPoolClientAnalyticsConfigurationGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> applicationArn;
-        private @Nullable Output<String> applicationId;
-        private @Nullable Output<String> externalId;
-        private @Nullable Output<String> roleArn;
-        private @Nullable Output<Boolean> userDataShared;
+        private UserPoolClientAnalyticsConfigurationGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new UserPoolClientAnalyticsConfigurationGetArgs();
         }
 
         public Builder(UserPoolClientAnalyticsConfigurationGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.applicationArn = defaults.applicationArn;
-    	      this.applicationId = defaults.applicationId;
-    	      this.externalId = defaults.externalId;
-    	      this.roleArn = defaults.roleArn;
-    	      this.userDataShared = defaults.userDataShared;
+            $ = new UserPoolClientAnalyticsConfigurationGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder applicationArn(@Nullable Output<String> applicationArn) {
-            this.applicationArn = applicationArn;
+            $.applicationArn = applicationArn;
             return this;
         }
-        public Builder applicationArn(@Nullable String applicationArn) {
-            this.applicationArn = Codegen.ofNullable(applicationArn);
-            return this;
+
+        public Builder applicationArn(String applicationArn) {
+            return applicationArn(Output.of(applicationArn));
         }
+
         public Builder applicationId(@Nullable Output<String> applicationId) {
-            this.applicationId = applicationId;
+            $.applicationId = applicationId;
             return this;
         }
-        public Builder applicationId(@Nullable String applicationId) {
-            this.applicationId = Codegen.ofNullable(applicationId);
-            return this;
+
+        public Builder applicationId(String applicationId) {
+            return applicationId(Output.of(applicationId));
         }
+
         public Builder externalId(@Nullable Output<String> externalId) {
-            this.externalId = externalId;
+            $.externalId = externalId;
             return this;
         }
-        public Builder externalId(@Nullable String externalId) {
-            this.externalId = Codegen.ofNullable(externalId);
-            return this;
+
+        public Builder externalId(String externalId) {
+            return externalId(Output.of(externalId));
         }
+
         public Builder roleArn(@Nullable Output<String> roleArn) {
-            this.roleArn = roleArn;
+            $.roleArn = roleArn;
             return this;
         }
-        public Builder roleArn(@Nullable String roleArn) {
-            this.roleArn = Codegen.ofNullable(roleArn);
-            return this;
+
+        public Builder roleArn(String roleArn) {
+            return roleArn(Output.of(roleArn));
         }
+
         public Builder userDataShared(@Nullable Output<Boolean> userDataShared) {
-            this.userDataShared = userDataShared;
+            $.userDataShared = userDataShared;
             return this;
         }
-        public Builder userDataShared(@Nullable Boolean userDataShared) {
-            this.userDataShared = Codegen.ofNullable(userDataShared);
-            return this;
-        }        public UserPoolClientAnalyticsConfigurationGetArgs build() {
-            return new UserPoolClientAnalyticsConfigurationGetArgs(applicationArn, applicationId, externalId, roleArn, userDataShared);
+
+        public Builder userDataShared(Boolean userDataShared) {
+            return userDataShared(Output.of(userDataShared));
+        }
+
+        public UserPoolClientAnalyticsConfigurationGetArgs build() {
+            return $;
         }
     }
+
 }

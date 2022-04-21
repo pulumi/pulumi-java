@@ -17,7 +17,7 @@ public final class GetMetricsSourceTagRuleArgs extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="metricsSourceName", required=true)
-      private final String metricsSourceName;
+    private String metricsSourceName;
 
     public String metricsSourceName() {
         return this.metricsSourceName;
@@ -28,7 +28,7 @@ public final class GetMetricsSourceTagRuleArgs extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="monitorName", required=true)
-      private final String monitorName;
+    private String monitorName;
 
     public String monitorName() {
         return this.monitorName;
@@ -39,80 +39,73 @@ public final class GetMetricsSourceTagRuleArgs extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
     @Import(name="ruleSetName", required=true)
-      private final String ruleSetName;
+    private String ruleSetName;
 
     public String ruleSetName() {
         return this.ruleSetName;
     }
 
-    public GetMetricsSourceTagRuleArgs(
-        String metricsSourceName,
-        String monitorName,
-        String resourceGroupName,
-        String ruleSetName) {
-        this.metricsSourceName = Objects.requireNonNull(metricsSourceName, "expected parameter 'metricsSourceName' to be non-null");
-        this.monitorName = Objects.requireNonNull(monitorName, "expected parameter 'monitorName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.ruleSetName = Objects.requireNonNull(ruleSetName, "expected parameter 'ruleSetName' to be non-null");
-    }
+    private GetMetricsSourceTagRuleArgs() {}
 
-    private GetMetricsSourceTagRuleArgs() {
-        this.metricsSourceName = null;
-        this.monitorName = null;
-        this.resourceGroupName = null;
-        this.ruleSetName = null;
+    private GetMetricsSourceTagRuleArgs(GetMetricsSourceTagRuleArgs $) {
+        this.metricsSourceName = $.metricsSourceName;
+        this.monitorName = $.monitorName;
+        this.resourceGroupName = $.resourceGroupName;
+        this.ruleSetName = $.ruleSetName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetMetricsSourceTagRuleArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String metricsSourceName;
-        private String monitorName;
-        private String resourceGroupName;
-        private String ruleSetName;
+        private GetMetricsSourceTagRuleArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetMetricsSourceTagRuleArgs();
         }
 
         public Builder(GetMetricsSourceTagRuleArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.metricsSourceName = defaults.metricsSourceName;
-    	      this.monitorName = defaults.monitorName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.ruleSetName = defaults.ruleSetName;
+            $ = new GetMetricsSourceTagRuleArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder metricsSourceName(String metricsSourceName) {
-            this.metricsSourceName = Objects.requireNonNull(metricsSourceName);
+            $.metricsSourceName = metricsSourceName;
             return this;
         }
+
         public Builder monitorName(String monitorName) {
-            this.monitorName = Objects.requireNonNull(monitorName);
+            $.monitorName = monitorName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder ruleSetName(String ruleSetName) {
-            this.ruleSetName = Objects.requireNonNull(ruleSetName);
+            $.ruleSetName = ruleSetName;
             return this;
-        }        public GetMetricsSourceTagRuleArgs build() {
-            return new GetMetricsSourceTagRuleArgs(metricsSourceName, monitorName, resourceGroupName, ruleSetName);
+        }
+
+        public GetMetricsSourceTagRuleArgs build() {
+            $.metricsSourceName = Objects.requireNonNull($.metricsSourceName, "expected parameter 'metricsSourceName' to be non-null");
+            $.monitorName = Objects.requireNonNull($.monitorName, "expected parameter 'monitorName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.ruleSetName = Objects.requireNonNull($.ruleSetName, "expected parameter 'ruleSetName' to be non-null");
+            return $;
         }
     }
+
 }

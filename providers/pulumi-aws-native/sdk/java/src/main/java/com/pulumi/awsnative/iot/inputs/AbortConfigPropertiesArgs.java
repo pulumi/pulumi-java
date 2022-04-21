@@ -6,7 +6,6 @@ package com.pulumi.awsnative.iot.inputs;
 import com.pulumi.awsnative.iot.inputs.JobTemplateAbortCriteriaArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
 
@@ -20,52 +19,53 @@ public final class AbortConfigPropertiesArgs extends com.pulumi.resources.Resour
     public static final AbortConfigPropertiesArgs Empty = new AbortConfigPropertiesArgs();
 
     @Import(name="criteriaList", required=true)
-      private final Output<List<JobTemplateAbortCriteriaArgs>> criteriaList;
+    private Output<List<JobTemplateAbortCriteriaArgs>> criteriaList;
 
     public Output<List<JobTemplateAbortCriteriaArgs>> criteriaList() {
         return this.criteriaList;
     }
 
-    public AbortConfigPropertiesArgs(Output<List<JobTemplateAbortCriteriaArgs>> criteriaList) {
-        this.criteriaList = Objects.requireNonNull(criteriaList, "expected parameter 'criteriaList' to be non-null");
-    }
+    private AbortConfigPropertiesArgs() {}
 
-    private AbortConfigPropertiesArgs() {
-        this.criteriaList = Codegen.empty();
+    private AbortConfigPropertiesArgs(AbortConfigPropertiesArgs $) {
+        this.criteriaList = $.criteriaList;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AbortConfigPropertiesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<List<JobTemplateAbortCriteriaArgs>> criteriaList;
+        private AbortConfigPropertiesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AbortConfigPropertiesArgs();
         }
 
         public Builder(AbortConfigPropertiesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.criteriaList = defaults.criteriaList;
+            $ = new AbortConfigPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder criteriaList(Output<List<JobTemplateAbortCriteriaArgs>> criteriaList) {
-            this.criteriaList = Objects.requireNonNull(criteriaList);
+            $.criteriaList = criteriaList;
             return this;
         }
+
         public Builder criteriaList(List<JobTemplateAbortCriteriaArgs> criteriaList) {
-            this.criteriaList = Output.of(Objects.requireNonNull(criteriaList));
-            return this;
+            return criteriaList(Output.of(criteriaList));
         }
+
         public Builder criteriaList(JobTemplateAbortCriteriaArgs... criteriaList) {
             return criteriaList(List.of(criteriaList));
-        }        public AbortConfigPropertiesArgs build() {
-            return new AbortConfigPropertiesArgs(criteriaList);
+        }
+
+        public AbortConfigPropertiesArgs build() {
+            $.criteriaList = Objects.requireNonNull($.criteriaList, "expected parameter 'criteriaList' to be non-null");
+            return $;
         }
     }
+
 }

@@ -26,10 +26,10 @@ public final class AutoscaleNotificationResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="email")
-      private final @Nullable EmailNotificationResponse email;
+    private @Nullable EmailNotificationResponse email;
 
     public Optional<EmailNotificationResponse> email() {
-        return this.email == null ? Optional.empty() : Optional.ofNullable(this.email);
+        return Optional.ofNullable(this.email);
     }
 
     /**
@@ -37,7 +37,7 @@ public final class AutoscaleNotificationResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="operation", required=true)
-      private final String operation;
+    private String operation;
 
     public String operation() {
         return this.operation;
@@ -48,67 +48,61 @@ public final class AutoscaleNotificationResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="webhooks")
-      private final @Nullable List<WebhookNotificationResponse> webhooks;
+    private @Nullable List<WebhookNotificationResponse> webhooks;
 
-    public List<WebhookNotificationResponse> webhooks() {
-        return this.webhooks == null ? List.of() : this.webhooks;
+    public Optional<List<WebhookNotificationResponse>> webhooks() {
+        return Optional.ofNullable(this.webhooks);
     }
 
-    public AutoscaleNotificationResponse(
-        @Nullable EmailNotificationResponse email,
-        String operation,
-        @Nullable List<WebhookNotificationResponse> webhooks) {
-        this.email = email;
-        this.operation = Objects.requireNonNull(operation, "expected parameter 'operation' to be non-null");
-        this.webhooks = webhooks;
-    }
+    private AutoscaleNotificationResponse() {}
 
-    private AutoscaleNotificationResponse() {
-        this.email = null;
-        this.operation = null;
-        this.webhooks = List.of();
+    private AutoscaleNotificationResponse(AutoscaleNotificationResponse $) {
+        this.email = $.email;
+        this.operation = $.operation;
+        this.webhooks = $.webhooks;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AutoscaleNotificationResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable EmailNotificationResponse email;
-        private String operation;
-        private @Nullable List<WebhookNotificationResponse> webhooks;
+        private AutoscaleNotificationResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AutoscaleNotificationResponse();
         }
 
         public Builder(AutoscaleNotificationResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.email = defaults.email;
-    	      this.operation = defaults.operation;
-    	      this.webhooks = defaults.webhooks;
+            $ = new AutoscaleNotificationResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder email(@Nullable EmailNotificationResponse email) {
-            this.email = email;
+            $.email = email;
             return this;
         }
+
         public Builder operation(String operation) {
-            this.operation = Objects.requireNonNull(operation);
+            $.operation = operation;
             return this;
         }
+
         public Builder webhooks(@Nullable List<WebhookNotificationResponse> webhooks) {
-            this.webhooks = webhooks;
+            $.webhooks = webhooks;
             return this;
         }
+
         public Builder webhooks(WebhookNotificationResponse... webhooks) {
             return webhooks(List.of(webhooks));
-        }        public AutoscaleNotificationResponse build() {
-            return new AutoscaleNotificationResponse(email, operation, webhooks);
+        }
+
+        public AutoscaleNotificationResponse build() {
+            $.operation = Objects.requireNonNull($.operation, "expected parameter 'operation' to be non-null");
+            return $;
         }
     }
+
 }

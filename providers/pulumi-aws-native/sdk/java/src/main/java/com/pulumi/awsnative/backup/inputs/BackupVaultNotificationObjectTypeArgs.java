@@ -5,7 +5,6 @@ package com.pulumi.awsnative.backup.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -16,73 +15,71 @@ public final class BackupVaultNotificationObjectTypeArgs extends com.pulumi.reso
     public static final BackupVaultNotificationObjectTypeArgs Empty = new BackupVaultNotificationObjectTypeArgs();
 
     @Import(name="backupVaultEvents", required=true)
-      private final Output<List<String>> backupVaultEvents;
+    private Output<List<String>> backupVaultEvents;
 
     public Output<List<String>> backupVaultEvents() {
         return this.backupVaultEvents;
     }
 
     @Import(name="sNSTopicArn", required=true)
-      private final Output<String> sNSTopicArn;
+    private Output<String> sNSTopicArn;
 
     public Output<String> sNSTopicArn() {
         return this.sNSTopicArn;
     }
 
-    public BackupVaultNotificationObjectTypeArgs(
-        Output<List<String>> backupVaultEvents,
-        Output<String> sNSTopicArn) {
-        this.backupVaultEvents = Objects.requireNonNull(backupVaultEvents, "expected parameter 'backupVaultEvents' to be non-null");
-        this.sNSTopicArn = Objects.requireNonNull(sNSTopicArn, "expected parameter 'sNSTopicArn' to be non-null");
-    }
+    private BackupVaultNotificationObjectTypeArgs() {}
 
-    private BackupVaultNotificationObjectTypeArgs() {
-        this.backupVaultEvents = Codegen.empty();
-        this.sNSTopicArn = Codegen.empty();
+    private BackupVaultNotificationObjectTypeArgs(BackupVaultNotificationObjectTypeArgs $) {
+        this.backupVaultEvents = $.backupVaultEvents;
+        this.sNSTopicArn = $.sNSTopicArn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BackupVaultNotificationObjectTypeArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<List<String>> backupVaultEvents;
-        private Output<String> sNSTopicArn;
+        private BackupVaultNotificationObjectTypeArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new BackupVaultNotificationObjectTypeArgs();
         }
 
         public Builder(BackupVaultNotificationObjectTypeArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.backupVaultEvents = defaults.backupVaultEvents;
-    	      this.sNSTopicArn = defaults.sNSTopicArn;
+            $ = new BackupVaultNotificationObjectTypeArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder backupVaultEvents(Output<List<String>> backupVaultEvents) {
-            this.backupVaultEvents = Objects.requireNonNull(backupVaultEvents);
+            $.backupVaultEvents = backupVaultEvents;
             return this;
         }
+
         public Builder backupVaultEvents(List<String> backupVaultEvents) {
-            this.backupVaultEvents = Output.of(Objects.requireNonNull(backupVaultEvents));
-            return this;
+            return backupVaultEvents(Output.of(backupVaultEvents));
         }
+
         public Builder backupVaultEvents(String... backupVaultEvents) {
             return backupVaultEvents(List.of(backupVaultEvents));
         }
+
         public Builder sNSTopicArn(Output<String> sNSTopicArn) {
-            this.sNSTopicArn = Objects.requireNonNull(sNSTopicArn);
+            $.sNSTopicArn = sNSTopicArn;
             return this;
         }
+
         public Builder sNSTopicArn(String sNSTopicArn) {
-            this.sNSTopicArn = Output.of(Objects.requireNonNull(sNSTopicArn));
-            return this;
-        }        public BackupVaultNotificationObjectTypeArgs build() {
-            return new BackupVaultNotificationObjectTypeArgs(backupVaultEvents, sNSTopicArn);
+            return sNSTopicArn(Output.of(sNSTopicArn));
+        }
+
+        public BackupVaultNotificationObjectTypeArgs build() {
+            $.backupVaultEvents = Objects.requireNonNull($.backupVaultEvents, "expected parameter 'backupVaultEvents' to be non-null");
+            $.sNSTopicArn = Objects.requireNonNull($.sNSTopicArn, "expected parameter 'sNSTopicArn' to be non-null");
+            return $;
         }
     }
+
 }

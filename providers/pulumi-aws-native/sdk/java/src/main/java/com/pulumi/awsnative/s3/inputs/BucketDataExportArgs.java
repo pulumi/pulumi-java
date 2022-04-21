@@ -6,7 +6,6 @@ package com.pulumi.awsnative.s3.inputs;
 import com.pulumi.awsnative.s3.inputs.BucketDestinationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +19,7 @@ public final class BucketDataExportArgs extends com.pulumi.resources.ResourceArg
     public static final BucketDataExportArgs Empty = new BucketDataExportArgs();
 
     @Import(name="destination", required=true)
-      private final Output<BucketDestinationArgs> destination;
+    private Output<BucketDestinationArgs> destination;
 
     public Output<BucketDestinationArgs> destination() {
         return this.destination;
@@ -31,63 +30,60 @@ public final class BucketDataExportArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="outputSchemaVersion", required=true)
-      private final Output<String> outputSchemaVersion;
+    private Output<String> outputSchemaVersion;
 
     public Output<String> outputSchemaVersion() {
         return this.outputSchemaVersion;
     }
 
-    public BucketDataExportArgs(
-        Output<BucketDestinationArgs> destination,
-        Output<String> outputSchemaVersion) {
-        this.destination = Objects.requireNonNull(destination, "expected parameter 'destination' to be non-null");
-        this.outputSchemaVersion = Objects.requireNonNull(outputSchemaVersion, "expected parameter 'outputSchemaVersion' to be non-null");
-    }
+    private BucketDataExportArgs() {}
 
-    private BucketDataExportArgs() {
-        this.destination = Codegen.empty();
-        this.outputSchemaVersion = Codegen.empty();
+    private BucketDataExportArgs(BucketDataExportArgs $) {
+        this.destination = $.destination;
+        this.outputSchemaVersion = $.outputSchemaVersion;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BucketDataExportArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<BucketDestinationArgs> destination;
-        private Output<String> outputSchemaVersion;
+        private BucketDataExportArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new BucketDataExportArgs();
         }
 
         public Builder(BucketDataExportArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.destination = defaults.destination;
-    	      this.outputSchemaVersion = defaults.outputSchemaVersion;
+            $ = new BucketDataExportArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder destination(Output<BucketDestinationArgs> destination) {
-            this.destination = Objects.requireNonNull(destination);
+            $.destination = destination;
             return this;
         }
+
         public Builder destination(BucketDestinationArgs destination) {
-            this.destination = Output.of(Objects.requireNonNull(destination));
-            return this;
+            return destination(Output.of(destination));
         }
+
         public Builder outputSchemaVersion(Output<String> outputSchemaVersion) {
-            this.outputSchemaVersion = Objects.requireNonNull(outputSchemaVersion);
+            $.outputSchemaVersion = outputSchemaVersion;
             return this;
         }
+
         public Builder outputSchemaVersion(String outputSchemaVersion) {
-            this.outputSchemaVersion = Output.of(Objects.requireNonNull(outputSchemaVersion));
-            return this;
-        }        public BucketDataExportArgs build() {
-            return new BucketDataExportArgs(destination, outputSchemaVersion);
+            return outputSchemaVersion(Output.of(outputSchemaVersion));
+        }
+
+        public BucketDataExportArgs build() {
+            $.destination = Objects.requireNonNull($.destination, "expected parameter 'destination' to be non-null");
+            $.outputSchemaVersion = Objects.requireNonNull($.outputSchemaVersion, "expected parameter 'outputSchemaVersion' to be non-null");
+            return $;
         }
     }
+
 }

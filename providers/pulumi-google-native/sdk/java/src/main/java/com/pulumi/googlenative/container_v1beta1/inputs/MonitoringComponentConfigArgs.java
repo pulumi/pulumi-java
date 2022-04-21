@@ -5,10 +5,10 @@ package com.pulumi.googlenative.container_v1beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.container_v1beta1.enums.MonitoringComponentConfigEnableComponentsItem;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,52 +25,52 @@ public final class MonitoringComponentConfigArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="enableComponents")
-      private final @Nullable Output<List<MonitoringComponentConfigEnableComponentsItem>> enableComponents;
+    private @Nullable Output<List<MonitoringComponentConfigEnableComponentsItem>> enableComponents;
 
-    public Output<List<MonitoringComponentConfigEnableComponentsItem>> enableComponents() {
-        return this.enableComponents == null ? Codegen.empty() : this.enableComponents;
+    public Optional<Output<List<MonitoringComponentConfigEnableComponentsItem>>> enableComponents() {
+        return Optional.ofNullable(this.enableComponents);
     }
 
-    public MonitoringComponentConfigArgs(@Nullable Output<List<MonitoringComponentConfigEnableComponentsItem>> enableComponents) {
-        this.enableComponents = enableComponents;
-    }
+    private MonitoringComponentConfigArgs() {}
 
-    private MonitoringComponentConfigArgs() {
-        this.enableComponents = Codegen.empty();
+    private MonitoringComponentConfigArgs(MonitoringComponentConfigArgs $) {
+        this.enableComponents = $.enableComponents;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MonitoringComponentConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<MonitoringComponentConfigEnableComponentsItem>> enableComponents;
+        private MonitoringComponentConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new MonitoringComponentConfigArgs();
         }
 
         public Builder(MonitoringComponentConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.enableComponents = defaults.enableComponents;
+            $ = new MonitoringComponentConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder enableComponents(@Nullable Output<List<MonitoringComponentConfigEnableComponentsItem>> enableComponents) {
-            this.enableComponents = enableComponents;
+            $.enableComponents = enableComponents;
             return this;
         }
-        public Builder enableComponents(@Nullable List<MonitoringComponentConfigEnableComponentsItem> enableComponents) {
-            this.enableComponents = Codegen.ofNullable(enableComponents);
-            return this;
+
+        public Builder enableComponents(List<MonitoringComponentConfigEnableComponentsItem> enableComponents) {
+            return enableComponents(Output.of(enableComponents));
         }
+
         public Builder enableComponents(MonitoringComponentConfigEnableComponentsItem... enableComponents) {
             return enableComponents(List.of(enableComponents));
-        }        public MonitoringComponentConfigArgs build() {
-            return new MonitoringComponentConfigArgs(enableComponents);
+        }
+
+        public MonitoringComponentConfigArgs build() {
+            return $;
         }
     }
+
 }

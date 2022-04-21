@@ -25,17 +25,17 @@ public final class DiskAddOn extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="addOnType", required=true)
-      private final String addOnType;
+    private String addOnType;
 
     public String addOnType() {
         return this.addOnType;
     }
 
     @Import(name="autoSnapshotAddOnRequest")
-      private final @Nullable DiskAutoSnapshotAddOn autoSnapshotAddOnRequest;
+    private @Nullable DiskAutoSnapshotAddOn autoSnapshotAddOnRequest;
 
     public Optional<DiskAutoSnapshotAddOn> autoSnapshotAddOnRequest() {
-        return this.autoSnapshotAddOnRequest == null ? Optional.empty() : Optional.ofNullable(this.autoSnapshotAddOnRequest);
+        return Optional.ofNullable(this.autoSnapshotAddOnRequest);
     }
 
     /**
@@ -43,64 +43,57 @@ public final class DiskAddOn extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="status")
-      private final @Nullable DiskAddOnStatus status;
+    private @Nullable DiskAddOnStatus status;
 
     public Optional<DiskAddOnStatus> status() {
-        return this.status == null ? Optional.empty() : Optional.ofNullable(this.status);
+        return Optional.ofNullable(this.status);
     }
 
-    public DiskAddOn(
-        String addOnType,
-        @Nullable DiskAutoSnapshotAddOn autoSnapshotAddOnRequest,
-        @Nullable DiskAddOnStatus status) {
-        this.addOnType = Objects.requireNonNull(addOnType, "expected parameter 'addOnType' to be non-null");
-        this.autoSnapshotAddOnRequest = autoSnapshotAddOnRequest;
-        this.status = status;
-    }
+    private DiskAddOn() {}
 
-    private DiskAddOn() {
-        this.addOnType = null;
-        this.autoSnapshotAddOnRequest = null;
-        this.status = null;
+    private DiskAddOn(DiskAddOn $) {
+        this.addOnType = $.addOnType;
+        this.autoSnapshotAddOnRequest = $.autoSnapshotAddOnRequest;
+        this.status = $.status;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DiskAddOn defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String addOnType;
-        private @Nullable DiskAutoSnapshotAddOn autoSnapshotAddOnRequest;
-        private @Nullable DiskAddOnStatus status;
+        private DiskAddOn $;
 
         public Builder() {
-    	      // Empty
+            $ = new DiskAddOn();
         }
 
         public Builder(DiskAddOn defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.addOnType = defaults.addOnType;
-    	      this.autoSnapshotAddOnRequest = defaults.autoSnapshotAddOnRequest;
-    	      this.status = defaults.status;
+            $ = new DiskAddOn(Objects.requireNonNull(defaults));
         }
 
         public Builder addOnType(String addOnType) {
-            this.addOnType = Objects.requireNonNull(addOnType);
+            $.addOnType = addOnType;
             return this;
         }
+
         public Builder autoSnapshotAddOnRequest(@Nullable DiskAutoSnapshotAddOn autoSnapshotAddOnRequest) {
-            this.autoSnapshotAddOnRequest = autoSnapshotAddOnRequest;
+            $.autoSnapshotAddOnRequest = autoSnapshotAddOnRequest;
             return this;
         }
+
         public Builder status(@Nullable DiskAddOnStatus status) {
-            this.status = status;
+            $.status = status;
             return this;
-        }        public DiskAddOn build() {
-            return new DiskAddOn(addOnType, autoSnapshotAddOnRequest, status);
+        }
+
+        public DiskAddOn build() {
+            $.addOnType = Objects.requireNonNull($.addOnType, "expected parameter 'addOnType' to be non-null");
+            return $;
         }
     }
+
 }

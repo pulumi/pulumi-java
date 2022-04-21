@@ -6,8 +6,8 @@ package com.pulumi.azurenative.datafactory.inputs;
 import com.pulumi.azurenative.datafactory.inputs.PrivateLinkConnectionStateArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class PrivateLinkConnectionApprovalRequestArgs extends com.pulumi.r
      * 
      */
     @Import(name="privateLinkServiceConnectionState")
-      private final @Nullable Output<PrivateLinkConnectionStateArgs> privateLinkServiceConnectionState;
+    private @Nullable Output<PrivateLinkConnectionStateArgs> privateLinkServiceConnectionState;
 
-    public Output<PrivateLinkConnectionStateArgs> privateLinkServiceConnectionState() {
-        return this.privateLinkServiceConnectionState == null ? Codegen.empty() : this.privateLinkServiceConnectionState;
+    public Optional<Output<PrivateLinkConnectionStateArgs>> privateLinkServiceConnectionState() {
+        return Optional.ofNullable(this.privateLinkServiceConnectionState);
     }
 
-    public PrivateLinkConnectionApprovalRequestArgs(@Nullable Output<PrivateLinkConnectionStateArgs> privateLinkServiceConnectionState) {
-        this.privateLinkServiceConnectionState = privateLinkServiceConnectionState;
-    }
+    private PrivateLinkConnectionApprovalRequestArgs() {}
 
-    private PrivateLinkConnectionApprovalRequestArgs() {
-        this.privateLinkServiceConnectionState = Codegen.empty();
+    private PrivateLinkConnectionApprovalRequestArgs(PrivateLinkConnectionApprovalRequestArgs $) {
+        this.privateLinkServiceConnectionState = $.privateLinkServiceConnectionState;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PrivateLinkConnectionApprovalRequestArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<PrivateLinkConnectionStateArgs> privateLinkServiceConnectionState;
+        private PrivateLinkConnectionApprovalRequestArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PrivateLinkConnectionApprovalRequestArgs();
         }
 
         public Builder(PrivateLinkConnectionApprovalRequestArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.privateLinkServiceConnectionState = defaults.privateLinkServiceConnectionState;
+            $ = new PrivateLinkConnectionApprovalRequestArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder privateLinkServiceConnectionState(@Nullable Output<PrivateLinkConnectionStateArgs> privateLinkServiceConnectionState) {
-            this.privateLinkServiceConnectionState = privateLinkServiceConnectionState;
+            $.privateLinkServiceConnectionState = privateLinkServiceConnectionState;
             return this;
         }
-        public Builder privateLinkServiceConnectionState(@Nullable PrivateLinkConnectionStateArgs privateLinkServiceConnectionState) {
-            this.privateLinkServiceConnectionState = Codegen.ofNullable(privateLinkServiceConnectionState);
-            return this;
-        }        public PrivateLinkConnectionApprovalRequestArgs build() {
-            return new PrivateLinkConnectionApprovalRequestArgs(privateLinkServiceConnectionState);
+
+        public Builder privateLinkServiceConnectionState(PrivateLinkConnectionStateArgs privateLinkServiceConnectionState) {
+            return privateLinkServiceConnectionState(Output.of(privateLinkServiceConnectionState));
+        }
+
+        public PrivateLinkConnectionApprovalRequestArgs build() {
+            return $;
         }
     }
+
 }

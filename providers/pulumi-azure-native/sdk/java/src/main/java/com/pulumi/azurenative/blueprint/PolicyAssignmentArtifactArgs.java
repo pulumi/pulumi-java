@@ -11,6 +11,7 @@ import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +24,10 @@ public final class PolicyAssignmentArtifactArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="artifactName")
-      private final @Nullable Output<String> artifactName;
+    private @Nullable Output<String> artifactName;
 
-    public Output<String> artifactName() {
-        return this.artifactName == null ? Codegen.empty() : this.artifactName;
+    public Optional<Output<String>> artifactName() {
+        return Optional.ofNullable(this.artifactName);
     }
 
     /**
@@ -34,7 +35,7 @@ public final class PolicyAssignmentArtifactArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="blueprintName", required=true)
-      private final Output<String> blueprintName;
+    private Output<String> blueprintName;
 
     public Output<String> blueprintName() {
         return this.blueprintName;
@@ -45,10 +46,10 @@ public final class PolicyAssignmentArtifactArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="dependsOn")
-      private final @Nullable Output<List<String>> dependsOn;
+    private @Nullable Output<List<String>> dependsOn;
 
-    public Output<List<String>> dependsOn() {
-        return this.dependsOn == null ? Codegen.empty() : this.dependsOn;
+    public Optional<Output<List<String>>> dependsOn() {
+        return Optional.ofNullable(this.dependsOn);
     }
 
     /**
@@ -56,10 +57,10 @@ public final class PolicyAssignmentArtifactArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -67,10 +68,10 @@ public final class PolicyAssignmentArtifactArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="displayName")
-      private final @Nullable Output<String> displayName;
+    private @Nullable Output<String> displayName;
 
-    public Output<String> displayName() {
-        return this.displayName == null ? Codegen.empty() : this.displayName;
+    public Optional<Output<String>> displayName() {
+        return Optional.ofNullable(this.displayName);
     }
 
     /**
@@ -79,7 +80,7 @@ public final class PolicyAssignmentArtifactArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="kind", required=true)
-      private final Output<String> kind;
+    private Output<String> kind;
 
     public Output<String> kind() {
         return this.kind;
@@ -90,7 +91,7 @@ public final class PolicyAssignmentArtifactArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="parameters", required=true)
-      private final Output<Map<String,ParameterValueArgs>> parameters;
+    private Output<Map<String,ParameterValueArgs>> parameters;
 
     public Output<Map<String,ParameterValueArgs>> parameters() {
         return this.parameters;
@@ -101,7 +102,7 @@ public final class PolicyAssignmentArtifactArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="policyDefinitionId", required=true)
-      private final Output<String> policyDefinitionId;
+    private Output<String> policyDefinitionId;
 
     public Output<String> policyDefinitionId() {
         return this.policyDefinitionId;
@@ -112,10 +113,10 @@ public final class PolicyAssignmentArtifactArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="resourceGroup")
-      private final @Nullable Output<String> resourceGroup;
+    private @Nullable Output<String> resourceGroup;
 
-    public Output<String> resourceGroup() {
-        return this.resourceGroup == null ? Codegen.empty() : this.resourceGroup;
+    public Optional<Output<String>> resourceGroup() {
+        return Optional.ofNullable(this.resourceGroup);
     }
 
     /**
@@ -123,170 +124,147 @@ public final class PolicyAssignmentArtifactArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="resourceScope", required=true)
-      private final Output<String> resourceScope;
+    private Output<String> resourceScope;
 
     public Output<String> resourceScope() {
         return this.resourceScope;
     }
 
-    public PolicyAssignmentArtifactArgs(
-        @Nullable Output<String> artifactName,
-        Output<String> blueprintName,
-        @Nullable Output<List<String>> dependsOn,
-        @Nullable Output<String> description,
-        @Nullable Output<String> displayName,
-        Output<String> kind,
-        Output<Map<String,ParameterValueArgs>> parameters,
-        Output<String> policyDefinitionId,
-        @Nullable Output<String> resourceGroup,
-        Output<String> resourceScope) {
-        this.artifactName = artifactName;
-        this.blueprintName = Objects.requireNonNull(blueprintName, "expected parameter 'blueprintName' to be non-null");
-        this.dependsOn = dependsOn;
-        this.description = description;
-        this.displayName = displayName;
-        this.kind = Codegen.stringProp("kind").output().arg(kind).require();
-        this.parameters = Objects.requireNonNull(parameters, "expected parameter 'parameters' to be non-null");
-        this.policyDefinitionId = Objects.requireNonNull(policyDefinitionId, "expected parameter 'policyDefinitionId' to be non-null");
-        this.resourceGroup = resourceGroup;
-        this.resourceScope = Objects.requireNonNull(resourceScope, "expected parameter 'resourceScope' to be non-null");
-    }
+    private PolicyAssignmentArtifactArgs() {}
 
-    private PolicyAssignmentArtifactArgs() {
-        this.artifactName = Codegen.empty();
-        this.blueprintName = Codegen.empty();
-        this.dependsOn = Codegen.empty();
-        this.description = Codegen.empty();
-        this.displayName = Codegen.empty();
-        this.kind = Codegen.empty();
-        this.parameters = Codegen.empty();
-        this.policyDefinitionId = Codegen.empty();
-        this.resourceGroup = Codegen.empty();
-        this.resourceScope = Codegen.empty();
+    private PolicyAssignmentArtifactArgs(PolicyAssignmentArtifactArgs $) {
+        this.artifactName = $.artifactName;
+        this.blueprintName = $.blueprintName;
+        this.dependsOn = $.dependsOn;
+        this.description = $.description;
+        this.displayName = $.displayName;
+        this.kind = $.kind;
+        this.parameters = $.parameters;
+        this.policyDefinitionId = $.policyDefinitionId;
+        this.resourceGroup = $.resourceGroup;
+        this.resourceScope = $.resourceScope;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PolicyAssignmentArtifactArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> artifactName;
-        private Output<String> blueprintName;
-        private @Nullable Output<List<String>> dependsOn;
-        private @Nullable Output<String> description;
-        private @Nullable Output<String> displayName;
-        private Output<String> kind;
-        private Output<Map<String,ParameterValueArgs>> parameters;
-        private Output<String> policyDefinitionId;
-        private @Nullable Output<String> resourceGroup;
-        private Output<String> resourceScope;
+        private PolicyAssignmentArtifactArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PolicyAssignmentArtifactArgs();
         }
 
         public Builder(PolicyAssignmentArtifactArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.artifactName = defaults.artifactName;
-    	      this.blueprintName = defaults.blueprintName;
-    	      this.dependsOn = defaults.dependsOn;
-    	      this.description = defaults.description;
-    	      this.displayName = defaults.displayName;
-    	      this.kind = defaults.kind;
-    	      this.parameters = defaults.parameters;
-    	      this.policyDefinitionId = defaults.policyDefinitionId;
-    	      this.resourceGroup = defaults.resourceGroup;
-    	      this.resourceScope = defaults.resourceScope;
+            $ = new PolicyAssignmentArtifactArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder artifactName(@Nullable Output<String> artifactName) {
-            this.artifactName = artifactName;
+            $.artifactName = artifactName;
             return this;
         }
-        public Builder artifactName(@Nullable String artifactName) {
-            this.artifactName = Codegen.ofNullable(artifactName);
-            return this;
+
+        public Builder artifactName(String artifactName) {
+            return artifactName(Output.of(artifactName));
         }
+
         public Builder blueprintName(Output<String> blueprintName) {
-            this.blueprintName = Objects.requireNonNull(blueprintName);
+            $.blueprintName = blueprintName;
             return this;
         }
+
         public Builder blueprintName(String blueprintName) {
-            this.blueprintName = Output.of(Objects.requireNonNull(blueprintName));
-            return this;
+            return blueprintName(Output.of(blueprintName));
         }
+
         public Builder dependsOn(@Nullable Output<List<String>> dependsOn) {
-            this.dependsOn = dependsOn;
+            $.dependsOn = dependsOn;
             return this;
         }
-        public Builder dependsOn(@Nullable List<String> dependsOn) {
-            this.dependsOn = Codegen.ofNullable(dependsOn);
-            return this;
+
+        public Builder dependsOn(List<String> dependsOn) {
+            return dependsOn(Output.of(dependsOn));
         }
+
         public Builder dependsOn(String... dependsOn) {
             return dependsOn(List.of(dependsOn));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder displayName(@Nullable Output<String> displayName) {
-            this.displayName = displayName;
+            $.displayName = displayName;
             return this;
         }
-        public Builder displayName(@Nullable String displayName) {
-            this.displayName = Codegen.ofNullable(displayName);
-            return this;
+
+        public Builder displayName(String displayName) {
+            return displayName(Output.of(displayName));
         }
+
         public Builder kind(Output<String> kind) {
-            this.kind = Objects.requireNonNull(kind);
+            $.kind = kind;
             return this;
         }
+
         public Builder kind(String kind) {
-            this.kind = Output.of(Objects.requireNonNull(kind));
-            return this;
+            return kind(Output.of(kind));
         }
+
         public Builder parameters(Output<Map<String,ParameterValueArgs>> parameters) {
-            this.parameters = Objects.requireNonNull(parameters);
+            $.parameters = parameters;
             return this;
         }
+
         public Builder parameters(Map<String,ParameterValueArgs> parameters) {
-            this.parameters = Output.of(Objects.requireNonNull(parameters));
-            return this;
+            return parameters(Output.of(parameters));
         }
+
         public Builder policyDefinitionId(Output<String> policyDefinitionId) {
-            this.policyDefinitionId = Objects.requireNonNull(policyDefinitionId);
+            $.policyDefinitionId = policyDefinitionId;
             return this;
         }
+
         public Builder policyDefinitionId(String policyDefinitionId) {
-            this.policyDefinitionId = Output.of(Objects.requireNonNull(policyDefinitionId));
-            return this;
+            return policyDefinitionId(Output.of(policyDefinitionId));
         }
+
         public Builder resourceGroup(@Nullable Output<String> resourceGroup) {
-            this.resourceGroup = resourceGroup;
+            $.resourceGroup = resourceGroup;
             return this;
         }
-        public Builder resourceGroup(@Nullable String resourceGroup) {
-            this.resourceGroup = Codegen.ofNullable(resourceGroup);
-            return this;
+
+        public Builder resourceGroup(String resourceGroup) {
+            return resourceGroup(Output.of(resourceGroup));
         }
+
         public Builder resourceScope(Output<String> resourceScope) {
-            this.resourceScope = Objects.requireNonNull(resourceScope);
+            $.resourceScope = resourceScope;
             return this;
         }
+
         public Builder resourceScope(String resourceScope) {
-            this.resourceScope = Output.of(Objects.requireNonNull(resourceScope));
-            return this;
-        }        public PolicyAssignmentArtifactArgs build() {
-            return new PolicyAssignmentArtifactArgs(artifactName, blueprintName, dependsOn, description, displayName, kind, parameters, policyDefinitionId, resourceGroup, resourceScope);
+            return resourceScope(Output.of(resourceScope));
+        }
+
+        public PolicyAssignmentArtifactArgs build() {
+            $.blueprintName = Objects.requireNonNull($.blueprintName, "expected parameter 'blueprintName' to be non-null");
+            $.kind = Codegen.stringProp("kind").output().arg($.kind).require();
+            $.parameters = Objects.requireNonNull($.parameters, "expected parameter 'parameters' to be non-null");
+            $.policyDefinitionId = Objects.requireNonNull($.policyDefinitionId, "expected parameter 'policyDefinitionId' to be non-null");
+            $.resourceScope = Objects.requireNonNull($.resourceScope, "expected parameter 'resourceScope' to be non-null");
+            return $;
         }
     }
+
 }

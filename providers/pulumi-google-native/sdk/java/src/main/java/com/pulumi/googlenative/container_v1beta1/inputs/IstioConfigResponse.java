@@ -22,7 +22,7 @@ public final class IstioConfigResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="auth", required=true)
-      private final String auth;
+    private String auth;
 
     public String auth() {
         return this.auth;
@@ -33,55 +33,52 @@ public final class IstioConfigResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="disabled", required=true)
-      private final Boolean disabled;
+    private Boolean disabled;
 
     public Boolean disabled() {
         return this.disabled;
     }
 
-    public IstioConfigResponse(
-        String auth,
-        Boolean disabled) {
-        this.auth = Objects.requireNonNull(auth, "expected parameter 'auth' to be non-null");
-        this.disabled = Objects.requireNonNull(disabled, "expected parameter 'disabled' to be non-null");
-    }
+    private IstioConfigResponse() {}
 
-    private IstioConfigResponse() {
-        this.auth = null;
-        this.disabled = null;
+    private IstioConfigResponse(IstioConfigResponse $) {
+        this.auth = $.auth;
+        this.disabled = $.disabled;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(IstioConfigResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String auth;
-        private Boolean disabled;
+        private IstioConfigResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new IstioConfigResponse();
         }
 
         public Builder(IstioConfigResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.auth = defaults.auth;
-    	      this.disabled = defaults.disabled;
+            $ = new IstioConfigResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder auth(String auth) {
-            this.auth = Objects.requireNonNull(auth);
+            $.auth = auth;
             return this;
         }
+
         public Builder disabled(Boolean disabled) {
-            this.disabled = Objects.requireNonNull(disabled);
+            $.disabled = disabled;
             return this;
-        }        public IstioConfigResponse build() {
-            return new IstioConfigResponse(auth, disabled);
+        }
+
+        public IstioConfigResponse build() {
+            $.auth = Objects.requireNonNull($.auth, "expected parameter 'auth' to be non-null");
+            $.disabled = Objects.requireNonNull($.disabled, "expected parameter 'disabled' to be non-null");
+            return $;
         }
     }
+
 }

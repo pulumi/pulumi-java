@@ -24,10 +24,10 @@ public final class IntegrationServiceEnvironmentSkuResponse extends com.pulumi.r
      * 
      */
     @Import(name="capacity")
-      private final @Nullable Integer capacity;
+    private @Nullable Integer capacity;
 
     public Optional<Integer> capacity() {
-        return this.capacity == null ? Optional.empty() : Optional.ofNullable(this.capacity);
+        return Optional.ofNullable(this.capacity);
     }
 
     /**
@@ -35,55 +35,50 @@ public final class IntegrationServiceEnvironmentSkuResponse extends com.pulumi.r
      * 
      */
     @Import(name="name")
-      private final @Nullable String name;
+    private @Nullable String name;
 
     public Optional<String> name() {
-        return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
+        return Optional.ofNullable(this.name);
     }
 
-    public IntegrationServiceEnvironmentSkuResponse(
-        @Nullable Integer capacity,
-        @Nullable String name) {
-        this.capacity = capacity;
-        this.name = name;
-    }
+    private IntegrationServiceEnvironmentSkuResponse() {}
 
-    private IntegrationServiceEnvironmentSkuResponse() {
-        this.capacity = null;
-        this.name = null;
+    private IntegrationServiceEnvironmentSkuResponse(IntegrationServiceEnvironmentSkuResponse $) {
+        this.capacity = $.capacity;
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(IntegrationServiceEnvironmentSkuResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Integer capacity;
-        private @Nullable String name;
+        private IntegrationServiceEnvironmentSkuResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new IntegrationServiceEnvironmentSkuResponse();
         }
 
         public Builder(IntegrationServiceEnvironmentSkuResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.capacity = defaults.capacity;
-    	      this.name = defaults.name;
+            $ = new IntegrationServiceEnvironmentSkuResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder capacity(@Nullable Integer capacity) {
-            this.capacity = capacity;
+            $.capacity = capacity;
             return this;
         }
+
         public Builder name(@Nullable String name) {
-            this.name = name;
+            $.name = name;
             return this;
-        }        public IntegrationServiceEnvironmentSkuResponse build() {
-            return new IntegrationServiceEnvironmentSkuResponse(capacity, name);
+        }
+
+        public IntegrationServiceEnvironmentSkuResponse build() {
+            return $;
         }
     }
+
 }

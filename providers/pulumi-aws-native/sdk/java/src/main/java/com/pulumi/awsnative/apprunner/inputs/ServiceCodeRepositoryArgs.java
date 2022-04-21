@@ -7,9 +7,9 @@ import com.pulumi.awsnative.apprunner.inputs.ServiceCodeConfigurationArgs;
 import com.pulumi.awsnative.apprunner.inputs.ServiceSourceCodeVersionArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class ServiceCodeRepositoryArgs extends com.pulumi.resources.Resour
     public static final ServiceCodeRepositoryArgs Empty = new ServiceCodeRepositoryArgs();
 
     @Import(name="codeConfiguration")
-      private final @Nullable Output<ServiceCodeConfigurationArgs> codeConfiguration;
+    private @Nullable Output<ServiceCodeConfigurationArgs> codeConfiguration;
 
-    public Output<ServiceCodeConfigurationArgs> codeConfiguration() {
-        return this.codeConfiguration == null ? Codegen.empty() : this.codeConfiguration;
+    public Optional<Output<ServiceCodeConfigurationArgs>> codeConfiguration() {
+        return Optional.ofNullable(this.codeConfiguration);
     }
 
     /**
@@ -33,83 +33,77 @@ public final class ServiceCodeRepositoryArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="repositoryUrl", required=true)
-      private final Output<String> repositoryUrl;
+    private Output<String> repositoryUrl;
 
     public Output<String> repositoryUrl() {
         return this.repositoryUrl;
     }
 
     @Import(name="sourceCodeVersion", required=true)
-      private final Output<ServiceSourceCodeVersionArgs> sourceCodeVersion;
+    private Output<ServiceSourceCodeVersionArgs> sourceCodeVersion;
 
     public Output<ServiceSourceCodeVersionArgs> sourceCodeVersion() {
         return this.sourceCodeVersion;
     }
 
-    public ServiceCodeRepositoryArgs(
-        @Nullable Output<ServiceCodeConfigurationArgs> codeConfiguration,
-        Output<String> repositoryUrl,
-        Output<ServiceSourceCodeVersionArgs> sourceCodeVersion) {
-        this.codeConfiguration = codeConfiguration;
-        this.repositoryUrl = Objects.requireNonNull(repositoryUrl, "expected parameter 'repositoryUrl' to be non-null");
-        this.sourceCodeVersion = Objects.requireNonNull(sourceCodeVersion, "expected parameter 'sourceCodeVersion' to be non-null");
-    }
+    private ServiceCodeRepositoryArgs() {}
 
-    private ServiceCodeRepositoryArgs() {
-        this.codeConfiguration = Codegen.empty();
-        this.repositoryUrl = Codegen.empty();
-        this.sourceCodeVersion = Codegen.empty();
+    private ServiceCodeRepositoryArgs(ServiceCodeRepositoryArgs $) {
+        this.codeConfiguration = $.codeConfiguration;
+        this.repositoryUrl = $.repositoryUrl;
+        this.sourceCodeVersion = $.sourceCodeVersion;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ServiceCodeRepositoryArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<ServiceCodeConfigurationArgs> codeConfiguration;
-        private Output<String> repositoryUrl;
-        private Output<ServiceSourceCodeVersionArgs> sourceCodeVersion;
+        private ServiceCodeRepositoryArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ServiceCodeRepositoryArgs();
         }
 
         public Builder(ServiceCodeRepositoryArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.codeConfiguration = defaults.codeConfiguration;
-    	      this.repositoryUrl = defaults.repositoryUrl;
-    	      this.sourceCodeVersion = defaults.sourceCodeVersion;
+            $ = new ServiceCodeRepositoryArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder codeConfiguration(@Nullable Output<ServiceCodeConfigurationArgs> codeConfiguration) {
-            this.codeConfiguration = codeConfiguration;
+            $.codeConfiguration = codeConfiguration;
             return this;
         }
-        public Builder codeConfiguration(@Nullable ServiceCodeConfigurationArgs codeConfiguration) {
-            this.codeConfiguration = Codegen.ofNullable(codeConfiguration);
-            return this;
+
+        public Builder codeConfiguration(ServiceCodeConfigurationArgs codeConfiguration) {
+            return codeConfiguration(Output.of(codeConfiguration));
         }
+
         public Builder repositoryUrl(Output<String> repositoryUrl) {
-            this.repositoryUrl = Objects.requireNonNull(repositoryUrl);
+            $.repositoryUrl = repositoryUrl;
             return this;
         }
+
         public Builder repositoryUrl(String repositoryUrl) {
-            this.repositoryUrl = Output.of(Objects.requireNonNull(repositoryUrl));
-            return this;
+            return repositoryUrl(Output.of(repositoryUrl));
         }
+
         public Builder sourceCodeVersion(Output<ServiceSourceCodeVersionArgs> sourceCodeVersion) {
-            this.sourceCodeVersion = Objects.requireNonNull(sourceCodeVersion);
+            $.sourceCodeVersion = sourceCodeVersion;
             return this;
         }
+
         public Builder sourceCodeVersion(ServiceSourceCodeVersionArgs sourceCodeVersion) {
-            this.sourceCodeVersion = Output.of(Objects.requireNonNull(sourceCodeVersion));
-            return this;
-        }        public ServiceCodeRepositoryArgs build() {
-            return new ServiceCodeRepositoryArgs(codeConfiguration, repositoryUrl, sourceCodeVersion);
+            return sourceCodeVersion(Output.of(sourceCodeVersion));
+        }
+
+        public ServiceCodeRepositoryArgs build() {
+            $.repositoryUrl = Objects.requireNonNull($.repositoryUrl, "expected parameter 'repositoryUrl' to be non-null");
+            $.sourceCodeVersion = Objects.requireNonNull($.sourceCodeVersion, "expected parameter 'sourceCodeVersion' to be non-null");
+            return $;
         }
     }
+
 }

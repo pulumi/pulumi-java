@@ -6,9 +6,9 @@ package com.pulumi.aws.cognito.inputs;
 import com.pulumi.aws.cognito.inputs.UserPoolAdminCreateUserConfigInviteMessageTemplateArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class UserPoolAdminCreateUserConfigArgs extends com.pulumi.resource
      * 
      */
     @Import(name="allowAdminCreateUserOnly")
-      private final @Nullable Output<Boolean> allowAdminCreateUserOnly;
+    private @Nullable Output<Boolean> allowAdminCreateUserOnly;
 
-    public Output<Boolean> allowAdminCreateUserOnly() {
-        return this.allowAdminCreateUserOnly == null ? Codegen.empty() : this.allowAdminCreateUserOnly;
+    public Optional<Output<Boolean>> allowAdminCreateUserOnly() {
+        return Optional.ofNullable(this.allowAdminCreateUserOnly);
     }
 
     /**
@@ -32,63 +32,58 @@ public final class UserPoolAdminCreateUserConfigArgs extends com.pulumi.resource
      * 
      */
     @Import(name="inviteMessageTemplate")
-      private final @Nullable Output<UserPoolAdminCreateUserConfigInviteMessageTemplateArgs> inviteMessageTemplate;
+    private @Nullable Output<UserPoolAdminCreateUserConfigInviteMessageTemplateArgs> inviteMessageTemplate;
 
-    public Output<UserPoolAdminCreateUserConfigInviteMessageTemplateArgs> inviteMessageTemplate() {
-        return this.inviteMessageTemplate == null ? Codegen.empty() : this.inviteMessageTemplate;
+    public Optional<Output<UserPoolAdminCreateUserConfigInviteMessageTemplateArgs>> inviteMessageTemplate() {
+        return Optional.ofNullable(this.inviteMessageTemplate);
     }
 
-    public UserPoolAdminCreateUserConfigArgs(
-        @Nullable Output<Boolean> allowAdminCreateUserOnly,
-        @Nullable Output<UserPoolAdminCreateUserConfigInviteMessageTemplateArgs> inviteMessageTemplate) {
-        this.allowAdminCreateUserOnly = allowAdminCreateUserOnly;
-        this.inviteMessageTemplate = inviteMessageTemplate;
-    }
+    private UserPoolAdminCreateUserConfigArgs() {}
 
-    private UserPoolAdminCreateUserConfigArgs() {
-        this.allowAdminCreateUserOnly = Codegen.empty();
-        this.inviteMessageTemplate = Codegen.empty();
+    private UserPoolAdminCreateUserConfigArgs(UserPoolAdminCreateUserConfigArgs $) {
+        this.allowAdminCreateUserOnly = $.allowAdminCreateUserOnly;
+        this.inviteMessageTemplate = $.inviteMessageTemplate;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(UserPoolAdminCreateUserConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> allowAdminCreateUserOnly;
-        private @Nullable Output<UserPoolAdminCreateUserConfigInviteMessageTemplateArgs> inviteMessageTemplate;
+        private UserPoolAdminCreateUserConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new UserPoolAdminCreateUserConfigArgs();
         }
 
         public Builder(UserPoolAdminCreateUserConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.allowAdminCreateUserOnly = defaults.allowAdminCreateUserOnly;
-    	      this.inviteMessageTemplate = defaults.inviteMessageTemplate;
+            $ = new UserPoolAdminCreateUserConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder allowAdminCreateUserOnly(@Nullable Output<Boolean> allowAdminCreateUserOnly) {
-            this.allowAdminCreateUserOnly = allowAdminCreateUserOnly;
+            $.allowAdminCreateUserOnly = allowAdminCreateUserOnly;
             return this;
         }
-        public Builder allowAdminCreateUserOnly(@Nullable Boolean allowAdminCreateUserOnly) {
-            this.allowAdminCreateUserOnly = Codegen.ofNullable(allowAdminCreateUserOnly);
-            return this;
+
+        public Builder allowAdminCreateUserOnly(Boolean allowAdminCreateUserOnly) {
+            return allowAdminCreateUserOnly(Output.of(allowAdminCreateUserOnly));
         }
+
         public Builder inviteMessageTemplate(@Nullable Output<UserPoolAdminCreateUserConfigInviteMessageTemplateArgs> inviteMessageTemplate) {
-            this.inviteMessageTemplate = inviteMessageTemplate;
+            $.inviteMessageTemplate = inviteMessageTemplate;
             return this;
         }
-        public Builder inviteMessageTemplate(@Nullable UserPoolAdminCreateUserConfigInviteMessageTemplateArgs inviteMessageTemplate) {
-            this.inviteMessageTemplate = Codegen.ofNullable(inviteMessageTemplate);
-            return this;
-        }        public UserPoolAdminCreateUserConfigArgs build() {
-            return new UserPoolAdminCreateUserConfigArgs(allowAdminCreateUserOnly, inviteMessageTemplate);
+
+        public Builder inviteMessageTemplate(UserPoolAdminCreateUserConfigInviteMessageTemplateArgs inviteMessageTemplate) {
+            return inviteMessageTemplate(Output.of(inviteMessageTemplate));
+        }
+
+        public UserPoolAdminCreateUserConfigArgs build() {
+            return $;
         }
     }
+
 }

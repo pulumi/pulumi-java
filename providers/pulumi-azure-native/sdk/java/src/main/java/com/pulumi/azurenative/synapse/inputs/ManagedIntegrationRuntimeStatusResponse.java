@@ -26,7 +26,7 @@ public final class ManagedIntegrationRuntimeStatusResponse extends com.pulumi.re
      * 
      */
     @Import(name="createTime", required=true)
-      private final String createTime;
+    private String createTime;
 
     public String createTime() {
         return this.createTime;
@@ -37,7 +37,7 @@ public final class ManagedIntegrationRuntimeStatusResponse extends com.pulumi.re
      * 
      */
     @Import(name="dataFactoryName", required=true)
-      private final String dataFactoryName;
+    private String dataFactoryName;
 
     public String dataFactoryName() {
         return this.dataFactoryName;
@@ -48,7 +48,7 @@ public final class ManagedIntegrationRuntimeStatusResponse extends com.pulumi.re
      * 
      */
     @Import(name="lastOperation", required=true)
-      private final ManagedIntegrationRuntimeOperationResultResponse lastOperation;
+    private ManagedIntegrationRuntimeOperationResultResponse lastOperation;
 
     public ManagedIntegrationRuntimeOperationResultResponse lastOperation() {
         return this.lastOperation;
@@ -59,7 +59,7 @@ public final class ManagedIntegrationRuntimeStatusResponse extends com.pulumi.re
      * 
      */
     @Import(name="nodes", required=true)
-      private final List<ManagedIntegrationRuntimeNodeResponse> nodes;
+    private List<ManagedIntegrationRuntimeNodeResponse> nodes;
 
     public List<ManagedIntegrationRuntimeNodeResponse> nodes() {
         return this.nodes;
@@ -70,7 +70,7 @@ public final class ManagedIntegrationRuntimeStatusResponse extends com.pulumi.re
      * 
      */
     @Import(name="otherErrors", required=true)
-      private final List<ManagedIntegrationRuntimeErrorResponse> otherErrors;
+    private List<ManagedIntegrationRuntimeErrorResponse> otherErrors;
 
     public List<ManagedIntegrationRuntimeErrorResponse> otherErrors() {
         return this.otherErrors;
@@ -81,7 +81,7 @@ public final class ManagedIntegrationRuntimeStatusResponse extends com.pulumi.re
      * 
      */
     @Import(name="state", required=true)
-      private final String state;
+    private String state;
 
     public String state() {
         return this.state;
@@ -93,106 +93,95 @@ public final class ManagedIntegrationRuntimeStatusResponse extends com.pulumi.re
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
     }
 
-    public ManagedIntegrationRuntimeStatusResponse(
-        String createTime,
-        String dataFactoryName,
-        ManagedIntegrationRuntimeOperationResultResponse lastOperation,
-        List<ManagedIntegrationRuntimeNodeResponse> nodes,
-        List<ManagedIntegrationRuntimeErrorResponse> otherErrors,
-        String state,
-        String type) {
-        this.createTime = Objects.requireNonNull(createTime, "expected parameter 'createTime' to be non-null");
-        this.dataFactoryName = Objects.requireNonNull(dataFactoryName, "expected parameter 'dataFactoryName' to be non-null");
-        this.lastOperation = Objects.requireNonNull(lastOperation, "expected parameter 'lastOperation' to be non-null");
-        this.nodes = Objects.requireNonNull(nodes, "expected parameter 'nodes' to be non-null");
-        this.otherErrors = Objects.requireNonNull(otherErrors, "expected parameter 'otherErrors' to be non-null");
-        this.state = Objects.requireNonNull(state, "expected parameter 'state' to be non-null");
-        this.type = Codegen.stringProp("type").arg(type).require();
-    }
+    private ManagedIntegrationRuntimeStatusResponse() {}
 
-    private ManagedIntegrationRuntimeStatusResponse() {
-        this.createTime = null;
-        this.dataFactoryName = null;
-        this.lastOperation = null;
-        this.nodes = List.of();
-        this.otherErrors = List.of();
-        this.state = null;
-        this.type = null;
+    private ManagedIntegrationRuntimeStatusResponse(ManagedIntegrationRuntimeStatusResponse $) {
+        this.createTime = $.createTime;
+        this.dataFactoryName = $.dataFactoryName;
+        this.lastOperation = $.lastOperation;
+        this.nodes = $.nodes;
+        this.otherErrors = $.otherErrors;
+        this.state = $.state;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ManagedIntegrationRuntimeStatusResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String createTime;
-        private String dataFactoryName;
-        private ManagedIntegrationRuntimeOperationResultResponse lastOperation;
-        private List<ManagedIntegrationRuntimeNodeResponse> nodes;
-        private List<ManagedIntegrationRuntimeErrorResponse> otherErrors;
-        private String state;
-        private String type;
+        private ManagedIntegrationRuntimeStatusResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ManagedIntegrationRuntimeStatusResponse();
         }
 
         public Builder(ManagedIntegrationRuntimeStatusResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.createTime = defaults.createTime;
-    	      this.dataFactoryName = defaults.dataFactoryName;
-    	      this.lastOperation = defaults.lastOperation;
-    	      this.nodes = defaults.nodes;
-    	      this.otherErrors = defaults.otherErrors;
-    	      this.state = defaults.state;
-    	      this.type = defaults.type;
+            $ = new ManagedIntegrationRuntimeStatusResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder createTime(String createTime) {
-            this.createTime = Objects.requireNonNull(createTime);
+            $.createTime = createTime;
             return this;
         }
+
         public Builder dataFactoryName(String dataFactoryName) {
-            this.dataFactoryName = Objects.requireNonNull(dataFactoryName);
+            $.dataFactoryName = dataFactoryName;
             return this;
         }
+
         public Builder lastOperation(ManagedIntegrationRuntimeOperationResultResponse lastOperation) {
-            this.lastOperation = Objects.requireNonNull(lastOperation);
+            $.lastOperation = lastOperation;
             return this;
         }
+
         public Builder nodes(List<ManagedIntegrationRuntimeNodeResponse> nodes) {
-            this.nodes = Objects.requireNonNull(nodes);
+            $.nodes = nodes;
             return this;
         }
+
         public Builder nodes(ManagedIntegrationRuntimeNodeResponse... nodes) {
             return nodes(List.of(nodes));
         }
+
         public Builder otherErrors(List<ManagedIntegrationRuntimeErrorResponse> otherErrors) {
-            this.otherErrors = Objects.requireNonNull(otherErrors);
+            $.otherErrors = otherErrors;
             return this;
         }
+
         public Builder otherErrors(ManagedIntegrationRuntimeErrorResponse... otherErrors) {
             return otherErrors(List.of(otherErrors));
         }
+
         public Builder state(String state) {
-            this.state = Objects.requireNonNull(state);
+            $.state = state;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
-        }        public ManagedIntegrationRuntimeStatusResponse build() {
-            return new ManagedIntegrationRuntimeStatusResponse(createTime, dataFactoryName, lastOperation, nodes, otherErrors, state, type);
+        }
+
+        public ManagedIntegrationRuntimeStatusResponse build() {
+            $.createTime = Objects.requireNonNull($.createTime, "expected parameter 'createTime' to be non-null");
+            $.dataFactoryName = Objects.requireNonNull($.dataFactoryName, "expected parameter 'dataFactoryName' to be non-null");
+            $.lastOperation = Objects.requireNonNull($.lastOperation, "expected parameter 'lastOperation' to be non-null");
+            $.nodes = Objects.requireNonNull($.nodes, "expected parameter 'nodes' to be non-null");
+            $.otherErrors = Objects.requireNonNull($.otherErrors, "expected parameter 'otherErrors' to be non-null");
+            $.state = Objects.requireNonNull($.state, "expected parameter 'state' to be non-null");
+            $.type = Codegen.stringProp("type").arg($.type).require();
+            return $;
         }
     }
+
 }

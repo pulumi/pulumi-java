@@ -6,7 +6,6 @@ package com.pulumi.awsnative.ec2;
 import com.pulumi.awsnative.ec2.inputs.SpotFleetRequestConfigDataArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
 
 
@@ -15,49 +14,49 @@ public final class SpotFleetArgs extends com.pulumi.resources.ResourceArgs {
     public static final SpotFleetArgs Empty = new SpotFleetArgs();
 
     @Import(name="spotFleetRequestConfigData", required=true)
-      private final Output<SpotFleetRequestConfigDataArgs> spotFleetRequestConfigData;
+    private Output<SpotFleetRequestConfigDataArgs> spotFleetRequestConfigData;
 
     public Output<SpotFleetRequestConfigDataArgs> spotFleetRequestConfigData() {
         return this.spotFleetRequestConfigData;
     }
 
-    public SpotFleetArgs(Output<SpotFleetRequestConfigDataArgs> spotFleetRequestConfigData) {
-        this.spotFleetRequestConfigData = Objects.requireNonNull(spotFleetRequestConfigData, "expected parameter 'spotFleetRequestConfigData' to be non-null");
-    }
+    private SpotFleetArgs() {}
 
-    private SpotFleetArgs() {
-        this.spotFleetRequestConfigData = Codegen.empty();
+    private SpotFleetArgs(SpotFleetArgs $) {
+        this.spotFleetRequestConfigData = $.spotFleetRequestConfigData;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SpotFleetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<SpotFleetRequestConfigDataArgs> spotFleetRequestConfigData;
+        private SpotFleetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SpotFleetArgs();
         }
 
         public Builder(SpotFleetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.spotFleetRequestConfigData = defaults.spotFleetRequestConfigData;
+            $ = new SpotFleetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder spotFleetRequestConfigData(Output<SpotFleetRequestConfigDataArgs> spotFleetRequestConfigData) {
-            this.spotFleetRequestConfigData = Objects.requireNonNull(spotFleetRequestConfigData);
+            $.spotFleetRequestConfigData = spotFleetRequestConfigData;
             return this;
         }
+
         public Builder spotFleetRequestConfigData(SpotFleetRequestConfigDataArgs spotFleetRequestConfigData) {
-            this.spotFleetRequestConfigData = Output.of(Objects.requireNonNull(spotFleetRequestConfigData));
-            return this;
-        }        public SpotFleetArgs build() {
-            return new SpotFleetArgs(spotFleetRequestConfigData);
+            return spotFleetRequestConfigData(Output.of(spotFleetRequestConfigData));
+        }
+
+        public SpotFleetArgs build() {
+            $.spotFleetRequestConfigData = Objects.requireNonNull($.spotFleetRequestConfigData, "expected parameter 'spotFleetRequestConfigData' to be non-null");
+            return $;
         }
     }
+
 }

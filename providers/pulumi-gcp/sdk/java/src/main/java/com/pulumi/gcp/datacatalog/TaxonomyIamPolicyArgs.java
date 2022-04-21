@@ -5,9 +5,9 @@ package com.pulumi.gcp.datacatalog;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,7 +21,7 @@ public final class TaxonomyIamPolicyArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="policyData", required=true)
-      private final Output<String> policyData;
+    private Output<String> policyData;
 
     public Output<String> policyData() {
         return this.policyData;
@@ -33,17 +33,17 @@ public final class TaxonomyIamPolicyArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     @Import(name="region")
-      private final @Nullable Output<String> region;
+    private @Nullable Output<String> region;
 
-    public Output<String> region() {
-        return this.region == null ? Codegen.empty() : this.region;
+    public Optional<Output<String>> region() {
+        return Optional.ofNullable(this.region);
     }
 
     /**
@@ -51,89 +51,80 @@ public final class TaxonomyIamPolicyArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="taxonomy", required=true)
-      private final Output<String> taxonomy;
+    private Output<String> taxonomy;
 
     public Output<String> taxonomy() {
         return this.taxonomy;
     }
 
-    public TaxonomyIamPolicyArgs(
-        Output<String> policyData,
-        @Nullable Output<String> project,
-        @Nullable Output<String> region,
-        Output<String> taxonomy) {
-        this.policyData = Objects.requireNonNull(policyData, "expected parameter 'policyData' to be non-null");
-        this.project = project;
-        this.region = region;
-        this.taxonomy = Objects.requireNonNull(taxonomy, "expected parameter 'taxonomy' to be non-null");
-    }
+    private TaxonomyIamPolicyArgs() {}
 
-    private TaxonomyIamPolicyArgs() {
-        this.policyData = Codegen.empty();
-        this.project = Codegen.empty();
-        this.region = Codegen.empty();
-        this.taxonomy = Codegen.empty();
+    private TaxonomyIamPolicyArgs(TaxonomyIamPolicyArgs $) {
+        this.policyData = $.policyData;
+        this.project = $.project;
+        this.region = $.region;
+        this.taxonomy = $.taxonomy;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TaxonomyIamPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> policyData;
-        private @Nullable Output<String> project;
-        private @Nullable Output<String> region;
-        private Output<String> taxonomy;
+        private TaxonomyIamPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TaxonomyIamPolicyArgs();
         }
 
         public Builder(TaxonomyIamPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.policyData = defaults.policyData;
-    	      this.project = defaults.project;
-    	      this.region = defaults.region;
-    	      this.taxonomy = defaults.taxonomy;
+            $ = new TaxonomyIamPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder policyData(Output<String> policyData) {
-            this.policyData = Objects.requireNonNull(policyData);
+            $.policyData = policyData;
             return this;
         }
+
         public Builder policyData(String policyData) {
-            this.policyData = Output.of(Objects.requireNonNull(policyData));
-            return this;
+            return policyData(Output.of(policyData));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder region(@Nullable Output<String> region) {
-            this.region = region;
+            $.region = region;
             return this;
         }
-        public Builder region(@Nullable String region) {
-            this.region = Codegen.ofNullable(region);
-            return this;
+
+        public Builder region(String region) {
+            return region(Output.of(region));
         }
+
         public Builder taxonomy(Output<String> taxonomy) {
-            this.taxonomy = Objects.requireNonNull(taxonomy);
+            $.taxonomy = taxonomy;
             return this;
         }
+
         public Builder taxonomy(String taxonomy) {
-            this.taxonomy = Output.of(Objects.requireNonNull(taxonomy));
-            return this;
-        }        public TaxonomyIamPolicyArgs build() {
-            return new TaxonomyIamPolicyArgs(policyData, project, region, taxonomy);
+            return taxonomy(Output.of(taxonomy));
+        }
+
+        public TaxonomyIamPolicyArgs build() {
+            $.policyData = Objects.requireNonNull($.policyData, "expected parameter 'policyData' to be non-null");
+            $.taxonomy = Objects.requireNonNull($.taxonomy, "expected parameter 'taxonomy' to be non-null");
+            return $;
         }
     }
+
 }

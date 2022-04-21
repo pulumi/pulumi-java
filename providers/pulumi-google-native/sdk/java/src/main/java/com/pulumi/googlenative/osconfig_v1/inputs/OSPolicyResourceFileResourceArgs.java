@@ -5,11 +5,11 @@ package com.pulumi.googlenative.osconfig_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.osconfig_v1.enums.OSPolicyResourceFileResourceState;
 import com.pulumi.googlenative.osconfig_v1.inputs.OSPolicyResourceFileArgs;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class OSPolicyResourceFileResourceArgs extends com.pulumi.resources
      * 
      */
     @Import(name="content")
-      private final @Nullable Output<String> content;
+    private @Nullable Output<String> content;
 
-    public Output<String> content() {
-        return this.content == null ? Codegen.empty() : this.content;
+    public Optional<Output<String>> content() {
+        return Optional.ofNullable(this.content);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class OSPolicyResourceFileResourceArgs extends com.pulumi.resources
      * 
      */
     @Import(name="file")
-      private final @Nullable Output<OSPolicyResourceFileArgs> file;
+    private @Nullable Output<OSPolicyResourceFileArgs> file;
 
-    public Output<OSPolicyResourceFileArgs> file() {
-        return this.file == null ? Codegen.empty() : this.file;
+    public Optional<Output<OSPolicyResourceFileArgs>> file() {
+        return Optional.ofNullable(this.file);
     }
 
     /**
@@ -48,7 +48,7 @@ public final class OSPolicyResourceFileResourceArgs extends com.pulumi.resources
      * 
      */
     @Import(name="path", required=true)
-      private final Output<String> path;
+    private Output<String> path;
 
     public Output<String> path() {
         return this.path;
@@ -59,10 +59,10 @@ public final class OSPolicyResourceFileResourceArgs extends com.pulumi.resources
      * 
      */
     @Import(name="permissions")
-      private final @Nullable Output<String> permissions;
+    private @Nullable Output<String> permissions;
 
-    public Output<String> permissions() {
-        return this.permissions == null ? Codegen.empty() : this.permissions;
+    public Optional<Output<String>> permissions() {
+        return Optional.ofNullable(this.permissions);
     }
 
     /**
@@ -70,102 +70,90 @@ public final class OSPolicyResourceFileResourceArgs extends com.pulumi.resources
      * 
      */
     @Import(name="state", required=true)
-      private final Output<OSPolicyResourceFileResourceState> state;
+    private Output<OSPolicyResourceFileResourceState> state;
 
     public Output<OSPolicyResourceFileResourceState> state() {
         return this.state;
     }
 
-    public OSPolicyResourceFileResourceArgs(
-        @Nullable Output<String> content,
-        @Nullable Output<OSPolicyResourceFileArgs> file,
-        Output<String> path,
-        @Nullable Output<String> permissions,
-        Output<OSPolicyResourceFileResourceState> state) {
-        this.content = content;
-        this.file = file;
-        this.path = Objects.requireNonNull(path, "expected parameter 'path' to be non-null");
-        this.permissions = permissions;
-        this.state = Objects.requireNonNull(state, "expected parameter 'state' to be non-null");
-    }
+    private OSPolicyResourceFileResourceArgs() {}
 
-    private OSPolicyResourceFileResourceArgs() {
-        this.content = Codegen.empty();
-        this.file = Codegen.empty();
-        this.path = Codegen.empty();
-        this.permissions = Codegen.empty();
-        this.state = Codegen.empty();
+    private OSPolicyResourceFileResourceArgs(OSPolicyResourceFileResourceArgs $) {
+        this.content = $.content;
+        this.file = $.file;
+        this.path = $.path;
+        this.permissions = $.permissions;
+        this.state = $.state;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(OSPolicyResourceFileResourceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> content;
-        private @Nullable Output<OSPolicyResourceFileArgs> file;
-        private Output<String> path;
-        private @Nullable Output<String> permissions;
-        private Output<OSPolicyResourceFileResourceState> state;
+        private OSPolicyResourceFileResourceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new OSPolicyResourceFileResourceArgs();
         }
 
         public Builder(OSPolicyResourceFileResourceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.content = defaults.content;
-    	      this.file = defaults.file;
-    	      this.path = defaults.path;
-    	      this.permissions = defaults.permissions;
-    	      this.state = defaults.state;
+            $ = new OSPolicyResourceFileResourceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder content(@Nullable Output<String> content) {
-            this.content = content;
+            $.content = content;
             return this;
         }
-        public Builder content(@Nullable String content) {
-            this.content = Codegen.ofNullable(content);
-            return this;
+
+        public Builder content(String content) {
+            return content(Output.of(content));
         }
+
         public Builder file(@Nullable Output<OSPolicyResourceFileArgs> file) {
-            this.file = file;
+            $.file = file;
             return this;
         }
-        public Builder file(@Nullable OSPolicyResourceFileArgs file) {
-            this.file = Codegen.ofNullable(file);
-            return this;
+
+        public Builder file(OSPolicyResourceFileArgs file) {
+            return file(Output.of(file));
         }
+
         public Builder path(Output<String> path) {
-            this.path = Objects.requireNonNull(path);
+            $.path = path;
             return this;
         }
+
         public Builder path(String path) {
-            this.path = Output.of(Objects.requireNonNull(path));
-            return this;
+            return path(Output.of(path));
         }
+
         public Builder permissions(@Nullable Output<String> permissions) {
-            this.permissions = permissions;
+            $.permissions = permissions;
             return this;
         }
-        public Builder permissions(@Nullable String permissions) {
-            this.permissions = Codegen.ofNullable(permissions);
-            return this;
+
+        public Builder permissions(String permissions) {
+            return permissions(Output.of(permissions));
         }
+
         public Builder state(Output<OSPolicyResourceFileResourceState> state) {
-            this.state = Objects.requireNonNull(state);
+            $.state = state;
             return this;
         }
+
         public Builder state(OSPolicyResourceFileResourceState state) {
-            this.state = Output.of(Objects.requireNonNull(state));
-            return this;
-        }        public OSPolicyResourceFileResourceArgs build() {
-            return new OSPolicyResourceFileResourceArgs(content, file, path, permissions, state);
+            return state(Output.of(state));
+        }
+
+        public OSPolicyResourceFileResourceArgs build() {
+            $.path = Objects.requireNonNull($.path, "expected parameter 'path' to be non-null");
+            $.state = Objects.requireNonNull($.state, "expected parameter 'state' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,10 +5,10 @@ package com.pulumi.gcp.assuredworkloads.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class WorkloadResourceGetArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="resourceId")
-      private final @Nullable Output<Integer> resourceId;
+    private @Nullable Output<Integer> resourceId;
 
-    public Output<Integer> resourceId() {
-        return this.resourceId == null ? Codegen.empty() : this.resourceId;
+    public Optional<Output<Integer>> resourceId() {
+        return Optional.ofNullable(this.resourceId);
     }
 
     /**
@@ -32,63 +32,58 @@ public final class WorkloadResourceGetArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="resourceType")
-      private final @Nullable Output<String> resourceType;
+    private @Nullable Output<String> resourceType;
 
-    public Output<String> resourceType() {
-        return this.resourceType == null ? Codegen.empty() : this.resourceType;
+    public Optional<Output<String>> resourceType() {
+        return Optional.ofNullable(this.resourceType);
     }
 
-    public WorkloadResourceGetArgs(
-        @Nullable Output<Integer> resourceId,
-        @Nullable Output<String> resourceType) {
-        this.resourceId = resourceId;
-        this.resourceType = resourceType;
-    }
+    private WorkloadResourceGetArgs() {}
 
-    private WorkloadResourceGetArgs() {
-        this.resourceId = Codegen.empty();
-        this.resourceType = Codegen.empty();
+    private WorkloadResourceGetArgs(WorkloadResourceGetArgs $) {
+        this.resourceId = $.resourceId;
+        this.resourceType = $.resourceType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WorkloadResourceGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> resourceId;
-        private @Nullable Output<String> resourceType;
+        private WorkloadResourceGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new WorkloadResourceGetArgs();
         }
 
         public Builder(WorkloadResourceGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.resourceId = defaults.resourceId;
-    	      this.resourceType = defaults.resourceType;
+            $ = new WorkloadResourceGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder resourceId(@Nullable Output<Integer> resourceId) {
-            this.resourceId = resourceId;
+            $.resourceId = resourceId;
             return this;
         }
-        public Builder resourceId(@Nullable Integer resourceId) {
-            this.resourceId = Codegen.ofNullable(resourceId);
-            return this;
+
+        public Builder resourceId(Integer resourceId) {
+            return resourceId(Output.of(resourceId));
         }
+
         public Builder resourceType(@Nullable Output<String> resourceType) {
-            this.resourceType = resourceType;
+            $.resourceType = resourceType;
             return this;
         }
-        public Builder resourceType(@Nullable String resourceType) {
-            this.resourceType = Codegen.ofNullable(resourceType);
-            return this;
-        }        public WorkloadResourceGetArgs build() {
-            return new WorkloadResourceGetArgs(resourceId, resourceType);
+
+        public Builder resourceType(String resourceType) {
+            return resourceType(Output.of(resourceType));
+        }
+
+        public WorkloadResourceGetArgs build() {
+            return $;
         }
     }
+
 }

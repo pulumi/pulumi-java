@@ -21,45 +21,45 @@ public final class KpiParticipantProfilesMetadataResponse extends com.pulumi.res
      * 
      */
     @Import(name="typeName", required=true)
-      private final String typeName;
+    private String typeName;
 
     public String typeName() {
         return this.typeName;
     }
 
-    public KpiParticipantProfilesMetadataResponse(String typeName) {
-        this.typeName = Objects.requireNonNull(typeName, "expected parameter 'typeName' to be non-null");
-    }
+    private KpiParticipantProfilesMetadataResponse() {}
 
-    private KpiParticipantProfilesMetadataResponse() {
-        this.typeName = null;
+    private KpiParticipantProfilesMetadataResponse(KpiParticipantProfilesMetadataResponse $) {
+        this.typeName = $.typeName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(KpiParticipantProfilesMetadataResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String typeName;
+        private KpiParticipantProfilesMetadataResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new KpiParticipantProfilesMetadataResponse();
         }
 
         public Builder(KpiParticipantProfilesMetadataResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.typeName = defaults.typeName;
+            $ = new KpiParticipantProfilesMetadataResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder typeName(String typeName) {
-            this.typeName = Objects.requireNonNull(typeName);
+            $.typeName = typeName;
             return this;
-        }        public KpiParticipantProfilesMetadataResponse build() {
-            return new KpiParticipantProfilesMetadataResponse(typeName);
+        }
+
+        public KpiParticipantProfilesMetadataResponse build() {
+            $.typeName = Objects.requireNonNull($.typeName, "expected parameter 'typeName' to be non-null");
+            return $;
         }
     }
+
 }

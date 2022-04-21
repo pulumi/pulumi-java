@@ -5,9 +5,9 @@ package com.pulumi.azurenative.datashare;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,7 +20,7 @@ public final class ShareSubscriptionArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="accountName", required=true)
-      private final Output<String> accountName;
+    private Output<String> accountName;
 
     public Output<String> accountName() {
         return this.accountName;
@@ -31,10 +31,10 @@ public final class ShareSubscriptionArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="expirationDate")
-      private final @Nullable Output<String> expirationDate;
+    private @Nullable Output<String> expirationDate;
 
-    public Output<String> expirationDate() {
-        return this.expirationDate == null ? Codegen.empty() : this.expirationDate;
+    public Optional<Output<String>> expirationDate() {
+        return Optional.ofNullable(this.expirationDate);
     }
 
     /**
@@ -42,7 +42,7 @@ public final class ShareSubscriptionArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="invitationId", required=true)
-      private final Output<String> invitationId;
+    private Output<String> invitationId;
 
     public Output<String> invitationId() {
         return this.invitationId;
@@ -53,7 +53,7 @@ public final class ShareSubscriptionArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -64,10 +64,10 @@ public final class ShareSubscriptionArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="shareSubscriptionName")
-      private final @Nullable Output<String> shareSubscriptionName;
+    private @Nullable Output<String> shareSubscriptionName;
 
-    public Output<String> shareSubscriptionName() {
-        return this.shareSubscriptionName == null ? Codegen.empty() : this.shareSubscriptionName;
+    public Optional<Output<String>> shareSubscriptionName() {
+        return Optional.ofNullable(this.shareSubscriptionName);
     }
 
     /**
@@ -75,115 +75,102 @@ public final class ShareSubscriptionArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="sourceShareLocation", required=true)
-      private final Output<String> sourceShareLocation;
+    private Output<String> sourceShareLocation;
 
     public Output<String> sourceShareLocation() {
         return this.sourceShareLocation;
     }
 
-    public ShareSubscriptionArgs(
-        Output<String> accountName,
-        @Nullable Output<String> expirationDate,
-        Output<String> invitationId,
-        Output<String> resourceGroupName,
-        @Nullable Output<String> shareSubscriptionName,
-        Output<String> sourceShareLocation) {
-        this.accountName = Objects.requireNonNull(accountName, "expected parameter 'accountName' to be non-null");
-        this.expirationDate = expirationDate;
-        this.invitationId = Objects.requireNonNull(invitationId, "expected parameter 'invitationId' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.shareSubscriptionName = shareSubscriptionName;
-        this.sourceShareLocation = Objects.requireNonNull(sourceShareLocation, "expected parameter 'sourceShareLocation' to be non-null");
-    }
+    private ShareSubscriptionArgs() {}
 
-    private ShareSubscriptionArgs() {
-        this.accountName = Codegen.empty();
-        this.expirationDate = Codegen.empty();
-        this.invitationId = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.shareSubscriptionName = Codegen.empty();
-        this.sourceShareLocation = Codegen.empty();
+    private ShareSubscriptionArgs(ShareSubscriptionArgs $) {
+        this.accountName = $.accountName;
+        this.expirationDate = $.expirationDate;
+        this.invitationId = $.invitationId;
+        this.resourceGroupName = $.resourceGroupName;
+        this.shareSubscriptionName = $.shareSubscriptionName;
+        this.sourceShareLocation = $.sourceShareLocation;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ShareSubscriptionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> accountName;
-        private @Nullable Output<String> expirationDate;
-        private Output<String> invitationId;
-        private Output<String> resourceGroupName;
-        private @Nullable Output<String> shareSubscriptionName;
-        private Output<String> sourceShareLocation;
+        private ShareSubscriptionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ShareSubscriptionArgs();
         }
 
         public Builder(ShareSubscriptionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accountName = defaults.accountName;
-    	      this.expirationDate = defaults.expirationDate;
-    	      this.invitationId = defaults.invitationId;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.shareSubscriptionName = defaults.shareSubscriptionName;
-    	      this.sourceShareLocation = defaults.sourceShareLocation;
+            $ = new ShareSubscriptionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder accountName(Output<String> accountName) {
-            this.accountName = Objects.requireNonNull(accountName);
+            $.accountName = accountName;
             return this;
         }
+
         public Builder accountName(String accountName) {
-            this.accountName = Output.of(Objects.requireNonNull(accountName));
-            return this;
+            return accountName(Output.of(accountName));
         }
+
         public Builder expirationDate(@Nullable Output<String> expirationDate) {
-            this.expirationDate = expirationDate;
+            $.expirationDate = expirationDate;
             return this;
         }
-        public Builder expirationDate(@Nullable String expirationDate) {
-            this.expirationDate = Codegen.ofNullable(expirationDate);
-            return this;
+
+        public Builder expirationDate(String expirationDate) {
+            return expirationDate(Output.of(expirationDate));
         }
+
         public Builder invitationId(Output<String> invitationId) {
-            this.invitationId = Objects.requireNonNull(invitationId);
+            $.invitationId = invitationId;
             return this;
         }
+
         public Builder invitationId(String invitationId) {
-            this.invitationId = Output.of(Objects.requireNonNull(invitationId));
-            return this;
+            return invitationId(Output.of(invitationId));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder shareSubscriptionName(@Nullable Output<String> shareSubscriptionName) {
-            this.shareSubscriptionName = shareSubscriptionName;
+            $.shareSubscriptionName = shareSubscriptionName;
             return this;
         }
-        public Builder shareSubscriptionName(@Nullable String shareSubscriptionName) {
-            this.shareSubscriptionName = Codegen.ofNullable(shareSubscriptionName);
-            return this;
+
+        public Builder shareSubscriptionName(String shareSubscriptionName) {
+            return shareSubscriptionName(Output.of(shareSubscriptionName));
         }
+
         public Builder sourceShareLocation(Output<String> sourceShareLocation) {
-            this.sourceShareLocation = Objects.requireNonNull(sourceShareLocation);
+            $.sourceShareLocation = sourceShareLocation;
             return this;
         }
+
         public Builder sourceShareLocation(String sourceShareLocation) {
-            this.sourceShareLocation = Output.of(Objects.requireNonNull(sourceShareLocation));
-            return this;
-        }        public ShareSubscriptionArgs build() {
-            return new ShareSubscriptionArgs(accountName, expirationDate, invitationId, resourceGroupName, shareSubscriptionName, sourceShareLocation);
+            return sourceShareLocation(Output.of(sourceShareLocation));
+        }
+
+        public ShareSubscriptionArgs build() {
+            $.accountName = Objects.requireNonNull($.accountName, "expected parameter 'accountName' to be non-null");
+            $.invitationId = Objects.requireNonNull($.invitationId, "expected parameter 'invitationId' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.sourceShareLocation = Objects.requireNonNull($.sourceShareLocation, "expected parameter 'sourceShareLocation' to be non-null");
+            return $;
         }
     }
+
 }

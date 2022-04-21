@@ -5,9 +5,9 @@ package com.pulumi.aws.route53;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,7 +20,7 @@ public final class HostedZoneDnsSecArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="hostedZoneId", required=true)
-      private final Output<String> hostedZoneId;
+    private Output<String> hostedZoneId;
 
     public Output<String> hostedZoneId() {
         return this.hostedZoneId;
@@ -31,63 +31,59 @@ public final class HostedZoneDnsSecArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="signingStatus")
-      private final @Nullable Output<String> signingStatus;
+    private @Nullable Output<String> signingStatus;
 
-    public Output<String> signingStatus() {
-        return this.signingStatus == null ? Codegen.empty() : this.signingStatus;
+    public Optional<Output<String>> signingStatus() {
+        return Optional.ofNullable(this.signingStatus);
     }
 
-    public HostedZoneDnsSecArgs(
-        Output<String> hostedZoneId,
-        @Nullable Output<String> signingStatus) {
-        this.hostedZoneId = Objects.requireNonNull(hostedZoneId, "expected parameter 'hostedZoneId' to be non-null");
-        this.signingStatus = signingStatus;
-    }
+    private HostedZoneDnsSecArgs() {}
 
-    private HostedZoneDnsSecArgs() {
-        this.hostedZoneId = Codegen.empty();
-        this.signingStatus = Codegen.empty();
+    private HostedZoneDnsSecArgs(HostedZoneDnsSecArgs $) {
+        this.hostedZoneId = $.hostedZoneId;
+        this.signingStatus = $.signingStatus;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(HostedZoneDnsSecArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> hostedZoneId;
-        private @Nullable Output<String> signingStatus;
+        private HostedZoneDnsSecArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new HostedZoneDnsSecArgs();
         }
 
         public Builder(HostedZoneDnsSecArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.hostedZoneId = defaults.hostedZoneId;
-    	      this.signingStatus = defaults.signingStatus;
+            $ = new HostedZoneDnsSecArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder hostedZoneId(Output<String> hostedZoneId) {
-            this.hostedZoneId = Objects.requireNonNull(hostedZoneId);
+            $.hostedZoneId = hostedZoneId;
             return this;
         }
+
         public Builder hostedZoneId(String hostedZoneId) {
-            this.hostedZoneId = Output.of(Objects.requireNonNull(hostedZoneId));
-            return this;
+            return hostedZoneId(Output.of(hostedZoneId));
         }
+
         public Builder signingStatus(@Nullable Output<String> signingStatus) {
-            this.signingStatus = signingStatus;
+            $.signingStatus = signingStatus;
             return this;
         }
-        public Builder signingStatus(@Nullable String signingStatus) {
-            this.signingStatus = Codegen.ofNullable(signingStatus);
-            return this;
-        }        public HostedZoneDnsSecArgs build() {
-            return new HostedZoneDnsSecArgs(hostedZoneId, signingStatus);
+
+        public Builder signingStatus(String signingStatus) {
+            return signingStatus(Output.of(signingStatus));
+        }
+
+        public HostedZoneDnsSecArgs build() {
+            $.hostedZoneId = Objects.requireNonNull($.hostedZoneId, "expected parameter 'hostedZoneId' to be non-null");
+            return $;
         }
     }
+
 }

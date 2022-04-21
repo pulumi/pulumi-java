@@ -24,10 +24,10 @@ public final class DevicePropertiesResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="deviceModel")
-      private final @Nullable String deviceModel;
+    private @Nullable String deviceModel;
 
     public Optional<String> deviceModel() {
-        return this.deviceModel == null ? Optional.empty() : Optional.ofNullable(this.deviceModel);
+        return Optional.ofNullable(this.deviceModel);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class DevicePropertiesResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="deviceVendor")
-      private final @Nullable String deviceVendor;
+    private @Nullable String deviceVendor;
 
     public Optional<String> deviceVendor() {
-        return this.deviceVendor == null ? Optional.empty() : Optional.ofNullable(this.deviceVendor);
+        return Optional.ofNullable(this.deviceVendor);
     }
 
     /**
@@ -46,64 +46,56 @@ public final class DevicePropertiesResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="linkSpeedInMbps")
-      private final @Nullable Integer linkSpeedInMbps;
+    private @Nullable Integer linkSpeedInMbps;
 
     public Optional<Integer> linkSpeedInMbps() {
-        return this.linkSpeedInMbps == null ? Optional.empty() : Optional.ofNullable(this.linkSpeedInMbps);
+        return Optional.ofNullable(this.linkSpeedInMbps);
     }
 
-    public DevicePropertiesResponse(
-        @Nullable String deviceModel,
-        @Nullable String deviceVendor,
-        @Nullable Integer linkSpeedInMbps) {
-        this.deviceModel = deviceModel;
-        this.deviceVendor = deviceVendor;
-        this.linkSpeedInMbps = linkSpeedInMbps;
-    }
+    private DevicePropertiesResponse() {}
 
-    private DevicePropertiesResponse() {
-        this.deviceModel = null;
-        this.deviceVendor = null;
-        this.linkSpeedInMbps = null;
+    private DevicePropertiesResponse(DevicePropertiesResponse $) {
+        this.deviceModel = $.deviceModel;
+        this.deviceVendor = $.deviceVendor;
+        this.linkSpeedInMbps = $.linkSpeedInMbps;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DevicePropertiesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String deviceModel;
-        private @Nullable String deviceVendor;
-        private @Nullable Integer linkSpeedInMbps;
+        private DevicePropertiesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new DevicePropertiesResponse();
         }
 
         public Builder(DevicePropertiesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.deviceModel = defaults.deviceModel;
-    	      this.deviceVendor = defaults.deviceVendor;
-    	      this.linkSpeedInMbps = defaults.linkSpeedInMbps;
+            $ = new DevicePropertiesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder deviceModel(@Nullable String deviceModel) {
-            this.deviceModel = deviceModel;
+            $.deviceModel = deviceModel;
             return this;
         }
+
         public Builder deviceVendor(@Nullable String deviceVendor) {
-            this.deviceVendor = deviceVendor;
+            $.deviceVendor = deviceVendor;
             return this;
         }
+
         public Builder linkSpeedInMbps(@Nullable Integer linkSpeedInMbps) {
-            this.linkSpeedInMbps = linkSpeedInMbps;
+            $.linkSpeedInMbps = linkSpeedInMbps;
             return this;
-        }        public DevicePropertiesResponse build() {
-            return new DevicePropertiesResponse(deviceModel, deviceVendor, linkSpeedInMbps);
+        }
+
+        public DevicePropertiesResponse build() {
+            return $;
         }
     }
+
 }

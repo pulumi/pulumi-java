@@ -5,10 +5,10 @@ package com.pulumi.googlenative.run_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.run_v1.enums.ResourceRecordType;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class ResourceRecordArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class ResourceRecordArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="rrdata")
-      private final @Nullable Output<String> rrdata;
+    private @Nullable Output<String> rrdata;
 
-    public Output<String> rrdata() {
-        return this.rrdata == null ? Codegen.empty() : this.rrdata;
+    public Optional<Output<String>> rrdata() {
+        return Optional.ofNullable(this.rrdata);
     }
 
     /**
@@ -47,76 +47,68 @@ public final class ResourceRecordArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="type")
-      private final @Nullable Output<ResourceRecordType> type;
+    private @Nullable Output<ResourceRecordType> type;
 
-    public Output<ResourceRecordType> type() {
-        return this.type == null ? Codegen.empty() : this.type;
+    public Optional<Output<ResourceRecordType>> type() {
+        return Optional.ofNullable(this.type);
     }
 
-    public ResourceRecordArgs(
-        @Nullable Output<String> name,
-        @Nullable Output<String> rrdata,
-        @Nullable Output<ResourceRecordType> type) {
-        this.name = name;
-        this.rrdata = rrdata;
-        this.type = type;
-    }
+    private ResourceRecordArgs() {}
 
-    private ResourceRecordArgs() {
-        this.name = Codegen.empty();
-        this.rrdata = Codegen.empty();
-        this.type = Codegen.empty();
+    private ResourceRecordArgs(ResourceRecordArgs $) {
+        this.name = $.name;
+        this.rrdata = $.rrdata;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ResourceRecordArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> rrdata;
-        private @Nullable Output<ResourceRecordType> type;
+        private ResourceRecordArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ResourceRecordArgs();
         }
 
         public Builder(ResourceRecordArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.rrdata = defaults.rrdata;
-    	      this.type = defaults.type;
+            $ = new ResourceRecordArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder rrdata(@Nullable Output<String> rrdata) {
-            this.rrdata = rrdata;
+            $.rrdata = rrdata;
             return this;
         }
-        public Builder rrdata(@Nullable String rrdata) {
-            this.rrdata = Codegen.ofNullable(rrdata);
-            return this;
+
+        public Builder rrdata(String rrdata) {
+            return rrdata(Output.of(rrdata));
         }
+
         public Builder type(@Nullable Output<ResourceRecordType> type) {
-            this.type = type;
+            $.type = type;
             return this;
         }
-        public Builder type(@Nullable ResourceRecordType type) {
-            this.type = Codegen.ofNullable(type);
-            return this;
-        }        public ResourceRecordArgs build() {
-            return new ResourceRecordArgs(name, rrdata, type);
+
+        public Builder type(ResourceRecordType type) {
+            return type(Output.of(type));
+        }
+
+        public ResourceRecordArgs build() {
+            return $;
         }
     }
+
 }

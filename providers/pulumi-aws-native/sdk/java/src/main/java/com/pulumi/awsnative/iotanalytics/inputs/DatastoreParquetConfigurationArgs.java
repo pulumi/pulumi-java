@@ -6,8 +6,8 @@ package com.pulumi.awsnative.iotanalytics.inputs;
 import com.pulumi.awsnative.iotanalytics.inputs.DatastoreSchemaDefinitionArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -16,49 +16,48 @@ public final class DatastoreParquetConfigurationArgs extends com.pulumi.resource
     public static final DatastoreParquetConfigurationArgs Empty = new DatastoreParquetConfigurationArgs();
 
     @Import(name="schemaDefinition")
-      private final @Nullable Output<DatastoreSchemaDefinitionArgs> schemaDefinition;
+    private @Nullable Output<DatastoreSchemaDefinitionArgs> schemaDefinition;
 
-    public Output<DatastoreSchemaDefinitionArgs> schemaDefinition() {
-        return this.schemaDefinition == null ? Codegen.empty() : this.schemaDefinition;
+    public Optional<Output<DatastoreSchemaDefinitionArgs>> schemaDefinition() {
+        return Optional.ofNullable(this.schemaDefinition);
     }
 
-    public DatastoreParquetConfigurationArgs(@Nullable Output<DatastoreSchemaDefinitionArgs> schemaDefinition) {
-        this.schemaDefinition = schemaDefinition;
-    }
+    private DatastoreParquetConfigurationArgs() {}
 
-    private DatastoreParquetConfigurationArgs() {
-        this.schemaDefinition = Codegen.empty();
+    private DatastoreParquetConfigurationArgs(DatastoreParquetConfigurationArgs $) {
+        this.schemaDefinition = $.schemaDefinition;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DatastoreParquetConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<DatastoreSchemaDefinitionArgs> schemaDefinition;
+        private DatastoreParquetConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DatastoreParquetConfigurationArgs();
         }
 
         public Builder(DatastoreParquetConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.schemaDefinition = defaults.schemaDefinition;
+            $ = new DatastoreParquetConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder schemaDefinition(@Nullable Output<DatastoreSchemaDefinitionArgs> schemaDefinition) {
-            this.schemaDefinition = schemaDefinition;
+            $.schemaDefinition = schemaDefinition;
             return this;
         }
-        public Builder schemaDefinition(@Nullable DatastoreSchemaDefinitionArgs schemaDefinition) {
-            this.schemaDefinition = Codegen.ofNullable(schemaDefinition);
-            return this;
-        }        public DatastoreParquetConfigurationArgs build() {
-            return new DatastoreParquetConfigurationArgs(schemaDefinition);
+
+        public Builder schemaDefinition(DatastoreSchemaDefinitionArgs schemaDefinition) {
+            return schemaDefinition(Output.of(schemaDefinition));
+        }
+
+        public DatastoreParquetConfigurationArgs build() {
+            return $;
         }
     }
+
 }

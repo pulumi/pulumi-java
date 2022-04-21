@@ -17,7 +17,7 @@ public final class GetAuthorizationArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="authorizationName", required=true)
-      private final String authorizationName;
+    private String authorizationName;
 
     public String authorizationName() {
         return this.authorizationName;
@@ -28,7 +28,7 @@ public final class GetAuthorizationArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="privateCloudName", required=true)
-      private final String privateCloudName;
+    private String privateCloudName;
 
     public String privateCloudName() {
         return this.privateCloudName;
@@ -39,64 +39,59 @@ public final class GetAuthorizationArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public GetAuthorizationArgs(
-        String authorizationName,
-        String privateCloudName,
-        String resourceGroupName) {
-        this.authorizationName = Objects.requireNonNull(authorizationName, "expected parameter 'authorizationName' to be non-null");
-        this.privateCloudName = Objects.requireNonNull(privateCloudName, "expected parameter 'privateCloudName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private GetAuthorizationArgs() {}
 
-    private GetAuthorizationArgs() {
-        this.authorizationName = null;
-        this.privateCloudName = null;
-        this.resourceGroupName = null;
+    private GetAuthorizationArgs(GetAuthorizationArgs $) {
+        this.authorizationName = $.authorizationName;
+        this.privateCloudName = $.privateCloudName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetAuthorizationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String authorizationName;
-        private String privateCloudName;
-        private String resourceGroupName;
+        private GetAuthorizationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetAuthorizationArgs();
         }
 
         public Builder(GetAuthorizationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.authorizationName = defaults.authorizationName;
-    	      this.privateCloudName = defaults.privateCloudName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new GetAuthorizationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder authorizationName(String authorizationName) {
-            this.authorizationName = Objects.requireNonNull(authorizationName);
+            $.authorizationName = authorizationName;
             return this;
         }
+
         public Builder privateCloudName(String privateCloudName) {
-            this.privateCloudName = Objects.requireNonNull(privateCloudName);
+            $.privateCloudName = privateCloudName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public GetAuthorizationArgs build() {
-            return new GetAuthorizationArgs(authorizationName, privateCloudName, resourceGroupName);
+        }
+
+        public GetAuthorizationArgs build() {
+            $.authorizationName = Objects.requireNonNull($.authorizationName, "expected parameter 'authorizationName' to be non-null");
+            $.privateCloudName = Objects.requireNonNull($.privateCloudName, "expected parameter 'privateCloudName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

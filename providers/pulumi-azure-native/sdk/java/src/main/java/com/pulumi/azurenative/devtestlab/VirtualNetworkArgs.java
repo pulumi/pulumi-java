@@ -7,11 +7,11 @@ import com.pulumi.azurenative.devtestlab.inputs.SubnetArgs;
 import com.pulumi.azurenative.devtestlab.inputs.SubnetOverrideArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class VirtualNetworkArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="allowedSubnets")
-      private final @Nullable Output<List<SubnetArgs>> allowedSubnets;
+    private @Nullable Output<List<SubnetArgs>> allowedSubnets;
 
-    public Output<List<SubnetArgs>> allowedSubnets() {
-        return this.allowedSubnets == null ? Codegen.empty() : this.allowedSubnets;
+    public Optional<Output<List<SubnetArgs>>> allowedSubnets() {
+        return Optional.ofNullable(this.allowedSubnets);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class VirtualNetworkArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class VirtualNetworkArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="externalProviderResourceId")
-      private final @Nullable Output<String> externalProviderResourceId;
+    private @Nullable Output<String> externalProviderResourceId;
 
-    public Output<String> externalProviderResourceId() {
-        return this.externalProviderResourceId == null ? Codegen.empty() : this.externalProviderResourceId;
+    public Optional<Output<String>> externalProviderResourceId() {
+        return Optional.ofNullable(this.externalProviderResourceId);
     }
 
     /**
@@ -57,7 +57,7 @@ public final class VirtualNetworkArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="labName", required=true)
-      private final Output<String> labName;
+    private Output<String> labName;
 
     public Output<String> labName() {
         return this.labName;
@@ -68,10 +68,10 @@ public final class VirtualNetworkArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -79,10 +79,10 @@ public final class VirtualNetworkArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -90,7 +90,7 @@ public final class VirtualNetworkArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -101,10 +101,10 @@ public final class VirtualNetworkArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="subnetOverrides")
-      private final @Nullable Output<List<SubnetOverrideArgs>> subnetOverrides;
+    private @Nullable Output<List<SubnetOverrideArgs>> subnetOverrides;
 
-    public Output<List<SubnetOverrideArgs>> subnetOverrides() {
-        return this.subnetOverrides == null ? Codegen.empty() : this.subnetOverrides;
+    public Optional<Output<List<SubnetOverrideArgs>>> subnetOverrides() {
+        return Optional.ofNullable(this.subnetOverrides);
     }
 
     /**
@@ -112,160 +112,138 @@ public final class VirtualNetworkArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public VirtualNetworkArgs(
-        @Nullable Output<List<SubnetArgs>> allowedSubnets,
-        @Nullable Output<String> description,
-        @Nullable Output<String> externalProviderResourceId,
-        Output<String> labName,
-        @Nullable Output<String> location,
-        @Nullable Output<String> name,
-        Output<String> resourceGroupName,
-        @Nullable Output<List<SubnetOverrideArgs>> subnetOverrides,
-        @Nullable Output<Map<String,String>> tags) {
-        this.allowedSubnets = allowedSubnets;
-        this.description = description;
-        this.externalProviderResourceId = externalProviderResourceId;
-        this.labName = Objects.requireNonNull(labName, "expected parameter 'labName' to be non-null");
-        this.location = location;
-        this.name = name;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.subnetOverrides = subnetOverrides;
-        this.tags = tags;
-    }
+    private VirtualNetworkArgs() {}
 
-    private VirtualNetworkArgs() {
-        this.allowedSubnets = Codegen.empty();
-        this.description = Codegen.empty();
-        this.externalProviderResourceId = Codegen.empty();
-        this.labName = Codegen.empty();
-        this.location = Codegen.empty();
-        this.name = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.subnetOverrides = Codegen.empty();
-        this.tags = Codegen.empty();
+    private VirtualNetworkArgs(VirtualNetworkArgs $) {
+        this.allowedSubnets = $.allowedSubnets;
+        this.description = $.description;
+        this.externalProviderResourceId = $.externalProviderResourceId;
+        this.labName = $.labName;
+        this.location = $.location;
+        this.name = $.name;
+        this.resourceGroupName = $.resourceGroupName;
+        this.subnetOverrides = $.subnetOverrides;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VirtualNetworkArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<SubnetArgs>> allowedSubnets;
-        private @Nullable Output<String> description;
-        private @Nullable Output<String> externalProviderResourceId;
-        private Output<String> labName;
-        private @Nullable Output<String> location;
-        private @Nullable Output<String> name;
-        private Output<String> resourceGroupName;
-        private @Nullable Output<List<SubnetOverrideArgs>> subnetOverrides;
-        private @Nullable Output<Map<String,String>> tags;
+        private VirtualNetworkArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new VirtualNetworkArgs();
         }
 
         public Builder(VirtualNetworkArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.allowedSubnets = defaults.allowedSubnets;
-    	      this.description = defaults.description;
-    	      this.externalProviderResourceId = defaults.externalProviderResourceId;
-    	      this.labName = defaults.labName;
-    	      this.location = defaults.location;
-    	      this.name = defaults.name;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.subnetOverrides = defaults.subnetOverrides;
-    	      this.tags = defaults.tags;
+            $ = new VirtualNetworkArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder allowedSubnets(@Nullable Output<List<SubnetArgs>> allowedSubnets) {
-            this.allowedSubnets = allowedSubnets;
+            $.allowedSubnets = allowedSubnets;
             return this;
         }
-        public Builder allowedSubnets(@Nullable List<SubnetArgs> allowedSubnets) {
-            this.allowedSubnets = Codegen.ofNullable(allowedSubnets);
-            return this;
+
+        public Builder allowedSubnets(List<SubnetArgs> allowedSubnets) {
+            return allowedSubnets(Output.of(allowedSubnets));
         }
+
         public Builder allowedSubnets(SubnetArgs... allowedSubnets) {
             return allowedSubnets(List.of(allowedSubnets));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder externalProviderResourceId(@Nullable Output<String> externalProviderResourceId) {
-            this.externalProviderResourceId = externalProviderResourceId;
+            $.externalProviderResourceId = externalProviderResourceId;
             return this;
         }
-        public Builder externalProviderResourceId(@Nullable String externalProviderResourceId) {
-            this.externalProviderResourceId = Codegen.ofNullable(externalProviderResourceId);
-            return this;
+
+        public Builder externalProviderResourceId(String externalProviderResourceId) {
+            return externalProviderResourceId(Output.of(externalProviderResourceId));
         }
+
         public Builder labName(Output<String> labName) {
-            this.labName = Objects.requireNonNull(labName);
+            $.labName = labName;
             return this;
         }
+
         public Builder labName(String labName) {
-            this.labName = Output.of(Objects.requireNonNull(labName));
-            return this;
+            return labName(Output.of(labName));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder subnetOverrides(@Nullable Output<List<SubnetOverrideArgs>> subnetOverrides) {
-            this.subnetOverrides = subnetOverrides;
+            $.subnetOverrides = subnetOverrides;
             return this;
         }
-        public Builder subnetOverrides(@Nullable List<SubnetOverrideArgs> subnetOverrides) {
-            this.subnetOverrides = Codegen.ofNullable(subnetOverrides);
-            return this;
+
+        public Builder subnetOverrides(List<SubnetOverrideArgs> subnetOverrides) {
+            return subnetOverrides(Output.of(subnetOverrides));
         }
+
         public Builder subnetOverrides(SubnetOverrideArgs... subnetOverrides) {
             return subnetOverrides(List.of(subnetOverrides));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
-        }        public VirtualNetworkArgs build() {
-            return new VirtualNetworkArgs(allowedSubnets, description, externalProviderResourceId, labName, location, name, resourceGroupName, subnetOverrides, tags);
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
+        }
+
+        public VirtualNetworkArgs build() {
+            $.labName = Objects.requireNonNull($.labName, "expected parameter 'labName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

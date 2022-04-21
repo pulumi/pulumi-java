@@ -13,62 +13,59 @@ public final class GetBucketLifecycleRuleAction extends com.pulumi.resources.Inv
     public static final GetBucketLifecycleRuleAction Empty = new GetBucketLifecycleRuleAction();
 
     @Import(name="storageClass", required=true)
-      private final String storageClass;
+    private String storageClass;
 
     public String storageClass() {
         return this.storageClass;
     }
 
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
     }
 
-    public GetBucketLifecycleRuleAction(
-        String storageClass,
-        String type) {
-        this.storageClass = Objects.requireNonNull(storageClass, "expected parameter 'storageClass' to be non-null");
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private GetBucketLifecycleRuleAction() {}
 
-    private GetBucketLifecycleRuleAction() {
-        this.storageClass = null;
-        this.type = null;
+    private GetBucketLifecycleRuleAction(GetBucketLifecycleRuleAction $) {
+        this.storageClass = $.storageClass;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetBucketLifecycleRuleAction defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String storageClass;
-        private String type;
+        private GetBucketLifecycleRuleAction $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetBucketLifecycleRuleAction();
         }
 
         public Builder(GetBucketLifecycleRuleAction defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.storageClass = defaults.storageClass;
-    	      this.type = defaults.type;
+            $ = new GetBucketLifecycleRuleAction(Objects.requireNonNull(defaults));
         }
 
         public Builder storageClass(String storageClass) {
-            this.storageClass = Objects.requireNonNull(storageClass);
+            $.storageClass = storageClass;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
-        }        public GetBucketLifecycleRuleAction build() {
-            return new GetBucketLifecycleRuleAction(storageClass, type);
+        }
+
+        public GetBucketLifecycleRuleAction build() {
+            $.storageClass = Objects.requireNonNull($.storageClass, "expected parameter 'storageClass' to be non-null");
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

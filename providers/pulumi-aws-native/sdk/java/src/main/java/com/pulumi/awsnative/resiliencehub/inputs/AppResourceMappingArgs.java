@@ -6,9 +6,9 @@ package com.pulumi.awsnative.resiliencehub.inputs;
 import com.pulumi.awsnative.resiliencehub.inputs.AppPhysicalResourceIdArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,110 +21,101 @@ public final class AppResourceMappingArgs extends com.pulumi.resources.ResourceA
     public static final AppResourceMappingArgs Empty = new AppResourceMappingArgs();
 
     @Import(name="logicalStackName")
-      private final @Nullable Output<String> logicalStackName;
+    private @Nullable Output<String> logicalStackName;
 
-    public Output<String> logicalStackName() {
-        return this.logicalStackName == null ? Codegen.empty() : this.logicalStackName;
+    public Optional<Output<String>> logicalStackName() {
+        return Optional.ofNullable(this.logicalStackName);
     }
 
     @Import(name="mappingType", required=true)
-      private final Output<String> mappingType;
+    private Output<String> mappingType;
 
     public Output<String> mappingType() {
         return this.mappingType;
     }
 
     @Import(name="physicalResourceId", required=true)
-      private final Output<AppPhysicalResourceIdArgs> physicalResourceId;
+    private Output<AppPhysicalResourceIdArgs> physicalResourceId;
 
     public Output<AppPhysicalResourceIdArgs> physicalResourceId() {
         return this.physicalResourceId;
     }
 
     @Import(name="resourceName")
-      private final @Nullable Output<String> resourceName;
+    private @Nullable Output<String> resourceName;
 
-    public Output<String> resourceName() {
-        return this.resourceName == null ? Codegen.empty() : this.resourceName;
+    public Optional<Output<String>> resourceName() {
+        return Optional.ofNullable(this.resourceName);
     }
 
-    public AppResourceMappingArgs(
-        @Nullable Output<String> logicalStackName,
-        Output<String> mappingType,
-        Output<AppPhysicalResourceIdArgs> physicalResourceId,
-        @Nullable Output<String> resourceName) {
-        this.logicalStackName = logicalStackName;
-        this.mappingType = Objects.requireNonNull(mappingType, "expected parameter 'mappingType' to be non-null");
-        this.physicalResourceId = Objects.requireNonNull(physicalResourceId, "expected parameter 'physicalResourceId' to be non-null");
-        this.resourceName = resourceName;
-    }
+    private AppResourceMappingArgs() {}
 
-    private AppResourceMappingArgs() {
-        this.logicalStackName = Codegen.empty();
-        this.mappingType = Codegen.empty();
-        this.physicalResourceId = Codegen.empty();
-        this.resourceName = Codegen.empty();
+    private AppResourceMappingArgs(AppResourceMappingArgs $) {
+        this.logicalStackName = $.logicalStackName;
+        this.mappingType = $.mappingType;
+        this.physicalResourceId = $.physicalResourceId;
+        this.resourceName = $.resourceName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AppResourceMappingArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> logicalStackName;
-        private Output<String> mappingType;
-        private Output<AppPhysicalResourceIdArgs> physicalResourceId;
-        private @Nullable Output<String> resourceName;
+        private AppResourceMappingArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AppResourceMappingArgs();
         }
 
         public Builder(AppResourceMappingArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.logicalStackName = defaults.logicalStackName;
-    	      this.mappingType = defaults.mappingType;
-    	      this.physicalResourceId = defaults.physicalResourceId;
-    	      this.resourceName = defaults.resourceName;
+            $ = new AppResourceMappingArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder logicalStackName(@Nullable Output<String> logicalStackName) {
-            this.logicalStackName = logicalStackName;
+            $.logicalStackName = logicalStackName;
             return this;
         }
-        public Builder logicalStackName(@Nullable String logicalStackName) {
-            this.logicalStackName = Codegen.ofNullable(logicalStackName);
-            return this;
+
+        public Builder logicalStackName(String logicalStackName) {
+            return logicalStackName(Output.of(logicalStackName));
         }
+
         public Builder mappingType(Output<String> mappingType) {
-            this.mappingType = Objects.requireNonNull(mappingType);
+            $.mappingType = mappingType;
             return this;
         }
+
         public Builder mappingType(String mappingType) {
-            this.mappingType = Output.of(Objects.requireNonNull(mappingType));
-            return this;
+            return mappingType(Output.of(mappingType));
         }
+
         public Builder physicalResourceId(Output<AppPhysicalResourceIdArgs> physicalResourceId) {
-            this.physicalResourceId = Objects.requireNonNull(physicalResourceId);
+            $.physicalResourceId = physicalResourceId;
             return this;
         }
+
         public Builder physicalResourceId(AppPhysicalResourceIdArgs physicalResourceId) {
-            this.physicalResourceId = Output.of(Objects.requireNonNull(physicalResourceId));
-            return this;
+            return physicalResourceId(Output.of(physicalResourceId));
         }
+
         public Builder resourceName(@Nullable Output<String> resourceName) {
-            this.resourceName = resourceName;
+            $.resourceName = resourceName;
             return this;
         }
-        public Builder resourceName(@Nullable String resourceName) {
-            this.resourceName = Codegen.ofNullable(resourceName);
-            return this;
-        }        public AppResourceMappingArgs build() {
-            return new AppResourceMappingArgs(logicalStackName, mappingType, physicalResourceId, resourceName);
+
+        public Builder resourceName(String resourceName) {
+            return resourceName(Output.of(resourceName));
+        }
+
+        public AppResourceMappingArgs build() {
+            $.mappingType = Objects.requireNonNull($.mappingType, "expected parameter 'mappingType' to be non-null");
+            $.physicalResourceId = Objects.requireNonNull($.physicalResourceId, "expected parameter 'physicalResourceId' to be non-null");
+            return $;
         }
     }
+
 }

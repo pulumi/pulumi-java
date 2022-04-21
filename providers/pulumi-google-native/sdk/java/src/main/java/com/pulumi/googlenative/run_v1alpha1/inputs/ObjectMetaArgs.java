@@ -5,13 +5,13 @@ package com.pulumi.googlenative.run_v1alpha1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.run_v1alpha1.inputs.OwnerReferenceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -28,10 +28,10 @@ public final class ObjectMetaArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="annotations")
-      private final @Nullable Output<Map<String,String>> annotations;
+    private @Nullable Output<Map<String,String>> annotations;
 
-    public Output<Map<String,String>> annotations() {
-        return this.annotations == null ? Codegen.empty() : this.annotations;
+    public Optional<Output<Map<String,String>>> annotations() {
+        return Optional.ofNullable(this.annotations);
     }
 
     /**
@@ -39,10 +39,10 @@ public final class ObjectMetaArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="clusterName")
-      private final @Nullable Output<String> clusterName;
+    private @Nullable Output<String> clusterName;
 
-    public Output<String> clusterName() {
-        return this.clusterName == null ? Codegen.empty() : this.clusterName;
+    public Optional<Output<String>> clusterName() {
+        return Optional.ofNullable(this.clusterName);
     }
 
     /**
@@ -50,10 +50,10 @@ public final class ObjectMetaArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="creationTimestamp")
-      private final @Nullable Output<String> creationTimestamp;
+    private @Nullable Output<String> creationTimestamp;
 
-    public Output<String> creationTimestamp() {
-        return this.creationTimestamp == null ? Codegen.empty() : this.creationTimestamp;
+    public Optional<Output<String>> creationTimestamp() {
+        return Optional.ofNullable(this.creationTimestamp);
     }
 
     /**
@@ -61,10 +61,10 @@ public final class ObjectMetaArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="deletionGracePeriodSeconds")
-      private final @Nullable Output<Integer> deletionGracePeriodSeconds;
+    private @Nullable Output<Integer> deletionGracePeriodSeconds;
 
-    public Output<Integer> deletionGracePeriodSeconds() {
-        return this.deletionGracePeriodSeconds == null ? Codegen.empty() : this.deletionGracePeriodSeconds;
+    public Optional<Output<Integer>> deletionGracePeriodSeconds() {
+        return Optional.ofNullable(this.deletionGracePeriodSeconds);
     }
 
     /**
@@ -72,10 +72,10 @@ public final class ObjectMetaArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="deletionTimestamp")
-      private final @Nullable Output<String> deletionTimestamp;
+    private @Nullable Output<String> deletionTimestamp;
 
-    public Output<String> deletionTimestamp() {
-        return this.deletionTimestamp == null ? Codegen.empty() : this.deletionTimestamp;
+    public Optional<Output<String>> deletionTimestamp() {
+        return Optional.ofNullable(this.deletionTimestamp);
     }
 
     /**
@@ -83,10 +83,10 @@ public final class ObjectMetaArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="finalizers")
-      private final @Nullable Output<List<String>> finalizers;
+    private @Nullable Output<List<String>> finalizers;
 
-    public Output<List<String>> finalizers() {
-        return this.finalizers == null ? Codegen.empty() : this.finalizers;
+    public Optional<Output<List<String>>> finalizers() {
+        return Optional.ofNullable(this.finalizers);
     }
 
     /**
@@ -94,10 +94,10 @@ public final class ObjectMetaArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="generateName")
-      private final @Nullable Output<String> generateName;
+    private @Nullable Output<String> generateName;
 
-    public Output<String> generateName() {
-        return this.generateName == null ? Codegen.empty() : this.generateName;
+    public Optional<Output<String>> generateName() {
+        return Optional.ofNullable(this.generateName);
     }
 
     /**
@@ -105,10 +105,10 @@ public final class ObjectMetaArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="generation")
-      private final @Nullable Output<Integer> generation;
+    private @Nullable Output<Integer> generation;
 
-    public Output<Integer> generation() {
-        return this.generation == null ? Codegen.empty() : this.generation;
+    public Optional<Output<Integer>> generation() {
+        return Optional.ofNullable(this.generation);
     }
 
     /**
@@ -116,10 +116,10 @@ public final class ObjectMetaArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="labels")
-      private final @Nullable Output<Map<String,String>> labels;
+    private @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> labels() {
-        return this.labels == null ? Codegen.empty() : this.labels;
+    public Optional<Output<Map<String,String>>> labels() {
+        return Optional.ofNullable(this.labels);
     }
 
     /**
@@ -127,10 +127,10 @@ public final class ObjectMetaArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -138,10 +138,10 @@ public final class ObjectMetaArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="namespace")
-      private final @Nullable Output<String> namespace;
+    private @Nullable Output<String> namespace;
 
-    public Output<String> namespace() {
-        return this.namespace == null ? Codegen.empty() : this.namespace;
+    public Optional<Output<String>> namespace() {
+        return Optional.ofNullable(this.namespace);
     }
 
     /**
@@ -149,10 +149,10 @@ public final class ObjectMetaArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="ownerReferences")
-      private final @Nullable Output<List<OwnerReferenceArgs>> ownerReferences;
+    private @Nullable Output<List<OwnerReferenceArgs>> ownerReferences;
 
-    public Output<List<OwnerReferenceArgs>> ownerReferences() {
-        return this.ownerReferences == null ? Codegen.empty() : this.ownerReferences;
+    public Optional<Output<List<OwnerReferenceArgs>>> ownerReferences() {
+        return Optional.ofNullable(this.ownerReferences);
     }
 
     /**
@@ -160,10 +160,10 @@ public final class ObjectMetaArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceVersion")
-      private final @Nullable Output<String> resourceVersion;
+    private @Nullable Output<String> resourceVersion;
 
-    public Output<String> resourceVersion() {
-        return this.resourceVersion == null ? Codegen.empty() : this.resourceVersion;
+    public Optional<Output<String>> resourceVersion() {
+        return Optional.ofNullable(this.resourceVersion);
     }
 
     /**
@@ -171,10 +171,10 @@ public final class ObjectMetaArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="selfLink")
-      private final @Nullable Output<String> selfLink;
+    private @Nullable Output<String> selfLink;
 
-    public Output<String> selfLink() {
-        return this.selfLink == null ? Codegen.empty() : this.selfLink;
+    public Optional<Output<String>> selfLink() {
+        return Optional.ofNullable(this.selfLink);
     }
 
     /**
@@ -182,238 +182,196 @@ public final class ObjectMetaArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="uid")
-      private final @Nullable Output<String> uid;
+    private @Nullable Output<String> uid;
 
-    public Output<String> uid() {
-        return this.uid == null ? Codegen.empty() : this.uid;
+    public Optional<Output<String>> uid() {
+        return Optional.ofNullable(this.uid);
     }
 
-    public ObjectMetaArgs(
-        @Nullable Output<Map<String,String>> annotations,
-        @Nullable Output<String> clusterName,
-        @Nullable Output<String> creationTimestamp,
-        @Nullable Output<Integer> deletionGracePeriodSeconds,
-        @Nullable Output<String> deletionTimestamp,
-        @Nullable Output<List<String>> finalizers,
-        @Nullable Output<String> generateName,
-        @Nullable Output<Integer> generation,
-        @Nullable Output<Map<String,String>> labels,
-        @Nullable Output<String> name,
-        @Nullable Output<String> namespace,
-        @Nullable Output<List<OwnerReferenceArgs>> ownerReferences,
-        @Nullable Output<String> resourceVersion,
-        @Nullable Output<String> selfLink,
-        @Nullable Output<String> uid) {
-        this.annotations = annotations;
-        this.clusterName = clusterName;
-        this.creationTimestamp = creationTimestamp;
-        this.deletionGracePeriodSeconds = deletionGracePeriodSeconds;
-        this.deletionTimestamp = deletionTimestamp;
-        this.finalizers = finalizers;
-        this.generateName = generateName;
-        this.generation = generation;
-        this.labels = labels;
-        this.name = name;
-        this.namespace = namespace;
-        this.ownerReferences = ownerReferences;
-        this.resourceVersion = resourceVersion;
-        this.selfLink = selfLink;
-        this.uid = uid;
-    }
+    private ObjectMetaArgs() {}
 
-    private ObjectMetaArgs() {
-        this.annotations = Codegen.empty();
-        this.clusterName = Codegen.empty();
-        this.creationTimestamp = Codegen.empty();
-        this.deletionGracePeriodSeconds = Codegen.empty();
-        this.deletionTimestamp = Codegen.empty();
-        this.finalizers = Codegen.empty();
-        this.generateName = Codegen.empty();
-        this.generation = Codegen.empty();
-        this.labels = Codegen.empty();
-        this.name = Codegen.empty();
-        this.namespace = Codegen.empty();
-        this.ownerReferences = Codegen.empty();
-        this.resourceVersion = Codegen.empty();
-        this.selfLink = Codegen.empty();
-        this.uid = Codegen.empty();
+    private ObjectMetaArgs(ObjectMetaArgs $) {
+        this.annotations = $.annotations;
+        this.clusterName = $.clusterName;
+        this.creationTimestamp = $.creationTimestamp;
+        this.deletionGracePeriodSeconds = $.deletionGracePeriodSeconds;
+        this.deletionTimestamp = $.deletionTimestamp;
+        this.finalizers = $.finalizers;
+        this.generateName = $.generateName;
+        this.generation = $.generation;
+        this.labels = $.labels;
+        this.name = $.name;
+        this.namespace = $.namespace;
+        this.ownerReferences = $.ownerReferences;
+        this.resourceVersion = $.resourceVersion;
+        this.selfLink = $.selfLink;
+        this.uid = $.uid;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ObjectMetaArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Map<String,String>> annotations;
-        private @Nullable Output<String> clusterName;
-        private @Nullable Output<String> creationTimestamp;
-        private @Nullable Output<Integer> deletionGracePeriodSeconds;
-        private @Nullable Output<String> deletionTimestamp;
-        private @Nullable Output<List<String>> finalizers;
-        private @Nullable Output<String> generateName;
-        private @Nullable Output<Integer> generation;
-        private @Nullable Output<Map<String,String>> labels;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> namespace;
-        private @Nullable Output<List<OwnerReferenceArgs>> ownerReferences;
-        private @Nullable Output<String> resourceVersion;
-        private @Nullable Output<String> selfLink;
-        private @Nullable Output<String> uid;
+        private ObjectMetaArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ObjectMetaArgs();
         }
 
         public Builder(ObjectMetaArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.annotations = defaults.annotations;
-    	      this.clusterName = defaults.clusterName;
-    	      this.creationTimestamp = defaults.creationTimestamp;
-    	      this.deletionGracePeriodSeconds = defaults.deletionGracePeriodSeconds;
-    	      this.deletionTimestamp = defaults.deletionTimestamp;
-    	      this.finalizers = defaults.finalizers;
-    	      this.generateName = defaults.generateName;
-    	      this.generation = defaults.generation;
-    	      this.labels = defaults.labels;
-    	      this.name = defaults.name;
-    	      this.namespace = defaults.namespace;
-    	      this.ownerReferences = defaults.ownerReferences;
-    	      this.resourceVersion = defaults.resourceVersion;
-    	      this.selfLink = defaults.selfLink;
-    	      this.uid = defaults.uid;
+            $ = new ObjectMetaArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder annotations(@Nullable Output<Map<String,String>> annotations) {
-            this.annotations = annotations;
+            $.annotations = annotations;
             return this;
         }
-        public Builder annotations(@Nullable Map<String,String> annotations) {
-            this.annotations = Codegen.ofNullable(annotations);
-            return this;
+
+        public Builder annotations(Map<String,String> annotations) {
+            return annotations(Output.of(annotations));
         }
+
         public Builder clusterName(@Nullable Output<String> clusterName) {
-            this.clusterName = clusterName;
+            $.clusterName = clusterName;
             return this;
         }
-        public Builder clusterName(@Nullable String clusterName) {
-            this.clusterName = Codegen.ofNullable(clusterName);
-            return this;
+
+        public Builder clusterName(String clusterName) {
+            return clusterName(Output.of(clusterName));
         }
+
         public Builder creationTimestamp(@Nullable Output<String> creationTimestamp) {
-            this.creationTimestamp = creationTimestamp;
+            $.creationTimestamp = creationTimestamp;
             return this;
         }
-        public Builder creationTimestamp(@Nullable String creationTimestamp) {
-            this.creationTimestamp = Codegen.ofNullable(creationTimestamp);
-            return this;
+
+        public Builder creationTimestamp(String creationTimestamp) {
+            return creationTimestamp(Output.of(creationTimestamp));
         }
+
         public Builder deletionGracePeriodSeconds(@Nullable Output<Integer> deletionGracePeriodSeconds) {
-            this.deletionGracePeriodSeconds = deletionGracePeriodSeconds;
+            $.deletionGracePeriodSeconds = deletionGracePeriodSeconds;
             return this;
         }
-        public Builder deletionGracePeriodSeconds(@Nullable Integer deletionGracePeriodSeconds) {
-            this.deletionGracePeriodSeconds = Codegen.ofNullable(deletionGracePeriodSeconds);
-            return this;
+
+        public Builder deletionGracePeriodSeconds(Integer deletionGracePeriodSeconds) {
+            return deletionGracePeriodSeconds(Output.of(deletionGracePeriodSeconds));
         }
+
         public Builder deletionTimestamp(@Nullable Output<String> deletionTimestamp) {
-            this.deletionTimestamp = deletionTimestamp;
+            $.deletionTimestamp = deletionTimestamp;
             return this;
         }
-        public Builder deletionTimestamp(@Nullable String deletionTimestamp) {
-            this.deletionTimestamp = Codegen.ofNullable(deletionTimestamp);
-            return this;
+
+        public Builder deletionTimestamp(String deletionTimestamp) {
+            return deletionTimestamp(Output.of(deletionTimestamp));
         }
+
         public Builder finalizers(@Nullable Output<List<String>> finalizers) {
-            this.finalizers = finalizers;
+            $.finalizers = finalizers;
             return this;
         }
-        public Builder finalizers(@Nullable List<String> finalizers) {
-            this.finalizers = Codegen.ofNullable(finalizers);
-            return this;
+
+        public Builder finalizers(List<String> finalizers) {
+            return finalizers(Output.of(finalizers));
         }
+
         public Builder finalizers(String... finalizers) {
             return finalizers(List.of(finalizers));
         }
+
         public Builder generateName(@Nullable Output<String> generateName) {
-            this.generateName = generateName;
+            $.generateName = generateName;
             return this;
         }
-        public Builder generateName(@Nullable String generateName) {
-            this.generateName = Codegen.ofNullable(generateName);
-            return this;
+
+        public Builder generateName(String generateName) {
+            return generateName(Output.of(generateName));
         }
+
         public Builder generation(@Nullable Output<Integer> generation) {
-            this.generation = generation;
+            $.generation = generation;
             return this;
         }
-        public Builder generation(@Nullable Integer generation) {
-            this.generation = Codegen.ofNullable(generation);
-            return this;
+
+        public Builder generation(Integer generation) {
+            return generation(Output.of(generation));
         }
+
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
-            this.labels = labels;
+            $.labels = labels;
             return this;
         }
-        public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Codegen.ofNullable(labels);
-            return this;
+
+        public Builder labels(Map<String,String> labels) {
+            return labels(Output.of(labels));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder namespace(@Nullable Output<String> namespace) {
-            this.namespace = namespace;
+            $.namespace = namespace;
             return this;
         }
-        public Builder namespace(@Nullable String namespace) {
-            this.namespace = Codegen.ofNullable(namespace);
-            return this;
+
+        public Builder namespace(String namespace) {
+            return namespace(Output.of(namespace));
         }
+
         public Builder ownerReferences(@Nullable Output<List<OwnerReferenceArgs>> ownerReferences) {
-            this.ownerReferences = ownerReferences;
+            $.ownerReferences = ownerReferences;
             return this;
         }
-        public Builder ownerReferences(@Nullable List<OwnerReferenceArgs> ownerReferences) {
-            this.ownerReferences = Codegen.ofNullable(ownerReferences);
-            return this;
+
+        public Builder ownerReferences(List<OwnerReferenceArgs> ownerReferences) {
+            return ownerReferences(Output.of(ownerReferences));
         }
+
         public Builder ownerReferences(OwnerReferenceArgs... ownerReferences) {
             return ownerReferences(List.of(ownerReferences));
         }
+
         public Builder resourceVersion(@Nullable Output<String> resourceVersion) {
-            this.resourceVersion = resourceVersion;
+            $.resourceVersion = resourceVersion;
             return this;
         }
-        public Builder resourceVersion(@Nullable String resourceVersion) {
-            this.resourceVersion = Codegen.ofNullable(resourceVersion);
-            return this;
+
+        public Builder resourceVersion(String resourceVersion) {
+            return resourceVersion(Output.of(resourceVersion));
         }
+
         public Builder selfLink(@Nullable Output<String> selfLink) {
-            this.selfLink = selfLink;
+            $.selfLink = selfLink;
             return this;
         }
-        public Builder selfLink(@Nullable String selfLink) {
-            this.selfLink = Codegen.ofNullable(selfLink);
-            return this;
+
+        public Builder selfLink(String selfLink) {
+            return selfLink(Output.of(selfLink));
         }
+
         public Builder uid(@Nullable Output<String> uid) {
-            this.uid = uid;
+            $.uid = uid;
             return this;
         }
-        public Builder uid(@Nullable String uid) {
-            this.uid = Codegen.ofNullable(uid);
-            return this;
-        }        public ObjectMetaArgs build() {
-            return new ObjectMetaArgs(annotations, clusterName, creationTimestamp, deletionGracePeriodSeconds, deletionTimestamp, finalizers, generateName, generation, labels, name, namespace, ownerReferences, resourceVersion, selfLink, uid);
+
+        public Builder uid(String uid) {
+            return uid(Output.of(uid));
+        }
+
+        public ObjectMetaArgs build() {
+            return $;
         }
     }
+
 }

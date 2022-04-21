@@ -23,7 +23,7 @@ public final class ApiOperationResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="methodSelectors", required=true)
-      private final List<MethodSelectorResponse> methodSelectors;
+    private List<MethodSelectorResponse> methodSelectors;
 
     public List<MethodSelectorResponse> methodSelectors() {
         return this.methodSelectors;
@@ -34,58 +34,56 @@ public final class ApiOperationResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="serviceName", required=true)
-      private final String serviceName;
+    private String serviceName;
 
     public String serviceName() {
         return this.serviceName;
     }
 
-    public ApiOperationResponse(
-        List<MethodSelectorResponse> methodSelectors,
-        String serviceName) {
-        this.methodSelectors = Objects.requireNonNull(methodSelectors, "expected parameter 'methodSelectors' to be non-null");
-        this.serviceName = Objects.requireNonNull(serviceName, "expected parameter 'serviceName' to be non-null");
-    }
+    private ApiOperationResponse() {}
 
-    private ApiOperationResponse() {
-        this.methodSelectors = List.of();
-        this.serviceName = null;
+    private ApiOperationResponse(ApiOperationResponse $) {
+        this.methodSelectors = $.methodSelectors;
+        this.serviceName = $.serviceName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ApiOperationResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<MethodSelectorResponse> methodSelectors;
-        private String serviceName;
+        private ApiOperationResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ApiOperationResponse();
         }
 
         public Builder(ApiOperationResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.methodSelectors = defaults.methodSelectors;
-    	      this.serviceName = defaults.serviceName;
+            $ = new ApiOperationResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder methodSelectors(List<MethodSelectorResponse> methodSelectors) {
-            this.methodSelectors = Objects.requireNonNull(methodSelectors);
+            $.methodSelectors = methodSelectors;
             return this;
         }
+
         public Builder methodSelectors(MethodSelectorResponse... methodSelectors) {
             return methodSelectors(List.of(methodSelectors));
         }
+
         public Builder serviceName(String serviceName) {
-            this.serviceName = Objects.requireNonNull(serviceName);
+            $.serviceName = serviceName;
             return this;
-        }        public ApiOperationResponse build() {
-            return new ApiOperationResponse(methodSelectors, serviceName);
+        }
+
+        public ApiOperationResponse build() {
+            $.methodSelectors = Objects.requireNonNull($.methodSelectors, "expected parameter 'methodSelectors' to be non-null");
+            $.serviceName = Objects.requireNonNull($.serviceName, "expected parameter 'serviceName' to be non-null");
+            return $;
         }
     }
+
 }

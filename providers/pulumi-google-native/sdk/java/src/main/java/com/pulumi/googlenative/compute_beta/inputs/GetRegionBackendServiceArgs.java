@@ -15,78 +15,72 @@ public final class GetRegionBackendServiceArgs extends com.pulumi.resources.Invo
     public static final GetRegionBackendServiceArgs Empty = new GetRegionBackendServiceArgs();
 
     @Import(name="backendService", required=true)
-      private final String backendService;
+    private String backendService;
 
     public String backendService() {
         return this.backendService;
     }
 
     @Import(name="project")
-      private final @Nullable String project;
+    private @Nullable String project;
 
     public Optional<String> project() {
-        return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
+        return Optional.ofNullable(this.project);
     }
 
     @Import(name="region", required=true)
-      private final String region;
+    private String region;
 
     public String region() {
         return this.region;
     }
 
-    public GetRegionBackendServiceArgs(
-        String backendService,
-        @Nullable String project,
-        String region) {
-        this.backendService = Objects.requireNonNull(backendService, "expected parameter 'backendService' to be non-null");
-        this.project = project;
-        this.region = Objects.requireNonNull(region, "expected parameter 'region' to be non-null");
-    }
+    private GetRegionBackendServiceArgs() {}
 
-    private GetRegionBackendServiceArgs() {
-        this.backendService = null;
-        this.project = null;
-        this.region = null;
+    private GetRegionBackendServiceArgs(GetRegionBackendServiceArgs $) {
+        this.backendService = $.backendService;
+        this.project = $.project;
+        this.region = $.region;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetRegionBackendServiceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String backendService;
-        private @Nullable String project;
-        private String region;
+        private GetRegionBackendServiceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetRegionBackendServiceArgs();
         }
 
         public Builder(GetRegionBackendServiceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.backendService = defaults.backendService;
-    	      this.project = defaults.project;
-    	      this.region = defaults.region;
+            $ = new GetRegionBackendServiceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder backendService(String backendService) {
-            this.backendService = Objects.requireNonNull(backendService);
+            $.backendService = backendService;
             return this;
         }
+
         public Builder project(@Nullable String project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
+
         public Builder region(String region) {
-            this.region = Objects.requireNonNull(region);
+            $.region = region;
             return this;
-        }        public GetRegionBackendServiceArgs build() {
-            return new GetRegionBackendServiceArgs(backendService, project, region);
+        }
+
+        public GetRegionBackendServiceArgs build() {
+            $.backendService = Objects.requireNonNull($.backendService, "expected parameter 'backendService' to be non-null");
+            $.region = Objects.requireNonNull($.region, "expected parameter 'region' to be non-null");
+            return $;
         }
     }
+
 }

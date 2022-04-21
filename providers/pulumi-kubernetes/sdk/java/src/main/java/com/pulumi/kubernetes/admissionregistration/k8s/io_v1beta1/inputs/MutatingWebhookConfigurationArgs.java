@@ -11,6 +11,7 @@ import com.pulumi.kubernetes.meta_v1.inputs.ObjectMetaArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +28,10 @@ public final class MutatingWebhookConfigurationArgs extends com.pulumi.resources
      * 
      */
     @Import(name="apiVersion")
-      private final @Nullable Output<String> apiVersion;
+    private @Nullable Output<String> apiVersion;
 
-    public Output<String> apiVersion() {
-        return this.apiVersion == null ? Codegen.empty() : this.apiVersion;
+    public Optional<Output<String>> apiVersion() {
+        return Optional.ofNullable(this.apiVersion);
     }
 
     /**
@@ -38,10 +39,10 @@ public final class MutatingWebhookConfigurationArgs extends com.pulumi.resources
      * 
      */
     @Import(name="kind")
-      private final @Nullable Output<String> kind;
+    private @Nullable Output<String> kind;
 
-    public Output<String> kind() {
-        return this.kind == null ? Codegen.empty() : this.kind;
+    public Optional<Output<String>> kind() {
+        return Optional.ofNullable(this.kind);
     }
 
     /**
@@ -49,10 +50,10 @@ public final class MutatingWebhookConfigurationArgs extends com.pulumi.resources
      * 
      */
     @Import(name="metadata")
-      private final @Nullable Output<ObjectMetaArgs> metadata;
+    private @Nullable Output<ObjectMetaArgs> metadata;
 
-    public Output<ObjectMetaArgs> metadata() {
-        return this.metadata == null ? Codegen.empty() : this.metadata;
+    public Optional<Output<ObjectMetaArgs>> metadata() {
+        return Optional.ofNullable(this.metadata);
     }
 
     /**
@@ -60,92 +61,84 @@ public final class MutatingWebhookConfigurationArgs extends com.pulumi.resources
      * 
      */
     @Import(name="webhooks")
-      private final @Nullable Output<List<MutatingWebhookArgs>> webhooks;
+    private @Nullable Output<List<MutatingWebhookArgs>> webhooks;
 
-    public Output<List<MutatingWebhookArgs>> webhooks() {
-        return this.webhooks == null ? Codegen.empty() : this.webhooks;
+    public Optional<Output<List<MutatingWebhookArgs>>> webhooks() {
+        return Optional.ofNullable(this.webhooks);
     }
 
-    public MutatingWebhookConfigurationArgs(
-        @Nullable Output<String> apiVersion,
-        @Nullable Output<String> kind,
-        @Nullable Output<ObjectMetaArgs> metadata,
-        @Nullable Output<List<MutatingWebhookArgs>> webhooks) {
-        this.apiVersion = Codegen.stringProp("apiVersion").output().arg(apiVersion).getNullable();
-        this.kind = Codegen.stringProp("kind").output().arg(kind).getNullable();
-        this.metadata = metadata;
-        this.webhooks = webhooks;
-    }
+    private MutatingWebhookConfigurationArgs() {}
 
-    private MutatingWebhookConfigurationArgs() {
-        this.apiVersion = Codegen.empty();
-        this.kind = Codegen.empty();
-        this.metadata = Codegen.empty();
-        this.webhooks = Codegen.empty();
+    private MutatingWebhookConfigurationArgs(MutatingWebhookConfigurationArgs $) {
+        this.apiVersion = $.apiVersion;
+        this.kind = $.kind;
+        this.metadata = $.metadata;
+        this.webhooks = $.webhooks;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MutatingWebhookConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> apiVersion;
-        private @Nullable Output<String> kind;
-        private @Nullable Output<ObjectMetaArgs> metadata;
-        private @Nullable Output<List<MutatingWebhookArgs>> webhooks;
+        private MutatingWebhookConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new MutatingWebhookConfigurationArgs();
         }
 
         public Builder(MutatingWebhookConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.apiVersion = defaults.apiVersion;
-    	      this.kind = defaults.kind;
-    	      this.metadata = defaults.metadata;
-    	      this.webhooks = defaults.webhooks;
+            $ = new MutatingWebhookConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder apiVersion(@Nullable Output<String> apiVersion) {
-            this.apiVersion = apiVersion;
+            $.apiVersion = apiVersion;
             return this;
         }
-        public Builder apiVersion(@Nullable String apiVersion) {
-            this.apiVersion = Codegen.ofNullable(apiVersion);
-            return this;
+
+        public Builder apiVersion(String apiVersion) {
+            return apiVersion(Output.of(apiVersion));
         }
+
         public Builder kind(@Nullable Output<String> kind) {
-            this.kind = kind;
+            $.kind = kind;
             return this;
         }
-        public Builder kind(@Nullable String kind) {
-            this.kind = Codegen.ofNullable(kind);
-            return this;
+
+        public Builder kind(String kind) {
+            return kind(Output.of(kind));
         }
+
         public Builder metadata(@Nullable Output<ObjectMetaArgs> metadata) {
-            this.metadata = metadata;
+            $.metadata = metadata;
             return this;
         }
-        public Builder metadata(@Nullable ObjectMetaArgs metadata) {
-            this.metadata = Codegen.ofNullable(metadata);
-            return this;
+
+        public Builder metadata(ObjectMetaArgs metadata) {
+            return metadata(Output.of(metadata));
         }
+
         public Builder webhooks(@Nullable Output<List<MutatingWebhookArgs>> webhooks) {
-            this.webhooks = webhooks;
+            $.webhooks = webhooks;
             return this;
         }
-        public Builder webhooks(@Nullable List<MutatingWebhookArgs> webhooks) {
-            this.webhooks = Codegen.ofNullable(webhooks);
-            return this;
+
+        public Builder webhooks(List<MutatingWebhookArgs> webhooks) {
+            return webhooks(Output.of(webhooks));
         }
+
         public Builder webhooks(MutatingWebhookArgs... webhooks) {
             return webhooks(List.of(webhooks));
-        }        public MutatingWebhookConfigurationArgs build() {
-            return new MutatingWebhookConfigurationArgs(apiVersion, kind, metadata, webhooks);
+        }
+
+        public MutatingWebhookConfigurationArgs build() {
+            $.apiVersion = Codegen.stringProp("apiVersion").output().arg($.apiVersion).getNullable();
+            $.kind = Codegen.stringProp("kind").output().arg($.kind).getNullable();
+            return $;
         }
     }
+
 }

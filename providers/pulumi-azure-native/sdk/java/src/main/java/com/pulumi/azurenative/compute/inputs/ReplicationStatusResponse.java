@@ -23,7 +23,7 @@ public final class ReplicationStatusResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="aggregatedState", required=true)
-      private final String aggregatedState;
+    private String aggregatedState;
 
     public String aggregatedState() {
         return this.aggregatedState;
@@ -34,58 +34,56 @@ public final class ReplicationStatusResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="summary", required=true)
-      private final List<RegionalReplicationStatusResponse> summary;
+    private List<RegionalReplicationStatusResponse> summary;
 
     public List<RegionalReplicationStatusResponse> summary() {
         return this.summary;
     }
 
-    public ReplicationStatusResponse(
-        String aggregatedState,
-        List<RegionalReplicationStatusResponse> summary) {
-        this.aggregatedState = Objects.requireNonNull(aggregatedState, "expected parameter 'aggregatedState' to be non-null");
-        this.summary = Objects.requireNonNull(summary, "expected parameter 'summary' to be non-null");
-    }
+    private ReplicationStatusResponse() {}
 
-    private ReplicationStatusResponse() {
-        this.aggregatedState = null;
-        this.summary = List.of();
+    private ReplicationStatusResponse(ReplicationStatusResponse $) {
+        this.aggregatedState = $.aggregatedState;
+        this.summary = $.summary;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ReplicationStatusResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String aggregatedState;
-        private List<RegionalReplicationStatusResponse> summary;
+        private ReplicationStatusResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ReplicationStatusResponse();
         }
 
         public Builder(ReplicationStatusResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.aggregatedState = defaults.aggregatedState;
-    	      this.summary = defaults.summary;
+            $ = new ReplicationStatusResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder aggregatedState(String aggregatedState) {
-            this.aggregatedState = Objects.requireNonNull(aggregatedState);
+            $.aggregatedState = aggregatedState;
             return this;
         }
+
         public Builder summary(List<RegionalReplicationStatusResponse> summary) {
-            this.summary = Objects.requireNonNull(summary);
+            $.summary = summary;
             return this;
         }
+
         public Builder summary(RegionalReplicationStatusResponse... summary) {
             return summary(List.of(summary));
-        }        public ReplicationStatusResponse build() {
-            return new ReplicationStatusResponse(aggregatedState, summary);
+        }
+
+        public ReplicationStatusResponse build() {
+            $.aggregatedState = Objects.requireNonNull($.aggregatedState, "expected parameter 'aggregatedState' to be non-null");
+            $.summary = Objects.requireNonNull($.summary, "expected parameter 'summary' to be non-null");
+            return $;
         }
     }
+
 }

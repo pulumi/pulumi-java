@@ -16,94 +16,83 @@ public final class DomainCognitoOptions extends com.pulumi.resources.InvokeArgs 
     public static final DomainCognitoOptions Empty = new DomainCognitoOptions();
 
     @Import(name="enabled")
-      private final @Nullable Boolean enabled;
+    private @Nullable Boolean enabled;
 
     public Optional<Boolean> enabled() {
-        return this.enabled == null ? Optional.empty() : Optional.ofNullable(this.enabled);
+        return Optional.ofNullable(this.enabled);
     }
 
     @Import(name="identityPoolId")
-      private final @Nullable String identityPoolId;
+    private @Nullable String identityPoolId;
 
     public Optional<String> identityPoolId() {
-        return this.identityPoolId == null ? Optional.empty() : Optional.ofNullable(this.identityPoolId);
+        return Optional.ofNullable(this.identityPoolId);
     }
 
     @Import(name="roleArn")
-      private final @Nullable String roleArn;
+    private @Nullable String roleArn;
 
     public Optional<String> roleArn() {
-        return this.roleArn == null ? Optional.empty() : Optional.ofNullable(this.roleArn);
+        return Optional.ofNullable(this.roleArn);
     }
 
     @Import(name="userPoolId")
-      private final @Nullable String userPoolId;
+    private @Nullable String userPoolId;
 
     public Optional<String> userPoolId() {
-        return this.userPoolId == null ? Optional.empty() : Optional.ofNullable(this.userPoolId);
+        return Optional.ofNullable(this.userPoolId);
     }
 
-    public DomainCognitoOptions(
-        @Nullable Boolean enabled,
-        @Nullable String identityPoolId,
-        @Nullable String roleArn,
-        @Nullable String userPoolId) {
-        this.enabled = enabled;
-        this.identityPoolId = identityPoolId;
-        this.roleArn = roleArn;
-        this.userPoolId = userPoolId;
-    }
+    private DomainCognitoOptions() {}
 
-    private DomainCognitoOptions() {
-        this.enabled = null;
-        this.identityPoolId = null;
-        this.roleArn = null;
-        this.userPoolId = null;
+    private DomainCognitoOptions(DomainCognitoOptions $) {
+        this.enabled = $.enabled;
+        this.identityPoolId = $.identityPoolId;
+        this.roleArn = $.roleArn;
+        this.userPoolId = $.userPoolId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DomainCognitoOptions defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Boolean enabled;
-        private @Nullable String identityPoolId;
-        private @Nullable String roleArn;
-        private @Nullable String userPoolId;
+        private DomainCognitoOptions $;
 
         public Builder() {
-    	      // Empty
+            $ = new DomainCognitoOptions();
         }
 
         public Builder(DomainCognitoOptions defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.enabled = defaults.enabled;
-    	      this.identityPoolId = defaults.identityPoolId;
-    	      this.roleArn = defaults.roleArn;
-    	      this.userPoolId = defaults.userPoolId;
+            $ = new DomainCognitoOptions(Objects.requireNonNull(defaults));
         }
 
         public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = enabled;
+            $.enabled = enabled;
             return this;
         }
+
         public Builder identityPoolId(@Nullable String identityPoolId) {
-            this.identityPoolId = identityPoolId;
+            $.identityPoolId = identityPoolId;
             return this;
         }
+
         public Builder roleArn(@Nullable String roleArn) {
-            this.roleArn = roleArn;
+            $.roleArn = roleArn;
             return this;
         }
+
         public Builder userPoolId(@Nullable String userPoolId) {
-            this.userPoolId = userPoolId;
+            $.userPoolId = userPoolId;
             return this;
-        }        public DomainCognitoOptions build() {
-            return new DomainCognitoOptions(enabled, identityPoolId, roleArn, userPoolId);
+        }
+
+        public DomainCognitoOptions build() {
+            return $;
         }
     }
+
 }

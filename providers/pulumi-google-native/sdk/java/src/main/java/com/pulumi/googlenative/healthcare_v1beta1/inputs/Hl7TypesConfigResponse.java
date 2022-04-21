@@ -23,7 +23,7 @@ public final class Hl7TypesConfigResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="type", required=true)
-      private final List<TypeResponse> type;
+    private List<TypeResponse> type;
 
     public List<TypeResponse> type() {
         return this.type;
@@ -34,61 +34,60 @@ public final class Hl7TypesConfigResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="version", required=true)
-      private final List<VersionSourceResponse> version;
+    private List<VersionSourceResponse> version;
 
     public List<VersionSourceResponse> version() {
         return this.version;
     }
 
-    public Hl7TypesConfigResponse(
-        List<TypeResponse> type,
-        List<VersionSourceResponse> version) {
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-        this.version = Objects.requireNonNull(version, "expected parameter 'version' to be non-null");
-    }
+    private Hl7TypesConfigResponse() {}
 
-    private Hl7TypesConfigResponse() {
-        this.type = List.of();
-        this.version = List.of();
+    private Hl7TypesConfigResponse(Hl7TypesConfigResponse $) {
+        this.type = $.type;
+        this.version = $.version;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(Hl7TypesConfigResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<TypeResponse> type;
-        private List<VersionSourceResponse> version;
+        private Hl7TypesConfigResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new Hl7TypesConfigResponse();
         }
 
         public Builder(Hl7TypesConfigResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.type = defaults.type;
-    	      this.version = defaults.version;
+            $ = new Hl7TypesConfigResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder type(List<TypeResponse> type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder type(TypeResponse... type) {
             return type(List.of(type));
         }
+
         public Builder version(List<VersionSourceResponse> version) {
-            this.version = Objects.requireNonNull(version);
+            $.version = version;
             return this;
         }
+
         public Builder version(VersionSourceResponse... version) {
             return version(List.of(version));
-        }        public Hl7TypesConfigResponse build() {
-            return new Hl7TypesConfigResponse(type, version);
+        }
+
+        public Hl7TypesConfigResponse build() {
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            $.version = Objects.requireNonNull($.version, "expected parameter 'version' to be non-null");
+            return $;
         }
     }
+
 }

@@ -25,10 +25,10 @@ public final class AdditionalWorkspacesPropertiesResponse extends com.pulumi.res
      * 
      */
     @Import(name="dataTypes")
-      private final @Nullable List<String> dataTypes;
+    private @Nullable List<String> dataTypes;
 
-    public List<String> dataTypes() {
-        return this.dataTypes == null ? List.of() : this.dataTypes;
+    public Optional<List<String>> dataTypes() {
+        return Optional.ofNullable(this.dataTypes);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class AdditionalWorkspacesPropertiesResponse extends com.pulumi.res
      * 
      */
     @Import(name="type")
-      private final @Nullable String type;
+    private @Nullable String type;
 
     public Optional<String> type() {
-        return this.type == null ? Optional.empty() : Optional.ofNullable(this.type);
+        return Optional.ofNullable(this.type);
     }
 
     /**
@@ -47,67 +47,61 @@ public final class AdditionalWorkspacesPropertiesResponse extends com.pulumi.res
      * 
      */
     @Import(name="workspace")
-      private final @Nullable String workspace;
+    private @Nullable String workspace;
 
     public Optional<String> workspace() {
-        return this.workspace == null ? Optional.empty() : Optional.ofNullable(this.workspace);
+        return Optional.ofNullable(this.workspace);
     }
 
-    public AdditionalWorkspacesPropertiesResponse(
-        @Nullable List<String> dataTypes,
-        @Nullable String type,
-        @Nullable String workspace) {
-        this.dataTypes = dataTypes;
-        this.type = Codegen.stringProp("type").arg(type).def("Sentinel").getNullable();
-        this.workspace = workspace;
-    }
+    private AdditionalWorkspacesPropertiesResponse() {}
 
-    private AdditionalWorkspacesPropertiesResponse() {
-        this.dataTypes = List.of();
-        this.type = null;
-        this.workspace = null;
+    private AdditionalWorkspacesPropertiesResponse(AdditionalWorkspacesPropertiesResponse $) {
+        this.dataTypes = $.dataTypes;
+        this.type = $.type;
+        this.workspace = $.workspace;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AdditionalWorkspacesPropertiesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<String> dataTypes;
-        private @Nullable String type;
-        private @Nullable String workspace;
+        private AdditionalWorkspacesPropertiesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AdditionalWorkspacesPropertiesResponse();
         }
 
         public Builder(AdditionalWorkspacesPropertiesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dataTypes = defaults.dataTypes;
-    	      this.type = defaults.type;
-    	      this.workspace = defaults.workspace;
+            $ = new AdditionalWorkspacesPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder dataTypes(@Nullable List<String> dataTypes) {
-            this.dataTypes = dataTypes;
+            $.dataTypes = dataTypes;
             return this;
         }
+
         public Builder dataTypes(String... dataTypes) {
             return dataTypes(List.of(dataTypes));
         }
+
         public Builder type(@Nullable String type) {
-            this.type = type;
+            $.type = type;
             return this;
         }
+
         public Builder workspace(@Nullable String workspace) {
-            this.workspace = workspace;
+            $.workspace = workspace;
             return this;
-        }        public AdditionalWorkspacesPropertiesResponse build() {
-            return new AdditionalWorkspacesPropertiesResponse(dataTypes, type, workspace);
+        }
+
+        public AdditionalWorkspacesPropertiesResponse build() {
+            $.type = Codegen.stringProp("type").arg($.type).def("Sentinel").getNullable();
+            return $;
         }
     }
+
 }

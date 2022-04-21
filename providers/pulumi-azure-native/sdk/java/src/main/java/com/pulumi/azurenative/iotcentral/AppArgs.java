@@ -6,10 +6,10 @@ package com.pulumi.azurenative.iotcentral;
 import com.pulumi.azurenative.iotcentral.inputs.AppSkuInfoArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class AppArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="displayName")
-      private final @Nullable Output<String> displayName;
+    private @Nullable Output<String> displayName;
 
-    public Output<String> displayName() {
-        return this.displayName == null ? Codegen.empty() : this.displayName;
+    public Optional<Output<String>> displayName() {
+        return Optional.ofNullable(this.displayName);
     }
 
     /**
@@ -33,10 +33,10 @@ public final class AppArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -44,7 +44,7 @@ public final class AppArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -55,10 +55,10 @@ public final class AppArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceName")
-      private final @Nullable Output<String> resourceName;
+    private @Nullable Output<String> resourceName;
 
-    public Output<String> resourceName() {
-        return this.resourceName == null ? Codegen.empty() : this.resourceName;
+    public Optional<Output<String>> resourceName() {
+        return Optional.ofNullable(this.resourceName);
     }
 
     /**
@@ -66,7 +66,7 @@ public final class AppArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="sku", required=true)
-      private final Output<AppSkuInfoArgs> sku;
+    private Output<AppSkuInfoArgs> sku;
 
     public Output<AppSkuInfoArgs> sku() {
         return this.sku;
@@ -77,10 +77,10 @@ public final class AppArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="subdomain")
-      private final @Nullable Output<String> subdomain;
+    private @Nullable Output<String> subdomain;
 
-    public Output<String> subdomain() {
-        return this.subdomain == null ? Codegen.empty() : this.subdomain;
+    public Optional<Output<String>> subdomain() {
+        return Optional.ofNullable(this.subdomain);
     }
 
     /**
@@ -88,10 +88,10 @@ public final class AppArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -99,141 +99,120 @@ public final class AppArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="template")
-      private final @Nullable Output<String> template;
+    private @Nullable Output<String> template;
 
-    public Output<String> template() {
-        return this.template == null ? Codegen.empty() : this.template;
+    public Optional<Output<String>> template() {
+        return Optional.ofNullable(this.template);
     }
 
-    public AppArgs(
-        @Nullable Output<String> displayName,
-        @Nullable Output<String> location,
-        Output<String> resourceGroupName,
-        @Nullable Output<String> resourceName,
-        Output<AppSkuInfoArgs> sku,
-        @Nullable Output<String> subdomain,
-        @Nullable Output<Map<String,String>> tags,
-        @Nullable Output<String> template) {
-        this.displayName = displayName;
-        this.location = location;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.resourceName = resourceName;
-        this.sku = Objects.requireNonNull(sku, "expected parameter 'sku' to be non-null");
-        this.subdomain = subdomain;
-        this.tags = tags;
-        this.template = template;
-    }
+    private AppArgs() {}
 
-    private AppArgs() {
-        this.displayName = Codegen.empty();
-        this.location = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.resourceName = Codegen.empty();
-        this.sku = Codegen.empty();
-        this.subdomain = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.template = Codegen.empty();
+    private AppArgs(AppArgs $) {
+        this.displayName = $.displayName;
+        this.location = $.location;
+        this.resourceGroupName = $.resourceGroupName;
+        this.resourceName = $.resourceName;
+        this.sku = $.sku;
+        this.subdomain = $.subdomain;
+        this.tags = $.tags;
+        this.template = $.template;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AppArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> displayName;
-        private @Nullable Output<String> location;
-        private Output<String> resourceGroupName;
-        private @Nullable Output<String> resourceName;
-        private Output<AppSkuInfoArgs> sku;
-        private @Nullable Output<String> subdomain;
-        private @Nullable Output<Map<String,String>> tags;
-        private @Nullable Output<String> template;
+        private AppArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AppArgs();
         }
 
         public Builder(AppArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.displayName = defaults.displayName;
-    	      this.location = defaults.location;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.resourceName = defaults.resourceName;
-    	      this.sku = defaults.sku;
-    	      this.subdomain = defaults.subdomain;
-    	      this.tags = defaults.tags;
-    	      this.template = defaults.template;
+            $ = new AppArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder displayName(@Nullable Output<String> displayName) {
-            this.displayName = displayName;
+            $.displayName = displayName;
             return this;
         }
-        public Builder displayName(@Nullable String displayName) {
-            this.displayName = Codegen.ofNullable(displayName);
-            return this;
+
+        public Builder displayName(String displayName) {
+            return displayName(Output.of(displayName));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder resourceName(@Nullable Output<String> resourceName) {
-            this.resourceName = resourceName;
+            $.resourceName = resourceName;
             return this;
         }
-        public Builder resourceName(@Nullable String resourceName) {
-            this.resourceName = Codegen.ofNullable(resourceName);
-            return this;
+
+        public Builder resourceName(String resourceName) {
+            return resourceName(Output.of(resourceName));
         }
+
         public Builder sku(Output<AppSkuInfoArgs> sku) {
-            this.sku = Objects.requireNonNull(sku);
+            $.sku = sku;
             return this;
         }
+
         public Builder sku(AppSkuInfoArgs sku) {
-            this.sku = Output.of(Objects.requireNonNull(sku));
-            return this;
+            return sku(Output.of(sku));
         }
+
         public Builder subdomain(@Nullable Output<String> subdomain) {
-            this.subdomain = subdomain;
+            $.subdomain = subdomain;
             return this;
         }
-        public Builder subdomain(@Nullable String subdomain) {
-            this.subdomain = Codegen.ofNullable(subdomain);
-            return this;
+
+        public Builder subdomain(String subdomain) {
+            return subdomain(Output.of(subdomain));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder template(@Nullable Output<String> template) {
-            this.template = template;
+            $.template = template;
             return this;
         }
-        public Builder template(@Nullable String template) {
-            this.template = Codegen.ofNullable(template);
-            return this;
-        }        public AppArgs build() {
-            return new AppArgs(displayName, location, resourceGroupName, resourceName, sku, subdomain, tags, template);
+
+        public Builder template(String template) {
+            return template(Output.of(template));
+        }
+
+        public AppArgs build() {
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.sku = Objects.requireNonNull($.sku, "expected parameter 'sku' to be non-null");
+            return $;
         }
     }
+
 }

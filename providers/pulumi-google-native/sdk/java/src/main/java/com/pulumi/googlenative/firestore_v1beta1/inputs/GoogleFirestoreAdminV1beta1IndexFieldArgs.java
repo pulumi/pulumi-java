@@ -5,10 +5,10 @@ package com.pulumi.googlenative.firestore_v1beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.firestore_v1beta1.enums.GoogleFirestoreAdminV1beta1IndexFieldMode;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class GoogleFirestoreAdminV1beta1IndexFieldArgs extends com.pulumi.
      * 
      */
     @Import(name="fieldPath")
-      private final @Nullable Output<String> fieldPath;
+    private @Nullable Output<String> fieldPath;
 
-    public Output<String> fieldPath() {
-        return this.fieldPath == null ? Codegen.empty() : this.fieldPath;
+    public Optional<Output<String>> fieldPath() {
+        return Optional.ofNullable(this.fieldPath);
     }
 
     /**
@@ -36,63 +36,58 @@ public final class GoogleFirestoreAdminV1beta1IndexFieldArgs extends com.pulumi.
      * 
      */
     @Import(name="mode")
-      private final @Nullable Output<GoogleFirestoreAdminV1beta1IndexFieldMode> mode;
+    private @Nullable Output<GoogleFirestoreAdminV1beta1IndexFieldMode> mode;
 
-    public Output<GoogleFirestoreAdminV1beta1IndexFieldMode> mode() {
-        return this.mode == null ? Codegen.empty() : this.mode;
+    public Optional<Output<GoogleFirestoreAdminV1beta1IndexFieldMode>> mode() {
+        return Optional.ofNullable(this.mode);
     }
 
-    public GoogleFirestoreAdminV1beta1IndexFieldArgs(
-        @Nullable Output<String> fieldPath,
-        @Nullable Output<GoogleFirestoreAdminV1beta1IndexFieldMode> mode) {
-        this.fieldPath = fieldPath;
-        this.mode = mode;
-    }
+    private GoogleFirestoreAdminV1beta1IndexFieldArgs() {}
 
-    private GoogleFirestoreAdminV1beta1IndexFieldArgs() {
-        this.fieldPath = Codegen.empty();
-        this.mode = Codegen.empty();
+    private GoogleFirestoreAdminV1beta1IndexFieldArgs(GoogleFirestoreAdminV1beta1IndexFieldArgs $) {
+        this.fieldPath = $.fieldPath;
+        this.mode = $.mode;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleFirestoreAdminV1beta1IndexFieldArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> fieldPath;
-        private @Nullable Output<GoogleFirestoreAdminV1beta1IndexFieldMode> mode;
+        private GoogleFirestoreAdminV1beta1IndexFieldArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleFirestoreAdminV1beta1IndexFieldArgs();
         }
 
         public Builder(GoogleFirestoreAdminV1beta1IndexFieldArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.fieldPath = defaults.fieldPath;
-    	      this.mode = defaults.mode;
+            $ = new GoogleFirestoreAdminV1beta1IndexFieldArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder fieldPath(@Nullable Output<String> fieldPath) {
-            this.fieldPath = fieldPath;
+            $.fieldPath = fieldPath;
             return this;
         }
-        public Builder fieldPath(@Nullable String fieldPath) {
-            this.fieldPath = Codegen.ofNullable(fieldPath);
-            return this;
+
+        public Builder fieldPath(String fieldPath) {
+            return fieldPath(Output.of(fieldPath));
         }
+
         public Builder mode(@Nullable Output<GoogleFirestoreAdminV1beta1IndexFieldMode> mode) {
-            this.mode = mode;
+            $.mode = mode;
             return this;
         }
-        public Builder mode(@Nullable GoogleFirestoreAdminV1beta1IndexFieldMode mode) {
-            this.mode = Codegen.ofNullable(mode);
-            return this;
-        }        public GoogleFirestoreAdminV1beta1IndexFieldArgs build() {
-            return new GoogleFirestoreAdminV1beta1IndexFieldArgs(fieldPath, mode);
+
+        public Builder mode(GoogleFirestoreAdminV1beta1IndexFieldMode mode) {
+            return mode(Output.of(mode));
+        }
+
+        public GoogleFirestoreAdminV1beta1IndexFieldArgs build() {
+            return $;
         }
     }
+
 }

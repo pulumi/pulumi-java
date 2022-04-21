@@ -5,9 +5,9 @@ package com.pulumi.gcp.bigtable;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,7 +20,7 @@ public final class TableIamPolicyArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="instance", required=true)
-      private final Output<String> instance;
+    private Output<String> instance;
 
     public Output<String> instance() {
         return this.instance;
@@ -31,7 +31,7 @@ public final class TableIamPolicyArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="policyData", required=true)
-      private final Output<String> policyData;
+    private Output<String> policyData;
 
     public Output<String> policyData() {
         return this.policyData;
@@ -43,10 +43,10 @@ public final class TableIamPolicyArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -54,89 +54,81 @@ public final class TableIamPolicyArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="table", required=true)
-      private final Output<String> table;
+    private Output<String> table;
 
     public Output<String> table() {
         return this.table;
     }
 
-    public TableIamPolicyArgs(
-        Output<String> instance,
-        Output<String> policyData,
-        @Nullable Output<String> project,
-        Output<String> table) {
-        this.instance = Objects.requireNonNull(instance, "expected parameter 'instance' to be non-null");
-        this.policyData = Objects.requireNonNull(policyData, "expected parameter 'policyData' to be non-null");
-        this.project = project;
-        this.table = Objects.requireNonNull(table, "expected parameter 'table' to be non-null");
-    }
+    private TableIamPolicyArgs() {}
 
-    private TableIamPolicyArgs() {
-        this.instance = Codegen.empty();
-        this.policyData = Codegen.empty();
-        this.project = Codegen.empty();
-        this.table = Codegen.empty();
+    private TableIamPolicyArgs(TableIamPolicyArgs $) {
+        this.instance = $.instance;
+        this.policyData = $.policyData;
+        this.project = $.project;
+        this.table = $.table;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TableIamPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> instance;
-        private Output<String> policyData;
-        private @Nullable Output<String> project;
-        private Output<String> table;
+        private TableIamPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TableIamPolicyArgs();
         }
 
         public Builder(TableIamPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.instance = defaults.instance;
-    	      this.policyData = defaults.policyData;
-    	      this.project = defaults.project;
-    	      this.table = defaults.table;
+            $ = new TableIamPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder instance(Output<String> instance) {
-            this.instance = Objects.requireNonNull(instance);
+            $.instance = instance;
             return this;
         }
+
         public Builder instance(String instance) {
-            this.instance = Output.of(Objects.requireNonNull(instance));
-            return this;
+            return instance(Output.of(instance));
         }
+
         public Builder policyData(Output<String> policyData) {
-            this.policyData = Objects.requireNonNull(policyData);
+            $.policyData = policyData;
             return this;
         }
+
         public Builder policyData(String policyData) {
-            this.policyData = Output.of(Objects.requireNonNull(policyData));
-            return this;
+            return policyData(Output.of(policyData));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder table(Output<String> table) {
-            this.table = Objects.requireNonNull(table);
+            $.table = table;
             return this;
         }
+
         public Builder table(String table) {
-            this.table = Output.of(Objects.requireNonNull(table));
-            return this;
-        }        public TableIamPolicyArgs build() {
-            return new TableIamPolicyArgs(instance, policyData, project, table);
+            return table(Output.of(table));
+        }
+
+        public TableIamPolicyArgs build() {
+            $.instance = Objects.requireNonNull($.instance, "expected parameter 'instance' to be non-null");
+            $.policyData = Objects.requireNonNull($.policyData, "expected parameter 'policyData' to be non-null");
+            $.table = Objects.requireNonNull($.table, "expected parameter 'table' to be non-null");
+            return $;
         }
     }
+
 }

@@ -6,11 +6,11 @@ package com.pulumi.azurenative.apimanagement.inputs;
 import com.pulumi.azurenative.apimanagement.inputs.BackendAuthorizationHeaderCredentialsArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +27,10 @@ public final class BackendCredentialsContractArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="authorization")
-      private final @Nullable Output<BackendAuthorizationHeaderCredentialsArgs> authorization;
+    private @Nullable Output<BackendAuthorizationHeaderCredentialsArgs> authorization;
 
-    public Output<BackendAuthorizationHeaderCredentialsArgs> authorization() {
-        return this.authorization == null ? Codegen.empty() : this.authorization;
+    public Optional<Output<BackendAuthorizationHeaderCredentialsArgs>> authorization() {
+        return Optional.ofNullable(this.authorization);
     }
 
     /**
@@ -38,10 +38,10 @@ public final class BackendCredentialsContractArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="certificate")
-      private final @Nullable Output<List<String>> certificate;
+    private @Nullable Output<List<String>> certificate;
 
-    public Output<List<String>> certificate() {
-        return this.certificate == null ? Codegen.empty() : this.certificate;
+    public Optional<Output<List<String>>> certificate() {
+        return Optional.ofNullable(this.certificate);
     }
 
     /**
@@ -49,10 +49,10 @@ public final class BackendCredentialsContractArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="certificateIds")
-      private final @Nullable Output<List<String>> certificateIds;
+    private @Nullable Output<List<String>> certificateIds;
 
-    public Output<List<String>> certificateIds() {
-        return this.certificateIds == null ? Codegen.empty() : this.certificateIds;
+    public Optional<Output<List<String>>> certificateIds() {
+        return Optional.ofNullable(this.certificateIds);
     }
 
     /**
@@ -60,10 +60,10 @@ public final class BackendCredentialsContractArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="header")
-      private final @Nullable Output<Map<String,List<String>>> header;
+    private @Nullable Output<Map<String,List<String>>> header;
 
-    public Output<Map<String,List<String>>> header() {
-        return this.header == null ? Codegen.empty() : this.header;
+    public Optional<Output<Map<String,List<String>>>> header() {
+        return Optional.ofNullable(this.header);
     }
 
     /**
@@ -71,108 +71,96 @@ public final class BackendCredentialsContractArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="query")
-      private final @Nullable Output<Map<String,List<String>>> query;
+    private @Nullable Output<Map<String,List<String>>> query;
 
-    public Output<Map<String,List<String>>> query() {
-        return this.query == null ? Codegen.empty() : this.query;
+    public Optional<Output<Map<String,List<String>>>> query() {
+        return Optional.ofNullable(this.query);
     }
 
-    public BackendCredentialsContractArgs(
-        @Nullable Output<BackendAuthorizationHeaderCredentialsArgs> authorization,
-        @Nullable Output<List<String>> certificate,
-        @Nullable Output<List<String>> certificateIds,
-        @Nullable Output<Map<String,List<String>>> header,
-        @Nullable Output<Map<String,List<String>>> query) {
-        this.authorization = authorization;
-        this.certificate = certificate;
-        this.certificateIds = certificateIds;
-        this.header = header;
-        this.query = query;
-    }
+    private BackendCredentialsContractArgs() {}
 
-    private BackendCredentialsContractArgs() {
-        this.authorization = Codegen.empty();
-        this.certificate = Codegen.empty();
-        this.certificateIds = Codegen.empty();
-        this.header = Codegen.empty();
-        this.query = Codegen.empty();
+    private BackendCredentialsContractArgs(BackendCredentialsContractArgs $) {
+        this.authorization = $.authorization;
+        this.certificate = $.certificate;
+        this.certificateIds = $.certificateIds;
+        this.header = $.header;
+        this.query = $.query;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BackendCredentialsContractArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<BackendAuthorizationHeaderCredentialsArgs> authorization;
-        private @Nullable Output<List<String>> certificate;
-        private @Nullable Output<List<String>> certificateIds;
-        private @Nullable Output<Map<String,List<String>>> header;
-        private @Nullable Output<Map<String,List<String>>> query;
+        private BackendCredentialsContractArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new BackendCredentialsContractArgs();
         }
 
         public Builder(BackendCredentialsContractArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.authorization = defaults.authorization;
-    	      this.certificate = defaults.certificate;
-    	      this.certificateIds = defaults.certificateIds;
-    	      this.header = defaults.header;
-    	      this.query = defaults.query;
+            $ = new BackendCredentialsContractArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder authorization(@Nullable Output<BackendAuthorizationHeaderCredentialsArgs> authorization) {
-            this.authorization = authorization;
+            $.authorization = authorization;
             return this;
         }
-        public Builder authorization(@Nullable BackendAuthorizationHeaderCredentialsArgs authorization) {
-            this.authorization = Codegen.ofNullable(authorization);
-            return this;
+
+        public Builder authorization(BackendAuthorizationHeaderCredentialsArgs authorization) {
+            return authorization(Output.of(authorization));
         }
+
         public Builder certificate(@Nullable Output<List<String>> certificate) {
-            this.certificate = certificate;
+            $.certificate = certificate;
             return this;
         }
-        public Builder certificate(@Nullable List<String> certificate) {
-            this.certificate = Codegen.ofNullable(certificate);
-            return this;
+
+        public Builder certificate(List<String> certificate) {
+            return certificate(Output.of(certificate));
         }
+
         public Builder certificate(String... certificate) {
             return certificate(List.of(certificate));
         }
+
         public Builder certificateIds(@Nullable Output<List<String>> certificateIds) {
-            this.certificateIds = certificateIds;
+            $.certificateIds = certificateIds;
             return this;
         }
-        public Builder certificateIds(@Nullable List<String> certificateIds) {
-            this.certificateIds = Codegen.ofNullable(certificateIds);
-            return this;
+
+        public Builder certificateIds(List<String> certificateIds) {
+            return certificateIds(Output.of(certificateIds));
         }
+
         public Builder certificateIds(String... certificateIds) {
             return certificateIds(List.of(certificateIds));
         }
+
         public Builder header(@Nullable Output<Map<String,List<String>>> header) {
-            this.header = header;
+            $.header = header;
             return this;
         }
-        public Builder header(@Nullable Map<String,List<String>> header) {
-            this.header = Codegen.ofNullable(header);
-            return this;
+
+        public Builder header(Map<String,List<String>> header) {
+            return header(Output.of(header));
         }
+
         public Builder query(@Nullable Output<Map<String,List<String>>> query) {
-            this.query = query;
+            $.query = query;
             return this;
         }
-        public Builder query(@Nullable Map<String,List<String>> query) {
-            this.query = Codegen.ofNullable(query);
-            return this;
-        }        public BackendCredentialsContractArgs build() {
-            return new BackendCredentialsContractArgs(authorization, certificate, certificateIds, header, query);
+
+        public Builder query(Map<String,List<String>> query) {
+            return query(Output.of(query));
+        }
+
+        public BackendCredentialsContractArgs build() {
+            return $;
         }
     }
+
 }

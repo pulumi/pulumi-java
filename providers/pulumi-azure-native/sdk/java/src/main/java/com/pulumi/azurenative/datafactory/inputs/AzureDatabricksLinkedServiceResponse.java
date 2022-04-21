@@ -33,10 +33,10 @@ public final class AzureDatabricksLinkedServiceResponse extends com.pulumi.resou
      * 
      */
     @Import(name="accessToken")
-      private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> accessToken;
+    private @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> accessToken;
 
-    public Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> accessToken() {
-        return this.accessToken == null ? null : this.accessToken;
+    public Optional<Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse>> accessToken() {
+        return Optional.ofNullable(this.accessToken);
     }
 
     /**
@@ -44,10 +44,10 @@ public final class AzureDatabricksLinkedServiceResponse extends com.pulumi.resou
      * 
      */
     @Import(name="annotations")
-      private final @Nullable List<Object> annotations;
+    private @Nullable List<Object> annotations;
 
-    public List<Object> annotations() {
-        return this.annotations == null ? List.of() : this.annotations;
+    public Optional<List<Object>> annotations() {
+        return Optional.ofNullable(this.annotations);
     }
 
     /**
@@ -55,10 +55,10 @@ public final class AzureDatabricksLinkedServiceResponse extends com.pulumi.resou
      * 
      */
     @Import(name="authentication")
-      private final @Nullable Object authentication;
+    private @Nullable Object authentication;
 
     public Optional<Object> authentication() {
-        return this.authentication == null ? Optional.empty() : Optional.ofNullable(this.authentication);
+        return Optional.ofNullable(this.authentication);
     }
 
     /**
@@ -66,10 +66,10 @@ public final class AzureDatabricksLinkedServiceResponse extends com.pulumi.resou
      * 
      */
     @Import(name="connectVia")
-      private final @Nullable IntegrationRuntimeReferenceResponse connectVia;
+    private @Nullable IntegrationRuntimeReferenceResponse connectVia;
 
     public Optional<IntegrationRuntimeReferenceResponse> connectVia() {
-        return this.connectVia == null ? Optional.empty() : Optional.ofNullable(this.connectVia);
+        return Optional.ofNullable(this.connectVia);
     }
 
     /**
@@ -77,10 +77,10 @@ public final class AzureDatabricksLinkedServiceResponse extends com.pulumi.resou
      * 
      */
     @Import(name="credential")
-      private final @Nullable CredentialReferenceResponse credential;
+    private @Nullable CredentialReferenceResponse credential;
 
     public Optional<CredentialReferenceResponse> credential() {
-        return this.credential == null ? Optional.empty() : Optional.ofNullable(this.credential);
+        return Optional.ofNullable(this.credential);
     }
 
     /**
@@ -88,10 +88,10 @@ public final class AzureDatabricksLinkedServiceResponse extends com.pulumi.resou
      * 
      */
     @Import(name="description")
-      private final @Nullable String description;
+    private @Nullable String description;
 
     public Optional<String> description() {
-        return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -99,7 +99,7 @@ public final class AzureDatabricksLinkedServiceResponse extends com.pulumi.resou
      * 
      */
     @Import(name="domain", required=true)
-      private final Object domain;
+    private Object domain;
 
     public Object domain() {
         return this.domain;
@@ -110,10 +110,10 @@ public final class AzureDatabricksLinkedServiceResponse extends com.pulumi.resou
      * 
      */
     @Import(name="encryptedCredential")
-      private final @Nullable Object encryptedCredential;
+    private @Nullable Object encryptedCredential;
 
     public Optional<Object> encryptedCredential() {
-        return this.encryptedCredential == null ? Optional.empty() : Optional.ofNullable(this.encryptedCredential);
+        return Optional.ofNullable(this.encryptedCredential);
     }
 
     /**
@@ -121,10 +121,10 @@ public final class AzureDatabricksLinkedServiceResponse extends com.pulumi.resou
      * 
      */
     @Import(name="existingClusterId")
-      private final @Nullable Object existingClusterId;
+    private @Nullable Object existingClusterId;
 
     public Optional<Object> existingClusterId() {
-        return this.existingClusterId == null ? Optional.empty() : Optional.ofNullable(this.existingClusterId);
+        return Optional.ofNullable(this.existingClusterId);
     }
 
     /**
@@ -132,10 +132,10 @@ public final class AzureDatabricksLinkedServiceResponse extends com.pulumi.resou
      * 
      */
     @Import(name="instancePoolId")
-      private final @Nullable Object instancePoolId;
+    private @Nullable Object instancePoolId;
 
     public Optional<Object> instancePoolId() {
-        return this.instancePoolId == null ? Optional.empty() : Optional.ofNullable(this.instancePoolId);
+        return Optional.ofNullable(this.instancePoolId);
     }
 
     /**
@@ -143,10 +143,10 @@ public final class AzureDatabricksLinkedServiceResponse extends com.pulumi.resou
      * 
      */
     @Import(name="newClusterCustomTags")
-      private final @Nullable Map<String,Object> newClusterCustomTags;
+    private @Nullable Map<String,Object> newClusterCustomTags;
 
-    public Map<String,Object> newClusterCustomTags() {
-        return this.newClusterCustomTags == null ? Map.of() : this.newClusterCustomTags;
+    public Optional<Map<String,Object>> newClusterCustomTags() {
+        return Optional.ofNullable(this.newClusterCustomTags);
     }
 
     /**
@@ -154,10 +154,10 @@ public final class AzureDatabricksLinkedServiceResponse extends com.pulumi.resou
      * 
      */
     @Import(name="newClusterDriverNodeType")
-      private final @Nullable Object newClusterDriverNodeType;
+    private @Nullable Object newClusterDriverNodeType;
 
     public Optional<Object> newClusterDriverNodeType() {
-        return this.newClusterDriverNodeType == null ? Optional.empty() : Optional.ofNullable(this.newClusterDriverNodeType);
+        return Optional.ofNullable(this.newClusterDriverNodeType);
     }
 
     /**
@@ -165,10 +165,10 @@ public final class AzureDatabricksLinkedServiceResponse extends com.pulumi.resou
      * 
      */
     @Import(name="newClusterEnableElasticDisk")
-      private final @Nullable Object newClusterEnableElasticDisk;
+    private @Nullable Object newClusterEnableElasticDisk;
 
     public Optional<Object> newClusterEnableElasticDisk() {
-        return this.newClusterEnableElasticDisk == null ? Optional.empty() : Optional.ofNullable(this.newClusterEnableElasticDisk);
+        return Optional.ofNullable(this.newClusterEnableElasticDisk);
     }
 
     /**
@@ -176,10 +176,10 @@ public final class AzureDatabricksLinkedServiceResponse extends com.pulumi.resou
      * 
      */
     @Import(name="newClusterInitScripts")
-      private final @Nullable Object newClusterInitScripts;
+    private @Nullable Object newClusterInitScripts;
 
     public Optional<Object> newClusterInitScripts() {
-        return this.newClusterInitScripts == null ? Optional.empty() : Optional.ofNullable(this.newClusterInitScripts);
+        return Optional.ofNullable(this.newClusterInitScripts);
     }
 
     /**
@@ -187,10 +187,10 @@ public final class AzureDatabricksLinkedServiceResponse extends com.pulumi.resou
      * 
      */
     @Import(name="newClusterLogDestination")
-      private final @Nullable Object newClusterLogDestination;
+    private @Nullable Object newClusterLogDestination;
 
     public Optional<Object> newClusterLogDestination() {
-        return this.newClusterLogDestination == null ? Optional.empty() : Optional.ofNullable(this.newClusterLogDestination);
+        return Optional.ofNullable(this.newClusterLogDestination);
     }
 
     /**
@@ -198,10 +198,10 @@ public final class AzureDatabricksLinkedServiceResponse extends com.pulumi.resou
      * 
      */
     @Import(name="newClusterNodeType")
-      private final @Nullable Object newClusterNodeType;
+    private @Nullable Object newClusterNodeType;
 
     public Optional<Object> newClusterNodeType() {
-        return this.newClusterNodeType == null ? Optional.empty() : Optional.ofNullable(this.newClusterNodeType);
+        return Optional.ofNullable(this.newClusterNodeType);
     }
 
     /**
@@ -209,10 +209,10 @@ public final class AzureDatabricksLinkedServiceResponse extends com.pulumi.resou
      * 
      */
     @Import(name="newClusterNumOfWorker")
-      private final @Nullable Object newClusterNumOfWorker;
+    private @Nullable Object newClusterNumOfWorker;
 
     public Optional<Object> newClusterNumOfWorker() {
-        return this.newClusterNumOfWorker == null ? Optional.empty() : Optional.ofNullable(this.newClusterNumOfWorker);
+        return Optional.ofNullable(this.newClusterNumOfWorker);
     }
 
     /**
@@ -220,10 +220,10 @@ public final class AzureDatabricksLinkedServiceResponse extends com.pulumi.resou
      * 
      */
     @Import(name="newClusterSparkConf")
-      private final @Nullable Map<String,Object> newClusterSparkConf;
+    private @Nullable Map<String,Object> newClusterSparkConf;
 
-    public Map<String,Object> newClusterSparkConf() {
-        return this.newClusterSparkConf == null ? Map.of() : this.newClusterSparkConf;
+    public Optional<Map<String,Object>> newClusterSparkConf() {
+        return Optional.ofNullable(this.newClusterSparkConf);
     }
 
     /**
@@ -231,10 +231,10 @@ public final class AzureDatabricksLinkedServiceResponse extends com.pulumi.resou
      * 
      */
     @Import(name="newClusterSparkEnvVars")
-      private final @Nullable Map<String,Object> newClusterSparkEnvVars;
+    private @Nullable Map<String,Object> newClusterSparkEnvVars;
 
-    public Map<String,Object> newClusterSparkEnvVars() {
-        return this.newClusterSparkEnvVars == null ? Map.of() : this.newClusterSparkEnvVars;
+    public Optional<Map<String,Object>> newClusterSparkEnvVars() {
+        return Optional.ofNullable(this.newClusterSparkEnvVars);
     }
 
     /**
@@ -242,10 +242,10 @@ public final class AzureDatabricksLinkedServiceResponse extends com.pulumi.resou
      * 
      */
     @Import(name="newClusterVersion")
-      private final @Nullable Object newClusterVersion;
+    private @Nullable Object newClusterVersion;
 
     public Optional<Object> newClusterVersion() {
-        return this.newClusterVersion == null ? Optional.empty() : Optional.ofNullable(this.newClusterVersion);
+        return Optional.ofNullable(this.newClusterVersion);
     }
 
     /**
@@ -253,10 +253,10 @@ public final class AzureDatabricksLinkedServiceResponse extends com.pulumi.resou
      * 
      */
     @Import(name="parameters")
-      private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
+    private @Nullable Map<String,ParameterSpecificationResponse> parameters;
 
-    public Map<String,ParameterSpecificationResponse> parameters() {
-        return this.parameters == null ? Map.of() : this.parameters;
+    public Optional<Map<String,ParameterSpecificationResponse>> parameters() {
+        return Optional.ofNullable(this.parameters);
     }
 
     /**
@@ -264,10 +264,10 @@ public final class AzureDatabricksLinkedServiceResponse extends com.pulumi.resou
      * 
      */
     @Import(name="policyId")
-      private final @Nullable Object policyId;
+    private @Nullable Object policyId;
 
     public Optional<Object> policyId() {
-        return this.policyId == null ? Optional.empty() : Optional.ofNullable(this.policyId);
+        return Optional.ofNullable(this.policyId);
     }
 
     /**
@@ -276,7 +276,7 @@ public final class AzureDatabricksLinkedServiceResponse extends com.pulumi.resou
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
@@ -287,256 +287,188 @@ public final class AzureDatabricksLinkedServiceResponse extends com.pulumi.resou
      * 
      */
     @Import(name="workspaceResourceId")
-      private final @Nullable Object workspaceResourceId;
+    private @Nullable Object workspaceResourceId;
 
     public Optional<Object> workspaceResourceId() {
-        return this.workspaceResourceId == null ? Optional.empty() : Optional.ofNullable(this.workspaceResourceId);
+        return Optional.ofNullable(this.workspaceResourceId);
     }
 
-    public AzureDatabricksLinkedServiceResponse(
-        @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> accessToken,
-        @Nullable List<Object> annotations,
-        @Nullable Object authentication,
-        @Nullable IntegrationRuntimeReferenceResponse connectVia,
-        @Nullable CredentialReferenceResponse credential,
-        @Nullable String description,
-        Object domain,
-        @Nullable Object encryptedCredential,
-        @Nullable Object existingClusterId,
-        @Nullable Object instancePoolId,
-        @Nullable Map<String,Object> newClusterCustomTags,
-        @Nullable Object newClusterDriverNodeType,
-        @Nullable Object newClusterEnableElasticDisk,
-        @Nullable Object newClusterInitScripts,
-        @Nullable Object newClusterLogDestination,
-        @Nullable Object newClusterNodeType,
-        @Nullable Object newClusterNumOfWorker,
-        @Nullable Map<String,Object> newClusterSparkConf,
-        @Nullable Map<String,Object> newClusterSparkEnvVars,
-        @Nullable Object newClusterVersion,
-        @Nullable Map<String,ParameterSpecificationResponse> parameters,
-        @Nullable Object policyId,
-        String type,
-        @Nullable Object workspaceResourceId) {
-        this.accessToken = accessToken;
-        this.annotations = annotations;
-        this.authentication = authentication;
-        this.connectVia = connectVia;
-        this.credential = credential;
-        this.description = description;
-        this.domain = Objects.requireNonNull(domain, "expected parameter 'domain' to be non-null");
-        this.encryptedCredential = encryptedCredential;
-        this.existingClusterId = existingClusterId;
-        this.instancePoolId = instancePoolId;
-        this.newClusterCustomTags = newClusterCustomTags;
-        this.newClusterDriverNodeType = newClusterDriverNodeType;
-        this.newClusterEnableElasticDisk = newClusterEnableElasticDisk;
-        this.newClusterInitScripts = newClusterInitScripts;
-        this.newClusterLogDestination = newClusterLogDestination;
-        this.newClusterNodeType = newClusterNodeType;
-        this.newClusterNumOfWorker = newClusterNumOfWorker;
-        this.newClusterSparkConf = newClusterSparkConf;
-        this.newClusterSparkEnvVars = newClusterSparkEnvVars;
-        this.newClusterVersion = newClusterVersion;
-        this.parameters = parameters;
-        this.policyId = policyId;
-        this.type = Codegen.stringProp("type").arg(type).require();
-        this.workspaceResourceId = workspaceResourceId;
-    }
+    private AzureDatabricksLinkedServiceResponse() {}
 
-    private AzureDatabricksLinkedServiceResponse() {
-        this.accessToken = null;
-        this.annotations = List.of();
-        this.authentication = null;
-        this.connectVia = null;
-        this.credential = null;
-        this.description = null;
-        this.domain = null;
-        this.encryptedCredential = null;
-        this.existingClusterId = null;
-        this.instancePoolId = null;
-        this.newClusterCustomTags = Map.of();
-        this.newClusterDriverNodeType = null;
-        this.newClusterEnableElasticDisk = null;
-        this.newClusterInitScripts = null;
-        this.newClusterLogDestination = null;
-        this.newClusterNodeType = null;
-        this.newClusterNumOfWorker = null;
-        this.newClusterSparkConf = Map.of();
-        this.newClusterSparkEnvVars = Map.of();
-        this.newClusterVersion = null;
-        this.parameters = Map.of();
-        this.policyId = null;
-        this.type = null;
-        this.workspaceResourceId = null;
+    private AzureDatabricksLinkedServiceResponse(AzureDatabricksLinkedServiceResponse $) {
+        this.accessToken = $.accessToken;
+        this.annotations = $.annotations;
+        this.authentication = $.authentication;
+        this.connectVia = $.connectVia;
+        this.credential = $.credential;
+        this.description = $.description;
+        this.domain = $.domain;
+        this.encryptedCredential = $.encryptedCredential;
+        this.existingClusterId = $.existingClusterId;
+        this.instancePoolId = $.instancePoolId;
+        this.newClusterCustomTags = $.newClusterCustomTags;
+        this.newClusterDriverNodeType = $.newClusterDriverNodeType;
+        this.newClusterEnableElasticDisk = $.newClusterEnableElasticDisk;
+        this.newClusterInitScripts = $.newClusterInitScripts;
+        this.newClusterLogDestination = $.newClusterLogDestination;
+        this.newClusterNodeType = $.newClusterNodeType;
+        this.newClusterNumOfWorker = $.newClusterNumOfWorker;
+        this.newClusterSparkConf = $.newClusterSparkConf;
+        this.newClusterSparkEnvVars = $.newClusterSparkEnvVars;
+        this.newClusterVersion = $.newClusterVersion;
+        this.parameters = $.parameters;
+        this.policyId = $.policyId;
+        this.type = $.type;
+        this.workspaceResourceId = $.workspaceResourceId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AzureDatabricksLinkedServiceResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> accessToken;
-        private @Nullable List<Object> annotations;
-        private @Nullable Object authentication;
-        private @Nullable IntegrationRuntimeReferenceResponse connectVia;
-        private @Nullable CredentialReferenceResponse credential;
-        private @Nullable String description;
-        private Object domain;
-        private @Nullable Object encryptedCredential;
-        private @Nullable Object existingClusterId;
-        private @Nullable Object instancePoolId;
-        private @Nullable Map<String,Object> newClusterCustomTags;
-        private @Nullable Object newClusterDriverNodeType;
-        private @Nullable Object newClusterEnableElasticDisk;
-        private @Nullable Object newClusterInitScripts;
-        private @Nullable Object newClusterLogDestination;
-        private @Nullable Object newClusterNodeType;
-        private @Nullable Object newClusterNumOfWorker;
-        private @Nullable Map<String,Object> newClusterSparkConf;
-        private @Nullable Map<String,Object> newClusterSparkEnvVars;
-        private @Nullable Object newClusterVersion;
-        private @Nullable Map<String,ParameterSpecificationResponse> parameters;
-        private @Nullable Object policyId;
-        private String type;
-        private @Nullable Object workspaceResourceId;
+        private AzureDatabricksLinkedServiceResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AzureDatabricksLinkedServiceResponse();
         }
 
         public Builder(AzureDatabricksLinkedServiceResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accessToken = defaults.accessToken;
-    	      this.annotations = defaults.annotations;
-    	      this.authentication = defaults.authentication;
-    	      this.connectVia = defaults.connectVia;
-    	      this.credential = defaults.credential;
-    	      this.description = defaults.description;
-    	      this.domain = defaults.domain;
-    	      this.encryptedCredential = defaults.encryptedCredential;
-    	      this.existingClusterId = defaults.existingClusterId;
-    	      this.instancePoolId = defaults.instancePoolId;
-    	      this.newClusterCustomTags = defaults.newClusterCustomTags;
-    	      this.newClusterDriverNodeType = defaults.newClusterDriverNodeType;
-    	      this.newClusterEnableElasticDisk = defaults.newClusterEnableElasticDisk;
-    	      this.newClusterInitScripts = defaults.newClusterInitScripts;
-    	      this.newClusterLogDestination = defaults.newClusterLogDestination;
-    	      this.newClusterNodeType = defaults.newClusterNodeType;
-    	      this.newClusterNumOfWorker = defaults.newClusterNumOfWorker;
-    	      this.newClusterSparkConf = defaults.newClusterSparkConf;
-    	      this.newClusterSparkEnvVars = defaults.newClusterSparkEnvVars;
-    	      this.newClusterVersion = defaults.newClusterVersion;
-    	      this.parameters = defaults.parameters;
-    	      this.policyId = defaults.policyId;
-    	      this.type = defaults.type;
-    	      this.workspaceResourceId = defaults.workspaceResourceId;
+            $ = new AzureDatabricksLinkedServiceResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder accessToken(@Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> accessToken) {
-            this.accessToken = accessToken;
+            $.accessToken = accessToken;
             return this;
         }
+
         public Builder annotations(@Nullable List<Object> annotations) {
-            this.annotations = annotations;
+            $.annotations = annotations;
             return this;
         }
+
         public Builder annotations(Object... annotations) {
             return annotations(List.of(annotations));
         }
+
         public Builder authentication(@Nullable Object authentication) {
-            this.authentication = authentication;
+            $.authentication = authentication;
             return this;
         }
+
         public Builder connectVia(@Nullable IntegrationRuntimeReferenceResponse connectVia) {
-            this.connectVia = connectVia;
+            $.connectVia = connectVia;
             return this;
         }
+
         public Builder credential(@Nullable CredentialReferenceResponse credential) {
-            this.credential = credential;
+            $.credential = credential;
             return this;
         }
+
         public Builder description(@Nullable String description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
+
         public Builder domain(Object domain) {
-            this.domain = Objects.requireNonNull(domain);
+            $.domain = domain;
             return this;
         }
+
         public Builder encryptedCredential(@Nullable Object encryptedCredential) {
-            this.encryptedCredential = encryptedCredential;
+            $.encryptedCredential = encryptedCredential;
             return this;
         }
+
         public Builder existingClusterId(@Nullable Object existingClusterId) {
-            this.existingClusterId = existingClusterId;
+            $.existingClusterId = existingClusterId;
             return this;
         }
+
         public Builder instancePoolId(@Nullable Object instancePoolId) {
-            this.instancePoolId = instancePoolId;
+            $.instancePoolId = instancePoolId;
             return this;
         }
+
         public Builder newClusterCustomTags(@Nullable Map<String,Object> newClusterCustomTags) {
-            this.newClusterCustomTags = newClusterCustomTags;
+            $.newClusterCustomTags = newClusterCustomTags;
             return this;
         }
+
         public Builder newClusterDriverNodeType(@Nullable Object newClusterDriverNodeType) {
-            this.newClusterDriverNodeType = newClusterDriverNodeType;
+            $.newClusterDriverNodeType = newClusterDriverNodeType;
             return this;
         }
+
         public Builder newClusterEnableElasticDisk(@Nullable Object newClusterEnableElasticDisk) {
-            this.newClusterEnableElasticDisk = newClusterEnableElasticDisk;
+            $.newClusterEnableElasticDisk = newClusterEnableElasticDisk;
             return this;
         }
+
         public Builder newClusterInitScripts(@Nullable Object newClusterInitScripts) {
-            this.newClusterInitScripts = newClusterInitScripts;
+            $.newClusterInitScripts = newClusterInitScripts;
             return this;
         }
+
         public Builder newClusterLogDestination(@Nullable Object newClusterLogDestination) {
-            this.newClusterLogDestination = newClusterLogDestination;
+            $.newClusterLogDestination = newClusterLogDestination;
             return this;
         }
+
         public Builder newClusterNodeType(@Nullable Object newClusterNodeType) {
-            this.newClusterNodeType = newClusterNodeType;
+            $.newClusterNodeType = newClusterNodeType;
             return this;
         }
+
         public Builder newClusterNumOfWorker(@Nullable Object newClusterNumOfWorker) {
-            this.newClusterNumOfWorker = newClusterNumOfWorker;
+            $.newClusterNumOfWorker = newClusterNumOfWorker;
             return this;
         }
+
         public Builder newClusterSparkConf(@Nullable Map<String,Object> newClusterSparkConf) {
-            this.newClusterSparkConf = newClusterSparkConf;
+            $.newClusterSparkConf = newClusterSparkConf;
             return this;
         }
+
         public Builder newClusterSparkEnvVars(@Nullable Map<String,Object> newClusterSparkEnvVars) {
-            this.newClusterSparkEnvVars = newClusterSparkEnvVars;
+            $.newClusterSparkEnvVars = newClusterSparkEnvVars;
             return this;
         }
+
         public Builder newClusterVersion(@Nullable Object newClusterVersion) {
-            this.newClusterVersion = newClusterVersion;
+            $.newClusterVersion = newClusterVersion;
             return this;
         }
+
         public Builder parameters(@Nullable Map<String,ParameterSpecificationResponse> parameters) {
-            this.parameters = parameters;
+            $.parameters = parameters;
             return this;
         }
+
         public Builder policyId(@Nullable Object policyId) {
-            this.policyId = policyId;
+            $.policyId = policyId;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder workspaceResourceId(@Nullable Object workspaceResourceId) {
-            this.workspaceResourceId = workspaceResourceId;
+            $.workspaceResourceId = workspaceResourceId;
             return this;
-        }        public AzureDatabricksLinkedServiceResponse build() {
-            return new AzureDatabricksLinkedServiceResponse(accessToken, annotations, authentication, connectVia, credential, description, domain, encryptedCredential, existingClusterId, instancePoolId, newClusterCustomTags, newClusterDriverNodeType, newClusterEnableElasticDisk, newClusterInitScripts, newClusterLogDestination, newClusterNodeType, newClusterNumOfWorker, newClusterSparkConf, newClusterSparkEnvVars, newClusterVersion, parameters, policyId, type, workspaceResourceId);
+        }
+
+        public AzureDatabricksLinkedServiceResponse build() {
+            $.domain = Objects.requireNonNull($.domain, "expected parameter 'domain' to be non-null");
+            $.type = Codegen.stringProp("type").arg($.type).require();
+            return $;
         }
     }
+
 }

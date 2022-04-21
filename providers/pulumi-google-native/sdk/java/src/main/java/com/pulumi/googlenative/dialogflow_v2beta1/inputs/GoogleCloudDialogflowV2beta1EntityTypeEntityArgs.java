@@ -5,7 +5,6 @@ package com.pulumi.googlenative.dialogflow_v2beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +23,7 @@ public final class GoogleCloudDialogflowV2beta1EntityTypeEntityArgs extends com.
      * 
      */
     @Import(name="synonyms", required=true)
-      private final Output<List<String>> synonyms;
+    private Output<List<String>> synonyms;
 
     public Output<List<String>> synonyms() {
         return this.synonyms;
@@ -35,66 +34,64 @@ public final class GoogleCloudDialogflowV2beta1EntityTypeEntityArgs extends com.
      * 
      */
     @Import(name="value", required=true)
-      private final Output<String> value;
+    private Output<String> value;
 
     public Output<String> value() {
         return this.value;
     }
 
-    public GoogleCloudDialogflowV2beta1EntityTypeEntityArgs(
-        Output<List<String>> synonyms,
-        Output<String> value) {
-        this.synonyms = Objects.requireNonNull(synonyms, "expected parameter 'synonyms' to be non-null");
-        this.value = Objects.requireNonNull(value, "expected parameter 'value' to be non-null");
-    }
+    private GoogleCloudDialogflowV2beta1EntityTypeEntityArgs() {}
 
-    private GoogleCloudDialogflowV2beta1EntityTypeEntityArgs() {
-        this.synonyms = Codegen.empty();
-        this.value = Codegen.empty();
+    private GoogleCloudDialogflowV2beta1EntityTypeEntityArgs(GoogleCloudDialogflowV2beta1EntityTypeEntityArgs $) {
+        this.synonyms = $.synonyms;
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudDialogflowV2beta1EntityTypeEntityArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<List<String>> synonyms;
-        private Output<String> value;
+        private GoogleCloudDialogflowV2beta1EntityTypeEntityArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudDialogflowV2beta1EntityTypeEntityArgs();
         }
 
         public Builder(GoogleCloudDialogflowV2beta1EntityTypeEntityArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.synonyms = defaults.synonyms;
-    	      this.value = defaults.value;
+            $ = new GoogleCloudDialogflowV2beta1EntityTypeEntityArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder synonyms(Output<List<String>> synonyms) {
-            this.synonyms = Objects.requireNonNull(synonyms);
+            $.synonyms = synonyms;
             return this;
         }
+
         public Builder synonyms(List<String> synonyms) {
-            this.synonyms = Output.of(Objects.requireNonNull(synonyms));
-            return this;
+            return synonyms(Output.of(synonyms));
         }
+
         public Builder synonyms(String... synonyms) {
             return synonyms(List.of(synonyms));
         }
+
         public Builder value(Output<String> value) {
-            this.value = Objects.requireNonNull(value);
+            $.value = value;
             return this;
         }
+
         public Builder value(String value) {
-            this.value = Output.of(Objects.requireNonNull(value));
-            return this;
-        }        public GoogleCloudDialogflowV2beta1EntityTypeEntityArgs build() {
-            return new GoogleCloudDialogflowV2beta1EntityTypeEntityArgs(synonyms, value);
+            return value(Output.of(value));
+        }
+
+        public GoogleCloudDialogflowV2beta1EntityTypeEntityArgs build() {
+            $.synonyms = Objects.requireNonNull($.synonyms, "expected parameter 'synonyms' to be non-null");
+            $.value = Objects.requireNonNull($.value, "expected parameter 'value' to be non-null");
+            return $;
         }
     }
+
 }

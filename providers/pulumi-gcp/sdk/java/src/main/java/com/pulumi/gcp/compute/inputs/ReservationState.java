@@ -5,12 +5,12 @@ package com.pulumi.gcp.compute.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.compute.inputs.ReservationShareSettingsGetArgs;
 import com.pulumi.gcp.compute.inputs.ReservationSpecificReservationGetArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,10 @@ public final class ReservationState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="commitment")
-      private final @Nullable Output<String> commitment;
+    private @Nullable Output<String> commitment;
 
-    public Output<String> commitment() {
-        return this.commitment == null ? Codegen.empty() : this.commitment;
+    public Optional<Output<String>> commitment() {
+        return Optional.ofNullable(this.commitment);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class ReservationState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="creationTimestamp")
-      private final @Nullable Output<String> creationTimestamp;
+    private @Nullable Output<String> creationTimestamp;
 
-    public Output<String> creationTimestamp() {
-        return this.creationTimestamp == null ? Codegen.empty() : this.creationTimestamp;
+    public Optional<Output<String>> creationTimestamp() {
+        return Optional.ofNullable(this.creationTimestamp);
     }
 
     /**
@@ -45,10 +45,10 @@ public final class ReservationState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -62,10 +62,10 @@ public final class ReservationState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -74,10 +74,10 @@ public final class ReservationState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -85,10 +85,10 @@ public final class ReservationState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="selfLink")
-      private final @Nullable Output<String> selfLink;
+    private @Nullable Output<String> selfLink;
 
-    public Output<String> selfLink() {
-        return this.selfLink == null ? Codegen.empty() : this.selfLink;
+    public Optional<Output<String>> selfLink() {
+        return Optional.ofNullable(this.selfLink);
     }
 
     /**
@@ -97,10 +97,10 @@ public final class ReservationState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="shareSettings")
-      private final @Nullable Output<ReservationShareSettingsGetArgs> shareSettings;
+    private @Nullable Output<ReservationShareSettingsGetArgs> shareSettings;
 
-    public Output<ReservationShareSettingsGetArgs> shareSettings() {
-        return this.shareSettings == null ? Codegen.empty() : this.shareSettings;
+    public Optional<Output<ReservationShareSettingsGetArgs>> shareSettings() {
+        return Optional.ofNullable(this.shareSettings);
     }
 
     /**
@@ -109,10 +109,10 @@ public final class ReservationState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="specificReservation")
-      private final @Nullable Output<ReservationSpecificReservationGetArgs> specificReservation;
+    private @Nullable Output<ReservationSpecificReservationGetArgs> specificReservation;
 
-    public Output<ReservationSpecificReservationGetArgs> specificReservation() {
-        return this.specificReservation == null ? Codegen.empty() : this.specificReservation;
+    public Optional<Output<ReservationSpecificReservationGetArgs>> specificReservation() {
+        return Optional.ofNullable(this.specificReservation);
     }
 
     /**
@@ -122,10 +122,10 @@ public final class ReservationState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="specificReservationRequired")
-      private final @Nullable Output<Boolean> specificReservationRequired;
+    private @Nullable Output<Boolean> specificReservationRequired;
 
-    public Output<Boolean> specificReservationRequired() {
-        return this.specificReservationRequired == null ? Codegen.empty() : this.specificReservationRequired;
+    public Optional<Output<Boolean>> specificReservationRequired() {
+        return Optional.ofNullable(this.specificReservationRequired);
     }
 
     /**
@@ -133,10 +133,10 @@ public final class ReservationState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="status")
-      private final @Nullable Output<String> status;
+    private @Nullable Output<String> status;
 
-    public Output<String> status() {
-        return this.status == null ? Codegen.empty() : this.status;
+    public Optional<Output<String>> status() {
+        return Optional.ofNullable(this.status);
     }
 
     /**
@@ -144,180 +144,148 @@ public final class ReservationState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="zone")
-      private final @Nullable Output<String> zone;
+    private @Nullable Output<String> zone;
 
-    public Output<String> zone() {
-        return this.zone == null ? Codegen.empty() : this.zone;
+    public Optional<Output<String>> zone() {
+        return Optional.ofNullable(this.zone);
     }
 
-    public ReservationState(
-        @Nullable Output<String> commitment,
-        @Nullable Output<String> creationTimestamp,
-        @Nullable Output<String> description,
-        @Nullable Output<String> name,
-        @Nullable Output<String> project,
-        @Nullable Output<String> selfLink,
-        @Nullable Output<ReservationShareSettingsGetArgs> shareSettings,
-        @Nullable Output<ReservationSpecificReservationGetArgs> specificReservation,
-        @Nullable Output<Boolean> specificReservationRequired,
-        @Nullable Output<String> status,
-        @Nullable Output<String> zone) {
-        this.commitment = commitment;
-        this.creationTimestamp = creationTimestamp;
-        this.description = description;
-        this.name = name;
-        this.project = project;
-        this.selfLink = selfLink;
-        this.shareSettings = shareSettings;
-        this.specificReservation = specificReservation;
-        this.specificReservationRequired = specificReservationRequired;
-        this.status = status;
-        this.zone = zone;
-    }
+    private ReservationState() {}
 
-    private ReservationState() {
-        this.commitment = Codegen.empty();
-        this.creationTimestamp = Codegen.empty();
-        this.description = Codegen.empty();
-        this.name = Codegen.empty();
-        this.project = Codegen.empty();
-        this.selfLink = Codegen.empty();
-        this.shareSettings = Codegen.empty();
-        this.specificReservation = Codegen.empty();
-        this.specificReservationRequired = Codegen.empty();
-        this.status = Codegen.empty();
-        this.zone = Codegen.empty();
+    private ReservationState(ReservationState $) {
+        this.commitment = $.commitment;
+        this.creationTimestamp = $.creationTimestamp;
+        this.description = $.description;
+        this.name = $.name;
+        this.project = $.project;
+        this.selfLink = $.selfLink;
+        this.shareSettings = $.shareSettings;
+        this.specificReservation = $.specificReservation;
+        this.specificReservationRequired = $.specificReservationRequired;
+        this.status = $.status;
+        this.zone = $.zone;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ReservationState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> commitment;
-        private @Nullable Output<String> creationTimestamp;
-        private @Nullable Output<String> description;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> project;
-        private @Nullable Output<String> selfLink;
-        private @Nullable Output<ReservationShareSettingsGetArgs> shareSettings;
-        private @Nullable Output<ReservationSpecificReservationGetArgs> specificReservation;
-        private @Nullable Output<Boolean> specificReservationRequired;
-        private @Nullable Output<String> status;
-        private @Nullable Output<String> zone;
+        private ReservationState $;
 
         public Builder() {
-    	      // Empty
+            $ = new ReservationState();
         }
 
         public Builder(ReservationState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.commitment = defaults.commitment;
-    	      this.creationTimestamp = defaults.creationTimestamp;
-    	      this.description = defaults.description;
-    	      this.name = defaults.name;
-    	      this.project = defaults.project;
-    	      this.selfLink = defaults.selfLink;
-    	      this.shareSettings = defaults.shareSettings;
-    	      this.specificReservation = defaults.specificReservation;
-    	      this.specificReservationRequired = defaults.specificReservationRequired;
-    	      this.status = defaults.status;
-    	      this.zone = defaults.zone;
+            $ = new ReservationState(Objects.requireNonNull(defaults));
         }
 
         public Builder commitment(@Nullable Output<String> commitment) {
-            this.commitment = commitment;
+            $.commitment = commitment;
             return this;
         }
-        public Builder commitment(@Nullable String commitment) {
-            this.commitment = Codegen.ofNullable(commitment);
-            return this;
+
+        public Builder commitment(String commitment) {
+            return commitment(Output.of(commitment));
         }
+
         public Builder creationTimestamp(@Nullable Output<String> creationTimestamp) {
-            this.creationTimestamp = creationTimestamp;
+            $.creationTimestamp = creationTimestamp;
             return this;
         }
-        public Builder creationTimestamp(@Nullable String creationTimestamp) {
-            this.creationTimestamp = Codegen.ofNullable(creationTimestamp);
-            return this;
+
+        public Builder creationTimestamp(String creationTimestamp) {
+            return creationTimestamp(Output.of(creationTimestamp));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder selfLink(@Nullable Output<String> selfLink) {
-            this.selfLink = selfLink;
+            $.selfLink = selfLink;
             return this;
         }
-        public Builder selfLink(@Nullable String selfLink) {
-            this.selfLink = Codegen.ofNullable(selfLink);
-            return this;
+
+        public Builder selfLink(String selfLink) {
+            return selfLink(Output.of(selfLink));
         }
+
         public Builder shareSettings(@Nullable Output<ReservationShareSettingsGetArgs> shareSettings) {
-            this.shareSettings = shareSettings;
+            $.shareSettings = shareSettings;
             return this;
         }
-        public Builder shareSettings(@Nullable ReservationShareSettingsGetArgs shareSettings) {
-            this.shareSettings = Codegen.ofNullable(shareSettings);
-            return this;
+
+        public Builder shareSettings(ReservationShareSettingsGetArgs shareSettings) {
+            return shareSettings(Output.of(shareSettings));
         }
+
         public Builder specificReservation(@Nullable Output<ReservationSpecificReservationGetArgs> specificReservation) {
-            this.specificReservation = specificReservation;
+            $.specificReservation = specificReservation;
             return this;
         }
-        public Builder specificReservation(@Nullable ReservationSpecificReservationGetArgs specificReservation) {
-            this.specificReservation = Codegen.ofNullable(specificReservation);
-            return this;
+
+        public Builder specificReservation(ReservationSpecificReservationGetArgs specificReservation) {
+            return specificReservation(Output.of(specificReservation));
         }
+
         public Builder specificReservationRequired(@Nullable Output<Boolean> specificReservationRequired) {
-            this.specificReservationRequired = specificReservationRequired;
+            $.specificReservationRequired = specificReservationRequired;
             return this;
         }
-        public Builder specificReservationRequired(@Nullable Boolean specificReservationRequired) {
-            this.specificReservationRequired = Codegen.ofNullable(specificReservationRequired);
-            return this;
+
+        public Builder specificReservationRequired(Boolean specificReservationRequired) {
+            return specificReservationRequired(Output.of(specificReservationRequired));
         }
+
         public Builder status(@Nullable Output<String> status) {
-            this.status = status;
+            $.status = status;
             return this;
         }
-        public Builder status(@Nullable String status) {
-            this.status = Codegen.ofNullable(status);
-            return this;
+
+        public Builder status(String status) {
+            return status(Output.of(status));
         }
+
         public Builder zone(@Nullable Output<String> zone) {
-            this.zone = zone;
+            $.zone = zone;
             return this;
         }
-        public Builder zone(@Nullable String zone) {
-            this.zone = Codegen.ofNullable(zone);
-            return this;
-        }        public ReservationState build() {
-            return new ReservationState(commitment, creationTimestamp, description, name, project, selfLink, shareSettings, specificReservation, specificReservationRequired, status, zone);
+
+        public Builder zone(String zone) {
+            return zone(Output.of(zone));
+        }
+
+        public ReservationState build() {
+            return $;
         }
     }
+
 }

@@ -6,9 +6,9 @@ package com.pulumi.azurenative.recoveryservices;
 import com.pulumi.azurenative.recoveryservices.inputs.CreateRecoveryPlanInputPropertiesArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,7 +21,7 @@ public final class ReplicationRecoveryPlanArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="properties", required=true)
-      private final Output<CreateRecoveryPlanInputPropertiesArgs> properties;
+    private Output<CreateRecoveryPlanInputPropertiesArgs> properties;
 
     public Output<CreateRecoveryPlanInputPropertiesArgs> properties() {
         return this.properties;
@@ -32,10 +32,10 @@ public final class ReplicationRecoveryPlanArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="recoveryPlanName")
-      private final @Nullable Output<String> recoveryPlanName;
+    private @Nullable Output<String> recoveryPlanName;
 
-    public Output<String> recoveryPlanName() {
-        return this.recoveryPlanName == null ? Codegen.empty() : this.recoveryPlanName;
+    public Optional<Output<String>> recoveryPlanName() {
+        return Optional.ofNullable(this.recoveryPlanName);
     }
 
     /**
@@ -43,7 +43,7 @@ public final class ReplicationRecoveryPlanArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -54,89 +54,81 @@ public final class ReplicationRecoveryPlanArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="resourceName", required=true)
-      private final Output<String> resourceName;
+    private Output<String> resourceName;
 
     public Output<String> resourceName() {
         return this.resourceName;
     }
 
-    public ReplicationRecoveryPlanArgs(
-        Output<CreateRecoveryPlanInputPropertiesArgs> properties,
-        @Nullable Output<String> recoveryPlanName,
-        Output<String> resourceGroupName,
-        Output<String> resourceName) {
-        this.properties = Objects.requireNonNull(properties, "expected parameter 'properties' to be non-null");
-        this.recoveryPlanName = recoveryPlanName;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.resourceName = Objects.requireNonNull(resourceName, "expected parameter 'resourceName' to be non-null");
-    }
+    private ReplicationRecoveryPlanArgs() {}
 
-    private ReplicationRecoveryPlanArgs() {
-        this.properties = Codegen.empty();
-        this.recoveryPlanName = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.resourceName = Codegen.empty();
+    private ReplicationRecoveryPlanArgs(ReplicationRecoveryPlanArgs $) {
+        this.properties = $.properties;
+        this.recoveryPlanName = $.recoveryPlanName;
+        this.resourceGroupName = $.resourceGroupName;
+        this.resourceName = $.resourceName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ReplicationRecoveryPlanArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<CreateRecoveryPlanInputPropertiesArgs> properties;
-        private @Nullable Output<String> recoveryPlanName;
-        private Output<String> resourceGroupName;
-        private Output<String> resourceName;
+        private ReplicationRecoveryPlanArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ReplicationRecoveryPlanArgs();
         }
 
         public Builder(ReplicationRecoveryPlanArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.properties = defaults.properties;
-    	      this.recoveryPlanName = defaults.recoveryPlanName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.resourceName = defaults.resourceName;
+            $ = new ReplicationRecoveryPlanArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder properties(Output<CreateRecoveryPlanInputPropertiesArgs> properties) {
-            this.properties = Objects.requireNonNull(properties);
+            $.properties = properties;
             return this;
         }
+
         public Builder properties(CreateRecoveryPlanInputPropertiesArgs properties) {
-            this.properties = Output.of(Objects.requireNonNull(properties));
-            return this;
+            return properties(Output.of(properties));
         }
+
         public Builder recoveryPlanName(@Nullable Output<String> recoveryPlanName) {
-            this.recoveryPlanName = recoveryPlanName;
+            $.recoveryPlanName = recoveryPlanName;
             return this;
         }
-        public Builder recoveryPlanName(@Nullable String recoveryPlanName) {
-            this.recoveryPlanName = Codegen.ofNullable(recoveryPlanName);
-            return this;
+
+        public Builder recoveryPlanName(String recoveryPlanName) {
+            return recoveryPlanName(Output.of(recoveryPlanName));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder resourceName(Output<String> resourceName) {
-            this.resourceName = Objects.requireNonNull(resourceName);
+            $.resourceName = resourceName;
             return this;
         }
+
         public Builder resourceName(String resourceName) {
-            this.resourceName = Output.of(Objects.requireNonNull(resourceName));
-            return this;
-        }        public ReplicationRecoveryPlanArgs build() {
-            return new ReplicationRecoveryPlanArgs(properties, recoveryPlanName, resourceGroupName, resourceName);
+            return resourceName(Output.of(resourceName));
+        }
+
+        public ReplicationRecoveryPlanArgs build() {
+            $.properties = Objects.requireNonNull($.properties, "expected parameter 'properties' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.resourceName = Objects.requireNonNull($.resourceName, "expected parameter 'resourceName' to be non-null");
+            return $;
         }
     }
+
 }

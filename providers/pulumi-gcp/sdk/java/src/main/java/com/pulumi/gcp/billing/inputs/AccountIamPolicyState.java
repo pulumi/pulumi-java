@@ -5,9 +5,9 @@ package com.pulumi.gcp.billing.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -16,90 +16,82 @@ public final class AccountIamPolicyState extends com.pulumi.resources.ResourceAr
     public static final AccountIamPolicyState Empty = new AccountIamPolicyState();
 
     @Import(name="billingAccountId")
-      private final @Nullable Output<String> billingAccountId;
+    private @Nullable Output<String> billingAccountId;
 
-    public Output<String> billingAccountId() {
-        return this.billingAccountId == null ? Codegen.empty() : this.billingAccountId;
+    public Optional<Output<String>> billingAccountId() {
+        return Optional.ofNullable(this.billingAccountId);
     }
 
     @Import(name="etag")
-      private final @Nullable Output<String> etag;
+    private @Nullable Output<String> etag;
 
-    public Output<String> etag() {
-        return this.etag == null ? Codegen.empty() : this.etag;
+    public Optional<Output<String>> etag() {
+        return Optional.ofNullable(this.etag);
     }
 
     @Import(name="policyData")
-      private final @Nullable Output<String> policyData;
+    private @Nullable Output<String> policyData;
 
-    public Output<String> policyData() {
-        return this.policyData == null ? Codegen.empty() : this.policyData;
+    public Optional<Output<String>> policyData() {
+        return Optional.ofNullable(this.policyData);
     }
 
-    public AccountIamPolicyState(
-        @Nullable Output<String> billingAccountId,
-        @Nullable Output<String> etag,
-        @Nullable Output<String> policyData) {
-        this.billingAccountId = billingAccountId;
-        this.etag = etag;
-        this.policyData = policyData;
-    }
+    private AccountIamPolicyState() {}
 
-    private AccountIamPolicyState() {
-        this.billingAccountId = Codegen.empty();
-        this.etag = Codegen.empty();
-        this.policyData = Codegen.empty();
+    private AccountIamPolicyState(AccountIamPolicyState $) {
+        this.billingAccountId = $.billingAccountId;
+        this.etag = $.etag;
+        this.policyData = $.policyData;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AccountIamPolicyState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> billingAccountId;
-        private @Nullable Output<String> etag;
-        private @Nullable Output<String> policyData;
+        private AccountIamPolicyState $;
 
         public Builder() {
-    	      // Empty
+            $ = new AccountIamPolicyState();
         }
 
         public Builder(AccountIamPolicyState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.billingAccountId = defaults.billingAccountId;
-    	      this.etag = defaults.etag;
-    	      this.policyData = defaults.policyData;
+            $ = new AccountIamPolicyState(Objects.requireNonNull(defaults));
         }
 
         public Builder billingAccountId(@Nullable Output<String> billingAccountId) {
-            this.billingAccountId = billingAccountId;
+            $.billingAccountId = billingAccountId;
             return this;
         }
-        public Builder billingAccountId(@Nullable String billingAccountId) {
-            this.billingAccountId = Codegen.ofNullable(billingAccountId);
-            return this;
+
+        public Builder billingAccountId(String billingAccountId) {
+            return billingAccountId(Output.of(billingAccountId));
         }
+
         public Builder etag(@Nullable Output<String> etag) {
-            this.etag = etag;
+            $.etag = etag;
             return this;
         }
-        public Builder etag(@Nullable String etag) {
-            this.etag = Codegen.ofNullable(etag);
-            return this;
+
+        public Builder etag(String etag) {
+            return etag(Output.of(etag));
         }
+
         public Builder policyData(@Nullable Output<String> policyData) {
-            this.policyData = policyData;
+            $.policyData = policyData;
             return this;
         }
-        public Builder policyData(@Nullable String policyData) {
-            this.policyData = Codegen.ofNullable(policyData);
-            return this;
-        }        public AccountIamPolicyState build() {
-            return new AccountIamPolicyState(billingAccountId, etag, policyData);
+
+        public Builder policyData(String policyData) {
+            return policyData(Output.of(policyData));
+        }
+
+        public AccountIamPolicyState build() {
+            return $;
         }
     }
+
 }

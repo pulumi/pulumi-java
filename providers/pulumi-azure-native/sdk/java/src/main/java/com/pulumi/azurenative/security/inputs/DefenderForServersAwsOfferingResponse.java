@@ -26,10 +26,10 @@ public final class DefenderForServersAwsOfferingResponse extends com.pulumi.reso
      * 
      */
     @Import(name="arcAutoProvisioning")
-      private final @Nullable DefenderForServersAwsOfferingResponseArcAutoProvisioning arcAutoProvisioning;
+    private @Nullable DefenderForServersAwsOfferingResponseArcAutoProvisioning arcAutoProvisioning;
 
     public Optional<DefenderForServersAwsOfferingResponseArcAutoProvisioning> arcAutoProvisioning() {
-        return this.arcAutoProvisioning == null ? Optional.empty() : Optional.ofNullable(this.arcAutoProvisioning);
+        return Optional.ofNullable(this.arcAutoProvisioning);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class DefenderForServersAwsOfferingResponse extends com.pulumi.reso
      * 
      */
     @Import(name="defenderForServers")
-      private final @Nullable DefenderForServersAwsOfferingResponseDefenderForServers defenderForServers;
+    private @Nullable DefenderForServersAwsOfferingResponseDefenderForServers defenderForServers;
 
     public Optional<DefenderForServersAwsOfferingResponseDefenderForServers> defenderForServers() {
-        return this.defenderForServers == null ? Optional.empty() : Optional.ofNullable(this.defenderForServers);
+        return Optional.ofNullable(this.defenderForServers);
     }
 
     /**
@@ -48,7 +48,7 @@ public final class DefenderForServersAwsOfferingResponse extends com.pulumi.reso
      * 
      */
     @Import(name="description", required=true)
-      private final String description;
+    private String description;
 
     public String description() {
         return this.description;
@@ -60,73 +60,64 @@ public final class DefenderForServersAwsOfferingResponse extends com.pulumi.reso
      * 
      */
     @Import(name="offeringType", required=true)
-      private final String offeringType;
+    private String offeringType;
 
     public String offeringType() {
         return this.offeringType;
     }
 
-    public DefenderForServersAwsOfferingResponse(
-        @Nullable DefenderForServersAwsOfferingResponseArcAutoProvisioning arcAutoProvisioning,
-        @Nullable DefenderForServersAwsOfferingResponseDefenderForServers defenderForServers,
-        String description,
-        String offeringType) {
-        this.arcAutoProvisioning = arcAutoProvisioning;
-        this.defenderForServers = defenderForServers;
-        this.description = Objects.requireNonNull(description, "expected parameter 'description' to be non-null");
-        this.offeringType = Codegen.stringProp("offeringType").arg(offeringType).require();
-    }
+    private DefenderForServersAwsOfferingResponse() {}
 
-    private DefenderForServersAwsOfferingResponse() {
-        this.arcAutoProvisioning = null;
-        this.defenderForServers = null;
-        this.description = null;
-        this.offeringType = null;
+    private DefenderForServersAwsOfferingResponse(DefenderForServersAwsOfferingResponse $) {
+        this.arcAutoProvisioning = $.arcAutoProvisioning;
+        this.defenderForServers = $.defenderForServers;
+        this.description = $.description;
+        this.offeringType = $.offeringType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DefenderForServersAwsOfferingResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable DefenderForServersAwsOfferingResponseArcAutoProvisioning arcAutoProvisioning;
-        private @Nullable DefenderForServersAwsOfferingResponseDefenderForServers defenderForServers;
-        private String description;
-        private String offeringType;
+        private DefenderForServersAwsOfferingResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new DefenderForServersAwsOfferingResponse();
         }
 
         public Builder(DefenderForServersAwsOfferingResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.arcAutoProvisioning = defaults.arcAutoProvisioning;
-    	      this.defenderForServers = defaults.defenderForServers;
-    	      this.description = defaults.description;
-    	      this.offeringType = defaults.offeringType;
+            $ = new DefenderForServersAwsOfferingResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder arcAutoProvisioning(@Nullable DefenderForServersAwsOfferingResponseArcAutoProvisioning arcAutoProvisioning) {
-            this.arcAutoProvisioning = arcAutoProvisioning;
+            $.arcAutoProvisioning = arcAutoProvisioning;
             return this;
         }
+
         public Builder defenderForServers(@Nullable DefenderForServersAwsOfferingResponseDefenderForServers defenderForServers) {
-            this.defenderForServers = defenderForServers;
+            $.defenderForServers = defenderForServers;
             return this;
         }
+
         public Builder description(String description) {
-            this.description = Objects.requireNonNull(description);
+            $.description = description;
             return this;
         }
+
         public Builder offeringType(String offeringType) {
-            this.offeringType = Objects.requireNonNull(offeringType);
+            $.offeringType = offeringType;
             return this;
-        }        public DefenderForServersAwsOfferingResponse build() {
-            return new DefenderForServersAwsOfferingResponse(arcAutoProvisioning, defenderForServers, description, offeringType);
+        }
+
+        public DefenderForServersAwsOfferingResponse build() {
+            $.description = Objects.requireNonNull($.description, "expected parameter 'description' to be non-null");
+            $.offeringType = Codegen.stringProp("offeringType").arg($.offeringType).require();
+            return $;
         }
     }
+
 }

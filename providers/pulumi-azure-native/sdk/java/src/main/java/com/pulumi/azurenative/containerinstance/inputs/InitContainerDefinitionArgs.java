@@ -7,10 +7,10 @@ import com.pulumi.azurenative.containerinstance.inputs.EnvironmentVariableArgs;
 import com.pulumi.azurenative.containerinstance.inputs.VolumeMountArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +27,10 @@ public final class InitContainerDefinitionArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="command")
-      private final @Nullable Output<List<String>> command;
+    private @Nullable Output<List<String>> command;
 
-    public Output<List<String>> command() {
-        return this.command == null ? Codegen.empty() : this.command;
+    public Optional<Output<List<String>>> command() {
+        return Optional.ofNullable(this.command);
     }
 
     /**
@@ -38,10 +38,10 @@ public final class InitContainerDefinitionArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="environmentVariables")
-      private final @Nullable Output<List<EnvironmentVariableArgs>> environmentVariables;
+    private @Nullable Output<List<EnvironmentVariableArgs>> environmentVariables;
 
-    public Output<List<EnvironmentVariableArgs>> environmentVariables() {
-        return this.environmentVariables == null ? Codegen.empty() : this.environmentVariables;
+    public Optional<Output<List<EnvironmentVariableArgs>>> environmentVariables() {
+        return Optional.ofNullable(this.environmentVariables);
     }
 
     /**
@@ -49,10 +49,10 @@ public final class InitContainerDefinitionArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="image")
-      private final @Nullable Output<String> image;
+    private @Nullable Output<String> image;
 
-    public Output<String> image() {
-        return this.image == null ? Codegen.empty() : this.image;
+    public Optional<Output<String>> image() {
+        return Optional.ofNullable(this.image);
     }
 
     /**
@@ -60,7 +60,7 @@ public final class InitContainerDefinitionArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="name", required=true)
-      private final Output<String> name;
+    private Output<String> name;
 
     public Output<String> name() {
         return this.name;
@@ -71,111 +71,101 @@ public final class InitContainerDefinitionArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="volumeMounts")
-      private final @Nullable Output<List<VolumeMountArgs>> volumeMounts;
+    private @Nullable Output<List<VolumeMountArgs>> volumeMounts;
 
-    public Output<List<VolumeMountArgs>> volumeMounts() {
-        return this.volumeMounts == null ? Codegen.empty() : this.volumeMounts;
+    public Optional<Output<List<VolumeMountArgs>>> volumeMounts() {
+        return Optional.ofNullable(this.volumeMounts);
     }
 
-    public InitContainerDefinitionArgs(
-        @Nullable Output<List<String>> command,
-        @Nullable Output<List<EnvironmentVariableArgs>> environmentVariables,
-        @Nullable Output<String> image,
-        Output<String> name,
-        @Nullable Output<List<VolumeMountArgs>> volumeMounts) {
-        this.command = command;
-        this.environmentVariables = environmentVariables;
-        this.image = image;
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.volumeMounts = volumeMounts;
-    }
+    private InitContainerDefinitionArgs() {}
 
-    private InitContainerDefinitionArgs() {
-        this.command = Codegen.empty();
-        this.environmentVariables = Codegen.empty();
-        this.image = Codegen.empty();
-        this.name = Codegen.empty();
-        this.volumeMounts = Codegen.empty();
+    private InitContainerDefinitionArgs(InitContainerDefinitionArgs $) {
+        this.command = $.command;
+        this.environmentVariables = $.environmentVariables;
+        this.image = $.image;
+        this.name = $.name;
+        this.volumeMounts = $.volumeMounts;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(InitContainerDefinitionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> command;
-        private @Nullable Output<List<EnvironmentVariableArgs>> environmentVariables;
-        private @Nullable Output<String> image;
-        private Output<String> name;
-        private @Nullable Output<List<VolumeMountArgs>> volumeMounts;
+        private InitContainerDefinitionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new InitContainerDefinitionArgs();
         }
 
         public Builder(InitContainerDefinitionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.command = defaults.command;
-    	      this.environmentVariables = defaults.environmentVariables;
-    	      this.image = defaults.image;
-    	      this.name = defaults.name;
-    	      this.volumeMounts = defaults.volumeMounts;
+            $ = new InitContainerDefinitionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder command(@Nullable Output<List<String>> command) {
-            this.command = command;
+            $.command = command;
             return this;
         }
-        public Builder command(@Nullable List<String> command) {
-            this.command = Codegen.ofNullable(command);
-            return this;
+
+        public Builder command(List<String> command) {
+            return command(Output.of(command));
         }
+
         public Builder command(String... command) {
             return command(List.of(command));
         }
+
         public Builder environmentVariables(@Nullable Output<List<EnvironmentVariableArgs>> environmentVariables) {
-            this.environmentVariables = environmentVariables;
+            $.environmentVariables = environmentVariables;
             return this;
         }
-        public Builder environmentVariables(@Nullable List<EnvironmentVariableArgs> environmentVariables) {
-            this.environmentVariables = Codegen.ofNullable(environmentVariables);
-            return this;
+
+        public Builder environmentVariables(List<EnvironmentVariableArgs> environmentVariables) {
+            return environmentVariables(Output.of(environmentVariables));
         }
+
         public Builder environmentVariables(EnvironmentVariableArgs... environmentVariables) {
             return environmentVariables(List.of(environmentVariables));
         }
+
         public Builder image(@Nullable Output<String> image) {
-            this.image = image;
+            $.image = image;
             return this;
         }
-        public Builder image(@Nullable String image) {
-            this.image = Codegen.ofNullable(image);
-            return this;
+
+        public Builder image(String image) {
+            return image(Output.of(image));
         }
+
         public Builder name(Output<String> name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Output.of(Objects.requireNonNull(name));
-            return this;
+            return name(Output.of(name));
         }
+
         public Builder volumeMounts(@Nullable Output<List<VolumeMountArgs>> volumeMounts) {
-            this.volumeMounts = volumeMounts;
+            $.volumeMounts = volumeMounts;
             return this;
         }
-        public Builder volumeMounts(@Nullable List<VolumeMountArgs> volumeMounts) {
-            this.volumeMounts = Codegen.ofNullable(volumeMounts);
-            return this;
+
+        public Builder volumeMounts(List<VolumeMountArgs> volumeMounts) {
+            return volumeMounts(Output.of(volumeMounts));
         }
+
         public Builder volumeMounts(VolumeMountArgs... volumeMounts) {
             return volumeMounts(List.of(volumeMounts));
-        }        public InitContainerDefinitionArgs build() {
-            return new InitContainerDefinitionArgs(command, environmentVariables, image, name, volumeMounts);
+        }
+
+        public InitContainerDefinitionArgs build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            return $;
         }
     }
+
 }

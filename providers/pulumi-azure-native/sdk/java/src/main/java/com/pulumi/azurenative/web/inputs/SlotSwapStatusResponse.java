@@ -21,7 +21,7 @@ public final class SlotSwapStatusResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="destinationSlotName", required=true)
-      private final String destinationSlotName;
+    private String destinationSlotName;
 
     public String destinationSlotName() {
         return this.destinationSlotName;
@@ -32,7 +32,7 @@ public final class SlotSwapStatusResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="sourceSlotName", required=true)
-      private final String sourceSlotName;
+    private String sourceSlotName;
 
     public String sourceSlotName() {
         return this.sourceSlotName;
@@ -43,64 +43,59 @@ public final class SlotSwapStatusResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="timestampUtc", required=true)
-      private final String timestampUtc;
+    private String timestampUtc;
 
     public String timestampUtc() {
         return this.timestampUtc;
     }
 
-    public SlotSwapStatusResponse(
-        String destinationSlotName,
-        String sourceSlotName,
-        String timestampUtc) {
-        this.destinationSlotName = Objects.requireNonNull(destinationSlotName, "expected parameter 'destinationSlotName' to be non-null");
-        this.sourceSlotName = Objects.requireNonNull(sourceSlotName, "expected parameter 'sourceSlotName' to be non-null");
-        this.timestampUtc = Objects.requireNonNull(timestampUtc, "expected parameter 'timestampUtc' to be non-null");
-    }
+    private SlotSwapStatusResponse() {}
 
-    private SlotSwapStatusResponse() {
-        this.destinationSlotName = null;
-        this.sourceSlotName = null;
-        this.timestampUtc = null;
+    private SlotSwapStatusResponse(SlotSwapStatusResponse $) {
+        this.destinationSlotName = $.destinationSlotName;
+        this.sourceSlotName = $.sourceSlotName;
+        this.timestampUtc = $.timestampUtc;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SlotSwapStatusResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String destinationSlotName;
-        private String sourceSlotName;
-        private String timestampUtc;
+        private SlotSwapStatusResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new SlotSwapStatusResponse();
         }
 
         public Builder(SlotSwapStatusResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.destinationSlotName = defaults.destinationSlotName;
-    	      this.sourceSlotName = defaults.sourceSlotName;
-    	      this.timestampUtc = defaults.timestampUtc;
+            $ = new SlotSwapStatusResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder destinationSlotName(String destinationSlotName) {
-            this.destinationSlotName = Objects.requireNonNull(destinationSlotName);
+            $.destinationSlotName = destinationSlotName;
             return this;
         }
+
         public Builder sourceSlotName(String sourceSlotName) {
-            this.sourceSlotName = Objects.requireNonNull(sourceSlotName);
+            $.sourceSlotName = sourceSlotName;
             return this;
         }
+
         public Builder timestampUtc(String timestampUtc) {
-            this.timestampUtc = Objects.requireNonNull(timestampUtc);
+            $.timestampUtc = timestampUtc;
             return this;
-        }        public SlotSwapStatusResponse build() {
-            return new SlotSwapStatusResponse(destinationSlotName, sourceSlotName, timestampUtc);
+        }
+
+        public SlotSwapStatusResponse build() {
+            $.destinationSlotName = Objects.requireNonNull($.destinationSlotName, "expected parameter 'destinationSlotName' to be non-null");
+            $.sourceSlotName = Objects.requireNonNull($.sourceSlotName, "expected parameter 'sourceSlotName' to be non-null");
+            $.timestampUtc = Objects.requireNonNull($.timestampUtc, "expected parameter 'timestampUtc' to be non-null");
+            return $;
         }
     }
+
 }

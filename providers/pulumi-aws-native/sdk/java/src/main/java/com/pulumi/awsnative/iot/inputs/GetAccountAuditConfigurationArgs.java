@@ -17,45 +17,45 @@ public final class GetAccountAuditConfigurationArgs extends com.pulumi.resources
      * 
      */
     @Import(name="accountId", required=true)
-      private final String accountId;
+    private String accountId;
 
     public String accountId() {
         return this.accountId;
     }
 
-    public GetAccountAuditConfigurationArgs(String accountId) {
-        this.accountId = Objects.requireNonNull(accountId, "expected parameter 'accountId' to be non-null");
-    }
+    private GetAccountAuditConfigurationArgs() {}
 
-    private GetAccountAuditConfigurationArgs() {
-        this.accountId = null;
+    private GetAccountAuditConfigurationArgs(GetAccountAuditConfigurationArgs $) {
+        this.accountId = $.accountId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetAccountAuditConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String accountId;
+        private GetAccountAuditConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetAccountAuditConfigurationArgs();
         }
 
         public Builder(GetAccountAuditConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accountId = defaults.accountId;
+            $ = new GetAccountAuditConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder accountId(String accountId) {
-            this.accountId = Objects.requireNonNull(accountId);
+            $.accountId = accountId;
             return this;
-        }        public GetAccountAuditConfigurationArgs build() {
-            return new GetAccountAuditConfigurationArgs(accountId);
+        }
+
+        public GetAccountAuditConfigurationArgs build() {
+            $.accountId = Objects.requireNonNull($.accountId, "expected parameter 'accountId' to be non-null");
+            return $;
         }
     }
+
 }

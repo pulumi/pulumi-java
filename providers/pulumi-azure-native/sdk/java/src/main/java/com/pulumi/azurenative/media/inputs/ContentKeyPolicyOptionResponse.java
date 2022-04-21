@@ -32,7 +32,7 @@ public final class ContentKeyPolicyOptionResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="configuration", required=true)
-      private final Object configuration;
+    private Object configuration;
 
     public Object configuration() {
         return this.configuration;
@@ -43,10 +43,10 @@ public final class ContentKeyPolicyOptionResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="name")
-      private final @Nullable String name;
+    private @Nullable String name;
 
     public Optional<String> name() {
-        return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -54,7 +54,7 @@ public final class ContentKeyPolicyOptionResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="policyOptionId", required=true)
-      private final String policyOptionId;
+    private String policyOptionId;
 
     public String policyOptionId() {
         return this.policyOptionId;
@@ -65,73 +65,65 @@ public final class ContentKeyPolicyOptionResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="restriction", required=true)
-      private final Object restriction;
+    private Object restriction;
 
     public Object restriction() {
         return this.restriction;
     }
 
-    public ContentKeyPolicyOptionResponse(
-        Object configuration,
-        @Nullable String name,
-        String policyOptionId,
-        Object restriction) {
-        this.configuration = Objects.requireNonNull(configuration, "expected parameter 'configuration' to be non-null");
-        this.name = name;
-        this.policyOptionId = Objects.requireNonNull(policyOptionId, "expected parameter 'policyOptionId' to be non-null");
-        this.restriction = Objects.requireNonNull(restriction, "expected parameter 'restriction' to be non-null");
-    }
+    private ContentKeyPolicyOptionResponse() {}
 
-    private ContentKeyPolicyOptionResponse() {
-        this.configuration = null;
-        this.name = null;
-        this.policyOptionId = null;
-        this.restriction = null;
+    private ContentKeyPolicyOptionResponse(ContentKeyPolicyOptionResponse $) {
+        this.configuration = $.configuration;
+        this.name = $.name;
+        this.policyOptionId = $.policyOptionId;
+        this.restriction = $.restriction;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ContentKeyPolicyOptionResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Object configuration;
-        private @Nullable String name;
-        private String policyOptionId;
-        private Object restriction;
+        private ContentKeyPolicyOptionResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ContentKeyPolicyOptionResponse();
         }
 
         public Builder(ContentKeyPolicyOptionResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.configuration = defaults.configuration;
-    	      this.name = defaults.name;
-    	      this.policyOptionId = defaults.policyOptionId;
-    	      this.restriction = defaults.restriction;
+            $ = new ContentKeyPolicyOptionResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder configuration(Object configuration) {
-            this.configuration = Objects.requireNonNull(configuration);
+            $.configuration = configuration;
             return this;
         }
+
         public Builder name(@Nullable String name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
+
         public Builder policyOptionId(String policyOptionId) {
-            this.policyOptionId = Objects.requireNonNull(policyOptionId);
+            $.policyOptionId = policyOptionId;
             return this;
         }
+
         public Builder restriction(Object restriction) {
-            this.restriction = Objects.requireNonNull(restriction);
+            $.restriction = restriction;
             return this;
-        }        public ContentKeyPolicyOptionResponse build() {
-            return new ContentKeyPolicyOptionResponse(configuration, name, policyOptionId, restriction);
+        }
+
+        public ContentKeyPolicyOptionResponse build() {
+            $.configuration = Objects.requireNonNull($.configuration, "expected parameter 'configuration' to be non-null");
+            $.policyOptionId = Objects.requireNonNull($.policyOptionId, "expected parameter 'policyOptionId' to be non-null");
+            $.restriction = Objects.requireNonNull($.restriction, "expected parameter 'restriction' to be non-null");
+            return $;
         }
     }
+
 }

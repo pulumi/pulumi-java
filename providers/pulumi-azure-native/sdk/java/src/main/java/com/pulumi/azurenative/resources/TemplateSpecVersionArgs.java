@@ -6,12 +6,12 @@ package com.pulumi.azurenative.resources;
 import com.pulumi.azurenative.resources.inputs.LinkedTemplateArtifactArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class TemplateSpecVersionArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class TemplateSpecVersionArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="linkedTemplates")
-      private final @Nullable Output<List<LinkedTemplateArtifactArgs>> linkedTemplates;
+    private @Nullable Output<List<LinkedTemplateArtifactArgs>> linkedTemplates;
 
-    public Output<List<LinkedTemplateArtifactArgs>> linkedTemplates() {
-        return this.linkedTemplates == null ? Codegen.empty() : this.linkedTemplates;
+    public Optional<Output<List<LinkedTemplateArtifactArgs>>> linkedTemplates() {
+        return Optional.ofNullable(this.linkedTemplates);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class TemplateSpecVersionArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -57,10 +57,10 @@ public final class TemplateSpecVersionArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="mainTemplate")
-      private final @Nullable Output<Object> mainTemplate;
+    private @Nullable Output<Object> mainTemplate;
 
-    public Output<Object> mainTemplate() {
-        return this.mainTemplate == null ? Codegen.empty() : this.mainTemplate;
+    public Optional<Output<Object>> mainTemplate() {
+        return Optional.ofNullable(this.mainTemplate);
     }
 
     /**
@@ -68,10 +68,10 @@ public final class TemplateSpecVersionArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="metadata")
-      private final @Nullable Output<Object> metadata;
+    private @Nullable Output<Object> metadata;
 
-    public Output<Object> metadata() {
-        return this.metadata == null ? Codegen.empty() : this.metadata;
+    public Optional<Output<Object>> metadata() {
+        return Optional.ofNullable(this.metadata);
     }
 
     /**
@@ -79,7 +79,7 @@ public final class TemplateSpecVersionArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -90,10 +90,10 @@ public final class TemplateSpecVersionArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -101,7 +101,7 @@ public final class TemplateSpecVersionArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="templateSpecName", required=true)
-      private final Output<String> templateSpecName;
+    private Output<String> templateSpecName;
 
     public Output<String> templateSpecName() {
         return this.templateSpecName;
@@ -112,10 +112,10 @@ public final class TemplateSpecVersionArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="templateSpecVersion")
-      private final @Nullable Output<String> templateSpecVersion;
+    private @Nullable Output<String> templateSpecVersion;
 
-    public Output<String> templateSpecVersion() {
-        return this.templateSpecVersion == null ? Codegen.empty() : this.templateSpecVersion;
+    public Optional<Output<String>> templateSpecVersion() {
+        return Optional.ofNullable(this.templateSpecVersion);
     }
 
     /**
@@ -123,170 +123,144 @@ public final class TemplateSpecVersionArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="uiFormDefinition")
-      private final @Nullable Output<Object> uiFormDefinition;
+    private @Nullable Output<Object> uiFormDefinition;
 
-    public Output<Object> uiFormDefinition() {
-        return this.uiFormDefinition == null ? Codegen.empty() : this.uiFormDefinition;
+    public Optional<Output<Object>> uiFormDefinition() {
+        return Optional.ofNullable(this.uiFormDefinition);
     }
 
-    public TemplateSpecVersionArgs(
-        @Nullable Output<String> description,
-        @Nullable Output<List<LinkedTemplateArtifactArgs>> linkedTemplates,
-        @Nullable Output<String> location,
-        @Nullable Output<Object> mainTemplate,
-        @Nullable Output<Object> metadata,
-        Output<String> resourceGroupName,
-        @Nullable Output<Map<String,String>> tags,
-        Output<String> templateSpecName,
-        @Nullable Output<String> templateSpecVersion,
-        @Nullable Output<Object> uiFormDefinition) {
-        this.description = description;
-        this.linkedTemplates = linkedTemplates;
-        this.location = location;
-        this.mainTemplate = mainTemplate;
-        this.metadata = metadata;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.tags = tags;
-        this.templateSpecName = Objects.requireNonNull(templateSpecName, "expected parameter 'templateSpecName' to be non-null");
-        this.templateSpecVersion = templateSpecVersion;
-        this.uiFormDefinition = uiFormDefinition;
-    }
+    private TemplateSpecVersionArgs() {}
 
-    private TemplateSpecVersionArgs() {
-        this.description = Codegen.empty();
-        this.linkedTemplates = Codegen.empty();
-        this.location = Codegen.empty();
-        this.mainTemplate = Codegen.empty();
-        this.metadata = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.templateSpecName = Codegen.empty();
-        this.templateSpecVersion = Codegen.empty();
-        this.uiFormDefinition = Codegen.empty();
+    private TemplateSpecVersionArgs(TemplateSpecVersionArgs $) {
+        this.description = $.description;
+        this.linkedTemplates = $.linkedTemplates;
+        this.location = $.location;
+        this.mainTemplate = $.mainTemplate;
+        this.metadata = $.metadata;
+        this.resourceGroupName = $.resourceGroupName;
+        this.tags = $.tags;
+        this.templateSpecName = $.templateSpecName;
+        this.templateSpecVersion = $.templateSpecVersion;
+        this.uiFormDefinition = $.uiFormDefinition;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TemplateSpecVersionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> description;
-        private @Nullable Output<List<LinkedTemplateArtifactArgs>> linkedTemplates;
-        private @Nullable Output<String> location;
-        private @Nullable Output<Object> mainTemplate;
-        private @Nullable Output<Object> metadata;
-        private Output<String> resourceGroupName;
-        private @Nullable Output<Map<String,String>> tags;
-        private Output<String> templateSpecName;
-        private @Nullable Output<String> templateSpecVersion;
-        private @Nullable Output<Object> uiFormDefinition;
+        private TemplateSpecVersionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TemplateSpecVersionArgs();
         }
 
         public Builder(TemplateSpecVersionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.description = defaults.description;
-    	      this.linkedTemplates = defaults.linkedTemplates;
-    	      this.location = defaults.location;
-    	      this.mainTemplate = defaults.mainTemplate;
-    	      this.metadata = defaults.metadata;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.tags = defaults.tags;
-    	      this.templateSpecName = defaults.templateSpecName;
-    	      this.templateSpecVersion = defaults.templateSpecVersion;
-    	      this.uiFormDefinition = defaults.uiFormDefinition;
+            $ = new TemplateSpecVersionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder linkedTemplates(@Nullable Output<List<LinkedTemplateArtifactArgs>> linkedTemplates) {
-            this.linkedTemplates = linkedTemplates;
+            $.linkedTemplates = linkedTemplates;
             return this;
         }
-        public Builder linkedTemplates(@Nullable List<LinkedTemplateArtifactArgs> linkedTemplates) {
-            this.linkedTemplates = Codegen.ofNullable(linkedTemplates);
-            return this;
+
+        public Builder linkedTemplates(List<LinkedTemplateArtifactArgs> linkedTemplates) {
+            return linkedTemplates(Output.of(linkedTemplates));
         }
+
         public Builder linkedTemplates(LinkedTemplateArtifactArgs... linkedTemplates) {
             return linkedTemplates(List.of(linkedTemplates));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder mainTemplate(@Nullable Output<Object> mainTemplate) {
-            this.mainTemplate = mainTemplate;
+            $.mainTemplate = mainTemplate;
             return this;
         }
-        public Builder mainTemplate(@Nullable Object mainTemplate) {
-            this.mainTemplate = Codegen.ofNullable(mainTemplate);
-            return this;
+
+        public Builder mainTemplate(Object mainTemplate) {
+            return mainTemplate(Output.of(mainTemplate));
         }
+
         public Builder metadata(@Nullable Output<Object> metadata) {
-            this.metadata = metadata;
+            $.metadata = metadata;
             return this;
         }
-        public Builder metadata(@Nullable Object metadata) {
-            this.metadata = Codegen.ofNullable(metadata);
-            return this;
+
+        public Builder metadata(Object metadata) {
+            return metadata(Output.of(metadata));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder templateSpecName(Output<String> templateSpecName) {
-            this.templateSpecName = Objects.requireNonNull(templateSpecName);
+            $.templateSpecName = templateSpecName;
             return this;
         }
+
         public Builder templateSpecName(String templateSpecName) {
-            this.templateSpecName = Output.of(Objects.requireNonNull(templateSpecName));
-            return this;
+            return templateSpecName(Output.of(templateSpecName));
         }
+
         public Builder templateSpecVersion(@Nullable Output<String> templateSpecVersion) {
-            this.templateSpecVersion = templateSpecVersion;
+            $.templateSpecVersion = templateSpecVersion;
             return this;
         }
-        public Builder templateSpecVersion(@Nullable String templateSpecVersion) {
-            this.templateSpecVersion = Codegen.ofNullable(templateSpecVersion);
-            return this;
+
+        public Builder templateSpecVersion(String templateSpecVersion) {
+            return templateSpecVersion(Output.of(templateSpecVersion));
         }
+
         public Builder uiFormDefinition(@Nullable Output<Object> uiFormDefinition) {
-            this.uiFormDefinition = uiFormDefinition;
+            $.uiFormDefinition = uiFormDefinition;
             return this;
         }
-        public Builder uiFormDefinition(@Nullable Object uiFormDefinition) {
-            this.uiFormDefinition = Codegen.ofNullable(uiFormDefinition);
-            return this;
-        }        public TemplateSpecVersionArgs build() {
-            return new TemplateSpecVersionArgs(description, linkedTemplates, location, mainTemplate, metadata, resourceGroupName, tags, templateSpecName, templateSpecVersion, uiFormDefinition);
+
+        public Builder uiFormDefinition(Object uiFormDefinition) {
+            return uiFormDefinition(Output.of(uiFormDefinition));
+        }
+
+        public TemplateSpecVersionArgs build() {
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.templateSpecName = Objects.requireNonNull($.templateSpecName, "expected parameter 'templateSpecName' to be non-null");
+            return $;
         }
     }
+
 }

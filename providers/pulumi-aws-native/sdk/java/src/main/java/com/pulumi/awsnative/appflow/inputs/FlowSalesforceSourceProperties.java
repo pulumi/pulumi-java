@@ -16,78 +16,71 @@ public final class FlowSalesforceSourceProperties extends com.pulumi.resources.I
     public static final FlowSalesforceSourceProperties Empty = new FlowSalesforceSourceProperties();
 
     @Import(name="enableDynamicFieldUpdate")
-      private final @Nullable Boolean enableDynamicFieldUpdate;
+    private @Nullable Boolean enableDynamicFieldUpdate;
 
     public Optional<Boolean> enableDynamicFieldUpdate() {
-        return this.enableDynamicFieldUpdate == null ? Optional.empty() : Optional.ofNullable(this.enableDynamicFieldUpdate);
+        return Optional.ofNullable(this.enableDynamicFieldUpdate);
     }
 
     @Import(name="includeDeletedRecords")
-      private final @Nullable Boolean includeDeletedRecords;
+    private @Nullable Boolean includeDeletedRecords;
 
     public Optional<Boolean> includeDeletedRecords() {
-        return this.includeDeletedRecords == null ? Optional.empty() : Optional.ofNullable(this.includeDeletedRecords);
+        return Optional.ofNullable(this.includeDeletedRecords);
     }
 
     @Import(name="object", required=true)
-      private final String object;
+    private String object;
 
     public String object() {
         return this.object;
     }
 
-    public FlowSalesforceSourceProperties(
-        @Nullable Boolean enableDynamicFieldUpdate,
-        @Nullable Boolean includeDeletedRecords,
-        String object) {
-        this.enableDynamicFieldUpdate = enableDynamicFieldUpdate;
-        this.includeDeletedRecords = includeDeletedRecords;
-        this.object = Objects.requireNonNull(object, "expected parameter 'object' to be non-null");
-    }
+    private FlowSalesforceSourceProperties() {}
 
-    private FlowSalesforceSourceProperties() {
-        this.enableDynamicFieldUpdate = null;
-        this.includeDeletedRecords = null;
-        this.object = null;
+    private FlowSalesforceSourceProperties(FlowSalesforceSourceProperties $) {
+        this.enableDynamicFieldUpdate = $.enableDynamicFieldUpdate;
+        this.includeDeletedRecords = $.includeDeletedRecords;
+        this.object = $.object;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FlowSalesforceSourceProperties defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Boolean enableDynamicFieldUpdate;
-        private @Nullable Boolean includeDeletedRecords;
-        private String object;
+        private FlowSalesforceSourceProperties $;
 
         public Builder() {
-    	      // Empty
+            $ = new FlowSalesforceSourceProperties();
         }
 
         public Builder(FlowSalesforceSourceProperties defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.enableDynamicFieldUpdate = defaults.enableDynamicFieldUpdate;
-    	      this.includeDeletedRecords = defaults.includeDeletedRecords;
-    	      this.object = defaults.object;
+            $ = new FlowSalesforceSourceProperties(Objects.requireNonNull(defaults));
         }
 
         public Builder enableDynamicFieldUpdate(@Nullable Boolean enableDynamicFieldUpdate) {
-            this.enableDynamicFieldUpdate = enableDynamicFieldUpdate;
+            $.enableDynamicFieldUpdate = enableDynamicFieldUpdate;
             return this;
         }
+
         public Builder includeDeletedRecords(@Nullable Boolean includeDeletedRecords) {
-            this.includeDeletedRecords = includeDeletedRecords;
+            $.includeDeletedRecords = includeDeletedRecords;
             return this;
         }
+
         public Builder object(String object) {
-            this.object = Objects.requireNonNull(object);
+            $.object = object;
             return this;
-        }        public FlowSalesforceSourceProperties build() {
-            return new FlowSalesforceSourceProperties(enableDynamicFieldUpdate, includeDeletedRecords, object);
+        }
+
+        public FlowSalesforceSourceProperties build() {
+            $.object = Objects.requireNonNull($.object, "expected parameter 'object' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,9 +5,9 @@ package com.pulumi.azurenative.insights;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class ComponentLinkedStorageAccountArgs extends com.pulumi.resource
      * 
      */
     @Import(name="linkedStorageAccount")
-      private final @Nullable Output<String> linkedStorageAccount;
+    private @Nullable Output<String> linkedStorageAccount;
 
-    public Output<String> linkedStorageAccount() {
-        return this.linkedStorageAccount == null ? Codegen.empty() : this.linkedStorageAccount;
+    public Optional<Output<String>> linkedStorageAccount() {
+        return Optional.ofNullable(this.linkedStorageAccount);
     }
 
     /**
@@ -31,7 +31,7 @@ public final class ComponentLinkedStorageAccountArgs extends com.pulumi.resource
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -42,7 +42,7 @@ public final class ComponentLinkedStorageAccountArgs extends com.pulumi.resource
      * 
      */
     @Import(name="resourceName", required=true)
-      private final Output<String> resourceName;
+    private Output<String> resourceName;
 
     public Output<String> resourceName() {
         return this.resourceName;
@@ -53,89 +53,80 @@ public final class ComponentLinkedStorageAccountArgs extends com.pulumi.resource
      * 
      */
     @Import(name="storageType")
-      private final @Nullable Output<String> storageType;
+    private @Nullable Output<String> storageType;
 
-    public Output<String> storageType() {
-        return this.storageType == null ? Codegen.empty() : this.storageType;
+    public Optional<Output<String>> storageType() {
+        return Optional.ofNullable(this.storageType);
     }
 
-    public ComponentLinkedStorageAccountArgs(
-        @Nullable Output<String> linkedStorageAccount,
-        Output<String> resourceGroupName,
-        Output<String> resourceName,
-        @Nullable Output<String> storageType) {
-        this.linkedStorageAccount = linkedStorageAccount;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.resourceName = Objects.requireNonNull(resourceName, "expected parameter 'resourceName' to be non-null");
-        this.storageType = storageType;
-    }
+    private ComponentLinkedStorageAccountArgs() {}
 
-    private ComponentLinkedStorageAccountArgs() {
-        this.linkedStorageAccount = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.resourceName = Codegen.empty();
-        this.storageType = Codegen.empty();
+    private ComponentLinkedStorageAccountArgs(ComponentLinkedStorageAccountArgs $) {
+        this.linkedStorageAccount = $.linkedStorageAccount;
+        this.resourceGroupName = $.resourceGroupName;
+        this.resourceName = $.resourceName;
+        this.storageType = $.storageType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ComponentLinkedStorageAccountArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> linkedStorageAccount;
-        private Output<String> resourceGroupName;
-        private Output<String> resourceName;
-        private @Nullable Output<String> storageType;
+        private ComponentLinkedStorageAccountArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ComponentLinkedStorageAccountArgs();
         }
 
         public Builder(ComponentLinkedStorageAccountArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.linkedStorageAccount = defaults.linkedStorageAccount;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.resourceName = defaults.resourceName;
-    	      this.storageType = defaults.storageType;
+            $ = new ComponentLinkedStorageAccountArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder linkedStorageAccount(@Nullable Output<String> linkedStorageAccount) {
-            this.linkedStorageAccount = linkedStorageAccount;
+            $.linkedStorageAccount = linkedStorageAccount;
             return this;
         }
-        public Builder linkedStorageAccount(@Nullable String linkedStorageAccount) {
-            this.linkedStorageAccount = Codegen.ofNullable(linkedStorageAccount);
-            return this;
+
+        public Builder linkedStorageAccount(String linkedStorageAccount) {
+            return linkedStorageAccount(Output.of(linkedStorageAccount));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder resourceName(Output<String> resourceName) {
-            this.resourceName = Objects.requireNonNull(resourceName);
+            $.resourceName = resourceName;
             return this;
         }
+
         public Builder resourceName(String resourceName) {
-            this.resourceName = Output.of(Objects.requireNonNull(resourceName));
-            return this;
+            return resourceName(Output.of(resourceName));
         }
+
         public Builder storageType(@Nullable Output<String> storageType) {
-            this.storageType = storageType;
+            $.storageType = storageType;
             return this;
         }
-        public Builder storageType(@Nullable String storageType) {
-            this.storageType = Codegen.ofNullable(storageType);
-            return this;
-        }        public ComponentLinkedStorageAccountArgs build() {
-            return new ComponentLinkedStorageAccountArgs(linkedStorageAccount, resourceGroupName, resourceName, storageType);
+
+        public Builder storageType(String storageType) {
+            return storageType(Output.of(storageType));
+        }
+
+        public ComponentLinkedStorageAccountArgs build() {
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.resourceName = Objects.requireNonNull($.resourceName, "expected parameter 'resourceName' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,9 +5,9 @@ package com.pulumi.azurenative.apimanagement;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class ContentItemArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="contentItemId")
-      private final @Nullable Output<String> contentItemId;
+    private @Nullable Output<String> contentItemId;
 
-    public Output<String> contentItemId() {
-        return this.contentItemId == null ? Codegen.empty() : this.contentItemId;
+    public Optional<Output<String>> contentItemId() {
+        return Optional.ofNullable(this.contentItemId);
     }
 
     /**
@@ -31,7 +31,7 @@ public final class ContentItemArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="contentTypeId", required=true)
-      private final Output<String> contentTypeId;
+    private Output<String> contentTypeId;
 
     public Output<String> contentTypeId() {
         return this.contentTypeId;
@@ -42,7 +42,7 @@ public final class ContentItemArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -53,89 +53,81 @@ public final class ContentItemArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="serviceName", required=true)
-      private final Output<String> serviceName;
+    private Output<String> serviceName;
 
     public Output<String> serviceName() {
         return this.serviceName;
     }
 
-    public ContentItemArgs(
-        @Nullable Output<String> contentItemId,
-        Output<String> contentTypeId,
-        Output<String> resourceGroupName,
-        Output<String> serviceName) {
-        this.contentItemId = contentItemId;
-        this.contentTypeId = Objects.requireNonNull(contentTypeId, "expected parameter 'contentTypeId' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.serviceName = Objects.requireNonNull(serviceName, "expected parameter 'serviceName' to be non-null");
-    }
+    private ContentItemArgs() {}
 
-    private ContentItemArgs() {
-        this.contentItemId = Codegen.empty();
-        this.contentTypeId = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.serviceName = Codegen.empty();
+    private ContentItemArgs(ContentItemArgs $) {
+        this.contentItemId = $.contentItemId;
+        this.contentTypeId = $.contentTypeId;
+        this.resourceGroupName = $.resourceGroupName;
+        this.serviceName = $.serviceName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ContentItemArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> contentItemId;
-        private Output<String> contentTypeId;
-        private Output<String> resourceGroupName;
-        private Output<String> serviceName;
+        private ContentItemArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ContentItemArgs();
         }
 
         public Builder(ContentItemArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.contentItemId = defaults.contentItemId;
-    	      this.contentTypeId = defaults.contentTypeId;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.serviceName = defaults.serviceName;
+            $ = new ContentItemArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder contentItemId(@Nullable Output<String> contentItemId) {
-            this.contentItemId = contentItemId;
+            $.contentItemId = contentItemId;
             return this;
         }
-        public Builder contentItemId(@Nullable String contentItemId) {
-            this.contentItemId = Codegen.ofNullable(contentItemId);
-            return this;
+
+        public Builder contentItemId(String contentItemId) {
+            return contentItemId(Output.of(contentItemId));
         }
+
         public Builder contentTypeId(Output<String> contentTypeId) {
-            this.contentTypeId = Objects.requireNonNull(contentTypeId);
+            $.contentTypeId = contentTypeId;
             return this;
         }
+
         public Builder contentTypeId(String contentTypeId) {
-            this.contentTypeId = Output.of(Objects.requireNonNull(contentTypeId));
-            return this;
+            return contentTypeId(Output.of(contentTypeId));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder serviceName(Output<String> serviceName) {
-            this.serviceName = Objects.requireNonNull(serviceName);
+            $.serviceName = serviceName;
             return this;
         }
+
         public Builder serviceName(String serviceName) {
-            this.serviceName = Output.of(Objects.requireNonNull(serviceName));
-            return this;
-        }        public ContentItemArgs build() {
-            return new ContentItemArgs(contentItemId, contentTypeId, resourceGroupName, serviceName);
+            return serviceName(Output.of(serviceName));
+        }
+
+        public ContentItemArgs build() {
+            $.contentTypeId = Objects.requireNonNull($.contentTypeId, "expected parameter 'contentTypeId' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.serviceName = Objects.requireNonNull($.serviceName, "expected parameter 'serviceName' to be non-null");
+            return $;
         }
     }
+
 }

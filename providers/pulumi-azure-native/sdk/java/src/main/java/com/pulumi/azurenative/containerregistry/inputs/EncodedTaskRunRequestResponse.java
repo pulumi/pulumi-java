@@ -31,10 +31,10 @@ public final class EncodedTaskRunRequestResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="agentConfiguration")
-      private final @Nullable AgentPropertiesResponse agentConfiguration;
+    private @Nullable AgentPropertiesResponse agentConfiguration;
 
     public Optional<AgentPropertiesResponse> agentConfiguration() {
-        return this.agentConfiguration == null ? Optional.empty() : Optional.ofNullable(this.agentConfiguration);
+        return Optional.ofNullable(this.agentConfiguration);
     }
 
     /**
@@ -42,10 +42,10 @@ public final class EncodedTaskRunRequestResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="agentPoolName")
-      private final @Nullable String agentPoolName;
+    private @Nullable String agentPoolName;
 
     public Optional<String> agentPoolName() {
-        return this.agentPoolName == null ? Optional.empty() : Optional.ofNullable(this.agentPoolName);
+        return Optional.ofNullable(this.agentPoolName);
     }
 
     /**
@@ -53,10 +53,10 @@ public final class EncodedTaskRunRequestResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="credentials")
-      private final @Nullable CredentialsResponse credentials;
+    private @Nullable CredentialsResponse credentials;
 
     public Optional<CredentialsResponse> credentials() {
-        return this.credentials == null ? Optional.empty() : Optional.ofNullable(this.credentials);
+        return Optional.ofNullable(this.credentials);
     }
 
     /**
@@ -64,7 +64,7 @@ public final class EncodedTaskRunRequestResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="encodedTaskContent", required=true)
-      private final String encodedTaskContent;
+    private String encodedTaskContent;
 
     public String encodedTaskContent() {
         return this.encodedTaskContent;
@@ -75,10 +75,10 @@ public final class EncodedTaskRunRequestResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="encodedValuesContent")
-      private final @Nullable String encodedValuesContent;
+    private @Nullable String encodedValuesContent;
 
     public Optional<String> encodedValuesContent() {
-        return this.encodedValuesContent == null ? Optional.empty() : Optional.ofNullable(this.encodedValuesContent);
+        return Optional.ofNullable(this.encodedValuesContent);
     }
 
     /**
@@ -86,10 +86,10 @@ public final class EncodedTaskRunRequestResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="isArchiveEnabled")
-      private final @Nullable Boolean isArchiveEnabled;
+    private @Nullable Boolean isArchiveEnabled;
 
     public Optional<Boolean> isArchiveEnabled() {
-        return this.isArchiveEnabled == null ? Optional.empty() : Optional.ofNullable(this.isArchiveEnabled);
+        return Optional.ofNullable(this.isArchiveEnabled);
     }
 
     /**
@@ -97,10 +97,10 @@ public final class EncodedTaskRunRequestResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="logTemplate")
-      private final @Nullable String logTemplate;
+    private @Nullable String logTemplate;
 
     public Optional<String> logTemplate() {
-        return this.logTemplate == null ? Optional.empty() : Optional.ofNullable(this.logTemplate);
+        return Optional.ofNullable(this.logTemplate);
     }
 
     /**
@@ -108,7 +108,7 @@ public final class EncodedTaskRunRequestResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="platform", required=true)
-      private final PlatformPropertiesResponse platform;
+    private PlatformPropertiesResponse platform;
 
     public PlatformPropertiesResponse platform() {
         return this.platform;
@@ -120,10 +120,10 @@ public final class EncodedTaskRunRequestResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="sourceLocation")
-      private final @Nullable String sourceLocation;
+    private @Nullable String sourceLocation;
 
     public Optional<String> sourceLocation() {
-        return this.sourceLocation == null ? Optional.empty() : Optional.ofNullable(this.sourceLocation);
+        return Optional.ofNullable(this.sourceLocation);
     }
 
     /**
@@ -131,10 +131,10 @@ public final class EncodedTaskRunRequestResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="timeout")
-      private final @Nullable Integer timeout;
+    private @Nullable Integer timeout;
 
     public Optional<Integer> timeout() {
-        return this.timeout == null ? Optional.empty() : Optional.ofNullable(this.timeout);
+        return Optional.ofNullable(this.timeout);
     }
 
     /**
@@ -143,7 +143,7 @@ public final class EncodedTaskRunRequestResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
@@ -154,148 +154,119 @@ public final class EncodedTaskRunRequestResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="values")
-      private final @Nullable List<SetValueResponse> values;
+    private @Nullable List<SetValueResponse> values;
 
-    public List<SetValueResponse> values() {
-        return this.values == null ? List.of() : this.values;
+    public Optional<List<SetValueResponse>> values() {
+        return Optional.ofNullable(this.values);
     }
 
-    public EncodedTaskRunRequestResponse(
-        @Nullable AgentPropertiesResponse agentConfiguration,
-        @Nullable String agentPoolName,
-        @Nullable CredentialsResponse credentials,
-        String encodedTaskContent,
-        @Nullable String encodedValuesContent,
-        @Nullable Boolean isArchiveEnabled,
-        @Nullable String logTemplate,
-        PlatformPropertiesResponse platform,
-        @Nullable String sourceLocation,
-        @Nullable Integer timeout,
-        String type,
-        @Nullable List<SetValueResponse> values) {
-        this.agentConfiguration = agentConfiguration;
-        this.agentPoolName = agentPoolName;
-        this.credentials = credentials;
-        this.encodedTaskContent = Objects.requireNonNull(encodedTaskContent, "expected parameter 'encodedTaskContent' to be non-null");
-        this.encodedValuesContent = encodedValuesContent;
-        this.isArchiveEnabled = Codegen.booleanProp("isArchiveEnabled").arg(isArchiveEnabled).def(false).getNullable();
-        this.logTemplate = logTemplate;
-        this.platform = Objects.requireNonNull(platform, "expected parameter 'platform' to be non-null");
-        this.sourceLocation = sourceLocation;
-        this.timeout = Codegen.integerProp("timeout").arg(timeout).def(3600).getNullable();
-        this.type = Codegen.stringProp("type").arg(type).require();
-        this.values = values;
-    }
+    private EncodedTaskRunRequestResponse() {}
 
-    private EncodedTaskRunRequestResponse() {
-        this.agentConfiguration = null;
-        this.agentPoolName = null;
-        this.credentials = null;
-        this.encodedTaskContent = null;
-        this.encodedValuesContent = null;
-        this.isArchiveEnabled = null;
-        this.logTemplate = null;
-        this.platform = null;
-        this.sourceLocation = null;
-        this.timeout = null;
-        this.type = null;
-        this.values = List.of();
+    private EncodedTaskRunRequestResponse(EncodedTaskRunRequestResponse $) {
+        this.agentConfiguration = $.agentConfiguration;
+        this.agentPoolName = $.agentPoolName;
+        this.credentials = $.credentials;
+        this.encodedTaskContent = $.encodedTaskContent;
+        this.encodedValuesContent = $.encodedValuesContent;
+        this.isArchiveEnabled = $.isArchiveEnabled;
+        this.logTemplate = $.logTemplate;
+        this.platform = $.platform;
+        this.sourceLocation = $.sourceLocation;
+        this.timeout = $.timeout;
+        this.type = $.type;
+        this.values = $.values;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EncodedTaskRunRequestResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable AgentPropertiesResponse agentConfiguration;
-        private @Nullable String agentPoolName;
-        private @Nullable CredentialsResponse credentials;
-        private String encodedTaskContent;
-        private @Nullable String encodedValuesContent;
-        private @Nullable Boolean isArchiveEnabled;
-        private @Nullable String logTemplate;
-        private PlatformPropertiesResponse platform;
-        private @Nullable String sourceLocation;
-        private @Nullable Integer timeout;
-        private String type;
-        private @Nullable List<SetValueResponse> values;
+        private EncodedTaskRunRequestResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new EncodedTaskRunRequestResponse();
         }
 
         public Builder(EncodedTaskRunRequestResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.agentConfiguration = defaults.agentConfiguration;
-    	      this.agentPoolName = defaults.agentPoolName;
-    	      this.credentials = defaults.credentials;
-    	      this.encodedTaskContent = defaults.encodedTaskContent;
-    	      this.encodedValuesContent = defaults.encodedValuesContent;
-    	      this.isArchiveEnabled = defaults.isArchiveEnabled;
-    	      this.logTemplate = defaults.logTemplate;
-    	      this.platform = defaults.platform;
-    	      this.sourceLocation = defaults.sourceLocation;
-    	      this.timeout = defaults.timeout;
-    	      this.type = defaults.type;
-    	      this.values = defaults.values;
+            $ = new EncodedTaskRunRequestResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder agentConfiguration(@Nullable AgentPropertiesResponse agentConfiguration) {
-            this.agentConfiguration = agentConfiguration;
+            $.agentConfiguration = agentConfiguration;
             return this;
         }
+
         public Builder agentPoolName(@Nullable String agentPoolName) {
-            this.agentPoolName = agentPoolName;
+            $.agentPoolName = agentPoolName;
             return this;
         }
+
         public Builder credentials(@Nullable CredentialsResponse credentials) {
-            this.credentials = credentials;
+            $.credentials = credentials;
             return this;
         }
+
         public Builder encodedTaskContent(String encodedTaskContent) {
-            this.encodedTaskContent = Objects.requireNonNull(encodedTaskContent);
+            $.encodedTaskContent = encodedTaskContent;
             return this;
         }
+
         public Builder encodedValuesContent(@Nullable String encodedValuesContent) {
-            this.encodedValuesContent = encodedValuesContent;
+            $.encodedValuesContent = encodedValuesContent;
             return this;
         }
+
         public Builder isArchiveEnabled(@Nullable Boolean isArchiveEnabled) {
-            this.isArchiveEnabled = isArchiveEnabled;
+            $.isArchiveEnabled = isArchiveEnabled;
             return this;
         }
+
         public Builder logTemplate(@Nullable String logTemplate) {
-            this.logTemplate = logTemplate;
+            $.logTemplate = logTemplate;
             return this;
         }
+
         public Builder platform(PlatformPropertiesResponse platform) {
-            this.platform = Objects.requireNonNull(platform);
+            $.platform = platform;
             return this;
         }
+
         public Builder sourceLocation(@Nullable String sourceLocation) {
-            this.sourceLocation = sourceLocation;
+            $.sourceLocation = sourceLocation;
             return this;
         }
+
         public Builder timeout(@Nullable Integer timeout) {
-            this.timeout = timeout;
+            $.timeout = timeout;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder values(@Nullable List<SetValueResponse> values) {
-            this.values = values;
+            $.values = values;
             return this;
         }
+
         public Builder values(SetValueResponse... values) {
             return values(List.of(values));
-        }        public EncodedTaskRunRequestResponse build() {
-            return new EncodedTaskRunRequestResponse(agentConfiguration, agentPoolName, credentials, encodedTaskContent, encodedValuesContent, isArchiveEnabled, logTemplate, platform, sourceLocation, timeout, type, values);
+        }
+
+        public EncodedTaskRunRequestResponse build() {
+            $.encodedTaskContent = Objects.requireNonNull($.encodedTaskContent, "expected parameter 'encodedTaskContent' to be non-null");
+            $.isArchiveEnabled = Codegen.booleanProp("isArchiveEnabled").arg($.isArchiveEnabled).def(false).getNullable();
+            $.platform = Objects.requireNonNull($.platform, "expected parameter 'platform' to be non-null");
+            $.timeout = Codegen.integerProp("timeout").arg($.timeout).def(3600).getNullable();
+            $.type = Codegen.stringProp("type").arg($.type).require();
+            return $;
         }
     }
+
 }

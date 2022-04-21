@@ -15,94 +15,87 @@ public final class GetLoadBalancerAccessLogs extends com.pulumi.resources.Invoke
     public static final GetLoadBalancerAccessLogs Empty = new GetLoadBalancerAccessLogs();
 
     @Import(name="bucket", required=true)
-      private final String bucket;
+    private String bucket;
 
     public String bucket() {
         return this.bucket;
     }
 
     @Import(name="bucketPrefix", required=true)
-      private final String bucketPrefix;
+    private String bucketPrefix;
 
     public String bucketPrefix() {
         return this.bucketPrefix;
     }
 
     @Import(name="enabled", required=true)
-      private final Boolean enabled;
+    private Boolean enabled;
 
     public Boolean enabled() {
         return this.enabled;
     }
 
     @Import(name="interval", required=true)
-      private final Integer interval;
+    private Integer interval;
 
     public Integer interval() {
         return this.interval;
     }
 
-    public GetLoadBalancerAccessLogs(
-        String bucket,
-        String bucketPrefix,
-        Boolean enabled,
-        Integer interval) {
-        this.bucket = Objects.requireNonNull(bucket, "expected parameter 'bucket' to be non-null");
-        this.bucketPrefix = Objects.requireNonNull(bucketPrefix, "expected parameter 'bucketPrefix' to be non-null");
-        this.enabled = Objects.requireNonNull(enabled, "expected parameter 'enabled' to be non-null");
-        this.interval = Objects.requireNonNull(interval, "expected parameter 'interval' to be non-null");
-    }
+    private GetLoadBalancerAccessLogs() {}
 
-    private GetLoadBalancerAccessLogs() {
-        this.bucket = null;
-        this.bucketPrefix = null;
-        this.enabled = null;
-        this.interval = null;
+    private GetLoadBalancerAccessLogs(GetLoadBalancerAccessLogs $) {
+        this.bucket = $.bucket;
+        this.bucketPrefix = $.bucketPrefix;
+        this.enabled = $.enabled;
+        this.interval = $.interval;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetLoadBalancerAccessLogs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String bucket;
-        private String bucketPrefix;
-        private Boolean enabled;
-        private Integer interval;
+        private GetLoadBalancerAccessLogs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetLoadBalancerAccessLogs();
         }
 
         public Builder(GetLoadBalancerAccessLogs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.bucket = defaults.bucket;
-    	      this.bucketPrefix = defaults.bucketPrefix;
-    	      this.enabled = defaults.enabled;
-    	      this.interval = defaults.interval;
+            $ = new GetLoadBalancerAccessLogs(Objects.requireNonNull(defaults));
         }
 
         public Builder bucket(String bucket) {
-            this.bucket = Objects.requireNonNull(bucket);
+            $.bucket = bucket;
             return this;
         }
+
         public Builder bucketPrefix(String bucketPrefix) {
-            this.bucketPrefix = Objects.requireNonNull(bucketPrefix);
+            $.bucketPrefix = bucketPrefix;
             return this;
         }
+
         public Builder enabled(Boolean enabled) {
-            this.enabled = Objects.requireNonNull(enabled);
+            $.enabled = enabled;
             return this;
         }
+
         public Builder interval(Integer interval) {
-            this.interval = Objects.requireNonNull(interval);
+            $.interval = interval;
             return this;
-        }        public GetLoadBalancerAccessLogs build() {
-            return new GetLoadBalancerAccessLogs(bucket, bucketPrefix, enabled, interval);
+        }
+
+        public GetLoadBalancerAccessLogs build() {
+            $.bucket = Objects.requireNonNull($.bucket, "expected parameter 'bucket' to be non-null");
+            $.bucketPrefix = Objects.requireNonNull($.bucketPrefix, "expected parameter 'bucketPrefix' to be non-null");
+            $.enabled = Objects.requireNonNull($.enabled, "expected parameter 'enabled' to be non-null");
+            $.interval = Objects.requireNonNull($.interval, "expected parameter 'interval' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,7 +5,6 @@ package com.pulumi.gcp.cloudbuild.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,49 +18,49 @@ public final class WorkerPoolNetworkConfigGetArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="peeredNetwork", required=true)
-      private final Output<String> peeredNetwork;
+    private Output<String> peeredNetwork;
 
     public Output<String> peeredNetwork() {
         return this.peeredNetwork;
     }
 
-    public WorkerPoolNetworkConfigGetArgs(Output<String> peeredNetwork) {
-        this.peeredNetwork = Objects.requireNonNull(peeredNetwork, "expected parameter 'peeredNetwork' to be non-null");
-    }
+    private WorkerPoolNetworkConfigGetArgs() {}
 
-    private WorkerPoolNetworkConfigGetArgs() {
-        this.peeredNetwork = Codegen.empty();
+    private WorkerPoolNetworkConfigGetArgs(WorkerPoolNetworkConfigGetArgs $) {
+        this.peeredNetwork = $.peeredNetwork;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WorkerPoolNetworkConfigGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> peeredNetwork;
+        private WorkerPoolNetworkConfigGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new WorkerPoolNetworkConfigGetArgs();
         }
 
         public Builder(WorkerPoolNetworkConfigGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.peeredNetwork = defaults.peeredNetwork;
+            $ = new WorkerPoolNetworkConfigGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder peeredNetwork(Output<String> peeredNetwork) {
-            this.peeredNetwork = Objects.requireNonNull(peeredNetwork);
+            $.peeredNetwork = peeredNetwork;
             return this;
         }
+
         public Builder peeredNetwork(String peeredNetwork) {
-            this.peeredNetwork = Output.of(Objects.requireNonNull(peeredNetwork));
-            return this;
-        }        public WorkerPoolNetworkConfigGetArgs build() {
-            return new WorkerPoolNetworkConfigGetArgs(peeredNetwork);
+            return peeredNetwork(Output.of(peeredNetwork));
+        }
+
+        public WorkerPoolNetworkConfigGetArgs build() {
+            $.peeredNetwork = Objects.requireNonNull($.peeredNetwork, "expected parameter 'peeredNetwork' to be non-null");
+            return $;
         }
     }
+
 }

@@ -7,9 +7,9 @@ import com.pulumi.awsnative.lex.inputs.BotPromptSpecificationArgs;
 import com.pulumi.awsnative.lex.inputs.BotResponseSpecificationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,90 +22,84 @@ public final class BotIntentConfirmationSettingArgs extends com.pulumi.resources
     public static final BotIntentConfirmationSettingArgs Empty = new BotIntentConfirmationSettingArgs();
 
     @Import(name="declinationResponse", required=true)
-      private final Output<BotResponseSpecificationArgs> declinationResponse;
+    private Output<BotResponseSpecificationArgs> declinationResponse;
 
     public Output<BotResponseSpecificationArgs> declinationResponse() {
         return this.declinationResponse;
     }
 
     @Import(name="isActive")
-      private final @Nullable Output<Boolean> isActive;
+    private @Nullable Output<Boolean> isActive;
 
-    public Output<Boolean> isActive() {
-        return this.isActive == null ? Codegen.empty() : this.isActive;
+    public Optional<Output<Boolean>> isActive() {
+        return Optional.ofNullable(this.isActive);
     }
 
     @Import(name="promptSpecification", required=true)
-      private final Output<BotPromptSpecificationArgs> promptSpecification;
+    private Output<BotPromptSpecificationArgs> promptSpecification;
 
     public Output<BotPromptSpecificationArgs> promptSpecification() {
         return this.promptSpecification;
     }
 
-    public BotIntentConfirmationSettingArgs(
-        Output<BotResponseSpecificationArgs> declinationResponse,
-        @Nullable Output<Boolean> isActive,
-        Output<BotPromptSpecificationArgs> promptSpecification) {
-        this.declinationResponse = Objects.requireNonNull(declinationResponse, "expected parameter 'declinationResponse' to be non-null");
-        this.isActive = isActive;
-        this.promptSpecification = Objects.requireNonNull(promptSpecification, "expected parameter 'promptSpecification' to be non-null");
-    }
+    private BotIntentConfirmationSettingArgs() {}
 
-    private BotIntentConfirmationSettingArgs() {
-        this.declinationResponse = Codegen.empty();
-        this.isActive = Codegen.empty();
-        this.promptSpecification = Codegen.empty();
+    private BotIntentConfirmationSettingArgs(BotIntentConfirmationSettingArgs $) {
+        this.declinationResponse = $.declinationResponse;
+        this.isActive = $.isActive;
+        this.promptSpecification = $.promptSpecification;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BotIntentConfirmationSettingArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<BotResponseSpecificationArgs> declinationResponse;
-        private @Nullable Output<Boolean> isActive;
-        private Output<BotPromptSpecificationArgs> promptSpecification;
+        private BotIntentConfirmationSettingArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new BotIntentConfirmationSettingArgs();
         }
 
         public Builder(BotIntentConfirmationSettingArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.declinationResponse = defaults.declinationResponse;
-    	      this.isActive = defaults.isActive;
-    	      this.promptSpecification = defaults.promptSpecification;
+            $ = new BotIntentConfirmationSettingArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder declinationResponse(Output<BotResponseSpecificationArgs> declinationResponse) {
-            this.declinationResponse = Objects.requireNonNull(declinationResponse);
+            $.declinationResponse = declinationResponse;
             return this;
         }
+
         public Builder declinationResponse(BotResponseSpecificationArgs declinationResponse) {
-            this.declinationResponse = Output.of(Objects.requireNonNull(declinationResponse));
-            return this;
+            return declinationResponse(Output.of(declinationResponse));
         }
+
         public Builder isActive(@Nullable Output<Boolean> isActive) {
-            this.isActive = isActive;
+            $.isActive = isActive;
             return this;
         }
-        public Builder isActive(@Nullable Boolean isActive) {
-            this.isActive = Codegen.ofNullable(isActive);
-            return this;
+
+        public Builder isActive(Boolean isActive) {
+            return isActive(Output.of(isActive));
         }
+
         public Builder promptSpecification(Output<BotPromptSpecificationArgs> promptSpecification) {
-            this.promptSpecification = Objects.requireNonNull(promptSpecification);
+            $.promptSpecification = promptSpecification;
             return this;
         }
+
         public Builder promptSpecification(BotPromptSpecificationArgs promptSpecification) {
-            this.promptSpecification = Output.of(Objects.requireNonNull(promptSpecification));
-            return this;
-        }        public BotIntentConfirmationSettingArgs build() {
-            return new BotIntentConfirmationSettingArgs(declinationResponse, isActive, promptSpecification);
+            return promptSpecification(Output.of(promptSpecification));
+        }
+
+        public BotIntentConfirmationSettingArgs build() {
+            $.declinationResponse = Objects.requireNonNull($.declinationResponse, "expected parameter 'declinationResponse' to be non-null");
+            $.promptSpecification = Objects.requireNonNull($.promptSpecification, "expected parameter 'promptSpecification' to be non-null");
+            return $;
         }
     }
+
 }

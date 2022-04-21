@@ -29,10 +29,10 @@ public final class OSDiskResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="caching")
-      private final @Nullable String caching;
+    private @Nullable String caching;
 
     public Optional<String> caching() {
-        return this.caching == null ? Optional.empty() : Optional.ofNullable(this.caching);
+        return Optional.ofNullable(this.caching);
     }
 
     /**
@@ -40,7 +40,7 @@ public final class OSDiskResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="createOption", required=true)
-      private final String createOption;
+    private String createOption;
 
     public String createOption() {
         return this.createOption;
@@ -51,10 +51,10 @@ public final class OSDiskResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="deleteOption")
-      private final @Nullable String deleteOption;
+    private @Nullable String deleteOption;
 
     public Optional<String> deleteOption() {
-        return this.deleteOption == null ? Optional.empty() : Optional.ofNullable(this.deleteOption);
+        return Optional.ofNullable(this.deleteOption);
     }
 
     /**
@@ -62,10 +62,10 @@ public final class OSDiskResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="diffDiskSettings")
-      private final @Nullable DiffDiskSettingsResponse diffDiskSettings;
+    private @Nullable DiffDiskSettingsResponse diffDiskSettings;
 
     public Optional<DiffDiskSettingsResponse> diffDiskSettings() {
-        return this.diffDiskSettings == null ? Optional.empty() : Optional.ofNullable(this.diffDiskSettings);
+        return Optional.ofNullable(this.diffDiskSettings);
     }
 
     /**
@@ -73,10 +73,10 @@ public final class OSDiskResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="diskSizeGB")
-      private final @Nullable Integer diskSizeGB;
+    private @Nullable Integer diskSizeGB;
 
     public Optional<Integer> diskSizeGB() {
-        return this.diskSizeGB == null ? Optional.empty() : Optional.ofNullable(this.diskSizeGB);
+        return Optional.ofNullable(this.diskSizeGB);
     }
 
     /**
@@ -84,10 +84,10 @@ public final class OSDiskResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="encryptionSettings")
-      private final @Nullable DiskEncryptionSettingsResponse encryptionSettings;
+    private @Nullable DiskEncryptionSettingsResponse encryptionSettings;
 
     public Optional<DiskEncryptionSettingsResponse> encryptionSettings() {
-        return this.encryptionSettings == null ? Optional.empty() : Optional.ofNullable(this.encryptionSettings);
+        return Optional.ofNullable(this.encryptionSettings);
     }
 
     /**
@@ -95,10 +95,10 @@ public final class OSDiskResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="image")
-      private final @Nullable VirtualHardDiskResponse image;
+    private @Nullable VirtualHardDiskResponse image;
 
     public Optional<VirtualHardDiskResponse> image() {
-        return this.image == null ? Optional.empty() : Optional.ofNullable(this.image);
+        return Optional.ofNullable(this.image);
     }
 
     /**
@@ -106,10 +106,10 @@ public final class OSDiskResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="managedDisk")
-      private final @Nullable ManagedDiskParametersResponse managedDisk;
+    private @Nullable ManagedDiskParametersResponse managedDisk;
 
     public Optional<ManagedDiskParametersResponse> managedDisk() {
-        return this.managedDisk == null ? Optional.empty() : Optional.ofNullable(this.managedDisk);
+        return Optional.ofNullable(this.managedDisk);
     }
 
     /**
@@ -117,10 +117,10 @@ public final class OSDiskResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable String name;
+    private @Nullable String name;
 
     public Optional<String> name() {
-        return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -128,10 +128,10 @@ public final class OSDiskResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="osType")
-      private final @Nullable String osType;
+    private @Nullable String osType;
 
     public Optional<String> osType() {
-        return this.osType == null ? Optional.empty() : Optional.ofNullable(this.osType);
+        return Optional.ofNullable(this.osType);
     }
 
     /**
@@ -139,10 +139,10 @@ public final class OSDiskResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="vhd")
-      private final @Nullable VirtualHardDiskResponse vhd;
+    private @Nullable VirtualHardDiskResponse vhd;
 
     public Optional<VirtualHardDiskResponse> vhd() {
-        return this.vhd == null ? Optional.empty() : Optional.ofNullable(this.vhd);
+        return Optional.ofNullable(this.vhd);
     }
 
     /**
@@ -150,145 +150,111 @@ public final class OSDiskResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="writeAcceleratorEnabled")
-      private final @Nullable Boolean writeAcceleratorEnabled;
+    private @Nullable Boolean writeAcceleratorEnabled;
 
     public Optional<Boolean> writeAcceleratorEnabled() {
-        return this.writeAcceleratorEnabled == null ? Optional.empty() : Optional.ofNullable(this.writeAcceleratorEnabled);
+        return Optional.ofNullable(this.writeAcceleratorEnabled);
     }
 
-    public OSDiskResponse(
-        @Nullable String caching,
-        String createOption,
-        @Nullable String deleteOption,
-        @Nullable DiffDiskSettingsResponse diffDiskSettings,
-        @Nullable Integer diskSizeGB,
-        @Nullable DiskEncryptionSettingsResponse encryptionSettings,
-        @Nullable VirtualHardDiskResponse image,
-        @Nullable ManagedDiskParametersResponse managedDisk,
-        @Nullable String name,
-        @Nullable String osType,
-        @Nullable VirtualHardDiskResponse vhd,
-        @Nullable Boolean writeAcceleratorEnabled) {
-        this.caching = caching;
-        this.createOption = Objects.requireNonNull(createOption, "expected parameter 'createOption' to be non-null");
-        this.deleteOption = deleteOption;
-        this.diffDiskSettings = diffDiskSettings;
-        this.diskSizeGB = diskSizeGB;
-        this.encryptionSettings = encryptionSettings;
-        this.image = image;
-        this.managedDisk = managedDisk;
-        this.name = name;
-        this.osType = osType;
-        this.vhd = vhd;
-        this.writeAcceleratorEnabled = writeAcceleratorEnabled;
-    }
+    private OSDiskResponse() {}
 
-    private OSDiskResponse() {
-        this.caching = null;
-        this.createOption = null;
-        this.deleteOption = null;
-        this.diffDiskSettings = null;
-        this.diskSizeGB = null;
-        this.encryptionSettings = null;
-        this.image = null;
-        this.managedDisk = null;
-        this.name = null;
-        this.osType = null;
-        this.vhd = null;
-        this.writeAcceleratorEnabled = null;
+    private OSDiskResponse(OSDiskResponse $) {
+        this.caching = $.caching;
+        this.createOption = $.createOption;
+        this.deleteOption = $.deleteOption;
+        this.diffDiskSettings = $.diffDiskSettings;
+        this.diskSizeGB = $.diskSizeGB;
+        this.encryptionSettings = $.encryptionSettings;
+        this.image = $.image;
+        this.managedDisk = $.managedDisk;
+        this.name = $.name;
+        this.osType = $.osType;
+        this.vhd = $.vhd;
+        this.writeAcceleratorEnabled = $.writeAcceleratorEnabled;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(OSDiskResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String caching;
-        private String createOption;
-        private @Nullable String deleteOption;
-        private @Nullable DiffDiskSettingsResponse diffDiskSettings;
-        private @Nullable Integer diskSizeGB;
-        private @Nullable DiskEncryptionSettingsResponse encryptionSettings;
-        private @Nullable VirtualHardDiskResponse image;
-        private @Nullable ManagedDiskParametersResponse managedDisk;
-        private @Nullable String name;
-        private @Nullable String osType;
-        private @Nullable VirtualHardDiskResponse vhd;
-        private @Nullable Boolean writeAcceleratorEnabled;
+        private OSDiskResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new OSDiskResponse();
         }
 
         public Builder(OSDiskResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.caching = defaults.caching;
-    	      this.createOption = defaults.createOption;
-    	      this.deleteOption = defaults.deleteOption;
-    	      this.diffDiskSettings = defaults.diffDiskSettings;
-    	      this.diskSizeGB = defaults.diskSizeGB;
-    	      this.encryptionSettings = defaults.encryptionSettings;
-    	      this.image = defaults.image;
-    	      this.managedDisk = defaults.managedDisk;
-    	      this.name = defaults.name;
-    	      this.osType = defaults.osType;
-    	      this.vhd = defaults.vhd;
-    	      this.writeAcceleratorEnabled = defaults.writeAcceleratorEnabled;
+            $ = new OSDiskResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder caching(@Nullable String caching) {
-            this.caching = caching;
+            $.caching = caching;
             return this;
         }
+
         public Builder createOption(String createOption) {
-            this.createOption = Objects.requireNonNull(createOption);
+            $.createOption = createOption;
             return this;
         }
+
         public Builder deleteOption(@Nullable String deleteOption) {
-            this.deleteOption = deleteOption;
+            $.deleteOption = deleteOption;
             return this;
         }
+
         public Builder diffDiskSettings(@Nullable DiffDiskSettingsResponse diffDiskSettings) {
-            this.diffDiskSettings = diffDiskSettings;
+            $.diffDiskSettings = diffDiskSettings;
             return this;
         }
+
         public Builder diskSizeGB(@Nullable Integer diskSizeGB) {
-            this.diskSizeGB = diskSizeGB;
+            $.diskSizeGB = diskSizeGB;
             return this;
         }
+
         public Builder encryptionSettings(@Nullable DiskEncryptionSettingsResponse encryptionSettings) {
-            this.encryptionSettings = encryptionSettings;
+            $.encryptionSettings = encryptionSettings;
             return this;
         }
+
         public Builder image(@Nullable VirtualHardDiskResponse image) {
-            this.image = image;
+            $.image = image;
             return this;
         }
+
         public Builder managedDisk(@Nullable ManagedDiskParametersResponse managedDisk) {
-            this.managedDisk = managedDisk;
+            $.managedDisk = managedDisk;
             return this;
         }
+
         public Builder name(@Nullable String name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
+
         public Builder osType(@Nullable String osType) {
-            this.osType = osType;
+            $.osType = osType;
             return this;
         }
+
         public Builder vhd(@Nullable VirtualHardDiskResponse vhd) {
-            this.vhd = vhd;
+            $.vhd = vhd;
             return this;
         }
+
         public Builder writeAcceleratorEnabled(@Nullable Boolean writeAcceleratorEnabled) {
-            this.writeAcceleratorEnabled = writeAcceleratorEnabled;
+            $.writeAcceleratorEnabled = writeAcceleratorEnabled;
             return this;
-        }        public OSDiskResponse build() {
-            return new OSDiskResponse(caching, createOption, deleteOption, diffDiskSettings, diskSizeGB, encryptionSettings, image, managedDisk, name, osType, vhd, writeAcceleratorEnabled);
+        }
+
+        public OSDiskResponse build() {
+            $.createOption = Objects.requireNonNull($.createOption, "expected parameter 'createOption' to be non-null");
+            return $;
         }
     }
+
 }

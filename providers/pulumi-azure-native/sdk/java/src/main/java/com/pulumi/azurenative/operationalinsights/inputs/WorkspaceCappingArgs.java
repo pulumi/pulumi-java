@@ -5,9 +5,9 @@ package com.pulumi.azurenative.operationalinsights.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class WorkspaceCappingArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="dailyQuotaGb")
-      private final @Nullable Output<Double> dailyQuotaGb;
+    private @Nullable Output<Double> dailyQuotaGb;
 
-    public Output<Double> dailyQuotaGb() {
-        return this.dailyQuotaGb == null ? Codegen.empty() : this.dailyQuotaGb;
+    public Optional<Output<Double>> dailyQuotaGb() {
+        return Optional.ofNullable(this.dailyQuotaGb);
     }
 
-    public WorkspaceCappingArgs(@Nullable Output<Double> dailyQuotaGb) {
-        this.dailyQuotaGb = dailyQuotaGb;
-    }
+    private WorkspaceCappingArgs() {}
 
-    private WorkspaceCappingArgs() {
-        this.dailyQuotaGb = Codegen.empty();
+    private WorkspaceCappingArgs(WorkspaceCappingArgs $) {
+        this.dailyQuotaGb = $.dailyQuotaGb;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WorkspaceCappingArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Double> dailyQuotaGb;
+        private WorkspaceCappingArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new WorkspaceCappingArgs();
         }
 
         public Builder(WorkspaceCappingArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dailyQuotaGb = defaults.dailyQuotaGb;
+            $ = new WorkspaceCappingArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder dailyQuotaGb(@Nullable Output<Double> dailyQuotaGb) {
-            this.dailyQuotaGb = dailyQuotaGb;
+            $.dailyQuotaGb = dailyQuotaGb;
             return this;
         }
-        public Builder dailyQuotaGb(@Nullable Double dailyQuotaGb) {
-            this.dailyQuotaGb = Codegen.ofNullable(dailyQuotaGb);
-            return this;
-        }        public WorkspaceCappingArgs build() {
-            return new WorkspaceCappingArgs(dailyQuotaGb);
+
+        public Builder dailyQuotaGb(Double dailyQuotaGb) {
+            return dailyQuotaGb(Output.of(dailyQuotaGb));
+        }
+
+        public WorkspaceCappingArgs build() {
+            return $;
         }
     }
+
 }

@@ -5,7 +5,6 @@ package com.pulumi.googlenative.compute_v1;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.compute_v1.enums.RegionHealthCheckType;
 import com.pulumi.googlenative.compute_v1.inputs.GRPCHealthCheckArgs;
 import com.pulumi.googlenative.compute_v1.inputs.HTTP2HealthCheckArgs;
@@ -17,6 +16,7 @@ import com.pulumi.googlenative.compute_v1.inputs.TCPHealthCheckArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -29,10 +29,10 @@ public final class RegionHealthCheckArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="checkIntervalSec")
-      private final @Nullable Output<Integer> checkIntervalSec;
+    private @Nullable Output<Integer> checkIntervalSec;
 
-    public Output<Integer> checkIntervalSec() {
-        return this.checkIntervalSec == null ? Codegen.empty() : this.checkIntervalSec;
+    public Optional<Output<Integer>> checkIntervalSec() {
+        return Optional.ofNullable(this.checkIntervalSec);
     }
 
     /**
@@ -40,17 +40,17 @@ public final class RegionHealthCheckArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     @Import(name="grpcHealthCheck")
-      private final @Nullable Output<GRPCHealthCheckArgs> grpcHealthCheck;
+    private @Nullable Output<GRPCHealthCheckArgs> grpcHealthCheck;
 
-    public Output<GRPCHealthCheckArgs> grpcHealthCheck() {
-        return this.grpcHealthCheck == null ? Codegen.empty() : this.grpcHealthCheck;
+    public Optional<Output<GRPCHealthCheckArgs>> grpcHealthCheck() {
+        return Optional.ofNullable(this.grpcHealthCheck);
     }
 
     /**
@@ -58,31 +58,31 @@ public final class RegionHealthCheckArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="healthyThreshold")
-      private final @Nullable Output<Integer> healthyThreshold;
+    private @Nullable Output<Integer> healthyThreshold;
 
-    public Output<Integer> healthyThreshold() {
-        return this.healthyThreshold == null ? Codegen.empty() : this.healthyThreshold;
+    public Optional<Output<Integer>> healthyThreshold() {
+        return Optional.ofNullable(this.healthyThreshold);
     }
 
     @Import(name="http2HealthCheck")
-      private final @Nullable Output<HTTP2HealthCheckArgs> http2HealthCheck;
+    private @Nullable Output<HTTP2HealthCheckArgs> http2HealthCheck;
 
-    public Output<HTTP2HealthCheckArgs> http2HealthCheck() {
-        return this.http2HealthCheck == null ? Codegen.empty() : this.http2HealthCheck;
+    public Optional<Output<HTTP2HealthCheckArgs>> http2HealthCheck() {
+        return Optional.ofNullable(this.http2HealthCheck);
     }
 
     @Import(name="httpHealthCheck")
-      private final @Nullable Output<HTTPHealthCheckArgs> httpHealthCheck;
+    private @Nullable Output<HTTPHealthCheckArgs> httpHealthCheck;
 
-    public Output<HTTPHealthCheckArgs> httpHealthCheck() {
-        return this.httpHealthCheck == null ? Codegen.empty() : this.httpHealthCheck;
+    public Optional<Output<HTTPHealthCheckArgs>> httpHealthCheck() {
+        return Optional.ofNullable(this.httpHealthCheck);
     }
 
     @Import(name="httpsHealthCheck")
-      private final @Nullable Output<HTTPSHealthCheckArgs> httpsHealthCheck;
+    private @Nullable Output<HTTPSHealthCheckArgs> httpsHealthCheck;
 
-    public Output<HTTPSHealthCheckArgs> httpsHealthCheck() {
-        return this.httpsHealthCheck == null ? Codegen.empty() : this.httpsHealthCheck;
+    public Optional<Output<HTTPSHealthCheckArgs>> httpsHealthCheck() {
+        return Optional.ofNullable(this.httpsHealthCheck);
     }
 
     /**
@@ -90,10 +90,10 @@ public final class RegionHealthCheckArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="kind")
-      private final @Nullable Output<String> kind;
+    private @Nullable Output<String> kind;
 
-    public Output<String> kind() {
-        return this.kind == null ? Codegen.empty() : this.kind;
+    public Optional<Output<String>> kind() {
+        return Optional.ofNullable(this.kind);
     }
 
     /**
@@ -101,10 +101,10 @@ public final class RegionHealthCheckArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="logConfig")
-      private final @Nullable Output<HealthCheckLogConfigArgs> logConfig;
+    private @Nullable Output<HealthCheckLogConfigArgs> logConfig;
 
-    public Output<HealthCheckLogConfigArgs> logConfig() {
-        return this.logConfig == null ? Codegen.empty() : this.logConfig;
+    public Optional<Output<HealthCheckLogConfigArgs>> logConfig() {
+        return Optional.ofNullable(this.logConfig);
     }
 
     /**
@@ -112,45 +112,45 @@ public final class RegionHealthCheckArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     @Import(name="region", required=true)
-      private final Output<String> region;
+    private Output<String> region;
 
     public Output<String> region() {
         return this.region;
     }
 
     @Import(name="requestId")
-      private final @Nullable Output<String> requestId;
+    private @Nullable Output<String> requestId;
 
-    public Output<String> requestId() {
-        return this.requestId == null ? Codegen.empty() : this.requestId;
+    public Optional<Output<String>> requestId() {
+        return Optional.ofNullable(this.requestId);
     }
 
     @Import(name="sslHealthCheck")
-      private final @Nullable Output<SSLHealthCheckArgs> sslHealthCheck;
+    private @Nullable Output<SSLHealthCheckArgs> sslHealthCheck;
 
-    public Output<SSLHealthCheckArgs> sslHealthCheck() {
-        return this.sslHealthCheck == null ? Codegen.empty() : this.sslHealthCheck;
+    public Optional<Output<SSLHealthCheckArgs>> sslHealthCheck() {
+        return Optional.ofNullable(this.sslHealthCheck);
     }
 
     @Import(name="tcpHealthCheck")
-      private final @Nullable Output<TCPHealthCheckArgs> tcpHealthCheck;
+    private @Nullable Output<TCPHealthCheckArgs> tcpHealthCheck;
 
-    public Output<TCPHealthCheckArgs> tcpHealthCheck() {
-        return this.tcpHealthCheck == null ? Codegen.empty() : this.tcpHealthCheck;
+    public Optional<Output<TCPHealthCheckArgs>> tcpHealthCheck() {
+        return Optional.ofNullable(this.tcpHealthCheck);
     }
 
     /**
@@ -158,10 +158,10 @@ public final class RegionHealthCheckArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="timeoutSec")
-      private final @Nullable Output<Integer> timeoutSec;
+    private @Nullable Output<Integer> timeoutSec;
 
-    public Output<Integer> timeoutSec() {
-        return this.timeoutSec == null ? Codegen.empty() : this.timeoutSec;
+    public Optional<Output<Integer>> timeoutSec() {
+        return Optional.ofNullable(this.timeoutSec);
     }
 
     /**
@@ -169,10 +169,10 @@ public final class RegionHealthCheckArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="type")
-      private final @Nullable Output<RegionHealthCheckType> type;
+    private @Nullable Output<RegionHealthCheckType> type;
 
-    public Output<RegionHealthCheckType> type() {
-        return this.type == null ? Codegen.empty() : this.type;
+    public Optional<Output<RegionHealthCheckType>> type() {
+        return Optional.ofNullable(this.type);
     }
 
     /**
@@ -180,271 +180,219 @@ public final class RegionHealthCheckArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="unhealthyThreshold")
-      private final @Nullable Output<Integer> unhealthyThreshold;
+    private @Nullable Output<Integer> unhealthyThreshold;
 
-    public Output<Integer> unhealthyThreshold() {
-        return this.unhealthyThreshold == null ? Codegen.empty() : this.unhealthyThreshold;
+    public Optional<Output<Integer>> unhealthyThreshold() {
+        return Optional.ofNullable(this.unhealthyThreshold);
     }
 
-    public RegionHealthCheckArgs(
-        @Nullable Output<Integer> checkIntervalSec,
-        @Nullable Output<String> description,
-        @Nullable Output<GRPCHealthCheckArgs> grpcHealthCheck,
-        @Nullable Output<Integer> healthyThreshold,
-        @Nullable Output<HTTP2HealthCheckArgs> http2HealthCheck,
-        @Nullable Output<HTTPHealthCheckArgs> httpHealthCheck,
-        @Nullable Output<HTTPSHealthCheckArgs> httpsHealthCheck,
-        @Nullable Output<String> kind,
-        @Nullable Output<HealthCheckLogConfigArgs> logConfig,
-        @Nullable Output<String> name,
-        @Nullable Output<String> project,
-        Output<String> region,
-        @Nullable Output<String> requestId,
-        @Nullable Output<SSLHealthCheckArgs> sslHealthCheck,
-        @Nullable Output<TCPHealthCheckArgs> tcpHealthCheck,
-        @Nullable Output<Integer> timeoutSec,
-        @Nullable Output<RegionHealthCheckType> type,
-        @Nullable Output<Integer> unhealthyThreshold) {
-        this.checkIntervalSec = checkIntervalSec;
-        this.description = description;
-        this.grpcHealthCheck = grpcHealthCheck;
-        this.healthyThreshold = healthyThreshold;
-        this.http2HealthCheck = http2HealthCheck;
-        this.httpHealthCheck = httpHealthCheck;
-        this.httpsHealthCheck = httpsHealthCheck;
-        this.kind = kind;
-        this.logConfig = logConfig;
-        this.name = name;
-        this.project = project;
-        this.region = Objects.requireNonNull(region, "expected parameter 'region' to be non-null");
-        this.requestId = requestId;
-        this.sslHealthCheck = sslHealthCheck;
-        this.tcpHealthCheck = tcpHealthCheck;
-        this.timeoutSec = timeoutSec;
-        this.type = type;
-        this.unhealthyThreshold = unhealthyThreshold;
-    }
+    private RegionHealthCheckArgs() {}
 
-    private RegionHealthCheckArgs() {
-        this.checkIntervalSec = Codegen.empty();
-        this.description = Codegen.empty();
-        this.grpcHealthCheck = Codegen.empty();
-        this.healthyThreshold = Codegen.empty();
-        this.http2HealthCheck = Codegen.empty();
-        this.httpHealthCheck = Codegen.empty();
-        this.httpsHealthCheck = Codegen.empty();
-        this.kind = Codegen.empty();
-        this.logConfig = Codegen.empty();
-        this.name = Codegen.empty();
-        this.project = Codegen.empty();
-        this.region = Codegen.empty();
-        this.requestId = Codegen.empty();
-        this.sslHealthCheck = Codegen.empty();
-        this.tcpHealthCheck = Codegen.empty();
-        this.timeoutSec = Codegen.empty();
-        this.type = Codegen.empty();
-        this.unhealthyThreshold = Codegen.empty();
+    private RegionHealthCheckArgs(RegionHealthCheckArgs $) {
+        this.checkIntervalSec = $.checkIntervalSec;
+        this.description = $.description;
+        this.grpcHealthCheck = $.grpcHealthCheck;
+        this.healthyThreshold = $.healthyThreshold;
+        this.http2HealthCheck = $.http2HealthCheck;
+        this.httpHealthCheck = $.httpHealthCheck;
+        this.httpsHealthCheck = $.httpsHealthCheck;
+        this.kind = $.kind;
+        this.logConfig = $.logConfig;
+        this.name = $.name;
+        this.project = $.project;
+        this.region = $.region;
+        this.requestId = $.requestId;
+        this.sslHealthCheck = $.sslHealthCheck;
+        this.tcpHealthCheck = $.tcpHealthCheck;
+        this.timeoutSec = $.timeoutSec;
+        this.type = $.type;
+        this.unhealthyThreshold = $.unhealthyThreshold;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RegionHealthCheckArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> checkIntervalSec;
-        private @Nullable Output<String> description;
-        private @Nullable Output<GRPCHealthCheckArgs> grpcHealthCheck;
-        private @Nullable Output<Integer> healthyThreshold;
-        private @Nullable Output<HTTP2HealthCheckArgs> http2HealthCheck;
-        private @Nullable Output<HTTPHealthCheckArgs> httpHealthCheck;
-        private @Nullable Output<HTTPSHealthCheckArgs> httpsHealthCheck;
-        private @Nullable Output<String> kind;
-        private @Nullable Output<HealthCheckLogConfigArgs> logConfig;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> project;
-        private Output<String> region;
-        private @Nullable Output<String> requestId;
-        private @Nullable Output<SSLHealthCheckArgs> sslHealthCheck;
-        private @Nullable Output<TCPHealthCheckArgs> tcpHealthCheck;
-        private @Nullable Output<Integer> timeoutSec;
-        private @Nullable Output<RegionHealthCheckType> type;
-        private @Nullable Output<Integer> unhealthyThreshold;
+        private RegionHealthCheckArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RegionHealthCheckArgs();
         }
 
         public Builder(RegionHealthCheckArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.checkIntervalSec = defaults.checkIntervalSec;
-    	      this.description = defaults.description;
-    	      this.grpcHealthCheck = defaults.grpcHealthCheck;
-    	      this.healthyThreshold = defaults.healthyThreshold;
-    	      this.http2HealthCheck = defaults.http2HealthCheck;
-    	      this.httpHealthCheck = defaults.httpHealthCheck;
-    	      this.httpsHealthCheck = defaults.httpsHealthCheck;
-    	      this.kind = defaults.kind;
-    	      this.logConfig = defaults.logConfig;
-    	      this.name = defaults.name;
-    	      this.project = defaults.project;
-    	      this.region = defaults.region;
-    	      this.requestId = defaults.requestId;
-    	      this.sslHealthCheck = defaults.sslHealthCheck;
-    	      this.tcpHealthCheck = defaults.tcpHealthCheck;
-    	      this.timeoutSec = defaults.timeoutSec;
-    	      this.type = defaults.type;
-    	      this.unhealthyThreshold = defaults.unhealthyThreshold;
+            $ = new RegionHealthCheckArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder checkIntervalSec(@Nullable Output<Integer> checkIntervalSec) {
-            this.checkIntervalSec = checkIntervalSec;
+            $.checkIntervalSec = checkIntervalSec;
             return this;
         }
-        public Builder checkIntervalSec(@Nullable Integer checkIntervalSec) {
-            this.checkIntervalSec = Codegen.ofNullable(checkIntervalSec);
-            return this;
+
+        public Builder checkIntervalSec(Integer checkIntervalSec) {
+            return checkIntervalSec(Output.of(checkIntervalSec));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder grpcHealthCheck(@Nullable Output<GRPCHealthCheckArgs> grpcHealthCheck) {
-            this.grpcHealthCheck = grpcHealthCheck;
+            $.grpcHealthCheck = grpcHealthCheck;
             return this;
         }
-        public Builder grpcHealthCheck(@Nullable GRPCHealthCheckArgs grpcHealthCheck) {
-            this.grpcHealthCheck = Codegen.ofNullable(grpcHealthCheck);
-            return this;
+
+        public Builder grpcHealthCheck(GRPCHealthCheckArgs grpcHealthCheck) {
+            return grpcHealthCheck(Output.of(grpcHealthCheck));
         }
+
         public Builder healthyThreshold(@Nullable Output<Integer> healthyThreshold) {
-            this.healthyThreshold = healthyThreshold;
+            $.healthyThreshold = healthyThreshold;
             return this;
         }
-        public Builder healthyThreshold(@Nullable Integer healthyThreshold) {
-            this.healthyThreshold = Codegen.ofNullable(healthyThreshold);
-            return this;
+
+        public Builder healthyThreshold(Integer healthyThreshold) {
+            return healthyThreshold(Output.of(healthyThreshold));
         }
+
         public Builder http2HealthCheck(@Nullable Output<HTTP2HealthCheckArgs> http2HealthCheck) {
-            this.http2HealthCheck = http2HealthCheck;
+            $.http2HealthCheck = http2HealthCheck;
             return this;
         }
-        public Builder http2HealthCheck(@Nullable HTTP2HealthCheckArgs http2HealthCheck) {
-            this.http2HealthCheck = Codegen.ofNullable(http2HealthCheck);
-            return this;
+
+        public Builder http2HealthCheck(HTTP2HealthCheckArgs http2HealthCheck) {
+            return http2HealthCheck(Output.of(http2HealthCheck));
         }
+
         public Builder httpHealthCheck(@Nullable Output<HTTPHealthCheckArgs> httpHealthCheck) {
-            this.httpHealthCheck = httpHealthCheck;
+            $.httpHealthCheck = httpHealthCheck;
             return this;
         }
-        public Builder httpHealthCheck(@Nullable HTTPHealthCheckArgs httpHealthCheck) {
-            this.httpHealthCheck = Codegen.ofNullable(httpHealthCheck);
-            return this;
+
+        public Builder httpHealthCheck(HTTPHealthCheckArgs httpHealthCheck) {
+            return httpHealthCheck(Output.of(httpHealthCheck));
         }
+
         public Builder httpsHealthCheck(@Nullable Output<HTTPSHealthCheckArgs> httpsHealthCheck) {
-            this.httpsHealthCheck = httpsHealthCheck;
+            $.httpsHealthCheck = httpsHealthCheck;
             return this;
         }
-        public Builder httpsHealthCheck(@Nullable HTTPSHealthCheckArgs httpsHealthCheck) {
-            this.httpsHealthCheck = Codegen.ofNullable(httpsHealthCheck);
-            return this;
+
+        public Builder httpsHealthCheck(HTTPSHealthCheckArgs httpsHealthCheck) {
+            return httpsHealthCheck(Output.of(httpsHealthCheck));
         }
+
         public Builder kind(@Nullable Output<String> kind) {
-            this.kind = kind;
+            $.kind = kind;
             return this;
         }
-        public Builder kind(@Nullable String kind) {
-            this.kind = Codegen.ofNullable(kind);
-            return this;
+
+        public Builder kind(String kind) {
+            return kind(Output.of(kind));
         }
+
         public Builder logConfig(@Nullable Output<HealthCheckLogConfigArgs> logConfig) {
-            this.logConfig = logConfig;
+            $.logConfig = logConfig;
             return this;
         }
-        public Builder logConfig(@Nullable HealthCheckLogConfigArgs logConfig) {
-            this.logConfig = Codegen.ofNullable(logConfig);
-            return this;
+
+        public Builder logConfig(HealthCheckLogConfigArgs logConfig) {
+            return logConfig(Output.of(logConfig));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder region(Output<String> region) {
-            this.region = Objects.requireNonNull(region);
+            $.region = region;
             return this;
         }
+
         public Builder region(String region) {
-            this.region = Output.of(Objects.requireNonNull(region));
-            return this;
+            return region(Output.of(region));
         }
+
         public Builder requestId(@Nullable Output<String> requestId) {
-            this.requestId = requestId;
+            $.requestId = requestId;
             return this;
         }
-        public Builder requestId(@Nullable String requestId) {
-            this.requestId = Codegen.ofNullable(requestId);
-            return this;
+
+        public Builder requestId(String requestId) {
+            return requestId(Output.of(requestId));
         }
+
         public Builder sslHealthCheck(@Nullable Output<SSLHealthCheckArgs> sslHealthCheck) {
-            this.sslHealthCheck = sslHealthCheck;
+            $.sslHealthCheck = sslHealthCheck;
             return this;
         }
-        public Builder sslHealthCheck(@Nullable SSLHealthCheckArgs sslHealthCheck) {
-            this.sslHealthCheck = Codegen.ofNullable(sslHealthCheck);
-            return this;
+
+        public Builder sslHealthCheck(SSLHealthCheckArgs sslHealthCheck) {
+            return sslHealthCheck(Output.of(sslHealthCheck));
         }
+
         public Builder tcpHealthCheck(@Nullable Output<TCPHealthCheckArgs> tcpHealthCheck) {
-            this.tcpHealthCheck = tcpHealthCheck;
+            $.tcpHealthCheck = tcpHealthCheck;
             return this;
         }
-        public Builder tcpHealthCheck(@Nullable TCPHealthCheckArgs tcpHealthCheck) {
-            this.tcpHealthCheck = Codegen.ofNullable(tcpHealthCheck);
-            return this;
+
+        public Builder tcpHealthCheck(TCPHealthCheckArgs tcpHealthCheck) {
+            return tcpHealthCheck(Output.of(tcpHealthCheck));
         }
+
         public Builder timeoutSec(@Nullable Output<Integer> timeoutSec) {
-            this.timeoutSec = timeoutSec;
+            $.timeoutSec = timeoutSec;
             return this;
         }
-        public Builder timeoutSec(@Nullable Integer timeoutSec) {
-            this.timeoutSec = Codegen.ofNullable(timeoutSec);
-            return this;
+
+        public Builder timeoutSec(Integer timeoutSec) {
+            return timeoutSec(Output.of(timeoutSec));
         }
+
         public Builder type(@Nullable Output<RegionHealthCheckType> type) {
-            this.type = type;
+            $.type = type;
             return this;
         }
-        public Builder type(@Nullable RegionHealthCheckType type) {
-            this.type = Codegen.ofNullable(type);
-            return this;
+
+        public Builder type(RegionHealthCheckType type) {
+            return type(Output.of(type));
         }
+
         public Builder unhealthyThreshold(@Nullable Output<Integer> unhealthyThreshold) {
-            this.unhealthyThreshold = unhealthyThreshold;
+            $.unhealthyThreshold = unhealthyThreshold;
             return this;
         }
-        public Builder unhealthyThreshold(@Nullable Integer unhealthyThreshold) {
-            this.unhealthyThreshold = Codegen.ofNullable(unhealthyThreshold);
-            return this;
-        }        public RegionHealthCheckArgs build() {
-            return new RegionHealthCheckArgs(checkIntervalSec, description, grpcHealthCheck, healthyThreshold, http2HealthCheck, httpHealthCheck, httpsHealthCheck, kind, logConfig, name, project, region, requestId, sslHealthCheck, tcpHealthCheck, timeoutSec, type, unhealthyThreshold);
+
+        public Builder unhealthyThreshold(Integer unhealthyThreshold) {
+            return unhealthyThreshold(Output.of(unhealthyThreshold));
+        }
+
+        public RegionHealthCheckArgs build() {
+            $.region = Objects.requireNonNull($.region, "expected parameter 'region' to be non-null");
+            return $;
         }
     }
+
 }

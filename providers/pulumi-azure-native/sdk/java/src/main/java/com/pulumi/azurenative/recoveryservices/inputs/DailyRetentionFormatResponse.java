@@ -24,48 +24,48 @@ public final class DailyRetentionFormatResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="daysOfTheMonth")
-      private final @Nullable List<DayResponse> daysOfTheMonth;
+    private @Nullable List<DayResponse> daysOfTheMonth;
 
-    public List<DayResponse> daysOfTheMonth() {
-        return this.daysOfTheMonth == null ? List.of() : this.daysOfTheMonth;
+    public Optional<List<DayResponse>> daysOfTheMonth() {
+        return Optional.ofNullable(this.daysOfTheMonth);
     }
 
-    public DailyRetentionFormatResponse(@Nullable List<DayResponse> daysOfTheMonth) {
-        this.daysOfTheMonth = daysOfTheMonth;
-    }
+    private DailyRetentionFormatResponse() {}
 
-    private DailyRetentionFormatResponse() {
-        this.daysOfTheMonth = List.of();
+    private DailyRetentionFormatResponse(DailyRetentionFormatResponse $) {
+        this.daysOfTheMonth = $.daysOfTheMonth;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DailyRetentionFormatResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<DayResponse> daysOfTheMonth;
+        private DailyRetentionFormatResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new DailyRetentionFormatResponse();
         }
 
         public Builder(DailyRetentionFormatResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.daysOfTheMonth = defaults.daysOfTheMonth;
+            $ = new DailyRetentionFormatResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder daysOfTheMonth(@Nullable List<DayResponse> daysOfTheMonth) {
-            this.daysOfTheMonth = daysOfTheMonth;
+            $.daysOfTheMonth = daysOfTheMonth;
             return this;
         }
+
         public Builder daysOfTheMonth(DayResponse... daysOfTheMonth) {
             return daysOfTheMonth(List.of(daysOfTheMonth));
-        }        public DailyRetentionFormatResponse build() {
-            return new DailyRetentionFormatResponse(daysOfTheMonth);
+        }
+
+        public DailyRetentionFormatResponse build() {
+            return $;
         }
     }
+
 }

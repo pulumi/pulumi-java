@@ -5,10 +5,10 @@ package com.pulumi.azurenative.customerinsights.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class PredictionGradesArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="gradeName")
-      private final @Nullable Output<String> gradeName;
+    private @Nullable Output<String> gradeName;
 
-    public Output<String> gradeName() {
-        return this.gradeName == null ? Codegen.empty() : this.gradeName;
+    public Optional<Output<String>> gradeName() {
+        return Optional.ofNullable(this.gradeName);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class PredictionGradesArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="maxScoreThreshold")
-      private final @Nullable Output<Integer> maxScoreThreshold;
+    private @Nullable Output<Integer> maxScoreThreshold;
 
-    public Output<Integer> maxScoreThreshold() {
-        return this.maxScoreThreshold == null ? Codegen.empty() : this.maxScoreThreshold;
+    public Optional<Output<Integer>> maxScoreThreshold() {
+        return Optional.ofNullable(this.maxScoreThreshold);
     }
 
     /**
@@ -47,76 +47,68 @@ public final class PredictionGradesArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="minScoreThreshold")
-      private final @Nullable Output<Integer> minScoreThreshold;
+    private @Nullable Output<Integer> minScoreThreshold;
 
-    public Output<Integer> minScoreThreshold() {
-        return this.minScoreThreshold == null ? Codegen.empty() : this.minScoreThreshold;
+    public Optional<Output<Integer>> minScoreThreshold() {
+        return Optional.ofNullable(this.minScoreThreshold);
     }
 
-    public PredictionGradesArgs(
-        @Nullable Output<String> gradeName,
-        @Nullable Output<Integer> maxScoreThreshold,
-        @Nullable Output<Integer> minScoreThreshold) {
-        this.gradeName = gradeName;
-        this.maxScoreThreshold = maxScoreThreshold;
-        this.minScoreThreshold = minScoreThreshold;
-    }
+    private PredictionGradesArgs() {}
 
-    private PredictionGradesArgs() {
-        this.gradeName = Codegen.empty();
-        this.maxScoreThreshold = Codegen.empty();
-        this.minScoreThreshold = Codegen.empty();
+    private PredictionGradesArgs(PredictionGradesArgs $) {
+        this.gradeName = $.gradeName;
+        this.maxScoreThreshold = $.maxScoreThreshold;
+        this.minScoreThreshold = $.minScoreThreshold;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PredictionGradesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> gradeName;
-        private @Nullable Output<Integer> maxScoreThreshold;
-        private @Nullable Output<Integer> minScoreThreshold;
+        private PredictionGradesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PredictionGradesArgs();
         }
 
         public Builder(PredictionGradesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.gradeName = defaults.gradeName;
-    	      this.maxScoreThreshold = defaults.maxScoreThreshold;
-    	      this.minScoreThreshold = defaults.minScoreThreshold;
+            $ = new PredictionGradesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder gradeName(@Nullable Output<String> gradeName) {
-            this.gradeName = gradeName;
+            $.gradeName = gradeName;
             return this;
         }
-        public Builder gradeName(@Nullable String gradeName) {
-            this.gradeName = Codegen.ofNullable(gradeName);
-            return this;
+
+        public Builder gradeName(String gradeName) {
+            return gradeName(Output.of(gradeName));
         }
+
         public Builder maxScoreThreshold(@Nullable Output<Integer> maxScoreThreshold) {
-            this.maxScoreThreshold = maxScoreThreshold;
+            $.maxScoreThreshold = maxScoreThreshold;
             return this;
         }
-        public Builder maxScoreThreshold(@Nullable Integer maxScoreThreshold) {
-            this.maxScoreThreshold = Codegen.ofNullable(maxScoreThreshold);
-            return this;
+
+        public Builder maxScoreThreshold(Integer maxScoreThreshold) {
+            return maxScoreThreshold(Output.of(maxScoreThreshold));
         }
+
         public Builder minScoreThreshold(@Nullable Output<Integer> minScoreThreshold) {
-            this.minScoreThreshold = minScoreThreshold;
+            $.minScoreThreshold = minScoreThreshold;
             return this;
         }
-        public Builder minScoreThreshold(@Nullable Integer minScoreThreshold) {
-            this.minScoreThreshold = Codegen.ofNullable(minScoreThreshold);
-            return this;
-        }        public PredictionGradesArgs build() {
-            return new PredictionGradesArgs(gradeName, maxScoreThreshold, minScoreThreshold);
+
+        public Builder minScoreThreshold(Integer minScoreThreshold) {
+            return minScoreThreshold(Output.of(minScoreThreshold));
+        }
+
+        public PredictionGradesArgs build() {
+            return $;
         }
     }
+
 }

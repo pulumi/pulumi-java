@@ -5,9 +5,9 @@ package com.pulumi.googlenative.appengine_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class EntrypointArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="shell")
-      private final @Nullable Output<String> shell;
+    private @Nullable Output<String> shell;
 
-    public Output<String> shell() {
-        return this.shell == null ? Codegen.empty() : this.shell;
+    public Optional<Output<String>> shell() {
+        return Optional.ofNullable(this.shell);
     }
 
-    public EntrypointArgs(@Nullable Output<String> shell) {
-        this.shell = shell;
-    }
+    private EntrypointArgs() {}
 
-    private EntrypointArgs() {
-        this.shell = Codegen.empty();
+    private EntrypointArgs(EntrypointArgs $) {
+        this.shell = $.shell;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EntrypointArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> shell;
+        private EntrypointArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new EntrypointArgs();
         }
 
         public Builder(EntrypointArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.shell = defaults.shell;
+            $ = new EntrypointArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder shell(@Nullable Output<String> shell) {
-            this.shell = shell;
+            $.shell = shell;
             return this;
         }
-        public Builder shell(@Nullable String shell) {
-            this.shell = Codegen.ofNullable(shell);
-            return this;
-        }        public EntrypointArgs build() {
-            return new EntrypointArgs(shell);
+
+        public Builder shell(String shell) {
+            return shell(Output.of(shell));
+        }
+
+        public EntrypointArgs build() {
+            return $;
         }
     }
+
 }

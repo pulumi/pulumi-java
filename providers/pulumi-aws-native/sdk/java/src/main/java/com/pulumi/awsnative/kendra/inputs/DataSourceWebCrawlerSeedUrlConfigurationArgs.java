@@ -6,10 +6,10 @@ package com.pulumi.awsnative.kendra.inputs;
 import com.pulumi.awsnative.kendra.enums.DataSourceWebCrawlerSeedUrlConfigurationWebCrawlerMode;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -18,73 +18,70 @@ public final class DataSourceWebCrawlerSeedUrlConfigurationArgs extends com.pulu
     public static final DataSourceWebCrawlerSeedUrlConfigurationArgs Empty = new DataSourceWebCrawlerSeedUrlConfigurationArgs();
 
     @Import(name="seedUrls", required=true)
-      private final Output<List<String>> seedUrls;
+    private Output<List<String>> seedUrls;
 
     public Output<List<String>> seedUrls() {
         return this.seedUrls;
     }
 
     @Import(name="webCrawlerMode")
-      private final @Nullable Output<DataSourceWebCrawlerSeedUrlConfigurationWebCrawlerMode> webCrawlerMode;
+    private @Nullable Output<DataSourceWebCrawlerSeedUrlConfigurationWebCrawlerMode> webCrawlerMode;
 
-    public Output<DataSourceWebCrawlerSeedUrlConfigurationWebCrawlerMode> webCrawlerMode() {
-        return this.webCrawlerMode == null ? Codegen.empty() : this.webCrawlerMode;
+    public Optional<Output<DataSourceWebCrawlerSeedUrlConfigurationWebCrawlerMode>> webCrawlerMode() {
+        return Optional.ofNullable(this.webCrawlerMode);
     }
 
-    public DataSourceWebCrawlerSeedUrlConfigurationArgs(
-        Output<List<String>> seedUrls,
-        @Nullable Output<DataSourceWebCrawlerSeedUrlConfigurationWebCrawlerMode> webCrawlerMode) {
-        this.seedUrls = Objects.requireNonNull(seedUrls, "expected parameter 'seedUrls' to be non-null");
-        this.webCrawlerMode = webCrawlerMode;
-    }
+    private DataSourceWebCrawlerSeedUrlConfigurationArgs() {}
 
-    private DataSourceWebCrawlerSeedUrlConfigurationArgs() {
-        this.seedUrls = Codegen.empty();
-        this.webCrawlerMode = Codegen.empty();
+    private DataSourceWebCrawlerSeedUrlConfigurationArgs(DataSourceWebCrawlerSeedUrlConfigurationArgs $) {
+        this.seedUrls = $.seedUrls;
+        this.webCrawlerMode = $.webCrawlerMode;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DataSourceWebCrawlerSeedUrlConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<List<String>> seedUrls;
-        private @Nullable Output<DataSourceWebCrawlerSeedUrlConfigurationWebCrawlerMode> webCrawlerMode;
+        private DataSourceWebCrawlerSeedUrlConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DataSourceWebCrawlerSeedUrlConfigurationArgs();
         }
 
         public Builder(DataSourceWebCrawlerSeedUrlConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.seedUrls = defaults.seedUrls;
-    	      this.webCrawlerMode = defaults.webCrawlerMode;
+            $ = new DataSourceWebCrawlerSeedUrlConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder seedUrls(Output<List<String>> seedUrls) {
-            this.seedUrls = Objects.requireNonNull(seedUrls);
+            $.seedUrls = seedUrls;
             return this;
         }
+
         public Builder seedUrls(List<String> seedUrls) {
-            this.seedUrls = Output.of(Objects.requireNonNull(seedUrls));
-            return this;
+            return seedUrls(Output.of(seedUrls));
         }
+
         public Builder seedUrls(String... seedUrls) {
             return seedUrls(List.of(seedUrls));
         }
+
         public Builder webCrawlerMode(@Nullable Output<DataSourceWebCrawlerSeedUrlConfigurationWebCrawlerMode> webCrawlerMode) {
-            this.webCrawlerMode = webCrawlerMode;
+            $.webCrawlerMode = webCrawlerMode;
             return this;
         }
-        public Builder webCrawlerMode(@Nullable DataSourceWebCrawlerSeedUrlConfigurationWebCrawlerMode webCrawlerMode) {
-            this.webCrawlerMode = Codegen.ofNullable(webCrawlerMode);
-            return this;
-        }        public DataSourceWebCrawlerSeedUrlConfigurationArgs build() {
-            return new DataSourceWebCrawlerSeedUrlConfigurationArgs(seedUrls, webCrawlerMode);
+
+        public Builder webCrawlerMode(DataSourceWebCrawlerSeedUrlConfigurationWebCrawlerMode webCrawlerMode) {
+            return webCrawlerMode(Output.of(webCrawlerMode));
+        }
+
+        public DataSourceWebCrawlerSeedUrlConfigurationArgs build() {
+            $.seedUrls = Objects.requireNonNull($.seedUrls, "expected parameter 'seedUrls' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,7 +5,6 @@ package com.pulumi.kubernetes.core_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.kubernetes.core_v1.inputs.NodeSelectorTermArgs;
 import java.util.List;
 import java.util.Objects;
@@ -24,52 +23,53 @@ public final class NodeSelectorArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="nodeSelectorTerms", required=true)
-      private final Output<List<NodeSelectorTermArgs>> nodeSelectorTerms;
+    private Output<List<NodeSelectorTermArgs>> nodeSelectorTerms;
 
     public Output<List<NodeSelectorTermArgs>> nodeSelectorTerms() {
         return this.nodeSelectorTerms;
     }
 
-    public NodeSelectorArgs(Output<List<NodeSelectorTermArgs>> nodeSelectorTerms) {
-        this.nodeSelectorTerms = Objects.requireNonNull(nodeSelectorTerms, "expected parameter 'nodeSelectorTerms' to be non-null");
-    }
+    private NodeSelectorArgs() {}
 
-    private NodeSelectorArgs() {
-        this.nodeSelectorTerms = Codegen.empty();
+    private NodeSelectorArgs(NodeSelectorArgs $) {
+        this.nodeSelectorTerms = $.nodeSelectorTerms;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NodeSelectorArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<List<NodeSelectorTermArgs>> nodeSelectorTerms;
+        private NodeSelectorArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new NodeSelectorArgs();
         }
 
         public Builder(NodeSelectorArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.nodeSelectorTerms = defaults.nodeSelectorTerms;
+            $ = new NodeSelectorArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder nodeSelectorTerms(Output<List<NodeSelectorTermArgs>> nodeSelectorTerms) {
-            this.nodeSelectorTerms = Objects.requireNonNull(nodeSelectorTerms);
+            $.nodeSelectorTerms = nodeSelectorTerms;
             return this;
         }
+
         public Builder nodeSelectorTerms(List<NodeSelectorTermArgs> nodeSelectorTerms) {
-            this.nodeSelectorTerms = Output.of(Objects.requireNonNull(nodeSelectorTerms));
-            return this;
+            return nodeSelectorTerms(Output.of(nodeSelectorTerms));
         }
+
         public Builder nodeSelectorTerms(NodeSelectorTermArgs... nodeSelectorTerms) {
             return nodeSelectorTerms(List.of(nodeSelectorTerms));
-        }        public NodeSelectorArgs build() {
-            return new NodeSelectorArgs(nodeSelectorTerms);
+        }
+
+        public NodeSelectorArgs build() {
+            $.nodeSelectorTerms = Objects.requireNonNull($.nodeSelectorTerms, "expected parameter 'nodeSelectorTerms' to be non-null");
+            return $;
         }
     }
+
 }

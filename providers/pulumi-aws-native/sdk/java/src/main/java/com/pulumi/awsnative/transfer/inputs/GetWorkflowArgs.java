@@ -17,45 +17,45 @@ public final class GetWorkflowArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="workflowId", required=true)
-      private final String workflowId;
+    private String workflowId;
 
     public String workflowId() {
         return this.workflowId;
     }
 
-    public GetWorkflowArgs(String workflowId) {
-        this.workflowId = Objects.requireNonNull(workflowId, "expected parameter 'workflowId' to be non-null");
-    }
+    private GetWorkflowArgs() {}
 
-    private GetWorkflowArgs() {
-        this.workflowId = null;
+    private GetWorkflowArgs(GetWorkflowArgs $) {
+        this.workflowId = $.workflowId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetWorkflowArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String workflowId;
+        private GetWorkflowArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetWorkflowArgs();
         }
 
         public Builder(GetWorkflowArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.workflowId = defaults.workflowId;
+            $ = new GetWorkflowArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder workflowId(String workflowId) {
-            this.workflowId = Objects.requireNonNull(workflowId);
+            $.workflowId = workflowId;
             return this;
-        }        public GetWorkflowArgs build() {
-            return new GetWorkflowArgs(workflowId);
+        }
+
+        public GetWorkflowArgs build() {
+            $.workflowId = Objects.requireNonNull($.workflowId, "expected parameter 'workflowId' to be non-null");
+            return $;
         }
     }
+
 }

@@ -25,7 +25,7 @@ public final class EccTokenKeyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="alg", required=true)
-      private final Output<Either<String,AccessPolicyEccAlgo>> alg;
+    private Output<Either<String,AccessPolicyEccAlgo>> alg;
 
     public Output<Either<String,AccessPolicyEccAlgo>> alg() {
         return this.alg;
@@ -36,7 +36,7 @@ public final class EccTokenKeyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="kid", required=true)
-      private final Output<String> kid;
+    private Output<String> kid;
 
     public Output<String> kid() {
         return this.kid;
@@ -48,7 +48,7 @@ public final class EccTokenKeyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="type", required=true)
-      private final Output<String> type;
+    private Output<String> type;
 
     public Output<String> type() {
         return this.type;
@@ -59,7 +59,7 @@ public final class EccTokenKeyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="x", required=true)
-      private final Output<String> x;
+    private Output<String> x;
 
     public Output<String> x() {
         return this.x;
@@ -70,102 +70,93 @@ public final class EccTokenKeyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="y", required=true)
-      private final Output<String> y;
+    private Output<String> y;
 
     public Output<String> y() {
         return this.y;
     }
 
-    public EccTokenKeyArgs(
-        Output<Either<String,AccessPolicyEccAlgo>> alg,
-        Output<String> kid,
-        Output<String> type,
-        Output<String> x,
-        Output<String> y) {
-        this.alg = Objects.requireNonNull(alg, "expected parameter 'alg' to be non-null");
-        this.kid = Objects.requireNonNull(kid, "expected parameter 'kid' to be non-null");
-        this.type = Codegen.stringProp("type").output().arg(type).require();
-        this.x = Objects.requireNonNull(x, "expected parameter 'x' to be non-null");
-        this.y = Objects.requireNonNull(y, "expected parameter 'y' to be non-null");
-    }
+    private EccTokenKeyArgs() {}
 
-    private EccTokenKeyArgs() {
-        this.alg = Codegen.empty();
-        this.kid = Codegen.empty();
-        this.type = Codegen.empty();
-        this.x = Codegen.empty();
-        this.y = Codegen.empty();
+    private EccTokenKeyArgs(EccTokenKeyArgs $) {
+        this.alg = $.alg;
+        this.kid = $.kid;
+        this.type = $.type;
+        this.x = $.x;
+        this.y = $.y;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EccTokenKeyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Either<String,AccessPolicyEccAlgo>> alg;
-        private Output<String> kid;
-        private Output<String> type;
-        private Output<String> x;
-        private Output<String> y;
+        private EccTokenKeyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new EccTokenKeyArgs();
         }
 
         public Builder(EccTokenKeyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.alg = defaults.alg;
-    	      this.kid = defaults.kid;
-    	      this.type = defaults.type;
-    	      this.x = defaults.x;
-    	      this.y = defaults.y;
+            $ = new EccTokenKeyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder alg(Output<Either<String,AccessPolicyEccAlgo>> alg) {
-            this.alg = Objects.requireNonNull(alg);
+            $.alg = alg;
             return this;
         }
+
         public Builder alg(Either<String,AccessPolicyEccAlgo> alg) {
-            this.alg = Output.of(Objects.requireNonNull(alg));
-            return this;
+            return alg(Output.of(alg));
         }
+
         public Builder kid(Output<String> kid) {
-            this.kid = Objects.requireNonNull(kid);
+            $.kid = kid;
             return this;
         }
+
         public Builder kid(String kid) {
-            this.kid = Output.of(Objects.requireNonNull(kid));
-            return this;
+            return kid(Output.of(kid));
         }
+
         public Builder type(Output<String> type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Output.of(Objects.requireNonNull(type));
-            return this;
+            return type(Output.of(type));
         }
+
         public Builder x(Output<String> x) {
-            this.x = Objects.requireNonNull(x);
+            $.x = x;
             return this;
         }
+
         public Builder x(String x) {
-            this.x = Output.of(Objects.requireNonNull(x));
-            return this;
+            return x(Output.of(x));
         }
+
         public Builder y(Output<String> y) {
-            this.y = Objects.requireNonNull(y);
+            $.y = y;
             return this;
         }
+
         public Builder y(String y) {
-            this.y = Output.of(Objects.requireNonNull(y));
-            return this;
-        }        public EccTokenKeyArgs build() {
-            return new EccTokenKeyArgs(alg, kid, type, x, y);
+            return y(Output.of(y));
+        }
+
+        public EccTokenKeyArgs build() {
+            $.alg = Objects.requireNonNull($.alg, "expected parameter 'alg' to be non-null");
+            $.kid = Objects.requireNonNull($.kid, "expected parameter 'kid' to be non-null");
+            $.type = Codegen.stringProp("type").output().arg($.type).require();
+            $.x = Objects.requireNonNull($.x, "expected parameter 'x' to be non-null");
+            $.y = Objects.requireNonNull($.y, "expected parameter 'y' to be non-null");
+            return $;
         }
     }
+
 }

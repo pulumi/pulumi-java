@@ -5,10 +5,10 @@ package com.pulumi.aws.organizations;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class OrganizationArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="awsServiceAccessPrincipals")
-      private final @Nullable Output<List<String>> awsServiceAccessPrincipals;
+    private @Nullable Output<List<String>> awsServiceAccessPrincipals;
 
-    public Output<List<String>> awsServiceAccessPrincipals() {
-        return this.awsServiceAccessPrincipals == null ? Codegen.empty() : this.awsServiceAccessPrincipals;
+    public Optional<Output<List<String>>> awsServiceAccessPrincipals() {
+        return Optional.ofNullable(this.awsServiceAccessPrincipals);
     }
 
     /**
@@ -32,10 +32,10 @@ public final class OrganizationArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="enabledPolicyTypes")
-      private final @Nullable Output<List<String>> enabledPolicyTypes;
+    private @Nullable Output<List<String>> enabledPolicyTypes;
 
-    public Output<List<String>> enabledPolicyTypes() {
-        return this.enabledPolicyTypes == null ? Codegen.empty() : this.enabledPolicyTypes;
+    public Optional<Output<List<String>>> enabledPolicyTypes() {
+        return Optional.ofNullable(this.enabledPolicyTypes);
     }
 
     /**
@@ -43,82 +43,76 @@ public final class OrganizationArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="featureSet")
-      private final @Nullable Output<String> featureSet;
+    private @Nullable Output<String> featureSet;
 
-    public Output<String> featureSet() {
-        return this.featureSet == null ? Codegen.empty() : this.featureSet;
+    public Optional<Output<String>> featureSet() {
+        return Optional.ofNullable(this.featureSet);
     }
 
-    public OrganizationArgs(
-        @Nullable Output<List<String>> awsServiceAccessPrincipals,
-        @Nullable Output<List<String>> enabledPolicyTypes,
-        @Nullable Output<String> featureSet) {
-        this.awsServiceAccessPrincipals = awsServiceAccessPrincipals;
-        this.enabledPolicyTypes = enabledPolicyTypes;
-        this.featureSet = featureSet;
-    }
+    private OrganizationArgs() {}
 
-    private OrganizationArgs() {
-        this.awsServiceAccessPrincipals = Codegen.empty();
-        this.enabledPolicyTypes = Codegen.empty();
-        this.featureSet = Codegen.empty();
+    private OrganizationArgs(OrganizationArgs $) {
+        this.awsServiceAccessPrincipals = $.awsServiceAccessPrincipals;
+        this.enabledPolicyTypes = $.enabledPolicyTypes;
+        this.featureSet = $.featureSet;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(OrganizationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> awsServiceAccessPrincipals;
-        private @Nullable Output<List<String>> enabledPolicyTypes;
-        private @Nullable Output<String> featureSet;
+        private OrganizationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new OrganizationArgs();
         }
 
         public Builder(OrganizationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.awsServiceAccessPrincipals = defaults.awsServiceAccessPrincipals;
-    	      this.enabledPolicyTypes = defaults.enabledPolicyTypes;
-    	      this.featureSet = defaults.featureSet;
+            $ = new OrganizationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder awsServiceAccessPrincipals(@Nullable Output<List<String>> awsServiceAccessPrincipals) {
-            this.awsServiceAccessPrincipals = awsServiceAccessPrincipals;
+            $.awsServiceAccessPrincipals = awsServiceAccessPrincipals;
             return this;
         }
-        public Builder awsServiceAccessPrincipals(@Nullable List<String> awsServiceAccessPrincipals) {
-            this.awsServiceAccessPrincipals = Codegen.ofNullable(awsServiceAccessPrincipals);
-            return this;
+
+        public Builder awsServiceAccessPrincipals(List<String> awsServiceAccessPrincipals) {
+            return awsServiceAccessPrincipals(Output.of(awsServiceAccessPrincipals));
         }
+
         public Builder awsServiceAccessPrincipals(String... awsServiceAccessPrincipals) {
             return awsServiceAccessPrincipals(List.of(awsServiceAccessPrincipals));
         }
+
         public Builder enabledPolicyTypes(@Nullable Output<List<String>> enabledPolicyTypes) {
-            this.enabledPolicyTypes = enabledPolicyTypes;
+            $.enabledPolicyTypes = enabledPolicyTypes;
             return this;
         }
-        public Builder enabledPolicyTypes(@Nullable List<String> enabledPolicyTypes) {
-            this.enabledPolicyTypes = Codegen.ofNullable(enabledPolicyTypes);
-            return this;
+
+        public Builder enabledPolicyTypes(List<String> enabledPolicyTypes) {
+            return enabledPolicyTypes(Output.of(enabledPolicyTypes));
         }
+
         public Builder enabledPolicyTypes(String... enabledPolicyTypes) {
             return enabledPolicyTypes(List.of(enabledPolicyTypes));
         }
+
         public Builder featureSet(@Nullable Output<String> featureSet) {
-            this.featureSet = featureSet;
+            $.featureSet = featureSet;
             return this;
         }
-        public Builder featureSet(@Nullable String featureSet) {
-            this.featureSet = Codegen.ofNullable(featureSet);
-            return this;
-        }        public OrganizationArgs build() {
-            return new OrganizationArgs(awsServiceAccessPrincipals, enabledPolicyTypes, featureSet);
+
+        public Builder featureSet(String featureSet) {
+            return featureSet(Output.of(featureSet));
+        }
+
+        public OrganizationArgs build() {
+            return $;
         }
     }
+
 }

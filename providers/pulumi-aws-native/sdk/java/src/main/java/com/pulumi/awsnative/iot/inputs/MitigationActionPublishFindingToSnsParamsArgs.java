@@ -5,7 +5,6 @@ package com.pulumi.awsnative.iot.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,49 +22,49 @@ public final class MitigationActionPublishFindingToSnsParamsArgs extends com.pul
      * 
      */
     @Import(name="topicArn", required=true)
-      private final Output<String> topicArn;
+    private Output<String> topicArn;
 
     public Output<String> topicArn() {
         return this.topicArn;
     }
 
-    public MitigationActionPublishFindingToSnsParamsArgs(Output<String> topicArn) {
-        this.topicArn = Objects.requireNonNull(topicArn, "expected parameter 'topicArn' to be non-null");
-    }
+    private MitigationActionPublishFindingToSnsParamsArgs() {}
 
-    private MitigationActionPublishFindingToSnsParamsArgs() {
-        this.topicArn = Codegen.empty();
+    private MitigationActionPublishFindingToSnsParamsArgs(MitigationActionPublishFindingToSnsParamsArgs $) {
+        this.topicArn = $.topicArn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MitigationActionPublishFindingToSnsParamsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> topicArn;
+        private MitigationActionPublishFindingToSnsParamsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new MitigationActionPublishFindingToSnsParamsArgs();
         }
 
         public Builder(MitigationActionPublishFindingToSnsParamsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.topicArn = defaults.topicArn;
+            $ = new MitigationActionPublishFindingToSnsParamsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder topicArn(Output<String> topicArn) {
-            this.topicArn = Objects.requireNonNull(topicArn);
+            $.topicArn = topicArn;
             return this;
         }
+
         public Builder topicArn(String topicArn) {
-            this.topicArn = Output.of(Objects.requireNonNull(topicArn));
-            return this;
-        }        public MitigationActionPublishFindingToSnsParamsArgs build() {
-            return new MitigationActionPublishFindingToSnsParamsArgs(topicArn);
+            return topicArn(Output.of(topicArn));
+        }
+
+        public MitigationActionPublishFindingToSnsParamsArgs build() {
+            $.topicArn = Objects.requireNonNull($.topicArn, "expected parameter 'topicArn' to be non-null");
+            return $;
         }
     }
+
 }

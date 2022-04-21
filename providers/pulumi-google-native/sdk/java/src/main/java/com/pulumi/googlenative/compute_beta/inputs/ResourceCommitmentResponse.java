@@ -21,7 +21,7 @@ public final class ResourceCommitmentResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="acceleratorType", required=true)
-      private final String acceleratorType;
+    private String acceleratorType;
 
     public String acceleratorType() {
         return this.acceleratorType;
@@ -32,7 +32,7 @@ public final class ResourceCommitmentResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="amount", required=true)
-      private final String amount;
+    private String amount;
 
     public String amount() {
         return this.amount;
@@ -43,64 +43,59 @@ public final class ResourceCommitmentResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
     }
 
-    public ResourceCommitmentResponse(
-        String acceleratorType,
-        String amount,
-        String type) {
-        this.acceleratorType = Objects.requireNonNull(acceleratorType, "expected parameter 'acceleratorType' to be non-null");
-        this.amount = Objects.requireNonNull(amount, "expected parameter 'amount' to be non-null");
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private ResourceCommitmentResponse() {}
 
-    private ResourceCommitmentResponse() {
-        this.acceleratorType = null;
-        this.amount = null;
-        this.type = null;
+    private ResourceCommitmentResponse(ResourceCommitmentResponse $) {
+        this.acceleratorType = $.acceleratorType;
+        this.amount = $.amount;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ResourceCommitmentResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String acceleratorType;
-        private String amount;
-        private String type;
+        private ResourceCommitmentResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ResourceCommitmentResponse();
         }
 
         public Builder(ResourceCommitmentResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.acceleratorType = defaults.acceleratorType;
-    	      this.amount = defaults.amount;
-    	      this.type = defaults.type;
+            $ = new ResourceCommitmentResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder acceleratorType(String acceleratorType) {
-            this.acceleratorType = Objects.requireNonNull(acceleratorType);
+            $.acceleratorType = acceleratorType;
             return this;
         }
+
         public Builder amount(String amount) {
-            this.amount = Objects.requireNonNull(amount);
+            $.amount = amount;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
-        }        public ResourceCommitmentResponse build() {
-            return new ResourceCommitmentResponse(acceleratorType, amount, type);
+        }
+
+        public ResourceCommitmentResponse build() {
+            $.acceleratorType = Objects.requireNonNull($.acceleratorType, "expected parameter 'acceleratorType' to be non-null");
+            $.amount = Objects.requireNonNull($.amount, "expected parameter 'amount' to be non-null");
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

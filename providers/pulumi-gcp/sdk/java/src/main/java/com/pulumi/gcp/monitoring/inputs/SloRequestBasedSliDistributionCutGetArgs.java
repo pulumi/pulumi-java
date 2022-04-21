@@ -5,7 +5,6 @@ package com.pulumi.gcp.monitoring.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.monitoring.inputs.SloRequestBasedSliDistributionCutRangeGetArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +22,7 @@ public final class SloRequestBasedSliDistributionCutGetArgs extends com.pulumi.r
      * 
      */
     @Import(name="distributionFilter", required=true)
-      private final Output<String> distributionFilter;
+    private Output<String> distributionFilter;
 
     public Output<String> distributionFilter() {
         return this.distributionFilter;
@@ -40,63 +39,60 @@ public final class SloRequestBasedSliDistributionCutGetArgs extends com.pulumi.r
      * 
      */
     @Import(name="range", required=true)
-      private final Output<SloRequestBasedSliDistributionCutRangeGetArgs> range;
+    private Output<SloRequestBasedSliDistributionCutRangeGetArgs> range;
 
     public Output<SloRequestBasedSliDistributionCutRangeGetArgs> range() {
         return this.range;
     }
 
-    public SloRequestBasedSliDistributionCutGetArgs(
-        Output<String> distributionFilter,
-        Output<SloRequestBasedSliDistributionCutRangeGetArgs> range) {
-        this.distributionFilter = Objects.requireNonNull(distributionFilter, "expected parameter 'distributionFilter' to be non-null");
-        this.range = Objects.requireNonNull(range, "expected parameter 'range' to be non-null");
-    }
+    private SloRequestBasedSliDistributionCutGetArgs() {}
 
-    private SloRequestBasedSliDistributionCutGetArgs() {
-        this.distributionFilter = Codegen.empty();
-        this.range = Codegen.empty();
+    private SloRequestBasedSliDistributionCutGetArgs(SloRequestBasedSliDistributionCutGetArgs $) {
+        this.distributionFilter = $.distributionFilter;
+        this.range = $.range;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SloRequestBasedSliDistributionCutGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> distributionFilter;
-        private Output<SloRequestBasedSliDistributionCutRangeGetArgs> range;
+        private SloRequestBasedSliDistributionCutGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SloRequestBasedSliDistributionCutGetArgs();
         }
 
         public Builder(SloRequestBasedSliDistributionCutGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.distributionFilter = defaults.distributionFilter;
-    	      this.range = defaults.range;
+            $ = new SloRequestBasedSliDistributionCutGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder distributionFilter(Output<String> distributionFilter) {
-            this.distributionFilter = Objects.requireNonNull(distributionFilter);
+            $.distributionFilter = distributionFilter;
             return this;
         }
+
         public Builder distributionFilter(String distributionFilter) {
-            this.distributionFilter = Output.of(Objects.requireNonNull(distributionFilter));
-            return this;
+            return distributionFilter(Output.of(distributionFilter));
         }
+
         public Builder range(Output<SloRequestBasedSliDistributionCutRangeGetArgs> range) {
-            this.range = Objects.requireNonNull(range);
+            $.range = range;
             return this;
         }
+
         public Builder range(SloRequestBasedSliDistributionCutRangeGetArgs range) {
-            this.range = Output.of(Objects.requireNonNull(range));
-            return this;
-        }        public SloRequestBasedSliDistributionCutGetArgs build() {
-            return new SloRequestBasedSliDistributionCutGetArgs(distributionFilter, range);
+            return range(Output.of(range));
+        }
+
+        public SloRequestBasedSliDistributionCutGetArgs build() {
+            $.distributionFilter = Objects.requireNonNull($.distributionFilter, "expected parameter 'distributionFilter' to be non-null");
+            $.range = Objects.requireNonNull($.range, "expected parameter 'range' to be non-null");
+            return $;
         }
     }
+
 }

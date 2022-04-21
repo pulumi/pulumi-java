@@ -25,10 +25,10 @@ public final class EventHandlerResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="auth")
-      private final @Nullable UpstreamAuthSettingsResponse auth;
+    private @Nullable UpstreamAuthSettingsResponse auth;
 
     public Optional<UpstreamAuthSettingsResponse> auth() {
-        return this.auth == null ? Optional.empty() : Optional.ofNullable(this.auth);
+        return Optional.ofNullable(this.auth);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class EventHandlerResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="systemEvents")
-      private final @Nullable List<String> systemEvents;
+    private @Nullable List<String> systemEvents;
 
-    public List<String> systemEvents() {
-        return this.systemEvents == null ? List.of() : this.systemEvents;
+    public Optional<List<String>> systemEvents() {
+        return Optional.ofNullable(this.systemEvents);
     }
 
     /**
@@ -48,7 +48,7 @@ public final class EventHandlerResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="urlTemplate", required=true)
-      private final String urlTemplate;
+    private String urlTemplate;
 
     public String urlTemplate() {
         return this.urlTemplate;
@@ -63,76 +63,67 @@ public final class EventHandlerResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="userEventPattern")
-      private final @Nullable String userEventPattern;
+    private @Nullable String userEventPattern;
 
     public Optional<String> userEventPattern() {
-        return this.userEventPattern == null ? Optional.empty() : Optional.ofNullable(this.userEventPattern);
+        return Optional.ofNullable(this.userEventPattern);
     }
 
-    public EventHandlerResponse(
-        @Nullable UpstreamAuthSettingsResponse auth,
-        @Nullable List<String> systemEvents,
-        String urlTemplate,
-        @Nullable String userEventPattern) {
-        this.auth = auth;
-        this.systemEvents = systemEvents;
-        this.urlTemplate = Objects.requireNonNull(urlTemplate, "expected parameter 'urlTemplate' to be non-null");
-        this.userEventPattern = userEventPattern;
-    }
+    private EventHandlerResponse() {}
 
-    private EventHandlerResponse() {
-        this.auth = null;
-        this.systemEvents = List.of();
-        this.urlTemplate = null;
-        this.userEventPattern = null;
+    private EventHandlerResponse(EventHandlerResponse $) {
+        this.auth = $.auth;
+        this.systemEvents = $.systemEvents;
+        this.urlTemplate = $.urlTemplate;
+        this.userEventPattern = $.userEventPattern;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EventHandlerResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable UpstreamAuthSettingsResponse auth;
-        private @Nullable List<String> systemEvents;
-        private String urlTemplate;
-        private @Nullable String userEventPattern;
+        private EventHandlerResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new EventHandlerResponse();
         }
 
         public Builder(EventHandlerResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.auth = defaults.auth;
-    	      this.systemEvents = defaults.systemEvents;
-    	      this.urlTemplate = defaults.urlTemplate;
-    	      this.userEventPattern = defaults.userEventPattern;
+            $ = new EventHandlerResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder auth(@Nullable UpstreamAuthSettingsResponse auth) {
-            this.auth = auth;
+            $.auth = auth;
             return this;
         }
+
         public Builder systemEvents(@Nullable List<String> systemEvents) {
-            this.systemEvents = systemEvents;
+            $.systemEvents = systemEvents;
             return this;
         }
+
         public Builder systemEvents(String... systemEvents) {
             return systemEvents(List.of(systemEvents));
         }
+
         public Builder urlTemplate(String urlTemplate) {
-            this.urlTemplate = Objects.requireNonNull(urlTemplate);
+            $.urlTemplate = urlTemplate;
             return this;
         }
+
         public Builder userEventPattern(@Nullable String userEventPattern) {
-            this.userEventPattern = userEventPattern;
+            $.userEventPattern = userEventPattern;
             return this;
-        }        public EventHandlerResponse build() {
-            return new EventHandlerResponse(auth, systemEvents, urlTemplate, userEventPattern);
+        }
+
+        public EventHandlerResponse build() {
+            $.urlTemplate = Objects.requireNonNull($.urlTemplate, "expected parameter 'urlTemplate' to be non-null");
+            return $;
         }
     }
+
 }

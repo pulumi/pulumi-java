@@ -5,9 +5,9 @@ package com.pulumi.aws.ecs.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,10 @@ public final class ServiceOrderedPlacementStrategyArgs extends com.pulumi.resour
      * 
      */
     @Import(name="field")
-      private final @Nullable Output<String> field;
+    private @Nullable Output<String> field;
 
-    public Output<String> field() {
-        return this.field == null ? Codegen.empty() : this.field;
+    public Optional<Output<String>> field() {
+        return Optional.ofNullable(this.field);
     }
 
     /**
@@ -34,63 +34,59 @@ public final class ServiceOrderedPlacementStrategyArgs extends com.pulumi.resour
      * 
      */
     @Import(name="type", required=true)
-      private final Output<String> type;
+    private Output<String> type;
 
     public Output<String> type() {
         return this.type;
     }
 
-    public ServiceOrderedPlacementStrategyArgs(
-        @Nullable Output<String> field,
-        Output<String> type) {
-        this.field = field;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private ServiceOrderedPlacementStrategyArgs() {}
 
-    private ServiceOrderedPlacementStrategyArgs() {
-        this.field = Codegen.empty();
-        this.type = Codegen.empty();
+    private ServiceOrderedPlacementStrategyArgs(ServiceOrderedPlacementStrategyArgs $) {
+        this.field = $.field;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ServiceOrderedPlacementStrategyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> field;
-        private Output<String> type;
+        private ServiceOrderedPlacementStrategyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ServiceOrderedPlacementStrategyArgs();
         }
 
         public Builder(ServiceOrderedPlacementStrategyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.field = defaults.field;
-    	      this.type = defaults.type;
+            $ = new ServiceOrderedPlacementStrategyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder field(@Nullable Output<String> field) {
-            this.field = field;
+            $.field = field;
             return this;
         }
-        public Builder field(@Nullable String field) {
-            this.field = Codegen.ofNullable(field);
-            return this;
+
+        public Builder field(String field) {
+            return field(Output.of(field));
         }
+
         public Builder type(Output<String> type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Output.of(Objects.requireNonNull(type));
-            return this;
-        }        public ServiceOrderedPlacementStrategyArgs build() {
-            return new ServiceOrderedPlacementStrategyArgs(field, type);
+            return type(Output.of(type));
+        }
+
+        public ServiceOrderedPlacementStrategyArgs build() {
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

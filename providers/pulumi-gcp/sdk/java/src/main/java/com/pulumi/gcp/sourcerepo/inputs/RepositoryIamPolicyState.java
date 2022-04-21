@@ -5,9 +5,9 @@ package com.pulumi.gcp.sourcerepo.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class RepositoryIamPolicyState extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="etag")
-      private final @Nullable Output<String> etag;
+    private @Nullable Output<String> etag;
 
-    public Output<String> etag() {
-        return this.etag == null ? Codegen.empty() : this.etag;
+    public Optional<Output<String>> etag() {
+        return Optional.ofNullable(this.etag);
     }
 
     /**
@@ -32,10 +32,10 @@ public final class RepositoryIamPolicyState extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="policyData")
-      private final @Nullable Output<String> policyData;
+    private @Nullable Output<String> policyData;
 
-    public Output<String> policyData() {
-        return this.policyData == null ? Codegen.empty() : this.policyData;
+    public Optional<Output<String>> policyData() {
+        return Optional.ofNullable(this.policyData);
     }
 
     /**
@@ -44,96 +44,85 @@ public final class RepositoryIamPolicyState extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     @Import(name="repository")
-      private final @Nullable Output<String> repository;
+    private @Nullable Output<String> repository;
 
-    public Output<String> repository() {
-        return this.repository == null ? Codegen.empty() : this.repository;
+    public Optional<Output<String>> repository() {
+        return Optional.ofNullable(this.repository);
     }
 
-    public RepositoryIamPolicyState(
-        @Nullable Output<String> etag,
-        @Nullable Output<String> policyData,
-        @Nullable Output<String> project,
-        @Nullable Output<String> repository) {
-        this.etag = etag;
-        this.policyData = policyData;
-        this.project = project;
-        this.repository = repository;
-    }
+    private RepositoryIamPolicyState() {}
 
-    private RepositoryIamPolicyState() {
-        this.etag = Codegen.empty();
-        this.policyData = Codegen.empty();
-        this.project = Codegen.empty();
-        this.repository = Codegen.empty();
+    private RepositoryIamPolicyState(RepositoryIamPolicyState $) {
+        this.etag = $.etag;
+        this.policyData = $.policyData;
+        this.project = $.project;
+        this.repository = $.repository;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RepositoryIamPolicyState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> etag;
-        private @Nullable Output<String> policyData;
-        private @Nullable Output<String> project;
-        private @Nullable Output<String> repository;
+        private RepositoryIamPolicyState $;
 
         public Builder() {
-    	      // Empty
+            $ = new RepositoryIamPolicyState();
         }
 
         public Builder(RepositoryIamPolicyState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.etag = defaults.etag;
-    	      this.policyData = defaults.policyData;
-    	      this.project = defaults.project;
-    	      this.repository = defaults.repository;
+            $ = new RepositoryIamPolicyState(Objects.requireNonNull(defaults));
         }
 
         public Builder etag(@Nullable Output<String> etag) {
-            this.etag = etag;
+            $.etag = etag;
             return this;
         }
-        public Builder etag(@Nullable String etag) {
-            this.etag = Codegen.ofNullable(etag);
-            return this;
+
+        public Builder etag(String etag) {
+            return etag(Output.of(etag));
         }
+
         public Builder policyData(@Nullable Output<String> policyData) {
-            this.policyData = policyData;
+            $.policyData = policyData;
             return this;
         }
-        public Builder policyData(@Nullable String policyData) {
-            this.policyData = Codegen.ofNullable(policyData);
-            return this;
+
+        public Builder policyData(String policyData) {
+            return policyData(Output.of(policyData));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder repository(@Nullable Output<String> repository) {
-            this.repository = repository;
+            $.repository = repository;
             return this;
         }
-        public Builder repository(@Nullable String repository) {
-            this.repository = Codegen.ofNullable(repository);
-            return this;
-        }        public RepositoryIamPolicyState build() {
-            return new RepositoryIamPolicyState(etag, policyData, project, repository);
+
+        public Builder repository(String repository) {
+            return repository(Output.of(repository));
+        }
+
+        public RepositoryIamPolicyState build() {
+            return $;
         }
     }
+
 }

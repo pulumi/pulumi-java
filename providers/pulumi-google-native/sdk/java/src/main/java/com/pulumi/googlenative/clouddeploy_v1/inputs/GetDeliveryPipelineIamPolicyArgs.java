@@ -15,94 +15,85 @@ public final class GetDeliveryPipelineIamPolicyArgs extends com.pulumi.resources
     public static final GetDeliveryPipelineIamPolicyArgs Empty = new GetDeliveryPipelineIamPolicyArgs();
 
     @Import(name="deliveryPipelineId", required=true)
-      private final String deliveryPipelineId;
+    private String deliveryPipelineId;
 
     public String deliveryPipelineId() {
         return this.deliveryPipelineId;
     }
 
     @Import(name="location", required=true)
-      private final String location;
+    private String location;
 
     public String location() {
         return this.location;
     }
 
     @Import(name="optionsRequestedPolicyVersion")
-      private final @Nullable String optionsRequestedPolicyVersion;
+    private @Nullable String optionsRequestedPolicyVersion;
 
     public Optional<String> optionsRequestedPolicyVersion() {
-        return this.optionsRequestedPolicyVersion == null ? Optional.empty() : Optional.ofNullable(this.optionsRequestedPolicyVersion);
+        return Optional.ofNullable(this.optionsRequestedPolicyVersion);
     }
 
     @Import(name="project")
-      private final @Nullable String project;
+    private @Nullable String project;
 
     public Optional<String> project() {
-        return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
+        return Optional.ofNullable(this.project);
     }
 
-    public GetDeliveryPipelineIamPolicyArgs(
-        String deliveryPipelineId,
-        String location,
-        @Nullable String optionsRequestedPolicyVersion,
-        @Nullable String project) {
-        this.deliveryPipelineId = Objects.requireNonNull(deliveryPipelineId, "expected parameter 'deliveryPipelineId' to be non-null");
-        this.location = Objects.requireNonNull(location, "expected parameter 'location' to be non-null");
-        this.optionsRequestedPolicyVersion = optionsRequestedPolicyVersion;
-        this.project = project;
-    }
+    private GetDeliveryPipelineIamPolicyArgs() {}
 
-    private GetDeliveryPipelineIamPolicyArgs() {
-        this.deliveryPipelineId = null;
-        this.location = null;
-        this.optionsRequestedPolicyVersion = null;
-        this.project = null;
+    private GetDeliveryPipelineIamPolicyArgs(GetDeliveryPipelineIamPolicyArgs $) {
+        this.deliveryPipelineId = $.deliveryPipelineId;
+        this.location = $.location;
+        this.optionsRequestedPolicyVersion = $.optionsRequestedPolicyVersion;
+        this.project = $.project;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetDeliveryPipelineIamPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String deliveryPipelineId;
-        private String location;
-        private @Nullable String optionsRequestedPolicyVersion;
-        private @Nullable String project;
+        private GetDeliveryPipelineIamPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetDeliveryPipelineIamPolicyArgs();
         }
 
         public Builder(GetDeliveryPipelineIamPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.deliveryPipelineId = defaults.deliveryPipelineId;
-    	      this.location = defaults.location;
-    	      this.optionsRequestedPolicyVersion = defaults.optionsRequestedPolicyVersion;
-    	      this.project = defaults.project;
+            $ = new GetDeliveryPipelineIamPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder deliveryPipelineId(String deliveryPipelineId) {
-            this.deliveryPipelineId = Objects.requireNonNull(deliveryPipelineId);
+            $.deliveryPipelineId = deliveryPipelineId;
             return this;
         }
+
         public Builder location(String location) {
-            this.location = Objects.requireNonNull(location);
+            $.location = location;
             return this;
         }
+
         public Builder optionsRequestedPolicyVersion(@Nullable String optionsRequestedPolicyVersion) {
-            this.optionsRequestedPolicyVersion = optionsRequestedPolicyVersion;
+            $.optionsRequestedPolicyVersion = optionsRequestedPolicyVersion;
             return this;
         }
+
         public Builder project(@Nullable String project) {
-            this.project = project;
+            $.project = project;
             return this;
-        }        public GetDeliveryPipelineIamPolicyArgs build() {
-            return new GetDeliveryPipelineIamPolicyArgs(deliveryPipelineId, location, optionsRequestedPolicyVersion, project);
+        }
+
+        public GetDeliveryPipelineIamPolicyArgs build() {
+            $.deliveryPipelineId = Objects.requireNonNull($.deliveryPipelineId, "expected parameter 'deliveryPipelineId' to be non-null");
+            $.location = Objects.requireNonNull($.location, "expected parameter 'location' to be non-null");
+            return $;
         }
     }
+
 }

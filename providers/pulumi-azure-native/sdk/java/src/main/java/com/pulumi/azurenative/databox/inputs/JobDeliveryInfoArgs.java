@@ -5,9 +5,9 @@ package com.pulumi.azurenative.databox.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class JobDeliveryInfoArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="scheduledDateTime")
-      private final @Nullable Output<String> scheduledDateTime;
+    private @Nullable Output<String> scheduledDateTime;
 
-    public Output<String> scheduledDateTime() {
-        return this.scheduledDateTime == null ? Codegen.empty() : this.scheduledDateTime;
+    public Optional<Output<String>> scheduledDateTime() {
+        return Optional.ofNullable(this.scheduledDateTime);
     }
 
-    public JobDeliveryInfoArgs(@Nullable Output<String> scheduledDateTime) {
-        this.scheduledDateTime = scheduledDateTime;
-    }
+    private JobDeliveryInfoArgs() {}
 
-    private JobDeliveryInfoArgs() {
-        this.scheduledDateTime = Codegen.empty();
+    private JobDeliveryInfoArgs(JobDeliveryInfoArgs $) {
+        this.scheduledDateTime = $.scheduledDateTime;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(JobDeliveryInfoArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> scheduledDateTime;
+        private JobDeliveryInfoArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new JobDeliveryInfoArgs();
         }
 
         public Builder(JobDeliveryInfoArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.scheduledDateTime = defaults.scheduledDateTime;
+            $ = new JobDeliveryInfoArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder scheduledDateTime(@Nullable Output<String> scheduledDateTime) {
-            this.scheduledDateTime = scheduledDateTime;
+            $.scheduledDateTime = scheduledDateTime;
             return this;
         }
-        public Builder scheduledDateTime(@Nullable String scheduledDateTime) {
-            this.scheduledDateTime = Codegen.ofNullable(scheduledDateTime);
-            return this;
-        }        public JobDeliveryInfoArgs build() {
-            return new JobDeliveryInfoArgs(scheduledDateTime);
+
+        public Builder scheduledDateTime(String scheduledDateTime) {
+            return scheduledDateTime(Output.of(scheduledDateTime));
+        }
+
+        public JobDeliveryInfoArgs build() {
+            return $;
         }
     }
+
 }

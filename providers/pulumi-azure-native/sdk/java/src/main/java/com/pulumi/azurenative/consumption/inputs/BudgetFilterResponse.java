@@ -25,10 +25,10 @@ public final class BudgetFilterResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="and")
-      private final @Nullable List<BudgetFilterPropertiesResponse> and;
+    private @Nullable List<BudgetFilterPropertiesResponse> and;
 
-    public List<BudgetFilterPropertiesResponse> and() {
-        return this.and == null ? List.of() : this.and;
+    public Optional<List<BudgetFilterPropertiesResponse>> and() {
+        return Optional.ofNullable(this.and);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class BudgetFilterResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="dimensions")
-      private final @Nullable BudgetComparisonExpressionResponse dimensions;
+    private @Nullable BudgetComparisonExpressionResponse dimensions;
 
     public Optional<BudgetComparisonExpressionResponse> dimensions() {
-        return this.dimensions == null ? Optional.empty() : Optional.ofNullable(this.dimensions);
+        return Optional.ofNullable(this.dimensions);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class BudgetFilterResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="not")
-      private final @Nullable BudgetFilterPropertiesResponse not;
+    private @Nullable BudgetFilterPropertiesResponse not;
 
     public Optional<BudgetFilterPropertiesResponse> not() {
-        return this.not == null ? Optional.empty() : Optional.ofNullable(this.not);
+        return Optional.ofNullable(this.not);
     }
 
     /**
@@ -58,76 +58,66 @@ public final class BudgetFilterResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="tags")
-      private final @Nullable BudgetComparisonExpressionResponse tags;
+    private @Nullable BudgetComparisonExpressionResponse tags;
 
     public Optional<BudgetComparisonExpressionResponse> tags() {
-        return this.tags == null ? Optional.empty() : Optional.ofNullable(this.tags);
+        return Optional.ofNullable(this.tags);
     }
 
-    public BudgetFilterResponse(
-        @Nullable List<BudgetFilterPropertiesResponse> and,
-        @Nullable BudgetComparisonExpressionResponse dimensions,
-        @Nullable BudgetFilterPropertiesResponse not,
-        @Nullable BudgetComparisonExpressionResponse tags) {
-        this.and = and;
-        this.dimensions = dimensions;
-        this.not = not;
-        this.tags = tags;
-    }
+    private BudgetFilterResponse() {}
 
-    private BudgetFilterResponse() {
-        this.and = List.of();
-        this.dimensions = null;
-        this.not = null;
-        this.tags = null;
+    private BudgetFilterResponse(BudgetFilterResponse $) {
+        this.and = $.and;
+        this.dimensions = $.dimensions;
+        this.not = $.not;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BudgetFilterResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<BudgetFilterPropertiesResponse> and;
-        private @Nullable BudgetComparisonExpressionResponse dimensions;
-        private @Nullable BudgetFilterPropertiesResponse not;
-        private @Nullable BudgetComparisonExpressionResponse tags;
+        private BudgetFilterResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new BudgetFilterResponse();
         }
 
         public Builder(BudgetFilterResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.and = defaults.and;
-    	      this.dimensions = defaults.dimensions;
-    	      this.not = defaults.not;
-    	      this.tags = defaults.tags;
+            $ = new BudgetFilterResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder and(@Nullable List<BudgetFilterPropertiesResponse> and) {
-            this.and = and;
+            $.and = and;
             return this;
         }
+
         public Builder and(BudgetFilterPropertiesResponse... and) {
             return and(List.of(and));
         }
+
         public Builder dimensions(@Nullable BudgetComparisonExpressionResponse dimensions) {
-            this.dimensions = dimensions;
+            $.dimensions = dimensions;
             return this;
         }
+
         public Builder not(@Nullable BudgetFilterPropertiesResponse not) {
-            this.not = not;
+            $.not = not;
             return this;
         }
+
         public Builder tags(@Nullable BudgetComparisonExpressionResponse tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
-        }        public BudgetFilterResponse build() {
-            return new BudgetFilterResponse(and, dimensions, not, tags);
+        }
+
+        public BudgetFilterResponse build() {
+            return $;
         }
     }
+
 }

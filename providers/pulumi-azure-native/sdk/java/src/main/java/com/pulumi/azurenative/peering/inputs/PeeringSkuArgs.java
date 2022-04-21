@@ -9,9 +9,9 @@ import com.pulumi.azurenative.peering.enums.Tier;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -28,10 +28,10 @@ public final class PeeringSkuArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="family")
-      private final @Nullable Output<Either<String,Family>> family;
+    private @Nullable Output<Either<String,Family>> family;
 
-    public Output<Either<String,Family>> family() {
-        return this.family == null ? Codegen.empty() : this.family;
+    public Optional<Output<Either<String,Family>>> family() {
+        return Optional.ofNullable(this.family);
     }
 
     /**
@@ -39,10 +39,10 @@ public final class PeeringSkuArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -50,10 +50,10 @@ public final class PeeringSkuArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="size")
-      private final @Nullable Output<Either<String,Size>> size;
+    private @Nullable Output<Either<String,Size>> size;
 
-    public Output<Either<String,Size>> size() {
-        return this.size == null ? Codegen.empty() : this.size;
+    public Optional<Output<Either<String,Size>>> size() {
+        return Optional.ofNullable(this.size);
     }
 
     /**
@@ -61,89 +61,78 @@ public final class PeeringSkuArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tier")
-      private final @Nullable Output<Either<String,Tier>> tier;
+    private @Nullable Output<Either<String,Tier>> tier;
 
-    public Output<Either<String,Tier>> tier() {
-        return this.tier == null ? Codegen.empty() : this.tier;
+    public Optional<Output<Either<String,Tier>>> tier() {
+        return Optional.ofNullable(this.tier);
     }
 
-    public PeeringSkuArgs(
-        @Nullable Output<Either<String,Family>> family,
-        @Nullable Output<String> name,
-        @Nullable Output<Either<String,Size>> size,
-        @Nullable Output<Either<String,Tier>> tier) {
-        this.family = family;
-        this.name = name;
-        this.size = size;
-        this.tier = tier;
-    }
+    private PeeringSkuArgs() {}
 
-    private PeeringSkuArgs() {
-        this.family = Codegen.empty();
-        this.name = Codegen.empty();
-        this.size = Codegen.empty();
-        this.tier = Codegen.empty();
+    private PeeringSkuArgs(PeeringSkuArgs $) {
+        this.family = $.family;
+        this.name = $.name;
+        this.size = $.size;
+        this.tier = $.tier;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PeeringSkuArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Either<String,Family>> family;
-        private @Nullable Output<String> name;
-        private @Nullable Output<Either<String,Size>> size;
-        private @Nullable Output<Either<String,Tier>> tier;
+        private PeeringSkuArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PeeringSkuArgs();
         }
 
         public Builder(PeeringSkuArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.family = defaults.family;
-    	      this.name = defaults.name;
-    	      this.size = defaults.size;
-    	      this.tier = defaults.tier;
+            $ = new PeeringSkuArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder family(@Nullable Output<Either<String,Family>> family) {
-            this.family = family;
+            $.family = family;
             return this;
         }
-        public Builder family(@Nullable Either<String,Family> family) {
-            this.family = Codegen.ofNullable(family);
-            return this;
+
+        public Builder family(Either<String,Family> family) {
+            return family(Output.of(family));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder size(@Nullable Output<Either<String,Size>> size) {
-            this.size = size;
+            $.size = size;
             return this;
         }
-        public Builder size(@Nullable Either<String,Size> size) {
-            this.size = Codegen.ofNullable(size);
-            return this;
+
+        public Builder size(Either<String,Size> size) {
+            return size(Output.of(size));
         }
+
         public Builder tier(@Nullable Output<Either<String,Tier>> tier) {
-            this.tier = tier;
+            $.tier = tier;
             return this;
         }
-        public Builder tier(@Nullable Either<String,Tier> tier) {
-            this.tier = Codegen.ofNullable(tier);
-            return this;
-        }        public PeeringSkuArgs build() {
-            return new PeeringSkuArgs(family, name, size, tier);
+
+        public Builder tier(Either<String,Tier> tier) {
+            return tier(Output.of(tier));
+        }
+
+        public PeeringSkuArgs build() {
+            return $;
         }
     }
+
 }

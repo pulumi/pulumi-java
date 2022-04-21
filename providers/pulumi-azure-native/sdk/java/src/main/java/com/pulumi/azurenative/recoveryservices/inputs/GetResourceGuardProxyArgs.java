@@ -17,14 +17,14 @@ public final class GetResourceGuardProxyArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
     @Import(name="resourceGuardProxyName", required=true)
-      private final String resourceGuardProxyName;
+    private String resourceGuardProxyName;
 
     public String resourceGuardProxyName() {
         return this.resourceGuardProxyName;
@@ -35,64 +35,59 @@ public final class GetResourceGuardProxyArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="vaultName", required=true)
-      private final String vaultName;
+    private String vaultName;
 
     public String vaultName() {
         return this.vaultName;
     }
 
-    public GetResourceGuardProxyArgs(
-        String resourceGroupName,
-        String resourceGuardProxyName,
-        String vaultName) {
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.resourceGuardProxyName = Objects.requireNonNull(resourceGuardProxyName, "expected parameter 'resourceGuardProxyName' to be non-null");
-        this.vaultName = Objects.requireNonNull(vaultName, "expected parameter 'vaultName' to be non-null");
-    }
+    private GetResourceGuardProxyArgs() {}
 
-    private GetResourceGuardProxyArgs() {
-        this.resourceGroupName = null;
-        this.resourceGuardProxyName = null;
-        this.vaultName = null;
+    private GetResourceGuardProxyArgs(GetResourceGuardProxyArgs $) {
+        this.resourceGroupName = $.resourceGroupName;
+        this.resourceGuardProxyName = $.resourceGuardProxyName;
+        this.vaultName = $.vaultName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetResourceGuardProxyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String resourceGroupName;
-        private String resourceGuardProxyName;
-        private String vaultName;
+        private GetResourceGuardProxyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetResourceGuardProxyArgs();
         }
 
         public Builder(GetResourceGuardProxyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.resourceGuardProxyName = defaults.resourceGuardProxyName;
-    	      this.vaultName = defaults.vaultName;
+            $ = new GetResourceGuardProxyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGuardProxyName(String resourceGuardProxyName) {
-            this.resourceGuardProxyName = Objects.requireNonNull(resourceGuardProxyName);
+            $.resourceGuardProxyName = resourceGuardProxyName;
             return this;
         }
+
         public Builder vaultName(String vaultName) {
-            this.vaultName = Objects.requireNonNull(vaultName);
+            $.vaultName = vaultName;
             return this;
-        }        public GetResourceGuardProxyArgs build() {
-            return new GetResourceGuardProxyArgs(resourceGroupName, resourceGuardProxyName, vaultName);
+        }
+
+        public GetResourceGuardProxyArgs build() {
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.resourceGuardProxyName = Objects.requireNonNull($.resourceGuardProxyName, "expected parameter 'resourceGuardProxyName' to be non-null");
+            $.vaultName = Objects.requireNonNull($.vaultName, "expected parameter 'vaultName' to be non-null");
+            return $;
         }
     }
+
 }

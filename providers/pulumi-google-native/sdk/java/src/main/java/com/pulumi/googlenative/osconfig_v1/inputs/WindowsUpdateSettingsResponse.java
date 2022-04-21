@@ -22,7 +22,7 @@ public final class WindowsUpdateSettingsResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="classifications", required=true)
-      private final List<String> classifications;
+    private List<String> classifications;
 
     public List<String> classifications() {
         return this.classifications;
@@ -33,7 +33,7 @@ public final class WindowsUpdateSettingsResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="excludes", required=true)
-      private final List<String> excludes;
+    private List<String> excludes;
 
     public List<String> excludes() {
         return this.excludes;
@@ -44,73 +44,71 @@ public final class WindowsUpdateSettingsResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="exclusivePatches", required=true)
-      private final List<String> exclusivePatches;
+    private List<String> exclusivePatches;
 
     public List<String> exclusivePatches() {
         return this.exclusivePatches;
     }
 
-    public WindowsUpdateSettingsResponse(
-        List<String> classifications,
-        List<String> excludes,
-        List<String> exclusivePatches) {
-        this.classifications = Objects.requireNonNull(classifications, "expected parameter 'classifications' to be non-null");
-        this.excludes = Objects.requireNonNull(excludes, "expected parameter 'excludes' to be non-null");
-        this.exclusivePatches = Objects.requireNonNull(exclusivePatches, "expected parameter 'exclusivePatches' to be non-null");
-    }
+    private WindowsUpdateSettingsResponse() {}
 
-    private WindowsUpdateSettingsResponse() {
-        this.classifications = List.of();
-        this.excludes = List.of();
-        this.exclusivePatches = List.of();
+    private WindowsUpdateSettingsResponse(WindowsUpdateSettingsResponse $) {
+        this.classifications = $.classifications;
+        this.excludes = $.excludes;
+        this.exclusivePatches = $.exclusivePatches;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WindowsUpdateSettingsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<String> classifications;
-        private List<String> excludes;
-        private List<String> exclusivePatches;
+        private WindowsUpdateSettingsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new WindowsUpdateSettingsResponse();
         }
 
         public Builder(WindowsUpdateSettingsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.classifications = defaults.classifications;
-    	      this.excludes = defaults.excludes;
-    	      this.exclusivePatches = defaults.exclusivePatches;
+            $ = new WindowsUpdateSettingsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder classifications(List<String> classifications) {
-            this.classifications = Objects.requireNonNull(classifications);
+            $.classifications = classifications;
             return this;
         }
+
         public Builder classifications(String... classifications) {
             return classifications(List.of(classifications));
         }
+
         public Builder excludes(List<String> excludes) {
-            this.excludes = Objects.requireNonNull(excludes);
+            $.excludes = excludes;
             return this;
         }
+
         public Builder excludes(String... excludes) {
             return excludes(List.of(excludes));
         }
+
         public Builder exclusivePatches(List<String> exclusivePatches) {
-            this.exclusivePatches = Objects.requireNonNull(exclusivePatches);
+            $.exclusivePatches = exclusivePatches;
             return this;
         }
+
         public Builder exclusivePatches(String... exclusivePatches) {
             return exclusivePatches(List.of(exclusivePatches));
-        }        public WindowsUpdateSettingsResponse build() {
-            return new WindowsUpdateSettingsResponse(classifications, excludes, exclusivePatches);
+        }
+
+        public WindowsUpdateSettingsResponse build() {
+            $.classifications = Objects.requireNonNull($.classifications, "expected parameter 'classifications' to be non-null");
+            $.excludes = Objects.requireNonNull($.excludes, "expected parameter 'excludes' to be non-null");
+            $.exclusivePatches = Objects.requireNonNull($.exclusivePatches, "expected parameter 'exclusivePatches' to be non-null");
+            return $;
         }
     }
+
 }

@@ -6,10 +6,10 @@ package com.pulumi.aws.datasync.inputs;
 import com.pulumi.aws.datasync.inputs.EfsLocationEc2ConfigGetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class EfsLocationState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="arn")
-      private final @Nullable Output<String> arn;
+    private @Nullable Output<String> arn;
 
-    public Output<String> arn() {
-        return this.arn == null ? Codegen.empty() : this.arn;
+    public Optional<Output<String>> arn() {
+        return Optional.ofNullable(this.arn);
     }
 
     /**
@@ -33,10 +33,10 @@ public final class EfsLocationState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="ec2Config")
-      private final @Nullable Output<EfsLocationEc2ConfigGetArgs> ec2Config;
+    private @Nullable Output<EfsLocationEc2ConfigGetArgs> ec2Config;
 
-    public Output<EfsLocationEc2ConfigGetArgs> ec2Config() {
-        return this.ec2Config == null ? Codegen.empty() : this.ec2Config;
+    public Optional<Output<EfsLocationEc2ConfigGetArgs>> ec2Config() {
+        return Optional.ofNullable(this.ec2Config);
     }
 
     /**
@@ -44,10 +44,10 @@ public final class EfsLocationState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="efsFileSystemArn")
-      private final @Nullable Output<String> efsFileSystemArn;
+    private @Nullable Output<String> efsFileSystemArn;
 
-    public Output<String> efsFileSystemArn() {
-        return this.efsFileSystemArn == null ? Codegen.empty() : this.efsFileSystemArn;
+    public Optional<Output<String>> efsFileSystemArn() {
+        return Optional.ofNullable(this.efsFileSystemArn);
     }
 
     /**
@@ -55,10 +55,10 @@ public final class EfsLocationState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="subdirectory")
-      private final @Nullable Output<String> subdirectory;
+    private @Nullable Output<String> subdirectory;
 
-    public Output<String> subdirectory() {
-        return this.subdirectory == null ? Codegen.empty() : this.subdirectory;
+    public Optional<Output<String>> subdirectory() {
+        return Optional.ofNullable(this.subdirectory);
     }
 
     /**
@@ -66,10 +66,10 @@ public final class EfsLocationState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -77,135 +77,115 @@ public final class EfsLocationState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tagsAll")
-      private final @Nullable Output<Map<String,String>> tagsAll;
+    private @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> tagsAll() {
-        return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
+    public Optional<Output<Map<String,String>>> tagsAll() {
+        return Optional.ofNullable(this.tagsAll);
     }
 
     @Import(name="uri")
-      private final @Nullable Output<String> uri;
+    private @Nullable Output<String> uri;
 
-    public Output<String> uri() {
-        return this.uri == null ? Codegen.empty() : this.uri;
+    public Optional<Output<String>> uri() {
+        return Optional.ofNullable(this.uri);
     }
 
-    public EfsLocationState(
-        @Nullable Output<String> arn,
-        @Nullable Output<EfsLocationEc2ConfigGetArgs> ec2Config,
-        @Nullable Output<String> efsFileSystemArn,
-        @Nullable Output<String> subdirectory,
-        @Nullable Output<Map<String,String>> tags,
-        @Nullable Output<Map<String,String>> tagsAll,
-        @Nullable Output<String> uri) {
-        this.arn = arn;
-        this.ec2Config = ec2Config;
-        this.efsFileSystemArn = efsFileSystemArn;
-        this.subdirectory = subdirectory;
-        this.tags = tags;
-        this.tagsAll = tagsAll;
-        this.uri = uri;
-    }
+    private EfsLocationState() {}
 
-    private EfsLocationState() {
-        this.arn = Codegen.empty();
-        this.ec2Config = Codegen.empty();
-        this.efsFileSystemArn = Codegen.empty();
-        this.subdirectory = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.tagsAll = Codegen.empty();
-        this.uri = Codegen.empty();
+    private EfsLocationState(EfsLocationState $) {
+        this.arn = $.arn;
+        this.ec2Config = $.ec2Config;
+        this.efsFileSystemArn = $.efsFileSystemArn;
+        this.subdirectory = $.subdirectory;
+        this.tags = $.tags;
+        this.tagsAll = $.tagsAll;
+        this.uri = $.uri;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EfsLocationState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> arn;
-        private @Nullable Output<EfsLocationEc2ConfigGetArgs> ec2Config;
-        private @Nullable Output<String> efsFileSystemArn;
-        private @Nullable Output<String> subdirectory;
-        private @Nullable Output<Map<String,String>> tags;
-        private @Nullable Output<Map<String,String>> tagsAll;
-        private @Nullable Output<String> uri;
+        private EfsLocationState $;
 
         public Builder() {
-    	      // Empty
+            $ = new EfsLocationState();
         }
 
         public Builder(EfsLocationState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.arn = defaults.arn;
-    	      this.ec2Config = defaults.ec2Config;
-    	      this.efsFileSystemArn = defaults.efsFileSystemArn;
-    	      this.subdirectory = defaults.subdirectory;
-    	      this.tags = defaults.tags;
-    	      this.tagsAll = defaults.tagsAll;
-    	      this.uri = defaults.uri;
+            $ = new EfsLocationState(Objects.requireNonNull(defaults));
         }
 
         public Builder arn(@Nullable Output<String> arn) {
-            this.arn = arn;
+            $.arn = arn;
             return this;
         }
-        public Builder arn(@Nullable String arn) {
-            this.arn = Codegen.ofNullable(arn);
-            return this;
+
+        public Builder arn(String arn) {
+            return arn(Output.of(arn));
         }
+
         public Builder ec2Config(@Nullable Output<EfsLocationEc2ConfigGetArgs> ec2Config) {
-            this.ec2Config = ec2Config;
+            $.ec2Config = ec2Config;
             return this;
         }
-        public Builder ec2Config(@Nullable EfsLocationEc2ConfigGetArgs ec2Config) {
-            this.ec2Config = Codegen.ofNullable(ec2Config);
-            return this;
+
+        public Builder ec2Config(EfsLocationEc2ConfigGetArgs ec2Config) {
+            return ec2Config(Output.of(ec2Config));
         }
+
         public Builder efsFileSystemArn(@Nullable Output<String> efsFileSystemArn) {
-            this.efsFileSystemArn = efsFileSystemArn;
+            $.efsFileSystemArn = efsFileSystemArn;
             return this;
         }
-        public Builder efsFileSystemArn(@Nullable String efsFileSystemArn) {
-            this.efsFileSystemArn = Codegen.ofNullable(efsFileSystemArn);
-            return this;
+
+        public Builder efsFileSystemArn(String efsFileSystemArn) {
+            return efsFileSystemArn(Output.of(efsFileSystemArn));
         }
+
         public Builder subdirectory(@Nullable Output<String> subdirectory) {
-            this.subdirectory = subdirectory;
+            $.subdirectory = subdirectory;
             return this;
         }
-        public Builder subdirectory(@Nullable String subdirectory) {
-            this.subdirectory = Codegen.ofNullable(subdirectory);
-            return this;
+
+        public Builder subdirectory(String subdirectory) {
+            return subdirectory(Output.of(subdirectory));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
-            this.tagsAll = tagsAll;
+            $.tagsAll = tagsAll;
             return this;
         }
-        public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Codegen.ofNullable(tagsAll);
-            return this;
+
+        public Builder tagsAll(Map<String,String> tagsAll) {
+            return tagsAll(Output.of(tagsAll));
         }
+
         public Builder uri(@Nullable Output<String> uri) {
-            this.uri = uri;
+            $.uri = uri;
             return this;
         }
-        public Builder uri(@Nullable String uri) {
-            this.uri = Codegen.ofNullable(uri);
-            return this;
-        }        public EfsLocationState build() {
-            return new EfsLocationState(arn, ec2Config, efsFileSystemArn, subdirectory, tags, tagsAll, uri);
+
+        public Builder uri(String uri) {
+            return uri(Output.of(uri));
+        }
+
+        public EfsLocationState build() {
+            return $;
         }
     }
+
 }

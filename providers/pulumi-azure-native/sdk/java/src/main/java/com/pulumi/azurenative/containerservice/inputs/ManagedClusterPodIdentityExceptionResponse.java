@@ -18,7 +18,7 @@ public final class ManagedClusterPodIdentityExceptionResponse extends com.pulumi
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -29,7 +29,7 @@ public final class ManagedClusterPodIdentityExceptionResponse extends com.pulumi
      * 
      */
     @Import(name="namespace", required=true)
-      private final String namespace;
+    private String namespace;
 
     public String namespace() {
         return this.namespace;
@@ -40,64 +40,59 @@ public final class ManagedClusterPodIdentityExceptionResponse extends com.pulumi
      * 
      */
     @Import(name="podLabels", required=true)
-      private final Map<String,String> podLabels;
+    private Map<String,String> podLabels;
 
     public Map<String,String> podLabels() {
         return this.podLabels;
     }
 
-    public ManagedClusterPodIdentityExceptionResponse(
-        String name,
-        String namespace,
-        Map<String,String> podLabels) {
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.namespace = Objects.requireNonNull(namespace, "expected parameter 'namespace' to be non-null");
-        this.podLabels = Objects.requireNonNull(podLabels, "expected parameter 'podLabels' to be non-null");
-    }
+    private ManagedClusterPodIdentityExceptionResponse() {}
 
-    private ManagedClusterPodIdentityExceptionResponse() {
-        this.name = null;
-        this.namespace = null;
-        this.podLabels = Map.of();
+    private ManagedClusterPodIdentityExceptionResponse(ManagedClusterPodIdentityExceptionResponse $) {
+        this.name = $.name;
+        this.namespace = $.namespace;
+        this.podLabels = $.podLabels;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ManagedClusterPodIdentityExceptionResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String name;
-        private String namespace;
-        private Map<String,String> podLabels;
+        private ManagedClusterPodIdentityExceptionResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ManagedClusterPodIdentityExceptionResponse();
         }
 
         public Builder(ManagedClusterPodIdentityExceptionResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.namespace = defaults.namespace;
-    	      this.podLabels = defaults.podLabels;
+            $ = new ManagedClusterPodIdentityExceptionResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder namespace(String namespace) {
-            this.namespace = Objects.requireNonNull(namespace);
+            $.namespace = namespace;
             return this;
         }
+
         public Builder podLabels(Map<String,String> podLabels) {
-            this.podLabels = Objects.requireNonNull(podLabels);
+            $.podLabels = podLabels;
             return this;
-        }        public ManagedClusterPodIdentityExceptionResponse build() {
-            return new ManagedClusterPodIdentityExceptionResponse(name, namespace, podLabels);
+        }
+
+        public ManagedClusterPodIdentityExceptionResponse build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.namespace = Objects.requireNonNull($.namespace, "expected parameter 'namespace' to be non-null");
+            $.podLabels = Objects.requireNonNull($.podLabels, "expected parameter 'podLabels' to be non-null");
+            return $;
         }
     }
+
 }

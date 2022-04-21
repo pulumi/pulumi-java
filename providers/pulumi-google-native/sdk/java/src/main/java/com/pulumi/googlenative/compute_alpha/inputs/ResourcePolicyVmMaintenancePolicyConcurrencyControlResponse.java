@@ -17,45 +17,45 @@ public final class ResourcePolicyVmMaintenancePolicyConcurrencyControlResponse e
     public static final ResourcePolicyVmMaintenancePolicyConcurrencyControlResponse Empty = new ResourcePolicyVmMaintenancePolicyConcurrencyControlResponse();
 
     @Import(name="concurrencyLimit", required=true)
-      private final Integer concurrencyLimit;
+    private Integer concurrencyLimit;
 
     public Integer concurrencyLimit() {
         return this.concurrencyLimit;
     }
 
-    public ResourcePolicyVmMaintenancePolicyConcurrencyControlResponse(Integer concurrencyLimit) {
-        this.concurrencyLimit = Objects.requireNonNull(concurrencyLimit, "expected parameter 'concurrencyLimit' to be non-null");
-    }
+    private ResourcePolicyVmMaintenancePolicyConcurrencyControlResponse() {}
 
-    private ResourcePolicyVmMaintenancePolicyConcurrencyControlResponse() {
-        this.concurrencyLimit = null;
+    private ResourcePolicyVmMaintenancePolicyConcurrencyControlResponse(ResourcePolicyVmMaintenancePolicyConcurrencyControlResponse $) {
+        this.concurrencyLimit = $.concurrencyLimit;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ResourcePolicyVmMaintenancePolicyConcurrencyControlResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Integer concurrencyLimit;
+        private ResourcePolicyVmMaintenancePolicyConcurrencyControlResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ResourcePolicyVmMaintenancePolicyConcurrencyControlResponse();
         }
 
         public Builder(ResourcePolicyVmMaintenancePolicyConcurrencyControlResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.concurrencyLimit = defaults.concurrencyLimit;
+            $ = new ResourcePolicyVmMaintenancePolicyConcurrencyControlResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder concurrencyLimit(Integer concurrencyLimit) {
-            this.concurrencyLimit = Objects.requireNonNull(concurrencyLimit);
+            $.concurrencyLimit = concurrencyLimit;
             return this;
-        }        public ResourcePolicyVmMaintenancePolicyConcurrencyControlResponse build() {
-            return new ResourcePolicyVmMaintenancePolicyConcurrencyControlResponse(concurrencyLimit);
+        }
+
+        public ResourcePolicyVmMaintenancePolicyConcurrencyControlResponse build() {
+            $.concurrencyLimit = Objects.requireNonNull($.concurrencyLimit, "expected parameter 'concurrencyLimit' to be non-null");
+            return $;
         }
     }
+
 }

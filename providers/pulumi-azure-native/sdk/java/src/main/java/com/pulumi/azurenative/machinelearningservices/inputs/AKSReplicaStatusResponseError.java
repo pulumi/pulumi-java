@@ -21,45 +21,45 @@ public final class AKSReplicaStatusResponseError extends com.pulumi.resources.In
      * 
      */
     @Import(name="error", required=true)
-      private final ErrorResponseResponse error;
+    private ErrorResponseResponse error;
 
     public ErrorResponseResponse error() {
         return this.error;
     }
 
-    public AKSReplicaStatusResponseError(ErrorResponseResponse error) {
-        this.error = Objects.requireNonNull(error, "expected parameter 'error' to be non-null");
-    }
+    private AKSReplicaStatusResponseError() {}
 
-    private AKSReplicaStatusResponseError() {
-        this.error = null;
+    private AKSReplicaStatusResponseError(AKSReplicaStatusResponseError $) {
+        this.error = $.error;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AKSReplicaStatusResponseError defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private ErrorResponseResponse error;
+        private AKSReplicaStatusResponseError $;
 
         public Builder() {
-    	      // Empty
+            $ = new AKSReplicaStatusResponseError();
         }
 
         public Builder(AKSReplicaStatusResponseError defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.error = defaults.error;
+            $ = new AKSReplicaStatusResponseError(Objects.requireNonNull(defaults));
         }
 
         public Builder error(ErrorResponseResponse error) {
-            this.error = Objects.requireNonNull(error);
+            $.error = error;
             return this;
-        }        public AKSReplicaStatusResponseError build() {
-            return new AKSReplicaStatusResponseError(error);
+        }
+
+        public AKSReplicaStatusResponseError build() {
+            $.error = Objects.requireNonNull($.error, "expected parameter 'error' to be non-null");
+            return $;
         }
     }
+
 }

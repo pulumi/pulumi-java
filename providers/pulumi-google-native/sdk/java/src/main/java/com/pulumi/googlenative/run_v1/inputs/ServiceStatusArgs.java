@@ -5,7 +5,6 @@ package com.pulumi.googlenative.run_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.run_v1.inputs.AddressableArgs;
 import com.pulumi.googlenative.run_v1.inputs.GoogleCloudRunV1ConditionArgs;
 import com.pulumi.googlenative.run_v1.inputs.TrafficTargetArgs;
@@ -13,6 +12,7 @@ import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -29,10 +29,10 @@ public final class ServiceStatusArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="address")
-      private final @Nullable Output<AddressableArgs> address;
+    private @Nullable Output<AddressableArgs> address;
 
-    public Output<AddressableArgs> address() {
-        return this.address == null ? Codegen.empty() : this.address;
+    public Optional<Output<AddressableArgs>> address() {
+        return Optional.ofNullable(this.address);
     }
 
     /**
@@ -40,10 +40,10 @@ public final class ServiceStatusArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="conditions")
-      private final @Nullable Output<List<GoogleCloudRunV1ConditionArgs>> conditions;
+    private @Nullable Output<List<GoogleCloudRunV1ConditionArgs>> conditions;
 
-    public Output<List<GoogleCloudRunV1ConditionArgs>> conditions() {
-        return this.conditions == null ? Codegen.empty() : this.conditions;
+    public Optional<Output<List<GoogleCloudRunV1ConditionArgs>>> conditions() {
+        return Optional.ofNullable(this.conditions);
     }
 
     /**
@@ -51,10 +51,10 @@ public final class ServiceStatusArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="latestCreatedRevisionName")
-      private final @Nullable Output<String> latestCreatedRevisionName;
+    private @Nullable Output<String> latestCreatedRevisionName;
 
-    public Output<String> latestCreatedRevisionName() {
-        return this.latestCreatedRevisionName == null ? Codegen.empty() : this.latestCreatedRevisionName;
+    public Optional<Output<String>> latestCreatedRevisionName() {
+        return Optional.ofNullable(this.latestCreatedRevisionName);
     }
 
     /**
@@ -62,10 +62,10 @@ public final class ServiceStatusArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="latestReadyRevisionName")
-      private final @Nullable Output<String> latestReadyRevisionName;
+    private @Nullable Output<String> latestReadyRevisionName;
 
-    public Output<String> latestReadyRevisionName() {
-        return this.latestReadyRevisionName == null ? Codegen.empty() : this.latestReadyRevisionName;
+    public Optional<Output<String>> latestReadyRevisionName() {
+        return Optional.ofNullable(this.latestReadyRevisionName);
     }
 
     /**
@@ -73,10 +73,10 @@ public final class ServiceStatusArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="observedGeneration")
-      private final @Nullable Output<Integer> observedGeneration;
+    private @Nullable Output<Integer> observedGeneration;
 
-    public Output<Integer> observedGeneration() {
-        return this.observedGeneration == null ? Codegen.empty() : this.observedGeneration;
+    public Optional<Output<Integer>> observedGeneration() {
+        return Optional.ofNullable(this.observedGeneration);
     }
 
     /**
@@ -84,10 +84,10 @@ public final class ServiceStatusArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="traffic")
-      private final @Nullable Output<List<TrafficTargetArgs>> traffic;
+    private @Nullable Output<List<TrafficTargetArgs>> traffic;
 
-    public Output<List<TrafficTargetArgs>> traffic() {
-        return this.traffic == null ? Codegen.empty() : this.traffic;
+    public Optional<Output<List<TrafficTargetArgs>>> traffic() {
+        return Optional.ofNullable(this.traffic);
     }
 
     /**
@@ -95,134 +95,116 @@ public final class ServiceStatusArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="url")
-      private final @Nullable Output<String> url;
+    private @Nullable Output<String> url;
 
-    public Output<String> url() {
-        return this.url == null ? Codegen.empty() : this.url;
+    public Optional<Output<String>> url() {
+        return Optional.ofNullable(this.url);
     }
 
-    public ServiceStatusArgs(
-        @Nullable Output<AddressableArgs> address,
-        @Nullable Output<List<GoogleCloudRunV1ConditionArgs>> conditions,
-        @Nullable Output<String> latestCreatedRevisionName,
-        @Nullable Output<String> latestReadyRevisionName,
-        @Nullable Output<Integer> observedGeneration,
-        @Nullable Output<List<TrafficTargetArgs>> traffic,
-        @Nullable Output<String> url) {
-        this.address = address;
-        this.conditions = conditions;
-        this.latestCreatedRevisionName = latestCreatedRevisionName;
-        this.latestReadyRevisionName = latestReadyRevisionName;
-        this.observedGeneration = observedGeneration;
-        this.traffic = traffic;
-        this.url = url;
-    }
+    private ServiceStatusArgs() {}
 
-    private ServiceStatusArgs() {
-        this.address = Codegen.empty();
-        this.conditions = Codegen.empty();
-        this.latestCreatedRevisionName = Codegen.empty();
-        this.latestReadyRevisionName = Codegen.empty();
-        this.observedGeneration = Codegen.empty();
-        this.traffic = Codegen.empty();
-        this.url = Codegen.empty();
+    private ServiceStatusArgs(ServiceStatusArgs $) {
+        this.address = $.address;
+        this.conditions = $.conditions;
+        this.latestCreatedRevisionName = $.latestCreatedRevisionName;
+        this.latestReadyRevisionName = $.latestReadyRevisionName;
+        this.observedGeneration = $.observedGeneration;
+        this.traffic = $.traffic;
+        this.url = $.url;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ServiceStatusArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<AddressableArgs> address;
-        private @Nullable Output<List<GoogleCloudRunV1ConditionArgs>> conditions;
-        private @Nullable Output<String> latestCreatedRevisionName;
-        private @Nullable Output<String> latestReadyRevisionName;
-        private @Nullable Output<Integer> observedGeneration;
-        private @Nullable Output<List<TrafficTargetArgs>> traffic;
-        private @Nullable Output<String> url;
+        private ServiceStatusArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ServiceStatusArgs();
         }
 
         public Builder(ServiceStatusArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.address = defaults.address;
-    	      this.conditions = defaults.conditions;
-    	      this.latestCreatedRevisionName = defaults.latestCreatedRevisionName;
-    	      this.latestReadyRevisionName = defaults.latestReadyRevisionName;
-    	      this.observedGeneration = defaults.observedGeneration;
-    	      this.traffic = defaults.traffic;
-    	      this.url = defaults.url;
+            $ = new ServiceStatusArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder address(@Nullable Output<AddressableArgs> address) {
-            this.address = address;
+            $.address = address;
             return this;
         }
-        public Builder address(@Nullable AddressableArgs address) {
-            this.address = Codegen.ofNullable(address);
-            return this;
+
+        public Builder address(AddressableArgs address) {
+            return address(Output.of(address));
         }
+
         public Builder conditions(@Nullable Output<List<GoogleCloudRunV1ConditionArgs>> conditions) {
-            this.conditions = conditions;
+            $.conditions = conditions;
             return this;
         }
-        public Builder conditions(@Nullable List<GoogleCloudRunV1ConditionArgs> conditions) {
-            this.conditions = Codegen.ofNullable(conditions);
-            return this;
+
+        public Builder conditions(List<GoogleCloudRunV1ConditionArgs> conditions) {
+            return conditions(Output.of(conditions));
         }
+
         public Builder conditions(GoogleCloudRunV1ConditionArgs... conditions) {
             return conditions(List.of(conditions));
         }
+
         public Builder latestCreatedRevisionName(@Nullable Output<String> latestCreatedRevisionName) {
-            this.latestCreatedRevisionName = latestCreatedRevisionName;
+            $.latestCreatedRevisionName = latestCreatedRevisionName;
             return this;
         }
-        public Builder latestCreatedRevisionName(@Nullable String latestCreatedRevisionName) {
-            this.latestCreatedRevisionName = Codegen.ofNullable(latestCreatedRevisionName);
-            return this;
+
+        public Builder latestCreatedRevisionName(String latestCreatedRevisionName) {
+            return latestCreatedRevisionName(Output.of(latestCreatedRevisionName));
         }
+
         public Builder latestReadyRevisionName(@Nullable Output<String> latestReadyRevisionName) {
-            this.latestReadyRevisionName = latestReadyRevisionName;
+            $.latestReadyRevisionName = latestReadyRevisionName;
             return this;
         }
-        public Builder latestReadyRevisionName(@Nullable String latestReadyRevisionName) {
-            this.latestReadyRevisionName = Codegen.ofNullable(latestReadyRevisionName);
-            return this;
+
+        public Builder latestReadyRevisionName(String latestReadyRevisionName) {
+            return latestReadyRevisionName(Output.of(latestReadyRevisionName));
         }
+
         public Builder observedGeneration(@Nullable Output<Integer> observedGeneration) {
-            this.observedGeneration = observedGeneration;
+            $.observedGeneration = observedGeneration;
             return this;
         }
-        public Builder observedGeneration(@Nullable Integer observedGeneration) {
-            this.observedGeneration = Codegen.ofNullable(observedGeneration);
-            return this;
+
+        public Builder observedGeneration(Integer observedGeneration) {
+            return observedGeneration(Output.of(observedGeneration));
         }
+
         public Builder traffic(@Nullable Output<List<TrafficTargetArgs>> traffic) {
-            this.traffic = traffic;
+            $.traffic = traffic;
             return this;
         }
-        public Builder traffic(@Nullable List<TrafficTargetArgs> traffic) {
-            this.traffic = Codegen.ofNullable(traffic);
-            return this;
+
+        public Builder traffic(List<TrafficTargetArgs> traffic) {
+            return traffic(Output.of(traffic));
         }
+
         public Builder traffic(TrafficTargetArgs... traffic) {
             return traffic(List.of(traffic));
         }
+
         public Builder url(@Nullable Output<String> url) {
-            this.url = url;
+            $.url = url;
             return this;
         }
-        public Builder url(@Nullable String url) {
-            this.url = Codegen.ofNullable(url);
-            return this;
-        }        public ServiceStatusArgs build() {
-            return new ServiceStatusArgs(address, conditions, latestCreatedRevisionName, latestReadyRevisionName, observedGeneration, traffic, url);
+
+        public Builder url(String url) {
+            return url(Output.of(url));
+        }
+
+        public ServiceStatusArgs build() {
+            return $;
         }
     }
+
 }

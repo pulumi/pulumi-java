@@ -6,10 +6,10 @@ package com.pulumi.azurenative.security.inputs;
 import com.pulumi.azurenative.security.inputs.JitNetworkAccessPortRuleArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,7 +22,7 @@ public final class JitNetworkAccessPolicyVirtualMachineArgs extends com.pulumi.r
      * 
      */
     @Import(name="id", required=true)
-      private final Output<String> id;
+    private Output<String> id;
 
     public Output<String> id() {
         return this.id;
@@ -33,7 +33,7 @@ public final class JitNetworkAccessPolicyVirtualMachineArgs extends com.pulumi.r
      * 
      */
     @Import(name="ports", required=true)
-      private final Output<List<JitNetworkAccessPortRuleArgs>> ports;
+    private Output<List<JitNetworkAccessPortRuleArgs>> ports;
 
     public Output<List<JitNetworkAccessPortRuleArgs>> ports() {
         return this.ports;
@@ -44,79 +44,74 @@ public final class JitNetworkAccessPolicyVirtualMachineArgs extends com.pulumi.r
      * 
      */
     @Import(name="publicIpAddress")
-      private final @Nullable Output<String> publicIpAddress;
+    private @Nullable Output<String> publicIpAddress;
 
-    public Output<String> publicIpAddress() {
-        return this.publicIpAddress == null ? Codegen.empty() : this.publicIpAddress;
+    public Optional<Output<String>> publicIpAddress() {
+        return Optional.ofNullable(this.publicIpAddress);
     }
 
-    public JitNetworkAccessPolicyVirtualMachineArgs(
-        Output<String> id,
-        Output<List<JitNetworkAccessPortRuleArgs>> ports,
-        @Nullable Output<String> publicIpAddress) {
-        this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
-        this.ports = Objects.requireNonNull(ports, "expected parameter 'ports' to be non-null");
-        this.publicIpAddress = publicIpAddress;
-    }
+    private JitNetworkAccessPolicyVirtualMachineArgs() {}
 
-    private JitNetworkAccessPolicyVirtualMachineArgs() {
-        this.id = Codegen.empty();
-        this.ports = Codegen.empty();
-        this.publicIpAddress = Codegen.empty();
+    private JitNetworkAccessPolicyVirtualMachineArgs(JitNetworkAccessPolicyVirtualMachineArgs $) {
+        this.id = $.id;
+        this.ports = $.ports;
+        this.publicIpAddress = $.publicIpAddress;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(JitNetworkAccessPolicyVirtualMachineArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> id;
-        private Output<List<JitNetworkAccessPortRuleArgs>> ports;
-        private @Nullable Output<String> publicIpAddress;
+        private JitNetworkAccessPolicyVirtualMachineArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new JitNetworkAccessPolicyVirtualMachineArgs();
         }
 
         public Builder(JitNetworkAccessPolicyVirtualMachineArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.id = defaults.id;
-    	      this.ports = defaults.ports;
-    	      this.publicIpAddress = defaults.publicIpAddress;
+            $ = new JitNetworkAccessPolicyVirtualMachineArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder id(Output<String> id) {
-            this.id = Objects.requireNonNull(id);
+            $.id = id;
             return this;
         }
+
         public Builder id(String id) {
-            this.id = Output.of(Objects.requireNonNull(id));
-            return this;
+            return id(Output.of(id));
         }
+
         public Builder ports(Output<List<JitNetworkAccessPortRuleArgs>> ports) {
-            this.ports = Objects.requireNonNull(ports);
+            $.ports = ports;
             return this;
         }
+
         public Builder ports(List<JitNetworkAccessPortRuleArgs> ports) {
-            this.ports = Output.of(Objects.requireNonNull(ports));
-            return this;
+            return ports(Output.of(ports));
         }
+
         public Builder ports(JitNetworkAccessPortRuleArgs... ports) {
             return ports(List.of(ports));
         }
+
         public Builder publicIpAddress(@Nullable Output<String> publicIpAddress) {
-            this.publicIpAddress = publicIpAddress;
+            $.publicIpAddress = publicIpAddress;
             return this;
         }
-        public Builder publicIpAddress(@Nullable String publicIpAddress) {
-            this.publicIpAddress = Codegen.ofNullable(publicIpAddress);
-            return this;
-        }        public JitNetworkAccessPolicyVirtualMachineArgs build() {
-            return new JitNetworkAccessPolicyVirtualMachineArgs(id, ports, publicIpAddress);
+
+        public Builder publicIpAddress(String publicIpAddress) {
+            return publicIpAddress(Output.of(publicIpAddress));
+        }
+
+        public JitNetworkAccessPolicyVirtualMachineArgs build() {
+            $.id = Objects.requireNonNull($.id, "expected parameter 'id' to be non-null");
+            $.ports = Objects.requireNonNull($.ports, "expected parameter 'ports' to be non-null");
+            return $;
         }
     }
+
 }

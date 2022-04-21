@@ -6,8 +6,8 @@ package com.pulumi.awsnative.customerprofiles.inputs;
 import com.pulumi.awsnative.customerprofiles.inputs.IntegrationScheduledTriggerPropertiesArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -16,49 +16,48 @@ public final class IntegrationTriggerPropertiesArgs extends com.pulumi.resources
     public static final IntegrationTriggerPropertiesArgs Empty = new IntegrationTriggerPropertiesArgs();
 
     @Import(name="scheduled")
-      private final @Nullable Output<IntegrationScheduledTriggerPropertiesArgs> scheduled;
+    private @Nullable Output<IntegrationScheduledTriggerPropertiesArgs> scheduled;
 
-    public Output<IntegrationScheduledTriggerPropertiesArgs> scheduled() {
-        return this.scheduled == null ? Codegen.empty() : this.scheduled;
+    public Optional<Output<IntegrationScheduledTriggerPropertiesArgs>> scheduled() {
+        return Optional.ofNullable(this.scheduled);
     }
 
-    public IntegrationTriggerPropertiesArgs(@Nullable Output<IntegrationScheduledTriggerPropertiesArgs> scheduled) {
-        this.scheduled = scheduled;
-    }
+    private IntegrationTriggerPropertiesArgs() {}
 
-    private IntegrationTriggerPropertiesArgs() {
-        this.scheduled = Codegen.empty();
+    private IntegrationTriggerPropertiesArgs(IntegrationTriggerPropertiesArgs $) {
+        this.scheduled = $.scheduled;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(IntegrationTriggerPropertiesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<IntegrationScheduledTriggerPropertiesArgs> scheduled;
+        private IntegrationTriggerPropertiesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new IntegrationTriggerPropertiesArgs();
         }
 
         public Builder(IntegrationTriggerPropertiesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.scheduled = defaults.scheduled;
+            $ = new IntegrationTriggerPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder scheduled(@Nullable Output<IntegrationScheduledTriggerPropertiesArgs> scheduled) {
-            this.scheduled = scheduled;
+            $.scheduled = scheduled;
             return this;
         }
-        public Builder scheduled(@Nullable IntegrationScheduledTriggerPropertiesArgs scheduled) {
-            this.scheduled = Codegen.ofNullable(scheduled);
-            return this;
-        }        public IntegrationTriggerPropertiesArgs build() {
-            return new IntegrationTriggerPropertiesArgs(scheduled);
+
+        public Builder scheduled(IntegrationScheduledTriggerPropertiesArgs scheduled) {
+            return scheduled(Output.of(scheduled));
+        }
+
+        public IntegrationTriggerPropertiesArgs build() {
+            return $;
         }
     }
+
 }

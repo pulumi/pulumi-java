@@ -9,9 +9,9 @@ import com.pulumi.aws.backup.inputs.SelectionConditionStringNotEqualArgs;
 import com.pulumi.aws.backup.inputs.SelectionConditionStringNotLikeArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,122 +20,115 @@ public final class SelectionConditionArgs extends com.pulumi.resources.ResourceA
     public static final SelectionConditionArgs Empty = new SelectionConditionArgs();
 
     @Import(name="stringEquals")
-      private final @Nullable Output<List<SelectionConditionStringEqualArgs>> stringEquals;
+    private @Nullable Output<List<SelectionConditionStringEqualArgs>> stringEquals;
 
-    public Output<List<SelectionConditionStringEqualArgs>> stringEquals() {
-        return this.stringEquals == null ? Codegen.empty() : this.stringEquals;
+    public Optional<Output<List<SelectionConditionStringEqualArgs>>> stringEquals() {
+        return Optional.ofNullable(this.stringEquals);
     }
 
     @Import(name="stringLikes")
-      private final @Nullable Output<List<SelectionConditionStringLikeArgs>> stringLikes;
+    private @Nullable Output<List<SelectionConditionStringLikeArgs>> stringLikes;
 
-    public Output<List<SelectionConditionStringLikeArgs>> stringLikes() {
-        return this.stringLikes == null ? Codegen.empty() : this.stringLikes;
+    public Optional<Output<List<SelectionConditionStringLikeArgs>>> stringLikes() {
+        return Optional.ofNullable(this.stringLikes);
     }
 
     @Import(name="stringNotEquals")
-      private final @Nullable Output<List<SelectionConditionStringNotEqualArgs>> stringNotEquals;
+    private @Nullable Output<List<SelectionConditionStringNotEqualArgs>> stringNotEquals;
 
-    public Output<List<SelectionConditionStringNotEqualArgs>> stringNotEquals() {
-        return this.stringNotEquals == null ? Codegen.empty() : this.stringNotEquals;
+    public Optional<Output<List<SelectionConditionStringNotEqualArgs>>> stringNotEquals() {
+        return Optional.ofNullable(this.stringNotEquals);
     }
 
     @Import(name="stringNotLikes")
-      private final @Nullable Output<List<SelectionConditionStringNotLikeArgs>> stringNotLikes;
+    private @Nullable Output<List<SelectionConditionStringNotLikeArgs>> stringNotLikes;
 
-    public Output<List<SelectionConditionStringNotLikeArgs>> stringNotLikes() {
-        return this.stringNotLikes == null ? Codegen.empty() : this.stringNotLikes;
+    public Optional<Output<List<SelectionConditionStringNotLikeArgs>>> stringNotLikes() {
+        return Optional.ofNullable(this.stringNotLikes);
     }
 
-    public SelectionConditionArgs(
-        @Nullable Output<List<SelectionConditionStringEqualArgs>> stringEquals,
-        @Nullable Output<List<SelectionConditionStringLikeArgs>> stringLikes,
-        @Nullable Output<List<SelectionConditionStringNotEqualArgs>> stringNotEquals,
-        @Nullable Output<List<SelectionConditionStringNotLikeArgs>> stringNotLikes) {
-        this.stringEquals = stringEquals;
-        this.stringLikes = stringLikes;
-        this.stringNotEquals = stringNotEquals;
-        this.stringNotLikes = stringNotLikes;
-    }
+    private SelectionConditionArgs() {}
 
-    private SelectionConditionArgs() {
-        this.stringEquals = Codegen.empty();
-        this.stringLikes = Codegen.empty();
-        this.stringNotEquals = Codegen.empty();
-        this.stringNotLikes = Codegen.empty();
+    private SelectionConditionArgs(SelectionConditionArgs $) {
+        this.stringEquals = $.stringEquals;
+        this.stringLikes = $.stringLikes;
+        this.stringNotEquals = $.stringNotEquals;
+        this.stringNotLikes = $.stringNotLikes;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SelectionConditionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<SelectionConditionStringEqualArgs>> stringEquals;
-        private @Nullable Output<List<SelectionConditionStringLikeArgs>> stringLikes;
-        private @Nullable Output<List<SelectionConditionStringNotEqualArgs>> stringNotEquals;
-        private @Nullable Output<List<SelectionConditionStringNotLikeArgs>> stringNotLikes;
+        private SelectionConditionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SelectionConditionArgs();
         }
 
         public Builder(SelectionConditionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.stringEquals = defaults.stringEquals;
-    	      this.stringLikes = defaults.stringLikes;
-    	      this.stringNotEquals = defaults.stringNotEquals;
-    	      this.stringNotLikes = defaults.stringNotLikes;
+            $ = new SelectionConditionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder stringEquals(@Nullable Output<List<SelectionConditionStringEqualArgs>> stringEquals) {
-            this.stringEquals = stringEquals;
+            $.stringEquals = stringEquals;
             return this;
         }
-        public Builder stringEquals(@Nullable List<SelectionConditionStringEqualArgs> stringEquals) {
-            this.stringEquals = Codegen.ofNullable(stringEquals);
-            return this;
+
+        public Builder stringEquals(List<SelectionConditionStringEqualArgs> stringEquals) {
+            return stringEquals(Output.of(stringEquals));
         }
+
         public Builder stringEquals(SelectionConditionStringEqualArgs... stringEquals) {
             return stringEquals(List.of(stringEquals));
         }
+
         public Builder stringLikes(@Nullable Output<List<SelectionConditionStringLikeArgs>> stringLikes) {
-            this.stringLikes = stringLikes;
+            $.stringLikes = stringLikes;
             return this;
         }
-        public Builder stringLikes(@Nullable List<SelectionConditionStringLikeArgs> stringLikes) {
-            this.stringLikes = Codegen.ofNullable(stringLikes);
-            return this;
+
+        public Builder stringLikes(List<SelectionConditionStringLikeArgs> stringLikes) {
+            return stringLikes(Output.of(stringLikes));
         }
+
         public Builder stringLikes(SelectionConditionStringLikeArgs... stringLikes) {
             return stringLikes(List.of(stringLikes));
         }
+
         public Builder stringNotEquals(@Nullable Output<List<SelectionConditionStringNotEqualArgs>> stringNotEquals) {
-            this.stringNotEquals = stringNotEquals;
+            $.stringNotEquals = stringNotEquals;
             return this;
         }
-        public Builder stringNotEquals(@Nullable List<SelectionConditionStringNotEqualArgs> stringNotEquals) {
-            this.stringNotEquals = Codegen.ofNullable(stringNotEquals);
-            return this;
+
+        public Builder stringNotEquals(List<SelectionConditionStringNotEqualArgs> stringNotEquals) {
+            return stringNotEquals(Output.of(stringNotEquals));
         }
+
         public Builder stringNotEquals(SelectionConditionStringNotEqualArgs... stringNotEquals) {
             return stringNotEquals(List.of(stringNotEquals));
         }
+
         public Builder stringNotLikes(@Nullable Output<List<SelectionConditionStringNotLikeArgs>> stringNotLikes) {
-            this.stringNotLikes = stringNotLikes;
+            $.stringNotLikes = stringNotLikes;
             return this;
         }
-        public Builder stringNotLikes(@Nullable List<SelectionConditionStringNotLikeArgs> stringNotLikes) {
-            this.stringNotLikes = Codegen.ofNullable(stringNotLikes);
-            return this;
+
+        public Builder stringNotLikes(List<SelectionConditionStringNotLikeArgs> stringNotLikes) {
+            return stringNotLikes(Output.of(stringNotLikes));
         }
+
         public Builder stringNotLikes(SelectionConditionStringNotLikeArgs... stringNotLikes) {
             return stringNotLikes(List.of(stringNotLikes));
-        }        public SelectionConditionArgs build() {
-            return new SelectionConditionArgs(stringEquals, stringLikes, stringNotEquals, stringNotLikes);
+        }
+
+        public SelectionConditionArgs build() {
+            return $;
         }
     }
+
 }

@@ -23,7 +23,7 @@ public final class RecipeConditionExpression extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="condition", required=true)
-      private final String condition;
+    private String condition;
 
     public String condition() {
         return this.condition;
@@ -34,7 +34,7 @@ public final class RecipeConditionExpression extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="targetColumn", required=true)
-      private final String targetColumn;
+    private String targetColumn;
 
     public String targetColumn() {
         return this.targetColumn;
@@ -45,64 +45,58 @@ public final class RecipeConditionExpression extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="value")
-      private final @Nullable String value;
+    private @Nullable String value;
 
     public Optional<String> value() {
-        return this.value == null ? Optional.empty() : Optional.ofNullable(this.value);
+        return Optional.ofNullable(this.value);
     }
 
-    public RecipeConditionExpression(
-        String condition,
-        String targetColumn,
-        @Nullable String value) {
-        this.condition = Objects.requireNonNull(condition, "expected parameter 'condition' to be non-null");
-        this.targetColumn = Objects.requireNonNull(targetColumn, "expected parameter 'targetColumn' to be non-null");
-        this.value = value;
-    }
+    private RecipeConditionExpression() {}
 
-    private RecipeConditionExpression() {
-        this.condition = null;
-        this.targetColumn = null;
-        this.value = null;
+    private RecipeConditionExpression(RecipeConditionExpression $) {
+        this.condition = $.condition;
+        this.targetColumn = $.targetColumn;
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RecipeConditionExpression defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String condition;
-        private String targetColumn;
-        private @Nullable String value;
+        private RecipeConditionExpression $;
 
         public Builder() {
-    	      // Empty
+            $ = new RecipeConditionExpression();
         }
 
         public Builder(RecipeConditionExpression defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.condition = defaults.condition;
-    	      this.targetColumn = defaults.targetColumn;
-    	      this.value = defaults.value;
+            $ = new RecipeConditionExpression(Objects.requireNonNull(defaults));
         }
 
         public Builder condition(String condition) {
-            this.condition = Objects.requireNonNull(condition);
+            $.condition = condition;
             return this;
         }
+
         public Builder targetColumn(String targetColumn) {
-            this.targetColumn = Objects.requireNonNull(targetColumn);
+            $.targetColumn = targetColumn;
             return this;
         }
+
         public Builder value(@Nullable String value) {
-            this.value = value;
+            $.value = value;
             return this;
-        }        public RecipeConditionExpression build() {
-            return new RecipeConditionExpression(condition, targetColumn, value);
+        }
+
+        public RecipeConditionExpression build() {
+            $.condition = Objects.requireNonNull($.condition, "expected parameter 'condition' to be non-null");
+            $.targetColumn = Objects.requireNonNull($.targetColumn, "expected parameter 'targetColumn' to be non-null");
+            return $;
         }
     }
+
 }

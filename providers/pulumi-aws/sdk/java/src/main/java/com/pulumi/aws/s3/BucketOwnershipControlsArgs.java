@@ -6,7 +6,6 @@ package com.pulumi.aws.s3;
 import com.pulumi.aws.s3.inputs.BucketOwnershipControlsRuleArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +19,7 @@ public final class BucketOwnershipControlsArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="bucket", required=true)
-      private final Output<String> bucket;
+    private Output<String> bucket;
 
     public Output<String> bucket() {
         return this.bucket;
@@ -31,63 +30,60 @@ public final class BucketOwnershipControlsArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="rule", required=true)
-      private final Output<BucketOwnershipControlsRuleArgs> rule;
+    private Output<BucketOwnershipControlsRuleArgs> rule;
 
     public Output<BucketOwnershipControlsRuleArgs> rule() {
         return this.rule;
     }
 
-    public BucketOwnershipControlsArgs(
-        Output<String> bucket,
-        Output<BucketOwnershipControlsRuleArgs> rule) {
-        this.bucket = Objects.requireNonNull(bucket, "expected parameter 'bucket' to be non-null");
-        this.rule = Objects.requireNonNull(rule, "expected parameter 'rule' to be non-null");
-    }
+    private BucketOwnershipControlsArgs() {}
 
-    private BucketOwnershipControlsArgs() {
-        this.bucket = Codegen.empty();
-        this.rule = Codegen.empty();
+    private BucketOwnershipControlsArgs(BucketOwnershipControlsArgs $) {
+        this.bucket = $.bucket;
+        this.rule = $.rule;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BucketOwnershipControlsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> bucket;
-        private Output<BucketOwnershipControlsRuleArgs> rule;
+        private BucketOwnershipControlsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new BucketOwnershipControlsArgs();
         }
 
         public Builder(BucketOwnershipControlsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.bucket = defaults.bucket;
-    	      this.rule = defaults.rule;
+            $ = new BucketOwnershipControlsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder bucket(Output<String> bucket) {
-            this.bucket = Objects.requireNonNull(bucket);
+            $.bucket = bucket;
             return this;
         }
+
         public Builder bucket(String bucket) {
-            this.bucket = Output.of(Objects.requireNonNull(bucket));
-            return this;
+            return bucket(Output.of(bucket));
         }
+
         public Builder rule(Output<BucketOwnershipControlsRuleArgs> rule) {
-            this.rule = Objects.requireNonNull(rule);
+            $.rule = rule;
             return this;
         }
+
         public Builder rule(BucketOwnershipControlsRuleArgs rule) {
-            this.rule = Output.of(Objects.requireNonNull(rule));
-            return this;
-        }        public BucketOwnershipControlsArgs build() {
-            return new BucketOwnershipControlsArgs(bucket, rule);
+            return rule(Output.of(rule));
+        }
+
+        public BucketOwnershipControlsArgs build() {
+            $.bucket = Objects.requireNonNull($.bucket, "expected parameter 'bucket' to be non-null");
+            $.rule = Objects.requireNonNull($.rule, "expected parameter 'rule' to be non-null");
+            return $;
         }
     }
+
 }

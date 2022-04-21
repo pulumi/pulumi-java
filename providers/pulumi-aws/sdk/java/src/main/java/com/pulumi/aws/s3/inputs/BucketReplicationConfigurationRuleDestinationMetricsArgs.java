@@ -5,10 +5,10 @@ package com.pulumi.aws.s3.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class BucketReplicationConfigurationRuleDestinationMetricsArgs exte
      * 
      */
     @Import(name="minutes")
-      private final @Nullable Output<Integer> minutes;
+    private @Nullable Output<Integer> minutes;
 
-    public Output<Integer> minutes() {
-        return this.minutes == null ? Codegen.empty() : this.minutes;
+    public Optional<Output<Integer>> minutes() {
+        return Optional.ofNullable(this.minutes);
     }
 
     /**
@@ -32,63 +32,58 @@ public final class BucketReplicationConfigurationRuleDestinationMetricsArgs exte
      * 
      */
     @Import(name="status")
-      private final @Nullable Output<String> status;
+    private @Nullable Output<String> status;
 
-    public Output<String> status() {
-        return this.status == null ? Codegen.empty() : this.status;
+    public Optional<Output<String>> status() {
+        return Optional.ofNullable(this.status);
     }
 
-    public BucketReplicationConfigurationRuleDestinationMetricsArgs(
-        @Nullable Output<Integer> minutes,
-        @Nullable Output<String> status) {
-        this.minutes = minutes;
-        this.status = status;
-    }
+    private BucketReplicationConfigurationRuleDestinationMetricsArgs() {}
 
-    private BucketReplicationConfigurationRuleDestinationMetricsArgs() {
-        this.minutes = Codegen.empty();
-        this.status = Codegen.empty();
+    private BucketReplicationConfigurationRuleDestinationMetricsArgs(BucketReplicationConfigurationRuleDestinationMetricsArgs $) {
+        this.minutes = $.minutes;
+        this.status = $.status;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BucketReplicationConfigurationRuleDestinationMetricsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> minutes;
-        private @Nullable Output<String> status;
+        private BucketReplicationConfigurationRuleDestinationMetricsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new BucketReplicationConfigurationRuleDestinationMetricsArgs();
         }
 
         public Builder(BucketReplicationConfigurationRuleDestinationMetricsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.minutes = defaults.minutes;
-    	      this.status = defaults.status;
+            $ = new BucketReplicationConfigurationRuleDestinationMetricsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder minutes(@Nullable Output<Integer> minutes) {
-            this.minutes = minutes;
+            $.minutes = minutes;
             return this;
         }
-        public Builder minutes(@Nullable Integer minutes) {
-            this.minutes = Codegen.ofNullable(minutes);
-            return this;
+
+        public Builder minutes(Integer minutes) {
+            return minutes(Output.of(minutes));
         }
+
         public Builder status(@Nullable Output<String> status) {
-            this.status = status;
+            $.status = status;
             return this;
         }
-        public Builder status(@Nullable String status) {
-            this.status = Codegen.ofNullable(status);
-            return this;
-        }        public BucketReplicationConfigurationRuleDestinationMetricsArgs build() {
-            return new BucketReplicationConfigurationRuleDestinationMetricsArgs(minutes, status);
+
+        public Builder status(String status) {
+            return status(Output.of(status));
+        }
+
+        public BucketReplicationConfigurationRuleDestinationMetricsArgs build() {
+            return $;
         }
     }
+
 }

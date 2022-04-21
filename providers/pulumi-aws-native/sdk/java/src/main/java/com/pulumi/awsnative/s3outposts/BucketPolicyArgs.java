@@ -5,7 +5,6 @@ package com.pulumi.awsnative.s3outposts;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +19,7 @@ public final class BucketPolicyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="bucket", required=true)
-      private final Output<String> bucket;
+    private Output<String> bucket;
 
     public Output<String> bucket() {
         return this.bucket;
@@ -31,63 +30,60 @@ public final class BucketPolicyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="policyDocument", required=true)
-      private final Output<Object> policyDocument;
+    private Output<Object> policyDocument;
 
     public Output<Object> policyDocument() {
         return this.policyDocument;
     }
 
-    public BucketPolicyArgs(
-        Output<String> bucket,
-        Output<Object> policyDocument) {
-        this.bucket = Objects.requireNonNull(bucket, "expected parameter 'bucket' to be non-null");
-        this.policyDocument = Objects.requireNonNull(policyDocument, "expected parameter 'policyDocument' to be non-null");
-    }
+    private BucketPolicyArgs() {}
 
-    private BucketPolicyArgs() {
-        this.bucket = Codegen.empty();
-        this.policyDocument = Codegen.empty();
+    private BucketPolicyArgs(BucketPolicyArgs $) {
+        this.bucket = $.bucket;
+        this.policyDocument = $.policyDocument;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BucketPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> bucket;
-        private Output<Object> policyDocument;
+        private BucketPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new BucketPolicyArgs();
         }
 
         public Builder(BucketPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.bucket = defaults.bucket;
-    	      this.policyDocument = defaults.policyDocument;
+            $ = new BucketPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder bucket(Output<String> bucket) {
-            this.bucket = Objects.requireNonNull(bucket);
+            $.bucket = bucket;
             return this;
         }
+
         public Builder bucket(String bucket) {
-            this.bucket = Output.of(Objects.requireNonNull(bucket));
-            return this;
+            return bucket(Output.of(bucket));
         }
+
         public Builder policyDocument(Output<Object> policyDocument) {
-            this.policyDocument = Objects.requireNonNull(policyDocument);
+            $.policyDocument = policyDocument;
             return this;
         }
+
         public Builder policyDocument(Object policyDocument) {
-            this.policyDocument = Output.of(Objects.requireNonNull(policyDocument));
-            return this;
-        }        public BucketPolicyArgs build() {
-            return new BucketPolicyArgs(bucket, policyDocument);
+            return policyDocument(Output.of(policyDocument));
+        }
+
+        public BucketPolicyArgs build() {
+            $.bucket = Objects.requireNonNull($.bucket, "expected parameter 'bucket' to be non-null");
+            $.policyDocument = Objects.requireNonNull($.policyDocument, "expected parameter 'policyDocument' to be non-null");
+            return $;
         }
     }
+
 }

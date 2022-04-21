@@ -5,7 +5,6 @@ package com.pulumi.googlenative.run_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.run_v1.inputs.ContainerArgs;
 import com.pulumi.googlenative.run_v1.inputs.LocalObjectReferenceArgs;
 import com.pulumi.googlenative.run_v1.inputs.VolumeArgs;
@@ -14,6 +13,7 @@ import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -30,10 +30,10 @@ public final class RevisionSpecArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="containerConcurrency")
-      private final @Nullable Output<Integer> containerConcurrency;
+    private @Nullable Output<Integer> containerConcurrency;
 
-    public Output<Integer> containerConcurrency() {
-        return this.containerConcurrency == null ? Codegen.empty() : this.containerConcurrency;
+    public Optional<Output<Integer>> containerConcurrency() {
+        return Optional.ofNullable(this.containerConcurrency);
     }
 
     /**
@@ -41,10 +41,10 @@ public final class RevisionSpecArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="containers")
-      private final @Nullable Output<List<ContainerArgs>> containers;
+    private @Nullable Output<List<ContainerArgs>> containers;
 
-    public Output<List<ContainerArgs>> containers() {
-        return this.containers == null ? Codegen.empty() : this.containers;
+    public Optional<Output<List<ContainerArgs>>> containers() {
+        return Optional.ofNullable(this.containers);
     }
 
     /**
@@ -52,10 +52,10 @@ public final class RevisionSpecArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="enableServiceLinks")
-      private final @Nullable Output<Boolean> enableServiceLinks;
+    private @Nullable Output<Boolean> enableServiceLinks;
 
-    public Output<Boolean> enableServiceLinks() {
-        return this.enableServiceLinks == null ? Codegen.empty() : this.enableServiceLinks;
+    public Optional<Output<Boolean>> enableServiceLinks() {
+        return Optional.ofNullable(this.enableServiceLinks);
     }
 
     /**
@@ -63,10 +63,10 @@ public final class RevisionSpecArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="imagePullSecrets")
-      private final @Nullable Output<List<LocalObjectReferenceArgs>> imagePullSecrets;
+    private @Nullable Output<List<LocalObjectReferenceArgs>> imagePullSecrets;
 
-    public Output<List<LocalObjectReferenceArgs>> imagePullSecrets() {
-        return this.imagePullSecrets == null ? Codegen.empty() : this.imagePullSecrets;
+    public Optional<Output<List<LocalObjectReferenceArgs>>> imagePullSecrets() {
+        return Optional.ofNullable(this.imagePullSecrets);
     }
 
     /**
@@ -74,10 +74,10 @@ public final class RevisionSpecArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="serviceAccountName")
-      private final @Nullable Output<String> serviceAccountName;
+    private @Nullable Output<String> serviceAccountName;
 
-    public Output<String> serviceAccountName() {
-        return this.serviceAccountName == null ? Codegen.empty() : this.serviceAccountName;
+    public Optional<Output<String>> serviceAccountName() {
+        return Optional.ofNullable(this.serviceAccountName);
     }
 
     /**
@@ -85,144 +85,127 @@ public final class RevisionSpecArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="timeoutSeconds")
-      private final @Nullable Output<Integer> timeoutSeconds;
+    private @Nullable Output<Integer> timeoutSeconds;
 
-    public Output<Integer> timeoutSeconds() {
-        return this.timeoutSeconds == null ? Codegen.empty() : this.timeoutSeconds;
+    public Optional<Output<Integer>> timeoutSeconds() {
+        return Optional.ofNullable(this.timeoutSeconds);
     }
 
     @Import(name="volumes")
-      private final @Nullable Output<List<VolumeArgs>> volumes;
+    private @Nullable Output<List<VolumeArgs>> volumes;
 
-    public Output<List<VolumeArgs>> volumes() {
-        return this.volumes == null ? Codegen.empty() : this.volumes;
+    public Optional<Output<List<VolumeArgs>>> volumes() {
+        return Optional.ofNullable(this.volumes);
     }
 
-    public RevisionSpecArgs(
-        @Nullable Output<Integer> containerConcurrency,
-        @Nullable Output<List<ContainerArgs>> containers,
-        @Nullable Output<Boolean> enableServiceLinks,
-        @Nullable Output<List<LocalObjectReferenceArgs>> imagePullSecrets,
-        @Nullable Output<String> serviceAccountName,
-        @Nullable Output<Integer> timeoutSeconds,
-        @Nullable Output<List<VolumeArgs>> volumes) {
-        this.containerConcurrency = containerConcurrency;
-        this.containers = containers;
-        this.enableServiceLinks = enableServiceLinks;
-        this.imagePullSecrets = imagePullSecrets;
-        this.serviceAccountName = serviceAccountName;
-        this.timeoutSeconds = timeoutSeconds;
-        this.volumes = volumes;
-    }
+    private RevisionSpecArgs() {}
 
-    private RevisionSpecArgs() {
-        this.containerConcurrency = Codegen.empty();
-        this.containers = Codegen.empty();
-        this.enableServiceLinks = Codegen.empty();
-        this.imagePullSecrets = Codegen.empty();
-        this.serviceAccountName = Codegen.empty();
-        this.timeoutSeconds = Codegen.empty();
-        this.volumes = Codegen.empty();
+    private RevisionSpecArgs(RevisionSpecArgs $) {
+        this.containerConcurrency = $.containerConcurrency;
+        this.containers = $.containers;
+        this.enableServiceLinks = $.enableServiceLinks;
+        this.imagePullSecrets = $.imagePullSecrets;
+        this.serviceAccountName = $.serviceAccountName;
+        this.timeoutSeconds = $.timeoutSeconds;
+        this.volumes = $.volumes;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RevisionSpecArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> containerConcurrency;
-        private @Nullable Output<List<ContainerArgs>> containers;
-        private @Nullable Output<Boolean> enableServiceLinks;
-        private @Nullable Output<List<LocalObjectReferenceArgs>> imagePullSecrets;
-        private @Nullable Output<String> serviceAccountName;
-        private @Nullable Output<Integer> timeoutSeconds;
-        private @Nullable Output<List<VolumeArgs>> volumes;
+        private RevisionSpecArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RevisionSpecArgs();
         }
 
         public Builder(RevisionSpecArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.containerConcurrency = defaults.containerConcurrency;
-    	      this.containers = defaults.containers;
-    	      this.enableServiceLinks = defaults.enableServiceLinks;
-    	      this.imagePullSecrets = defaults.imagePullSecrets;
-    	      this.serviceAccountName = defaults.serviceAccountName;
-    	      this.timeoutSeconds = defaults.timeoutSeconds;
-    	      this.volumes = defaults.volumes;
+            $ = new RevisionSpecArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder containerConcurrency(@Nullable Output<Integer> containerConcurrency) {
-            this.containerConcurrency = containerConcurrency;
+            $.containerConcurrency = containerConcurrency;
             return this;
         }
-        public Builder containerConcurrency(@Nullable Integer containerConcurrency) {
-            this.containerConcurrency = Codegen.ofNullable(containerConcurrency);
-            return this;
+
+        public Builder containerConcurrency(Integer containerConcurrency) {
+            return containerConcurrency(Output.of(containerConcurrency));
         }
+
         public Builder containers(@Nullable Output<List<ContainerArgs>> containers) {
-            this.containers = containers;
+            $.containers = containers;
             return this;
         }
-        public Builder containers(@Nullable List<ContainerArgs> containers) {
-            this.containers = Codegen.ofNullable(containers);
-            return this;
+
+        public Builder containers(List<ContainerArgs> containers) {
+            return containers(Output.of(containers));
         }
+
         public Builder containers(ContainerArgs... containers) {
             return containers(List.of(containers));
         }
+
         public Builder enableServiceLinks(@Nullable Output<Boolean> enableServiceLinks) {
-            this.enableServiceLinks = enableServiceLinks;
+            $.enableServiceLinks = enableServiceLinks;
             return this;
         }
-        public Builder enableServiceLinks(@Nullable Boolean enableServiceLinks) {
-            this.enableServiceLinks = Codegen.ofNullable(enableServiceLinks);
-            return this;
+
+        public Builder enableServiceLinks(Boolean enableServiceLinks) {
+            return enableServiceLinks(Output.of(enableServiceLinks));
         }
+
         public Builder imagePullSecrets(@Nullable Output<List<LocalObjectReferenceArgs>> imagePullSecrets) {
-            this.imagePullSecrets = imagePullSecrets;
+            $.imagePullSecrets = imagePullSecrets;
             return this;
         }
-        public Builder imagePullSecrets(@Nullable List<LocalObjectReferenceArgs> imagePullSecrets) {
-            this.imagePullSecrets = Codegen.ofNullable(imagePullSecrets);
-            return this;
+
+        public Builder imagePullSecrets(List<LocalObjectReferenceArgs> imagePullSecrets) {
+            return imagePullSecrets(Output.of(imagePullSecrets));
         }
+
         public Builder imagePullSecrets(LocalObjectReferenceArgs... imagePullSecrets) {
             return imagePullSecrets(List.of(imagePullSecrets));
         }
+
         public Builder serviceAccountName(@Nullable Output<String> serviceAccountName) {
-            this.serviceAccountName = serviceAccountName;
+            $.serviceAccountName = serviceAccountName;
             return this;
         }
-        public Builder serviceAccountName(@Nullable String serviceAccountName) {
-            this.serviceAccountName = Codegen.ofNullable(serviceAccountName);
-            return this;
+
+        public Builder serviceAccountName(String serviceAccountName) {
+            return serviceAccountName(Output.of(serviceAccountName));
         }
+
         public Builder timeoutSeconds(@Nullable Output<Integer> timeoutSeconds) {
-            this.timeoutSeconds = timeoutSeconds;
+            $.timeoutSeconds = timeoutSeconds;
             return this;
         }
-        public Builder timeoutSeconds(@Nullable Integer timeoutSeconds) {
-            this.timeoutSeconds = Codegen.ofNullable(timeoutSeconds);
-            return this;
+
+        public Builder timeoutSeconds(Integer timeoutSeconds) {
+            return timeoutSeconds(Output.of(timeoutSeconds));
         }
+
         public Builder volumes(@Nullable Output<List<VolumeArgs>> volumes) {
-            this.volumes = volumes;
+            $.volumes = volumes;
             return this;
         }
-        public Builder volumes(@Nullable List<VolumeArgs> volumes) {
-            this.volumes = Codegen.ofNullable(volumes);
-            return this;
+
+        public Builder volumes(List<VolumeArgs> volumes) {
+            return volumes(Output.of(volumes));
         }
+
         public Builder volumes(VolumeArgs... volumes) {
             return volumes(List.of(volumes));
-        }        public RevisionSpecArgs build() {
-            return new RevisionSpecArgs(containerConcurrency, containers, enableServiceLinks, imagePullSecrets, serviceAccountName, timeoutSeconds, volumes);
+        }
+
+        public RevisionSpecArgs build() {
+            return $;
         }
     }
+
 }

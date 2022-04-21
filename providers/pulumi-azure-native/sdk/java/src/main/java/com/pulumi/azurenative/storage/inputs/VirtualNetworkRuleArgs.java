@@ -11,6 +11,7 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +28,10 @@ public final class VirtualNetworkRuleArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="action")
-      private final @Nullable Output<Action> action;
+    private @Nullable Output<Action> action;
 
-    public Output<Action> action() {
-        return this.action == null ? Codegen.empty() : this.action;
+    public Optional<Output<Action>> action() {
+        return Optional.ofNullable(this.action);
     }
 
     /**
@@ -38,10 +39,10 @@ public final class VirtualNetworkRuleArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="state")
-      private final @Nullable Output<Either<String,State>> state;
+    private @Nullable Output<Either<String,State>> state;
 
-    public Output<Either<String,State>> state() {
-        return this.state == null ? Codegen.empty() : this.state;
+    public Optional<Output<Either<String,State>>> state() {
+        return Optional.ofNullable(this.state);
     }
 
     /**
@@ -49,76 +50,70 @@ public final class VirtualNetworkRuleArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="virtualNetworkResourceId", required=true)
-      private final Output<String> virtualNetworkResourceId;
+    private Output<String> virtualNetworkResourceId;
 
     public Output<String> virtualNetworkResourceId() {
         return this.virtualNetworkResourceId;
     }
 
-    public VirtualNetworkRuleArgs(
-        @Nullable Output<Action> action,
-        @Nullable Output<Either<String,State>> state,
-        Output<String> virtualNetworkResourceId) {
-        this.action = Codegen.objectProp("action", Action.class).output().arg(action).def(Action.Allow).getNullable();
-        this.state = state;
-        this.virtualNetworkResourceId = Objects.requireNonNull(virtualNetworkResourceId, "expected parameter 'virtualNetworkResourceId' to be non-null");
-    }
+    private VirtualNetworkRuleArgs() {}
 
-    private VirtualNetworkRuleArgs() {
-        this.action = Codegen.empty();
-        this.state = Codegen.empty();
-        this.virtualNetworkResourceId = Codegen.empty();
+    private VirtualNetworkRuleArgs(VirtualNetworkRuleArgs $) {
+        this.action = $.action;
+        this.state = $.state;
+        this.virtualNetworkResourceId = $.virtualNetworkResourceId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VirtualNetworkRuleArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Action> action;
-        private @Nullable Output<Either<String,State>> state;
-        private Output<String> virtualNetworkResourceId;
+        private VirtualNetworkRuleArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new VirtualNetworkRuleArgs();
         }
 
         public Builder(VirtualNetworkRuleArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.action = defaults.action;
-    	      this.state = defaults.state;
-    	      this.virtualNetworkResourceId = defaults.virtualNetworkResourceId;
+            $ = new VirtualNetworkRuleArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder action(@Nullable Output<Action> action) {
-            this.action = action;
+            $.action = action;
             return this;
         }
-        public Builder action(@Nullable Action action) {
-            this.action = Codegen.ofNullable(action);
-            return this;
+
+        public Builder action(Action action) {
+            return action(Output.of(action));
         }
+
         public Builder state(@Nullable Output<Either<String,State>> state) {
-            this.state = state;
+            $.state = state;
             return this;
         }
-        public Builder state(@Nullable Either<String,State> state) {
-            this.state = Codegen.ofNullable(state);
-            return this;
+
+        public Builder state(Either<String,State> state) {
+            return state(Output.of(state));
         }
+
         public Builder virtualNetworkResourceId(Output<String> virtualNetworkResourceId) {
-            this.virtualNetworkResourceId = Objects.requireNonNull(virtualNetworkResourceId);
+            $.virtualNetworkResourceId = virtualNetworkResourceId;
             return this;
         }
+
         public Builder virtualNetworkResourceId(String virtualNetworkResourceId) {
-            this.virtualNetworkResourceId = Output.of(Objects.requireNonNull(virtualNetworkResourceId));
-            return this;
-        }        public VirtualNetworkRuleArgs build() {
-            return new VirtualNetworkRuleArgs(action, state, virtualNetworkResourceId);
+            return virtualNetworkResourceId(Output.of(virtualNetworkResourceId));
+        }
+
+        public VirtualNetworkRuleArgs build() {
+            $.action = Codegen.objectProp("action", Action.class).output().arg($.action).def(Action.Allow).getNullable();
+            $.virtualNetworkResourceId = Objects.requireNonNull($.virtualNetworkResourceId, "expected parameter 'virtualNetworkResourceId' to be non-null");
+            return $;
         }
     }
+
 }

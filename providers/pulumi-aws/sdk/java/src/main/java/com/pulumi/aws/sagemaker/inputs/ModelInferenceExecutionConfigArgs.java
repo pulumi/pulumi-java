@@ -5,7 +5,6 @@ package com.pulumi.aws.sagemaker.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,49 +18,49 @@ public final class ModelInferenceExecutionConfigArgs extends com.pulumi.resource
      * 
      */
     @Import(name="mode", required=true)
-      private final Output<String> mode;
+    private Output<String> mode;
 
     public Output<String> mode() {
         return this.mode;
     }
 
-    public ModelInferenceExecutionConfigArgs(Output<String> mode) {
-        this.mode = Objects.requireNonNull(mode, "expected parameter 'mode' to be non-null");
-    }
+    private ModelInferenceExecutionConfigArgs() {}
 
-    private ModelInferenceExecutionConfigArgs() {
-        this.mode = Codegen.empty();
+    private ModelInferenceExecutionConfigArgs(ModelInferenceExecutionConfigArgs $) {
+        this.mode = $.mode;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ModelInferenceExecutionConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> mode;
+        private ModelInferenceExecutionConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ModelInferenceExecutionConfigArgs();
         }
 
         public Builder(ModelInferenceExecutionConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.mode = defaults.mode;
+            $ = new ModelInferenceExecutionConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder mode(Output<String> mode) {
-            this.mode = Objects.requireNonNull(mode);
+            $.mode = mode;
             return this;
         }
+
         public Builder mode(String mode) {
-            this.mode = Output.of(Objects.requireNonNull(mode));
-            return this;
-        }        public ModelInferenceExecutionConfigArgs build() {
-            return new ModelInferenceExecutionConfigArgs(mode);
+            return mode(Output.of(mode));
+        }
+
+        public ModelInferenceExecutionConfigArgs build() {
+            $.mode = Objects.requireNonNull($.mode, "expected parameter 'mode' to be non-null");
+            return $;
         }
     }
+
 }

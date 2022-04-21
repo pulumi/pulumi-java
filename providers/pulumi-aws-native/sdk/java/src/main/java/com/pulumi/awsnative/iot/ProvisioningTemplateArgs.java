@@ -7,11 +7,11 @@ import com.pulumi.awsnative.iot.inputs.ProvisioningTemplateProvisioningHookArgs;
 import com.pulumi.awsnative.iot.inputs.ProvisioningTemplateTagArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,173 +20,156 @@ public final class ProvisioningTemplateArgs extends com.pulumi.resources.Resourc
     public static final ProvisioningTemplateArgs Empty = new ProvisioningTemplateArgs();
 
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     @Import(name="enabled")
-      private final @Nullable Output<Boolean> enabled;
+    private @Nullable Output<Boolean> enabled;
 
-    public Output<Boolean> enabled() {
-        return this.enabled == null ? Codegen.empty() : this.enabled;
+    public Optional<Output<Boolean>> enabled() {
+        return Optional.ofNullable(this.enabled);
     }
 
     @Import(name="preProvisioningHook")
-      private final @Nullable Output<ProvisioningTemplateProvisioningHookArgs> preProvisioningHook;
+    private @Nullable Output<ProvisioningTemplateProvisioningHookArgs> preProvisioningHook;
 
-    public Output<ProvisioningTemplateProvisioningHookArgs> preProvisioningHook() {
-        return this.preProvisioningHook == null ? Codegen.empty() : this.preProvisioningHook;
+    public Optional<Output<ProvisioningTemplateProvisioningHookArgs>> preProvisioningHook() {
+        return Optional.ofNullable(this.preProvisioningHook);
     }
 
     @Import(name="provisioningRoleArn", required=true)
-      private final Output<String> provisioningRoleArn;
+    private Output<String> provisioningRoleArn;
 
     public Output<String> provisioningRoleArn() {
         return this.provisioningRoleArn;
     }
 
     @Import(name="tags")
-      private final @Nullable Output<List<ProvisioningTemplateTagArgs>> tags;
+    private @Nullable Output<List<ProvisioningTemplateTagArgs>> tags;
 
-    public Output<List<ProvisioningTemplateTagArgs>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<List<ProvisioningTemplateTagArgs>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     @Import(name="templateBody", required=true)
-      private final Output<String> templateBody;
+    private Output<String> templateBody;
 
     public Output<String> templateBody() {
         return this.templateBody;
     }
 
     @Import(name="templateName")
-      private final @Nullable Output<String> templateName;
+    private @Nullable Output<String> templateName;
 
-    public Output<String> templateName() {
-        return this.templateName == null ? Codegen.empty() : this.templateName;
+    public Optional<Output<String>> templateName() {
+        return Optional.ofNullable(this.templateName);
     }
 
-    public ProvisioningTemplateArgs(
-        @Nullable Output<String> description,
-        @Nullable Output<Boolean> enabled,
-        @Nullable Output<ProvisioningTemplateProvisioningHookArgs> preProvisioningHook,
-        Output<String> provisioningRoleArn,
-        @Nullable Output<List<ProvisioningTemplateTagArgs>> tags,
-        Output<String> templateBody,
-        @Nullable Output<String> templateName) {
-        this.description = description;
-        this.enabled = enabled;
-        this.preProvisioningHook = preProvisioningHook;
-        this.provisioningRoleArn = Objects.requireNonNull(provisioningRoleArn, "expected parameter 'provisioningRoleArn' to be non-null");
-        this.tags = tags;
-        this.templateBody = Objects.requireNonNull(templateBody, "expected parameter 'templateBody' to be non-null");
-        this.templateName = templateName;
-    }
+    private ProvisioningTemplateArgs() {}
 
-    private ProvisioningTemplateArgs() {
-        this.description = Codegen.empty();
-        this.enabled = Codegen.empty();
-        this.preProvisioningHook = Codegen.empty();
-        this.provisioningRoleArn = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.templateBody = Codegen.empty();
-        this.templateName = Codegen.empty();
+    private ProvisioningTemplateArgs(ProvisioningTemplateArgs $) {
+        this.description = $.description;
+        this.enabled = $.enabled;
+        this.preProvisioningHook = $.preProvisioningHook;
+        this.provisioningRoleArn = $.provisioningRoleArn;
+        this.tags = $.tags;
+        this.templateBody = $.templateBody;
+        this.templateName = $.templateName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ProvisioningTemplateArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> description;
-        private @Nullable Output<Boolean> enabled;
-        private @Nullable Output<ProvisioningTemplateProvisioningHookArgs> preProvisioningHook;
-        private Output<String> provisioningRoleArn;
-        private @Nullable Output<List<ProvisioningTemplateTagArgs>> tags;
-        private Output<String> templateBody;
-        private @Nullable Output<String> templateName;
+        private ProvisioningTemplateArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ProvisioningTemplateArgs();
         }
 
         public Builder(ProvisioningTemplateArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.description = defaults.description;
-    	      this.enabled = defaults.enabled;
-    	      this.preProvisioningHook = defaults.preProvisioningHook;
-    	      this.provisioningRoleArn = defaults.provisioningRoleArn;
-    	      this.tags = defaults.tags;
-    	      this.templateBody = defaults.templateBody;
-    	      this.templateName = defaults.templateName;
+            $ = new ProvisioningTemplateArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder enabled(@Nullable Output<Boolean> enabled) {
-            this.enabled = enabled;
+            $.enabled = enabled;
             return this;
         }
-        public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Codegen.ofNullable(enabled);
-            return this;
+
+        public Builder enabled(Boolean enabled) {
+            return enabled(Output.of(enabled));
         }
+
         public Builder preProvisioningHook(@Nullable Output<ProvisioningTemplateProvisioningHookArgs> preProvisioningHook) {
-            this.preProvisioningHook = preProvisioningHook;
+            $.preProvisioningHook = preProvisioningHook;
             return this;
         }
-        public Builder preProvisioningHook(@Nullable ProvisioningTemplateProvisioningHookArgs preProvisioningHook) {
-            this.preProvisioningHook = Codegen.ofNullable(preProvisioningHook);
-            return this;
+
+        public Builder preProvisioningHook(ProvisioningTemplateProvisioningHookArgs preProvisioningHook) {
+            return preProvisioningHook(Output.of(preProvisioningHook));
         }
+
         public Builder provisioningRoleArn(Output<String> provisioningRoleArn) {
-            this.provisioningRoleArn = Objects.requireNonNull(provisioningRoleArn);
+            $.provisioningRoleArn = provisioningRoleArn;
             return this;
         }
+
         public Builder provisioningRoleArn(String provisioningRoleArn) {
-            this.provisioningRoleArn = Output.of(Objects.requireNonNull(provisioningRoleArn));
-            return this;
+            return provisioningRoleArn(Output.of(provisioningRoleArn));
         }
+
         public Builder tags(@Nullable Output<List<ProvisioningTemplateTagArgs>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable List<ProvisioningTemplateTagArgs> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(List<ProvisioningTemplateTagArgs> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tags(ProvisioningTemplateTagArgs... tags) {
             return tags(List.of(tags));
         }
+
         public Builder templateBody(Output<String> templateBody) {
-            this.templateBody = Objects.requireNonNull(templateBody);
+            $.templateBody = templateBody;
             return this;
         }
+
         public Builder templateBody(String templateBody) {
-            this.templateBody = Output.of(Objects.requireNonNull(templateBody));
-            return this;
+            return templateBody(Output.of(templateBody));
         }
+
         public Builder templateName(@Nullable Output<String> templateName) {
-            this.templateName = templateName;
+            $.templateName = templateName;
             return this;
         }
-        public Builder templateName(@Nullable String templateName) {
-            this.templateName = Codegen.ofNullable(templateName);
-            return this;
-        }        public ProvisioningTemplateArgs build() {
-            return new ProvisioningTemplateArgs(description, enabled, preProvisioningHook, provisioningRoleArn, tags, templateBody, templateName);
+
+        public Builder templateName(String templateName) {
+            return templateName(Output.of(templateName));
+        }
+
+        public ProvisioningTemplateArgs build() {
+            $.provisioningRoleArn = Objects.requireNonNull($.provisioningRoleArn, "expected parameter 'provisioningRoleArn' to be non-null");
+            $.templateBody = Objects.requireNonNull($.templateBody, "expected parameter 'templateBody' to be non-null");
+            return $;
         }
     }
+
 }

@@ -19,45 +19,44 @@ public final class ControllerConnectionDetailsResponse extends com.pulumi.resour
      * 
      */
     @Import(name="orchestratorSpecificConnectionDetails")
-      private final @Nullable KubernetesConnectionDetailsResponse orchestratorSpecificConnectionDetails;
+    private @Nullable KubernetesConnectionDetailsResponse orchestratorSpecificConnectionDetails;
 
     public Optional<KubernetesConnectionDetailsResponse> orchestratorSpecificConnectionDetails() {
-        return this.orchestratorSpecificConnectionDetails == null ? Optional.empty() : Optional.ofNullable(this.orchestratorSpecificConnectionDetails);
+        return Optional.ofNullable(this.orchestratorSpecificConnectionDetails);
     }
 
-    public ControllerConnectionDetailsResponse(@Nullable KubernetesConnectionDetailsResponse orchestratorSpecificConnectionDetails) {
-        this.orchestratorSpecificConnectionDetails = orchestratorSpecificConnectionDetails;
-    }
+    private ControllerConnectionDetailsResponse() {}
 
-    private ControllerConnectionDetailsResponse() {
-        this.orchestratorSpecificConnectionDetails = null;
+    private ControllerConnectionDetailsResponse(ControllerConnectionDetailsResponse $) {
+        this.orchestratorSpecificConnectionDetails = $.orchestratorSpecificConnectionDetails;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ControllerConnectionDetailsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable KubernetesConnectionDetailsResponse orchestratorSpecificConnectionDetails;
+        private ControllerConnectionDetailsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ControllerConnectionDetailsResponse();
         }
 
         public Builder(ControllerConnectionDetailsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.orchestratorSpecificConnectionDetails = defaults.orchestratorSpecificConnectionDetails;
+            $ = new ControllerConnectionDetailsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder orchestratorSpecificConnectionDetails(@Nullable KubernetesConnectionDetailsResponse orchestratorSpecificConnectionDetails) {
-            this.orchestratorSpecificConnectionDetails = orchestratorSpecificConnectionDetails;
+            $.orchestratorSpecificConnectionDetails = orchestratorSpecificConnectionDetails;
             return this;
-        }        public ControllerConnectionDetailsResponse build() {
-            return new ControllerConnectionDetailsResponse(orchestratorSpecificConnectionDetails);
+        }
+
+        public ControllerConnectionDetailsResponse build() {
+            return $;
         }
     }
+
 }

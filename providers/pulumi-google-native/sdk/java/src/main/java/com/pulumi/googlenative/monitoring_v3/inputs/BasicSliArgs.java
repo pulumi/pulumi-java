@@ -5,12 +5,12 @@ package com.pulumi.googlenative.monitoring_v3.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.monitoring_v3.inputs.AvailabilityCriteriaArgs;
 import com.pulumi.googlenative.monitoring_v3.inputs.LatencyCriteriaArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +27,10 @@ public final class BasicSliArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="availability")
-      private final @Nullable Output<AvailabilityCriteriaArgs> availability;
+    private @Nullable Output<AvailabilityCriteriaArgs> availability;
 
-    public Output<AvailabilityCriteriaArgs> availability() {
-        return this.availability == null ? Codegen.empty() : this.availability;
+    public Optional<Output<AvailabilityCriteriaArgs>> availability() {
+        return Optional.ofNullable(this.availability);
     }
 
     /**
@@ -38,10 +38,10 @@ public final class BasicSliArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="latency")
-      private final @Nullable Output<LatencyCriteriaArgs> latency;
+    private @Nullable Output<LatencyCriteriaArgs> latency;
 
-    public Output<LatencyCriteriaArgs> latency() {
-        return this.latency == null ? Codegen.empty() : this.latency;
+    public Optional<Output<LatencyCriteriaArgs>> latency() {
+        return Optional.ofNullable(this.latency);
     }
 
     /**
@@ -49,10 +49,10 @@ public final class BasicSliArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="location")
-      private final @Nullable Output<List<String>> location;
+    private @Nullable Output<List<String>> location;
 
-    public Output<List<String>> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<List<String>>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -60,10 +60,10 @@ public final class BasicSliArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="method")
-      private final @Nullable Output<List<String>> method;
+    private @Nullable Output<List<String>> method;
 
-    public Output<List<String>> method() {
-        return this.method == null ? Codegen.empty() : this.method;
+    public Optional<Output<List<String>>> method() {
+        return Optional.ofNullable(this.method);
     }
 
     /**
@@ -71,111 +71,100 @@ public final class BasicSliArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="version")
-      private final @Nullable Output<List<String>> version;
+    private @Nullable Output<List<String>> version;
 
-    public Output<List<String>> version() {
-        return this.version == null ? Codegen.empty() : this.version;
+    public Optional<Output<List<String>>> version() {
+        return Optional.ofNullable(this.version);
     }
 
-    public BasicSliArgs(
-        @Nullable Output<AvailabilityCriteriaArgs> availability,
-        @Nullable Output<LatencyCriteriaArgs> latency,
-        @Nullable Output<List<String>> location,
-        @Nullable Output<List<String>> method,
-        @Nullable Output<List<String>> version) {
-        this.availability = availability;
-        this.latency = latency;
-        this.location = location;
-        this.method = method;
-        this.version = version;
-    }
+    private BasicSliArgs() {}
 
-    private BasicSliArgs() {
-        this.availability = Codegen.empty();
-        this.latency = Codegen.empty();
-        this.location = Codegen.empty();
-        this.method = Codegen.empty();
-        this.version = Codegen.empty();
+    private BasicSliArgs(BasicSliArgs $) {
+        this.availability = $.availability;
+        this.latency = $.latency;
+        this.location = $.location;
+        this.method = $.method;
+        this.version = $.version;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BasicSliArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<AvailabilityCriteriaArgs> availability;
-        private @Nullable Output<LatencyCriteriaArgs> latency;
-        private @Nullable Output<List<String>> location;
-        private @Nullable Output<List<String>> method;
-        private @Nullable Output<List<String>> version;
+        private BasicSliArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new BasicSliArgs();
         }
 
         public Builder(BasicSliArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.availability = defaults.availability;
-    	      this.latency = defaults.latency;
-    	      this.location = defaults.location;
-    	      this.method = defaults.method;
-    	      this.version = defaults.version;
+            $ = new BasicSliArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder availability(@Nullable Output<AvailabilityCriteriaArgs> availability) {
-            this.availability = availability;
+            $.availability = availability;
             return this;
         }
-        public Builder availability(@Nullable AvailabilityCriteriaArgs availability) {
-            this.availability = Codegen.ofNullable(availability);
-            return this;
+
+        public Builder availability(AvailabilityCriteriaArgs availability) {
+            return availability(Output.of(availability));
         }
+
         public Builder latency(@Nullable Output<LatencyCriteriaArgs> latency) {
-            this.latency = latency;
+            $.latency = latency;
             return this;
         }
-        public Builder latency(@Nullable LatencyCriteriaArgs latency) {
-            this.latency = Codegen.ofNullable(latency);
-            return this;
+
+        public Builder latency(LatencyCriteriaArgs latency) {
+            return latency(Output.of(latency));
         }
+
         public Builder location(@Nullable Output<List<String>> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable List<String> location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(List<String> location) {
+            return location(Output.of(location));
         }
+
         public Builder location(String... location) {
             return location(List.of(location));
         }
+
         public Builder method(@Nullable Output<List<String>> method) {
-            this.method = method;
+            $.method = method;
             return this;
         }
-        public Builder method(@Nullable List<String> method) {
-            this.method = Codegen.ofNullable(method);
-            return this;
+
+        public Builder method(List<String> method) {
+            return method(Output.of(method));
         }
+
         public Builder method(String... method) {
             return method(List.of(method));
         }
+
         public Builder version(@Nullable Output<List<String>> version) {
-            this.version = version;
+            $.version = version;
             return this;
         }
-        public Builder version(@Nullable List<String> version) {
-            this.version = Codegen.ofNullable(version);
-            return this;
+
+        public Builder version(List<String> version) {
+            return version(Output.of(version));
         }
+
         public Builder version(String... version) {
             return version(List.of(version));
-        }        public BasicSliArgs build() {
-            return new BasicSliArgs(availability, latency, location, method, version);
+        }
+
+        public BasicSliArgs build() {
+            return $;
         }
     }
+
 }

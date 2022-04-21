@@ -22,7 +22,7 @@ public final class AuthenticatorGroupsConfigResponse extends com.pulumi.resource
      * 
      */
     @Import(name="enabled", required=true)
-      private final Boolean enabled;
+    private Boolean enabled;
 
     public Boolean enabled() {
         return this.enabled;
@@ -33,55 +33,52 @@ public final class AuthenticatorGroupsConfigResponse extends com.pulumi.resource
      * 
      */
     @Import(name="securityGroup", required=true)
-      private final String securityGroup;
+    private String securityGroup;
 
     public String securityGroup() {
         return this.securityGroup;
     }
 
-    public AuthenticatorGroupsConfigResponse(
-        Boolean enabled,
-        String securityGroup) {
-        this.enabled = Objects.requireNonNull(enabled, "expected parameter 'enabled' to be non-null");
-        this.securityGroup = Objects.requireNonNull(securityGroup, "expected parameter 'securityGroup' to be non-null");
-    }
+    private AuthenticatorGroupsConfigResponse() {}
 
-    private AuthenticatorGroupsConfigResponse() {
-        this.enabled = null;
-        this.securityGroup = null;
+    private AuthenticatorGroupsConfigResponse(AuthenticatorGroupsConfigResponse $) {
+        this.enabled = $.enabled;
+        this.securityGroup = $.securityGroup;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AuthenticatorGroupsConfigResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Boolean enabled;
-        private String securityGroup;
+        private AuthenticatorGroupsConfigResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AuthenticatorGroupsConfigResponse();
         }
 
         public Builder(AuthenticatorGroupsConfigResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.enabled = defaults.enabled;
-    	      this.securityGroup = defaults.securityGroup;
+            $ = new AuthenticatorGroupsConfigResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder enabled(Boolean enabled) {
-            this.enabled = Objects.requireNonNull(enabled);
+            $.enabled = enabled;
             return this;
         }
+
         public Builder securityGroup(String securityGroup) {
-            this.securityGroup = Objects.requireNonNull(securityGroup);
+            $.securityGroup = securityGroup;
             return this;
-        }        public AuthenticatorGroupsConfigResponse build() {
-            return new AuthenticatorGroupsConfigResponse(enabled, securityGroup);
+        }
+
+        public AuthenticatorGroupsConfigResponse build() {
+            $.enabled = Objects.requireNonNull($.enabled, "expected parameter 'enabled' to be non-null");
+            $.securityGroup = Objects.requireNonNull($.securityGroup, "expected parameter 'securityGroup' to be non-null");
+            return $;
         }
     }
+
 }

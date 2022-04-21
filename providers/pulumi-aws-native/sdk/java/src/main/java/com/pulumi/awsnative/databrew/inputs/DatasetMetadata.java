@@ -19,45 +19,44 @@ public final class DatasetMetadata extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="sourceArn")
-      private final @Nullable String sourceArn;
+    private @Nullable String sourceArn;
 
     public Optional<String> sourceArn() {
-        return this.sourceArn == null ? Optional.empty() : Optional.ofNullable(this.sourceArn);
+        return Optional.ofNullable(this.sourceArn);
     }
 
-    public DatasetMetadata(@Nullable String sourceArn) {
-        this.sourceArn = sourceArn;
-    }
+    private DatasetMetadata() {}
 
-    private DatasetMetadata() {
-        this.sourceArn = null;
+    private DatasetMetadata(DatasetMetadata $) {
+        this.sourceArn = $.sourceArn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DatasetMetadata defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String sourceArn;
+        private DatasetMetadata $;
 
         public Builder() {
-    	      // Empty
+            $ = new DatasetMetadata();
         }
 
         public Builder(DatasetMetadata defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.sourceArn = defaults.sourceArn;
+            $ = new DatasetMetadata(Objects.requireNonNull(defaults));
         }
 
         public Builder sourceArn(@Nullable String sourceArn) {
-            this.sourceArn = sourceArn;
+            $.sourceArn = sourceArn;
             return this;
-        }        public DatasetMetadata build() {
-            return new DatasetMetadata(sourceArn);
+        }
+
+        public DatasetMetadata build() {
+            return $;
         }
     }
+
 }

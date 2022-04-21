@@ -27,7 +27,7 @@ public final class GuestConfigurationAssignmentPropertiesResponse extends com.pu
      * 
      */
     @Import(name="assignmentHash", required=true)
-      private final String assignmentHash;
+    private String assignmentHash;
 
     public String assignmentHash() {
         return this.assignmentHash;
@@ -38,7 +38,7 @@ public final class GuestConfigurationAssignmentPropertiesResponse extends com.pu
      * 
      */
     @Import(name="complianceStatus", required=true)
-      private final String complianceStatus;
+    private String complianceStatus;
 
     public String complianceStatus() {
         return this.complianceStatus;
@@ -49,10 +49,10 @@ public final class GuestConfigurationAssignmentPropertiesResponse extends com.pu
      * 
      */
     @Import(name="context")
-      private final @Nullable String context;
+    private @Nullable String context;
 
     public Optional<String> context() {
-        return this.context == null ? Optional.empty() : Optional.ofNullable(this.context);
+        return Optional.ofNullable(this.context);
     }
 
     /**
@@ -60,10 +60,10 @@ public final class GuestConfigurationAssignmentPropertiesResponse extends com.pu
      * 
      */
     @Import(name="guestConfiguration")
-      private final @Nullable GuestConfigurationNavigationResponse guestConfiguration;
+    private @Nullable GuestConfigurationNavigationResponse guestConfiguration;
 
     public Optional<GuestConfigurationNavigationResponse> guestConfiguration() {
-        return this.guestConfiguration == null ? Optional.empty() : Optional.ofNullable(this.guestConfiguration);
+        return Optional.ofNullable(this.guestConfiguration);
     }
 
     /**
@@ -71,7 +71,7 @@ public final class GuestConfigurationAssignmentPropertiesResponse extends com.pu
      * 
      */
     @Import(name="lastComplianceStatusChecked", required=true)
-      private final String lastComplianceStatusChecked;
+    private String lastComplianceStatusChecked;
 
     public String lastComplianceStatusChecked() {
         return this.lastComplianceStatusChecked;
@@ -82,10 +82,10 @@ public final class GuestConfigurationAssignmentPropertiesResponse extends com.pu
      * 
      */
     @Import(name="latestAssignmentReport")
-      private final @Nullable AssignmentReportResponse latestAssignmentReport;
+    private @Nullable AssignmentReportResponse latestAssignmentReport;
 
     public Optional<AssignmentReportResponse> latestAssignmentReport() {
-        return this.latestAssignmentReport == null ? Optional.empty() : Optional.ofNullable(this.latestAssignmentReport);
+        return Optional.ofNullable(this.latestAssignmentReport);
     }
 
     /**
@@ -93,7 +93,7 @@ public final class GuestConfigurationAssignmentPropertiesResponse extends com.pu
      * 
      */
     @Import(name="latestReportId", required=true)
-      private final String latestReportId;
+    private String latestReportId;
 
     public String latestReportId() {
         return this.latestReportId;
@@ -104,7 +104,7 @@ public final class GuestConfigurationAssignmentPropertiesResponse extends com.pu
      * 
      */
     @Import(name="parameterHash", required=true)
-      private final String parameterHash;
+    private String parameterHash;
 
     public String parameterHash() {
         return this.parameterHash;
@@ -115,7 +115,7 @@ public final class GuestConfigurationAssignmentPropertiesResponse extends com.pu
      * 
      */
     @Import(name="provisioningState", required=true)
-      private final String provisioningState;
+    private String provisioningState;
 
     public String provisioningState() {
         return this.provisioningState;
@@ -126,7 +126,7 @@ public final class GuestConfigurationAssignmentPropertiesResponse extends com.pu
      * 
      */
     @Import(name="resourceType", required=true)
-      private final String resourceType;
+    private String resourceType;
 
     public String resourceType() {
         return this.resourceType;
@@ -137,7 +137,7 @@ public final class GuestConfigurationAssignmentPropertiesResponse extends com.pu
      * 
      */
     @Import(name="targetResourceId", required=true)
-      private final String targetResourceId;
+    private String targetResourceId;
 
     public String targetResourceId() {
         return this.targetResourceId;
@@ -148,148 +148,122 @@ public final class GuestConfigurationAssignmentPropertiesResponse extends com.pu
      * 
      */
     @Import(name="vmssVMList")
-      private final @Nullable List<VMSSVMInfoResponse> vmssVMList;
+    private @Nullable List<VMSSVMInfoResponse> vmssVMList;
 
-    public List<VMSSVMInfoResponse> vmssVMList() {
-        return this.vmssVMList == null ? List.of() : this.vmssVMList;
+    public Optional<List<VMSSVMInfoResponse>> vmssVMList() {
+        return Optional.ofNullable(this.vmssVMList);
     }
 
-    public GuestConfigurationAssignmentPropertiesResponse(
-        String assignmentHash,
-        String complianceStatus,
-        @Nullable String context,
-        @Nullable GuestConfigurationNavigationResponse guestConfiguration,
-        String lastComplianceStatusChecked,
-        @Nullable AssignmentReportResponse latestAssignmentReport,
-        String latestReportId,
-        String parameterHash,
-        String provisioningState,
-        String resourceType,
-        String targetResourceId,
-        @Nullable List<VMSSVMInfoResponse> vmssVMList) {
-        this.assignmentHash = Objects.requireNonNull(assignmentHash, "expected parameter 'assignmentHash' to be non-null");
-        this.complianceStatus = Objects.requireNonNull(complianceStatus, "expected parameter 'complianceStatus' to be non-null");
-        this.context = context;
-        this.guestConfiguration = guestConfiguration;
-        this.lastComplianceStatusChecked = Objects.requireNonNull(lastComplianceStatusChecked, "expected parameter 'lastComplianceStatusChecked' to be non-null");
-        this.latestAssignmentReport = latestAssignmentReport;
-        this.latestReportId = Objects.requireNonNull(latestReportId, "expected parameter 'latestReportId' to be non-null");
-        this.parameterHash = Objects.requireNonNull(parameterHash, "expected parameter 'parameterHash' to be non-null");
-        this.provisioningState = Objects.requireNonNull(provisioningState, "expected parameter 'provisioningState' to be non-null");
-        this.resourceType = Objects.requireNonNull(resourceType, "expected parameter 'resourceType' to be non-null");
-        this.targetResourceId = Objects.requireNonNull(targetResourceId, "expected parameter 'targetResourceId' to be non-null");
-        this.vmssVMList = vmssVMList;
-    }
+    private GuestConfigurationAssignmentPropertiesResponse() {}
 
-    private GuestConfigurationAssignmentPropertiesResponse() {
-        this.assignmentHash = null;
-        this.complianceStatus = null;
-        this.context = null;
-        this.guestConfiguration = null;
-        this.lastComplianceStatusChecked = null;
-        this.latestAssignmentReport = null;
-        this.latestReportId = null;
-        this.parameterHash = null;
-        this.provisioningState = null;
-        this.resourceType = null;
-        this.targetResourceId = null;
-        this.vmssVMList = List.of();
+    private GuestConfigurationAssignmentPropertiesResponse(GuestConfigurationAssignmentPropertiesResponse $) {
+        this.assignmentHash = $.assignmentHash;
+        this.complianceStatus = $.complianceStatus;
+        this.context = $.context;
+        this.guestConfiguration = $.guestConfiguration;
+        this.lastComplianceStatusChecked = $.lastComplianceStatusChecked;
+        this.latestAssignmentReport = $.latestAssignmentReport;
+        this.latestReportId = $.latestReportId;
+        this.parameterHash = $.parameterHash;
+        this.provisioningState = $.provisioningState;
+        this.resourceType = $.resourceType;
+        this.targetResourceId = $.targetResourceId;
+        this.vmssVMList = $.vmssVMList;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GuestConfigurationAssignmentPropertiesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String assignmentHash;
-        private String complianceStatus;
-        private @Nullable String context;
-        private @Nullable GuestConfigurationNavigationResponse guestConfiguration;
-        private String lastComplianceStatusChecked;
-        private @Nullable AssignmentReportResponse latestAssignmentReport;
-        private String latestReportId;
-        private String parameterHash;
-        private String provisioningState;
-        private String resourceType;
-        private String targetResourceId;
-        private @Nullable List<VMSSVMInfoResponse> vmssVMList;
+        private GuestConfigurationAssignmentPropertiesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GuestConfigurationAssignmentPropertiesResponse();
         }
 
         public Builder(GuestConfigurationAssignmentPropertiesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.assignmentHash = defaults.assignmentHash;
-    	      this.complianceStatus = defaults.complianceStatus;
-    	      this.context = defaults.context;
-    	      this.guestConfiguration = defaults.guestConfiguration;
-    	      this.lastComplianceStatusChecked = defaults.lastComplianceStatusChecked;
-    	      this.latestAssignmentReport = defaults.latestAssignmentReport;
-    	      this.latestReportId = defaults.latestReportId;
-    	      this.parameterHash = defaults.parameterHash;
-    	      this.provisioningState = defaults.provisioningState;
-    	      this.resourceType = defaults.resourceType;
-    	      this.targetResourceId = defaults.targetResourceId;
-    	      this.vmssVMList = defaults.vmssVMList;
+            $ = new GuestConfigurationAssignmentPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder assignmentHash(String assignmentHash) {
-            this.assignmentHash = Objects.requireNonNull(assignmentHash);
+            $.assignmentHash = assignmentHash;
             return this;
         }
+
         public Builder complianceStatus(String complianceStatus) {
-            this.complianceStatus = Objects.requireNonNull(complianceStatus);
+            $.complianceStatus = complianceStatus;
             return this;
         }
+
         public Builder context(@Nullable String context) {
-            this.context = context;
+            $.context = context;
             return this;
         }
+
         public Builder guestConfiguration(@Nullable GuestConfigurationNavigationResponse guestConfiguration) {
-            this.guestConfiguration = guestConfiguration;
+            $.guestConfiguration = guestConfiguration;
             return this;
         }
+
         public Builder lastComplianceStatusChecked(String lastComplianceStatusChecked) {
-            this.lastComplianceStatusChecked = Objects.requireNonNull(lastComplianceStatusChecked);
+            $.lastComplianceStatusChecked = lastComplianceStatusChecked;
             return this;
         }
+
         public Builder latestAssignmentReport(@Nullable AssignmentReportResponse latestAssignmentReport) {
-            this.latestAssignmentReport = latestAssignmentReport;
+            $.latestAssignmentReport = latestAssignmentReport;
             return this;
         }
+
         public Builder latestReportId(String latestReportId) {
-            this.latestReportId = Objects.requireNonNull(latestReportId);
+            $.latestReportId = latestReportId;
             return this;
         }
+
         public Builder parameterHash(String parameterHash) {
-            this.parameterHash = Objects.requireNonNull(parameterHash);
+            $.parameterHash = parameterHash;
             return this;
         }
+
         public Builder provisioningState(String provisioningState) {
-            this.provisioningState = Objects.requireNonNull(provisioningState);
+            $.provisioningState = provisioningState;
             return this;
         }
+
         public Builder resourceType(String resourceType) {
-            this.resourceType = Objects.requireNonNull(resourceType);
+            $.resourceType = resourceType;
             return this;
         }
+
         public Builder targetResourceId(String targetResourceId) {
-            this.targetResourceId = Objects.requireNonNull(targetResourceId);
+            $.targetResourceId = targetResourceId;
             return this;
         }
+
         public Builder vmssVMList(@Nullable List<VMSSVMInfoResponse> vmssVMList) {
-            this.vmssVMList = vmssVMList;
+            $.vmssVMList = vmssVMList;
             return this;
         }
+
         public Builder vmssVMList(VMSSVMInfoResponse... vmssVMList) {
             return vmssVMList(List.of(vmssVMList));
-        }        public GuestConfigurationAssignmentPropertiesResponse build() {
-            return new GuestConfigurationAssignmentPropertiesResponse(assignmentHash, complianceStatus, context, guestConfiguration, lastComplianceStatusChecked, latestAssignmentReport, latestReportId, parameterHash, provisioningState, resourceType, targetResourceId, vmssVMList);
+        }
+
+        public GuestConfigurationAssignmentPropertiesResponse build() {
+            $.assignmentHash = Objects.requireNonNull($.assignmentHash, "expected parameter 'assignmentHash' to be non-null");
+            $.complianceStatus = Objects.requireNonNull($.complianceStatus, "expected parameter 'complianceStatus' to be non-null");
+            $.lastComplianceStatusChecked = Objects.requireNonNull($.lastComplianceStatusChecked, "expected parameter 'lastComplianceStatusChecked' to be non-null");
+            $.latestReportId = Objects.requireNonNull($.latestReportId, "expected parameter 'latestReportId' to be non-null");
+            $.parameterHash = Objects.requireNonNull($.parameterHash, "expected parameter 'parameterHash' to be non-null");
+            $.provisioningState = Objects.requireNonNull($.provisioningState, "expected parameter 'provisioningState' to be non-null");
+            $.resourceType = Objects.requireNonNull($.resourceType, "expected parameter 'resourceType' to be non-null");
+            $.targetResourceId = Objects.requireNonNull($.targetResourceId, "expected parameter 'targetResourceId' to be non-null");
+            return $;
         }
     }
+
 }

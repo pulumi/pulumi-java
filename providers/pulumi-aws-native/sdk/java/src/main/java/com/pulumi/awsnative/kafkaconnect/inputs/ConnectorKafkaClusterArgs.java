@@ -6,7 +6,6 @@ package com.pulumi.awsnative.kafkaconnect.inputs;
 import com.pulumi.awsnative.kafkaconnect.inputs.ConnectorApacheKafkaClusterArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
 
 
@@ -19,49 +18,49 @@ public final class ConnectorKafkaClusterArgs extends com.pulumi.resources.Resour
     public static final ConnectorKafkaClusterArgs Empty = new ConnectorKafkaClusterArgs();
 
     @Import(name="apacheKafkaCluster", required=true)
-      private final Output<ConnectorApacheKafkaClusterArgs> apacheKafkaCluster;
+    private Output<ConnectorApacheKafkaClusterArgs> apacheKafkaCluster;
 
     public Output<ConnectorApacheKafkaClusterArgs> apacheKafkaCluster() {
         return this.apacheKafkaCluster;
     }
 
-    public ConnectorKafkaClusterArgs(Output<ConnectorApacheKafkaClusterArgs> apacheKafkaCluster) {
-        this.apacheKafkaCluster = Objects.requireNonNull(apacheKafkaCluster, "expected parameter 'apacheKafkaCluster' to be non-null");
-    }
+    private ConnectorKafkaClusterArgs() {}
 
-    private ConnectorKafkaClusterArgs() {
-        this.apacheKafkaCluster = Codegen.empty();
+    private ConnectorKafkaClusterArgs(ConnectorKafkaClusterArgs $) {
+        this.apacheKafkaCluster = $.apacheKafkaCluster;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ConnectorKafkaClusterArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<ConnectorApacheKafkaClusterArgs> apacheKafkaCluster;
+        private ConnectorKafkaClusterArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ConnectorKafkaClusterArgs();
         }
 
         public Builder(ConnectorKafkaClusterArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.apacheKafkaCluster = defaults.apacheKafkaCluster;
+            $ = new ConnectorKafkaClusterArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder apacheKafkaCluster(Output<ConnectorApacheKafkaClusterArgs> apacheKafkaCluster) {
-            this.apacheKafkaCluster = Objects.requireNonNull(apacheKafkaCluster);
+            $.apacheKafkaCluster = apacheKafkaCluster;
             return this;
         }
+
         public Builder apacheKafkaCluster(ConnectorApacheKafkaClusterArgs apacheKafkaCluster) {
-            this.apacheKafkaCluster = Output.of(Objects.requireNonNull(apacheKafkaCluster));
-            return this;
-        }        public ConnectorKafkaClusterArgs build() {
-            return new ConnectorKafkaClusterArgs(apacheKafkaCluster);
+            return apacheKafkaCluster(Output.of(apacheKafkaCluster));
+        }
+
+        public ConnectorKafkaClusterArgs build() {
+            $.apacheKafkaCluster = Objects.requireNonNull($.apacheKafkaCluster, "expected parameter 'apacheKafkaCluster' to be non-null");
+            return $;
         }
     }
+
 }

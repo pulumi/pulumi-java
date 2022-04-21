@@ -23,10 +23,10 @@ public final class ScriptsToExecuteResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="creationScript")
-      private final @Nullable ScriptReferenceResponse creationScript;
+    private @Nullable ScriptReferenceResponse creationScript;
 
     public Optional<ScriptReferenceResponse> creationScript() {
-        return this.creationScript == null ? Optional.empty() : Optional.ofNullable(this.creationScript);
+        return Optional.ofNullable(this.creationScript);
     }
 
     /**
@@ -34,55 +34,50 @@ public final class ScriptsToExecuteResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="startupScript")
-      private final @Nullable ScriptReferenceResponse startupScript;
+    private @Nullable ScriptReferenceResponse startupScript;
 
     public Optional<ScriptReferenceResponse> startupScript() {
-        return this.startupScript == null ? Optional.empty() : Optional.ofNullable(this.startupScript);
+        return Optional.ofNullable(this.startupScript);
     }
 
-    public ScriptsToExecuteResponse(
-        @Nullable ScriptReferenceResponse creationScript,
-        @Nullable ScriptReferenceResponse startupScript) {
-        this.creationScript = creationScript;
-        this.startupScript = startupScript;
-    }
+    private ScriptsToExecuteResponse() {}
 
-    private ScriptsToExecuteResponse() {
-        this.creationScript = null;
-        this.startupScript = null;
+    private ScriptsToExecuteResponse(ScriptsToExecuteResponse $) {
+        this.creationScript = $.creationScript;
+        this.startupScript = $.startupScript;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ScriptsToExecuteResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable ScriptReferenceResponse creationScript;
-        private @Nullable ScriptReferenceResponse startupScript;
+        private ScriptsToExecuteResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ScriptsToExecuteResponse();
         }
 
         public Builder(ScriptsToExecuteResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.creationScript = defaults.creationScript;
-    	      this.startupScript = defaults.startupScript;
+            $ = new ScriptsToExecuteResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder creationScript(@Nullable ScriptReferenceResponse creationScript) {
-            this.creationScript = creationScript;
+            $.creationScript = creationScript;
             return this;
         }
+
         public Builder startupScript(@Nullable ScriptReferenceResponse startupScript) {
-            this.startupScript = startupScript;
+            $.startupScript = startupScript;
             return this;
-        }        public ScriptsToExecuteResponse build() {
-            return new ScriptsToExecuteResponse(creationScript, startupScript);
+        }
+
+        public ScriptsToExecuteResponse build() {
+            return $;
         }
     }
+
 }

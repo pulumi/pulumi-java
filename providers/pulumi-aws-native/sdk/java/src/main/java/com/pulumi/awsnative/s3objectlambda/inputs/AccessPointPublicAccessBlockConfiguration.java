@@ -27,10 +27,10 @@ public final class AccessPointPublicAccessBlockConfiguration extends com.pulumi.
      * 
      */
     @Import(name="blockPublicAcls")
-      private final @Nullable Boolean blockPublicAcls;
+    private @Nullable Boolean blockPublicAcls;
 
     public Optional<Boolean> blockPublicAcls() {
-        return this.blockPublicAcls == null ? Optional.empty() : Optional.ofNullable(this.blockPublicAcls);
+        return Optional.ofNullable(this.blockPublicAcls);
     }
 
     /**
@@ -38,10 +38,10 @@ public final class AccessPointPublicAccessBlockConfiguration extends com.pulumi.
      * 
      */
     @Import(name="blockPublicPolicy")
-      private final @Nullable Boolean blockPublicPolicy;
+    private @Nullable Boolean blockPublicPolicy;
 
     public Optional<Boolean> blockPublicPolicy() {
-        return this.blockPublicPolicy == null ? Optional.empty() : Optional.ofNullable(this.blockPublicPolicy);
+        return Optional.ofNullable(this.blockPublicPolicy);
     }
 
     /**
@@ -49,10 +49,10 @@ public final class AccessPointPublicAccessBlockConfiguration extends com.pulumi.
      * 
      */
     @Import(name="ignorePublicAcls")
-      private final @Nullable Boolean ignorePublicAcls;
+    private @Nullable Boolean ignorePublicAcls;
 
     public Optional<Boolean> ignorePublicAcls() {
-        return this.ignorePublicAcls == null ? Optional.empty() : Optional.ofNullable(this.ignorePublicAcls);
+        return Optional.ofNullable(this.ignorePublicAcls);
     }
 
     /**
@@ -61,73 +61,62 @@ public final class AccessPointPublicAccessBlockConfiguration extends com.pulumi.
      * 
      */
     @Import(name="restrictPublicBuckets")
-      private final @Nullable Boolean restrictPublicBuckets;
+    private @Nullable Boolean restrictPublicBuckets;
 
     public Optional<Boolean> restrictPublicBuckets() {
-        return this.restrictPublicBuckets == null ? Optional.empty() : Optional.ofNullable(this.restrictPublicBuckets);
+        return Optional.ofNullable(this.restrictPublicBuckets);
     }
 
-    public AccessPointPublicAccessBlockConfiguration(
-        @Nullable Boolean blockPublicAcls,
-        @Nullable Boolean blockPublicPolicy,
-        @Nullable Boolean ignorePublicAcls,
-        @Nullable Boolean restrictPublicBuckets) {
-        this.blockPublicAcls = blockPublicAcls;
-        this.blockPublicPolicy = blockPublicPolicy;
-        this.ignorePublicAcls = ignorePublicAcls;
-        this.restrictPublicBuckets = restrictPublicBuckets;
-    }
+    private AccessPointPublicAccessBlockConfiguration() {}
 
-    private AccessPointPublicAccessBlockConfiguration() {
-        this.blockPublicAcls = null;
-        this.blockPublicPolicy = null;
-        this.ignorePublicAcls = null;
-        this.restrictPublicBuckets = null;
+    private AccessPointPublicAccessBlockConfiguration(AccessPointPublicAccessBlockConfiguration $) {
+        this.blockPublicAcls = $.blockPublicAcls;
+        this.blockPublicPolicy = $.blockPublicPolicy;
+        this.ignorePublicAcls = $.ignorePublicAcls;
+        this.restrictPublicBuckets = $.restrictPublicBuckets;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AccessPointPublicAccessBlockConfiguration defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Boolean blockPublicAcls;
-        private @Nullable Boolean blockPublicPolicy;
-        private @Nullable Boolean ignorePublicAcls;
-        private @Nullable Boolean restrictPublicBuckets;
+        private AccessPointPublicAccessBlockConfiguration $;
 
         public Builder() {
-    	      // Empty
+            $ = new AccessPointPublicAccessBlockConfiguration();
         }
 
         public Builder(AccessPointPublicAccessBlockConfiguration defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.blockPublicAcls = defaults.blockPublicAcls;
-    	      this.blockPublicPolicy = defaults.blockPublicPolicy;
-    	      this.ignorePublicAcls = defaults.ignorePublicAcls;
-    	      this.restrictPublicBuckets = defaults.restrictPublicBuckets;
+            $ = new AccessPointPublicAccessBlockConfiguration(Objects.requireNonNull(defaults));
         }
 
         public Builder blockPublicAcls(@Nullable Boolean blockPublicAcls) {
-            this.blockPublicAcls = blockPublicAcls;
+            $.blockPublicAcls = blockPublicAcls;
             return this;
         }
+
         public Builder blockPublicPolicy(@Nullable Boolean blockPublicPolicy) {
-            this.blockPublicPolicy = blockPublicPolicy;
+            $.blockPublicPolicy = blockPublicPolicy;
             return this;
         }
+
         public Builder ignorePublicAcls(@Nullable Boolean ignorePublicAcls) {
-            this.ignorePublicAcls = ignorePublicAcls;
+            $.ignorePublicAcls = ignorePublicAcls;
             return this;
         }
+
         public Builder restrictPublicBuckets(@Nullable Boolean restrictPublicBuckets) {
-            this.restrictPublicBuckets = restrictPublicBuckets;
+            $.restrictPublicBuckets = restrictPublicBuckets;
             return this;
-        }        public AccessPointPublicAccessBlockConfiguration build() {
-            return new AccessPointPublicAccessBlockConfiguration(blockPublicAcls, blockPublicPolicy, ignorePublicAcls, restrictPublicBuckets);
+        }
+
+        public AccessPointPublicAccessBlockConfiguration build() {
+            return $;
         }
     }
+
 }

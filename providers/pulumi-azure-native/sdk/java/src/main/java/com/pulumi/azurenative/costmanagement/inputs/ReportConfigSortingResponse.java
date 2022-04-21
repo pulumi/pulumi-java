@@ -23,10 +23,10 @@ public final class ReportConfigSortingResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="direction")
-      private final @Nullable String direction;
+    private @Nullable String direction;
 
     public Optional<String> direction() {
-        return this.direction == null ? Optional.empty() : Optional.ofNullable(this.direction);
+        return Optional.ofNullable(this.direction);
     }
 
     /**
@@ -34,55 +34,51 @@ public final class ReportConfigSortingResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
     }
 
-    public ReportConfigSortingResponse(
-        @Nullable String direction,
-        String name) {
-        this.direction = direction;
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-    }
+    private ReportConfigSortingResponse() {}
 
-    private ReportConfigSortingResponse() {
-        this.direction = null;
-        this.name = null;
+    private ReportConfigSortingResponse(ReportConfigSortingResponse $) {
+        this.direction = $.direction;
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ReportConfigSortingResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String direction;
-        private String name;
+        private ReportConfigSortingResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ReportConfigSortingResponse();
         }
 
         public Builder(ReportConfigSortingResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.direction = defaults.direction;
-    	      this.name = defaults.name;
+            $ = new ReportConfigSortingResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder direction(@Nullable String direction) {
-            this.direction = direction;
+            $.direction = direction;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
-        }        public ReportConfigSortingResponse build() {
-            return new ReportConfigSortingResponse(direction, name);
+        }
+
+        public ReportConfigSortingResponse build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            return $;
         }
     }
+
 }

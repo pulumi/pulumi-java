@@ -21,45 +21,45 @@ public final class NetworkRoutingConfigResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="routingMode", required=true)
-      private final String routingMode;
+    private String routingMode;
 
     public String routingMode() {
         return this.routingMode;
     }
 
-    public NetworkRoutingConfigResponse(String routingMode) {
-        this.routingMode = Objects.requireNonNull(routingMode, "expected parameter 'routingMode' to be non-null");
-    }
+    private NetworkRoutingConfigResponse() {}
 
-    private NetworkRoutingConfigResponse() {
-        this.routingMode = null;
+    private NetworkRoutingConfigResponse(NetworkRoutingConfigResponse $) {
+        this.routingMode = $.routingMode;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NetworkRoutingConfigResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String routingMode;
+        private NetworkRoutingConfigResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new NetworkRoutingConfigResponse();
         }
 
         public Builder(NetworkRoutingConfigResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.routingMode = defaults.routingMode;
+            $ = new NetworkRoutingConfigResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder routingMode(String routingMode) {
-            this.routingMode = Objects.requireNonNull(routingMode);
+            $.routingMode = routingMode;
             return this;
-        }        public NetworkRoutingConfigResponse build() {
-            return new NetworkRoutingConfigResponse(routingMode);
+        }
+
+        public NetworkRoutingConfigResponse build() {
+            $.routingMode = Objects.requireNonNull($.routingMode, "expected parameter 'routingMode' to be non-null");
+            return $;
         }
     }
+
 }

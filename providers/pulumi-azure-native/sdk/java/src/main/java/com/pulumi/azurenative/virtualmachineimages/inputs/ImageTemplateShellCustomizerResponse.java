@@ -25,10 +25,10 @@ public final class ImageTemplateShellCustomizerResponse extends com.pulumi.resou
      * 
      */
     @Import(name="inline")
-      private final @Nullable List<String> inline;
+    private @Nullable List<String> inline;
 
-    public List<String> inline() {
-        return this.inline == null ? List.of() : this.inline;
+    public Optional<List<String>> inline() {
+        return Optional.ofNullable(this.inline);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class ImageTemplateShellCustomizerResponse extends com.pulumi.resou
      * 
      */
     @Import(name="name")
-      private final @Nullable String name;
+    private @Nullable String name;
 
     public Optional<String> name() {
-        return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class ImageTemplateShellCustomizerResponse extends com.pulumi.resou
      * 
      */
     @Import(name="scriptUri")
-      private final @Nullable String scriptUri;
+    private @Nullable String scriptUri;
 
     public Optional<String> scriptUri() {
-        return this.scriptUri == null ? Optional.empty() : Optional.ofNullable(this.scriptUri);
+        return Optional.ofNullable(this.scriptUri);
     }
 
     /**
@@ -58,10 +58,10 @@ public final class ImageTemplateShellCustomizerResponse extends com.pulumi.resou
      * 
      */
     @Import(name="sha256Checksum")
-      private final @Nullable String sha256Checksum;
+    private @Nullable String sha256Checksum;
 
     public Optional<String> sha256Checksum() {
-        return this.sha256Checksum == null ? Optional.empty() : Optional.ofNullable(this.sha256Checksum);
+        return Optional.ofNullable(this.sha256Checksum);
     }
 
     /**
@@ -70,85 +70,74 @@ public final class ImageTemplateShellCustomizerResponse extends com.pulumi.resou
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
     }
 
-    public ImageTemplateShellCustomizerResponse(
-        @Nullable List<String> inline,
-        @Nullable String name,
-        @Nullable String scriptUri,
-        @Nullable String sha256Checksum,
-        String type) {
-        this.inline = inline;
-        this.name = name;
-        this.scriptUri = scriptUri;
-        this.sha256Checksum = Codegen.stringProp("sha256Checksum").arg(sha256Checksum).def("").getNullable();
-        this.type = Codegen.stringProp("type").arg(type).require();
-    }
+    private ImageTemplateShellCustomizerResponse() {}
 
-    private ImageTemplateShellCustomizerResponse() {
-        this.inline = List.of();
-        this.name = null;
-        this.scriptUri = null;
-        this.sha256Checksum = null;
-        this.type = null;
+    private ImageTemplateShellCustomizerResponse(ImageTemplateShellCustomizerResponse $) {
+        this.inline = $.inline;
+        this.name = $.name;
+        this.scriptUri = $.scriptUri;
+        this.sha256Checksum = $.sha256Checksum;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ImageTemplateShellCustomizerResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<String> inline;
-        private @Nullable String name;
-        private @Nullable String scriptUri;
-        private @Nullable String sha256Checksum;
-        private String type;
+        private ImageTemplateShellCustomizerResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ImageTemplateShellCustomizerResponse();
         }
 
         public Builder(ImageTemplateShellCustomizerResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.inline = defaults.inline;
-    	      this.name = defaults.name;
-    	      this.scriptUri = defaults.scriptUri;
-    	      this.sha256Checksum = defaults.sha256Checksum;
-    	      this.type = defaults.type;
+            $ = new ImageTemplateShellCustomizerResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder inline(@Nullable List<String> inline) {
-            this.inline = inline;
+            $.inline = inline;
             return this;
         }
+
         public Builder inline(String... inline) {
             return inline(List.of(inline));
         }
+
         public Builder name(@Nullable String name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
+
         public Builder scriptUri(@Nullable String scriptUri) {
-            this.scriptUri = scriptUri;
+            $.scriptUri = scriptUri;
             return this;
         }
+
         public Builder sha256Checksum(@Nullable String sha256Checksum) {
-            this.sha256Checksum = sha256Checksum;
+            $.sha256Checksum = sha256Checksum;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
-        }        public ImageTemplateShellCustomizerResponse build() {
-            return new ImageTemplateShellCustomizerResponse(inline, name, scriptUri, sha256Checksum, type);
+        }
+
+        public ImageTemplateShellCustomizerResponse build() {
+            $.sha256Checksum = Codegen.stringProp("sha256Checksum").arg($.sha256Checksum).def("").getNullable();
+            $.type = Codegen.stringProp("type").arg($.type).require();
+            return $;
         }
     }
+
 }

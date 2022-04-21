@@ -23,10 +23,10 @@ public final class VirtualMachineScaleSetIpTagResponse extends com.pulumi.resour
      * 
      */
     @Import(name="ipTagType")
-      private final @Nullable String ipTagType;
+    private @Nullable String ipTagType;
 
     public Optional<String> ipTagType() {
-        return this.ipTagType == null ? Optional.empty() : Optional.ofNullable(this.ipTagType);
+        return Optional.ofNullable(this.ipTagType);
     }
 
     /**
@@ -34,55 +34,50 @@ public final class VirtualMachineScaleSetIpTagResponse extends com.pulumi.resour
      * 
      */
     @Import(name="tag")
-      private final @Nullable String tag;
+    private @Nullable String tag;
 
     public Optional<String> tag() {
-        return this.tag == null ? Optional.empty() : Optional.ofNullable(this.tag);
+        return Optional.ofNullable(this.tag);
     }
 
-    public VirtualMachineScaleSetIpTagResponse(
-        @Nullable String ipTagType,
-        @Nullable String tag) {
-        this.ipTagType = ipTagType;
-        this.tag = tag;
-    }
+    private VirtualMachineScaleSetIpTagResponse() {}
 
-    private VirtualMachineScaleSetIpTagResponse() {
-        this.ipTagType = null;
-        this.tag = null;
+    private VirtualMachineScaleSetIpTagResponse(VirtualMachineScaleSetIpTagResponse $) {
+        this.ipTagType = $.ipTagType;
+        this.tag = $.tag;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VirtualMachineScaleSetIpTagResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String ipTagType;
-        private @Nullable String tag;
+        private VirtualMachineScaleSetIpTagResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new VirtualMachineScaleSetIpTagResponse();
         }
 
         public Builder(VirtualMachineScaleSetIpTagResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.ipTagType = defaults.ipTagType;
-    	      this.tag = defaults.tag;
+            $ = new VirtualMachineScaleSetIpTagResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder ipTagType(@Nullable String ipTagType) {
-            this.ipTagType = ipTagType;
+            $.ipTagType = ipTagType;
             return this;
         }
+
         public Builder tag(@Nullable String tag) {
-            this.tag = tag;
+            $.tag = tag;
             return this;
-        }        public VirtualMachineScaleSetIpTagResponse build() {
-            return new VirtualMachineScaleSetIpTagResponse(ipTagType, tag);
+        }
+
+        public VirtualMachineScaleSetIpTagResponse build() {
+            return $;
         }
     }
+
 }

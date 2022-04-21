@@ -5,10 +5,10 @@ package com.pulumi.azurenative.web;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class WebAppSlotConfigurationNamesArgs extends com.pulumi.resources
      * 
      */
     @Import(name="appSettingNames")
-      private final @Nullable Output<List<String>> appSettingNames;
+    private @Nullable Output<List<String>> appSettingNames;
 
-    public Output<List<String>> appSettingNames() {
-        return this.appSettingNames == null ? Codegen.empty() : this.appSettingNames;
+    public Optional<Output<List<String>>> appSettingNames() {
+        return Optional.ofNullable(this.appSettingNames);
     }
 
     /**
@@ -32,10 +32,10 @@ public final class WebAppSlotConfigurationNamesArgs extends com.pulumi.resources
      * 
      */
     @Import(name="azureStorageConfigNames")
-      private final @Nullable Output<List<String>> azureStorageConfigNames;
+    private @Nullable Output<List<String>> azureStorageConfigNames;
 
-    public Output<List<String>> azureStorageConfigNames() {
-        return this.azureStorageConfigNames == null ? Codegen.empty() : this.azureStorageConfigNames;
+    public Optional<Output<List<String>>> azureStorageConfigNames() {
+        return Optional.ofNullable(this.azureStorageConfigNames);
     }
 
     /**
@@ -43,10 +43,10 @@ public final class WebAppSlotConfigurationNamesArgs extends com.pulumi.resources
      * 
      */
     @Import(name="connectionStringNames")
-      private final @Nullable Output<List<String>> connectionStringNames;
+    private @Nullable Output<List<String>> connectionStringNames;
 
-    public Output<List<String>> connectionStringNames() {
-        return this.connectionStringNames == null ? Codegen.empty() : this.connectionStringNames;
+    public Optional<Output<List<String>>> connectionStringNames() {
+        return Optional.ofNullable(this.connectionStringNames);
     }
 
     /**
@@ -54,10 +54,10 @@ public final class WebAppSlotConfigurationNamesArgs extends com.pulumi.resources
      * 
      */
     @Import(name="kind")
-      private final @Nullable Output<String> kind;
+    private @Nullable Output<String> kind;
 
-    public Output<String> kind() {
-        return this.kind == null ? Codegen.empty() : this.kind;
+    public Optional<Output<String>> kind() {
+        return Optional.ofNullable(this.kind);
     }
 
     /**
@@ -65,7 +65,7 @@ public final class WebAppSlotConfigurationNamesArgs extends com.pulumi.resources
      * 
      */
     @Import(name="name", required=true)
-      private final Output<String> name;
+    private Output<String> name;
 
     public Output<String> name() {
         return this.name;
@@ -76,124 +76,112 @@ public final class WebAppSlotConfigurationNamesArgs extends com.pulumi.resources
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public WebAppSlotConfigurationNamesArgs(
-        @Nullable Output<List<String>> appSettingNames,
-        @Nullable Output<List<String>> azureStorageConfigNames,
-        @Nullable Output<List<String>> connectionStringNames,
-        @Nullable Output<String> kind,
-        Output<String> name,
-        Output<String> resourceGroupName) {
-        this.appSettingNames = appSettingNames;
-        this.azureStorageConfigNames = azureStorageConfigNames;
-        this.connectionStringNames = connectionStringNames;
-        this.kind = kind;
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private WebAppSlotConfigurationNamesArgs() {}
 
-    private WebAppSlotConfigurationNamesArgs() {
-        this.appSettingNames = Codegen.empty();
-        this.azureStorageConfigNames = Codegen.empty();
-        this.connectionStringNames = Codegen.empty();
-        this.kind = Codegen.empty();
-        this.name = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
+    private WebAppSlotConfigurationNamesArgs(WebAppSlotConfigurationNamesArgs $) {
+        this.appSettingNames = $.appSettingNames;
+        this.azureStorageConfigNames = $.azureStorageConfigNames;
+        this.connectionStringNames = $.connectionStringNames;
+        this.kind = $.kind;
+        this.name = $.name;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WebAppSlotConfigurationNamesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> appSettingNames;
-        private @Nullable Output<List<String>> azureStorageConfigNames;
-        private @Nullable Output<List<String>> connectionStringNames;
-        private @Nullable Output<String> kind;
-        private Output<String> name;
-        private Output<String> resourceGroupName;
+        private WebAppSlotConfigurationNamesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new WebAppSlotConfigurationNamesArgs();
         }
 
         public Builder(WebAppSlotConfigurationNamesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.appSettingNames = defaults.appSettingNames;
-    	      this.azureStorageConfigNames = defaults.azureStorageConfigNames;
-    	      this.connectionStringNames = defaults.connectionStringNames;
-    	      this.kind = defaults.kind;
-    	      this.name = defaults.name;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new WebAppSlotConfigurationNamesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder appSettingNames(@Nullable Output<List<String>> appSettingNames) {
-            this.appSettingNames = appSettingNames;
+            $.appSettingNames = appSettingNames;
             return this;
         }
-        public Builder appSettingNames(@Nullable List<String> appSettingNames) {
-            this.appSettingNames = Codegen.ofNullable(appSettingNames);
-            return this;
+
+        public Builder appSettingNames(List<String> appSettingNames) {
+            return appSettingNames(Output.of(appSettingNames));
         }
+
         public Builder appSettingNames(String... appSettingNames) {
             return appSettingNames(List.of(appSettingNames));
         }
+
         public Builder azureStorageConfigNames(@Nullable Output<List<String>> azureStorageConfigNames) {
-            this.azureStorageConfigNames = azureStorageConfigNames;
+            $.azureStorageConfigNames = azureStorageConfigNames;
             return this;
         }
-        public Builder azureStorageConfigNames(@Nullable List<String> azureStorageConfigNames) {
-            this.azureStorageConfigNames = Codegen.ofNullable(azureStorageConfigNames);
-            return this;
+
+        public Builder azureStorageConfigNames(List<String> azureStorageConfigNames) {
+            return azureStorageConfigNames(Output.of(azureStorageConfigNames));
         }
+
         public Builder azureStorageConfigNames(String... azureStorageConfigNames) {
             return azureStorageConfigNames(List.of(azureStorageConfigNames));
         }
+
         public Builder connectionStringNames(@Nullable Output<List<String>> connectionStringNames) {
-            this.connectionStringNames = connectionStringNames;
+            $.connectionStringNames = connectionStringNames;
             return this;
         }
-        public Builder connectionStringNames(@Nullable List<String> connectionStringNames) {
-            this.connectionStringNames = Codegen.ofNullable(connectionStringNames);
-            return this;
+
+        public Builder connectionStringNames(List<String> connectionStringNames) {
+            return connectionStringNames(Output.of(connectionStringNames));
         }
+
         public Builder connectionStringNames(String... connectionStringNames) {
             return connectionStringNames(List.of(connectionStringNames));
         }
+
         public Builder kind(@Nullable Output<String> kind) {
-            this.kind = kind;
+            $.kind = kind;
             return this;
         }
-        public Builder kind(@Nullable String kind) {
-            this.kind = Codegen.ofNullable(kind);
-            return this;
+
+        public Builder kind(String kind) {
+            return kind(Output.of(kind));
         }
+
         public Builder name(Output<String> name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Output.of(Objects.requireNonNull(name));
-            return this;
+            return name(Output.of(name));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
-        }        public WebAppSlotConfigurationNamesArgs build() {
-            return new WebAppSlotConfigurationNamesArgs(appSettingNames, azureStorageConfigNames, connectionStringNames, kind, name, resourceGroupName);
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        public WebAppSlotConfigurationNamesArgs build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

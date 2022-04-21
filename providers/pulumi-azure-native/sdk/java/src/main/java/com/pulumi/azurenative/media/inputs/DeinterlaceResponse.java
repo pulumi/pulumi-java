@@ -23,10 +23,10 @@ public final class DeinterlaceResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="mode")
-      private final @Nullable String mode;
+    private @Nullable String mode;
 
     public Optional<String> mode() {
-        return this.mode == null ? Optional.empty() : Optional.ofNullable(this.mode);
+        return Optional.ofNullable(this.mode);
     }
 
     /**
@@ -34,55 +34,50 @@ public final class DeinterlaceResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="parity")
-      private final @Nullable String parity;
+    private @Nullable String parity;
 
     public Optional<String> parity() {
-        return this.parity == null ? Optional.empty() : Optional.ofNullable(this.parity);
+        return Optional.ofNullable(this.parity);
     }
 
-    public DeinterlaceResponse(
-        @Nullable String mode,
-        @Nullable String parity) {
-        this.mode = mode;
-        this.parity = parity;
-    }
+    private DeinterlaceResponse() {}
 
-    private DeinterlaceResponse() {
-        this.mode = null;
-        this.parity = null;
+    private DeinterlaceResponse(DeinterlaceResponse $) {
+        this.mode = $.mode;
+        this.parity = $.parity;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DeinterlaceResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String mode;
-        private @Nullable String parity;
+        private DeinterlaceResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new DeinterlaceResponse();
         }
 
         public Builder(DeinterlaceResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.mode = defaults.mode;
-    	      this.parity = defaults.parity;
+            $ = new DeinterlaceResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder mode(@Nullable String mode) {
-            this.mode = mode;
+            $.mode = mode;
             return this;
         }
+
         public Builder parity(@Nullable String parity) {
-            this.parity = parity;
+            $.parity = parity;
             return this;
-        }        public DeinterlaceResponse build() {
-            return new DeinterlaceResponse(mode, parity);
+        }
+
+        public DeinterlaceResponse build() {
+            return $;
         }
     }
+
 }

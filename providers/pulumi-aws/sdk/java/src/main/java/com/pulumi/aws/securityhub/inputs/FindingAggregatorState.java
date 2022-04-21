@@ -5,10 +5,10 @@ package com.pulumi.aws.securityhub.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class FindingAggregatorState extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="linkingMode")
-      private final @Nullable Output<String> linkingMode;
+    private @Nullable Output<String> linkingMode;
 
-    public Output<String> linkingMode() {
-        return this.linkingMode == null ? Codegen.empty() : this.linkingMode;
+    public Optional<Output<String>> linkingMode() {
+        return Optional.ofNullable(this.linkingMode);
     }
 
     /**
@@ -32,66 +32,62 @@ public final class FindingAggregatorState extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="specifiedRegions")
-      private final @Nullable Output<List<String>> specifiedRegions;
+    private @Nullable Output<List<String>> specifiedRegions;
 
-    public Output<List<String>> specifiedRegions() {
-        return this.specifiedRegions == null ? Codegen.empty() : this.specifiedRegions;
+    public Optional<Output<List<String>>> specifiedRegions() {
+        return Optional.ofNullable(this.specifiedRegions);
     }
 
-    public FindingAggregatorState(
-        @Nullable Output<String> linkingMode,
-        @Nullable Output<List<String>> specifiedRegions) {
-        this.linkingMode = linkingMode;
-        this.specifiedRegions = specifiedRegions;
-    }
+    private FindingAggregatorState() {}
 
-    private FindingAggregatorState() {
-        this.linkingMode = Codegen.empty();
-        this.specifiedRegions = Codegen.empty();
+    private FindingAggregatorState(FindingAggregatorState $) {
+        this.linkingMode = $.linkingMode;
+        this.specifiedRegions = $.specifiedRegions;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FindingAggregatorState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> linkingMode;
-        private @Nullable Output<List<String>> specifiedRegions;
+        private FindingAggregatorState $;
 
         public Builder() {
-    	      // Empty
+            $ = new FindingAggregatorState();
         }
 
         public Builder(FindingAggregatorState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.linkingMode = defaults.linkingMode;
-    	      this.specifiedRegions = defaults.specifiedRegions;
+            $ = new FindingAggregatorState(Objects.requireNonNull(defaults));
         }
 
         public Builder linkingMode(@Nullable Output<String> linkingMode) {
-            this.linkingMode = linkingMode;
+            $.linkingMode = linkingMode;
             return this;
         }
-        public Builder linkingMode(@Nullable String linkingMode) {
-            this.linkingMode = Codegen.ofNullable(linkingMode);
-            return this;
+
+        public Builder linkingMode(String linkingMode) {
+            return linkingMode(Output.of(linkingMode));
         }
+
         public Builder specifiedRegions(@Nullable Output<List<String>> specifiedRegions) {
-            this.specifiedRegions = specifiedRegions;
+            $.specifiedRegions = specifiedRegions;
             return this;
         }
-        public Builder specifiedRegions(@Nullable List<String> specifiedRegions) {
-            this.specifiedRegions = Codegen.ofNullable(specifiedRegions);
-            return this;
+
+        public Builder specifiedRegions(List<String> specifiedRegions) {
+            return specifiedRegions(Output.of(specifiedRegions));
         }
+
         public Builder specifiedRegions(String... specifiedRegions) {
             return specifiedRegions(List.of(specifiedRegions));
-        }        public FindingAggregatorState build() {
-            return new FindingAggregatorState(linkingMode, specifiedRegions);
+        }
+
+        public FindingAggregatorState build() {
+            return $;
         }
     }
+
 }

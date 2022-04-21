@@ -5,10 +5,10 @@ package com.pulumi.azurenative.machinelearning.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class WebServiceParameterArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="certificateThumbprint")
-      private final @Nullable Output<String> certificateThumbprint;
+    private @Nullable Output<String> certificateThumbprint;
 
-    public Output<String> certificateThumbprint() {
-        return this.certificateThumbprint == null ? Codegen.empty() : this.certificateThumbprint;
+    public Optional<Output<String>> certificateThumbprint() {
+        return Optional.ofNullable(this.certificateThumbprint);
     }
 
     /**
@@ -36,63 +36,58 @@ public final class WebServiceParameterArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="value")
-      private final @Nullable Output<Object> value;
+    private @Nullable Output<Object> value;
 
-    public Output<Object> value() {
-        return this.value == null ? Codegen.empty() : this.value;
+    public Optional<Output<Object>> value() {
+        return Optional.ofNullable(this.value);
     }
 
-    public WebServiceParameterArgs(
-        @Nullable Output<String> certificateThumbprint,
-        @Nullable Output<Object> value) {
-        this.certificateThumbprint = certificateThumbprint;
-        this.value = value;
-    }
+    private WebServiceParameterArgs() {}
 
-    private WebServiceParameterArgs() {
-        this.certificateThumbprint = Codegen.empty();
-        this.value = Codegen.empty();
+    private WebServiceParameterArgs(WebServiceParameterArgs $) {
+        this.certificateThumbprint = $.certificateThumbprint;
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WebServiceParameterArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> certificateThumbprint;
-        private @Nullable Output<Object> value;
+        private WebServiceParameterArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new WebServiceParameterArgs();
         }
 
         public Builder(WebServiceParameterArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.certificateThumbprint = defaults.certificateThumbprint;
-    	      this.value = defaults.value;
+            $ = new WebServiceParameterArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder certificateThumbprint(@Nullable Output<String> certificateThumbprint) {
-            this.certificateThumbprint = certificateThumbprint;
+            $.certificateThumbprint = certificateThumbprint;
             return this;
         }
-        public Builder certificateThumbprint(@Nullable String certificateThumbprint) {
-            this.certificateThumbprint = Codegen.ofNullable(certificateThumbprint);
-            return this;
+
+        public Builder certificateThumbprint(String certificateThumbprint) {
+            return certificateThumbprint(Output.of(certificateThumbprint));
         }
+
         public Builder value(@Nullable Output<Object> value) {
-            this.value = value;
+            $.value = value;
             return this;
         }
-        public Builder value(@Nullable Object value) {
-            this.value = Codegen.ofNullable(value);
-            return this;
-        }        public WebServiceParameterArgs build() {
-            return new WebServiceParameterArgs(certificateThumbprint, value);
+
+        public Builder value(Object value) {
+            return value(Output.of(value));
+        }
+
+        public WebServiceParameterArgs build() {
+            return $;
         }
     }
+
 }

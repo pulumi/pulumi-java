@@ -19,7 +19,7 @@ public final class GetVariableArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -30,7 +30,7 @@ public final class GetVariableArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="parent", required=true)
-      private final String parent;
+    private String parent;
 
     public String parent() {
         return this.parent;
@@ -42,64 +42,58 @@ public final class GetVariableArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="project")
-      private final @Nullable String project;
+    private @Nullable String project;
 
     public Optional<String> project() {
-        return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
+        return Optional.ofNullable(this.project);
     }
 
-    public GetVariableArgs(
-        String name,
-        String parent,
-        @Nullable String project) {
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.parent = Objects.requireNonNull(parent, "expected parameter 'parent' to be non-null");
-        this.project = project;
-    }
+    private GetVariableArgs() {}
 
-    private GetVariableArgs() {
-        this.name = null;
-        this.parent = null;
-        this.project = null;
+    private GetVariableArgs(GetVariableArgs $) {
+        this.name = $.name;
+        this.parent = $.parent;
+        this.project = $.project;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetVariableArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String name;
-        private String parent;
-        private @Nullable String project;
+        private GetVariableArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetVariableArgs();
         }
 
         public Builder(GetVariableArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.parent = defaults.parent;
-    	      this.project = defaults.project;
+            $ = new GetVariableArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder parent(String parent) {
-            this.parent = Objects.requireNonNull(parent);
+            $.parent = parent;
             return this;
         }
+
         public Builder project(@Nullable String project) {
-            this.project = project;
+            $.project = project;
             return this;
-        }        public GetVariableArgs build() {
-            return new GetVariableArgs(name, parent, project);
+        }
+
+        public GetVariableArgs build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.parent = Objects.requireNonNull($.parent, "expected parameter 'parent' to be non-null");
+            return $;
         }
     }
+
 }

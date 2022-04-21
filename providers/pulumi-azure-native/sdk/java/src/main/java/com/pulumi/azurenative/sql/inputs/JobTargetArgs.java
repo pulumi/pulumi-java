@@ -11,6 +11,7 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +28,10 @@ public final class JobTargetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="databaseName")
-      private final @Nullable Output<String> databaseName;
+    private @Nullable Output<String> databaseName;
 
-    public Output<String> databaseName() {
-        return this.databaseName == null ? Codegen.empty() : this.databaseName;
+    public Optional<Output<String>> databaseName() {
+        return Optional.ofNullable(this.databaseName);
     }
 
     /**
@@ -38,10 +39,10 @@ public final class JobTargetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="elasticPoolName")
-      private final @Nullable Output<String> elasticPoolName;
+    private @Nullable Output<String> elasticPoolName;
 
-    public Output<String> elasticPoolName() {
-        return this.elasticPoolName == null ? Codegen.empty() : this.elasticPoolName;
+    public Optional<Output<String>> elasticPoolName() {
+        return Optional.ofNullable(this.elasticPoolName);
     }
 
     /**
@@ -49,10 +50,10 @@ public final class JobTargetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="membershipType")
-      private final @Nullable Output<JobTargetGroupMembershipType> membershipType;
+    private @Nullable Output<JobTargetGroupMembershipType> membershipType;
 
-    public Output<JobTargetGroupMembershipType> membershipType() {
-        return this.membershipType == null ? Codegen.empty() : this.membershipType;
+    public Optional<Output<JobTargetGroupMembershipType>> membershipType() {
+        return Optional.ofNullable(this.membershipType);
     }
 
     /**
@@ -60,10 +61,10 @@ public final class JobTargetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="refreshCredential")
-      private final @Nullable Output<String> refreshCredential;
+    private @Nullable Output<String> refreshCredential;
 
-    public Output<String> refreshCredential() {
-        return this.refreshCredential == null ? Codegen.empty() : this.refreshCredential;
+    public Optional<Output<String>> refreshCredential() {
+        return Optional.ofNullable(this.refreshCredential);
     }
 
     /**
@@ -71,10 +72,10 @@ public final class JobTargetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="serverName")
-      private final @Nullable Output<String> serverName;
+    private @Nullable Output<String> serverName;
 
-    public Output<String> serverName() {
-        return this.serverName == null ? Codegen.empty() : this.serverName;
+    public Optional<Output<String>> serverName() {
+        return Optional.ofNullable(this.serverName);
     }
 
     /**
@@ -82,10 +83,10 @@ public final class JobTargetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="shardMapName")
-      private final @Nullable Output<String> shardMapName;
+    private @Nullable Output<String> shardMapName;
 
-    public Output<String> shardMapName() {
-        return this.shardMapName == null ? Codegen.empty() : this.shardMapName;
+    public Optional<Output<String>> shardMapName() {
+        return Optional.ofNullable(this.shardMapName);
     }
 
     /**
@@ -93,128 +94,110 @@ public final class JobTargetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="type", required=true)
-      private final Output<Either<String,JobTargetType>> type;
+    private Output<Either<String,JobTargetType>> type;
 
     public Output<Either<String,JobTargetType>> type() {
         return this.type;
     }
 
-    public JobTargetArgs(
-        @Nullable Output<String> databaseName,
-        @Nullable Output<String> elasticPoolName,
-        @Nullable Output<JobTargetGroupMembershipType> membershipType,
-        @Nullable Output<String> refreshCredential,
-        @Nullable Output<String> serverName,
-        @Nullable Output<String> shardMapName,
-        Output<Either<String,JobTargetType>> type) {
-        this.databaseName = databaseName;
-        this.elasticPoolName = elasticPoolName;
-        this.membershipType = Codegen.objectProp("membershipType", JobTargetGroupMembershipType.class).output().arg(membershipType).def(JobTargetGroupMembershipType.Include).getNullable();
-        this.refreshCredential = refreshCredential;
-        this.serverName = serverName;
-        this.shardMapName = shardMapName;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private JobTargetArgs() {}
 
-    private JobTargetArgs() {
-        this.databaseName = Codegen.empty();
-        this.elasticPoolName = Codegen.empty();
-        this.membershipType = Codegen.empty();
-        this.refreshCredential = Codegen.empty();
-        this.serverName = Codegen.empty();
-        this.shardMapName = Codegen.empty();
-        this.type = Codegen.empty();
+    private JobTargetArgs(JobTargetArgs $) {
+        this.databaseName = $.databaseName;
+        this.elasticPoolName = $.elasticPoolName;
+        this.membershipType = $.membershipType;
+        this.refreshCredential = $.refreshCredential;
+        this.serverName = $.serverName;
+        this.shardMapName = $.shardMapName;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(JobTargetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> databaseName;
-        private @Nullable Output<String> elasticPoolName;
-        private @Nullable Output<JobTargetGroupMembershipType> membershipType;
-        private @Nullable Output<String> refreshCredential;
-        private @Nullable Output<String> serverName;
-        private @Nullable Output<String> shardMapName;
-        private Output<Either<String,JobTargetType>> type;
+        private JobTargetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new JobTargetArgs();
         }
 
         public Builder(JobTargetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.databaseName = defaults.databaseName;
-    	      this.elasticPoolName = defaults.elasticPoolName;
-    	      this.membershipType = defaults.membershipType;
-    	      this.refreshCredential = defaults.refreshCredential;
-    	      this.serverName = defaults.serverName;
-    	      this.shardMapName = defaults.shardMapName;
-    	      this.type = defaults.type;
+            $ = new JobTargetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder databaseName(@Nullable Output<String> databaseName) {
-            this.databaseName = databaseName;
+            $.databaseName = databaseName;
             return this;
         }
-        public Builder databaseName(@Nullable String databaseName) {
-            this.databaseName = Codegen.ofNullable(databaseName);
-            return this;
+
+        public Builder databaseName(String databaseName) {
+            return databaseName(Output.of(databaseName));
         }
+
         public Builder elasticPoolName(@Nullable Output<String> elasticPoolName) {
-            this.elasticPoolName = elasticPoolName;
+            $.elasticPoolName = elasticPoolName;
             return this;
         }
-        public Builder elasticPoolName(@Nullable String elasticPoolName) {
-            this.elasticPoolName = Codegen.ofNullable(elasticPoolName);
-            return this;
+
+        public Builder elasticPoolName(String elasticPoolName) {
+            return elasticPoolName(Output.of(elasticPoolName));
         }
+
         public Builder membershipType(@Nullable Output<JobTargetGroupMembershipType> membershipType) {
-            this.membershipType = membershipType;
+            $.membershipType = membershipType;
             return this;
         }
-        public Builder membershipType(@Nullable JobTargetGroupMembershipType membershipType) {
-            this.membershipType = Codegen.ofNullable(membershipType);
-            return this;
+
+        public Builder membershipType(JobTargetGroupMembershipType membershipType) {
+            return membershipType(Output.of(membershipType));
         }
+
         public Builder refreshCredential(@Nullable Output<String> refreshCredential) {
-            this.refreshCredential = refreshCredential;
+            $.refreshCredential = refreshCredential;
             return this;
         }
-        public Builder refreshCredential(@Nullable String refreshCredential) {
-            this.refreshCredential = Codegen.ofNullable(refreshCredential);
-            return this;
+
+        public Builder refreshCredential(String refreshCredential) {
+            return refreshCredential(Output.of(refreshCredential));
         }
+
         public Builder serverName(@Nullable Output<String> serverName) {
-            this.serverName = serverName;
+            $.serverName = serverName;
             return this;
         }
-        public Builder serverName(@Nullable String serverName) {
-            this.serverName = Codegen.ofNullable(serverName);
-            return this;
+
+        public Builder serverName(String serverName) {
+            return serverName(Output.of(serverName));
         }
+
         public Builder shardMapName(@Nullable Output<String> shardMapName) {
-            this.shardMapName = shardMapName;
+            $.shardMapName = shardMapName;
             return this;
         }
-        public Builder shardMapName(@Nullable String shardMapName) {
-            this.shardMapName = Codegen.ofNullable(shardMapName);
-            return this;
+
+        public Builder shardMapName(String shardMapName) {
+            return shardMapName(Output.of(shardMapName));
         }
+
         public Builder type(Output<Either<String,JobTargetType>> type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder type(Either<String,JobTargetType> type) {
-            this.type = Output.of(Objects.requireNonNull(type));
-            return this;
-        }        public JobTargetArgs build() {
-            return new JobTargetArgs(databaseName, elasticPoolName, membershipType, refreshCredential, serverName, shardMapName, type);
+            return type(Output.of(type));
+        }
+
+        public JobTargetArgs build() {
+            $.membershipType = Codegen.objectProp("membershipType", JobTargetGroupMembershipType.class).output().arg($.membershipType).def(JobTargetGroupMembershipType.Include).getNullable();
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

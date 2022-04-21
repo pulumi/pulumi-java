@@ -23,7 +23,7 @@ public final class GetUserTablesSqlTaskInputResponse extends com.pulumi.resource
      * 
      */
     @Import(name="connectionInfo", required=true)
-      private final SqlConnectionInfoResponse connectionInfo;
+    private SqlConnectionInfoResponse connectionInfo;
 
     public SqlConnectionInfoResponse connectionInfo() {
         return this.connectionInfo;
@@ -34,58 +34,56 @@ public final class GetUserTablesSqlTaskInputResponse extends com.pulumi.resource
      * 
      */
     @Import(name="selectedDatabases", required=true)
-      private final List<String> selectedDatabases;
+    private List<String> selectedDatabases;
 
     public List<String> selectedDatabases() {
         return this.selectedDatabases;
     }
 
-    public GetUserTablesSqlTaskInputResponse(
-        SqlConnectionInfoResponse connectionInfo,
-        List<String> selectedDatabases) {
-        this.connectionInfo = Objects.requireNonNull(connectionInfo, "expected parameter 'connectionInfo' to be non-null");
-        this.selectedDatabases = Objects.requireNonNull(selectedDatabases, "expected parameter 'selectedDatabases' to be non-null");
-    }
+    private GetUserTablesSqlTaskInputResponse() {}
 
-    private GetUserTablesSqlTaskInputResponse() {
-        this.connectionInfo = null;
-        this.selectedDatabases = List.of();
+    private GetUserTablesSqlTaskInputResponse(GetUserTablesSqlTaskInputResponse $) {
+        this.connectionInfo = $.connectionInfo;
+        this.selectedDatabases = $.selectedDatabases;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetUserTablesSqlTaskInputResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private SqlConnectionInfoResponse connectionInfo;
-        private List<String> selectedDatabases;
+        private GetUserTablesSqlTaskInputResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetUserTablesSqlTaskInputResponse();
         }
 
         public Builder(GetUserTablesSqlTaskInputResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.connectionInfo = defaults.connectionInfo;
-    	      this.selectedDatabases = defaults.selectedDatabases;
+            $ = new GetUserTablesSqlTaskInputResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder connectionInfo(SqlConnectionInfoResponse connectionInfo) {
-            this.connectionInfo = Objects.requireNonNull(connectionInfo);
+            $.connectionInfo = connectionInfo;
             return this;
         }
+
         public Builder selectedDatabases(List<String> selectedDatabases) {
-            this.selectedDatabases = Objects.requireNonNull(selectedDatabases);
+            $.selectedDatabases = selectedDatabases;
             return this;
         }
+
         public Builder selectedDatabases(String... selectedDatabases) {
             return selectedDatabases(List.of(selectedDatabases));
-        }        public GetUserTablesSqlTaskInputResponse build() {
-            return new GetUserTablesSqlTaskInputResponse(connectionInfo, selectedDatabases);
+        }
+
+        public GetUserTablesSqlTaskInputResponse build() {
+            $.connectionInfo = Objects.requireNonNull($.connectionInfo, "expected parameter 'connectionInfo' to be non-null");
+            $.selectedDatabases = Objects.requireNonNull($.selectedDatabases, "expected parameter 'selectedDatabases' to be non-null");
+            return $;
         }
     }
+
 }

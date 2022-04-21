@@ -5,12 +5,12 @@ package com.pulumi.aws.ssm;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,10 @@ public final class MaintenanceWindowArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="allowUnassociatedTargets")
-      private final @Nullable Output<Boolean> allowUnassociatedTargets;
+    private @Nullable Output<Boolean> allowUnassociatedTargets;
 
-    public Output<Boolean> allowUnassociatedTargets() {
-        return this.allowUnassociatedTargets == null ? Codegen.empty() : this.allowUnassociatedTargets;
+    public Optional<Output<Boolean>> allowUnassociatedTargets() {
+        return Optional.ofNullable(this.allowUnassociatedTargets);
     }
 
     /**
@@ -34,7 +34,7 @@ public final class MaintenanceWindowArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="cutoff", required=true)
-      private final Output<Integer> cutoff;
+    private Output<Integer> cutoff;
 
     public Output<Integer> cutoff() {
         return this.cutoff;
@@ -45,10 +45,10 @@ public final class MaintenanceWindowArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -56,7 +56,7 @@ public final class MaintenanceWindowArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="duration", required=true)
-      private final Output<Integer> duration;
+    private Output<Integer> duration;
 
     public Output<Integer> duration() {
         return this.duration;
@@ -67,10 +67,10 @@ public final class MaintenanceWindowArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="enabled")
-      private final @Nullable Output<Boolean> enabled;
+    private @Nullable Output<Boolean> enabled;
 
-    public Output<Boolean> enabled() {
-        return this.enabled == null ? Codegen.empty() : this.enabled;
+    public Optional<Output<Boolean>> enabled() {
+        return Optional.ofNullable(this.enabled);
     }
 
     /**
@@ -78,10 +78,10 @@ public final class MaintenanceWindowArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="endDate")
-      private final @Nullable Output<String> endDate;
+    private @Nullable Output<String> endDate;
 
-    public Output<String> endDate() {
-        return this.endDate == null ? Codegen.empty() : this.endDate;
+    public Optional<Output<String>> endDate() {
+        return Optional.ofNullable(this.endDate);
     }
 
     /**
@@ -89,10 +89,10 @@ public final class MaintenanceWindowArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -100,7 +100,7 @@ public final class MaintenanceWindowArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="schedule", required=true)
-      private final Output<String> schedule;
+    private Output<String> schedule;
 
     public Output<String> schedule() {
         return this.schedule;
@@ -111,10 +111,10 @@ public final class MaintenanceWindowArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="scheduleOffset")
-      private final @Nullable Output<Integer> scheduleOffset;
+    private @Nullable Output<Integer> scheduleOffset;
 
-    public Output<Integer> scheduleOffset() {
-        return this.scheduleOffset == null ? Codegen.empty() : this.scheduleOffset;
+    public Optional<Output<Integer>> scheduleOffset() {
+        return Optional.ofNullable(this.scheduleOffset);
     }
 
     /**
@@ -122,10 +122,10 @@ public final class MaintenanceWindowArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="scheduleTimezone")
-      private final @Nullable Output<String> scheduleTimezone;
+    private @Nullable Output<String> scheduleTimezone;
 
-    public Output<String> scheduleTimezone() {
-        return this.scheduleTimezone == null ? Codegen.empty() : this.scheduleTimezone;
+    public Optional<Output<String>> scheduleTimezone() {
+        return Optional.ofNullable(this.scheduleTimezone);
     }
 
     /**
@@ -133,10 +133,10 @@ public final class MaintenanceWindowArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="startDate")
-      private final @Nullable Output<String> startDate;
+    private @Nullable Output<String> startDate;
 
-    public Output<String> startDate() {
-        return this.startDate == null ? Codegen.empty() : this.startDate;
+    public Optional<Output<String>> startDate() {
+        return Optional.ofNullable(this.startDate);
     }
 
     /**
@@ -144,193 +144,161 @@ public final class MaintenanceWindowArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public MaintenanceWindowArgs(
-        @Nullable Output<Boolean> allowUnassociatedTargets,
-        Output<Integer> cutoff,
-        @Nullable Output<String> description,
-        Output<Integer> duration,
-        @Nullable Output<Boolean> enabled,
-        @Nullable Output<String> endDate,
-        @Nullable Output<String> name,
-        Output<String> schedule,
-        @Nullable Output<Integer> scheduleOffset,
-        @Nullable Output<String> scheduleTimezone,
-        @Nullable Output<String> startDate,
-        @Nullable Output<Map<String,String>> tags) {
-        this.allowUnassociatedTargets = allowUnassociatedTargets;
-        this.cutoff = Objects.requireNonNull(cutoff, "expected parameter 'cutoff' to be non-null");
-        this.description = description;
-        this.duration = Objects.requireNonNull(duration, "expected parameter 'duration' to be non-null");
-        this.enabled = enabled;
-        this.endDate = endDate;
-        this.name = name;
-        this.schedule = Objects.requireNonNull(schedule, "expected parameter 'schedule' to be non-null");
-        this.scheduleOffset = scheduleOffset;
-        this.scheduleTimezone = scheduleTimezone;
-        this.startDate = startDate;
-        this.tags = tags;
-    }
+    private MaintenanceWindowArgs() {}
 
-    private MaintenanceWindowArgs() {
-        this.allowUnassociatedTargets = Codegen.empty();
-        this.cutoff = Codegen.empty();
-        this.description = Codegen.empty();
-        this.duration = Codegen.empty();
-        this.enabled = Codegen.empty();
-        this.endDate = Codegen.empty();
-        this.name = Codegen.empty();
-        this.schedule = Codegen.empty();
-        this.scheduleOffset = Codegen.empty();
-        this.scheduleTimezone = Codegen.empty();
-        this.startDate = Codegen.empty();
-        this.tags = Codegen.empty();
+    private MaintenanceWindowArgs(MaintenanceWindowArgs $) {
+        this.allowUnassociatedTargets = $.allowUnassociatedTargets;
+        this.cutoff = $.cutoff;
+        this.description = $.description;
+        this.duration = $.duration;
+        this.enabled = $.enabled;
+        this.endDate = $.endDate;
+        this.name = $.name;
+        this.schedule = $.schedule;
+        this.scheduleOffset = $.scheduleOffset;
+        this.scheduleTimezone = $.scheduleTimezone;
+        this.startDate = $.startDate;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MaintenanceWindowArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> allowUnassociatedTargets;
-        private Output<Integer> cutoff;
-        private @Nullable Output<String> description;
-        private Output<Integer> duration;
-        private @Nullable Output<Boolean> enabled;
-        private @Nullable Output<String> endDate;
-        private @Nullable Output<String> name;
-        private Output<String> schedule;
-        private @Nullable Output<Integer> scheduleOffset;
-        private @Nullable Output<String> scheduleTimezone;
-        private @Nullable Output<String> startDate;
-        private @Nullable Output<Map<String,String>> tags;
+        private MaintenanceWindowArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new MaintenanceWindowArgs();
         }
 
         public Builder(MaintenanceWindowArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.allowUnassociatedTargets = defaults.allowUnassociatedTargets;
-    	      this.cutoff = defaults.cutoff;
-    	      this.description = defaults.description;
-    	      this.duration = defaults.duration;
-    	      this.enabled = defaults.enabled;
-    	      this.endDate = defaults.endDate;
-    	      this.name = defaults.name;
-    	      this.schedule = defaults.schedule;
-    	      this.scheduleOffset = defaults.scheduleOffset;
-    	      this.scheduleTimezone = defaults.scheduleTimezone;
-    	      this.startDate = defaults.startDate;
-    	      this.tags = defaults.tags;
+            $ = new MaintenanceWindowArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder allowUnassociatedTargets(@Nullable Output<Boolean> allowUnassociatedTargets) {
-            this.allowUnassociatedTargets = allowUnassociatedTargets;
+            $.allowUnassociatedTargets = allowUnassociatedTargets;
             return this;
         }
-        public Builder allowUnassociatedTargets(@Nullable Boolean allowUnassociatedTargets) {
-            this.allowUnassociatedTargets = Codegen.ofNullable(allowUnassociatedTargets);
-            return this;
+
+        public Builder allowUnassociatedTargets(Boolean allowUnassociatedTargets) {
+            return allowUnassociatedTargets(Output.of(allowUnassociatedTargets));
         }
+
         public Builder cutoff(Output<Integer> cutoff) {
-            this.cutoff = Objects.requireNonNull(cutoff);
+            $.cutoff = cutoff;
             return this;
         }
+
         public Builder cutoff(Integer cutoff) {
-            this.cutoff = Output.of(Objects.requireNonNull(cutoff));
-            return this;
+            return cutoff(Output.of(cutoff));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder duration(Output<Integer> duration) {
-            this.duration = Objects.requireNonNull(duration);
+            $.duration = duration;
             return this;
         }
+
         public Builder duration(Integer duration) {
-            this.duration = Output.of(Objects.requireNonNull(duration));
-            return this;
+            return duration(Output.of(duration));
         }
+
         public Builder enabled(@Nullable Output<Boolean> enabled) {
-            this.enabled = enabled;
+            $.enabled = enabled;
             return this;
         }
-        public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Codegen.ofNullable(enabled);
-            return this;
+
+        public Builder enabled(Boolean enabled) {
+            return enabled(Output.of(enabled));
         }
+
         public Builder endDate(@Nullable Output<String> endDate) {
-            this.endDate = endDate;
+            $.endDate = endDate;
             return this;
         }
-        public Builder endDate(@Nullable String endDate) {
-            this.endDate = Codegen.ofNullable(endDate);
-            return this;
+
+        public Builder endDate(String endDate) {
+            return endDate(Output.of(endDate));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder schedule(Output<String> schedule) {
-            this.schedule = Objects.requireNonNull(schedule);
+            $.schedule = schedule;
             return this;
         }
+
         public Builder schedule(String schedule) {
-            this.schedule = Output.of(Objects.requireNonNull(schedule));
-            return this;
+            return schedule(Output.of(schedule));
         }
+
         public Builder scheduleOffset(@Nullable Output<Integer> scheduleOffset) {
-            this.scheduleOffset = scheduleOffset;
+            $.scheduleOffset = scheduleOffset;
             return this;
         }
-        public Builder scheduleOffset(@Nullable Integer scheduleOffset) {
-            this.scheduleOffset = Codegen.ofNullable(scheduleOffset);
-            return this;
+
+        public Builder scheduleOffset(Integer scheduleOffset) {
+            return scheduleOffset(Output.of(scheduleOffset));
         }
+
         public Builder scheduleTimezone(@Nullable Output<String> scheduleTimezone) {
-            this.scheduleTimezone = scheduleTimezone;
+            $.scheduleTimezone = scheduleTimezone;
             return this;
         }
-        public Builder scheduleTimezone(@Nullable String scheduleTimezone) {
-            this.scheduleTimezone = Codegen.ofNullable(scheduleTimezone);
-            return this;
+
+        public Builder scheduleTimezone(String scheduleTimezone) {
+            return scheduleTimezone(Output.of(scheduleTimezone));
         }
+
         public Builder startDate(@Nullable Output<String> startDate) {
-            this.startDate = startDate;
+            $.startDate = startDate;
             return this;
         }
-        public Builder startDate(@Nullable String startDate) {
-            this.startDate = Codegen.ofNullable(startDate);
-            return this;
+
+        public Builder startDate(String startDate) {
+            return startDate(Output.of(startDate));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
-        }        public MaintenanceWindowArgs build() {
-            return new MaintenanceWindowArgs(allowUnassociatedTargets, cutoff, description, duration, enabled, endDate, name, schedule, scheduleOffset, scheduleTimezone, startDate, tags);
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
+        }
+
+        public MaintenanceWindowArgs build() {
+            $.cutoff = Objects.requireNonNull($.cutoff, "expected parameter 'cutoff' to be non-null");
+            $.duration = Objects.requireNonNull($.duration, "expected parameter 'duration' to be non-null");
+            $.schedule = Objects.requireNonNull($.schedule, "expected parameter 'schedule' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,10 +5,10 @@ package com.pulumi.googlenative.healthcare_v1beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.healthcare_v1beta1.inputs.SearchParameterArgs;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,52 +25,52 @@ public final class SearchConfigArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="searchParameters")
-      private final @Nullable Output<List<SearchParameterArgs>> searchParameters;
+    private @Nullable Output<List<SearchParameterArgs>> searchParameters;
 
-    public Output<List<SearchParameterArgs>> searchParameters() {
-        return this.searchParameters == null ? Codegen.empty() : this.searchParameters;
+    public Optional<Output<List<SearchParameterArgs>>> searchParameters() {
+        return Optional.ofNullable(this.searchParameters);
     }
 
-    public SearchConfigArgs(@Nullable Output<List<SearchParameterArgs>> searchParameters) {
-        this.searchParameters = searchParameters;
-    }
+    private SearchConfigArgs() {}
 
-    private SearchConfigArgs() {
-        this.searchParameters = Codegen.empty();
+    private SearchConfigArgs(SearchConfigArgs $) {
+        this.searchParameters = $.searchParameters;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SearchConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<SearchParameterArgs>> searchParameters;
+        private SearchConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SearchConfigArgs();
         }
 
         public Builder(SearchConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.searchParameters = defaults.searchParameters;
+            $ = new SearchConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder searchParameters(@Nullable Output<List<SearchParameterArgs>> searchParameters) {
-            this.searchParameters = searchParameters;
+            $.searchParameters = searchParameters;
             return this;
         }
-        public Builder searchParameters(@Nullable List<SearchParameterArgs> searchParameters) {
-            this.searchParameters = Codegen.ofNullable(searchParameters);
-            return this;
+
+        public Builder searchParameters(List<SearchParameterArgs> searchParameters) {
+            return searchParameters(Output.of(searchParameters));
         }
+
         public Builder searchParameters(SearchParameterArgs... searchParameters) {
             return searchParameters(List.of(searchParameters));
-        }        public SearchConfigArgs build() {
-            return new SearchConfigArgs(searchParameters);
+        }
+
+        public SearchConfigArgs build() {
+            return $;
         }
     }
+
 }

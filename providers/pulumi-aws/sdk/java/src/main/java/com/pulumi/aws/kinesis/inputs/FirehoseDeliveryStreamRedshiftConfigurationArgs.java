@@ -8,10 +8,10 @@ import com.pulumi.aws.kinesis.inputs.FirehoseDeliveryStreamRedshiftConfiguration
 import com.pulumi.aws.kinesis.inputs.FirehoseDeliveryStreamRedshiftConfigurationS3BackupConfigurationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class FirehoseDeliveryStreamRedshiftConfigurationArgs extends com.p
      * 
      */
     @Import(name="cloudwatchLoggingOptions")
-      private final @Nullable Output<FirehoseDeliveryStreamRedshiftConfigurationCloudwatchLoggingOptionsArgs> cloudwatchLoggingOptions;
+    private @Nullable Output<FirehoseDeliveryStreamRedshiftConfigurationCloudwatchLoggingOptionsArgs> cloudwatchLoggingOptions;
 
-    public Output<FirehoseDeliveryStreamRedshiftConfigurationCloudwatchLoggingOptionsArgs> cloudwatchLoggingOptions() {
-        return this.cloudwatchLoggingOptions == null ? Codegen.empty() : this.cloudwatchLoggingOptions;
+    public Optional<Output<FirehoseDeliveryStreamRedshiftConfigurationCloudwatchLoggingOptionsArgs>> cloudwatchLoggingOptions() {
+        return Optional.ofNullable(this.cloudwatchLoggingOptions);
     }
 
     /**
@@ -35,7 +35,7 @@ public final class FirehoseDeliveryStreamRedshiftConfigurationArgs extends com.p
      * 
      */
     @Import(name="clusterJdbcurl", required=true)
-      private final Output<String> clusterJdbcurl;
+    private Output<String> clusterJdbcurl;
 
     public Output<String> clusterJdbcurl() {
         return this.clusterJdbcurl;
@@ -46,10 +46,10 @@ public final class FirehoseDeliveryStreamRedshiftConfigurationArgs extends com.p
      * 
      */
     @Import(name="copyOptions")
-      private final @Nullable Output<String> copyOptions;
+    private @Nullable Output<String> copyOptions;
 
-    public Output<String> copyOptions() {
-        return this.copyOptions == null ? Codegen.empty() : this.copyOptions;
+    public Optional<Output<String>> copyOptions() {
+        return Optional.ofNullable(this.copyOptions);
     }
 
     /**
@@ -57,10 +57,10 @@ public final class FirehoseDeliveryStreamRedshiftConfigurationArgs extends com.p
      * 
      */
     @Import(name="dataTableColumns")
-      private final @Nullable Output<String> dataTableColumns;
+    private @Nullable Output<String> dataTableColumns;
 
-    public Output<String> dataTableColumns() {
-        return this.dataTableColumns == null ? Codegen.empty() : this.dataTableColumns;
+    public Optional<Output<String>> dataTableColumns() {
+        return Optional.ofNullable(this.dataTableColumns);
     }
 
     /**
@@ -68,7 +68,7 @@ public final class FirehoseDeliveryStreamRedshiftConfigurationArgs extends com.p
      * 
      */
     @Import(name="dataTableName", required=true)
-      private final Output<String> dataTableName;
+    private Output<String> dataTableName;
 
     public Output<String> dataTableName() {
         return this.dataTableName;
@@ -79,7 +79,7 @@ public final class FirehoseDeliveryStreamRedshiftConfigurationArgs extends com.p
      * 
      */
     @Import(name="password", required=true)
-      private final Output<String> password;
+    private Output<String> password;
 
     public Output<String> password() {
         return this.password;
@@ -90,10 +90,10 @@ public final class FirehoseDeliveryStreamRedshiftConfigurationArgs extends com.p
      * 
      */
     @Import(name="processingConfiguration")
-      private final @Nullable Output<FirehoseDeliveryStreamRedshiftConfigurationProcessingConfigurationArgs> processingConfiguration;
+    private @Nullable Output<FirehoseDeliveryStreamRedshiftConfigurationProcessingConfigurationArgs> processingConfiguration;
 
-    public Output<FirehoseDeliveryStreamRedshiftConfigurationProcessingConfigurationArgs> processingConfiguration() {
-        return this.processingConfiguration == null ? Codegen.empty() : this.processingConfiguration;
+    public Optional<Output<FirehoseDeliveryStreamRedshiftConfigurationProcessingConfigurationArgs>> processingConfiguration() {
+        return Optional.ofNullable(this.processingConfiguration);
     }
 
     /**
@@ -101,10 +101,10 @@ public final class FirehoseDeliveryStreamRedshiftConfigurationArgs extends com.p
      * 
      */
     @Import(name="retryDuration")
-      private final @Nullable Output<Integer> retryDuration;
+    private @Nullable Output<Integer> retryDuration;
 
-    public Output<Integer> retryDuration() {
-        return this.retryDuration == null ? Codegen.empty() : this.retryDuration;
+    public Optional<Output<Integer>> retryDuration() {
+        return Optional.ofNullable(this.retryDuration);
     }
 
     /**
@@ -112,7 +112,7 @@ public final class FirehoseDeliveryStreamRedshiftConfigurationArgs extends com.p
      * 
      */
     @Import(name="roleArn", required=true)
-      private final Output<String> roleArn;
+    private Output<String> roleArn;
 
     public Output<String> roleArn() {
         return this.roleArn;
@@ -123,10 +123,10 @@ public final class FirehoseDeliveryStreamRedshiftConfigurationArgs extends com.p
      * 
      */
     @Import(name="s3BackupConfiguration")
-      private final @Nullable Output<FirehoseDeliveryStreamRedshiftConfigurationS3BackupConfigurationArgs> s3BackupConfiguration;
+    private @Nullable Output<FirehoseDeliveryStreamRedshiftConfigurationS3BackupConfigurationArgs> s3BackupConfiguration;
 
-    public Output<FirehoseDeliveryStreamRedshiftConfigurationS3BackupConfigurationArgs> s3BackupConfiguration() {
-        return this.s3BackupConfiguration == null ? Codegen.empty() : this.s3BackupConfiguration;
+    public Optional<Output<FirehoseDeliveryStreamRedshiftConfigurationS3BackupConfigurationArgs>> s3BackupConfiguration() {
+        return Optional.ofNullable(this.s3BackupConfiguration);
     }
 
     /**
@@ -134,10 +134,10 @@ public final class FirehoseDeliveryStreamRedshiftConfigurationArgs extends com.p
      * 
      */
     @Import(name="s3BackupMode")
-      private final @Nullable Output<String> s3BackupMode;
+    private @Nullable Output<String> s3BackupMode;
 
-    public Output<String> s3BackupMode() {
-        return this.s3BackupMode == null ? Codegen.empty() : this.s3BackupMode;
+    public Optional<Output<String>> s3BackupMode() {
+        return Optional.ofNullable(this.s3BackupMode);
     }
 
     /**
@@ -145,193 +145,163 @@ public final class FirehoseDeliveryStreamRedshiftConfigurationArgs extends com.p
      * 
      */
     @Import(name="username", required=true)
-      private final Output<String> username;
+    private Output<String> username;
 
     public Output<String> username() {
         return this.username;
     }
 
-    public FirehoseDeliveryStreamRedshiftConfigurationArgs(
-        @Nullable Output<FirehoseDeliveryStreamRedshiftConfigurationCloudwatchLoggingOptionsArgs> cloudwatchLoggingOptions,
-        Output<String> clusterJdbcurl,
-        @Nullable Output<String> copyOptions,
-        @Nullable Output<String> dataTableColumns,
-        Output<String> dataTableName,
-        Output<String> password,
-        @Nullable Output<FirehoseDeliveryStreamRedshiftConfigurationProcessingConfigurationArgs> processingConfiguration,
-        @Nullable Output<Integer> retryDuration,
-        Output<String> roleArn,
-        @Nullable Output<FirehoseDeliveryStreamRedshiftConfigurationS3BackupConfigurationArgs> s3BackupConfiguration,
-        @Nullable Output<String> s3BackupMode,
-        Output<String> username) {
-        this.cloudwatchLoggingOptions = cloudwatchLoggingOptions;
-        this.clusterJdbcurl = Objects.requireNonNull(clusterJdbcurl, "expected parameter 'clusterJdbcurl' to be non-null");
-        this.copyOptions = copyOptions;
-        this.dataTableColumns = dataTableColumns;
-        this.dataTableName = Objects.requireNonNull(dataTableName, "expected parameter 'dataTableName' to be non-null");
-        this.password = Objects.requireNonNull(password, "expected parameter 'password' to be non-null");
-        this.processingConfiguration = processingConfiguration;
-        this.retryDuration = retryDuration;
-        this.roleArn = Objects.requireNonNull(roleArn, "expected parameter 'roleArn' to be non-null");
-        this.s3BackupConfiguration = s3BackupConfiguration;
-        this.s3BackupMode = s3BackupMode;
-        this.username = Objects.requireNonNull(username, "expected parameter 'username' to be non-null");
-    }
+    private FirehoseDeliveryStreamRedshiftConfigurationArgs() {}
 
-    private FirehoseDeliveryStreamRedshiftConfigurationArgs() {
-        this.cloudwatchLoggingOptions = Codegen.empty();
-        this.clusterJdbcurl = Codegen.empty();
-        this.copyOptions = Codegen.empty();
-        this.dataTableColumns = Codegen.empty();
-        this.dataTableName = Codegen.empty();
-        this.password = Codegen.empty();
-        this.processingConfiguration = Codegen.empty();
-        this.retryDuration = Codegen.empty();
-        this.roleArn = Codegen.empty();
-        this.s3BackupConfiguration = Codegen.empty();
-        this.s3BackupMode = Codegen.empty();
-        this.username = Codegen.empty();
+    private FirehoseDeliveryStreamRedshiftConfigurationArgs(FirehoseDeliveryStreamRedshiftConfigurationArgs $) {
+        this.cloudwatchLoggingOptions = $.cloudwatchLoggingOptions;
+        this.clusterJdbcurl = $.clusterJdbcurl;
+        this.copyOptions = $.copyOptions;
+        this.dataTableColumns = $.dataTableColumns;
+        this.dataTableName = $.dataTableName;
+        this.password = $.password;
+        this.processingConfiguration = $.processingConfiguration;
+        this.retryDuration = $.retryDuration;
+        this.roleArn = $.roleArn;
+        this.s3BackupConfiguration = $.s3BackupConfiguration;
+        this.s3BackupMode = $.s3BackupMode;
+        this.username = $.username;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FirehoseDeliveryStreamRedshiftConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<FirehoseDeliveryStreamRedshiftConfigurationCloudwatchLoggingOptionsArgs> cloudwatchLoggingOptions;
-        private Output<String> clusterJdbcurl;
-        private @Nullable Output<String> copyOptions;
-        private @Nullable Output<String> dataTableColumns;
-        private Output<String> dataTableName;
-        private Output<String> password;
-        private @Nullable Output<FirehoseDeliveryStreamRedshiftConfigurationProcessingConfigurationArgs> processingConfiguration;
-        private @Nullable Output<Integer> retryDuration;
-        private Output<String> roleArn;
-        private @Nullable Output<FirehoseDeliveryStreamRedshiftConfigurationS3BackupConfigurationArgs> s3BackupConfiguration;
-        private @Nullable Output<String> s3BackupMode;
-        private Output<String> username;
+        private FirehoseDeliveryStreamRedshiftConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new FirehoseDeliveryStreamRedshiftConfigurationArgs();
         }
 
         public Builder(FirehoseDeliveryStreamRedshiftConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cloudwatchLoggingOptions = defaults.cloudwatchLoggingOptions;
-    	      this.clusterJdbcurl = defaults.clusterJdbcurl;
-    	      this.copyOptions = defaults.copyOptions;
-    	      this.dataTableColumns = defaults.dataTableColumns;
-    	      this.dataTableName = defaults.dataTableName;
-    	      this.password = defaults.password;
-    	      this.processingConfiguration = defaults.processingConfiguration;
-    	      this.retryDuration = defaults.retryDuration;
-    	      this.roleArn = defaults.roleArn;
-    	      this.s3BackupConfiguration = defaults.s3BackupConfiguration;
-    	      this.s3BackupMode = defaults.s3BackupMode;
-    	      this.username = defaults.username;
+            $ = new FirehoseDeliveryStreamRedshiftConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder cloudwatchLoggingOptions(@Nullable Output<FirehoseDeliveryStreamRedshiftConfigurationCloudwatchLoggingOptionsArgs> cloudwatchLoggingOptions) {
-            this.cloudwatchLoggingOptions = cloudwatchLoggingOptions;
+            $.cloudwatchLoggingOptions = cloudwatchLoggingOptions;
             return this;
         }
-        public Builder cloudwatchLoggingOptions(@Nullable FirehoseDeliveryStreamRedshiftConfigurationCloudwatchLoggingOptionsArgs cloudwatchLoggingOptions) {
-            this.cloudwatchLoggingOptions = Codegen.ofNullable(cloudwatchLoggingOptions);
-            return this;
+
+        public Builder cloudwatchLoggingOptions(FirehoseDeliveryStreamRedshiftConfigurationCloudwatchLoggingOptionsArgs cloudwatchLoggingOptions) {
+            return cloudwatchLoggingOptions(Output.of(cloudwatchLoggingOptions));
         }
+
         public Builder clusterJdbcurl(Output<String> clusterJdbcurl) {
-            this.clusterJdbcurl = Objects.requireNonNull(clusterJdbcurl);
+            $.clusterJdbcurl = clusterJdbcurl;
             return this;
         }
+
         public Builder clusterJdbcurl(String clusterJdbcurl) {
-            this.clusterJdbcurl = Output.of(Objects.requireNonNull(clusterJdbcurl));
-            return this;
+            return clusterJdbcurl(Output.of(clusterJdbcurl));
         }
+
         public Builder copyOptions(@Nullable Output<String> copyOptions) {
-            this.copyOptions = copyOptions;
+            $.copyOptions = copyOptions;
             return this;
         }
-        public Builder copyOptions(@Nullable String copyOptions) {
-            this.copyOptions = Codegen.ofNullable(copyOptions);
-            return this;
+
+        public Builder copyOptions(String copyOptions) {
+            return copyOptions(Output.of(copyOptions));
         }
+
         public Builder dataTableColumns(@Nullable Output<String> dataTableColumns) {
-            this.dataTableColumns = dataTableColumns;
+            $.dataTableColumns = dataTableColumns;
             return this;
         }
-        public Builder dataTableColumns(@Nullable String dataTableColumns) {
-            this.dataTableColumns = Codegen.ofNullable(dataTableColumns);
-            return this;
+
+        public Builder dataTableColumns(String dataTableColumns) {
+            return dataTableColumns(Output.of(dataTableColumns));
         }
+
         public Builder dataTableName(Output<String> dataTableName) {
-            this.dataTableName = Objects.requireNonNull(dataTableName);
+            $.dataTableName = dataTableName;
             return this;
         }
+
         public Builder dataTableName(String dataTableName) {
-            this.dataTableName = Output.of(Objects.requireNonNull(dataTableName));
-            return this;
+            return dataTableName(Output.of(dataTableName));
         }
+
         public Builder password(Output<String> password) {
-            this.password = Objects.requireNonNull(password);
+            $.password = password;
             return this;
         }
+
         public Builder password(String password) {
-            this.password = Output.of(Objects.requireNonNull(password));
-            return this;
+            return password(Output.of(password));
         }
+
         public Builder processingConfiguration(@Nullable Output<FirehoseDeliveryStreamRedshiftConfigurationProcessingConfigurationArgs> processingConfiguration) {
-            this.processingConfiguration = processingConfiguration;
+            $.processingConfiguration = processingConfiguration;
             return this;
         }
-        public Builder processingConfiguration(@Nullable FirehoseDeliveryStreamRedshiftConfigurationProcessingConfigurationArgs processingConfiguration) {
-            this.processingConfiguration = Codegen.ofNullable(processingConfiguration);
-            return this;
+
+        public Builder processingConfiguration(FirehoseDeliveryStreamRedshiftConfigurationProcessingConfigurationArgs processingConfiguration) {
+            return processingConfiguration(Output.of(processingConfiguration));
         }
+
         public Builder retryDuration(@Nullable Output<Integer> retryDuration) {
-            this.retryDuration = retryDuration;
+            $.retryDuration = retryDuration;
             return this;
         }
-        public Builder retryDuration(@Nullable Integer retryDuration) {
-            this.retryDuration = Codegen.ofNullable(retryDuration);
-            return this;
+
+        public Builder retryDuration(Integer retryDuration) {
+            return retryDuration(Output.of(retryDuration));
         }
+
         public Builder roleArn(Output<String> roleArn) {
-            this.roleArn = Objects.requireNonNull(roleArn);
+            $.roleArn = roleArn;
             return this;
         }
+
         public Builder roleArn(String roleArn) {
-            this.roleArn = Output.of(Objects.requireNonNull(roleArn));
-            return this;
+            return roleArn(Output.of(roleArn));
         }
+
         public Builder s3BackupConfiguration(@Nullable Output<FirehoseDeliveryStreamRedshiftConfigurationS3BackupConfigurationArgs> s3BackupConfiguration) {
-            this.s3BackupConfiguration = s3BackupConfiguration;
+            $.s3BackupConfiguration = s3BackupConfiguration;
             return this;
         }
-        public Builder s3BackupConfiguration(@Nullable FirehoseDeliveryStreamRedshiftConfigurationS3BackupConfigurationArgs s3BackupConfiguration) {
-            this.s3BackupConfiguration = Codegen.ofNullable(s3BackupConfiguration);
-            return this;
+
+        public Builder s3BackupConfiguration(FirehoseDeliveryStreamRedshiftConfigurationS3BackupConfigurationArgs s3BackupConfiguration) {
+            return s3BackupConfiguration(Output.of(s3BackupConfiguration));
         }
+
         public Builder s3BackupMode(@Nullable Output<String> s3BackupMode) {
-            this.s3BackupMode = s3BackupMode;
+            $.s3BackupMode = s3BackupMode;
             return this;
         }
-        public Builder s3BackupMode(@Nullable String s3BackupMode) {
-            this.s3BackupMode = Codegen.ofNullable(s3BackupMode);
-            return this;
+
+        public Builder s3BackupMode(String s3BackupMode) {
+            return s3BackupMode(Output.of(s3BackupMode));
         }
+
         public Builder username(Output<String> username) {
-            this.username = Objects.requireNonNull(username);
+            $.username = username;
             return this;
         }
+
         public Builder username(String username) {
-            this.username = Output.of(Objects.requireNonNull(username));
-            return this;
-        }        public FirehoseDeliveryStreamRedshiftConfigurationArgs build() {
-            return new FirehoseDeliveryStreamRedshiftConfigurationArgs(cloudwatchLoggingOptions, clusterJdbcurl, copyOptions, dataTableColumns, dataTableName, password, processingConfiguration, retryDuration, roleArn, s3BackupConfiguration, s3BackupMode, username);
+            return username(Output.of(username));
+        }
+
+        public FirehoseDeliveryStreamRedshiftConfigurationArgs build() {
+            $.clusterJdbcurl = Objects.requireNonNull($.clusterJdbcurl, "expected parameter 'clusterJdbcurl' to be non-null");
+            $.dataTableName = Objects.requireNonNull($.dataTableName, "expected parameter 'dataTableName' to be non-null");
+            $.password = Objects.requireNonNull($.password, "expected parameter 'password' to be non-null");
+            $.roleArn = Objects.requireNonNull($.roleArn, "expected parameter 'roleArn' to be non-null");
+            $.username = Objects.requireNonNull($.username, "expected parameter 'username' to be non-null");
+            return $;
         }
     }
+
 }

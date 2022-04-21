@@ -6,10 +6,10 @@ package com.pulumi.awsnative.wafv2.inputs;
 import com.pulumi.awsnative.wafv2.inputs.RuleGroupForwardedIPConfigurationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -18,73 +18,69 @@ public final class RuleGroupGeoMatchStatementArgs extends com.pulumi.resources.R
     public static final RuleGroupGeoMatchStatementArgs Empty = new RuleGroupGeoMatchStatementArgs();
 
     @Import(name="countryCodes")
-      private final @Nullable Output<List<String>> countryCodes;
+    private @Nullable Output<List<String>> countryCodes;
 
-    public Output<List<String>> countryCodes() {
-        return this.countryCodes == null ? Codegen.empty() : this.countryCodes;
+    public Optional<Output<List<String>>> countryCodes() {
+        return Optional.ofNullable(this.countryCodes);
     }
 
     @Import(name="forwardedIPConfig")
-      private final @Nullable Output<RuleGroupForwardedIPConfigurationArgs> forwardedIPConfig;
+    private @Nullable Output<RuleGroupForwardedIPConfigurationArgs> forwardedIPConfig;
 
-    public Output<RuleGroupForwardedIPConfigurationArgs> forwardedIPConfig() {
-        return this.forwardedIPConfig == null ? Codegen.empty() : this.forwardedIPConfig;
+    public Optional<Output<RuleGroupForwardedIPConfigurationArgs>> forwardedIPConfig() {
+        return Optional.ofNullable(this.forwardedIPConfig);
     }
 
-    public RuleGroupGeoMatchStatementArgs(
-        @Nullable Output<List<String>> countryCodes,
-        @Nullable Output<RuleGroupForwardedIPConfigurationArgs> forwardedIPConfig) {
-        this.countryCodes = countryCodes;
-        this.forwardedIPConfig = forwardedIPConfig;
-    }
+    private RuleGroupGeoMatchStatementArgs() {}
 
-    private RuleGroupGeoMatchStatementArgs() {
-        this.countryCodes = Codegen.empty();
-        this.forwardedIPConfig = Codegen.empty();
+    private RuleGroupGeoMatchStatementArgs(RuleGroupGeoMatchStatementArgs $) {
+        this.countryCodes = $.countryCodes;
+        this.forwardedIPConfig = $.forwardedIPConfig;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RuleGroupGeoMatchStatementArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> countryCodes;
-        private @Nullable Output<RuleGroupForwardedIPConfigurationArgs> forwardedIPConfig;
+        private RuleGroupGeoMatchStatementArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RuleGroupGeoMatchStatementArgs();
         }
 
         public Builder(RuleGroupGeoMatchStatementArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.countryCodes = defaults.countryCodes;
-    	      this.forwardedIPConfig = defaults.forwardedIPConfig;
+            $ = new RuleGroupGeoMatchStatementArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder countryCodes(@Nullable Output<List<String>> countryCodes) {
-            this.countryCodes = countryCodes;
+            $.countryCodes = countryCodes;
             return this;
         }
-        public Builder countryCodes(@Nullable List<String> countryCodes) {
-            this.countryCodes = Codegen.ofNullable(countryCodes);
-            return this;
+
+        public Builder countryCodes(List<String> countryCodes) {
+            return countryCodes(Output.of(countryCodes));
         }
+
         public Builder countryCodes(String... countryCodes) {
             return countryCodes(List.of(countryCodes));
         }
+
         public Builder forwardedIPConfig(@Nullable Output<RuleGroupForwardedIPConfigurationArgs> forwardedIPConfig) {
-            this.forwardedIPConfig = forwardedIPConfig;
+            $.forwardedIPConfig = forwardedIPConfig;
             return this;
         }
-        public Builder forwardedIPConfig(@Nullable RuleGroupForwardedIPConfigurationArgs forwardedIPConfig) {
-            this.forwardedIPConfig = Codegen.ofNullable(forwardedIPConfig);
-            return this;
-        }        public RuleGroupGeoMatchStatementArgs build() {
-            return new RuleGroupGeoMatchStatementArgs(countryCodes, forwardedIPConfig);
+
+        public Builder forwardedIPConfig(RuleGroupForwardedIPConfigurationArgs forwardedIPConfig) {
+            return forwardedIPConfig(Output.of(forwardedIPConfig));
+        }
+
+        public RuleGroupGeoMatchStatementArgs build() {
+            return $;
         }
     }
+
 }

@@ -21,7 +21,7 @@ public final class SavedDiskResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="kind", required=true)
-      private final String kind;
+    private String kind;
 
     public String kind() {
         return this.kind;
@@ -32,7 +32,7 @@ public final class SavedDiskResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="sourceDisk", required=true)
-      private final String sourceDisk;
+    private String sourceDisk;
 
     public String sourceDisk() {
         return this.sourceDisk;
@@ -43,7 +43,7 @@ public final class SavedDiskResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="storageBytes", required=true)
-      private final String storageBytes;
+    private String storageBytes;
 
     public String storageBytes() {
         return this.storageBytes;
@@ -54,73 +54,66 @@ public final class SavedDiskResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="storageBytesStatus", required=true)
-      private final String storageBytesStatus;
+    private String storageBytesStatus;
 
     public String storageBytesStatus() {
         return this.storageBytesStatus;
     }
 
-    public SavedDiskResponse(
-        String kind,
-        String sourceDisk,
-        String storageBytes,
-        String storageBytesStatus) {
-        this.kind = Objects.requireNonNull(kind, "expected parameter 'kind' to be non-null");
-        this.sourceDisk = Objects.requireNonNull(sourceDisk, "expected parameter 'sourceDisk' to be non-null");
-        this.storageBytes = Objects.requireNonNull(storageBytes, "expected parameter 'storageBytes' to be non-null");
-        this.storageBytesStatus = Objects.requireNonNull(storageBytesStatus, "expected parameter 'storageBytesStatus' to be non-null");
-    }
+    private SavedDiskResponse() {}
 
-    private SavedDiskResponse() {
-        this.kind = null;
-        this.sourceDisk = null;
-        this.storageBytes = null;
-        this.storageBytesStatus = null;
+    private SavedDiskResponse(SavedDiskResponse $) {
+        this.kind = $.kind;
+        this.sourceDisk = $.sourceDisk;
+        this.storageBytes = $.storageBytes;
+        this.storageBytesStatus = $.storageBytesStatus;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SavedDiskResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String kind;
-        private String sourceDisk;
-        private String storageBytes;
-        private String storageBytesStatus;
+        private SavedDiskResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new SavedDiskResponse();
         }
 
         public Builder(SavedDiskResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.kind = defaults.kind;
-    	      this.sourceDisk = defaults.sourceDisk;
-    	      this.storageBytes = defaults.storageBytes;
-    	      this.storageBytesStatus = defaults.storageBytesStatus;
+            $ = new SavedDiskResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder kind(String kind) {
-            this.kind = Objects.requireNonNull(kind);
+            $.kind = kind;
             return this;
         }
+
         public Builder sourceDisk(String sourceDisk) {
-            this.sourceDisk = Objects.requireNonNull(sourceDisk);
+            $.sourceDisk = sourceDisk;
             return this;
         }
+
         public Builder storageBytes(String storageBytes) {
-            this.storageBytes = Objects.requireNonNull(storageBytes);
+            $.storageBytes = storageBytes;
             return this;
         }
+
         public Builder storageBytesStatus(String storageBytesStatus) {
-            this.storageBytesStatus = Objects.requireNonNull(storageBytesStatus);
+            $.storageBytesStatus = storageBytesStatus;
             return this;
-        }        public SavedDiskResponse build() {
-            return new SavedDiskResponse(kind, sourceDisk, storageBytes, storageBytesStatus);
+        }
+
+        public SavedDiskResponse build() {
+            $.kind = Objects.requireNonNull($.kind, "expected parameter 'kind' to be non-null");
+            $.sourceDisk = Objects.requireNonNull($.sourceDisk, "expected parameter 'sourceDisk' to be non-null");
+            $.storageBytes = Objects.requireNonNull($.storageBytes, "expected parameter 'storageBytes' to be non-null");
+            $.storageBytesStatus = Objects.requireNonNull($.storageBytesStatus, "expected parameter 'storageBytesStatus' to be non-null");
+            return $;
         }
     }
+
 }

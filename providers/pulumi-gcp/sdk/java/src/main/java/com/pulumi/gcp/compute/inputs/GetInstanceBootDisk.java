@@ -20,7 +20,7 @@ public final class GetInstanceBootDisk extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="autoDelete", required=true)
-      private final Boolean autoDelete;
+    private Boolean autoDelete;
 
     public Boolean autoDelete() {
         return this.autoDelete;
@@ -32,21 +32,21 @@ public final class GetInstanceBootDisk extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="deviceName", required=true)
-      private final String deviceName;
+    private String deviceName;
 
     public String deviceName() {
         return this.deviceName;
     }
 
     @Import(name="diskEncryptionKeyRaw", required=true)
-      private final String diskEncryptionKeyRaw;
+    private String diskEncryptionKeyRaw;
 
     public String diskEncryptionKeyRaw() {
         return this.diskEncryptionKeyRaw;
     }
 
     @Import(name="diskEncryptionKeySha256", required=true)
-      private final String diskEncryptionKeySha256;
+    private String diskEncryptionKeySha256;
 
     public String diskEncryptionKeySha256() {
         return this.diskEncryptionKeySha256;
@@ -58,14 +58,14 @@ public final class GetInstanceBootDisk extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="initializeParams", required=true)
-      private final List<GetInstanceBootDiskInitializeParam> initializeParams;
+    private List<GetInstanceBootDiskInitializeParam> initializeParams;
 
     public List<GetInstanceBootDiskInitializeParam> initializeParams() {
         return this.initializeParams;
     }
 
     @Import(name="kmsKeySelfLink", required=true)
-      private final String kmsKeySelfLink;
+    private String kmsKeySelfLink;
 
     public String kmsKeySelfLink() {
         return this.kmsKeySelfLink;
@@ -76,7 +76,7 @@ public final class GetInstanceBootDisk extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="mode", required=true)
-      private final String mode;
+    private String mode;
 
     public String mode() {
         return this.mode;
@@ -87,112 +87,98 @@ public final class GetInstanceBootDisk extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="source", required=true)
-      private final String source;
+    private String source;
 
     public String source() {
         return this.source;
     }
 
-    public GetInstanceBootDisk(
-        Boolean autoDelete,
-        String deviceName,
-        String diskEncryptionKeyRaw,
-        String diskEncryptionKeySha256,
-        List<GetInstanceBootDiskInitializeParam> initializeParams,
-        String kmsKeySelfLink,
-        String mode,
-        String source) {
-        this.autoDelete = Objects.requireNonNull(autoDelete, "expected parameter 'autoDelete' to be non-null");
-        this.deviceName = Objects.requireNonNull(deviceName, "expected parameter 'deviceName' to be non-null");
-        this.diskEncryptionKeyRaw = Objects.requireNonNull(diskEncryptionKeyRaw, "expected parameter 'diskEncryptionKeyRaw' to be non-null");
-        this.diskEncryptionKeySha256 = Objects.requireNonNull(diskEncryptionKeySha256, "expected parameter 'diskEncryptionKeySha256' to be non-null");
-        this.initializeParams = Objects.requireNonNull(initializeParams, "expected parameter 'initializeParams' to be non-null");
-        this.kmsKeySelfLink = Objects.requireNonNull(kmsKeySelfLink, "expected parameter 'kmsKeySelfLink' to be non-null");
-        this.mode = Objects.requireNonNull(mode, "expected parameter 'mode' to be non-null");
-        this.source = Objects.requireNonNull(source, "expected parameter 'source' to be non-null");
-    }
+    private GetInstanceBootDisk() {}
 
-    private GetInstanceBootDisk() {
-        this.autoDelete = null;
-        this.deviceName = null;
-        this.diskEncryptionKeyRaw = null;
-        this.diskEncryptionKeySha256 = null;
-        this.initializeParams = List.of();
-        this.kmsKeySelfLink = null;
-        this.mode = null;
-        this.source = null;
+    private GetInstanceBootDisk(GetInstanceBootDisk $) {
+        this.autoDelete = $.autoDelete;
+        this.deviceName = $.deviceName;
+        this.diskEncryptionKeyRaw = $.diskEncryptionKeyRaw;
+        this.diskEncryptionKeySha256 = $.diskEncryptionKeySha256;
+        this.initializeParams = $.initializeParams;
+        this.kmsKeySelfLink = $.kmsKeySelfLink;
+        this.mode = $.mode;
+        this.source = $.source;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetInstanceBootDisk defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Boolean autoDelete;
-        private String deviceName;
-        private String diskEncryptionKeyRaw;
-        private String diskEncryptionKeySha256;
-        private List<GetInstanceBootDiskInitializeParam> initializeParams;
-        private String kmsKeySelfLink;
-        private String mode;
-        private String source;
+        private GetInstanceBootDisk $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetInstanceBootDisk();
         }
 
         public Builder(GetInstanceBootDisk defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.autoDelete = defaults.autoDelete;
-    	      this.deviceName = defaults.deviceName;
-    	      this.diskEncryptionKeyRaw = defaults.diskEncryptionKeyRaw;
-    	      this.diskEncryptionKeySha256 = defaults.diskEncryptionKeySha256;
-    	      this.initializeParams = defaults.initializeParams;
-    	      this.kmsKeySelfLink = defaults.kmsKeySelfLink;
-    	      this.mode = defaults.mode;
-    	      this.source = defaults.source;
+            $ = new GetInstanceBootDisk(Objects.requireNonNull(defaults));
         }
 
         public Builder autoDelete(Boolean autoDelete) {
-            this.autoDelete = Objects.requireNonNull(autoDelete);
+            $.autoDelete = autoDelete;
             return this;
         }
+
         public Builder deviceName(String deviceName) {
-            this.deviceName = Objects.requireNonNull(deviceName);
+            $.deviceName = deviceName;
             return this;
         }
+
         public Builder diskEncryptionKeyRaw(String diskEncryptionKeyRaw) {
-            this.diskEncryptionKeyRaw = Objects.requireNonNull(diskEncryptionKeyRaw);
+            $.diskEncryptionKeyRaw = diskEncryptionKeyRaw;
             return this;
         }
+
         public Builder diskEncryptionKeySha256(String diskEncryptionKeySha256) {
-            this.diskEncryptionKeySha256 = Objects.requireNonNull(diskEncryptionKeySha256);
+            $.diskEncryptionKeySha256 = diskEncryptionKeySha256;
             return this;
         }
+
         public Builder initializeParams(List<GetInstanceBootDiskInitializeParam> initializeParams) {
-            this.initializeParams = Objects.requireNonNull(initializeParams);
+            $.initializeParams = initializeParams;
             return this;
         }
+
         public Builder initializeParams(GetInstanceBootDiskInitializeParam... initializeParams) {
             return initializeParams(List.of(initializeParams));
         }
+
         public Builder kmsKeySelfLink(String kmsKeySelfLink) {
-            this.kmsKeySelfLink = Objects.requireNonNull(kmsKeySelfLink);
+            $.kmsKeySelfLink = kmsKeySelfLink;
             return this;
         }
+
         public Builder mode(String mode) {
-            this.mode = Objects.requireNonNull(mode);
+            $.mode = mode;
             return this;
         }
+
         public Builder source(String source) {
-            this.source = Objects.requireNonNull(source);
+            $.source = source;
             return this;
-        }        public GetInstanceBootDisk build() {
-            return new GetInstanceBootDisk(autoDelete, deviceName, diskEncryptionKeyRaw, diskEncryptionKeySha256, initializeParams, kmsKeySelfLink, mode, source);
+        }
+
+        public GetInstanceBootDisk build() {
+            $.autoDelete = Objects.requireNonNull($.autoDelete, "expected parameter 'autoDelete' to be non-null");
+            $.deviceName = Objects.requireNonNull($.deviceName, "expected parameter 'deviceName' to be non-null");
+            $.diskEncryptionKeyRaw = Objects.requireNonNull($.diskEncryptionKeyRaw, "expected parameter 'diskEncryptionKeyRaw' to be non-null");
+            $.diskEncryptionKeySha256 = Objects.requireNonNull($.diskEncryptionKeySha256, "expected parameter 'diskEncryptionKeySha256' to be non-null");
+            $.initializeParams = Objects.requireNonNull($.initializeParams, "expected parameter 'initializeParams' to be non-null");
+            $.kmsKeySelfLink = Objects.requireNonNull($.kmsKeySelfLink, "expected parameter 'kmsKeySelfLink' to be non-null");
+            $.mode = Objects.requireNonNull($.mode, "expected parameter 'mode' to be non-null");
+            $.source = Objects.requireNonNull($.source, "expected parameter 'source' to be non-null");
+            return $;
         }
     }
+
 }

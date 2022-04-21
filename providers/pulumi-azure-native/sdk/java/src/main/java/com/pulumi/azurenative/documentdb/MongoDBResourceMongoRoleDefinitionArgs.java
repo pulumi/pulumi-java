@@ -8,10 +8,10 @@ import com.pulumi.azurenative.documentdb.inputs.PrivilegeArgs;
 import com.pulumi.azurenative.documentdb.inputs.RoleArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,7 +24,7 @@ public final class MongoDBResourceMongoRoleDefinitionArgs extends com.pulumi.res
      * 
      */
     @Import(name="accountName", required=true)
-      private final Output<String> accountName;
+    private Output<String> accountName;
 
     public Output<String> accountName() {
         return this.accountName;
@@ -35,10 +35,10 @@ public final class MongoDBResourceMongoRoleDefinitionArgs extends com.pulumi.res
      * 
      */
     @Import(name="databaseName")
-      private final @Nullable Output<String> databaseName;
+    private @Nullable Output<String> databaseName;
 
-    public Output<String> databaseName() {
-        return this.databaseName == null ? Codegen.empty() : this.databaseName;
+    public Optional<Output<String>> databaseName() {
+        return Optional.ofNullable(this.databaseName);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class MongoDBResourceMongoRoleDefinitionArgs extends com.pulumi.res
      * 
      */
     @Import(name="mongoRoleDefinitionId")
-      private final @Nullable Output<String> mongoRoleDefinitionId;
+    private @Nullable Output<String> mongoRoleDefinitionId;
 
-    public Output<String> mongoRoleDefinitionId() {
-        return this.mongoRoleDefinitionId == null ? Codegen.empty() : this.mongoRoleDefinitionId;
+    public Optional<Output<String>> mongoRoleDefinitionId() {
+        return Optional.ofNullable(this.mongoRoleDefinitionId);
     }
 
     /**
@@ -57,10 +57,10 @@ public final class MongoDBResourceMongoRoleDefinitionArgs extends com.pulumi.res
      * 
      */
     @Import(name="privileges")
-      private final @Nullable Output<List<PrivilegeArgs>> privileges;
+    private @Nullable Output<List<PrivilegeArgs>> privileges;
 
-    public Output<List<PrivilegeArgs>> privileges() {
-        return this.privileges == null ? Codegen.empty() : this.privileges;
+    public Optional<Output<List<PrivilegeArgs>>> privileges() {
+        return Optional.ofNullable(this.privileges);
     }
 
     /**
@@ -68,7 +68,7 @@ public final class MongoDBResourceMongoRoleDefinitionArgs extends com.pulumi.res
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -79,10 +79,10 @@ public final class MongoDBResourceMongoRoleDefinitionArgs extends com.pulumi.res
      * 
      */
     @Import(name="roleName")
-      private final @Nullable Output<String> roleName;
+    private @Nullable Output<String> roleName;
 
-    public Output<String> roleName() {
-        return this.roleName == null ? Codegen.empty() : this.roleName;
+    public Optional<Output<String>> roleName() {
+        return Optional.ofNullable(this.roleName);
     }
 
     /**
@@ -90,10 +90,10 @@ public final class MongoDBResourceMongoRoleDefinitionArgs extends com.pulumi.res
      * 
      */
     @Import(name="roles")
-      private final @Nullable Output<List<RoleArgs>> roles;
+    private @Nullable Output<List<RoleArgs>> roles;
 
-    public Output<List<RoleArgs>> roles() {
-        return this.roles == null ? Codegen.empty() : this.roles;
+    public Optional<Output<List<RoleArgs>>> roles() {
+        return Optional.ofNullable(this.roles);
     }
 
     /**
@@ -101,147 +101,128 @@ public final class MongoDBResourceMongoRoleDefinitionArgs extends com.pulumi.res
      * 
      */
     @Import(name="type")
-      private final @Nullable Output<MongoRoleDefinitionType> type;
+    private @Nullable Output<MongoRoleDefinitionType> type;
 
-    public Output<MongoRoleDefinitionType> type() {
-        return this.type == null ? Codegen.empty() : this.type;
+    public Optional<Output<MongoRoleDefinitionType>> type() {
+        return Optional.ofNullable(this.type);
     }
 
-    public MongoDBResourceMongoRoleDefinitionArgs(
-        Output<String> accountName,
-        @Nullable Output<String> databaseName,
-        @Nullable Output<String> mongoRoleDefinitionId,
-        @Nullable Output<List<PrivilegeArgs>> privileges,
-        Output<String> resourceGroupName,
-        @Nullable Output<String> roleName,
-        @Nullable Output<List<RoleArgs>> roles,
-        @Nullable Output<MongoRoleDefinitionType> type) {
-        this.accountName = Objects.requireNonNull(accountName, "expected parameter 'accountName' to be non-null");
-        this.databaseName = databaseName;
-        this.mongoRoleDefinitionId = mongoRoleDefinitionId;
-        this.privileges = privileges;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.roleName = roleName;
-        this.roles = roles;
-        this.type = type;
-    }
+    private MongoDBResourceMongoRoleDefinitionArgs() {}
 
-    private MongoDBResourceMongoRoleDefinitionArgs() {
-        this.accountName = Codegen.empty();
-        this.databaseName = Codegen.empty();
-        this.mongoRoleDefinitionId = Codegen.empty();
-        this.privileges = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.roleName = Codegen.empty();
-        this.roles = Codegen.empty();
-        this.type = Codegen.empty();
+    private MongoDBResourceMongoRoleDefinitionArgs(MongoDBResourceMongoRoleDefinitionArgs $) {
+        this.accountName = $.accountName;
+        this.databaseName = $.databaseName;
+        this.mongoRoleDefinitionId = $.mongoRoleDefinitionId;
+        this.privileges = $.privileges;
+        this.resourceGroupName = $.resourceGroupName;
+        this.roleName = $.roleName;
+        this.roles = $.roles;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MongoDBResourceMongoRoleDefinitionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> accountName;
-        private @Nullable Output<String> databaseName;
-        private @Nullable Output<String> mongoRoleDefinitionId;
-        private @Nullable Output<List<PrivilegeArgs>> privileges;
-        private Output<String> resourceGroupName;
-        private @Nullable Output<String> roleName;
-        private @Nullable Output<List<RoleArgs>> roles;
-        private @Nullable Output<MongoRoleDefinitionType> type;
+        private MongoDBResourceMongoRoleDefinitionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new MongoDBResourceMongoRoleDefinitionArgs();
         }
 
         public Builder(MongoDBResourceMongoRoleDefinitionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accountName = defaults.accountName;
-    	      this.databaseName = defaults.databaseName;
-    	      this.mongoRoleDefinitionId = defaults.mongoRoleDefinitionId;
-    	      this.privileges = defaults.privileges;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.roleName = defaults.roleName;
-    	      this.roles = defaults.roles;
-    	      this.type = defaults.type;
+            $ = new MongoDBResourceMongoRoleDefinitionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder accountName(Output<String> accountName) {
-            this.accountName = Objects.requireNonNull(accountName);
+            $.accountName = accountName;
             return this;
         }
+
         public Builder accountName(String accountName) {
-            this.accountName = Output.of(Objects.requireNonNull(accountName));
-            return this;
+            return accountName(Output.of(accountName));
         }
+
         public Builder databaseName(@Nullable Output<String> databaseName) {
-            this.databaseName = databaseName;
+            $.databaseName = databaseName;
             return this;
         }
-        public Builder databaseName(@Nullable String databaseName) {
-            this.databaseName = Codegen.ofNullable(databaseName);
-            return this;
+
+        public Builder databaseName(String databaseName) {
+            return databaseName(Output.of(databaseName));
         }
+
         public Builder mongoRoleDefinitionId(@Nullable Output<String> mongoRoleDefinitionId) {
-            this.mongoRoleDefinitionId = mongoRoleDefinitionId;
+            $.mongoRoleDefinitionId = mongoRoleDefinitionId;
             return this;
         }
-        public Builder mongoRoleDefinitionId(@Nullable String mongoRoleDefinitionId) {
-            this.mongoRoleDefinitionId = Codegen.ofNullable(mongoRoleDefinitionId);
-            return this;
+
+        public Builder mongoRoleDefinitionId(String mongoRoleDefinitionId) {
+            return mongoRoleDefinitionId(Output.of(mongoRoleDefinitionId));
         }
+
         public Builder privileges(@Nullable Output<List<PrivilegeArgs>> privileges) {
-            this.privileges = privileges;
+            $.privileges = privileges;
             return this;
         }
-        public Builder privileges(@Nullable List<PrivilegeArgs> privileges) {
-            this.privileges = Codegen.ofNullable(privileges);
-            return this;
+
+        public Builder privileges(List<PrivilegeArgs> privileges) {
+            return privileges(Output.of(privileges));
         }
+
         public Builder privileges(PrivilegeArgs... privileges) {
             return privileges(List.of(privileges));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder roleName(@Nullable Output<String> roleName) {
-            this.roleName = roleName;
+            $.roleName = roleName;
             return this;
         }
-        public Builder roleName(@Nullable String roleName) {
-            this.roleName = Codegen.ofNullable(roleName);
-            return this;
+
+        public Builder roleName(String roleName) {
+            return roleName(Output.of(roleName));
         }
+
         public Builder roles(@Nullable Output<List<RoleArgs>> roles) {
-            this.roles = roles;
+            $.roles = roles;
             return this;
         }
-        public Builder roles(@Nullable List<RoleArgs> roles) {
-            this.roles = Codegen.ofNullable(roles);
-            return this;
+
+        public Builder roles(List<RoleArgs> roles) {
+            return roles(Output.of(roles));
         }
+
         public Builder roles(RoleArgs... roles) {
             return roles(List.of(roles));
         }
+
         public Builder type(@Nullable Output<MongoRoleDefinitionType> type) {
-            this.type = type;
+            $.type = type;
             return this;
         }
-        public Builder type(@Nullable MongoRoleDefinitionType type) {
-            this.type = Codegen.ofNullable(type);
-            return this;
-        }        public MongoDBResourceMongoRoleDefinitionArgs build() {
-            return new MongoDBResourceMongoRoleDefinitionArgs(accountName, databaseName, mongoRoleDefinitionId, privileges, resourceGroupName, roleName, roles, type);
+
+        public Builder type(MongoRoleDefinitionType type) {
+            return type(Output.of(type));
+        }
+
+        public MongoDBResourceMongoRoleDefinitionArgs build() {
+            $.accountName = Objects.requireNonNull($.accountName, "expected parameter 'accountName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

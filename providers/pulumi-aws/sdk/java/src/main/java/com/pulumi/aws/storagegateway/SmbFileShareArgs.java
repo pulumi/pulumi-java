@@ -6,12 +6,12 @@ package com.pulumi.aws.storagegateway;
 import com.pulumi.aws.storagegateway.inputs.SmbFileShareCacheAttributesArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class SmbFileShareArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="accessBasedEnumeration")
-      private final @Nullable Output<Boolean> accessBasedEnumeration;
+    private @Nullable Output<Boolean> accessBasedEnumeration;
 
-    public Output<Boolean> accessBasedEnumeration() {
-        return this.accessBasedEnumeration == null ? Codegen.empty() : this.accessBasedEnumeration;
+    public Optional<Output<Boolean>> accessBasedEnumeration() {
+        return Optional.ofNullable(this.accessBasedEnumeration);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class SmbFileShareArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="adminUserLists")
-      private final @Nullable Output<List<String>> adminUserLists;
+    private @Nullable Output<List<String>> adminUserLists;
 
-    public Output<List<String>> adminUserLists() {
-        return this.adminUserLists == null ? Codegen.empty() : this.adminUserLists;
+    public Optional<Output<List<String>>> adminUserLists() {
+        return Optional.ofNullable(this.adminUserLists);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class SmbFileShareArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="auditDestinationArn")
-      private final @Nullable Output<String> auditDestinationArn;
+    private @Nullable Output<String> auditDestinationArn;
 
-    public Output<String> auditDestinationArn() {
-        return this.auditDestinationArn == null ? Codegen.empty() : this.auditDestinationArn;
+    public Optional<Output<String>> auditDestinationArn() {
+        return Optional.ofNullable(this.auditDestinationArn);
     }
 
     /**
@@ -57,10 +57,10 @@ public final class SmbFileShareArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="authentication")
-      private final @Nullable Output<String> authentication;
+    private @Nullable Output<String> authentication;
 
-    public Output<String> authentication() {
-        return this.authentication == null ? Codegen.empty() : this.authentication;
+    public Optional<Output<String>> authentication() {
+        return Optional.ofNullable(this.authentication);
     }
 
     /**
@@ -68,10 +68,10 @@ public final class SmbFileShareArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="bucketRegion")
-      private final @Nullable Output<String> bucketRegion;
+    private @Nullable Output<String> bucketRegion;
 
-    public Output<String> bucketRegion() {
-        return this.bucketRegion == null ? Codegen.empty() : this.bucketRegion;
+    public Optional<Output<String>> bucketRegion() {
+        return Optional.ofNullable(this.bucketRegion);
     }
 
     /**
@@ -79,10 +79,10 @@ public final class SmbFileShareArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="cacheAttributes")
-      private final @Nullable Output<SmbFileShareCacheAttributesArgs> cacheAttributes;
+    private @Nullable Output<SmbFileShareCacheAttributesArgs> cacheAttributes;
 
-    public Output<SmbFileShareCacheAttributesArgs> cacheAttributes() {
-        return this.cacheAttributes == null ? Codegen.empty() : this.cacheAttributes;
+    public Optional<Output<SmbFileShareCacheAttributesArgs>> cacheAttributes() {
+        return Optional.ofNullable(this.cacheAttributes);
     }
 
     /**
@@ -90,10 +90,10 @@ public final class SmbFileShareArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="caseSensitivity")
-      private final @Nullable Output<String> caseSensitivity;
+    private @Nullable Output<String> caseSensitivity;
 
-    public Output<String> caseSensitivity() {
-        return this.caseSensitivity == null ? Codegen.empty() : this.caseSensitivity;
+    public Optional<Output<String>> caseSensitivity() {
+        return Optional.ofNullable(this.caseSensitivity);
     }
 
     /**
@@ -101,10 +101,10 @@ public final class SmbFileShareArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="defaultStorageClass")
-      private final @Nullable Output<String> defaultStorageClass;
+    private @Nullable Output<String> defaultStorageClass;
 
-    public Output<String> defaultStorageClass() {
-        return this.defaultStorageClass == null ? Codegen.empty() : this.defaultStorageClass;
+    public Optional<Output<String>> defaultStorageClass() {
+        return Optional.ofNullable(this.defaultStorageClass);
     }
 
     /**
@@ -112,10 +112,10 @@ public final class SmbFileShareArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="fileShareName")
-      private final @Nullable Output<String> fileShareName;
+    private @Nullable Output<String> fileShareName;
 
-    public Output<String> fileShareName() {
-        return this.fileShareName == null ? Codegen.empty() : this.fileShareName;
+    public Optional<Output<String>> fileShareName() {
+        return Optional.ofNullable(this.fileShareName);
     }
 
     /**
@@ -123,7 +123,7 @@ public final class SmbFileShareArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="gatewayArn", required=true)
-      private final Output<String> gatewayArn;
+    private Output<String> gatewayArn;
 
     public Output<String> gatewayArn() {
         return this.gatewayArn;
@@ -134,10 +134,10 @@ public final class SmbFileShareArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="guessMimeTypeEnabled")
-      private final @Nullable Output<Boolean> guessMimeTypeEnabled;
+    private @Nullable Output<Boolean> guessMimeTypeEnabled;
 
-    public Output<Boolean> guessMimeTypeEnabled() {
-        return this.guessMimeTypeEnabled == null ? Codegen.empty() : this.guessMimeTypeEnabled;
+    public Optional<Output<Boolean>> guessMimeTypeEnabled() {
+        return Optional.ofNullable(this.guessMimeTypeEnabled);
     }
 
     /**
@@ -145,10 +145,10 @@ public final class SmbFileShareArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="invalidUserLists")
-      private final @Nullable Output<List<String>> invalidUserLists;
+    private @Nullable Output<List<String>> invalidUserLists;
 
-    public Output<List<String>> invalidUserLists() {
-        return this.invalidUserLists == null ? Codegen.empty() : this.invalidUserLists;
+    public Optional<Output<List<String>>> invalidUserLists() {
+        return Optional.ofNullable(this.invalidUserLists);
     }
 
     /**
@@ -156,10 +156,10 @@ public final class SmbFileShareArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="kmsEncrypted")
-      private final @Nullable Output<Boolean> kmsEncrypted;
+    private @Nullable Output<Boolean> kmsEncrypted;
 
-    public Output<Boolean> kmsEncrypted() {
-        return this.kmsEncrypted == null ? Codegen.empty() : this.kmsEncrypted;
+    public Optional<Output<Boolean>> kmsEncrypted() {
+        return Optional.ofNullable(this.kmsEncrypted);
     }
 
     /**
@@ -167,10 +167,10 @@ public final class SmbFileShareArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="kmsKeyArn")
-      private final @Nullable Output<String> kmsKeyArn;
+    private @Nullable Output<String> kmsKeyArn;
 
-    public Output<String> kmsKeyArn() {
-        return this.kmsKeyArn == null ? Codegen.empty() : this.kmsKeyArn;
+    public Optional<Output<String>> kmsKeyArn() {
+        return Optional.ofNullable(this.kmsKeyArn);
     }
 
     /**
@@ -178,7 +178,7 @@ public final class SmbFileShareArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="locationArn", required=true)
-      private final Output<String> locationArn;
+    private Output<String> locationArn;
 
     public Output<String> locationArn() {
         return this.locationArn;
@@ -189,10 +189,10 @@ public final class SmbFileShareArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="notificationPolicy")
-      private final @Nullable Output<String> notificationPolicy;
+    private @Nullable Output<String> notificationPolicy;
 
-    public Output<String> notificationPolicy() {
-        return this.notificationPolicy == null ? Codegen.empty() : this.notificationPolicy;
+    public Optional<Output<String>> notificationPolicy() {
+        return Optional.ofNullable(this.notificationPolicy);
     }
 
     /**
@@ -200,10 +200,10 @@ public final class SmbFileShareArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="objectAcl")
-      private final @Nullable Output<String> objectAcl;
+    private @Nullable Output<String> objectAcl;
 
-    public Output<String> objectAcl() {
-        return this.objectAcl == null ? Codegen.empty() : this.objectAcl;
+    public Optional<Output<String>> objectAcl() {
+        return Optional.ofNullable(this.objectAcl);
     }
 
     /**
@@ -211,10 +211,10 @@ public final class SmbFileShareArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="oplocksEnabled")
-      private final @Nullable Output<Boolean> oplocksEnabled;
+    private @Nullable Output<Boolean> oplocksEnabled;
 
-    public Output<Boolean> oplocksEnabled() {
-        return this.oplocksEnabled == null ? Codegen.empty() : this.oplocksEnabled;
+    public Optional<Output<Boolean>> oplocksEnabled() {
+        return Optional.ofNullable(this.oplocksEnabled);
     }
 
     /**
@@ -222,10 +222,10 @@ public final class SmbFileShareArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="readOnly")
-      private final @Nullable Output<Boolean> readOnly;
+    private @Nullable Output<Boolean> readOnly;
 
-    public Output<Boolean> readOnly() {
-        return this.readOnly == null ? Codegen.empty() : this.readOnly;
+    public Optional<Output<Boolean>> readOnly() {
+        return Optional.ofNullable(this.readOnly);
     }
 
     /**
@@ -233,10 +233,10 @@ public final class SmbFileShareArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="requesterPays")
-      private final @Nullable Output<Boolean> requesterPays;
+    private @Nullable Output<Boolean> requesterPays;
 
-    public Output<Boolean> requesterPays() {
-        return this.requesterPays == null ? Codegen.empty() : this.requesterPays;
+    public Optional<Output<Boolean>> requesterPays() {
+        return Optional.ofNullable(this.requesterPays);
     }
 
     /**
@@ -244,7 +244,7 @@ public final class SmbFileShareArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="roleArn", required=true)
-      private final Output<String> roleArn;
+    private Output<String> roleArn;
 
     public Output<String> roleArn() {
         return this.roleArn;
@@ -255,10 +255,10 @@ public final class SmbFileShareArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="smbAclEnabled")
-      private final @Nullable Output<Boolean> smbAclEnabled;
+    private @Nullable Output<Boolean> smbAclEnabled;
 
-    public Output<Boolean> smbAclEnabled() {
-        return this.smbAclEnabled == null ? Codegen.empty() : this.smbAclEnabled;
+    public Optional<Output<Boolean>> smbAclEnabled() {
+        return Optional.ofNullable(this.smbAclEnabled);
     }
 
     /**
@@ -266,10 +266,10 @@ public final class SmbFileShareArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -277,10 +277,10 @@ public final class SmbFileShareArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="validUserLists")
-      private final @Nullable Output<List<String>> validUserLists;
+    private @Nullable Output<List<String>> validUserLists;
 
-    public Output<List<String>> validUserLists() {
-        return this.validUserLists == null ? Codegen.empty() : this.validUserLists;
+    public Optional<Output<List<String>>> validUserLists() {
+        return Optional.ofNullable(this.validUserLists);
     }
 
     /**
@@ -288,371 +288,303 @@ public final class SmbFileShareArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="vpcEndpointDnsName")
-      private final @Nullable Output<String> vpcEndpointDnsName;
+    private @Nullable Output<String> vpcEndpointDnsName;
 
-    public Output<String> vpcEndpointDnsName() {
-        return this.vpcEndpointDnsName == null ? Codegen.empty() : this.vpcEndpointDnsName;
+    public Optional<Output<String>> vpcEndpointDnsName() {
+        return Optional.ofNullable(this.vpcEndpointDnsName);
     }
 
-    public SmbFileShareArgs(
-        @Nullable Output<Boolean> accessBasedEnumeration,
-        @Nullable Output<List<String>> adminUserLists,
-        @Nullable Output<String> auditDestinationArn,
-        @Nullable Output<String> authentication,
-        @Nullable Output<String> bucketRegion,
-        @Nullable Output<SmbFileShareCacheAttributesArgs> cacheAttributes,
-        @Nullable Output<String> caseSensitivity,
-        @Nullable Output<String> defaultStorageClass,
-        @Nullable Output<String> fileShareName,
-        Output<String> gatewayArn,
-        @Nullable Output<Boolean> guessMimeTypeEnabled,
-        @Nullable Output<List<String>> invalidUserLists,
-        @Nullable Output<Boolean> kmsEncrypted,
-        @Nullable Output<String> kmsKeyArn,
-        Output<String> locationArn,
-        @Nullable Output<String> notificationPolicy,
-        @Nullable Output<String> objectAcl,
-        @Nullable Output<Boolean> oplocksEnabled,
-        @Nullable Output<Boolean> readOnly,
-        @Nullable Output<Boolean> requesterPays,
-        Output<String> roleArn,
-        @Nullable Output<Boolean> smbAclEnabled,
-        @Nullable Output<Map<String,String>> tags,
-        @Nullable Output<List<String>> validUserLists,
-        @Nullable Output<String> vpcEndpointDnsName) {
-        this.accessBasedEnumeration = accessBasedEnumeration;
-        this.adminUserLists = adminUserLists;
-        this.auditDestinationArn = auditDestinationArn;
-        this.authentication = authentication;
-        this.bucketRegion = bucketRegion;
-        this.cacheAttributes = cacheAttributes;
-        this.caseSensitivity = caseSensitivity;
-        this.defaultStorageClass = defaultStorageClass;
-        this.fileShareName = fileShareName;
-        this.gatewayArn = Objects.requireNonNull(gatewayArn, "expected parameter 'gatewayArn' to be non-null");
-        this.guessMimeTypeEnabled = guessMimeTypeEnabled;
-        this.invalidUserLists = invalidUserLists;
-        this.kmsEncrypted = kmsEncrypted;
-        this.kmsKeyArn = kmsKeyArn;
-        this.locationArn = Objects.requireNonNull(locationArn, "expected parameter 'locationArn' to be non-null");
-        this.notificationPolicy = notificationPolicy;
-        this.objectAcl = objectAcl;
-        this.oplocksEnabled = oplocksEnabled;
-        this.readOnly = readOnly;
-        this.requesterPays = requesterPays;
-        this.roleArn = Objects.requireNonNull(roleArn, "expected parameter 'roleArn' to be non-null");
-        this.smbAclEnabled = smbAclEnabled;
-        this.tags = tags;
-        this.validUserLists = validUserLists;
-        this.vpcEndpointDnsName = vpcEndpointDnsName;
-    }
+    private SmbFileShareArgs() {}
 
-    private SmbFileShareArgs() {
-        this.accessBasedEnumeration = Codegen.empty();
-        this.adminUserLists = Codegen.empty();
-        this.auditDestinationArn = Codegen.empty();
-        this.authentication = Codegen.empty();
-        this.bucketRegion = Codegen.empty();
-        this.cacheAttributes = Codegen.empty();
-        this.caseSensitivity = Codegen.empty();
-        this.defaultStorageClass = Codegen.empty();
-        this.fileShareName = Codegen.empty();
-        this.gatewayArn = Codegen.empty();
-        this.guessMimeTypeEnabled = Codegen.empty();
-        this.invalidUserLists = Codegen.empty();
-        this.kmsEncrypted = Codegen.empty();
-        this.kmsKeyArn = Codegen.empty();
-        this.locationArn = Codegen.empty();
-        this.notificationPolicy = Codegen.empty();
-        this.objectAcl = Codegen.empty();
-        this.oplocksEnabled = Codegen.empty();
-        this.readOnly = Codegen.empty();
-        this.requesterPays = Codegen.empty();
-        this.roleArn = Codegen.empty();
-        this.smbAclEnabled = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.validUserLists = Codegen.empty();
-        this.vpcEndpointDnsName = Codegen.empty();
+    private SmbFileShareArgs(SmbFileShareArgs $) {
+        this.accessBasedEnumeration = $.accessBasedEnumeration;
+        this.adminUserLists = $.adminUserLists;
+        this.auditDestinationArn = $.auditDestinationArn;
+        this.authentication = $.authentication;
+        this.bucketRegion = $.bucketRegion;
+        this.cacheAttributes = $.cacheAttributes;
+        this.caseSensitivity = $.caseSensitivity;
+        this.defaultStorageClass = $.defaultStorageClass;
+        this.fileShareName = $.fileShareName;
+        this.gatewayArn = $.gatewayArn;
+        this.guessMimeTypeEnabled = $.guessMimeTypeEnabled;
+        this.invalidUserLists = $.invalidUserLists;
+        this.kmsEncrypted = $.kmsEncrypted;
+        this.kmsKeyArn = $.kmsKeyArn;
+        this.locationArn = $.locationArn;
+        this.notificationPolicy = $.notificationPolicy;
+        this.objectAcl = $.objectAcl;
+        this.oplocksEnabled = $.oplocksEnabled;
+        this.readOnly = $.readOnly;
+        this.requesterPays = $.requesterPays;
+        this.roleArn = $.roleArn;
+        this.smbAclEnabled = $.smbAclEnabled;
+        this.tags = $.tags;
+        this.validUserLists = $.validUserLists;
+        this.vpcEndpointDnsName = $.vpcEndpointDnsName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SmbFileShareArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> accessBasedEnumeration;
-        private @Nullable Output<List<String>> adminUserLists;
-        private @Nullable Output<String> auditDestinationArn;
-        private @Nullable Output<String> authentication;
-        private @Nullable Output<String> bucketRegion;
-        private @Nullable Output<SmbFileShareCacheAttributesArgs> cacheAttributes;
-        private @Nullable Output<String> caseSensitivity;
-        private @Nullable Output<String> defaultStorageClass;
-        private @Nullable Output<String> fileShareName;
-        private Output<String> gatewayArn;
-        private @Nullable Output<Boolean> guessMimeTypeEnabled;
-        private @Nullable Output<List<String>> invalidUserLists;
-        private @Nullable Output<Boolean> kmsEncrypted;
-        private @Nullable Output<String> kmsKeyArn;
-        private Output<String> locationArn;
-        private @Nullable Output<String> notificationPolicy;
-        private @Nullable Output<String> objectAcl;
-        private @Nullable Output<Boolean> oplocksEnabled;
-        private @Nullable Output<Boolean> readOnly;
-        private @Nullable Output<Boolean> requesterPays;
-        private Output<String> roleArn;
-        private @Nullable Output<Boolean> smbAclEnabled;
-        private @Nullable Output<Map<String,String>> tags;
-        private @Nullable Output<List<String>> validUserLists;
-        private @Nullable Output<String> vpcEndpointDnsName;
+        private SmbFileShareArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SmbFileShareArgs();
         }
 
         public Builder(SmbFileShareArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accessBasedEnumeration = defaults.accessBasedEnumeration;
-    	      this.adminUserLists = defaults.adminUserLists;
-    	      this.auditDestinationArn = defaults.auditDestinationArn;
-    	      this.authentication = defaults.authentication;
-    	      this.bucketRegion = defaults.bucketRegion;
-    	      this.cacheAttributes = defaults.cacheAttributes;
-    	      this.caseSensitivity = defaults.caseSensitivity;
-    	      this.defaultStorageClass = defaults.defaultStorageClass;
-    	      this.fileShareName = defaults.fileShareName;
-    	      this.gatewayArn = defaults.gatewayArn;
-    	      this.guessMimeTypeEnabled = defaults.guessMimeTypeEnabled;
-    	      this.invalidUserLists = defaults.invalidUserLists;
-    	      this.kmsEncrypted = defaults.kmsEncrypted;
-    	      this.kmsKeyArn = defaults.kmsKeyArn;
-    	      this.locationArn = defaults.locationArn;
-    	      this.notificationPolicy = defaults.notificationPolicy;
-    	      this.objectAcl = defaults.objectAcl;
-    	      this.oplocksEnabled = defaults.oplocksEnabled;
-    	      this.readOnly = defaults.readOnly;
-    	      this.requesterPays = defaults.requesterPays;
-    	      this.roleArn = defaults.roleArn;
-    	      this.smbAclEnabled = defaults.smbAclEnabled;
-    	      this.tags = defaults.tags;
-    	      this.validUserLists = defaults.validUserLists;
-    	      this.vpcEndpointDnsName = defaults.vpcEndpointDnsName;
+            $ = new SmbFileShareArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder accessBasedEnumeration(@Nullable Output<Boolean> accessBasedEnumeration) {
-            this.accessBasedEnumeration = accessBasedEnumeration;
+            $.accessBasedEnumeration = accessBasedEnumeration;
             return this;
         }
-        public Builder accessBasedEnumeration(@Nullable Boolean accessBasedEnumeration) {
-            this.accessBasedEnumeration = Codegen.ofNullable(accessBasedEnumeration);
-            return this;
+
+        public Builder accessBasedEnumeration(Boolean accessBasedEnumeration) {
+            return accessBasedEnumeration(Output.of(accessBasedEnumeration));
         }
+
         public Builder adminUserLists(@Nullable Output<List<String>> adminUserLists) {
-            this.adminUserLists = adminUserLists;
+            $.adminUserLists = adminUserLists;
             return this;
         }
-        public Builder adminUserLists(@Nullable List<String> adminUserLists) {
-            this.adminUserLists = Codegen.ofNullable(adminUserLists);
-            return this;
+
+        public Builder adminUserLists(List<String> adminUserLists) {
+            return adminUserLists(Output.of(adminUserLists));
         }
+
         public Builder adminUserLists(String... adminUserLists) {
             return adminUserLists(List.of(adminUserLists));
         }
+
         public Builder auditDestinationArn(@Nullable Output<String> auditDestinationArn) {
-            this.auditDestinationArn = auditDestinationArn;
+            $.auditDestinationArn = auditDestinationArn;
             return this;
         }
-        public Builder auditDestinationArn(@Nullable String auditDestinationArn) {
-            this.auditDestinationArn = Codegen.ofNullable(auditDestinationArn);
-            return this;
+
+        public Builder auditDestinationArn(String auditDestinationArn) {
+            return auditDestinationArn(Output.of(auditDestinationArn));
         }
+
         public Builder authentication(@Nullable Output<String> authentication) {
-            this.authentication = authentication;
+            $.authentication = authentication;
             return this;
         }
-        public Builder authentication(@Nullable String authentication) {
-            this.authentication = Codegen.ofNullable(authentication);
-            return this;
+
+        public Builder authentication(String authentication) {
+            return authentication(Output.of(authentication));
         }
+
         public Builder bucketRegion(@Nullable Output<String> bucketRegion) {
-            this.bucketRegion = bucketRegion;
+            $.bucketRegion = bucketRegion;
             return this;
         }
-        public Builder bucketRegion(@Nullable String bucketRegion) {
-            this.bucketRegion = Codegen.ofNullable(bucketRegion);
-            return this;
+
+        public Builder bucketRegion(String bucketRegion) {
+            return bucketRegion(Output.of(bucketRegion));
         }
+
         public Builder cacheAttributes(@Nullable Output<SmbFileShareCacheAttributesArgs> cacheAttributes) {
-            this.cacheAttributes = cacheAttributes;
+            $.cacheAttributes = cacheAttributes;
             return this;
         }
-        public Builder cacheAttributes(@Nullable SmbFileShareCacheAttributesArgs cacheAttributes) {
-            this.cacheAttributes = Codegen.ofNullable(cacheAttributes);
-            return this;
+
+        public Builder cacheAttributes(SmbFileShareCacheAttributesArgs cacheAttributes) {
+            return cacheAttributes(Output.of(cacheAttributes));
         }
+
         public Builder caseSensitivity(@Nullable Output<String> caseSensitivity) {
-            this.caseSensitivity = caseSensitivity;
+            $.caseSensitivity = caseSensitivity;
             return this;
         }
-        public Builder caseSensitivity(@Nullable String caseSensitivity) {
-            this.caseSensitivity = Codegen.ofNullable(caseSensitivity);
-            return this;
+
+        public Builder caseSensitivity(String caseSensitivity) {
+            return caseSensitivity(Output.of(caseSensitivity));
         }
+
         public Builder defaultStorageClass(@Nullable Output<String> defaultStorageClass) {
-            this.defaultStorageClass = defaultStorageClass;
+            $.defaultStorageClass = defaultStorageClass;
             return this;
         }
-        public Builder defaultStorageClass(@Nullable String defaultStorageClass) {
-            this.defaultStorageClass = Codegen.ofNullable(defaultStorageClass);
-            return this;
+
+        public Builder defaultStorageClass(String defaultStorageClass) {
+            return defaultStorageClass(Output.of(defaultStorageClass));
         }
+
         public Builder fileShareName(@Nullable Output<String> fileShareName) {
-            this.fileShareName = fileShareName;
+            $.fileShareName = fileShareName;
             return this;
         }
-        public Builder fileShareName(@Nullable String fileShareName) {
-            this.fileShareName = Codegen.ofNullable(fileShareName);
-            return this;
+
+        public Builder fileShareName(String fileShareName) {
+            return fileShareName(Output.of(fileShareName));
         }
+
         public Builder gatewayArn(Output<String> gatewayArn) {
-            this.gatewayArn = Objects.requireNonNull(gatewayArn);
+            $.gatewayArn = gatewayArn;
             return this;
         }
+
         public Builder gatewayArn(String gatewayArn) {
-            this.gatewayArn = Output.of(Objects.requireNonNull(gatewayArn));
-            return this;
+            return gatewayArn(Output.of(gatewayArn));
         }
+
         public Builder guessMimeTypeEnabled(@Nullable Output<Boolean> guessMimeTypeEnabled) {
-            this.guessMimeTypeEnabled = guessMimeTypeEnabled;
+            $.guessMimeTypeEnabled = guessMimeTypeEnabled;
             return this;
         }
-        public Builder guessMimeTypeEnabled(@Nullable Boolean guessMimeTypeEnabled) {
-            this.guessMimeTypeEnabled = Codegen.ofNullable(guessMimeTypeEnabled);
-            return this;
+
+        public Builder guessMimeTypeEnabled(Boolean guessMimeTypeEnabled) {
+            return guessMimeTypeEnabled(Output.of(guessMimeTypeEnabled));
         }
+
         public Builder invalidUserLists(@Nullable Output<List<String>> invalidUserLists) {
-            this.invalidUserLists = invalidUserLists;
+            $.invalidUserLists = invalidUserLists;
             return this;
         }
-        public Builder invalidUserLists(@Nullable List<String> invalidUserLists) {
-            this.invalidUserLists = Codegen.ofNullable(invalidUserLists);
-            return this;
+
+        public Builder invalidUserLists(List<String> invalidUserLists) {
+            return invalidUserLists(Output.of(invalidUserLists));
         }
+
         public Builder invalidUserLists(String... invalidUserLists) {
             return invalidUserLists(List.of(invalidUserLists));
         }
+
         public Builder kmsEncrypted(@Nullable Output<Boolean> kmsEncrypted) {
-            this.kmsEncrypted = kmsEncrypted;
+            $.kmsEncrypted = kmsEncrypted;
             return this;
         }
-        public Builder kmsEncrypted(@Nullable Boolean kmsEncrypted) {
-            this.kmsEncrypted = Codegen.ofNullable(kmsEncrypted);
-            return this;
+
+        public Builder kmsEncrypted(Boolean kmsEncrypted) {
+            return kmsEncrypted(Output.of(kmsEncrypted));
         }
+
         public Builder kmsKeyArn(@Nullable Output<String> kmsKeyArn) {
-            this.kmsKeyArn = kmsKeyArn;
+            $.kmsKeyArn = kmsKeyArn;
             return this;
         }
-        public Builder kmsKeyArn(@Nullable String kmsKeyArn) {
-            this.kmsKeyArn = Codegen.ofNullable(kmsKeyArn);
-            return this;
+
+        public Builder kmsKeyArn(String kmsKeyArn) {
+            return kmsKeyArn(Output.of(kmsKeyArn));
         }
+
         public Builder locationArn(Output<String> locationArn) {
-            this.locationArn = Objects.requireNonNull(locationArn);
+            $.locationArn = locationArn;
             return this;
         }
+
         public Builder locationArn(String locationArn) {
-            this.locationArn = Output.of(Objects.requireNonNull(locationArn));
-            return this;
+            return locationArn(Output.of(locationArn));
         }
+
         public Builder notificationPolicy(@Nullable Output<String> notificationPolicy) {
-            this.notificationPolicy = notificationPolicy;
+            $.notificationPolicy = notificationPolicy;
             return this;
         }
-        public Builder notificationPolicy(@Nullable String notificationPolicy) {
-            this.notificationPolicy = Codegen.ofNullable(notificationPolicy);
-            return this;
+
+        public Builder notificationPolicy(String notificationPolicy) {
+            return notificationPolicy(Output.of(notificationPolicy));
         }
+
         public Builder objectAcl(@Nullable Output<String> objectAcl) {
-            this.objectAcl = objectAcl;
+            $.objectAcl = objectAcl;
             return this;
         }
-        public Builder objectAcl(@Nullable String objectAcl) {
-            this.objectAcl = Codegen.ofNullable(objectAcl);
-            return this;
+
+        public Builder objectAcl(String objectAcl) {
+            return objectAcl(Output.of(objectAcl));
         }
+
         public Builder oplocksEnabled(@Nullable Output<Boolean> oplocksEnabled) {
-            this.oplocksEnabled = oplocksEnabled;
+            $.oplocksEnabled = oplocksEnabled;
             return this;
         }
-        public Builder oplocksEnabled(@Nullable Boolean oplocksEnabled) {
-            this.oplocksEnabled = Codegen.ofNullable(oplocksEnabled);
-            return this;
+
+        public Builder oplocksEnabled(Boolean oplocksEnabled) {
+            return oplocksEnabled(Output.of(oplocksEnabled));
         }
+
         public Builder readOnly(@Nullable Output<Boolean> readOnly) {
-            this.readOnly = readOnly;
+            $.readOnly = readOnly;
             return this;
         }
-        public Builder readOnly(@Nullable Boolean readOnly) {
-            this.readOnly = Codegen.ofNullable(readOnly);
-            return this;
+
+        public Builder readOnly(Boolean readOnly) {
+            return readOnly(Output.of(readOnly));
         }
+
         public Builder requesterPays(@Nullable Output<Boolean> requesterPays) {
-            this.requesterPays = requesterPays;
+            $.requesterPays = requesterPays;
             return this;
         }
-        public Builder requesterPays(@Nullable Boolean requesterPays) {
-            this.requesterPays = Codegen.ofNullable(requesterPays);
-            return this;
+
+        public Builder requesterPays(Boolean requesterPays) {
+            return requesterPays(Output.of(requesterPays));
         }
+
         public Builder roleArn(Output<String> roleArn) {
-            this.roleArn = Objects.requireNonNull(roleArn);
+            $.roleArn = roleArn;
             return this;
         }
+
         public Builder roleArn(String roleArn) {
-            this.roleArn = Output.of(Objects.requireNonNull(roleArn));
-            return this;
+            return roleArn(Output.of(roleArn));
         }
+
         public Builder smbAclEnabled(@Nullable Output<Boolean> smbAclEnabled) {
-            this.smbAclEnabled = smbAclEnabled;
+            $.smbAclEnabled = smbAclEnabled;
             return this;
         }
-        public Builder smbAclEnabled(@Nullable Boolean smbAclEnabled) {
-            this.smbAclEnabled = Codegen.ofNullable(smbAclEnabled);
-            return this;
+
+        public Builder smbAclEnabled(Boolean smbAclEnabled) {
+            return smbAclEnabled(Output.of(smbAclEnabled));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder validUserLists(@Nullable Output<List<String>> validUserLists) {
-            this.validUserLists = validUserLists;
+            $.validUserLists = validUserLists;
             return this;
         }
-        public Builder validUserLists(@Nullable List<String> validUserLists) {
-            this.validUserLists = Codegen.ofNullable(validUserLists);
-            return this;
+
+        public Builder validUserLists(List<String> validUserLists) {
+            return validUserLists(Output.of(validUserLists));
         }
+
         public Builder validUserLists(String... validUserLists) {
             return validUserLists(List.of(validUserLists));
         }
+
         public Builder vpcEndpointDnsName(@Nullable Output<String> vpcEndpointDnsName) {
-            this.vpcEndpointDnsName = vpcEndpointDnsName;
+            $.vpcEndpointDnsName = vpcEndpointDnsName;
             return this;
         }
-        public Builder vpcEndpointDnsName(@Nullable String vpcEndpointDnsName) {
-            this.vpcEndpointDnsName = Codegen.ofNullable(vpcEndpointDnsName);
-            return this;
-        }        public SmbFileShareArgs build() {
-            return new SmbFileShareArgs(accessBasedEnumeration, adminUserLists, auditDestinationArn, authentication, bucketRegion, cacheAttributes, caseSensitivity, defaultStorageClass, fileShareName, gatewayArn, guessMimeTypeEnabled, invalidUserLists, kmsEncrypted, kmsKeyArn, locationArn, notificationPolicy, objectAcl, oplocksEnabled, readOnly, requesterPays, roleArn, smbAclEnabled, tags, validUserLists, vpcEndpointDnsName);
+
+        public Builder vpcEndpointDnsName(String vpcEndpointDnsName) {
+            return vpcEndpointDnsName(Output.of(vpcEndpointDnsName));
+        }
+
+        public SmbFileShareArgs build() {
+            $.gatewayArn = Objects.requireNonNull($.gatewayArn, "expected parameter 'gatewayArn' to be non-null");
+            $.locationArn = Objects.requireNonNull($.locationArn, "expected parameter 'locationArn' to be non-null");
+            $.roleArn = Objects.requireNonNull($.roleArn, "expected parameter 'roleArn' to be non-null");
+            return $;
         }
     }
+
 }

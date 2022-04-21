@@ -17,7 +17,7 @@ public final class GetInstanceDetailsArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="instanceName", required=true)
-      private final String instanceName;
+    private String instanceName;
 
     public String instanceName() {
         return this.instanceName;
@@ -28,55 +28,52 @@ public final class GetInstanceDetailsArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public GetInstanceDetailsArgs(
-        String instanceName,
-        String resourceGroupName) {
-        this.instanceName = Objects.requireNonNull(instanceName, "expected parameter 'instanceName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private GetInstanceDetailsArgs() {}
 
-    private GetInstanceDetailsArgs() {
-        this.instanceName = null;
-        this.resourceGroupName = null;
+    private GetInstanceDetailsArgs(GetInstanceDetailsArgs $) {
+        this.instanceName = $.instanceName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetInstanceDetailsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String instanceName;
-        private String resourceGroupName;
+        private GetInstanceDetailsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetInstanceDetailsArgs();
         }
 
         public Builder(GetInstanceDetailsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.instanceName = defaults.instanceName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new GetInstanceDetailsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder instanceName(String instanceName) {
-            this.instanceName = Objects.requireNonNull(instanceName);
+            $.instanceName = instanceName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public GetInstanceDetailsArgs build() {
-            return new GetInstanceDetailsArgs(instanceName, resourceGroupName);
+        }
+
+        public GetInstanceDetailsArgs build() {
+            $.instanceName = Objects.requireNonNull($.instanceName, "expected parameter 'instanceName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

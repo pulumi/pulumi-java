@@ -6,9 +6,9 @@ package com.pulumi.azurenative.web.inputs;
 import com.pulumi.azurenative.web.inputs.ConnectionErrorArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class ConnectionStatusDefinitionArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="error")
-      private final @Nullable Output<ConnectionErrorArgs> error;
+    private @Nullable Output<ConnectionErrorArgs> error;
 
-    public Output<ConnectionErrorArgs> error() {
-        return this.error == null ? Codegen.empty() : this.error;
+    public Optional<Output<ConnectionErrorArgs>> error() {
+        return Optional.ofNullable(this.error);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class ConnectionStatusDefinitionArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="status")
-      private final @Nullable Output<String> status;
+    private @Nullable Output<String> status;
 
-    public Output<String> status() {
-        return this.status == null ? Codegen.empty() : this.status;
+    public Optional<Output<String>> status() {
+        return Optional.ofNullable(this.status);
     }
 
     /**
@@ -47,76 +47,68 @@ public final class ConnectionStatusDefinitionArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="target")
-      private final @Nullable Output<String> target;
+    private @Nullable Output<String> target;
 
-    public Output<String> target() {
-        return this.target == null ? Codegen.empty() : this.target;
+    public Optional<Output<String>> target() {
+        return Optional.ofNullable(this.target);
     }
 
-    public ConnectionStatusDefinitionArgs(
-        @Nullable Output<ConnectionErrorArgs> error,
-        @Nullable Output<String> status,
-        @Nullable Output<String> target) {
-        this.error = error;
-        this.status = status;
-        this.target = target;
-    }
+    private ConnectionStatusDefinitionArgs() {}
 
-    private ConnectionStatusDefinitionArgs() {
-        this.error = Codegen.empty();
-        this.status = Codegen.empty();
-        this.target = Codegen.empty();
+    private ConnectionStatusDefinitionArgs(ConnectionStatusDefinitionArgs $) {
+        this.error = $.error;
+        this.status = $.status;
+        this.target = $.target;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ConnectionStatusDefinitionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<ConnectionErrorArgs> error;
-        private @Nullable Output<String> status;
-        private @Nullable Output<String> target;
+        private ConnectionStatusDefinitionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ConnectionStatusDefinitionArgs();
         }
 
         public Builder(ConnectionStatusDefinitionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.error = defaults.error;
-    	      this.status = defaults.status;
-    	      this.target = defaults.target;
+            $ = new ConnectionStatusDefinitionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder error(@Nullable Output<ConnectionErrorArgs> error) {
-            this.error = error;
+            $.error = error;
             return this;
         }
-        public Builder error(@Nullable ConnectionErrorArgs error) {
-            this.error = Codegen.ofNullable(error);
-            return this;
+
+        public Builder error(ConnectionErrorArgs error) {
+            return error(Output.of(error));
         }
+
         public Builder status(@Nullable Output<String> status) {
-            this.status = status;
+            $.status = status;
             return this;
         }
-        public Builder status(@Nullable String status) {
-            this.status = Codegen.ofNullable(status);
-            return this;
+
+        public Builder status(String status) {
+            return status(Output.of(status));
         }
+
         public Builder target(@Nullable Output<String> target) {
-            this.target = target;
+            $.target = target;
             return this;
         }
-        public Builder target(@Nullable String target) {
-            this.target = Codegen.ofNullable(target);
-            return this;
-        }        public ConnectionStatusDefinitionArgs build() {
-            return new ConnectionStatusDefinitionArgs(error, status, target);
+
+        public Builder target(String target) {
+            return target(Output.of(target));
+        }
+
+        public ConnectionStatusDefinitionArgs build() {
+            return $;
         }
     }
+
 }

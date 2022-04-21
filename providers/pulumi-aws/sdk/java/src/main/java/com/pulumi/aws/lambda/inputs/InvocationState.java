@@ -5,10 +5,10 @@ package com.pulumi.aws.lambda.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class InvocationState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="functionName")
-      private final @Nullable Output<String> functionName;
+    private @Nullable Output<String> functionName;
 
-    public Output<String> functionName() {
-        return this.functionName == null ? Codegen.empty() : this.functionName;
+    public Optional<Output<String>> functionName() {
+        return Optional.ofNullable(this.functionName);
     }
 
     /**
@@ -32,10 +32,10 @@ public final class InvocationState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="input")
-      private final @Nullable Output<String> input;
+    private @Nullable Output<String> input;
 
-    public Output<String> input() {
-        return this.input == null ? Codegen.empty() : this.input;
+    public Optional<Output<String>> input() {
+        return Optional.ofNullable(this.input);
     }
 
     /**
@@ -43,10 +43,10 @@ public final class InvocationState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="qualifier")
-      private final @Nullable Output<String> qualifier;
+    private @Nullable Output<String> qualifier;
 
-    public Output<String> qualifier() {
-        return this.qualifier == null ? Codegen.empty() : this.qualifier;
+    public Optional<Output<String>> qualifier() {
+        return Optional.ofNullable(this.qualifier);
     }
 
     /**
@@ -54,109 +54,95 @@ public final class InvocationState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="result")
-      private final @Nullable Output<String> result;
+    private @Nullable Output<String> result;
 
-    public Output<String> result() {
-        return this.result == null ? Codegen.empty() : this.result;
+    public Optional<Output<String>> result() {
+        return Optional.ofNullable(this.result);
     }
 
     @Import(name="triggers")
-      private final @Nullable Output<Map<String,String>> triggers;
+    private @Nullable Output<Map<String,String>> triggers;
 
-    public Output<Map<String,String>> triggers() {
-        return this.triggers == null ? Codegen.empty() : this.triggers;
+    public Optional<Output<Map<String,String>>> triggers() {
+        return Optional.ofNullable(this.triggers);
     }
 
-    public InvocationState(
-        @Nullable Output<String> functionName,
-        @Nullable Output<String> input,
-        @Nullable Output<String> qualifier,
-        @Nullable Output<String> result,
-        @Nullable Output<Map<String,String>> triggers) {
-        this.functionName = functionName;
-        this.input = input;
-        this.qualifier = qualifier;
-        this.result = result;
-        this.triggers = triggers;
-    }
+    private InvocationState() {}
 
-    private InvocationState() {
-        this.functionName = Codegen.empty();
-        this.input = Codegen.empty();
-        this.qualifier = Codegen.empty();
-        this.result = Codegen.empty();
-        this.triggers = Codegen.empty();
+    private InvocationState(InvocationState $) {
+        this.functionName = $.functionName;
+        this.input = $.input;
+        this.qualifier = $.qualifier;
+        this.result = $.result;
+        this.triggers = $.triggers;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(InvocationState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> functionName;
-        private @Nullable Output<String> input;
-        private @Nullable Output<String> qualifier;
-        private @Nullable Output<String> result;
-        private @Nullable Output<Map<String,String>> triggers;
+        private InvocationState $;
 
         public Builder() {
-    	      // Empty
+            $ = new InvocationState();
         }
 
         public Builder(InvocationState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.functionName = defaults.functionName;
-    	      this.input = defaults.input;
-    	      this.qualifier = defaults.qualifier;
-    	      this.result = defaults.result;
-    	      this.triggers = defaults.triggers;
+            $ = new InvocationState(Objects.requireNonNull(defaults));
         }
 
         public Builder functionName(@Nullable Output<String> functionName) {
-            this.functionName = functionName;
+            $.functionName = functionName;
             return this;
         }
-        public Builder functionName(@Nullable String functionName) {
-            this.functionName = Codegen.ofNullable(functionName);
-            return this;
+
+        public Builder functionName(String functionName) {
+            return functionName(Output.of(functionName));
         }
+
         public Builder input(@Nullable Output<String> input) {
-            this.input = input;
+            $.input = input;
             return this;
         }
-        public Builder input(@Nullable String input) {
-            this.input = Codegen.ofNullable(input);
-            return this;
+
+        public Builder input(String input) {
+            return input(Output.of(input));
         }
+
         public Builder qualifier(@Nullable Output<String> qualifier) {
-            this.qualifier = qualifier;
+            $.qualifier = qualifier;
             return this;
         }
-        public Builder qualifier(@Nullable String qualifier) {
-            this.qualifier = Codegen.ofNullable(qualifier);
-            return this;
+
+        public Builder qualifier(String qualifier) {
+            return qualifier(Output.of(qualifier));
         }
+
         public Builder result(@Nullable Output<String> result) {
-            this.result = result;
+            $.result = result;
             return this;
         }
-        public Builder result(@Nullable String result) {
-            this.result = Codegen.ofNullable(result);
-            return this;
+
+        public Builder result(String result) {
+            return result(Output.of(result));
         }
+
         public Builder triggers(@Nullable Output<Map<String,String>> triggers) {
-            this.triggers = triggers;
+            $.triggers = triggers;
             return this;
         }
-        public Builder triggers(@Nullable Map<String,String> triggers) {
-            this.triggers = Codegen.ofNullable(triggers);
-            return this;
-        }        public InvocationState build() {
-            return new InvocationState(functionName, input, qualifier, result, triggers);
+
+        public Builder triggers(Map<String,String> triggers) {
+            return triggers(Output.of(triggers));
+        }
+
+        public InvocationState build() {
+            return $;
         }
     }
+
 }

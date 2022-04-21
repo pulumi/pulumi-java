@@ -15,62 +15,57 @@ public final class BackupPlanLifecycleResourceType extends com.pulumi.resources.
     public static final BackupPlanLifecycleResourceType Empty = new BackupPlanLifecycleResourceType();
 
     @Import(name="deleteAfterDays")
-      private final @Nullable Double deleteAfterDays;
+    private @Nullable Double deleteAfterDays;
 
     public Optional<Double> deleteAfterDays() {
-        return this.deleteAfterDays == null ? Optional.empty() : Optional.ofNullable(this.deleteAfterDays);
+        return Optional.ofNullable(this.deleteAfterDays);
     }
 
     @Import(name="moveToColdStorageAfterDays")
-      private final @Nullable Double moveToColdStorageAfterDays;
+    private @Nullable Double moveToColdStorageAfterDays;
 
     public Optional<Double> moveToColdStorageAfterDays() {
-        return this.moveToColdStorageAfterDays == null ? Optional.empty() : Optional.ofNullable(this.moveToColdStorageAfterDays);
+        return Optional.ofNullable(this.moveToColdStorageAfterDays);
     }
 
-    public BackupPlanLifecycleResourceType(
-        @Nullable Double deleteAfterDays,
-        @Nullable Double moveToColdStorageAfterDays) {
-        this.deleteAfterDays = deleteAfterDays;
-        this.moveToColdStorageAfterDays = moveToColdStorageAfterDays;
-    }
+    private BackupPlanLifecycleResourceType() {}
 
-    private BackupPlanLifecycleResourceType() {
-        this.deleteAfterDays = null;
-        this.moveToColdStorageAfterDays = null;
+    private BackupPlanLifecycleResourceType(BackupPlanLifecycleResourceType $) {
+        this.deleteAfterDays = $.deleteAfterDays;
+        this.moveToColdStorageAfterDays = $.moveToColdStorageAfterDays;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BackupPlanLifecycleResourceType defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Double deleteAfterDays;
-        private @Nullable Double moveToColdStorageAfterDays;
+        private BackupPlanLifecycleResourceType $;
 
         public Builder() {
-    	      // Empty
+            $ = new BackupPlanLifecycleResourceType();
         }
 
         public Builder(BackupPlanLifecycleResourceType defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.deleteAfterDays = defaults.deleteAfterDays;
-    	      this.moveToColdStorageAfterDays = defaults.moveToColdStorageAfterDays;
+            $ = new BackupPlanLifecycleResourceType(Objects.requireNonNull(defaults));
         }
 
         public Builder deleteAfterDays(@Nullable Double deleteAfterDays) {
-            this.deleteAfterDays = deleteAfterDays;
+            $.deleteAfterDays = deleteAfterDays;
             return this;
         }
+
         public Builder moveToColdStorageAfterDays(@Nullable Double moveToColdStorageAfterDays) {
-            this.moveToColdStorageAfterDays = moveToColdStorageAfterDays;
+            $.moveToColdStorageAfterDays = moveToColdStorageAfterDays;
             return this;
-        }        public BackupPlanLifecycleResourceType build() {
-            return new BackupPlanLifecycleResourceType(deleteAfterDays, moveToColdStorageAfterDays);
+        }
+
+        public BackupPlanLifecycleResourceType build() {
+            return $;
         }
     }
+
 }

@@ -5,10 +5,10 @@ package com.pulumi.gcp.networkservices.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleHeaderMat
      * 
      */
     @Import(name="exactMatch")
-      private final @Nullable Output<String> exactMatch;
+    private @Nullable Output<String> exactMatch;
 
-    public Output<String> exactMatch() {
-        return this.exactMatch == null ? Codegen.empty() : this.exactMatch;
+    public Optional<Output<String>> exactMatch() {
+        return Optional.ofNullable(this.exactMatch);
     }
 
     /**
@@ -33,7 +33,7 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleHeaderMat
      * 
      */
     @Import(name="headerName", required=true)
-      private final Output<String> headerName;
+    private Output<String> headerName;
 
     public Output<String> headerName() {
         return this.headerName;
@@ -45,10 +45,10 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleHeaderMat
      * 
      */
     @Import(name="invertMatch")
-      private final @Nullable Output<Boolean> invertMatch;
+    private @Nullable Output<Boolean> invertMatch;
 
-    public Output<Boolean> invertMatch() {
-        return this.invertMatch == null ? Codegen.empty() : this.invertMatch;
+    public Optional<Output<Boolean>> invertMatch() {
+        return Optional.ofNullable(this.invertMatch);
     }
 
     /**
@@ -56,10 +56,10 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleHeaderMat
      * 
      */
     @Import(name="prefixMatch")
-      private final @Nullable Output<String> prefixMatch;
+    private @Nullable Output<String> prefixMatch;
 
-    public Output<String> prefixMatch() {
-        return this.prefixMatch == null ? Codegen.empty() : this.prefixMatch;
+    public Optional<Output<String>> prefixMatch() {
+        return Optional.ofNullable(this.prefixMatch);
     }
 
     /**
@@ -67,10 +67,10 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleHeaderMat
      * 
      */
     @Import(name="presentMatch")
-      private final @Nullable Output<Boolean> presentMatch;
+    private @Nullable Output<Boolean> presentMatch;
 
-    public Output<Boolean> presentMatch() {
-        return this.presentMatch == null ? Codegen.empty() : this.presentMatch;
+    public Optional<Output<Boolean>> presentMatch() {
+        return Optional.ofNullable(this.presentMatch);
     }
 
     /**
@@ -78,115 +78,99 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleHeaderMat
      * 
      */
     @Import(name="suffixMatch")
-      private final @Nullable Output<String> suffixMatch;
+    private @Nullable Output<String> suffixMatch;
 
-    public Output<String> suffixMatch() {
-        return this.suffixMatch == null ? Codegen.empty() : this.suffixMatch;
+    public Optional<Output<String>> suffixMatch() {
+        return Optional.ofNullable(this.suffixMatch);
     }
 
-    public EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleHeaderMatchGetArgs(
-        @Nullable Output<String> exactMatch,
-        Output<String> headerName,
-        @Nullable Output<Boolean> invertMatch,
-        @Nullable Output<String> prefixMatch,
-        @Nullable Output<Boolean> presentMatch,
-        @Nullable Output<String> suffixMatch) {
-        this.exactMatch = exactMatch;
-        this.headerName = Objects.requireNonNull(headerName, "expected parameter 'headerName' to be non-null");
-        this.invertMatch = invertMatch;
-        this.prefixMatch = prefixMatch;
-        this.presentMatch = presentMatch;
-        this.suffixMatch = suffixMatch;
-    }
+    private EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleHeaderMatchGetArgs() {}
 
-    private EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleHeaderMatchGetArgs() {
-        this.exactMatch = Codegen.empty();
-        this.headerName = Codegen.empty();
-        this.invertMatch = Codegen.empty();
-        this.prefixMatch = Codegen.empty();
-        this.presentMatch = Codegen.empty();
-        this.suffixMatch = Codegen.empty();
+    private EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleHeaderMatchGetArgs(EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleHeaderMatchGetArgs $) {
+        this.exactMatch = $.exactMatch;
+        this.headerName = $.headerName;
+        this.invertMatch = $.invertMatch;
+        this.prefixMatch = $.prefixMatch;
+        this.presentMatch = $.presentMatch;
+        this.suffixMatch = $.suffixMatch;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleHeaderMatchGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> exactMatch;
-        private Output<String> headerName;
-        private @Nullable Output<Boolean> invertMatch;
-        private @Nullable Output<String> prefixMatch;
-        private @Nullable Output<Boolean> presentMatch;
-        private @Nullable Output<String> suffixMatch;
+        private EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleHeaderMatchGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleHeaderMatchGetArgs();
         }
 
         public Builder(EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleHeaderMatchGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.exactMatch = defaults.exactMatch;
-    	      this.headerName = defaults.headerName;
-    	      this.invertMatch = defaults.invertMatch;
-    	      this.prefixMatch = defaults.prefixMatch;
-    	      this.presentMatch = defaults.presentMatch;
-    	      this.suffixMatch = defaults.suffixMatch;
+            $ = new EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleHeaderMatchGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder exactMatch(@Nullable Output<String> exactMatch) {
-            this.exactMatch = exactMatch;
+            $.exactMatch = exactMatch;
             return this;
         }
-        public Builder exactMatch(@Nullable String exactMatch) {
-            this.exactMatch = Codegen.ofNullable(exactMatch);
-            return this;
+
+        public Builder exactMatch(String exactMatch) {
+            return exactMatch(Output.of(exactMatch));
         }
+
         public Builder headerName(Output<String> headerName) {
-            this.headerName = Objects.requireNonNull(headerName);
+            $.headerName = headerName;
             return this;
         }
+
         public Builder headerName(String headerName) {
-            this.headerName = Output.of(Objects.requireNonNull(headerName));
-            return this;
+            return headerName(Output.of(headerName));
         }
+
         public Builder invertMatch(@Nullable Output<Boolean> invertMatch) {
-            this.invertMatch = invertMatch;
+            $.invertMatch = invertMatch;
             return this;
         }
-        public Builder invertMatch(@Nullable Boolean invertMatch) {
-            this.invertMatch = Codegen.ofNullable(invertMatch);
-            return this;
+
+        public Builder invertMatch(Boolean invertMatch) {
+            return invertMatch(Output.of(invertMatch));
         }
+
         public Builder prefixMatch(@Nullable Output<String> prefixMatch) {
-            this.prefixMatch = prefixMatch;
+            $.prefixMatch = prefixMatch;
             return this;
         }
-        public Builder prefixMatch(@Nullable String prefixMatch) {
-            this.prefixMatch = Codegen.ofNullable(prefixMatch);
-            return this;
+
+        public Builder prefixMatch(String prefixMatch) {
+            return prefixMatch(Output.of(prefixMatch));
         }
+
         public Builder presentMatch(@Nullable Output<Boolean> presentMatch) {
-            this.presentMatch = presentMatch;
+            $.presentMatch = presentMatch;
             return this;
         }
-        public Builder presentMatch(@Nullable Boolean presentMatch) {
-            this.presentMatch = Codegen.ofNullable(presentMatch);
-            return this;
+
+        public Builder presentMatch(Boolean presentMatch) {
+            return presentMatch(Output.of(presentMatch));
         }
+
         public Builder suffixMatch(@Nullable Output<String> suffixMatch) {
-            this.suffixMatch = suffixMatch;
+            $.suffixMatch = suffixMatch;
             return this;
         }
-        public Builder suffixMatch(@Nullable String suffixMatch) {
-            this.suffixMatch = Codegen.ofNullable(suffixMatch);
-            return this;
-        }        public EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleHeaderMatchGetArgs build() {
-            return new EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleHeaderMatchGetArgs(exactMatch, headerName, invertMatch, prefixMatch, presentMatch, suffixMatch);
+
+        public Builder suffixMatch(String suffixMatch) {
+            return suffixMatch(Output.of(suffixMatch));
+        }
+
+        public EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleHeaderMatchGetArgs build() {
+            $.headerName = Objects.requireNonNull($.headerName, "expected parameter 'headerName' to be non-null");
+            return $;
         }
     }
+
 }

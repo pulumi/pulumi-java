@@ -17,45 +17,45 @@ public final class GetPublicTypeVersionArgs extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="publicTypeArn", required=true)
-      private final String publicTypeArn;
+    private String publicTypeArn;
 
     public String publicTypeArn() {
         return this.publicTypeArn;
     }
 
-    public GetPublicTypeVersionArgs(String publicTypeArn) {
-        this.publicTypeArn = Objects.requireNonNull(publicTypeArn, "expected parameter 'publicTypeArn' to be non-null");
-    }
+    private GetPublicTypeVersionArgs() {}
 
-    private GetPublicTypeVersionArgs() {
-        this.publicTypeArn = null;
+    private GetPublicTypeVersionArgs(GetPublicTypeVersionArgs $) {
+        this.publicTypeArn = $.publicTypeArn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetPublicTypeVersionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String publicTypeArn;
+        private GetPublicTypeVersionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetPublicTypeVersionArgs();
         }
 
         public Builder(GetPublicTypeVersionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.publicTypeArn = defaults.publicTypeArn;
+            $ = new GetPublicTypeVersionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder publicTypeArn(String publicTypeArn) {
-            this.publicTypeArn = Objects.requireNonNull(publicTypeArn);
+            $.publicTypeArn = publicTypeArn;
             return this;
-        }        public GetPublicTypeVersionArgs build() {
-            return new GetPublicTypeVersionArgs(publicTypeArn);
+        }
+
+        public GetPublicTypeVersionArgs build() {
+            $.publicTypeArn = Objects.requireNonNull($.publicTypeArn, "expected parameter 'publicTypeArn' to be non-null");
+            return $;
         }
     }
+
 }

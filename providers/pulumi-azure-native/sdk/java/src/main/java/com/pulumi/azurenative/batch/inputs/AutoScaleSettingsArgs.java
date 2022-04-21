@@ -5,9 +5,9 @@ package com.pulumi.azurenative.batch.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,70 +20,66 @@ public final class AutoScaleSettingsArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="evaluationInterval")
-      private final @Nullable Output<String> evaluationInterval;
+    private @Nullable Output<String> evaluationInterval;
 
-    public Output<String> evaluationInterval() {
-        return this.evaluationInterval == null ? Codegen.empty() : this.evaluationInterval;
+    public Optional<Output<String>> evaluationInterval() {
+        return Optional.ofNullable(this.evaluationInterval);
     }
 
     @Import(name="formula", required=true)
-      private final Output<String> formula;
+    private Output<String> formula;
 
     public Output<String> formula() {
         return this.formula;
     }
 
-    public AutoScaleSettingsArgs(
-        @Nullable Output<String> evaluationInterval,
-        Output<String> formula) {
-        this.evaluationInterval = evaluationInterval;
-        this.formula = Objects.requireNonNull(formula, "expected parameter 'formula' to be non-null");
-    }
+    private AutoScaleSettingsArgs() {}
 
-    private AutoScaleSettingsArgs() {
-        this.evaluationInterval = Codegen.empty();
-        this.formula = Codegen.empty();
+    private AutoScaleSettingsArgs(AutoScaleSettingsArgs $) {
+        this.evaluationInterval = $.evaluationInterval;
+        this.formula = $.formula;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AutoScaleSettingsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> evaluationInterval;
-        private Output<String> formula;
+        private AutoScaleSettingsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AutoScaleSettingsArgs();
         }
 
         public Builder(AutoScaleSettingsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.evaluationInterval = defaults.evaluationInterval;
-    	      this.formula = defaults.formula;
+            $ = new AutoScaleSettingsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder evaluationInterval(@Nullable Output<String> evaluationInterval) {
-            this.evaluationInterval = evaluationInterval;
+            $.evaluationInterval = evaluationInterval;
             return this;
         }
-        public Builder evaluationInterval(@Nullable String evaluationInterval) {
-            this.evaluationInterval = Codegen.ofNullable(evaluationInterval);
-            return this;
+
+        public Builder evaluationInterval(String evaluationInterval) {
+            return evaluationInterval(Output.of(evaluationInterval));
         }
+
         public Builder formula(Output<String> formula) {
-            this.formula = Objects.requireNonNull(formula);
+            $.formula = formula;
             return this;
         }
+
         public Builder formula(String formula) {
-            this.formula = Output.of(Objects.requireNonNull(formula));
-            return this;
-        }        public AutoScaleSettingsArgs build() {
-            return new AutoScaleSettingsArgs(evaluationInterval, formula);
+            return formula(Output.of(formula));
+        }
+
+        public AutoScaleSettingsArgs build() {
+            $.formula = Objects.requireNonNull($.formula, "expected parameter 'formula' to be non-null");
+            return $;
         }
     }
+
 }

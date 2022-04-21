@@ -14,62 +14,59 @@ public final class BudgetsActionSubscriber extends com.pulumi.resources.InvokeAr
     public static final BudgetsActionSubscriber Empty = new BudgetsActionSubscriber();
 
     @Import(name="address", required=true)
-      private final String address;
+    private String address;
 
     public String address() {
         return this.address;
     }
 
     @Import(name="type", required=true)
-      private final BudgetsActionSubscriberType type;
+    private BudgetsActionSubscriberType type;
 
     public BudgetsActionSubscriberType type() {
         return this.type;
     }
 
-    public BudgetsActionSubscriber(
-        String address,
-        BudgetsActionSubscriberType type) {
-        this.address = Objects.requireNonNull(address, "expected parameter 'address' to be non-null");
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private BudgetsActionSubscriber() {}
 
-    private BudgetsActionSubscriber() {
-        this.address = null;
-        this.type = null;
+    private BudgetsActionSubscriber(BudgetsActionSubscriber $) {
+        this.address = $.address;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BudgetsActionSubscriber defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String address;
-        private BudgetsActionSubscriberType type;
+        private BudgetsActionSubscriber $;
 
         public Builder() {
-    	      // Empty
+            $ = new BudgetsActionSubscriber();
         }
 
         public Builder(BudgetsActionSubscriber defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.address = defaults.address;
-    	      this.type = defaults.type;
+            $ = new BudgetsActionSubscriber(Objects.requireNonNull(defaults));
         }
 
         public Builder address(String address) {
-            this.address = Objects.requireNonNull(address);
+            $.address = address;
             return this;
         }
+
         public Builder type(BudgetsActionSubscriberType type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
-        }        public BudgetsActionSubscriber build() {
-            return new BudgetsActionSubscriber(address, type);
+        }
+
+        public BudgetsActionSubscriber build() {
+            $.address = Objects.requireNonNull($.address, "expected parameter 'address' to be non-null");
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

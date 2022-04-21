@@ -5,7 +5,6 @@ package com.pulumi.aws.codebuild.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,7 +19,7 @@ public final class ProjectVpcConfigArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="securityGroupIds", required=true)
-      private final Output<List<String>> securityGroupIds;
+    private Output<List<String>> securityGroupIds;
 
     public Output<List<String>> securityGroupIds() {
         return this.securityGroupIds;
@@ -31,7 +30,7 @@ public final class ProjectVpcConfigArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="subnets", required=true)
-      private final Output<List<String>> subnets;
+    private Output<List<String>> subnets;
 
     public Output<List<String>> subnets() {
         return this.subnets;
@@ -42,82 +41,79 @@ public final class ProjectVpcConfigArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="vpcId", required=true)
-      private final Output<String> vpcId;
+    private Output<String> vpcId;
 
     public Output<String> vpcId() {
         return this.vpcId;
     }
 
-    public ProjectVpcConfigArgs(
-        Output<List<String>> securityGroupIds,
-        Output<List<String>> subnets,
-        Output<String> vpcId) {
-        this.securityGroupIds = Objects.requireNonNull(securityGroupIds, "expected parameter 'securityGroupIds' to be non-null");
-        this.subnets = Objects.requireNonNull(subnets, "expected parameter 'subnets' to be non-null");
-        this.vpcId = Objects.requireNonNull(vpcId, "expected parameter 'vpcId' to be non-null");
-    }
+    private ProjectVpcConfigArgs() {}
 
-    private ProjectVpcConfigArgs() {
-        this.securityGroupIds = Codegen.empty();
-        this.subnets = Codegen.empty();
-        this.vpcId = Codegen.empty();
+    private ProjectVpcConfigArgs(ProjectVpcConfigArgs $) {
+        this.securityGroupIds = $.securityGroupIds;
+        this.subnets = $.subnets;
+        this.vpcId = $.vpcId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ProjectVpcConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<List<String>> securityGroupIds;
-        private Output<List<String>> subnets;
-        private Output<String> vpcId;
+        private ProjectVpcConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ProjectVpcConfigArgs();
         }
 
         public Builder(ProjectVpcConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.securityGroupIds = defaults.securityGroupIds;
-    	      this.subnets = defaults.subnets;
-    	      this.vpcId = defaults.vpcId;
+            $ = new ProjectVpcConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder securityGroupIds(Output<List<String>> securityGroupIds) {
-            this.securityGroupIds = Objects.requireNonNull(securityGroupIds);
+            $.securityGroupIds = securityGroupIds;
             return this;
         }
+
         public Builder securityGroupIds(List<String> securityGroupIds) {
-            this.securityGroupIds = Output.of(Objects.requireNonNull(securityGroupIds));
-            return this;
+            return securityGroupIds(Output.of(securityGroupIds));
         }
+
         public Builder securityGroupIds(String... securityGroupIds) {
             return securityGroupIds(List.of(securityGroupIds));
         }
+
         public Builder subnets(Output<List<String>> subnets) {
-            this.subnets = Objects.requireNonNull(subnets);
+            $.subnets = subnets;
             return this;
         }
+
         public Builder subnets(List<String> subnets) {
-            this.subnets = Output.of(Objects.requireNonNull(subnets));
-            return this;
+            return subnets(Output.of(subnets));
         }
+
         public Builder subnets(String... subnets) {
             return subnets(List.of(subnets));
         }
+
         public Builder vpcId(Output<String> vpcId) {
-            this.vpcId = Objects.requireNonNull(vpcId);
+            $.vpcId = vpcId;
             return this;
         }
+
         public Builder vpcId(String vpcId) {
-            this.vpcId = Output.of(Objects.requireNonNull(vpcId));
-            return this;
-        }        public ProjectVpcConfigArgs build() {
-            return new ProjectVpcConfigArgs(securityGroupIds, subnets, vpcId);
+            return vpcId(Output.of(vpcId));
+        }
+
+        public ProjectVpcConfigArgs build() {
+            $.securityGroupIds = Objects.requireNonNull($.securityGroupIds, "expected parameter 'securityGroupIds' to be non-null");
+            $.subnets = Objects.requireNonNull($.subnets, "expected parameter 'subnets' to be non-null");
+            $.vpcId = Objects.requireNonNull($.vpcId, "expected parameter 'vpcId' to be non-null");
+            return $;
         }
     }
+
 }

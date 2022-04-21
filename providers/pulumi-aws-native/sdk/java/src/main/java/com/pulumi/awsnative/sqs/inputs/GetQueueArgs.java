@@ -17,45 +17,45 @@ public final class GetQueueArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="queueUrl", required=true)
-      private final String queueUrl;
+    private String queueUrl;
 
     public String queueUrl() {
         return this.queueUrl;
     }
 
-    public GetQueueArgs(String queueUrl) {
-        this.queueUrl = Objects.requireNonNull(queueUrl, "expected parameter 'queueUrl' to be non-null");
-    }
+    private GetQueueArgs() {}
 
-    private GetQueueArgs() {
-        this.queueUrl = null;
+    private GetQueueArgs(GetQueueArgs $) {
+        this.queueUrl = $.queueUrl;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetQueueArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String queueUrl;
+        private GetQueueArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetQueueArgs();
         }
 
         public Builder(GetQueueArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.queueUrl = defaults.queueUrl;
+            $ = new GetQueueArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder queueUrl(String queueUrl) {
-            this.queueUrl = Objects.requireNonNull(queueUrl);
+            $.queueUrl = queueUrl;
             return this;
-        }        public GetQueueArgs build() {
-            return new GetQueueArgs(queueUrl);
+        }
+
+        public GetQueueArgs build() {
+            $.queueUrl = Objects.requireNonNull($.queueUrl, "expected parameter 'queueUrl' to be non-null");
+            return $;
         }
     }
+
 }

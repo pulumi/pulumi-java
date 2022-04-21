@@ -6,9 +6,9 @@ package com.pulumi.awsnative.lex.inputs;
 import com.pulumi.awsnative.lex.inputs.BotSampleValueArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,73 +21,70 @@ public final class BotSlotTypeValueArgs extends com.pulumi.resources.ResourceArg
     public static final BotSlotTypeValueArgs Empty = new BotSlotTypeValueArgs();
 
     @Import(name="sampleValue", required=true)
-      private final Output<BotSampleValueArgs> sampleValue;
+    private Output<BotSampleValueArgs> sampleValue;
 
     public Output<BotSampleValueArgs> sampleValue() {
         return this.sampleValue;
     }
 
     @Import(name="synonyms")
-      private final @Nullable Output<List<BotSampleValueArgs>> synonyms;
+    private @Nullable Output<List<BotSampleValueArgs>> synonyms;
 
-    public Output<List<BotSampleValueArgs>> synonyms() {
-        return this.synonyms == null ? Codegen.empty() : this.synonyms;
+    public Optional<Output<List<BotSampleValueArgs>>> synonyms() {
+        return Optional.ofNullable(this.synonyms);
     }
 
-    public BotSlotTypeValueArgs(
-        Output<BotSampleValueArgs> sampleValue,
-        @Nullable Output<List<BotSampleValueArgs>> synonyms) {
-        this.sampleValue = Objects.requireNonNull(sampleValue, "expected parameter 'sampleValue' to be non-null");
-        this.synonyms = synonyms;
-    }
+    private BotSlotTypeValueArgs() {}
 
-    private BotSlotTypeValueArgs() {
-        this.sampleValue = Codegen.empty();
-        this.synonyms = Codegen.empty();
+    private BotSlotTypeValueArgs(BotSlotTypeValueArgs $) {
+        this.sampleValue = $.sampleValue;
+        this.synonyms = $.synonyms;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BotSlotTypeValueArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<BotSampleValueArgs> sampleValue;
-        private @Nullable Output<List<BotSampleValueArgs>> synonyms;
+        private BotSlotTypeValueArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new BotSlotTypeValueArgs();
         }
 
         public Builder(BotSlotTypeValueArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.sampleValue = defaults.sampleValue;
-    	      this.synonyms = defaults.synonyms;
+            $ = new BotSlotTypeValueArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder sampleValue(Output<BotSampleValueArgs> sampleValue) {
-            this.sampleValue = Objects.requireNonNull(sampleValue);
+            $.sampleValue = sampleValue;
             return this;
         }
+
         public Builder sampleValue(BotSampleValueArgs sampleValue) {
-            this.sampleValue = Output.of(Objects.requireNonNull(sampleValue));
-            return this;
+            return sampleValue(Output.of(sampleValue));
         }
+
         public Builder synonyms(@Nullable Output<List<BotSampleValueArgs>> synonyms) {
-            this.synonyms = synonyms;
+            $.synonyms = synonyms;
             return this;
         }
-        public Builder synonyms(@Nullable List<BotSampleValueArgs> synonyms) {
-            this.synonyms = Codegen.ofNullable(synonyms);
-            return this;
+
+        public Builder synonyms(List<BotSampleValueArgs> synonyms) {
+            return synonyms(Output.of(synonyms));
         }
+
         public Builder synonyms(BotSampleValueArgs... synonyms) {
             return synonyms(List.of(synonyms));
-        }        public BotSlotTypeValueArgs build() {
-            return new BotSlotTypeValueArgs(sampleValue, synonyms);
+        }
+
+        public BotSlotTypeValueArgs build() {
+            $.sampleValue = Objects.requireNonNull($.sampleValue, "expected parameter 'sampleValue' to be non-null");
+            return $;
         }
     }
+
 }

@@ -9,11 +9,11 @@ import com.pulumi.azurenative.synapse.inputs.SkuArgs;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class SqlPoolArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="collation")
-      private final @Nullable Output<String> collation;
+    private @Nullable Output<String> collation;
 
-    public Output<String> collation() {
-        return this.collation == null ? Codegen.empty() : this.collation;
+    public Optional<Output<String>> collation() {
+        return Optional.ofNullable(this.collation);
     }
 
     /**
@@ -45,10 +45,10 @@ public final class SqlPoolArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="createMode")
-      private final @Nullable Output<Either<String,CreateMode>> createMode;
+    private @Nullable Output<Either<String,CreateMode>> createMode;
 
-    public Output<Either<String,CreateMode>> createMode() {
-        return this.createMode == null ? Codegen.empty() : this.createMode;
+    public Optional<Output<Either<String,CreateMode>>> createMode() {
+        return Optional.ofNullable(this.createMode);
     }
 
     /**
@@ -56,10 +56,10 @@ public final class SqlPoolArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="creationDate")
-      private final @Nullable Output<String> creationDate;
+    private @Nullable Output<String> creationDate;
 
-    public Output<String> creationDate() {
-        return this.creationDate == null ? Codegen.empty() : this.creationDate;
+    public Optional<Output<String>> creationDate() {
+        return Optional.ofNullable(this.creationDate);
     }
 
     /**
@@ -67,10 +67,10 @@ public final class SqlPoolArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -78,10 +78,10 @@ public final class SqlPoolArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="maxSizeBytes")
-      private final @Nullable Output<Double> maxSizeBytes;
+    private @Nullable Output<Double> maxSizeBytes;
 
-    public Output<Double> maxSizeBytes() {
-        return this.maxSizeBytes == null ? Codegen.empty() : this.maxSizeBytes;
+    public Optional<Output<Double>> maxSizeBytes() {
+        return Optional.ofNullable(this.maxSizeBytes);
     }
 
     /**
@@ -89,10 +89,10 @@ public final class SqlPoolArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="provisioningState")
-      private final @Nullable Output<String> provisioningState;
+    private @Nullable Output<String> provisioningState;
 
-    public Output<String> provisioningState() {
-        return this.provisioningState == null ? Codegen.empty() : this.provisioningState;
+    public Optional<Output<String>> provisioningState() {
+        return Optional.ofNullable(this.provisioningState);
     }
 
     /**
@@ -100,10 +100,10 @@ public final class SqlPoolArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="recoverableDatabaseId")
-      private final @Nullable Output<String> recoverableDatabaseId;
+    private @Nullable Output<String> recoverableDatabaseId;
 
-    public Output<String> recoverableDatabaseId() {
-        return this.recoverableDatabaseId == null ? Codegen.empty() : this.recoverableDatabaseId;
+    public Optional<Output<String>> recoverableDatabaseId() {
+        return Optional.ofNullable(this.recoverableDatabaseId);
     }
 
     /**
@@ -111,7 +111,7 @@ public final class SqlPoolArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -122,10 +122,10 @@ public final class SqlPoolArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="restorePointInTime")
-      private final @Nullable Output<String> restorePointInTime;
+    private @Nullable Output<String> restorePointInTime;
 
-    public Output<String> restorePointInTime() {
-        return this.restorePointInTime == null ? Codegen.empty() : this.restorePointInTime;
+    public Optional<Output<String>> restorePointInTime() {
+        return Optional.ofNullable(this.restorePointInTime);
     }
 
     /**
@@ -133,10 +133,10 @@ public final class SqlPoolArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="sku")
-      private final @Nullable Output<SkuArgs> sku;
+    private @Nullable Output<SkuArgs> sku;
 
-    public Output<SkuArgs> sku() {
-        return this.sku == null ? Codegen.empty() : this.sku;
+    public Optional<Output<SkuArgs>> sku() {
+        return Optional.ofNullable(this.sku);
     }
 
     /**
@@ -144,10 +144,10 @@ public final class SqlPoolArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="sourceDatabaseId")
-      private final @Nullable Output<String> sourceDatabaseId;
+    private @Nullable Output<String> sourceDatabaseId;
 
-    public Output<String> sourceDatabaseId() {
-        return this.sourceDatabaseId == null ? Codegen.empty() : this.sourceDatabaseId;
+    public Optional<Output<String>> sourceDatabaseId() {
+        return Optional.ofNullable(this.sourceDatabaseId);
     }
 
     /**
@@ -155,10 +155,10 @@ public final class SqlPoolArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="sqlPoolName")
-      private final @Nullable Output<String> sqlPoolName;
+    private @Nullable Output<String> sqlPoolName;
 
-    public Output<String> sqlPoolName() {
-        return this.sqlPoolName == null ? Codegen.empty() : this.sqlPoolName;
+    public Optional<Output<String>> sqlPoolName() {
+        return Optional.ofNullable(this.sqlPoolName);
     }
 
     /**
@@ -166,10 +166,10 @@ public final class SqlPoolArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="status")
-      private final @Nullable Output<String> status;
+    private @Nullable Output<String> status;
 
-    public Output<String> status() {
-        return this.status == null ? Codegen.empty() : this.status;
+    public Optional<Output<String>> status() {
+        return Optional.ofNullable(this.status);
     }
 
     /**
@@ -177,10 +177,10 @@ public final class SqlPoolArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="storageAccountType")
-      private final @Nullable Output<Either<String,StorageAccountType>> storageAccountType;
+    private @Nullable Output<Either<String,StorageAccountType>> storageAccountType;
 
-    public Output<Either<String,StorageAccountType>> storageAccountType() {
-        return this.storageAccountType == null ? Codegen.empty() : this.storageAccountType;
+    public Optional<Output<Either<String,StorageAccountType>>> storageAccountType() {
+        return Optional.ofNullable(this.storageAccountType);
     }
 
     /**
@@ -188,10 +188,10 @@ public final class SqlPoolArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -199,245 +199,200 @@ public final class SqlPoolArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="workspaceName", required=true)
-      private final Output<String> workspaceName;
+    private Output<String> workspaceName;
 
     public Output<String> workspaceName() {
         return this.workspaceName;
     }
 
-    public SqlPoolArgs(
-        @Nullable Output<String> collation,
-        @Nullable Output<Either<String,CreateMode>> createMode,
-        @Nullable Output<String> creationDate,
-        @Nullable Output<String> location,
-        @Nullable Output<Double> maxSizeBytes,
-        @Nullable Output<String> provisioningState,
-        @Nullable Output<String> recoverableDatabaseId,
-        Output<String> resourceGroupName,
-        @Nullable Output<String> restorePointInTime,
-        @Nullable Output<SkuArgs> sku,
-        @Nullable Output<String> sourceDatabaseId,
-        @Nullable Output<String> sqlPoolName,
-        @Nullable Output<String> status,
-        @Nullable Output<Either<String,StorageAccountType>> storageAccountType,
-        @Nullable Output<Map<String,String>> tags,
-        Output<String> workspaceName) {
-        this.collation = collation;
-        this.createMode = createMode;
-        this.creationDate = creationDate;
-        this.location = location;
-        this.maxSizeBytes = maxSizeBytes;
-        this.provisioningState = provisioningState;
-        this.recoverableDatabaseId = recoverableDatabaseId;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.restorePointInTime = restorePointInTime;
-        this.sku = sku;
-        this.sourceDatabaseId = sourceDatabaseId;
-        this.sqlPoolName = sqlPoolName;
-        this.status = status;
-        this.storageAccountType = storageAccountType;
-        this.tags = tags;
-        this.workspaceName = Objects.requireNonNull(workspaceName, "expected parameter 'workspaceName' to be non-null");
-    }
+    private SqlPoolArgs() {}
 
-    private SqlPoolArgs() {
-        this.collation = Codegen.empty();
-        this.createMode = Codegen.empty();
-        this.creationDate = Codegen.empty();
-        this.location = Codegen.empty();
-        this.maxSizeBytes = Codegen.empty();
-        this.provisioningState = Codegen.empty();
-        this.recoverableDatabaseId = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.restorePointInTime = Codegen.empty();
-        this.sku = Codegen.empty();
-        this.sourceDatabaseId = Codegen.empty();
-        this.sqlPoolName = Codegen.empty();
-        this.status = Codegen.empty();
-        this.storageAccountType = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.workspaceName = Codegen.empty();
+    private SqlPoolArgs(SqlPoolArgs $) {
+        this.collation = $.collation;
+        this.createMode = $.createMode;
+        this.creationDate = $.creationDate;
+        this.location = $.location;
+        this.maxSizeBytes = $.maxSizeBytes;
+        this.provisioningState = $.provisioningState;
+        this.recoverableDatabaseId = $.recoverableDatabaseId;
+        this.resourceGroupName = $.resourceGroupName;
+        this.restorePointInTime = $.restorePointInTime;
+        this.sku = $.sku;
+        this.sourceDatabaseId = $.sourceDatabaseId;
+        this.sqlPoolName = $.sqlPoolName;
+        this.status = $.status;
+        this.storageAccountType = $.storageAccountType;
+        this.tags = $.tags;
+        this.workspaceName = $.workspaceName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SqlPoolArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> collation;
-        private @Nullable Output<Either<String,CreateMode>> createMode;
-        private @Nullable Output<String> creationDate;
-        private @Nullable Output<String> location;
-        private @Nullable Output<Double> maxSizeBytes;
-        private @Nullable Output<String> provisioningState;
-        private @Nullable Output<String> recoverableDatabaseId;
-        private Output<String> resourceGroupName;
-        private @Nullable Output<String> restorePointInTime;
-        private @Nullable Output<SkuArgs> sku;
-        private @Nullable Output<String> sourceDatabaseId;
-        private @Nullable Output<String> sqlPoolName;
-        private @Nullable Output<String> status;
-        private @Nullable Output<Either<String,StorageAccountType>> storageAccountType;
-        private @Nullable Output<Map<String,String>> tags;
-        private Output<String> workspaceName;
+        private SqlPoolArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SqlPoolArgs();
         }
 
         public Builder(SqlPoolArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.collation = defaults.collation;
-    	      this.createMode = defaults.createMode;
-    	      this.creationDate = defaults.creationDate;
-    	      this.location = defaults.location;
-    	      this.maxSizeBytes = defaults.maxSizeBytes;
-    	      this.provisioningState = defaults.provisioningState;
-    	      this.recoverableDatabaseId = defaults.recoverableDatabaseId;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.restorePointInTime = defaults.restorePointInTime;
-    	      this.sku = defaults.sku;
-    	      this.sourceDatabaseId = defaults.sourceDatabaseId;
-    	      this.sqlPoolName = defaults.sqlPoolName;
-    	      this.status = defaults.status;
-    	      this.storageAccountType = defaults.storageAccountType;
-    	      this.tags = defaults.tags;
-    	      this.workspaceName = defaults.workspaceName;
+            $ = new SqlPoolArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder collation(@Nullable Output<String> collation) {
-            this.collation = collation;
+            $.collation = collation;
             return this;
         }
-        public Builder collation(@Nullable String collation) {
-            this.collation = Codegen.ofNullable(collation);
-            return this;
+
+        public Builder collation(String collation) {
+            return collation(Output.of(collation));
         }
+
         public Builder createMode(@Nullable Output<Either<String,CreateMode>> createMode) {
-            this.createMode = createMode;
+            $.createMode = createMode;
             return this;
         }
-        public Builder createMode(@Nullable Either<String,CreateMode> createMode) {
-            this.createMode = Codegen.ofNullable(createMode);
-            return this;
+
+        public Builder createMode(Either<String,CreateMode> createMode) {
+            return createMode(Output.of(createMode));
         }
+
         public Builder creationDate(@Nullable Output<String> creationDate) {
-            this.creationDate = creationDate;
+            $.creationDate = creationDate;
             return this;
         }
-        public Builder creationDate(@Nullable String creationDate) {
-            this.creationDate = Codegen.ofNullable(creationDate);
-            return this;
+
+        public Builder creationDate(String creationDate) {
+            return creationDate(Output.of(creationDate));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder maxSizeBytes(@Nullable Output<Double> maxSizeBytes) {
-            this.maxSizeBytes = maxSizeBytes;
+            $.maxSizeBytes = maxSizeBytes;
             return this;
         }
-        public Builder maxSizeBytes(@Nullable Double maxSizeBytes) {
-            this.maxSizeBytes = Codegen.ofNullable(maxSizeBytes);
-            return this;
+
+        public Builder maxSizeBytes(Double maxSizeBytes) {
+            return maxSizeBytes(Output.of(maxSizeBytes));
         }
+
         public Builder provisioningState(@Nullable Output<String> provisioningState) {
-            this.provisioningState = provisioningState;
+            $.provisioningState = provisioningState;
             return this;
         }
-        public Builder provisioningState(@Nullable String provisioningState) {
-            this.provisioningState = Codegen.ofNullable(provisioningState);
-            return this;
+
+        public Builder provisioningState(String provisioningState) {
+            return provisioningState(Output.of(provisioningState));
         }
+
         public Builder recoverableDatabaseId(@Nullable Output<String> recoverableDatabaseId) {
-            this.recoverableDatabaseId = recoverableDatabaseId;
+            $.recoverableDatabaseId = recoverableDatabaseId;
             return this;
         }
-        public Builder recoverableDatabaseId(@Nullable String recoverableDatabaseId) {
-            this.recoverableDatabaseId = Codegen.ofNullable(recoverableDatabaseId);
-            return this;
+
+        public Builder recoverableDatabaseId(String recoverableDatabaseId) {
+            return recoverableDatabaseId(Output.of(recoverableDatabaseId));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder restorePointInTime(@Nullable Output<String> restorePointInTime) {
-            this.restorePointInTime = restorePointInTime;
+            $.restorePointInTime = restorePointInTime;
             return this;
         }
-        public Builder restorePointInTime(@Nullable String restorePointInTime) {
-            this.restorePointInTime = Codegen.ofNullable(restorePointInTime);
-            return this;
+
+        public Builder restorePointInTime(String restorePointInTime) {
+            return restorePointInTime(Output.of(restorePointInTime));
         }
+
         public Builder sku(@Nullable Output<SkuArgs> sku) {
-            this.sku = sku;
+            $.sku = sku;
             return this;
         }
-        public Builder sku(@Nullable SkuArgs sku) {
-            this.sku = Codegen.ofNullable(sku);
-            return this;
+
+        public Builder sku(SkuArgs sku) {
+            return sku(Output.of(sku));
         }
+
         public Builder sourceDatabaseId(@Nullable Output<String> sourceDatabaseId) {
-            this.sourceDatabaseId = sourceDatabaseId;
+            $.sourceDatabaseId = sourceDatabaseId;
             return this;
         }
-        public Builder sourceDatabaseId(@Nullable String sourceDatabaseId) {
-            this.sourceDatabaseId = Codegen.ofNullable(sourceDatabaseId);
-            return this;
+
+        public Builder sourceDatabaseId(String sourceDatabaseId) {
+            return sourceDatabaseId(Output.of(sourceDatabaseId));
         }
+
         public Builder sqlPoolName(@Nullable Output<String> sqlPoolName) {
-            this.sqlPoolName = sqlPoolName;
+            $.sqlPoolName = sqlPoolName;
             return this;
         }
-        public Builder sqlPoolName(@Nullable String sqlPoolName) {
-            this.sqlPoolName = Codegen.ofNullable(sqlPoolName);
-            return this;
+
+        public Builder sqlPoolName(String sqlPoolName) {
+            return sqlPoolName(Output.of(sqlPoolName));
         }
+
         public Builder status(@Nullable Output<String> status) {
-            this.status = status;
+            $.status = status;
             return this;
         }
-        public Builder status(@Nullable String status) {
-            this.status = Codegen.ofNullable(status);
-            return this;
+
+        public Builder status(String status) {
+            return status(Output.of(status));
         }
+
         public Builder storageAccountType(@Nullable Output<Either<String,StorageAccountType>> storageAccountType) {
-            this.storageAccountType = storageAccountType;
+            $.storageAccountType = storageAccountType;
             return this;
         }
-        public Builder storageAccountType(@Nullable Either<String,StorageAccountType> storageAccountType) {
-            this.storageAccountType = Codegen.ofNullable(storageAccountType);
-            return this;
+
+        public Builder storageAccountType(Either<String,StorageAccountType> storageAccountType) {
+            return storageAccountType(Output.of(storageAccountType));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder workspaceName(Output<String> workspaceName) {
-            this.workspaceName = Objects.requireNonNull(workspaceName);
+            $.workspaceName = workspaceName;
             return this;
         }
+
         public Builder workspaceName(String workspaceName) {
-            this.workspaceName = Output.of(Objects.requireNonNull(workspaceName));
-            return this;
-        }        public SqlPoolArgs build() {
-            return new SqlPoolArgs(collation, createMode, creationDate, location, maxSizeBytes, provisioningState, recoverableDatabaseId, resourceGroupName, restorePointInTime, sku, sourceDatabaseId, sqlPoolName, status, storageAccountType, tags, workspaceName);
+            return workspaceName(Output.of(workspaceName));
+        }
+
+        public SqlPoolArgs build() {
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.workspaceName = Objects.requireNonNull($.workspaceName, "expected parameter 'workspaceName' to be non-null");
+            return $;
         }
     }
+
 }

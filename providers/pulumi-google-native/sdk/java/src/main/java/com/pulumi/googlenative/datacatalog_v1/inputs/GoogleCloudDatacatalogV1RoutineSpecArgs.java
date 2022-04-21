@@ -5,13 +5,13 @@ package com.pulumi.googlenative.datacatalog_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.datacatalog_v1.enums.GoogleCloudDatacatalogV1RoutineSpecRoutineType;
 import com.pulumi.googlenative.datacatalog_v1.inputs.GoogleCloudDatacatalogV1BigQueryRoutineSpecArgs;
 import com.pulumi.googlenative.datacatalog_v1.inputs.GoogleCloudDatacatalogV1RoutineSpecArgumentArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -28,10 +28,10 @@ public final class GoogleCloudDatacatalogV1RoutineSpecArgs extends com.pulumi.re
      * 
      */
     @Import(name="bigqueryRoutineSpec")
-      private final @Nullable Output<GoogleCloudDatacatalogV1BigQueryRoutineSpecArgs> bigqueryRoutineSpec;
+    private @Nullable Output<GoogleCloudDatacatalogV1BigQueryRoutineSpecArgs> bigqueryRoutineSpec;
 
-    public Output<GoogleCloudDatacatalogV1BigQueryRoutineSpecArgs> bigqueryRoutineSpec() {
-        return this.bigqueryRoutineSpec == null ? Codegen.empty() : this.bigqueryRoutineSpec;
+    public Optional<Output<GoogleCloudDatacatalogV1BigQueryRoutineSpecArgs>> bigqueryRoutineSpec() {
+        return Optional.ofNullable(this.bigqueryRoutineSpec);
     }
 
     /**
@@ -39,10 +39,10 @@ public final class GoogleCloudDatacatalogV1RoutineSpecArgs extends com.pulumi.re
      * 
      */
     @Import(name="definitionBody")
-      private final @Nullable Output<String> definitionBody;
+    private @Nullable Output<String> definitionBody;
 
-    public Output<String> definitionBody() {
-        return this.definitionBody == null ? Codegen.empty() : this.definitionBody;
+    public Optional<Output<String>> definitionBody() {
+        return Optional.ofNullable(this.definitionBody);
     }
 
     /**
@@ -50,10 +50,10 @@ public final class GoogleCloudDatacatalogV1RoutineSpecArgs extends com.pulumi.re
      * 
      */
     @Import(name="language")
-      private final @Nullable Output<String> language;
+    private @Nullable Output<String> language;
 
-    public Output<String> language() {
-        return this.language == null ? Codegen.empty() : this.language;
+    public Optional<Output<String>> language() {
+        return Optional.ofNullable(this.language);
     }
 
     /**
@@ -61,10 +61,10 @@ public final class GoogleCloudDatacatalogV1RoutineSpecArgs extends com.pulumi.re
      * 
      */
     @Import(name="returnType")
-      private final @Nullable Output<String> returnType;
+    private @Nullable Output<String> returnType;
 
-    public Output<String> returnType() {
-        return this.returnType == null ? Codegen.empty() : this.returnType;
+    public Optional<Output<String>> returnType() {
+        return Optional.ofNullable(this.returnType);
     }
 
     /**
@@ -72,10 +72,10 @@ public final class GoogleCloudDatacatalogV1RoutineSpecArgs extends com.pulumi.re
      * 
      */
     @Import(name="routineArguments")
-      private final @Nullable Output<List<GoogleCloudDatacatalogV1RoutineSpecArgumentArgs>> routineArguments;
+    private @Nullable Output<List<GoogleCloudDatacatalogV1RoutineSpecArgumentArgs>> routineArguments;
 
-    public Output<List<GoogleCloudDatacatalogV1RoutineSpecArgumentArgs>> routineArguments() {
-        return this.routineArguments == null ? Codegen.empty() : this.routineArguments;
+    public Optional<Output<List<GoogleCloudDatacatalogV1RoutineSpecArgumentArgs>>> routineArguments() {
+        return Optional.ofNullable(this.routineArguments);
     }
 
     /**
@@ -83,118 +83,102 @@ public final class GoogleCloudDatacatalogV1RoutineSpecArgs extends com.pulumi.re
      * 
      */
     @Import(name="routineType")
-      private final @Nullable Output<GoogleCloudDatacatalogV1RoutineSpecRoutineType> routineType;
+    private @Nullable Output<GoogleCloudDatacatalogV1RoutineSpecRoutineType> routineType;
 
-    public Output<GoogleCloudDatacatalogV1RoutineSpecRoutineType> routineType() {
-        return this.routineType == null ? Codegen.empty() : this.routineType;
+    public Optional<Output<GoogleCloudDatacatalogV1RoutineSpecRoutineType>> routineType() {
+        return Optional.ofNullable(this.routineType);
     }
 
-    public GoogleCloudDatacatalogV1RoutineSpecArgs(
-        @Nullable Output<GoogleCloudDatacatalogV1BigQueryRoutineSpecArgs> bigqueryRoutineSpec,
-        @Nullable Output<String> definitionBody,
-        @Nullable Output<String> language,
-        @Nullable Output<String> returnType,
-        @Nullable Output<List<GoogleCloudDatacatalogV1RoutineSpecArgumentArgs>> routineArguments,
-        @Nullable Output<GoogleCloudDatacatalogV1RoutineSpecRoutineType> routineType) {
-        this.bigqueryRoutineSpec = bigqueryRoutineSpec;
-        this.definitionBody = definitionBody;
-        this.language = language;
-        this.returnType = returnType;
-        this.routineArguments = routineArguments;
-        this.routineType = routineType;
-    }
+    private GoogleCloudDatacatalogV1RoutineSpecArgs() {}
 
-    private GoogleCloudDatacatalogV1RoutineSpecArgs() {
-        this.bigqueryRoutineSpec = Codegen.empty();
-        this.definitionBody = Codegen.empty();
-        this.language = Codegen.empty();
-        this.returnType = Codegen.empty();
-        this.routineArguments = Codegen.empty();
-        this.routineType = Codegen.empty();
+    private GoogleCloudDatacatalogV1RoutineSpecArgs(GoogleCloudDatacatalogV1RoutineSpecArgs $) {
+        this.bigqueryRoutineSpec = $.bigqueryRoutineSpec;
+        this.definitionBody = $.definitionBody;
+        this.language = $.language;
+        this.returnType = $.returnType;
+        this.routineArguments = $.routineArguments;
+        this.routineType = $.routineType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudDatacatalogV1RoutineSpecArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<GoogleCloudDatacatalogV1BigQueryRoutineSpecArgs> bigqueryRoutineSpec;
-        private @Nullable Output<String> definitionBody;
-        private @Nullable Output<String> language;
-        private @Nullable Output<String> returnType;
-        private @Nullable Output<List<GoogleCloudDatacatalogV1RoutineSpecArgumentArgs>> routineArguments;
-        private @Nullable Output<GoogleCloudDatacatalogV1RoutineSpecRoutineType> routineType;
+        private GoogleCloudDatacatalogV1RoutineSpecArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudDatacatalogV1RoutineSpecArgs();
         }
 
         public Builder(GoogleCloudDatacatalogV1RoutineSpecArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.bigqueryRoutineSpec = defaults.bigqueryRoutineSpec;
-    	      this.definitionBody = defaults.definitionBody;
-    	      this.language = defaults.language;
-    	      this.returnType = defaults.returnType;
-    	      this.routineArguments = defaults.routineArguments;
-    	      this.routineType = defaults.routineType;
+            $ = new GoogleCloudDatacatalogV1RoutineSpecArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder bigqueryRoutineSpec(@Nullable Output<GoogleCloudDatacatalogV1BigQueryRoutineSpecArgs> bigqueryRoutineSpec) {
-            this.bigqueryRoutineSpec = bigqueryRoutineSpec;
+            $.bigqueryRoutineSpec = bigqueryRoutineSpec;
             return this;
         }
-        public Builder bigqueryRoutineSpec(@Nullable GoogleCloudDatacatalogV1BigQueryRoutineSpecArgs bigqueryRoutineSpec) {
-            this.bigqueryRoutineSpec = Codegen.ofNullable(bigqueryRoutineSpec);
-            return this;
+
+        public Builder bigqueryRoutineSpec(GoogleCloudDatacatalogV1BigQueryRoutineSpecArgs bigqueryRoutineSpec) {
+            return bigqueryRoutineSpec(Output.of(bigqueryRoutineSpec));
         }
+
         public Builder definitionBody(@Nullable Output<String> definitionBody) {
-            this.definitionBody = definitionBody;
+            $.definitionBody = definitionBody;
             return this;
         }
-        public Builder definitionBody(@Nullable String definitionBody) {
-            this.definitionBody = Codegen.ofNullable(definitionBody);
-            return this;
+
+        public Builder definitionBody(String definitionBody) {
+            return definitionBody(Output.of(definitionBody));
         }
+
         public Builder language(@Nullable Output<String> language) {
-            this.language = language;
+            $.language = language;
             return this;
         }
-        public Builder language(@Nullable String language) {
-            this.language = Codegen.ofNullable(language);
-            return this;
+
+        public Builder language(String language) {
+            return language(Output.of(language));
         }
+
         public Builder returnType(@Nullable Output<String> returnType) {
-            this.returnType = returnType;
+            $.returnType = returnType;
             return this;
         }
-        public Builder returnType(@Nullable String returnType) {
-            this.returnType = Codegen.ofNullable(returnType);
-            return this;
+
+        public Builder returnType(String returnType) {
+            return returnType(Output.of(returnType));
         }
+
         public Builder routineArguments(@Nullable Output<List<GoogleCloudDatacatalogV1RoutineSpecArgumentArgs>> routineArguments) {
-            this.routineArguments = routineArguments;
+            $.routineArguments = routineArguments;
             return this;
         }
-        public Builder routineArguments(@Nullable List<GoogleCloudDatacatalogV1RoutineSpecArgumentArgs> routineArguments) {
-            this.routineArguments = Codegen.ofNullable(routineArguments);
-            return this;
+
+        public Builder routineArguments(List<GoogleCloudDatacatalogV1RoutineSpecArgumentArgs> routineArguments) {
+            return routineArguments(Output.of(routineArguments));
         }
+
         public Builder routineArguments(GoogleCloudDatacatalogV1RoutineSpecArgumentArgs... routineArguments) {
             return routineArguments(List.of(routineArguments));
         }
+
         public Builder routineType(@Nullable Output<GoogleCloudDatacatalogV1RoutineSpecRoutineType> routineType) {
-            this.routineType = routineType;
+            $.routineType = routineType;
             return this;
         }
-        public Builder routineType(@Nullable GoogleCloudDatacatalogV1RoutineSpecRoutineType routineType) {
-            this.routineType = Codegen.ofNullable(routineType);
-            return this;
-        }        public GoogleCloudDatacatalogV1RoutineSpecArgs build() {
-            return new GoogleCloudDatacatalogV1RoutineSpecArgs(bigqueryRoutineSpec, definitionBody, language, returnType, routineArguments, routineType);
+
+        public Builder routineType(GoogleCloudDatacatalogV1RoutineSpecRoutineType routineType) {
+            return routineType(Output.of(routineType));
+        }
+
+        public GoogleCloudDatacatalogV1RoutineSpecArgs build() {
+            return $;
         }
     }
+
 }

@@ -5,10 +5,10 @@ package com.pulumi.googlenative.transcoder_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class DenoiseArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="strength")
-      private final @Nullable Output<Double> strength;
+    private @Nullable Output<Double> strength;
 
-    public Output<Double> strength() {
-        return this.strength == null ? Codegen.empty() : this.strength;
+    public Optional<Output<Double>> strength() {
+        return Optional.ofNullable(this.strength);
     }
 
     /**
@@ -36,63 +36,58 @@ public final class DenoiseArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tune")
-      private final @Nullable Output<String> tune;
+    private @Nullable Output<String> tune;
 
-    public Output<String> tune() {
-        return this.tune == null ? Codegen.empty() : this.tune;
+    public Optional<Output<String>> tune() {
+        return Optional.ofNullable(this.tune);
     }
 
-    public DenoiseArgs(
-        @Nullable Output<Double> strength,
-        @Nullable Output<String> tune) {
-        this.strength = strength;
-        this.tune = tune;
-    }
+    private DenoiseArgs() {}
 
-    private DenoiseArgs() {
-        this.strength = Codegen.empty();
-        this.tune = Codegen.empty();
+    private DenoiseArgs(DenoiseArgs $) {
+        this.strength = $.strength;
+        this.tune = $.tune;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DenoiseArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Double> strength;
-        private @Nullable Output<String> tune;
+        private DenoiseArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DenoiseArgs();
         }
 
         public Builder(DenoiseArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.strength = defaults.strength;
-    	      this.tune = defaults.tune;
+            $ = new DenoiseArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder strength(@Nullable Output<Double> strength) {
-            this.strength = strength;
+            $.strength = strength;
             return this;
         }
-        public Builder strength(@Nullable Double strength) {
-            this.strength = Codegen.ofNullable(strength);
-            return this;
+
+        public Builder strength(Double strength) {
+            return strength(Output.of(strength));
         }
+
         public Builder tune(@Nullable Output<String> tune) {
-            this.tune = tune;
+            $.tune = tune;
             return this;
         }
-        public Builder tune(@Nullable String tune) {
-            this.tune = Codegen.ofNullable(tune);
-            return this;
-        }        public DenoiseArgs build() {
-            return new DenoiseArgs(strength, tune);
+
+        public Builder tune(String tune) {
+            return tune(Output.of(tune));
+        }
+
+        public DenoiseArgs build() {
+            return $;
         }
     }
+
 }

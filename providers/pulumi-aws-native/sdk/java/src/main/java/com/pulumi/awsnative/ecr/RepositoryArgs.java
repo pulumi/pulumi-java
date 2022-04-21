@@ -10,11 +10,11 @@ import com.pulumi.awsnative.ecr.inputs.RepositoryLifecyclePolicyArgs;
 import com.pulumi.awsnative.ecr.inputs.RepositoryTagArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,17 +23,17 @@ public final class RepositoryArgs extends com.pulumi.resources.ResourceArgs {
     public static final RepositoryArgs Empty = new RepositoryArgs();
 
     @Import(name="encryptionConfiguration")
-      private final @Nullable Output<RepositoryEncryptionConfigurationArgs> encryptionConfiguration;
+    private @Nullable Output<RepositoryEncryptionConfigurationArgs> encryptionConfiguration;
 
-    public Output<RepositoryEncryptionConfigurationArgs> encryptionConfiguration() {
-        return this.encryptionConfiguration == null ? Codegen.empty() : this.encryptionConfiguration;
+    public Optional<Output<RepositoryEncryptionConfigurationArgs>> encryptionConfiguration() {
+        return Optional.ofNullable(this.encryptionConfiguration);
     }
 
     @Import(name="imageScanningConfiguration")
-      private final @Nullable Output<RepositoryImageScanningConfigurationArgs> imageScanningConfiguration;
+    private @Nullable Output<RepositoryImageScanningConfigurationArgs> imageScanningConfiguration;
 
-    public Output<RepositoryImageScanningConfigurationArgs> imageScanningConfiguration() {
-        return this.imageScanningConfiguration == null ? Codegen.empty() : this.imageScanningConfiguration;
+    public Optional<Output<RepositoryImageScanningConfigurationArgs>> imageScanningConfiguration() {
+        return Optional.ofNullable(this.imageScanningConfiguration);
     }
 
     /**
@@ -41,17 +41,17 @@ public final class RepositoryArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="imageTagMutability")
-      private final @Nullable Output<RepositoryImageTagMutability> imageTagMutability;
+    private @Nullable Output<RepositoryImageTagMutability> imageTagMutability;
 
-    public Output<RepositoryImageTagMutability> imageTagMutability() {
-        return this.imageTagMutability == null ? Codegen.empty() : this.imageTagMutability;
+    public Optional<Output<RepositoryImageTagMutability>> imageTagMutability() {
+        return Optional.ofNullable(this.imageTagMutability);
     }
 
     @Import(name="lifecyclePolicy")
-      private final @Nullable Output<RepositoryLifecyclePolicyArgs> lifecyclePolicy;
+    private @Nullable Output<RepositoryLifecyclePolicyArgs> lifecyclePolicy;
 
-    public Output<RepositoryLifecyclePolicyArgs> lifecyclePolicy() {
-        return this.lifecyclePolicy == null ? Codegen.empty() : this.lifecyclePolicy;
+    public Optional<Output<RepositoryLifecyclePolicyArgs>> lifecyclePolicy() {
+        return Optional.ofNullable(this.lifecyclePolicy);
     }
 
     /**
@@ -59,10 +59,10 @@ public final class RepositoryArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="repositoryName")
-      private final @Nullable Output<String> repositoryName;
+    private @Nullable Output<String> repositoryName;
 
-    public Output<String> repositoryName() {
-        return this.repositoryName == null ? Codegen.empty() : this.repositoryName;
+    public Optional<Output<String>> repositoryName() {
+        return Optional.ofNullable(this.repositoryName);
     }
 
     /**
@@ -70,10 +70,10 @@ public final class RepositoryArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="repositoryPolicyText")
-      private final @Nullable Output<Object> repositoryPolicyText;
+    private @Nullable Output<Object> repositoryPolicyText;
 
-    public Output<Object> repositoryPolicyText() {
-        return this.repositoryPolicyText == null ? Codegen.empty() : this.repositoryPolicyText;
+    public Optional<Output<Object>> repositoryPolicyText() {
+        return Optional.ofNullable(this.repositoryPolicyText);
     }
 
     /**
@@ -81,131 +81,112 @@ public final class RepositoryArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<List<RepositoryTagArgs>> tags;
+    private @Nullable Output<List<RepositoryTagArgs>> tags;
 
-    public Output<List<RepositoryTagArgs>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<List<RepositoryTagArgs>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public RepositoryArgs(
-        @Nullable Output<RepositoryEncryptionConfigurationArgs> encryptionConfiguration,
-        @Nullable Output<RepositoryImageScanningConfigurationArgs> imageScanningConfiguration,
-        @Nullable Output<RepositoryImageTagMutability> imageTagMutability,
-        @Nullable Output<RepositoryLifecyclePolicyArgs> lifecyclePolicy,
-        @Nullable Output<String> repositoryName,
-        @Nullable Output<Object> repositoryPolicyText,
-        @Nullable Output<List<RepositoryTagArgs>> tags) {
-        this.encryptionConfiguration = encryptionConfiguration;
-        this.imageScanningConfiguration = imageScanningConfiguration;
-        this.imageTagMutability = imageTagMutability;
-        this.lifecyclePolicy = lifecyclePolicy;
-        this.repositoryName = repositoryName;
-        this.repositoryPolicyText = repositoryPolicyText;
-        this.tags = tags;
-    }
+    private RepositoryArgs() {}
 
-    private RepositoryArgs() {
-        this.encryptionConfiguration = Codegen.empty();
-        this.imageScanningConfiguration = Codegen.empty();
-        this.imageTagMutability = Codegen.empty();
-        this.lifecyclePolicy = Codegen.empty();
-        this.repositoryName = Codegen.empty();
-        this.repositoryPolicyText = Codegen.empty();
-        this.tags = Codegen.empty();
+    private RepositoryArgs(RepositoryArgs $) {
+        this.encryptionConfiguration = $.encryptionConfiguration;
+        this.imageScanningConfiguration = $.imageScanningConfiguration;
+        this.imageTagMutability = $.imageTagMutability;
+        this.lifecyclePolicy = $.lifecyclePolicy;
+        this.repositoryName = $.repositoryName;
+        this.repositoryPolicyText = $.repositoryPolicyText;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RepositoryArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<RepositoryEncryptionConfigurationArgs> encryptionConfiguration;
-        private @Nullable Output<RepositoryImageScanningConfigurationArgs> imageScanningConfiguration;
-        private @Nullable Output<RepositoryImageTagMutability> imageTagMutability;
-        private @Nullable Output<RepositoryLifecyclePolicyArgs> lifecyclePolicy;
-        private @Nullable Output<String> repositoryName;
-        private @Nullable Output<Object> repositoryPolicyText;
-        private @Nullable Output<List<RepositoryTagArgs>> tags;
+        private RepositoryArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RepositoryArgs();
         }
 
         public Builder(RepositoryArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.encryptionConfiguration = defaults.encryptionConfiguration;
-    	      this.imageScanningConfiguration = defaults.imageScanningConfiguration;
-    	      this.imageTagMutability = defaults.imageTagMutability;
-    	      this.lifecyclePolicy = defaults.lifecyclePolicy;
-    	      this.repositoryName = defaults.repositoryName;
-    	      this.repositoryPolicyText = defaults.repositoryPolicyText;
-    	      this.tags = defaults.tags;
+            $ = new RepositoryArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder encryptionConfiguration(@Nullable Output<RepositoryEncryptionConfigurationArgs> encryptionConfiguration) {
-            this.encryptionConfiguration = encryptionConfiguration;
+            $.encryptionConfiguration = encryptionConfiguration;
             return this;
         }
-        public Builder encryptionConfiguration(@Nullable RepositoryEncryptionConfigurationArgs encryptionConfiguration) {
-            this.encryptionConfiguration = Codegen.ofNullable(encryptionConfiguration);
-            return this;
+
+        public Builder encryptionConfiguration(RepositoryEncryptionConfigurationArgs encryptionConfiguration) {
+            return encryptionConfiguration(Output.of(encryptionConfiguration));
         }
+
         public Builder imageScanningConfiguration(@Nullable Output<RepositoryImageScanningConfigurationArgs> imageScanningConfiguration) {
-            this.imageScanningConfiguration = imageScanningConfiguration;
+            $.imageScanningConfiguration = imageScanningConfiguration;
             return this;
         }
-        public Builder imageScanningConfiguration(@Nullable RepositoryImageScanningConfigurationArgs imageScanningConfiguration) {
-            this.imageScanningConfiguration = Codegen.ofNullable(imageScanningConfiguration);
-            return this;
+
+        public Builder imageScanningConfiguration(RepositoryImageScanningConfigurationArgs imageScanningConfiguration) {
+            return imageScanningConfiguration(Output.of(imageScanningConfiguration));
         }
+
         public Builder imageTagMutability(@Nullable Output<RepositoryImageTagMutability> imageTagMutability) {
-            this.imageTagMutability = imageTagMutability;
+            $.imageTagMutability = imageTagMutability;
             return this;
         }
-        public Builder imageTagMutability(@Nullable RepositoryImageTagMutability imageTagMutability) {
-            this.imageTagMutability = Codegen.ofNullable(imageTagMutability);
-            return this;
+
+        public Builder imageTagMutability(RepositoryImageTagMutability imageTagMutability) {
+            return imageTagMutability(Output.of(imageTagMutability));
         }
+
         public Builder lifecyclePolicy(@Nullable Output<RepositoryLifecyclePolicyArgs> lifecyclePolicy) {
-            this.lifecyclePolicy = lifecyclePolicy;
+            $.lifecyclePolicy = lifecyclePolicy;
             return this;
         }
-        public Builder lifecyclePolicy(@Nullable RepositoryLifecyclePolicyArgs lifecyclePolicy) {
-            this.lifecyclePolicy = Codegen.ofNullable(lifecyclePolicy);
-            return this;
+
+        public Builder lifecyclePolicy(RepositoryLifecyclePolicyArgs lifecyclePolicy) {
+            return lifecyclePolicy(Output.of(lifecyclePolicy));
         }
+
         public Builder repositoryName(@Nullable Output<String> repositoryName) {
-            this.repositoryName = repositoryName;
+            $.repositoryName = repositoryName;
             return this;
         }
-        public Builder repositoryName(@Nullable String repositoryName) {
-            this.repositoryName = Codegen.ofNullable(repositoryName);
-            return this;
+
+        public Builder repositoryName(String repositoryName) {
+            return repositoryName(Output.of(repositoryName));
         }
+
         public Builder repositoryPolicyText(@Nullable Output<Object> repositoryPolicyText) {
-            this.repositoryPolicyText = repositoryPolicyText;
+            $.repositoryPolicyText = repositoryPolicyText;
             return this;
         }
-        public Builder repositoryPolicyText(@Nullable Object repositoryPolicyText) {
-            this.repositoryPolicyText = Codegen.ofNullable(repositoryPolicyText);
-            return this;
+
+        public Builder repositoryPolicyText(Object repositoryPolicyText) {
+            return repositoryPolicyText(Output.of(repositoryPolicyText));
         }
+
         public Builder tags(@Nullable Output<List<RepositoryTagArgs>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable List<RepositoryTagArgs> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(List<RepositoryTagArgs> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tags(RepositoryTagArgs... tags) {
             return tags(List.of(tags));
-        }        public RepositoryArgs build() {
-            return new RepositoryArgs(encryptionConfiguration, imageScanningConfiguration, imageTagMutability, lifecyclePolicy, repositoryName, repositoryPolicyText, tags);
+        }
+
+        public RepositoryArgs build() {
+            return $;
         }
     }
+
 }

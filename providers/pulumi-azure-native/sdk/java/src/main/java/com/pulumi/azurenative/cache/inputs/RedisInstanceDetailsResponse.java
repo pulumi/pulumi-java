@@ -23,7 +23,7 @@ public final class RedisInstanceDetailsResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="isMaster", required=true)
-      private final Boolean isMaster;
+    private Boolean isMaster;
 
     public Boolean isMaster() {
         return this.isMaster;
@@ -34,7 +34,7 @@ public final class RedisInstanceDetailsResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="nonSslPort", required=true)
-      private final Integer nonSslPort;
+    private Integer nonSslPort;
 
     public Integer nonSslPort() {
         return this.nonSslPort;
@@ -45,7 +45,7 @@ public final class RedisInstanceDetailsResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="shardId", required=true)
-      private final Integer shardId;
+    private Integer shardId;
 
     public Integer shardId() {
         return this.shardId;
@@ -56,7 +56,7 @@ public final class RedisInstanceDetailsResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="sslPort", required=true)
-      private final Integer sslPort;
+    private Integer sslPort;
 
     public Integer sslPort() {
         return this.sslPort;
@@ -67,82 +67,73 @@ public final class RedisInstanceDetailsResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="zone", required=true)
-      private final String zone;
+    private String zone;
 
     public String zone() {
         return this.zone;
     }
 
-    public RedisInstanceDetailsResponse(
-        Boolean isMaster,
-        Integer nonSslPort,
-        Integer shardId,
-        Integer sslPort,
-        String zone) {
-        this.isMaster = Objects.requireNonNull(isMaster, "expected parameter 'isMaster' to be non-null");
-        this.nonSslPort = Objects.requireNonNull(nonSslPort, "expected parameter 'nonSslPort' to be non-null");
-        this.shardId = Objects.requireNonNull(shardId, "expected parameter 'shardId' to be non-null");
-        this.sslPort = Objects.requireNonNull(sslPort, "expected parameter 'sslPort' to be non-null");
-        this.zone = Objects.requireNonNull(zone, "expected parameter 'zone' to be non-null");
-    }
+    private RedisInstanceDetailsResponse() {}
 
-    private RedisInstanceDetailsResponse() {
-        this.isMaster = null;
-        this.nonSslPort = null;
-        this.shardId = null;
-        this.sslPort = null;
-        this.zone = null;
+    private RedisInstanceDetailsResponse(RedisInstanceDetailsResponse $) {
+        this.isMaster = $.isMaster;
+        this.nonSslPort = $.nonSslPort;
+        this.shardId = $.shardId;
+        this.sslPort = $.sslPort;
+        this.zone = $.zone;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RedisInstanceDetailsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Boolean isMaster;
-        private Integer nonSslPort;
-        private Integer shardId;
-        private Integer sslPort;
-        private String zone;
+        private RedisInstanceDetailsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new RedisInstanceDetailsResponse();
         }
 
         public Builder(RedisInstanceDetailsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.isMaster = defaults.isMaster;
-    	      this.nonSslPort = defaults.nonSslPort;
-    	      this.shardId = defaults.shardId;
-    	      this.sslPort = defaults.sslPort;
-    	      this.zone = defaults.zone;
+            $ = new RedisInstanceDetailsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder isMaster(Boolean isMaster) {
-            this.isMaster = Objects.requireNonNull(isMaster);
+            $.isMaster = isMaster;
             return this;
         }
+
         public Builder nonSslPort(Integer nonSslPort) {
-            this.nonSslPort = Objects.requireNonNull(nonSslPort);
+            $.nonSslPort = nonSslPort;
             return this;
         }
+
         public Builder shardId(Integer shardId) {
-            this.shardId = Objects.requireNonNull(shardId);
+            $.shardId = shardId;
             return this;
         }
+
         public Builder sslPort(Integer sslPort) {
-            this.sslPort = Objects.requireNonNull(sslPort);
+            $.sslPort = sslPort;
             return this;
         }
+
         public Builder zone(String zone) {
-            this.zone = Objects.requireNonNull(zone);
+            $.zone = zone;
             return this;
-        }        public RedisInstanceDetailsResponse build() {
-            return new RedisInstanceDetailsResponse(isMaster, nonSslPort, shardId, sslPort, zone);
+        }
+
+        public RedisInstanceDetailsResponse build() {
+            $.isMaster = Objects.requireNonNull($.isMaster, "expected parameter 'isMaster' to be non-null");
+            $.nonSslPort = Objects.requireNonNull($.nonSslPort, "expected parameter 'nonSslPort' to be non-null");
+            $.shardId = Objects.requireNonNull($.shardId, "expected parameter 'shardId' to be non-null");
+            $.sslPort = Objects.requireNonNull($.sslPort, "expected parameter 'sslPort' to be non-null");
+            $.zone = Objects.requireNonNull($.zone, "expected parameter 'zone' to be non-null");
+            return $;
         }
     }
+
 }

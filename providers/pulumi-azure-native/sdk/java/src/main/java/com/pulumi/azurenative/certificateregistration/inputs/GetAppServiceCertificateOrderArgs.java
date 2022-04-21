@@ -17,7 +17,7 @@ public final class GetAppServiceCertificateOrderArgs extends com.pulumi.resource
      * 
      */
     @Import(name="certificateOrderName", required=true)
-      private final String certificateOrderName;
+    private String certificateOrderName;
 
     public String certificateOrderName() {
         return this.certificateOrderName;
@@ -28,55 +28,52 @@ public final class GetAppServiceCertificateOrderArgs extends com.pulumi.resource
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public GetAppServiceCertificateOrderArgs(
-        String certificateOrderName,
-        String resourceGroupName) {
-        this.certificateOrderName = Objects.requireNonNull(certificateOrderName, "expected parameter 'certificateOrderName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private GetAppServiceCertificateOrderArgs() {}
 
-    private GetAppServiceCertificateOrderArgs() {
-        this.certificateOrderName = null;
-        this.resourceGroupName = null;
+    private GetAppServiceCertificateOrderArgs(GetAppServiceCertificateOrderArgs $) {
+        this.certificateOrderName = $.certificateOrderName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetAppServiceCertificateOrderArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String certificateOrderName;
-        private String resourceGroupName;
+        private GetAppServiceCertificateOrderArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetAppServiceCertificateOrderArgs();
         }
 
         public Builder(GetAppServiceCertificateOrderArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.certificateOrderName = defaults.certificateOrderName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new GetAppServiceCertificateOrderArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder certificateOrderName(String certificateOrderName) {
-            this.certificateOrderName = Objects.requireNonNull(certificateOrderName);
+            $.certificateOrderName = certificateOrderName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public GetAppServiceCertificateOrderArgs build() {
-            return new GetAppServiceCertificateOrderArgs(certificateOrderName, resourceGroupName);
+        }
+
+        public GetAppServiceCertificateOrderArgs build() {
+            $.certificateOrderName = Objects.requireNonNull($.certificateOrderName, "expected parameter 'certificateOrderName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

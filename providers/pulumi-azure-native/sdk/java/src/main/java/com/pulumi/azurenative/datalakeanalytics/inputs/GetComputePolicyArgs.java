@@ -17,7 +17,7 @@ public final class GetComputePolicyArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="accountName", required=true)
-      private final String accountName;
+    private String accountName;
 
     public String accountName() {
         return this.accountName;
@@ -28,7 +28,7 @@ public final class GetComputePolicyArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="computePolicyName", required=true)
-      private final String computePolicyName;
+    private String computePolicyName;
 
     public String computePolicyName() {
         return this.computePolicyName;
@@ -39,64 +39,59 @@ public final class GetComputePolicyArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public GetComputePolicyArgs(
-        String accountName,
-        String computePolicyName,
-        String resourceGroupName) {
-        this.accountName = Objects.requireNonNull(accountName, "expected parameter 'accountName' to be non-null");
-        this.computePolicyName = Objects.requireNonNull(computePolicyName, "expected parameter 'computePolicyName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private GetComputePolicyArgs() {}
 
-    private GetComputePolicyArgs() {
-        this.accountName = null;
-        this.computePolicyName = null;
-        this.resourceGroupName = null;
+    private GetComputePolicyArgs(GetComputePolicyArgs $) {
+        this.accountName = $.accountName;
+        this.computePolicyName = $.computePolicyName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetComputePolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String accountName;
-        private String computePolicyName;
-        private String resourceGroupName;
+        private GetComputePolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetComputePolicyArgs();
         }
 
         public Builder(GetComputePolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accountName = defaults.accountName;
-    	      this.computePolicyName = defaults.computePolicyName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new GetComputePolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder accountName(String accountName) {
-            this.accountName = Objects.requireNonNull(accountName);
+            $.accountName = accountName;
             return this;
         }
+
         public Builder computePolicyName(String computePolicyName) {
-            this.computePolicyName = Objects.requireNonNull(computePolicyName);
+            $.computePolicyName = computePolicyName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public GetComputePolicyArgs build() {
-            return new GetComputePolicyArgs(accountName, computePolicyName, resourceGroupName);
+        }
+
+        public GetComputePolicyArgs build() {
+            $.accountName = Objects.requireNonNull($.accountName, "expected parameter 'accountName' to be non-null");
+            $.computePolicyName = Objects.requireNonNull($.computePolicyName, "expected parameter 'computePolicyName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

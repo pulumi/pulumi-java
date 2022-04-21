@@ -5,9 +5,9 @@ package com.pulumi.azurenative.media.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class RectangleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="height")
-      private final @Nullable Output<String> height;
+    private @Nullable Output<String> height;
 
-    public Output<String> height() {
-        return this.height == null ? Codegen.empty() : this.height;
+    public Optional<Output<String>> height() {
+        return Optional.ofNullable(this.height);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class RectangleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="left")
-      private final @Nullable Output<String> left;
+    private @Nullable Output<String> left;
 
-    public Output<String> left() {
-        return this.left == null ? Codegen.empty() : this.left;
+    public Optional<Output<String>> left() {
+        return Optional.ofNullable(this.left);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class RectangleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="top")
-      private final @Nullable Output<String> top;
+    private @Nullable Output<String> top;
 
-    public Output<String> top() {
-        return this.top == null ? Codegen.empty() : this.top;
+    public Optional<Output<String>> top() {
+        return Optional.ofNullable(this.top);
     }
 
     /**
@@ -57,89 +57,78 @@ public final class RectangleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="width")
-      private final @Nullable Output<String> width;
+    private @Nullable Output<String> width;
 
-    public Output<String> width() {
-        return this.width == null ? Codegen.empty() : this.width;
+    public Optional<Output<String>> width() {
+        return Optional.ofNullable(this.width);
     }
 
-    public RectangleArgs(
-        @Nullable Output<String> height,
-        @Nullable Output<String> left,
-        @Nullable Output<String> top,
-        @Nullable Output<String> width) {
-        this.height = height;
-        this.left = left;
-        this.top = top;
-        this.width = width;
-    }
+    private RectangleArgs() {}
 
-    private RectangleArgs() {
-        this.height = Codegen.empty();
-        this.left = Codegen.empty();
-        this.top = Codegen.empty();
-        this.width = Codegen.empty();
+    private RectangleArgs(RectangleArgs $) {
+        this.height = $.height;
+        this.left = $.left;
+        this.top = $.top;
+        this.width = $.width;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RectangleArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> height;
-        private @Nullable Output<String> left;
-        private @Nullable Output<String> top;
-        private @Nullable Output<String> width;
+        private RectangleArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RectangleArgs();
         }
 
         public Builder(RectangleArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.height = defaults.height;
-    	      this.left = defaults.left;
-    	      this.top = defaults.top;
-    	      this.width = defaults.width;
+            $ = new RectangleArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder height(@Nullable Output<String> height) {
-            this.height = height;
+            $.height = height;
             return this;
         }
-        public Builder height(@Nullable String height) {
-            this.height = Codegen.ofNullable(height);
-            return this;
+
+        public Builder height(String height) {
+            return height(Output.of(height));
         }
+
         public Builder left(@Nullable Output<String> left) {
-            this.left = left;
+            $.left = left;
             return this;
         }
-        public Builder left(@Nullable String left) {
-            this.left = Codegen.ofNullable(left);
-            return this;
+
+        public Builder left(String left) {
+            return left(Output.of(left));
         }
+
         public Builder top(@Nullable Output<String> top) {
-            this.top = top;
+            $.top = top;
             return this;
         }
-        public Builder top(@Nullable String top) {
-            this.top = Codegen.ofNullable(top);
-            return this;
+
+        public Builder top(String top) {
+            return top(Output.of(top));
         }
+
         public Builder width(@Nullable Output<String> width) {
-            this.width = width;
+            $.width = width;
             return this;
         }
-        public Builder width(@Nullable String width) {
-            this.width = Codegen.ofNullable(width);
-            return this;
-        }        public RectangleArgs build() {
-            return new RectangleArgs(height, left, top, width);
+
+        public Builder width(String width) {
+            return width(Output.of(width));
+        }
+
+        public RectangleArgs build() {
+            return $;
         }
     }
+
 }

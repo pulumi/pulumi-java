@@ -5,7 +5,6 @@ package com.pulumi.gcp.compute.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,49 +18,49 @@ public final class PacketMirroringMirroredResourcesSubnetworkGetArgs extends com
      * 
      */
     @Import(name="url", required=true)
-      private final Output<String> url;
+    private Output<String> url;
 
     public Output<String> url() {
         return this.url;
     }
 
-    public PacketMirroringMirroredResourcesSubnetworkGetArgs(Output<String> url) {
-        this.url = Objects.requireNonNull(url, "expected parameter 'url' to be non-null");
-    }
+    private PacketMirroringMirroredResourcesSubnetworkGetArgs() {}
 
-    private PacketMirroringMirroredResourcesSubnetworkGetArgs() {
-        this.url = Codegen.empty();
+    private PacketMirroringMirroredResourcesSubnetworkGetArgs(PacketMirroringMirroredResourcesSubnetworkGetArgs $) {
+        this.url = $.url;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PacketMirroringMirroredResourcesSubnetworkGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> url;
+        private PacketMirroringMirroredResourcesSubnetworkGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PacketMirroringMirroredResourcesSubnetworkGetArgs();
         }
 
         public Builder(PacketMirroringMirroredResourcesSubnetworkGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.url = defaults.url;
+            $ = new PacketMirroringMirroredResourcesSubnetworkGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder url(Output<String> url) {
-            this.url = Objects.requireNonNull(url);
+            $.url = url;
             return this;
         }
+
         public Builder url(String url) {
-            this.url = Output.of(Objects.requireNonNull(url));
-            return this;
-        }        public PacketMirroringMirroredResourcesSubnetworkGetArgs build() {
-            return new PacketMirroringMirroredResourcesSubnetworkGetArgs(url);
+            return url(Output.of(url));
+        }
+
+        public PacketMirroringMirroredResourcesSubnetworkGetArgs build() {
+            $.url = Objects.requireNonNull($.url, "expected parameter 'url' to be non-null");
+            return $;
         }
     }
+
 }

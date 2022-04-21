@@ -25,7 +25,7 @@ public final class EnterpriseChannelPropertiesResponse extends com.pulumi.resour
      * 
      */
     @Import(name="nodes", required=true)
-      private final List<EnterpriseChannelNodeResponse> nodes;
+    private List<EnterpriseChannelNodeResponse> nodes;
 
     public List<EnterpriseChannelNodeResponse> nodes() {
         return this.nodes;
@@ -36,58 +36,55 @@ public final class EnterpriseChannelPropertiesResponse extends com.pulumi.resour
      * 
      */
     @Import(name="state")
-      private final @Nullable String state;
+    private @Nullable String state;
 
     public Optional<String> state() {
-        return this.state == null ? Optional.empty() : Optional.ofNullable(this.state);
+        return Optional.ofNullable(this.state);
     }
 
-    public EnterpriseChannelPropertiesResponse(
-        List<EnterpriseChannelNodeResponse> nodes,
-        @Nullable String state) {
-        this.nodes = Objects.requireNonNull(nodes, "expected parameter 'nodes' to be non-null");
-        this.state = state;
-    }
+    private EnterpriseChannelPropertiesResponse() {}
 
-    private EnterpriseChannelPropertiesResponse() {
-        this.nodes = List.of();
-        this.state = null;
+    private EnterpriseChannelPropertiesResponse(EnterpriseChannelPropertiesResponse $) {
+        this.nodes = $.nodes;
+        this.state = $.state;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EnterpriseChannelPropertiesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<EnterpriseChannelNodeResponse> nodes;
-        private @Nullable String state;
+        private EnterpriseChannelPropertiesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new EnterpriseChannelPropertiesResponse();
         }
 
         public Builder(EnterpriseChannelPropertiesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.nodes = defaults.nodes;
-    	      this.state = defaults.state;
+            $ = new EnterpriseChannelPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder nodes(List<EnterpriseChannelNodeResponse> nodes) {
-            this.nodes = Objects.requireNonNull(nodes);
+            $.nodes = nodes;
             return this;
         }
+
         public Builder nodes(EnterpriseChannelNodeResponse... nodes) {
             return nodes(List.of(nodes));
         }
+
         public Builder state(@Nullable String state) {
-            this.state = state;
+            $.state = state;
             return this;
-        }        public EnterpriseChannelPropertiesResponse build() {
-            return new EnterpriseChannelPropertiesResponse(nodes, state);
+        }
+
+        public EnterpriseChannelPropertiesResponse build() {
+            $.nodes = Objects.requireNonNull($.nodes, "expected parameter 'nodes' to be non-null");
+            return $;
         }
     }
+
 }

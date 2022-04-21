@@ -5,7 +5,6 @@ package com.pulumi.docker.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -15,70 +14,67 @@ public final class NetworkLabelGetArgs extends com.pulumi.resources.ResourceArgs
     public static final NetworkLabelGetArgs Empty = new NetworkLabelGetArgs();
 
     @Import(name="label", required=true)
-      private final Output<String> label;
+    private Output<String> label;
 
     public Output<String> label() {
         return this.label;
     }
 
     @Import(name="value", required=true)
-      private final Output<String> value;
+    private Output<String> value;
 
     public Output<String> value() {
         return this.value;
     }
 
-    public NetworkLabelGetArgs(
-        Output<String> label,
-        Output<String> value) {
-        this.label = Objects.requireNonNull(label, "expected parameter 'label' to be non-null");
-        this.value = Objects.requireNonNull(value, "expected parameter 'value' to be non-null");
-    }
+    private NetworkLabelGetArgs() {}
 
-    private NetworkLabelGetArgs() {
-        this.label = Codegen.empty();
-        this.value = Codegen.empty();
+    private NetworkLabelGetArgs(NetworkLabelGetArgs $) {
+        this.label = $.label;
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NetworkLabelGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> label;
-        private Output<String> value;
+        private NetworkLabelGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new NetworkLabelGetArgs();
         }
 
         public Builder(NetworkLabelGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.label = defaults.label;
-    	      this.value = defaults.value;
+            $ = new NetworkLabelGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder label(Output<String> label) {
-            this.label = Objects.requireNonNull(label);
+            $.label = label;
             return this;
         }
+
         public Builder label(String label) {
-            this.label = Output.of(Objects.requireNonNull(label));
-            return this;
+            return label(Output.of(label));
         }
+
         public Builder value(Output<String> value) {
-            this.value = Objects.requireNonNull(value);
+            $.value = value;
             return this;
         }
+
         public Builder value(String value) {
-            this.value = Output.of(Objects.requireNonNull(value));
-            return this;
-        }        public NetworkLabelGetArgs build() {
-            return new NetworkLabelGetArgs(label, value);
+            return value(Output.of(value));
+        }
+
+        public NetworkLabelGetArgs build() {
+            $.label = Objects.requireNonNull($.label, "expected parameter 'label' to be non-null");
+            $.value = Objects.requireNonNull($.value, "expected parameter 'value' to be non-null");
+            return $;
         }
     }
+
 }

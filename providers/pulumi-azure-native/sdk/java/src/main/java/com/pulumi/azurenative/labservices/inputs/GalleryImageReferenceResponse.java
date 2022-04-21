@@ -23,10 +23,10 @@ public final class GalleryImageReferenceResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="offer")
-      private final @Nullable String offer;
+    private @Nullable String offer;
 
     public Optional<String> offer() {
-        return this.offer == null ? Optional.empty() : Optional.ofNullable(this.offer);
+        return Optional.ofNullable(this.offer);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class GalleryImageReferenceResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="osType")
-      private final @Nullable String osType;
+    private @Nullable String osType;
 
     public Optional<String> osType() {
-        return this.osType == null ? Optional.empty() : Optional.ofNullable(this.osType);
+        return Optional.ofNullable(this.osType);
     }
 
     /**
@@ -45,10 +45,10 @@ public final class GalleryImageReferenceResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="publisher")
-      private final @Nullable String publisher;
+    private @Nullable String publisher;
 
     public Optional<String> publisher() {
-        return this.publisher == null ? Optional.empty() : Optional.ofNullable(this.publisher);
+        return Optional.ofNullable(this.publisher);
     }
 
     /**
@@ -56,10 +56,10 @@ public final class GalleryImageReferenceResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="sku")
-      private final @Nullable String sku;
+    private @Nullable String sku;
 
     public Optional<String> sku() {
-        return this.sku == null ? Optional.empty() : Optional.ofNullable(this.sku);
+        return Optional.ofNullable(this.sku);
     }
 
     /**
@@ -67,82 +67,68 @@ public final class GalleryImageReferenceResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="version")
-      private final @Nullable String version;
+    private @Nullable String version;
 
     public Optional<String> version() {
-        return this.version == null ? Optional.empty() : Optional.ofNullable(this.version);
+        return Optional.ofNullable(this.version);
     }
 
-    public GalleryImageReferenceResponse(
-        @Nullable String offer,
-        @Nullable String osType,
-        @Nullable String publisher,
-        @Nullable String sku,
-        @Nullable String version) {
-        this.offer = offer;
-        this.osType = osType;
-        this.publisher = publisher;
-        this.sku = sku;
-        this.version = version;
-    }
+    private GalleryImageReferenceResponse() {}
 
-    private GalleryImageReferenceResponse() {
-        this.offer = null;
-        this.osType = null;
-        this.publisher = null;
-        this.sku = null;
-        this.version = null;
+    private GalleryImageReferenceResponse(GalleryImageReferenceResponse $) {
+        this.offer = $.offer;
+        this.osType = $.osType;
+        this.publisher = $.publisher;
+        this.sku = $.sku;
+        this.version = $.version;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GalleryImageReferenceResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String offer;
-        private @Nullable String osType;
-        private @Nullable String publisher;
-        private @Nullable String sku;
-        private @Nullable String version;
+        private GalleryImageReferenceResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GalleryImageReferenceResponse();
         }
 
         public Builder(GalleryImageReferenceResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.offer = defaults.offer;
-    	      this.osType = defaults.osType;
-    	      this.publisher = defaults.publisher;
-    	      this.sku = defaults.sku;
-    	      this.version = defaults.version;
+            $ = new GalleryImageReferenceResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder offer(@Nullable String offer) {
-            this.offer = offer;
+            $.offer = offer;
             return this;
         }
+
         public Builder osType(@Nullable String osType) {
-            this.osType = osType;
+            $.osType = osType;
             return this;
         }
+
         public Builder publisher(@Nullable String publisher) {
-            this.publisher = publisher;
+            $.publisher = publisher;
             return this;
         }
+
         public Builder sku(@Nullable String sku) {
-            this.sku = sku;
+            $.sku = sku;
             return this;
         }
+
         public Builder version(@Nullable String version) {
-            this.version = version;
+            $.version = version;
             return this;
-        }        public GalleryImageReferenceResponse build() {
-            return new GalleryImageReferenceResponse(offer, osType, publisher, sku, version);
+        }
+
+        public GalleryImageReferenceResponse build() {
+            return $;
         }
     }
+
 }

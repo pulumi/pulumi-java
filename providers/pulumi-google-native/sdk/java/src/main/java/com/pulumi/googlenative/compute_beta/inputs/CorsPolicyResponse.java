@@ -24,7 +24,7 @@ public final class CorsPolicyResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="allowCredentials", required=true)
-      private final Boolean allowCredentials;
+    private Boolean allowCredentials;
 
     public Boolean allowCredentials() {
         return this.allowCredentials;
@@ -35,7 +35,7 @@ public final class CorsPolicyResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="allowHeaders", required=true)
-      private final List<String> allowHeaders;
+    private List<String> allowHeaders;
 
     public List<String> allowHeaders() {
         return this.allowHeaders;
@@ -46,7 +46,7 @@ public final class CorsPolicyResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="allowMethods", required=true)
-      private final List<String> allowMethods;
+    private List<String> allowMethods;
 
     public List<String> allowMethods() {
         return this.allowMethods;
@@ -57,7 +57,7 @@ public final class CorsPolicyResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="allowOriginRegexes", required=true)
-      private final List<String> allowOriginRegexes;
+    private List<String> allowOriginRegexes;
 
     public List<String> allowOriginRegexes() {
         return this.allowOriginRegexes;
@@ -68,7 +68,7 @@ public final class CorsPolicyResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="allowOrigins", required=true)
-      private final List<String> allowOrigins;
+    private List<String> allowOrigins;
 
     public List<String> allowOrigins() {
         return this.allowOrigins;
@@ -79,7 +79,7 @@ public final class CorsPolicyResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="disabled", required=true)
-      private final Boolean disabled;
+    private Boolean disabled;
 
     public Boolean disabled() {
         return this.disabled;
@@ -90,7 +90,7 @@ public final class CorsPolicyResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="exposeHeaders", required=true)
-      private final List<String> exposeHeaders;
+    private List<String> exposeHeaders;
 
     public List<String> exposeHeaders() {
         return this.exposeHeaders;
@@ -101,124 +101,114 @@ public final class CorsPolicyResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="maxAge", required=true)
-      private final Integer maxAge;
+    private Integer maxAge;
 
     public Integer maxAge() {
         return this.maxAge;
     }
 
-    public CorsPolicyResponse(
-        Boolean allowCredentials,
-        List<String> allowHeaders,
-        List<String> allowMethods,
-        List<String> allowOriginRegexes,
-        List<String> allowOrigins,
-        Boolean disabled,
-        List<String> exposeHeaders,
-        Integer maxAge) {
-        this.allowCredentials = Objects.requireNonNull(allowCredentials, "expected parameter 'allowCredentials' to be non-null");
-        this.allowHeaders = Objects.requireNonNull(allowHeaders, "expected parameter 'allowHeaders' to be non-null");
-        this.allowMethods = Objects.requireNonNull(allowMethods, "expected parameter 'allowMethods' to be non-null");
-        this.allowOriginRegexes = Objects.requireNonNull(allowOriginRegexes, "expected parameter 'allowOriginRegexes' to be non-null");
-        this.allowOrigins = Objects.requireNonNull(allowOrigins, "expected parameter 'allowOrigins' to be non-null");
-        this.disabled = Objects.requireNonNull(disabled, "expected parameter 'disabled' to be non-null");
-        this.exposeHeaders = Objects.requireNonNull(exposeHeaders, "expected parameter 'exposeHeaders' to be non-null");
-        this.maxAge = Objects.requireNonNull(maxAge, "expected parameter 'maxAge' to be non-null");
-    }
+    private CorsPolicyResponse() {}
 
-    private CorsPolicyResponse() {
-        this.allowCredentials = null;
-        this.allowHeaders = List.of();
-        this.allowMethods = List.of();
-        this.allowOriginRegexes = List.of();
-        this.allowOrigins = List.of();
-        this.disabled = null;
-        this.exposeHeaders = List.of();
-        this.maxAge = null;
+    private CorsPolicyResponse(CorsPolicyResponse $) {
+        this.allowCredentials = $.allowCredentials;
+        this.allowHeaders = $.allowHeaders;
+        this.allowMethods = $.allowMethods;
+        this.allowOriginRegexes = $.allowOriginRegexes;
+        this.allowOrigins = $.allowOrigins;
+        this.disabled = $.disabled;
+        this.exposeHeaders = $.exposeHeaders;
+        this.maxAge = $.maxAge;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CorsPolicyResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Boolean allowCredentials;
-        private List<String> allowHeaders;
-        private List<String> allowMethods;
-        private List<String> allowOriginRegexes;
-        private List<String> allowOrigins;
-        private Boolean disabled;
-        private List<String> exposeHeaders;
-        private Integer maxAge;
+        private CorsPolicyResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new CorsPolicyResponse();
         }
 
         public Builder(CorsPolicyResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.allowCredentials = defaults.allowCredentials;
-    	      this.allowHeaders = defaults.allowHeaders;
-    	      this.allowMethods = defaults.allowMethods;
-    	      this.allowOriginRegexes = defaults.allowOriginRegexes;
-    	      this.allowOrigins = defaults.allowOrigins;
-    	      this.disabled = defaults.disabled;
-    	      this.exposeHeaders = defaults.exposeHeaders;
-    	      this.maxAge = defaults.maxAge;
+            $ = new CorsPolicyResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder allowCredentials(Boolean allowCredentials) {
-            this.allowCredentials = Objects.requireNonNull(allowCredentials);
+            $.allowCredentials = allowCredentials;
             return this;
         }
+
         public Builder allowHeaders(List<String> allowHeaders) {
-            this.allowHeaders = Objects.requireNonNull(allowHeaders);
+            $.allowHeaders = allowHeaders;
             return this;
         }
+
         public Builder allowHeaders(String... allowHeaders) {
             return allowHeaders(List.of(allowHeaders));
         }
+
         public Builder allowMethods(List<String> allowMethods) {
-            this.allowMethods = Objects.requireNonNull(allowMethods);
+            $.allowMethods = allowMethods;
             return this;
         }
+
         public Builder allowMethods(String... allowMethods) {
             return allowMethods(List.of(allowMethods));
         }
+
         public Builder allowOriginRegexes(List<String> allowOriginRegexes) {
-            this.allowOriginRegexes = Objects.requireNonNull(allowOriginRegexes);
+            $.allowOriginRegexes = allowOriginRegexes;
             return this;
         }
+
         public Builder allowOriginRegexes(String... allowOriginRegexes) {
             return allowOriginRegexes(List.of(allowOriginRegexes));
         }
+
         public Builder allowOrigins(List<String> allowOrigins) {
-            this.allowOrigins = Objects.requireNonNull(allowOrigins);
+            $.allowOrigins = allowOrigins;
             return this;
         }
+
         public Builder allowOrigins(String... allowOrigins) {
             return allowOrigins(List.of(allowOrigins));
         }
+
         public Builder disabled(Boolean disabled) {
-            this.disabled = Objects.requireNonNull(disabled);
+            $.disabled = disabled;
             return this;
         }
+
         public Builder exposeHeaders(List<String> exposeHeaders) {
-            this.exposeHeaders = Objects.requireNonNull(exposeHeaders);
+            $.exposeHeaders = exposeHeaders;
             return this;
         }
+
         public Builder exposeHeaders(String... exposeHeaders) {
             return exposeHeaders(List.of(exposeHeaders));
         }
+
         public Builder maxAge(Integer maxAge) {
-            this.maxAge = Objects.requireNonNull(maxAge);
+            $.maxAge = maxAge;
             return this;
-        }        public CorsPolicyResponse build() {
-            return new CorsPolicyResponse(allowCredentials, allowHeaders, allowMethods, allowOriginRegexes, allowOrigins, disabled, exposeHeaders, maxAge);
+        }
+
+        public CorsPolicyResponse build() {
+            $.allowCredentials = Objects.requireNonNull($.allowCredentials, "expected parameter 'allowCredentials' to be non-null");
+            $.allowHeaders = Objects.requireNonNull($.allowHeaders, "expected parameter 'allowHeaders' to be non-null");
+            $.allowMethods = Objects.requireNonNull($.allowMethods, "expected parameter 'allowMethods' to be non-null");
+            $.allowOriginRegexes = Objects.requireNonNull($.allowOriginRegexes, "expected parameter 'allowOriginRegexes' to be non-null");
+            $.allowOrigins = Objects.requireNonNull($.allowOrigins, "expected parameter 'allowOrigins' to be non-null");
+            $.disabled = Objects.requireNonNull($.disabled, "expected parameter 'disabled' to be non-null");
+            $.exposeHeaders = Objects.requireNonNull($.exposeHeaders, "expected parameter 'exposeHeaders' to be non-null");
+            $.maxAge = Objects.requireNonNull($.maxAge, "expected parameter 'maxAge' to be non-null");
+            return $;
         }
     }
+
 }

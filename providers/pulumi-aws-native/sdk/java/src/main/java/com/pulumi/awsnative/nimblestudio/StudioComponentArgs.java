@@ -11,10 +11,10 @@ import com.pulumi.awsnative.nimblestudio.inputs.StudioComponentScriptParameterKe
 import com.pulumi.awsnative.nimblestudio.inputs.StudioComponentTagsArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,10 @@ public final class StudioComponentArgs extends com.pulumi.resources.ResourceArgs
     public static final StudioComponentArgs Empty = new StudioComponentArgs();
 
     @Import(name="configuration")
-      private final @Nullable Output<StudioComponentConfigurationArgs> configuration;
+    private @Nullable Output<StudioComponentConfigurationArgs> configuration;
 
-    public Output<StudioComponentConfigurationArgs> configuration() {
-        return this.configuration == null ? Codegen.empty() : this.configuration;
+    public Optional<Output<StudioComponentConfigurationArgs>> configuration() {
+        return Optional.ofNullable(this.configuration);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class StudioComponentArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -45,10 +45,10 @@ public final class StudioComponentArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="ec2SecurityGroupIds")
-      private final @Nullable Output<List<String>> ec2SecurityGroupIds;
+    private @Nullable Output<List<String>> ec2SecurityGroupIds;
 
-    public Output<List<String>> ec2SecurityGroupIds() {
-        return this.ec2SecurityGroupIds == null ? Codegen.empty() : this.ec2SecurityGroupIds;
+    public Optional<Output<List<String>>> ec2SecurityGroupIds() {
+        return Optional.ofNullable(this.ec2SecurityGroupIds);
     }
 
     /**
@@ -56,10 +56,10 @@ public final class StudioComponentArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="initializationScripts")
-      private final @Nullable Output<List<StudioComponentInitializationScriptArgs>> initializationScripts;
+    private @Nullable Output<List<StudioComponentInitializationScriptArgs>> initializationScripts;
 
-    public Output<List<StudioComponentInitializationScriptArgs>> initializationScripts() {
-        return this.initializationScripts == null ? Codegen.empty() : this.initializationScripts;
+    public Optional<Output<List<StudioComponentInitializationScriptArgs>>> initializationScripts() {
+        return Optional.ofNullable(this.initializationScripts);
     }
 
     /**
@@ -67,10 +67,10 @@ public final class StudioComponentArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -78,10 +78,10 @@ public final class StudioComponentArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="scriptParameters")
-      private final @Nullable Output<List<StudioComponentScriptParameterKeyValueArgs>> scriptParameters;
+    private @Nullable Output<List<StudioComponentScriptParameterKeyValueArgs>> scriptParameters;
 
-    public Output<List<StudioComponentScriptParameterKeyValueArgs>> scriptParameters() {
-        return this.scriptParameters == null ? Codegen.empty() : this.scriptParameters;
+    public Optional<Output<List<StudioComponentScriptParameterKeyValueArgs>>> scriptParameters() {
+        return Optional.ofNullable(this.scriptParameters);
     }
 
     /**
@@ -89,197 +89,173 @@ public final class StudioComponentArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="studioId", required=true)
-      private final Output<String> studioId;
+    private Output<String> studioId;
 
     public Output<String> studioId() {
         return this.studioId;
     }
 
     @Import(name="subtype")
-      private final @Nullable Output<StudioComponentSubtype> subtype;
+    private @Nullable Output<StudioComponentSubtype> subtype;
 
-    public Output<StudioComponentSubtype> subtype() {
-        return this.subtype == null ? Codegen.empty() : this.subtype;
+    public Optional<Output<StudioComponentSubtype>> subtype() {
+        return Optional.ofNullable(this.subtype);
     }
 
     @Import(name="tags")
-      private final @Nullable Output<StudioComponentTagsArgs> tags;
+    private @Nullable Output<StudioComponentTagsArgs> tags;
 
-    public Output<StudioComponentTagsArgs> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<StudioComponentTagsArgs>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     @Import(name="type", required=true)
-      private final Output<StudioComponentType> type;
+    private Output<StudioComponentType> type;
 
     public Output<StudioComponentType> type() {
         return this.type;
     }
 
-    public StudioComponentArgs(
-        @Nullable Output<StudioComponentConfigurationArgs> configuration,
-        @Nullable Output<String> description,
-        @Nullable Output<List<String>> ec2SecurityGroupIds,
-        @Nullable Output<List<StudioComponentInitializationScriptArgs>> initializationScripts,
-        @Nullable Output<String> name,
-        @Nullable Output<List<StudioComponentScriptParameterKeyValueArgs>> scriptParameters,
-        Output<String> studioId,
-        @Nullable Output<StudioComponentSubtype> subtype,
-        @Nullable Output<StudioComponentTagsArgs> tags,
-        Output<StudioComponentType> type) {
-        this.configuration = configuration;
-        this.description = description;
-        this.ec2SecurityGroupIds = ec2SecurityGroupIds;
-        this.initializationScripts = initializationScripts;
-        this.name = name;
-        this.scriptParameters = scriptParameters;
-        this.studioId = Objects.requireNonNull(studioId, "expected parameter 'studioId' to be non-null");
-        this.subtype = subtype;
-        this.tags = tags;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private StudioComponentArgs() {}
 
-    private StudioComponentArgs() {
-        this.configuration = Codegen.empty();
-        this.description = Codegen.empty();
-        this.ec2SecurityGroupIds = Codegen.empty();
-        this.initializationScripts = Codegen.empty();
-        this.name = Codegen.empty();
-        this.scriptParameters = Codegen.empty();
-        this.studioId = Codegen.empty();
-        this.subtype = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.type = Codegen.empty();
+    private StudioComponentArgs(StudioComponentArgs $) {
+        this.configuration = $.configuration;
+        this.description = $.description;
+        this.ec2SecurityGroupIds = $.ec2SecurityGroupIds;
+        this.initializationScripts = $.initializationScripts;
+        this.name = $.name;
+        this.scriptParameters = $.scriptParameters;
+        this.studioId = $.studioId;
+        this.subtype = $.subtype;
+        this.tags = $.tags;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(StudioComponentArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<StudioComponentConfigurationArgs> configuration;
-        private @Nullable Output<String> description;
-        private @Nullable Output<List<String>> ec2SecurityGroupIds;
-        private @Nullable Output<List<StudioComponentInitializationScriptArgs>> initializationScripts;
-        private @Nullable Output<String> name;
-        private @Nullable Output<List<StudioComponentScriptParameterKeyValueArgs>> scriptParameters;
-        private Output<String> studioId;
-        private @Nullable Output<StudioComponentSubtype> subtype;
-        private @Nullable Output<StudioComponentTagsArgs> tags;
-        private Output<StudioComponentType> type;
+        private StudioComponentArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new StudioComponentArgs();
         }
 
         public Builder(StudioComponentArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.configuration = defaults.configuration;
-    	      this.description = defaults.description;
-    	      this.ec2SecurityGroupIds = defaults.ec2SecurityGroupIds;
-    	      this.initializationScripts = defaults.initializationScripts;
-    	      this.name = defaults.name;
-    	      this.scriptParameters = defaults.scriptParameters;
-    	      this.studioId = defaults.studioId;
-    	      this.subtype = defaults.subtype;
-    	      this.tags = defaults.tags;
-    	      this.type = defaults.type;
+            $ = new StudioComponentArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder configuration(@Nullable Output<StudioComponentConfigurationArgs> configuration) {
-            this.configuration = configuration;
+            $.configuration = configuration;
             return this;
         }
-        public Builder configuration(@Nullable StudioComponentConfigurationArgs configuration) {
-            this.configuration = Codegen.ofNullable(configuration);
-            return this;
+
+        public Builder configuration(StudioComponentConfigurationArgs configuration) {
+            return configuration(Output.of(configuration));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder ec2SecurityGroupIds(@Nullable Output<List<String>> ec2SecurityGroupIds) {
-            this.ec2SecurityGroupIds = ec2SecurityGroupIds;
+            $.ec2SecurityGroupIds = ec2SecurityGroupIds;
             return this;
         }
-        public Builder ec2SecurityGroupIds(@Nullable List<String> ec2SecurityGroupIds) {
-            this.ec2SecurityGroupIds = Codegen.ofNullable(ec2SecurityGroupIds);
-            return this;
+
+        public Builder ec2SecurityGroupIds(List<String> ec2SecurityGroupIds) {
+            return ec2SecurityGroupIds(Output.of(ec2SecurityGroupIds));
         }
+
         public Builder ec2SecurityGroupIds(String... ec2SecurityGroupIds) {
             return ec2SecurityGroupIds(List.of(ec2SecurityGroupIds));
         }
+
         public Builder initializationScripts(@Nullable Output<List<StudioComponentInitializationScriptArgs>> initializationScripts) {
-            this.initializationScripts = initializationScripts;
+            $.initializationScripts = initializationScripts;
             return this;
         }
-        public Builder initializationScripts(@Nullable List<StudioComponentInitializationScriptArgs> initializationScripts) {
-            this.initializationScripts = Codegen.ofNullable(initializationScripts);
-            return this;
+
+        public Builder initializationScripts(List<StudioComponentInitializationScriptArgs> initializationScripts) {
+            return initializationScripts(Output.of(initializationScripts));
         }
+
         public Builder initializationScripts(StudioComponentInitializationScriptArgs... initializationScripts) {
             return initializationScripts(List.of(initializationScripts));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder scriptParameters(@Nullable Output<List<StudioComponentScriptParameterKeyValueArgs>> scriptParameters) {
-            this.scriptParameters = scriptParameters;
+            $.scriptParameters = scriptParameters;
             return this;
         }
-        public Builder scriptParameters(@Nullable List<StudioComponentScriptParameterKeyValueArgs> scriptParameters) {
-            this.scriptParameters = Codegen.ofNullable(scriptParameters);
-            return this;
+
+        public Builder scriptParameters(List<StudioComponentScriptParameterKeyValueArgs> scriptParameters) {
+            return scriptParameters(Output.of(scriptParameters));
         }
+
         public Builder scriptParameters(StudioComponentScriptParameterKeyValueArgs... scriptParameters) {
             return scriptParameters(List.of(scriptParameters));
         }
+
         public Builder studioId(Output<String> studioId) {
-            this.studioId = Objects.requireNonNull(studioId);
+            $.studioId = studioId;
             return this;
         }
+
         public Builder studioId(String studioId) {
-            this.studioId = Output.of(Objects.requireNonNull(studioId));
-            return this;
+            return studioId(Output.of(studioId));
         }
+
         public Builder subtype(@Nullable Output<StudioComponentSubtype> subtype) {
-            this.subtype = subtype;
+            $.subtype = subtype;
             return this;
         }
-        public Builder subtype(@Nullable StudioComponentSubtype subtype) {
-            this.subtype = Codegen.ofNullable(subtype);
-            return this;
+
+        public Builder subtype(StudioComponentSubtype subtype) {
+            return subtype(Output.of(subtype));
         }
+
         public Builder tags(@Nullable Output<StudioComponentTagsArgs> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable StudioComponentTagsArgs tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(StudioComponentTagsArgs tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder type(Output<StudioComponentType> type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder type(StudioComponentType type) {
-            this.type = Output.of(Objects.requireNonNull(type));
-            return this;
-        }        public StudioComponentArgs build() {
-            return new StudioComponentArgs(configuration, description, ec2SecurityGroupIds, initializationScripts, name, scriptParameters, studioId, subtype, tags, type);
+            return type(Output.of(type));
+        }
+
+        public StudioComponentArgs build() {
+            $.studioId = Objects.requireNonNull($.studioId, "expected parameter 'studioId' to be non-null");
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

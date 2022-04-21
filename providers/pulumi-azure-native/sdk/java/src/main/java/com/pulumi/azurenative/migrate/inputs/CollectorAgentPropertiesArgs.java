@@ -6,8 +6,8 @@ package com.pulumi.azurenative.migrate.inputs;
 import com.pulumi.azurenative.migrate.inputs.CollectorBodyAgentSpnPropertiesArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -16,49 +16,48 @@ public final class CollectorAgentPropertiesArgs extends com.pulumi.resources.Res
     public static final CollectorAgentPropertiesArgs Empty = new CollectorAgentPropertiesArgs();
 
     @Import(name="spnDetails")
-      private final @Nullable Output<CollectorBodyAgentSpnPropertiesArgs> spnDetails;
+    private @Nullable Output<CollectorBodyAgentSpnPropertiesArgs> spnDetails;
 
-    public Output<CollectorBodyAgentSpnPropertiesArgs> spnDetails() {
-        return this.spnDetails == null ? Codegen.empty() : this.spnDetails;
+    public Optional<Output<CollectorBodyAgentSpnPropertiesArgs>> spnDetails() {
+        return Optional.ofNullable(this.spnDetails);
     }
 
-    public CollectorAgentPropertiesArgs(@Nullable Output<CollectorBodyAgentSpnPropertiesArgs> spnDetails) {
-        this.spnDetails = spnDetails;
-    }
+    private CollectorAgentPropertiesArgs() {}
 
-    private CollectorAgentPropertiesArgs() {
-        this.spnDetails = Codegen.empty();
+    private CollectorAgentPropertiesArgs(CollectorAgentPropertiesArgs $) {
+        this.spnDetails = $.spnDetails;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CollectorAgentPropertiesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<CollectorBodyAgentSpnPropertiesArgs> spnDetails;
+        private CollectorAgentPropertiesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CollectorAgentPropertiesArgs();
         }
 
         public Builder(CollectorAgentPropertiesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.spnDetails = defaults.spnDetails;
+            $ = new CollectorAgentPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder spnDetails(@Nullable Output<CollectorBodyAgentSpnPropertiesArgs> spnDetails) {
-            this.spnDetails = spnDetails;
+            $.spnDetails = spnDetails;
             return this;
         }
-        public Builder spnDetails(@Nullable CollectorBodyAgentSpnPropertiesArgs spnDetails) {
-            this.spnDetails = Codegen.ofNullable(spnDetails);
-            return this;
-        }        public CollectorAgentPropertiesArgs build() {
-            return new CollectorAgentPropertiesArgs(spnDetails);
+
+        public Builder spnDetails(CollectorBodyAgentSpnPropertiesArgs spnDetails) {
+            return spnDetails(Output.of(spnDetails));
+        }
+
+        public CollectorAgentPropertiesArgs build() {
+            return $;
         }
     }
+
 }

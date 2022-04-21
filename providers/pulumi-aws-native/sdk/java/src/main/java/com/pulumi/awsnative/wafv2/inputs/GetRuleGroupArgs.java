@@ -14,78 +14,73 @@ public final class GetRuleGroupArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetRuleGroupArgs Empty = new GetRuleGroupArgs();
 
     @Import(name="id", required=true)
-      private final String id;
+    private String id;
 
     public String id() {
         return this.id;
     }
 
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
     }
 
     @Import(name="scope", required=true)
-      private final RuleGroupScope scope;
+    private RuleGroupScope scope;
 
     public RuleGroupScope scope() {
         return this.scope;
     }
 
-    public GetRuleGroupArgs(
-        String id,
-        String name,
-        RuleGroupScope scope) {
-        this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.scope = Objects.requireNonNull(scope, "expected parameter 'scope' to be non-null");
-    }
+    private GetRuleGroupArgs() {}
 
-    private GetRuleGroupArgs() {
-        this.id = null;
-        this.name = null;
-        this.scope = null;
+    private GetRuleGroupArgs(GetRuleGroupArgs $) {
+        this.id = $.id;
+        this.name = $.name;
+        this.scope = $.scope;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetRuleGroupArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String id;
-        private String name;
-        private RuleGroupScope scope;
+        private GetRuleGroupArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetRuleGroupArgs();
         }
 
         public Builder(GetRuleGroupArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.id = defaults.id;
-    	      this.name = defaults.name;
-    	      this.scope = defaults.scope;
+            $ = new GetRuleGroupArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder id(String id) {
-            this.id = Objects.requireNonNull(id);
+            $.id = id;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder scope(RuleGroupScope scope) {
-            this.scope = Objects.requireNonNull(scope);
+            $.scope = scope;
             return this;
-        }        public GetRuleGroupArgs build() {
-            return new GetRuleGroupArgs(id, name, scope);
+        }
+
+        public GetRuleGroupArgs build() {
+            $.id = Objects.requireNonNull($.id, "expected parameter 'id' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.scope = Objects.requireNonNull($.scope, "expected parameter 'scope' to be non-null");
+            return $;
         }
     }
+
 }

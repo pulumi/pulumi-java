@@ -23,7 +23,7 @@ public final class GoogleCloudDialogflowV2beta1FulfillmentGenericWebServiceRespo
      * 
      */
     @Import(name="isCloudFunction", required=true)
-      private final Boolean isCloudFunction;
+    private Boolean isCloudFunction;
 
     public Boolean isCloudFunction() {
         return this.isCloudFunction;
@@ -34,7 +34,7 @@ public final class GoogleCloudDialogflowV2beta1FulfillmentGenericWebServiceRespo
      * 
      */
     @Import(name="password", required=true)
-      private final String password;
+    private String password;
 
     public String password() {
         return this.password;
@@ -45,7 +45,7 @@ public final class GoogleCloudDialogflowV2beta1FulfillmentGenericWebServiceRespo
      * 
      */
     @Import(name="requestHeaders", required=true)
-      private final Map<String,String> requestHeaders;
+    private Map<String,String> requestHeaders;
 
     public Map<String,String> requestHeaders() {
         return this.requestHeaders;
@@ -56,7 +56,7 @@ public final class GoogleCloudDialogflowV2beta1FulfillmentGenericWebServiceRespo
      * 
      */
     @Import(name="uri", required=true)
-      private final String uri;
+    private String uri;
 
     public String uri() {
         return this.uri;
@@ -67,82 +67,73 @@ public final class GoogleCloudDialogflowV2beta1FulfillmentGenericWebServiceRespo
      * 
      */
     @Import(name="username", required=true)
-      private final String username;
+    private String username;
 
     public String username() {
         return this.username;
     }
 
-    public GoogleCloudDialogflowV2beta1FulfillmentGenericWebServiceResponse(
-        Boolean isCloudFunction,
-        String password,
-        Map<String,String> requestHeaders,
-        String uri,
-        String username) {
-        this.isCloudFunction = Objects.requireNonNull(isCloudFunction, "expected parameter 'isCloudFunction' to be non-null");
-        this.password = Objects.requireNonNull(password, "expected parameter 'password' to be non-null");
-        this.requestHeaders = Objects.requireNonNull(requestHeaders, "expected parameter 'requestHeaders' to be non-null");
-        this.uri = Objects.requireNonNull(uri, "expected parameter 'uri' to be non-null");
-        this.username = Objects.requireNonNull(username, "expected parameter 'username' to be non-null");
-    }
+    private GoogleCloudDialogflowV2beta1FulfillmentGenericWebServiceResponse() {}
 
-    private GoogleCloudDialogflowV2beta1FulfillmentGenericWebServiceResponse() {
-        this.isCloudFunction = null;
-        this.password = null;
-        this.requestHeaders = Map.of();
-        this.uri = null;
-        this.username = null;
+    private GoogleCloudDialogflowV2beta1FulfillmentGenericWebServiceResponse(GoogleCloudDialogflowV2beta1FulfillmentGenericWebServiceResponse $) {
+        this.isCloudFunction = $.isCloudFunction;
+        this.password = $.password;
+        this.requestHeaders = $.requestHeaders;
+        this.uri = $.uri;
+        this.username = $.username;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudDialogflowV2beta1FulfillmentGenericWebServiceResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Boolean isCloudFunction;
-        private String password;
-        private Map<String,String> requestHeaders;
-        private String uri;
-        private String username;
+        private GoogleCloudDialogflowV2beta1FulfillmentGenericWebServiceResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudDialogflowV2beta1FulfillmentGenericWebServiceResponse();
         }
 
         public Builder(GoogleCloudDialogflowV2beta1FulfillmentGenericWebServiceResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.isCloudFunction = defaults.isCloudFunction;
-    	      this.password = defaults.password;
-    	      this.requestHeaders = defaults.requestHeaders;
-    	      this.uri = defaults.uri;
-    	      this.username = defaults.username;
+            $ = new GoogleCloudDialogflowV2beta1FulfillmentGenericWebServiceResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder isCloudFunction(Boolean isCloudFunction) {
-            this.isCloudFunction = Objects.requireNonNull(isCloudFunction);
+            $.isCloudFunction = isCloudFunction;
             return this;
         }
+
         public Builder password(String password) {
-            this.password = Objects.requireNonNull(password);
+            $.password = password;
             return this;
         }
+
         public Builder requestHeaders(Map<String,String> requestHeaders) {
-            this.requestHeaders = Objects.requireNonNull(requestHeaders);
+            $.requestHeaders = requestHeaders;
             return this;
         }
+
         public Builder uri(String uri) {
-            this.uri = Objects.requireNonNull(uri);
+            $.uri = uri;
             return this;
         }
+
         public Builder username(String username) {
-            this.username = Objects.requireNonNull(username);
+            $.username = username;
             return this;
-        }        public GoogleCloudDialogflowV2beta1FulfillmentGenericWebServiceResponse build() {
-            return new GoogleCloudDialogflowV2beta1FulfillmentGenericWebServiceResponse(isCloudFunction, password, requestHeaders, uri, username);
+        }
+
+        public GoogleCloudDialogflowV2beta1FulfillmentGenericWebServiceResponse build() {
+            $.isCloudFunction = Objects.requireNonNull($.isCloudFunction, "expected parameter 'isCloudFunction' to be non-null");
+            $.password = Objects.requireNonNull($.password, "expected parameter 'password' to be non-null");
+            $.requestHeaders = Objects.requireNonNull($.requestHeaders, "expected parameter 'requestHeaders' to be non-null");
+            $.uri = Objects.requireNonNull($.uri, "expected parameter 'uri' to be non-null");
+            $.username = Objects.requireNonNull($.username, "expected parameter 'username' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,9 +5,9 @@ package com.pulumi.gcp.dataloss.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
      * 
      */
     @Import(name="charactersToSkip")
-      private final @Nullable Output<String> charactersToSkip;
+    private @Nullable Output<String> charactersToSkip;
 
-    public Output<String> charactersToSkip() {
-        return this.charactersToSkip == null ? Codegen.empty() : this.charactersToSkip;
+    public Optional<Output<String>> charactersToSkip() {
+        return Optional.ofNullable(this.charactersToSkip);
     }
 
     /**
@@ -32,63 +32,58 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
      * 
      */
     @Import(name="commonCharactersToIgnore")
-      private final @Nullable Output<String> commonCharactersToIgnore;
+    private @Nullable Output<String> commonCharactersToIgnore;
 
-    public Output<String> commonCharactersToIgnore() {
-        return this.commonCharactersToIgnore == null ? Codegen.empty() : this.commonCharactersToIgnore;
+    public Optional<Output<String>> commonCharactersToIgnore() {
+        return Optional.ofNullable(this.commonCharactersToIgnore);
     }
 
-    public PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCharacterMaskConfigCharactersToIgnoreGetArgs(
-        @Nullable Output<String> charactersToSkip,
-        @Nullable Output<String> commonCharactersToIgnore) {
-        this.charactersToSkip = charactersToSkip;
-        this.commonCharactersToIgnore = commonCharactersToIgnore;
-    }
+    private PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCharacterMaskConfigCharactersToIgnoreGetArgs() {}
 
-    private PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCharacterMaskConfigCharactersToIgnoreGetArgs() {
-        this.charactersToSkip = Codegen.empty();
-        this.commonCharactersToIgnore = Codegen.empty();
+    private PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCharacterMaskConfigCharactersToIgnoreGetArgs(PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCharacterMaskConfigCharactersToIgnoreGetArgs $) {
+        this.charactersToSkip = $.charactersToSkip;
+        this.commonCharactersToIgnore = $.commonCharactersToIgnore;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCharacterMaskConfigCharactersToIgnoreGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> charactersToSkip;
-        private @Nullable Output<String> commonCharactersToIgnore;
+        private PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCharacterMaskConfigCharactersToIgnoreGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCharacterMaskConfigCharactersToIgnoreGetArgs();
         }
 
         public Builder(PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCharacterMaskConfigCharactersToIgnoreGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.charactersToSkip = defaults.charactersToSkip;
-    	      this.commonCharactersToIgnore = defaults.commonCharactersToIgnore;
+            $ = new PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCharacterMaskConfigCharactersToIgnoreGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder charactersToSkip(@Nullable Output<String> charactersToSkip) {
-            this.charactersToSkip = charactersToSkip;
+            $.charactersToSkip = charactersToSkip;
             return this;
         }
-        public Builder charactersToSkip(@Nullable String charactersToSkip) {
-            this.charactersToSkip = Codegen.ofNullable(charactersToSkip);
-            return this;
+
+        public Builder charactersToSkip(String charactersToSkip) {
+            return charactersToSkip(Output.of(charactersToSkip));
         }
+
         public Builder commonCharactersToIgnore(@Nullable Output<String> commonCharactersToIgnore) {
-            this.commonCharactersToIgnore = commonCharactersToIgnore;
+            $.commonCharactersToIgnore = commonCharactersToIgnore;
             return this;
         }
-        public Builder commonCharactersToIgnore(@Nullable String commonCharactersToIgnore) {
-            this.commonCharactersToIgnore = Codegen.ofNullable(commonCharactersToIgnore);
-            return this;
-        }        public PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCharacterMaskConfigCharactersToIgnoreGetArgs build() {
-            return new PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCharacterMaskConfigCharactersToIgnoreGetArgs(charactersToSkip, commonCharactersToIgnore);
+
+        public Builder commonCharactersToIgnore(String commonCharactersToIgnore) {
+            return commonCharactersToIgnore(Output.of(commonCharactersToIgnore));
+        }
+
+        public PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCharacterMaskConfigCharactersToIgnoreGetArgs build() {
+            return $;
         }
     }
+
 }

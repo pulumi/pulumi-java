@@ -16,81 +16,77 @@ public final class WebACLRegexMatchStatement extends com.pulumi.resources.Invoke
     public static final WebACLRegexMatchStatement Empty = new WebACLRegexMatchStatement();
 
     @Import(name="fieldToMatch", required=true)
-      private final WebACLFieldToMatch fieldToMatch;
+    private WebACLFieldToMatch fieldToMatch;
 
     public WebACLFieldToMatch fieldToMatch() {
         return this.fieldToMatch;
     }
 
     @Import(name="regexString", required=true)
-      private final String regexString;
+    private String regexString;
 
     public String regexString() {
         return this.regexString;
     }
 
     @Import(name="textTransformations", required=true)
-      private final List<WebACLTextTransformation> textTransformations;
+    private List<WebACLTextTransformation> textTransformations;
 
     public List<WebACLTextTransformation> textTransformations() {
         return this.textTransformations;
     }
 
-    public WebACLRegexMatchStatement(
-        WebACLFieldToMatch fieldToMatch,
-        String regexString,
-        List<WebACLTextTransformation> textTransformations) {
-        this.fieldToMatch = Objects.requireNonNull(fieldToMatch, "expected parameter 'fieldToMatch' to be non-null");
-        this.regexString = Objects.requireNonNull(regexString, "expected parameter 'regexString' to be non-null");
-        this.textTransformations = Objects.requireNonNull(textTransformations, "expected parameter 'textTransformations' to be non-null");
-    }
+    private WebACLRegexMatchStatement() {}
 
-    private WebACLRegexMatchStatement() {
-        this.fieldToMatch = null;
-        this.regexString = null;
-        this.textTransformations = List.of();
+    private WebACLRegexMatchStatement(WebACLRegexMatchStatement $) {
+        this.fieldToMatch = $.fieldToMatch;
+        this.regexString = $.regexString;
+        this.textTransformations = $.textTransformations;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WebACLRegexMatchStatement defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private WebACLFieldToMatch fieldToMatch;
-        private String regexString;
-        private List<WebACLTextTransformation> textTransformations;
+        private WebACLRegexMatchStatement $;
 
         public Builder() {
-    	      // Empty
+            $ = new WebACLRegexMatchStatement();
         }
 
         public Builder(WebACLRegexMatchStatement defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.fieldToMatch = defaults.fieldToMatch;
-    	      this.regexString = defaults.regexString;
-    	      this.textTransformations = defaults.textTransformations;
+            $ = new WebACLRegexMatchStatement(Objects.requireNonNull(defaults));
         }
 
         public Builder fieldToMatch(WebACLFieldToMatch fieldToMatch) {
-            this.fieldToMatch = Objects.requireNonNull(fieldToMatch);
+            $.fieldToMatch = fieldToMatch;
             return this;
         }
+
         public Builder regexString(String regexString) {
-            this.regexString = Objects.requireNonNull(regexString);
+            $.regexString = regexString;
             return this;
         }
+
         public Builder textTransformations(List<WebACLTextTransformation> textTransformations) {
-            this.textTransformations = Objects.requireNonNull(textTransformations);
+            $.textTransformations = textTransformations;
             return this;
         }
+
         public Builder textTransformations(WebACLTextTransformation... textTransformations) {
             return textTransformations(List.of(textTransformations));
-        }        public WebACLRegexMatchStatement build() {
-            return new WebACLRegexMatchStatement(fieldToMatch, regexString, textTransformations);
+        }
+
+        public WebACLRegexMatchStatement build() {
+            $.fieldToMatch = Objects.requireNonNull($.fieldToMatch, "expected parameter 'fieldToMatch' to be non-null");
+            $.regexString = Objects.requireNonNull($.regexString, "expected parameter 'regexString' to be non-null");
+            $.textTransformations = Objects.requireNonNull($.textTransformations, "expected parameter 'textTransformations' to be non-null");
+            return $;
         }
     }
+
 }

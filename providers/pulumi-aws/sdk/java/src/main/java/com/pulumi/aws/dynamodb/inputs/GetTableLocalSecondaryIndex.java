@@ -18,97 +18,91 @@ public final class GetTableLocalSecondaryIndex extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
     }
 
     @Import(name="nonKeyAttributes", required=true)
-      private final List<String> nonKeyAttributes;
+    private List<String> nonKeyAttributes;
 
     public List<String> nonKeyAttributes() {
         return this.nonKeyAttributes;
     }
 
     @Import(name="projectionType", required=true)
-      private final String projectionType;
+    private String projectionType;
 
     public String projectionType() {
         return this.projectionType;
     }
 
     @Import(name="rangeKey", required=true)
-      private final String rangeKey;
+    private String rangeKey;
 
     public String rangeKey() {
         return this.rangeKey;
     }
 
-    public GetTableLocalSecondaryIndex(
-        String name,
-        List<String> nonKeyAttributes,
-        String projectionType,
-        String rangeKey) {
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.nonKeyAttributes = Objects.requireNonNull(nonKeyAttributes, "expected parameter 'nonKeyAttributes' to be non-null");
-        this.projectionType = Objects.requireNonNull(projectionType, "expected parameter 'projectionType' to be non-null");
-        this.rangeKey = Objects.requireNonNull(rangeKey, "expected parameter 'rangeKey' to be non-null");
-    }
+    private GetTableLocalSecondaryIndex() {}
 
-    private GetTableLocalSecondaryIndex() {
-        this.name = null;
-        this.nonKeyAttributes = List.of();
-        this.projectionType = null;
-        this.rangeKey = null;
+    private GetTableLocalSecondaryIndex(GetTableLocalSecondaryIndex $) {
+        this.name = $.name;
+        this.nonKeyAttributes = $.nonKeyAttributes;
+        this.projectionType = $.projectionType;
+        this.rangeKey = $.rangeKey;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetTableLocalSecondaryIndex defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String name;
-        private List<String> nonKeyAttributes;
-        private String projectionType;
-        private String rangeKey;
+        private GetTableLocalSecondaryIndex $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetTableLocalSecondaryIndex();
         }
 
         public Builder(GetTableLocalSecondaryIndex defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.nonKeyAttributes = defaults.nonKeyAttributes;
-    	      this.projectionType = defaults.projectionType;
-    	      this.rangeKey = defaults.rangeKey;
+            $ = new GetTableLocalSecondaryIndex(Objects.requireNonNull(defaults));
         }
 
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder nonKeyAttributes(List<String> nonKeyAttributes) {
-            this.nonKeyAttributes = Objects.requireNonNull(nonKeyAttributes);
+            $.nonKeyAttributes = nonKeyAttributes;
             return this;
         }
+
         public Builder nonKeyAttributes(String... nonKeyAttributes) {
             return nonKeyAttributes(List.of(nonKeyAttributes));
         }
+
         public Builder projectionType(String projectionType) {
-            this.projectionType = Objects.requireNonNull(projectionType);
+            $.projectionType = projectionType;
             return this;
         }
+
         public Builder rangeKey(String rangeKey) {
-            this.rangeKey = Objects.requireNonNull(rangeKey);
+            $.rangeKey = rangeKey;
             return this;
-        }        public GetTableLocalSecondaryIndex build() {
-            return new GetTableLocalSecondaryIndex(name, nonKeyAttributes, projectionType, rangeKey);
+        }
+
+        public GetTableLocalSecondaryIndex build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.nonKeyAttributes = Objects.requireNonNull($.nonKeyAttributes, "expected parameter 'nonKeyAttributes' to be non-null");
+            $.projectionType = Objects.requireNonNull($.projectionType, "expected parameter 'projectionType' to be non-null");
+            $.rangeKey = Objects.requireNonNull($.rangeKey, "expected parameter 'rangeKey' to be non-null");
+            return $;
         }
     }
+
 }

@@ -10,6 +10,7 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +27,10 @@ public final class ServiceBusArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="authenticationType")
-      private final @Nullable Output<Either<String,AuthenticationType>> authenticationType;
+    private @Nullable Output<Either<String,AuthenticationType>> authenticationType;
 
-    public Output<Either<String,AuthenticationType>> authenticationType() {
-        return this.authenticationType == null ? Codegen.empty() : this.authenticationType;
+    public Optional<Output<Either<String,AuthenticationType>>> authenticationType() {
+        return Optional.ofNullable(this.authenticationType);
     }
 
     /**
@@ -37,10 +38,10 @@ public final class ServiceBusArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="deadLetterSecret")
-      private final @Nullable Output<String> deadLetterSecret;
+    private @Nullable Output<String> deadLetterSecret;
 
-    public Output<String> deadLetterSecret() {
-        return this.deadLetterSecret == null ? Codegen.empty() : this.deadLetterSecret;
+    public Optional<Output<String>> deadLetterSecret() {
+        return Optional.ofNullable(this.deadLetterSecret);
     }
 
     /**
@@ -48,10 +49,10 @@ public final class ServiceBusArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="deadLetterUri")
-      private final @Nullable Output<String> deadLetterUri;
+    private @Nullable Output<String> deadLetterUri;
 
-    public Output<String> deadLetterUri() {
-        return this.deadLetterUri == null ? Codegen.empty() : this.deadLetterUri;
+    public Optional<Output<String>> deadLetterUri() {
+        return Optional.ofNullable(this.deadLetterUri);
     }
 
     /**
@@ -60,7 +61,7 @@ public final class ServiceBusArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="endpointType", required=true)
-      private final Output<String> endpointType;
+    private Output<String> endpointType;
 
     public Output<String> endpointType() {
         return this.endpointType;
@@ -71,10 +72,10 @@ public final class ServiceBusArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="endpointUri")
-      private final @Nullable Output<String> endpointUri;
+    private @Nullable Output<String> endpointUri;
 
-    public Output<String> endpointUri() {
-        return this.endpointUri == null ? Codegen.empty() : this.endpointUri;
+    public Optional<Output<String>> endpointUri() {
+        return Optional.ofNullable(this.endpointUri);
     }
 
     /**
@@ -82,10 +83,10 @@ public final class ServiceBusArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="entityPath")
-      private final @Nullable Output<String> entityPath;
+    private @Nullable Output<String> entityPath;
 
-    public Output<String> entityPath() {
-        return this.entityPath == null ? Codegen.empty() : this.entityPath;
+    public Optional<Output<String>> entityPath() {
+        return Optional.ofNullable(this.entityPath);
     }
 
     /**
@@ -93,10 +94,10 @@ public final class ServiceBusArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="primaryConnectionString")
-      private final @Nullable Output<String> primaryConnectionString;
+    private @Nullable Output<String> primaryConnectionString;
 
-    public Output<String> primaryConnectionString() {
-        return this.primaryConnectionString == null ? Codegen.empty() : this.primaryConnectionString;
+    public Optional<Output<String>> primaryConnectionString() {
+        return Optional.ofNullable(this.primaryConnectionString);
     }
 
     /**
@@ -104,141 +105,119 @@ public final class ServiceBusArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="secondaryConnectionString")
-      private final @Nullable Output<String> secondaryConnectionString;
+    private @Nullable Output<String> secondaryConnectionString;
 
-    public Output<String> secondaryConnectionString() {
-        return this.secondaryConnectionString == null ? Codegen.empty() : this.secondaryConnectionString;
+    public Optional<Output<String>> secondaryConnectionString() {
+        return Optional.ofNullable(this.secondaryConnectionString);
     }
 
-    public ServiceBusArgs(
-        @Nullable Output<Either<String,AuthenticationType>> authenticationType,
-        @Nullable Output<String> deadLetterSecret,
-        @Nullable Output<String> deadLetterUri,
-        Output<String> endpointType,
-        @Nullable Output<String> endpointUri,
-        @Nullable Output<String> entityPath,
-        @Nullable Output<String> primaryConnectionString,
-        @Nullable Output<String> secondaryConnectionString) {
-        this.authenticationType = authenticationType;
-        this.deadLetterSecret = deadLetterSecret;
-        this.deadLetterUri = deadLetterUri;
-        this.endpointType = Codegen.stringProp("endpointType").output().arg(endpointType).require();
-        this.endpointUri = endpointUri;
-        this.entityPath = entityPath;
-        this.primaryConnectionString = primaryConnectionString;
-        this.secondaryConnectionString = secondaryConnectionString;
-    }
+    private ServiceBusArgs() {}
 
-    private ServiceBusArgs() {
-        this.authenticationType = Codegen.empty();
-        this.deadLetterSecret = Codegen.empty();
-        this.deadLetterUri = Codegen.empty();
-        this.endpointType = Codegen.empty();
-        this.endpointUri = Codegen.empty();
-        this.entityPath = Codegen.empty();
-        this.primaryConnectionString = Codegen.empty();
-        this.secondaryConnectionString = Codegen.empty();
+    private ServiceBusArgs(ServiceBusArgs $) {
+        this.authenticationType = $.authenticationType;
+        this.deadLetterSecret = $.deadLetterSecret;
+        this.deadLetterUri = $.deadLetterUri;
+        this.endpointType = $.endpointType;
+        this.endpointUri = $.endpointUri;
+        this.entityPath = $.entityPath;
+        this.primaryConnectionString = $.primaryConnectionString;
+        this.secondaryConnectionString = $.secondaryConnectionString;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ServiceBusArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Either<String,AuthenticationType>> authenticationType;
-        private @Nullable Output<String> deadLetterSecret;
-        private @Nullable Output<String> deadLetterUri;
-        private Output<String> endpointType;
-        private @Nullable Output<String> endpointUri;
-        private @Nullable Output<String> entityPath;
-        private @Nullable Output<String> primaryConnectionString;
-        private @Nullable Output<String> secondaryConnectionString;
+        private ServiceBusArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ServiceBusArgs();
         }
 
         public Builder(ServiceBusArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.authenticationType = defaults.authenticationType;
-    	      this.deadLetterSecret = defaults.deadLetterSecret;
-    	      this.deadLetterUri = defaults.deadLetterUri;
-    	      this.endpointType = defaults.endpointType;
-    	      this.endpointUri = defaults.endpointUri;
-    	      this.entityPath = defaults.entityPath;
-    	      this.primaryConnectionString = defaults.primaryConnectionString;
-    	      this.secondaryConnectionString = defaults.secondaryConnectionString;
+            $ = new ServiceBusArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder authenticationType(@Nullable Output<Either<String,AuthenticationType>> authenticationType) {
-            this.authenticationType = authenticationType;
+            $.authenticationType = authenticationType;
             return this;
         }
-        public Builder authenticationType(@Nullable Either<String,AuthenticationType> authenticationType) {
-            this.authenticationType = Codegen.ofNullable(authenticationType);
-            return this;
+
+        public Builder authenticationType(Either<String,AuthenticationType> authenticationType) {
+            return authenticationType(Output.of(authenticationType));
         }
+
         public Builder deadLetterSecret(@Nullable Output<String> deadLetterSecret) {
-            this.deadLetterSecret = deadLetterSecret;
+            $.deadLetterSecret = deadLetterSecret;
             return this;
         }
-        public Builder deadLetterSecret(@Nullable String deadLetterSecret) {
-            this.deadLetterSecret = Codegen.ofNullable(deadLetterSecret);
-            return this;
+
+        public Builder deadLetterSecret(String deadLetterSecret) {
+            return deadLetterSecret(Output.of(deadLetterSecret));
         }
+
         public Builder deadLetterUri(@Nullable Output<String> deadLetterUri) {
-            this.deadLetterUri = deadLetterUri;
+            $.deadLetterUri = deadLetterUri;
             return this;
         }
-        public Builder deadLetterUri(@Nullable String deadLetterUri) {
-            this.deadLetterUri = Codegen.ofNullable(deadLetterUri);
-            return this;
+
+        public Builder deadLetterUri(String deadLetterUri) {
+            return deadLetterUri(Output.of(deadLetterUri));
         }
+
         public Builder endpointType(Output<String> endpointType) {
-            this.endpointType = Objects.requireNonNull(endpointType);
+            $.endpointType = endpointType;
             return this;
         }
+
         public Builder endpointType(String endpointType) {
-            this.endpointType = Output.of(Objects.requireNonNull(endpointType));
-            return this;
+            return endpointType(Output.of(endpointType));
         }
+
         public Builder endpointUri(@Nullable Output<String> endpointUri) {
-            this.endpointUri = endpointUri;
+            $.endpointUri = endpointUri;
             return this;
         }
-        public Builder endpointUri(@Nullable String endpointUri) {
-            this.endpointUri = Codegen.ofNullable(endpointUri);
-            return this;
+
+        public Builder endpointUri(String endpointUri) {
+            return endpointUri(Output.of(endpointUri));
         }
+
         public Builder entityPath(@Nullable Output<String> entityPath) {
-            this.entityPath = entityPath;
+            $.entityPath = entityPath;
             return this;
         }
-        public Builder entityPath(@Nullable String entityPath) {
-            this.entityPath = Codegen.ofNullable(entityPath);
-            return this;
+
+        public Builder entityPath(String entityPath) {
+            return entityPath(Output.of(entityPath));
         }
+
         public Builder primaryConnectionString(@Nullable Output<String> primaryConnectionString) {
-            this.primaryConnectionString = primaryConnectionString;
+            $.primaryConnectionString = primaryConnectionString;
             return this;
         }
-        public Builder primaryConnectionString(@Nullable String primaryConnectionString) {
-            this.primaryConnectionString = Codegen.ofNullable(primaryConnectionString);
-            return this;
+
+        public Builder primaryConnectionString(String primaryConnectionString) {
+            return primaryConnectionString(Output.of(primaryConnectionString));
         }
+
         public Builder secondaryConnectionString(@Nullable Output<String> secondaryConnectionString) {
-            this.secondaryConnectionString = secondaryConnectionString;
+            $.secondaryConnectionString = secondaryConnectionString;
             return this;
         }
-        public Builder secondaryConnectionString(@Nullable String secondaryConnectionString) {
-            this.secondaryConnectionString = Codegen.ofNullable(secondaryConnectionString);
-            return this;
-        }        public ServiceBusArgs build() {
-            return new ServiceBusArgs(authenticationType, deadLetterSecret, deadLetterUri, endpointType, endpointUri, entityPath, primaryConnectionString, secondaryConnectionString);
+
+        public Builder secondaryConnectionString(String secondaryConnectionString) {
+            return secondaryConnectionString(Output.of(secondaryConnectionString));
+        }
+
+        public ServiceBusArgs build() {
+            $.endpointType = Codegen.stringProp("endpointType").output().arg($.endpointType).require();
+            return $;
         }
     }
+
 }

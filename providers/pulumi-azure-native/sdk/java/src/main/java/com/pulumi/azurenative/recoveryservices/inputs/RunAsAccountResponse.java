@@ -23,10 +23,10 @@ public final class RunAsAccountResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="accountId")
-      private final @Nullable String accountId;
+    private @Nullable String accountId;
 
     public Optional<String> accountId() {
-        return this.accountId == null ? Optional.empty() : Optional.ofNullable(this.accountId);
+        return Optional.ofNullable(this.accountId);
     }
 
     /**
@@ -34,55 +34,50 @@ public final class RunAsAccountResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="accountName")
-      private final @Nullable String accountName;
+    private @Nullable String accountName;
 
     public Optional<String> accountName() {
-        return this.accountName == null ? Optional.empty() : Optional.ofNullable(this.accountName);
+        return Optional.ofNullable(this.accountName);
     }
 
-    public RunAsAccountResponse(
-        @Nullable String accountId,
-        @Nullable String accountName) {
-        this.accountId = accountId;
-        this.accountName = accountName;
-    }
+    private RunAsAccountResponse() {}
 
-    private RunAsAccountResponse() {
-        this.accountId = null;
-        this.accountName = null;
+    private RunAsAccountResponse(RunAsAccountResponse $) {
+        this.accountId = $.accountId;
+        this.accountName = $.accountName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RunAsAccountResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String accountId;
-        private @Nullable String accountName;
+        private RunAsAccountResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new RunAsAccountResponse();
         }
 
         public Builder(RunAsAccountResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accountId = defaults.accountId;
-    	      this.accountName = defaults.accountName;
+            $ = new RunAsAccountResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder accountId(@Nullable String accountId) {
-            this.accountId = accountId;
+            $.accountId = accountId;
             return this;
         }
+
         public Builder accountName(@Nullable String accountName) {
-            this.accountName = accountName;
+            $.accountName = accountName;
             return this;
-        }        public RunAsAccountResponse build() {
-            return new RunAsAccountResponse(accountId, accountName);
+        }
+
+        public RunAsAccountResponse build() {
+            return $;
         }
     }
+
 }

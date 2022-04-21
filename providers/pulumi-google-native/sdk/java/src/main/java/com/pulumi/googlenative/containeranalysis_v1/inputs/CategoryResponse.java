@@ -21,7 +21,7 @@ public final class CategoryResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="categoryId", required=true)
-      private final String categoryId;
+    private String categoryId;
 
     public String categoryId() {
         return this.categoryId;
@@ -32,55 +32,52 @@ public final class CategoryResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
     }
 
-    public CategoryResponse(
-        String categoryId,
-        String name) {
-        this.categoryId = Objects.requireNonNull(categoryId, "expected parameter 'categoryId' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-    }
+    private CategoryResponse() {}
 
-    private CategoryResponse() {
-        this.categoryId = null;
-        this.name = null;
+    private CategoryResponse(CategoryResponse $) {
+        this.categoryId = $.categoryId;
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CategoryResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String categoryId;
-        private String name;
+        private CategoryResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new CategoryResponse();
         }
 
         public Builder(CategoryResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.categoryId = defaults.categoryId;
-    	      this.name = defaults.name;
+            $ = new CategoryResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder categoryId(String categoryId) {
-            this.categoryId = Objects.requireNonNull(categoryId);
+            $.categoryId = categoryId;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
-        }        public CategoryResponse build() {
-            return new CategoryResponse(categoryId, name);
+        }
+
+        public CategoryResponse build() {
+            $.categoryId = Objects.requireNonNull($.categoryId, "expected parameter 'categoryId' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            return $;
         }
     }
+
 }

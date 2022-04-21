@@ -5,10 +5,10 @@ package com.pulumi.googlenative.privateca_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.privateca_v1.inputs.SubjectAltNamesArgs;
 import com.pulumi.googlenative.privateca_v1.inputs.SubjectArgs;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,7 +25,7 @@ public final class SubjectConfigArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="subject", required=true)
-      private final Output<SubjectArgs> subject;
+    private Output<SubjectArgs> subject;
 
     public Output<SubjectArgs> subject() {
         return this.subject;
@@ -36,63 +36,59 @@ public final class SubjectConfigArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="subjectAltName")
-      private final @Nullable Output<SubjectAltNamesArgs> subjectAltName;
+    private @Nullable Output<SubjectAltNamesArgs> subjectAltName;
 
-    public Output<SubjectAltNamesArgs> subjectAltName() {
-        return this.subjectAltName == null ? Codegen.empty() : this.subjectAltName;
+    public Optional<Output<SubjectAltNamesArgs>> subjectAltName() {
+        return Optional.ofNullable(this.subjectAltName);
     }
 
-    public SubjectConfigArgs(
-        Output<SubjectArgs> subject,
-        @Nullable Output<SubjectAltNamesArgs> subjectAltName) {
-        this.subject = Objects.requireNonNull(subject, "expected parameter 'subject' to be non-null");
-        this.subjectAltName = subjectAltName;
-    }
+    private SubjectConfigArgs() {}
 
-    private SubjectConfigArgs() {
-        this.subject = Codegen.empty();
-        this.subjectAltName = Codegen.empty();
+    private SubjectConfigArgs(SubjectConfigArgs $) {
+        this.subject = $.subject;
+        this.subjectAltName = $.subjectAltName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SubjectConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<SubjectArgs> subject;
-        private @Nullable Output<SubjectAltNamesArgs> subjectAltName;
+        private SubjectConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SubjectConfigArgs();
         }
 
         public Builder(SubjectConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.subject = defaults.subject;
-    	      this.subjectAltName = defaults.subjectAltName;
+            $ = new SubjectConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder subject(Output<SubjectArgs> subject) {
-            this.subject = Objects.requireNonNull(subject);
+            $.subject = subject;
             return this;
         }
+
         public Builder subject(SubjectArgs subject) {
-            this.subject = Output.of(Objects.requireNonNull(subject));
-            return this;
+            return subject(Output.of(subject));
         }
+
         public Builder subjectAltName(@Nullable Output<SubjectAltNamesArgs> subjectAltName) {
-            this.subjectAltName = subjectAltName;
+            $.subjectAltName = subjectAltName;
             return this;
         }
-        public Builder subjectAltName(@Nullable SubjectAltNamesArgs subjectAltName) {
-            this.subjectAltName = Codegen.ofNullable(subjectAltName);
-            return this;
-        }        public SubjectConfigArgs build() {
-            return new SubjectConfigArgs(subject, subjectAltName);
+
+        public Builder subjectAltName(SubjectAltNamesArgs subjectAltName) {
+            return subjectAltName(Output.of(subjectAltName));
+        }
+
+        public SubjectConfigArgs build() {
+            $.subject = Objects.requireNonNull($.subject, "expected parameter 'subject' to be non-null");
+            return $;
         }
     }
+
 }

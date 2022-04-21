@@ -23,45 +23,44 @@ public final class FunctionTracingConfig extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="mode")
-      private final @Nullable FunctionTracingConfigMode mode;
+    private @Nullable FunctionTracingConfigMode mode;
 
     public Optional<FunctionTracingConfigMode> mode() {
-        return this.mode == null ? Optional.empty() : Optional.ofNullable(this.mode);
+        return Optional.ofNullable(this.mode);
     }
 
-    public FunctionTracingConfig(@Nullable FunctionTracingConfigMode mode) {
-        this.mode = mode;
-    }
+    private FunctionTracingConfig() {}
 
-    private FunctionTracingConfig() {
-        this.mode = null;
+    private FunctionTracingConfig(FunctionTracingConfig $) {
+        this.mode = $.mode;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FunctionTracingConfig defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable FunctionTracingConfigMode mode;
+        private FunctionTracingConfig $;
 
         public Builder() {
-    	      // Empty
+            $ = new FunctionTracingConfig();
         }
 
         public Builder(FunctionTracingConfig defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.mode = defaults.mode;
+            $ = new FunctionTracingConfig(Objects.requireNonNull(defaults));
         }
 
         public Builder mode(@Nullable FunctionTracingConfigMode mode) {
-            this.mode = mode;
+            $.mode = mode;
             return this;
-        }        public FunctionTracingConfig build() {
-            return new FunctionTracingConfig(mode);
+        }
+
+        public FunctionTracingConfig build() {
+            return $;
         }
     }
+
 }

@@ -5,9 +5,9 @@ package com.pulumi.aws.devicefarm.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class DevicePoolRuleArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="attribute")
-      private final @Nullable Output<String> attribute;
+    private @Nullable Output<String> attribute;
 
-    public Output<String> attribute() {
-        return this.attribute == null ? Codegen.empty() : this.attribute;
+    public Optional<Output<String>> attribute() {
+        return Optional.ofNullable(this.attribute);
     }
 
     /**
@@ -31,10 +31,10 @@ public final class DevicePoolRuleArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="operator")
-      private final @Nullable Output<String> operator;
+    private @Nullable Output<String> operator;
 
-    public Output<String> operator() {
-        return this.operator == null ? Codegen.empty() : this.operator;
+    public Optional<Output<String>> operator() {
+        return Optional.ofNullable(this.operator);
     }
 
     /**
@@ -42,76 +42,68 @@ public final class DevicePoolRuleArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="value")
-      private final @Nullable Output<String> value;
+    private @Nullable Output<String> value;
 
-    public Output<String> value() {
-        return this.value == null ? Codegen.empty() : this.value;
+    public Optional<Output<String>> value() {
+        return Optional.ofNullable(this.value);
     }
 
-    public DevicePoolRuleArgs(
-        @Nullable Output<String> attribute,
-        @Nullable Output<String> operator,
-        @Nullable Output<String> value) {
-        this.attribute = attribute;
-        this.operator = operator;
-        this.value = value;
-    }
+    private DevicePoolRuleArgs() {}
 
-    private DevicePoolRuleArgs() {
-        this.attribute = Codegen.empty();
-        this.operator = Codegen.empty();
-        this.value = Codegen.empty();
+    private DevicePoolRuleArgs(DevicePoolRuleArgs $) {
+        this.attribute = $.attribute;
+        this.operator = $.operator;
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DevicePoolRuleArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> attribute;
-        private @Nullable Output<String> operator;
-        private @Nullable Output<String> value;
+        private DevicePoolRuleArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DevicePoolRuleArgs();
         }
 
         public Builder(DevicePoolRuleArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.attribute = defaults.attribute;
-    	      this.operator = defaults.operator;
-    	      this.value = defaults.value;
+            $ = new DevicePoolRuleArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder attribute(@Nullable Output<String> attribute) {
-            this.attribute = attribute;
+            $.attribute = attribute;
             return this;
         }
-        public Builder attribute(@Nullable String attribute) {
-            this.attribute = Codegen.ofNullable(attribute);
-            return this;
+
+        public Builder attribute(String attribute) {
+            return attribute(Output.of(attribute));
         }
+
         public Builder operator(@Nullable Output<String> operator) {
-            this.operator = operator;
+            $.operator = operator;
             return this;
         }
-        public Builder operator(@Nullable String operator) {
-            this.operator = Codegen.ofNullable(operator);
-            return this;
+
+        public Builder operator(String operator) {
+            return operator(Output.of(operator));
         }
+
         public Builder value(@Nullable Output<String> value) {
-            this.value = value;
+            $.value = value;
             return this;
         }
-        public Builder value(@Nullable String value) {
-            this.value = Codegen.ofNullable(value);
-            return this;
-        }        public DevicePoolRuleArgs build() {
-            return new DevicePoolRuleArgs(attribute, operator, value);
+
+        public Builder value(String value) {
+            return value(Output.of(value));
+        }
+
+        public DevicePoolRuleArgs build() {
+            return $;
         }
     }
+
 }

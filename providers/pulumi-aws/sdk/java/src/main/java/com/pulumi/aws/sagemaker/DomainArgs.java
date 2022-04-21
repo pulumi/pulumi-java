@@ -7,11 +7,11 @@ import com.pulumi.aws.sagemaker.inputs.DomainDefaultUserSettingsArgs;
 import com.pulumi.aws.sagemaker.inputs.DomainRetentionPolicyArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class DomainArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="appNetworkAccessType")
-      private final @Nullable Output<String> appNetworkAccessType;
+    private @Nullable Output<String> appNetworkAccessType;
 
-    public Output<String> appNetworkAccessType() {
-        return this.appNetworkAccessType == null ? Codegen.empty() : this.appNetworkAccessType;
+    public Optional<Output<String>> appNetworkAccessType() {
+        return Optional.ofNullable(this.appNetworkAccessType);
     }
 
     /**
@@ -35,7 +35,7 @@ public final class DomainArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="authMode", required=true)
-      private final Output<String> authMode;
+    private Output<String> authMode;
 
     public Output<String> authMode() {
         return this.authMode;
@@ -46,7 +46,7 @@ public final class DomainArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="defaultUserSettings", required=true)
-      private final Output<DomainDefaultUserSettingsArgs> defaultUserSettings;
+    private Output<DomainDefaultUserSettingsArgs> defaultUserSettings;
 
     public Output<DomainDefaultUserSettingsArgs> defaultUserSettings() {
         return this.defaultUserSettings;
@@ -57,7 +57,7 @@ public final class DomainArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="domainName", required=true)
-      private final Output<String> domainName;
+    private Output<String> domainName;
 
     public Output<String> domainName() {
         return this.domainName;
@@ -68,10 +68,10 @@ public final class DomainArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="kmsKeyId")
-      private final @Nullable Output<String> kmsKeyId;
+    private @Nullable Output<String> kmsKeyId;
 
-    public Output<String> kmsKeyId() {
-        return this.kmsKeyId == null ? Codegen.empty() : this.kmsKeyId;
+    public Optional<Output<String>> kmsKeyId() {
+        return Optional.ofNullable(this.kmsKeyId);
     }
 
     /**
@@ -79,10 +79,10 @@ public final class DomainArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="retentionPolicy")
-      private final @Nullable Output<DomainRetentionPolicyArgs> retentionPolicy;
+    private @Nullable Output<DomainRetentionPolicyArgs> retentionPolicy;
 
-    public Output<DomainRetentionPolicyArgs> retentionPolicy() {
-        return this.retentionPolicy == null ? Codegen.empty() : this.retentionPolicy;
+    public Optional<Output<DomainRetentionPolicyArgs>> retentionPolicy() {
+        return Optional.ofNullable(this.retentionPolicy);
     }
 
     /**
@@ -90,7 +90,7 @@ public final class DomainArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="subnetIds", required=true)
-      private final Output<List<String>> subnetIds;
+    private Output<List<String>> subnetIds;
 
     public Output<List<String>> subnetIds() {
         return this.subnetIds;
@@ -101,10 +101,10 @@ public final class DomainArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -112,157 +112,137 @@ public final class DomainArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="vpcId", required=true)
-      private final Output<String> vpcId;
+    private Output<String> vpcId;
 
     public Output<String> vpcId() {
         return this.vpcId;
     }
 
-    public DomainArgs(
-        @Nullable Output<String> appNetworkAccessType,
-        Output<String> authMode,
-        Output<DomainDefaultUserSettingsArgs> defaultUserSettings,
-        Output<String> domainName,
-        @Nullable Output<String> kmsKeyId,
-        @Nullable Output<DomainRetentionPolicyArgs> retentionPolicy,
-        Output<List<String>> subnetIds,
-        @Nullable Output<Map<String,String>> tags,
-        Output<String> vpcId) {
-        this.appNetworkAccessType = appNetworkAccessType;
-        this.authMode = Objects.requireNonNull(authMode, "expected parameter 'authMode' to be non-null");
-        this.defaultUserSettings = Objects.requireNonNull(defaultUserSettings, "expected parameter 'defaultUserSettings' to be non-null");
-        this.domainName = Objects.requireNonNull(domainName, "expected parameter 'domainName' to be non-null");
-        this.kmsKeyId = kmsKeyId;
-        this.retentionPolicy = retentionPolicy;
-        this.subnetIds = Objects.requireNonNull(subnetIds, "expected parameter 'subnetIds' to be non-null");
-        this.tags = tags;
-        this.vpcId = Objects.requireNonNull(vpcId, "expected parameter 'vpcId' to be non-null");
-    }
+    private DomainArgs() {}
 
-    private DomainArgs() {
-        this.appNetworkAccessType = Codegen.empty();
-        this.authMode = Codegen.empty();
-        this.defaultUserSettings = Codegen.empty();
-        this.domainName = Codegen.empty();
-        this.kmsKeyId = Codegen.empty();
-        this.retentionPolicy = Codegen.empty();
-        this.subnetIds = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.vpcId = Codegen.empty();
+    private DomainArgs(DomainArgs $) {
+        this.appNetworkAccessType = $.appNetworkAccessType;
+        this.authMode = $.authMode;
+        this.defaultUserSettings = $.defaultUserSettings;
+        this.domainName = $.domainName;
+        this.kmsKeyId = $.kmsKeyId;
+        this.retentionPolicy = $.retentionPolicy;
+        this.subnetIds = $.subnetIds;
+        this.tags = $.tags;
+        this.vpcId = $.vpcId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DomainArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> appNetworkAccessType;
-        private Output<String> authMode;
-        private Output<DomainDefaultUserSettingsArgs> defaultUserSettings;
-        private Output<String> domainName;
-        private @Nullable Output<String> kmsKeyId;
-        private @Nullable Output<DomainRetentionPolicyArgs> retentionPolicy;
-        private Output<List<String>> subnetIds;
-        private @Nullable Output<Map<String,String>> tags;
-        private Output<String> vpcId;
+        private DomainArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DomainArgs();
         }
 
         public Builder(DomainArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.appNetworkAccessType = defaults.appNetworkAccessType;
-    	      this.authMode = defaults.authMode;
-    	      this.defaultUserSettings = defaults.defaultUserSettings;
-    	      this.domainName = defaults.domainName;
-    	      this.kmsKeyId = defaults.kmsKeyId;
-    	      this.retentionPolicy = defaults.retentionPolicy;
-    	      this.subnetIds = defaults.subnetIds;
-    	      this.tags = defaults.tags;
-    	      this.vpcId = defaults.vpcId;
+            $ = new DomainArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder appNetworkAccessType(@Nullable Output<String> appNetworkAccessType) {
-            this.appNetworkAccessType = appNetworkAccessType;
+            $.appNetworkAccessType = appNetworkAccessType;
             return this;
         }
-        public Builder appNetworkAccessType(@Nullable String appNetworkAccessType) {
-            this.appNetworkAccessType = Codegen.ofNullable(appNetworkAccessType);
-            return this;
+
+        public Builder appNetworkAccessType(String appNetworkAccessType) {
+            return appNetworkAccessType(Output.of(appNetworkAccessType));
         }
+
         public Builder authMode(Output<String> authMode) {
-            this.authMode = Objects.requireNonNull(authMode);
+            $.authMode = authMode;
             return this;
         }
+
         public Builder authMode(String authMode) {
-            this.authMode = Output.of(Objects.requireNonNull(authMode));
-            return this;
+            return authMode(Output.of(authMode));
         }
+
         public Builder defaultUserSettings(Output<DomainDefaultUserSettingsArgs> defaultUserSettings) {
-            this.defaultUserSettings = Objects.requireNonNull(defaultUserSettings);
+            $.defaultUserSettings = defaultUserSettings;
             return this;
         }
+
         public Builder defaultUserSettings(DomainDefaultUserSettingsArgs defaultUserSettings) {
-            this.defaultUserSettings = Output.of(Objects.requireNonNull(defaultUserSettings));
-            return this;
+            return defaultUserSettings(Output.of(defaultUserSettings));
         }
+
         public Builder domainName(Output<String> domainName) {
-            this.domainName = Objects.requireNonNull(domainName);
+            $.domainName = domainName;
             return this;
         }
+
         public Builder domainName(String domainName) {
-            this.domainName = Output.of(Objects.requireNonNull(domainName));
-            return this;
+            return domainName(Output.of(domainName));
         }
+
         public Builder kmsKeyId(@Nullable Output<String> kmsKeyId) {
-            this.kmsKeyId = kmsKeyId;
+            $.kmsKeyId = kmsKeyId;
             return this;
         }
-        public Builder kmsKeyId(@Nullable String kmsKeyId) {
-            this.kmsKeyId = Codegen.ofNullable(kmsKeyId);
-            return this;
+
+        public Builder kmsKeyId(String kmsKeyId) {
+            return kmsKeyId(Output.of(kmsKeyId));
         }
+
         public Builder retentionPolicy(@Nullable Output<DomainRetentionPolicyArgs> retentionPolicy) {
-            this.retentionPolicy = retentionPolicy;
+            $.retentionPolicy = retentionPolicy;
             return this;
         }
-        public Builder retentionPolicy(@Nullable DomainRetentionPolicyArgs retentionPolicy) {
-            this.retentionPolicy = Codegen.ofNullable(retentionPolicy);
-            return this;
+
+        public Builder retentionPolicy(DomainRetentionPolicyArgs retentionPolicy) {
+            return retentionPolicy(Output.of(retentionPolicy));
         }
+
         public Builder subnetIds(Output<List<String>> subnetIds) {
-            this.subnetIds = Objects.requireNonNull(subnetIds);
+            $.subnetIds = subnetIds;
             return this;
         }
+
         public Builder subnetIds(List<String> subnetIds) {
-            this.subnetIds = Output.of(Objects.requireNonNull(subnetIds));
-            return this;
+            return subnetIds(Output.of(subnetIds));
         }
+
         public Builder subnetIds(String... subnetIds) {
             return subnetIds(List.of(subnetIds));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder vpcId(Output<String> vpcId) {
-            this.vpcId = Objects.requireNonNull(vpcId);
+            $.vpcId = vpcId;
             return this;
         }
+
         public Builder vpcId(String vpcId) {
-            this.vpcId = Output.of(Objects.requireNonNull(vpcId));
-            return this;
-        }        public DomainArgs build() {
-            return new DomainArgs(appNetworkAccessType, authMode, defaultUserSettings, domainName, kmsKeyId, retentionPolicy, subnetIds, tags, vpcId);
+            return vpcId(Output.of(vpcId));
+        }
+
+        public DomainArgs build() {
+            $.authMode = Objects.requireNonNull($.authMode, "expected parameter 'authMode' to be non-null");
+            $.defaultUserSettings = Objects.requireNonNull($.defaultUserSettings, "expected parameter 'defaultUserSettings' to be non-null");
+            $.domainName = Objects.requireNonNull($.domainName, "expected parameter 'domainName' to be non-null");
+            $.subnetIds = Objects.requireNonNull($.subnetIds, "expected parameter 'subnetIds' to be non-null");
+            $.vpcId = Objects.requireNonNull($.vpcId, "expected parameter 'vpcId' to be non-null");
+            return $;
         }
     }
+
 }

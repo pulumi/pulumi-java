@@ -10,6 +10,7 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +27,10 @@ public final class CsvSerializationArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="encoding")
-      private final @Nullable Output<Either<String,Encoding>> encoding;
+    private @Nullable Output<Either<String,Encoding>> encoding;
 
-    public Output<Either<String,Encoding>> encoding() {
-        return this.encoding == null ? Codegen.empty() : this.encoding;
+    public Optional<Output<Either<String,Encoding>>> encoding() {
+        return Optional.ofNullable(this.encoding);
     }
 
     /**
@@ -37,10 +38,10 @@ public final class CsvSerializationArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="fieldDelimiter")
-      private final @Nullable Output<String> fieldDelimiter;
+    private @Nullable Output<String> fieldDelimiter;
 
-    public Output<String> fieldDelimiter() {
-        return this.fieldDelimiter == null ? Codegen.empty() : this.fieldDelimiter;
+    public Optional<Output<String>> fieldDelimiter() {
+        return Optional.ofNullable(this.fieldDelimiter);
     }
 
     /**
@@ -49,76 +50,69 @@ public final class CsvSerializationArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="type", required=true)
-      private final Output<String> type;
+    private Output<String> type;
 
     public Output<String> type() {
         return this.type;
     }
 
-    public CsvSerializationArgs(
-        @Nullable Output<Either<String,Encoding>> encoding,
-        @Nullable Output<String> fieldDelimiter,
-        Output<String> type) {
-        this.encoding = encoding;
-        this.fieldDelimiter = fieldDelimiter;
-        this.type = Codegen.stringProp("type").output().arg(type).require();
-    }
+    private CsvSerializationArgs() {}
 
-    private CsvSerializationArgs() {
-        this.encoding = Codegen.empty();
-        this.fieldDelimiter = Codegen.empty();
-        this.type = Codegen.empty();
+    private CsvSerializationArgs(CsvSerializationArgs $) {
+        this.encoding = $.encoding;
+        this.fieldDelimiter = $.fieldDelimiter;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CsvSerializationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Either<String,Encoding>> encoding;
-        private @Nullable Output<String> fieldDelimiter;
-        private Output<String> type;
+        private CsvSerializationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CsvSerializationArgs();
         }
 
         public Builder(CsvSerializationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.encoding = defaults.encoding;
-    	      this.fieldDelimiter = defaults.fieldDelimiter;
-    	      this.type = defaults.type;
+            $ = new CsvSerializationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder encoding(@Nullable Output<Either<String,Encoding>> encoding) {
-            this.encoding = encoding;
+            $.encoding = encoding;
             return this;
         }
-        public Builder encoding(@Nullable Either<String,Encoding> encoding) {
-            this.encoding = Codegen.ofNullable(encoding);
-            return this;
+
+        public Builder encoding(Either<String,Encoding> encoding) {
+            return encoding(Output.of(encoding));
         }
+
         public Builder fieldDelimiter(@Nullable Output<String> fieldDelimiter) {
-            this.fieldDelimiter = fieldDelimiter;
+            $.fieldDelimiter = fieldDelimiter;
             return this;
         }
-        public Builder fieldDelimiter(@Nullable String fieldDelimiter) {
-            this.fieldDelimiter = Codegen.ofNullable(fieldDelimiter);
-            return this;
+
+        public Builder fieldDelimiter(String fieldDelimiter) {
+            return fieldDelimiter(Output.of(fieldDelimiter));
         }
+
         public Builder type(Output<String> type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Output.of(Objects.requireNonNull(type));
-            return this;
-        }        public CsvSerializationArgs build() {
-            return new CsvSerializationArgs(encoding, fieldDelimiter, type);
+            return type(Output.of(type));
+        }
+
+        public CsvSerializationArgs build() {
+            $.type = Codegen.stringProp("type").output().arg($.type).require();
+            return $;
         }
     }
+
 }

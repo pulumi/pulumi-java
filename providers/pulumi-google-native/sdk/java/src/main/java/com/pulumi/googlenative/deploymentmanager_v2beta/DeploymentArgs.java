@@ -5,12 +5,12 @@ package com.pulumi.googlenative.deploymentmanager_v2beta;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.deploymentmanager_v2beta.inputs.DeploymentLabelEntryArgs;
 import com.pulumi.googlenative.deploymentmanager_v2beta.inputs.TargetConfigurationArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -19,10 +19,10 @@ public final class DeploymentArgs extends com.pulumi.resources.ResourceArgs {
     public static final DeploymentArgs Empty = new DeploymentArgs();
 
     @Import(name="createPolicy")
-      private final @Nullable Output<String> createPolicy;
+    private @Nullable Output<String> createPolicy;
 
-    public Output<String> createPolicy() {
-        return this.createPolicy == null ? Codegen.empty() : this.createPolicy;
+    public Optional<Output<String>> createPolicy() {
+        return Optional.ofNullable(this.createPolicy);
     }
 
     /**
@@ -30,17 +30,17 @@ public final class DeploymentArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     @Import(name="id")
-      private final @Nullable Output<String> id;
+    private @Nullable Output<String> id;
 
-    public Output<String> id() {
-        return this.id == null ? Codegen.empty() : this.id;
+    public Optional<Output<String>> id() {
+        return Optional.ofNullable(this.id);
     }
 
     /**
@@ -48,10 +48,10 @@ public final class DeploymentArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="labels")
-      private final @Nullable Output<List<DeploymentLabelEntryArgs>> labels;
+    private @Nullable Output<List<DeploymentLabelEntryArgs>> labels;
 
-    public Output<List<DeploymentLabelEntryArgs>> labels() {
-        return this.labels == null ? Codegen.empty() : this.labels;
+    public Optional<Output<List<DeploymentLabelEntryArgs>>> labels() {
+        return Optional.ofNullable(this.labels);
     }
 
     /**
@@ -59,24 +59,24 @@ public final class DeploymentArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     @Import(name="preview")
-      private final @Nullable Output<String> preview;
+    private @Nullable Output<String> preview;
 
-    public Output<String> preview() {
-        return this.preview == null ? Codegen.empty() : this.preview;
+    public Optional<Output<String>> preview() {
+        return Optional.ofNullable(this.preview);
     }
 
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -84,144 +84,122 @@ public final class DeploymentArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="target")
-      private final @Nullable Output<TargetConfigurationArgs> target;
+    private @Nullable Output<TargetConfigurationArgs> target;
 
-    public Output<TargetConfigurationArgs> target() {
-        return this.target == null ? Codegen.empty() : this.target;
+    public Optional<Output<TargetConfigurationArgs>> target() {
+        return Optional.ofNullable(this.target);
     }
 
-    public DeploymentArgs(
-        @Nullable Output<String> createPolicy,
-        @Nullable Output<String> description,
-        @Nullable Output<String> id,
-        @Nullable Output<List<DeploymentLabelEntryArgs>> labels,
-        @Nullable Output<String> name,
-        @Nullable Output<String> preview,
-        @Nullable Output<String> project,
-        @Nullable Output<TargetConfigurationArgs> target) {
-        this.createPolicy = createPolicy;
-        this.description = description;
-        this.id = id;
-        this.labels = labels;
-        this.name = name;
-        this.preview = preview;
-        this.project = project;
-        this.target = target;
-    }
+    private DeploymentArgs() {}
 
-    private DeploymentArgs() {
-        this.createPolicy = Codegen.empty();
-        this.description = Codegen.empty();
-        this.id = Codegen.empty();
-        this.labels = Codegen.empty();
-        this.name = Codegen.empty();
-        this.preview = Codegen.empty();
-        this.project = Codegen.empty();
-        this.target = Codegen.empty();
+    private DeploymentArgs(DeploymentArgs $) {
+        this.createPolicy = $.createPolicy;
+        this.description = $.description;
+        this.id = $.id;
+        this.labels = $.labels;
+        this.name = $.name;
+        this.preview = $.preview;
+        this.project = $.project;
+        this.target = $.target;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DeploymentArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> createPolicy;
-        private @Nullable Output<String> description;
-        private @Nullable Output<String> id;
-        private @Nullable Output<List<DeploymentLabelEntryArgs>> labels;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> preview;
-        private @Nullable Output<String> project;
-        private @Nullable Output<TargetConfigurationArgs> target;
+        private DeploymentArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DeploymentArgs();
         }
 
         public Builder(DeploymentArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.createPolicy = defaults.createPolicy;
-    	      this.description = defaults.description;
-    	      this.id = defaults.id;
-    	      this.labels = defaults.labels;
-    	      this.name = defaults.name;
-    	      this.preview = defaults.preview;
-    	      this.project = defaults.project;
-    	      this.target = defaults.target;
+            $ = new DeploymentArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder createPolicy(@Nullable Output<String> createPolicy) {
-            this.createPolicy = createPolicy;
+            $.createPolicy = createPolicy;
             return this;
         }
-        public Builder createPolicy(@Nullable String createPolicy) {
-            this.createPolicy = Codegen.ofNullable(createPolicy);
-            return this;
+
+        public Builder createPolicy(String createPolicy) {
+            return createPolicy(Output.of(createPolicy));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder id(@Nullable Output<String> id) {
-            this.id = id;
+            $.id = id;
             return this;
         }
-        public Builder id(@Nullable String id) {
-            this.id = Codegen.ofNullable(id);
-            return this;
+
+        public Builder id(String id) {
+            return id(Output.of(id));
         }
+
         public Builder labels(@Nullable Output<List<DeploymentLabelEntryArgs>> labels) {
-            this.labels = labels;
+            $.labels = labels;
             return this;
         }
-        public Builder labels(@Nullable List<DeploymentLabelEntryArgs> labels) {
-            this.labels = Codegen.ofNullable(labels);
-            return this;
+
+        public Builder labels(List<DeploymentLabelEntryArgs> labels) {
+            return labels(Output.of(labels));
         }
+
         public Builder labels(DeploymentLabelEntryArgs... labels) {
             return labels(List.of(labels));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder preview(@Nullable Output<String> preview) {
-            this.preview = preview;
+            $.preview = preview;
             return this;
         }
-        public Builder preview(@Nullable String preview) {
-            this.preview = Codegen.ofNullable(preview);
-            return this;
+
+        public Builder preview(String preview) {
+            return preview(Output.of(preview));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder target(@Nullable Output<TargetConfigurationArgs> target) {
-            this.target = target;
+            $.target = target;
             return this;
         }
-        public Builder target(@Nullable TargetConfigurationArgs target) {
-            this.target = Codegen.ofNullable(target);
-            return this;
-        }        public DeploymentArgs build() {
-            return new DeploymentArgs(createPolicy, description, id, labels, name, preview, project, target);
+
+        public Builder target(TargetConfigurationArgs target) {
+            return target(Output.of(target));
+        }
+
+        public DeploymentArgs build() {
+            return $;
         }
     }
+
 }

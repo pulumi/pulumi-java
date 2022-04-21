@@ -18,7 +18,7 @@ public final class GetWorkspaceWorkspaceProperty extends com.pulumi.resources.In
      * 
      */
     @Import(name="computeTypeName", required=true)
-      private final String computeTypeName;
+    private String computeTypeName;
 
     public String computeTypeName() {
         return this.computeTypeName;
@@ -29,7 +29,7 @@ public final class GetWorkspaceWorkspaceProperty extends com.pulumi.resources.In
      * 
      */
     @Import(name="rootVolumeSizeGib", required=true)
-      private final Integer rootVolumeSizeGib;
+    private Integer rootVolumeSizeGib;
 
     public Integer rootVolumeSizeGib() {
         return this.rootVolumeSizeGib;
@@ -40,7 +40,7 @@ public final class GetWorkspaceWorkspaceProperty extends com.pulumi.resources.In
      * 
      */
     @Import(name="runningMode", required=true)
-      private final String runningMode;
+    private String runningMode;
 
     public String runningMode() {
         return this.runningMode;
@@ -51,7 +51,7 @@ public final class GetWorkspaceWorkspaceProperty extends com.pulumi.resources.In
      * 
      */
     @Import(name="runningModeAutoStopTimeoutInMinutes", required=true)
-      private final Integer runningModeAutoStopTimeoutInMinutes;
+    private Integer runningModeAutoStopTimeoutInMinutes;
 
     public Integer runningModeAutoStopTimeoutInMinutes() {
         return this.runningModeAutoStopTimeoutInMinutes;
@@ -62,82 +62,73 @@ public final class GetWorkspaceWorkspaceProperty extends com.pulumi.resources.In
      * 
      */
     @Import(name="userVolumeSizeGib", required=true)
-      private final Integer userVolumeSizeGib;
+    private Integer userVolumeSizeGib;
 
     public Integer userVolumeSizeGib() {
         return this.userVolumeSizeGib;
     }
 
-    public GetWorkspaceWorkspaceProperty(
-        String computeTypeName,
-        Integer rootVolumeSizeGib,
-        String runningMode,
-        Integer runningModeAutoStopTimeoutInMinutes,
-        Integer userVolumeSizeGib) {
-        this.computeTypeName = Objects.requireNonNull(computeTypeName, "expected parameter 'computeTypeName' to be non-null");
-        this.rootVolumeSizeGib = Objects.requireNonNull(rootVolumeSizeGib, "expected parameter 'rootVolumeSizeGib' to be non-null");
-        this.runningMode = Objects.requireNonNull(runningMode, "expected parameter 'runningMode' to be non-null");
-        this.runningModeAutoStopTimeoutInMinutes = Objects.requireNonNull(runningModeAutoStopTimeoutInMinutes, "expected parameter 'runningModeAutoStopTimeoutInMinutes' to be non-null");
-        this.userVolumeSizeGib = Objects.requireNonNull(userVolumeSizeGib, "expected parameter 'userVolumeSizeGib' to be non-null");
-    }
+    private GetWorkspaceWorkspaceProperty() {}
 
-    private GetWorkspaceWorkspaceProperty() {
-        this.computeTypeName = null;
-        this.rootVolumeSizeGib = null;
-        this.runningMode = null;
-        this.runningModeAutoStopTimeoutInMinutes = null;
-        this.userVolumeSizeGib = null;
+    private GetWorkspaceWorkspaceProperty(GetWorkspaceWorkspaceProperty $) {
+        this.computeTypeName = $.computeTypeName;
+        this.rootVolumeSizeGib = $.rootVolumeSizeGib;
+        this.runningMode = $.runningMode;
+        this.runningModeAutoStopTimeoutInMinutes = $.runningModeAutoStopTimeoutInMinutes;
+        this.userVolumeSizeGib = $.userVolumeSizeGib;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetWorkspaceWorkspaceProperty defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String computeTypeName;
-        private Integer rootVolumeSizeGib;
-        private String runningMode;
-        private Integer runningModeAutoStopTimeoutInMinutes;
-        private Integer userVolumeSizeGib;
+        private GetWorkspaceWorkspaceProperty $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetWorkspaceWorkspaceProperty();
         }
 
         public Builder(GetWorkspaceWorkspaceProperty defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.computeTypeName = defaults.computeTypeName;
-    	      this.rootVolumeSizeGib = defaults.rootVolumeSizeGib;
-    	      this.runningMode = defaults.runningMode;
-    	      this.runningModeAutoStopTimeoutInMinutes = defaults.runningModeAutoStopTimeoutInMinutes;
-    	      this.userVolumeSizeGib = defaults.userVolumeSizeGib;
+            $ = new GetWorkspaceWorkspaceProperty(Objects.requireNonNull(defaults));
         }
 
         public Builder computeTypeName(String computeTypeName) {
-            this.computeTypeName = Objects.requireNonNull(computeTypeName);
+            $.computeTypeName = computeTypeName;
             return this;
         }
+
         public Builder rootVolumeSizeGib(Integer rootVolumeSizeGib) {
-            this.rootVolumeSizeGib = Objects.requireNonNull(rootVolumeSizeGib);
+            $.rootVolumeSizeGib = rootVolumeSizeGib;
             return this;
         }
+
         public Builder runningMode(String runningMode) {
-            this.runningMode = Objects.requireNonNull(runningMode);
+            $.runningMode = runningMode;
             return this;
         }
+
         public Builder runningModeAutoStopTimeoutInMinutes(Integer runningModeAutoStopTimeoutInMinutes) {
-            this.runningModeAutoStopTimeoutInMinutes = Objects.requireNonNull(runningModeAutoStopTimeoutInMinutes);
+            $.runningModeAutoStopTimeoutInMinutes = runningModeAutoStopTimeoutInMinutes;
             return this;
         }
+
         public Builder userVolumeSizeGib(Integer userVolumeSizeGib) {
-            this.userVolumeSizeGib = Objects.requireNonNull(userVolumeSizeGib);
+            $.userVolumeSizeGib = userVolumeSizeGib;
             return this;
-        }        public GetWorkspaceWorkspaceProperty build() {
-            return new GetWorkspaceWorkspaceProperty(computeTypeName, rootVolumeSizeGib, runningMode, runningModeAutoStopTimeoutInMinutes, userVolumeSizeGib);
+        }
+
+        public GetWorkspaceWorkspaceProperty build() {
+            $.computeTypeName = Objects.requireNonNull($.computeTypeName, "expected parameter 'computeTypeName' to be non-null");
+            $.rootVolumeSizeGib = Objects.requireNonNull($.rootVolumeSizeGib, "expected parameter 'rootVolumeSizeGib' to be non-null");
+            $.runningMode = Objects.requireNonNull($.runningMode, "expected parameter 'runningMode' to be non-null");
+            $.runningModeAutoStopTimeoutInMinutes = Objects.requireNonNull($.runningModeAutoStopTimeoutInMinutes, "expected parameter 'runningModeAutoStopTimeoutInMinutes' to be non-null");
+            $.userVolumeSizeGib = Objects.requireNonNull($.userVolumeSizeGib, "expected parameter 'userVolumeSizeGib' to be non-null");
+            return $;
         }
     }
+
 }

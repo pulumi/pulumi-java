@@ -5,11 +5,11 @@ package com.pulumi.aws.codedeploy.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class ApplicationState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="applicationId")
-      private final @Nullable Output<String> applicationId;
+    private @Nullable Output<String> applicationId;
 
-    public Output<String> applicationId() {
-        return this.applicationId == null ? Codegen.empty() : this.applicationId;
+    public Optional<Output<String>> applicationId() {
+        return Optional.ofNullable(this.applicationId);
     }
 
     /**
@@ -33,10 +33,10 @@ public final class ApplicationState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="arn")
-      private final @Nullable Output<String> arn;
+    private @Nullable Output<String> arn;
 
-    public Output<String> arn() {
-        return this.arn == null ? Codegen.empty() : this.arn;
+    public Optional<Output<String>> arn() {
+        return Optional.ofNullable(this.arn);
     }
 
     /**
@@ -44,10 +44,10 @@ public final class ApplicationState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="computePlatform")
-      private final @Nullable Output<String> computePlatform;
+    private @Nullable Output<String> computePlatform;
 
-    public Output<String> computePlatform() {
-        return this.computePlatform == null ? Codegen.empty() : this.computePlatform;
+    public Optional<Output<String>> computePlatform() {
+        return Optional.ofNullable(this.computePlatform);
     }
 
     /**
@@ -55,10 +55,10 @@ public final class ApplicationState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="githubAccountName")
-      private final @Nullable Output<String> githubAccountName;
+    private @Nullable Output<String> githubAccountName;
 
-    public Output<String> githubAccountName() {
-        return this.githubAccountName == null ? Codegen.empty() : this.githubAccountName;
+    public Optional<Output<String>> githubAccountName() {
+        return Optional.ofNullable(this.githubAccountName);
     }
 
     /**
@@ -66,10 +66,10 @@ public final class ApplicationState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="linkedToGithub")
-      private final @Nullable Output<Boolean> linkedToGithub;
+    private @Nullable Output<Boolean> linkedToGithub;
 
-    public Output<Boolean> linkedToGithub() {
-        return this.linkedToGithub == null ? Codegen.empty() : this.linkedToGithub;
+    public Optional<Output<Boolean>> linkedToGithub() {
+        return Optional.ofNullable(this.linkedToGithub);
     }
 
     /**
@@ -77,10 +77,10 @@ public final class ApplicationState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -88,10 +88,10 @@ public final class ApplicationState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -99,141 +99,118 @@ public final class ApplicationState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tagsAll")
-      private final @Nullable Output<Map<String,String>> tagsAll;
+    private @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> tagsAll() {
-        return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
+    public Optional<Output<Map<String,String>>> tagsAll() {
+        return Optional.ofNullable(this.tagsAll);
     }
 
-    public ApplicationState(
-        @Nullable Output<String> applicationId,
-        @Nullable Output<String> arn,
-        @Nullable Output<String> computePlatform,
-        @Nullable Output<String> githubAccountName,
-        @Nullable Output<Boolean> linkedToGithub,
-        @Nullable Output<String> name,
-        @Nullable Output<Map<String,String>> tags,
-        @Nullable Output<Map<String,String>> tagsAll) {
-        this.applicationId = applicationId;
-        this.arn = arn;
-        this.computePlatform = computePlatform;
-        this.githubAccountName = githubAccountName;
-        this.linkedToGithub = linkedToGithub;
-        this.name = name;
-        this.tags = tags;
-        this.tagsAll = tagsAll;
-    }
+    private ApplicationState() {}
 
-    private ApplicationState() {
-        this.applicationId = Codegen.empty();
-        this.arn = Codegen.empty();
-        this.computePlatform = Codegen.empty();
-        this.githubAccountName = Codegen.empty();
-        this.linkedToGithub = Codegen.empty();
-        this.name = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.tagsAll = Codegen.empty();
+    private ApplicationState(ApplicationState $) {
+        this.applicationId = $.applicationId;
+        this.arn = $.arn;
+        this.computePlatform = $.computePlatform;
+        this.githubAccountName = $.githubAccountName;
+        this.linkedToGithub = $.linkedToGithub;
+        this.name = $.name;
+        this.tags = $.tags;
+        this.tagsAll = $.tagsAll;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ApplicationState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> applicationId;
-        private @Nullable Output<String> arn;
-        private @Nullable Output<String> computePlatform;
-        private @Nullable Output<String> githubAccountName;
-        private @Nullable Output<Boolean> linkedToGithub;
-        private @Nullable Output<String> name;
-        private @Nullable Output<Map<String,String>> tags;
-        private @Nullable Output<Map<String,String>> tagsAll;
+        private ApplicationState $;
 
         public Builder() {
-    	      // Empty
+            $ = new ApplicationState();
         }
 
         public Builder(ApplicationState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.applicationId = defaults.applicationId;
-    	      this.arn = defaults.arn;
-    	      this.computePlatform = defaults.computePlatform;
-    	      this.githubAccountName = defaults.githubAccountName;
-    	      this.linkedToGithub = defaults.linkedToGithub;
-    	      this.name = defaults.name;
-    	      this.tags = defaults.tags;
-    	      this.tagsAll = defaults.tagsAll;
+            $ = new ApplicationState(Objects.requireNonNull(defaults));
         }
 
         public Builder applicationId(@Nullable Output<String> applicationId) {
-            this.applicationId = applicationId;
+            $.applicationId = applicationId;
             return this;
         }
-        public Builder applicationId(@Nullable String applicationId) {
-            this.applicationId = Codegen.ofNullable(applicationId);
-            return this;
+
+        public Builder applicationId(String applicationId) {
+            return applicationId(Output.of(applicationId));
         }
+
         public Builder arn(@Nullable Output<String> arn) {
-            this.arn = arn;
+            $.arn = arn;
             return this;
         }
-        public Builder arn(@Nullable String arn) {
-            this.arn = Codegen.ofNullable(arn);
-            return this;
+
+        public Builder arn(String arn) {
+            return arn(Output.of(arn));
         }
+
         public Builder computePlatform(@Nullable Output<String> computePlatform) {
-            this.computePlatform = computePlatform;
+            $.computePlatform = computePlatform;
             return this;
         }
-        public Builder computePlatform(@Nullable String computePlatform) {
-            this.computePlatform = Codegen.ofNullable(computePlatform);
-            return this;
+
+        public Builder computePlatform(String computePlatform) {
+            return computePlatform(Output.of(computePlatform));
         }
+
         public Builder githubAccountName(@Nullable Output<String> githubAccountName) {
-            this.githubAccountName = githubAccountName;
+            $.githubAccountName = githubAccountName;
             return this;
         }
-        public Builder githubAccountName(@Nullable String githubAccountName) {
-            this.githubAccountName = Codegen.ofNullable(githubAccountName);
-            return this;
+
+        public Builder githubAccountName(String githubAccountName) {
+            return githubAccountName(Output.of(githubAccountName));
         }
+
         public Builder linkedToGithub(@Nullable Output<Boolean> linkedToGithub) {
-            this.linkedToGithub = linkedToGithub;
+            $.linkedToGithub = linkedToGithub;
             return this;
         }
-        public Builder linkedToGithub(@Nullable Boolean linkedToGithub) {
-            this.linkedToGithub = Codegen.ofNullable(linkedToGithub);
-            return this;
+
+        public Builder linkedToGithub(Boolean linkedToGithub) {
+            return linkedToGithub(Output.of(linkedToGithub));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
-            this.tagsAll = tagsAll;
+            $.tagsAll = tagsAll;
             return this;
         }
-        public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Codegen.ofNullable(tagsAll);
-            return this;
-        }        public ApplicationState build() {
-            return new ApplicationState(applicationId, arn, computePlatform, githubAccountName, linkedToGithub, name, tags, tagsAll);
+
+        public Builder tagsAll(Map<String,String> tagsAll) {
+            return tagsAll(Output.of(tagsAll));
+        }
+
+        public ApplicationState build() {
+            return $;
         }
     }
+
 }

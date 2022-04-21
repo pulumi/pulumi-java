@@ -23,7 +23,7 @@ public final class ContentKeyPolicySymmetricTokenKeyArgs extends com.pulumi.reso
      * 
      */
     @Import(name="keyValue", required=true)
-      private final Output<String> keyValue;
+    private Output<String> keyValue;
 
     public Output<String> keyValue() {
         return this.keyValue;
@@ -35,63 +35,60 @@ public final class ContentKeyPolicySymmetricTokenKeyArgs extends com.pulumi.reso
      * 
      */
     @Import(name="odataType", required=true)
-      private final Output<String> odataType;
+    private Output<String> odataType;
 
     public Output<String> odataType() {
         return this.odataType;
     }
 
-    public ContentKeyPolicySymmetricTokenKeyArgs(
-        Output<String> keyValue,
-        Output<String> odataType) {
-        this.keyValue = Objects.requireNonNull(keyValue, "expected parameter 'keyValue' to be non-null");
-        this.odataType = Codegen.stringProp("odataType").output().arg(odataType).require();
-    }
+    private ContentKeyPolicySymmetricTokenKeyArgs() {}
 
-    private ContentKeyPolicySymmetricTokenKeyArgs() {
-        this.keyValue = Codegen.empty();
-        this.odataType = Codegen.empty();
+    private ContentKeyPolicySymmetricTokenKeyArgs(ContentKeyPolicySymmetricTokenKeyArgs $) {
+        this.keyValue = $.keyValue;
+        this.odataType = $.odataType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ContentKeyPolicySymmetricTokenKeyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> keyValue;
-        private Output<String> odataType;
+        private ContentKeyPolicySymmetricTokenKeyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ContentKeyPolicySymmetricTokenKeyArgs();
         }
 
         public Builder(ContentKeyPolicySymmetricTokenKeyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.keyValue = defaults.keyValue;
-    	      this.odataType = defaults.odataType;
+            $ = new ContentKeyPolicySymmetricTokenKeyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder keyValue(Output<String> keyValue) {
-            this.keyValue = Objects.requireNonNull(keyValue);
+            $.keyValue = keyValue;
             return this;
         }
+
         public Builder keyValue(String keyValue) {
-            this.keyValue = Output.of(Objects.requireNonNull(keyValue));
-            return this;
+            return keyValue(Output.of(keyValue));
         }
+
         public Builder odataType(Output<String> odataType) {
-            this.odataType = Objects.requireNonNull(odataType);
+            $.odataType = odataType;
             return this;
         }
+
         public Builder odataType(String odataType) {
-            this.odataType = Output.of(Objects.requireNonNull(odataType));
-            return this;
-        }        public ContentKeyPolicySymmetricTokenKeyArgs build() {
-            return new ContentKeyPolicySymmetricTokenKeyArgs(keyValue, odataType);
+            return odataType(Output.of(odataType));
+        }
+
+        public ContentKeyPolicySymmetricTokenKeyArgs build() {
+            $.keyValue = Objects.requireNonNull($.keyValue, "expected parameter 'keyValue' to be non-null");
+            $.odataType = Codegen.stringProp("odataType").output().arg($.odataType).require();
+            return $;
         }
     }
+
 }

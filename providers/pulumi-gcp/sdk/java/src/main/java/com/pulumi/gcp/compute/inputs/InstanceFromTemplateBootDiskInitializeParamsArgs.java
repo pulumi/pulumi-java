@@ -5,12 +5,12 @@ package com.pulumi.gcp.compute.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -19,110 +19,99 @@ public final class InstanceFromTemplateBootDiskInitializeParamsArgs extends com.
     public static final InstanceFromTemplateBootDiskInitializeParamsArgs Empty = new InstanceFromTemplateBootDiskInitializeParamsArgs();
 
     @Import(name="image")
-      private final @Nullable Output<String> image;
+    private @Nullable Output<String> image;
 
-    public Output<String> image() {
-        return this.image == null ? Codegen.empty() : this.image;
+    public Optional<Output<String>> image() {
+        return Optional.ofNullable(this.image);
     }
 
     @Import(name="labels")
-      private final @Nullable Output<Map<String,Object>> labels;
+    private @Nullable Output<Map<String,Object>> labels;
 
-    public Output<Map<String,Object>> labels() {
-        return this.labels == null ? Codegen.empty() : this.labels;
+    public Optional<Output<Map<String,Object>>> labels() {
+        return Optional.ofNullable(this.labels);
     }
 
     @Import(name="size")
-      private final @Nullable Output<Integer> size;
+    private @Nullable Output<Integer> size;
 
-    public Output<Integer> size() {
-        return this.size == null ? Codegen.empty() : this.size;
+    public Optional<Output<Integer>> size() {
+        return Optional.ofNullable(this.size);
     }
 
     @Import(name="type")
-      private final @Nullable Output<String> type;
+    private @Nullable Output<String> type;
 
-    public Output<String> type() {
-        return this.type == null ? Codegen.empty() : this.type;
+    public Optional<Output<String>> type() {
+        return Optional.ofNullable(this.type);
     }
 
-    public InstanceFromTemplateBootDiskInitializeParamsArgs(
-        @Nullable Output<String> image,
-        @Nullable Output<Map<String,Object>> labels,
-        @Nullable Output<Integer> size,
-        @Nullable Output<String> type) {
-        this.image = image;
-        this.labels = labels;
-        this.size = size;
-        this.type = type;
-    }
+    private InstanceFromTemplateBootDiskInitializeParamsArgs() {}
 
-    private InstanceFromTemplateBootDiskInitializeParamsArgs() {
-        this.image = Codegen.empty();
-        this.labels = Codegen.empty();
-        this.size = Codegen.empty();
-        this.type = Codegen.empty();
+    private InstanceFromTemplateBootDiskInitializeParamsArgs(InstanceFromTemplateBootDiskInitializeParamsArgs $) {
+        this.image = $.image;
+        this.labels = $.labels;
+        this.size = $.size;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(InstanceFromTemplateBootDiskInitializeParamsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> image;
-        private @Nullable Output<Map<String,Object>> labels;
-        private @Nullable Output<Integer> size;
-        private @Nullable Output<String> type;
+        private InstanceFromTemplateBootDiskInitializeParamsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new InstanceFromTemplateBootDiskInitializeParamsArgs();
         }
 
         public Builder(InstanceFromTemplateBootDiskInitializeParamsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.image = defaults.image;
-    	      this.labels = defaults.labels;
-    	      this.size = defaults.size;
-    	      this.type = defaults.type;
+            $ = new InstanceFromTemplateBootDiskInitializeParamsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder image(@Nullable Output<String> image) {
-            this.image = image;
+            $.image = image;
             return this;
         }
-        public Builder image(@Nullable String image) {
-            this.image = Codegen.ofNullable(image);
-            return this;
+
+        public Builder image(String image) {
+            return image(Output.of(image));
         }
+
         public Builder labels(@Nullable Output<Map<String,Object>> labels) {
-            this.labels = labels;
+            $.labels = labels;
             return this;
         }
-        public Builder labels(@Nullable Map<String,Object> labels) {
-            this.labels = Codegen.ofNullable(labels);
-            return this;
+
+        public Builder labels(Map<String,Object> labels) {
+            return labels(Output.of(labels));
         }
+
         public Builder size(@Nullable Output<Integer> size) {
-            this.size = size;
+            $.size = size;
             return this;
         }
-        public Builder size(@Nullable Integer size) {
-            this.size = Codegen.ofNullable(size);
-            return this;
+
+        public Builder size(Integer size) {
+            return size(Output.of(size));
         }
+
         public Builder type(@Nullable Output<String> type) {
-            this.type = type;
+            $.type = type;
             return this;
         }
-        public Builder type(@Nullable String type) {
-            this.type = Codegen.ofNullable(type);
-            return this;
-        }        public InstanceFromTemplateBootDiskInitializeParamsArgs build() {
-            return new InstanceFromTemplateBootDiskInitializeParamsArgs(image, labels, size, type);
+
+        public Builder type(String type) {
+            return type(Output.of(type));
+        }
+
+        public InstanceFromTemplateBootDiskInitializeParamsArgs build() {
+            return $;
         }
     }
+
 }

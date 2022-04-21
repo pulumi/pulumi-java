@@ -5,13 +5,13 @@ package com.pulumi.gcp.cloudidentity.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.cloudidentity.inputs.GroupMembershipMemberKeyGetArgs;
 import com.pulumi.gcp.cloudidentity.inputs.GroupMembershipPreferredMemberKeyGetArgs;
 import com.pulumi.gcp.cloudidentity.inputs.GroupMembershipRoleGetArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class GroupMembershipState extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="createTime")
-      private final @Nullable Output<String> createTime;
+    private @Nullable Output<String> createTime;
 
-    public Output<String> createTime() {
-        return this.createTime == null ? Codegen.empty() : this.createTime;
+    public Optional<Output<String>> createTime() {
+        return Optional.ofNullable(this.createTime);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class GroupMembershipState extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="group")
-      private final @Nullable Output<String> group;
+    private @Nullable Output<String> group;
 
-    public Output<String> group() {
-        return this.group == null ? Codegen.empty() : this.group;
+    public Optional<Output<String>> group() {
+        return Optional.ofNullable(this.group);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class GroupMembershipState extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="memberKey")
-      private final @Nullable Output<GroupMembershipMemberKeyGetArgs> memberKey;
+    private @Nullable Output<GroupMembershipMemberKeyGetArgs> memberKey;
 
-    public Output<GroupMembershipMemberKeyGetArgs> memberKey() {
-        return this.memberKey == null ? Codegen.empty() : this.memberKey;
+    public Optional<Output<GroupMembershipMemberKeyGetArgs>> memberKey() {
+        return Optional.ofNullable(this.memberKey);
     }
 
     /**
@@ -59,10 +59,10 @@ public final class GroupMembershipState extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -71,10 +71,10 @@ public final class GroupMembershipState extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="preferredMemberKey")
-      private final @Nullable Output<GroupMembershipPreferredMemberKeyGetArgs> preferredMemberKey;
+    private @Nullable Output<GroupMembershipPreferredMemberKeyGetArgs> preferredMemberKey;
 
-    public Output<GroupMembershipPreferredMemberKeyGetArgs> preferredMemberKey() {
-        return this.preferredMemberKey == null ? Codegen.empty() : this.preferredMemberKey;
+    public Optional<Output<GroupMembershipPreferredMemberKeyGetArgs>> preferredMemberKey() {
+        return Optional.ofNullable(this.preferredMemberKey);
     }
 
     /**
@@ -84,10 +84,10 @@ public final class GroupMembershipState extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="roles")
-      private final @Nullable Output<List<GroupMembershipRoleGetArgs>> roles;
+    private @Nullable Output<List<GroupMembershipRoleGetArgs>> roles;
 
-    public Output<List<GroupMembershipRoleGetArgs>> roles() {
-        return this.roles == null ? Codegen.empty() : this.roles;
+    public Optional<Output<List<GroupMembershipRoleGetArgs>>> roles() {
+        return Optional.ofNullable(this.roles);
     }
 
     /**
@@ -95,10 +95,10 @@ public final class GroupMembershipState extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="type")
-      private final @Nullable Output<String> type;
+    private @Nullable Output<String> type;
 
-    public Output<String> type() {
-        return this.type == null ? Codegen.empty() : this.type;
+    public Optional<Output<String>> type() {
+        return Optional.ofNullable(this.type);
     }
 
     /**
@@ -106,144 +106,122 @@ public final class GroupMembershipState extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="updateTime")
-      private final @Nullable Output<String> updateTime;
+    private @Nullable Output<String> updateTime;
 
-    public Output<String> updateTime() {
-        return this.updateTime == null ? Codegen.empty() : this.updateTime;
+    public Optional<Output<String>> updateTime() {
+        return Optional.ofNullable(this.updateTime);
     }
 
-    public GroupMembershipState(
-        @Nullable Output<String> createTime,
-        @Nullable Output<String> group,
-        @Nullable Output<GroupMembershipMemberKeyGetArgs> memberKey,
-        @Nullable Output<String> name,
-        @Nullable Output<GroupMembershipPreferredMemberKeyGetArgs> preferredMemberKey,
-        @Nullable Output<List<GroupMembershipRoleGetArgs>> roles,
-        @Nullable Output<String> type,
-        @Nullable Output<String> updateTime) {
-        this.createTime = createTime;
-        this.group = group;
-        this.memberKey = memberKey;
-        this.name = name;
-        this.preferredMemberKey = preferredMemberKey;
-        this.roles = roles;
-        this.type = type;
-        this.updateTime = updateTime;
-    }
+    private GroupMembershipState() {}
 
-    private GroupMembershipState() {
-        this.createTime = Codegen.empty();
-        this.group = Codegen.empty();
-        this.memberKey = Codegen.empty();
-        this.name = Codegen.empty();
-        this.preferredMemberKey = Codegen.empty();
-        this.roles = Codegen.empty();
-        this.type = Codegen.empty();
-        this.updateTime = Codegen.empty();
+    private GroupMembershipState(GroupMembershipState $) {
+        this.createTime = $.createTime;
+        this.group = $.group;
+        this.memberKey = $.memberKey;
+        this.name = $.name;
+        this.preferredMemberKey = $.preferredMemberKey;
+        this.roles = $.roles;
+        this.type = $.type;
+        this.updateTime = $.updateTime;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GroupMembershipState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> createTime;
-        private @Nullable Output<String> group;
-        private @Nullable Output<GroupMembershipMemberKeyGetArgs> memberKey;
-        private @Nullable Output<String> name;
-        private @Nullable Output<GroupMembershipPreferredMemberKeyGetArgs> preferredMemberKey;
-        private @Nullable Output<List<GroupMembershipRoleGetArgs>> roles;
-        private @Nullable Output<String> type;
-        private @Nullable Output<String> updateTime;
+        private GroupMembershipState $;
 
         public Builder() {
-    	      // Empty
+            $ = new GroupMembershipState();
         }
 
         public Builder(GroupMembershipState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.createTime = defaults.createTime;
-    	      this.group = defaults.group;
-    	      this.memberKey = defaults.memberKey;
-    	      this.name = defaults.name;
-    	      this.preferredMemberKey = defaults.preferredMemberKey;
-    	      this.roles = defaults.roles;
-    	      this.type = defaults.type;
-    	      this.updateTime = defaults.updateTime;
+            $ = new GroupMembershipState(Objects.requireNonNull(defaults));
         }
 
         public Builder createTime(@Nullable Output<String> createTime) {
-            this.createTime = createTime;
+            $.createTime = createTime;
             return this;
         }
-        public Builder createTime(@Nullable String createTime) {
-            this.createTime = Codegen.ofNullable(createTime);
-            return this;
+
+        public Builder createTime(String createTime) {
+            return createTime(Output.of(createTime));
         }
+
         public Builder group(@Nullable Output<String> group) {
-            this.group = group;
+            $.group = group;
             return this;
         }
-        public Builder group(@Nullable String group) {
-            this.group = Codegen.ofNullable(group);
-            return this;
+
+        public Builder group(String group) {
+            return group(Output.of(group));
         }
+
         public Builder memberKey(@Nullable Output<GroupMembershipMemberKeyGetArgs> memberKey) {
-            this.memberKey = memberKey;
+            $.memberKey = memberKey;
             return this;
         }
-        public Builder memberKey(@Nullable GroupMembershipMemberKeyGetArgs memberKey) {
-            this.memberKey = Codegen.ofNullable(memberKey);
-            return this;
+
+        public Builder memberKey(GroupMembershipMemberKeyGetArgs memberKey) {
+            return memberKey(Output.of(memberKey));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder preferredMemberKey(@Nullable Output<GroupMembershipPreferredMemberKeyGetArgs> preferredMemberKey) {
-            this.preferredMemberKey = preferredMemberKey;
+            $.preferredMemberKey = preferredMemberKey;
             return this;
         }
-        public Builder preferredMemberKey(@Nullable GroupMembershipPreferredMemberKeyGetArgs preferredMemberKey) {
-            this.preferredMemberKey = Codegen.ofNullable(preferredMemberKey);
-            return this;
+
+        public Builder preferredMemberKey(GroupMembershipPreferredMemberKeyGetArgs preferredMemberKey) {
+            return preferredMemberKey(Output.of(preferredMemberKey));
         }
+
         public Builder roles(@Nullable Output<List<GroupMembershipRoleGetArgs>> roles) {
-            this.roles = roles;
+            $.roles = roles;
             return this;
         }
-        public Builder roles(@Nullable List<GroupMembershipRoleGetArgs> roles) {
-            this.roles = Codegen.ofNullable(roles);
-            return this;
+
+        public Builder roles(List<GroupMembershipRoleGetArgs> roles) {
+            return roles(Output.of(roles));
         }
+
         public Builder roles(GroupMembershipRoleGetArgs... roles) {
             return roles(List.of(roles));
         }
+
         public Builder type(@Nullable Output<String> type) {
-            this.type = type;
+            $.type = type;
             return this;
         }
-        public Builder type(@Nullable String type) {
-            this.type = Codegen.ofNullable(type);
-            return this;
+
+        public Builder type(String type) {
+            return type(Output.of(type));
         }
+
         public Builder updateTime(@Nullable Output<String> updateTime) {
-            this.updateTime = updateTime;
+            $.updateTime = updateTime;
             return this;
         }
-        public Builder updateTime(@Nullable String updateTime) {
-            this.updateTime = Codegen.ofNullable(updateTime);
-            return this;
-        }        public GroupMembershipState build() {
-            return new GroupMembershipState(createTime, group, memberKey, name, preferredMemberKey, roles, type, updateTime);
+
+        public Builder updateTime(String updateTime) {
+            return updateTime(Output.of(updateTime));
+        }
+
+        public GroupMembershipState build() {
+            return $;
         }
     }
+
 }

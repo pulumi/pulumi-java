@@ -13,45 +13,45 @@ public final class DatasetSchedule extends com.pulumi.resources.InvokeArgs {
     public static final DatasetSchedule Empty = new DatasetSchedule();
 
     @Import(name="scheduleExpression", required=true)
-      private final String scheduleExpression;
+    private String scheduleExpression;
 
     public String scheduleExpression() {
         return this.scheduleExpression;
     }
 
-    public DatasetSchedule(String scheduleExpression) {
-        this.scheduleExpression = Objects.requireNonNull(scheduleExpression, "expected parameter 'scheduleExpression' to be non-null");
-    }
+    private DatasetSchedule() {}
 
-    private DatasetSchedule() {
-        this.scheduleExpression = null;
+    private DatasetSchedule(DatasetSchedule $) {
+        this.scheduleExpression = $.scheduleExpression;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DatasetSchedule defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String scheduleExpression;
+        private DatasetSchedule $;
 
         public Builder() {
-    	      // Empty
+            $ = new DatasetSchedule();
         }
 
         public Builder(DatasetSchedule defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.scheduleExpression = defaults.scheduleExpression;
+            $ = new DatasetSchedule(Objects.requireNonNull(defaults));
         }
 
         public Builder scheduleExpression(String scheduleExpression) {
-            this.scheduleExpression = Objects.requireNonNull(scheduleExpression);
+            $.scheduleExpression = scheduleExpression;
             return this;
-        }        public DatasetSchedule build() {
-            return new DatasetSchedule(scheduleExpression);
+        }
+
+        public DatasetSchedule build() {
+            $.scheduleExpression = Objects.requireNonNull($.scheduleExpression, "expected parameter 'scheduleExpression' to be non-null");
+            return $;
         }
     }
+
 }

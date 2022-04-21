@@ -23,7 +23,7 @@ public final class GoogleCloudMlV1__ExplanationConfigResponse extends com.pulumi
      * 
      */
     @Import(name="integratedGradientsAttribution", required=true)
-      private final GoogleCloudMlV1__IntegratedGradientsAttributionResponse integratedGradientsAttribution;
+    private GoogleCloudMlV1__IntegratedGradientsAttributionResponse integratedGradientsAttribution;
 
     public GoogleCloudMlV1__IntegratedGradientsAttributionResponse integratedGradientsAttribution() {
         return this.integratedGradientsAttribution;
@@ -34,7 +34,7 @@ public final class GoogleCloudMlV1__ExplanationConfigResponse extends com.pulumi
      * 
      */
     @Import(name="sampledShapleyAttribution", required=true)
-      private final GoogleCloudMlV1__SampledShapleyAttributionResponse sampledShapleyAttribution;
+    private GoogleCloudMlV1__SampledShapleyAttributionResponse sampledShapleyAttribution;
 
     public GoogleCloudMlV1__SampledShapleyAttributionResponse sampledShapleyAttribution() {
         return this.sampledShapleyAttribution;
@@ -45,64 +45,59 @@ public final class GoogleCloudMlV1__ExplanationConfigResponse extends com.pulumi
      * 
      */
     @Import(name="xraiAttribution", required=true)
-      private final GoogleCloudMlV1__XraiAttributionResponse xraiAttribution;
+    private GoogleCloudMlV1__XraiAttributionResponse xraiAttribution;
 
     public GoogleCloudMlV1__XraiAttributionResponse xraiAttribution() {
         return this.xraiAttribution;
     }
 
-    public GoogleCloudMlV1__ExplanationConfigResponse(
-        GoogleCloudMlV1__IntegratedGradientsAttributionResponse integratedGradientsAttribution,
-        GoogleCloudMlV1__SampledShapleyAttributionResponse sampledShapleyAttribution,
-        GoogleCloudMlV1__XraiAttributionResponse xraiAttribution) {
-        this.integratedGradientsAttribution = Objects.requireNonNull(integratedGradientsAttribution, "expected parameter 'integratedGradientsAttribution' to be non-null");
-        this.sampledShapleyAttribution = Objects.requireNonNull(sampledShapleyAttribution, "expected parameter 'sampledShapleyAttribution' to be non-null");
-        this.xraiAttribution = Objects.requireNonNull(xraiAttribution, "expected parameter 'xraiAttribution' to be non-null");
-    }
+    private GoogleCloudMlV1__ExplanationConfigResponse() {}
 
-    private GoogleCloudMlV1__ExplanationConfigResponse() {
-        this.integratedGradientsAttribution = null;
-        this.sampledShapleyAttribution = null;
-        this.xraiAttribution = null;
+    private GoogleCloudMlV1__ExplanationConfigResponse(GoogleCloudMlV1__ExplanationConfigResponse $) {
+        this.integratedGradientsAttribution = $.integratedGradientsAttribution;
+        this.sampledShapleyAttribution = $.sampledShapleyAttribution;
+        this.xraiAttribution = $.xraiAttribution;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudMlV1__ExplanationConfigResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private GoogleCloudMlV1__IntegratedGradientsAttributionResponse integratedGradientsAttribution;
-        private GoogleCloudMlV1__SampledShapleyAttributionResponse sampledShapleyAttribution;
-        private GoogleCloudMlV1__XraiAttributionResponse xraiAttribution;
+        private GoogleCloudMlV1__ExplanationConfigResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudMlV1__ExplanationConfigResponse();
         }
 
         public Builder(GoogleCloudMlV1__ExplanationConfigResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.integratedGradientsAttribution = defaults.integratedGradientsAttribution;
-    	      this.sampledShapleyAttribution = defaults.sampledShapleyAttribution;
-    	      this.xraiAttribution = defaults.xraiAttribution;
+            $ = new GoogleCloudMlV1__ExplanationConfigResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder integratedGradientsAttribution(GoogleCloudMlV1__IntegratedGradientsAttributionResponse integratedGradientsAttribution) {
-            this.integratedGradientsAttribution = Objects.requireNonNull(integratedGradientsAttribution);
+            $.integratedGradientsAttribution = integratedGradientsAttribution;
             return this;
         }
+
         public Builder sampledShapleyAttribution(GoogleCloudMlV1__SampledShapleyAttributionResponse sampledShapleyAttribution) {
-            this.sampledShapleyAttribution = Objects.requireNonNull(sampledShapleyAttribution);
+            $.sampledShapleyAttribution = sampledShapleyAttribution;
             return this;
         }
+
         public Builder xraiAttribution(GoogleCloudMlV1__XraiAttributionResponse xraiAttribution) {
-            this.xraiAttribution = Objects.requireNonNull(xraiAttribution);
+            $.xraiAttribution = xraiAttribution;
             return this;
-        }        public GoogleCloudMlV1__ExplanationConfigResponse build() {
-            return new GoogleCloudMlV1__ExplanationConfigResponse(integratedGradientsAttribution, sampledShapleyAttribution, xraiAttribution);
+        }
+
+        public GoogleCloudMlV1__ExplanationConfigResponse build() {
+            $.integratedGradientsAttribution = Objects.requireNonNull($.integratedGradientsAttribution, "expected parameter 'integratedGradientsAttribution' to be non-null");
+            $.sampledShapleyAttribution = Objects.requireNonNull($.sampledShapleyAttribution, "expected parameter 'sampledShapleyAttribution' to be non-null");
+            $.xraiAttribution = Objects.requireNonNull($.xraiAttribution, "expected parameter 'xraiAttribution' to be non-null");
+            return $;
         }
     }
+
 }

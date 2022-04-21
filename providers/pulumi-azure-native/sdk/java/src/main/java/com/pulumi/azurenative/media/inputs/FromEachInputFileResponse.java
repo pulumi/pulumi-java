@@ -32,10 +32,10 @@ public final class FromEachInputFileResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="includedTracks")
-      private final @Nullable List<Object> includedTracks;
+    private @Nullable List<Object> includedTracks;
 
-    public List<Object> includedTracks() {
-        return this.includedTracks == null ? List.of() : this.includedTracks;
+    public Optional<List<Object>> includedTracks() {
+        return Optional.ofNullable(this.includedTracks);
     }
 
     /**
@@ -44,58 +44,55 @@ public final class FromEachInputFileResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="odataType", required=true)
-      private final String odataType;
+    private String odataType;
 
     public String odataType() {
         return this.odataType;
     }
 
-    public FromEachInputFileResponse(
-        @Nullable List<Object> includedTracks,
-        String odataType) {
-        this.includedTracks = includedTracks;
-        this.odataType = Codegen.stringProp("odataType").arg(odataType).require();
-    }
+    private FromEachInputFileResponse() {}
 
-    private FromEachInputFileResponse() {
-        this.includedTracks = List.of();
-        this.odataType = null;
+    private FromEachInputFileResponse(FromEachInputFileResponse $) {
+        this.includedTracks = $.includedTracks;
+        this.odataType = $.odataType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FromEachInputFileResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<Object> includedTracks;
-        private String odataType;
+        private FromEachInputFileResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new FromEachInputFileResponse();
         }
 
         public Builder(FromEachInputFileResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.includedTracks = defaults.includedTracks;
-    	      this.odataType = defaults.odataType;
+            $ = new FromEachInputFileResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder includedTracks(@Nullable List<Object> includedTracks) {
-            this.includedTracks = includedTracks;
+            $.includedTracks = includedTracks;
             return this;
         }
+
         public Builder includedTracks(Object... includedTracks) {
             return includedTracks(List.of(includedTracks));
         }
+
         public Builder odataType(String odataType) {
-            this.odataType = Objects.requireNonNull(odataType);
+            $.odataType = odataType;
             return this;
-        }        public FromEachInputFileResponse build() {
-            return new FromEachInputFileResponse(includedTracks, odataType);
+        }
+
+        public FromEachInputFileResponse build() {
+            $.odataType = Codegen.stringProp("odataType").arg($.odataType).require();
+            return $;
         }
     }
+
 }

@@ -19,174 +19,157 @@ public final class BqmlTrainingRunTrainingOptionsResponse extends com.pulumi.res
     public static final BqmlTrainingRunTrainingOptionsResponse Empty = new BqmlTrainingRunTrainingOptionsResponse();
 
     @Import(name="earlyStop", required=true)
-      private final Boolean earlyStop;
+    private Boolean earlyStop;
 
     public Boolean earlyStop() {
         return this.earlyStop;
     }
 
     @Import(name="l1Reg", required=true)
-      private final Double l1Reg;
+    private Double l1Reg;
 
     public Double l1Reg() {
         return this.l1Reg;
     }
 
     @Import(name="l2Reg", required=true)
-      private final Double l2Reg;
+    private Double l2Reg;
 
     public Double l2Reg() {
         return this.l2Reg;
     }
 
     @Import(name="learnRate", required=true)
-      private final Double learnRate;
+    private Double learnRate;
 
     public Double learnRate() {
         return this.learnRate;
     }
 
     @Import(name="learnRateStrategy", required=true)
-      private final String learnRateStrategy;
+    private String learnRateStrategy;
 
     public String learnRateStrategy() {
         return this.learnRateStrategy;
     }
 
     @Import(name="lineSearchInitLearnRate", required=true)
-      private final Double lineSearchInitLearnRate;
+    private Double lineSearchInitLearnRate;
 
     public Double lineSearchInitLearnRate() {
         return this.lineSearchInitLearnRate;
     }
 
     @Import(name="maxIteration", required=true)
-      private final String maxIteration;
+    private String maxIteration;
 
     public String maxIteration() {
         return this.maxIteration;
     }
 
     @Import(name="minRelProgress", required=true)
-      private final Double minRelProgress;
+    private Double minRelProgress;
 
     public Double minRelProgress() {
         return this.minRelProgress;
     }
 
     @Import(name="warmStart", required=true)
-      private final Boolean warmStart;
+    private Boolean warmStart;
 
     public Boolean warmStart() {
         return this.warmStart;
     }
 
-    public BqmlTrainingRunTrainingOptionsResponse(
-        Boolean earlyStop,
-        Double l1Reg,
-        Double l2Reg,
-        Double learnRate,
-        String learnRateStrategy,
-        Double lineSearchInitLearnRate,
-        String maxIteration,
-        Double minRelProgress,
-        Boolean warmStart) {
-        this.earlyStop = Objects.requireNonNull(earlyStop, "expected parameter 'earlyStop' to be non-null");
-        this.l1Reg = Objects.requireNonNull(l1Reg, "expected parameter 'l1Reg' to be non-null");
-        this.l2Reg = Objects.requireNonNull(l2Reg, "expected parameter 'l2Reg' to be non-null");
-        this.learnRate = Objects.requireNonNull(learnRate, "expected parameter 'learnRate' to be non-null");
-        this.learnRateStrategy = Objects.requireNonNull(learnRateStrategy, "expected parameter 'learnRateStrategy' to be non-null");
-        this.lineSearchInitLearnRate = Objects.requireNonNull(lineSearchInitLearnRate, "expected parameter 'lineSearchInitLearnRate' to be non-null");
-        this.maxIteration = Objects.requireNonNull(maxIteration, "expected parameter 'maxIteration' to be non-null");
-        this.minRelProgress = Objects.requireNonNull(minRelProgress, "expected parameter 'minRelProgress' to be non-null");
-        this.warmStart = Objects.requireNonNull(warmStart, "expected parameter 'warmStart' to be non-null");
-    }
+    private BqmlTrainingRunTrainingOptionsResponse() {}
 
-    private BqmlTrainingRunTrainingOptionsResponse() {
-        this.earlyStop = null;
-        this.l1Reg = null;
-        this.l2Reg = null;
-        this.learnRate = null;
-        this.learnRateStrategy = null;
-        this.lineSearchInitLearnRate = null;
-        this.maxIteration = null;
-        this.minRelProgress = null;
-        this.warmStart = null;
+    private BqmlTrainingRunTrainingOptionsResponse(BqmlTrainingRunTrainingOptionsResponse $) {
+        this.earlyStop = $.earlyStop;
+        this.l1Reg = $.l1Reg;
+        this.l2Reg = $.l2Reg;
+        this.learnRate = $.learnRate;
+        this.learnRateStrategy = $.learnRateStrategy;
+        this.lineSearchInitLearnRate = $.lineSearchInitLearnRate;
+        this.maxIteration = $.maxIteration;
+        this.minRelProgress = $.minRelProgress;
+        this.warmStart = $.warmStart;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BqmlTrainingRunTrainingOptionsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Boolean earlyStop;
-        private Double l1Reg;
-        private Double l2Reg;
-        private Double learnRate;
-        private String learnRateStrategy;
-        private Double lineSearchInitLearnRate;
-        private String maxIteration;
-        private Double minRelProgress;
-        private Boolean warmStart;
+        private BqmlTrainingRunTrainingOptionsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new BqmlTrainingRunTrainingOptionsResponse();
         }
 
         public Builder(BqmlTrainingRunTrainingOptionsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.earlyStop = defaults.earlyStop;
-    	      this.l1Reg = defaults.l1Reg;
-    	      this.l2Reg = defaults.l2Reg;
-    	      this.learnRate = defaults.learnRate;
-    	      this.learnRateStrategy = defaults.learnRateStrategy;
-    	      this.lineSearchInitLearnRate = defaults.lineSearchInitLearnRate;
-    	      this.maxIteration = defaults.maxIteration;
-    	      this.minRelProgress = defaults.minRelProgress;
-    	      this.warmStart = defaults.warmStart;
+            $ = new BqmlTrainingRunTrainingOptionsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder earlyStop(Boolean earlyStop) {
-            this.earlyStop = Objects.requireNonNull(earlyStop);
+            $.earlyStop = earlyStop;
             return this;
         }
+
         public Builder l1Reg(Double l1Reg) {
-            this.l1Reg = Objects.requireNonNull(l1Reg);
+            $.l1Reg = l1Reg;
             return this;
         }
+
         public Builder l2Reg(Double l2Reg) {
-            this.l2Reg = Objects.requireNonNull(l2Reg);
+            $.l2Reg = l2Reg;
             return this;
         }
+
         public Builder learnRate(Double learnRate) {
-            this.learnRate = Objects.requireNonNull(learnRate);
+            $.learnRate = learnRate;
             return this;
         }
+
         public Builder learnRateStrategy(String learnRateStrategy) {
-            this.learnRateStrategy = Objects.requireNonNull(learnRateStrategy);
+            $.learnRateStrategy = learnRateStrategy;
             return this;
         }
+
         public Builder lineSearchInitLearnRate(Double lineSearchInitLearnRate) {
-            this.lineSearchInitLearnRate = Objects.requireNonNull(lineSearchInitLearnRate);
+            $.lineSearchInitLearnRate = lineSearchInitLearnRate;
             return this;
         }
+
         public Builder maxIteration(String maxIteration) {
-            this.maxIteration = Objects.requireNonNull(maxIteration);
+            $.maxIteration = maxIteration;
             return this;
         }
+
         public Builder minRelProgress(Double minRelProgress) {
-            this.minRelProgress = Objects.requireNonNull(minRelProgress);
+            $.minRelProgress = minRelProgress;
             return this;
         }
+
         public Builder warmStart(Boolean warmStart) {
-            this.warmStart = Objects.requireNonNull(warmStart);
+            $.warmStart = warmStart;
             return this;
-        }        public BqmlTrainingRunTrainingOptionsResponse build() {
-            return new BqmlTrainingRunTrainingOptionsResponse(earlyStop, l1Reg, l2Reg, learnRate, learnRateStrategy, lineSearchInitLearnRate, maxIteration, minRelProgress, warmStart);
+        }
+
+        public BqmlTrainingRunTrainingOptionsResponse build() {
+            $.earlyStop = Objects.requireNonNull($.earlyStop, "expected parameter 'earlyStop' to be non-null");
+            $.l1Reg = Objects.requireNonNull($.l1Reg, "expected parameter 'l1Reg' to be non-null");
+            $.l2Reg = Objects.requireNonNull($.l2Reg, "expected parameter 'l2Reg' to be non-null");
+            $.learnRate = Objects.requireNonNull($.learnRate, "expected parameter 'learnRate' to be non-null");
+            $.learnRateStrategy = Objects.requireNonNull($.learnRateStrategy, "expected parameter 'learnRateStrategy' to be non-null");
+            $.lineSearchInitLearnRate = Objects.requireNonNull($.lineSearchInitLearnRate, "expected parameter 'lineSearchInitLearnRate' to be non-null");
+            $.maxIteration = Objects.requireNonNull($.maxIteration, "expected parameter 'maxIteration' to be non-null");
+            $.minRelProgress = Objects.requireNonNull($.minRelProgress, "expected parameter 'minRelProgress' to be non-null");
+            $.warmStart = Objects.requireNonNull($.warmStart, "expected parameter 'warmStart' to be non-null");
+            return $;
         }
     }
+
 }

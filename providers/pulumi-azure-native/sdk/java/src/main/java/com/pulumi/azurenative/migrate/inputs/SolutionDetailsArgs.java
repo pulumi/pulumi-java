@@ -5,11 +5,11 @@ package com.pulumi.azurenative.migrate.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class SolutionDetailsArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="assessmentCount")
-      private final @Nullable Output<Integer> assessmentCount;
+    private @Nullable Output<Integer> assessmentCount;
 
-    public Output<Integer> assessmentCount() {
-        return this.assessmentCount == null ? Codegen.empty() : this.assessmentCount;
+    public Optional<Output<Integer>> assessmentCount() {
+        return Optional.ofNullable(this.assessmentCount);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class SolutionDetailsArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="extendedDetails")
-      private final @Nullable Output<Map<String,String>> extendedDetails;
+    private @Nullable Output<Map<String,String>> extendedDetails;
 
-    public Output<Map<String,String>> extendedDetails() {
-        return this.extendedDetails == null ? Codegen.empty() : this.extendedDetails;
+    public Optional<Output<Map<String,String>>> extendedDetails() {
+        return Optional.ofNullable(this.extendedDetails);
     }
 
     /**
@@ -48,76 +48,68 @@ public final class SolutionDetailsArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="groupCount")
-      private final @Nullable Output<Integer> groupCount;
+    private @Nullable Output<Integer> groupCount;
 
-    public Output<Integer> groupCount() {
-        return this.groupCount == null ? Codegen.empty() : this.groupCount;
+    public Optional<Output<Integer>> groupCount() {
+        return Optional.ofNullable(this.groupCount);
     }
 
-    public SolutionDetailsArgs(
-        @Nullable Output<Integer> assessmentCount,
-        @Nullable Output<Map<String,String>> extendedDetails,
-        @Nullable Output<Integer> groupCount) {
-        this.assessmentCount = assessmentCount;
-        this.extendedDetails = extendedDetails;
-        this.groupCount = groupCount;
-    }
+    private SolutionDetailsArgs() {}
 
-    private SolutionDetailsArgs() {
-        this.assessmentCount = Codegen.empty();
-        this.extendedDetails = Codegen.empty();
-        this.groupCount = Codegen.empty();
+    private SolutionDetailsArgs(SolutionDetailsArgs $) {
+        this.assessmentCount = $.assessmentCount;
+        this.extendedDetails = $.extendedDetails;
+        this.groupCount = $.groupCount;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SolutionDetailsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> assessmentCount;
-        private @Nullable Output<Map<String,String>> extendedDetails;
-        private @Nullable Output<Integer> groupCount;
+        private SolutionDetailsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SolutionDetailsArgs();
         }
 
         public Builder(SolutionDetailsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.assessmentCount = defaults.assessmentCount;
-    	      this.extendedDetails = defaults.extendedDetails;
-    	      this.groupCount = defaults.groupCount;
+            $ = new SolutionDetailsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder assessmentCount(@Nullable Output<Integer> assessmentCount) {
-            this.assessmentCount = assessmentCount;
+            $.assessmentCount = assessmentCount;
             return this;
         }
-        public Builder assessmentCount(@Nullable Integer assessmentCount) {
-            this.assessmentCount = Codegen.ofNullable(assessmentCount);
-            return this;
+
+        public Builder assessmentCount(Integer assessmentCount) {
+            return assessmentCount(Output.of(assessmentCount));
         }
+
         public Builder extendedDetails(@Nullable Output<Map<String,String>> extendedDetails) {
-            this.extendedDetails = extendedDetails;
+            $.extendedDetails = extendedDetails;
             return this;
         }
-        public Builder extendedDetails(@Nullable Map<String,String> extendedDetails) {
-            this.extendedDetails = Codegen.ofNullable(extendedDetails);
-            return this;
+
+        public Builder extendedDetails(Map<String,String> extendedDetails) {
+            return extendedDetails(Output.of(extendedDetails));
         }
+
         public Builder groupCount(@Nullable Output<Integer> groupCount) {
-            this.groupCount = groupCount;
+            $.groupCount = groupCount;
             return this;
         }
-        public Builder groupCount(@Nullable Integer groupCount) {
-            this.groupCount = Codegen.ofNullable(groupCount);
-            return this;
-        }        public SolutionDetailsArgs build() {
-            return new SolutionDetailsArgs(assessmentCount, extendedDetails, groupCount);
+
+        public Builder groupCount(Integer groupCount) {
+            return groupCount(Output.of(groupCount));
+        }
+
+        public SolutionDetailsArgs build() {
+            return $;
         }
     }
+
 }

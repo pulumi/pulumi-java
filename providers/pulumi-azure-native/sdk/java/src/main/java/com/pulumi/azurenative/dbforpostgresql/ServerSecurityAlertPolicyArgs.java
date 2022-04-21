@@ -6,12 +6,12 @@ package com.pulumi.azurenative.dbforpostgresql;
 import com.pulumi.azurenative.dbforpostgresql.enums.ServerSecurityAlertPolicyState;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class ServerSecurityAlertPolicyArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="disabledAlerts")
-      private final @Nullable Output<List<String>> disabledAlerts;
+    private @Nullable Output<List<String>> disabledAlerts;
 
-    public Output<List<String>> disabledAlerts() {
-        return this.disabledAlerts == null ? Codegen.empty() : this.disabledAlerts;
+    public Optional<Output<List<String>>> disabledAlerts() {
+        return Optional.ofNullable(this.disabledAlerts);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class ServerSecurityAlertPolicyArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="emailAccountAdmins")
-      private final @Nullable Output<Boolean> emailAccountAdmins;
+    private @Nullable Output<Boolean> emailAccountAdmins;
 
-    public Output<Boolean> emailAccountAdmins() {
-        return this.emailAccountAdmins == null ? Codegen.empty() : this.emailAccountAdmins;
+    public Optional<Output<Boolean>> emailAccountAdmins() {
+        return Optional.ofNullable(this.emailAccountAdmins);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class ServerSecurityAlertPolicyArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="emailAddresses")
-      private final @Nullable Output<List<String>> emailAddresses;
+    private @Nullable Output<List<String>> emailAddresses;
 
-    public Output<List<String>> emailAddresses() {
-        return this.emailAddresses == null ? Codegen.empty() : this.emailAddresses;
+    public Optional<Output<List<String>>> emailAddresses() {
+        return Optional.ofNullable(this.emailAddresses);
     }
 
     /**
@@ -57,7 +57,7 @@ public final class ServerSecurityAlertPolicyArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -68,10 +68,10 @@ public final class ServerSecurityAlertPolicyArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="retentionDays")
-      private final @Nullable Output<Integer> retentionDays;
+    private @Nullable Output<Integer> retentionDays;
 
-    public Output<Integer> retentionDays() {
-        return this.retentionDays == null ? Codegen.empty() : this.retentionDays;
+    public Optional<Output<Integer>> retentionDays() {
+        return Optional.ofNullable(this.retentionDays);
     }
 
     /**
@@ -79,10 +79,10 @@ public final class ServerSecurityAlertPolicyArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="securityAlertPolicyName")
-      private final @Nullable Output<String> securityAlertPolicyName;
+    private @Nullable Output<String> securityAlertPolicyName;
 
-    public Output<String> securityAlertPolicyName() {
-        return this.securityAlertPolicyName == null ? Codegen.empty() : this.securityAlertPolicyName;
+    public Optional<Output<String>> securityAlertPolicyName() {
+        return Optional.ofNullable(this.securityAlertPolicyName);
     }
 
     /**
@@ -90,7 +90,7 @@ public final class ServerSecurityAlertPolicyArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="serverName", required=true)
-      private final Output<String> serverName;
+    private Output<String> serverName;
 
     public Output<String> serverName() {
         return this.serverName;
@@ -101,7 +101,7 @@ public final class ServerSecurityAlertPolicyArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="state", required=true)
-      private final Output<ServerSecurityAlertPolicyState> state;
+    private Output<ServerSecurityAlertPolicyState> state;
 
     public Output<ServerSecurityAlertPolicyState> state() {
         return this.state;
@@ -112,10 +112,10 @@ public final class ServerSecurityAlertPolicyArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="storageAccountAccessKey")
-      private final @Nullable Output<String> storageAccountAccessKey;
+    private @Nullable Output<String> storageAccountAccessKey;
 
-    public Output<String> storageAccountAccessKey() {
-        return this.storageAccountAccessKey == null ? Codegen.empty() : this.storageAccountAccessKey;
+    public Optional<Output<String>> storageAccountAccessKey() {
+        return Optional.ofNullable(this.storageAccountAccessKey);
     }
 
     /**
@@ -123,173 +123,149 @@ public final class ServerSecurityAlertPolicyArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="storageEndpoint")
-      private final @Nullable Output<String> storageEndpoint;
+    private @Nullable Output<String> storageEndpoint;
 
-    public Output<String> storageEndpoint() {
-        return this.storageEndpoint == null ? Codegen.empty() : this.storageEndpoint;
+    public Optional<Output<String>> storageEndpoint() {
+        return Optional.ofNullable(this.storageEndpoint);
     }
 
-    public ServerSecurityAlertPolicyArgs(
-        @Nullable Output<List<String>> disabledAlerts,
-        @Nullable Output<Boolean> emailAccountAdmins,
-        @Nullable Output<List<String>> emailAddresses,
-        Output<String> resourceGroupName,
-        @Nullable Output<Integer> retentionDays,
-        @Nullable Output<String> securityAlertPolicyName,
-        Output<String> serverName,
-        Output<ServerSecurityAlertPolicyState> state,
-        @Nullable Output<String> storageAccountAccessKey,
-        @Nullable Output<String> storageEndpoint) {
-        this.disabledAlerts = disabledAlerts;
-        this.emailAccountAdmins = emailAccountAdmins;
-        this.emailAddresses = emailAddresses;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.retentionDays = retentionDays;
-        this.securityAlertPolicyName = securityAlertPolicyName;
-        this.serverName = Objects.requireNonNull(serverName, "expected parameter 'serverName' to be non-null");
-        this.state = Objects.requireNonNull(state, "expected parameter 'state' to be non-null");
-        this.storageAccountAccessKey = storageAccountAccessKey;
-        this.storageEndpoint = storageEndpoint;
-    }
+    private ServerSecurityAlertPolicyArgs() {}
 
-    private ServerSecurityAlertPolicyArgs() {
-        this.disabledAlerts = Codegen.empty();
-        this.emailAccountAdmins = Codegen.empty();
-        this.emailAddresses = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.retentionDays = Codegen.empty();
-        this.securityAlertPolicyName = Codegen.empty();
-        this.serverName = Codegen.empty();
-        this.state = Codegen.empty();
-        this.storageAccountAccessKey = Codegen.empty();
-        this.storageEndpoint = Codegen.empty();
+    private ServerSecurityAlertPolicyArgs(ServerSecurityAlertPolicyArgs $) {
+        this.disabledAlerts = $.disabledAlerts;
+        this.emailAccountAdmins = $.emailAccountAdmins;
+        this.emailAddresses = $.emailAddresses;
+        this.resourceGroupName = $.resourceGroupName;
+        this.retentionDays = $.retentionDays;
+        this.securityAlertPolicyName = $.securityAlertPolicyName;
+        this.serverName = $.serverName;
+        this.state = $.state;
+        this.storageAccountAccessKey = $.storageAccountAccessKey;
+        this.storageEndpoint = $.storageEndpoint;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ServerSecurityAlertPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> disabledAlerts;
-        private @Nullable Output<Boolean> emailAccountAdmins;
-        private @Nullable Output<List<String>> emailAddresses;
-        private Output<String> resourceGroupName;
-        private @Nullable Output<Integer> retentionDays;
-        private @Nullable Output<String> securityAlertPolicyName;
-        private Output<String> serverName;
-        private Output<ServerSecurityAlertPolicyState> state;
-        private @Nullable Output<String> storageAccountAccessKey;
-        private @Nullable Output<String> storageEndpoint;
+        private ServerSecurityAlertPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ServerSecurityAlertPolicyArgs();
         }
 
         public Builder(ServerSecurityAlertPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.disabledAlerts = defaults.disabledAlerts;
-    	      this.emailAccountAdmins = defaults.emailAccountAdmins;
-    	      this.emailAddresses = defaults.emailAddresses;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.retentionDays = defaults.retentionDays;
-    	      this.securityAlertPolicyName = defaults.securityAlertPolicyName;
-    	      this.serverName = defaults.serverName;
-    	      this.state = defaults.state;
-    	      this.storageAccountAccessKey = defaults.storageAccountAccessKey;
-    	      this.storageEndpoint = defaults.storageEndpoint;
+            $ = new ServerSecurityAlertPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder disabledAlerts(@Nullable Output<List<String>> disabledAlerts) {
-            this.disabledAlerts = disabledAlerts;
+            $.disabledAlerts = disabledAlerts;
             return this;
         }
-        public Builder disabledAlerts(@Nullable List<String> disabledAlerts) {
-            this.disabledAlerts = Codegen.ofNullable(disabledAlerts);
-            return this;
+
+        public Builder disabledAlerts(List<String> disabledAlerts) {
+            return disabledAlerts(Output.of(disabledAlerts));
         }
+
         public Builder disabledAlerts(String... disabledAlerts) {
             return disabledAlerts(List.of(disabledAlerts));
         }
+
         public Builder emailAccountAdmins(@Nullable Output<Boolean> emailAccountAdmins) {
-            this.emailAccountAdmins = emailAccountAdmins;
+            $.emailAccountAdmins = emailAccountAdmins;
             return this;
         }
-        public Builder emailAccountAdmins(@Nullable Boolean emailAccountAdmins) {
-            this.emailAccountAdmins = Codegen.ofNullable(emailAccountAdmins);
-            return this;
+
+        public Builder emailAccountAdmins(Boolean emailAccountAdmins) {
+            return emailAccountAdmins(Output.of(emailAccountAdmins));
         }
+
         public Builder emailAddresses(@Nullable Output<List<String>> emailAddresses) {
-            this.emailAddresses = emailAddresses;
+            $.emailAddresses = emailAddresses;
             return this;
         }
-        public Builder emailAddresses(@Nullable List<String> emailAddresses) {
-            this.emailAddresses = Codegen.ofNullable(emailAddresses);
-            return this;
+
+        public Builder emailAddresses(List<String> emailAddresses) {
+            return emailAddresses(Output.of(emailAddresses));
         }
+
         public Builder emailAddresses(String... emailAddresses) {
             return emailAddresses(List.of(emailAddresses));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder retentionDays(@Nullable Output<Integer> retentionDays) {
-            this.retentionDays = retentionDays;
+            $.retentionDays = retentionDays;
             return this;
         }
-        public Builder retentionDays(@Nullable Integer retentionDays) {
-            this.retentionDays = Codegen.ofNullable(retentionDays);
-            return this;
+
+        public Builder retentionDays(Integer retentionDays) {
+            return retentionDays(Output.of(retentionDays));
         }
+
         public Builder securityAlertPolicyName(@Nullable Output<String> securityAlertPolicyName) {
-            this.securityAlertPolicyName = securityAlertPolicyName;
+            $.securityAlertPolicyName = securityAlertPolicyName;
             return this;
         }
-        public Builder securityAlertPolicyName(@Nullable String securityAlertPolicyName) {
-            this.securityAlertPolicyName = Codegen.ofNullable(securityAlertPolicyName);
-            return this;
+
+        public Builder securityAlertPolicyName(String securityAlertPolicyName) {
+            return securityAlertPolicyName(Output.of(securityAlertPolicyName));
         }
+
         public Builder serverName(Output<String> serverName) {
-            this.serverName = Objects.requireNonNull(serverName);
+            $.serverName = serverName;
             return this;
         }
+
         public Builder serverName(String serverName) {
-            this.serverName = Output.of(Objects.requireNonNull(serverName));
-            return this;
+            return serverName(Output.of(serverName));
         }
+
         public Builder state(Output<ServerSecurityAlertPolicyState> state) {
-            this.state = Objects.requireNonNull(state);
+            $.state = state;
             return this;
         }
+
         public Builder state(ServerSecurityAlertPolicyState state) {
-            this.state = Output.of(Objects.requireNonNull(state));
-            return this;
+            return state(Output.of(state));
         }
+
         public Builder storageAccountAccessKey(@Nullable Output<String> storageAccountAccessKey) {
-            this.storageAccountAccessKey = storageAccountAccessKey;
+            $.storageAccountAccessKey = storageAccountAccessKey;
             return this;
         }
-        public Builder storageAccountAccessKey(@Nullable String storageAccountAccessKey) {
-            this.storageAccountAccessKey = Codegen.ofNullable(storageAccountAccessKey);
-            return this;
+
+        public Builder storageAccountAccessKey(String storageAccountAccessKey) {
+            return storageAccountAccessKey(Output.of(storageAccountAccessKey));
         }
+
         public Builder storageEndpoint(@Nullable Output<String> storageEndpoint) {
-            this.storageEndpoint = storageEndpoint;
+            $.storageEndpoint = storageEndpoint;
             return this;
         }
-        public Builder storageEndpoint(@Nullable String storageEndpoint) {
-            this.storageEndpoint = Codegen.ofNullable(storageEndpoint);
-            return this;
-        }        public ServerSecurityAlertPolicyArgs build() {
-            return new ServerSecurityAlertPolicyArgs(disabledAlerts, emailAccountAdmins, emailAddresses, resourceGroupName, retentionDays, securityAlertPolicyName, serverName, state, storageAccountAccessKey, storageEndpoint);
+
+        public Builder storageEndpoint(String storageEndpoint) {
+            return storageEndpoint(Output.of(storageEndpoint));
+        }
+
+        public ServerSecurityAlertPolicyArgs build() {
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.serverName = Objects.requireNonNull($.serverName, "expected parameter 'serverName' to be non-null");
+            $.state = Objects.requireNonNull($.state, "expected parameter 'state' to be non-null");
+            return $;
         }
     }
+
 }

@@ -21,45 +21,45 @@ public final class GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigConversa
      * 
      */
     @Import(name="recentSentencesCount", required=true)
-      private final Integer recentSentencesCount;
+    private Integer recentSentencesCount;
 
     public Integer recentSentencesCount() {
         return this.recentSentencesCount;
     }
 
-    public GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigConversationProcessConfigResponse(Integer recentSentencesCount) {
-        this.recentSentencesCount = Objects.requireNonNull(recentSentencesCount, "expected parameter 'recentSentencesCount' to be non-null");
-    }
+    private GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigConversationProcessConfigResponse() {}
 
-    private GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigConversationProcessConfigResponse() {
-        this.recentSentencesCount = null;
+    private GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigConversationProcessConfigResponse(GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigConversationProcessConfigResponse $) {
+        this.recentSentencesCount = $.recentSentencesCount;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigConversationProcessConfigResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Integer recentSentencesCount;
+        private GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigConversationProcessConfigResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigConversationProcessConfigResponse();
         }
 
         public Builder(GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigConversationProcessConfigResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.recentSentencesCount = defaults.recentSentencesCount;
+            $ = new GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigConversationProcessConfigResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder recentSentencesCount(Integer recentSentencesCount) {
-            this.recentSentencesCount = Objects.requireNonNull(recentSentencesCount);
+            $.recentSentencesCount = recentSentencesCount;
             return this;
-        }        public GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigConversationProcessConfigResponse build() {
-            return new GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigConversationProcessConfigResponse(recentSentencesCount);
+        }
+
+        public GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigConversationProcessConfigResponse build() {
+            $.recentSentencesCount = Objects.requireNonNull($.recentSentencesCount, "expected parameter 'recentSentencesCount' to be non-null");
+            return $;
         }
     }
+
 }

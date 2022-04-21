@@ -25,7 +25,7 @@ public final class ManagementPolicyRuleResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="definition", required=true)
-      private final ManagementPolicyDefinitionResponse definition;
+    private ManagementPolicyDefinitionResponse definition;
 
     public ManagementPolicyDefinitionResponse definition() {
         return this.definition;
@@ -36,10 +36,10 @@ public final class ManagementPolicyRuleResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="enabled")
-      private final @Nullable Boolean enabled;
+    private @Nullable Boolean enabled;
 
     public Optional<Boolean> enabled() {
-        return this.enabled == null ? Optional.empty() : Optional.ofNullable(this.enabled);
+        return Optional.ofNullable(this.enabled);
     }
 
     /**
@@ -47,7 +47,7 @@ public final class ManagementPolicyRuleResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -58,73 +58,65 @@ public final class ManagementPolicyRuleResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
     }
 
-    public ManagementPolicyRuleResponse(
-        ManagementPolicyDefinitionResponse definition,
-        @Nullable Boolean enabled,
-        String name,
-        String type) {
-        this.definition = Objects.requireNonNull(definition, "expected parameter 'definition' to be non-null");
-        this.enabled = enabled;
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private ManagementPolicyRuleResponse() {}
 
-    private ManagementPolicyRuleResponse() {
-        this.definition = null;
-        this.enabled = null;
-        this.name = null;
-        this.type = null;
+    private ManagementPolicyRuleResponse(ManagementPolicyRuleResponse $) {
+        this.definition = $.definition;
+        this.enabled = $.enabled;
+        this.name = $.name;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ManagementPolicyRuleResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private ManagementPolicyDefinitionResponse definition;
-        private @Nullable Boolean enabled;
-        private String name;
-        private String type;
+        private ManagementPolicyRuleResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ManagementPolicyRuleResponse();
         }
 
         public Builder(ManagementPolicyRuleResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.definition = defaults.definition;
-    	      this.enabled = defaults.enabled;
-    	      this.name = defaults.name;
-    	      this.type = defaults.type;
+            $ = new ManagementPolicyRuleResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder definition(ManagementPolicyDefinitionResponse definition) {
-            this.definition = Objects.requireNonNull(definition);
+            $.definition = definition;
             return this;
         }
+
         public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = enabled;
+            $.enabled = enabled;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
-        }        public ManagementPolicyRuleResponse build() {
-            return new ManagementPolicyRuleResponse(definition, enabled, name, type);
+        }
+
+        public ManagementPolicyRuleResponse build() {
+            $.definition = Objects.requireNonNull($.definition, "expected parameter 'definition' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

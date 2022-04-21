@@ -5,10 +5,10 @@ package com.pulumi.googlenative.testing_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.testing_v1.inputs.FileReferenceArgs;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class ApkArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="location")
-      private final @Nullable Output<FileReferenceArgs> location;
+    private @Nullable Output<FileReferenceArgs> location;
 
-    public Output<FileReferenceArgs> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<FileReferenceArgs>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -36,63 +36,58 @@ public final class ApkArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="packageName")
-      private final @Nullable Output<String> packageName;
+    private @Nullable Output<String> packageName;
 
-    public Output<String> packageName() {
-        return this.packageName == null ? Codegen.empty() : this.packageName;
+    public Optional<Output<String>> packageName() {
+        return Optional.ofNullable(this.packageName);
     }
 
-    public ApkArgs(
-        @Nullable Output<FileReferenceArgs> location,
-        @Nullable Output<String> packageName) {
-        this.location = location;
-        this.packageName = packageName;
-    }
+    private ApkArgs() {}
 
-    private ApkArgs() {
-        this.location = Codegen.empty();
-        this.packageName = Codegen.empty();
+    private ApkArgs(ApkArgs $) {
+        this.location = $.location;
+        this.packageName = $.packageName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ApkArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<FileReferenceArgs> location;
-        private @Nullable Output<String> packageName;
+        private ApkArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ApkArgs();
         }
 
         public Builder(ApkArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.location = defaults.location;
-    	      this.packageName = defaults.packageName;
+            $ = new ApkArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder location(@Nullable Output<FileReferenceArgs> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable FileReferenceArgs location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(FileReferenceArgs location) {
+            return location(Output.of(location));
         }
+
         public Builder packageName(@Nullable Output<String> packageName) {
-            this.packageName = packageName;
+            $.packageName = packageName;
             return this;
         }
-        public Builder packageName(@Nullable String packageName) {
-            this.packageName = Codegen.ofNullable(packageName);
-            return this;
-        }        public ApkArgs build() {
-            return new ApkArgs(location, packageName);
+
+        public Builder packageName(String packageName) {
+            return packageName(Output.of(packageName));
+        }
+
+        public ApkArgs build() {
+            return $;
         }
     }
+
 }

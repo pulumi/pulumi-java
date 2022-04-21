@@ -18,48 +18,49 @@ public final class SecurityPolicyRuleHttpHeaderActionResponse extends com.pulumi
      * 
      */
     @Import(name="requestHeadersToAdds", required=true)
-      private final List<SecurityPolicyRuleHttpHeaderActionHttpHeaderOptionResponse> requestHeadersToAdds;
+    private List<SecurityPolicyRuleHttpHeaderActionHttpHeaderOptionResponse> requestHeadersToAdds;
 
     public List<SecurityPolicyRuleHttpHeaderActionHttpHeaderOptionResponse> requestHeadersToAdds() {
         return this.requestHeadersToAdds;
     }
 
-    public SecurityPolicyRuleHttpHeaderActionResponse(List<SecurityPolicyRuleHttpHeaderActionHttpHeaderOptionResponse> requestHeadersToAdds) {
-        this.requestHeadersToAdds = Objects.requireNonNull(requestHeadersToAdds, "expected parameter 'requestHeadersToAdds' to be non-null");
-    }
+    private SecurityPolicyRuleHttpHeaderActionResponse() {}
 
-    private SecurityPolicyRuleHttpHeaderActionResponse() {
-        this.requestHeadersToAdds = List.of();
+    private SecurityPolicyRuleHttpHeaderActionResponse(SecurityPolicyRuleHttpHeaderActionResponse $) {
+        this.requestHeadersToAdds = $.requestHeadersToAdds;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SecurityPolicyRuleHttpHeaderActionResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<SecurityPolicyRuleHttpHeaderActionHttpHeaderOptionResponse> requestHeadersToAdds;
+        private SecurityPolicyRuleHttpHeaderActionResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new SecurityPolicyRuleHttpHeaderActionResponse();
         }
 
         public Builder(SecurityPolicyRuleHttpHeaderActionResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.requestHeadersToAdds = defaults.requestHeadersToAdds;
+            $ = new SecurityPolicyRuleHttpHeaderActionResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder requestHeadersToAdds(List<SecurityPolicyRuleHttpHeaderActionHttpHeaderOptionResponse> requestHeadersToAdds) {
-            this.requestHeadersToAdds = Objects.requireNonNull(requestHeadersToAdds);
+            $.requestHeadersToAdds = requestHeadersToAdds;
             return this;
         }
+
         public Builder requestHeadersToAdds(SecurityPolicyRuleHttpHeaderActionHttpHeaderOptionResponse... requestHeadersToAdds) {
             return requestHeadersToAdds(List.of(requestHeadersToAdds));
-        }        public SecurityPolicyRuleHttpHeaderActionResponse build() {
-            return new SecurityPolicyRuleHttpHeaderActionResponse(requestHeadersToAdds);
+        }
+
+        public SecurityPolicyRuleHttpHeaderActionResponse build() {
+            $.requestHeadersToAdds = Objects.requireNonNull($.requestHeadersToAdds, "expected parameter 'requestHeadersToAdds' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,10 +5,10 @@ package com.pulumi.googlenative.cloudbuild_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.cloudbuild_v1.enums.PubsubConfigState;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class PubsubConfigArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="serviceAccountEmail")
-      private final @Nullable Output<String> serviceAccountEmail;
+    private @Nullable Output<String> serviceAccountEmail;
 
-    public Output<String> serviceAccountEmail() {
-        return this.serviceAccountEmail == null ? Codegen.empty() : this.serviceAccountEmail;
+    public Optional<Output<String>> serviceAccountEmail() {
+        return Optional.ofNullable(this.serviceAccountEmail);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class PubsubConfigArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="state")
-      private final @Nullable Output<PubsubConfigState> state;
+    private @Nullable Output<PubsubConfigState> state;
 
-    public Output<PubsubConfigState> state() {
-        return this.state == null ? Codegen.empty() : this.state;
+    public Optional<Output<PubsubConfigState>> state() {
+        return Optional.ofNullable(this.state);
     }
 
     /**
@@ -47,76 +47,68 @@ public final class PubsubConfigArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="topic")
-      private final @Nullable Output<String> topic;
+    private @Nullable Output<String> topic;
 
-    public Output<String> topic() {
-        return this.topic == null ? Codegen.empty() : this.topic;
+    public Optional<Output<String>> topic() {
+        return Optional.ofNullable(this.topic);
     }
 
-    public PubsubConfigArgs(
-        @Nullable Output<String> serviceAccountEmail,
-        @Nullable Output<PubsubConfigState> state,
-        @Nullable Output<String> topic) {
-        this.serviceAccountEmail = serviceAccountEmail;
-        this.state = state;
-        this.topic = topic;
-    }
+    private PubsubConfigArgs() {}
 
-    private PubsubConfigArgs() {
-        this.serviceAccountEmail = Codegen.empty();
-        this.state = Codegen.empty();
-        this.topic = Codegen.empty();
+    private PubsubConfigArgs(PubsubConfigArgs $) {
+        this.serviceAccountEmail = $.serviceAccountEmail;
+        this.state = $.state;
+        this.topic = $.topic;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PubsubConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> serviceAccountEmail;
-        private @Nullable Output<PubsubConfigState> state;
-        private @Nullable Output<String> topic;
+        private PubsubConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PubsubConfigArgs();
         }
 
         public Builder(PubsubConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.serviceAccountEmail = defaults.serviceAccountEmail;
-    	      this.state = defaults.state;
-    	      this.topic = defaults.topic;
+            $ = new PubsubConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder serviceAccountEmail(@Nullable Output<String> serviceAccountEmail) {
-            this.serviceAccountEmail = serviceAccountEmail;
+            $.serviceAccountEmail = serviceAccountEmail;
             return this;
         }
-        public Builder serviceAccountEmail(@Nullable String serviceAccountEmail) {
-            this.serviceAccountEmail = Codegen.ofNullable(serviceAccountEmail);
-            return this;
+
+        public Builder serviceAccountEmail(String serviceAccountEmail) {
+            return serviceAccountEmail(Output.of(serviceAccountEmail));
         }
+
         public Builder state(@Nullable Output<PubsubConfigState> state) {
-            this.state = state;
+            $.state = state;
             return this;
         }
-        public Builder state(@Nullable PubsubConfigState state) {
-            this.state = Codegen.ofNullable(state);
-            return this;
+
+        public Builder state(PubsubConfigState state) {
+            return state(Output.of(state));
         }
+
         public Builder topic(@Nullable Output<String> topic) {
-            this.topic = topic;
+            $.topic = topic;
             return this;
         }
-        public Builder topic(@Nullable String topic) {
-            this.topic = Codegen.ofNullable(topic);
-            return this;
-        }        public PubsubConfigArgs build() {
-            return new PubsubConfigArgs(serviceAccountEmail, state, topic);
+
+        public Builder topic(String topic) {
+            return topic(Output.of(topic));
+        }
+
+        public PubsubConfigArgs build() {
+            return $;
         }
     }
+
 }

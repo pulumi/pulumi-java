@@ -5,10 +5,10 @@ package com.pulumi.aws.ec2clientvpn;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class AuthorizationRuleArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="accessGroupId")
-      private final @Nullable Output<String> accessGroupId;
+    private @Nullable Output<String> accessGroupId;
 
-    public Output<String> accessGroupId() {
-        return this.accessGroupId == null ? Codegen.empty() : this.accessGroupId;
+    public Optional<Output<String>> accessGroupId() {
+        return Optional.ofNullable(this.accessGroupId);
     }
 
     /**
@@ -32,10 +32,10 @@ public final class AuthorizationRuleArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="authorizeAllGroups")
-      private final @Nullable Output<Boolean> authorizeAllGroups;
+    private @Nullable Output<Boolean> authorizeAllGroups;
 
-    public Output<Boolean> authorizeAllGroups() {
-        return this.authorizeAllGroups == null ? Codegen.empty() : this.authorizeAllGroups;
+    public Optional<Output<Boolean>> authorizeAllGroups() {
+        return Optional.ofNullable(this.authorizeAllGroups);
     }
 
     /**
@@ -43,7 +43,7 @@ public final class AuthorizationRuleArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="clientVpnEndpointId", required=true)
-      private final Output<String> clientVpnEndpointId;
+    private Output<String> clientVpnEndpointId;
 
     public Output<String> clientVpnEndpointId() {
         return this.clientVpnEndpointId;
@@ -54,10 +54,10 @@ public final class AuthorizationRuleArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -65,102 +65,90 @@ public final class AuthorizationRuleArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="targetNetworkCidr", required=true)
-      private final Output<String> targetNetworkCidr;
+    private Output<String> targetNetworkCidr;
 
     public Output<String> targetNetworkCidr() {
         return this.targetNetworkCidr;
     }
 
-    public AuthorizationRuleArgs(
-        @Nullable Output<String> accessGroupId,
-        @Nullable Output<Boolean> authorizeAllGroups,
-        Output<String> clientVpnEndpointId,
-        @Nullable Output<String> description,
-        Output<String> targetNetworkCidr) {
-        this.accessGroupId = accessGroupId;
-        this.authorizeAllGroups = authorizeAllGroups;
-        this.clientVpnEndpointId = Objects.requireNonNull(clientVpnEndpointId, "expected parameter 'clientVpnEndpointId' to be non-null");
-        this.description = description;
-        this.targetNetworkCidr = Objects.requireNonNull(targetNetworkCidr, "expected parameter 'targetNetworkCidr' to be non-null");
-    }
+    private AuthorizationRuleArgs() {}
 
-    private AuthorizationRuleArgs() {
-        this.accessGroupId = Codegen.empty();
-        this.authorizeAllGroups = Codegen.empty();
-        this.clientVpnEndpointId = Codegen.empty();
-        this.description = Codegen.empty();
-        this.targetNetworkCidr = Codegen.empty();
+    private AuthorizationRuleArgs(AuthorizationRuleArgs $) {
+        this.accessGroupId = $.accessGroupId;
+        this.authorizeAllGroups = $.authorizeAllGroups;
+        this.clientVpnEndpointId = $.clientVpnEndpointId;
+        this.description = $.description;
+        this.targetNetworkCidr = $.targetNetworkCidr;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AuthorizationRuleArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> accessGroupId;
-        private @Nullable Output<Boolean> authorizeAllGroups;
-        private Output<String> clientVpnEndpointId;
-        private @Nullable Output<String> description;
-        private Output<String> targetNetworkCidr;
+        private AuthorizationRuleArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AuthorizationRuleArgs();
         }
 
         public Builder(AuthorizationRuleArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accessGroupId = defaults.accessGroupId;
-    	      this.authorizeAllGroups = defaults.authorizeAllGroups;
-    	      this.clientVpnEndpointId = defaults.clientVpnEndpointId;
-    	      this.description = defaults.description;
-    	      this.targetNetworkCidr = defaults.targetNetworkCidr;
+            $ = new AuthorizationRuleArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder accessGroupId(@Nullable Output<String> accessGroupId) {
-            this.accessGroupId = accessGroupId;
+            $.accessGroupId = accessGroupId;
             return this;
         }
-        public Builder accessGroupId(@Nullable String accessGroupId) {
-            this.accessGroupId = Codegen.ofNullable(accessGroupId);
-            return this;
+
+        public Builder accessGroupId(String accessGroupId) {
+            return accessGroupId(Output.of(accessGroupId));
         }
+
         public Builder authorizeAllGroups(@Nullable Output<Boolean> authorizeAllGroups) {
-            this.authorizeAllGroups = authorizeAllGroups;
+            $.authorizeAllGroups = authorizeAllGroups;
             return this;
         }
-        public Builder authorizeAllGroups(@Nullable Boolean authorizeAllGroups) {
-            this.authorizeAllGroups = Codegen.ofNullable(authorizeAllGroups);
-            return this;
+
+        public Builder authorizeAllGroups(Boolean authorizeAllGroups) {
+            return authorizeAllGroups(Output.of(authorizeAllGroups));
         }
+
         public Builder clientVpnEndpointId(Output<String> clientVpnEndpointId) {
-            this.clientVpnEndpointId = Objects.requireNonNull(clientVpnEndpointId);
+            $.clientVpnEndpointId = clientVpnEndpointId;
             return this;
         }
+
         public Builder clientVpnEndpointId(String clientVpnEndpointId) {
-            this.clientVpnEndpointId = Output.of(Objects.requireNonNull(clientVpnEndpointId));
-            return this;
+            return clientVpnEndpointId(Output.of(clientVpnEndpointId));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder targetNetworkCidr(Output<String> targetNetworkCidr) {
-            this.targetNetworkCidr = Objects.requireNonNull(targetNetworkCidr);
+            $.targetNetworkCidr = targetNetworkCidr;
             return this;
         }
+
         public Builder targetNetworkCidr(String targetNetworkCidr) {
-            this.targetNetworkCidr = Output.of(Objects.requireNonNull(targetNetworkCidr));
-            return this;
-        }        public AuthorizationRuleArgs build() {
-            return new AuthorizationRuleArgs(accessGroupId, authorizeAllGroups, clientVpnEndpointId, description, targetNetworkCidr);
+            return targetNetworkCidr(Output.of(targetNetworkCidr));
+        }
+
+        public AuthorizationRuleArgs build() {
+            $.clientVpnEndpointId = Objects.requireNonNull($.clientVpnEndpointId, "expected parameter 'clientVpnEndpointId' to be non-null");
+            $.targetNetworkCidr = Objects.requireNonNull($.targetNetworkCidr, "expected parameter 'targetNetworkCidr' to be non-null");
+            return $;
         }
     }
+
 }

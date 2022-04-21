@@ -22,7 +22,7 @@ public final class FutureReservationStatusResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="autoCreatedReservations", required=true)
-      private final List<String> autoCreatedReservations;
+    private List<String> autoCreatedReservations;
 
     public List<String> autoCreatedReservations() {
         return this.autoCreatedReservations;
@@ -33,7 +33,7 @@ public final class FutureReservationStatusResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="fulfilledCount", required=true)
-      private final String fulfilledCount;
+    private String fulfilledCount;
 
     public String fulfilledCount() {
         return this.fulfilledCount;
@@ -44,7 +44,7 @@ public final class FutureReservationStatusResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="lockTime", required=true)
-      private final String lockTime;
+    private String lockTime;
 
     public String lockTime() {
         return this.lockTime;
@@ -55,76 +55,70 @@ public final class FutureReservationStatusResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="procurementStatus", required=true)
-      private final String procurementStatus;
+    private String procurementStatus;
 
     public String procurementStatus() {
         return this.procurementStatus;
     }
 
-    public FutureReservationStatusResponse(
-        List<String> autoCreatedReservations,
-        String fulfilledCount,
-        String lockTime,
-        String procurementStatus) {
-        this.autoCreatedReservations = Objects.requireNonNull(autoCreatedReservations, "expected parameter 'autoCreatedReservations' to be non-null");
-        this.fulfilledCount = Objects.requireNonNull(fulfilledCount, "expected parameter 'fulfilledCount' to be non-null");
-        this.lockTime = Objects.requireNonNull(lockTime, "expected parameter 'lockTime' to be non-null");
-        this.procurementStatus = Objects.requireNonNull(procurementStatus, "expected parameter 'procurementStatus' to be non-null");
-    }
+    private FutureReservationStatusResponse() {}
 
-    private FutureReservationStatusResponse() {
-        this.autoCreatedReservations = List.of();
-        this.fulfilledCount = null;
-        this.lockTime = null;
-        this.procurementStatus = null;
+    private FutureReservationStatusResponse(FutureReservationStatusResponse $) {
+        this.autoCreatedReservations = $.autoCreatedReservations;
+        this.fulfilledCount = $.fulfilledCount;
+        this.lockTime = $.lockTime;
+        this.procurementStatus = $.procurementStatus;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FutureReservationStatusResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<String> autoCreatedReservations;
-        private String fulfilledCount;
-        private String lockTime;
-        private String procurementStatus;
+        private FutureReservationStatusResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new FutureReservationStatusResponse();
         }
 
         public Builder(FutureReservationStatusResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.autoCreatedReservations = defaults.autoCreatedReservations;
-    	      this.fulfilledCount = defaults.fulfilledCount;
-    	      this.lockTime = defaults.lockTime;
-    	      this.procurementStatus = defaults.procurementStatus;
+            $ = new FutureReservationStatusResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder autoCreatedReservations(List<String> autoCreatedReservations) {
-            this.autoCreatedReservations = Objects.requireNonNull(autoCreatedReservations);
+            $.autoCreatedReservations = autoCreatedReservations;
             return this;
         }
+
         public Builder autoCreatedReservations(String... autoCreatedReservations) {
             return autoCreatedReservations(List.of(autoCreatedReservations));
         }
+
         public Builder fulfilledCount(String fulfilledCount) {
-            this.fulfilledCount = Objects.requireNonNull(fulfilledCount);
+            $.fulfilledCount = fulfilledCount;
             return this;
         }
+
         public Builder lockTime(String lockTime) {
-            this.lockTime = Objects.requireNonNull(lockTime);
+            $.lockTime = lockTime;
             return this;
         }
+
         public Builder procurementStatus(String procurementStatus) {
-            this.procurementStatus = Objects.requireNonNull(procurementStatus);
+            $.procurementStatus = procurementStatus;
             return this;
-        }        public FutureReservationStatusResponse build() {
-            return new FutureReservationStatusResponse(autoCreatedReservations, fulfilledCount, lockTime, procurementStatus);
+        }
+
+        public FutureReservationStatusResponse build() {
+            $.autoCreatedReservations = Objects.requireNonNull($.autoCreatedReservations, "expected parameter 'autoCreatedReservations' to be non-null");
+            $.fulfilledCount = Objects.requireNonNull($.fulfilledCount, "expected parameter 'fulfilledCount' to be non-null");
+            $.lockTime = Objects.requireNonNull($.lockTime, "expected parameter 'lockTime' to be non-null");
+            $.procurementStatus = Objects.requireNonNull($.procurementStatus, "expected parameter 'procurementStatus' to be non-null");
+            return $;
         }
     }
+
 }

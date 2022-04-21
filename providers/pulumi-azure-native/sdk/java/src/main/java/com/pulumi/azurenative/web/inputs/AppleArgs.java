@@ -7,9 +7,9 @@ import com.pulumi.azurenative.web.inputs.AppleRegistrationArgs;
 import com.pulumi.azurenative.web.inputs.LoginScopesArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class AppleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="enabled")
-      private final @Nullable Output<Boolean> enabled;
+    private @Nullable Output<Boolean> enabled;
 
-    public Output<Boolean> enabled() {
-        return this.enabled == null ? Codegen.empty() : this.enabled;
+    public Optional<Output<Boolean>> enabled() {
+        return Optional.ofNullable(this.enabled);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class AppleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="login")
-      private final @Nullable Output<LoginScopesArgs> login;
+    private @Nullable Output<LoginScopesArgs> login;
 
-    public Output<LoginScopesArgs> login() {
-        return this.login == null ? Codegen.empty() : this.login;
+    public Optional<Output<LoginScopesArgs>> login() {
+        return Optional.ofNullable(this.login);
     }
 
     /**
@@ -48,76 +48,68 @@ public final class AppleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="registration")
-      private final @Nullable Output<AppleRegistrationArgs> registration;
+    private @Nullable Output<AppleRegistrationArgs> registration;
 
-    public Output<AppleRegistrationArgs> registration() {
-        return this.registration == null ? Codegen.empty() : this.registration;
+    public Optional<Output<AppleRegistrationArgs>> registration() {
+        return Optional.ofNullable(this.registration);
     }
 
-    public AppleArgs(
-        @Nullable Output<Boolean> enabled,
-        @Nullable Output<LoginScopesArgs> login,
-        @Nullable Output<AppleRegistrationArgs> registration) {
-        this.enabled = enabled;
-        this.login = login;
-        this.registration = registration;
-    }
+    private AppleArgs() {}
 
-    private AppleArgs() {
-        this.enabled = Codegen.empty();
-        this.login = Codegen.empty();
-        this.registration = Codegen.empty();
+    private AppleArgs(AppleArgs $) {
+        this.enabled = $.enabled;
+        this.login = $.login;
+        this.registration = $.registration;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AppleArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> enabled;
-        private @Nullable Output<LoginScopesArgs> login;
-        private @Nullable Output<AppleRegistrationArgs> registration;
+        private AppleArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AppleArgs();
         }
 
         public Builder(AppleArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.enabled = defaults.enabled;
-    	      this.login = defaults.login;
-    	      this.registration = defaults.registration;
+            $ = new AppleArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder enabled(@Nullable Output<Boolean> enabled) {
-            this.enabled = enabled;
+            $.enabled = enabled;
             return this;
         }
-        public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Codegen.ofNullable(enabled);
-            return this;
+
+        public Builder enabled(Boolean enabled) {
+            return enabled(Output.of(enabled));
         }
+
         public Builder login(@Nullable Output<LoginScopesArgs> login) {
-            this.login = login;
+            $.login = login;
             return this;
         }
-        public Builder login(@Nullable LoginScopesArgs login) {
-            this.login = Codegen.ofNullable(login);
-            return this;
+
+        public Builder login(LoginScopesArgs login) {
+            return login(Output.of(login));
         }
+
         public Builder registration(@Nullable Output<AppleRegistrationArgs> registration) {
-            this.registration = registration;
+            $.registration = registration;
             return this;
         }
-        public Builder registration(@Nullable AppleRegistrationArgs registration) {
-            this.registration = Codegen.ofNullable(registration);
-            return this;
-        }        public AppleArgs build() {
-            return new AppleArgs(enabled, login, registration);
+
+        public Builder registration(AppleRegistrationArgs registration) {
+            return registration(Output.of(registration));
+        }
+
+        public AppleArgs build() {
+            return $;
         }
     }
+
 }

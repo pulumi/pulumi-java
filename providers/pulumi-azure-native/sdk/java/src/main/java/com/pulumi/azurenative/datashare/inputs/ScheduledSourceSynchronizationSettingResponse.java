@@ -25,7 +25,7 @@ public final class ScheduledSourceSynchronizationSettingResponse extends com.pul
      * 
      */
     @Import(name="kind", required=true)
-      private final String kind;
+    private String kind;
 
     public String kind() {
         return this.kind;
@@ -36,10 +36,10 @@ public final class ScheduledSourceSynchronizationSettingResponse extends com.pul
      * 
      */
     @Import(name="recurrenceInterval")
-      private final @Nullable String recurrenceInterval;
+    private @Nullable String recurrenceInterval;
 
     public Optional<String> recurrenceInterval() {
-        return this.recurrenceInterval == null ? Optional.empty() : Optional.ofNullable(this.recurrenceInterval);
+        return Optional.ofNullable(this.recurrenceInterval);
     }
 
     /**
@@ -47,64 +47,57 @@ public final class ScheduledSourceSynchronizationSettingResponse extends com.pul
      * 
      */
     @Import(name="synchronizationTime")
-      private final @Nullable String synchronizationTime;
+    private @Nullable String synchronizationTime;
 
     public Optional<String> synchronizationTime() {
-        return this.synchronizationTime == null ? Optional.empty() : Optional.ofNullable(this.synchronizationTime);
+        return Optional.ofNullable(this.synchronizationTime);
     }
 
-    public ScheduledSourceSynchronizationSettingResponse(
-        String kind,
-        @Nullable String recurrenceInterval,
-        @Nullable String synchronizationTime) {
-        this.kind = Codegen.stringProp("kind").arg(kind).require();
-        this.recurrenceInterval = recurrenceInterval;
-        this.synchronizationTime = synchronizationTime;
-    }
+    private ScheduledSourceSynchronizationSettingResponse() {}
 
-    private ScheduledSourceSynchronizationSettingResponse() {
-        this.kind = null;
-        this.recurrenceInterval = null;
-        this.synchronizationTime = null;
+    private ScheduledSourceSynchronizationSettingResponse(ScheduledSourceSynchronizationSettingResponse $) {
+        this.kind = $.kind;
+        this.recurrenceInterval = $.recurrenceInterval;
+        this.synchronizationTime = $.synchronizationTime;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ScheduledSourceSynchronizationSettingResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String kind;
-        private @Nullable String recurrenceInterval;
-        private @Nullable String synchronizationTime;
+        private ScheduledSourceSynchronizationSettingResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ScheduledSourceSynchronizationSettingResponse();
         }
 
         public Builder(ScheduledSourceSynchronizationSettingResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.kind = defaults.kind;
-    	      this.recurrenceInterval = defaults.recurrenceInterval;
-    	      this.synchronizationTime = defaults.synchronizationTime;
+            $ = new ScheduledSourceSynchronizationSettingResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder kind(String kind) {
-            this.kind = Objects.requireNonNull(kind);
+            $.kind = kind;
             return this;
         }
+
         public Builder recurrenceInterval(@Nullable String recurrenceInterval) {
-            this.recurrenceInterval = recurrenceInterval;
+            $.recurrenceInterval = recurrenceInterval;
             return this;
         }
+
         public Builder synchronizationTime(@Nullable String synchronizationTime) {
-            this.synchronizationTime = synchronizationTime;
+            $.synchronizationTime = synchronizationTime;
             return this;
-        }        public ScheduledSourceSynchronizationSettingResponse build() {
-            return new ScheduledSourceSynchronizationSettingResponse(kind, recurrenceInterval, synchronizationTime);
+        }
+
+        public ScheduledSourceSynchronizationSettingResponse build() {
+            $.kind = Codegen.stringProp("kind").arg($.kind).require();
+            return $;
         }
     }
+
 }

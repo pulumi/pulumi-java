@@ -6,8 +6,8 @@ package com.pulumi.awsnative.datasync.inputs;
 import com.pulumi.awsnative.datasync.enums.LocationNFSMountOptionsVersion;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class LocationNFSMountOptionsArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="version")
-      private final @Nullable Output<LocationNFSMountOptionsVersion> version;
+    private @Nullable Output<LocationNFSMountOptionsVersion> version;
 
-    public Output<LocationNFSMountOptionsVersion> version() {
-        return this.version == null ? Codegen.empty() : this.version;
+    public Optional<Output<LocationNFSMountOptionsVersion>> version() {
+        return Optional.ofNullable(this.version);
     }
 
-    public LocationNFSMountOptionsArgs(@Nullable Output<LocationNFSMountOptionsVersion> version) {
-        this.version = version;
-    }
+    private LocationNFSMountOptionsArgs() {}
 
-    private LocationNFSMountOptionsArgs() {
-        this.version = Codegen.empty();
+    private LocationNFSMountOptionsArgs(LocationNFSMountOptionsArgs $) {
+        this.version = $.version;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LocationNFSMountOptionsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<LocationNFSMountOptionsVersion> version;
+        private LocationNFSMountOptionsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new LocationNFSMountOptionsArgs();
         }
 
         public Builder(LocationNFSMountOptionsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.version = defaults.version;
+            $ = new LocationNFSMountOptionsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder version(@Nullable Output<LocationNFSMountOptionsVersion> version) {
-            this.version = version;
+            $.version = version;
             return this;
         }
-        public Builder version(@Nullable LocationNFSMountOptionsVersion version) {
-            this.version = Codegen.ofNullable(version);
-            return this;
-        }        public LocationNFSMountOptionsArgs build() {
-            return new LocationNFSMountOptionsArgs(version);
+
+        public Builder version(LocationNFSMountOptionsVersion version) {
+            return version(Output.of(version));
+        }
+
+        public LocationNFSMountOptionsArgs build() {
+            return $;
         }
     }
+
 }

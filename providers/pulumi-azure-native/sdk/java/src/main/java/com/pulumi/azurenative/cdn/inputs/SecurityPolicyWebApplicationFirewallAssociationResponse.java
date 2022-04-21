@@ -25,10 +25,10 @@ public final class SecurityPolicyWebApplicationFirewallAssociationResponse exten
      * 
      */
     @Import(name="domains")
-      private final @Nullable List<ResourceReferenceResponse> domains;
+    private @Nullable List<ResourceReferenceResponse> domains;
 
-    public List<ResourceReferenceResponse> domains() {
-        return this.domains == null ? List.of() : this.domains;
+    public Optional<List<ResourceReferenceResponse>> domains() {
+        return Optional.ofNullable(this.domains);
     }
 
     /**
@@ -36,61 +36,58 @@ public final class SecurityPolicyWebApplicationFirewallAssociationResponse exten
      * 
      */
     @Import(name="patternsToMatch")
-      private final @Nullable List<String> patternsToMatch;
+    private @Nullable List<String> patternsToMatch;
 
-    public List<String> patternsToMatch() {
-        return this.patternsToMatch == null ? List.of() : this.patternsToMatch;
+    public Optional<List<String>> patternsToMatch() {
+        return Optional.ofNullable(this.patternsToMatch);
     }
 
-    public SecurityPolicyWebApplicationFirewallAssociationResponse(
-        @Nullable List<ResourceReferenceResponse> domains,
-        @Nullable List<String> patternsToMatch) {
-        this.domains = domains;
-        this.patternsToMatch = patternsToMatch;
-    }
+    private SecurityPolicyWebApplicationFirewallAssociationResponse() {}
 
-    private SecurityPolicyWebApplicationFirewallAssociationResponse() {
-        this.domains = List.of();
-        this.patternsToMatch = List.of();
+    private SecurityPolicyWebApplicationFirewallAssociationResponse(SecurityPolicyWebApplicationFirewallAssociationResponse $) {
+        this.domains = $.domains;
+        this.patternsToMatch = $.patternsToMatch;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SecurityPolicyWebApplicationFirewallAssociationResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<ResourceReferenceResponse> domains;
-        private @Nullable List<String> patternsToMatch;
+        private SecurityPolicyWebApplicationFirewallAssociationResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new SecurityPolicyWebApplicationFirewallAssociationResponse();
         }
 
         public Builder(SecurityPolicyWebApplicationFirewallAssociationResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.domains = defaults.domains;
-    	      this.patternsToMatch = defaults.patternsToMatch;
+            $ = new SecurityPolicyWebApplicationFirewallAssociationResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder domains(@Nullable List<ResourceReferenceResponse> domains) {
-            this.domains = domains;
+            $.domains = domains;
             return this;
         }
+
         public Builder domains(ResourceReferenceResponse... domains) {
             return domains(List.of(domains));
         }
+
         public Builder patternsToMatch(@Nullable List<String> patternsToMatch) {
-            this.patternsToMatch = patternsToMatch;
+            $.patternsToMatch = patternsToMatch;
             return this;
         }
+
         public Builder patternsToMatch(String... patternsToMatch) {
             return patternsToMatch(List.of(patternsToMatch));
-        }        public SecurityPolicyWebApplicationFirewallAssociationResponse build() {
-            return new SecurityPolicyWebApplicationFirewallAssociationResponse(domains, patternsToMatch);
+        }
+
+        public SecurityPolicyWebApplicationFirewallAssociationResponse build() {
+            return $;
         }
     }
+
 }

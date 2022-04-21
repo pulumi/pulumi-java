@@ -6,9 +6,9 @@ package com.pulumi.azurenative.appplatform;
 import com.pulumi.azurenative.appplatform.inputs.ConfigurationServicePropertiesArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class ConfigurationServiceArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="configurationServiceName")
-      private final @Nullable Output<String> configurationServiceName;
+    private @Nullable Output<String> configurationServiceName;
 
-    public Output<String> configurationServiceName() {
-        return this.configurationServiceName == null ? Codegen.empty() : this.configurationServiceName;
+    public Optional<Output<String>> configurationServiceName() {
+        return Optional.ofNullable(this.configurationServiceName);
     }
 
     /**
@@ -32,10 +32,10 @@ public final class ConfigurationServiceArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="properties")
-      private final @Nullable Output<ConfigurationServicePropertiesArgs> properties;
+    private @Nullable Output<ConfigurationServicePropertiesArgs> properties;
 
-    public Output<ConfigurationServicePropertiesArgs> properties() {
-        return this.properties == null ? Codegen.empty() : this.properties;
+    public Optional<Output<ConfigurationServicePropertiesArgs>> properties() {
+        return Optional.ofNullable(this.properties);
     }
 
     /**
@@ -43,7 +43,7 @@ public final class ConfigurationServiceArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -54,89 +54,80 @@ public final class ConfigurationServiceArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="serviceName", required=true)
-      private final Output<String> serviceName;
+    private Output<String> serviceName;
 
     public Output<String> serviceName() {
         return this.serviceName;
     }
 
-    public ConfigurationServiceArgs(
-        @Nullable Output<String> configurationServiceName,
-        @Nullable Output<ConfigurationServicePropertiesArgs> properties,
-        Output<String> resourceGroupName,
-        Output<String> serviceName) {
-        this.configurationServiceName = configurationServiceName;
-        this.properties = properties;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.serviceName = Objects.requireNonNull(serviceName, "expected parameter 'serviceName' to be non-null");
-    }
+    private ConfigurationServiceArgs() {}
 
-    private ConfigurationServiceArgs() {
-        this.configurationServiceName = Codegen.empty();
-        this.properties = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.serviceName = Codegen.empty();
+    private ConfigurationServiceArgs(ConfigurationServiceArgs $) {
+        this.configurationServiceName = $.configurationServiceName;
+        this.properties = $.properties;
+        this.resourceGroupName = $.resourceGroupName;
+        this.serviceName = $.serviceName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ConfigurationServiceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> configurationServiceName;
-        private @Nullable Output<ConfigurationServicePropertiesArgs> properties;
-        private Output<String> resourceGroupName;
-        private Output<String> serviceName;
+        private ConfigurationServiceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ConfigurationServiceArgs();
         }
 
         public Builder(ConfigurationServiceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.configurationServiceName = defaults.configurationServiceName;
-    	      this.properties = defaults.properties;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.serviceName = defaults.serviceName;
+            $ = new ConfigurationServiceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder configurationServiceName(@Nullable Output<String> configurationServiceName) {
-            this.configurationServiceName = configurationServiceName;
+            $.configurationServiceName = configurationServiceName;
             return this;
         }
-        public Builder configurationServiceName(@Nullable String configurationServiceName) {
-            this.configurationServiceName = Codegen.ofNullable(configurationServiceName);
-            return this;
+
+        public Builder configurationServiceName(String configurationServiceName) {
+            return configurationServiceName(Output.of(configurationServiceName));
         }
+
         public Builder properties(@Nullable Output<ConfigurationServicePropertiesArgs> properties) {
-            this.properties = properties;
+            $.properties = properties;
             return this;
         }
-        public Builder properties(@Nullable ConfigurationServicePropertiesArgs properties) {
-            this.properties = Codegen.ofNullable(properties);
-            return this;
+
+        public Builder properties(ConfigurationServicePropertiesArgs properties) {
+            return properties(Output.of(properties));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder serviceName(Output<String> serviceName) {
-            this.serviceName = Objects.requireNonNull(serviceName);
+            $.serviceName = serviceName;
             return this;
         }
+
         public Builder serviceName(String serviceName) {
-            this.serviceName = Output.of(Objects.requireNonNull(serviceName));
-            return this;
-        }        public ConfigurationServiceArgs build() {
-            return new ConfigurationServiceArgs(configurationServiceName, properties, resourceGroupName, serviceName);
+            return serviceName(Output.of(serviceName));
+        }
+
+        public ConfigurationServiceArgs build() {
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.serviceName = Objects.requireNonNull($.serviceName, "expected parameter 'serviceName' to be non-null");
+            return $;
         }
     }
+
 }

@@ -32,7 +32,7 @@ public final class LabelingJobPropertiesResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="createdTimeUtc", required=true)
-      private final String createdTimeUtc;
+    private String createdTimeUtc;
 
     public String createdTimeUtc() {
         return this.createdTimeUtc;
@@ -43,7 +43,7 @@ public final class LabelingJobPropertiesResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="datasetConfiguration", required=true)
-      private final LabelingDatasetConfigurationResponse datasetConfiguration;
+    private LabelingDatasetConfigurationResponse datasetConfiguration;
 
     public LabelingDatasetConfigurationResponse datasetConfiguration() {
         return this.datasetConfiguration;
@@ -54,7 +54,7 @@ public final class LabelingJobPropertiesResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="jobInstructions", required=true)
-      private final LabelingJobInstructionsResponse jobInstructions;
+    private LabelingJobInstructionsResponse jobInstructions;
 
     public LabelingJobInstructionsResponse jobInstructions() {
         return this.jobInstructions;
@@ -65,7 +65,7 @@ public final class LabelingJobPropertiesResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="labelCategories", required=true)
-      private final Map<String,LabelCategoryResponse> labelCategories;
+    private Map<String,LabelCategoryResponse> labelCategories;
 
     public Map<String,LabelCategoryResponse> labelCategories() {
         return this.labelCategories;
@@ -76,7 +76,7 @@ public final class LabelingJobPropertiesResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="labelingJobMediaProperties", required=true)
-      private final LabelingJobImagePropertiesResponse labelingJobMediaProperties;
+    private LabelingJobImagePropertiesResponse labelingJobMediaProperties;
 
     public LabelingJobImagePropertiesResponse labelingJobMediaProperties() {
         return this.labelingJobMediaProperties;
@@ -87,10 +87,10 @@ public final class LabelingJobPropertiesResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="mlAssistConfiguration")
-      private final @Nullable MLAssistConfigurationResponse mlAssistConfiguration;
+    private @Nullable MLAssistConfigurationResponse mlAssistConfiguration;
 
     public Optional<MLAssistConfigurationResponse> mlAssistConfiguration() {
-        return this.mlAssistConfiguration == null ? Optional.empty() : Optional.ofNullable(this.mlAssistConfiguration);
+        return Optional.ofNullable(this.mlAssistConfiguration);
     }
 
     /**
@@ -98,7 +98,7 @@ public final class LabelingJobPropertiesResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="progressMetrics", required=true)
-      private final ProgressMetricsResponse progressMetrics;
+    private ProgressMetricsResponse progressMetrics;
 
     public ProgressMetricsResponse progressMetrics() {
         return this.progressMetrics;
@@ -109,7 +109,7 @@ public final class LabelingJobPropertiesResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="projectId", required=true)
-      private final String projectId;
+    private String projectId;
 
     public String projectId() {
         return this.projectId;
@@ -120,10 +120,10 @@ public final class LabelingJobPropertiesResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="properties")
-      private final @Nullable Map<String,String> properties;
+    private @Nullable Map<String,String> properties;
 
-    public Map<String,String> properties() {
-        return this.properties == null ? Map.of() : this.properties;
+    public Optional<Map<String,String>> properties() {
+        return Optional.ofNullable(this.properties);
     }
 
     /**
@@ -131,7 +131,7 @@ public final class LabelingJobPropertiesResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="status", required=true)
-      private final String status;
+    private String status;
 
     public String status() {
         return this.status;
@@ -142,7 +142,7 @@ public final class LabelingJobPropertiesResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="statusMessages", required=true)
-      private final List<StatusMessageResponse> statusMessages;
+    private List<StatusMessageResponse> statusMessages;
 
     public List<StatusMessageResponse> statusMessages() {
         return this.statusMessages;
@@ -153,148 +153,123 @@ public final class LabelingJobPropertiesResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="tags")
-      private final @Nullable Map<String,String> tags;
+    private @Nullable Map<String,String> tags;
 
-    public Map<String,String> tags() {
-        return this.tags == null ? Map.of() : this.tags;
+    public Optional<Map<String,String>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public LabelingJobPropertiesResponse(
-        String createdTimeUtc,
-        LabelingDatasetConfigurationResponse datasetConfiguration,
-        LabelingJobInstructionsResponse jobInstructions,
-        Map<String,LabelCategoryResponse> labelCategories,
-        LabelingJobImagePropertiesResponse labelingJobMediaProperties,
-        @Nullable MLAssistConfigurationResponse mlAssistConfiguration,
-        ProgressMetricsResponse progressMetrics,
-        String projectId,
-        @Nullable Map<String,String> properties,
-        String status,
-        List<StatusMessageResponse> statusMessages,
-        @Nullable Map<String,String> tags) {
-        this.createdTimeUtc = Objects.requireNonNull(createdTimeUtc, "expected parameter 'createdTimeUtc' to be non-null");
-        this.datasetConfiguration = Objects.requireNonNull(datasetConfiguration, "expected parameter 'datasetConfiguration' to be non-null");
-        this.jobInstructions = Objects.requireNonNull(jobInstructions, "expected parameter 'jobInstructions' to be non-null");
-        this.labelCategories = Objects.requireNonNull(labelCategories, "expected parameter 'labelCategories' to be non-null");
-        this.labelingJobMediaProperties = Objects.requireNonNull(labelingJobMediaProperties, "expected parameter 'labelingJobMediaProperties' to be non-null");
-        this.mlAssistConfiguration = mlAssistConfiguration;
-        this.progressMetrics = Objects.requireNonNull(progressMetrics, "expected parameter 'progressMetrics' to be non-null");
-        this.projectId = Objects.requireNonNull(projectId, "expected parameter 'projectId' to be non-null");
-        this.properties = properties;
-        this.status = Objects.requireNonNull(status, "expected parameter 'status' to be non-null");
-        this.statusMessages = Objects.requireNonNull(statusMessages, "expected parameter 'statusMessages' to be non-null");
-        this.tags = tags;
-    }
+    private LabelingJobPropertiesResponse() {}
 
-    private LabelingJobPropertiesResponse() {
-        this.createdTimeUtc = null;
-        this.datasetConfiguration = null;
-        this.jobInstructions = null;
-        this.labelCategories = Map.of();
-        this.labelingJobMediaProperties = null;
-        this.mlAssistConfiguration = null;
-        this.progressMetrics = null;
-        this.projectId = null;
-        this.properties = Map.of();
-        this.status = null;
-        this.statusMessages = List.of();
-        this.tags = Map.of();
+    private LabelingJobPropertiesResponse(LabelingJobPropertiesResponse $) {
+        this.createdTimeUtc = $.createdTimeUtc;
+        this.datasetConfiguration = $.datasetConfiguration;
+        this.jobInstructions = $.jobInstructions;
+        this.labelCategories = $.labelCategories;
+        this.labelingJobMediaProperties = $.labelingJobMediaProperties;
+        this.mlAssistConfiguration = $.mlAssistConfiguration;
+        this.progressMetrics = $.progressMetrics;
+        this.projectId = $.projectId;
+        this.properties = $.properties;
+        this.status = $.status;
+        this.statusMessages = $.statusMessages;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LabelingJobPropertiesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String createdTimeUtc;
-        private LabelingDatasetConfigurationResponse datasetConfiguration;
-        private LabelingJobInstructionsResponse jobInstructions;
-        private Map<String,LabelCategoryResponse> labelCategories;
-        private LabelingJobImagePropertiesResponse labelingJobMediaProperties;
-        private @Nullable MLAssistConfigurationResponse mlAssistConfiguration;
-        private ProgressMetricsResponse progressMetrics;
-        private String projectId;
-        private @Nullable Map<String,String> properties;
-        private String status;
-        private List<StatusMessageResponse> statusMessages;
-        private @Nullable Map<String,String> tags;
+        private LabelingJobPropertiesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new LabelingJobPropertiesResponse();
         }
 
         public Builder(LabelingJobPropertiesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.createdTimeUtc = defaults.createdTimeUtc;
-    	      this.datasetConfiguration = defaults.datasetConfiguration;
-    	      this.jobInstructions = defaults.jobInstructions;
-    	      this.labelCategories = defaults.labelCategories;
-    	      this.labelingJobMediaProperties = defaults.labelingJobMediaProperties;
-    	      this.mlAssistConfiguration = defaults.mlAssistConfiguration;
-    	      this.progressMetrics = defaults.progressMetrics;
-    	      this.projectId = defaults.projectId;
-    	      this.properties = defaults.properties;
-    	      this.status = defaults.status;
-    	      this.statusMessages = defaults.statusMessages;
-    	      this.tags = defaults.tags;
+            $ = new LabelingJobPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder createdTimeUtc(String createdTimeUtc) {
-            this.createdTimeUtc = Objects.requireNonNull(createdTimeUtc);
+            $.createdTimeUtc = createdTimeUtc;
             return this;
         }
+
         public Builder datasetConfiguration(LabelingDatasetConfigurationResponse datasetConfiguration) {
-            this.datasetConfiguration = Objects.requireNonNull(datasetConfiguration);
+            $.datasetConfiguration = datasetConfiguration;
             return this;
         }
+
         public Builder jobInstructions(LabelingJobInstructionsResponse jobInstructions) {
-            this.jobInstructions = Objects.requireNonNull(jobInstructions);
+            $.jobInstructions = jobInstructions;
             return this;
         }
+
         public Builder labelCategories(Map<String,LabelCategoryResponse> labelCategories) {
-            this.labelCategories = Objects.requireNonNull(labelCategories);
+            $.labelCategories = labelCategories;
             return this;
         }
+
         public Builder labelingJobMediaProperties(LabelingJobImagePropertiesResponse labelingJobMediaProperties) {
-            this.labelingJobMediaProperties = Objects.requireNonNull(labelingJobMediaProperties);
+            $.labelingJobMediaProperties = labelingJobMediaProperties;
             return this;
         }
+
         public Builder mlAssistConfiguration(@Nullable MLAssistConfigurationResponse mlAssistConfiguration) {
-            this.mlAssistConfiguration = mlAssistConfiguration;
+            $.mlAssistConfiguration = mlAssistConfiguration;
             return this;
         }
+
         public Builder progressMetrics(ProgressMetricsResponse progressMetrics) {
-            this.progressMetrics = Objects.requireNonNull(progressMetrics);
+            $.progressMetrics = progressMetrics;
             return this;
         }
+
         public Builder projectId(String projectId) {
-            this.projectId = Objects.requireNonNull(projectId);
+            $.projectId = projectId;
             return this;
         }
+
         public Builder properties(@Nullable Map<String,String> properties) {
-            this.properties = properties;
+            $.properties = properties;
             return this;
         }
+
         public Builder status(String status) {
-            this.status = Objects.requireNonNull(status);
+            $.status = status;
             return this;
         }
+
         public Builder statusMessages(List<StatusMessageResponse> statusMessages) {
-            this.statusMessages = Objects.requireNonNull(statusMessages);
+            $.statusMessages = statusMessages;
             return this;
         }
+
         public Builder statusMessages(StatusMessageResponse... statusMessages) {
             return statusMessages(List.of(statusMessages));
         }
+
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
-        }        public LabelingJobPropertiesResponse build() {
-            return new LabelingJobPropertiesResponse(createdTimeUtc, datasetConfiguration, jobInstructions, labelCategories, labelingJobMediaProperties, mlAssistConfiguration, progressMetrics, projectId, properties, status, statusMessages, tags);
+        }
+
+        public LabelingJobPropertiesResponse build() {
+            $.createdTimeUtc = Objects.requireNonNull($.createdTimeUtc, "expected parameter 'createdTimeUtc' to be non-null");
+            $.datasetConfiguration = Objects.requireNonNull($.datasetConfiguration, "expected parameter 'datasetConfiguration' to be non-null");
+            $.jobInstructions = Objects.requireNonNull($.jobInstructions, "expected parameter 'jobInstructions' to be non-null");
+            $.labelCategories = Objects.requireNonNull($.labelCategories, "expected parameter 'labelCategories' to be non-null");
+            $.labelingJobMediaProperties = Objects.requireNonNull($.labelingJobMediaProperties, "expected parameter 'labelingJobMediaProperties' to be non-null");
+            $.progressMetrics = Objects.requireNonNull($.progressMetrics, "expected parameter 'progressMetrics' to be non-null");
+            $.projectId = Objects.requireNonNull($.projectId, "expected parameter 'projectId' to be non-null");
+            $.status = Objects.requireNonNull($.status, "expected parameter 'status' to be non-null");
+            $.statusMessages = Objects.requireNonNull($.statusMessages, "expected parameter 'statusMessages' to be non-null");
+            return $;
         }
     }
+
 }

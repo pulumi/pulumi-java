@@ -6,9 +6,9 @@ package com.pulumi.awsnative.sagemaker.inputs;
 import com.pulumi.awsnative.sagemaker.enums.DomainSharingSettingsNotebookOutputOption;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class DomainSharingSettingsArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="notebookOutputOption")
-      private final @Nullable Output<DomainSharingSettingsNotebookOutputOption> notebookOutputOption;
+    private @Nullable Output<DomainSharingSettingsNotebookOutputOption> notebookOutputOption;
 
-    public Output<DomainSharingSettingsNotebookOutputOption> notebookOutputOption() {
-        return this.notebookOutputOption == null ? Codegen.empty() : this.notebookOutputOption;
+    public Optional<Output<DomainSharingSettingsNotebookOutputOption>> notebookOutputOption() {
+        return Optional.ofNullable(this.notebookOutputOption);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class DomainSharingSettingsArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="s3KmsKeyId")
-      private final @Nullable Output<String> s3KmsKeyId;
+    private @Nullable Output<String> s3KmsKeyId;
 
-    public Output<String> s3KmsKeyId() {
-        return this.s3KmsKeyId == null ? Codegen.empty() : this.s3KmsKeyId;
+    public Optional<Output<String>> s3KmsKeyId() {
+        return Optional.ofNullable(this.s3KmsKeyId);
     }
 
     /**
@@ -47,76 +47,68 @@ public final class DomainSharingSettingsArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="s3OutputPath")
-      private final @Nullable Output<String> s3OutputPath;
+    private @Nullable Output<String> s3OutputPath;
 
-    public Output<String> s3OutputPath() {
-        return this.s3OutputPath == null ? Codegen.empty() : this.s3OutputPath;
+    public Optional<Output<String>> s3OutputPath() {
+        return Optional.ofNullable(this.s3OutputPath);
     }
 
-    public DomainSharingSettingsArgs(
-        @Nullable Output<DomainSharingSettingsNotebookOutputOption> notebookOutputOption,
-        @Nullable Output<String> s3KmsKeyId,
-        @Nullable Output<String> s3OutputPath) {
-        this.notebookOutputOption = notebookOutputOption;
-        this.s3KmsKeyId = s3KmsKeyId;
-        this.s3OutputPath = s3OutputPath;
-    }
+    private DomainSharingSettingsArgs() {}
 
-    private DomainSharingSettingsArgs() {
-        this.notebookOutputOption = Codegen.empty();
-        this.s3KmsKeyId = Codegen.empty();
-        this.s3OutputPath = Codegen.empty();
+    private DomainSharingSettingsArgs(DomainSharingSettingsArgs $) {
+        this.notebookOutputOption = $.notebookOutputOption;
+        this.s3KmsKeyId = $.s3KmsKeyId;
+        this.s3OutputPath = $.s3OutputPath;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DomainSharingSettingsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<DomainSharingSettingsNotebookOutputOption> notebookOutputOption;
-        private @Nullable Output<String> s3KmsKeyId;
-        private @Nullable Output<String> s3OutputPath;
+        private DomainSharingSettingsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DomainSharingSettingsArgs();
         }
 
         public Builder(DomainSharingSettingsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.notebookOutputOption = defaults.notebookOutputOption;
-    	      this.s3KmsKeyId = defaults.s3KmsKeyId;
-    	      this.s3OutputPath = defaults.s3OutputPath;
+            $ = new DomainSharingSettingsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder notebookOutputOption(@Nullable Output<DomainSharingSettingsNotebookOutputOption> notebookOutputOption) {
-            this.notebookOutputOption = notebookOutputOption;
+            $.notebookOutputOption = notebookOutputOption;
             return this;
         }
-        public Builder notebookOutputOption(@Nullable DomainSharingSettingsNotebookOutputOption notebookOutputOption) {
-            this.notebookOutputOption = Codegen.ofNullable(notebookOutputOption);
-            return this;
+
+        public Builder notebookOutputOption(DomainSharingSettingsNotebookOutputOption notebookOutputOption) {
+            return notebookOutputOption(Output.of(notebookOutputOption));
         }
+
         public Builder s3KmsKeyId(@Nullable Output<String> s3KmsKeyId) {
-            this.s3KmsKeyId = s3KmsKeyId;
+            $.s3KmsKeyId = s3KmsKeyId;
             return this;
         }
-        public Builder s3KmsKeyId(@Nullable String s3KmsKeyId) {
-            this.s3KmsKeyId = Codegen.ofNullable(s3KmsKeyId);
-            return this;
+
+        public Builder s3KmsKeyId(String s3KmsKeyId) {
+            return s3KmsKeyId(Output.of(s3KmsKeyId));
         }
+
         public Builder s3OutputPath(@Nullable Output<String> s3OutputPath) {
-            this.s3OutputPath = s3OutputPath;
+            $.s3OutputPath = s3OutputPath;
             return this;
         }
-        public Builder s3OutputPath(@Nullable String s3OutputPath) {
-            this.s3OutputPath = Codegen.ofNullable(s3OutputPath);
-            return this;
-        }        public DomainSharingSettingsArgs build() {
-            return new DomainSharingSettingsArgs(notebookOutputOption, s3KmsKeyId, s3OutputPath);
+
+        public Builder s3OutputPath(String s3OutputPath) {
+            return s3OutputPath(Output.of(s3OutputPath));
+        }
+
+        public DomainSharingSettingsArgs build() {
+            return $;
         }
     }
+
 }

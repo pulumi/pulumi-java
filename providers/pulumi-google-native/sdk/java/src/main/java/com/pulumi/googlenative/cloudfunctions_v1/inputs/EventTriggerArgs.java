@@ -5,10 +5,10 @@ package com.pulumi.googlenative.cloudfunctions_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.cloudfunctions_v1.inputs.FailurePolicyArgs;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,7 +25,7 @@ public final class EventTriggerArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="eventType", required=true)
-      private final Output<String> eventType;
+    private Output<String> eventType;
 
     public Output<String> eventType() {
         return this.eventType;
@@ -36,10 +36,10 @@ public final class EventTriggerArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="failurePolicy")
-      private final @Nullable Output<FailurePolicyArgs> failurePolicy;
+    private @Nullable Output<FailurePolicyArgs> failurePolicy;
 
-    public Output<FailurePolicyArgs> failurePolicy() {
-        return this.failurePolicy == null ? Codegen.empty() : this.failurePolicy;
+    public Optional<Output<FailurePolicyArgs>> failurePolicy() {
+        return Optional.ofNullable(this.failurePolicy);
     }
 
     /**
@@ -47,7 +47,7 @@ public final class EventTriggerArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resource", required=true)
-      private final Output<String> resource;
+    private Output<String> resource;
 
     public Output<String> resource() {
         return this.resource;
@@ -58,89 +58,80 @@ public final class EventTriggerArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="service")
-      private final @Nullable Output<String> service;
+    private @Nullable Output<String> service;
 
-    public Output<String> service() {
-        return this.service == null ? Codegen.empty() : this.service;
+    public Optional<Output<String>> service() {
+        return Optional.ofNullable(this.service);
     }
 
-    public EventTriggerArgs(
-        Output<String> eventType,
-        @Nullable Output<FailurePolicyArgs> failurePolicy,
-        Output<String> resource,
-        @Nullable Output<String> service) {
-        this.eventType = Objects.requireNonNull(eventType, "expected parameter 'eventType' to be non-null");
-        this.failurePolicy = failurePolicy;
-        this.resource = Objects.requireNonNull(resource, "expected parameter 'resource' to be non-null");
-        this.service = service;
-    }
+    private EventTriggerArgs() {}
 
-    private EventTriggerArgs() {
-        this.eventType = Codegen.empty();
-        this.failurePolicy = Codegen.empty();
-        this.resource = Codegen.empty();
-        this.service = Codegen.empty();
+    private EventTriggerArgs(EventTriggerArgs $) {
+        this.eventType = $.eventType;
+        this.failurePolicy = $.failurePolicy;
+        this.resource = $.resource;
+        this.service = $.service;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EventTriggerArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> eventType;
-        private @Nullable Output<FailurePolicyArgs> failurePolicy;
-        private Output<String> resource;
-        private @Nullable Output<String> service;
+        private EventTriggerArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new EventTriggerArgs();
         }
 
         public Builder(EventTriggerArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.eventType = defaults.eventType;
-    	      this.failurePolicy = defaults.failurePolicy;
-    	      this.resource = defaults.resource;
-    	      this.service = defaults.service;
+            $ = new EventTriggerArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder eventType(Output<String> eventType) {
-            this.eventType = Objects.requireNonNull(eventType);
+            $.eventType = eventType;
             return this;
         }
+
         public Builder eventType(String eventType) {
-            this.eventType = Output.of(Objects.requireNonNull(eventType));
-            return this;
+            return eventType(Output.of(eventType));
         }
+
         public Builder failurePolicy(@Nullable Output<FailurePolicyArgs> failurePolicy) {
-            this.failurePolicy = failurePolicy;
+            $.failurePolicy = failurePolicy;
             return this;
         }
-        public Builder failurePolicy(@Nullable FailurePolicyArgs failurePolicy) {
-            this.failurePolicy = Codegen.ofNullable(failurePolicy);
-            return this;
+
+        public Builder failurePolicy(FailurePolicyArgs failurePolicy) {
+            return failurePolicy(Output.of(failurePolicy));
         }
+
         public Builder resource(Output<String> resource) {
-            this.resource = Objects.requireNonNull(resource);
+            $.resource = resource;
             return this;
         }
+
         public Builder resource(String resource) {
-            this.resource = Output.of(Objects.requireNonNull(resource));
-            return this;
+            return resource(Output.of(resource));
         }
+
         public Builder service(@Nullable Output<String> service) {
-            this.service = service;
+            $.service = service;
             return this;
         }
-        public Builder service(@Nullable String service) {
-            this.service = Codegen.ofNullable(service);
-            return this;
-        }        public EventTriggerArgs build() {
-            return new EventTriggerArgs(eventType, failurePolicy, resource, service);
+
+        public Builder service(String service) {
+            return service(Output.of(service));
+        }
+
+        public EventTriggerArgs build() {
+            $.eventType = Objects.requireNonNull($.eventType, "expected parameter 'eventType' to be non-null");
+            $.resource = Objects.requireNonNull($.resource, "expected parameter 'resource' to be non-null");
+            return $;
         }
     }
+
 }

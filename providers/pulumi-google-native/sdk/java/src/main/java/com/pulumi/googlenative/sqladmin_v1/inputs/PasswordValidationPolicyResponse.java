@@ -23,7 +23,7 @@ public final class PasswordValidationPolicyResponse extends com.pulumi.resources
      * 
      */
     @Import(name="complexity", required=true)
-      private final String complexity;
+    private String complexity;
 
     public String complexity() {
         return this.complexity;
@@ -34,7 +34,7 @@ public final class PasswordValidationPolicyResponse extends com.pulumi.resources
      * 
      */
     @Import(name="disallowUsernameSubstring", required=true)
-      private final Boolean disallowUsernameSubstring;
+    private Boolean disallowUsernameSubstring;
 
     public Boolean disallowUsernameSubstring() {
         return this.disallowUsernameSubstring;
@@ -45,7 +45,7 @@ public final class PasswordValidationPolicyResponse extends com.pulumi.resources
      * 
      */
     @Import(name="minLength", required=true)
-      private final Integer minLength;
+    private Integer minLength;
 
     public Integer minLength() {
         return this.minLength;
@@ -56,7 +56,7 @@ public final class PasswordValidationPolicyResponse extends com.pulumi.resources
      * 
      */
     @Import(name="passwordChangeInterval", required=true)
-      private final String passwordChangeInterval;
+    private String passwordChangeInterval;
 
     public String passwordChangeInterval() {
         return this.passwordChangeInterval;
@@ -67,82 +67,73 @@ public final class PasswordValidationPolicyResponse extends com.pulumi.resources
      * 
      */
     @Import(name="reuseInterval", required=true)
-      private final Integer reuseInterval;
+    private Integer reuseInterval;
 
     public Integer reuseInterval() {
         return this.reuseInterval;
     }
 
-    public PasswordValidationPolicyResponse(
-        String complexity,
-        Boolean disallowUsernameSubstring,
-        Integer minLength,
-        String passwordChangeInterval,
-        Integer reuseInterval) {
-        this.complexity = Objects.requireNonNull(complexity, "expected parameter 'complexity' to be non-null");
-        this.disallowUsernameSubstring = Objects.requireNonNull(disallowUsernameSubstring, "expected parameter 'disallowUsernameSubstring' to be non-null");
-        this.minLength = Objects.requireNonNull(minLength, "expected parameter 'minLength' to be non-null");
-        this.passwordChangeInterval = Objects.requireNonNull(passwordChangeInterval, "expected parameter 'passwordChangeInterval' to be non-null");
-        this.reuseInterval = Objects.requireNonNull(reuseInterval, "expected parameter 'reuseInterval' to be non-null");
-    }
+    private PasswordValidationPolicyResponse() {}
 
-    private PasswordValidationPolicyResponse() {
-        this.complexity = null;
-        this.disallowUsernameSubstring = null;
-        this.minLength = null;
-        this.passwordChangeInterval = null;
-        this.reuseInterval = null;
+    private PasswordValidationPolicyResponse(PasswordValidationPolicyResponse $) {
+        this.complexity = $.complexity;
+        this.disallowUsernameSubstring = $.disallowUsernameSubstring;
+        this.minLength = $.minLength;
+        this.passwordChangeInterval = $.passwordChangeInterval;
+        this.reuseInterval = $.reuseInterval;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PasswordValidationPolicyResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String complexity;
-        private Boolean disallowUsernameSubstring;
-        private Integer minLength;
-        private String passwordChangeInterval;
-        private Integer reuseInterval;
+        private PasswordValidationPolicyResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new PasswordValidationPolicyResponse();
         }
 
         public Builder(PasswordValidationPolicyResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.complexity = defaults.complexity;
-    	      this.disallowUsernameSubstring = defaults.disallowUsernameSubstring;
-    	      this.minLength = defaults.minLength;
-    	      this.passwordChangeInterval = defaults.passwordChangeInterval;
-    	      this.reuseInterval = defaults.reuseInterval;
+            $ = new PasswordValidationPolicyResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder complexity(String complexity) {
-            this.complexity = Objects.requireNonNull(complexity);
+            $.complexity = complexity;
             return this;
         }
+
         public Builder disallowUsernameSubstring(Boolean disallowUsernameSubstring) {
-            this.disallowUsernameSubstring = Objects.requireNonNull(disallowUsernameSubstring);
+            $.disallowUsernameSubstring = disallowUsernameSubstring;
             return this;
         }
+
         public Builder minLength(Integer minLength) {
-            this.minLength = Objects.requireNonNull(minLength);
+            $.minLength = minLength;
             return this;
         }
+
         public Builder passwordChangeInterval(String passwordChangeInterval) {
-            this.passwordChangeInterval = Objects.requireNonNull(passwordChangeInterval);
+            $.passwordChangeInterval = passwordChangeInterval;
             return this;
         }
+
         public Builder reuseInterval(Integer reuseInterval) {
-            this.reuseInterval = Objects.requireNonNull(reuseInterval);
+            $.reuseInterval = reuseInterval;
             return this;
-        }        public PasswordValidationPolicyResponse build() {
-            return new PasswordValidationPolicyResponse(complexity, disallowUsernameSubstring, minLength, passwordChangeInterval, reuseInterval);
+        }
+
+        public PasswordValidationPolicyResponse build() {
+            $.complexity = Objects.requireNonNull($.complexity, "expected parameter 'complexity' to be non-null");
+            $.disallowUsernameSubstring = Objects.requireNonNull($.disallowUsernameSubstring, "expected parameter 'disallowUsernameSubstring' to be non-null");
+            $.minLength = Objects.requireNonNull($.minLength, "expected parameter 'minLength' to be non-null");
+            $.passwordChangeInterval = Objects.requireNonNull($.passwordChangeInterval, "expected parameter 'passwordChangeInterval' to be non-null");
+            $.reuseInterval = Objects.requireNonNull($.reuseInterval, "expected parameter 'reuseInterval' to be non-null");
+            return $;
         }
     }
+
 }

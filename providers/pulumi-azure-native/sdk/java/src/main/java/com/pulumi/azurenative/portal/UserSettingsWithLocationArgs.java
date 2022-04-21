@@ -6,9 +6,9 @@ package com.pulumi.azurenative.portal;
 import com.pulumi.azurenative.portal.inputs.UserPropertiesArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,7 +21,7 @@ public final class UserSettingsWithLocationArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="location", required=true)
-      private final Output<String> location;
+    private Output<String> location;
 
     public Output<String> location() {
         return this.location;
@@ -32,7 +32,7 @@ public final class UserSettingsWithLocationArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="properties", required=true)
-      private final Output<UserPropertiesArgs> properties;
+    private Output<UserPropertiesArgs> properties;
 
     public Output<UserPropertiesArgs> properties() {
         return this.properties;
@@ -43,76 +43,70 @@ public final class UserSettingsWithLocationArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="userSettingsName")
-      private final @Nullable Output<String> userSettingsName;
+    private @Nullable Output<String> userSettingsName;
 
-    public Output<String> userSettingsName() {
-        return this.userSettingsName == null ? Codegen.empty() : this.userSettingsName;
+    public Optional<Output<String>> userSettingsName() {
+        return Optional.ofNullable(this.userSettingsName);
     }
 
-    public UserSettingsWithLocationArgs(
-        Output<String> location,
-        Output<UserPropertiesArgs> properties,
-        @Nullable Output<String> userSettingsName) {
-        this.location = Objects.requireNonNull(location, "expected parameter 'location' to be non-null");
-        this.properties = Objects.requireNonNull(properties, "expected parameter 'properties' to be non-null");
-        this.userSettingsName = userSettingsName;
-    }
+    private UserSettingsWithLocationArgs() {}
 
-    private UserSettingsWithLocationArgs() {
-        this.location = Codegen.empty();
-        this.properties = Codegen.empty();
-        this.userSettingsName = Codegen.empty();
+    private UserSettingsWithLocationArgs(UserSettingsWithLocationArgs $) {
+        this.location = $.location;
+        this.properties = $.properties;
+        this.userSettingsName = $.userSettingsName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(UserSettingsWithLocationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> location;
-        private Output<UserPropertiesArgs> properties;
-        private @Nullable Output<String> userSettingsName;
+        private UserSettingsWithLocationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new UserSettingsWithLocationArgs();
         }
 
         public Builder(UserSettingsWithLocationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.location = defaults.location;
-    	      this.properties = defaults.properties;
-    	      this.userSettingsName = defaults.userSettingsName;
+            $ = new UserSettingsWithLocationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder location(Output<String> location) {
-            this.location = Objects.requireNonNull(location);
+            $.location = location;
             return this;
         }
+
         public Builder location(String location) {
-            this.location = Output.of(Objects.requireNonNull(location));
-            return this;
+            return location(Output.of(location));
         }
+
         public Builder properties(Output<UserPropertiesArgs> properties) {
-            this.properties = Objects.requireNonNull(properties);
+            $.properties = properties;
             return this;
         }
+
         public Builder properties(UserPropertiesArgs properties) {
-            this.properties = Output.of(Objects.requireNonNull(properties));
-            return this;
+            return properties(Output.of(properties));
         }
+
         public Builder userSettingsName(@Nullable Output<String> userSettingsName) {
-            this.userSettingsName = userSettingsName;
+            $.userSettingsName = userSettingsName;
             return this;
         }
-        public Builder userSettingsName(@Nullable String userSettingsName) {
-            this.userSettingsName = Codegen.ofNullable(userSettingsName);
-            return this;
-        }        public UserSettingsWithLocationArgs build() {
-            return new UserSettingsWithLocationArgs(location, properties, userSettingsName);
+
+        public Builder userSettingsName(String userSettingsName) {
+            return userSettingsName(Output.of(userSettingsName));
+        }
+
+        public UserSettingsWithLocationArgs build() {
+            $.location = Objects.requireNonNull($.location, "expected parameter 'location' to be non-null");
+            $.properties = Objects.requireNonNull($.properties, "expected parameter 'properties' to be non-null");
+            return $;
         }
     }
+
 }

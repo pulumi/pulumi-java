@@ -20,10 +20,10 @@ public final class GetMeshArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="meshOwner")
-      private final @Nullable String meshOwner;
+    private @Nullable String meshOwner;
 
     public Optional<String> meshOwner() {
-        return this.meshOwner == null ? Optional.empty() : Optional.ofNullable(this.meshOwner);
+        return Optional.ofNullable(this.meshOwner);
     }
 
     /**
@@ -31,7 +31,7 @@ public final class GetMeshArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -42,64 +42,57 @@ public final class GetMeshArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Map<String,String> tags;
+    private @Nullable Map<String,String> tags;
 
-    public Map<String,String> tags() {
-        return this.tags == null ? Map.of() : this.tags;
+    public Optional<Map<String,String>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public GetMeshArgs(
-        @Nullable String meshOwner,
-        String name,
-        @Nullable Map<String,String> tags) {
-        this.meshOwner = meshOwner;
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.tags = tags;
-    }
+    private GetMeshArgs() {}
 
-    private GetMeshArgs() {
-        this.meshOwner = null;
-        this.name = null;
-        this.tags = Map.of();
+    private GetMeshArgs(GetMeshArgs $) {
+        this.meshOwner = $.meshOwner;
+        this.name = $.name;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetMeshArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String meshOwner;
-        private String name;
-        private @Nullable Map<String,String> tags;
+        private GetMeshArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetMeshArgs();
         }
 
         public Builder(GetMeshArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.meshOwner = defaults.meshOwner;
-    	      this.name = defaults.name;
-    	      this.tags = defaults.tags;
+            $ = new GetMeshArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder meshOwner(@Nullable String meshOwner) {
-            this.meshOwner = meshOwner;
+            $.meshOwner = meshOwner;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
-        }        public GetMeshArgs build() {
-            return new GetMeshArgs(meshOwner, name, tags);
+        }
+
+        public GetMeshArgs build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            return $;
         }
     }
+
 }

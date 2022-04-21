@@ -23,7 +23,7 @@ public final class EnterpriseChannelNodeResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="azureLocation", required=true)
-      private final String azureLocation;
+    private String azureLocation;
 
     public String azureLocation() {
         return this.azureLocation;
@@ -34,7 +34,7 @@ public final class EnterpriseChannelNodeResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="azureSku", required=true)
-      private final String azureSku;
+    private String azureSku;
 
     public String azureSku() {
         return this.azureSku;
@@ -45,7 +45,7 @@ public final class EnterpriseChannelNodeResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="id", required=true)
-      private final String id;
+    private String id;
 
     public String id() {
         return this.id;
@@ -56,7 +56,7 @@ public final class EnterpriseChannelNodeResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -67,82 +67,72 @@ public final class EnterpriseChannelNodeResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="state")
-      private final @Nullable String state;
+    private @Nullable String state;
 
     public Optional<String> state() {
-        return this.state == null ? Optional.empty() : Optional.ofNullable(this.state);
+        return Optional.ofNullable(this.state);
     }
 
-    public EnterpriseChannelNodeResponse(
-        String azureLocation,
-        String azureSku,
-        String id,
-        String name,
-        @Nullable String state) {
-        this.azureLocation = Objects.requireNonNull(azureLocation, "expected parameter 'azureLocation' to be non-null");
-        this.azureSku = Objects.requireNonNull(azureSku, "expected parameter 'azureSku' to be non-null");
-        this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.state = state;
-    }
+    private EnterpriseChannelNodeResponse() {}
 
-    private EnterpriseChannelNodeResponse() {
-        this.azureLocation = null;
-        this.azureSku = null;
-        this.id = null;
-        this.name = null;
-        this.state = null;
+    private EnterpriseChannelNodeResponse(EnterpriseChannelNodeResponse $) {
+        this.azureLocation = $.azureLocation;
+        this.azureSku = $.azureSku;
+        this.id = $.id;
+        this.name = $.name;
+        this.state = $.state;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EnterpriseChannelNodeResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String azureLocation;
-        private String azureSku;
-        private String id;
-        private String name;
-        private @Nullable String state;
+        private EnterpriseChannelNodeResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new EnterpriseChannelNodeResponse();
         }
 
         public Builder(EnterpriseChannelNodeResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.azureLocation = defaults.azureLocation;
-    	      this.azureSku = defaults.azureSku;
-    	      this.id = defaults.id;
-    	      this.name = defaults.name;
-    	      this.state = defaults.state;
+            $ = new EnterpriseChannelNodeResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder azureLocation(String azureLocation) {
-            this.azureLocation = Objects.requireNonNull(azureLocation);
+            $.azureLocation = azureLocation;
             return this;
         }
+
         public Builder azureSku(String azureSku) {
-            this.azureSku = Objects.requireNonNull(azureSku);
+            $.azureSku = azureSku;
             return this;
         }
+
         public Builder id(String id) {
-            this.id = Objects.requireNonNull(id);
+            $.id = id;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder state(@Nullable String state) {
-            this.state = state;
+            $.state = state;
             return this;
-        }        public EnterpriseChannelNodeResponse build() {
-            return new EnterpriseChannelNodeResponse(azureLocation, azureSku, id, name, state);
+        }
+
+        public EnterpriseChannelNodeResponse build() {
+            $.azureLocation = Objects.requireNonNull($.azureLocation, "expected parameter 'azureLocation' to be non-null");
+            $.azureSku = Objects.requireNonNull($.azureSku, "expected parameter 'azureSku' to be non-null");
+            $.id = Objects.requireNonNull($.id, "expected parameter 'id' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            return $;
         }
     }
+
 }

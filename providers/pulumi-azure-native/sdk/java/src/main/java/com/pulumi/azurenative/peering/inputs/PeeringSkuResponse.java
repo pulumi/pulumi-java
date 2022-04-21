@@ -23,10 +23,10 @@ public final class PeeringSkuResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="family")
-      private final @Nullable String family;
+    private @Nullable String family;
 
     public Optional<String> family() {
-        return this.family == null ? Optional.empty() : Optional.ofNullable(this.family);
+        return Optional.ofNullable(this.family);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class PeeringSkuResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable String name;
+    private @Nullable String name;
 
     public Optional<String> name() {
-        return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -45,10 +45,10 @@ public final class PeeringSkuResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="size")
-      private final @Nullable String size;
+    private @Nullable String size;
 
     public Optional<String> size() {
-        return this.size == null ? Optional.empty() : Optional.ofNullable(this.size);
+        return Optional.ofNullable(this.size);
     }
 
     /**
@@ -56,73 +56,62 @@ public final class PeeringSkuResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="tier")
-      private final @Nullable String tier;
+    private @Nullable String tier;
 
     public Optional<String> tier() {
-        return this.tier == null ? Optional.empty() : Optional.ofNullable(this.tier);
+        return Optional.ofNullable(this.tier);
     }
 
-    public PeeringSkuResponse(
-        @Nullable String family,
-        @Nullable String name,
-        @Nullable String size,
-        @Nullable String tier) {
-        this.family = family;
-        this.name = name;
-        this.size = size;
-        this.tier = tier;
-    }
+    private PeeringSkuResponse() {}
 
-    private PeeringSkuResponse() {
-        this.family = null;
-        this.name = null;
-        this.size = null;
-        this.tier = null;
+    private PeeringSkuResponse(PeeringSkuResponse $) {
+        this.family = $.family;
+        this.name = $.name;
+        this.size = $.size;
+        this.tier = $.tier;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PeeringSkuResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String family;
-        private @Nullable String name;
-        private @Nullable String size;
-        private @Nullable String tier;
+        private PeeringSkuResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new PeeringSkuResponse();
         }
 
         public Builder(PeeringSkuResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.family = defaults.family;
-    	      this.name = defaults.name;
-    	      this.size = defaults.size;
-    	      this.tier = defaults.tier;
+            $ = new PeeringSkuResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder family(@Nullable String family) {
-            this.family = family;
+            $.family = family;
             return this;
         }
+
         public Builder name(@Nullable String name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
+
         public Builder size(@Nullable String size) {
-            this.size = size;
+            $.size = size;
             return this;
         }
+
         public Builder tier(@Nullable String tier) {
-            this.tier = tier;
+            $.tier = tier;
             return this;
-        }        public PeeringSkuResponse build() {
-            return new PeeringSkuResponse(family, name, size, tier);
+        }
+
+        public PeeringSkuResponse build() {
+            return $;
         }
     }
+
 }

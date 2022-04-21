@@ -13,10 +13,10 @@ import com.pulumi.azurenative.media.inputs.ContentKeyPolicyUnknownRestrictionArg
 import com.pulumi.azurenative.media.inputs.ContentKeyPolicyWidevineConfigurationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -33,7 +33,7 @@ public final class ContentKeyPolicyOptionArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="configuration", required=true)
-      private final Output<Object> configuration;
+    private Output<Object> configuration;
 
     public Output<Object> configuration() {
         return this.configuration;
@@ -44,10 +44,10 @@ public final class ContentKeyPolicyOptionArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -55,76 +55,70 @@ public final class ContentKeyPolicyOptionArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="restriction", required=true)
-      private final Output<Object> restriction;
+    private Output<Object> restriction;
 
     public Output<Object> restriction() {
         return this.restriction;
     }
 
-    public ContentKeyPolicyOptionArgs(
-        Output<Object> configuration,
-        @Nullable Output<String> name,
-        Output<Object> restriction) {
-        this.configuration = Objects.requireNonNull(configuration, "expected parameter 'configuration' to be non-null");
-        this.name = name;
-        this.restriction = Objects.requireNonNull(restriction, "expected parameter 'restriction' to be non-null");
-    }
+    private ContentKeyPolicyOptionArgs() {}
 
-    private ContentKeyPolicyOptionArgs() {
-        this.configuration = Codegen.empty();
-        this.name = Codegen.empty();
-        this.restriction = Codegen.empty();
+    private ContentKeyPolicyOptionArgs(ContentKeyPolicyOptionArgs $) {
+        this.configuration = $.configuration;
+        this.name = $.name;
+        this.restriction = $.restriction;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ContentKeyPolicyOptionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Object> configuration;
-        private @Nullable Output<String> name;
-        private Output<Object> restriction;
+        private ContentKeyPolicyOptionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ContentKeyPolicyOptionArgs();
         }
 
         public Builder(ContentKeyPolicyOptionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.configuration = defaults.configuration;
-    	      this.name = defaults.name;
-    	      this.restriction = defaults.restriction;
+            $ = new ContentKeyPolicyOptionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder configuration(Output<Object> configuration) {
-            this.configuration = Objects.requireNonNull(configuration);
+            $.configuration = configuration;
             return this;
         }
+
         public Builder configuration(Object configuration) {
-            this.configuration = Output.of(Objects.requireNonNull(configuration));
-            return this;
+            return configuration(Output.of(configuration));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder restriction(Output<Object> restriction) {
-            this.restriction = Objects.requireNonNull(restriction);
+            $.restriction = restriction;
             return this;
         }
+
         public Builder restriction(Object restriction) {
-            this.restriction = Output.of(Objects.requireNonNull(restriction));
-            return this;
-        }        public ContentKeyPolicyOptionArgs build() {
-            return new ContentKeyPolicyOptionArgs(configuration, name, restriction);
+            return restriction(Output.of(restriction));
+        }
+
+        public ContentKeyPolicyOptionArgs build() {
+            $.configuration = Objects.requireNonNull($.configuration, "expected parameter 'configuration' to be non-null");
+            $.restriction = Objects.requireNonNull($.restriction, "expected parameter 'restriction' to be non-null");
+            return $;
         }
     }
+
 }

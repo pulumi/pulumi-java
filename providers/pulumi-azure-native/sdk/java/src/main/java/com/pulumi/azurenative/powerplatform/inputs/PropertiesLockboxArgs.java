@@ -7,9 +7,9 @@ import com.pulumi.azurenative.powerplatform.enums.State;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,49 +26,48 @@ public final class PropertiesLockboxArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="state")
-      private final @Nullable Output<Either<String,State>> state;
+    private @Nullable Output<Either<String,State>> state;
 
-    public Output<Either<String,State>> state() {
-        return this.state == null ? Codegen.empty() : this.state;
+    public Optional<Output<Either<String,State>>> state() {
+        return Optional.ofNullable(this.state);
     }
 
-    public PropertiesLockboxArgs(@Nullable Output<Either<String,State>> state) {
-        this.state = state;
-    }
+    private PropertiesLockboxArgs() {}
 
-    private PropertiesLockboxArgs() {
-        this.state = Codegen.empty();
+    private PropertiesLockboxArgs(PropertiesLockboxArgs $) {
+        this.state = $.state;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PropertiesLockboxArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Either<String,State>> state;
+        private PropertiesLockboxArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PropertiesLockboxArgs();
         }
 
         public Builder(PropertiesLockboxArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.state = defaults.state;
+            $ = new PropertiesLockboxArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder state(@Nullable Output<Either<String,State>> state) {
-            this.state = state;
+            $.state = state;
             return this;
         }
-        public Builder state(@Nullable Either<String,State> state) {
-            this.state = Codegen.ofNullable(state);
-            return this;
-        }        public PropertiesLockboxArgs build() {
-            return new PropertiesLockboxArgs(state);
+
+        public Builder state(Either<String,State> state) {
+            return state(Output.of(state));
+        }
+
+        public PropertiesLockboxArgs build() {
+            return $;
         }
     }
+
 }

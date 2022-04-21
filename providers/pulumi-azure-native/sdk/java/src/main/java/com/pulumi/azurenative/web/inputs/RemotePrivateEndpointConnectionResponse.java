@@ -26,7 +26,7 @@ public final class RemotePrivateEndpointConnectionResponse extends com.pulumi.re
      * 
      */
     @Import(name="id", required=true)
-      private final String id;
+    private String id;
 
     public String id() {
         return this.id;
@@ -37,10 +37,10 @@ public final class RemotePrivateEndpointConnectionResponse extends com.pulumi.re
      * 
      */
     @Import(name="ipAddresses")
-      private final @Nullable List<String> ipAddresses;
+    private @Nullable List<String> ipAddresses;
 
-    public List<String> ipAddresses() {
-        return this.ipAddresses == null ? List.of() : this.ipAddresses;
+    public Optional<List<String>> ipAddresses() {
+        return Optional.ofNullable(this.ipAddresses);
     }
 
     /**
@@ -48,10 +48,10 @@ public final class RemotePrivateEndpointConnectionResponse extends com.pulumi.re
      * 
      */
     @Import(name="kind")
-      private final @Nullable String kind;
+    private @Nullable String kind;
 
     public Optional<String> kind() {
-        return this.kind == null ? Optional.empty() : Optional.ofNullable(this.kind);
+        return Optional.ofNullable(this.kind);
     }
 
     /**
@@ -59,7 +59,7 @@ public final class RemotePrivateEndpointConnectionResponse extends com.pulumi.re
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -70,10 +70,10 @@ public final class RemotePrivateEndpointConnectionResponse extends com.pulumi.re
      * 
      */
     @Import(name="privateEndpoint")
-      private final @Nullable ArmIdWrapperResponse privateEndpoint;
+    private @Nullable ArmIdWrapperResponse privateEndpoint;
 
     public Optional<ArmIdWrapperResponse> privateEndpoint() {
-        return this.privateEndpoint == null ? Optional.empty() : Optional.ofNullable(this.privateEndpoint);
+        return Optional.ofNullable(this.privateEndpoint);
     }
 
     /**
@@ -81,14 +81,14 @@ public final class RemotePrivateEndpointConnectionResponse extends com.pulumi.re
      * 
      */
     @Import(name="privateLinkServiceConnectionState")
-      private final @Nullable PrivateLinkConnectionStateResponse privateLinkServiceConnectionState;
+    private @Nullable PrivateLinkConnectionStateResponse privateLinkServiceConnectionState;
 
     public Optional<PrivateLinkConnectionStateResponse> privateLinkServiceConnectionState() {
-        return this.privateLinkServiceConnectionState == null ? Optional.empty() : Optional.ofNullable(this.privateLinkServiceConnectionState);
+        return Optional.ofNullable(this.privateLinkServiceConnectionState);
     }
 
     @Import(name="provisioningState", required=true)
-      private final String provisioningState;
+    private String provisioningState;
 
     public String provisioningState() {
         return this.provisioningState;
@@ -99,112 +99,94 @@ public final class RemotePrivateEndpointConnectionResponse extends com.pulumi.re
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
     }
 
-    public RemotePrivateEndpointConnectionResponse(
-        String id,
-        @Nullable List<String> ipAddresses,
-        @Nullable String kind,
-        String name,
-        @Nullable ArmIdWrapperResponse privateEndpoint,
-        @Nullable PrivateLinkConnectionStateResponse privateLinkServiceConnectionState,
-        String provisioningState,
-        String type) {
-        this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
-        this.ipAddresses = ipAddresses;
-        this.kind = kind;
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.privateEndpoint = privateEndpoint;
-        this.privateLinkServiceConnectionState = privateLinkServiceConnectionState;
-        this.provisioningState = Objects.requireNonNull(provisioningState, "expected parameter 'provisioningState' to be non-null");
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private RemotePrivateEndpointConnectionResponse() {}
 
-    private RemotePrivateEndpointConnectionResponse() {
-        this.id = null;
-        this.ipAddresses = List.of();
-        this.kind = null;
-        this.name = null;
-        this.privateEndpoint = null;
-        this.privateLinkServiceConnectionState = null;
-        this.provisioningState = null;
-        this.type = null;
+    private RemotePrivateEndpointConnectionResponse(RemotePrivateEndpointConnectionResponse $) {
+        this.id = $.id;
+        this.ipAddresses = $.ipAddresses;
+        this.kind = $.kind;
+        this.name = $.name;
+        this.privateEndpoint = $.privateEndpoint;
+        this.privateLinkServiceConnectionState = $.privateLinkServiceConnectionState;
+        this.provisioningState = $.provisioningState;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RemotePrivateEndpointConnectionResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String id;
-        private @Nullable List<String> ipAddresses;
-        private @Nullable String kind;
-        private String name;
-        private @Nullable ArmIdWrapperResponse privateEndpoint;
-        private @Nullable PrivateLinkConnectionStateResponse privateLinkServiceConnectionState;
-        private String provisioningState;
-        private String type;
+        private RemotePrivateEndpointConnectionResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new RemotePrivateEndpointConnectionResponse();
         }
 
         public Builder(RemotePrivateEndpointConnectionResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.id = defaults.id;
-    	      this.ipAddresses = defaults.ipAddresses;
-    	      this.kind = defaults.kind;
-    	      this.name = defaults.name;
-    	      this.privateEndpoint = defaults.privateEndpoint;
-    	      this.privateLinkServiceConnectionState = defaults.privateLinkServiceConnectionState;
-    	      this.provisioningState = defaults.provisioningState;
-    	      this.type = defaults.type;
+            $ = new RemotePrivateEndpointConnectionResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder id(String id) {
-            this.id = Objects.requireNonNull(id);
+            $.id = id;
             return this;
         }
+
         public Builder ipAddresses(@Nullable List<String> ipAddresses) {
-            this.ipAddresses = ipAddresses;
+            $.ipAddresses = ipAddresses;
             return this;
         }
+
         public Builder ipAddresses(String... ipAddresses) {
             return ipAddresses(List.of(ipAddresses));
         }
+
         public Builder kind(@Nullable String kind) {
-            this.kind = kind;
+            $.kind = kind;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder privateEndpoint(@Nullable ArmIdWrapperResponse privateEndpoint) {
-            this.privateEndpoint = privateEndpoint;
+            $.privateEndpoint = privateEndpoint;
             return this;
         }
+
         public Builder privateLinkServiceConnectionState(@Nullable PrivateLinkConnectionStateResponse privateLinkServiceConnectionState) {
-            this.privateLinkServiceConnectionState = privateLinkServiceConnectionState;
+            $.privateLinkServiceConnectionState = privateLinkServiceConnectionState;
             return this;
         }
+
         public Builder provisioningState(String provisioningState) {
-            this.provisioningState = Objects.requireNonNull(provisioningState);
+            $.provisioningState = provisioningState;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
-        }        public RemotePrivateEndpointConnectionResponse build() {
-            return new RemotePrivateEndpointConnectionResponse(id, ipAddresses, kind, name, privateEndpoint, privateLinkServiceConnectionState, provisioningState, type);
+        }
+
+        public RemotePrivateEndpointConnectionResponse build() {
+            $.id = Objects.requireNonNull($.id, "expected parameter 'id' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.provisioningState = Objects.requireNonNull($.provisioningState, "expected parameter 'provisioningState' to be non-null");
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

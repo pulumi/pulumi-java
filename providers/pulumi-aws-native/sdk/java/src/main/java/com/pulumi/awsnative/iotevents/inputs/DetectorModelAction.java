@@ -31,238 +31,200 @@ public final class DetectorModelAction extends com.pulumi.resources.InvokeArgs {
     public static final DetectorModelAction Empty = new DetectorModelAction();
 
     @Import(name="clearTimer")
-      private final @Nullable DetectorModelClearTimer clearTimer;
+    private @Nullable DetectorModelClearTimer clearTimer;
 
     public Optional<DetectorModelClearTimer> clearTimer() {
-        return this.clearTimer == null ? Optional.empty() : Optional.ofNullable(this.clearTimer);
+        return Optional.ofNullable(this.clearTimer);
     }
 
     @Import(name="dynamoDB")
-      private final @Nullable DetectorModelDynamoDB dynamoDB;
+    private @Nullable DetectorModelDynamoDB dynamoDB;
 
     public Optional<DetectorModelDynamoDB> dynamoDB() {
-        return this.dynamoDB == null ? Optional.empty() : Optional.ofNullable(this.dynamoDB);
+        return Optional.ofNullable(this.dynamoDB);
     }
 
     @Import(name="dynamoDBv2")
-      private final @Nullable DetectorModelDynamoDBv2 dynamoDBv2;
+    private @Nullable DetectorModelDynamoDBv2 dynamoDBv2;
 
     public Optional<DetectorModelDynamoDBv2> dynamoDBv2() {
-        return this.dynamoDBv2 == null ? Optional.empty() : Optional.ofNullable(this.dynamoDBv2);
+        return Optional.ofNullable(this.dynamoDBv2);
     }
 
     @Import(name="firehose")
-      private final @Nullable DetectorModelFirehose firehose;
+    private @Nullable DetectorModelFirehose firehose;
 
     public Optional<DetectorModelFirehose> firehose() {
-        return this.firehose == null ? Optional.empty() : Optional.ofNullable(this.firehose);
+        return Optional.ofNullable(this.firehose);
     }
 
     @Import(name="iotEvents")
-      private final @Nullable DetectorModelIotEvents iotEvents;
+    private @Nullable DetectorModelIotEvents iotEvents;
 
     public Optional<DetectorModelIotEvents> iotEvents() {
-        return this.iotEvents == null ? Optional.empty() : Optional.ofNullable(this.iotEvents);
+        return Optional.ofNullable(this.iotEvents);
     }
 
     @Import(name="iotSiteWise")
-      private final @Nullable DetectorModelIotSiteWise iotSiteWise;
+    private @Nullable DetectorModelIotSiteWise iotSiteWise;
 
     public Optional<DetectorModelIotSiteWise> iotSiteWise() {
-        return this.iotSiteWise == null ? Optional.empty() : Optional.ofNullable(this.iotSiteWise);
+        return Optional.ofNullable(this.iotSiteWise);
     }
 
     @Import(name="iotTopicPublish")
-      private final @Nullable DetectorModelIotTopicPublish iotTopicPublish;
+    private @Nullable DetectorModelIotTopicPublish iotTopicPublish;
 
     public Optional<DetectorModelIotTopicPublish> iotTopicPublish() {
-        return this.iotTopicPublish == null ? Optional.empty() : Optional.ofNullable(this.iotTopicPublish);
+        return Optional.ofNullable(this.iotTopicPublish);
     }
 
     @Import(name="lambda")
-      private final @Nullable DetectorModelLambda lambda;
+    private @Nullable DetectorModelLambda lambda;
 
     public Optional<DetectorModelLambda> lambda() {
-        return this.lambda == null ? Optional.empty() : Optional.ofNullable(this.lambda);
+        return Optional.ofNullable(this.lambda);
     }
 
     @Import(name="resetTimer")
-      private final @Nullable DetectorModelResetTimer resetTimer;
+    private @Nullable DetectorModelResetTimer resetTimer;
 
     public Optional<DetectorModelResetTimer> resetTimer() {
-        return this.resetTimer == null ? Optional.empty() : Optional.ofNullable(this.resetTimer);
+        return Optional.ofNullable(this.resetTimer);
     }
 
     @Import(name="setTimer")
-      private final @Nullable DetectorModelSetTimer setTimer;
+    private @Nullable DetectorModelSetTimer setTimer;
 
     public Optional<DetectorModelSetTimer> setTimer() {
-        return this.setTimer == null ? Optional.empty() : Optional.ofNullable(this.setTimer);
+        return Optional.ofNullable(this.setTimer);
     }
 
     @Import(name="setVariable")
-      private final @Nullable DetectorModelSetVariable setVariable;
+    private @Nullable DetectorModelSetVariable setVariable;
 
     public Optional<DetectorModelSetVariable> setVariable() {
-        return this.setVariable == null ? Optional.empty() : Optional.ofNullable(this.setVariable);
+        return Optional.ofNullable(this.setVariable);
     }
 
     @Import(name="sns")
-      private final @Nullable DetectorModelSns sns;
+    private @Nullable DetectorModelSns sns;
 
     public Optional<DetectorModelSns> sns() {
-        return this.sns == null ? Optional.empty() : Optional.ofNullable(this.sns);
+        return Optional.ofNullable(this.sns);
     }
 
     @Import(name="sqs")
-      private final @Nullable DetectorModelSqs sqs;
+    private @Nullable DetectorModelSqs sqs;
 
     public Optional<DetectorModelSqs> sqs() {
-        return this.sqs == null ? Optional.empty() : Optional.ofNullable(this.sqs);
+        return Optional.ofNullable(this.sqs);
     }
 
-    public DetectorModelAction(
-        @Nullable DetectorModelClearTimer clearTimer,
-        @Nullable DetectorModelDynamoDB dynamoDB,
-        @Nullable DetectorModelDynamoDBv2 dynamoDBv2,
-        @Nullable DetectorModelFirehose firehose,
-        @Nullable DetectorModelIotEvents iotEvents,
-        @Nullable DetectorModelIotSiteWise iotSiteWise,
-        @Nullable DetectorModelIotTopicPublish iotTopicPublish,
-        @Nullable DetectorModelLambda lambda,
-        @Nullable DetectorModelResetTimer resetTimer,
-        @Nullable DetectorModelSetTimer setTimer,
-        @Nullable DetectorModelSetVariable setVariable,
-        @Nullable DetectorModelSns sns,
-        @Nullable DetectorModelSqs sqs) {
-        this.clearTimer = clearTimer;
-        this.dynamoDB = dynamoDB;
-        this.dynamoDBv2 = dynamoDBv2;
-        this.firehose = firehose;
-        this.iotEvents = iotEvents;
-        this.iotSiteWise = iotSiteWise;
-        this.iotTopicPublish = iotTopicPublish;
-        this.lambda = lambda;
-        this.resetTimer = resetTimer;
-        this.setTimer = setTimer;
-        this.setVariable = setVariable;
-        this.sns = sns;
-        this.sqs = sqs;
-    }
+    private DetectorModelAction() {}
 
-    private DetectorModelAction() {
-        this.clearTimer = null;
-        this.dynamoDB = null;
-        this.dynamoDBv2 = null;
-        this.firehose = null;
-        this.iotEvents = null;
-        this.iotSiteWise = null;
-        this.iotTopicPublish = null;
-        this.lambda = null;
-        this.resetTimer = null;
-        this.setTimer = null;
-        this.setVariable = null;
-        this.sns = null;
-        this.sqs = null;
+    private DetectorModelAction(DetectorModelAction $) {
+        this.clearTimer = $.clearTimer;
+        this.dynamoDB = $.dynamoDB;
+        this.dynamoDBv2 = $.dynamoDBv2;
+        this.firehose = $.firehose;
+        this.iotEvents = $.iotEvents;
+        this.iotSiteWise = $.iotSiteWise;
+        this.iotTopicPublish = $.iotTopicPublish;
+        this.lambda = $.lambda;
+        this.resetTimer = $.resetTimer;
+        this.setTimer = $.setTimer;
+        this.setVariable = $.setVariable;
+        this.sns = $.sns;
+        this.sqs = $.sqs;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DetectorModelAction defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable DetectorModelClearTimer clearTimer;
-        private @Nullable DetectorModelDynamoDB dynamoDB;
-        private @Nullable DetectorModelDynamoDBv2 dynamoDBv2;
-        private @Nullable DetectorModelFirehose firehose;
-        private @Nullable DetectorModelIotEvents iotEvents;
-        private @Nullable DetectorModelIotSiteWise iotSiteWise;
-        private @Nullable DetectorModelIotTopicPublish iotTopicPublish;
-        private @Nullable DetectorModelLambda lambda;
-        private @Nullable DetectorModelResetTimer resetTimer;
-        private @Nullable DetectorModelSetTimer setTimer;
-        private @Nullable DetectorModelSetVariable setVariable;
-        private @Nullable DetectorModelSns sns;
-        private @Nullable DetectorModelSqs sqs;
+        private DetectorModelAction $;
 
         public Builder() {
-    	      // Empty
+            $ = new DetectorModelAction();
         }
 
         public Builder(DetectorModelAction defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.clearTimer = defaults.clearTimer;
-    	      this.dynamoDB = defaults.dynamoDB;
-    	      this.dynamoDBv2 = defaults.dynamoDBv2;
-    	      this.firehose = defaults.firehose;
-    	      this.iotEvents = defaults.iotEvents;
-    	      this.iotSiteWise = defaults.iotSiteWise;
-    	      this.iotTopicPublish = defaults.iotTopicPublish;
-    	      this.lambda = defaults.lambda;
-    	      this.resetTimer = defaults.resetTimer;
-    	      this.setTimer = defaults.setTimer;
-    	      this.setVariable = defaults.setVariable;
-    	      this.sns = defaults.sns;
-    	      this.sqs = defaults.sqs;
+            $ = new DetectorModelAction(Objects.requireNonNull(defaults));
         }
 
         public Builder clearTimer(@Nullable DetectorModelClearTimer clearTimer) {
-            this.clearTimer = clearTimer;
+            $.clearTimer = clearTimer;
             return this;
         }
+
         public Builder dynamoDB(@Nullable DetectorModelDynamoDB dynamoDB) {
-            this.dynamoDB = dynamoDB;
+            $.dynamoDB = dynamoDB;
             return this;
         }
+
         public Builder dynamoDBv2(@Nullable DetectorModelDynamoDBv2 dynamoDBv2) {
-            this.dynamoDBv2 = dynamoDBv2;
+            $.dynamoDBv2 = dynamoDBv2;
             return this;
         }
+
         public Builder firehose(@Nullable DetectorModelFirehose firehose) {
-            this.firehose = firehose;
+            $.firehose = firehose;
             return this;
         }
+
         public Builder iotEvents(@Nullable DetectorModelIotEvents iotEvents) {
-            this.iotEvents = iotEvents;
+            $.iotEvents = iotEvents;
             return this;
         }
+
         public Builder iotSiteWise(@Nullable DetectorModelIotSiteWise iotSiteWise) {
-            this.iotSiteWise = iotSiteWise;
+            $.iotSiteWise = iotSiteWise;
             return this;
         }
+
         public Builder iotTopicPublish(@Nullable DetectorModelIotTopicPublish iotTopicPublish) {
-            this.iotTopicPublish = iotTopicPublish;
+            $.iotTopicPublish = iotTopicPublish;
             return this;
         }
+
         public Builder lambda(@Nullable DetectorModelLambda lambda) {
-            this.lambda = lambda;
+            $.lambda = lambda;
             return this;
         }
+
         public Builder resetTimer(@Nullable DetectorModelResetTimer resetTimer) {
-            this.resetTimer = resetTimer;
+            $.resetTimer = resetTimer;
             return this;
         }
+
         public Builder setTimer(@Nullable DetectorModelSetTimer setTimer) {
-            this.setTimer = setTimer;
+            $.setTimer = setTimer;
             return this;
         }
+
         public Builder setVariable(@Nullable DetectorModelSetVariable setVariable) {
-            this.setVariable = setVariable;
+            $.setVariable = setVariable;
             return this;
         }
+
         public Builder sns(@Nullable DetectorModelSns sns) {
-            this.sns = sns;
+            $.sns = sns;
             return this;
         }
+
         public Builder sqs(@Nullable DetectorModelSqs sqs) {
-            this.sqs = sqs;
+            $.sqs = sqs;
             return this;
-        }        public DetectorModelAction build() {
-            return new DetectorModelAction(clearTimer, dynamoDB, dynamoDBv2, firehose, iotEvents, iotSiteWise, iotTopicPublish, lambda, resetTimer, setTimer, setVariable, sns, sqs);
+        }
+
+        public DetectorModelAction build() {
+            return $;
         }
     }
+
 }

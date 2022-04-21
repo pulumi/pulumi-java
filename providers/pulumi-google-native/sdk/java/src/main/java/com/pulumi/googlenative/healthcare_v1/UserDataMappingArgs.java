@@ -5,11 +5,11 @@ package com.pulumi.googlenative.healthcare_v1;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.healthcare_v1.inputs.AttributeArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -18,7 +18,7 @@ public final class UserDataMappingArgs extends com.pulumi.resources.ResourceArgs
     public static final UserDataMappingArgs Empty = new UserDataMappingArgs();
 
     @Import(name="consentStoreId", required=true)
-      private final Output<String> consentStoreId;
+    private Output<String> consentStoreId;
 
     public Output<String> consentStoreId() {
         return this.consentStoreId;
@@ -29,24 +29,24 @@ public final class UserDataMappingArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="dataId", required=true)
-      private final Output<String> dataId;
+    private Output<String> dataId;
 
     public Output<String> dataId() {
         return this.dataId;
     }
 
     @Import(name="datasetId", required=true)
-      private final Output<String> datasetId;
+    private Output<String> datasetId;
 
     public Output<String> datasetId() {
         return this.datasetId;
     }
 
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -54,17 +54,17 @@ public final class UserDataMappingArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -72,10 +72,10 @@ public final class UserDataMappingArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="resourceAttributes")
-      private final @Nullable Output<List<AttributeArgs>> resourceAttributes;
+    private @Nullable Output<List<AttributeArgs>> resourceAttributes;
 
-    public Output<List<AttributeArgs>> resourceAttributes() {
-        return this.resourceAttributes == null ? Codegen.empty() : this.resourceAttributes;
+    public Optional<Output<List<AttributeArgs>>> resourceAttributes() {
+        return Optional.ofNullable(this.resourceAttributes);
     }
 
     /**
@@ -83,144 +83,126 @@ public final class UserDataMappingArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="userId", required=true)
-      private final Output<String> userId;
+    private Output<String> userId;
 
     public Output<String> userId() {
         return this.userId;
     }
 
-    public UserDataMappingArgs(
-        Output<String> consentStoreId,
-        Output<String> dataId,
-        Output<String> datasetId,
-        @Nullable Output<String> location,
-        @Nullable Output<String> name,
-        @Nullable Output<String> project,
-        @Nullable Output<List<AttributeArgs>> resourceAttributes,
-        Output<String> userId) {
-        this.consentStoreId = Objects.requireNonNull(consentStoreId, "expected parameter 'consentStoreId' to be non-null");
-        this.dataId = Objects.requireNonNull(dataId, "expected parameter 'dataId' to be non-null");
-        this.datasetId = Objects.requireNonNull(datasetId, "expected parameter 'datasetId' to be non-null");
-        this.location = location;
-        this.name = name;
-        this.project = project;
-        this.resourceAttributes = resourceAttributes;
-        this.userId = Objects.requireNonNull(userId, "expected parameter 'userId' to be non-null");
-    }
+    private UserDataMappingArgs() {}
 
-    private UserDataMappingArgs() {
-        this.consentStoreId = Codegen.empty();
-        this.dataId = Codegen.empty();
-        this.datasetId = Codegen.empty();
-        this.location = Codegen.empty();
-        this.name = Codegen.empty();
-        this.project = Codegen.empty();
-        this.resourceAttributes = Codegen.empty();
-        this.userId = Codegen.empty();
+    private UserDataMappingArgs(UserDataMappingArgs $) {
+        this.consentStoreId = $.consentStoreId;
+        this.dataId = $.dataId;
+        this.datasetId = $.datasetId;
+        this.location = $.location;
+        this.name = $.name;
+        this.project = $.project;
+        this.resourceAttributes = $.resourceAttributes;
+        this.userId = $.userId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(UserDataMappingArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> consentStoreId;
-        private Output<String> dataId;
-        private Output<String> datasetId;
-        private @Nullable Output<String> location;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> project;
-        private @Nullable Output<List<AttributeArgs>> resourceAttributes;
-        private Output<String> userId;
+        private UserDataMappingArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new UserDataMappingArgs();
         }
 
         public Builder(UserDataMappingArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.consentStoreId = defaults.consentStoreId;
-    	      this.dataId = defaults.dataId;
-    	      this.datasetId = defaults.datasetId;
-    	      this.location = defaults.location;
-    	      this.name = defaults.name;
-    	      this.project = defaults.project;
-    	      this.resourceAttributes = defaults.resourceAttributes;
-    	      this.userId = defaults.userId;
+            $ = new UserDataMappingArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder consentStoreId(Output<String> consentStoreId) {
-            this.consentStoreId = Objects.requireNonNull(consentStoreId);
+            $.consentStoreId = consentStoreId;
             return this;
         }
+
         public Builder consentStoreId(String consentStoreId) {
-            this.consentStoreId = Output.of(Objects.requireNonNull(consentStoreId));
-            return this;
+            return consentStoreId(Output.of(consentStoreId));
         }
+
         public Builder dataId(Output<String> dataId) {
-            this.dataId = Objects.requireNonNull(dataId);
+            $.dataId = dataId;
             return this;
         }
+
         public Builder dataId(String dataId) {
-            this.dataId = Output.of(Objects.requireNonNull(dataId));
-            return this;
+            return dataId(Output.of(dataId));
         }
+
         public Builder datasetId(Output<String> datasetId) {
-            this.datasetId = Objects.requireNonNull(datasetId);
+            $.datasetId = datasetId;
             return this;
         }
+
         public Builder datasetId(String datasetId) {
-            this.datasetId = Output.of(Objects.requireNonNull(datasetId));
-            return this;
+            return datasetId(Output.of(datasetId));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder resourceAttributes(@Nullable Output<List<AttributeArgs>> resourceAttributes) {
-            this.resourceAttributes = resourceAttributes;
+            $.resourceAttributes = resourceAttributes;
             return this;
         }
-        public Builder resourceAttributes(@Nullable List<AttributeArgs> resourceAttributes) {
-            this.resourceAttributes = Codegen.ofNullable(resourceAttributes);
-            return this;
+
+        public Builder resourceAttributes(List<AttributeArgs> resourceAttributes) {
+            return resourceAttributes(Output.of(resourceAttributes));
         }
+
         public Builder resourceAttributes(AttributeArgs... resourceAttributes) {
             return resourceAttributes(List.of(resourceAttributes));
         }
+
         public Builder userId(Output<String> userId) {
-            this.userId = Objects.requireNonNull(userId);
+            $.userId = userId;
             return this;
         }
+
         public Builder userId(String userId) {
-            this.userId = Output.of(Objects.requireNonNull(userId));
-            return this;
-        }        public UserDataMappingArgs build() {
-            return new UserDataMappingArgs(consentStoreId, dataId, datasetId, location, name, project, resourceAttributes, userId);
+            return userId(Output.of(userId));
+        }
+
+        public UserDataMappingArgs build() {
+            $.consentStoreId = Objects.requireNonNull($.consentStoreId, "expected parameter 'consentStoreId' to be non-null");
+            $.dataId = Objects.requireNonNull($.dataId, "expected parameter 'dataId' to be non-null");
+            $.datasetId = Objects.requireNonNull($.datasetId, "expected parameter 'datasetId' to be non-null");
+            $.userId = Objects.requireNonNull($.userId, "expected parameter 'userId' to be non-null");
+            return $;
         }
     }
+
 }

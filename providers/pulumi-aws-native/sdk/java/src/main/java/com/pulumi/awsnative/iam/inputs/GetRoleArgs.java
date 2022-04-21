@@ -17,45 +17,45 @@ public final class GetRoleArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="roleName", required=true)
-      private final String roleName;
+    private String roleName;
 
     public String roleName() {
         return this.roleName;
     }
 
-    public GetRoleArgs(String roleName) {
-        this.roleName = Objects.requireNonNull(roleName, "expected parameter 'roleName' to be non-null");
-    }
+    private GetRoleArgs() {}
 
-    private GetRoleArgs() {
-        this.roleName = null;
+    private GetRoleArgs(GetRoleArgs $) {
+        this.roleName = $.roleName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetRoleArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String roleName;
+        private GetRoleArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetRoleArgs();
         }
 
         public Builder(GetRoleArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.roleName = defaults.roleName;
+            $ = new GetRoleArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder roleName(String roleName) {
-            this.roleName = Objects.requireNonNull(roleName);
+            $.roleName = roleName;
             return this;
-        }        public GetRoleArgs build() {
-            return new GetRoleArgs(roleName);
+        }
+
+        public GetRoleArgs build() {
+            $.roleName = Objects.requireNonNull($.roleName, "expected parameter 'roleName' to be non-null");
+            return $;
         }
     }
+
 }

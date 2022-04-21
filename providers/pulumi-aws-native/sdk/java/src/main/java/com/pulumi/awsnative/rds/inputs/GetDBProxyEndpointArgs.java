@@ -17,45 +17,45 @@ public final class GetDBProxyEndpointArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="dBProxyEndpointName", required=true)
-      private final String dBProxyEndpointName;
+    private String dBProxyEndpointName;
 
     public String dBProxyEndpointName() {
         return this.dBProxyEndpointName;
     }
 
-    public GetDBProxyEndpointArgs(String dBProxyEndpointName) {
-        this.dBProxyEndpointName = Objects.requireNonNull(dBProxyEndpointName, "expected parameter 'dBProxyEndpointName' to be non-null");
-    }
+    private GetDBProxyEndpointArgs() {}
 
-    private GetDBProxyEndpointArgs() {
-        this.dBProxyEndpointName = null;
+    private GetDBProxyEndpointArgs(GetDBProxyEndpointArgs $) {
+        this.dBProxyEndpointName = $.dBProxyEndpointName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetDBProxyEndpointArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String dBProxyEndpointName;
+        private GetDBProxyEndpointArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetDBProxyEndpointArgs();
         }
 
         public Builder(GetDBProxyEndpointArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dBProxyEndpointName = defaults.dBProxyEndpointName;
+            $ = new GetDBProxyEndpointArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder dBProxyEndpointName(String dBProxyEndpointName) {
-            this.dBProxyEndpointName = Objects.requireNonNull(dBProxyEndpointName);
+            $.dBProxyEndpointName = dBProxyEndpointName;
             return this;
-        }        public GetDBProxyEndpointArgs build() {
-            return new GetDBProxyEndpointArgs(dBProxyEndpointName);
+        }
+
+        public GetDBProxyEndpointArgs build() {
+            $.dBProxyEndpointName = Objects.requireNonNull($.dBProxyEndpointName, "expected parameter 'dBProxyEndpointName' to be non-null");
+            return $;
         }
     }
+
 }

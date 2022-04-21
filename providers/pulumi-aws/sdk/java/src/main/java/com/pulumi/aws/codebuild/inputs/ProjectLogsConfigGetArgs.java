@@ -7,8 +7,8 @@ import com.pulumi.aws.codebuild.inputs.ProjectLogsConfigCloudwatchLogsGetArgs;
 import com.pulumi.aws.codebuild.inputs.ProjectLogsConfigS3LogsGetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class ProjectLogsConfigGetArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="cloudwatchLogs")
-      private final @Nullable Output<ProjectLogsConfigCloudwatchLogsGetArgs> cloudwatchLogs;
+    private @Nullable Output<ProjectLogsConfigCloudwatchLogsGetArgs> cloudwatchLogs;
 
-    public Output<ProjectLogsConfigCloudwatchLogsGetArgs> cloudwatchLogs() {
-        return this.cloudwatchLogs == null ? Codegen.empty() : this.cloudwatchLogs;
+    public Optional<Output<ProjectLogsConfigCloudwatchLogsGetArgs>> cloudwatchLogs() {
+        return Optional.ofNullable(this.cloudwatchLogs);
     }
 
     /**
@@ -32,63 +32,58 @@ public final class ProjectLogsConfigGetArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="s3Logs")
-      private final @Nullable Output<ProjectLogsConfigS3LogsGetArgs> s3Logs;
+    private @Nullable Output<ProjectLogsConfigS3LogsGetArgs> s3Logs;
 
-    public Output<ProjectLogsConfigS3LogsGetArgs> s3Logs() {
-        return this.s3Logs == null ? Codegen.empty() : this.s3Logs;
+    public Optional<Output<ProjectLogsConfigS3LogsGetArgs>> s3Logs() {
+        return Optional.ofNullable(this.s3Logs);
     }
 
-    public ProjectLogsConfigGetArgs(
-        @Nullable Output<ProjectLogsConfigCloudwatchLogsGetArgs> cloudwatchLogs,
-        @Nullable Output<ProjectLogsConfigS3LogsGetArgs> s3Logs) {
-        this.cloudwatchLogs = cloudwatchLogs;
-        this.s3Logs = s3Logs;
-    }
+    private ProjectLogsConfigGetArgs() {}
 
-    private ProjectLogsConfigGetArgs() {
-        this.cloudwatchLogs = Codegen.empty();
-        this.s3Logs = Codegen.empty();
+    private ProjectLogsConfigGetArgs(ProjectLogsConfigGetArgs $) {
+        this.cloudwatchLogs = $.cloudwatchLogs;
+        this.s3Logs = $.s3Logs;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ProjectLogsConfigGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<ProjectLogsConfigCloudwatchLogsGetArgs> cloudwatchLogs;
-        private @Nullable Output<ProjectLogsConfigS3LogsGetArgs> s3Logs;
+        private ProjectLogsConfigGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ProjectLogsConfigGetArgs();
         }
 
         public Builder(ProjectLogsConfigGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cloudwatchLogs = defaults.cloudwatchLogs;
-    	      this.s3Logs = defaults.s3Logs;
+            $ = new ProjectLogsConfigGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder cloudwatchLogs(@Nullable Output<ProjectLogsConfigCloudwatchLogsGetArgs> cloudwatchLogs) {
-            this.cloudwatchLogs = cloudwatchLogs;
+            $.cloudwatchLogs = cloudwatchLogs;
             return this;
         }
-        public Builder cloudwatchLogs(@Nullable ProjectLogsConfigCloudwatchLogsGetArgs cloudwatchLogs) {
-            this.cloudwatchLogs = Codegen.ofNullable(cloudwatchLogs);
-            return this;
+
+        public Builder cloudwatchLogs(ProjectLogsConfigCloudwatchLogsGetArgs cloudwatchLogs) {
+            return cloudwatchLogs(Output.of(cloudwatchLogs));
         }
+
         public Builder s3Logs(@Nullable Output<ProjectLogsConfigS3LogsGetArgs> s3Logs) {
-            this.s3Logs = s3Logs;
+            $.s3Logs = s3Logs;
             return this;
         }
-        public Builder s3Logs(@Nullable ProjectLogsConfigS3LogsGetArgs s3Logs) {
-            this.s3Logs = Codegen.ofNullable(s3Logs);
-            return this;
-        }        public ProjectLogsConfigGetArgs build() {
-            return new ProjectLogsConfigGetArgs(cloudwatchLogs, s3Logs);
+
+        public Builder s3Logs(ProjectLogsConfigS3LogsGetArgs s3Logs) {
+            return s3Logs(Output.of(s3Logs));
+        }
+
+        public ProjectLogsConfigGetArgs build() {
+            return $;
         }
     }
+
 }

@@ -5,10 +5,10 @@ package com.pulumi.googlenative.servicemanagement_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.servicemanagement_v1.inputs.BillingDestinationArgs;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,52 +25,52 @@ public final class BillingArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="consumerDestinations")
-      private final @Nullable Output<List<BillingDestinationArgs>> consumerDestinations;
+    private @Nullable Output<List<BillingDestinationArgs>> consumerDestinations;
 
-    public Output<List<BillingDestinationArgs>> consumerDestinations() {
-        return this.consumerDestinations == null ? Codegen.empty() : this.consumerDestinations;
+    public Optional<Output<List<BillingDestinationArgs>>> consumerDestinations() {
+        return Optional.ofNullable(this.consumerDestinations);
     }
 
-    public BillingArgs(@Nullable Output<List<BillingDestinationArgs>> consumerDestinations) {
-        this.consumerDestinations = consumerDestinations;
-    }
+    private BillingArgs() {}
 
-    private BillingArgs() {
-        this.consumerDestinations = Codegen.empty();
+    private BillingArgs(BillingArgs $) {
+        this.consumerDestinations = $.consumerDestinations;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BillingArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<BillingDestinationArgs>> consumerDestinations;
+        private BillingArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new BillingArgs();
         }
 
         public Builder(BillingArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.consumerDestinations = defaults.consumerDestinations;
+            $ = new BillingArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder consumerDestinations(@Nullable Output<List<BillingDestinationArgs>> consumerDestinations) {
-            this.consumerDestinations = consumerDestinations;
+            $.consumerDestinations = consumerDestinations;
             return this;
         }
-        public Builder consumerDestinations(@Nullable List<BillingDestinationArgs> consumerDestinations) {
-            this.consumerDestinations = Codegen.ofNullable(consumerDestinations);
-            return this;
+
+        public Builder consumerDestinations(List<BillingDestinationArgs> consumerDestinations) {
+            return consumerDestinations(Output.of(consumerDestinations));
         }
+
         public Builder consumerDestinations(BillingDestinationArgs... consumerDestinations) {
             return consumerDestinations(List.of(consumerDestinations));
-        }        public BillingArgs build() {
-            return new BillingArgs(consumerDestinations);
+        }
+
+        public BillingArgs build() {
+            return $;
         }
     }
+
 }

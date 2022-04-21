@@ -5,7 +5,6 @@ package com.pulumi.awsnative.cassandra.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -19,70 +18,67 @@ public final class TableProvisionedThroughputArgs extends com.pulumi.resources.R
     public static final TableProvisionedThroughputArgs Empty = new TableProvisionedThroughputArgs();
 
     @Import(name="readCapacityUnits", required=true)
-      private final Output<Integer> readCapacityUnits;
+    private Output<Integer> readCapacityUnits;
 
     public Output<Integer> readCapacityUnits() {
         return this.readCapacityUnits;
     }
 
     @Import(name="writeCapacityUnits", required=true)
-      private final Output<Integer> writeCapacityUnits;
+    private Output<Integer> writeCapacityUnits;
 
     public Output<Integer> writeCapacityUnits() {
         return this.writeCapacityUnits;
     }
 
-    public TableProvisionedThroughputArgs(
-        Output<Integer> readCapacityUnits,
-        Output<Integer> writeCapacityUnits) {
-        this.readCapacityUnits = Objects.requireNonNull(readCapacityUnits, "expected parameter 'readCapacityUnits' to be non-null");
-        this.writeCapacityUnits = Objects.requireNonNull(writeCapacityUnits, "expected parameter 'writeCapacityUnits' to be non-null");
-    }
+    private TableProvisionedThroughputArgs() {}
 
-    private TableProvisionedThroughputArgs() {
-        this.readCapacityUnits = Codegen.empty();
-        this.writeCapacityUnits = Codegen.empty();
+    private TableProvisionedThroughputArgs(TableProvisionedThroughputArgs $) {
+        this.readCapacityUnits = $.readCapacityUnits;
+        this.writeCapacityUnits = $.writeCapacityUnits;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TableProvisionedThroughputArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Integer> readCapacityUnits;
-        private Output<Integer> writeCapacityUnits;
+        private TableProvisionedThroughputArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TableProvisionedThroughputArgs();
         }
 
         public Builder(TableProvisionedThroughputArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.readCapacityUnits = defaults.readCapacityUnits;
-    	      this.writeCapacityUnits = defaults.writeCapacityUnits;
+            $ = new TableProvisionedThroughputArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder readCapacityUnits(Output<Integer> readCapacityUnits) {
-            this.readCapacityUnits = Objects.requireNonNull(readCapacityUnits);
+            $.readCapacityUnits = readCapacityUnits;
             return this;
         }
+
         public Builder readCapacityUnits(Integer readCapacityUnits) {
-            this.readCapacityUnits = Output.of(Objects.requireNonNull(readCapacityUnits));
-            return this;
+            return readCapacityUnits(Output.of(readCapacityUnits));
         }
+
         public Builder writeCapacityUnits(Output<Integer> writeCapacityUnits) {
-            this.writeCapacityUnits = Objects.requireNonNull(writeCapacityUnits);
+            $.writeCapacityUnits = writeCapacityUnits;
             return this;
         }
+
         public Builder writeCapacityUnits(Integer writeCapacityUnits) {
-            this.writeCapacityUnits = Output.of(Objects.requireNonNull(writeCapacityUnits));
-            return this;
-        }        public TableProvisionedThroughputArgs build() {
-            return new TableProvisionedThroughputArgs(readCapacityUnits, writeCapacityUnits);
+            return writeCapacityUnits(Output.of(writeCapacityUnits));
+        }
+
+        public TableProvisionedThroughputArgs build() {
+            $.readCapacityUnits = Objects.requireNonNull($.readCapacityUnits, "expected parameter 'readCapacityUnits' to be non-null");
+            $.writeCapacityUnits = Objects.requireNonNull($.writeCapacityUnits, "expected parameter 'writeCapacityUnits' to be non-null");
+            return $;
         }
     }
+
 }

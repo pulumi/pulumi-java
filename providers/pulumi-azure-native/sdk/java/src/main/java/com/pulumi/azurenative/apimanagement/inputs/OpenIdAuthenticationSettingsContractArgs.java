@@ -7,10 +7,10 @@ import com.pulumi.azurenative.apimanagement.enums.BearerTokenSendingMethods;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +27,10 @@ public final class OpenIdAuthenticationSettingsContractArgs extends com.pulumi.r
      * 
      */
     @Import(name="bearerTokenSendingMethods")
-      private final @Nullable Output<List<Either<String,BearerTokenSendingMethods>>> bearerTokenSendingMethods;
+    private @Nullable Output<List<Either<String,BearerTokenSendingMethods>>> bearerTokenSendingMethods;
 
-    public Output<List<Either<String,BearerTokenSendingMethods>>> bearerTokenSendingMethods() {
-        return this.bearerTokenSendingMethods == null ? Codegen.empty() : this.bearerTokenSendingMethods;
+    public Optional<Output<List<Either<String,BearerTokenSendingMethods>>>> bearerTokenSendingMethods() {
+        return Optional.ofNullable(this.bearerTokenSendingMethods);
     }
 
     /**
@@ -38,66 +38,62 @@ public final class OpenIdAuthenticationSettingsContractArgs extends com.pulumi.r
      * 
      */
     @Import(name="openidProviderId")
-      private final @Nullable Output<String> openidProviderId;
+    private @Nullable Output<String> openidProviderId;
 
-    public Output<String> openidProviderId() {
-        return this.openidProviderId == null ? Codegen.empty() : this.openidProviderId;
+    public Optional<Output<String>> openidProviderId() {
+        return Optional.ofNullable(this.openidProviderId);
     }
 
-    public OpenIdAuthenticationSettingsContractArgs(
-        @Nullable Output<List<Either<String,BearerTokenSendingMethods>>> bearerTokenSendingMethods,
-        @Nullable Output<String> openidProviderId) {
-        this.bearerTokenSendingMethods = bearerTokenSendingMethods;
-        this.openidProviderId = openidProviderId;
-    }
+    private OpenIdAuthenticationSettingsContractArgs() {}
 
-    private OpenIdAuthenticationSettingsContractArgs() {
-        this.bearerTokenSendingMethods = Codegen.empty();
-        this.openidProviderId = Codegen.empty();
+    private OpenIdAuthenticationSettingsContractArgs(OpenIdAuthenticationSettingsContractArgs $) {
+        this.bearerTokenSendingMethods = $.bearerTokenSendingMethods;
+        this.openidProviderId = $.openidProviderId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(OpenIdAuthenticationSettingsContractArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<Either<String,BearerTokenSendingMethods>>> bearerTokenSendingMethods;
-        private @Nullable Output<String> openidProviderId;
+        private OpenIdAuthenticationSettingsContractArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new OpenIdAuthenticationSettingsContractArgs();
         }
 
         public Builder(OpenIdAuthenticationSettingsContractArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.bearerTokenSendingMethods = defaults.bearerTokenSendingMethods;
-    	      this.openidProviderId = defaults.openidProviderId;
+            $ = new OpenIdAuthenticationSettingsContractArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder bearerTokenSendingMethods(@Nullable Output<List<Either<String,BearerTokenSendingMethods>>> bearerTokenSendingMethods) {
-            this.bearerTokenSendingMethods = bearerTokenSendingMethods;
+            $.bearerTokenSendingMethods = bearerTokenSendingMethods;
             return this;
         }
-        public Builder bearerTokenSendingMethods(@Nullable List<Either<String,BearerTokenSendingMethods>> bearerTokenSendingMethods) {
-            this.bearerTokenSendingMethods = Codegen.ofNullable(bearerTokenSendingMethods);
-            return this;
+
+        public Builder bearerTokenSendingMethods(List<Either<String,BearerTokenSendingMethods>> bearerTokenSendingMethods) {
+            return bearerTokenSendingMethods(Output.of(bearerTokenSendingMethods));
         }
+
         public Builder bearerTokenSendingMethods(Either<String,BearerTokenSendingMethods>... bearerTokenSendingMethods) {
             return bearerTokenSendingMethods(List.of(bearerTokenSendingMethods));
         }
+
         public Builder openidProviderId(@Nullable Output<String> openidProviderId) {
-            this.openidProviderId = openidProviderId;
+            $.openidProviderId = openidProviderId;
             return this;
         }
-        public Builder openidProviderId(@Nullable String openidProviderId) {
-            this.openidProviderId = Codegen.ofNullable(openidProviderId);
-            return this;
-        }        public OpenIdAuthenticationSettingsContractArgs build() {
-            return new OpenIdAuthenticationSettingsContractArgs(bearerTokenSendingMethods, openidProviderId);
+
+        public Builder openidProviderId(String openidProviderId) {
+            return openidProviderId(Output.of(openidProviderId));
+        }
+
+        public OpenIdAuthenticationSettingsContractArgs build() {
+            return $;
         }
     }
+
 }

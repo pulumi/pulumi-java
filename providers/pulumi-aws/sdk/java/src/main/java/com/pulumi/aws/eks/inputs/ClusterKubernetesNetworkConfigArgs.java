@@ -5,9 +5,9 @@ package com.pulumi.aws.eks.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class ClusterKubernetesNetworkConfigArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="ipFamily")
-      private final @Nullable Output<String> ipFamily;
+    private @Nullable Output<String> ipFamily;
 
-    public Output<String> ipFamily() {
-        return this.ipFamily == null ? Codegen.empty() : this.ipFamily;
+    public Optional<Output<String>> ipFamily() {
+        return Optional.ofNullable(this.ipFamily);
     }
 
     /**
@@ -31,63 +31,58 @@ public final class ClusterKubernetesNetworkConfigArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="serviceIpv4Cidr")
-      private final @Nullable Output<String> serviceIpv4Cidr;
+    private @Nullable Output<String> serviceIpv4Cidr;
 
-    public Output<String> serviceIpv4Cidr() {
-        return this.serviceIpv4Cidr == null ? Codegen.empty() : this.serviceIpv4Cidr;
+    public Optional<Output<String>> serviceIpv4Cidr() {
+        return Optional.ofNullable(this.serviceIpv4Cidr);
     }
 
-    public ClusterKubernetesNetworkConfigArgs(
-        @Nullable Output<String> ipFamily,
-        @Nullable Output<String> serviceIpv4Cidr) {
-        this.ipFamily = ipFamily;
-        this.serviceIpv4Cidr = serviceIpv4Cidr;
-    }
+    private ClusterKubernetesNetworkConfigArgs() {}
 
-    private ClusterKubernetesNetworkConfigArgs() {
-        this.ipFamily = Codegen.empty();
-        this.serviceIpv4Cidr = Codegen.empty();
+    private ClusterKubernetesNetworkConfigArgs(ClusterKubernetesNetworkConfigArgs $) {
+        this.ipFamily = $.ipFamily;
+        this.serviceIpv4Cidr = $.serviceIpv4Cidr;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ClusterKubernetesNetworkConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> ipFamily;
-        private @Nullable Output<String> serviceIpv4Cidr;
+        private ClusterKubernetesNetworkConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ClusterKubernetesNetworkConfigArgs();
         }
 
         public Builder(ClusterKubernetesNetworkConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.ipFamily = defaults.ipFamily;
-    	      this.serviceIpv4Cidr = defaults.serviceIpv4Cidr;
+            $ = new ClusterKubernetesNetworkConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder ipFamily(@Nullable Output<String> ipFamily) {
-            this.ipFamily = ipFamily;
+            $.ipFamily = ipFamily;
             return this;
         }
-        public Builder ipFamily(@Nullable String ipFamily) {
-            this.ipFamily = Codegen.ofNullable(ipFamily);
-            return this;
+
+        public Builder ipFamily(String ipFamily) {
+            return ipFamily(Output.of(ipFamily));
         }
+
         public Builder serviceIpv4Cidr(@Nullable Output<String> serviceIpv4Cidr) {
-            this.serviceIpv4Cidr = serviceIpv4Cidr;
+            $.serviceIpv4Cidr = serviceIpv4Cidr;
             return this;
         }
-        public Builder serviceIpv4Cidr(@Nullable String serviceIpv4Cidr) {
-            this.serviceIpv4Cidr = Codegen.ofNullable(serviceIpv4Cidr);
-            return this;
-        }        public ClusterKubernetesNetworkConfigArgs build() {
-            return new ClusterKubernetesNetworkConfigArgs(ipFamily, serviceIpv4Cidr);
+
+        public Builder serviceIpv4Cidr(String serviceIpv4Cidr) {
+            return serviceIpv4Cidr(Output.of(serviceIpv4Cidr));
+        }
+
+        public ClusterKubernetesNetworkConfigArgs build() {
+            return $;
         }
     }
+
 }

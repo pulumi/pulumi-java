@@ -22,7 +22,7 @@ public final class OsConstraintResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="minimumVersion", required=true)
-      private final String minimumVersion;
+    private String minimumVersion;
 
     public String minimumVersion() {
         return this.minimumVersion;
@@ -33,7 +33,7 @@ public final class OsConstraintResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="osType", required=true)
-      private final String osType;
+    private String osType;
 
     public String osType() {
         return this.osType;
@@ -44,64 +44,59 @@ public final class OsConstraintResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="requireVerifiedChromeOs", required=true)
-      private final Boolean requireVerifiedChromeOs;
+    private Boolean requireVerifiedChromeOs;
 
     public Boolean requireVerifiedChromeOs() {
         return this.requireVerifiedChromeOs;
     }
 
-    public OsConstraintResponse(
-        String minimumVersion,
-        String osType,
-        Boolean requireVerifiedChromeOs) {
-        this.minimumVersion = Objects.requireNonNull(minimumVersion, "expected parameter 'minimumVersion' to be non-null");
-        this.osType = Objects.requireNonNull(osType, "expected parameter 'osType' to be non-null");
-        this.requireVerifiedChromeOs = Objects.requireNonNull(requireVerifiedChromeOs, "expected parameter 'requireVerifiedChromeOs' to be non-null");
-    }
+    private OsConstraintResponse() {}
 
-    private OsConstraintResponse() {
-        this.minimumVersion = null;
-        this.osType = null;
-        this.requireVerifiedChromeOs = null;
+    private OsConstraintResponse(OsConstraintResponse $) {
+        this.minimumVersion = $.minimumVersion;
+        this.osType = $.osType;
+        this.requireVerifiedChromeOs = $.requireVerifiedChromeOs;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(OsConstraintResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String minimumVersion;
-        private String osType;
-        private Boolean requireVerifiedChromeOs;
+        private OsConstraintResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new OsConstraintResponse();
         }
 
         public Builder(OsConstraintResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.minimumVersion = defaults.minimumVersion;
-    	      this.osType = defaults.osType;
-    	      this.requireVerifiedChromeOs = defaults.requireVerifiedChromeOs;
+            $ = new OsConstraintResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder minimumVersion(String minimumVersion) {
-            this.minimumVersion = Objects.requireNonNull(minimumVersion);
+            $.minimumVersion = minimumVersion;
             return this;
         }
+
         public Builder osType(String osType) {
-            this.osType = Objects.requireNonNull(osType);
+            $.osType = osType;
             return this;
         }
+
         public Builder requireVerifiedChromeOs(Boolean requireVerifiedChromeOs) {
-            this.requireVerifiedChromeOs = Objects.requireNonNull(requireVerifiedChromeOs);
+            $.requireVerifiedChromeOs = requireVerifiedChromeOs;
             return this;
-        }        public OsConstraintResponse build() {
-            return new OsConstraintResponse(minimumVersion, osType, requireVerifiedChromeOs);
+        }
+
+        public OsConstraintResponse build() {
+            $.minimumVersion = Objects.requireNonNull($.minimumVersion, "expected parameter 'minimumVersion' to be non-null");
+            $.osType = Objects.requireNonNull($.osType, "expected parameter 'osType' to be non-null");
+            $.requireVerifiedChromeOs = Objects.requireNonNull($.requireVerifiedChromeOs, "expected parameter 'requireVerifiedChromeOs' to be non-null");
+            return $;
         }
     }
+
 }

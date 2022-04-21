@@ -6,9 +6,9 @@ package com.pulumi.azurenative.datafactory.inputs;
 import com.pulumi.azurenative.datafactory.inputs.CMKIdentityDefinitionArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class EncryptionConfigurationArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="identity")
-      private final @Nullable Output<CMKIdentityDefinitionArgs> identity;
+    private @Nullable Output<CMKIdentityDefinitionArgs> identity;
 
-    public Output<CMKIdentityDefinitionArgs> identity() {
-        return this.identity == null ? Codegen.empty() : this.identity;
+    public Optional<Output<CMKIdentityDefinitionArgs>> identity() {
+        return Optional.ofNullable(this.identity);
     }
 
     /**
@@ -36,7 +36,7 @@ public final class EncryptionConfigurationArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="keyName", required=true)
-      private final Output<String> keyName;
+    private Output<String> keyName;
 
     public Output<String> keyName() {
         return this.keyName;
@@ -47,10 +47,10 @@ public final class EncryptionConfigurationArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="keyVersion")
-      private final @Nullable Output<String> keyVersion;
+    private @Nullable Output<String> keyVersion;
 
-    public Output<String> keyVersion() {
-        return this.keyVersion == null ? Codegen.empty() : this.keyVersion;
+    public Optional<Output<String>> keyVersion() {
+        return Optional.ofNullable(this.keyVersion);
     }
 
     /**
@@ -58,89 +58,80 @@ public final class EncryptionConfigurationArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="vaultBaseUrl", required=true)
-      private final Output<String> vaultBaseUrl;
+    private Output<String> vaultBaseUrl;
 
     public Output<String> vaultBaseUrl() {
         return this.vaultBaseUrl;
     }
 
-    public EncryptionConfigurationArgs(
-        @Nullable Output<CMKIdentityDefinitionArgs> identity,
-        Output<String> keyName,
-        @Nullable Output<String> keyVersion,
-        Output<String> vaultBaseUrl) {
-        this.identity = identity;
-        this.keyName = Objects.requireNonNull(keyName, "expected parameter 'keyName' to be non-null");
-        this.keyVersion = keyVersion;
-        this.vaultBaseUrl = Objects.requireNonNull(vaultBaseUrl, "expected parameter 'vaultBaseUrl' to be non-null");
-    }
+    private EncryptionConfigurationArgs() {}
 
-    private EncryptionConfigurationArgs() {
-        this.identity = Codegen.empty();
-        this.keyName = Codegen.empty();
-        this.keyVersion = Codegen.empty();
-        this.vaultBaseUrl = Codegen.empty();
+    private EncryptionConfigurationArgs(EncryptionConfigurationArgs $) {
+        this.identity = $.identity;
+        this.keyName = $.keyName;
+        this.keyVersion = $.keyVersion;
+        this.vaultBaseUrl = $.vaultBaseUrl;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EncryptionConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<CMKIdentityDefinitionArgs> identity;
-        private Output<String> keyName;
-        private @Nullable Output<String> keyVersion;
-        private Output<String> vaultBaseUrl;
+        private EncryptionConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new EncryptionConfigurationArgs();
         }
 
         public Builder(EncryptionConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.identity = defaults.identity;
-    	      this.keyName = defaults.keyName;
-    	      this.keyVersion = defaults.keyVersion;
-    	      this.vaultBaseUrl = defaults.vaultBaseUrl;
+            $ = new EncryptionConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder identity(@Nullable Output<CMKIdentityDefinitionArgs> identity) {
-            this.identity = identity;
+            $.identity = identity;
             return this;
         }
-        public Builder identity(@Nullable CMKIdentityDefinitionArgs identity) {
-            this.identity = Codegen.ofNullable(identity);
-            return this;
+
+        public Builder identity(CMKIdentityDefinitionArgs identity) {
+            return identity(Output.of(identity));
         }
+
         public Builder keyName(Output<String> keyName) {
-            this.keyName = Objects.requireNonNull(keyName);
+            $.keyName = keyName;
             return this;
         }
+
         public Builder keyName(String keyName) {
-            this.keyName = Output.of(Objects.requireNonNull(keyName));
-            return this;
+            return keyName(Output.of(keyName));
         }
+
         public Builder keyVersion(@Nullable Output<String> keyVersion) {
-            this.keyVersion = keyVersion;
+            $.keyVersion = keyVersion;
             return this;
         }
-        public Builder keyVersion(@Nullable String keyVersion) {
-            this.keyVersion = Codegen.ofNullable(keyVersion);
-            return this;
+
+        public Builder keyVersion(String keyVersion) {
+            return keyVersion(Output.of(keyVersion));
         }
+
         public Builder vaultBaseUrl(Output<String> vaultBaseUrl) {
-            this.vaultBaseUrl = Objects.requireNonNull(vaultBaseUrl);
+            $.vaultBaseUrl = vaultBaseUrl;
             return this;
         }
+
         public Builder vaultBaseUrl(String vaultBaseUrl) {
-            this.vaultBaseUrl = Output.of(Objects.requireNonNull(vaultBaseUrl));
-            return this;
-        }        public EncryptionConfigurationArgs build() {
-            return new EncryptionConfigurationArgs(identity, keyName, keyVersion, vaultBaseUrl);
+            return vaultBaseUrl(Output.of(vaultBaseUrl));
+        }
+
+        public EncryptionConfigurationArgs build() {
+            $.keyName = Objects.requireNonNull($.keyName, "expected parameter 'keyName' to be non-null");
+            $.vaultBaseUrl = Objects.requireNonNull($.vaultBaseUrl, "expected parameter 'vaultBaseUrl' to be non-null");
+            return $;
         }
     }
+
 }

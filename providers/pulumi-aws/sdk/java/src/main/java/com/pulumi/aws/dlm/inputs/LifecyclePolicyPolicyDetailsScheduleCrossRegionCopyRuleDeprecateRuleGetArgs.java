@@ -5,7 +5,6 @@ package com.pulumi.aws.dlm.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +19,7 @@ public final class LifecyclePolicyPolicyDetailsScheduleCrossRegionCopyRuleDeprec
      * 
      */
     @Import(name="interval", required=true)
-      private final Output<Integer> interval;
+    private Output<Integer> interval;
 
     public Output<Integer> interval() {
         return this.interval;
@@ -31,63 +30,60 @@ public final class LifecyclePolicyPolicyDetailsScheduleCrossRegionCopyRuleDeprec
      * 
      */
     @Import(name="intervalUnit", required=true)
-      private final Output<String> intervalUnit;
+    private Output<String> intervalUnit;
 
     public Output<String> intervalUnit() {
         return this.intervalUnit;
     }
 
-    public LifecyclePolicyPolicyDetailsScheduleCrossRegionCopyRuleDeprecateRuleGetArgs(
-        Output<Integer> interval,
-        Output<String> intervalUnit) {
-        this.interval = Objects.requireNonNull(interval, "expected parameter 'interval' to be non-null");
-        this.intervalUnit = Objects.requireNonNull(intervalUnit, "expected parameter 'intervalUnit' to be non-null");
-    }
+    private LifecyclePolicyPolicyDetailsScheduleCrossRegionCopyRuleDeprecateRuleGetArgs() {}
 
-    private LifecyclePolicyPolicyDetailsScheduleCrossRegionCopyRuleDeprecateRuleGetArgs() {
-        this.interval = Codegen.empty();
-        this.intervalUnit = Codegen.empty();
+    private LifecyclePolicyPolicyDetailsScheduleCrossRegionCopyRuleDeprecateRuleGetArgs(LifecyclePolicyPolicyDetailsScheduleCrossRegionCopyRuleDeprecateRuleGetArgs $) {
+        this.interval = $.interval;
+        this.intervalUnit = $.intervalUnit;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LifecyclePolicyPolicyDetailsScheduleCrossRegionCopyRuleDeprecateRuleGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Integer> interval;
-        private Output<String> intervalUnit;
+        private LifecyclePolicyPolicyDetailsScheduleCrossRegionCopyRuleDeprecateRuleGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new LifecyclePolicyPolicyDetailsScheduleCrossRegionCopyRuleDeprecateRuleGetArgs();
         }
 
         public Builder(LifecyclePolicyPolicyDetailsScheduleCrossRegionCopyRuleDeprecateRuleGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.interval = defaults.interval;
-    	      this.intervalUnit = defaults.intervalUnit;
+            $ = new LifecyclePolicyPolicyDetailsScheduleCrossRegionCopyRuleDeprecateRuleGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder interval(Output<Integer> interval) {
-            this.interval = Objects.requireNonNull(interval);
+            $.interval = interval;
             return this;
         }
+
         public Builder interval(Integer interval) {
-            this.interval = Output.of(Objects.requireNonNull(interval));
-            return this;
+            return interval(Output.of(interval));
         }
+
         public Builder intervalUnit(Output<String> intervalUnit) {
-            this.intervalUnit = Objects.requireNonNull(intervalUnit);
+            $.intervalUnit = intervalUnit;
             return this;
         }
+
         public Builder intervalUnit(String intervalUnit) {
-            this.intervalUnit = Output.of(Objects.requireNonNull(intervalUnit));
-            return this;
-        }        public LifecyclePolicyPolicyDetailsScheduleCrossRegionCopyRuleDeprecateRuleGetArgs build() {
-            return new LifecyclePolicyPolicyDetailsScheduleCrossRegionCopyRuleDeprecateRuleGetArgs(interval, intervalUnit);
+            return intervalUnit(Output.of(intervalUnit));
+        }
+
+        public LifecyclePolicyPolicyDetailsScheduleCrossRegionCopyRuleDeprecateRuleGetArgs build() {
+            $.interval = Objects.requireNonNull($.interval, "expected parameter 'interval' to be non-null");
+            $.intervalUnit = Objects.requireNonNull($.intervalUnit, "expected parameter 'intervalUnit' to be non-null");
+            return $;
         }
     }
+
 }

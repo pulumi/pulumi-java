@@ -15,62 +15,58 @@ public final class GetDeploymentArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetDeploymentArgs Empty = new GetDeploymentArgs();
 
     @Import(name="deployment", required=true)
-      private final String deployment;
+    private String deployment;
 
     public String deployment() {
         return this.deployment;
     }
 
     @Import(name="project")
-      private final @Nullable String project;
+    private @Nullable String project;
 
     public Optional<String> project() {
-        return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
+        return Optional.ofNullable(this.project);
     }
 
-    public GetDeploymentArgs(
-        String deployment,
-        @Nullable String project) {
-        this.deployment = Objects.requireNonNull(deployment, "expected parameter 'deployment' to be non-null");
-        this.project = project;
-    }
+    private GetDeploymentArgs() {}
 
-    private GetDeploymentArgs() {
-        this.deployment = null;
-        this.project = null;
+    private GetDeploymentArgs(GetDeploymentArgs $) {
+        this.deployment = $.deployment;
+        this.project = $.project;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetDeploymentArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String deployment;
-        private @Nullable String project;
+        private GetDeploymentArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetDeploymentArgs();
         }
 
         public Builder(GetDeploymentArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.deployment = defaults.deployment;
-    	      this.project = defaults.project;
+            $ = new GetDeploymentArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder deployment(String deployment) {
-            this.deployment = Objects.requireNonNull(deployment);
+            $.deployment = deployment;
             return this;
         }
+
         public Builder project(@Nullable String project) {
-            this.project = project;
+            $.project = project;
             return this;
-        }        public GetDeploymentArgs build() {
-            return new GetDeploymentArgs(deployment, project);
+        }
+
+        public GetDeploymentArgs build() {
+            $.deployment = Objects.requireNonNull($.deployment, "expected parameter 'deployment' to be non-null");
+            return $;
         }
     }
+
 }

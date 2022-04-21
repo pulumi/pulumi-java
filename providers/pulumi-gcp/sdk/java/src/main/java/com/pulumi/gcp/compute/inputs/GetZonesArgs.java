@@ -19,10 +19,10 @@ public final class GetZonesArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="project")
-      private final @Nullable String project;
+    private @Nullable String project;
 
     public Optional<String> project() {
-        return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -30,10 +30,10 @@ public final class GetZonesArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="region")
-      private final @Nullable String region;
+    private @Nullable String region;
 
     public Optional<String> region() {
-        return this.region == null ? Optional.empty() : Optional.ofNullable(this.region);
+        return Optional.ofNullable(this.region);
     }
 
     /**
@@ -42,64 +42,56 @@ public final class GetZonesArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="status")
-      private final @Nullable String status;
+    private @Nullable String status;
 
     public Optional<String> status() {
-        return this.status == null ? Optional.empty() : Optional.ofNullable(this.status);
+        return Optional.ofNullable(this.status);
     }
 
-    public GetZonesArgs(
-        @Nullable String project,
-        @Nullable String region,
-        @Nullable String status) {
-        this.project = project;
-        this.region = region;
-        this.status = status;
-    }
+    private GetZonesArgs() {}
 
-    private GetZonesArgs() {
-        this.project = null;
-        this.region = null;
-        this.status = null;
+    private GetZonesArgs(GetZonesArgs $) {
+        this.project = $.project;
+        this.region = $.region;
+        this.status = $.status;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetZonesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String project;
-        private @Nullable String region;
-        private @Nullable String status;
+        private GetZonesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetZonesArgs();
         }
 
         public Builder(GetZonesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.project = defaults.project;
-    	      this.region = defaults.region;
-    	      this.status = defaults.status;
+            $ = new GetZonesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder project(@Nullable String project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
+
         public Builder region(@Nullable String region) {
-            this.region = region;
+            $.region = region;
             return this;
         }
+
         public Builder status(@Nullable String status) {
-            this.status = status;
+            $.status = status;
             return this;
-        }        public GetZonesArgs build() {
-            return new GetZonesArgs(project, region, status);
+        }
+
+        public GetZonesArgs build() {
+            return $;
         }
     }
+
 }

@@ -21,7 +21,7 @@ public final class GoogleCloudRecommendationengineV1beta1ProductCatalogItemExact
      * 
      */
     @Import(name="displayPrice", required=true)
-      private final Double displayPrice;
+    private Double displayPrice;
 
     public Double displayPrice() {
         return this.displayPrice;
@@ -32,55 +32,52 @@ public final class GoogleCloudRecommendationengineV1beta1ProductCatalogItemExact
      * 
      */
     @Import(name="originalPrice", required=true)
-      private final Double originalPrice;
+    private Double originalPrice;
 
     public Double originalPrice() {
         return this.originalPrice;
     }
 
-    public GoogleCloudRecommendationengineV1beta1ProductCatalogItemExactPriceResponse(
-        Double displayPrice,
-        Double originalPrice) {
-        this.displayPrice = Objects.requireNonNull(displayPrice, "expected parameter 'displayPrice' to be non-null");
-        this.originalPrice = Objects.requireNonNull(originalPrice, "expected parameter 'originalPrice' to be non-null");
-    }
+    private GoogleCloudRecommendationengineV1beta1ProductCatalogItemExactPriceResponse() {}
 
-    private GoogleCloudRecommendationengineV1beta1ProductCatalogItemExactPriceResponse() {
-        this.displayPrice = null;
-        this.originalPrice = null;
+    private GoogleCloudRecommendationengineV1beta1ProductCatalogItemExactPriceResponse(GoogleCloudRecommendationengineV1beta1ProductCatalogItemExactPriceResponse $) {
+        this.displayPrice = $.displayPrice;
+        this.originalPrice = $.originalPrice;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudRecommendationengineV1beta1ProductCatalogItemExactPriceResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Double displayPrice;
-        private Double originalPrice;
+        private GoogleCloudRecommendationengineV1beta1ProductCatalogItemExactPriceResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudRecommendationengineV1beta1ProductCatalogItemExactPriceResponse();
         }
 
         public Builder(GoogleCloudRecommendationengineV1beta1ProductCatalogItemExactPriceResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.displayPrice = defaults.displayPrice;
-    	      this.originalPrice = defaults.originalPrice;
+            $ = new GoogleCloudRecommendationengineV1beta1ProductCatalogItemExactPriceResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder displayPrice(Double displayPrice) {
-            this.displayPrice = Objects.requireNonNull(displayPrice);
+            $.displayPrice = displayPrice;
             return this;
         }
+
         public Builder originalPrice(Double originalPrice) {
-            this.originalPrice = Objects.requireNonNull(originalPrice);
+            $.originalPrice = originalPrice;
             return this;
-        }        public GoogleCloudRecommendationengineV1beta1ProductCatalogItemExactPriceResponse build() {
-            return new GoogleCloudRecommendationengineV1beta1ProductCatalogItemExactPriceResponse(displayPrice, originalPrice);
+        }
+
+        public GoogleCloudRecommendationengineV1beta1ProductCatalogItemExactPriceResponse build() {
+            $.displayPrice = Objects.requireNonNull($.displayPrice, "expected parameter 'displayPrice' to be non-null");
+            $.originalPrice = Objects.requireNonNull($.originalPrice, "expected parameter 'originalPrice' to be non-null");
+            return $;
         }
     }
+
 }

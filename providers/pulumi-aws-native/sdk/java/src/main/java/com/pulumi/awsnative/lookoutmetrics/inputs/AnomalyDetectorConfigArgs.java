@@ -6,7 +6,6 @@ package com.pulumi.awsnative.lookoutmetrics.inputs;
 import com.pulumi.awsnative.lookoutmetrics.enums.AnomalyDetectorFrequency;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
 
 
@@ -19,49 +18,49 @@ public final class AnomalyDetectorConfigArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="anomalyDetectorFrequency", required=true)
-      private final Output<AnomalyDetectorFrequency> anomalyDetectorFrequency;
+    private Output<AnomalyDetectorFrequency> anomalyDetectorFrequency;
 
     public Output<AnomalyDetectorFrequency> anomalyDetectorFrequency() {
         return this.anomalyDetectorFrequency;
     }
 
-    public AnomalyDetectorConfigArgs(Output<AnomalyDetectorFrequency> anomalyDetectorFrequency) {
-        this.anomalyDetectorFrequency = Objects.requireNonNull(anomalyDetectorFrequency, "expected parameter 'anomalyDetectorFrequency' to be non-null");
-    }
+    private AnomalyDetectorConfigArgs() {}
 
-    private AnomalyDetectorConfigArgs() {
-        this.anomalyDetectorFrequency = Codegen.empty();
+    private AnomalyDetectorConfigArgs(AnomalyDetectorConfigArgs $) {
+        this.anomalyDetectorFrequency = $.anomalyDetectorFrequency;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AnomalyDetectorConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<AnomalyDetectorFrequency> anomalyDetectorFrequency;
+        private AnomalyDetectorConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AnomalyDetectorConfigArgs();
         }
 
         public Builder(AnomalyDetectorConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.anomalyDetectorFrequency = defaults.anomalyDetectorFrequency;
+            $ = new AnomalyDetectorConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder anomalyDetectorFrequency(Output<AnomalyDetectorFrequency> anomalyDetectorFrequency) {
-            this.anomalyDetectorFrequency = Objects.requireNonNull(anomalyDetectorFrequency);
+            $.anomalyDetectorFrequency = anomalyDetectorFrequency;
             return this;
         }
+
         public Builder anomalyDetectorFrequency(AnomalyDetectorFrequency anomalyDetectorFrequency) {
-            this.anomalyDetectorFrequency = Output.of(Objects.requireNonNull(anomalyDetectorFrequency));
-            return this;
-        }        public AnomalyDetectorConfigArgs build() {
-            return new AnomalyDetectorConfigArgs(anomalyDetectorFrequency);
+            return anomalyDetectorFrequency(Output.of(anomalyDetectorFrequency));
+        }
+
+        public AnomalyDetectorConfigArgs build() {
+            $.anomalyDetectorFrequency = Objects.requireNonNull($.anomalyDetectorFrequency, "expected parameter 'anomalyDetectorFrequency' to be non-null");
+            return $;
         }
     }
+
 }

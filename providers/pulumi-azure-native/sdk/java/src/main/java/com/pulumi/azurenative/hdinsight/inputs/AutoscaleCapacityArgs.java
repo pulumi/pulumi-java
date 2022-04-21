@@ -5,9 +5,9 @@ package com.pulumi.azurenative.hdinsight.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class AutoscaleCapacityArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="maxInstanceCount")
-      private final @Nullable Output<Integer> maxInstanceCount;
+    private @Nullable Output<Integer> maxInstanceCount;
 
-    public Output<Integer> maxInstanceCount() {
-        return this.maxInstanceCount == null ? Codegen.empty() : this.maxInstanceCount;
+    public Optional<Output<Integer>> maxInstanceCount() {
+        return Optional.ofNullable(this.maxInstanceCount);
     }
 
     /**
@@ -35,63 +35,58 @@ public final class AutoscaleCapacityArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="minInstanceCount")
-      private final @Nullable Output<Integer> minInstanceCount;
+    private @Nullable Output<Integer> minInstanceCount;
 
-    public Output<Integer> minInstanceCount() {
-        return this.minInstanceCount == null ? Codegen.empty() : this.minInstanceCount;
+    public Optional<Output<Integer>> minInstanceCount() {
+        return Optional.ofNullable(this.minInstanceCount);
     }
 
-    public AutoscaleCapacityArgs(
-        @Nullable Output<Integer> maxInstanceCount,
-        @Nullable Output<Integer> minInstanceCount) {
-        this.maxInstanceCount = maxInstanceCount;
-        this.minInstanceCount = minInstanceCount;
-    }
+    private AutoscaleCapacityArgs() {}
 
-    private AutoscaleCapacityArgs() {
-        this.maxInstanceCount = Codegen.empty();
-        this.minInstanceCount = Codegen.empty();
+    private AutoscaleCapacityArgs(AutoscaleCapacityArgs $) {
+        this.maxInstanceCount = $.maxInstanceCount;
+        this.minInstanceCount = $.minInstanceCount;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AutoscaleCapacityArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> maxInstanceCount;
-        private @Nullable Output<Integer> minInstanceCount;
+        private AutoscaleCapacityArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AutoscaleCapacityArgs();
         }
 
         public Builder(AutoscaleCapacityArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.maxInstanceCount = defaults.maxInstanceCount;
-    	      this.minInstanceCount = defaults.minInstanceCount;
+            $ = new AutoscaleCapacityArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder maxInstanceCount(@Nullable Output<Integer> maxInstanceCount) {
-            this.maxInstanceCount = maxInstanceCount;
+            $.maxInstanceCount = maxInstanceCount;
             return this;
         }
-        public Builder maxInstanceCount(@Nullable Integer maxInstanceCount) {
-            this.maxInstanceCount = Codegen.ofNullable(maxInstanceCount);
-            return this;
+
+        public Builder maxInstanceCount(Integer maxInstanceCount) {
+            return maxInstanceCount(Output.of(maxInstanceCount));
         }
+
         public Builder minInstanceCount(@Nullable Output<Integer> minInstanceCount) {
-            this.minInstanceCount = minInstanceCount;
+            $.minInstanceCount = minInstanceCount;
             return this;
         }
-        public Builder minInstanceCount(@Nullable Integer minInstanceCount) {
-            this.minInstanceCount = Codegen.ofNullable(minInstanceCount);
-            return this;
-        }        public AutoscaleCapacityArgs build() {
-            return new AutoscaleCapacityArgs(maxInstanceCount, minInstanceCount);
+
+        public Builder minInstanceCount(Integer minInstanceCount) {
+            return minInstanceCount(Output.of(minInstanceCount));
+        }
+
+        public AutoscaleCapacityArgs build() {
+            return $;
         }
     }
+
 }

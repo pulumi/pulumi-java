@@ -21,45 +21,45 @@ public final class ContainerInfoResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="image", required=true)
-      private final String image;
+    private String image;
 
     public String image() {
         return this.image;
     }
 
-    public ContainerInfoResponse(String image) {
-        this.image = Objects.requireNonNull(image, "expected parameter 'image' to be non-null");
-    }
+    private ContainerInfoResponse() {}
 
-    private ContainerInfoResponse() {
-        this.image = null;
+    private ContainerInfoResponse(ContainerInfoResponse $) {
+        this.image = $.image;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ContainerInfoResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String image;
+        private ContainerInfoResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ContainerInfoResponse();
         }
 
         public Builder(ContainerInfoResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.image = defaults.image;
+            $ = new ContainerInfoResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder image(String image) {
-            this.image = Objects.requireNonNull(image);
+            $.image = image;
             return this;
-        }        public ContainerInfoResponse build() {
-            return new ContainerInfoResponse(image);
+        }
+
+        public ContainerInfoResponse build() {
+            $.image = Objects.requireNonNull($.image, "expected parameter 'image' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,9 +5,9 @@ package com.pulumi.azurenative.logz.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class LogzOrganizationPropertiesArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="companyName")
-      private final @Nullable Output<String> companyName;
+    private @Nullable Output<String> companyName;
 
-    public Output<String> companyName() {
-        return this.companyName == null ? Codegen.empty() : this.companyName;
+    public Optional<Output<String>> companyName() {
+        return Optional.ofNullable(this.companyName);
     }
 
     /**
@@ -31,10 +31,10 @@ public final class LogzOrganizationPropertiesArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="enterpriseAppId")
-      private final @Nullable Output<String> enterpriseAppId;
+    private @Nullable Output<String> enterpriseAppId;
 
-    public Output<String> enterpriseAppId() {
-        return this.enterpriseAppId == null ? Codegen.empty() : this.enterpriseAppId;
+    public Optional<Output<String>> enterpriseAppId() {
+        return Optional.ofNullable(this.enterpriseAppId);
     }
 
     /**
@@ -42,76 +42,68 @@ public final class LogzOrganizationPropertiesArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="singleSignOnUrl")
-      private final @Nullable Output<String> singleSignOnUrl;
+    private @Nullable Output<String> singleSignOnUrl;
 
-    public Output<String> singleSignOnUrl() {
-        return this.singleSignOnUrl == null ? Codegen.empty() : this.singleSignOnUrl;
+    public Optional<Output<String>> singleSignOnUrl() {
+        return Optional.ofNullable(this.singleSignOnUrl);
     }
 
-    public LogzOrganizationPropertiesArgs(
-        @Nullable Output<String> companyName,
-        @Nullable Output<String> enterpriseAppId,
-        @Nullable Output<String> singleSignOnUrl) {
-        this.companyName = companyName;
-        this.enterpriseAppId = enterpriseAppId;
-        this.singleSignOnUrl = singleSignOnUrl;
-    }
+    private LogzOrganizationPropertiesArgs() {}
 
-    private LogzOrganizationPropertiesArgs() {
-        this.companyName = Codegen.empty();
-        this.enterpriseAppId = Codegen.empty();
-        this.singleSignOnUrl = Codegen.empty();
+    private LogzOrganizationPropertiesArgs(LogzOrganizationPropertiesArgs $) {
+        this.companyName = $.companyName;
+        this.enterpriseAppId = $.enterpriseAppId;
+        this.singleSignOnUrl = $.singleSignOnUrl;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LogzOrganizationPropertiesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> companyName;
-        private @Nullable Output<String> enterpriseAppId;
-        private @Nullable Output<String> singleSignOnUrl;
+        private LogzOrganizationPropertiesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new LogzOrganizationPropertiesArgs();
         }
 
         public Builder(LogzOrganizationPropertiesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.companyName = defaults.companyName;
-    	      this.enterpriseAppId = defaults.enterpriseAppId;
-    	      this.singleSignOnUrl = defaults.singleSignOnUrl;
+            $ = new LogzOrganizationPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder companyName(@Nullable Output<String> companyName) {
-            this.companyName = companyName;
+            $.companyName = companyName;
             return this;
         }
-        public Builder companyName(@Nullable String companyName) {
-            this.companyName = Codegen.ofNullable(companyName);
-            return this;
+
+        public Builder companyName(String companyName) {
+            return companyName(Output.of(companyName));
         }
+
         public Builder enterpriseAppId(@Nullable Output<String> enterpriseAppId) {
-            this.enterpriseAppId = enterpriseAppId;
+            $.enterpriseAppId = enterpriseAppId;
             return this;
         }
-        public Builder enterpriseAppId(@Nullable String enterpriseAppId) {
-            this.enterpriseAppId = Codegen.ofNullable(enterpriseAppId);
-            return this;
+
+        public Builder enterpriseAppId(String enterpriseAppId) {
+            return enterpriseAppId(Output.of(enterpriseAppId));
         }
+
         public Builder singleSignOnUrl(@Nullable Output<String> singleSignOnUrl) {
-            this.singleSignOnUrl = singleSignOnUrl;
+            $.singleSignOnUrl = singleSignOnUrl;
             return this;
         }
-        public Builder singleSignOnUrl(@Nullable String singleSignOnUrl) {
-            this.singleSignOnUrl = Codegen.ofNullable(singleSignOnUrl);
-            return this;
-        }        public LogzOrganizationPropertiesArgs build() {
-            return new LogzOrganizationPropertiesArgs(companyName, enterpriseAppId, singleSignOnUrl);
+
+        public Builder singleSignOnUrl(String singleSignOnUrl) {
+            return singleSignOnUrl(Output.of(singleSignOnUrl));
+        }
+
+        public LogzOrganizationPropertiesArgs build() {
+            return $;
         }
     }
+
 }

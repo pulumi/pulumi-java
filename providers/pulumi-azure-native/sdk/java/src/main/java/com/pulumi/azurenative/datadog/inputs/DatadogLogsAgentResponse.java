@@ -19,45 +19,44 @@ public final class DatadogLogsAgentResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="transport")
-      private final @Nullable String transport;
+    private @Nullable String transport;
 
     public Optional<String> transport() {
-        return this.transport == null ? Optional.empty() : Optional.ofNullable(this.transport);
+        return Optional.ofNullable(this.transport);
     }
 
-    public DatadogLogsAgentResponse(@Nullable String transport) {
-        this.transport = transport;
-    }
+    private DatadogLogsAgentResponse() {}
 
-    private DatadogLogsAgentResponse() {
-        this.transport = null;
+    private DatadogLogsAgentResponse(DatadogLogsAgentResponse $) {
+        this.transport = $.transport;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DatadogLogsAgentResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String transport;
+        private DatadogLogsAgentResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new DatadogLogsAgentResponse();
         }
 
         public Builder(DatadogLogsAgentResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.transport = defaults.transport;
+            $ = new DatadogLogsAgentResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder transport(@Nullable String transport) {
-            this.transport = transport;
+            $.transport = transport;
             return this;
-        }        public DatadogLogsAgentResponse build() {
-            return new DatadogLogsAgentResponse(transport);
+        }
+
+        public DatadogLogsAgentResponse build() {
+            return $;
         }
     }
+
 }

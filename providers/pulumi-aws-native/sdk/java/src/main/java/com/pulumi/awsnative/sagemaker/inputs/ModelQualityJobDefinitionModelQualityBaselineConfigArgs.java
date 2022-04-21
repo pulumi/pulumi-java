@@ -6,9 +6,9 @@ package com.pulumi.awsnative.sagemaker.inputs;
 import com.pulumi.awsnative.sagemaker.inputs.ModelQualityJobDefinitionConstraintsResourceArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,70 +21,65 @@ public final class ModelQualityJobDefinitionModelQualityBaselineConfigArgs exten
     public static final ModelQualityJobDefinitionModelQualityBaselineConfigArgs Empty = new ModelQualityJobDefinitionModelQualityBaselineConfigArgs();
 
     @Import(name="baseliningJobName")
-      private final @Nullable Output<String> baseliningJobName;
+    private @Nullable Output<String> baseliningJobName;
 
-    public Output<String> baseliningJobName() {
-        return this.baseliningJobName == null ? Codegen.empty() : this.baseliningJobName;
+    public Optional<Output<String>> baseliningJobName() {
+        return Optional.ofNullable(this.baseliningJobName);
     }
 
     @Import(name="constraintsResource")
-      private final @Nullable Output<ModelQualityJobDefinitionConstraintsResourceArgs> constraintsResource;
+    private @Nullable Output<ModelQualityJobDefinitionConstraintsResourceArgs> constraintsResource;
 
-    public Output<ModelQualityJobDefinitionConstraintsResourceArgs> constraintsResource() {
-        return this.constraintsResource == null ? Codegen.empty() : this.constraintsResource;
+    public Optional<Output<ModelQualityJobDefinitionConstraintsResourceArgs>> constraintsResource() {
+        return Optional.ofNullable(this.constraintsResource);
     }
 
-    public ModelQualityJobDefinitionModelQualityBaselineConfigArgs(
-        @Nullable Output<String> baseliningJobName,
-        @Nullable Output<ModelQualityJobDefinitionConstraintsResourceArgs> constraintsResource) {
-        this.baseliningJobName = baseliningJobName;
-        this.constraintsResource = constraintsResource;
-    }
+    private ModelQualityJobDefinitionModelQualityBaselineConfigArgs() {}
 
-    private ModelQualityJobDefinitionModelQualityBaselineConfigArgs() {
-        this.baseliningJobName = Codegen.empty();
-        this.constraintsResource = Codegen.empty();
+    private ModelQualityJobDefinitionModelQualityBaselineConfigArgs(ModelQualityJobDefinitionModelQualityBaselineConfigArgs $) {
+        this.baseliningJobName = $.baseliningJobName;
+        this.constraintsResource = $.constraintsResource;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ModelQualityJobDefinitionModelQualityBaselineConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> baseliningJobName;
-        private @Nullable Output<ModelQualityJobDefinitionConstraintsResourceArgs> constraintsResource;
+        private ModelQualityJobDefinitionModelQualityBaselineConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ModelQualityJobDefinitionModelQualityBaselineConfigArgs();
         }
 
         public Builder(ModelQualityJobDefinitionModelQualityBaselineConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.baseliningJobName = defaults.baseliningJobName;
-    	      this.constraintsResource = defaults.constraintsResource;
+            $ = new ModelQualityJobDefinitionModelQualityBaselineConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder baseliningJobName(@Nullable Output<String> baseliningJobName) {
-            this.baseliningJobName = baseliningJobName;
+            $.baseliningJobName = baseliningJobName;
             return this;
         }
-        public Builder baseliningJobName(@Nullable String baseliningJobName) {
-            this.baseliningJobName = Codegen.ofNullable(baseliningJobName);
-            return this;
+
+        public Builder baseliningJobName(String baseliningJobName) {
+            return baseliningJobName(Output.of(baseliningJobName));
         }
+
         public Builder constraintsResource(@Nullable Output<ModelQualityJobDefinitionConstraintsResourceArgs> constraintsResource) {
-            this.constraintsResource = constraintsResource;
+            $.constraintsResource = constraintsResource;
             return this;
         }
-        public Builder constraintsResource(@Nullable ModelQualityJobDefinitionConstraintsResourceArgs constraintsResource) {
-            this.constraintsResource = Codegen.ofNullable(constraintsResource);
-            return this;
-        }        public ModelQualityJobDefinitionModelQualityBaselineConfigArgs build() {
-            return new ModelQualityJobDefinitionModelQualityBaselineConfigArgs(baseliningJobName, constraintsResource);
+
+        public Builder constraintsResource(ModelQualityJobDefinitionConstraintsResourceArgs constraintsResource) {
+            return constraintsResource(Output.of(constraintsResource));
+        }
+
+        public ModelQualityJobDefinitionModelQualityBaselineConfigArgs build() {
+            return $;
         }
     }
+
 }

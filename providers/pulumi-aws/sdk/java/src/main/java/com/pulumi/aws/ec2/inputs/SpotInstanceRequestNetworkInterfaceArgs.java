@@ -5,11 +5,11 @@ package com.pulumi.aws.ec2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class SpotInstanceRequestNetworkInterfaceArgs extends com.pulumi.re
      * 
      */
     @Import(name="deleteOnTermination")
-      private final @Nullable Output<Boolean> deleteOnTermination;
+    private @Nullable Output<Boolean> deleteOnTermination;
 
-    public Output<Boolean> deleteOnTermination() {
-        return this.deleteOnTermination == null ? Codegen.empty() : this.deleteOnTermination;
+    public Optional<Output<Boolean>> deleteOnTermination() {
+        return Optional.ofNullable(this.deleteOnTermination);
     }
 
     /**
@@ -33,7 +33,7 @@ public final class SpotInstanceRequestNetworkInterfaceArgs extends com.pulumi.re
      * 
      */
     @Import(name="deviceIndex", required=true)
-      private final Output<Integer> deviceIndex;
+    private Output<Integer> deviceIndex;
 
     public Output<Integer> deviceIndex() {
         return this.deviceIndex;
@@ -44,76 +44,70 @@ public final class SpotInstanceRequestNetworkInterfaceArgs extends com.pulumi.re
      * 
      */
     @Import(name="networkInterfaceId", required=true)
-      private final Output<String> networkInterfaceId;
+    private Output<String> networkInterfaceId;
 
     public Output<String> networkInterfaceId() {
         return this.networkInterfaceId;
     }
 
-    public SpotInstanceRequestNetworkInterfaceArgs(
-        @Nullable Output<Boolean> deleteOnTermination,
-        Output<Integer> deviceIndex,
-        Output<String> networkInterfaceId) {
-        this.deleteOnTermination = deleteOnTermination;
-        this.deviceIndex = Objects.requireNonNull(deviceIndex, "expected parameter 'deviceIndex' to be non-null");
-        this.networkInterfaceId = Objects.requireNonNull(networkInterfaceId, "expected parameter 'networkInterfaceId' to be non-null");
-    }
+    private SpotInstanceRequestNetworkInterfaceArgs() {}
 
-    private SpotInstanceRequestNetworkInterfaceArgs() {
-        this.deleteOnTermination = Codegen.empty();
-        this.deviceIndex = Codegen.empty();
-        this.networkInterfaceId = Codegen.empty();
+    private SpotInstanceRequestNetworkInterfaceArgs(SpotInstanceRequestNetworkInterfaceArgs $) {
+        this.deleteOnTermination = $.deleteOnTermination;
+        this.deviceIndex = $.deviceIndex;
+        this.networkInterfaceId = $.networkInterfaceId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SpotInstanceRequestNetworkInterfaceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> deleteOnTermination;
-        private Output<Integer> deviceIndex;
-        private Output<String> networkInterfaceId;
+        private SpotInstanceRequestNetworkInterfaceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SpotInstanceRequestNetworkInterfaceArgs();
         }
 
         public Builder(SpotInstanceRequestNetworkInterfaceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.deleteOnTermination = defaults.deleteOnTermination;
-    	      this.deviceIndex = defaults.deviceIndex;
-    	      this.networkInterfaceId = defaults.networkInterfaceId;
+            $ = new SpotInstanceRequestNetworkInterfaceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder deleteOnTermination(@Nullable Output<Boolean> deleteOnTermination) {
-            this.deleteOnTermination = deleteOnTermination;
+            $.deleteOnTermination = deleteOnTermination;
             return this;
         }
-        public Builder deleteOnTermination(@Nullable Boolean deleteOnTermination) {
-            this.deleteOnTermination = Codegen.ofNullable(deleteOnTermination);
-            return this;
+
+        public Builder deleteOnTermination(Boolean deleteOnTermination) {
+            return deleteOnTermination(Output.of(deleteOnTermination));
         }
+
         public Builder deviceIndex(Output<Integer> deviceIndex) {
-            this.deviceIndex = Objects.requireNonNull(deviceIndex);
+            $.deviceIndex = deviceIndex;
             return this;
         }
+
         public Builder deviceIndex(Integer deviceIndex) {
-            this.deviceIndex = Output.of(Objects.requireNonNull(deviceIndex));
-            return this;
+            return deviceIndex(Output.of(deviceIndex));
         }
+
         public Builder networkInterfaceId(Output<String> networkInterfaceId) {
-            this.networkInterfaceId = Objects.requireNonNull(networkInterfaceId);
+            $.networkInterfaceId = networkInterfaceId;
             return this;
         }
+
         public Builder networkInterfaceId(String networkInterfaceId) {
-            this.networkInterfaceId = Output.of(Objects.requireNonNull(networkInterfaceId));
-            return this;
-        }        public SpotInstanceRequestNetworkInterfaceArgs build() {
-            return new SpotInstanceRequestNetworkInterfaceArgs(deleteOnTermination, deviceIndex, networkInterfaceId);
+            return networkInterfaceId(Output.of(networkInterfaceId));
+        }
+
+        public SpotInstanceRequestNetworkInterfaceArgs build() {
+            $.deviceIndex = Objects.requireNonNull($.deviceIndex, "expected parameter 'deviceIndex' to be non-null");
+            $.networkInterfaceId = Objects.requireNonNull($.networkInterfaceId, "expected parameter 'networkInterfaceId' to be non-null");
+            return $;
         }
     }
+
 }

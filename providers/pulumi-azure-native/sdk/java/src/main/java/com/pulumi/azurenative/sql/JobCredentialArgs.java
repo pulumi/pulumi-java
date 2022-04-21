@@ -5,9 +5,9 @@ package com.pulumi.azurenative.sql;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class JobCredentialArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="credentialName")
-      private final @Nullable Output<String> credentialName;
+    private @Nullable Output<String> credentialName;
 
-    public Output<String> credentialName() {
-        return this.credentialName == null ? Codegen.empty() : this.credentialName;
+    public Optional<Output<String>> credentialName() {
+        return Optional.ofNullable(this.credentialName);
     }
 
     /**
@@ -31,7 +31,7 @@ public final class JobCredentialArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="jobAgentName", required=true)
-      private final Output<String> jobAgentName;
+    private Output<String> jobAgentName;
 
     public Output<String> jobAgentName() {
         return this.jobAgentName;
@@ -42,7 +42,7 @@ public final class JobCredentialArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="password", required=true)
-      private final Output<String> password;
+    private Output<String> password;
 
     public Output<String> password() {
         return this.password;
@@ -53,7 +53,7 @@ public final class JobCredentialArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -64,7 +64,7 @@ public final class JobCredentialArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="serverName", required=true)
-      private final Output<String> serverName;
+    private Output<String> serverName;
 
     public Output<String> serverName() {
         return this.serverName;
@@ -75,115 +75,103 @@ public final class JobCredentialArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="username", required=true)
-      private final Output<String> username;
+    private Output<String> username;
 
     public Output<String> username() {
         return this.username;
     }
 
-    public JobCredentialArgs(
-        @Nullable Output<String> credentialName,
-        Output<String> jobAgentName,
-        Output<String> password,
-        Output<String> resourceGroupName,
-        Output<String> serverName,
-        Output<String> username) {
-        this.credentialName = credentialName;
-        this.jobAgentName = Objects.requireNonNull(jobAgentName, "expected parameter 'jobAgentName' to be non-null");
-        this.password = Objects.requireNonNull(password, "expected parameter 'password' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.serverName = Objects.requireNonNull(serverName, "expected parameter 'serverName' to be non-null");
-        this.username = Objects.requireNonNull(username, "expected parameter 'username' to be non-null");
-    }
+    private JobCredentialArgs() {}
 
-    private JobCredentialArgs() {
-        this.credentialName = Codegen.empty();
-        this.jobAgentName = Codegen.empty();
-        this.password = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.serverName = Codegen.empty();
-        this.username = Codegen.empty();
+    private JobCredentialArgs(JobCredentialArgs $) {
+        this.credentialName = $.credentialName;
+        this.jobAgentName = $.jobAgentName;
+        this.password = $.password;
+        this.resourceGroupName = $.resourceGroupName;
+        this.serverName = $.serverName;
+        this.username = $.username;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(JobCredentialArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> credentialName;
-        private Output<String> jobAgentName;
-        private Output<String> password;
-        private Output<String> resourceGroupName;
-        private Output<String> serverName;
-        private Output<String> username;
+        private JobCredentialArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new JobCredentialArgs();
         }
 
         public Builder(JobCredentialArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.credentialName = defaults.credentialName;
-    	      this.jobAgentName = defaults.jobAgentName;
-    	      this.password = defaults.password;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.serverName = defaults.serverName;
-    	      this.username = defaults.username;
+            $ = new JobCredentialArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder credentialName(@Nullable Output<String> credentialName) {
-            this.credentialName = credentialName;
+            $.credentialName = credentialName;
             return this;
         }
-        public Builder credentialName(@Nullable String credentialName) {
-            this.credentialName = Codegen.ofNullable(credentialName);
-            return this;
+
+        public Builder credentialName(String credentialName) {
+            return credentialName(Output.of(credentialName));
         }
+
         public Builder jobAgentName(Output<String> jobAgentName) {
-            this.jobAgentName = Objects.requireNonNull(jobAgentName);
+            $.jobAgentName = jobAgentName;
             return this;
         }
+
         public Builder jobAgentName(String jobAgentName) {
-            this.jobAgentName = Output.of(Objects.requireNonNull(jobAgentName));
-            return this;
+            return jobAgentName(Output.of(jobAgentName));
         }
+
         public Builder password(Output<String> password) {
-            this.password = Objects.requireNonNull(password);
+            $.password = password;
             return this;
         }
+
         public Builder password(String password) {
-            this.password = Output.of(Objects.requireNonNull(password));
-            return this;
+            return password(Output.of(password));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder serverName(Output<String> serverName) {
-            this.serverName = Objects.requireNonNull(serverName);
+            $.serverName = serverName;
             return this;
         }
+
         public Builder serverName(String serverName) {
-            this.serverName = Output.of(Objects.requireNonNull(serverName));
-            return this;
+            return serverName(Output.of(serverName));
         }
+
         public Builder username(Output<String> username) {
-            this.username = Objects.requireNonNull(username);
+            $.username = username;
             return this;
         }
+
         public Builder username(String username) {
-            this.username = Output.of(Objects.requireNonNull(username));
-            return this;
-        }        public JobCredentialArgs build() {
-            return new JobCredentialArgs(credentialName, jobAgentName, password, resourceGroupName, serverName, username);
+            return username(Output.of(username));
+        }
+
+        public JobCredentialArgs build() {
+            $.jobAgentName = Objects.requireNonNull($.jobAgentName, "expected parameter 'jobAgentName' to be non-null");
+            $.password = Objects.requireNonNull($.password, "expected parameter 'password' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.serverName = Objects.requireNonNull($.serverName, "expected parameter 'serverName' to be non-null");
+            $.username = Objects.requireNonNull($.username, "expected parameter 'username' to be non-null");
+            return $;
         }
     }
+
 }

@@ -8,6 +8,7 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,7 +26,7 @@ public final class AutomationActionEventHubArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="actionType", required=true)
-      private final Output<String> actionType;
+    private Output<String> actionType;
 
     public Output<String> actionType() {
         return this.actionType;
@@ -36,10 +37,10 @@ public final class AutomationActionEventHubArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="connectionString")
-      private final @Nullable Output<String> connectionString;
+    private @Nullable Output<String> connectionString;
 
-    public Output<String> connectionString() {
-        return this.connectionString == null ? Codegen.empty() : this.connectionString;
+    public Optional<Output<String>> connectionString() {
+        return Optional.ofNullable(this.connectionString);
     }
 
     /**
@@ -47,76 +48,69 @@ public final class AutomationActionEventHubArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="eventHubResourceId")
-      private final @Nullable Output<String> eventHubResourceId;
+    private @Nullable Output<String> eventHubResourceId;
 
-    public Output<String> eventHubResourceId() {
-        return this.eventHubResourceId == null ? Codegen.empty() : this.eventHubResourceId;
+    public Optional<Output<String>> eventHubResourceId() {
+        return Optional.ofNullable(this.eventHubResourceId);
     }
 
-    public AutomationActionEventHubArgs(
-        Output<String> actionType,
-        @Nullable Output<String> connectionString,
-        @Nullable Output<String> eventHubResourceId) {
-        this.actionType = Codegen.stringProp("actionType").output().arg(actionType).require();
-        this.connectionString = connectionString;
-        this.eventHubResourceId = eventHubResourceId;
-    }
+    private AutomationActionEventHubArgs() {}
 
-    private AutomationActionEventHubArgs() {
-        this.actionType = Codegen.empty();
-        this.connectionString = Codegen.empty();
-        this.eventHubResourceId = Codegen.empty();
+    private AutomationActionEventHubArgs(AutomationActionEventHubArgs $) {
+        this.actionType = $.actionType;
+        this.connectionString = $.connectionString;
+        this.eventHubResourceId = $.eventHubResourceId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AutomationActionEventHubArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> actionType;
-        private @Nullable Output<String> connectionString;
-        private @Nullable Output<String> eventHubResourceId;
+        private AutomationActionEventHubArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AutomationActionEventHubArgs();
         }
 
         public Builder(AutomationActionEventHubArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.actionType = defaults.actionType;
-    	      this.connectionString = defaults.connectionString;
-    	      this.eventHubResourceId = defaults.eventHubResourceId;
+            $ = new AutomationActionEventHubArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder actionType(Output<String> actionType) {
-            this.actionType = Objects.requireNonNull(actionType);
+            $.actionType = actionType;
             return this;
         }
+
         public Builder actionType(String actionType) {
-            this.actionType = Output.of(Objects.requireNonNull(actionType));
-            return this;
+            return actionType(Output.of(actionType));
         }
+
         public Builder connectionString(@Nullable Output<String> connectionString) {
-            this.connectionString = connectionString;
+            $.connectionString = connectionString;
             return this;
         }
-        public Builder connectionString(@Nullable String connectionString) {
-            this.connectionString = Codegen.ofNullable(connectionString);
-            return this;
+
+        public Builder connectionString(String connectionString) {
+            return connectionString(Output.of(connectionString));
         }
+
         public Builder eventHubResourceId(@Nullable Output<String> eventHubResourceId) {
-            this.eventHubResourceId = eventHubResourceId;
+            $.eventHubResourceId = eventHubResourceId;
             return this;
         }
-        public Builder eventHubResourceId(@Nullable String eventHubResourceId) {
-            this.eventHubResourceId = Codegen.ofNullable(eventHubResourceId);
-            return this;
-        }        public AutomationActionEventHubArgs build() {
-            return new AutomationActionEventHubArgs(actionType, connectionString, eventHubResourceId);
+
+        public Builder eventHubResourceId(String eventHubResourceId) {
+            return eventHubResourceId(Output.of(eventHubResourceId));
+        }
+
+        public AutomationActionEventHubArgs build() {
+            $.actionType = Codegen.stringProp("actionType").output().arg($.actionType).require();
+            return $;
         }
     }
+
 }

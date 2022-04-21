@@ -5,10 +5,10 @@ package com.pulumi.azurenative.relay;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class HybridConnectionArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="hybridConnectionName")
-      private final @Nullable Output<String> hybridConnectionName;
+    private @Nullable Output<String> hybridConnectionName;
 
-    public Output<String> hybridConnectionName() {
-        return this.hybridConnectionName == null ? Codegen.empty() : this.hybridConnectionName;
+    public Optional<Output<String>> hybridConnectionName() {
+        return Optional.ofNullable(this.hybridConnectionName);
     }
 
     /**
@@ -32,7 +32,7 @@ public final class HybridConnectionArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="namespaceName", required=true)
-      private final Output<String> namespaceName;
+    private Output<String> namespaceName;
 
     public Output<String> namespaceName() {
         return this.namespaceName;
@@ -43,10 +43,10 @@ public final class HybridConnectionArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="requiresClientAuthorization")
-      private final @Nullable Output<Boolean> requiresClientAuthorization;
+    private @Nullable Output<Boolean> requiresClientAuthorization;
 
-    public Output<Boolean> requiresClientAuthorization() {
-        return this.requiresClientAuthorization == null ? Codegen.empty() : this.requiresClientAuthorization;
+    public Optional<Output<Boolean>> requiresClientAuthorization() {
+        return Optional.ofNullable(this.requiresClientAuthorization);
     }
 
     /**
@@ -54,7 +54,7 @@ public final class HybridConnectionArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -65,102 +65,90 @@ public final class HybridConnectionArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="userMetadata")
-      private final @Nullable Output<String> userMetadata;
+    private @Nullable Output<String> userMetadata;
 
-    public Output<String> userMetadata() {
-        return this.userMetadata == null ? Codegen.empty() : this.userMetadata;
+    public Optional<Output<String>> userMetadata() {
+        return Optional.ofNullable(this.userMetadata);
     }
 
-    public HybridConnectionArgs(
-        @Nullable Output<String> hybridConnectionName,
-        Output<String> namespaceName,
-        @Nullable Output<Boolean> requiresClientAuthorization,
-        Output<String> resourceGroupName,
-        @Nullable Output<String> userMetadata) {
-        this.hybridConnectionName = hybridConnectionName;
-        this.namespaceName = Objects.requireNonNull(namespaceName, "expected parameter 'namespaceName' to be non-null");
-        this.requiresClientAuthorization = requiresClientAuthorization;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.userMetadata = userMetadata;
-    }
+    private HybridConnectionArgs() {}
 
-    private HybridConnectionArgs() {
-        this.hybridConnectionName = Codegen.empty();
-        this.namespaceName = Codegen.empty();
-        this.requiresClientAuthorization = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.userMetadata = Codegen.empty();
+    private HybridConnectionArgs(HybridConnectionArgs $) {
+        this.hybridConnectionName = $.hybridConnectionName;
+        this.namespaceName = $.namespaceName;
+        this.requiresClientAuthorization = $.requiresClientAuthorization;
+        this.resourceGroupName = $.resourceGroupName;
+        this.userMetadata = $.userMetadata;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(HybridConnectionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> hybridConnectionName;
-        private Output<String> namespaceName;
-        private @Nullable Output<Boolean> requiresClientAuthorization;
-        private Output<String> resourceGroupName;
-        private @Nullable Output<String> userMetadata;
+        private HybridConnectionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new HybridConnectionArgs();
         }
 
         public Builder(HybridConnectionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.hybridConnectionName = defaults.hybridConnectionName;
-    	      this.namespaceName = defaults.namespaceName;
-    	      this.requiresClientAuthorization = defaults.requiresClientAuthorization;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.userMetadata = defaults.userMetadata;
+            $ = new HybridConnectionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder hybridConnectionName(@Nullable Output<String> hybridConnectionName) {
-            this.hybridConnectionName = hybridConnectionName;
+            $.hybridConnectionName = hybridConnectionName;
             return this;
         }
-        public Builder hybridConnectionName(@Nullable String hybridConnectionName) {
-            this.hybridConnectionName = Codegen.ofNullable(hybridConnectionName);
-            return this;
+
+        public Builder hybridConnectionName(String hybridConnectionName) {
+            return hybridConnectionName(Output.of(hybridConnectionName));
         }
+
         public Builder namespaceName(Output<String> namespaceName) {
-            this.namespaceName = Objects.requireNonNull(namespaceName);
+            $.namespaceName = namespaceName;
             return this;
         }
+
         public Builder namespaceName(String namespaceName) {
-            this.namespaceName = Output.of(Objects.requireNonNull(namespaceName));
-            return this;
+            return namespaceName(Output.of(namespaceName));
         }
+
         public Builder requiresClientAuthorization(@Nullable Output<Boolean> requiresClientAuthorization) {
-            this.requiresClientAuthorization = requiresClientAuthorization;
+            $.requiresClientAuthorization = requiresClientAuthorization;
             return this;
         }
-        public Builder requiresClientAuthorization(@Nullable Boolean requiresClientAuthorization) {
-            this.requiresClientAuthorization = Codegen.ofNullable(requiresClientAuthorization);
-            return this;
+
+        public Builder requiresClientAuthorization(Boolean requiresClientAuthorization) {
+            return requiresClientAuthorization(Output.of(requiresClientAuthorization));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder userMetadata(@Nullable Output<String> userMetadata) {
-            this.userMetadata = userMetadata;
+            $.userMetadata = userMetadata;
             return this;
         }
-        public Builder userMetadata(@Nullable String userMetadata) {
-            this.userMetadata = Codegen.ofNullable(userMetadata);
-            return this;
-        }        public HybridConnectionArgs build() {
-            return new HybridConnectionArgs(hybridConnectionName, namespaceName, requiresClientAuthorization, resourceGroupName, userMetadata);
+
+        public Builder userMetadata(String userMetadata) {
+            return userMetadata(Output.of(userMetadata));
+        }
+
+        public HybridConnectionArgs build() {
+            $.namespaceName = Objects.requireNonNull($.namespaceName, "expected parameter 'namespaceName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

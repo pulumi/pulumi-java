@@ -5,11 +5,11 @@ package com.pulumi.azurenative.network.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class TrafficAnalyticsConfigurationPropertiesArgs extends com.pulum
      * 
      */
     @Import(name="enabled")
-      private final @Nullable Output<Boolean> enabled;
+    private @Nullable Output<Boolean> enabled;
 
-    public Output<Boolean> enabled() {
-        return this.enabled == null ? Codegen.empty() : this.enabled;
+    public Optional<Output<Boolean>> enabled() {
+        return Optional.ofNullable(this.enabled);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class TrafficAnalyticsConfigurationPropertiesArgs extends com.pulum
      * 
      */
     @Import(name="trafficAnalyticsInterval")
-      private final @Nullable Output<Integer> trafficAnalyticsInterval;
+    private @Nullable Output<Integer> trafficAnalyticsInterval;
 
-    public Output<Integer> trafficAnalyticsInterval() {
-        return this.trafficAnalyticsInterval == null ? Codegen.empty() : this.trafficAnalyticsInterval;
+    public Optional<Output<Integer>> trafficAnalyticsInterval() {
+        return Optional.ofNullable(this.trafficAnalyticsInterval);
     }
 
     /**
@@ -48,10 +48,10 @@ public final class TrafficAnalyticsConfigurationPropertiesArgs extends com.pulum
      * 
      */
     @Import(name="workspaceId")
-      private final @Nullable Output<String> workspaceId;
+    private @Nullable Output<String> workspaceId;
 
-    public Output<String> workspaceId() {
-        return this.workspaceId == null ? Codegen.empty() : this.workspaceId;
+    public Optional<Output<String>> workspaceId() {
+        return Optional.ofNullable(this.workspaceId);
     }
 
     /**
@@ -59,10 +59,10 @@ public final class TrafficAnalyticsConfigurationPropertiesArgs extends com.pulum
      * 
      */
     @Import(name="workspaceRegion")
-      private final @Nullable Output<String> workspaceRegion;
+    private @Nullable Output<String> workspaceRegion;
 
-    public Output<String> workspaceRegion() {
-        return this.workspaceRegion == null ? Codegen.empty() : this.workspaceRegion;
+    public Optional<Output<String>> workspaceRegion() {
+        return Optional.ofNullable(this.workspaceRegion);
     }
 
     /**
@@ -70,102 +70,88 @@ public final class TrafficAnalyticsConfigurationPropertiesArgs extends com.pulum
      * 
      */
     @Import(name="workspaceResourceId")
-      private final @Nullable Output<String> workspaceResourceId;
+    private @Nullable Output<String> workspaceResourceId;
 
-    public Output<String> workspaceResourceId() {
-        return this.workspaceResourceId == null ? Codegen.empty() : this.workspaceResourceId;
+    public Optional<Output<String>> workspaceResourceId() {
+        return Optional.ofNullable(this.workspaceResourceId);
     }
 
-    public TrafficAnalyticsConfigurationPropertiesArgs(
-        @Nullable Output<Boolean> enabled,
-        @Nullable Output<Integer> trafficAnalyticsInterval,
-        @Nullable Output<String> workspaceId,
-        @Nullable Output<String> workspaceRegion,
-        @Nullable Output<String> workspaceResourceId) {
-        this.enabled = enabled;
-        this.trafficAnalyticsInterval = trafficAnalyticsInterval;
-        this.workspaceId = workspaceId;
-        this.workspaceRegion = workspaceRegion;
-        this.workspaceResourceId = workspaceResourceId;
-    }
+    private TrafficAnalyticsConfigurationPropertiesArgs() {}
 
-    private TrafficAnalyticsConfigurationPropertiesArgs() {
-        this.enabled = Codegen.empty();
-        this.trafficAnalyticsInterval = Codegen.empty();
-        this.workspaceId = Codegen.empty();
-        this.workspaceRegion = Codegen.empty();
-        this.workspaceResourceId = Codegen.empty();
+    private TrafficAnalyticsConfigurationPropertiesArgs(TrafficAnalyticsConfigurationPropertiesArgs $) {
+        this.enabled = $.enabled;
+        this.trafficAnalyticsInterval = $.trafficAnalyticsInterval;
+        this.workspaceId = $.workspaceId;
+        this.workspaceRegion = $.workspaceRegion;
+        this.workspaceResourceId = $.workspaceResourceId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TrafficAnalyticsConfigurationPropertiesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> enabled;
-        private @Nullable Output<Integer> trafficAnalyticsInterval;
-        private @Nullable Output<String> workspaceId;
-        private @Nullable Output<String> workspaceRegion;
-        private @Nullable Output<String> workspaceResourceId;
+        private TrafficAnalyticsConfigurationPropertiesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TrafficAnalyticsConfigurationPropertiesArgs();
         }
 
         public Builder(TrafficAnalyticsConfigurationPropertiesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.enabled = defaults.enabled;
-    	      this.trafficAnalyticsInterval = defaults.trafficAnalyticsInterval;
-    	      this.workspaceId = defaults.workspaceId;
-    	      this.workspaceRegion = defaults.workspaceRegion;
-    	      this.workspaceResourceId = defaults.workspaceResourceId;
+            $ = new TrafficAnalyticsConfigurationPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder enabled(@Nullable Output<Boolean> enabled) {
-            this.enabled = enabled;
+            $.enabled = enabled;
             return this;
         }
-        public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Codegen.ofNullable(enabled);
-            return this;
+
+        public Builder enabled(Boolean enabled) {
+            return enabled(Output.of(enabled));
         }
+
         public Builder trafficAnalyticsInterval(@Nullable Output<Integer> trafficAnalyticsInterval) {
-            this.trafficAnalyticsInterval = trafficAnalyticsInterval;
+            $.trafficAnalyticsInterval = trafficAnalyticsInterval;
             return this;
         }
-        public Builder trafficAnalyticsInterval(@Nullable Integer trafficAnalyticsInterval) {
-            this.trafficAnalyticsInterval = Codegen.ofNullable(trafficAnalyticsInterval);
-            return this;
+
+        public Builder trafficAnalyticsInterval(Integer trafficAnalyticsInterval) {
+            return trafficAnalyticsInterval(Output.of(trafficAnalyticsInterval));
         }
+
         public Builder workspaceId(@Nullable Output<String> workspaceId) {
-            this.workspaceId = workspaceId;
+            $.workspaceId = workspaceId;
             return this;
         }
-        public Builder workspaceId(@Nullable String workspaceId) {
-            this.workspaceId = Codegen.ofNullable(workspaceId);
-            return this;
+
+        public Builder workspaceId(String workspaceId) {
+            return workspaceId(Output.of(workspaceId));
         }
+
         public Builder workspaceRegion(@Nullable Output<String> workspaceRegion) {
-            this.workspaceRegion = workspaceRegion;
+            $.workspaceRegion = workspaceRegion;
             return this;
         }
-        public Builder workspaceRegion(@Nullable String workspaceRegion) {
-            this.workspaceRegion = Codegen.ofNullable(workspaceRegion);
-            return this;
+
+        public Builder workspaceRegion(String workspaceRegion) {
+            return workspaceRegion(Output.of(workspaceRegion));
         }
+
         public Builder workspaceResourceId(@Nullable Output<String> workspaceResourceId) {
-            this.workspaceResourceId = workspaceResourceId;
+            $.workspaceResourceId = workspaceResourceId;
             return this;
         }
-        public Builder workspaceResourceId(@Nullable String workspaceResourceId) {
-            this.workspaceResourceId = Codegen.ofNullable(workspaceResourceId);
-            return this;
-        }        public TrafficAnalyticsConfigurationPropertiesArgs build() {
-            return new TrafficAnalyticsConfigurationPropertiesArgs(enabled, trafficAnalyticsInterval, workspaceId, workspaceRegion, workspaceResourceId);
+
+        public Builder workspaceResourceId(String workspaceResourceId) {
+            return workspaceResourceId(Output.of(workspaceResourceId));
+        }
+
+        public TrafficAnalyticsConfigurationPropertiesArgs build() {
+            return $;
         }
     }
+
 }

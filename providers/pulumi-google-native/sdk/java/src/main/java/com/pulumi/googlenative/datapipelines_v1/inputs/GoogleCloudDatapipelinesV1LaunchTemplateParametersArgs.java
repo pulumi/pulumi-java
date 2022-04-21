@@ -5,12 +5,12 @@ package com.pulumi.googlenative.datapipelines_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.datapipelines_v1.inputs.GoogleCloudDatapipelinesV1RuntimeEnvironmentArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +27,10 @@ public final class GoogleCloudDatapipelinesV1LaunchTemplateParametersArgs extend
      * 
      */
     @Import(name="environment")
-      private final @Nullable Output<GoogleCloudDatapipelinesV1RuntimeEnvironmentArgs> environment;
+    private @Nullable Output<GoogleCloudDatapipelinesV1RuntimeEnvironmentArgs> environment;
 
-    public Output<GoogleCloudDatapipelinesV1RuntimeEnvironmentArgs> environment() {
-        return this.environment == null ? Codegen.empty() : this.environment;
+    public Optional<Output<GoogleCloudDatapipelinesV1RuntimeEnvironmentArgs>> environment() {
+        return Optional.ofNullable(this.environment);
     }
 
     /**
@@ -38,7 +38,7 @@ public final class GoogleCloudDatapipelinesV1LaunchTemplateParametersArgs extend
      * 
      */
     @Import(name="jobName", required=true)
-      private final Output<String> jobName;
+    private Output<String> jobName;
 
     public Output<String> jobName() {
         return this.jobName;
@@ -49,10 +49,10 @@ public final class GoogleCloudDatapipelinesV1LaunchTemplateParametersArgs extend
      * 
      */
     @Import(name="parameters")
-      private final @Nullable Output<Map<String,String>> parameters;
+    private @Nullable Output<Map<String,String>> parameters;
 
-    public Output<Map<String,String>> parameters() {
-        return this.parameters == null ? Codegen.empty() : this.parameters;
+    public Optional<Output<Map<String,String>>> parameters() {
+        return Optional.ofNullable(this.parameters);
     }
 
     /**
@@ -60,10 +60,10 @@ public final class GoogleCloudDatapipelinesV1LaunchTemplateParametersArgs extend
      * 
      */
     @Import(name="transformNameMapping")
-      private final @Nullable Output<Map<String,String>> transformNameMapping;
+    private @Nullable Output<Map<String,String>> transformNameMapping;
 
-    public Output<Map<String,String>> transformNameMapping() {
-        return this.transformNameMapping == null ? Codegen.empty() : this.transformNameMapping;
+    public Optional<Output<Map<String,String>>> transformNameMapping() {
+        return Optional.ofNullable(this.transformNameMapping);
     }
 
     /**
@@ -71,102 +71,89 @@ public final class GoogleCloudDatapipelinesV1LaunchTemplateParametersArgs extend
      * 
      */
     @Import(name="update")
-      private final @Nullable Output<Boolean> update;
+    private @Nullable Output<Boolean> update;
 
-    public Output<Boolean> update() {
-        return this.update == null ? Codegen.empty() : this.update;
+    public Optional<Output<Boolean>> update() {
+        return Optional.ofNullable(this.update);
     }
 
-    public GoogleCloudDatapipelinesV1LaunchTemplateParametersArgs(
-        @Nullable Output<GoogleCloudDatapipelinesV1RuntimeEnvironmentArgs> environment,
-        Output<String> jobName,
-        @Nullable Output<Map<String,String>> parameters,
-        @Nullable Output<Map<String,String>> transformNameMapping,
-        @Nullable Output<Boolean> update) {
-        this.environment = environment;
-        this.jobName = Objects.requireNonNull(jobName, "expected parameter 'jobName' to be non-null");
-        this.parameters = parameters;
-        this.transformNameMapping = transformNameMapping;
-        this.update = update;
-    }
+    private GoogleCloudDatapipelinesV1LaunchTemplateParametersArgs() {}
 
-    private GoogleCloudDatapipelinesV1LaunchTemplateParametersArgs() {
-        this.environment = Codegen.empty();
-        this.jobName = Codegen.empty();
-        this.parameters = Codegen.empty();
-        this.transformNameMapping = Codegen.empty();
-        this.update = Codegen.empty();
+    private GoogleCloudDatapipelinesV1LaunchTemplateParametersArgs(GoogleCloudDatapipelinesV1LaunchTemplateParametersArgs $) {
+        this.environment = $.environment;
+        this.jobName = $.jobName;
+        this.parameters = $.parameters;
+        this.transformNameMapping = $.transformNameMapping;
+        this.update = $.update;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudDatapipelinesV1LaunchTemplateParametersArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<GoogleCloudDatapipelinesV1RuntimeEnvironmentArgs> environment;
-        private Output<String> jobName;
-        private @Nullable Output<Map<String,String>> parameters;
-        private @Nullable Output<Map<String,String>> transformNameMapping;
-        private @Nullable Output<Boolean> update;
+        private GoogleCloudDatapipelinesV1LaunchTemplateParametersArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudDatapipelinesV1LaunchTemplateParametersArgs();
         }
 
         public Builder(GoogleCloudDatapipelinesV1LaunchTemplateParametersArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.environment = defaults.environment;
-    	      this.jobName = defaults.jobName;
-    	      this.parameters = defaults.parameters;
-    	      this.transformNameMapping = defaults.transformNameMapping;
-    	      this.update = defaults.update;
+            $ = new GoogleCloudDatapipelinesV1LaunchTemplateParametersArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder environment(@Nullable Output<GoogleCloudDatapipelinesV1RuntimeEnvironmentArgs> environment) {
-            this.environment = environment;
+            $.environment = environment;
             return this;
         }
-        public Builder environment(@Nullable GoogleCloudDatapipelinesV1RuntimeEnvironmentArgs environment) {
-            this.environment = Codegen.ofNullable(environment);
-            return this;
+
+        public Builder environment(GoogleCloudDatapipelinesV1RuntimeEnvironmentArgs environment) {
+            return environment(Output.of(environment));
         }
+
         public Builder jobName(Output<String> jobName) {
-            this.jobName = Objects.requireNonNull(jobName);
+            $.jobName = jobName;
             return this;
         }
+
         public Builder jobName(String jobName) {
-            this.jobName = Output.of(Objects.requireNonNull(jobName));
-            return this;
+            return jobName(Output.of(jobName));
         }
+
         public Builder parameters(@Nullable Output<Map<String,String>> parameters) {
-            this.parameters = parameters;
+            $.parameters = parameters;
             return this;
         }
-        public Builder parameters(@Nullable Map<String,String> parameters) {
-            this.parameters = Codegen.ofNullable(parameters);
-            return this;
+
+        public Builder parameters(Map<String,String> parameters) {
+            return parameters(Output.of(parameters));
         }
+
         public Builder transformNameMapping(@Nullable Output<Map<String,String>> transformNameMapping) {
-            this.transformNameMapping = transformNameMapping;
+            $.transformNameMapping = transformNameMapping;
             return this;
         }
-        public Builder transformNameMapping(@Nullable Map<String,String> transformNameMapping) {
-            this.transformNameMapping = Codegen.ofNullable(transformNameMapping);
-            return this;
+
+        public Builder transformNameMapping(Map<String,String> transformNameMapping) {
+            return transformNameMapping(Output.of(transformNameMapping));
         }
+
         public Builder update(@Nullable Output<Boolean> update) {
-            this.update = update;
+            $.update = update;
             return this;
         }
-        public Builder update(@Nullable Boolean update) {
-            this.update = Codegen.ofNullable(update);
-            return this;
-        }        public GoogleCloudDatapipelinesV1LaunchTemplateParametersArgs build() {
-            return new GoogleCloudDatapipelinesV1LaunchTemplateParametersArgs(environment, jobName, parameters, transformNameMapping, update);
+
+        public Builder update(Boolean update) {
+            return update(Output.of(update));
+        }
+
+        public GoogleCloudDatapipelinesV1LaunchTemplateParametersArgs build() {
+            $.jobName = Objects.requireNonNull($.jobName, "expected parameter 'jobName' to be non-null");
+            return $;
         }
     }
+
 }

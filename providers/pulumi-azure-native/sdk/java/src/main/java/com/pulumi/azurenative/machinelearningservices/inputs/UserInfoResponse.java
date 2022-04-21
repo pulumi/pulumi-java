@@ -23,10 +23,10 @@ public final class UserInfoResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="userAltSecId")
-      private final @Nullable String userAltSecId;
+    private @Nullable String userAltSecId;
 
     public Optional<String> userAltSecId() {
-        return this.userAltSecId == null ? Optional.empty() : Optional.ofNullable(this.userAltSecId);
+        return Optional.ofNullable(this.userAltSecId);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class UserInfoResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="userIdp")
-      private final @Nullable String userIdp;
+    private @Nullable String userIdp;
 
     public Optional<String> userIdp() {
-        return this.userIdp == null ? Optional.empty() : Optional.ofNullable(this.userIdp);
+        return Optional.ofNullable(this.userIdp);
     }
 
     /**
@@ -45,10 +45,10 @@ public final class UserInfoResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="userIss")
-      private final @Nullable String userIss;
+    private @Nullable String userIss;
 
     public Optional<String> userIss() {
-        return this.userIss == null ? Optional.empty() : Optional.ofNullable(this.userIss);
+        return Optional.ofNullable(this.userIss);
     }
 
     /**
@@ -56,10 +56,10 @@ public final class UserInfoResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="userName")
-      private final @Nullable String userName;
+    private @Nullable String userName;
 
     public Optional<String> userName() {
-        return this.userName == null ? Optional.empty() : Optional.ofNullable(this.userName);
+        return Optional.ofNullable(this.userName);
     }
 
     /**
@@ -67,10 +67,10 @@ public final class UserInfoResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="userObjectId")
-      private final @Nullable String userObjectId;
+    private @Nullable String userObjectId;
 
     public Optional<String> userObjectId() {
-        return this.userObjectId == null ? Optional.empty() : Optional.ofNullable(this.userObjectId);
+        return Optional.ofNullable(this.userObjectId);
     }
 
     /**
@@ -78,10 +78,10 @@ public final class UserInfoResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="userPuId")
-      private final @Nullable String userPuId;
+    private @Nullable String userPuId;
 
     public Optional<String> userPuId() {
-        return this.userPuId == null ? Optional.empty() : Optional.ofNullable(this.userPuId);
+        return Optional.ofNullable(this.userPuId);
     }
 
     /**
@@ -89,100 +89,80 @@ public final class UserInfoResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="userTenantId")
-      private final @Nullable String userTenantId;
+    private @Nullable String userTenantId;
 
     public Optional<String> userTenantId() {
-        return this.userTenantId == null ? Optional.empty() : Optional.ofNullable(this.userTenantId);
+        return Optional.ofNullable(this.userTenantId);
     }
 
-    public UserInfoResponse(
-        @Nullable String userAltSecId,
-        @Nullable String userIdp,
-        @Nullable String userIss,
-        @Nullable String userName,
-        @Nullable String userObjectId,
-        @Nullable String userPuId,
-        @Nullable String userTenantId) {
-        this.userAltSecId = userAltSecId;
-        this.userIdp = userIdp;
-        this.userIss = userIss;
-        this.userName = userName;
-        this.userObjectId = userObjectId;
-        this.userPuId = userPuId;
-        this.userTenantId = userTenantId;
-    }
+    private UserInfoResponse() {}
 
-    private UserInfoResponse() {
-        this.userAltSecId = null;
-        this.userIdp = null;
-        this.userIss = null;
-        this.userName = null;
-        this.userObjectId = null;
-        this.userPuId = null;
-        this.userTenantId = null;
+    private UserInfoResponse(UserInfoResponse $) {
+        this.userAltSecId = $.userAltSecId;
+        this.userIdp = $.userIdp;
+        this.userIss = $.userIss;
+        this.userName = $.userName;
+        this.userObjectId = $.userObjectId;
+        this.userPuId = $.userPuId;
+        this.userTenantId = $.userTenantId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(UserInfoResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String userAltSecId;
-        private @Nullable String userIdp;
-        private @Nullable String userIss;
-        private @Nullable String userName;
-        private @Nullable String userObjectId;
-        private @Nullable String userPuId;
-        private @Nullable String userTenantId;
+        private UserInfoResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new UserInfoResponse();
         }
 
         public Builder(UserInfoResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.userAltSecId = defaults.userAltSecId;
-    	      this.userIdp = defaults.userIdp;
-    	      this.userIss = defaults.userIss;
-    	      this.userName = defaults.userName;
-    	      this.userObjectId = defaults.userObjectId;
-    	      this.userPuId = defaults.userPuId;
-    	      this.userTenantId = defaults.userTenantId;
+            $ = new UserInfoResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder userAltSecId(@Nullable String userAltSecId) {
-            this.userAltSecId = userAltSecId;
+            $.userAltSecId = userAltSecId;
             return this;
         }
+
         public Builder userIdp(@Nullable String userIdp) {
-            this.userIdp = userIdp;
+            $.userIdp = userIdp;
             return this;
         }
+
         public Builder userIss(@Nullable String userIss) {
-            this.userIss = userIss;
+            $.userIss = userIss;
             return this;
         }
+
         public Builder userName(@Nullable String userName) {
-            this.userName = userName;
+            $.userName = userName;
             return this;
         }
+
         public Builder userObjectId(@Nullable String userObjectId) {
-            this.userObjectId = userObjectId;
+            $.userObjectId = userObjectId;
             return this;
         }
+
         public Builder userPuId(@Nullable String userPuId) {
-            this.userPuId = userPuId;
+            $.userPuId = userPuId;
             return this;
         }
+
         public Builder userTenantId(@Nullable String userTenantId) {
-            this.userTenantId = userTenantId;
+            $.userTenantId = userTenantId;
             return this;
-        }        public UserInfoResponse build() {
-            return new UserInfoResponse(userAltSecId, userIdp, userIss, userName, userObjectId, userPuId, userTenantId);
+        }
+
+        public UserInfoResponse build() {
+            return $;
         }
     }
+
 }

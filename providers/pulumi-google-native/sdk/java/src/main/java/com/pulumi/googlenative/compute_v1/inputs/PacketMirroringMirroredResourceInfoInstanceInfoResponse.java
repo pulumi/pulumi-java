@@ -17,7 +17,7 @@ public final class PacketMirroringMirroredResourceInfoInstanceInfoResponse exten
      * 
      */
     @Import(name="canonicalUrl", required=true)
-      private final String canonicalUrl;
+    private String canonicalUrl;
 
     public String canonicalUrl() {
         return this.canonicalUrl;
@@ -28,55 +28,52 @@ public final class PacketMirroringMirroredResourceInfoInstanceInfoResponse exten
      * 
      */
     @Import(name="url", required=true)
-      private final String url;
+    private String url;
 
     public String url() {
         return this.url;
     }
 
-    public PacketMirroringMirroredResourceInfoInstanceInfoResponse(
-        String canonicalUrl,
-        String url) {
-        this.canonicalUrl = Objects.requireNonNull(canonicalUrl, "expected parameter 'canonicalUrl' to be non-null");
-        this.url = Objects.requireNonNull(url, "expected parameter 'url' to be non-null");
-    }
+    private PacketMirroringMirroredResourceInfoInstanceInfoResponse() {}
 
-    private PacketMirroringMirroredResourceInfoInstanceInfoResponse() {
-        this.canonicalUrl = null;
-        this.url = null;
+    private PacketMirroringMirroredResourceInfoInstanceInfoResponse(PacketMirroringMirroredResourceInfoInstanceInfoResponse $) {
+        this.canonicalUrl = $.canonicalUrl;
+        this.url = $.url;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PacketMirroringMirroredResourceInfoInstanceInfoResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String canonicalUrl;
-        private String url;
+        private PacketMirroringMirroredResourceInfoInstanceInfoResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new PacketMirroringMirroredResourceInfoInstanceInfoResponse();
         }
 
         public Builder(PacketMirroringMirroredResourceInfoInstanceInfoResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.canonicalUrl = defaults.canonicalUrl;
-    	      this.url = defaults.url;
+            $ = new PacketMirroringMirroredResourceInfoInstanceInfoResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder canonicalUrl(String canonicalUrl) {
-            this.canonicalUrl = Objects.requireNonNull(canonicalUrl);
+            $.canonicalUrl = canonicalUrl;
             return this;
         }
+
         public Builder url(String url) {
-            this.url = Objects.requireNonNull(url);
+            $.url = url;
             return this;
-        }        public PacketMirroringMirroredResourceInfoInstanceInfoResponse build() {
-            return new PacketMirroringMirroredResourceInfoInstanceInfoResponse(canonicalUrl, url);
+        }
+
+        public PacketMirroringMirroredResourceInfoInstanceInfoResponse build() {
+            $.canonicalUrl = Objects.requireNonNull($.canonicalUrl, "expected parameter 'canonicalUrl' to be non-null");
+            $.url = Objects.requireNonNull($.url, "expected parameter 'url' to be non-null");
+            return $;
         }
     }
+
 }

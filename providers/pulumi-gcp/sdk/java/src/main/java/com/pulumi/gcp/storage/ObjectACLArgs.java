@@ -5,10 +5,10 @@ package com.pulumi.gcp.storage;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,7 +21,7 @@ public final class ObjectACLArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="bucket", required=true)
-      private final Output<String> bucket;
+    private Output<String> bucket;
 
     public Output<String> bucket() {
         return this.bucket;
@@ -32,7 +32,7 @@ public final class ObjectACLArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="object", required=true)
-      private final Output<String> object;
+    private Output<String> object;
 
     public Output<String> object() {
         return this.object;
@@ -43,10 +43,10 @@ public final class ObjectACLArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="predefinedAcl")
-      private final @Nullable Output<String> predefinedAcl;
+    private @Nullable Output<String> predefinedAcl;
 
-    public Output<String> predefinedAcl() {
-        return this.predefinedAcl == null ? Codegen.empty() : this.predefinedAcl;
+    public Optional<Output<String>> predefinedAcl() {
+        return Optional.ofNullable(this.predefinedAcl);
     }
 
     /**
@@ -55,92 +55,84 @@ public final class ObjectACLArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="roleEntities")
-      private final @Nullable Output<List<String>> roleEntities;
+    private @Nullable Output<List<String>> roleEntities;
 
-    public Output<List<String>> roleEntities() {
-        return this.roleEntities == null ? Codegen.empty() : this.roleEntities;
+    public Optional<Output<List<String>>> roleEntities() {
+        return Optional.ofNullable(this.roleEntities);
     }
 
-    public ObjectACLArgs(
-        Output<String> bucket,
-        Output<String> object,
-        @Nullable Output<String> predefinedAcl,
-        @Nullable Output<List<String>> roleEntities) {
-        this.bucket = Objects.requireNonNull(bucket, "expected parameter 'bucket' to be non-null");
-        this.object = Objects.requireNonNull(object, "expected parameter 'object' to be non-null");
-        this.predefinedAcl = predefinedAcl;
-        this.roleEntities = roleEntities;
-    }
+    private ObjectACLArgs() {}
 
-    private ObjectACLArgs() {
-        this.bucket = Codegen.empty();
-        this.object = Codegen.empty();
-        this.predefinedAcl = Codegen.empty();
-        this.roleEntities = Codegen.empty();
+    private ObjectACLArgs(ObjectACLArgs $) {
+        this.bucket = $.bucket;
+        this.object = $.object;
+        this.predefinedAcl = $.predefinedAcl;
+        this.roleEntities = $.roleEntities;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ObjectACLArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> bucket;
-        private Output<String> object;
-        private @Nullable Output<String> predefinedAcl;
-        private @Nullable Output<List<String>> roleEntities;
+        private ObjectACLArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ObjectACLArgs();
         }
 
         public Builder(ObjectACLArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.bucket = defaults.bucket;
-    	      this.object = defaults.object;
-    	      this.predefinedAcl = defaults.predefinedAcl;
-    	      this.roleEntities = defaults.roleEntities;
+            $ = new ObjectACLArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder bucket(Output<String> bucket) {
-            this.bucket = Objects.requireNonNull(bucket);
+            $.bucket = bucket;
             return this;
         }
+
         public Builder bucket(String bucket) {
-            this.bucket = Output.of(Objects.requireNonNull(bucket));
-            return this;
+            return bucket(Output.of(bucket));
         }
+
         public Builder object(Output<String> object) {
-            this.object = Objects.requireNonNull(object);
+            $.object = object;
             return this;
         }
+
         public Builder object(String object) {
-            this.object = Output.of(Objects.requireNonNull(object));
-            return this;
+            return object(Output.of(object));
         }
+
         public Builder predefinedAcl(@Nullable Output<String> predefinedAcl) {
-            this.predefinedAcl = predefinedAcl;
+            $.predefinedAcl = predefinedAcl;
             return this;
         }
-        public Builder predefinedAcl(@Nullable String predefinedAcl) {
-            this.predefinedAcl = Codegen.ofNullable(predefinedAcl);
-            return this;
+
+        public Builder predefinedAcl(String predefinedAcl) {
+            return predefinedAcl(Output.of(predefinedAcl));
         }
+
         public Builder roleEntities(@Nullable Output<List<String>> roleEntities) {
-            this.roleEntities = roleEntities;
+            $.roleEntities = roleEntities;
             return this;
         }
-        public Builder roleEntities(@Nullable List<String> roleEntities) {
-            this.roleEntities = Codegen.ofNullable(roleEntities);
-            return this;
+
+        public Builder roleEntities(List<String> roleEntities) {
+            return roleEntities(Output.of(roleEntities));
         }
+
         public Builder roleEntities(String... roleEntities) {
             return roleEntities(List.of(roleEntities));
-        }        public ObjectACLArgs build() {
-            return new ObjectACLArgs(bucket, object, predefinedAcl, roleEntities);
+        }
+
+        public ObjectACLArgs build() {
+            $.bucket = Objects.requireNonNull($.bucket, "expected parameter 'bucket' to be non-null");
+            $.object = Objects.requireNonNull($.object, "expected parameter 'object' to be non-null");
+            return $;
         }
     }
+
 }

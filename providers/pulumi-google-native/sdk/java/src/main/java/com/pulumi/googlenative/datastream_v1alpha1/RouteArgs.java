@@ -5,11 +5,11 @@ package com.pulumi.googlenative.datastream_v1alpha1;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,7 +22,7 @@ public final class RouteArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="destinationAddress", required=true)
-      private final Output<String> destinationAddress;
+    private Output<String> destinationAddress;
 
     public Output<String> destinationAddress() {
         return this.destinationAddress;
@@ -33,10 +33,10 @@ public final class RouteArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="destinationPort")
-      private final @Nullable Output<Integer> destinationPort;
+    private @Nullable Output<Integer> destinationPort;
 
-    public Output<Integer> destinationPort() {
-        return this.destinationPort == null ? Codegen.empty() : this.destinationPort;
+    public Optional<Output<Integer>> destinationPort() {
+        return Optional.ofNullable(this.destinationPort);
     }
 
     /**
@@ -44,7 +44,7 @@ public final class RouteArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="displayName", required=true)
-      private final Output<String> displayName;
+    private Output<String> displayName;
 
     public Output<String> displayName() {
         return this.displayName;
@@ -55,189 +55,167 @@ public final class RouteArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="labels")
-      private final @Nullable Output<Map<String,String>> labels;
+    private @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> labels() {
-        return this.labels == null ? Codegen.empty() : this.labels;
+    public Optional<Output<Map<String,String>>> labels() {
+        return Optional.ofNullable(this.labels);
     }
 
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     @Import(name="privateConnectionId", required=true)
-      private final Output<String> privateConnectionId;
+    private Output<String> privateConnectionId;
 
     public Output<String> privateConnectionId() {
         return this.privateConnectionId;
     }
 
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     @Import(name="requestId")
-      private final @Nullable Output<String> requestId;
+    private @Nullable Output<String> requestId;
 
-    public Output<String> requestId() {
-        return this.requestId == null ? Codegen.empty() : this.requestId;
+    public Optional<Output<String>> requestId() {
+        return Optional.ofNullable(this.requestId);
     }
 
     @Import(name="routeId", required=true)
-      private final Output<String> routeId;
+    private Output<String> routeId;
 
     public Output<String> routeId() {
         return this.routeId;
     }
 
-    public RouteArgs(
-        Output<String> destinationAddress,
-        @Nullable Output<Integer> destinationPort,
-        Output<String> displayName,
-        @Nullable Output<Map<String,String>> labels,
-        @Nullable Output<String> location,
-        Output<String> privateConnectionId,
-        @Nullable Output<String> project,
-        @Nullable Output<String> requestId,
-        Output<String> routeId) {
-        this.destinationAddress = Objects.requireNonNull(destinationAddress, "expected parameter 'destinationAddress' to be non-null");
-        this.destinationPort = destinationPort;
-        this.displayName = Objects.requireNonNull(displayName, "expected parameter 'displayName' to be non-null");
-        this.labels = labels;
-        this.location = location;
-        this.privateConnectionId = Objects.requireNonNull(privateConnectionId, "expected parameter 'privateConnectionId' to be non-null");
-        this.project = project;
-        this.requestId = requestId;
-        this.routeId = Objects.requireNonNull(routeId, "expected parameter 'routeId' to be non-null");
-    }
+    private RouteArgs() {}
 
-    private RouteArgs() {
-        this.destinationAddress = Codegen.empty();
-        this.destinationPort = Codegen.empty();
-        this.displayName = Codegen.empty();
-        this.labels = Codegen.empty();
-        this.location = Codegen.empty();
-        this.privateConnectionId = Codegen.empty();
-        this.project = Codegen.empty();
-        this.requestId = Codegen.empty();
-        this.routeId = Codegen.empty();
+    private RouteArgs(RouteArgs $) {
+        this.destinationAddress = $.destinationAddress;
+        this.destinationPort = $.destinationPort;
+        this.displayName = $.displayName;
+        this.labels = $.labels;
+        this.location = $.location;
+        this.privateConnectionId = $.privateConnectionId;
+        this.project = $.project;
+        this.requestId = $.requestId;
+        this.routeId = $.routeId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RouteArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> destinationAddress;
-        private @Nullable Output<Integer> destinationPort;
-        private Output<String> displayName;
-        private @Nullable Output<Map<String,String>> labels;
-        private @Nullable Output<String> location;
-        private Output<String> privateConnectionId;
-        private @Nullable Output<String> project;
-        private @Nullable Output<String> requestId;
-        private Output<String> routeId;
+        private RouteArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RouteArgs();
         }
 
         public Builder(RouteArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.destinationAddress = defaults.destinationAddress;
-    	      this.destinationPort = defaults.destinationPort;
-    	      this.displayName = defaults.displayName;
-    	      this.labels = defaults.labels;
-    	      this.location = defaults.location;
-    	      this.privateConnectionId = defaults.privateConnectionId;
-    	      this.project = defaults.project;
-    	      this.requestId = defaults.requestId;
-    	      this.routeId = defaults.routeId;
+            $ = new RouteArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder destinationAddress(Output<String> destinationAddress) {
-            this.destinationAddress = Objects.requireNonNull(destinationAddress);
+            $.destinationAddress = destinationAddress;
             return this;
         }
+
         public Builder destinationAddress(String destinationAddress) {
-            this.destinationAddress = Output.of(Objects.requireNonNull(destinationAddress));
-            return this;
+            return destinationAddress(Output.of(destinationAddress));
         }
+
         public Builder destinationPort(@Nullable Output<Integer> destinationPort) {
-            this.destinationPort = destinationPort;
+            $.destinationPort = destinationPort;
             return this;
         }
-        public Builder destinationPort(@Nullable Integer destinationPort) {
-            this.destinationPort = Codegen.ofNullable(destinationPort);
-            return this;
+
+        public Builder destinationPort(Integer destinationPort) {
+            return destinationPort(Output.of(destinationPort));
         }
+
         public Builder displayName(Output<String> displayName) {
-            this.displayName = Objects.requireNonNull(displayName);
+            $.displayName = displayName;
             return this;
         }
+
         public Builder displayName(String displayName) {
-            this.displayName = Output.of(Objects.requireNonNull(displayName));
-            return this;
+            return displayName(Output.of(displayName));
         }
+
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
-            this.labels = labels;
+            $.labels = labels;
             return this;
         }
-        public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Codegen.ofNullable(labels);
-            return this;
+
+        public Builder labels(Map<String,String> labels) {
+            return labels(Output.of(labels));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder privateConnectionId(Output<String> privateConnectionId) {
-            this.privateConnectionId = Objects.requireNonNull(privateConnectionId);
+            $.privateConnectionId = privateConnectionId;
             return this;
         }
+
         public Builder privateConnectionId(String privateConnectionId) {
-            this.privateConnectionId = Output.of(Objects.requireNonNull(privateConnectionId));
-            return this;
+            return privateConnectionId(Output.of(privateConnectionId));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder requestId(@Nullable Output<String> requestId) {
-            this.requestId = requestId;
+            $.requestId = requestId;
             return this;
         }
-        public Builder requestId(@Nullable String requestId) {
-            this.requestId = Codegen.ofNullable(requestId);
-            return this;
+
+        public Builder requestId(String requestId) {
+            return requestId(Output.of(requestId));
         }
+
         public Builder routeId(Output<String> routeId) {
-            this.routeId = Objects.requireNonNull(routeId);
+            $.routeId = routeId;
             return this;
         }
+
         public Builder routeId(String routeId) {
-            this.routeId = Output.of(Objects.requireNonNull(routeId));
-            return this;
-        }        public RouteArgs build() {
-            return new RouteArgs(destinationAddress, destinationPort, displayName, labels, location, privateConnectionId, project, requestId, routeId);
+            return routeId(Output.of(routeId));
+        }
+
+        public RouteArgs build() {
+            $.destinationAddress = Objects.requireNonNull($.destinationAddress, "expected parameter 'destinationAddress' to be non-null");
+            $.displayName = Objects.requireNonNull($.displayName, "expected parameter 'displayName' to be non-null");
+            $.privateConnectionId = Objects.requireNonNull($.privateConnectionId, "expected parameter 'privateConnectionId' to be non-null");
+            $.routeId = Objects.requireNonNull($.routeId, "expected parameter 'routeId' to be non-null");
+            return $;
         }
     }
+
 }

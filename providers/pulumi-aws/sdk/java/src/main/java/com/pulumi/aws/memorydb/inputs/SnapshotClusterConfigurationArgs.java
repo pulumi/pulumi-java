@@ -5,10 +5,10 @@ package com.pulumi.aws.memorydb.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class SnapshotClusterConfigurationArgs extends com.pulumi.resources
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -32,10 +32,10 @@ public final class SnapshotClusterConfigurationArgs extends com.pulumi.resources
      * 
      */
     @Import(name="engineVersion")
-      private final @Nullable Output<String> engineVersion;
+    private @Nullable Output<String> engineVersion;
 
-    public Output<String> engineVersion() {
-        return this.engineVersion == null ? Codegen.empty() : this.engineVersion;
+    public Optional<Output<String>> engineVersion() {
+        return Optional.ofNullable(this.engineVersion);
     }
 
     /**
@@ -43,10 +43,10 @@ public final class SnapshotClusterConfigurationArgs extends com.pulumi.resources
      * 
      */
     @Import(name="maintenanceWindow")
-      private final @Nullable Output<String> maintenanceWindow;
+    private @Nullable Output<String> maintenanceWindow;
 
-    public Output<String> maintenanceWindow() {
-        return this.maintenanceWindow == null ? Codegen.empty() : this.maintenanceWindow;
+    public Optional<Output<String>> maintenanceWindow() {
+        return Optional.ofNullable(this.maintenanceWindow);
     }
 
     /**
@@ -54,10 +54,10 @@ public final class SnapshotClusterConfigurationArgs extends com.pulumi.resources
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -65,10 +65,10 @@ public final class SnapshotClusterConfigurationArgs extends com.pulumi.resources
      * 
      */
     @Import(name="nodeType")
-      private final @Nullable Output<String> nodeType;
+    private @Nullable Output<String> nodeType;
 
-    public Output<String> nodeType() {
-        return this.nodeType == null ? Codegen.empty() : this.nodeType;
+    public Optional<Output<String>> nodeType() {
+        return Optional.ofNullable(this.nodeType);
     }
 
     /**
@@ -76,10 +76,10 @@ public final class SnapshotClusterConfigurationArgs extends com.pulumi.resources
      * 
      */
     @Import(name="numShards")
-      private final @Nullable Output<Integer> numShards;
+    private @Nullable Output<Integer> numShards;
 
-    public Output<Integer> numShards() {
-        return this.numShards == null ? Codegen.empty() : this.numShards;
+    public Optional<Output<Integer>> numShards() {
+        return Optional.ofNullable(this.numShards);
     }
 
     /**
@@ -87,10 +87,10 @@ public final class SnapshotClusterConfigurationArgs extends com.pulumi.resources
      * 
      */
     @Import(name="parameterGroupName")
-      private final @Nullable Output<String> parameterGroupName;
+    private @Nullable Output<String> parameterGroupName;
 
-    public Output<String> parameterGroupName() {
-        return this.parameterGroupName == null ? Codegen.empty() : this.parameterGroupName;
+    public Optional<Output<String>> parameterGroupName() {
+        return Optional.ofNullable(this.parameterGroupName);
     }
 
     /**
@@ -98,10 +98,10 @@ public final class SnapshotClusterConfigurationArgs extends com.pulumi.resources
      * 
      */
     @Import(name="port")
-      private final @Nullable Output<Integer> port;
+    private @Nullable Output<Integer> port;
 
-    public Output<Integer> port() {
-        return this.port == null ? Codegen.empty() : this.port;
+    public Optional<Output<Integer>> port() {
+        return Optional.ofNullable(this.port);
     }
 
     /**
@@ -109,10 +109,10 @@ public final class SnapshotClusterConfigurationArgs extends com.pulumi.resources
      * 
      */
     @Import(name="snapshotRetentionLimit")
-      private final @Nullable Output<Integer> snapshotRetentionLimit;
+    private @Nullable Output<Integer> snapshotRetentionLimit;
 
-    public Output<Integer> snapshotRetentionLimit() {
-        return this.snapshotRetentionLimit == null ? Codegen.empty() : this.snapshotRetentionLimit;
+    public Optional<Output<Integer>> snapshotRetentionLimit() {
+        return Optional.ofNullable(this.snapshotRetentionLimit);
     }
 
     /**
@@ -120,10 +120,10 @@ public final class SnapshotClusterConfigurationArgs extends com.pulumi.resources
      * 
      */
     @Import(name="snapshotWindow")
-      private final @Nullable Output<String> snapshotWindow;
+    private @Nullable Output<String> snapshotWindow;
 
-    public Output<String> snapshotWindow() {
-        return this.snapshotWindow == null ? Codegen.empty() : this.snapshotWindow;
+    public Optional<Output<String>> snapshotWindow() {
+        return Optional.ofNullable(this.snapshotWindow);
     }
 
     /**
@@ -131,10 +131,10 @@ public final class SnapshotClusterConfigurationArgs extends com.pulumi.resources
      * 
      */
     @Import(name="subnetGroupName")
-      private final @Nullable Output<String> subnetGroupName;
+    private @Nullable Output<String> subnetGroupName;
 
-    public Output<String> subnetGroupName() {
-        return this.subnetGroupName == null ? Codegen.empty() : this.subnetGroupName;
+    public Optional<Output<String>> subnetGroupName() {
+        return Optional.ofNullable(this.subnetGroupName);
     }
 
     /**
@@ -142,10 +142,10 @@ public final class SnapshotClusterConfigurationArgs extends com.pulumi.resources
      * 
      */
     @Import(name="topicArn")
-      private final @Nullable Output<String> topicArn;
+    private @Nullable Output<String> topicArn;
 
-    public Output<String> topicArn() {
-        return this.topicArn == null ? Codegen.empty() : this.topicArn;
+    public Optional<Output<String>> topicArn() {
+        return Optional.ofNullable(this.topicArn);
     }
 
     /**
@@ -153,206 +153,168 @@ public final class SnapshotClusterConfigurationArgs extends com.pulumi.resources
      * 
      */
     @Import(name="vpcId")
-      private final @Nullable Output<String> vpcId;
+    private @Nullable Output<String> vpcId;
 
-    public Output<String> vpcId() {
-        return this.vpcId == null ? Codegen.empty() : this.vpcId;
+    public Optional<Output<String>> vpcId() {
+        return Optional.ofNullable(this.vpcId);
     }
 
-    public SnapshotClusterConfigurationArgs(
-        @Nullable Output<String> description,
-        @Nullable Output<String> engineVersion,
-        @Nullable Output<String> maintenanceWindow,
-        @Nullable Output<String> name,
-        @Nullable Output<String> nodeType,
-        @Nullable Output<Integer> numShards,
-        @Nullable Output<String> parameterGroupName,
-        @Nullable Output<Integer> port,
-        @Nullable Output<Integer> snapshotRetentionLimit,
-        @Nullable Output<String> snapshotWindow,
-        @Nullable Output<String> subnetGroupName,
-        @Nullable Output<String> topicArn,
-        @Nullable Output<String> vpcId) {
-        this.description = description;
-        this.engineVersion = engineVersion;
-        this.maintenanceWindow = maintenanceWindow;
-        this.name = name;
-        this.nodeType = nodeType;
-        this.numShards = numShards;
-        this.parameterGroupName = parameterGroupName;
-        this.port = port;
-        this.snapshotRetentionLimit = snapshotRetentionLimit;
-        this.snapshotWindow = snapshotWindow;
-        this.subnetGroupName = subnetGroupName;
-        this.topicArn = topicArn;
-        this.vpcId = vpcId;
-    }
+    private SnapshotClusterConfigurationArgs() {}
 
-    private SnapshotClusterConfigurationArgs() {
-        this.description = Codegen.empty();
-        this.engineVersion = Codegen.empty();
-        this.maintenanceWindow = Codegen.empty();
-        this.name = Codegen.empty();
-        this.nodeType = Codegen.empty();
-        this.numShards = Codegen.empty();
-        this.parameterGroupName = Codegen.empty();
-        this.port = Codegen.empty();
-        this.snapshotRetentionLimit = Codegen.empty();
-        this.snapshotWindow = Codegen.empty();
-        this.subnetGroupName = Codegen.empty();
-        this.topicArn = Codegen.empty();
-        this.vpcId = Codegen.empty();
+    private SnapshotClusterConfigurationArgs(SnapshotClusterConfigurationArgs $) {
+        this.description = $.description;
+        this.engineVersion = $.engineVersion;
+        this.maintenanceWindow = $.maintenanceWindow;
+        this.name = $.name;
+        this.nodeType = $.nodeType;
+        this.numShards = $.numShards;
+        this.parameterGroupName = $.parameterGroupName;
+        this.port = $.port;
+        this.snapshotRetentionLimit = $.snapshotRetentionLimit;
+        this.snapshotWindow = $.snapshotWindow;
+        this.subnetGroupName = $.subnetGroupName;
+        this.topicArn = $.topicArn;
+        this.vpcId = $.vpcId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SnapshotClusterConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> description;
-        private @Nullable Output<String> engineVersion;
-        private @Nullable Output<String> maintenanceWindow;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> nodeType;
-        private @Nullable Output<Integer> numShards;
-        private @Nullable Output<String> parameterGroupName;
-        private @Nullable Output<Integer> port;
-        private @Nullable Output<Integer> snapshotRetentionLimit;
-        private @Nullable Output<String> snapshotWindow;
-        private @Nullable Output<String> subnetGroupName;
-        private @Nullable Output<String> topicArn;
-        private @Nullable Output<String> vpcId;
+        private SnapshotClusterConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SnapshotClusterConfigurationArgs();
         }
 
         public Builder(SnapshotClusterConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.description = defaults.description;
-    	      this.engineVersion = defaults.engineVersion;
-    	      this.maintenanceWindow = defaults.maintenanceWindow;
-    	      this.name = defaults.name;
-    	      this.nodeType = defaults.nodeType;
-    	      this.numShards = defaults.numShards;
-    	      this.parameterGroupName = defaults.parameterGroupName;
-    	      this.port = defaults.port;
-    	      this.snapshotRetentionLimit = defaults.snapshotRetentionLimit;
-    	      this.snapshotWindow = defaults.snapshotWindow;
-    	      this.subnetGroupName = defaults.subnetGroupName;
-    	      this.topicArn = defaults.topicArn;
-    	      this.vpcId = defaults.vpcId;
+            $ = new SnapshotClusterConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder engineVersion(@Nullable Output<String> engineVersion) {
-            this.engineVersion = engineVersion;
+            $.engineVersion = engineVersion;
             return this;
         }
-        public Builder engineVersion(@Nullable String engineVersion) {
-            this.engineVersion = Codegen.ofNullable(engineVersion);
-            return this;
+
+        public Builder engineVersion(String engineVersion) {
+            return engineVersion(Output.of(engineVersion));
         }
+
         public Builder maintenanceWindow(@Nullable Output<String> maintenanceWindow) {
-            this.maintenanceWindow = maintenanceWindow;
+            $.maintenanceWindow = maintenanceWindow;
             return this;
         }
-        public Builder maintenanceWindow(@Nullable String maintenanceWindow) {
-            this.maintenanceWindow = Codegen.ofNullable(maintenanceWindow);
-            return this;
+
+        public Builder maintenanceWindow(String maintenanceWindow) {
+            return maintenanceWindow(Output.of(maintenanceWindow));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder nodeType(@Nullable Output<String> nodeType) {
-            this.nodeType = nodeType;
+            $.nodeType = nodeType;
             return this;
         }
-        public Builder nodeType(@Nullable String nodeType) {
-            this.nodeType = Codegen.ofNullable(nodeType);
-            return this;
+
+        public Builder nodeType(String nodeType) {
+            return nodeType(Output.of(nodeType));
         }
+
         public Builder numShards(@Nullable Output<Integer> numShards) {
-            this.numShards = numShards;
+            $.numShards = numShards;
             return this;
         }
-        public Builder numShards(@Nullable Integer numShards) {
-            this.numShards = Codegen.ofNullable(numShards);
-            return this;
+
+        public Builder numShards(Integer numShards) {
+            return numShards(Output.of(numShards));
         }
+
         public Builder parameterGroupName(@Nullable Output<String> parameterGroupName) {
-            this.parameterGroupName = parameterGroupName;
+            $.parameterGroupName = parameterGroupName;
             return this;
         }
-        public Builder parameterGroupName(@Nullable String parameterGroupName) {
-            this.parameterGroupName = Codegen.ofNullable(parameterGroupName);
-            return this;
+
+        public Builder parameterGroupName(String parameterGroupName) {
+            return parameterGroupName(Output.of(parameterGroupName));
         }
+
         public Builder port(@Nullable Output<Integer> port) {
-            this.port = port;
+            $.port = port;
             return this;
         }
-        public Builder port(@Nullable Integer port) {
-            this.port = Codegen.ofNullable(port);
-            return this;
+
+        public Builder port(Integer port) {
+            return port(Output.of(port));
         }
+
         public Builder snapshotRetentionLimit(@Nullable Output<Integer> snapshotRetentionLimit) {
-            this.snapshotRetentionLimit = snapshotRetentionLimit;
+            $.snapshotRetentionLimit = snapshotRetentionLimit;
             return this;
         }
-        public Builder snapshotRetentionLimit(@Nullable Integer snapshotRetentionLimit) {
-            this.snapshotRetentionLimit = Codegen.ofNullable(snapshotRetentionLimit);
-            return this;
+
+        public Builder snapshotRetentionLimit(Integer snapshotRetentionLimit) {
+            return snapshotRetentionLimit(Output.of(snapshotRetentionLimit));
         }
+
         public Builder snapshotWindow(@Nullable Output<String> snapshotWindow) {
-            this.snapshotWindow = snapshotWindow;
+            $.snapshotWindow = snapshotWindow;
             return this;
         }
-        public Builder snapshotWindow(@Nullable String snapshotWindow) {
-            this.snapshotWindow = Codegen.ofNullable(snapshotWindow);
-            return this;
+
+        public Builder snapshotWindow(String snapshotWindow) {
+            return snapshotWindow(Output.of(snapshotWindow));
         }
+
         public Builder subnetGroupName(@Nullable Output<String> subnetGroupName) {
-            this.subnetGroupName = subnetGroupName;
+            $.subnetGroupName = subnetGroupName;
             return this;
         }
-        public Builder subnetGroupName(@Nullable String subnetGroupName) {
-            this.subnetGroupName = Codegen.ofNullable(subnetGroupName);
-            return this;
+
+        public Builder subnetGroupName(String subnetGroupName) {
+            return subnetGroupName(Output.of(subnetGroupName));
         }
+
         public Builder topicArn(@Nullable Output<String> topicArn) {
-            this.topicArn = topicArn;
+            $.topicArn = topicArn;
             return this;
         }
-        public Builder topicArn(@Nullable String topicArn) {
-            this.topicArn = Codegen.ofNullable(topicArn);
-            return this;
+
+        public Builder topicArn(String topicArn) {
+            return topicArn(Output.of(topicArn));
         }
+
         public Builder vpcId(@Nullable Output<String> vpcId) {
-            this.vpcId = vpcId;
+            $.vpcId = vpcId;
             return this;
         }
-        public Builder vpcId(@Nullable String vpcId) {
-            this.vpcId = Codegen.ofNullable(vpcId);
-            return this;
-        }        public SnapshotClusterConfigurationArgs build() {
-            return new SnapshotClusterConfigurationArgs(description, engineVersion, maintenanceWindow, name, nodeType, numShards, parameterGroupName, port, snapshotRetentionLimit, snapshotWindow, subnetGroupName, topicArn, vpcId);
+
+        public Builder vpcId(String vpcId) {
+            return vpcId(Output.of(vpcId));
+        }
+
+        public SnapshotClusterConfigurationArgs build() {
+            return $;
         }
     }
+
 }

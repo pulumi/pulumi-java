@@ -5,12 +5,12 @@ package com.pulumi.googlenative.vmmigration_v1;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.vmmigration_v1.enums.UtilizationReportTimeFrame;
 import com.pulumi.googlenative.vmmigration_v1.inputs.VmUtilizationInfoArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,35 +23,35 @@ public final class UtilizationReportArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="displayName")
-      private final @Nullable Output<String> displayName;
+    private @Nullable Output<String> displayName;
 
-    public Output<String> displayName() {
-        return this.displayName == null ? Codegen.empty() : this.displayName;
+    public Optional<Output<String>> displayName() {
+        return Optional.ofNullable(this.displayName);
     }
 
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     @Import(name="requestId")
-      private final @Nullable Output<String> requestId;
+    private @Nullable Output<String> requestId;
 
-    public Output<String> requestId() {
-        return this.requestId == null ? Codegen.empty() : this.requestId;
+    public Optional<Output<String>> requestId() {
+        return Optional.ofNullable(this.requestId);
     }
 
     @Import(name="sourceId", required=true)
-      private final Output<String> sourceId;
+    private Output<String> sourceId;
 
     public Output<String> sourceId() {
         return this.sourceId;
@@ -62,14 +62,14 @@ public final class UtilizationReportArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="timeFrame")
-      private final @Nullable Output<UtilizationReportTimeFrame> timeFrame;
+    private @Nullable Output<UtilizationReportTimeFrame> timeFrame;
 
-    public Output<UtilizationReportTimeFrame> timeFrame() {
-        return this.timeFrame == null ? Codegen.empty() : this.timeFrame;
+    public Optional<Output<UtilizationReportTimeFrame>> timeFrame() {
+        return Optional.ofNullable(this.timeFrame);
     }
 
     @Import(name="utilizationReportId", required=true)
-      private final Output<String> utilizationReportId;
+    private Output<String> utilizationReportId;
 
     public Output<String> utilizationReportId() {
         return this.utilizationReportId;
@@ -80,144 +80,124 @@ public final class UtilizationReportArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="vms")
-      private final @Nullable Output<List<VmUtilizationInfoArgs>> vms;
+    private @Nullable Output<List<VmUtilizationInfoArgs>> vms;
 
-    public Output<List<VmUtilizationInfoArgs>> vms() {
-        return this.vms == null ? Codegen.empty() : this.vms;
+    public Optional<Output<List<VmUtilizationInfoArgs>>> vms() {
+        return Optional.ofNullable(this.vms);
     }
 
-    public UtilizationReportArgs(
-        @Nullable Output<String> displayName,
-        @Nullable Output<String> location,
-        @Nullable Output<String> project,
-        @Nullable Output<String> requestId,
-        Output<String> sourceId,
-        @Nullable Output<UtilizationReportTimeFrame> timeFrame,
-        Output<String> utilizationReportId,
-        @Nullable Output<List<VmUtilizationInfoArgs>> vms) {
-        this.displayName = displayName;
-        this.location = location;
-        this.project = project;
-        this.requestId = requestId;
-        this.sourceId = Objects.requireNonNull(sourceId, "expected parameter 'sourceId' to be non-null");
-        this.timeFrame = timeFrame;
-        this.utilizationReportId = Objects.requireNonNull(utilizationReportId, "expected parameter 'utilizationReportId' to be non-null");
-        this.vms = vms;
-    }
+    private UtilizationReportArgs() {}
 
-    private UtilizationReportArgs() {
-        this.displayName = Codegen.empty();
-        this.location = Codegen.empty();
-        this.project = Codegen.empty();
-        this.requestId = Codegen.empty();
-        this.sourceId = Codegen.empty();
-        this.timeFrame = Codegen.empty();
-        this.utilizationReportId = Codegen.empty();
-        this.vms = Codegen.empty();
+    private UtilizationReportArgs(UtilizationReportArgs $) {
+        this.displayName = $.displayName;
+        this.location = $.location;
+        this.project = $.project;
+        this.requestId = $.requestId;
+        this.sourceId = $.sourceId;
+        this.timeFrame = $.timeFrame;
+        this.utilizationReportId = $.utilizationReportId;
+        this.vms = $.vms;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(UtilizationReportArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> displayName;
-        private @Nullable Output<String> location;
-        private @Nullable Output<String> project;
-        private @Nullable Output<String> requestId;
-        private Output<String> sourceId;
-        private @Nullable Output<UtilizationReportTimeFrame> timeFrame;
-        private Output<String> utilizationReportId;
-        private @Nullable Output<List<VmUtilizationInfoArgs>> vms;
+        private UtilizationReportArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new UtilizationReportArgs();
         }
 
         public Builder(UtilizationReportArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.displayName = defaults.displayName;
-    	      this.location = defaults.location;
-    	      this.project = defaults.project;
-    	      this.requestId = defaults.requestId;
-    	      this.sourceId = defaults.sourceId;
-    	      this.timeFrame = defaults.timeFrame;
-    	      this.utilizationReportId = defaults.utilizationReportId;
-    	      this.vms = defaults.vms;
+            $ = new UtilizationReportArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder displayName(@Nullable Output<String> displayName) {
-            this.displayName = displayName;
+            $.displayName = displayName;
             return this;
         }
-        public Builder displayName(@Nullable String displayName) {
-            this.displayName = Codegen.ofNullable(displayName);
-            return this;
+
+        public Builder displayName(String displayName) {
+            return displayName(Output.of(displayName));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder requestId(@Nullable Output<String> requestId) {
-            this.requestId = requestId;
+            $.requestId = requestId;
             return this;
         }
-        public Builder requestId(@Nullable String requestId) {
-            this.requestId = Codegen.ofNullable(requestId);
-            return this;
+
+        public Builder requestId(String requestId) {
+            return requestId(Output.of(requestId));
         }
+
         public Builder sourceId(Output<String> sourceId) {
-            this.sourceId = Objects.requireNonNull(sourceId);
+            $.sourceId = sourceId;
             return this;
         }
+
         public Builder sourceId(String sourceId) {
-            this.sourceId = Output.of(Objects.requireNonNull(sourceId));
-            return this;
+            return sourceId(Output.of(sourceId));
         }
+
         public Builder timeFrame(@Nullable Output<UtilizationReportTimeFrame> timeFrame) {
-            this.timeFrame = timeFrame;
+            $.timeFrame = timeFrame;
             return this;
         }
-        public Builder timeFrame(@Nullable UtilizationReportTimeFrame timeFrame) {
-            this.timeFrame = Codegen.ofNullable(timeFrame);
-            return this;
+
+        public Builder timeFrame(UtilizationReportTimeFrame timeFrame) {
+            return timeFrame(Output.of(timeFrame));
         }
+
         public Builder utilizationReportId(Output<String> utilizationReportId) {
-            this.utilizationReportId = Objects.requireNonNull(utilizationReportId);
+            $.utilizationReportId = utilizationReportId;
             return this;
         }
+
         public Builder utilizationReportId(String utilizationReportId) {
-            this.utilizationReportId = Output.of(Objects.requireNonNull(utilizationReportId));
-            return this;
+            return utilizationReportId(Output.of(utilizationReportId));
         }
+
         public Builder vms(@Nullable Output<List<VmUtilizationInfoArgs>> vms) {
-            this.vms = vms;
+            $.vms = vms;
             return this;
         }
-        public Builder vms(@Nullable List<VmUtilizationInfoArgs> vms) {
-            this.vms = Codegen.ofNullable(vms);
-            return this;
+
+        public Builder vms(List<VmUtilizationInfoArgs> vms) {
+            return vms(Output.of(vms));
         }
+
         public Builder vms(VmUtilizationInfoArgs... vms) {
             return vms(List.of(vms));
-        }        public UtilizationReportArgs build() {
-            return new UtilizationReportArgs(displayName, location, project, requestId, sourceId, timeFrame, utilizationReportId, vms);
+        }
+
+        public UtilizationReportArgs build() {
+            $.sourceId = Objects.requireNonNull($.sourceId, "expected parameter 'sourceId' to be non-null");
+            $.utilizationReportId = Objects.requireNonNull($.utilizationReportId, "expected parameter 'utilizationReportId' to be non-null");
+            return $;
         }
     }
+
 }

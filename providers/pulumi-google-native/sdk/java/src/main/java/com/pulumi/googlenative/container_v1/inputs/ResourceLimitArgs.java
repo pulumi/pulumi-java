@@ -5,9 +5,9 @@ package com.pulumi.googlenative.container_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class ResourceLimitArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="maximum")
-      private final @Nullable Output<String> maximum;
+    private @Nullable Output<String> maximum;
 
-    public Output<String> maximum() {
-        return this.maximum == null ? Codegen.empty() : this.maximum;
+    public Optional<Output<String>> maximum() {
+        return Optional.ofNullable(this.maximum);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class ResourceLimitArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="minimum")
-      private final @Nullable Output<String> minimum;
+    private @Nullable Output<String> minimum;
 
-    public Output<String> minimum() {
-        return this.minimum == null ? Codegen.empty() : this.minimum;
+    public Optional<Output<String>> minimum() {
+        return Optional.ofNullable(this.minimum);
     }
 
     /**
@@ -46,76 +46,68 @@ public final class ResourceLimitArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceType")
-      private final @Nullable Output<String> resourceType;
+    private @Nullable Output<String> resourceType;
 
-    public Output<String> resourceType() {
-        return this.resourceType == null ? Codegen.empty() : this.resourceType;
+    public Optional<Output<String>> resourceType() {
+        return Optional.ofNullable(this.resourceType);
     }
 
-    public ResourceLimitArgs(
-        @Nullable Output<String> maximum,
-        @Nullable Output<String> minimum,
-        @Nullable Output<String> resourceType) {
-        this.maximum = maximum;
-        this.minimum = minimum;
-        this.resourceType = resourceType;
-    }
+    private ResourceLimitArgs() {}
 
-    private ResourceLimitArgs() {
-        this.maximum = Codegen.empty();
-        this.minimum = Codegen.empty();
-        this.resourceType = Codegen.empty();
+    private ResourceLimitArgs(ResourceLimitArgs $) {
+        this.maximum = $.maximum;
+        this.minimum = $.minimum;
+        this.resourceType = $.resourceType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ResourceLimitArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> maximum;
-        private @Nullable Output<String> minimum;
-        private @Nullable Output<String> resourceType;
+        private ResourceLimitArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ResourceLimitArgs();
         }
 
         public Builder(ResourceLimitArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.maximum = defaults.maximum;
-    	      this.minimum = defaults.minimum;
-    	      this.resourceType = defaults.resourceType;
+            $ = new ResourceLimitArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder maximum(@Nullable Output<String> maximum) {
-            this.maximum = maximum;
+            $.maximum = maximum;
             return this;
         }
-        public Builder maximum(@Nullable String maximum) {
-            this.maximum = Codegen.ofNullable(maximum);
-            return this;
+
+        public Builder maximum(String maximum) {
+            return maximum(Output.of(maximum));
         }
+
         public Builder minimum(@Nullable Output<String> minimum) {
-            this.minimum = minimum;
+            $.minimum = minimum;
             return this;
         }
-        public Builder minimum(@Nullable String minimum) {
-            this.minimum = Codegen.ofNullable(minimum);
-            return this;
+
+        public Builder minimum(String minimum) {
+            return minimum(Output.of(minimum));
         }
+
         public Builder resourceType(@Nullable Output<String> resourceType) {
-            this.resourceType = resourceType;
+            $.resourceType = resourceType;
             return this;
         }
-        public Builder resourceType(@Nullable String resourceType) {
-            this.resourceType = Codegen.ofNullable(resourceType);
-            return this;
-        }        public ResourceLimitArgs build() {
-            return new ResourceLimitArgs(maximum, minimum, resourceType);
+
+        public Builder resourceType(String resourceType) {
+            return resourceType(Output.of(resourceType));
+        }
+
+        public ResourceLimitArgs build() {
+            return $;
         }
     }
+
 }

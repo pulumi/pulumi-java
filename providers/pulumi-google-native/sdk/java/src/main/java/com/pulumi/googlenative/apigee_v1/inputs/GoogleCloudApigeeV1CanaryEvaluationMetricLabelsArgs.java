@@ -5,9 +5,9 @@ package com.pulumi.googlenative.apigee_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class GoogleCloudApigeeV1CanaryEvaluationMetricLabelsArgs extends c
      * 
      */
     @Import(name="env")
-      private final @Nullable Output<String> env;
+    private @Nullable Output<String> env;
 
-    public Output<String> env() {
-        return this.env == null ? Codegen.empty() : this.env;
+    public Optional<Output<String>> env() {
+        return Optional.ofNullable(this.env);
     }
 
     /**
@@ -35,7 +35,7 @@ public final class GoogleCloudApigeeV1CanaryEvaluationMetricLabelsArgs extends c
      * 
      */
     @Import(name="instanceId", required=true)
-      private final Output<String> instanceId;
+    private Output<String> instanceId;
 
     public Output<String> instanceId() {
         return this.instanceId;
@@ -46,76 +46,70 @@ public final class GoogleCloudApigeeV1CanaryEvaluationMetricLabelsArgs extends c
      * 
      */
     @Import(name="location", required=true)
-      private final Output<String> location;
+    private Output<String> location;
 
     public Output<String> location() {
         return this.location;
     }
 
-    public GoogleCloudApigeeV1CanaryEvaluationMetricLabelsArgs(
-        @Nullable Output<String> env,
-        Output<String> instanceId,
-        Output<String> location) {
-        this.env = env;
-        this.instanceId = Objects.requireNonNull(instanceId, "expected parameter 'instanceId' to be non-null");
-        this.location = Objects.requireNonNull(location, "expected parameter 'location' to be non-null");
-    }
+    private GoogleCloudApigeeV1CanaryEvaluationMetricLabelsArgs() {}
 
-    private GoogleCloudApigeeV1CanaryEvaluationMetricLabelsArgs() {
-        this.env = Codegen.empty();
-        this.instanceId = Codegen.empty();
-        this.location = Codegen.empty();
+    private GoogleCloudApigeeV1CanaryEvaluationMetricLabelsArgs(GoogleCloudApigeeV1CanaryEvaluationMetricLabelsArgs $) {
+        this.env = $.env;
+        this.instanceId = $.instanceId;
+        this.location = $.location;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudApigeeV1CanaryEvaluationMetricLabelsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> env;
-        private Output<String> instanceId;
-        private Output<String> location;
+        private GoogleCloudApigeeV1CanaryEvaluationMetricLabelsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudApigeeV1CanaryEvaluationMetricLabelsArgs();
         }
 
         public Builder(GoogleCloudApigeeV1CanaryEvaluationMetricLabelsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.env = defaults.env;
-    	      this.instanceId = defaults.instanceId;
-    	      this.location = defaults.location;
+            $ = new GoogleCloudApigeeV1CanaryEvaluationMetricLabelsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder env(@Nullable Output<String> env) {
-            this.env = env;
+            $.env = env;
             return this;
         }
-        public Builder env(@Nullable String env) {
-            this.env = Codegen.ofNullable(env);
-            return this;
+
+        public Builder env(String env) {
+            return env(Output.of(env));
         }
+
         public Builder instanceId(Output<String> instanceId) {
-            this.instanceId = Objects.requireNonNull(instanceId);
+            $.instanceId = instanceId;
             return this;
         }
+
         public Builder instanceId(String instanceId) {
-            this.instanceId = Output.of(Objects.requireNonNull(instanceId));
-            return this;
+            return instanceId(Output.of(instanceId));
         }
+
         public Builder location(Output<String> location) {
-            this.location = Objects.requireNonNull(location);
+            $.location = location;
             return this;
         }
+
         public Builder location(String location) {
-            this.location = Output.of(Objects.requireNonNull(location));
-            return this;
-        }        public GoogleCloudApigeeV1CanaryEvaluationMetricLabelsArgs build() {
-            return new GoogleCloudApigeeV1CanaryEvaluationMetricLabelsArgs(env, instanceId, location);
+            return location(Output.of(location));
+        }
+
+        public GoogleCloudApigeeV1CanaryEvaluationMetricLabelsArgs build() {
+            $.instanceId = Objects.requireNonNull($.instanceId, "expected parameter 'instanceId' to be non-null");
+            $.location = Objects.requireNonNull($.location, "expected parameter 'location' to be non-null");
+            return $;
         }
     }
+
 }

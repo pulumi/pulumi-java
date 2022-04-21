@@ -25,7 +25,7 @@ public final class GooglePrivacyDlpV2CryptoReplaceFfxFpeConfigResponse extends c
      * 
      */
     @Import(name="commonAlphabet", required=true)
-      private final String commonAlphabet;
+    private String commonAlphabet;
 
     public String commonAlphabet() {
         return this.commonAlphabet;
@@ -36,7 +36,7 @@ public final class GooglePrivacyDlpV2CryptoReplaceFfxFpeConfigResponse extends c
      * 
      */
     @Import(name="context", required=true)
-      private final GooglePrivacyDlpV2FieldIdResponse context;
+    private GooglePrivacyDlpV2FieldIdResponse context;
 
     public GooglePrivacyDlpV2FieldIdResponse context() {
         return this.context;
@@ -47,7 +47,7 @@ public final class GooglePrivacyDlpV2CryptoReplaceFfxFpeConfigResponse extends c
      * 
      */
     @Import(name="cryptoKey", required=true)
-      private final GooglePrivacyDlpV2CryptoKeyResponse cryptoKey;
+    private GooglePrivacyDlpV2CryptoKeyResponse cryptoKey;
 
     public GooglePrivacyDlpV2CryptoKeyResponse cryptoKey() {
         return this.cryptoKey;
@@ -58,7 +58,7 @@ public final class GooglePrivacyDlpV2CryptoReplaceFfxFpeConfigResponse extends c
      * 
      */
     @Import(name="customAlphabet", required=true)
-      private final String customAlphabet;
+    private String customAlphabet;
 
     public String customAlphabet() {
         return this.customAlphabet;
@@ -69,7 +69,7 @@ public final class GooglePrivacyDlpV2CryptoReplaceFfxFpeConfigResponse extends c
      * 
      */
     @Import(name="radix", required=true)
-      private final Integer radix;
+    private Integer radix;
 
     public Integer radix() {
         return this.radix;
@@ -80,91 +80,80 @@ public final class GooglePrivacyDlpV2CryptoReplaceFfxFpeConfigResponse extends c
      * 
      */
     @Import(name="surrogateInfoType", required=true)
-      private final GooglePrivacyDlpV2InfoTypeResponse surrogateInfoType;
+    private GooglePrivacyDlpV2InfoTypeResponse surrogateInfoType;
 
     public GooglePrivacyDlpV2InfoTypeResponse surrogateInfoType() {
         return this.surrogateInfoType;
     }
 
-    public GooglePrivacyDlpV2CryptoReplaceFfxFpeConfigResponse(
-        String commonAlphabet,
-        GooglePrivacyDlpV2FieldIdResponse context,
-        GooglePrivacyDlpV2CryptoKeyResponse cryptoKey,
-        String customAlphabet,
-        Integer radix,
-        GooglePrivacyDlpV2InfoTypeResponse surrogateInfoType) {
-        this.commonAlphabet = Objects.requireNonNull(commonAlphabet, "expected parameter 'commonAlphabet' to be non-null");
-        this.context = Objects.requireNonNull(context, "expected parameter 'context' to be non-null");
-        this.cryptoKey = Objects.requireNonNull(cryptoKey, "expected parameter 'cryptoKey' to be non-null");
-        this.customAlphabet = Objects.requireNonNull(customAlphabet, "expected parameter 'customAlphabet' to be non-null");
-        this.radix = Objects.requireNonNull(radix, "expected parameter 'radix' to be non-null");
-        this.surrogateInfoType = Objects.requireNonNull(surrogateInfoType, "expected parameter 'surrogateInfoType' to be non-null");
-    }
+    private GooglePrivacyDlpV2CryptoReplaceFfxFpeConfigResponse() {}
 
-    private GooglePrivacyDlpV2CryptoReplaceFfxFpeConfigResponse() {
-        this.commonAlphabet = null;
-        this.context = null;
-        this.cryptoKey = null;
-        this.customAlphabet = null;
-        this.radix = null;
-        this.surrogateInfoType = null;
+    private GooglePrivacyDlpV2CryptoReplaceFfxFpeConfigResponse(GooglePrivacyDlpV2CryptoReplaceFfxFpeConfigResponse $) {
+        this.commonAlphabet = $.commonAlphabet;
+        this.context = $.context;
+        this.cryptoKey = $.cryptoKey;
+        this.customAlphabet = $.customAlphabet;
+        this.radix = $.radix;
+        this.surrogateInfoType = $.surrogateInfoType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GooglePrivacyDlpV2CryptoReplaceFfxFpeConfigResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String commonAlphabet;
-        private GooglePrivacyDlpV2FieldIdResponse context;
-        private GooglePrivacyDlpV2CryptoKeyResponse cryptoKey;
-        private String customAlphabet;
-        private Integer radix;
-        private GooglePrivacyDlpV2InfoTypeResponse surrogateInfoType;
+        private GooglePrivacyDlpV2CryptoReplaceFfxFpeConfigResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GooglePrivacyDlpV2CryptoReplaceFfxFpeConfigResponse();
         }
 
         public Builder(GooglePrivacyDlpV2CryptoReplaceFfxFpeConfigResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.commonAlphabet = defaults.commonAlphabet;
-    	      this.context = defaults.context;
-    	      this.cryptoKey = defaults.cryptoKey;
-    	      this.customAlphabet = defaults.customAlphabet;
-    	      this.radix = defaults.radix;
-    	      this.surrogateInfoType = defaults.surrogateInfoType;
+            $ = new GooglePrivacyDlpV2CryptoReplaceFfxFpeConfigResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder commonAlphabet(String commonAlphabet) {
-            this.commonAlphabet = Objects.requireNonNull(commonAlphabet);
+            $.commonAlphabet = commonAlphabet;
             return this;
         }
+
         public Builder context(GooglePrivacyDlpV2FieldIdResponse context) {
-            this.context = Objects.requireNonNull(context);
+            $.context = context;
             return this;
         }
+
         public Builder cryptoKey(GooglePrivacyDlpV2CryptoKeyResponse cryptoKey) {
-            this.cryptoKey = Objects.requireNonNull(cryptoKey);
+            $.cryptoKey = cryptoKey;
             return this;
         }
+
         public Builder customAlphabet(String customAlphabet) {
-            this.customAlphabet = Objects.requireNonNull(customAlphabet);
+            $.customAlphabet = customAlphabet;
             return this;
         }
+
         public Builder radix(Integer radix) {
-            this.radix = Objects.requireNonNull(radix);
+            $.radix = radix;
             return this;
         }
+
         public Builder surrogateInfoType(GooglePrivacyDlpV2InfoTypeResponse surrogateInfoType) {
-            this.surrogateInfoType = Objects.requireNonNull(surrogateInfoType);
+            $.surrogateInfoType = surrogateInfoType;
             return this;
-        }        public GooglePrivacyDlpV2CryptoReplaceFfxFpeConfigResponse build() {
-            return new GooglePrivacyDlpV2CryptoReplaceFfxFpeConfigResponse(commonAlphabet, context, cryptoKey, customAlphabet, radix, surrogateInfoType);
+        }
+
+        public GooglePrivacyDlpV2CryptoReplaceFfxFpeConfigResponse build() {
+            $.commonAlphabet = Objects.requireNonNull($.commonAlphabet, "expected parameter 'commonAlphabet' to be non-null");
+            $.context = Objects.requireNonNull($.context, "expected parameter 'context' to be non-null");
+            $.cryptoKey = Objects.requireNonNull($.cryptoKey, "expected parameter 'cryptoKey' to be non-null");
+            $.customAlphabet = Objects.requireNonNull($.customAlphabet, "expected parameter 'customAlphabet' to be non-null");
+            $.radix = Objects.requireNonNull($.radix, "expected parameter 'radix' to be non-null");
+            $.surrogateInfoType = Objects.requireNonNull($.surrogateInfoType, "expected parameter 'surrogateInfoType' to be non-null");
+            return $;
         }
     }
+
 }

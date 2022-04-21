@@ -5,9 +5,9 @@ package com.pulumi.azurenative.securityinsights.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class ThreatIntelligenceParsedPatternTypeValueArgs extends com.pulu
      * 
      */
     @Import(name="value")
-      private final @Nullable Output<String> value;
+    private @Nullable Output<String> value;
 
-    public Output<String> value() {
-        return this.value == null ? Codegen.empty() : this.value;
+    public Optional<Output<String>> value() {
+        return Optional.ofNullable(this.value);
     }
 
     /**
@@ -35,63 +35,58 @@ public final class ThreatIntelligenceParsedPatternTypeValueArgs extends com.pulu
      * 
      */
     @Import(name="valueType")
-      private final @Nullable Output<String> valueType;
+    private @Nullable Output<String> valueType;
 
-    public Output<String> valueType() {
-        return this.valueType == null ? Codegen.empty() : this.valueType;
+    public Optional<Output<String>> valueType() {
+        return Optional.ofNullable(this.valueType);
     }
 
-    public ThreatIntelligenceParsedPatternTypeValueArgs(
-        @Nullable Output<String> value,
-        @Nullable Output<String> valueType) {
-        this.value = value;
-        this.valueType = valueType;
-    }
+    private ThreatIntelligenceParsedPatternTypeValueArgs() {}
 
-    private ThreatIntelligenceParsedPatternTypeValueArgs() {
-        this.value = Codegen.empty();
-        this.valueType = Codegen.empty();
+    private ThreatIntelligenceParsedPatternTypeValueArgs(ThreatIntelligenceParsedPatternTypeValueArgs $) {
+        this.value = $.value;
+        this.valueType = $.valueType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ThreatIntelligenceParsedPatternTypeValueArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> value;
-        private @Nullable Output<String> valueType;
+        private ThreatIntelligenceParsedPatternTypeValueArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ThreatIntelligenceParsedPatternTypeValueArgs();
         }
 
         public Builder(ThreatIntelligenceParsedPatternTypeValueArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.value = defaults.value;
-    	      this.valueType = defaults.valueType;
+            $ = new ThreatIntelligenceParsedPatternTypeValueArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder value(@Nullable Output<String> value) {
-            this.value = value;
+            $.value = value;
             return this;
         }
-        public Builder value(@Nullable String value) {
-            this.value = Codegen.ofNullable(value);
-            return this;
+
+        public Builder value(String value) {
+            return value(Output.of(value));
         }
+
         public Builder valueType(@Nullable Output<String> valueType) {
-            this.valueType = valueType;
+            $.valueType = valueType;
             return this;
         }
-        public Builder valueType(@Nullable String valueType) {
-            this.valueType = Codegen.ofNullable(valueType);
-            return this;
-        }        public ThreatIntelligenceParsedPatternTypeValueArgs build() {
-            return new ThreatIntelligenceParsedPatternTypeValueArgs(value, valueType);
+
+        public Builder valueType(String valueType) {
+            return valueType(Output.of(valueType));
+        }
+
+        public ThreatIntelligenceParsedPatternTypeValueArgs build() {
+            return $;
         }
     }
+
 }

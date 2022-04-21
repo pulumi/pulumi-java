@@ -9,6 +9,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +26,10 @@ public final class AvailabilitySetResourceSettingsArgs extends com.pulumi.resour
      * 
      */
     @Import(name="faultDomain")
-      private final @Nullable Output<Integer> faultDomain;
+    private @Nullable Output<Integer> faultDomain;
 
-    public Output<Integer> faultDomain() {
-        return this.faultDomain == null ? Codegen.empty() : this.faultDomain;
+    public Optional<Output<Integer>> faultDomain() {
+        return Optional.ofNullable(this.faultDomain);
     }
 
     /**
@@ -37,7 +38,7 @@ public final class AvailabilitySetResourceSettingsArgs extends com.pulumi.resour
      * 
      */
     @Import(name="resourceType", required=true)
-      private final Output<String> resourceType;
+    private Output<String> resourceType;
 
     public Output<String> resourceType() {
         return this.resourceType;
@@ -48,7 +49,7 @@ public final class AvailabilitySetResourceSettingsArgs extends com.pulumi.resour
      * 
      */
     @Import(name="targetResourceName", required=true)
-      private final Output<String> targetResourceName;
+    private Output<String> targetResourceName;
 
     public Output<String> targetResourceName() {
         return this.targetResourceName;
@@ -59,89 +60,80 @@ public final class AvailabilitySetResourceSettingsArgs extends com.pulumi.resour
      * 
      */
     @Import(name="updateDomain")
-      private final @Nullable Output<Integer> updateDomain;
+    private @Nullable Output<Integer> updateDomain;
 
-    public Output<Integer> updateDomain() {
-        return this.updateDomain == null ? Codegen.empty() : this.updateDomain;
+    public Optional<Output<Integer>> updateDomain() {
+        return Optional.ofNullable(this.updateDomain);
     }
 
-    public AvailabilitySetResourceSettingsArgs(
-        @Nullable Output<Integer> faultDomain,
-        Output<String> resourceType,
-        Output<String> targetResourceName,
-        @Nullable Output<Integer> updateDomain) {
-        this.faultDomain = faultDomain;
-        this.resourceType = Codegen.stringProp("resourceType").output().arg(resourceType).require();
-        this.targetResourceName = Objects.requireNonNull(targetResourceName, "expected parameter 'targetResourceName' to be non-null");
-        this.updateDomain = updateDomain;
-    }
+    private AvailabilitySetResourceSettingsArgs() {}
 
-    private AvailabilitySetResourceSettingsArgs() {
-        this.faultDomain = Codegen.empty();
-        this.resourceType = Codegen.empty();
-        this.targetResourceName = Codegen.empty();
-        this.updateDomain = Codegen.empty();
+    private AvailabilitySetResourceSettingsArgs(AvailabilitySetResourceSettingsArgs $) {
+        this.faultDomain = $.faultDomain;
+        this.resourceType = $.resourceType;
+        this.targetResourceName = $.targetResourceName;
+        this.updateDomain = $.updateDomain;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AvailabilitySetResourceSettingsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> faultDomain;
-        private Output<String> resourceType;
-        private Output<String> targetResourceName;
-        private @Nullable Output<Integer> updateDomain;
+        private AvailabilitySetResourceSettingsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AvailabilitySetResourceSettingsArgs();
         }
 
         public Builder(AvailabilitySetResourceSettingsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.faultDomain = defaults.faultDomain;
-    	      this.resourceType = defaults.resourceType;
-    	      this.targetResourceName = defaults.targetResourceName;
-    	      this.updateDomain = defaults.updateDomain;
+            $ = new AvailabilitySetResourceSettingsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder faultDomain(@Nullable Output<Integer> faultDomain) {
-            this.faultDomain = faultDomain;
+            $.faultDomain = faultDomain;
             return this;
         }
-        public Builder faultDomain(@Nullable Integer faultDomain) {
-            this.faultDomain = Codegen.ofNullable(faultDomain);
-            return this;
+
+        public Builder faultDomain(Integer faultDomain) {
+            return faultDomain(Output.of(faultDomain));
         }
+
         public Builder resourceType(Output<String> resourceType) {
-            this.resourceType = Objects.requireNonNull(resourceType);
+            $.resourceType = resourceType;
             return this;
         }
+
         public Builder resourceType(String resourceType) {
-            this.resourceType = Output.of(Objects.requireNonNull(resourceType));
-            return this;
+            return resourceType(Output.of(resourceType));
         }
+
         public Builder targetResourceName(Output<String> targetResourceName) {
-            this.targetResourceName = Objects.requireNonNull(targetResourceName);
+            $.targetResourceName = targetResourceName;
             return this;
         }
+
         public Builder targetResourceName(String targetResourceName) {
-            this.targetResourceName = Output.of(Objects.requireNonNull(targetResourceName));
-            return this;
+            return targetResourceName(Output.of(targetResourceName));
         }
+
         public Builder updateDomain(@Nullable Output<Integer> updateDomain) {
-            this.updateDomain = updateDomain;
+            $.updateDomain = updateDomain;
             return this;
         }
-        public Builder updateDomain(@Nullable Integer updateDomain) {
-            this.updateDomain = Codegen.ofNullable(updateDomain);
-            return this;
-        }        public AvailabilitySetResourceSettingsArgs build() {
-            return new AvailabilitySetResourceSettingsArgs(faultDomain, resourceType, targetResourceName, updateDomain);
+
+        public Builder updateDomain(Integer updateDomain) {
+            return updateDomain(Output.of(updateDomain));
+        }
+
+        public AvailabilitySetResourceSettingsArgs build() {
+            $.resourceType = Codegen.stringProp("resourceType").output().arg($.resourceType).require();
+            $.targetResourceName = Objects.requireNonNull($.targetResourceName, "expected parameter 'targetResourceName' to be non-null");
+            return $;
         }
     }
+
 }

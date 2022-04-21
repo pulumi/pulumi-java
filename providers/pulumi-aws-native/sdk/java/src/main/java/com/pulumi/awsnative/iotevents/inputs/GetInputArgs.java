@@ -17,45 +17,45 @@ public final class GetInputArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="inputName", required=true)
-      private final String inputName;
+    private String inputName;
 
     public String inputName() {
         return this.inputName;
     }
 
-    public GetInputArgs(String inputName) {
-        this.inputName = Objects.requireNonNull(inputName, "expected parameter 'inputName' to be non-null");
-    }
+    private GetInputArgs() {}
 
-    private GetInputArgs() {
-        this.inputName = null;
+    private GetInputArgs(GetInputArgs $) {
+        this.inputName = $.inputName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetInputArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String inputName;
+        private GetInputArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetInputArgs();
         }
 
         public Builder(GetInputArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.inputName = defaults.inputName;
+            $ = new GetInputArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder inputName(String inputName) {
-            this.inputName = Objects.requireNonNull(inputName);
+            $.inputName = inputName;
             return this;
-        }        public GetInputArgs build() {
-            return new GetInputArgs(inputName);
+        }
+
+        public GetInputArgs build() {
+            $.inputName = Objects.requireNonNull($.inputName, "expected parameter 'inputName' to be non-null");
+            return $;
         }
     }
+
 }

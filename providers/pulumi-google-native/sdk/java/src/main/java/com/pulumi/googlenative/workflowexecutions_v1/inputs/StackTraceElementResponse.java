@@ -22,7 +22,7 @@ public final class StackTraceElementResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="position", required=true)
-      private final PositionResponse position;
+    private PositionResponse position;
 
     public PositionResponse position() {
         return this.position;
@@ -33,7 +33,7 @@ public final class StackTraceElementResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="routine", required=true)
-      private final String routine;
+    private String routine;
 
     public String routine() {
         return this.routine;
@@ -44,64 +44,59 @@ public final class StackTraceElementResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="step", required=true)
-      private final String step;
+    private String step;
 
     public String step() {
         return this.step;
     }
 
-    public StackTraceElementResponse(
-        PositionResponse position,
-        String routine,
-        String step) {
-        this.position = Objects.requireNonNull(position, "expected parameter 'position' to be non-null");
-        this.routine = Objects.requireNonNull(routine, "expected parameter 'routine' to be non-null");
-        this.step = Objects.requireNonNull(step, "expected parameter 'step' to be non-null");
-    }
+    private StackTraceElementResponse() {}
 
-    private StackTraceElementResponse() {
-        this.position = null;
-        this.routine = null;
-        this.step = null;
+    private StackTraceElementResponse(StackTraceElementResponse $) {
+        this.position = $.position;
+        this.routine = $.routine;
+        this.step = $.step;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(StackTraceElementResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private PositionResponse position;
-        private String routine;
-        private String step;
+        private StackTraceElementResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new StackTraceElementResponse();
         }
 
         public Builder(StackTraceElementResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.position = defaults.position;
-    	      this.routine = defaults.routine;
-    	      this.step = defaults.step;
+            $ = new StackTraceElementResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder position(PositionResponse position) {
-            this.position = Objects.requireNonNull(position);
+            $.position = position;
             return this;
         }
+
         public Builder routine(String routine) {
-            this.routine = Objects.requireNonNull(routine);
+            $.routine = routine;
             return this;
         }
+
         public Builder step(String step) {
-            this.step = Objects.requireNonNull(step);
+            $.step = step;
             return this;
-        }        public StackTraceElementResponse build() {
-            return new StackTraceElementResponse(position, routine, step);
+        }
+
+        public StackTraceElementResponse build() {
+            $.position = Objects.requireNonNull($.position, "expected parameter 'position' to be non-null");
+            $.routine = Objects.requireNonNull($.routine, "expected parameter 'routine' to be non-null");
+            $.step = Objects.requireNonNull($.step, "expected parameter 'step' to be non-null");
+            return $;
         }
     }
+
 }

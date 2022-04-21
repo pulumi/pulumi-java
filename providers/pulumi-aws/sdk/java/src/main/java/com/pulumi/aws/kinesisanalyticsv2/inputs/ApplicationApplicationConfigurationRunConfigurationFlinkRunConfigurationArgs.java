@@ -5,9 +5,9 @@ package com.pulumi.aws.kinesisanalyticsv2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,49 +20,48 @@ public final class ApplicationApplicationConfigurationRunConfigurationFlinkRunCo
      * 
      */
     @Import(name="allowNonRestoredState")
-      private final @Nullable Output<Boolean> allowNonRestoredState;
+    private @Nullable Output<Boolean> allowNonRestoredState;
 
-    public Output<Boolean> allowNonRestoredState() {
-        return this.allowNonRestoredState == null ? Codegen.empty() : this.allowNonRestoredState;
+    public Optional<Output<Boolean>> allowNonRestoredState() {
+        return Optional.ofNullable(this.allowNonRestoredState);
     }
 
-    public ApplicationApplicationConfigurationRunConfigurationFlinkRunConfigurationArgs(@Nullable Output<Boolean> allowNonRestoredState) {
-        this.allowNonRestoredState = allowNonRestoredState;
-    }
+    private ApplicationApplicationConfigurationRunConfigurationFlinkRunConfigurationArgs() {}
 
-    private ApplicationApplicationConfigurationRunConfigurationFlinkRunConfigurationArgs() {
-        this.allowNonRestoredState = Codegen.empty();
+    private ApplicationApplicationConfigurationRunConfigurationFlinkRunConfigurationArgs(ApplicationApplicationConfigurationRunConfigurationFlinkRunConfigurationArgs $) {
+        this.allowNonRestoredState = $.allowNonRestoredState;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ApplicationApplicationConfigurationRunConfigurationFlinkRunConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> allowNonRestoredState;
+        private ApplicationApplicationConfigurationRunConfigurationFlinkRunConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ApplicationApplicationConfigurationRunConfigurationFlinkRunConfigurationArgs();
         }
 
         public Builder(ApplicationApplicationConfigurationRunConfigurationFlinkRunConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.allowNonRestoredState = defaults.allowNonRestoredState;
+            $ = new ApplicationApplicationConfigurationRunConfigurationFlinkRunConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder allowNonRestoredState(@Nullable Output<Boolean> allowNonRestoredState) {
-            this.allowNonRestoredState = allowNonRestoredState;
+            $.allowNonRestoredState = allowNonRestoredState;
             return this;
         }
-        public Builder allowNonRestoredState(@Nullable Boolean allowNonRestoredState) {
-            this.allowNonRestoredState = Codegen.ofNullable(allowNonRestoredState);
-            return this;
-        }        public ApplicationApplicationConfigurationRunConfigurationFlinkRunConfigurationArgs build() {
-            return new ApplicationApplicationConfigurationRunConfigurationFlinkRunConfigurationArgs(allowNonRestoredState);
+
+        public Builder allowNonRestoredState(Boolean allowNonRestoredState) {
+            return allowNonRestoredState(Output.of(allowNonRestoredState));
+        }
+
+        public ApplicationApplicationConfigurationRunConfigurationFlinkRunConfigurationArgs build() {
+            return $;
         }
     }
+
 }

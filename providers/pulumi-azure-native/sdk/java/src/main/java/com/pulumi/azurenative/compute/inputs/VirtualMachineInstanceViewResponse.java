@@ -33,7 +33,7 @@ public final class VirtualMachineInstanceViewResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="assignedHost", required=true)
-      private final String assignedHost;
+    private String assignedHost;
 
     public String assignedHost() {
         return this.assignedHost;
@@ -44,10 +44,10 @@ public final class VirtualMachineInstanceViewResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="bootDiagnostics")
-      private final @Nullable BootDiagnosticsInstanceViewResponse bootDiagnostics;
+    private @Nullable BootDiagnosticsInstanceViewResponse bootDiagnostics;
 
     public Optional<BootDiagnosticsInstanceViewResponse> bootDiagnostics() {
-        return this.bootDiagnostics == null ? Optional.empty() : Optional.ofNullable(this.bootDiagnostics);
+        return Optional.ofNullable(this.bootDiagnostics);
     }
 
     /**
@@ -55,10 +55,10 @@ public final class VirtualMachineInstanceViewResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="computerName")
-      private final @Nullable String computerName;
+    private @Nullable String computerName;
 
     public Optional<String> computerName() {
-        return this.computerName == null ? Optional.empty() : Optional.ofNullable(this.computerName);
+        return Optional.ofNullable(this.computerName);
     }
 
     /**
@@ -66,10 +66,10 @@ public final class VirtualMachineInstanceViewResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="disks")
-      private final @Nullable List<DiskInstanceViewResponse> disks;
+    private @Nullable List<DiskInstanceViewResponse> disks;
 
-    public List<DiskInstanceViewResponse> disks() {
-        return this.disks == null ? List.of() : this.disks;
+    public Optional<List<DiskInstanceViewResponse>> disks() {
+        return Optional.ofNullable(this.disks);
     }
 
     /**
@@ -77,10 +77,10 @@ public final class VirtualMachineInstanceViewResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="extensions")
-      private final @Nullable List<VirtualMachineExtensionInstanceViewResponse> extensions;
+    private @Nullable List<VirtualMachineExtensionInstanceViewResponse> extensions;
 
-    public List<VirtualMachineExtensionInstanceViewResponse> extensions() {
-        return this.extensions == null ? List.of() : this.extensions;
+    public Optional<List<VirtualMachineExtensionInstanceViewResponse>> extensions() {
+        return Optional.ofNullable(this.extensions);
     }
 
     /**
@@ -88,10 +88,10 @@ public final class VirtualMachineInstanceViewResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="hyperVGeneration")
-      private final @Nullable String hyperVGeneration;
+    private @Nullable String hyperVGeneration;
 
     public Optional<String> hyperVGeneration() {
-        return this.hyperVGeneration == null ? Optional.empty() : Optional.ofNullable(this.hyperVGeneration);
+        return Optional.ofNullable(this.hyperVGeneration);
     }
 
     /**
@@ -99,10 +99,10 @@ public final class VirtualMachineInstanceViewResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="maintenanceRedeployStatus")
-      private final @Nullable MaintenanceRedeployStatusResponse maintenanceRedeployStatus;
+    private @Nullable MaintenanceRedeployStatusResponse maintenanceRedeployStatus;
 
     public Optional<MaintenanceRedeployStatusResponse> maintenanceRedeployStatus() {
-        return this.maintenanceRedeployStatus == null ? Optional.empty() : Optional.ofNullable(this.maintenanceRedeployStatus);
+        return Optional.ofNullable(this.maintenanceRedeployStatus);
     }
 
     /**
@@ -110,10 +110,10 @@ public final class VirtualMachineInstanceViewResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="osName")
-      private final @Nullable String osName;
+    private @Nullable String osName;
 
     public Optional<String> osName() {
-        return this.osName == null ? Optional.empty() : Optional.ofNullable(this.osName);
+        return Optional.ofNullable(this.osName);
     }
 
     /**
@@ -121,10 +121,10 @@ public final class VirtualMachineInstanceViewResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="osVersion")
-      private final @Nullable String osVersion;
+    private @Nullable String osVersion;
 
     public Optional<String> osVersion() {
-        return this.osVersion == null ? Optional.empty() : Optional.ofNullable(this.osVersion);
+        return Optional.ofNullable(this.osVersion);
     }
 
     /**
@@ -132,10 +132,10 @@ public final class VirtualMachineInstanceViewResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="patchStatus")
-      private final @Nullable VirtualMachinePatchStatusResponse patchStatus;
+    private @Nullable VirtualMachinePatchStatusResponse patchStatus;
 
     public Optional<VirtualMachinePatchStatusResponse> patchStatus() {
-        return this.patchStatus == null ? Optional.empty() : Optional.ofNullable(this.patchStatus);
+        return Optional.ofNullable(this.patchStatus);
     }
 
     /**
@@ -143,10 +143,10 @@ public final class VirtualMachineInstanceViewResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="platformFaultDomain")
-      private final @Nullable Integer platformFaultDomain;
+    private @Nullable Integer platformFaultDomain;
 
     public Optional<Integer> platformFaultDomain() {
-        return this.platformFaultDomain == null ? Optional.empty() : Optional.ofNullable(this.platformFaultDomain);
+        return Optional.ofNullable(this.platformFaultDomain);
     }
 
     /**
@@ -154,10 +154,10 @@ public final class VirtualMachineInstanceViewResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="platformUpdateDomain")
-      private final @Nullable Integer platformUpdateDomain;
+    private @Nullable Integer platformUpdateDomain;
 
     public Optional<Integer> platformUpdateDomain() {
-        return this.platformUpdateDomain == null ? Optional.empty() : Optional.ofNullable(this.platformUpdateDomain);
+        return Optional.ofNullable(this.platformUpdateDomain);
     }
 
     /**
@@ -165,10 +165,10 @@ public final class VirtualMachineInstanceViewResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="rdpThumbPrint")
-      private final @Nullable String rdpThumbPrint;
+    private @Nullable String rdpThumbPrint;
 
     public Optional<String> rdpThumbPrint() {
-        return this.rdpThumbPrint == null ? Optional.empty() : Optional.ofNullable(this.rdpThumbPrint);
+        return Optional.ofNullable(this.rdpThumbPrint);
     }
 
     /**
@@ -176,10 +176,10 @@ public final class VirtualMachineInstanceViewResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="statuses")
-      private final @Nullable List<InstanceViewStatusResponse> statuses;
+    private @Nullable List<InstanceViewStatusResponse> statuses;
 
-    public List<InstanceViewStatusResponse> statuses() {
-        return this.statuses == null ? List.of() : this.statuses;
+    public Optional<List<InstanceViewStatusResponse>> statuses() {
+        return Optional.ofNullable(this.statuses);
     }
 
     /**
@@ -187,10 +187,10 @@ public final class VirtualMachineInstanceViewResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="vmAgent")
-      private final @Nullable VirtualMachineAgentInstanceViewResponse vmAgent;
+    private @Nullable VirtualMachineAgentInstanceViewResponse vmAgent;
 
     public Optional<VirtualMachineAgentInstanceViewResponse> vmAgent() {
-        return this.vmAgent == null ? Optional.empty() : Optional.ofNullable(this.vmAgent);
+        return Optional.ofNullable(this.vmAgent);
     }
 
     /**
@@ -198,190 +198,148 @@ public final class VirtualMachineInstanceViewResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="vmHealth", required=true)
-      private final VirtualMachineHealthStatusResponse vmHealth;
+    private VirtualMachineHealthStatusResponse vmHealth;
 
     public VirtualMachineHealthStatusResponse vmHealth() {
         return this.vmHealth;
     }
 
-    public VirtualMachineInstanceViewResponse(
-        String assignedHost,
-        @Nullable BootDiagnosticsInstanceViewResponse bootDiagnostics,
-        @Nullable String computerName,
-        @Nullable List<DiskInstanceViewResponse> disks,
-        @Nullable List<VirtualMachineExtensionInstanceViewResponse> extensions,
-        @Nullable String hyperVGeneration,
-        @Nullable MaintenanceRedeployStatusResponse maintenanceRedeployStatus,
-        @Nullable String osName,
-        @Nullable String osVersion,
-        @Nullable VirtualMachinePatchStatusResponse patchStatus,
-        @Nullable Integer platformFaultDomain,
-        @Nullable Integer platformUpdateDomain,
-        @Nullable String rdpThumbPrint,
-        @Nullable List<InstanceViewStatusResponse> statuses,
-        @Nullable VirtualMachineAgentInstanceViewResponse vmAgent,
-        VirtualMachineHealthStatusResponse vmHealth) {
-        this.assignedHost = Objects.requireNonNull(assignedHost, "expected parameter 'assignedHost' to be non-null");
-        this.bootDiagnostics = bootDiagnostics;
-        this.computerName = computerName;
-        this.disks = disks;
-        this.extensions = extensions;
-        this.hyperVGeneration = hyperVGeneration;
-        this.maintenanceRedeployStatus = maintenanceRedeployStatus;
-        this.osName = osName;
-        this.osVersion = osVersion;
-        this.patchStatus = patchStatus;
-        this.platformFaultDomain = platformFaultDomain;
-        this.platformUpdateDomain = platformUpdateDomain;
-        this.rdpThumbPrint = rdpThumbPrint;
-        this.statuses = statuses;
-        this.vmAgent = vmAgent;
-        this.vmHealth = Objects.requireNonNull(vmHealth, "expected parameter 'vmHealth' to be non-null");
-    }
+    private VirtualMachineInstanceViewResponse() {}
 
-    private VirtualMachineInstanceViewResponse() {
-        this.assignedHost = null;
-        this.bootDiagnostics = null;
-        this.computerName = null;
-        this.disks = List.of();
-        this.extensions = List.of();
-        this.hyperVGeneration = null;
-        this.maintenanceRedeployStatus = null;
-        this.osName = null;
-        this.osVersion = null;
-        this.patchStatus = null;
-        this.platformFaultDomain = null;
-        this.platformUpdateDomain = null;
-        this.rdpThumbPrint = null;
-        this.statuses = List.of();
-        this.vmAgent = null;
-        this.vmHealth = null;
+    private VirtualMachineInstanceViewResponse(VirtualMachineInstanceViewResponse $) {
+        this.assignedHost = $.assignedHost;
+        this.bootDiagnostics = $.bootDiagnostics;
+        this.computerName = $.computerName;
+        this.disks = $.disks;
+        this.extensions = $.extensions;
+        this.hyperVGeneration = $.hyperVGeneration;
+        this.maintenanceRedeployStatus = $.maintenanceRedeployStatus;
+        this.osName = $.osName;
+        this.osVersion = $.osVersion;
+        this.patchStatus = $.patchStatus;
+        this.platformFaultDomain = $.platformFaultDomain;
+        this.platformUpdateDomain = $.platformUpdateDomain;
+        this.rdpThumbPrint = $.rdpThumbPrint;
+        this.statuses = $.statuses;
+        this.vmAgent = $.vmAgent;
+        this.vmHealth = $.vmHealth;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VirtualMachineInstanceViewResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String assignedHost;
-        private @Nullable BootDiagnosticsInstanceViewResponse bootDiagnostics;
-        private @Nullable String computerName;
-        private @Nullable List<DiskInstanceViewResponse> disks;
-        private @Nullable List<VirtualMachineExtensionInstanceViewResponse> extensions;
-        private @Nullable String hyperVGeneration;
-        private @Nullable MaintenanceRedeployStatusResponse maintenanceRedeployStatus;
-        private @Nullable String osName;
-        private @Nullable String osVersion;
-        private @Nullable VirtualMachinePatchStatusResponse patchStatus;
-        private @Nullable Integer platformFaultDomain;
-        private @Nullable Integer platformUpdateDomain;
-        private @Nullable String rdpThumbPrint;
-        private @Nullable List<InstanceViewStatusResponse> statuses;
-        private @Nullable VirtualMachineAgentInstanceViewResponse vmAgent;
-        private VirtualMachineHealthStatusResponse vmHealth;
+        private VirtualMachineInstanceViewResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new VirtualMachineInstanceViewResponse();
         }
 
         public Builder(VirtualMachineInstanceViewResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.assignedHost = defaults.assignedHost;
-    	      this.bootDiagnostics = defaults.bootDiagnostics;
-    	      this.computerName = defaults.computerName;
-    	      this.disks = defaults.disks;
-    	      this.extensions = defaults.extensions;
-    	      this.hyperVGeneration = defaults.hyperVGeneration;
-    	      this.maintenanceRedeployStatus = defaults.maintenanceRedeployStatus;
-    	      this.osName = defaults.osName;
-    	      this.osVersion = defaults.osVersion;
-    	      this.patchStatus = defaults.patchStatus;
-    	      this.platformFaultDomain = defaults.platformFaultDomain;
-    	      this.platformUpdateDomain = defaults.platformUpdateDomain;
-    	      this.rdpThumbPrint = defaults.rdpThumbPrint;
-    	      this.statuses = defaults.statuses;
-    	      this.vmAgent = defaults.vmAgent;
-    	      this.vmHealth = defaults.vmHealth;
+            $ = new VirtualMachineInstanceViewResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder assignedHost(String assignedHost) {
-            this.assignedHost = Objects.requireNonNull(assignedHost);
+            $.assignedHost = assignedHost;
             return this;
         }
+
         public Builder bootDiagnostics(@Nullable BootDiagnosticsInstanceViewResponse bootDiagnostics) {
-            this.bootDiagnostics = bootDiagnostics;
+            $.bootDiagnostics = bootDiagnostics;
             return this;
         }
+
         public Builder computerName(@Nullable String computerName) {
-            this.computerName = computerName;
+            $.computerName = computerName;
             return this;
         }
+
         public Builder disks(@Nullable List<DiskInstanceViewResponse> disks) {
-            this.disks = disks;
+            $.disks = disks;
             return this;
         }
+
         public Builder disks(DiskInstanceViewResponse... disks) {
             return disks(List.of(disks));
         }
+
         public Builder extensions(@Nullable List<VirtualMachineExtensionInstanceViewResponse> extensions) {
-            this.extensions = extensions;
+            $.extensions = extensions;
             return this;
         }
+
         public Builder extensions(VirtualMachineExtensionInstanceViewResponse... extensions) {
             return extensions(List.of(extensions));
         }
+
         public Builder hyperVGeneration(@Nullable String hyperVGeneration) {
-            this.hyperVGeneration = hyperVGeneration;
+            $.hyperVGeneration = hyperVGeneration;
             return this;
         }
+
         public Builder maintenanceRedeployStatus(@Nullable MaintenanceRedeployStatusResponse maintenanceRedeployStatus) {
-            this.maintenanceRedeployStatus = maintenanceRedeployStatus;
+            $.maintenanceRedeployStatus = maintenanceRedeployStatus;
             return this;
         }
+
         public Builder osName(@Nullable String osName) {
-            this.osName = osName;
+            $.osName = osName;
             return this;
         }
+
         public Builder osVersion(@Nullable String osVersion) {
-            this.osVersion = osVersion;
+            $.osVersion = osVersion;
             return this;
         }
+
         public Builder patchStatus(@Nullable VirtualMachinePatchStatusResponse patchStatus) {
-            this.patchStatus = patchStatus;
+            $.patchStatus = patchStatus;
             return this;
         }
+
         public Builder platformFaultDomain(@Nullable Integer platformFaultDomain) {
-            this.platformFaultDomain = platformFaultDomain;
+            $.platformFaultDomain = platformFaultDomain;
             return this;
         }
+
         public Builder platformUpdateDomain(@Nullable Integer platformUpdateDomain) {
-            this.platformUpdateDomain = platformUpdateDomain;
+            $.platformUpdateDomain = platformUpdateDomain;
             return this;
         }
+
         public Builder rdpThumbPrint(@Nullable String rdpThumbPrint) {
-            this.rdpThumbPrint = rdpThumbPrint;
+            $.rdpThumbPrint = rdpThumbPrint;
             return this;
         }
+
         public Builder statuses(@Nullable List<InstanceViewStatusResponse> statuses) {
-            this.statuses = statuses;
+            $.statuses = statuses;
             return this;
         }
+
         public Builder statuses(InstanceViewStatusResponse... statuses) {
             return statuses(List.of(statuses));
         }
+
         public Builder vmAgent(@Nullable VirtualMachineAgentInstanceViewResponse vmAgent) {
-            this.vmAgent = vmAgent;
+            $.vmAgent = vmAgent;
             return this;
         }
+
         public Builder vmHealth(VirtualMachineHealthStatusResponse vmHealth) {
-            this.vmHealth = Objects.requireNonNull(vmHealth);
+            $.vmHealth = vmHealth;
             return this;
-        }        public VirtualMachineInstanceViewResponse build() {
-            return new VirtualMachineInstanceViewResponse(assignedHost, bootDiagnostics, computerName, disks, extensions, hyperVGeneration, maintenanceRedeployStatus, osName, osVersion, patchStatus, platformFaultDomain, platformUpdateDomain, rdpThumbPrint, statuses, vmAgent, vmHealth);
+        }
+
+        public VirtualMachineInstanceViewResponse build() {
+            $.assignedHost = Objects.requireNonNull($.assignedHost, "expected parameter 'assignedHost' to be non-null");
+            $.vmHealth = Objects.requireNonNull($.vmHealth, "expected parameter 'vmHealth' to be non-null");
+            return $;
         }
     }
+
 }

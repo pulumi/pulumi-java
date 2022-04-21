@@ -22,7 +22,7 @@ public final class TextMappingResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="atomKey", required=true)
-      private final String atomKey;
+    private String atomKey;
 
     public String atomKey() {
         return this.atomKey;
@@ -33,7 +33,7 @@ public final class TextMappingResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="inputKey", required=true)
-      private final String inputKey;
+    private String inputKey;
 
     public String inputKey() {
         return this.inputKey;
@@ -44,64 +44,59 @@ public final class TextMappingResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="inputTrack", required=true)
-      private final Integer inputTrack;
+    private Integer inputTrack;
 
     public Integer inputTrack() {
         return this.inputTrack;
     }
 
-    public TextMappingResponse(
-        String atomKey,
-        String inputKey,
-        Integer inputTrack) {
-        this.atomKey = Objects.requireNonNull(atomKey, "expected parameter 'atomKey' to be non-null");
-        this.inputKey = Objects.requireNonNull(inputKey, "expected parameter 'inputKey' to be non-null");
-        this.inputTrack = Objects.requireNonNull(inputTrack, "expected parameter 'inputTrack' to be non-null");
-    }
+    private TextMappingResponse() {}
 
-    private TextMappingResponse() {
-        this.atomKey = null;
-        this.inputKey = null;
-        this.inputTrack = null;
+    private TextMappingResponse(TextMappingResponse $) {
+        this.atomKey = $.atomKey;
+        this.inputKey = $.inputKey;
+        this.inputTrack = $.inputTrack;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TextMappingResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String atomKey;
-        private String inputKey;
-        private Integer inputTrack;
+        private TextMappingResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new TextMappingResponse();
         }
 
         public Builder(TextMappingResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.atomKey = defaults.atomKey;
-    	      this.inputKey = defaults.inputKey;
-    	      this.inputTrack = defaults.inputTrack;
+            $ = new TextMappingResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder atomKey(String atomKey) {
-            this.atomKey = Objects.requireNonNull(atomKey);
+            $.atomKey = atomKey;
             return this;
         }
+
         public Builder inputKey(String inputKey) {
-            this.inputKey = Objects.requireNonNull(inputKey);
+            $.inputKey = inputKey;
             return this;
         }
+
         public Builder inputTrack(Integer inputTrack) {
-            this.inputTrack = Objects.requireNonNull(inputTrack);
+            $.inputTrack = inputTrack;
             return this;
-        }        public TextMappingResponse build() {
-            return new TextMappingResponse(atomKey, inputKey, inputTrack);
+        }
+
+        public TextMappingResponse build() {
+            $.atomKey = Objects.requireNonNull($.atomKey, "expected parameter 'atomKey' to be non-null");
+            $.inputKey = Objects.requireNonNull($.inputKey, "expected parameter 'inputKey' to be non-null");
+            $.inputTrack = Objects.requireNonNull($.inputTrack, "expected parameter 'inputTrack' to be non-null");
+            return $;
         }
     }
+
 }

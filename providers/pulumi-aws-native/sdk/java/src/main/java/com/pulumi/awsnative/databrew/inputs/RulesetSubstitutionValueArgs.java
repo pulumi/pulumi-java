@@ -5,7 +5,6 @@ package com.pulumi.awsnative.databrew.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,7 +22,7 @@ public final class RulesetSubstitutionValueArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="value", required=true)
-      private final Output<String> value;
+    private Output<String> value;
 
     public Output<String> value() {
         return this.value;
@@ -34,63 +33,60 @@ public final class RulesetSubstitutionValueArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="valueReference", required=true)
-      private final Output<String> valueReference;
+    private Output<String> valueReference;
 
     public Output<String> valueReference() {
         return this.valueReference;
     }
 
-    public RulesetSubstitutionValueArgs(
-        Output<String> value,
-        Output<String> valueReference) {
-        this.value = Objects.requireNonNull(value, "expected parameter 'value' to be non-null");
-        this.valueReference = Objects.requireNonNull(valueReference, "expected parameter 'valueReference' to be non-null");
-    }
+    private RulesetSubstitutionValueArgs() {}
 
-    private RulesetSubstitutionValueArgs() {
-        this.value = Codegen.empty();
-        this.valueReference = Codegen.empty();
+    private RulesetSubstitutionValueArgs(RulesetSubstitutionValueArgs $) {
+        this.value = $.value;
+        this.valueReference = $.valueReference;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RulesetSubstitutionValueArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> value;
-        private Output<String> valueReference;
+        private RulesetSubstitutionValueArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RulesetSubstitutionValueArgs();
         }
 
         public Builder(RulesetSubstitutionValueArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.value = defaults.value;
-    	      this.valueReference = defaults.valueReference;
+            $ = new RulesetSubstitutionValueArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder value(Output<String> value) {
-            this.value = Objects.requireNonNull(value);
+            $.value = value;
             return this;
         }
+
         public Builder value(String value) {
-            this.value = Output.of(Objects.requireNonNull(value));
-            return this;
+            return value(Output.of(value));
         }
+
         public Builder valueReference(Output<String> valueReference) {
-            this.valueReference = Objects.requireNonNull(valueReference);
+            $.valueReference = valueReference;
             return this;
         }
+
         public Builder valueReference(String valueReference) {
-            this.valueReference = Output.of(Objects.requireNonNull(valueReference));
-            return this;
-        }        public RulesetSubstitutionValueArgs build() {
-            return new RulesetSubstitutionValueArgs(value, valueReference);
+            return valueReference(Output.of(valueReference));
+        }
+
+        public RulesetSubstitutionValueArgs build() {
+            $.value = Objects.requireNonNull($.value, "expected parameter 'value' to be non-null");
+            $.valueReference = Objects.requireNonNull($.valueReference, "expected parameter 'valueReference' to be non-null");
+            return $;
         }
     }
+
 }

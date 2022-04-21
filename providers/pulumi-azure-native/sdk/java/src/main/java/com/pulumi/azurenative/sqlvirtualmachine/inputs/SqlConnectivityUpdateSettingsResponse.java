@@ -24,10 +24,10 @@ public final class SqlConnectivityUpdateSettingsResponse extends com.pulumi.reso
      * 
      */
     @Import(name="connectivityType")
-      private final @Nullable String connectivityType;
+    private @Nullable String connectivityType;
 
     public Optional<String> connectivityType() {
-        return this.connectivityType == null ? Optional.empty() : Optional.ofNullable(this.connectivityType);
+        return Optional.ofNullable(this.connectivityType);
     }
 
     /**
@@ -35,55 +35,50 @@ public final class SqlConnectivityUpdateSettingsResponse extends com.pulumi.reso
      * 
      */
     @Import(name="port")
-      private final @Nullable Integer port;
+    private @Nullable Integer port;
 
     public Optional<Integer> port() {
-        return this.port == null ? Optional.empty() : Optional.ofNullable(this.port);
+        return Optional.ofNullable(this.port);
     }
 
-    public SqlConnectivityUpdateSettingsResponse(
-        @Nullable String connectivityType,
-        @Nullable Integer port) {
-        this.connectivityType = connectivityType;
-        this.port = port;
-    }
+    private SqlConnectivityUpdateSettingsResponse() {}
 
-    private SqlConnectivityUpdateSettingsResponse() {
-        this.connectivityType = null;
-        this.port = null;
+    private SqlConnectivityUpdateSettingsResponse(SqlConnectivityUpdateSettingsResponse $) {
+        this.connectivityType = $.connectivityType;
+        this.port = $.port;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SqlConnectivityUpdateSettingsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String connectivityType;
-        private @Nullable Integer port;
+        private SqlConnectivityUpdateSettingsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new SqlConnectivityUpdateSettingsResponse();
         }
 
         public Builder(SqlConnectivityUpdateSettingsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.connectivityType = defaults.connectivityType;
-    	      this.port = defaults.port;
+            $ = new SqlConnectivityUpdateSettingsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder connectivityType(@Nullable String connectivityType) {
-            this.connectivityType = connectivityType;
+            $.connectivityType = connectivityType;
             return this;
         }
+
         public Builder port(@Nullable Integer port) {
-            this.port = port;
+            $.port = port;
             return this;
-        }        public SqlConnectivityUpdateSettingsResponse build() {
-            return new SqlConnectivityUpdateSettingsResponse(connectivityType, port);
+        }
+
+        public SqlConnectivityUpdateSettingsResponse build() {
+            return $;
         }
     }
+
 }

@@ -13,78 +13,73 @@ public final class GetQueryArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetQueryArgs Empty = new GetQueryArgs();
 
     @Import(name="environmentId", required=true)
-      private final String environmentId;
+    private String environmentId;
 
     public String environmentId() {
         return this.environmentId;
     }
 
     @Import(name="organizationId", required=true)
-      private final String organizationId;
+    private String organizationId;
 
     public String organizationId() {
         return this.organizationId;
     }
 
     @Import(name="queryId", required=true)
-      private final String queryId;
+    private String queryId;
 
     public String queryId() {
         return this.queryId;
     }
 
-    public GetQueryArgs(
-        String environmentId,
-        String organizationId,
-        String queryId) {
-        this.environmentId = Objects.requireNonNull(environmentId, "expected parameter 'environmentId' to be non-null");
-        this.organizationId = Objects.requireNonNull(organizationId, "expected parameter 'organizationId' to be non-null");
-        this.queryId = Objects.requireNonNull(queryId, "expected parameter 'queryId' to be non-null");
-    }
+    private GetQueryArgs() {}
 
-    private GetQueryArgs() {
-        this.environmentId = null;
-        this.organizationId = null;
-        this.queryId = null;
+    private GetQueryArgs(GetQueryArgs $) {
+        this.environmentId = $.environmentId;
+        this.organizationId = $.organizationId;
+        this.queryId = $.queryId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetQueryArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String environmentId;
-        private String organizationId;
-        private String queryId;
+        private GetQueryArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetQueryArgs();
         }
 
         public Builder(GetQueryArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.environmentId = defaults.environmentId;
-    	      this.organizationId = defaults.organizationId;
-    	      this.queryId = defaults.queryId;
+            $ = new GetQueryArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder environmentId(String environmentId) {
-            this.environmentId = Objects.requireNonNull(environmentId);
+            $.environmentId = environmentId;
             return this;
         }
+
         public Builder organizationId(String organizationId) {
-            this.organizationId = Objects.requireNonNull(organizationId);
+            $.organizationId = organizationId;
             return this;
         }
+
         public Builder queryId(String queryId) {
-            this.queryId = Objects.requireNonNull(queryId);
+            $.queryId = queryId;
             return this;
-        }        public GetQueryArgs build() {
-            return new GetQueryArgs(environmentId, organizationId, queryId);
+        }
+
+        public GetQueryArgs build() {
+            $.environmentId = Objects.requireNonNull($.environmentId, "expected parameter 'environmentId' to be non-null");
+            $.organizationId = Objects.requireNonNull($.organizationId, "expected parameter 'organizationId' to be non-null");
+            $.queryId = Objects.requireNonNull($.queryId, "expected parameter 'queryId' to be non-null");
+            return $;
         }
     }
+
 }

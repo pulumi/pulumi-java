@@ -17,7 +17,7 @@ public final class GetBindingArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="appName", required=true)
-      private final String appName;
+    private String appName;
 
     public String appName() {
         return this.appName;
@@ -28,7 +28,7 @@ public final class GetBindingArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="bindingName", required=true)
-      private final String bindingName;
+    private String bindingName;
 
     public String bindingName() {
         return this.bindingName;
@@ -39,7 +39,7 @@ public final class GetBindingArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -50,73 +50,66 @@ public final class GetBindingArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="serviceName", required=true)
-      private final String serviceName;
+    private String serviceName;
 
     public String serviceName() {
         return this.serviceName;
     }
 
-    public GetBindingArgs(
-        String appName,
-        String bindingName,
-        String resourceGroupName,
-        String serviceName) {
-        this.appName = Objects.requireNonNull(appName, "expected parameter 'appName' to be non-null");
-        this.bindingName = Objects.requireNonNull(bindingName, "expected parameter 'bindingName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.serviceName = Objects.requireNonNull(serviceName, "expected parameter 'serviceName' to be non-null");
-    }
+    private GetBindingArgs() {}
 
-    private GetBindingArgs() {
-        this.appName = null;
-        this.bindingName = null;
-        this.resourceGroupName = null;
-        this.serviceName = null;
+    private GetBindingArgs(GetBindingArgs $) {
+        this.appName = $.appName;
+        this.bindingName = $.bindingName;
+        this.resourceGroupName = $.resourceGroupName;
+        this.serviceName = $.serviceName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetBindingArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String appName;
-        private String bindingName;
-        private String resourceGroupName;
-        private String serviceName;
+        private GetBindingArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetBindingArgs();
         }
 
         public Builder(GetBindingArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.appName = defaults.appName;
-    	      this.bindingName = defaults.bindingName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.serviceName = defaults.serviceName;
+            $ = new GetBindingArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder appName(String appName) {
-            this.appName = Objects.requireNonNull(appName);
+            $.appName = appName;
             return this;
         }
+
         public Builder bindingName(String bindingName) {
-            this.bindingName = Objects.requireNonNull(bindingName);
+            $.bindingName = bindingName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder serviceName(String serviceName) {
-            this.serviceName = Objects.requireNonNull(serviceName);
+            $.serviceName = serviceName;
             return this;
-        }        public GetBindingArgs build() {
-            return new GetBindingArgs(appName, bindingName, resourceGroupName, serviceName);
+        }
+
+        public GetBindingArgs build() {
+            $.appName = Objects.requireNonNull($.appName, "expected parameter 'appName' to be non-null");
+            $.bindingName = Objects.requireNonNull($.bindingName, "expected parameter 'bindingName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.serviceName = Objects.requireNonNull($.serviceName, "expected parameter 'serviceName' to be non-null");
+            return $;
         }
     }
+
 }

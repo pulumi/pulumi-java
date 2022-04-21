@@ -6,7 +6,6 @@ package com.pulumi.azurenative.storagecache.inputs;
 import com.pulumi.azurenative.storagecache.inputs.KeyVaultKeyReferenceSourceVaultArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -24,7 +23,7 @@ public final class KeyVaultKeyReferenceArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="keyUrl", required=true)
-      private final Output<String> keyUrl;
+    private Output<String> keyUrl;
 
     public Output<String> keyUrl() {
         return this.keyUrl;
@@ -35,63 +34,60 @@ public final class KeyVaultKeyReferenceArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="sourceVault", required=true)
-      private final Output<KeyVaultKeyReferenceSourceVaultArgs> sourceVault;
+    private Output<KeyVaultKeyReferenceSourceVaultArgs> sourceVault;
 
     public Output<KeyVaultKeyReferenceSourceVaultArgs> sourceVault() {
         return this.sourceVault;
     }
 
-    public KeyVaultKeyReferenceArgs(
-        Output<String> keyUrl,
-        Output<KeyVaultKeyReferenceSourceVaultArgs> sourceVault) {
-        this.keyUrl = Objects.requireNonNull(keyUrl, "expected parameter 'keyUrl' to be non-null");
-        this.sourceVault = Objects.requireNonNull(sourceVault, "expected parameter 'sourceVault' to be non-null");
-    }
+    private KeyVaultKeyReferenceArgs() {}
 
-    private KeyVaultKeyReferenceArgs() {
-        this.keyUrl = Codegen.empty();
-        this.sourceVault = Codegen.empty();
+    private KeyVaultKeyReferenceArgs(KeyVaultKeyReferenceArgs $) {
+        this.keyUrl = $.keyUrl;
+        this.sourceVault = $.sourceVault;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(KeyVaultKeyReferenceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> keyUrl;
-        private Output<KeyVaultKeyReferenceSourceVaultArgs> sourceVault;
+        private KeyVaultKeyReferenceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new KeyVaultKeyReferenceArgs();
         }
 
         public Builder(KeyVaultKeyReferenceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.keyUrl = defaults.keyUrl;
-    	      this.sourceVault = defaults.sourceVault;
+            $ = new KeyVaultKeyReferenceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder keyUrl(Output<String> keyUrl) {
-            this.keyUrl = Objects.requireNonNull(keyUrl);
+            $.keyUrl = keyUrl;
             return this;
         }
+
         public Builder keyUrl(String keyUrl) {
-            this.keyUrl = Output.of(Objects.requireNonNull(keyUrl));
-            return this;
+            return keyUrl(Output.of(keyUrl));
         }
+
         public Builder sourceVault(Output<KeyVaultKeyReferenceSourceVaultArgs> sourceVault) {
-            this.sourceVault = Objects.requireNonNull(sourceVault);
+            $.sourceVault = sourceVault;
             return this;
         }
+
         public Builder sourceVault(KeyVaultKeyReferenceSourceVaultArgs sourceVault) {
-            this.sourceVault = Output.of(Objects.requireNonNull(sourceVault));
-            return this;
-        }        public KeyVaultKeyReferenceArgs build() {
-            return new KeyVaultKeyReferenceArgs(keyUrl, sourceVault);
+            return sourceVault(Output.of(sourceVault));
+        }
+
+        public KeyVaultKeyReferenceArgs build() {
+            $.keyUrl = Objects.requireNonNull($.keyUrl, "expected parameter 'keyUrl' to be non-null");
+            $.sourceVault = Objects.requireNonNull($.sourceVault, "expected parameter 'sourceVault' to be non-null");
+            return $;
         }
     }
+
 }

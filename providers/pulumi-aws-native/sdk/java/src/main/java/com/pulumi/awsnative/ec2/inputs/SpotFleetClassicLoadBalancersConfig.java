@@ -14,48 +14,49 @@ public final class SpotFleetClassicLoadBalancersConfig extends com.pulumi.resour
     public static final SpotFleetClassicLoadBalancersConfig Empty = new SpotFleetClassicLoadBalancersConfig();
 
     @Import(name="classicLoadBalancers", required=true)
-      private final List<SpotFleetClassicLoadBalancer> classicLoadBalancers;
+    private List<SpotFleetClassicLoadBalancer> classicLoadBalancers;
 
     public List<SpotFleetClassicLoadBalancer> classicLoadBalancers() {
         return this.classicLoadBalancers;
     }
 
-    public SpotFleetClassicLoadBalancersConfig(List<SpotFleetClassicLoadBalancer> classicLoadBalancers) {
-        this.classicLoadBalancers = Objects.requireNonNull(classicLoadBalancers, "expected parameter 'classicLoadBalancers' to be non-null");
-    }
+    private SpotFleetClassicLoadBalancersConfig() {}
 
-    private SpotFleetClassicLoadBalancersConfig() {
-        this.classicLoadBalancers = List.of();
+    private SpotFleetClassicLoadBalancersConfig(SpotFleetClassicLoadBalancersConfig $) {
+        this.classicLoadBalancers = $.classicLoadBalancers;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SpotFleetClassicLoadBalancersConfig defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<SpotFleetClassicLoadBalancer> classicLoadBalancers;
+        private SpotFleetClassicLoadBalancersConfig $;
 
         public Builder() {
-    	      // Empty
+            $ = new SpotFleetClassicLoadBalancersConfig();
         }
 
         public Builder(SpotFleetClassicLoadBalancersConfig defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.classicLoadBalancers = defaults.classicLoadBalancers;
+            $ = new SpotFleetClassicLoadBalancersConfig(Objects.requireNonNull(defaults));
         }
 
         public Builder classicLoadBalancers(List<SpotFleetClassicLoadBalancer> classicLoadBalancers) {
-            this.classicLoadBalancers = Objects.requireNonNull(classicLoadBalancers);
+            $.classicLoadBalancers = classicLoadBalancers;
             return this;
         }
+
         public Builder classicLoadBalancers(SpotFleetClassicLoadBalancer... classicLoadBalancers) {
             return classicLoadBalancers(List.of(classicLoadBalancers));
-        }        public SpotFleetClassicLoadBalancersConfig build() {
-            return new SpotFleetClassicLoadBalancersConfig(classicLoadBalancers);
+        }
+
+        public SpotFleetClassicLoadBalancersConfig build() {
+            $.classicLoadBalancers = Objects.requireNonNull($.classicLoadBalancers, "expected parameter 'classicLoadBalancers' to be non-null");
+            return $;
         }
     }
+
 }

@@ -19,7 +19,7 @@ public final class GetCachePolicyParametersInCacheKeyAndForwardedToOriginQuerySt
      * 
      */
     @Import(name="queryStringBehavior", required=true)
-      private final String queryStringBehavior;
+    private String queryStringBehavior;
 
     public String queryStringBehavior() {
         return this.queryStringBehavior;
@@ -30,58 +30,56 @@ public final class GetCachePolicyParametersInCacheKeyAndForwardedToOriginQuerySt
      * 
      */
     @Import(name="queryStrings", required=true)
-      private final List<GetCachePolicyParametersInCacheKeyAndForwardedToOriginQueryStringsConfigQueryString> queryStrings;
+    private List<GetCachePolicyParametersInCacheKeyAndForwardedToOriginQueryStringsConfigQueryString> queryStrings;
 
     public List<GetCachePolicyParametersInCacheKeyAndForwardedToOriginQueryStringsConfigQueryString> queryStrings() {
         return this.queryStrings;
     }
 
-    public GetCachePolicyParametersInCacheKeyAndForwardedToOriginQueryStringsConfig(
-        String queryStringBehavior,
-        List<GetCachePolicyParametersInCacheKeyAndForwardedToOriginQueryStringsConfigQueryString> queryStrings) {
-        this.queryStringBehavior = Objects.requireNonNull(queryStringBehavior, "expected parameter 'queryStringBehavior' to be non-null");
-        this.queryStrings = Objects.requireNonNull(queryStrings, "expected parameter 'queryStrings' to be non-null");
-    }
+    private GetCachePolicyParametersInCacheKeyAndForwardedToOriginQueryStringsConfig() {}
 
-    private GetCachePolicyParametersInCacheKeyAndForwardedToOriginQueryStringsConfig() {
-        this.queryStringBehavior = null;
-        this.queryStrings = List.of();
+    private GetCachePolicyParametersInCacheKeyAndForwardedToOriginQueryStringsConfig(GetCachePolicyParametersInCacheKeyAndForwardedToOriginQueryStringsConfig $) {
+        this.queryStringBehavior = $.queryStringBehavior;
+        this.queryStrings = $.queryStrings;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetCachePolicyParametersInCacheKeyAndForwardedToOriginQueryStringsConfig defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String queryStringBehavior;
-        private List<GetCachePolicyParametersInCacheKeyAndForwardedToOriginQueryStringsConfigQueryString> queryStrings;
+        private GetCachePolicyParametersInCacheKeyAndForwardedToOriginQueryStringsConfig $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetCachePolicyParametersInCacheKeyAndForwardedToOriginQueryStringsConfig();
         }
 
         public Builder(GetCachePolicyParametersInCacheKeyAndForwardedToOriginQueryStringsConfig defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.queryStringBehavior = defaults.queryStringBehavior;
-    	      this.queryStrings = defaults.queryStrings;
+            $ = new GetCachePolicyParametersInCacheKeyAndForwardedToOriginQueryStringsConfig(Objects.requireNonNull(defaults));
         }
 
         public Builder queryStringBehavior(String queryStringBehavior) {
-            this.queryStringBehavior = Objects.requireNonNull(queryStringBehavior);
+            $.queryStringBehavior = queryStringBehavior;
             return this;
         }
+
         public Builder queryStrings(List<GetCachePolicyParametersInCacheKeyAndForwardedToOriginQueryStringsConfigQueryString> queryStrings) {
-            this.queryStrings = Objects.requireNonNull(queryStrings);
+            $.queryStrings = queryStrings;
             return this;
         }
+
         public Builder queryStrings(GetCachePolicyParametersInCacheKeyAndForwardedToOriginQueryStringsConfigQueryString... queryStrings) {
             return queryStrings(List.of(queryStrings));
-        }        public GetCachePolicyParametersInCacheKeyAndForwardedToOriginQueryStringsConfig build() {
-            return new GetCachePolicyParametersInCacheKeyAndForwardedToOriginQueryStringsConfig(queryStringBehavior, queryStrings);
+        }
+
+        public GetCachePolicyParametersInCacheKeyAndForwardedToOriginQueryStringsConfig build() {
+            $.queryStringBehavior = Objects.requireNonNull($.queryStringBehavior, "expected parameter 'queryStringBehavior' to be non-null");
+            $.queryStrings = Objects.requireNonNull($.queryStrings, "expected parameter 'queryStrings' to be non-null");
+            return $;
         }
     }
+
 }

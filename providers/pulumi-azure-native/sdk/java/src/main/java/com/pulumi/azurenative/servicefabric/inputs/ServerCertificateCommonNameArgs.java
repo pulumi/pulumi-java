@@ -5,7 +5,6 @@ package com.pulumi.azurenative.servicefabric.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,7 +22,7 @@ public final class ServerCertificateCommonNameArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="certificateCommonName", required=true)
-      private final Output<String> certificateCommonName;
+    private Output<String> certificateCommonName;
 
     public Output<String> certificateCommonName() {
         return this.certificateCommonName;
@@ -34,63 +33,60 @@ public final class ServerCertificateCommonNameArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="certificateIssuerThumbprint", required=true)
-      private final Output<String> certificateIssuerThumbprint;
+    private Output<String> certificateIssuerThumbprint;
 
     public Output<String> certificateIssuerThumbprint() {
         return this.certificateIssuerThumbprint;
     }
 
-    public ServerCertificateCommonNameArgs(
-        Output<String> certificateCommonName,
-        Output<String> certificateIssuerThumbprint) {
-        this.certificateCommonName = Objects.requireNonNull(certificateCommonName, "expected parameter 'certificateCommonName' to be non-null");
-        this.certificateIssuerThumbprint = Objects.requireNonNull(certificateIssuerThumbprint, "expected parameter 'certificateIssuerThumbprint' to be non-null");
-    }
+    private ServerCertificateCommonNameArgs() {}
 
-    private ServerCertificateCommonNameArgs() {
-        this.certificateCommonName = Codegen.empty();
-        this.certificateIssuerThumbprint = Codegen.empty();
+    private ServerCertificateCommonNameArgs(ServerCertificateCommonNameArgs $) {
+        this.certificateCommonName = $.certificateCommonName;
+        this.certificateIssuerThumbprint = $.certificateIssuerThumbprint;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ServerCertificateCommonNameArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> certificateCommonName;
-        private Output<String> certificateIssuerThumbprint;
+        private ServerCertificateCommonNameArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ServerCertificateCommonNameArgs();
         }
 
         public Builder(ServerCertificateCommonNameArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.certificateCommonName = defaults.certificateCommonName;
-    	      this.certificateIssuerThumbprint = defaults.certificateIssuerThumbprint;
+            $ = new ServerCertificateCommonNameArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder certificateCommonName(Output<String> certificateCommonName) {
-            this.certificateCommonName = Objects.requireNonNull(certificateCommonName);
+            $.certificateCommonName = certificateCommonName;
             return this;
         }
+
         public Builder certificateCommonName(String certificateCommonName) {
-            this.certificateCommonName = Output.of(Objects.requireNonNull(certificateCommonName));
-            return this;
+            return certificateCommonName(Output.of(certificateCommonName));
         }
+
         public Builder certificateIssuerThumbprint(Output<String> certificateIssuerThumbprint) {
-            this.certificateIssuerThumbprint = Objects.requireNonNull(certificateIssuerThumbprint);
+            $.certificateIssuerThumbprint = certificateIssuerThumbprint;
             return this;
         }
+
         public Builder certificateIssuerThumbprint(String certificateIssuerThumbprint) {
-            this.certificateIssuerThumbprint = Output.of(Objects.requireNonNull(certificateIssuerThumbprint));
-            return this;
-        }        public ServerCertificateCommonNameArgs build() {
-            return new ServerCertificateCommonNameArgs(certificateCommonName, certificateIssuerThumbprint);
+            return certificateIssuerThumbprint(Output.of(certificateIssuerThumbprint));
+        }
+
+        public ServerCertificateCommonNameArgs build() {
+            $.certificateCommonName = Objects.requireNonNull($.certificateCommonName, "expected parameter 'certificateCommonName' to be non-null");
+            $.certificateIssuerThumbprint = Objects.requireNonNull($.certificateIssuerThumbprint, "expected parameter 'certificateIssuerThumbprint' to be non-null");
+            return $;
         }
     }
+
 }

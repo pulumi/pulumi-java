@@ -23,7 +23,7 @@ public final class KeyVaultPropertiesResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="currentVersionedKeyIdentifier", required=true)
-      private final String currentVersionedKeyIdentifier;
+    private String currentVersionedKeyIdentifier;
 
     public String currentVersionedKeyIdentifier() {
         return this.currentVersionedKeyIdentifier;
@@ -34,10 +34,10 @@ public final class KeyVaultPropertiesResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="keyName")
-      private final @Nullable String keyName;
+    private @Nullable String keyName;
 
     public Optional<String> keyName() {
-        return this.keyName == null ? Optional.empty() : Optional.ofNullable(this.keyName);
+        return Optional.ofNullable(this.keyName);
     }
 
     /**
@@ -45,10 +45,10 @@ public final class KeyVaultPropertiesResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="keyVaultUri")
-      private final @Nullable String keyVaultUri;
+    private @Nullable String keyVaultUri;
 
     public Optional<String> keyVaultUri() {
-        return this.keyVaultUri == null ? Optional.empty() : Optional.ofNullable(this.keyVaultUri);
+        return Optional.ofNullable(this.keyVaultUri);
     }
 
     /**
@@ -56,10 +56,10 @@ public final class KeyVaultPropertiesResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="keyVersion")
-      private final @Nullable String keyVersion;
+    private @Nullable String keyVersion;
 
     public Optional<String> keyVersion() {
-        return this.keyVersion == null ? Optional.empty() : Optional.ofNullable(this.keyVersion);
+        return Optional.ofNullable(this.keyVersion);
     }
 
     /**
@@ -67,82 +67,70 @@ public final class KeyVaultPropertiesResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="lastKeyRotationTimestamp", required=true)
-      private final String lastKeyRotationTimestamp;
+    private String lastKeyRotationTimestamp;
 
     public String lastKeyRotationTimestamp() {
         return this.lastKeyRotationTimestamp;
     }
 
-    public KeyVaultPropertiesResponse(
-        String currentVersionedKeyIdentifier,
-        @Nullable String keyName,
-        @Nullable String keyVaultUri,
-        @Nullable String keyVersion,
-        String lastKeyRotationTimestamp) {
-        this.currentVersionedKeyIdentifier = Objects.requireNonNull(currentVersionedKeyIdentifier, "expected parameter 'currentVersionedKeyIdentifier' to be non-null");
-        this.keyName = keyName;
-        this.keyVaultUri = keyVaultUri;
-        this.keyVersion = keyVersion;
-        this.lastKeyRotationTimestamp = Objects.requireNonNull(lastKeyRotationTimestamp, "expected parameter 'lastKeyRotationTimestamp' to be non-null");
-    }
+    private KeyVaultPropertiesResponse() {}
 
-    private KeyVaultPropertiesResponse() {
-        this.currentVersionedKeyIdentifier = null;
-        this.keyName = null;
-        this.keyVaultUri = null;
-        this.keyVersion = null;
-        this.lastKeyRotationTimestamp = null;
+    private KeyVaultPropertiesResponse(KeyVaultPropertiesResponse $) {
+        this.currentVersionedKeyIdentifier = $.currentVersionedKeyIdentifier;
+        this.keyName = $.keyName;
+        this.keyVaultUri = $.keyVaultUri;
+        this.keyVersion = $.keyVersion;
+        this.lastKeyRotationTimestamp = $.lastKeyRotationTimestamp;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(KeyVaultPropertiesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String currentVersionedKeyIdentifier;
-        private @Nullable String keyName;
-        private @Nullable String keyVaultUri;
-        private @Nullable String keyVersion;
-        private String lastKeyRotationTimestamp;
+        private KeyVaultPropertiesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new KeyVaultPropertiesResponse();
         }
 
         public Builder(KeyVaultPropertiesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.currentVersionedKeyIdentifier = defaults.currentVersionedKeyIdentifier;
-    	      this.keyName = defaults.keyName;
-    	      this.keyVaultUri = defaults.keyVaultUri;
-    	      this.keyVersion = defaults.keyVersion;
-    	      this.lastKeyRotationTimestamp = defaults.lastKeyRotationTimestamp;
+            $ = new KeyVaultPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder currentVersionedKeyIdentifier(String currentVersionedKeyIdentifier) {
-            this.currentVersionedKeyIdentifier = Objects.requireNonNull(currentVersionedKeyIdentifier);
+            $.currentVersionedKeyIdentifier = currentVersionedKeyIdentifier;
             return this;
         }
+
         public Builder keyName(@Nullable String keyName) {
-            this.keyName = keyName;
+            $.keyName = keyName;
             return this;
         }
+
         public Builder keyVaultUri(@Nullable String keyVaultUri) {
-            this.keyVaultUri = keyVaultUri;
+            $.keyVaultUri = keyVaultUri;
             return this;
         }
+
         public Builder keyVersion(@Nullable String keyVersion) {
-            this.keyVersion = keyVersion;
+            $.keyVersion = keyVersion;
             return this;
         }
+
         public Builder lastKeyRotationTimestamp(String lastKeyRotationTimestamp) {
-            this.lastKeyRotationTimestamp = Objects.requireNonNull(lastKeyRotationTimestamp);
+            $.lastKeyRotationTimestamp = lastKeyRotationTimestamp;
             return this;
-        }        public KeyVaultPropertiesResponse build() {
-            return new KeyVaultPropertiesResponse(currentVersionedKeyIdentifier, keyName, keyVaultUri, keyVersion, lastKeyRotationTimestamp);
+        }
+
+        public KeyVaultPropertiesResponse build() {
+            $.currentVersionedKeyIdentifier = Objects.requireNonNull($.currentVersionedKeyIdentifier, "expected parameter 'currentVersionedKeyIdentifier' to be non-null");
+            $.lastKeyRotationTimestamp = Objects.requireNonNull($.lastKeyRotationTimestamp, "expected parameter 'lastKeyRotationTimestamp' to be non-null");
+            return $;
         }
     }
+
 }

@@ -32,10 +32,10 @@ public final class DeliveryWithResourceIdentityResponse extends com.pulumi.resou
      * 
      */
     @Import(name="destination")
-      private final @Nullable Object destination;
+    private @Nullable Object destination;
 
-    public Object destination() {
-        return this.destination == null ? null : this.destination;
+    public Optional<Object> destination() {
+        return Optional.ofNullable(this.destination);
     }
 
     /**
@@ -43,55 +43,50 @@ public final class DeliveryWithResourceIdentityResponse extends com.pulumi.resou
      * 
      */
     @Import(name="identity")
-      private final @Nullable EventSubscriptionIdentityResponse identity;
+    private @Nullable EventSubscriptionIdentityResponse identity;
 
     public Optional<EventSubscriptionIdentityResponse> identity() {
-        return this.identity == null ? Optional.empty() : Optional.ofNullable(this.identity);
+        return Optional.ofNullable(this.identity);
     }
 
-    public DeliveryWithResourceIdentityResponse(
-        @Nullable Object destination,
-        @Nullable EventSubscriptionIdentityResponse identity) {
-        this.destination = destination;
-        this.identity = identity;
-    }
+    private DeliveryWithResourceIdentityResponse() {}
 
-    private DeliveryWithResourceIdentityResponse() {
-        this.destination = null;
-        this.identity = null;
+    private DeliveryWithResourceIdentityResponse(DeliveryWithResourceIdentityResponse $) {
+        this.destination = $.destination;
+        this.identity = $.identity;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DeliveryWithResourceIdentityResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Object destination;
-        private @Nullable EventSubscriptionIdentityResponse identity;
+        private DeliveryWithResourceIdentityResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new DeliveryWithResourceIdentityResponse();
         }
 
         public Builder(DeliveryWithResourceIdentityResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.destination = defaults.destination;
-    	      this.identity = defaults.identity;
+            $ = new DeliveryWithResourceIdentityResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder destination(@Nullable Object destination) {
-            this.destination = destination;
+            $.destination = destination;
             return this;
         }
+
         public Builder identity(@Nullable EventSubscriptionIdentityResponse identity) {
-            this.identity = identity;
+            $.identity = identity;
             return this;
-        }        public DeliveryWithResourceIdentityResponse build() {
-            return new DeliveryWithResourceIdentityResponse(destination, identity);
+        }
+
+        public DeliveryWithResourceIdentityResponse build() {
+            return $;
         }
     }
+
 }

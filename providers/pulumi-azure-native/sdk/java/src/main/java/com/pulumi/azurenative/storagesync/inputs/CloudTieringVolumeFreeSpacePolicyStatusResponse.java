@@ -22,7 +22,7 @@ public final class CloudTieringVolumeFreeSpacePolicyStatusResponse extends com.p
      * 
      */
     @Import(name="currentVolumeFreeSpacePercent", required=true)
-      private final Integer currentVolumeFreeSpacePercent;
+    private Integer currentVolumeFreeSpacePercent;
 
     public Integer currentVolumeFreeSpacePercent() {
         return this.currentVolumeFreeSpacePercent;
@@ -33,7 +33,7 @@ public final class CloudTieringVolumeFreeSpacePolicyStatusResponse extends com.p
      * 
      */
     @Import(name="effectiveVolumeFreeSpacePolicy", required=true)
-      private final Integer effectiveVolumeFreeSpacePolicy;
+    private Integer effectiveVolumeFreeSpacePolicy;
 
     public Integer effectiveVolumeFreeSpacePolicy() {
         return this.effectiveVolumeFreeSpacePolicy;
@@ -44,64 +44,59 @@ public final class CloudTieringVolumeFreeSpacePolicyStatusResponse extends com.p
      * 
      */
     @Import(name="lastUpdatedTimestamp", required=true)
-      private final String lastUpdatedTimestamp;
+    private String lastUpdatedTimestamp;
 
     public String lastUpdatedTimestamp() {
         return this.lastUpdatedTimestamp;
     }
 
-    public CloudTieringVolumeFreeSpacePolicyStatusResponse(
-        Integer currentVolumeFreeSpacePercent,
-        Integer effectiveVolumeFreeSpacePolicy,
-        String lastUpdatedTimestamp) {
-        this.currentVolumeFreeSpacePercent = Objects.requireNonNull(currentVolumeFreeSpacePercent, "expected parameter 'currentVolumeFreeSpacePercent' to be non-null");
-        this.effectiveVolumeFreeSpacePolicy = Objects.requireNonNull(effectiveVolumeFreeSpacePolicy, "expected parameter 'effectiveVolumeFreeSpacePolicy' to be non-null");
-        this.lastUpdatedTimestamp = Objects.requireNonNull(lastUpdatedTimestamp, "expected parameter 'lastUpdatedTimestamp' to be non-null");
-    }
+    private CloudTieringVolumeFreeSpacePolicyStatusResponse() {}
 
-    private CloudTieringVolumeFreeSpacePolicyStatusResponse() {
-        this.currentVolumeFreeSpacePercent = null;
-        this.effectiveVolumeFreeSpacePolicy = null;
-        this.lastUpdatedTimestamp = null;
+    private CloudTieringVolumeFreeSpacePolicyStatusResponse(CloudTieringVolumeFreeSpacePolicyStatusResponse $) {
+        this.currentVolumeFreeSpacePercent = $.currentVolumeFreeSpacePercent;
+        this.effectiveVolumeFreeSpacePolicy = $.effectiveVolumeFreeSpacePolicy;
+        this.lastUpdatedTimestamp = $.lastUpdatedTimestamp;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CloudTieringVolumeFreeSpacePolicyStatusResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Integer currentVolumeFreeSpacePercent;
-        private Integer effectiveVolumeFreeSpacePolicy;
-        private String lastUpdatedTimestamp;
+        private CloudTieringVolumeFreeSpacePolicyStatusResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new CloudTieringVolumeFreeSpacePolicyStatusResponse();
         }
 
         public Builder(CloudTieringVolumeFreeSpacePolicyStatusResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.currentVolumeFreeSpacePercent = defaults.currentVolumeFreeSpacePercent;
-    	      this.effectiveVolumeFreeSpacePolicy = defaults.effectiveVolumeFreeSpacePolicy;
-    	      this.lastUpdatedTimestamp = defaults.lastUpdatedTimestamp;
+            $ = new CloudTieringVolumeFreeSpacePolicyStatusResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder currentVolumeFreeSpacePercent(Integer currentVolumeFreeSpacePercent) {
-            this.currentVolumeFreeSpacePercent = Objects.requireNonNull(currentVolumeFreeSpacePercent);
+            $.currentVolumeFreeSpacePercent = currentVolumeFreeSpacePercent;
             return this;
         }
+
         public Builder effectiveVolumeFreeSpacePolicy(Integer effectiveVolumeFreeSpacePolicy) {
-            this.effectiveVolumeFreeSpacePolicy = Objects.requireNonNull(effectiveVolumeFreeSpacePolicy);
+            $.effectiveVolumeFreeSpacePolicy = effectiveVolumeFreeSpacePolicy;
             return this;
         }
+
         public Builder lastUpdatedTimestamp(String lastUpdatedTimestamp) {
-            this.lastUpdatedTimestamp = Objects.requireNonNull(lastUpdatedTimestamp);
+            $.lastUpdatedTimestamp = lastUpdatedTimestamp;
             return this;
-        }        public CloudTieringVolumeFreeSpacePolicyStatusResponse build() {
-            return new CloudTieringVolumeFreeSpacePolicyStatusResponse(currentVolumeFreeSpacePercent, effectiveVolumeFreeSpacePolicy, lastUpdatedTimestamp);
+        }
+
+        public CloudTieringVolumeFreeSpacePolicyStatusResponse build() {
+            $.currentVolumeFreeSpacePercent = Objects.requireNonNull($.currentVolumeFreeSpacePercent, "expected parameter 'currentVolumeFreeSpacePercent' to be non-null");
+            $.effectiveVolumeFreeSpacePolicy = Objects.requireNonNull($.effectiveVolumeFreeSpacePolicy, "expected parameter 'effectiveVolumeFreeSpacePolicy' to be non-null");
+            $.lastUpdatedTimestamp = Objects.requireNonNull($.lastUpdatedTimestamp, "expected parameter 'lastUpdatedTimestamp' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,10 +5,10 @@ package com.pulumi.azurenative.portal.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class StorageProfileArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="diskSizeInGB")
-      private final @Nullable Output<Integer> diskSizeInGB;
+    private @Nullable Output<Integer> diskSizeInGB;
 
-    public Output<Integer> diskSizeInGB() {
-        return this.diskSizeInGB == null ? Codegen.empty() : this.diskSizeInGB;
+    public Optional<Output<Integer>> diskSizeInGB() {
+        return Optional.ofNullable(this.diskSizeInGB);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class StorageProfileArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="fileShareName")
-      private final @Nullable Output<String> fileShareName;
+    private @Nullable Output<String> fileShareName;
 
-    public Output<String> fileShareName() {
-        return this.fileShareName == null ? Codegen.empty() : this.fileShareName;
+    public Optional<Output<String>> fileShareName() {
+        return Optional.ofNullable(this.fileShareName);
     }
 
     /**
@@ -47,76 +47,68 @@ public final class StorageProfileArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="storageAccountResourceId")
-      private final @Nullable Output<String> storageAccountResourceId;
+    private @Nullable Output<String> storageAccountResourceId;
 
-    public Output<String> storageAccountResourceId() {
-        return this.storageAccountResourceId == null ? Codegen.empty() : this.storageAccountResourceId;
+    public Optional<Output<String>> storageAccountResourceId() {
+        return Optional.ofNullable(this.storageAccountResourceId);
     }
 
-    public StorageProfileArgs(
-        @Nullable Output<Integer> diskSizeInGB,
-        @Nullable Output<String> fileShareName,
-        @Nullable Output<String> storageAccountResourceId) {
-        this.diskSizeInGB = diskSizeInGB;
-        this.fileShareName = fileShareName;
-        this.storageAccountResourceId = storageAccountResourceId;
-    }
+    private StorageProfileArgs() {}
 
-    private StorageProfileArgs() {
-        this.diskSizeInGB = Codegen.empty();
-        this.fileShareName = Codegen.empty();
-        this.storageAccountResourceId = Codegen.empty();
+    private StorageProfileArgs(StorageProfileArgs $) {
+        this.diskSizeInGB = $.diskSizeInGB;
+        this.fileShareName = $.fileShareName;
+        this.storageAccountResourceId = $.storageAccountResourceId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(StorageProfileArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> diskSizeInGB;
-        private @Nullable Output<String> fileShareName;
-        private @Nullable Output<String> storageAccountResourceId;
+        private StorageProfileArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new StorageProfileArgs();
         }
 
         public Builder(StorageProfileArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.diskSizeInGB = defaults.diskSizeInGB;
-    	      this.fileShareName = defaults.fileShareName;
-    	      this.storageAccountResourceId = defaults.storageAccountResourceId;
+            $ = new StorageProfileArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder diskSizeInGB(@Nullable Output<Integer> diskSizeInGB) {
-            this.diskSizeInGB = diskSizeInGB;
+            $.diskSizeInGB = diskSizeInGB;
             return this;
         }
-        public Builder diskSizeInGB(@Nullable Integer diskSizeInGB) {
-            this.diskSizeInGB = Codegen.ofNullable(diskSizeInGB);
-            return this;
+
+        public Builder diskSizeInGB(Integer diskSizeInGB) {
+            return diskSizeInGB(Output.of(diskSizeInGB));
         }
+
         public Builder fileShareName(@Nullable Output<String> fileShareName) {
-            this.fileShareName = fileShareName;
+            $.fileShareName = fileShareName;
             return this;
         }
-        public Builder fileShareName(@Nullable String fileShareName) {
-            this.fileShareName = Codegen.ofNullable(fileShareName);
-            return this;
+
+        public Builder fileShareName(String fileShareName) {
+            return fileShareName(Output.of(fileShareName));
         }
+
         public Builder storageAccountResourceId(@Nullable Output<String> storageAccountResourceId) {
-            this.storageAccountResourceId = storageAccountResourceId;
+            $.storageAccountResourceId = storageAccountResourceId;
             return this;
         }
-        public Builder storageAccountResourceId(@Nullable String storageAccountResourceId) {
-            this.storageAccountResourceId = Codegen.ofNullable(storageAccountResourceId);
-            return this;
-        }        public StorageProfileArgs build() {
-            return new StorageProfileArgs(diskSizeInGB, fileShareName, storageAccountResourceId);
+
+        public Builder storageAccountResourceId(String storageAccountResourceId) {
+            return storageAccountResourceId(Output.of(storageAccountResourceId));
+        }
+
+        public StorageProfileArgs build() {
+            return $;
         }
     }
+
 }

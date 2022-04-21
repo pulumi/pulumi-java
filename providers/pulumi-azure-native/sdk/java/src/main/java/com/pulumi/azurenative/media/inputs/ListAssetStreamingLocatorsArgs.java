@@ -17,7 +17,7 @@ public final class ListAssetStreamingLocatorsArgs extends com.pulumi.resources.I
      * 
      */
     @Import(name="accountName", required=true)
-      private final String accountName;
+    private String accountName;
 
     public String accountName() {
         return this.accountName;
@@ -28,7 +28,7 @@ public final class ListAssetStreamingLocatorsArgs extends com.pulumi.resources.I
      * 
      */
     @Import(name="assetName", required=true)
-      private final String assetName;
+    private String assetName;
 
     public String assetName() {
         return this.assetName;
@@ -39,64 +39,59 @@ public final class ListAssetStreamingLocatorsArgs extends com.pulumi.resources.I
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public ListAssetStreamingLocatorsArgs(
-        String accountName,
-        String assetName,
-        String resourceGroupName) {
-        this.accountName = Objects.requireNonNull(accountName, "expected parameter 'accountName' to be non-null");
-        this.assetName = Objects.requireNonNull(assetName, "expected parameter 'assetName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private ListAssetStreamingLocatorsArgs() {}
 
-    private ListAssetStreamingLocatorsArgs() {
-        this.accountName = null;
-        this.assetName = null;
-        this.resourceGroupName = null;
+    private ListAssetStreamingLocatorsArgs(ListAssetStreamingLocatorsArgs $) {
+        this.accountName = $.accountName;
+        this.assetName = $.assetName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ListAssetStreamingLocatorsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String accountName;
-        private String assetName;
-        private String resourceGroupName;
+        private ListAssetStreamingLocatorsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ListAssetStreamingLocatorsArgs();
         }
 
         public Builder(ListAssetStreamingLocatorsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accountName = defaults.accountName;
-    	      this.assetName = defaults.assetName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new ListAssetStreamingLocatorsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder accountName(String accountName) {
-            this.accountName = Objects.requireNonNull(accountName);
+            $.accountName = accountName;
             return this;
         }
+
         public Builder assetName(String assetName) {
-            this.assetName = Objects.requireNonNull(assetName);
+            $.assetName = assetName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public ListAssetStreamingLocatorsArgs build() {
-            return new ListAssetStreamingLocatorsArgs(accountName, assetName, resourceGroupName);
+        }
+
+        public ListAssetStreamingLocatorsArgs build() {
+            $.accountName = Objects.requireNonNull($.accountName, "expected parameter 'accountName' to be non-null");
+            $.assetName = Objects.requireNonNull($.assetName, "expected parameter 'assetName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

@@ -15,78 +15,72 @@ public final class GetNodeGroupArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetNodeGroupArgs Empty = new GetNodeGroupArgs();
 
     @Import(name="nodeGroup", required=true)
-      private final String nodeGroup;
+    private String nodeGroup;
 
     public String nodeGroup() {
         return this.nodeGroup;
     }
 
     @Import(name="project")
-      private final @Nullable String project;
+    private @Nullable String project;
 
     public Optional<String> project() {
-        return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
+        return Optional.ofNullable(this.project);
     }
 
     @Import(name="zone", required=true)
-      private final String zone;
+    private String zone;
 
     public String zone() {
         return this.zone;
     }
 
-    public GetNodeGroupArgs(
-        String nodeGroup,
-        @Nullable String project,
-        String zone) {
-        this.nodeGroup = Objects.requireNonNull(nodeGroup, "expected parameter 'nodeGroup' to be non-null");
-        this.project = project;
-        this.zone = Objects.requireNonNull(zone, "expected parameter 'zone' to be non-null");
-    }
+    private GetNodeGroupArgs() {}
 
-    private GetNodeGroupArgs() {
-        this.nodeGroup = null;
-        this.project = null;
-        this.zone = null;
+    private GetNodeGroupArgs(GetNodeGroupArgs $) {
+        this.nodeGroup = $.nodeGroup;
+        this.project = $.project;
+        this.zone = $.zone;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetNodeGroupArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String nodeGroup;
-        private @Nullable String project;
-        private String zone;
+        private GetNodeGroupArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetNodeGroupArgs();
         }
 
         public Builder(GetNodeGroupArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.nodeGroup = defaults.nodeGroup;
-    	      this.project = defaults.project;
-    	      this.zone = defaults.zone;
+            $ = new GetNodeGroupArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder nodeGroup(String nodeGroup) {
-            this.nodeGroup = Objects.requireNonNull(nodeGroup);
+            $.nodeGroup = nodeGroup;
             return this;
         }
+
         public Builder project(@Nullable String project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
+
         public Builder zone(String zone) {
-            this.zone = Objects.requireNonNull(zone);
+            $.zone = zone;
             return this;
-        }        public GetNodeGroupArgs build() {
-            return new GetNodeGroupArgs(nodeGroup, project, zone);
+        }
+
+        public GetNodeGroupArgs build() {
+            $.nodeGroup = Objects.requireNonNull($.nodeGroup, "expected parameter 'nodeGroup' to be non-null");
+            $.zone = Objects.requireNonNull($.zone, "expected parameter 'zone' to be non-null");
+            return $;
         }
     }
+
 }

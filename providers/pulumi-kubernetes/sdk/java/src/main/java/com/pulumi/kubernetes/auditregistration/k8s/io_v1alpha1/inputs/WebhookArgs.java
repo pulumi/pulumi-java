@@ -5,10 +5,10 @@ package com.pulumi.kubernetes.auditregistration.k8s.io_v1alpha1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.kubernetes.auditregistration.k8s.io_v1alpha1.inputs.WebhookClientConfigArgs;
 import com.pulumi.kubernetes.auditregistration.k8s.io_v1alpha1.inputs.WebhookThrottleConfigArgs;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,7 +25,7 @@ public final class WebhookArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="clientConfig", required=true)
-      private final Output<WebhookClientConfigArgs> clientConfig;
+    private Output<WebhookClientConfigArgs> clientConfig;
 
     public Output<WebhookClientConfigArgs> clientConfig() {
         return this.clientConfig;
@@ -36,63 +36,59 @@ public final class WebhookArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="throttle")
-      private final @Nullable Output<WebhookThrottleConfigArgs> throttle;
+    private @Nullable Output<WebhookThrottleConfigArgs> throttle;
 
-    public Output<WebhookThrottleConfigArgs> throttle() {
-        return this.throttle == null ? Codegen.empty() : this.throttle;
+    public Optional<Output<WebhookThrottleConfigArgs>> throttle() {
+        return Optional.ofNullable(this.throttle);
     }
 
-    public WebhookArgs(
-        Output<WebhookClientConfigArgs> clientConfig,
-        @Nullable Output<WebhookThrottleConfigArgs> throttle) {
-        this.clientConfig = Objects.requireNonNull(clientConfig, "expected parameter 'clientConfig' to be non-null");
-        this.throttle = throttle;
-    }
+    private WebhookArgs() {}
 
-    private WebhookArgs() {
-        this.clientConfig = Codegen.empty();
-        this.throttle = Codegen.empty();
+    private WebhookArgs(WebhookArgs $) {
+        this.clientConfig = $.clientConfig;
+        this.throttle = $.throttle;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WebhookArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<WebhookClientConfigArgs> clientConfig;
-        private @Nullable Output<WebhookThrottleConfigArgs> throttle;
+        private WebhookArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new WebhookArgs();
         }
 
         public Builder(WebhookArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.clientConfig = defaults.clientConfig;
-    	      this.throttle = defaults.throttle;
+            $ = new WebhookArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder clientConfig(Output<WebhookClientConfigArgs> clientConfig) {
-            this.clientConfig = Objects.requireNonNull(clientConfig);
+            $.clientConfig = clientConfig;
             return this;
         }
+
         public Builder clientConfig(WebhookClientConfigArgs clientConfig) {
-            this.clientConfig = Output.of(Objects.requireNonNull(clientConfig));
-            return this;
+            return clientConfig(Output.of(clientConfig));
         }
+
         public Builder throttle(@Nullable Output<WebhookThrottleConfigArgs> throttle) {
-            this.throttle = throttle;
+            $.throttle = throttle;
             return this;
         }
-        public Builder throttle(@Nullable WebhookThrottleConfigArgs throttle) {
-            this.throttle = Codegen.ofNullable(throttle);
-            return this;
-        }        public WebhookArgs build() {
-            return new WebhookArgs(clientConfig, throttle);
+
+        public Builder throttle(WebhookThrottleConfigArgs throttle) {
+            return throttle(Output.of(throttle));
+        }
+
+        public WebhookArgs build() {
+            $.clientConfig = Objects.requireNonNull($.clientConfig, "expected parameter 'clientConfig' to be non-null");
+            return $;
         }
     }
+
 }

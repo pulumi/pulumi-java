@@ -24,7 +24,7 @@ public final class RestRequestResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="authentication", required=true)
-      private final Either<ApiKeyAuthenticationResponse,RolloutIdentityAuthenticationResponse> authentication;
+    private Either<ApiKeyAuthenticationResponse,RolloutIdentityAuthenticationResponse> authentication;
 
     public Either<ApiKeyAuthenticationResponse,RolloutIdentityAuthenticationResponse> authentication() {
         return this.authentication;
@@ -35,7 +35,7 @@ public final class RestRequestResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="method", required=true)
-      private final String method;
+    private String method;
 
     public String method() {
         return this.method;
@@ -46,64 +46,59 @@ public final class RestRequestResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="uri", required=true)
-      private final String uri;
+    private String uri;
 
     public String uri() {
         return this.uri;
     }
 
-    public RestRequestResponse(
-        Either<ApiKeyAuthenticationResponse,RolloutIdentityAuthenticationResponse> authentication,
-        String method,
-        String uri) {
-        this.authentication = Objects.requireNonNull(authentication, "expected parameter 'authentication' to be non-null");
-        this.method = Objects.requireNonNull(method, "expected parameter 'method' to be non-null");
-        this.uri = Objects.requireNonNull(uri, "expected parameter 'uri' to be non-null");
-    }
+    private RestRequestResponse() {}
 
-    private RestRequestResponse() {
-        this.authentication = null;
-        this.method = null;
-        this.uri = null;
+    private RestRequestResponse(RestRequestResponse $) {
+        this.authentication = $.authentication;
+        this.method = $.method;
+        this.uri = $.uri;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RestRequestResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Either<ApiKeyAuthenticationResponse,RolloutIdentityAuthenticationResponse> authentication;
-        private String method;
-        private String uri;
+        private RestRequestResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new RestRequestResponse();
         }
 
         public Builder(RestRequestResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.authentication = defaults.authentication;
-    	      this.method = defaults.method;
-    	      this.uri = defaults.uri;
+            $ = new RestRequestResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder authentication(Either<ApiKeyAuthenticationResponse,RolloutIdentityAuthenticationResponse> authentication) {
-            this.authentication = Objects.requireNonNull(authentication);
+            $.authentication = authentication;
             return this;
         }
+
         public Builder method(String method) {
-            this.method = Objects.requireNonNull(method);
+            $.method = method;
             return this;
         }
+
         public Builder uri(String uri) {
-            this.uri = Objects.requireNonNull(uri);
+            $.uri = uri;
             return this;
-        }        public RestRequestResponse build() {
-            return new RestRequestResponse(authentication, method, uri);
+        }
+
+        public RestRequestResponse build() {
+            $.authentication = Objects.requireNonNull($.authentication, "expected parameter 'authentication' to be non-null");
+            $.method = Objects.requireNonNull($.method, "expected parameter 'method' to be non-null");
+            $.uri = Objects.requireNonNull($.uri, "expected parameter 'uri' to be non-null");
+            return $;
         }
     }
+
 }

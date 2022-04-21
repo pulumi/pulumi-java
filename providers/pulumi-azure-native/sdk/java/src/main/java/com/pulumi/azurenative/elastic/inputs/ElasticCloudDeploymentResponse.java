@@ -21,7 +21,7 @@ public final class ElasticCloudDeploymentResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="azureSubscriptionId", required=true)
-      private final String azureSubscriptionId;
+    private String azureSubscriptionId;
 
     public String azureSubscriptionId() {
         return this.azureSubscriptionId;
@@ -32,7 +32,7 @@ public final class ElasticCloudDeploymentResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="deploymentId", required=true)
-      private final String deploymentId;
+    private String deploymentId;
 
     public String deploymentId() {
         return this.deploymentId;
@@ -43,7 +43,7 @@ public final class ElasticCloudDeploymentResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="elasticsearchRegion", required=true)
-      private final String elasticsearchRegion;
+    private String elasticsearchRegion;
 
     public String elasticsearchRegion() {
         return this.elasticsearchRegion;
@@ -54,7 +54,7 @@ public final class ElasticCloudDeploymentResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="elasticsearchServiceUrl", required=true)
-      private final String elasticsearchServiceUrl;
+    private String elasticsearchServiceUrl;
 
     public String elasticsearchServiceUrl() {
         return this.elasticsearchServiceUrl;
@@ -65,7 +65,7 @@ public final class ElasticCloudDeploymentResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="kibanaServiceUrl", required=true)
-      private final String kibanaServiceUrl;
+    private String kibanaServiceUrl;
 
     public String kibanaServiceUrl() {
         return this.kibanaServiceUrl;
@@ -76,7 +76,7 @@ public final class ElasticCloudDeploymentResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="kibanaSsoUrl", required=true)
-      private final String kibanaSsoUrl;
+    private String kibanaSsoUrl;
 
     public String kibanaSsoUrl() {
         return this.kibanaSsoUrl;
@@ -87,100 +87,87 @@ public final class ElasticCloudDeploymentResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
     }
 
-    public ElasticCloudDeploymentResponse(
-        String azureSubscriptionId,
-        String deploymentId,
-        String elasticsearchRegion,
-        String elasticsearchServiceUrl,
-        String kibanaServiceUrl,
-        String kibanaSsoUrl,
-        String name) {
-        this.azureSubscriptionId = Objects.requireNonNull(azureSubscriptionId, "expected parameter 'azureSubscriptionId' to be non-null");
-        this.deploymentId = Objects.requireNonNull(deploymentId, "expected parameter 'deploymentId' to be non-null");
-        this.elasticsearchRegion = Objects.requireNonNull(elasticsearchRegion, "expected parameter 'elasticsearchRegion' to be non-null");
-        this.elasticsearchServiceUrl = Objects.requireNonNull(elasticsearchServiceUrl, "expected parameter 'elasticsearchServiceUrl' to be non-null");
-        this.kibanaServiceUrl = Objects.requireNonNull(kibanaServiceUrl, "expected parameter 'kibanaServiceUrl' to be non-null");
-        this.kibanaSsoUrl = Objects.requireNonNull(kibanaSsoUrl, "expected parameter 'kibanaSsoUrl' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-    }
+    private ElasticCloudDeploymentResponse() {}
 
-    private ElasticCloudDeploymentResponse() {
-        this.azureSubscriptionId = null;
-        this.deploymentId = null;
-        this.elasticsearchRegion = null;
-        this.elasticsearchServiceUrl = null;
-        this.kibanaServiceUrl = null;
-        this.kibanaSsoUrl = null;
-        this.name = null;
+    private ElasticCloudDeploymentResponse(ElasticCloudDeploymentResponse $) {
+        this.azureSubscriptionId = $.azureSubscriptionId;
+        this.deploymentId = $.deploymentId;
+        this.elasticsearchRegion = $.elasticsearchRegion;
+        this.elasticsearchServiceUrl = $.elasticsearchServiceUrl;
+        this.kibanaServiceUrl = $.kibanaServiceUrl;
+        this.kibanaSsoUrl = $.kibanaSsoUrl;
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ElasticCloudDeploymentResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String azureSubscriptionId;
-        private String deploymentId;
-        private String elasticsearchRegion;
-        private String elasticsearchServiceUrl;
-        private String kibanaServiceUrl;
-        private String kibanaSsoUrl;
-        private String name;
+        private ElasticCloudDeploymentResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ElasticCloudDeploymentResponse();
         }
 
         public Builder(ElasticCloudDeploymentResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.azureSubscriptionId = defaults.azureSubscriptionId;
-    	      this.deploymentId = defaults.deploymentId;
-    	      this.elasticsearchRegion = defaults.elasticsearchRegion;
-    	      this.elasticsearchServiceUrl = defaults.elasticsearchServiceUrl;
-    	      this.kibanaServiceUrl = defaults.kibanaServiceUrl;
-    	      this.kibanaSsoUrl = defaults.kibanaSsoUrl;
-    	      this.name = defaults.name;
+            $ = new ElasticCloudDeploymentResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder azureSubscriptionId(String azureSubscriptionId) {
-            this.azureSubscriptionId = Objects.requireNonNull(azureSubscriptionId);
+            $.azureSubscriptionId = azureSubscriptionId;
             return this;
         }
+
         public Builder deploymentId(String deploymentId) {
-            this.deploymentId = Objects.requireNonNull(deploymentId);
+            $.deploymentId = deploymentId;
             return this;
         }
+
         public Builder elasticsearchRegion(String elasticsearchRegion) {
-            this.elasticsearchRegion = Objects.requireNonNull(elasticsearchRegion);
+            $.elasticsearchRegion = elasticsearchRegion;
             return this;
         }
+
         public Builder elasticsearchServiceUrl(String elasticsearchServiceUrl) {
-            this.elasticsearchServiceUrl = Objects.requireNonNull(elasticsearchServiceUrl);
+            $.elasticsearchServiceUrl = elasticsearchServiceUrl;
             return this;
         }
+
         public Builder kibanaServiceUrl(String kibanaServiceUrl) {
-            this.kibanaServiceUrl = Objects.requireNonNull(kibanaServiceUrl);
+            $.kibanaServiceUrl = kibanaServiceUrl;
             return this;
         }
+
         public Builder kibanaSsoUrl(String kibanaSsoUrl) {
-            this.kibanaSsoUrl = Objects.requireNonNull(kibanaSsoUrl);
+            $.kibanaSsoUrl = kibanaSsoUrl;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
-        }        public ElasticCloudDeploymentResponse build() {
-            return new ElasticCloudDeploymentResponse(azureSubscriptionId, deploymentId, elasticsearchRegion, elasticsearchServiceUrl, kibanaServiceUrl, kibanaSsoUrl, name);
+        }
+
+        public ElasticCloudDeploymentResponse build() {
+            $.azureSubscriptionId = Objects.requireNonNull($.azureSubscriptionId, "expected parameter 'azureSubscriptionId' to be non-null");
+            $.deploymentId = Objects.requireNonNull($.deploymentId, "expected parameter 'deploymentId' to be non-null");
+            $.elasticsearchRegion = Objects.requireNonNull($.elasticsearchRegion, "expected parameter 'elasticsearchRegion' to be non-null");
+            $.elasticsearchServiceUrl = Objects.requireNonNull($.elasticsearchServiceUrl, "expected parameter 'elasticsearchServiceUrl' to be non-null");
+            $.kibanaServiceUrl = Objects.requireNonNull($.kibanaServiceUrl, "expected parameter 'kibanaServiceUrl' to be non-null");
+            $.kibanaSsoUrl = Objects.requireNonNull($.kibanaSsoUrl, "expected parameter 'kibanaSsoUrl' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            return $;
         }
     }
+
 }

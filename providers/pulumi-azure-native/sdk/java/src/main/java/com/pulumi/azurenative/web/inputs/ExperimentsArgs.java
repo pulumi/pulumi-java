@@ -6,9 +6,9 @@ package com.pulumi.azurenative.web.inputs;
 import com.pulumi.azurenative.web.inputs.RampUpRuleArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,52 +25,52 @@ public final class ExperimentsArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="rampUpRules")
-      private final @Nullable Output<List<RampUpRuleArgs>> rampUpRules;
+    private @Nullable Output<List<RampUpRuleArgs>> rampUpRules;
 
-    public Output<List<RampUpRuleArgs>> rampUpRules() {
-        return this.rampUpRules == null ? Codegen.empty() : this.rampUpRules;
+    public Optional<Output<List<RampUpRuleArgs>>> rampUpRules() {
+        return Optional.ofNullable(this.rampUpRules);
     }
 
-    public ExperimentsArgs(@Nullable Output<List<RampUpRuleArgs>> rampUpRules) {
-        this.rampUpRules = rampUpRules;
-    }
+    private ExperimentsArgs() {}
 
-    private ExperimentsArgs() {
-        this.rampUpRules = Codegen.empty();
+    private ExperimentsArgs(ExperimentsArgs $) {
+        this.rampUpRules = $.rampUpRules;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ExperimentsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<RampUpRuleArgs>> rampUpRules;
+        private ExperimentsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ExperimentsArgs();
         }
 
         public Builder(ExperimentsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.rampUpRules = defaults.rampUpRules;
+            $ = new ExperimentsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder rampUpRules(@Nullable Output<List<RampUpRuleArgs>> rampUpRules) {
-            this.rampUpRules = rampUpRules;
+            $.rampUpRules = rampUpRules;
             return this;
         }
-        public Builder rampUpRules(@Nullable List<RampUpRuleArgs> rampUpRules) {
-            this.rampUpRules = Codegen.ofNullable(rampUpRules);
-            return this;
+
+        public Builder rampUpRules(List<RampUpRuleArgs> rampUpRules) {
+            return rampUpRules(Output.of(rampUpRules));
         }
+
         public Builder rampUpRules(RampUpRuleArgs... rampUpRules) {
             return rampUpRules(List.of(rampUpRules));
-        }        public ExperimentsArgs build() {
-            return new ExperimentsArgs(rampUpRules);
+        }
+
+        public ExperimentsArgs build() {
+            return $;
         }
     }
+
 }

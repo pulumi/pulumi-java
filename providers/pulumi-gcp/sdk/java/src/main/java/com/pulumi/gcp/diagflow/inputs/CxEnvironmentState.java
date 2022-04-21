@@ -5,11 +5,11 @@ package com.pulumi.gcp.diagflow.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.diagflow.inputs.CxEnvironmentVersionConfigGetArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class CxEnvironmentState extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -33,10 +33,10 @@ public final class CxEnvironmentState extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="displayName")
-      private final @Nullable Output<String> displayName;
+    private @Nullable Output<String> displayName;
 
-    public Output<String> displayName() {
-        return this.displayName == null ? Codegen.empty() : this.displayName;
+    public Optional<Output<String>> displayName() {
+        return Optional.ofNullable(this.displayName);
     }
 
     /**
@@ -44,10 +44,10 @@ public final class CxEnvironmentState extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -56,10 +56,10 @@ public final class CxEnvironmentState extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="parent")
-      private final @Nullable Output<String> parent;
+    private @Nullable Output<String> parent;
 
-    public Output<String> parent() {
-        return this.parent == null ? Codegen.empty() : this.parent;
+    public Optional<Output<String>> parent() {
+        return Optional.ofNullable(this.parent);
     }
 
     /**
@@ -68,10 +68,10 @@ public final class CxEnvironmentState extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="updateTime")
-      private final @Nullable Output<String> updateTime;
+    private @Nullable Output<String> updateTime;
 
-    public Output<String> updateTime() {
-        return this.updateTime == null ? Codegen.empty() : this.updateTime;
+    public Optional<Output<String>> updateTime() {
+        return Optional.ofNullable(this.updateTime);
     }
 
     /**
@@ -80,118 +80,102 @@ public final class CxEnvironmentState extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="versionConfigs")
-      private final @Nullable Output<List<CxEnvironmentVersionConfigGetArgs>> versionConfigs;
+    private @Nullable Output<List<CxEnvironmentVersionConfigGetArgs>> versionConfigs;
 
-    public Output<List<CxEnvironmentVersionConfigGetArgs>> versionConfigs() {
-        return this.versionConfigs == null ? Codegen.empty() : this.versionConfigs;
+    public Optional<Output<List<CxEnvironmentVersionConfigGetArgs>>> versionConfigs() {
+        return Optional.ofNullable(this.versionConfigs);
     }
 
-    public CxEnvironmentState(
-        @Nullable Output<String> description,
-        @Nullable Output<String> displayName,
-        @Nullable Output<String> name,
-        @Nullable Output<String> parent,
-        @Nullable Output<String> updateTime,
-        @Nullable Output<List<CxEnvironmentVersionConfigGetArgs>> versionConfigs) {
-        this.description = description;
-        this.displayName = displayName;
-        this.name = name;
-        this.parent = parent;
-        this.updateTime = updateTime;
-        this.versionConfigs = versionConfigs;
-    }
+    private CxEnvironmentState() {}
 
-    private CxEnvironmentState() {
-        this.description = Codegen.empty();
-        this.displayName = Codegen.empty();
-        this.name = Codegen.empty();
-        this.parent = Codegen.empty();
-        this.updateTime = Codegen.empty();
-        this.versionConfigs = Codegen.empty();
+    private CxEnvironmentState(CxEnvironmentState $) {
+        this.description = $.description;
+        this.displayName = $.displayName;
+        this.name = $.name;
+        this.parent = $.parent;
+        this.updateTime = $.updateTime;
+        this.versionConfigs = $.versionConfigs;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CxEnvironmentState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> description;
-        private @Nullable Output<String> displayName;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> parent;
-        private @Nullable Output<String> updateTime;
-        private @Nullable Output<List<CxEnvironmentVersionConfigGetArgs>> versionConfigs;
+        private CxEnvironmentState $;
 
         public Builder() {
-    	      // Empty
+            $ = new CxEnvironmentState();
         }
 
         public Builder(CxEnvironmentState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.description = defaults.description;
-    	      this.displayName = defaults.displayName;
-    	      this.name = defaults.name;
-    	      this.parent = defaults.parent;
-    	      this.updateTime = defaults.updateTime;
-    	      this.versionConfigs = defaults.versionConfigs;
+            $ = new CxEnvironmentState(Objects.requireNonNull(defaults));
         }
 
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder displayName(@Nullable Output<String> displayName) {
-            this.displayName = displayName;
+            $.displayName = displayName;
             return this;
         }
-        public Builder displayName(@Nullable String displayName) {
-            this.displayName = Codegen.ofNullable(displayName);
-            return this;
+
+        public Builder displayName(String displayName) {
+            return displayName(Output.of(displayName));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder parent(@Nullable Output<String> parent) {
-            this.parent = parent;
+            $.parent = parent;
             return this;
         }
-        public Builder parent(@Nullable String parent) {
-            this.parent = Codegen.ofNullable(parent);
-            return this;
+
+        public Builder parent(String parent) {
+            return parent(Output.of(parent));
         }
+
         public Builder updateTime(@Nullable Output<String> updateTime) {
-            this.updateTime = updateTime;
+            $.updateTime = updateTime;
             return this;
         }
-        public Builder updateTime(@Nullable String updateTime) {
-            this.updateTime = Codegen.ofNullable(updateTime);
-            return this;
+
+        public Builder updateTime(String updateTime) {
+            return updateTime(Output.of(updateTime));
         }
+
         public Builder versionConfigs(@Nullable Output<List<CxEnvironmentVersionConfigGetArgs>> versionConfigs) {
-            this.versionConfigs = versionConfigs;
+            $.versionConfigs = versionConfigs;
             return this;
         }
-        public Builder versionConfigs(@Nullable List<CxEnvironmentVersionConfigGetArgs> versionConfigs) {
-            this.versionConfigs = Codegen.ofNullable(versionConfigs);
-            return this;
+
+        public Builder versionConfigs(List<CxEnvironmentVersionConfigGetArgs> versionConfigs) {
+            return versionConfigs(Output.of(versionConfigs));
         }
+
         public Builder versionConfigs(CxEnvironmentVersionConfigGetArgs... versionConfigs) {
             return versionConfigs(List.of(versionConfigs));
-        }        public CxEnvironmentState build() {
-            return new CxEnvironmentState(description, displayName, name, parent, updateTime, versionConfigs);
+        }
+
+        public CxEnvironmentState build() {
+            return $;
         }
     }
+
 }

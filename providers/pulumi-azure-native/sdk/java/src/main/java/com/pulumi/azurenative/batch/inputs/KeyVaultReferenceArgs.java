@@ -5,7 +5,6 @@ package com.pulumi.azurenative.batch.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,7 +22,7 @@ public final class KeyVaultReferenceArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="id", required=true)
-      private final Output<String> id;
+    private Output<String> id;
 
     public Output<String> id() {
         return this.id;
@@ -34,63 +33,60 @@ public final class KeyVaultReferenceArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="url", required=true)
-      private final Output<String> url;
+    private Output<String> url;
 
     public Output<String> url() {
         return this.url;
     }
 
-    public KeyVaultReferenceArgs(
-        Output<String> id,
-        Output<String> url) {
-        this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
-        this.url = Objects.requireNonNull(url, "expected parameter 'url' to be non-null");
-    }
+    private KeyVaultReferenceArgs() {}
 
-    private KeyVaultReferenceArgs() {
-        this.id = Codegen.empty();
-        this.url = Codegen.empty();
+    private KeyVaultReferenceArgs(KeyVaultReferenceArgs $) {
+        this.id = $.id;
+        this.url = $.url;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(KeyVaultReferenceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> id;
-        private Output<String> url;
+        private KeyVaultReferenceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new KeyVaultReferenceArgs();
         }
 
         public Builder(KeyVaultReferenceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.id = defaults.id;
-    	      this.url = defaults.url;
+            $ = new KeyVaultReferenceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder id(Output<String> id) {
-            this.id = Objects.requireNonNull(id);
+            $.id = id;
             return this;
         }
+
         public Builder id(String id) {
-            this.id = Output.of(Objects.requireNonNull(id));
-            return this;
+            return id(Output.of(id));
         }
+
         public Builder url(Output<String> url) {
-            this.url = Objects.requireNonNull(url);
+            $.url = url;
             return this;
         }
+
         public Builder url(String url) {
-            this.url = Output.of(Objects.requireNonNull(url));
-            return this;
-        }        public KeyVaultReferenceArgs build() {
-            return new KeyVaultReferenceArgs(id, url);
+            return url(Output.of(url));
+        }
+
+        public KeyVaultReferenceArgs build() {
+            $.id = Objects.requireNonNull($.id, "expected parameter 'id' to be non-null");
+            $.url = Objects.requireNonNull($.url, "expected parameter 'url' to be non-null");
+            return $;
         }
     }
+
 }

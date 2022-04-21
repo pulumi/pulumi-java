@@ -5,7 +5,6 @@ package com.pulumi.azurenative.solutions.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,49 +22,49 @@ public final class ApplicationNotificationEndpointArgs extends com.pulumi.resour
      * 
      */
     @Import(name="uri", required=true)
-      private final Output<String> uri;
+    private Output<String> uri;
 
     public Output<String> uri() {
         return this.uri;
     }
 
-    public ApplicationNotificationEndpointArgs(Output<String> uri) {
-        this.uri = Objects.requireNonNull(uri, "expected parameter 'uri' to be non-null");
-    }
+    private ApplicationNotificationEndpointArgs() {}
 
-    private ApplicationNotificationEndpointArgs() {
-        this.uri = Codegen.empty();
+    private ApplicationNotificationEndpointArgs(ApplicationNotificationEndpointArgs $) {
+        this.uri = $.uri;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ApplicationNotificationEndpointArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> uri;
+        private ApplicationNotificationEndpointArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ApplicationNotificationEndpointArgs();
         }
 
         public Builder(ApplicationNotificationEndpointArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.uri = defaults.uri;
+            $ = new ApplicationNotificationEndpointArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder uri(Output<String> uri) {
-            this.uri = Objects.requireNonNull(uri);
+            $.uri = uri;
             return this;
         }
+
         public Builder uri(String uri) {
-            this.uri = Output.of(Objects.requireNonNull(uri));
-            return this;
-        }        public ApplicationNotificationEndpointArgs build() {
-            return new ApplicationNotificationEndpointArgs(uri);
+            return uri(Output.of(uri));
+        }
+
+        public ApplicationNotificationEndpointArgs build() {
+            $.uri = Objects.requireNonNull($.uri, "expected parameter 'uri' to be non-null");
+            return $;
         }
     }
+
 }

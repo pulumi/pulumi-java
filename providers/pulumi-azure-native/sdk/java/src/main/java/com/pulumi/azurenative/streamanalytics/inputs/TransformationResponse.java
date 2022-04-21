@@ -24,7 +24,7 @@ public final class TransformationResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="etag", required=true)
-      private final String etag;
+    private String etag;
 
     public String etag() {
         return this.etag;
@@ -35,7 +35,7 @@ public final class TransformationResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="id", required=true)
-      private final String id;
+    private String id;
 
     public String id() {
         return this.id;
@@ -46,10 +46,10 @@ public final class TransformationResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="name")
-      private final @Nullable String name;
+    private @Nullable String name;
 
     public Optional<String> name() {
-        return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -57,10 +57,10 @@ public final class TransformationResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="query")
-      private final @Nullable String query;
+    private @Nullable String query;
 
     public Optional<String> query() {
-        return this.query == null ? Optional.empty() : Optional.ofNullable(this.query);
+        return Optional.ofNullable(this.query);
     }
 
     /**
@@ -68,10 +68,10 @@ public final class TransformationResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="streamingUnits")
-      private final @Nullable Integer streamingUnits;
+    private @Nullable Integer streamingUnits;
 
     public Optional<Integer> streamingUnits() {
-        return this.streamingUnits == null ? Optional.empty() : Optional.ofNullable(this.streamingUnits);
+        return Optional.ofNullable(this.streamingUnits);
     }
 
     /**
@@ -79,91 +79,77 @@ public final class TransformationResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
     }
 
-    public TransformationResponse(
-        String etag,
-        String id,
-        @Nullable String name,
-        @Nullable String query,
-        @Nullable Integer streamingUnits,
-        String type) {
-        this.etag = Objects.requireNonNull(etag, "expected parameter 'etag' to be non-null");
-        this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
-        this.name = name;
-        this.query = query;
-        this.streamingUnits = streamingUnits;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private TransformationResponse() {}
 
-    private TransformationResponse() {
-        this.etag = null;
-        this.id = null;
-        this.name = null;
-        this.query = null;
-        this.streamingUnits = null;
-        this.type = null;
+    private TransformationResponse(TransformationResponse $) {
+        this.etag = $.etag;
+        this.id = $.id;
+        this.name = $.name;
+        this.query = $.query;
+        this.streamingUnits = $.streamingUnits;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TransformationResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String etag;
-        private String id;
-        private @Nullable String name;
-        private @Nullable String query;
-        private @Nullable Integer streamingUnits;
-        private String type;
+        private TransformationResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new TransformationResponse();
         }
 
         public Builder(TransformationResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.etag = defaults.etag;
-    	      this.id = defaults.id;
-    	      this.name = defaults.name;
-    	      this.query = defaults.query;
-    	      this.streamingUnits = defaults.streamingUnits;
-    	      this.type = defaults.type;
+            $ = new TransformationResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder etag(String etag) {
-            this.etag = Objects.requireNonNull(etag);
+            $.etag = etag;
             return this;
         }
+
         public Builder id(String id) {
-            this.id = Objects.requireNonNull(id);
+            $.id = id;
             return this;
         }
+
         public Builder name(@Nullable String name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
+
         public Builder query(@Nullable String query) {
-            this.query = query;
+            $.query = query;
             return this;
         }
+
         public Builder streamingUnits(@Nullable Integer streamingUnits) {
-            this.streamingUnits = streamingUnits;
+            $.streamingUnits = streamingUnits;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
-        }        public TransformationResponse build() {
-            return new TransformationResponse(etag, id, name, query, streamingUnits, type);
+        }
+
+        public TransformationResponse build() {
+            $.etag = Objects.requireNonNull($.etag, "expected parameter 'etag' to be non-null");
+            $.id = Objects.requireNonNull($.id, "expected parameter 'id' to be non-null");
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

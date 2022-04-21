@@ -15,62 +15,57 @@ public final class SpotFleetBaselineEbsBandwidthMbpsRequest extends com.pulumi.r
     public static final SpotFleetBaselineEbsBandwidthMbpsRequest Empty = new SpotFleetBaselineEbsBandwidthMbpsRequest();
 
     @Import(name="max")
-      private final @Nullable Integer max;
+    private @Nullable Integer max;
 
     public Optional<Integer> max() {
-        return this.max == null ? Optional.empty() : Optional.ofNullable(this.max);
+        return Optional.ofNullable(this.max);
     }
 
     @Import(name="min")
-      private final @Nullable Integer min;
+    private @Nullable Integer min;
 
     public Optional<Integer> min() {
-        return this.min == null ? Optional.empty() : Optional.ofNullable(this.min);
+        return Optional.ofNullable(this.min);
     }
 
-    public SpotFleetBaselineEbsBandwidthMbpsRequest(
-        @Nullable Integer max,
-        @Nullable Integer min) {
-        this.max = max;
-        this.min = min;
-    }
+    private SpotFleetBaselineEbsBandwidthMbpsRequest() {}
 
-    private SpotFleetBaselineEbsBandwidthMbpsRequest() {
-        this.max = null;
-        this.min = null;
+    private SpotFleetBaselineEbsBandwidthMbpsRequest(SpotFleetBaselineEbsBandwidthMbpsRequest $) {
+        this.max = $.max;
+        this.min = $.min;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SpotFleetBaselineEbsBandwidthMbpsRequest defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Integer max;
-        private @Nullable Integer min;
+        private SpotFleetBaselineEbsBandwidthMbpsRequest $;
 
         public Builder() {
-    	      // Empty
+            $ = new SpotFleetBaselineEbsBandwidthMbpsRequest();
         }
 
         public Builder(SpotFleetBaselineEbsBandwidthMbpsRequest defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.max = defaults.max;
-    	      this.min = defaults.min;
+            $ = new SpotFleetBaselineEbsBandwidthMbpsRequest(Objects.requireNonNull(defaults));
         }
 
         public Builder max(@Nullable Integer max) {
-            this.max = max;
+            $.max = max;
             return this;
         }
+
         public Builder min(@Nullable Integer min) {
-            this.min = min;
+            $.min = min;
             return this;
-        }        public SpotFleetBaselineEbsBandwidthMbpsRequest build() {
-            return new SpotFleetBaselineEbsBandwidthMbpsRequest(max, min);
+        }
+
+        public SpotFleetBaselineEbsBandwidthMbpsRequest build() {
+            return $;
         }
     }
+
 }

@@ -5,9 +5,9 @@ package com.pulumi.aws.amp.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class WorkspaceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="alias")
-      private final @Nullable Output<String> alias;
+    private @Nullable Output<String> alias;
 
-    public Output<String> alias() {
-        return this.alias == null ? Codegen.empty() : this.alias;
+    public Optional<Output<String>> alias() {
+        return Optional.ofNullable(this.alias);
     }
 
     /**
@@ -31,10 +31,10 @@ public final class WorkspaceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="arn")
-      private final @Nullable Output<String> arn;
+    private @Nullable Output<String> arn;
 
-    public Output<String> arn() {
-        return this.arn == null ? Codegen.empty() : this.arn;
+    public Optional<Output<String>> arn() {
+        return Optional.ofNullable(this.arn);
     }
 
     /**
@@ -42,76 +42,68 @@ public final class WorkspaceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="prometheusEndpoint")
-      private final @Nullable Output<String> prometheusEndpoint;
+    private @Nullable Output<String> prometheusEndpoint;
 
-    public Output<String> prometheusEndpoint() {
-        return this.prometheusEndpoint == null ? Codegen.empty() : this.prometheusEndpoint;
+    public Optional<Output<String>> prometheusEndpoint() {
+        return Optional.ofNullable(this.prometheusEndpoint);
     }
 
-    public WorkspaceState(
-        @Nullable Output<String> alias,
-        @Nullable Output<String> arn,
-        @Nullable Output<String> prometheusEndpoint) {
-        this.alias = alias;
-        this.arn = arn;
-        this.prometheusEndpoint = prometheusEndpoint;
-    }
+    private WorkspaceState() {}
 
-    private WorkspaceState() {
-        this.alias = Codegen.empty();
-        this.arn = Codegen.empty();
-        this.prometheusEndpoint = Codegen.empty();
+    private WorkspaceState(WorkspaceState $) {
+        this.alias = $.alias;
+        this.arn = $.arn;
+        this.prometheusEndpoint = $.prometheusEndpoint;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WorkspaceState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> alias;
-        private @Nullable Output<String> arn;
-        private @Nullable Output<String> prometheusEndpoint;
+        private WorkspaceState $;
 
         public Builder() {
-    	      // Empty
+            $ = new WorkspaceState();
         }
 
         public Builder(WorkspaceState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.alias = defaults.alias;
-    	      this.arn = defaults.arn;
-    	      this.prometheusEndpoint = defaults.prometheusEndpoint;
+            $ = new WorkspaceState(Objects.requireNonNull(defaults));
         }
 
         public Builder alias(@Nullable Output<String> alias) {
-            this.alias = alias;
+            $.alias = alias;
             return this;
         }
-        public Builder alias(@Nullable String alias) {
-            this.alias = Codegen.ofNullable(alias);
-            return this;
+
+        public Builder alias(String alias) {
+            return alias(Output.of(alias));
         }
+
         public Builder arn(@Nullable Output<String> arn) {
-            this.arn = arn;
+            $.arn = arn;
             return this;
         }
-        public Builder arn(@Nullable String arn) {
-            this.arn = Codegen.ofNullable(arn);
-            return this;
+
+        public Builder arn(String arn) {
+            return arn(Output.of(arn));
         }
+
         public Builder prometheusEndpoint(@Nullable Output<String> prometheusEndpoint) {
-            this.prometheusEndpoint = prometheusEndpoint;
+            $.prometheusEndpoint = prometheusEndpoint;
             return this;
         }
-        public Builder prometheusEndpoint(@Nullable String prometheusEndpoint) {
-            this.prometheusEndpoint = Codegen.ofNullable(prometheusEndpoint);
-            return this;
-        }        public WorkspaceState build() {
-            return new WorkspaceState(alias, arn, prometheusEndpoint);
+
+        public Builder prometheusEndpoint(String prometheusEndpoint) {
+            return prometheusEndpoint(Output.of(prometheusEndpoint));
+        }
+
+        public WorkspaceState build() {
+            return $;
         }
     }
+
 }

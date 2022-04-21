@@ -17,45 +17,45 @@ public final class GetUserGroupArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="userGroupId", required=true)
-      private final String userGroupId;
+    private String userGroupId;
 
     public String userGroupId() {
         return this.userGroupId;
     }
 
-    public GetUserGroupArgs(String userGroupId) {
-        this.userGroupId = Objects.requireNonNull(userGroupId, "expected parameter 'userGroupId' to be non-null");
-    }
+    private GetUserGroupArgs() {}
 
-    private GetUserGroupArgs() {
-        this.userGroupId = null;
+    private GetUserGroupArgs(GetUserGroupArgs $) {
+        this.userGroupId = $.userGroupId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetUserGroupArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String userGroupId;
+        private GetUserGroupArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetUserGroupArgs();
         }
 
         public Builder(GetUserGroupArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.userGroupId = defaults.userGroupId;
+            $ = new GetUserGroupArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder userGroupId(String userGroupId) {
-            this.userGroupId = Objects.requireNonNull(userGroupId);
+            $.userGroupId = userGroupId;
             return this;
-        }        public GetUserGroupArgs build() {
-            return new GetUserGroupArgs(userGroupId);
+        }
+
+        public GetUserGroupArgs build() {
+            $.userGroupId = Objects.requireNonNull($.userGroupId, "expected parameter 'userGroupId' to be non-null");
+            return $;
         }
     }
+
 }

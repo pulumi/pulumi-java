@@ -6,10 +6,10 @@ package com.pulumi.awsnative.greengrassv2.inputs;
 import com.pulumi.awsnative.greengrassv2.enums.ComponentVersionLambdaFilesystemPermission;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -18,90 +18,82 @@ public final class ComponentVersionLambdaDeviceMountArgs extends com.pulumi.reso
     public static final ComponentVersionLambdaDeviceMountArgs Empty = new ComponentVersionLambdaDeviceMountArgs();
 
     @Import(name="addGroupOwner")
-      private final @Nullable Output<Boolean> addGroupOwner;
+    private @Nullable Output<Boolean> addGroupOwner;
 
-    public Output<Boolean> addGroupOwner() {
-        return this.addGroupOwner == null ? Codegen.empty() : this.addGroupOwner;
+    public Optional<Output<Boolean>> addGroupOwner() {
+        return Optional.ofNullable(this.addGroupOwner);
     }
 
     @Import(name="path")
-      private final @Nullable Output<String> path;
+    private @Nullable Output<String> path;
 
-    public Output<String> path() {
-        return this.path == null ? Codegen.empty() : this.path;
+    public Optional<Output<String>> path() {
+        return Optional.ofNullable(this.path);
     }
 
     @Import(name="permission")
-      private final @Nullable Output<ComponentVersionLambdaFilesystemPermission> permission;
+    private @Nullable Output<ComponentVersionLambdaFilesystemPermission> permission;
 
-    public Output<ComponentVersionLambdaFilesystemPermission> permission() {
-        return this.permission == null ? Codegen.empty() : this.permission;
+    public Optional<Output<ComponentVersionLambdaFilesystemPermission>> permission() {
+        return Optional.ofNullable(this.permission);
     }
 
-    public ComponentVersionLambdaDeviceMountArgs(
-        @Nullable Output<Boolean> addGroupOwner,
-        @Nullable Output<String> path,
-        @Nullable Output<ComponentVersionLambdaFilesystemPermission> permission) {
-        this.addGroupOwner = addGroupOwner;
-        this.path = path;
-        this.permission = permission;
-    }
+    private ComponentVersionLambdaDeviceMountArgs() {}
 
-    private ComponentVersionLambdaDeviceMountArgs() {
-        this.addGroupOwner = Codegen.empty();
-        this.path = Codegen.empty();
-        this.permission = Codegen.empty();
+    private ComponentVersionLambdaDeviceMountArgs(ComponentVersionLambdaDeviceMountArgs $) {
+        this.addGroupOwner = $.addGroupOwner;
+        this.path = $.path;
+        this.permission = $.permission;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ComponentVersionLambdaDeviceMountArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> addGroupOwner;
-        private @Nullable Output<String> path;
-        private @Nullable Output<ComponentVersionLambdaFilesystemPermission> permission;
+        private ComponentVersionLambdaDeviceMountArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ComponentVersionLambdaDeviceMountArgs();
         }
 
         public Builder(ComponentVersionLambdaDeviceMountArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.addGroupOwner = defaults.addGroupOwner;
-    	      this.path = defaults.path;
-    	      this.permission = defaults.permission;
+            $ = new ComponentVersionLambdaDeviceMountArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder addGroupOwner(@Nullable Output<Boolean> addGroupOwner) {
-            this.addGroupOwner = addGroupOwner;
+            $.addGroupOwner = addGroupOwner;
             return this;
         }
-        public Builder addGroupOwner(@Nullable Boolean addGroupOwner) {
-            this.addGroupOwner = Codegen.ofNullable(addGroupOwner);
-            return this;
+
+        public Builder addGroupOwner(Boolean addGroupOwner) {
+            return addGroupOwner(Output.of(addGroupOwner));
         }
+
         public Builder path(@Nullable Output<String> path) {
-            this.path = path;
+            $.path = path;
             return this;
         }
-        public Builder path(@Nullable String path) {
-            this.path = Codegen.ofNullable(path);
-            return this;
+
+        public Builder path(String path) {
+            return path(Output.of(path));
         }
+
         public Builder permission(@Nullable Output<ComponentVersionLambdaFilesystemPermission> permission) {
-            this.permission = permission;
+            $.permission = permission;
             return this;
         }
-        public Builder permission(@Nullable ComponentVersionLambdaFilesystemPermission permission) {
-            this.permission = Codegen.ofNullable(permission);
-            return this;
-        }        public ComponentVersionLambdaDeviceMountArgs build() {
-            return new ComponentVersionLambdaDeviceMountArgs(addGroupOwner, path, permission);
+
+        public Builder permission(ComponentVersionLambdaFilesystemPermission permission) {
+            return permission(Output.of(permission));
+        }
+
+        public ComponentVersionLambdaDeviceMountArgs build() {
+            return $;
         }
     }
+
 }

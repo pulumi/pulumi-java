@@ -23,10 +23,10 @@ public final class EntityReferenceResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="referenceName")
-      private final @Nullable String referenceName;
+    private @Nullable String referenceName;
 
     public Optional<String> referenceName() {
-        return this.referenceName == null ? Optional.empty() : Optional.ofNullable(this.referenceName);
+        return Optional.ofNullable(this.referenceName);
     }
 
     /**
@@ -34,55 +34,50 @@ public final class EntityReferenceResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="type")
-      private final @Nullable String type;
+    private @Nullable String type;
 
     public Optional<String> type() {
-        return this.type == null ? Optional.empty() : Optional.ofNullable(this.type);
+        return Optional.ofNullable(this.type);
     }
 
-    public EntityReferenceResponse(
-        @Nullable String referenceName,
-        @Nullable String type) {
-        this.referenceName = referenceName;
-        this.type = type;
-    }
+    private EntityReferenceResponse() {}
 
-    private EntityReferenceResponse() {
-        this.referenceName = null;
-        this.type = null;
+    private EntityReferenceResponse(EntityReferenceResponse $) {
+        this.referenceName = $.referenceName;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EntityReferenceResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String referenceName;
-        private @Nullable String type;
+        private EntityReferenceResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new EntityReferenceResponse();
         }
 
         public Builder(EntityReferenceResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.referenceName = defaults.referenceName;
-    	      this.type = defaults.type;
+            $ = new EntityReferenceResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder referenceName(@Nullable String referenceName) {
-            this.referenceName = referenceName;
+            $.referenceName = referenceName;
             return this;
         }
+
         public Builder type(@Nullable String type) {
-            this.type = type;
+            $.type = type;
             return this;
-        }        public EntityReferenceResponse build() {
-            return new EntityReferenceResponse(referenceName, type);
+        }
+
+        public EntityReferenceResponse build() {
+            return $;
         }
     }
+
 }

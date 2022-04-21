@@ -5,10 +5,10 @@ package com.pulumi.googlenative.bigquery_v2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.bigquery_v2.inputs.StandardSqlFieldArgs;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,52 +25,52 @@ public final class StandardSqlTableTypeArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="columns")
-      private final @Nullable Output<List<StandardSqlFieldArgs>> columns;
+    private @Nullable Output<List<StandardSqlFieldArgs>> columns;
 
-    public Output<List<StandardSqlFieldArgs>> columns() {
-        return this.columns == null ? Codegen.empty() : this.columns;
+    public Optional<Output<List<StandardSqlFieldArgs>>> columns() {
+        return Optional.ofNullable(this.columns);
     }
 
-    public StandardSqlTableTypeArgs(@Nullable Output<List<StandardSqlFieldArgs>> columns) {
-        this.columns = columns;
-    }
+    private StandardSqlTableTypeArgs() {}
 
-    private StandardSqlTableTypeArgs() {
-        this.columns = Codegen.empty();
+    private StandardSqlTableTypeArgs(StandardSqlTableTypeArgs $) {
+        this.columns = $.columns;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(StandardSqlTableTypeArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<StandardSqlFieldArgs>> columns;
+        private StandardSqlTableTypeArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new StandardSqlTableTypeArgs();
         }
 
         public Builder(StandardSqlTableTypeArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.columns = defaults.columns;
+            $ = new StandardSqlTableTypeArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder columns(@Nullable Output<List<StandardSqlFieldArgs>> columns) {
-            this.columns = columns;
+            $.columns = columns;
             return this;
         }
-        public Builder columns(@Nullable List<StandardSqlFieldArgs> columns) {
-            this.columns = Codegen.ofNullable(columns);
-            return this;
+
+        public Builder columns(List<StandardSqlFieldArgs> columns) {
+            return columns(Output.of(columns));
         }
+
         public Builder columns(StandardSqlFieldArgs... columns) {
             return columns(List.of(columns));
-        }        public StandardSqlTableTypeArgs build() {
-            return new StandardSqlTableTypeArgs(columns);
+        }
+
+        public StandardSqlTableTypeArgs build() {
+            return $;
         }
     }
+
 }

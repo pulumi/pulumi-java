@@ -21,7 +21,7 @@ public final class SoftwareRecipeStepExtractArchiveResponse extends com.pulumi.r
      * 
      */
     @Import(name="artifactId", required=true)
-      private final String artifactId;
+    private String artifactId;
 
     public String artifactId() {
         return this.artifactId;
@@ -32,7 +32,7 @@ public final class SoftwareRecipeStepExtractArchiveResponse extends com.pulumi.r
      * 
      */
     @Import(name="destination", required=true)
-      private final String destination;
+    private String destination;
 
     public String destination() {
         return this.destination;
@@ -43,64 +43,59 @@ public final class SoftwareRecipeStepExtractArchiveResponse extends com.pulumi.r
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
     }
 
-    public SoftwareRecipeStepExtractArchiveResponse(
-        String artifactId,
-        String destination,
-        String type) {
-        this.artifactId = Objects.requireNonNull(artifactId, "expected parameter 'artifactId' to be non-null");
-        this.destination = Objects.requireNonNull(destination, "expected parameter 'destination' to be non-null");
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private SoftwareRecipeStepExtractArchiveResponse() {}
 
-    private SoftwareRecipeStepExtractArchiveResponse() {
-        this.artifactId = null;
-        this.destination = null;
-        this.type = null;
+    private SoftwareRecipeStepExtractArchiveResponse(SoftwareRecipeStepExtractArchiveResponse $) {
+        this.artifactId = $.artifactId;
+        this.destination = $.destination;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SoftwareRecipeStepExtractArchiveResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String artifactId;
-        private String destination;
-        private String type;
+        private SoftwareRecipeStepExtractArchiveResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new SoftwareRecipeStepExtractArchiveResponse();
         }
 
         public Builder(SoftwareRecipeStepExtractArchiveResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.artifactId = defaults.artifactId;
-    	      this.destination = defaults.destination;
-    	      this.type = defaults.type;
+            $ = new SoftwareRecipeStepExtractArchiveResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder artifactId(String artifactId) {
-            this.artifactId = Objects.requireNonNull(artifactId);
+            $.artifactId = artifactId;
             return this;
         }
+
         public Builder destination(String destination) {
-            this.destination = Objects.requireNonNull(destination);
+            $.destination = destination;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
-        }        public SoftwareRecipeStepExtractArchiveResponse build() {
-            return new SoftwareRecipeStepExtractArchiveResponse(artifactId, destination, type);
+        }
+
+        public SoftwareRecipeStepExtractArchiveResponse build() {
+            $.artifactId = Objects.requireNonNull($.artifactId, "expected parameter 'artifactId' to be non-null");
+            $.destination = Objects.requireNonNull($.destination, "expected parameter 'destination' to be non-null");
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

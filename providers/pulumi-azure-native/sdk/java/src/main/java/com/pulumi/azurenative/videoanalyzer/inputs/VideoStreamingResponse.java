@@ -29,45 +29,44 @@ public final class VideoStreamingResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="archiveBaseUrl")
-      private final @Nullable String archiveBaseUrl;
+    private @Nullable String archiveBaseUrl;
 
     public Optional<String> archiveBaseUrl() {
-        return this.archiveBaseUrl == null ? Optional.empty() : Optional.ofNullable(this.archiveBaseUrl);
+        return Optional.ofNullable(this.archiveBaseUrl);
     }
 
-    public VideoStreamingResponse(@Nullable String archiveBaseUrl) {
-        this.archiveBaseUrl = archiveBaseUrl;
-    }
+    private VideoStreamingResponse() {}
 
-    private VideoStreamingResponse() {
-        this.archiveBaseUrl = null;
+    private VideoStreamingResponse(VideoStreamingResponse $) {
+        this.archiveBaseUrl = $.archiveBaseUrl;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VideoStreamingResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String archiveBaseUrl;
+        private VideoStreamingResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new VideoStreamingResponse();
         }
 
         public Builder(VideoStreamingResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.archiveBaseUrl = defaults.archiveBaseUrl;
+            $ = new VideoStreamingResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder archiveBaseUrl(@Nullable String archiveBaseUrl) {
-            this.archiveBaseUrl = archiveBaseUrl;
+            $.archiveBaseUrl = archiveBaseUrl;
             return this;
-        }        public VideoStreamingResponse build() {
-            return new VideoStreamingResponse(archiveBaseUrl);
+        }
+
+        public VideoStreamingResponse build() {
+            return $;
         }
     }
+
 }

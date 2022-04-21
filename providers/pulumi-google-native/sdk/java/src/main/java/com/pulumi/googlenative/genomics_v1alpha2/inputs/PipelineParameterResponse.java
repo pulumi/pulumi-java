@@ -22,7 +22,7 @@ public final class PipelineParameterResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="defaultValue", required=true)
-      private final String defaultValue;
+    private String defaultValue;
 
     public String defaultValue() {
         return this.defaultValue;
@@ -33,7 +33,7 @@ public final class PipelineParameterResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="description", required=true)
-      private final String description;
+    private String description;
 
     public String description() {
         return this.description;
@@ -44,7 +44,7 @@ public final class PipelineParameterResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="localCopy", required=true)
-      private final LocalCopyResponse localCopy;
+    private LocalCopyResponse localCopy;
 
     public LocalCopyResponse localCopy() {
         return this.localCopy;
@@ -55,73 +55,66 @@ public final class PipelineParameterResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
     }
 
-    public PipelineParameterResponse(
-        String defaultValue,
-        String description,
-        LocalCopyResponse localCopy,
-        String name) {
-        this.defaultValue = Objects.requireNonNull(defaultValue, "expected parameter 'defaultValue' to be non-null");
-        this.description = Objects.requireNonNull(description, "expected parameter 'description' to be non-null");
-        this.localCopy = Objects.requireNonNull(localCopy, "expected parameter 'localCopy' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-    }
+    private PipelineParameterResponse() {}
 
-    private PipelineParameterResponse() {
-        this.defaultValue = null;
-        this.description = null;
-        this.localCopy = null;
-        this.name = null;
+    private PipelineParameterResponse(PipelineParameterResponse $) {
+        this.defaultValue = $.defaultValue;
+        this.description = $.description;
+        this.localCopy = $.localCopy;
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PipelineParameterResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String defaultValue;
-        private String description;
-        private LocalCopyResponse localCopy;
-        private String name;
+        private PipelineParameterResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new PipelineParameterResponse();
         }
 
         public Builder(PipelineParameterResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.defaultValue = defaults.defaultValue;
-    	      this.description = defaults.description;
-    	      this.localCopy = defaults.localCopy;
-    	      this.name = defaults.name;
+            $ = new PipelineParameterResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder defaultValue(String defaultValue) {
-            this.defaultValue = Objects.requireNonNull(defaultValue);
+            $.defaultValue = defaultValue;
             return this;
         }
+
         public Builder description(String description) {
-            this.description = Objects.requireNonNull(description);
+            $.description = description;
             return this;
         }
+
         public Builder localCopy(LocalCopyResponse localCopy) {
-            this.localCopy = Objects.requireNonNull(localCopy);
+            $.localCopy = localCopy;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
-        }        public PipelineParameterResponse build() {
-            return new PipelineParameterResponse(defaultValue, description, localCopy, name);
+        }
+
+        public PipelineParameterResponse build() {
+            $.defaultValue = Objects.requireNonNull($.defaultValue, "expected parameter 'defaultValue' to be non-null");
+            $.description = Objects.requireNonNull($.description, "expected parameter 'description' to be non-null");
+            $.localCopy = Objects.requireNonNull($.localCopy, "expected parameter 'localCopy' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            return $;
         }
     }
+
 }

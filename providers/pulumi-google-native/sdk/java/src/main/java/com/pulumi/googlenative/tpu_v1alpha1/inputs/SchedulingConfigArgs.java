@@ -5,9 +5,9 @@ package com.pulumi.googlenative.tpu_v1alpha1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class SchedulingConfigArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="preemptible")
-      private final @Nullable Output<Boolean> preemptible;
+    private @Nullable Output<Boolean> preemptible;
 
-    public Output<Boolean> preemptible() {
-        return this.preemptible == null ? Codegen.empty() : this.preemptible;
+    public Optional<Output<Boolean>> preemptible() {
+        return Optional.ofNullable(this.preemptible);
     }
 
     /**
@@ -35,63 +35,58 @@ public final class SchedulingConfigArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="reserved")
-      private final @Nullable Output<Boolean> reserved;
+    private @Nullable Output<Boolean> reserved;
 
-    public Output<Boolean> reserved() {
-        return this.reserved == null ? Codegen.empty() : this.reserved;
+    public Optional<Output<Boolean>> reserved() {
+        return Optional.ofNullable(this.reserved);
     }
 
-    public SchedulingConfigArgs(
-        @Nullable Output<Boolean> preemptible,
-        @Nullable Output<Boolean> reserved) {
-        this.preemptible = preemptible;
-        this.reserved = reserved;
-    }
+    private SchedulingConfigArgs() {}
 
-    private SchedulingConfigArgs() {
-        this.preemptible = Codegen.empty();
-        this.reserved = Codegen.empty();
+    private SchedulingConfigArgs(SchedulingConfigArgs $) {
+        this.preemptible = $.preemptible;
+        this.reserved = $.reserved;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SchedulingConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> preemptible;
-        private @Nullable Output<Boolean> reserved;
+        private SchedulingConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SchedulingConfigArgs();
         }
 
         public Builder(SchedulingConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.preemptible = defaults.preemptible;
-    	      this.reserved = defaults.reserved;
+            $ = new SchedulingConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder preemptible(@Nullable Output<Boolean> preemptible) {
-            this.preemptible = preemptible;
+            $.preemptible = preemptible;
             return this;
         }
-        public Builder preemptible(@Nullable Boolean preemptible) {
-            this.preemptible = Codegen.ofNullable(preemptible);
-            return this;
+
+        public Builder preemptible(Boolean preemptible) {
+            return preemptible(Output.of(preemptible));
         }
+
         public Builder reserved(@Nullable Output<Boolean> reserved) {
-            this.reserved = reserved;
+            $.reserved = reserved;
             return this;
         }
-        public Builder reserved(@Nullable Boolean reserved) {
-            this.reserved = Codegen.ofNullable(reserved);
-            return this;
-        }        public SchedulingConfigArgs build() {
-            return new SchedulingConfigArgs(preemptible, reserved);
+
+        public Builder reserved(Boolean reserved) {
+            return reserved(Output.of(reserved));
+        }
+
+        public SchedulingConfigArgs build() {
+            return $;
         }
     }
+
 }

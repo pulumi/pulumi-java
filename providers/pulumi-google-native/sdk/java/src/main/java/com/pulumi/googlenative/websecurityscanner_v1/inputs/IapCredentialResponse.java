@@ -21,45 +21,45 @@ public final class IapCredentialResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="iapTestServiceAccountInfo", required=true)
-      private final IapTestServiceAccountInfoResponse iapTestServiceAccountInfo;
+    private IapTestServiceAccountInfoResponse iapTestServiceAccountInfo;
 
     public IapTestServiceAccountInfoResponse iapTestServiceAccountInfo() {
         return this.iapTestServiceAccountInfo;
     }
 
-    public IapCredentialResponse(IapTestServiceAccountInfoResponse iapTestServiceAccountInfo) {
-        this.iapTestServiceAccountInfo = Objects.requireNonNull(iapTestServiceAccountInfo, "expected parameter 'iapTestServiceAccountInfo' to be non-null");
-    }
+    private IapCredentialResponse() {}
 
-    private IapCredentialResponse() {
-        this.iapTestServiceAccountInfo = null;
+    private IapCredentialResponse(IapCredentialResponse $) {
+        this.iapTestServiceAccountInfo = $.iapTestServiceAccountInfo;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(IapCredentialResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private IapTestServiceAccountInfoResponse iapTestServiceAccountInfo;
+        private IapCredentialResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new IapCredentialResponse();
         }
 
         public Builder(IapCredentialResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.iapTestServiceAccountInfo = defaults.iapTestServiceAccountInfo;
+            $ = new IapCredentialResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder iapTestServiceAccountInfo(IapTestServiceAccountInfoResponse iapTestServiceAccountInfo) {
-            this.iapTestServiceAccountInfo = Objects.requireNonNull(iapTestServiceAccountInfo);
+            $.iapTestServiceAccountInfo = iapTestServiceAccountInfo;
             return this;
-        }        public IapCredentialResponse build() {
-            return new IapCredentialResponse(iapTestServiceAccountInfo);
+        }
+
+        public IapCredentialResponse build() {
+            $.iapTestServiceAccountInfo = Objects.requireNonNull($.iapTestServiceAccountInfo, "expected parameter 'iapTestServiceAccountInfo' to be non-null");
+            return $;
         }
     }
+
 }

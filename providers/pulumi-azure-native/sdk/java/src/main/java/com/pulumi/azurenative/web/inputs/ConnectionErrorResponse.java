@@ -24,10 +24,10 @@ public final class ConnectionErrorResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="code")
-      private final @Nullable String code;
+    private @Nullable String code;
 
     public Optional<String> code() {
-        return this.code == null ? Optional.empty() : Optional.ofNullable(this.code);
+        return Optional.ofNullable(this.code);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class ConnectionErrorResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="etag")
-      private final @Nullable String etag;
+    private @Nullable String etag;
 
     public Optional<String> etag() {
-        return this.etag == null ? Optional.empty() : Optional.ofNullable(this.etag);
+        return Optional.ofNullable(this.etag);
     }
 
     /**
@@ -46,7 +46,7 @@ public final class ConnectionErrorResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="id", required=true)
-      private final String id;
+    private String id;
 
     public String id() {
         return this.id;
@@ -57,10 +57,10 @@ public final class ConnectionErrorResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="location")
-      private final @Nullable String location;
+    private @Nullable String location;
 
     public Optional<String> location() {
-        return this.location == null ? Optional.empty() : Optional.ofNullable(this.location);
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -68,10 +68,10 @@ public final class ConnectionErrorResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="message")
-      private final @Nullable String message;
+    private @Nullable String message;
 
     public Optional<String> message() {
-        return this.message == null ? Optional.empty() : Optional.ofNullable(this.message);
+        return Optional.ofNullable(this.message);
     }
 
     /**
@@ -79,7 +79,7 @@ public final class ConnectionErrorResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -90,10 +90,10 @@ public final class ConnectionErrorResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="tags")
-      private final @Nullable Map<String,String> tags;
+    private @Nullable Map<String,String> tags;
 
-    public Map<String,String> tags() {
-        return this.tags == null ? Map.of() : this.tags;
+    public Optional<Map<String,String>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -101,109 +101,89 @@ public final class ConnectionErrorResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
     }
 
-    public ConnectionErrorResponse(
-        @Nullable String code,
-        @Nullable String etag,
-        String id,
-        @Nullable String location,
-        @Nullable String message,
-        String name,
-        @Nullable Map<String,String> tags,
-        String type) {
-        this.code = code;
-        this.etag = etag;
-        this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
-        this.location = location;
-        this.message = message;
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.tags = tags;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private ConnectionErrorResponse() {}
 
-    private ConnectionErrorResponse() {
-        this.code = null;
-        this.etag = null;
-        this.id = null;
-        this.location = null;
-        this.message = null;
-        this.name = null;
-        this.tags = Map.of();
-        this.type = null;
+    private ConnectionErrorResponse(ConnectionErrorResponse $) {
+        this.code = $.code;
+        this.etag = $.etag;
+        this.id = $.id;
+        this.location = $.location;
+        this.message = $.message;
+        this.name = $.name;
+        this.tags = $.tags;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ConnectionErrorResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String code;
-        private @Nullable String etag;
-        private String id;
-        private @Nullable String location;
-        private @Nullable String message;
-        private String name;
-        private @Nullable Map<String,String> tags;
-        private String type;
+        private ConnectionErrorResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ConnectionErrorResponse();
         }
 
         public Builder(ConnectionErrorResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.code = defaults.code;
-    	      this.etag = defaults.etag;
-    	      this.id = defaults.id;
-    	      this.location = defaults.location;
-    	      this.message = defaults.message;
-    	      this.name = defaults.name;
-    	      this.tags = defaults.tags;
-    	      this.type = defaults.type;
+            $ = new ConnectionErrorResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder code(@Nullable String code) {
-            this.code = code;
+            $.code = code;
             return this;
         }
+
         public Builder etag(@Nullable String etag) {
-            this.etag = etag;
+            $.etag = etag;
             return this;
         }
+
         public Builder id(String id) {
-            this.id = Objects.requireNonNull(id);
+            $.id = id;
             return this;
         }
+
         public Builder location(@Nullable String location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
+
         public Builder message(@Nullable String message) {
-            this.message = message;
+            $.message = message;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
-        }        public ConnectionErrorResponse build() {
-            return new ConnectionErrorResponse(code, etag, id, location, message, name, tags, type);
+        }
+
+        public ConnectionErrorResponse build() {
+            $.id = Objects.requireNonNull($.id, "expected parameter 'id' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

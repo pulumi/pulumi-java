@@ -17,7 +17,7 @@ public final class GetWebAppInstanceFunctionSlotArgs extends com.pulumi.resource
      * 
      */
     @Import(name="functionName", required=true)
-      private final String functionName;
+    private String functionName;
 
     public String functionName() {
         return this.functionName;
@@ -28,7 +28,7 @@ public final class GetWebAppInstanceFunctionSlotArgs extends com.pulumi.resource
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -39,7 +39,7 @@ public final class GetWebAppInstanceFunctionSlotArgs extends com.pulumi.resource
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -50,73 +50,66 @@ public final class GetWebAppInstanceFunctionSlotArgs extends com.pulumi.resource
      * 
      */
     @Import(name="slot", required=true)
-      private final String slot;
+    private String slot;
 
     public String slot() {
         return this.slot;
     }
 
-    public GetWebAppInstanceFunctionSlotArgs(
-        String functionName,
-        String name,
-        String resourceGroupName,
-        String slot) {
-        this.functionName = Objects.requireNonNull(functionName, "expected parameter 'functionName' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.slot = Objects.requireNonNull(slot, "expected parameter 'slot' to be non-null");
-    }
+    private GetWebAppInstanceFunctionSlotArgs() {}
 
-    private GetWebAppInstanceFunctionSlotArgs() {
-        this.functionName = null;
-        this.name = null;
-        this.resourceGroupName = null;
-        this.slot = null;
+    private GetWebAppInstanceFunctionSlotArgs(GetWebAppInstanceFunctionSlotArgs $) {
+        this.functionName = $.functionName;
+        this.name = $.name;
+        this.resourceGroupName = $.resourceGroupName;
+        this.slot = $.slot;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetWebAppInstanceFunctionSlotArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String functionName;
-        private String name;
-        private String resourceGroupName;
-        private String slot;
+        private GetWebAppInstanceFunctionSlotArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetWebAppInstanceFunctionSlotArgs();
         }
 
         public Builder(GetWebAppInstanceFunctionSlotArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.functionName = defaults.functionName;
-    	      this.name = defaults.name;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.slot = defaults.slot;
+            $ = new GetWebAppInstanceFunctionSlotArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder functionName(String functionName) {
-            this.functionName = Objects.requireNonNull(functionName);
+            $.functionName = functionName;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder slot(String slot) {
-            this.slot = Objects.requireNonNull(slot);
+            $.slot = slot;
             return this;
-        }        public GetWebAppInstanceFunctionSlotArgs build() {
-            return new GetWebAppInstanceFunctionSlotArgs(functionName, name, resourceGroupName, slot);
+        }
+
+        public GetWebAppInstanceFunctionSlotArgs build() {
+            $.functionName = Objects.requireNonNull($.functionName, "expected parameter 'functionName' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.slot = Objects.requireNonNull($.slot, "expected parameter 'slot' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,9 +5,9 @@ package com.pulumi.azurenative.compute.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class AdditionalCapabilitiesArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="ultraSSDEnabled")
-      private final @Nullable Output<Boolean> ultraSSDEnabled;
+    private @Nullable Output<Boolean> ultraSSDEnabled;
 
-    public Output<Boolean> ultraSSDEnabled() {
-        return this.ultraSSDEnabled == null ? Codegen.empty() : this.ultraSSDEnabled;
+    public Optional<Output<Boolean>> ultraSSDEnabled() {
+        return Optional.ofNullable(this.ultraSSDEnabled);
     }
 
-    public AdditionalCapabilitiesArgs(@Nullable Output<Boolean> ultraSSDEnabled) {
-        this.ultraSSDEnabled = ultraSSDEnabled;
-    }
+    private AdditionalCapabilitiesArgs() {}
 
-    private AdditionalCapabilitiesArgs() {
-        this.ultraSSDEnabled = Codegen.empty();
+    private AdditionalCapabilitiesArgs(AdditionalCapabilitiesArgs $) {
+        this.ultraSSDEnabled = $.ultraSSDEnabled;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AdditionalCapabilitiesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> ultraSSDEnabled;
+        private AdditionalCapabilitiesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AdditionalCapabilitiesArgs();
         }
 
         public Builder(AdditionalCapabilitiesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.ultraSSDEnabled = defaults.ultraSSDEnabled;
+            $ = new AdditionalCapabilitiesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder ultraSSDEnabled(@Nullable Output<Boolean> ultraSSDEnabled) {
-            this.ultraSSDEnabled = ultraSSDEnabled;
+            $.ultraSSDEnabled = ultraSSDEnabled;
             return this;
         }
-        public Builder ultraSSDEnabled(@Nullable Boolean ultraSSDEnabled) {
-            this.ultraSSDEnabled = Codegen.ofNullable(ultraSSDEnabled);
-            return this;
-        }        public AdditionalCapabilitiesArgs build() {
-            return new AdditionalCapabilitiesArgs(ultraSSDEnabled);
+
+        public Builder ultraSSDEnabled(Boolean ultraSSDEnabled) {
+            return ultraSSDEnabled(Output.of(ultraSSDEnabled));
+        }
+
+        public AdditionalCapabilitiesArgs build() {
+            return $;
         }
     }
+
 }

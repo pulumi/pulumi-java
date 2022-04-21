@@ -21,7 +21,7 @@ public final class HostedZoneVPC extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="vPCId", required=true)
-      private final String vPCId;
+    private String vPCId;
 
     public String vPCId() {
         return this.vPCId;
@@ -32,55 +32,52 @@ public final class HostedZoneVPC extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="vPCRegion", required=true)
-      private final String vPCRegion;
+    private String vPCRegion;
 
     public String vPCRegion() {
         return this.vPCRegion;
     }
 
-    public HostedZoneVPC(
-        String vPCId,
-        String vPCRegion) {
-        this.vPCId = Objects.requireNonNull(vPCId, "expected parameter 'vPCId' to be non-null");
-        this.vPCRegion = Objects.requireNonNull(vPCRegion, "expected parameter 'vPCRegion' to be non-null");
-    }
+    private HostedZoneVPC() {}
 
-    private HostedZoneVPC() {
-        this.vPCId = null;
-        this.vPCRegion = null;
+    private HostedZoneVPC(HostedZoneVPC $) {
+        this.vPCId = $.vPCId;
+        this.vPCRegion = $.vPCRegion;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(HostedZoneVPC defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String vPCId;
-        private String vPCRegion;
+        private HostedZoneVPC $;
 
         public Builder() {
-    	      // Empty
+            $ = new HostedZoneVPC();
         }
 
         public Builder(HostedZoneVPC defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.vPCId = defaults.vPCId;
-    	      this.vPCRegion = defaults.vPCRegion;
+            $ = new HostedZoneVPC(Objects.requireNonNull(defaults));
         }
 
         public Builder vPCId(String vPCId) {
-            this.vPCId = Objects.requireNonNull(vPCId);
+            $.vPCId = vPCId;
             return this;
         }
+
         public Builder vPCRegion(String vPCRegion) {
-            this.vPCRegion = Objects.requireNonNull(vPCRegion);
+            $.vPCRegion = vPCRegion;
             return this;
-        }        public HostedZoneVPC build() {
-            return new HostedZoneVPC(vPCId, vPCRegion);
+        }
+
+        public HostedZoneVPC build() {
+            $.vPCId = Objects.requireNonNull($.vPCId, "expected parameter 'vPCId' to be non-null");
+            $.vPCRegion = Objects.requireNonNull($.vPCRegion, "expected parameter 'vPCRegion' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,9 +5,9 @@ package com.pulumi.googlenative.containeranalysis_v1alpha1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class RepoSourceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="branchName")
-      private final @Nullable Output<String> branchName;
+    private @Nullable Output<String> branchName;
 
-    public Output<String> branchName() {
-        return this.branchName == null ? Codegen.empty() : this.branchName;
+    public Optional<Output<String>> branchName() {
+        return Optional.ofNullable(this.branchName);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class RepoSourceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="commitSha")
-      private final @Nullable Output<String> commitSha;
+    private @Nullable Output<String> commitSha;
 
-    public Output<String> commitSha() {
-        return this.commitSha == null ? Codegen.empty() : this.commitSha;
+    public Optional<Output<String>> commitSha() {
+        return Optional.ofNullable(this.commitSha);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class RepoSourceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -57,10 +57,10 @@ public final class RepoSourceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="repoName")
-      private final @Nullable Output<String> repoName;
+    private @Nullable Output<String> repoName;
 
-    public Output<String> repoName() {
-        return this.repoName == null ? Codegen.empty() : this.repoName;
+    public Optional<Output<String>> repoName() {
+        return Optional.ofNullable(this.repoName);
     }
 
     /**
@@ -68,102 +68,88 @@ public final class RepoSourceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tagName")
-      private final @Nullable Output<String> tagName;
+    private @Nullable Output<String> tagName;
 
-    public Output<String> tagName() {
-        return this.tagName == null ? Codegen.empty() : this.tagName;
+    public Optional<Output<String>> tagName() {
+        return Optional.ofNullable(this.tagName);
     }
 
-    public RepoSourceArgs(
-        @Nullable Output<String> branchName,
-        @Nullable Output<String> commitSha,
-        @Nullable Output<String> project,
-        @Nullable Output<String> repoName,
-        @Nullable Output<String> tagName) {
-        this.branchName = branchName;
-        this.commitSha = commitSha;
-        this.project = project;
-        this.repoName = repoName;
-        this.tagName = tagName;
-    }
+    private RepoSourceArgs() {}
 
-    private RepoSourceArgs() {
-        this.branchName = Codegen.empty();
-        this.commitSha = Codegen.empty();
-        this.project = Codegen.empty();
-        this.repoName = Codegen.empty();
-        this.tagName = Codegen.empty();
+    private RepoSourceArgs(RepoSourceArgs $) {
+        this.branchName = $.branchName;
+        this.commitSha = $.commitSha;
+        this.project = $.project;
+        this.repoName = $.repoName;
+        this.tagName = $.tagName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RepoSourceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> branchName;
-        private @Nullable Output<String> commitSha;
-        private @Nullable Output<String> project;
-        private @Nullable Output<String> repoName;
-        private @Nullable Output<String> tagName;
+        private RepoSourceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RepoSourceArgs();
         }
 
         public Builder(RepoSourceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.branchName = defaults.branchName;
-    	      this.commitSha = defaults.commitSha;
-    	      this.project = defaults.project;
-    	      this.repoName = defaults.repoName;
-    	      this.tagName = defaults.tagName;
+            $ = new RepoSourceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder branchName(@Nullable Output<String> branchName) {
-            this.branchName = branchName;
+            $.branchName = branchName;
             return this;
         }
-        public Builder branchName(@Nullable String branchName) {
-            this.branchName = Codegen.ofNullable(branchName);
-            return this;
+
+        public Builder branchName(String branchName) {
+            return branchName(Output.of(branchName));
         }
+
         public Builder commitSha(@Nullable Output<String> commitSha) {
-            this.commitSha = commitSha;
+            $.commitSha = commitSha;
             return this;
         }
-        public Builder commitSha(@Nullable String commitSha) {
-            this.commitSha = Codegen.ofNullable(commitSha);
-            return this;
+
+        public Builder commitSha(String commitSha) {
+            return commitSha(Output.of(commitSha));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder repoName(@Nullable Output<String> repoName) {
-            this.repoName = repoName;
+            $.repoName = repoName;
             return this;
         }
-        public Builder repoName(@Nullable String repoName) {
-            this.repoName = Codegen.ofNullable(repoName);
-            return this;
+
+        public Builder repoName(String repoName) {
+            return repoName(Output.of(repoName));
         }
+
         public Builder tagName(@Nullable Output<String> tagName) {
-            this.tagName = tagName;
+            $.tagName = tagName;
             return this;
         }
-        public Builder tagName(@Nullable String tagName) {
-            this.tagName = Codegen.ofNullable(tagName);
-            return this;
-        }        public RepoSourceArgs build() {
-            return new RepoSourceArgs(branchName, commitSha, project, repoName, tagName);
+
+        public Builder tagName(String tagName) {
+            return tagName(Output.of(tagName));
+        }
+
+        public RepoSourceArgs build() {
+            return $;
         }
     }
+
 }

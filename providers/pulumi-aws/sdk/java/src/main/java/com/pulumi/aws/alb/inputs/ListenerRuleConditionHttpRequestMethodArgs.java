@@ -5,7 +5,6 @@ package com.pulumi.aws.alb.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,52 +19,53 @@ public final class ListenerRuleConditionHttpRequestMethodArgs extends com.pulumi
      * 
      */
     @Import(name="values", required=true)
-      private final Output<List<String>> values;
+    private Output<List<String>> values;
 
     public Output<List<String>> values() {
         return this.values;
     }
 
-    public ListenerRuleConditionHttpRequestMethodArgs(Output<List<String>> values) {
-        this.values = Objects.requireNonNull(values, "expected parameter 'values' to be non-null");
-    }
+    private ListenerRuleConditionHttpRequestMethodArgs() {}
 
-    private ListenerRuleConditionHttpRequestMethodArgs() {
-        this.values = Codegen.empty();
+    private ListenerRuleConditionHttpRequestMethodArgs(ListenerRuleConditionHttpRequestMethodArgs $) {
+        this.values = $.values;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ListenerRuleConditionHttpRequestMethodArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<List<String>> values;
+        private ListenerRuleConditionHttpRequestMethodArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ListenerRuleConditionHttpRequestMethodArgs();
         }
 
         public Builder(ListenerRuleConditionHttpRequestMethodArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.values = defaults.values;
+            $ = new ListenerRuleConditionHttpRequestMethodArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder values(Output<List<String>> values) {
-            this.values = Objects.requireNonNull(values);
+            $.values = values;
             return this;
         }
+
         public Builder values(List<String> values) {
-            this.values = Output.of(Objects.requireNonNull(values));
-            return this;
+            return values(Output.of(values));
         }
+
         public Builder values(String... values) {
             return values(List.of(values));
-        }        public ListenerRuleConditionHttpRequestMethodArgs build() {
-            return new ListenerRuleConditionHttpRequestMethodArgs(values);
+        }
+
+        public ListenerRuleConditionHttpRequestMethodArgs build() {
+            $.values = Objects.requireNonNull($.values, "expected parameter 'values' to be non-null");
+            return $;
         }
     }
+
 }

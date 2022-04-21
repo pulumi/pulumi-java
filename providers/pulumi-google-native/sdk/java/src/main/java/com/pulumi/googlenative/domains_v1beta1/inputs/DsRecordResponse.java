@@ -22,7 +22,7 @@ public final class DsRecordResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="algorithm", required=true)
-      private final String algorithm;
+    private String algorithm;
 
     public String algorithm() {
         return this.algorithm;
@@ -33,7 +33,7 @@ public final class DsRecordResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="digest", required=true)
-      private final String digest;
+    private String digest;
 
     public String digest() {
         return this.digest;
@@ -44,7 +44,7 @@ public final class DsRecordResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="digestType", required=true)
-      private final String digestType;
+    private String digestType;
 
     public String digestType() {
         return this.digestType;
@@ -55,73 +55,66 @@ public final class DsRecordResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="keyTag", required=true)
-      private final Integer keyTag;
+    private Integer keyTag;
 
     public Integer keyTag() {
         return this.keyTag;
     }
 
-    public DsRecordResponse(
-        String algorithm,
-        String digest,
-        String digestType,
-        Integer keyTag) {
-        this.algorithm = Objects.requireNonNull(algorithm, "expected parameter 'algorithm' to be non-null");
-        this.digest = Objects.requireNonNull(digest, "expected parameter 'digest' to be non-null");
-        this.digestType = Objects.requireNonNull(digestType, "expected parameter 'digestType' to be non-null");
-        this.keyTag = Objects.requireNonNull(keyTag, "expected parameter 'keyTag' to be non-null");
-    }
+    private DsRecordResponse() {}
 
-    private DsRecordResponse() {
-        this.algorithm = null;
-        this.digest = null;
-        this.digestType = null;
-        this.keyTag = null;
+    private DsRecordResponse(DsRecordResponse $) {
+        this.algorithm = $.algorithm;
+        this.digest = $.digest;
+        this.digestType = $.digestType;
+        this.keyTag = $.keyTag;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DsRecordResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String algorithm;
-        private String digest;
-        private String digestType;
-        private Integer keyTag;
+        private DsRecordResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new DsRecordResponse();
         }
 
         public Builder(DsRecordResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.algorithm = defaults.algorithm;
-    	      this.digest = defaults.digest;
-    	      this.digestType = defaults.digestType;
-    	      this.keyTag = defaults.keyTag;
+            $ = new DsRecordResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder algorithm(String algorithm) {
-            this.algorithm = Objects.requireNonNull(algorithm);
+            $.algorithm = algorithm;
             return this;
         }
+
         public Builder digest(String digest) {
-            this.digest = Objects.requireNonNull(digest);
+            $.digest = digest;
             return this;
         }
+
         public Builder digestType(String digestType) {
-            this.digestType = Objects.requireNonNull(digestType);
+            $.digestType = digestType;
             return this;
         }
+
         public Builder keyTag(Integer keyTag) {
-            this.keyTag = Objects.requireNonNull(keyTag);
+            $.keyTag = keyTag;
             return this;
-        }        public DsRecordResponse build() {
-            return new DsRecordResponse(algorithm, digest, digestType, keyTag);
+        }
+
+        public DsRecordResponse build() {
+            $.algorithm = Objects.requireNonNull($.algorithm, "expected parameter 'algorithm' to be non-null");
+            $.digest = Objects.requireNonNull($.digest, "expected parameter 'digest' to be non-null");
+            $.digestType = Objects.requireNonNull($.digestType, "expected parameter 'digestType' to be non-null");
+            $.keyTag = Objects.requireNonNull($.keyTag, "expected parameter 'keyTag' to be non-null");
+            return $;
         }
     }
+
 }

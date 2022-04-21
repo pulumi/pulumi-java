@@ -5,11 +5,11 @@ package com.pulumi.azurenative.automation;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,7 +22,7 @@ public final class WatcherArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="automationAccountName", required=true)
-      private final Output<String> automationAccountName;
+    private Output<String> automationAccountName;
 
     public Output<String> automationAccountName() {
         return this.automationAccountName;
@@ -33,10 +33,10 @@ public final class WatcherArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -44,10 +44,10 @@ public final class WatcherArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="executionFrequencyInSeconds")
-      private final @Nullable Output<Double> executionFrequencyInSeconds;
+    private @Nullable Output<Double> executionFrequencyInSeconds;
 
-    public Output<Double> executionFrequencyInSeconds() {
-        return this.executionFrequencyInSeconds == null ? Codegen.empty() : this.executionFrequencyInSeconds;
+    public Optional<Output<Double>> executionFrequencyInSeconds() {
+        return Optional.ofNullable(this.executionFrequencyInSeconds);
     }
 
     /**
@@ -55,10 +55,10 @@ public final class WatcherArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -66,7 +66,7 @@ public final class WatcherArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -77,10 +77,10 @@ public final class WatcherArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="scriptName")
-      private final @Nullable Output<String> scriptName;
+    private @Nullable Output<String> scriptName;
 
-    public Output<String> scriptName() {
-        return this.scriptName == null ? Codegen.empty() : this.scriptName;
+    public Optional<Output<String>> scriptName() {
+        return Optional.ofNullable(this.scriptName);
     }
 
     /**
@@ -88,10 +88,10 @@ public final class WatcherArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="scriptParameters")
-      private final @Nullable Output<Map<String,String>> scriptParameters;
+    private @Nullable Output<Map<String,String>> scriptParameters;
 
-    public Output<Map<String,String>> scriptParameters() {
-        return this.scriptParameters == null ? Codegen.empty() : this.scriptParameters;
+    public Optional<Output<Map<String,String>>> scriptParameters() {
+        return Optional.ofNullable(this.scriptParameters);
     }
 
     /**
@@ -99,10 +99,10 @@ public final class WatcherArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="scriptRunOn")
-      private final @Nullable Output<String> scriptRunOn;
+    private @Nullable Output<String> scriptRunOn;
 
-    public Output<String> scriptRunOn() {
-        return this.scriptRunOn == null ? Codegen.empty() : this.scriptRunOn;
+    public Optional<Output<String>> scriptRunOn() {
+        return Optional.ofNullable(this.scriptRunOn);
     }
 
     /**
@@ -110,10 +110,10 @@ public final class WatcherArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -121,167 +121,140 @@ public final class WatcherArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="watcherName")
-      private final @Nullable Output<String> watcherName;
+    private @Nullable Output<String> watcherName;
 
-    public Output<String> watcherName() {
-        return this.watcherName == null ? Codegen.empty() : this.watcherName;
+    public Optional<Output<String>> watcherName() {
+        return Optional.ofNullable(this.watcherName);
     }
 
-    public WatcherArgs(
-        Output<String> automationAccountName,
-        @Nullable Output<String> description,
-        @Nullable Output<Double> executionFrequencyInSeconds,
-        @Nullable Output<String> location,
-        Output<String> resourceGroupName,
-        @Nullable Output<String> scriptName,
-        @Nullable Output<Map<String,String>> scriptParameters,
-        @Nullable Output<String> scriptRunOn,
-        @Nullable Output<Map<String,String>> tags,
-        @Nullable Output<String> watcherName) {
-        this.automationAccountName = Objects.requireNonNull(automationAccountName, "expected parameter 'automationAccountName' to be non-null");
-        this.description = description;
-        this.executionFrequencyInSeconds = executionFrequencyInSeconds;
-        this.location = location;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.scriptName = scriptName;
-        this.scriptParameters = scriptParameters;
-        this.scriptRunOn = scriptRunOn;
-        this.tags = tags;
-        this.watcherName = watcherName;
-    }
+    private WatcherArgs() {}
 
-    private WatcherArgs() {
-        this.automationAccountName = Codegen.empty();
-        this.description = Codegen.empty();
-        this.executionFrequencyInSeconds = Codegen.empty();
-        this.location = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.scriptName = Codegen.empty();
-        this.scriptParameters = Codegen.empty();
-        this.scriptRunOn = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.watcherName = Codegen.empty();
+    private WatcherArgs(WatcherArgs $) {
+        this.automationAccountName = $.automationAccountName;
+        this.description = $.description;
+        this.executionFrequencyInSeconds = $.executionFrequencyInSeconds;
+        this.location = $.location;
+        this.resourceGroupName = $.resourceGroupName;
+        this.scriptName = $.scriptName;
+        this.scriptParameters = $.scriptParameters;
+        this.scriptRunOn = $.scriptRunOn;
+        this.tags = $.tags;
+        this.watcherName = $.watcherName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WatcherArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> automationAccountName;
-        private @Nullable Output<String> description;
-        private @Nullable Output<Double> executionFrequencyInSeconds;
-        private @Nullable Output<String> location;
-        private Output<String> resourceGroupName;
-        private @Nullable Output<String> scriptName;
-        private @Nullable Output<Map<String,String>> scriptParameters;
-        private @Nullable Output<String> scriptRunOn;
-        private @Nullable Output<Map<String,String>> tags;
-        private @Nullable Output<String> watcherName;
+        private WatcherArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new WatcherArgs();
         }
 
         public Builder(WatcherArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.automationAccountName = defaults.automationAccountName;
-    	      this.description = defaults.description;
-    	      this.executionFrequencyInSeconds = defaults.executionFrequencyInSeconds;
-    	      this.location = defaults.location;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.scriptName = defaults.scriptName;
-    	      this.scriptParameters = defaults.scriptParameters;
-    	      this.scriptRunOn = defaults.scriptRunOn;
-    	      this.tags = defaults.tags;
-    	      this.watcherName = defaults.watcherName;
+            $ = new WatcherArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder automationAccountName(Output<String> automationAccountName) {
-            this.automationAccountName = Objects.requireNonNull(automationAccountName);
+            $.automationAccountName = automationAccountName;
             return this;
         }
+
         public Builder automationAccountName(String automationAccountName) {
-            this.automationAccountName = Output.of(Objects.requireNonNull(automationAccountName));
-            return this;
+            return automationAccountName(Output.of(automationAccountName));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder executionFrequencyInSeconds(@Nullable Output<Double> executionFrequencyInSeconds) {
-            this.executionFrequencyInSeconds = executionFrequencyInSeconds;
+            $.executionFrequencyInSeconds = executionFrequencyInSeconds;
             return this;
         }
-        public Builder executionFrequencyInSeconds(@Nullable Double executionFrequencyInSeconds) {
-            this.executionFrequencyInSeconds = Codegen.ofNullable(executionFrequencyInSeconds);
-            return this;
+
+        public Builder executionFrequencyInSeconds(Double executionFrequencyInSeconds) {
+            return executionFrequencyInSeconds(Output.of(executionFrequencyInSeconds));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder scriptName(@Nullable Output<String> scriptName) {
-            this.scriptName = scriptName;
+            $.scriptName = scriptName;
             return this;
         }
-        public Builder scriptName(@Nullable String scriptName) {
-            this.scriptName = Codegen.ofNullable(scriptName);
-            return this;
+
+        public Builder scriptName(String scriptName) {
+            return scriptName(Output.of(scriptName));
         }
+
         public Builder scriptParameters(@Nullable Output<Map<String,String>> scriptParameters) {
-            this.scriptParameters = scriptParameters;
+            $.scriptParameters = scriptParameters;
             return this;
         }
-        public Builder scriptParameters(@Nullable Map<String,String> scriptParameters) {
-            this.scriptParameters = Codegen.ofNullable(scriptParameters);
-            return this;
+
+        public Builder scriptParameters(Map<String,String> scriptParameters) {
+            return scriptParameters(Output.of(scriptParameters));
         }
+
         public Builder scriptRunOn(@Nullable Output<String> scriptRunOn) {
-            this.scriptRunOn = scriptRunOn;
+            $.scriptRunOn = scriptRunOn;
             return this;
         }
-        public Builder scriptRunOn(@Nullable String scriptRunOn) {
-            this.scriptRunOn = Codegen.ofNullable(scriptRunOn);
-            return this;
+
+        public Builder scriptRunOn(String scriptRunOn) {
+            return scriptRunOn(Output.of(scriptRunOn));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder watcherName(@Nullable Output<String> watcherName) {
-            this.watcherName = watcherName;
+            $.watcherName = watcherName;
             return this;
         }
-        public Builder watcherName(@Nullable String watcherName) {
-            this.watcherName = Codegen.ofNullable(watcherName);
-            return this;
-        }        public WatcherArgs build() {
-            return new WatcherArgs(automationAccountName, description, executionFrequencyInSeconds, location, resourceGroupName, scriptName, scriptParameters, scriptRunOn, tags, watcherName);
+
+        public Builder watcherName(String watcherName) {
+            return watcherName(Output.of(watcherName));
+        }
+
+        public WatcherArgs build() {
+            $.automationAccountName = Objects.requireNonNull($.automationAccountName, "expected parameter 'automationAccountName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

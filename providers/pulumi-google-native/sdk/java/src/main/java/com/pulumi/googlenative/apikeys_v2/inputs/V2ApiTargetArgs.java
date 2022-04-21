@@ -5,10 +5,10 @@ package com.pulumi.googlenative.apikeys_v2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class V2ApiTargetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="methods")
-      private final @Nullable Output<List<String>> methods;
+    private @Nullable Output<List<String>> methods;
 
-    public Output<List<String>> methods() {
-        return this.methods == null ? Codegen.empty() : this.methods;
+    public Optional<Output<List<String>>> methods() {
+        return Optional.ofNullable(this.methods);
     }
 
     /**
@@ -36,66 +36,62 @@ public final class V2ApiTargetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="service")
-      private final @Nullable Output<String> service;
+    private @Nullable Output<String> service;
 
-    public Output<String> service() {
-        return this.service == null ? Codegen.empty() : this.service;
+    public Optional<Output<String>> service() {
+        return Optional.ofNullable(this.service);
     }
 
-    public V2ApiTargetArgs(
-        @Nullable Output<List<String>> methods,
-        @Nullable Output<String> service) {
-        this.methods = methods;
-        this.service = service;
-    }
+    private V2ApiTargetArgs() {}
 
-    private V2ApiTargetArgs() {
-        this.methods = Codegen.empty();
-        this.service = Codegen.empty();
+    private V2ApiTargetArgs(V2ApiTargetArgs $) {
+        this.methods = $.methods;
+        this.service = $.service;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(V2ApiTargetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> methods;
-        private @Nullable Output<String> service;
+        private V2ApiTargetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new V2ApiTargetArgs();
         }
 
         public Builder(V2ApiTargetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.methods = defaults.methods;
-    	      this.service = defaults.service;
+            $ = new V2ApiTargetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder methods(@Nullable Output<List<String>> methods) {
-            this.methods = methods;
+            $.methods = methods;
             return this;
         }
-        public Builder methods(@Nullable List<String> methods) {
-            this.methods = Codegen.ofNullable(methods);
-            return this;
+
+        public Builder methods(List<String> methods) {
+            return methods(Output.of(methods));
         }
+
         public Builder methods(String... methods) {
             return methods(List.of(methods));
         }
+
         public Builder service(@Nullable Output<String> service) {
-            this.service = service;
+            $.service = service;
             return this;
         }
-        public Builder service(@Nullable String service) {
-            this.service = Codegen.ofNullable(service);
-            return this;
-        }        public V2ApiTargetArgs build() {
-            return new V2ApiTargetArgs(methods, service);
+
+        public Builder service(String service) {
+            return service(Output.of(service));
+        }
+
+        public V2ApiTargetArgs build() {
+            return $;
         }
     }
+
 }

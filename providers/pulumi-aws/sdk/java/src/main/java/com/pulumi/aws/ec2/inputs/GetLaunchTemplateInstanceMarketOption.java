@@ -15,65 +15,63 @@ public final class GetLaunchTemplateInstanceMarketOption extends com.pulumi.reso
     public static final GetLaunchTemplateInstanceMarketOption Empty = new GetLaunchTemplateInstanceMarketOption();
 
     @Import(name="marketType", required=true)
-      private final String marketType;
+    private String marketType;
 
     public String marketType() {
         return this.marketType;
     }
 
     @Import(name="spotOptions", required=true)
-      private final List<GetLaunchTemplateInstanceMarketOptionSpotOption> spotOptions;
+    private List<GetLaunchTemplateInstanceMarketOptionSpotOption> spotOptions;
 
     public List<GetLaunchTemplateInstanceMarketOptionSpotOption> spotOptions() {
         return this.spotOptions;
     }
 
-    public GetLaunchTemplateInstanceMarketOption(
-        String marketType,
-        List<GetLaunchTemplateInstanceMarketOptionSpotOption> spotOptions) {
-        this.marketType = Objects.requireNonNull(marketType, "expected parameter 'marketType' to be non-null");
-        this.spotOptions = Objects.requireNonNull(spotOptions, "expected parameter 'spotOptions' to be non-null");
-    }
+    private GetLaunchTemplateInstanceMarketOption() {}
 
-    private GetLaunchTemplateInstanceMarketOption() {
-        this.marketType = null;
-        this.spotOptions = List.of();
+    private GetLaunchTemplateInstanceMarketOption(GetLaunchTemplateInstanceMarketOption $) {
+        this.marketType = $.marketType;
+        this.spotOptions = $.spotOptions;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetLaunchTemplateInstanceMarketOption defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String marketType;
-        private List<GetLaunchTemplateInstanceMarketOptionSpotOption> spotOptions;
+        private GetLaunchTemplateInstanceMarketOption $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetLaunchTemplateInstanceMarketOption();
         }
 
         public Builder(GetLaunchTemplateInstanceMarketOption defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.marketType = defaults.marketType;
-    	      this.spotOptions = defaults.spotOptions;
+            $ = new GetLaunchTemplateInstanceMarketOption(Objects.requireNonNull(defaults));
         }
 
         public Builder marketType(String marketType) {
-            this.marketType = Objects.requireNonNull(marketType);
+            $.marketType = marketType;
             return this;
         }
+
         public Builder spotOptions(List<GetLaunchTemplateInstanceMarketOptionSpotOption> spotOptions) {
-            this.spotOptions = Objects.requireNonNull(spotOptions);
+            $.spotOptions = spotOptions;
             return this;
         }
+
         public Builder spotOptions(GetLaunchTemplateInstanceMarketOptionSpotOption... spotOptions) {
             return spotOptions(List.of(spotOptions));
-        }        public GetLaunchTemplateInstanceMarketOption build() {
-            return new GetLaunchTemplateInstanceMarketOption(marketType, spotOptions);
+        }
+
+        public GetLaunchTemplateInstanceMarketOption build() {
+            $.marketType = Objects.requireNonNull($.marketType, "expected parameter 'marketType' to be non-null");
+            $.spotOptions = Objects.requireNonNull($.spotOptions, "expected parameter 'spotOptions' to be non-null");
+            return $;
         }
     }
+
 }

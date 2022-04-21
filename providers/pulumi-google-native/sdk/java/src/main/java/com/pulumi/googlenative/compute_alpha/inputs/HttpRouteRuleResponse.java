@@ -28,7 +28,7 @@ public final class HttpRouteRuleResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="description", required=true)
-      private final String description;
+    private String description;
 
     public String description() {
         return this.description;
@@ -39,7 +39,7 @@ public final class HttpRouteRuleResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="headerAction", required=true)
-      private final HttpHeaderActionResponse headerAction;
+    private HttpHeaderActionResponse headerAction;
 
     public HttpHeaderActionResponse headerAction() {
         return this.headerAction;
@@ -50,7 +50,7 @@ public final class HttpRouteRuleResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="httpFilterConfigs", required=true)
-      private final List<HttpFilterConfigResponse> httpFilterConfigs;
+    private List<HttpFilterConfigResponse> httpFilterConfigs;
 
     public List<HttpFilterConfigResponse> httpFilterConfigs() {
         return this.httpFilterConfigs;
@@ -61,7 +61,7 @@ public final class HttpRouteRuleResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="httpFilterMetadata", required=true)
-      private final List<HttpFilterConfigResponse> httpFilterMetadata;
+    private List<HttpFilterConfigResponse> httpFilterMetadata;
 
     public List<HttpFilterConfigResponse> httpFilterMetadata() {
         return this.httpFilterMetadata;
@@ -72,7 +72,7 @@ public final class HttpRouteRuleResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="matchRules", required=true)
-      private final List<HttpRouteRuleMatchResponse> matchRules;
+    private List<HttpRouteRuleMatchResponse> matchRules;
 
     public List<HttpRouteRuleMatchResponse> matchRules() {
         return this.matchRules;
@@ -83,7 +83,7 @@ public final class HttpRouteRuleResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="priority", required=true)
-      private final Integer priority;
+    private Integer priority;
 
     public Integer priority() {
         return this.priority;
@@ -94,7 +94,7 @@ public final class HttpRouteRuleResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="routeAction", required=true)
-      private final HttpRouteActionResponse routeAction;
+    private HttpRouteActionResponse routeAction;
 
     public HttpRouteActionResponse routeAction() {
         return this.routeAction;
@@ -105,7 +105,7 @@ public final class HttpRouteRuleResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="service", required=true)
-      private final String service;
+    private String service;
 
     public String service() {
         return this.service;
@@ -116,127 +116,113 @@ public final class HttpRouteRuleResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="urlRedirect", required=true)
-      private final HttpRedirectActionResponse urlRedirect;
+    private HttpRedirectActionResponse urlRedirect;
 
     public HttpRedirectActionResponse urlRedirect() {
         return this.urlRedirect;
     }
 
-    public HttpRouteRuleResponse(
-        String description,
-        HttpHeaderActionResponse headerAction,
-        List<HttpFilterConfigResponse> httpFilterConfigs,
-        List<HttpFilterConfigResponse> httpFilterMetadata,
-        List<HttpRouteRuleMatchResponse> matchRules,
-        Integer priority,
-        HttpRouteActionResponse routeAction,
-        String service,
-        HttpRedirectActionResponse urlRedirect) {
-        this.description = Objects.requireNonNull(description, "expected parameter 'description' to be non-null");
-        this.headerAction = Objects.requireNonNull(headerAction, "expected parameter 'headerAction' to be non-null");
-        this.httpFilterConfigs = Objects.requireNonNull(httpFilterConfigs, "expected parameter 'httpFilterConfigs' to be non-null");
-        this.httpFilterMetadata = Objects.requireNonNull(httpFilterMetadata, "expected parameter 'httpFilterMetadata' to be non-null");
-        this.matchRules = Objects.requireNonNull(matchRules, "expected parameter 'matchRules' to be non-null");
-        this.priority = Objects.requireNonNull(priority, "expected parameter 'priority' to be non-null");
-        this.routeAction = Objects.requireNonNull(routeAction, "expected parameter 'routeAction' to be non-null");
-        this.service = Objects.requireNonNull(service, "expected parameter 'service' to be non-null");
-        this.urlRedirect = Objects.requireNonNull(urlRedirect, "expected parameter 'urlRedirect' to be non-null");
-    }
+    private HttpRouteRuleResponse() {}
 
-    private HttpRouteRuleResponse() {
-        this.description = null;
-        this.headerAction = null;
-        this.httpFilterConfigs = List.of();
-        this.httpFilterMetadata = List.of();
-        this.matchRules = List.of();
-        this.priority = null;
-        this.routeAction = null;
-        this.service = null;
-        this.urlRedirect = null;
+    private HttpRouteRuleResponse(HttpRouteRuleResponse $) {
+        this.description = $.description;
+        this.headerAction = $.headerAction;
+        this.httpFilterConfigs = $.httpFilterConfigs;
+        this.httpFilterMetadata = $.httpFilterMetadata;
+        this.matchRules = $.matchRules;
+        this.priority = $.priority;
+        this.routeAction = $.routeAction;
+        this.service = $.service;
+        this.urlRedirect = $.urlRedirect;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(HttpRouteRuleResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String description;
-        private HttpHeaderActionResponse headerAction;
-        private List<HttpFilterConfigResponse> httpFilterConfigs;
-        private List<HttpFilterConfigResponse> httpFilterMetadata;
-        private List<HttpRouteRuleMatchResponse> matchRules;
-        private Integer priority;
-        private HttpRouteActionResponse routeAction;
-        private String service;
-        private HttpRedirectActionResponse urlRedirect;
+        private HttpRouteRuleResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new HttpRouteRuleResponse();
         }
 
         public Builder(HttpRouteRuleResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.description = defaults.description;
-    	      this.headerAction = defaults.headerAction;
-    	      this.httpFilterConfigs = defaults.httpFilterConfigs;
-    	      this.httpFilterMetadata = defaults.httpFilterMetadata;
-    	      this.matchRules = defaults.matchRules;
-    	      this.priority = defaults.priority;
-    	      this.routeAction = defaults.routeAction;
-    	      this.service = defaults.service;
-    	      this.urlRedirect = defaults.urlRedirect;
+            $ = new HttpRouteRuleResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder description(String description) {
-            this.description = Objects.requireNonNull(description);
+            $.description = description;
             return this;
         }
+
         public Builder headerAction(HttpHeaderActionResponse headerAction) {
-            this.headerAction = Objects.requireNonNull(headerAction);
+            $.headerAction = headerAction;
             return this;
         }
+
         public Builder httpFilterConfigs(List<HttpFilterConfigResponse> httpFilterConfigs) {
-            this.httpFilterConfigs = Objects.requireNonNull(httpFilterConfigs);
+            $.httpFilterConfigs = httpFilterConfigs;
             return this;
         }
+
         public Builder httpFilterConfigs(HttpFilterConfigResponse... httpFilterConfigs) {
             return httpFilterConfigs(List.of(httpFilterConfigs));
         }
+
         public Builder httpFilterMetadata(List<HttpFilterConfigResponse> httpFilterMetadata) {
-            this.httpFilterMetadata = Objects.requireNonNull(httpFilterMetadata);
+            $.httpFilterMetadata = httpFilterMetadata;
             return this;
         }
+
         public Builder httpFilterMetadata(HttpFilterConfigResponse... httpFilterMetadata) {
             return httpFilterMetadata(List.of(httpFilterMetadata));
         }
+
         public Builder matchRules(List<HttpRouteRuleMatchResponse> matchRules) {
-            this.matchRules = Objects.requireNonNull(matchRules);
+            $.matchRules = matchRules;
             return this;
         }
+
         public Builder matchRules(HttpRouteRuleMatchResponse... matchRules) {
             return matchRules(List.of(matchRules));
         }
+
         public Builder priority(Integer priority) {
-            this.priority = Objects.requireNonNull(priority);
+            $.priority = priority;
             return this;
         }
+
         public Builder routeAction(HttpRouteActionResponse routeAction) {
-            this.routeAction = Objects.requireNonNull(routeAction);
+            $.routeAction = routeAction;
             return this;
         }
+
         public Builder service(String service) {
-            this.service = Objects.requireNonNull(service);
+            $.service = service;
             return this;
         }
+
         public Builder urlRedirect(HttpRedirectActionResponse urlRedirect) {
-            this.urlRedirect = Objects.requireNonNull(urlRedirect);
+            $.urlRedirect = urlRedirect;
             return this;
-        }        public HttpRouteRuleResponse build() {
-            return new HttpRouteRuleResponse(description, headerAction, httpFilterConfigs, httpFilterMetadata, matchRules, priority, routeAction, service, urlRedirect);
+        }
+
+        public HttpRouteRuleResponse build() {
+            $.description = Objects.requireNonNull($.description, "expected parameter 'description' to be non-null");
+            $.headerAction = Objects.requireNonNull($.headerAction, "expected parameter 'headerAction' to be non-null");
+            $.httpFilterConfigs = Objects.requireNonNull($.httpFilterConfigs, "expected parameter 'httpFilterConfigs' to be non-null");
+            $.httpFilterMetadata = Objects.requireNonNull($.httpFilterMetadata, "expected parameter 'httpFilterMetadata' to be non-null");
+            $.matchRules = Objects.requireNonNull($.matchRules, "expected parameter 'matchRules' to be non-null");
+            $.priority = Objects.requireNonNull($.priority, "expected parameter 'priority' to be non-null");
+            $.routeAction = Objects.requireNonNull($.routeAction, "expected parameter 'routeAction' to be non-null");
+            $.service = Objects.requireNonNull($.service, "expected parameter 'service' to be non-null");
+            $.urlRedirect = Objects.requireNonNull($.urlRedirect, "expected parameter 'urlRedirect' to be non-null");
+            return $;
         }
     }
+
 }

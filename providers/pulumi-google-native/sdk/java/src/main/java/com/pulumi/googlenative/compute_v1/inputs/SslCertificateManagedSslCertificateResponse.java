@@ -23,7 +23,7 @@ public final class SslCertificateManagedSslCertificateResponse extends com.pulum
      * 
      */
     @Import(name="domainStatus", required=true)
-      private final Map<String,String> domainStatus;
+    private Map<String,String> domainStatus;
 
     public Map<String,String> domainStatus() {
         return this.domainStatus;
@@ -34,7 +34,7 @@ public final class SslCertificateManagedSslCertificateResponse extends com.pulum
      * 
      */
     @Import(name="domains", required=true)
-      private final List<String> domains;
+    private List<String> domains;
 
     public List<String> domains() {
         return this.domains;
@@ -45,67 +45,63 @@ public final class SslCertificateManagedSslCertificateResponse extends com.pulum
      * 
      */
     @Import(name="status", required=true)
-      private final String status;
+    private String status;
 
     public String status() {
         return this.status;
     }
 
-    public SslCertificateManagedSslCertificateResponse(
-        Map<String,String> domainStatus,
-        List<String> domains,
-        String status) {
-        this.domainStatus = Objects.requireNonNull(domainStatus, "expected parameter 'domainStatus' to be non-null");
-        this.domains = Objects.requireNonNull(domains, "expected parameter 'domains' to be non-null");
-        this.status = Objects.requireNonNull(status, "expected parameter 'status' to be non-null");
-    }
+    private SslCertificateManagedSslCertificateResponse() {}
 
-    private SslCertificateManagedSslCertificateResponse() {
-        this.domainStatus = Map.of();
-        this.domains = List.of();
-        this.status = null;
+    private SslCertificateManagedSslCertificateResponse(SslCertificateManagedSslCertificateResponse $) {
+        this.domainStatus = $.domainStatus;
+        this.domains = $.domains;
+        this.status = $.status;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SslCertificateManagedSslCertificateResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Map<String,String> domainStatus;
-        private List<String> domains;
-        private String status;
+        private SslCertificateManagedSslCertificateResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new SslCertificateManagedSslCertificateResponse();
         }
 
         public Builder(SslCertificateManagedSslCertificateResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.domainStatus = defaults.domainStatus;
-    	      this.domains = defaults.domains;
-    	      this.status = defaults.status;
+            $ = new SslCertificateManagedSslCertificateResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder domainStatus(Map<String,String> domainStatus) {
-            this.domainStatus = Objects.requireNonNull(domainStatus);
+            $.domainStatus = domainStatus;
             return this;
         }
+
         public Builder domains(List<String> domains) {
-            this.domains = Objects.requireNonNull(domains);
+            $.domains = domains;
             return this;
         }
+
         public Builder domains(String... domains) {
             return domains(List.of(domains));
         }
+
         public Builder status(String status) {
-            this.status = Objects.requireNonNull(status);
+            $.status = status;
             return this;
-        }        public SslCertificateManagedSslCertificateResponse build() {
-            return new SslCertificateManagedSslCertificateResponse(domainStatus, domains, status);
+        }
+
+        public SslCertificateManagedSslCertificateResponse build() {
+            $.domainStatus = Objects.requireNonNull($.domainStatus, "expected parameter 'domainStatus' to be non-null");
+            $.domains = Objects.requireNonNull($.domains, "expected parameter 'domains' to be non-null");
+            $.status = Objects.requireNonNull($.status, "expected parameter 'status' to be non-null");
+            return $;
         }
     }
+
 }

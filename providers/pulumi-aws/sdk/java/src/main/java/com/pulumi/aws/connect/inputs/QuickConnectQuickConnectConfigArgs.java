@@ -8,10 +8,10 @@ import com.pulumi.aws.connect.inputs.QuickConnectQuickConnectConfigQueueConfigAr
 import com.pulumi.aws.connect.inputs.QuickConnectQuickConnectConfigUserConfigArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class QuickConnectQuickConnectConfigArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="phoneConfigs")
-      private final @Nullable Output<List<QuickConnectQuickConnectConfigPhoneConfigArgs>> phoneConfigs;
+    private @Nullable Output<List<QuickConnectQuickConnectConfigPhoneConfigArgs>> phoneConfigs;
 
-    public Output<List<QuickConnectQuickConnectConfigPhoneConfigArgs>> phoneConfigs() {
-        return this.phoneConfigs == null ? Codegen.empty() : this.phoneConfigs;
+    public Optional<Output<List<QuickConnectQuickConnectConfigPhoneConfigArgs>>> phoneConfigs() {
+        return Optional.ofNullable(this.phoneConfigs);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class QuickConnectQuickConnectConfigArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="queueConfigs")
-      private final @Nullable Output<List<QuickConnectQuickConnectConfigQueueConfigArgs>> queueConfigs;
+    private @Nullable Output<List<QuickConnectQuickConnectConfigQueueConfigArgs>> queueConfigs;
 
-    public Output<List<QuickConnectQuickConnectConfigQueueConfigArgs>> queueConfigs() {
-        return this.queueConfigs == null ? Codegen.empty() : this.queueConfigs;
+    public Optional<Output<List<QuickConnectQuickConnectConfigQueueConfigArgs>>> queueConfigs() {
+        return Optional.ofNullable(this.queueConfigs);
     }
 
     /**
@@ -46,7 +46,7 @@ public final class QuickConnectQuickConnectConfigArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="quickConnectType", required=true)
-      private final Output<String> quickConnectType;
+    private Output<String> quickConnectType;
 
     public Output<String> quickConnectType() {
         return this.quickConnectType;
@@ -57,98 +57,91 @@ public final class QuickConnectQuickConnectConfigArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="userConfigs")
-      private final @Nullable Output<List<QuickConnectQuickConnectConfigUserConfigArgs>> userConfigs;
+    private @Nullable Output<List<QuickConnectQuickConnectConfigUserConfigArgs>> userConfigs;
 
-    public Output<List<QuickConnectQuickConnectConfigUserConfigArgs>> userConfigs() {
-        return this.userConfigs == null ? Codegen.empty() : this.userConfigs;
+    public Optional<Output<List<QuickConnectQuickConnectConfigUserConfigArgs>>> userConfigs() {
+        return Optional.ofNullable(this.userConfigs);
     }
 
-    public QuickConnectQuickConnectConfigArgs(
-        @Nullable Output<List<QuickConnectQuickConnectConfigPhoneConfigArgs>> phoneConfigs,
-        @Nullable Output<List<QuickConnectQuickConnectConfigQueueConfigArgs>> queueConfigs,
-        Output<String> quickConnectType,
-        @Nullable Output<List<QuickConnectQuickConnectConfigUserConfigArgs>> userConfigs) {
-        this.phoneConfigs = phoneConfigs;
-        this.queueConfigs = queueConfigs;
-        this.quickConnectType = Objects.requireNonNull(quickConnectType, "expected parameter 'quickConnectType' to be non-null");
-        this.userConfigs = userConfigs;
-    }
+    private QuickConnectQuickConnectConfigArgs() {}
 
-    private QuickConnectQuickConnectConfigArgs() {
-        this.phoneConfigs = Codegen.empty();
-        this.queueConfigs = Codegen.empty();
-        this.quickConnectType = Codegen.empty();
-        this.userConfigs = Codegen.empty();
+    private QuickConnectQuickConnectConfigArgs(QuickConnectQuickConnectConfigArgs $) {
+        this.phoneConfigs = $.phoneConfigs;
+        this.queueConfigs = $.queueConfigs;
+        this.quickConnectType = $.quickConnectType;
+        this.userConfigs = $.userConfigs;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(QuickConnectQuickConnectConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<QuickConnectQuickConnectConfigPhoneConfigArgs>> phoneConfigs;
-        private @Nullable Output<List<QuickConnectQuickConnectConfigQueueConfigArgs>> queueConfigs;
-        private Output<String> quickConnectType;
-        private @Nullable Output<List<QuickConnectQuickConnectConfigUserConfigArgs>> userConfigs;
+        private QuickConnectQuickConnectConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new QuickConnectQuickConnectConfigArgs();
         }
 
         public Builder(QuickConnectQuickConnectConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.phoneConfigs = defaults.phoneConfigs;
-    	      this.queueConfigs = defaults.queueConfigs;
-    	      this.quickConnectType = defaults.quickConnectType;
-    	      this.userConfigs = defaults.userConfigs;
+            $ = new QuickConnectQuickConnectConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder phoneConfigs(@Nullable Output<List<QuickConnectQuickConnectConfigPhoneConfigArgs>> phoneConfigs) {
-            this.phoneConfigs = phoneConfigs;
+            $.phoneConfigs = phoneConfigs;
             return this;
         }
-        public Builder phoneConfigs(@Nullable List<QuickConnectQuickConnectConfigPhoneConfigArgs> phoneConfigs) {
-            this.phoneConfigs = Codegen.ofNullable(phoneConfigs);
-            return this;
+
+        public Builder phoneConfigs(List<QuickConnectQuickConnectConfigPhoneConfigArgs> phoneConfigs) {
+            return phoneConfigs(Output.of(phoneConfigs));
         }
+
         public Builder phoneConfigs(QuickConnectQuickConnectConfigPhoneConfigArgs... phoneConfigs) {
             return phoneConfigs(List.of(phoneConfigs));
         }
+
         public Builder queueConfigs(@Nullable Output<List<QuickConnectQuickConnectConfigQueueConfigArgs>> queueConfigs) {
-            this.queueConfigs = queueConfigs;
+            $.queueConfigs = queueConfigs;
             return this;
         }
-        public Builder queueConfigs(@Nullable List<QuickConnectQuickConnectConfigQueueConfigArgs> queueConfigs) {
-            this.queueConfigs = Codegen.ofNullable(queueConfigs);
-            return this;
+
+        public Builder queueConfigs(List<QuickConnectQuickConnectConfigQueueConfigArgs> queueConfigs) {
+            return queueConfigs(Output.of(queueConfigs));
         }
+
         public Builder queueConfigs(QuickConnectQuickConnectConfigQueueConfigArgs... queueConfigs) {
             return queueConfigs(List.of(queueConfigs));
         }
+
         public Builder quickConnectType(Output<String> quickConnectType) {
-            this.quickConnectType = Objects.requireNonNull(quickConnectType);
+            $.quickConnectType = quickConnectType;
             return this;
         }
+
         public Builder quickConnectType(String quickConnectType) {
-            this.quickConnectType = Output.of(Objects.requireNonNull(quickConnectType));
-            return this;
+            return quickConnectType(Output.of(quickConnectType));
         }
+
         public Builder userConfigs(@Nullable Output<List<QuickConnectQuickConnectConfigUserConfigArgs>> userConfigs) {
-            this.userConfigs = userConfigs;
+            $.userConfigs = userConfigs;
             return this;
         }
-        public Builder userConfigs(@Nullable List<QuickConnectQuickConnectConfigUserConfigArgs> userConfigs) {
-            this.userConfigs = Codegen.ofNullable(userConfigs);
-            return this;
+
+        public Builder userConfigs(List<QuickConnectQuickConnectConfigUserConfigArgs> userConfigs) {
+            return userConfigs(Output.of(userConfigs));
         }
+
         public Builder userConfigs(QuickConnectQuickConnectConfigUserConfigArgs... userConfigs) {
             return userConfigs(List.of(userConfigs));
-        }        public QuickConnectQuickConnectConfigArgs build() {
-            return new QuickConnectQuickConnectConfigArgs(phoneConfigs, queueConfigs, quickConnectType, userConfigs);
+        }
+
+        public QuickConnectQuickConnectConfigArgs build() {
+            $.quickConnectType = Objects.requireNonNull($.quickConnectType, "expected parameter 'quickConnectType' to be non-null");
+            return $;
         }
     }
+
 }

@@ -7,11 +7,11 @@ import com.pulumi.aws.backup.inputs.PlanAdvancedBackupSettingArgs;
 import com.pulumi.aws.backup.inputs.PlanRuleArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class PlanArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="advancedBackupSettings")
-      private final @Nullable Output<List<PlanAdvancedBackupSettingArgs>> advancedBackupSettings;
+    private @Nullable Output<List<PlanAdvancedBackupSettingArgs>> advancedBackupSettings;
 
-    public Output<List<PlanAdvancedBackupSettingArgs>> advancedBackupSettings() {
-        return this.advancedBackupSettings == null ? Codegen.empty() : this.advancedBackupSettings;
+    public Optional<Output<List<PlanAdvancedBackupSettingArgs>>> advancedBackupSettings() {
+        return Optional.ofNullable(this.advancedBackupSettings);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class PlanArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -46,7 +46,7 @@ public final class PlanArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="rules", required=true)
-      private final Output<List<PlanRuleArgs>> rules;
+    private Output<List<PlanRuleArgs>> rules;
 
     public Output<List<PlanRuleArgs>> rules() {
         return this.rules;
@@ -57,95 +57,87 @@ public final class PlanArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public PlanArgs(
-        @Nullable Output<List<PlanAdvancedBackupSettingArgs>> advancedBackupSettings,
-        @Nullable Output<String> name,
-        Output<List<PlanRuleArgs>> rules,
-        @Nullable Output<Map<String,String>> tags) {
-        this.advancedBackupSettings = advancedBackupSettings;
-        this.name = name;
-        this.rules = Objects.requireNonNull(rules, "expected parameter 'rules' to be non-null");
-        this.tags = tags;
-    }
+    private PlanArgs() {}
 
-    private PlanArgs() {
-        this.advancedBackupSettings = Codegen.empty();
-        this.name = Codegen.empty();
-        this.rules = Codegen.empty();
-        this.tags = Codegen.empty();
+    private PlanArgs(PlanArgs $) {
+        this.advancedBackupSettings = $.advancedBackupSettings;
+        this.name = $.name;
+        this.rules = $.rules;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PlanArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<PlanAdvancedBackupSettingArgs>> advancedBackupSettings;
-        private @Nullable Output<String> name;
-        private Output<List<PlanRuleArgs>> rules;
-        private @Nullable Output<Map<String,String>> tags;
+        private PlanArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PlanArgs();
         }
 
         public Builder(PlanArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.advancedBackupSettings = defaults.advancedBackupSettings;
-    	      this.name = defaults.name;
-    	      this.rules = defaults.rules;
-    	      this.tags = defaults.tags;
+            $ = new PlanArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder advancedBackupSettings(@Nullable Output<List<PlanAdvancedBackupSettingArgs>> advancedBackupSettings) {
-            this.advancedBackupSettings = advancedBackupSettings;
+            $.advancedBackupSettings = advancedBackupSettings;
             return this;
         }
-        public Builder advancedBackupSettings(@Nullable List<PlanAdvancedBackupSettingArgs> advancedBackupSettings) {
-            this.advancedBackupSettings = Codegen.ofNullable(advancedBackupSettings);
-            return this;
+
+        public Builder advancedBackupSettings(List<PlanAdvancedBackupSettingArgs> advancedBackupSettings) {
+            return advancedBackupSettings(Output.of(advancedBackupSettings));
         }
+
         public Builder advancedBackupSettings(PlanAdvancedBackupSettingArgs... advancedBackupSettings) {
             return advancedBackupSettings(List.of(advancedBackupSettings));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder rules(Output<List<PlanRuleArgs>> rules) {
-            this.rules = Objects.requireNonNull(rules);
+            $.rules = rules;
             return this;
         }
+
         public Builder rules(List<PlanRuleArgs> rules) {
-            this.rules = Output.of(Objects.requireNonNull(rules));
-            return this;
+            return rules(Output.of(rules));
         }
+
         public Builder rules(PlanRuleArgs... rules) {
             return rules(List.of(rules));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
-        }        public PlanArgs build() {
-            return new PlanArgs(advancedBackupSettings, name, rules, tags);
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
+        }
+
+        public PlanArgs build() {
+            $.rules = Objects.requireNonNull($.rules, "expected parameter 'rules' to be non-null");
+            return $;
         }
     }
+
 }

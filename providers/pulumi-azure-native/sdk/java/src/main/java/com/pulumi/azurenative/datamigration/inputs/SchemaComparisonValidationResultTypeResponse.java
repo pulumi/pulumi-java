@@ -21,7 +21,7 @@ public final class SchemaComparisonValidationResultTypeResponse extends com.pulu
      * 
      */
     @Import(name="objectName", required=true)
-      private final String objectName;
+    private String objectName;
 
     public String objectName() {
         return this.objectName;
@@ -32,7 +32,7 @@ public final class SchemaComparisonValidationResultTypeResponse extends com.pulu
      * 
      */
     @Import(name="objectType", required=true)
-      private final String objectType;
+    private String objectType;
 
     public String objectType() {
         return this.objectType;
@@ -43,64 +43,59 @@ public final class SchemaComparisonValidationResultTypeResponse extends com.pulu
      * 
      */
     @Import(name="updateAction", required=true)
-      private final String updateAction;
+    private String updateAction;
 
     public String updateAction() {
         return this.updateAction;
     }
 
-    public SchemaComparisonValidationResultTypeResponse(
-        String objectName,
-        String objectType,
-        String updateAction) {
-        this.objectName = Objects.requireNonNull(objectName, "expected parameter 'objectName' to be non-null");
-        this.objectType = Objects.requireNonNull(objectType, "expected parameter 'objectType' to be non-null");
-        this.updateAction = Objects.requireNonNull(updateAction, "expected parameter 'updateAction' to be non-null");
-    }
+    private SchemaComparisonValidationResultTypeResponse() {}
 
-    private SchemaComparisonValidationResultTypeResponse() {
-        this.objectName = null;
-        this.objectType = null;
-        this.updateAction = null;
+    private SchemaComparisonValidationResultTypeResponse(SchemaComparisonValidationResultTypeResponse $) {
+        this.objectName = $.objectName;
+        this.objectType = $.objectType;
+        this.updateAction = $.updateAction;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SchemaComparisonValidationResultTypeResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String objectName;
-        private String objectType;
-        private String updateAction;
+        private SchemaComparisonValidationResultTypeResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new SchemaComparisonValidationResultTypeResponse();
         }
 
         public Builder(SchemaComparisonValidationResultTypeResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.objectName = defaults.objectName;
-    	      this.objectType = defaults.objectType;
-    	      this.updateAction = defaults.updateAction;
+            $ = new SchemaComparisonValidationResultTypeResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder objectName(String objectName) {
-            this.objectName = Objects.requireNonNull(objectName);
+            $.objectName = objectName;
             return this;
         }
+
         public Builder objectType(String objectType) {
-            this.objectType = Objects.requireNonNull(objectType);
+            $.objectType = objectType;
             return this;
         }
+
         public Builder updateAction(String updateAction) {
-            this.updateAction = Objects.requireNonNull(updateAction);
+            $.updateAction = updateAction;
             return this;
-        }        public SchemaComparisonValidationResultTypeResponse build() {
-            return new SchemaComparisonValidationResultTypeResponse(objectName, objectType, updateAction);
+        }
+
+        public SchemaComparisonValidationResultTypeResponse build() {
+            $.objectName = Objects.requireNonNull($.objectName, "expected parameter 'objectName' to be non-null");
+            $.objectType = Objects.requireNonNull($.objectType, "expected parameter 'objectType' to be non-null");
+            $.updateAction = Objects.requireNonNull($.updateAction, "expected parameter 'updateAction' to be non-null");
+            return $;
         }
     }
+
 }

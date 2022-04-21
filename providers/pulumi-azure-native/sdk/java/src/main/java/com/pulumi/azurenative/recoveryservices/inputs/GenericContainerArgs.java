@@ -11,6 +11,7 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +28,10 @@ public final class GenericContainerArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="backupManagementType")
-      private final @Nullable Output<Either<String,BackupManagementType>> backupManagementType;
+    private @Nullable Output<Either<String,BackupManagementType>> backupManagementType;
 
-    public Output<Either<String,BackupManagementType>> backupManagementType() {
-        return this.backupManagementType == null ? Codegen.empty() : this.backupManagementType;
+    public Optional<Output<Either<String,BackupManagementType>>> backupManagementType() {
+        return Optional.ofNullable(this.backupManagementType);
     }
 
     /**
@@ -42,7 +43,7 @@ public final class GenericContainerArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="containerType", required=true)
-      private final Output<String> containerType;
+    private Output<String> containerType;
 
     public Output<String> containerType() {
         return this.containerType;
@@ -53,10 +54,10 @@ public final class GenericContainerArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="extendedInformation")
-      private final @Nullable Output<GenericContainerExtendedInfoArgs> extendedInformation;
+    private @Nullable Output<GenericContainerExtendedInfoArgs> extendedInformation;
 
-    public Output<GenericContainerExtendedInfoArgs> extendedInformation() {
-        return this.extendedInformation == null ? Codegen.empty() : this.extendedInformation;
+    public Optional<Output<GenericContainerExtendedInfoArgs>> extendedInformation() {
+        return Optional.ofNullable(this.extendedInformation);
     }
 
     /**
@@ -64,10 +65,10 @@ public final class GenericContainerArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="fabricName")
-      private final @Nullable Output<String> fabricName;
+    private @Nullable Output<String> fabricName;
 
-    public Output<String> fabricName() {
-        return this.fabricName == null ? Codegen.empty() : this.fabricName;
+    public Optional<Output<String>> fabricName() {
+        return Optional.ofNullable(this.fabricName);
     }
 
     /**
@@ -75,10 +76,10 @@ public final class GenericContainerArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="friendlyName")
-      private final @Nullable Output<String> friendlyName;
+    private @Nullable Output<String> friendlyName;
 
-    public Output<String> friendlyName() {
-        return this.friendlyName == null ? Codegen.empty() : this.friendlyName;
+    public Optional<Output<String>> friendlyName() {
+        return Optional.ofNullable(this.friendlyName);
     }
 
     /**
@@ -86,10 +87,10 @@ public final class GenericContainerArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="healthStatus")
-      private final @Nullable Output<String> healthStatus;
+    private @Nullable Output<String> healthStatus;
 
-    public Output<String> healthStatus() {
-        return this.healthStatus == null ? Codegen.empty() : this.healthStatus;
+    public Optional<Output<String>> healthStatus() {
+        return Optional.ofNullable(this.healthStatus);
     }
 
     /**
@@ -97,128 +98,109 @@ public final class GenericContainerArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="registrationStatus")
-      private final @Nullable Output<String> registrationStatus;
+    private @Nullable Output<String> registrationStatus;
 
-    public Output<String> registrationStatus() {
-        return this.registrationStatus == null ? Codegen.empty() : this.registrationStatus;
+    public Optional<Output<String>> registrationStatus() {
+        return Optional.ofNullable(this.registrationStatus);
     }
 
-    public GenericContainerArgs(
-        @Nullable Output<Either<String,BackupManagementType>> backupManagementType,
-        Output<String> containerType,
-        @Nullable Output<GenericContainerExtendedInfoArgs> extendedInformation,
-        @Nullable Output<String> fabricName,
-        @Nullable Output<String> friendlyName,
-        @Nullable Output<String> healthStatus,
-        @Nullable Output<String> registrationStatus) {
-        this.backupManagementType = backupManagementType;
-        this.containerType = Codegen.stringProp("containerType").output().arg(containerType).require();
-        this.extendedInformation = extendedInformation;
-        this.fabricName = fabricName;
-        this.friendlyName = friendlyName;
-        this.healthStatus = healthStatus;
-        this.registrationStatus = registrationStatus;
-    }
+    private GenericContainerArgs() {}
 
-    private GenericContainerArgs() {
-        this.backupManagementType = Codegen.empty();
-        this.containerType = Codegen.empty();
-        this.extendedInformation = Codegen.empty();
-        this.fabricName = Codegen.empty();
-        this.friendlyName = Codegen.empty();
-        this.healthStatus = Codegen.empty();
-        this.registrationStatus = Codegen.empty();
+    private GenericContainerArgs(GenericContainerArgs $) {
+        this.backupManagementType = $.backupManagementType;
+        this.containerType = $.containerType;
+        this.extendedInformation = $.extendedInformation;
+        this.fabricName = $.fabricName;
+        this.friendlyName = $.friendlyName;
+        this.healthStatus = $.healthStatus;
+        this.registrationStatus = $.registrationStatus;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GenericContainerArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Either<String,BackupManagementType>> backupManagementType;
-        private Output<String> containerType;
-        private @Nullable Output<GenericContainerExtendedInfoArgs> extendedInformation;
-        private @Nullable Output<String> fabricName;
-        private @Nullable Output<String> friendlyName;
-        private @Nullable Output<String> healthStatus;
-        private @Nullable Output<String> registrationStatus;
+        private GenericContainerArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GenericContainerArgs();
         }
 
         public Builder(GenericContainerArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.backupManagementType = defaults.backupManagementType;
-    	      this.containerType = defaults.containerType;
-    	      this.extendedInformation = defaults.extendedInformation;
-    	      this.fabricName = defaults.fabricName;
-    	      this.friendlyName = defaults.friendlyName;
-    	      this.healthStatus = defaults.healthStatus;
-    	      this.registrationStatus = defaults.registrationStatus;
+            $ = new GenericContainerArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder backupManagementType(@Nullable Output<Either<String,BackupManagementType>> backupManagementType) {
-            this.backupManagementType = backupManagementType;
+            $.backupManagementType = backupManagementType;
             return this;
         }
-        public Builder backupManagementType(@Nullable Either<String,BackupManagementType> backupManagementType) {
-            this.backupManagementType = Codegen.ofNullable(backupManagementType);
-            return this;
+
+        public Builder backupManagementType(Either<String,BackupManagementType> backupManagementType) {
+            return backupManagementType(Output.of(backupManagementType));
         }
+
         public Builder containerType(Output<String> containerType) {
-            this.containerType = Objects.requireNonNull(containerType);
+            $.containerType = containerType;
             return this;
         }
+
         public Builder containerType(String containerType) {
-            this.containerType = Output.of(Objects.requireNonNull(containerType));
-            return this;
+            return containerType(Output.of(containerType));
         }
+
         public Builder extendedInformation(@Nullable Output<GenericContainerExtendedInfoArgs> extendedInformation) {
-            this.extendedInformation = extendedInformation;
+            $.extendedInformation = extendedInformation;
             return this;
         }
-        public Builder extendedInformation(@Nullable GenericContainerExtendedInfoArgs extendedInformation) {
-            this.extendedInformation = Codegen.ofNullable(extendedInformation);
-            return this;
+
+        public Builder extendedInformation(GenericContainerExtendedInfoArgs extendedInformation) {
+            return extendedInformation(Output.of(extendedInformation));
         }
+
         public Builder fabricName(@Nullable Output<String> fabricName) {
-            this.fabricName = fabricName;
+            $.fabricName = fabricName;
             return this;
         }
-        public Builder fabricName(@Nullable String fabricName) {
-            this.fabricName = Codegen.ofNullable(fabricName);
-            return this;
+
+        public Builder fabricName(String fabricName) {
+            return fabricName(Output.of(fabricName));
         }
+
         public Builder friendlyName(@Nullable Output<String> friendlyName) {
-            this.friendlyName = friendlyName;
+            $.friendlyName = friendlyName;
             return this;
         }
-        public Builder friendlyName(@Nullable String friendlyName) {
-            this.friendlyName = Codegen.ofNullable(friendlyName);
-            return this;
+
+        public Builder friendlyName(String friendlyName) {
+            return friendlyName(Output.of(friendlyName));
         }
+
         public Builder healthStatus(@Nullable Output<String> healthStatus) {
-            this.healthStatus = healthStatus;
+            $.healthStatus = healthStatus;
             return this;
         }
-        public Builder healthStatus(@Nullable String healthStatus) {
-            this.healthStatus = Codegen.ofNullable(healthStatus);
-            return this;
+
+        public Builder healthStatus(String healthStatus) {
+            return healthStatus(Output.of(healthStatus));
         }
+
         public Builder registrationStatus(@Nullable Output<String> registrationStatus) {
-            this.registrationStatus = registrationStatus;
+            $.registrationStatus = registrationStatus;
             return this;
         }
-        public Builder registrationStatus(@Nullable String registrationStatus) {
-            this.registrationStatus = Codegen.ofNullable(registrationStatus);
-            return this;
-        }        public GenericContainerArgs build() {
-            return new GenericContainerArgs(backupManagementType, containerType, extendedInformation, fabricName, friendlyName, healthStatus, registrationStatus);
+
+        public Builder registrationStatus(String registrationStatus) {
+            return registrationStatus(Output.of(registrationStatus));
+        }
+
+        public GenericContainerArgs build() {
+            $.containerType = Codegen.stringProp("containerType").output().arg($.containerType).require();
+            return $;
         }
     }
+
 }

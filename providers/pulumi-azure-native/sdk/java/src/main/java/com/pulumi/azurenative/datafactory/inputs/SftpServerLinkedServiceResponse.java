@@ -32,10 +32,10 @@ public final class SftpServerLinkedServiceResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="annotations")
-      private final @Nullable List<Object> annotations;
+    private @Nullable List<Object> annotations;
 
-    public List<Object> annotations() {
-        return this.annotations == null ? List.of() : this.annotations;
+    public Optional<List<Object>> annotations() {
+        return Optional.ofNullable(this.annotations);
     }
 
     /**
@@ -43,10 +43,10 @@ public final class SftpServerLinkedServiceResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="authenticationType")
-      private final @Nullable String authenticationType;
+    private @Nullable String authenticationType;
 
     public Optional<String> authenticationType() {
-        return this.authenticationType == null ? Optional.empty() : Optional.ofNullable(this.authenticationType);
+        return Optional.ofNullable(this.authenticationType);
     }
 
     /**
@@ -54,10 +54,10 @@ public final class SftpServerLinkedServiceResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="connectVia")
-      private final @Nullable IntegrationRuntimeReferenceResponse connectVia;
+    private @Nullable IntegrationRuntimeReferenceResponse connectVia;
 
     public Optional<IntegrationRuntimeReferenceResponse> connectVia() {
-        return this.connectVia == null ? Optional.empty() : Optional.ofNullable(this.connectVia);
+        return Optional.ofNullable(this.connectVia);
     }
 
     /**
@@ -65,10 +65,10 @@ public final class SftpServerLinkedServiceResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="description")
-      private final @Nullable String description;
+    private @Nullable String description;
 
     public Optional<String> description() {
-        return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -76,10 +76,10 @@ public final class SftpServerLinkedServiceResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="encryptedCredential")
-      private final @Nullable Object encryptedCredential;
+    private @Nullable Object encryptedCredential;
 
     public Optional<Object> encryptedCredential() {
-        return this.encryptedCredential == null ? Optional.empty() : Optional.ofNullable(this.encryptedCredential);
+        return Optional.ofNullable(this.encryptedCredential);
     }
 
     /**
@@ -87,7 +87,7 @@ public final class SftpServerLinkedServiceResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="host", required=true)
-      private final Object host;
+    private Object host;
 
     public Object host() {
         return this.host;
@@ -98,10 +98,10 @@ public final class SftpServerLinkedServiceResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="hostKeyFingerprint")
-      private final @Nullable Object hostKeyFingerprint;
+    private @Nullable Object hostKeyFingerprint;
 
     public Optional<Object> hostKeyFingerprint() {
-        return this.hostKeyFingerprint == null ? Optional.empty() : Optional.ofNullable(this.hostKeyFingerprint);
+        return Optional.ofNullable(this.hostKeyFingerprint);
     }
 
     /**
@@ -109,10 +109,10 @@ public final class SftpServerLinkedServiceResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="parameters")
-      private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
+    private @Nullable Map<String,ParameterSpecificationResponse> parameters;
 
-    public Map<String,ParameterSpecificationResponse> parameters() {
-        return this.parameters == null ? Map.of() : this.parameters;
+    public Optional<Map<String,ParameterSpecificationResponse>> parameters() {
+        return Optional.ofNullable(this.parameters);
     }
 
     /**
@@ -120,10 +120,10 @@ public final class SftpServerLinkedServiceResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="passPhrase")
-      private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> passPhrase;
+    private @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> passPhrase;
 
-    public Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> passPhrase() {
-        return this.passPhrase == null ? null : this.passPhrase;
+    public Optional<Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse>> passPhrase() {
+        return Optional.ofNullable(this.passPhrase);
     }
 
     /**
@@ -131,10 +131,10 @@ public final class SftpServerLinkedServiceResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="password")
-      private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password;
+    private @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password;
 
-    public Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password() {
-        return this.password == null ? null : this.password;
+    public Optional<Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse>> password() {
+        return Optional.ofNullable(this.password);
     }
 
     /**
@@ -142,10 +142,10 @@ public final class SftpServerLinkedServiceResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="port")
-      private final @Nullable Object port;
+    private @Nullable Object port;
 
     public Optional<Object> port() {
-        return this.port == null ? Optional.empty() : Optional.ofNullable(this.port);
+        return Optional.ofNullable(this.port);
     }
 
     /**
@@ -153,10 +153,10 @@ public final class SftpServerLinkedServiceResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="privateKeyContent")
-      private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> privateKeyContent;
+    private @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> privateKeyContent;
 
-    public Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> privateKeyContent() {
-        return this.privateKeyContent == null ? null : this.privateKeyContent;
+    public Optional<Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse>> privateKeyContent() {
+        return Optional.ofNullable(this.privateKeyContent);
     }
 
     /**
@@ -164,10 +164,10 @@ public final class SftpServerLinkedServiceResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="privateKeyPath")
-      private final @Nullable Object privateKeyPath;
+    private @Nullable Object privateKeyPath;
 
     public Optional<Object> privateKeyPath() {
-        return this.privateKeyPath == null ? Optional.empty() : Optional.ofNullable(this.privateKeyPath);
+        return Optional.ofNullable(this.privateKeyPath);
     }
 
     /**
@@ -175,10 +175,10 @@ public final class SftpServerLinkedServiceResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="skipHostKeyValidation")
-      private final @Nullable Object skipHostKeyValidation;
+    private @Nullable Object skipHostKeyValidation;
 
     public Optional<Object> skipHostKeyValidation() {
-        return this.skipHostKeyValidation == null ? Optional.empty() : Optional.ofNullable(this.skipHostKeyValidation);
+        return Optional.ofNullable(this.skipHostKeyValidation);
     }
 
     /**
@@ -187,7 +187,7 @@ public final class SftpServerLinkedServiceResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
@@ -198,184 +198,140 @@ public final class SftpServerLinkedServiceResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="userName")
-      private final @Nullable Object userName;
+    private @Nullable Object userName;
 
     public Optional<Object> userName() {
-        return this.userName == null ? Optional.empty() : Optional.ofNullable(this.userName);
+        return Optional.ofNullable(this.userName);
     }
 
-    public SftpServerLinkedServiceResponse(
-        @Nullable List<Object> annotations,
-        @Nullable String authenticationType,
-        @Nullable IntegrationRuntimeReferenceResponse connectVia,
-        @Nullable String description,
-        @Nullable Object encryptedCredential,
-        Object host,
-        @Nullable Object hostKeyFingerprint,
-        @Nullable Map<String,ParameterSpecificationResponse> parameters,
-        @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> passPhrase,
-        @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password,
-        @Nullable Object port,
-        @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> privateKeyContent,
-        @Nullable Object privateKeyPath,
-        @Nullable Object skipHostKeyValidation,
-        String type,
-        @Nullable Object userName) {
-        this.annotations = annotations;
-        this.authenticationType = authenticationType;
-        this.connectVia = connectVia;
-        this.description = description;
-        this.encryptedCredential = encryptedCredential;
-        this.host = Objects.requireNonNull(host, "expected parameter 'host' to be non-null");
-        this.hostKeyFingerprint = hostKeyFingerprint;
-        this.parameters = parameters;
-        this.passPhrase = passPhrase;
-        this.password = password;
-        this.port = port;
-        this.privateKeyContent = privateKeyContent;
-        this.privateKeyPath = privateKeyPath;
-        this.skipHostKeyValidation = skipHostKeyValidation;
-        this.type = Codegen.stringProp("type").arg(type).require();
-        this.userName = userName;
-    }
+    private SftpServerLinkedServiceResponse() {}
 
-    private SftpServerLinkedServiceResponse() {
-        this.annotations = List.of();
-        this.authenticationType = null;
-        this.connectVia = null;
-        this.description = null;
-        this.encryptedCredential = null;
-        this.host = null;
-        this.hostKeyFingerprint = null;
-        this.parameters = Map.of();
-        this.passPhrase = null;
-        this.password = null;
-        this.port = null;
-        this.privateKeyContent = null;
-        this.privateKeyPath = null;
-        this.skipHostKeyValidation = null;
-        this.type = null;
-        this.userName = null;
+    private SftpServerLinkedServiceResponse(SftpServerLinkedServiceResponse $) {
+        this.annotations = $.annotations;
+        this.authenticationType = $.authenticationType;
+        this.connectVia = $.connectVia;
+        this.description = $.description;
+        this.encryptedCredential = $.encryptedCredential;
+        this.host = $.host;
+        this.hostKeyFingerprint = $.hostKeyFingerprint;
+        this.parameters = $.parameters;
+        this.passPhrase = $.passPhrase;
+        this.password = $.password;
+        this.port = $.port;
+        this.privateKeyContent = $.privateKeyContent;
+        this.privateKeyPath = $.privateKeyPath;
+        this.skipHostKeyValidation = $.skipHostKeyValidation;
+        this.type = $.type;
+        this.userName = $.userName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SftpServerLinkedServiceResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<Object> annotations;
-        private @Nullable String authenticationType;
-        private @Nullable IntegrationRuntimeReferenceResponse connectVia;
-        private @Nullable String description;
-        private @Nullable Object encryptedCredential;
-        private Object host;
-        private @Nullable Object hostKeyFingerprint;
-        private @Nullable Map<String,ParameterSpecificationResponse> parameters;
-        private @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> passPhrase;
-        private @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password;
-        private @Nullable Object port;
-        private @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> privateKeyContent;
-        private @Nullable Object privateKeyPath;
-        private @Nullable Object skipHostKeyValidation;
-        private String type;
-        private @Nullable Object userName;
+        private SftpServerLinkedServiceResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new SftpServerLinkedServiceResponse();
         }
 
         public Builder(SftpServerLinkedServiceResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.annotations = defaults.annotations;
-    	      this.authenticationType = defaults.authenticationType;
-    	      this.connectVia = defaults.connectVia;
-    	      this.description = defaults.description;
-    	      this.encryptedCredential = defaults.encryptedCredential;
-    	      this.host = defaults.host;
-    	      this.hostKeyFingerprint = defaults.hostKeyFingerprint;
-    	      this.parameters = defaults.parameters;
-    	      this.passPhrase = defaults.passPhrase;
-    	      this.password = defaults.password;
-    	      this.port = defaults.port;
-    	      this.privateKeyContent = defaults.privateKeyContent;
-    	      this.privateKeyPath = defaults.privateKeyPath;
-    	      this.skipHostKeyValidation = defaults.skipHostKeyValidation;
-    	      this.type = defaults.type;
-    	      this.userName = defaults.userName;
+            $ = new SftpServerLinkedServiceResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder annotations(@Nullable List<Object> annotations) {
-            this.annotations = annotations;
+            $.annotations = annotations;
             return this;
         }
+
         public Builder annotations(Object... annotations) {
             return annotations(List.of(annotations));
         }
+
         public Builder authenticationType(@Nullable String authenticationType) {
-            this.authenticationType = authenticationType;
+            $.authenticationType = authenticationType;
             return this;
         }
+
         public Builder connectVia(@Nullable IntegrationRuntimeReferenceResponse connectVia) {
-            this.connectVia = connectVia;
+            $.connectVia = connectVia;
             return this;
         }
+
         public Builder description(@Nullable String description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
+
         public Builder encryptedCredential(@Nullable Object encryptedCredential) {
-            this.encryptedCredential = encryptedCredential;
+            $.encryptedCredential = encryptedCredential;
             return this;
         }
+
         public Builder host(Object host) {
-            this.host = Objects.requireNonNull(host);
+            $.host = host;
             return this;
         }
+
         public Builder hostKeyFingerprint(@Nullable Object hostKeyFingerprint) {
-            this.hostKeyFingerprint = hostKeyFingerprint;
+            $.hostKeyFingerprint = hostKeyFingerprint;
             return this;
         }
+
         public Builder parameters(@Nullable Map<String,ParameterSpecificationResponse> parameters) {
-            this.parameters = parameters;
+            $.parameters = parameters;
             return this;
         }
+
         public Builder passPhrase(@Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> passPhrase) {
-            this.passPhrase = passPhrase;
+            $.passPhrase = passPhrase;
             return this;
         }
+
         public Builder password(@Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password) {
-            this.password = password;
+            $.password = password;
             return this;
         }
+
         public Builder port(@Nullable Object port) {
-            this.port = port;
+            $.port = port;
             return this;
         }
+
         public Builder privateKeyContent(@Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> privateKeyContent) {
-            this.privateKeyContent = privateKeyContent;
+            $.privateKeyContent = privateKeyContent;
             return this;
         }
+
         public Builder privateKeyPath(@Nullable Object privateKeyPath) {
-            this.privateKeyPath = privateKeyPath;
+            $.privateKeyPath = privateKeyPath;
             return this;
         }
+
         public Builder skipHostKeyValidation(@Nullable Object skipHostKeyValidation) {
-            this.skipHostKeyValidation = skipHostKeyValidation;
+            $.skipHostKeyValidation = skipHostKeyValidation;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder userName(@Nullable Object userName) {
-            this.userName = userName;
+            $.userName = userName;
             return this;
-        }        public SftpServerLinkedServiceResponse build() {
-            return new SftpServerLinkedServiceResponse(annotations, authenticationType, connectVia, description, encryptedCredential, host, hostKeyFingerprint, parameters, passPhrase, password, port, privateKeyContent, privateKeyPath, skipHostKeyValidation, type, userName);
+        }
+
+        public SftpServerLinkedServiceResponse build() {
+            $.host = Objects.requireNonNull($.host, "expected parameter 'host' to be non-null");
+            $.type = Codegen.stringProp("type").arg($.type).require();
+            return $;
         }
     }
+
 }

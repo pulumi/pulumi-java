@@ -24,10 +24,10 @@ public final class LoadBalancerBackendAddressResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="ipAddress")
-      private final @Nullable String ipAddress;
+    private @Nullable String ipAddress;
 
     public Optional<String> ipAddress() {
-        return this.ipAddress == null ? Optional.empty() : Optional.ofNullable(this.ipAddress);
+        return Optional.ofNullable(this.ipAddress);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class LoadBalancerBackendAddressResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="loadBalancerFrontendIPConfiguration")
-      private final @Nullable SubResourceResponse loadBalancerFrontendIPConfiguration;
+    private @Nullable SubResourceResponse loadBalancerFrontendIPConfiguration;
 
     public Optional<SubResourceResponse> loadBalancerFrontendIPConfiguration() {
-        return this.loadBalancerFrontendIPConfiguration == null ? Optional.empty() : Optional.ofNullable(this.loadBalancerFrontendIPConfiguration);
+        return Optional.ofNullable(this.loadBalancerFrontendIPConfiguration);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class LoadBalancerBackendAddressResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="name")
-      private final @Nullable String name;
+    private @Nullable String name;
 
     public Optional<String> name() {
-        return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -57,7 +57,7 @@ public final class LoadBalancerBackendAddressResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="networkInterfaceIPConfiguration", required=true)
-      private final SubResourceResponse networkInterfaceIPConfiguration;
+    private SubResourceResponse networkInterfaceIPConfiguration;
 
     public SubResourceResponse networkInterfaceIPConfiguration() {
         return this.networkInterfaceIPConfiguration;
@@ -68,10 +68,10 @@ public final class LoadBalancerBackendAddressResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="subnet")
-      private final @Nullable SubResourceResponse subnet;
+    private @Nullable SubResourceResponse subnet;
 
     public Optional<SubResourceResponse> subnet() {
-        return this.subnet == null ? Optional.empty() : Optional.ofNullable(this.subnet);
+        return Optional.ofNullable(this.subnet);
     }
 
     /**
@@ -79,91 +79,75 @@ public final class LoadBalancerBackendAddressResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="virtualNetwork")
-      private final @Nullable SubResourceResponse virtualNetwork;
+    private @Nullable SubResourceResponse virtualNetwork;
 
     public Optional<SubResourceResponse> virtualNetwork() {
-        return this.virtualNetwork == null ? Optional.empty() : Optional.ofNullable(this.virtualNetwork);
+        return Optional.ofNullable(this.virtualNetwork);
     }
 
-    public LoadBalancerBackendAddressResponse(
-        @Nullable String ipAddress,
-        @Nullable SubResourceResponse loadBalancerFrontendIPConfiguration,
-        @Nullable String name,
-        SubResourceResponse networkInterfaceIPConfiguration,
-        @Nullable SubResourceResponse subnet,
-        @Nullable SubResourceResponse virtualNetwork) {
-        this.ipAddress = ipAddress;
-        this.loadBalancerFrontendIPConfiguration = loadBalancerFrontendIPConfiguration;
-        this.name = name;
-        this.networkInterfaceIPConfiguration = Objects.requireNonNull(networkInterfaceIPConfiguration, "expected parameter 'networkInterfaceIPConfiguration' to be non-null");
-        this.subnet = subnet;
-        this.virtualNetwork = virtualNetwork;
-    }
+    private LoadBalancerBackendAddressResponse() {}
 
-    private LoadBalancerBackendAddressResponse() {
-        this.ipAddress = null;
-        this.loadBalancerFrontendIPConfiguration = null;
-        this.name = null;
-        this.networkInterfaceIPConfiguration = null;
-        this.subnet = null;
-        this.virtualNetwork = null;
+    private LoadBalancerBackendAddressResponse(LoadBalancerBackendAddressResponse $) {
+        this.ipAddress = $.ipAddress;
+        this.loadBalancerFrontendIPConfiguration = $.loadBalancerFrontendIPConfiguration;
+        this.name = $.name;
+        this.networkInterfaceIPConfiguration = $.networkInterfaceIPConfiguration;
+        this.subnet = $.subnet;
+        this.virtualNetwork = $.virtualNetwork;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LoadBalancerBackendAddressResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String ipAddress;
-        private @Nullable SubResourceResponse loadBalancerFrontendIPConfiguration;
-        private @Nullable String name;
-        private SubResourceResponse networkInterfaceIPConfiguration;
-        private @Nullable SubResourceResponse subnet;
-        private @Nullable SubResourceResponse virtualNetwork;
+        private LoadBalancerBackendAddressResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new LoadBalancerBackendAddressResponse();
         }
 
         public Builder(LoadBalancerBackendAddressResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.ipAddress = defaults.ipAddress;
-    	      this.loadBalancerFrontendIPConfiguration = defaults.loadBalancerFrontendIPConfiguration;
-    	      this.name = defaults.name;
-    	      this.networkInterfaceIPConfiguration = defaults.networkInterfaceIPConfiguration;
-    	      this.subnet = defaults.subnet;
-    	      this.virtualNetwork = defaults.virtualNetwork;
+            $ = new LoadBalancerBackendAddressResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder ipAddress(@Nullable String ipAddress) {
-            this.ipAddress = ipAddress;
+            $.ipAddress = ipAddress;
             return this;
         }
+
         public Builder loadBalancerFrontendIPConfiguration(@Nullable SubResourceResponse loadBalancerFrontendIPConfiguration) {
-            this.loadBalancerFrontendIPConfiguration = loadBalancerFrontendIPConfiguration;
+            $.loadBalancerFrontendIPConfiguration = loadBalancerFrontendIPConfiguration;
             return this;
         }
+
         public Builder name(@Nullable String name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
+
         public Builder networkInterfaceIPConfiguration(SubResourceResponse networkInterfaceIPConfiguration) {
-            this.networkInterfaceIPConfiguration = Objects.requireNonNull(networkInterfaceIPConfiguration);
+            $.networkInterfaceIPConfiguration = networkInterfaceIPConfiguration;
             return this;
         }
+
         public Builder subnet(@Nullable SubResourceResponse subnet) {
-            this.subnet = subnet;
+            $.subnet = subnet;
             return this;
         }
+
         public Builder virtualNetwork(@Nullable SubResourceResponse virtualNetwork) {
-            this.virtualNetwork = virtualNetwork;
+            $.virtualNetwork = virtualNetwork;
             return this;
-        }        public LoadBalancerBackendAddressResponse build() {
-            return new LoadBalancerBackendAddressResponse(ipAddress, loadBalancerFrontendIPConfiguration, name, networkInterfaceIPConfiguration, subnet, virtualNetwork);
+        }
+
+        public LoadBalancerBackendAddressResponse build() {
+            $.networkInterfaceIPConfiguration = Objects.requireNonNull($.networkInterfaceIPConfiguration, "expected parameter 'networkInterfaceIPConfiguration' to be non-null");
+            return $;
         }
     }
+
 }

@@ -19,45 +19,44 @@ public final class ExcludedPathResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="path")
-      private final @Nullable String path;
+    private @Nullable String path;
 
     public Optional<String> path() {
-        return this.path == null ? Optional.empty() : Optional.ofNullable(this.path);
+        return Optional.ofNullable(this.path);
     }
 
-    public ExcludedPathResponse(@Nullable String path) {
-        this.path = path;
-    }
+    private ExcludedPathResponse() {}
 
-    private ExcludedPathResponse() {
-        this.path = null;
+    private ExcludedPathResponse(ExcludedPathResponse $) {
+        this.path = $.path;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ExcludedPathResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String path;
+        private ExcludedPathResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ExcludedPathResponse();
         }
 
         public Builder(ExcludedPathResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.path = defaults.path;
+            $ = new ExcludedPathResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder path(@Nullable String path) {
-            this.path = path;
+            $.path = path;
             return this;
-        }        public ExcludedPathResponse build() {
-            return new ExcludedPathResponse(path);
+        }
+
+        public ExcludedPathResponse build() {
+            return $;
         }
     }
+
 }

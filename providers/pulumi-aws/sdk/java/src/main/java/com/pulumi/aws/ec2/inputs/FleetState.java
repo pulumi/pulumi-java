@@ -9,11 +9,11 @@ import com.pulumi.aws.ec2.inputs.FleetSpotOptionsGetArgs;
 import com.pulumi.aws.ec2.inputs.FleetTargetCapacitySpecificationGetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class FleetState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="excessCapacityTerminationPolicy")
-      private final @Nullable Output<String> excessCapacityTerminationPolicy;
+    private @Nullable Output<String> excessCapacityTerminationPolicy;
 
-    public Output<String> excessCapacityTerminationPolicy() {
-        return this.excessCapacityTerminationPolicy == null ? Codegen.empty() : this.excessCapacityTerminationPolicy;
+    public Optional<Output<String>> excessCapacityTerminationPolicy() {
+        return Optional.ofNullable(this.excessCapacityTerminationPolicy);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class FleetState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="launchTemplateConfig")
-      private final @Nullable Output<FleetLaunchTemplateConfigGetArgs> launchTemplateConfig;
+    private @Nullable Output<FleetLaunchTemplateConfigGetArgs> launchTemplateConfig;
 
-    public Output<FleetLaunchTemplateConfigGetArgs> launchTemplateConfig() {
-        return this.launchTemplateConfig == null ? Codegen.empty() : this.launchTemplateConfig;
+    public Optional<Output<FleetLaunchTemplateConfigGetArgs>> launchTemplateConfig() {
+        return Optional.ofNullable(this.launchTemplateConfig);
     }
 
     /**
@@ -48,10 +48,10 @@ public final class FleetState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="onDemandOptions")
-      private final @Nullable Output<FleetOnDemandOptionsGetArgs> onDemandOptions;
+    private @Nullable Output<FleetOnDemandOptionsGetArgs> onDemandOptions;
 
-    public Output<FleetOnDemandOptionsGetArgs> onDemandOptions() {
-        return this.onDemandOptions == null ? Codegen.empty() : this.onDemandOptions;
+    public Optional<Output<FleetOnDemandOptionsGetArgs>> onDemandOptions() {
+        return Optional.ofNullable(this.onDemandOptions);
     }
 
     /**
@@ -59,10 +59,10 @@ public final class FleetState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="replaceUnhealthyInstances")
-      private final @Nullable Output<Boolean> replaceUnhealthyInstances;
+    private @Nullable Output<Boolean> replaceUnhealthyInstances;
 
-    public Output<Boolean> replaceUnhealthyInstances() {
-        return this.replaceUnhealthyInstances == null ? Codegen.empty() : this.replaceUnhealthyInstances;
+    public Optional<Output<Boolean>> replaceUnhealthyInstances() {
+        return Optional.ofNullable(this.replaceUnhealthyInstances);
     }
 
     /**
@@ -70,10 +70,10 @@ public final class FleetState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="spotOptions")
-      private final @Nullable Output<FleetSpotOptionsGetArgs> spotOptions;
+    private @Nullable Output<FleetSpotOptionsGetArgs> spotOptions;
 
-    public Output<FleetSpotOptionsGetArgs> spotOptions() {
-        return this.spotOptions == null ? Codegen.empty() : this.spotOptions;
+    public Optional<Output<FleetSpotOptionsGetArgs>> spotOptions() {
+        return Optional.ofNullable(this.spotOptions);
     }
 
     /**
@@ -81,10 +81,10 @@ public final class FleetState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -92,10 +92,10 @@ public final class FleetState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tagsAll")
-      private final @Nullable Output<Map<String,String>> tagsAll;
+    private @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> tagsAll() {
-        return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
+    public Optional<Output<Map<String,String>>> tagsAll() {
+        return Optional.ofNullable(this.tagsAll);
     }
 
     /**
@@ -103,10 +103,10 @@ public final class FleetState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="targetCapacitySpecification")
-      private final @Nullable Output<FleetTargetCapacitySpecificationGetArgs> targetCapacitySpecification;
+    private @Nullable Output<FleetTargetCapacitySpecificationGetArgs> targetCapacitySpecification;
 
-    public Output<FleetTargetCapacitySpecificationGetArgs> targetCapacitySpecification() {
-        return this.targetCapacitySpecification == null ? Codegen.empty() : this.targetCapacitySpecification;
+    public Optional<Output<FleetTargetCapacitySpecificationGetArgs>> targetCapacitySpecification() {
+        return Optional.ofNullable(this.targetCapacitySpecification);
     }
 
     /**
@@ -114,10 +114,10 @@ public final class FleetState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="terminateInstances")
-      private final @Nullable Output<Boolean> terminateInstances;
+    private @Nullable Output<Boolean> terminateInstances;
 
-    public Output<Boolean> terminateInstances() {
-        return this.terminateInstances == null ? Codegen.empty() : this.terminateInstances;
+    public Optional<Output<Boolean>> terminateInstances() {
+        return Optional.ofNullable(this.terminateInstances);
     }
 
     /**
@@ -125,10 +125,10 @@ public final class FleetState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="terminateInstancesWithExpiration")
-      private final @Nullable Output<Boolean> terminateInstancesWithExpiration;
+    private @Nullable Output<Boolean> terminateInstancesWithExpiration;
 
-    public Output<Boolean> terminateInstancesWithExpiration() {
-        return this.terminateInstancesWithExpiration == null ? Codegen.empty() : this.terminateInstancesWithExpiration;
+    public Optional<Output<Boolean>> terminateInstancesWithExpiration() {
+        return Optional.ofNullable(this.terminateInstancesWithExpiration);
     }
 
     /**
@@ -136,180 +136,148 @@ public final class FleetState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="type")
-      private final @Nullable Output<String> type;
+    private @Nullable Output<String> type;
 
-    public Output<String> type() {
-        return this.type == null ? Codegen.empty() : this.type;
+    public Optional<Output<String>> type() {
+        return Optional.ofNullable(this.type);
     }
 
-    public FleetState(
-        @Nullable Output<String> excessCapacityTerminationPolicy,
-        @Nullable Output<FleetLaunchTemplateConfigGetArgs> launchTemplateConfig,
-        @Nullable Output<FleetOnDemandOptionsGetArgs> onDemandOptions,
-        @Nullable Output<Boolean> replaceUnhealthyInstances,
-        @Nullable Output<FleetSpotOptionsGetArgs> spotOptions,
-        @Nullable Output<Map<String,String>> tags,
-        @Nullable Output<Map<String,String>> tagsAll,
-        @Nullable Output<FleetTargetCapacitySpecificationGetArgs> targetCapacitySpecification,
-        @Nullable Output<Boolean> terminateInstances,
-        @Nullable Output<Boolean> terminateInstancesWithExpiration,
-        @Nullable Output<String> type) {
-        this.excessCapacityTerminationPolicy = excessCapacityTerminationPolicy;
-        this.launchTemplateConfig = launchTemplateConfig;
-        this.onDemandOptions = onDemandOptions;
-        this.replaceUnhealthyInstances = replaceUnhealthyInstances;
-        this.spotOptions = spotOptions;
-        this.tags = tags;
-        this.tagsAll = tagsAll;
-        this.targetCapacitySpecification = targetCapacitySpecification;
-        this.terminateInstances = terminateInstances;
-        this.terminateInstancesWithExpiration = terminateInstancesWithExpiration;
-        this.type = type;
-    }
+    private FleetState() {}
 
-    private FleetState() {
-        this.excessCapacityTerminationPolicy = Codegen.empty();
-        this.launchTemplateConfig = Codegen.empty();
-        this.onDemandOptions = Codegen.empty();
-        this.replaceUnhealthyInstances = Codegen.empty();
-        this.spotOptions = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.tagsAll = Codegen.empty();
-        this.targetCapacitySpecification = Codegen.empty();
-        this.terminateInstances = Codegen.empty();
-        this.terminateInstancesWithExpiration = Codegen.empty();
-        this.type = Codegen.empty();
+    private FleetState(FleetState $) {
+        this.excessCapacityTerminationPolicy = $.excessCapacityTerminationPolicy;
+        this.launchTemplateConfig = $.launchTemplateConfig;
+        this.onDemandOptions = $.onDemandOptions;
+        this.replaceUnhealthyInstances = $.replaceUnhealthyInstances;
+        this.spotOptions = $.spotOptions;
+        this.tags = $.tags;
+        this.tagsAll = $.tagsAll;
+        this.targetCapacitySpecification = $.targetCapacitySpecification;
+        this.terminateInstances = $.terminateInstances;
+        this.terminateInstancesWithExpiration = $.terminateInstancesWithExpiration;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FleetState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> excessCapacityTerminationPolicy;
-        private @Nullable Output<FleetLaunchTemplateConfigGetArgs> launchTemplateConfig;
-        private @Nullable Output<FleetOnDemandOptionsGetArgs> onDemandOptions;
-        private @Nullable Output<Boolean> replaceUnhealthyInstances;
-        private @Nullable Output<FleetSpotOptionsGetArgs> spotOptions;
-        private @Nullable Output<Map<String,String>> tags;
-        private @Nullable Output<Map<String,String>> tagsAll;
-        private @Nullable Output<FleetTargetCapacitySpecificationGetArgs> targetCapacitySpecification;
-        private @Nullable Output<Boolean> terminateInstances;
-        private @Nullable Output<Boolean> terminateInstancesWithExpiration;
-        private @Nullable Output<String> type;
+        private FleetState $;
 
         public Builder() {
-    	      // Empty
+            $ = new FleetState();
         }
 
         public Builder(FleetState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.excessCapacityTerminationPolicy = defaults.excessCapacityTerminationPolicy;
-    	      this.launchTemplateConfig = defaults.launchTemplateConfig;
-    	      this.onDemandOptions = defaults.onDemandOptions;
-    	      this.replaceUnhealthyInstances = defaults.replaceUnhealthyInstances;
-    	      this.spotOptions = defaults.spotOptions;
-    	      this.tags = defaults.tags;
-    	      this.tagsAll = defaults.tagsAll;
-    	      this.targetCapacitySpecification = defaults.targetCapacitySpecification;
-    	      this.terminateInstances = defaults.terminateInstances;
-    	      this.terminateInstancesWithExpiration = defaults.terminateInstancesWithExpiration;
-    	      this.type = defaults.type;
+            $ = new FleetState(Objects.requireNonNull(defaults));
         }
 
         public Builder excessCapacityTerminationPolicy(@Nullable Output<String> excessCapacityTerminationPolicy) {
-            this.excessCapacityTerminationPolicy = excessCapacityTerminationPolicy;
+            $.excessCapacityTerminationPolicy = excessCapacityTerminationPolicy;
             return this;
         }
-        public Builder excessCapacityTerminationPolicy(@Nullable String excessCapacityTerminationPolicy) {
-            this.excessCapacityTerminationPolicy = Codegen.ofNullable(excessCapacityTerminationPolicy);
-            return this;
+
+        public Builder excessCapacityTerminationPolicy(String excessCapacityTerminationPolicy) {
+            return excessCapacityTerminationPolicy(Output.of(excessCapacityTerminationPolicy));
         }
+
         public Builder launchTemplateConfig(@Nullable Output<FleetLaunchTemplateConfigGetArgs> launchTemplateConfig) {
-            this.launchTemplateConfig = launchTemplateConfig;
+            $.launchTemplateConfig = launchTemplateConfig;
             return this;
         }
-        public Builder launchTemplateConfig(@Nullable FleetLaunchTemplateConfigGetArgs launchTemplateConfig) {
-            this.launchTemplateConfig = Codegen.ofNullable(launchTemplateConfig);
-            return this;
+
+        public Builder launchTemplateConfig(FleetLaunchTemplateConfigGetArgs launchTemplateConfig) {
+            return launchTemplateConfig(Output.of(launchTemplateConfig));
         }
+
         public Builder onDemandOptions(@Nullable Output<FleetOnDemandOptionsGetArgs> onDemandOptions) {
-            this.onDemandOptions = onDemandOptions;
+            $.onDemandOptions = onDemandOptions;
             return this;
         }
-        public Builder onDemandOptions(@Nullable FleetOnDemandOptionsGetArgs onDemandOptions) {
-            this.onDemandOptions = Codegen.ofNullable(onDemandOptions);
-            return this;
+
+        public Builder onDemandOptions(FleetOnDemandOptionsGetArgs onDemandOptions) {
+            return onDemandOptions(Output.of(onDemandOptions));
         }
+
         public Builder replaceUnhealthyInstances(@Nullable Output<Boolean> replaceUnhealthyInstances) {
-            this.replaceUnhealthyInstances = replaceUnhealthyInstances;
+            $.replaceUnhealthyInstances = replaceUnhealthyInstances;
             return this;
         }
-        public Builder replaceUnhealthyInstances(@Nullable Boolean replaceUnhealthyInstances) {
-            this.replaceUnhealthyInstances = Codegen.ofNullable(replaceUnhealthyInstances);
-            return this;
+
+        public Builder replaceUnhealthyInstances(Boolean replaceUnhealthyInstances) {
+            return replaceUnhealthyInstances(Output.of(replaceUnhealthyInstances));
         }
+
         public Builder spotOptions(@Nullable Output<FleetSpotOptionsGetArgs> spotOptions) {
-            this.spotOptions = spotOptions;
+            $.spotOptions = spotOptions;
             return this;
         }
-        public Builder spotOptions(@Nullable FleetSpotOptionsGetArgs spotOptions) {
-            this.spotOptions = Codegen.ofNullable(spotOptions);
-            return this;
+
+        public Builder spotOptions(FleetSpotOptionsGetArgs spotOptions) {
+            return spotOptions(Output.of(spotOptions));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
-            this.tagsAll = tagsAll;
+            $.tagsAll = tagsAll;
             return this;
         }
-        public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Codegen.ofNullable(tagsAll);
-            return this;
+
+        public Builder tagsAll(Map<String,String> tagsAll) {
+            return tagsAll(Output.of(tagsAll));
         }
+
         public Builder targetCapacitySpecification(@Nullable Output<FleetTargetCapacitySpecificationGetArgs> targetCapacitySpecification) {
-            this.targetCapacitySpecification = targetCapacitySpecification;
+            $.targetCapacitySpecification = targetCapacitySpecification;
             return this;
         }
-        public Builder targetCapacitySpecification(@Nullable FleetTargetCapacitySpecificationGetArgs targetCapacitySpecification) {
-            this.targetCapacitySpecification = Codegen.ofNullable(targetCapacitySpecification);
-            return this;
+
+        public Builder targetCapacitySpecification(FleetTargetCapacitySpecificationGetArgs targetCapacitySpecification) {
+            return targetCapacitySpecification(Output.of(targetCapacitySpecification));
         }
+
         public Builder terminateInstances(@Nullable Output<Boolean> terminateInstances) {
-            this.terminateInstances = terminateInstances;
+            $.terminateInstances = terminateInstances;
             return this;
         }
-        public Builder terminateInstances(@Nullable Boolean terminateInstances) {
-            this.terminateInstances = Codegen.ofNullable(terminateInstances);
-            return this;
+
+        public Builder terminateInstances(Boolean terminateInstances) {
+            return terminateInstances(Output.of(terminateInstances));
         }
+
         public Builder terminateInstancesWithExpiration(@Nullable Output<Boolean> terminateInstancesWithExpiration) {
-            this.terminateInstancesWithExpiration = terminateInstancesWithExpiration;
+            $.terminateInstancesWithExpiration = terminateInstancesWithExpiration;
             return this;
         }
-        public Builder terminateInstancesWithExpiration(@Nullable Boolean terminateInstancesWithExpiration) {
-            this.terminateInstancesWithExpiration = Codegen.ofNullable(terminateInstancesWithExpiration);
-            return this;
+
+        public Builder terminateInstancesWithExpiration(Boolean terminateInstancesWithExpiration) {
+            return terminateInstancesWithExpiration(Output.of(terminateInstancesWithExpiration));
         }
+
         public Builder type(@Nullable Output<String> type) {
-            this.type = type;
+            $.type = type;
             return this;
         }
-        public Builder type(@Nullable String type) {
-            this.type = Codegen.ofNullable(type);
-            return this;
-        }        public FleetState build() {
-            return new FleetState(excessCapacityTerminationPolicy, launchTemplateConfig, onDemandOptions, replaceUnhealthyInstances, spotOptions, tags, tagsAll, targetCapacitySpecification, terminateInstances, terminateInstancesWithExpiration, type);
+
+        public Builder type(String type) {
+            return type(Output.of(type));
+        }
+
+        public FleetState build() {
+            return $;
         }
     }
+
 }

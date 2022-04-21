@@ -13,6 +13,7 @@ import java.lang.Object;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -29,10 +30,10 @@ public final class BlobTriggerArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="annotations")
-      private final @Nullable Output<List<Object>> annotations;
+    private @Nullable Output<List<Object>> annotations;
 
-    public Output<List<Object>> annotations() {
-        return this.annotations == null ? Codegen.empty() : this.annotations;
+    public Optional<Output<List<Object>>> annotations() {
+        return Optional.ofNullable(this.annotations);
     }
 
     /**
@@ -40,10 +41,10 @@ public final class BlobTriggerArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -51,7 +52,7 @@ public final class BlobTriggerArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="folderPath", required=true)
-      private final Output<String> folderPath;
+    private Output<String> folderPath;
 
     public Output<String> folderPath() {
         return this.folderPath;
@@ -62,7 +63,7 @@ public final class BlobTriggerArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="linkedService", required=true)
-      private final Output<LinkedServiceReferenceArgs> linkedService;
+    private Output<LinkedServiceReferenceArgs> linkedService;
 
     public Output<LinkedServiceReferenceArgs> linkedService() {
         return this.linkedService;
@@ -73,7 +74,7 @@ public final class BlobTriggerArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="maxConcurrency", required=true)
-      private final Output<Integer> maxConcurrency;
+    private Output<Integer> maxConcurrency;
 
     public Output<Integer> maxConcurrency() {
         return this.maxConcurrency;
@@ -84,10 +85,10 @@ public final class BlobTriggerArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="pipelines")
-      private final @Nullable Output<List<TriggerPipelineReferenceArgs>> pipelines;
+    private @Nullable Output<List<TriggerPipelineReferenceArgs>> pipelines;
 
-    public Output<List<TriggerPipelineReferenceArgs>> pipelines() {
-        return this.pipelines == null ? Codegen.empty() : this.pipelines;
+    public Optional<Output<List<TriggerPipelineReferenceArgs>>> pipelines() {
+        return Optional.ofNullable(this.pipelines);
     }
 
     /**
@@ -96,134 +97,120 @@ public final class BlobTriggerArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="type", required=true)
-      private final Output<String> type;
+    private Output<String> type;
 
     public Output<String> type() {
         return this.type;
     }
 
-    public BlobTriggerArgs(
-        @Nullable Output<List<Object>> annotations,
-        @Nullable Output<String> description,
-        Output<String> folderPath,
-        Output<LinkedServiceReferenceArgs> linkedService,
-        Output<Integer> maxConcurrency,
-        @Nullable Output<List<TriggerPipelineReferenceArgs>> pipelines,
-        Output<String> type) {
-        this.annotations = annotations;
-        this.description = description;
-        this.folderPath = Objects.requireNonNull(folderPath, "expected parameter 'folderPath' to be non-null");
-        this.linkedService = Objects.requireNonNull(linkedService, "expected parameter 'linkedService' to be non-null");
-        this.maxConcurrency = Objects.requireNonNull(maxConcurrency, "expected parameter 'maxConcurrency' to be non-null");
-        this.pipelines = pipelines;
-        this.type = Codegen.stringProp("type").output().arg(type).require();
-    }
+    private BlobTriggerArgs() {}
 
-    private BlobTriggerArgs() {
-        this.annotations = Codegen.empty();
-        this.description = Codegen.empty();
-        this.folderPath = Codegen.empty();
-        this.linkedService = Codegen.empty();
-        this.maxConcurrency = Codegen.empty();
-        this.pipelines = Codegen.empty();
-        this.type = Codegen.empty();
+    private BlobTriggerArgs(BlobTriggerArgs $) {
+        this.annotations = $.annotations;
+        this.description = $.description;
+        this.folderPath = $.folderPath;
+        this.linkedService = $.linkedService;
+        this.maxConcurrency = $.maxConcurrency;
+        this.pipelines = $.pipelines;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BlobTriggerArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<Object>> annotations;
-        private @Nullable Output<String> description;
-        private Output<String> folderPath;
-        private Output<LinkedServiceReferenceArgs> linkedService;
-        private Output<Integer> maxConcurrency;
-        private @Nullable Output<List<TriggerPipelineReferenceArgs>> pipelines;
-        private Output<String> type;
+        private BlobTriggerArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new BlobTriggerArgs();
         }
 
         public Builder(BlobTriggerArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.annotations = defaults.annotations;
-    	      this.description = defaults.description;
-    	      this.folderPath = defaults.folderPath;
-    	      this.linkedService = defaults.linkedService;
-    	      this.maxConcurrency = defaults.maxConcurrency;
-    	      this.pipelines = defaults.pipelines;
-    	      this.type = defaults.type;
+            $ = new BlobTriggerArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder annotations(@Nullable Output<List<Object>> annotations) {
-            this.annotations = annotations;
+            $.annotations = annotations;
             return this;
         }
-        public Builder annotations(@Nullable List<Object> annotations) {
-            this.annotations = Codegen.ofNullable(annotations);
-            return this;
+
+        public Builder annotations(List<Object> annotations) {
+            return annotations(Output.of(annotations));
         }
+
         public Builder annotations(Object... annotations) {
             return annotations(List.of(annotations));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder folderPath(Output<String> folderPath) {
-            this.folderPath = Objects.requireNonNull(folderPath);
+            $.folderPath = folderPath;
             return this;
         }
+
         public Builder folderPath(String folderPath) {
-            this.folderPath = Output.of(Objects.requireNonNull(folderPath));
-            return this;
+            return folderPath(Output.of(folderPath));
         }
+
         public Builder linkedService(Output<LinkedServiceReferenceArgs> linkedService) {
-            this.linkedService = Objects.requireNonNull(linkedService);
+            $.linkedService = linkedService;
             return this;
         }
+
         public Builder linkedService(LinkedServiceReferenceArgs linkedService) {
-            this.linkedService = Output.of(Objects.requireNonNull(linkedService));
-            return this;
+            return linkedService(Output.of(linkedService));
         }
+
         public Builder maxConcurrency(Output<Integer> maxConcurrency) {
-            this.maxConcurrency = Objects.requireNonNull(maxConcurrency);
+            $.maxConcurrency = maxConcurrency;
             return this;
         }
+
         public Builder maxConcurrency(Integer maxConcurrency) {
-            this.maxConcurrency = Output.of(Objects.requireNonNull(maxConcurrency));
-            return this;
+            return maxConcurrency(Output.of(maxConcurrency));
         }
+
         public Builder pipelines(@Nullable Output<List<TriggerPipelineReferenceArgs>> pipelines) {
-            this.pipelines = pipelines;
+            $.pipelines = pipelines;
             return this;
         }
-        public Builder pipelines(@Nullable List<TriggerPipelineReferenceArgs> pipelines) {
-            this.pipelines = Codegen.ofNullable(pipelines);
-            return this;
+
+        public Builder pipelines(List<TriggerPipelineReferenceArgs> pipelines) {
+            return pipelines(Output.of(pipelines));
         }
+
         public Builder pipelines(TriggerPipelineReferenceArgs... pipelines) {
             return pipelines(List.of(pipelines));
         }
+
         public Builder type(Output<String> type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Output.of(Objects.requireNonNull(type));
-            return this;
-        }        public BlobTriggerArgs build() {
-            return new BlobTriggerArgs(annotations, description, folderPath, linkedService, maxConcurrency, pipelines, type);
+            return type(Output.of(type));
+        }
+
+        public BlobTriggerArgs build() {
+            $.folderPath = Objects.requireNonNull($.folderPath, "expected parameter 'folderPath' to be non-null");
+            $.linkedService = Objects.requireNonNull($.linkedService, "expected parameter 'linkedService' to be non-null");
+            $.maxConcurrency = Objects.requireNonNull($.maxConcurrency, "expected parameter 'maxConcurrency' to be non-null");
+            $.type = Codegen.stringProp("type").output().arg($.type).require();
+            return $;
         }
     }
+
 }

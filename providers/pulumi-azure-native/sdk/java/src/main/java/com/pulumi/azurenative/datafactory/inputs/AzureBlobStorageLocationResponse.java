@@ -25,10 +25,10 @@ public final class AzureBlobStorageLocationResponse extends com.pulumi.resources
      * 
      */
     @Import(name="container")
-      private final @Nullable Object container;
+    private @Nullable Object container;
 
     public Optional<Object> container() {
-        return this.container == null ? Optional.empty() : Optional.ofNullable(this.container);
+        return Optional.ofNullable(this.container);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class AzureBlobStorageLocationResponse extends com.pulumi.resources
      * 
      */
     @Import(name="fileName")
-      private final @Nullable Object fileName;
+    private @Nullable Object fileName;
 
     public Optional<Object> fileName() {
-        return this.fileName == null ? Optional.empty() : Optional.ofNullable(this.fileName);
+        return Optional.ofNullable(this.fileName);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class AzureBlobStorageLocationResponse extends com.pulumi.resources
      * 
      */
     @Import(name="folderPath")
-      private final @Nullable Object folderPath;
+    private @Nullable Object folderPath;
 
     public Optional<Object> folderPath() {
-        return this.folderPath == null ? Optional.empty() : Optional.ofNullable(this.folderPath);
+        return Optional.ofNullable(this.folderPath);
     }
 
     /**
@@ -59,73 +59,63 @@ public final class AzureBlobStorageLocationResponse extends com.pulumi.resources
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
     }
 
-    public AzureBlobStorageLocationResponse(
-        @Nullable Object container,
-        @Nullable Object fileName,
-        @Nullable Object folderPath,
-        String type) {
-        this.container = container;
-        this.fileName = fileName;
-        this.folderPath = folderPath;
-        this.type = Codegen.stringProp("type").arg(type).require();
-    }
+    private AzureBlobStorageLocationResponse() {}
 
-    private AzureBlobStorageLocationResponse() {
-        this.container = null;
-        this.fileName = null;
-        this.folderPath = null;
-        this.type = null;
+    private AzureBlobStorageLocationResponse(AzureBlobStorageLocationResponse $) {
+        this.container = $.container;
+        this.fileName = $.fileName;
+        this.folderPath = $.folderPath;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AzureBlobStorageLocationResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Object container;
-        private @Nullable Object fileName;
-        private @Nullable Object folderPath;
-        private String type;
+        private AzureBlobStorageLocationResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AzureBlobStorageLocationResponse();
         }
 
         public Builder(AzureBlobStorageLocationResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.container = defaults.container;
-    	      this.fileName = defaults.fileName;
-    	      this.folderPath = defaults.folderPath;
-    	      this.type = defaults.type;
+            $ = new AzureBlobStorageLocationResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder container(@Nullable Object container) {
-            this.container = container;
+            $.container = container;
             return this;
         }
+
         public Builder fileName(@Nullable Object fileName) {
-            this.fileName = fileName;
+            $.fileName = fileName;
             return this;
         }
+
         public Builder folderPath(@Nullable Object folderPath) {
-            this.folderPath = folderPath;
+            $.folderPath = folderPath;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
-        }        public AzureBlobStorageLocationResponse build() {
-            return new AzureBlobStorageLocationResponse(container, fileName, folderPath, type);
+        }
+
+        public AzureBlobStorageLocationResponse build() {
+            $.type = Codegen.stringProp("type").arg($.type).require();
+            return $;
         }
     }
+
 }

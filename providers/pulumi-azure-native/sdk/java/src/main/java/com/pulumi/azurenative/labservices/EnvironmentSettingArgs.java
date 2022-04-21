@@ -8,10 +8,10 @@ import com.pulumi.azurenative.labservices.inputs.ResourceSettingsArgs;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class EnvironmentSettingArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="configurationState")
-      private final @Nullable Output<Either<String,ConfigurationState>> configurationState;
+    private @Nullable Output<Either<String,ConfigurationState>> configurationState;
 
-    public Output<Either<String,ConfigurationState>> configurationState() {
-        return this.configurationState == null ? Codegen.empty() : this.configurationState;
+    public Optional<Output<Either<String,ConfigurationState>>> configurationState() {
+        return Optional.ofNullable(this.configurationState);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class EnvironmentSettingArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class EnvironmentSettingArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="environmentSettingName")
-      private final @Nullable Output<String> environmentSettingName;
+    private @Nullable Output<String> environmentSettingName;
 
-    public Output<String> environmentSettingName() {
-        return this.environmentSettingName == null ? Codegen.empty() : this.environmentSettingName;
+    public Optional<Output<String>> environmentSettingName() {
+        return Optional.ofNullable(this.environmentSettingName);
     }
 
     /**
@@ -57,7 +57,7 @@ public final class EnvironmentSettingArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="labAccountName", required=true)
-      private final Output<String> labAccountName;
+    private Output<String> labAccountName;
 
     public Output<String> labAccountName() {
         return this.labAccountName;
@@ -68,7 +68,7 @@ public final class EnvironmentSettingArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="labName", required=true)
-      private final Output<String> labName;
+    private Output<String> labName;
 
     public Output<String> labName() {
         return this.labName;
@@ -79,10 +79,10 @@ public final class EnvironmentSettingArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -90,10 +90,10 @@ public final class EnvironmentSettingArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="provisioningState")
-      private final @Nullable Output<String> provisioningState;
+    private @Nullable Output<String> provisioningState;
 
-    public Output<String> provisioningState() {
-        return this.provisioningState == null ? Codegen.empty() : this.provisioningState;
+    public Optional<Output<String>> provisioningState() {
+        return Optional.ofNullable(this.provisioningState);
     }
 
     /**
@@ -101,7 +101,7 @@ public final class EnvironmentSettingArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -112,7 +112,7 @@ public final class EnvironmentSettingArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="resourceSettings", required=true)
-      private final Output<ResourceSettingsArgs> resourceSettings;
+    private Output<ResourceSettingsArgs> resourceSettings;
 
     public Output<ResourceSettingsArgs> resourceSettings() {
         return this.resourceSettings;
@@ -123,10 +123,10 @@ public final class EnvironmentSettingArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -134,10 +134,10 @@ public final class EnvironmentSettingArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="title")
-      private final @Nullable Output<String> title;
+    private @Nullable Output<String> title;
 
-    public Output<String> title() {
-        return this.title == null ? Codegen.empty() : this.title;
+    public Optional<Output<String>> title() {
+        return Optional.ofNullable(this.title);
     }
 
     /**
@@ -145,193 +145,162 @@ public final class EnvironmentSettingArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="uniqueIdentifier")
-      private final @Nullable Output<String> uniqueIdentifier;
+    private @Nullable Output<String> uniqueIdentifier;
 
-    public Output<String> uniqueIdentifier() {
-        return this.uniqueIdentifier == null ? Codegen.empty() : this.uniqueIdentifier;
+    public Optional<Output<String>> uniqueIdentifier() {
+        return Optional.ofNullable(this.uniqueIdentifier);
     }
 
-    public EnvironmentSettingArgs(
-        @Nullable Output<Either<String,ConfigurationState>> configurationState,
-        @Nullable Output<String> description,
-        @Nullable Output<String> environmentSettingName,
-        Output<String> labAccountName,
-        Output<String> labName,
-        @Nullable Output<String> location,
-        @Nullable Output<String> provisioningState,
-        Output<String> resourceGroupName,
-        Output<ResourceSettingsArgs> resourceSettings,
-        @Nullable Output<Map<String,String>> tags,
-        @Nullable Output<String> title,
-        @Nullable Output<String> uniqueIdentifier) {
-        this.configurationState = configurationState;
-        this.description = description;
-        this.environmentSettingName = environmentSettingName;
-        this.labAccountName = Objects.requireNonNull(labAccountName, "expected parameter 'labAccountName' to be non-null");
-        this.labName = Objects.requireNonNull(labName, "expected parameter 'labName' to be non-null");
-        this.location = location;
-        this.provisioningState = provisioningState;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.resourceSettings = Objects.requireNonNull(resourceSettings, "expected parameter 'resourceSettings' to be non-null");
-        this.tags = tags;
-        this.title = title;
-        this.uniqueIdentifier = uniqueIdentifier;
-    }
+    private EnvironmentSettingArgs() {}
 
-    private EnvironmentSettingArgs() {
-        this.configurationState = Codegen.empty();
-        this.description = Codegen.empty();
-        this.environmentSettingName = Codegen.empty();
-        this.labAccountName = Codegen.empty();
-        this.labName = Codegen.empty();
-        this.location = Codegen.empty();
-        this.provisioningState = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.resourceSettings = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.title = Codegen.empty();
-        this.uniqueIdentifier = Codegen.empty();
+    private EnvironmentSettingArgs(EnvironmentSettingArgs $) {
+        this.configurationState = $.configurationState;
+        this.description = $.description;
+        this.environmentSettingName = $.environmentSettingName;
+        this.labAccountName = $.labAccountName;
+        this.labName = $.labName;
+        this.location = $.location;
+        this.provisioningState = $.provisioningState;
+        this.resourceGroupName = $.resourceGroupName;
+        this.resourceSettings = $.resourceSettings;
+        this.tags = $.tags;
+        this.title = $.title;
+        this.uniqueIdentifier = $.uniqueIdentifier;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EnvironmentSettingArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Either<String,ConfigurationState>> configurationState;
-        private @Nullable Output<String> description;
-        private @Nullable Output<String> environmentSettingName;
-        private Output<String> labAccountName;
-        private Output<String> labName;
-        private @Nullable Output<String> location;
-        private @Nullable Output<String> provisioningState;
-        private Output<String> resourceGroupName;
-        private Output<ResourceSettingsArgs> resourceSettings;
-        private @Nullable Output<Map<String,String>> tags;
-        private @Nullable Output<String> title;
-        private @Nullable Output<String> uniqueIdentifier;
+        private EnvironmentSettingArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new EnvironmentSettingArgs();
         }
 
         public Builder(EnvironmentSettingArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.configurationState = defaults.configurationState;
-    	      this.description = defaults.description;
-    	      this.environmentSettingName = defaults.environmentSettingName;
-    	      this.labAccountName = defaults.labAccountName;
-    	      this.labName = defaults.labName;
-    	      this.location = defaults.location;
-    	      this.provisioningState = defaults.provisioningState;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.resourceSettings = defaults.resourceSettings;
-    	      this.tags = defaults.tags;
-    	      this.title = defaults.title;
-    	      this.uniqueIdentifier = defaults.uniqueIdentifier;
+            $ = new EnvironmentSettingArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder configurationState(@Nullable Output<Either<String,ConfigurationState>> configurationState) {
-            this.configurationState = configurationState;
+            $.configurationState = configurationState;
             return this;
         }
-        public Builder configurationState(@Nullable Either<String,ConfigurationState> configurationState) {
-            this.configurationState = Codegen.ofNullable(configurationState);
-            return this;
+
+        public Builder configurationState(Either<String,ConfigurationState> configurationState) {
+            return configurationState(Output.of(configurationState));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder environmentSettingName(@Nullable Output<String> environmentSettingName) {
-            this.environmentSettingName = environmentSettingName;
+            $.environmentSettingName = environmentSettingName;
             return this;
         }
-        public Builder environmentSettingName(@Nullable String environmentSettingName) {
-            this.environmentSettingName = Codegen.ofNullable(environmentSettingName);
-            return this;
+
+        public Builder environmentSettingName(String environmentSettingName) {
+            return environmentSettingName(Output.of(environmentSettingName));
         }
+
         public Builder labAccountName(Output<String> labAccountName) {
-            this.labAccountName = Objects.requireNonNull(labAccountName);
+            $.labAccountName = labAccountName;
             return this;
         }
+
         public Builder labAccountName(String labAccountName) {
-            this.labAccountName = Output.of(Objects.requireNonNull(labAccountName));
-            return this;
+            return labAccountName(Output.of(labAccountName));
         }
+
         public Builder labName(Output<String> labName) {
-            this.labName = Objects.requireNonNull(labName);
+            $.labName = labName;
             return this;
         }
+
         public Builder labName(String labName) {
-            this.labName = Output.of(Objects.requireNonNull(labName));
-            return this;
+            return labName(Output.of(labName));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder provisioningState(@Nullable Output<String> provisioningState) {
-            this.provisioningState = provisioningState;
+            $.provisioningState = provisioningState;
             return this;
         }
-        public Builder provisioningState(@Nullable String provisioningState) {
-            this.provisioningState = Codegen.ofNullable(provisioningState);
-            return this;
+
+        public Builder provisioningState(String provisioningState) {
+            return provisioningState(Output.of(provisioningState));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder resourceSettings(Output<ResourceSettingsArgs> resourceSettings) {
-            this.resourceSettings = Objects.requireNonNull(resourceSettings);
+            $.resourceSettings = resourceSettings;
             return this;
         }
+
         public Builder resourceSettings(ResourceSettingsArgs resourceSettings) {
-            this.resourceSettings = Output.of(Objects.requireNonNull(resourceSettings));
-            return this;
+            return resourceSettings(Output.of(resourceSettings));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder title(@Nullable Output<String> title) {
-            this.title = title;
+            $.title = title;
             return this;
         }
-        public Builder title(@Nullable String title) {
-            this.title = Codegen.ofNullable(title);
-            return this;
+
+        public Builder title(String title) {
+            return title(Output.of(title));
         }
+
         public Builder uniqueIdentifier(@Nullable Output<String> uniqueIdentifier) {
-            this.uniqueIdentifier = uniqueIdentifier;
+            $.uniqueIdentifier = uniqueIdentifier;
             return this;
         }
-        public Builder uniqueIdentifier(@Nullable String uniqueIdentifier) {
-            this.uniqueIdentifier = Codegen.ofNullable(uniqueIdentifier);
-            return this;
-        }        public EnvironmentSettingArgs build() {
-            return new EnvironmentSettingArgs(configurationState, description, environmentSettingName, labAccountName, labName, location, provisioningState, resourceGroupName, resourceSettings, tags, title, uniqueIdentifier);
+
+        public Builder uniqueIdentifier(String uniqueIdentifier) {
+            return uniqueIdentifier(Output.of(uniqueIdentifier));
+        }
+
+        public EnvironmentSettingArgs build() {
+            $.labAccountName = Objects.requireNonNull($.labAccountName, "expected parameter 'labAccountName' to be non-null");
+            $.labName = Objects.requireNonNull($.labName, "expected parameter 'labName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.resourceSettings = Objects.requireNonNull($.resourceSettings, "expected parameter 'resourceSettings' to be non-null");
+            return $;
         }
     }
+
 }

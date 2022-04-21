@@ -5,7 +5,6 @@ package com.pulumi.gcp.dataproc.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.dataproc.inputs.JobHadoopConfigGetArgs;
 import com.pulumi.gcp.dataproc.inputs.JobHiveConfigGetArgs;
 import com.pulumi.gcp.dataproc.inputs.JobPigConfigGetArgs;
@@ -21,6 +20,7 @@ import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -33,10 +33,10 @@ public final class JobState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="driverControlsFilesUri")
-      private final @Nullable Output<String> driverControlsFilesUri;
+    private @Nullable Output<String> driverControlsFilesUri;
 
-    public Output<String> driverControlsFilesUri() {
-        return this.driverControlsFilesUri == null ? Codegen.empty() : this.driverControlsFilesUri;
+    public Optional<Output<String>> driverControlsFilesUri() {
+        return Optional.ofNullable(this.driverControlsFilesUri);
     }
 
     /**
@@ -44,10 +44,10 @@ public final class JobState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="driverOutputResourceUri")
-      private final @Nullable Output<String> driverOutputResourceUri;
+    private @Nullable Output<String> driverOutputResourceUri;
 
-    public Output<String> driverOutputResourceUri() {
-        return this.driverOutputResourceUri == null ? Codegen.empty() : this.driverOutputResourceUri;
+    public Optional<Output<String>> driverOutputResourceUri() {
+        return Optional.ofNullable(this.driverOutputResourceUri);
     }
 
     /**
@@ -57,10 +57,10 @@ public final class JobState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="forceDelete")
-      private final @Nullable Output<Boolean> forceDelete;
+    private @Nullable Output<Boolean> forceDelete;
 
-    public Output<Boolean> forceDelete() {
-        return this.forceDelete == null ? Codegen.empty() : this.forceDelete;
+    public Optional<Output<Boolean>> forceDelete() {
+        return Optional.ofNullable(this.forceDelete);
     }
 
     /**
@@ -68,10 +68,10 @@ public final class JobState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="hadoopConfig")
-      private final @Nullable Output<JobHadoopConfigGetArgs> hadoopConfig;
+    private @Nullable Output<JobHadoopConfigGetArgs> hadoopConfig;
 
-    public Output<JobHadoopConfigGetArgs> hadoopConfig() {
-        return this.hadoopConfig == null ? Codegen.empty() : this.hadoopConfig;
+    public Optional<Output<JobHadoopConfigGetArgs>> hadoopConfig() {
+        return Optional.ofNullable(this.hadoopConfig);
     }
 
     /**
@@ -79,10 +79,10 @@ public final class JobState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="hiveConfig")
-      private final @Nullable Output<JobHiveConfigGetArgs> hiveConfig;
+    private @Nullable Output<JobHiveConfigGetArgs> hiveConfig;
 
-    public Output<JobHiveConfigGetArgs> hiveConfig() {
-        return this.hiveConfig == null ? Codegen.empty() : this.hiveConfig;
+    public Optional<Output<JobHiveConfigGetArgs>> hiveConfig() {
+        return Optional.ofNullable(this.hiveConfig);
     }
 
     /**
@@ -90,10 +90,10 @@ public final class JobState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="labels")
-      private final @Nullable Output<Map<String,String>> labels;
+    private @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> labels() {
-        return this.labels == null ? Codegen.empty() : this.labels;
+    public Optional<Output<Map<String,String>>> labels() {
+        return Optional.ofNullable(this.labels);
     }
 
     /**
@@ -101,10 +101,10 @@ public final class JobState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="pigConfig")
-      private final @Nullable Output<JobPigConfigGetArgs> pigConfig;
+    private @Nullable Output<JobPigConfigGetArgs> pigConfig;
 
-    public Output<JobPigConfigGetArgs> pigConfig() {
-        return this.pigConfig == null ? Codegen.empty() : this.pigConfig;
+    public Optional<Output<JobPigConfigGetArgs>> pigConfig() {
+        return Optional.ofNullable(this.pigConfig);
     }
 
     /**
@@ -112,10 +112,10 @@ public final class JobState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="placement")
-      private final @Nullable Output<JobPlacementGetArgs> placement;
+    private @Nullable Output<JobPlacementGetArgs> placement;
 
-    public Output<JobPlacementGetArgs> placement() {
-        return this.placement == null ? Codegen.empty() : this.placement;
+    public Optional<Output<JobPlacementGetArgs>> placement() {
+        return Optional.ofNullable(this.placement);
     }
 
     /**
@@ -124,10 +124,10 @@ public final class JobState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -135,10 +135,10 @@ public final class JobState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="pysparkConfig")
-      private final @Nullable Output<JobPysparkConfigGetArgs> pysparkConfig;
+    private @Nullable Output<JobPysparkConfigGetArgs> pysparkConfig;
 
-    public Output<JobPysparkConfigGetArgs> pysparkConfig() {
-        return this.pysparkConfig == null ? Codegen.empty() : this.pysparkConfig;
+    public Optional<Output<JobPysparkConfigGetArgs>> pysparkConfig() {
+        return Optional.ofNullable(this.pysparkConfig);
     }
 
     /**
@@ -146,10 +146,10 @@ public final class JobState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="reference")
-      private final @Nullable Output<JobReferenceGetArgs> reference;
+    private @Nullable Output<JobReferenceGetArgs> reference;
 
-    public Output<JobReferenceGetArgs> reference() {
-        return this.reference == null ? Codegen.empty() : this.reference;
+    public Optional<Output<JobReferenceGetArgs>> reference() {
+        return Optional.ofNullable(this.reference);
     }
 
     /**
@@ -158,10 +158,10 @@ public final class JobState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="region")
-      private final @Nullable Output<String> region;
+    private @Nullable Output<String> region;
 
-    public Output<String> region() {
-        return this.region == null ? Codegen.empty() : this.region;
+    public Optional<Output<String>> region() {
+        return Optional.ofNullable(this.region);
     }
 
     /**
@@ -169,10 +169,10 @@ public final class JobState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="scheduling")
-      private final @Nullable Output<JobSchedulingGetArgs> scheduling;
+    private @Nullable Output<JobSchedulingGetArgs> scheduling;
 
-    public Output<JobSchedulingGetArgs> scheduling() {
-        return this.scheduling == null ? Codegen.empty() : this.scheduling;
+    public Optional<Output<JobSchedulingGetArgs>> scheduling() {
+        return Optional.ofNullable(this.scheduling);
     }
 
     /**
@@ -180,10 +180,10 @@ public final class JobState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="sparkConfig")
-      private final @Nullable Output<JobSparkConfigGetArgs> sparkConfig;
+    private @Nullable Output<JobSparkConfigGetArgs> sparkConfig;
 
-    public Output<JobSparkConfigGetArgs> sparkConfig() {
-        return this.sparkConfig == null ? Codegen.empty() : this.sparkConfig;
+    public Optional<Output<JobSparkConfigGetArgs>> sparkConfig() {
+        return Optional.ofNullable(this.sparkConfig);
     }
 
     /**
@@ -191,10 +191,10 @@ public final class JobState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="sparksqlConfig")
-      private final @Nullable Output<JobSparksqlConfigGetArgs> sparksqlConfig;
+    private @Nullable Output<JobSparksqlConfigGetArgs> sparksqlConfig;
 
-    public Output<JobSparksqlConfigGetArgs> sparksqlConfig() {
-        return this.sparksqlConfig == null ? Codegen.empty() : this.sparksqlConfig;
+    public Optional<Output<JobSparksqlConfigGetArgs>> sparksqlConfig() {
+        return Optional.ofNullable(this.sparksqlConfig);
     }
 
     /**
@@ -202,248 +202,202 @@ public final class JobState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="statuses")
-      private final @Nullable Output<List<JobStatusGetArgs>> statuses;
+    private @Nullable Output<List<JobStatusGetArgs>> statuses;
 
-    public Output<List<JobStatusGetArgs>> statuses() {
-        return this.statuses == null ? Codegen.empty() : this.statuses;
+    public Optional<Output<List<JobStatusGetArgs>>> statuses() {
+        return Optional.ofNullable(this.statuses);
     }
 
-    public JobState(
-        @Nullable Output<String> driverControlsFilesUri,
-        @Nullable Output<String> driverOutputResourceUri,
-        @Nullable Output<Boolean> forceDelete,
-        @Nullable Output<JobHadoopConfigGetArgs> hadoopConfig,
-        @Nullable Output<JobHiveConfigGetArgs> hiveConfig,
-        @Nullable Output<Map<String,String>> labels,
-        @Nullable Output<JobPigConfigGetArgs> pigConfig,
-        @Nullable Output<JobPlacementGetArgs> placement,
-        @Nullable Output<String> project,
-        @Nullable Output<JobPysparkConfigGetArgs> pysparkConfig,
-        @Nullable Output<JobReferenceGetArgs> reference,
-        @Nullable Output<String> region,
-        @Nullable Output<JobSchedulingGetArgs> scheduling,
-        @Nullable Output<JobSparkConfigGetArgs> sparkConfig,
-        @Nullable Output<JobSparksqlConfigGetArgs> sparksqlConfig,
-        @Nullable Output<List<JobStatusGetArgs>> statuses) {
-        this.driverControlsFilesUri = driverControlsFilesUri;
-        this.driverOutputResourceUri = driverOutputResourceUri;
-        this.forceDelete = forceDelete;
-        this.hadoopConfig = hadoopConfig;
-        this.hiveConfig = hiveConfig;
-        this.labels = labels;
-        this.pigConfig = pigConfig;
-        this.placement = placement;
-        this.project = project;
-        this.pysparkConfig = pysparkConfig;
-        this.reference = reference;
-        this.region = region;
-        this.scheduling = scheduling;
-        this.sparkConfig = sparkConfig;
-        this.sparksqlConfig = sparksqlConfig;
-        this.statuses = statuses;
-    }
+    private JobState() {}
 
-    private JobState() {
-        this.driverControlsFilesUri = Codegen.empty();
-        this.driverOutputResourceUri = Codegen.empty();
-        this.forceDelete = Codegen.empty();
-        this.hadoopConfig = Codegen.empty();
-        this.hiveConfig = Codegen.empty();
-        this.labels = Codegen.empty();
-        this.pigConfig = Codegen.empty();
-        this.placement = Codegen.empty();
-        this.project = Codegen.empty();
-        this.pysparkConfig = Codegen.empty();
-        this.reference = Codegen.empty();
-        this.region = Codegen.empty();
-        this.scheduling = Codegen.empty();
-        this.sparkConfig = Codegen.empty();
-        this.sparksqlConfig = Codegen.empty();
-        this.statuses = Codegen.empty();
+    private JobState(JobState $) {
+        this.driverControlsFilesUri = $.driverControlsFilesUri;
+        this.driverOutputResourceUri = $.driverOutputResourceUri;
+        this.forceDelete = $.forceDelete;
+        this.hadoopConfig = $.hadoopConfig;
+        this.hiveConfig = $.hiveConfig;
+        this.labels = $.labels;
+        this.pigConfig = $.pigConfig;
+        this.placement = $.placement;
+        this.project = $.project;
+        this.pysparkConfig = $.pysparkConfig;
+        this.reference = $.reference;
+        this.region = $.region;
+        this.scheduling = $.scheduling;
+        this.sparkConfig = $.sparkConfig;
+        this.sparksqlConfig = $.sparksqlConfig;
+        this.statuses = $.statuses;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(JobState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> driverControlsFilesUri;
-        private @Nullable Output<String> driverOutputResourceUri;
-        private @Nullable Output<Boolean> forceDelete;
-        private @Nullable Output<JobHadoopConfigGetArgs> hadoopConfig;
-        private @Nullable Output<JobHiveConfigGetArgs> hiveConfig;
-        private @Nullable Output<Map<String,String>> labels;
-        private @Nullable Output<JobPigConfigGetArgs> pigConfig;
-        private @Nullable Output<JobPlacementGetArgs> placement;
-        private @Nullable Output<String> project;
-        private @Nullable Output<JobPysparkConfigGetArgs> pysparkConfig;
-        private @Nullable Output<JobReferenceGetArgs> reference;
-        private @Nullable Output<String> region;
-        private @Nullable Output<JobSchedulingGetArgs> scheduling;
-        private @Nullable Output<JobSparkConfigGetArgs> sparkConfig;
-        private @Nullable Output<JobSparksqlConfigGetArgs> sparksqlConfig;
-        private @Nullable Output<List<JobStatusGetArgs>> statuses;
+        private JobState $;
 
         public Builder() {
-    	      // Empty
+            $ = new JobState();
         }
 
         public Builder(JobState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.driverControlsFilesUri = defaults.driverControlsFilesUri;
-    	      this.driverOutputResourceUri = defaults.driverOutputResourceUri;
-    	      this.forceDelete = defaults.forceDelete;
-    	      this.hadoopConfig = defaults.hadoopConfig;
-    	      this.hiveConfig = defaults.hiveConfig;
-    	      this.labels = defaults.labels;
-    	      this.pigConfig = defaults.pigConfig;
-    	      this.placement = defaults.placement;
-    	      this.project = defaults.project;
-    	      this.pysparkConfig = defaults.pysparkConfig;
-    	      this.reference = defaults.reference;
-    	      this.region = defaults.region;
-    	      this.scheduling = defaults.scheduling;
-    	      this.sparkConfig = defaults.sparkConfig;
-    	      this.sparksqlConfig = defaults.sparksqlConfig;
-    	      this.statuses = defaults.statuses;
+            $ = new JobState(Objects.requireNonNull(defaults));
         }
 
         public Builder driverControlsFilesUri(@Nullable Output<String> driverControlsFilesUri) {
-            this.driverControlsFilesUri = driverControlsFilesUri;
+            $.driverControlsFilesUri = driverControlsFilesUri;
             return this;
         }
-        public Builder driverControlsFilesUri(@Nullable String driverControlsFilesUri) {
-            this.driverControlsFilesUri = Codegen.ofNullable(driverControlsFilesUri);
-            return this;
+
+        public Builder driverControlsFilesUri(String driverControlsFilesUri) {
+            return driverControlsFilesUri(Output.of(driverControlsFilesUri));
         }
+
         public Builder driverOutputResourceUri(@Nullable Output<String> driverOutputResourceUri) {
-            this.driverOutputResourceUri = driverOutputResourceUri;
+            $.driverOutputResourceUri = driverOutputResourceUri;
             return this;
         }
-        public Builder driverOutputResourceUri(@Nullable String driverOutputResourceUri) {
-            this.driverOutputResourceUri = Codegen.ofNullable(driverOutputResourceUri);
-            return this;
+
+        public Builder driverOutputResourceUri(String driverOutputResourceUri) {
+            return driverOutputResourceUri(Output.of(driverOutputResourceUri));
         }
+
         public Builder forceDelete(@Nullable Output<Boolean> forceDelete) {
-            this.forceDelete = forceDelete;
+            $.forceDelete = forceDelete;
             return this;
         }
-        public Builder forceDelete(@Nullable Boolean forceDelete) {
-            this.forceDelete = Codegen.ofNullable(forceDelete);
-            return this;
+
+        public Builder forceDelete(Boolean forceDelete) {
+            return forceDelete(Output.of(forceDelete));
         }
+
         public Builder hadoopConfig(@Nullable Output<JobHadoopConfigGetArgs> hadoopConfig) {
-            this.hadoopConfig = hadoopConfig;
+            $.hadoopConfig = hadoopConfig;
             return this;
         }
-        public Builder hadoopConfig(@Nullable JobHadoopConfigGetArgs hadoopConfig) {
-            this.hadoopConfig = Codegen.ofNullable(hadoopConfig);
-            return this;
+
+        public Builder hadoopConfig(JobHadoopConfigGetArgs hadoopConfig) {
+            return hadoopConfig(Output.of(hadoopConfig));
         }
+
         public Builder hiveConfig(@Nullable Output<JobHiveConfigGetArgs> hiveConfig) {
-            this.hiveConfig = hiveConfig;
+            $.hiveConfig = hiveConfig;
             return this;
         }
-        public Builder hiveConfig(@Nullable JobHiveConfigGetArgs hiveConfig) {
-            this.hiveConfig = Codegen.ofNullable(hiveConfig);
-            return this;
+
+        public Builder hiveConfig(JobHiveConfigGetArgs hiveConfig) {
+            return hiveConfig(Output.of(hiveConfig));
         }
+
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
-            this.labels = labels;
+            $.labels = labels;
             return this;
         }
-        public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Codegen.ofNullable(labels);
-            return this;
+
+        public Builder labels(Map<String,String> labels) {
+            return labels(Output.of(labels));
         }
+
         public Builder pigConfig(@Nullable Output<JobPigConfigGetArgs> pigConfig) {
-            this.pigConfig = pigConfig;
+            $.pigConfig = pigConfig;
             return this;
         }
-        public Builder pigConfig(@Nullable JobPigConfigGetArgs pigConfig) {
-            this.pigConfig = Codegen.ofNullable(pigConfig);
-            return this;
+
+        public Builder pigConfig(JobPigConfigGetArgs pigConfig) {
+            return pigConfig(Output.of(pigConfig));
         }
+
         public Builder placement(@Nullable Output<JobPlacementGetArgs> placement) {
-            this.placement = placement;
+            $.placement = placement;
             return this;
         }
-        public Builder placement(@Nullable JobPlacementGetArgs placement) {
-            this.placement = Codegen.ofNullable(placement);
-            return this;
+
+        public Builder placement(JobPlacementGetArgs placement) {
+            return placement(Output.of(placement));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder pysparkConfig(@Nullable Output<JobPysparkConfigGetArgs> pysparkConfig) {
-            this.pysparkConfig = pysparkConfig;
+            $.pysparkConfig = pysparkConfig;
             return this;
         }
-        public Builder pysparkConfig(@Nullable JobPysparkConfigGetArgs pysparkConfig) {
-            this.pysparkConfig = Codegen.ofNullable(pysparkConfig);
-            return this;
+
+        public Builder pysparkConfig(JobPysparkConfigGetArgs pysparkConfig) {
+            return pysparkConfig(Output.of(pysparkConfig));
         }
+
         public Builder reference(@Nullable Output<JobReferenceGetArgs> reference) {
-            this.reference = reference;
+            $.reference = reference;
             return this;
         }
-        public Builder reference(@Nullable JobReferenceGetArgs reference) {
-            this.reference = Codegen.ofNullable(reference);
-            return this;
+
+        public Builder reference(JobReferenceGetArgs reference) {
+            return reference(Output.of(reference));
         }
+
         public Builder region(@Nullable Output<String> region) {
-            this.region = region;
+            $.region = region;
             return this;
         }
-        public Builder region(@Nullable String region) {
-            this.region = Codegen.ofNullable(region);
-            return this;
+
+        public Builder region(String region) {
+            return region(Output.of(region));
         }
+
         public Builder scheduling(@Nullable Output<JobSchedulingGetArgs> scheduling) {
-            this.scheduling = scheduling;
+            $.scheduling = scheduling;
             return this;
         }
-        public Builder scheduling(@Nullable JobSchedulingGetArgs scheduling) {
-            this.scheduling = Codegen.ofNullable(scheduling);
-            return this;
+
+        public Builder scheduling(JobSchedulingGetArgs scheduling) {
+            return scheduling(Output.of(scheduling));
         }
+
         public Builder sparkConfig(@Nullable Output<JobSparkConfigGetArgs> sparkConfig) {
-            this.sparkConfig = sparkConfig;
+            $.sparkConfig = sparkConfig;
             return this;
         }
-        public Builder sparkConfig(@Nullable JobSparkConfigGetArgs sparkConfig) {
-            this.sparkConfig = Codegen.ofNullable(sparkConfig);
-            return this;
+
+        public Builder sparkConfig(JobSparkConfigGetArgs sparkConfig) {
+            return sparkConfig(Output.of(sparkConfig));
         }
+
         public Builder sparksqlConfig(@Nullable Output<JobSparksqlConfigGetArgs> sparksqlConfig) {
-            this.sparksqlConfig = sparksqlConfig;
+            $.sparksqlConfig = sparksqlConfig;
             return this;
         }
-        public Builder sparksqlConfig(@Nullable JobSparksqlConfigGetArgs sparksqlConfig) {
-            this.sparksqlConfig = Codegen.ofNullable(sparksqlConfig);
-            return this;
+
+        public Builder sparksqlConfig(JobSparksqlConfigGetArgs sparksqlConfig) {
+            return sparksqlConfig(Output.of(sparksqlConfig));
         }
+
         public Builder statuses(@Nullable Output<List<JobStatusGetArgs>> statuses) {
-            this.statuses = statuses;
+            $.statuses = statuses;
             return this;
         }
-        public Builder statuses(@Nullable List<JobStatusGetArgs> statuses) {
-            this.statuses = Codegen.ofNullable(statuses);
-            return this;
+
+        public Builder statuses(List<JobStatusGetArgs> statuses) {
+            return statuses(Output.of(statuses));
         }
+
         public Builder statuses(JobStatusGetArgs... statuses) {
             return statuses(List.of(statuses));
-        }        public JobState build() {
-            return new JobState(driverControlsFilesUri, driverOutputResourceUri, forceDelete, hadoopConfig, hiveConfig, labels, pigConfig, placement, project, pysparkConfig, reference, region, scheduling, sparkConfig, sparksqlConfig, statuses);
+        }
+
+        public JobState build() {
+            return $;
         }
     }
+
 }

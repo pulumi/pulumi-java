@@ -5,7 +5,6 @@ package com.pulumi.gcp.container.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,49 +18,49 @@ public final class AzureNodePoolConfigSshConfigArgs extends com.pulumi.resources
      * 
      */
     @Import(name="authorizedKey", required=true)
-      private final Output<String> authorizedKey;
+    private Output<String> authorizedKey;
 
     public Output<String> authorizedKey() {
         return this.authorizedKey;
     }
 
-    public AzureNodePoolConfigSshConfigArgs(Output<String> authorizedKey) {
-        this.authorizedKey = Objects.requireNonNull(authorizedKey, "expected parameter 'authorizedKey' to be non-null");
-    }
+    private AzureNodePoolConfigSshConfigArgs() {}
 
-    private AzureNodePoolConfigSshConfigArgs() {
-        this.authorizedKey = Codegen.empty();
+    private AzureNodePoolConfigSshConfigArgs(AzureNodePoolConfigSshConfigArgs $) {
+        this.authorizedKey = $.authorizedKey;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AzureNodePoolConfigSshConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> authorizedKey;
+        private AzureNodePoolConfigSshConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AzureNodePoolConfigSshConfigArgs();
         }
 
         public Builder(AzureNodePoolConfigSshConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.authorizedKey = defaults.authorizedKey;
+            $ = new AzureNodePoolConfigSshConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder authorizedKey(Output<String> authorizedKey) {
-            this.authorizedKey = Objects.requireNonNull(authorizedKey);
+            $.authorizedKey = authorizedKey;
             return this;
         }
+
         public Builder authorizedKey(String authorizedKey) {
-            this.authorizedKey = Output.of(Objects.requireNonNull(authorizedKey));
-            return this;
-        }        public AzureNodePoolConfigSshConfigArgs build() {
-            return new AzureNodePoolConfigSshConfigArgs(authorizedKey);
+            return authorizedKey(Output.of(authorizedKey));
+        }
+
+        public AzureNodePoolConfigSshConfigArgs build() {
+            $.authorizedKey = Objects.requireNonNull($.authorizedKey, "expected parameter 'authorizedKey' to be non-null");
+            return $;
         }
     }
+
 }

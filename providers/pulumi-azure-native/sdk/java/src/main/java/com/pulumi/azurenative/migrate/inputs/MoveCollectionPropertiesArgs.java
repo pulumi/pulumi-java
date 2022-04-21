@@ -5,7 +5,6 @@ package com.pulumi.azurenative.migrate.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,7 +22,7 @@ public final class MoveCollectionPropertiesArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="sourceRegion", required=true)
-      private final Output<String> sourceRegion;
+    private Output<String> sourceRegion;
 
     public Output<String> sourceRegion() {
         return this.sourceRegion;
@@ -34,63 +33,60 @@ public final class MoveCollectionPropertiesArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="targetRegion", required=true)
-      private final Output<String> targetRegion;
+    private Output<String> targetRegion;
 
     public Output<String> targetRegion() {
         return this.targetRegion;
     }
 
-    public MoveCollectionPropertiesArgs(
-        Output<String> sourceRegion,
-        Output<String> targetRegion) {
-        this.sourceRegion = Objects.requireNonNull(sourceRegion, "expected parameter 'sourceRegion' to be non-null");
-        this.targetRegion = Objects.requireNonNull(targetRegion, "expected parameter 'targetRegion' to be non-null");
-    }
+    private MoveCollectionPropertiesArgs() {}
 
-    private MoveCollectionPropertiesArgs() {
-        this.sourceRegion = Codegen.empty();
-        this.targetRegion = Codegen.empty();
+    private MoveCollectionPropertiesArgs(MoveCollectionPropertiesArgs $) {
+        this.sourceRegion = $.sourceRegion;
+        this.targetRegion = $.targetRegion;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MoveCollectionPropertiesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> sourceRegion;
-        private Output<String> targetRegion;
+        private MoveCollectionPropertiesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new MoveCollectionPropertiesArgs();
         }
 
         public Builder(MoveCollectionPropertiesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.sourceRegion = defaults.sourceRegion;
-    	      this.targetRegion = defaults.targetRegion;
+            $ = new MoveCollectionPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder sourceRegion(Output<String> sourceRegion) {
-            this.sourceRegion = Objects.requireNonNull(sourceRegion);
+            $.sourceRegion = sourceRegion;
             return this;
         }
+
         public Builder sourceRegion(String sourceRegion) {
-            this.sourceRegion = Output.of(Objects.requireNonNull(sourceRegion));
-            return this;
+            return sourceRegion(Output.of(sourceRegion));
         }
+
         public Builder targetRegion(Output<String> targetRegion) {
-            this.targetRegion = Objects.requireNonNull(targetRegion);
+            $.targetRegion = targetRegion;
             return this;
         }
+
         public Builder targetRegion(String targetRegion) {
-            this.targetRegion = Output.of(Objects.requireNonNull(targetRegion));
-            return this;
-        }        public MoveCollectionPropertiesArgs build() {
-            return new MoveCollectionPropertiesArgs(sourceRegion, targetRegion);
+            return targetRegion(Output.of(targetRegion));
+        }
+
+        public MoveCollectionPropertiesArgs build() {
+            $.sourceRegion = Objects.requireNonNull($.sourceRegion, "expected parameter 'sourceRegion' to be non-null");
+            $.targetRegion = Objects.requireNonNull($.targetRegion, "expected parameter 'targetRegion' to be non-null");
+            return $;
         }
     }
+
 }

@@ -6,7 +6,6 @@ package com.pulumi.azurenative.insights.inputs;
 import com.pulumi.azurenative.insights.inputs.AlertRuleAnyOfOrLeafConditionArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
 
@@ -24,52 +23,53 @@ public final class AlertRuleAllOfConditionArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="allOf", required=true)
-      private final Output<List<AlertRuleAnyOfOrLeafConditionArgs>> allOf;
+    private Output<List<AlertRuleAnyOfOrLeafConditionArgs>> allOf;
 
     public Output<List<AlertRuleAnyOfOrLeafConditionArgs>> allOf() {
         return this.allOf;
     }
 
-    public AlertRuleAllOfConditionArgs(Output<List<AlertRuleAnyOfOrLeafConditionArgs>> allOf) {
-        this.allOf = Objects.requireNonNull(allOf, "expected parameter 'allOf' to be non-null");
-    }
+    private AlertRuleAllOfConditionArgs() {}
 
-    private AlertRuleAllOfConditionArgs() {
-        this.allOf = Codegen.empty();
+    private AlertRuleAllOfConditionArgs(AlertRuleAllOfConditionArgs $) {
+        this.allOf = $.allOf;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AlertRuleAllOfConditionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<List<AlertRuleAnyOfOrLeafConditionArgs>> allOf;
+        private AlertRuleAllOfConditionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AlertRuleAllOfConditionArgs();
         }
 
         public Builder(AlertRuleAllOfConditionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.allOf = defaults.allOf;
+            $ = new AlertRuleAllOfConditionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder allOf(Output<List<AlertRuleAnyOfOrLeafConditionArgs>> allOf) {
-            this.allOf = Objects.requireNonNull(allOf);
+            $.allOf = allOf;
             return this;
         }
+
         public Builder allOf(List<AlertRuleAnyOfOrLeafConditionArgs> allOf) {
-            this.allOf = Output.of(Objects.requireNonNull(allOf));
-            return this;
+            return allOf(Output.of(allOf));
         }
+
         public Builder allOf(AlertRuleAnyOfOrLeafConditionArgs... allOf) {
             return allOf(List.of(allOf));
-        }        public AlertRuleAllOfConditionArgs build() {
-            return new AlertRuleAllOfConditionArgs(allOf);
+        }
+
+        public AlertRuleAllOfConditionArgs build() {
+            $.allOf = Objects.requireNonNull($.allOf, "expected parameter 'allOf' to be non-null");
+            return $;
         }
     }
+
 }

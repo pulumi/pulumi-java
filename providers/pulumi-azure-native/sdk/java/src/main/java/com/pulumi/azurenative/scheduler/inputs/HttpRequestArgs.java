@@ -8,11 +8,11 @@ import com.pulumi.azurenative.scheduler.inputs.ClientCertAuthenticationArgs;
 import com.pulumi.azurenative.scheduler.inputs.OAuthAuthenticationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class HttpRequestArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="authentication")
-      private final @Nullable Output<Object> authentication;
+    private @Nullable Output<Object> authentication;
 
-    public Output<Object> authentication() {
-        return this.authentication == null ? Codegen.empty() : this.authentication;
+    public Optional<Output<Object>> authentication() {
+        return Optional.ofNullable(this.authentication);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class HttpRequestArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="body")
-      private final @Nullable Output<String> body;
+    private @Nullable Output<String> body;
 
-    public Output<String> body() {
-        return this.body == null ? Codegen.empty() : this.body;
+    public Optional<Output<String>> body() {
+        return Optional.ofNullable(this.body);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class HttpRequestArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="headers")
-      private final @Nullable Output<Map<String,String>> headers;
+    private @Nullable Output<Map<String,String>> headers;
 
-    public Output<Map<String,String>> headers() {
-        return this.headers == null ? Codegen.empty() : this.headers;
+    public Optional<Output<Map<String,String>>> headers() {
+        return Optional.ofNullable(this.headers);
     }
 
     /**
@@ -58,10 +58,10 @@ public final class HttpRequestArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="method")
-      private final @Nullable Output<String> method;
+    private @Nullable Output<String> method;
 
-    public Output<String> method() {
-        return this.method == null ? Codegen.empty() : this.method;
+    public Optional<Output<String>> method() {
+        return Optional.ofNullable(this.method);
     }
 
     /**
@@ -69,102 +69,88 @@ public final class HttpRequestArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="uri")
-      private final @Nullable Output<String> uri;
+    private @Nullable Output<String> uri;
 
-    public Output<String> uri() {
-        return this.uri == null ? Codegen.empty() : this.uri;
+    public Optional<Output<String>> uri() {
+        return Optional.ofNullable(this.uri);
     }
 
-    public HttpRequestArgs(
-        @Nullable Output<Object> authentication,
-        @Nullable Output<String> body,
-        @Nullable Output<Map<String,String>> headers,
-        @Nullable Output<String> method,
-        @Nullable Output<String> uri) {
-        this.authentication = authentication;
-        this.body = body;
-        this.headers = headers;
-        this.method = method;
-        this.uri = uri;
-    }
+    private HttpRequestArgs() {}
 
-    private HttpRequestArgs() {
-        this.authentication = Codegen.empty();
-        this.body = Codegen.empty();
-        this.headers = Codegen.empty();
-        this.method = Codegen.empty();
-        this.uri = Codegen.empty();
+    private HttpRequestArgs(HttpRequestArgs $) {
+        this.authentication = $.authentication;
+        this.body = $.body;
+        this.headers = $.headers;
+        this.method = $.method;
+        this.uri = $.uri;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(HttpRequestArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Object> authentication;
-        private @Nullable Output<String> body;
-        private @Nullable Output<Map<String,String>> headers;
-        private @Nullable Output<String> method;
-        private @Nullable Output<String> uri;
+        private HttpRequestArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new HttpRequestArgs();
         }
 
         public Builder(HttpRequestArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.authentication = defaults.authentication;
-    	      this.body = defaults.body;
-    	      this.headers = defaults.headers;
-    	      this.method = defaults.method;
-    	      this.uri = defaults.uri;
+            $ = new HttpRequestArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder authentication(@Nullable Output<Object> authentication) {
-            this.authentication = authentication;
+            $.authentication = authentication;
             return this;
         }
-        public Builder authentication(@Nullable Object authentication) {
-            this.authentication = Codegen.ofNullable(authentication);
-            return this;
+
+        public Builder authentication(Object authentication) {
+            return authentication(Output.of(authentication));
         }
+
         public Builder body(@Nullable Output<String> body) {
-            this.body = body;
+            $.body = body;
             return this;
         }
-        public Builder body(@Nullable String body) {
-            this.body = Codegen.ofNullable(body);
-            return this;
+
+        public Builder body(String body) {
+            return body(Output.of(body));
         }
+
         public Builder headers(@Nullable Output<Map<String,String>> headers) {
-            this.headers = headers;
+            $.headers = headers;
             return this;
         }
-        public Builder headers(@Nullable Map<String,String> headers) {
-            this.headers = Codegen.ofNullable(headers);
-            return this;
+
+        public Builder headers(Map<String,String> headers) {
+            return headers(Output.of(headers));
         }
+
         public Builder method(@Nullable Output<String> method) {
-            this.method = method;
+            $.method = method;
             return this;
         }
-        public Builder method(@Nullable String method) {
-            this.method = Codegen.ofNullable(method);
-            return this;
+
+        public Builder method(String method) {
+            return method(Output.of(method));
         }
+
         public Builder uri(@Nullable Output<String> uri) {
-            this.uri = uri;
+            $.uri = uri;
             return this;
         }
-        public Builder uri(@Nullable String uri) {
-            this.uri = Codegen.ofNullable(uri);
-            return this;
-        }        public HttpRequestArgs build() {
-            return new HttpRequestArgs(authentication, body, headers, method, uri);
+
+        public Builder uri(String uri) {
+            return uri(Output.of(uri));
+        }
+
+        public HttpRequestArgs build() {
+            return $;
         }
     }
+
 }

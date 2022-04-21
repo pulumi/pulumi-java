@@ -21,45 +21,45 @@ public final class DefenderSettingsPropertiesResponseMdeIntegration extends com.
      * 
      */
     @Import(name="status", required=true)
-      private final String status;
+    private String status;
 
     public String status() {
         return this.status;
     }
 
-    public DefenderSettingsPropertiesResponseMdeIntegration(String status) {
-        this.status = Objects.requireNonNull(status, "expected parameter 'status' to be non-null");
-    }
+    private DefenderSettingsPropertiesResponseMdeIntegration() {}
 
-    private DefenderSettingsPropertiesResponseMdeIntegration() {
-        this.status = null;
+    private DefenderSettingsPropertiesResponseMdeIntegration(DefenderSettingsPropertiesResponseMdeIntegration $) {
+        this.status = $.status;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DefenderSettingsPropertiesResponseMdeIntegration defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String status;
+        private DefenderSettingsPropertiesResponseMdeIntegration $;
 
         public Builder() {
-    	      // Empty
+            $ = new DefenderSettingsPropertiesResponseMdeIntegration();
         }
 
         public Builder(DefenderSettingsPropertiesResponseMdeIntegration defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.status = defaults.status;
+            $ = new DefenderSettingsPropertiesResponseMdeIntegration(Objects.requireNonNull(defaults));
         }
 
         public Builder status(String status) {
-            this.status = Objects.requireNonNull(status);
+            $.status = status;
             return this;
-        }        public DefenderSettingsPropertiesResponseMdeIntegration build() {
-            return new DefenderSettingsPropertiesResponseMdeIntegration(status);
+        }
+
+        public DefenderSettingsPropertiesResponseMdeIntegration build() {
+            $.status = Objects.requireNonNull($.status, "expected parameter 'status' to be non-null");
+            return $;
         }
     }
+
 }

@@ -6,8 +6,8 @@ package com.pulumi.awsnative.s3.inputs;
 import com.pulumi.awsnative.s3.enums.BucketDeleteMarkerReplicationStatus;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -16,49 +16,48 @@ public final class BucketDeleteMarkerReplicationArgs extends com.pulumi.resource
     public static final BucketDeleteMarkerReplicationArgs Empty = new BucketDeleteMarkerReplicationArgs();
 
     @Import(name="status")
-      private final @Nullable Output<BucketDeleteMarkerReplicationStatus> status;
+    private @Nullable Output<BucketDeleteMarkerReplicationStatus> status;
 
-    public Output<BucketDeleteMarkerReplicationStatus> status() {
-        return this.status == null ? Codegen.empty() : this.status;
+    public Optional<Output<BucketDeleteMarkerReplicationStatus>> status() {
+        return Optional.ofNullable(this.status);
     }
 
-    public BucketDeleteMarkerReplicationArgs(@Nullable Output<BucketDeleteMarkerReplicationStatus> status) {
-        this.status = status;
-    }
+    private BucketDeleteMarkerReplicationArgs() {}
 
-    private BucketDeleteMarkerReplicationArgs() {
-        this.status = Codegen.empty();
+    private BucketDeleteMarkerReplicationArgs(BucketDeleteMarkerReplicationArgs $) {
+        this.status = $.status;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BucketDeleteMarkerReplicationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<BucketDeleteMarkerReplicationStatus> status;
+        private BucketDeleteMarkerReplicationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new BucketDeleteMarkerReplicationArgs();
         }
 
         public Builder(BucketDeleteMarkerReplicationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.status = defaults.status;
+            $ = new BucketDeleteMarkerReplicationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder status(@Nullable Output<BucketDeleteMarkerReplicationStatus> status) {
-            this.status = status;
+            $.status = status;
             return this;
         }
-        public Builder status(@Nullable BucketDeleteMarkerReplicationStatus status) {
-            this.status = Codegen.ofNullable(status);
-            return this;
-        }        public BucketDeleteMarkerReplicationArgs build() {
-            return new BucketDeleteMarkerReplicationArgs(status);
+
+        public Builder status(BucketDeleteMarkerReplicationStatus status) {
+            return status(Output.of(status));
+        }
+
+        public BucketDeleteMarkerReplicationArgs build() {
+            return $;
         }
     }
+
 }

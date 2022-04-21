@@ -8,6 +8,7 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,7 +21,7 @@ public final class ADLSGen2FolderDataSetMappingArgs extends com.pulumi.resources
      * 
      */
     @Import(name="accountName", required=true)
-      private final Output<String> accountName;
+    private Output<String> accountName;
 
     public Output<String> accountName() {
         return this.accountName;
@@ -31,7 +32,7 @@ public final class ADLSGen2FolderDataSetMappingArgs extends com.pulumi.resources
      * 
      */
     @Import(name="dataSetId", required=true)
-      private final Output<String> dataSetId;
+    private Output<String> dataSetId;
 
     public Output<String> dataSetId() {
         return this.dataSetId;
@@ -42,10 +43,10 @@ public final class ADLSGen2FolderDataSetMappingArgs extends com.pulumi.resources
      * 
      */
     @Import(name="dataSetMappingName")
-      private final @Nullable Output<String> dataSetMappingName;
+    private @Nullable Output<String> dataSetMappingName;
 
-    public Output<String> dataSetMappingName() {
-        return this.dataSetMappingName == null ? Codegen.empty() : this.dataSetMappingName;
+    public Optional<Output<String>> dataSetMappingName() {
+        return Optional.ofNullable(this.dataSetMappingName);
     }
 
     /**
@@ -53,7 +54,7 @@ public final class ADLSGen2FolderDataSetMappingArgs extends com.pulumi.resources
      * 
      */
     @Import(name="fileSystem", required=true)
-      private final Output<String> fileSystem;
+    private Output<String> fileSystem;
 
     public Output<String> fileSystem() {
         return this.fileSystem;
@@ -64,7 +65,7 @@ public final class ADLSGen2FolderDataSetMappingArgs extends com.pulumi.resources
      * 
      */
     @Import(name="folderPath", required=true)
-      private final Output<String> folderPath;
+    private Output<String> folderPath;
 
     public Output<String> folderPath() {
         return this.folderPath;
@@ -76,7 +77,7 @@ public final class ADLSGen2FolderDataSetMappingArgs extends com.pulumi.resources
      * 
      */
     @Import(name="kind", required=true)
-      private final Output<String> kind;
+    private Output<String> kind;
 
     public Output<String> kind() {
         return this.kind;
@@ -87,7 +88,7 @@ public final class ADLSGen2FolderDataSetMappingArgs extends com.pulumi.resources
      * 
      */
     @Import(name="resourceGroup", required=true)
-      private final Output<String> resourceGroup;
+    private Output<String> resourceGroup;
 
     public Output<String> resourceGroup() {
         return this.resourceGroup;
@@ -98,7 +99,7 @@ public final class ADLSGen2FolderDataSetMappingArgs extends com.pulumi.resources
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -109,7 +110,7 @@ public final class ADLSGen2FolderDataSetMappingArgs extends com.pulumi.resources
      * 
      */
     @Import(name="shareSubscriptionName", required=true)
-      private final Output<String> shareSubscriptionName;
+    private Output<String> shareSubscriptionName;
 
     public Output<String> shareSubscriptionName() {
         return this.shareSubscriptionName;
@@ -120,7 +121,7 @@ public final class ADLSGen2FolderDataSetMappingArgs extends com.pulumi.resources
      * 
      */
     @Import(name="storageAccountName", required=true)
-      private final Output<String> storageAccountName;
+    private Output<String> storageAccountName;
 
     public Output<String> storageAccountName() {
         return this.storageAccountName;
@@ -131,180 +132,158 @@ public final class ADLSGen2FolderDataSetMappingArgs extends com.pulumi.resources
      * 
      */
     @Import(name="subscriptionId", required=true)
-      private final Output<String> subscriptionId;
+    private Output<String> subscriptionId;
 
     public Output<String> subscriptionId() {
         return this.subscriptionId;
     }
 
-    public ADLSGen2FolderDataSetMappingArgs(
-        Output<String> accountName,
-        Output<String> dataSetId,
-        @Nullable Output<String> dataSetMappingName,
-        Output<String> fileSystem,
-        Output<String> folderPath,
-        Output<String> kind,
-        Output<String> resourceGroup,
-        Output<String> resourceGroupName,
-        Output<String> shareSubscriptionName,
-        Output<String> storageAccountName,
-        Output<String> subscriptionId) {
-        this.accountName = Objects.requireNonNull(accountName, "expected parameter 'accountName' to be non-null");
-        this.dataSetId = Objects.requireNonNull(dataSetId, "expected parameter 'dataSetId' to be non-null");
-        this.dataSetMappingName = dataSetMappingName;
-        this.fileSystem = Objects.requireNonNull(fileSystem, "expected parameter 'fileSystem' to be non-null");
-        this.folderPath = Objects.requireNonNull(folderPath, "expected parameter 'folderPath' to be non-null");
-        this.kind = Codegen.stringProp("kind").output().arg(kind).require();
-        this.resourceGroup = Objects.requireNonNull(resourceGroup, "expected parameter 'resourceGroup' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.shareSubscriptionName = Objects.requireNonNull(shareSubscriptionName, "expected parameter 'shareSubscriptionName' to be non-null");
-        this.storageAccountName = Objects.requireNonNull(storageAccountName, "expected parameter 'storageAccountName' to be non-null");
-        this.subscriptionId = Objects.requireNonNull(subscriptionId, "expected parameter 'subscriptionId' to be non-null");
-    }
+    private ADLSGen2FolderDataSetMappingArgs() {}
 
-    private ADLSGen2FolderDataSetMappingArgs() {
-        this.accountName = Codegen.empty();
-        this.dataSetId = Codegen.empty();
-        this.dataSetMappingName = Codegen.empty();
-        this.fileSystem = Codegen.empty();
-        this.folderPath = Codegen.empty();
-        this.kind = Codegen.empty();
-        this.resourceGroup = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.shareSubscriptionName = Codegen.empty();
-        this.storageAccountName = Codegen.empty();
-        this.subscriptionId = Codegen.empty();
+    private ADLSGen2FolderDataSetMappingArgs(ADLSGen2FolderDataSetMappingArgs $) {
+        this.accountName = $.accountName;
+        this.dataSetId = $.dataSetId;
+        this.dataSetMappingName = $.dataSetMappingName;
+        this.fileSystem = $.fileSystem;
+        this.folderPath = $.folderPath;
+        this.kind = $.kind;
+        this.resourceGroup = $.resourceGroup;
+        this.resourceGroupName = $.resourceGroupName;
+        this.shareSubscriptionName = $.shareSubscriptionName;
+        this.storageAccountName = $.storageAccountName;
+        this.subscriptionId = $.subscriptionId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ADLSGen2FolderDataSetMappingArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> accountName;
-        private Output<String> dataSetId;
-        private @Nullable Output<String> dataSetMappingName;
-        private Output<String> fileSystem;
-        private Output<String> folderPath;
-        private Output<String> kind;
-        private Output<String> resourceGroup;
-        private Output<String> resourceGroupName;
-        private Output<String> shareSubscriptionName;
-        private Output<String> storageAccountName;
-        private Output<String> subscriptionId;
+        private ADLSGen2FolderDataSetMappingArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ADLSGen2FolderDataSetMappingArgs();
         }
 
         public Builder(ADLSGen2FolderDataSetMappingArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accountName = defaults.accountName;
-    	      this.dataSetId = defaults.dataSetId;
-    	      this.dataSetMappingName = defaults.dataSetMappingName;
-    	      this.fileSystem = defaults.fileSystem;
-    	      this.folderPath = defaults.folderPath;
-    	      this.kind = defaults.kind;
-    	      this.resourceGroup = defaults.resourceGroup;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.shareSubscriptionName = defaults.shareSubscriptionName;
-    	      this.storageAccountName = defaults.storageAccountName;
-    	      this.subscriptionId = defaults.subscriptionId;
+            $ = new ADLSGen2FolderDataSetMappingArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder accountName(Output<String> accountName) {
-            this.accountName = Objects.requireNonNull(accountName);
+            $.accountName = accountName;
             return this;
         }
+
         public Builder accountName(String accountName) {
-            this.accountName = Output.of(Objects.requireNonNull(accountName));
-            return this;
+            return accountName(Output.of(accountName));
         }
+
         public Builder dataSetId(Output<String> dataSetId) {
-            this.dataSetId = Objects.requireNonNull(dataSetId);
+            $.dataSetId = dataSetId;
             return this;
         }
+
         public Builder dataSetId(String dataSetId) {
-            this.dataSetId = Output.of(Objects.requireNonNull(dataSetId));
-            return this;
+            return dataSetId(Output.of(dataSetId));
         }
+
         public Builder dataSetMappingName(@Nullable Output<String> dataSetMappingName) {
-            this.dataSetMappingName = dataSetMappingName;
+            $.dataSetMappingName = dataSetMappingName;
             return this;
         }
-        public Builder dataSetMappingName(@Nullable String dataSetMappingName) {
-            this.dataSetMappingName = Codegen.ofNullable(dataSetMappingName);
-            return this;
+
+        public Builder dataSetMappingName(String dataSetMappingName) {
+            return dataSetMappingName(Output.of(dataSetMappingName));
         }
+
         public Builder fileSystem(Output<String> fileSystem) {
-            this.fileSystem = Objects.requireNonNull(fileSystem);
+            $.fileSystem = fileSystem;
             return this;
         }
+
         public Builder fileSystem(String fileSystem) {
-            this.fileSystem = Output.of(Objects.requireNonNull(fileSystem));
-            return this;
+            return fileSystem(Output.of(fileSystem));
         }
+
         public Builder folderPath(Output<String> folderPath) {
-            this.folderPath = Objects.requireNonNull(folderPath);
+            $.folderPath = folderPath;
             return this;
         }
+
         public Builder folderPath(String folderPath) {
-            this.folderPath = Output.of(Objects.requireNonNull(folderPath));
-            return this;
+            return folderPath(Output.of(folderPath));
         }
+
         public Builder kind(Output<String> kind) {
-            this.kind = Objects.requireNonNull(kind);
+            $.kind = kind;
             return this;
         }
+
         public Builder kind(String kind) {
-            this.kind = Output.of(Objects.requireNonNull(kind));
-            return this;
+            return kind(Output.of(kind));
         }
+
         public Builder resourceGroup(Output<String> resourceGroup) {
-            this.resourceGroup = Objects.requireNonNull(resourceGroup);
+            $.resourceGroup = resourceGroup;
             return this;
         }
+
         public Builder resourceGroup(String resourceGroup) {
-            this.resourceGroup = Output.of(Objects.requireNonNull(resourceGroup));
-            return this;
+            return resourceGroup(Output.of(resourceGroup));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder shareSubscriptionName(Output<String> shareSubscriptionName) {
-            this.shareSubscriptionName = Objects.requireNonNull(shareSubscriptionName);
+            $.shareSubscriptionName = shareSubscriptionName;
             return this;
         }
+
         public Builder shareSubscriptionName(String shareSubscriptionName) {
-            this.shareSubscriptionName = Output.of(Objects.requireNonNull(shareSubscriptionName));
-            return this;
+            return shareSubscriptionName(Output.of(shareSubscriptionName));
         }
+
         public Builder storageAccountName(Output<String> storageAccountName) {
-            this.storageAccountName = Objects.requireNonNull(storageAccountName);
+            $.storageAccountName = storageAccountName;
             return this;
         }
+
         public Builder storageAccountName(String storageAccountName) {
-            this.storageAccountName = Output.of(Objects.requireNonNull(storageAccountName));
-            return this;
+            return storageAccountName(Output.of(storageAccountName));
         }
+
         public Builder subscriptionId(Output<String> subscriptionId) {
-            this.subscriptionId = Objects.requireNonNull(subscriptionId);
+            $.subscriptionId = subscriptionId;
             return this;
         }
+
         public Builder subscriptionId(String subscriptionId) {
-            this.subscriptionId = Output.of(Objects.requireNonNull(subscriptionId));
-            return this;
-        }        public ADLSGen2FolderDataSetMappingArgs build() {
-            return new ADLSGen2FolderDataSetMappingArgs(accountName, dataSetId, dataSetMappingName, fileSystem, folderPath, kind, resourceGroup, resourceGroupName, shareSubscriptionName, storageAccountName, subscriptionId);
+            return subscriptionId(Output.of(subscriptionId));
+        }
+
+        public ADLSGen2FolderDataSetMappingArgs build() {
+            $.accountName = Objects.requireNonNull($.accountName, "expected parameter 'accountName' to be non-null");
+            $.dataSetId = Objects.requireNonNull($.dataSetId, "expected parameter 'dataSetId' to be non-null");
+            $.fileSystem = Objects.requireNonNull($.fileSystem, "expected parameter 'fileSystem' to be non-null");
+            $.folderPath = Objects.requireNonNull($.folderPath, "expected parameter 'folderPath' to be non-null");
+            $.kind = Codegen.stringProp("kind").output().arg($.kind).require();
+            $.resourceGroup = Objects.requireNonNull($.resourceGroup, "expected parameter 'resourceGroup' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.shareSubscriptionName = Objects.requireNonNull($.shareSubscriptionName, "expected parameter 'shareSubscriptionName' to be non-null");
+            $.storageAccountName = Objects.requireNonNull($.storageAccountName, "expected parameter 'storageAccountName' to be non-null");
+            $.subscriptionId = Objects.requireNonNull($.subscriptionId, "expected parameter 'subscriptionId' to be non-null");
+            return $;
         }
     }
+
 }

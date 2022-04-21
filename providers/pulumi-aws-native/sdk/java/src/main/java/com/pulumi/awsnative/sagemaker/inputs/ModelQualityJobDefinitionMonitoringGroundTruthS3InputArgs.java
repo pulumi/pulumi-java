@@ -5,7 +5,6 @@ package com.pulumi.awsnative.sagemaker.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,49 +22,49 @@ public final class ModelQualityJobDefinitionMonitoringGroundTruthS3InputArgs ext
      * 
      */
     @Import(name="s3Uri", required=true)
-      private final Output<String> s3Uri;
+    private Output<String> s3Uri;
 
     public Output<String> s3Uri() {
         return this.s3Uri;
     }
 
-    public ModelQualityJobDefinitionMonitoringGroundTruthS3InputArgs(Output<String> s3Uri) {
-        this.s3Uri = Objects.requireNonNull(s3Uri, "expected parameter 's3Uri' to be non-null");
-    }
+    private ModelQualityJobDefinitionMonitoringGroundTruthS3InputArgs() {}
 
-    private ModelQualityJobDefinitionMonitoringGroundTruthS3InputArgs() {
-        this.s3Uri = Codegen.empty();
+    private ModelQualityJobDefinitionMonitoringGroundTruthS3InputArgs(ModelQualityJobDefinitionMonitoringGroundTruthS3InputArgs $) {
+        this.s3Uri = $.s3Uri;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ModelQualityJobDefinitionMonitoringGroundTruthS3InputArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> s3Uri;
+        private ModelQualityJobDefinitionMonitoringGroundTruthS3InputArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ModelQualityJobDefinitionMonitoringGroundTruthS3InputArgs();
         }
 
         public Builder(ModelQualityJobDefinitionMonitoringGroundTruthS3InputArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.s3Uri = defaults.s3Uri;
+            $ = new ModelQualityJobDefinitionMonitoringGroundTruthS3InputArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder s3Uri(Output<String> s3Uri) {
-            this.s3Uri = Objects.requireNonNull(s3Uri);
+            $.s3Uri = s3Uri;
             return this;
         }
+
         public Builder s3Uri(String s3Uri) {
-            this.s3Uri = Output.of(Objects.requireNonNull(s3Uri));
-            return this;
-        }        public ModelQualityJobDefinitionMonitoringGroundTruthS3InputArgs build() {
-            return new ModelQualityJobDefinitionMonitoringGroundTruthS3InputArgs(s3Uri);
+            return s3Uri(Output.of(s3Uri));
+        }
+
+        public ModelQualityJobDefinitionMonitoringGroundTruthS3InputArgs build() {
+            $.s3Uri = Objects.requireNonNull($.s3Uri, "expected parameter 's3Uri' to be non-null");
+            return $;
         }
     }
+
 }

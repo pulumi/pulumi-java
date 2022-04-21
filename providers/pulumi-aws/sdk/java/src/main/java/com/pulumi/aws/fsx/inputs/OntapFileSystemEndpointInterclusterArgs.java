@@ -5,10 +5,10 @@ package com.pulumi.aws.fsx.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class OntapFileSystemEndpointInterclusterArgs extends com.pulumi.re
      * 
      */
     @Import(name="dnsName")
-      private final @Nullable Output<String> dnsName;
+    private @Nullable Output<String> dnsName;
 
-    public Output<String> dnsName() {
-        return this.dnsName == null ? Codegen.empty() : this.dnsName;
+    public Optional<Output<String>> dnsName() {
+        return Optional.ofNullable(this.dnsName);
     }
 
     /**
@@ -32,66 +32,62 @@ public final class OntapFileSystemEndpointInterclusterArgs extends com.pulumi.re
      * 
      */
     @Import(name="ipAddresses")
-      private final @Nullable Output<List<String>> ipAddresses;
+    private @Nullable Output<List<String>> ipAddresses;
 
-    public Output<List<String>> ipAddresses() {
-        return this.ipAddresses == null ? Codegen.empty() : this.ipAddresses;
+    public Optional<Output<List<String>>> ipAddresses() {
+        return Optional.ofNullable(this.ipAddresses);
     }
 
-    public OntapFileSystemEndpointInterclusterArgs(
-        @Nullable Output<String> dnsName,
-        @Nullable Output<List<String>> ipAddresses) {
-        this.dnsName = dnsName;
-        this.ipAddresses = ipAddresses;
-    }
+    private OntapFileSystemEndpointInterclusterArgs() {}
 
-    private OntapFileSystemEndpointInterclusterArgs() {
-        this.dnsName = Codegen.empty();
-        this.ipAddresses = Codegen.empty();
+    private OntapFileSystemEndpointInterclusterArgs(OntapFileSystemEndpointInterclusterArgs $) {
+        this.dnsName = $.dnsName;
+        this.ipAddresses = $.ipAddresses;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(OntapFileSystemEndpointInterclusterArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> dnsName;
-        private @Nullable Output<List<String>> ipAddresses;
+        private OntapFileSystemEndpointInterclusterArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new OntapFileSystemEndpointInterclusterArgs();
         }
 
         public Builder(OntapFileSystemEndpointInterclusterArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dnsName = defaults.dnsName;
-    	      this.ipAddresses = defaults.ipAddresses;
+            $ = new OntapFileSystemEndpointInterclusterArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder dnsName(@Nullable Output<String> dnsName) {
-            this.dnsName = dnsName;
+            $.dnsName = dnsName;
             return this;
         }
-        public Builder dnsName(@Nullable String dnsName) {
-            this.dnsName = Codegen.ofNullable(dnsName);
-            return this;
+
+        public Builder dnsName(String dnsName) {
+            return dnsName(Output.of(dnsName));
         }
+
         public Builder ipAddresses(@Nullable Output<List<String>> ipAddresses) {
-            this.ipAddresses = ipAddresses;
+            $.ipAddresses = ipAddresses;
             return this;
         }
-        public Builder ipAddresses(@Nullable List<String> ipAddresses) {
-            this.ipAddresses = Codegen.ofNullable(ipAddresses);
-            return this;
+
+        public Builder ipAddresses(List<String> ipAddresses) {
+            return ipAddresses(Output.of(ipAddresses));
         }
+
         public Builder ipAddresses(String... ipAddresses) {
             return ipAddresses(List.of(ipAddresses));
-        }        public OntapFileSystemEndpointInterclusterArgs build() {
-            return new OntapFileSystemEndpointInterclusterArgs(dnsName, ipAddresses);
+        }
+
+        public OntapFileSystemEndpointInterclusterArgs build() {
+            return $;
         }
     }
+
 }

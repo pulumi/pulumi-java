@@ -15,45 +15,44 @@ public final class DataSourceSqlConfiguration extends com.pulumi.resources.Invok
     public static final DataSourceSqlConfiguration Empty = new DataSourceSqlConfiguration();
 
     @Import(name="queryIdentifiersEnclosingOption")
-      private final @Nullable DataSourceQueryIdentifiersEnclosingOption queryIdentifiersEnclosingOption;
+    private @Nullable DataSourceQueryIdentifiersEnclosingOption queryIdentifiersEnclosingOption;
 
     public Optional<DataSourceQueryIdentifiersEnclosingOption> queryIdentifiersEnclosingOption() {
-        return this.queryIdentifiersEnclosingOption == null ? Optional.empty() : Optional.ofNullable(this.queryIdentifiersEnclosingOption);
+        return Optional.ofNullable(this.queryIdentifiersEnclosingOption);
     }
 
-    public DataSourceSqlConfiguration(@Nullable DataSourceQueryIdentifiersEnclosingOption queryIdentifiersEnclosingOption) {
-        this.queryIdentifiersEnclosingOption = queryIdentifiersEnclosingOption;
-    }
+    private DataSourceSqlConfiguration() {}
 
-    private DataSourceSqlConfiguration() {
-        this.queryIdentifiersEnclosingOption = null;
+    private DataSourceSqlConfiguration(DataSourceSqlConfiguration $) {
+        this.queryIdentifiersEnclosingOption = $.queryIdentifiersEnclosingOption;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DataSourceSqlConfiguration defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable DataSourceQueryIdentifiersEnclosingOption queryIdentifiersEnclosingOption;
+        private DataSourceSqlConfiguration $;
 
         public Builder() {
-    	      // Empty
+            $ = new DataSourceSqlConfiguration();
         }
 
         public Builder(DataSourceSqlConfiguration defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.queryIdentifiersEnclosingOption = defaults.queryIdentifiersEnclosingOption;
+            $ = new DataSourceSqlConfiguration(Objects.requireNonNull(defaults));
         }
 
         public Builder queryIdentifiersEnclosingOption(@Nullable DataSourceQueryIdentifiersEnclosingOption queryIdentifiersEnclosingOption) {
-            this.queryIdentifiersEnclosingOption = queryIdentifiersEnclosingOption;
+            $.queryIdentifiersEnclosingOption = queryIdentifiersEnclosingOption;
             return this;
-        }        public DataSourceSqlConfiguration build() {
-            return new DataSourceSqlConfiguration(queryIdentifiersEnclosingOption);
+        }
+
+        public DataSourceSqlConfiguration build() {
+            return $;
         }
     }
+
 }

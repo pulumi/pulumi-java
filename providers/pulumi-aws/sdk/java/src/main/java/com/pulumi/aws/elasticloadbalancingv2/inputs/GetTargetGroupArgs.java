@@ -20,10 +20,10 @@ public final class GetTargetGroupArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="arn")
-      private final @Nullable String arn;
+    private @Nullable String arn;
 
     public Optional<String> arn() {
-        return this.arn == null ? Optional.empty() : Optional.ofNullable(this.arn);
+        return Optional.ofNullable(this.arn);
     }
 
     /**
@@ -31,71 +31,63 @@ public final class GetTargetGroupArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable String name;
+    private @Nullable String name;
 
     public Optional<String> name() {
-        return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
+        return Optional.ofNullable(this.name);
     }
 
     @Import(name="tags")
-      private final @Nullable Map<String,String> tags;
+    private @Nullable Map<String,String> tags;
 
-    public Map<String,String> tags() {
-        return this.tags == null ? Map.of() : this.tags;
+    public Optional<Map<String,String>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public GetTargetGroupArgs(
-        @Nullable String arn,
-        @Nullable String name,
-        @Nullable Map<String,String> tags) {
-        this.arn = arn;
-        this.name = name;
-        this.tags = tags;
-    }
+    private GetTargetGroupArgs() {}
 
-    private GetTargetGroupArgs() {
-        this.arn = null;
-        this.name = null;
-        this.tags = Map.of();
+    private GetTargetGroupArgs(GetTargetGroupArgs $) {
+        this.arn = $.arn;
+        this.name = $.name;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetTargetGroupArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String arn;
-        private @Nullable String name;
-        private @Nullable Map<String,String> tags;
+        private GetTargetGroupArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetTargetGroupArgs();
         }
 
         public Builder(GetTargetGroupArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.arn = defaults.arn;
-    	      this.name = defaults.name;
-    	      this.tags = defaults.tags;
+            $ = new GetTargetGroupArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder arn(@Nullable String arn) {
-            this.arn = arn;
+            $.arn = arn;
             return this;
         }
+
         public Builder name(@Nullable String name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
+
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
-        }        public GetTargetGroupArgs build() {
-            return new GetTargetGroupArgs(arn, name, tags);
+        }
+
+        public GetTargetGroupArgs build() {
+            return $;
         }
     }
+
 }

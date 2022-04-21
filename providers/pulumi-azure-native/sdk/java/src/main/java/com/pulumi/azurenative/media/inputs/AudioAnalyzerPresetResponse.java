@@ -25,10 +25,10 @@ public final class AudioAnalyzerPresetResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="audioLanguage")
-      private final @Nullable String audioLanguage;
+    private @Nullable String audioLanguage;
 
     public Optional<String> audioLanguage() {
-        return this.audioLanguage == null ? Optional.empty() : Optional.ofNullable(this.audioLanguage);
+        return Optional.ofNullable(this.audioLanguage);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class AudioAnalyzerPresetResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="experimentalOptions")
-      private final @Nullable Map<String,String> experimentalOptions;
+    private @Nullable Map<String,String> experimentalOptions;
 
-    public Map<String,String> experimentalOptions() {
-        return this.experimentalOptions == null ? Map.of() : this.experimentalOptions;
+    public Optional<Map<String,String>> experimentalOptions() {
+        return Optional.ofNullable(this.experimentalOptions);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class AudioAnalyzerPresetResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="mode")
-      private final @Nullable String mode;
+    private @Nullable String mode;
 
     public Optional<String> mode() {
-        return this.mode == null ? Optional.empty() : Optional.ofNullable(this.mode);
+        return Optional.ofNullable(this.mode);
     }
 
     /**
@@ -59,73 +59,63 @@ public final class AudioAnalyzerPresetResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="odataType", required=true)
-      private final String odataType;
+    private String odataType;
 
     public String odataType() {
         return this.odataType;
     }
 
-    public AudioAnalyzerPresetResponse(
-        @Nullable String audioLanguage,
-        @Nullable Map<String,String> experimentalOptions,
-        @Nullable String mode,
-        String odataType) {
-        this.audioLanguage = audioLanguage;
-        this.experimentalOptions = experimentalOptions;
-        this.mode = mode;
-        this.odataType = Codegen.stringProp("odataType").arg(odataType).require();
-    }
+    private AudioAnalyzerPresetResponse() {}
 
-    private AudioAnalyzerPresetResponse() {
-        this.audioLanguage = null;
-        this.experimentalOptions = Map.of();
-        this.mode = null;
-        this.odataType = null;
+    private AudioAnalyzerPresetResponse(AudioAnalyzerPresetResponse $) {
+        this.audioLanguage = $.audioLanguage;
+        this.experimentalOptions = $.experimentalOptions;
+        this.mode = $.mode;
+        this.odataType = $.odataType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AudioAnalyzerPresetResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String audioLanguage;
-        private @Nullable Map<String,String> experimentalOptions;
-        private @Nullable String mode;
-        private String odataType;
+        private AudioAnalyzerPresetResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AudioAnalyzerPresetResponse();
         }
 
         public Builder(AudioAnalyzerPresetResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.audioLanguage = defaults.audioLanguage;
-    	      this.experimentalOptions = defaults.experimentalOptions;
-    	      this.mode = defaults.mode;
-    	      this.odataType = defaults.odataType;
+            $ = new AudioAnalyzerPresetResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder audioLanguage(@Nullable String audioLanguage) {
-            this.audioLanguage = audioLanguage;
+            $.audioLanguage = audioLanguage;
             return this;
         }
+
         public Builder experimentalOptions(@Nullable Map<String,String> experimentalOptions) {
-            this.experimentalOptions = experimentalOptions;
+            $.experimentalOptions = experimentalOptions;
             return this;
         }
+
         public Builder mode(@Nullable String mode) {
-            this.mode = mode;
+            $.mode = mode;
             return this;
         }
+
         public Builder odataType(String odataType) {
-            this.odataType = Objects.requireNonNull(odataType);
+            $.odataType = odataType;
             return this;
-        }        public AudioAnalyzerPresetResponse build() {
-            return new AudioAnalyzerPresetResponse(audioLanguage, experimentalOptions, mode, odataType);
+        }
+
+        public AudioAnalyzerPresetResponse build() {
+            $.odataType = Codegen.stringProp("odataType").arg($.odataType).require();
+            return $;
         }
     }
+
 }

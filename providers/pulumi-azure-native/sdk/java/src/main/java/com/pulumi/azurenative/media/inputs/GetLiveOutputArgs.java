@@ -17,7 +17,7 @@ public final class GetLiveOutputArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="accountName", required=true)
-      private final String accountName;
+    private String accountName;
 
     public String accountName() {
         return this.accountName;
@@ -28,7 +28,7 @@ public final class GetLiveOutputArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="liveEventName", required=true)
-      private final String liveEventName;
+    private String liveEventName;
 
     public String liveEventName() {
         return this.liveEventName;
@@ -39,7 +39,7 @@ public final class GetLiveOutputArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="liveOutputName", required=true)
-      private final String liveOutputName;
+    private String liveOutputName;
 
     public String liveOutputName() {
         return this.liveOutputName;
@@ -50,73 +50,66 @@ public final class GetLiveOutputArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public GetLiveOutputArgs(
-        String accountName,
-        String liveEventName,
-        String liveOutputName,
-        String resourceGroupName) {
-        this.accountName = Objects.requireNonNull(accountName, "expected parameter 'accountName' to be non-null");
-        this.liveEventName = Objects.requireNonNull(liveEventName, "expected parameter 'liveEventName' to be non-null");
-        this.liveOutputName = Objects.requireNonNull(liveOutputName, "expected parameter 'liveOutputName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private GetLiveOutputArgs() {}
 
-    private GetLiveOutputArgs() {
-        this.accountName = null;
-        this.liveEventName = null;
-        this.liveOutputName = null;
-        this.resourceGroupName = null;
+    private GetLiveOutputArgs(GetLiveOutputArgs $) {
+        this.accountName = $.accountName;
+        this.liveEventName = $.liveEventName;
+        this.liveOutputName = $.liveOutputName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetLiveOutputArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String accountName;
-        private String liveEventName;
-        private String liveOutputName;
-        private String resourceGroupName;
+        private GetLiveOutputArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetLiveOutputArgs();
         }
 
         public Builder(GetLiveOutputArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accountName = defaults.accountName;
-    	      this.liveEventName = defaults.liveEventName;
-    	      this.liveOutputName = defaults.liveOutputName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new GetLiveOutputArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder accountName(String accountName) {
-            this.accountName = Objects.requireNonNull(accountName);
+            $.accountName = accountName;
             return this;
         }
+
         public Builder liveEventName(String liveEventName) {
-            this.liveEventName = Objects.requireNonNull(liveEventName);
+            $.liveEventName = liveEventName;
             return this;
         }
+
         public Builder liveOutputName(String liveOutputName) {
-            this.liveOutputName = Objects.requireNonNull(liveOutputName);
+            $.liveOutputName = liveOutputName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public GetLiveOutputArgs build() {
-            return new GetLiveOutputArgs(accountName, liveEventName, liveOutputName, resourceGroupName);
+        }
+
+        public GetLiveOutputArgs build() {
+            $.accountName = Objects.requireNonNull($.accountName, "expected parameter 'accountName' to be non-null");
+            $.liveEventName = Objects.requireNonNull($.liveEventName, "expected parameter 'liveEventName' to be non-null");
+            $.liveOutputName = Objects.requireNonNull($.liveOutputName, "expected parameter 'liveOutputName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

@@ -25,10 +25,10 @@ public final class ApplicationLogsConfigResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="azureBlobStorage")
-      private final @Nullable AzureBlobStorageApplicationLogsConfigResponse azureBlobStorage;
+    private @Nullable AzureBlobStorageApplicationLogsConfigResponse azureBlobStorage;
 
     public Optional<AzureBlobStorageApplicationLogsConfigResponse> azureBlobStorage() {
-        return this.azureBlobStorage == null ? Optional.empty() : Optional.ofNullable(this.azureBlobStorage);
+        return Optional.ofNullable(this.azureBlobStorage);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class ApplicationLogsConfigResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="azureTableStorage")
-      private final @Nullable AzureTableStorageApplicationLogsConfigResponse azureTableStorage;
+    private @Nullable AzureTableStorageApplicationLogsConfigResponse azureTableStorage;
 
     public Optional<AzureTableStorageApplicationLogsConfigResponse> azureTableStorage() {
-        return this.azureTableStorage == null ? Optional.empty() : Optional.ofNullable(this.azureTableStorage);
+        return Optional.ofNullable(this.azureTableStorage);
     }
 
     /**
@@ -47,64 +47,56 @@ public final class ApplicationLogsConfigResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="fileSystem")
-      private final @Nullable FileSystemApplicationLogsConfigResponse fileSystem;
+    private @Nullable FileSystemApplicationLogsConfigResponse fileSystem;
 
     public Optional<FileSystemApplicationLogsConfigResponse> fileSystem() {
-        return this.fileSystem == null ? Optional.empty() : Optional.ofNullable(this.fileSystem);
+        return Optional.ofNullable(this.fileSystem);
     }
 
-    public ApplicationLogsConfigResponse(
-        @Nullable AzureBlobStorageApplicationLogsConfigResponse azureBlobStorage,
-        @Nullable AzureTableStorageApplicationLogsConfigResponse azureTableStorage,
-        @Nullable FileSystemApplicationLogsConfigResponse fileSystem) {
-        this.azureBlobStorage = azureBlobStorage;
-        this.azureTableStorage = azureTableStorage;
-        this.fileSystem = fileSystem;
-    }
+    private ApplicationLogsConfigResponse() {}
 
-    private ApplicationLogsConfigResponse() {
-        this.azureBlobStorage = null;
-        this.azureTableStorage = null;
-        this.fileSystem = null;
+    private ApplicationLogsConfigResponse(ApplicationLogsConfigResponse $) {
+        this.azureBlobStorage = $.azureBlobStorage;
+        this.azureTableStorage = $.azureTableStorage;
+        this.fileSystem = $.fileSystem;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ApplicationLogsConfigResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable AzureBlobStorageApplicationLogsConfigResponse azureBlobStorage;
-        private @Nullable AzureTableStorageApplicationLogsConfigResponse azureTableStorage;
-        private @Nullable FileSystemApplicationLogsConfigResponse fileSystem;
+        private ApplicationLogsConfigResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ApplicationLogsConfigResponse();
         }
 
         public Builder(ApplicationLogsConfigResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.azureBlobStorage = defaults.azureBlobStorage;
-    	      this.azureTableStorage = defaults.azureTableStorage;
-    	      this.fileSystem = defaults.fileSystem;
+            $ = new ApplicationLogsConfigResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder azureBlobStorage(@Nullable AzureBlobStorageApplicationLogsConfigResponse azureBlobStorage) {
-            this.azureBlobStorage = azureBlobStorage;
+            $.azureBlobStorage = azureBlobStorage;
             return this;
         }
+
         public Builder azureTableStorage(@Nullable AzureTableStorageApplicationLogsConfigResponse azureTableStorage) {
-            this.azureTableStorage = azureTableStorage;
+            $.azureTableStorage = azureTableStorage;
             return this;
         }
+
         public Builder fileSystem(@Nullable FileSystemApplicationLogsConfigResponse fileSystem) {
-            this.fileSystem = fileSystem;
+            $.fileSystem = fileSystem;
             return this;
-        }        public ApplicationLogsConfigResponse build() {
-            return new ApplicationLogsConfigResponse(azureBlobStorage, azureTableStorage, fileSystem);
+        }
+
+        public ApplicationLogsConfigResponse build() {
+            return $;
         }
     }
+
 }

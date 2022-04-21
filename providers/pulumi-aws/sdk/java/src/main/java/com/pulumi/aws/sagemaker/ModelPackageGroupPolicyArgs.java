@@ -5,7 +5,6 @@ package com.pulumi.aws.sagemaker;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,70 +18,67 @@ public final class ModelPackageGroupPolicyArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="modelPackageGroupName", required=true)
-      private final Output<String> modelPackageGroupName;
+    private Output<String> modelPackageGroupName;
 
     public Output<String> modelPackageGroupName() {
         return this.modelPackageGroupName;
     }
 
     @Import(name="resourcePolicy", required=true)
-      private final Output<String> resourcePolicy;
+    private Output<String> resourcePolicy;
 
     public Output<String> resourcePolicy() {
         return this.resourcePolicy;
     }
 
-    public ModelPackageGroupPolicyArgs(
-        Output<String> modelPackageGroupName,
-        Output<String> resourcePolicy) {
-        this.modelPackageGroupName = Objects.requireNonNull(modelPackageGroupName, "expected parameter 'modelPackageGroupName' to be non-null");
-        this.resourcePolicy = Objects.requireNonNull(resourcePolicy, "expected parameter 'resourcePolicy' to be non-null");
-    }
+    private ModelPackageGroupPolicyArgs() {}
 
-    private ModelPackageGroupPolicyArgs() {
-        this.modelPackageGroupName = Codegen.empty();
-        this.resourcePolicy = Codegen.empty();
+    private ModelPackageGroupPolicyArgs(ModelPackageGroupPolicyArgs $) {
+        this.modelPackageGroupName = $.modelPackageGroupName;
+        this.resourcePolicy = $.resourcePolicy;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ModelPackageGroupPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> modelPackageGroupName;
-        private Output<String> resourcePolicy;
+        private ModelPackageGroupPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ModelPackageGroupPolicyArgs();
         }
 
         public Builder(ModelPackageGroupPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.modelPackageGroupName = defaults.modelPackageGroupName;
-    	      this.resourcePolicy = defaults.resourcePolicy;
+            $ = new ModelPackageGroupPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder modelPackageGroupName(Output<String> modelPackageGroupName) {
-            this.modelPackageGroupName = Objects.requireNonNull(modelPackageGroupName);
+            $.modelPackageGroupName = modelPackageGroupName;
             return this;
         }
+
         public Builder modelPackageGroupName(String modelPackageGroupName) {
-            this.modelPackageGroupName = Output.of(Objects.requireNonNull(modelPackageGroupName));
-            return this;
+            return modelPackageGroupName(Output.of(modelPackageGroupName));
         }
+
         public Builder resourcePolicy(Output<String> resourcePolicy) {
-            this.resourcePolicy = Objects.requireNonNull(resourcePolicy);
+            $.resourcePolicy = resourcePolicy;
             return this;
         }
+
         public Builder resourcePolicy(String resourcePolicy) {
-            this.resourcePolicy = Output.of(Objects.requireNonNull(resourcePolicy));
-            return this;
-        }        public ModelPackageGroupPolicyArgs build() {
-            return new ModelPackageGroupPolicyArgs(modelPackageGroupName, resourcePolicy);
+            return resourcePolicy(Output.of(resourcePolicy));
+        }
+
+        public ModelPackageGroupPolicyArgs build() {
+            $.modelPackageGroupName = Objects.requireNonNull($.modelPackageGroupName, "expected parameter 'modelPackageGroupName' to be non-null");
+            $.resourcePolicy = Objects.requireNonNull($.resourcePolicy, "expected parameter 'resourcePolicy' to be non-null");
+            return $;
         }
     }
+
 }

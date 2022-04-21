@@ -17,45 +17,45 @@ public final class GetResolverConfigArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="id", required=true)
-      private final String id;
+    private String id;
 
     public String id() {
         return this.id;
     }
 
-    public GetResolverConfigArgs(String id) {
-        this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
-    }
+    private GetResolverConfigArgs() {}
 
-    private GetResolverConfigArgs() {
-        this.id = null;
+    private GetResolverConfigArgs(GetResolverConfigArgs $) {
+        this.id = $.id;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetResolverConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String id;
+        private GetResolverConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetResolverConfigArgs();
         }
 
         public Builder(GetResolverConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.id = defaults.id;
+            $ = new GetResolverConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder id(String id) {
-            this.id = Objects.requireNonNull(id);
+            $.id = id;
             return this;
-        }        public GetResolverConfigArgs build() {
-            return new GetResolverConfigArgs(id);
+        }
+
+        public GetResolverConfigArgs build() {
+            $.id = Objects.requireNonNull($.id, "expected parameter 'id' to be non-null");
+            return $;
         }
     }
+
 }

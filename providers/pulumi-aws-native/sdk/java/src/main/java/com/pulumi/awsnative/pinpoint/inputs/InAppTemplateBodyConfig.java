@@ -16,78 +16,70 @@ public final class InAppTemplateBodyConfig extends com.pulumi.resources.InvokeAr
     public static final InAppTemplateBodyConfig Empty = new InAppTemplateBodyConfig();
 
     @Import(name="alignment")
-      private final @Nullable InAppTemplateAlignment alignment;
+    private @Nullable InAppTemplateAlignment alignment;
 
     public Optional<InAppTemplateAlignment> alignment() {
-        return this.alignment == null ? Optional.empty() : Optional.ofNullable(this.alignment);
+        return Optional.ofNullable(this.alignment);
     }
 
     @Import(name="body")
-      private final @Nullable String body;
+    private @Nullable String body;
 
     public Optional<String> body() {
-        return this.body == null ? Optional.empty() : Optional.ofNullable(this.body);
+        return Optional.ofNullable(this.body);
     }
 
     @Import(name="textColor")
-      private final @Nullable String textColor;
+    private @Nullable String textColor;
 
     public Optional<String> textColor() {
-        return this.textColor == null ? Optional.empty() : Optional.ofNullable(this.textColor);
+        return Optional.ofNullable(this.textColor);
     }
 
-    public InAppTemplateBodyConfig(
-        @Nullable InAppTemplateAlignment alignment,
-        @Nullable String body,
-        @Nullable String textColor) {
-        this.alignment = alignment;
-        this.body = body;
-        this.textColor = textColor;
-    }
+    private InAppTemplateBodyConfig() {}
 
-    private InAppTemplateBodyConfig() {
-        this.alignment = null;
-        this.body = null;
-        this.textColor = null;
+    private InAppTemplateBodyConfig(InAppTemplateBodyConfig $) {
+        this.alignment = $.alignment;
+        this.body = $.body;
+        this.textColor = $.textColor;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(InAppTemplateBodyConfig defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable InAppTemplateAlignment alignment;
-        private @Nullable String body;
-        private @Nullable String textColor;
+        private InAppTemplateBodyConfig $;
 
         public Builder() {
-    	      // Empty
+            $ = new InAppTemplateBodyConfig();
         }
 
         public Builder(InAppTemplateBodyConfig defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.alignment = defaults.alignment;
-    	      this.body = defaults.body;
-    	      this.textColor = defaults.textColor;
+            $ = new InAppTemplateBodyConfig(Objects.requireNonNull(defaults));
         }
 
         public Builder alignment(@Nullable InAppTemplateAlignment alignment) {
-            this.alignment = alignment;
+            $.alignment = alignment;
             return this;
         }
+
         public Builder body(@Nullable String body) {
-            this.body = body;
+            $.body = body;
             return this;
         }
+
         public Builder textColor(@Nullable String textColor) {
-            this.textColor = textColor;
+            $.textColor = textColor;
             return this;
-        }        public InAppTemplateBodyConfig build() {
-            return new InAppTemplateBodyConfig(alignment, body, textColor);
+        }
+
+        public InAppTemplateBodyConfig build() {
+            return $;
         }
     }
+
 }

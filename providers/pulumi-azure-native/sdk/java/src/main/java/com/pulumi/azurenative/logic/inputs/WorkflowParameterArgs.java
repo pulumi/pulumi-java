@@ -7,10 +7,10 @@ import com.pulumi.azurenative.logic.enums.ParameterType;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +27,10 @@ public final class WorkflowParameterArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -38,10 +38,10 @@ public final class WorkflowParameterArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="metadata")
-      private final @Nullable Output<Object> metadata;
+    private @Nullable Output<Object> metadata;
 
-    public Output<Object> metadata() {
-        return this.metadata == null ? Codegen.empty() : this.metadata;
+    public Optional<Output<Object>> metadata() {
+        return Optional.ofNullable(this.metadata);
     }
 
     /**
@@ -49,10 +49,10 @@ public final class WorkflowParameterArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="type")
-      private final @Nullable Output<Either<String,ParameterType>> type;
+    private @Nullable Output<Either<String,ParameterType>> type;
 
-    public Output<Either<String,ParameterType>> type() {
-        return this.type == null ? Codegen.empty() : this.type;
+    public Optional<Output<Either<String,ParameterType>>> type() {
+        return Optional.ofNullable(this.type);
     }
 
     /**
@@ -60,89 +60,78 @@ public final class WorkflowParameterArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="value")
-      private final @Nullable Output<Object> value;
+    private @Nullable Output<Object> value;
 
-    public Output<Object> value() {
-        return this.value == null ? Codegen.empty() : this.value;
+    public Optional<Output<Object>> value() {
+        return Optional.ofNullable(this.value);
     }
 
-    public WorkflowParameterArgs(
-        @Nullable Output<String> description,
-        @Nullable Output<Object> metadata,
-        @Nullable Output<Either<String,ParameterType>> type,
-        @Nullable Output<Object> value) {
-        this.description = description;
-        this.metadata = metadata;
-        this.type = type;
-        this.value = value;
-    }
+    private WorkflowParameterArgs() {}
 
-    private WorkflowParameterArgs() {
-        this.description = Codegen.empty();
-        this.metadata = Codegen.empty();
-        this.type = Codegen.empty();
-        this.value = Codegen.empty();
+    private WorkflowParameterArgs(WorkflowParameterArgs $) {
+        this.description = $.description;
+        this.metadata = $.metadata;
+        this.type = $.type;
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WorkflowParameterArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> description;
-        private @Nullable Output<Object> metadata;
-        private @Nullable Output<Either<String,ParameterType>> type;
-        private @Nullable Output<Object> value;
+        private WorkflowParameterArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new WorkflowParameterArgs();
         }
 
         public Builder(WorkflowParameterArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.description = defaults.description;
-    	      this.metadata = defaults.metadata;
-    	      this.type = defaults.type;
-    	      this.value = defaults.value;
+            $ = new WorkflowParameterArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder metadata(@Nullable Output<Object> metadata) {
-            this.metadata = metadata;
+            $.metadata = metadata;
             return this;
         }
-        public Builder metadata(@Nullable Object metadata) {
-            this.metadata = Codegen.ofNullable(metadata);
-            return this;
+
+        public Builder metadata(Object metadata) {
+            return metadata(Output.of(metadata));
         }
+
         public Builder type(@Nullable Output<Either<String,ParameterType>> type) {
-            this.type = type;
+            $.type = type;
             return this;
         }
-        public Builder type(@Nullable Either<String,ParameterType> type) {
-            this.type = Codegen.ofNullable(type);
-            return this;
+
+        public Builder type(Either<String,ParameterType> type) {
+            return type(Output.of(type));
         }
+
         public Builder value(@Nullable Output<Object> value) {
-            this.value = value;
+            $.value = value;
             return this;
         }
-        public Builder value(@Nullable Object value) {
-            this.value = Codegen.ofNullable(value);
-            return this;
-        }        public WorkflowParameterArgs build() {
-            return new WorkflowParameterArgs(description, metadata, type, value);
+
+        public Builder value(Object value) {
+            return value(Output.of(value));
+        }
+
+        public WorkflowParameterArgs build() {
+            return $;
         }
     }
+
 }

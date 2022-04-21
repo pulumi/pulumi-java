@@ -5,9 +5,9 @@ package com.pulumi.awsnative.iotsitewise.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,70 +20,66 @@ public final class AssetModelTumblingWindowArgs extends com.pulumi.resources.Res
     public static final AssetModelTumblingWindowArgs Empty = new AssetModelTumblingWindowArgs();
 
     @Import(name="interval", required=true)
-      private final Output<String> interval;
+    private Output<String> interval;
 
     public Output<String> interval() {
         return this.interval;
     }
 
     @Import(name="offset")
-      private final @Nullable Output<String> offset;
+    private @Nullable Output<String> offset;
 
-    public Output<String> offset() {
-        return this.offset == null ? Codegen.empty() : this.offset;
+    public Optional<Output<String>> offset() {
+        return Optional.ofNullable(this.offset);
     }
 
-    public AssetModelTumblingWindowArgs(
-        Output<String> interval,
-        @Nullable Output<String> offset) {
-        this.interval = Objects.requireNonNull(interval, "expected parameter 'interval' to be non-null");
-        this.offset = offset;
-    }
+    private AssetModelTumblingWindowArgs() {}
 
-    private AssetModelTumblingWindowArgs() {
-        this.interval = Codegen.empty();
-        this.offset = Codegen.empty();
+    private AssetModelTumblingWindowArgs(AssetModelTumblingWindowArgs $) {
+        this.interval = $.interval;
+        this.offset = $.offset;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AssetModelTumblingWindowArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> interval;
-        private @Nullable Output<String> offset;
+        private AssetModelTumblingWindowArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AssetModelTumblingWindowArgs();
         }
 
         public Builder(AssetModelTumblingWindowArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.interval = defaults.interval;
-    	      this.offset = defaults.offset;
+            $ = new AssetModelTumblingWindowArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder interval(Output<String> interval) {
-            this.interval = Objects.requireNonNull(interval);
+            $.interval = interval;
             return this;
         }
+
         public Builder interval(String interval) {
-            this.interval = Output.of(Objects.requireNonNull(interval));
-            return this;
+            return interval(Output.of(interval));
         }
+
         public Builder offset(@Nullable Output<String> offset) {
-            this.offset = offset;
+            $.offset = offset;
             return this;
         }
-        public Builder offset(@Nullable String offset) {
-            this.offset = Codegen.ofNullable(offset);
-            return this;
-        }        public AssetModelTumblingWindowArgs build() {
-            return new AssetModelTumblingWindowArgs(interval, offset);
+
+        public Builder offset(String offset) {
+            return offset(Output.of(offset));
+        }
+
+        public AssetModelTumblingWindowArgs build() {
+            $.interval = Objects.requireNonNull($.interval, "expected parameter 'interval' to be non-null");
+            return $;
         }
     }
+
 }

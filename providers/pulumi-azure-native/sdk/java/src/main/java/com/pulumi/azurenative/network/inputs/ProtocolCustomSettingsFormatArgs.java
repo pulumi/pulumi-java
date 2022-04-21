@@ -8,9 +8,9 @@ import com.pulumi.azurenative.network.enums.DdosCustomPolicyTriggerSensitivityOv
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +27,10 @@ public final class ProtocolCustomSettingsFormatArgs extends com.pulumi.resources
      * 
      */
     @Import(name="protocol")
-      private final @Nullable Output<Either<String,DdosCustomPolicyProtocol>> protocol;
+    private @Nullable Output<Either<String,DdosCustomPolicyProtocol>> protocol;
 
-    public Output<Either<String,DdosCustomPolicyProtocol>> protocol() {
-        return this.protocol == null ? Codegen.empty() : this.protocol;
+    public Optional<Output<Either<String,DdosCustomPolicyProtocol>>> protocol() {
+        return Optional.ofNullable(this.protocol);
     }
 
     /**
@@ -38,10 +38,10 @@ public final class ProtocolCustomSettingsFormatArgs extends com.pulumi.resources
      * 
      */
     @Import(name="sourceRateOverride")
-      private final @Nullable Output<String> sourceRateOverride;
+    private @Nullable Output<String> sourceRateOverride;
 
-    public Output<String> sourceRateOverride() {
-        return this.sourceRateOverride == null ? Codegen.empty() : this.sourceRateOverride;
+    public Optional<Output<String>> sourceRateOverride() {
+        return Optional.ofNullable(this.sourceRateOverride);
     }
 
     /**
@@ -49,10 +49,10 @@ public final class ProtocolCustomSettingsFormatArgs extends com.pulumi.resources
      * 
      */
     @Import(name="triggerRateOverride")
-      private final @Nullable Output<String> triggerRateOverride;
+    private @Nullable Output<String> triggerRateOverride;
 
-    public Output<String> triggerRateOverride() {
-        return this.triggerRateOverride == null ? Codegen.empty() : this.triggerRateOverride;
+    public Optional<Output<String>> triggerRateOverride() {
+        return Optional.ofNullable(this.triggerRateOverride);
     }
 
     /**
@@ -60,89 +60,78 @@ public final class ProtocolCustomSettingsFormatArgs extends com.pulumi.resources
      * 
      */
     @Import(name="triggerSensitivityOverride")
-      private final @Nullable Output<Either<String,DdosCustomPolicyTriggerSensitivityOverride>> triggerSensitivityOverride;
+    private @Nullable Output<Either<String,DdosCustomPolicyTriggerSensitivityOverride>> triggerSensitivityOverride;
 
-    public Output<Either<String,DdosCustomPolicyTriggerSensitivityOverride>> triggerSensitivityOverride() {
-        return this.triggerSensitivityOverride == null ? Codegen.empty() : this.triggerSensitivityOverride;
+    public Optional<Output<Either<String,DdosCustomPolicyTriggerSensitivityOverride>>> triggerSensitivityOverride() {
+        return Optional.ofNullable(this.triggerSensitivityOverride);
     }
 
-    public ProtocolCustomSettingsFormatArgs(
-        @Nullable Output<Either<String,DdosCustomPolicyProtocol>> protocol,
-        @Nullable Output<String> sourceRateOverride,
-        @Nullable Output<String> triggerRateOverride,
-        @Nullable Output<Either<String,DdosCustomPolicyTriggerSensitivityOverride>> triggerSensitivityOverride) {
-        this.protocol = protocol;
-        this.sourceRateOverride = sourceRateOverride;
-        this.triggerRateOverride = triggerRateOverride;
-        this.triggerSensitivityOverride = triggerSensitivityOverride;
-    }
+    private ProtocolCustomSettingsFormatArgs() {}
 
-    private ProtocolCustomSettingsFormatArgs() {
-        this.protocol = Codegen.empty();
-        this.sourceRateOverride = Codegen.empty();
-        this.triggerRateOverride = Codegen.empty();
-        this.triggerSensitivityOverride = Codegen.empty();
+    private ProtocolCustomSettingsFormatArgs(ProtocolCustomSettingsFormatArgs $) {
+        this.protocol = $.protocol;
+        this.sourceRateOverride = $.sourceRateOverride;
+        this.triggerRateOverride = $.triggerRateOverride;
+        this.triggerSensitivityOverride = $.triggerSensitivityOverride;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ProtocolCustomSettingsFormatArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Either<String,DdosCustomPolicyProtocol>> protocol;
-        private @Nullable Output<String> sourceRateOverride;
-        private @Nullable Output<String> triggerRateOverride;
-        private @Nullable Output<Either<String,DdosCustomPolicyTriggerSensitivityOverride>> triggerSensitivityOverride;
+        private ProtocolCustomSettingsFormatArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ProtocolCustomSettingsFormatArgs();
         }
 
         public Builder(ProtocolCustomSettingsFormatArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.protocol = defaults.protocol;
-    	      this.sourceRateOverride = defaults.sourceRateOverride;
-    	      this.triggerRateOverride = defaults.triggerRateOverride;
-    	      this.triggerSensitivityOverride = defaults.triggerSensitivityOverride;
+            $ = new ProtocolCustomSettingsFormatArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder protocol(@Nullable Output<Either<String,DdosCustomPolicyProtocol>> protocol) {
-            this.protocol = protocol;
+            $.protocol = protocol;
             return this;
         }
-        public Builder protocol(@Nullable Either<String,DdosCustomPolicyProtocol> protocol) {
-            this.protocol = Codegen.ofNullable(protocol);
-            return this;
+
+        public Builder protocol(Either<String,DdosCustomPolicyProtocol> protocol) {
+            return protocol(Output.of(protocol));
         }
+
         public Builder sourceRateOverride(@Nullable Output<String> sourceRateOverride) {
-            this.sourceRateOverride = sourceRateOverride;
+            $.sourceRateOverride = sourceRateOverride;
             return this;
         }
-        public Builder sourceRateOverride(@Nullable String sourceRateOverride) {
-            this.sourceRateOverride = Codegen.ofNullable(sourceRateOverride);
-            return this;
+
+        public Builder sourceRateOverride(String sourceRateOverride) {
+            return sourceRateOverride(Output.of(sourceRateOverride));
         }
+
         public Builder triggerRateOverride(@Nullable Output<String> triggerRateOverride) {
-            this.triggerRateOverride = triggerRateOverride;
+            $.triggerRateOverride = triggerRateOverride;
             return this;
         }
-        public Builder triggerRateOverride(@Nullable String triggerRateOverride) {
-            this.triggerRateOverride = Codegen.ofNullable(triggerRateOverride);
-            return this;
+
+        public Builder triggerRateOverride(String triggerRateOverride) {
+            return triggerRateOverride(Output.of(triggerRateOverride));
         }
+
         public Builder triggerSensitivityOverride(@Nullable Output<Either<String,DdosCustomPolicyTriggerSensitivityOverride>> triggerSensitivityOverride) {
-            this.triggerSensitivityOverride = triggerSensitivityOverride;
+            $.triggerSensitivityOverride = triggerSensitivityOverride;
             return this;
         }
-        public Builder triggerSensitivityOverride(@Nullable Either<String,DdosCustomPolicyTriggerSensitivityOverride> triggerSensitivityOverride) {
-            this.triggerSensitivityOverride = Codegen.ofNullable(triggerSensitivityOverride);
-            return this;
-        }        public ProtocolCustomSettingsFormatArgs build() {
-            return new ProtocolCustomSettingsFormatArgs(protocol, sourceRateOverride, triggerRateOverride, triggerSensitivityOverride);
+
+        public Builder triggerSensitivityOverride(Either<String,DdosCustomPolicyTriggerSensitivityOverride> triggerSensitivityOverride) {
+            return triggerSensitivityOverride(Output.of(triggerSensitivityOverride));
+        }
+
+        public ProtocolCustomSettingsFormatArgs build() {
+            return $;
         }
     }
+
 }

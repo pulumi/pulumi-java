@@ -5,9 +5,9 @@ package com.pulumi.gcp.cloudidentity.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,7 +25,7 @@ public final class GroupMembershipMemberKeyArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="id", required=true)
-      private final Output<String> id;
+    private Output<String> id;
 
     public Output<String> id() {
         return this.id;
@@ -41,63 +41,59 @@ public final class GroupMembershipMemberKeyArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="namespace")
-      private final @Nullable Output<String> namespace;
+    private @Nullable Output<String> namespace;
 
-    public Output<String> namespace() {
-        return this.namespace == null ? Codegen.empty() : this.namespace;
+    public Optional<Output<String>> namespace() {
+        return Optional.ofNullable(this.namespace);
     }
 
-    public GroupMembershipMemberKeyArgs(
-        Output<String> id,
-        @Nullable Output<String> namespace) {
-        this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
-        this.namespace = namespace;
-    }
+    private GroupMembershipMemberKeyArgs() {}
 
-    private GroupMembershipMemberKeyArgs() {
-        this.id = Codegen.empty();
-        this.namespace = Codegen.empty();
+    private GroupMembershipMemberKeyArgs(GroupMembershipMemberKeyArgs $) {
+        this.id = $.id;
+        this.namespace = $.namespace;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GroupMembershipMemberKeyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> id;
-        private @Nullable Output<String> namespace;
+        private GroupMembershipMemberKeyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GroupMembershipMemberKeyArgs();
         }
 
         public Builder(GroupMembershipMemberKeyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.id = defaults.id;
-    	      this.namespace = defaults.namespace;
+            $ = new GroupMembershipMemberKeyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder id(Output<String> id) {
-            this.id = Objects.requireNonNull(id);
+            $.id = id;
             return this;
         }
+
         public Builder id(String id) {
-            this.id = Output.of(Objects.requireNonNull(id));
-            return this;
+            return id(Output.of(id));
         }
+
         public Builder namespace(@Nullable Output<String> namespace) {
-            this.namespace = namespace;
+            $.namespace = namespace;
             return this;
         }
-        public Builder namespace(@Nullable String namespace) {
-            this.namespace = Codegen.ofNullable(namespace);
-            return this;
-        }        public GroupMembershipMemberKeyArgs build() {
-            return new GroupMembershipMemberKeyArgs(id, namespace);
+
+        public Builder namespace(String namespace) {
+            return namespace(Output.of(namespace));
+        }
+
+        public GroupMembershipMemberKeyArgs build() {
+            $.id = Objects.requireNonNull($.id, "expected parameter 'id' to be non-null");
+            return $;
         }
     }
+
 }

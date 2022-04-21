@@ -9,10 +9,10 @@ import com.pulumi.awsnative.iot.inputs.DomainConfigurationAuthorizerConfigArgs;
 import com.pulumi.awsnative.iot.inputs.DomainConfigurationTagArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,196 +21,175 @@ public final class DomainConfigurationArgs extends com.pulumi.resources.Resource
     public static final DomainConfigurationArgs Empty = new DomainConfigurationArgs();
 
     @Import(name="authorizerConfig")
-      private final @Nullable Output<DomainConfigurationAuthorizerConfigArgs> authorizerConfig;
+    private @Nullable Output<DomainConfigurationAuthorizerConfigArgs> authorizerConfig;
 
-    public Output<DomainConfigurationAuthorizerConfigArgs> authorizerConfig() {
-        return this.authorizerConfig == null ? Codegen.empty() : this.authorizerConfig;
+    public Optional<Output<DomainConfigurationAuthorizerConfigArgs>> authorizerConfig() {
+        return Optional.ofNullable(this.authorizerConfig);
     }
 
     @Import(name="domainConfigurationName")
-      private final @Nullable Output<String> domainConfigurationName;
+    private @Nullable Output<String> domainConfigurationName;
 
-    public Output<String> domainConfigurationName() {
-        return this.domainConfigurationName == null ? Codegen.empty() : this.domainConfigurationName;
+    public Optional<Output<String>> domainConfigurationName() {
+        return Optional.ofNullable(this.domainConfigurationName);
     }
 
     @Import(name="domainConfigurationStatus")
-      private final @Nullable Output<DomainConfigurationStatus> domainConfigurationStatus;
+    private @Nullable Output<DomainConfigurationStatus> domainConfigurationStatus;
 
-    public Output<DomainConfigurationStatus> domainConfigurationStatus() {
-        return this.domainConfigurationStatus == null ? Codegen.empty() : this.domainConfigurationStatus;
+    public Optional<Output<DomainConfigurationStatus>> domainConfigurationStatus() {
+        return Optional.ofNullable(this.domainConfigurationStatus);
     }
 
     @Import(name="domainName")
-      private final @Nullable Output<String> domainName;
+    private @Nullable Output<String> domainName;
 
-    public Output<String> domainName() {
-        return this.domainName == null ? Codegen.empty() : this.domainName;
+    public Optional<Output<String>> domainName() {
+        return Optional.ofNullable(this.domainName);
     }
 
     @Import(name="serverCertificateArns")
-      private final @Nullable Output<List<String>> serverCertificateArns;
+    private @Nullable Output<List<String>> serverCertificateArns;
 
-    public Output<List<String>> serverCertificateArns() {
-        return this.serverCertificateArns == null ? Codegen.empty() : this.serverCertificateArns;
+    public Optional<Output<List<String>>> serverCertificateArns() {
+        return Optional.ofNullable(this.serverCertificateArns);
     }
 
     @Import(name="serviceType")
-      private final @Nullable Output<DomainConfigurationServiceType> serviceType;
+    private @Nullable Output<DomainConfigurationServiceType> serviceType;
 
-    public Output<DomainConfigurationServiceType> serviceType() {
-        return this.serviceType == null ? Codegen.empty() : this.serviceType;
+    public Optional<Output<DomainConfigurationServiceType>> serviceType() {
+        return Optional.ofNullable(this.serviceType);
     }
 
     @Import(name="tags")
-      private final @Nullable Output<List<DomainConfigurationTagArgs>> tags;
+    private @Nullable Output<List<DomainConfigurationTagArgs>> tags;
 
-    public Output<List<DomainConfigurationTagArgs>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<List<DomainConfigurationTagArgs>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     @Import(name="validationCertificateArn")
-      private final @Nullable Output<String> validationCertificateArn;
+    private @Nullable Output<String> validationCertificateArn;
 
-    public Output<String> validationCertificateArn() {
-        return this.validationCertificateArn == null ? Codegen.empty() : this.validationCertificateArn;
+    public Optional<Output<String>> validationCertificateArn() {
+        return Optional.ofNullable(this.validationCertificateArn);
     }
 
-    public DomainConfigurationArgs(
-        @Nullable Output<DomainConfigurationAuthorizerConfigArgs> authorizerConfig,
-        @Nullable Output<String> domainConfigurationName,
-        @Nullable Output<DomainConfigurationStatus> domainConfigurationStatus,
-        @Nullable Output<String> domainName,
-        @Nullable Output<List<String>> serverCertificateArns,
-        @Nullable Output<DomainConfigurationServiceType> serviceType,
-        @Nullable Output<List<DomainConfigurationTagArgs>> tags,
-        @Nullable Output<String> validationCertificateArn) {
-        this.authorizerConfig = authorizerConfig;
-        this.domainConfigurationName = domainConfigurationName;
-        this.domainConfigurationStatus = domainConfigurationStatus;
-        this.domainName = domainName;
-        this.serverCertificateArns = serverCertificateArns;
-        this.serviceType = serviceType;
-        this.tags = tags;
-        this.validationCertificateArn = validationCertificateArn;
-    }
+    private DomainConfigurationArgs() {}
 
-    private DomainConfigurationArgs() {
-        this.authorizerConfig = Codegen.empty();
-        this.domainConfigurationName = Codegen.empty();
-        this.domainConfigurationStatus = Codegen.empty();
-        this.domainName = Codegen.empty();
-        this.serverCertificateArns = Codegen.empty();
-        this.serviceType = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.validationCertificateArn = Codegen.empty();
+    private DomainConfigurationArgs(DomainConfigurationArgs $) {
+        this.authorizerConfig = $.authorizerConfig;
+        this.domainConfigurationName = $.domainConfigurationName;
+        this.domainConfigurationStatus = $.domainConfigurationStatus;
+        this.domainName = $.domainName;
+        this.serverCertificateArns = $.serverCertificateArns;
+        this.serviceType = $.serviceType;
+        this.tags = $.tags;
+        this.validationCertificateArn = $.validationCertificateArn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DomainConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<DomainConfigurationAuthorizerConfigArgs> authorizerConfig;
-        private @Nullable Output<String> domainConfigurationName;
-        private @Nullable Output<DomainConfigurationStatus> domainConfigurationStatus;
-        private @Nullable Output<String> domainName;
-        private @Nullable Output<List<String>> serverCertificateArns;
-        private @Nullable Output<DomainConfigurationServiceType> serviceType;
-        private @Nullable Output<List<DomainConfigurationTagArgs>> tags;
-        private @Nullable Output<String> validationCertificateArn;
+        private DomainConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DomainConfigurationArgs();
         }
 
         public Builder(DomainConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.authorizerConfig = defaults.authorizerConfig;
-    	      this.domainConfigurationName = defaults.domainConfigurationName;
-    	      this.domainConfigurationStatus = defaults.domainConfigurationStatus;
-    	      this.domainName = defaults.domainName;
-    	      this.serverCertificateArns = defaults.serverCertificateArns;
-    	      this.serviceType = defaults.serviceType;
-    	      this.tags = defaults.tags;
-    	      this.validationCertificateArn = defaults.validationCertificateArn;
+            $ = new DomainConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder authorizerConfig(@Nullable Output<DomainConfigurationAuthorizerConfigArgs> authorizerConfig) {
-            this.authorizerConfig = authorizerConfig;
+            $.authorizerConfig = authorizerConfig;
             return this;
         }
-        public Builder authorizerConfig(@Nullable DomainConfigurationAuthorizerConfigArgs authorizerConfig) {
-            this.authorizerConfig = Codegen.ofNullable(authorizerConfig);
-            return this;
+
+        public Builder authorizerConfig(DomainConfigurationAuthorizerConfigArgs authorizerConfig) {
+            return authorizerConfig(Output.of(authorizerConfig));
         }
+
         public Builder domainConfigurationName(@Nullable Output<String> domainConfigurationName) {
-            this.domainConfigurationName = domainConfigurationName;
+            $.domainConfigurationName = domainConfigurationName;
             return this;
         }
-        public Builder domainConfigurationName(@Nullable String domainConfigurationName) {
-            this.domainConfigurationName = Codegen.ofNullable(domainConfigurationName);
-            return this;
+
+        public Builder domainConfigurationName(String domainConfigurationName) {
+            return domainConfigurationName(Output.of(domainConfigurationName));
         }
+
         public Builder domainConfigurationStatus(@Nullable Output<DomainConfigurationStatus> domainConfigurationStatus) {
-            this.domainConfigurationStatus = domainConfigurationStatus;
+            $.domainConfigurationStatus = domainConfigurationStatus;
             return this;
         }
-        public Builder domainConfigurationStatus(@Nullable DomainConfigurationStatus domainConfigurationStatus) {
-            this.domainConfigurationStatus = Codegen.ofNullable(domainConfigurationStatus);
-            return this;
+
+        public Builder domainConfigurationStatus(DomainConfigurationStatus domainConfigurationStatus) {
+            return domainConfigurationStatus(Output.of(domainConfigurationStatus));
         }
+
         public Builder domainName(@Nullable Output<String> domainName) {
-            this.domainName = domainName;
+            $.domainName = domainName;
             return this;
         }
-        public Builder domainName(@Nullable String domainName) {
-            this.domainName = Codegen.ofNullable(domainName);
-            return this;
+
+        public Builder domainName(String domainName) {
+            return domainName(Output.of(domainName));
         }
+
         public Builder serverCertificateArns(@Nullable Output<List<String>> serverCertificateArns) {
-            this.serverCertificateArns = serverCertificateArns;
+            $.serverCertificateArns = serverCertificateArns;
             return this;
         }
-        public Builder serverCertificateArns(@Nullable List<String> serverCertificateArns) {
-            this.serverCertificateArns = Codegen.ofNullable(serverCertificateArns);
-            return this;
+
+        public Builder serverCertificateArns(List<String> serverCertificateArns) {
+            return serverCertificateArns(Output.of(serverCertificateArns));
         }
+
         public Builder serverCertificateArns(String... serverCertificateArns) {
             return serverCertificateArns(List.of(serverCertificateArns));
         }
+
         public Builder serviceType(@Nullable Output<DomainConfigurationServiceType> serviceType) {
-            this.serviceType = serviceType;
+            $.serviceType = serviceType;
             return this;
         }
-        public Builder serviceType(@Nullable DomainConfigurationServiceType serviceType) {
-            this.serviceType = Codegen.ofNullable(serviceType);
-            return this;
+
+        public Builder serviceType(DomainConfigurationServiceType serviceType) {
+            return serviceType(Output.of(serviceType));
         }
+
         public Builder tags(@Nullable Output<List<DomainConfigurationTagArgs>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable List<DomainConfigurationTagArgs> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(List<DomainConfigurationTagArgs> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tags(DomainConfigurationTagArgs... tags) {
             return tags(List.of(tags));
         }
+
         public Builder validationCertificateArn(@Nullable Output<String> validationCertificateArn) {
-            this.validationCertificateArn = validationCertificateArn;
+            $.validationCertificateArn = validationCertificateArn;
             return this;
         }
-        public Builder validationCertificateArn(@Nullable String validationCertificateArn) {
-            this.validationCertificateArn = Codegen.ofNullable(validationCertificateArn);
-            return this;
-        }        public DomainConfigurationArgs build() {
-            return new DomainConfigurationArgs(authorizerConfig, domainConfigurationName, domainConfigurationStatus, domainName, serverCertificateArns, serviceType, tags, validationCertificateArn);
+
+        public Builder validationCertificateArn(String validationCertificateArn) {
+            return validationCertificateArn(Output.of(validationCertificateArn));
+        }
+
+        public DomainConfigurationArgs build() {
+            return $;
         }
     }
+
 }

@@ -22,7 +22,7 @@ public final class StandardSqlDataTypeResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="arrayElementType", required=true)
-      private final StandardSqlDataTypeResponse arrayElementType;
+    private StandardSqlDataTypeResponse arrayElementType;
 
     public StandardSqlDataTypeResponse arrayElementType() {
         return this.arrayElementType;
@@ -33,7 +33,7 @@ public final class StandardSqlDataTypeResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="structType", required=true)
-      private final StandardSqlStructTypeResponse structType;
+    private StandardSqlStructTypeResponse structType;
 
     public StandardSqlStructTypeResponse structType() {
         return this.structType;
@@ -44,64 +44,59 @@ public final class StandardSqlDataTypeResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="typeKind", required=true)
-      private final String typeKind;
+    private String typeKind;
 
     public String typeKind() {
         return this.typeKind;
     }
 
-    public StandardSqlDataTypeResponse(
-        StandardSqlDataTypeResponse arrayElementType,
-        StandardSqlStructTypeResponse structType,
-        String typeKind) {
-        this.arrayElementType = Objects.requireNonNull(arrayElementType, "expected parameter 'arrayElementType' to be non-null");
-        this.structType = Objects.requireNonNull(structType, "expected parameter 'structType' to be non-null");
-        this.typeKind = Objects.requireNonNull(typeKind, "expected parameter 'typeKind' to be non-null");
-    }
+    private StandardSqlDataTypeResponse() {}
 
-    private StandardSqlDataTypeResponse() {
-        this.arrayElementType = null;
-        this.structType = null;
-        this.typeKind = null;
+    private StandardSqlDataTypeResponse(StandardSqlDataTypeResponse $) {
+        this.arrayElementType = $.arrayElementType;
+        this.structType = $.structType;
+        this.typeKind = $.typeKind;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(StandardSqlDataTypeResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private StandardSqlDataTypeResponse arrayElementType;
-        private StandardSqlStructTypeResponse structType;
-        private String typeKind;
+        private StandardSqlDataTypeResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new StandardSqlDataTypeResponse();
         }
 
         public Builder(StandardSqlDataTypeResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.arrayElementType = defaults.arrayElementType;
-    	      this.structType = defaults.structType;
-    	      this.typeKind = defaults.typeKind;
+            $ = new StandardSqlDataTypeResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder arrayElementType(StandardSqlDataTypeResponse arrayElementType) {
-            this.arrayElementType = Objects.requireNonNull(arrayElementType);
+            $.arrayElementType = arrayElementType;
             return this;
         }
+
         public Builder structType(StandardSqlStructTypeResponse structType) {
-            this.structType = Objects.requireNonNull(structType);
+            $.structType = structType;
             return this;
         }
+
         public Builder typeKind(String typeKind) {
-            this.typeKind = Objects.requireNonNull(typeKind);
+            $.typeKind = typeKind;
             return this;
-        }        public StandardSqlDataTypeResponse build() {
-            return new StandardSqlDataTypeResponse(arrayElementType, structType, typeKind);
+        }
+
+        public StandardSqlDataTypeResponse build() {
+            $.arrayElementType = Objects.requireNonNull($.arrayElementType, "expected parameter 'arrayElementType' to be non-null");
+            $.structType = Objects.requireNonNull($.structType, "expected parameter 'structType' to be non-null");
+            $.typeKind = Objects.requireNonNull($.typeKind, "expected parameter 'typeKind' to be non-null");
+            return $;
         }
     }
+
 }

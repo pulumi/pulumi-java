@@ -8,10 +8,10 @@ import com.pulumi.azurenative.datafactory.inputs.MappingDataFlowArgs;
 import com.pulumi.azurenative.datafactory.inputs.WranglingDataFlowArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class DataFlowArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="dataFlowName")
-      private final @Nullable Output<String> dataFlowName;
+    private @Nullable Output<String> dataFlowName;
 
-    public Output<String> dataFlowName() {
-        return this.dataFlowName == null ? Codegen.empty() : this.dataFlowName;
+    public Optional<Output<String>> dataFlowName() {
+        return Optional.ofNullable(this.dataFlowName);
     }
 
     /**
@@ -35,7 +35,7 @@ public final class DataFlowArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="factoryName", required=true)
-      private final Output<String> factoryName;
+    private Output<String> factoryName;
 
     public Output<String> factoryName() {
         return this.factoryName;
@@ -46,7 +46,7 @@ public final class DataFlowArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="properties", required=true)
-      private final Output<Object> properties;
+    private Output<Object> properties;
 
     public Output<Object> properties() {
         return this.properties;
@@ -57,89 +57,81 @@ public final class DataFlowArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public DataFlowArgs(
-        @Nullable Output<String> dataFlowName,
-        Output<String> factoryName,
-        Output<Object> properties,
-        Output<String> resourceGroupName) {
-        this.dataFlowName = dataFlowName;
-        this.factoryName = Objects.requireNonNull(factoryName, "expected parameter 'factoryName' to be non-null");
-        this.properties = Objects.requireNonNull(properties, "expected parameter 'properties' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private DataFlowArgs() {}
 
-    private DataFlowArgs() {
-        this.dataFlowName = Codegen.empty();
-        this.factoryName = Codegen.empty();
-        this.properties = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
+    private DataFlowArgs(DataFlowArgs $) {
+        this.dataFlowName = $.dataFlowName;
+        this.factoryName = $.factoryName;
+        this.properties = $.properties;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DataFlowArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> dataFlowName;
-        private Output<String> factoryName;
-        private Output<Object> properties;
-        private Output<String> resourceGroupName;
+        private DataFlowArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DataFlowArgs();
         }
 
         public Builder(DataFlowArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dataFlowName = defaults.dataFlowName;
-    	      this.factoryName = defaults.factoryName;
-    	      this.properties = defaults.properties;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new DataFlowArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder dataFlowName(@Nullable Output<String> dataFlowName) {
-            this.dataFlowName = dataFlowName;
+            $.dataFlowName = dataFlowName;
             return this;
         }
-        public Builder dataFlowName(@Nullable String dataFlowName) {
-            this.dataFlowName = Codegen.ofNullable(dataFlowName);
-            return this;
+
+        public Builder dataFlowName(String dataFlowName) {
+            return dataFlowName(Output.of(dataFlowName));
         }
+
         public Builder factoryName(Output<String> factoryName) {
-            this.factoryName = Objects.requireNonNull(factoryName);
+            $.factoryName = factoryName;
             return this;
         }
+
         public Builder factoryName(String factoryName) {
-            this.factoryName = Output.of(Objects.requireNonNull(factoryName));
-            return this;
+            return factoryName(Output.of(factoryName));
         }
+
         public Builder properties(Output<Object> properties) {
-            this.properties = Objects.requireNonNull(properties);
+            $.properties = properties;
             return this;
         }
+
         public Builder properties(Object properties) {
-            this.properties = Output.of(Objects.requireNonNull(properties));
-            return this;
+            return properties(Output.of(properties));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
-        }        public DataFlowArgs build() {
-            return new DataFlowArgs(dataFlowName, factoryName, properties, resourceGroupName);
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        public DataFlowArgs build() {
+            $.factoryName = Objects.requireNonNull($.factoryName, "expected parameter 'factoryName' to be non-null");
+            $.properties = Objects.requireNonNull($.properties, "expected parameter 'properties' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

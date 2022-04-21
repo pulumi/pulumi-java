@@ -21,7 +21,7 @@ public final class JobReferenceResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="jobId", required=true)
-      private final String jobId;
+    private String jobId;
 
     public String jobId() {
         return this.jobId;
@@ -32,55 +32,52 @@ public final class JobReferenceResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="project", required=true)
-      private final String project;
+    private String project;
 
     public String project() {
         return this.project;
     }
 
-    public JobReferenceResponse(
-        String jobId,
-        String project) {
-        this.jobId = Objects.requireNonNull(jobId, "expected parameter 'jobId' to be non-null");
-        this.project = Objects.requireNonNull(project, "expected parameter 'project' to be non-null");
-    }
+    private JobReferenceResponse() {}
 
-    private JobReferenceResponse() {
-        this.jobId = null;
-        this.project = null;
+    private JobReferenceResponse(JobReferenceResponse $) {
+        this.jobId = $.jobId;
+        this.project = $.project;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(JobReferenceResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String jobId;
-        private String project;
+        private JobReferenceResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new JobReferenceResponse();
         }
 
         public Builder(JobReferenceResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.jobId = defaults.jobId;
-    	      this.project = defaults.project;
+            $ = new JobReferenceResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder jobId(String jobId) {
-            this.jobId = Objects.requireNonNull(jobId);
+            $.jobId = jobId;
             return this;
         }
+
         public Builder project(String project) {
-            this.project = Objects.requireNonNull(project);
+            $.project = project;
             return this;
-        }        public JobReferenceResponse build() {
-            return new JobReferenceResponse(jobId, project);
+        }
+
+        public JobReferenceResponse build() {
+            $.jobId = Objects.requireNonNull($.jobId, "expected parameter 'jobId' to be non-null");
+            $.project = Objects.requireNonNull($.project, "expected parameter 'project' to be non-null");
+            return $;
         }
     }
+
 }

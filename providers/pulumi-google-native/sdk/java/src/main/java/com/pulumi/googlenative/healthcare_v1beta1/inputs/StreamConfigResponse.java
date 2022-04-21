@@ -23,7 +23,7 @@ public final class StreamConfigResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="bigqueryDestination", required=true)
-      private final GoogleCloudHealthcareV1beta1FhirBigQueryDestinationResponse bigqueryDestination;
+    private GoogleCloudHealthcareV1beta1FhirBigQueryDestinationResponse bigqueryDestination;
 
     public GoogleCloudHealthcareV1beta1FhirBigQueryDestinationResponse bigqueryDestination() {
         return this.bigqueryDestination;
@@ -34,58 +34,56 @@ public final class StreamConfigResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="resourceTypes", required=true)
-      private final List<String> resourceTypes;
+    private List<String> resourceTypes;
 
     public List<String> resourceTypes() {
         return this.resourceTypes;
     }
 
-    public StreamConfigResponse(
-        GoogleCloudHealthcareV1beta1FhirBigQueryDestinationResponse bigqueryDestination,
-        List<String> resourceTypes) {
-        this.bigqueryDestination = Objects.requireNonNull(bigqueryDestination, "expected parameter 'bigqueryDestination' to be non-null");
-        this.resourceTypes = Objects.requireNonNull(resourceTypes, "expected parameter 'resourceTypes' to be non-null");
-    }
+    private StreamConfigResponse() {}
 
-    private StreamConfigResponse() {
-        this.bigqueryDestination = null;
-        this.resourceTypes = List.of();
+    private StreamConfigResponse(StreamConfigResponse $) {
+        this.bigqueryDestination = $.bigqueryDestination;
+        this.resourceTypes = $.resourceTypes;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(StreamConfigResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private GoogleCloudHealthcareV1beta1FhirBigQueryDestinationResponse bigqueryDestination;
-        private List<String> resourceTypes;
+        private StreamConfigResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new StreamConfigResponse();
         }
 
         public Builder(StreamConfigResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.bigqueryDestination = defaults.bigqueryDestination;
-    	      this.resourceTypes = defaults.resourceTypes;
+            $ = new StreamConfigResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder bigqueryDestination(GoogleCloudHealthcareV1beta1FhirBigQueryDestinationResponse bigqueryDestination) {
-            this.bigqueryDestination = Objects.requireNonNull(bigqueryDestination);
+            $.bigqueryDestination = bigqueryDestination;
             return this;
         }
+
         public Builder resourceTypes(List<String> resourceTypes) {
-            this.resourceTypes = Objects.requireNonNull(resourceTypes);
+            $.resourceTypes = resourceTypes;
             return this;
         }
+
         public Builder resourceTypes(String... resourceTypes) {
             return resourceTypes(List.of(resourceTypes));
-        }        public StreamConfigResponse build() {
-            return new StreamConfigResponse(bigqueryDestination, resourceTypes);
+        }
+
+        public StreamConfigResponse build() {
+            $.bigqueryDestination = Objects.requireNonNull($.bigqueryDestination, "expected parameter 'bigqueryDestination' to be non-null");
+            $.resourceTypes = Objects.requireNonNull($.resourceTypes, "expected parameter 'resourceTypes' to be non-null");
+            return $;
         }
     }
+
 }

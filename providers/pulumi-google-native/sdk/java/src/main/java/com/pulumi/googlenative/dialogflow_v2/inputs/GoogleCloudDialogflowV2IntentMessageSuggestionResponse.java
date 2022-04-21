@@ -21,45 +21,45 @@ public final class GoogleCloudDialogflowV2IntentMessageSuggestionResponse extend
      * 
      */
     @Import(name="title", required=true)
-      private final String title;
+    private String title;
 
     public String title() {
         return this.title;
     }
 
-    public GoogleCloudDialogflowV2IntentMessageSuggestionResponse(String title) {
-        this.title = Objects.requireNonNull(title, "expected parameter 'title' to be non-null");
-    }
+    private GoogleCloudDialogflowV2IntentMessageSuggestionResponse() {}
 
-    private GoogleCloudDialogflowV2IntentMessageSuggestionResponse() {
-        this.title = null;
+    private GoogleCloudDialogflowV2IntentMessageSuggestionResponse(GoogleCloudDialogflowV2IntentMessageSuggestionResponse $) {
+        this.title = $.title;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudDialogflowV2IntentMessageSuggestionResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String title;
+        private GoogleCloudDialogflowV2IntentMessageSuggestionResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudDialogflowV2IntentMessageSuggestionResponse();
         }
 
         public Builder(GoogleCloudDialogflowV2IntentMessageSuggestionResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.title = defaults.title;
+            $ = new GoogleCloudDialogflowV2IntentMessageSuggestionResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder title(String title) {
-            this.title = Objects.requireNonNull(title);
+            $.title = title;
             return this;
-        }        public GoogleCloudDialogflowV2IntentMessageSuggestionResponse build() {
-            return new GoogleCloudDialogflowV2IntentMessageSuggestionResponse(title);
+        }
+
+        public GoogleCloudDialogflowV2IntentMessageSuggestionResponse build() {
+            $.title = Objects.requireNonNull($.title, "expected parameter 'title' to be non-null");
+            return $;
         }
     }
+
 }

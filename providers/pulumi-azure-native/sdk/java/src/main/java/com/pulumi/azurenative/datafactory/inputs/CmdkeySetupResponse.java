@@ -26,7 +26,7 @@ public final class CmdkeySetupResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="password", required=true)
-      private final Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password;
+    private Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password;
 
     public Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password() {
         return this.password;
@@ -37,7 +37,7 @@ public final class CmdkeySetupResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="targetName", required=true)
-      private final Object targetName;
+    private Object targetName;
 
     public Object targetName() {
         return this.targetName;
@@ -49,7 +49,7 @@ public final class CmdkeySetupResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
@@ -60,73 +60,66 @@ public final class CmdkeySetupResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="userName", required=true)
-      private final Object userName;
+    private Object userName;
 
     public Object userName() {
         return this.userName;
     }
 
-    public CmdkeySetupResponse(
-        Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password,
-        Object targetName,
-        String type,
-        Object userName) {
-        this.password = Objects.requireNonNull(password, "expected parameter 'password' to be non-null");
-        this.targetName = Objects.requireNonNull(targetName, "expected parameter 'targetName' to be non-null");
-        this.type = Codegen.stringProp("type").arg(type).require();
-        this.userName = Objects.requireNonNull(userName, "expected parameter 'userName' to be non-null");
-    }
+    private CmdkeySetupResponse() {}
 
-    private CmdkeySetupResponse() {
-        this.password = null;
-        this.targetName = null;
-        this.type = null;
-        this.userName = null;
+    private CmdkeySetupResponse(CmdkeySetupResponse $) {
+        this.password = $.password;
+        this.targetName = $.targetName;
+        this.type = $.type;
+        this.userName = $.userName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CmdkeySetupResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password;
-        private Object targetName;
-        private String type;
-        private Object userName;
+        private CmdkeySetupResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new CmdkeySetupResponse();
         }
 
         public Builder(CmdkeySetupResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.password = defaults.password;
-    	      this.targetName = defaults.targetName;
-    	      this.type = defaults.type;
-    	      this.userName = defaults.userName;
+            $ = new CmdkeySetupResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder password(Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password) {
-            this.password = Objects.requireNonNull(password);
+            $.password = password;
             return this;
         }
+
         public Builder targetName(Object targetName) {
-            this.targetName = Objects.requireNonNull(targetName);
+            $.targetName = targetName;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder userName(Object userName) {
-            this.userName = Objects.requireNonNull(userName);
+            $.userName = userName;
             return this;
-        }        public CmdkeySetupResponse build() {
-            return new CmdkeySetupResponse(password, targetName, type, userName);
+        }
+
+        public CmdkeySetupResponse build() {
+            $.password = Objects.requireNonNull($.password, "expected parameter 'password' to be non-null");
+            $.targetName = Objects.requireNonNull($.targetName, "expected parameter 'targetName' to be non-null");
+            $.type = Codegen.stringProp("type").arg($.type).require();
+            $.userName = Objects.requireNonNull($.userName, "expected parameter 'userName' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,10 +5,10 @@ package com.pulumi.googlenative.monitoring_v3.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.monitoring_v3.inputs.DistributionCutArgs;
 import com.pulumi.googlenative.monitoring_v3.inputs.TimeSeriesRatioArgs;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class RequestBasedSliArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="distributionCut")
-      private final @Nullable Output<DistributionCutArgs> distributionCut;
+    private @Nullable Output<DistributionCutArgs> distributionCut;
 
-    public Output<DistributionCutArgs> distributionCut() {
-        return this.distributionCut == null ? Codegen.empty() : this.distributionCut;
+    public Optional<Output<DistributionCutArgs>> distributionCut() {
+        return Optional.ofNullable(this.distributionCut);
     }
 
     /**
@@ -36,63 +36,58 @@ public final class RequestBasedSliArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="goodTotalRatio")
-      private final @Nullable Output<TimeSeriesRatioArgs> goodTotalRatio;
+    private @Nullable Output<TimeSeriesRatioArgs> goodTotalRatio;
 
-    public Output<TimeSeriesRatioArgs> goodTotalRatio() {
-        return this.goodTotalRatio == null ? Codegen.empty() : this.goodTotalRatio;
+    public Optional<Output<TimeSeriesRatioArgs>> goodTotalRatio() {
+        return Optional.ofNullable(this.goodTotalRatio);
     }
 
-    public RequestBasedSliArgs(
-        @Nullable Output<DistributionCutArgs> distributionCut,
-        @Nullable Output<TimeSeriesRatioArgs> goodTotalRatio) {
-        this.distributionCut = distributionCut;
-        this.goodTotalRatio = goodTotalRatio;
-    }
+    private RequestBasedSliArgs() {}
 
-    private RequestBasedSliArgs() {
-        this.distributionCut = Codegen.empty();
-        this.goodTotalRatio = Codegen.empty();
+    private RequestBasedSliArgs(RequestBasedSliArgs $) {
+        this.distributionCut = $.distributionCut;
+        this.goodTotalRatio = $.goodTotalRatio;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RequestBasedSliArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<DistributionCutArgs> distributionCut;
-        private @Nullable Output<TimeSeriesRatioArgs> goodTotalRatio;
+        private RequestBasedSliArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RequestBasedSliArgs();
         }
 
         public Builder(RequestBasedSliArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.distributionCut = defaults.distributionCut;
-    	      this.goodTotalRatio = defaults.goodTotalRatio;
+            $ = new RequestBasedSliArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder distributionCut(@Nullable Output<DistributionCutArgs> distributionCut) {
-            this.distributionCut = distributionCut;
+            $.distributionCut = distributionCut;
             return this;
         }
-        public Builder distributionCut(@Nullable DistributionCutArgs distributionCut) {
-            this.distributionCut = Codegen.ofNullable(distributionCut);
-            return this;
+
+        public Builder distributionCut(DistributionCutArgs distributionCut) {
+            return distributionCut(Output.of(distributionCut));
         }
+
         public Builder goodTotalRatio(@Nullable Output<TimeSeriesRatioArgs> goodTotalRatio) {
-            this.goodTotalRatio = goodTotalRatio;
+            $.goodTotalRatio = goodTotalRatio;
             return this;
         }
-        public Builder goodTotalRatio(@Nullable TimeSeriesRatioArgs goodTotalRatio) {
-            this.goodTotalRatio = Codegen.ofNullable(goodTotalRatio);
-            return this;
-        }        public RequestBasedSliArgs build() {
-            return new RequestBasedSliArgs(distributionCut, goodTotalRatio);
+
+        public Builder goodTotalRatio(TimeSeriesRatioArgs goodTotalRatio) {
+            return goodTotalRatio(Output.of(goodTotalRatio));
+        }
+
+        public RequestBasedSliArgs build() {
+            return $;
         }
     }
+
 }

@@ -17,7 +17,7 @@ public final class ErrorProtoResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="debugInfo", required=true)
-      private final String debugInfo;
+    private String debugInfo;
 
     public String debugInfo() {
         return this.debugInfo;
@@ -28,7 +28,7 @@ public final class ErrorProtoResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="location", required=true)
-      private final String location;
+    private String location;
 
     public String location() {
         return this.location;
@@ -39,7 +39,7 @@ public final class ErrorProtoResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="message", required=true)
-      private final String message;
+    private String message;
 
     public String message() {
         return this.message;
@@ -50,73 +50,66 @@ public final class ErrorProtoResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="reason", required=true)
-      private final String reason;
+    private String reason;
 
     public String reason() {
         return this.reason;
     }
 
-    public ErrorProtoResponse(
-        String debugInfo,
-        String location,
-        String message,
-        String reason) {
-        this.debugInfo = Objects.requireNonNull(debugInfo, "expected parameter 'debugInfo' to be non-null");
-        this.location = Objects.requireNonNull(location, "expected parameter 'location' to be non-null");
-        this.message = Objects.requireNonNull(message, "expected parameter 'message' to be non-null");
-        this.reason = Objects.requireNonNull(reason, "expected parameter 'reason' to be non-null");
-    }
+    private ErrorProtoResponse() {}
 
-    private ErrorProtoResponse() {
-        this.debugInfo = null;
-        this.location = null;
-        this.message = null;
-        this.reason = null;
+    private ErrorProtoResponse(ErrorProtoResponse $) {
+        this.debugInfo = $.debugInfo;
+        this.location = $.location;
+        this.message = $.message;
+        this.reason = $.reason;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ErrorProtoResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String debugInfo;
-        private String location;
-        private String message;
-        private String reason;
+        private ErrorProtoResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ErrorProtoResponse();
         }
 
         public Builder(ErrorProtoResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.debugInfo = defaults.debugInfo;
-    	      this.location = defaults.location;
-    	      this.message = defaults.message;
-    	      this.reason = defaults.reason;
+            $ = new ErrorProtoResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder debugInfo(String debugInfo) {
-            this.debugInfo = Objects.requireNonNull(debugInfo);
+            $.debugInfo = debugInfo;
             return this;
         }
+
         public Builder location(String location) {
-            this.location = Objects.requireNonNull(location);
+            $.location = location;
             return this;
         }
+
         public Builder message(String message) {
-            this.message = Objects.requireNonNull(message);
+            $.message = message;
             return this;
         }
+
         public Builder reason(String reason) {
-            this.reason = Objects.requireNonNull(reason);
+            $.reason = reason;
             return this;
-        }        public ErrorProtoResponse build() {
-            return new ErrorProtoResponse(debugInfo, location, message, reason);
+        }
+
+        public ErrorProtoResponse build() {
+            $.debugInfo = Objects.requireNonNull($.debugInfo, "expected parameter 'debugInfo' to be non-null");
+            $.location = Objects.requireNonNull($.location, "expected parameter 'location' to be non-null");
+            $.message = Objects.requireNonNull($.message, "expected parameter 'message' to be non-null");
+            $.reason = Objects.requireNonNull($.reason, "expected parameter 'reason' to be non-null");
+            return $;
         }
     }
+
 }

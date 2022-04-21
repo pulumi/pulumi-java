@@ -25,10 +25,10 @@ public final class PrivateDnsZoneConfigResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="name")
-      private final @Nullable String name;
+    private @Nullable String name;
 
     public Optional<String> name() {
-        return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class PrivateDnsZoneConfigResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="privateDnsZoneId")
-      private final @Nullable String privateDnsZoneId;
+    private @Nullable String privateDnsZoneId;
 
     public Optional<String> privateDnsZoneId() {
-        return this.privateDnsZoneId == null ? Optional.empty() : Optional.ofNullable(this.privateDnsZoneId);
+        return Optional.ofNullable(this.privateDnsZoneId);
     }
 
     /**
@@ -47,67 +47,61 @@ public final class PrivateDnsZoneConfigResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="recordSets", required=true)
-      private final List<RecordSetResponse> recordSets;
+    private List<RecordSetResponse> recordSets;
 
     public List<RecordSetResponse> recordSets() {
         return this.recordSets;
     }
 
-    public PrivateDnsZoneConfigResponse(
-        @Nullable String name,
-        @Nullable String privateDnsZoneId,
-        List<RecordSetResponse> recordSets) {
-        this.name = name;
-        this.privateDnsZoneId = privateDnsZoneId;
-        this.recordSets = Objects.requireNonNull(recordSets, "expected parameter 'recordSets' to be non-null");
-    }
+    private PrivateDnsZoneConfigResponse() {}
 
-    private PrivateDnsZoneConfigResponse() {
-        this.name = null;
-        this.privateDnsZoneId = null;
-        this.recordSets = List.of();
+    private PrivateDnsZoneConfigResponse(PrivateDnsZoneConfigResponse $) {
+        this.name = $.name;
+        this.privateDnsZoneId = $.privateDnsZoneId;
+        this.recordSets = $.recordSets;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PrivateDnsZoneConfigResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String name;
-        private @Nullable String privateDnsZoneId;
-        private List<RecordSetResponse> recordSets;
+        private PrivateDnsZoneConfigResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new PrivateDnsZoneConfigResponse();
         }
 
         public Builder(PrivateDnsZoneConfigResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.privateDnsZoneId = defaults.privateDnsZoneId;
-    	      this.recordSets = defaults.recordSets;
+            $ = new PrivateDnsZoneConfigResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder name(@Nullable String name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
+
         public Builder privateDnsZoneId(@Nullable String privateDnsZoneId) {
-            this.privateDnsZoneId = privateDnsZoneId;
+            $.privateDnsZoneId = privateDnsZoneId;
             return this;
         }
+
         public Builder recordSets(List<RecordSetResponse> recordSets) {
-            this.recordSets = Objects.requireNonNull(recordSets);
+            $.recordSets = recordSets;
             return this;
         }
+
         public Builder recordSets(RecordSetResponse... recordSets) {
             return recordSets(List.of(recordSets));
-        }        public PrivateDnsZoneConfigResponse build() {
-            return new PrivateDnsZoneConfigResponse(name, privateDnsZoneId, recordSets);
+        }
+
+        public PrivateDnsZoneConfigResponse build() {
+            $.recordSets = Objects.requireNonNull($.recordSets, "expected parameter 'recordSets' to be non-null");
+            return $;
         }
     }
+
 }

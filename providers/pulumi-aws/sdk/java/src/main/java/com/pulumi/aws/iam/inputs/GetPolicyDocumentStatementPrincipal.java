@@ -18,7 +18,7 @@ public final class GetPolicyDocumentStatementPrincipal extends com.pulumi.resour
      * 
      */
     @Import(name="identifiers", required=true)
-      private final List<String> identifiers;
+    private List<String> identifiers;
 
     public List<String> identifiers() {
         return this.identifiers;
@@ -29,58 +29,56 @@ public final class GetPolicyDocumentStatementPrincipal extends com.pulumi.resour
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
     }
 
-    public GetPolicyDocumentStatementPrincipal(
-        List<String> identifiers,
-        String type) {
-        this.identifiers = Objects.requireNonNull(identifiers, "expected parameter 'identifiers' to be non-null");
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private GetPolicyDocumentStatementPrincipal() {}
 
-    private GetPolicyDocumentStatementPrincipal() {
-        this.identifiers = List.of();
-        this.type = null;
+    private GetPolicyDocumentStatementPrincipal(GetPolicyDocumentStatementPrincipal $) {
+        this.identifiers = $.identifiers;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetPolicyDocumentStatementPrincipal defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<String> identifiers;
-        private String type;
+        private GetPolicyDocumentStatementPrincipal $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetPolicyDocumentStatementPrincipal();
         }
 
         public Builder(GetPolicyDocumentStatementPrincipal defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.identifiers = defaults.identifiers;
-    	      this.type = defaults.type;
+            $ = new GetPolicyDocumentStatementPrincipal(Objects.requireNonNull(defaults));
         }
 
         public Builder identifiers(List<String> identifiers) {
-            this.identifiers = Objects.requireNonNull(identifiers);
+            $.identifiers = identifiers;
             return this;
         }
+
         public Builder identifiers(String... identifiers) {
             return identifiers(List.of(identifiers));
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
-        }        public GetPolicyDocumentStatementPrincipal build() {
-            return new GetPolicyDocumentStatementPrincipal(identifiers, type);
+        }
+
+        public GetPolicyDocumentStatementPrincipal build() {
+            $.identifiers = Objects.requireNonNull($.identifiers, "expected parameter 'identifiers' to be non-null");
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

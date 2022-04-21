@@ -5,10 +5,10 @@ package com.pulumi.gcp.compute.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.lang.Integer;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class RegionUrlMapPathMatcherRouteRuleRouteActionFaultInjectionPoli
      * 
      */
     @Import(name="httpStatus")
-      private final @Nullable Output<Integer> httpStatus;
+    private @Nullable Output<Integer> httpStatus;
 
-    public Output<Integer> httpStatus() {
-        return this.httpStatus == null ? Codegen.empty() : this.httpStatus;
+    public Optional<Output<Integer>> httpStatus() {
+        return Optional.ofNullable(this.httpStatus);
     }
 
     /**
@@ -35,63 +35,58 @@ public final class RegionUrlMapPathMatcherRouteRuleRouteActionFaultInjectionPoli
      * 
      */
     @Import(name="percentage")
-      private final @Nullable Output<Double> percentage;
+    private @Nullable Output<Double> percentage;
 
-    public Output<Double> percentage() {
-        return this.percentage == null ? Codegen.empty() : this.percentage;
+    public Optional<Output<Double>> percentage() {
+        return Optional.ofNullable(this.percentage);
     }
 
-    public RegionUrlMapPathMatcherRouteRuleRouteActionFaultInjectionPolicyAbortGetArgs(
-        @Nullable Output<Integer> httpStatus,
-        @Nullable Output<Double> percentage) {
-        this.httpStatus = httpStatus;
-        this.percentage = percentage;
-    }
+    private RegionUrlMapPathMatcherRouteRuleRouteActionFaultInjectionPolicyAbortGetArgs() {}
 
-    private RegionUrlMapPathMatcherRouteRuleRouteActionFaultInjectionPolicyAbortGetArgs() {
-        this.httpStatus = Codegen.empty();
-        this.percentage = Codegen.empty();
+    private RegionUrlMapPathMatcherRouteRuleRouteActionFaultInjectionPolicyAbortGetArgs(RegionUrlMapPathMatcherRouteRuleRouteActionFaultInjectionPolicyAbortGetArgs $) {
+        this.httpStatus = $.httpStatus;
+        this.percentage = $.percentage;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RegionUrlMapPathMatcherRouteRuleRouteActionFaultInjectionPolicyAbortGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> httpStatus;
-        private @Nullable Output<Double> percentage;
+        private RegionUrlMapPathMatcherRouteRuleRouteActionFaultInjectionPolicyAbortGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RegionUrlMapPathMatcherRouteRuleRouteActionFaultInjectionPolicyAbortGetArgs();
         }
 
         public Builder(RegionUrlMapPathMatcherRouteRuleRouteActionFaultInjectionPolicyAbortGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.httpStatus = defaults.httpStatus;
-    	      this.percentage = defaults.percentage;
+            $ = new RegionUrlMapPathMatcherRouteRuleRouteActionFaultInjectionPolicyAbortGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder httpStatus(@Nullable Output<Integer> httpStatus) {
-            this.httpStatus = httpStatus;
+            $.httpStatus = httpStatus;
             return this;
         }
-        public Builder httpStatus(@Nullable Integer httpStatus) {
-            this.httpStatus = Codegen.ofNullable(httpStatus);
-            return this;
+
+        public Builder httpStatus(Integer httpStatus) {
+            return httpStatus(Output.of(httpStatus));
         }
+
         public Builder percentage(@Nullable Output<Double> percentage) {
-            this.percentage = percentage;
+            $.percentage = percentage;
             return this;
         }
-        public Builder percentage(@Nullable Double percentage) {
-            this.percentage = Codegen.ofNullable(percentage);
-            return this;
-        }        public RegionUrlMapPathMatcherRouteRuleRouteActionFaultInjectionPolicyAbortGetArgs build() {
-            return new RegionUrlMapPathMatcherRouteRuleRouteActionFaultInjectionPolicyAbortGetArgs(httpStatus, percentage);
+
+        public Builder percentage(Double percentage) {
+            return percentage(Output.of(percentage));
+        }
+
+        public RegionUrlMapPathMatcherRouteRuleRouteActionFaultInjectionPolicyAbortGetArgs build() {
+            return $;
         }
     }
+
 }

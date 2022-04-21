@@ -23,7 +23,7 @@ public final class ParserConfigResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="allowNullHeader", required=true)
-      private final Boolean allowNullHeader;
+    private Boolean allowNullHeader;
 
     public Boolean allowNullHeader() {
         return this.allowNullHeader;
@@ -34,7 +34,7 @@ public final class ParserConfigResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="schema", required=true)
-      private final SchemaPackageResponse schema;
+    private SchemaPackageResponse schema;
 
     public SchemaPackageResponse schema() {
         return this.schema;
@@ -45,7 +45,7 @@ public final class ParserConfigResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="segmentTerminator", required=true)
-      private final String segmentTerminator;
+    private String segmentTerminator;
 
     public String segmentTerminator() {
         return this.segmentTerminator;
@@ -56,73 +56,66 @@ public final class ParserConfigResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="version", required=true)
-      private final String version;
+    private String version;
 
     public String version() {
         return this.version;
     }
 
-    public ParserConfigResponse(
-        Boolean allowNullHeader,
-        SchemaPackageResponse schema,
-        String segmentTerminator,
-        String version) {
-        this.allowNullHeader = Objects.requireNonNull(allowNullHeader, "expected parameter 'allowNullHeader' to be non-null");
-        this.schema = Objects.requireNonNull(schema, "expected parameter 'schema' to be non-null");
-        this.segmentTerminator = Objects.requireNonNull(segmentTerminator, "expected parameter 'segmentTerminator' to be non-null");
-        this.version = Objects.requireNonNull(version, "expected parameter 'version' to be non-null");
-    }
+    private ParserConfigResponse() {}
 
-    private ParserConfigResponse() {
-        this.allowNullHeader = null;
-        this.schema = null;
-        this.segmentTerminator = null;
-        this.version = null;
+    private ParserConfigResponse(ParserConfigResponse $) {
+        this.allowNullHeader = $.allowNullHeader;
+        this.schema = $.schema;
+        this.segmentTerminator = $.segmentTerminator;
+        this.version = $.version;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ParserConfigResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Boolean allowNullHeader;
-        private SchemaPackageResponse schema;
-        private String segmentTerminator;
-        private String version;
+        private ParserConfigResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ParserConfigResponse();
         }
 
         public Builder(ParserConfigResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.allowNullHeader = defaults.allowNullHeader;
-    	      this.schema = defaults.schema;
-    	      this.segmentTerminator = defaults.segmentTerminator;
-    	      this.version = defaults.version;
+            $ = new ParserConfigResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder allowNullHeader(Boolean allowNullHeader) {
-            this.allowNullHeader = Objects.requireNonNull(allowNullHeader);
+            $.allowNullHeader = allowNullHeader;
             return this;
         }
+
         public Builder schema(SchemaPackageResponse schema) {
-            this.schema = Objects.requireNonNull(schema);
+            $.schema = schema;
             return this;
         }
+
         public Builder segmentTerminator(String segmentTerminator) {
-            this.segmentTerminator = Objects.requireNonNull(segmentTerminator);
+            $.segmentTerminator = segmentTerminator;
             return this;
         }
+
         public Builder version(String version) {
-            this.version = Objects.requireNonNull(version);
+            $.version = version;
             return this;
-        }        public ParserConfigResponse build() {
-            return new ParserConfigResponse(allowNullHeader, schema, segmentTerminator, version);
+        }
+
+        public ParserConfigResponse build() {
+            $.allowNullHeader = Objects.requireNonNull($.allowNullHeader, "expected parameter 'allowNullHeader' to be non-null");
+            $.schema = Objects.requireNonNull($.schema, "expected parameter 'schema' to be non-null");
+            $.segmentTerminator = Objects.requireNonNull($.segmentTerminator, "expected parameter 'segmentTerminator' to be non-null");
+            $.version = Objects.requireNonNull($.version, "expected parameter 'version' to be non-null");
+            return $;
         }
     }
+
 }

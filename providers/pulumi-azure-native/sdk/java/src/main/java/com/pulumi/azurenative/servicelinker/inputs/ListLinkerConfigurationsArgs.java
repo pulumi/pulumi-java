@@ -17,7 +17,7 @@ public final class ListLinkerConfigurationsArgs extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="linkerName", required=true)
-      private final String linkerName;
+    private String linkerName;
 
     public String linkerName() {
         return this.linkerName;
@@ -28,55 +28,52 @@ public final class ListLinkerConfigurationsArgs extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="resourceUri", required=true)
-      private final String resourceUri;
+    private String resourceUri;
 
     public String resourceUri() {
         return this.resourceUri;
     }
 
-    public ListLinkerConfigurationsArgs(
-        String linkerName,
-        String resourceUri) {
-        this.linkerName = Objects.requireNonNull(linkerName, "expected parameter 'linkerName' to be non-null");
-        this.resourceUri = Objects.requireNonNull(resourceUri, "expected parameter 'resourceUri' to be non-null");
-    }
+    private ListLinkerConfigurationsArgs() {}
 
-    private ListLinkerConfigurationsArgs() {
-        this.linkerName = null;
-        this.resourceUri = null;
+    private ListLinkerConfigurationsArgs(ListLinkerConfigurationsArgs $) {
+        this.linkerName = $.linkerName;
+        this.resourceUri = $.resourceUri;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ListLinkerConfigurationsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String linkerName;
-        private String resourceUri;
+        private ListLinkerConfigurationsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ListLinkerConfigurationsArgs();
         }
 
         public Builder(ListLinkerConfigurationsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.linkerName = defaults.linkerName;
-    	      this.resourceUri = defaults.resourceUri;
+            $ = new ListLinkerConfigurationsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder linkerName(String linkerName) {
-            this.linkerName = Objects.requireNonNull(linkerName);
+            $.linkerName = linkerName;
             return this;
         }
+
         public Builder resourceUri(String resourceUri) {
-            this.resourceUri = Objects.requireNonNull(resourceUri);
+            $.resourceUri = resourceUri;
             return this;
-        }        public ListLinkerConfigurationsArgs build() {
-            return new ListLinkerConfigurationsArgs(linkerName, resourceUri);
+        }
+
+        public ListLinkerConfigurationsArgs build() {
+            $.linkerName = Objects.requireNonNull($.linkerName, "expected parameter 'linkerName' to be non-null");
+            $.resourceUri = Objects.requireNonNull($.resourceUri, "expected parameter 'resourceUri' to be non-null");
+            return $;
         }
     }
+
 }

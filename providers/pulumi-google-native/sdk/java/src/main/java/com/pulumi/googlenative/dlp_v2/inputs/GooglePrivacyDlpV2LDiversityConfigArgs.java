@@ -5,10 +5,10 @@ package com.pulumi.googlenative.dlp_v2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2FieldIdArgs;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class GooglePrivacyDlpV2LDiversityConfigArgs extends com.pulumi.res
      * 
      */
     @Import(name="quasiIds")
-      private final @Nullable Output<List<GooglePrivacyDlpV2FieldIdArgs>> quasiIds;
+    private @Nullable Output<List<GooglePrivacyDlpV2FieldIdArgs>> quasiIds;
 
-    public Output<List<GooglePrivacyDlpV2FieldIdArgs>> quasiIds() {
-        return this.quasiIds == null ? Codegen.empty() : this.quasiIds;
+    public Optional<Output<List<GooglePrivacyDlpV2FieldIdArgs>>> quasiIds() {
+        return Optional.ofNullable(this.quasiIds);
     }
 
     /**
@@ -36,66 +36,62 @@ public final class GooglePrivacyDlpV2LDiversityConfigArgs extends com.pulumi.res
      * 
      */
     @Import(name="sensitiveAttribute")
-      private final @Nullable Output<GooglePrivacyDlpV2FieldIdArgs> sensitiveAttribute;
+    private @Nullable Output<GooglePrivacyDlpV2FieldIdArgs> sensitiveAttribute;
 
-    public Output<GooglePrivacyDlpV2FieldIdArgs> sensitiveAttribute() {
-        return this.sensitiveAttribute == null ? Codegen.empty() : this.sensitiveAttribute;
+    public Optional<Output<GooglePrivacyDlpV2FieldIdArgs>> sensitiveAttribute() {
+        return Optional.ofNullable(this.sensitiveAttribute);
     }
 
-    public GooglePrivacyDlpV2LDiversityConfigArgs(
-        @Nullable Output<List<GooglePrivacyDlpV2FieldIdArgs>> quasiIds,
-        @Nullable Output<GooglePrivacyDlpV2FieldIdArgs> sensitiveAttribute) {
-        this.quasiIds = quasiIds;
-        this.sensitiveAttribute = sensitiveAttribute;
-    }
+    private GooglePrivacyDlpV2LDiversityConfigArgs() {}
 
-    private GooglePrivacyDlpV2LDiversityConfigArgs() {
-        this.quasiIds = Codegen.empty();
-        this.sensitiveAttribute = Codegen.empty();
+    private GooglePrivacyDlpV2LDiversityConfigArgs(GooglePrivacyDlpV2LDiversityConfigArgs $) {
+        this.quasiIds = $.quasiIds;
+        this.sensitiveAttribute = $.sensitiveAttribute;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GooglePrivacyDlpV2LDiversityConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<GooglePrivacyDlpV2FieldIdArgs>> quasiIds;
-        private @Nullable Output<GooglePrivacyDlpV2FieldIdArgs> sensitiveAttribute;
+        private GooglePrivacyDlpV2LDiversityConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GooglePrivacyDlpV2LDiversityConfigArgs();
         }
 
         public Builder(GooglePrivacyDlpV2LDiversityConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.quasiIds = defaults.quasiIds;
-    	      this.sensitiveAttribute = defaults.sensitiveAttribute;
+            $ = new GooglePrivacyDlpV2LDiversityConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder quasiIds(@Nullable Output<List<GooglePrivacyDlpV2FieldIdArgs>> quasiIds) {
-            this.quasiIds = quasiIds;
+            $.quasiIds = quasiIds;
             return this;
         }
-        public Builder quasiIds(@Nullable List<GooglePrivacyDlpV2FieldIdArgs> quasiIds) {
-            this.quasiIds = Codegen.ofNullable(quasiIds);
-            return this;
+
+        public Builder quasiIds(List<GooglePrivacyDlpV2FieldIdArgs> quasiIds) {
+            return quasiIds(Output.of(quasiIds));
         }
+
         public Builder quasiIds(GooglePrivacyDlpV2FieldIdArgs... quasiIds) {
             return quasiIds(List.of(quasiIds));
         }
+
         public Builder sensitiveAttribute(@Nullable Output<GooglePrivacyDlpV2FieldIdArgs> sensitiveAttribute) {
-            this.sensitiveAttribute = sensitiveAttribute;
+            $.sensitiveAttribute = sensitiveAttribute;
             return this;
         }
-        public Builder sensitiveAttribute(@Nullable GooglePrivacyDlpV2FieldIdArgs sensitiveAttribute) {
-            this.sensitiveAttribute = Codegen.ofNullable(sensitiveAttribute);
-            return this;
-        }        public GooglePrivacyDlpV2LDiversityConfigArgs build() {
-            return new GooglePrivacyDlpV2LDiversityConfigArgs(quasiIds, sensitiveAttribute);
+
+        public Builder sensitiveAttribute(GooglePrivacyDlpV2FieldIdArgs sensitiveAttribute) {
+            return sensitiveAttribute(Output.of(sensitiveAttribute));
+        }
+
+        public GooglePrivacyDlpV2LDiversityConfigArgs build() {
+            return $;
         }
     }
+
 }

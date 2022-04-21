@@ -5,9 +5,9 @@ package com.pulumi.googlenative.cloudfunctions_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.cloudfunctions_v1.inputs.RetryArgs;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class FailurePolicyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="retry")
-      private final @Nullable Output<RetryArgs> retry;
+    private @Nullable Output<RetryArgs> retry;
 
-    public Output<RetryArgs> retry() {
-        return this.retry == null ? Codegen.empty() : this.retry;
+    public Optional<Output<RetryArgs>> retry() {
+        return Optional.ofNullable(this.retry);
     }
 
-    public FailurePolicyArgs(@Nullable Output<RetryArgs> retry) {
-        this.retry = retry;
-    }
+    private FailurePolicyArgs() {}
 
-    private FailurePolicyArgs() {
-        this.retry = Codegen.empty();
+    private FailurePolicyArgs(FailurePolicyArgs $) {
+        this.retry = $.retry;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FailurePolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<RetryArgs> retry;
+        private FailurePolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new FailurePolicyArgs();
         }
 
         public Builder(FailurePolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.retry = defaults.retry;
+            $ = new FailurePolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder retry(@Nullable Output<RetryArgs> retry) {
-            this.retry = retry;
+            $.retry = retry;
             return this;
         }
-        public Builder retry(@Nullable RetryArgs retry) {
-            this.retry = Codegen.ofNullable(retry);
-            return this;
-        }        public FailurePolicyArgs build() {
-            return new FailurePolicyArgs(retry);
+
+        public Builder retry(RetryArgs retry) {
+            return retry(Output.of(retry));
+        }
+
+        public FailurePolicyArgs build() {
+            return $;
         }
     }
+
 }

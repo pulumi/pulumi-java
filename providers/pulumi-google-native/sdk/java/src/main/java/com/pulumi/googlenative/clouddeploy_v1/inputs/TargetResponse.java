@@ -27,7 +27,7 @@ public final class TargetResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="annotations", required=true)
-      private final Map<String,String> annotations;
+    private Map<String,String> annotations;
 
     public Map<String,String> annotations() {
         return this.annotations;
@@ -38,7 +38,7 @@ public final class TargetResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="anthosCluster", required=true)
-      private final AnthosClusterResponse anthosCluster;
+    private AnthosClusterResponse anthosCluster;
 
     public AnthosClusterResponse anthosCluster() {
         return this.anthosCluster;
@@ -49,7 +49,7 @@ public final class TargetResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="createTime", required=true)
-      private final String createTime;
+    private String createTime;
 
     public String createTime() {
         return this.createTime;
@@ -60,7 +60,7 @@ public final class TargetResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="description", required=true)
-      private final String description;
+    private String description;
 
     public String description() {
         return this.description;
@@ -71,7 +71,7 @@ public final class TargetResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="etag", required=true)
-      private final String etag;
+    private String etag;
 
     public String etag() {
         return this.etag;
@@ -82,7 +82,7 @@ public final class TargetResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="executionConfigs", required=true)
-      private final List<ExecutionConfigResponse> executionConfigs;
+    private List<ExecutionConfigResponse> executionConfigs;
 
     public List<ExecutionConfigResponse> executionConfigs() {
         return this.executionConfigs;
@@ -93,7 +93,7 @@ public final class TargetResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="gke", required=true)
-      private final GkeClusterResponse gke;
+    private GkeClusterResponse gke;
 
     public GkeClusterResponse gke() {
         return this.gke;
@@ -104,7 +104,7 @@ public final class TargetResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="labels", required=true)
-      private final Map<String,String> labels;
+    private Map<String,String> labels;
 
     public Map<String,String> labels() {
         return this.labels;
@@ -115,7 +115,7 @@ public final class TargetResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -126,7 +126,7 @@ public final class TargetResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="requireApproval", required=true)
-      private final Boolean requireApproval;
+    private Boolean requireApproval;
 
     public Boolean requireApproval() {
         return this.requireApproval;
@@ -137,7 +137,7 @@ public final class TargetResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="targetId", required=true)
-      private final String targetId;
+    private String targetId;
 
     public String targetId() {
         return this.targetId;
@@ -148,7 +148,7 @@ public final class TargetResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="uid", required=true)
-      private final String uid;
+    private String uid;
 
     public String uid() {
         return this.uid;
@@ -159,157 +159,133 @@ public final class TargetResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="updateTime", required=true)
-      private final String updateTime;
+    private String updateTime;
 
     public String updateTime() {
         return this.updateTime;
     }
 
-    public TargetResponse(
-        Map<String,String> annotations,
-        AnthosClusterResponse anthosCluster,
-        String createTime,
-        String description,
-        String etag,
-        List<ExecutionConfigResponse> executionConfigs,
-        GkeClusterResponse gke,
-        Map<String,String> labels,
-        String name,
-        Boolean requireApproval,
-        String targetId,
-        String uid,
-        String updateTime) {
-        this.annotations = Objects.requireNonNull(annotations, "expected parameter 'annotations' to be non-null");
-        this.anthosCluster = Objects.requireNonNull(anthosCluster, "expected parameter 'anthosCluster' to be non-null");
-        this.createTime = Objects.requireNonNull(createTime, "expected parameter 'createTime' to be non-null");
-        this.description = Objects.requireNonNull(description, "expected parameter 'description' to be non-null");
-        this.etag = Objects.requireNonNull(etag, "expected parameter 'etag' to be non-null");
-        this.executionConfigs = Objects.requireNonNull(executionConfigs, "expected parameter 'executionConfigs' to be non-null");
-        this.gke = Objects.requireNonNull(gke, "expected parameter 'gke' to be non-null");
-        this.labels = Objects.requireNonNull(labels, "expected parameter 'labels' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.requireApproval = Objects.requireNonNull(requireApproval, "expected parameter 'requireApproval' to be non-null");
-        this.targetId = Objects.requireNonNull(targetId, "expected parameter 'targetId' to be non-null");
-        this.uid = Objects.requireNonNull(uid, "expected parameter 'uid' to be non-null");
-        this.updateTime = Objects.requireNonNull(updateTime, "expected parameter 'updateTime' to be non-null");
-    }
+    private TargetResponse() {}
 
-    private TargetResponse() {
-        this.annotations = Map.of();
-        this.anthosCluster = null;
-        this.createTime = null;
-        this.description = null;
-        this.etag = null;
-        this.executionConfigs = List.of();
-        this.gke = null;
-        this.labels = Map.of();
-        this.name = null;
-        this.requireApproval = null;
-        this.targetId = null;
-        this.uid = null;
-        this.updateTime = null;
+    private TargetResponse(TargetResponse $) {
+        this.annotations = $.annotations;
+        this.anthosCluster = $.anthosCluster;
+        this.createTime = $.createTime;
+        this.description = $.description;
+        this.etag = $.etag;
+        this.executionConfigs = $.executionConfigs;
+        this.gke = $.gke;
+        this.labels = $.labels;
+        this.name = $.name;
+        this.requireApproval = $.requireApproval;
+        this.targetId = $.targetId;
+        this.uid = $.uid;
+        this.updateTime = $.updateTime;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TargetResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Map<String,String> annotations;
-        private AnthosClusterResponse anthosCluster;
-        private String createTime;
-        private String description;
-        private String etag;
-        private List<ExecutionConfigResponse> executionConfigs;
-        private GkeClusterResponse gke;
-        private Map<String,String> labels;
-        private String name;
-        private Boolean requireApproval;
-        private String targetId;
-        private String uid;
-        private String updateTime;
+        private TargetResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new TargetResponse();
         }
 
         public Builder(TargetResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.annotations = defaults.annotations;
-    	      this.anthosCluster = defaults.anthosCluster;
-    	      this.createTime = defaults.createTime;
-    	      this.description = defaults.description;
-    	      this.etag = defaults.etag;
-    	      this.executionConfigs = defaults.executionConfigs;
-    	      this.gke = defaults.gke;
-    	      this.labels = defaults.labels;
-    	      this.name = defaults.name;
-    	      this.requireApproval = defaults.requireApproval;
-    	      this.targetId = defaults.targetId;
-    	      this.uid = defaults.uid;
-    	      this.updateTime = defaults.updateTime;
+            $ = new TargetResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder annotations(Map<String,String> annotations) {
-            this.annotations = Objects.requireNonNull(annotations);
+            $.annotations = annotations;
             return this;
         }
+
         public Builder anthosCluster(AnthosClusterResponse anthosCluster) {
-            this.anthosCluster = Objects.requireNonNull(anthosCluster);
+            $.anthosCluster = anthosCluster;
             return this;
         }
+
         public Builder createTime(String createTime) {
-            this.createTime = Objects.requireNonNull(createTime);
+            $.createTime = createTime;
             return this;
         }
+
         public Builder description(String description) {
-            this.description = Objects.requireNonNull(description);
+            $.description = description;
             return this;
         }
+
         public Builder etag(String etag) {
-            this.etag = Objects.requireNonNull(etag);
+            $.etag = etag;
             return this;
         }
+
         public Builder executionConfigs(List<ExecutionConfigResponse> executionConfigs) {
-            this.executionConfigs = Objects.requireNonNull(executionConfigs);
+            $.executionConfigs = executionConfigs;
             return this;
         }
+
         public Builder executionConfigs(ExecutionConfigResponse... executionConfigs) {
             return executionConfigs(List.of(executionConfigs));
         }
+
         public Builder gke(GkeClusterResponse gke) {
-            this.gke = Objects.requireNonNull(gke);
+            $.gke = gke;
             return this;
         }
+
         public Builder labels(Map<String,String> labels) {
-            this.labels = Objects.requireNonNull(labels);
+            $.labels = labels;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder requireApproval(Boolean requireApproval) {
-            this.requireApproval = Objects.requireNonNull(requireApproval);
+            $.requireApproval = requireApproval;
             return this;
         }
+
         public Builder targetId(String targetId) {
-            this.targetId = Objects.requireNonNull(targetId);
+            $.targetId = targetId;
             return this;
         }
+
         public Builder uid(String uid) {
-            this.uid = Objects.requireNonNull(uid);
+            $.uid = uid;
             return this;
         }
+
         public Builder updateTime(String updateTime) {
-            this.updateTime = Objects.requireNonNull(updateTime);
+            $.updateTime = updateTime;
             return this;
-        }        public TargetResponse build() {
-            return new TargetResponse(annotations, anthosCluster, createTime, description, etag, executionConfigs, gke, labels, name, requireApproval, targetId, uid, updateTime);
+        }
+
+        public TargetResponse build() {
+            $.annotations = Objects.requireNonNull($.annotations, "expected parameter 'annotations' to be non-null");
+            $.anthosCluster = Objects.requireNonNull($.anthosCluster, "expected parameter 'anthosCluster' to be non-null");
+            $.createTime = Objects.requireNonNull($.createTime, "expected parameter 'createTime' to be non-null");
+            $.description = Objects.requireNonNull($.description, "expected parameter 'description' to be non-null");
+            $.etag = Objects.requireNonNull($.etag, "expected parameter 'etag' to be non-null");
+            $.executionConfigs = Objects.requireNonNull($.executionConfigs, "expected parameter 'executionConfigs' to be non-null");
+            $.gke = Objects.requireNonNull($.gke, "expected parameter 'gke' to be non-null");
+            $.labels = Objects.requireNonNull($.labels, "expected parameter 'labels' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.requireApproval = Objects.requireNonNull($.requireApproval, "expected parameter 'requireApproval' to be non-null");
+            $.targetId = Objects.requireNonNull($.targetId, "expected parameter 'targetId' to be non-null");
+            $.uid = Objects.requireNonNull($.uid, "expected parameter 'uid' to be non-null");
+            $.updateTime = Objects.requireNonNull($.updateTime, "expected parameter 'updateTime' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,7 +5,6 @@ package com.pulumi.azurenative.media.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.Objects;
@@ -24,7 +23,7 @@ public final class ContentKeyPolicyPlayReadyExplicitAnalogTelevisionRestrictionA
      * 
      */
     @Import(name="bestEffort", required=true)
-      private final Output<Boolean> bestEffort;
+    private Output<Boolean> bestEffort;
 
     public Output<Boolean> bestEffort() {
         return this.bestEffort;
@@ -35,63 +34,60 @@ public final class ContentKeyPolicyPlayReadyExplicitAnalogTelevisionRestrictionA
      * 
      */
     @Import(name="configurationData", required=true)
-      private final Output<Integer> configurationData;
+    private Output<Integer> configurationData;
 
     public Output<Integer> configurationData() {
         return this.configurationData;
     }
 
-    public ContentKeyPolicyPlayReadyExplicitAnalogTelevisionRestrictionArgs(
-        Output<Boolean> bestEffort,
-        Output<Integer> configurationData) {
-        this.bestEffort = Objects.requireNonNull(bestEffort, "expected parameter 'bestEffort' to be non-null");
-        this.configurationData = Objects.requireNonNull(configurationData, "expected parameter 'configurationData' to be non-null");
-    }
+    private ContentKeyPolicyPlayReadyExplicitAnalogTelevisionRestrictionArgs() {}
 
-    private ContentKeyPolicyPlayReadyExplicitAnalogTelevisionRestrictionArgs() {
-        this.bestEffort = Codegen.empty();
-        this.configurationData = Codegen.empty();
+    private ContentKeyPolicyPlayReadyExplicitAnalogTelevisionRestrictionArgs(ContentKeyPolicyPlayReadyExplicitAnalogTelevisionRestrictionArgs $) {
+        this.bestEffort = $.bestEffort;
+        this.configurationData = $.configurationData;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ContentKeyPolicyPlayReadyExplicitAnalogTelevisionRestrictionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Boolean> bestEffort;
-        private Output<Integer> configurationData;
+        private ContentKeyPolicyPlayReadyExplicitAnalogTelevisionRestrictionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ContentKeyPolicyPlayReadyExplicitAnalogTelevisionRestrictionArgs();
         }
 
         public Builder(ContentKeyPolicyPlayReadyExplicitAnalogTelevisionRestrictionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.bestEffort = defaults.bestEffort;
-    	      this.configurationData = defaults.configurationData;
+            $ = new ContentKeyPolicyPlayReadyExplicitAnalogTelevisionRestrictionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder bestEffort(Output<Boolean> bestEffort) {
-            this.bestEffort = Objects.requireNonNull(bestEffort);
+            $.bestEffort = bestEffort;
             return this;
         }
+
         public Builder bestEffort(Boolean bestEffort) {
-            this.bestEffort = Output.of(Objects.requireNonNull(bestEffort));
-            return this;
+            return bestEffort(Output.of(bestEffort));
         }
+
         public Builder configurationData(Output<Integer> configurationData) {
-            this.configurationData = Objects.requireNonNull(configurationData);
+            $.configurationData = configurationData;
             return this;
         }
+
         public Builder configurationData(Integer configurationData) {
-            this.configurationData = Output.of(Objects.requireNonNull(configurationData));
-            return this;
-        }        public ContentKeyPolicyPlayReadyExplicitAnalogTelevisionRestrictionArgs build() {
-            return new ContentKeyPolicyPlayReadyExplicitAnalogTelevisionRestrictionArgs(bestEffort, configurationData);
+            return configurationData(Output.of(configurationData));
+        }
+
+        public ContentKeyPolicyPlayReadyExplicitAnalogTelevisionRestrictionArgs build() {
+            $.bestEffort = Objects.requireNonNull($.bestEffort, "expected parameter 'bestEffort' to be non-null");
+            $.configurationData = Objects.requireNonNull($.configurationData, "expected parameter 'configurationData' to be non-null");
+            return $;
         }
     }
+
 }

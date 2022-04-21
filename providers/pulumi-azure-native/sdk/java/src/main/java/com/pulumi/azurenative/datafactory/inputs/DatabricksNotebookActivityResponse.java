@@ -31,10 +31,10 @@ public final class DatabricksNotebookActivityResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="baseParameters")
-      private final @Nullable Map<String,Object> baseParameters;
+    private @Nullable Map<String,Object> baseParameters;
 
-    public Map<String,Object> baseParameters() {
-        return this.baseParameters == null ? Map.of() : this.baseParameters;
+    public Optional<Map<String,Object>> baseParameters() {
+        return Optional.ofNullable(this.baseParameters);
     }
 
     /**
@@ -42,10 +42,10 @@ public final class DatabricksNotebookActivityResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="dependsOn")
-      private final @Nullable List<ActivityDependencyResponse> dependsOn;
+    private @Nullable List<ActivityDependencyResponse> dependsOn;
 
-    public List<ActivityDependencyResponse> dependsOn() {
-        return this.dependsOn == null ? List.of() : this.dependsOn;
+    public Optional<List<ActivityDependencyResponse>> dependsOn() {
+        return Optional.ofNullable(this.dependsOn);
     }
 
     /**
@@ -53,10 +53,10 @@ public final class DatabricksNotebookActivityResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="description")
-      private final @Nullable String description;
+    private @Nullable String description;
 
     public Optional<String> description() {
-        return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -64,10 +64,10 @@ public final class DatabricksNotebookActivityResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="libraries")
-      private final @Nullable List<Map<String,Object>> libraries;
+    private @Nullable List<Map<String,Object>> libraries;
 
-    public List<Map<String,Object>> libraries() {
-        return this.libraries == null ? List.of() : this.libraries;
+    public Optional<List<Map<String,Object>>> libraries() {
+        return Optional.ofNullable(this.libraries);
     }
 
     /**
@@ -75,10 +75,10 @@ public final class DatabricksNotebookActivityResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="linkedServiceName")
-      private final @Nullable LinkedServiceReferenceResponse linkedServiceName;
+    private @Nullable LinkedServiceReferenceResponse linkedServiceName;
 
     public Optional<LinkedServiceReferenceResponse> linkedServiceName() {
-        return this.linkedServiceName == null ? Optional.empty() : Optional.ofNullable(this.linkedServiceName);
+        return Optional.ofNullable(this.linkedServiceName);
     }
 
     /**
@@ -86,7 +86,7 @@ public final class DatabricksNotebookActivityResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -97,7 +97,7 @@ public final class DatabricksNotebookActivityResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="notebookPath", required=true)
-      private final Object notebookPath;
+    private Object notebookPath;
 
     public Object notebookPath() {
         return this.notebookPath;
@@ -108,10 +108,10 @@ public final class DatabricksNotebookActivityResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="policy")
-      private final @Nullable ActivityPolicyResponse policy;
+    private @Nullable ActivityPolicyResponse policy;
 
     public Optional<ActivityPolicyResponse> policy() {
-        return this.policy == null ? Optional.empty() : Optional.ofNullable(this.policy);
+        return Optional.ofNullable(this.policy);
     }
 
     /**
@@ -120,7 +120,7 @@ public final class DatabricksNotebookActivityResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
@@ -131,133 +131,113 @@ public final class DatabricksNotebookActivityResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="userProperties")
-      private final @Nullable List<UserPropertyResponse> userProperties;
+    private @Nullable List<UserPropertyResponse> userProperties;
 
-    public List<UserPropertyResponse> userProperties() {
-        return this.userProperties == null ? List.of() : this.userProperties;
+    public Optional<List<UserPropertyResponse>> userProperties() {
+        return Optional.ofNullable(this.userProperties);
     }
 
-    public DatabricksNotebookActivityResponse(
-        @Nullable Map<String,Object> baseParameters,
-        @Nullable List<ActivityDependencyResponse> dependsOn,
-        @Nullable String description,
-        @Nullable List<Map<String,Object>> libraries,
-        @Nullable LinkedServiceReferenceResponse linkedServiceName,
-        String name,
-        Object notebookPath,
-        @Nullable ActivityPolicyResponse policy,
-        String type,
-        @Nullable List<UserPropertyResponse> userProperties) {
-        this.baseParameters = baseParameters;
-        this.dependsOn = dependsOn;
-        this.description = description;
-        this.libraries = libraries;
-        this.linkedServiceName = linkedServiceName;
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.notebookPath = Objects.requireNonNull(notebookPath, "expected parameter 'notebookPath' to be non-null");
-        this.policy = policy;
-        this.type = Codegen.stringProp("type").arg(type).require();
-        this.userProperties = userProperties;
-    }
+    private DatabricksNotebookActivityResponse() {}
 
-    private DatabricksNotebookActivityResponse() {
-        this.baseParameters = Map.of();
-        this.dependsOn = List.of();
-        this.description = null;
-        this.libraries = List.of();
-        this.linkedServiceName = null;
-        this.name = null;
-        this.notebookPath = null;
-        this.policy = null;
-        this.type = null;
-        this.userProperties = List.of();
+    private DatabricksNotebookActivityResponse(DatabricksNotebookActivityResponse $) {
+        this.baseParameters = $.baseParameters;
+        this.dependsOn = $.dependsOn;
+        this.description = $.description;
+        this.libraries = $.libraries;
+        this.linkedServiceName = $.linkedServiceName;
+        this.name = $.name;
+        this.notebookPath = $.notebookPath;
+        this.policy = $.policy;
+        this.type = $.type;
+        this.userProperties = $.userProperties;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DatabricksNotebookActivityResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Map<String,Object> baseParameters;
-        private @Nullable List<ActivityDependencyResponse> dependsOn;
-        private @Nullable String description;
-        private @Nullable List<Map<String,Object>> libraries;
-        private @Nullable LinkedServiceReferenceResponse linkedServiceName;
-        private String name;
-        private Object notebookPath;
-        private @Nullable ActivityPolicyResponse policy;
-        private String type;
-        private @Nullable List<UserPropertyResponse> userProperties;
+        private DatabricksNotebookActivityResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new DatabricksNotebookActivityResponse();
         }
 
         public Builder(DatabricksNotebookActivityResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.baseParameters = defaults.baseParameters;
-    	      this.dependsOn = defaults.dependsOn;
-    	      this.description = defaults.description;
-    	      this.libraries = defaults.libraries;
-    	      this.linkedServiceName = defaults.linkedServiceName;
-    	      this.name = defaults.name;
-    	      this.notebookPath = defaults.notebookPath;
-    	      this.policy = defaults.policy;
-    	      this.type = defaults.type;
-    	      this.userProperties = defaults.userProperties;
+            $ = new DatabricksNotebookActivityResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder baseParameters(@Nullable Map<String,Object> baseParameters) {
-            this.baseParameters = baseParameters;
+            $.baseParameters = baseParameters;
             return this;
         }
+
         public Builder dependsOn(@Nullable List<ActivityDependencyResponse> dependsOn) {
-            this.dependsOn = dependsOn;
+            $.dependsOn = dependsOn;
             return this;
         }
+
         public Builder dependsOn(ActivityDependencyResponse... dependsOn) {
             return dependsOn(List.of(dependsOn));
         }
+
         public Builder description(@Nullable String description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
+
         public Builder libraries(@Nullable List<Map<String,Object>> libraries) {
-            this.libraries = libraries;
+            $.libraries = libraries;
             return this;
         }
+
+        public Builder libraries(Map<String,Object>... libraries) {
+            return libraries(List.of(libraries));
+        }
+
         public Builder linkedServiceName(@Nullable LinkedServiceReferenceResponse linkedServiceName) {
-            this.linkedServiceName = linkedServiceName;
+            $.linkedServiceName = linkedServiceName;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder notebookPath(Object notebookPath) {
-            this.notebookPath = Objects.requireNonNull(notebookPath);
+            $.notebookPath = notebookPath;
             return this;
         }
+
         public Builder policy(@Nullable ActivityPolicyResponse policy) {
-            this.policy = policy;
+            $.policy = policy;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder userProperties(@Nullable List<UserPropertyResponse> userProperties) {
-            this.userProperties = userProperties;
+            $.userProperties = userProperties;
             return this;
         }
+
         public Builder userProperties(UserPropertyResponse... userProperties) {
             return userProperties(List.of(userProperties));
-        }        public DatabricksNotebookActivityResponse build() {
-            return new DatabricksNotebookActivityResponse(baseParameters, dependsOn, description, libraries, linkedServiceName, name, notebookPath, policy, type, userProperties);
+        }
+
+        public DatabricksNotebookActivityResponse build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.notebookPath = Objects.requireNonNull($.notebookPath, "expected parameter 'notebookPath' to be non-null");
+            $.type = Codegen.stringProp("type").arg($.type).require();
+            return $;
         }
     }
+
 }

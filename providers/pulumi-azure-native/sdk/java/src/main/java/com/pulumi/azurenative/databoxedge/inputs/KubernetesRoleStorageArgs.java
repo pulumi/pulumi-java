@@ -6,9 +6,9 @@ package com.pulumi.azurenative.databoxedge.inputs;
 import com.pulumi.azurenative.databoxedge.inputs.MountPointMapArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,52 +25,52 @@ public final class KubernetesRoleStorageArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="endpoints")
-      private final @Nullable Output<List<MountPointMapArgs>> endpoints;
+    private @Nullable Output<List<MountPointMapArgs>> endpoints;
 
-    public Output<List<MountPointMapArgs>> endpoints() {
-        return this.endpoints == null ? Codegen.empty() : this.endpoints;
+    public Optional<Output<List<MountPointMapArgs>>> endpoints() {
+        return Optional.ofNullable(this.endpoints);
     }
 
-    public KubernetesRoleStorageArgs(@Nullable Output<List<MountPointMapArgs>> endpoints) {
-        this.endpoints = endpoints;
-    }
+    private KubernetesRoleStorageArgs() {}
 
-    private KubernetesRoleStorageArgs() {
-        this.endpoints = Codegen.empty();
+    private KubernetesRoleStorageArgs(KubernetesRoleStorageArgs $) {
+        this.endpoints = $.endpoints;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(KubernetesRoleStorageArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<MountPointMapArgs>> endpoints;
+        private KubernetesRoleStorageArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new KubernetesRoleStorageArgs();
         }
 
         public Builder(KubernetesRoleStorageArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.endpoints = defaults.endpoints;
+            $ = new KubernetesRoleStorageArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder endpoints(@Nullable Output<List<MountPointMapArgs>> endpoints) {
-            this.endpoints = endpoints;
+            $.endpoints = endpoints;
             return this;
         }
-        public Builder endpoints(@Nullable List<MountPointMapArgs> endpoints) {
-            this.endpoints = Codegen.ofNullable(endpoints);
-            return this;
+
+        public Builder endpoints(List<MountPointMapArgs> endpoints) {
+            return endpoints(Output.of(endpoints));
         }
+
         public Builder endpoints(MountPointMapArgs... endpoints) {
             return endpoints(List.of(endpoints));
-        }        public KubernetesRoleStorageArgs build() {
-            return new KubernetesRoleStorageArgs(endpoints);
+        }
+
+        public KubernetesRoleStorageArgs build() {
+            return $;
         }
     }
+
 }

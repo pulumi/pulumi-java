@@ -28,10 +28,10 @@ public final class HyperVReplicaBlueReplicationDetailsResponse extends com.pulum
      * 
      */
     @Import(name="initialReplicationDetails")
-      private final @Nullable InitialReplicationDetailsResponse initialReplicationDetails;
+    private @Nullable InitialReplicationDetailsResponse initialReplicationDetails;
 
     public Optional<InitialReplicationDetailsResponse> initialReplicationDetails() {
-        return this.initialReplicationDetails == null ? Optional.empty() : Optional.ofNullable(this.initialReplicationDetails);
+        return Optional.ofNullable(this.initialReplicationDetails);
     }
 
     /**
@@ -40,7 +40,7 @@ public final class HyperVReplicaBlueReplicationDetailsResponse extends com.pulum
      * 
      */
     @Import(name="instanceType", required=true)
-      private final String instanceType;
+    private String instanceType;
 
     public String instanceType() {
         return this.instanceType;
@@ -51,10 +51,10 @@ public final class HyperVReplicaBlueReplicationDetailsResponse extends com.pulum
      * 
      */
     @Import(name="lastReplicatedTime")
-      private final @Nullable String lastReplicatedTime;
+    private @Nullable String lastReplicatedTime;
 
     public Optional<String> lastReplicatedTime() {
-        return this.lastReplicatedTime == null ? Optional.empty() : Optional.ofNullable(this.lastReplicatedTime);
+        return Optional.ofNullable(this.lastReplicatedTime);
     }
 
     /**
@@ -62,10 +62,10 @@ public final class HyperVReplicaBlueReplicationDetailsResponse extends com.pulum
      * 
      */
     @Import(name="vMDiskDetails")
-      private final @Nullable List<DiskDetailsResponse> vMDiskDetails;
+    private @Nullable List<DiskDetailsResponse> vMDiskDetails;
 
-    public List<DiskDetailsResponse> vMDiskDetails() {
-        return this.vMDiskDetails == null ? List.of() : this.vMDiskDetails;
+    public Optional<List<DiskDetailsResponse>> vMDiskDetails() {
+        return Optional.ofNullable(this.vMDiskDetails);
     }
 
     /**
@@ -73,10 +73,10 @@ public final class HyperVReplicaBlueReplicationDetailsResponse extends com.pulum
      * 
      */
     @Import(name="vmId")
-      private final @Nullable String vmId;
+    private @Nullable String vmId;
 
     public Optional<String> vmId() {
-        return this.vmId == null ? Optional.empty() : Optional.ofNullable(this.vmId);
+        return Optional.ofNullable(this.vmId);
     }
 
     /**
@@ -84,10 +84,10 @@ public final class HyperVReplicaBlueReplicationDetailsResponse extends com.pulum
      * 
      */
     @Import(name="vmNics")
-      private final @Nullable List<VMNicDetailsResponse> vmNics;
+    private @Nullable List<VMNicDetailsResponse> vmNics;
 
-    public List<VMNicDetailsResponse> vmNics() {
-        return this.vmNics == null ? List.of() : this.vmNics;
+    public Optional<List<VMNicDetailsResponse>> vmNics() {
+        return Optional.ofNullable(this.vmNics);
     }
 
     /**
@@ -95,10 +95,10 @@ public final class HyperVReplicaBlueReplicationDetailsResponse extends com.pulum
      * 
      */
     @Import(name="vmProtectionState")
-      private final @Nullable String vmProtectionState;
+    private @Nullable String vmProtectionState;
 
     public Optional<String> vmProtectionState() {
-        return this.vmProtectionState == null ? Optional.empty() : Optional.ofNullable(this.vmProtectionState);
+        return Optional.ofNullable(this.vmProtectionState);
     }
 
     /**
@@ -106,115 +106,95 @@ public final class HyperVReplicaBlueReplicationDetailsResponse extends com.pulum
      * 
      */
     @Import(name="vmProtectionStateDescription")
-      private final @Nullable String vmProtectionStateDescription;
+    private @Nullable String vmProtectionStateDescription;
 
     public Optional<String> vmProtectionStateDescription() {
-        return this.vmProtectionStateDescription == null ? Optional.empty() : Optional.ofNullable(this.vmProtectionStateDescription);
+        return Optional.ofNullable(this.vmProtectionStateDescription);
     }
 
-    public HyperVReplicaBlueReplicationDetailsResponse(
-        @Nullable InitialReplicationDetailsResponse initialReplicationDetails,
-        String instanceType,
-        @Nullable String lastReplicatedTime,
-        @Nullable List<DiskDetailsResponse> vMDiskDetails,
-        @Nullable String vmId,
-        @Nullable List<VMNicDetailsResponse> vmNics,
-        @Nullable String vmProtectionState,
-        @Nullable String vmProtectionStateDescription) {
-        this.initialReplicationDetails = initialReplicationDetails;
-        this.instanceType = Codegen.stringProp("instanceType").arg(instanceType).require();
-        this.lastReplicatedTime = lastReplicatedTime;
-        this.vMDiskDetails = vMDiskDetails;
-        this.vmId = vmId;
-        this.vmNics = vmNics;
-        this.vmProtectionState = vmProtectionState;
-        this.vmProtectionStateDescription = vmProtectionStateDescription;
-    }
+    private HyperVReplicaBlueReplicationDetailsResponse() {}
 
-    private HyperVReplicaBlueReplicationDetailsResponse() {
-        this.initialReplicationDetails = null;
-        this.instanceType = null;
-        this.lastReplicatedTime = null;
-        this.vMDiskDetails = List.of();
-        this.vmId = null;
-        this.vmNics = List.of();
-        this.vmProtectionState = null;
-        this.vmProtectionStateDescription = null;
+    private HyperVReplicaBlueReplicationDetailsResponse(HyperVReplicaBlueReplicationDetailsResponse $) {
+        this.initialReplicationDetails = $.initialReplicationDetails;
+        this.instanceType = $.instanceType;
+        this.lastReplicatedTime = $.lastReplicatedTime;
+        this.vMDiskDetails = $.vMDiskDetails;
+        this.vmId = $.vmId;
+        this.vmNics = $.vmNics;
+        this.vmProtectionState = $.vmProtectionState;
+        this.vmProtectionStateDescription = $.vmProtectionStateDescription;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(HyperVReplicaBlueReplicationDetailsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable InitialReplicationDetailsResponse initialReplicationDetails;
-        private String instanceType;
-        private @Nullable String lastReplicatedTime;
-        private @Nullable List<DiskDetailsResponse> vMDiskDetails;
-        private @Nullable String vmId;
-        private @Nullable List<VMNicDetailsResponse> vmNics;
-        private @Nullable String vmProtectionState;
-        private @Nullable String vmProtectionStateDescription;
+        private HyperVReplicaBlueReplicationDetailsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new HyperVReplicaBlueReplicationDetailsResponse();
         }
 
         public Builder(HyperVReplicaBlueReplicationDetailsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.initialReplicationDetails = defaults.initialReplicationDetails;
-    	      this.instanceType = defaults.instanceType;
-    	      this.lastReplicatedTime = defaults.lastReplicatedTime;
-    	      this.vMDiskDetails = defaults.vMDiskDetails;
-    	      this.vmId = defaults.vmId;
-    	      this.vmNics = defaults.vmNics;
-    	      this.vmProtectionState = defaults.vmProtectionState;
-    	      this.vmProtectionStateDescription = defaults.vmProtectionStateDescription;
+            $ = new HyperVReplicaBlueReplicationDetailsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder initialReplicationDetails(@Nullable InitialReplicationDetailsResponse initialReplicationDetails) {
-            this.initialReplicationDetails = initialReplicationDetails;
+            $.initialReplicationDetails = initialReplicationDetails;
             return this;
         }
+
         public Builder instanceType(String instanceType) {
-            this.instanceType = Objects.requireNonNull(instanceType);
+            $.instanceType = instanceType;
             return this;
         }
+
         public Builder lastReplicatedTime(@Nullable String lastReplicatedTime) {
-            this.lastReplicatedTime = lastReplicatedTime;
+            $.lastReplicatedTime = lastReplicatedTime;
             return this;
         }
+
         public Builder vMDiskDetails(@Nullable List<DiskDetailsResponse> vMDiskDetails) {
-            this.vMDiskDetails = vMDiskDetails;
+            $.vMDiskDetails = vMDiskDetails;
             return this;
         }
+
         public Builder vMDiskDetails(DiskDetailsResponse... vMDiskDetails) {
             return vMDiskDetails(List.of(vMDiskDetails));
         }
+
         public Builder vmId(@Nullable String vmId) {
-            this.vmId = vmId;
+            $.vmId = vmId;
             return this;
         }
+
         public Builder vmNics(@Nullable List<VMNicDetailsResponse> vmNics) {
-            this.vmNics = vmNics;
+            $.vmNics = vmNics;
             return this;
         }
+
         public Builder vmNics(VMNicDetailsResponse... vmNics) {
             return vmNics(List.of(vmNics));
         }
+
         public Builder vmProtectionState(@Nullable String vmProtectionState) {
-            this.vmProtectionState = vmProtectionState;
+            $.vmProtectionState = vmProtectionState;
             return this;
         }
+
         public Builder vmProtectionStateDescription(@Nullable String vmProtectionStateDescription) {
-            this.vmProtectionStateDescription = vmProtectionStateDescription;
+            $.vmProtectionStateDescription = vmProtectionStateDescription;
             return this;
-        }        public HyperVReplicaBlueReplicationDetailsResponse build() {
-            return new HyperVReplicaBlueReplicationDetailsResponse(initialReplicationDetails, instanceType, lastReplicatedTime, vMDiskDetails, vmId, vmNics, vmProtectionState, vmProtectionStateDescription);
+        }
+
+        public HyperVReplicaBlueReplicationDetailsResponse build() {
+            $.instanceType = Codegen.stringProp("instanceType").arg($.instanceType).require();
+            return $;
         }
     }
+
 }

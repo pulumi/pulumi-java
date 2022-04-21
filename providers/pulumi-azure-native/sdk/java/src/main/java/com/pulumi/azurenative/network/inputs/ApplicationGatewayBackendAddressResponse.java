@@ -23,10 +23,10 @@ public final class ApplicationGatewayBackendAddressResponse extends com.pulumi.r
      * 
      */
     @Import(name="fqdn")
-      private final @Nullable String fqdn;
+    private @Nullable String fqdn;
 
     public Optional<String> fqdn() {
-        return this.fqdn == null ? Optional.empty() : Optional.ofNullable(this.fqdn);
+        return Optional.ofNullable(this.fqdn);
     }
 
     /**
@@ -34,55 +34,50 @@ public final class ApplicationGatewayBackendAddressResponse extends com.pulumi.r
      * 
      */
     @Import(name="ipAddress")
-      private final @Nullable String ipAddress;
+    private @Nullable String ipAddress;
 
     public Optional<String> ipAddress() {
-        return this.ipAddress == null ? Optional.empty() : Optional.ofNullable(this.ipAddress);
+        return Optional.ofNullable(this.ipAddress);
     }
 
-    public ApplicationGatewayBackendAddressResponse(
-        @Nullable String fqdn,
-        @Nullable String ipAddress) {
-        this.fqdn = fqdn;
-        this.ipAddress = ipAddress;
-    }
+    private ApplicationGatewayBackendAddressResponse() {}
 
-    private ApplicationGatewayBackendAddressResponse() {
-        this.fqdn = null;
-        this.ipAddress = null;
+    private ApplicationGatewayBackendAddressResponse(ApplicationGatewayBackendAddressResponse $) {
+        this.fqdn = $.fqdn;
+        this.ipAddress = $.ipAddress;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ApplicationGatewayBackendAddressResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String fqdn;
-        private @Nullable String ipAddress;
+        private ApplicationGatewayBackendAddressResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ApplicationGatewayBackendAddressResponse();
         }
 
         public Builder(ApplicationGatewayBackendAddressResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.fqdn = defaults.fqdn;
-    	      this.ipAddress = defaults.ipAddress;
+            $ = new ApplicationGatewayBackendAddressResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder fqdn(@Nullable String fqdn) {
-            this.fqdn = fqdn;
+            $.fqdn = fqdn;
             return this;
         }
+
         public Builder ipAddress(@Nullable String ipAddress) {
-            this.ipAddress = ipAddress;
+            $.ipAddress = ipAddress;
             return this;
-        }        public ApplicationGatewayBackendAddressResponse build() {
-            return new ApplicationGatewayBackendAddressResponse(fqdn, ipAddress);
+        }
+
+        public ApplicationGatewayBackendAddressResponse build() {
+            return $;
         }
     }
+
 }

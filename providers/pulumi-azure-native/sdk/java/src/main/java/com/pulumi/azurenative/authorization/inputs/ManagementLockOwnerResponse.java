@@ -23,45 +23,44 @@ public final class ManagementLockOwnerResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="applicationId")
-      private final @Nullable String applicationId;
+    private @Nullable String applicationId;
 
     public Optional<String> applicationId() {
-        return this.applicationId == null ? Optional.empty() : Optional.ofNullable(this.applicationId);
+        return Optional.ofNullable(this.applicationId);
     }
 
-    public ManagementLockOwnerResponse(@Nullable String applicationId) {
-        this.applicationId = applicationId;
-    }
+    private ManagementLockOwnerResponse() {}
 
-    private ManagementLockOwnerResponse() {
-        this.applicationId = null;
+    private ManagementLockOwnerResponse(ManagementLockOwnerResponse $) {
+        this.applicationId = $.applicationId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ManagementLockOwnerResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String applicationId;
+        private ManagementLockOwnerResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ManagementLockOwnerResponse();
         }
 
         public Builder(ManagementLockOwnerResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.applicationId = defaults.applicationId;
+            $ = new ManagementLockOwnerResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder applicationId(@Nullable String applicationId) {
-            this.applicationId = applicationId;
+            $.applicationId = applicationId;
             return this;
-        }        public ManagementLockOwnerResponse build() {
-            return new ManagementLockOwnerResponse(applicationId);
+        }
+
+        public ManagementLockOwnerResponse build() {
+            return $;
         }
     }
+
 }

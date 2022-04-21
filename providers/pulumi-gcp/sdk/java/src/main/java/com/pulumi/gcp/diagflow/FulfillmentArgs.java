@@ -5,13 +5,13 @@ package com.pulumi.gcp.diagflow;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.diagflow.inputs.FulfillmentFeatureArgs;
 import com.pulumi.gcp.diagflow.inputs.FulfillmentGenericWebServiceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,7 +24,7 @@ public final class FulfillmentArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="displayName", required=true)
-      private final Output<String> displayName;
+    private Output<String> displayName;
 
     public Output<String> displayName() {
         return this.displayName;
@@ -35,10 +35,10 @@ public final class FulfillmentArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="enabled")
-      private final @Nullable Output<Boolean> enabled;
+    private @Nullable Output<Boolean> enabled;
 
-    public Output<Boolean> enabled() {
-        return this.enabled == null ? Codegen.empty() : this.enabled;
+    public Optional<Output<Boolean>> enabled() {
+        return Optional.ofNullable(this.enabled);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class FulfillmentArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="features")
-      private final @Nullable Output<List<FulfillmentFeatureArgs>> features;
+    private @Nullable Output<List<FulfillmentFeatureArgs>> features;
 
-    public Output<List<FulfillmentFeatureArgs>> features() {
-        return this.features == null ? Codegen.empty() : this.features;
+    public Optional<Output<List<FulfillmentFeatureArgs>>> features() {
+        return Optional.ofNullable(this.features);
     }
 
     /**
@@ -59,10 +59,10 @@ public final class FulfillmentArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="genericWebService")
-      private final @Nullable Output<FulfillmentGenericWebServiceArgs> genericWebService;
+    private @Nullable Output<FulfillmentGenericWebServiceArgs> genericWebService;
 
-    public Output<FulfillmentGenericWebServiceArgs> genericWebService() {
-        return this.genericWebService == null ? Codegen.empty() : this.genericWebService;
+    public Optional<Output<FulfillmentGenericWebServiceArgs>> genericWebService() {
+        return Optional.ofNullable(this.genericWebService);
     }
 
     /**
@@ -71,105 +71,93 @@ public final class FulfillmentArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
-    public FulfillmentArgs(
-        Output<String> displayName,
-        @Nullable Output<Boolean> enabled,
-        @Nullable Output<List<FulfillmentFeatureArgs>> features,
-        @Nullable Output<FulfillmentGenericWebServiceArgs> genericWebService,
-        @Nullable Output<String> project) {
-        this.displayName = Objects.requireNonNull(displayName, "expected parameter 'displayName' to be non-null");
-        this.enabled = enabled;
-        this.features = features;
-        this.genericWebService = genericWebService;
-        this.project = project;
-    }
+    private FulfillmentArgs() {}
 
-    private FulfillmentArgs() {
-        this.displayName = Codegen.empty();
-        this.enabled = Codegen.empty();
-        this.features = Codegen.empty();
-        this.genericWebService = Codegen.empty();
-        this.project = Codegen.empty();
+    private FulfillmentArgs(FulfillmentArgs $) {
+        this.displayName = $.displayName;
+        this.enabled = $.enabled;
+        this.features = $.features;
+        this.genericWebService = $.genericWebService;
+        this.project = $.project;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FulfillmentArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> displayName;
-        private @Nullable Output<Boolean> enabled;
-        private @Nullable Output<List<FulfillmentFeatureArgs>> features;
-        private @Nullable Output<FulfillmentGenericWebServiceArgs> genericWebService;
-        private @Nullable Output<String> project;
+        private FulfillmentArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new FulfillmentArgs();
         }
 
         public Builder(FulfillmentArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.displayName = defaults.displayName;
-    	      this.enabled = defaults.enabled;
-    	      this.features = defaults.features;
-    	      this.genericWebService = defaults.genericWebService;
-    	      this.project = defaults.project;
+            $ = new FulfillmentArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder displayName(Output<String> displayName) {
-            this.displayName = Objects.requireNonNull(displayName);
+            $.displayName = displayName;
             return this;
         }
+
         public Builder displayName(String displayName) {
-            this.displayName = Output.of(Objects.requireNonNull(displayName));
-            return this;
+            return displayName(Output.of(displayName));
         }
+
         public Builder enabled(@Nullable Output<Boolean> enabled) {
-            this.enabled = enabled;
+            $.enabled = enabled;
             return this;
         }
-        public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Codegen.ofNullable(enabled);
-            return this;
+
+        public Builder enabled(Boolean enabled) {
+            return enabled(Output.of(enabled));
         }
+
         public Builder features(@Nullable Output<List<FulfillmentFeatureArgs>> features) {
-            this.features = features;
+            $.features = features;
             return this;
         }
-        public Builder features(@Nullable List<FulfillmentFeatureArgs> features) {
-            this.features = Codegen.ofNullable(features);
-            return this;
+
+        public Builder features(List<FulfillmentFeatureArgs> features) {
+            return features(Output.of(features));
         }
+
         public Builder features(FulfillmentFeatureArgs... features) {
             return features(List.of(features));
         }
+
         public Builder genericWebService(@Nullable Output<FulfillmentGenericWebServiceArgs> genericWebService) {
-            this.genericWebService = genericWebService;
+            $.genericWebService = genericWebService;
             return this;
         }
-        public Builder genericWebService(@Nullable FulfillmentGenericWebServiceArgs genericWebService) {
-            this.genericWebService = Codegen.ofNullable(genericWebService);
-            return this;
+
+        public Builder genericWebService(FulfillmentGenericWebServiceArgs genericWebService) {
+            return genericWebService(Output.of(genericWebService));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
-        }        public FulfillmentArgs build() {
-            return new FulfillmentArgs(displayName, enabled, features, genericWebService, project);
+
+        public Builder project(String project) {
+            return project(Output.of(project));
+        }
+
+        public FulfillmentArgs build() {
+            $.displayName = Objects.requireNonNull($.displayName, "expected parameter 'displayName' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,13 +5,13 @@ package com.pulumi.googlenative.compute_beta.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.compute_beta.enums.RouterBgpAdvertiseMode;
 import com.pulumi.googlenative.compute_beta.enums.RouterBgpAdvertisedGroupsItem;
 import com.pulumi.googlenative.compute_beta.inputs.RouterAdvertisedIpRangeArgs;
 import java.lang.Integer;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class RouterBgpArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="advertiseMode")
-      private final @Nullable Output<RouterBgpAdvertiseMode> advertiseMode;
+    private @Nullable Output<RouterBgpAdvertiseMode> advertiseMode;
 
-    public Output<RouterBgpAdvertiseMode> advertiseMode() {
-        return this.advertiseMode == null ? Codegen.empty() : this.advertiseMode;
+    public Optional<Output<RouterBgpAdvertiseMode>> advertiseMode() {
+        return Optional.ofNullable(this.advertiseMode);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class RouterBgpArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="advertisedGroups")
-      private final @Nullable Output<List<RouterBgpAdvertisedGroupsItem>> advertisedGroups;
+    private @Nullable Output<List<RouterBgpAdvertisedGroupsItem>> advertisedGroups;
 
-    public Output<List<RouterBgpAdvertisedGroupsItem>> advertisedGroups() {
-        return this.advertisedGroups == null ? Codegen.empty() : this.advertisedGroups;
+    public Optional<Output<List<RouterBgpAdvertisedGroupsItem>>> advertisedGroups() {
+        return Optional.ofNullable(this.advertisedGroups);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class RouterBgpArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="advertisedIpRanges")
-      private final @Nullable Output<List<RouterAdvertisedIpRangeArgs>> advertisedIpRanges;
+    private @Nullable Output<List<RouterAdvertisedIpRangeArgs>> advertisedIpRanges;
 
-    public Output<List<RouterAdvertisedIpRangeArgs>> advertisedIpRanges() {
-        return this.advertisedIpRanges == null ? Codegen.empty() : this.advertisedIpRanges;
+    public Optional<Output<List<RouterAdvertisedIpRangeArgs>>> advertisedIpRanges() {
+        return Optional.ofNullable(this.advertisedIpRanges);
     }
 
     /**
@@ -57,10 +57,10 @@ public final class RouterBgpArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="asn")
-      private final @Nullable Output<Integer> asn;
+    private @Nullable Output<Integer> asn;
 
-    public Output<Integer> asn() {
-        return this.asn == null ? Codegen.empty() : this.asn;
+    public Optional<Output<Integer>> asn() {
+        return Optional.ofNullable(this.asn);
     }
 
     /**
@@ -68,108 +68,96 @@ public final class RouterBgpArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="keepaliveInterval")
-      private final @Nullable Output<Integer> keepaliveInterval;
+    private @Nullable Output<Integer> keepaliveInterval;
 
-    public Output<Integer> keepaliveInterval() {
-        return this.keepaliveInterval == null ? Codegen.empty() : this.keepaliveInterval;
+    public Optional<Output<Integer>> keepaliveInterval() {
+        return Optional.ofNullable(this.keepaliveInterval);
     }
 
-    public RouterBgpArgs(
-        @Nullable Output<RouterBgpAdvertiseMode> advertiseMode,
-        @Nullable Output<List<RouterBgpAdvertisedGroupsItem>> advertisedGroups,
-        @Nullable Output<List<RouterAdvertisedIpRangeArgs>> advertisedIpRanges,
-        @Nullable Output<Integer> asn,
-        @Nullable Output<Integer> keepaliveInterval) {
-        this.advertiseMode = advertiseMode;
-        this.advertisedGroups = advertisedGroups;
-        this.advertisedIpRanges = advertisedIpRanges;
-        this.asn = asn;
-        this.keepaliveInterval = keepaliveInterval;
-    }
+    private RouterBgpArgs() {}
 
-    private RouterBgpArgs() {
-        this.advertiseMode = Codegen.empty();
-        this.advertisedGroups = Codegen.empty();
-        this.advertisedIpRanges = Codegen.empty();
-        this.asn = Codegen.empty();
-        this.keepaliveInterval = Codegen.empty();
+    private RouterBgpArgs(RouterBgpArgs $) {
+        this.advertiseMode = $.advertiseMode;
+        this.advertisedGroups = $.advertisedGroups;
+        this.advertisedIpRanges = $.advertisedIpRanges;
+        this.asn = $.asn;
+        this.keepaliveInterval = $.keepaliveInterval;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RouterBgpArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<RouterBgpAdvertiseMode> advertiseMode;
-        private @Nullable Output<List<RouterBgpAdvertisedGroupsItem>> advertisedGroups;
-        private @Nullable Output<List<RouterAdvertisedIpRangeArgs>> advertisedIpRanges;
-        private @Nullable Output<Integer> asn;
-        private @Nullable Output<Integer> keepaliveInterval;
+        private RouterBgpArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RouterBgpArgs();
         }
 
         public Builder(RouterBgpArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.advertiseMode = defaults.advertiseMode;
-    	      this.advertisedGroups = defaults.advertisedGroups;
-    	      this.advertisedIpRanges = defaults.advertisedIpRanges;
-    	      this.asn = defaults.asn;
-    	      this.keepaliveInterval = defaults.keepaliveInterval;
+            $ = new RouterBgpArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder advertiseMode(@Nullable Output<RouterBgpAdvertiseMode> advertiseMode) {
-            this.advertiseMode = advertiseMode;
+            $.advertiseMode = advertiseMode;
             return this;
         }
-        public Builder advertiseMode(@Nullable RouterBgpAdvertiseMode advertiseMode) {
-            this.advertiseMode = Codegen.ofNullable(advertiseMode);
-            return this;
+
+        public Builder advertiseMode(RouterBgpAdvertiseMode advertiseMode) {
+            return advertiseMode(Output.of(advertiseMode));
         }
+
         public Builder advertisedGroups(@Nullable Output<List<RouterBgpAdvertisedGroupsItem>> advertisedGroups) {
-            this.advertisedGroups = advertisedGroups;
+            $.advertisedGroups = advertisedGroups;
             return this;
         }
-        public Builder advertisedGroups(@Nullable List<RouterBgpAdvertisedGroupsItem> advertisedGroups) {
-            this.advertisedGroups = Codegen.ofNullable(advertisedGroups);
-            return this;
+
+        public Builder advertisedGroups(List<RouterBgpAdvertisedGroupsItem> advertisedGroups) {
+            return advertisedGroups(Output.of(advertisedGroups));
         }
+
         public Builder advertisedGroups(RouterBgpAdvertisedGroupsItem... advertisedGroups) {
             return advertisedGroups(List.of(advertisedGroups));
         }
+
         public Builder advertisedIpRanges(@Nullable Output<List<RouterAdvertisedIpRangeArgs>> advertisedIpRanges) {
-            this.advertisedIpRanges = advertisedIpRanges;
+            $.advertisedIpRanges = advertisedIpRanges;
             return this;
         }
-        public Builder advertisedIpRanges(@Nullable List<RouterAdvertisedIpRangeArgs> advertisedIpRanges) {
-            this.advertisedIpRanges = Codegen.ofNullable(advertisedIpRanges);
-            return this;
+
+        public Builder advertisedIpRanges(List<RouterAdvertisedIpRangeArgs> advertisedIpRanges) {
+            return advertisedIpRanges(Output.of(advertisedIpRanges));
         }
+
         public Builder advertisedIpRanges(RouterAdvertisedIpRangeArgs... advertisedIpRanges) {
             return advertisedIpRanges(List.of(advertisedIpRanges));
         }
+
         public Builder asn(@Nullable Output<Integer> asn) {
-            this.asn = asn;
+            $.asn = asn;
             return this;
         }
-        public Builder asn(@Nullable Integer asn) {
-            this.asn = Codegen.ofNullable(asn);
-            return this;
+
+        public Builder asn(Integer asn) {
+            return asn(Output.of(asn));
         }
+
         public Builder keepaliveInterval(@Nullable Output<Integer> keepaliveInterval) {
-            this.keepaliveInterval = keepaliveInterval;
+            $.keepaliveInterval = keepaliveInterval;
             return this;
         }
-        public Builder keepaliveInterval(@Nullable Integer keepaliveInterval) {
-            this.keepaliveInterval = Codegen.ofNullable(keepaliveInterval);
-            return this;
-        }        public RouterBgpArgs build() {
-            return new RouterBgpArgs(advertiseMode, advertisedGroups, advertisedIpRanges, asn, keepaliveInterval);
+
+        public Builder keepaliveInterval(Integer keepaliveInterval) {
+            return keepaliveInterval(Output.of(keepaliveInterval));
+        }
+
+        public RouterBgpArgs build() {
+            return $;
         }
     }
+
 }

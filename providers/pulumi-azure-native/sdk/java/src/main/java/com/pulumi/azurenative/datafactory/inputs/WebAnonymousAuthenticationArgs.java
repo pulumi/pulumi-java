@@ -25,7 +25,7 @@ public final class WebAnonymousAuthenticationArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="authenticationType", required=true)
-      private final Output<String> authenticationType;
+    private Output<String> authenticationType;
 
     public Output<String> authenticationType() {
         return this.authenticationType;
@@ -36,63 +36,60 @@ public final class WebAnonymousAuthenticationArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="url", required=true)
-      private final Output<Object> url;
+    private Output<Object> url;
 
     public Output<Object> url() {
         return this.url;
     }
 
-    public WebAnonymousAuthenticationArgs(
-        Output<String> authenticationType,
-        Output<Object> url) {
-        this.authenticationType = Codegen.stringProp("authenticationType").output().arg(authenticationType).require();
-        this.url = Objects.requireNonNull(url, "expected parameter 'url' to be non-null");
-    }
+    private WebAnonymousAuthenticationArgs() {}
 
-    private WebAnonymousAuthenticationArgs() {
-        this.authenticationType = Codegen.empty();
-        this.url = Codegen.empty();
+    private WebAnonymousAuthenticationArgs(WebAnonymousAuthenticationArgs $) {
+        this.authenticationType = $.authenticationType;
+        this.url = $.url;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WebAnonymousAuthenticationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> authenticationType;
-        private Output<Object> url;
+        private WebAnonymousAuthenticationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new WebAnonymousAuthenticationArgs();
         }
 
         public Builder(WebAnonymousAuthenticationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.authenticationType = defaults.authenticationType;
-    	      this.url = defaults.url;
+            $ = new WebAnonymousAuthenticationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder authenticationType(Output<String> authenticationType) {
-            this.authenticationType = Objects.requireNonNull(authenticationType);
+            $.authenticationType = authenticationType;
             return this;
         }
+
         public Builder authenticationType(String authenticationType) {
-            this.authenticationType = Output.of(Objects.requireNonNull(authenticationType));
-            return this;
+            return authenticationType(Output.of(authenticationType));
         }
+
         public Builder url(Output<Object> url) {
-            this.url = Objects.requireNonNull(url);
+            $.url = url;
             return this;
         }
+
         public Builder url(Object url) {
-            this.url = Output.of(Objects.requireNonNull(url));
-            return this;
-        }        public WebAnonymousAuthenticationArgs build() {
-            return new WebAnonymousAuthenticationArgs(authenticationType, url);
+            return url(Output.of(url));
+        }
+
+        public WebAnonymousAuthenticationArgs build() {
+            $.authenticationType = Codegen.stringProp("authenticationType").output().arg($.authenticationType).require();
+            $.url = Objects.requireNonNull($.url, "expected parameter 'url' to be non-null");
+            return $;
         }
     }
+
 }

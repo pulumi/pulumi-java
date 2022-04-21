@@ -23,45 +23,44 @@ public final class LocationNFSMountOptions extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="version")
-      private final @Nullable LocationNFSMountOptionsVersion version;
+    private @Nullable LocationNFSMountOptionsVersion version;
 
     public Optional<LocationNFSMountOptionsVersion> version() {
-        return this.version == null ? Optional.empty() : Optional.ofNullable(this.version);
+        return Optional.ofNullable(this.version);
     }
 
-    public LocationNFSMountOptions(@Nullable LocationNFSMountOptionsVersion version) {
-        this.version = version;
-    }
+    private LocationNFSMountOptions() {}
 
-    private LocationNFSMountOptions() {
-        this.version = null;
+    private LocationNFSMountOptions(LocationNFSMountOptions $) {
+        this.version = $.version;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LocationNFSMountOptions defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable LocationNFSMountOptionsVersion version;
+        private LocationNFSMountOptions $;
 
         public Builder() {
-    	      // Empty
+            $ = new LocationNFSMountOptions();
         }
 
         public Builder(LocationNFSMountOptions defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.version = defaults.version;
+            $ = new LocationNFSMountOptions(Objects.requireNonNull(defaults));
         }
 
         public Builder version(@Nullable LocationNFSMountOptionsVersion version) {
-            this.version = version;
+            $.version = version;
             return this;
-        }        public LocationNFSMountOptions build() {
-            return new LocationNFSMountOptions(version);
+        }
+
+        public LocationNFSMountOptions build() {
+            return $;
         }
     }
+
 }

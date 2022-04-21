@@ -6,11 +6,11 @@ package com.pulumi.azurenative.automation.inputs;
 import com.pulumi.azurenative.automation.inputs.AdvancedScheduleMonthlyOccurrenceArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +27,10 @@ public final class AdvancedScheduleArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="monthDays")
-      private final @Nullable Output<List<Integer>> monthDays;
+    private @Nullable Output<List<Integer>> monthDays;
 
-    public Output<List<Integer>> monthDays() {
-        return this.monthDays == null ? Codegen.empty() : this.monthDays;
+    public Optional<Output<List<Integer>>> monthDays() {
+        return Optional.ofNullable(this.monthDays);
     }
 
     /**
@@ -38,10 +38,10 @@ public final class AdvancedScheduleArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="monthlyOccurrences")
-      private final @Nullable Output<List<AdvancedScheduleMonthlyOccurrenceArgs>> monthlyOccurrences;
+    private @Nullable Output<List<AdvancedScheduleMonthlyOccurrenceArgs>> monthlyOccurrences;
 
-    public Output<List<AdvancedScheduleMonthlyOccurrenceArgs>> monthlyOccurrences() {
-        return this.monthlyOccurrences == null ? Codegen.empty() : this.monthlyOccurrences;
+    public Optional<Output<List<AdvancedScheduleMonthlyOccurrenceArgs>>> monthlyOccurrences() {
+        return Optional.ofNullable(this.monthlyOccurrences);
     }
 
     /**
@@ -49,85 +49,80 @@ public final class AdvancedScheduleArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="weekDays")
-      private final @Nullable Output<List<String>> weekDays;
+    private @Nullable Output<List<String>> weekDays;
 
-    public Output<List<String>> weekDays() {
-        return this.weekDays == null ? Codegen.empty() : this.weekDays;
+    public Optional<Output<List<String>>> weekDays() {
+        return Optional.ofNullable(this.weekDays);
     }
 
-    public AdvancedScheduleArgs(
-        @Nullable Output<List<Integer>> monthDays,
-        @Nullable Output<List<AdvancedScheduleMonthlyOccurrenceArgs>> monthlyOccurrences,
-        @Nullable Output<List<String>> weekDays) {
-        this.monthDays = monthDays;
-        this.monthlyOccurrences = monthlyOccurrences;
-        this.weekDays = weekDays;
-    }
+    private AdvancedScheduleArgs() {}
 
-    private AdvancedScheduleArgs() {
-        this.monthDays = Codegen.empty();
-        this.monthlyOccurrences = Codegen.empty();
-        this.weekDays = Codegen.empty();
+    private AdvancedScheduleArgs(AdvancedScheduleArgs $) {
+        this.monthDays = $.monthDays;
+        this.monthlyOccurrences = $.monthlyOccurrences;
+        this.weekDays = $.weekDays;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AdvancedScheduleArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<Integer>> monthDays;
-        private @Nullable Output<List<AdvancedScheduleMonthlyOccurrenceArgs>> monthlyOccurrences;
-        private @Nullable Output<List<String>> weekDays;
+        private AdvancedScheduleArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AdvancedScheduleArgs();
         }
 
         public Builder(AdvancedScheduleArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.monthDays = defaults.monthDays;
-    	      this.monthlyOccurrences = defaults.monthlyOccurrences;
-    	      this.weekDays = defaults.weekDays;
+            $ = new AdvancedScheduleArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder monthDays(@Nullable Output<List<Integer>> monthDays) {
-            this.monthDays = monthDays;
+            $.monthDays = monthDays;
             return this;
         }
-        public Builder monthDays(@Nullable List<Integer> monthDays) {
-            this.monthDays = Codegen.ofNullable(monthDays);
-            return this;
+
+        public Builder monthDays(List<Integer> monthDays) {
+            return monthDays(Output.of(monthDays));
         }
+
         public Builder monthDays(Integer... monthDays) {
             return monthDays(List.of(monthDays));
         }
+
         public Builder monthlyOccurrences(@Nullable Output<List<AdvancedScheduleMonthlyOccurrenceArgs>> monthlyOccurrences) {
-            this.monthlyOccurrences = monthlyOccurrences;
+            $.monthlyOccurrences = monthlyOccurrences;
             return this;
         }
-        public Builder monthlyOccurrences(@Nullable List<AdvancedScheduleMonthlyOccurrenceArgs> monthlyOccurrences) {
-            this.monthlyOccurrences = Codegen.ofNullable(monthlyOccurrences);
-            return this;
+
+        public Builder monthlyOccurrences(List<AdvancedScheduleMonthlyOccurrenceArgs> monthlyOccurrences) {
+            return monthlyOccurrences(Output.of(monthlyOccurrences));
         }
+
         public Builder monthlyOccurrences(AdvancedScheduleMonthlyOccurrenceArgs... monthlyOccurrences) {
             return monthlyOccurrences(List.of(monthlyOccurrences));
         }
+
         public Builder weekDays(@Nullable Output<List<String>> weekDays) {
-            this.weekDays = weekDays;
+            $.weekDays = weekDays;
             return this;
         }
-        public Builder weekDays(@Nullable List<String> weekDays) {
-            this.weekDays = Codegen.ofNullable(weekDays);
-            return this;
+
+        public Builder weekDays(List<String> weekDays) {
+            return weekDays(Output.of(weekDays));
         }
+
         public Builder weekDays(String... weekDays) {
             return weekDays(List.of(weekDays));
-        }        public AdvancedScheduleArgs build() {
-            return new AdvancedScheduleArgs(monthDays, monthlyOccurrences, weekDays);
+        }
+
+        public AdvancedScheduleArgs build() {
+            return $;
         }
     }
+
 }

@@ -21,45 +21,45 @@ public final class IapTestServiceAccountInfoResponse extends com.pulumi.resource
      * 
      */
     @Import(name="targetAudienceClientId", required=true)
-      private final String targetAudienceClientId;
+    private String targetAudienceClientId;
 
     public String targetAudienceClientId() {
         return this.targetAudienceClientId;
     }
 
-    public IapTestServiceAccountInfoResponse(String targetAudienceClientId) {
-        this.targetAudienceClientId = Objects.requireNonNull(targetAudienceClientId, "expected parameter 'targetAudienceClientId' to be non-null");
-    }
+    private IapTestServiceAccountInfoResponse() {}
 
-    private IapTestServiceAccountInfoResponse() {
-        this.targetAudienceClientId = null;
+    private IapTestServiceAccountInfoResponse(IapTestServiceAccountInfoResponse $) {
+        this.targetAudienceClientId = $.targetAudienceClientId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(IapTestServiceAccountInfoResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String targetAudienceClientId;
+        private IapTestServiceAccountInfoResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new IapTestServiceAccountInfoResponse();
         }
 
         public Builder(IapTestServiceAccountInfoResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.targetAudienceClientId = defaults.targetAudienceClientId;
+            $ = new IapTestServiceAccountInfoResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder targetAudienceClientId(String targetAudienceClientId) {
-            this.targetAudienceClientId = Objects.requireNonNull(targetAudienceClientId);
+            $.targetAudienceClientId = targetAudienceClientId;
             return this;
-        }        public IapTestServiceAccountInfoResponse build() {
-            return new IapTestServiceAccountInfoResponse(targetAudienceClientId);
+        }
+
+        public IapTestServiceAccountInfoResponse build() {
+            $.targetAudienceClientId = Objects.requireNonNull($.targetAudienceClientId, "expected parameter 'targetAudienceClientId' to be non-null");
+            return $;
         }
     }
+
 }

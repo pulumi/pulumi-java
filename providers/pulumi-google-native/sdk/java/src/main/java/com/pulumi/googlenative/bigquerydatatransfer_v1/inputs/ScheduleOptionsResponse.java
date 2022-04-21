@@ -22,7 +22,7 @@ public final class ScheduleOptionsResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="disableAutoScheduling", required=true)
-      private final Boolean disableAutoScheduling;
+    private Boolean disableAutoScheduling;
 
     public Boolean disableAutoScheduling() {
         return this.disableAutoScheduling;
@@ -33,7 +33,7 @@ public final class ScheduleOptionsResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="endTime", required=true)
-      private final String endTime;
+    private String endTime;
 
     public String endTime() {
         return this.endTime;
@@ -44,64 +44,59 @@ public final class ScheduleOptionsResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="startTime", required=true)
-      private final String startTime;
+    private String startTime;
 
     public String startTime() {
         return this.startTime;
     }
 
-    public ScheduleOptionsResponse(
-        Boolean disableAutoScheduling,
-        String endTime,
-        String startTime) {
-        this.disableAutoScheduling = Objects.requireNonNull(disableAutoScheduling, "expected parameter 'disableAutoScheduling' to be non-null");
-        this.endTime = Objects.requireNonNull(endTime, "expected parameter 'endTime' to be non-null");
-        this.startTime = Objects.requireNonNull(startTime, "expected parameter 'startTime' to be non-null");
-    }
+    private ScheduleOptionsResponse() {}
 
-    private ScheduleOptionsResponse() {
-        this.disableAutoScheduling = null;
-        this.endTime = null;
-        this.startTime = null;
+    private ScheduleOptionsResponse(ScheduleOptionsResponse $) {
+        this.disableAutoScheduling = $.disableAutoScheduling;
+        this.endTime = $.endTime;
+        this.startTime = $.startTime;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ScheduleOptionsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Boolean disableAutoScheduling;
-        private String endTime;
-        private String startTime;
+        private ScheduleOptionsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ScheduleOptionsResponse();
         }
 
         public Builder(ScheduleOptionsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.disableAutoScheduling = defaults.disableAutoScheduling;
-    	      this.endTime = defaults.endTime;
-    	      this.startTime = defaults.startTime;
+            $ = new ScheduleOptionsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder disableAutoScheduling(Boolean disableAutoScheduling) {
-            this.disableAutoScheduling = Objects.requireNonNull(disableAutoScheduling);
+            $.disableAutoScheduling = disableAutoScheduling;
             return this;
         }
+
         public Builder endTime(String endTime) {
-            this.endTime = Objects.requireNonNull(endTime);
+            $.endTime = endTime;
             return this;
         }
+
         public Builder startTime(String startTime) {
-            this.startTime = Objects.requireNonNull(startTime);
+            $.startTime = startTime;
             return this;
-        }        public ScheduleOptionsResponse build() {
-            return new ScheduleOptionsResponse(disableAutoScheduling, endTime, startTime);
+        }
+
+        public ScheduleOptionsResponse build() {
+            $.disableAutoScheduling = Objects.requireNonNull($.disableAutoScheduling, "expected parameter 'disableAutoScheduling' to be non-null");
+            $.endTime = Objects.requireNonNull($.endTime, "expected parameter 'endTime' to be non-null");
+            $.startTime = Objects.requireNonNull($.startTime, "expected parameter 'startTime' to be non-null");
+            return $;
         }
     }
+
 }

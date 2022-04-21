@@ -5,9 +5,9 @@ package com.pulumi.gcp.apigateway.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,17 +21,17 @@ public final class ApiConfigIamPolicyState extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="api")
-      private final @Nullable Output<String> api;
+    private @Nullable Output<String> api;
 
-    public Output<String> api() {
-        return this.api == null ? Codegen.empty() : this.api;
+    public Optional<Output<String>> api() {
+        return Optional.ofNullable(this.api);
     }
 
     @Import(name="apiConfig")
-      private final @Nullable Output<String> apiConfig;
+    private @Nullable Output<String> apiConfig;
 
-    public Output<String> apiConfig() {
-        return this.apiConfig == null ? Codegen.empty() : this.apiConfig;
+    public Optional<Output<String>> apiConfig() {
+        return Optional.ofNullable(this.apiConfig);
     }
 
     /**
@@ -39,10 +39,10 @@ public final class ApiConfigIamPolicyState extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="etag")
-      private final @Nullable Output<String> etag;
+    private @Nullable Output<String> etag;
 
-    public Output<String> etag() {
-        return this.etag == null ? Codegen.empty() : this.etag;
+    public Optional<Output<String>> etag() {
+        return Optional.ofNullable(this.etag);
     }
 
     /**
@@ -51,10 +51,10 @@ public final class ApiConfigIamPolicyState extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="policyData")
-      private final @Nullable Output<String> policyData;
+    private @Nullable Output<String> policyData;
 
-    public Output<String> policyData() {
-        return this.policyData == null ? Codegen.empty() : this.policyData;
+    public Optional<Output<String>> policyData() {
+        return Optional.ofNullable(this.policyData);
     }
 
     /**
@@ -63,102 +63,88 @@ public final class ApiConfigIamPolicyState extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
-    public ApiConfigIamPolicyState(
-        @Nullable Output<String> api,
-        @Nullable Output<String> apiConfig,
-        @Nullable Output<String> etag,
-        @Nullable Output<String> policyData,
-        @Nullable Output<String> project) {
-        this.api = api;
-        this.apiConfig = apiConfig;
-        this.etag = etag;
-        this.policyData = policyData;
-        this.project = project;
-    }
+    private ApiConfigIamPolicyState() {}
 
-    private ApiConfigIamPolicyState() {
-        this.api = Codegen.empty();
-        this.apiConfig = Codegen.empty();
-        this.etag = Codegen.empty();
-        this.policyData = Codegen.empty();
-        this.project = Codegen.empty();
+    private ApiConfigIamPolicyState(ApiConfigIamPolicyState $) {
+        this.api = $.api;
+        this.apiConfig = $.apiConfig;
+        this.etag = $.etag;
+        this.policyData = $.policyData;
+        this.project = $.project;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ApiConfigIamPolicyState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> api;
-        private @Nullable Output<String> apiConfig;
-        private @Nullable Output<String> etag;
-        private @Nullable Output<String> policyData;
-        private @Nullable Output<String> project;
+        private ApiConfigIamPolicyState $;
 
         public Builder() {
-    	      // Empty
+            $ = new ApiConfigIamPolicyState();
         }
 
         public Builder(ApiConfigIamPolicyState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.api = defaults.api;
-    	      this.apiConfig = defaults.apiConfig;
-    	      this.etag = defaults.etag;
-    	      this.policyData = defaults.policyData;
-    	      this.project = defaults.project;
+            $ = new ApiConfigIamPolicyState(Objects.requireNonNull(defaults));
         }
 
         public Builder api(@Nullable Output<String> api) {
-            this.api = api;
+            $.api = api;
             return this;
         }
-        public Builder api(@Nullable String api) {
-            this.api = Codegen.ofNullable(api);
-            return this;
+
+        public Builder api(String api) {
+            return api(Output.of(api));
         }
+
         public Builder apiConfig(@Nullable Output<String> apiConfig) {
-            this.apiConfig = apiConfig;
+            $.apiConfig = apiConfig;
             return this;
         }
-        public Builder apiConfig(@Nullable String apiConfig) {
-            this.apiConfig = Codegen.ofNullable(apiConfig);
-            return this;
+
+        public Builder apiConfig(String apiConfig) {
+            return apiConfig(Output.of(apiConfig));
         }
+
         public Builder etag(@Nullable Output<String> etag) {
-            this.etag = etag;
+            $.etag = etag;
             return this;
         }
-        public Builder etag(@Nullable String etag) {
-            this.etag = Codegen.ofNullable(etag);
-            return this;
+
+        public Builder etag(String etag) {
+            return etag(Output.of(etag));
         }
+
         public Builder policyData(@Nullable Output<String> policyData) {
-            this.policyData = policyData;
+            $.policyData = policyData;
             return this;
         }
-        public Builder policyData(@Nullable String policyData) {
-            this.policyData = Codegen.ofNullable(policyData);
-            return this;
+
+        public Builder policyData(String policyData) {
+            return policyData(Output.of(policyData));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
-        }        public ApiConfigIamPolicyState build() {
-            return new ApiConfigIamPolicyState(api, apiConfig, etag, policyData, project);
+
+        public Builder project(String project) {
+            return project(Output.of(project));
+        }
+
+        public ApiConfigIamPolicyState build() {
+            return $;
         }
     }
+
 }

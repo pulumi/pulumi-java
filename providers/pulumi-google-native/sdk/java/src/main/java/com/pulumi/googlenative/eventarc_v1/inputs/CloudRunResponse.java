@@ -21,7 +21,7 @@ public final class CloudRunResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="path", required=true)
-      private final String path;
+    private String path;
 
     public String path() {
         return this.path;
@@ -32,7 +32,7 @@ public final class CloudRunResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="region", required=true)
-      private final String region;
+    private String region;
 
     public String region() {
         return this.region;
@@ -43,64 +43,59 @@ public final class CloudRunResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="service", required=true)
-      private final String service;
+    private String service;
 
     public String service() {
         return this.service;
     }
 
-    public CloudRunResponse(
-        String path,
-        String region,
-        String service) {
-        this.path = Objects.requireNonNull(path, "expected parameter 'path' to be non-null");
-        this.region = Objects.requireNonNull(region, "expected parameter 'region' to be non-null");
-        this.service = Objects.requireNonNull(service, "expected parameter 'service' to be non-null");
-    }
+    private CloudRunResponse() {}
 
-    private CloudRunResponse() {
-        this.path = null;
-        this.region = null;
-        this.service = null;
+    private CloudRunResponse(CloudRunResponse $) {
+        this.path = $.path;
+        this.region = $.region;
+        this.service = $.service;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CloudRunResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String path;
-        private String region;
-        private String service;
+        private CloudRunResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new CloudRunResponse();
         }
 
         public Builder(CloudRunResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.path = defaults.path;
-    	      this.region = defaults.region;
-    	      this.service = defaults.service;
+            $ = new CloudRunResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder path(String path) {
-            this.path = Objects.requireNonNull(path);
+            $.path = path;
             return this;
         }
+
         public Builder region(String region) {
-            this.region = Objects.requireNonNull(region);
+            $.region = region;
             return this;
         }
+
         public Builder service(String service) {
-            this.service = Objects.requireNonNull(service);
+            $.service = service;
             return this;
-        }        public CloudRunResponse build() {
-            return new CloudRunResponse(path, region, service);
+        }
+
+        public CloudRunResponse build() {
+            $.path = Objects.requireNonNull($.path, "expected parameter 'path' to be non-null");
+            $.region = Objects.requireNonNull($.region, "expected parameter 'region' to be non-null");
+            $.service = Objects.requireNonNull($.service, "expected parameter 'service' to be non-null");
+            return $;
         }
     }
+
 }

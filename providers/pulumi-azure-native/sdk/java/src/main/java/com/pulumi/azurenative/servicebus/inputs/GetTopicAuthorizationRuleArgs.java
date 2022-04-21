@@ -17,7 +17,7 @@ public final class GetTopicAuthorizationRuleArgs extends com.pulumi.resources.In
      * 
      */
     @Import(name="authorizationRuleName", required=true)
-      private final String authorizationRuleName;
+    private String authorizationRuleName;
 
     public String authorizationRuleName() {
         return this.authorizationRuleName;
@@ -28,7 +28,7 @@ public final class GetTopicAuthorizationRuleArgs extends com.pulumi.resources.In
      * 
      */
     @Import(name="namespaceName", required=true)
-      private final String namespaceName;
+    private String namespaceName;
 
     public String namespaceName() {
         return this.namespaceName;
@@ -39,7 +39,7 @@ public final class GetTopicAuthorizationRuleArgs extends com.pulumi.resources.In
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -50,73 +50,66 @@ public final class GetTopicAuthorizationRuleArgs extends com.pulumi.resources.In
      * 
      */
     @Import(name="topicName", required=true)
-      private final String topicName;
+    private String topicName;
 
     public String topicName() {
         return this.topicName;
     }
 
-    public GetTopicAuthorizationRuleArgs(
-        String authorizationRuleName,
-        String namespaceName,
-        String resourceGroupName,
-        String topicName) {
-        this.authorizationRuleName = Objects.requireNonNull(authorizationRuleName, "expected parameter 'authorizationRuleName' to be non-null");
-        this.namespaceName = Objects.requireNonNull(namespaceName, "expected parameter 'namespaceName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.topicName = Objects.requireNonNull(topicName, "expected parameter 'topicName' to be non-null");
-    }
+    private GetTopicAuthorizationRuleArgs() {}
 
-    private GetTopicAuthorizationRuleArgs() {
-        this.authorizationRuleName = null;
-        this.namespaceName = null;
-        this.resourceGroupName = null;
-        this.topicName = null;
+    private GetTopicAuthorizationRuleArgs(GetTopicAuthorizationRuleArgs $) {
+        this.authorizationRuleName = $.authorizationRuleName;
+        this.namespaceName = $.namespaceName;
+        this.resourceGroupName = $.resourceGroupName;
+        this.topicName = $.topicName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetTopicAuthorizationRuleArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String authorizationRuleName;
-        private String namespaceName;
-        private String resourceGroupName;
-        private String topicName;
+        private GetTopicAuthorizationRuleArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetTopicAuthorizationRuleArgs();
         }
 
         public Builder(GetTopicAuthorizationRuleArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.authorizationRuleName = defaults.authorizationRuleName;
-    	      this.namespaceName = defaults.namespaceName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.topicName = defaults.topicName;
+            $ = new GetTopicAuthorizationRuleArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder authorizationRuleName(String authorizationRuleName) {
-            this.authorizationRuleName = Objects.requireNonNull(authorizationRuleName);
+            $.authorizationRuleName = authorizationRuleName;
             return this;
         }
+
         public Builder namespaceName(String namespaceName) {
-            this.namespaceName = Objects.requireNonNull(namespaceName);
+            $.namespaceName = namespaceName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder topicName(String topicName) {
-            this.topicName = Objects.requireNonNull(topicName);
+            $.topicName = topicName;
             return this;
-        }        public GetTopicAuthorizationRuleArgs build() {
-            return new GetTopicAuthorizationRuleArgs(authorizationRuleName, namespaceName, resourceGroupName, topicName);
+        }
+
+        public GetTopicAuthorizationRuleArgs build() {
+            $.authorizationRuleName = Objects.requireNonNull($.authorizationRuleName, "expected parameter 'authorizationRuleName' to be non-null");
+            $.namespaceName = Objects.requireNonNull($.namespaceName, "expected parameter 'namespaceName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.topicName = Objects.requireNonNull($.topicName, "expected parameter 'topicName' to be non-null");
+            return $;
         }
     }
+
 }

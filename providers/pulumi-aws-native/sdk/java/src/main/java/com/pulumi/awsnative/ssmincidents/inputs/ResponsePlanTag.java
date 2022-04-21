@@ -17,62 +17,59 @@ public final class ResponsePlanTag extends com.pulumi.resources.InvokeArgs {
     public static final ResponsePlanTag Empty = new ResponsePlanTag();
 
     @Import(name="key", required=true)
-      private final String key;
+    private String key;
 
     public String key() {
         return this.key;
     }
 
     @Import(name="value", required=true)
-      private final String value;
+    private String value;
 
     public String value() {
         return this.value;
     }
 
-    public ResponsePlanTag(
-        String key,
-        String value) {
-        this.key = Objects.requireNonNull(key, "expected parameter 'key' to be non-null");
-        this.value = Objects.requireNonNull(value, "expected parameter 'value' to be non-null");
-    }
+    private ResponsePlanTag() {}
 
-    private ResponsePlanTag() {
-        this.key = null;
-        this.value = null;
+    private ResponsePlanTag(ResponsePlanTag $) {
+        this.key = $.key;
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ResponsePlanTag defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String key;
-        private String value;
+        private ResponsePlanTag $;
 
         public Builder() {
-    	      // Empty
+            $ = new ResponsePlanTag();
         }
 
         public Builder(ResponsePlanTag defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.key = defaults.key;
-    	      this.value = defaults.value;
+            $ = new ResponsePlanTag(Objects.requireNonNull(defaults));
         }
 
         public Builder key(String key) {
-            this.key = Objects.requireNonNull(key);
+            $.key = key;
             return this;
         }
+
         public Builder value(String value) {
-            this.value = Objects.requireNonNull(value);
+            $.value = value;
             return this;
-        }        public ResponsePlanTag build() {
-            return new ResponsePlanTag(key, value);
+        }
+
+        public ResponsePlanTag build() {
+            $.key = Objects.requireNonNull($.key, "expected parameter 'key' to be non-null");
+            $.value = Objects.requireNonNull($.value, "expected parameter 'value' to be non-null");
+            return $;
         }
     }
+
 }

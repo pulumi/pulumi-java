@@ -10,6 +10,7 @@ import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +27,10 @@ public final class ActiveDirectoryArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="activeDirectoryId")
-      private final @Nullable Output<String> activeDirectoryId;
+    private @Nullable Output<String> activeDirectoryId;
 
-    public Output<String> activeDirectoryId() {
-        return this.activeDirectoryId == null ? Codegen.empty() : this.activeDirectoryId;
+    public Optional<Output<String>> activeDirectoryId() {
+        return Optional.ofNullable(this.activeDirectoryId);
     }
 
     /**
@@ -37,10 +38,10 @@ public final class ActiveDirectoryArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="adName")
-      private final @Nullable Output<String> adName;
+    private @Nullable Output<String> adName;
 
-    public Output<String> adName() {
-        return this.adName == null ? Codegen.empty() : this.adName;
+    public Optional<Output<String>> adName() {
+        return Optional.ofNullable(this.adName);
     }
 
     /**
@@ -48,10 +49,10 @@ public final class ActiveDirectoryArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="aesEncryption")
-      private final @Nullable Output<Boolean> aesEncryption;
+    private @Nullable Output<Boolean> aesEncryption;
 
-    public Output<Boolean> aesEncryption() {
-        return this.aesEncryption == null ? Codegen.empty() : this.aesEncryption;
+    public Optional<Output<Boolean>> aesEncryption() {
+        return Optional.ofNullable(this.aesEncryption);
     }
 
     /**
@@ -59,10 +60,10 @@ public final class ActiveDirectoryArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="allowLocalNfsUsersWithLdap")
-      private final @Nullable Output<Boolean> allowLocalNfsUsersWithLdap;
+    private @Nullable Output<Boolean> allowLocalNfsUsersWithLdap;
 
-    public Output<Boolean> allowLocalNfsUsersWithLdap() {
-        return this.allowLocalNfsUsersWithLdap == null ? Codegen.empty() : this.allowLocalNfsUsersWithLdap;
+    public Optional<Output<Boolean>> allowLocalNfsUsersWithLdap() {
+        return Optional.ofNullable(this.allowLocalNfsUsersWithLdap);
     }
 
     /**
@@ -70,10 +71,10 @@ public final class ActiveDirectoryArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="backupOperators")
-      private final @Nullable Output<List<String>> backupOperators;
+    private @Nullable Output<List<String>> backupOperators;
 
-    public Output<List<String>> backupOperators() {
-        return this.backupOperators == null ? Codegen.empty() : this.backupOperators;
+    public Optional<Output<List<String>>> backupOperators() {
+        return Optional.ofNullable(this.backupOperators);
     }
 
     /**
@@ -81,10 +82,10 @@ public final class ActiveDirectoryArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="dns")
-      private final @Nullable Output<String> dns;
+    private @Nullable Output<String> dns;
 
-    public Output<String> dns() {
-        return this.dns == null ? Codegen.empty() : this.dns;
+    public Optional<Output<String>> dns() {
+        return Optional.ofNullable(this.dns);
     }
 
     /**
@@ -92,10 +93,10 @@ public final class ActiveDirectoryArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="domain")
-      private final @Nullable Output<String> domain;
+    private @Nullable Output<String> domain;
 
-    public Output<String> domain() {
-        return this.domain == null ? Codegen.empty() : this.domain;
+    public Optional<Output<String>> domain() {
+        return Optional.ofNullable(this.domain);
     }
 
     /**
@@ -103,10 +104,10 @@ public final class ActiveDirectoryArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="kdcIP")
-      private final @Nullable Output<String> kdcIP;
+    private @Nullable Output<String> kdcIP;
 
-    public Output<String> kdcIP() {
-        return this.kdcIP == null ? Codegen.empty() : this.kdcIP;
+    public Optional<Output<String>> kdcIP() {
+        return Optional.ofNullable(this.kdcIP);
     }
 
     /**
@@ -114,10 +115,10 @@ public final class ActiveDirectoryArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="ldapOverTLS")
-      private final @Nullable Output<Boolean> ldapOverTLS;
+    private @Nullable Output<Boolean> ldapOverTLS;
 
-    public Output<Boolean> ldapOverTLS() {
-        return this.ldapOverTLS == null ? Codegen.empty() : this.ldapOverTLS;
+    public Optional<Output<Boolean>> ldapOverTLS() {
+        return Optional.ofNullable(this.ldapOverTLS);
     }
 
     /**
@@ -125,10 +126,10 @@ public final class ActiveDirectoryArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="ldapSigning")
-      private final @Nullable Output<Boolean> ldapSigning;
+    private @Nullable Output<Boolean> ldapSigning;
 
-    public Output<Boolean> ldapSigning() {
-        return this.ldapSigning == null ? Codegen.empty() : this.ldapSigning;
+    public Optional<Output<Boolean>> ldapSigning() {
+        return Optional.ofNullable(this.ldapSigning);
     }
 
     /**
@@ -136,10 +137,10 @@ public final class ActiveDirectoryArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="organizationalUnit")
-      private final @Nullable Output<String> organizationalUnit;
+    private @Nullable Output<String> organizationalUnit;
 
-    public Output<String> organizationalUnit() {
-        return this.organizationalUnit == null ? Codegen.empty() : this.organizationalUnit;
+    public Optional<Output<String>> organizationalUnit() {
+        return Optional.ofNullable(this.organizationalUnit);
     }
 
     /**
@@ -147,10 +148,10 @@ public final class ActiveDirectoryArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="password")
-      private final @Nullable Output<String> password;
+    private @Nullable Output<String> password;
 
-    public Output<String> password() {
-        return this.password == null ? Codegen.empty() : this.password;
+    public Optional<Output<String>> password() {
+        return Optional.ofNullable(this.password);
     }
 
     /**
@@ -158,10 +159,10 @@ public final class ActiveDirectoryArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="securityOperators")
-      private final @Nullable Output<List<String>> securityOperators;
+    private @Nullable Output<List<String>> securityOperators;
 
-    public Output<List<String>> securityOperators() {
-        return this.securityOperators == null ? Codegen.empty() : this.securityOperators;
+    public Optional<Output<List<String>>> securityOperators() {
+        return Optional.ofNullable(this.securityOperators);
     }
 
     /**
@@ -169,10 +170,10 @@ public final class ActiveDirectoryArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="serverRootCACertificate")
-      private final @Nullable Output<String> serverRootCACertificate;
+    private @Nullable Output<String> serverRootCACertificate;
 
-    public Output<String> serverRootCACertificate() {
-        return this.serverRootCACertificate == null ? Codegen.empty() : this.serverRootCACertificate;
+    public Optional<Output<String>> serverRootCACertificate() {
+        return Optional.ofNullable(this.serverRootCACertificate);
     }
 
     /**
@@ -180,10 +181,10 @@ public final class ActiveDirectoryArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="site")
-      private final @Nullable Output<String> site;
+    private @Nullable Output<String> site;
 
-    public Output<String> site() {
-        return this.site == null ? Codegen.empty() : this.site;
+    public Optional<Output<String>> site() {
+        return Optional.ofNullable(this.site);
     }
 
     /**
@@ -191,10 +192,10 @@ public final class ActiveDirectoryArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="smbServerName")
-      private final @Nullable Output<String> smbServerName;
+    private @Nullable Output<String> smbServerName;
 
-    public Output<String> smbServerName() {
-        return this.smbServerName == null ? Codegen.empty() : this.smbServerName;
+    public Optional<Output<String>> smbServerName() {
+        return Optional.ofNullable(this.smbServerName);
     }
 
     /**
@@ -202,264 +203,217 @@ public final class ActiveDirectoryArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="username")
-      private final @Nullable Output<String> username;
+    private @Nullable Output<String> username;
 
-    public Output<String> username() {
-        return this.username == null ? Codegen.empty() : this.username;
+    public Optional<Output<String>> username() {
+        return Optional.ofNullable(this.username);
     }
 
-    public ActiveDirectoryArgs(
-        @Nullable Output<String> activeDirectoryId,
-        @Nullable Output<String> adName,
-        @Nullable Output<Boolean> aesEncryption,
-        @Nullable Output<Boolean> allowLocalNfsUsersWithLdap,
-        @Nullable Output<List<String>> backupOperators,
-        @Nullable Output<String> dns,
-        @Nullable Output<String> domain,
-        @Nullable Output<String> kdcIP,
-        @Nullable Output<Boolean> ldapOverTLS,
-        @Nullable Output<Boolean> ldapSigning,
-        @Nullable Output<String> organizationalUnit,
-        @Nullable Output<String> password,
-        @Nullable Output<List<String>> securityOperators,
-        @Nullable Output<String> serverRootCACertificate,
-        @Nullable Output<String> site,
-        @Nullable Output<String> smbServerName,
-        @Nullable Output<String> username) {
-        this.activeDirectoryId = activeDirectoryId;
-        this.adName = adName;
-        this.aesEncryption = aesEncryption;
-        this.allowLocalNfsUsersWithLdap = allowLocalNfsUsersWithLdap;
-        this.backupOperators = backupOperators;
-        this.dns = dns;
-        this.domain = domain;
-        this.kdcIP = kdcIP;
-        this.ldapOverTLS = ldapOverTLS;
-        this.ldapSigning = ldapSigning;
-        this.organizationalUnit = Codegen.stringProp("organizationalUnit").output().arg(organizationalUnit).def("CN=Computers").getNullable();
-        this.password = password;
-        this.securityOperators = securityOperators;
-        this.serverRootCACertificate = serverRootCACertificate;
-        this.site = site;
-        this.smbServerName = smbServerName;
-        this.username = username;
-    }
+    private ActiveDirectoryArgs() {}
 
-    private ActiveDirectoryArgs() {
-        this.activeDirectoryId = Codegen.empty();
-        this.adName = Codegen.empty();
-        this.aesEncryption = Codegen.empty();
-        this.allowLocalNfsUsersWithLdap = Codegen.empty();
-        this.backupOperators = Codegen.empty();
-        this.dns = Codegen.empty();
-        this.domain = Codegen.empty();
-        this.kdcIP = Codegen.empty();
-        this.ldapOverTLS = Codegen.empty();
-        this.ldapSigning = Codegen.empty();
-        this.organizationalUnit = Codegen.empty();
-        this.password = Codegen.empty();
-        this.securityOperators = Codegen.empty();
-        this.serverRootCACertificate = Codegen.empty();
-        this.site = Codegen.empty();
-        this.smbServerName = Codegen.empty();
-        this.username = Codegen.empty();
+    private ActiveDirectoryArgs(ActiveDirectoryArgs $) {
+        this.activeDirectoryId = $.activeDirectoryId;
+        this.adName = $.adName;
+        this.aesEncryption = $.aesEncryption;
+        this.allowLocalNfsUsersWithLdap = $.allowLocalNfsUsersWithLdap;
+        this.backupOperators = $.backupOperators;
+        this.dns = $.dns;
+        this.domain = $.domain;
+        this.kdcIP = $.kdcIP;
+        this.ldapOverTLS = $.ldapOverTLS;
+        this.ldapSigning = $.ldapSigning;
+        this.organizationalUnit = $.organizationalUnit;
+        this.password = $.password;
+        this.securityOperators = $.securityOperators;
+        this.serverRootCACertificate = $.serverRootCACertificate;
+        this.site = $.site;
+        this.smbServerName = $.smbServerName;
+        this.username = $.username;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ActiveDirectoryArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> activeDirectoryId;
-        private @Nullable Output<String> adName;
-        private @Nullable Output<Boolean> aesEncryption;
-        private @Nullable Output<Boolean> allowLocalNfsUsersWithLdap;
-        private @Nullable Output<List<String>> backupOperators;
-        private @Nullable Output<String> dns;
-        private @Nullable Output<String> domain;
-        private @Nullable Output<String> kdcIP;
-        private @Nullable Output<Boolean> ldapOverTLS;
-        private @Nullable Output<Boolean> ldapSigning;
-        private @Nullable Output<String> organizationalUnit;
-        private @Nullable Output<String> password;
-        private @Nullable Output<List<String>> securityOperators;
-        private @Nullable Output<String> serverRootCACertificate;
-        private @Nullable Output<String> site;
-        private @Nullable Output<String> smbServerName;
-        private @Nullable Output<String> username;
+        private ActiveDirectoryArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ActiveDirectoryArgs();
         }
 
         public Builder(ActiveDirectoryArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.activeDirectoryId = defaults.activeDirectoryId;
-    	      this.adName = defaults.adName;
-    	      this.aesEncryption = defaults.aesEncryption;
-    	      this.allowLocalNfsUsersWithLdap = defaults.allowLocalNfsUsersWithLdap;
-    	      this.backupOperators = defaults.backupOperators;
-    	      this.dns = defaults.dns;
-    	      this.domain = defaults.domain;
-    	      this.kdcIP = defaults.kdcIP;
-    	      this.ldapOverTLS = defaults.ldapOverTLS;
-    	      this.ldapSigning = defaults.ldapSigning;
-    	      this.organizationalUnit = defaults.organizationalUnit;
-    	      this.password = defaults.password;
-    	      this.securityOperators = defaults.securityOperators;
-    	      this.serverRootCACertificate = defaults.serverRootCACertificate;
-    	      this.site = defaults.site;
-    	      this.smbServerName = defaults.smbServerName;
-    	      this.username = defaults.username;
+            $ = new ActiveDirectoryArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder activeDirectoryId(@Nullable Output<String> activeDirectoryId) {
-            this.activeDirectoryId = activeDirectoryId;
+            $.activeDirectoryId = activeDirectoryId;
             return this;
         }
-        public Builder activeDirectoryId(@Nullable String activeDirectoryId) {
-            this.activeDirectoryId = Codegen.ofNullable(activeDirectoryId);
-            return this;
+
+        public Builder activeDirectoryId(String activeDirectoryId) {
+            return activeDirectoryId(Output.of(activeDirectoryId));
         }
+
         public Builder adName(@Nullable Output<String> adName) {
-            this.adName = adName;
+            $.adName = adName;
             return this;
         }
-        public Builder adName(@Nullable String adName) {
-            this.adName = Codegen.ofNullable(adName);
-            return this;
+
+        public Builder adName(String adName) {
+            return adName(Output.of(adName));
         }
+
         public Builder aesEncryption(@Nullable Output<Boolean> aesEncryption) {
-            this.aesEncryption = aesEncryption;
+            $.aesEncryption = aesEncryption;
             return this;
         }
-        public Builder aesEncryption(@Nullable Boolean aesEncryption) {
-            this.aesEncryption = Codegen.ofNullable(aesEncryption);
-            return this;
+
+        public Builder aesEncryption(Boolean aesEncryption) {
+            return aesEncryption(Output.of(aesEncryption));
         }
+
         public Builder allowLocalNfsUsersWithLdap(@Nullable Output<Boolean> allowLocalNfsUsersWithLdap) {
-            this.allowLocalNfsUsersWithLdap = allowLocalNfsUsersWithLdap;
+            $.allowLocalNfsUsersWithLdap = allowLocalNfsUsersWithLdap;
             return this;
         }
-        public Builder allowLocalNfsUsersWithLdap(@Nullable Boolean allowLocalNfsUsersWithLdap) {
-            this.allowLocalNfsUsersWithLdap = Codegen.ofNullable(allowLocalNfsUsersWithLdap);
-            return this;
+
+        public Builder allowLocalNfsUsersWithLdap(Boolean allowLocalNfsUsersWithLdap) {
+            return allowLocalNfsUsersWithLdap(Output.of(allowLocalNfsUsersWithLdap));
         }
+
         public Builder backupOperators(@Nullable Output<List<String>> backupOperators) {
-            this.backupOperators = backupOperators;
+            $.backupOperators = backupOperators;
             return this;
         }
-        public Builder backupOperators(@Nullable List<String> backupOperators) {
-            this.backupOperators = Codegen.ofNullable(backupOperators);
-            return this;
+
+        public Builder backupOperators(List<String> backupOperators) {
+            return backupOperators(Output.of(backupOperators));
         }
+
         public Builder backupOperators(String... backupOperators) {
             return backupOperators(List.of(backupOperators));
         }
+
         public Builder dns(@Nullable Output<String> dns) {
-            this.dns = dns;
+            $.dns = dns;
             return this;
         }
-        public Builder dns(@Nullable String dns) {
-            this.dns = Codegen.ofNullable(dns);
-            return this;
+
+        public Builder dns(String dns) {
+            return dns(Output.of(dns));
         }
+
         public Builder domain(@Nullable Output<String> domain) {
-            this.domain = domain;
+            $.domain = domain;
             return this;
         }
-        public Builder domain(@Nullable String domain) {
-            this.domain = Codegen.ofNullable(domain);
-            return this;
+
+        public Builder domain(String domain) {
+            return domain(Output.of(domain));
         }
+
         public Builder kdcIP(@Nullable Output<String> kdcIP) {
-            this.kdcIP = kdcIP;
+            $.kdcIP = kdcIP;
             return this;
         }
-        public Builder kdcIP(@Nullable String kdcIP) {
-            this.kdcIP = Codegen.ofNullable(kdcIP);
-            return this;
+
+        public Builder kdcIP(String kdcIP) {
+            return kdcIP(Output.of(kdcIP));
         }
+
         public Builder ldapOverTLS(@Nullable Output<Boolean> ldapOverTLS) {
-            this.ldapOverTLS = ldapOverTLS;
+            $.ldapOverTLS = ldapOverTLS;
             return this;
         }
-        public Builder ldapOverTLS(@Nullable Boolean ldapOverTLS) {
-            this.ldapOverTLS = Codegen.ofNullable(ldapOverTLS);
-            return this;
+
+        public Builder ldapOverTLS(Boolean ldapOverTLS) {
+            return ldapOverTLS(Output.of(ldapOverTLS));
         }
+
         public Builder ldapSigning(@Nullable Output<Boolean> ldapSigning) {
-            this.ldapSigning = ldapSigning;
+            $.ldapSigning = ldapSigning;
             return this;
         }
-        public Builder ldapSigning(@Nullable Boolean ldapSigning) {
-            this.ldapSigning = Codegen.ofNullable(ldapSigning);
-            return this;
+
+        public Builder ldapSigning(Boolean ldapSigning) {
+            return ldapSigning(Output.of(ldapSigning));
         }
+
         public Builder organizationalUnit(@Nullable Output<String> organizationalUnit) {
-            this.organizationalUnit = organizationalUnit;
+            $.organizationalUnit = organizationalUnit;
             return this;
         }
-        public Builder organizationalUnit(@Nullable String organizationalUnit) {
-            this.organizationalUnit = Codegen.ofNullable(organizationalUnit);
-            return this;
+
+        public Builder organizationalUnit(String organizationalUnit) {
+            return organizationalUnit(Output.of(organizationalUnit));
         }
+
         public Builder password(@Nullable Output<String> password) {
-            this.password = password;
+            $.password = password;
             return this;
         }
-        public Builder password(@Nullable String password) {
-            this.password = Codegen.ofNullable(password);
-            return this;
+
+        public Builder password(String password) {
+            return password(Output.of(password));
         }
+
         public Builder securityOperators(@Nullable Output<List<String>> securityOperators) {
-            this.securityOperators = securityOperators;
+            $.securityOperators = securityOperators;
             return this;
         }
-        public Builder securityOperators(@Nullable List<String> securityOperators) {
-            this.securityOperators = Codegen.ofNullable(securityOperators);
-            return this;
+
+        public Builder securityOperators(List<String> securityOperators) {
+            return securityOperators(Output.of(securityOperators));
         }
+
         public Builder securityOperators(String... securityOperators) {
             return securityOperators(List.of(securityOperators));
         }
+
         public Builder serverRootCACertificate(@Nullable Output<String> serverRootCACertificate) {
-            this.serverRootCACertificate = serverRootCACertificate;
+            $.serverRootCACertificate = serverRootCACertificate;
             return this;
         }
-        public Builder serverRootCACertificate(@Nullable String serverRootCACertificate) {
-            this.serverRootCACertificate = Codegen.ofNullable(serverRootCACertificate);
-            return this;
+
+        public Builder serverRootCACertificate(String serverRootCACertificate) {
+            return serverRootCACertificate(Output.of(serverRootCACertificate));
         }
+
         public Builder site(@Nullable Output<String> site) {
-            this.site = site;
+            $.site = site;
             return this;
         }
-        public Builder site(@Nullable String site) {
-            this.site = Codegen.ofNullable(site);
-            return this;
+
+        public Builder site(String site) {
+            return site(Output.of(site));
         }
+
         public Builder smbServerName(@Nullable Output<String> smbServerName) {
-            this.smbServerName = smbServerName;
+            $.smbServerName = smbServerName;
             return this;
         }
-        public Builder smbServerName(@Nullable String smbServerName) {
-            this.smbServerName = Codegen.ofNullable(smbServerName);
-            return this;
+
+        public Builder smbServerName(String smbServerName) {
+            return smbServerName(Output.of(smbServerName));
         }
+
         public Builder username(@Nullable Output<String> username) {
-            this.username = username;
+            $.username = username;
             return this;
         }
-        public Builder username(@Nullable String username) {
-            this.username = Codegen.ofNullable(username);
-            return this;
-        }        public ActiveDirectoryArgs build() {
-            return new ActiveDirectoryArgs(activeDirectoryId, adName, aesEncryption, allowLocalNfsUsersWithLdap, backupOperators, dns, domain, kdcIP, ldapOverTLS, ldapSigning, organizationalUnit, password, securityOperators, serverRootCACertificate, site, smbServerName, username);
+
+        public Builder username(String username) {
+            return username(Output.of(username));
+        }
+
+        public ActiveDirectoryArgs build() {
+            $.organizationalUnit = Codegen.stringProp("organizationalUnit").output().arg($.organizationalUnit).def("CN=Computers").getNullable();
+            return $;
         }
     }
+
 }

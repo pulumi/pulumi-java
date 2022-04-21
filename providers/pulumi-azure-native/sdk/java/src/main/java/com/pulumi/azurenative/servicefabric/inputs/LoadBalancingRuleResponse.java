@@ -24,7 +24,7 @@ public final class LoadBalancingRuleResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="backendPort", required=true)
-      private final Integer backendPort;
+    private Integer backendPort;
 
     public Integer backendPort() {
         return this.backendPort;
@@ -35,7 +35,7 @@ public final class LoadBalancingRuleResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="frontendPort", required=true)
-      private final Integer frontendPort;
+    private Integer frontendPort;
 
     public Integer frontendPort() {
         return this.frontendPort;
@@ -46,7 +46,7 @@ public final class LoadBalancingRuleResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="probeProtocol", required=true)
-      private final String probeProtocol;
+    private String probeProtocol;
 
     public String probeProtocol() {
         return this.probeProtocol;
@@ -57,10 +57,10 @@ public final class LoadBalancingRuleResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="probeRequestPath")
-      private final @Nullable String probeRequestPath;
+    private @Nullable String probeRequestPath;
 
     public Optional<String> probeRequestPath() {
-        return this.probeRequestPath == null ? Optional.empty() : Optional.ofNullable(this.probeRequestPath);
+        return Optional.ofNullable(this.probeRequestPath);
     }
 
     /**
@@ -68,82 +68,72 @@ public final class LoadBalancingRuleResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="protocol", required=true)
-      private final String protocol;
+    private String protocol;
 
     public String protocol() {
         return this.protocol;
     }
 
-    public LoadBalancingRuleResponse(
-        Integer backendPort,
-        Integer frontendPort,
-        String probeProtocol,
-        @Nullable String probeRequestPath,
-        String protocol) {
-        this.backendPort = Objects.requireNonNull(backendPort, "expected parameter 'backendPort' to be non-null");
-        this.frontendPort = Objects.requireNonNull(frontendPort, "expected parameter 'frontendPort' to be non-null");
-        this.probeProtocol = Objects.requireNonNull(probeProtocol, "expected parameter 'probeProtocol' to be non-null");
-        this.probeRequestPath = probeRequestPath;
-        this.protocol = Objects.requireNonNull(protocol, "expected parameter 'protocol' to be non-null");
-    }
+    private LoadBalancingRuleResponse() {}
 
-    private LoadBalancingRuleResponse() {
-        this.backendPort = null;
-        this.frontendPort = null;
-        this.probeProtocol = null;
-        this.probeRequestPath = null;
-        this.protocol = null;
+    private LoadBalancingRuleResponse(LoadBalancingRuleResponse $) {
+        this.backendPort = $.backendPort;
+        this.frontendPort = $.frontendPort;
+        this.probeProtocol = $.probeProtocol;
+        this.probeRequestPath = $.probeRequestPath;
+        this.protocol = $.protocol;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LoadBalancingRuleResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Integer backendPort;
-        private Integer frontendPort;
-        private String probeProtocol;
-        private @Nullable String probeRequestPath;
-        private String protocol;
+        private LoadBalancingRuleResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new LoadBalancingRuleResponse();
         }
 
         public Builder(LoadBalancingRuleResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.backendPort = defaults.backendPort;
-    	      this.frontendPort = defaults.frontendPort;
-    	      this.probeProtocol = defaults.probeProtocol;
-    	      this.probeRequestPath = defaults.probeRequestPath;
-    	      this.protocol = defaults.protocol;
+            $ = new LoadBalancingRuleResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder backendPort(Integer backendPort) {
-            this.backendPort = Objects.requireNonNull(backendPort);
+            $.backendPort = backendPort;
             return this;
         }
+
         public Builder frontendPort(Integer frontendPort) {
-            this.frontendPort = Objects.requireNonNull(frontendPort);
+            $.frontendPort = frontendPort;
             return this;
         }
+
         public Builder probeProtocol(String probeProtocol) {
-            this.probeProtocol = Objects.requireNonNull(probeProtocol);
+            $.probeProtocol = probeProtocol;
             return this;
         }
+
         public Builder probeRequestPath(@Nullable String probeRequestPath) {
-            this.probeRequestPath = probeRequestPath;
+            $.probeRequestPath = probeRequestPath;
             return this;
         }
+
         public Builder protocol(String protocol) {
-            this.protocol = Objects.requireNonNull(protocol);
+            $.protocol = protocol;
             return this;
-        }        public LoadBalancingRuleResponse build() {
-            return new LoadBalancingRuleResponse(backendPort, frontendPort, probeProtocol, probeRequestPath, protocol);
+        }
+
+        public LoadBalancingRuleResponse build() {
+            $.backendPort = Objects.requireNonNull($.backendPort, "expected parameter 'backendPort' to be non-null");
+            $.frontendPort = Objects.requireNonNull($.frontendPort, "expected parameter 'frontendPort' to be non-null");
+            $.probeProtocol = Objects.requireNonNull($.probeProtocol, "expected parameter 'probeProtocol' to be non-null");
+            $.protocol = Objects.requireNonNull($.protocol, "expected parameter 'protocol' to be non-null");
+            return $;
         }
     }
+
 }

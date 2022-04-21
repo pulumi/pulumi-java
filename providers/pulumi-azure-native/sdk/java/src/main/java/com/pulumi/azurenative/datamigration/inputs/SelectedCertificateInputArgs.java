@@ -5,7 +5,6 @@ package com.pulumi.azurenative.datamigration.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,7 +22,7 @@ public final class SelectedCertificateInputArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="certificateName", required=true)
-      private final Output<String> certificateName;
+    private Output<String> certificateName;
 
     public Output<String> certificateName() {
         return this.certificateName;
@@ -34,63 +33,60 @@ public final class SelectedCertificateInputArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="password", required=true)
-      private final Output<String> password;
+    private Output<String> password;
 
     public Output<String> password() {
         return this.password;
     }
 
-    public SelectedCertificateInputArgs(
-        Output<String> certificateName,
-        Output<String> password) {
-        this.certificateName = Objects.requireNonNull(certificateName, "expected parameter 'certificateName' to be non-null");
-        this.password = Objects.requireNonNull(password, "expected parameter 'password' to be non-null");
-    }
+    private SelectedCertificateInputArgs() {}
 
-    private SelectedCertificateInputArgs() {
-        this.certificateName = Codegen.empty();
-        this.password = Codegen.empty();
+    private SelectedCertificateInputArgs(SelectedCertificateInputArgs $) {
+        this.certificateName = $.certificateName;
+        this.password = $.password;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SelectedCertificateInputArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> certificateName;
-        private Output<String> password;
+        private SelectedCertificateInputArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SelectedCertificateInputArgs();
         }
 
         public Builder(SelectedCertificateInputArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.certificateName = defaults.certificateName;
-    	      this.password = defaults.password;
+            $ = new SelectedCertificateInputArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder certificateName(Output<String> certificateName) {
-            this.certificateName = Objects.requireNonNull(certificateName);
+            $.certificateName = certificateName;
             return this;
         }
+
         public Builder certificateName(String certificateName) {
-            this.certificateName = Output.of(Objects.requireNonNull(certificateName));
-            return this;
+            return certificateName(Output.of(certificateName));
         }
+
         public Builder password(Output<String> password) {
-            this.password = Objects.requireNonNull(password);
+            $.password = password;
             return this;
         }
+
         public Builder password(String password) {
-            this.password = Output.of(Objects.requireNonNull(password));
-            return this;
-        }        public SelectedCertificateInputArgs build() {
-            return new SelectedCertificateInputArgs(certificateName, password);
+            return password(Output.of(password));
+        }
+
+        public SelectedCertificateInputArgs build() {
+            $.certificateName = Objects.requireNonNull($.certificateName, "expected parameter 'certificateName' to be non-null");
+            $.password = Objects.requireNonNull($.password, "expected parameter 'password' to be non-null");
+            return $;
         }
     }
+
 }

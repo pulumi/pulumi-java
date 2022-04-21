@@ -19,10 +19,10 @@ public final class GetFactoryDataPlaneAccessArgs extends com.pulumi.resources.In
      * 
      */
     @Import(name="accessResourcePath")
-      private final @Nullable String accessResourcePath;
+    private @Nullable String accessResourcePath;
 
     public Optional<String> accessResourcePath() {
-        return this.accessResourcePath == null ? Optional.empty() : Optional.ofNullable(this.accessResourcePath);
+        return Optional.ofNullable(this.accessResourcePath);
     }
 
     /**
@@ -30,10 +30,10 @@ public final class GetFactoryDataPlaneAccessArgs extends com.pulumi.resources.In
      * 
      */
     @Import(name="expireTime")
-      private final @Nullable String expireTime;
+    private @Nullable String expireTime;
 
     public Optional<String> expireTime() {
-        return this.expireTime == null ? Optional.empty() : Optional.ofNullable(this.expireTime);
+        return Optional.ofNullable(this.expireTime);
     }
 
     /**
@@ -41,7 +41,7 @@ public final class GetFactoryDataPlaneAccessArgs extends com.pulumi.resources.In
      * 
      */
     @Import(name="factoryName", required=true)
-      private final String factoryName;
+    private String factoryName;
 
     public String factoryName() {
         return this.factoryName;
@@ -52,10 +52,10 @@ public final class GetFactoryDataPlaneAccessArgs extends com.pulumi.resources.In
      * 
      */
     @Import(name="permissions")
-      private final @Nullable String permissions;
+    private @Nullable String permissions;
 
     public Optional<String> permissions() {
-        return this.permissions == null ? Optional.empty() : Optional.ofNullable(this.permissions);
+        return Optional.ofNullable(this.permissions);
     }
 
     /**
@@ -63,10 +63,10 @@ public final class GetFactoryDataPlaneAccessArgs extends com.pulumi.resources.In
      * 
      */
     @Import(name="profileName")
-      private final @Nullable String profileName;
+    private @Nullable String profileName;
 
     public Optional<String> profileName() {
-        return this.profileName == null ? Optional.empty() : Optional.ofNullable(this.profileName);
+        return Optional.ofNullable(this.profileName);
     }
 
     /**
@@ -74,7 +74,7 @@ public final class GetFactoryDataPlaneAccessArgs extends com.pulumi.resources.In
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -85,100 +85,82 @@ public final class GetFactoryDataPlaneAccessArgs extends com.pulumi.resources.In
      * 
      */
     @Import(name="startTime")
-      private final @Nullable String startTime;
+    private @Nullable String startTime;
 
     public Optional<String> startTime() {
-        return this.startTime == null ? Optional.empty() : Optional.ofNullable(this.startTime);
+        return Optional.ofNullable(this.startTime);
     }
 
-    public GetFactoryDataPlaneAccessArgs(
-        @Nullable String accessResourcePath,
-        @Nullable String expireTime,
-        String factoryName,
-        @Nullable String permissions,
-        @Nullable String profileName,
-        String resourceGroupName,
-        @Nullable String startTime) {
-        this.accessResourcePath = accessResourcePath;
-        this.expireTime = expireTime;
-        this.factoryName = Objects.requireNonNull(factoryName, "expected parameter 'factoryName' to be non-null");
-        this.permissions = permissions;
-        this.profileName = profileName;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.startTime = startTime;
-    }
+    private GetFactoryDataPlaneAccessArgs() {}
 
-    private GetFactoryDataPlaneAccessArgs() {
-        this.accessResourcePath = null;
-        this.expireTime = null;
-        this.factoryName = null;
-        this.permissions = null;
-        this.profileName = null;
-        this.resourceGroupName = null;
-        this.startTime = null;
+    private GetFactoryDataPlaneAccessArgs(GetFactoryDataPlaneAccessArgs $) {
+        this.accessResourcePath = $.accessResourcePath;
+        this.expireTime = $.expireTime;
+        this.factoryName = $.factoryName;
+        this.permissions = $.permissions;
+        this.profileName = $.profileName;
+        this.resourceGroupName = $.resourceGroupName;
+        this.startTime = $.startTime;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetFactoryDataPlaneAccessArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String accessResourcePath;
-        private @Nullable String expireTime;
-        private String factoryName;
-        private @Nullable String permissions;
-        private @Nullable String profileName;
-        private String resourceGroupName;
-        private @Nullable String startTime;
+        private GetFactoryDataPlaneAccessArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetFactoryDataPlaneAccessArgs();
         }
 
         public Builder(GetFactoryDataPlaneAccessArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accessResourcePath = defaults.accessResourcePath;
-    	      this.expireTime = defaults.expireTime;
-    	      this.factoryName = defaults.factoryName;
-    	      this.permissions = defaults.permissions;
-    	      this.profileName = defaults.profileName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.startTime = defaults.startTime;
+            $ = new GetFactoryDataPlaneAccessArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder accessResourcePath(@Nullable String accessResourcePath) {
-            this.accessResourcePath = accessResourcePath;
+            $.accessResourcePath = accessResourcePath;
             return this;
         }
+
         public Builder expireTime(@Nullable String expireTime) {
-            this.expireTime = expireTime;
+            $.expireTime = expireTime;
             return this;
         }
+
         public Builder factoryName(String factoryName) {
-            this.factoryName = Objects.requireNonNull(factoryName);
+            $.factoryName = factoryName;
             return this;
         }
+
         public Builder permissions(@Nullable String permissions) {
-            this.permissions = permissions;
+            $.permissions = permissions;
             return this;
         }
+
         public Builder profileName(@Nullable String profileName) {
-            this.profileName = profileName;
+            $.profileName = profileName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder startTime(@Nullable String startTime) {
-            this.startTime = startTime;
+            $.startTime = startTime;
             return this;
-        }        public GetFactoryDataPlaneAccessArgs build() {
-            return new GetFactoryDataPlaneAccessArgs(accessResourcePath, expireTime, factoryName, permissions, profileName, resourceGroupName, startTime);
+        }
+
+        public GetFactoryDataPlaneAccessArgs build() {
+            $.factoryName = Objects.requireNonNull($.factoryName, "expected parameter 'factoryName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

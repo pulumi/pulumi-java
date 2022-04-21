@@ -17,7 +17,7 @@ public final class GetBlobServicePropertiesArgs extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="accountName", required=true)
-      private final String accountName;
+    private String accountName;
 
     public String accountName() {
         return this.accountName;
@@ -28,7 +28,7 @@ public final class GetBlobServicePropertiesArgs extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="blobServicesName", required=true)
-      private final String blobServicesName;
+    private String blobServicesName;
 
     public String blobServicesName() {
         return this.blobServicesName;
@@ -39,64 +39,59 @@ public final class GetBlobServicePropertiesArgs extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public GetBlobServicePropertiesArgs(
-        String accountName,
-        String blobServicesName,
-        String resourceGroupName) {
-        this.accountName = Objects.requireNonNull(accountName, "expected parameter 'accountName' to be non-null");
-        this.blobServicesName = Objects.requireNonNull(blobServicesName, "expected parameter 'blobServicesName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private GetBlobServicePropertiesArgs() {}
 
-    private GetBlobServicePropertiesArgs() {
-        this.accountName = null;
-        this.blobServicesName = null;
-        this.resourceGroupName = null;
+    private GetBlobServicePropertiesArgs(GetBlobServicePropertiesArgs $) {
+        this.accountName = $.accountName;
+        this.blobServicesName = $.blobServicesName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetBlobServicePropertiesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String accountName;
-        private String blobServicesName;
-        private String resourceGroupName;
+        private GetBlobServicePropertiesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetBlobServicePropertiesArgs();
         }
 
         public Builder(GetBlobServicePropertiesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accountName = defaults.accountName;
-    	      this.blobServicesName = defaults.blobServicesName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new GetBlobServicePropertiesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder accountName(String accountName) {
-            this.accountName = Objects.requireNonNull(accountName);
+            $.accountName = accountName;
             return this;
         }
+
         public Builder blobServicesName(String blobServicesName) {
-            this.blobServicesName = Objects.requireNonNull(blobServicesName);
+            $.blobServicesName = blobServicesName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public GetBlobServicePropertiesArgs build() {
-            return new GetBlobServicePropertiesArgs(accountName, blobServicesName, resourceGroupName);
+        }
+
+        public GetBlobServicePropertiesArgs build() {
+            $.accountName = Objects.requireNonNull($.accountName, "expected parameter 'accountName' to be non-null");
+            $.blobServicesName = Objects.requireNonNull($.blobServicesName, "expected parameter 'blobServicesName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

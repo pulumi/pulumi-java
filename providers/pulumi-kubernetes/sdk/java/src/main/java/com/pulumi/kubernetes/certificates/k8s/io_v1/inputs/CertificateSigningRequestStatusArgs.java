@@ -5,11 +5,11 @@ package com.pulumi.kubernetes.certificates.k8s.io_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.kubernetes.certificates.k8s.io_v1.inputs.CertificateSigningRequestConditionArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -47,10 +47,10 @@ public final class CertificateSigningRequestStatusArgs extends com.pulumi.resour
      * 
      */
     @Import(name="certificate")
-      private final @Nullable Output<String> certificate;
+    private @Nullable Output<String> certificate;
 
-    public Output<String> certificate() {
-        return this.certificate == null ? Codegen.empty() : this.certificate;
+    public Optional<Output<String>> certificate() {
+        return Optional.ofNullable(this.certificate);
     }
 
     /**
@@ -58,66 +58,62 @@ public final class CertificateSigningRequestStatusArgs extends com.pulumi.resour
      * 
      */
     @Import(name="conditions")
-      private final @Nullable Output<List<CertificateSigningRequestConditionArgs>> conditions;
+    private @Nullable Output<List<CertificateSigningRequestConditionArgs>> conditions;
 
-    public Output<List<CertificateSigningRequestConditionArgs>> conditions() {
-        return this.conditions == null ? Codegen.empty() : this.conditions;
+    public Optional<Output<List<CertificateSigningRequestConditionArgs>>> conditions() {
+        return Optional.ofNullable(this.conditions);
     }
 
-    public CertificateSigningRequestStatusArgs(
-        @Nullable Output<String> certificate,
-        @Nullable Output<List<CertificateSigningRequestConditionArgs>> conditions) {
-        this.certificate = certificate;
-        this.conditions = conditions;
-    }
+    private CertificateSigningRequestStatusArgs() {}
 
-    private CertificateSigningRequestStatusArgs() {
-        this.certificate = Codegen.empty();
-        this.conditions = Codegen.empty();
+    private CertificateSigningRequestStatusArgs(CertificateSigningRequestStatusArgs $) {
+        this.certificate = $.certificate;
+        this.conditions = $.conditions;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CertificateSigningRequestStatusArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> certificate;
-        private @Nullable Output<List<CertificateSigningRequestConditionArgs>> conditions;
+        private CertificateSigningRequestStatusArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CertificateSigningRequestStatusArgs();
         }
 
         public Builder(CertificateSigningRequestStatusArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.certificate = defaults.certificate;
-    	      this.conditions = defaults.conditions;
+            $ = new CertificateSigningRequestStatusArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder certificate(@Nullable Output<String> certificate) {
-            this.certificate = certificate;
+            $.certificate = certificate;
             return this;
         }
-        public Builder certificate(@Nullable String certificate) {
-            this.certificate = Codegen.ofNullable(certificate);
-            return this;
+
+        public Builder certificate(String certificate) {
+            return certificate(Output.of(certificate));
         }
+
         public Builder conditions(@Nullable Output<List<CertificateSigningRequestConditionArgs>> conditions) {
-            this.conditions = conditions;
+            $.conditions = conditions;
             return this;
         }
-        public Builder conditions(@Nullable List<CertificateSigningRequestConditionArgs> conditions) {
-            this.conditions = Codegen.ofNullable(conditions);
-            return this;
+
+        public Builder conditions(List<CertificateSigningRequestConditionArgs> conditions) {
+            return conditions(Output.of(conditions));
         }
+
         public Builder conditions(CertificateSigningRequestConditionArgs... conditions) {
             return conditions(List.of(conditions));
-        }        public CertificateSigningRequestStatusArgs build() {
-            return new CertificateSigningRequestStatusArgs(certificate, conditions);
+        }
+
+        public CertificateSigningRequestStatusArgs build() {
+            return $;
         }
     }
+
 }

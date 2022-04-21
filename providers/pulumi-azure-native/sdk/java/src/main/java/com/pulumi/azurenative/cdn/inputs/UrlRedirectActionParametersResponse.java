@@ -23,10 +23,10 @@ public final class UrlRedirectActionParametersResponse extends com.pulumi.resour
      * 
      */
     @Import(name="customFragment")
-      private final @Nullable String customFragment;
+    private @Nullable String customFragment;
 
     public Optional<String> customFragment() {
-        return this.customFragment == null ? Optional.empty() : Optional.ofNullable(this.customFragment);
+        return Optional.ofNullable(this.customFragment);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class UrlRedirectActionParametersResponse extends com.pulumi.resour
      * 
      */
     @Import(name="customHostname")
-      private final @Nullable String customHostname;
+    private @Nullable String customHostname;
 
     public Optional<String> customHostname() {
-        return this.customHostname == null ? Optional.empty() : Optional.ofNullable(this.customHostname);
+        return Optional.ofNullable(this.customHostname);
     }
 
     /**
@@ -45,10 +45,10 @@ public final class UrlRedirectActionParametersResponse extends com.pulumi.resour
      * 
      */
     @Import(name="customPath")
-      private final @Nullable String customPath;
+    private @Nullable String customPath;
 
     public Optional<String> customPath() {
-        return this.customPath == null ? Optional.empty() : Optional.ofNullable(this.customPath);
+        return Optional.ofNullable(this.customPath);
     }
 
     /**
@@ -56,10 +56,10 @@ public final class UrlRedirectActionParametersResponse extends com.pulumi.resour
      * 
      */
     @Import(name="customQueryString")
-      private final @Nullable String customQueryString;
+    private @Nullable String customQueryString;
 
     public Optional<String> customQueryString() {
-        return this.customQueryString == null ? Optional.empty() : Optional.ofNullable(this.customQueryString);
+        return Optional.ofNullable(this.customQueryString);
     }
 
     /**
@@ -67,14 +67,14 @@ public final class UrlRedirectActionParametersResponse extends com.pulumi.resour
      * 
      */
     @Import(name="destinationProtocol")
-      private final @Nullable String destinationProtocol;
+    private @Nullable String destinationProtocol;
 
     public Optional<String> destinationProtocol() {
-        return this.destinationProtocol == null ? Optional.empty() : Optional.ofNullable(this.destinationProtocol);
+        return Optional.ofNullable(this.destinationProtocol);
     }
 
     @Import(name="odataType", required=true)
-      private final String odataType;
+    private String odataType;
 
     public String odataType() {
         return this.odataType;
@@ -85,100 +85,82 @@ public final class UrlRedirectActionParametersResponse extends com.pulumi.resour
      * 
      */
     @Import(name="redirectType", required=true)
-      private final String redirectType;
+    private String redirectType;
 
     public String redirectType() {
         return this.redirectType;
     }
 
-    public UrlRedirectActionParametersResponse(
-        @Nullable String customFragment,
-        @Nullable String customHostname,
-        @Nullable String customPath,
-        @Nullable String customQueryString,
-        @Nullable String destinationProtocol,
-        String odataType,
-        String redirectType) {
-        this.customFragment = customFragment;
-        this.customHostname = customHostname;
-        this.customPath = customPath;
-        this.customQueryString = customQueryString;
-        this.destinationProtocol = destinationProtocol;
-        this.odataType = Objects.requireNonNull(odataType, "expected parameter 'odataType' to be non-null");
-        this.redirectType = Objects.requireNonNull(redirectType, "expected parameter 'redirectType' to be non-null");
-    }
+    private UrlRedirectActionParametersResponse() {}
 
-    private UrlRedirectActionParametersResponse() {
-        this.customFragment = null;
-        this.customHostname = null;
-        this.customPath = null;
-        this.customQueryString = null;
-        this.destinationProtocol = null;
-        this.odataType = null;
-        this.redirectType = null;
+    private UrlRedirectActionParametersResponse(UrlRedirectActionParametersResponse $) {
+        this.customFragment = $.customFragment;
+        this.customHostname = $.customHostname;
+        this.customPath = $.customPath;
+        this.customQueryString = $.customQueryString;
+        this.destinationProtocol = $.destinationProtocol;
+        this.odataType = $.odataType;
+        this.redirectType = $.redirectType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(UrlRedirectActionParametersResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String customFragment;
-        private @Nullable String customHostname;
-        private @Nullable String customPath;
-        private @Nullable String customQueryString;
-        private @Nullable String destinationProtocol;
-        private String odataType;
-        private String redirectType;
+        private UrlRedirectActionParametersResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new UrlRedirectActionParametersResponse();
         }
 
         public Builder(UrlRedirectActionParametersResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.customFragment = defaults.customFragment;
-    	      this.customHostname = defaults.customHostname;
-    	      this.customPath = defaults.customPath;
-    	      this.customQueryString = defaults.customQueryString;
-    	      this.destinationProtocol = defaults.destinationProtocol;
-    	      this.odataType = defaults.odataType;
-    	      this.redirectType = defaults.redirectType;
+            $ = new UrlRedirectActionParametersResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder customFragment(@Nullable String customFragment) {
-            this.customFragment = customFragment;
+            $.customFragment = customFragment;
             return this;
         }
+
         public Builder customHostname(@Nullable String customHostname) {
-            this.customHostname = customHostname;
+            $.customHostname = customHostname;
             return this;
         }
+
         public Builder customPath(@Nullable String customPath) {
-            this.customPath = customPath;
+            $.customPath = customPath;
             return this;
         }
+
         public Builder customQueryString(@Nullable String customQueryString) {
-            this.customQueryString = customQueryString;
+            $.customQueryString = customQueryString;
             return this;
         }
+
         public Builder destinationProtocol(@Nullable String destinationProtocol) {
-            this.destinationProtocol = destinationProtocol;
+            $.destinationProtocol = destinationProtocol;
             return this;
         }
+
         public Builder odataType(String odataType) {
-            this.odataType = Objects.requireNonNull(odataType);
+            $.odataType = odataType;
             return this;
         }
+
         public Builder redirectType(String redirectType) {
-            this.redirectType = Objects.requireNonNull(redirectType);
+            $.redirectType = redirectType;
             return this;
-        }        public UrlRedirectActionParametersResponse build() {
-            return new UrlRedirectActionParametersResponse(customFragment, customHostname, customPath, customQueryString, destinationProtocol, odataType, redirectType);
+        }
+
+        public UrlRedirectActionParametersResponse build() {
+            $.odataType = Objects.requireNonNull($.odataType, "expected parameter 'odataType' to be non-null");
+            $.redirectType = Objects.requireNonNull($.redirectType, "expected parameter 'redirectType' to be non-null");
+            return $;
         }
     }
+
 }

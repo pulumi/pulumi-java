@@ -19,10 +19,10 @@ public final class ManagedClusterSKUResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="name")
-      private final @Nullable String name;
+    private @Nullable String name;
 
     public Optional<String> name() {
-        return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -30,55 +30,50 @@ public final class ManagedClusterSKUResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="tier")
-      private final @Nullable String tier;
+    private @Nullable String tier;
 
     public Optional<String> tier() {
-        return this.tier == null ? Optional.empty() : Optional.ofNullable(this.tier);
+        return Optional.ofNullable(this.tier);
     }
 
-    public ManagedClusterSKUResponse(
-        @Nullable String name,
-        @Nullable String tier) {
-        this.name = name;
-        this.tier = tier;
-    }
+    private ManagedClusterSKUResponse() {}
 
-    private ManagedClusterSKUResponse() {
-        this.name = null;
-        this.tier = null;
+    private ManagedClusterSKUResponse(ManagedClusterSKUResponse $) {
+        this.name = $.name;
+        this.tier = $.tier;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ManagedClusterSKUResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String name;
-        private @Nullable String tier;
+        private ManagedClusterSKUResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ManagedClusterSKUResponse();
         }
 
         public Builder(ManagedClusterSKUResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.tier = defaults.tier;
+            $ = new ManagedClusterSKUResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder name(@Nullable String name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
+
         public Builder tier(@Nullable String tier) {
-            this.tier = tier;
+            $.tier = tier;
             return this;
-        }        public ManagedClusterSKUResponse build() {
-            return new ManagedClusterSKUResponse(name, tier);
+        }
+
+        public ManagedClusterSKUResponse build() {
+            return $;
         }
     }
+
 }

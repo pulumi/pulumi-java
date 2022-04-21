@@ -25,10 +25,10 @@ public final class ExportDefinitionResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="dataSet")
-      private final @Nullable ExportDatasetResponse dataSet;
+    private @Nullable ExportDatasetResponse dataSet;
 
     public Optional<ExportDatasetResponse> dataSet() {
-        return this.dataSet == null ? Optional.empty() : Optional.ofNullable(this.dataSet);
+        return Optional.ofNullable(this.dataSet);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class ExportDefinitionResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="timePeriod")
-      private final @Nullable ExportTimePeriodResponse timePeriod;
+    private @Nullable ExportTimePeriodResponse timePeriod;
 
     public Optional<ExportTimePeriodResponse> timePeriod() {
-        return this.timePeriod == null ? Optional.empty() : Optional.ofNullable(this.timePeriod);
+        return Optional.ofNullable(this.timePeriod);
     }
 
     /**
@@ -47,7 +47,7 @@ public final class ExportDefinitionResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="timeframe", required=true)
-      private final String timeframe;
+    private String timeframe;
 
     public String timeframe() {
         return this.timeframe;
@@ -58,73 +58,64 @@ public final class ExportDefinitionResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
     }
 
-    public ExportDefinitionResponse(
-        @Nullable ExportDatasetResponse dataSet,
-        @Nullable ExportTimePeriodResponse timePeriod,
-        String timeframe,
-        String type) {
-        this.dataSet = dataSet;
-        this.timePeriod = timePeriod;
-        this.timeframe = Objects.requireNonNull(timeframe, "expected parameter 'timeframe' to be non-null");
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private ExportDefinitionResponse() {}
 
-    private ExportDefinitionResponse() {
-        this.dataSet = null;
-        this.timePeriod = null;
-        this.timeframe = null;
-        this.type = null;
+    private ExportDefinitionResponse(ExportDefinitionResponse $) {
+        this.dataSet = $.dataSet;
+        this.timePeriod = $.timePeriod;
+        this.timeframe = $.timeframe;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ExportDefinitionResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable ExportDatasetResponse dataSet;
-        private @Nullable ExportTimePeriodResponse timePeriod;
-        private String timeframe;
-        private String type;
+        private ExportDefinitionResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ExportDefinitionResponse();
         }
 
         public Builder(ExportDefinitionResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dataSet = defaults.dataSet;
-    	      this.timePeriod = defaults.timePeriod;
-    	      this.timeframe = defaults.timeframe;
-    	      this.type = defaults.type;
+            $ = new ExportDefinitionResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder dataSet(@Nullable ExportDatasetResponse dataSet) {
-            this.dataSet = dataSet;
+            $.dataSet = dataSet;
             return this;
         }
+
         public Builder timePeriod(@Nullable ExportTimePeriodResponse timePeriod) {
-            this.timePeriod = timePeriod;
+            $.timePeriod = timePeriod;
             return this;
         }
+
         public Builder timeframe(String timeframe) {
-            this.timeframe = Objects.requireNonNull(timeframe);
+            $.timeframe = timeframe;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
-        }        public ExportDefinitionResponse build() {
-            return new ExportDefinitionResponse(dataSet, timePeriod, timeframe, type);
+        }
+
+        public ExportDefinitionResponse build() {
+            $.timeframe = Objects.requireNonNull($.timeframe, "expected parameter 'timeframe' to be non-null");
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

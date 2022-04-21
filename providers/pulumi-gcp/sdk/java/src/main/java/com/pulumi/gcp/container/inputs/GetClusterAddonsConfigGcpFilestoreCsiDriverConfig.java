@@ -13,45 +13,45 @@ public final class GetClusterAddonsConfigGcpFilestoreCsiDriverConfig extends com
     public static final GetClusterAddonsConfigGcpFilestoreCsiDriverConfig Empty = new GetClusterAddonsConfigGcpFilestoreCsiDriverConfig();
 
     @Import(name="enabled", required=true)
-      private final Boolean enabled;
+    private Boolean enabled;
 
     public Boolean enabled() {
         return this.enabled;
     }
 
-    public GetClusterAddonsConfigGcpFilestoreCsiDriverConfig(Boolean enabled) {
-        this.enabled = Objects.requireNonNull(enabled, "expected parameter 'enabled' to be non-null");
-    }
+    private GetClusterAddonsConfigGcpFilestoreCsiDriverConfig() {}
 
-    private GetClusterAddonsConfigGcpFilestoreCsiDriverConfig() {
-        this.enabled = null;
+    private GetClusterAddonsConfigGcpFilestoreCsiDriverConfig(GetClusterAddonsConfigGcpFilestoreCsiDriverConfig $) {
+        this.enabled = $.enabled;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetClusterAddonsConfigGcpFilestoreCsiDriverConfig defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Boolean enabled;
+        private GetClusterAddonsConfigGcpFilestoreCsiDriverConfig $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetClusterAddonsConfigGcpFilestoreCsiDriverConfig();
         }
 
         public Builder(GetClusterAddonsConfigGcpFilestoreCsiDriverConfig defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.enabled = defaults.enabled;
+            $ = new GetClusterAddonsConfigGcpFilestoreCsiDriverConfig(Objects.requireNonNull(defaults));
         }
 
         public Builder enabled(Boolean enabled) {
-            this.enabled = Objects.requireNonNull(enabled);
+            $.enabled = enabled;
             return this;
-        }        public GetClusterAddonsConfigGcpFilestoreCsiDriverConfig build() {
-            return new GetClusterAddonsConfigGcpFilestoreCsiDriverConfig(enabled);
+        }
+
+        public GetClusterAddonsConfigGcpFilestoreCsiDriverConfig build() {
+            $.enabled = Objects.requireNonNull($.enabled, "expected parameter 'enabled' to be non-null");
+            return $;
         }
     }
+
 }

@@ -23,10 +23,10 @@ public final class RoutingEventHubPropertiesResponse extends com.pulumi.resource
      * 
      */
     @Import(name="authenticationType")
-      private final @Nullable String authenticationType;
+    private @Nullable String authenticationType;
 
     public Optional<String> authenticationType() {
-        return this.authenticationType == null ? Optional.empty() : Optional.ofNullable(this.authenticationType);
+        return Optional.ofNullable(this.authenticationType);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class RoutingEventHubPropertiesResponse extends com.pulumi.resource
      * 
      */
     @Import(name="connectionString")
-      private final @Nullable String connectionString;
+    private @Nullable String connectionString;
 
     public Optional<String> connectionString() {
-        return this.connectionString == null ? Optional.empty() : Optional.ofNullable(this.connectionString);
+        return Optional.ofNullable(this.connectionString);
     }
 
     /**
@@ -45,10 +45,10 @@ public final class RoutingEventHubPropertiesResponse extends com.pulumi.resource
      * 
      */
     @Import(name="endpointUri")
-      private final @Nullable String endpointUri;
+    private @Nullable String endpointUri;
 
     public Optional<String> endpointUri() {
-        return this.endpointUri == null ? Optional.empty() : Optional.ofNullable(this.endpointUri);
+        return Optional.ofNullable(this.endpointUri);
     }
 
     /**
@@ -56,10 +56,10 @@ public final class RoutingEventHubPropertiesResponse extends com.pulumi.resource
      * 
      */
     @Import(name="entityPath")
-      private final @Nullable String entityPath;
+    private @Nullable String entityPath;
 
     public Optional<String> entityPath() {
-        return this.entityPath == null ? Optional.empty() : Optional.ofNullable(this.entityPath);
+        return Optional.ofNullable(this.entityPath);
     }
 
     /**
@@ -67,10 +67,10 @@ public final class RoutingEventHubPropertiesResponse extends com.pulumi.resource
      * 
      */
     @Import(name="id")
-      private final @Nullable String id;
+    private @Nullable String id;
 
     public Optional<String> id() {
-        return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
+        return Optional.ofNullable(this.id);
     }
 
     /**
@@ -78,7 +78,7 @@ public final class RoutingEventHubPropertiesResponse extends com.pulumi.resource
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -89,10 +89,10 @@ public final class RoutingEventHubPropertiesResponse extends com.pulumi.resource
      * 
      */
     @Import(name="resourceGroup")
-      private final @Nullable String resourceGroup;
+    private @Nullable String resourceGroup;
 
     public Optional<String> resourceGroup() {
-        return this.resourceGroup == null ? Optional.empty() : Optional.ofNullable(this.resourceGroup);
+        return Optional.ofNullable(this.resourceGroup);
     }
 
     /**
@@ -100,109 +100,87 @@ public final class RoutingEventHubPropertiesResponse extends com.pulumi.resource
      * 
      */
     @Import(name="subscriptionId")
-      private final @Nullable String subscriptionId;
+    private @Nullable String subscriptionId;
 
     public Optional<String> subscriptionId() {
-        return this.subscriptionId == null ? Optional.empty() : Optional.ofNullable(this.subscriptionId);
+        return Optional.ofNullable(this.subscriptionId);
     }
 
-    public RoutingEventHubPropertiesResponse(
-        @Nullable String authenticationType,
-        @Nullable String connectionString,
-        @Nullable String endpointUri,
-        @Nullable String entityPath,
-        @Nullable String id,
-        String name,
-        @Nullable String resourceGroup,
-        @Nullable String subscriptionId) {
-        this.authenticationType = authenticationType;
-        this.connectionString = connectionString;
-        this.endpointUri = endpointUri;
-        this.entityPath = entityPath;
-        this.id = id;
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.resourceGroup = resourceGroup;
-        this.subscriptionId = subscriptionId;
-    }
+    private RoutingEventHubPropertiesResponse() {}
 
-    private RoutingEventHubPropertiesResponse() {
-        this.authenticationType = null;
-        this.connectionString = null;
-        this.endpointUri = null;
-        this.entityPath = null;
-        this.id = null;
-        this.name = null;
-        this.resourceGroup = null;
-        this.subscriptionId = null;
+    private RoutingEventHubPropertiesResponse(RoutingEventHubPropertiesResponse $) {
+        this.authenticationType = $.authenticationType;
+        this.connectionString = $.connectionString;
+        this.endpointUri = $.endpointUri;
+        this.entityPath = $.entityPath;
+        this.id = $.id;
+        this.name = $.name;
+        this.resourceGroup = $.resourceGroup;
+        this.subscriptionId = $.subscriptionId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RoutingEventHubPropertiesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String authenticationType;
-        private @Nullable String connectionString;
-        private @Nullable String endpointUri;
-        private @Nullable String entityPath;
-        private @Nullable String id;
-        private String name;
-        private @Nullable String resourceGroup;
-        private @Nullable String subscriptionId;
+        private RoutingEventHubPropertiesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new RoutingEventHubPropertiesResponse();
         }
 
         public Builder(RoutingEventHubPropertiesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.authenticationType = defaults.authenticationType;
-    	      this.connectionString = defaults.connectionString;
-    	      this.endpointUri = defaults.endpointUri;
-    	      this.entityPath = defaults.entityPath;
-    	      this.id = defaults.id;
-    	      this.name = defaults.name;
-    	      this.resourceGroup = defaults.resourceGroup;
-    	      this.subscriptionId = defaults.subscriptionId;
+            $ = new RoutingEventHubPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder authenticationType(@Nullable String authenticationType) {
-            this.authenticationType = authenticationType;
+            $.authenticationType = authenticationType;
             return this;
         }
+
         public Builder connectionString(@Nullable String connectionString) {
-            this.connectionString = connectionString;
+            $.connectionString = connectionString;
             return this;
         }
+
         public Builder endpointUri(@Nullable String endpointUri) {
-            this.endpointUri = endpointUri;
+            $.endpointUri = endpointUri;
             return this;
         }
+
         public Builder entityPath(@Nullable String entityPath) {
-            this.entityPath = entityPath;
+            $.entityPath = entityPath;
             return this;
         }
+
         public Builder id(@Nullable String id) {
-            this.id = id;
+            $.id = id;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder resourceGroup(@Nullable String resourceGroup) {
-            this.resourceGroup = resourceGroup;
+            $.resourceGroup = resourceGroup;
             return this;
         }
+
         public Builder subscriptionId(@Nullable String subscriptionId) {
-            this.subscriptionId = subscriptionId;
+            $.subscriptionId = subscriptionId;
             return this;
-        }        public RoutingEventHubPropertiesResponse build() {
-            return new RoutingEventHubPropertiesResponse(authenticationType, connectionString, endpointUri, entityPath, id, name, resourceGroup, subscriptionId);
+        }
+
+        public RoutingEventHubPropertiesResponse build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            return $;
         }
     }
+
 }

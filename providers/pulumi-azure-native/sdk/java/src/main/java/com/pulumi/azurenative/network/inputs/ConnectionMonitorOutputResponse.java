@@ -24,10 +24,10 @@ public final class ConnectionMonitorOutputResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="type")
-      private final @Nullable String type;
+    private @Nullable String type;
 
     public Optional<String> type() {
-        return this.type == null ? Optional.empty() : Optional.ofNullable(this.type);
+        return Optional.ofNullable(this.type);
     }
 
     /**
@@ -35,55 +35,50 @@ public final class ConnectionMonitorOutputResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="workspaceSettings")
-      private final @Nullable ConnectionMonitorWorkspaceSettingsResponse workspaceSettings;
+    private @Nullable ConnectionMonitorWorkspaceSettingsResponse workspaceSettings;
 
     public Optional<ConnectionMonitorWorkspaceSettingsResponse> workspaceSettings() {
-        return this.workspaceSettings == null ? Optional.empty() : Optional.ofNullable(this.workspaceSettings);
+        return Optional.ofNullable(this.workspaceSettings);
     }
 
-    public ConnectionMonitorOutputResponse(
-        @Nullable String type,
-        @Nullable ConnectionMonitorWorkspaceSettingsResponse workspaceSettings) {
-        this.type = type;
-        this.workspaceSettings = workspaceSettings;
-    }
+    private ConnectionMonitorOutputResponse() {}
 
-    private ConnectionMonitorOutputResponse() {
-        this.type = null;
-        this.workspaceSettings = null;
+    private ConnectionMonitorOutputResponse(ConnectionMonitorOutputResponse $) {
+        this.type = $.type;
+        this.workspaceSettings = $.workspaceSettings;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ConnectionMonitorOutputResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String type;
-        private @Nullable ConnectionMonitorWorkspaceSettingsResponse workspaceSettings;
+        private ConnectionMonitorOutputResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ConnectionMonitorOutputResponse();
         }
 
         public Builder(ConnectionMonitorOutputResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.type = defaults.type;
-    	      this.workspaceSettings = defaults.workspaceSettings;
+            $ = new ConnectionMonitorOutputResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder type(@Nullable String type) {
-            this.type = type;
+            $.type = type;
             return this;
         }
+
         public Builder workspaceSettings(@Nullable ConnectionMonitorWorkspaceSettingsResponse workspaceSettings) {
-            this.workspaceSettings = workspaceSettings;
+            $.workspaceSettings = workspaceSettings;
             return this;
-        }        public ConnectionMonitorOutputResponse build() {
-            return new ConnectionMonitorOutputResponse(type, workspaceSettings);
+        }
+
+        public ConnectionMonitorOutputResponse build() {
+            return $;
         }
     }
+
 }

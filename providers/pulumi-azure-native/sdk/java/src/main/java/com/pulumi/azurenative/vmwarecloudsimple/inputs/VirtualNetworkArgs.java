@@ -5,7 +5,6 @@ package com.pulumi.azurenative.vmwarecloudsimple.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,49 +22,49 @@ public final class VirtualNetworkArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="id", required=true)
-      private final Output<String> id;
+    private Output<String> id;
 
     public Output<String> id() {
         return this.id;
     }
 
-    public VirtualNetworkArgs(Output<String> id) {
-        this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
-    }
+    private VirtualNetworkArgs() {}
 
-    private VirtualNetworkArgs() {
-        this.id = Codegen.empty();
+    private VirtualNetworkArgs(VirtualNetworkArgs $) {
+        this.id = $.id;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VirtualNetworkArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> id;
+        private VirtualNetworkArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new VirtualNetworkArgs();
         }
 
         public Builder(VirtualNetworkArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.id = defaults.id;
+            $ = new VirtualNetworkArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder id(Output<String> id) {
-            this.id = Objects.requireNonNull(id);
+            $.id = id;
             return this;
         }
+
         public Builder id(String id) {
-            this.id = Output.of(Objects.requireNonNull(id));
-            return this;
-        }        public VirtualNetworkArgs build() {
-            return new VirtualNetworkArgs(id);
+            return id(Output.of(id));
+        }
+
+        public VirtualNetworkArgs build() {
+            $.id = Objects.requireNonNull($.id, "expected parameter 'id' to be non-null");
+            return $;
         }
     }
+
 }

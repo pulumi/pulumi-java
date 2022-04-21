@@ -5,7 +5,6 @@ package com.pulumi.aws.wafv2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +19,7 @@ public final class WebAclRuleStatementOrStatementStatementByteMatchStatementText
      * 
      */
     @Import(name="priority", required=true)
-      private final Output<Integer> priority;
+    private Output<Integer> priority;
 
     public Output<Integer> priority() {
         return this.priority;
@@ -31,63 +30,60 @@ public final class WebAclRuleStatementOrStatementStatementByteMatchStatementText
      * 
      */
     @Import(name="type", required=true)
-      private final Output<String> type;
+    private Output<String> type;
 
     public Output<String> type() {
         return this.type;
     }
 
-    public WebAclRuleStatementOrStatementStatementByteMatchStatementTextTransformationArgs(
-        Output<Integer> priority,
-        Output<String> type) {
-        this.priority = Objects.requireNonNull(priority, "expected parameter 'priority' to be non-null");
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private WebAclRuleStatementOrStatementStatementByteMatchStatementTextTransformationArgs() {}
 
-    private WebAclRuleStatementOrStatementStatementByteMatchStatementTextTransformationArgs() {
-        this.priority = Codegen.empty();
-        this.type = Codegen.empty();
+    private WebAclRuleStatementOrStatementStatementByteMatchStatementTextTransformationArgs(WebAclRuleStatementOrStatementStatementByteMatchStatementTextTransformationArgs $) {
+        this.priority = $.priority;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WebAclRuleStatementOrStatementStatementByteMatchStatementTextTransformationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Integer> priority;
-        private Output<String> type;
+        private WebAclRuleStatementOrStatementStatementByteMatchStatementTextTransformationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new WebAclRuleStatementOrStatementStatementByteMatchStatementTextTransformationArgs();
         }
 
         public Builder(WebAclRuleStatementOrStatementStatementByteMatchStatementTextTransformationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.priority = defaults.priority;
-    	      this.type = defaults.type;
+            $ = new WebAclRuleStatementOrStatementStatementByteMatchStatementTextTransformationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder priority(Output<Integer> priority) {
-            this.priority = Objects.requireNonNull(priority);
+            $.priority = priority;
             return this;
         }
+
         public Builder priority(Integer priority) {
-            this.priority = Output.of(Objects.requireNonNull(priority));
-            return this;
+            return priority(Output.of(priority));
         }
+
         public Builder type(Output<String> type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Output.of(Objects.requireNonNull(type));
-            return this;
-        }        public WebAclRuleStatementOrStatementStatementByteMatchStatementTextTransformationArgs build() {
-            return new WebAclRuleStatementOrStatementStatementByteMatchStatementTextTransformationArgs(priority, type);
+            return type(Output.of(type));
+        }
+
+        public WebAclRuleStatementOrStatementStatementByteMatchStatementTextTransformationArgs build() {
+            $.priority = Objects.requireNonNull($.priority, "expected parameter 'priority' to be non-null");
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

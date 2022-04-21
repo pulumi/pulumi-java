@@ -7,7 +7,6 @@ import com.pulumi.azurenative.machinelearningcompute.enums.SystemServiceType;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -25,49 +24,49 @@ public final class SystemServiceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="systemServiceType", required=true)
-      private final Output<Either<String,SystemServiceType>> systemServiceType;
+    private Output<Either<String,SystemServiceType>> systemServiceType;
 
     public Output<Either<String,SystemServiceType>> systemServiceType() {
         return this.systemServiceType;
     }
 
-    public SystemServiceArgs(Output<Either<String,SystemServiceType>> systemServiceType) {
-        this.systemServiceType = Objects.requireNonNull(systemServiceType, "expected parameter 'systemServiceType' to be non-null");
-    }
+    private SystemServiceArgs() {}
 
-    private SystemServiceArgs() {
-        this.systemServiceType = Codegen.empty();
+    private SystemServiceArgs(SystemServiceArgs $) {
+        this.systemServiceType = $.systemServiceType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SystemServiceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Either<String,SystemServiceType>> systemServiceType;
+        private SystemServiceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SystemServiceArgs();
         }
 
         public Builder(SystemServiceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.systemServiceType = defaults.systemServiceType;
+            $ = new SystemServiceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder systemServiceType(Output<Either<String,SystemServiceType>> systemServiceType) {
-            this.systemServiceType = Objects.requireNonNull(systemServiceType);
+            $.systemServiceType = systemServiceType;
             return this;
         }
+
         public Builder systemServiceType(Either<String,SystemServiceType> systemServiceType) {
-            this.systemServiceType = Output.of(Objects.requireNonNull(systemServiceType));
-            return this;
-        }        public SystemServiceArgs build() {
-            return new SystemServiceArgs(systemServiceType);
+            return systemServiceType(Output.of(systemServiceType));
+        }
+
+        public SystemServiceArgs build() {
+            $.systemServiceType = Objects.requireNonNull($.systemServiceType, "expected parameter 'systemServiceType' to be non-null");
+            return $;
         }
     }
+
 }

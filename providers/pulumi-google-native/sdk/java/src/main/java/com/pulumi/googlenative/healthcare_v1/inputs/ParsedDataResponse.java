@@ -18,48 +18,49 @@ public final class ParsedDataResponse extends com.pulumi.resources.InvokeArgs {
     public static final ParsedDataResponse Empty = new ParsedDataResponse();
 
     @Import(name="segments", required=true)
-      private final List<SegmentResponse> segments;
+    private List<SegmentResponse> segments;
 
     public List<SegmentResponse> segments() {
         return this.segments;
     }
 
-    public ParsedDataResponse(List<SegmentResponse> segments) {
-        this.segments = Objects.requireNonNull(segments, "expected parameter 'segments' to be non-null");
-    }
+    private ParsedDataResponse() {}
 
-    private ParsedDataResponse() {
-        this.segments = List.of();
+    private ParsedDataResponse(ParsedDataResponse $) {
+        this.segments = $.segments;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ParsedDataResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<SegmentResponse> segments;
+        private ParsedDataResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ParsedDataResponse();
         }
 
         public Builder(ParsedDataResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.segments = defaults.segments;
+            $ = new ParsedDataResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder segments(List<SegmentResponse> segments) {
-            this.segments = Objects.requireNonNull(segments);
+            $.segments = segments;
             return this;
         }
+
         public Builder segments(SegmentResponse... segments) {
             return segments(List.of(segments));
-        }        public ParsedDataResponse build() {
-            return new ParsedDataResponse(segments);
+        }
+
+        public ParsedDataResponse build() {
+            $.segments = Objects.requireNonNull($.segments, "expected parameter 'segments' to be non-null");
+            return $;
         }
     }
+
 }

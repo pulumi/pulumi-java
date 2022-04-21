@@ -16,62 +16,57 @@ public final class ConfigEirp extends com.pulumi.resources.InvokeArgs {
     public static final ConfigEirp Empty = new ConfigEirp();
 
     @Import(name="units")
-      private final @Nullable ConfigEirpUnits units;
+    private @Nullable ConfigEirpUnits units;
 
     public Optional<ConfigEirpUnits> units() {
-        return this.units == null ? Optional.empty() : Optional.ofNullable(this.units);
+        return Optional.ofNullable(this.units);
     }
 
     @Import(name="value")
-      private final @Nullable Double value;
+    private @Nullable Double value;
 
     public Optional<Double> value() {
-        return this.value == null ? Optional.empty() : Optional.ofNullable(this.value);
+        return Optional.ofNullable(this.value);
     }
 
-    public ConfigEirp(
-        @Nullable ConfigEirpUnits units,
-        @Nullable Double value) {
-        this.units = units;
-        this.value = value;
-    }
+    private ConfigEirp() {}
 
-    private ConfigEirp() {
-        this.units = null;
-        this.value = null;
+    private ConfigEirp(ConfigEirp $) {
+        this.units = $.units;
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ConfigEirp defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable ConfigEirpUnits units;
-        private @Nullable Double value;
+        private ConfigEirp $;
 
         public Builder() {
-    	      // Empty
+            $ = new ConfigEirp();
         }
 
         public Builder(ConfigEirp defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.units = defaults.units;
-    	      this.value = defaults.value;
+            $ = new ConfigEirp(Objects.requireNonNull(defaults));
         }
 
         public Builder units(@Nullable ConfigEirpUnits units) {
-            this.units = units;
+            $.units = units;
             return this;
         }
+
         public Builder value(@Nullable Double value) {
-            this.value = value;
+            $.value = value;
             return this;
-        }        public ConfigEirp build() {
-            return new ConfigEirp(units, value);
+        }
+
+        public ConfigEirp build() {
+            return $;
         }
     }
+
 }

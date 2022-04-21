@@ -7,9 +7,9 @@ import com.pulumi.awsnative.ec2.inputs.EC2FleetFleetLaunchTemplateOverridesReque
 import com.pulumi.awsnative.ec2.inputs.EC2FleetFleetLaunchTemplateSpecificationRequestArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -18,73 +18,69 @@ public final class EC2FleetFleetLaunchTemplateConfigRequestArgs extends com.pulu
     public static final EC2FleetFleetLaunchTemplateConfigRequestArgs Empty = new EC2FleetFleetLaunchTemplateConfigRequestArgs();
 
     @Import(name="launchTemplateSpecification")
-      private final @Nullable Output<EC2FleetFleetLaunchTemplateSpecificationRequestArgs> launchTemplateSpecification;
+    private @Nullable Output<EC2FleetFleetLaunchTemplateSpecificationRequestArgs> launchTemplateSpecification;
 
-    public Output<EC2FleetFleetLaunchTemplateSpecificationRequestArgs> launchTemplateSpecification() {
-        return this.launchTemplateSpecification == null ? Codegen.empty() : this.launchTemplateSpecification;
+    public Optional<Output<EC2FleetFleetLaunchTemplateSpecificationRequestArgs>> launchTemplateSpecification() {
+        return Optional.ofNullable(this.launchTemplateSpecification);
     }
 
     @Import(name="overrides")
-      private final @Nullable Output<List<EC2FleetFleetLaunchTemplateOverridesRequestArgs>> overrides;
+    private @Nullable Output<List<EC2FleetFleetLaunchTemplateOverridesRequestArgs>> overrides;
 
-    public Output<List<EC2FleetFleetLaunchTemplateOverridesRequestArgs>> overrides() {
-        return this.overrides == null ? Codegen.empty() : this.overrides;
+    public Optional<Output<List<EC2FleetFleetLaunchTemplateOverridesRequestArgs>>> overrides() {
+        return Optional.ofNullable(this.overrides);
     }
 
-    public EC2FleetFleetLaunchTemplateConfigRequestArgs(
-        @Nullable Output<EC2FleetFleetLaunchTemplateSpecificationRequestArgs> launchTemplateSpecification,
-        @Nullable Output<List<EC2FleetFleetLaunchTemplateOverridesRequestArgs>> overrides) {
-        this.launchTemplateSpecification = launchTemplateSpecification;
-        this.overrides = overrides;
-    }
+    private EC2FleetFleetLaunchTemplateConfigRequestArgs() {}
 
-    private EC2FleetFleetLaunchTemplateConfigRequestArgs() {
-        this.launchTemplateSpecification = Codegen.empty();
-        this.overrides = Codegen.empty();
+    private EC2FleetFleetLaunchTemplateConfigRequestArgs(EC2FleetFleetLaunchTemplateConfigRequestArgs $) {
+        this.launchTemplateSpecification = $.launchTemplateSpecification;
+        this.overrides = $.overrides;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EC2FleetFleetLaunchTemplateConfigRequestArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<EC2FleetFleetLaunchTemplateSpecificationRequestArgs> launchTemplateSpecification;
-        private @Nullable Output<List<EC2FleetFleetLaunchTemplateOverridesRequestArgs>> overrides;
+        private EC2FleetFleetLaunchTemplateConfigRequestArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new EC2FleetFleetLaunchTemplateConfigRequestArgs();
         }
 
         public Builder(EC2FleetFleetLaunchTemplateConfigRequestArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.launchTemplateSpecification = defaults.launchTemplateSpecification;
-    	      this.overrides = defaults.overrides;
+            $ = new EC2FleetFleetLaunchTemplateConfigRequestArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder launchTemplateSpecification(@Nullable Output<EC2FleetFleetLaunchTemplateSpecificationRequestArgs> launchTemplateSpecification) {
-            this.launchTemplateSpecification = launchTemplateSpecification;
+            $.launchTemplateSpecification = launchTemplateSpecification;
             return this;
         }
-        public Builder launchTemplateSpecification(@Nullable EC2FleetFleetLaunchTemplateSpecificationRequestArgs launchTemplateSpecification) {
-            this.launchTemplateSpecification = Codegen.ofNullable(launchTemplateSpecification);
-            return this;
+
+        public Builder launchTemplateSpecification(EC2FleetFleetLaunchTemplateSpecificationRequestArgs launchTemplateSpecification) {
+            return launchTemplateSpecification(Output.of(launchTemplateSpecification));
         }
+
         public Builder overrides(@Nullable Output<List<EC2FleetFleetLaunchTemplateOverridesRequestArgs>> overrides) {
-            this.overrides = overrides;
+            $.overrides = overrides;
             return this;
         }
-        public Builder overrides(@Nullable List<EC2FleetFleetLaunchTemplateOverridesRequestArgs> overrides) {
-            this.overrides = Codegen.ofNullable(overrides);
-            return this;
+
+        public Builder overrides(List<EC2FleetFleetLaunchTemplateOverridesRequestArgs> overrides) {
+            return overrides(Output.of(overrides));
         }
+
         public Builder overrides(EC2FleetFleetLaunchTemplateOverridesRequestArgs... overrides) {
             return overrides(List.of(overrides));
-        }        public EC2FleetFleetLaunchTemplateConfigRequestArgs build() {
-            return new EC2FleetFleetLaunchTemplateConfigRequestArgs(launchTemplateSpecification, overrides);
+        }
+
+        public EC2FleetFleetLaunchTemplateConfigRequestArgs build() {
+            return $;
         }
     }
+
 }

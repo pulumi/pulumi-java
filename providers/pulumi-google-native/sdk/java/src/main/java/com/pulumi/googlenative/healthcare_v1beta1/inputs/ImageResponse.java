@@ -21,7 +21,7 @@ public final class ImageResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="gcsUri", required=true)
-      private final String gcsUri;
+    private String gcsUri;
 
     public String gcsUri() {
         return this.gcsUri;
@@ -32,55 +32,52 @@ public final class ImageResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="rawBytes", required=true)
-      private final String rawBytes;
+    private String rawBytes;
 
     public String rawBytes() {
         return this.rawBytes;
     }
 
-    public ImageResponse(
-        String gcsUri,
-        String rawBytes) {
-        this.gcsUri = Objects.requireNonNull(gcsUri, "expected parameter 'gcsUri' to be non-null");
-        this.rawBytes = Objects.requireNonNull(rawBytes, "expected parameter 'rawBytes' to be non-null");
-    }
+    private ImageResponse() {}
 
-    private ImageResponse() {
-        this.gcsUri = null;
-        this.rawBytes = null;
+    private ImageResponse(ImageResponse $) {
+        this.gcsUri = $.gcsUri;
+        this.rawBytes = $.rawBytes;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ImageResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String gcsUri;
-        private String rawBytes;
+        private ImageResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ImageResponse();
         }
 
         public Builder(ImageResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.gcsUri = defaults.gcsUri;
-    	      this.rawBytes = defaults.rawBytes;
+            $ = new ImageResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder gcsUri(String gcsUri) {
-            this.gcsUri = Objects.requireNonNull(gcsUri);
+            $.gcsUri = gcsUri;
             return this;
         }
+
         public Builder rawBytes(String rawBytes) {
-            this.rawBytes = Objects.requireNonNull(rawBytes);
+            $.rawBytes = rawBytes;
             return this;
-        }        public ImageResponse build() {
-            return new ImageResponse(gcsUri, rawBytes);
+        }
+
+        public ImageResponse build() {
+            $.gcsUri = Objects.requireNonNull($.gcsUri, "expected parameter 'gcsUri' to be non-null");
+            $.rawBytes = Objects.requireNonNull($.rawBytes, "expected parameter 'rawBytes' to be non-null");
+            return $;
         }
     }
+
 }

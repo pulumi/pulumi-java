@@ -13,62 +13,59 @@ public final class DomainConfigurationTag extends com.pulumi.resources.InvokeArg
     public static final DomainConfigurationTag Empty = new DomainConfigurationTag();
 
     @Import(name="key", required=true)
-      private final String key;
+    private String key;
 
     public String key() {
         return this.key;
     }
 
     @Import(name="value", required=true)
-      private final String value;
+    private String value;
 
     public String value() {
         return this.value;
     }
 
-    public DomainConfigurationTag(
-        String key,
-        String value) {
-        this.key = Objects.requireNonNull(key, "expected parameter 'key' to be non-null");
-        this.value = Objects.requireNonNull(value, "expected parameter 'value' to be non-null");
-    }
+    private DomainConfigurationTag() {}
 
-    private DomainConfigurationTag() {
-        this.key = null;
-        this.value = null;
+    private DomainConfigurationTag(DomainConfigurationTag $) {
+        this.key = $.key;
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DomainConfigurationTag defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String key;
-        private String value;
+        private DomainConfigurationTag $;
 
         public Builder() {
-    	      // Empty
+            $ = new DomainConfigurationTag();
         }
 
         public Builder(DomainConfigurationTag defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.key = defaults.key;
-    	      this.value = defaults.value;
+            $ = new DomainConfigurationTag(Objects.requireNonNull(defaults));
         }
 
         public Builder key(String key) {
-            this.key = Objects.requireNonNull(key);
+            $.key = key;
             return this;
         }
+
         public Builder value(String value) {
-            this.value = Objects.requireNonNull(value);
+            $.value = value;
             return this;
-        }        public DomainConfigurationTag build() {
-            return new DomainConfigurationTag(key, value);
+        }
+
+        public DomainConfigurationTag build() {
+            $.key = Objects.requireNonNull($.key, "expected parameter 'key' to be non-null");
+            $.value = Objects.requireNonNull($.value, "expected parameter 'value' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,9 +5,9 @@ package com.pulumi.gcp.notebooks.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,7 +21,7 @@ public final class RuntimeVirtualMachineVirtualMachineConfigContainerImageArgs e
      * 
      */
     @Import(name="repository", required=true)
-      private final Output<String> repository;
+    private Output<String> repository;
 
     public Output<String> repository() {
         return this.repository;
@@ -32,63 +32,59 @@ public final class RuntimeVirtualMachineVirtualMachineConfigContainerImageArgs e
      * 
      */
     @Import(name="tag")
-      private final @Nullable Output<String> tag;
+    private @Nullable Output<String> tag;
 
-    public Output<String> tag() {
-        return this.tag == null ? Codegen.empty() : this.tag;
+    public Optional<Output<String>> tag() {
+        return Optional.ofNullable(this.tag);
     }
 
-    public RuntimeVirtualMachineVirtualMachineConfigContainerImageArgs(
-        Output<String> repository,
-        @Nullable Output<String> tag) {
-        this.repository = Objects.requireNonNull(repository, "expected parameter 'repository' to be non-null");
-        this.tag = tag;
-    }
+    private RuntimeVirtualMachineVirtualMachineConfigContainerImageArgs() {}
 
-    private RuntimeVirtualMachineVirtualMachineConfigContainerImageArgs() {
-        this.repository = Codegen.empty();
-        this.tag = Codegen.empty();
+    private RuntimeVirtualMachineVirtualMachineConfigContainerImageArgs(RuntimeVirtualMachineVirtualMachineConfigContainerImageArgs $) {
+        this.repository = $.repository;
+        this.tag = $.tag;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RuntimeVirtualMachineVirtualMachineConfigContainerImageArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> repository;
-        private @Nullable Output<String> tag;
+        private RuntimeVirtualMachineVirtualMachineConfigContainerImageArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RuntimeVirtualMachineVirtualMachineConfigContainerImageArgs();
         }
 
         public Builder(RuntimeVirtualMachineVirtualMachineConfigContainerImageArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.repository = defaults.repository;
-    	      this.tag = defaults.tag;
+            $ = new RuntimeVirtualMachineVirtualMachineConfigContainerImageArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder repository(Output<String> repository) {
-            this.repository = Objects.requireNonNull(repository);
+            $.repository = repository;
             return this;
         }
+
         public Builder repository(String repository) {
-            this.repository = Output.of(Objects.requireNonNull(repository));
-            return this;
+            return repository(Output.of(repository));
         }
+
         public Builder tag(@Nullable Output<String> tag) {
-            this.tag = tag;
+            $.tag = tag;
             return this;
         }
-        public Builder tag(@Nullable String tag) {
-            this.tag = Codegen.ofNullable(tag);
-            return this;
-        }        public RuntimeVirtualMachineVirtualMachineConfigContainerImageArgs build() {
-            return new RuntimeVirtualMachineVirtualMachineConfigContainerImageArgs(repository, tag);
+
+        public Builder tag(String tag) {
+            return tag(Output.of(tag));
+        }
+
+        public RuntimeVirtualMachineVirtualMachineConfigContainerImageArgs build() {
+            $.repository = Objects.requireNonNull($.repository, "expected parameter 'repository' to be non-null");
+            return $;
         }
     }
+
 }

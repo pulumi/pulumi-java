@@ -5,9 +5,9 @@ package com.pulumi.aws.servicediscovery.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,49 +20,48 @@ public final class ServiceHealthCheckCustomConfigGetArgs extends com.pulumi.reso
      * 
      */
     @Import(name="failureThreshold")
-      private final @Nullable Output<Integer> failureThreshold;
+    private @Nullable Output<Integer> failureThreshold;
 
-    public Output<Integer> failureThreshold() {
-        return this.failureThreshold == null ? Codegen.empty() : this.failureThreshold;
+    public Optional<Output<Integer>> failureThreshold() {
+        return Optional.ofNullable(this.failureThreshold);
     }
 
-    public ServiceHealthCheckCustomConfigGetArgs(@Nullable Output<Integer> failureThreshold) {
-        this.failureThreshold = failureThreshold;
-    }
+    private ServiceHealthCheckCustomConfigGetArgs() {}
 
-    private ServiceHealthCheckCustomConfigGetArgs() {
-        this.failureThreshold = Codegen.empty();
+    private ServiceHealthCheckCustomConfigGetArgs(ServiceHealthCheckCustomConfigGetArgs $) {
+        this.failureThreshold = $.failureThreshold;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ServiceHealthCheckCustomConfigGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> failureThreshold;
+        private ServiceHealthCheckCustomConfigGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ServiceHealthCheckCustomConfigGetArgs();
         }
 
         public Builder(ServiceHealthCheckCustomConfigGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.failureThreshold = defaults.failureThreshold;
+            $ = new ServiceHealthCheckCustomConfigGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder failureThreshold(@Nullable Output<Integer> failureThreshold) {
-            this.failureThreshold = failureThreshold;
+            $.failureThreshold = failureThreshold;
             return this;
         }
-        public Builder failureThreshold(@Nullable Integer failureThreshold) {
-            this.failureThreshold = Codegen.ofNullable(failureThreshold);
-            return this;
-        }        public ServiceHealthCheckCustomConfigGetArgs build() {
-            return new ServiceHealthCheckCustomConfigGetArgs(failureThreshold);
+
+        public Builder failureThreshold(Integer failureThreshold) {
+            return failureThreshold(Output.of(failureThreshold));
+        }
+
+        public ServiceHealthCheckCustomConfigGetArgs build() {
+            return $;
         }
     }
+
 }

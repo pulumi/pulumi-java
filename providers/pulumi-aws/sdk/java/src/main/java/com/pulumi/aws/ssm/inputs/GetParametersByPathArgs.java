@@ -20,7 +20,7 @@ public final class GetParametersByPathArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="path", required=true)
-      private final String path;
+    private String path;
 
     public String path() {
         return this.path;
@@ -31,10 +31,10 @@ public final class GetParametersByPathArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="recursive")
-      private final @Nullable Boolean recursive;
+    private @Nullable Boolean recursive;
 
     public Optional<Boolean> recursive() {
-        return this.recursive == null ? Optional.empty() : Optional.ofNullable(this.recursive);
+        return Optional.ofNullable(this.recursive);
     }
 
     /**
@@ -42,64 +42,57 @@ public final class GetParametersByPathArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="withDecryption")
-      private final @Nullable Boolean withDecryption;
+    private @Nullable Boolean withDecryption;
 
     public Optional<Boolean> withDecryption() {
-        return this.withDecryption == null ? Optional.empty() : Optional.ofNullable(this.withDecryption);
+        return Optional.ofNullable(this.withDecryption);
     }
 
-    public GetParametersByPathArgs(
-        String path,
-        @Nullable Boolean recursive,
-        @Nullable Boolean withDecryption) {
-        this.path = Objects.requireNonNull(path, "expected parameter 'path' to be non-null");
-        this.recursive = recursive;
-        this.withDecryption = withDecryption;
-    }
+    private GetParametersByPathArgs() {}
 
-    private GetParametersByPathArgs() {
-        this.path = null;
-        this.recursive = null;
-        this.withDecryption = null;
+    private GetParametersByPathArgs(GetParametersByPathArgs $) {
+        this.path = $.path;
+        this.recursive = $.recursive;
+        this.withDecryption = $.withDecryption;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetParametersByPathArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String path;
-        private @Nullable Boolean recursive;
-        private @Nullable Boolean withDecryption;
+        private GetParametersByPathArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetParametersByPathArgs();
         }
 
         public Builder(GetParametersByPathArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.path = defaults.path;
-    	      this.recursive = defaults.recursive;
-    	      this.withDecryption = defaults.withDecryption;
+            $ = new GetParametersByPathArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder path(String path) {
-            this.path = Objects.requireNonNull(path);
+            $.path = path;
             return this;
         }
+
         public Builder recursive(@Nullable Boolean recursive) {
-            this.recursive = recursive;
+            $.recursive = recursive;
             return this;
         }
+
         public Builder withDecryption(@Nullable Boolean withDecryption) {
-            this.withDecryption = withDecryption;
+            $.withDecryption = withDecryption;
             return this;
-        }        public GetParametersByPathArgs build() {
-            return new GetParametersByPathArgs(path, recursive, withDecryption);
+        }
+
+        public GetParametersByPathArgs build() {
+            $.path = Objects.requireNonNull($.path, "expected parameter 'path' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,10 +5,10 @@ package com.pulumi.gcp.osconfig.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class GuestPoliciesRecipeArtifactGcsArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="bucket")
-      private final @Nullable Output<String> bucket;
+    private @Nullable Output<String> bucket;
 
-    public Output<String> bucket() {
-        return this.bucket == null ? Codegen.empty() : this.bucket;
+    public Optional<Output<String>> bucket() {
+        return Optional.ofNullable(this.bucket);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class GuestPoliciesRecipeArtifactGcsArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="generation")
-      private final @Nullable Output<Integer> generation;
+    private @Nullable Output<Integer> generation;
 
-    public Output<Integer> generation() {
-        return this.generation == null ? Codegen.empty() : this.generation;
+    public Optional<Output<Integer>> generation() {
+        return Optional.ofNullable(this.generation);
     }
 
     /**
@@ -46,76 +46,68 @@ public final class GuestPoliciesRecipeArtifactGcsArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="object")
-      private final @Nullable Output<String> object;
+    private @Nullable Output<String> object;
 
-    public Output<String> object() {
-        return this.object == null ? Codegen.empty() : this.object;
+    public Optional<Output<String>> object() {
+        return Optional.ofNullable(this.object);
     }
 
-    public GuestPoliciesRecipeArtifactGcsArgs(
-        @Nullable Output<String> bucket,
-        @Nullable Output<Integer> generation,
-        @Nullable Output<String> object) {
-        this.bucket = bucket;
-        this.generation = generation;
-        this.object = object;
-    }
+    private GuestPoliciesRecipeArtifactGcsArgs() {}
 
-    private GuestPoliciesRecipeArtifactGcsArgs() {
-        this.bucket = Codegen.empty();
-        this.generation = Codegen.empty();
-        this.object = Codegen.empty();
+    private GuestPoliciesRecipeArtifactGcsArgs(GuestPoliciesRecipeArtifactGcsArgs $) {
+        this.bucket = $.bucket;
+        this.generation = $.generation;
+        this.object = $.object;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GuestPoliciesRecipeArtifactGcsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> bucket;
-        private @Nullable Output<Integer> generation;
-        private @Nullable Output<String> object;
+        private GuestPoliciesRecipeArtifactGcsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GuestPoliciesRecipeArtifactGcsArgs();
         }
 
         public Builder(GuestPoliciesRecipeArtifactGcsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.bucket = defaults.bucket;
-    	      this.generation = defaults.generation;
-    	      this.object = defaults.object;
+            $ = new GuestPoliciesRecipeArtifactGcsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder bucket(@Nullable Output<String> bucket) {
-            this.bucket = bucket;
+            $.bucket = bucket;
             return this;
         }
-        public Builder bucket(@Nullable String bucket) {
-            this.bucket = Codegen.ofNullable(bucket);
-            return this;
+
+        public Builder bucket(String bucket) {
+            return bucket(Output.of(bucket));
         }
+
         public Builder generation(@Nullable Output<Integer> generation) {
-            this.generation = generation;
+            $.generation = generation;
             return this;
         }
-        public Builder generation(@Nullable Integer generation) {
-            this.generation = Codegen.ofNullable(generation);
-            return this;
+
+        public Builder generation(Integer generation) {
+            return generation(Output.of(generation));
         }
+
         public Builder object(@Nullable Output<String> object) {
-            this.object = object;
+            $.object = object;
             return this;
         }
-        public Builder object(@Nullable String object) {
-            this.object = Codegen.ofNullable(object);
-            return this;
-        }        public GuestPoliciesRecipeArtifactGcsArgs build() {
-            return new GuestPoliciesRecipeArtifactGcsArgs(bucket, generation, object);
+
+        public Builder object(String object) {
+            return object(Output.of(object));
+        }
+
+        public GuestPoliciesRecipeArtifactGcsArgs build() {
+            return $;
         }
     }
+
 }

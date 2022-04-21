@@ -8,9 +8,9 @@ import com.pulumi.azurenative.network.enums.ExpressRouteLinkMacSecSciState;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +27,10 @@ public final class ExpressRouteLinkMacSecConfigArgs extends com.pulumi.resources
      * 
      */
     @Import(name="cakSecretIdentifier")
-      private final @Nullable Output<String> cakSecretIdentifier;
+    private @Nullable Output<String> cakSecretIdentifier;
 
-    public Output<String> cakSecretIdentifier() {
-        return this.cakSecretIdentifier == null ? Codegen.empty() : this.cakSecretIdentifier;
+    public Optional<Output<String>> cakSecretIdentifier() {
+        return Optional.ofNullable(this.cakSecretIdentifier);
     }
 
     /**
@@ -38,10 +38,10 @@ public final class ExpressRouteLinkMacSecConfigArgs extends com.pulumi.resources
      * 
      */
     @Import(name="cipher")
-      private final @Nullable Output<Either<String,ExpressRouteLinkMacSecCipher>> cipher;
+    private @Nullable Output<Either<String,ExpressRouteLinkMacSecCipher>> cipher;
 
-    public Output<Either<String,ExpressRouteLinkMacSecCipher>> cipher() {
-        return this.cipher == null ? Codegen.empty() : this.cipher;
+    public Optional<Output<Either<String,ExpressRouteLinkMacSecCipher>>> cipher() {
+        return Optional.ofNullable(this.cipher);
     }
 
     /**
@@ -49,10 +49,10 @@ public final class ExpressRouteLinkMacSecConfigArgs extends com.pulumi.resources
      * 
      */
     @Import(name="cknSecretIdentifier")
-      private final @Nullable Output<String> cknSecretIdentifier;
+    private @Nullable Output<String> cknSecretIdentifier;
 
-    public Output<String> cknSecretIdentifier() {
-        return this.cknSecretIdentifier == null ? Codegen.empty() : this.cknSecretIdentifier;
+    public Optional<Output<String>> cknSecretIdentifier() {
+        return Optional.ofNullable(this.cknSecretIdentifier);
     }
 
     /**
@@ -60,89 +60,78 @@ public final class ExpressRouteLinkMacSecConfigArgs extends com.pulumi.resources
      * 
      */
     @Import(name="sciState")
-      private final @Nullable Output<Either<String,ExpressRouteLinkMacSecSciState>> sciState;
+    private @Nullable Output<Either<String,ExpressRouteLinkMacSecSciState>> sciState;
 
-    public Output<Either<String,ExpressRouteLinkMacSecSciState>> sciState() {
-        return this.sciState == null ? Codegen.empty() : this.sciState;
+    public Optional<Output<Either<String,ExpressRouteLinkMacSecSciState>>> sciState() {
+        return Optional.ofNullable(this.sciState);
     }
 
-    public ExpressRouteLinkMacSecConfigArgs(
-        @Nullable Output<String> cakSecretIdentifier,
-        @Nullable Output<Either<String,ExpressRouteLinkMacSecCipher>> cipher,
-        @Nullable Output<String> cknSecretIdentifier,
-        @Nullable Output<Either<String,ExpressRouteLinkMacSecSciState>> sciState) {
-        this.cakSecretIdentifier = cakSecretIdentifier;
-        this.cipher = cipher;
-        this.cknSecretIdentifier = cknSecretIdentifier;
-        this.sciState = sciState;
-    }
+    private ExpressRouteLinkMacSecConfigArgs() {}
 
-    private ExpressRouteLinkMacSecConfigArgs() {
-        this.cakSecretIdentifier = Codegen.empty();
-        this.cipher = Codegen.empty();
-        this.cknSecretIdentifier = Codegen.empty();
-        this.sciState = Codegen.empty();
+    private ExpressRouteLinkMacSecConfigArgs(ExpressRouteLinkMacSecConfigArgs $) {
+        this.cakSecretIdentifier = $.cakSecretIdentifier;
+        this.cipher = $.cipher;
+        this.cknSecretIdentifier = $.cknSecretIdentifier;
+        this.sciState = $.sciState;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ExpressRouteLinkMacSecConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> cakSecretIdentifier;
-        private @Nullable Output<Either<String,ExpressRouteLinkMacSecCipher>> cipher;
-        private @Nullable Output<String> cknSecretIdentifier;
-        private @Nullable Output<Either<String,ExpressRouteLinkMacSecSciState>> sciState;
+        private ExpressRouteLinkMacSecConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ExpressRouteLinkMacSecConfigArgs();
         }
 
         public Builder(ExpressRouteLinkMacSecConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cakSecretIdentifier = defaults.cakSecretIdentifier;
-    	      this.cipher = defaults.cipher;
-    	      this.cknSecretIdentifier = defaults.cknSecretIdentifier;
-    	      this.sciState = defaults.sciState;
+            $ = new ExpressRouteLinkMacSecConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder cakSecretIdentifier(@Nullable Output<String> cakSecretIdentifier) {
-            this.cakSecretIdentifier = cakSecretIdentifier;
+            $.cakSecretIdentifier = cakSecretIdentifier;
             return this;
         }
-        public Builder cakSecretIdentifier(@Nullable String cakSecretIdentifier) {
-            this.cakSecretIdentifier = Codegen.ofNullable(cakSecretIdentifier);
-            return this;
+
+        public Builder cakSecretIdentifier(String cakSecretIdentifier) {
+            return cakSecretIdentifier(Output.of(cakSecretIdentifier));
         }
+
         public Builder cipher(@Nullable Output<Either<String,ExpressRouteLinkMacSecCipher>> cipher) {
-            this.cipher = cipher;
+            $.cipher = cipher;
             return this;
         }
-        public Builder cipher(@Nullable Either<String,ExpressRouteLinkMacSecCipher> cipher) {
-            this.cipher = Codegen.ofNullable(cipher);
-            return this;
+
+        public Builder cipher(Either<String,ExpressRouteLinkMacSecCipher> cipher) {
+            return cipher(Output.of(cipher));
         }
+
         public Builder cknSecretIdentifier(@Nullable Output<String> cknSecretIdentifier) {
-            this.cknSecretIdentifier = cknSecretIdentifier;
+            $.cknSecretIdentifier = cknSecretIdentifier;
             return this;
         }
-        public Builder cknSecretIdentifier(@Nullable String cknSecretIdentifier) {
-            this.cknSecretIdentifier = Codegen.ofNullable(cknSecretIdentifier);
-            return this;
+
+        public Builder cknSecretIdentifier(String cknSecretIdentifier) {
+            return cknSecretIdentifier(Output.of(cknSecretIdentifier));
         }
+
         public Builder sciState(@Nullable Output<Either<String,ExpressRouteLinkMacSecSciState>> sciState) {
-            this.sciState = sciState;
+            $.sciState = sciState;
             return this;
         }
-        public Builder sciState(@Nullable Either<String,ExpressRouteLinkMacSecSciState> sciState) {
-            this.sciState = Codegen.ofNullable(sciState);
-            return this;
-        }        public ExpressRouteLinkMacSecConfigArgs build() {
-            return new ExpressRouteLinkMacSecConfigArgs(cakSecretIdentifier, cipher, cknSecretIdentifier, sciState);
+
+        public Builder sciState(Either<String,ExpressRouteLinkMacSecSciState> sciState) {
+            return sciState(Output.of(sciState));
+        }
+
+        public ExpressRouteLinkMacSecConfigArgs build() {
+            return $;
         }
     }
+
 }

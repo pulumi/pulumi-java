@@ -19,7 +19,7 @@ public final class BucketCorsItemResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="maxAgeSeconds", required=true)
-      private final Integer maxAgeSeconds;
+    private Integer maxAgeSeconds;
 
     public Integer maxAgeSeconds() {
         return this.maxAgeSeconds;
@@ -30,7 +30,7 @@ public final class BucketCorsItemResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="method", required=true)
-      private final List<String> method;
+    private List<String> method;
 
     public List<String> method() {
         return this.method;
@@ -41,7 +41,7 @@ public final class BucketCorsItemResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="origin", required=true)
-      private final List<String> origin;
+    private List<String> origin;
 
     public List<String> origin() {
         return this.origin;
@@ -52,82 +52,78 @@ public final class BucketCorsItemResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="responseHeader", required=true)
-      private final List<String> responseHeader;
+    private List<String> responseHeader;
 
     public List<String> responseHeader() {
         return this.responseHeader;
     }
 
-    public BucketCorsItemResponse(
-        Integer maxAgeSeconds,
-        List<String> method,
-        List<String> origin,
-        List<String> responseHeader) {
-        this.maxAgeSeconds = Objects.requireNonNull(maxAgeSeconds, "expected parameter 'maxAgeSeconds' to be non-null");
-        this.method = Objects.requireNonNull(method, "expected parameter 'method' to be non-null");
-        this.origin = Objects.requireNonNull(origin, "expected parameter 'origin' to be non-null");
-        this.responseHeader = Objects.requireNonNull(responseHeader, "expected parameter 'responseHeader' to be non-null");
-    }
+    private BucketCorsItemResponse() {}
 
-    private BucketCorsItemResponse() {
-        this.maxAgeSeconds = null;
-        this.method = List.of();
-        this.origin = List.of();
-        this.responseHeader = List.of();
+    private BucketCorsItemResponse(BucketCorsItemResponse $) {
+        this.maxAgeSeconds = $.maxAgeSeconds;
+        this.method = $.method;
+        this.origin = $.origin;
+        this.responseHeader = $.responseHeader;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BucketCorsItemResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Integer maxAgeSeconds;
-        private List<String> method;
-        private List<String> origin;
-        private List<String> responseHeader;
+        private BucketCorsItemResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new BucketCorsItemResponse();
         }
 
         public Builder(BucketCorsItemResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.maxAgeSeconds = defaults.maxAgeSeconds;
-    	      this.method = defaults.method;
-    	      this.origin = defaults.origin;
-    	      this.responseHeader = defaults.responseHeader;
+            $ = new BucketCorsItemResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder maxAgeSeconds(Integer maxAgeSeconds) {
-            this.maxAgeSeconds = Objects.requireNonNull(maxAgeSeconds);
+            $.maxAgeSeconds = maxAgeSeconds;
             return this;
         }
+
         public Builder method(List<String> method) {
-            this.method = Objects.requireNonNull(method);
+            $.method = method;
             return this;
         }
+
         public Builder method(String... method) {
             return method(List.of(method));
         }
+
         public Builder origin(List<String> origin) {
-            this.origin = Objects.requireNonNull(origin);
+            $.origin = origin;
             return this;
         }
+
         public Builder origin(String... origin) {
             return origin(List.of(origin));
         }
+
         public Builder responseHeader(List<String> responseHeader) {
-            this.responseHeader = Objects.requireNonNull(responseHeader);
+            $.responseHeader = responseHeader;
             return this;
         }
+
         public Builder responseHeader(String... responseHeader) {
             return responseHeader(List.of(responseHeader));
-        }        public BucketCorsItemResponse build() {
-            return new BucketCorsItemResponse(maxAgeSeconds, method, origin, responseHeader);
+        }
+
+        public BucketCorsItemResponse build() {
+            $.maxAgeSeconds = Objects.requireNonNull($.maxAgeSeconds, "expected parameter 'maxAgeSeconds' to be non-null");
+            $.method = Objects.requireNonNull($.method, "expected parameter 'method' to be non-null");
+            $.origin = Objects.requireNonNull($.origin, "expected parameter 'origin' to be non-null");
+            $.responseHeader = Objects.requireNonNull($.responseHeader, "expected parameter 'responseHeader' to be non-null");
+            return $;
         }
     }
+
 }

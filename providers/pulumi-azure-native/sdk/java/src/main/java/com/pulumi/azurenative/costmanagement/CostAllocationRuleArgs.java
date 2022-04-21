@@ -6,9 +6,9 @@ package com.pulumi.azurenative.costmanagement;
 import com.pulumi.azurenative.costmanagement.inputs.CostAllocationRulePropertiesArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,7 +21,7 @@ public final class CostAllocationRuleArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="billingAccountId", required=true)
-      private final Output<String> billingAccountId;
+    private Output<String> billingAccountId;
 
     public Output<String> billingAccountId() {
         return this.billingAccountId;
@@ -32,10 +32,10 @@ public final class CostAllocationRuleArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="properties")
-      private final @Nullable Output<CostAllocationRulePropertiesArgs> properties;
+    private @Nullable Output<CostAllocationRulePropertiesArgs> properties;
 
-    public Output<CostAllocationRulePropertiesArgs> properties() {
-        return this.properties == null ? Codegen.empty() : this.properties;
+    public Optional<Output<CostAllocationRulePropertiesArgs>> properties() {
+        return Optional.ofNullable(this.properties);
     }
 
     /**
@@ -43,76 +43,69 @@ public final class CostAllocationRuleArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="ruleName")
-      private final @Nullable Output<String> ruleName;
+    private @Nullable Output<String> ruleName;
 
-    public Output<String> ruleName() {
-        return this.ruleName == null ? Codegen.empty() : this.ruleName;
+    public Optional<Output<String>> ruleName() {
+        return Optional.ofNullable(this.ruleName);
     }
 
-    public CostAllocationRuleArgs(
-        Output<String> billingAccountId,
-        @Nullable Output<CostAllocationRulePropertiesArgs> properties,
-        @Nullable Output<String> ruleName) {
-        this.billingAccountId = Objects.requireNonNull(billingAccountId, "expected parameter 'billingAccountId' to be non-null");
-        this.properties = properties;
-        this.ruleName = ruleName;
-    }
+    private CostAllocationRuleArgs() {}
 
-    private CostAllocationRuleArgs() {
-        this.billingAccountId = Codegen.empty();
-        this.properties = Codegen.empty();
-        this.ruleName = Codegen.empty();
+    private CostAllocationRuleArgs(CostAllocationRuleArgs $) {
+        this.billingAccountId = $.billingAccountId;
+        this.properties = $.properties;
+        this.ruleName = $.ruleName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CostAllocationRuleArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> billingAccountId;
-        private @Nullable Output<CostAllocationRulePropertiesArgs> properties;
-        private @Nullable Output<String> ruleName;
+        private CostAllocationRuleArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CostAllocationRuleArgs();
         }
 
         public Builder(CostAllocationRuleArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.billingAccountId = defaults.billingAccountId;
-    	      this.properties = defaults.properties;
-    	      this.ruleName = defaults.ruleName;
+            $ = new CostAllocationRuleArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder billingAccountId(Output<String> billingAccountId) {
-            this.billingAccountId = Objects.requireNonNull(billingAccountId);
+            $.billingAccountId = billingAccountId;
             return this;
         }
+
         public Builder billingAccountId(String billingAccountId) {
-            this.billingAccountId = Output.of(Objects.requireNonNull(billingAccountId));
-            return this;
+            return billingAccountId(Output.of(billingAccountId));
         }
+
         public Builder properties(@Nullable Output<CostAllocationRulePropertiesArgs> properties) {
-            this.properties = properties;
+            $.properties = properties;
             return this;
         }
-        public Builder properties(@Nullable CostAllocationRulePropertiesArgs properties) {
-            this.properties = Codegen.ofNullable(properties);
-            return this;
+
+        public Builder properties(CostAllocationRulePropertiesArgs properties) {
+            return properties(Output.of(properties));
         }
+
         public Builder ruleName(@Nullable Output<String> ruleName) {
-            this.ruleName = ruleName;
+            $.ruleName = ruleName;
             return this;
         }
-        public Builder ruleName(@Nullable String ruleName) {
-            this.ruleName = Codegen.ofNullable(ruleName);
-            return this;
-        }        public CostAllocationRuleArgs build() {
-            return new CostAllocationRuleArgs(billingAccountId, properties, ruleName);
+
+        public Builder ruleName(String ruleName) {
+            return ruleName(Output.of(ruleName));
+        }
+
+        public CostAllocationRuleArgs build() {
+            $.billingAccountId = Objects.requireNonNull($.billingAccountId, "expected parameter 'billingAccountId' to be non-null");
+            return $;
         }
     }
+
 }

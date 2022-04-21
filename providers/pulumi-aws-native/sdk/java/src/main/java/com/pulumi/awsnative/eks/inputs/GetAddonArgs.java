@@ -17,7 +17,7 @@ public final class GetAddonArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="addonName", required=true)
-      private final String addonName;
+    private String addonName;
 
     public String addonName() {
         return this.addonName;
@@ -28,55 +28,52 @@ public final class GetAddonArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="clusterName", required=true)
-      private final String clusterName;
+    private String clusterName;
 
     public String clusterName() {
         return this.clusterName;
     }
 
-    public GetAddonArgs(
-        String addonName,
-        String clusterName) {
-        this.addonName = Objects.requireNonNull(addonName, "expected parameter 'addonName' to be non-null");
-        this.clusterName = Objects.requireNonNull(clusterName, "expected parameter 'clusterName' to be non-null");
-    }
+    private GetAddonArgs() {}
 
-    private GetAddonArgs() {
-        this.addonName = null;
-        this.clusterName = null;
+    private GetAddonArgs(GetAddonArgs $) {
+        this.addonName = $.addonName;
+        this.clusterName = $.clusterName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetAddonArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String addonName;
-        private String clusterName;
+        private GetAddonArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetAddonArgs();
         }
 
         public Builder(GetAddonArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.addonName = defaults.addonName;
-    	      this.clusterName = defaults.clusterName;
+            $ = new GetAddonArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder addonName(String addonName) {
-            this.addonName = Objects.requireNonNull(addonName);
+            $.addonName = addonName;
             return this;
         }
+
         public Builder clusterName(String clusterName) {
-            this.clusterName = Objects.requireNonNull(clusterName);
+            $.clusterName = clusterName;
             return this;
-        }        public GetAddonArgs build() {
-            return new GetAddonArgs(addonName, clusterName);
+        }
+
+        public GetAddonArgs build() {
+            $.addonName = Objects.requireNonNull($.addonName, "expected parameter 'addonName' to be non-null");
+            $.clusterName = Objects.requireNonNull($.clusterName, "expected parameter 'clusterName' to be non-null");
+            return $;
         }
     }
+
 }

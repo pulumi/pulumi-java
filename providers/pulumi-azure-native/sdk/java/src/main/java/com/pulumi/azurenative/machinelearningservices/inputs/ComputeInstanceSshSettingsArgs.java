@@ -10,6 +10,7 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +27,10 @@ public final class ComputeInstanceSshSettingsArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="adminPublicKey")
-      private final @Nullable Output<String> adminPublicKey;
+    private @Nullable Output<String> adminPublicKey;
 
-    public Output<String> adminPublicKey() {
-        return this.adminPublicKey == null ? Codegen.empty() : this.adminPublicKey;
+    public Optional<Output<String>> adminPublicKey() {
+        return Optional.ofNullable(this.adminPublicKey);
     }
 
     /**
@@ -37,63 +38,59 @@ public final class ComputeInstanceSshSettingsArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="sshPublicAccess")
-      private final @Nullable Output<Either<String,SshPublicAccess>> sshPublicAccess;
+    private @Nullable Output<Either<String,SshPublicAccess>> sshPublicAccess;
 
-    public Output<Either<String,SshPublicAccess>> sshPublicAccess() {
-        return this.sshPublicAccess == null ? Codegen.empty() : this.sshPublicAccess;
+    public Optional<Output<Either<String,SshPublicAccess>>> sshPublicAccess() {
+        return Optional.ofNullable(this.sshPublicAccess);
     }
 
-    public ComputeInstanceSshSettingsArgs(
-        @Nullable Output<String> adminPublicKey,
-        @Nullable Output<Either<String,SshPublicAccess>> sshPublicAccess) {
-        this.adminPublicKey = adminPublicKey;
-        this.sshPublicAccess = Codegen.stringProp("sshPublicAccess").left(SshPublicAccess.class).output().arg(sshPublicAccess).def("Disabled").getNullable();
-    }
+    private ComputeInstanceSshSettingsArgs() {}
 
-    private ComputeInstanceSshSettingsArgs() {
-        this.adminPublicKey = Codegen.empty();
-        this.sshPublicAccess = Codegen.empty();
+    private ComputeInstanceSshSettingsArgs(ComputeInstanceSshSettingsArgs $) {
+        this.adminPublicKey = $.adminPublicKey;
+        this.sshPublicAccess = $.sshPublicAccess;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ComputeInstanceSshSettingsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> adminPublicKey;
-        private @Nullable Output<Either<String,SshPublicAccess>> sshPublicAccess;
+        private ComputeInstanceSshSettingsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ComputeInstanceSshSettingsArgs();
         }
 
         public Builder(ComputeInstanceSshSettingsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.adminPublicKey = defaults.adminPublicKey;
-    	      this.sshPublicAccess = defaults.sshPublicAccess;
+            $ = new ComputeInstanceSshSettingsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder adminPublicKey(@Nullable Output<String> adminPublicKey) {
-            this.adminPublicKey = adminPublicKey;
+            $.adminPublicKey = adminPublicKey;
             return this;
         }
-        public Builder adminPublicKey(@Nullable String adminPublicKey) {
-            this.adminPublicKey = Codegen.ofNullable(adminPublicKey);
-            return this;
+
+        public Builder adminPublicKey(String adminPublicKey) {
+            return adminPublicKey(Output.of(adminPublicKey));
         }
+
         public Builder sshPublicAccess(@Nullable Output<Either<String,SshPublicAccess>> sshPublicAccess) {
-            this.sshPublicAccess = sshPublicAccess;
+            $.sshPublicAccess = sshPublicAccess;
             return this;
         }
-        public Builder sshPublicAccess(@Nullable Either<String,SshPublicAccess> sshPublicAccess) {
-            this.sshPublicAccess = Codegen.ofNullable(sshPublicAccess);
-            return this;
-        }        public ComputeInstanceSshSettingsArgs build() {
-            return new ComputeInstanceSshSettingsArgs(adminPublicKey, sshPublicAccess);
+
+        public Builder sshPublicAccess(Either<String,SshPublicAccess> sshPublicAccess) {
+            return sshPublicAccess(Output.of(sshPublicAccess));
+        }
+
+        public ComputeInstanceSshSettingsArgs build() {
+            $.sshPublicAccess = Codegen.stringProp("sshPublicAccess").left(SshPublicAccess.class).output().arg($.sshPublicAccess).def("Disabled").getNullable();
+            return $;
         }
     }
+
 }

@@ -7,8 +7,8 @@ import com.pulumi.azurenative.eventgrid.inputs.EventSubscriptionIdentityArgs;
 import com.pulumi.azurenative.eventgrid.inputs.StorageBlobDeadLetterDestinationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class DeadLetterWithResourceIdentityArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="deadLetterDestination")
-      private final @Nullable Output<StorageBlobDeadLetterDestinationArgs> deadLetterDestination;
+    private @Nullable Output<StorageBlobDeadLetterDestinationArgs> deadLetterDestination;
 
-    public Output<StorageBlobDeadLetterDestinationArgs> deadLetterDestination() {
-        return this.deadLetterDestination == null ? Codegen.empty() : this.deadLetterDestination;
+    public Optional<Output<StorageBlobDeadLetterDestinationArgs>> deadLetterDestination() {
+        return Optional.ofNullable(this.deadLetterDestination);
     }
 
     /**
@@ -37,63 +37,58 @@ public final class DeadLetterWithResourceIdentityArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="identity")
-      private final @Nullable Output<EventSubscriptionIdentityArgs> identity;
+    private @Nullable Output<EventSubscriptionIdentityArgs> identity;
 
-    public Output<EventSubscriptionIdentityArgs> identity() {
-        return this.identity == null ? Codegen.empty() : this.identity;
+    public Optional<Output<EventSubscriptionIdentityArgs>> identity() {
+        return Optional.ofNullable(this.identity);
     }
 
-    public DeadLetterWithResourceIdentityArgs(
-        @Nullable Output<StorageBlobDeadLetterDestinationArgs> deadLetterDestination,
-        @Nullable Output<EventSubscriptionIdentityArgs> identity) {
-        this.deadLetterDestination = deadLetterDestination;
-        this.identity = identity;
-    }
+    private DeadLetterWithResourceIdentityArgs() {}
 
-    private DeadLetterWithResourceIdentityArgs() {
-        this.deadLetterDestination = Codegen.empty();
-        this.identity = Codegen.empty();
+    private DeadLetterWithResourceIdentityArgs(DeadLetterWithResourceIdentityArgs $) {
+        this.deadLetterDestination = $.deadLetterDestination;
+        this.identity = $.identity;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DeadLetterWithResourceIdentityArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<StorageBlobDeadLetterDestinationArgs> deadLetterDestination;
-        private @Nullable Output<EventSubscriptionIdentityArgs> identity;
+        private DeadLetterWithResourceIdentityArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DeadLetterWithResourceIdentityArgs();
         }
 
         public Builder(DeadLetterWithResourceIdentityArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.deadLetterDestination = defaults.deadLetterDestination;
-    	      this.identity = defaults.identity;
+            $ = new DeadLetterWithResourceIdentityArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder deadLetterDestination(@Nullable Output<StorageBlobDeadLetterDestinationArgs> deadLetterDestination) {
-            this.deadLetterDestination = deadLetterDestination;
+            $.deadLetterDestination = deadLetterDestination;
             return this;
         }
-        public Builder deadLetterDestination(@Nullable StorageBlobDeadLetterDestinationArgs deadLetterDestination) {
-            this.deadLetterDestination = Codegen.ofNullable(deadLetterDestination);
-            return this;
+
+        public Builder deadLetterDestination(StorageBlobDeadLetterDestinationArgs deadLetterDestination) {
+            return deadLetterDestination(Output.of(deadLetterDestination));
         }
+
         public Builder identity(@Nullable Output<EventSubscriptionIdentityArgs> identity) {
-            this.identity = identity;
+            $.identity = identity;
             return this;
         }
-        public Builder identity(@Nullable EventSubscriptionIdentityArgs identity) {
-            this.identity = Codegen.ofNullable(identity);
-            return this;
-        }        public DeadLetterWithResourceIdentityArgs build() {
-            return new DeadLetterWithResourceIdentityArgs(deadLetterDestination, identity);
+
+        public Builder identity(EventSubscriptionIdentityArgs identity) {
+            return identity(Output.of(identity));
+        }
+
+        public DeadLetterWithResourceIdentityArgs build() {
+            return $;
         }
     }
+
 }

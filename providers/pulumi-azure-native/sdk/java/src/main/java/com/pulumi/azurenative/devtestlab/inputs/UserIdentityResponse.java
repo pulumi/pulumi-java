@@ -23,10 +23,10 @@ public final class UserIdentityResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="appId")
-      private final @Nullable String appId;
+    private @Nullable String appId;
 
     public Optional<String> appId() {
-        return this.appId == null ? Optional.empty() : Optional.ofNullable(this.appId);
+        return Optional.ofNullable(this.appId);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class UserIdentityResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="objectId")
-      private final @Nullable String objectId;
+    private @Nullable String objectId;
 
     public Optional<String> objectId() {
-        return this.objectId == null ? Optional.empty() : Optional.ofNullable(this.objectId);
+        return Optional.ofNullable(this.objectId);
     }
 
     /**
@@ -45,10 +45,10 @@ public final class UserIdentityResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="principalId")
-      private final @Nullable String principalId;
+    private @Nullable String principalId;
 
     public Optional<String> principalId() {
-        return this.principalId == null ? Optional.empty() : Optional.ofNullable(this.principalId);
+        return Optional.ofNullable(this.principalId);
     }
 
     /**
@@ -56,10 +56,10 @@ public final class UserIdentityResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="principalName")
-      private final @Nullable String principalName;
+    private @Nullable String principalName;
 
     public Optional<String> principalName() {
-        return this.principalName == null ? Optional.empty() : Optional.ofNullable(this.principalName);
+        return Optional.ofNullable(this.principalName);
     }
 
     /**
@@ -67,82 +67,68 @@ public final class UserIdentityResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="tenantId")
-      private final @Nullable String tenantId;
+    private @Nullable String tenantId;
 
     public Optional<String> tenantId() {
-        return this.tenantId == null ? Optional.empty() : Optional.ofNullable(this.tenantId);
+        return Optional.ofNullable(this.tenantId);
     }
 
-    public UserIdentityResponse(
-        @Nullable String appId,
-        @Nullable String objectId,
-        @Nullable String principalId,
-        @Nullable String principalName,
-        @Nullable String tenantId) {
-        this.appId = appId;
-        this.objectId = objectId;
-        this.principalId = principalId;
-        this.principalName = principalName;
-        this.tenantId = tenantId;
-    }
+    private UserIdentityResponse() {}
 
-    private UserIdentityResponse() {
-        this.appId = null;
-        this.objectId = null;
-        this.principalId = null;
-        this.principalName = null;
-        this.tenantId = null;
+    private UserIdentityResponse(UserIdentityResponse $) {
+        this.appId = $.appId;
+        this.objectId = $.objectId;
+        this.principalId = $.principalId;
+        this.principalName = $.principalName;
+        this.tenantId = $.tenantId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(UserIdentityResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String appId;
-        private @Nullable String objectId;
-        private @Nullable String principalId;
-        private @Nullable String principalName;
-        private @Nullable String tenantId;
+        private UserIdentityResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new UserIdentityResponse();
         }
 
         public Builder(UserIdentityResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.appId = defaults.appId;
-    	      this.objectId = defaults.objectId;
-    	      this.principalId = defaults.principalId;
-    	      this.principalName = defaults.principalName;
-    	      this.tenantId = defaults.tenantId;
+            $ = new UserIdentityResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder appId(@Nullable String appId) {
-            this.appId = appId;
+            $.appId = appId;
             return this;
         }
+
         public Builder objectId(@Nullable String objectId) {
-            this.objectId = objectId;
+            $.objectId = objectId;
             return this;
         }
+
         public Builder principalId(@Nullable String principalId) {
-            this.principalId = principalId;
+            $.principalId = principalId;
             return this;
         }
+
         public Builder principalName(@Nullable String principalName) {
-            this.principalName = principalName;
+            $.principalName = principalName;
             return this;
         }
+
         public Builder tenantId(@Nullable String tenantId) {
-            this.tenantId = tenantId;
+            $.tenantId = tenantId;
             return this;
-        }        public UserIdentityResponse build() {
-            return new UserIdentityResponse(appId, objectId, principalId, principalName, tenantId);
+        }
+
+        public UserIdentityResponse build() {
+            return $;
         }
     }
+
 }

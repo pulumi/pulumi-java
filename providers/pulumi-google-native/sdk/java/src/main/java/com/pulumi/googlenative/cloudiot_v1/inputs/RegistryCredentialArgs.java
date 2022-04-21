@@ -5,9 +5,9 @@ package com.pulumi.googlenative.cloudiot_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.cloudiot_v1.inputs.PublicKeyCertificateArgs;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class RegistryCredentialArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="publicKeyCertificate")
-      private final @Nullable Output<PublicKeyCertificateArgs> publicKeyCertificate;
+    private @Nullable Output<PublicKeyCertificateArgs> publicKeyCertificate;
 
-    public Output<PublicKeyCertificateArgs> publicKeyCertificate() {
-        return this.publicKeyCertificate == null ? Codegen.empty() : this.publicKeyCertificate;
+    public Optional<Output<PublicKeyCertificateArgs>> publicKeyCertificate() {
+        return Optional.ofNullable(this.publicKeyCertificate);
     }
 
-    public RegistryCredentialArgs(@Nullable Output<PublicKeyCertificateArgs> publicKeyCertificate) {
-        this.publicKeyCertificate = publicKeyCertificate;
-    }
+    private RegistryCredentialArgs() {}
 
-    private RegistryCredentialArgs() {
-        this.publicKeyCertificate = Codegen.empty();
+    private RegistryCredentialArgs(RegistryCredentialArgs $) {
+        this.publicKeyCertificate = $.publicKeyCertificate;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RegistryCredentialArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<PublicKeyCertificateArgs> publicKeyCertificate;
+        private RegistryCredentialArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RegistryCredentialArgs();
         }
 
         public Builder(RegistryCredentialArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.publicKeyCertificate = defaults.publicKeyCertificate;
+            $ = new RegistryCredentialArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder publicKeyCertificate(@Nullable Output<PublicKeyCertificateArgs> publicKeyCertificate) {
-            this.publicKeyCertificate = publicKeyCertificate;
+            $.publicKeyCertificate = publicKeyCertificate;
             return this;
         }
-        public Builder publicKeyCertificate(@Nullable PublicKeyCertificateArgs publicKeyCertificate) {
-            this.publicKeyCertificate = Codegen.ofNullable(publicKeyCertificate);
-            return this;
-        }        public RegistryCredentialArgs build() {
-            return new RegistryCredentialArgs(publicKeyCertificate);
+
+        public Builder publicKeyCertificate(PublicKeyCertificateArgs publicKeyCertificate) {
+            return publicKeyCertificate(Output.of(publicKeyCertificate));
+        }
+
+        public RegistryCredentialArgs build() {
+            return $;
         }
     }
+
 }

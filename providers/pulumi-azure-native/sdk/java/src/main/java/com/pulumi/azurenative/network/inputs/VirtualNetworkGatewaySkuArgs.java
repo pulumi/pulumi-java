@@ -8,9 +8,9 @@ import com.pulumi.azurenative.network.enums.VirtualNetworkGatewaySkuTier;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +27,10 @@ public final class VirtualNetworkGatewaySkuArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<Either<String,VirtualNetworkGatewaySkuName>> name;
+    private @Nullable Output<Either<String,VirtualNetworkGatewaySkuName>> name;
 
-    public Output<Either<String,VirtualNetworkGatewaySkuName>> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<Either<String,VirtualNetworkGatewaySkuName>>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -38,63 +38,58 @@ public final class VirtualNetworkGatewaySkuArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="tier")
-      private final @Nullable Output<Either<String,VirtualNetworkGatewaySkuTier>> tier;
+    private @Nullable Output<Either<String,VirtualNetworkGatewaySkuTier>> tier;
 
-    public Output<Either<String,VirtualNetworkGatewaySkuTier>> tier() {
-        return this.tier == null ? Codegen.empty() : this.tier;
+    public Optional<Output<Either<String,VirtualNetworkGatewaySkuTier>>> tier() {
+        return Optional.ofNullable(this.tier);
     }
 
-    public VirtualNetworkGatewaySkuArgs(
-        @Nullable Output<Either<String,VirtualNetworkGatewaySkuName>> name,
-        @Nullable Output<Either<String,VirtualNetworkGatewaySkuTier>> tier) {
-        this.name = name;
-        this.tier = tier;
-    }
+    private VirtualNetworkGatewaySkuArgs() {}
 
-    private VirtualNetworkGatewaySkuArgs() {
-        this.name = Codegen.empty();
-        this.tier = Codegen.empty();
+    private VirtualNetworkGatewaySkuArgs(VirtualNetworkGatewaySkuArgs $) {
+        this.name = $.name;
+        this.tier = $.tier;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VirtualNetworkGatewaySkuArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Either<String,VirtualNetworkGatewaySkuName>> name;
-        private @Nullable Output<Either<String,VirtualNetworkGatewaySkuTier>> tier;
+        private VirtualNetworkGatewaySkuArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new VirtualNetworkGatewaySkuArgs();
         }
 
         public Builder(VirtualNetworkGatewaySkuArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.tier = defaults.tier;
+            $ = new VirtualNetworkGatewaySkuArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder name(@Nullable Output<Either<String,VirtualNetworkGatewaySkuName>> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable Either<String,VirtualNetworkGatewaySkuName> name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(Either<String,VirtualNetworkGatewaySkuName> name) {
+            return name(Output.of(name));
         }
+
         public Builder tier(@Nullable Output<Either<String,VirtualNetworkGatewaySkuTier>> tier) {
-            this.tier = tier;
+            $.tier = tier;
             return this;
         }
-        public Builder tier(@Nullable Either<String,VirtualNetworkGatewaySkuTier> tier) {
-            this.tier = Codegen.ofNullable(tier);
-            return this;
-        }        public VirtualNetworkGatewaySkuArgs build() {
-            return new VirtualNetworkGatewaySkuArgs(name, tier);
+
+        public Builder tier(Either<String,VirtualNetworkGatewaySkuTier> tier) {
+            return tier(Output.of(tier));
+        }
+
+        public VirtualNetworkGatewaySkuArgs build() {
+            return $;
         }
     }
+
 }

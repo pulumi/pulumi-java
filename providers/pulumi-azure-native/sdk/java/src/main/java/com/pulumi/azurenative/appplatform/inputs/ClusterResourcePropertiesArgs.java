@@ -6,8 +6,8 @@ package com.pulumi.azurenative.appplatform.inputs;
 import com.pulumi.azurenative.appplatform.inputs.NetworkProfileArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class ClusterResourcePropertiesArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="networkProfile")
-      private final @Nullable Output<NetworkProfileArgs> networkProfile;
+    private @Nullable Output<NetworkProfileArgs> networkProfile;
 
-    public Output<NetworkProfileArgs> networkProfile() {
-        return this.networkProfile == null ? Codegen.empty() : this.networkProfile;
+    public Optional<Output<NetworkProfileArgs>> networkProfile() {
+        return Optional.ofNullable(this.networkProfile);
     }
 
-    public ClusterResourcePropertiesArgs(@Nullable Output<NetworkProfileArgs> networkProfile) {
-        this.networkProfile = networkProfile;
-    }
+    private ClusterResourcePropertiesArgs() {}
 
-    private ClusterResourcePropertiesArgs() {
-        this.networkProfile = Codegen.empty();
+    private ClusterResourcePropertiesArgs(ClusterResourcePropertiesArgs $) {
+        this.networkProfile = $.networkProfile;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ClusterResourcePropertiesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<NetworkProfileArgs> networkProfile;
+        private ClusterResourcePropertiesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ClusterResourcePropertiesArgs();
         }
 
         public Builder(ClusterResourcePropertiesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.networkProfile = defaults.networkProfile;
+            $ = new ClusterResourcePropertiesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder networkProfile(@Nullable Output<NetworkProfileArgs> networkProfile) {
-            this.networkProfile = networkProfile;
+            $.networkProfile = networkProfile;
             return this;
         }
-        public Builder networkProfile(@Nullable NetworkProfileArgs networkProfile) {
-            this.networkProfile = Codegen.ofNullable(networkProfile);
-            return this;
-        }        public ClusterResourcePropertiesArgs build() {
-            return new ClusterResourcePropertiesArgs(networkProfile);
+
+        public Builder networkProfile(NetworkProfileArgs networkProfile) {
+            return networkProfile(Output.of(networkProfile));
+        }
+
+        public ClusterResourcePropertiesArgs build() {
+            return $;
         }
     }
+
 }

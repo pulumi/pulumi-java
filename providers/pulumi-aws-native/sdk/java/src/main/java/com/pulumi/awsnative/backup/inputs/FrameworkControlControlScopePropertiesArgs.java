@@ -6,10 +6,10 @@ package com.pulumi.awsnative.backup.inputs;
 import com.pulumi.awsnative.backup.inputs.FrameworkTagArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class FrameworkControlControlScopePropertiesArgs extends com.pulumi
      * 
      */
     @Import(name="complianceResourceIds")
-      private final @Nullable Output<List<String>> complianceResourceIds;
+    private @Nullable Output<List<String>> complianceResourceIds;
 
-    public Output<List<String>> complianceResourceIds() {
-        return this.complianceResourceIds == null ? Codegen.empty() : this.complianceResourceIds;
+    public Optional<Output<List<String>>> complianceResourceIds() {
+        return Optional.ofNullable(this.complianceResourceIds);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class FrameworkControlControlScopePropertiesArgs extends com.pulumi
      * 
      */
     @Import(name="complianceResourceTypes")
-      private final @Nullable Output<List<String>> complianceResourceTypes;
+    private @Nullable Output<List<String>> complianceResourceTypes;
 
-    public Output<List<String>> complianceResourceTypes() {
-        return this.complianceResourceTypes == null ? Codegen.empty() : this.complianceResourceTypes;
+    public Optional<Output<List<String>>> complianceResourceTypes() {
+        return Optional.ofNullable(this.complianceResourceTypes);
     }
 
     /**
@@ -48,85 +48,80 @@ public final class FrameworkControlControlScopePropertiesArgs extends com.pulumi
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<List<FrameworkTagArgs>> tags;
+    private @Nullable Output<List<FrameworkTagArgs>> tags;
 
-    public Output<List<FrameworkTagArgs>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<List<FrameworkTagArgs>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public FrameworkControlControlScopePropertiesArgs(
-        @Nullable Output<List<String>> complianceResourceIds,
-        @Nullable Output<List<String>> complianceResourceTypes,
-        @Nullable Output<List<FrameworkTagArgs>> tags) {
-        this.complianceResourceIds = complianceResourceIds;
-        this.complianceResourceTypes = complianceResourceTypes;
-        this.tags = tags;
-    }
+    private FrameworkControlControlScopePropertiesArgs() {}
 
-    private FrameworkControlControlScopePropertiesArgs() {
-        this.complianceResourceIds = Codegen.empty();
-        this.complianceResourceTypes = Codegen.empty();
-        this.tags = Codegen.empty();
+    private FrameworkControlControlScopePropertiesArgs(FrameworkControlControlScopePropertiesArgs $) {
+        this.complianceResourceIds = $.complianceResourceIds;
+        this.complianceResourceTypes = $.complianceResourceTypes;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FrameworkControlControlScopePropertiesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> complianceResourceIds;
-        private @Nullable Output<List<String>> complianceResourceTypes;
-        private @Nullable Output<List<FrameworkTagArgs>> tags;
+        private FrameworkControlControlScopePropertiesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new FrameworkControlControlScopePropertiesArgs();
         }
 
         public Builder(FrameworkControlControlScopePropertiesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.complianceResourceIds = defaults.complianceResourceIds;
-    	      this.complianceResourceTypes = defaults.complianceResourceTypes;
-    	      this.tags = defaults.tags;
+            $ = new FrameworkControlControlScopePropertiesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder complianceResourceIds(@Nullable Output<List<String>> complianceResourceIds) {
-            this.complianceResourceIds = complianceResourceIds;
+            $.complianceResourceIds = complianceResourceIds;
             return this;
         }
-        public Builder complianceResourceIds(@Nullable List<String> complianceResourceIds) {
-            this.complianceResourceIds = Codegen.ofNullable(complianceResourceIds);
-            return this;
+
+        public Builder complianceResourceIds(List<String> complianceResourceIds) {
+            return complianceResourceIds(Output.of(complianceResourceIds));
         }
+
         public Builder complianceResourceIds(String... complianceResourceIds) {
             return complianceResourceIds(List.of(complianceResourceIds));
         }
+
         public Builder complianceResourceTypes(@Nullable Output<List<String>> complianceResourceTypes) {
-            this.complianceResourceTypes = complianceResourceTypes;
+            $.complianceResourceTypes = complianceResourceTypes;
             return this;
         }
-        public Builder complianceResourceTypes(@Nullable List<String> complianceResourceTypes) {
-            this.complianceResourceTypes = Codegen.ofNullable(complianceResourceTypes);
-            return this;
+
+        public Builder complianceResourceTypes(List<String> complianceResourceTypes) {
+            return complianceResourceTypes(Output.of(complianceResourceTypes));
         }
+
         public Builder complianceResourceTypes(String... complianceResourceTypes) {
             return complianceResourceTypes(List.of(complianceResourceTypes));
         }
+
         public Builder tags(@Nullable Output<List<FrameworkTagArgs>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable List<FrameworkTagArgs> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(List<FrameworkTagArgs> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tags(FrameworkTagArgs... tags) {
             return tags(List.of(tags));
-        }        public FrameworkControlControlScopePropertiesArgs build() {
-            return new FrameworkControlControlScopePropertiesArgs(complianceResourceIds, complianceResourceTypes, tags);
+        }
+
+        public FrameworkControlControlScopePropertiesArgs build() {
+            return $;
         }
     }
+
 }

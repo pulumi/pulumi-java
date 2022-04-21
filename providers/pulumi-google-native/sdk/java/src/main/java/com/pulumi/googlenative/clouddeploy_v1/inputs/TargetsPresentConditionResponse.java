@@ -23,7 +23,7 @@ public final class TargetsPresentConditionResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="missingTargets", required=true)
-      private final List<String> missingTargets;
+    private List<String> missingTargets;
 
     public List<String> missingTargets() {
         return this.missingTargets;
@@ -34,7 +34,7 @@ public final class TargetsPresentConditionResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="status", required=true)
-      private final Boolean status;
+    private Boolean status;
 
     public Boolean status() {
         return this.status;
@@ -45,67 +45,63 @@ public final class TargetsPresentConditionResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="updateTime", required=true)
-      private final String updateTime;
+    private String updateTime;
 
     public String updateTime() {
         return this.updateTime;
     }
 
-    public TargetsPresentConditionResponse(
-        List<String> missingTargets,
-        Boolean status,
-        String updateTime) {
-        this.missingTargets = Objects.requireNonNull(missingTargets, "expected parameter 'missingTargets' to be non-null");
-        this.status = Objects.requireNonNull(status, "expected parameter 'status' to be non-null");
-        this.updateTime = Objects.requireNonNull(updateTime, "expected parameter 'updateTime' to be non-null");
-    }
+    private TargetsPresentConditionResponse() {}
 
-    private TargetsPresentConditionResponse() {
-        this.missingTargets = List.of();
-        this.status = null;
-        this.updateTime = null;
+    private TargetsPresentConditionResponse(TargetsPresentConditionResponse $) {
+        this.missingTargets = $.missingTargets;
+        this.status = $.status;
+        this.updateTime = $.updateTime;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TargetsPresentConditionResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<String> missingTargets;
-        private Boolean status;
-        private String updateTime;
+        private TargetsPresentConditionResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new TargetsPresentConditionResponse();
         }
 
         public Builder(TargetsPresentConditionResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.missingTargets = defaults.missingTargets;
-    	      this.status = defaults.status;
-    	      this.updateTime = defaults.updateTime;
+            $ = new TargetsPresentConditionResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder missingTargets(List<String> missingTargets) {
-            this.missingTargets = Objects.requireNonNull(missingTargets);
+            $.missingTargets = missingTargets;
             return this;
         }
+
         public Builder missingTargets(String... missingTargets) {
             return missingTargets(List.of(missingTargets));
         }
+
         public Builder status(Boolean status) {
-            this.status = Objects.requireNonNull(status);
+            $.status = status;
             return this;
         }
+
         public Builder updateTime(String updateTime) {
-            this.updateTime = Objects.requireNonNull(updateTime);
+            $.updateTime = updateTime;
             return this;
-        }        public TargetsPresentConditionResponse build() {
-            return new TargetsPresentConditionResponse(missingTargets, status, updateTime);
+        }
+
+        public TargetsPresentConditionResponse build() {
+            $.missingTargets = Objects.requireNonNull($.missingTargets, "expected parameter 'missingTargets' to be non-null");
+            $.status = Objects.requireNonNull($.status, "expected parameter 'status' to be non-null");
+            $.updateTime = Objects.requireNonNull($.updateTime, "expected parameter 'updateTime' to be non-null");
+            return $;
         }
     }
+
 }

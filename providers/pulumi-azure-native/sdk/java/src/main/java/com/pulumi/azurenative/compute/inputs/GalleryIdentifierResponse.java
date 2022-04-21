@@ -21,45 +21,45 @@ public final class GalleryIdentifierResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="uniqueName", required=true)
-      private final String uniqueName;
+    private String uniqueName;
 
     public String uniqueName() {
         return this.uniqueName;
     }
 
-    public GalleryIdentifierResponse(String uniqueName) {
-        this.uniqueName = Objects.requireNonNull(uniqueName, "expected parameter 'uniqueName' to be non-null");
-    }
+    private GalleryIdentifierResponse() {}
 
-    private GalleryIdentifierResponse() {
-        this.uniqueName = null;
+    private GalleryIdentifierResponse(GalleryIdentifierResponse $) {
+        this.uniqueName = $.uniqueName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GalleryIdentifierResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String uniqueName;
+        private GalleryIdentifierResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GalleryIdentifierResponse();
         }
 
         public Builder(GalleryIdentifierResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.uniqueName = defaults.uniqueName;
+            $ = new GalleryIdentifierResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder uniqueName(String uniqueName) {
-            this.uniqueName = Objects.requireNonNull(uniqueName);
+            $.uniqueName = uniqueName;
             return this;
-        }        public GalleryIdentifierResponse build() {
-            return new GalleryIdentifierResponse(uniqueName);
+        }
+
+        public GalleryIdentifierResponse build() {
+            $.uniqueName = Objects.requireNonNull($.uniqueName, "expected parameter 'uniqueName' to be non-null");
+            return $;
         }
     }
+
 }

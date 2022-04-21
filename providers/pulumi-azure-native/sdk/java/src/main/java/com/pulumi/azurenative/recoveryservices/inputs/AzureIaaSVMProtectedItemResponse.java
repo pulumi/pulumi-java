@@ -31,10 +31,10 @@ public final class AzureIaaSVMProtectedItemResponse extends com.pulumi.resources
      * 
      */
     @Import(name="backupManagementType")
-      private final @Nullable String backupManagementType;
+    private @Nullable String backupManagementType;
 
     public Optional<String> backupManagementType() {
-        return this.backupManagementType == null ? Optional.empty() : Optional.ofNullable(this.backupManagementType);
+        return Optional.ofNullable(this.backupManagementType);
     }
 
     /**
@@ -42,10 +42,10 @@ public final class AzureIaaSVMProtectedItemResponse extends com.pulumi.resources
      * 
      */
     @Import(name="backupSetName")
-      private final @Nullable String backupSetName;
+    private @Nullable String backupSetName;
 
     public Optional<String> backupSetName() {
-        return this.backupSetName == null ? Optional.empty() : Optional.ofNullable(this.backupSetName);
+        return Optional.ofNullable(this.backupSetName);
     }
 
     /**
@@ -53,10 +53,10 @@ public final class AzureIaaSVMProtectedItemResponse extends com.pulumi.resources
      * 
      */
     @Import(name="containerName")
-      private final @Nullable String containerName;
+    private @Nullable String containerName;
 
     public Optional<String> containerName() {
-        return this.containerName == null ? Optional.empty() : Optional.ofNullable(this.containerName);
+        return Optional.ofNullable(this.containerName);
     }
 
     /**
@@ -64,10 +64,10 @@ public final class AzureIaaSVMProtectedItemResponse extends com.pulumi.resources
      * 
      */
     @Import(name="createMode")
-      private final @Nullable String createMode;
+    private @Nullable String createMode;
 
     public Optional<String> createMode() {
-        return this.createMode == null ? Optional.empty() : Optional.ofNullable(this.createMode);
+        return Optional.ofNullable(this.createMode);
     }
 
     /**
@@ -75,10 +75,10 @@ public final class AzureIaaSVMProtectedItemResponse extends com.pulumi.resources
      * 
      */
     @Import(name="deferredDeleteTimeInUTC")
-      private final @Nullable String deferredDeleteTimeInUTC;
+    private @Nullable String deferredDeleteTimeInUTC;
 
     public Optional<String> deferredDeleteTimeInUTC() {
-        return this.deferredDeleteTimeInUTC == null ? Optional.empty() : Optional.ofNullable(this.deferredDeleteTimeInUTC);
+        return Optional.ofNullable(this.deferredDeleteTimeInUTC);
     }
 
     /**
@@ -86,10 +86,10 @@ public final class AzureIaaSVMProtectedItemResponse extends com.pulumi.resources
      * 
      */
     @Import(name="deferredDeleteTimeRemaining")
-      private final @Nullable String deferredDeleteTimeRemaining;
+    private @Nullable String deferredDeleteTimeRemaining;
 
     public Optional<String> deferredDeleteTimeRemaining() {
-        return this.deferredDeleteTimeRemaining == null ? Optional.empty() : Optional.ofNullable(this.deferredDeleteTimeRemaining);
+        return Optional.ofNullable(this.deferredDeleteTimeRemaining);
     }
 
     /**
@@ -97,10 +97,10 @@ public final class AzureIaaSVMProtectedItemResponse extends com.pulumi.resources
      * 
      */
     @Import(name="extendedInfo")
-      private final @Nullable AzureIaaSVMProtectedItemExtendedInfoResponse extendedInfo;
+    private @Nullable AzureIaaSVMProtectedItemExtendedInfoResponse extendedInfo;
 
     public Optional<AzureIaaSVMProtectedItemExtendedInfoResponse> extendedInfo() {
-        return this.extendedInfo == null ? Optional.empty() : Optional.ofNullable(this.extendedInfo);
+        return Optional.ofNullable(this.extendedInfo);
     }
 
     /**
@@ -108,10 +108,10 @@ public final class AzureIaaSVMProtectedItemResponse extends com.pulumi.resources
      * 
      */
     @Import(name="extendedProperties")
-      private final @Nullable ExtendedPropertiesResponse extendedProperties;
+    private @Nullable ExtendedPropertiesResponse extendedProperties;
 
     public Optional<ExtendedPropertiesResponse> extendedProperties() {
-        return this.extendedProperties == null ? Optional.empty() : Optional.ofNullable(this.extendedProperties);
+        return Optional.ofNullable(this.extendedProperties);
     }
 
     /**
@@ -119,10 +119,10 @@ public final class AzureIaaSVMProtectedItemResponse extends com.pulumi.resources
      * 
      */
     @Import(name="friendlyName")
-      private final @Nullable String friendlyName;
+    private @Nullable String friendlyName;
 
     public Optional<String> friendlyName() {
-        return this.friendlyName == null ? Optional.empty() : Optional.ofNullable(this.friendlyName);
+        return Optional.ofNullable(this.friendlyName);
     }
 
     /**
@@ -130,10 +130,10 @@ public final class AzureIaaSVMProtectedItemResponse extends com.pulumi.resources
      * 
      */
     @Import(name="healthDetails")
-      private final @Nullable List<AzureIaaSVMHealthDetailsResponse> healthDetails;
+    private @Nullable List<AzureIaaSVMHealthDetailsResponse> healthDetails;
 
-    public List<AzureIaaSVMHealthDetailsResponse> healthDetails() {
-        return this.healthDetails == null ? List.of() : this.healthDetails;
+    public Optional<List<AzureIaaSVMHealthDetailsResponse>> healthDetails() {
+        return Optional.ofNullable(this.healthDetails);
     }
 
     /**
@@ -141,10 +141,10 @@ public final class AzureIaaSVMProtectedItemResponse extends com.pulumi.resources
      * 
      */
     @Import(name="healthStatus")
-      private final @Nullable String healthStatus;
+    private @Nullable String healthStatus;
 
     public Optional<String> healthStatus() {
-        return this.healthStatus == null ? Optional.empty() : Optional.ofNullable(this.healthStatus);
+        return Optional.ofNullable(this.healthStatus);
     }
 
     /**
@@ -152,10 +152,10 @@ public final class AzureIaaSVMProtectedItemResponse extends com.pulumi.resources
      * 
      */
     @Import(name="isDeferredDeleteScheduleUpcoming")
-      private final @Nullable Boolean isDeferredDeleteScheduleUpcoming;
+    private @Nullable Boolean isDeferredDeleteScheduleUpcoming;
 
     public Optional<Boolean> isDeferredDeleteScheduleUpcoming() {
-        return this.isDeferredDeleteScheduleUpcoming == null ? Optional.empty() : Optional.ofNullable(this.isDeferredDeleteScheduleUpcoming);
+        return Optional.ofNullable(this.isDeferredDeleteScheduleUpcoming);
     }
 
     /**
@@ -163,10 +163,10 @@ public final class AzureIaaSVMProtectedItemResponse extends com.pulumi.resources
      * 
      */
     @Import(name="isRehydrate")
-      private final @Nullable Boolean isRehydrate;
+    private @Nullable Boolean isRehydrate;
 
     public Optional<Boolean> isRehydrate() {
-        return this.isRehydrate == null ? Optional.empty() : Optional.ofNullable(this.isRehydrate);
+        return Optional.ofNullable(this.isRehydrate);
     }
 
     /**
@@ -174,10 +174,10 @@ public final class AzureIaaSVMProtectedItemResponse extends com.pulumi.resources
      * 
      */
     @Import(name="isScheduledForDeferredDelete")
-      private final @Nullable Boolean isScheduledForDeferredDelete;
+    private @Nullable Boolean isScheduledForDeferredDelete;
 
     public Optional<Boolean> isScheduledForDeferredDelete() {
-        return this.isScheduledForDeferredDelete == null ? Optional.empty() : Optional.ofNullable(this.isScheduledForDeferredDelete);
+        return Optional.ofNullable(this.isScheduledForDeferredDelete);
     }
 
     /**
@@ -185,10 +185,10 @@ public final class AzureIaaSVMProtectedItemResponse extends com.pulumi.resources
      * 
      */
     @Import(name="kpisHealths")
-      private final @Nullable Map<String,KPIResourceHealthDetailsResponse> kpisHealths;
+    private @Nullable Map<String,KPIResourceHealthDetailsResponse> kpisHealths;
 
-    public Map<String,KPIResourceHealthDetailsResponse> kpisHealths() {
-        return this.kpisHealths == null ? Map.of() : this.kpisHealths;
+    public Optional<Map<String,KPIResourceHealthDetailsResponse>> kpisHealths() {
+        return Optional.ofNullable(this.kpisHealths);
     }
 
     /**
@@ -196,10 +196,10 @@ public final class AzureIaaSVMProtectedItemResponse extends com.pulumi.resources
      * 
      */
     @Import(name="lastBackupStatus")
-      private final @Nullable String lastBackupStatus;
+    private @Nullable String lastBackupStatus;
 
     public Optional<String> lastBackupStatus() {
-        return this.lastBackupStatus == null ? Optional.empty() : Optional.ofNullable(this.lastBackupStatus);
+        return Optional.ofNullable(this.lastBackupStatus);
     }
 
     /**
@@ -207,10 +207,10 @@ public final class AzureIaaSVMProtectedItemResponse extends com.pulumi.resources
      * 
      */
     @Import(name="lastBackupTime")
-      private final @Nullable String lastBackupTime;
+    private @Nullable String lastBackupTime;
 
     public Optional<String> lastBackupTime() {
-        return this.lastBackupTime == null ? Optional.empty() : Optional.ofNullable(this.lastBackupTime);
+        return Optional.ofNullable(this.lastBackupTime);
     }
 
     /**
@@ -218,10 +218,10 @@ public final class AzureIaaSVMProtectedItemResponse extends com.pulumi.resources
      * 
      */
     @Import(name="lastRecoveryPoint")
-      private final @Nullable String lastRecoveryPoint;
+    private @Nullable String lastRecoveryPoint;
 
     public Optional<String> lastRecoveryPoint() {
-        return this.lastRecoveryPoint == null ? Optional.empty() : Optional.ofNullable(this.lastRecoveryPoint);
+        return Optional.ofNullable(this.lastRecoveryPoint);
     }
 
     /**
@@ -229,10 +229,10 @@ public final class AzureIaaSVMProtectedItemResponse extends com.pulumi.resources
      * 
      */
     @Import(name="policyId")
-      private final @Nullable String policyId;
+    private @Nullable String policyId;
 
     public Optional<String> policyId() {
-        return this.policyId == null ? Optional.empty() : Optional.ofNullable(this.policyId);
+        return Optional.ofNullable(this.policyId);
     }
 
     /**
@@ -240,10 +240,10 @@ public final class AzureIaaSVMProtectedItemResponse extends com.pulumi.resources
      * 
      */
     @Import(name="protectedItemDataId")
-      private final @Nullable String protectedItemDataId;
+    private @Nullable String protectedItemDataId;
 
     public Optional<String> protectedItemDataId() {
-        return this.protectedItemDataId == null ? Optional.empty() : Optional.ofNullable(this.protectedItemDataId);
+        return Optional.ofNullable(this.protectedItemDataId);
     }
 
     /**
@@ -252,7 +252,7 @@ public final class AzureIaaSVMProtectedItemResponse extends com.pulumi.resources
      * 
      */
     @Import(name="protectedItemType", required=true)
-      private final String protectedItemType;
+    private String protectedItemType;
 
     public String protectedItemType() {
         return this.protectedItemType;
@@ -263,10 +263,10 @@ public final class AzureIaaSVMProtectedItemResponse extends com.pulumi.resources
      * 
      */
     @Import(name="protectionState")
-      private final @Nullable String protectionState;
+    private @Nullable String protectionState;
 
     public Optional<String> protectionState() {
-        return this.protectionState == null ? Optional.empty() : Optional.ofNullable(this.protectionState);
+        return Optional.ofNullable(this.protectionState);
     }
 
     /**
@@ -274,10 +274,10 @@ public final class AzureIaaSVMProtectedItemResponse extends com.pulumi.resources
      * 
      */
     @Import(name="protectionStatus")
-      private final @Nullable String protectionStatus;
+    private @Nullable String protectionStatus;
 
     public Optional<String> protectionStatus() {
-        return this.protectionStatus == null ? Optional.empty() : Optional.ofNullable(this.protectionStatus);
+        return Optional.ofNullable(this.protectionStatus);
     }
 
     /**
@@ -285,10 +285,10 @@ public final class AzureIaaSVMProtectedItemResponse extends com.pulumi.resources
      * 
      */
     @Import(name="sourceResourceId")
-      private final @Nullable String sourceResourceId;
+    private @Nullable String sourceResourceId;
 
     public Optional<String> sourceResourceId() {
-        return this.sourceResourceId == null ? Optional.empty() : Optional.ofNullable(this.sourceResourceId);
+        return Optional.ofNullable(this.sourceResourceId);
     }
 
     /**
@@ -296,10 +296,10 @@ public final class AzureIaaSVMProtectedItemResponse extends com.pulumi.resources
      * 
      */
     @Import(name="virtualMachineId")
-      private final @Nullable String virtualMachineId;
+    private @Nullable String virtualMachineId;
 
     public Optional<String> virtualMachineId() {
-        return this.virtualMachineId == null ? Optional.empty() : Optional.ofNullable(this.virtualMachineId);
+        return Optional.ofNullable(this.virtualMachineId);
     }
 
     /**
@@ -307,274 +307,199 @@ public final class AzureIaaSVMProtectedItemResponse extends com.pulumi.resources
      * 
      */
     @Import(name="workloadType")
-      private final @Nullable String workloadType;
+    private @Nullable String workloadType;
 
     public Optional<String> workloadType() {
-        return this.workloadType == null ? Optional.empty() : Optional.ofNullable(this.workloadType);
+        return Optional.ofNullable(this.workloadType);
     }
 
-    public AzureIaaSVMProtectedItemResponse(
-        @Nullable String backupManagementType,
-        @Nullable String backupSetName,
-        @Nullable String containerName,
-        @Nullable String createMode,
-        @Nullable String deferredDeleteTimeInUTC,
-        @Nullable String deferredDeleteTimeRemaining,
-        @Nullable AzureIaaSVMProtectedItemExtendedInfoResponse extendedInfo,
-        @Nullable ExtendedPropertiesResponse extendedProperties,
-        @Nullable String friendlyName,
-        @Nullable List<AzureIaaSVMHealthDetailsResponse> healthDetails,
-        @Nullable String healthStatus,
-        @Nullable Boolean isDeferredDeleteScheduleUpcoming,
-        @Nullable Boolean isRehydrate,
-        @Nullable Boolean isScheduledForDeferredDelete,
-        @Nullable Map<String,KPIResourceHealthDetailsResponse> kpisHealths,
-        @Nullable String lastBackupStatus,
-        @Nullable String lastBackupTime,
-        @Nullable String lastRecoveryPoint,
-        @Nullable String policyId,
-        @Nullable String protectedItemDataId,
-        String protectedItemType,
-        @Nullable String protectionState,
-        @Nullable String protectionStatus,
-        @Nullable String sourceResourceId,
-        @Nullable String virtualMachineId,
-        @Nullable String workloadType) {
-        this.backupManagementType = backupManagementType;
-        this.backupSetName = backupSetName;
-        this.containerName = containerName;
-        this.createMode = createMode;
-        this.deferredDeleteTimeInUTC = deferredDeleteTimeInUTC;
-        this.deferredDeleteTimeRemaining = deferredDeleteTimeRemaining;
-        this.extendedInfo = extendedInfo;
-        this.extendedProperties = extendedProperties;
-        this.friendlyName = friendlyName;
-        this.healthDetails = healthDetails;
-        this.healthStatus = healthStatus;
-        this.isDeferredDeleteScheduleUpcoming = isDeferredDeleteScheduleUpcoming;
-        this.isRehydrate = isRehydrate;
-        this.isScheduledForDeferredDelete = isScheduledForDeferredDelete;
-        this.kpisHealths = kpisHealths;
-        this.lastBackupStatus = lastBackupStatus;
-        this.lastBackupTime = lastBackupTime;
-        this.lastRecoveryPoint = lastRecoveryPoint;
-        this.policyId = policyId;
-        this.protectedItemDataId = protectedItemDataId;
-        this.protectedItemType = Codegen.stringProp("protectedItemType").arg(protectedItemType).require();
-        this.protectionState = protectionState;
-        this.protectionStatus = protectionStatus;
-        this.sourceResourceId = sourceResourceId;
-        this.virtualMachineId = virtualMachineId;
-        this.workloadType = workloadType;
-    }
+    private AzureIaaSVMProtectedItemResponse() {}
 
-    private AzureIaaSVMProtectedItemResponse() {
-        this.backupManagementType = null;
-        this.backupSetName = null;
-        this.containerName = null;
-        this.createMode = null;
-        this.deferredDeleteTimeInUTC = null;
-        this.deferredDeleteTimeRemaining = null;
-        this.extendedInfo = null;
-        this.extendedProperties = null;
-        this.friendlyName = null;
-        this.healthDetails = List.of();
-        this.healthStatus = null;
-        this.isDeferredDeleteScheduleUpcoming = null;
-        this.isRehydrate = null;
-        this.isScheduledForDeferredDelete = null;
-        this.kpisHealths = Map.of();
-        this.lastBackupStatus = null;
-        this.lastBackupTime = null;
-        this.lastRecoveryPoint = null;
-        this.policyId = null;
-        this.protectedItemDataId = null;
-        this.protectedItemType = null;
-        this.protectionState = null;
-        this.protectionStatus = null;
-        this.sourceResourceId = null;
-        this.virtualMachineId = null;
-        this.workloadType = null;
+    private AzureIaaSVMProtectedItemResponse(AzureIaaSVMProtectedItemResponse $) {
+        this.backupManagementType = $.backupManagementType;
+        this.backupSetName = $.backupSetName;
+        this.containerName = $.containerName;
+        this.createMode = $.createMode;
+        this.deferredDeleteTimeInUTC = $.deferredDeleteTimeInUTC;
+        this.deferredDeleteTimeRemaining = $.deferredDeleteTimeRemaining;
+        this.extendedInfo = $.extendedInfo;
+        this.extendedProperties = $.extendedProperties;
+        this.friendlyName = $.friendlyName;
+        this.healthDetails = $.healthDetails;
+        this.healthStatus = $.healthStatus;
+        this.isDeferredDeleteScheduleUpcoming = $.isDeferredDeleteScheduleUpcoming;
+        this.isRehydrate = $.isRehydrate;
+        this.isScheduledForDeferredDelete = $.isScheduledForDeferredDelete;
+        this.kpisHealths = $.kpisHealths;
+        this.lastBackupStatus = $.lastBackupStatus;
+        this.lastBackupTime = $.lastBackupTime;
+        this.lastRecoveryPoint = $.lastRecoveryPoint;
+        this.policyId = $.policyId;
+        this.protectedItemDataId = $.protectedItemDataId;
+        this.protectedItemType = $.protectedItemType;
+        this.protectionState = $.protectionState;
+        this.protectionStatus = $.protectionStatus;
+        this.sourceResourceId = $.sourceResourceId;
+        this.virtualMachineId = $.virtualMachineId;
+        this.workloadType = $.workloadType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AzureIaaSVMProtectedItemResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String backupManagementType;
-        private @Nullable String backupSetName;
-        private @Nullable String containerName;
-        private @Nullable String createMode;
-        private @Nullable String deferredDeleteTimeInUTC;
-        private @Nullable String deferredDeleteTimeRemaining;
-        private @Nullable AzureIaaSVMProtectedItemExtendedInfoResponse extendedInfo;
-        private @Nullable ExtendedPropertiesResponse extendedProperties;
-        private @Nullable String friendlyName;
-        private @Nullable List<AzureIaaSVMHealthDetailsResponse> healthDetails;
-        private @Nullable String healthStatus;
-        private @Nullable Boolean isDeferredDeleteScheduleUpcoming;
-        private @Nullable Boolean isRehydrate;
-        private @Nullable Boolean isScheduledForDeferredDelete;
-        private @Nullable Map<String,KPIResourceHealthDetailsResponse> kpisHealths;
-        private @Nullable String lastBackupStatus;
-        private @Nullable String lastBackupTime;
-        private @Nullable String lastRecoveryPoint;
-        private @Nullable String policyId;
-        private @Nullable String protectedItemDataId;
-        private String protectedItemType;
-        private @Nullable String protectionState;
-        private @Nullable String protectionStatus;
-        private @Nullable String sourceResourceId;
-        private @Nullable String virtualMachineId;
-        private @Nullable String workloadType;
+        private AzureIaaSVMProtectedItemResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AzureIaaSVMProtectedItemResponse();
         }
 
         public Builder(AzureIaaSVMProtectedItemResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.backupManagementType = defaults.backupManagementType;
-    	      this.backupSetName = defaults.backupSetName;
-    	      this.containerName = defaults.containerName;
-    	      this.createMode = defaults.createMode;
-    	      this.deferredDeleteTimeInUTC = defaults.deferredDeleteTimeInUTC;
-    	      this.deferredDeleteTimeRemaining = defaults.deferredDeleteTimeRemaining;
-    	      this.extendedInfo = defaults.extendedInfo;
-    	      this.extendedProperties = defaults.extendedProperties;
-    	      this.friendlyName = defaults.friendlyName;
-    	      this.healthDetails = defaults.healthDetails;
-    	      this.healthStatus = defaults.healthStatus;
-    	      this.isDeferredDeleteScheduleUpcoming = defaults.isDeferredDeleteScheduleUpcoming;
-    	      this.isRehydrate = defaults.isRehydrate;
-    	      this.isScheduledForDeferredDelete = defaults.isScheduledForDeferredDelete;
-    	      this.kpisHealths = defaults.kpisHealths;
-    	      this.lastBackupStatus = defaults.lastBackupStatus;
-    	      this.lastBackupTime = defaults.lastBackupTime;
-    	      this.lastRecoveryPoint = defaults.lastRecoveryPoint;
-    	      this.policyId = defaults.policyId;
-    	      this.protectedItemDataId = defaults.protectedItemDataId;
-    	      this.protectedItemType = defaults.protectedItemType;
-    	      this.protectionState = defaults.protectionState;
-    	      this.protectionStatus = defaults.protectionStatus;
-    	      this.sourceResourceId = defaults.sourceResourceId;
-    	      this.virtualMachineId = defaults.virtualMachineId;
-    	      this.workloadType = defaults.workloadType;
+            $ = new AzureIaaSVMProtectedItemResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder backupManagementType(@Nullable String backupManagementType) {
-            this.backupManagementType = backupManagementType;
+            $.backupManagementType = backupManagementType;
             return this;
         }
+
         public Builder backupSetName(@Nullable String backupSetName) {
-            this.backupSetName = backupSetName;
+            $.backupSetName = backupSetName;
             return this;
         }
+
         public Builder containerName(@Nullable String containerName) {
-            this.containerName = containerName;
+            $.containerName = containerName;
             return this;
         }
+
         public Builder createMode(@Nullable String createMode) {
-            this.createMode = createMode;
+            $.createMode = createMode;
             return this;
         }
+
         public Builder deferredDeleteTimeInUTC(@Nullable String deferredDeleteTimeInUTC) {
-            this.deferredDeleteTimeInUTC = deferredDeleteTimeInUTC;
+            $.deferredDeleteTimeInUTC = deferredDeleteTimeInUTC;
             return this;
         }
+
         public Builder deferredDeleteTimeRemaining(@Nullable String deferredDeleteTimeRemaining) {
-            this.deferredDeleteTimeRemaining = deferredDeleteTimeRemaining;
+            $.deferredDeleteTimeRemaining = deferredDeleteTimeRemaining;
             return this;
         }
+
         public Builder extendedInfo(@Nullable AzureIaaSVMProtectedItemExtendedInfoResponse extendedInfo) {
-            this.extendedInfo = extendedInfo;
+            $.extendedInfo = extendedInfo;
             return this;
         }
+
         public Builder extendedProperties(@Nullable ExtendedPropertiesResponse extendedProperties) {
-            this.extendedProperties = extendedProperties;
+            $.extendedProperties = extendedProperties;
             return this;
         }
+
         public Builder friendlyName(@Nullable String friendlyName) {
-            this.friendlyName = friendlyName;
+            $.friendlyName = friendlyName;
             return this;
         }
+
         public Builder healthDetails(@Nullable List<AzureIaaSVMHealthDetailsResponse> healthDetails) {
-            this.healthDetails = healthDetails;
+            $.healthDetails = healthDetails;
             return this;
         }
+
         public Builder healthDetails(AzureIaaSVMHealthDetailsResponse... healthDetails) {
             return healthDetails(List.of(healthDetails));
         }
+
         public Builder healthStatus(@Nullable String healthStatus) {
-            this.healthStatus = healthStatus;
+            $.healthStatus = healthStatus;
             return this;
         }
+
         public Builder isDeferredDeleteScheduleUpcoming(@Nullable Boolean isDeferredDeleteScheduleUpcoming) {
-            this.isDeferredDeleteScheduleUpcoming = isDeferredDeleteScheduleUpcoming;
+            $.isDeferredDeleteScheduleUpcoming = isDeferredDeleteScheduleUpcoming;
             return this;
         }
+
         public Builder isRehydrate(@Nullable Boolean isRehydrate) {
-            this.isRehydrate = isRehydrate;
+            $.isRehydrate = isRehydrate;
             return this;
         }
+
         public Builder isScheduledForDeferredDelete(@Nullable Boolean isScheduledForDeferredDelete) {
-            this.isScheduledForDeferredDelete = isScheduledForDeferredDelete;
+            $.isScheduledForDeferredDelete = isScheduledForDeferredDelete;
             return this;
         }
+
         public Builder kpisHealths(@Nullable Map<String,KPIResourceHealthDetailsResponse> kpisHealths) {
-            this.kpisHealths = kpisHealths;
+            $.kpisHealths = kpisHealths;
             return this;
         }
+
         public Builder lastBackupStatus(@Nullable String lastBackupStatus) {
-            this.lastBackupStatus = lastBackupStatus;
+            $.lastBackupStatus = lastBackupStatus;
             return this;
         }
+
         public Builder lastBackupTime(@Nullable String lastBackupTime) {
-            this.lastBackupTime = lastBackupTime;
+            $.lastBackupTime = lastBackupTime;
             return this;
         }
+
         public Builder lastRecoveryPoint(@Nullable String lastRecoveryPoint) {
-            this.lastRecoveryPoint = lastRecoveryPoint;
+            $.lastRecoveryPoint = lastRecoveryPoint;
             return this;
         }
+
         public Builder policyId(@Nullable String policyId) {
-            this.policyId = policyId;
+            $.policyId = policyId;
             return this;
         }
+
         public Builder protectedItemDataId(@Nullable String protectedItemDataId) {
-            this.protectedItemDataId = protectedItemDataId;
+            $.protectedItemDataId = protectedItemDataId;
             return this;
         }
+
         public Builder protectedItemType(String protectedItemType) {
-            this.protectedItemType = Objects.requireNonNull(protectedItemType);
+            $.protectedItemType = protectedItemType;
             return this;
         }
+
         public Builder protectionState(@Nullable String protectionState) {
-            this.protectionState = protectionState;
+            $.protectionState = protectionState;
             return this;
         }
+
         public Builder protectionStatus(@Nullable String protectionStatus) {
-            this.protectionStatus = protectionStatus;
+            $.protectionStatus = protectionStatus;
             return this;
         }
+
         public Builder sourceResourceId(@Nullable String sourceResourceId) {
-            this.sourceResourceId = sourceResourceId;
+            $.sourceResourceId = sourceResourceId;
             return this;
         }
+
         public Builder virtualMachineId(@Nullable String virtualMachineId) {
-            this.virtualMachineId = virtualMachineId;
+            $.virtualMachineId = virtualMachineId;
             return this;
         }
+
         public Builder workloadType(@Nullable String workloadType) {
-            this.workloadType = workloadType;
+            $.workloadType = workloadType;
             return this;
-        }        public AzureIaaSVMProtectedItemResponse build() {
-            return new AzureIaaSVMProtectedItemResponse(backupManagementType, backupSetName, containerName, createMode, deferredDeleteTimeInUTC, deferredDeleteTimeRemaining, extendedInfo, extendedProperties, friendlyName, healthDetails, healthStatus, isDeferredDeleteScheduleUpcoming, isRehydrate, isScheduledForDeferredDelete, kpisHealths, lastBackupStatus, lastBackupTime, lastRecoveryPoint, policyId, protectedItemDataId, protectedItemType, protectionState, protectionStatus, sourceResourceId, virtualMachineId, workloadType);
+        }
+
+        public AzureIaaSVMProtectedItemResponse build() {
+            $.protectedItemType = Codegen.stringProp("protectedItemType").arg($.protectedItemType).require();
+            return $;
         }
     }
+
 }

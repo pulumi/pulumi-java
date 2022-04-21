@@ -9,6 +9,7 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +26,10 @@ public final class InMageRcmFabricCreationInputArgs extends com.pulumi.resources
      * 
      */
     @Import(name="authCertificate")
-      private final @Nullable Output<String> authCertificate;
+    private @Nullable Output<String> authCertificate;
 
-    public Output<String> authCertificate() {
-        return this.authCertificate == null ? Codegen.empty() : this.authCertificate;
+    public Optional<Output<String>> authCertificate() {
+        return Optional.ofNullable(this.authCertificate);
     }
 
     /**
@@ -37,10 +38,10 @@ public final class InMageRcmFabricCreationInputArgs extends com.pulumi.resources
      * 
      */
     @Import(name="instanceType")
-      private final @Nullable Output<String> instanceType;
+    private @Nullable Output<String> instanceType;
 
-    public Output<String> instanceType() {
-        return this.instanceType == null ? Codegen.empty() : this.instanceType;
+    public Optional<Output<String>> instanceType() {
+        return Optional.ofNullable(this.instanceType);
     }
 
     /**
@@ -48,10 +49,10 @@ public final class InMageRcmFabricCreationInputArgs extends com.pulumi.resources
      * 
      */
     @Import(name="physicalSiteId")
-      private final @Nullable Output<String> physicalSiteId;
+    private @Nullable Output<String> physicalSiteId;
 
-    public Output<String> physicalSiteId() {
-        return this.physicalSiteId == null ? Codegen.empty() : this.physicalSiteId;
+    public Optional<Output<String>> physicalSiteId() {
+        return Optional.ofNullable(this.physicalSiteId);
     }
 
     /**
@@ -59,10 +60,10 @@ public final class InMageRcmFabricCreationInputArgs extends com.pulumi.resources
      * 
      */
     @Import(name="sourceAgentIdentity")
-      private final @Nullable Output<IdentityProviderInputArgs> sourceAgentIdentity;
+    private @Nullable Output<IdentityProviderInputArgs> sourceAgentIdentity;
 
-    public Output<IdentityProviderInputArgs> sourceAgentIdentity() {
-        return this.sourceAgentIdentity == null ? Codegen.empty() : this.sourceAgentIdentity;
+    public Optional<Output<IdentityProviderInputArgs>> sourceAgentIdentity() {
+        return Optional.ofNullable(this.sourceAgentIdentity);
     }
 
     /**
@@ -70,102 +71,89 @@ public final class InMageRcmFabricCreationInputArgs extends com.pulumi.resources
      * 
      */
     @Import(name="vmwareSiteId")
-      private final @Nullable Output<String> vmwareSiteId;
+    private @Nullable Output<String> vmwareSiteId;
 
-    public Output<String> vmwareSiteId() {
-        return this.vmwareSiteId == null ? Codegen.empty() : this.vmwareSiteId;
+    public Optional<Output<String>> vmwareSiteId() {
+        return Optional.ofNullable(this.vmwareSiteId);
     }
 
-    public InMageRcmFabricCreationInputArgs(
-        @Nullable Output<String> authCertificate,
-        @Nullable Output<String> instanceType,
-        @Nullable Output<String> physicalSiteId,
-        @Nullable Output<IdentityProviderInputArgs> sourceAgentIdentity,
-        @Nullable Output<String> vmwareSiteId) {
-        this.authCertificate = authCertificate;
-        this.instanceType = Codegen.stringProp("instanceType").output().arg(instanceType).getNullable();
-        this.physicalSiteId = physicalSiteId;
-        this.sourceAgentIdentity = sourceAgentIdentity;
-        this.vmwareSiteId = vmwareSiteId;
-    }
+    private InMageRcmFabricCreationInputArgs() {}
 
-    private InMageRcmFabricCreationInputArgs() {
-        this.authCertificate = Codegen.empty();
-        this.instanceType = Codegen.empty();
-        this.physicalSiteId = Codegen.empty();
-        this.sourceAgentIdentity = Codegen.empty();
-        this.vmwareSiteId = Codegen.empty();
+    private InMageRcmFabricCreationInputArgs(InMageRcmFabricCreationInputArgs $) {
+        this.authCertificate = $.authCertificate;
+        this.instanceType = $.instanceType;
+        this.physicalSiteId = $.physicalSiteId;
+        this.sourceAgentIdentity = $.sourceAgentIdentity;
+        this.vmwareSiteId = $.vmwareSiteId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(InMageRcmFabricCreationInputArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> authCertificate;
-        private @Nullable Output<String> instanceType;
-        private @Nullable Output<String> physicalSiteId;
-        private @Nullable Output<IdentityProviderInputArgs> sourceAgentIdentity;
-        private @Nullable Output<String> vmwareSiteId;
+        private InMageRcmFabricCreationInputArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new InMageRcmFabricCreationInputArgs();
         }
 
         public Builder(InMageRcmFabricCreationInputArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.authCertificate = defaults.authCertificate;
-    	      this.instanceType = defaults.instanceType;
-    	      this.physicalSiteId = defaults.physicalSiteId;
-    	      this.sourceAgentIdentity = defaults.sourceAgentIdentity;
-    	      this.vmwareSiteId = defaults.vmwareSiteId;
+            $ = new InMageRcmFabricCreationInputArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder authCertificate(@Nullable Output<String> authCertificate) {
-            this.authCertificate = authCertificate;
+            $.authCertificate = authCertificate;
             return this;
         }
-        public Builder authCertificate(@Nullable String authCertificate) {
-            this.authCertificate = Codegen.ofNullable(authCertificate);
-            return this;
+
+        public Builder authCertificate(String authCertificate) {
+            return authCertificate(Output.of(authCertificate));
         }
+
         public Builder instanceType(@Nullable Output<String> instanceType) {
-            this.instanceType = instanceType;
+            $.instanceType = instanceType;
             return this;
         }
-        public Builder instanceType(@Nullable String instanceType) {
-            this.instanceType = Codegen.ofNullable(instanceType);
-            return this;
+
+        public Builder instanceType(String instanceType) {
+            return instanceType(Output.of(instanceType));
         }
+
         public Builder physicalSiteId(@Nullable Output<String> physicalSiteId) {
-            this.physicalSiteId = physicalSiteId;
+            $.physicalSiteId = physicalSiteId;
             return this;
         }
-        public Builder physicalSiteId(@Nullable String physicalSiteId) {
-            this.physicalSiteId = Codegen.ofNullable(physicalSiteId);
-            return this;
+
+        public Builder physicalSiteId(String physicalSiteId) {
+            return physicalSiteId(Output.of(physicalSiteId));
         }
+
         public Builder sourceAgentIdentity(@Nullable Output<IdentityProviderInputArgs> sourceAgentIdentity) {
-            this.sourceAgentIdentity = sourceAgentIdentity;
+            $.sourceAgentIdentity = sourceAgentIdentity;
             return this;
         }
-        public Builder sourceAgentIdentity(@Nullable IdentityProviderInputArgs sourceAgentIdentity) {
-            this.sourceAgentIdentity = Codegen.ofNullable(sourceAgentIdentity);
-            return this;
+
+        public Builder sourceAgentIdentity(IdentityProviderInputArgs sourceAgentIdentity) {
+            return sourceAgentIdentity(Output.of(sourceAgentIdentity));
         }
+
         public Builder vmwareSiteId(@Nullable Output<String> vmwareSiteId) {
-            this.vmwareSiteId = vmwareSiteId;
+            $.vmwareSiteId = vmwareSiteId;
             return this;
         }
-        public Builder vmwareSiteId(@Nullable String vmwareSiteId) {
-            this.vmwareSiteId = Codegen.ofNullable(vmwareSiteId);
-            return this;
-        }        public InMageRcmFabricCreationInputArgs build() {
-            return new InMageRcmFabricCreationInputArgs(authCertificate, instanceType, physicalSiteId, sourceAgentIdentity, vmwareSiteId);
+
+        public Builder vmwareSiteId(String vmwareSiteId) {
+            return vmwareSiteId(Output.of(vmwareSiteId));
+        }
+
+        public InMageRcmFabricCreationInputArgs build() {
+            $.instanceType = Codegen.stringProp("instanceType").output().arg($.instanceType).getNullable();
+            return $;
         }
     }
+
 }

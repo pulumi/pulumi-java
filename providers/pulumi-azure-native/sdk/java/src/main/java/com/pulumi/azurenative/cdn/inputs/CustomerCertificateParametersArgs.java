@@ -11,6 +11,7 @@ import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +28,10 @@ public final class CustomerCertificateParametersArgs extends com.pulumi.resource
      * 
      */
     @Import(name="certificateAuthority")
-      private final @Nullable Output<String> certificateAuthority;
+    private @Nullable Output<String> certificateAuthority;
 
-    public Output<String> certificateAuthority() {
-        return this.certificateAuthority == null ? Codegen.empty() : this.certificateAuthority;
+    public Optional<Output<String>> certificateAuthority() {
+        return Optional.ofNullable(this.certificateAuthority);
     }
 
     /**
@@ -38,7 +39,7 @@ public final class CustomerCertificateParametersArgs extends com.pulumi.resource
      * 
      */
     @Import(name="secretSource", required=true)
-      private final Output<ResourceReferenceArgs> secretSource;
+    private Output<ResourceReferenceArgs> secretSource;
 
     public Output<ResourceReferenceArgs> secretSource() {
         return this.secretSource;
@@ -49,10 +50,10 @@ public final class CustomerCertificateParametersArgs extends com.pulumi.resource
      * 
      */
     @Import(name="secretVersion")
-      private final @Nullable Output<String> secretVersion;
+    private @Nullable Output<String> secretVersion;
 
-    public Output<String> secretVersion() {
-        return this.secretVersion == null ? Codegen.empty() : this.secretVersion;
+    public Optional<Output<String>> secretVersion() {
+        return Optional.ofNullable(this.secretVersion);
     }
 
     /**
@@ -60,10 +61,10 @@ public final class CustomerCertificateParametersArgs extends com.pulumi.resource
      * 
      */
     @Import(name="subjectAlternativeNames")
-      private final @Nullable Output<List<String>> subjectAlternativeNames;
+    private @Nullable Output<List<String>> subjectAlternativeNames;
 
-    public Output<List<String>> subjectAlternativeNames() {
-        return this.subjectAlternativeNames == null ? Codegen.empty() : this.subjectAlternativeNames;
+    public Optional<Output<List<String>>> subjectAlternativeNames() {
+        return Optional.ofNullable(this.subjectAlternativeNames);
     }
 
     /**
@@ -72,7 +73,7 @@ public final class CustomerCertificateParametersArgs extends com.pulumi.resource
      * 
      */
     @Import(name="type", required=true)
-      private final Output<String> type;
+    private Output<String> type;
 
     public Output<String> type() {
         return this.type;
@@ -83,118 +84,104 @@ public final class CustomerCertificateParametersArgs extends com.pulumi.resource
      * 
      */
     @Import(name="useLatestVersion")
-      private final @Nullable Output<Boolean> useLatestVersion;
+    private @Nullable Output<Boolean> useLatestVersion;
 
-    public Output<Boolean> useLatestVersion() {
-        return this.useLatestVersion == null ? Codegen.empty() : this.useLatestVersion;
+    public Optional<Output<Boolean>> useLatestVersion() {
+        return Optional.ofNullable(this.useLatestVersion);
     }
 
-    public CustomerCertificateParametersArgs(
-        @Nullable Output<String> certificateAuthority,
-        Output<ResourceReferenceArgs> secretSource,
-        @Nullable Output<String> secretVersion,
-        @Nullable Output<List<String>> subjectAlternativeNames,
-        Output<String> type,
-        @Nullable Output<Boolean> useLatestVersion) {
-        this.certificateAuthority = certificateAuthority;
-        this.secretSource = Objects.requireNonNull(secretSource, "expected parameter 'secretSource' to be non-null");
-        this.secretVersion = secretVersion;
-        this.subjectAlternativeNames = subjectAlternativeNames;
-        this.type = Codegen.stringProp("type").output().arg(type).require();
-        this.useLatestVersion = useLatestVersion;
-    }
+    private CustomerCertificateParametersArgs() {}
 
-    private CustomerCertificateParametersArgs() {
-        this.certificateAuthority = Codegen.empty();
-        this.secretSource = Codegen.empty();
-        this.secretVersion = Codegen.empty();
-        this.subjectAlternativeNames = Codegen.empty();
-        this.type = Codegen.empty();
-        this.useLatestVersion = Codegen.empty();
+    private CustomerCertificateParametersArgs(CustomerCertificateParametersArgs $) {
+        this.certificateAuthority = $.certificateAuthority;
+        this.secretSource = $.secretSource;
+        this.secretVersion = $.secretVersion;
+        this.subjectAlternativeNames = $.subjectAlternativeNames;
+        this.type = $.type;
+        this.useLatestVersion = $.useLatestVersion;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CustomerCertificateParametersArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> certificateAuthority;
-        private Output<ResourceReferenceArgs> secretSource;
-        private @Nullable Output<String> secretVersion;
-        private @Nullable Output<List<String>> subjectAlternativeNames;
-        private Output<String> type;
-        private @Nullable Output<Boolean> useLatestVersion;
+        private CustomerCertificateParametersArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CustomerCertificateParametersArgs();
         }
 
         public Builder(CustomerCertificateParametersArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.certificateAuthority = defaults.certificateAuthority;
-    	      this.secretSource = defaults.secretSource;
-    	      this.secretVersion = defaults.secretVersion;
-    	      this.subjectAlternativeNames = defaults.subjectAlternativeNames;
-    	      this.type = defaults.type;
-    	      this.useLatestVersion = defaults.useLatestVersion;
+            $ = new CustomerCertificateParametersArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder certificateAuthority(@Nullable Output<String> certificateAuthority) {
-            this.certificateAuthority = certificateAuthority;
+            $.certificateAuthority = certificateAuthority;
             return this;
         }
-        public Builder certificateAuthority(@Nullable String certificateAuthority) {
-            this.certificateAuthority = Codegen.ofNullable(certificateAuthority);
-            return this;
+
+        public Builder certificateAuthority(String certificateAuthority) {
+            return certificateAuthority(Output.of(certificateAuthority));
         }
+
         public Builder secretSource(Output<ResourceReferenceArgs> secretSource) {
-            this.secretSource = Objects.requireNonNull(secretSource);
+            $.secretSource = secretSource;
             return this;
         }
+
         public Builder secretSource(ResourceReferenceArgs secretSource) {
-            this.secretSource = Output.of(Objects.requireNonNull(secretSource));
-            return this;
+            return secretSource(Output.of(secretSource));
         }
+
         public Builder secretVersion(@Nullable Output<String> secretVersion) {
-            this.secretVersion = secretVersion;
+            $.secretVersion = secretVersion;
             return this;
         }
-        public Builder secretVersion(@Nullable String secretVersion) {
-            this.secretVersion = Codegen.ofNullable(secretVersion);
-            return this;
+
+        public Builder secretVersion(String secretVersion) {
+            return secretVersion(Output.of(secretVersion));
         }
+
         public Builder subjectAlternativeNames(@Nullable Output<List<String>> subjectAlternativeNames) {
-            this.subjectAlternativeNames = subjectAlternativeNames;
+            $.subjectAlternativeNames = subjectAlternativeNames;
             return this;
         }
-        public Builder subjectAlternativeNames(@Nullable List<String> subjectAlternativeNames) {
-            this.subjectAlternativeNames = Codegen.ofNullable(subjectAlternativeNames);
-            return this;
+
+        public Builder subjectAlternativeNames(List<String> subjectAlternativeNames) {
+            return subjectAlternativeNames(Output.of(subjectAlternativeNames));
         }
+
         public Builder subjectAlternativeNames(String... subjectAlternativeNames) {
             return subjectAlternativeNames(List.of(subjectAlternativeNames));
         }
+
         public Builder type(Output<String> type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Output.of(Objects.requireNonNull(type));
-            return this;
+            return type(Output.of(type));
         }
+
         public Builder useLatestVersion(@Nullable Output<Boolean> useLatestVersion) {
-            this.useLatestVersion = useLatestVersion;
+            $.useLatestVersion = useLatestVersion;
             return this;
         }
-        public Builder useLatestVersion(@Nullable Boolean useLatestVersion) {
-            this.useLatestVersion = Codegen.ofNullable(useLatestVersion);
-            return this;
-        }        public CustomerCertificateParametersArgs build() {
-            return new CustomerCertificateParametersArgs(certificateAuthority, secretSource, secretVersion, subjectAlternativeNames, type, useLatestVersion);
+
+        public Builder useLatestVersion(Boolean useLatestVersion) {
+            return useLatestVersion(Output.of(useLatestVersion));
+        }
+
+        public CustomerCertificateParametersArgs build() {
+            $.secretSource = Objects.requireNonNull($.secretSource, "expected parameter 'secretSource' to be non-null");
+            $.type = Codegen.stringProp("type").output().arg($.type).require();
+            return $;
         }
     }
+
 }

@@ -17,7 +17,7 @@ public final class GetManagementLockByScopeArgs extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="lockName", required=true)
-      private final String lockName;
+    private String lockName;
 
     public String lockName() {
         return this.lockName;
@@ -28,55 +28,52 @@ public final class GetManagementLockByScopeArgs extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="scope", required=true)
-      private final String scope;
+    private String scope;
 
     public String scope() {
         return this.scope;
     }
 
-    public GetManagementLockByScopeArgs(
-        String lockName,
-        String scope) {
-        this.lockName = Objects.requireNonNull(lockName, "expected parameter 'lockName' to be non-null");
-        this.scope = Objects.requireNonNull(scope, "expected parameter 'scope' to be non-null");
-    }
+    private GetManagementLockByScopeArgs() {}
 
-    private GetManagementLockByScopeArgs() {
-        this.lockName = null;
-        this.scope = null;
+    private GetManagementLockByScopeArgs(GetManagementLockByScopeArgs $) {
+        this.lockName = $.lockName;
+        this.scope = $.scope;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetManagementLockByScopeArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String lockName;
-        private String scope;
+        private GetManagementLockByScopeArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetManagementLockByScopeArgs();
         }
 
         public Builder(GetManagementLockByScopeArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.lockName = defaults.lockName;
-    	      this.scope = defaults.scope;
+            $ = new GetManagementLockByScopeArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder lockName(String lockName) {
-            this.lockName = Objects.requireNonNull(lockName);
+            $.lockName = lockName;
             return this;
         }
+
         public Builder scope(String scope) {
-            this.scope = Objects.requireNonNull(scope);
+            $.scope = scope;
             return this;
-        }        public GetManagementLockByScopeArgs build() {
-            return new GetManagementLockByScopeArgs(lockName, scope);
+        }
+
+        public GetManagementLockByScopeArgs build() {
+            $.lockName = Objects.requireNonNull($.lockName, "expected parameter 'lockName' to be non-null");
+            $.scope = Objects.requireNonNull($.scope, "expected parameter 'scope' to be non-null");
+            return $;
         }
     }
+
 }

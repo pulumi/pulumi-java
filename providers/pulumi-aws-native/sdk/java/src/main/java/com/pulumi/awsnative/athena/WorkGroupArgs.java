@@ -9,11 +9,11 @@ import com.pulumi.awsnative.athena.inputs.WorkGroupConfigurationUpdatesArgs;
 import com.pulumi.awsnative.athena.inputs.WorkGroupTagArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class WorkGroupArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class WorkGroupArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -48,10 +48,10 @@ public final class WorkGroupArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="recursiveDeleteOption")
-      private final @Nullable Output<Boolean> recursiveDeleteOption;
+    private @Nullable Output<Boolean> recursiveDeleteOption;
 
-    public Output<Boolean> recursiveDeleteOption() {
-        return this.recursiveDeleteOption == null ? Codegen.empty() : this.recursiveDeleteOption;
+    public Optional<Output<Boolean>> recursiveDeleteOption() {
+        return Optional.ofNullable(this.recursiveDeleteOption);
     }
 
     /**
@@ -59,10 +59,10 @@ public final class WorkGroupArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="state")
-      private final @Nullable Output<WorkGroupState> state;
+    private @Nullable Output<WorkGroupState> state;
 
-    public Output<WorkGroupState> state() {
-        return this.state == null ? Codegen.empty() : this.state;
+    public Optional<Output<WorkGroupState>> state() {
+        return Optional.ofNullable(this.state);
     }
 
     /**
@@ -70,10 +70,10 @@ public final class WorkGroupArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<List<WorkGroupTagArgs>> tags;
+    private @Nullable Output<List<WorkGroupTagArgs>> tags;
 
-    public Output<List<WorkGroupTagArgs>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<List<WorkGroupTagArgs>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -81,10 +81,10 @@ public final class WorkGroupArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="workGroupConfiguration")
-      private final @Nullable Output<WorkGroupConfigurationArgs> workGroupConfiguration;
+    private @Nullable Output<WorkGroupConfigurationArgs> workGroupConfiguration;
 
-    public Output<WorkGroupConfigurationArgs> workGroupConfiguration() {
-        return this.workGroupConfiguration == null ? Codegen.empty() : this.workGroupConfiguration;
+    public Optional<Output<WorkGroupConfigurationArgs>> workGroupConfiguration() {
+        return Optional.ofNullable(this.workGroupConfiguration);
     }
 
     /**
@@ -92,131 +92,112 @@ public final class WorkGroupArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="workGroupConfigurationUpdates")
-      private final @Nullable Output<WorkGroupConfigurationUpdatesArgs> workGroupConfigurationUpdates;
+    private @Nullable Output<WorkGroupConfigurationUpdatesArgs> workGroupConfigurationUpdates;
 
-    public Output<WorkGroupConfigurationUpdatesArgs> workGroupConfigurationUpdates() {
-        return this.workGroupConfigurationUpdates == null ? Codegen.empty() : this.workGroupConfigurationUpdates;
+    public Optional<Output<WorkGroupConfigurationUpdatesArgs>> workGroupConfigurationUpdates() {
+        return Optional.ofNullable(this.workGroupConfigurationUpdates);
     }
 
-    public WorkGroupArgs(
-        @Nullable Output<String> description,
-        @Nullable Output<String> name,
-        @Nullable Output<Boolean> recursiveDeleteOption,
-        @Nullable Output<WorkGroupState> state,
-        @Nullable Output<List<WorkGroupTagArgs>> tags,
-        @Nullable Output<WorkGroupConfigurationArgs> workGroupConfiguration,
-        @Nullable Output<WorkGroupConfigurationUpdatesArgs> workGroupConfigurationUpdates) {
-        this.description = description;
-        this.name = name;
-        this.recursiveDeleteOption = recursiveDeleteOption;
-        this.state = state;
-        this.tags = tags;
-        this.workGroupConfiguration = workGroupConfiguration;
-        this.workGroupConfigurationUpdates = workGroupConfigurationUpdates;
-    }
+    private WorkGroupArgs() {}
 
-    private WorkGroupArgs() {
-        this.description = Codegen.empty();
-        this.name = Codegen.empty();
-        this.recursiveDeleteOption = Codegen.empty();
-        this.state = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.workGroupConfiguration = Codegen.empty();
-        this.workGroupConfigurationUpdates = Codegen.empty();
+    private WorkGroupArgs(WorkGroupArgs $) {
+        this.description = $.description;
+        this.name = $.name;
+        this.recursiveDeleteOption = $.recursiveDeleteOption;
+        this.state = $.state;
+        this.tags = $.tags;
+        this.workGroupConfiguration = $.workGroupConfiguration;
+        this.workGroupConfigurationUpdates = $.workGroupConfigurationUpdates;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WorkGroupArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> description;
-        private @Nullable Output<String> name;
-        private @Nullable Output<Boolean> recursiveDeleteOption;
-        private @Nullable Output<WorkGroupState> state;
-        private @Nullable Output<List<WorkGroupTagArgs>> tags;
-        private @Nullable Output<WorkGroupConfigurationArgs> workGroupConfiguration;
-        private @Nullable Output<WorkGroupConfigurationUpdatesArgs> workGroupConfigurationUpdates;
+        private WorkGroupArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new WorkGroupArgs();
         }
 
         public Builder(WorkGroupArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.description = defaults.description;
-    	      this.name = defaults.name;
-    	      this.recursiveDeleteOption = defaults.recursiveDeleteOption;
-    	      this.state = defaults.state;
-    	      this.tags = defaults.tags;
-    	      this.workGroupConfiguration = defaults.workGroupConfiguration;
-    	      this.workGroupConfigurationUpdates = defaults.workGroupConfigurationUpdates;
+            $ = new WorkGroupArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder recursiveDeleteOption(@Nullable Output<Boolean> recursiveDeleteOption) {
-            this.recursiveDeleteOption = recursiveDeleteOption;
+            $.recursiveDeleteOption = recursiveDeleteOption;
             return this;
         }
-        public Builder recursiveDeleteOption(@Nullable Boolean recursiveDeleteOption) {
-            this.recursiveDeleteOption = Codegen.ofNullable(recursiveDeleteOption);
-            return this;
+
+        public Builder recursiveDeleteOption(Boolean recursiveDeleteOption) {
+            return recursiveDeleteOption(Output.of(recursiveDeleteOption));
         }
+
         public Builder state(@Nullable Output<WorkGroupState> state) {
-            this.state = state;
+            $.state = state;
             return this;
         }
-        public Builder state(@Nullable WorkGroupState state) {
-            this.state = Codegen.ofNullable(state);
-            return this;
+
+        public Builder state(WorkGroupState state) {
+            return state(Output.of(state));
         }
+
         public Builder tags(@Nullable Output<List<WorkGroupTagArgs>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable List<WorkGroupTagArgs> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(List<WorkGroupTagArgs> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tags(WorkGroupTagArgs... tags) {
             return tags(List.of(tags));
         }
+
         public Builder workGroupConfiguration(@Nullable Output<WorkGroupConfigurationArgs> workGroupConfiguration) {
-            this.workGroupConfiguration = workGroupConfiguration;
+            $.workGroupConfiguration = workGroupConfiguration;
             return this;
         }
-        public Builder workGroupConfiguration(@Nullable WorkGroupConfigurationArgs workGroupConfiguration) {
-            this.workGroupConfiguration = Codegen.ofNullable(workGroupConfiguration);
-            return this;
+
+        public Builder workGroupConfiguration(WorkGroupConfigurationArgs workGroupConfiguration) {
+            return workGroupConfiguration(Output.of(workGroupConfiguration));
         }
+
         public Builder workGroupConfigurationUpdates(@Nullable Output<WorkGroupConfigurationUpdatesArgs> workGroupConfigurationUpdates) {
-            this.workGroupConfigurationUpdates = workGroupConfigurationUpdates;
+            $.workGroupConfigurationUpdates = workGroupConfigurationUpdates;
             return this;
         }
-        public Builder workGroupConfigurationUpdates(@Nullable WorkGroupConfigurationUpdatesArgs workGroupConfigurationUpdates) {
-            this.workGroupConfigurationUpdates = Codegen.ofNullable(workGroupConfigurationUpdates);
-            return this;
-        }        public WorkGroupArgs build() {
-            return new WorkGroupArgs(description, name, recursiveDeleteOption, state, tags, workGroupConfiguration, workGroupConfigurationUpdates);
+
+        public Builder workGroupConfigurationUpdates(WorkGroupConfigurationUpdatesArgs workGroupConfigurationUpdates) {
+            return workGroupConfigurationUpdates(Output.of(workGroupConfigurationUpdates));
+        }
+
+        public WorkGroupArgs build() {
+            return $;
         }
     }
+
 }

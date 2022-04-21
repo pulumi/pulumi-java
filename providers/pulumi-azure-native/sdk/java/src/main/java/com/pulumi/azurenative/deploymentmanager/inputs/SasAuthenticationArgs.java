@@ -23,7 +23,7 @@ public final class SasAuthenticationArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="sasUri", required=true)
-      private final Output<String> sasUri;
+    private Output<String> sasUri;
 
     public Output<String> sasUri() {
         return this.sasUri;
@@ -35,63 +35,60 @@ public final class SasAuthenticationArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="type", required=true)
-      private final Output<String> type;
+    private Output<String> type;
 
     public Output<String> type() {
         return this.type;
     }
 
-    public SasAuthenticationArgs(
-        Output<String> sasUri,
-        Output<String> type) {
-        this.sasUri = Objects.requireNonNull(sasUri, "expected parameter 'sasUri' to be non-null");
-        this.type = Codegen.stringProp("type").output().arg(type).require();
-    }
+    private SasAuthenticationArgs() {}
 
-    private SasAuthenticationArgs() {
-        this.sasUri = Codegen.empty();
-        this.type = Codegen.empty();
+    private SasAuthenticationArgs(SasAuthenticationArgs $) {
+        this.sasUri = $.sasUri;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SasAuthenticationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> sasUri;
-        private Output<String> type;
+        private SasAuthenticationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SasAuthenticationArgs();
         }
 
         public Builder(SasAuthenticationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.sasUri = defaults.sasUri;
-    	      this.type = defaults.type;
+            $ = new SasAuthenticationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder sasUri(Output<String> sasUri) {
-            this.sasUri = Objects.requireNonNull(sasUri);
+            $.sasUri = sasUri;
             return this;
         }
+
         public Builder sasUri(String sasUri) {
-            this.sasUri = Output.of(Objects.requireNonNull(sasUri));
-            return this;
+            return sasUri(Output.of(sasUri));
         }
+
         public Builder type(Output<String> type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Output.of(Objects.requireNonNull(type));
-            return this;
-        }        public SasAuthenticationArgs build() {
-            return new SasAuthenticationArgs(sasUri, type);
+            return type(Output.of(type));
+        }
+
+        public SasAuthenticationArgs build() {
+            $.sasUri = Objects.requireNonNull($.sasUri, "expected parameter 'sasUri' to be non-null");
+            $.type = Codegen.stringProp("type").output().arg($.type).require();
+            return $;
         }
     }
+
 }

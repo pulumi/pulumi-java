@@ -6,7 +6,6 @@ package com.pulumi.aws.kinesisanalyticsv2.inputs;
 import com.pulumi.aws.kinesisanalyticsv2.inputs.ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputProcessingConfigurationInputLambdaProcessorArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
 
 
@@ -19,49 +18,49 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
      * 
      */
     @Import(name="inputLambdaProcessor", required=true)
-      private final Output<ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputProcessingConfigurationInputLambdaProcessorArgs> inputLambdaProcessor;
+    private Output<ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputProcessingConfigurationInputLambdaProcessorArgs> inputLambdaProcessor;
 
     public Output<ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputProcessingConfigurationInputLambdaProcessorArgs> inputLambdaProcessor() {
         return this.inputLambdaProcessor;
     }
 
-    public ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputProcessingConfigurationArgs(Output<ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputProcessingConfigurationInputLambdaProcessorArgs> inputLambdaProcessor) {
-        this.inputLambdaProcessor = Objects.requireNonNull(inputLambdaProcessor, "expected parameter 'inputLambdaProcessor' to be non-null");
-    }
+    private ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputProcessingConfigurationArgs() {}
 
-    private ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputProcessingConfigurationArgs() {
-        this.inputLambdaProcessor = Codegen.empty();
+    private ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputProcessingConfigurationArgs(ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputProcessingConfigurationArgs $) {
+        this.inputLambdaProcessor = $.inputLambdaProcessor;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputProcessingConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputProcessingConfigurationInputLambdaProcessorArgs> inputLambdaProcessor;
+        private ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputProcessingConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputProcessingConfigurationArgs();
         }
 
         public Builder(ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputProcessingConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.inputLambdaProcessor = defaults.inputLambdaProcessor;
+            $ = new ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputProcessingConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder inputLambdaProcessor(Output<ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputProcessingConfigurationInputLambdaProcessorArgs> inputLambdaProcessor) {
-            this.inputLambdaProcessor = Objects.requireNonNull(inputLambdaProcessor);
+            $.inputLambdaProcessor = inputLambdaProcessor;
             return this;
         }
+
         public Builder inputLambdaProcessor(ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputProcessingConfigurationInputLambdaProcessorArgs inputLambdaProcessor) {
-            this.inputLambdaProcessor = Output.of(Objects.requireNonNull(inputLambdaProcessor));
-            return this;
-        }        public ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputProcessingConfigurationArgs build() {
-            return new ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputProcessingConfigurationArgs(inputLambdaProcessor);
+            return inputLambdaProcessor(Output.of(inputLambdaProcessor));
+        }
+
+        public ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputProcessingConfigurationArgs build() {
+            $.inputLambdaProcessor = Objects.requireNonNull($.inputLambdaProcessor, "expected parameter 'inputLambdaProcessor' to be non-null");
+            return $;
         }
     }
+
 }

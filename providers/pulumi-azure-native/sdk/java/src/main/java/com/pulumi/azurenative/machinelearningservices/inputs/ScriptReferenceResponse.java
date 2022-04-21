@@ -23,10 +23,10 @@ public final class ScriptReferenceResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="scriptArguments")
-      private final @Nullable String scriptArguments;
+    private @Nullable String scriptArguments;
 
     public Optional<String> scriptArguments() {
-        return this.scriptArguments == null ? Optional.empty() : Optional.ofNullable(this.scriptArguments);
+        return Optional.ofNullable(this.scriptArguments);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class ScriptReferenceResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="scriptData")
-      private final @Nullable String scriptData;
+    private @Nullable String scriptData;
 
     public Optional<String> scriptData() {
-        return this.scriptData == null ? Optional.empty() : Optional.ofNullable(this.scriptData);
+        return Optional.ofNullable(this.scriptData);
     }
 
     /**
@@ -45,10 +45,10 @@ public final class ScriptReferenceResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="scriptSource")
-      private final @Nullable String scriptSource;
+    private @Nullable String scriptSource;
 
     public Optional<String> scriptSource() {
-        return this.scriptSource == null ? Optional.empty() : Optional.ofNullable(this.scriptSource);
+        return Optional.ofNullable(this.scriptSource);
     }
 
     /**
@@ -56,73 +56,62 @@ public final class ScriptReferenceResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="timeout")
-      private final @Nullable String timeout;
+    private @Nullable String timeout;
 
     public Optional<String> timeout() {
-        return this.timeout == null ? Optional.empty() : Optional.ofNullable(this.timeout);
+        return Optional.ofNullable(this.timeout);
     }
 
-    public ScriptReferenceResponse(
-        @Nullable String scriptArguments,
-        @Nullable String scriptData,
-        @Nullable String scriptSource,
-        @Nullable String timeout) {
-        this.scriptArguments = scriptArguments;
-        this.scriptData = scriptData;
-        this.scriptSource = scriptSource;
-        this.timeout = timeout;
-    }
+    private ScriptReferenceResponse() {}
 
-    private ScriptReferenceResponse() {
-        this.scriptArguments = null;
-        this.scriptData = null;
-        this.scriptSource = null;
-        this.timeout = null;
+    private ScriptReferenceResponse(ScriptReferenceResponse $) {
+        this.scriptArguments = $.scriptArguments;
+        this.scriptData = $.scriptData;
+        this.scriptSource = $.scriptSource;
+        this.timeout = $.timeout;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ScriptReferenceResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String scriptArguments;
-        private @Nullable String scriptData;
-        private @Nullable String scriptSource;
-        private @Nullable String timeout;
+        private ScriptReferenceResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ScriptReferenceResponse();
         }
 
         public Builder(ScriptReferenceResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.scriptArguments = defaults.scriptArguments;
-    	      this.scriptData = defaults.scriptData;
-    	      this.scriptSource = defaults.scriptSource;
-    	      this.timeout = defaults.timeout;
+            $ = new ScriptReferenceResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder scriptArguments(@Nullable String scriptArguments) {
-            this.scriptArguments = scriptArguments;
+            $.scriptArguments = scriptArguments;
             return this;
         }
+
         public Builder scriptData(@Nullable String scriptData) {
-            this.scriptData = scriptData;
+            $.scriptData = scriptData;
             return this;
         }
+
         public Builder scriptSource(@Nullable String scriptSource) {
-            this.scriptSource = scriptSource;
+            $.scriptSource = scriptSource;
             return this;
         }
+
         public Builder timeout(@Nullable String timeout) {
-            this.timeout = timeout;
+            $.timeout = timeout;
             return this;
-        }        public ScriptReferenceResponse build() {
-            return new ScriptReferenceResponse(scriptArguments, scriptData, scriptSource, timeout);
+        }
+
+        public ScriptReferenceResponse build() {
+            return $;
         }
     }
+
 }

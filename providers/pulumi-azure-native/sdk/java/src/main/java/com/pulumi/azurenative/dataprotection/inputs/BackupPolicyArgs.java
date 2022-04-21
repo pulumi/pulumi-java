@@ -27,7 +27,7 @@ public final class BackupPolicyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="datasourceTypes", required=true)
-      private final Output<List<String>> datasourceTypes;
+    private Output<List<String>> datasourceTypes;
 
     public Output<List<String>> datasourceTypes() {
         return this.datasourceTypes;
@@ -38,7 +38,7 @@ public final class BackupPolicyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="objectType", required=true)
-      private final Output<String> objectType;
+    private Output<String> objectType;
 
     public Output<String> objectType() {
         return this.objectType;
@@ -49,82 +49,79 @@ public final class BackupPolicyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="policyRules", required=true)
-      private final Output<List<Either<AzureBackupRuleArgs,AzureRetentionRuleArgs>>> policyRules;
+    private Output<List<Either<AzureBackupRuleArgs,AzureRetentionRuleArgs>>> policyRules;
 
     public Output<List<Either<AzureBackupRuleArgs,AzureRetentionRuleArgs>>> policyRules() {
         return this.policyRules;
     }
 
-    public BackupPolicyArgs(
-        Output<List<String>> datasourceTypes,
-        Output<String> objectType,
-        Output<List<Either<AzureBackupRuleArgs,AzureRetentionRuleArgs>>> policyRules) {
-        this.datasourceTypes = Objects.requireNonNull(datasourceTypes, "expected parameter 'datasourceTypes' to be non-null");
-        this.objectType = Codegen.stringProp("objectType").output().arg(objectType).require();
-        this.policyRules = Objects.requireNonNull(policyRules, "expected parameter 'policyRules' to be non-null");
-    }
+    private BackupPolicyArgs() {}
 
-    private BackupPolicyArgs() {
-        this.datasourceTypes = Codegen.empty();
-        this.objectType = Codegen.empty();
-        this.policyRules = Codegen.empty();
+    private BackupPolicyArgs(BackupPolicyArgs $) {
+        this.datasourceTypes = $.datasourceTypes;
+        this.objectType = $.objectType;
+        this.policyRules = $.policyRules;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BackupPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<List<String>> datasourceTypes;
-        private Output<String> objectType;
-        private Output<List<Either<AzureBackupRuleArgs,AzureRetentionRuleArgs>>> policyRules;
+        private BackupPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new BackupPolicyArgs();
         }
 
         public Builder(BackupPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.datasourceTypes = defaults.datasourceTypes;
-    	      this.objectType = defaults.objectType;
-    	      this.policyRules = defaults.policyRules;
+            $ = new BackupPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder datasourceTypes(Output<List<String>> datasourceTypes) {
-            this.datasourceTypes = Objects.requireNonNull(datasourceTypes);
+            $.datasourceTypes = datasourceTypes;
             return this;
         }
+
         public Builder datasourceTypes(List<String> datasourceTypes) {
-            this.datasourceTypes = Output.of(Objects.requireNonNull(datasourceTypes));
-            return this;
+            return datasourceTypes(Output.of(datasourceTypes));
         }
+
         public Builder datasourceTypes(String... datasourceTypes) {
             return datasourceTypes(List.of(datasourceTypes));
         }
+
         public Builder objectType(Output<String> objectType) {
-            this.objectType = Objects.requireNonNull(objectType);
+            $.objectType = objectType;
             return this;
         }
+
         public Builder objectType(String objectType) {
-            this.objectType = Output.of(Objects.requireNonNull(objectType));
-            return this;
+            return objectType(Output.of(objectType));
         }
+
         public Builder policyRules(Output<List<Either<AzureBackupRuleArgs,AzureRetentionRuleArgs>>> policyRules) {
-            this.policyRules = Objects.requireNonNull(policyRules);
+            $.policyRules = policyRules;
             return this;
         }
+
         public Builder policyRules(List<Either<AzureBackupRuleArgs,AzureRetentionRuleArgs>> policyRules) {
-            this.policyRules = Output.of(Objects.requireNonNull(policyRules));
-            return this;
+            return policyRules(Output.of(policyRules));
         }
+
         public Builder policyRules(Either<AzureBackupRuleArgs,AzureRetentionRuleArgs>... policyRules) {
             return policyRules(List.of(policyRules));
-        }        public BackupPolicyArgs build() {
-            return new BackupPolicyArgs(datasourceTypes, objectType, policyRules);
+        }
+
+        public BackupPolicyArgs build() {
+            $.datasourceTypes = Objects.requireNonNull($.datasourceTypes, "expected parameter 'datasourceTypes' to be non-null");
+            $.objectType = Codegen.stringProp("objectType").output().arg($.objectType).require();
+            $.policyRules = Objects.requireNonNull($.policyRules, "expected parameter 'policyRules' to be non-null");
+            return $;
         }
     }
+
 }

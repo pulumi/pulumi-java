@@ -23,45 +23,44 @@ public final class ApplicationBillingDetailsDefinitionResponse extends com.pulum
      * 
      */
     @Import(name="resourceUsageId")
-      private final @Nullable String resourceUsageId;
+    private @Nullable String resourceUsageId;
 
     public Optional<String> resourceUsageId() {
-        return this.resourceUsageId == null ? Optional.empty() : Optional.ofNullable(this.resourceUsageId);
+        return Optional.ofNullable(this.resourceUsageId);
     }
 
-    public ApplicationBillingDetailsDefinitionResponse(@Nullable String resourceUsageId) {
-        this.resourceUsageId = resourceUsageId;
-    }
+    private ApplicationBillingDetailsDefinitionResponse() {}
 
-    private ApplicationBillingDetailsDefinitionResponse() {
-        this.resourceUsageId = null;
+    private ApplicationBillingDetailsDefinitionResponse(ApplicationBillingDetailsDefinitionResponse $) {
+        this.resourceUsageId = $.resourceUsageId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ApplicationBillingDetailsDefinitionResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String resourceUsageId;
+        private ApplicationBillingDetailsDefinitionResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ApplicationBillingDetailsDefinitionResponse();
         }
 
         public Builder(ApplicationBillingDetailsDefinitionResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.resourceUsageId = defaults.resourceUsageId;
+            $ = new ApplicationBillingDetailsDefinitionResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder resourceUsageId(@Nullable String resourceUsageId) {
-            this.resourceUsageId = resourceUsageId;
+            $.resourceUsageId = resourceUsageId;
             return this;
-        }        public ApplicationBillingDetailsDefinitionResponse build() {
-            return new ApplicationBillingDetailsDefinitionResponse(resourceUsageId);
+        }
+
+        public ApplicationBillingDetailsDefinitionResponse build() {
+            return $;
         }
     }
+
 }

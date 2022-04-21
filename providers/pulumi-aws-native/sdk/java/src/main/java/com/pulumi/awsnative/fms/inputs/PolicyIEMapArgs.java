@@ -5,10 +5,10 @@ package com.pulumi.awsnative.fms.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,76 +21,73 @@ public final class PolicyIEMapArgs extends com.pulumi.resources.ResourceArgs {
     public static final PolicyIEMapArgs Empty = new PolicyIEMapArgs();
 
     @Import(name="aCCOUNT")
-      private final @Nullable Output<List<String>> aCCOUNT;
+    private @Nullable Output<List<String>> aCCOUNT;
 
-    public Output<List<String>> aCCOUNT() {
-        return this.aCCOUNT == null ? Codegen.empty() : this.aCCOUNT;
+    public Optional<Output<List<String>>> aCCOUNT() {
+        return Optional.ofNullable(this.aCCOUNT);
     }
 
     @Import(name="oRGUNIT")
-      private final @Nullable Output<List<String>> oRGUNIT;
+    private @Nullable Output<List<String>> oRGUNIT;
 
-    public Output<List<String>> oRGUNIT() {
-        return this.oRGUNIT == null ? Codegen.empty() : this.oRGUNIT;
+    public Optional<Output<List<String>>> oRGUNIT() {
+        return Optional.ofNullable(this.oRGUNIT);
     }
 
-    public PolicyIEMapArgs(
-        @Nullable Output<List<String>> aCCOUNT,
-        @Nullable Output<List<String>> oRGUNIT) {
-        this.aCCOUNT = aCCOUNT;
-        this.oRGUNIT = oRGUNIT;
-    }
+    private PolicyIEMapArgs() {}
 
-    private PolicyIEMapArgs() {
-        this.aCCOUNT = Codegen.empty();
-        this.oRGUNIT = Codegen.empty();
+    private PolicyIEMapArgs(PolicyIEMapArgs $) {
+        this.aCCOUNT = $.aCCOUNT;
+        this.oRGUNIT = $.oRGUNIT;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PolicyIEMapArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> aCCOUNT;
-        private @Nullable Output<List<String>> oRGUNIT;
+        private PolicyIEMapArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PolicyIEMapArgs();
         }
 
         public Builder(PolicyIEMapArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.aCCOUNT = defaults.aCCOUNT;
-    	      this.oRGUNIT = defaults.oRGUNIT;
+            $ = new PolicyIEMapArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder aCCOUNT(@Nullable Output<List<String>> aCCOUNT) {
-            this.aCCOUNT = aCCOUNT;
+            $.aCCOUNT = aCCOUNT;
             return this;
         }
-        public Builder aCCOUNT(@Nullable List<String> aCCOUNT) {
-            this.aCCOUNT = Codegen.ofNullable(aCCOUNT);
-            return this;
+
+        public Builder aCCOUNT(List<String> aCCOUNT) {
+            return aCCOUNT(Output.of(aCCOUNT));
         }
+
         public Builder aCCOUNT(String... aCCOUNT) {
             return aCCOUNT(List.of(aCCOUNT));
         }
+
         public Builder oRGUNIT(@Nullable Output<List<String>> oRGUNIT) {
-            this.oRGUNIT = oRGUNIT;
+            $.oRGUNIT = oRGUNIT;
             return this;
         }
-        public Builder oRGUNIT(@Nullable List<String> oRGUNIT) {
-            this.oRGUNIT = Codegen.ofNullable(oRGUNIT);
-            return this;
+
+        public Builder oRGUNIT(List<String> oRGUNIT) {
+            return oRGUNIT(Output.of(oRGUNIT));
         }
+
         public Builder oRGUNIT(String... oRGUNIT) {
             return oRGUNIT(List.of(oRGUNIT));
-        }        public PolicyIEMapArgs build() {
-            return new PolicyIEMapArgs(aCCOUNT, oRGUNIT);
+        }
+
+        public PolicyIEMapArgs build() {
+            return $;
         }
     }
+
 }

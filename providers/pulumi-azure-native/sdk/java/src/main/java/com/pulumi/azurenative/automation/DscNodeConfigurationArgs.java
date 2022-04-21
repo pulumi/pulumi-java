@@ -7,11 +7,11 @@ import com.pulumi.azurenative.automation.inputs.ContentSourceArgs;
 import com.pulumi.azurenative.automation.inputs.DscConfigurationAssociationPropertyArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,7 +24,7 @@ public final class DscNodeConfigurationArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="automationAccountName", required=true)
-      private final Output<String> automationAccountName;
+    private Output<String> automationAccountName;
 
     public Output<String> automationAccountName() {
         return this.automationAccountName;
@@ -35,7 +35,7 @@ public final class DscNodeConfigurationArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="configuration", required=true)
-      private final Output<DscConfigurationAssociationPropertyArgs> configuration;
+    private Output<DscConfigurationAssociationPropertyArgs> configuration;
 
     public Output<DscConfigurationAssociationPropertyArgs> configuration() {
         return this.configuration;
@@ -46,10 +46,10 @@ public final class DscNodeConfigurationArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="incrementNodeConfigurationBuild")
-      private final @Nullable Output<Boolean> incrementNodeConfigurationBuild;
+    private @Nullable Output<Boolean> incrementNodeConfigurationBuild;
 
-    public Output<Boolean> incrementNodeConfigurationBuild() {
-        return this.incrementNodeConfigurationBuild == null ? Codegen.empty() : this.incrementNodeConfigurationBuild;
+    public Optional<Output<Boolean>> incrementNodeConfigurationBuild() {
+        return Optional.ofNullable(this.incrementNodeConfigurationBuild);
     }
 
     /**
@@ -57,10 +57,10 @@ public final class DscNodeConfigurationArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -68,10 +68,10 @@ public final class DscNodeConfigurationArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="nodeConfigurationName")
-      private final @Nullable Output<String> nodeConfigurationName;
+    private @Nullable Output<String> nodeConfigurationName;
 
-    public Output<String> nodeConfigurationName() {
-        return this.nodeConfigurationName == null ? Codegen.empty() : this.nodeConfigurationName;
+    public Optional<Output<String>> nodeConfigurationName() {
+        return Optional.ofNullable(this.nodeConfigurationName);
     }
 
     /**
@@ -79,7 +79,7 @@ public final class DscNodeConfigurationArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -90,7 +90,7 @@ public final class DscNodeConfigurationArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="source", required=true)
-      private final Output<ContentSourceArgs> source;
+    private Output<ContentSourceArgs> source;
 
     public Output<ContentSourceArgs> source() {
         return this.source;
@@ -101,141 +101,122 @@ public final class DscNodeConfigurationArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public DscNodeConfigurationArgs(
-        Output<String> automationAccountName,
-        Output<DscConfigurationAssociationPropertyArgs> configuration,
-        @Nullable Output<Boolean> incrementNodeConfigurationBuild,
-        @Nullable Output<String> name,
-        @Nullable Output<String> nodeConfigurationName,
-        Output<String> resourceGroupName,
-        Output<ContentSourceArgs> source,
-        @Nullable Output<Map<String,String>> tags) {
-        this.automationAccountName = Objects.requireNonNull(automationAccountName, "expected parameter 'automationAccountName' to be non-null");
-        this.configuration = Objects.requireNonNull(configuration, "expected parameter 'configuration' to be non-null");
-        this.incrementNodeConfigurationBuild = incrementNodeConfigurationBuild;
-        this.name = name;
-        this.nodeConfigurationName = nodeConfigurationName;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.source = Objects.requireNonNull(source, "expected parameter 'source' to be non-null");
-        this.tags = tags;
-    }
+    private DscNodeConfigurationArgs() {}
 
-    private DscNodeConfigurationArgs() {
-        this.automationAccountName = Codegen.empty();
-        this.configuration = Codegen.empty();
-        this.incrementNodeConfigurationBuild = Codegen.empty();
-        this.name = Codegen.empty();
-        this.nodeConfigurationName = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.source = Codegen.empty();
-        this.tags = Codegen.empty();
+    private DscNodeConfigurationArgs(DscNodeConfigurationArgs $) {
+        this.automationAccountName = $.automationAccountName;
+        this.configuration = $.configuration;
+        this.incrementNodeConfigurationBuild = $.incrementNodeConfigurationBuild;
+        this.name = $.name;
+        this.nodeConfigurationName = $.nodeConfigurationName;
+        this.resourceGroupName = $.resourceGroupName;
+        this.source = $.source;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DscNodeConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> automationAccountName;
-        private Output<DscConfigurationAssociationPropertyArgs> configuration;
-        private @Nullable Output<Boolean> incrementNodeConfigurationBuild;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> nodeConfigurationName;
-        private Output<String> resourceGroupName;
-        private Output<ContentSourceArgs> source;
-        private @Nullable Output<Map<String,String>> tags;
+        private DscNodeConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DscNodeConfigurationArgs();
         }
 
         public Builder(DscNodeConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.automationAccountName = defaults.automationAccountName;
-    	      this.configuration = defaults.configuration;
-    	      this.incrementNodeConfigurationBuild = defaults.incrementNodeConfigurationBuild;
-    	      this.name = defaults.name;
-    	      this.nodeConfigurationName = defaults.nodeConfigurationName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.source = defaults.source;
-    	      this.tags = defaults.tags;
+            $ = new DscNodeConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder automationAccountName(Output<String> automationAccountName) {
-            this.automationAccountName = Objects.requireNonNull(automationAccountName);
+            $.automationAccountName = automationAccountName;
             return this;
         }
+
         public Builder automationAccountName(String automationAccountName) {
-            this.automationAccountName = Output.of(Objects.requireNonNull(automationAccountName));
-            return this;
+            return automationAccountName(Output.of(automationAccountName));
         }
+
         public Builder configuration(Output<DscConfigurationAssociationPropertyArgs> configuration) {
-            this.configuration = Objects.requireNonNull(configuration);
+            $.configuration = configuration;
             return this;
         }
+
         public Builder configuration(DscConfigurationAssociationPropertyArgs configuration) {
-            this.configuration = Output.of(Objects.requireNonNull(configuration));
-            return this;
+            return configuration(Output.of(configuration));
         }
+
         public Builder incrementNodeConfigurationBuild(@Nullable Output<Boolean> incrementNodeConfigurationBuild) {
-            this.incrementNodeConfigurationBuild = incrementNodeConfigurationBuild;
+            $.incrementNodeConfigurationBuild = incrementNodeConfigurationBuild;
             return this;
         }
-        public Builder incrementNodeConfigurationBuild(@Nullable Boolean incrementNodeConfigurationBuild) {
-            this.incrementNodeConfigurationBuild = Codegen.ofNullable(incrementNodeConfigurationBuild);
-            return this;
+
+        public Builder incrementNodeConfigurationBuild(Boolean incrementNodeConfigurationBuild) {
+            return incrementNodeConfigurationBuild(Output.of(incrementNodeConfigurationBuild));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder nodeConfigurationName(@Nullable Output<String> nodeConfigurationName) {
-            this.nodeConfigurationName = nodeConfigurationName;
+            $.nodeConfigurationName = nodeConfigurationName;
             return this;
         }
-        public Builder nodeConfigurationName(@Nullable String nodeConfigurationName) {
-            this.nodeConfigurationName = Codegen.ofNullable(nodeConfigurationName);
-            return this;
+
+        public Builder nodeConfigurationName(String nodeConfigurationName) {
+            return nodeConfigurationName(Output.of(nodeConfigurationName));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder source(Output<ContentSourceArgs> source) {
-            this.source = Objects.requireNonNull(source);
+            $.source = source;
             return this;
         }
+
         public Builder source(ContentSourceArgs source) {
-            this.source = Output.of(Objects.requireNonNull(source));
-            return this;
+            return source(Output.of(source));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
-        }        public DscNodeConfigurationArgs build() {
-            return new DscNodeConfigurationArgs(automationAccountName, configuration, incrementNodeConfigurationBuild, name, nodeConfigurationName, resourceGroupName, source, tags);
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
+        }
+
+        public DscNodeConfigurationArgs build() {
+            $.automationAccountName = Objects.requireNonNull($.automationAccountName, "expected parameter 'automationAccountName' to be non-null");
+            $.configuration = Objects.requireNonNull($.configuration, "expected parameter 'configuration' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.source = Objects.requireNonNull($.source, "expected parameter 'source' to be non-null");
+            return $;
         }
     }
+
 }

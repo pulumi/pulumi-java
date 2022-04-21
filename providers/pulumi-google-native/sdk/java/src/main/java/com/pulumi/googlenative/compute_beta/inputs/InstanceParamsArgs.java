@@ -5,10 +5,10 @@ package com.pulumi.googlenative.compute_beta.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,49 +25,48 @@ public final class InstanceParamsArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="resourceManagerTags")
-      private final @Nullable Output<Map<String,String>> resourceManagerTags;
+    private @Nullable Output<Map<String,String>> resourceManagerTags;
 
-    public Output<Map<String,String>> resourceManagerTags() {
-        return this.resourceManagerTags == null ? Codegen.empty() : this.resourceManagerTags;
+    public Optional<Output<Map<String,String>>> resourceManagerTags() {
+        return Optional.ofNullable(this.resourceManagerTags);
     }
 
-    public InstanceParamsArgs(@Nullable Output<Map<String,String>> resourceManagerTags) {
-        this.resourceManagerTags = resourceManagerTags;
-    }
+    private InstanceParamsArgs() {}
 
-    private InstanceParamsArgs() {
-        this.resourceManagerTags = Codegen.empty();
+    private InstanceParamsArgs(InstanceParamsArgs $) {
+        this.resourceManagerTags = $.resourceManagerTags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(InstanceParamsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Map<String,String>> resourceManagerTags;
+        private InstanceParamsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new InstanceParamsArgs();
         }
 
         public Builder(InstanceParamsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.resourceManagerTags = defaults.resourceManagerTags;
+            $ = new InstanceParamsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder resourceManagerTags(@Nullable Output<Map<String,String>> resourceManagerTags) {
-            this.resourceManagerTags = resourceManagerTags;
+            $.resourceManagerTags = resourceManagerTags;
             return this;
         }
-        public Builder resourceManagerTags(@Nullable Map<String,String> resourceManagerTags) {
-            this.resourceManagerTags = Codegen.ofNullable(resourceManagerTags);
-            return this;
-        }        public InstanceParamsArgs build() {
-            return new InstanceParamsArgs(resourceManagerTags);
+
+        public Builder resourceManagerTags(Map<String,String> resourceManagerTags) {
+            return resourceManagerTags(Output.of(resourceManagerTags));
+        }
+
+        public InstanceParamsArgs build() {
+            return $;
         }
     }
+
 }

@@ -7,8 +7,8 @@ import com.pulumi.aws.wafv2.inputs.WebAclLoggingConfigurationLoggingFilterFilter
 import com.pulumi.aws.wafv2.inputs.WebAclLoggingConfigurationLoggingFilterFilterConditionLabelNameConditionGetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class WebAclLoggingConfigurationLoggingFilterFilterConditionGetArgs
      * 
      */
     @Import(name="actionCondition")
-      private final @Nullable Output<WebAclLoggingConfigurationLoggingFilterFilterConditionActionConditionGetArgs> actionCondition;
+    private @Nullable Output<WebAclLoggingConfigurationLoggingFilterFilterConditionActionConditionGetArgs> actionCondition;
 
-    public Output<WebAclLoggingConfigurationLoggingFilterFilterConditionActionConditionGetArgs> actionCondition() {
-        return this.actionCondition == null ? Codegen.empty() : this.actionCondition;
+    public Optional<Output<WebAclLoggingConfigurationLoggingFilterFilterConditionActionConditionGetArgs>> actionCondition() {
+        return Optional.ofNullable(this.actionCondition);
     }
 
     /**
@@ -32,63 +32,58 @@ public final class WebAclLoggingConfigurationLoggingFilterFilterConditionGetArgs
      * 
      */
     @Import(name="labelNameCondition")
-      private final @Nullable Output<WebAclLoggingConfigurationLoggingFilterFilterConditionLabelNameConditionGetArgs> labelNameCondition;
+    private @Nullable Output<WebAclLoggingConfigurationLoggingFilterFilterConditionLabelNameConditionGetArgs> labelNameCondition;
 
-    public Output<WebAclLoggingConfigurationLoggingFilterFilterConditionLabelNameConditionGetArgs> labelNameCondition() {
-        return this.labelNameCondition == null ? Codegen.empty() : this.labelNameCondition;
+    public Optional<Output<WebAclLoggingConfigurationLoggingFilterFilterConditionLabelNameConditionGetArgs>> labelNameCondition() {
+        return Optional.ofNullable(this.labelNameCondition);
     }
 
-    public WebAclLoggingConfigurationLoggingFilterFilterConditionGetArgs(
-        @Nullable Output<WebAclLoggingConfigurationLoggingFilterFilterConditionActionConditionGetArgs> actionCondition,
-        @Nullable Output<WebAclLoggingConfigurationLoggingFilterFilterConditionLabelNameConditionGetArgs> labelNameCondition) {
-        this.actionCondition = actionCondition;
-        this.labelNameCondition = labelNameCondition;
-    }
+    private WebAclLoggingConfigurationLoggingFilterFilterConditionGetArgs() {}
 
-    private WebAclLoggingConfigurationLoggingFilterFilterConditionGetArgs() {
-        this.actionCondition = Codegen.empty();
-        this.labelNameCondition = Codegen.empty();
+    private WebAclLoggingConfigurationLoggingFilterFilterConditionGetArgs(WebAclLoggingConfigurationLoggingFilterFilterConditionGetArgs $) {
+        this.actionCondition = $.actionCondition;
+        this.labelNameCondition = $.labelNameCondition;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WebAclLoggingConfigurationLoggingFilterFilterConditionGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<WebAclLoggingConfigurationLoggingFilterFilterConditionActionConditionGetArgs> actionCondition;
-        private @Nullable Output<WebAclLoggingConfigurationLoggingFilterFilterConditionLabelNameConditionGetArgs> labelNameCondition;
+        private WebAclLoggingConfigurationLoggingFilterFilterConditionGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new WebAclLoggingConfigurationLoggingFilterFilterConditionGetArgs();
         }
 
         public Builder(WebAclLoggingConfigurationLoggingFilterFilterConditionGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.actionCondition = defaults.actionCondition;
-    	      this.labelNameCondition = defaults.labelNameCondition;
+            $ = new WebAclLoggingConfigurationLoggingFilterFilterConditionGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder actionCondition(@Nullable Output<WebAclLoggingConfigurationLoggingFilterFilterConditionActionConditionGetArgs> actionCondition) {
-            this.actionCondition = actionCondition;
+            $.actionCondition = actionCondition;
             return this;
         }
-        public Builder actionCondition(@Nullable WebAclLoggingConfigurationLoggingFilterFilterConditionActionConditionGetArgs actionCondition) {
-            this.actionCondition = Codegen.ofNullable(actionCondition);
-            return this;
+
+        public Builder actionCondition(WebAclLoggingConfigurationLoggingFilterFilterConditionActionConditionGetArgs actionCondition) {
+            return actionCondition(Output.of(actionCondition));
         }
+
         public Builder labelNameCondition(@Nullable Output<WebAclLoggingConfigurationLoggingFilterFilterConditionLabelNameConditionGetArgs> labelNameCondition) {
-            this.labelNameCondition = labelNameCondition;
+            $.labelNameCondition = labelNameCondition;
             return this;
         }
-        public Builder labelNameCondition(@Nullable WebAclLoggingConfigurationLoggingFilterFilterConditionLabelNameConditionGetArgs labelNameCondition) {
-            this.labelNameCondition = Codegen.ofNullable(labelNameCondition);
-            return this;
-        }        public WebAclLoggingConfigurationLoggingFilterFilterConditionGetArgs build() {
-            return new WebAclLoggingConfigurationLoggingFilterFilterConditionGetArgs(actionCondition, labelNameCondition);
+
+        public Builder labelNameCondition(WebAclLoggingConfigurationLoggingFilterFilterConditionLabelNameConditionGetArgs labelNameCondition) {
+            return labelNameCondition(Output.of(labelNameCondition));
+        }
+
+        public WebAclLoggingConfigurationLoggingFilterFilterConditionGetArgs build() {
+            return $;
         }
     }
+
 }

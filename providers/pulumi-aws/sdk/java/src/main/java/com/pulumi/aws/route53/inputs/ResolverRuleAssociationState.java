@@ -5,9 +5,9 @@ package com.pulumi.aws.route53.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class ResolverRuleAssociationState extends com.pulumi.resources.Res
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -31,10 +31,10 @@ public final class ResolverRuleAssociationState extends com.pulumi.resources.Res
      * 
      */
     @Import(name="resolverRuleId")
-      private final @Nullable Output<String> resolverRuleId;
+    private @Nullable Output<String> resolverRuleId;
 
-    public Output<String> resolverRuleId() {
-        return this.resolverRuleId == null ? Codegen.empty() : this.resolverRuleId;
+    public Optional<Output<String>> resolverRuleId() {
+        return Optional.ofNullable(this.resolverRuleId);
     }
 
     /**
@@ -42,76 +42,68 @@ public final class ResolverRuleAssociationState extends com.pulumi.resources.Res
      * 
      */
     @Import(name="vpcId")
-      private final @Nullable Output<String> vpcId;
+    private @Nullable Output<String> vpcId;
 
-    public Output<String> vpcId() {
-        return this.vpcId == null ? Codegen.empty() : this.vpcId;
+    public Optional<Output<String>> vpcId() {
+        return Optional.ofNullable(this.vpcId);
     }
 
-    public ResolverRuleAssociationState(
-        @Nullable Output<String> name,
-        @Nullable Output<String> resolverRuleId,
-        @Nullable Output<String> vpcId) {
-        this.name = name;
-        this.resolverRuleId = resolverRuleId;
-        this.vpcId = vpcId;
-    }
+    private ResolverRuleAssociationState() {}
 
-    private ResolverRuleAssociationState() {
-        this.name = Codegen.empty();
-        this.resolverRuleId = Codegen.empty();
-        this.vpcId = Codegen.empty();
+    private ResolverRuleAssociationState(ResolverRuleAssociationState $) {
+        this.name = $.name;
+        this.resolverRuleId = $.resolverRuleId;
+        this.vpcId = $.vpcId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ResolverRuleAssociationState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> resolverRuleId;
-        private @Nullable Output<String> vpcId;
+        private ResolverRuleAssociationState $;
 
         public Builder() {
-    	      // Empty
+            $ = new ResolverRuleAssociationState();
         }
 
         public Builder(ResolverRuleAssociationState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.resolverRuleId = defaults.resolverRuleId;
-    	      this.vpcId = defaults.vpcId;
+            $ = new ResolverRuleAssociationState(Objects.requireNonNull(defaults));
         }
 
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder resolverRuleId(@Nullable Output<String> resolverRuleId) {
-            this.resolverRuleId = resolverRuleId;
+            $.resolverRuleId = resolverRuleId;
             return this;
         }
-        public Builder resolverRuleId(@Nullable String resolverRuleId) {
-            this.resolverRuleId = Codegen.ofNullable(resolverRuleId);
-            return this;
+
+        public Builder resolverRuleId(String resolverRuleId) {
+            return resolverRuleId(Output.of(resolverRuleId));
         }
+
         public Builder vpcId(@Nullable Output<String> vpcId) {
-            this.vpcId = vpcId;
+            $.vpcId = vpcId;
             return this;
         }
-        public Builder vpcId(@Nullable String vpcId) {
-            this.vpcId = Codegen.ofNullable(vpcId);
-            return this;
-        }        public ResolverRuleAssociationState build() {
-            return new ResolverRuleAssociationState(name, resolverRuleId, vpcId);
+
+        public Builder vpcId(String vpcId) {
+            return vpcId(Output.of(vpcId));
+        }
+
+        public ResolverRuleAssociationState build() {
+            return $;
         }
     }
+
 }

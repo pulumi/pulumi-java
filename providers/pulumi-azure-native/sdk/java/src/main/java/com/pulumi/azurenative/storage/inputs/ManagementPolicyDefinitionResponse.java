@@ -24,7 +24,7 @@ public final class ManagementPolicyDefinitionResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="actions", required=true)
-      private final ManagementPolicyActionResponse actions;
+    private ManagementPolicyActionResponse actions;
 
     public ManagementPolicyActionResponse actions() {
         return this.actions;
@@ -35,55 +35,51 @@ public final class ManagementPolicyDefinitionResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="filters")
-      private final @Nullable ManagementPolicyFilterResponse filters;
+    private @Nullable ManagementPolicyFilterResponse filters;
 
     public Optional<ManagementPolicyFilterResponse> filters() {
-        return this.filters == null ? Optional.empty() : Optional.ofNullable(this.filters);
+        return Optional.ofNullable(this.filters);
     }
 
-    public ManagementPolicyDefinitionResponse(
-        ManagementPolicyActionResponse actions,
-        @Nullable ManagementPolicyFilterResponse filters) {
-        this.actions = Objects.requireNonNull(actions, "expected parameter 'actions' to be non-null");
-        this.filters = filters;
-    }
+    private ManagementPolicyDefinitionResponse() {}
 
-    private ManagementPolicyDefinitionResponse() {
-        this.actions = null;
-        this.filters = null;
+    private ManagementPolicyDefinitionResponse(ManagementPolicyDefinitionResponse $) {
+        this.actions = $.actions;
+        this.filters = $.filters;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ManagementPolicyDefinitionResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private ManagementPolicyActionResponse actions;
-        private @Nullable ManagementPolicyFilterResponse filters;
+        private ManagementPolicyDefinitionResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ManagementPolicyDefinitionResponse();
         }
 
         public Builder(ManagementPolicyDefinitionResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.actions = defaults.actions;
-    	      this.filters = defaults.filters;
+            $ = new ManagementPolicyDefinitionResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder actions(ManagementPolicyActionResponse actions) {
-            this.actions = Objects.requireNonNull(actions);
+            $.actions = actions;
             return this;
         }
+
         public Builder filters(@Nullable ManagementPolicyFilterResponse filters) {
-            this.filters = filters;
+            $.filters = filters;
             return this;
-        }        public ManagementPolicyDefinitionResponse build() {
-            return new ManagementPolicyDefinitionResponse(actions, filters);
+        }
+
+        public ManagementPolicyDefinitionResponse build() {
+            $.actions = Objects.requireNonNull($.actions, "expected parameter 'actions' to be non-null");
+            return $;
         }
     }
+
 }

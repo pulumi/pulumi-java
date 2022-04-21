@@ -19,45 +19,44 @@ public final class CanaryArtifactConfig extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="s3Encryption")
-      private final @Nullable CanaryS3Encryption s3Encryption;
+    private @Nullable CanaryS3Encryption s3Encryption;
 
     public Optional<CanaryS3Encryption> s3Encryption() {
-        return this.s3Encryption == null ? Optional.empty() : Optional.ofNullable(this.s3Encryption);
+        return Optional.ofNullable(this.s3Encryption);
     }
 
-    public CanaryArtifactConfig(@Nullable CanaryS3Encryption s3Encryption) {
-        this.s3Encryption = s3Encryption;
-    }
+    private CanaryArtifactConfig() {}
 
-    private CanaryArtifactConfig() {
-        this.s3Encryption = null;
+    private CanaryArtifactConfig(CanaryArtifactConfig $) {
+        this.s3Encryption = $.s3Encryption;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CanaryArtifactConfig defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable CanaryS3Encryption s3Encryption;
+        private CanaryArtifactConfig $;
 
         public Builder() {
-    	      // Empty
+            $ = new CanaryArtifactConfig();
         }
 
         public Builder(CanaryArtifactConfig defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.s3Encryption = defaults.s3Encryption;
+            $ = new CanaryArtifactConfig(Objects.requireNonNull(defaults));
         }
 
         public Builder s3Encryption(@Nullable CanaryS3Encryption s3Encryption) {
-            this.s3Encryption = s3Encryption;
+            $.s3Encryption = s3Encryption;
             return this;
-        }        public CanaryArtifactConfig build() {
-            return new CanaryArtifactConfig(s3Encryption);
+        }
+
+        public CanaryArtifactConfig build() {
+            return $;
         }
     }
+
 }

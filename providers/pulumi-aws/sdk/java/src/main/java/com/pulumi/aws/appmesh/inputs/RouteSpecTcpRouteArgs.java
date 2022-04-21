@@ -7,8 +7,8 @@ import com.pulumi.aws.appmesh.inputs.RouteSpecTcpRouteActionArgs;
 import com.pulumi.aws.appmesh.inputs.RouteSpecTcpRouteTimeoutArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,7 +21,7 @@ public final class RouteSpecTcpRouteArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="action", required=true)
-      private final Output<RouteSpecTcpRouteActionArgs> action;
+    private Output<RouteSpecTcpRouteActionArgs> action;
 
     public Output<RouteSpecTcpRouteActionArgs> action() {
         return this.action;
@@ -32,63 +32,59 @@ public final class RouteSpecTcpRouteArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="timeout")
-      private final @Nullable Output<RouteSpecTcpRouteTimeoutArgs> timeout;
+    private @Nullable Output<RouteSpecTcpRouteTimeoutArgs> timeout;
 
-    public Output<RouteSpecTcpRouteTimeoutArgs> timeout() {
-        return this.timeout == null ? Codegen.empty() : this.timeout;
+    public Optional<Output<RouteSpecTcpRouteTimeoutArgs>> timeout() {
+        return Optional.ofNullable(this.timeout);
     }
 
-    public RouteSpecTcpRouteArgs(
-        Output<RouteSpecTcpRouteActionArgs> action,
-        @Nullable Output<RouteSpecTcpRouteTimeoutArgs> timeout) {
-        this.action = Objects.requireNonNull(action, "expected parameter 'action' to be non-null");
-        this.timeout = timeout;
-    }
+    private RouteSpecTcpRouteArgs() {}
 
-    private RouteSpecTcpRouteArgs() {
-        this.action = Codegen.empty();
-        this.timeout = Codegen.empty();
+    private RouteSpecTcpRouteArgs(RouteSpecTcpRouteArgs $) {
+        this.action = $.action;
+        this.timeout = $.timeout;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RouteSpecTcpRouteArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<RouteSpecTcpRouteActionArgs> action;
-        private @Nullable Output<RouteSpecTcpRouteTimeoutArgs> timeout;
+        private RouteSpecTcpRouteArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RouteSpecTcpRouteArgs();
         }
 
         public Builder(RouteSpecTcpRouteArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.action = defaults.action;
-    	      this.timeout = defaults.timeout;
+            $ = new RouteSpecTcpRouteArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder action(Output<RouteSpecTcpRouteActionArgs> action) {
-            this.action = Objects.requireNonNull(action);
+            $.action = action;
             return this;
         }
+
         public Builder action(RouteSpecTcpRouteActionArgs action) {
-            this.action = Output.of(Objects.requireNonNull(action));
-            return this;
+            return action(Output.of(action));
         }
+
         public Builder timeout(@Nullable Output<RouteSpecTcpRouteTimeoutArgs> timeout) {
-            this.timeout = timeout;
+            $.timeout = timeout;
             return this;
         }
-        public Builder timeout(@Nullable RouteSpecTcpRouteTimeoutArgs timeout) {
-            this.timeout = Codegen.ofNullable(timeout);
-            return this;
-        }        public RouteSpecTcpRouteArgs build() {
-            return new RouteSpecTcpRouteArgs(action, timeout);
+
+        public Builder timeout(RouteSpecTcpRouteTimeoutArgs timeout) {
+            return timeout(Output.of(timeout));
+        }
+
+        public RouteSpecTcpRouteArgs build() {
+            $.action = Objects.requireNonNull($.action, "expected parameter 'action' to be non-null");
+            return $;
         }
     }
+
 }

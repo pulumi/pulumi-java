@@ -15,45 +15,44 @@ public final class FlowLookoutMetricsDestinationProperties extends com.pulumi.re
     public static final FlowLookoutMetricsDestinationProperties Empty = new FlowLookoutMetricsDestinationProperties();
 
     @Import(name="object")
-      private final @Nullable String object;
+    private @Nullable String object;
 
     public Optional<String> object() {
-        return this.object == null ? Optional.empty() : Optional.ofNullable(this.object);
+        return Optional.ofNullable(this.object);
     }
 
-    public FlowLookoutMetricsDestinationProperties(@Nullable String object) {
-        this.object = object;
-    }
+    private FlowLookoutMetricsDestinationProperties() {}
 
-    private FlowLookoutMetricsDestinationProperties() {
-        this.object = null;
+    private FlowLookoutMetricsDestinationProperties(FlowLookoutMetricsDestinationProperties $) {
+        this.object = $.object;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FlowLookoutMetricsDestinationProperties defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String object;
+        private FlowLookoutMetricsDestinationProperties $;
 
         public Builder() {
-    	      // Empty
+            $ = new FlowLookoutMetricsDestinationProperties();
         }
 
         public Builder(FlowLookoutMetricsDestinationProperties defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.object = defaults.object;
+            $ = new FlowLookoutMetricsDestinationProperties(Objects.requireNonNull(defaults));
         }
 
         public Builder object(@Nullable String object) {
-            this.object = object;
+            $.object = object;
             return this;
-        }        public FlowLookoutMetricsDestinationProperties build() {
-            return new FlowLookoutMetricsDestinationProperties(object);
+        }
+
+        public FlowLookoutMetricsDestinationProperties build() {
+            return $;
         }
     }
+
 }

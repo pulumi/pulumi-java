@@ -5,9 +5,9 @@ package com.pulumi.gcp.runtimeconfig;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,7 +20,7 @@ public final class ConfigIamPolicyArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="config", required=true)
-      private final Output<String> config;
+    private Output<String> config;
 
     public Output<String> config() {
         return this.config;
@@ -32,7 +32,7 @@ public final class ConfigIamPolicyArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="policyData", required=true)
-      private final Output<String> policyData;
+    private Output<String> policyData;
 
     public Output<String> policyData() {
         return this.policyData;
@@ -44,76 +44,70 @@ public final class ConfigIamPolicyArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
-    public ConfigIamPolicyArgs(
-        Output<String> config,
-        Output<String> policyData,
-        @Nullable Output<String> project) {
-        this.config = Objects.requireNonNull(config, "expected parameter 'config' to be non-null");
-        this.policyData = Objects.requireNonNull(policyData, "expected parameter 'policyData' to be non-null");
-        this.project = project;
-    }
+    private ConfigIamPolicyArgs() {}
 
-    private ConfigIamPolicyArgs() {
-        this.config = Codegen.empty();
-        this.policyData = Codegen.empty();
-        this.project = Codegen.empty();
+    private ConfigIamPolicyArgs(ConfigIamPolicyArgs $) {
+        this.config = $.config;
+        this.policyData = $.policyData;
+        this.project = $.project;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ConfigIamPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> config;
-        private Output<String> policyData;
-        private @Nullable Output<String> project;
+        private ConfigIamPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ConfigIamPolicyArgs();
         }
 
         public Builder(ConfigIamPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.config = defaults.config;
-    	      this.policyData = defaults.policyData;
-    	      this.project = defaults.project;
+            $ = new ConfigIamPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder config(Output<String> config) {
-            this.config = Objects.requireNonNull(config);
+            $.config = config;
             return this;
         }
+
         public Builder config(String config) {
-            this.config = Output.of(Objects.requireNonNull(config));
-            return this;
+            return config(Output.of(config));
         }
+
         public Builder policyData(Output<String> policyData) {
-            this.policyData = Objects.requireNonNull(policyData);
+            $.policyData = policyData;
             return this;
         }
+
         public Builder policyData(String policyData) {
-            this.policyData = Output.of(Objects.requireNonNull(policyData));
-            return this;
+            return policyData(Output.of(policyData));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
-        }        public ConfigIamPolicyArgs build() {
-            return new ConfigIamPolicyArgs(config, policyData, project);
+
+        public Builder project(String project) {
+            return project(Output.of(project));
+        }
+
+        public ConfigIamPolicyArgs build() {
+            $.config = Objects.requireNonNull($.config, "expected parameter 'config' to be non-null");
+            $.policyData = Objects.requireNonNull($.policyData, "expected parameter 'policyData' to be non-null");
+            return $;
         }
     }
+
 }

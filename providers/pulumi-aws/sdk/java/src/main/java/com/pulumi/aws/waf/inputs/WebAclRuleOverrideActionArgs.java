@@ -5,7 +5,6 @@ package com.pulumi.aws.waf.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,49 +18,49 @@ public final class WebAclRuleOverrideActionArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="type", required=true)
-      private final Output<String> type;
+    private Output<String> type;
 
     public Output<String> type() {
         return this.type;
     }
 
-    public WebAclRuleOverrideActionArgs(Output<String> type) {
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private WebAclRuleOverrideActionArgs() {}
 
-    private WebAclRuleOverrideActionArgs() {
-        this.type = Codegen.empty();
+    private WebAclRuleOverrideActionArgs(WebAclRuleOverrideActionArgs $) {
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WebAclRuleOverrideActionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> type;
+        private WebAclRuleOverrideActionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new WebAclRuleOverrideActionArgs();
         }
 
         public Builder(WebAclRuleOverrideActionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.type = defaults.type;
+            $ = new WebAclRuleOverrideActionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder type(Output<String> type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Output.of(Objects.requireNonNull(type));
-            return this;
-        }        public WebAclRuleOverrideActionArgs build() {
-            return new WebAclRuleOverrideActionArgs(type);
+            return type(Output.of(type));
+        }
+
+        public WebAclRuleOverrideActionArgs build() {
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

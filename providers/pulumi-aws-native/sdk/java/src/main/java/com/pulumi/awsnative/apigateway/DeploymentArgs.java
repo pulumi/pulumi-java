@@ -7,9 +7,9 @@ import com.pulumi.awsnative.apigateway.inputs.DeploymentCanarySettingsArgs;
 import com.pulumi.awsnative.apigateway.inputs.DeploymentStageDescriptionArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class DeploymentArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="deploymentCanarySettings")
-      private final @Nullable Output<DeploymentCanarySettingsArgs> deploymentCanarySettings;
+    private @Nullable Output<DeploymentCanarySettingsArgs> deploymentCanarySettings;
 
-    public Output<DeploymentCanarySettingsArgs> deploymentCanarySettings() {
-        return this.deploymentCanarySettings == null ? Codegen.empty() : this.deploymentCanarySettings;
+    public Optional<Output<DeploymentCanarySettingsArgs>> deploymentCanarySettings() {
+        return Optional.ofNullable(this.deploymentCanarySettings);
     }
 
     /**
@@ -33,10 +33,10 @@ public final class DeploymentArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -44,7 +44,7 @@ public final class DeploymentArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="restApiId", required=true)
-      private final Output<String> restApiId;
+    private Output<String> restApiId;
 
     public Output<String> restApiId() {
         return this.restApiId;
@@ -55,10 +55,10 @@ public final class DeploymentArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="stageDescription")
-      private final @Nullable Output<DeploymentStageDescriptionArgs> stageDescription;
+    private @Nullable Output<DeploymentStageDescriptionArgs> stageDescription;
 
-    public Output<DeploymentStageDescriptionArgs> stageDescription() {
-        return this.stageDescription == null ? Codegen.empty() : this.stageDescription;
+    public Optional<Output<DeploymentStageDescriptionArgs>> stageDescription() {
+        return Optional.ofNullable(this.stageDescription);
     }
 
     /**
@@ -66,102 +66,89 @@ public final class DeploymentArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="stageName")
-      private final @Nullable Output<String> stageName;
+    private @Nullable Output<String> stageName;
 
-    public Output<String> stageName() {
-        return this.stageName == null ? Codegen.empty() : this.stageName;
+    public Optional<Output<String>> stageName() {
+        return Optional.ofNullable(this.stageName);
     }
 
-    public DeploymentArgs(
-        @Nullable Output<DeploymentCanarySettingsArgs> deploymentCanarySettings,
-        @Nullable Output<String> description,
-        Output<String> restApiId,
-        @Nullable Output<DeploymentStageDescriptionArgs> stageDescription,
-        @Nullable Output<String> stageName) {
-        this.deploymentCanarySettings = deploymentCanarySettings;
-        this.description = description;
-        this.restApiId = Objects.requireNonNull(restApiId, "expected parameter 'restApiId' to be non-null");
-        this.stageDescription = stageDescription;
-        this.stageName = stageName;
-    }
+    private DeploymentArgs() {}
 
-    private DeploymentArgs() {
-        this.deploymentCanarySettings = Codegen.empty();
-        this.description = Codegen.empty();
-        this.restApiId = Codegen.empty();
-        this.stageDescription = Codegen.empty();
-        this.stageName = Codegen.empty();
+    private DeploymentArgs(DeploymentArgs $) {
+        this.deploymentCanarySettings = $.deploymentCanarySettings;
+        this.description = $.description;
+        this.restApiId = $.restApiId;
+        this.stageDescription = $.stageDescription;
+        this.stageName = $.stageName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DeploymentArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<DeploymentCanarySettingsArgs> deploymentCanarySettings;
-        private @Nullable Output<String> description;
-        private Output<String> restApiId;
-        private @Nullable Output<DeploymentStageDescriptionArgs> stageDescription;
-        private @Nullable Output<String> stageName;
+        private DeploymentArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DeploymentArgs();
         }
 
         public Builder(DeploymentArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.deploymentCanarySettings = defaults.deploymentCanarySettings;
-    	      this.description = defaults.description;
-    	      this.restApiId = defaults.restApiId;
-    	      this.stageDescription = defaults.stageDescription;
-    	      this.stageName = defaults.stageName;
+            $ = new DeploymentArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder deploymentCanarySettings(@Nullable Output<DeploymentCanarySettingsArgs> deploymentCanarySettings) {
-            this.deploymentCanarySettings = deploymentCanarySettings;
+            $.deploymentCanarySettings = deploymentCanarySettings;
             return this;
         }
-        public Builder deploymentCanarySettings(@Nullable DeploymentCanarySettingsArgs deploymentCanarySettings) {
-            this.deploymentCanarySettings = Codegen.ofNullable(deploymentCanarySettings);
-            return this;
+
+        public Builder deploymentCanarySettings(DeploymentCanarySettingsArgs deploymentCanarySettings) {
+            return deploymentCanarySettings(Output.of(deploymentCanarySettings));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder restApiId(Output<String> restApiId) {
-            this.restApiId = Objects.requireNonNull(restApiId);
+            $.restApiId = restApiId;
             return this;
         }
+
         public Builder restApiId(String restApiId) {
-            this.restApiId = Output.of(Objects.requireNonNull(restApiId));
-            return this;
+            return restApiId(Output.of(restApiId));
         }
+
         public Builder stageDescription(@Nullable Output<DeploymentStageDescriptionArgs> stageDescription) {
-            this.stageDescription = stageDescription;
+            $.stageDescription = stageDescription;
             return this;
         }
-        public Builder stageDescription(@Nullable DeploymentStageDescriptionArgs stageDescription) {
-            this.stageDescription = Codegen.ofNullable(stageDescription);
-            return this;
+
+        public Builder stageDescription(DeploymentStageDescriptionArgs stageDescription) {
+            return stageDescription(Output.of(stageDescription));
         }
+
         public Builder stageName(@Nullable Output<String> stageName) {
-            this.stageName = stageName;
+            $.stageName = stageName;
             return this;
         }
-        public Builder stageName(@Nullable String stageName) {
-            this.stageName = Codegen.ofNullable(stageName);
-            return this;
-        }        public DeploymentArgs build() {
-            return new DeploymentArgs(deploymentCanarySettings, description, restApiId, stageDescription, stageName);
+
+        public Builder stageName(String stageName) {
+            return stageName(Output.of(stageName));
+        }
+
+        public DeploymentArgs build() {
+            $.restApiId = Objects.requireNonNull($.restApiId, "expected parameter 'restApiId' to be non-null");
+            return $;
         }
     }
+
 }

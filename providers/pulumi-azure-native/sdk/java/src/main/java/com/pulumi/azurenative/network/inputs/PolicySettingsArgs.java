@@ -8,11 +8,11 @@ import com.pulumi.azurenative.network.enums.WebApplicationFirewallMode;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -29,10 +29,10 @@ public final class PolicySettingsArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="fileUploadLimitInMb")
-      private final @Nullable Output<Integer> fileUploadLimitInMb;
+    private @Nullable Output<Integer> fileUploadLimitInMb;
 
-    public Output<Integer> fileUploadLimitInMb() {
-        return this.fileUploadLimitInMb == null ? Codegen.empty() : this.fileUploadLimitInMb;
+    public Optional<Output<Integer>> fileUploadLimitInMb() {
+        return Optional.ofNullable(this.fileUploadLimitInMb);
     }
 
     /**
@@ -40,10 +40,10 @@ public final class PolicySettingsArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="maxRequestBodySizeInKb")
-      private final @Nullable Output<Integer> maxRequestBodySizeInKb;
+    private @Nullable Output<Integer> maxRequestBodySizeInKb;
 
-    public Output<Integer> maxRequestBodySizeInKb() {
-        return this.maxRequestBodySizeInKb == null ? Codegen.empty() : this.maxRequestBodySizeInKb;
+    public Optional<Output<Integer>> maxRequestBodySizeInKb() {
+        return Optional.ofNullable(this.maxRequestBodySizeInKb);
     }
 
     /**
@@ -51,10 +51,10 @@ public final class PolicySettingsArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="mode")
-      private final @Nullable Output<Either<String,WebApplicationFirewallMode>> mode;
+    private @Nullable Output<Either<String,WebApplicationFirewallMode>> mode;
 
-    public Output<Either<String,WebApplicationFirewallMode>> mode() {
-        return this.mode == null ? Codegen.empty() : this.mode;
+    public Optional<Output<Either<String,WebApplicationFirewallMode>>> mode() {
+        return Optional.ofNullable(this.mode);
     }
 
     /**
@@ -62,10 +62,10 @@ public final class PolicySettingsArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="requestBodyCheck")
-      private final @Nullable Output<Boolean> requestBodyCheck;
+    private @Nullable Output<Boolean> requestBodyCheck;
 
-    public Output<Boolean> requestBodyCheck() {
-        return this.requestBodyCheck == null ? Codegen.empty() : this.requestBodyCheck;
+    public Optional<Output<Boolean>> requestBodyCheck() {
+        return Optional.ofNullable(this.requestBodyCheck);
     }
 
     /**
@@ -73,102 +73,88 @@ public final class PolicySettingsArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="state")
-      private final @Nullable Output<Either<String,WebApplicationFirewallEnabledState>> state;
+    private @Nullable Output<Either<String,WebApplicationFirewallEnabledState>> state;
 
-    public Output<Either<String,WebApplicationFirewallEnabledState>> state() {
-        return this.state == null ? Codegen.empty() : this.state;
+    public Optional<Output<Either<String,WebApplicationFirewallEnabledState>>> state() {
+        return Optional.ofNullable(this.state);
     }
 
-    public PolicySettingsArgs(
-        @Nullable Output<Integer> fileUploadLimitInMb,
-        @Nullable Output<Integer> maxRequestBodySizeInKb,
-        @Nullable Output<Either<String,WebApplicationFirewallMode>> mode,
-        @Nullable Output<Boolean> requestBodyCheck,
-        @Nullable Output<Either<String,WebApplicationFirewallEnabledState>> state) {
-        this.fileUploadLimitInMb = fileUploadLimitInMb;
-        this.maxRequestBodySizeInKb = maxRequestBodySizeInKb;
-        this.mode = mode;
-        this.requestBodyCheck = requestBodyCheck;
-        this.state = state;
-    }
+    private PolicySettingsArgs() {}
 
-    private PolicySettingsArgs() {
-        this.fileUploadLimitInMb = Codegen.empty();
-        this.maxRequestBodySizeInKb = Codegen.empty();
-        this.mode = Codegen.empty();
-        this.requestBodyCheck = Codegen.empty();
-        this.state = Codegen.empty();
+    private PolicySettingsArgs(PolicySettingsArgs $) {
+        this.fileUploadLimitInMb = $.fileUploadLimitInMb;
+        this.maxRequestBodySizeInKb = $.maxRequestBodySizeInKb;
+        this.mode = $.mode;
+        this.requestBodyCheck = $.requestBodyCheck;
+        this.state = $.state;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PolicySettingsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> fileUploadLimitInMb;
-        private @Nullable Output<Integer> maxRequestBodySizeInKb;
-        private @Nullable Output<Either<String,WebApplicationFirewallMode>> mode;
-        private @Nullable Output<Boolean> requestBodyCheck;
-        private @Nullable Output<Either<String,WebApplicationFirewallEnabledState>> state;
+        private PolicySettingsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PolicySettingsArgs();
         }
 
         public Builder(PolicySettingsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.fileUploadLimitInMb = defaults.fileUploadLimitInMb;
-    	      this.maxRequestBodySizeInKb = defaults.maxRequestBodySizeInKb;
-    	      this.mode = defaults.mode;
-    	      this.requestBodyCheck = defaults.requestBodyCheck;
-    	      this.state = defaults.state;
+            $ = new PolicySettingsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder fileUploadLimitInMb(@Nullable Output<Integer> fileUploadLimitInMb) {
-            this.fileUploadLimitInMb = fileUploadLimitInMb;
+            $.fileUploadLimitInMb = fileUploadLimitInMb;
             return this;
         }
-        public Builder fileUploadLimitInMb(@Nullable Integer fileUploadLimitInMb) {
-            this.fileUploadLimitInMb = Codegen.ofNullable(fileUploadLimitInMb);
-            return this;
+
+        public Builder fileUploadLimitInMb(Integer fileUploadLimitInMb) {
+            return fileUploadLimitInMb(Output.of(fileUploadLimitInMb));
         }
+
         public Builder maxRequestBodySizeInKb(@Nullable Output<Integer> maxRequestBodySizeInKb) {
-            this.maxRequestBodySizeInKb = maxRequestBodySizeInKb;
+            $.maxRequestBodySizeInKb = maxRequestBodySizeInKb;
             return this;
         }
-        public Builder maxRequestBodySizeInKb(@Nullable Integer maxRequestBodySizeInKb) {
-            this.maxRequestBodySizeInKb = Codegen.ofNullable(maxRequestBodySizeInKb);
-            return this;
+
+        public Builder maxRequestBodySizeInKb(Integer maxRequestBodySizeInKb) {
+            return maxRequestBodySizeInKb(Output.of(maxRequestBodySizeInKb));
         }
+
         public Builder mode(@Nullable Output<Either<String,WebApplicationFirewallMode>> mode) {
-            this.mode = mode;
+            $.mode = mode;
             return this;
         }
-        public Builder mode(@Nullable Either<String,WebApplicationFirewallMode> mode) {
-            this.mode = Codegen.ofNullable(mode);
-            return this;
+
+        public Builder mode(Either<String,WebApplicationFirewallMode> mode) {
+            return mode(Output.of(mode));
         }
+
         public Builder requestBodyCheck(@Nullable Output<Boolean> requestBodyCheck) {
-            this.requestBodyCheck = requestBodyCheck;
+            $.requestBodyCheck = requestBodyCheck;
             return this;
         }
-        public Builder requestBodyCheck(@Nullable Boolean requestBodyCheck) {
-            this.requestBodyCheck = Codegen.ofNullable(requestBodyCheck);
-            return this;
+
+        public Builder requestBodyCheck(Boolean requestBodyCheck) {
+            return requestBodyCheck(Output.of(requestBodyCheck));
         }
+
         public Builder state(@Nullable Output<Either<String,WebApplicationFirewallEnabledState>> state) {
-            this.state = state;
+            $.state = state;
             return this;
         }
-        public Builder state(@Nullable Either<String,WebApplicationFirewallEnabledState> state) {
-            this.state = Codegen.ofNullable(state);
-            return this;
-        }        public PolicySettingsArgs build() {
-            return new PolicySettingsArgs(fileUploadLimitInMb, maxRequestBodySizeInKb, mode, requestBodyCheck, state);
+
+        public Builder state(Either<String,WebApplicationFirewallEnabledState> state) {
+            return state(Output.of(state));
+        }
+
+        public PolicySettingsArgs build() {
+            return $;
         }
     }
+
 }

@@ -7,9 +7,9 @@ import com.pulumi.awsnative.databrew.inputs.RecipeActionArgs;
 import com.pulumi.awsnative.databrew.inputs.RecipeConditionExpressionArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -18,7 +18,7 @@ public final class RecipeStepArgs extends com.pulumi.resources.ResourceArgs {
     public static final RecipeStepArgs Empty = new RecipeStepArgs();
 
     @Import(name="action", required=true)
-      private final Output<RecipeActionArgs> action;
+    private Output<RecipeActionArgs> action;
 
     public Output<RecipeActionArgs> action() {
         return this.action;
@@ -29,66 +29,63 @@ public final class RecipeStepArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="conditionExpressions")
-      private final @Nullable Output<List<RecipeConditionExpressionArgs>> conditionExpressions;
+    private @Nullable Output<List<RecipeConditionExpressionArgs>> conditionExpressions;
 
-    public Output<List<RecipeConditionExpressionArgs>> conditionExpressions() {
-        return this.conditionExpressions == null ? Codegen.empty() : this.conditionExpressions;
+    public Optional<Output<List<RecipeConditionExpressionArgs>>> conditionExpressions() {
+        return Optional.ofNullable(this.conditionExpressions);
     }
 
-    public RecipeStepArgs(
-        Output<RecipeActionArgs> action,
-        @Nullable Output<List<RecipeConditionExpressionArgs>> conditionExpressions) {
-        this.action = Objects.requireNonNull(action, "expected parameter 'action' to be non-null");
-        this.conditionExpressions = conditionExpressions;
-    }
+    private RecipeStepArgs() {}
 
-    private RecipeStepArgs() {
-        this.action = Codegen.empty();
-        this.conditionExpressions = Codegen.empty();
+    private RecipeStepArgs(RecipeStepArgs $) {
+        this.action = $.action;
+        this.conditionExpressions = $.conditionExpressions;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RecipeStepArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<RecipeActionArgs> action;
-        private @Nullable Output<List<RecipeConditionExpressionArgs>> conditionExpressions;
+        private RecipeStepArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RecipeStepArgs();
         }
 
         public Builder(RecipeStepArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.action = defaults.action;
-    	      this.conditionExpressions = defaults.conditionExpressions;
+            $ = new RecipeStepArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder action(Output<RecipeActionArgs> action) {
-            this.action = Objects.requireNonNull(action);
+            $.action = action;
             return this;
         }
+
         public Builder action(RecipeActionArgs action) {
-            this.action = Output.of(Objects.requireNonNull(action));
-            return this;
+            return action(Output.of(action));
         }
+
         public Builder conditionExpressions(@Nullable Output<List<RecipeConditionExpressionArgs>> conditionExpressions) {
-            this.conditionExpressions = conditionExpressions;
+            $.conditionExpressions = conditionExpressions;
             return this;
         }
-        public Builder conditionExpressions(@Nullable List<RecipeConditionExpressionArgs> conditionExpressions) {
-            this.conditionExpressions = Codegen.ofNullable(conditionExpressions);
-            return this;
+
+        public Builder conditionExpressions(List<RecipeConditionExpressionArgs> conditionExpressions) {
+            return conditionExpressions(Output.of(conditionExpressions));
         }
+
         public Builder conditionExpressions(RecipeConditionExpressionArgs... conditionExpressions) {
             return conditionExpressions(List.of(conditionExpressions));
-        }        public RecipeStepArgs build() {
-            return new RecipeStepArgs(action, conditionExpressions);
+        }
+
+        public RecipeStepArgs build() {
+            $.action = Objects.requireNonNull($.action, "expected parameter 'action' to be non-null");
+            return $;
         }
     }
+
 }

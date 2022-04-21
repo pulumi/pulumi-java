@@ -5,9 +5,9 @@ package com.pulumi.gcp.healthcare.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class ConsentStoreIamPolicyState extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="consentStoreId")
-      private final @Nullable Output<String> consentStoreId;
+    private @Nullable Output<String> consentStoreId;
 
-    public Output<String> consentStoreId() {
-        return this.consentStoreId == null ? Codegen.empty() : this.consentStoreId;
+    public Optional<Output<String>> consentStoreId() {
+        return Optional.ofNullable(this.consentStoreId);
     }
 
     /**
@@ -33,10 +33,10 @@ public final class ConsentStoreIamPolicyState extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="dataset")
-      private final @Nullable Output<String> dataset;
+    private @Nullable Output<String> dataset;
 
-    public Output<String> dataset() {
-        return this.dataset == null ? Codegen.empty() : this.dataset;
+    public Optional<Output<String>> dataset() {
+        return Optional.ofNullable(this.dataset);
     }
 
     /**
@@ -44,10 +44,10 @@ public final class ConsentStoreIamPolicyState extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="etag")
-      private final @Nullable Output<String> etag;
+    private @Nullable Output<String> etag;
 
-    public Output<String> etag() {
-        return this.etag == null ? Codegen.empty() : this.etag;
+    public Optional<Output<String>> etag() {
+        return Optional.ofNullable(this.etag);
     }
 
     /**
@@ -56,89 +56,78 @@ public final class ConsentStoreIamPolicyState extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="policyData")
-      private final @Nullable Output<String> policyData;
+    private @Nullable Output<String> policyData;
 
-    public Output<String> policyData() {
-        return this.policyData == null ? Codegen.empty() : this.policyData;
+    public Optional<Output<String>> policyData() {
+        return Optional.ofNullable(this.policyData);
     }
 
-    public ConsentStoreIamPolicyState(
-        @Nullable Output<String> consentStoreId,
-        @Nullable Output<String> dataset,
-        @Nullable Output<String> etag,
-        @Nullable Output<String> policyData) {
-        this.consentStoreId = consentStoreId;
-        this.dataset = dataset;
-        this.etag = etag;
-        this.policyData = policyData;
-    }
+    private ConsentStoreIamPolicyState() {}
 
-    private ConsentStoreIamPolicyState() {
-        this.consentStoreId = Codegen.empty();
-        this.dataset = Codegen.empty();
-        this.etag = Codegen.empty();
-        this.policyData = Codegen.empty();
+    private ConsentStoreIamPolicyState(ConsentStoreIamPolicyState $) {
+        this.consentStoreId = $.consentStoreId;
+        this.dataset = $.dataset;
+        this.etag = $.etag;
+        this.policyData = $.policyData;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ConsentStoreIamPolicyState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> consentStoreId;
-        private @Nullable Output<String> dataset;
-        private @Nullable Output<String> etag;
-        private @Nullable Output<String> policyData;
+        private ConsentStoreIamPolicyState $;
 
         public Builder() {
-    	      // Empty
+            $ = new ConsentStoreIamPolicyState();
         }
 
         public Builder(ConsentStoreIamPolicyState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.consentStoreId = defaults.consentStoreId;
-    	      this.dataset = defaults.dataset;
-    	      this.etag = defaults.etag;
-    	      this.policyData = defaults.policyData;
+            $ = new ConsentStoreIamPolicyState(Objects.requireNonNull(defaults));
         }
 
         public Builder consentStoreId(@Nullable Output<String> consentStoreId) {
-            this.consentStoreId = consentStoreId;
+            $.consentStoreId = consentStoreId;
             return this;
         }
-        public Builder consentStoreId(@Nullable String consentStoreId) {
-            this.consentStoreId = Codegen.ofNullable(consentStoreId);
-            return this;
+
+        public Builder consentStoreId(String consentStoreId) {
+            return consentStoreId(Output.of(consentStoreId));
         }
+
         public Builder dataset(@Nullable Output<String> dataset) {
-            this.dataset = dataset;
+            $.dataset = dataset;
             return this;
         }
-        public Builder dataset(@Nullable String dataset) {
-            this.dataset = Codegen.ofNullable(dataset);
-            return this;
+
+        public Builder dataset(String dataset) {
+            return dataset(Output.of(dataset));
         }
+
         public Builder etag(@Nullable Output<String> etag) {
-            this.etag = etag;
+            $.etag = etag;
             return this;
         }
-        public Builder etag(@Nullable String etag) {
-            this.etag = Codegen.ofNullable(etag);
-            return this;
+
+        public Builder etag(String etag) {
+            return etag(Output.of(etag));
         }
+
         public Builder policyData(@Nullable Output<String> policyData) {
-            this.policyData = policyData;
+            $.policyData = policyData;
             return this;
         }
-        public Builder policyData(@Nullable String policyData) {
-            this.policyData = Codegen.ofNullable(policyData);
-            return this;
-        }        public ConsentStoreIamPolicyState build() {
-            return new ConsentStoreIamPolicyState(consentStoreId, dataset, etag, policyData);
+
+        public Builder policyData(String policyData) {
+            return policyData(Output.of(policyData));
+        }
+
+        public ConsentStoreIamPolicyState build() {
+            return $;
         }
     }
+
 }

@@ -5,9 +5,9 @@ package com.pulumi.azurenative.storage.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class EncryptionScopeKeyVaultPropertiesArgs extends com.pulumi.reso
      * 
      */
     @Import(name="keyUri")
-      private final @Nullable Output<String> keyUri;
+    private @Nullable Output<String> keyUri;
 
-    public Output<String> keyUri() {
-        return this.keyUri == null ? Codegen.empty() : this.keyUri;
+    public Optional<Output<String>> keyUri() {
+        return Optional.ofNullable(this.keyUri);
     }
 
-    public EncryptionScopeKeyVaultPropertiesArgs(@Nullable Output<String> keyUri) {
-        this.keyUri = keyUri;
-    }
+    private EncryptionScopeKeyVaultPropertiesArgs() {}
 
-    private EncryptionScopeKeyVaultPropertiesArgs() {
-        this.keyUri = Codegen.empty();
+    private EncryptionScopeKeyVaultPropertiesArgs(EncryptionScopeKeyVaultPropertiesArgs $) {
+        this.keyUri = $.keyUri;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EncryptionScopeKeyVaultPropertiesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> keyUri;
+        private EncryptionScopeKeyVaultPropertiesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new EncryptionScopeKeyVaultPropertiesArgs();
         }
 
         public Builder(EncryptionScopeKeyVaultPropertiesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.keyUri = defaults.keyUri;
+            $ = new EncryptionScopeKeyVaultPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder keyUri(@Nullable Output<String> keyUri) {
-            this.keyUri = keyUri;
+            $.keyUri = keyUri;
             return this;
         }
-        public Builder keyUri(@Nullable String keyUri) {
-            this.keyUri = Codegen.ofNullable(keyUri);
-            return this;
-        }        public EncryptionScopeKeyVaultPropertiesArgs build() {
-            return new EncryptionScopeKeyVaultPropertiesArgs(keyUri);
+
+        public Builder keyUri(String keyUri) {
+            return keyUri(Output.of(keyUri));
+        }
+
+        public EncryptionScopeKeyVaultPropertiesArgs build() {
+            return $;
         }
     }
+
 }

@@ -17,45 +17,45 @@ public final class MonitoringScheduleMonitoringInput extends com.pulumi.resource
     public static final MonitoringScheduleMonitoringInput Empty = new MonitoringScheduleMonitoringInput();
 
     @Import(name="endpointInput", required=true)
-      private final MonitoringScheduleEndpointInput endpointInput;
+    private MonitoringScheduleEndpointInput endpointInput;
 
     public MonitoringScheduleEndpointInput endpointInput() {
         return this.endpointInput;
     }
 
-    public MonitoringScheduleMonitoringInput(MonitoringScheduleEndpointInput endpointInput) {
-        this.endpointInput = Objects.requireNonNull(endpointInput, "expected parameter 'endpointInput' to be non-null");
-    }
+    private MonitoringScheduleMonitoringInput() {}
 
-    private MonitoringScheduleMonitoringInput() {
-        this.endpointInput = null;
+    private MonitoringScheduleMonitoringInput(MonitoringScheduleMonitoringInput $) {
+        this.endpointInput = $.endpointInput;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MonitoringScheduleMonitoringInput defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private MonitoringScheduleEndpointInput endpointInput;
+        private MonitoringScheduleMonitoringInput $;
 
         public Builder() {
-    	      // Empty
+            $ = new MonitoringScheduleMonitoringInput();
         }
 
         public Builder(MonitoringScheduleMonitoringInput defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.endpointInput = defaults.endpointInput;
+            $ = new MonitoringScheduleMonitoringInput(Objects.requireNonNull(defaults));
         }
 
         public Builder endpointInput(MonitoringScheduleEndpointInput endpointInput) {
-            this.endpointInput = Objects.requireNonNull(endpointInput);
+            $.endpointInput = endpointInput;
             return this;
-        }        public MonitoringScheduleMonitoringInput build() {
-            return new MonitoringScheduleMonitoringInput(endpointInput);
+        }
+
+        public MonitoringScheduleMonitoringInput build() {
+            $.endpointInput = Objects.requireNonNull($.endpointInput, "expected parameter 'endpointInput' to be non-null");
+            return $;
         }
     }
+
 }

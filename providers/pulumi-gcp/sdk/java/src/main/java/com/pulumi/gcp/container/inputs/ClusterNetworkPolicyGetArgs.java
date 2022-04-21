@@ -5,10 +5,10 @@ package com.pulumi.gcp.container.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,7 +22,7 @@ public final class ClusterNetworkPolicyGetArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="enabled", required=true)
-      private final Output<Boolean> enabled;
+    private Output<Boolean> enabled;
 
     public Output<Boolean> enabled() {
         return this.enabled;
@@ -33,63 +33,59 @@ public final class ClusterNetworkPolicyGetArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="provider")
-      private final @Nullable Output<String> provider;
+    private @Nullable Output<String> provider;
 
-    public Output<String> provider() {
-        return this.provider == null ? Codegen.empty() : this.provider;
+    public Optional<Output<String>> provider() {
+        return Optional.ofNullable(this.provider);
     }
 
-    public ClusterNetworkPolicyGetArgs(
-        Output<Boolean> enabled,
-        @Nullable Output<String> provider) {
-        this.enabled = Objects.requireNonNull(enabled, "expected parameter 'enabled' to be non-null");
-        this.provider = provider;
-    }
+    private ClusterNetworkPolicyGetArgs() {}
 
-    private ClusterNetworkPolicyGetArgs() {
-        this.enabled = Codegen.empty();
-        this.provider = Codegen.empty();
+    private ClusterNetworkPolicyGetArgs(ClusterNetworkPolicyGetArgs $) {
+        this.enabled = $.enabled;
+        this.provider = $.provider;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ClusterNetworkPolicyGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Boolean> enabled;
-        private @Nullable Output<String> provider;
+        private ClusterNetworkPolicyGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ClusterNetworkPolicyGetArgs();
         }
 
         public Builder(ClusterNetworkPolicyGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.enabled = defaults.enabled;
-    	      this.provider = defaults.provider;
+            $ = new ClusterNetworkPolicyGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder enabled(Output<Boolean> enabled) {
-            this.enabled = Objects.requireNonNull(enabled);
+            $.enabled = enabled;
             return this;
         }
+
         public Builder enabled(Boolean enabled) {
-            this.enabled = Output.of(Objects.requireNonNull(enabled));
-            return this;
+            return enabled(Output.of(enabled));
         }
+
         public Builder provider(@Nullable Output<String> provider) {
-            this.provider = provider;
+            $.provider = provider;
             return this;
         }
-        public Builder provider(@Nullable String provider) {
-            this.provider = Codegen.ofNullable(provider);
-            return this;
-        }        public ClusterNetworkPolicyGetArgs build() {
-            return new ClusterNetworkPolicyGetArgs(enabled, provider);
+
+        public Builder provider(String provider) {
+            return provider(Output.of(provider));
+        }
+
+        public ClusterNetworkPolicyGetArgs build() {
+            $.enabled = Objects.requireNonNull($.enabled, "expected parameter 'enabled' to be non-null");
+            return $;
         }
     }
+
 }

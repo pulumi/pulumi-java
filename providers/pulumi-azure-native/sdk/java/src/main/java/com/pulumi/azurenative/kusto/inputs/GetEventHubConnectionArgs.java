@@ -17,7 +17,7 @@ public final class GetEventHubConnectionArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="clusterName", required=true)
-      private final String clusterName;
+    private String clusterName;
 
     public String clusterName() {
         return this.clusterName;
@@ -28,7 +28,7 @@ public final class GetEventHubConnectionArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="databaseName", required=true)
-      private final String databaseName;
+    private String databaseName;
 
     public String databaseName() {
         return this.databaseName;
@@ -39,7 +39,7 @@ public final class GetEventHubConnectionArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="eventHubConnectionName", required=true)
-      private final String eventHubConnectionName;
+    private String eventHubConnectionName;
 
     public String eventHubConnectionName() {
         return this.eventHubConnectionName;
@@ -50,73 +50,66 @@ public final class GetEventHubConnectionArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public GetEventHubConnectionArgs(
-        String clusterName,
-        String databaseName,
-        String eventHubConnectionName,
-        String resourceGroupName) {
-        this.clusterName = Objects.requireNonNull(clusterName, "expected parameter 'clusterName' to be non-null");
-        this.databaseName = Objects.requireNonNull(databaseName, "expected parameter 'databaseName' to be non-null");
-        this.eventHubConnectionName = Objects.requireNonNull(eventHubConnectionName, "expected parameter 'eventHubConnectionName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private GetEventHubConnectionArgs() {}
 
-    private GetEventHubConnectionArgs() {
-        this.clusterName = null;
-        this.databaseName = null;
-        this.eventHubConnectionName = null;
-        this.resourceGroupName = null;
+    private GetEventHubConnectionArgs(GetEventHubConnectionArgs $) {
+        this.clusterName = $.clusterName;
+        this.databaseName = $.databaseName;
+        this.eventHubConnectionName = $.eventHubConnectionName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetEventHubConnectionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String clusterName;
-        private String databaseName;
-        private String eventHubConnectionName;
-        private String resourceGroupName;
+        private GetEventHubConnectionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetEventHubConnectionArgs();
         }
 
         public Builder(GetEventHubConnectionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.clusterName = defaults.clusterName;
-    	      this.databaseName = defaults.databaseName;
-    	      this.eventHubConnectionName = defaults.eventHubConnectionName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new GetEventHubConnectionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder clusterName(String clusterName) {
-            this.clusterName = Objects.requireNonNull(clusterName);
+            $.clusterName = clusterName;
             return this;
         }
+
         public Builder databaseName(String databaseName) {
-            this.databaseName = Objects.requireNonNull(databaseName);
+            $.databaseName = databaseName;
             return this;
         }
+
         public Builder eventHubConnectionName(String eventHubConnectionName) {
-            this.eventHubConnectionName = Objects.requireNonNull(eventHubConnectionName);
+            $.eventHubConnectionName = eventHubConnectionName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public GetEventHubConnectionArgs build() {
-            return new GetEventHubConnectionArgs(clusterName, databaseName, eventHubConnectionName, resourceGroupName);
+        }
+
+        public GetEventHubConnectionArgs build() {
+            $.clusterName = Objects.requireNonNull($.clusterName, "expected parameter 'clusterName' to be non-null");
+            $.databaseName = Objects.requireNonNull($.databaseName, "expected parameter 'databaseName' to be non-null");
+            $.eventHubConnectionName = Objects.requireNonNull($.eventHubConnectionName, "expected parameter 'eventHubConnectionName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

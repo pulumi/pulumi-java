@@ -10,6 +10,7 @@ import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +27,10 @@ public final class HyperVReplicaAzurePolicyInputArgs extends com.pulumi.resource
      * 
      */
     @Import(name="applicationConsistentSnapshotFrequencyInHours")
-      private final @Nullable Output<Integer> applicationConsistentSnapshotFrequencyInHours;
+    private @Nullable Output<Integer> applicationConsistentSnapshotFrequencyInHours;
 
-    public Output<Integer> applicationConsistentSnapshotFrequencyInHours() {
-        return this.applicationConsistentSnapshotFrequencyInHours == null ? Codegen.empty() : this.applicationConsistentSnapshotFrequencyInHours;
+    public Optional<Output<Integer>> applicationConsistentSnapshotFrequencyInHours() {
+        return Optional.ofNullable(this.applicationConsistentSnapshotFrequencyInHours);
     }
 
     /**
@@ -38,10 +39,10 @@ public final class HyperVReplicaAzurePolicyInputArgs extends com.pulumi.resource
      * 
      */
     @Import(name="instanceType")
-      private final @Nullable Output<String> instanceType;
+    private @Nullable Output<String> instanceType;
 
-    public Output<String> instanceType() {
-        return this.instanceType == null ? Codegen.empty() : this.instanceType;
+    public Optional<Output<String>> instanceType() {
+        return Optional.ofNullable(this.instanceType);
     }
 
     /**
@@ -49,10 +50,10 @@ public final class HyperVReplicaAzurePolicyInputArgs extends com.pulumi.resource
      * 
      */
     @Import(name="onlineReplicationStartTime")
-      private final @Nullable Output<String> onlineReplicationStartTime;
+    private @Nullable Output<String> onlineReplicationStartTime;
 
-    public Output<String> onlineReplicationStartTime() {
-        return this.onlineReplicationStartTime == null ? Codegen.empty() : this.onlineReplicationStartTime;
+    public Optional<Output<String>> onlineReplicationStartTime() {
+        return Optional.ofNullable(this.onlineReplicationStartTime);
     }
 
     /**
@@ -60,10 +61,10 @@ public final class HyperVReplicaAzurePolicyInputArgs extends com.pulumi.resource
      * 
      */
     @Import(name="recoveryPointHistoryDuration")
-      private final @Nullable Output<Integer> recoveryPointHistoryDuration;
+    private @Nullable Output<Integer> recoveryPointHistoryDuration;
 
-    public Output<Integer> recoveryPointHistoryDuration() {
-        return this.recoveryPointHistoryDuration == null ? Codegen.empty() : this.recoveryPointHistoryDuration;
+    public Optional<Output<Integer>> recoveryPointHistoryDuration() {
+        return Optional.ofNullable(this.recoveryPointHistoryDuration);
     }
 
     /**
@@ -71,10 +72,10 @@ public final class HyperVReplicaAzurePolicyInputArgs extends com.pulumi.resource
      * 
      */
     @Import(name="replicationInterval")
-      private final @Nullable Output<Integer> replicationInterval;
+    private @Nullable Output<Integer> replicationInterval;
 
-    public Output<Integer> replicationInterval() {
-        return this.replicationInterval == null ? Codegen.empty() : this.replicationInterval;
+    public Optional<Output<Integer>> replicationInterval() {
+        return Optional.ofNullable(this.replicationInterval);
     }
 
     /**
@@ -82,118 +83,103 @@ public final class HyperVReplicaAzurePolicyInputArgs extends com.pulumi.resource
      * 
      */
     @Import(name="storageAccounts")
-      private final @Nullable Output<List<String>> storageAccounts;
+    private @Nullable Output<List<String>> storageAccounts;
 
-    public Output<List<String>> storageAccounts() {
-        return this.storageAccounts == null ? Codegen.empty() : this.storageAccounts;
+    public Optional<Output<List<String>>> storageAccounts() {
+        return Optional.ofNullable(this.storageAccounts);
     }
 
-    public HyperVReplicaAzurePolicyInputArgs(
-        @Nullable Output<Integer> applicationConsistentSnapshotFrequencyInHours,
-        @Nullable Output<String> instanceType,
-        @Nullable Output<String> onlineReplicationStartTime,
-        @Nullable Output<Integer> recoveryPointHistoryDuration,
-        @Nullable Output<Integer> replicationInterval,
-        @Nullable Output<List<String>> storageAccounts) {
-        this.applicationConsistentSnapshotFrequencyInHours = applicationConsistentSnapshotFrequencyInHours;
-        this.instanceType = Codegen.stringProp("instanceType").output().arg(instanceType).getNullable();
-        this.onlineReplicationStartTime = onlineReplicationStartTime;
-        this.recoveryPointHistoryDuration = recoveryPointHistoryDuration;
-        this.replicationInterval = replicationInterval;
-        this.storageAccounts = storageAccounts;
-    }
+    private HyperVReplicaAzurePolicyInputArgs() {}
 
-    private HyperVReplicaAzurePolicyInputArgs() {
-        this.applicationConsistentSnapshotFrequencyInHours = Codegen.empty();
-        this.instanceType = Codegen.empty();
-        this.onlineReplicationStartTime = Codegen.empty();
-        this.recoveryPointHistoryDuration = Codegen.empty();
-        this.replicationInterval = Codegen.empty();
-        this.storageAccounts = Codegen.empty();
+    private HyperVReplicaAzurePolicyInputArgs(HyperVReplicaAzurePolicyInputArgs $) {
+        this.applicationConsistentSnapshotFrequencyInHours = $.applicationConsistentSnapshotFrequencyInHours;
+        this.instanceType = $.instanceType;
+        this.onlineReplicationStartTime = $.onlineReplicationStartTime;
+        this.recoveryPointHistoryDuration = $.recoveryPointHistoryDuration;
+        this.replicationInterval = $.replicationInterval;
+        this.storageAccounts = $.storageAccounts;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(HyperVReplicaAzurePolicyInputArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> applicationConsistentSnapshotFrequencyInHours;
-        private @Nullable Output<String> instanceType;
-        private @Nullable Output<String> onlineReplicationStartTime;
-        private @Nullable Output<Integer> recoveryPointHistoryDuration;
-        private @Nullable Output<Integer> replicationInterval;
-        private @Nullable Output<List<String>> storageAccounts;
+        private HyperVReplicaAzurePolicyInputArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new HyperVReplicaAzurePolicyInputArgs();
         }
 
         public Builder(HyperVReplicaAzurePolicyInputArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.applicationConsistentSnapshotFrequencyInHours = defaults.applicationConsistentSnapshotFrequencyInHours;
-    	      this.instanceType = defaults.instanceType;
-    	      this.onlineReplicationStartTime = defaults.onlineReplicationStartTime;
-    	      this.recoveryPointHistoryDuration = defaults.recoveryPointHistoryDuration;
-    	      this.replicationInterval = defaults.replicationInterval;
-    	      this.storageAccounts = defaults.storageAccounts;
+            $ = new HyperVReplicaAzurePolicyInputArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder applicationConsistentSnapshotFrequencyInHours(@Nullable Output<Integer> applicationConsistentSnapshotFrequencyInHours) {
-            this.applicationConsistentSnapshotFrequencyInHours = applicationConsistentSnapshotFrequencyInHours;
+            $.applicationConsistentSnapshotFrequencyInHours = applicationConsistentSnapshotFrequencyInHours;
             return this;
         }
-        public Builder applicationConsistentSnapshotFrequencyInHours(@Nullable Integer applicationConsistentSnapshotFrequencyInHours) {
-            this.applicationConsistentSnapshotFrequencyInHours = Codegen.ofNullable(applicationConsistentSnapshotFrequencyInHours);
-            return this;
+
+        public Builder applicationConsistentSnapshotFrequencyInHours(Integer applicationConsistentSnapshotFrequencyInHours) {
+            return applicationConsistentSnapshotFrequencyInHours(Output.of(applicationConsistentSnapshotFrequencyInHours));
         }
+
         public Builder instanceType(@Nullable Output<String> instanceType) {
-            this.instanceType = instanceType;
+            $.instanceType = instanceType;
             return this;
         }
-        public Builder instanceType(@Nullable String instanceType) {
-            this.instanceType = Codegen.ofNullable(instanceType);
-            return this;
+
+        public Builder instanceType(String instanceType) {
+            return instanceType(Output.of(instanceType));
         }
+
         public Builder onlineReplicationStartTime(@Nullable Output<String> onlineReplicationStartTime) {
-            this.onlineReplicationStartTime = onlineReplicationStartTime;
+            $.onlineReplicationStartTime = onlineReplicationStartTime;
             return this;
         }
-        public Builder onlineReplicationStartTime(@Nullable String onlineReplicationStartTime) {
-            this.onlineReplicationStartTime = Codegen.ofNullable(onlineReplicationStartTime);
-            return this;
+
+        public Builder onlineReplicationStartTime(String onlineReplicationStartTime) {
+            return onlineReplicationStartTime(Output.of(onlineReplicationStartTime));
         }
+
         public Builder recoveryPointHistoryDuration(@Nullable Output<Integer> recoveryPointHistoryDuration) {
-            this.recoveryPointHistoryDuration = recoveryPointHistoryDuration;
+            $.recoveryPointHistoryDuration = recoveryPointHistoryDuration;
             return this;
         }
-        public Builder recoveryPointHistoryDuration(@Nullable Integer recoveryPointHistoryDuration) {
-            this.recoveryPointHistoryDuration = Codegen.ofNullable(recoveryPointHistoryDuration);
-            return this;
+
+        public Builder recoveryPointHistoryDuration(Integer recoveryPointHistoryDuration) {
+            return recoveryPointHistoryDuration(Output.of(recoveryPointHistoryDuration));
         }
+
         public Builder replicationInterval(@Nullable Output<Integer> replicationInterval) {
-            this.replicationInterval = replicationInterval;
+            $.replicationInterval = replicationInterval;
             return this;
         }
-        public Builder replicationInterval(@Nullable Integer replicationInterval) {
-            this.replicationInterval = Codegen.ofNullable(replicationInterval);
-            return this;
+
+        public Builder replicationInterval(Integer replicationInterval) {
+            return replicationInterval(Output.of(replicationInterval));
         }
+
         public Builder storageAccounts(@Nullable Output<List<String>> storageAccounts) {
-            this.storageAccounts = storageAccounts;
+            $.storageAccounts = storageAccounts;
             return this;
         }
-        public Builder storageAccounts(@Nullable List<String> storageAccounts) {
-            this.storageAccounts = Codegen.ofNullable(storageAccounts);
-            return this;
+
+        public Builder storageAccounts(List<String> storageAccounts) {
+            return storageAccounts(Output.of(storageAccounts));
         }
+
         public Builder storageAccounts(String... storageAccounts) {
             return storageAccounts(List.of(storageAccounts));
-        }        public HyperVReplicaAzurePolicyInputArgs build() {
-            return new HyperVReplicaAzurePolicyInputArgs(applicationConsistentSnapshotFrequencyInHours, instanceType, onlineReplicationStartTime, recoveryPointHistoryDuration, replicationInterval, storageAccounts);
+        }
+
+        public HyperVReplicaAzurePolicyInputArgs build() {
+            $.instanceType = Codegen.stringProp("instanceType").output().arg($.instanceType).getNullable();
+            return $;
         }
     }
+
 }

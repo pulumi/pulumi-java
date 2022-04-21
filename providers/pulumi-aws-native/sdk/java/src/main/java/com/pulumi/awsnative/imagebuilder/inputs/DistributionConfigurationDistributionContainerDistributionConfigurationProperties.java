@@ -25,10 +25,10 @@ public final class DistributionConfigurationDistributionContainerDistributionCon
      * 
      */
     @Import(name="containerTags")
-      private final @Nullable List<String> containerTags;
+    private @Nullable List<String> containerTags;
 
-    public List<String> containerTags() {
-        return this.containerTags == null ? List.of() : this.containerTags;
+    public Optional<List<String>> containerTags() {
+        return Optional.ofNullable(this.containerTags);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class DistributionConfigurationDistributionContainerDistributionCon
      * 
      */
     @Import(name="description")
-      private final @Nullable String description;
+    private @Nullable String description;
 
     public Optional<String> description() {
-        return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -47,67 +47,60 @@ public final class DistributionConfigurationDistributionContainerDistributionCon
      * 
      */
     @Import(name="targetRepository")
-      private final @Nullable DistributionConfigurationTargetContainerRepository targetRepository;
+    private @Nullable DistributionConfigurationTargetContainerRepository targetRepository;
 
     public Optional<DistributionConfigurationTargetContainerRepository> targetRepository() {
-        return this.targetRepository == null ? Optional.empty() : Optional.ofNullable(this.targetRepository);
+        return Optional.ofNullable(this.targetRepository);
     }
 
-    public DistributionConfigurationDistributionContainerDistributionConfigurationProperties(
-        @Nullable List<String> containerTags,
-        @Nullable String description,
-        @Nullable DistributionConfigurationTargetContainerRepository targetRepository) {
-        this.containerTags = containerTags;
-        this.description = description;
-        this.targetRepository = targetRepository;
-    }
+    private DistributionConfigurationDistributionContainerDistributionConfigurationProperties() {}
 
-    private DistributionConfigurationDistributionContainerDistributionConfigurationProperties() {
-        this.containerTags = List.of();
-        this.description = null;
-        this.targetRepository = null;
+    private DistributionConfigurationDistributionContainerDistributionConfigurationProperties(DistributionConfigurationDistributionContainerDistributionConfigurationProperties $) {
+        this.containerTags = $.containerTags;
+        this.description = $.description;
+        this.targetRepository = $.targetRepository;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DistributionConfigurationDistributionContainerDistributionConfigurationProperties defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<String> containerTags;
-        private @Nullable String description;
-        private @Nullable DistributionConfigurationTargetContainerRepository targetRepository;
+        private DistributionConfigurationDistributionContainerDistributionConfigurationProperties $;
 
         public Builder() {
-    	      // Empty
+            $ = new DistributionConfigurationDistributionContainerDistributionConfigurationProperties();
         }
 
         public Builder(DistributionConfigurationDistributionContainerDistributionConfigurationProperties defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.containerTags = defaults.containerTags;
-    	      this.description = defaults.description;
-    	      this.targetRepository = defaults.targetRepository;
+            $ = new DistributionConfigurationDistributionContainerDistributionConfigurationProperties(Objects.requireNonNull(defaults));
         }
 
         public Builder containerTags(@Nullable List<String> containerTags) {
-            this.containerTags = containerTags;
+            $.containerTags = containerTags;
             return this;
         }
+
         public Builder containerTags(String... containerTags) {
             return containerTags(List.of(containerTags));
         }
+
         public Builder description(@Nullable String description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
+
         public Builder targetRepository(@Nullable DistributionConfigurationTargetContainerRepository targetRepository) {
-            this.targetRepository = targetRepository;
+            $.targetRepository = targetRepository;
             return this;
-        }        public DistributionConfigurationDistributionContainerDistributionConfigurationProperties build() {
-            return new DistributionConfigurationDistributionContainerDistributionConfigurationProperties(containerTags, description, targetRepository);
+        }
+
+        public DistributionConfigurationDistributionContainerDistributionConfigurationProperties build() {
+            return $;
         }
     }
+
 }

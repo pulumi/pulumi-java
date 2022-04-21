@@ -22,10 +22,10 @@ public final class CassandraTableGetPropertiesResponseResource extends com.pulum
      * 
      */
     @Import(name="analyticalStorageTtl")
-      private final @Nullable Integer analyticalStorageTtl;
+    private @Nullable Integer analyticalStorageTtl;
 
     public Optional<Integer> analyticalStorageTtl() {
-        return this.analyticalStorageTtl == null ? Optional.empty() : Optional.ofNullable(this.analyticalStorageTtl);
+        return Optional.ofNullable(this.analyticalStorageTtl);
     }
 
     /**
@@ -33,10 +33,10 @@ public final class CassandraTableGetPropertiesResponseResource extends com.pulum
      * 
      */
     @Import(name="defaultTtl")
-      private final @Nullable Integer defaultTtl;
+    private @Nullable Integer defaultTtl;
 
     public Optional<Integer> defaultTtl() {
-        return this.defaultTtl == null ? Optional.empty() : Optional.ofNullable(this.defaultTtl);
+        return Optional.ofNullable(this.defaultTtl);
     }
 
     /**
@@ -44,7 +44,7 @@ public final class CassandraTableGetPropertiesResponseResource extends com.pulum
      * 
      */
     @Import(name="etag", required=true)
-      private final String etag;
+    private String etag;
 
     public String etag() {
         return this.etag;
@@ -55,7 +55,7 @@ public final class CassandraTableGetPropertiesResponseResource extends com.pulum
      * 
      */
     @Import(name="id", required=true)
-      private final String id;
+    private String id;
 
     public String id() {
         return this.id;
@@ -66,7 +66,7 @@ public final class CassandraTableGetPropertiesResponseResource extends com.pulum
      * 
      */
     @Import(name="rid", required=true)
-      private final String rid;
+    private String rid;
 
     public String rid() {
         return this.rid;
@@ -77,10 +77,10 @@ public final class CassandraTableGetPropertiesResponseResource extends com.pulum
      * 
      */
     @Import(name="schema")
-      private final @Nullable CassandraSchemaResponse schema;
+    private @Nullable CassandraSchemaResponse schema;
 
     public Optional<CassandraSchemaResponse> schema() {
-        return this.schema == null ? Optional.empty() : Optional.ofNullable(this.schema);
+        return Optional.ofNullable(this.schema);
     }
 
     /**
@@ -88,100 +88,84 @@ public final class CassandraTableGetPropertiesResponseResource extends com.pulum
      * 
      */
     @Import(name="ts", required=true)
-      private final Double ts;
+    private Double ts;
 
     public Double ts() {
         return this.ts;
     }
 
-    public CassandraTableGetPropertiesResponseResource(
-        @Nullable Integer analyticalStorageTtl,
-        @Nullable Integer defaultTtl,
-        String etag,
-        String id,
-        String rid,
-        @Nullable CassandraSchemaResponse schema,
-        Double ts) {
-        this.analyticalStorageTtl = analyticalStorageTtl;
-        this.defaultTtl = defaultTtl;
-        this.etag = Objects.requireNonNull(etag, "expected parameter 'etag' to be non-null");
-        this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
-        this.rid = Objects.requireNonNull(rid, "expected parameter 'rid' to be non-null");
-        this.schema = schema;
-        this.ts = Objects.requireNonNull(ts, "expected parameter 'ts' to be non-null");
-    }
+    private CassandraTableGetPropertiesResponseResource() {}
 
-    private CassandraTableGetPropertiesResponseResource() {
-        this.analyticalStorageTtl = null;
-        this.defaultTtl = null;
-        this.etag = null;
-        this.id = null;
-        this.rid = null;
-        this.schema = null;
-        this.ts = null;
+    private CassandraTableGetPropertiesResponseResource(CassandraTableGetPropertiesResponseResource $) {
+        this.analyticalStorageTtl = $.analyticalStorageTtl;
+        this.defaultTtl = $.defaultTtl;
+        this.etag = $.etag;
+        this.id = $.id;
+        this.rid = $.rid;
+        this.schema = $.schema;
+        this.ts = $.ts;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CassandraTableGetPropertiesResponseResource defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Integer analyticalStorageTtl;
-        private @Nullable Integer defaultTtl;
-        private String etag;
-        private String id;
-        private String rid;
-        private @Nullable CassandraSchemaResponse schema;
-        private Double ts;
+        private CassandraTableGetPropertiesResponseResource $;
 
         public Builder() {
-    	      // Empty
+            $ = new CassandraTableGetPropertiesResponseResource();
         }
 
         public Builder(CassandraTableGetPropertiesResponseResource defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.analyticalStorageTtl = defaults.analyticalStorageTtl;
-    	      this.defaultTtl = defaults.defaultTtl;
-    	      this.etag = defaults.etag;
-    	      this.id = defaults.id;
-    	      this.rid = defaults.rid;
-    	      this.schema = defaults.schema;
-    	      this.ts = defaults.ts;
+            $ = new CassandraTableGetPropertiesResponseResource(Objects.requireNonNull(defaults));
         }
 
         public Builder analyticalStorageTtl(@Nullable Integer analyticalStorageTtl) {
-            this.analyticalStorageTtl = analyticalStorageTtl;
+            $.analyticalStorageTtl = analyticalStorageTtl;
             return this;
         }
+
         public Builder defaultTtl(@Nullable Integer defaultTtl) {
-            this.defaultTtl = defaultTtl;
+            $.defaultTtl = defaultTtl;
             return this;
         }
+
         public Builder etag(String etag) {
-            this.etag = Objects.requireNonNull(etag);
+            $.etag = etag;
             return this;
         }
+
         public Builder id(String id) {
-            this.id = Objects.requireNonNull(id);
+            $.id = id;
             return this;
         }
+
         public Builder rid(String rid) {
-            this.rid = Objects.requireNonNull(rid);
+            $.rid = rid;
             return this;
         }
+
         public Builder schema(@Nullable CassandraSchemaResponse schema) {
-            this.schema = schema;
+            $.schema = schema;
             return this;
         }
+
         public Builder ts(Double ts) {
-            this.ts = Objects.requireNonNull(ts);
+            $.ts = ts;
             return this;
-        }        public CassandraTableGetPropertiesResponseResource build() {
-            return new CassandraTableGetPropertiesResponseResource(analyticalStorageTtl, defaultTtl, etag, id, rid, schema, ts);
+        }
+
+        public CassandraTableGetPropertiesResponseResource build() {
+            $.etag = Objects.requireNonNull($.etag, "expected parameter 'etag' to be non-null");
+            $.id = Objects.requireNonNull($.id, "expected parameter 'id' to be non-null");
+            $.rid = Objects.requireNonNull($.rid, "expected parameter 'rid' to be non-null");
+            $.ts = Objects.requireNonNull($.ts, "expected parameter 'ts' to be non-null");
+            return $;
         }
     }
+
 }

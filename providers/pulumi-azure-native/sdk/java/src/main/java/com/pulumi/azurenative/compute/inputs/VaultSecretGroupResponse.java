@@ -25,10 +25,10 @@ public final class VaultSecretGroupResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="sourceVault")
-      private final @Nullable SubResourceResponse sourceVault;
+    private @Nullable SubResourceResponse sourceVault;
 
     public Optional<SubResourceResponse> sourceVault() {
-        return this.sourceVault == null ? Optional.empty() : Optional.ofNullable(this.sourceVault);
+        return Optional.ofNullable(this.sourceVault);
     }
 
     /**
@@ -36,58 +36,54 @@ public final class VaultSecretGroupResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="vaultCertificates")
-      private final @Nullable List<VaultCertificateResponse> vaultCertificates;
+    private @Nullable List<VaultCertificateResponse> vaultCertificates;
 
-    public List<VaultCertificateResponse> vaultCertificates() {
-        return this.vaultCertificates == null ? List.of() : this.vaultCertificates;
+    public Optional<List<VaultCertificateResponse>> vaultCertificates() {
+        return Optional.ofNullable(this.vaultCertificates);
     }
 
-    public VaultSecretGroupResponse(
-        @Nullable SubResourceResponse sourceVault,
-        @Nullable List<VaultCertificateResponse> vaultCertificates) {
-        this.sourceVault = sourceVault;
-        this.vaultCertificates = vaultCertificates;
-    }
+    private VaultSecretGroupResponse() {}
 
-    private VaultSecretGroupResponse() {
-        this.sourceVault = null;
-        this.vaultCertificates = List.of();
+    private VaultSecretGroupResponse(VaultSecretGroupResponse $) {
+        this.sourceVault = $.sourceVault;
+        this.vaultCertificates = $.vaultCertificates;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VaultSecretGroupResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable SubResourceResponse sourceVault;
-        private @Nullable List<VaultCertificateResponse> vaultCertificates;
+        private VaultSecretGroupResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new VaultSecretGroupResponse();
         }
 
         public Builder(VaultSecretGroupResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.sourceVault = defaults.sourceVault;
-    	      this.vaultCertificates = defaults.vaultCertificates;
+            $ = new VaultSecretGroupResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder sourceVault(@Nullable SubResourceResponse sourceVault) {
-            this.sourceVault = sourceVault;
+            $.sourceVault = sourceVault;
             return this;
         }
+
         public Builder vaultCertificates(@Nullable List<VaultCertificateResponse> vaultCertificates) {
-            this.vaultCertificates = vaultCertificates;
+            $.vaultCertificates = vaultCertificates;
             return this;
         }
+
         public Builder vaultCertificates(VaultCertificateResponse... vaultCertificates) {
             return vaultCertificates(List.of(vaultCertificates));
-        }        public VaultSecretGroupResponse build() {
-            return new VaultSecretGroupResponse(sourceVault, vaultCertificates);
+        }
+
+        public VaultSecretGroupResponse build() {
+            return $;
         }
     }
+
 }

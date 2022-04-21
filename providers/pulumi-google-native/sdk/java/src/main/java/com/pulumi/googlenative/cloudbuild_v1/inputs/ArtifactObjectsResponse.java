@@ -23,7 +23,7 @@ public final class ArtifactObjectsResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="location", required=true)
-      private final String location;
+    private String location;
 
     public String location() {
         return this.location;
@@ -34,7 +34,7 @@ public final class ArtifactObjectsResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="paths", required=true)
-      private final List<String> paths;
+    private List<String> paths;
 
     public List<String> paths() {
         return this.paths;
@@ -45,67 +45,63 @@ public final class ArtifactObjectsResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="timing", required=true)
-      private final TimeSpanResponse timing;
+    private TimeSpanResponse timing;
 
     public TimeSpanResponse timing() {
         return this.timing;
     }
 
-    public ArtifactObjectsResponse(
-        String location,
-        List<String> paths,
-        TimeSpanResponse timing) {
-        this.location = Objects.requireNonNull(location, "expected parameter 'location' to be non-null");
-        this.paths = Objects.requireNonNull(paths, "expected parameter 'paths' to be non-null");
-        this.timing = Objects.requireNonNull(timing, "expected parameter 'timing' to be non-null");
-    }
+    private ArtifactObjectsResponse() {}
 
-    private ArtifactObjectsResponse() {
-        this.location = null;
-        this.paths = List.of();
-        this.timing = null;
+    private ArtifactObjectsResponse(ArtifactObjectsResponse $) {
+        this.location = $.location;
+        this.paths = $.paths;
+        this.timing = $.timing;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ArtifactObjectsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String location;
-        private List<String> paths;
-        private TimeSpanResponse timing;
+        private ArtifactObjectsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ArtifactObjectsResponse();
         }
 
         public Builder(ArtifactObjectsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.location = defaults.location;
-    	      this.paths = defaults.paths;
-    	      this.timing = defaults.timing;
+            $ = new ArtifactObjectsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder location(String location) {
-            this.location = Objects.requireNonNull(location);
+            $.location = location;
             return this;
         }
+
         public Builder paths(List<String> paths) {
-            this.paths = Objects.requireNonNull(paths);
+            $.paths = paths;
             return this;
         }
+
         public Builder paths(String... paths) {
             return paths(List.of(paths));
         }
+
         public Builder timing(TimeSpanResponse timing) {
-            this.timing = Objects.requireNonNull(timing);
+            $.timing = timing;
             return this;
-        }        public ArtifactObjectsResponse build() {
-            return new ArtifactObjectsResponse(location, paths, timing);
+        }
+
+        public ArtifactObjectsResponse build() {
+            $.location = Objects.requireNonNull($.location, "expected parameter 'location' to be non-null");
+            $.paths = Objects.requireNonNull($.paths, "expected parameter 'paths' to be non-null");
+            $.timing = Objects.requireNonNull($.timing, "expected parameter 'timing' to be non-null");
+            return $;
         }
     }
+
 }

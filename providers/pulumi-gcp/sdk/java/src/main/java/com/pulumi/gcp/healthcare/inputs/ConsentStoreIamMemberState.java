@@ -5,10 +5,10 @@ package com.pulumi.gcp.healthcare.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.healthcare.inputs.ConsentStoreIamMemberConditionGetArgs;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -17,10 +17,10 @@ public final class ConsentStoreIamMemberState extends com.pulumi.resources.Resou
     public static final ConsentStoreIamMemberState Empty = new ConsentStoreIamMemberState();
 
     @Import(name="condition")
-      private final @Nullable Output<ConsentStoreIamMemberConditionGetArgs> condition;
+    private @Nullable Output<ConsentStoreIamMemberConditionGetArgs> condition;
 
-    public Output<ConsentStoreIamMemberConditionGetArgs> condition() {
-        return this.condition == null ? Codegen.empty() : this.condition;
+    public Optional<Output<ConsentStoreIamMemberConditionGetArgs>> condition() {
+        return Optional.ofNullable(this.condition);
     }
 
     /**
@@ -28,10 +28,10 @@ public final class ConsentStoreIamMemberState extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="consentStoreId")
-      private final @Nullable Output<String> consentStoreId;
+    private @Nullable Output<String> consentStoreId;
 
-    public Output<String> consentStoreId() {
-        return this.consentStoreId == null ? Codegen.empty() : this.consentStoreId;
+    public Optional<Output<String>> consentStoreId() {
+        return Optional.ofNullable(this.consentStoreId);
     }
 
     /**
@@ -41,10 +41,10 @@ public final class ConsentStoreIamMemberState extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="dataset")
-      private final @Nullable Output<String> dataset;
+    private @Nullable Output<String> dataset;
 
-    public Output<String> dataset() {
-        return this.dataset == null ? Codegen.empty() : this.dataset;
+    public Optional<Output<String>> dataset() {
+        return Optional.ofNullable(this.dataset);
     }
 
     /**
@@ -52,17 +52,17 @@ public final class ConsentStoreIamMemberState extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="etag")
-      private final @Nullable Output<String> etag;
+    private @Nullable Output<String> etag;
 
-    public Output<String> etag() {
-        return this.etag == null ? Codegen.empty() : this.etag;
+    public Optional<Output<String>> etag() {
+        return Optional.ofNullable(this.etag);
     }
 
     @Import(name="member")
-      private final @Nullable Output<String> member;
+    private @Nullable Output<String> member;
 
-    public Output<String> member() {
-        return this.member == null ? Codegen.empty() : this.member;
+    public Optional<Output<String>> member() {
+        return Optional.ofNullable(this.member);
     }
 
     /**
@@ -72,115 +72,98 @@ public final class ConsentStoreIamMemberState extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="role")
-      private final @Nullable Output<String> role;
+    private @Nullable Output<String> role;
 
-    public Output<String> role() {
-        return this.role == null ? Codegen.empty() : this.role;
+    public Optional<Output<String>> role() {
+        return Optional.ofNullable(this.role);
     }
 
-    public ConsentStoreIamMemberState(
-        @Nullable Output<ConsentStoreIamMemberConditionGetArgs> condition,
-        @Nullable Output<String> consentStoreId,
-        @Nullable Output<String> dataset,
-        @Nullable Output<String> etag,
-        @Nullable Output<String> member,
-        @Nullable Output<String> role) {
-        this.condition = condition;
-        this.consentStoreId = consentStoreId;
-        this.dataset = dataset;
-        this.etag = etag;
-        this.member = member;
-        this.role = role;
-    }
+    private ConsentStoreIamMemberState() {}
 
-    private ConsentStoreIamMemberState() {
-        this.condition = Codegen.empty();
-        this.consentStoreId = Codegen.empty();
-        this.dataset = Codegen.empty();
-        this.etag = Codegen.empty();
-        this.member = Codegen.empty();
-        this.role = Codegen.empty();
+    private ConsentStoreIamMemberState(ConsentStoreIamMemberState $) {
+        this.condition = $.condition;
+        this.consentStoreId = $.consentStoreId;
+        this.dataset = $.dataset;
+        this.etag = $.etag;
+        this.member = $.member;
+        this.role = $.role;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ConsentStoreIamMemberState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<ConsentStoreIamMemberConditionGetArgs> condition;
-        private @Nullable Output<String> consentStoreId;
-        private @Nullable Output<String> dataset;
-        private @Nullable Output<String> etag;
-        private @Nullable Output<String> member;
-        private @Nullable Output<String> role;
+        private ConsentStoreIamMemberState $;
 
         public Builder() {
-    	      // Empty
+            $ = new ConsentStoreIamMemberState();
         }
 
         public Builder(ConsentStoreIamMemberState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.condition = defaults.condition;
-    	      this.consentStoreId = defaults.consentStoreId;
-    	      this.dataset = defaults.dataset;
-    	      this.etag = defaults.etag;
-    	      this.member = defaults.member;
-    	      this.role = defaults.role;
+            $ = new ConsentStoreIamMemberState(Objects.requireNonNull(defaults));
         }
 
         public Builder condition(@Nullable Output<ConsentStoreIamMemberConditionGetArgs> condition) {
-            this.condition = condition;
+            $.condition = condition;
             return this;
         }
-        public Builder condition(@Nullable ConsentStoreIamMemberConditionGetArgs condition) {
-            this.condition = Codegen.ofNullable(condition);
-            return this;
+
+        public Builder condition(ConsentStoreIamMemberConditionGetArgs condition) {
+            return condition(Output.of(condition));
         }
+
         public Builder consentStoreId(@Nullable Output<String> consentStoreId) {
-            this.consentStoreId = consentStoreId;
+            $.consentStoreId = consentStoreId;
             return this;
         }
-        public Builder consentStoreId(@Nullable String consentStoreId) {
-            this.consentStoreId = Codegen.ofNullable(consentStoreId);
-            return this;
+
+        public Builder consentStoreId(String consentStoreId) {
+            return consentStoreId(Output.of(consentStoreId));
         }
+
         public Builder dataset(@Nullable Output<String> dataset) {
-            this.dataset = dataset;
+            $.dataset = dataset;
             return this;
         }
-        public Builder dataset(@Nullable String dataset) {
-            this.dataset = Codegen.ofNullable(dataset);
-            return this;
+
+        public Builder dataset(String dataset) {
+            return dataset(Output.of(dataset));
         }
+
         public Builder etag(@Nullable Output<String> etag) {
-            this.etag = etag;
+            $.etag = etag;
             return this;
         }
-        public Builder etag(@Nullable String etag) {
-            this.etag = Codegen.ofNullable(etag);
-            return this;
+
+        public Builder etag(String etag) {
+            return etag(Output.of(etag));
         }
+
         public Builder member(@Nullable Output<String> member) {
-            this.member = member;
+            $.member = member;
             return this;
         }
-        public Builder member(@Nullable String member) {
-            this.member = Codegen.ofNullable(member);
-            return this;
+
+        public Builder member(String member) {
+            return member(Output.of(member));
         }
+
         public Builder role(@Nullable Output<String> role) {
-            this.role = role;
+            $.role = role;
             return this;
         }
-        public Builder role(@Nullable String role) {
-            this.role = Codegen.ofNullable(role);
-            return this;
-        }        public ConsentStoreIamMemberState build() {
-            return new ConsentStoreIamMemberState(condition, consentStoreId, dataset, etag, member, role);
+
+        public Builder role(String role) {
+            return role(Output.of(role));
+        }
+
+        public ConsentStoreIamMemberState build() {
+            return $;
         }
     }
+
 }

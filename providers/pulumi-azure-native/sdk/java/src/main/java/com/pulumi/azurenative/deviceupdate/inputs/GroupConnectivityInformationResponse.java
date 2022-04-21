@@ -24,10 +24,10 @@ public final class GroupConnectivityInformationResponse extends com.pulumi.resou
      * 
      */
     @Import(name="customerVisibleFqdns")
-      private final @Nullable List<String> customerVisibleFqdns;
+    private @Nullable List<String> customerVisibleFqdns;
 
-    public List<String> customerVisibleFqdns() {
-        return this.customerVisibleFqdns == null ? List.of() : this.customerVisibleFqdns;
+    public Optional<List<String>> customerVisibleFqdns() {
+        return Optional.ofNullable(this.customerVisibleFqdns);
     }
 
     /**
@@ -35,7 +35,7 @@ public final class GroupConnectivityInformationResponse extends com.pulumi.resou
      * 
      */
     @Import(name="groupId", required=true)
-      private final String groupId;
+    private String groupId;
 
     public String groupId() {
         return this.groupId;
@@ -46,7 +46,7 @@ public final class GroupConnectivityInformationResponse extends com.pulumi.resou
      * 
      */
     @Import(name="internalFqdn", required=true)
-      private final String internalFqdn;
+    private String internalFqdn;
 
     public String internalFqdn() {
         return this.internalFqdn;
@@ -57,7 +57,7 @@ public final class GroupConnectivityInformationResponse extends com.pulumi.resou
      * 
      */
     @Import(name="memberName", required=true)
-      private final String memberName;
+    private String memberName;
 
     public String memberName() {
         return this.memberName;
@@ -68,10 +68,10 @@ public final class GroupConnectivityInformationResponse extends com.pulumi.resou
      * 
      */
     @Import(name="privateLinkServiceArmRegion")
-      private final @Nullable String privateLinkServiceArmRegion;
+    private @Nullable String privateLinkServiceArmRegion;
 
     public Optional<String> privateLinkServiceArmRegion() {
-        return this.privateLinkServiceArmRegion == null ? Optional.empty() : Optional.ofNullable(this.privateLinkServiceArmRegion);
+        return Optional.ofNullable(this.privateLinkServiceArmRegion);
     }
 
     /**
@@ -79,94 +79,81 @@ public final class GroupConnectivityInformationResponse extends com.pulumi.resou
      * 
      */
     @Import(name="redirectMapId")
-      private final @Nullable String redirectMapId;
+    private @Nullable String redirectMapId;
 
     public Optional<String> redirectMapId() {
-        return this.redirectMapId == null ? Optional.empty() : Optional.ofNullable(this.redirectMapId);
+        return Optional.ofNullable(this.redirectMapId);
     }
 
-    public GroupConnectivityInformationResponse(
-        @Nullable List<String> customerVisibleFqdns,
-        String groupId,
-        String internalFqdn,
-        String memberName,
-        @Nullable String privateLinkServiceArmRegion,
-        @Nullable String redirectMapId) {
-        this.customerVisibleFqdns = customerVisibleFqdns;
-        this.groupId = Objects.requireNonNull(groupId, "expected parameter 'groupId' to be non-null");
-        this.internalFqdn = Objects.requireNonNull(internalFqdn, "expected parameter 'internalFqdn' to be non-null");
-        this.memberName = Objects.requireNonNull(memberName, "expected parameter 'memberName' to be non-null");
-        this.privateLinkServiceArmRegion = privateLinkServiceArmRegion;
-        this.redirectMapId = redirectMapId;
-    }
+    private GroupConnectivityInformationResponse() {}
 
-    private GroupConnectivityInformationResponse() {
-        this.customerVisibleFqdns = List.of();
-        this.groupId = null;
-        this.internalFqdn = null;
-        this.memberName = null;
-        this.privateLinkServiceArmRegion = null;
-        this.redirectMapId = null;
+    private GroupConnectivityInformationResponse(GroupConnectivityInformationResponse $) {
+        this.customerVisibleFqdns = $.customerVisibleFqdns;
+        this.groupId = $.groupId;
+        this.internalFqdn = $.internalFqdn;
+        this.memberName = $.memberName;
+        this.privateLinkServiceArmRegion = $.privateLinkServiceArmRegion;
+        this.redirectMapId = $.redirectMapId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GroupConnectivityInformationResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<String> customerVisibleFqdns;
-        private String groupId;
-        private String internalFqdn;
-        private String memberName;
-        private @Nullable String privateLinkServiceArmRegion;
-        private @Nullable String redirectMapId;
+        private GroupConnectivityInformationResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GroupConnectivityInformationResponse();
         }
 
         public Builder(GroupConnectivityInformationResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.customerVisibleFqdns = defaults.customerVisibleFqdns;
-    	      this.groupId = defaults.groupId;
-    	      this.internalFqdn = defaults.internalFqdn;
-    	      this.memberName = defaults.memberName;
-    	      this.privateLinkServiceArmRegion = defaults.privateLinkServiceArmRegion;
-    	      this.redirectMapId = defaults.redirectMapId;
+            $ = new GroupConnectivityInformationResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder customerVisibleFqdns(@Nullable List<String> customerVisibleFqdns) {
-            this.customerVisibleFqdns = customerVisibleFqdns;
+            $.customerVisibleFqdns = customerVisibleFqdns;
             return this;
         }
+
         public Builder customerVisibleFqdns(String... customerVisibleFqdns) {
             return customerVisibleFqdns(List.of(customerVisibleFqdns));
         }
+
         public Builder groupId(String groupId) {
-            this.groupId = Objects.requireNonNull(groupId);
+            $.groupId = groupId;
             return this;
         }
+
         public Builder internalFqdn(String internalFqdn) {
-            this.internalFqdn = Objects.requireNonNull(internalFqdn);
+            $.internalFqdn = internalFqdn;
             return this;
         }
+
         public Builder memberName(String memberName) {
-            this.memberName = Objects.requireNonNull(memberName);
+            $.memberName = memberName;
             return this;
         }
+
         public Builder privateLinkServiceArmRegion(@Nullable String privateLinkServiceArmRegion) {
-            this.privateLinkServiceArmRegion = privateLinkServiceArmRegion;
+            $.privateLinkServiceArmRegion = privateLinkServiceArmRegion;
             return this;
         }
+
         public Builder redirectMapId(@Nullable String redirectMapId) {
-            this.redirectMapId = redirectMapId;
+            $.redirectMapId = redirectMapId;
             return this;
-        }        public GroupConnectivityInformationResponse build() {
-            return new GroupConnectivityInformationResponse(customerVisibleFqdns, groupId, internalFqdn, memberName, privateLinkServiceArmRegion, redirectMapId);
+        }
+
+        public GroupConnectivityInformationResponse build() {
+            $.groupId = Objects.requireNonNull($.groupId, "expected parameter 'groupId' to be non-null");
+            $.internalFqdn = Objects.requireNonNull($.internalFqdn, "expected parameter 'internalFqdn' to be non-null");
+            $.memberName = Objects.requireNonNull($.memberName, "expected parameter 'memberName' to be non-null");
+            return $;
         }
     }
+
 }

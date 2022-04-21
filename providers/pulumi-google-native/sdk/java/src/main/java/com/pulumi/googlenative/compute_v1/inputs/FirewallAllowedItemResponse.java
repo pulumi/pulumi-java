@@ -18,7 +18,7 @@ public final class FirewallAllowedItemResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="ipProtocol", required=true)
-      private final String ipProtocol;
+    private String ipProtocol;
 
     public String ipProtocol() {
         return this.ipProtocol;
@@ -29,58 +29,56 @@ public final class FirewallAllowedItemResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="ports", required=true)
-      private final List<String> ports;
+    private List<String> ports;
 
     public List<String> ports() {
         return this.ports;
     }
 
-    public FirewallAllowedItemResponse(
-        String ipProtocol,
-        List<String> ports) {
-        this.ipProtocol = Objects.requireNonNull(ipProtocol, "expected parameter 'ipProtocol' to be non-null");
-        this.ports = Objects.requireNonNull(ports, "expected parameter 'ports' to be non-null");
-    }
+    private FirewallAllowedItemResponse() {}
 
-    private FirewallAllowedItemResponse() {
-        this.ipProtocol = null;
-        this.ports = List.of();
+    private FirewallAllowedItemResponse(FirewallAllowedItemResponse $) {
+        this.ipProtocol = $.ipProtocol;
+        this.ports = $.ports;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FirewallAllowedItemResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String ipProtocol;
-        private List<String> ports;
+        private FirewallAllowedItemResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new FirewallAllowedItemResponse();
         }
 
         public Builder(FirewallAllowedItemResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.ipProtocol = defaults.ipProtocol;
-    	      this.ports = defaults.ports;
+            $ = new FirewallAllowedItemResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder ipProtocol(String ipProtocol) {
-            this.ipProtocol = Objects.requireNonNull(ipProtocol);
+            $.ipProtocol = ipProtocol;
             return this;
         }
+
         public Builder ports(List<String> ports) {
-            this.ports = Objects.requireNonNull(ports);
+            $.ports = ports;
             return this;
         }
+
         public Builder ports(String... ports) {
             return ports(List.of(ports));
-        }        public FirewallAllowedItemResponse build() {
-            return new FirewallAllowedItemResponse(ipProtocol, ports);
+        }
+
+        public FirewallAllowedItemResponse build() {
+            $.ipProtocol = Objects.requireNonNull($.ipProtocol, "expected parameter 'ipProtocol' to be non-null");
+            $.ports = Objects.requireNonNull($.ports, "expected parameter 'ports' to be non-null");
+            return $;
         }
     }
+
 }

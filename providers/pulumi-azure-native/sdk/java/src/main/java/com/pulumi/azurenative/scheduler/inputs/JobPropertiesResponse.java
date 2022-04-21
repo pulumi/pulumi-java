@@ -22,10 +22,10 @@ public final class JobPropertiesResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="action")
-      private final @Nullable JobActionResponse action;
+    private @Nullable JobActionResponse action;
 
     public Optional<JobActionResponse> action() {
-        return this.action == null ? Optional.empty() : Optional.ofNullable(this.action);
+        return Optional.ofNullable(this.action);
     }
 
     /**
@@ -33,10 +33,10 @@ public final class JobPropertiesResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="recurrence")
-      private final @Nullable JobRecurrenceResponse recurrence;
+    private @Nullable JobRecurrenceResponse recurrence;
 
     public Optional<JobRecurrenceResponse> recurrence() {
-        return this.recurrence == null ? Optional.empty() : Optional.ofNullable(this.recurrence);
+        return Optional.ofNullable(this.recurrence);
     }
 
     /**
@@ -44,10 +44,10 @@ public final class JobPropertiesResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="startTime")
-      private final @Nullable String startTime;
+    private @Nullable String startTime;
 
     public Optional<String> startTime() {
-        return this.startTime == null ? Optional.empty() : Optional.ofNullable(this.startTime);
+        return Optional.ofNullable(this.startTime);
     }
 
     /**
@@ -55,10 +55,10 @@ public final class JobPropertiesResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="state")
-      private final @Nullable String state;
+    private @Nullable String state;
 
     public Optional<String> state() {
-        return this.state == null ? Optional.empty() : Optional.ofNullable(this.state);
+        return Optional.ofNullable(this.state);
     }
 
     /**
@@ -66,82 +66,69 @@ public final class JobPropertiesResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="status", required=true)
-      private final JobStatusResponse status;
+    private JobStatusResponse status;
 
     public JobStatusResponse status() {
         return this.status;
     }
 
-    public JobPropertiesResponse(
-        @Nullable JobActionResponse action,
-        @Nullable JobRecurrenceResponse recurrence,
-        @Nullable String startTime,
-        @Nullable String state,
-        JobStatusResponse status) {
-        this.action = action;
-        this.recurrence = recurrence;
-        this.startTime = startTime;
-        this.state = state;
-        this.status = Objects.requireNonNull(status, "expected parameter 'status' to be non-null");
-    }
+    private JobPropertiesResponse() {}
 
-    private JobPropertiesResponse() {
-        this.action = null;
-        this.recurrence = null;
-        this.startTime = null;
-        this.state = null;
-        this.status = null;
+    private JobPropertiesResponse(JobPropertiesResponse $) {
+        this.action = $.action;
+        this.recurrence = $.recurrence;
+        this.startTime = $.startTime;
+        this.state = $.state;
+        this.status = $.status;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(JobPropertiesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable JobActionResponse action;
-        private @Nullable JobRecurrenceResponse recurrence;
-        private @Nullable String startTime;
-        private @Nullable String state;
-        private JobStatusResponse status;
+        private JobPropertiesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new JobPropertiesResponse();
         }
 
         public Builder(JobPropertiesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.action = defaults.action;
-    	      this.recurrence = defaults.recurrence;
-    	      this.startTime = defaults.startTime;
-    	      this.state = defaults.state;
-    	      this.status = defaults.status;
+            $ = new JobPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder action(@Nullable JobActionResponse action) {
-            this.action = action;
+            $.action = action;
             return this;
         }
+
         public Builder recurrence(@Nullable JobRecurrenceResponse recurrence) {
-            this.recurrence = recurrence;
+            $.recurrence = recurrence;
             return this;
         }
+
         public Builder startTime(@Nullable String startTime) {
-            this.startTime = startTime;
+            $.startTime = startTime;
             return this;
         }
+
         public Builder state(@Nullable String state) {
-            this.state = state;
+            $.state = state;
             return this;
         }
+
         public Builder status(JobStatusResponse status) {
-            this.status = Objects.requireNonNull(status);
+            $.status = status;
             return this;
-        }        public JobPropertiesResponse build() {
-            return new JobPropertiesResponse(action, recurrence, startTime, state, status);
+        }
+
+        public JobPropertiesResponse build() {
+            $.status = Objects.requireNonNull($.status, "expected parameter 'status' to be non-null");
+            return $;
         }
     }
+
 }

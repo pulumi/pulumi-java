@@ -6,9 +6,9 @@ package com.pulumi.azurenative.datafactory.inputs;
 import com.pulumi.azurenative.datafactory.inputs.LinkedServiceReferenceArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,7 +25,7 @@ public final class LogLocationSettingsArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="linkedServiceName", required=true)
-      private final Output<LinkedServiceReferenceArgs> linkedServiceName;
+    private Output<LinkedServiceReferenceArgs> linkedServiceName;
 
     public Output<LinkedServiceReferenceArgs> linkedServiceName() {
         return this.linkedServiceName;
@@ -36,63 +36,59 @@ public final class LogLocationSettingsArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="path")
-      private final @Nullable Output<Object> path;
+    private @Nullable Output<Object> path;
 
-    public Output<Object> path() {
-        return this.path == null ? Codegen.empty() : this.path;
+    public Optional<Output<Object>> path() {
+        return Optional.ofNullable(this.path);
     }
 
-    public LogLocationSettingsArgs(
-        Output<LinkedServiceReferenceArgs> linkedServiceName,
-        @Nullable Output<Object> path) {
-        this.linkedServiceName = Objects.requireNonNull(linkedServiceName, "expected parameter 'linkedServiceName' to be non-null");
-        this.path = path;
-    }
+    private LogLocationSettingsArgs() {}
 
-    private LogLocationSettingsArgs() {
-        this.linkedServiceName = Codegen.empty();
-        this.path = Codegen.empty();
+    private LogLocationSettingsArgs(LogLocationSettingsArgs $) {
+        this.linkedServiceName = $.linkedServiceName;
+        this.path = $.path;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LogLocationSettingsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<LinkedServiceReferenceArgs> linkedServiceName;
-        private @Nullable Output<Object> path;
+        private LogLocationSettingsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new LogLocationSettingsArgs();
         }
 
         public Builder(LogLocationSettingsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.linkedServiceName = defaults.linkedServiceName;
-    	      this.path = defaults.path;
+            $ = new LogLocationSettingsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder linkedServiceName(Output<LinkedServiceReferenceArgs> linkedServiceName) {
-            this.linkedServiceName = Objects.requireNonNull(linkedServiceName);
+            $.linkedServiceName = linkedServiceName;
             return this;
         }
+
         public Builder linkedServiceName(LinkedServiceReferenceArgs linkedServiceName) {
-            this.linkedServiceName = Output.of(Objects.requireNonNull(linkedServiceName));
-            return this;
+            return linkedServiceName(Output.of(linkedServiceName));
         }
+
         public Builder path(@Nullable Output<Object> path) {
-            this.path = path;
+            $.path = path;
             return this;
         }
-        public Builder path(@Nullable Object path) {
-            this.path = Codegen.ofNullable(path);
-            return this;
-        }        public LogLocationSettingsArgs build() {
-            return new LogLocationSettingsArgs(linkedServiceName, path);
+
+        public Builder path(Object path) {
+            return path(Output.of(path));
+        }
+
+        public LogLocationSettingsArgs build() {
+            $.linkedServiceName = Objects.requireNonNull($.linkedServiceName, "expected parameter 'linkedServiceName' to be non-null");
+            return $;
         }
     }
+
 }

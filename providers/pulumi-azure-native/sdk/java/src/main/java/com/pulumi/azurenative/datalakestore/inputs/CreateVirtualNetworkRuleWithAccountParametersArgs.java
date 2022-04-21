@@ -5,7 +5,6 @@ package com.pulumi.azurenative.datalakestore.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,7 +22,7 @@ public final class CreateVirtualNetworkRuleWithAccountParametersArgs extends com
      * 
      */
     @Import(name="name", required=true)
-      private final Output<String> name;
+    private Output<String> name;
 
     public Output<String> name() {
         return this.name;
@@ -34,63 +33,60 @@ public final class CreateVirtualNetworkRuleWithAccountParametersArgs extends com
      * 
      */
     @Import(name="subnetId", required=true)
-      private final Output<String> subnetId;
+    private Output<String> subnetId;
 
     public Output<String> subnetId() {
         return this.subnetId;
     }
 
-    public CreateVirtualNetworkRuleWithAccountParametersArgs(
-        Output<String> name,
-        Output<String> subnetId) {
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.subnetId = Objects.requireNonNull(subnetId, "expected parameter 'subnetId' to be non-null");
-    }
+    private CreateVirtualNetworkRuleWithAccountParametersArgs() {}
 
-    private CreateVirtualNetworkRuleWithAccountParametersArgs() {
-        this.name = Codegen.empty();
-        this.subnetId = Codegen.empty();
+    private CreateVirtualNetworkRuleWithAccountParametersArgs(CreateVirtualNetworkRuleWithAccountParametersArgs $) {
+        this.name = $.name;
+        this.subnetId = $.subnetId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CreateVirtualNetworkRuleWithAccountParametersArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> name;
-        private Output<String> subnetId;
+        private CreateVirtualNetworkRuleWithAccountParametersArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CreateVirtualNetworkRuleWithAccountParametersArgs();
         }
 
         public Builder(CreateVirtualNetworkRuleWithAccountParametersArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.subnetId = defaults.subnetId;
+            $ = new CreateVirtualNetworkRuleWithAccountParametersArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder name(Output<String> name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Output.of(Objects.requireNonNull(name));
-            return this;
+            return name(Output.of(name));
         }
+
         public Builder subnetId(Output<String> subnetId) {
-            this.subnetId = Objects.requireNonNull(subnetId);
+            $.subnetId = subnetId;
             return this;
         }
+
         public Builder subnetId(String subnetId) {
-            this.subnetId = Output.of(Objects.requireNonNull(subnetId));
-            return this;
-        }        public CreateVirtualNetworkRuleWithAccountParametersArgs build() {
-            return new CreateVirtualNetworkRuleWithAccountParametersArgs(name, subnetId);
+            return subnetId(Output.of(subnetId));
+        }
+
+        public CreateVirtualNetworkRuleWithAccountParametersArgs build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.subnetId = Objects.requireNonNull($.subnetId, "expected parameter 'subnetId' to be non-null");
+            return $;
         }
     }
+
 }

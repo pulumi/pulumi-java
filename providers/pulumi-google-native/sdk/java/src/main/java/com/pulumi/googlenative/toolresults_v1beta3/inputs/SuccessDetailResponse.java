@@ -21,45 +21,45 @@ public final class SuccessDetailResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="otherNativeCrash", required=true)
-      private final Boolean otherNativeCrash;
+    private Boolean otherNativeCrash;
 
     public Boolean otherNativeCrash() {
         return this.otherNativeCrash;
     }
 
-    public SuccessDetailResponse(Boolean otherNativeCrash) {
-        this.otherNativeCrash = Objects.requireNonNull(otherNativeCrash, "expected parameter 'otherNativeCrash' to be non-null");
-    }
+    private SuccessDetailResponse() {}
 
-    private SuccessDetailResponse() {
-        this.otherNativeCrash = null;
+    private SuccessDetailResponse(SuccessDetailResponse $) {
+        this.otherNativeCrash = $.otherNativeCrash;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SuccessDetailResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Boolean otherNativeCrash;
+        private SuccessDetailResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new SuccessDetailResponse();
         }
 
         public Builder(SuccessDetailResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.otherNativeCrash = defaults.otherNativeCrash;
+            $ = new SuccessDetailResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder otherNativeCrash(Boolean otherNativeCrash) {
-            this.otherNativeCrash = Objects.requireNonNull(otherNativeCrash);
+            $.otherNativeCrash = otherNativeCrash;
             return this;
-        }        public SuccessDetailResponse build() {
-            return new SuccessDetailResponse(otherNativeCrash);
+        }
+
+        public SuccessDetailResponse build() {
+            $.otherNativeCrash = Objects.requireNonNull($.otherNativeCrash, "expected parameter 'otherNativeCrash' to be non-null");
+            return $;
         }
     }
+
 }

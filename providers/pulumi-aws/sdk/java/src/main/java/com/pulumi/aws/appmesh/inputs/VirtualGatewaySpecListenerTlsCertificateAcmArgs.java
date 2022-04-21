@@ -5,7 +5,6 @@ package com.pulumi.aws.appmesh.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,49 +18,49 @@ public final class VirtualGatewaySpecListenerTlsCertificateAcmArgs extends com.p
      * 
      */
     @Import(name="certificateArn", required=true)
-      private final Output<String> certificateArn;
+    private Output<String> certificateArn;
 
     public Output<String> certificateArn() {
         return this.certificateArn;
     }
 
-    public VirtualGatewaySpecListenerTlsCertificateAcmArgs(Output<String> certificateArn) {
-        this.certificateArn = Objects.requireNonNull(certificateArn, "expected parameter 'certificateArn' to be non-null");
-    }
+    private VirtualGatewaySpecListenerTlsCertificateAcmArgs() {}
 
-    private VirtualGatewaySpecListenerTlsCertificateAcmArgs() {
-        this.certificateArn = Codegen.empty();
+    private VirtualGatewaySpecListenerTlsCertificateAcmArgs(VirtualGatewaySpecListenerTlsCertificateAcmArgs $) {
+        this.certificateArn = $.certificateArn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VirtualGatewaySpecListenerTlsCertificateAcmArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> certificateArn;
+        private VirtualGatewaySpecListenerTlsCertificateAcmArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new VirtualGatewaySpecListenerTlsCertificateAcmArgs();
         }
 
         public Builder(VirtualGatewaySpecListenerTlsCertificateAcmArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.certificateArn = defaults.certificateArn;
+            $ = new VirtualGatewaySpecListenerTlsCertificateAcmArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder certificateArn(Output<String> certificateArn) {
-            this.certificateArn = Objects.requireNonNull(certificateArn);
+            $.certificateArn = certificateArn;
             return this;
         }
+
         public Builder certificateArn(String certificateArn) {
-            this.certificateArn = Output.of(Objects.requireNonNull(certificateArn));
-            return this;
-        }        public VirtualGatewaySpecListenerTlsCertificateAcmArgs build() {
-            return new VirtualGatewaySpecListenerTlsCertificateAcmArgs(certificateArn);
+            return certificateArn(Output.of(certificateArn));
+        }
+
+        public VirtualGatewaySpecListenerTlsCertificateAcmArgs build() {
+            $.certificateArn = Objects.requireNonNull($.certificateArn, "expected parameter 'certificateArn' to be non-null");
+            return $;
         }
     }
+
 }

@@ -21,10 +21,10 @@ public final class ModelEnvironmentDefinitionResponseResponsePython extends com.
     public static final ModelEnvironmentDefinitionResponseResponsePython Empty = new ModelEnvironmentDefinitionResponseResponsePython();
 
     @Import(name="baseCondaEnvironment")
-      private final @Nullable String baseCondaEnvironment;
+    private @Nullable String baseCondaEnvironment;
 
     public Optional<String> baseCondaEnvironment() {
-        return this.baseCondaEnvironment == null ? Optional.empty() : Optional.ofNullable(this.baseCondaEnvironment);
+        return Optional.ofNullable(this.baseCondaEnvironment);
     }
 
     /**
@@ -32,10 +32,10 @@ public final class ModelEnvironmentDefinitionResponseResponsePython extends com.
      * 
      */
     @Import(name="condaDependencies")
-      private final @Nullable Object condaDependencies;
+    private @Nullable Object condaDependencies;
 
     public Optional<Object> condaDependencies() {
-        return this.condaDependencies == null ? Optional.empty() : Optional.ofNullable(this.condaDependencies);
+        return Optional.ofNullable(this.condaDependencies);
     }
 
     /**
@@ -43,10 +43,10 @@ public final class ModelEnvironmentDefinitionResponseResponsePython extends com.
      * 
      */
     @Import(name="interpreterPath")
-      private final @Nullable String interpreterPath;
+    private @Nullable String interpreterPath;
 
     public Optional<String> interpreterPath() {
-        return this.interpreterPath == null ? Optional.empty() : Optional.ofNullable(this.interpreterPath);
+        return Optional.ofNullable(this.interpreterPath);
     }
 
     /**
@@ -54,73 +54,62 @@ public final class ModelEnvironmentDefinitionResponseResponsePython extends com.
      * 
      */
     @Import(name="userManagedDependencies")
-      private final @Nullable Boolean userManagedDependencies;
+    private @Nullable Boolean userManagedDependencies;
 
     public Optional<Boolean> userManagedDependencies() {
-        return this.userManagedDependencies == null ? Optional.empty() : Optional.ofNullable(this.userManagedDependencies);
+        return Optional.ofNullable(this.userManagedDependencies);
     }
 
-    public ModelEnvironmentDefinitionResponseResponsePython(
-        @Nullable String baseCondaEnvironment,
-        @Nullable Object condaDependencies,
-        @Nullable String interpreterPath,
-        @Nullable Boolean userManagedDependencies) {
-        this.baseCondaEnvironment = baseCondaEnvironment;
-        this.condaDependencies = condaDependencies;
-        this.interpreterPath = interpreterPath;
-        this.userManagedDependencies = userManagedDependencies;
-    }
+    private ModelEnvironmentDefinitionResponseResponsePython() {}
 
-    private ModelEnvironmentDefinitionResponseResponsePython() {
-        this.baseCondaEnvironment = null;
-        this.condaDependencies = null;
-        this.interpreterPath = null;
-        this.userManagedDependencies = null;
+    private ModelEnvironmentDefinitionResponseResponsePython(ModelEnvironmentDefinitionResponseResponsePython $) {
+        this.baseCondaEnvironment = $.baseCondaEnvironment;
+        this.condaDependencies = $.condaDependencies;
+        this.interpreterPath = $.interpreterPath;
+        this.userManagedDependencies = $.userManagedDependencies;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ModelEnvironmentDefinitionResponseResponsePython defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String baseCondaEnvironment;
-        private @Nullable Object condaDependencies;
-        private @Nullable String interpreterPath;
-        private @Nullable Boolean userManagedDependencies;
+        private ModelEnvironmentDefinitionResponseResponsePython $;
 
         public Builder() {
-    	      // Empty
+            $ = new ModelEnvironmentDefinitionResponseResponsePython();
         }
 
         public Builder(ModelEnvironmentDefinitionResponseResponsePython defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.baseCondaEnvironment = defaults.baseCondaEnvironment;
-    	      this.condaDependencies = defaults.condaDependencies;
-    	      this.interpreterPath = defaults.interpreterPath;
-    	      this.userManagedDependencies = defaults.userManagedDependencies;
+            $ = new ModelEnvironmentDefinitionResponseResponsePython(Objects.requireNonNull(defaults));
         }
 
         public Builder baseCondaEnvironment(@Nullable String baseCondaEnvironment) {
-            this.baseCondaEnvironment = baseCondaEnvironment;
+            $.baseCondaEnvironment = baseCondaEnvironment;
             return this;
         }
+
         public Builder condaDependencies(@Nullable Object condaDependencies) {
-            this.condaDependencies = condaDependencies;
+            $.condaDependencies = condaDependencies;
             return this;
         }
+
         public Builder interpreterPath(@Nullable String interpreterPath) {
-            this.interpreterPath = interpreterPath;
+            $.interpreterPath = interpreterPath;
             return this;
         }
+
         public Builder userManagedDependencies(@Nullable Boolean userManagedDependencies) {
-            this.userManagedDependencies = userManagedDependencies;
+            $.userManagedDependencies = userManagedDependencies;
             return this;
-        }        public ModelEnvironmentDefinitionResponseResponsePython build() {
-            return new ModelEnvironmentDefinitionResponseResponsePython(baseCondaEnvironment, condaDependencies, interpreterPath, userManagedDependencies);
+        }
+
+        public ModelEnvironmentDefinitionResponseResponsePython build() {
+            return $;
         }
     }
+
 }

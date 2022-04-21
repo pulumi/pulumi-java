@@ -20,7 +20,7 @@ public final class GetMeshIstioServiceArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="meshUid", required=true)
-      private final String meshUid;
+    private String meshUid;
 
     public String meshUid() {
         return this.meshUid;
@@ -32,10 +32,10 @@ public final class GetMeshIstioServiceArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="project")
-      private final @Nullable String project;
+    private @Nullable String project;
 
     public Optional<String> project() {
-        return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -44,7 +44,7 @@ public final class GetMeshIstioServiceArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="serviceName", required=true)
-      private final String serviceName;
+    private String serviceName;
 
     public String serviceName() {
         return this.serviceName;
@@ -56,73 +56,65 @@ public final class GetMeshIstioServiceArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="serviceNamespace", required=true)
-      private final String serviceNamespace;
+    private String serviceNamespace;
 
     public String serviceNamespace() {
         return this.serviceNamespace;
     }
 
-    public GetMeshIstioServiceArgs(
-        String meshUid,
-        @Nullable String project,
-        String serviceName,
-        String serviceNamespace) {
-        this.meshUid = Objects.requireNonNull(meshUid, "expected parameter 'meshUid' to be non-null");
-        this.project = project;
-        this.serviceName = Objects.requireNonNull(serviceName, "expected parameter 'serviceName' to be non-null");
-        this.serviceNamespace = Objects.requireNonNull(serviceNamespace, "expected parameter 'serviceNamespace' to be non-null");
-    }
+    private GetMeshIstioServiceArgs() {}
 
-    private GetMeshIstioServiceArgs() {
-        this.meshUid = null;
-        this.project = null;
-        this.serviceName = null;
-        this.serviceNamespace = null;
+    private GetMeshIstioServiceArgs(GetMeshIstioServiceArgs $) {
+        this.meshUid = $.meshUid;
+        this.project = $.project;
+        this.serviceName = $.serviceName;
+        this.serviceNamespace = $.serviceNamespace;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetMeshIstioServiceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String meshUid;
-        private @Nullable String project;
-        private String serviceName;
-        private String serviceNamespace;
+        private GetMeshIstioServiceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetMeshIstioServiceArgs();
         }
 
         public Builder(GetMeshIstioServiceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.meshUid = defaults.meshUid;
-    	      this.project = defaults.project;
-    	      this.serviceName = defaults.serviceName;
-    	      this.serviceNamespace = defaults.serviceNamespace;
+            $ = new GetMeshIstioServiceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder meshUid(String meshUid) {
-            this.meshUid = Objects.requireNonNull(meshUid);
+            $.meshUid = meshUid;
             return this;
         }
+
         public Builder project(@Nullable String project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
+
         public Builder serviceName(String serviceName) {
-            this.serviceName = Objects.requireNonNull(serviceName);
+            $.serviceName = serviceName;
             return this;
         }
+
         public Builder serviceNamespace(String serviceNamespace) {
-            this.serviceNamespace = Objects.requireNonNull(serviceNamespace);
+            $.serviceNamespace = serviceNamespace;
             return this;
-        }        public GetMeshIstioServiceArgs build() {
-            return new GetMeshIstioServiceArgs(meshUid, project, serviceName, serviceNamespace);
+        }
+
+        public GetMeshIstioServiceArgs build() {
+            $.meshUid = Objects.requireNonNull($.meshUid, "expected parameter 'meshUid' to be non-null");
+            $.serviceName = Objects.requireNonNull($.serviceName, "expected parameter 'serviceName' to be non-null");
+            $.serviceNamespace = Objects.requireNonNull($.serviceNamespace, "expected parameter 'serviceNamespace' to be non-null");
+            return $;
         }
     }
+
 }

@@ -23,7 +23,7 @@ public final class GoogleCloudRetailV2alphaPriceInfoResponse extends com.pulumi.
      * 
      */
     @Import(name="cost", required=true)
-      private final Double cost;
+    private Double cost;
 
     public Double cost() {
         return this.cost;
@@ -34,7 +34,7 @@ public final class GoogleCloudRetailV2alphaPriceInfoResponse extends com.pulumi.
      * 
      */
     @Import(name="currencyCode", required=true)
-      private final String currencyCode;
+    private String currencyCode;
 
     public String currencyCode() {
         return this.currencyCode;
@@ -45,7 +45,7 @@ public final class GoogleCloudRetailV2alphaPriceInfoResponse extends com.pulumi.
      * 
      */
     @Import(name="originalPrice", required=true)
-      private final Double originalPrice;
+    private Double originalPrice;
 
     public Double originalPrice() {
         return this.originalPrice;
@@ -56,7 +56,7 @@ public final class GoogleCloudRetailV2alphaPriceInfoResponse extends com.pulumi.
      * 
      */
     @Import(name="price", required=true)
-      private final Double price;
+    private Double price;
 
     public Double price() {
         return this.price;
@@ -67,7 +67,7 @@ public final class GoogleCloudRetailV2alphaPriceInfoResponse extends com.pulumi.
      * 
      */
     @Import(name="priceEffectiveTime", required=true)
-      private final String priceEffectiveTime;
+    private String priceEffectiveTime;
 
     public String priceEffectiveTime() {
         return this.priceEffectiveTime;
@@ -78,7 +78,7 @@ public final class GoogleCloudRetailV2alphaPriceInfoResponse extends com.pulumi.
      * 
      */
     @Import(name="priceExpireTime", required=true)
-      private final String priceExpireTime;
+    private String priceExpireTime;
 
     public String priceExpireTime() {
         return this.priceExpireTime;
@@ -89,100 +89,87 @@ public final class GoogleCloudRetailV2alphaPriceInfoResponse extends com.pulumi.
      * 
      */
     @Import(name="priceRange", required=true)
-      private final GoogleCloudRetailV2alphaPriceInfoPriceRangeResponse priceRange;
+    private GoogleCloudRetailV2alphaPriceInfoPriceRangeResponse priceRange;
 
     public GoogleCloudRetailV2alphaPriceInfoPriceRangeResponse priceRange() {
         return this.priceRange;
     }
 
-    public GoogleCloudRetailV2alphaPriceInfoResponse(
-        Double cost,
-        String currencyCode,
-        Double originalPrice,
-        Double price,
-        String priceEffectiveTime,
-        String priceExpireTime,
-        GoogleCloudRetailV2alphaPriceInfoPriceRangeResponse priceRange) {
-        this.cost = Objects.requireNonNull(cost, "expected parameter 'cost' to be non-null");
-        this.currencyCode = Objects.requireNonNull(currencyCode, "expected parameter 'currencyCode' to be non-null");
-        this.originalPrice = Objects.requireNonNull(originalPrice, "expected parameter 'originalPrice' to be non-null");
-        this.price = Objects.requireNonNull(price, "expected parameter 'price' to be non-null");
-        this.priceEffectiveTime = Objects.requireNonNull(priceEffectiveTime, "expected parameter 'priceEffectiveTime' to be non-null");
-        this.priceExpireTime = Objects.requireNonNull(priceExpireTime, "expected parameter 'priceExpireTime' to be non-null");
-        this.priceRange = Objects.requireNonNull(priceRange, "expected parameter 'priceRange' to be non-null");
-    }
+    private GoogleCloudRetailV2alphaPriceInfoResponse() {}
 
-    private GoogleCloudRetailV2alphaPriceInfoResponse() {
-        this.cost = null;
-        this.currencyCode = null;
-        this.originalPrice = null;
-        this.price = null;
-        this.priceEffectiveTime = null;
-        this.priceExpireTime = null;
-        this.priceRange = null;
+    private GoogleCloudRetailV2alphaPriceInfoResponse(GoogleCloudRetailV2alphaPriceInfoResponse $) {
+        this.cost = $.cost;
+        this.currencyCode = $.currencyCode;
+        this.originalPrice = $.originalPrice;
+        this.price = $.price;
+        this.priceEffectiveTime = $.priceEffectiveTime;
+        this.priceExpireTime = $.priceExpireTime;
+        this.priceRange = $.priceRange;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudRetailV2alphaPriceInfoResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Double cost;
-        private String currencyCode;
-        private Double originalPrice;
-        private Double price;
-        private String priceEffectiveTime;
-        private String priceExpireTime;
-        private GoogleCloudRetailV2alphaPriceInfoPriceRangeResponse priceRange;
+        private GoogleCloudRetailV2alphaPriceInfoResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudRetailV2alphaPriceInfoResponse();
         }
 
         public Builder(GoogleCloudRetailV2alphaPriceInfoResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cost = defaults.cost;
-    	      this.currencyCode = defaults.currencyCode;
-    	      this.originalPrice = defaults.originalPrice;
-    	      this.price = defaults.price;
-    	      this.priceEffectiveTime = defaults.priceEffectiveTime;
-    	      this.priceExpireTime = defaults.priceExpireTime;
-    	      this.priceRange = defaults.priceRange;
+            $ = new GoogleCloudRetailV2alphaPriceInfoResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder cost(Double cost) {
-            this.cost = Objects.requireNonNull(cost);
+            $.cost = cost;
             return this;
         }
+
         public Builder currencyCode(String currencyCode) {
-            this.currencyCode = Objects.requireNonNull(currencyCode);
+            $.currencyCode = currencyCode;
             return this;
         }
+
         public Builder originalPrice(Double originalPrice) {
-            this.originalPrice = Objects.requireNonNull(originalPrice);
+            $.originalPrice = originalPrice;
             return this;
         }
+
         public Builder price(Double price) {
-            this.price = Objects.requireNonNull(price);
+            $.price = price;
             return this;
         }
+
         public Builder priceEffectiveTime(String priceEffectiveTime) {
-            this.priceEffectiveTime = Objects.requireNonNull(priceEffectiveTime);
+            $.priceEffectiveTime = priceEffectiveTime;
             return this;
         }
+
         public Builder priceExpireTime(String priceExpireTime) {
-            this.priceExpireTime = Objects.requireNonNull(priceExpireTime);
+            $.priceExpireTime = priceExpireTime;
             return this;
         }
+
         public Builder priceRange(GoogleCloudRetailV2alphaPriceInfoPriceRangeResponse priceRange) {
-            this.priceRange = Objects.requireNonNull(priceRange);
+            $.priceRange = priceRange;
             return this;
-        }        public GoogleCloudRetailV2alphaPriceInfoResponse build() {
-            return new GoogleCloudRetailV2alphaPriceInfoResponse(cost, currencyCode, originalPrice, price, priceEffectiveTime, priceExpireTime, priceRange);
+        }
+
+        public GoogleCloudRetailV2alphaPriceInfoResponse build() {
+            $.cost = Objects.requireNonNull($.cost, "expected parameter 'cost' to be non-null");
+            $.currencyCode = Objects.requireNonNull($.currencyCode, "expected parameter 'currencyCode' to be non-null");
+            $.originalPrice = Objects.requireNonNull($.originalPrice, "expected parameter 'originalPrice' to be non-null");
+            $.price = Objects.requireNonNull($.price, "expected parameter 'price' to be non-null");
+            $.priceEffectiveTime = Objects.requireNonNull($.priceEffectiveTime, "expected parameter 'priceEffectiveTime' to be non-null");
+            $.priceExpireTime = Objects.requireNonNull($.priceExpireTime, "expected parameter 'priceExpireTime' to be non-null");
+            $.priceRange = Objects.requireNonNull($.priceRange, "expected parameter 'priceRange' to be non-null");
+            return $;
         }
     }
+
 }

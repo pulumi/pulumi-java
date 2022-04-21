@@ -23,10 +23,10 @@ public final class SyncGroupSchemaTableColumnResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="dataSize")
-      private final @Nullable String dataSize;
+    private @Nullable String dataSize;
 
     public Optional<String> dataSize() {
-        return this.dataSize == null ? Optional.empty() : Optional.ofNullable(this.dataSize);
+        return Optional.ofNullable(this.dataSize);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class SyncGroupSchemaTableColumnResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="dataType")
-      private final @Nullable String dataType;
+    private @Nullable String dataType;
 
     public Optional<String> dataType() {
-        return this.dataType == null ? Optional.empty() : Optional.ofNullable(this.dataType);
+        return Optional.ofNullable(this.dataType);
     }
 
     /**
@@ -45,64 +45,56 @@ public final class SyncGroupSchemaTableColumnResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="quotedName")
-      private final @Nullable String quotedName;
+    private @Nullable String quotedName;
 
     public Optional<String> quotedName() {
-        return this.quotedName == null ? Optional.empty() : Optional.ofNullable(this.quotedName);
+        return Optional.ofNullable(this.quotedName);
     }
 
-    public SyncGroupSchemaTableColumnResponse(
-        @Nullable String dataSize,
-        @Nullable String dataType,
-        @Nullable String quotedName) {
-        this.dataSize = dataSize;
-        this.dataType = dataType;
-        this.quotedName = quotedName;
-    }
+    private SyncGroupSchemaTableColumnResponse() {}
 
-    private SyncGroupSchemaTableColumnResponse() {
-        this.dataSize = null;
-        this.dataType = null;
-        this.quotedName = null;
+    private SyncGroupSchemaTableColumnResponse(SyncGroupSchemaTableColumnResponse $) {
+        this.dataSize = $.dataSize;
+        this.dataType = $.dataType;
+        this.quotedName = $.quotedName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SyncGroupSchemaTableColumnResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String dataSize;
-        private @Nullable String dataType;
-        private @Nullable String quotedName;
+        private SyncGroupSchemaTableColumnResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new SyncGroupSchemaTableColumnResponse();
         }
 
         public Builder(SyncGroupSchemaTableColumnResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dataSize = defaults.dataSize;
-    	      this.dataType = defaults.dataType;
-    	      this.quotedName = defaults.quotedName;
+            $ = new SyncGroupSchemaTableColumnResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder dataSize(@Nullable String dataSize) {
-            this.dataSize = dataSize;
+            $.dataSize = dataSize;
             return this;
         }
+
         public Builder dataType(@Nullable String dataType) {
-            this.dataType = dataType;
+            $.dataType = dataType;
             return this;
         }
+
         public Builder quotedName(@Nullable String quotedName) {
-            this.quotedName = quotedName;
+            $.quotedName = quotedName;
             return this;
-        }        public SyncGroupSchemaTableColumnResponse build() {
-            return new SyncGroupSchemaTableColumnResponse(dataSize, dataType, quotedName);
+        }
+
+        public SyncGroupSchemaTableColumnResponse build() {
+            return $;
         }
     }
+
 }

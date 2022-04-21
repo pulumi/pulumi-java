@@ -7,8 +7,8 @@ import com.pulumi.aws.s3.inputs.InventoryDestinationBucketEncryptionSseKmsGetArg
 import com.pulumi.aws.s3.inputs.InventoryDestinationBucketEncryptionSseS3GetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class InventoryDestinationBucketEncryptionGetArgs extends com.pulum
      * 
      */
     @Import(name="sseKms")
-      private final @Nullable Output<InventoryDestinationBucketEncryptionSseKmsGetArgs> sseKms;
+    private @Nullable Output<InventoryDestinationBucketEncryptionSseKmsGetArgs> sseKms;
 
-    public Output<InventoryDestinationBucketEncryptionSseKmsGetArgs> sseKms() {
-        return this.sseKms == null ? Codegen.empty() : this.sseKms;
+    public Optional<Output<InventoryDestinationBucketEncryptionSseKmsGetArgs>> sseKms() {
+        return Optional.ofNullable(this.sseKms);
     }
 
     /**
@@ -32,63 +32,58 @@ public final class InventoryDestinationBucketEncryptionGetArgs extends com.pulum
      * 
      */
     @Import(name="sseS3")
-      private final @Nullable Output<InventoryDestinationBucketEncryptionSseS3GetArgs> sseS3;
+    private @Nullable Output<InventoryDestinationBucketEncryptionSseS3GetArgs> sseS3;
 
-    public Output<InventoryDestinationBucketEncryptionSseS3GetArgs> sseS3() {
-        return this.sseS3 == null ? Codegen.empty() : this.sseS3;
+    public Optional<Output<InventoryDestinationBucketEncryptionSseS3GetArgs>> sseS3() {
+        return Optional.ofNullable(this.sseS3);
     }
 
-    public InventoryDestinationBucketEncryptionGetArgs(
-        @Nullable Output<InventoryDestinationBucketEncryptionSseKmsGetArgs> sseKms,
-        @Nullable Output<InventoryDestinationBucketEncryptionSseS3GetArgs> sseS3) {
-        this.sseKms = sseKms;
-        this.sseS3 = sseS3;
-    }
+    private InventoryDestinationBucketEncryptionGetArgs() {}
 
-    private InventoryDestinationBucketEncryptionGetArgs() {
-        this.sseKms = Codegen.empty();
-        this.sseS3 = Codegen.empty();
+    private InventoryDestinationBucketEncryptionGetArgs(InventoryDestinationBucketEncryptionGetArgs $) {
+        this.sseKms = $.sseKms;
+        this.sseS3 = $.sseS3;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(InventoryDestinationBucketEncryptionGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<InventoryDestinationBucketEncryptionSseKmsGetArgs> sseKms;
-        private @Nullable Output<InventoryDestinationBucketEncryptionSseS3GetArgs> sseS3;
+        private InventoryDestinationBucketEncryptionGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new InventoryDestinationBucketEncryptionGetArgs();
         }
 
         public Builder(InventoryDestinationBucketEncryptionGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.sseKms = defaults.sseKms;
-    	      this.sseS3 = defaults.sseS3;
+            $ = new InventoryDestinationBucketEncryptionGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder sseKms(@Nullable Output<InventoryDestinationBucketEncryptionSseKmsGetArgs> sseKms) {
-            this.sseKms = sseKms;
+            $.sseKms = sseKms;
             return this;
         }
-        public Builder sseKms(@Nullable InventoryDestinationBucketEncryptionSseKmsGetArgs sseKms) {
-            this.sseKms = Codegen.ofNullable(sseKms);
-            return this;
+
+        public Builder sseKms(InventoryDestinationBucketEncryptionSseKmsGetArgs sseKms) {
+            return sseKms(Output.of(sseKms));
         }
+
         public Builder sseS3(@Nullable Output<InventoryDestinationBucketEncryptionSseS3GetArgs> sseS3) {
-            this.sseS3 = sseS3;
+            $.sseS3 = sseS3;
             return this;
         }
-        public Builder sseS3(@Nullable InventoryDestinationBucketEncryptionSseS3GetArgs sseS3) {
-            this.sseS3 = Codegen.ofNullable(sseS3);
-            return this;
-        }        public InventoryDestinationBucketEncryptionGetArgs build() {
-            return new InventoryDestinationBucketEncryptionGetArgs(sseKms, sseS3);
+
+        public Builder sseS3(InventoryDestinationBucketEncryptionSseS3GetArgs sseS3) {
+            return sseS3(Output.of(sseS3));
+        }
+
+        public InventoryDestinationBucketEncryptionGetArgs build() {
+            return $;
         }
     }
+
 }

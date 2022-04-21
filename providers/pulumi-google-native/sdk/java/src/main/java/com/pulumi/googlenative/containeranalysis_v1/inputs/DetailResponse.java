@@ -23,7 +23,7 @@ public final class DetailResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="affectedCpeUri", required=true)
-      private final String affectedCpeUri;
+    private String affectedCpeUri;
 
     public String affectedCpeUri() {
         return this.affectedCpeUri;
@@ -34,7 +34,7 @@ public final class DetailResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="affectedPackage", required=true)
-      private final String affectedPackage;
+    private String affectedPackage;
 
     public String affectedPackage() {
         return this.affectedPackage;
@@ -45,7 +45,7 @@ public final class DetailResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="affectedVersionEnd", required=true)
-      private final VersionResponse affectedVersionEnd;
+    private VersionResponse affectedVersionEnd;
 
     public VersionResponse affectedVersionEnd() {
         return this.affectedVersionEnd;
@@ -56,7 +56,7 @@ public final class DetailResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="affectedVersionStart", required=true)
-      private final VersionResponse affectedVersionStart;
+    private VersionResponse affectedVersionStart;
 
     public VersionResponse affectedVersionStart() {
         return this.affectedVersionStart;
@@ -67,7 +67,7 @@ public final class DetailResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="description", required=true)
-      private final String description;
+    private String description;
 
     public String description() {
         return this.description;
@@ -78,7 +78,7 @@ public final class DetailResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="fixedCpeUri", required=true)
-      private final String fixedCpeUri;
+    private String fixedCpeUri;
 
     public String fixedCpeUri() {
         return this.fixedCpeUri;
@@ -89,7 +89,7 @@ public final class DetailResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="fixedPackage", required=true)
-      private final String fixedPackage;
+    private String fixedPackage;
 
     public String fixedPackage() {
         return this.fixedPackage;
@@ -100,7 +100,7 @@ public final class DetailResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="fixedVersion", required=true)
-      private final VersionResponse fixedVersion;
+    private VersionResponse fixedVersion;
 
     public VersionResponse fixedVersion() {
         return this.fixedVersion;
@@ -111,7 +111,7 @@ public final class DetailResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="isObsolete", required=true)
-      private final Boolean isObsolete;
+    private Boolean isObsolete;
 
     public Boolean isObsolete() {
         return this.isObsolete;
@@ -122,7 +122,7 @@ public final class DetailResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="packageType", required=true)
-      private final String packageType;
+    private String packageType;
 
     public String packageType() {
         return this.packageType;
@@ -133,7 +133,7 @@ public final class DetailResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="severityName", required=true)
-      private final String severityName;
+    private String severityName;
 
     public String severityName() {
         return this.severityName;
@@ -144,7 +144,7 @@ public final class DetailResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="source", required=true)
-      private final String source;
+    private String source;
 
     public String source() {
         return this.source;
@@ -155,7 +155,7 @@ public final class DetailResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="sourceUpdateTime", required=true)
-      private final String sourceUpdateTime;
+    private String sourceUpdateTime;
 
     public String sourceUpdateTime() {
         return this.sourceUpdateTime;
@@ -166,163 +166,136 @@ public final class DetailResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="vendor", required=true)
-      private final String vendor;
+    private String vendor;
 
     public String vendor() {
         return this.vendor;
     }
 
-    public DetailResponse(
-        String affectedCpeUri,
-        String affectedPackage,
-        VersionResponse affectedVersionEnd,
-        VersionResponse affectedVersionStart,
-        String description,
-        String fixedCpeUri,
-        String fixedPackage,
-        VersionResponse fixedVersion,
-        Boolean isObsolete,
-        String packageType,
-        String severityName,
-        String source,
-        String sourceUpdateTime,
-        String vendor) {
-        this.affectedCpeUri = Objects.requireNonNull(affectedCpeUri, "expected parameter 'affectedCpeUri' to be non-null");
-        this.affectedPackage = Objects.requireNonNull(affectedPackage, "expected parameter 'affectedPackage' to be non-null");
-        this.affectedVersionEnd = Objects.requireNonNull(affectedVersionEnd, "expected parameter 'affectedVersionEnd' to be non-null");
-        this.affectedVersionStart = Objects.requireNonNull(affectedVersionStart, "expected parameter 'affectedVersionStart' to be non-null");
-        this.description = Objects.requireNonNull(description, "expected parameter 'description' to be non-null");
-        this.fixedCpeUri = Objects.requireNonNull(fixedCpeUri, "expected parameter 'fixedCpeUri' to be non-null");
-        this.fixedPackage = Objects.requireNonNull(fixedPackage, "expected parameter 'fixedPackage' to be non-null");
-        this.fixedVersion = Objects.requireNonNull(fixedVersion, "expected parameter 'fixedVersion' to be non-null");
-        this.isObsolete = Objects.requireNonNull(isObsolete, "expected parameter 'isObsolete' to be non-null");
-        this.packageType = Objects.requireNonNull(packageType, "expected parameter 'packageType' to be non-null");
-        this.severityName = Objects.requireNonNull(severityName, "expected parameter 'severityName' to be non-null");
-        this.source = Objects.requireNonNull(source, "expected parameter 'source' to be non-null");
-        this.sourceUpdateTime = Objects.requireNonNull(sourceUpdateTime, "expected parameter 'sourceUpdateTime' to be non-null");
-        this.vendor = Objects.requireNonNull(vendor, "expected parameter 'vendor' to be non-null");
-    }
+    private DetailResponse() {}
 
-    private DetailResponse() {
-        this.affectedCpeUri = null;
-        this.affectedPackage = null;
-        this.affectedVersionEnd = null;
-        this.affectedVersionStart = null;
-        this.description = null;
-        this.fixedCpeUri = null;
-        this.fixedPackage = null;
-        this.fixedVersion = null;
-        this.isObsolete = null;
-        this.packageType = null;
-        this.severityName = null;
-        this.source = null;
-        this.sourceUpdateTime = null;
-        this.vendor = null;
+    private DetailResponse(DetailResponse $) {
+        this.affectedCpeUri = $.affectedCpeUri;
+        this.affectedPackage = $.affectedPackage;
+        this.affectedVersionEnd = $.affectedVersionEnd;
+        this.affectedVersionStart = $.affectedVersionStart;
+        this.description = $.description;
+        this.fixedCpeUri = $.fixedCpeUri;
+        this.fixedPackage = $.fixedPackage;
+        this.fixedVersion = $.fixedVersion;
+        this.isObsolete = $.isObsolete;
+        this.packageType = $.packageType;
+        this.severityName = $.severityName;
+        this.source = $.source;
+        this.sourceUpdateTime = $.sourceUpdateTime;
+        this.vendor = $.vendor;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DetailResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String affectedCpeUri;
-        private String affectedPackage;
-        private VersionResponse affectedVersionEnd;
-        private VersionResponse affectedVersionStart;
-        private String description;
-        private String fixedCpeUri;
-        private String fixedPackage;
-        private VersionResponse fixedVersion;
-        private Boolean isObsolete;
-        private String packageType;
-        private String severityName;
-        private String source;
-        private String sourceUpdateTime;
-        private String vendor;
+        private DetailResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new DetailResponse();
         }
 
         public Builder(DetailResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.affectedCpeUri = defaults.affectedCpeUri;
-    	      this.affectedPackage = defaults.affectedPackage;
-    	      this.affectedVersionEnd = defaults.affectedVersionEnd;
-    	      this.affectedVersionStart = defaults.affectedVersionStart;
-    	      this.description = defaults.description;
-    	      this.fixedCpeUri = defaults.fixedCpeUri;
-    	      this.fixedPackage = defaults.fixedPackage;
-    	      this.fixedVersion = defaults.fixedVersion;
-    	      this.isObsolete = defaults.isObsolete;
-    	      this.packageType = defaults.packageType;
-    	      this.severityName = defaults.severityName;
-    	      this.source = defaults.source;
-    	      this.sourceUpdateTime = defaults.sourceUpdateTime;
-    	      this.vendor = defaults.vendor;
+            $ = new DetailResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder affectedCpeUri(String affectedCpeUri) {
-            this.affectedCpeUri = Objects.requireNonNull(affectedCpeUri);
+            $.affectedCpeUri = affectedCpeUri;
             return this;
         }
+
         public Builder affectedPackage(String affectedPackage) {
-            this.affectedPackage = Objects.requireNonNull(affectedPackage);
+            $.affectedPackage = affectedPackage;
             return this;
         }
+
         public Builder affectedVersionEnd(VersionResponse affectedVersionEnd) {
-            this.affectedVersionEnd = Objects.requireNonNull(affectedVersionEnd);
+            $.affectedVersionEnd = affectedVersionEnd;
             return this;
         }
+
         public Builder affectedVersionStart(VersionResponse affectedVersionStart) {
-            this.affectedVersionStart = Objects.requireNonNull(affectedVersionStart);
+            $.affectedVersionStart = affectedVersionStart;
             return this;
         }
+
         public Builder description(String description) {
-            this.description = Objects.requireNonNull(description);
+            $.description = description;
             return this;
         }
+
         public Builder fixedCpeUri(String fixedCpeUri) {
-            this.fixedCpeUri = Objects.requireNonNull(fixedCpeUri);
+            $.fixedCpeUri = fixedCpeUri;
             return this;
         }
+
         public Builder fixedPackage(String fixedPackage) {
-            this.fixedPackage = Objects.requireNonNull(fixedPackage);
+            $.fixedPackage = fixedPackage;
             return this;
         }
+
         public Builder fixedVersion(VersionResponse fixedVersion) {
-            this.fixedVersion = Objects.requireNonNull(fixedVersion);
+            $.fixedVersion = fixedVersion;
             return this;
         }
+
         public Builder isObsolete(Boolean isObsolete) {
-            this.isObsolete = Objects.requireNonNull(isObsolete);
+            $.isObsolete = isObsolete;
             return this;
         }
+
         public Builder packageType(String packageType) {
-            this.packageType = Objects.requireNonNull(packageType);
+            $.packageType = packageType;
             return this;
         }
+
         public Builder severityName(String severityName) {
-            this.severityName = Objects.requireNonNull(severityName);
+            $.severityName = severityName;
             return this;
         }
+
         public Builder source(String source) {
-            this.source = Objects.requireNonNull(source);
+            $.source = source;
             return this;
         }
+
         public Builder sourceUpdateTime(String sourceUpdateTime) {
-            this.sourceUpdateTime = Objects.requireNonNull(sourceUpdateTime);
+            $.sourceUpdateTime = sourceUpdateTime;
             return this;
         }
+
         public Builder vendor(String vendor) {
-            this.vendor = Objects.requireNonNull(vendor);
+            $.vendor = vendor;
             return this;
-        }        public DetailResponse build() {
-            return new DetailResponse(affectedCpeUri, affectedPackage, affectedVersionEnd, affectedVersionStart, description, fixedCpeUri, fixedPackage, fixedVersion, isObsolete, packageType, severityName, source, sourceUpdateTime, vendor);
+        }
+
+        public DetailResponse build() {
+            $.affectedCpeUri = Objects.requireNonNull($.affectedCpeUri, "expected parameter 'affectedCpeUri' to be non-null");
+            $.affectedPackage = Objects.requireNonNull($.affectedPackage, "expected parameter 'affectedPackage' to be non-null");
+            $.affectedVersionEnd = Objects.requireNonNull($.affectedVersionEnd, "expected parameter 'affectedVersionEnd' to be non-null");
+            $.affectedVersionStart = Objects.requireNonNull($.affectedVersionStart, "expected parameter 'affectedVersionStart' to be non-null");
+            $.description = Objects.requireNonNull($.description, "expected parameter 'description' to be non-null");
+            $.fixedCpeUri = Objects.requireNonNull($.fixedCpeUri, "expected parameter 'fixedCpeUri' to be non-null");
+            $.fixedPackage = Objects.requireNonNull($.fixedPackage, "expected parameter 'fixedPackage' to be non-null");
+            $.fixedVersion = Objects.requireNonNull($.fixedVersion, "expected parameter 'fixedVersion' to be non-null");
+            $.isObsolete = Objects.requireNonNull($.isObsolete, "expected parameter 'isObsolete' to be non-null");
+            $.packageType = Objects.requireNonNull($.packageType, "expected parameter 'packageType' to be non-null");
+            $.severityName = Objects.requireNonNull($.severityName, "expected parameter 'severityName' to be non-null");
+            $.source = Objects.requireNonNull($.source, "expected parameter 'source' to be non-null");
+            $.sourceUpdateTime = Objects.requireNonNull($.sourceUpdateTime, "expected parameter 'sourceUpdateTime' to be non-null");
+            $.vendor = Objects.requireNonNull($.vendor, "expected parameter 'vendor' to be non-null");
+            return $;
         }
     }
+
 }

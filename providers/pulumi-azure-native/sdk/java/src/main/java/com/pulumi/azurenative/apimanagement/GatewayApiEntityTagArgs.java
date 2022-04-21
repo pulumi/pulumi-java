@@ -6,9 +6,9 @@ package com.pulumi.azurenative.apimanagement;
 import com.pulumi.azurenative.apimanagement.enums.ProvisioningState;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class GatewayApiEntityTagArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="apiId")
-      private final @Nullable Output<String> apiId;
+    private @Nullable Output<String> apiId;
 
-    public Output<String> apiId() {
-        return this.apiId == null ? Codegen.empty() : this.apiId;
+    public Optional<Output<String>> apiId() {
+        return Optional.ofNullable(this.apiId);
     }
 
     /**
@@ -32,7 +32,7 @@ public final class GatewayApiEntityTagArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="gatewayId", required=true)
-      private final Output<String> gatewayId;
+    private Output<String> gatewayId;
 
     public Output<String> gatewayId() {
         return this.gatewayId;
@@ -43,10 +43,10 @@ public final class GatewayApiEntityTagArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="provisioningState")
-      private final @Nullable Output<ProvisioningState> provisioningState;
+    private @Nullable Output<ProvisioningState> provisioningState;
 
-    public Output<ProvisioningState> provisioningState() {
-        return this.provisioningState == null ? Codegen.empty() : this.provisioningState;
+    public Optional<Output<ProvisioningState>> provisioningState() {
+        return Optional.ofNullable(this.provisioningState);
     }
 
     /**
@@ -54,7 +54,7 @@ public final class GatewayApiEntityTagArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -65,102 +65,91 @@ public final class GatewayApiEntityTagArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="serviceName", required=true)
-      private final Output<String> serviceName;
+    private Output<String> serviceName;
 
     public Output<String> serviceName() {
         return this.serviceName;
     }
 
-    public GatewayApiEntityTagArgs(
-        @Nullable Output<String> apiId,
-        Output<String> gatewayId,
-        @Nullable Output<ProvisioningState> provisioningState,
-        Output<String> resourceGroupName,
-        Output<String> serviceName) {
-        this.apiId = apiId;
-        this.gatewayId = Objects.requireNonNull(gatewayId, "expected parameter 'gatewayId' to be non-null");
-        this.provisioningState = provisioningState;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.serviceName = Objects.requireNonNull(serviceName, "expected parameter 'serviceName' to be non-null");
-    }
+    private GatewayApiEntityTagArgs() {}
 
-    private GatewayApiEntityTagArgs() {
-        this.apiId = Codegen.empty();
-        this.gatewayId = Codegen.empty();
-        this.provisioningState = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.serviceName = Codegen.empty();
+    private GatewayApiEntityTagArgs(GatewayApiEntityTagArgs $) {
+        this.apiId = $.apiId;
+        this.gatewayId = $.gatewayId;
+        this.provisioningState = $.provisioningState;
+        this.resourceGroupName = $.resourceGroupName;
+        this.serviceName = $.serviceName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GatewayApiEntityTagArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> apiId;
-        private Output<String> gatewayId;
-        private @Nullable Output<ProvisioningState> provisioningState;
-        private Output<String> resourceGroupName;
-        private Output<String> serviceName;
+        private GatewayApiEntityTagArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GatewayApiEntityTagArgs();
         }
 
         public Builder(GatewayApiEntityTagArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.apiId = defaults.apiId;
-    	      this.gatewayId = defaults.gatewayId;
-    	      this.provisioningState = defaults.provisioningState;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.serviceName = defaults.serviceName;
+            $ = new GatewayApiEntityTagArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder apiId(@Nullable Output<String> apiId) {
-            this.apiId = apiId;
+            $.apiId = apiId;
             return this;
         }
-        public Builder apiId(@Nullable String apiId) {
-            this.apiId = Codegen.ofNullable(apiId);
-            return this;
+
+        public Builder apiId(String apiId) {
+            return apiId(Output.of(apiId));
         }
+
         public Builder gatewayId(Output<String> gatewayId) {
-            this.gatewayId = Objects.requireNonNull(gatewayId);
+            $.gatewayId = gatewayId;
             return this;
         }
+
         public Builder gatewayId(String gatewayId) {
-            this.gatewayId = Output.of(Objects.requireNonNull(gatewayId));
-            return this;
+            return gatewayId(Output.of(gatewayId));
         }
+
         public Builder provisioningState(@Nullable Output<ProvisioningState> provisioningState) {
-            this.provisioningState = provisioningState;
+            $.provisioningState = provisioningState;
             return this;
         }
-        public Builder provisioningState(@Nullable ProvisioningState provisioningState) {
-            this.provisioningState = Codegen.ofNullable(provisioningState);
-            return this;
+
+        public Builder provisioningState(ProvisioningState provisioningState) {
+            return provisioningState(Output.of(provisioningState));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder serviceName(Output<String> serviceName) {
-            this.serviceName = Objects.requireNonNull(serviceName);
+            $.serviceName = serviceName;
             return this;
         }
+
         public Builder serviceName(String serviceName) {
-            this.serviceName = Output.of(Objects.requireNonNull(serviceName));
-            return this;
-        }        public GatewayApiEntityTagArgs build() {
-            return new GatewayApiEntityTagArgs(apiId, gatewayId, provisioningState, resourceGroupName, serviceName);
+            return serviceName(Output.of(serviceName));
+        }
+
+        public GatewayApiEntityTagArgs build() {
+            $.gatewayId = Objects.requireNonNull($.gatewayId, "expected parameter 'gatewayId' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.serviceName = Objects.requireNonNull($.serviceName, "expected parameter 'serviceName' to be non-null");
+            return $;
         }
     }
+
 }

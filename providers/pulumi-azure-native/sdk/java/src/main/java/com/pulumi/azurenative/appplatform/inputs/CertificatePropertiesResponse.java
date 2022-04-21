@@ -24,7 +24,7 @@ public final class CertificatePropertiesResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="activateDate", required=true)
-      private final String activateDate;
+    private String activateDate;
 
     public String activateDate() {
         return this.activateDate;
@@ -35,10 +35,10 @@ public final class CertificatePropertiesResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="certVersion")
-      private final @Nullable String certVersion;
+    private @Nullable String certVersion;
 
     public Optional<String> certVersion() {
-        return this.certVersion == null ? Optional.empty() : Optional.ofNullable(this.certVersion);
+        return Optional.ofNullable(this.certVersion);
     }
 
     /**
@@ -46,7 +46,7 @@ public final class CertificatePropertiesResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="dnsNames", required=true)
-      private final List<String> dnsNames;
+    private List<String> dnsNames;
 
     public List<String> dnsNames() {
         return this.dnsNames;
@@ -57,7 +57,7 @@ public final class CertificatePropertiesResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="expirationDate", required=true)
-      private final String expirationDate;
+    private String expirationDate;
 
     public String expirationDate() {
         return this.expirationDate;
@@ -68,7 +68,7 @@ public final class CertificatePropertiesResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="issuedDate", required=true)
-      private final String issuedDate;
+    private String issuedDate;
 
     public String issuedDate() {
         return this.issuedDate;
@@ -79,7 +79,7 @@ public final class CertificatePropertiesResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="issuer", required=true)
-      private final String issuer;
+    private String issuer;
 
     public String issuer() {
         return this.issuer;
@@ -90,7 +90,7 @@ public final class CertificatePropertiesResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="keyVaultCertName", required=true)
-      private final String keyVaultCertName;
+    private String keyVaultCertName;
 
     public String keyVaultCertName() {
         return this.keyVaultCertName;
@@ -101,7 +101,7 @@ public final class CertificatePropertiesResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="subjectName", required=true)
-      private final String subjectName;
+    private String subjectName;
 
     public String subjectName() {
         return this.subjectName;
@@ -112,7 +112,7 @@ public final class CertificatePropertiesResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="thumbprint", required=true)
-      private final String thumbprint;
+    private String thumbprint;
 
     public String thumbprint() {
         return this.thumbprint;
@@ -123,130 +123,111 @@ public final class CertificatePropertiesResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="vaultUri", required=true)
-      private final String vaultUri;
+    private String vaultUri;
 
     public String vaultUri() {
         return this.vaultUri;
     }
 
-    public CertificatePropertiesResponse(
-        String activateDate,
-        @Nullable String certVersion,
-        List<String> dnsNames,
-        String expirationDate,
-        String issuedDate,
-        String issuer,
-        String keyVaultCertName,
-        String subjectName,
-        String thumbprint,
-        String vaultUri) {
-        this.activateDate = Objects.requireNonNull(activateDate, "expected parameter 'activateDate' to be non-null");
-        this.certVersion = certVersion;
-        this.dnsNames = Objects.requireNonNull(dnsNames, "expected parameter 'dnsNames' to be non-null");
-        this.expirationDate = Objects.requireNonNull(expirationDate, "expected parameter 'expirationDate' to be non-null");
-        this.issuedDate = Objects.requireNonNull(issuedDate, "expected parameter 'issuedDate' to be non-null");
-        this.issuer = Objects.requireNonNull(issuer, "expected parameter 'issuer' to be non-null");
-        this.keyVaultCertName = Objects.requireNonNull(keyVaultCertName, "expected parameter 'keyVaultCertName' to be non-null");
-        this.subjectName = Objects.requireNonNull(subjectName, "expected parameter 'subjectName' to be non-null");
-        this.thumbprint = Objects.requireNonNull(thumbprint, "expected parameter 'thumbprint' to be non-null");
-        this.vaultUri = Objects.requireNonNull(vaultUri, "expected parameter 'vaultUri' to be non-null");
-    }
+    private CertificatePropertiesResponse() {}
 
-    private CertificatePropertiesResponse() {
-        this.activateDate = null;
-        this.certVersion = null;
-        this.dnsNames = List.of();
-        this.expirationDate = null;
-        this.issuedDate = null;
-        this.issuer = null;
-        this.keyVaultCertName = null;
-        this.subjectName = null;
-        this.thumbprint = null;
-        this.vaultUri = null;
+    private CertificatePropertiesResponse(CertificatePropertiesResponse $) {
+        this.activateDate = $.activateDate;
+        this.certVersion = $.certVersion;
+        this.dnsNames = $.dnsNames;
+        this.expirationDate = $.expirationDate;
+        this.issuedDate = $.issuedDate;
+        this.issuer = $.issuer;
+        this.keyVaultCertName = $.keyVaultCertName;
+        this.subjectName = $.subjectName;
+        this.thumbprint = $.thumbprint;
+        this.vaultUri = $.vaultUri;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CertificatePropertiesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String activateDate;
-        private @Nullable String certVersion;
-        private List<String> dnsNames;
-        private String expirationDate;
-        private String issuedDate;
-        private String issuer;
-        private String keyVaultCertName;
-        private String subjectName;
-        private String thumbprint;
-        private String vaultUri;
+        private CertificatePropertiesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new CertificatePropertiesResponse();
         }
 
         public Builder(CertificatePropertiesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.activateDate = defaults.activateDate;
-    	      this.certVersion = defaults.certVersion;
-    	      this.dnsNames = defaults.dnsNames;
-    	      this.expirationDate = defaults.expirationDate;
-    	      this.issuedDate = defaults.issuedDate;
-    	      this.issuer = defaults.issuer;
-    	      this.keyVaultCertName = defaults.keyVaultCertName;
-    	      this.subjectName = defaults.subjectName;
-    	      this.thumbprint = defaults.thumbprint;
-    	      this.vaultUri = defaults.vaultUri;
+            $ = new CertificatePropertiesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder activateDate(String activateDate) {
-            this.activateDate = Objects.requireNonNull(activateDate);
+            $.activateDate = activateDate;
             return this;
         }
+
         public Builder certVersion(@Nullable String certVersion) {
-            this.certVersion = certVersion;
+            $.certVersion = certVersion;
             return this;
         }
+
         public Builder dnsNames(List<String> dnsNames) {
-            this.dnsNames = Objects.requireNonNull(dnsNames);
+            $.dnsNames = dnsNames;
             return this;
         }
+
         public Builder dnsNames(String... dnsNames) {
             return dnsNames(List.of(dnsNames));
         }
+
         public Builder expirationDate(String expirationDate) {
-            this.expirationDate = Objects.requireNonNull(expirationDate);
+            $.expirationDate = expirationDate;
             return this;
         }
+
         public Builder issuedDate(String issuedDate) {
-            this.issuedDate = Objects.requireNonNull(issuedDate);
+            $.issuedDate = issuedDate;
             return this;
         }
+
         public Builder issuer(String issuer) {
-            this.issuer = Objects.requireNonNull(issuer);
+            $.issuer = issuer;
             return this;
         }
+
         public Builder keyVaultCertName(String keyVaultCertName) {
-            this.keyVaultCertName = Objects.requireNonNull(keyVaultCertName);
+            $.keyVaultCertName = keyVaultCertName;
             return this;
         }
+
         public Builder subjectName(String subjectName) {
-            this.subjectName = Objects.requireNonNull(subjectName);
+            $.subjectName = subjectName;
             return this;
         }
+
         public Builder thumbprint(String thumbprint) {
-            this.thumbprint = Objects.requireNonNull(thumbprint);
+            $.thumbprint = thumbprint;
             return this;
         }
+
         public Builder vaultUri(String vaultUri) {
-            this.vaultUri = Objects.requireNonNull(vaultUri);
+            $.vaultUri = vaultUri;
             return this;
-        }        public CertificatePropertiesResponse build() {
-            return new CertificatePropertiesResponse(activateDate, certVersion, dnsNames, expirationDate, issuedDate, issuer, keyVaultCertName, subjectName, thumbprint, vaultUri);
+        }
+
+        public CertificatePropertiesResponse build() {
+            $.activateDate = Objects.requireNonNull($.activateDate, "expected parameter 'activateDate' to be non-null");
+            $.dnsNames = Objects.requireNonNull($.dnsNames, "expected parameter 'dnsNames' to be non-null");
+            $.expirationDate = Objects.requireNonNull($.expirationDate, "expected parameter 'expirationDate' to be non-null");
+            $.issuedDate = Objects.requireNonNull($.issuedDate, "expected parameter 'issuedDate' to be non-null");
+            $.issuer = Objects.requireNonNull($.issuer, "expected parameter 'issuer' to be non-null");
+            $.keyVaultCertName = Objects.requireNonNull($.keyVaultCertName, "expected parameter 'keyVaultCertName' to be non-null");
+            $.subjectName = Objects.requireNonNull($.subjectName, "expected parameter 'subjectName' to be non-null");
+            $.thumbprint = Objects.requireNonNull($.thumbprint, "expected parameter 'thumbprint' to be non-null");
+            $.vaultUri = Objects.requireNonNull($.vaultUri, "expected parameter 'vaultUri' to be non-null");
+            return $;
         }
     }
+
 }

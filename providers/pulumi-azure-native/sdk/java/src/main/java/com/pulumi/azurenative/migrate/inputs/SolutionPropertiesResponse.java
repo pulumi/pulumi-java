@@ -27,10 +27,10 @@ public final class SolutionPropertiesResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="cleanupState")
-      private final @Nullable String cleanupState;
+    private @Nullable String cleanupState;
 
     public Optional<String> cleanupState() {
-        return this.cleanupState == null ? Optional.empty() : Optional.ofNullable(this.cleanupState);
+        return Optional.ofNullable(this.cleanupState);
     }
 
     /**
@@ -38,10 +38,10 @@ public final class SolutionPropertiesResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="details")
-      private final @Nullable SolutionDetailsResponse details;
+    private @Nullable SolutionDetailsResponse details;
 
     public Optional<SolutionDetailsResponse> details() {
-        return this.details == null ? Optional.empty() : Optional.ofNullable(this.details);
+        return Optional.ofNullable(this.details);
     }
 
     /**
@@ -49,10 +49,10 @@ public final class SolutionPropertiesResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="goal")
-      private final @Nullable String goal;
+    private @Nullable String goal;
 
     public Optional<String> goal() {
-        return this.goal == null ? Optional.empty() : Optional.ofNullable(this.goal);
+        return Optional.ofNullable(this.goal);
     }
 
     /**
@@ -60,10 +60,10 @@ public final class SolutionPropertiesResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="purpose")
-      private final @Nullable String purpose;
+    private @Nullable String purpose;
 
     public Optional<String> purpose() {
-        return this.purpose == null ? Optional.empty() : Optional.ofNullable(this.purpose);
+        return Optional.ofNullable(this.purpose);
     }
 
     /**
@@ -71,10 +71,10 @@ public final class SolutionPropertiesResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="status")
-      private final @Nullable String status;
+    private @Nullable String status;
 
     public Optional<String> status() {
-        return this.status == null ? Optional.empty() : Optional.ofNullable(this.status);
+        return Optional.ofNullable(this.status);
     }
 
     /**
@@ -82,10 +82,10 @@ public final class SolutionPropertiesResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="summary")
-      private final @Nullable Either<DatabasesSolutionSummaryResponse,ServersSolutionSummaryResponse> summary;
+    private @Nullable Either<DatabasesSolutionSummaryResponse,ServersSolutionSummaryResponse> summary;
 
-    public Either<DatabasesSolutionSummaryResponse,ServersSolutionSummaryResponse> summary() {
-        return this.summary == null ? null : this.summary;
+    public Optional<Either<DatabasesSolutionSummaryResponse,ServersSolutionSummaryResponse>> summary() {
+        return Optional.ofNullable(this.summary);
     }
 
     /**
@@ -93,100 +93,80 @@ public final class SolutionPropertiesResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="tool")
-      private final @Nullable String tool;
+    private @Nullable String tool;
 
     public Optional<String> tool() {
-        return this.tool == null ? Optional.empty() : Optional.ofNullable(this.tool);
+        return Optional.ofNullable(this.tool);
     }
 
-    public SolutionPropertiesResponse(
-        @Nullable String cleanupState,
-        @Nullable SolutionDetailsResponse details,
-        @Nullable String goal,
-        @Nullable String purpose,
-        @Nullable String status,
-        @Nullable Either<DatabasesSolutionSummaryResponse,ServersSolutionSummaryResponse> summary,
-        @Nullable String tool) {
-        this.cleanupState = cleanupState;
-        this.details = details;
-        this.goal = goal;
-        this.purpose = purpose;
-        this.status = status;
-        this.summary = summary;
-        this.tool = tool;
-    }
+    private SolutionPropertiesResponse() {}
 
-    private SolutionPropertiesResponse() {
-        this.cleanupState = null;
-        this.details = null;
-        this.goal = null;
-        this.purpose = null;
-        this.status = null;
-        this.summary = null;
-        this.tool = null;
+    private SolutionPropertiesResponse(SolutionPropertiesResponse $) {
+        this.cleanupState = $.cleanupState;
+        this.details = $.details;
+        this.goal = $.goal;
+        this.purpose = $.purpose;
+        this.status = $.status;
+        this.summary = $.summary;
+        this.tool = $.tool;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SolutionPropertiesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String cleanupState;
-        private @Nullable SolutionDetailsResponse details;
-        private @Nullable String goal;
-        private @Nullable String purpose;
-        private @Nullable String status;
-        private @Nullable Either<DatabasesSolutionSummaryResponse,ServersSolutionSummaryResponse> summary;
-        private @Nullable String tool;
+        private SolutionPropertiesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new SolutionPropertiesResponse();
         }
 
         public Builder(SolutionPropertiesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cleanupState = defaults.cleanupState;
-    	      this.details = defaults.details;
-    	      this.goal = defaults.goal;
-    	      this.purpose = defaults.purpose;
-    	      this.status = defaults.status;
-    	      this.summary = defaults.summary;
-    	      this.tool = defaults.tool;
+            $ = new SolutionPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder cleanupState(@Nullable String cleanupState) {
-            this.cleanupState = cleanupState;
+            $.cleanupState = cleanupState;
             return this;
         }
+
         public Builder details(@Nullable SolutionDetailsResponse details) {
-            this.details = details;
+            $.details = details;
             return this;
         }
+
         public Builder goal(@Nullable String goal) {
-            this.goal = goal;
+            $.goal = goal;
             return this;
         }
+
         public Builder purpose(@Nullable String purpose) {
-            this.purpose = purpose;
+            $.purpose = purpose;
             return this;
         }
+
         public Builder status(@Nullable String status) {
-            this.status = status;
+            $.status = status;
             return this;
         }
+
         public Builder summary(@Nullable Either<DatabasesSolutionSummaryResponse,ServersSolutionSummaryResponse> summary) {
-            this.summary = summary;
+            $.summary = summary;
             return this;
         }
+
         public Builder tool(@Nullable String tool) {
-            this.tool = tool;
+            $.tool = tool;
             return this;
-        }        public SolutionPropertiesResponse build() {
-            return new SolutionPropertiesResponse(cleanupState, details, goal, purpose, status, summary, tool);
+        }
+
+        public SolutionPropertiesResponse build() {
+            return $;
         }
     }
+
 }

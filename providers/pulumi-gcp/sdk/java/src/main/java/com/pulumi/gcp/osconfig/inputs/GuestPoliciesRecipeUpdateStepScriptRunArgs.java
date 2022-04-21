@@ -5,11 +5,11 @@ package com.pulumi.gcp.osconfig.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class GuestPoliciesRecipeUpdateStepScriptRunArgs extends com.pulumi
      * 
      */
     @Import(name="allowedExitCodes")
-      private final @Nullable Output<List<Integer>> allowedExitCodes;
+    private @Nullable Output<List<Integer>> allowedExitCodes;
 
-    public Output<List<Integer>> allowedExitCodes() {
-        return this.allowedExitCodes == null ? Codegen.empty() : this.allowedExitCodes;
+    public Optional<Output<List<Integer>>> allowedExitCodes() {
+        return Optional.ofNullable(this.allowedExitCodes);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class GuestPoliciesRecipeUpdateStepScriptRunArgs extends com.pulumi
      * 
      */
     @Import(name="interpreter")
-      private final @Nullable Output<String> interpreter;
+    private @Nullable Output<String> interpreter;
 
-    public Output<String> interpreter() {
-        return this.interpreter == null ? Codegen.empty() : this.interpreter;
+    public Optional<Output<String>> interpreter() {
+        return Optional.ofNullable(this.interpreter);
     }
 
     /**
@@ -46,79 +46,73 @@ public final class GuestPoliciesRecipeUpdateStepScriptRunArgs extends com.pulumi
      * 
      */
     @Import(name="script", required=true)
-      private final Output<String> script;
+    private Output<String> script;
 
     public Output<String> script() {
         return this.script;
     }
 
-    public GuestPoliciesRecipeUpdateStepScriptRunArgs(
-        @Nullable Output<List<Integer>> allowedExitCodes,
-        @Nullable Output<String> interpreter,
-        Output<String> script) {
-        this.allowedExitCodes = allowedExitCodes;
-        this.interpreter = interpreter;
-        this.script = Objects.requireNonNull(script, "expected parameter 'script' to be non-null");
-    }
+    private GuestPoliciesRecipeUpdateStepScriptRunArgs() {}
 
-    private GuestPoliciesRecipeUpdateStepScriptRunArgs() {
-        this.allowedExitCodes = Codegen.empty();
-        this.interpreter = Codegen.empty();
-        this.script = Codegen.empty();
+    private GuestPoliciesRecipeUpdateStepScriptRunArgs(GuestPoliciesRecipeUpdateStepScriptRunArgs $) {
+        this.allowedExitCodes = $.allowedExitCodes;
+        this.interpreter = $.interpreter;
+        this.script = $.script;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GuestPoliciesRecipeUpdateStepScriptRunArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<Integer>> allowedExitCodes;
-        private @Nullable Output<String> interpreter;
-        private Output<String> script;
+        private GuestPoliciesRecipeUpdateStepScriptRunArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GuestPoliciesRecipeUpdateStepScriptRunArgs();
         }
 
         public Builder(GuestPoliciesRecipeUpdateStepScriptRunArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.allowedExitCodes = defaults.allowedExitCodes;
-    	      this.interpreter = defaults.interpreter;
-    	      this.script = defaults.script;
+            $ = new GuestPoliciesRecipeUpdateStepScriptRunArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder allowedExitCodes(@Nullable Output<List<Integer>> allowedExitCodes) {
-            this.allowedExitCodes = allowedExitCodes;
+            $.allowedExitCodes = allowedExitCodes;
             return this;
         }
-        public Builder allowedExitCodes(@Nullable List<Integer> allowedExitCodes) {
-            this.allowedExitCodes = Codegen.ofNullable(allowedExitCodes);
-            return this;
+
+        public Builder allowedExitCodes(List<Integer> allowedExitCodes) {
+            return allowedExitCodes(Output.of(allowedExitCodes));
         }
+
         public Builder allowedExitCodes(Integer... allowedExitCodes) {
             return allowedExitCodes(List.of(allowedExitCodes));
         }
+
         public Builder interpreter(@Nullable Output<String> interpreter) {
-            this.interpreter = interpreter;
+            $.interpreter = interpreter;
             return this;
         }
-        public Builder interpreter(@Nullable String interpreter) {
-            this.interpreter = Codegen.ofNullable(interpreter);
-            return this;
+
+        public Builder interpreter(String interpreter) {
+            return interpreter(Output.of(interpreter));
         }
+
         public Builder script(Output<String> script) {
-            this.script = Objects.requireNonNull(script);
+            $.script = script;
             return this;
         }
+
         public Builder script(String script) {
-            this.script = Output.of(Objects.requireNonNull(script));
-            return this;
-        }        public GuestPoliciesRecipeUpdateStepScriptRunArgs build() {
-            return new GuestPoliciesRecipeUpdateStepScriptRunArgs(allowedExitCodes, interpreter, script);
+            return script(Output.of(script));
+        }
+
+        public GuestPoliciesRecipeUpdateStepScriptRunArgs build() {
+            $.script = Objects.requireNonNull($.script, "expected parameter 'script' to be non-null");
+            return $;
         }
     }
+
 }

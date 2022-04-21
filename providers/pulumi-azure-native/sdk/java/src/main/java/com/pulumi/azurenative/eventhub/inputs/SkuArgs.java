@@ -8,10 +8,10 @@ import com.pulumi.azurenative.eventhub.enums.SkuTier;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -28,10 +28,10 @@ public final class SkuArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="capacity")
-      private final @Nullable Output<Integer> capacity;
+    private @Nullable Output<Integer> capacity;
 
-    public Output<Integer> capacity() {
-        return this.capacity == null ? Codegen.empty() : this.capacity;
+    public Optional<Output<Integer>> capacity() {
+        return Optional.ofNullable(this.capacity);
     }
 
     /**
@@ -39,7 +39,7 @@ public final class SkuArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name", required=true)
-      private final Output<Either<String,SkuName>> name;
+    private Output<Either<String,SkuName>> name;
 
     public Output<Either<String,SkuName>> name() {
         return this.name;
@@ -50,76 +50,69 @@ public final class SkuArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tier")
-      private final @Nullable Output<Either<String,SkuTier>> tier;
+    private @Nullable Output<Either<String,SkuTier>> tier;
 
-    public Output<Either<String,SkuTier>> tier() {
-        return this.tier == null ? Codegen.empty() : this.tier;
+    public Optional<Output<Either<String,SkuTier>>> tier() {
+        return Optional.ofNullable(this.tier);
     }
 
-    public SkuArgs(
-        @Nullable Output<Integer> capacity,
-        Output<Either<String,SkuName>> name,
-        @Nullable Output<Either<String,SkuTier>> tier) {
-        this.capacity = capacity;
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.tier = tier;
-    }
+    private SkuArgs() {}
 
-    private SkuArgs() {
-        this.capacity = Codegen.empty();
-        this.name = Codegen.empty();
-        this.tier = Codegen.empty();
+    private SkuArgs(SkuArgs $) {
+        this.capacity = $.capacity;
+        this.name = $.name;
+        this.tier = $.tier;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SkuArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> capacity;
-        private Output<Either<String,SkuName>> name;
-        private @Nullable Output<Either<String,SkuTier>> tier;
+        private SkuArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SkuArgs();
         }
 
         public Builder(SkuArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.capacity = defaults.capacity;
-    	      this.name = defaults.name;
-    	      this.tier = defaults.tier;
+            $ = new SkuArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder capacity(@Nullable Output<Integer> capacity) {
-            this.capacity = capacity;
+            $.capacity = capacity;
             return this;
         }
-        public Builder capacity(@Nullable Integer capacity) {
-            this.capacity = Codegen.ofNullable(capacity);
-            return this;
+
+        public Builder capacity(Integer capacity) {
+            return capacity(Output.of(capacity));
         }
+
         public Builder name(Output<Either<String,SkuName>> name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder name(Either<String,SkuName> name) {
-            this.name = Output.of(Objects.requireNonNull(name));
-            return this;
+            return name(Output.of(name));
         }
+
         public Builder tier(@Nullable Output<Either<String,SkuTier>> tier) {
-            this.tier = tier;
+            $.tier = tier;
             return this;
         }
-        public Builder tier(@Nullable Either<String,SkuTier> tier) {
-            this.tier = Codegen.ofNullable(tier);
-            return this;
-        }        public SkuArgs build() {
-            return new SkuArgs(capacity, name, tier);
+
+        public Builder tier(Either<String,SkuTier> tier) {
+            return tier(Output.of(tier));
+        }
+
+        public SkuArgs build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            return $;
         }
     }
+
 }

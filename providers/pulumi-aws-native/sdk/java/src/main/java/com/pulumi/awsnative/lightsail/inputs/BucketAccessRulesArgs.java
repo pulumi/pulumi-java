@@ -5,10 +5,10 @@ package com.pulumi.awsnative.lightsail.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class BucketAccessRulesArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="allowPublicOverrides")
-      private final @Nullable Output<Boolean> allowPublicOverrides;
+    private @Nullable Output<Boolean> allowPublicOverrides;
 
-    public Output<Boolean> allowPublicOverrides() {
-        return this.allowPublicOverrides == null ? Codegen.empty() : this.allowPublicOverrides;
+    public Optional<Output<Boolean>> allowPublicOverrides() {
+        return Optional.ofNullable(this.allowPublicOverrides);
     }
 
     /**
@@ -36,63 +36,58 @@ public final class BucketAccessRulesArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="getObject")
-      private final @Nullable Output<String> getObject;
+    private @Nullable Output<String> getObject;
 
-    public Output<String> getObject() {
-        return this.getObject == null ? Codegen.empty() : this.getObject;
+    public Optional<Output<String>> getObject() {
+        return Optional.ofNullable(this.getObject);
     }
 
-    public BucketAccessRulesArgs(
-        @Nullable Output<Boolean> allowPublicOverrides,
-        @Nullable Output<String> getObject) {
-        this.allowPublicOverrides = allowPublicOverrides;
-        this.getObject = getObject;
-    }
+    private BucketAccessRulesArgs() {}
 
-    private BucketAccessRulesArgs() {
-        this.allowPublicOverrides = Codegen.empty();
-        this.getObject = Codegen.empty();
+    private BucketAccessRulesArgs(BucketAccessRulesArgs $) {
+        this.allowPublicOverrides = $.allowPublicOverrides;
+        this.getObject = $.getObject;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BucketAccessRulesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> allowPublicOverrides;
-        private @Nullable Output<String> getObject;
+        private BucketAccessRulesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new BucketAccessRulesArgs();
         }
 
         public Builder(BucketAccessRulesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.allowPublicOverrides = defaults.allowPublicOverrides;
-    	      this.getObject = defaults.getObject;
+            $ = new BucketAccessRulesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder allowPublicOverrides(@Nullable Output<Boolean> allowPublicOverrides) {
-            this.allowPublicOverrides = allowPublicOverrides;
+            $.allowPublicOverrides = allowPublicOverrides;
             return this;
         }
-        public Builder allowPublicOverrides(@Nullable Boolean allowPublicOverrides) {
-            this.allowPublicOverrides = Codegen.ofNullable(allowPublicOverrides);
-            return this;
+
+        public Builder allowPublicOverrides(Boolean allowPublicOverrides) {
+            return allowPublicOverrides(Output.of(allowPublicOverrides));
         }
+
         public Builder getObject(@Nullable Output<String> getObject) {
-            this.getObject = getObject;
+            $.getObject = getObject;
             return this;
         }
-        public Builder getObject(@Nullable String getObject) {
-            this.getObject = Codegen.ofNullable(getObject);
-            return this;
-        }        public BucketAccessRulesArgs build() {
-            return new BucketAccessRulesArgs(allowPublicOverrides, getObject);
+
+        public Builder getObject(String getObject) {
+            return getObject(Output.of(getObject));
+        }
+
+        public BucketAccessRulesArgs build() {
+            return $;
         }
     }
+
 }

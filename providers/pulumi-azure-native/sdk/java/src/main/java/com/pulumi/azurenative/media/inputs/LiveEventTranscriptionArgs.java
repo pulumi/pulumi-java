@@ -7,10 +7,10 @@ import com.pulumi.azurenative.media.inputs.LiveEventInputTrackSelectionArgs;
 import com.pulumi.azurenative.media.inputs.LiveEventOutputTranscriptionTrackArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +27,10 @@ public final class LiveEventTranscriptionArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="inputTrackSelection")
-      private final @Nullable Output<List<LiveEventInputTrackSelectionArgs>> inputTrackSelection;
+    private @Nullable Output<List<LiveEventInputTrackSelectionArgs>> inputTrackSelection;
 
-    public Output<List<LiveEventInputTrackSelectionArgs>> inputTrackSelection() {
-        return this.inputTrackSelection == null ? Codegen.empty() : this.inputTrackSelection;
+    public Optional<Output<List<LiveEventInputTrackSelectionArgs>>> inputTrackSelection() {
+        return Optional.ofNullable(this.inputTrackSelection);
     }
 
     /**
@@ -38,10 +38,10 @@ public final class LiveEventTranscriptionArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="language")
-      private final @Nullable Output<String> language;
+    private @Nullable Output<String> language;
 
-    public Output<String> language() {
-        return this.language == null ? Codegen.empty() : this.language;
+    public Optional<Output<String>> language() {
+        return Optional.ofNullable(this.language);
     }
 
     /**
@@ -49,79 +49,72 @@ public final class LiveEventTranscriptionArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="outputTranscriptionTrack")
-      private final @Nullable Output<LiveEventOutputTranscriptionTrackArgs> outputTranscriptionTrack;
+    private @Nullable Output<LiveEventOutputTranscriptionTrackArgs> outputTranscriptionTrack;
 
-    public Output<LiveEventOutputTranscriptionTrackArgs> outputTranscriptionTrack() {
-        return this.outputTranscriptionTrack == null ? Codegen.empty() : this.outputTranscriptionTrack;
+    public Optional<Output<LiveEventOutputTranscriptionTrackArgs>> outputTranscriptionTrack() {
+        return Optional.ofNullable(this.outputTranscriptionTrack);
     }
 
-    public LiveEventTranscriptionArgs(
-        @Nullable Output<List<LiveEventInputTrackSelectionArgs>> inputTrackSelection,
-        @Nullable Output<String> language,
-        @Nullable Output<LiveEventOutputTranscriptionTrackArgs> outputTranscriptionTrack) {
-        this.inputTrackSelection = inputTrackSelection;
-        this.language = language;
-        this.outputTranscriptionTrack = outputTranscriptionTrack;
-    }
+    private LiveEventTranscriptionArgs() {}
 
-    private LiveEventTranscriptionArgs() {
-        this.inputTrackSelection = Codegen.empty();
-        this.language = Codegen.empty();
-        this.outputTranscriptionTrack = Codegen.empty();
+    private LiveEventTranscriptionArgs(LiveEventTranscriptionArgs $) {
+        this.inputTrackSelection = $.inputTrackSelection;
+        this.language = $.language;
+        this.outputTranscriptionTrack = $.outputTranscriptionTrack;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LiveEventTranscriptionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<LiveEventInputTrackSelectionArgs>> inputTrackSelection;
-        private @Nullable Output<String> language;
-        private @Nullable Output<LiveEventOutputTranscriptionTrackArgs> outputTranscriptionTrack;
+        private LiveEventTranscriptionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new LiveEventTranscriptionArgs();
         }
 
         public Builder(LiveEventTranscriptionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.inputTrackSelection = defaults.inputTrackSelection;
-    	      this.language = defaults.language;
-    	      this.outputTranscriptionTrack = defaults.outputTranscriptionTrack;
+            $ = new LiveEventTranscriptionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder inputTrackSelection(@Nullable Output<List<LiveEventInputTrackSelectionArgs>> inputTrackSelection) {
-            this.inputTrackSelection = inputTrackSelection;
+            $.inputTrackSelection = inputTrackSelection;
             return this;
         }
-        public Builder inputTrackSelection(@Nullable List<LiveEventInputTrackSelectionArgs> inputTrackSelection) {
-            this.inputTrackSelection = Codegen.ofNullable(inputTrackSelection);
-            return this;
+
+        public Builder inputTrackSelection(List<LiveEventInputTrackSelectionArgs> inputTrackSelection) {
+            return inputTrackSelection(Output.of(inputTrackSelection));
         }
+
         public Builder inputTrackSelection(LiveEventInputTrackSelectionArgs... inputTrackSelection) {
             return inputTrackSelection(List.of(inputTrackSelection));
         }
+
         public Builder language(@Nullable Output<String> language) {
-            this.language = language;
+            $.language = language;
             return this;
         }
-        public Builder language(@Nullable String language) {
-            this.language = Codegen.ofNullable(language);
-            return this;
+
+        public Builder language(String language) {
+            return language(Output.of(language));
         }
+
         public Builder outputTranscriptionTrack(@Nullable Output<LiveEventOutputTranscriptionTrackArgs> outputTranscriptionTrack) {
-            this.outputTranscriptionTrack = outputTranscriptionTrack;
+            $.outputTranscriptionTrack = outputTranscriptionTrack;
             return this;
         }
-        public Builder outputTranscriptionTrack(@Nullable LiveEventOutputTranscriptionTrackArgs outputTranscriptionTrack) {
-            this.outputTranscriptionTrack = Codegen.ofNullable(outputTranscriptionTrack);
-            return this;
-        }        public LiveEventTranscriptionArgs build() {
-            return new LiveEventTranscriptionArgs(inputTrackSelection, language, outputTranscriptionTrack);
+
+        public Builder outputTranscriptionTrack(LiveEventOutputTranscriptionTrackArgs outputTranscriptionTrack) {
+            return outputTranscriptionTrack(Output.of(outputTranscriptionTrack));
+        }
+
+        public LiveEventTranscriptionArgs build() {
+            return $;
         }
     }
+
 }

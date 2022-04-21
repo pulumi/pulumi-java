@@ -5,9 +5,9 @@ package com.pulumi.googlenative.sqladmin_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class DiskEncryptionConfigurationArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="kind")
-      private final @Nullable Output<String> kind;
+    private @Nullable Output<String> kind;
 
-    public Output<String> kind() {
-        return this.kind == null ? Codegen.empty() : this.kind;
+    public Optional<Output<String>> kind() {
+        return Optional.ofNullable(this.kind);
     }
 
     /**
@@ -35,63 +35,58 @@ public final class DiskEncryptionConfigurationArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="kmsKeyName")
-      private final @Nullable Output<String> kmsKeyName;
+    private @Nullable Output<String> kmsKeyName;
 
-    public Output<String> kmsKeyName() {
-        return this.kmsKeyName == null ? Codegen.empty() : this.kmsKeyName;
+    public Optional<Output<String>> kmsKeyName() {
+        return Optional.ofNullable(this.kmsKeyName);
     }
 
-    public DiskEncryptionConfigurationArgs(
-        @Nullable Output<String> kind,
-        @Nullable Output<String> kmsKeyName) {
-        this.kind = kind;
-        this.kmsKeyName = kmsKeyName;
-    }
+    private DiskEncryptionConfigurationArgs() {}
 
-    private DiskEncryptionConfigurationArgs() {
-        this.kind = Codegen.empty();
-        this.kmsKeyName = Codegen.empty();
+    private DiskEncryptionConfigurationArgs(DiskEncryptionConfigurationArgs $) {
+        this.kind = $.kind;
+        this.kmsKeyName = $.kmsKeyName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DiskEncryptionConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> kind;
-        private @Nullable Output<String> kmsKeyName;
+        private DiskEncryptionConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DiskEncryptionConfigurationArgs();
         }
 
         public Builder(DiskEncryptionConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.kind = defaults.kind;
-    	      this.kmsKeyName = defaults.kmsKeyName;
+            $ = new DiskEncryptionConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder kind(@Nullable Output<String> kind) {
-            this.kind = kind;
+            $.kind = kind;
             return this;
         }
-        public Builder kind(@Nullable String kind) {
-            this.kind = Codegen.ofNullable(kind);
-            return this;
+
+        public Builder kind(String kind) {
+            return kind(Output.of(kind));
         }
+
         public Builder kmsKeyName(@Nullable Output<String> kmsKeyName) {
-            this.kmsKeyName = kmsKeyName;
+            $.kmsKeyName = kmsKeyName;
             return this;
         }
-        public Builder kmsKeyName(@Nullable String kmsKeyName) {
-            this.kmsKeyName = Codegen.ofNullable(kmsKeyName);
-            return this;
-        }        public DiskEncryptionConfigurationArgs build() {
-            return new DiskEncryptionConfigurationArgs(kind, kmsKeyName);
+
+        public Builder kmsKeyName(String kmsKeyName) {
+            return kmsKeyName(Output.of(kmsKeyName));
+        }
+
+        public DiskEncryptionConfigurationArgs build() {
+            return $;
         }
     }
+
 }

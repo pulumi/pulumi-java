@@ -15,78 +15,72 @@ public final class GetRegionInstantSnapshotArgs extends com.pulumi.resources.Inv
     public static final GetRegionInstantSnapshotArgs Empty = new GetRegionInstantSnapshotArgs();
 
     @Import(name="instantSnapshot", required=true)
-      private final String instantSnapshot;
+    private String instantSnapshot;
 
     public String instantSnapshot() {
         return this.instantSnapshot;
     }
 
     @Import(name="project")
-      private final @Nullable String project;
+    private @Nullable String project;
 
     public Optional<String> project() {
-        return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
+        return Optional.ofNullable(this.project);
     }
 
     @Import(name="region", required=true)
-      private final String region;
+    private String region;
 
     public String region() {
         return this.region;
     }
 
-    public GetRegionInstantSnapshotArgs(
-        String instantSnapshot,
-        @Nullable String project,
-        String region) {
-        this.instantSnapshot = Objects.requireNonNull(instantSnapshot, "expected parameter 'instantSnapshot' to be non-null");
-        this.project = project;
-        this.region = Objects.requireNonNull(region, "expected parameter 'region' to be non-null");
-    }
+    private GetRegionInstantSnapshotArgs() {}
 
-    private GetRegionInstantSnapshotArgs() {
-        this.instantSnapshot = null;
-        this.project = null;
-        this.region = null;
+    private GetRegionInstantSnapshotArgs(GetRegionInstantSnapshotArgs $) {
+        this.instantSnapshot = $.instantSnapshot;
+        this.project = $.project;
+        this.region = $.region;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetRegionInstantSnapshotArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String instantSnapshot;
-        private @Nullable String project;
-        private String region;
+        private GetRegionInstantSnapshotArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetRegionInstantSnapshotArgs();
         }
 
         public Builder(GetRegionInstantSnapshotArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.instantSnapshot = defaults.instantSnapshot;
-    	      this.project = defaults.project;
-    	      this.region = defaults.region;
+            $ = new GetRegionInstantSnapshotArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder instantSnapshot(String instantSnapshot) {
-            this.instantSnapshot = Objects.requireNonNull(instantSnapshot);
+            $.instantSnapshot = instantSnapshot;
             return this;
         }
+
         public Builder project(@Nullable String project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
+
         public Builder region(String region) {
-            this.region = Objects.requireNonNull(region);
+            $.region = region;
             return this;
-        }        public GetRegionInstantSnapshotArgs build() {
-            return new GetRegionInstantSnapshotArgs(instantSnapshot, project, region);
+        }
+
+        public GetRegionInstantSnapshotArgs build() {
+            $.instantSnapshot = Objects.requireNonNull($.instantSnapshot, "expected parameter 'instantSnapshot' to be non-null");
+            $.region = Objects.requireNonNull($.region, "expected parameter 'region' to be non-null");
+            return $;
         }
     }
+
 }

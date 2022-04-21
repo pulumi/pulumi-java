@@ -5,9 +5,9 @@ package com.pulumi.googlenative.vmmigration_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class VmwareSourceDetailsArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="password")
-      private final @Nullable Output<String> password;
+    private @Nullable Output<String> password;
 
-    public Output<String> password() {
-        return this.password == null ? Codegen.empty() : this.password;
+    public Optional<Output<String>> password() {
+        return Optional.ofNullable(this.password);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class VmwareSourceDetailsArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="thumbprint")
-      private final @Nullable Output<String> thumbprint;
+    private @Nullable Output<String> thumbprint;
 
-    public Output<String> thumbprint() {
-        return this.thumbprint == null ? Codegen.empty() : this.thumbprint;
+    public Optional<Output<String>> thumbprint() {
+        return Optional.ofNullable(this.thumbprint);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class VmwareSourceDetailsArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="username")
-      private final @Nullable Output<String> username;
+    private @Nullable Output<String> username;
 
-    public Output<String> username() {
-        return this.username == null ? Codegen.empty() : this.username;
+    public Optional<Output<String>> username() {
+        return Optional.ofNullable(this.username);
     }
 
     /**
@@ -57,89 +57,78 @@ public final class VmwareSourceDetailsArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="vcenterIp")
-      private final @Nullable Output<String> vcenterIp;
+    private @Nullable Output<String> vcenterIp;
 
-    public Output<String> vcenterIp() {
-        return this.vcenterIp == null ? Codegen.empty() : this.vcenterIp;
+    public Optional<Output<String>> vcenterIp() {
+        return Optional.ofNullable(this.vcenterIp);
     }
 
-    public VmwareSourceDetailsArgs(
-        @Nullable Output<String> password,
-        @Nullable Output<String> thumbprint,
-        @Nullable Output<String> username,
-        @Nullable Output<String> vcenterIp) {
-        this.password = password;
-        this.thumbprint = thumbprint;
-        this.username = username;
-        this.vcenterIp = vcenterIp;
-    }
+    private VmwareSourceDetailsArgs() {}
 
-    private VmwareSourceDetailsArgs() {
-        this.password = Codegen.empty();
-        this.thumbprint = Codegen.empty();
-        this.username = Codegen.empty();
-        this.vcenterIp = Codegen.empty();
+    private VmwareSourceDetailsArgs(VmwareSourceDetailsArgs $) {
+        this.password = $.password;
+        this.thumbprint = $.thumbprint;
+        this.username = $.username;
+        this.vcenterIp = $.vcenterIp;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VmwareSourceDetailsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> password;
-        private @Nullable Output<String> thumbprint;
-        private @Nullable Output<String> username;
-        private @Nullable Output<String> vcenterIp;
+        private VmwareSourceDetailsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new VmwareSourceDetailsArgs();
         }
 
         public Builder(VmwareSourceDetailsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.password = defaults.password;
-    	      this.thumbprint = defaults.thumbprint;
-    	      this.username = defaults.username;
-    	      this.vcenterIp = defaults.vcenterIp;
+            $ = new VmwareSourceDetailsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder password(@Nullable Output<String> password) {
-            this.password = password;
+            $.password = password;
             return this;
         }
-        public Builder password(@Nullable String password) {
-            this.password = Codegen.ofNullable(password);
-            return this;
+
+        public Builder password(String password) {
+            return password(Output.of(password));
         }
+
         public Builder thumbprint(@Nullable Output<String> thumbprint) {
-            this.thumbprint = thumbprint;
+            $.thumbprint = thumbprint;
             return this;
         }
-        public Builder thumbprint(@Nullable String thumbprint) {
-            this.thumbprint = Codegen.ofNullable(thumbprint);
-            return this;
+
+        public Builder thumbprint(String thumbprint) {
+            return thumbprint(Output.of(thumbprint));
         }
+
         public Builder username(@Nullable Output<String> username) {
-            this.username = username;
+            $.username = username;
             return this;
         }
-        public Builder username(@Nullable String username) {
-            this.username = Codegen.ofNullable(username);
-            return this;
+
+        public Builder username(String username) {
+            return username(Output.of(username));
         }
+
         public Builder vcenterIp(@Nullable Output<String> vcenterIp) {
-            this.vcenterIp = vcenterIp;
+            $.vcenterIp = vcenterIp;
             return this;
         }
-        public Builder vcenterIp(@Nullable String vcenterIp) {
-            this.vcenterIp = Codegen.ofNullable(vcenterIp);
-            return this;
-        }        public VmwareSourceDetailsArgs build() {
-            return new VmwareSourceDetailsArgs(password, thumbprint, username, vcenterIp);
+
+        public Builder vcenterIp(String vcenterIp) {
+            return vcenterIp(Output.of(vcenterIp));
+        }
+
+        public VmwareSourceDetailsArgs build() {
+            return $;
         }
     }
+
 }

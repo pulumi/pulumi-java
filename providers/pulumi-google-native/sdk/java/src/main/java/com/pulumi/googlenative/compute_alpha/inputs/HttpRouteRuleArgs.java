@@ -5,7 +5,6 @@ package com.pulumi.googlenative.compute_alpha.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.compute_alpha.inputs.HttpFilterConfigArgs;
 import com.pulumi.googlenative.compute_alpha.inputs.HttpHeaderActionArgs;
 import com.pulumi.googlenative.compute_alpha.inputs.HttpRedirectActionArgs;
@@ -15,6 +14,7 @@ import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -31,10 +31,10 @@ public final class HttpRouteRuleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -42,10 +42,10 @@ public final class HttpRouteRuleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="headerAction")
-      private final @Nullable Output<HttpHeaderActionArgs> headerAction;
+    private @Nullable Output<HttpHeaderActionArgs> headerAction;
 
-    public Output<HttpHeaderActionArgs> headerAction() {
-        return this.headerAction == null ? Codegen.empty() : this.headerAction;
+    public Optional<Output<HttpHeaderActionArgs>> headerAction() {
+        return Optional.ofNullable(this.headerAction);
     }
 
     /**
@@ -53,10 +53,10 @@ public final class HttpRouteRuleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="httpFilterConfigs")
-      private final @Nullable Output<List<HttpFilterConfigArgs>> httpFilterConfigs;
+    private @Nullable Output<List<HttpFilterConfigArgs>> httpFilterConfigs;
 
-    public Output<List<HttpFilterConfigArgs>> httpFilterConfigs() {
-        return this.httpFilterConfigs == null ? Codegen.empty() : this.httpFilterConfigs;
+    public Optional<Output<List<HttpFilterConfigArgs>>> httpFilterConfigs() {
+        return Optional.ofNullable(this.httpFilterConfigs);
     }
 
     /**
@@ -64,10 +64,10 @@ public final class HttpRouteRuleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="httpFilterMetadata")
-      private final @Nullable Output<List<HttpFilterConfigArgs>> httpFilterMetadata;
+    private @Nullable Output<List<HttpFilterConfigArgs>> httpFilterMetadata;
 
-    public Output<List<HttpFilterConfigArgs>> httpFilterMetadata() {
-        return this.httpFilterMetadata == null ? Codegen.empty() : this.httpFilterMetadata;
+    public Optional<Output<List<HttpFilterConfigArgs>>> httpFilterMetadata() {
+        return Optional.ofNullable(this.httpFilterMetadata);
     }
 
     /**
@@ -75,10 +75,10 @@ public final class HttpRouteRuleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="matchRules")
-      private final @Nullable Output<List<HttpRouteRuleMatchArgs>> matchRules;
+    private @Nullable Output<List<HttpRouteRuleMatchArgs>> matchRules;
 
-    public Output<List<HttpRouteRuleMatchArgs>> matchRules() {
-        return this.matchRules == null ? Codegen.empty() : this.matchRules;
+    public Optional<Output<List<HttpRouteRuleMatchArgs>>> matchRules() {
+        return Optional.ofNullable(this.matchRules);
     }
 
     /**
@@ -86,10 +86,10 @@ public final class HttpRouteRuleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="priority")
-      private final @Nullable Output<Integer> priority;
+    private @Nullable Output<Integer> priority;
 
-    public Output<Integer> priority() {
-        return this.priority == null ? Codegen.empty() : this.priority;
+    public Optional<Output<Integer>> priority() {
+        return Optional.ofNullable(this.priority);
     }
 
     /**
@@ -97,10 +97,10 @@ public final class HttpRouteRuleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="routeAction")
-      private final @Nullable Output<HttpRouteActionArgs> routeAction;
+    private @Nullable Output<HttpRouteActionArgs> routeAction;
 
-    public Output<HttpRouteActionArgs> routeAction() {
-        return this.routeAction == null ? Codegen.empty() : this.routeAction;
+    public Optional<Output<HttpRouteActionArgs>> routeAction() {
+        return Optional.ofNullable(this.routeAction);
     }
 
     /**
@@ -108,10 +108,10 @@ public final class HttpRouteRuleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="service")
-      private final @Nullable Output<String> service;
+    private @Nullable Output<String> service;
 
-    public Output<String> service() {
-        return this.service == null ? Codegen.empty() : this.service;
+    public Optional<Output<String>> service() {
+        return Optional.ofNullable(this.service);
     }
 
     /**
@@ -119,163 +119,140 @@ public final class HttpRouteRuleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="urlRedirect")
-      private final @Nullable Output<HttpRedirectActionArgs> urlRedirect;
+    private @Nullable Output<HttpRedirectActionArgs> urlRedirect;
 
-    public Output<HttpRedirectActionArgs> urlRedirect() {
-        return this.urlRedirect == null ? Codegen.empty() : this.urlRedirect;
+    public Optional<Output<HttpRedirectActionArgs>> urlRedirect() {
+        return Optional.ofNullable(this.urlRedirect);
     }
 
-    public HttpRouteRuleArgs(
-        @Nullable Output<String> description,
-        @Nullable Output<HttpHeaderActionArgs> headerAction,
-        @Nullable Output<List<HttpFilterConfigArgs>> httpFilterConfigs,
-        @Nullable Output<List<HttpFilterConfigArgs>> httpFilterMetadata,
-        @Nullable Output<List<HttpRouteRuleMatchArgs>> matchRules,
-        @Nullable Output<Integer> priority,
-        @Nullable Output<HttpRouteActionArgs> routeAction,
-        @Nullable Output<String> service,
-        @Nullable Output<HttpRedirectActionArgs> urlRedirect) {
-        this.description = description;
-        this.headerAction = headerAction;
-        this.httpFilterConfigs = httpFilterConfigs;
-        this.httpFilterMetadata = httpFilterMetadata;
-        this.matchRules = matchRules;
-        this.priority = priority;
-        this.routeAction = routeAction;
-        this.service = service;
-        this.urlRedirect = urlRedirect;
-    }
+    private HttpRouteRuleArgs() {}
 
-    private HttpRouteRuleArgs() {
-        this.description = Codegen.empty();
-        this.headerAction = Codegen.empty();
-        this.httpFilterConfigs = Codegen.empty();
-        this.httpFilterMetadata = Codegen.empty();
-        this.matchRules = Codegen.empty();
-        this.priority = Codegen.empty();
-        this.routeAction = Codegen.empty();
-        this.service = Codegen.empty();
-        this.urlRedirect = Codegen.empty();
+    private HttpRouteRuleArgs(HttpRouteRuleArgs $) {
+        this.description = $.description;
+        this.headerAction = $.headerAction;
+        this.httpFilterConfigs = $.httpFilterConfigs;
+        this.httpFilterMetadata = $.httpFilterMetadata;
+        this.matchRules = $.matchRules;
+        this.priority = $.priority;
+        this.routeAction = $.routeAction;
+        this.service = $.service;
+        this.urlRedirect = $.urlRedirect;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(HttpRouteRuleArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> description;
-        private @Nullable Output<HttpHeaderActionArgs> headerAction;
-        private @Nullable Output<List<HttpFilterConfigArgs>> httpFilterConfigs;
-        private @Nullable Output<List<HttpFilterConfigArgs>> httpFilterMetadata;
-        private @Nullable Output<List<HttpRouteRuleMatchArgs>> matchRules;
-        private @Nullable Output<Integer> priority;
-        private @Nullable Output<HttpRouteActionArgs> routeAction;
-        private @Nullable Output<String> service;
-        private @Nullable Output<HttpRedirectActionArgs> urlRedirect;
+        private HttpRouteRuleArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new HttpRouteRuleArgs();
         }
 
         public Builder(HttpRouteRuleArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.description = defaults.description;
-    	      this.headerAction = defaults.headerAction;
-    	      this.httpFilterConfigs = defaults.httpFilterConfigs;
-    	      this.httpFilterMetadata = defaults.httpFilterMetadata;
-    	      this.matchRules = defaults.matchRules;
-    	      this.priority = defaults.priority;
-    	      this.routeAction = defaults.routeAction;
-    	      this.service = defaults.service;
-    	      this.urlRedirect = defaults.urlRedirect;
+            $ = new HttpRouteRuleArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder headerAction(@Nullable Output<HttpHeaderActionArgs> headerAction) {
-            this.headerAction = headerAction;
+            $.headerAction = headerAction;
             return this;
         }
-        public Builder headerAction(@Nullable HttpHeaderActionArgs headerAction) {
-            this.headerAction = Codegen.ofNullable(headerAction);
-            return this;
+
+        public Builder headerAction(HttpHeaderActionArgs headerAction) {
+            return headerAction(Output.of(headerAction));
         }
+
         public Builder httpFilterConfigs(@Nullable Output<List<HttpFilterConfigArgs>> httpFilterConfigs) {
-            this.httpFilterConfigs = httpFilterConfigs;
+            $.httpFilterConfigs = httpFilterConfigs;
             return this;
         }
-        public Builder httpFilterConfigs(@Nullable List<HttpFilterConfigArgs> httpFilterConfigs) {
-            this.httpFilterConfigs = Codegen.ofNullable(httpFilterConfigs);
-            return this;
+
+        public Builder httpFilterConfigs(List<HttpFilterConfigArgs> httpFilterConfigs) {
+            return httpFilterConfigs(Output.of(httpFilterConfigs));
         }
+
         public Builder httpFilterConfigs(HttpFilterConfigArgs... httpFilterConfigs) {
             return httpFilterConfigs(List.of(httpFilterConfigs));
         }
+
         public Builder httpFilterMetadata(@Nullable Output<List<HttpFilterConfigArgs>> httpFilterMetadata) {
-            this.httpFilterMetadata = httpFilterMetadata;
+            $.httpFilterMetadata = httpFilterMetadata;
             return this;
         }
-        public Builder httpFilterMetadata(@Nullable List<HttpFilterConfigArgs> httpFilterMetadata) {
-            this.httpFilterMetadata = Codegen.ofNullable(httpFilterMetadata);
-            return this;
+
+        public Builder httpFilterMetadata(List<HttpFilterConfigArgs> httpFilterMetadata) {
+            return httpFilterMetadata(Output.of(httpFilterMetadata));
         }
+
         public Builder httpFilterMetadata(HttpFilterConfigArgs... httpFilterMetadata) {
             return httpFilterMetadata(List.of(httpFilterMetadata));
         }
+
         public Builder matchRules(@Nullable Output<List<HttpRouteRuleMatchArgs>> matchRules) {
-            this.matchRules = matchRules;
+            $.matchRules = matchRules;
             return this;
         }
-        public Builder matchRules(@Nullable List<HttpRouteRuleMatchArgs> matchRules) {
-            this.matchRules = Codegen.ofNullable(matchRules);
-            return this;
+
+        public Builder matchRules(List<HttpRouteRuleMatchArgs> matchRules) {
+            return matchRules(Output.of(matchRules));
         }
+
         public Builder matchRules(HttpRouteRuleMatchArgs... matchRules) {
             return matchRules(List.of(matchRules));
         }
+
         public Builder priority(@Nullable Output<Integer> priority) {
-            this.priority = priority;
+            $.priority = priority;
             return this;
         }
-        public Builder priority(@Nullable Integer priority) {
-            this.priority = Codegen.ofNullable(priority);
-            return this;
+
+        public Builder priority(Integer priority) {
+            return priority(Output.of(priority));
         }
+
         public Builder routeAction(@Nullable Output<HttpRouteActionArgs> routeAction) {
-            this.routeAction = routeAction;
+            $.routeAction = routeAction;
             return this;
         }
-        public Builder routeAction(@Nullable HttpRouteActionArgs routeAction) {
-            this.routeAction = Codegen.ofNullable(routeAction);
-            return this;
+
+        public Builder routeAction(HttpRouteActionArgs routeAction) {
+            return routeAction(Output.of(routeAction));
         }
+
         public Builder service(@Nullable Output<String> service) {
-            this.service = service;
+            $.service = service;
             return this;
         }
-        public Builder service(@Nullable String service) {
-            this.service = Codegen.ofNullable(service);
-            return this;
+
+        public Builder service(String service) {
+            return service(Output.of(service));
         }
+
         public Builder urlRedirect(@Nullable Output<HttpRedirectActionArgs> urlRedirect) {
-            this.urlRedirect = urlRedirect;
+            $.urlRedirect = urlRedirect;
             return this;
         }
-        public Builder urlRedirect(@Nullable HttpRedirectActionArgs urlRedirect) {
-            this.urlRedirect = Codegen.ofNullable(urlRedirect);
-            return this;
-        }        public HttpRouteRuleArgs build() {
-            return new HttpRouteRuleArgs(description, headerAction, httpFilterConfigs, httpFilterMetadata, matchRules, priority, routeAction, service, urlRedirect);
+
+        public Builder urlRedirect(HttpRedirectActionArgs urlRedirect) {
+            return urlRedirect(Output.of(urlRedirect));
+        }
+
+        public HttpRouteRuleArgs build() {
+            return $;
         }
     }
+
 }

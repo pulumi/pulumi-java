@@ -13,45 +13,45 @@ public final class GetNetworkInsightsPathArgs extends com.pulumi.resources.Invok
     public static final GetNetworkInsightsPathArgs Empty = new GetNetworkInsightsPathArgs();
 
     @Import(name="networkInsightsPathId", required=true)
-      private final String networkInsightsPathId;
+    private String networkInsightsPathId;
 
     public String networkInsightsPathId() {
         return this.networkInsightsPathId;
     }
 
-    public GetNetworkInsightsPathArgs(String networkInsightsPathId) {
-        this.networkInsightsPathId = Objects.requireNonNull(networkInsightsPathId, "expected parameter 'networkInsightsPathId' to be non-null");
-    }
+    private GetNetworkInsightsPathArgs() {}
 
-    private GetNetworkInsightsPathArgs() {
-        this.networkInsightsPathId = null;
+    private GetNetworkInsightsPathArgs(GetNetworkInsightsPathArgs $) {
+        this.networkInsightsPathId = $.networkInsightsPathId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetNetworkInsightsPathArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String networkInsightsPathId;
+        private GetNetworkInsightsPathArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetNetworkInsightsPathArgs();
         }
 
         public Builder(GetNetworkInsightsPathArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.networkInsightsPathId = defaults.networkInsightsPathId;
+            $ = new GetNetworkInsightsPathArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder networkInsightsPathId(String networkInsightsPathId) {
-            this.networkInsightsPathId = Objects.requireNonNull(networkInsightsPathId);
+            $.networkInsightsPathId = networkInsightsPathId;
             return this;
-        }        public GetNetworkInsightsPathArgs build() {
-            return new GetNetworkInsightsPathArgs(networkInsightsPathId);
+        }
+
+        public GetNetworkInsightsPathArgs build() {
+            $.networkInsightsPathId = Objects.requireNonNull($.networkInsightsPathId, "expected parameter 'networkInsightsPathId' to be non-null");
+            return $;
         }
     }
+
 }

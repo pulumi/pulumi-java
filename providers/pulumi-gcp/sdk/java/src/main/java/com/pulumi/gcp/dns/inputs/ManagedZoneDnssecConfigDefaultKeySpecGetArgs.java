@@ -5,10 +5,10 @@ package com.pulumi.gcp.dns.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class ManagedZoneDnssecConfigDefaultKeySpecGetArgs extends com.pulu
      * 
      */
     @Import(name="algorithm")
-      private final @Nullable Output<String> algorithm;
+    private @Nullable Output<String> algorithm;
 
-    public Output<String> algorithm() {
-        return this.algorithm == null ? Codegen.empty() : this.algorithm;
+    public Optional<Output<String>> algorithm() {
+        return Optional.ofNullable(this.algorithm);
     }
 
     /**
@@ -33,10 +33,10 @@ public final class ManagedZoneDnssecConfigDefaultKeySpecGetArgs extends com.pulu
      * 
      */
     @Import(name="keyLength")
-      private final @Nullable Output<Integer> keyLength;
+    private @Nullable Output<Integer> keyLength;
 
-    public Output<Integer> keyLength() {
-        return this.keyLength == null ? Codegen.empty() : this.keyLength;
+    public Optional<Output<Integer>> keyLength() {
+        return Optional.ofNullable(this.keyLength);
     }
 
     /**
@@ -50,10 +50,10 @@ public final class ManagedZoneDnssecConfigDefaultKeySpecGetArgs extends com.pulu
      * 
      */
     @Import(name="keyType")
-      private final @Nullable Output<String> keyType;
+    private @Nullable Output<String> keyType;
 
-    public Output<String> keyType() {
-        return this.keyType == null ? Codegen.empty() : this.keyType;
+    public Optional<Output<String>> keyType() {
+        return Optional.ofNullable(this.keyType);
     }
 
     /**
@@ -61,89 +61,78 @@ public final class ManagedZoneDnssecConfigDefaultKeySpecGetArgs extends com.pulu
      * 
      */
     @Import(name="kind")
-      private final @Nullable Output<String> kind;
+    private @Nullable Output<String> kind;
 
-    public Output<String> kind() {
-        return this.kind == null ? Codegen.empty() : this.kind;
+    public Optional<Output<String>> kind() {
+        return Optional.ofNullable(this.kind);
     }
 
-    public ManagedZoneDnssecConfigDefaultKeySpecGetArgs(
-        @Nullable Output<String> algorithm,
-        @Nullable Output<Integer> keyLength,
-        @Nullable Output<String> keyType,
-        @Nullable Output<String> kind) {
-        this.algorithm = algorithm;
-        this.keyLength = keyLength;
-        this.keyType = keyType;
-        this.kind = kind;
-    }
+    private ManagedZoneDnssecConfigDefaultKeySpecGetArgs() {}
 
-    private ManagedZoneDnssecConfigDefaultKeySpecGetArgs() {
-        this.algorithm = Codegen.empty();
-        this.keyLength = Codegen.empty();
-        this.keyType = Codegen.empty();
-        this.kind = Codegen.empty();
+    private ManagedZoneDnssecConfigDefaultKeySpecGetArgs(ManagedZoneDnssecConfigDefaultKeySpecGetArgs $) {
+        this.algorithm = $.algorithm;
+        this.keyLength = $.keyLength;
+        this.keyType = $.keyType;
+        this.kind = $.kind;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ManagedZoneDnssecConfigDefaultKeySpecGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> algorithm;
-        private @Nullable Output<Integer> keyLength;
-        private @Nullable Output<String> keyType;
-        private @Nullable Output<String> kind;
+        private ManagedZoneDnssecConfigDefaultKeySpecGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ManagedZoneDnssecConfigDefaultKeySpecGetArgs();
         }
 
         public Builder(ManagedZoneDnssecConfigDefaultKeySpecGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.algorithm = defaults.algorithm;
-    	      this.keyLength = defaults.keyLength;
-    	      this.keyType = defaults.keyType;
-    	      this.kind = defaults.kind;
+            $ = new ManagedZoneDnssecConfigDefaultKeySpecGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder algorithm(@Nullable Output<String> algorithm) {
-            this.algorithm = algorithm;
+            $.algorithm = algorithm;
             return this;
         }
-        public Builder algorithm(@Nullable String algorithm) {
-            this.algorithm = Codegen.ofNullable(algorithm);
-            return this;
+
+        public Builder algorithm(String algorithm) {
+            return algorithm(Output.of(algorithm));
         }
+
         public Builder keyLength(@Nullable Output<Integer> keyLength) {
-            this.keyLength = keyLength;
+            $.keyLength = keyLength;
             return this;
         }
-        public Builder keyLength(@Nullable Integer keyLength) {
-            this.keyLength = Codegen.ofNullable(keyLength);
-            return this;
+
+        public Builder keyLength(Integer keyLength) {
+            return keyLength(Output.of(keyLength));
         }
+
         public Builder keyType(@Nullable Output<String> keyType) {
-            this.keyType = keyType;
+            $.keyType = keyType;
             return this;
         }
-        public Builder keyType(@Nullable String keyType) {
-            this.keyType = Codegen.ofNullable(keyType);
-            return this;
+
+        public Builder keyType(String keyType) {
+            return keyType(Output.of(keyType));
         }
+
         public Builder kind(@Nullable Output<String> kind) {
-            this.kind = kind;
+            $.kind = kind;
             return this;
         }
-        public Builder kind(@Nullable String kind) {
-            this.kind = Codegen.ofNullable(kind);
-            return this;
-        }        public ManagedZoneDnssecConfigDefaultKeySpecGetArgs build() {
-            return new ManagedZoneDnssecConfigDefaultKeySpecGetArgs(algorithm, keyLength, keyType, kind);
+
+        public Builder kind(String kind) {
+            return kind(Output.of(kind));
+        }
+
+        public ManagedZoneDnssecConfigDefaultKeySpecGetArgs build() {
+            return $;
         }
     }
+
 }

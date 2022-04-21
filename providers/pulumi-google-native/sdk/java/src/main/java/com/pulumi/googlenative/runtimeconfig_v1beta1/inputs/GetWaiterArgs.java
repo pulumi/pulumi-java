@@ -15,78 +15,72 @@ public final class GetWaiterArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetWaiterArgs Empty = new GetWaiterArgs();
 
     @Import(name="configId", required=true)
-      private final String configId;
+    private String configId;
 
     public String configId() {
         return this.configId;
     }
 
     @Import(name="project")
-      private final @Nullable String project;
+    private @Nullable String project;
 
     public Optional<String> project() {
-        return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
+        return Optional.ofNullable(this.project);
     }
 
     @Import(name="waiterId", required=true)
-      private final String waiterId;
+    private String waiterId;
 
     public String waiterId() {
         return this.waiterId;
     }
 
-    public GetWaiterArgs(
-        String configId,
-        @Nullable String project,
-        String waiterId) {
-        this.configId = Objects.requireNonNull(configId, "expected parameter 'configId' to be non-null");
-        this.project = project;
-        this.waiterId = Objects.requireNonNull(waiterId, "expected parameter 'waiterId' to be non-null");
-    }
+    private GetWaiterArgs() {}
 
-    private GetWaiterArgs() {
-        this.configId = null;
-        this.project = null;
-        this.waiterId = null;
+    private GetWaiterArgs(GetWaiterArgs $) {
+        this.configId = $.configId;
+        this.project = $.project;
+        this.waiterId = $.waiterId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetWaiterArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String configId;
-        private @Nullable String project;
-        private String waiterId;
+        private GetWaiterArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetWaiterArgs();
         }
 
         public Builder(GetWaiterArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.configId = defaults.configId;
-    	      this.project = defaults.project;
-    	      this.waiterId = defaults.waiterId;
+            $ = new GetWaiterArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder configId(String configId) {
-            this.configId = Objects.requireNonNull(configId);
+            $.configId = configId;
             return this;
         }
+
         public Builder project(@Nullable String project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
+
         public Builder waiterId(String waiterId) {
-            this.waiterId = Objects.requireNonNull(waiterId);
+            $.waiterId = waiterId;
             return this;
-        }        public GetWaiterArgs build() {
-            return new GetWaiterArgs(configId, project, waiterId);
+        }
+
+        public GetWaiterArgs build() {
+            $.configId = Objects.requireNonNull($.configId, "expected parameter 'configId' to be non-null");
+            $.waiterId = Objects.requireNonNull($.waiterId, "expected parameter 'waiterId' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,7 +5,6 @@ package com.pulumi.awsnative.ec2;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,7 +18,7 @@ public final class SubnetNetworkAclAssociationArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="networkAclId", required=true)
-      private final Output<String> networkAclId;
+    private Output<String> networkAclId;
 
     public Output<String> networkAclId() {
         return this.networkAclId;
@@ -30,63 +29,60 @@ public final class SubnetNetworkAclAssociationArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="subnetId", required=true)
-      private final Output<String> subnetId;
+    private Output<String> subnetId;
 
     public Output<String> subnetId() {
         return this.subnetId;
     }
 
-    public SubnetNetworkAclAssociationArgs(
-        Output<String> networkAclId,
-        Output<String> subnetId) {
-        this.networkAclId = Objects.requireNonNull(networkAclId, "expected parameter 'networkAclId' to be non-null");
-        this.subnetId = Objects.requireNonNull(subnetId, "expected parameter 'subnetId' to be non-null");
-    }
+    private SubnetNetworkAclAssociationArgs() {}
 
-    private SubnetNetworkAclAssociationArgs() {
-        this.networkAclId = Codegen.empty();
-        this.subnetId = Codegen.empty();
+    private SubnetNetworkAclAssociationArgs(SubnetNetworkAclAssociationArgs $) {
+        this.networkAclId = $.networkAclId;
+        this.subnetId = $.subnetId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SubnetNetworkAclAssociationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> networkAclId;
-        private Output<String> subnetId;
+        private SubnetNetworkAclAssociationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SubnetNetworkAclAssociationArgs();
         }
 
         public Builder(SubnetNetworkAclAssociationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.networkAclId = defaults.networkAclId;
-    	      this.subnetId = defaults.subnetId;
+            $ = new SubnetNetworkAclAssociationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder networkAclId(Output<String> networkAclId) {
-            this.networkAclId = Objects.requireNonNull(networkAclId);
+            $.networkAclId = networkAclId;
             return this;
         }
+
         public Builder networkAclId(String networkAclId) {
-            this.networkAclId = Output.of(Objects.requireNonNull(networkAclId));
-            return this;
+            return networkAclId(Output.of(networkAclId));
         }
+
         public Builder subnetId(Output<String> subnetId) {
-            this.subnetId = Objects.requireNonNull(subnetId);
+            $.subnetId = subnetId;
             return this;
         }
+
         public Builder subnetId(String subnetId) {
-            this.subnetId = Output.of(Objects.requireNonNull(subnetId));
-            return this;
-        }        public SubnetNetworkAclAssociationArgs build() {
-            return new SubnetNetworkAclAssociationArgs(networkAclId, subnetId);
+            return subnetId(Output.of(subnetId));
+        }
+
+        public SubnetNetworkAclAssociationArgs build() {
+            $.networkAclId = Objects.requireNonNull($.networkAclId, "expected parameter 'networkAclId' to be non-null");
+            $.subnetId = Objects.requireNonNull($.subnetId, "expected parameter 'subnetId' to be non-null");
+            return $;
         }
     }
+
 }

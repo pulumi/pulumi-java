@@ -21,7 +21,7 @@ public final class GooglePrivacyDlpV2BucketResponse extends com.pulumi.resources
      * 
      */
     @Import(name="max", required=true)
-      private final GooglePrivacyDlpV2ValueResponse max;
+    private GooglePrivacyDlpV2ValueResponse max;
 
     public GooglePrivacyDlpV2ValueResponse max() {
         return this.max;
@@ -32,7 +32,7 @@ public final class GooglePrivacyDlpV2BucketResponse extends com.pulumi.resources
      * 
      */
     @Import(name="min", required=true)
-      private final GooglePrivacyDlpV2ValueResponse min;
+    private GooglePrivacyDlpV2ValueResponse min;
 
     public GooglePrivacyDlpV2ValueResponse min() {
         return this.min;
@@ -43,64 +43,59 @@ public final class GooglePrivacyDlpV2BucketResponse extends com.pulumi.resources
      * 
      */
     @Import(name="replacementValue", required=true)
-      private final GooglePrivacyDlpV2ValueResponse replacementValue;
+    private GooglePrivacyDlpV2ValueResponse replacementValue;
 
     public GooglePrivacyDlpV2ValueResponse replacementValue() {
         return this.replacementValue;
     }
 
-    public GooglePrivacyDlpV2BucketResponse(
-        GooglePrivacyDlpV2ValueResponse max,
-        GooglePrivacyDlpV2ValueResponse min,
-        GooglePrivacyDlpV2ValueResponse replacementValue) {
-        this.max = Objects.requireNonNull(max, "expected parameter 'max' to be non-null");
-        this.min = Objects.requireNonNull(min, "expected parameter 'min' to be non-null");
-        this.replacementValue = Objects.requireNonNull(replacementValue, "expected parameter 'replacementValue' to be non-null");
-    }
+    private GooglePrivacyDlpV2BucketResponse() {}
 
-    private GooglePrivacyDlpV2BucketResponse() {
-        this.max = null;
-        this.min = null;
-        this.replacementValue = null;
+    private GooglePrivacyDlpV2BucketResponse(GooglePrivacyDlpV2BucketResponse $) {
+        this.max = $.max;
+        this.min = $.min;
+        this.replacementValue = $.replacementValue;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GooglePrivacyDlpV2BucketResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private GooglePrivacyDlpV2ValueResponse max;
-        private GooglePrivacyDlpV2ValueResponse min;
-        private GooglePrivacyDlpV2ValueResponse replacementValue;
+        private GooglePrivacyDlpV2BucketResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GooglePrivacyDlpV2BucketResponse();
         }
 
         public Builder(GooglePrivacyDlpV2BucketResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.max = defaults.max;
-    	      this.min = defaults.min;
-    	      this.replacementValue = defaults.replacementValue;
+            $ = new GooglePrivacyDlpV2BucketResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder max(GooglePrivacyDlpV2ValueResponse max) {
-            this.max = Objects.requireNonNull(max);
+            $.max = max;
             return this;
         }
+
         public Builder min(GooglePrivacyDlpV2ValueResponse min) {
-            this.min = Objects.requireNonNull(min);
+            $.min = min;
             return this;
         }
+
         public Builder replacementValue(GooglePrivacyDlpV2ValueResponse replacementValue) {
-            this.replacementValue = Objects.requireNonNull(replacementValue);
+            $.replacementValue = replacementValue;
             return this;
-        }        public GooglePrivacyDlpV2BucketResponse build() {
-            return new GooglePrivacyDlpV2BucketResponse(max, min, replacementValue);
+        }
+
+        public GooglePrivacyDlpV2BucketResponse build() {
+            $.max = Objects.requireNonNull($.max, "expected parameter 'max' to be non-null");
+            $.min = Objects.requireNonNull($.min, "expected parameter 'min' to be non-null");
+            $.replacementValue = Objects.requireNonNull($.replacementValue, "expected parameter 'replacementValue' to be non-null");
+            return $;
         }
     }
+
 }

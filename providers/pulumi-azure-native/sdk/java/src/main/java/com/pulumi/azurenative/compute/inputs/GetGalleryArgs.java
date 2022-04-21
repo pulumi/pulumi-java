@@ -19,7 +19,7 @@ public final class GetGalleryArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="galleryName", required=true)
-      private final String galleryName;
+    private String galleryName;
 
     public String galleryName() {
         return this.galleryName;
@@ -30,7 +30,7 @@ public final class GetGalleryArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -41,64 +41,58 @@ public final class GetGalleryArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="select")
-      private final @Nullable String select;
+    private @Nullable String select;
 
     public Optional<String> select() {
-        return this.select == null ? Optional.empty() : Optional.ofNullable(this.select);
+        return Optional.ofNullable(this.select);
     }
 
-    public GetGalleryArgs(
-        String galleryName,
-        String resourceGroupName,
-        @Nullable String select) {
-        this.galleryName = Objects.requireNonNull(galleryName, "expected parameter 'galleryName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.select = select;
-    }
+    private GetGalleryArgs() {}
 
-    private GetGalleryArgs() {
-        this.galleryName = null;
-        this.resourceGroupName = null;
-        this.select = null;
+    private GetGalleryArgs(GetGalleryArgs $) {
+        this.galleryName = $.galleryName;
+        this.resourceGroupName = $.resourceGroupName;
+        this.select = $.select;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetGalleryArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String galleryName;
-        private String resourceGroupName;
-        private @Nullable String select;
+        private GetGalleryArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetGalleryArgs();
         }
 
         public Builder(GetGalleryArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.galleryName = defaults.galleryName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.select = defaults.select;
+            $ = new GetGalleryArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder galleryName(String galleryName) {
-            this.galleryName = Objects.requireNonNull(galleryName);
+            $.galleryName = galleryName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder select(@Nullable String select) {
-            this.select = select;
+            $.select = select;
             return this;
-        }        public GetGalleryArgs build() {
-            return new GetGalleryArgs(galleryName, resourceGroupName, select);
+        }
+
+        public GetGalleryArgs build() {
+            $.galleryName = Objects.requireNonNull($.galleryName, "expected parameter 'galleryName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

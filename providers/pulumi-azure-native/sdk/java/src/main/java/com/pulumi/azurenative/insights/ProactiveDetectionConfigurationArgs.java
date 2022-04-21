@@ -6,11 +6,11 @@ package com.pulumi.azurenative.insights;
 import com.pulumi.azurenative.insights.inputs.ApplicationInsightsComponentProactiveDetectionConfigurationRuleDefinitionsArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,10 @@ public final class ProactiveDetectionConfigurationArgs extends com.pulumi.resour
      * 
      */
     @Import(name="configurationId")
-      private final @Nullable Output<String> configurationId;
+    private @Nullable Output<String> configurationId;
 
-    public Output<String> configurationId() {
-        return this.configurationId == null ? Codegen.empty() : this.configurationId;
+    public Optional<Output<String>> configurationId() {
+        return Optional.ofNullable(this.configurationId);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class ProactiveDetectionConfigurationArgs extends com.pulumi.resour
      * 
      */
     @Import(name="customEmails")
-      private final @Nullable Output<List<String>> customEmails;
+    private @Nullable Output<List<String>> customEmails;
 
-    public Output<List<String>> customEmails() {
-        return this.customEmails == null ? Codegen.empty() : this.customEmails;
+    public Optional<Output<List<String>>> customEmails() {
+        return Optional.ofNullable(this.customEmails);
     }
 
     /**
@@ -45,10 +45,10 @@ public final class ProactiveDetectionConfigurationArgs extends com.pulumi.resour
      * 
      */
     @Import(name="enabled")
-      private final @Nullable Output<Boolean> enabled;
+    private @Nullable Output<Boolean> enabled;
 
-    public Output<Boolean> enabled() {
-        return this.enabled == null ? Codegen.empty() : this.enabled;
+    public Optional<Output<Boolean>> enabled() {
+        return Optional.ofNullable(this.enabled);
     }
 
     /**
@@ -56,10 +56,10 @@ public final class ProactiveDetectionConfigurationArgs extends com.pulumi.resour
      * 
      */
     @Import(name="lastUpdatedTime")
-      private final @Nullable Output<String> lastUpdatedTime;
+    private @Nullable Output<String> lastUpdatedTime;
 
-    public Output<String> lastUpdatedTime() {
-        return this.lastUpdatedTime == null ? Codegen.empty() : this.lastUpdatedTime;
+    public Optional<Output<String>> lastUpdatedTime() {
+        return Optional.ofNullable(this.lastUpdatedTime);
     }
 
     /**
@@ -67,10 +67,10 @@ public final class ProactiveDetectionConfigurationArgs extends com.pulumi.resour
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -78,7 +78,7 @@ public final class ProactiveDetectionConfigurationArgs extends com.pulumi.resour
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -89,7 +89,7 @@ public final class ProactiveDetectionConfigurationArgs extends com.pulumi.resour
      * 
      */
     @Import(name="resourceName", required=true)
-      private final Output<String> resourceName;
+    private Output<String> resourceName;
 
     public Output<String> resourceName() {
         return this.resourceName;
@@ -100,10 +100,10 @@ public final class ProactiveDetectionConfigurationArgs extends com.pulumi.resour
      * 
      */
     @Import(name="ruleDefinitions")
-      private final @Nullable Output<ApplicationInsightsComponentProactiveDetectionConfigurationRuleDefinitionsArgs> ruleDefinitions;
+    private @Nullable Output<ApplicationInsightsComponentProactiveDetectionConfigurationRuleDefinitionsArgs> ruleDefinitions;
 
-    public Output<ApplicationInsightsComponentProactiveDetectionConfigurationRuleDefinitionsArgs> ruleDefinitions() {
-        return this.ruleDefinitions == null ? Codegen.empty() : this.ruleDefinitions;
+    public Optional<Output<ApplicationInsightsComponentProactiveDetectionConfigurationRuleDefinitionsArgs>> ruleDefinitions() {
+        return Optional.ofNullable(this.ruleDefinitions);
     }
 
     /**
@@ -111,157 +111,134 @@ public final class ProactiveDetectionConfigurationArgs extends com.pulumi.resour
      * 
      */
     @Import(name="sendEmailsToSubscriptionOwners")
-      private final @Nullable Output<Boolean> sendEmailsToSubscriptionOwners;
+    private @Nullable Output<Boolean> sendEmailsToSubscriptionOwners;
 
-    public Output<Boolean> sendEmailsToSubscriptionOwners() {
-        return this.sendEmailsToSubscriptionOwners == null ? Codegen.empty() : this.sendEmailsToSubscriptionOwners;
+    public Optional<Output<Boolean>> sendEmailsToSubscriptionOwners() {
+        return Optional.ofNullable(this.sendEmailsToSubscriptionOwners);
     }
 
-    public ProactiveDetectionConfigurationArgs(
-        @Nullable Output<String> configurationId,
-        @Nullable Output<List<String>> customEmails,
-        @Nullable Output<Boolean> enabled,
-        @Nullable Output<String> lastUpdatedTime,
-        @Nullable Output<String> name,
-        Output<String> resourceGroupName,
-        Output<String> resourceName,
-        @Nullable Output<ApplicationInsightsComponentProactiveDetectionConfigurationRuleDefinitionsArgs> ruleDefinitions,
-        @Nullable Output<Boolean> sendEmailsToSubscriptionOwners) {
-        this.configurationId = configurationId;
-        this.customEmails = customEmails;
-        this.enabled = enabled;
-        this.lastUpdatedTime = lastUpdatedTime;
-        this.name = name;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.resourceName = Objects.requireNonNull(resourceName, "expected parameter 'resourceName' to be non-null");
-        this.ruleDefinitions = ruleDefinitions;
-        this.sendEmailsToSubscriptionOwners = sendEmailsToSubscriptionOwners;
-    }
+    private ProactiveDetectionConfigurationArgs() {}
 
-    private ProactiveDetectionConfigurationArgs() {
-        this.configurationId = Codegen.empty();
-        this.customEmails = Codegen.empty();
-        this.enabled = Codegen.empty();
-        this.lastUpdatedTime = Codegen.empty();
-        this.name = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.resourceName = Codegen.empty();
-        this.ruleDefinitions = Codegen.empty();
-        this.sendEmailsToSubscriptionOwners = Codegen.empty();
+    private ProactiveDetectionConfigurationArgs(ProactiveDetectionConfigurationArgs $) {
+        this.configurationId = $.configurationId;
+        this.customEmails = $.customEmails;
+        this.enabled = $.enabled;
+        this.lastUpdatedTime = $.lastUpdatedTime;
+        this.name = $.name;
+        this.resourceGroupName = $.resourceGroupName;
+        this.resourceName = $.resourceName;
+        this.ruleDefinitions = $.ruleDefinitions;
+        this.sendEmailsToSubscriptionOwners = $.sendEmailsToSubscriptionOwners;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ProactiveDetectionConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> configurationId;
-        private @Nullable Output<List<String>> customEmails;
-        private @Nullable Output<Boolean> enabled;
-        private @Nullable Output<String> lastUpdatedTime;
-        private @Nullable Output<String> name;
-        private Output<String> resourceGroupName;
-        private Output<String> resourceName;
-        private @Nullable Output<ApplicationInsightsComponentProactiveDetectionConfigurationRuleDefinitionsArgs> ruleDefinitions;
-        private @Nullable Output<Boolean> sendEmailsToSubscriptionOwners;
+        private ProactiveDetectionConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ProactiveDetectionConfigurationArgs();
         }
 
         public Builder(ProactiveDetectionConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.configurationId = defaults.configurationId;
-    	      this.customEmails = defaults.customEmails;
-    	      this.enabled = defaults.enabled;
-    	      this.lastUpdatedTime = defaults.lastUpdatedTime;
-    	      this.name = defaults.name;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.resourceName = defaults.resourceName;
-    	      this.ruleDefinitions = defaults.ruleDefinitions;
-    	      this.sendEmailsToSubscriptionOwners = defaults.sendEmailsToSubscriptionOwners;
+            $ = new ProactiveDetectionConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder configurationId(@Nullable Output<String> configurationId) {
-            this.configurationId = configurationId;
+            $.configurationId = configurationId;
             return this;
         }
-        public Builder configurationId(@Nullable String configurationId) {
-            this.configurationId = Codegen.ofNullable(configurationId);
-            return this;
+
+        public Builder configurationId(String configurationId) {
+            return configurationId(Output.of(configurationId));
         }
+
         public Builder customEmails(@Nullable Output<List<String>> customEmails) {
-            this.customEmails = customEmails;
+            $.customEmails = customEmails;
             return this;
         }
-        public Builder customEmails(@Nullable List<String> customEmails) {
-            this.customEmails = Codegen.ofNullable(customEmails);
-            return this;
+
+        public Builder customEmails(List<String> customEmails) {
+            return customEmails(Output.of(customEmails));
         }
+
         public Builder customEmails(String... customEmails) {
             return customEmails(List.of(customEmails));
         }
+
         public Builder enabled(@Nullable Output<Boolean> enabled) {
-            this.enabled = enabled;
+            $.enabled = enabled;
             return this;
         }
-        public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Codegen.ofNullable(enabled);
-            return this;
+
+        public Builder enabled(Boolean enabled) {
+            return enabled(Output.of(enabled));
         }
+
         public Builder lastUpdatedTime(@Nullable Output<String> lastUpdatedTime) {
-            this.lastUpdatedTime = lastUpdatedTime;
+            $.lastUpdatedTime = lastUpdatedTime;
             return this;
         }
-        public Builder lastUpdatedTime(@Nullable String lastUpdatedTime) {
-            this.lastUpdatedTime = Codegen.ofNullable(lastUpdatedTime);
-            return this;
+
+        public Builder lastUpdatedTime(String lastUpdatedTime) {
+            return lastUpdatedTime(Output.of(lastUpdatedTime));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder resourceName(Output<String> resourceName) {
-            this.resourceName = Objects.requireNonNull(resourceName);
+            $.resourceName = resourceName;
             return this;
         }
+
         public Builder resourceName(String resourceName) {
-            this.resourceName = Output.of(Objects.requireNonNull(resourceName));
-            return this;
+            return resourceName(Output.of(resourceName));
         }
+
         public Builder ruleDefinitions(@Nullable Output<ApplicationInsightsComponentProactiveDetectionConfigurationRuleDefinitionsArgs> ruleDefinitions) {
-            this.ruleDefinitions = ruleDefinitions;
+            $.ruleDefinitions = ruleDefinitions;
             return this;
         }
-        public Builder ruleDefinitions(@Nullable ApplicationInsightsComponentProactiveDetectionConfigurationRuleDefinitionsArgs ruleDefinitions) {
-            this.ruleDefinitions = Codegen.ofNullable(ruleDefinitions);
-            return this;
+
+        public Builder ruleDefinitions(ApplicationInsightsComponentProactiveDetectionConfigurationRuleDefinitionsArgs ruleDefinitions) {
+            return ruleDefinitions(Output.of(ruleDefinitions));
         }
+
         public Builder sendEmailsToSubscriptionOwners(@Nullable Output<Boolean> sendEmailsToSubscriptionOwners) {
-            this.sendEmailsToSubscriptionOwners = sendEmailsToSubscriptionOwners;
+            $.sendEmailsToSubscriptionOwners = sendEmailsToSubscriptionOwners;
             return this;
         }
-        public Builder sendEmailsToSubscriptionOwners(@Nullable Boolean sendEmailsToSubscriptionOwners) {
-            this.sendEmailsToSubscriptionOwners = Codegen.ofNullable(sendEmailsToSubscriptionOwners);
-            return this;
-        }        public ProactiveDetectionConfigurationArgs build() {
-            return new ProactiveDetectionConfigurationArgs(configurationId, customEmails, enabled, lastUpdatedTime, name, resourceGroupName, resourceName, ruleDefinitions, sendEmailsToSubscriptionOwners);
+
+        public Builder sendEmailsToSubscriptionOwners(Boolean sendEmailsToSubscriptionOwners) {
+            return sendEmailsToSubscriptionOwners(Output.of(sendEmailsToSubscriptionOwners));
+        }
+
+        public ProactiveDetectionConfigurationArgs build() {
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.resourceName = Objects.requireNonNull($.resourceName, "expected parameter 'resourceName' to be non-null");
+            return $;
         }
     }
+
 }

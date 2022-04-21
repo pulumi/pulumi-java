@@ -13,45 +13,45 @@ public final class GetSecretReplicationUserManagedReplicaCustomerManagedEncrypti
     public static final GetSecretReplicationUserManagedReplicaCustomerManagedEncryption Empty = new GetSecretReplicationUserManagedReplicaCustomerManagedEncryption();
 
     @Import(name="kmsKeyName", required=true)
-      private final String kmsKeyName;
+    private String kmsKeyName;
 
     public String kmsKeyName() {
         return this.kmsKeyName;
     }
 
-    public GetSecretReplicationUserManagedReplicaCustomerManagedEncryption(String kmsKeyName) {
-        this.kmsKeyName = Objects.requireNonNull(kmsKeyName, "expected parameter 'kmsKeyName' to be non-null");
-    }
+    private GetSecretReplicationUserManagedReplicaCustomerManagedEncryption() {}
 
-    private GetSecretReplicationUserManagedReplicaCustomerManagedEncryption() {
-        this.kmsKeyName = null;
+    private GetSecretReplicationUserManagedReplicaCustomerManagedEncryption(GetSecretReplicationUserManagedReplicaCustomerManagedEncryption $) {
+        this.kmsKeyName = $.kmsKeyName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetSecretReplicationUserManagedReplicaCustomerManagedEncryption defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String kmsKeyName;
+        private GetSecretReplicationUserManagedReplicaCustomerManagedEncryption $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetSecretReplicationUserManagedReplicaCustomerManagedEncryption();
         }
 
         public Builder(GetSecretReplicationUserManagedReplicaCustomerManagedEncryption defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.kmsKeyName = defaults.kmsKeyName;
+            $ = new GetSecretReplicationUserManagedReplicaCustomerManagedEncryption(Objects.requireNonNull(defaults));
         }
 
         public Builder kmsKeyName(String kmsKeyName) {
-            this.kmsKeyName = Objects.requireNonNull(kmsKeyName);
+            $.kmsKeyName = kmsKeyName;
             return this;
-        }        public GetSecretReplicationUserManagedReplicaCustomerManagedEncryption build() {
-            return new GetSecretReplicationUserManagedReplicaCustomerManagedEncryption(kmsKeyName);
+        }
+
+        public GetSecretReplicationUserManagedReplicaCustomerManagedEncryption build() {
+            $.kmsKeyName = Objects.requireNonNull($.kmsKeyName, "expected parameter 'kmsKeyName' to be non-null");
+            return $;
         }
     }
+
 }

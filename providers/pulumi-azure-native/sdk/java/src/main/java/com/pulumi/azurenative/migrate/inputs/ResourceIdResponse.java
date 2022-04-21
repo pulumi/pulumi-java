@@ -17,45 +17,45 @@ public final class ResourceIdResponse extends com.pulumi.resources.InvokeArgs {
     public static final ResourceIdResponse Empty = new ResourceIdResponse();
 
     @Import(name="id", required=true)
-      private final String id;
+    private String id;
 
     public String id() {
         return this.id;
     }
 
-    public ResourceIdResponse(String id) {
-        this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
-    }
+    private ResourceIdResponse() {}
 
-    private ResourceIdResponse() {
-        this.id = null;
+    private ResourceIdResponse(ResourceIdResponse $) {
+        this.id = $.id;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ResourceIdResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String id;
+        private ResourceIdResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ResourceIdResponse();
         }
 
         public Builder(ResourceIdResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.id = defaults.id;
+            $ = new ResourceIdResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder id(String id) {
-            this.id = Objects.requireNonNull(id);
+            $.id = id;
             return this;
-        }        public ResourceIdResponse build() {
-            return new ResourceIdResponse(id);
+        }
+
+        public ResourceIdResponse build() {
+            $.id = Objects.requireNonNull($.id, "expected parameter 'id' to be non-null");
+            return $;
         }
     }
+
 }

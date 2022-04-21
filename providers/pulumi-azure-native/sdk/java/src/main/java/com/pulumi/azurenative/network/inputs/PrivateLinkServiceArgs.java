@@ -10,12 +10,12 @@ import com.pulumi.azurenative.network.inputs.PrivateLinkServicePropertiesAutoApp
 import com.pulumi.azurenative.network.inputs.PrivateLinkServicePropertiesVisibilityArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -32,10 +32,10 @@ public final class PrivateLinkServiceArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="autoApproval")
-      private final @Nullable Output<PrivateLinkServicePropertiesAutoApprovalArgs> autoApproval;
+    private @Nullable Output<PrivateLinkServicePropertiesAutoApprovalArgs> autoApproval;
 
-    public Output<PrivateLinkServicePropertiesAutoApprovalArgs> autoApproval() {
-        return this.autoApproval == null ? Codegen.empty() : this.autoApproval;
+    public Optional<Output<PrivateLinkServicePropertiesAutoApprovalArgs>> autoApproval() {
+        return Optional.ofNullable(this.autoApproval);
     }
 
     /**
@@ -43,10 +43,10 @@ public final class PrivateLinkServiceArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="enableProxyProtocol")
-      private final @Nullable Output<Boolean> enableProxyProtocol;
+    private @Nullable Output<Boolean> enableProxyProtocol;
 
-    public Output<Boolean> enableProxyProtocol() {
-        return this.enableProxyProtocol == null ? Codegen.empty() : this.enableProxyProtocol;
+    public Optional<Output<Boolean>> enableProxyProtocol() {
+        return Optional.ofNullable(this.enableProxyProtocol);
     }
 
     /**
@@ -54,10 +54,10 @@ public final class PrivateLinkServiceArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="extendedLocation")
-      private final @Nullable Output<ExtendedLocationArgs> extendedLocation;
+    private @Nullable Output<ExtendedLocationArgs> extendedLocation;
 
-    public Output<ExtendedLocationArgs> extendedLocation() {
-        return this.extendedLocation == null ? Codegen.empty() : this.extendedLocation;
+    public Optional<Output<ExtendedLocationArgs>> extendedLocation() {
+        return Optional.ofNullable(this.extendedLocation);
     }
 
     /**
@@ -65,10 +65,10 @@ public final class PrivateLinkServiceArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="fqdns")
-      private final @Nullable Output<List<String>> fqdns;
+    private @Nullable Output<List<String>> fqdns;
 
-    public Output<List<String>> fqdns() {
-        return this.fqdns == null ? Codegen.empty() : this.fqdns;
+    public Optional<Output<List<String>>> fqdns() {
+        return Optional.ofNullable(this.fqdns);
     }
 
     /**
@@ -76,10 +76,10 @@ public final class PrivateLinkServiceArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="id")
-      private final @Nullable Output<String> id;
+    private @Nullable Output<String> id;
 
-    public Output<String> id() {
-        return this.id == null ? Codegen.empty() : this.id;
+    public Optional<Output<String>> id() {
+        return Optional.ofNullable(this.id);
     }
 
     /**
@@ -87,10 +87,10 @@ public final class PrivateLinkServiceArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="ipConfigurations")
-      private final @Nullable Output<List<PrivateLinkServiceIpConfigurationArgs>> ipConfigurations;
+    private @Nullable Output<List<PrivateLinkServiceIpConfigurationArgs>> ipConfigurations;
 
-    public Output<List<PrivateLinkServiceIpConfigurationArgs>> ipConfigurations() {
-        return this.ipConfigurations == null ? Codegen.empty() : this.ipConfigurations;
+    public Optional<Output<List<PrivateLinkServiceIpConfigurationArgs>>> ipConfigurations() {
+        return Optional.ofNullable(this.ipConfigurations);
     }
 
     /**
@@ -98,10 +98,10 @@ public final class PrivateLinkServiceArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="loadBalancerFrontendIpConfigurations")
-      private final @Nullable Output<List<FrontendIPConfigurationArgs>> loadBalancerFrontendIpConfigurations;
+    private @Nullable Output<List<FrontendIPConfigurationArgs>> loadBalancerFrontendIpConfigurations;
 
-    public Output<List<FrontendIPConfigurationArgs>> loadBalancerFrontendIpConfigurations() {
-        return this.loadBalancerFrontendIpConfigurations == null ? Codegen.empty() : this.loadBalancerFrontendIpConfigurations;
+    public Optional<Output<List<FrontendIPConfigurationArgs>>> loadBalancerFrontendIpConfigurations() {
+        return Optional.ofNullable(this.loadBalancerFrontendIpConfigurations);
     }
 
     /**
@@ -109,10 +109,10 @@ public final class PrivateLinkServiceArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -120,10 +120,10 @@ public final class PrivateLinkServiceArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -131,176 +131,150 @@ public final class PrivateLinkServiceArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="visibility")
-      private final @Nullable Output<PrivateLinkServicePropertiesVisibilityArgs> visibility;
+    private @Nullable Output<PrivateLinkServicePropertiesVisibilityArgs> visibility;
 
-    public Output<PrivateLinkServicePropertiesVisibilityArgs> visibility() {
-        return this.visibility == null ? Codegen.empty() : this.visibility;
+    public Optional<Output<PrivateLinkServicePropertiesVisibilityArgs>> visibility() {
+        return Optional.ofNullable(this.visibility);
     }
 
-    public PrivateLinkServiceArgs(
-        @Nullable Output<PrivateLinkServicePropertiesAutoApprovalArgs> autoApproval,
-        @Nullable Output<Boolean> enableProxyProtocol,
-        @Nullable Output<ExtendedLocationArgs> extendedLocation,
-        @Nullable Output<List<String>> fqdns,
-        @Nullable Output<String> id,
-        @Nullable Output<List<PrivateLinkServiceIpConfigurationArgs>> ipConfigurations,
-        @Nullable Output<List<FrontendIPConfigurationArgs>> loadBalancerFrontendIpConfigurations,
-        @Nullable Output<String> location,
-        @Nullable Output<Map<String,String>> tags,
-        @Nullable Output<PrivateLinkServicePropertiesVisibilityArgs> visibility) {
-        this.autoApproval = autoApproval;
-        this.enableProxyProtocol = enableProxyProtocol;
-        this.extendedLocation = extendedLocation;
-        this.fqdns = fqdns;
-        this.id = id;
-        this.ipConfigurations = ipConfigurations;
-        this.loadBalancerFrontendIpConfigurations = loadBalancerFrontendIpConfigurations;
-        this.location = location;
-        this.tags = tags;
-        this.visibility = visibility;
-    }
+    private PrivateLinkServiceArgs() {}
 
-    private PrivateLinkServiceArgs() {
-        this.autoApproval = Codegen.empty();
-        this.enableProxyProtocol = Codegen.empty();
-        this.extendedLocation = Codegen.empty();
-        this.fqdns = Codegen.empty();
-        this.id = Codegen.empty();
-        this.ipConfigurations = Codegen.empty();
-        this.loadBalancerFrontendIpConfigurations = Codegen.empty();
-        this.location = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.visibility = Codegen.empty();
+    private PrivateLinkServiceArgs(PrivateLinkServiceArgs $) {
+        this.autoApproval = $.autoApproval;
+        this.enableProxyProtocol = $.enableProxyProtocol;
+        this.extendedLocation = $.extendedLocation;
+        this.fqdns = $.fqdns;
+        this.id = $.id;
+        this.ipConfigurations = $.ipConfigurations;
+        this.loadBalancerFrontendIpConfigurations = $.loadBalancerFrontendIpConfigurations;
+        this.location = $.location;
+        this.tags = $.tags;
+        this.visibility = $.visibility;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PrivateLinkServiceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<PrivateLinkServicePropertiesAutoApprovalArgs> autoApproval;
-        private @Nullable Output<Boolean> enableProxyProtocol;
-        private @Nullable Output<ExtendedLocationArgs> extendedLocation;
-        private @Nullable Output<List<String>> fqdns;
-        private @Nullable Output<String> id;
-        private @Nullable Output<List<PrivateLinkServiceIpConfigurationArgs>> ipConfigurations;
-        private @Nullable Output<List<FrontendIPConfigurationArgs>> loadBalancerFrontendIpConfigurations;
-        private @Nullable Output<String> location;
-        private @Nullable Output<Map<String,String>> tags;
-        private @Nullable Output<PrivateLinkServicePropertiesVisibilityArgs> visibility;
+        private PrivateLinkServiceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PrivateLinkServiceArgs();
         }
 
         public Builder(PrivateLinkServiceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.autoApproval = defaults.autoApproval;
-    	      this.enableProxyProtocol = defaults.enableProxyProtocol;
-    	      this.extendedLocation = defaults.extendedLocation;
-    	      this.fqdns = defaults.fqdns;
-    	      this.id = defaults.id;
-    	      this.ipConfigurations = defaults.ipConfigurations;
-    	      this.loadBalancerFrontendIpConfigurations = defaults.loadBalancerFrontendIpConfigurations;
-    	      this.location = defaults.location;
-    	      this.tags = defaults.tags;
-    	      this.visibility = defaults.visibility;
+            $ = new PrivateLinkServiceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder autoApproval(@Nullable Output<PrivateLinkServicePropertiesAutoApprovalArgs> autoApproval) {
-            this.autoApproval = autoApproval;
+            $.autoApproval = autoApproval;
             return this;
         }
-        public Builder autoApproval(@Nullable PrivateLinkServicePropertiesAutoApprovalArgs autoApproval) {
-            this.autoApproval = Codegen.ofNullable(autoApproval);
-            return this;
+
+        public Builder autoApproval(PrivateLinkServicePropertiesAutoApprovalArgs autoApproval) {
+            return autoApproval(Output.of(autoApproval));
         }
+
         public Builder enableProxyProtocol(@Nullable Output<Boolean> enableProxyProtocol) {
-            this.enableProxyProtocol = enableProxyProtocol;
+            $.enableProxyProtocol = enableProxyProtocol;
             return this;
         }
-        public Builder enableProxyProtocol(@Nullable Boolean enableProxyProtocol) {
-            this.enableProxyProtocol = Codegen.ofNullable(enableProxyProtocol);
-            return this;
+
+        public Builder enableProxyProtocol(Boolean enableProxyProtocol) {
+            return enableProxyProtocol(Output.of(enableProxyProtocol));
         }
+
         public Builder extendedLocation(@Nullable Output<ExtendedLocationArgs> extendedLocation) {
-            this.extendedLocation = extendedLocation;
+            $.extendedLocation = extendedLocation;
             return this;
         }
-        public Builder extendedLocation(@Nullable ExtendedLocationArgs extendedLocation) {
-            this.extendedLocation = Codegen.ofNullable(extendedLocation);
-            return this;
+
+        public Builder extendedLocation(ExtendedLocationArgs extendedLocation) {
+            return extendedLocation(Output.of(extendedLocation));
         }
+
         public Builder fqdns(@Nullable Output<List<String>> fqdns) {
-            this.fqdns = fqdns;
+            $.fqdns = fqdns;
             return this;
         }
-        public Builder fqdns(@Nullable List<String> fqdns) {
-            this.fqdns = Codegen.ofNullable(fqdns);
-            return this;
+
+        public Builder fqdns(List<String> fqdns) {
+            return fqdns(Output.of(fqdns));
         }
+
         public Builder fqdns(String... fqdns) {
             return fqdns(List.of(fqdns));
         }
+
         public Builder id(@Nullable Output<String> id) {
-            this.id = id;
+            $.id = id;
             return this;
         }
-        public Builder id(@Nullable String id) {
-            this.id = Codegen.ofNullable(id);
-            return this;
+
+        public Builder id(String id) {
+            return id(Output.of(id));
         }
+
         public Builder ipConfigurations(@Nullable Output<List<PrivateLinkServiceIpConfigurationArgs>> ipConfigurations) {
-            this.ipConfigurations = ipConfigurations;
+            $.ipConfigurations = ipConfigurations;
             return this;
         }
-        public Builder ipConfigurations(@Nullable List<PrivateLinkServiceIpConfigurationArgs> ipConfigurations) {
-            this.ipConfigurations = Codegen.ofNullable(ipConfigurations);
-            return this;
+
+        public Builder ipConfigurations(List<PrivateLinkServiceIpConfigurationArgs> ipConfigurations) {
+            return ipConfigurations(Output.of(ipConfigurations));
         }
+
         public Builder ipConfigurations(PrivateLinkServiceIpConfigurationArgs... ipConfigurations) {
             return ipConfigurations(List.of(ipConfigurations));
         }
+
         public Builder loadBalancerFrontendIpConfigurations(@Nullable Output<List<FrontendIPConfigurationArgs>> loadBalancerFrontendIpConfigurations) {
-            this.loadBalancerFrontendIpConfigurations = loadBalancerFrontendIpConfigurations;
+            $.loadBalancerFrontendIpConfigurations = loadBalancerFrontendIpConfigurations;
             return this;
         }
-        public Builder loadBalancerFrontendIpConfigurations(@Nullable List<FrontendIPConfigurationArgs> loadBalancerFrontendIpConfigurations) {
-            this.loadBalancerFrontendIpConfigurations = Codegen.ofNullable(loadBalancerFrontendIpConfigurations);
-            return this;
+
+        public Builder loadBalancerFrontendIpConfigurations(List<FrontendIPConfigurationArgs> loadBalancerFrontendIpConfigurations) {
+            return loadBalancerFrontendIpConfigurations(Output.of(loadBalancerFrontendIpConfigurations));
         }
+
         public Builder loadBalancerFrontendIpConfigurations(FrontendIPConfigurationArgs... loadBalancerFrontendIpConfigurations) {
             return loadBalancerFrontendIpConfigurations(List.of(loadBalancerFrontendIpConfigurations));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder visibility(@Nullable Output<PrivateLinkServicePropertiesVisibilityArgs> visibility) {
-            this.visibility = visibility;
+            $.visibility = visibility;
             return this;
         }
-        public Builder visibility(@Nullable PrivateLinkServicePropertiesVisibilityArgs visibility) {
-            this.visibility = Codegen.ofNullable(visibility);
-            return this;
-        }        public PrivateLinkServiceArgs build() {
-            return new PrivateLinkServiceArgs(autoApproval, enableProxyProtocol, extendedLocation, fqdns, id, ipConfigurations, loadBalancerFrontendIpConfigurations, location, tags, visibility);
+
+        public Builder visibility(PrivateLinkServicePropertiesVisibilityArgs visibility) {
+            return visibility(Output.of(visibility));
+        }
+
+        public PrivateLinkServiceArgs build() {
+            return $;
         }
     }
+
 }

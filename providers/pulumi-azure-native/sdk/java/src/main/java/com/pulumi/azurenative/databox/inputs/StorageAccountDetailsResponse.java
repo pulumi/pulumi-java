@@ -23,7 +23,7 @@ public final class StorageAccountDetailsResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="dataAccountType", required=true)
-      private final String dataAccountType;
+    private String dataAccountType;
 
     public String dataAccountType() {
         return this.dataAccountType;
@@ -34,55 +34,52 @@ public final class StorageAccountDetailsResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="storageAccountId", required=true)
-      private final String storageAccountId;
+    private String storageAccountId;
 
     public String storageAccountId() {
         return this.storageAccountId;
     }
 
-    public StorageAccountDetailsResponse(
-        String dataAccountType,
-        String storageAccountId) {
-        this.dataAccountType = Codegen.stringProp("dataAccountType").arg(dataAccountType).def("StorageAccount").require();
-        this.storageAccountId = Objects.requireNonNull(storageAccountId, "expected parameter 'storageAccountId' to be non-null");
-    }
+    private StorageAccountDetailsResponse() {}
 
-    private StorageAccountDetailsResponse() {
-        this.dataAccountType = null;
-        this.storageAccountId = null;
+    private StorageAccountDetailsResponse(StorageAccountDetailsResponse $) {
+        this.dataAccountType = $.dataAccountType;
+        this.storageAccountId = $.storageAccountId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(StorageAccountDetailsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String dataAccountType;
-        private String storageAccountId;
+        private StorageAccountDetailsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new StorageAccountDetailsResponse();
         }
 
         public Builder(StorageAccountDetailsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dataAccountType = defaults.dataAccountType;
-    	      this.storageAccountId = defaults.storageAccountId;
+            $ = new StorageAccountDetailsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder dataAccountType(String dataAccountType) {
-            this.dataAccountType = Objects.requireNonNull(dataAccountType);
+            $.dataAccountType = dataAccountType;
             return this;
         }
+
         public Builder storageAccountId(String storageAccountId) {
-            this.storageAccountId = Objects.requireNonNull(storageAccountId);
+            $.storageAccountId = storageAccountId;
             return this;
-        }        public StorageAccountDetailsResponse build() {
-            return new StorageAccountDetailsResponse(dataAccountType, storageAccountId);
+        }
+
+        public StorageAccountDetailsResponse build() {
+            $.dataAccountType = Codegen.stringProp("dataAccountType").arg($.dataAccountType).def("StorageAccount").require();
+            $.storageAccountId = Objects.requireNonNull($.storageAccountId, "expected parameter 'storageAccountId' to be non-null");
+            return $;
         }
     }
+
 }

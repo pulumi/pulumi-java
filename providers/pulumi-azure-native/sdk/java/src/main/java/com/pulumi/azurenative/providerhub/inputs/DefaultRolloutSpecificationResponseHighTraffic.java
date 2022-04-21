@@ -16,65 +16,61 @@ public final class DefaultRolloutSpecificationResponseHighTraffic extends com.pu
     public static final DefaultRolloutSpecificationResponseHighTraffic Empty = new DefaultRolloutSpecificationResponseHighTraffic();
 
     @Import(name="regions")
-      private final @Nullable List<String> regions;
+    private @Nullable List<String> regions;
 
-    public List<String> regions() {
-        return this.regions == null ? List.of() : this.regions;
+    public Optional<List<String>> regions() {
+        return Optional.ofNullable(this.regions);
     }
 
     @Import(name="waitDuration")
-      private final @Nullable String waitDuration;
+    private @Nullable String waitDuration;
 
     public Optional<String> waitDuration() {
-        return this.waitDuration == null ? Optional.empty() : Optional.ofNullable(this.waitDuration);
+        return Optional.ofNullable(this.waitDuration);
     }
 
-    public DefaultRolloutSpecificationResponseHighTraffic(
-        @Nullable List<String> regions,
-        @Nullable String waitDuration) {
-        this.regions = regions;
-        this.waitDuration = waitDuration;
-    }
+    private DefaultRolloutSpecificationResponseHighTraffic() {}
 
-    private DefaultRolloutSpecificationResponseHighTraffic() {
-        this.regions = List.of();
-        this.waitDuration = null;
+    private DefaultRolloutSpecificationResponseHighTraffic(DefaultRolloutSpecificationResponseHighTraffic $) {
+        this.regions = $.regions;
+        this.waitDuration = $.waitDuration;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DefaultRolloutSpecificationResponseHighTraffic defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<String> regions;
-        private @Nullable String waitDuration;
+        private DefaultRolloutSpecificationResponseHighTraffic $;
 
         public Builder() {
-    	      // Empty
+            $ = new DefaultRolloutSpecificationResponseHighTraffic();
         }
 
         public Builder(DefaultRolloutSpecificationResponseHighTraffic defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.regions = defaults.regions;
-    	      this.waitDuration = defaults.waitDuration;
+            $ = new DefaultRolloutSpecificationResponseHighTraffic(Objects.requireNonNull(defaults));
         }
 
         public Builder regions(@Nullable List<String> regions) {
-            this.regions = regions;
+            $.regions = regions;
             return this;
         }
+
         public Builder regions(String... regions) {
             return regions(List.of(regions));
         }
+
         public Builder waitDuration(@Nullable String waitDuration) {
-            this.waitDuration = waitDuration;
+            $.waitDuration = waitDuration;
             return this;
-        }        public DefaultRolloutSpecificationResponseHighTraffic build() {
-            return new DefaultRolloutSpecificationResponseHighTraffic(regions, waitDuration);
+        }
+
+        public DefaultRolloutSpecificationResponseHighTraffic build() {
+            return $;
         }
     }
+
 }

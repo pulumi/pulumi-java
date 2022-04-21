@@ -19,7 +19,7 @@ public final class DeploymentUpdateResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="description", required=true)
-      private final String description;
+    private String description;
 
     public String description() {
         return this.description;
@@ -30,7 +30,7 @@ public final class DeploymentUpdateResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="labels", required=true)
-      private final List<DeploymentUpdateLabelEntryResponse> labels;
+    private List<DeploymentUpdateLabelEntryResponse> labels;
 
     public List<DeploymentUpdateLabelEntryResponse> labels() {
         return this.labels;
@@ -41,67 +41,63 @@ public final class DeploymentUpdateResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="manifest", required=true)
-      private final String manifest;
+    private String manifest;
 
     public String manifest() {
         return this.manifest;
     }
 
-    public DeploymentUpdateResponse(
-        String description,
-        List<DeploymentUpdateLabelEntryResponse> labels,
-        String manifest) {
-        this.description = Objects.requireNonNull(description, "expected parameter 'description' to be non-null");
-        this.labels = Objects.requireNonNull(labels, "expected parameter 'labels' to be non-null");
-        this.manifest = Objects.requireNonNull(manifest, "expected parameter 'manifest' to be non-null");
-    }
+    private DeploymentUpdateResponse() {}
 
-    private DeploymentUpdateResponse() {
-        this.description = null;
-        this.labels = List.of();
-        this.manifest = null;
+    private DeploymentUpdateResponse(DeploymentUpdateResponse $) {
+        this.description = $.description;
+        this.labels = $.labels;
+        this.manifest = $.manifest;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DeploymentUpdateResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String description;
-        private List<DeploymentUpdateLabelEntryResponse> labels;
-        private String manifest;
+        private DeploymentUpdateResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new DeploymentUpdateResponse();
         }
 
         public Builder(DeploymentUpdateResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.description = defaults.description;
-    	      this.labels = defaults.labels;
-    	      this.manifest = defaults.manifest;
+            $ = new DeploymentUpdateResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder description(String description) {
-            this.description = Objects.requireNonNull(description);
+            $.description = description;
             return this;
         }
+
         public Builder labels(List<DeploymentUpdateLabelEntryResponse> labels) {
-            this.labels = Objects.requireNonNull(labels);
+            $.labels = labels;
             return this;
         }
+
         public Builder labels(DeploymentUpdateLabelEntryResponse... labels) {
             return labels(List.of(labels));
         }
+
         public Builder manifest(String manifest) {
-            this.manifest = Objects.requireNonNull(manifest);
+            $.manifest = manifest;
             return this;
-        }        public DeploymentUpdateResponse build() {
-            return new DeploymentUpdateResponse(description, labels, manifest);
+        }
+
+        public DeploymentUpdateResponse build() {
+            $.description = Objects.requireNonNull($.description, "expected parameter 'description' to be non-null");
+            $.labels = Objects.requireNonNull($.labels, "expected parameter 'labels' to be non-null");
+            $.manifest = Objects.requireNonNull($.manifest, "expected parameter 'manifest' to be non-null");
+            return $;
         }
     }
+
 }

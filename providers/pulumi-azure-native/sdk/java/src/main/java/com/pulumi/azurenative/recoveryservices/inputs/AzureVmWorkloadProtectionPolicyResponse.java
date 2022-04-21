@@ -30,7 +30,7 @@ public final class AzureVmWorkloadProtectionPolicyResponse extends com.pulumi.re
      * 
      */
     @Import(name="backupManagementType", required=true)
-      private final String backupManagementType;
+    private String backupManagementType;
 
     public String backupManagementType() {
         return this.backupManagementType;
@@ -41,10 +41,10 @@ public final class AzureVmWorkloadProtectionPolicyResponse extends com.pulumi.re
      * 
      */
     @Import(name="makePolicyConsistent")
-      private final @Nullable Boolean makePolicyConsistent;
+    private @Nullable Boolean makePolicyConsistent;
 
     public Optional<Boolean> makePolicyConsistent() {
-        return this.makePolicyConsistent == null ? Optional.empty() : Optional.ofNullable(this.makePolicyConsistent);
+        return Optional.ofNullable(this.makePolicyConsistent);
     }
 
     /**
@@ -52,10 +52,10 @@ public final class AzureVmWorkloadProtectionPolicyResponse extends com.pulumi.re
      * 
      */
     @Import(name="protectedItemsCount")
-      private final @Nullable Integer protectedItemsCount;
+    private @Nullable Integer protectedItemsCount;
 
     public Optional<Integer> protectedItemsCount() {
-        return this.protectedItemsCount == null ? Optional.empty() : Optional.ofNullable(this.protectedItemsCount);
+        return Optional.ofNullable(this.protectedItemsCount);
     }
 
     /**
@@ -63,10 +63,10 @@ public final class AzureVmWorkloadProtectionPolicyResponse extends com.pulumi.re
      * 
      */
     @Import(name="settings")
-      private final @Nullable SettingsResponse settings;
+    private @Nullable SettingsResponse settings;
 
     public Optional<SettingsResponse> settings() {
-        return this.settings == null ? Optional.empty() : Optional.ofNullable(this.settings);
+        return Optional.ofNullable(this.settings);
     }
 
     /**
@@ -74,10 +74,10 @@ public final class AzureVmWorkloadProtectionPolicyResponse extends com.pulumi.re
      * 
      */
     @Import(name="subProtectionPolicy")
-      private final @Nullable List<SubProtectionPolicyResponse> subProtectionPolicy;
+    private @Nullable List<SubProtectionPolicyResponse> subProtectionPolicy;
 
-    public List<SubProtectionPolicyResponse> subProtectionPolicy() {
-        return this.subProtectionPolicy == null ? List.of() : this.subProtectionPolicy;
+    public Optional<List<SubProtectionPolicyResponse>> subProtectionPolicy() {
+        return Optional.ofNullable(this.subProtectionPolicy);
     }
 
     /**
@@ -85,94 +85,79 @@ public final class AzureVmWorkloadProtectionPolicyResponse extends com.pulumi.re
      * 
      */
     @Import(name="workLoadType")
-      private final @Nullable String workLoadType;
+    private @Nullable String workLoadType;
 
     public Optional<String> workLoadType() {
-        return this.workLoadType == null ? Optional.empty() : Optional.ofNullable(this.workLoadType);
+        return Optional.ofNullable(this.workLoadType);
     }
 
-    public AzureVmWorkloadProtectionPolicyResponse(
-        String backupManagementType,
-        @Nullable Boolean makePolicyConsistent,
-        @Nullable Integer protectedItemsCount,
-        @Nullable SettingsResponse settings,
-        @Nullable List<SubProtectionPolicyResponse> subProtectionPolicy,
-        @Nullable String workLoadType) {
-        this.backupManagementType = Codegen.stringProp("backupManagementType").arg(backupManagementType).require();
-        this.makePolicyConsistent = makePolicyConsistent;
-        this.protectedItemsCount = protectedItemsCount;
-        this.settings = settings;
-        this.subProtectionPolicy = subProtectionPolicy;
-        this.workLoadType = workLoadType;
-    }
+    private AzureVmWorkloadProtectionPolicyResponse() {}
 
-    private AzureVmWorkloadProtectionPolicyResponse() {
-        this.backupManagementType = null;
-        this.makePolicyConsistent = null;
-        this.protectedItemsCount = null;
-        this.settings = null;
-        this.subProtectionPolicy = List.of();
-        this.workLoadType = null;
+    private AzureVmWorkloadProtectionPolicyResponse(AzureVmWorkloadProtectionPolicyResponse $) {
+        this.backupManagementType = $.backupManagementType;
+        this.makePolicyConsistent = $.makePolicyConsistent;
+        this.protectedItemsCount = $.protectedItemsCount;
+        this.settings = $.settings;
+        this.subProtectionPolicy = $.subProtectionPolicy;
+        this.workLoadType = $.workLoadType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AzureVmWorkloadProtectionPolicyResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String backupManagementType;
-        private @Nullable Boolean makePolicyConsistent;
-        private @Nullable Integer protectedItemsCount;
-        private @Nullable SettingsResponse settings;
-        private @Nullable List<SubProtectionPolicyResponse> subProtectionPolicy;
-        private @Nullable String workLoadType;
+        private AzureVmWorkloadProtectionPolicyResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AzureVmWorkloadProtectionPolicyResponse();
         }
 
         public Builder(AzureVmWorkloadProtectionPolicyResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.backupManagementType = defaults.backupManagementType;
-    	      this.makePolicyConsistent = defaults.makePolicyConsistent;
-    	      this.protectedItemsCount = defaults.protectedItemsCount;
-    	      this.settings = defaults.settings;
-    	      this.subProtectionPolicy = defaults.subProtectionPolicy;
-    	      this.workLoadType = defaults.workLoadType;
+            $ = new AzureVmWorkloadProtectionPolicyResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder backupManagementType(String backupManagementType) {
-            this.backupManagementType = Objects.requireNonNull(backupManagementType);
+            $.backupManagementType = backupManagementType;
             return this;
         }
+
         public Builder makePolicyConsistent(@Nullable Boolean makePolicyConsistent) {
-            this.makePolicyConsistent = makePolicyConsistent;
+            $.makePolicyConsistent = makePolicyConsistent;
             return this;
         }
+
         public Builder protectedItemsCount(@Nullable Integer protectedItemsCount) {
-            this.protectedItemsCount = protectedItemsCount;
+            $.protectedItemsCount = protectedItemsCount;
             return this;
         }
+
         public Builder settings(@Nullable SettingsResponse settings) {
-            this.settings = settings;
+            $.settings = settings;
             return this;
         }
+
         public Builder subProtectionPolicy(@Nullable List<SubProtectionPolicyResponse> subProtectionPolicy) {
-            this.subProtectionPolicy = subProtectionPolicy;
+            $.subProtectionPolicy = subProtectionPolicy;
             return this;
         }
+
         public Builder subProtectionPolicy(SubProtectionPolicyResponse... subProtectionPolicy) {
             return subProtectionPolicy(List.of(subProtectionPolicy));
         }
+
         public Builder workLoadType(@Nullable String workLoadType) {
-            this.workLoadType = workLoadType;
+            $.workLoadType = workLoadType;
             return this;
-        }        public AzureVmWorkloadProtectionPolicyResponse build() {
-            return new AzureVmWorkloadProtectionPolicyResponse(backupManagementType, makePolicyConsistent, protectedItemsCount, settings, subProtectionPolicy, workLoadType);
+        }
+
+        public AzureVmWorkloadProtectionPolicyResponse build() {
+            $.backupManagementType = Codegen.stringProp("backupManagementType").arg($.backupManagementType).require();
+            return $;
         }
     }
+
 }

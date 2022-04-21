@@ -23,7 +23,7 @@ public final class HeaderActionResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="headerActionType", required=true)
-      private final String headerActionType;
+    private String headerActionType;
 
     public String headerActionType() {
         return this.headerActionType;
@@ -34,7 +34,7 @@ public final class HeaderActionResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="headerName", required=true)
-      private final String headerName;
+    private String headerName;
 
     public String headerName() {
         return this.headerName;
@@ -45,64 +45,58 @@ public final class HeaderActionResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="value")
-      private final @Nullable String value;
+    private @Nullable String value;
 
     public Optional<String> value() {
-        return this.value == null ? Optional.empty() : Optional.ofNullable(this.value);
+        return Optional.ofNullable(this.value);
     }
 
-    public HeaderActionResponse(
-        String headerActionType,
-        String headerName,
-        @Nullable String value) {
-        this.headerActionType = Objects.requireNonNull(headerActionType, "expected parameter 'headerActionType' to be non-null");
-        this.headerName = Objects.requireNonNull(headerName, "expected parameter 'headerName' to be non-null");
-        this.value = value;
-    }
+    private HeaderActionResponse() {}
 
-    private HeaderActionResponse() {
-        this.headerActionType = null;
-        this.headerName = null;
-        this.value = null;
+    private HeaderActionResponse(HeaderActionResponse $) {
+        this.headerActionType = $.headerActionType;
+        this.headerName = $.headerName;
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(HeaderActionResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String headerActionType;
-        private String headerName;
-        private @Nullable String value;
+        private HeaderActionResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new HeaderActionResponse();
         }
 
         public Builder(HeaderActionResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.headerActionType = defaults.headerActionType;
-    	      this.headerName = defaults.headerName;
-    	      this.value = defaults.value;
+            $ = new HeaderActionResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder headerActionType(String headerActionType) {
-            this.headerActionType = Objects.requireNonNull(headerActionType);
+            $.headerActionType = headerActionType;
             return this;
         }
+
         public Builder headerName(String headerName) {
-            this.headerName = Objects.requireNonNull(headerName);
+            $.headerName = headerName;
             return this;
         }
+
         public Builder value(@Nullable String value) {
-            this.value = value;
+            $.value = value;
             return this;
-        }        public HeaderActionResponse build() {
-            return new HeaderActionResponse(headerActionType, headerName, value);
+        }
+
+        public HeaderActionResponse build() {
+            $.headerActionType = Objects.requireNonNull($.headerActionType, "expected parameter 'headerActionType' to be non-null");
+            $.headerName = Objects.requireNonNull($.headerName, "expected parameter 'headerName' to be non-null");
+            return $;
         }
     }
+
 }

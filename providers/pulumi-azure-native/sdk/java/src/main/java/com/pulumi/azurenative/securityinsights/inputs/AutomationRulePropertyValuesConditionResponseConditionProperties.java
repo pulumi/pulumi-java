@@ -24,10 +24,10 @@ public final class AutomationRulePropertyValuesConditionResponseConditionPropert
      * 
      */
     @Import(name="operator")
-      private final @Nullable String operator;
+    private @Nullable String operator;
 
     public Optional<String> operator() {
-        return this.operator == null ? Optional.empty() : Optional.ofNullable(this.operator);
+        return Optional.ofNullable(this.operator);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class AutomationRulePropertyValuesConditionResponseConditionPropert
      * 
      */
     @Import(name="propertyName")
-      private final @Nullable String propertyName;
+    private @Nullable String propertyName;
 
     public Optional<String> propertyName() {
-        return this.propertyName == null ? Optional.empty() : Optional.ofNullable(this.propertyName);
+        return Optional.ofNullable(this.propertyName);
     }
 
     /**
@@ -46,67 +46,60 @@ public final class AutomationRulePropertyValuesConditionResponseConditionPropert
      * 
      */
     @Import(name="propertyValues")
-      private final @Nullable List<String> propertyValues;
+    private @Nullable List<String> propertyValues;
 
-    public List<String> propertyValues() {
-        return this.propertyValues == null ? List.of() : this.propertyValues;
+    public Optional<List<String>> propertyValues() {
+        return Optional.ofNullable(this.propertyValues);
     }
 
-    public AutomationRulePropertyValuesConditionResponseConditionProperties(
-        @Nullable String operator,
-        @Nullable String propertyName,
-        @Nullable List<String> propertyValues) {
-        this.operator = operator;
-        this.propertyName = propertyName;
-        this.propertyValues = propertyValues;
-    }
+    private AutomationRulePropertyValuesConditionResponseConditionProperties() {}
 
-    private AutomationRulePropertyValuesConditionResponseConditionProperties() {
-        this.operator = null;
-        this.propertyName = null;
-        this.propertyValues = List.of();
+    private AutomationRulePropertyValuesConditionResponseConditionProperties(AutomationRulePropertyValuesConditionResponseConditionProperties $) {
+        this.operator = $.operator;
+        this.propertyName = $.propertyName;
+        this.propertyValues = $.propertyValues;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AutomationRulePropertyValuesConditionResponseConditionProperties defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String operator;
-        private @Nullable String propertyName;
-        private @Nullable List<String> propertyValues;
+        private AutomationRulePropertyValuesConditionResponseConditionProperties $;
 
         public Builder() {
-    	      // Empty
+            $ = new AutomationRulePropertyValuesConditionResponseConditionProperties();
         }
 
         public Builder(AutomationRulePropertyValuesConditionResponseConditionProperties defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.operator = defaults.operator;
-    	      this.propertyName = defaults.propertyName;
-    	      this.propertyValues = defaults.propertyValues;
+            $ = new AutomationRulePropertyValuesConditionResponseConditionProperties(Objects.requireNonNull(defaults));
         }
 
         public Builder operator(@Nullable String operator) {
-            this.operator = operator;
+            $.operator = operator;
             return this;
         }
+
         public Builder propertyName(@Nullable String propertyName) {
-            this.propertyName = propertyName;
+            $.propertyName = propertyName;
             return this;
         }
+
         public Builder propertyValues(@Nullable List<String> propertyValues) {
-            this.propertyValues = propertyValues;
+            $.propertyValues = propertyValues;
             return this;
         }
+
         public Builder propertyValues(String... propertyValues) {
             return propertyValues(List.of(propertyValues));
-        }        public AutomationRulePropertyValuesConditionResponseConditionProperties build() {
-            return new AutomationRulePropertyValuesConditionResponseConditionProperties(operator, propertyName, propertyValues);
+        }
+
+        public AutomationRulePropertyValuesConditionResponseConditionProperties build() {
+            return $;
         }
     }
+
 }

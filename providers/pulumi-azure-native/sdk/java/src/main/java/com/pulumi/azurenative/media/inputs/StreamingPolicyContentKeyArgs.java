@@ -6,10 +6,10 @@ package com.pulumi.azurenative.media.inputs;
 import com.pulumi.azurenative.media.inputs.TrackSelectionArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class StreamingPolicyContentKeyArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="label")
-      private final @Nullable Output<String> label;
+    private @Nullable Output<String> label;
 
-    public Output<String> label() {
-        return this.label == null ? Codegen.empty() : this.label;
+    public Optional<Output<String>> label() {
+        return Optional.ofNullable(this.label);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class StreamingPolicyContentKeyArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="policyName")
-      private final @Nullable Output<String> policyName;
+    private @Nullable Output<String> policyName;
 
-    public Output<String> policyName() {
-        return this.policyName == null ? Codegen.empty() : this.policyName;
+    public Optional<Output<String>> policyName() {
+        return Optional.ofNullable(this.policyName);
     }
 
     /**
@@ -48,79 +48,72 @@ public final class StreamingPolicyContentKeyArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="tracks")
-      private final @Nullable Output<List<TrackSelectionArgs>> tracks;
+    private @Nullable Output<List<TrackSelectionArgs>> tracks;
 
-    public Output<List<TrackSelectionArgs>> tracks() {
-        return this.tracks == null ? Codegen.empty() : this.tracks;
+    public Optional<Output<List<TrackSelectionArgs>>> tracks() {
+        return Optional.ofNullable(this.tracks);
     }
 
-    public StreamingPolicyContentKeyArgs(
-        @Nullable Output<String> label,
-        @Nullable Output<String> policyName,
-        @Nullable Output<List<TrackSelectionArgs>> tracks) {
-        this.label = label;
-        this.policyName = policyName;
-        this.tracks = tracks;
-    }
+    private StreamingPolicyContentKeyArgs() {}
 
-    private StreamingPolicyContentKeyArgs() {
-        this.label = Codegen.empty();
-        this.policyName = Codegen.empty();
-        this.tracks = Codegen.empty();
+    private StreamingPolicyContentKeyArgs(StreamingPolicyContentKeyArgs $) {
+        this.label = $.label;
+        this.policyName = $.policyName;
+        this.tracks = $.tracks;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(StreamingPolicyContentKeyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> label;
-        private @Nullable Output<String> policyName;
-        private @Nullable Output<List<TrackSelectionArgs>> tracks;
+        private StreamingPolicyContentKeyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new StreamingPolicyContentKeyArgs();
         }
 
         public Builder(StreamingPolicyContentKeyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.label = defaults.label;
-    	      this.policyName = defaults.policyName;
-    	      this.tracks = defaults.tracks;
+            $ = new StreamingPolicyContentKeyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder label(@Nullable Output<String> label) {
-            this.label = label;
+            $.label = label;
             return this;
         }
-        public Builder label(@Nullable String label) {
-            this.label = Codegen.ofNullable(label);
-            return this;
+
+        public Builder label(String label) {
+            return label(Output.of(label));
         }
+
         public Builder policyName(@Nullable Output<String> policyName) {
-            this.policyName = policyName;
+            $.policyName = policyName;
             return this;
         }
-        public Builder policyName(@Nullable String policyName) {
-            this.policyName = Codegen.ofNullable(policyName);
-            return this;
+
+        public Builder policyName(String policyName) {
+            return policyName(Output.of(policyName));
         }
+
         public Builder tracks(@Nullable Output<List<TrackSelectionArgs>> tracks) {
-            this.tracks = tracks;
+            $.tracks = tracks;
             return this;
         }
-        public Builder tracks(@Nullable List<TrackSelectionArgs> tracks) {
-            this.tracks = Codegen.ofNullable(tracks);
-            return this;
+
+        public Builder tracks(List<TrackSelectionArgs> tracks) {
+            return tracks(Output.of(tracks));
         }
+
         public Builder tracks(TrackSelectionArgs... tracks) {
             return tracks(List.of(tracks));
-        }        public StreamingPolicyContentKeyArgs build() {
-            return new StreamingPolicyContentKeyArgs(label, policyName, tracks);
+        }
+
+        public StreamingPolicyContentKeyArgs build() {
+            return $;
         }
     }
+
 }

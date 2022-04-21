@@ -25,10 +25,10 @@ public final class SuppressionScheduleResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="endDate")
-      private final @Nullable String endDate;
+    private @Nullable String endDate;
 
     public Optional<String> endDate() {
-        return this.endDate == null ? Optional.empty() : Optional.ofNullable(this.endDate);
+        return Optional.ofNullable(this.endDate);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class SuppressionScheduleResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="endTime")
-      private final @Nullable String endTime;
+    private @Nullable String endTime;
 
     public Optional<String> endTime() {
-        return this.endTime == null ? Optional.empty() : Optional.ofNullable(this.endTime);
+        return Optional.ofNullable(this.endTime);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class SuppressionScheduleResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="recurrenceValues")
-      private final @Nullable List<Integer> recurrenceValues;
+    private @Nullable List<Integer> recurrenceValues;
 
-    public List<Integer> recurrenceValues() {
-        return this.recurrenceValues == null ? List.of() : this.recurrenceValues;
+    public Optional<List<Integer>> recurrenceValues() {
+        return Optional.ofNullable(this.recurrenceValues);
     }
 
     /**
@@ -58,10 +58,10 @@ public final class SuppressionScheduleResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="startDate")
-      private final @Nullable String startDate;
+    private @Nullable String startDate;
 
     public Optional<String> startDate() {
-        return this.startDate == null ? Optional.empty() : Optional.ofNullable(this.startDate);
+        return Optional.ofNullable(this.startDate);
     }
 
     /**
@@ -69,85 +69,72 @@ public final class SuppressionScheduleResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="startTime")
-      private final @Nullable String startTime;
+    private @Nullable String startTime;
 
     public Optional<String> startTime() {
-        return this.startTime == null ? Optional.empty() : Optional.ofNullable(this.startTime);
+        return Optional.ofNullable(this.startTime);
     }
 
-    public SuppressionScheduleResponse(
-        @Nullable String endDate,
-        @Nullable String endTime,
-        @Nullable List<Integer> recurrenceValues,
-        @Nullable String startDate,
-        @Nullable String startTime) {
-        this.endDate = endDate;
-        this.endTime = endTime;
-        this.recurrenceValues = recurrenceValues;
-        this.startDate = startDate;
-        this.startTime = startTime;
-    }
+    private SuppressionScheduleResponse() {}
 
-    private SuppressionScheduleResponse() {
-        this.endDate = null;
-        this.endTime = null;
-        this.recurrenceValues = List.of();
-        this.startDate = null;
-        this.startTime = null;
+    private SuppressionScheduleResponse(SuppressionScheduleResponse $) {
+        this.endDate = $.endDate;
+        this.endTime = $.endTime;
+        this.recurrenceValues = $.recurrenceValues;
+        this.startDate = $.startDate;
+        this.startTime = $.startTime;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SuppressionScheduleResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String endDate;
-        private @Nullable String endTime;
-        private @Nullable List<Integer> recurrenceValues;
-        private @Nullable String startDate;
-        private @Nullable String startTime;
+        private SuppressionScheduleResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new SuppressionScheduleResponse();
         }
 
         public Builder(SuppressionScheduleResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.endDate = defaults.endDate;
-    	      this.endTime = defaults.endTime;
-    	      this.recurrenceValues = defaults.recurrenceValues;
-    	      this.startDate = defaults.startDate;
-    	      this.startTime = defaults.startTime;
+            $ = new SuppressionScheduleResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder endDate(@Nullable String endDate) {
-            this.endDate = endDate;
+            $.endDate = endDate;
             return this;
         }
+
         public Builder endTime(@Nullable String endTime) {
-            this.endTime = endTime;
+            $.endTime = endTime;
             return this;
         }
+
         public Builder recurrenceValues(@Nullable List<Integer> recurrenceValues) {
-            this.recurrenceValues = recurrenceValues;
+            $.recurrenceValues = recurrenceValues;
             return this;
         }
+
         public Builder recurrenceValues(Integer... recurrenceValues) {
             return recurrenceValues(List.of(recurrenceValues));
         }
+
         public Builder startDate(@Nullable String startDate) {
-            this.startDate = startDate;
+            $.startDate = startDate;
             return this;
         }
+
         public Builder startTime(@Nullable String startTime) {
-            this.startTime = startTime;
+            $.startTime = startTime;
             return this;
-        }        public SuppressionScheduleResponse build() {
-            return new SuppressionScheduleResponse(endDate, endTime, recurrenceValues, startDate, startTime);
+        }
+
+        public SuppressionScheduleResponse build() {
+            return $;
         }
     }
+
 }

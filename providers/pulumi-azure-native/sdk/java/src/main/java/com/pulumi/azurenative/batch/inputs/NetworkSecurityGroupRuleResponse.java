@@ -17,7 +17,7 @@ public final class NetworkSecurityGroupRuleResponse extends com.pulumi.resources
     public static final NetworkSecurityGroupRuleResponse Empty = new NetworkSecurityGroupRuleResponse();
 
     @Import(name="access", required=true)
-      private final String access;
+    private String access;
 
     public String access() {
         return this.access;
@@ -28,7 +28,7 @@ public final class NetworkSecurityGroupRuleResponse extends com.pulumi.resources
      * 
      */
     @Import(name="priority", required=true)
-      private final Integer priority;
+    private Integer priority;
 
     public Integer priority() {
         return this.priority;
@@ -39,7 +39,7 @@ public final class NetworkSecurityGroupRuleResponse extends com.pulumi.resources
      * 
      */
     @Import(name="sourceAddressPrefix", required=true)
-      private final String sourceAddressPrefix;
+    private String sourceAddressPrefix;
 
     public String sourceAddressPrefix() {
         return this.sourceAddressPrefix;
@@ -50,76 +50,69 @@ public final class NetworkSecurityGroupRuleResponse extends com.pulumi.resources
      * 
      */
     @Import(name="sourcePortRanges")
-      private final @Nullable List<String> sourcePortRanges;
+    private @Nullable List<String> sourcePortRanges;
 
-    public List<String> sourcePortRanges() {
-        return this.sourcePortRanges == null ? List.of() : this.sourcePortRanges;
+    public Optional<List<String>> sourcePortRanges() {
+        return Optional.ofNullable(this.sourcePortRanges);
     }
 
-    public NetworkSecurityGroupRuleResponse(
-        String access,
-        Integer priority,
-        String sourceAddressPrefix,
-        @Nullable List<String> sourcePortRanges) {
-        this.access = Objects.requireNonNull(access, "expected parameter 'access' to be non-null");
-        this.priority = Objects.requireNonNull(priority, "expected parameter 'priority' to be non-null");
-        this.sourceAddressPrefix = Objects.requireNonNull(sourceAddressPrefix, "expected parameter 'sourceAddressPrefix' to be non-null");
-        this.sourcePortRanges = sourcePortRanges;
-    }
+    private NetworkSecurityGroupRuleResponse() {}
 
-    private NetworkSecurityGroupRuleResponse() {
-        this.access = null;
-        this.priority = null;
-        this.sourceAddressPrefix = null;
-        this.sourcePortRanges = List.of();
+    private NetworkSecurityGroupRuleResponse(NetworkSecurityGroupRuleResponse $) {
+        this.access = $.access;
+        this.priority = $.priority;
+        this.sourceAddressPrefix = $.sourceAddressPrefix;
+        this.sourcePortRanges = $.sourcePortRanges;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NetworkSecurityGroupRuleResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String access;
-        private Integer priority;
-        private String sourceAddressPrefix;
-        private @Nullable List<String> sourcePortRanges;
+        private NetworkSecurityGroupRuleResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new NetworkSecurityGroupRuleResponse();
         }
 
         public Builder(NetworkSecurityGroupRuleResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.access = defaults.access;
-    	      this.priority = defaults.priority;
-    	      this.sourceAddressPrefix = defaults.sourceAddressPrefix;
-    	      this.sourcePortRanges = defaults.sourcePortRanges;
+            $ = new NetworkSecurityGroupRuleResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder access(String access) {
-            this.access = Objects.requireNonNull(access);
+            $.access = access;
             return this;
         }
+
         public Builder priority(Integer priority) {
-            this.priority = Objects.requireNonNull(priority);
+            $.priority = priority;
             return this;
         }
+
         public Builder sourceAddressPrefix(String sourceAddressPrefix) {
-            this.sourceAddressPrefix = Objects.requireNonNull(sourceAddressPrefix);
+            $.sourceAddressPrefix = sourceAddressPrefix;
             return this;
         }
+
         public Builder sourcePortRanges(@Nullable List<String> sourcePortRanges) {
-            this.sourcePortRanges = sourcePortRanges;
+            $.sourcePortRanges = sourcePortRanges;
             return this;
         }
+
         public Builder sourcePortRanges(String... sourcePortRanges) {
             return sourcePortRanges(List.of(sourcePortRanges));
-        }        public NetworkSecurityGroupRuleResponse build() {
-            return new NetworkSecurityGroupRuleResponse(access, priority, sourceAddressPrefix, sourcePortRanges);
+        }
+
+        public NetworkSecurityGroupRuleResponse build() {
+            $.access = Objects.requireNonNull($.access, "expected parameter 'access' to be non-null");
+            $.priority = Objects.requireNonNull($.priority, "expected parameter 'priority' to be non-null");
+            $.sourceAddressPrefix = Objects.requireNonNull($.sourceAddressPrefix, "expected parameter 'sourceAddressPrefix' to be non-null");
+            return $;
         }
     }
+
 }

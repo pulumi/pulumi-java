@@ -6,10 +6,10 @@ package com.pulumi.aws.networkfirewall.inputs;
 import com.pulumi.aws.networkfirewall.inputs.FirewallFirewallStatusSyncStateAttachmentGetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class FirewallFirewallStatusSyncStateGetArgs extends com.pulumi.res
      * 
      */
     @Import(name="attachments")
-      private final @Nullable Output<List<FirewallFirewallStatusSyncStateAttachmentGetArgs>> attachments;
+    private @Nullable Output<List<FirewallFirewallStatusSyncStateAttachmentGetArgs>> attachments;
 
-    public Output<List<FirewallFirewallStatusSyncStateAttachmentGetArgs>> attachments() {
-        return this.attachments == null ? Codegen.empty() : this.attachments;
+    public Optional<Output<List<FirewallFirewallStatusSyncStateAttachmentGetArgs>>> attachments() {
+        return Optional.ofNullable(this.attachments);
     }
 
     /**
@@ -33,66 +33,62 @@ public final class FirewallFirewallStatusSyncStateGetArgs extends com.pulumi.res
      * 
      */
     @Import(name="availabilityZone")
-      private final @Nullable Output<String> availabilityZone;
+    private @Nullable Output<String> availabilityZone;
 
-    public Output<String> availabilityZone() {
-        return this.availabilityZone == null ? Codegen.empty() : this.availabilityZone;
+    public Optional<Output<String>> availabilityZone() {
+        return Optional.ofNullable(this.availabilityZone);
     }
 
-    public FirewallFirewallStatusSyncStateGetArgs(
-        @Nullable Output<List<FirewallFirewallStatusSyncStateAttachmentGetArgs>> attachments,
-        @Nullable Output<String> availabilityZone) {
-        this.attachments = attachments;
-        this.availabilityZone = availabilityZone;
-    }
+    private FirewallFirewallStatusSyncStateGetArgs() {}
 
-    private FirewallFirewallStatusSyncStateGetArgs() {
-        this.attachments = Codegen.empty();
-        this.availabilityZone = Codegen.empty();
+    private FirewallFirewallStatusSyncStateGetArgs(FirewallFirewallStatusSyncStateGetArgs $) {
+        this.attachments = $.attachments;
+        this.availabilityZone = $.availabilityZone;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FirewallFirewallStatusSyncStateGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<FirewallFirewallStatusSyncStateAttachmentGetArgs>> attachments;
-        private @Nullable Output<String> availabilityZone;
+        private FirewallFirewallStatusSyncStateGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new FirewallFirewallStatusSyncStateGetArgs();
         }
 
         public Builder(FirewallFirewallStatusSyncStateGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.attachments = defaults.attachments;
-    	      this.availabilityZone = defaults.availabilityZone;
+            $ = new FirewallFirewallStatusSyncStateGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder attachments(@Nullable Output<List<FirewallFirewallStatusSyncStateAttachmentGetArgs>> attachments) {
-            this.attachments = attachments;
+            $.attachments = attachments;
             return this;
         }
-        public Builder attachments(@Nullable List<FirewallFirewallStatusSyncStateAttachmentGetArgs> attachments) {
-            this.attachments = Codegen.ofNullable(attachments);
-            return this;
+
+        public Builder attachments(List<FirewallFirewallStatusSyncStateAttachmentGetArgs> attachments) {
+            return attachments(Output.of(attachments));
         }
+
         public Builder attachments(FirewallFirewallStatusSyncStateAttachmentGetArgs... attachments) {
             return attachments(List.of(attachments));
         }
+
         public Builder availabilityZone(@Nullable Output<String> availabilityZone) {
-            this.availabilityZone = availabilityZone;
+            $.availabilityZone = availabilityZone;
             return this;
         }
-        public Builder availabilityZone(@Nullable String availabilityZone) {
-            this.availabilityZone = Codegen.ofNullable(availabilityZone);
-            return this;
-        }        public FirewallFirewallStatusSyncStateGetArgs build() {
-            return new FirewallFirewallStatusSyncStateGetArgs(attachments, availabilityZone);
+
+        public Builder availabilityZone(String availabilityZone) {
+            return availabilityZone(Output.of(availabilityZone));
+        }
+
+        public FirewallFirewallStatusSyncStateGetArgs build() {
+            return $;
         }
     }
+
 }

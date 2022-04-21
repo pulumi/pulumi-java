@@ -7,12 +7,12 @@ import com.pulumi.aws.batch.inputs.JobDefinitionRetryStrategyArgs;
 import com.pulumi.aws.batch.inputs.JobDefinitionTimeoutArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class JobDefinitionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="containerProperties")
-      private final @Nullable Output<String> containerProperties;
+    private @Nullable Output<String> containerProperties;
 
-    public Output<String> containerProperties() {
-        return this.containerProperties == null ? Codegen.empty() : this.containerProperties;
+    public Optional<Output<String>> containerProperties() {
+        return Optional.ofNullable(this.containerProperties);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class JobDefinitionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -48,10 +48,10 @@ public final class JobDefinitionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="parameters")
-      private final @Nullable Output<Map<String,String>> parameters;
+    private @Nullable Output<Map<String,String>> parameters;
 
-    public Output<Map<String,String>> parameters() {
-        return this.parameters == null ? Codegen.empty() : this.parameters;
+    public Optional<Output<Map<String,String>>> parameters() {
+        return Optional.ofNullable(this.parameters);
     }
 
     /**
@@ -59,10 +59,10 @@ public final class JobDefinitionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="platformCapabilities")
-      private final @Nullable Output<List<String>> platformCapabilities;
+    private @Nullable Output<List<String>> platformCapabilities;
 
-    public Output<List<String>> platformCapabilities() {
-        return this.platformCapabilities == null ? Codegen.empty() : this.platformCapabilities;
+    public Optional<Output<List<String>>> platformCapabilities() {
+        return Optional.ofNullable(this.platformCapabilities);
     }
 
     /**
@@ -70,10 +70,10 @@ public final class JobDefinitionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="propagateTags")
-      private final @Nullable Output<Boolean> propagateTags;
+    private @Nullable Output<Boolean> propagateTags;
 
-    public Output<Boolean> propagateTags() {
-        return this.propagateTags == null ? Codegen.empty() : this.propagateTags;
+    public Optional<Output<Boolean>> propagateTags() {
+        return Optional.ofNullable(this.propagateTags);
     }
 
     /**
@@ -82,10 +82,10 @@ public final class JobDefinitionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="retryStrategy")
-      private final @Nullable Output<JobDefinitionRetryStrategyArgs> retryStrategy;
+    private @Nullable Output<JobDefinitionRetryStrategyArgs> retryStrategy;
 
-    public Output<JobDefinitionRetryStrategyArgs> retryStrategy() {
-        return this.retryStrategy == null ? Codegen.empty() : this.retryStrategy;
+    public Optional<Output<JobDefinitionRetryStrategyArgs>> retryStrategy() {
+        return Optional.ofNullable(this.retryStrategy);
     }
 
     /**
@@ -93,10 +93,10 @@ public final class JobDefinitionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -104,10 +104,10 @@ public final class JobDefinitionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="timeout")
-      private final @Nullable Output<JobDefinitionTimeoutArgs> timeout;
+    private @Nullable Output<JobDefinitionTimeoutArgs> timeout;
 
-    public Output<JobDefinitionTimeoutArgs> timeout() {
-        return this.timeout == null ? Codegen.empty() : this.timeout;
+    public Optional<Output<JobDefinitionTimeoutArgs>> timeout() {
+        return Optional.ofNullable(this.timeout);
     }
 
     /**
@@ -115,157 +115,133 @@ public final class JobDefinitionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="type", required=true)
-      private final Output<String> type;
+    private Output<String> type;
 
     public Output<String> type() {
         return this.type;
     }
 
-    public JobDefinitionArgs(
-        @Nullable Output<String> containerProperties,
-        @Nullable Output<String> name,
-        @Nullable Output<Map<String,String>> parameters,
-        @Nullable Output<List<String>> platformCapabilities,
-        @Nullable Output<Boolean> propagateTags,
-        @Nullable Output<JobDefinitionRetryStrategyArgs> retryStrategy,
-        @Nullable Output<Map<String,String>> tags,
-        @Nullable Output<JobDefinitionTimeoutArgs> timeout,
-        Output<String> type) {
-        this.containerProperties = containerProperties;
-        this.name = name;
-        this.parameters = parameters;
-        this.platformCapabilities = platformCapabilities;
-        this.propagateTags = propagateTags;
-        this.retryStrategy = retryStrategy;
-        this.tags = tags;
-        this.timeout = timeout;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private JobDefinitionArgs() {}
 
-    private JobDefinitionArgs() {
-        this.containerProperties = Codegen.empty();
-        this.name = Codegen.empty();
-        this.parameters = Codegen.empty();
-        this.platformCapabilities = Codegen.empty();
-        this.propagateTags = Codegen.empty();
-        this.retryStrategy = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.timeout = Codegen.empty();
-        this.type = Codegen.empty();
+    private JobDefinitionArgs(JobDefinitionArgs $) {
+        this.containerProperties = $.containerProperties;
+        this.name = $.name;
+        this.parameters = $.parameters;
+        this.platformCapabilities = $.platformCapabilities;
+        this.propagateTags = $.propagateTags;
+        this.retryStrategy = $.retryStrategy;
+        this.tags = $.tags;
+        this.timeout = $.timeout;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(JobDefinitionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> containerProperties;
-        private @Nullable Output<String> name;
-        private @Nullable Output<Map<String,String>> parameters;
-        private @Nullable Output<List<String>> platformCapabilities;
-        private @Nullable Output<Boolean> propagateTags;
-        private @Nullable Output<JobDefinitionRetryStrategyArgs> retryStrategy;
-        private @Nullable Output<Map<String,String>> tags;
-        private @Nullable Output<JobDefinitionTimeoutArgs> timeout;
-        private Output<String> type;
+        private JobDefinitionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new JobDefinitionArgs();
         }
 
         public Builder(JobDefinitionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.containerProperties = defaults.containerProperties;
-    	      this.name = defaults.name;
-    	      this.parameters = defaults.parameters;
-    	      this.platformCapabilities = defaults.platformCapabilities;
-    	      this.propagateTags = defaults.propagateTags;
-    	      this.retryStrategy = defaults.retryStrategy;
-    	      this.tags = defaults.tags;
-    	      this.timeout = defaults.timeout;
-    	      this.type = defaults.type;
+            $ = new JobDefinitionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder containerProperties(@Nullable Output<String> containerProperties) {
-            this.containerProperties = containerProperties;
+            $.containerProperties = containerProperties;
             return this;
         }
-        public Builder containerProperties(@Nullable String containerProperties) {
-            this.containerProperties = Codegen.ofNullable(containerProperties);
-            return this;
+
+        public Builder containerProperties(String containerProperties) {
+            return containerProperties(Output.of(containerProperties));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder parameters(@Nullable Output<Map<String,String>> parameters) {
-            this.parameters = parameters;
+            $.parameters = parameters;
             return this;
         }
-        public Builder parameters(@Nullable Map<String,String> parameters) {
-            this.parameters = Codegen.ofNullable(parameters);
-            return this;
+
+        public Builder parameters(Map<String,String> parameters) {
+            return parameters(Output.of(parameters));
         }
+
         public Builder platformCapabilities(@Nullable Output<List<String>> platformCapabilities) {
-            this.platformCapabilities = platformCapabilities;
+            $.platformCapabilities = platformCapabilities;
             return this;
         }
-        public Builder platformCapabilities(@Nullable List<String> platformCapabilities) {
-            this.platformCapabilities = Codegen.ofNullable(platformCapabilities);
-            return this;
+
+        public Builder platformCapabilities(List<String> platformCapabilities) {
+            return platformCapabilities(Output.of(platformCapabilities));
         }
+
         public Builder platformCapabilities(String... platformCapabilities) {
             return platformCapabilities(List.of(platformCapabilities));
         }
+
         public Builder propagateTags(@Nullable Output<Boolean> propagateTags) {
-            this.propagateTags = propagateTags;
+            $.propagateTags = propagateTags;
             return this;
         }
-        public Builder propagateTags(@Nullable Boolean propagateTags) {
-            this.propagateTags = Codegen.ofNullable(propagateTags);
-            return this;
+
+        public Builder propagateTags(Boolean propagateTags) {
+            return propagateTags(Output.of(propagateTags));
         }
+
         public Builder retryStrategy(@Nullable Output<JobDefinitionRetryStrategyArgs> retryStrategy) {
-            this.retryStrategy = retryStrategy;
+            $.retryStrategy = retryStrategy;
             return this;
         }
-        public Builder retryStrategy(@Nullable JobDefinitionRetryStrategyArgs retryStrategy) {
-            this.retryStrategy = Codegen.ofNullable(retryStrategy);
-            return this;
+
+        public Builder retryStrategy(JobDefinitionRetryStrategyArgs retryStrategy) {
+            return retryStrategy(Output.of(retryStrategy));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder timeout(@Nullable Output<JobDefinitionTimeoutArgs> timeout) {
-            this.timeout = timeout;
+            $.timeout = timeout;
             return this;
         }
-        public Builder timeout(@Nullable JobDefinitionTimeoutArgs timeout) {
-            this.timeout = Codegen.ofNullable(timeout);
-            return this;
+
+        public Builder timeout(JobDefinitionTimeoutArgs timeout) {
+            return timeout(Output.of(timeout));
         }
+
         public Builder type(Output<String> type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Output.of(Objects.requireNonNull(type));
-            return this;
-        }        public JobDefinitionArgs build() {
-            return new JobDefinitionArgs(containerProperties, name, parameters, platformCapabilities, propagateTags, retryStrategy, tags, timeout, type);
+            return type(Output.of(type));
+        }
+
+        public JobDefinitionArgs build() {
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

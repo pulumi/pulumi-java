@@ -21,7 +21,7 @@ public final class AccessUrlsResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="caCertificateAccessUrl", required=true)
-      private final String caCertificateAccessUrl;
+    private String caCertificateAccessUrl;
 
     public String caCertificateAccessUrl() {
         return this.caCertificateAccessUrl;
@@ -32,55 +32,52 @@ public final class AccessUrlsResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="crlAccessUrl", required=true)
-      private final String crlAccessUrl;
+    private String crlAccessUrl;
 
     public String crlAccessUrl() {
         return this.crlAccessUrl;
     }
 
-    public AccessUrlsResponse(
-        String caCertificateAccessUrl,
-        String crlAccessUrl) {
-        this.caCertificateAccessUrl = Objects.requireNonNull(caCertificateAccessUrl, "expected parameter 'caCertificateAccessUrl' to be non-null");
-        this.crlAccessUrl = Objects.requireNonNull(crlAccessUrl, "expected parameter 'crlAccessUrl' to be non-null");
-    }
+    private AccessUrlsResponse() {}
 
-    private AccessUrlsResponse() {
-        this.caCertificateAccessUrl = null;
-        this.crlAccessUrl = null;
+    private AccessUrlsResponse(AccessUrlsResponse $) {
+        this.caCertificateAccessUrl = $.caCertificateAccessUrl;
+        this.crlAccessUrl = $.crlAccessUrl;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AccessUrlsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String caCertificateAccessUrl;
-        private String crlAccessUrl;
+        private AccessUrlsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AccessUrlsResponse();
         }
 
         public Builder(AccessUrlsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.caCertificateAccessUrl = defaults.caCertificateAccessUrl;
-    	      this.crlAccessUrl = defaults.crlAccessUrl;
+            $ = new AccessUrlsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder caCertificateAccessUrl(String caCertificateAccessUrl) {
-            this.caCertificateAccessUrl = Objects.requireNonNull(caCertificateAccessUrl);
+            $.caCertificateAccessUrl = caCertificateAccessUrl;
             return this;
         }
+
         public Builder crlAccessUrl(String crlAccessUrl) {
-            this.crlAccessUrl = Objects.requireNonNull(crlAccessUrl);
+            $.crlAccessUrl = crlAccessUrl;
             return this;
-        }        public AccessUrlsResponse build() {
-            return new AccessUrlsResponse(caCertificateAccessUrl, crlAccessUrl);
+        }
+
+        public AccessUrlsResponse build() {
+            $.caCertificateAccessUrl = Objects.requireNonNull($.caCertificateAccessUrl, "expected parameter 'caCertificateAccessUrl' to be non-null");
+            $.crlAccessUrl = Objects.requireNonNull($.crlAccessUrl, "expected parameter 'crlAccessUrl' to be non-null");
+            return $;
         }
     }
+
 }

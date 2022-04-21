@@ -5,7 +5,6 @@ package com.pulumi.awsnative.ec2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -15,49 +14,49 @@ public final class SpotFleetGroupIdentifierArgs extends com.pulumi.resources.Res
     public static final SpotFleetGroupIdentifierArgs Empty = new SpotFleetGroupIdentifierArgs();
 
     @Import(name="groupId", required=true)
-      private final Output<String> groupId;
+    private Output<String> groupId;
 
     public Output<String> groupId() {
         return this.groupId;
     }
 
-    public SpotFleetGroupIdentifierArgs(Output<String> groupId) {
-        this.groupId = Objects.requireNonNull(groupId, "expected parameter 'groupId' to be non-null");
-    }
+    private SpotFleetGroupIdentifierArgs() {}
 
-    private SpotFleetGroupIdentifierArgs() {
-        this.groupId = Codegen.empty();
+    private SpotFleetGroupIdentifierArgs(SpotFleetGroupIdentifierArgs $) {
+        this.groupId = $.groupId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SpotFleetGroupIdentifierArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> groupId;
+        private SpotFleetGroupIdentifierArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SpotFleetGroupIdentifierArgs();
         }
 
         public Builder(SpotFleetGroupIdentifierArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.groupId = defaults.groupId;
+            $ = new SpotFleetGroupIdentifierArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder groupId(Output<String> groupId) {
-            this.groupId = Objects.requireNonNull(groupId);
+            $.groupId = groupId;
             return this;
         }
+
         public Builder groupId(String groupId) {
-            this.groupId = Output.of(Objects.requireNonNull(groupId));
-            return this;
-        }        public SpotFleetGroupIdentifierArgs build() {
-            return new SpotFleetGroupIdentifierArgs(groupId);
+            return groupId(Output.of(groupId));
+        }
+
+        public SpotFleetGroupIdentifierArgs build() {
+            $.groupId = Objects.requireNonNull($.groupId, "expected parameter 'groupId' to be non-null");
+            return $;
         }
     }
+
 }

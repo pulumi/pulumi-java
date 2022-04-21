@@ -5,11 +5,11 @@ package com.pulumi.gcp.dns;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,7 +23,7 @@ public final class RecordSetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="managedZone", required=true)
-      private final Output<String> managedZone;
+    private Output<String> managedZone;
 
     public Output<String> managedZone() {
         return this.managedZone;
@@ -34,7 +34,7 @@ public final class RecordSetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name", required=true)
-      private final Output<String> name;
+    private Output<String> name;
 
     public Output<String> name() {
         return this.name;
@@ -46,10 +46,10 @@ public final class RecordSetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -60,7 +60,7 @@ public final class RecordSetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="rrdatas", required=true)
-      private final Output<List<String>> rrdatas;
+    private Output<List<String>> rrdatas;
 
     public Output<List<String>> rrdatas() {
         return this.rrdatas;
@@ -71,10 +71,10 @@ public final class RecordSetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="ttl")
-      private final @Nullable Output<Integer> ttl;
+    private @Nullable Output<Integer> ttl;
 
-    public Output<Integer> ttl() {
-        return this.ttl == null ? Codegen.empty() : this.ttl;
+    public Optional<Output<Integer>> ttl() {
+        return Optional.ofNullable(this.ttl);
     }
 
     /**
@@ -82,118 +82,106 @@ public final class RecordSetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="type", required=true)
-      private final Output<String> type;
+    private Output<String> type;
 
     public Output<String> type() {
         return this.type;
     }
 
-    public RecordSetArgs(
-        Output<String> managedZone,
-        Output<String> name,
-        @Nullable Output<String> project,
-        Output<List<String>> rrdatas,
-        @Nullable Output<Integer> ttl,
-        Output<String> type) {
-        this.managedZone = Objects.requireNonNull(managedZone, "expected parameter 'managedZone' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.project = project;
-        this.rrdatas = Objects.requireNonNull(rrdatas, "expected parameter 'rrdatas' to be non-null");
-        this.ttl = ttl;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private RecordSetArgs() {}
 
-    private RecordSetArgs() {
-        this.managedZone = Codegen.empty();
-        this.name = Codegen.empty();
-        this.project = Codegen.empty();
-        this.rrdatas = Codegen.empty();
-        this.ttl = Codegen.empty();
-        this.type = Codegen.empty();
+    private RecordSetArgs(RecordSetArgs $) {
+        this.managedZone = $.managedZone;
+        this.name = $.name;
+        this.project = $.project;
+        this.rrdatas = $.rrdatas;
+        this.ttl = $.ttl;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RecordSetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> managedZone;
-        private Output<String> name;
-        private @Nullable Output<String> project;
-        private Output<List<String>> rrdatas;
-        private @Nullable Output<Integer> ttl;
-        private Output<String> type;
+        private RecordSetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RecordSetArgs();
         }
 
         public Builder(RecordSetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.managedZone = defaults.managedZone;
-    	      this.name = defaults.name;
-    	      this.project = defaults.project;
-    	      this.rrdatas = defaults.rrdatas;
-    	      this.ttl = defaults.ttl;
-    	      this.type = defaults.type;
+            $ = new RecordSetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder managedZone(Output<String> managedZone) {
-            this.managedZone = Objects.requireNonNull(managedZone);
+            $.managedZone = managedZone;
             return this;
         }
+
         public Builder managedZone(String managedZone) {
-            this.managedZone = Output.of(Objects.requireNonNull(managedZone));
-            return this;
+            return managedZone(Output.of(managedZone));
         }
+
         public Builder name(Output<String> name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Output.of(Objects.requireNonNull(name));
-            return this;
+            return name(Output.of(name));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder rrdatas(Output<List<String>> rrdatas) {
-            this.rrdatas = Objects.requireNonNull(rrdatas);
+            $.rrdatas = rrdatas;
             return this;
         }
+
         public Builder rrdatas(List<String> rrdatas) {
-            this.rrdatas = Output.of(Objects.requireNonNull(rrdatas));
-            return this;
+            return rrdatas(Output.of(rrdatas));
         }
+
         public Builder rrdatas(String... rrdatas) {
             return rrdatas(List.of(rrdatas));
         }
+
         public Builder ttl(@Nullable Output<Integer> ttl) {
-            this.ttl = ttl;
+            $.ttl = ttl;
             return this;
         }
-        public Builder ttl(@Nullable Integer ttl) {
-            this.ttl = Codegen.ofNullable(ttl);
-            return this;
+
+        public Builder ttl(Integer ttl) {
+            return ttl(Output.of(ttl));
         }
+
         public Builder type(Output<String> type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Output.of(Objects.requireNonNull(type));
-            return this;
-        }        public RecordSetArgs build() {
-            return new RecordSetArgs(managedZone, name, project, rrdatas, ttl, type);
+            return type(Output.of(type));
+        }
+
+        public RecordSetArgs build() {
+            $.managedZone = Objects.requireNonNull($.managedZone, "expected parameter 'managedZone' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.rrdatas = Objects.requireNonNull($.rrdatas, "expected parameter 'rrdatas' to be non-null");
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

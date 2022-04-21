@@ -5,9 +5,9 @@ package com.pulumi.azurenative.storage.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class DateAfterModificationArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="daysAfterLastAccessTimeGreaterThan")
-      private final @Nullable Output<Double> daysAfterLastAccessTimeGreaterThan;
+    private @Nullable Output<Double> daysAfterLastAccessTimeGreaterThan;
 
-    public Output<Double> daysAfterLastAccessTimeGreaterThan() {
-        return this.daysAfterLastAccessTimeGreaterThan == null ? Codegen.empty() : this.daysAfterLastAccessTimeGreaterThan;
+    public Optional<Output<Double>> daysAfterLastAccessTimeGreaterThan() {
+        return Optional.ofNullable(this.daysAfterLastAccessTimeGreaterThan);
     }
 
     /**
@@ -35,63 +35,58 @@ public final class DateAfterModificationArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="daysAfterModificationGreaterThan")
-      private final @Nullable Output<Double> daysAfterModificationGreaterThan;
+    private @Nullable Output<Double> daysAfterModificationGreaterThan;
 
-    public Output<Double> daysAfterModificationGreaterThan() {
-        return this.daysAfterModificationGreaterThan == null ? Codegen.empty() : this.daysAfterModificationGreaterThan;
+    public Optional<Output<Double>> daysAfterModificationGreaterThan() {
+        return Optional.ofNullable(this.daysAfterModificationGreaterThan);
     }
 
-    public DateAfterModificationArgs(
-        @Nullable Output<Double> daysAfterLastAccessTimeGreaterThan,
-        @Nullable Output<Double> daysAfterModificationGreaterThan) {
-        this.daysAfterLastAccessTimeGreaterThan = daysAfterLastAccessTimeGreaterThan;
-        this.daysAfterModificationGreaterThan = daysAfterModificationGreaterThan;
-    }
+    private DateAfterModificationArgs() {}
 
-    private DateAfterModificationArgs() {
-        this.daysAfterLastAccessTimeGreaterThan = Codegen.empty();
-        this.daysAfterModificationGreaterThan = Codegen.empty();
+    private DateAfterModificationArgs(DateAfterModificationArgs $) {
+        this.daysAfterLastAccessTimeGreaterThan = $.daysAfterLastAccessTimeGreaterThan;
+        this.daysAfterModificationGreaterThan = $.daysAfterModificationGreaterThan;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DateAfterModificationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Double> daysAfterLastAccessTimeGreaterThan;
-        private @Nullable Output<Double> daysAfterModificationGreaterThan;
+        private DateAfterModificationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DateAfterModificationArgs();
         }
 
         public Builder(DateAfterModificationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.daysAfterLastAccessTimeGreaterThan = defaults.daysAfterLastAccessTimeGreaterThan;
-    	      this.daysAfterModificationGreaterThan = defaults.daysAfterModificationGreaterThan;
+            $ = new DateAfterModificationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder daysAfterLastAccessTimeGreaterThan(@Nullable Output<Double> daysAfterLastAccessTimeGreaterThan) {
-            this.daysAfterLastAccessTimeGreaterThan = daysAfterLastAccessTimeGreaterThan;
+            $.daysAfterLastAccessTimeGreaterThan = daysAfterLastAccessTimeGreaterThan;
             return this;
         }
-        public Builder daysAfterLastAccessTimeGreaterThan(@Nullable Double daysAfterLastAccessTimeGreaterThan) {
-            this.daysAfterLastAccessTimeGreaterThan = Codegen.ofNullable(daysAfterLastAccessTimeGreaterThan);
-            return this;
+
+        public Builder daysAfterLastAccessTimeGreaterThan(Double daysAfterLastAccessTimeGreaterThan) {
+            return daysAfterLastAccessTimeGreaterThan(Output.of(daysAfterLastAccessTimeGreaterThan));
         }
+
         public Builder daysAfterModificationGreaterThan(@Nullable Output<Double> daysAfterModificationGreaterThan) {
-            this.daysAfterModificationGreaterThan = daysAfterModificationGreaterThan;
+            $.daysAfterModificationGreaterThan = daysAfterModificationGreaterThan;
             return this;
         }
-        public Builder daysAfterModificationGreaterThan(@Nullable Double daysAfterModificationGreaterThan) {
-            this.daysAfterModificationGreaterThan = Codegen.ofNullable(daysAfterModificationGreaterThan);
-            return this;
-        }        public DateAfterModificationArgs build() {
-            return new DateAfterModificationArgs(daysAfterLastAccessTimeGreaterThan, daysAfterModificationGreaterThan);
+
+        public Builder daysAfterModificationGreaterThan(Double daysAfterModificationGreaterThan) {
+            return daysAfterModificationGreaterThan(Output.of(daysAfterModificationGreaterThan));
+        }
+
+        public DateAfterModificationArgs build() {
+            return $;
         }
     }
+
 }

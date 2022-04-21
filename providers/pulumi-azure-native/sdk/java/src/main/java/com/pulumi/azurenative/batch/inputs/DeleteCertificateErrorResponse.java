@@ -24,7 +24,7 @@ public final class DeleteCertificateErrorResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="code", required=true)
-      private final String code;
+    private String code;
 
     public String code() {
         return this.code;
@@ -35,10 +35,10 @@ public final class DeleteCertificateErrorResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="details")
-      private final @Nullable List<DeleteCertificateErrorResponse> details;
+    private @Nullable List<DeleteCertificateErrorResponse> details;
 
-    public List<DeleteCertificateErrorResponse> details() {
-        return this.details == null ? List.of() : this.details;
+    public Optional<List<DeleteCertificateErrorResponse>> details() {
+        return Optional.ofNullable(this.details);
     }
 
     /**
@@ -46,7 +46,7 @@ public final class DeleteCertificateErrorResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="message", required=true)
-      private final String message;
+    private String message;
 
     public String message() {
         return this.message;
@@ -57,76 +57,68 @@ public final class DeleteCertificateErrorResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="target")
-      private final @Nullable String target;
+    private @Nullable String target;
 
     public Optional<String> target() {
-        return this.target == null ? Optional.empty() : Optional.ofNullable(this.target);
+        return Optional.ofNullable(this.target);
     }
 
-    public DeleteCertificateErrorResponse(
-        String code,
-        @Nullable List<DeleteCertificateErrorResponse> details,
-        String message,
-        @Nullable String target) {
-        this.code = Objects.requireNonNull(code, "expected parameter 'code' to be non-null");
-        this.details = details;
-        this.message = Objects.requireNonNull(message, "expected parameter 'message' to be non-null");
-        this.target = target;
-    }
+    private DeleteCertificateErrorResponse() {}
 
-    private DeleteCertificateErrorResponse() {
-        this.code = null;
-        this.details = List.of();
-        this.message = null;
-        this.target = null;
+    private DeleteCertificateErrorResponse(DeleteCertificateErrorResponse $) {
+        this.code = $.code;
+        this.details = $.details;
+        this.message = $.message;
+        this.target = $.target;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DeleteCertificateErrorResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String code;
-        private @Nullable List<DeleteCertificateErrorResponse> details;
-        private String message;
-        private @Nullable String target;
+        private DeleteCertificateErrorResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new DeleteCertificateErrorResponse();
         }
 
         public Builder(DeleteCertificateErrorResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.code = defaults.code;
-    	      this.details = defaults.details;
-    	      this.message = defaults.message;
-    	      this.target = defaults.target;
+            $ = new DeleteCertificateErrorResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder code(String code) {
-            this.code = Objects.requireNonNull(code);
+            $.code = code;
             return this;
         }
+
         public Builder details(@Nullable List<DeleteCertificateErrorResponse> details) {
-            this.details = details;
+            $.details = details;
             return this;
         }
+
         public Builder details(DeleteCertificateErrorResponse... details) {
             return details(List.of(details));
         }
+
         public Builder message(String message) {
-            this.message = Objects.requireNonNull(message);
+            $.message = message;
             return this;
         }
+
         public Builder target(@Nullable String target) {
-            this.target = target;
+            $.target = target;
             return this;
-        }        public DeleteCertificateErrorResponse build() {
-            return new DeleteCertificateErrorResponse(code, details, message, target);
+        }
+
+        public DeleteCertificateErrorResponse build() {
+            $.code = Objects.requireNonNull($.code, "expected parameter 'code' to be non-null");
+            $.message = Objects.requireNonNull($.message, "expected parameter 'message' to be non-null");
+            return $;
         }
     }
+
 }

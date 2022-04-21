@@ -5,9 +5,9 @@ package com.pulumi.aws.servicecatalog.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class TagOptionResourceAssociationState extends com.pulumi.resource
      * 
      */
     @Import(name="resourceArn")
-      private final @Nullable Output<String> resourceArn;
+    private @Nullable Output<String> resourceArn;
 
-    public Output<String> resourceArn() {
-        return this.resourceArn == null ? Codegen.empty() : this.resourceArn;
+    public Optional<Output<String>> resourceArn() {
+        return Optional.ofNullable(this.resourceArn);
     }
 
     /**
@@ -31,10 +31,10 @@ public final class TagOptionResourceAssociationState extends com.pulumi.resource
      * 
      */
     @Import(name="resourceCreatedTime")
-      private final @Nullable Output<String> resourceCreatedTime;
+    private @Nullable Output<String> resourceCreatedTime;
 
-    public Output<String> resourceCreatedTime() {
-        return this.resourceCreatedTime == null ? Codegen.empty() : this.resourceCreatedTime;
+    public Optional<Output<String>> resourceCreatedTime() {
+        return Optional.ofNullable(this.resourceCreatedTime);
     }
 
     /**
@@ -42,10 +42,10 @@ public final class TagOptionResourceAssociationState extends com.pulumi.resource
      * 
      */
     @Import(name="resourceDescription")
-      private final @Nullable Output<String> resourceDescription;
+    private @Nullable Output<String> resourceDescription;
 
-    public Output<String> resourceDescription() {
-        return this.resourceDescription == null ? Codegen.empty() : this.resourceDescription;
+    public Optional<Output<String>> resourceDescription() {
+        return Optional.ofNullable(this.resourceDescription);
     }
 
     /**
@@ -53,10 +53,10 @@ public final class TagOptionResourceAssociationState extends com.pulumi.resource
      * 
      */
     @Import(name="resourceId")
-      private final @Nullable Output<String> resourceId;
+    private @Nullable Output<String> resourceId;
 
-    public Output<String> resourceId() {
-        return this.resourceId == null ? Codegen.empty() : this.resourceId;
+    public Optional<Output<String>> resourceId() {
+        return Optional.ofNullable(this.resourceId);
     }
 
     /**
@@ -64,10 +64,10 @@ public final class TagOptionResourceAssociationState extends com.pulumi.resource
      * 
      */
     @Import(name="resourceName")
-      private final @Nullable Output<String> resourceName;
+    private @Nullable Output<String> resourceName;
 
-    public Output<String> resourceName() {
-        return this.resourceName == null ? Codegen.empty() : this.resourceName;
+    public Optional<Output<String>> resourceName() {
+        return Optional.ofNullable(this.resourceName);
     }
 
     /**
@@ -75,115 +75,98 @@ public final class TagOptionResourceAssociationState extends com.pulumi.resource
      * 
      */
     @Import(name="tagOptionId")
-      private final @Nullable Output<String> tagOptionId;
+    private @Nullable Output<String> tagOptionId;
 
-    public Output<String> tagOptionId() {
-        return this.tagOptionId == null ? Codegen.empty() : this.tagOptionId;
+    public Optional<Output<String>> tagOptionId() {
+        return Optional.ofNullable(this.tagOptionId);
     }
 
-    public TagOptionResourceAssociationState(
-        @Nullable Output<String> resourceArn,
-        @Nullable Output<String> resourceCreatedTime,
-        @Nullable Output<String> resourceDescription,
-        @Nullable Output<String> resourceId,
-        @Nullable Output<String> resourceName,
-        @Nullable Output<String> tagOptionId) {
-        this.resourceArn = resourceArn;
-        this.resourceCreatedTime = resourceCreatedTime;
-        this.resourceDescription = resourceDescription;
-        this.resourceId = resourceId;
-        this.resourceName = resourceName;
-        this.tagOptionId = tagOptionId;
-    }
+    private TagOptionResourceAssociationState() {}
 
-    private TagOptionResourceAssociationState() {
-        this.resourceArn = Codegen.empty();
-        this.resourceCreatedTime = Codegen.empty();
-        this.resourceDescription = Codegen.empty();
-        this.resourceId = Codegen.empty();
-        this.resourceName = Codegen.empty();
-        this.tagOptionId = Codegen.empty();
+    private TagOptionResourceAssociationState(TagOptionResourceAssociationState $) {
+        this.resourceArn = $.resourceArn;
+        this.resourceCreatedTime = $.resourceCreatedTime;
+        this.resourceDescription = $.resourceDescription;
+        this.resourceId = $.resourceId;
+        this.resourceName = $.resourceName;
+        this.tagOptionId = $.tagOptionId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TagOptionResourceAssociationState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> resourceArn;
-        private @Nullable Output<String> resourceCreatedTime;
-        private @Nullable Output<String> resourceDescription;
-        private @Nullable Output<String> resourceId;
-        private @Nullable Output<String> resourceName;
-        private @Nullable Output<String> tagOptionId;
+        private TagOptionResourceAssociationState $;
 
         public Builder() {
-    	      // Empty
+            $ = new TagOptionResourceAssociationState();
         }
 
         public Builder(TagOptionResourceAssociationState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.resourceArn = defaults.resourceArn;
-    	      this.resourceCreatedTime = defaults.resourceCreatedTime;
-    	      this.resourceDescription = defaults.resourceDescription;
-    	      this.resourceId = defaults.resourceId;
-    	      this.resourceName = defaults.resourceName;
-    	      this.tagOptionId = defaults.tagOptionId;
+            $ = new TagOptionResourceAssociationState(Objects.requireNonNull(defaults));
         }
 
         public Builder resourceArn(@Nullable Output<String> resourceArn) {
-            this.resourceArn = resourceArn;
+            $.resourceArn = resourceArn;
             return this;
         }
-        public Builder resourceArn(@Nullable String resourceArn) {
-            this.resourceArn = Codegen.ofNullable(resourceArn);
-            return this;
+
+        public Builder resourceArn(String resourceArn) {
+            return resourceArn(Output.of(resourceArn));
         }
+
         public Builder resourceCreatedTime(@Nullable Output<String> resourceCreatedTime) {
-            this.resourceCreatedTime = resourceCreatedTime;
+            $.resourceCreatedTime = resourceCreatedTime;
             return this;
         }
-        public Builder resourceCreatedTime(@Nullable String resourceCreatedTime) {
-            this.resourceCreatedTime = Codegen.ofNullable(resourceCreatedTime);
-            return this;
+
+        public Builder resourceCreatedTime(String resourceCreatedTime) {
+            return resourceCreatedTime(Output.of(resourceCreatedTime));
         }
+
         public Builder resourceDescription(@Nullable Output<String> resourceDescription) {
-            this.resourceDescription = resourceDescription;
+            $.resourceDescription = resourceDescription;
             return this;
         }
-        public Builder resourceDescription(@Nullable String resourceDescription) {
-            this.resourceDescription = Codegen.ofNullable(resourceDescription);
-            return this;
+
+        public Builder resourceDescription(String resourceDescription) {
+            return resourceDescription(Output.of(resourceDescription));
         }
+
         public Builder resourceId(@Nullable Output<String> resourceId) {
-            this.resourceId = resourceId;
+            $.resourceId = resourceId;
             return this;
         }
-        public Builder resourceId(@Nullable String resourceId) {
-            this.resourceId = Codegen.ofNullable(resourceId);
-            return this;
+
+        public Builder resourceId(String resourceId) {
+            return resourceId(Output.of(resourceId));
         }
+
         public Builder resourceName(@Nullable Output<String> resourceName) {
-            this.resourceName = resourceName;
+            $.resourceName = resourceName;
             return this;
         }
-        public Builder resourceName(@Nullable String resourceName) {
-            this.resourceName = Codegen.ofNullable(resourceName);
-            return this;
+
+        public Builder resourceName(String resourceName) {
+            return resourceName(Output.of(resourceName));
         }
+
         public Builder tagOptionId(@Nullable Output<String> tagOptionId) {
-            this.tagOptionId = tagOptionId;
+            $.tagOptionId = tagOptionId;
             return this;
         }
-        public Builder tagOptionId(@Nullable String tagOptionId) {
-            this.tagOptionId = Codegen.ofNullable(tagOptionId);
-            return this;
-        }        public TagOptionResourceAssociationState build() {
-            return new TagOptionResourceAssociationState(resourceArn, resourceCreatedTime, resourceDescription, resourceId, resourceName, tagOptionId);
+
+        public Builder tagOptionId(String tagOptionId) {
+            return tagOptionId(Output.of(tagOptionId));
+        }
+
+        public TagOptionResourceAssociationState build() {
+            return $;
         }
     }
+
 }

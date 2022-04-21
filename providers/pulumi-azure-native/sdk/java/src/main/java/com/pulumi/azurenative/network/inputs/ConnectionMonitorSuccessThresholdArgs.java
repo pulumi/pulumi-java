@@ -5,10 +5,10 @@ package com.pulumi.azurenative.network.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.lang.Integer;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class ConnectionMonitorSuccessThresholdArgs extends com.pulumi.reso
      * 
      */
     @Import(name="checksFailedPercent")
-      private final @Nullable Output<Integer> checksFailedPercent;
+    private @Nullable Output<Integer> checksFailedPercent;
 
-    public Output<Integer> checksFailedPercent() {
-        return this.checksFailedPercent == null ? Codegen.empty() : this.checksFailedPercent;
+    public Optional<Output<Integer>> checksFailedPercent() {
+        return Optional.ofNullable(this.checksFailedPercent);
     }
 
     /**
@@ -36,63 +36,58 @@ public final class ConnectionMonitorSuccessThresholdArgs extends com.pulumi.reso
      * 
      */
     @Import(name="roundTripTimeMs")
-      private final @Nullable Output<Double> roundTripTimeMs;
+    private @Nullable Output<Double> roundTripTimeMs;
 
-    public Output<Double> roundTripTimeMs() {
-        return this.roundTripTimeMs == null ? Codegen.empty() : this.roundTripTimeMs;
+    public Optional<Output<Double>> roundTripTimeMs() {
+        return Optional.ofNullable(this.roundTripTimeMs);
     }
 
-    public ConnectionMonitorSuccessThresholdArgs(
-        @Nullable Output<Integer> checksFailedPercent,
-        @Nullable Output<Double> roundTripTimeMs) {
-        this.checksFailedPercent = checksFailedPercent;
-        this.roundTripTimeMs = roundTripTimeMs;
-    }
+    private ConnectionMonitorSuccessThresholdArgs() {}
 
-    private ConnectionMonitorSuccessThresholdArgs() {
-        this.checksFailedPercent = Codegen.empty();
-        this.roundTripTimeMs = Codegen.empty();
+    private ConnectionMonitorSuccessThresholdArgs(ConnectionMonitorSuccessThresholdArgs $) {
+        this.checksFailedPercent = $.checksFailedPercent;
+        this.roundTripTimeMs = $.roundTripTimeMs;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ConnectionMonitorSuccessThresholdArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> checksFailedPercent;
-        private @Nullable Output<Double> roundTripTimeMs;
+        private ConnectionMonitorSuccessThresholdArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ConnectionMonitorSuccessThresholdArgs();
         }
 
         public Builder(ConnectionMonitorSuccessThresholdArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.checksFailedPercent = defaults.checksFailedPercent;
-    	      this.roundTripTimeMs = defaults.roundTripTimeMs;
+            $ = new ConnectionMonitorSuccessThresholdArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder checksFailedPercent(@Nullable Output<Integer> checksFailedPercent) {
-            this.checksFailedPercent = checksFailedPercent;
+            $.checksFailedPercent = checksFailedPercent;
             return this;
         }
-        public Builder checksFailedPercent(@Nullable Integer checksFailedPercent) {
-            this.checksFailedPercent = Codegen.ofNullable(checksFailedPercent);
-            return this;
+
+        public Builder checksFailedPercent(Integer checksFailedPercent) {
+            return checksFailedPercent(Output.of(checksFailedPercent));
         }
+
         public Builder roundTripTimeMs(@Nullable Output<Double> roundTripTimeMs) {
-            this.roundTripTimeMs = roundTripTimeMs;
+            $.roundTripTimeMs = roundTripTimeMs;
             return this;
         }
-        public Builder roundTripTimeMs(@Nullable Double roundTripTimeMs) {
-            this.roundTripTimeMs = Codegen.ofNullable(roundTripTimeMs);
-            return this;
-        }        public ConnectionMonitorSuccessThresholdArgs build() {
-            return new ConnectionMonitorSuccessThresholdArgs(checksFailedPercent, roundTripTimeMs);
+
+        public Builder roundTripTimeMs(Double roundTripTimeMs) {
+            return roundTripTimeMs(Output.of(roundTripTimeMs));
+        }
+
+        public ConnectionMonitorSuccessThresholdArgs build() {
+            return $;
         }
     }
+
 }

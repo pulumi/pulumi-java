@@ -28,10 +28,10 @@ public final class ConfigurationResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="activeRevisionsMode")
-      private final @Nullable String activeRevisionsMode;
+    private @Nullable String activeRevisionsMode;
 
     public Optional<String> activeRevisionsMode() {
-        return this.activeRevisionsMode == null ? Optional.empty() : Optional.ofNullable(this.activeRevisionsMode);
+        return Optional.ofNullable(this.activeRevisionsMode);
     }
 
     /**
@@ -39,10 +39,10 @@ public final class ConfigurationResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="ingress")
-      private final @Nullable IngressResponse ingress;
+    private @Nullable IngressResponse ingress;
 
     public Optional<IngressResponse> ingress() {
-        return this.ingress == null ? Optional.empty() : Optional.ofNullable(this.ingress);
+        return Optional.ofNullable(this.ingress);
     }
 
     /**
@@ -50,10 +50,10 @@ public final class ConfigurationResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="registries")
-      private final @Nullable List<RegistryCredentialsResponse> registries;
+    private @Nullable List<RegistryCredentialsResponse> registries;
 
-    public List<RegistryCredentialsResponse> registries() {
-        return this.registries == null ? List.of() : this.registries;
+    public Optional<List<RegistryCredentialsResponse>> registries() {
+        return Optional.ofNullable(this.registries);
     }
 
     /**
@@ -61,79 +61,70 @@ public final class ConfigurationResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="secrets")
-      private final @Nullable List<SecretResponse> secrets;
+    private @Nullable List<SecretResponse> secrets;
 
-    public List<SecretResponse> secrets() {
-        return this.secrets == null ? List.of() : this.secrets;
+    public Optional<List<SecretResponse>> secrets() {
+        return Optional.ofNullable(this.secrets);
     }
 
-    public ConfigurationResponse(
-        @Nullable String activeRevisionsMode,
-        @Nullable IngressResponse ingress,
-        @Nullable List<RegistryCredentialsResponse> registries,
-        @Nullable List<SecretResponse> secrets) {
-        this.activeRevisionsMode = activeRevisionsMode;
-        this.ingress = ingress;
-        this.registries = registries;
-        this.secrets = secrets;
-    }
+    private ConfigurationResponse() {}
 
-    private ConfigurationResponse() {
-        this.activeRevisionsMode = null;
-        this.ingress = null;
-        this.registries = List.of();
-        this.secrets = List.of();
+    private ConfigurationResponse(ConfigurationResponse $) {
+        this.activeRevisionsMode = $.activeRevisionsMode;
+        this.ingress = $.ingress;
+        this.registries = $.registries;
+        this.secrets = $.secrets;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ConfigurationResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String activeRevisionsMode;
-        private @Nullable IngressResponse ingress;
-        private @Nullable List<RegistryCredentialsResponse> registries;
-        private @Nullable List<SecretResponse> secrets;
+        private ConfigurationResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ConfigurationResponse();
         }
 
         public Builder(ConfigurationResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.activeRevisionsMode = defaults.activeRevisionsMode;
-    	      this.ingress = defaults.ingress;
-    	      this.registries = defaults.registries;
-    	      this.secrets = defaults.secrets;
+            $ = new ConfigurationResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder activeRevisionsMode(@Nullable String activeRevisionsMode) {
-            this.activeRevisionsMode = activeRevisionsMode;
+            $.activeRevisionsMode = activeRevisionsMode;
             return this;
         }
+
         public Builder ingress(@Nullable IngressResponse ingress) {
-            this.ingress = ingress;
+            $.ingress = ingress;
             return this;
         }
+
         public Builder registries(@Nullable List<RegistryCredentialsResponse> registries) {
-            this.registries = registries;
+            $.registries = registries;
             return this;
         }
+
         public Builder registries(RegistryCredentialsResponse... registries) {
             return registries(List.of(registries));
         }
+
         public Builder secrets(@Nullable List<SecretResponse> secrets) {
-            this.secrets = secrets;
+            $.secrets = secrets;
             return this;
         }
+
         public Builder secrets(SecretResponse... secrets) {
             return secrets(List.of(secrets));
-        }        public ConfigurationResponse build() {
-            return new ConfigurationResponse(activeRevisionsMode, ingress, registries, secrets);
+        }
+
+        public ConfigurationResponse build() {
+            return $;
         }
     }
+
 }

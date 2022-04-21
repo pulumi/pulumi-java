@@ -22,7 +22,7 @@ public final class ReplicationCycleResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="progressPercent", required=true)
-      private final Integer progressPercent;
+    private Integer progressPercent;
 
     public Integer progressPercent() {
         return this.progressPercent;
@@ -33,55 +33,52 @@ public final class ReplicationCycleResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="startTime", required=true)
-      private final String startTime;
+    private String startTime;
 
     public String startTime() {
         return this.startTime;
     }
 
-    public ReplicationCycleResponse(
-        Integer progressPercent,
-        String startTime) {
-        this.progressPercent = Objects.requireNonNull(progressPercent, "expected parameter 'progressPercent' to be non-null");
-        this.startTime = Objects.requireNonNull(startTime, "expected parameter 'startTime' to be non-null");
-    }
+    private ReplicationCycleResponse() {}
 
-    private ReplicationCycleResponse() {
-        this.progressPercent = null;
-        this.startTime = null;
+    private ReplicationCycleResponse(ReplicationCycleResponse $) {
+        this.progressPercent = $.progressPercent;
+        this.startTime = $.startTime;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ReplicationCycleResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Integer progressPercent;
-        private String startTime;
+        private ReplicationCycleResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ReplicationCycleResponse();
         }
 
         public Builder(ReplicationCycleResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.progressPercent = defaults.progressPercent;
-    	      this.startTime = defaults.startTime;
+            $ = new ReplicationCycleResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder progressPercent(Integer progressPercent) {
-            this.progressPercent = Objects.requireNonNull(progressPercent);
+            $.progressPercent = progressPercent;
             return this;
         }
+
         public Builder startTime(String startTime) {
-            this.startTime = Objects.requireNonNull(startTime);
+            $.startTime = startTime;
             return this;
-        }        public ReplicationCycleResponse build() {
-            return new ReplicationCycleResponse(progressPercent, startTime);
+        }
+
+        public ReplicationCycleResponse build() {
+            $.progressPercent = Objects.requireNonNull($.progressPercent, "expected parameter 'progressPercent' to be non-null");
+            $.startTime = Objects.requireNonNull($.startTime, "expected parameter 'startTime' to be non-null");
+            return $;
         }
     }
+
 }

@@ -17,7 +17,7 @@ public final class ListServiceFabricApplicableSchedulesArgs extends com.pulumi.r
      * 
      */
     @Import(name="labName", required=true)
-      private final String labName;
+    private String labName;
 
     public String labName() {
         return this.labName;
@@ -28,7 +28,7 @@ public final class ListServiceFabricApplicableSchedulesArgs extends com.pulumi.r
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -39,7 +39,7 @@ public final class ListServiceFabricApplicableSchedulesArgs extends com.pulumi.r
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -50,73 +50,66 @@ public final class ListServiceFabricApplicableSchedulesArgs extends com.pulumi.r
      * 
      */
     @Import(name="userName", required=true)
-      private final String userName;
+    private String userName;
 
     public String userName() {
         return this.userName;
     }
 
-    public ListServiceFabricApplicableSchedulesArgs(
-        String labName,
-        String name,
-        String resourceGroupName,
-        String userName) {
-        this.labName = Objects.requireNonNull(labName, "expected parameter 'labName' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.userName = Objects.requireNonNull(userName, "expected parameter 'userName' to be non-null");
-    }
+    private ListServiceFabricApplicableSchedulesArgs() {}
 
-    private ListServiceFabricApplicableSchedulesArgs() {
-        this.labName = null;
-        this.name = null;
-        this.resourceGroupName = null;
-        this.userName = null;
+    private ListServiceFabricApplicableSchedulesArgs(ListServiceFabricApplicableSchedulesArgs $) {
+        this.labName = $.labName;
+        this.name = $.name;
+        this.resourceGroupName = $.resourceGroupName;
+        this.userName = $.userName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ListServiceFabricApplicableSchedulesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String labName;
-        private String name;
-        private String resourceGroupName;
-        private String userName;
+        private ListServiceFabricApplicableSchedulesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ListServiceFabricApplicableSchedulesArgs();
         }
 
         public Builder(ListServiceFabricApplicableSchedulesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.labName = defaults.labName;
-    	      this.name = defaults.name;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.userName = defaults.userName;
+            $ = new ListServiceFabricApplicableSchedulesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder labName(String labName) {
-            this.labName = Objects.requireNonNull(labName);
+            $.labName = labName;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder userName(String userName) {
-            this.userName = Objects.requireNonNull(userName);
+            $.userName = userName;
             return this;
-        }        public ListServiceFabricApplicableSchedulesArgs build() {
-            return new ListServiceFabricApplicableSchedulesArgs(labName, name, resourceGroupName, userName);
+        }
+
+        public ListServiceFabricApplicableSchedulesArgs build() {
+            $.labName = Objects.requireNonNull($.labName, "expected parameter 'labName' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.userName = Objects.requireNonNull($.userName, "expected parameter 'userName' to be non-null");
+            return $;
         }
     }
+
 }

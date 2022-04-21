@@ -24,7 +24,7 @@ public final class DevicePolicyResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="allowedDeviceManagementLevels", required=true)
-      private final List<String> allowedDeviceManagementLevels;
+    private List<String> allowedDeviceManagementLevels;
 
     public List<String> allowedDeviceManagementLevels() {
         return this.allowedDeviceManagementLevels;
@@ -35,7 +35,7 @@ public final class DevicePolicyResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="allowedEncryptionStatuses", required=true)
-      private final List<String> allowedEncryptionStatuses;
+    private List<String> allowedEncryptionStatuses;
 
     public List<String> allowedEncryptionStatuses() {
         return this.allowedEncryptionStatuses;
@@ -46,7 +46,7 @@ public final class DevicePolicyResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="osConstraints", required=true)
-      private final List<OsConstraintResponse> osConstraints;
+    private List<OsConstraintResponse> osConstraints;
 
     public List<OsConstraintResponse> osConstraints() {
         return this.osConstraints;
@@ -57,7 +57,7 @@ public final class DevicePolicyResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="requireAdminApproval", required=true)
-      private final Boolean requireAdminApproval;
+    private Boolean requireAdminApproval;
 
     public Boolean requireAdminApproval() {
         return this.requireAdminApproval;
@@ -68,7 +68,7 @@ public final class DevicePolicyResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="requireCorpOwned", required=true)
-      private final Boolean requireCorpOwned;
+    private Boolean requireCorpOwned;
 
     public Boolean requireCorpOwned() {
         return this.requireCorpOwned;
@@ -79,100 +79,92 @@ public final class DevicePolicyResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="requireScreenlock", required=true)
-      private final Boolean requireScreenlock;
+    private Boolean requireScreenlock;
 
     public Boolean requireScreenlock() {
         return this.requireScreenlock;
     }
 
-    public DevicePolicyResponse(
-        List<String> allowedDeviceManagementLevels,
-        List<String> allowedEncryptionStatuses,
-        List<OsConstraintResponse> osConstraints,
-        Boolean requireAdminApproval,
-        Boolean requireCorpOwned,
-        Boolean requireScreenlock) {
-        this.allowedDeviceManagementLevels = Objects.requireNonNull(allowedDeviceManagementLevels, "expected parameter 'allowedDeviceManagementLevels' to be non-null");
-        this.allowedEncryptionStatuses = Objects.requireNonNull(allowedEncryptionStatuses, "expected parameter 'allowedEncryptionStatuses' to be non-null");
-        this.osConstraints = Objects.requireNonNull(osConstraints, "expected parameter 'osConstraints' to be non-null");
-        this.requireAdminApproval = Objects.requireNonNull(requireAdminApproval, "expected parameter 'requireAdminApproval' to be non-null");
-        this.requireCorpOwned = Objects.requireNonNull(requireCorpOwned, "expected parameter 'requireCorpOwned' to be non-null");
-        this.requireScreenlock = Objects.requireNonNull(requireScreenlock, "expected parameter 'requireScreenlock' to be non-null");
-    }
+    private DevicePolicyResponse() {}
 
-    private DevicePolicyResponse() {
-        this.allowedDeviceManagementLevels = List.of();
-        this.allowedEncryptionStatuses = List.of();
-        this.osConstraints = List.of();
-        this.requireAdminApproval = null;
-        this.requireCorpOwned = null;
-        this.requireScreenlock = null;
+    private DevicePolicyResponse(DevicePolicyResponse $) {
+        this.allowedDeviceManagementLevels = $.allowedDeviceManagementLevels;
+        this.allowedEncryptionStatuses = $.allowedEncryptionStatuses;
+        this.osConstraints = $.osConstraints;
+        this.requireAdminApproval = $.requireAdminApproval;
+        this.requireCorpOwned = $.requireCorpOwned;
+        this.requireScreenlock = $.requireScreenlock;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DevicePolicyResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<String> allowedDeviceManagementLevels;
-        private List<String> allowedEncryptionStatuses;
-        private List<OsConstraintResponse> osConstraints;
-        private Boolean requireAdminApproval;
-        private Boolean requireCorpOwned;
-        private Boolean requireScreenlock;
+        private DevicePolicyResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new DevicePolicyResponse();
         }
 
         public Builder(DevicePolicyResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.allowedDeviceManagementLevels = defaults.allowedDeviceManagementLevels;
-    	      this.allowedEncryptionStatuses = defaults.allowedEncryptionStatuses;
-    	      this.osConstraints = defaults.osConstraints;
-    	      this.requireAdminApproval = defaults.requireAdminApproval;
-    	      this.requireCorpOwned = defaults.requireCorpOwned;
-    	      this.requireScreenlock = defaults.requireScreenlock;
+            $ = new DevicePolicyResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder allowedDeviceManagementLevels(List<String> allowedDeviceManagementLevels) {
-            this.allowedDeviceManagementLevels = Objects.requireNonNull(allowedDeviceManagementLevels);
+            $.allowedDeviceManagementLevels = allowedDeviceManagementLevels;
             return this;
         }
+
         public Builder allowedDeviceManagementLevels(String... allowedDeviceManagementLevels) {
             return allowedDeviceManagementLevels(List.of(allowedDeviceManagementLevels));
         }
+
         public Builder allowedEncryptionStatuses(List<String> allowedEncryptionStatuses) {
-            this.allowedEncryptionStatuses = Objects.requireNonNull(allowedEncryptionStatuses);
+            $.allowedEncryptionStatuses = allowedEncryptionStatuses;
             return this;
         }
+
         public Builder allowedEncryptionStatuses(String... allowedEncryptionStatuses) {
             return allowedEncryptionStatuses(List.of(allowedEncryptionStatuses));
         }
+
         public Builder osConstraints(List<OsConstraintResponse> osConstraints) {
-            this.osConstraints = Objects.requireNonNull(osConstraints);
+            $.osConstraints = osConstraints;
             return this;
         }
+
         public Builder osConstraints(OsConstraintResponse... osConstraints) {
             return osConstraints(List.of(osConstraints));
         }
+
         public Builder requireAdminApproval(Boolean requireAdminApproval) {
-            this.requireAdminApproval = Objects.requireNonNull(requireAdminApproval);
+            $.requireAdminApproval = requireAdminApproval;
             return this;
         }
+
         public Builder requireCorpOwned(Boolean requireCorpOwned) {
-            this.requireCorpOwned = Objects.requireNonNull(requireCorpOwned);
+            $.requireCorpOwned = requireCorpOwned;
             return this;
         }
+
         public Builder requireScreenlock(Boolean requireScreenlock) {
-            this.requireScreenlock = Objects.requireNonNull(requireScreenlock);
+            $.requireScreenlock = requireScreenlock;
             return this;
-        }        public DevicePolicyResponse build() {
-            return new DevicePolicyResponse(allowedDeviceManagementLevels, allowedEncryptionStatuses, osConstraints, requireAdminApproval, requireCorpOwned, requireScreenlock);
+        }
+
+        public DevicePolicyResponse build() {
+            $.allowedDeviceManagementLevels = Objects.requireNonNull($.allowedDeviceManagementLevels, "expected parameter 'allowedDeviceManagementLevels' to be non-null");
+            $.allowedEncryptionStatuses = Objects.requireNonNull($.allowedEncryptionStatuses, "expected parameter 'allowedEncryptionStatuses' to be non-null");
+            $.osConstraints = Objects.requireNonNull($.osConstraints, "expected parameter 'osConstraints' to be non-null");
+            $.requireAdminApproval = Objects.requireNonNull($.requireAdminApproval, "expected parameter 'requireAdminApproval' to be non-null");
+            $.requireCorpOwned = Objects.requireNonNull($.requireCorpOwned, "expected parameter 'requireCorpOwned' to be non-null");
+            $.requireScreenlock = Objects.requireNonNull($.requireScreenlock, "expected parameter 'requireScreenlock' to be non-null");
+            return $;
         }
     }
+
 }

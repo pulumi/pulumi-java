@@ -18,100 +18,92 @@ public final class DistributionForwardedValues extends com.pulumi.resources.Invo
     public static final DistributionForwardedValues Empty = new DistributionForwardedValues();
 
     @Import(name="cookies")
-      private final @Nullable DistributionCookies cookies;
+    private @Nullable DistributionCookies cookies;
 
     public Optional<DistributionCookies> cookies() {
-        return this.cookies == null ? Optional.empty() : Optional.ofNullable(this.cookies);
+        return Optional.ofNullable(this.cookies);
     }
 
     @Import(name="headers")
-      private final @Nullable List<String> headers;
+    private @Nullable List<String> headers;
 
-    public List<String> headers() {
-        return this.headers == null ? List.of() : this.headers;
+    public Optional<List<String>> headers() {
+        return Optional.ofNullable(this.headers);
     }
 
     @Import(name="queryString", required=true)
-      private final Boolean queryString;
+    private Boolean queryString;
 
     public Boolean queryString() {
         return this.queryString;
     }
 
     @Import(name="queryStringCacheKeys")
-      private final @Nullable List<String> queryStringCacheKeys;
+    private @Nullable List<String> queryStringCacheKeys;
 
-    public List<String> queryStringCacheKeys() {
-        return this.queryStringCacheKeys == null ? List.of() : this.queryStringCacheKeys;
+    public Optional<List<String>> queryStringCacheKeys() {
+        return Optional.ofNullable(this.queryStringCacheKeys);
     }
 
-    public DistributionForwardedValues(
-        @Nullable DistributionCookies cookies,
-        @Nullable List<String> headers,
-        Boolean queryString,
-        @Nullable List<String> queryStringCacheKeys) {
-        this.cookies = cookies;
-        this.headers = headers;
-        this.queryString = Objects.requireNonNull(queryString, "expected parameter 'queryString' to be non-null");
-        this.queryStringCacheKeys = queryStringCacheKeys;
-    }
+    private DistributionForwardedValues() {}
 
-    private DistributionForwardedValues() {
-        this.cookies = null;
-        this.headers = List.of();
-        this.queryString = null;
-        this.queryStringCacheKeys = List.of();
+    private DistributionForwardedValues(DistributionForwardedValues $) {
+        this.cookies = $.cookies;
+        this.headers = $.headers;
+        this.queryString = $.queryString;
+        this.queryStringCacheKeys = $.queryStringCacheKeys;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DistributionForwardedValues defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable DistributionCookies cookies;
-        private @Nullable List<String> headers;
-        private Boolean queryString;
-        private @Nullable List<String> queryStringCacheKeys;
+        private DistributionForwardedValues $;
 
         public Builder() {
-    	      // Empty
+            $ = new DistributionForwardedValues();
         }
 
         public Builder(DistributionForwardedValues defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cookies = defaults.cookies;
-    	      this.headers = defaults.headers;
-    	      this.queryString = defaults.queryString;
-    	      this.queryStringCacheKeys = defaults.queryStringCacheKeys;
+            $ = new DistributionForwardedValues(Objects.requireNonNull(defaults));
         }
 
         public Builder cookies(@Nullable DistributionCookies cookies) {
-            this.cookies = cookies;
+            $.cookies = cookies;
             return this;
         }
+
         public Builder headers(@Nullable List<String> headers) {
-            this.headers = headers;
+            $.headers = headers;
             return this;
         }
+
         public Builder headers(String... headers) {
             return headers(List.of(headers));
         }
+
         public Builder queryString(Boolean queryString) {
-            this.queryString = Objects.requireNonNull(queryString);
+            $.queryString = queryString;
             return this;
         }
+
         public Builder queryStringCacheKeys(@Nullable List<String> queryStringCacheKeys) {
-            this.queryStringCacheKeys = queryStringCacheKeys;
+            $.queryStringCacheKeys = queryStringCacheKeys;
             return this;
         }
+
         public Builder queryStringCacheKeys(String... queryStringCacheKeys) {
             return queryStringCacheKeys(List.of(queryStringCacheKeys));
-        }        public DistributionForwardedValues build() {
-            return new DistributionForwardedValues(cookies, headers, queryString, queryStringCacheKeys);
+        }
+
+        public DistributionForwardedValues build() {
+            $.queryString = Objects.requireNonNull($.queryString, "expected parameter 'queryString' to be non-null");
+            return $;
         }
     }
+
 }

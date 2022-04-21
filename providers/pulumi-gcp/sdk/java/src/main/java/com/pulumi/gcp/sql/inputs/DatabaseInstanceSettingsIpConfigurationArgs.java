@@ -5,12 +5,12 @@ package com.pulumi.gcp.sql.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.sql.inputs.DatabaseInstanceSettingsIpConfigurationAuthorizedNetworkArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,17 +23,17 @@ public final class DatabaseInstanceSettingsIpConfigurationArgs extends com.pulum
      * 
      */
     @Import(name="allocatedIpRange")
-      private final @Nullable Output<String> allocatedIpRange;
+    private @Nullable Output<String> allocatedIpRange;
 
-    public Output<String> allocatedIpRange() {
-        return this.allocatedIpRange == null ? Codegen.empty() : this.allocatedIpRange;
+    public Optional<Output<String>> allocatedIpRange() {
+        return Optional.ofNullable(this.allocatedIpRange);
     }
 
     @Import(name="authorizedNetworks")
-      private final @Nullable Output<List<DatabaseInstanceSettingsIpConfigurationAuthorizedNetworkArgs>> authorizedNetworks;
+    private @Nullable Output<List<DatabaseInstanceSettingsIpConfigurationAuthorizedNetworkArgs>> authorizedNetworks;
 
-    public Output<List<DatabaseInstanceSettingsIpConfigurationAuthorizedNetworkArgs>> authorizedNetworks() {
-        return this.authorizedNetworks == null ? Codegen.empty() : this.authorizedNetworks;
+    public Optional<Output<List<DatabaseInstanceSettingsIpConfigurationAuthorizedNetworkArgs>>> authorizedNetworks() {
+        return Optional.ofNullable(this.authorizedNetworks);
     }
 
     /**
@@ -43,10 +43,10 @@ public final class DatabaseInstanceSettingsIpConfigurationArgs extends com.pulum
      * 
      */
     @Import(name="ipv4Enabled")
-      private final @Nullable Output<Boolean> ipv4Enabled;
+    private @Nullable Output<Boolean> ipv4Enabled;
 
-    public Output<Boolean> ipv4Enabled() {
-        return this.ipv4Enabled == null ? Codegen.empty() : this.ipv4Enabled;
+    public Optional<Output<Boolean>> ipv4Enabled() {
+        return Optional.ofNullable(this.ipv4Enabled);
     }
 
     /**
@@ -58,10 +58,10 @@ public final class DatabaseInstanceSettingsIpConfigurationArgs extends com.pulum
      * 
      */
     @Import(name="privateNetwork")
-      private final @Nullable Output<String> privateNetwork;
+    private @Nullable Output<String> privateNetwork;
 
-    public Output<String> privateNetwork() {
-        return this.privateNetwork == null ? Codegen.empty() : this.privateNetwork;
+    public Optional<Output<String>> privateNetwork() {
+        return Optional.ofNullable(this.privateNetwork);
     }
 
     /**
@@ -69,105 +69,92 @@ public final class DatabaseInstanceSettingsIpConfigurationArgs extends com.pulum
      * 
      */
     @Import(name="requireSsl")
-      private final @Nullable Output<Boolean> requireSsl;
+    private @Nullable Output<Boolean> requireSsl;
 
-    public Output<Boolean> requireSsl() {
-        return this.requireSsl == null ? Codegen.empty() : this.requireSsl;
+    public Optional<Output<Boolean>> requireSsl() {
+        return Optional.ofNullable(this.requireSsl);
     }
 
-    public DatabaseInstanceSettingsIpConfigurationArgs(
-        @Nullable Output<String> allocatedIpRange,
-        @Nullable Output<List<DatabaseInstanceSettingsIpConfigurationAuthorizedNetworkArgs>> authorizedNetworks,
-        @Nullable Output<Boolean> ipv4Enabled,
-        @Nullable Output<String> privateNetwork,
-        @Nullable Output<Boolean> requireSsl) {
-        this.allocatedIpRange = allocatedIpRange;
-        this.authorizedNetworks = authorizedNetworks;
-        this.ipv4Enabled = ipv4Enabled;
-        this.privateNetwork = privateNetwork;
-        this.requireSsl = requireSsl;
-    }
+    private DatabaseInstanceSettingsIpConfigurationArgs() {}
 
-    private DatabaseInstanceSettingsIpConfigurationArgs() {
-        this.allocatedIpRange = Codegen.empty();
-        this.authorizedNetworks = Codegen.empty();
-        this.ipv4Enabled = Codegen.empty();
-        this.privateNetwork = Codegen.empty();
-        this.requireSsl = Codegen.empty();
+    private DatabaseInstanceSettingsIpConfigurationArgs(DatabaseInstanceSettingsIpConfigurationArgs $) {
+        this.allocatedIpRange = $.allocatedIpRange;
+        this.authorizedNetworks = $.authorizedNetworks;
+        this.ipv4Enabled = $.ipv4Enabled;
+        this.privateNetwork = $.privateNetwork;
+        this.requireSsl = $.requireSsl;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DatabaseInstanceSettingsIpConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> allocatedIpRange;
-        private @Nullable Output<List<DatabaseInstanceSettingsIpConfigurationAuthorizedNetworkArgs>> authorizedNetworks;
-        private @Nullable Output<Boolean> ipv4Enabled;
-        private @Nullable Output<String> privateNetwork;
-        private @Nullable Output<Boolean> requireSsl;
+        private DatabaseInstanceSettingsIpConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DatabaseInstanceSettingsIpConfigurationArgs();
         }
 
         public Builder(DatabaseInstanceSettingsIpConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.allocatedIpRange = defaults.allocatedIpRange;
-    	      this.authorizedNetworks = defaults.authorizedNetworks;
-    	      this.ipv4Enabled = defaults.ipv4Enabled;
-    	      this.privateNetwork = defaults.privateNetwork;
-    	      this.requireSsl = defaults.requireSsl;
+            $ = new DatabaseInstanceSettingsIpConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder allocatedIpRange(@Nullable Output<String> allocatedIpRange) {
-            this.allocatedIpRange = allocatedIpRange;
+            $.allocatedIpRange = allocatedIpRange;
             return this;
         }
-        public Builder allocatedIpRange(@Nullable String allocatedIpRange) {
-            this.allocatedIpRange = Codegen.ofNullable(allocatedIpRange);
-            return this;
+
+        public Builder allocatedIpRange(String allocatedIpRange) {
+            return allocatedIpRange(Output.of(allocatedIpRange));
         }
+
         public Builder authorizedNetworks(@Nullable Output<List<DatabaseInstanceSettingsIpConfigurationAuthorizedNetworkArgs>> authorizedNetworks) {
-            this.authorizedNetworks = authorizedNetworks;
+            $.authorizedNetworks = authorizedNetworks;
             return this;
         }
-        public Builder authorizedNetworks(@Nullable List<DatabaseInstanceSettingsIpConfigurationAuthorizedNetworkArgs> authorizedNetworks) {
-            this.authorizedNetworks = Codegen.ofNullable(authorizedNetworks);
-            return this;
+
+        public Builder authorizedNetworks(List<DatabaseInstanceSettingsIpConfigurationAuthorizedNetworkArgs> authorizedNetworks) {
+            return authorizedNetworks(Output.of(authorizedNetworks));
         }
+
         public Builder authorizedNetworks(DatabaseInstanceSettingsIpConfigurationAuthorizedNetworkArgs... authorizedNetworks) {
             return authorizedNetworks(List.of(authorizedNetworks));
         }
+
         public Builder ipv4Enabled(@Nullable Output<Boolean> ipv4Enabled) {
-            this.ipv4Enabled = ipv4Enabled;
+            $.ipv4Enabled = ipv4Enabled;
             return this;
         }
-        public Builder ipv4Enabled(@Nullable Boolean ipv4Enabled) {
-            this.ipv4Enabled = Codegen.ofNullable(ipv4Enabled);
-            return this;
+
+        public Builder ipv4Enabled(Boolean ipv4Enabled) {
+            return ipv4Enabled(Output.of(ipv4Enabled));
         }
+
         public Builder privateNetwork(@Nullable Output<String> privateNetwork) {
-            this.privateNetwork = privateNetwork;
+            $.privateNetwork = privateNetwork;
             return this;
         }
-        public Builder privateNetwork(@Nullable String privateNetwork) {
-            this.privateNetwork = Codegen.ofNullable(privateNetwork);
-            return this;
+
+        public Builder privateNetwork(String privateNetwork) {
+            return privateNetwork(Output.of(privateNetwork));
         }
+
         public Builder requireSsl(@Nullable Output<Boolean> requireSsl) {
-            this.requireSsl = requireSsl;
+            $.requireSsl = requireSsl;
             return this;
         }
-        public Builder requireSsl(@Nullable Boolean requireSsl) {
-            this.requireSsl = Codegen.ofNullable(requireSsl);
-            return this;
-        }        public DatabaseInstanceSettingsIpConfigurationArgs build() {
-            return new DatabaseInstanceSettingsIpConfigurationArgs(allocatedIpRange, authorizedNetworks, ipv4Enabled, privateNetwork, requireSsl);
+
+        public Builder requireSsl(Boolean requireSsl) {
+            return requireSsl(Output.of(requireSsl));
+        }
+
+        public DatabaseInstanceSettingsIpConfigurationArgs build() {
+            return $;
         }
     }
+
 }

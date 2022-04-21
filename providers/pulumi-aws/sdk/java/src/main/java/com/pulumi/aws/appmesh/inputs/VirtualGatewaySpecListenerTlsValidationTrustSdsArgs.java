@@ -5,7 +5,6 @@ package com.pulumi.aws.appmesh.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,49 +18,49 @@ public final class VirtualGatewaySpecListenerTlsValidationTrustSdsArgs extends c
      * 
      */
     @Import(name="secretName", required=true)
-      private final Output<String> secretName;
+    private Output<String> secretName;
 
     public Output<String> secretName() {
         return this.secretName;
     }
 
-    public VirtualGatewaySpecListenerTlsValidationTrustSdsArgs(Output<String> secretName) {
-        this.secretName = Objects.requireNonNull(secretName, "expected parameter 'secretName' to be non-null");
-    }
+    private VirtualGatewaySpecListenerTlsValidationTrustSdsArgs() {}
 
-    private VirtualGatewaySpecListenerTlsValidationTrustSdsArgs() {
-        this.secretName = Codegen.empty();
+    private VirtualGatewaySpecListenerTlsValidationTrustSdsArgs(VirtualGatewaySpecListenerTlsValidationTrustSdsArgs $) {
+        this.secretName = $.secretName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VirtualGatewaySpecListenerTlsValidationTrustSdsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> secretName;
+        private VirtualGatewaySpecListenerTlsValidationTrustSdsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new VirtualGatewaySpecListenerTlsValidationTrustSdsArgs();
         }
 
         public Builder(VirtualGatewaySpecListenerTlsValidationTrustSdsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.secretName = defaults.secretName;
+            $ = new VirtualGatewaySpecListenerTlsValidationTrustSdsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder secretName(Output<String> secretName) {
-            this.secretName = Objects.requireNonNull(secretName);
+            $.secretName = secretName;
             return this;
         }
+
         public Builder secretName(String secretName) {
-            this.secretName = Output.of(Objects.requireNonNull(secretName));
-            return this;
-        }        public VirtualGatewaySpecListenerTlsValidationTrustSdsArgs build() {
-            return new VirtualGatewaySpecListenerTlsValidationTrustSdsArgs(secretName);
+            return secretName(Output.of(secretName));
+        }
+
+        public VirtualGatewaySpecListenerTlsValidationTrustSdsArgs build() {
+            $.secretName = Objects.requireNonNull($.secretName, "expected parameter 'secretName' to be non-null");
+            return $;
         }
     }
+
 }

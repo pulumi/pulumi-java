@@ -23,7 +23,7 @@ public final class WorkloadsConfigResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="scheduler", required=true)
-      private final SchedulerResourceResponse scheduler;
+    private SchedulerResourceResponse scheduler;
 
     public SchedulerResourceResponse scheduler() {
         return this.scheduler;
@@ -34,7 +34,7 @@ public final class WorkloadsConfigResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="webServer", required=true)
-      private final WebServerResourceResponse webServer;
+    private WebServerResourceResponse webServer;
 
     public WebServerResourceResponse webServer() {
         return this.webServer;
@@ -45,64 +45,59 @@ public final class WorkloadsConfigResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="worker", required=true)
-      private final WorkerResourceResponse worker;
+    private WorkerResourceResponse worker;
 
     public WorkerResourceResponse worker() {
         return this.worker;
     }
 
-    public WorkloadsConfigResponse(
-        SchedulerResourceResponse scheduler,
-        WebServerResourceResponse webServer,
-        WorkerResourceResponse worker) {
-        this.scheduler = Objects.requireNonNull(scheduler, "expected parameter 'scheduler' to be non-null");
-        this.webServer = Objects.requireNonNull(webServer, "expected parameter 'webServer' to be non-null");
-        this.worker = Objects.requireNonNull(worker, "expected parameter 'worker' to be non-null");
-    }
+    private WorkloadsConfigResponse() {}
 
-    private WorkloadsConfigResponse() {
-        this.scheduler = null;
-        this.webServer = null;
-        this.worker = null;
+    private WorkloadsConfigResponse(WorkloadsConfigResponse $) {
+        this.scheduler = $.scheduler;
+        this.webServer = $.webServer;
+        this.worker = $.worker;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WorkloadsConfigResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private SchedulerResourceResponse scheduler;
-        private WebServerResourceResponse webServer;
-        private WorkerResourceResponse worker;
+        private WorkloadsConfigResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new WorkloadsConfigResponse();
         }
 
         public Builder(WorkloadsConfigResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.scheduler = defaults.scheduler;
-    	      this.webServer = defaults.webServer;
-    	      this.worker = defaults.worker;
+            $ = new WorkloadsConfigResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder scheduler(SchedulerResourceResponse scheduler) {
-            this.scheduler = Objects.requireNonNull(scheduler);
+            $.scheduler = scheduler;
             return this;
         }
+
         public Builder webServer(WebServerResourceResponse webServer) {
-            this.webServer = Objects.requireNonNull(webServer);
+            $.webServer = webServer;
             return this;
         }
+
         public Builder worker(WorkerResourceResponse worker) {
-            this.worker = Objects.requireNonNull(worker);
+            $.worker = worker;
             return this;
-        }        public WorkloadsConfigResponse build() {
-            return new WorkloadsConfigResponse(scheduler, webServer, worker);
+        }
+
+        public WorkloadsConfigResponse build() {
+            $.scheduler = Objects.requireNonNull($.scheduler, "expected parameter 'scheduler' to be non-null");
+            $.webServer = Objects.requireNonNull($.webServer, "expected parameter 'webServer' to be non-null");
+            $.worker = Objects.requireNonNull($.worker, "expected parameter 'worker' to be non-null");
+            return $;
         }
     }
+
 }

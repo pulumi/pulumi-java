@@ -22,7 +22,7 @@ public final class CircuitBreakersResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="connectTimeout", required=true)
-      private final DurationResponse connectTimeout;
+    private DurationResponse connectTimeout;
 
     public DurationResponse connectTimeout() {
         return this.connectTimeout;
@@ -33,7 +33,7 @@ public final class CircuitBreakersResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="maxConnections", required=true)
-      private final Integer maxConnections;
+    private Integer maxConnections;
 
     public Integer maxConnections() {
         return this.maxConnections;
@@ -44,7 +44,7 @@ public final class CircuitBreakersResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="maxPendingRequests", required=true)
-      private final Integer maxPendingRequests;
+    private Integer maxPendingRequests;
 
     public Integer maxPendingRequests() {
         return this.maxPendingRequests;
@@ -55,7 +55,7 @@ public final class CircuitBreakersResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="maxRequests", required=true)
-      private final Integer maxRequests;
+    private Integer maxRequests;
 
     public Integer maxRequests() {
         return this.maxRequests;
@@ -66,7 +66,7 @@ public final class CircuitBreakersResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="maxRequestsPerConnection", required=true)
-      private final Integer maxRequestsPerConnection;
+    private Integer maxRequestsPerConnection;
 
     public Integer maxRequestsPerConnection() {
         return this.maxRequestsPerConnection;
@@ -77,91 +77,80 @@ public final class CircuitBreakersResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="maxRetries", required=true)
-      private final Integer maxRetries;
+    private Integer maxRetries;
 
     public Integer maxRetries() {
         return this.maxRetries;
     }
 
-    public CircuitBreakersResponse(
-        DurationResponse connectTimeout,
-        Integer maxConnections,
-        Integer maxPendingRequests,
-        Integer maxRequests,
-        Integer maxRequestsPerConnection,
-        Integer maxRetries) {
-        this.connectTimeout = Objects.requireNonNull(connectTimeout, "expected parameter 'connectTimeout' to be non-null");
-        this.maxConnections = Objects.requireNonNull(maxConnections, "expected parameter 'maxConnections' to be non-null");
-        this.maxPendingRequests = Objects.requireNonNull(maxPendingRequests, "expected parameter 'maxPendingRequests' to be non-null");
-        this.maxRequests = Objects.requireNonNull(maxRequests, "expected parameter 'maxRequests' to be non-null");
-        this.maxRequestsPerConnection = Objects.requireNonNull(maxRequestsPerConnection, "expected parameter 'maxRequestsPerConnection' to be non-null");
-        this.maxRetries = Objects.requireNonNull(maxRetries, "expected parameter 'maxRetries' to be non-null");
-    }
+    private CircuitBreakersResponse() {}
 
-    private CircuitBreakersResponse() {
-        this.connectTimeout = null;
-        this.maxConnections = null;
-        this.maxPendingRequests = null;
-        this.maxRequests = null;
-        this.maxRequestsPerConnection = null;
-        this.maxRetries = null;
+    private CircuitBreakersResponse(CircuitBreakersResponse $) {
+        this.connectTimeout = $.connectTimeout;
+        this.maxConnections = $.maxConnections;
+        this.maxPendingRequests = $.maxPendingRequests;
+        this.maxRequests = $.maxRequests;
+        this.maxRequestsPerConnection = $.maxRequestsPerConnection;
+        this.maxRetries = $.maxRetries;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CircuitBreakersResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private DurationResponse connectTimeout;
-        private Integer maxConnections;
-        private Integer maxPendingRequests;
-        private Integer maxRequests;
-        private Integer maxRequestsPerConnection;
-        private Integer maxRetries;
+        private CircuitBreakersResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new CircuitBreakersResponse();
         }
 
         public Builder(CircuitBreakersResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.connectTimeout = defaults.connectTimeout;
-    	      this.maxConnections = defaults.maxConnections;
-    	      this.maxPendingRequests = defaults.maxPendingRequests;
-    	      this.maxRequests = defaults.maxRequests;
-    	      this.maxRequestsPerConnection = defaults.maxRequestsPerConnection;
-    	      this.maxRetries = defaults.maxRetries;
+            $ = new CircuitBreakersResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder connectTimeout(DurationResponse connectTimeout) {
-            this.connectTimeout = Objects.requireNonNull(connectTimeout);
+            $.connectTimeout = connectTimeout;
             return this;
         }
+
         public Builder maxConnections(Integer maxConnections) {
-            this.maxConnections = Objects.requireNonNull(maxConnections);
+            $.maxConnections = maxConnections;
             return this;
         }
+
         public Builder maxPendingRequests(Integer maxPendingRequests) {
-            this.maxPendingRequests = Objects.requireNonNull(maxPendingRequests);
+            $.maxPendingRequests = maxPendingRequests;
             return this;
         }
+
         public Builder maxRequests(Integer maxRequests) {
-            this.maxRequests = Objects.requireNonNull(maxRequests);
+            $.maxRequests = maxRequests;
             return this;
         }
+
         public Builder maxRequestsPerConnection(Integer maxRequestsPerConnection) {
-            this.maxRequestsPerConnection = Objects.requireNonNull(maxRequestsPerConnection);
+            $.maxRequestsPerConnection = maxRequestsPerConnection;
             return this;
         }
+
         public Builder maxRetries(Integer maxRetries) {
-            this.maxRetries = Objects.requireNonNull(maxRetries);
+            $.maxRetries = maxRetries;
             return this;
-        }        public CircuitBreakersResponse build() {
-            return new CircuitBreakersResponse(connectTimeout, maxConnections, maxPendingRequests, maxRequests, maxRequestsPerConnection, maxRetries);
+        }
+
+        public CircuitBreakersResponse build() {
+            $.connectTimeout = Objects.requireNonNull($.connectTimeout, "expected parameter 'connectTimeout' to be non-null");
+            $.maxConnections = Objects.requireNonNull($.maxConnections, "expected parameter 'maxConnections' to be non-null");
+            $.maxPendingRequests = Objects.requireNonNull($.maxPendingRequests, "expected parameter 'maxPendingRequests' to be non-null");
+            $.maxRequests = Objects.requireNonNull($.maxRequests, "expected parameter 'maxRequests' to be non-null");
+            $.maxRequestsPerConnection = Objects.requireNonNull($.maxRequestsPerConnection, "expected parameter 'maxRequestsPerConnection' to be non-null");
+            $.maxRetries = Objects.requireNonNull($.maxRetries, "expected parameter 'maxRetries' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,9 +5,9 @@ package com.pulumi.aws.route53;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class ResolverFirewallConfigArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="firewallFailOpen")
-      private final @Nullable Output<String> firewallFailOpen;
+    private @Nullable Output<String> firewallFailOpen;
 
-    public Output<String> firewallFailOpen() {
-        return this.firewallFailOpen == null ? Codegen.empty() : this.firewallFailOpen;
+    public Optional<Output<String>> firewallFailOpen() {
+        return Optional.ofNullable(this.firewallFailOpen);
     }
 
     /**
@@ -31,63 +31,59 @@ public final class ResolverFirewallConfigArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="resourceId", required=true)
-      private final Output<String> resourceId;
+    private Output<String> resourceId;
 
     public Output<String> resourceId() {
         return this.resourceId;
     }
 
-    public ResolverFirewallConfigArgs(
-        @Nullable Output<String> firewallFailOpen,
-        Output<String> resourceId) {
-        this.firewallFailOpen = firewallFailOpen;
-        this.resourceId = Objects.requireNonNull(resourceId, "expected parameter 'resourceId' to be non-null");
-    }
+    private ResolverFirewallConfigArgs() {}
 
-    private ResolverFirewallConfigArgs() {
-        this.firewallFailOpen = Codegen.empty();
-        this.resourceId = Codegen.empty();
+    private ResolverFirewallConfigArgs(ResolverFirewallConfigArgs $) {
+        this.firewallFailOpen = $.firewallFailOpen;
+        this.resourceId = $.resourceId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ResolverFirewallConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> firewallFailOpen;
-        private Output<String> resourceId;
+        private ResolverFirewallConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ResolverFirewallConfigArgs();
         }
 
         public Builder(ResolverFirewallConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.firewallFailOpen = defaults.firewallFailOpen;
-    	      this.resourceId = defaults.resourceId;
+            $ = new ResolverFirewallConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder firewallFailOpen(@Nullable Output<String> firewallFailOpen) {
-            this.firewallFailOpen = firewallFailOpen;
+            $.firewallFailOpen = firewallFailOpen;
             return this;
         }
-        public Builder firewallFailOpen(@Nullable String firewallFailOpen) {
-            this.firewallFailOpen = Codegen.ofNullable(firewallFailOpen);
-            return this;
+
+        public Builder firewallFailOpen(String firewallFailOpen) {
+            return firewallFailOpen(Output.of(firewallFailOpen));
         }
+
         public Builder resourceId(Output<String> resourceId) {
-            this.resourceId = Objects.requireNonNull(resourceId);
+            $.resourceId = resourceId;
             return this;
         }
+
         public Builder resourceId(String resourceId) {
-            this.resourceId = Output.of(Objects.requireNonNull(resourceId));
-            return this;
-        }        public ResolverFirewallConfigArgs build() {
-            return new ResolverFirewallConfigArgs(firewallFailOpen, resourceId);
+            return resourceId(Output.of(resourceId));
+        }
+
+        public ResolverFirewallConfigArgs build() {
+            $.resourceId = Objects.requireNonNull($.resourceId, "expected parameter 'resourceId' to be non-null");
+            return $;
         }
     }
+
 }

@@ -23,45 +23,44 @@ public final class StreamingPolicyWidevineConfigurationResponse extends com.pulu
      * 
      */
     @Import(name="customLicenseAcquisitionUrlTemplate")
-      private final @Nullable String customLicenseAcquisitionUrlTemplate;
+    private @Nullable String customLicenseAcquisitionUrlTemplate;
 
     public Optional<String> customLicenseAcquisitionUrlTemplate() {
-        return this.customLicenseAcquisitionUrlTemplate == null ? Optional.empty() : Optional.ofNullable(this.customLicenseAcquisitionUrlTemplate);
+        return Optional.ofNullable(this.customLicenseAcquisitionUrlTemplate);
     }
 
-    public StreamingPolicyWidevineConfigurationResponse(@Nullable String customLicenseAcquisitionUrlTemplate) {
-        this.customLicenseAcquisitionUrlTemplate = customLicenseAcquisitionUrlTemplate;
-    }
+    private StreamingPolicyWidevineConfigurationResponse() {}
 
-    private StreamingPolicyWidevineConfigurationResponse() {
-        this.customLicenseAcquisitionUrlTemplate = null;
+    private StreamingPolicyWidevineConfigurationResponse(StreamingPolicyWidevineConfigurationResponse $) {
+        this.customLicenseAcquisitionUrlTemplate = $.customLicenseAcquisitionUrlTemplate;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(StreamingPolicyWidevineConfigurationResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String customLicenseAcquisitionUrlTemplate;
+        private StreamingPolicyWidevineConfigurationResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new StreamingPolicyWidevineConfigurationResponse();
         }
 
         public Builder(StreamingPolicyWidevineConfigurationResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.customLicenseAcquisitionUrlTemplate = defaults.customLicenseAcquisitionUrlTemplate;
+            $ = new StreamingPolicyWidevineConfigurationResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder customLicenseAcquisitionUrlTemplate(@Nullable String customLicenseAcquisitionUrlTemplate) {
-            this.customLicenseAcquisitionUrlTemplate = customLicenseAcquisitionUrlTemplate;
+            $.customLicenseAcquisitionUrlTemplate = customLicenseAcquisitionUrlTemplate;
             return this;
-        }        public StreamingPolicyWidevineConfigurationResponse build() {
-            return new StreamingPolicyWidevineConfigurationResponse(customLicenseAcquisitionUrlTemplate);
+        }
+
+        public StreamingPolicyWidevineConfigurationResponse build() {
+            return $;
         }
     }
+
 }

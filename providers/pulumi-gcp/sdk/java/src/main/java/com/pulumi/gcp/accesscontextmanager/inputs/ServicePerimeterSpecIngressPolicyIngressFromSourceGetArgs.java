@@ -5,9 +5,9 @@ package com.pulumi.gcp.accesscontextmanager.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +27,10 @@ public final class ServicePerimeterSpecIngressPolicyIngressFromSourceGetArgs ext
      * 
      */
     @Import(name="accessLevel")
-      private final @Nullable Output<String> accessLevel;
+    private @Nullable Output<String> accessLevel;
 
-    public Output<String> accessLevel() {
-        return this.accessLevel == null ? Codegen.empty() : this.accessLevel;
+    public Optional<Output<String>> accessLevel() {
+        return Optional.ofNullable(this.accessLevel);
     }
 
     /**
@@ -43,63 +43,58 @@ public final class ServicePerimeterSpecIngressPolicyIngressFromSourceGetArgs ext
      * 
      */
     @Import(name="resource")
-      private final @Nullable Output<String> resource;
+    private @Nullable Output<String> resource;
 
-    public Output<String> resource() {
-        return this.resource == null ? Codegen.empty() : this.resource;
+    public Optional<Output<String>> resource() {
+        return Optional.ofNullable(this.resource);
     }
 
-    public ServicePerimeterSpecIngressPolicyIngressFromSourceGetArgs(
-        @Nullable Output<String> accessLevel,
-        @Nullable Output<String> resource) {
-        this.accessLevel = accessLevel;
-        this.resource = resource;
-    }
+    private ServicePerimeterSpecIngressPolicyIngressFromSourceGetArgs() {}
 
-    private ServicePerimeterSpecIngressPolicyIngressFromSourceGetArgs() {
-        this.accessLevel = Codegen.empty();
-        this.resource = Codegen.empty();
+    private ServicePerimeterSpecIngressPolicyIngressFromSourceGetArgs(ServicePerimeterSpecIngressPolicyIngressFromSourceGetArgs $) {
+        this.accessLevel = $.accessLevel;
+        this.resource = $.resource;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ServicePerimeterSpecIngressPolicyIngressFromSourceGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> accessLevel;
-        private @Nullable Output<String> resource;
+        private ServicePerimeterSpecIngressPolicyIngressFromSourceGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ServicePerimeterSpecIngressPolicyIngressFromSourceGetArgs();
         }
 
         public Builder(ServicePerimeterSpecIngressPolicyIngressFromSourceGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accessLevel = defaults.accessLevel;
-    	      this.resource = defaults.resource;
+            $ = new ServicePerimeterSpecIngressPolicyIngressFromSourceGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder accessLevel(@Nullable Output<String> accessLevel) {
-            this.accessLevel = accessLevel;
+            $.accessLevel = accessLevel;
             return this;
         }
-        public Builder accessLevel(@Nullable String accessLevel) {
-            this.accessLevel = Codegen.ofNullable(accessLevel);
-            return this;
+
+        public Builder accessLevel(String accessLevel) {
+            return accessLevel(Output.of(accessLevel));
         }
+
         public Builder resource(@Nullable Output<String> resource) {
-            this.resource = resource;
+            $.resource = resource;
             return this;
         }
-        public Builder resource(@Nullable String resource) {
-            this.resource = Codegen.ofNullable(resource);
-            return this;
-        }        public ServicePerimeterSpecIngressPolicyIngressFromSourceGetArgs build() {
-            return new ServicePerimeterSpecIngressPolicyIngressFromSourceGetArgs(accessLevel, resource);
+
+        public Builder resource(String resource) {
+            return resource(Output.of(resource));
+        }
+
+        public ServicePerimeterSpecIngressPolicyIngressFromSourceGetArgs build() {
+            return $;
         }
     }
+
 }

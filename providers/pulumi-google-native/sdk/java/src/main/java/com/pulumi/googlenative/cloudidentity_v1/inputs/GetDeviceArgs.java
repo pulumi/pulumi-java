@@ -15,62 +15,58 @@ public final class GetDeviceArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetDeviceArgs Empty = new GetDeviceArgs();
 
     @Import(name="customer")
-      private final @Nullable String customer;
+    private @Nullable String customer;
 
     public Optional<String> customer() {
-        return this.customer == null ? Optional.empty() : Optional.ofNullable(this.customer);
+        return Optional.ofNullable(this.customer);
     }
 
     @Import(name="deviceId", required=true)
-      private final String deviceId;
+    private String deviceId;
 
     public String deviceId() {
         return this.deviceId;
     }
 
-    public GetDeviceArgs(
-        @Nullable String customer,
-        String deviceId) {
-        this.customer = customer;
-        this.deviceId = Objects.requireNonNull(deviceId, "expected parameter 'deviceId' to be non-null");
-    }
+    private GetDeviceArgs() {}
 
-    private GetDeviceArgs() {
-        this.customer = null;
-        this.deviceId = null;
+    private GetDeviceArgs(GetDeviceArgs $) {
+        this.customer = $.customer;
+        this.deviceId = $.deviceId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetDeviceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String customer;
-        private String deviceId;
+        private GetDeviceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetDeviceArgs();
         }
 
         public Builder(GetDeviceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.customer = defaults.customer;
-    	      this.deviceId = defaults.deviceId;
+            $ = new GetDeviceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder customer(@Nullable String customer) {
-            this.customer = customer;
+            $.customer = customer;
             return this;
         }
+
         public Builder deviceId(String deviceId) {
-            this.deviceId = Objects.requireNonNull(deviceId);
+            $.deviceId = deviceId;
             return this;
-        }        public GetDeviceArgs build() {
-            return new GetDeviceArgs(customer, deviceId);
+        }
+
+        public GetDeviceArgs build() {
+            $.deviceId = Objects.requireNonNull($.deviceId, "expected parameter 'deviceId' to be non-null");
+            return $;
         }
     }
+
 }

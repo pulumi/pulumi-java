@@ -21,7 +21,7 @@ public final class PerNodeExtensionStateResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="extension", required=true)
-      private final String extension;
+    private String extension;
 
     public String extension() {
         return this.extension;
@@ -32,7 +32,7 @@ public final class PerNodeExtensionStateResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -43,64 +43,59 @@ public final class PerNodeExtensionStateResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="state", required=true)
-      private final String state;
+    private String state;
 
     public String state() {
         return this.state;
     }
 
-    public PerNodeExtensionStateResponse(
-        String extension,
-        String name,
-        String state) {
-        this.extension = Objects.requireNonNull(extension, "expected parameter 'extension' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.state = Objects.requireNonNull(state, "expected parameter 'state' to be non-null");
-    }
+    private PerNodeExtensionStateResponse() {}
 
-    private PerNodeExtensionStateResponse() {
-        this.extension = null;
-        this.name = null;
-        this.state = null;
+    private PerNodeExtensionStateResponse(PerNodeExtensionStateResponse $) {
+        this.extension = $.extension;
+        this.name = $.name;
+        this.state = $.state;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PerNodeExtensionStateResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String extension;
-        private String name;
-        private String state;
+        private PerNodeExtensionStateResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new PerNodeExtensionStateResponse();
         }
 
         public Builder(PerNodeExtensionStateResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.extension = defaults.extension;
-    	      this.name = defaults.name;
-    	      this.state = defaults.state;
+            $ = new PerNodeExtensionStateResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder extension(String extension) {
-            this.extension = Objects.requireNonNull(extension);
+            $.extension = extension;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder state(String state) {
-            this.state = Objects.requireNonNull(state);
+            $.state = state;
             return this;
-        }        public PerNodeExtensionStateResponse build() {
-            return new PerNodeExtensionStateResponse(extension, name, state);
+        }
+
+        public PerNodeExtensionStateResponse build() {
+            $.extension = Objects.requireNonNull($.extension, "expected parameter 'extension' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.state = Objects.requireNonNull($.state, "expected parameter 'state' to be non-null");
+            return $;
         }
     }
+
 }

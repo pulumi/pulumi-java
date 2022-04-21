@@ -23,7 +23,7 @@ public final class PostalAddressResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="addressLines", required=true)
-      private final List<String> addressLines;
+    private List<String> addressLines;
 
     public List<String> addressLines() {
         return this.addressLines;
@@ -34,7 +34,7 @@ public final class PostalAddressResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="administrativeArea", required=true)
-      private final String administrativeArea;
+    private String administrativeArea;
 
     public String administrativeArea() {
         return this.administrativeArea;
@@ -45,7 +45,7 @@ public final class PostalAddressResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="languageCode", required=true)
-      private final String languageCode;
+    private String languageCode;
 
     public String languageCode() {
         return this.languageCode;
@@ -56,7 +56,7 @@ public final class PostalAddressResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="locality", required=true)
-      private final String locality;
+    private String locality;
 
     public String locality() {
         return this.locality;
@@ -67,7 +67,7 @@ public final class PostalAddressResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="organization", required=true)
-      private final String organization;
+    private String organization;
 
     public String organization() {
         return this.organization;
@@ -78,7 +78,7 @@ public final class PostalAddressResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="postalCode", required=true)
-      private final String postalCode;
+    private String postalCode;
 
     public String postalCode() {
         return this.postalCode;
@@ -89,7 +89,7 @@ public final class PostalAddressResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="recipients", required=true)
-      private final List<String> recipients;
+    private List<String> recipients;
 
     public List<String> recipients() {
         return this.recipients;
@@ -100,7 +100,7 @@ public final class PostalAddressResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="regionCode", required=true)
-      private final String regionCode;
+    private String regionCode;
 
     public String regionCode() {
         return this.regionCode;
@@ -111,7 +111,7 @@ public final class PostalAddressResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="revision", required=true)
-      private final Integer revision;
+    private Integer revision;
 
     public Integer revision() {
         return this.revision;
@@ -122,7 +122,7 @@ public final class PostalAddressResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="sortingCode", required=true)
-      private final String sortingCode;
+    private String sortingCode;
 
     public String sortingCode() {
         return this.sortingCode;
@@ -133,142 +133,123 @@ public final class PostalAddressResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="sublocality", required=true)
-      private final String sublocality;
+    private String sublocality;
 
     public String sublocality() {
         return this.sublocality;
     }
 
-    public PostalAddressResponse(
-        List<String> addressLines,
-        String administrativeArea,
-        String languageCode,
-        String locality,
-        String organization,
-        String postalCode,
-        List<String> recipients,
-        String regionCode,
-        Integer revision,
-        String sortingCode,
-        String sublocality) {
-        this.addressLines = Objects.requireNonNull(addressLines, "expected parameter 'addressLines' to be non-null");
-        this.administrativeArea = Objects.requireNonNull(administrativeArea, "expected parameter 'administrativeArea' to be non-null");
-        this.languageCode = Objects.requireNonNull(languageCode, "expected parameter 'languageCode' to be non-null");
-        this.locality = Objects.requireNonNull(locality, "expected parameter 'locality' to be non-null");
-        this.organization = Objects.requireNonNull(organization, "expected parameter 'organization' to be non-null");
-        this.postalCode = Objects.requireNonNull(postalCode, "expected parameter 'postalCode' to be non-null");
-        this.recipients = Objects.requireNonNull(recipients, "expected parameter 'recipients' to be non-null");
-        this.regionCode = Objects.requireNonNull(regionCode, "expected parameter 'regionCode' to be non-null");
-        this.revision = Objects.requireNonNull(revision, "expected parameter 'revision' to be non-null");
-        this.sortingCode = Objects.requireNonNull(sortingCode, "expected parameter 'sortingCode' to be non-null");
-        this.sublocality = Objects.requireNonNull(sublocality, "expected parameter 'sublocality' to be non-null");
-    }
+    private PostalAddressResponse() {}
 
-    private PostalAddressResponse() {
-        this.addressLines = List.of();
-        this.administrativeArea = null;
-        this.languageCode = null;
-        this.locality = null;
-        this.organization = null;
-        this.postalCode = null;
-        this.recipients = List.of();
-        this.regionCode = null;
-        this.revision = null;
-        this.sortingCode = null;
-        this.sublocality = null;
+    private PostalAddressResponse(PostalAddressResponse $) {
+        this.addressLines = $.addressLines;
+        this.administrativeArea = $.administrativeArea;
+        this.languageCode = $.languageCode;
+        this.locality = $.locality;
+        this.organization = $.organization;
+        this.postalCode = $.postalCode;
+        this.recipients = $.recipients;
+        this.regionCode = $.regionCode;
+        this.revision = $.revision;
+        this.sortingCode = $.sortingCode;
+        this.sublocality = $.sublocality;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PostalAddressResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<String> addressLines;
-        private String administrativeArea;
-        private String languageCode;
-        private String locality;
-        private String organization;
-        private String postalCode;
-        private List<String> recipients;
-        private String regionCode;
-        private Integer revision;
-        private String sortingCode;
-        private String sublocality;
+        private PostalAddressResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new PostalAddressResponse();
         }
 
         public Builder(PostalAddressResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.addressLines = defaults.addressLines;
-    	      this.administrativeArea = defaults.administrativeArea;
-    	      this.languageCode = defaults.languageCode;
-    	      this.locality = defaults.locality;
-    	      this.organization = defaults.organization;
-    	      this.postalCode = defaults.postalCode;
-    	      this.recipients = defaults.recipients;
-    	      this.regionCode = defaults.regionCode;
-    	      this.revision = defaults.revision;
-    	      this.sortingCode = defaults.sortingCode;
-    	      this.sublocality = defaults.sublocality;
+            $ = new PostalAddressResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder addressLines(List<String> addressLines) {
-            this.addressLines = Objects.requireNonNull(addressLines);
+            $.addressLines = addressLines;
             return this;
         }
+
         public Builder addressLines(String... addressLines) {
             return addressLines(List.of(addressLines));
         }
+
         public Builder administrativeArea(String administrativeArea) {
-            this.administrativeArea = Objects.requireNonNull(administrativeArea);
+            $.administrativeArea = administrativeArea;
             return this;
         }
+
         public Builder languageCode(String languageCode) {
-            this.languageCode = Objects.requireNonNull(languageCode);
+            $.languageCode = languageCode;
             return this;
         }
+
         public Builder locality(String locality) {
-            this.locality = Objects.requireNonNull(locality);
+            $.locality = locality;
             return this;
         }
+
         public Builder organization(String organization) {
-            this.organization = Objects.requireNonNull(organization);
+            $.organization = organization;
             return this;
         }
+
         public Builder postalCode(String postalCode) {
-            this.postalCode = Objects.requireNonNull(postalCode);
+            $.postalCode = postalCode;
             return this;
         }
+
         public Builder recipients(List<String> recipients) {
-            this.recipients = Objects.requireNonNull(recipients);
+            $.recipients = recipients;
             return this;
         }
+
         public Builder recipients(String... recipients) {
             return recipients(List.of(recipients));
         }
+
         public Builder regionCode(String regionCode) {
-            this.regionCode = Objects.requireNonNull(regionCode);
+            $.regionCode = regionCode;
             return this;
         }
+
         public Builder revision(Integer revision) {
-            this.revision = Objects.requireNonNull(revision);
+            $.revision = revision;
             return this;
         }
+
         public Builder sortingCode(String sortingCode) {
-            this.sortingCode = Objects.requireNonNull(sortingCode);
+            $.sortingCode = sortingCode;
             return this;
         }
+
         public Builder sublocality(String sublocality) {
-            this.sublocality = Objects.requireNonNull(sublocality);
+            $.sublocality = sublocality;
             return this;
-        }        public PostalAddressResponse build() {
-            return new PostalAddressResponse(addressLines, administrativeArea, languageCode, locality, organization, postalCode, recipients, regionCode, revision, sortingCode, sublocality);
+        }
+
+        public PostalAddressResponse build() {
+            $.addressLines = Objects.requireNonNull($.addressLines, "expected parameter 'addressLines' to be non-null");
+            $.administrativeArea = Objects.requireNonNull($.administrativeArea, "expected parameter 'administrativeArea' to be non-null");
+            $.languageCode = Objects.requireNonNull($.languageCode, "expected parameter 'languageCode' to be non-null");
+            $.locality = Objects.requireNonNull($.locality, "expected parameter 'locality' to be non-null");
+            $.organization = Objects.requireNonNull($.organization, "expected parameter 'organization' to be non-null");
+            $.postalCode = Objects.requireNonNull($.postalCode, "expected parameter 'postalCode' to be non-null");
+            $.recipients = Objects.requireNonNull($.recipients, "expected parameter 'recipients' to be non-null");
+            $.regionCode = Objects.requireNonNull($.regionCode, "expected parameter 'regionCode' to be non-null");
+            $.revision = Objects.requireNonNull($.revision, "expected parameter 'revision' to be non-null");
+            $.sortingCode = Objects.requireNonNull($.sortingCode, "expected parameter 'sortingCode' to be non-null");
+            $.sublocality = Objects.requireNonNull($.sublocality, "expected parameter 'sublocality' to be non-null");
+            return $;
         }
     }
+
 }

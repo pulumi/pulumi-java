@@ -6,13 +6,13 @@ package com.pulumi.aws.rds;
 import com.pulumi.aws.rds.inputs.ProxyAuthArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,7 +25,7 @@ public final class ProxyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="auths", required=true)
-      private final Output<List<ProxyAuthArgs>> auths;
+    private Output<List<ProxyAuthArgs>> auths;
 
     public Output<List<ProxyAuthArgs>> auths() {
         return this.auths;
@@ -36,10 +36,10 @@ public final class ProxyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="debugLogging")
-      private final @Nullable Output<Boolean> debugLogging;
+    private @Nullable Output<Boolean> debugLogging;
 
-    public Output<Boolean> debugLogging() {
-        return this.debugLogging == null ? Codegen.empty() : this.debugLogging;
+    public Optional<Output<Boolean>> debugLogging() {
+        return Optional.ofNullable(this.debugLogging);
     }
 
     /**
@@ -47,7 +47,7 @@ public final class ProxyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="engineFamily", required=true)
-      private final Output<String> engineFamily;
+    private Output<String> engineFamily;
 
     public Output<String> engineFamily() {
         return this.engineFamily;
@@ -58,10 +58,10 @@ public final class ProxyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="idleClientTimeout")
-      private final @Nullable Output<Integer> idleClientTimeout;
+    private @Nullable Output<Integer> idleClientTimeout;
 
-    public Output<Integer> idleClientTimeout() {
-        return this.idleClientTimeout == null ? Codegen.empty() : this.idleClientTimeout;
+    public Optional<Output<Integer>> idleClientTimeout() {
+        return Optional.ofNullable(this.idleClientTimeout);
     }
 
     /**
@@ -69,10 +69,10 @@ public final class ProxyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -80,10 +80,10 @@ public final class ProxyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="requireTls")
-      private final @Nullable Output<Boolean> requireTls;
+    private @Nullable Output<Boolean> requireTls;
 
-    public Output<Boolean> requireTls() {
-        return this.requireTls == null ? Codegen.empty() : this.requireTls;
+    public Optional<Output<Boolean>> requireTls() {
+        return Optional.ofNullable(this.requireTls);
     }
 
     /**
@@ -91,7 +91,7 @@ public final class ProxyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="roleArn", required=true)
-      private final Output<String> roleArn;
+    private Output<String> roleArn;
 
     public Output<String> roleArn() {
         return this.roleArn;
@@ -102,10 +102,10 @@ public final class ProxyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -113,10 +113,10 @@ public final class ProxyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="vpcSecurityGroupIds")
-      private final @Nullable Output<List<String>> vpcSecurityGroupIds;
+    private @Nullable Output<List<String>> vpcSecurityGroupIds;
 
-    public Output<List<String>> vpcSecurityGroupIds() {
-        return this.vpcSecurityGroupIds == null ? Codegen.empty() : this.vpcSecurityGroupIds;
+    public Optional<Output<List<String>>> vpcSecurityGroupIds() {
+        return Optional.ofNullable(this.vpcSecurityGroupIds);
     }
 
     /**
@@ -124,176 +124,154 @@ public final class ProxyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="vpcSubnetIds", required=true)
-      private final Output<List<String>> vpcSubnetIds;
+    private Output<List<String>> vpcSubnetIds;
 
     public Output<List<String>> vpcSubnetIds() {
         return this.vpcSubnetIds;
     }
 
-    public ProxyArgs(
-        Output<List<ProxyAuthArgs>> auths,
-        @Nullable Output<Boolean> debugLogging,
-        Output<String> engineFamily,
-        @Nullable Output<Integer> idleClientTimeout,
-        @Nullable Output<String> name,
-        @Nullable Output<Boolean> requireTls,
-        Output<String> roleArn,
-        @Nullable Output<Map<String,String>> tags,
-        @Nullable Output<List<String>> vpcSecurityGroupIds,
-        Output<List<String>> vpcSubnetIds) {
-        this.auths = Objects.requireNonNull(auths, "expected parameter 'auths' to be non-null");
-        this.debugLogging = debugLogging;
-        this.engineFamily = Objects.requireNonNull(engineFamily, "expected parameter 'engineFamily' to be non-null");
-        this.idleClientTimeout = idleClientTimeout;
-        this.name = name;
-        this.requireTls = requireTls;
-        this.roleArn = Objects.requireNonNull(roleArn, "expected parameter 'roleArn' to be non-null");
-        this.tags = tags;
-        this.vpcSecurityGroupIds = vpcSecurityGroupIds;
-        this.vpcSubnetIds = Objects.requireNonNull(vpcSubnetIds, "expected parameter 'vpcSubnetIds' to be non-null");
-    }
+    private ProxyArgs() {}
 
-    private ProxyArgs() {
-        this.auths = Codegen.empty();
-        this.debugLogging = Codegen.empty();
-        this.engineFamily = Codegen.empty();
-        this.idleClientTimeout = Codegen.empty();
-        this.name = Codegen.empty();
-        this.requireTls = Codegen.empty();
-        this.roleArn = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.vpcSecurityGroupIds = Codegen.empty();
-        this.vpcSubnetIds = Codegen.empty();
+    private ProxyArgs(ProxyArgs $) {
+        this.auths = $.auths;
+        this.debugLogging = $.debugLogging;
+        this.engineFamily = $.engineFamily;
+        this.idleClientTimeout = $.idleClientTimeout;
+        this.name = $.name;
+        this.requireTls = $.requireTls;
+        this.roleArn = $.roleArn;
+        this.tags = $.tags;
+        this.vpcSecurityGroupIds = $.vpcSecurityGroupIds;
+        this.vpcSubnetIds = $.vpcSubnetIds;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ProxyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<List<ProxyAuthArgs>> auths;
-        private @Nullable Output<Boolean> debugLogging;
-        private Output<String> engineFamily;
-        private @Nullable Output<Integer> idleClientTimeout;
-        private @Nullable Output<String> name;
-        private @Nullable Output<Boolean> requireTls;
-        private Output<String> roleArn;
-        private @Nullable Output<Map<String,String>> tags;
-        private @Nullable Output<List<String>> vpcSecurityGroupIds;
-        private Output<List<String>> vpcSubnetIds;
+        private ProxyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ProxyArgs();
         }
 
         public Builder(ProxyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.auths = defaults.auths;
-    	      this.debugLogging = defaults.debugLogging;
-    	      this.engineFamily = defaults.engineFamily;
-    	      this.idleClientTimeout = defaults.idleClientTimeout;
-    	      this.name = defaults.name;
-    	      this.requireTls = defaults.requireTls;
-    	      this.roleArn = defaults.roleArn;
-    	      this.tags = defaults.tags;
-    	      this.vpcSecurityGroupIds = defaults.vpcSecurityGroupIds;
-    	      this.vpcSubnetIds = defaults.vpcSubnetIds;
+            $ = new ProxyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder auths(Output<List<ProxyAuthArgs>> auths) {
-            this.auths = Objects.requireNonNull(auths);
+            $.auths = auths;
             return this;
         }
+
         public Builder auths(List<ProxyAuthArgs> auths) {
-            this.auths = Output.of(Objects.requireNonNull(auths));
-            return this;
+            return auths(Output.of(auths));
         }
+
         public Builder auths(ProxyAuthArgs... auths) {
             return auths(List.of(auths));
         }
+
         public Builder debugLogging(@Nullable Output<Boolean> debugLogging) {
-            this.debugLogging = debugLogging;
+            $.debugLogging = debugLogging;
             return this;
         }
-        public Builder debugLogging(@Nullable Boolean debugLogging) {
-            this.debugLogging = Codegen.ofNullable(debugLogging);
-            return this;
+
+        public Builder debugLogging(Boolean debugLogging) {
+            return debugLogging(Output.of(debugLogging));
         }
+
         public Builder engineFamily(Output<String> engineFamily) {
-            this.engineFamily = Objects.requireNonNull(engineFamily);
+            $.engineFamily = engineFamily;
             return this;
         }
+
         public Builder engineFamily(String engineFamily) {
-            this.engineFamily = Output.of(Objects.requireNonNull(engineFamily));
-            return this;
+            return engineFamily(Output.of(engineFamily));
         }
+
         public Builder idleClientTimeout(@Nullable Output<Integer> idleClientTimeout) {
-            this.idleClientTimeout = idleClientTimeout;
+            $.idleClientTimeout = idleClientTimeout;
             return this;
         }
-        public Builder idleClientTimeout(@Nullable Integer idleClientTimeout) {
-            this.idleClientTimeout = Codegen.ofNullable(idleClientTimeout);
-            return this;
+
+        public Builder idleClientTimeout(Integer idleClientTimeout) {
+            return idleClientTimeout(Output.of(idleClientTimeout));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder requireTls(@Nullable Output<Boolean> requireTls) {
-            this.requireTls = requireTls;
+            $.requireTls = requireTls;
             return this;
         }
-        public Builder requireTls(@Nullable Boolean requireTls) {
-            this.requireTls = Codegen.ofNullable(requireTls);
-            return this;
+
+        public Builder requireTls(Boolean requireTls) {
+            return requireTls(Output.of(requireTls));
         }
+
         public Builder roleArn(Output<String> roleArn) {
-            this.roleArn = Objects.requireNonNull(roleArn);
+            $.roleArn = roleArn;
             return this;
         }
+
         public Builder roleArn(String roleArn) {
-            this.roleArn = Output.of(Objects.requireNonNull(roleArn));
-            return this;
+            return roleArn(Output.of(roleArn));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder vpcSecurityGroupIds(@Nullable Output<List<String>> vpcSecurityGroupIds) {
-            this.vpcSecurityGroupIds = vpcSecurityGroupIds;
+            $.vpcSecurityGroupIds = vpcSecurityGroupIds;
             return this;
         }
-        public Builder vpcSecurityGroupIds(@Nullable List<String> vpcSecurityGroupIds) {
-            this.vpcSecurityGroupIds = Codegen.ofNullable(vpcSecurityGroupIds);
-            return this;
+
+        public Builder vpcSecurityGroupIds(List<String> vpcSecurityGroupIds) {
+            return vpcSecurityGroupIds(Output.of(vpcSecurityGroupIds));
         }
+
         public Builder vpcSecurityGroupIds(String... vpcSecurityGroupIds) {
             return vpcSecurityGroupIds(List.of(vpcSecurityGroupIds));
         }
+
         public Builder vpcSubnetIds(Output<List<String>> vpcSubnetIds) {
-            this.vpcSubnetIds = Objects.requireNonNull(vpcSubnetIds);
+            $.vpcSubnetIds = vpcSubnetIds;
             return this;
         }
+
         public Builder vpcSubnetIds(List<String> vpcSubnetIds) {
-            this.vpcSubnetIds = Output.of(Objects.requireNonNull(vpcSubnetIds));
-            return this;
+            return vpcSubnetIds(Output.of(vpcSubnetIds));
         }
+
         public Builder vpcSubnetIds(String... vpcSubnetIds) {
             return vpcSubnetIds(List.of(vpcSubnetIds));
-        }        public ProxyArgs build() {
-            return new ProxyArgs(auths, debugLogging, engineFamily, idleClientTimeout, name, requireTls, roleArn, tags, vpcSecurityGroupIds, vpcSubnetIds);
+        }
+
+        public ProxyArgs build() {
+            $.auths = Objects.requireNonNull($.auths, "expected parameter 'auths' to be non-null");
+            $.engineFamily = Objects.requireNonNull($.engineFamily, "expected parameter 'engineFamily' to be non-null");
+            $.roleArn = Objects.requireNonNull($.roleArn, "expected parameter 'roleArn' to be non-null");
+            $.vpcSubnetIds = Objects.requireNonNull($.vpcSubnetIds, "expected parameter 'vpcSubnetIds' to be non-null");
+            return $;
         }
     }
+
 }

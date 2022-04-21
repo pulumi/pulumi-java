@@ -13,45 +13,45 @@ public final class GetTemplateArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetTemplateArgs Empty = new GetTemplateArgs();
 
     @Import(name="id", required=true)
-      private final String id;
+    private String id;
 
     public String id() {
         return this.id;
     }
 
-    public GetTemplateArgs(String id) {
-        this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
-    }
+    private GetTemplateArgs() {}
 
-    private GetTemplateArgs() {
-        this.id = null;
+    private GetTemplateArgs(GetTemplateArgs $) {
+        this.id = $.id;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetTemplateArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String id;
+        private GetTemplateArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetTemplateArgs();
         }
 
         public Builder(GetTemplateArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.id = defaults.id;
+            $ = new GetTemplateArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder id(String id) {
-            this.id = Objects.requireNonNull(id);
+            $.id = id;
             return this;
-        }        public GetTemplateArgs build() {
-            return new GetTemplateArgs(id);
+        }
+
+        public GetTemplateArgs build() {
+            $.id = Objects.requireNonNull($.id, "expected parameter 'id' to be non-null");
+            return $;
         }
     }
+
 }

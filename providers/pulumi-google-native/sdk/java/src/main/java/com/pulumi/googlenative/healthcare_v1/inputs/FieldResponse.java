@@ -22,7 +22,7 @@ public final class FieldResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="maxOccurs", required=true)
-      private final Integer maxOccurs;
+    private Integer maxOccurs;
 
     public Integer maxOccurs() {
         return this.maxOccurs;
@@ -33,7 +33,7 @@ public final class FieldResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="minOccurs", required=true)
-      private final Integer minOccurs;
+    private Integer minOccurs;
 
     public Integer minOccurs() {
         return this.minOccurs;
@@ -44,7 +44,7 @@ public final class FieldResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -55,7 +55,7 @@ public final class FieldResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="table", required=true)
-      private final String table;
+    private String table;
 
     public String table() {
         return this.table;
@@ -66,82 +66,73 @@ public final class FieldResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
     }
 
-    public FieldResponse(
-        Integer maxOccurs,
-        Integer minOccurs,
-        String name,
-        String table,
-        String type) {
-        this.maxOccurs = Objects.requireNonNull(maxOccurs, "expected parameter 'maxOccurs' to be non-null");
-        this.minOccurs = Objects.requireNonNull(minOccurs, "expected parameter 'minOccurs' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.table = Objects.requireNonNull(table, "expected parameter 'table' to be non-null");
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private FieldResponse() {}
 
-    private FieldResponse() {
-        this.maxOccurs = null;
-        this.minOccurs = null;
-        this.name = null;
-        this.table = null;
-        this.type = null;
+    private FieldResponse(FieldResponse $) {
+        this.maxOccurs = $.maxOccurs;
+        this.minOccurs = $.minOccurs;
+        this.name = $.name;
+        this.table = $.table;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FieldResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Integer maxOccurs;
-        private Integer minOccurs;
-        private String name;
-        private String table;
-        private String type;
+        private FieldResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new FieldResponse();
         }
 
         public Builder(FieldResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.maxOccurs = defaults.maxOccurs;
-    	      this.minOccurs = defaults.minOccurs;
-    	      this.name = defaults.name;
-    	      this.table = defaults.table;
-    	      this.type = defaults.type;
+            $ = new FieldResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder maxOccurs(Integer maxOccurs) {
-            this.maxOccurs = Objects.requireNonNull(maxOccurs);
+            $.maxOccurs = maxOccurs;
             return this;
         }
+
         public Builder minOccurs(Integer minOccurs) {
-            this.minOccurs = Objects.requireNonNull(minOccurs);
+            $.minOccurs = minOccurs;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder table(String table) {
-            this.table = Objects.requireNonNull(table);
+            $.table = table;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
-        }        public FieldResponse build() {
-            return new FieldResponse(maxOccurs, minOccurs, name, table, type);
+        }
+
+        public FieldResponse build() {
+            $.maxOccurs = Objects.requireNonNull($.maxOccurs, "expected parameter 'maxOccurs' to be non-null");
+            $.minOccurs = Objects.requireNonNull($.minOccurs, "expected parameter 'minOccurs' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.table = Objects.requireNonNull($.table, "expected parameter 'table' to be non-null");
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

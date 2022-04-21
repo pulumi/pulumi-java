@@ -25,7 +25,7 @@ public final class RegistrationAssignmentPropertiesResponseRegistrationDefinitio
      * 
      */
     @Import(name="id", required=true)
-      private final String id;
+    private String id;
 
     public String id() {
         return this.id;
@@ -36,7 +36,7 @@ public final class RegistrationAssignmentPropertiesResponseRegistrationDefinitio
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -47,10 +47,10 @@ public final class RegistrationAssignmentPropertiesResponseRegistrationDefinitio
      * 
      */
     @Import(name="plan")
-      private final @Nullable PlanResponse plan;
+    private @Nullable PlanResponse plan;
 
     public Optional<PlanResponse> plan() {
-        return this.plan == null ? Optional.empty() : Optional.ofNullable(this.plan);
+        return Optional.ofNullable(this.plan);
     }
 
     /**
@@ -58,10 +58,10 @@ public final class RegistrationAssignmentPropertiesResponseRegistrationDefinitio
      * 
      */
     @Import(name="properties")
-      private final @Nullable RegistrationAssignmentPropertiesResponseProperties properties;
+    private @Nullable RegistrationAssignmentPropertiesResponseProperties properties;
 
     public Optional<RegistrationAssignmentPropertiesResponseProperties> properties() {
-        return this.properties == null ? Optional.empty() : Optional.ofNullable(this.properties);
+        return Optional.ofNullable(this.properties);
     }
 
     /**
@@ -69,82 +69,71 @@ public final class RegistrationAssignmentPropertiesResponseRegistrationDefinitio
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
     }
 
-    public RegistrationAssignmentPropertiesResponseRegistrationDefinition(
-        String id,
-        String name,
-        @Nullable PlanResponse plan,
-        @Nullable RegistrationAssignmentPropertiesResponseProperties properties,
-        String type) {
-        this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.plan = plan;
-        this.properties = properties;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private RegistrationAssignmentPropertiesResponseRegistrationDefinition() {}
 
-    private RegistrationAssignmentPropertiesResponseRegistrationDefinition() {
-        this.id = null;
-        this.name = null;
-        this.plan = null;
-        this.properties = null;
-        this.type = null;
+    private RegistrationAssignmentPropertiesResponseRegistrationDefinition(RegistrationAssignmentPropertiesResponseRegistrationDefinition $) {
+        this.id = $.id;
+        this.name = $.name;
+        this.plan = $.plan;
+        this.properties = $.properties;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RegistrationAssignmentPropertiesResponseRegistrationDefinition defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String id;
-        private String name;
-        private @Nullable PlanResponse plan;
-        private @Nullable RegistrationAssignmentPropertiesResponseProperties properties;
-        private String type;
+        private RegistrationAssignmentPropertiesResponseRegistrationDefinition $;
 
         public Builder() {
-    	      // Empty
+            $ = new RegistrationAssignmentPropertiesResponseRegistrationDefinition();
         }
 
         public Builder(RegistrationAssignmentPropertiesResponseRegistrationDefinition defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.id = defaults.id;
-    	      this.name = defaults.name;
-    	      this.plan = defaults.plan;
-    	      this.properties = defaults.properties;
-    	      this.type = defaults.type;
+            $ = new RegistrationAssignmentPropertiesResponseRegistrationDefinition(Objects.requireNonNull(defaults));
         }
 
         public Builder id(String id) {
-            this.id = Objects.requireNonNull(id);
+            $.id = id;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder plan(@Nullable PlanResponse plan) {
-            this.plan = plan;
+            $.plan = plan;
             return this;
         }
+
         public Builder properties(@Nullable RegistrationAssignmentPropertiesResponseProperties properties) {
-            this.properties = properties;
+            $.properties = properties;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
-        }        public RegistrationAssignmentPropertiesResponseRegistrationDefinition build() {
-            return new RegistrationAssignmentPropertiesResponseRegistrationDefinition(id, name, plan, properties, type);
+        }
+
+        public RegistrationAssignmentPropertiesResponseRegistrationDefinition build() {
+            $.id = Objects.requireNonNull($.id, "expected parameter 'id' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

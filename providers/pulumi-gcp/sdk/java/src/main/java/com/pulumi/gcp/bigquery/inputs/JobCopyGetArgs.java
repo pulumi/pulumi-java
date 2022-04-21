@@ -5,13 +5,13 @@ package com.pulumi.gcp.bigquery.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.bigquery.inputs.JobCopyDestinationEncryptionConfigurationGetArgs;
 import com.pulumi.gcp.bigquery.inputs.JobCopyDestinationTableGetArgs;
 import com.pulumi.gcp.bigquery.inputs.JobCopySourceTableGetArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -29,10 +29,10 @@ public final class JobCopyGetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="createDisposition")
-      private final @Nullable Output<String> createDisposition;
+    private @Nullable Output<String> createDisposition;
 
-    public Output<String> createDisposition() {
-        return this.createDisposition == null ? Codegen.empty() : this.createDisposition;
+    public Optional<Output<String>> createDisposition() {
+        return Optional.ofNullable(this.createDisposition);
     }
 
     /**
@@ -41,10 +41,10 @@ public final class JobCopyGetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="destinationEncryptionConfiguration")
-      private final @Nullable Output<JobCopyDestinationEncryptionConfigurationGetArgs> destinationEncryptionConfiguration;
+    private @Nullable Output<JobCopyDestinationEncryptionConfigurationGetArgs> destinationEncryptionConfiguration;
 
-    public Output<JobCopyDestinationEncryptionConfigurationGetArgs> destinationEncryptionConfiguration() {
-        return this.destinationEncryptionConfiguration == null ? Codegen.empty() : this.destinationEncryptionConfiguration;
+    public Optional<Output<JobCopyDestinationEncryptionConfigurationGetArgs>> destinationEncryptionConfiguration() {
+        return Optional.ofNullable(this.destinationEncryptionConfiguration);
     }
 
     /**
@@ -53,10 +53,10 @@ public final class JobCopyGetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="destinationTable")
-      private final @Nullable Output<JobCopyDestinationTableGetArgs> destinationTable;
+    private @Nullable Output<JobCopyDestinationTableGetArgs> destinationTable;
 
-    public Output<JobCopyDestinationTableGetArgs> destinationTable() {
-        return this.destinationTable == null ? Codegen.empty() : this.destinationTable;
+    public Optional<Output<JobCopyDestinationTableGetArgs>> destinationTable() {
+        return Optional.ofNullable(this.destinationTable);
     }
 
     /**
@@ -65,7 +65,7 @@ public final class JobCopyGetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="sourceTables", required=true)
-      private final Output<List<JobCopySourceTableGetArgs>> sourceTables;
+    private Output<List<JobCopySourceTableGetArgs>> sourceTables;
 
     public Output<List<JobCopySourceTableGetArgs>> sourceTables() {
         return this.sourceTables;
@@ -83,105 +83,93 @@ public final class JobCopyGetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="writeDisposition")
-      private final @Nullable Output<String> writeDisposition;
+    private @Nullable Output<String> writeDisposition;
 
-    public Output<String> writeDisposition() {
-        return this.writeDisposition == null ? Codegen.empty() : this.writeDisposition;
+    public Optional<Output<String>> writeDisposition() {
+        return Optional.ofNullable(this.writeDisposition);
     }
 
-    public JobCopyGetArgs(
-        @Nullable Output<String> createDisposition,
-        @Nullable Output<JobCopyDestinationEncryptionConfigurationGetArgs> destinationEncryptionConfiguration,
-        @Nullable Output<JobCopyDestinationTableGetArgs> destinationTable,
-        Output<List<JobCopySourceTableGetArgs>> sourceTables,
-        @Nullable Output<String> writeDisposition) {
-        this.createDisposition = createDisposition;
-        this.destinationEncryptionConfiguration = destinationEncryptionConfiguration;
-        this.destinationTable = destinationTable;
-        this.sourceTables = Objects.requireNonNull(sourceTables, "expected parameter 'sourceTables' to be non-null");
-        this.writeDisposition = writeDisposition;
-    }
+    private JobCopyGetArgs() {}
 
-    private JobCopyGetArgs() {
-        this.createDisposition = Codegen.empty();
-        this.destinationEncryptionConfiguration = Codegen.empty();
-        this.destinationTable = Codegen.empty();
-        this.sourceTables = Codegen.empty();
-        this.writeDisposition = Codegen.empty();
+    private JobCopyGetArgs(JobCopyGetArgs $) {
+        this.createDisposition = $.createDisposition;
+        this.destinationEncryptionConfiguration = $.destinationEncryptionConfiguration;
+        this.destinationTable = $.destinationTable;
+        this.sourceTables = $.sourceTables;
+        this.writeDisposition = $.writeDisposition;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(JobCopyGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> createDisposition;
-        private @Nullable Output<JobCopyDestinationEncryptionConfigurationGetArgs> destinationEncryptionConfiguration;
-        private @Nullable Output<JobCopyDestinationTableGetArgs> destinationTable;
-        private Output<List<JobCopySourceTableGetArgs>> sourceTables;
-        private @Nullable Output<String> writeDisposition;
+        private JobCopyGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new JobCopyGetArgs();
         }
 
         public Builder(JobCopyGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.createDisposition = defaults.createDisposition;
-    	      this.destinationEncryptionConfiguration = defaults.destinationEncryptionConfiguration;
-    	      this.destinationTable = defaults.destinationTable;
-    	      this.sourceTables = defaults.sourceTables;
-    	      this.writeDisposition = defaults.writeDisposition;
+            $ = new JobCopyGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder createDisposition(@Nullable Output<String> createDisposition) {
-            this.createDisposition = createDisposition;
+            $.createDisposition = createDisposition;
             return this;
         }
-        public Builder createDisposition(@Nullable String createDisposition) {
-            this.createDisposition = Codegen.ofNullable(createDisposition);
-            return this;
+
+        public Builder createDisposition(String createDisposition) {
+            return createDisposition(Output.of(createDisposition));
         }
+
         public Builder destinationEncryptionConfiguration(@Nullable Output<JobCopyDestinationEncryptionConfigurationGetArgs> destinationEncryptionConfiguration) {
-            this.destinationEncryptionConfiguration = destinationEncryptionConfiguration;
+            $.destinationEncryptionConfiguration = destinationEncryptionConfiguration;
             return this;
         }
-        public Builder destinationEncryptionConfiguration(@Nullable JobCopyDestinationEncryptionConfigurationGetArgs destinationEncryptionConfiguration) {
-            this.destinationEncryptionConfiguration = Codegen.ofNullable(destinationEncryptionConfiguration);
-            return this;
+
+        public Builder destinationEncryptionConfiguration(JobCopyDestinationEncryptionConfigurationGetArgs destinationEncryptionConfiguration) {
+            return destinationEncryptionConfiguration(Output.of(destinationEncryptionConfiguration));
         }
+
         public Builder destinationTable(@Nullable Output<JobCopyDestinationTableGetArgs> destinationTable) {
-            this.destinationTable = destinationTable;
+            $.destinationTable = destinationTable;
             return this;
         }
-        public Builder destinationTable(@Nullable JobCopyDestinationTableGetArgs destinationTable) {
-            this.destinationTable = Codegen.ofNullable(destinationTable);
-            return this;
+
+        public Builder destinationTable(JobCopyDestinationTableGetArgs destinationTable) {
+            return destinationTable(Output.of(destinationTable));
         }
+
         public Builder sourceTables(Output<List<JobCopySourceTableGetArgs>> sourceTables) {
-            this.sourceTables = Objects.requireNonNull(sourceTables);
+            $.sourceTables = sourceTables;
             return this;
         }
+
         public Builder sourceTables(List<JobCopySourceTableGetArgs> sourceTables) {
-            this.sourceTables = Output.of(Objects.requireNonNull(sourceTables));
-            return this;
+            return sourceTables(Output.of(sourceTables));
         }
+
         public Builder sourceTables(JobCopySourceTableGetArgs... sourceTables) {
             return sourceTables(List.of(sourceTables));
         }
+
         public Builder writeDisposition(@Nullable Output<String> writeDisposition) {
-            this.writeDisposition = writeDisposition;
+            $.writeDisposition = writeDisposition;
             return this;
         }
-        public Builder writeDisposition(@Nullable String writeDisposition) {
-            this.writeDisposition = Codegen.ofNullable(writeDisposition);
-            return this;
-        }        public JobCopyGetArgs build() {
-            return new JobCopyGetArgs(createDisposition, destinationEncryptionConfiguration, destinationTable, sourceTables, writeDisposition);
+
+        public Builder writeDisposition(String writeDisposition) {
+            return writeDisposition(Output.of(writeDisposition));
+        }
+
+        public JobCopyGetArgs build() {
+            $.sourceTables = Objects.requireNonNull($.sourceTables, "expected parameter 'sourceTables' to be non-null");
+            return $;
         }
     }
+
 }

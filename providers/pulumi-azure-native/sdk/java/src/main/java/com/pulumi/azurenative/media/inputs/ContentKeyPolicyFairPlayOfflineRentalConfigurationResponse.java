@@ -17,7 +17,7 @@ public final class ContentKeyPolicyFairPlayOfflineRentalConfigurationResponse ex
      * 
      */
     @Import(name="playbackDurationSeconds", required=true)
-      private final Double playbackDurationSeconds;
+    private Double playbackDurationSeconds;
 
     public Double playbackDurationSeconds() {
         return this.playbackDurationSeconds;
@@ -28,55 +28,52 @@ public final class ContentKeyPolicyFairPlayOfflineRentalConfigurationResponse ex
      * 
      */
     @Import(name="storageDurationSeconds", required=true)
-      private final Double storageDurationSeconds;
+    private Double storageDurationSeconds;
 
     public Double storageDurationSeconds() {
         return this.storageDurationSeconds;
     }
 
-    public ContentKeyPolicyFairPlayOfflineRentalConfigurationResponse(
-        Double playbackDurationSeconds,
-        Double storageDurationSeconds) {
-        this.playbackDurationSeconds = Objects.requireNonNull(playbackDurationSeconds, "expected parameter 'playbackDurationSeconds' to be non-null");
-        this.storageDurationSeconds = Objects.requireNonNull(storageDurationSeconds, "expected parameter 'storageDurationSeconds' to be non-null");
-    }
+    private ContentKeyPolicyFairPlayOfflineRentalConfigurationResponse() {}
 
-    private ContentKeyPolicyFairPlayOfflineRentalConfigurationResponse() {
-        this.playbackDurationSeconds = null;
-        this.storageDurationSeconds = null;
+    private ContentKeyPolicyFairPlayOfflineRentalConfigurationResponse(ContentKeyPolicyFairPlayOfflineRentalConfigurationResponse $) {
+        this.playbackDurationSeconds = $.playbackDurationSeconds;
+        this.storageDurationSeconds = $.storageDurationSeconds;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ContentKeyPolicyFairPlayOfflineRentalConfigurationResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Double playbackDurationSeconds;
-        private Double storageDurationSeconds;
+        private ContentKeyPolicyFairPlayOfflineRentalConfigurationResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ContentKeyPolicyFairPlayOfflineRentalConfigurationResponse();
         }
 
         public Builder(ContentKeyPolicyFairPlayOfflineRentalConfigurationResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.playbackDurationSeconds = defaults.playbackDurationSeconds;
-    	      this.storageDurationSeconds = defaults.storageDurationSeconds;
+            $ = new ContentKeyPolicyFairPlayOfflineRentalConfigurationResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder playbackDurationSeconds(Double playbackDurationSeconds) {
-            this.playbackDurationSeconds = Objects.requireNonNull(playbackDurationSeconds);
+            $.playbackDurationSeconds = playbackDurationSeconds;
             return this;
         }
+
         public Builder storageDurationSeconds(Double storageDurationSeconds) {
-            this.storageDurationSeconds = Objects.requireNonNull(storageDurationSeconds);
+            $.storageDurationSeconds = storageDurationSeconds;
             return this;
-        }        public ContentKeyPolicyFairPlayOfflineRentalConfigurationResponse build() {
-            return new ContentKeyPolicyFairPlayOfflineRentalConfigurationResponse(playbackDurationSeconds, storageDurationSeconds);
+        }
+
+        public ContentKeyPolicyFairPlayOfflineRentalConfigurationResponse build() {
+            $.playbackDurationSeconds = Objects.requireNonNull($.playbackDurationSeconds, "expected parameter 'playbackDurationSeconds' to be non-null");
+            $.storageDurationSeconds = Objects.requireNonNull($.storageDurationSeconds, "expected parameter 'storageDurationSeconds' to be non-null");
+            return $;
         }
     }
+
 }

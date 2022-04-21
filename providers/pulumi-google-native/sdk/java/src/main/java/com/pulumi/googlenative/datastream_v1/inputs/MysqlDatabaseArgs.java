@@ -5,11 +5,11 @@ package com.pulumi.googlenative.datastream_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.datastream_v1.inputs.MysqlTableArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class MysqlDatabaseArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="database")
-      private final @Nullable Output<String> database;
+    private @Nullable Output<String> database;
 
-    public Output<String> database() {
-        return this.database == null ? Codegen.empty() : this.database;
+    public Optional<Output<String>> database() {
+        return Optional.ofNullable(this.database);
     }
 
     /**
@@ -37,66 +37,62 @@ public final class MysqlDatabaseArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="mysqlTables")
-      private final @Nullable Output<List<MysqlTableArgs>> mysqlTables;
+    private @Nullable Output<List<MysqlTableArgs>> mysqlTables;
 
-    public Output<List<MysqlTableArgs>> mysqlTables() {
-        return this.mysqlTables == null ? Codegen.empty() : this.mysqlTables;
+    public Optional<Output<List<MysqlTableArgs>>> mysqlTables() {
+        return Optional.ofNullable(this.mysqlTables);
     }
 
-    public MysqlDatabaseArgs(
-        @Nullable Output<String> database,
-        @Nullable Output<List<MysqlTableArgs>> mysqlTables) {
-        this.database = database;
-        this.mysqlTables = mysqlTables;
-    }
+    private MysqlDatabaseArgs() {}
 
-    private MysqlDatabaseArgs() {
-        this.database = Codegen.empty();
-        this.mysqlTables = Codegen.empty();
+    private MysqlDatabaseArgs(MysqlDatabaseArgs $) {
+        this.database = $.database;
+        this.mysqlTables = $.mysqlTables;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MysqlDatabaseArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> database;
-        private @Nullable Output<List<MysqlTableArgs>> mysqlTables;
+        private MysqlDatabaseArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new MysqlDatabaseArgs();
         }
 
         public Builder(MysqlDatabaseArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.database = defaults.database;
-    	      this.mysqlTables = defaults.mysqlTables;
+            $ = new MysqlDatabaseArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder database(@Nullable Output<String> database) {
-            this.database = database;
+            $.database = database;
             return this;
         }
-        public Builder database(@Nullable String database) {
-            this.database = Codegen.ofNullable(database);
-            return this;
+
+        public Builder database(String database) {
+            return database(Output.of(database));
         }
+
         public Builder mysqlTables(@Nullable Output<List<MysqlTableArgs>> mysqlTables) {
-            this.mysqlTables = mysqlTables;
+            $.mysqlTables = mysqlTables;
             return this;
         }
-        public Builder mysqlTables(@Nullable List<MysqlTableArgs> mysqlTables) {
-            this.mysqlTables = Codegen.ofNullable(mysqlTables);
-            return this;
+
+        public Builder mysqlTables(List<MysqlTableArgs> mysqlTables) {
+            return mysqlTables(Output.of(mysqlTables));
         }
+
         public Builder mysqlTables(MysqlTableArgs... mysqlTables) {
             return mysqlTables(List.of(mysqlTables));
-        }        public MysqlDatabaseArgs build() {
-            return new MysqlDatabaseArgs(database, mysqlTables);
+        }
+
+        public MysqlDatabaseArgs build() {
+            return $;
         }
     }
+
 }

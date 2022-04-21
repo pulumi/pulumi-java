@@ -12,6 +12,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -28,10 +29,10 @@ public final class VideoAnalyzerPresetArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="audioLanguage")
-      private final @Nullable Output<String> audioLanguage;
+    private @Nullable Output<String> audioLanguage;
 
-    public Output<String> audioLanguage() {
-        return this.audioLanguage == null ? Codegen.empty() : this.audioLanguage;
+    public Optional<Output<String>> audioLanguage() {
+        return Optional.ofNullable(this.audioLanguage);
     }
 
     /**
@@ -39,10 +40,10 @@ public final class VideoAnalyzerPresetArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="experimentalOptions")
-      private final @Nullable Output<Map<String,String>> experimentalOptions;
+    private @Nullable Output<Map<String,String>> experimentalOptions;
 
-    public Output<Map<String,String>> experimentalOptions() {
-        return this.experimentalOptions == null ? Codegen.empty() : this.experimentalOptions;
+    public Optional<Output<Map<String,String>>> experimentalOptions() {
+        return Optional.ofNullable(this.experimentalOptions);
     }
 
     /**
@@ -50,10 +51,10 @@ public final class VideoAnalyzerPresetArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="insightsToExtract")
-      private final @Nullable Output<Either<String,InsightsType>> insightsToExtract;
+    private @Nullable Output<Either<String,InsightsType>> insightsToExtract;
 
-    public Output<Either<String,InsightsType>> insightsToExtract() {
-        return this.insightsToExtract == null ? Codegen.empty() : this.insightsToExtract;
+    public Optional<Output<Either<String,InsightsType>>> insightsToExtract() {
+        return Optional.ofNullable(this.insightsToExtract);
     }
 
     /**
@@ -61,10 +62,10 @@ public final class VideoAnalyzerPresetArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="mode")
-      private final @Nullable Output<Either<String,AudioAnalysisMode>> mode;
+    private @Nullable Output<Either<String,AudioAnalysisMode>> mode;
 
-    public Output<Either<String,AudioAnalysisMode>> mode() {
-        return this.mode == null ? Codegen.empty() : this.mode;
+    public Optional<Output<Either<String,AudioAnalysisMode>>> mode() {
+        return Optional.ofNullable(this.mode);
     }
 
     /**
@@ -73,102 +74,89 @@ public final class VideoAnalyzerPresetArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="odataType", required=true)
-      private final Output<String> odataType;
+    private Output<String> odataType;
 
     public Output<String> odataType() {
         return this.odataType;
     }
 
-    public VideoAnalyzerPresetArgs(
-        @Nullable Output<String> audioLanguage,
-        @Nullable Output<Map<String,String>> experimentalOptions,
-        @Nullable Output<Either<String,InsightsType>> insightsToExtract,
-        @Nullable Output<Either<String,AudioAnalysisMode>> mode,
-        Output<String> odataType) {
-        this.audioLanguage = audioLanguage;
-        this.experimentalOptions = experimentalOptions;
-        this.insightsToExtract = insightsToExtract;
-        this.mode = mode;
-        this.odataType = Codegen.stringProp("odataType").output().arg(odataType).require();
-    }
+    private VideoAnalyzerPresetArgs() {}
 
-    private VideoAnalyzerPresetArgs() {
-        this.audioLanguage = Codegen.empty();
-        this.experimentalOptions = Codegen.empty();
-        this.insightsToExtract = Codegen.empty();
-        this.mode = Codegen.empty();
-        this.odataType = Codegen.empty();
+    private VideoAnalyzerPresetArgs(VideoAnalyzerPresetArgs $) {
+        this.audioLanguage = $.audioLanguage;
+        this.experimentalOptions = $.experimentalOptions;
+        this.insightsToExtract = $.insightsToExtract;
+        this.mode = $.mode;
+        this.odataType = $.odataType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VideoAnalyzerPresetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> audioLanguage;
-        private @Nullable Output<Map<String,String>> experimentalOptions;
-        private @Nullable Output<Either<String,InsightsType>> insightsToExtract;
-        private @Nullable Output<Either<String,AudioAnalysisMode>> mode;
-        private Output<String> odataType;
+        private VideoAnalyzerPresetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new VideoAnalyzerPresetArgs();
         }
 
         public Builder(VideoAnalyzerPresetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.audioLanguage = defaults.audioLanguage;
-    	      this.experimentalOptions = defaults.experimentalOptions;
-    	      this.insightsToExtract = defaults.insightsToExtract;
-    	      this.mode = defaults.mode;
-    	      this.odataType = defaults.odataType;
+            $ = new VideoAnalyzerPresetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder audioLanguage(@Nullable Output<String> audioLanguage) {
-            this.audioLanguage = audioLanguage;
+            $.audioLanguage = audioLanguage;
             return this;
         }
-        public Builder audioLanguage(@Nullable String audioLanguage) {
-            this.audioLanguage = Codegen.ofNullable(audioLanguage);
-            return this;
+
+        public Builder audioLanguage(String audioLanguage) {
+            return audioLanguage(Output.of(audioLanguage));
         }
+
         public Builder experimentalOptions(@Nullable Output<Map<String,String>> experimentalOptions) {
-            this.experimentalOptions = experimentalOptions;
+            $.experimentalOptions = experimentalOptions;
             return this;
         }
-        public Builder experimentalOptions(@Nullable Map<String,String> experimentalOptions) {
-            this.experimentalOptions = Codegen.ofNullable(experimentalOptions);
-            return this;
+
+        public Builder experimentalOptions(Map<String,String> experimentalOptions) {
+            return experimentalOptions(Output.of(experimentalOptions));
         }
+
         public Builder insightsToExtract(@Nullable Output<Either<String,InsightsType>> insightsToExtract) {
-            this.insightsToExtract = insightsToExtract;
+            $.insightsToExtract = insightsToExtract;
             return this;
         }
-        public Builder insightsToExtract(@Nullable Either<String,InsightsType> insightsToExtract) {
-            this.insightsToExtract = Codegen.ofNullable(insightsToExtract);
-            return this;
+
+        public Builder insightsToExtract(Either<String,InsightsType> insightsToExtract) {
+            return insightsToExtract(Output.of(insightsToExtract));
         }
+
         public Builder mode(@Nullable Output<Either<String,AudioAnalysisMode>> mode) {
-            this.mode = mode;
+            $.mode = mode;
             return this;
         }
-        public Builder mode(@Nullable Either<String,AudioAnalysisMode> mode) {
-            this.mode = Codegen.ofNullable(mode);
-            return this;
+
+        public Builder mode(Either<String,AudioAnalysisMode> mode) {
+            return mode(Output.of(mode));
         }
+
         public Builder odataType(Output<String> odataType) {
-            this.odataType = Objects.requireNonNull(odataType);
+            $.odataType = odataType;
             return this;
         }
+
         public Builder odataType(String odataType) {
-            this.odataType = Output.of(Objects.requireNonNull(odataType));
-            return this;
-        }        public VideoAnalyzerPresetArgs build() {
-            return new VideoAnalyzerPresetArgs(audioLanguage, experimentalOptions, insightsToExtract, mode, odataType);
+            return odataType(Output.of(odataType));
+        }
+
+        public VideoAnalyzerPresetArgs build() {
+            $.odataType = Codegen.stringProp("odataType").output().arg($.odataType).require();
+            return $;
         }
     }
+
 }

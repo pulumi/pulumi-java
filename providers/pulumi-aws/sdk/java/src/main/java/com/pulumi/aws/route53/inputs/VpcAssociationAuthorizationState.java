@@ -5,9 +5,9 @@ package com.pulumi.aws.route53.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class VpcAssociationAuthorizationState extends com.pulumi.resources
      * 
      */
     @Import(name="vpcId")
-      private final @Nullable Output<String> vpcId;
+    private @Nullable Output<String> vpcId;
 
-    public Output<String> vpcId() {
-        return this.vpcId == null ? Codegen.empty() : this.vpcId;
+    public Optional<Output<String>> vpcId() {
+        return Optional.ofNullable(this.vpcId);
     }
 
     /**
@@ -31,10 +31,10 @@ public final class VpcAssociationAuthorizationState extends com.pulumi.resources
      * 
      */
     @Import(name="vpcRegion")
-      private final @Nullable Output<String> vpcRegion;
+    private @Nullable Output<String> vpcRegion;
 
-    public Output<String> vpcRegion() {
-        return this.vpcRegion == null ? Codegen.empty() : this.vpcRegion;
+    public Optional<Output<String>> vpcRegion() {
+        return Optional.ofNullable(this.vpcRegion);
     }
 
     /**
@@ -42,76 +42,68 @@ public final class VpcAssociationAuthorizationState extends com.pulumi.resources
      * 
      */
     @Import(name="zoneId")
-      private final @Nullable Output<String> zoneId;
+    private @Nullable Output<String> zoneId;
 
-    public Output<String> zoneId() {
-        return this.zoneId == null ? Codegen.empty() : this.zoneId;
+    public Optional<Output<String>> zoneId() {
+        return Optional.ofNullable(this.zoneId);
     }
 
-    public VpcAssociationAuthorizationState(
-        @Nullable Output<String> vpcId,
-        @Nullable Output<String> vpcRegion,
-        @Nullable Output<String> zoneId) {
-        this.vpcId = vpcId;
-        this.vpcRegion = vpcRegion;
-        this.zoneId = zoneId;
-    }
+    private VpcAssociationAuthorizationState() {}
 
-    private VpcAssociationAuthorizationState() {
-        this.vpcId = Codegen.empty();
-        this.vpcRegion = Codegen.empty();
-        this.zoneId = Codegen.empty();
+    private VpcAssociationAuthorizationState(VpcAssociationAuthorizationState $) {
+        this.vpcId = $.vpcId;
+        this.vpcRegion = $.vpcRegion;
+        this.zoneId = $.zoneId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VpcAssociationAuthorizationState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> vpcId;
-        private @Nullable Output<String> vpcRegion;
-        private @Nullable Output<String> zoneId;
+        private VpcAssociationAuthorizationState $;
 
         public Builder() {
-    	      // Empty
+            $ = new VpcAssociationAuthorizationState();
         }
 
         public Builder(VpcAssociationAuthorizationState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.vpcId = defaults.vpcId;
-    	      this.vpcRegion = defaults.vpcRegion;
-    	      this.zoneId = defaults.zoneId;
+            $ = new VpcAssociationAuthorizationState(Objects.requireNonNull(defaults));
         }
 
         public Builder vpcId(@Nullable Output<String> vpcId) {
-            this.vpcId = vpcId;
+            $.vpcId = vpcId;
             return this;
         }
-        public Builder vpcId(@Nullable String vpcId) {
-            this.vpcId = Codegen.ofNullable(vpcId);
-            return this;
+
+        public Builder vpcId(String vpcId) {
+            return vpcId(Output.of(vpcId));
         }
+
         public Builder vpcRegion(@Nullable Output<String> vpcRegion) {
-            this.vpcRegion = vpcRegion;
+            $.vpcRegion = vpcRegion;
             return this;
         }
-        public Builder vpcRegion(@Nullable String vpcRegion) {
-            this.vpcRegion = Codegen.ofNullable(vpcRegion);
-            return this;
+
+        public Builder vpcRegion(String vpcRegion) {
+            return vpcRegion(Output.of(vpcRegion));
         }
+
         public Builder zoneId(@Nullable Output<String> zoneId) {
-            this.zoneId = zoneId;
+            $.zoneId = zoneId;
             return this;
         }
-        public Builder zoneId(@Nullable String zoneId) {
-            this.zoneId = Codegen.ofNullable(zoneId);
-            return this;
-        }        public VpcAssociationAuthorizationState build() {
-            return new VpcAssociationAuthorizationState(vpcId, vpcRegion, zoneId);
+
+        public Builder zoneId(String zoneId) {
+            return zoneId(Output.of(zoneId));
+        }
+
+        public VpcAssociationAuthorizationState build() {
+            return $;
         }
     }
+
 }

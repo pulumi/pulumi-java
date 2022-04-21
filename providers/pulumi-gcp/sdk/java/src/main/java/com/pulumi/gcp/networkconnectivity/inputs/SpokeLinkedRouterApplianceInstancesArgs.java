@@ -5,7 +5,6 @@ package com.pulumi.gcp.networkconnectivity.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.networkconnectivity.inputs.SpokeLinkedRouterApplianceInstancesInstanceArgs;
 import java.lang.Boolean;
 import java.util.List;
@@ -21,7 +20,7 @@ public final class SpokeLinkedRouterApplianceInstancesArgs extends com.pulumi.re
      * 
      */
     @Import(name="instances", required=true)
-      private final Output<List<SpokeLinkedRouterApplianceInstancesInstanceArgs>> instances;
+    private Output<List<SpokeLinkedRouterApplianceInstancesInstanceArgs>> instances;
 
     public Output<List<SpokeLinkedRouterApplianceInstancesInstanceArgs>> instances() {
         return this.instances;
@@ -32,66 +31,64 @@ public final class SpokeLinkedRouterApplianceInstancesArgs extends com.pulumi.re
      * 
      */
     @Import(name="siteToSiteDataTransfer", required=true)
-      private final Output<Boolean> siteToSiteDataTransfer;
+    private Output<Boolean> siteToSiteDataTransfer;
 
     public Output<Boolean> siteToSiteDataTransfer() {
         return this.siteToSiteDataTransfer;
     }
 
-    public SpokeLinkedRouterApplianceInstancesArgs(
-        Output<List<SpokeLinkedRouterApplianceInstancesInstanceArgs>> instances,
-        Output<Boolean> siteToSiteDataTransfer) {
-        this.instances = Objects.requireNonNull(instances, "expected parameter 'instances' to be non-null");
-        this.siteToSiteDataTransfer = Objects.requireNonNull(siteToSiteDataTransfer, "expected parameter 'siteToSiteDataTransfer' to be non-null");
-    }
+    private SpokeLinkedRouterApplianceInstancesArgs() {}
 
-    private SpokeLinkedRouterApplianceInstancesArgs() {
-        this.instances = Codegen.empty();
-        this.siteToSiteDataTransfer = Codegen.empty();
+    private SpokeLinkedRouterApplianceInstancesArgs(SpokeLinkedRouterApplianceInstancesArgs $) {
+        this.instances = $.instances;
+        this.siteToSiteDataTransfer = $.siteToSiteDataTransfer;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SpokeLinkedRouterApplianceInstancesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<List<SpokeLinkedRouterApplianceInstancesInstanceArgs>> instances;
-        private Output<Boolean> siteToSiteDataTransfer;
+        private SpokeLinkedRouterApplianceInstancesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SpokeLinkedRouterApplianceInstancesArgs();
         }
 
         public Builder(SpokeLinkedRouterApplianceInstancesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.instances = defaults.instances;
-    	      this.siteToSiteDataTransfer = defaults.siteToSiteDataTransfer;
+            $ = new SpokeLinkedRouterApplianceInstancesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder instances(Output<List<SpokeLinkedRouterApplianceInstancesInstanceArgs>> instances) {
-            this.instances = Objects.requireNonNull(instances);
+            $.instances = instances;
             return this;
         }
+
         public Builder instances(List<SpokeLinkedRouterApplianceInstancesInstanceArgs> instances) {
-            this.instances = Output.of(Objects.requireNonNull(instances));
-            return this;
+            return instances(Output.of(instances));
         }
+
         public Builder instances(SpokeLinkedRouterApplianceInstancesInstanceArgs... instances) {
             return instances(List.of(instances));
         }
+
         public Builder siteToSiteDataTransfer(Output<Boolean> siteToSiteDataTransfer) {
-            this.siteToSiteDataTransfer = Objects.requireNonNull(siteToSiteDataTransfer);
+            $.siteToSiteDataTransfer = siteToSiteDataTransfer;
             return this;
         }
+
         public Builder siteToSiteDataTransfer(Boolean siteToSiteDataTransfer) {
-            this.siteToSiteDataTransfer = Output.of(Objects.requireNonNull(siteToSiteDataTransfer));
-            return this;
-        }        public SpokeLinkedRouterApplianceInstancesArgs build() {
-            return new SpokeLinkedRouterApplianceInstancesArgs(instances, siteToSiteDataTransfer);
+            return siteToSiteDataTransfer(Output.of(siteToSiteDataTransfer));
+        }
+
+        public SpokeLinkedRouterApplianceInstancesArgs build() {
+            $.instances = Objects.requireNonNull($.instances, "expected parameter 'instances' to be non-null");
+            $.siteToSiteDataTransfer = Objects.requireNonNull($.siteToSiteDataTransfer, "expected parameter 'siteToSiteDataTransfer' to be non-null");
+            return $;
         }
     }
+
 }

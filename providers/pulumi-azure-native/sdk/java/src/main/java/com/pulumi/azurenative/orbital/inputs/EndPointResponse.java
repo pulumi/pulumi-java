@@ -21,7 +21,7 @@ public final class EndPointResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="endPointName", required=true)
-      private final String endPointName;
+    private String endPointName;
 
     public String endPointName() {
         return this.endPointName;
@@ -32,7 +32,7 @@ public final class EndPointResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="ipAddress", required=true)
-      private final String ipAddress;
+    private String ipAddress;
 
     public String ipAddress() {
         return this.ipAddress;
@@ -43,7 +43,7 @@ public final class EndPointResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="port", required=true)
-      private final String port;
+    private String port;
 
     public String port() {
         return this.port;
@@ -54,73 +54,66 @@ public final class EndPointResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="protocol", required=true)
-      private final String protocol;
+    private String protocol;
 
     public String protocol() {
         return this.protocol;
     }
 
-    public EndPointResponse(
-        String endPointName,
-        String ipAddress,
-        String port,
-        String protocol) {
-        this.endPointName = Objects.requireNonNull(endPointName, "expected parameter 'endPointName' to be non-null");
-        this.ipAddress = Objects.requireNonNull(ipAddress, "expected parameter 'ipAddress' to be non-null");
-        this.port = Objects.requireNonNull(port, "expected parameter 'port' to be non-null");
-        this.protocol = Objects.requireNonNull(protocol, "expected parameter 'protocol' to be non-null");
-    }
+    private EndPointResponse() {}
 
-    private EndPointResponse() {
-        this.endPointName = null;
-        this.ipAddress = null;
-        this.port = null;
-        this.protocol = null;
+    private EndPointResponse(EndPointResponse $) {
+        this.endPointName = $.endPointName;
+        this.ipAddress = $.ipAddress;
+        this.port = $.port;
+        this.protocol = $.protocol;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EndPointResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String endPointName;
-        private String ipAddress;
-        private String port;
-        private String protocol;
+        private EndPointResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new EndPointResponse();
         }
 
         public Builder(EndPointResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.endPointName = defaults.endPointName;
-    	      this.ipAddress = defaults.ipAddress;
-    	      this.port = defaults.port;
-    	      this.protocol = defaults.protocol;
+            $ = new EndPointResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder endPointName(String endPointName) {
-            this.endPointName = Objects.requireNonNull(endPointName);
+            $.endPointName = endPointName;
             return this;
         }
+
         public Builder ipAddress(String ipAddress) {
-            this.ipAddress = Objects.requireNonNull(ipAddress);
+            $.ipAddress = ipAddress;
             return this;
         }
+
         public Builder port(String port) {
-            this.port = Objects.requireNonNull(port);
+            $.port = port;
             return this;
         }
+
         public Builder protocol(String protocol) {
-            this.protocol = Objects.requireNonNull(protocol);
+            $.protocol = protocol;
             return this;
-        }        public EndPointResponse build() {
-            return new EndPointResponse(endPointName, ipAddress, port, protocol);
+        }
+
+        public EndPointResponse build() {
+            $.endPointName = Objects.requireNonNull($.endPointName, "expected parameter 'endPointName' to be non-null");
+            $.ipAddress = Objects.requireNonNull($.ipAddress, "expected parameter 'ipAddress' to be non-null");
+            $.port = Objects.requireNonNull($.port, "expected parameter 'port' to be non-null");
+            $.protocol = Objects.requireNonNull($.protocol, "expected parameter 'protocol' to be non-null");
+            return $;
         }
     }
+
 }

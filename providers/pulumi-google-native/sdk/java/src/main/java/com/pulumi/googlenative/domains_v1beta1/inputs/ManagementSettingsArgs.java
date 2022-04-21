@@ -5,9 +5,9 @@ package com.pulumi.googlenative.domains_v1beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.domains_v1beta1.enums.ManagementSettingsTransferLockState;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class ManagementSettingsArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="transferLockState")
-      private final @Nullable Output<ManagementSettingsTransferLockState> transferLockState;
+    private @Nullable Output<ManagementSettingsTransferLockState> transferLockState;
 
-    public Output<ManagementSettingsTransferLockState> transferLockState() {
-        return this.transferLockState == null ? Codegen.empty() : this.transferLockState;
+    public Optional<Output<ManagementSettingsTransferLockState>> transferLockState() {
+        return Optional.ofNullable(this.transferLockState);
     }
 
-    public ManagementSettingsArgs(@Nullable Output<ManagementSettingsTransferLockState> transferLockState) {
-        this.transferLockState = transferLockState;
-    }
+    private ManagementSettingsArgs() {}
 
-    private ManagementSettingsArgs() {
-        this.transferLockState = Codegen.empty();
+    private ManagementSettingsArgs(ManagementSettingsArgs $) {
+        this.transferLockState = $.transferLockState;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ManagementSettingsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<ManagementSettingsTransferLockState> transferLockState;
+        private ManagementSettingsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ManagementSettingsArgs();
         }
 
         public Builder(ManagementSettingsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.transferLockState = defaults.transferLockState;
+            $ = new ManagementSettingsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder transferLockState(@Nullable Output<ManagementSettingsTransferLockState> transferLockState) {
-            this.transferLockState = transferLockState;
+            $.transferLockState = transferLockState;
             return this;
         }
-        public Builder transferLockState(@Nullable ManagementSettingsTransferLockState transferLockState) {
-            this.transferLockState = Codegen.ofNullable(transferLockState);
-            return this;
-        }        public ManagementSettingsArgs build() {
-            return new ManagementSettingsArgs(transferLockState);
+
+        public Builder transferLockState(ManagementSettingsTransferLockState transferLockState) {
+            return transferLockState(Output.of(transferLockState));
+        }
+
+        public ManagementSettingsArgs build() {
+            return $;
         }
     }
+
 }

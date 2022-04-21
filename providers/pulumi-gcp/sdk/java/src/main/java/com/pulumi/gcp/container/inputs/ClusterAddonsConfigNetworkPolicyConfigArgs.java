@@ -5,7 +5,6 @@ package com.pulumi.gcp.container.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.Objects;
 
@@ -20,49 +19,49 @@ public final class ClusterAddonsConfigNetworkPolicyConfigArgs extends com.pulumi
      * 
      */
     @Import(name="disabled", required=true)
-      private final Output<Boolean> disabled;
+    private Output<Boolean> disabled;
 
     public Output<Boolean> disabled() {
         return this.disabled;
     }
 
-    public ClusterAddonsConfigNetworkPolicyConfigArgs(Output<Boolean> disabled) {
-        this.disabled = Objects.requireNonNull(disabled, "expected parameter 'disabled' to be non-null");
-    }
+    private ClusterAddonsConfigNetworkPolicyConfigArgs() {}
 
-    private ClusterAddonsConfigNetworkPolicyConfigArgs() {
-        this.disabled = Codegen.empty();
+    private ClusterAddonsConfigNetworkPolicyConfigArgs(ClusterAddonsConfigNetworkPolicyConfigArgs $) {
+        this.disabled = $.disabled;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ClusterAddonsConfigNetworkPolicyConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Boolean> disabled;
+        private ClusterAddonsConfigNetworkPolicyConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ClusterAddonsConfigNetworkPolicyConfigArgs();
         }
 
         public Builder(ClusterAddonsConfigNetworkPolicyConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.disabled = defaults.disabled;
+            $ = new ClusterAddonsConfigNetworkPolicyConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder disabled(Output<Boolean> disabled) {
-            this.disabled = Objects.requireNonNull(disabled);
+            $.disabled = disabled;
             return this;
         }
+
         public Builder disabled(Boolean disabled) {
-            this.disabled = Output.of(Objects.requireNonNull(disabled));
-            return this;
-        }        public ClusterAddonsConfigNetworkPolicyConfigArgs build() {
-            return new ClusterAddonsConfigNetworkPolicyConfigArgs(disabled);
+            return disabled(Output.of(disabled));
+        }
+
+        public ClusterAddonsConfigNetworkPolicyConfigArgs build() {
+            $.disabled = Objects.requireNonNull($.disabled, "expected parameter 'disabled' to be non-null");
+            return $;
         }
     }
+
 }

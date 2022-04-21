@@ -26,28 +26,28 @@ public final class RuleGroupRule extends com.pulumi.resources.InvokeArgs {
     public static final RuleGroupRule Empty = new RuleGroupRule();
 
     @Import(name="action")
-      private final @Nullable RuleGroupRuleAction action;
+    private @Nullable RuleGroupRuleAction action;
 
     public Optional<RuleGroupRuleAction> action() {
-        return this.action == null ? Optional.empty() : Optional.ofNullable(this.action);
+        return Optional.ofNullable(this.action);
     }
 
     @Import(name="captchaConfig")
-      private final @Nullable RuleGroupCaptchaConfig captchaConfig;
+    private @Nullable RuleGroupCaptchaConfig captchaConfig;
 
     public Optional<RuleGroupCaptchaConfig> captchaConfig() {
-        return this.captchaConfig == null ? Optional.empty() : Optional.ofNullable(this.captchaConfig);
+        return Optional.ofNullable(this.captchaConfig);
     }
 
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
     }
 
     @Import(name="priority", required=true)
-      private final Integer priority;
+    private Integer priority;
 
     public Integer priority() {
         return this.priority;
@@ -58,117 +58,102 @@ public final class RuleGroupRule extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="ruleLabels")
-      private final @Nullable List<RuleGroupLabel> ruleLabels;
+    private @Nullable List<RuleGroupLabel> ruleLabels;
 
-    public List<RuleGroupLabel> ruleLabels() {
-        return this.ruleLabels == null ? List.of() : this.ruleLabels;
+    public Optional<List<RuleGroupLabel>> ruleLabels() {
+        return Optional.ofNullable(this.ruleLabels);
     }
 
     @Import(name="statement", required=true)
-      private final RuleGroupStatement statement;
+    private RuleGroupStatement statement;
 
     public RuleGroupStatement statement() {
         return this.statement;
     }
 
     @Import(name="visibilityConfig", required=true)
-      private final RuleGroupVisibilityConfig visibilityConfig;
+    private RuleGroupVisibilityConfig visibilityConfig;
 
     public RuleGroupVisibilityConfig visibilityConfig() {
         return this.visibilityConfig;
     }
 
-    public RuleGroupRule(
-        @Nullable RuleGroupRuleAction action,
-        @Nullable RuleGroupCaptchaConfig captchaConfig,
-        String name,
-        Integer priority,
-        @Nullable List<RuleGroupLabel> ruleLabels,
-        RuleGroupStatement statement,
-        RuleGroupVisibilityConfig visibilityConfig) {
-        this.action = action;
-        this.captchaConfig = captchaConfig;
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.priority = Objects.requireNonNull(priority, "expected parameter 'priority' to be non-null");
-        this.ruleLabels = ruleLabels;
-        this.statement = Objects.requireNonNull(statement, "expected parameter 'statement' to be non-null");
-        this.visibilityConfig = Objects.requireNonNull(visibilityConfig, "expected parameter 'visibilityConfig' to be non-null");
-    }
+    private RuleGroupRule() {}
 
-    private RuleGroupRule() {
-        this.action = null;
-        this.captchaConfig = null;
-        this.name = null;
-        this.priority = null;
-        this.ruleLabels = List.of();
-        this.statement = null;
-        this.visibilityConfig = null;
+    private RuleGroupRule(RuleGroupRule $) {
+        this.action = $.action;
+        this.captchaConfig = $.captchaConfig;
+        this.name = $.name;
+        this.priority = $.priority;
+        this.ruleLabels = $.ruleLabels;
+        this.statement = $.statement;
+        this.visibilityConfig = $.visibilityConfig;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RuleGroupRule defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable RuleGroupRuleAction action;
-        private @Nullable RuleGroupCaptchaConfig captchaConfig;
-        private String name;
-        private Integer priority;
-        private @Nullable List<RuleGroupLabel> ruleLabels;
-        private RuleGroupStatement statement;
-        private RuleGroupVisibilityConfig visibilityConfig;
+        private RuleGroupRule $;
 
         public Builder() {
-    	      // Empty
+            $ = new RuleGroupRule();
         }
 
         public Builder(RuleGroupRule defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.action = defaults.action;
-    	      this.captchaConfig = defaults.captchaConfig;
-    	      this.name = defaults.name;
-    	      this.priority = defaults.priority;
-    	      this.ruleLabels = defaults.ruleLabels;
-    	      this.statement = defaults.statement;
-    	      this.visibilityConfig = defaults.visibilityConfig;
+            $ = new RuleGroupRule(Objects.requireNonNull(defaults));
         }
 
         public Builder action(@Nullable RuleGroupRuleAction action) {
-            this.action = action;
+            $.action = action;
             return this;
         }
+
         public Builder captchaConfig(@Nullable RuleGroupCaptchaConfig captchaConfig) {
-            this.captchaConfig = captchaConfig;
+            $.captchaConfig = captchaConfig;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder priority(Integer priority) {
-            this.priority = Objects.requireNonNull(priority);
+            $.priority = priority;
             return this;
         }
+
         public Builder ruleLabels(@Nullable List<RuleGroupLabel> ruleLabels) {
-            this.ruleLabels = ruleLabels;
+            $.ruleLabels = ruleLabels;
             return this;
         }
+
         public Builder ruleLabels(RuleGroupLabel... ruleLabels) {
             return ruleLabels(List.of(ruleLabels));
         }
+
         public Builder statement(RuleGroupStatement statement) {
-            this.statement = Objects.requireNonNull(statement);
+            $.statement = statement;
             return this;
         }
+
         public Builder visibilityConfig(RuleGroupVisibilityConfig visibilityConfig) {
-            this.visibilityConfig = Objects.requireNonNull(visibilityConfig);
+            $.visibilityConfig = visibilityConfig;
             return this;
-        }        public RuleGroupRule build() {
-            return new RuleGroupRule(action, captchaConfig, name, priority, ruleLabels, statement, visibilityConfig);
+        }
+
+        public RuleGroupRule build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.priority = Objects.requireNonNull($.priority, "expected parameter 'priority' to be non-null");
+            $.statement = Objects.requireNonNull($.statement, "expected parameter 'statement' to be non-null");
+            $.visibilityConfig = Objects.requireNonNull($.visibilityConfig, "expected parameter 'visibilityConfig' to be non-null");
+            return $;
         }
     }
+
 }

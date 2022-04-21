@@ -5,9 +5,9 @@ package com.pulumi.azurenative.network.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class NsRecordArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="nsdname")
-      private final @Nullable Output<String> nsdname;
+    private @Nullable Output<String> nsdname;
 
-    public Output<String> nsdname() {
-        return this.nsdname == null ? Codegen.empty() : this.nsdname;
+    public Optional<Output<String>> nsdname() {
+        return Optional.ofNullable(this.nsdname);
     }
 
-    public NsRecordArgs(@Nullable Output<String> nsdname) {
-        this.nsdname = nsdname;
-    }
+    private NsRecordArgs() {}
 
-    private NsRecordArgs() {
-        this.nsdname = Codegen.empty();
+    private NsRecordArgs(NsRecordArgs $) {
+        this.nsdname = $.nsdname;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NsRecordArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> nsdname;
+        private NsRecordArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new NsRecordArgs();
         }
 
         public Builder(NsRecordArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.nsdname = defaults.nsdname;
+            $ = new NsRecordArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder nsdname(@Nullable Output<String> nsdname) {
-            this.nsdname = nsdname;
+            $.nsdname = nsdname;
             return this;
         }
-        public Builder nsdname(@Nullable String nsdname) {
-            this.nsdname = Codegen.ofNullable(nsdname);
-            return this;
-        }        public NsRecordArgs build() {
-            return new NsRecordArgs(nsdname);
+
+        public Builder nsdname(String nsdname) {
+            return nsdname(Output.of(nsdname));
+        }
+
+        public NsRecordArgs build() {
+            return $;
         }
     }
+
 }

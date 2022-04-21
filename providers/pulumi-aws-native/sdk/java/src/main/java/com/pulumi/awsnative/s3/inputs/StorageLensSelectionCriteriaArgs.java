@@ -5,11 +5,11 @@ package com.pulumi.awsnative.s3.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class StorageLensSelectionCriteriaArgs extends com.pulumi.resources
      * 
      */
     @Import(name="delimiter")
-      private final @Nullable Output<String> delimiter;
+    private @Nullable Output<String> delimiter;
 
-    public Output<String> delimiter() {
-        return this.delimiter == null ? Codegen.empty() : this.delimiter;
+    public Optional<Output<String>> delimiter() {
+        return Optional.ofNullable(this.delimiter);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class StorageLensSelectionCriteriaArgs extends com.pulumi.resources
      * 
      */
     @Import(name="maxDepth")
-      private final @Nullable Output<Integer> maxDepth;
+    private @Nullable Output<Integer> maxDepth;
 
-    public Output<Integer> maxDepth() {
-        return this.maxDepth == null ? Codegen.empty() : this.maxDepth;
+    public Optional<Output<Integer>> maxDepth() {
+        return Optional.ofNullable(this.maxDepth);
     }
 
     /**
@@ -48,76 +48,68 @@ public final class StorageLensSelectionCriteriaArgs extends com.pulumi.resources
      * 
      */
     @Import(name="minStorageBytesPercentage")
-      private final @Nullable Output<Double> minStorageBytesPercentage;
+    private @Nullable Output<Double> minStorageBytesPercentage;
 
-    public Output<Double> minStorageBytesPercentage() {
-        return this.minStorageBytesPercentage == null ? Codegen.empty() : this.minStorageBytesPercentage;
+    public Optional<Output<Double>> minStorageBytesPercentage() {
+        return Optional.ofNullable(this.minStorageBytesPercentage);
     }
 
-    public StorageLensSelectionCriteriaArgs(
-        @Nullable Output<String> delimiter,
-        @Nullable Output<Integer> maxDepth,
-        @Nullable Output<Double> minStorageBytesPercentage) {
-        this.delimiter = delimiter;
-        this.maxDepth = maxDepth;
-        this.minStorageBytesPercentage = minStorageBytesPercentage;
-    }
+    private StorageLensSelectionCriteriaArgs() {}
 
-    private StorageLensSelectionCriteriaArgs() {
-        this.delimiter = Codegen.empty();
-        this.maxDepth = Codegen.empty();
-        this.minStorageBytesPercentage = Codegen.empty();
+    private StorageLensSelectionCriteriaArgs(StorageLensSelectionCriteriaArgs $) {
+        this.delimiter = $.delimiter;
+        this.maxDepth = $.maxDepth;
+        this.minStorageBytesPercentage = $.minStorageBytesPercentage;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(StorageLensSelectionCriteriaArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> delimiter;
-        private @Nullable Output<Integer> maxDepth;
-        private @Nullable Output<Double> minStorageBytesPercentage;
+        private StorageLensSelectionCriteriaArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new StorageLensSelectionCriteriaArgs();
         }
 
         public Builder(StorageLensSelectionCriteriaArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.delimiter = defaults.delimiter;
-    	      this.maxDepth = defaults.maxDepth;
-    	      this.minStorageBytesPercentage = defaults.minStorageBytesPercentage;
+            $ = new StorageLensSelectionCriteriaArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder delimiter(@Nullable Output<String> delimiter) {
-            this.delimiter = delimiter;
+            $.delimiter = delimiter;
             return this;
         }
-        public Builder delimiter(@Nullable String delimiter) {
-            this.delimiter = Codegen.ofNullable(delimiter);
-            return this;
+
+        public Builder delimiter(String delimiter) {
+            return delimiter(Output.of(delimiter));
         }
+
         public Builder maxDepth(@Nullable Output<Integer> maxDepth) {
-            this.maxDepth = maxDepth;
+            $.maxDepth = maxDepth;
             return this;
         }
-        public Builder maxDepth(@Nullable Integer maxDepth) {
-            this.maxDepth = Codegen.ofNullable(maxDepth);
-            return this;
+
+        public Builder maxDepth(Integer maxDepth) {
+            return maxDepth(Output.of(maxDepth));
         }
+
         public Builder minStorageBytesPercentage(@Nullable Output<Double> minStorageBytesPercentage) {
-            this.minStorageBytesPercentage = minStorageBytesPercentage;
+            $.minStorageBytesPercentage = minStorageBytesPercentage;
             return this;
         }
-        public Builder minStorageBytesPercentage(@Nullable Double minStorageBytesPercentage) {
-            this.minStorageBytesPercentage = Codegen.ofNullable(minStorageBytesPercentage);
-            return this;
-        }        public StorageLensSelectionCriteriaArgs build() {
-            return new StorageLensSelectionCriteriaArgs(delimiter, maxDepth, minStorageBytesPercentage);
+
+        public Builder minStorageBytesPercentage(Double minStorageBytesPercentage) {
+            return minStorageBytesPercentage(Output.of(minStorageBytesPercentage));
+        }
+
+        public StorageLensSelectionCriteriaArgs build() {
+            return $;
         }
     }
+
 }

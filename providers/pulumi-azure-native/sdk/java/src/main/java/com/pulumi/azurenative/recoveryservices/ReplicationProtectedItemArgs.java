@@ -6,9 +6,9 @@ package com.pulumi.azurenative.recoveryservices;
 import com.pulumi.azurenative.recoveryservices.inputs.EnableProtectionInputPropertiesArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,7 +21,7 @@ public final class ReplicationProtectedItemArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="fabricName", required=true)
-      private final Output<String> fabricName;
+    private Output<String> fabricName;
 
     public Output<String> fabricName() {
         return this.fabricName;
@@ -32,10 +32,10 @@ public final class ReplicationProtectedItemArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="properties")
-      private final @Nullable Output<EnableProtectionInputPropertiesArgs> properties;
+    private @Nullable Output<EnableProtectionInputPropertiesArgs> properties;
 
-    public Output<EnableProtectionInputPropertiesArgs> properties() {
-        return this.properties == null ? Codegen.empty() : this.properties;
+    public Optional<Output<EnableProtectionInputPropertiesArgs>> properties() {
+        return Optional.ofNullable(this.properties);
     }
 
     /**
@@ -43,7 +43,7 @@ public final class ReplicationProtectedItemArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="protectionContainerName", required=true)
-      private final Output<String> protectionContainerName;
+    private Output<String> protectionContainerName;
 
     public Output<String> protectionContainerName() {
         return this.protectionContainerName;
@@ -54,10 +54,10 @@ public final class ReplicationProtectedItemArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="replicatedProtectedItemName")
-      private final @Nullable Output<String> replicatedProtectedItemName;
+    private @Nullable Output<String> replicatedProtectedItemName;
 
-    public Output<String> replicatedProtectedItemName() {
-        return this.replicatedProtectedItemName == null ? Codegen.empty() : this.replicatedProtectedItemName;
+    public Optional<Output<String>> replicatedProtectedItemName() {
+        return Optional.ofNullable(this.replicatedProtectedItemName);
     }
 
     /**
@@ -65,7 +65,7 @@ public final class ReplicationProtectedItemArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -76,115 +76,102 @@ public final class ReplicationProtectedItemArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="resourceName", required=true)
-      private final Output<String> resourceName;
+    private Output<String> resourceName;
 
     public Output<String> resourceName() {
         return this.resourceName;
     }
 
-    public ReplicationProtectedItemArgs(
-        Output<String> fabricName,
-        @Nullable Output<EnableProtectionInputPropertiesArgs> properties,
-        Output<String> protectionContainerName,
-        @Nullable Output<String> replicatedProtectedItemName,
-        Output<String> resourceGroupName,
-        Output<String> resourceName) {
-        this.fabricName = Objects.requireNonNull(fabricName, "expected parameter 'fabricName' to be non-null");
-        this.properties = properties;
-        this.protectionContainerName = Objects.requireNonNull(protectionContainerName, "expected parameter 'protectionContainerName' to be non-null");
-        this.replicatedProtectedItemName = replicatedProtectedItemName;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.resourceName = Objects.requireNonNull(resourceName, "expected parameter 'resourceName' to be non-null");
-    }
+    private ReplicationProtectedItemArgs() {}
 
-    private ReplicationProtectedItemArgs() {
-        this.fabricName = Codegen.empty();
-        this.properties = Codegen.empty();
-        this.protectionContainerName = Codegen.empty();
-        this.replicatedProtectedItemName = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.resourceName = Codegen.empty();
+    private ReplicationProtectedItemArgs(ReplicationProtectedItemArgs $) {
+        this.fabricName = $.fabricName;
+        this.properties = $.properties;
+        this.protectionContainerName = $.protectionContainerName;
+        this.replicatedProtectedItemName = $.replicatedProtectedItemName;
+        this.resourceGroupName = $.resourceGroupName;
+        this.resourceName = $.resourceName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ReplicationProtectedItemArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> fabricName;
-        private @Nullable Output<EnableProtectionInputPropertiesArgs> properties;
-        private Output<String> protectionContainerName;
-        private @Nullable Output<String> replicatedProtectedItemName;
-        private Output<String> resourceGroupName;
-        private Output<String> resourceName;
+        private ReplicationProtectedItemArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ReplicationProtectedItemArgs();
         }
 
         public Builder(ReplicationProtectedItemArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.fabricName = defaults.fabricName;
-    	      this.properties = defaults.properties;
-    	      this.protectionContainerName = defaults.protectionContainerName;
-    	      this.replicatedProtectedItemName = defaults.replicatedProtectedItemName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.resourceName = defaults.resourceName;
+            $ = new ReplicationProtectedItemArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder fabricName(Output<String> fabricName) {
-            this.fabricName = Objects.requireNonNull(fabricName);
+            $.fabricName = fabricName;
             return this;
         }
+
         public Builder fabricName(String fabricName) {
-            this.fabricName = Output.of(Objects.requireNonNull(fabricName));
-            return this;
+            return fabricName(Output.of(fabricName));
         }
+
         public Builder properties(@Nullable Output<EnableProtectionInputPropertiesArgs> properties) {
-            this.properties = properties;
+            $.properties = properties;
             return this;
         }
-        public Builder properties(@Nullable EnableProtectionInputPropertiesArgs properties) {
-            this.properties = Codegen.ofNullable(properties);
-            return this;
+
+        public Builder properties(EnableProtectionInputPropertiesArgs properties) {
+            return properties(Output.of(properties));
         }
+
         public Builder protectionContainerName(Output<String> protectionContainerName) {
-            this.protectionContainerName = Objects.requireNonNull(protectionContainerName);
+            $.protectionContainerName = protectionContainerName;
             return this;
         }
+
         public Builder protectionContainerName(String protectionContainerName) {
-            this.protectionContainerName = Output.of(Objects.requireNonNull(protectionContainerName));
-            return this;
+            return protectionContainerName(Output.of(protectionContainerName));
         }
+
         public Builder replicatedProtectedItemName(@Nullable Output<String> replicatedProtectedItemName) {
-            this.replicatedProtectedItemName = replicatedProtectedItemName;
+            $.replicatedProtectedItemName = replicatedProtectedItemName;
             return this;
         }
-        public Builder replicatedProtectedItemName(@Nullable String replicatedProtectedItemName) {
-            this.replicatedProtectedItemName = Codegen.ofNullable(replicatedProtectedItemName);
-            return this;
+
+        public Builder replicatedProtectedItemName(String replicatedProtectedItemName) {
+            return replicatedProtectedItemName(Output.of(replicatedProtectedItemName));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder resourceName(Output<String> resourceName) {
-            this.resourceName = Objects.requireNonNull(resourceName);
+            $.resourceName = resourceName;
             return this;
         }
+
         public Builder resourceName(String resourceName) {
-            this.resourceName = Output.of(Objects.requireNonNull(resourceName));
-            return this;
-        }        public ReplicationProtectedItemArgs build() {
-            return new ReplicationProtectedItemArgs(fabricName, properties, protectionContainerName, replicatedProtectedItemName, resourceGroupName, resourceName);
+            return resourceName(Output.of(resourceName));
+        }
+
+        public ReplicationProtectedItemArgs build() {
+            $.fabricName = Objects.requireNonNull($.fabricName, "expected parameter 'fabricName' to be non-null");
+            $.protectionContainerName = Objects.requireNonNull($.protectionContainerName, "expected parameter 'protectionContainerName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.resourceName = Objects.requireNonNull($.resourceName, "expected parameter 'resourceName' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,12 +5,12 @@ package com.pulumi.gcp.compute.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.compute.inputs.PerInstanceConfigPreservedStateDiskGetArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class PerInstanceConfigPreservedStateGetArgs extends com.pulumi.res
      * 
      */
     @Import(name="disks")
-      private final @Nullable Output<List<PerInstanceConfigPreservedStateDiskGetArgs>> disks;
+    private @Nullable Output<List<PerInstanceConfigPreservedStateDiskGetArgs>> disks;
 
-    public Output<List<PerInstanceConfigPreservedStateDiskGetArgs>> disks() {
-        return this.disks == null ? Codegen.empty() : this.disks;
+    public Optional<Output<List<PerInstanceConfigPreservedStateDiskGetArgs>>> disks() {
+        return Optional.ofNullable(this.disks);
     }
 
     /**
@@ -35,66 +35,62 @@ public final class PerInstanceConfigPreservedStateGetArgs extends com.pulumi.res
      * 
      */
     @Import(name="metadata")
-      private final @Nullable Output<Map<String,String>> metadata;
+    private @Nullable Output<Map<String,String>> metadata;
 
-    public Output<Map<String,String>> metadata() {
-        return this.metadata == null ? Codegen.empty() : this.metadata;
+    public Optional<Output<Map<String,String>>> metadata() {
+        return Optional.ofNullable(this.metadata);
     }
 
-    public PerInstanceConfigPreservedStateGetArgs(
-        @Nullable Output<List<PerInstanceConfigPreservedStateDiskGetArgs>> disks,
-        @Nullable Output<Map<String,String>> metadata) {
-        this.disks = disks;
-        this.metadata = metadata;
-    }
+    private PerInstanceConfigPreservedStateGetArgs() {}
 
-    private PerInstanceConfigPreservedStateGetArgs() {
-        this.disks = Codegen.empty();
-        this.metadata = Codegen.empty();
+    private PerInstanceConfigPreservedStateGetArgs(PerInstanceConfigPreservedStateGetArgs $) {
+        this.disks = $.disks;
+        this.metadata = $.metadata;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PerInstanceConfigPreservedStateGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<PerInstanceConfigPreservedStateDiskGetArgs>> disks;
-        private @Nullable Output<Map<String,String>> metadata;
+        private PerInstanceConfigPreservedStateGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PerInstanceConfigPreservedStateGetArgs();
         }
 
         public Builder(PerInstanceConfigPreservedStateGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.disks = defaults.disks;
-    	      this.metadata = defaults.metadata;
+            $ = new PerInstanceConfigPreservedStateGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder disks(@Nullable Output<List<PerInstanceConfigPreservedStateDiskGetArgs>> disks) {
-            this.disks = disks;
+            $.disks = disks;
             return this;
         }
-        public Builder disks(@Nullable List<PerInstanceConfigPreservedStateDiskGetArgs> disks) {
-            this.disks = Codegen.ofNullable(disks);
-            return this;
+
+        public Builder disks(List<PerInstanceConfigPreservedStateDiskGetArgs> disks) {
+            return disks(Output.of(disks));
         }
+
         public Builder disks(PerInstanceConfigPreservedStateDiskGetArgs... disks) {
             return disks(List.of(disks));
         }
+
         public Builder metadata(@Nullable Output<Map<String,String>> metadata) {
-            this.metadata = metadata;
+            $.metadata = metadata;
             return this;
         }
-        public Builder metadata(@Nullable Map<String,String> metadata) {
-            this.metadata = Codegen.ofNullable(metadata);
-            return this;
-        }        public PerInstanceConfigPreservedStateGetArgs build() {
-            return new PerInstanceConfigPreservedStateGetArgs(disks, metadata);
+
+        public Builder metadata(Map<String,String> metadata) {
+            return metadata(Output.of(metadata));
+        }
+
+        public PerInstanceConfigPreservedStateGetArgs build() {
+            return $;
         }
     }
+
 }

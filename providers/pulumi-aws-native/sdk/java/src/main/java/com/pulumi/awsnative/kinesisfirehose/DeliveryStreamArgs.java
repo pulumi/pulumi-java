@@ -16,10 +16,10 @@ import com.pulumi.awsnative.kinesisfirehose.inputs.DeliveryStreamSplunkDestinati
 import com.pulumi.awsnative.kinesisfirehose.inputs.DeliveryStreamTagArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -28,273 +28,239 @@ public final class DeliveryStreamArgs extends com.pulumi.resources.ResourceArgs 
     public static final DeliveryStreamArgs Empty = new DeliveryStreamArgs();
 
     @Import(name="amazonopensearchserviceDestinationConfiguration")
-      private final @Nullable Output<DeliveryStreamAmazonopensearchserviceDestinationConfigurationArgs> amazonopensearchserviceDestinationConfiguration;
+    private @Nullable Output<DeliveryStreamAmazonopensearchserviceDestinationConfigurationArgs> amazonopensearchserviceDestinationConfiguration;
 
-    public Output<DeliveryStreamAmazonopensearchserviceDestinationConfigurationArgs> amazonopensearchserviceDestinationConfiguration() {
-        return this.amazonopensearchserviceDestinationConfiguration == null ? Codegen.empty() : this.amazonopensearchserviceDestinationConfiguration;
+    public Optional<Output<DeliveryStreamAmazonopensearchserviceDestinationConfigurationArgs>> amazonopensearchserviceDestinationConfiguration() {
+        return Optional.ofNullable(this.amazonopensearchserviceDestinationConfiguration);
     }
 
     @Import(name="deliveryStreamEncryptionConfigurationInput")
-      private final @Nullable Output<DeliveryStreamEncryptionConfigurationInputArgs> deliveryStreamEncryptionConfigurationInput;
+    private @Nullable Output<DeliveryStreamEncryptionConfigurationInputArgs> deliveryStreamEncryptionConfigurationInput;
 
-    public Output<DeliveryStreamEncryptionConfigurationInputArgs> deliveryStreamEncryptionConfigurationInput() {
-        return this.deliveryStreamEncryptionConfigurationInput == null ? Codegen.empty() : this.deliveryStreamEncryptionConfigurationInput;
+    public Optional<Output<DeliveryStreamEncryptionConfigurationInputArgs>> deliveryStreamEncryptionConfigurationInput() {
+        return Optional.ofNullable(this.deliveryStreamEncryptionConfigurationInput);
     }
 
     @Import(name="deliveryStreamName")
-      private final @Nullable Output<String> deliveryStreamName;
+    private @Nullable Output<String> deliveryStreamName;
 
-    public Output<String> deliveryStreamName() {
-        return this.deliveryStreamName == null ? Codegen.empty() : this.deliveryStreamName;
+    public Optional<Output<String>> deliveryStreamName() {
+        return Optional.ofNullable(this.deliveryStreamName);
     }
 
     @Import(name="deliveryStreamType")
-      private final @Nullable Output<DeliveryStreamType> deliveryStreamType;
+    private @Nullable Output<DeliveryStreamType> deliveryStreamType;
 
-    public Output<DeliveryStreamType> deliveryStreamType() {
-        return this.deliveryStreamType == null ? Codegen.empty() : this.deliveryStreamType;
+    public Optional<Output<DeliveryStreamType>> deliveryStreamType() {
+        return Optional.ofNullable(this.deliveryStreamType);
     }
 
     @Import(name="elasticsearchDestinationConfiguration")
-      private final @Nullable Output<DeliveryStreamElasticsearchDestinationConfigurationArgs> elasticsearchDestinationConfiguration;
+    private @Nullable Output<DeliveryStreamElasticsearchDestinationConfigurationArgs> elasticsearchDestinationConfiguration;
 
-    public Output<DeliveryStreamElasticsearchDestinationConfigurationArgs> elasticsearchDestinationConfiguration() {
-        return this.elasticsearchDestinationConfiguration == null ? Codegen.empty() : this.elasticsearchDestinationConfiguration;
+    public Optional<Output<DeliveryStreamElasticsearchDestinationConfigurationArgs>> elasticsearchDestinationConfiguration() {
+        return Optional.ofNullable(this.elasticsearchDestinationConfiguration);
     }
 
     @Import(name="extendedS3DestinationConfiguration")
-      private final @Nullable Output<DeliveryStreamExtendedS3DestinationConfigurationArgs> extendedS3DestinationConfiguration;
+    private @Nullable Output<DeliveryStreamExtendedS3DestinationConfigurationArgs> extendedS3DestinationConfiguration;
 
-    public Output<DeliveryStreamExtendedS3DestinationConfigurationArgs> extendedS3DestinationConfiguration() {
-        return this.extendedS3DestinationConfiguration == null ? Codegen.empty() : this.extendedS3DestinationConfiguration;
+    public Optional<Output<DeliveryStreamExtendedS3DestinationConfigurationArgs>> extendedS3DestinationConfiguration() {
+        return Optional.ofNullable(this.extendedS3DestinationConfiguration);
     }
 
     @Import(name="httpEndpointDestinationConfiguration")
-      private final @Nullable Output<DeliveryStreamHttpEndpointDestinationConfigurationArgs> httpEndpointDestinationConfiguration;
+    private @Nullable Output<DeliveryStreamHttpEndpointDestinationConfigurationArgs> httpEndpointDestinationConfiguration;
 
-    public Output<DeliveryStreamHttpEndpointDestinationConfigurationArgs> httpEndpointDestinationConfiguration() {
-        return this.httpEndpointDestinationConfiguration == null ? Codegen.empty() : this.httpEndpointDestinationConfiguration;
+    public Optional<Output<DeliveryStreamHttpEndpointDestinationConfigurationArgs>> httpEndpointDestinationConfiguration() {
+        return Optional.ofNullable(this.httpEndpointDestinationConfiguration);
     }
 
     @Import(name="kinesisStreamSourceConfiguration")
-      private final @Nullable Output<DeliveryStreamKinesisStreamSourceConfigurationArgs> kinesisStreamSourceConfiguration;
+    private @Nullable Output<DeliveryStreamKinesisStreamSourceConfigurationArgs> kinesisStreamSourceConfiguration;
 
-    public Output<DeliveryStreamKinesisStreamSourceConfigurationArgs> kinesisStreamSourceConfiguration() {
-        return this.kinesisStreamSourceConfiguration == null ? Codegen.empty() : this.kinesisStreamSourceConfiguration;
+    public Optional<Output<DeliveryStreamKinesisStreamSourceConfigurationArgs>> kinesisStreamSourceConfiguration() {
+        return Optional.ofNullable(this.kinesisStreamSourceConfiguration);
     }
 
     @Import(name="redshiftDestinationConfiguration")
-      private final @Nullable Output<DeliveryStreamRedshiftDestinationConfigurationArgs> redshiftDestinationConfiguration;
+    private @Nullable Output<DeliveryStreamRedshiftDestinationConfigurationArgs> redshiftDestinationConfiguration;
 
-    public Output<DeliveryStreamRedshiftDestinationConfigurationArgs> redshiftDestinationConfiguration() {
-        return this.redshiftDestinationConfiguration == null ? Codegen.empty() : this.redshiftDestinationConfiguration;
+    public Optional<Output<DeliveryStreamRedshiftDestinationConfigurationArgs>> redshiftDestinationConfiguration() {
+        return Optional.ofNullable(this.redshiftDestinationConfiguration);
     }
 
     @Import(name="s3DestinationConfiguration")
-      private final @Nullable Output<DeliveryStreamS3DestinationConfigurationArgs> s3DestinationConfiguration;
+    private @Nullable Output<DeliveryStreamS3DestinationConfigurationArgs> s3DestinationConfiguration;
 
-    public Output<DeliveryStreamS3DestinationConfigurationArgs> s3DestinationConfiguration() {
-        return this.s3DestinationConfiguration == null ? Codegen.empty() : this.s3DestinationConfiguration;
+    public Optional<Output<DeliveryStreamS3DestinationConfigurationArgs>> s3DestinationConfiguration() {
+        return Optional.ofNullable(this.s3DestinationConfiguration);
     }
 
     @Import(name="splunkDestinationConfiguration")
-      private final @Nullable Output<DeliveryStreamSplunkDestinationConfigurationArgs> splunkDestinationConfiguration;
+    private @Nullable Output<DeliveryStreamSplunkDestinationConfigurationArgs> splunkDestinationConfiguration;
 
-    public Output<DeliveryStreamSplunkDestinationConfigurationArgs> splunkDestinationConfiguration() {
-        return this.splunkDestinationConfiguration == null ? Codegen.empty() : this.splunkDestinationConfiguration;
+    public Optional<Output<DeliveryStreamSplunkDestinationConfigurationArgs>> splunkDestinationConfiguration() {
+        return Optional.ofNullable(this.splunkDestinationConfiguration);
     }
 
     @Import(name="tags")
-      private final @Nullable Output<List<DeliveryStreamTagArgs>> tags;
+    private @Nullable Output<List<DeliveryStreamTagArgs>> tags;
 
-    public Output<List<DeliveryStreamTagArgs>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<List<DeliveryStreamTagArgs>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public DeliveryStreamArgs(
-        @Nullable Output<DeliveryStreamAmazonopensearchserviceDestinationConfigurationArgs> amazonopensearchserviceDestinationConfiguration,
-        @Nullable Output<DeliveryStreamEncryptionConfigurationInputArgs> deliveryStreamEncryptionConfigurationInput,
-        @Nullable Output<String> deliveryStreamName,
-        @Nullable Output<DeliveryStreamType> deliveryStreamType,
-        @Nullable Output<DeliveryStreamElasticsearchDestinationConfigurationArgs> elasticsearchDestinationConfiguration,
-        @Nullable Output<DeliveryStreamExtendedS3DestinationConfigurationArgs> extendedS3DestinationConfiguration,
-        @Nullable Output<DeliveryStreamHttpEndpointDestinationConfigurationArgs> httpEndpointDestinationConfiguration,
-        @Nullable Output<DeliveryStreamKinesisStreamSourceConfigurationArgs> kinesisStreamSourceConfiguration,
-        @Nullable Output<DeliveryStreamRedshiftDestinationConfigurationArgs> redshiftDestinationConfiguration,
-        @Nullable Output<DeliveryStreamS3DestinationConfigurationArgs> s3DestinationConfiguration,
-        @Nullable Output<DeliveryStreamSplunkDestinationConfigurationArgs> splunkDestinationConfiguration,
-        @Nullable Output<List<DeliveryStreamTagArgs>> tags) {
-        this.amazonopensearchserviceDestinationConfiguration = amazonopensearchserviceDestinationConfiguration;
-        this.deliveryStreamEncryptionConfigurationInput = deliveryStreamEncryptionConfigurationInput;
-        this.deliveryStreamName = deliveryStreamName;
-        this.deliveryStreamType = deliveryStreamType;
-        this.elasticsearchDestinationConfiguration = elasticsearchDestinationConfiguration;
-        this.extendedS3DestinationConfiguration = extendedS3DestinationConfiguration;
-        this.httpEndpointDestinationConfiguration = httpEndpointDestinationConfiguration;
-        this.kinesisStreamSourceConfiguration = kinesisStreamSourceConfiguration;
-        this.redshiftDestinationConfiguration = redshiftDestinationConfiguration;
-        this.s3DestinationConfiguration = s3DestinationConfiguration;
-        this.splunkDestinationConfiguration = splunkDestinationConfiguration;
-        this.tags = tags;
-    }
+    private DeliveryStreamArgs() {}
 
-    private DeliveryStreamArgs() {
-        this.amazonopensearchserviceDestinationConfiguration = Codegen.empty();
-        this.deliveryStreamEncryptionConfigurationInput = Codegen.empty();
-        this.deliveryStreamName = Codegen.empty();
-        this.deliveryStreamType = Codegen.empty();
-        this.elasticsearchDestinationConfiguration = Codegen.empty();
-        this.extendedS3DestinationConfiguration = Codegen.empty();
-        this.httpEndpointDestinationConfiguration = Codegen.empty();
-        this.kinesisStreamSourceConfiguration = Codegen.empty();
-        this.redshiftDestinationConfiguration = Codegen.empty();
-        this.s3DestinationConfiguration = Codegen.empty();
-        this.splunkDestinationConfiguration = Codegen.empty();
-        this.tags = Codegen.empty();
+    private DeliveryStreamArgs(DeliveryStreamArgs $) {
+        this.amazonopensearchserviceDestinationConfiguration = $.amazonopensearchserviceDestinationConfiguration;
+        this.deliveryStreamEncryptionConfigurationInput = $.deliveryStreamEncryptionConfigurationInput;
+        this.deliveryStreamName = $.deliveryStreamName;
+        this.deliveryStreamType = $.deliveryStreamType;
+        this.elasticsearchDestinationConfiguration = $.elasticsearchDestinationConfiguration;
+        this.extendedS3DestinationConfiguration = $.extendedS3DestinationConfiguration;
+        this.httpEndpointDestinationConfiguration = $.httpEndpointDestinationConfiguration;
+        this.kinesisStreamSourceConfiguration = $.kinesisStreamSourceConfiguration;
+        this.redshiftDestinationConfiguration = $.redshiftDestinationConfiguration;
+        this.s3DestinationConfiguration = $.s3DestinationConfiguration;
+        this.splunkDestinationConfiguration = $.splunkDestinationConfiguration;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DeliveryStreamArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<DeliveryStreamAmazonopensearchserviceDestinationConfigurationArgs> amazonopensearchserviceDestinationConfiguration;
-        private @Nullable Output<DeliveryStreamEncryptionConfigurationInputArgs> deliveryStreamEncryptionConfigurationInput;
-        private @Nullable Output<String> deliveryStreamName;
-        private @Nullable Output<DeliveryStreamType> deliveryStreamType;
-        private @Nullable Output<DeliveryStreamElasticsearchDestinationConfigurationArgs> elasticsearchDestinationConfiguration;
-        private @Nullable Output<DeliveryStreamExtendedS3DestinationConfigurationArgs> extendedS3DestinationConfiguration;
-        private @Nullable Output<DeliveryStreamHttpEndpointDestinationConfigurationArgs> httpEndpointDestinationConfiguration;
-        private @Nullable Output<DeliveryStreamKinesisStreamSourceConfigurationArgs> kinesisStreamSourceConfiguration;
-        private @Nullable Output<DeliveryStreamRedshiftDestinationConfigurationArgs> redshiftDestinationConfiguration;
-        private @Nullable Output<DeliveryStreamS3DestinationConfigurationArgs> s3DestinationConfiguration;
-        private @Nullable Output<DeliveryStreamSplunkDestinationConfigurationArgs> splunkDestinationConfiguration;
-        private @Nullable Output<List<DeliveryStreamTagArgs>> tags;
+        private DeliveryStreamArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DeliveryStreamArgs();
         }
 
         public Builder(DeliveryStreamArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.amazonopensearchserviceDestinationConfiguration = defaults.amazonopensearchserviceDestinationConfiguration;
-    	      this.deliveryStreamEncryptionConfigurationInput = defaults.deliveryStreamEncryptionConfigurationInput;
-    	      this.deliveryStreamName = defaults.deliveryStreamName;
-    	      this.deliveryStreamType = defaults.deliveryStreamType;
-    	      this.elasticsearchDestinationConfiguration = defaults.elasticsearchDestinationConfiguration;
-    	      this.extendedS3DestinationConfiguration = defaults.extendedS3DestinationConfiguration;
-    	      this.httpEndpointDestinationConfiguration = defaults.httpEndpointDestinationConfiguration;
-    	      this.kinesisStreamSourceConfiguration = defaults.kinesisStreamSourceConfiguration;
-    	      this.redshiftDestinationConfiguration = defaults.redshiftDestinationConfiguration;
-    	      this.s3DestinationConfiguration = defaults.s3DestinationConfiguration;
-    	      this.splunkDestinationConfiguration = defaults.splunkDestinationConfiguration;
-    	      this.tags = defaults.tags;
+            $ = new DeliveryStreamArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder amazonopensearchserviceDestinationConfiguration(@Nullable Output<DeliveryStreamAmazonopensearchserviceDestinationConfigurationArgs> amazonopensearchserviceDestinationConfiguration) {
-            this.amazonopensearchserviceDestinationConfiguration = amazonopensearchserviceDestinationConfiguration;
+            $.amazonopensearchserviceDestinationConfiguration = amazonopensearchserviceDestinationConfiguration;
             return this;
         }
-        public Builder amazonopensearchserviceDestinationConfiguration(@Nullable DeliveryStreamAmazonopensearchserviceDestinationConfigurationArgs amazonopensearchserviceDestinationConfiguration) {
-            this.amazonopensearchserviceDestinationConfiguration = Codegen.ofNullable(amazonopensearchserviceDestinationConfiguration);
-            return this;
+
+        public Builder amazonopensearchserviceDestinationConfiguration(DeliveryStreamAmazonopensearchserviceDestinationConfigurationArgs amazonopensearchserviceDestinationConfiguration) {
+            return amazonopensearchserviceDestinationConfiguration(Output.of(amazonopensearchserviceDestinationConfiguration));
         }
+
         public Builder deliveryStreamEncryptionConfigurationInput(@Nullable Output<DeliveryStreamEncryptionConfigurationInputArgs> deliveryStreamEncryptionConfigurationInput) {
-            this.deliveryStreamEncryptionConfigurationInput = deliveryStreamEncryptionConfigurationInput;
+            $.deliveryStreamEncryptionConfigurationInput = deliveryStreamEncryptionConfigurationInput;
             return this;
         }
-        public Builder deliveryStreamEncryptionConfigurationInput(@Nullable DeliveryStreamEncryptionConfigurationInputArgs deliveryStreamEncryptionConfigurationInput) {
-            this.deliveryStreamEncryptionConfigurationInput = Codegen.ofNullable(deliveryStreamEncryptionConfigurationInput);
-            return this;
+
+        public Builder deliveryStreamEncryptionConfigurationInput(DeliveryStreamEncryptionConfigurationInputArgs deliveryStreamEncryptionConfigurationInput) {
+            return deliveryStreamEncryptionConfigurationInput(Output.of(deliveryStreamEncryptionConfigurationInput));
         }
+
         public Builder deliveryStreamName(@Nullable Output<String> deliveryStreamName) {
-            this.deliveryStreamName = deliveryStreamName;
+            $.deliveryStreamName = deliveryStreamName;
             return this;
         }
-        public Builder deliveryStreamName(@Nullable String deliveryStreamName) {
-            this.deliveryStreamName = Codegen.ofNullable(deliveryStreamName);
-            return this;
+
+        public Builder deliveryStreamName(String deliveryStreamName) {
+            return deliveryStreamName(Output.of(deliveryStreamName));
         }
+
         public Builder deliveryStreamType(@Nullable Output<DeliveryStreamType> deliveryStreamType) {
-            this.deliveryStreamType = deliveryStreamType;
+            $.deliveryStreamType = deliveryStreamType;
             return this;
         }
-        public Builder deliveryStreamType(@Nullable DeliveryStreamType deliveryStreamType) {
-            this.deliveryStreamType = Codegen.ofNullable(deliveryStreamType);
-            return this;
+
+        public Builder deliveryStreamType(DeliveryStreamType deliveryStreamType) {
+            return deliveryStreamType(Output.of(deliveryStreamType));
         }
+
         public Builder elasticsearchDestinationConfiguration(@Nullable Output<DeliveryStreamElasticsearchDestinationConfigurationArgs> elasticsearchDestinationConfiguration) {
-            this.elasticsearchDestinationConfiguration = elasticsearchDestinationConfiguration;
+            $.elasticsearchDestinationConfiguration = elasticsearchDestinationConfiguration;
             return this;
         }
-        public Builder elasticsearchDestinationConfiguration(@Nullable DeliveryStreamElasticsearchDestinationConfigurationArgs elasticsearchDestinationConfiguration) {
-            this.elasticsearchDestinationConfiguration = Codegen.ofNullable(elasticsearchDestinationConfiguration);
-            return this;
+
+        public Builder elasticsearchDestinationConfiguration(DeliveryStreamElasticsearchDestinationConfigurationArgs elasticsearchDestinationConfiguration) {
+            return elasticsearchDestinationConfiguration(Output.of(elasticsearchDestinationConfiguration));
         }
+
         public Builder extendedS3DestinationConfiguration(@Nullable Output<DeliveryStreamExtendedS3DestinationConfigurationArgs> extendedS3DestinationConfiguration) {
-            this.extendedS3DestinationConfiguration = extendedS3DestinationConfiguration;
+            $.extendedS3DestinationConfiguration = extendedS3DestinationConfiguration;
             return this;
         }
-        public Builder extendedS3DestinationConfiguration(@Nullable DeliveryStreamExtendedS3DestinationConfigurationArgs extendedS3DestinationConfiguration) {
-            this.extendedS3DestinationConfiguration = Codegen.ofNullable(extendedS3DestinationConfiguration);
-            return this;
+
+        public Builder extendedS3DestinationConfiguration(DeliveryStreamExtendedS3DestinationConfigurationArgs extendedS3DestinationConfiguration) {
+            return extendedS3DestinationConfiguration(Output.of(extendedS3DestinationConfiguration));
         }
+
         public Builder httpEndpointDestinationConfiguration(@Nullable Output<DeliveryStreamHttpEndpointDestinationConfigurationArgs> httpEndpointDestinationConfiguration) {
-            this.httpEndpointDestinationConfiguration = httpEndpointDestinationConfiguration;
+            $.httpEndpointDestinationConfiguration = httpEndpointDestinationConfiguration;
             return this;
         }
-        public Builder httpEndpointDestinationConfiguration(@Nullable DeliveryStreamHttpEndpointDestinationConfigurationArgs httpEndpointDestinationConfiguration) {
-            this.httpEndpointDestinationConfiguration = Codegen.ofNullable(httpEndpointDestinationConfiguration);
-            return this;
+
+        public Builder httpEndpointDestinationConfiguration(DeliveryStreamHttpEndpointDestinationConfigurationArgs httpEndpointDestinationConfiguration) {
+            return httpEndpointDestinationConfiguration(Output.of(httpEndpointDestinationConfiguration));
         }
+
         public Builder kinesisStreamSourceConfiguration(@Nullable Output<DeliveryStreamKinesisStreamSourceConfigurationArgs> kinesisStreamSourceConfiguration) {
-            this.kinesisStreamSourceConfiguration = kinesisStreamSourceConfiguration;
+            $.kinesisStreamSourceConfiguration = kinesisStreamSourceConfiguration;
             return this;
         }
-        public Builder kinesisStreamSourceConfiguration(@Nullable DeliveryStreamKinesisStreamSourceConfigurationArgs kinesisStreamSourceConfiguration) {
-            this.kinesisStreamSourceConfiguration = Codegen.ofNullable(kinesisStreamSourceConfiguration);
-            return this;
+
+        public Builder kinesisStreamSourceConfiguration(DeliveryStreamKinesisStreamSourceConfigurationArgs kinesisStreamSourceConfiguration) {
+            return kinesisStreamSourceConfiguration(Output.of(kinesisStreamSourceConfiguration));
         }
+
         public Builder redshiftDestinationConfiguration(@Nullable Output<DeliveryStreamRedshiftDestinationConfigurationArgs> redshiftDestinationConfiguration) {
-            this.redshiftDestinationConfiguration = redshiftDestinationConfiguration;
+            $.redshiftDestinationConfiguration = redshiftDestinationConfiguration;
             return this;
         }
-        public Builder redshiftDestinationConfiguration(@Nullable DeliveryStreamRedshiftDestinationConfigurationArgs redshiftDestinationConfiguration) {
-            this.redshiftDestinationConfiguration = Codegen.ofNullable(redshiftDestinationConfiguration);
-            return this;
+
+        public Builder redshiftDestinationConfiguration(DeliveryStreamRedshiftDestinationConfigurationArgs redshiftDestinationConfiguration) {
+            return redshiftDestinationConfiguration(Output.of(redshiftDestinationConfiguration));
         }
+
         public Builder s3DestinationConfiguration(@Nullable Output<DeliveryStreamS3DestinationConfigurationArgs> s3DestinationConfiguration) {
-            this.s3DestinationConfiguration = s3DestinationConfiguration;
+            $.s3DestinationConfiguration = s3DestinationConfiguration;
             return this;
         }
-        public Builder s3DestinationConfiguration(@Nullable DeliveryStreamS3DestinationConfigurationArgs s3DestinationConfiguration) {
-            this.s3DestinationConfiguration = Codegen.ofNullable(s3DestinationConfiguration);
-            return this;
+
+        public Builder s3DestinationConfiguration(DeliveryStreamS3DestinationConfigurationArgs s3DestinationConfiguration) {
+            return s3DestinationConfiguration(Output.of(s3DestinationConfiguration));
         }
+
         public Builder splunkDestinationConfiguration(@Nullable Output<DeliveryStreamSplunkDestinationConfigurationArgs> splunkDestinationConfiguration) {
-            this.splunkDestinationConfiguration = splunkDestinationConfiguration;
+            $.splunkDestinationConfiguration = splunkDestinationConfiguration;
             return this;
         }
-        public Builder splunkDestinationConfiguration(@Nullable DeliveryStreamSplunkDestinationConfigurationArgs splunkDestinationConfiguration) {
-            this.splunkDestinationConfiguration = Codegen.ofNullable(splunkDestinationConfiguration);
-            return this;
+
+        public Builder splunkDestinationConfiguration(DeliveryStreamSplunkDestinationConfigurationArgs splunkDestinationConfiguration) {
+            return splunkDestinationConfiguration(Output.of(splunkDestinationConfiguration));
         }
+
         public Builder tags(@Nullable Output<List<DeliveryStreamTagArgs>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable List<DeliveryStreamTagArgs> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(List<DeliveryStreamTagArgs> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tags(DeliveryStreamTagArgs... tags) {
             return tags(List.of(tags));
-        }        public DeliveryStreamArgs build() {
-            return new DeliveryStreamArgs(amazonopensearchserviceDestinationConfiguration, deliveryStreamEncryptionConfigurationInput, deliveryStreamName, deliveryStreamType, elasticsearchDestinationConfiguration, extendedS3DestinationConfiguration, httpEndpointDestinationConfiguration, kinesisStreamSourceConfiguration, redshiftDestinationConfiguration, s3DestinationConfiguration, splunkDestinationConfiguration, tags);
+        }
+
+        public DeliveryStreamArgs build() {
+            return $;
         }
     }
+
 }

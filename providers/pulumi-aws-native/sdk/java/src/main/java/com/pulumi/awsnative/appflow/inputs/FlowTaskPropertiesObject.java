@@ -18,62 +18,59 @@ public final class FlowTaskPropertiesObject extends com.pulumi.resources.InvokeA
     public static final FlowTaskPropertiesObject Empty = new FlowTaskPropertiesObject();
 
     @Import(name="key", required=true)
-      private final FlowOperatorPropertiesKeys key;
+    private FlowOperatorPropertiesKeys key;
 
     public FlowOperatorPropertiesKeys key() {
         return this.key;
     }
 
     @Import(name="value", required=true)
-      private final String value;
+    private String value;
 
     public String value() {
         return this.value;
     }
 
-    public FlowTaskPropertiesObject(
-        FlowOperatorPropertiesKeys key,
-        String value) {
-        this.key = Objects.requireNonNull(key, "expected parameter 'key' to be non-null");
-        this.value = Objects.requireNonNull(value, "expected parameter 'value' to be non-null");
-    }
+    private FlowTaskPropertiesObject() {}
 
-    private FlowTaskPropertiesObject() {
-        this.key = null;
-        this.value = null;
+    private FlowTaskPropertiesObject(FlowTaskPropertiesObject $) {
+        this.key = $.key;
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FlowTaskPropertiesObject defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private FlowOperatorPropertiesKeys key;
-        private String value;
+        private FlowTaskPropertiesObject $;
 
         public Builder() {
-    	      // Empty
+            $ = new FlowTaskPropertiesObject();
         }
 
         public Builder(FlowTaskPropertiesObject defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.key = defaults.key;
-    	      this.value = defaults.value;
+            $ = new FlowTaskPropertiesObject(Objects.requireNonNull(defaults));
         }
 
         public Builder key(FlowOperatorPropertiesKeys key) {
-            this.key = Objects.requireNonNull(key);
+            $.key = key;
             return this;
         }
+
         public Builder value(String value) {
-            this.value = Objects.requireNonNull(value);
+            $.value = value;
             return this;
-        }        public FlowTaskPropertiesObject build() {
-            return new FlowTaskPropertiesObject(key, value);
+        }
+
+        public FlowTaskPropertiesObject build() {
+            $.key = Objects.requireNonNull($.key, "expected parameter 'key' to be non-null");
+            $.value = Objects.requireNonNull($.value, "expected parameter 'value' to be non-null");
+            return $;
         }
     }
+
 }

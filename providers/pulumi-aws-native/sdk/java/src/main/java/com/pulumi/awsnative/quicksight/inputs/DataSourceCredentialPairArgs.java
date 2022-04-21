@@ -6,10 +6,10 @@ package com.pulumi.awsnative.quicksight.inputs;
 import com.pulumi.awsnative.quicksight.inputs.DataSourceParametersArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -34,10 +34,10 @@ public final class DataSourceCredentialPairArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="alternateDataSourceParameters")
-      private final @Nullable Output<List<DataSourceParametersArgs>> alternateDataSourceParameters;
+    private @Nullable Output<List<DataSourceParametersArgs>> alternateDataSourceParameters;
 
-    public Output<List<DataSourceParametersArgs>> alternateDataSourceParameters() {
-        return this.alternateDataSourceParameters == null ? Codegen.empty() : this.alternateDataSourceParameters;
+    public Optional<Output<List<DataSourceParametersArgs>>> alternateDataSourceParameters() {
+        return Optional.ofNullable(this.alternateDataSourceParameters);
     }
 
     /**
@@ -45,7 +45,7 @@ public final class DataSourceCredentialPairArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="password", required=true)
-      private final Output<String> password;
+    private Output<String> password;
 
     public Output<String> password() {
         return this.password;
@@ -56,79 +56,74 @@ public final class DataSourceCredentialPairArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="username", required=true)
-      private final Output<String> username;
+    private Output<String> username;
 
     public Output<String> username() {
         return this.username;
     }
 
-    public DataSourceCredentialPairArgs(
-        @Nullable Output<List<DataSourceParametersArgs>> alternateDataSourceParameters,
-        Output<String> password,
-        Output<String> username) {
-        this.alternateDataSourceParameters = alternateDataSourceParameters;
-        this.password = Objects.requireNonNull(password, "expected parameter 'password' to be non-null");
-        this.username = Objects.requireNonNull(username, "expected parameter 'username' to be non-null");
-    }
+    private DataSourceCredentialPairArgs() {}
 
-    private DataSourceCredentialPairArgs() {
-        this.alternateDataSourceParameters = Codegen.empty();
-        this.password = Codegen.empty();
-        this.username = Codegen.empty();
+    private DataSourceCredentialPairArgs(DataSourceCredentialPairArgs $) {
+        this.alternateDataSourceParameters = $.alternateDataSourceParameters;
+        this.password = $.password;
+        this.username = $.username;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DataSourceCredentialPairArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<DataSourceParametersArgs>> alternateDataSourceParameters;
-        private Output<String> password;
-        private Output<String> username;
+        private DataSourceCredentialPairArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DataSourceCredentialPairArgs();
         }
 
         public Builder(DataSourceCredentialPairArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.alternateDataSourceParameters = defaults.alternateDataSourceParameters;
-    	      this.password = defaults.password;
-    	      this.username = defaults.username;
+            $ = new DataSourceCredentialPairArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder alternateDataSourceParameters(@Nullable Output<List<DataSourceParametersArgs>> alternateDataSourceParameters) {
-            this.alternateDataSourceParameters = alternateDataSourceParameters;
+            $.alternateDataSourceParameters = alternateDataSourceParameters;
             return this;
         }
-        public Builder alternateDataSourceParameters(@Nullable List<DataSourceParametersArgs> alternateDataSourceParameters) {
-            this.alternateDataSourceParameters = Codegen.ofNullable(alternateDataSourceParameters);
-            return this;
+
+        public Builder alternateDataSourceParameters(List<DataSourceParametersArgs> alternateDataSourceParameters) {
+            return alternateDataSourceParameters(Output.of(alternateDataSourceParameters));
         }
+
         public Builder alternateDataSourceParameters(DataSourceParametersArgs... alternateDataSourceParameters) {
             return alternateDataSourceParameters(List.of(alternateDataSourceParameters));
         }
+
         public Builder password(Output<String> password) {
-            this.password = Objects.requireNonNull(password);
+            $.password = password;
             return this;
         }
+
         public Builder password(String password) {
-            this.password = Output.of(Objects.requireNonNull(password));
-            return this;
+            return password(Output.of(password));
         }
+
         public Builder username(Output<String> username) {
-            this.username = Objects.requireNonNull(username);
+            $.username = username;
             return this;
         }
+
         public Builder username(String username) {
-            this.username = Output.of(Objects.requireNonNull(username));
-            return this;
-        }        public DataSourceCredentialPairArgs build() {
-            return new DataSourceCredentialPairArgs(alternateDataSourceParameters, password, username);
+            return username(Output.of(username));
+        }
+
+        public DataSourceCredentialPairArgs build() {
+            $.password = Objects.requireNonNull($.password, "expected parameter 'password' to be non-null");
+            $.username = Objects.requireNonNull($.username, "expected parameter 'username' to be non-null");
+            return $;
         }
     }
+
 }

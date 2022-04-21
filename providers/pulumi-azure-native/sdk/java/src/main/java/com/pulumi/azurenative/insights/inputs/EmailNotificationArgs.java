@@ -10,6 +10,7 @@ import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +27,10 @@ public final class EmailNotificationArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="customEmails")
-      private final @Nullable Output<List<String>> customEmails;
+    private @Nullable Output<List<String>> customEmails;
 
-    public Output<List<String>> customEmails() {
-        return this.customEmails == null ? Codegen.empty() : this.customEmails;
+    public Optional<Output<List<String>>> customEmails() {
+        return Optional.ofNullable(this.customEmails);
     }
 
     /**
@@ -37,10 +38,10 @@ public final class EmailNotificationArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="sendToSubscriptionAdministrator")
-      private final @Nullable Output<Boolean> sendToSubscriptionAdministrator;
+    private @Nullable Output<Boolean> sendToSubscriptionAdministrator;
 
-    public Output<Boolean> sendToSubscriptionAdministrator() {
-        return this.sendToSubscriptionAdministrator == null ? Codegen.empty() : this.sendToSubscriptionAdministrator;
+    public Optional<Output<Boolean>> sendToSubscriptionAdministrator() {
+        return Optional.ofNullable(this.sendToSubscriptionAdministrator);
     }
 
     /**
@@ -48,79 +49,74 @@ public final class EmailNotificationArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="sendToSubscriptionCoAdministrators")
-      private final @Nullable Output<Boolean> sendToSubscriptionCoAdministrators;
+    private @Nullable Output<Boolean> sendToSubscriptionCoAdministrators;
 
-    public Output<Boolean> sendToSubscriptionCoAdministrators() {
-        return this.sendToSubscriptionCoAdministrators == null ? Codegen.empty() : this.sendToSubscriptionCoAdministrators;
+    public Optional<Output<Boolean>> sendToSubscriptionCoAdministrators() {
+        return Optional.ofNullable(this.sendToSubscriptionCoAdministrators);
     }
 
-    public EmailNotificationArgs(
-        @Nullable Output<List<String>> customEmails,
-        @Nullable Output<Boolean> sendToSubscriptionAdministrator,
-        @Nullable Output<Boolean> sendToSubscriptionCoAdministrators) {
-        this.customEmails = customEmails;
-        this.sendToSubscriptionAdministrator = Codegen.booleanProp("sendToSubscriptionAdministrator").output().arg(sendToSubscriptionAdministrator).def(false).getNullable();
-        this.sendToSubscriptionCoAdministrators = Codegen.booleanProp("sendToSubscriptionCoAdministrators").output().arg(sendToSubscriptionCoAdministrators).def(false).getNullable();
-    }
+    private EmailNotificationArgs() {}
 
-    private EmailNotificationArgs() {
-        this.customEmails = Codegen.empty();
-        this.sendToSubscriptionAdministrator = Codegen.empty();
-        this.sendToSubscriptionCoAdministrators = Codegen.empty();
+    private EmailNotificationArgs(EmailNotificationArgs $) {
+        this.customEmails = $.customEmails;
+        this.sendToSubscriptionAdministrator = $.sendToSubscriptionAdministrator;
+        this.sendToSubscriptionCoAdministrators = $.sendToSubscriptionCoAdministrators;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EmailNotificationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> customEmails;
-        private @Nullable Output<Boolean> sendToSubscriptionAdministrator;
-        private @Nullable Output<Boolean> sendToSubscriptionCoAdministrators;
+        private EmailNotificationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new EmailNotificationArgs();
         }
 
         public Builder(EmailNotificationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.customEmails = defaults.customEmails;
-    	      this.sendToSubscriptionAdministrator = defaults.sendToSubscriptionAdministrator;
-    	      this.sendToSubscriptionCoAdministrators = defaults.sendToSubscriptionCoAdministrators;
+            $ = new EmailNotificationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder customEmails(@Nullable Output<List<String>> customEmails) {
-            this.customEmails = customEmails;
+            $.customEmails = customEmails;
             return this;
         }
-        public Builder customEmails(@Nullable List<String> customEmails) {
-            this.customEmails = Codegen.ofNullable(customEmails);
-            return this;
+
+        public Builder customEmails(List<String> customEmails) {
+            return customEmails(Output.of(customEmails));
         }
+
         public Builder customEmails(String... customEmails) {
             return customEmails(List.of(customEmails));
         }
+
         public Builder sendToSubscriptionAdministrator(@Nullable Output<Boolean> sendToSubscriptionAdministrator) {
-            this.sendToSubscriptionAdministrator = sendToSubscriptionAdministrator;
+            $.sendToSubscriptionAdministrator = sendToSubscriptionAdministrator;
             return this;
         }
-        public Builder sendToSubscriptionAdministrator(@Nullable Boolean sendToSubscriptionAdministrator) {
-            this.sendToSubscriptionAdministrator = Codegen.ofNullable(sendToSubscriptionAdministrator);
-            return this;
+
+        public Builder sendToSubscriptionAdministrator(Boolean sendToSubscriptionAdministrator) {
+            return sendToSubscriptionAdministrator(Output.of(sendToSubscriptionAdministrator));
         }
+
         public Builder sendToSubscriptionCoAdministrators(@Nullable Output<Boolean> sendToSubscriptionCoAdministrators) {
-            this.sendToSubscriptionCoAdministrators = sendToSubscriptionCoAdministrators;
+            $.sendToSubscriptionCoAdministrators = sendToSubscriptionCoAdministrators;
             return this;
         }
-        public Builder sendToSubscriptionCoAdministrators(@Nullable Boolean sendToSubscriptionCoAdministrators) {
-            this.sendToSubscriptionCoAdministrators = Codegen.ofNullable(sendToSubscriptionCoAdministrators);
-            return this;
-        }        public EmailNotificationArgs build() {
-            return new EmailNotificationArgs(customEmails, sendToSubscriptionAdministrator, sendToSubscriptionCoAdministrators);
+
+        public Builder sendToSubscriptionCoAdministrators(Boolean sendToSubscriptionCoAdministrators) {
+            return sendToSubscriptionCoAdministrators(Output.of(sendToSubscriptionCoAdministrators));
+        }
+
+        public EmailNotificationArgs build() {
+            $.sendToSubscriptionAdministrator = Codegen.booleanProp("sendToSubscriptionAdministrator").output().arg($.sendToSubscriptionAdministrator).def(false).getNullable();
+            $.sendToSubscriptionCoAdministrators = Codegen.booleanProp("sendToSubscriptionCoAdministrators").output().arg($.sendToSubscriptionCoAdministrators).def(false).getNullable();
+            return $;
         }
     }
+
 }

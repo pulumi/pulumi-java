@@ -23,7 +23,7 @@ public final class LinkedRouterApplianceInstancesResponse extends com.pulumi.res
      * 
      */
     @Import(name="instances", required=true)
-      private final List<RouterApplianceInstanceResponse> instances;
+    private List<RouterApplianceInstanceResponse> instances;
 
     public List<RouterApplianceInstanceResponse> instances() {
         return this.instances;
@@ -34,58 +34,56 @@ public final class LinkedRouterApplianceInstancesResponse extends com.pulumi.res
      * 
      */
     @Import(name="siteToSiteDataTransfer", required=true)
-      private final Boolean siteToSiteDataTransfer;
+    private Boolean siteToSiteDataTransfer;
 
     public Boolean siteToSiteDataTransfer() {
         return this.siteToSiteDataTransfer;
     }
 
-    public LinkedRouterApplianceInstancesResponse(
-        List<RouterApplianceInstanceResponse> instances,
-        Boolean siteToSiteDataTransfer) {
-        this.instances = Objects.requireNonNull(instances, "expected parameter 'instances' to be non-null");
-        this.siteToSiteDataTransfer = Objects.requireNonNull(siteToSiteDataTransfer, "expected parameter 'siteToSiteDataTransfer' to be non-null");
-    }
+    private LinkedRouterApplianceInstancesResponse() {}
 
-    private LinkedRouterApplianceInstancesResponse() {
-        this.instances = List.of();
-        this.siteToSiteDataTransfer = null;
+    private LinkedRouterApplianceInstancesResponse(LinkedRouterApplianceInstancesResponse $) {
+        this.instances = $.instances;
+        this.siteToSiteDataTransfer = $.siteToSiteDataTransfer;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LinkedRouterApplianceInstancesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<RouterApplianceInstanceResponse> instances;
-        private Boolean siteToSiteDataTransfer;
+        private LinkedRouterApplianceInstancesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new LinkedRouterApplianceInstancesResponse();
         }
 
         public Builder(LinkedRouterApplianceInstancesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.instances = defaults.instances;
-    	      this.siteToSiteDataTransfer = defaults.siteToSiteDataTransfer;
+            $ = new LinkedRouterApplianceInstancesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder instances(List<RouterApplianceInstanceResponse> instances) {
-            this.instances = Objects.requireNonNull(instances);
+            $.instances = instances;
             return this;
         }
+
         public Builder instances(RouterApplianceInstanceResponse... instances) {
             return instances(List.of(instances));
         }
+
         public Builder siteToSiteDataTransfer(Boolean siteToSiteDataTransfer) {
-            this.siteToSiteDataTransfer = Objects.requireNonNull(siteToSiteDataTransfer);
+            $.siteToSiteDataTransfer = siteToSiteDataTransfer;
             return this;
-        }        public LinkedRouterApplianceInstancesResponse build() {
-            return new LinkedRouterApplianceInstancesResponse(instances, siteToSiteDataTransfer);
+        }
+
+        public LinkedRouterApplianceInstancesResponse build() {
+            $.instances = Objects.requireNonNull($.instances, "expected parameter 'instances' to be non-null");
+            $.siteToSiteDataTransfer = Objects.requireNonNull($.siteToSiteDataTransfer, "expected parameter 'siteToSiteDataTransfer' to be non-null");
+            return $;
         }
     }
+
 }

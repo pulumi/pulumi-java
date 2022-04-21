@@ -22,48 +22,49 @@ public final class GoogleCloudDialogflowV2IntentMessageTextResponse extends com.
      * 
      */
     @Import(name="text", required=true)
-      private final List<String> text;
+    private List<String> text;
 
     public List<String> text() {
         return this.text;
     }
 
-    public GoogleCloudDialogflowV2IntentMessageTextResponse(List<String> text) {
-        this.text = Objects.requireNonNull(text, "expected parameter 'text' to be non-null");
-    }
+    private GoogleCloudDialogflowV2IntentMessageTextResponse() {}
 
-    private GoogleCloudDialogflowV2IntentMessageTextResponse() {
-        this.text = List.of();
+    private GoogleCloudDialogflowV2IntentMessageTextResponse(GoogleCloudDialogflowV2IntentMessageTextResponse $) {
+        this.text = $.text;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudDialogflowV2IntentMessageTextResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<String> text;
+        private GoogleCloudDialogflowV2IntentMessageTextResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudDialogflowV2IntentMessageTextResponse();
         }
 
         public Builder(GoogleCloudDialogflowV2IntentMessageTextResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.text = defaults.text;
+            $ = new GoogleCloudDialogflowV2IntentMessageTextResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder text(List<String> text) {
-            this.text = Objects.requireNonNull(text);
+            $.text = text;
             return this;
         }
+
         public Builder text(String... text) {
             return text(List.of(text));
-        }        public GoogleCloudDialogflowV2IntentMessageTextResponse build() {
-            return new GoogleCloudDialogflowV2IntentMessageTextResponse(text);
+        }
+
+        public GoogleCloudDialogflowV2IntentMessageTextResponse build() {
+            $.text = Objects.requireNonNull($.text, "expected parameter 'text' to be non-null");
+            return $;
         }
     }
+
 }

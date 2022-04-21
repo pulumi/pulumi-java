@@ -20,110 +20,96 @@ public final class ClusterExecuteCommandLogConfiguration extends com.pulumi.reso
     public static final ClusterExecuteCommandLogConfiguration Empty = new ClusterExecuteCommandLogConfiguration();
 
     @Import(name="cloudWatchEncryptionEnabled")
-      private final @Nullable Boolean cloudWatchEncryptionEnabled;
+    private @Nullable Boolean cloudWatchEncryptionEnabled;
 
     public Optional<Boolean> cloudWatchEncryptionEnabled() {
-        return this.cloudWatchEncryptionEnabled == null ? Optional.empty() : Optional.ofNullable(this.cloudWatchEncryptionEnabled);
+        return Optional.ofNullable(this.cloudWatchEncryptionEnabled);
     }
 
     @Import(name="cloudWatchLogGroupName")
-      private final @Nullable String cloudWatchLogGroupName;
+    private @Nullable String cloudWatchLogGroupName;
 
     public Optional<String> cloudWatchLogGroupName() {
-        return this.cloudWatchLogGroupName == null ? Optional.empty() : Optional.ofNullable(this.cloudWatchLogGroupName);
+        return Optional.ofNullable(this.cloudWatchLogGroupName);
     }
 
     @Import(name="s3BucketName")
-      private final @Nullable String s3BucketName;
+    private @Nullable String s3BucketName;
 
     public Optional<String> s3BucketName() {
-        return this.s3BucketName == null ? Optional.empty() : Optional.ofNullable(this.s3BucketName);
+        return Optional.ofNullable(this.s3BucketName);
     }
 
     @Import(name="s3EncryptionEnabled")
-      private final @Nullable Boolean s3EncryptionEnabled;
+    private @Nullable Boolean s3EncryptionEnabled;
 
     public Optional<Boolean> s3EncryptionEnabled() {
-        return this.s3EncryptionEnabled == null ? Optional.empty() : Optional.ofNullable(this.s3EncryptionEnabled);
+        return Optional.ofNullable(this.s3EncryptionEnabled);
     }
 
     @Import(name="s3KeyPrefix")
-      private final @Nullable String s3KeyPrefix;
+    private @Nullable String s3KeyPrefix;
 
     public Optional<String> s3KeyPrefix() {
-        return this.s3KeyPrefix == null ? Optional.empty() : Optional.ofNullable(this.s3KeyPrefix);
+        return Optional.ofNullable(this.s3KeyPrefix);
     }
 
-    public ClusterExecuteCommandLogConfiguration(
-        @Nullable Boolean cloudWatchEncryptionEnabled,
-        @Nullable String cloudWatchLogGroupName,
-        @Nullable String s3BucketName,
-        @Nullable Boolean s3EncryptionEnabled,
-        @Nullable String s3KeyPrefix) {
-        this.cloudWatchEncryptionEnabled = cloudWatchEncryptionEnabled;
-        this.cloudWatchLogGroupName = cloudWatchLogGroupName;
-        this.s3BucketName = s3BucketName;
-        this.s3EncryptionEnabled = s3EncryptionEnabled;
-        this.s3KeyPrefix = s3KeyPrefix;
-    }
+    private ClusterExecuteCommandLogConfiguration() {}
 
-    private ClusterExecuteCommandLogConfiguration() {
-        this.cloudWatchEncryptionEnabled = null;
-        this.cloudWatchLogGroupName = null;
-        this.s3BucketName = null;
-        this.s3EncryptionEnabled = null;
-        this.s3KeyPrefix = null;
+    private ClusterExecuteCommandLogConfiguration(ClusterExecuteCommandLogConfiguration $) {
+        this.cloudWatchEncryptionEnabled = $.cloudWatchEncryptionEnabled;
+        this.cloudWatchLogGroupName = $.cloudWatchLogGroupName;
+        this.s3BucketName = $.s3BucketName;
+        this.s3EncryptionEnabled = $.s3EncryptionEnabled;
+        this.s3KeyPrefix = $.s3KeyPrefix;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ClusterExecuteCommandLogConfiguration defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Boolean cloudWatchEncryptionEnabled;
-        private @Nullable String cloudWatchLogGroupName;
-        private @Nullable String s3BucketName;
-        private @Nullable Boolean s3EncryptionEnabled;
-        private @Nullable String s3KeyPrefix;
+        private ClusterExecuteCommandLogConfiguration $;
 
         public Builder() {
-    	      // Empty
+            $ = new ClusterExecuteCommandLogConfiguration();
         }
 
         public Builder(ClusterExecuteCommandLogConfiguration defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cloudWatchEncryptionEnabled = defaults.cloudWatchEncryptionEnabled;
-    	      this.cloudWatchLogGroupName = defaults.cloudWatchLogGroupName;
-    	      this.s3BucketName = defaults.s3BucketName;
-    	      this.s3EncryptionEnabled = defaults.s3EncryptionEnabled;
-    	      this.s3KeyPrefix = defaults.s3KeyPrefix;
+            $ = new ClusterExecuteCommandLogConfiguration(Objects.requireNonNull(defaults));
         }
 
         public Builder cloudWatchEncryptionEnabled(@Nullable Boolean cloudWatchEncryptionEnabled) {
-            this.cloudWatchEncryptionEnabled = cloudWatchEncryptionEnabled;
+            $.cloudWatchEncryptionEnabled = cloudWatchEncryptionEnabled;
             return this;
         }
+
         public Builder cloudWatchLogGroupName(@Nullable String cloudWatchLogGroupName) {
-            this.cloudWatchLogGroupName = cloudWatchLogGroupName;
+            $.cloudWatchLogGroupName = cloudWatchLogGroupName;
             return this;
         }
+
         public Builder s3BucketName(@Nullable String s3BucketName) {
-            this.s3BucketName = s3BucketName;
+            $.s3BucketName = s3BucketName;
             return this;
         }
+
         public Builder s3EncryptionEnabled(@Nullable Boolean s3EncryptionEnabled) {
-            this.s3EncryptionEnabled = s3EncryptionEnabled;
+            $.s3EncryptionEnabled = s3EncryptionEnabled;
             return this;
         }
+
         public Builder s3KeyPrefix(@Nullable String s3KeyPrefix) {
-            this.s3KeyPrefix = s3KeyPrefix;
+            $.s3KeyPrefix = s3KeyPrefix;
             return this;
-        }        public ClusterExecuteCommandLogConfiguration build() {
-            return new ClusterExecuteCommandLogConfiguration(cloudWatchEncryptionEnabled, cloudWatchLogGroupName, s3BucketName, s3EncryptionEnabled, s3KeyPrefix);
+        }
+
+        public ClusterExecuteCommandLogConfiguration build() {
+            return $;
         }
     }
+
 }

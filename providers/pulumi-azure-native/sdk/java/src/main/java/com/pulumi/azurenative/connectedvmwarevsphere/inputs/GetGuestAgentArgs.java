@@ -17,7 +17,7 @@ public final class GetGuestAgentArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -28,7 +28,7 @@ public final class GetGuestAgentArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -39,64 +39,59 @@ public final class GetGuestAgentArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="virtualMachineName", required=true)
-      private final String virtualMachineName;
+    private String virtualMachineName;
 
     public String virtualMachineName() {
         return this.virtualMachineName;
     }
 
-    public GetGuestAgentArgs(
-        String name,
-        String resourceGroupName,
-        String virtualMachineName) {
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.virtualMachineName = Objects.requireNonNull(virtualMachineName, "expected parameter 'virtualMachineName' to be non-null");
-    }
+    private GetGuestAgentArgs() {}
 
-    private GetGuestAgentArgs() {
-        this.name = null;
-        this.resourceGroupName = null;
-        this.virtualMachineName = null;
+    private GetGuestAgentArgs(GetGuestAgentArgs $) {
+        this.name = $.name;
+        this.resourceGroupName = $.resourceGroupName;
+        this.virtualMachineName = $.virtualMachineName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetGuestAgentArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String name;
-        private String resourceGroupName;
-        private String virtualMachineName;
+        private GetGuestAgentArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetGuestAgentArgs();
         }
 
         public Builder(GetGuestAgentArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.virtualMachineName = defaults.virtualMachineName;
+            $ = new GetGuestAgentArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder virtualMachineName(String virtualMachineName) {
-            this.virtualMachineName = Objects.requireNonNull(virtualMachineName);
+            $.virtualMachineName = virtualMachineName;
             return this;
-        }        public GetGuestAgentArgs build() {
-            return new GetGuestAgentArgs(name, resourceGroupName, virtualMachineName);
+        }
+
+        public GetGuestAgentArgs build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.virtualMachineName = Objects.requireNonNull($.virtualMachineName, "expected parameter 'virtualMachineName' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,7 +5,6 @@ package com.pulumi.googlenative.containeranalysis_v1beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,52 +23,53 @@ public final class DeployableArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceUri", required=true)
-      private final Output<List<String>> resourceUri;
+    private Output<List<String>> resourceUri;
 
     public Output<List<String>> resourceUri() {
         return this.resourceUri;
     }
 
-    public DeployableArgs(Output<List<String>> resourceUri) {
-        this.resourceUri = Objects.requireNonNull(resourceUri, "expected parameter 'resourceUri' to be non-null");
-    }
+    private DeployableArgs() {}
 
-    private DeployableArgs() {
-        this.resourceUri = Codegen.empty();
+    private DeployableArgs(DeployableArgs $) {
+        this.resourceUri = $.resourceUri;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DeployableArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<List<String>> resourceUri;
+        private DeployableArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DeployableArgs();
         }
 
         public Builder(DeployableArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.resourceUri = defaults.resourceUri;
+            $ = new DeployableArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder resourceUri(Output<List<String>> resourceUri) {
-            this.resourceUri = Objects.requireNonNull(resourceUri);
+            $.resourceUri = resourceUri;
             return this;
         }
+
         public Builder resourceUri(List<String> resourceUri) {
-            this.resourceUri = Output.of(Objects.requireNonNull(resourceUri));
-            return this;
+            return resourceUri(Output.of(resourceUri));
         }
+
         public Builder resourceUri(String... resourceUri) {
             return resourceUri(List.of(resourceUri));
-        }        public DeployableArgs build() {
-            return new DeployableArgs(resourceUri);
+        }
+
+        public DeployableArgs build() {
+            $.resourceUri = Objects.requireNonNull($.resourceUri, "expected parameter 'resourceUri' to be non-null");
+            return $;
         }
     }
+
 }

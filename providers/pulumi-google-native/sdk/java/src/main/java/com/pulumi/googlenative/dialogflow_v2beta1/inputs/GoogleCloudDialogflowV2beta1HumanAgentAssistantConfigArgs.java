@@ -5,11 +5,11 @@ package com.pulumi.googlenative.dialogflow_v2beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.dialogflow_v2beta1.inputs.GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigMessageAnalysisConfigArgs;
 import com.pulumi.googlenative.dialogflow_v2beta1.inputs.GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionConfigArgs;
 import com.pulumi.googlenative.dialogflow_v2beta1.inputs.GoogleCloudDialogflowV2beta1NotificationConfigArgs;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigArgs ext
      * 
      */
     @Import(name="endUserSuggestionConfig")
-      private final @Nullable Output<GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionConfigArgs> endUserSuggestionConfig;
+    private @Nullable Output<GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionConfigArgs> endUserSuggestionConfig;
 
-    public Output<GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionConfigArgs> endUserSuggestionConfig() {
-        return this.endUserSuggestionConfig == null ? Codegen.empty() : this.endUserSuggestionConfig;
+    public Optional<Output<GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionConfigArgs>> endUserSuggestionConfig() {
+        return Optional.ofNullable(this.endUserSuggestionConfig);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigArgs ext
      * 
      */
     @Import(name="humanAgentSuggestionConfig")
-      private final @Nullable Output<GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionConfigArgs> humanAgentSuggestionConfig;
+    private @Nullable Output<GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionConfigArgs> humanAgentSuggestionConfig;
 
-    public Output<GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionConfigArgs> humanAgentSuggestionConfig() {
-        return this.humanAgentSuggestionConfig == null ? Codegen.empty() : this.humanAgentSuggestionConfig;
+    public Optional<Output<GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionConfigArgs>> humanAgentSuggestionConfig() {
+        return Optional.ofNullable(this.humanAgentSuggestionConfig);
     }
 
     /**
@@ -48,10 +48,10 @@ public final class GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigArgs ext
      * 
      */
     @Import(name="messageAnalysisConfig")
-      private final @Nullable Output<GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigMessageAnalysisConfigArgs> messageAnalysisConfig;
+    private @Nullable Output<GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigMessageAnalysisConfigArgs> messageAnalysisConfig;
 
-    public Output<GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigMessageAnalysisConfigArgs> messageAnalysisConfig() {
-        return this.messageAnalysisConfig == null ? Codegen.empty() : this.messageAnalysisConfig;
+    public Optional<Output<GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigMessageAnalysisConfigArgs>> messageAnalysisConfig() {
+        return Optional.ofNullable(this.messageAnalysisConfig);
     }
 
     /**
@@ -59,89 +59,78 @@ public final class GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigArgs ext
      * 
      */
     @Import(name="notificationConfig")
-      private final @Nullable Output<GoogleCloudDialogflowV2beta1NotificationConfigArgs> notificationConfig;
+    private @Nullable Output<GoogleCloudDialogflowV2beta1NotificationConfigArgs> notificationConfig;
 
-    public Output<GoogleCloudDialogflowV2beta1NotificationConfigArgs> notificationConfig() {
-        return this.notificationConfig == null ? Codegen.empty() : this.notificationConfig;
+    public Optional<Output<GoogleCloudDialogflowV2beta1NotificationConfigArgs>> notificationConfig() {
+        return Optional.ofNullable(this.notificationConfig);
     }
 
-    public GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigArgs(
-        @Nullable Output<GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionConfigArgs> endUserSuggestionConfig,
-        @Nullable Output<GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionConfigArgs> humanAgentSuggestionConfig,
-        @Nullable Output<GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigMessageAnalysisConfigArgs> messageAnalysisConfig,
-        @Nullable Output<GoogleCloudDialogflowV2beta1NotificationConfigArgs> notificationConfig) {
-        this.endUserSuggestionConfig = endUserSuggestionConfig;
-        this.humanAgentSuggestionConfig = humanAgentSuggestionConfig;
-        this.messageAnalysisConfig = messageAnalysisConfig;
-        this.notificationConfig = notificationConfig;
-    }
+    private GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigArgs() {}
 
-    private GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigArgs() {
-        this.endUserSuggestionConfig = Codegen.empty();
-        this.humanAgentSuggestionConfig = Codegen.empty();
-        this.messageAnalysisConfig = Codegen.empty();
-        this.notificationConfig = Codegen.empty();
+    private GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigArgs(GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigArgs $) {
+        this.endUserSuggestionConfig = $.endUserSuggestionConfig;
+        this.humanAgentSuggestionConfig = $.humanAgentSuggestionConfig;
+        this.messageAnalysisConfig = $.messageAnalysisConfig;
+        this.notificationConfig = $.notificationConfig;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionConfigArgs> endUserSuggestionConfig;
-        private @Nullable Output<GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionConfigArgs> humanAgentSuggestionConfig;
-        private @Nullable Output<GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigMessageAnalysisConfigArgs> messageAnalysisConfig;
-        private @Nullable Output<GoogleCloudDialogflowV2beta1NotificationConfigArgs> notificationConfig;
+        private GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigArgs();
         }
 
         public Builder(GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.endUserSuggestionConfig = defaults.endUserSuggestionConfig;
-    	      this.humanAgentSuggestionConfig = defaults.humanAgentSuggestionConfig;
-    	      this.messageAnalysisConfig = defaults.messageAnalysisConfig;
-    	      this.notificationConfig = defaults.notificationConfig;
+            $ = new GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder endUserSuggestionConfig(@Nullable Output<GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionConfigArgs> endUserSuggestionConfig) {
-            this.endUserSuggestionConfig = endUserSuggestionConfig;
+            $.endUserSuggestionConfig = endUserSuggestionConfig;
             return this;
         }
-        public Builder endUserSuggestionConfig(@Nullable GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionConfigArgs endUserSuggestionConfig) {
-            this.endUserSuggestionConfig = Codegen.ofNullable(endUserSuggestionConfig);
-            return this;
+
+        public Builder endUserSuggestionConfig(GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionConfigArgs endUserSuggestionConfig) {
+            return endUserSuggestionConfig(Output.of(endUserSuggestionConfig));
         }
+
         public Builder humanAgentSuggestionConfig(@Nullable Output<GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionConfigArgs> humanAgentSuggestionConfig) {
-            this.humanAgentSuggestionConfig = humanAgentSuggestionConfig;
+            $.humanAgentSuggestionConfig = humanAgentSuggestionConfig;
             return this;
         }
-        public Builder humanAgentSuggestionConfig(@Nullable GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionConfigArgs humanAgentSuggestionConfig) {
-            this.humanAgentSuggestionConfig = Codegen.ofNullable(humanAgentSuggestionConfig);
-            return this;
+
+        public Builder humanAgentSuggestionConfig(GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionConfigArgs humanAgentSuggestionConfig) {
+            return humanAgentSuggestionConfig(Output.of(humanAgentSuggestionConfig));
         }
+
         public Builder messageAnalysisConfig(@Nullable Output<GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigMessageAnalysisConfigArgs> messageAnalysisConfig) {
-            this.messageAnalysisConfig = messageAnalysisConfig;
+            $.messageAnalysisConfig = messageAnalysisConfig;
             return this;
         }
-        public Builder messageAnalysisConfig(@Nullable GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigMessageAnalysisConfigArgs messageAnalysisConfig) {
-            this.messageAnalysisConfig = Codegen.ofNullable(messageAnalysisConfig);
-            return this;
+
+        public Builder messageAnalysisConfig(GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigMessageAnalysisConfigArgs messageAnalysisConfig) {
+            return messageAnalysisConfig(Output.of(messageAnalysisConfig));
         }
+
         public Builder notificationConfig(@Nullable Output<GoogleCloudDialogflowV2beta1NotificationConfigArgs> notificationConfig) {
-            this.notificationConfig = notificationConfig;
+            $.notificationConfig = notificationConfig;
             return this;
         }
-        public Builder notificationConfig(@Nullable GoogleCloudDialogflowV2beta1NotificationConfigArgs notificationConfig) {
-            this.notificationConfig = Codegen.ofNullable(notificationConfig);
-            return this;
-        }        public GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigArgs build() {
-            return new GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigArgs(endUserSuggestionConfig, humanAgentSuggestionConfig, messageAnalysisConfig, notificationConfig);
+
+        public Builder notificationConfig(GoogleCloudDialogflowV2beta1NotificationConfigArgs notificationConfig) {
+            return notificationConfig(Output.of(notificationConfig));
+        }
+
+        public GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigArgs build() {
+            return $;
         }
     }
+
 }

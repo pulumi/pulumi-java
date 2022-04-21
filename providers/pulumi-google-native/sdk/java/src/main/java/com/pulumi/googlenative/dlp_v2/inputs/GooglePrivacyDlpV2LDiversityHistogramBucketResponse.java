@@ -23,7 +23,7 @@ public final class GooglePrivacyDlpV2LDiversityHistogramBucketResponse extends c
      * 
      */
     @Import(name="bucketSize", required=true)
-      private final String bucketSize;
+    private String bucketSize;
 
     public String bucketSize() {
         return this.bucketSize;
@@ -34,7 +34,7 @@ public final class GooglePrivacyDlpV2LDiversityHistogramBucketResponse extends c
      * 
      */
     @Import(name="bucketValueCount", required=true)
-      private final String bucketValueCount;
+    private String bucketValueCount;
 
     public String bucketValueCount() {
         return this.bucketValueCount;
@@ -45,7 +45,7 @@ public final class GooglePrivacyDlpV2LDiversityHistogramBucketResponse extends c
      * 
      */
     @Import(name="bucketValues", required=true)
-      private final List<GooglePrivacyDlpV2LDiversityEquivalenceClassResponse> bucketValues;
+    private List<GooglePrivacyDlpV2LDiversityEquivalenceClassResponse> bucketValues;
 
     public List<GooglePrivacyDlpV2LDiversityEquivalenceClassResponse> bucketValues() {
         return this.bucketValues;
@@ -56,7 +56,7 @@ public final class GooglePrivacyDlpV2LDiversityHistogramBucketResponse extends c
      * 
      */
     @Import(name="sensitiveValueFrequencyLowerBound", required=true)
-      private final String sensitiveValueFrequencyLowerBound;
+    private String sensitiveValueFrequencyLowerBound;
 
     public String sensitiveValueFrequencyLowerBound() {
         return this.sensitiveValueFrequencyLowerBound;
@@ -67,85 +67,77 @@ public final class GooglePrivacyDlpV2LDiversityHistogramBucketResponse extends c
      * 
      */
     @Import(name="sensitiveValueFrequencyUpperBound", required=true)
-      private final String sensitiveValueFrequencyUpperBound;
+    private String sensitiveValueFrequencyUpperBound;
 
     public String sensitiveValueFrequencyUpperBound() {
         return this.sensitiveValueFrequencyUpperBound;
     }
 
-    public GooglePrivacyDlpV2LDiversityHistogramBucketResponse(
-        String bucketSize,
-        String bucketValueCount,
-        List<GooglePrivacyDlpV2LDiversityEquivalenceClassResponse> bucketValues,
-        String sensitiveValueFrequencyLowerBound,
-        String sensitiveValueFrequencyUpperBound) {
-        this.bucketSize = Objects.requireNonNull(bucketSize, "expected parameter 'bucketSize' to be non-null");
-        this.bucketValueCount = Objects.requireNonNull(bucketValueCount, "expected parameter 'bucketValueCount' to be non-null");
-        this.bucketValues = Objects.requireNonNull(bucketValues, "expected parameter 'bucketValues' to be non-null");
-        this.sensitiveValueFrequencyLowerBound = Objects.requireNonNull(sensitiveValueFrequencyLowerBound, "expected parameter 'sensitiveValueFrequencyLowerBound' to be non-null");
-        this.sensitiveValueFrequencyUpperBound = Objects.requireNonNull(sensitiveValueFrequencyUpperBound, "expected parameter 'sensitiveValueFrequencyUpperBound' to be non-null");
-    }
+    private GooglePrivacyDlpV2LDiversityHistogramBucketResponse() {}
 
-    private GooglePrivacyDlpV2LDiversityHistogramBucketResponse() {
-        this.bucketSize = null;
-        this.bucketValueCount = null;
-        this.bucketValues = List.of();
-        this.sensitiveValueFrequencyLowerBound = null;
-        this.sensitiveValueFrequencyUpperBound = null;
+    private GooglePrivacyDlpV2LDiversityHistogramBucketResponse(GooglePrivacyDlpV2LDiversityHistogramBucketResponse $) {
+        this.bucketSize = $.bucketSize;
+        this.bucketValueCount = $.bucketValueCount;
+        this.bucketValues = $.bucketValues;
+        this.sensitiveValueFrequencyLowerBound = $.sensitiveValueFrequencyLowerBound;
+        this.sensitiveValueFrequencyUpperBound = $.sensitiveValueFrequencyUpperBound;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GooglePrivacyDlpV2LDiversityHistogramBucketResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String bucketSize;
-        private String bucketValueCount;
-        private List<GooglePrivacyDlpV2LDiversityEquivalenceClassResponse> bucketValues;
-        private String sensitiveValueFrequencyLowerBound;
-        private String sensitiveValueFrequencyUpperBound;
+        private GooglePrivacyDlpV2LDiversityHistogramBucketResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GooglePrivacyDlpV2LDiversityHistogramBucketResponse();
         }
 
         public Builder(GooglePrivacyDlpV2LDiversityHistogramBucketResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.bucketSize = defaults.bucketSize;
-    	      this.bucketValueCount = defaults.bucketValueCount;
-    	      this.bucketValues = defaults.bucketValues;
-    	      this.sensitiveValueFrequencyLowerBound = defaults.sensitiveValueFrequencyLowerBound;
-    	      this.sensitiveValueFrequencyUpperBound = defaults.sensitiveValueFrequencyUpperBound;
+            $ = new GooglePrivacyDlpV2LDiversityHistogramBucketResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder bucketSize(String bucketSize) {
-            this.bucketSize = Objects.requireNonNull(bucketSize);
+            $.bucketSize = bucketSize;
             return this;
         }
+
         public Builder bucketValueCount(String bucketValueCount) {
-            this.bucketValueCount = Objects.requireNonNull(bucketValueCount);
+            $.bucketValueCount = bucketValueCount;
             return this;
         }
+
         public Builder bucketValues(List<GooglePrivacyDlpV2LDiversityEquivalenceClassResponse> bucketValues) {
-            this.bucketValues = Objects.requireNonNull(bucketValues);
+            $.bucketValues = bucketValues;
             return this;
         }
+
         public Builder bucketValues(GooglePrivacyDlpV2LDiversityEquivalenceClassResponse... bucketValues) {
             return bucketValues(List.of(bucketValues));
         }
+
         public Builder sensitiveValueFrequencyLowerBound(String sensitiveValueFrequencyLowerBound) {
-            this.sensitiveValueFrequencyLowerBound = Objects.requireNonNull(sensitiveValueFrequencyLowerBound);
+            $.sensitiveValueFrequencyLowerBound = sensitiveValueFrequencyLowerBound;
             return this;
         }
+
         public Builder sensitiveValueFrequencyUpperBound(String sensitiveValueFrequencyUpperBound) {
-            this.sensitiveValueFrequencyUpperBound = Objects.requireNonNull(sensitiveValueFrequencyUpperBound);
+            $.sensitiveValueFrequencyUpperBound = sensitiveValueFrequencyUpperBound;
             return this;
-        }        public GooglePrivacyDlpV2LDiversityHistogramBucketResponse build() {
-            return new GooglePrivacyDlpV2LDiversityHistogramBucketResponse(bucketSize, bucketValueCount, bucketValues, sensitiveValueFrequencyLowerBound, sensitiveValueFrequencyUpperBound);
+        }
+
+        public GooglePrivacyDlpV2LDiversityHistogramBucketResponse build() {
+            $.bucketSize = Objects.requireNonNull($.bucketSize, "expected parameter 'bucketSize' to be non-null");
+            $.bucketValueCount = Objects.requireNonNull($.bucketValueCount, "expected parameter 'bucketValueCount' to be non-null");
+            $.bucketValues = Objects.requireNonNull($.bucketValues, "expected parameter 'bucketValues' to be non-null");
+            $.sensitiveValueFrequencyLowerBound = Objects.requireNonNull($.sensitiveValueFrequencyLowerBound, "expected parameter 'sensitiveValueFrequencyLowerBound' to be non-null");
+            $.sensitiveValueFrequencyUpperBound = Objects.requireNonNull($.sensitiveValueFrequencyUpperBound, "expected parameter 'sensitiveValueFrequencyUpperBound' to be non-null");
+            return $;
         }
     }
+
 }

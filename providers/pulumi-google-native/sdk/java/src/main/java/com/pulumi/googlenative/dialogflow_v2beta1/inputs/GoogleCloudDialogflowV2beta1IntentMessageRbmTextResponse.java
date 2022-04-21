@@ -23,7 +23,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmTextResponse exte
      * 
      */
     @Import(name="rbmSuggestion", required=true)
-      private final List<GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestionResponse> rbmSuggestion;
+    private List<GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestionResponse> rbmSuggestion;
 
     public List<GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestionResponse> rbmSuggestion() {
         return this.rbmSuggestion;
@@ -34,58 +34,56 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmTextResponse exte
      * 
      */
     @Import(name="text", required=true)
-      private final String text;
+    private String text;
 
     public String text() {
         return this.text;
     }
 
-    public GoogleCloudDialogflowV2beta1IntentMessageRbmTextResponse(
-        List<GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestionResponse> rbmSuggestion,
-        String text) {
-        this.rbmSuggestion = Objects.requireNonNull(rbmSuggestion, "expected parameter 'rbmSuggestion' to be non-null");
-        this.text = Objects.requireNonNull(text, "expected parameter 'text' to be non-null");
-    }
+    private GoogleCloudDialogflowV2beta1IntentMessageRbmTextResponse() {}
 
-    private GoogleCloudDialogflowV2beta1IntentMessageRbmTextResponse() {
-        this.rbmSuggestion = List.of();
-        this.text = null;
+    private GoogleCloudDialogflowV2beta1IntentMessageRbmTextResponse(GoogleCloudDialogflowV2beta1IntentMessageRbmTextResponse $) {
+        this.rbmSuggestion = $.rbmSuggestion;
+        this.text = $.text;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudDialogflowV2beta1IntentMessageRbmTextResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestionResponse> rbmSuggestion;
-        private String text;
+        private GoogleCloudDialogflowV2beta1IntentMessageRbmTextResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudDialogflowV2beta1IntentMessageRbmTextResponse();
         }
 
         public Builder(GoogleCloudDialogflowV2beta1IntentMessageRbmTextResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.rbmSuggestion = defaults.rbmSuggestion;
-    	      this.text = defaults.text;
+            $ = new GoogleCloudDialogflowV2beta1IntentMessageRbmTextResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder rbmSuggestion(List<GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestionResponse> rbmSuggestion) {
-            this.rbmSuggestion = Objects.requireNonNull(rbmSuggestion);
+            $.rbmSuggestion = rbmSuggestion;
             return this;
         }
+
         public Builder rbmSuggestion(GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestionResponse... rbmSuggestion) {
             return rbmSuggestion(List.of(rbmSuggestion));
         }
+
         public Builder text(String text) {
-            this.text = Objects.requireNonNull(text);
+            $.text = text;
             return this;
-        }        public GoogleCloudDialogflowV2beta1IntentMessageRbmTextResponse build() {
-            return new GoogleCloudDialogflowV2beta1IntentMessageRbmTextResponse(rbmSuggestion, text);
+        }
+
+        public GoogleCloudDialogflowV2beta1IntentMessageRbmTextResponse build() {
+            $.rbmSuggestion = Objects.requireNonNull($.rbmSuggestion, "expected parameter 'rbmSuggestion' to be non-null");
+            $.text = Objects.requireNonNull($.text, "expected parameter 'text' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,11 +5,11 @@ package com.pulumi.aws.rds.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class ClusterScalingConfigurationArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="autoPause")
-      private final @Nullable Output<Boolean> autoPause;
+    private @Nullable Output<Boolean> autoPause;
 
-    public Output<Boolean> autoPause() {
-        return this.autoPause == null ? Codegen.empty() : this.autoPause;
+    public Optional<Output<Boolean>> autoPause() {
+        return Optional.ofNullable(this.autoPause);
     }
 
     /**
@@ -33,10 +33,10 @@ public final class ClusterScalingConfigurationArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="maxCapacity")
-      private final @Nullable Output<Integer> maxCapacity;
+    private @Nullable Output<Integer> maxCapacity;
 
-    public Output<Integer> maxCapacity() {
-        return this.maxCapacity == null ? Codegen.empty() : this.maxCapacity;
+    public Optional<Output<Integer>> maxCapacity() {
+        return Optional.ofNullable(this.maxCapacity);
     }
 
     /**
@@ -44,10 +44,10 @@ public final class ClusterScalingConfigurationArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="minCapacity")
-      private final @Nullable Output<Integer> minCapacity;
+    private @Nullable Output<Integer> minCapacity;
 
-    public Output<Integer> minCapacity() {
-        return this.minCapacity == null ? Codegen.empty() : this.minCapacity;
+    public Optional<Output<Integer>> minCapacity() {
+        return Optional.ofNullable(this.minCapacity);
     }
 
     /**
@@ -55,10 +55,10 @@ public final class ClusterScalingConfigurationArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="secondsUntilAutoPause")
-      private final @Nullable Output<Integer> secondsUntilAutoPause;
+    private @Nullable Output<Integer> secondsUntilAutoPause;
 
-    public Output<Integer> secondsUntilAutoPause() {
-        return this.secondsUntilAutoPause == null ? Codegen.empty() : this.secondsUntilAutoPause;
+    public Optional<Output<Integer>> secondsUntilAutoPause() {
+        return Optional.ofNullable(this.secondsUntilAutoPause);
     }
 
     /**
@@ -66,102 +66,88 @@ public final class ClusterScalingConfigurationArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="timeoutAction")
-      private final @Nullable Output<String> timeoutAction;
+    private @Nullable Output<String> timeoutAction;
 
-    public Output<String> timeoutAction() {
-        return this.timeoutAction == null ? Codegen.empty() : this.timeoutAction;
+    public Optional<Output<String>> timeoutAction() {
+        return Optional.ofNullable(this.timeoutAction);
     }
 
-    public ClusterScalingConfigurationArgs(
-        @Nullable Output<Boolean> autoPause,
-        @Nullable Output<Integer> maxCapacity,
-        @Nullable Output<Integer> minCapacity,
-        @Nullable Output<Integer> secondsUntilAutoPause,
-        @Nullable Output<String> timeoutAction) {
-        this.autoPause = autoPause;
-        this.maxCapacity = maxCapacity;
-        this.minCapacity = minCapacity;
-        this.secondsUntilAutoPause = secondsUntilAutoPause;
-        this.timeoutAction = timeoutAction;
-    }
+    private ClusterScalingConfigurationArgs() {}
 
-    private ClusterScalingConfigurationArgs() {
-        this.autoPause = Codegen.empty();
-        this.maxCapacity = Codegen.empty();
-        this.minCapacity = Codegen.empty();
-        this.secondsUntilAutoPause = Codegen.empty();
-        this.timeoutAction = Codegen.empty();
+    private ClusterScalingConfigurationArgs(ClusterScalingConfigurationArgs $) {
+        this.autoPause = $.autoPause;
+        this.maxCapacity = $.maxCapacity;
+        this.minCapacity = $.minCapacity;
+        this.secondsUntilAutoPause = $.secondsUntilAutoPause;
+        this.timeoutAction = $.timeoutAction;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ClusterScalingConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> autoPause;
-        private @Nullable Output<Integer> maxCapacity;
-        private @Nullable Output<Integer> minCapacity;
-        private @Nullable Output<Integer> secondsUntilAutoPause;
-        private @Nullable Output<String> timeoutAction;
+        private ClusterScalingConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ClusterScalingConfigurationArgs();
         }
 
         public Builder(ClusterScalingConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.autoPause = defaults.autoPause;
-    	      this.maxCapacity = defaults.maxCapacity;
-    	      this.minCapacity = defaults.minCapacity;
-    	      this.secondsUntilAutoPause = defaults.secondsUntilAutoPause;
-    	      this.timeoutAction = defaults.timeoutAction;
+            $ = new ClusterScalingConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder autoPause(@Nullable Output<Boolean> autoPause) {
-            this.autoPause = autoPause;
+            $.autoPause = autoPause;
             return this;
         }
-        public Builder autoPause(@Nullable Boolean autoPause) {
-            this.autoPause = Codegen.ofNullable(autoPause);
-            return this;
+
+        public Builder autoPause(Boolean autoPause) {
+            return autoPause(Output.of(autoPause));
         }
+
         public Builder maxCapacity(@Nullable Output<Integer> maxCapacity) {
-            this.maxCapacity = maxCapacity;
+            $.maxCapacity = maxCapacity;
             return this;
         }
-        public Builder maxCapacity(@Nullable Integer maxCapacity) {
-            this.maxCapacity = Codegen.ofNullable(maxCapacity);
-            return this;
+
+        public Builder maxCapacity(Integer maxCapacity) {
+            return maxCapacity(Output.of(maxCapacity));
         }
+
         public Builder minCapacity(@Nullable Output<Integer> minCapacity) {
-            this.minCapacity = minCapacity;
+            $.minCapacity = minCapacity;
             return this;
         }
-        public Builder minCapacity(@Nullable Integer minCapacity) {
-            this.minCapacity = Codegen.ofNullable(minCapacity);
-            return this;
+
+        public Builder minCapacity(Integer minCapacity) {
+            return minCapacity(Output.of(minCapacity));
         }
+
         public Builder secondsUntilAutoPause(@Nullable Output<Integer> secondsUntilAutoPause) {
-            this.secondsUntilAutoPause = secondsUntilAutoPause;
+            $.secondsUntilAutoPause = secondsUntilAutoPause;
             return this;
         }
-        public Builder secondsUntilAutoPause(@Nullable Integer secondsUntilAutoPause) {
-            this.secondsUntilAutoPause = Codegen.ofNullable(secondsUntilAutoPause);
-            return this;
+
+        public Builder secondsUntilAutoPause(Integer secondsUntilAutoPause) {
+            return secondsUntilAutoPause(Output.of(secondsUntilAutoPause));
         }
+
         public Builder timeoutAction(@Nullable Output<String> timeoutAction) {
-            this.timeoutAction = timeoutAction;
+            $.timeoutAction = timeoutAction;
             return this;
         }
-        public Builder timeoutAction(@Nullable String timeoutAction) {
-            this.timeoutAction = Codegen.ofNullable(timeoutAction);
-            return this;
-        }        public ClusterScalingConfigurationArgs build() {
-            return new ClusterScalingConfigurationArgs(autoPause, maxCapacity, minCapacity, secondsUntilAutoPause, timeoutAction);
+
+        public Builder timeoutAction(String timeoutAction) {
+            return timeoutAction(Output.of(timeoutAction));
+        }
+
+        public ClusterScalingConfigurationArgs build() {
+            return $;
         }
     }
+
 }

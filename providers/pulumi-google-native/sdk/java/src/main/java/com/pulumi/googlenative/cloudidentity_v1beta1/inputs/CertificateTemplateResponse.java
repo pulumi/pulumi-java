@@ -21,7 +21,7 @@ public final class CertificateTemplateResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="majorVersion", required=true)
-      private final Integer majorVersion;
+    private Integer majorVersion;
 
     public Integer majorVersion() {
         return this.majorVersion;
@@ -32,55 +32,52 @@ public final class CertificateTemplateResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="minorVersion", required=true)
-      private final Integer minorVersion;
+    private Integer minorVersion;
 
     public Integer minorVersion() {
         return this.minorVersion;
     }
 
-    public CertificateTemplateResponse(
-        Integer majorVersion,
-        Integer minorVersion) {
-        this.majorVersion = Objects.requireNonNull(majorVersion, "expected parameter 'majorVersion' to be non-null");
-        this.minorVersion = Objects.requireNonNull(minorVersion, "expected parameter 'minorVersion' to be non-null");
-    }
+    private CertificateTemplateResponse() {}
 
-    private CertificateTemplateResponse() {
-        this.majorVersion = null;
-        this.minorVersion = null;
+    private CertificateTemplateResponse(CertificateTemplateResponse $) {
+        this.majorVersion = $.majorVersion;
+        this.minorVersion = $.minorVersion;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CertificateTemplateResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Integer majorVersion;
-        private Integer minorVersion;
+        private CertificateTemplateResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new CertificateTemplateResponse();
         }
 
         public Builder(CertificateTemplateResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.majorVersion = defaults.majorVersion;
-    	      this.minorVersion = defaults.minorVersion;
+            $ = new CertificateTemplateResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder majorVersion(Integer majorVersion) {
-            this.majorVersion = Objects.requireNonNull(majorVersion);
+            $.majorVersion = majorVersion;
             return this;
         }
+
         public Builder minorVersion(Integer minorVersion) {
-            this.minorVersion = Objects.requireNonNull(minorVersion);
+            $.minorVersion = minorVersion;
             return this;
-        }        public CertificateTemplateResponse build() {
-            return new CertificateTemplateResponse(majorVersion, minorVersion);
+        }
+
+        public CertificateTemplateResponse build() {
+            $.majorVersion = Objects.requireNonNull($.majorVersion, "expected parameter 'majorVersion' to be non-null");
+            $.minorVersion = Objects.requireNonNull($.minorVersion, "expected parameter 'minorVersion' to be non-null");
+            return $;
         }
     }
+
 }

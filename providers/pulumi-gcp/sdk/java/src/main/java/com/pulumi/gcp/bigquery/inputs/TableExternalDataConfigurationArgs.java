@@ -5,7 +5,6 @@ package com.pulumi.gcp.bigquery.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.bigquery.inputs.TableExternalDataConfigurationCsvOptionsArgs;
 import com.pulumi.gcp.bigquery.inputs.TableExternalDataConfigurationGoogleSheetsOptionsArgs;
 import com.pulumi.gcp.bigquery.inputs.TableExternalDataConfigurationHivePartitioningOptionsArgs;
@@ -14,6 +13,7 @@ import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,7 +27,7 @@ public final class TableExternalDataConfigurationArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="autodetect", required=true)
-      private final Output<Boolean> autodetect;
+    private Output<Boolean> autodetect;
 
     public Output<Boolean> autodetect() {
         return this.autodetect;
@@ -39,10 +39,10 @@ public final class TableExternalDataConfigurationArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="compression")
-      private final @Nullable Output<String> compression;
+    private @Nullable Output<String> compression;
 
-    public Output<String> compression() {
-        return this.compression == null ? Codegen.empty() : this.compression;
+    public Optional<Output<String>> compression() {
+        return Optional.ofNullable(this.compression);
     }
 
     /**
@@ -51,10 +51,10 @@ public final class TableExternalDataConfigurationArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="csvOptions")
-      private final @Nullable Output<TableExternalDataConfigurationCsvOptionsArgs> csvOptions;
+    private @Nullable Output<TableExternalDataConfigurationCsvOptionsArgs> csvOptions;
 
-    public Output<TableExternalDataConfigurationCsvOptionsArgs> csvOptions() {
-        return this.csvOptions == null ? Codegen.empty() : this.csvOptions;
+    public Optional<Output<TableExternalDataConfigurationCsvOptionsArgs>> csvOptions() {
+        return Optional.ofNullable(this.csvOptions);
     }
 
     /**
@@ -64,10 +64,10 @@ public final class TableExternalDataConfigurationArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="googleSheetsOptions")
-      private final @Nullable Output<TableExternalDataConfigurationGoogleSheetsOptionsArgs> googleSheetsOptions;
+    private @Nullable Output<TableExternalDataConfigurationGoogleSheetsOptionsArgs> googleSheetsOptions;
 
-    public Output<TableExternalDataConfigurationGoogleSheetsOptionsArgs> googleSheetsOptions() {
-        return this.googleSheetsOptions == null ? Codegen.empty() : this.googleSheetsOptions;
+    public Optional<Output<TableExternalDataConfigurationGoogleSheetsOptionsArgs>> googleSheetsOptions() {
+        return Optional.ofNullable(this.googleSheetsOptions);
     }
 
     /**
@@ -78,10 +78,10 @@ public final class TableExternalDataConfigurationArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="hivePartitioningOptions")
-      private final @Nullable Output<TableExternalDataConfigurationHivePartitioningOptionsArgs> hivePartitioningOptions;
+    private @Nullable Output<TableExternalDataConfigurationHivePartitioningOptionsArgs> hivePartitioningOptions;
 
-    public Output<TableExternalDataConfigurationHivePartitioningOptionsArgs> hivePartitioningOptions() {
-        return this.hivePartitioningOptions == null ? Codegen.empty() : this.hivePartitioningOptions;
+    public Optional<Output<TableExternalDataConfigurationHivePartitioningOptionsArgs>> hivePartitioningOptions() {
+        return Optional.ofNullable(this.hivePartitioningOptions);
     }
 
     /**
@@ -94,10 +94,10 @@ public final class TableExternalDataConfigurationArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="ignoreUnknownValues")
-      private final @Nullable Output<Boolean> ignoreUnknownValues;
+    private @Nullable Output<Boolean> ignoreUnknownValues;
 
-    public Output<Boolean> ignoreUnknownValues() {
-        return this.ignoreUnknownValues == null ? Codegen.empty() : this.ignoreUnknownValues;
+    public Optional<Output<Boolean>> ignoreUnknownValues() {
+        return Optional.ofNullable(this.ignoreUnknownValues);
     }
 
     /**
@@ -106,10 +106,10 @@ public final class TableExternalDataConfigurationArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="maxBadRecords")
-      private final @Nullable Output<Integer> maxBadRecords;
+    private @Nullable Output<Integer> maxBadRecords;
 
-    public Output<Integer> maxBadRecords() {
-        return this.maxBadRecords == null ? Codegen.empty() : this.maxBadRecords;
+    public Optional<Output<Integer>> maxBadRecords() {
+        return Optional.ofNullable(this.maxBadRecords);
     }
 
     /**
@@ -127,10 +127,10 @@ public final class TableExternalDataConfigurationArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="schema")
-      private final @Nullable Output<String> schema;
+    private @Nullable Output<String> schema;
 
-    public Output<String> schema() {
-        return this.schema == null ? Codegen.empty() : this.schema;
+    public Optional<Output<String>> schema() {
+        return Optional.ofNullable(this.schema);
     }
 
     /**
@@ -142,7 +142,7 @@ public final class TableExternalDataConfigurationArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="sourceFormat", required=true)
-      private final Output<String> sourceFormat;
+    private Output<String> sourceFormat;
 
     public Output<String> sourceFormat() {
         return this.sourceFormat;
@@ -154,170 +154,145 @@ public final class TableExternalDataConfigurationArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="sourceUris", required=true)
-      private final Output<List<String>> sourceUris;
+    private Output<List<String>> sourceUris;
 
     public Output<List<String>> sourceUris() {
         return this.sourceUris;
     }
 
-    public TableExternalDataConfigurationArgs(
-        Output<Boolean> autodetect,
-        @Nullable Output<String> compression,
-        @Nullable Output<TableExternalDataConfigurationCsvOptionsArgs> csvOptions,
-        @Nullable Output<TableExternalDataConfigurationGoogleSheetsOptionsArgs> googleSheetsOptions,
-        @Nullable Output<TableExternalDataConfigurationHivePartitioningOptionsArgs> hivePartitioningOptions,
-        @Nullable Output<Boolean> ignoreUnknownValues,
-        @Nullable Output<Integer> maxBadRecords,
-        @Nullable Output<String> schema,
-        Output<String> sourceFormat,
-        Output<List<String>> sourceUris) {
-        this.autodetect = Objects.requireNonNull(autodetect, "expected parameter 'autodetect' to be non-null");
-        this.compression = compression;
-        this.csvOptions = csvOptions;
-        this.googleSheetsOptions = googleSheetsOptions;
-        this.hivePartitioningOptions = hivePartitioningOptions;
-        this.ignoreUnknownValues = ignoreUnknownValues;
-        this.maxBadRecords = maxBadRecords;
-        this.schema = schema;
-        this.sourceFormat = Objects.requireNonNull(sourceFormat, "expected parameter 'sourceFormat' to be non-null");
-        this.sourceUris = Objects.requireNonNull(sourceUris, "expected parameter 'sourceUris' to be non-null");
-    }
+    private TableExternalDataConfigurationArgs() {}
 
-    private TableExternalDataConfigurationArgs() {
-        this.autodetect = Codegen.empty();
-        this.compression = Codegen.empty();
-        this.csvOptions = Codegen.empty();
-        this.googleSheetsOptions = Codegen.empty();
-        this.hivePartitioningOptions = Codegen.empty();
-        this.ignoreUnknownValues = Codegen.empty();
-        this.maxBadRecords = Codegen.empty();
-        this.schema = Codegen.empty();
-        this.sourceFormat = Codegen.empty();
-        this.sourceUris = Codegen.empty();
+    private TableExternalDataConfigurationArgs(TableExternalDataConfigurationArgs $) {
+        this.autodetect = $.autodetect;
+        this.compression = $.compression;
+        this.csvOptions = $.csvOptions;
+        this.googleSheetsOptions = $.googleSheetsOptions;
+        this.hivePartitioningOptions = $.hivePartitioningOptions;
+        this.ignoreUnknownValues = $.ignoreUnknownValues;
+        this.maxBadRecords = $.maxBadRecords;
+        this.schema = $.schema;
+        this.sourceFormat = $.sourceFormat;
+        this.sourceUris = $.sourceUris;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TableExternalDataConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Boolean> autodetect;
-        private @Nullable Output<String> compression;
-        private @Nullable Output<TableExternalDataConfigurationCsvOptionsArgs> csvOptions;
-        private @Nullable Output<TableExternalDataConfigurationGoogleSheetsOptionsArgs> googleSheetsOptions;
-        private @Nullable Output<TableExternalDataConfigurationHivePartitioningOptionsArgs> hivePartitioningOptions;
-        private @Nullable Output<Boolean> ignoreUnknownValues;
-        private @Nullable Output<Integer> maxBadRecords;
-        private @Nullable Output<String> schema;
-        private Output<String> sourceFormat;
-        private Output<List<String>> sourceUris;
+        private TableExternalDataConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TableExternalDataConfigurationArgs();
         }
 
         public Builder(TableExternalDataConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.autodetect = defaults.autodetect;
-    	      this.compression = defaults.compression;
-    	      this.csvOptions = defaults.csvOptions;
-    	      this.googleSheetsOptions = defaults.googleSheetsOptions;
-    	      this.hivePartitioningOptions = defaults.hivePartitioningOptions;
-    	      this.ignoreUnknownValues = defaults.ignoreUnknownValues;
-    	      this.maxBadRecords = defaults.maxBadRecords;
-    	      this.schema = defaults.schema;
-    	      this.sourceFormat = defaults.sourceFormat;
-    	      this.sourceUris = defaults.sourceUris;
+            $ = new TableExternalDataConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder autodetect(Output<Boolean> autodetect) {
-            this.autodetect = Objects.requireNonNull(autodetect);
+            $.autodetect = autodetect;
             return this;
         }
+
         public Builder autodetect(Boolean autodetect) {
-            this.autodetect = Output.of(Objects.requireNonNull(autodetect));
-            return this;
+            return autodetect(Output.of(autodetect));
         }
+
         public Builder compression(@Nullable Output<String> compression) {
-            this.compression = compression;
+            $.compression = compression;
             return this;
         }
-        public Builder compression(@Nullable String compression) {
-            this.compression = Codegen.ofNullable(compression);
-            return this;
+
+        public Builder compression(String compression) {
+            return compression(Output.of(compression));
         }
+
         public Builder csvOptions(@Nullable Output<TableExternalDataConfigurationCsvOptionsArgs> csvOptions) {
-            this.csvOptions = csvOptions;
+            $.csvOptions = csvOptions;
             return this;
         }
-        public Builder csvOptions(@Nullable TableExternalDataConfigurationCsvOptionsArgs csvOptions) {
-            this.csvOptions = Codegen.ofNullable(csvOptions);
-            return this;
+
+        public Builder csvOptions(TableExternalDataConfigurationCsvOptionsArgs csvOptions) {
+            return csvOptions(Output.of(csvOptions));
         }
+
         public Builder googleSheetsOptions(@Nullable Output<TableExternalDataConfigurationGoogleSheetsOptionsArgs> googleSheetsOptions) {
-            this.googleSheetsOptions = googleSheetsOptions;
+            $.googleSheetsOptions = googleSheetsOptions;
             return this;
         }
-        public Builder googleSheetsOptions(@Nullable TableExternalDataConfigurationGoogleSheetsOptionsArgs googleSheetsOptions) {
-            this.googleSheetsOptions = Codegen.ofNullable(googleSheetsOptions);
-            return this;
+
+        public Builder googleSheetsOptions(TableExternalDataConfigurationGoogleSheetsOptionsArgs googleSheetsOptions) {
+            return googleSheetsOptions(Output.of(googleSheetsOptions));
         }
+
         public Builder hivePartitioningOptions(@Nullable Output<TableExternalDataConfigurationHivePartitioningOptionsArgs> hivePartitioningOptions) {
-            this.hivePartitioningOptions = hivePartitioningOptions;
+            $.hivePartitioningOptions = hivePartitioningOptions;
             return this;
         }
-        public Builder hivePartitioningOptions(@Nullable TableExternalDataConfigurationHivePartitioningOptionsArgs hivePartitioningOptions) {
-            this.hivePartitioningOptions = Codegen.ofNullable(hivePartitioningOptions);
-            return this;
+
+        public Builder hivePartitioningOptions(TableExternalDataConfigurationHivePartitioningOptionsArgs hivePartitioningOptions) {
+            return hivePartitioningOptions(Output.of(hivePartitioningOptions));
         }
+
         public Builder ignoreUnknownValues(@Nullable Output<Boolean> ignoreUnknownValues) {
-            this.ignoreUnknownValues = ignoreUnknownValues;
+            $.ignoreUnknownValues = ignoreUnknownValues;
             return this;
         }
-        public Builder ignoreUnknownValues(@Nullable Boolean ignoreUnknownValues) {
-            this.ignoreUnknownValues = Codegen.ofNullable(ignoreUnknownValues);
-            return this;
+
+        public Builder ignoreUnknownValues(Boolean ignoreUnknownValues) {
+            return ignoreUnknownValues(Output.of(ignoreUnknownValues));
         }
+
         public Builder maxBadRecords(@Nullable Output<Integer> maxBadRecords) {
-            this.maxBadRecords = maxBadRecords;
+            $.maxBadRecords = maxBadRecords;
             return this;
         }
-        public Builder maxBadRecords(@Nullable Integer maxBadRecords) {
-            this.maxBadRecords = Codegen.ofNullable(maxBadRecords);
-            return this;
+
+        public Builder maxBadRecords(Integer maxBadRecords) {
+            return maxBadRecords(Output.of(maxBadRecords));
         }
+
         public Builder schema(@Nullable Output<String> schema) {
-            this.schema = schema;
+            $.schema = schema;
             return this;
         }
-        public Builder schema(@Nullable String schema) {
-            this.schema = Codegen.ofNullable(schema);
-            return this;
+
+        public Builder schema(String schema) {
+            return schema(Output.of(schema));
         }
+
         public Builder sourceFormat(Output<String> sourceFormat) {
-            this.sourceFormat = Objects.requireNonNull(sourceFormat);
+            $.sourceFormat = sourceFormat;
             return this;
         }
+
         public Builder sourceFormat(String sourceFormat) {
-            this.sourceFormat = Output.of(Objects.requireNonNull(sourceFormat));
-            return this;
+            return sourceFormat(Output.of(sourceFormat));
         }
+
         public Builder sourceUris(Output<List<String>> sourceUris) {
-            this.sourceUris = Objects.requireNonNull(sourceUris);
+            $.sourceUris = sourceUris;
             return this;
         }
+
         public Builder sourceUris(List<String> sourceUris) {
-            this.sourceUris = Output.of(Objects.requireNonNull(sourceUris));
-            return this;
+            return sourceUris(Output.of(sourceUris));
         }
+
         public Builder sourceUris(String... sourceUris) {
             return sourceUris(List.of(sourceUris));
-        }        public TableExternalDataConfigurationArgs build() {
-            return new TableExternalDataConfigurationArgs(autodetect, compression, csvOptions, googleSheetsOptions, hivePartitioningOptions, ignoreUnknownValues, maxBadRecords, schema, sourceFormat, sourceUris);
+        }
+
+        public TableExternalDataConfigurationArgs build() {
+            $.autodetect = Objects.requireNonNull($.autodetect, "expected parameter 'autodetect' to be non-null");
+            $.sourceFormat = Objects.requireNonNull($.sourceFormat, "expected parameter 'sourceFormat' to be non-null");
+            $.sourceUris = Objects.requireNonNull($.sourceUris, "expected parameter 'sourceUris' to be non-null");
+            return $;
         }
     }
+
 }

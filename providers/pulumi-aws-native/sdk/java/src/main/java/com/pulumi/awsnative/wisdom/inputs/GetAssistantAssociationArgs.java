@@ -13,62 +13,59 @@ public final class GetAssistantAssociationArgs extends com.pulumi.resources.Invo
     public static final GetAssistantAssociationArgs Empty = new GetAssistantAssociationArgs();
 
     @Import(name="assistantAssociationId", required=true)
-      private final String assistantAssociationId;
+    private String assistantAssociationId;
 
     public String assistantAssociationId() {
         return this.assistantAssociationId;
     }
 
     @Import(name="assistantId", required=true)
-      private final String assistantId;
+    private String assistantId;
 
     public String assistantId() {
         return this.assistantId;
     }
 
-    public GetAssistantAssociationArgs(
-        String assistantAssociationId,
-        String assistantId) {
-        this.assistantAssociationId = Objects.requireNonNull(assistantAssociationId, "expected parameter 'assistantAssociationId' to be non-null");
-        this.assistantId = Objects.requireNonNull(assistantId, "expected parameter 'assistantId' to be non-null");
-    }
+    private GetAssistantAssociationArgs() {}
 
-    private GetAssistantAssociationArgs() {
-        this.assistantAssociationId = null;
-        this.assistantId = null;
+    private GetAssistantAssociationArgs(GetAssistantAssociationArgs $) {
+        this.assistantAssociationId = $.assistantAssociationId;
+        this.assistantId = $.assistantId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetAssistantAssociationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String assistantAssociationId;
-        private String assistantId;
+        private GetAssistantAssociationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetAssistantAssociationArgs();
         }
 
         public Builder(GetAssistantAssociationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.assistantAssociationId = defaults.assistantAssociationId;
-    	      this.assistantId = defaults.assistantId;
+            $ = new GetAssistantAssociationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder assistantAssociationId(String assistantAssociationId) {
-            this.assistantAssociationId = Objects.requireNonNull(assistantAssociationId);
+            $.assistantAssociationId = assistantAssociationId;
             return this;
         }
+
         public Builder assistantId(String assistantId) {
-            this.assistantId = Objects.requireNonNull(assistantId);
+            $.assistantId = assistantId;
             return this;
-        }        public GetAssistantAssociationArgs build() {
-            return new GetAssistantAssociationArgs(assistantAssociationId, assistantId);
+        }
+
+        public GetAssistantAssociationArgs build() {
+            $.assistantAssociationId = Objects.requireNonNull($.assistantAssociationId, "expected parameter 'assistantAssociationId' to be non-null");
+            $.assistantId = Objects.requireNonNull($.assistantId, "expected parameter 'assistantId' to be non-null");
+            return $;
         }
     }
+
 }

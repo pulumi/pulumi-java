@@ -23,7 +23,7 @@ public final class SecretEnvSourceResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="localObjectReference", required=true)
-      private final LocalObjectReferenceResponse localObjectReference;
+    private LocalObjectReferenceResponse localObjectReference;
 
     public LocalObjectReferenceResponse localObjectReference() {
         return this.localObjectReference;
@@ -34,7 +34,7 @@ public final class SecretEnvSourceResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -45,64 +45,59 @@ public final class SecretEnvSourceResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="optional", required=true)
-      private final Boolean optional;
+    private Boolean optional;
 
     public Boolean optional() {
         return this.optional;
     }
 
-    public SecretEnvSourceResponse(
-        LocalObjectReferenceResponse localObjectReference,
-        String name,
-        Boolean optional) {
-        this.localObjectReference = Objects.requireNonNull(localObjectReference, "expected parameter 'localObjectReference' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.optional = Objects.requireNonNull(optional, "expected parameter 'optional' to be non-null");
-    }
+    private SecretEnvSourceResponse() {}
 
-    private SecretEnvSourceResponse() {
-        this.localObjectReference = null;
-        this.name = null;
-        this.optional = null;
+    private SecretEnvSourceResponse(SecretEnvSourceResponse $) {
+        this.localObjectReference = $.localObjectReference;
+        this.name = $.name;
+        this.optional = $.optional;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SecretEnvSourceResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private LocalObjectReferenceResponse localObjectReference;
-        private String name;
-        private Boolean optional;
+        private SecretEnvSourceResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new SecretEnvSourceResponse();
         }
 
         public Builder(SecretEnvSourceResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.localObjectReference = defaults.localObjectReference;
-    	      this.name = defaults.name;
-    	      this.optional = defaults.optional;
+            $ = new SecretEnvSourceResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder localObjectReference(LocalObjectReferenceResponse localObjectReference) {
-            this.localObjectReference = Objects.requireNonNull(localObjectReference);
+            $.localObjectReference = localObjectReference;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder optional(Boolean optional) {
-            this.optional = Objects.requireNonNull(optional);
+            $.optional = optional;
             return this;
-        }        public SecretEnvSourceResponse build() {
-            return new SecretEnvSourceResponse(localObjectReference, name, optional);
+        }
+
+        public SecretEnvSourceResponse build() {
+            $.localObjectReference = Objects.requireNonNull($.localObjectReference, "expected parameter 'localObjectReference' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.optional = Objects.requireNonNull($.optional, "expected parameter 'optional' to be non-null");
+            return $;
         }
     }
+
 }

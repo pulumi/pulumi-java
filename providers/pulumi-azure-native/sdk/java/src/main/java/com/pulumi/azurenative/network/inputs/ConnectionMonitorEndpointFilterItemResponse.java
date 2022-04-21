@@ -23,10 +23,10 @@ public final class ConnectionMonitorEndpointFilterItemResponse extends com.pulum
      * 
      */
     @Import(name="address")
-      private final @Nullable String address;
+    private @Nullable String address;
 
     public Optional<String> address() {
-        return this.address == null ? Optional.empty() : Optional.ofNullable(this.address);
+        return Optional.ofNullable(this.address);
     }
 
     /**
@@ -34,55 +34,50 @@ public final class ConnectionMonitorEndpointFilterItemResponse extends com.pulum
      * 
      */
     @Import(name="type")
-      private final @Nullable String type;
+    private @Nullable String type;
 
     public Optional<String> type() {
-        return this.type == null ? Optional.empty() : Optional.ofNullable(this.type);
+        return Optional.ofNullable(this.type);
     }
 
-    public ConnectionMonitorEndpointFilterItemResponse(
-        @Nullable String address,
-        @Nullable String type) {
-        this.address = address;
-        this.type = type;
-    }
+    private ConnectionMonitorEndpointFilterItemResponse() {}
 
-    private ConnectionMonitorEndpointFilterItemResponse() {
-        this.address = null;
-        this.type = null;
+    private ConnectionMonitorEndpointFilterItemResponse(ConnectionMonitorEndpointFilterItemResponse $) {
+        this.address = $.address;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ConnectionMonitorEndpointFilterItemResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String address;
-        private @Nullable String type;
+        private ConnectionMonitorEndpointFilterItemResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ConnectionMonitorEndpointFilterItemResponse();
         }
 
         public Builder(ConnectionMonitorEndpointFilterItemResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.address = defaults.address;
-    	      this.type = defaults.type;
+            $ = new ConnectionMonitorEndpointFilterItemResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder address(@Nullable String address) {
-            this.address = address;
+            $.address = address;
             return this;
         }
+
         public Builder type(@Nullable String type) {
-            this.type = type;
+            $.type = type;
             return this;
-        }        public ConnectionMonitorEndpointFilterItemResponse build() {
-            return new ConnectionMonitorEndpointFilterItemResponse(address, type);
+        }
+
+        public ConnectionMonitorEndpointFilterItemResponse build() {
+            return $;
         }
     }
+
 }

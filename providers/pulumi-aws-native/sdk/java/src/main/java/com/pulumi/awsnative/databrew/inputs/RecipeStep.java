@@ -17,7 +17,7 @@ public final class RecipeStep extends com.pulumi.resources.InvokeArgs {
     public static final RecipeStep Empty = new RecipeStep();
 
     @Import(name="action", required=true)
-      private final RecipeAction action;
+    private RecipeAction action;
 
     public RecipeAction action() {
         return this.action;
@@ -28,58 +28,55 @@ public final class RecipeStep extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="conditionExpressions")
-      private final @Nullable List<RecipeConditionExpression> conditionExpressions;
+    private @Nullable List<RecipeConditionExpression> conditionExpressions;
 
-    public List<RecipeConditionExpression> conditionExpressions() {
-        return this.conditionExpressions == null ? List.of() : this.conditionExpressions;
+    public Optional<List<RecipeConditionExpression>> conditionExpressions() {
+        return Optional.ofNullable(this.conditionExpressions);
     }
 
-    public RecipeStep(
-        RecipeAction action,
-        @Nullable List<RecipeConditionExpression> conditionExpressions) {
-        this.action = Objects.requireNonNull(action, "expected parameter 'action' to be non-null");
-        this.conditionExpressions = conditionExpressions;
-    }
+    private RecipeStep() {}
 
-    private RecipeStep() {
-        this.action = null;
-        this.conditionExpressions = List.of();
+    private RecipeStep(RecipeStep $) {
+        this.action = $.action;
+        this.conditionExpressions = $.conditionExpressions;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RecipeStep defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private RecipeAction action;
-        private @Nullable List<RecipeConditionExpression> conditionExpressions;
+        private RecipeStep $;
 
         public Builder() {
-    	      // Empty
+            $ = new RecipeStep();
         }
 
         public Builder(RecipeStep defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.action = defaults.action;
-    	      this.conditionExpressions = defaults.conditionExpressions;
+            $ = new RecipeStep(Objects.requireNonNull(defaults));
         }
 
         public Builder action(RecipeAction action) {
-            this.action = Objects.requireNonNull(action);
+            $.action = action;
             return this;
         }
+
         public Builder conditionExpressions(@Nullable List<RecipeConditionExpression> conditionExpressions) {
-            this.conditionExpressions = conditionExpressions;
+            $.conditionExpressions = conditionExpressions;
             return this;
         }
+
         public Builder conditionExpressions(RecipeConditionExpression... conditionExpressions) {
             return conditionExpressions(List.of(conditionExpressions));
-        }        public RecipeStep build() {
-            return new RecipeStep(action, conditionExpressions);
+        }
+
+        public RecipeStep build() {
+            $.action = Objects.requireNonNull($.action, "expected parameter 'action' to be non-null");
+            return $;
         }
     }
+
 }

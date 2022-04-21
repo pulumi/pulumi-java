@@ -27,10 +27,10 @@ public final class ResponseContractResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="description")
-      private final @Nullable String description;
+    private @Nullable String description;
 
     public Optional<String> description() {
-        return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -38,10 +38,10 @@ public final class ResponseContractResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="headers")
-      private final @Nullable List<ParameterContractResponse> headers;
+    private @Nullable List<ParameterContractResponse> headers;
 
-    public List<ParameterContractResponse> headers() {
-        return this.headers == null ? List.of() : this.headers;
+    public Optional<List<ParameterContractResponse>> headers() {
+        return Optional.ofNullable(this.headers);
     }
 
     /**
@@ -49,10 +49,10 @@ public final class ResponseContractResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="representations")
-      private final @Nullable List<RepresentationContractResponse> representations;
+    private @Nullable List<RepresentationContractResponse> representations;
 
-    public List<RepresentationContractResponse> representations() {
-        return this.representations == null ? List.of() : this.representations;
+    public Optional<List<RepresentationContractResponse>> representations() {
+        return Optional.ofNullable(this.representations);
     }
 
     /**
@@ -60,79 +60,71 @@ public final class ResponseContractResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="statusCode", required=true)
-      private final Integer statusCode;
+    private Integer statusCode;
 
     public Integer statusCode() {
         return this.statusCode;
     }
 
-    public ResponseContractResponse(
-        @Nullable String description,
-        @Nullable List<ParameterContractResponse> headers,
-        @Nullable List<RepresentationContractResponse> representations,
-        Integer statusCode) {
-        this.description = description;
-        this.headers = headers;
-        this.representations = representations;
-        this.statusCode = Objects.requireNonNull(statusCode, "expected parameter 'statusCode' to be non-null");
-    }
+    private ResponseContractResponse() {}
 
-    private ResponseContractResponse() {
-        this.description = null;
-        this.headers = List.of();
-        this.representations = List.of();
-        this.statusCode = null;
+    private ResponseContractResponse(ResponseContractResponse $) {
+        this.description = $.description;
+        this.headers = $.headers;
+        this.representations = $.representations;
+        this.statusCode = $.statusCode;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ResponseContractResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String description;
-        private @Nullable List<ParameterContractResponse> headers;
-        private @Nullable List<RepresentationContractResponse> representations;
-        private Integer statusCode;
+        private ResponseContractResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ResponseContractResponse();
         }
 
         public Builder(ResponseContractResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.description = defaults.description;
-    	      this.headers = defaults.headers;
-    	      this.representations = defaults.representations;
-    	      this.statusCode = defaults.statusCode;
+            $ = new ResponseContractResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder description(@Nullable String description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
+
         public Builder headers(@Nullable List<ParameterContractResponse> headers) {
-            this.headers = headers;
+            $.headers = headers;
             return this;
         }
+
         public Builder headers(ParameterContractResponse... headers) {
             return headers(List.of(headers));
         }
+
         public Builder representations(@Nullable List<RepresentationContractResponse> representations) {
-            this.representations = representations;
+            $.representations = representations;
             return this;
         }
+
         public Builder representations(RepresentationContractResponse... representations) {
             return representations(List.of(representations));
         }
+
         public Builder statusCode(Integer statusCode) {
-            this.statusCode = Objects.requireNonNull(statusCode);
+            $.statusCode = statusCode;
             return this;
-        }        public ResponseContractResponse build() {
-            return new ResponseContractResponse(description, headers, representations, statusCode);
+        }
+
+        public ResponseContractResponse build() {
+            $.statusCode = Objects.requireNonNull($.statusCode, "expected parameter 'statusCode' to be non-null");
+            return $;
         }
     }
+
 }

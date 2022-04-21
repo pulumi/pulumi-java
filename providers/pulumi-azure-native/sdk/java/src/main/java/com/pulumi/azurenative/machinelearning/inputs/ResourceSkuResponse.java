@@ -24,10 +24,10 @@ public final class ResourceSkuResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="capacity")
-      private final @Nullable Integer capacity;
+    private @Nullable Integer capacity;
 
     public Optional<Integer> capacity() {
-        return this.capacity == null ? Optional.empty() : Optional.ofNullable(this.capacity);
+        return Optional.ofNullable(this.capacity);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class ResourceSkuResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable String name;
+    private @Nullable String name;
 
     public Optional<String> name() {
-        return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -46,64 +46,56 @@ public final class ResourceSkuResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="tier")
-      private final @Nullable String tier;
+    private @Nullable String tier;
 
     public Optional<String> tier() {
-        return this.tier == null ? Optional.empty() : Optional.ofNullable(this.tier);
+        return Optional.ofNullable(this.tier);
     }
 
-    public ResourceSkuResponse(
-        @Nullable Integer capacity,
-        @Nullable String name,
-        @Nullable String tier) {
-        this.capacity = capacity;
-        this.name = name;
-        this.tier = tier;
-    }
+    private ResourceSkuResponse() {}
 
-    private ResourceSkuResponse() {
-        this.capacity = null;
-        this.name = null;
-        this.tier = null;
+    private ResourceSkuResponse(ResourceSkuResponse $) {
+        this.capacity = $.capacity;
+        this.name = $.name;
+        this.tier = $.tier;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ResourceSkuResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Integer capacity;
-        private @Nullable String name;
-        private @Nullable String tier;
+        private ResourceSkuResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ResourceSkuResponse();
         }
 
         public Builder(ResourceSkuResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.capacity = defaults.capacity;
-    	      this.name = defaults.name;
-    	      this.tier = defaults.tier;
+            $ = new ResourceSkuResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder capacity(@Nullable Integer capacity) {
-            this.capacity = capacity;
+            $.capacity = capacity;
             return this;
         }
+
         public Builder name(@Nullable String name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
+
         public Builder tier(@Nullable String tier) {
-            this.tier = tier;
+            $.tier = tier;
             return this;
-        }        public ResourceSkuResponse build() {
-            return new ResourceSkuResponse(capacity, name, tier);
+        }
+
+        public ResourceSkuResponse build() {
+            return $;
         }
     }
+
 }

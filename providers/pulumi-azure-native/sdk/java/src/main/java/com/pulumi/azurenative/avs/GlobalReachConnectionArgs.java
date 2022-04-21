@@ -5,9 +5,9 @@ package com.pulumi.azurenative.avs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class GlobalReachConnectionArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="authorizationKey")
-      private final @Nullable Output<String> authorizationKey;
+    private @Nullable Output<String> authorizationKey;
 
-    public Output<String> authorizationKey() {
-        return this.authorizationKey == null ? Codegen.empty() : this.authorizationKey;
+    public Optional<Output<String>> authorizationKey() {
+        return Optional.ofNullable(this.authorizationKey);
     }
 
     /**
@@ -31,10 +31,10 @@ public final class GlobalReachConnectionArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="globalReachConnectionName")
-      private final @Nullable Output<String> globalReachConnectionName;
+    private @Nullable Output<String> globalReachConnectionName;
 
-    public Output<String> globalReachConnectionName() {
-        return this.globalReachConnectionName == null ? Codegen.empty() : this.globalReachConnectionName;
+    public Optional<Output<String>> globalReachConnectionName() {
+        return Optional.ofNullable(this.globalReachConnectionName);
     }
 
     /**
@@ -42,10 +42,10 @@ public final class GlobalReachConnectionArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="peerExpressRouteCircuit")
-      private final @Nullable Output<String> peerExpressRouteCircuit;
+    private @Nullable Output<String> peerExpressRouteCircuit;
 
-    public Output<String> peerExpressRouteCircuit() {
-        return this.peerExpressRouteCircuit == null ? Codegen.empty() : this.peerExpressRouteCircuit;
+    public Optional<Output<String>> peerExpressRouteCircuit() {
+        return Optional.ofNullable(this.peerExpressRouteCircuit);
     }
 
     /**
@@ -53,7 +53,7 @@ public final class GlobalReachConnectionArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="privateCloudName", required=true)
-      private final Output<String> privateCloudName;
+    private Output<String> privateCloudName;
 
     public Output<String> privateCloudName() {
         return this.privateCloudName;
@@ -64,102 +64,90 @@ public final class GlobalReachConnectionArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public GlobalReachConnectionArgs(
-        @Nullable Output<String> authorizationKey,
-        @Nullable Output<String> globalReachConnectionName,
-        @Nullable Output<String> peerExpressRouteCircuit,
-        Output<String> privateCloudName,
-        Output<String> resourceGroupName) {
-        this.authorizationKey = authorizationKey;
-        this.globalReachConnectionName = globalReachConnectionName;
-        this.peerExpressRouteCircuit = peerExpressRouteCircuit;
-        this.privateCloudName = Objects.requireNonNull(privateCloudName, "expected parameter 'privateCloudName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private GlobalReachConnectionArgs() {}
 
-    private GlobalReachConnectionArgs() {
-        this.authorizationKey = Codegen.empty();
-        this.globalReachConnectionName = Codegen.empty();
-        this.peerExpressRouteCircuit = Codegen.empty();
-        this.privateCloudName = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
+    private GlobalReachConnectionArgs(GlobalReachConnectionArgs $) {
+        this.authorizationKey = $.authorizationKey;
+        this.globalReachConnectionName = $.globalReachConnectionName;
+        this.peerExpressRouteCircuit = $.peerExpressRouteCircuit;
+        this.privateCloudName = $.privateCloudName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GlobalReachConnectionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> authorizationKey;
-        private @Nullable Output<String> globalReachConnectionName;
-        private @Nullable Output<String> peerExpressRouteCircuit;
-        private Output<String> privateCloudName;
-        private Output<String> resourceGroupName;
+        private GlobalReachConnectionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GlobalReachConnectionArgs();
         }
 
         public Builder(GlobalReachConnectionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.authorizationKey = defaults.authorizationKey;
-    	      this.globalReachConnectionName = defaults.globalReachConnectionName;
-    	      this.peerExpressRouteCircuit = defaults.peerExpressRouteCircuit;
-    	      this.privateCloudName = defaults.privateCloudName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new GlobalReachConnectionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder authorizationKey(@Nullable Output<String> authorizationKey) {
-            this.authorizationKey = authorizationKey;
+            $.authorizationKey = authorizationKey;
             return this;
         }
-        public Builder authorizationKey(@Nullable String authorizationKey) {
-            this.authorizationKey = Codegen.ofNullable(authorizationKey);
-            return this;
+
+        public Builder authorizationKey(String authorizationKey) {
+            return authorizationKey(Output.of(authorizationKey));
         }
+
         public Builder globalReachConnectionName(@Nullable Output<String> globalReachConnectionName) {
-            this.globalReachConnectionName = globalReachConnectionName;
+            $.globalReachConnectionName = globalReachConnectionName;
             return this;
         }
-        public Builder globalReachConnectionName(@Nullable String globalReachConnectionName) {
-            this.globalReachConnectionName = Codegen.ofNullable(globalReachConnectionName);
-            return this;
+
+        public Builder globalReachConnectionName(String globalReachConnectionName) {
+            return globalReachConnectionName(Output.of(globalReachConnectionName));
         }
+
         public Builder peerExpressRouteCircuit(@Nullable Output<String> peerExpressRouteCircuit) {
-            this.peerExpressRouteCircuit = peerExpressRouteCircuit;
+            $.peerExpressRouteCircuit = peerExpressRouteCircuit;
             return this;
         }
-        public Builder peerExpressRouteCircuit(@Nullable String peerExpressRouteCircuit) {
-            this.peerExpressRouteCircuit = Codegen.ofNullable(peerExpressRouteCircuit);
-            return this;
+
+        public Builder peerExpressRouteCircuit(String peerExpressRouteCircuit) {
+            return peerExpressRouteCircuit(Output.of(peerExpressRouteCircuit));
         }
+
         public Builder privateCloudName(Output<String> privateCloudName) {
-            this.privateCloudName = Objects.requireNonNull(privateCloudName);
+            $.privateCloudName = privateCloudName;
             return this;
         }
+
         public Builder privateCloudName(String privateCloudName) {
-            this.privateCloudName = Output.of(Objects.requireNonNull(privateCloudName));
-            return this;
+            return privateCloudName(Output.of(privateCloudName));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
-        }        public GlobalReachConnectionArgs build() {
-            return new GlobalReachConnectionArgs(authorizationKey, globalReachConnectionName, peerExpressRouteCircuit, privateCloudName, resourceGroupName);
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        public GlobalReachConnectionArgs build() {
+            $.privateCloudName = Objects.requireNonNull($.privateCloudName, "expected parameter 'privateCloudName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

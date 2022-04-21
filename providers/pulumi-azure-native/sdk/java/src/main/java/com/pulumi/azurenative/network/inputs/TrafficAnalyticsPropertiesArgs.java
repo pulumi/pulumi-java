@@ -6,8 +6,8 @@ package com.pulumi.azurenative.network.inputs;
 import com.pulumi.azurenative.network.inputs.TrafficAnalyticsConfigurationPropertiesArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class TrafficAnalyticsPropertiesArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="networkWatcherFlowAnalyticsConfiguration")
-      private final @Nullable Output<TrafficAnalyticsConfigurationPropertiesArgs> networkWatcherFlowAnalyticsConfiguration;
+    private @Nullable Output<TrafficAnalyticsConfigurationPropertiesArgs> networkWatcherFlowAnalyticsConfiguration;
 
-    public Output<TrafficAnalyticsConfigurationPropertiesArgs> networkWatcherFlowAnalyticsConfiguration() {
-        return this.networkWatcherFlowAnalyticsConfiguration == null ? Codegen.empty() : this.networkWatcherFlowAnalyticsConfiguration;
+    public Optional<Output<TrafficAnalyticsConfigurationPropertiesArgs>> networkWatcherFlowAnalyticsConfiguration() {
+        return Optional.ofNullable(this.networkWatcherFlowAnalyticsConfiguration);
     }
 
-    public TrafficAnalyticsPropertiesArgs(@Nullable Output<TrafficAnalyticsConfigurationPropertiesArgs> networkWatcherFlowAnalyticsConfiguration) {
-        this.networkWatcherFlowAnalyticsConfiguration = networkWatcherFlowAnalyticsConfiguration;
-    }
+    private TrafficAnalyticsPropertiesArgs() {}
 
-    private TrafficAnalyticsPropertiesArgs() {
-        this.networkWatcherFlowAnalyticsConfiguration = Codegen.empty();
+    private TrafficAnalyticsPropertiesArgs(TrafficAnalyticsPropertiesArgs $) {
+        this.networkWatcherFlowAnalyticsConfiguration = $.networkWatcherFlowAnalyticsConfiguration;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TrafficAnalyticsPropertiesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<TrafficAnalyticsConfigurationPropertiesArgs> networkWatcherFlowAnalyticsConfiguration;
+        private TrafficAnalyticsPropertiesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TrafficAnalyticsPropertiesArgs();
         }
 
         public Builder(TrafficAnalyticsPropertiesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.networkWatcherFlowAnalyticsConfiguration = defaults.networkWatcherFlowAnalyticsConfiguration;
+            $ = new TrafficAnalyticsPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder networkWatcherFlowAnalyticsConfiguration(@Nullable Output<TrafficAnalyticsConfigurationPropertiesArgs> networkWatcherFlowAnalyticsConfiguration) {
-            this.networkWatcherFlowAnalyticsConfiguration = networkWatcherFlowAnalyticsConfiguration;
+            $.networkWatcherFlowAnalyticsConfiguration = networkWatcherFlowAnalyticsConfiguration;
             return this;
         }
-        public Builder networkWatcherFlowAnalyticsConfiguration(@Nullable TrafficAnalyticsConfigurationPropertiesArgs networkWatcherFlowAnalyticsConfiguration) {
-            this.networkWatcherFlowAnalyticsConfiguration = Codegen.ofNullable(networkWatcherFlowAnalyticsConfiguration);
-            return this;
-        }        public TrafficAnalyticsPropertiesArgs build() {
-            return new TrafficAnalyticsPropertiesArgs(networkWatcherFlowAnalyticsConfiguration);
+
+        public Builder networkWatcherFlowAnalyticsConfiguration(TrafficAnalyticsConfigurationPropertiesArgs networkWatcherFlowAnalyticsConfiguration) {
+            return networkWatcherFlowAnalyticsConfiguration(Output.of(networkWatcherFlowAnalyticsConfiguration));
+        }
+
+        public TrafficAnalyticsPropertiesArgs build() {
+            return $;
         }
     }
+
 }

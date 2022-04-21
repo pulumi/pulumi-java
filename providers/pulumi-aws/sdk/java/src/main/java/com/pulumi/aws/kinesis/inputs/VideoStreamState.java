@@ -5,11 +5,11 @@ package com.pulumi.aws.kinesis.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class VideoStreamState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="arn")
-      private final @Nullable Output<String> arn;
+    private @Nullable Output<String> arn;
 
-    public Output<String> arn() {
-        return this.arn == null ? Codegen.empty() : this.arn;
+    public Optional<Output<String>> arn() {
+        return Optional.ofNullable(this.arn);
     }
 
     /**
@@ -33,10 +33,10 @@ public final class VideoStreamState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="creationTime")
-      private final @Nullable Output<String> creationTime;
+    private @Nullable Output<String> creationTime;
 
-    public Output<String> creationTime() {
-        return this.creationTime == null ? Codegen.empty() : this.creationTime;
+    public Optional<Output<String>> creationTime() {
+        return Optional.ofNullable(this.creationTime);
     }
 
     /**
@@ -44,10 +44,10 @@ public final class VideoStreamState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="dataRetentionInHours")
-      private final @Nullable Output<Integer> dataRetentionInHours;
+    private @Nullable Output<Integer> dataRetentionInHours;
 
-    public Output<Integer> dataRetentionInHours() {
-        return this.dataRetentionInHours == null ? Codegen.empty() : this.dataRetentionInHours;
+    public Optional<Output<Integer>> dataRetentionInHours() {
+        return Optional.ofNullable(this.dataRetentionInHours);
     }
 
     /**
@@ -55,10 +55,10 @@ public final class VideoStreamState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="deviceName")
-      private final @Nullable Output<String> deviceName;
+    private @Nullable Output<String> deviceName;
 
-    public Output<String> deviceName() {
-        return this.deviceName == null ? Codegen.empty() : this.deviceName;
+    public Optional<Output<String>> deviceName() {
+        return Optional.ofNullable(this.deviceName);
     }
 
     /**
@@ -66,10 +66,10 @@ public final class VideoStreamState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="kmsKeyId")
-      private final @Nullable Output<String> kmsKeyId;
+    private @Nullable Output<String> kmsKeyId;
 
-    public Output<String> kmsKeyId() {
-        return this.kmsKeyId == null ? Codegen.empty() : this.kmsKeyId;
+    public Optional<Output<String>> kmsKeyId() {
+        return Optional.ofNullable(this.kmsKeyId);
     }
 
     /**
@@ -77,10 +77,10 @@ public final class VideoStreamState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="mediaType")
-      private final @Nullable Output<String> mediaType;
+    private @Nullable Output<String> mediaType;
 
-    public Output<String> mediaType() {
-        return this.mediaType == null ? Codegen.empty() : this.mediaType;
+    public Optional<Output<String>> mediaType() {
+        return Optional.ofNullable(this.mediaType);
     }
 
     /**
@@ -89,10 +89,10 @@ public final class VideoStreamState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -100,10 +100,10 @@ public final class VideoStreamState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -111,10 +111,10 @@ public final class VideoStreamState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tagsAll")
-      private final @Nullable Output<Map<String,String>> tagsAll;
+    private @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> tagsAll() {
-        return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
+    public Optional<Output<Map<String,String>>> tagsAll() {
+        return Optional.ofNullable(this.tagsAll);
     }
 
     /**
@@ -122,167 +122,138 @@ public final class VideoStreamState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="version")
-      private final @Nullable Output<String> version;
+    private @Nullable Output<String> version;
 
-    public Output<String> version() {
-        return this.version == null ? Codegen.empty() : this.version;
+    public Optional<Output<String>> version() {
+        return Optional.ofNullable(this.version);
     }
 
-    public VideoStreamState(
-        @Nullable Output<String> arn,
-        @Nullable Output<String> creationTime,
-        @Nullable Output<Integer> dataRetentionInHours,
-        @Nullable Output<String> deviceName,
-        @Nullable Output<String> kmsKeyId,
-        @Nullable Output<String> mediaType,
-        @Nullable Output<String> name,
-        @Nullable Output<Map<String,String>> tags,
-        @Nullable Output<Map<String,String>> tagsAll,
-        @Nullable Output<String> version) {
-        this.arn = arn;
-        this.creationTime = creationTime;
-        this.dataRetentionInHours = dataRetentionInHours;
-        this.deviceName = deviceName;
-        this.kmsKeyId = kmsKeyId;
-        this.mediaType = mediaType;
-        this.name = name;
-        this.tags = tags;
-        this.tagsAll = tagsAll;
-        this.version = version;
-    }
+    private VideoStreamState() {}
 
-    private VideoStreamState() {
-        this.arn = Codegen.empty();
-        this.creationTime = Codegen.empty();
-        this.dataRetentionInHours = Codegen.empty();
-        this.deviceName = Codegen.empty();
-        this.kmsKeyId = Codegen.empty();
-        this.mediaType = Codegen.empty();
-        this.name = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.tagsAll = Codegen.empty();
-        this.version = Codegen.empty();
+    private VideoStreamState(VideoStreamState $) {
+        this.arn = $.arn;
+        this.creationTime = $.creationTime;
+        this.dataRetentionInHours = $.dataRetentionInHours;
+        this.deviceName = $.deviceName;
+        this.kmsKeyId = $.kmsKeyId;
+        this.mediaType = $.mediaType;
+        this.name = $.name;
+        this.tags = $.tags;
+        this.tagsAll = $.tagsAll;
+        this.version = $.version;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VideoStreamState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> arn;
-        private @Nullable Output<String> creationTime;
-        private @Nullable Output<Integer> dataRetentionInHours;
-        private @Nullable Output<String> deviceName;
-        private @Nullable Output<String> kmsKeyId;
-        private @Nullable Output<String> mediaType;
-        private @Nullable Output<String> name;
-        private @Nullable Output<Map<String,String>> tags;
-        private @Nullable Output<Map<String,String>> tagsAll;
-        private @Nullable Output<String> version;
+        private VideoStreamState $;
 
         public Builder() {
-    	      // Empty
+            $ = new VideoStreamState();
         }
 
         public Builder(VideoStreamState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.arn = defaults.arn;
-    	      this.creationTime = defaults.creationTime;
-    	      this.dataRetentionInHours = defaults.dataRetentionInHours;
-    	      this.deviceName = defaults.deviceName;
-    	      this.kmsKeyId = defaults.kmsKeyId;
-    	      this.mediaType = defaults.mediaType;
-    	      this.name = defaults.name;
-    	      this.tags = defaults.tags;
-    	      this.tagsAll = defaults.tagsAll;
-    	      this.version = defaults.version;
+            $ = new VideoStreamState(Objects.requireNonNull(defaults));
         }
 
         public Builder arn(@Nullable Output<String> arn) {
-            this.arn = arn;
+            $.arn = arn;
             return this;
         }
-        public Builder arn(@Nullable String arn) {
-            this.arn = Codegen.ofNullable(arn);
-            return this;
+
+        public Builder arn(String arn) {
+            return arn(Output.of(arn));
         }
+
         public Builder creationTime(@Nullable Output<String> creationTime) {
-            this.creationTime = creationTime;
+            $.creationTime = creationTime;
             return this;
         }
-        public Builder creationTime(@Nullable String creationTime) {
-            this.creationTime = Codegen.ofNullable(creationTime);
-            return this;
+
+        public Builder creationTime(String creationTime) {
+            return creationTime(Output.of(creationTime));
         }
+
         public Builder dataRetentionInHours(@Nullable Output<Integer> dataRetentionInHours) {
-            this.dataRetentionInHours = dataRetentionInHours;
+            $.dataRetentionInHours = dataRetentionInHours;
             return this;
         }
-        public Builder dataRetentionInHours(@Nullable Integer dataRetentionInHours) {
-            this.dataRetentionInHours = Codegen.ofNullable(dataRetentionInHours);
-            return this;
+
+        public Builder dataRetentionInHours(Integer dataRetentionInHours) {
+            return dataRetentionInHours(Output.of(dataRetentionInHours));
         }
+
         public Builder deviceName(@Nullable Output<String> deviceName) {
-            this.deviceName = deviceName;
+            $.deviceName = deviceName;
             return this;
         }
-        public Builder deviceName(@Nullable String deviceName) {
-            this.deviceName = Codegen.ofNullable(deviceName);
-            return this;
+
+        public Builder deviceName(String deviceName) {
+            return deviceName(Output.of(deviceName));
         }
+
         public Builder kmsKeyId(@Nullable Output<String> kmsKeyId) {
-            this.kmsKeyId = kmsKeyId;
+            $.kmsKeyId = kmsKeyId;
             return this;
         }
-        public Builder kmsKeyId(@Nullable String kmsKeyId) {
-            this.kmsKeyId = Codegen.ofNullable(kmsKeyId);
-            return this;
+
+        public Builder kmsKeyId(String kmsKeyId) {
+            return kmsKeyId(Output.of(kmsKeyId));
         }
+
         public Builder mediaType(@Nullable Output<String> mediaType) {
-            this.mediaType = mediaType;
+            $.mediaType = mediaType;
             return this;
         }
-        public Builder mediaType(@Nullable String mediaType) {
-            this.mediaType = Codegen.ofNullable(mediaType);
-            return this;
+
+        public Builder mediaType(String mediaType) {
+            return mediaType(Output.of(mediaType));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
-            this.tagsAll = tagsAll;
+            $.tagsAll = tagsAll;
             return this;
         }
-        public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Codegen.ofNullable(tagsAll);
-            return this;
+
+        public Builder tagsAll(Map<String,String> tagsAll) {
+            return tagsAll(Output.of(tagsAll));
         }
+
         public Builder version(@Nullable Output<String> version) {
-            this.version = version;
+            $.version = version;
             return this;
         }
-        public Builder version(@Nullable String version) {
-            this.version = Codegen.ofNullable(version);
-            return this;
-        }        public VideoStreamState build() {
-            return new VideoStreamState(arn, creationTime, dataRetentionInHours, deviceName, kmsKeyId, mediaType, name, tags, tagsAll, version);
+
+        public Builder version(String version) {
+            return version(Output.of(version));
+        }
+
+        public VideoStreamState build() {
+            return $;
         }
     }
+
 }

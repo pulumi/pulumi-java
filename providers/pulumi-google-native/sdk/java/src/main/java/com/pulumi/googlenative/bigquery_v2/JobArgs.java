@@ -6,11 +6,11 @@ package com.pulumi.googlenative.bigquery_v2;
 import com.pulumi.asset.AssetOrArchive;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.bigquery_v2.inputs.JobConfigurationArgs;
 import com.pulumi.googlenative.bigquery_v2.inputs.JobReferenceArgs;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,10 @@ public final class JobArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="configuration")
-      private final @Nullable Output<JobConfigurationArgs> configuration;
+    private @Nullable Output<JobConfigurationArgs> configuration;
 
-    public Output<JobConfigurationArgs> configuration() {
-        return this.configuration == null ? Codegen.empty() : this.configuration;
+    public Optional<Output<JobConfigurationArgs>> configuration() {
+        return Optional.ofNullable(this.configuration);
     }
 
     /**
@@ -34,103 +34,92 @@ public final class JobArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="jobReference")
-      private final @Nullable Output<JobReferenceArgs> jobReference;
+    private @Nullable Output<JobReferenceArgs> jobReference;
 
-    public Output<JobReferenceArgs> jobReference() {
-        return this.jobReference == null ? Codegen.empty() : this.jobReference;
+    public Optional<Output<JobReferenceArgs>> jobReference() {
+        return Optional.ofNullable(this.jobReference);
     }
 
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     @Import(name="source")
-      private final @Nullable Output<AssetOrArchive> source;
+    private @Nullable Output<AssetOrArchive> source;
 
-    public Output<AssetOrArchive> source() {
-        return this.source == null ? Codegen.empty() : this.source;
+    public Optional<Output<AssetOrArchive>> source() {
+        return Optional.ofNullable(this.source);
     }
 
-    public JobArgs(
-        @Nullable Output<JobConfigurationArgs> configuration,
-        @Nullable Output<JobReferenceArgs> jobReference,
-        @Nullable Output<String> project,
-        @Nullable Output<AssetOrArchive> source) {
-        this.configuration = configuration;
-        this.jobReference = jobReference;
-        this.project = project;
-        this.source = source;
-    }
+    private JobArgs() {}
 
-    private JobArgs() {
-        this.configuration = Codegen.empty();
-        this.jobReference = Codegen.empty();
-        this.project = Codegen.empty();
-        this.source = Codegen.empty();
+    private JobArgs(JobArgs $) {
+        this.configuration = $.configuration;
+        this.jobReference = $.jobReference;
+        this.project = $.project;
+        this.source = $.source;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(JobArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<JobConfigurationArgs> configuration;
-        private @Nullable Output<JobReferenceArgs> jobReference;
-        private @Nullable Output<String> project;
-        private @Nullable Output<AssetOrArchive> source;
+        private JobArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new JobArgs();
         }
 
         public Builder(JobArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.configuration = defaults.configuration;
-    	      this.jobReference = defaults.jobReference;
-    	      this.project = defaults.project;
-    	      this.source = defaults.source;
+            $ = new JobArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder configuration(@Nullable Output<JobConfigurationArgs> configuration) {
-            this.configuration = configuration;
+            $.configuration = configuration;
             return this;
         }
-        public Builder configuration(@Nullable JobConfigurationArgs configuration) {
-            this.configuration = Codegen.ofNullable(configuration);
-            return this;
+
+        public Builder configuration(JobConfigurationArgs configuration) {
+            return configuration(Output.of(configuration));
         }
+
         public Builder jobReference(@Nullable Output<JobReferenceArgs> jobReference) {
-            this.jobReference = jobReference;
+            $.jobReference = jobReference;
             return this;
         }
-        public Builder jobReference(@Nullable JobReferenceArgs jobReference) {
-            this.jobReference = Codegen.ofNullable(jobReference);
-            return this;
+
+        public Builder jobReference(JobReferenceArgs jobReference) {
+            return jobReference(Output.of(jobReference));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder source(@Nullable Output<AssetOrArchive> source) {
-            this.source = source;
+            $.source = source;
             return this;
         }
-        public Builder source(@Nullable AssetOrArchive source) {
-            this.source = Codegen.ofNullable(source);
-            return this;
-        }        public JobArgs build() {
-            return new JobArgs(configuration, jobReference, project, source);
+
+        public Builder source(AssetOrArchive source) {
+            return source(Output.of(source));
+        }
+
+        public JobArgs build() {
+            return $;
         }
     }
+
 }

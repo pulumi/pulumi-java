@@ -17,7 +17,7 @@ public final class GetLedgerArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="ledgerName", required=true)
-      private final String ledgerName;
+    private String ledgerName;
 
     public String ledgerName() {
         return this.ledgerName;
@@ -28,55 +28,52 @@ public final class GetLedgerArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public GetLedgerArgs(
-        String ledgerName,
-        String resourceGroupName) {
-        this.ledgerName = Objects.requireNonNull(ledgerName, "expected parameter 'ledgerName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private GetLedgerArgs() {}
 
-    private GetLedgerArgs() {
-        this.ledgerName = null;
-        this.resourceGroupName = null;
+    private GetLedgerArgs(GetLedgerArgs $) {
+        this.ledgerName = $.ledgerName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetLedgerArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String ledgerName;
-        private String resourceGroupName;
+        private GetLedgerArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetLedgerArgs();
         }
 
         public Builder(GetLedgerArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.ledgerName = defaults.ledgerName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new GetLedgerArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder ledgerName(String ledgerName) {
-            this.ledgerName = Objects.requireNonNull(ledgerName);
+            $.ledgerName = ledgerName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public GetLedgerArgs build() {
-            return new GetLedgerArgs(ledgerName, resourceGroupName);
+        }
+
+        public GetLedgerArgs build() {
+            $.ledgerName = Objects.requireNonNull($.ledgerName, "expected parameter 'ledgerName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

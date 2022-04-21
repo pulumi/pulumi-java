@@ -15,62 +15,58 @@ public final class GetSecretArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetSecretArgs Empty = new GetSecretArgs();
 
     @Import(name="project")
-      private final @Nullable String project;
+    private @Nullable String project;
 
     public Optional<String> project() {
-        return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
+        return Optional.ofNullable(this.project);
     }
 
     @Import(name="secretId", required=true)
-      private final String secretId;
+    private String secretId;
 
     public String secretId() {
         return this.secretId;
     }
 
-    public GetSecretArgs(
-        @Nullable String project,
-        String secretId) {
-        this.project = project;
-        this.secretId = Objects.requireNonNull(secretId, "expected parameter 'secretId' to be non-null");
-    }
+    private GetSecretArgs() {}
 
-    private GetSecretArgs() {
-        this.project = null;
-        this.secretId = null;
+    private GetSecretArgs(GetSecretArgs $) {
+        this.project = $.project;
+        this.secretId = $.secretId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetSecretArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String project;
-        private String secretId;
+        private GetSecretArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetSecretArgs();
         }
 
         public Builder(GetSecretArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.project = defaults.project;
-    	      this.secretId = defaults.secretId;
+            $ = new GetSecretArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder project(@Nullable String project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
+
         public Builder secretId(String secretId) {
-            this.secretId = Objects.requireNonNull(secretId);
+            $.secretId = secretId;
             return this;
-        }        public GetSecretArgs build() {
-            return new GetSecretArgs(project, secretId);
+        }
+
+        public GetSecretArgs build() {
+            $.secretId = Objects.requireNonNull($.secretId, "expected parameter 'secretId' to be non-null");
+            return $;
         }
     }
+
 }

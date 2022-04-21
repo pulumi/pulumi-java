@@ -15,45 +15,44 @@ public final class ResourceTypeRegistrationPropertiesResponseExtensionOptions ex
     public static final ResourceTypeRegistrationPropertiesResponseExtensionOptions Empty = new ResourceTypeRegistrationPropertiesResponseExtensionOptions();
 
     @Import(name="resourceCreationBegin")
-      private final @Nullable ResourceTypeExtensionOptionsResponseResourceCreationBegin resourceCreationBegin;
+    private @Nullable ResourceTypeExtensionOptionsResponseResourceCreationBegin resourceCreationBegin;
 
     public Optional<ResourceTypeExtensionOptionsResponseResourceCreationBegin> resourceCreationBegin() {
-        return this.resourceCreationBegin == null ? Optional.empty() : Optional.ofNullable(this.resourceCreationBegin);
+        return Optional.ofNullable(this.resourceCreationBegin);
     }
 
-    public ResourceTypeRegistrationPropertiesResponseExtensionOptions(@Nullable ResourceTypeExtensionOptionsResponseResourceCreationBegin resourceCreationBegin) {
-        this.resourceCreationBegin = resourceCreationBegin;
-    }
+    private ResourceTypeRegistrationPropertiesResponseExtensionOptions() {}
 
-    private ResourceTypeRegistrationPropertiesResponseExtensionOptions() {
-        this.resourceCreationBegin = null;
+    private ResourceTypeRegistrationPropertiesResponseExtensionOptions(ResourceTypeRegistrationPropertiesResponseExtensionOptions $) {
+        this.resourceCreationBegin = $.resourceCreationBegin;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ResourceTypeRegistrationPropertiesResponseExtensionOptions defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable ResourceTypeExtensionOptionsResponseResourceCreationBegin resourceCreationBegin;
+        private ResourceTypeRegistrationPropertiesResponseExtensionOptions $;
 
         public Builder() {
-    	      // Empty
+            $ = new ResourceTypeRegistrationPropertiesResponseExtensionOptions();
         }
 
         public Builder(ResourceTypeRegistrationPropertiesResponseExtensionOptions defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.resourceCreationBegin = defaults.resourceCreationBegin;
+            $ = new ResourceTypeRegistrationPropertiesResponseExtensionOptions(Objects.requireNonNull(defaults));
         }
 
         public Builder resourceCreationBegin(@Nullable ResourceTypeExtensionOptionsResponseResourceCreationBegin resourceCreationBegin) {
-            this.resourceCreationBegin = resourceCreationBegin;
+            $.resourceCreationBegin = resourceCreationBegin;
             return this;
-        }        public ResourceTypeRegistrationPropertiesResponseExtensionOptions build() {
-            return new ResourceTypeRegistrationPropertiesResponseExtensionOptions(resourceCreationBegin);
+        }
+
+        public ResourceTypeRegistrationPropertiesResponseExtensionOptions build() {
+            return $;
         }
     }
+
 }

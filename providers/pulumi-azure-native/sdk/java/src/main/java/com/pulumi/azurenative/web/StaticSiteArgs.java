@@ -10,11 +10,11 @@ import com.pulumi.azurenative.web.inputs.StaticSiteBuildPropertiesArgs;
 import com.pulumi.azurenative.web.inputs.StaticSiteTemplateOptionsArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +27,10 @@ public final class StaticSiteArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="allowConfigFileUpdates")
-      private final @Nullable Output<Boolean> allowConfigFileUpdates;
+    private @Nullable Output<Boolean> allowConfigFileUpdates;
 
-    public Output<Boolean> allowConfigFileUpdates() {
-        return this.allowConfigFileUpdates == null ? Codegen.empty() : this.allowConfigFileUpdates;
+    public Optional<Output<Boolean>> allowConfigFileUpdates() {
+        return Optional.ofNullable(this.allowConfigFileUpdates);
     }
 
     /**
@@ -38,10 +38,10 @@ public final class StaticSiteArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="branch")
-      private final @Nullable Output<String> branch;
+    private @Nullable Output<String> branch;
 
-    public Output<String> branch() {
-        return this.branch == null ? Codegen.empty() : this.branch;
+    public Optional<Output<String>> branch() {
+        return Optional.ofNullable(this.branch);
     }
 
     /**
@@ -49,10 +49,10 @@ public final class StaticSiteArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="buildProperties")
-      private final @Nullable Output<StaticSiteBuildPropertiesArgs> buildProperties;
+    private @Nullable Output<StaticSiteBuildPropertiesArgs> buildProperties;
 
-    public Output<StaticSiteBuildPropertiesArgs> buildProperties() {
-        return this.buildProperties == null ? Codegen.empty() : this.buildProperties;
+    public Optional<Output<StaticSiteBuildPropertiesArgs>> buildProperties() {
+        return Optional.ofNullable(this.buildProperties);
     }
 
     /**
@@ -60,10 +60,10 @@ public final class StaticSiteArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="identity")
-      private final @Nullable Output<ManagedServiceIdentityArgs> identity;
+    private @Nullable Output<ManagedServiceIdentityArgs> identity;
 
-    public Output<ManagedServiceIdentityArgs> identity() {
-        return this.identity == null ? Codegen.empty() : this.identity;
+    public Optional<Output<ManagedServiceIdentityArgs>> identity() {
+        return Optional.ofNullable(this.identity);
     }
 
     /**
@@ -71,10 +71,10 @@ public final class StaticSiteArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="kind")
-      private final @Nullable Output<String> kind;
+    private @Nullable Output<String> kind;
 
-    public Output<String> kind() {
-        return this.kind == null ? Codegen.empty() : this.kind;
+    public Optional<Output<String>> kind() {
+        return Optional.ofNullable(this.kind);
     }
 
     /**
@@ -82,10 +82,10 @@ public final class StaticSiteArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -93,10 +93,10 @@ public final class StaticSiteArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -104,10 +104,10 @@ public final class StaticSiteArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="repositoryToken")
-      private final @Nullable Output<String> repositoryToken;
+    private @Nullable Output<String> repositoryToken;
 
-    public Output<String> repositoryToken() {
-        return this.repositoryToken == null ? Codegen.empty() : this.repositoryToken;
+    public Optional<Output<String>> repositoryToken() {
+        return Optional.ofNullable(this.repositoryToken);
     }
 
     /**
@@ -115,10 +115,10 @@ public final class StaticSiteArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="repositoryUrl")
-      private final @Nullable Output<String> repositoryUrl;
+    private @Nullable Output<String> repositoryUrl;
 
-    public Output<String> repositoryUrl() {
-        return this.repositoryUrl == null ? Codegen.empty() : this.repositoryUrl;
+    public Optional<Output<String>> repositoryUrl() {
+        return Optional.ofNullable(this.repositoryUrl);
     }
 
     /**
@@ -126,7 +126,7 @@ public final class StaticSiteArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -137,10 +137,10 @@ public final class StaticSiteArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="sku")
-      private final @Nullable Output<SkuDescriptionArgs> sku;
+    private @Nullable Output<SkuDescriptionArgs> sku;
 
-    public Output<SkuDescriptionArgs> sku() {
-        return this.sku == null ? Codegen.empty() : this.sku;
+    public Optional<Output<SkuDescriptionArgs>> sku() {
+        return Optional.ofNullable(this.sku);
     }
 
     /**
@@ -148,10 +148,10 @@ public final class StaticSiteArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="stagingEnvironmentPolicy")
-      private final @Nullable Output<StagingEnvironmentPolicy> stagingEnvironmentPolicy;
+    private @Nullable Output<StagingEnvironmentPolicy> stagingEnvironmentPolicy;
 
-    public Output<StagingEnvironmentPolicy> stagingEnvironmentPolicy() {
-        return this.stagingEnvironmentPolicy == null ? Codegen.empty() : this.stagingEnvironmentPolicy;
+    public Optional<Output<StagingEnvironmentPolicy>> stagingEnvironmentPolicy() {
+        return Optional.ofNullable(this.stagingEnvironmentPolicy);
     }
 
     /**
@@ -159,10 +159,10 @@ public final class StaticSiteArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -170,219 +170,179 @@ public final class StaticSiteArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="templateProperties")
-      private final @Nullable Output<StaticSiteTemplateOptionsArgs> templateProperties;
+    private @Nullable Output<StaticSiteTemplateOptionsArgs> templateProperties;
 
-    public Output<StaticSiteTemplateOptionsArgs> templateProperties() {
-        return this.templateProperties == null ? Codegen.empty() : this.templateProperties;
+    public Optional<Output<StaticSiteTemplateOptionsArgs>> templateProperties() {
+        return Optional.ofNullable(this.templateProperties);
     }
 
-    public StaticSiteArgs(
-        @Nullable Output<Boolean> allowConfigFileUpdates,
-        @Nullable Output<String> branch,
-        @Nullable Output<StaticSiteBuildPropertiesArgs> buildProperties,
-        @Nullable Output<ManagedServiceIdentityArgs> identity,
-        @Nullable Output<String> kind,
-        @Nullable Output<String> location,
-        @Nullable Output<String> name,
-        @Nullable Output<String> repositoryToken,
-        @Nullable Output<String> repositoryUrl,
-        Output<String> resourceGroupName,
-        @Nullable Output<SkuDescriptionArgs> sku,
-        @Nullable Output<StagingEnvironmentPolicy> stagingEnvironmentPolicy,
-        @Nullable Output<Map<String,String>> tags,
-        @Nullable Output<StaticSiteTemplateOptionsArgs> templateProperties) {
-        this.allowConfigFileUpdates = allowConfigFileUpdates;
-        this.branch = branch;
-        this.buildProperties = buildProperties;
-        this.identity = identity;
-        this.kind = kind;
-        this.location = location;
-        this.name = name;
-        this.repositoryToken = repositoryToken;
-        this.repositoryUrl = repositoryUrl;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.sku = sku;
-        this.stagingEnvironmentPolicy = stagingEnvironmentPolicy;
-        this.tags = tags;
-        this.templateProperties = templateProperties;
-    }
+    private StaticSiteArgs() {}
 
-    private StaticSiteArgs() {
-        this.allowConfigFileUpdates = Codegen.empty();
-        this.branch = Codegen.empty();
-        this.buildProperties = Codegen.empty();
-        this.identity = Codegen.empty();
-        this.kind = Codegen.empty();
-        this.location = Codegen.empty();
-        this.name = Codegen.empty();
-        this.repositoryToken = Codegen.empty();
-        this.repositoryUrl = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.sku = Codegen.empty();
-        this.stagingEnvironmentPolicy = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.templateProperties = Codegen.empty();
+    private StaticSiteArgs(StaticSiteArgs $) {
+        this.allowConfigFileUpdates = $.allowConfigFileUpdates;
+        this.branch = $.branch;
+        this.buildProperties = $.buildProperties;
+        this.identity = $.identity;
+        this.kind = $.kind;
+        this.location = $.location;
+        this.name = $.name;
+        this.repositoryToken = $.repositoryToken;
+        this.repositoryUrl = $.repositoryUrl;
+        this.resourceGroupName = $.resourceGroupName;
+        this.sku = $.sku;
+        this.stagingEnvironmentPolicy = $.stagingEnvironmentPolicy;
+        this.tags = $.tags;
+        this.templateProperties = $.templateProperties;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(StaticSiteArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> allowConfigFileUpdates;
-        private @Nullable Output<String> branch;
-        private @Nullable Output<StaticSiteBuildPropertiesArgs> buildProperties;
-        private @Nullable Output<ManagedServiceIdentityArgs> identity;
-        private @Nullable Output<String> kind;
-        private @Nullable Output<String> location;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> repositoryToken;
-        private @Nullable Output<String> repositoryUrl;
-        private Output<String> resourceGroupName;
-        private @Nullable Output<SkuDescriptionArgs> sku;
-        private @Nullable Output<StagingEnvironmentPolicy> stagingEnvironmentPolicy;
-        private @Nullable Output<Map<String,String>> tags;
-        private @Nullable Output<StaticSiteTemplateOptionsArgs> templateProperties;
+        private StaticSiteArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new StaticSiteArgs();
         }
 
         public Builder(StaticSiteArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.allowConfigFileUpdates = defaults.allowConfigFileUpdates;
-    	      this.branch = defaults.branch;
-    	      this.buildProperties = defaults.buildProperties;
-    	      this.identity = defaults.identity;
-    	      this.kind = defaults.kind;
-    	      this.location = defaults.location;
-    	      this.name = defaults.name;
-    	      this.repositoryToken = defaults.repositoryToken;
-    	      this.repositoryUrl = defaults.repositoryUrl;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.sku = defaults.sku;
-    	      this.stagingEnvironmentPolicy = defaults.stagingEnvironmentPolicy;
-    	      this.tags = defaults.tags;
-    	      this.templateProperties = defaults.templateProperties;
+            $ = new StaticSiteArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder allowConfigFileUpdates(@Nullable Output<Boolean> allowConfigFileUpdates) {
-            this.allowConfigFileUpdates = allowConfigFileUpdates;
+            $.allowConfigFileUpdates = allowConfigFileUpdates;
             return this;
         }
-        public Builder allowConfigFileUpdates(@Nullable Boolean allowConfigFileUpdates) {
-            this.allowConfigFileUpdates = Codegen.ofNullable(allowConfigFileUpdates);
-            return this;
+
+        public Builder allowConfigFileUpdates(Boolean allowConfigFileUpdates) {
+            return allowConfigFileUpdates(Output.of(allowConfigFileUpdates));
         }
+
         public Builder branch(@Nullable Output<String> branch) {
-            this.branch = branch;
+            $.branch = branch;
             return this;
         }
-        public Builder branch(@Nullable String branch) {
-            this.branch = Codegen.ofNullable(branch);
-            return this;
+
+        public Builder branch(String branch) {
+            return branch(Output.of(branch));
         }
+
         public Builder buildProperties(@Nullable Output<StaticSiteBuildPropertiesArgs> buildProperties) {
-            this.buildProperties = buildProperties;
+            $.buildProperties = buildProperties;
             return this;
         }
-        public Builder buildProperties(@Nullable StaticSiteBuildPropertiesArgs buildProperties) {
-            this.buildProperties = Codegen.ofNullable(buildProperties);
-            return this;
+
+        public Builder buildProperties(StaticSiteBuildPropertiesArgs buildProperties) {
+            return buildProperties(Output.of(buildProperties));
         }
+
         public Builder identity(@Nullable Output<ManagedServiceIdentityArgs> identity) {
-            this.identity = identity;
+            $.identity = identity;
             return this;
         }
-        public Builder identity(@Nullable ManagedServiceIdentityArgs identity) {
-            this.identity = Codegen.ofNullable(identity);
-            return this;
+
+        public Builder identity(ManagedServiceIdentityArgs identity) {
+            return identity(Output.of(identity));
         }
+
         public Builder kind(@Nullable Output<String> kind) {
-            this.kind = kind;
+            $.kind = kind;
             return this;
         }
-        public Builder kind(@Nullable String kind) {
-            this.kind = Codegen.ofNullable(kind);
-            return this;
+
+        public Builder kind(String kind) {
+            return kind(Output.of(kind));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder repositoryToken(@Nullable Output<String> repositoryToken) {
-            this.repositoryToken = repositoryToken;
+            $.repositoryToken = repositoryToken;
             return this;
         }
-        public Builder repositoryToken(@Nullable String repositoryToken) {
-            this.repositoryToken = Codegen.ofNullable(repositoryToken);
-            return this;
+
+        public Builder repositoryToken(String repositoryToken) {
+            return repositoryToken(Output.of(repositoryToken));
         }
+
         public Builder repositoryUrl(@Nullable Output<String> repositoryUrl) {
-            this.repositoryUrl = repositoryUrl;
+            $.repositoryUrl = repositoryUrl;
             return this;
         }
-        public Builder repositoryUrl(@Nullable String repositoryUrl) {
-            this.repositoryUrl = Codegen.ofNullable(repositoryUrl);
-            return this;
+
+        public Builder repositoryUrl(String repositoryUrl) {
+            return repositoryUrl(Output.of(repositoryUrl));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder sku(@Nullable Output<SkuDescriptionArgs> sku) {
-            this.sku = sku;
+            $.sku = sku;
             return this;
         }
-        public Builder sku(@Nullable SkuDescriptionArgs sku) {
-            this.sku = Codegen.ofNullable(sku);
-            return this;
+
+        public Builder sku(SkuDescriptionArgs sku) {
+            return sku(Output.of(sku));
         }
+
         public Builder stagingEnvironmentPolicy(@Nullable Output<StagingEnvironmentPolicy> stagingEnvironmentPolicy) {
-            this.stagingEnvironmentPolicy = stagingEnvironmentPolicy;
+            $.stagingEnvironmentPolicy = stagingEnvironmentPolicy;
             return this;
         }
-        public Builder stagingEnvironmentPolicy(@Nullable StagingEnvironmentPolicy stagingEnvironmentPolicy) {
-            this.stagingEnvironmentPolicy = Codegen.ofNullable(stagingEnvironmentPolicy);
-            return this;
+
+        public Builder stagingEnvironmentPolicy(StagingEnvironmentPolicy stagingEnvironmentPolicy) {
+            return stagingEnvironmentPolicy(Output.of(stagingEnvironmentPolicy));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder templateProperties(@Nullable Output<StaticSiteTemplateOptionsArgs> templateProperties) {
-            this.templateProperties = templateProperties;
+            $.templateProperties = templateProperties;
             return this;
         }
-        public Builder templateProperties(@Nullable StaticSiteTemplateOptionsArgs templateProperties) {
-            this.templateProperties = Codegen.ofNullable(templateProperties);
-            return this;
-        }        public StaticSiteArgs build() {
-            return new StaticSiteArgs(allowConfigFileUpdates, branch, buildProperties, identity, kind, location, name, repositoryToken, repositoryUrl, resourceGroupName, sku, stagingEnvironmentPolicy, tags, templateProperties);
+
+        public Builder templateProperties(StaticSiteTemplateOptionsArgs templateProperties) {
+            return templateProperties(Output.of(templateProperties));
+        }
+
+        public StaticSiteArgs build() {
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

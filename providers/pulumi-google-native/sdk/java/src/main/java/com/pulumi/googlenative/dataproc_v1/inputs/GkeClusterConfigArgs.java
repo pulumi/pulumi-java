@@ -5,9 +5,9 @@ package com.pulumi.googlenative.dataproc_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.dataproc_v1.inputs.NamespacedGkeDeploymentTargetArgs;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class GkeClusterConfigArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="namespacedGkeDeploymentTarget")
-      private final @Nullable Output<NamespacedGkeDeploymentTargetArgs> namespacedGkeDeploymentTarget;
+    private @Nullable Output<NamespacedGkeDeploymentTargetArgs> namespacedGkeDeploymentTarget;
 
-    public Output<NamespacedGkeDeploymentTargetArgs> namespacedGkeDeploymentTarget() {
-        return this.namespacedGkeDeploymentTarget == null ? Codegen.empty() : this.namespacedGkeDeploymentTarget;
+    public Optional<Output<NamespacedGkeDeploymentTargetArgs>> namespacedGkeDeploymentTarget() {
+        return Optional.ofNullable(this.namespacedGkeDeploymentTarget);
     }
 
-    public GkeClusterConfigArgs(@Nullable Output<NamespacedGkeDeploymentTargetArgs> namespacedGkeDeploymentTarget) {
-        this.namespacedGkeDeploymentTarget = namespacedGkeDeploymentTarget;
-    }
+    private GkeClusterConfigArgs() {}
 
-    private GkeClusterConfigArgs() {
-        this.namespacedGkeDeploymentTarget = Codegen.empty();
+    private GkeClusterConfigArgs(GkeClusterConfigArgs $) {
+        this.namespacedGkeDeploymentTarget = $.namespacedGkeDeploymentTarget;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GkeClusterConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<NamespacedGkeDeploymentTargetArgs> namespacedGkeDeploymentTarget;
+        private GkeClusterConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GkeClusterConfigArgs();
         }
 
         public Builder(GkeClusterConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.namespacedGkeDeploymentTarget = defaults.namespacedGkeDeploymentTarget;
+            $ = new GkeClusterConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder namespacedGkeDeploymentTarget(@Nullable Output<NamespacedGkeDeploymentTargetArgs> namespacedGkeDeploymentTarget) {
-            this.namespacedGkeDeploymentTarget = namespacedGkeDeploymentTarget;
+            $.namespacedGkeDeploymentTarget = namespacedGkeDeploymentTarget;
             return this;
         }
-        public Builder namespacedGkeDeploymentTarget(@Nullable NamespacedGkeDeploymentTargetArgs namespacedGkeDeploymentTarget) {
-            this.namespacedGkeDeploymentTarget = Codegen.ofNullable(namespacedGkeDeploymentTarget);
-            return this;
-        }        public GkeClusterConfigArgs build() {
-            return new GkeClusterConfigArgs(namespacedGkeDeploymentTarget);
+
+        public Builder namespacedGkeDeploymentTarget(NamespacedGkeDeploymentTargetArgs namespacedGkeDeploymentTarget) {
+            return namespacedGkeDeploymentTarget(Output.of(namespacedGkeDeploymentTarget));
+        }
+
+        public GkeClusterConfigArgs build() {
+            return $;
         }
     }
+
 }

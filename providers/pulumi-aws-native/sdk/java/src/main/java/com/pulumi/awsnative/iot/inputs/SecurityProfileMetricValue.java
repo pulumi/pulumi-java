@@ -26,10 +26,10 @@ public final class SecurityProfileMetricValue extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="cidrs")
-      private final @Nullable List<String> cidrs;
+    private @Nullable List<String> cidrs;
 
-    public List<String> cidrs() {
-        return this.cidrs == null ? List.of() : this.cidrs;
+    public Optional<List<String>> cidrs() {
+        return Optional.ofNullable(this.cidrs);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class SecurityProfileMetricValue extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="count")
-      private final @Nullable String count;
+    private @Nullable String count;
 
     public Optional<String> count() {
-        return this.count == null ? Optional.empty() : Optional.ofNullable(this.count);
+        return Optional.ofNullable(this.count);
     }
 
     /**
@@ -48,10 +48,10 @@ public final class SecurityProfileMetricValue extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="number")
-      private final @Nullable Double number;
+    private @Nullable Double number;
 
     public Optional<Double> number() {
-        return this.number == null ? Optional.empty() : Optional.ofNullable(this.number);
+        return Optional.ofNullable(this.number);
     }
 
     /**
@@ -59,10 +59,10 @@ public final class SecurityProfileMetricValue extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="numbers")
-      private final @Nullable List<Double> numbers;
+    private @Nullable List<Double> numbers;
 
-    public List<Double> numbers() {
-        return this.numbers == null ? List.of() : this.numbers;
+    public Optional<List<Double>> numbers() {
+        return Optional.ofNullable(this.numbers);
     }
 
     /**
@@ -70,10 +70,10 @@ public final class SecurityProfileMetricValue extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="ports")
-      private final @Nullable List<Integer> ports;
+    private @Nullable List<Integer> ports;
 
-    public List<Integer> ports() {
-        return this.ports == null ? List.of() : this.ports;
+    public Optional<List<Integer>> ports() {
+        return Optional.ofNullable(this.ports);
     }
 
     /**
@@ -81,103 +81,90 @@ public final class SecurityProfileMetricValue extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="strings")
-      private final @Nullable List<String> strings;
+    private @Nullable List<String> strings;
 
-    public List<String> strings() {
-        return this.strings == null ? List.of() : this.strings;
+    public Optional<List<String>> strings() {
+        return Optional.ofNullable(this.strings);
     }
 
-    public SecurityProfileMetricValue(
-        @Nullable List<String> cidrs,
-        @Nullable String count,
-        @Nullable Double number,
-        @Nullable List<Double> numbers,
-        @Nullable List<Integer> ports,
-        @Nullable List<String> strings) {
-        this.cidrs = cidrs;
-        this.count = count;
-        this.number = number;
-        this.numbers = numbers;
-        this.ports = ports;
-        this.strings = strings;
-    }
+    private SecurityProfileMetricValue() {}
 
-    private SecurityProfileMetricValue() {
-        this.cidrs = List.of();
-        this.count = null;
-        this.number = null;
-        this.numbers = List.of();
-        this.ports = List.of();
-        this.strings = List.of();
+    private SecurityProfileMetricValue(SecurityProfileMetricValue $) {
+        this.cidrs = $.cidrs;
+        this.count = $.count;
+        this.number = $.number;
+        this.numbers = $.numbers;
+        this.ports = $.ports;
+        this.strings = $.strings;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SecurityProfileMetricValue defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<String> cidrs;
-        private @Nullable String count;
-        private @Nullable Double number;
-        private @Nullable List<Double> numbers;
-        private @Nullable List<Integer> ports;
-        private @Nullable List<String> strings;
+        private SecurityProfileMetricValue $;
 
         public Builder() {
-    	      // Empty
+            $ = new SecurityProfileMetricValue();
         }
 
         public Builder(SecurityProfileMetricValue defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cidrs = defaults.cidrs;
-    	      this.count = defaults.count;
-    	      this.number = defaults.number;
-    	      this.numbers = defaults.numbers;
-    	      this.ports = defaults.ports;
-    	      this.strings = defaults.strings;
+            $ = new SecurityProfileMetricValue(Objects.requireNonNull(defaults));
         }
 
         public Builder cidrs(@Nullable List<String> cidrs) {
-            this.cidrs = cidrs;
+            $.cidrs = cidrs;
             return this;
         }
+
         public Builder cidrs(String... cidrs) {
             return cidrs(List.of(cidrs));
         }
+
         public Builder count(@Nullable String count) {
-            this.count = count;
+            $.count = count;
             return this;
         }
+
         public Builder number(@Nullable Double number) {
-            this.number = number;
+            $.number = number;
             return this;
         }
+
         public Builder numbers(@Nullable List<Double> numbers) {
-            this.numbers = numbers;
+            $.numbers = numbers;
             return this;
         }
+
         public Builder numbers(Double... numbers) {
             return numbers(List.of(numbers));
         }
+
         public Builder ports(@Nullable List<Integer> ports) {
-            this.ports = ports;
+            $.ports = ports;
             return this;
         }
+
         public Builder ports(Integer... ports) {
             return ports(List.of(ports));
         }
+
         public Builder strings(@Nullable List<String> strings) {
-            this.strings = strings;
+            $.strings = strings;
             return this;
         }
+
         public Builder strings(String... strings) {
             return strings(List.of(strings));
-        }        public SecurityProfileMetricValue build() {
-            return new SecurityProfileMetricValue(cidrs, count, number, numbers, ports, strings);
+        }
+
+        public SecurityProfileMetricValue build() {
+            return $;
         }
     }
+
 }

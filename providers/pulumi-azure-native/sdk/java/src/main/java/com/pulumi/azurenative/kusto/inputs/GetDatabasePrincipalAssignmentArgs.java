@@ -17,7 +17,7 @@ public final class GetDatabasePrincipalAssignmentArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="clusterName", required=true)
-      private final String clusterName;
+    private String clusterName;
 
     public String clusterName() {
         return this.clusterName;
@@ -28,7 +28,7 @@ public final class GetDatabasePrincipalAssignmentArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="databaseName", required=true)
-      private final String databaseName;
+    private String databaseName;
 
     public String databaseName() {
         return this.databaseName;
@@ -39,7 +39,7 @@ public final class GetDatabasePrincipalAssignmentArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="principalAssignmentName", required=true)
-      private final String principalAssignmentName;
+    private String principalAssignmentName;
 
     public String principalAssignmentName() {
         return this.principalAssignmentName;
@@ -50,73 +50,66 @@ public final class GetDatabasePrincipalAssignmentArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public GetDatabasePrincipalAssignmentArgs(
-        String clusterName,
-        String databaseName,
-        String principalAssignmentName,
-        String resourceGroupName) {
-        this.clusterName = Objects.requireNonNull(clusterName, "expected parameter 'clusterName' to be non-null");
-        this.databaseName = Objects.requireNonNull(databaseName, "expected parameter 'databaseName' to be non-null");
-        this.principalAssignmentName = Objects.requireNonNull(principalAssignmentName, "expected parameter 'principalAssignmentName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private GetDatabasePrincipalAssignmentArgs() {}
 
-    private GetDatabasePrincipalAssignmentArgs() {
-        this.clusterName = null;
-        this.databaseName = null;
-        this.principalAssignmentName = null;
-        this.resourceGroupName = null;
+    private GetDatabasePrincipalAssignmentArgs(GetDatabasePrincipalAssignmentArgs $) {
+        this.clusterName = $.clusterName;
+        this.databaseName = $.databaseName;
+        this.principalAssignmentName = $.principalAssignmentName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetDatabasePrincipalAssignmentArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String clusterName;
-        private String databaseName;
-        private String principalAssignmentName;
-        private String resourceGroupName;
+        private GetDatabasePrincipalAssignmentArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetDatabasePrincipalAssignmentArgs();
         }
 
         public Builder(GetDatabasePrincipalAssignmentArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.clusterName = defaults.clusterName;
-    	      this.databaseName = defaults.databaseName;
-    	      this.principalAssignmentName = defaults.principalAssignmentName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new GetDatabasePrincipalAssignmentArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder clusterName(String clusterName) {
-            this.clusterName = Objects.requireNonNull(clusterName);
+            $.clusterName = clusterName;
             return this;
         }
+
         public Builder databaseName(String databaseName) {
-            this.databaseName = Objects.requireNonNull(databaseName);
+            $.databaseName = databaseName;
             return this;
         }
+
         public Builder principalAssignmentName(String principalAssignmentName) {
-            this.principalAssignmentName = Objects.requireNonNull(principalAssignmentName);
+            $.principalAssignmentName = principalAssignmentName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public GetDatabasePrincipalAssignmentArgs build() {
-            return new GetDatabasePrincipalAssignmentArgs(clusterName, databaseName, principalAssignmentName, resourceGroupName);
+        }
+
+        public GetDatabasePrincipalAssignmentArgs build() {
+            $.clusterName = Objects.requireNonNull($.clusterName, "expected parameter 'clusterName' to be non-null");
+            $.databaseName = Objects.requireNonNull($.databaseName, "expected parameter 'databaseName' to be non-null");
+            $.principalAssignmentName = Objects.requireNonNull($.principalAssignmentName, "expected parameter 'principalAssignmentName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

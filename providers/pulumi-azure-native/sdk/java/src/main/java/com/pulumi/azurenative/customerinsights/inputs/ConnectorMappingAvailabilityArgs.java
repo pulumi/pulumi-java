@@ -6,9 +6,9 @@ package com.pulumi.azurenative.customerinsights.inputs;
 import com.pulumi.azurenative.customerinsights.enums.FrequencyTypes;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class ConnectorMappingAvailabilityArgs extends com.pulumi.resources
      * 
      */
     @Import(name="frequency")
-      private final @Nullable Output<FrequencyTypes> frequency;
+    private @Nullable Output<FrequencyTypes> frequency;
 
-    public Output<FrequencyTypes> frequency() {
-        return this.frequency == null ? Codegen.empty() : this.frequency;
+    public Optional<Output<FrequencyTypes>> frequency() {
+        return Optional.ofNullable(this.frequency);
     }
 
     /**
@@ -36,63 +36,59 @@ public final class ConnectorMappingAvailabilityArgs extends com.pulumi.resources
      * 
      */
     @Import(name="interval", required=true)
-      private final Output<Integer> interval;
+    private Output<Integer> interval;
 
     public Output<Integer> interval() {
         return this.interval;
     }
 
-    public ConnectorMappingAvailabilityArgs(
-        @Nullable Output<FrequencyTypes> frequency,
-        Output<Integer> interval) {
-        this.frequency = frequency;
-        this.interval = Objects.requireNonNull(interval, "expected parameter 'interval' to be non-null");
-    }
+    private ConnectorMappingAvailabilityArgs() {}
 
-    private ConnectorMappingAvailabilityArgs() {
-        this.frequency = Codegen.empty();
-        this.interval = Codegen.empty();
+    private ConnectorMappingAvailabilityArgs(ConnectorMappingAvailabilityArgs $) {
+        this.frequency = $.frequency;
+        this.interval = $.interval;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ConnectorMappingAvailabilityArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<FrequencyTypes> frequency;
-        private Output<Integer> interval;
+        private ConnectorMappingAvailabilityArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ConnectorMappingAvailabilityArgs();
         }
 
         public Builder(ConnectorMappingAvailabilityArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.frequency = defaults.frequency;
-    	      this.interval = defaults.interval;
+            $ = new ConnectorMappingAvailabilityArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder frequency(@Nullable Output<FrequencyTypes> frequency) {
-            this.frequency = frequency;
+            $.frequency = frequency;
             return this;
         }
-        public Builder frequency(@Nullable FrequencyTypes frequency) {
-            this.frequency = Codegen.ofNullable(frequency);
-            return this;
+
+        public Builder frequency(FrequencyTypes frequency) {
+            return frequency(Output.of(frequency));
         }
+
         public Builder interval(Output<Integer> interval) {
-            this.interval = Objects.requireNonNull(interval);
+            $.interval = interval;
             return this;
         }
+
         public Builder interval(Integer interval) {
-            this.interval = Output.of(Objects.requireNonNull(interval));
-            return this;
-        }        public ConnectorMappingAvailabilityArgs build() {
-            return new ConnectorMappingAvailabilityArgs(frequency, interval);
+            return interval(Output.of(interval));
+        }
+
+        public ConnectorMappingAvailabilityArgs build() {
+            $.interval = Objects.requireNonNull($.interval, "expected parameter 'interval' to be non-null");
+            return $;
         }
     }
+
 }

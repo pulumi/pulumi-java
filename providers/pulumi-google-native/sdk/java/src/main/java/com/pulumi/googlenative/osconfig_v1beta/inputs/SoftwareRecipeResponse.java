@@ -24,7 +24,7 @@ public final class SoftwareRecipeResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="artifacts", required=true)
-      private final List<SoftwareRecipeArtifactResponse> artifacts;
+    private List<SoftwareRecipeArtifactResponse> artifacts;
 
     public List<SoftwareRecipeArtifactResponse> artifacts() {
         return this.artifacts;
@@ -35,7 +35,7 @@ public final class SoftwareRecipeResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="desiredState", required=true)
-      private final String desiredState;
+    private String desiredState;
 
     public String desiredState() {
         return this.desiredState;
@@ -46,7 +46,7 @@ public final class SoftwareRecipeResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="installSteps", required=true)
-      private final List<SoftwareRecipeStepResponse> installSteps;
+    private List<SoftwareRecipeStepResponse> installSteps;
 
     public List<SoftwareRecipeStepResponse> installSteps() {
         return this.installSteps;
@@ -57,7 +57,7 @@ public final class SoftwareRecipeResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -68,7 +68,7 @@ public final class SoftwareRecipeResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="updateSteps", required=true)
-      private final List<SoftwareRecipeStepResponse> updateSteps;
+    private List<SoftwareRecipeStepResponse> updateSteps;
 
     public List<SoftwareRecipeStepResponse> updateSteps() {
         return this.updateSteps;
@@ -79,100 +79,92 @@ public final class SoftwareRecipeResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="version", required=true)
-      private final String version;
+    private String version;
 
     public String version() {
         return this.version;
     }
 
-    public SoftwareRecipeResponse(
-        List<SoftwareRecipeArtifactResponse> artifacts,
-        String desiredState,
-        List<SoftwareRecipeStepResponse> installSteps,
-        String name,
-        List<SoftwareRecipeStepResponse> updateSteps,
-        String version) {
-        this.artifacts = Objects.requireNonNull(artifacts, "expected parameter 'artifacts' to be non-null");
-        this.desiredState = Objects.requireNonNull(desiredState, "expected parameter 'desiredState' to be non-null");
-        this.installSteps = Objects.requireNonNull(installSteps, "expected parameter 'installSteps' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.updateSteps = Objects.requireNonNull(updateSteps, "expected parameter 'updateSteps' to be non-null");
-        this.version = Objects.requireNonNull(version, "expected parameter 'version' to be non-null");
-    }
+    private SoftwareRecipeResponse() {}
 
-    private SoftwareRecipeResponse() {
-        this.artifacts = List.of();
-        this.desiredState = null;
-        this.installSteps = List.of();
-        this.name = null;
-        this.updateSteps = List.of();
-        this.version = null;
+    private SoftwareRecipeResponse(SoftwareRecipeResponse $) {
+        this.artifacts = $.artifacts;
+        this.desiredState = $.desiredState;
+        this.installSteps = $.installSteps;
+        this.name = $.name;
+        this.updateSteps = $.updateSteps;
+        this.version = $.version;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SoftwareRecipeResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<SoftwareRecipeArtifactResponse> artifacts;
-        private String desiredState;
-        private List<SoftwareRecipeStepResponse> installSteps;
-        private String name;
-        private List<SoftwareRecipeStepResponse> updateSteps;
-        private String version;
+        private SoftwareRecipeResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new SoftwareRecipeResponse();
         }
 
         public Builder(SoftwareRecipeResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.artifacts = defaults.artifacts;
-    	      this.desiredState = defaults.desiredState;
-    	      this.installSteps = defaults.installSteps;
-    	      this.name = defaults.name;
-    	      this.updateSteps = defaults.updateSteps;
-    	      this.version = defaults.version;
+            $ = new SoftwareRecipeResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder artifacts(List<SoftwareRecipeArtifactResponse> artifacts) {
-            this.artifacts = Objects.requireNonNull(artifacts);
+            $.artifacts = artifacts;
             return this;
         }
+
         public Builder artifacts(SoftwareRecipeArtifactResponse... artifacts) {
             return artifacts(List.of(artifacts));
         }
+
         public Builder desiredState(String desiredState) {
-            this.desiredState = Objects.requireNonNull(desiredState);
+            $.desiredState = desiredState;
             return this;
         }
+
         public Builder installSteps(List<SoftwareRecipeStepResponse> installSteps) {
-            this.installSteps = Objects.requireNonNull(installSteps);
+            $.installSteps = installSteps;
             return this;
         }
+
         public Builder installSteps(SoftwareRecipeStepResponse... installSteps) {
             return installSteps(List.of(installSteps));
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder updateSteps(List<SoftwareRecipeStepResponse> updateSteps) {
-            this.updateSteps = Objects.requireNonNull(updateSteps);
+            $.updateSteps = updateSteps;
             return this;
         }
+
         public Builder updateSteps(SoftwareRecipeStepResponse... updateSteps) {
             return updateSteps(List.of(updateSteps));
         }
+
         public Builder version(String version) {
-            this.version = Objects.requireNonNull(version);
+            $.version = version;
             return this;
-        }        public SoftwareRecipeResponse build() {
-            return new SoftwareRecipeResponse(artifacts, desiredState, installSteps, name, updateSteps, version);
+        }
+
+        public SoftwareRecipeResponse build() {
+            $.artifacts = Objects.requireNonNull($.artifacts, "expected parameter 'artifacts' to be non-null");
+            $.desiredState = Objects.requireNonNull($.desiredState, "expected parameter 'desiredState' to be non-null");
+            $.installSteps = Objects.requireNonNull($.installSteps, "expected parameter 'installSteps' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.updateSteps = Objects.requireNonNull($.updateSteps, "expected parameter 'updateSteps' to be non-null");
+            $.version = Objects.requireNonNull($.version, "expected parameter 'version' to be non-null");
+            return $;
         }
     }
+
 }

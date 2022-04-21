@@ -15,78 +15,70 @@ public final class ResourceProviderAuthorizationResponse extends com.pulumi.reso
     public static final ResourceProviderAuthorizationResponse Empty = new ResourceProviderAuthorizationResponse();
 
     @Import(name="applicationId")
-      private final @Nullable String applicationId;
+    private @Nullable String applicationId;
 
     public Optional<String> applicationId() {
-        return this.applicationId == null ? Optional.empty() : Optional.ofNullable(this.applicationId);
+        return Optional.ofNullable(this.applicationId);
     }
 
     @Import(name="managedByRoleDefinitionId")
-      private final @Nullable String managedByRoleDefinitionId;
+    private @Nullable String managedByRoleDefinitionId;
 
     public Optional<String> managedByRoleDefinitionId() {
-        return this.managedByRoleDefinitionId == null ? Optional.empty() : Optional.ofNullable(this.managedByRoleDefinitionId);
+        return Optional.ofNullable(this.managedByRoleDefinitionId);
     }
 
     @Import(name="roleDefinitionId")
-      private final @Nullable String roleDefinitionId;
+    private @Nullable String roleDefinitionId;
 
     public Optional<String> roleDefinitionId() {
-        return this.roleDefinitionId == null ? Optional.empty() : Optional.ofNullable(this.roleDefinitionId);
+        return Optional.ofNullable(this.roleDefinitionId);
     }
 
-    public ResourceProviderAuthorizationResponse(
-        @Nullable String applicationId,
-        @Nullable String managedByRoleDefinitionId,
-        @Nullable String roleDefinitionId) {
-        this.applicationId = applicationId;
-        this.managedByRoleDefinitionId = managedByRoleDefinitionId;
-        this.roleDefinitionId = roleDefinitionId;
-    }
+    private ResourceProviderAuthorizationResponse() {}
 
-    private ResourceProviderAuthorizationResponse() {
-        this.applicationId = null;
-        this.managedByRoleDefinitionId = null;
-        this.roleDefinitionId = null;
+    private ResourceProviderAuthorizationResponse(ResourceProviderAuthorizationResponse $) {
+        this.applicationId = $.applicationId;
+        this.managedByRoleDefinitionId = $.managedByRoleDefinitionId;
+        this.roleDefinitionId = $.roleDefinitionId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ResourceProviderAuthorizationResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String applicationId;
-        private @Nullable String managedByRoleDefinitionId;
-        private @Nullable String roleDefinitionId;
+        private ResourceProviderAuthorizationResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ResourceProviderAuthorizationResponse();
         }
 
         public Builder(ResourceProviderAuthorizationResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.applicationId = defaults.applicationId;
-    	      this.managedByRoleDefinitionId = defaults.managedByRoleDefinitionId;
-    	      this.roleDefinitionId = defaults.roleDefinitionId;
+            $ = new ResourceProviderAuthorizationResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder applicationId(@Nullable String applicationId) {
-            this.applicationId = applicationId;
+            $.applicationId = applicationId;
             return this;
         }
+
         public Builder managedByRoleDefinitionId(@Nullable String managedByRoleDefinitionId) {
-            this.managedByRoleDefinitionId = managedByRoleDefinitionId;
+            $.managedByRoleDefinitionId = managedByRoleDefinitionId;
             return this;
         }
+
         public Builder roleDefinitionId(@Nullable String roleDefinitionId) {
-            this.roleDefinitionId = roleDefinitionId;
+            $.roleDefinitionId = roleDefinitionId;
             return this;
-        }        public ResourceProviderAuthorizationResponse build() {
-            return new ResourceProviderAuthorizationResponse(applicationId, managedByRoleDefinitionId, roleDefinitionId);
+        }
+
+        public ResourceProviderAuthorizationResponse build() {
+            return $;
         }
     }
+
 }

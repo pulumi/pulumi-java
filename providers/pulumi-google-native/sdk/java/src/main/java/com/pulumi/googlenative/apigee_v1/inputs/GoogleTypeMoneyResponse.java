@@ -22,7 +22,7 @@ public final class GoogleTypeMoneyResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="currencyCode", required=true)
-      private final String currencyCode;
+    private String currencyCode;
 
     public String currencyCode() {
         return this.currencyCode;
@@ -33,7 +33,7 @@ public final class GoogleTypeMoneyResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="nanos", required=true)
-      private final Integer nanos;
+    private Integer nanos;
 
     public Integer nanos() {
         return this.nanos;
@@ -44,64 +44,59 @@ public final class GoogleTypeMoneyResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="units", required=true)
-      private final String units;
+    private String units;
 
     public String units() {
         return this.units;
     }
 
-    public GoogleTypeMoneyResponse(
-        String currencyCode,
-        Integer nanos,
-        String units) {
-        this.currencyCode = Objects.requireNonNull(currencyCode, "expected parameter 'currencyCode' to be non-null");
-        this.nanos = Objects.requireNonNull(nanos, "expected parameter 'nanos' to be non-null");
-        this.units = Objects.requireNonNull(units, "expected parameter 'units' to be non-null");
-    }
+    private GoogleTypeMoneyResponse() {}
 
-    private GoogleTypeMoneyResponse() {
-        this.currencyCode = null;
-        this.nanos = null;
-        this.units = null;
+    private GoogleTypeMoneyResponse(GoogleTypeMoneyResponse $) {
+        this.currencyCode = $.currencyCode;
+        this.nanos = $.nanos;
+        this.units = $.units;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleTypeMoneyResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String currencyCode;
-        private Integer nanos;
-        private String units;
+        private GoogleTypeMoneyResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleTypeMoneyResponse();
         }
 
         public Builder(GoogleTypeMoneyResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.currencyCode = defaults.currencyCode;
-    	      this.nanos = defaults.nanos;
-    	      this.units = defaults.units;
+            $ = new GoogleTypeMoneyResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder currencyCode(String currencyCode) {
-            this.currencyCode = Objects.requireNonNull(currencyCode);
+            $.currencyCode = currencyCode;
             return this;
         }
+
         public Builder nanos(Integer nanos) {
-            this.nanos = Objects.requireNonNull(nanos);
+            $.nanos = nanos;
             return this;
         }
+
         public Builder units(String units) {
-            this.units = Objects.requireNonNull(units);
+            $.units = units;
             return this;
-        }        public GoogleTypeMoneyResponse build() {
-            return new GoogleTypeMoneyResponse(currencyCode, nanos, units);
+        }
+
+        public GoogleTypeMoneyResponse build() {
+            $.currencyCode = Objects.requireNonNull($.currencyCode, "expected parameter 'currencyCode' to be non-null");
+            $.nanos = Objects.requireNonNull($.nanos, "expected parameter 'nanos' to be non-null");
+            $.units = Objects.requireNonNull($.units, "expected parameter 'units' to be non-null");
+            return $;
         }
     }
+
 }

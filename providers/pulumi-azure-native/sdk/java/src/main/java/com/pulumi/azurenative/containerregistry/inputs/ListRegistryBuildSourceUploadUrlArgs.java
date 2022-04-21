@@ -17,7 +17,7 @@ public final class ListRegistryBuildSourceUploadUrlArgs extends com.pulumi.resou
      * 
      */
     @Import(name="registryName", required=true)
-      private final String registryName;
+    private String registryName;
 
     public String registryName() {
         return this.registryName;
@@ -28,55 +28,52 @@ public final class ListRegistryBuildSourceUploadUrlArgs extends com.pulumi.resou
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public ListRegistryBuildSourceUploadUrlArgs(
-        String registryName,
-        String resourceGroupName) {
-        this.registryName = Objects.requireNonNull(registryName, "expected parameter 'registryName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private ListRegistryBuildSourceUploadUrlArgs() {}
 
-    private ListRegistryBuildSourceUploadUrlArgs() {
-        this.registryName = null;
-        this.resourceGroupName = null;
+    private ListRegistryBuildSourceUploadUrlArgs(ListRegistryBuildSourceUploadUrlArgs $) {
+        this.registryName = $.registryName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ListRegistryBuildSourceUploadUrlArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String registryName;
-        private String resourceGroupName;
+        private ListRegistryBuildSourceUploadUrlArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ListRegistryBuildSourceUploadUrlArgs();
         }
 
         public Builder(ListRegistryBuildSourceUploadUrlArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.registryName = defaults.registryName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new ListRegistryBuildSourceUploadUrlArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder registryName(String registryName) {
-            this.registryName = Objects.requireNonNull(registryName);
+            $.registryName = registryName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public ListRegistryBuildSourceUploadUrlArgs build() {
-            return new ListRegistryBuildSourceUploadUrlArgs(registryName, resourceGroupName);
+        }
+
+        public ListRegistryBuildSourceUploadUrlArgs build() {
+            $.registryName = Objects.requireNonNull($.registryName, "expected parameter 'registryName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

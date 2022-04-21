@@ -5,9 +5,9 @@ package com.pulumi.aws.appstream.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class FleetDomainJoinInfoArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="directoryName")
-      private final @Nullable Output<String> directoryName;
+    private @Nullable Output<String> directoryName;
 
-    public Output<String> directoryName() {
-        return this.directoryName == null ? Codegen.empty() : this.directoryName;
+    public Optional<Output<String>> directoryName() {
+        return Optional.ofNullable(this.directoryName);
     }
 
     /**
@@ -31,63 +31,58 @@ public final class FleetDomainJoinInfoArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="organizationalUnitDistinguishedName")
-      private final @Nullable Output<String> organizationalUnitDistinguishedName;
+    private @Nullable Output<String> organizationalUnitDistinguishedName;
 
-    public Output<String> organizationalUnitDistinguishedName() {
-        return this.organizationalUnitDistinguishedName == null ? Codegen.empty() : this.organizationalUnitDistinguishedName;
+    public Optional<Output<String>> organizationalUnitDistinguishedName() {
+        return Optional.ofNullable(this.organizationalUnitDistinguishedName);
     }
 
-    public FleetDomainJoinInfoArgs(
-        @Nullable Output<String> directoryName,
-        @Nullable Output<String> organizationalUnitDistinguishedName) {
-        this.directoryName = directoryName;
-        this.organizationalUnitDistinguishedName = organizationalUnitDistinguishedName;
-    }
+    private FleetDomainJoinInfoArgs() {}
 
-    private FleetDomainJoinInfoArgs() {
-        this.directoryName = Codegen.empty();
-        this.organizationalUnitDistinguishedName = Codegen.empty();
+    private FleetDomainJoinInfoArgs(FleetDomainJoinInfoArgs $) {
+        this.directoryName = $.directoryName;
+        this.organizationalUnitDistinguishedName = $.organizationalUnitDistinguishedName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FleetDomainJoinInfoArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> directoryName;
-        private @Nullable Output<String> organizationalUnitDistinguishedName;
+        private FleetDomainJoinInfoArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new FleetDomainJoinInfoArgs();
         }
 
         public Builder(FleetDomainJoinInfoArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.directoryName = defaults.directoryName;
-    	      this.organizationalUnitDistinguishedName = defaults.organizationalUnitDistinguishedName;
+            $ = new FleetDomainJoinInfoArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder directoryName(@Nullable Output<String> directoryName) {
-            this.directoryName = directoryName;
+            $.directoryName = directoryName;
             return this;
         }
-        public Builder directoryName(@Nullable String directoryName) {
-            this.directoryName = Codegen.ofNullable(directoryName);
-            return this;
+
+        public Builder directoryName(String directoryName) {
+            return directoryName(Output.of(directoryName));
         }
+
         public Builder organizationalUnitDistinguishedName(@Nullable Output<String> organizationalUnitDistinguishedName) {
-            this.organizationalUnitDistinguishedName = organizationalUnitDistinguishedName;
+            $.organizationalUnitDistinguishedName = organizationalUnitDistinguishedName;
             return this;
         }
-        public Builder organizationalUnitDistinguishedName(@Nullable String organizationalUnitDistinguishedName) {
-            this.organizationalUnitDistinguishedName = Codegen.ofNullable(organizationalUnitDistinguishedName);
-            return this;
-        }        public FleetDomainJoinInfoArgs build() {
-            return new FleetDomainJoinInfoArgs(directoryName, organizationalUnitDistinguishedName);
+
+        public Builder organizationalUnitDistinguishedName(String organizationalUnitDistinguishedName) {
+            return organizationalUnitDistinguishedName(Output.of(organizationalUnitDistinguishedName));
+        }
+
+        public FleetDomainJoinInfoArgs build() {
+            return $;
         }
     }
+
 }

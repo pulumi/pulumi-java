@@ -15,78 +15,72 @@ public final class GetRegionHealthCheckServiceArgs extends com.pulumi.resources.
     public static final GetRegionHealthCheckServiceArgs Empty = new GetRegionHealthCheckServiceArgs();
 
     @Import(name="healthCheckService", required=true)
-      private final String healthCheckService;
+    private String healthCheckService;
 
     public String healthCheckService() {
         return this.healthCheckService;
     }
 
     @Import(name="project")
-      private final @Nullable String project;
+    private @Nullable String project;
 
     public Optional<String> project() {
-        return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
+        return Optional.ofNullable(this.project);
     }
 
     @Import(name="region", required=true)
-      private final String region;
+    private String region;
 
     public String region() {
         return this.region;
     }
 
-    public GetRegionHealthCheckServiceArgs(
-        String healthCheckService,
-        @Nullable String project,
-        String region) {
-        this.healthCheckService = Objects.requireNonNull(healthCheckService, "expected parameter 'healthCheckService' to be non-null");
-        this.project = project;
-        this.region = Objects.requireNonNull(region, "expected parameter 'region' to be non-null");
-    }
+    private GetRegionHealthCheckServiceArgs() {}
 
-    private GetRegionHealthCheckServiceArgs() {
-        this.healthCheckService = null;
-        this.project = null;
-        this.region = null;
+    private GetRegionHealthCheckServiceArgs(GetRegionHealthCheckServiceArgs $) {
+        this.healthCheckService = $.healthCheckService;
+        this.project = $.project;
+        this.region = $.region;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetRegionHealthCheckServiceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String healthCheckService;
-        private @Nullable String project;
-        private String region;
+        private GetRegionHealthCheckServiceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetRegionHealthCheckServiceArgs();
         }
 
         public Builder(GetRegionHealthCheckServiceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.healthCheckService = defaults.healthCheckService;
-    	      this.project = defaults.project;
-    	      this.region = defaults.region;
+            $ = new GetRegionHealthCheckServiceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder healthCheckService(String healthCheckService) {
-            this.healthCheckService = Objects.requireNonNull(healthCheckService);
+            $.healthCheckService = healthCheckService;
             return this;
         }
+
         public Builder project(@Nullable String project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
+
         public Builder region(String region) {
-            this.region = Objects.requireNonNull(region);
+            $.region = region;
             return this;
-        }        public GetRegionHealthCheckServiceArgs build() {
-            return new GetRegionHealthCheckServiceArgs(healthCheckService, project, region);
+        }
+
+        public GetRegionHealthCheckServiceArgs build() {
+            $.healthCheckService = Objects.requireNonNull($.healthCheckService, "expected parameter 'healthCheckService' to be non-null");
+            $.region = Objects.requireNonNull($.region, "expected parameter 'region' to be non-null");
+            return $;
         }
     }
+
 }

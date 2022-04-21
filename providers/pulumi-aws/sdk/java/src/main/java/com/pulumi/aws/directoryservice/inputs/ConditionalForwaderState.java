@@ -5,10 +5,10 @@ package com.pulumi.aws.directoryservice.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class ConditionalForwaderState extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="directoryId")
-      private final @Nullable Output<String> directoryId;
+    private @Nullable Output<String> directoryId;
 
-    public Output<String> directoryId() {
-        return this.directoryId == null ? Codegen.empty() : this.directoryId;
+    public Optional<Output<String>> directoryId() {
+        return Optional.ofNullable(this.directoryId);
     }
 
     /**
@@ -32,10 +32,10 @@ public final class ConditionalForwaderState extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="dnsIps")
-      private final @Nullable Output<List<String>> dnsIps;
+    private @Nullable Output<List<String>> dnsIps;
 
-    public Output<List<String>> dnsIps() {
-        return this.dnsIps == null ? Codegen.empty() : this.dnsIps;
+    public Optional<Output<List<String>>> dnsIps() {
+        return Optional.ofNullable(this.dnsIps);
     }
 
     /**
@@ -43,79 +43,72 @@ public final class ConditionalForwaderState extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="remoteDomainName")
-      private final @Nullable Output<String> remoteDomainName;
+    private @Nullable Output<String> remoteDomainName;
 
-    public Output<String> remoteDomainName() {
-        return this.remoteDomainName == null ? Codegen.empty() : this.remoteDomainName;
+    public Optional<Output<String>> remoteDomainName() {
+        return Optional.ofNullable(this.remoteDomainName);
     }
 
-    public ConditionalForwaderState(
-        @Nullable Output<String> directoryId,
-        @Nullable Output<List<String>> dnsIps,
-        @Nullable Output<String> remoteDomainName) {
-        this.directoryId = directoryId;
-        this.dnsIps = dnsIps;
-        this.remoteDomainName = remoteDomainName;
-    }
+    private ConditionalForwaderState() {}
 
-    private ConditionalForwaderState() {
-        this.directoryId = Codegen.empty();
-        this.dnsIps = Codegen.empty();
-        this.remoteDomainName = Codegen.empty();
+    private ConditionalForwaderState(ConditionalForwaderState $) {
+        this.directoryId = $.directoryId;
+        this.dnsIps = $.dnsIps;
+        this.remoteDomainName = $.remoteDomainName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ConditionalForwaderState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> directoryId;
-        private @Nullable Output<List<String>> dnsIps;
-        private @Nullable Output<String> remoteDomainName;
+        private ConditionalForwaderState $;
 
         public Builder() {
-    	      // Empty
+            $ = new ConditionalForwaderState();
         }
 
         public Builder(ConditionalForwaderState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.directoryId = defaults.directoryId;
-    	      this.dnsIps = defaults.dnsIps;
-    	      this.remoteDomainName = defaults.remoteDomainName;
+            $ = new ConditionalForwaderState(Objects.requireNonNull(defaults));
         }
 
         public Builder directoryId(@Nullable Output<String> directoryId) {
-            this.directoryId = directoryId;
+            $.directoryId = directoryId;
             return this;
         }
-        public Builder directoryId(@Nullable String directoryId) {
-            this.directoryId = Codegen.ofNullable(directoryId);
-            return this;
+
+        public Builder directoryId(String directoryId) {
+            return directoryId(Output.of(directoryId));
         }
+
         public Builder dnsIps(@Nullable Output<List<String>> dnsIps) {
-            this.dnsIps = dnsIps;
+            $.dnsIps = dnsIps;
             return this;
         }
-        public Builder dnsIps(@Nullable List<String> dnsIps) {
-            this.dnsIps = Codegen.ofNullable(dnsIps);
-            return this;
+
+        public Builder dnsIps(List<String> dnsIps) {
+            return dnsIps(Output.of(dnsIps));
         }
+
         public Builder dnsIps(String... dnsIps) {
             return dnsIps(List.of(dnsIps));
         }
+
         public Builder remoteDomainName(@Nullable Output<String> remoteDomainName) {
-            this.remoteDomainName = remoteDomainName;
+            $.remoteDomainName = remoteDomainName;
             return this;
         }
-        public Builder remoteDomainName(@Nullable String remoteDomainName) {
-            this.remoteDomainName = Codegen.ofNullable(remoteDomainName);
-            return this;
-        }        public ConditionalForwaderState build() {
-            return new ConditionalForwaderState(directoryId, dnsIps, remoteDomainName);
+
+        public Builder remoteDomainName(String remoteDomainName) {
+            return remoteDomainName(Output.of(remoteDomainName));
+        }
+
+        public ConditionalForwaderState build() {
+            return $;
         }
     }
+
 }

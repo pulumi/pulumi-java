@@ -5,10 +5,10 @@ package com.pulumi.googlenative.containeranalysis_v1beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.containeranalysis_v1beta1.inputs.BuildProvenanceArgs;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,7 +25,7 @@ public final class GrafeasV1beta1BuildDetailsArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="provenance", required=true)
-      private final Output<BuildProvenanceArgs> provenance;
+    private Output<BuildProvenanceArgs> provenance;
 
     public Output<BuildProvenanceArgs> provenance() {
         return this.provenance;
@@ -36,63 +36,59 @@ public final class GrafeasV1beta1BuildDetailsArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="provenanceBytes")
-      private final @Nullable Output<String> provenanceBytes;
+    private @Nullable Output<String> provenanceBytes;
 
-    public Output<String> provenanceBytes() {
-        return this.provenanceBytes == null ? Codegen.empty() : this.provenanceBytes;
+    public Optional<Output<String>> provenanceBytes() {
+        return Optional.ofNullable(this.provenanceBytes);
     }
 
-    public GrafeasV1beta1BuildDetailsArgs(
-        Output<BuildProvenanceArgs> provenance,
-        @Nullable Output<String> provenanceBytes) {
-        this.provenance = Objects.requireNonNull(provenance, "expected parameter 'provenance' to be non-null");
-        this.provenanceBytes = provenanceBytes;
-    }
+    private GrafeasV1beta1BuildDetailsArgs() {}
 
-    private GrafeasV1beta1BuildDetailsArgs() {
-        this.provenance = Codegen.empty();
-        this.provenanceBytes = Codegen.empty();
+    private GrafeasV1beta1BuildDetailsArgs(GrafeasV1beta1BuildDetailsArgs $) {
+        this.provenance = $.provenance;
+        this.provenanceBytes = $.provenanceBytes;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GrafeasV1beta1BuildDetailsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<BuildProvenanceArgs> provenance;
-        private @Nullable Output<String> provenanceBytes;
+        private GrafeasV1beta1BuildDetailsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GrafeasV1beta1BuildDetailsArgs();
         }
 
         public Builder(GrafeasV1beta1BuildDetailsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.provenance = defaults.provenance;
-    	      this.provenanceBytes = defaults.provenanceBytes;
+            $ = new GrafeasV1beta1BuildDetailsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder provenance(Output<BuildProvenanceArgs> provenance) {
-            this.provenance = Objects.requireNonNull(provenance);
+            $.provenance = provenance;
             return this;
         }
+
         public Builder provenance(BuildProvenanceArgs provenance) {
-            this.provenance = Output.of(Objects.requireNonNull(provenance));
-            return this;
+            return provenance(Output.of(provenance));
         }
+
         public Builder provenanceBytes(@Nullable Output<String> provenanceBytes) {
-            this.provenanceBytes = provenanceBytes;
+            $.provenanceBytes = provenanceBytes;
             return this;
         }
-        public Builder provenanceBytes(@Nullable String provenanceBytes) {
-            this.provenanceBytes = Codegen.ofNullable(provenanceBytes);
-            return this;
-        }        public GrafeasV1beta1BuildDetailsArgs build() {
-            return new GrafeasV1beta1BuildDetailsArgs(provenance, provenanceBytes);
+
+        public Builder provenanceBytes(String provenanceBytes) {
+            return provenanceBytes(Output.of(provenanceBytes));
+        }
+
+        public GrafeasV1beta1BuildDetailsArgs build() {
+            $.provenance = Objects.requireNonNull($.provenance, "expected parameter 'provenance' to be non-null");
+            return $;
         }
     }
+
 }

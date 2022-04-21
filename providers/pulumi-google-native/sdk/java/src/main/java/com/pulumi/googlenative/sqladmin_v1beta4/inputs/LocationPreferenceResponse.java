@@ -21,7 +21,7 @@ public final class LocationPreferenceResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="followGaeApplication", required=true)
-      private final String followGaeApplication;
+    private String followGaeApplication;
 
     public String followGaeApplication() {
         return this.followGaeApplication;
@@ -32,7 +32,7 @@ public final class LocationPreferenceResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="kind", required=true)
-      private final String kind;
+    private String kind;
 
     public String kind() {
         return this.kind;
@@ -43,7 +43,7 @@ public final class LocationPreferenceResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="secondaryZone", required=true)
-      private final String secondaryZone;
+    private String secondaryZone;
 
     public String secondaryZone() {
         return this.secondaryZone;
@@ -54,73 +54,66 @@ public final class LocationPreferenceResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="zone", required=true)
-      private final String zone;
+    private String zone;
 
     public String zone() {
         return this.zone;
     }
 
-    public LocationPreferenceResponse(
-        String followGaeApplication,
-        String kind,
-        String secondaryZone,
-        String zone) {
-        this.followGaeApplication = Objects.requireNonNull(followGaeApplication, "expected parameter 'followGaeApplication' to be non-null");
-        this.kind = Objects.requireNonNull(kind, "expected parameter 'kind' to be non-null");
-        this.secondaryZone = Objects.requireNonNull(secondaryZone, "expected parameter 'secondaryZone' to be non-null");
-        this.zone = Objects.requireNonNull(zone, "expected parameter 'zone' to be non-null");
-    }
+    private LocationPreferenceResponse() {}
 
-    private LocationPreferenceResponse() {
-        this.followGaeApplication = null;
-        this.kind = null;
-        this.secondaryZone = null;
-        this.zone = null;
+    private LocationPreferenceResponse(LocationPreferenceResponse $) {
+        this.followGaeApplication = $.followGaeApplication;
+        this.kind = $.kind;
+        this.secondaryZone = $.secondaryZone;
+        this.zone = $.zone;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LocationPreferenceResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String followGaeApplication;
-        private String kind;
-        private String secondaryZone;
-        private String zone;
+        private LocationPreferenceResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new LocationPreferenceResponse();
         }
 
         public Builder(LocationPreferenceResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.followGaeApplication = defaults.followGaeApplication;
-    	      this.kind = defaults.kind;
-    	      this.secondaryZone = defaults.secondaryZone;
-    	      this.zone = defaults.zone;
+            $ = new LocationPreferenceResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder followGaeApplication(String followGaeApplication) {
-            this.followGaeApplication = Objects.requireNonNull(followGaeApplication);
+            $.followGaeApplication = followGaeApplication;
             return this;
         }
+
         public Builder kind(String kind) {
-            this.kind = Objects.requireNonNull(kind);
+            $.kind = kind;
             return this;
         }
+
         public Builder secondaryZone(String secondaryZone) {
-            this.secondaryZone = Objects.requireNonNull(secondaryZone);
+            $.secondaryZone = secondaryZone;
             return this;
         }
+
         public Builder zone(String zone) {
-            this.zone = Objects.requireNonNull(zone);
+            $.zone = zone;
             return this;
-        }        public LocationPreferenceResponse build() {
-            return new LocationPreferenceResponse(followGaeApplication, kind, secondaryZone, zone);
+        }
+
+        public LocationPreferenceResponse build() {
+            $.followGaeApplication = Objects.requireNonNull($.followGaeApplication, "expected parameter 'followGaeApplication' to be non-null");
+            $.kind = Objects.requireNonNull($.kind, "expected parameter 'kind' to be non-null");
+            $.secondaryZone = Objects.requireNonNull($.secondaryZone, "expected parameter 'secondaryZone' to be non-null");
+            $.zone = Objects.requireNonNull($.zone, "expected parameter 'zone' to be non-null");
+            return $;
         }
     }
+
 }

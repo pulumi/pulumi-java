@@ -24,10 +24,10 @@ public final class NotificationSettingsResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="additionalRecipients")
-      private final @Nullable List<String> additionalRecipients;
+    private @Nullable List<String> additionalRecipients;
 
-    public List<String> additionalRecipients() {
-        return this.additionalRecipients == null ? List.of() : this.additionalRecipients;
+    public Optional<List<String>> additionalRecipients() {
+        return Optional.ofNullable(this.additionalRecipients);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class NotificationSettingsResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="notifyDcAdmins")
-      private final @Nullable String notifyDcAdmins;
+    private @Nullable String notifyDcAdmins;
 
     public Optional<String> notifyDcAdmins() {
-        return this.notifyDcAdmins == null ? Optional.empty() : Optional.ofNullable(this.notifyDcAdmins);
+        return Optional.ofNullable(this.notifyDcAdmins);
     }
 
     /**
@@ -46,67 +46,60 @@ public final class NotificationSettingsResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="notifyGlobalAdmins")
-      private final @Nullable String notifyGlobalAdmins;
+    private @Nullable String notifyGlobalAdmins;
 
     public Optional<String> notifyGlobalAdmins() {
-        return this.notifyGlobalAdmins == null ? Optional.empty() : Optional.ofNullable(this.notifyGlobalAdmins);
+        return Optional.ofNullable(this.notifyGlobalAdmins);
     }
 
-    public NotificationSettingsResponse(
-        @Nullable List<String> additionalRecipients,
-        @Nullable String notifyDcAdmins,
-        @Nullable String notifyGlobalAdmins) {
-        this.additionalRecipients = additionalRecipients;
-        this.notifyDcAdmins = notifyDcAdmins;
-        this.notifyGlobalAdmins = notifyGlobalAdmins;
-    }
+    private NotificationSettingsResponse() {}
 
-    private NotificationSettingsResponse() {
-        this.additionalRecipients = List.of();
-        this.notifyDcAdmins = null;
-        this.notifyGlobalAdmins = null;
+    private NotificationSettingsResponse(NotificationSettingsResponse $) {
+        this.additionalRecipients = $.additionalRecipients;
+        this.notifyDcAdmins = $.notifyDcAdmins;
+        this.notifyGlobalAdmins = $.notifyGlobalAdmins;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NotificationSettingsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<String> additionalRecipients;
-        private @Nullable String notifyDcAdmins;
-        private @Nullable String notifyGlobalAdmins;
+        private NotificationSettingsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new NotificationSettingsResponse();
         }
 
         public Builder(NotificationSettingsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.additionalRecipients = defaults.additionalRecipients;
-    	      this.notifyDcAdmins = defaults.notifyDcAdmins;
-    	      this.notifyGlobalAdmins = defaults.notifyGlobalAdmins;
+            $ = new NotificationSettingsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder additionalRecipients(@Nullable List<String> additionalRecipients) {
-            this.additionalRecipients = additionalRecipients;
+            $.additionalRecipients = additionalRecipients;
             return this;
         }
+
         public Builder additionalRecipients(String... additionalRecipients) {
             return additionalRecipients(List.of(additionalRecipients));
         }
+
         public Builder notifyDcAdmins(@Nullable String notifyDcAdmins) {
-            this.notifyDcAdmins = notifyDcAdmins;
+            $.notifyDcAdmins = notifyDcAdmins;
             return this;
         }
+
         public Builder notifyGlobalAdmins(@Nullable String notifyGlobalAdmins) {
-            this.notifyGlobalAdmins = notifyGlobalAdmins;
+            $.notifyGlobalAdmins = notifyGlobalAdmins;
             return this;
-        }        public NotificationSettingsResponse build() {
-            return new NotificationSettingsResponse(additionalRecipients, notifyDcAdmins, notifyGlobalAdmins);
+        }
+
+        public NotificationSettingsResponse build() {
+            return $;
         }
     }
+
 }

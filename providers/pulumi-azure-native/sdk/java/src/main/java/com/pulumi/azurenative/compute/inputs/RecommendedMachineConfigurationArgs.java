@@ -6,8 +6,8 @@ package com.pulumi.azurenative.compute.inputs;
 import com.pulumi.azurenative.compute.inputs.ResourceRangeArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class RecommendedMachineConfigurationArgs extends com.pulumi.resour
      * 
      */
     @Import(name="memory")
-      private final @Nullable Output<ResourceRangeArgs> memory;
+    private @Nullable Output<ResourceRangeArgs> memory;
 
-    public Output<ResourceRangeArgs> memory() {
-        return this.memory == null ? Codegen.empty() : this.memory;
+    public Optional<Output<ResourceRangeArgs>> memory() {
+        return Optional.ofNullable(this.memory);
     }
 
     /**
@@ -35,63 +35,58 @@ public final class RecommendedMachineConfigurationArgs extends com.pulumi.resour
      * 
      */
     @Import(name="vCPUs")
-      private final @Nullable Output<ResourceRangeArgs> vCPUs;
+    private @Nullable Output<ResourceRangeArgs> vCPUs;
 
-    public Output<ResourceRangeArgs> vCPUs() {
-        return this.vCPUs == null ? Codegen.empty() : this.vCPUs;
+    public Optional<Output<ResourceRangeArgs>> vCPUs() {
+        return Optional.ofNullable(this.vCPUs);
     }
 
-    public RecommendedMachineConfigurationArgs(
-        @Nullable Output<ResourceRangeArgs> memory,
-        @Nullable Output<ResourceRangeArgs> vCPUs) {
-        this.memory = memory;
-        this.vCPUs = vCPUs;
-    }
+    private RecommendedMachineConfigurationArgs() {}
 
-    private RecommendedMachineConfigurationArgs() {
-        this.memory = Codegen.empty();
-        this.vCPUs = Codegen.empty();
+    private RecommendedMachineConfigurationArgs(RecommendedMachineConfigurationArgs $) {
+        this.memory = $.memory;
+        this.vCPUs = $.vCPUs;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RecommendedMachineConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<ResourceRangeArgs> memory;
-        private @Nullable Output<ResourceRangeArgs> vCPUs;
+        private RecommendedMachineConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RecommendedMachineConfigurationArgs();
         }
 
         public Builder(RecommendedMachineConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.memory = defaults.memory;
-    	      this.vCPUs = defaults.vCPUs;
+            $ = new RecommendedMachineConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder memory(@Nullable Output<ResourceRangeArgs> memory) {
-            this.memory = memory;
+            $.memory = memory;
             return this;
         }
-        public Builder memory(@Nullable ResourceRangeArgs memory) {
-            this.memory = Codegen.ofNullable(memory);
-            return this;
+
+        public Builder memory(ResourceRangeArgs memory) {
+            return memory(Output.of(memory));
         }
+
         public Builder vCPUs(@Nullable Output<ResourceRangeArgs> vCPUs) {
-            this.vCPUs = vCPUs;
+            $.vCPUs = vCPUs;
             return this;
         }
-        public Builder vCPUs(@Nullable ResourceRangeArgs vCPUs) {
-            this.vCPUs = Codegen.ofNullable(vCPUs);
-            return this;
-        }        public RecommendedMachineConfigurationArgs build() {
-            return new RecommendedMachineConfigurationArgs(memory, vCPUs);
+
+        public Builder vCPUs(ResourceRangeArgs vCPUs) {
+            return vCPUs(Output.of(vCPUs));
+        }
+
+        public RecommendedMachineConfigurationArgs build() {
+            return $;
         }
     }
+
 }

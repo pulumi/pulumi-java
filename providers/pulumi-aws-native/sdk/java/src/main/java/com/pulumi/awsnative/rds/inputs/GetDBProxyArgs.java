@@ -17,45 +17,45 @@ public final class GetDBProxyArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="dBProxyName", required=true)
-      private final String dBProxyName;
+    private String dBProxyName;
 
     public String dBProxyName() {
         return this.dBProxyName;
     }
 
-    public GetDBProxyArgs(String dBProxyName) {
-        this.dBProxyName = Objects.requireNonNull(dBProxyName, "expected parameter 'dBProxyName' to be non-null");
-    }
+    private GetDBProxyArgs() {}
 
-    private GetDBProxyArgs() {
-        this.dBProxyName = null;
+    private GetDBProxyArgs(GetDBProxyArgs $) {
+        this.dBProxyName = $.dBProxyName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetDBProxyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String dBProxyName;
+        private GetDBProxyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetDBProxyArgs();
         }
 
         public Builder(GetDBProxyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dBProxyName = defaults.dBProxyName;
+            $ = new GetDBProxyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder dBProxyName(String dBProxyName) {
-            this.dBProxyName = Objects.requireNonNull(dBProxyName);
+            $.dBProxyName = dBProxyName;
             return this;
-        }        public GetDBProxyArgs build() {
-            return new GetDBProxyArgs(dBProxyName);
+        }
+
+        public GetDBProxyArgs build() {
+            $.dBProxyName = Objects.requireNonNull($.dBProxyName, "expected parameter 'dBProxyName' to be non-null");
+            return $;
         }
     }
+
 }

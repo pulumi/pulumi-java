@@ -5,11 +5,11 @@ package com.pulumi.gcp.identityplatform.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.identityplatform.inputs.TenantInboundSamlConfigSpConfigSpCertificateArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,7 +22,7 @@ public final class TenantInboundSamlConfigSpConfigArgs extends com.pulumi.resour
      * 
      */
     @Import(name="callbackUri", required=true)
-      private final Output<String> callbackUri;
+    private Output<String> callbackUri;
 
     public Output<String> callbackUri() {
         return this.callbackUri;
@@ -35,10 +35,10 @@ public final class TenantInboundSamlConfigSpConfigArgs extends com.pulumi.resour
      * 
      */
     @Import(name="spCertificates")
-      private final @Nullable Output<List<TenantInboundSamlConfigSpConfigSpCertificateArgs>> spCertificates;
+    private @Nullable Output<List<TenantInboundSamlConfigSpConfigSpCertificateArgs>> spCertificates;
 
-    public Output<List<TenantInboundSamlConfigSpConfigSpCertificateArgs>> spCertificates() {
-        return this.spCertificates == null ? Codegen.empty() : this.spCertificates;
+    public Optional<Output<List<TenantInboundSamlConfigSpConfigSpCertificateArgs>>> spCertificates() {
+        return Optional.ofNullable(this.spCertificates);
     }
 
     /**
@@ -46,79 +46,74 @@ public final class TenantInboundSamlConfigSpConfigArgs extends com.pulumi.resour
      * 
      */
     @Import(name="spEntityId", required=true)
-      private final Output<String> spEntityId;
+    private Output<String> spEntityId;
 
     public Output<String> spEntityId() {
         return this.spEntityId;
     }
 
-    public TenantInboundSamlConfigSpConfigArgs(
-        Output<String> callbackUri,
-        @Nullable Output<List<TenantInboundSamlConfigSpConfigSpCertificateArgs>> spCertificates,
-        Output<String> spEntityId) {
-        this.callbackUri = Objects.requireNonNull(callbackUri, "expected parameter 'callbackUri' to be non-null");
-        this.spCertificates = spCertificates;
-        this.spEntityId = Objects.requireNonNull(spEntityId, "expected parameter 'spEntityId' to be non-null");
-    }
+    private TenantInboundSamlConfigSpConfigArgs() {}
 
-    private TenantInboundSamlConfigSpConfigArgs() {
-        this.callbackUri = Codegen.empty();
-        this.spCertificates = Codegen.empty();
-        this.spEntityId = Codegen.empty();
+    private TenantInboundSamlConfigSpConfigArgs(TenantInboundSamlConfigSpConfigArgs $) {
+        this.callbackUri = $.callbackUri;
+        this.spCertificates = $.spCertificates;
+        this.spEntityId = $.spEntityId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TenantInboundSamlConfigSpConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> callbackUri;
-        private @Nullable Output<List<TenantInboundSamlConfigSpConfigSpCertificateArgs>> spCertificates;
-        private Output<String> spEntityId;
+        private TenantInboundSamlConfigSpConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TenantInboundSamlConfigSpConfigArgs();
         }
 
         public Builder(TenantInboundSamlConfigSpConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.callbackUri = defaults.callbackUri;
-    	      this.spCertificates = defaults.spCertificates;
-    	      this.spEntityId = defaults.spEntityId;
+            $ = new TenantInboundSamlConfigSpConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder callbackUri(Output<String> callbackUri) {
-            this.callbackUri = Objects.requireNonNull(callbackUri);
+            $.callbackUri = callbackUri;
             return this;
         }
+
         public Builder callbackUri(String callbackUri) {
-            this.callbackUri = Output.of(Objects.requireNonNull(callbackUri));
-            return this;
+            return callbackUri(Output.of(callbackUri));
         }
+
         public Builder spCertificates(@Nullable Output<List<TenantInboundSamlConfigSpConfigSpCertificateArgs>> spCertificates) {
-            this.spCertificates = spCertificates;
+            $.spCertificates = spCertificates;
             return this;
         }
-        public Builder spCertificates(@Nullable List<TenantInboundSamlConfigSpConfigSpCertificateArgs> spCertificates) {
-            this.spCertificates = Codegen.ofNullable(spCertificates);
-            return this;
+
+        public Builder spCertificates(List<TenantInboundSamlConfigSpConfigSpCertificateArgs> spCertificates) {
+            return spCertificates(Output.of(spCertificates));
         }
+
         public Builder spCertificates(TenantInboundSamlConfigSpConfigSpCertificateArgs... spCertificates) {
             return spCertificates(List.of(spCertificates));
         }
+
         public Builder spEntityId(Output<String> spEntityId) {
-            this.spEntityId = Objects.requireNonNull(spEntityId);
+            $.spEntityId = spEntityId;
             return this;
         }
+
         public Builder spEntityId(String spEntityId) {
-            this.spEntityId = Output.of(Objects.requireNonNull(spEntityId));
-            return this;
-        }        public TenantInboundSamlConfigSpConfigArgs build() {
-            return new TenantInboundSamlConfigSpConfigArgs(callbackUri, spCertificates, spEntityId);
+            return spEntityId(Output.of(spEntityId));
+        }
+
+        public TenantInboundSamlConfigSpConfigArgs build() {
+            $.callbackUri = Objects.requireNonNull($.callbackUri, "expected parameter 'callbackUri' to be non-null");
+            $.spEntityId = Objects.requireNonNull($.spEntityId, "expected parameter 'spEntityId' to be non-null");
+            return $;
         }
     }
+
 }

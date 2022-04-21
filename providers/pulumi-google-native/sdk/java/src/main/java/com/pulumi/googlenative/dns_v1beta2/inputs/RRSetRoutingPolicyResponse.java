@@ -19,110 +19,101 @@ public final class RRSetRoutingPolicyResponse extends com.pulumi.resources.Invok
     public static final RRSetRoutingPolicyResponse Empty = new RRSetRoutingPolicyResponse();
 
     @Import(name="geo", required=true)
-      private final RRSetRoutingPolicyGeoPolicyResponse geo;
+    private RRSetRoutingPolicyGeoPolicyResponse geo;
 
     public RRSetRoutingPolicyGeoPolicyResponse geo() {
         return this.geo;
     }
 
     @Import(name="geoPolicy", required=true)
-      private final RRSetRoutingPolicyGeoPolicyResponse geoPolicy;
+    private RRSetRoutingPolicyGeoPolicyResponse geoPolicy;
 
     public RRSetRoutingPolicyGeoPolicyResponse geoPolicy() {
         return this.geoPolicy;
     }
 
     @Import(name="kind", required=true)
-      private final String kind;
+    private String kind;
 
     public String kind() {
         return this.kind;
     }
 
     @Import(name="wrr", required=true)
-      private final RRSetRoutingPolicyWrrPolicyResponse wrr;
+    private RRSetRoutingPolicyWrrPolicyResponse wrr;
 
     public RRSetRoutingPolicyWrrPolicyResponse wrr() {
         return this.wrr;
     }
 
     @Import(name="wrrPolicy", required=true)
-      private final RRSetRoutingPolicyWrrPolicyResponse wrrPolicy;
+    private RRSetRoutingPolicyWrrPolicyResponse wrrPolicy;
 
     public RRSetRoutingPolicyWrrPolicyResponse wrrPolicy() {
         return this.wrrPolicy;
     }
 
-    public RRSetRoutingPolicyResponse(
-        RRSetRoutingPolicyGeoPolicyResponse geo,
-        RRSetRoutingPolicyGeoPolicyResponse geoPolicy,
-        String kind,
-        RRSetRoutingPolicyWrrPolicyResponse wrr,
-        RRSetRoutingPolicyWrrPolicyResponse wrrPolicy) {
-        this.geo = Objects.requireNonNull(geo, "expected parameter 'geo' to be non-null");
-        this.geoPolicy = Objects.requireNonNull(geoPolicy, "expected parameter 'geoPolicy' to be non-null");
-        this.kind = Objects.requireNonNull(kind, "expected parameter 'kind' to be non-null");
-        this.wrr = Objects.requireNonNull(wrr, "expected parameter 'wrr' to be non-null");
-        this.wrrPolicy = Objects.requireNonNull(wrrPolicy, "expected parameter 'wrrPolicy' to be non-null");
-    }
+    private RRSetRoutingPolicyResponse() {}
 
-    private RRSetRoutingPolicyResponse() {
-        this.geo = null;
-        this.geoPolicy = null;
-        this.kind = null;
-        this.wrr = null;
-        this.wrrPolicy = null;
+    private RRSetRoutingPolicyResponse(RRSetRoutingPolicyResponse $) {
+        this.geo = $.geo;
+        this.geoPolicy = $.geoPolicy;
+        this.kind = $.kind;
+        this.wrr = $.wrr;
+        this.wrrPolicy = $.wrrPolicy;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RRSetRoutingPolicyResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private RRSetRoutingPolicyGeoPolicyResponse geo;
-        private RRSetRoutingPolicyGeoPolicyResponse geoPolicy;
-        private String kind;
-        private RRSetRoutingPolicyWrrPolicyResponse wrr;
-        private RRSetRoutingPolicyWrrPolicyResponse wrrPolicy;
+        private RRSetRoutingPolicyResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new RRSetRoutingPolicyResponse();
         }
 
         public Builder(RRSetRoutingPolicyResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.geo = defaults.geo;
-    	      this.geoPolicy = defaults.geoPolicy;
-    	      this.kind = defaults.kind;
-    	      this.wrr = defaults.wrr;
-    	      this.wrrPolicy = defaults.wrrPolicy;
+            $ = new RRSetRoutingPolicyResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder geo(RRSetRoutingPolicyGeoPolicyResponse geo) {
-            this.geo = Objects.requireNonNull(geo);
+            $.geo = geo;
             return this;
         }
+
         public Builder geoPolicy(RRSetRoutingPolicyGeoPolicyResponse geoPolicy) {
-            this.geoPolicy = Objects.requireNonNull(geoPolicy);
+            $.geoPolicy = geoPolicy;
             return this;
         }
+
         public Builder kind(String kind) {
-            this.kind = Objects.requireNonNull(kind);
+            $.kind = kind;
             return this;
         }
+
         public Builder wrr(RRSetRoutingPolicyWrrPolicyResponse wrr) {
-            this.wrr = Objects.requireNonNull(wrr);
+            $.wrr = wrr;
             return this;
         }
+
         public Builder wrrPolicy(RRSetRoutingPolicyWrrPolicyResponse wrrPolicy) {
-            this.wrrPolicy = Objects.requireNonNull(wrrPolicy);
+            $.wrrPolicy = wrrPolicy;
             return this;
-        }        public RRSetRoutingPolicyResponse build() {
-            return new RRSetRoutingPolicyResponse(geo, geoPolicy, kind, wrr, wrrPolicy);
+        }
+
+        public RRSetRoutingPolicyResponse build() {
+            $.geo = Objects.requireNonNull($.geo, "expected parameter 'geo' to be non-null");
+            $.geoPolicy = Objects.requireNonNull($.geoPolicy, "expected parameter 'geoPolicy' to be non-null");
+            $.kind = Objects.requireNonNull($.kind, "expected parameter 'kind' to be non-null");
+            $.wrr = Objects.requireNonNull($.wrr, "expected parameter 'wrr' to be non-null");
+            $.wrrPolicy = Objects.requireNonNull($.wrrPolicy, "expected parameter 'wrrPolicy' to be non-null");
+            return $;
         }
     }
+
 }

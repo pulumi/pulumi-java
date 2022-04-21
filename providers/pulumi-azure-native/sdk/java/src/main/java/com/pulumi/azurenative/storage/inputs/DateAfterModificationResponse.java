@@ -23,10 +23,10 @@ public final class DateAfterModificationResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="daysAfterLastAccessTimeGreaterThan")
-      private final @Nullable Double daysAfterLastAccessTimeGreaterThan;
+    private @Nullable Double daysAfterLastAccessTimeGreaterThan;
 
     public Optional<Double> daysAfterLastAccessTimeGreaterThan() {
-        return this.daysAfterLastAccessTimeGreaterThan == null ? Optional.empty() : Optional.ofNullable(this.daysAfterLastAccessTimeGreaterThan);
+        return Optional.ofNullable(this.daysAfterLastAccessTimeGreaterThan);
     }
 
     /**
@@ -34,55 +34,50 @@ public final class DateAfterModificationResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="daysAfterModificationGreaterThan")
-      private final @Nullable Double daysAfterModificationGreaterThan;
+    private @Nullable Double daysAfterModificationGreaterThan;
 
     public Optional<Double> daysAfterModificationGreaterThan() {
-        return this.daysAfterModificationGreaterThan == null ? Optional.empty() : Optional.ofNullable(this.daysAfterModificationGreaterThan);
+        return Optional.ofNullable(this.daysAfterModificationGreaterThan);
     }
 
-    public DateAfterModificationResponse(
-        @Nullable Double daysAfterLastAccessTimeGreaterThan,
-        @Nullable Double daysAfterModificationGreaterThan) {
-        this.daysAfterLastAccessTimeGreaterThan = daysAfterLastAccessTimeGreaterThan;
-        this.daysAfterModificationGreaterThan = daysAfterModificationGreaterThan;
-    }
+    private DateAfterModificationResponse() {}
 
-    private DateAfterModificationResponse() {
-        this.daysAfterLastAccessTimeGreaterThan = null;
-        this.daysAfterModificationGreaterThan = null;
+    private DateAfterModificationResponse(DateAfterModificationResponse $) {
+        this.daysAfterLastAccessTimeGreaterThan = $.daysAfterLastAccessTimeGreaterThan;
+        this.daysAfterModificationGreaterThan = $.daysAfterModificationGreaterThan;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DateAfterModificationResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Double daysAfterLastAccessTimeGreaterThan;
-        private @Nullable Double daysAfterModificationGreaterThan;
+        private DateAfterModificationResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new DateAfterModificationResponse();
         }
 
         public Builder(DateAfterModificationResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.daysAfterLastAccessTimeGreaterThan = defaults.daysAfterLastAccessTimeGreaterThan;
-    	      this.daysAfterModificationGreaterThan = defaults.daysAfterModificationGreaterThan;
+            $ = new DateAfterModificationResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder daysAfterLastAccessTimeGreaterThan(@Nullable Double daysAfterLastAccessTimeGreaterThan) {
-            this.daysAfterLastAccessTimeGreaterThan = daysAfterLastAccessTimeGreaterThan;
+            $.daysAfterLastAccessTimeGreaterThan = daysAfterLastAccessTimeGreaterThan;
             return this;
         }
+
         public Builder daysAfterModificationGreaterThan(@Nullable Double daysAfterModificationGreaterThan) {
-            this.daysAfterModificationGreaterThan = daysAfterModificationGreaterThan;
+            $.daysAfterModificationGreaterThan = daysAfterModificationGreaterThan;
             return this;
-        }        public DateAfterModificationResponse build() {
-            return new DateAfterModificationResponse(daysAfterLastAccessTimeGreaterThan, daysAfterModificationGreaterThan);
+        }
+
+        public DateAfterModificationResponse build() {
+            return $;
         }
     }
+
 }

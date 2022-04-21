@@ -12,6 +12,7 @@ import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -28,10 +29,10 @@ public final class ContainerPartitionKeyArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="kind")
-      private final @Nullable Output<Either<String,PartitionKind>> kind;
+    private @Nullable Output<Either<String,PartitionKind>> kind;
 
-    public Output<Either<String,PartitionKind>> kind() {
-        return this.kind == null ? Codegen.empty() : this.kind;
+    public Optional<Output<Either<String,PartitionKind>>> kind() {
+        return Optional.ofNullable(this.kind);
     }
 
     /**
@@ -39,10 +40,10 @@ public final class ContainerPartitionKeyArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="paths")
-      private final @Nullable Output<List<String>> paths;
+    private @Nullable Output<List<String>> paths;
 
-    public Output<List<String>> paths() {
-        return this.paths == null ? Codegen.empty() : this.paths;
+    public Optional<Output<List<String>>> paths() {
+        return Optional.ofNullable(this.paths);
     }
 
     /**
@@ -50,79 +51,73 @@ public final class ContainerPartitionKeyArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="version")
-      private final @Nullable Output<Integer> version;
+    private @Nullable Output<Integer> version;
 
-    public Output<Integer> version() {
-        return this.version == null ? Codegen.empty() : this.version;
+    public Optional<Output<Integer>> version() {
+        return Optional.ofNullable(this.version);
     }
 
-    public ContainerPartitionKeyArgs(
-        @Nullable Output<Either<String,PartitionKind>> kind,
-        @Nullable Output<List<String>> paths,
-        @Nullable Output<Integer> version) {
-        this.kind = Codegen.stringProp("kind").left(PartitionKind.class).output().arg(kind).def("Hash").getNullable();
-        this.paths = paths;
-        this.version = version;
-    }
+    private ContainerPartitionKeyArgs() {}
 
-    private ContainerPartitionKeyArgs() {
-        this.kind = Codegen.empty();
-        this.paths = Codegen.empty();
-        this.version = Codegen.empty();
+    private ContainerPartitionKeyArgs(ContainerPartitionKeyArgs $) {
+        this.kind = $.kind;
+        this.paths = $.paths;
+        this.version = $.version;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ContainerPartitionKeyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Either<String,PartitionKind>> kind;
-        private @Nullable Output<List<String>> paths;
-        private @Nullable Output<Integer> version;
+        private ContainerPartitionKeyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ContainerPartitionKeyArgs();
         }
 
         public Builder(ContainerPartitionKeyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.kind = defaults.kind;
-    	      this.paths = defaults.paths;
-    	      this.version = defaults.version;
+            $ = new ContainerPartitionKeyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder kind(@Nullable Output<Either<String,PartitionKind>> kind) {
-            this.kind = kind;
+            $.kind = kind;
             return this;
         }
-        public Builder kind(@Nullable Either<String,PartitionKind> kind) {
-            this.kind = Codegen.ofNullable(kind);
-            return this;
+
+        public Builder kind(Either<String,PartitionKind> kind) {
+            return kind(Output.of(kind));
         }
+
         public Builder paths(@Nullable Output<List<String>> paths) {
-            this.paths = paths;
+            $.paths = paths;
             return this;
         }
-        public Builder paths(@Nullable List<String> paths) {
-            this.paths = Codegen.ofNullable(paths);
-            return this;
+
+        public Builder paths(List<String> paths) {
+            return paths(Output.of(paths));
         }
+
         public Builder paths(String... paths) {
             return paths(List.of(paths));
         }
+
         public Builder version(@Nullable Output<Integer> version) {
-            this.version = version;
+            $.version = version;
             return this;
         }
-        public Builder version(@Nullable Integer version) {
-            this.version = Codegen.ofNullable(version);
-            return this;
-        }        public ContainerPartitionKeyArgs build() {
-            return new ContainerPartitionKeyArgs(kind, paths, version);
+
+        public Builder version(Integer version) {
+            return version(Output.of(version));
+        }
+
+        public ContainerPartitionKeyArgs build() {
+            $.kind = Codegen.stringProp("kind").left(PartitionKind.class).output().arg($.kind).def("Hash").getNullable();
+            return $;
         }
     }
+
 }

@@ -5,7 +5,6 @@ package com.pulumi.googlenative.appengine_v1beta;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.appengine_v1beta.enums.AppDatabaseType;
 import com.pulumi.googlenative.appengine_v1beta.enums.AppServingStatus;
 import com.pulumi.googlenative.appengine_v1beta.inputs.FeatureSettingsArgs;
@@ -14,6 +13,7 @@ import com.pulumi.googlenative.appengine_v1beta.inputs.UrlDispatchRuleArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class AppArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="authDomain")
-      private final @Nullable Output<String> authDomain;
+    private @Nullable Output<String> authDomain;
 
-    public Output<String> authDomain() {
-        return this.authDomain == null ? Codegen.empty() : this.authDomain;
+    public Optional<Output<String>> authDomain() {
+        return Optional.ofNullable(this.authDomain);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class AppArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="databaseType")
-      private final @Nullable Output<AppDatabaseType> databaseType;
+    private @Nullable Output<AppDatabaseType> databaseType;
 
-    public Output<AppDatabaseType> databaseType() {
-        return this.databaseType == null ? Codegen.empty() : this.databaseType;
+    public Optional<Output<AppDatabaseType>> databaseType() {
+        return Optional.ofNullable(this.databaseType);
     }
 
     /**
@@ -48,10 +48,10 @@ public final class AppArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="defaultCookieExpiration")
-      private final @Nullable Output<String> defaultCookieExpiration;
+    private @Nullable Output<String> defaultCookieExpiration;
 
-    public Output<String> defaultCookieExpiration() {
-        return this.defaultCookieExpiration == null ? Codegen.empty() : this.defaultCookieExpiration;
+    public Optional<Output<String>> defaultCookieExpiration() {
+        return Optional.ofNullable(this.defaultCookieExpiration);
     }
 
     /**
@@ -59,10 +59,10 @@ public final class AppArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="dispatchRules")
-      private final @Nullable Output<List<UrlDispatchRuleArgs>> dispatchRules;
+    private @Nullable Output<List<UrlDispatchRuleArgs>> dispatchRules;
 
-    public Output<List<UrlDispatchRuleArgs>> dispatchRules() {
-        return this.dispatchRules == null ? Codegen.empty() : this.dispatchRules;
+    public Optional<Output<List<UrlDispatchRuleArgs>>> dispatchRules() {
+        return Optional.ofNullable(this.dispatchRules);
     }
 
     /**
@@ -70,10 +70,10 @@ public final class AppArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="featureSettings")
-      private final @Nullable Output<FeatureSettingsArgs> featureSettings;
+    private @Nullable Output<FeatureSettingsArgs> featureSettings;
 
-    public Output<FeatureSettingsArgs> featureSettings() {
-        return this.featureSettings == null ? Codegen.empty() : this.featureSettings;
+    public Optional<Output<FeatureSettingsArgs>> featureSettings() {
+        return Optional.ofNullable(this.featureSettings);
     }
 
     /**
@@ -81,17 +81,17 @@ public final class AppArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="gcrDomain")
-      private final @Nullable Output<String> gcrDomain;
+    private @Nullable Output<String> gcrDomain;
 
-    public Output<String> gcrDomain() {
-        return this.gcrDomain == null ? Codegen.empty() : this.gcrDomain;
+    public Optional<Output<String>> gcrDomain() {
+        return Optional.ofNullable(this.gcrDomain);
     }
 
     @Import(name="iap")
-      private final @Nullable Output<IdentityAwareProxyArgs> iap;
+    private @Nullable Output<IdentityAwareProxyArgs> iap;
 
-    public Output<IdentityAwareProxyArgs> iap() {
-        return this.iap == null ? Codegen.empty() : this.iap;
+    public Optional<Output<IdentityAwareProxyArgs>> iap() {
+        return Optional.ofNullable(this.iap);
     }
 
     /**
@@ -99,10 +99,10 @@ public final class AppArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="id")
-      private final @Nullable Output<String> id;
+    private @Nullable Output<String> id;
 
-    public Output<String> id() {
-        return this.id == null ? Codegen.empty() : this.id;
+    public Optional<Output<String>> id() {
+        return Optional.ofNullable(this.id);
     }
 
     /**
@@ -110,10 +110,10 @@ public final class AppArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -121,10 +121,10 @@ public final class AppArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="serviceAccount")
-      private final @Nullable Output<String> serviceAccount;
+    private @Nullable Output<String> serviceAccount;
 
-    public Output<String> serviceAccount() {
-        return this.serviceAccount == null ? Codegen.empty() : this.serviceAccount;
+    public Optional<Output<String>> serviceAccount() {
+        return Optional.ofNullable(this.serviceAccount);
     }
 
     /**
@@ -132,183 +132,152 @@ public final class AppArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="servingStatus")
-      private final @Nullable Output<AppServingStatus> servingStatus;
+    private @Nullable Output<AppServingStatus> servingStatus;
 
-    public Output<AppServingStatus> servingStatus() {
-        return this.servingStatus == null ? Codegen.empty() : this.servingStatus;
+    public Optional<Output<AppServingStatus>> servingStatus() {
+        return Optional.ofNullable(this.servingStatus);
     }
 
-    public AppArgs(
-        @Nullable Output<String> authDomain,
-        @Nullable Output<AppDatabaseType> databaseType,
-        @Nullable Output<String> defaultCookieExpiration,
-        @Nullable Output<List<UrlDispatchRuleArgs>> dispatchRules,
-        @Nullable Output<FeatureSettingsArgs> featureSettings,
-        @Nullable Output<String> gcrDomain,
-        @Nullable Output<IdentityAwareProxyArgs> iap,
-        @Nullable Output<String> id,
-        @Nullable Output<String> location,
-        @Nullable Output<String> serviceAccount,
-        @Nullable Output<AppServingStatus> servingStatus) {
-        this.authDomain = authDomain;
-        this.databaseType = databaseType;
-        this.defaultCookieExpiration = defaultCookieExpiration;
-        this.dispatchRules = dispatchRules;
-        this.featureSettings = featureSettings;
-        this.gcrDomain = gcrDomain;
-        this.iap = iap;
-        this.id = id;
-        this.location = location;
-        this.serviceAccount = serviceAccount;
-        this.servingStatus = servingStatus;
-    }
+    private AppArgs() {}
 
-    private AppArgs() {
-        this.authDomain = Codegen.empty();
-        this.databaseType = Codegen.empty();
-        this.defaultCookieExpiration = Codegen.empty();
-        this.dispatchRules = Codegen.empty();
-        this.featureSettings = Codegen.empty();
-        this.gcrDomain = Codegen.empty();
-        this.iap = Codegen.empty();
-        this.id = Codegen.empty();
-        this.location = Codegen.empty();
-        this.serviceAccount = Codegen.empty();
-        this.servingStatus = Codegen.empty();
+    private AppArgs(AppArgs $) {
+        this.authDomain = $.authDomain;
+        this.databaseType = $.databaseType;
+        this.defaultCookieExpiration = $.defaultCookieExpiration;
+        this.dispatchRules = $.dispatchRules;
+        this.featureSettings = $.featureSettings;
+        this.gcrDomain = $.gcrDomain;
+        this.iap = $.iap;
+        this.id = $.id;
+        this.location = $.location;
+        this.serviceAccount = $.serviceAccount;
+        this.servingStatus = $.servingStatus;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AppArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> authDomain;
-        private @Nullable Output<AppDatabaseType> databaseType;
-        private @Nullable Output<String> defaultCookieExpiration;
-        private @Nullable Output<List<UrlDispatchRuleArgs>> dispatchRules;
-        private @Nullable Output<FeatureSettingsArgs> featureSettings;
-        private @Nullable Output<String> gcrDomain;
-        private @Nullable Output<IdentityAwareProxyArgs> iap;
-        private @Nullable Output<String> id;
-        private @Nullable Output<String> location;
-        private @Nullable Output<String> serviceAccount;
-        private @Nullable Output<AppServingStatus> servingStatus;
+        private AppArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AppArgs();
         }
 
         public Builder(AppArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.authDomain = defaults.authDomain;
-    	      this.databaseType = defaults.databaseType;
-    	      this.defaultCookieExpiration = defaults.defaultCookieExpiration;
-    	      this.dispatchRules = defaults.dispatchRules;
-    	      this.featureSettings = defaults.featureSettings;
-    	      this.gcrDomain = defaults.gcrDomain;
-    	      this.iap = defaults.iap;
-    	      this.id = defaults.id;
-    	      this.location = defaults.location;
-    	      this.serviceAccount = defaults.serviceAccount;
-    	      this.servingStatus = defaults.servingStatus;
+            $ = new AppArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder authDomain(@Nullable Output<String> authDomain) {
-            this.authDomain = authDomain;
+            $.authDomain = authDomain;
             return this;
         }
-        public Builder authDomain(@Nullable String authDomain) {
-            this.authDomain = Codegen.ofNullable(authDomain);
-            return this;
+
+        public Builder authDomain(String authDomain) {
+            return authDomain(Output.of(authDomain));
         }
+
         public Builder databaseType(@Nullable Output<AppDatabaseType> databaseType) {
-            this.databaseType = databaseType;
+            $.databaseType = databaseType;
             return this;
         }
-        public Builder databaseType(@Nullable AppDatabaseType databaseType) {
-            this.databaseType = Codegen.ofNullable(databaseType);
-            return this;
+
+        public Builder databaseType(AppDatabaseType databaseType) {
+            return databaseType(Output.of(databaseType));
         }
+
         public Builder defaultCookieExpiration(@Nullable Output<String> defaultCookieExpiration) {
-            this.defaultCookieExpiration = defaultCookieExpiration;
+            $.defaultCookieExpiration = defaultCookieExpiration;
             return this;
         }
-        public Builder defaultCookieExpiration(@Nullable String defaultCookieExpiration) {
-            this.defaultCookieExpiration = Codegen.ofNullable(defaultCookieExpiration);
-            return this;
+
+        public Builder defaultCookieExpiration(String defaultCookieExpiration) {
+            return defaultCookieExpiration(Output.of(defaultCookieExpiration));
         }
+
         public Builder dispatchRules(@Nullable Output<List<UrlDispatchRuleArgs>> dispatchRules) {
-            this.dispatchRules = dispatchRules;
+            $.dispatchRules = dispatchRules;
             return this;
         }
-        public Builder dispatchRules(@Nullable List<UrlDispatchRuleArgs> dispatchRules) {
-            this.dispatchRules = Codegen.ofNullable(dispatchRules);
-            return this;
+
+        public Builder dispatchRules(List<UrlDispatchRuleArgs> dispatchRules) {
+            return dispatchRules(Output.of(dispatchRules));
         }
+
         public Builder dispatchRules(UrlDispatchRuleArgs... dispatchRules) {
             return dispatchRules(List.of(dispatchRules));
         }
+
         public Builder featureSettings(@Nullable Output<FeatureSettingsArgs> featureSettings) {
-            this.featureSettings = featureSettings;
+            $.featureSettings = featureSettings;
             return this;
         }
-        public Builder featureSettings(@Nullable FeatureSettingsArgs featureSettings) {
-            this.featureSettings = Codegen.ofNullable(featureSettings);
-            return this;
+
+        public Builder featureSettings(FeatureSettingsArgs featureSettings) {
+            return featureSettings(Output.of(featureSettings));
         }
+
         public Builder gcrDomain(@Nullable Output<String> gcrDomain) {
-            this.gcrDomain = gcrDomain;
+            $.gcrDomain = gcrDomain;
             return this;
         }
-        public Builder gcrDomain(@Nullable String gcrDomain) {
-            this.gcrDomain = Codegen.ofNullable(gcrDomain);
-            return this;
+
+        public Builder gcrDomain(String gcrDomain) {
+            return gcrDomain(Output.of(gcrDomain));
         }
+
         public Builder iap(@Nullable Output<IdentityAwareProxyArgs> iap) {
-            this.iap = iap;
+            $.iap = iap;
             return this;
         }
-        public Builder iap(@Nullable IdentityAwareProxyArgs iap) {
-            this.iap = Codegen.ofNullable(iap);
-            return this;
+
+        public Builder iap(IdentityAwareProxyArgs iap) {
+            return iap(Output.of(iap));
         }
+
         public Builder id(@Nullable Output<String> id) {
-            this.id = id;
+            $.id = id;
             return this;
         }
-        public Builder id(@Nullable String id) {
-            this.id = Codegen.ofNullable(id);
-            return this;
+
+        public Builder id(String id) {
+            return id(Output.of(id));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder serviceAccount(@Nullable Output<String> serviceAccount) {
-            this.serviceAccount = serviceAccount;
+            $.serviceAccount = serviceAccount;
             return this;
         }
-        public Builder serviceAccount(@Nullable String serviceAccount) {
-            this.serviceAccount = Codegen.ofNullable(serviceAccount);
-            return this;
+
+        public Builder serviceAccount(String serviceAccount) {
+            return serviceAccount(Output.of(serviceAccount));
         }
+
         public Builder servingStatus(@Nullable Output<AppServingStatus> servingStatus) {
-            this.servingStatus = servingStatus;
+            $.servingStatus = servingStatus;
             return this;
         }
-        public Builder servingStatus(@Nullable AppServingStatus servingStatus) {
-            this.servingStatus = Codegen.ofNullable(servingStatus);
-            return this;
-        }        public AppArgs build() {
-            return new AppArgs(authDomain, databaseType, defaultCookieExpiration, dispatchRules, featureSettings, gcrDomain, iap, id, location, serviceAccount, servingStatus);
+
+        public Builder servingStatus(AppServingStatus servingStatus) {
+            return servingStatus(Output.of(servingStatus));
+        }
+
+        public AppArgs build() {
+            return $;
         }
     }
+
 }

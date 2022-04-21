@@ -21,7 +21,7 @@ public final class GoogleCloudDialogflowCxV3ExperimentResultConfidenceIntervalRe
      * 
      */
     @Import(name="confidenceLevel", required=true)
-      private final Double confidenceLevel;
+    private Double confidenceLevel;
 
     public Double confidenceLevel() {
         return this.confidenceLevel;
@@ -32,7 +32,7 @@ public final class GoogleCloudDialogflowCxV3ExperimentResultConfidenceIntervalRe
      * 
      */
     @Import(name="lowerBound", required=true)
-      private final Double lowerBound;
+    private Double lowerBound;
 
     public Double lowerBound() {
         return this.lowerBound;
@@ -43,7 +43,7 @@ public final class GoogleCloudDialogflowCxV3ExperimentResultConfidenceIntervalRe
      * 
      */
     @Import(name="ratio", required=true)
-      private final Double ratio;
+    private Double ratio;
 
     public Double ratio() {
         return this.ratio;
@@ -54,73 +54,66 @@ public final class GoogleCloudDialogflowCxV3ExperimentResultConfidenceIntervalRe
      * 
      */
     @Import(name="upperBound", required=true)
-      private final Double upperBound;
+    private Double upperBound;
 
     public Double upperBound() {
         return this.upperBound;
     }
 
-    public GoogleCloudDialogflowCxV3ExperimentResultConfidenceIntervalResponse(
-        Double confidenceLevel,
-        Double lowerBound,
-        Double ratio,
-        Double upperBound) {
-        this.confidenceLevel = Objects.requireNonNull(confidenceLevel, "expected parameter 'confidenceLevel' to be non-null");
-        this.lowerBound = Objects.requireNonNull(lowerBound, "expected parameter 'lowerBound' to be non-null");
-        this.ratio = Objects.requireNonNull(ratio, "expected parameter 'ratio' to be non-null");
-        this.upperBound = Objects.requireNonNull(upperBound, "expected parameter 'upperBound' to be non-null");
-    }
+    private GoogleCloudDialogflowCxV3ExperimentResultConfidenceIntervalResponse() {}
 
-    private GoogleCloudDialogflowCxV3ExperimentResultConfidenceIntervalResponse() {
-        this.confidenceLevel = null;
-        this.lowerBound = null;
-        this.ratio = null;
-        this.upperBound = null;
+    private GoogleCloudDialogflowCxV3ExperimentResultConfidenceIntervalResponse(GoogleCloudDialogflowCxV3ExperimentResultConfidenceIntervalResponse $) {
+        this.confidenceLevel = $.confidenceLevel;
+        this.lowerBound = $.lowerBound;
+        this.ratio = $.ratio;
+        this.upperBound = $.upperBound;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudDialogflowCxV3ExperimentResultConfidenceIntervalResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Double confidenceLevel;
-        private Double lowerBound;
-        private Double ratio;
-        private Double upperBound;
+        private GoogleCloudDialogflowCxV3ExperimentResultConfidenceIntervalResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudDialogflowCxV3ExperimentResultConfidenceIntervalResponse();
         }
 
         public Builder(GoogleCloudDialogflowCxV3ExperimentResultConfidenceIntervalResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.confidenceLevel = defaults.confidenceLevel;
-    	      this.lowerBound = defaults.lowerBound;
-    	      this.ratio = defaults.ratio;
-    	      this.upperBound = defaults.upperBound;
+            $ = new GoogleCloudDialogflowCxV3ExperimentResultConfidenceIntervalResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder confidenceLevel(Double confidenceLevel) {
-            this.confidenceLevel = Objects.requireNonNull(confidenceLevel);
+            $.confidenceLevel = confidenceLevel;
             return this;
         }
+
         public Builder lowerBound(Double lowerBound) {
-            this.lowerBound = Objects.requireNonNull(lowerBound);
+            $.lowerBound = lowerBound;
             return this;
         }
+
         public Builder ratio(Double ratio) {
-            this.ratio = Objects.requireNonNull(ratio);
+            $.ratio = ratio;
             return this;
         }
+
         public Builder upperBound(Double upperBound) {
-            this.upperBound = Objects.requireNonNull(upperBound);
+            $.upperBound = upperBound;
             return this;
-        }        public GoogleCloudDialogflowCxV3ExperimentResultConfidenceIntervalResponse build() {
-            return new GoogleCloudDialogflowCxV3ExperimentResultConfidenceIntervalResponse(confidenceLevel, lowerBound, ratio, upperBound);
+        }
+
+        public GoogleCloudDialogflowCxV3ExperimentResultConfidenceIntervalResponse build() {
+            $.confidenceLevel = Objects.requireNonNull($.confidenceLevel, "expected parameter 'confidenceLevel' to be non-null");
+            $.lowerBound = Objects.requireNonNull($.lowerBound, "expected parameter 'lowerBound' to be non-null");
+            $.ratio = Objects.requireNonNull($.ratio, "expected parameter 'ratio' to be non-null");
+            $.upperBound = Objects.requireNonNull($.upperBound, "expected parameter 'upperBound' to be non-null");
+            return $;
         }
     }
+
 }

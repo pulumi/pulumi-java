@@ -12,7 +12,6 @@ import com.pulumi.azurenative.logic.inputs.AS2SecuritySettingsArgs;
 import com.pulumi.azurenative.logic.inputs.AS2ValidationSettingsArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
 
 
@@ -29,7 +28,7 @@ public final class AS2ProtocolSettingsArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="acknowledgementConnectionSettings", required=true)
-      private final Output<AS2AcknowledgementConnectionSettingsArgs> acknowledgementConnectionSettings;
+    private Output<AS2AcknowledgementConnectionSettingsArgs> acknowledgementConnectionSettings;
 
     public Output<AS2AcknowledgementConnectionSettingsArgs> acknowledgementConnectionSettings() {
         return this.acknowledgementConnectionSettings;
@@ -40,7 +39,7 @@ public final class AS2ProtocolSettingsArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="envelopeSettings", required=true)
-      private final Output<AS2EnvelopeSettingsArgs> envelopeSettings;
+    private Output<AS2EnvelopeSettingsArgs> envelopeSettings;
 
     public Output<AS2EnvelopeSettingsArgs> envelopeSettings() {
         return this.envelopeSettings;
@@ -51,7 +50,7 @@ public final class AS2ProtocolSettingsArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="errorSettings", required=true)
-      private final Output<AS2ErrorSettingsArgs> errorSettings;
+    private Output<AS2ErrorSettingsArgs> errorSettings;
 
     public Output<AS2ErrorSettingsArgs> errorSettings() {
         return this.errorSettings;
@@ -62,7 +61,7 @@ public final class AS2ProtocolSettingsArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="mdnSettings", required=true)
-      private final Output<AS2MdnSettingsArgs> mdnSettings;
+    private Output<AS2MdnSettingsArgs> mdnSettings;
 
     public Output<AS2MdnSettingsArgs> mdnSettings() {
         return this.mdnSettings;
@@ -73,7 +72,7 @@ public final class AS2ProtocolSettingsArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="messageConnectionSettings", required=true)
-      private final Output<AS2MessageConnectionSettingsArgs> messageConnectionSettings;
+    private Output<AS2MessageConnectionSettingsArgs> messageConnectionSettings;
 
     public Output<AS2MessageConnectionSettingsArgs> messageConnectionSettings() {
         return this.messageConnectionSettings;
@@ -84,7 +83,7 @@ public final class AS2ProtocolSettingsArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="securitySettings", required=true)
-      private final Output<AS2SecuritySettingsArgs> securitySettings;
+    private Output<AS2SecuritySettingsArgs> securitySettings;
 
     public Output<AS2SecuritySettingsArgs> securitySettings() {
         return this.securitySettings;
@@ -95,128 +94,115 @@ public final class AS2ProtocolSettingsArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="validationSettings", required=true)
-      private final Output<AS2ValidationSettingsArgs> validationSettings;
+    private Output<AS2ValidationSettingsArgs> validationSettings;
 
     public Output<AS2ValidationSettingsArgs> validationSettings() {
         return this.validationSettings;
     }
 
-    public AS2ProtocolSettingsArgs(
-        Output<AS2AcknowledgementConnectionSettingsArgs> acknowledgementConnectionSettings,
-        Output<AS2EnvelopeSettingsArgs> envelopeSettings,
-        Output<AS2ErrorSettingsArgs> errorSettings,
-        Output<AS2MdnSettingsArgs> mdnSettings,
-        Output<AS2MessageConnectionSettingsArgs> messageConnectionSettings,
-        Output<AS2SecuritySettingsArgs> securitySettings,
-        Output<AS2ValidationSettingsArgs> validationSettings) {
-        this.acknowledgementConnectionSettings = Objects.requireNonNull(acknowledgementConnectionSettings, "expected parameter 'acknowledgementConnectionSettings' to be non-null");
-        this.envelopeSettings = Objects.requireNonNull(envelopeSettings, "expected parameter 'envelopeSettings' to be non-null");
-        this.errorSettings = Objects.requireNonNull(errorSettings, "expected parameter 'errorSettings' to be non-null");
-        this.mdnSettings = Objects.requireNonNull(mdnSettings, "expected parameter 'mdnSettings' to be non-null");
-        this.messageConnectionSettings = Objects.requireNonNull(messageConnectionSettings, "expected parameter 'messageConnectionSettings' to be non-null");
-        this.securitySettings = Objects.requireNonNull(securitySettings, "expected parameter 'securitySettings' to be non-null");
-        this.validationSettings = Objects.requireNonNull(validationSettings, "expected parameter 'validationSettings' to be non-null");
-    }
+    private AS2ProtocolSettingsArgs() {}
 
-    private AS2ProtocolSettingsArgs() {
-        this.acknowledgementConnectionSettings = Codegen.empty();
-        this.envelopeSettings = Codegen.empty();
-        this.errorSettings = Codegen.empty();
-        this.mdnSettings = Codegen.empty();
-        this.messageConnectionSettings = Codegen.empty();
-        this.securitySettings = Codegen.empty();
-        this.validationSettings = Codegen.empty();
+    private AS2ProtocolSettingsArgs(AS2ProtocolSettingsArgs $) {
+        this.acknowledgementConnectionSettings = $.acknowledgementConnectionSettings;
+        this.envelopeSettings = $.envelopeSettings;
+        this.errorSettings = $.errorSettings;
+        this.mdnSettings = $.mdnSettings;
+        this.messageConnectionSettings = $.messageConnectionSettings;
+        this.securitySettings = $.securitySettings;
+        this.validationSettings = $.validationSettings;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AS2ProtocolSettingsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<AS2AcknowledgementConnectionSettingsArgs> acknowledgementConnectionSettings;
-        private Output<AS2EnvelopeSettingsArgs> envelopeSettings;
-        private Output<AS2ErrorSettingsArgs> errorSettings;
-        private Output<AS2MdnSettingsArgs> mdnSettings;
-        private Output<AS2MessageConnectionSettingsArgs> messageConnectionSettings;
-        private Output<AS2SecuritySettingsArgs> securitySettings;
-        private Output<AS2ValidationSettingsArgs> validationSettings;
+        private AS2ProtocolSettingsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AS2ProtocolSettingsArgs();
         }
 
         public Builder(AS2ProtocolSettingsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.acknowledgementConnectionSettings = defaults.acknowledgementConnectionSettings;
-    	      this.envelopeSettings = defaults.envelopeSettings;
-    	      this.errorSettings = defaults.errorSettings;
-    	      this.mdnSettings = defaults.mdnSettings;
-    	      this.messageConnectionSettings = defaults.messageConnectionSettings;
-    	      this.securitySettings = defaults.securitySettings;
-    	      this.validationSettings = defaults.validationSettings;
+            $ = new AS2ProtocolSettingsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder acknowledgementConnectionSettings(Output<AS2AcknowledgementConnectionSettingsArgs> acknowledgementConnectionSettings) {
-            this.acknowledgementConnectionSettings = Objects.requireNonNull(acknowledgementConnectionSettings);
+            $.acknowledgementConnectionSettings = acknowledgementConnectionSettings;
             return this;
         }
+
         public Builder acknowledgementConnectionSettings(AS2AcknowledgementConnectionSettingsArgs acknowledgementConnectionSettings) {
-            this.acknowledgementConnectionSettings = Output.of(Objects.requireNonNull(acknowledgementConnectionSettings));
-            return this;
+            return acknowledgementConnectionSettings(Output.of(acknowledgementConnectionSettings));
         }
+
         public Builder envelopeSettings(Output<AS2EnvelopeSettingsArgs> envelopeSettings) {
-            this.envelopeSettings = Objects.requireNonNull(envelopeSettings);
+            $.envelopeSettings = envelopeSettings;
             return this;
         }
+
         public Builder envelopeSettings(AS2EnvelopeSettingsArgs envelopeSettings) {
-            this.envelopeSettings = Output.of(Objects.requireNonNull(envelopeSettings));
-            return this;
+            return envelopeSettings(Output.of(envelopeSettings));
         }
+
         public Builder errorSettings(Output<AS2ErrorSettingsArgs> errorSettings) {
-            this.errorSettings = Objects.requireNonNull(errorSettings);
+            $.errorSettings = errorSettings;
             return this;
         }
+
         public Builder errorSettings(AS2ErrorSettingsArgs errorSettings) {
-            this.errorSettings = Output.of(Objects.requireNonNull(errorSettings));
-            return this;
+            return errorSettings(Output.of(errorSettings));
         }
+
         public Builder mdnSettings(Output<AS2MdnSettingsArgs> mdnSettings) {
-            this.mdnSettings = Objects.requireNonNull(mdnSettings);
+            $.mdnSettings = mdnSettings;
             return this;
         }
+
         public Builder mdnSettings(AS2MdnSettingsArgs mdnSettings) {
-            this.mdnSettings = Output.of(Objects.requireNonNull(mdnSettings));
-            return this;
+            return mdnSettings(Output.of(mdnSettings));
         }
+
         public Builder messageConnectionSettings(Output<AS2MessageConnectionSettingsArgs> messageConnectionSettings) {
-            this.messageConnectionSettings = Objects.requireNonNull(messageConnectionSettings);
+            $.messageConnectionSettings = messageConnectionSettings;
             return this;
         }
+
         public Builder messageConnectionSettings(AS2MessageConnectionSettingsArgs messageConnectionSettings) {
-            this.messageConnectionSettings = Output.of(Objects.requireNonNull(messageConnectionSettings));
-            return this;
+            return messageConnectionSettings(Output.of(messageConnectionSettings));
         }
+
         public Builder securitySettings(Output<AS2SecuritySettingsArgs> securitySettings) {
-            this.securitySettings = Objects.requireNonNull(securitySettings);
+            $.securitySettings = securitySettings;
             return this;
         }
+
         public Builder securitySettings(AS2SecuritySettingsArgs securitySettings) {
-            this.securitySettings = Output.of(Objects.requireNonNull(securitySettings));
-            return this;
+            return securitySettings(Output.of(securitySettings));
         }
+
         public Builder validationSettings(Output<AS2ValidationSettingsArgs> validationSettings) {
-            this.validationSettings = Objects.requireNonNull(validationSettings);
+            $.validationSettings = validationSettings;
             return this;
         }
+
         public Builder validationSettings(AS2ValidationSettingsArgs validationSettings) {
-            this.validationSettings = Output.of(Objects.requireNonNull(validationSettings));
-            return this;
-        }        public AS2ProtocolSettingsArgs build() {
-            return new AS2ProtocolSettingsArgs(acknowledgementConnectionSettings, envelopeSettings, errorSettings, mdnSettings, messageConnectionSettings, securitySettings, validationSettings);
+            return validationSettings(Output.of(validationSettings));
+        }
+
+        public AS2ProtocolSettingsArgs build() {
+            $.acknowledgementConnectionSettings = Objects.requireNonNull($.acknowledgementConnectionSettings, "expected parameter 'acknowledgementConnectionSettings' to be non-null");
+            $.envelopeSettings = Objects.requireNonNull($.envelopeSettings, "expected parameter 'envelopeSettings' to be non-null");
+            $.errorSettings = Objects.requireNonNull($.errorSettings, "expected parameter 'errorSettings' to be non-null");
+            $.mdnSettings = Objects.requireNonNull($.mdnSettings, "expected parameter 'mdnSettings' to be non-null");
+            $.messageConnectionSettings = Objects.requireNonNull($.messageConnectionSettings, "expected parameter 'messageConnectionSettings' to be non-null");
+            $.securitySettings = Objects.requireNonNull($.securitySettings, "expected parameter 'securitySettings' to be non-null");
+            $.validationSettings = Objects.requireNonNull($.validationSettings, "expected parameter 'validationSettings' to be non-null");
+            return $;
         }
     }
+
 }

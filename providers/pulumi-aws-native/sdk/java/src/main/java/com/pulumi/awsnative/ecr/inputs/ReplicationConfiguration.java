@@ -22,48 +22,49 @@ public final class ReplicationConfiguration extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="rules", required=true)
-      private final List<ReplicationConfigurationReplicationRule> rules;
+    private List<ReplicationConfigurationReplicationRule> rules;
 
     public List<ReplicationConfigurationReplicationRule> rules() {
         return this.rules;
     }
 
-    public ReplicationConfiguration(List<ReplicationConfigurationReplicationRule> rules) {
-        this.rules = Objects.requireNonNull(rules, "expected parameter 'rules' to be non-null");
-    }
+    private ReplicationConfiguration() {}
 
-    private ReplicationConfiguration() {
-        this.rules = List.of();
+    private ReplicationConfiguration(ReplicationConfiguration $) {
+        this.rules = $.rules;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ReplicationConfiguration defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<ReplicationConfigurationReplicationRule> rules;
+        private ReplicationConfiguration $;
 
         public Builder() {
-    	      // Empty
+            $ = new ReplicationConfiguration();
         }
 
         public Builder(ReplicationConfiguration defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.rules = defaults.rules;
+            $ = new ReplicationConfiguration(Objects.requireNonNull(defaults));
         }
 
         public Builder rules(List<ReplicationConfigurationReplicationRule> rules) {
-            this.rules = Objects.requireNonNull(rules);
+            $.rules = rules;
             return this;
         }
+
         public Builder rules(ReplicationConfigurationReplicationRule... rules) {
             return rules(List.of(rules));
-        }        public ReplicationConfiguration build() {
-            return new ReplicationConfiguration(rules);
+        }
+
+        public ReplicationConfiguration build() {
+            $.rules = Objects.requireNonNull($.rules, "expected parameter 'rules' to be non-null");
+            return $;
         }
     }
+
 }

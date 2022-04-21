@@ -23,7 +23,7 @@ public final class SubjectDescriptionResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="hexSerialNumber", required=true)
-      private final String hexSerialNumber;
+    private String hexSerialNumber;
 
     public String hexSerialNumber() {
         return this.hexSerialNumber;
@@ -34,7 +34,7 @@ public final class SubjectDescriptionResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="lifetime", required=true)
-      private final String lifetime;
+    private String lifetime;
 
     public String lifetime() {
         return this.lifetime;
@@ -45,7 +45,7 @@ public final class SubjectDescriptionResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="notAfterTime", required=true)
-      private final String notAfterTime;
+    private String notAfterTime;
 
     public String notAfterTime() {
         return this.notAfterTime;
@@ -56,7 +56,7 @@ public final class SubjectDescriptionResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="notBeforeTime", required=true)
-      private final String notBeforeTime;
+    private String notBeforeTime;
 
     public String notBeforeTime() {
         return this.notBeforeTime;
@@ -67,7 +67,7 @@ public final class SubjectDescriptionResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="subject", required=true)
-      private final SubjectResponse subject;
+    private SubjectResponse subject;
 
     public SubjectResponse subject() {
         return this.subject;
@@ -78,91 +78,80 @@ public final class SubjectDescriptionResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="subjectAltName", required=true)
-      private final SubjectAltNamesResponse subjectAltName;
+    private SubjectAltNamesResponse subjectAltName;
 
     public SubjectAltNamesResponse subjectAltName() {
         return this.subjectAltName;
     }
 
-    public SubjectDescriptionResponse(
-        String hexSerialNumber,
-        String lifetime,
-        String notAfterTime,
-        String notBeforeTime,
-        SubjectResponse subject,
-        SubjectAltNamesResponse subjectAltName) {
-        this.hexSerialNumber = Objects.requireNonNull(hexSerialNumber, "expected parameter 'hexSerialNumber' to be non-null");
-        this.lifetime = Objects.requireNonNull(lifetime, "expected parameter 'lifetime' to be non-null");
-        this.notAfterTime = Objects.requireNonNull(notAfterTime, "expected parameter 'notAfterTime' to be non-null");
-        this.notBeforeTime = Objects.requireNonNull(notBeforeTime, "expected parameter 'notBeforeTime' to be non-null");
-        this.subject = Objects.requireNonNull(subject, "expected parameter 'subject' to be non-null");
-        this.subjectAltName = Objects.requireNonNull(subjectAltName, "expected parameter 'subjectAltName' to be non-null");
-    }
+    private SubjectDescriptionResponse() {}
 
-    private SubjectDescriptionResponse() {
-        this.hexSerialNumber = null;
-        this.lifetime = null;
-        this.notAfterTime = null;
-        this.notBeforeTime = null;
-        this.subject = null;
-        this.subjectAltName = null;
+    private SubjectDescriptionResponse(SubjectDescriptionResponse $) {
+        this.hexSerialNumber = $.hexSerialNumber;
+        this.lifetime = $.lifetime;
+        this.notAfterTime = $.notAfterTime;
+        this.notBeforeTime = $.notBeforeTime;
+        this.subject = $.subject;
+        this.subjectAltName = $.subjectAltName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SubjectDescriptionResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String hexSerialNumber;
-        private String lifetime;
-        private String notAfterTime;
-        private String notBeforeTime;
-        private SubjectResponse subject;
-        private SubjectAltNamesResponse subjectAltName;
+        private SubjectDescriptionResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new SubjectDescriptionResponse();
         }
 
         public Builder(SubjectDescriptionResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.hexSerialNumber = defaults.hexSerialNumber;
-    	      this.lifetime = defaults.lifetime;
-    	      this.notAfterTime = defaults.notAfterTime;
-    	      this.notBeforeTime = defaults.notBeforeTime;
-    	      this.subject = defaults.subject;
-    	      this.subjectAltName = defaults.subjectAltName;
+            $ = new SubjectDescriptionResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder hexSerialNumber(String hexSerialNumber) {
-            this.hexSerialNumber = Objects.requireNonNull(hexSerialNumber);
+            $.hexSerialNumber = hexSerialNumber;
             return this;
         }
+
         public Builder lifetime(String lifetime) {
-            this.lifetime = Objects.requireNonNull(lifetime);
+            $.lifetime = lifetime;
             return this;
         }
+
         public Builder notAfterTime(String notAfterTime) {
-            this.notAfterTime = Objects.requireNonNull(notAfterTime);
+            $.notAfterTime = notAfterTime;
             return this;
         }
+
         public Builder notBeforeTime(String notBeforeTime) {
-            this.notBeforeTime = Objects.requireNonNull(notBeforeTime);
+            $.notBeforeTime = notBeforeTime;
             return this;
         }
+
         public Builder subject(SubjectResponse subject) {
-            this.subject = Objects.requireNonNull(subject);
+            $.subject = subject;
             return this;
         }
+
         public Builder subjectAltName(SubjectAltNamesResponse subjectAltName) {
-            this.subjectAltName = Objects.requireNonNull(subjectAltName);
+            $.subjectAltName = subjectAltName;
             return this;
-        }        public SubjectDescriptionResponse build() {
-            return new SubjectDescriptionResponse(hexSerialNumber, lifetime, notAfterTime, notBeforeTime, subject, subjectAltName);
+        }
+
+        public SubjectDescriptionResponse build() {
+            $.hexSerialNumber = Objects.requireNonNull($.hexSerialNumber, "expected parameter 'hexSerialNumber' to be non-null");
+            $.lifetime = Objects.requireNonNull($.lifetime, "expected parameter 'lifetime' to be non-null");
+            $.notAfterTime = Objects.requireNonNull($.notAfterTime, "expected parameter 'notAfterTime' to be non-null");
+            $.notBeforeTime = Objects.requireNonNull($.notBeforeTime, "expected parameter 'notBeforeTime' to be non-null");
+            $.subject = Objects.requireNonNull($.subject, "expected parameter 'subject' to be non-null");
+            $.subjectAltName = Objects.requireNonNull($.subjectAltName, "expected parameter 'subjectAltName' to be non-null");
+            return $;
         }
     }
+
 }

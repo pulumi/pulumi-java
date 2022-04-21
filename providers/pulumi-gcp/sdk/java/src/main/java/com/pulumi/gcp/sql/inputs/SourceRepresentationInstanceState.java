@@ -5,10 +5,10 @@ package com.pulumi.gcp.sql.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class SourceRepresentationInstanceState extends com.pulumi.resource
      * 
      */
     @Import(name="databaseVersion")
-      private final @Nullable Output<String> databaseVersion;
+    private @Nullable Output<String> databaseVersion;
 
-    public Output<String> databaseVersion() {
-        return this.databaseVersion == null ? Codegen.empty() : this.databaseVersion;
+    public Optional<Output<String>> databaseVersion() {
+        return Optional.ofNullable(this.databaseVersion);
     }
 
     /**
@@ -33,10 +33,10 @@ public final class SourceRepresentationInstanceState extends com.pulumi.resource
      * 
      */
     @Import(name="host")
-      private final @Nullable Output<String> host;
+    private @Nullable Output<String> host;
 
-    public Output<String> host() {
-        return this.host == null ? Codegen.empty() : this.host;
+    public Optional<Output<String>> host() {
+        return Optional.ofNullable(this.host);
     }
 
     /**
@@ -44,10 +44,10 @@ public final class SourceRepresentationInstanceState extends com.pulumi.resource
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -56,10 +56,10 @@ public final class SourceRepresentationInstanceState extends com.pulumi.resource
      * 
      */
     @Import(name="port")
-      private final @Nullable Output<Integer> port;
+    private @Nullable Output<Integer> port;
 
-    public Output<Integer> port() {
-        return this.port == null ? Codegen.empty() : this.port;
+    public Optional<Output<Integer>> port() {
+        return Optional.ofNullable(this.port);
     }
 
     /**
@@ -68,10 +68,10 @@ public final class SourceRepresentationInstanceState extends com.pulumi.resource
      * 
      */
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -80,115 +80,98 @@ public final class SourceRepresentationInstanceState extends com.pulumi.resource
      * 
      */
     @Import(name="region")
-      private final @Nullable Output<String> region;
+    private @Nullable Output<String> region;
 
-    public Output<String> region() {
-        return this.region == null ? Codegen.empty() : this.region;
+    public Optional<Output<String>> region() {
+        return Optional.ofNullable(this.region);
     }
 
-    public SourceRepresentationInstanceState(
-        @Nullable Output<String> databaseVersion,
-        @Nullable Output<String> host,
-        @Nullable Output<String> name,
-        @Nullable Output<Integer> port,
-        @Nullable Output<String> project,
-        @Nullable Output<String> region) {
-        this.databaseVersion = databaseVersion;
-        this.host = host;
-        this.name = name;
-        this.port = port;
-        this.project = project;
-        this.region = region;
-    }
+    private SourceRepresentationInstanceState() {}
 
-    private SourceRepresentationInstanceState() {
-        this.databaseVersion = Codegen.empty();
-        this.host = Codegen.empty();
-        this.name = Codegen.empty();
-        this.port = Codegen.empty();
-        this.project = Codegen.empty();
-        this.region = Codegen.empty();
+    private SourceRepresentationInstanceState(SourceRepresentationInstanceState $) {
+        this.databaseVersion = $.databaseVersion;
+        this.host = $.host;
+        this.name = $.name;
+        this.port = $.port;
+        this.project = $.project;
+        this.region = $.region;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SourceRepresentationInstanceState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> databaseVersion;
-        private @Nullable Output<String> host;
-        private @Nullable Output<String> name;
-        private @Nullable Output<Integer> port;
-        private @Nullable Output<String> project;
-        private @Nullable Output<String> region;
+        private SourceRepresentationInstanceState $;
 
         public Builder() {
-    	      // Empty
+            $ = new SourceRepresentationInstanceState();
         }
 
         public Builder(SourceRepresentationInstanceState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.databaseVersion = defaults.databaseVersion;
-    	      this.host = defaults.host;
-    	      this.name = defaults.name;
-    	      this.port = defaults.port;
-    	      this.project = defaults.project;
-    	      this.region = defaults.region;
+            $ = new SourceRepresentationInstanceState(Objects.requireNonNull(defaults));
         }
 
         public Builder databaseVersion(@Nullable Output<String> databaseVersion) {
-            this.databaseVersion = databaseVersion;
+            $.databaseVersion = databaseVersion;
             return this;
         }
-        public Builder databaseVersion(@Nullable String databaseVersion) {
-            this.databaseVersion = Codegen.ofNullable(databaseVersion);
-            return this;
+
+        public Builder databaseVersion(String databaseVersion) {
+            return databaseVersion(Output.of(databaseVersion));
         }
+
         public Builder host(@Nullable Output<String> host) {
-            this.host = host;
+            $.host = host;
             return this;
         }
-        public Builder host(@Nullable String host) {
-            this.host = Codegen.ofNullable(host);
-            return this;
+
+        public Builder host(String host) {
+            return host(Output.of(host));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder port(@Nullable Output<Integer> port) {
-            this.port = port;
+            $.port = port;
             return this;
         }
-        public Builder port(@Nullable Integer port) {
-            this.port = Codegen.ofNullable(port);
-            return this;
+
+        public Builder port(Integer port) {
+            return port(Output.of(port));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder region(@Nullable Output<String> region) {
-            this.region = region;
+            $.region = region;
             return this;
         }
-        public Builder region(@Nullable String region) {
-            this.region = Codegen.ofNullable(region);
-            return this;
-        }        public SourceRepresentationInstanceState build() {
-            return new SourceRepresentationInstanceState(databaseVersion, host, name, port, project, region);
+
+        public Builder region(String region) {
+            return region(Output.of(region));
+        }
+
+        public SourceRepresentationInstanceState build() {
+            return $;
         }
     }
+
 }

@@ -13,45 +13,45 @@ public final class GetResourcePolicyInstanceSchedulePolicyVmStartSchedule extend
     public static final GetResourcePolicyInstanceSchedulePolicyVmStartSchedule Empty = new GetResourcePolicyInstanceSchedulePolicyVmStartSchedule();
 
     @Import(name="schedule", required=true)
-      private final String schedule;
+    private String schedule;
 
     public String schedule() {
         return this.schedule;
     }
 
-    public GetResourcePolicyInstanceSchedulePolicyVmStartSchedule(String schedule) {
-        this.schedule = Objects.requireNonNull(schedule, "expected parameter 'schedule' to be non-null");
-    }
+    private GetResourcePolicyInstanceSchedulePolicyVmStartSchedule() {}
 
-    private GetResourcePolicyInstanceSchedulePolicyVmStartSchedule() {
-        this.schedule = null;
+    private GetResourcePolicyInstanceSchedulePolicyVmStartSchedule(GetResourcePolicyInstanceSchedulePolicyVmStartSchedule $) {
+        this.schedule = $.schedule;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetResourcePolicyInstanceSchedulePolicyVmStartSchedule defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String schedule;
+        private GetResourcePolicyInstanceSchedulePolicyVmStartSchedule $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetResourcePolicyInstanceSchedulePolicyVmStartSchedule();
         }
 
         public Builder(GetResourcePolicyInstanceSchedulePolicyVmStartSchedule defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.schedule = defaults.schedule;
+            $ = new GetResourcePolicyInstanceSchedulePolicyVmStartSchedule(Objects.requireNonNull(defaults));
         }
 
         public Builder schedule(String schedule) {
-            this.schedule = Objects.requireNonNull(schedule);
+            $.schedule = schedule;
             return this;
-        }        public GetResourcePolicyInstanceSchedulePolicyVmStartSchedule build() {
-            return new GetResourcePolicyInstanceSchedulePolicyVmStartSchedule(schedule);
+        }
+
+        public GetResourcePolicyInstanceSchedulePolicyVmStartSchedule build() {
+            $.schedule = Objects.requireNonNull($.schedule, "expected parameter 'schedule' to be non-null");
+            return $;
         }
     }
+
 }

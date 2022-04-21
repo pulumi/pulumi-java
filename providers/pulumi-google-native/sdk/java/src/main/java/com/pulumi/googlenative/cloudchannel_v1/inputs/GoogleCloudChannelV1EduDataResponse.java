@@ -21,7 +21,7 @@ public final class GoogleCloudChannelV1EduDataResponse extends com.pulumi.resour
      * 
      */
     @Import(name="instituteSize", required=true)
-      private final String instituteSize;
+    private String instituteSize;
 
     public String instituteSize() {
         return this.instituteSize;
@@ -32,7 +32,7 @@ public final class GoogleCloudChannelV1EduDataResponse extends com.pulumi.resour
      * 
      */
     @Import(name="instituteType", required=true)
-      private final String instituteType;
+    private String instituteType;
 
     public String instituteType() {
         return this.instituteType;
@@ -43,64 +43,59 @@ public final class GoogleCloudChannelV1EduDataResponse extends com.pulumi.resour
      * 
      */
     @Import(name="website", required=true)
-      private final String website;
+    private String website;
 
     public String website() {
         return this.website;
     }
 
-    public GoogleCloudChannelV1EduDataResponse(
-        String instituteSize,
-        String instituteType,
-        String website) {
-        this.instituteSize = Objects.requireNonNull(instituteSize, "expected parameter 'instituteSize' to be non-null");
-        this.instituteType = Objects.requireNonNull(instituteType, "expected parameter 'instituteType' to be non-null");
-        this.website = Objects.requireNonNull(website, "expected parameter 'website' to be non-null");
-    }
+    private GoogleCloudChannelV1EduDataResponse() {}
 
-    private GoogleCloudChannelV1EduDataResponse() {
-        this.instituteSize = null;
-        this.instituteType = null;
-        this.website = null;
+    private GoogleCloudChannelV1EduDataResponse(GoogleCloudChannelV1EduDataResponse $) {
+        this.instituteSize = $.instituteSize;
+        this.instituteType = $.instituteType;
+        this.website = $.website;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudChannelV1EduDataResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String instituteSize;
-        private String instituteType;
-        private String website;
+        private GoogleCloudChannelV1EduDataResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudChannelV1EduDataResponse();
         }
 
         public Builder(GoogleCloudChannelV1EduDataResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.instituteSize = defaults.instituteSize;
-    	      this.instituteType = defaults.instituteType;
-    	      this.website = defaults.website;
+            $ = new GoogleCloudChannelV1EduDataResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder instituteSize(String instituteSize) {
-            this.instituteSize = Objects.requireNonNull(instituteSize);
+            $.instituteSize = instituteSize;
             return this;
         }
+
         public Builder instituteType(String instituteType) {
-            this.instituteType = Objects.requireNonNull(instituteType);
+            $.instituteType = instituteType;
             return this;
         }
+
         public Builder website(String website) {
-            this.website = Objects.requireNonNull(website);
+            $.website = website;
             return this;
-        }        public GoogleCloudChannelV1EduDataResponse build() {
-            return new GoogleCloudChannelV1EduDataResponse(instituteSize, instituteType, website);
+        }
+
+        public GoogleCloudChannelV1EduDataResponse build() {
+            $.instituteSize = Objects.requireNonNull($.instituteSize, "expected parameter 'instituteSize' to be non-null");
+            $.instituteType = Objects.requireNonNull($.instituteType, "expected parameter 'instituteType' to be non-null");
+            $.website = Objects.requireNonNull($.website, "expected parameter 'website' to be non-null");
+            return $;
         }
     }
+
 }

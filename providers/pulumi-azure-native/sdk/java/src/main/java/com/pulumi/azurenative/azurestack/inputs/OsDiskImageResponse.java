@@ -21,7 +21,7 @@ public final class OsDiskImageResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="operatingSystem", required=true)
-      private final String operatingSystem;
+    private String operatingSystem;
 
     public String operatingSystem() {
         return this.operatingSystem;
@@ -32,55 +32,52 @@ public final class OsDiskImageResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="sourceBlobSasUri", required=true)
-      private final String sourceBlobSasUri;
+    private String sourceBlobSasUri;
 
     public String sourceBlobSasUri() {
         return this.sourceBlobSasUri;
     }
 
-    public OsDiskImageResponse(
-        String operatingSystem,
-        String sourceBlobSasUri) {
-        this.operatingSystem = Objects.requireNonNull(operatingSystem, "expected parameter 'operatingSystem' to be non-null");
-        this.sourceBlobSasUri = Objects.requireNonNull(sourceBlobSasUri, "expected parameter 'sourceBlobSasUri' to be non-null");
-    }
+    private OsDiskImageResponse() {}
 
-    private OsDiskImageResponse() {
-        this.operatingSystem = null;
-        this.sourceBlobSasUri = null;
+    private OsDiskImageResponse(OsDiskImageResponse $) {
+        this.operatingSystem = $.operatingSystem;
+        this.sourceBlobSasUri = $.sourceBlobSasUri;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(OsDiskImageResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String operatingSystem;
-        private String sourceBlobSasUri;
+        private OsDiskImageResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new OsDiskImageResponse();
         }
 
         public Builder(OsDiskImageResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.operatingSystem = defaults.operatingSystem;
-    	      this.sourceBlobSasUri = defaults.sourceBlobSasUri;
+            $ = new OsDiskImageResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder operatingSystem(String operatingSystem) {
-            this.operatingSystem = Objects.requireNonNull(operatingSystem);
+            $.operatingSystem = operatingSystem;
             return this;
         }
+
         public Builder sourceBlobSasUri(String sourceBlobSasUri) {
-            this.sourceBlobSasUri = Objects.requireNonNull(sourceBlobSasUri);
+            $.sourceBlobSasUri = sourceBlobSasUri;
             return this;
-        }        public OsDiskImageResponse build() {
-            return new OsDiskImageResponse(operatingSystem, sourceBlobSasUri);
+        }
+
+        public OsDiskImageResponse build() {
+            $.operatingSystem = Objects.requireNonNull($.operatingSystem, "expected parameter 'operatingSystem' to be non-null");
+            $.sourceBlobSasUri = Objects.requireNonNull($.sourceBlobSasUri, "expected parameter 'sourceBlobSasUri' to be non-null");
+            return $;
         }
     }
+
 }

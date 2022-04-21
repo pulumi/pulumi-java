@@ -17,7 +17,7 @@ public final class GetRouteArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -28,7 +28,7 @@ public final class GetRouteArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="routeName", required=true)
-      private final String routeName;
+    private String routeName;
 
     public String routeName() {
         return this.routeName;
@@ -39,64 +39,59 @@ public final class GetRouteArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="routeTableName", required=true)
-      private final String routeTableName;
+    private String routeTableName;
 
     public String routeTableName() {
         return this.routeTableName;
     }
 
-    public GetRouteArgs(
-        String resourceGroupName,
-        String routeName,
-        String routeTableName) {
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.routeName = Objects.requireNonNull(routeName, "expected parameter 'routeName' to be non-null");
-        this.routeTableName = Objects.requireNonNull(routeTableName, "expected parameter 'routeTableName' to be non-null");
-    }
+    private GetRouteArgs() {}
 
-    private GetRouteArgs() {
-        this.resourceGroupName = null;
-        this.routeName = null;
-        this.routeTableName = null;
+    private GetRouteArgs(GetRouteArgs $) {
+        this.resourceGroupName = $.resourceGroupName;
+        this.routeName = $.routeName;
+        this.routeTableName = $.routeTableName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetRouteArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String resourceGroupName;
-        private String routeName;
-        private String routeTableName;
+        private GetRouteArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetRouteArgs();
         }
 
         public Builder(GetRouteArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.routeName = defaults.routeName;
-    	      this.routeTableName = defaults.routeTableName;
+            $ = new GetRouteArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder routeName(String routeName) {
-            this.routeName = Objects.requireNonNull(routeName);
+            $.routeName = routeName;
             return this;
         }
+
         public Builder routeTableName(String routeTableName) {
-            this.routeTableName = Objects.requireNonNull(routeTableName);
+            $.routeTableName = routeTableName;
             return this;
-        }        public GetRouteArgs build() {
-            return new GetRouteArgs(resourceGroupName, routeName, routeTableName);
+        }
+
+        public GetRouteArgs build() {
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.routeName = Objects.requireNonNull($.routeName, "expected parameter 'routeName' to be non-null");
+            $.routeTableName = Objects.requireNonNull($.routeTableName, "expected parameter 'routeTableName' to be non-null");
+            return $;
         }
     }
+
 }

@@ -21,7 +21,7 @@ public final class SmsReceiverResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="countryCode", required=true)
-      private final String countryCode;
+    private String countryCode;
 
     public String countryCode() {
         return this.countryCode;
@@ -32,7 +32,7 @@ public final class SmsReceiverResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -43,7 +43,7 @@ public final class SmsReceiverResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="phoneNumber", required=true)
-      private final String phoneNumber;
+    private String phoneNumber;
 
     public String phoneNumber() {
         return this.phoneNumber;
@@ -54,73 +54,66 @@ public final class SmsReceiverResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="status", required=true)
-      private final String status;
+    private String status;
 
     public String status() {
         return this.status;
     }
 
-    public SmsReceiverResponse(
-        String countryCode,
-        String name,
-        String phoneNumber,
-        String status) {
-        this.countryCode = Objects.requireNonNull(countryCode, "expected parameter 'countryCode' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.phoneNumber = Objects.requireNonNull(phoneNumber, "expected parameter 'phoneNumber' to be non-null");
-        this.status = Objects.requireNonNull(status, "expected parameter 'status' to be non-null");
-    }
+    private SmsReceiverResponse() {}
 
-    private SmsReceiverResponse() {
-        this.countryCode = null;
-        this.name = null;
-        this.phoneNumber = null;
-        this.status = null;
+    private SmsReceiverResponse(SmsReceiverResponse $) {
+        this.countryCode = $.countryCode;
+        this.name = $.name;
+        this.phoneNumber = $.phoneNumber;
+        this.status = $.status;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SmsReceiverResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String countryCode;
-        private String name;
-        private String phoneNumber;
-        private String status;
+        private SmsReceiverResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new SmsReceiverResponse();
         }
 
         public Builder(SmsReceiverResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.countryCode = defaults.countryCode;
-    	      this.name = defaults.name;
-    	      this.phoneNumber = defaults.phoneNumber;
-    	      this.status = defaults.status;
+            $ = new SmsReceiverResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder countryCode(String countryCode) {
-            this.countryCode = Objects.requireNonNull(countryCode);
+            $.countryCode = countryCode;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder phoneNumber(String phoneNumber) {
-            this.phoneNumber = Objects.requireNonNull(phoneNumber);
+            $.phoneNumber = phoneNumber;
             return this;
         }
+
         public Builder status(String status) {
-            this.status = Objects.requireNonNull(status);
+            $.status = status;
             return this;
-        }        public SmsReceiverResponse build() {
-            return new SmsReceiverResponse(countryCode, name, phoneNumber, status);
+        }
+
+        public SmsReceiverResponse build() {
+            $.countryCode = Objects.requireNonNull($.countryCode, "expected parameter 'countryCode' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.phoneNumber = Objects.requireNonNull($.phoneNumber, "expected parameter 'phoneNumber' to be non-null");
+            $.status = Objects.requireNonNull($.status, "expected parameter 'status' to be non-null");
+            return $;
         }
     }
+
 }

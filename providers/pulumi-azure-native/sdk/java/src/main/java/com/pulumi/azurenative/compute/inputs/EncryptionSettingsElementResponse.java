@@ -24,10 +24,10 @@ public final class EncryptionSettingsElementResponse extends com.pulumi.resource
      * 
      */
     @Import(name="diskEncryptionKey")
-      private final @Nullable KeyVaultAndSecretReferenceResponse diskEncryptionKey;
+    private @Nullable KeyVaultAndSecretReferenceResponse diskEncryptionKey;
 
     public Optional<KeyVaultAndSecretReferenceResponse> diskEncryptionKey() {
-        return this.diskEncryptionKey == null ? Optional.empty() : Optional.ofNullable(this.diskEncryptionKey);
+        return Optional.ofNullable(this.diskEncryptionKey);
     }
 
     /**
@@ -35,55 +35,50 @@ public final class EncryptionSettingsElementResponse extends com.pulumi.resource
      * 
      */
     @Import(name="keyEncryptionKey")
-      private final @Nullable KeyVaultAndKeyReferenceResponse keyEncryptionKey;
+    private @Nullable KeyVaultAndKeyReferenceResponse keyEncryptionKey;
 
     public Optional<KeyVaultAndKeyReferenceResponse> keyEncryptionKey() {
-        return this.keyEncryptionKey == null ? Optional.empty() : Optional.ofNullable(this.keyEncryptionKey);
+        return Optional.ofNullable(this.keyEncryptionKey);
     }
 
-    public EncryptionSettingsElementResponse(
-        @Nullable KeyVaultAndSecretReferenceResponse diskEncryptionKey,
-        @Nullable KeyVaultAndKeyReferenceResponse keyEncryptionKey) {
-        this.diskEncryptionKey = diskEncryptionKey;
-        this.keyEncryptionKey = keyEncryptionKey;
-    }
+    private EncryptionSettingsElementResponse() {}
 
-    private EncryptionSettingsElementResponse() {
-        this.diskEncryptionKey = null;
-        this.keyEncryptionKey = null;
+    private EncryptionSettingsElementResponse(EncryptionSettingsElementResponse $) {
+        this.diskEncryptionKey = $.diskEncryptionKey;
+        this.keyEncryptionKey = $.keyEncryptionKey;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EncryptionSettingsElementResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable KeyVaultAndSecretReferenceResponse diskEncryptionKey;
-        private @Nullable KeyVaultAndKeyReferenceResponse keyEncryptionKey;
+        private EncryptionSettingsElementResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new EncryptionSettingsElementResponse();
         }
 
         public Builder(EncryptionSettingsElementResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.diskEncryptionKey = defaults.diskEncryptionKey;
-    	      this.keyEncryptionKey = defaults.keyEncryptionKey;
+            $ = new EncryptionSettingsElementResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder diskEncryptionKey(@Nullable KeyVaultAndSecretReferenceResponse diskEncryptionKey) {
-            this.diskEncryptionKey = diskEncryptionKey;
+            $.diskEncryptionKey = diskEncryptionKey;
             return this;
         }
+
         public Builder keyEncryptionKey(@Nullable KeyVaultAndKeyReferenceResponse keyEncryptionKey) {
-            this.keyEncryptionKey = keyEncryptionKey;
+            $.keyEncryptionKey = keyEncryptionKey;
             return this;
-        }        public EncryptionSettingsElementResponse build() {
-            return new EncryptionSettingsElementResponse(diskEncryptionKey, keyEncryptionKey);
+        }
+
+        public EncryptionSettingsElementResponse build() {
+            return $;
         }
     }
+
 }

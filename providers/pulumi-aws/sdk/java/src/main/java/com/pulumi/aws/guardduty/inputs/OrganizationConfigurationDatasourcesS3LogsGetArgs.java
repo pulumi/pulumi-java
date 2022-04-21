@@ -5,7 +5,6 @@ package com.pulumi.aws.guardduty.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.Objects;
 
@@ -19,49 +18,49 @@ public final class OrganizationConfigurationDatasourcesS3LogsGetArgs extends com
      * 
      */
     @Import(name="autoEnable", required=true)
-      private final Output<Boolean> autoEnable;
+    private Output<Boolean> autoEnable;
 
     public Output<Boolean> autoEnable() {
         return this.autoEnable;
     }
 
-    public OrganizationConfigurationDatasourcesS3LogsGetArgs(Output<Boolean> autoEnable) {
-        this.autoEnable = Objects.requireNonNull(autoEnable, "expected parameter 'autoEnable' to be non-null");
-    }
+    private OrganizationConfigurationDatasourcesS3LogsGetArgs() {}
 
-    private OrganizationConfigurationDatasourcesS3LogsGetArgs() {
-        this.autoEnable = Codegen.empty();
+    private OrganizationConfigurationDatasourcesS3LogsGetArgs(OrganizationConfigurationDatasourcesS3LogsGetArgs $) {
+        this.autoEnable = $.autoEnable;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(OrganizationConfigurationDatasourcesS3LogsGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Boolean> autoEnable;
+        private OrganizationConfigurationDatasourcesS3LogsGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new OrganizationConfigurationDatasourcesS3LogsGetArgs();
         }
 
         public Builder(OrganizationConfigurationDatasourcesS3LogsGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.autoEnable = defaults.autoEnable;
+            $ = new OrganizationConfigurationDatasourcesS3LogsGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder autoEnable(Output<Boolean> autoEnable) {
-            this.autoEnable = Objects.requireNonNull(autoEnable);
+            $.autoEnable = autoEnable;
             return this;
         }
+
         public Builder autoEnable(Boolean autoEnable) {
-            this.autoEnable = Output.of(Objects.requireNonNull(autoEnable));
-            return this;
-        }        public OrganizationConfigurationDatasourcesS3LogsGetArgs build() {
-            return new OrganizationConfigurationDatasourcesS3LogsGetArgs(autoEnable);
+            return autoEnable(Output.of(autoEnable));
+        }
+
+        public OrganizationConfigurationDatasourcesS3LogsGetArgs build() {
+            $.autoEnable = Objects.requireNonNull($.autoEnable, "expected parameter 'autoEnable' to be non-null");
+            return $;
         }
     }
+
 }

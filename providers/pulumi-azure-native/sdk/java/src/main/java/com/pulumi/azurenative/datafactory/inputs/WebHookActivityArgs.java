@@ -15,6 +15,7 @@ import java.lang.Object;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -31,10 +32,10 @@ public final class WebHookActivityArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="authentication")
-      private final @Nullable Output<WebActivityAuthenticationArgs> authentication;
+    private @Nullable Output<WebActivityAuthenticationArgs> authentication;
 
-    public Output<WebActivityAuthenticationArgs> authentication() {
-        return this.authentication == null ? Codegen.empty() : this.authentication;
+    public Optional<Output<WebActivityAuthenticationArgs>> authentication() {
+        return Optional.ofNullable(this.authentication);
     }
 
     /**
@@ -42,10 +43,10 @@ public final class WebHookActivityArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="body")
-      private final @Nullable Output<Object> body;
+    private @Nullable Output<Object> body;
 
-    public Output<Object> body() {
-        return this.body == null ? Codegen.empty() : this.body;
+    public Optional<Output<Object>> body() {
+        return Optional.ofNullable(this.body);
     }
 
     /**
@@ -53,10 +54,10 @@ public final class WebHookActivityArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="dependsOn")
-      private final @Nullable Output<List<ActivityDependencyArgs>> dependsOn;
+    private @Nullable Output<List<ActivityDependencyArgs>> dependsOn;
 
-    public Output<List<ActivityDependencyArgs>> dependsOn() {
-        return this.dependsOn == null ? Codegen.empty() : this.dependsOn;
+    public Optional<Output<List<ActivityDependencyArgs>>> dependsOn() {
+        return Optional.ofNullable(this.dependsOn);
     }
 
     /**
@@ -64,10 +65,10 @@ public final class WebHookActivityArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -75,10 +76,10 @@ public final class WebHookActivityArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="headers")
-      private final @Nullable Output<Object> headers;
+    private @Nullable Output<Object> headers;
 
-    public Output<Object> headers() {
-        return this.headers == null ? Codegen.empty() : this.headers;
+    public Optional<Output<Object>> headers() {
+        return Optional.ofNullable(this.headers);
     }
 
     /**
@@ -86,7 +87,7 @@ public final class WebHookActivityArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="method", required=true)
-      private final Output<Either<String,WebHookActivityMethod>> method;
+    private Output<Either<String,WebHookActivityMethod>> method;
 
     public Output<Either<String,WebHookActivityMethod>> method() {
         return this.method;
@@ -97,7 +98,7 @@ public final class WebHookActivityArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="name", required=true)
-      private final Output<String> name;
+    private Output<String> name;
 
     public Output<String> name() {
         return this.name;
@@ -108,10 +109,10 @@ public final class WebHookActivityArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="reportStatusOnCallBack")
-      private final @Nullable Output<Object> reportStatusOnCallBack;
+    private @Nullable Output<Object> reportStatusOnCallBack;
 
-    public Output<Object> reportStatusOnCallBack() {
-        return this.reportStatusOnCallBack == null ? Codegen.empty() : this.reportStatusOnCallBack;
+    public Optional<Output<Object>> reportStatusOnCallBack() {
+        return Optional.ofNullable(this.reportStatusOnCallBack);
     }
 
     /**
@@ -119,10 +120,10 @@ public final class WebHookActivityArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="timeout")
-      private final @Nullable Output<String> timeout;
+    private @Nullable Output<String> timeout;
 
-    public Output<String> timeout() {
-        return this.timeout == null ? Codegen.empty() : this.timeout;
+    public Optional<Output<String>> timeout() {
+        return Optional.ofNullable(this.timeout);
     }
 
     /**
@@ -131,7 +132,7 @@ public final class WebHookActivityArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="type", required=true)
-      private final Output<String> type;
+    private Output<String> type;
 
     public Output<String> type() {
         return this.type;
@@ -142,7 +143,7 @@ public final class WebHookActivityArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="url", required=true)
-      private final Output<Object> url;
+    private Output<Object> url;
 
     public Output<Object> url() {
         return this.url;
@@ -153,199 +154,170 @@ public final class WebHookActivityArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="userProperties")
-      private final @Nullable Output<List<UserPropertyArgs>> userProperties;
+    private @Nullable Output<List<UserPropertyArgs>> userProperties;
 
-    public Output<List<UserPropertyArgs>> userProperties() {
-        return this.userProperties == null ? Codegen.empty() : this.userProperties;
+    public Optional<Output<List<UserPropertyArgs>>> userProperties() {
+        return Optional.ofNullable(this.userProperties);
     }
 
-    public WebHookActivityArgs(
-        @Nullable Output<WebActivityAuthenticationArgs> authentication,
-        @Nullable Output<Object> body,
-        @Nullable Output<List<ActivityDependencyArgs>> dependsOn,
-        @Nullable Output<String> description,
-        @Nullable Output<Object> headers,
-        Output<Either<String,WebHookActivityMethod>> method,
-        Output<String> name,
-        @Nullable Output<Object> reportStatusOnCallBack,
-        @Nullable Output<String> timeout,
-        Output<String> type,
-        Output<Object> url,
-        @Nullable Output<List<UserPropertyArgs>> userProperties) {
-        this.authentication = authentication;
-        this.body = body;
-        this.dependsOn = dependsOn;
-        this.description = description;
-        this.headers = headers;
-        this.method = Objects.requireNonNull(method, "expected parameter 'method' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.reportStatusOnCallBack = reportStatusOnCallBack;
-        this.timeout = timeout;
-        this.type = Codegen.stringProp("type").output().arg(type).require();
-        this.url = Objects.requireNonNull(url, "expected parameter 'url' to be non-null");
-        this.userProperties = userProperties;
-    }
+    private WebHookActivityArgs() {}
 
-    private WebHookActivityArgs() {
-        this.authentication = Codegen.empty();
-        this.body = Codegen.empty();
-        this.dependsOn = Codegen.empty();
-        this.description = Codegen.empty();
-        this.headers = Codegen.empty();
-        this.method = Codegen.empty();
-        this.name = Codegen.empty();
-        this.reportStatusOnCallBack = Codegen.empty();
-        this.timeout = Codegen.empty();
-        this.type = Codegen.empty();
-        this.url = Codegen.empty();
-        this.userProperties = Codegen.empty();
+    private WebHookActivityArgs(WebHookActivityArgs $) {
+        this.authentication = $.authentication;
+        this.body = $.body;
+        this.dependsOn = $.dependsOn;
+        this.description = $.description;
+        this.headers = $.headers;
+        this.method = $.method;
+        this.name = $.name;
+        this.reportStatusOnCallBack = $.reportStatusOnCallBack;
+        this.timeout = $.timeout;
+        this.type = $.type;
+        this.url = $.url;
+        this.userProperties = $.userProperties;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WebHookActivityArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<WebActivityAuthenticationArgs> authentication;
-        private @Nullable Output<Object> body;
-        private @Nullable Output<List<ActivityDependencyArgs>> dependsOn;
-        private @Nullable Output<String> description;
-        private @Nullable Output<Object> headers;
-        private Output<Either<String,WebHookActivityMethod>> method;
-        private Output<String> name;
-        private @Nullable Output<Object> reportStatusOnCallBack;
-        private @Nullable Output<String> timeout;
-        private Output<String> type;
-        private Output<Object> url;
-        private @Nullable Output<List<UserPropertyArgs>> userProperties;
+        private WebHookActivityArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new WebHookActivityArgs();
         }
 
         public Builder(WebHookActivityArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.authentication = defaults.authentication;
-    	      this.body = defaults.body;
-    	      this.dependsOn = defaults.dependsOn;
-    	      this.description = defaults.description;
-    	      this.headers = defaults.headers;
-    	      this.method = defaults.method;
-    	      this.name = defaults.name;
-    	      this.reportStatusOnCallBack = defaults.reportStatusOnCallBack;
-    	      this.timeout = defaults.timeout;
-    	      this.type = defaults.type;
-    	      this.url = defaults.url;
-    	      this.userProperties = defaults.userProperties;
+            $ = new WebHookActivityArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder authentication(@Nullable Output<WebActivityAuthenticationArgs> authentication) {
-            this.authentication = authentication;
+            $.authentication = authentication;
             return this;
         }
-        public Builder authentication(@Nullable WebActivityAuthenticationArgs authentication) {
-            this.authentication = Codegen.ofNullable(authentication);
-            return this;
+
+        public Builder authentication(WebActivityAuthenticationArgs authentication) {
+            return authentication(Output.of(authentication));
         }
+
         public Builder body(@Nullable Output<Object> body) {
-            this.body = body;
+            $.body = body;
             return this;
         }
-        public Builder body(@Nullable Object body) {
-            this.body = Codegen.ofNullable(body);
-            return this;
+
+        public Builder body(Object body) {
+            return body(Output.of(body));
         }
+
         public Builder dependsOn(@Nullable Output<List<ActivityDependencyArgs>> dependsOn) {
-            this.dependsOn = dependsOn;
+            $.dependsOn = dependsOn;
             return this;
         }
-        public Builder dependsOn(@Nullable List<ActivityDependencyArgs> dependsOn) {
-            this.dependsOn = Codegen.ofNullable(dependsOn);
-            return this;
+
+        public Builder dependsOn(List<ActivityDependencyArgs> dependsOn) {
+            return dependsOn(Output.of(dependsOn));
         }
+
         public Builder dependsOn(ActivityDependencyArgs... dependsOn) {
             return dependsOn(List.of(dependsOn));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder headers(@Nullable Output<Object> headers) {
-            this.headers = headers;
+            $.headers = headers;
             return this;
         }
-        public Builder headers(@Nullable Object headers) {
-            this.headers = Codegen.ofNullable(headers);
-            return this;
+
+        public Builder headers(Object headers) {
+            return headers(Output.of(headers));
         }
+
         public Builder method(Output<Either<String,WebHookActivityMethod>> method) {
-            this.method = Objects.requireNonNull(method);
+            $.method = method;
             return this;
         }
+
         public Builder method(Either<String,WebHookActivityMethod> method) {
-            this.method = Output.of(Objects.requireNonNull(method));
-            return this;
+            return method(Output.of(method));
         }
+
         public Builder name(Output<String> name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Output.of(Objects.requireNonNull(name));
-            return this;
+            return name(Output.of(name));
         }
+
         public Builder reportStatusOnCallBack(@Nullable Output<Object> reportStatusOnCallBack) {
-            this.reportStatusOnCallBack = reportStatusOnCallBack;
+            $.reportStatusOnCallBack = reportStatusOnCallBack;
             return this;
         }
-        public Builder reportStatusOnCallBack(@Nullable Object reportStatusOnCallBack) {
-            this.reportStatusOnCallBack = Codegen.ofNullable(reportStatusOnCallBack);
-            return this;
+
+        public Builder reportStatusOnCallBack(Object reportStatusOnCallBack) {
+            return reportStatusOnCallBack(Output.of(reportStatusOnCallBack));
         }
+
         public Builder timeout(@Nullable Output<String> timeout) {
-            this.timeout = timeout;
+            $.timeout = timeout;
             return this;
         }
-        public Builder timeout(@Nullable String timeout) {
-            this.timeout = Codegen.ofNullable(timeout);
-            return this;
+
+        public Builder timeout(String timeout) {
+            return timeout(Output.of(timeout));
         }
+
         public Builder type(Output<String> type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Output.of(Objects.requireNonNull(type));
-            return this;
+            return type(Output.of(type));
         }
+
         public Builder url(Output<Object> url) {
-            this.url = Objects.requireNonNull(url);
+            $.url = url;
             return this;
         }
+
         public Builder url(Object url) {
-            this.url = Output.of(Objects.requireNonNull(url));
-            return this;
+            return url(Output.of(url));
         }
+
         public Builder userProperties(@Nullable Output<List<UserPropertyArgs>> userProperties) {
-            this.userProperties = userProperties;
+            $.userProperties = userProperties;
             return this;
         }
-        public Builder userProperties(@Nullable List<UserPropertyArgs> userProperties) {
-            this.userProperties = Codegen.ofNullable(userProperties);
-            return this;
+
+        public Builder userProperties(List<UserPropertyArgs> userProperties) {
+            return userProperties(Output.of(userProperties));
         }
+
         public Builder userProperties(UserPropertyArgs... userProperties) {
             return userProperties(List.of(userProperties));
-        }        public WebHookActivityArgs build() {
-            return new WebHookActivityArgs(authentication, body, dependsOn, description, headers, method, name, reportStatusOnCallBack, timeout, type, url, userProperties);
+        }
+
+        public WebHookActivityArgs build() {
+            $.method = Objects.requireNonNull($.method, "expected parameter 'method' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.type = Codegen.stringProp("type").output().arg($.type).require();
+            $.url = Objects.requireNonNull($.url, "expected parameter 'url' to be non-null");
+            return $;
         }
     }
+
 }

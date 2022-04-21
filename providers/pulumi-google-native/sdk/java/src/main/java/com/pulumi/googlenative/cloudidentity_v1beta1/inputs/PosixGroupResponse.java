@@ -21,7 +21,7 @@ public final class PosixGroupResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="gid", required=true)
-      private final String gid;
+    private String gid;
 
     public String gid() {
         return this.gid;
@@ -32,7 +32,7 @@ public final class PosixGroupResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -43,64 +43,59 @@ public final class PosixGroupResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="systemId", required=true)
-      private final String systemId;
+    private String systemId;
 
     public String systemId() {
         return this.systemId;
     }
 
-    public PosixGroupResponse(
-        String gid,
-        String name,
-        String systemId) {
-        this.gid = Objects.requireNonNull(gid, "expected parameter 'gid' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.systemId = Objects.requireNonNull(systemId, "expected parameter 'systemId' to be non-null");
-    }
+    private PosixGroupResponse() {}
 
-    private PosixGroupResponse() {
-        this.gid = null;
-        this.name = null;
-        this.systemId = null;
+    private PosixGroupResponse(PosixGroupResponse $) {
+        this.gid = $.gid;
+        this.name = $.name;
+        this.systemId = $.systemId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PosixGroupResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String gid;
-        private String name;
-        private String systemId;
+        private PosixGroupResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new PosixGroupResponse();
         }
 
         public Builder(PosixGroupResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.gid = defaults.gid;
-    	      this.name = defaults.name;
-    	      this.systemId = defaults.systemId;
+            $ = new PosixGroupResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder gid(String gid) {
-            this.gid = Objects.requireNonNull(gid);
+            $.gid = gid;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder systemId(String systemId) {
-            this.systemId = Objects.requireNonNull(systemId);
+            $.systemId = systemId;
             return this;
-        }        public PosixGroupResponse build() {
-            return new PosixGroupResponse(gid, name, systemId);
+        }
+
+        public PosixGroupResponse build() {
+            $.gid = Objects.requireNonNull($.gid, "expected parameter 'gid' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.systemId = Objects.requireNonNull($.systemId, "expected parameter 'systemId' to be non-null");
+            return $;
         }
     }
+
 }

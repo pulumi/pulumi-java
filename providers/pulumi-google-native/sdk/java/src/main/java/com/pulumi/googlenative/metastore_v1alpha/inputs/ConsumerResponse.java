@@ -21,7 +21,7 @@ public final class ConsumerResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="endpointUri", required=true)
-      private final String endpointUri;
+    private String endpointUri;
 
     public String endpointUri() {
         return this.endpointUri;
@@ -32,55 +32,52 @@ public final class ConsumerResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="subnetwork", required=true)
-      private final String subnetwork;
+    private String subnetwork;
 
     public String subnetwork() {
         return this.subnetwork;
     }
 
-    public ConsumerResponse(
-        String endpointUri,
-        String subnetwork) {
-        this.endpointUri = Objects.requireNonNull(endpointUri, "expected parameter 'endpointUri' to be non-null");
-        this.subnetwork = Objects.requireNonNull(subnetwork, "expected parameter 'subnetwork' to be non-null");
-    }
+    private ConsumerResponse() {}
 
-    private ConsumerResponse() {
-        this.endpointUri = null;
-        this.subnetwork = null;
+    private ConsumerResponse(ConsumerResponse $) {
+        this.endpointUri = $.endpointUri;
+        this.subnetwork = $.subnetwork;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ConsumerResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String endpointUri;
-        private String subnetwork;
+        private ConsumerResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ConsumerResponse();
         }
 
         public Builder(ConsumerResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.endpointUri = defaults.endpointUri;
-    	      this.subnetwork = defaults.subnetwork;
+            $ = new ConsumerResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder endpointUri(String endpointUri) {
-            this.endpointUri = Objects.requireNonNull(endpointUri);
+            $.endpointUri = endpointUri;
             return this;
         }
+
         public Builder subnetwork(String subnetwork) {
-            this.subnetwork = Objects.requireNonNull(subnetwork);
+            $.subnetwork = subnetwork;
             return this;
-        }        public ConsumerResponse build() {
-            return new ConsumerResponse(endpointUri, subnetwork);
+        }
+
+        public ConsumerResponse build() {
+            $.endpointUri = Objects.requireNonNull($.endpointUri, "expected parameter 'endpointUri' to be non-null");
+            $.subnetwork = Objects.requireNonNull($.subnetwork, "expected parameter 'subnetwork' to be non-null");
+            return $;
         }
     }
+
 }

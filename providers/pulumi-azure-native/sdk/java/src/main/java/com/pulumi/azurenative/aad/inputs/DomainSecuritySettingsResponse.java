@@ -24,10 +24,10 @@ public final class DomainSecuritySettingsResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="kerberosArmoring")
-      private final @Nullable String kerberosArmoring;
+    private @Nullable String kerberosArmoring;
 
     public Optional<String> kerberosArmoring() {
-        return this.kerberosArmoring == null ? Optional.empty() : Optional.ofNullable(this.kerberosArmoring);
+        return Optional.ofNullable(this.kerberosArmoring);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class DomainSecuritySettingsResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="kerberosRc4Encryption")
-      private final @Nullable String kerberosRc4Encryption;
+    private @Nullable String kerberosRc4Encryption;
 
     public Optional<String> kerberosRc4Encryption() {
-        return this.kerberosRc4Encryption == null ? Optional.empty() : Optional.ofNullable(this.kerberosRc4Encryption);
+        return Optional.ofNullable(this.kerberosRc4Encryption);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class DomainSecuritySettingsResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="ntlmV1")
-      private final @Nullable String ntlmV1;
+    private @Nullable String ntlmV1;
 
     public Optional<String> ntlmV1() {
-        return this.ntlmV1 == null ? Optional.empty() : Optional.ofNullable(this.ntlmV1);
+        return Optional.ofNullable(this.ntlmV1);
     }
 
     /**
@@ -57,10 +57,10 @@ public final class DomainSecuritySettingsResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="syncKerberosPasswords")
-      private final @Nullable String syncKerberosPasswords;
+    private @Nullable String syncKerberosPasswords;
 
     public Optional<String> syncKerberosPasswords() {
-        return this.syncKerberosPasswords == null ? Optional.empty() : Optional.ofNullable(this.syncKerberosPasswords);
+        return Optional.ofNullable(this.syncKerberosPasswords);
     }
 
     /**
@@ -68,10 +68,10 @@ public final class DomainSecuritySettingsResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="syncNtlmPasswords")
-      private final @Nullable String syncNtlmPasswords;
+    private @Nullable String syncNtlmPasswords;
 
     public Optional<String> syncNtlmPasswords() {
-        return this.syncNtlmPasswords == null ? Optional.empty() : Optional.ofNullable(this.syncNtlmPasswords);
+        return Optional.ofNullable(this.syncNtlmPasswords);
     }
 
     /**
@@ -79,10 +79,10 @@ public final class DomainSecuritySettingsResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="syncOnPremPasswords")
-      private final @Nullable String syncOnPremPasswords;
+    private @Nullable String syncOnPremPasswords;
 
     public Optional<String> syncOnPremPasswords() {
-        return this.syncOnPremPasswords == null ? Optional.empty() : Optional.ofNullable(this.syncOnPremPasswords);
+        return Optional.ofNullable(this.syncOnPremPasswords);
     }
 
     /**
@@ -90,100 +90,87 @@ public final class DomainSecuritySettingsResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="tlsV1")
-      private final @Nullable String tlsV1;
+    private @Nullable String tlsV1;
 
     public Optional<String> tlsV1() {
-        return this.tlsV1 == null ? Optional.empty() : Optional.ofNullable(this.tlsV1);
+        return Optional.ofNullable(this.tlsV1);
     }
 
-    public DomainSecuritySettingsResponse(
-        @Nullable String kerberosArmoring,
-        @Nullable String kerberosRc4Encryption,
-        @Nullable String ntlmV1,
-        @Nullable String syncKerberosPasswords,
-        @Nullable String syncNtlmPasswords,
-        @Nullable String syncOnPremPasswords,
-        @Nullable String tlsV1) {
-        this.kerberosArmoring = Codegen.stringProp("kerberosArmoring").arg(kerberosArmoring).def("Disabled").getNullable();
-        this.kerberosRc4Encryption = Codegen.stringProp("kerberosRc4Encryption").arg(kerberosRc4Encryption).def("Enabled").getNullable();
-        this.ntlmV1 = Codegen.stringProp("ntlmV1").arg(ntlmV1).def("Enabled").getNullable();
-        this.syncKerberosPasswords = Codegen.stringProp("syncKerberosPasswords").arg(syncKerberosPasswords).def("Enabled").getNullable();
-        this.syncNtlmPasswords = Codegen.stringProp("syncNtlmPasswords").arg(syncNtlmPasswords).def("Enabled").getNullable();
-        this.syncOnPremPasswords = Codegen.stringProp("syncOnPremPasswords").arg(syncOnPremPasswords).def("Enabled").getNullable();
-        this.tlsV1 = Codegen.stringProp("tlsV1").arg(tlsV1).def("Enabled").getNullable();
-    }
+    private DomainSecuritySettingsResponse() {}
 
-    private DomainSecuritySettingsResponse() {
-        this.kerberosArmoring = null;
-        this.kerberosRc4Encryption = null;
-        this.ntlmV1 = null;
-        this.syncKerberosPasswords = null;
-        this.syncNtlmPasswords = null;
-        this.syncOnPremPasswords = null;
-        this.tlsV1 = null;
+    private DomainSecuritySettingsResponse(DomainSecuritySettingsResponse $) {
+        this.kerberosArmoring = $.kerberosArmoring;
+        this.kerberosRc4Encryption = $.kerberosRc4Encryption;
+        this.ntlmV1 = $.ntlmV1;
+        this.syncKerberosPasswords = $.syncKerberosPasswords;
+        this.syncNtlmPasswords = $.syncNtlmPasswords;
+        this.syncOnPremPasswords = $.syncOnPremPasswords;
+        this.tlsV1 = $.tlsV1;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DomainSecuritySettingsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String kerberosArmoring;
-        private @Nullable String kerberosRc4Encryption;
-        private @Nullable String ntlmV1;
-        private @Nullable String syncKerberosPasswords;
-        private @Nullable String syncNtlmPasswords;
-        private @Nullable String syncOnPremPasswords;
-        private @Nullable String tlsV1;
+        private DomainSecuritySettingsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new DomainSecuritySettingsResponse();
         }
 
         public Builder(DomainSecuritySettingsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.kerberosArmoring = defaults.kerberosArmoring;
-    	      this.kerberosRc4Encryption = defaults.kerberosRc4Encryption;
-    	      this.ntlmV1 = defaults.ntlmV1;
-    	      this.syncKerberosPasswords = defaults.syncKerberosPasswords;
-    	      this.syncNtlmPasswords = defaults.syncNtlmPasswords;
-    	      this.syncOnPremPasswords = defaults.syncOnPremPasswords;
-    	      this.tlsV1 = defaults.tlsV1;
+            $ = new DomainSecuritySettingsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder kerberosArmoring(@Nullable String kerberosArmoring) {
-            this.kerberosArmoring = kerberosArmoring;
+            $.kerberosArmoring = kerberosArmoring;
             return this;
         }
+
         public Builder kerberosRc4Encryption(@Nullable String kerberosRc4Encryption) {
-            this.kerberosRc4Encryption = kerberosRc4Encryption;
+            $.kerberosRc4Encryption = kerberosRc4Encryption;
             return this;
         }
+
         public Builder ntlmV1(@Nullable String ntlmV1) {
-            this.ntlmV1 = ntlmV1;
+            $.ntlmV1 = ntlmV1;
             return this;
         }
+
         public Builder syncKerberosPasswords(@Nullable String syncKerberosPasswords) {
-            this.syncKerberosPasswords = syncKerberosPasswords;
+            $.syncKerberosPasswords = syncKerberosPasswords;
             return this;
         }
+
         public Builder syncNtlmPasswords(@Nullable String syncNtlmPasswords) {
-            this.syncNtlmPasswords = syncNtlmPasswords;
+            $.syncNtlmPasswords = syncNtlmPasswords;
             return this;
         }
+
         public Builder syncOnPremPasswords(@Nullable String syncOnPremPasswords) {
-            this.syncOnPremPasswords = syncOnPremPasswords;
+            $.syncOnPremPasswords = syncOnPremPasswords;
             return this;
         }
+
         public Builder tlsV1(@Nullable String tlsV1) {
-            this.tlsV1 = tlsV1;
+            $.tlsV1 = tlsV1;
             return this;
-        }        public DomainSecuritySettingsResponse build() {
-            return new DomainSecuritySettingsResponse(kerberosArmoring, kerberosRc4Encryption, ntlmV1, syncKerberosPasswords, syncNtlmPasswords, syncOnPremPasswords, tlsV1);
+        }
+
+        public DomainSecuritySettingsResponse build() {
+            $.kerberosArmoring = Codegen.stringProp("kerberosArmoring").arg($.kerberosArmoring).def("Disabled").getNullable();
+            $.kerberosRc4Encryption = Codegen.stringProp("kerberosRc4Encryption").arg($.kerberosRc4Encryption).def("Enabled").getNullable();
+            $.ntlmV1 = Codegen.stringProp("ntlmV1").arg($.ntlmV1).def("Enabled").getNullable();
+            $.syncKerberosPasswords = Codegen.stringProp("syncKerberosPasswords").arg($.syncKerberosPasswords).def("Enabled").getNullable();
+            $.syncNtlmPasswords = Codegen.stringProp("syncNtlmPasswords").arg($.syncNtlmPasswords).def("Enabled").getNullable();
+            $.syncOnPremPasswords = Codegen.stringProp("syncOnPremPasswords").arg($.syncOnPremPasswords).def("Enabled").getNullable();
+            $.tlsV1 = Codegen.stringProp("tlsV1").arg($.tlsV1).def("Enabled").getNullable();
+            return $;
         }
     }
+
 }

@@ -17,7 +17,7 @@ public final class GetProductFilter extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="field", required=true)
-      private final String field;
+    private String field;
 
     public String field() {
         return this.field;
@@ -28,55 +28,52 @@ public final class GetProductFilter extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="value", required=true)
-      private final String value;
+    private String value;
 
     public String value() {
         return this.value;
     }
 
-    public GetProductFilter(
-        String field,
-        String value) {
-        this.field = Objects.requireNonNull(field, "expected parameter 'field' to be non-null");
-        this.value = Objects.requireNonNull(value, "expected parameter 'value' to be non-null");
-    }
+    private GetProductFilter() {}
 
-    private GetProductFilter() {
-        this.field = null;
-        this.value = null;
+    private GetProductFilter(GetProductFilter $) {
+        this.field = $.field;
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetProductFilter defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String field;
-        private String value;
+        private GetProductFilter $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetProductFilter();
         }
 
         public Builder(GetProductFilter defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.field = defaults.field;
-    	      this.value = defaults.value;
+            $ = new GetProductFilter(Objects.requireNonNull(defaults));
         }
 
         public Builder field(String field) {
-            this.field = Objects.requireNonNull(field);
+            $.field = field;
             return this;
         }
+
         public Builder value(String value) {
-            this.value = Objects.requireNonNull(value);
+            $.value = value;
             return this;
-        }        public GetProductFilter build() {
-            return new GetProductFilter(field, value);
+        }
+
+        public GetProductFilter build() {
+            $.field = Objects.requireNonNull($.field, "expected parameter 'field' to be non-null");
+            $.value = Objects.requireNonNull($.value, "expected parameter 'value' to be non-null");
+            return $;
         }
     }
+
 }

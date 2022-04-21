@@ -25,10 +25,10 @@ public final class RampUpRuleResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="actionHostName")
-      private final @Nullable String actionHostName;
+    private @Nullable String actionHostName;
 
     public Optional<String> actionHostName() {
-        return this.actionHostName == null ? Optional.empty() : Optional.ofNullable(this.actionHostName);
+        return Optional.ofNullable(this.actionHostName);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class RampUpRuleResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="changeDecisionCallbackUrl")
-      private final @Nullable String changeDecisionCallbackUrl;
+    private @Nullable String changeDecisionCallbackUrl;
 
     public Optional<String> changeDecisionCallbackUrl() {
-        return this.changeDecisionCallbackUrl == null ? Optional.empty() : Optional.ofNullable(this.changeDecisionCallbackUrl);
+        return Optional.ofNullable(this.changeDecisionCallbackUrl);
     }
 
     /**
@@ -48,10 +48,10 @@ public final class RampUpRuleResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="changeIntervalInMinutes")
-      private final @Nullable Integer changeIntervalInMinutes;
+    private @Nullable Integer changeIntervalInMinutes;
 
     public Optional<Integer> changeIntervalInMinutes() {
-        return this.changeIntervalInMinutes == null ? Optional.empty() : Optional.ofNullable(this.changeIntervalInMinutes);
+        return Optional.ofNullable(this.changeIntervalInMinutes);
     }
 
     /**
@@ -61,10 +61,10 @@ public final class RampUpRuleResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="changeStep")
-      private final @Nullable Double changeStep;
+    private @Nullable Double changeStep;
 
     public Optional<Double> changeStep() {
-        return this.changeStep == null ? Optional.empty() : Optional.ofNullable(this.changeStep);
+        return Optional.ofNullable(this.changeStep);
     }
 
     /**
@@ -72,10 +72,10 @@ public final class RampUpRuleResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="maxReroutePercentage")
-      private final @Nullable Double maxReroutePercentage;
+    private @Nullable Double maxReroutePercentage;
 
     public Optional<Double> maxReroutePercentage() {
-        return this.maxReroutePercentage == null ? Optional.empty() : Optional.ofNullable(this.maxReroutePercentage);
+        return Optional.ofNullable(this.maxReroutePercentage);
     }
 
     /**
@@ -83,10 +83,10 @@ public final class RampUpRuleResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="minReroutePercentage")
-      private final @Nullable Double minReroutePercentage;
+    private @Nullable Double minReroutePercentage;
 
     public Optional<Double> minReroutePercentage() {
-        return this.minReroutePercentage == null ? Optional.empty() : Optional.ofNullable(this.minReroutePercentage);
+        return Optional.ofNullable(this.minReroutePercentage);
     }
 
     /**
@@ -94,10 +94,10 @@ public final class RampUpRuleResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable String name;
+    private @Nullable String name;
 
     public Optional<String> name() {
-        return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -105,109 +105,86 @@ public final class RampUpRuleResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="reroutePercentage")
-      private final @Nullable Double reroutePercentage;
+    private @Nullable Double reroutePercentage;
 
     public Optional<Double> reroutePercentage() {
-        return this.reroutePercentage == null ? Optional.empty() : Optional.ofNullable(this.reroutePercentage);
+        return Optional.ofNullable(this.reroutePercentage);
     }
 
-    public RampUpRuleResponse(
-        @Nullable String actionHostName,
-        @Nullable String changeDecisionCallbackUrl,
-        @Nullable Integer changeIntervalInMinutes,
-        @Nullable Double changeStep,
-        @Nullable Double maxReroutePercentage,
-        @Nullable Double minReroutePercentage,
-        @Nullable String name,
-        @Nullable Double reroutePercentage) {
-        this.actionHostName = actionHostName;
-        this.changeDecisionCallbackUrl = changeDecisionCallbackUrl;
-        this.changeIntervalInMinutes = changeIntervalInMinutes;
-        this.changeStep = changeStep;
-        this.maxReroutePercentage = maxReroutePercentage;
-        this.minReroutePercentage = minReroutePercentage;
-        this.name = name;
-        this.reroutePercentage = reroutePercentage;
-    }
+    private RampUpRuleResponse() {}
 
-    private RampUpRuleResponse() {
-        this.actionHostName = null;
-        this.changeDecisionCallbackUrl = null;
-        this.changeIntervalInMinutes = null;
-        this.changeStep = null;
-        this.maxReroutePercentage = null;
-        this.minReroutePercentage = null;
-        this.name = null;
-        this.reroutePercentage = null;
+    private RampUpRuleResponse(RampUpRuleResponse $) {
+        this.actionHostName = $.actionHostName;
+        this.changeDecisionCallbackUrl = $.changeDecisionCallbackUrl;
+        this.changeIntervalInMinutes = $.changeIntervalInMinutes;
+        this.changeStep = $.changeStep;
+        this.maxReroutePercentage = $.maxReroutePercentage;
+        this.minReroutePercentage = $.minReroutePercentage;
+        this.name = $.name;
+        this.reroutePercentage = $.reroutePercentage;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RampUpRuleResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String actionHostName;
-        private @Nullable String changeDecisionCallbackUrl;
-        private @Nullable Integer changeIntervalInMinutes;
-        private @Nullable Double changeStep;
-        private @Nullable Double maxReroutePercentage;
-        private @Nullable Double minReroutePercentage;
-        private @Nullable String name;
-        private @Nullable Double reroutePercentage;
+        private RampUpRuleResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new RampUpRuleResponse();
         }
 
         public Builder(RampUpRuleResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.actionHostName = defaults.actionHostName;
-    	      this.changeDecisionCallbackUrl = defaults.changeDecisionCallbackUrl;
-    	      this.changeIntervalInMinutes = defaults.changeIntervalInMinutes;
-    	      this.changeStep = defaults.changeStep;
-    	      this.maxReroutePercentage = defaults.maxReroutePercentage;
-    	      this.minReroutePercentage = defaults.minReroutePercentage;
-    	      this.name = defaults.name;
-    	      this.reroutePercentage = defaults.reroutePercentage;
+            $ = new RampUpRuleResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder actionHostName(@Nullable String actionHostName) {
-            this.actionHostName = actionHostName;
+            $.actionHostName = actionHostName;
             return this;
         }
+
         public Builder changeDecisionCallbackUrl(@Nullable String changeDecisionCallbackUrl) {
-            this.changeDecisionCallbackUrl = changeDecisionCallbackUrl;
+            $.changeDecisionCallbackUrl = changeDecisionCallbackUrl;
             return this;
         }
+
         public Builder changeIntervalInMinutes(@Nullable Integer changeIntervalInMinutes) {
-            this.changeIntervalInMinutes = changeIntervalInMinutes;
+            $.changeIntervalInMinutes = changeIntervalInMinutes;
             return this;
         }
+
         public Builder changeStep(@Nullable Double changeStep) {
-            this.changeStep = changeStep;
+            $.changeStep = changeStep;
             return this;
         }
+
         public Builder maxReroutePercentage(@Nullable Double maxReroutePercentage) {
-            this.maxReroutePercentage = maxReroutePercentage;
+            $.maxReroutePercentage = maxReroutePercentage;
             return this;
         }
+
         public Builder minReroutePercentage(@Nullable Double minReroutePercentage) {
-            this.minReroutePercentage = minReroutePercentage;
+            $.minReroutePercentage = minReroutePercentage;
             return this;
         }
+
         public Builder name(@Nullable String name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
+
         public Builder reroutePercentage(@Nullable Double reroutePercentage) {
-            this.reroutePercentage = reroutePercentage;
+            $.reroutePercentage = reroutePercentage;
             return this;
-        }        public RampUpRuleResponse build() {
-            return new RampUpRuleResponse(actionHostName, changeDecisionCallbackUrl, changeIntervalInMinutes, changeStep, maxReroutePercentage, minReroutePercentage, name, reroutePercentage);
+        }
+
+        public RampUpRuleResponse build() {
+            return $;
         }
     }
+
 }

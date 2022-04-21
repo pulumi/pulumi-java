@@ -24,10 +24,10 @@ public final class NetworkInterfaceReferenceResponse extends com.pulumi.resource
      * 
      */
     @Import(name="deleteOption")
-      private final @Nullable String deleteOption;
+    private @Nullable String deleteOption;
 
     public Optional<String> deleteOption() {
-        return this.deleteOption == null ? Optional.empty() : Optional.ofNullable(this.deleteOption);
+        return Optional.ofNullable(this.deleteOption);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class NetworkInterfaceReferenceResponse extends com.pulumi.resource
      * 
      */
     @Import(name="id")
-      private final @Nullable String id;
+    private @Nullable String id;
 
     public Optional<String> id() {
-        return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
+        return Optional.ofNullable(this.id);
     }
 
     /**
@@ -46,64 +46,56 @@ public final class NetworkInterfaceReferenceResponse extends com.pulumi.resource
      * 
      */
     @Import(name="primary")
-      private final @Nullable Boolean primary;
+    private @Nullable Boolean primary;
 
     public Optional<Boolean> primary() {
-        return this.primary == null ? Optional.empty() : Optional.ofNullable(this.primary);
+        return Optional.ofNullable(this.primary);
     }
 
-    public NetworkInterfaceReferenceResponse(
-        @Nullable String deleteOption,
-        @Nullable String id,
-        @Nullable Boolean primary) {
-        this.deleteOption = deleteOption;
-        this.id = id;
-        this.primary = primary;
-    }
+    private NetworkInterfaceReferenceResponse() {}
 
-    private NetworkInterfaceReferenceResponse() {
-        this.deleteOption = null;
-        this.id = null;
-        this.primary = null;
+    private NetworkInterfaceReferenceResponse(NetworkInterfaceReferenceResponse $) {
+        this.deleteOption = $.deleteOption;
+        this.id = $.id;
+        this.primary = $.primary;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NetworkInterfaceReferenceResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String deleteOption;
-        private @Nullable String id;
-        private @Nullable Boolean primary;
+        private NetworkInterfaceReferenceResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new NetworkInterfaceReferenceResponse();
         }
 
         public Builder(NetworkInterfaceReferenceResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.deleteOption = defaults.deleteOption;
-    	      this.id = defaults.id;
-    	      this.primary = defaults.primary;
+            $ = new NetworkInterfaceReferenceResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder deleteOption(@Nullable String deleteOption) {
-            this.deleteOption = deleteOption;
+            $.deleteOption = deleteOption;
             return this;
         }
+
         public Builder id(@Nullable String id) {
-            this.id = id;
+            $.id = id;
             return this;
         }
+
         public Builder primary(@Nullable Boolean primary) {
-            this.primary = primary;
+            $.primary = primary;
             return this;
-        }        public NetworkInterfaceReferenceResponse build() {
-            return new NetworkInterfaceReferenceResponse(deleteOption, id, primary);
+        }
+
+        public NetworkInterfaceReferenceResponse build() {
+            return $;
         }
     }
+
 }

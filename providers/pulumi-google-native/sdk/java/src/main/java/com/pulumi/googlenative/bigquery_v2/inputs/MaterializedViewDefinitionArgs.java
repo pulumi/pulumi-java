@@ -5,10 +5,10 @@ package com.pulumi.googlenative.bigquery_v2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class MaterializedViewDefinitionArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="enableRefresh")
-      private final @Nullable Output<Boolean> enableRefresh;
+    private @Nullable Output<Boolean> enableRefresh;
 
-    public Output<Boolean> enableRefresh() {
-        return this.enableRefresh == null ? Codegen.empty() : this.enableRefresh;
+    public Optional<Output<Boolean>> enableRefresh() {
+        return Optional.ofNullable(this.enableRefresh);
     }
 
     /**
@@ -32,10 +32,10 @@ public final class MaterializedViewDefinitionArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="query")
-      private final @Nullable Output<String> query;
+    private @Nullable Output<String> query;
 
-    public Output<String> query() {
-        return this.query == null ? Codegen.empty() : this.query;
+    public Optional<Output<String>> query() {
+        return Optional.ofNullable(this.query);
     }
 
     /**
@@ -43,76 +43,68 @@ public final class MaterializedViewDefinitionArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="refreshIntervalMs")
-      private final @Nullable Output<String> refreshIntervalMs;
+    private @Nullable Output<String> refreshIntervalMs;
 
-    public Output<String> refreshIntervalMs() {
-        return this.refreshIntervalMs == null ? Codegen.empty() : this.refreshIntervalMs;
+    public Optional<Output<String>> refreshIntervalMs() {
+        return Optional.ofNullable(this.refreshIntervalMs);
     }
 
-    public MaterializedViewDefinitionArgs(
-        @Nullable Output<Boolean> enableRefresh,
-        @Nullable Output<String> query,
-        @Nullable Output<String> refreshIntervalMs) {
-        this.enableRefresh = enableRefresh;
-        this.query = query;
-        this.refreshIntervalMs = refreshIntervalMs;
-    }
+    private MaterializedViewDefinitionArgs() {}
 
-    private MaterializedViewDefinitionArgs() {
-        this.enableRefresh = Codegen.empty();
-        this.query = Codegen.empty();
-        this.refreshIntervalMs = Codegen.empty();
+    private MaterializedViewDefinitionArgs(MaterializedViewDefinitionArgs $) {
+        this.enableRefresh = $.enableRefresh;
+        this.query = $.query;
+        this.refreshIntervalMs = $.refreshIntervalMs;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MaterializedViewDefinitionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> enableRefresh;
-        private @Nullable Output<String> query;
-        private @Nullable Output<String> refreshIntervalMs;
+        private MaterializedViewDefinitionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new MaterializedViewDefinitionArgs();
         }
 
         public Builder(MaterializedViewDefinitionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.enableRefresh = defaults.enableRefresh;
-    	      this.query = defaults.query;
-    	      this.refreshIntervalMs = defaults.refreshIntervalMs;
+            $ = new MaterializedViewDefinitionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder enableRefresh(@Nullable Output<Boolean> enableRefresh) {
-            this.enableRefresh = enableRefresh;
+            $.enableRefresh = enableRefresh;
             return this;
         }
-        public Builder enableRefresh(@Nullable Boolean enableRefresh) {
-            this.enableRefresh = Codegen.ofNullable(enableRefresh);
-            return this;
+
+        public Builder enableRefresh(Boolean enableRefresh) {
+            return enableRefresh(Output.of(enableRefresh));
         }
+
         public Builder query(@Nullable Output<String> query) {
-            this.query = query;
+            $.query = query;
             return this;
         }
-        public Builder query(@Nullable String query) {
-            this.query = Codegen.ofNullable(query);
-            return this;
+
+        public Builder query(String query) {
+            return query(Output.of(query));
         }
+
         public Builder refreshIntervalMs(@Nullable Output<String> refreshIntervalMs) {
-            this.refreshIntervalMs = refreshIntervalMs;
+            $.refreshIntervalMs = refreshIntervalMs;
             return this;
         }
-        public Builder refreshIntervalMs(@Nullable String refreshIntervalMs) {
-            this.refreshIntervalMs = Codegen.ofNullable(refreshIntervalMs);
-            return this;
-        }        public MaterializedViewDefinitionArgs build() {
-            return new MaterializedViewDefinitionArgs(enableRefresh, query, refreshIntervalMs);
+
+        public Builder refreshIntervalMs(String refreshIntervalMs) {
+            return refreshIntervalMs(Output.of(refreshIntervalMs));
+        }
+
+        public MaterializedViewDefinitionArgs build() {
+            return $;
         }
     }
+
 }

@@ -5,10 +5,10 @@ package com.pulumi.azurenative.network.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class VirtualHubRouteV2Args extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="destinationType")
-      private final @Nullable Output<String> destinationType;
+    private @Nullable Output<String> destinationType;
 
-    public Output<String> destinationType() {
-        return this.destinationType == null ? Codegen.empty() : this.destinationType;
+    public Optional<Output<String>> destinationType() {
+        return Optional.ofNullable(this.destinationType);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class VirtualHubRouteV2Args extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="destinations")
-      private final @Nullable Output<List<String>> destinations;
+    private @Nullable Output<List<String>> destinations;
 
-    public Output<List<String>> destinations() {
-        return this.destinations == null ? Codegen.empty() : this.destinations;
+    public Optional<Output<List<String>>> destinations() {
+        return Optional.ofNullable(this.destinations);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class VirtualHubRouteV2Args extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="nextHopType")
-      private final @Nullable Output<String> nextHopType;
+    private @Nullable Output<String> nextHopType;
 
-    public Output<String> nextHopType() {
-        return this.nextHopType == null ? Codegen.empty() : this.nextHopType;
+    public Optional<Output<String>> nextHopType() {
+        return Optional.ofNullable(this.nextHopType);
     }
 
     /**
@@ -58,95 +58,86 @@ public final class VirtualHubRouteV2Args extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="nextHops")
-      private final @Nullable Output<List<String>> nextHops;
+    private @Nullable Output<List<String>> nextHops;
 
-    public Output<List<String>> nextHops() {
-        return this.nextHops == null ? Codegen.empty() : this.nextHops;
+    public Optional<Output<List<String>>> nextHops() {
+        return Optional.ofNullable(this.nextHops);
     }
 
-    public VirtualHubRouteV2Args(
-        @Nullable Output<String> destinationType,
-        @Nullable Output<List<String>> destinations,
-        @Nullable Output<String> nextHopType,
-        @Nullable Output<List<String>> nextHops) {
-        this.destinationType = destinationType;
-        this.destinations = destinations;
-        this.nextHopType = nextHopType;
-        this.nextHops = nextHops;
-    }
+    private VirtualHubRouteV2Args() {}
 
-    private VirtualHubRouteV2Args() {
-        this.destinationType = Codegen.empty();
-        this.destinations = Codegen.empty();
-        this.nextHopType = Codegen.empty();
-        this.nextHops = Codegen.empty();
+    private VirtualHubRouteV2Args(VirtualHubRouteV2Args $) {
+        this.destinationType = $.destinationType;
+        this.destinations = $.destinations;
+        this.nextHopType = $.nextHopType;
+        this.nextHops = $.nextHops;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VirtualHubRouteV2Args defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> destinationType;
-        private @Nullable Output<List<String>> destinations;
-        private @Nullable Output<String> nextHopType;
-        private @Nullable Output<List<String>> nextHops;
+        private VirtualHubRouteV2Args $;
 
         public Builder() {
-    	      // Empty
+            $ = new VirtualHubRouteV2Args();
         }
 
         public Builder(VirtualHubRouteV2Args defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.destinationType = defaults.destinationType;
-    	      this.destinations = defaults.destinations;
-    	      this.nextHopType = defaults.nextHopType;
-    	      this.nextHops = defaults.nextHops;
+            $ = new VirtualHubRouteV2Args(Objects.requireNonNull(defaults));
         }
 
         public Builder destinationType(@Nullable Output<String> destinationType) {
-            this.destinationType = destinationType;
+            $.destinationType = destinationType;
             return this;
         }
-        public Builder destinationType(@Nullable String destinationType) {
-            this.destinationType = Codegen.ofNullable(destinationType);
-            return this;
+
+        public Builder destinationType(String destinationType) {
+            return destinationType(Output.of(destinationType));
         }
+
         public Builder destinations(@Nullable Output<List<String>> destinations) {
-            this.destinations = destinations;
+            $.destinations = destinations;
             return this;
         }
-        public Builder destinations(@Nullable List<String> destinations) {
-            this.destinations = Codegen.ofNullable(destinations);
-            return this;
+
+        public Builder destinations(List<String> destinations) {
+            return destinations(Output.of(destinations));
         }
+
         public Builder destinations(String... destinations) {
             return destinations(List.of(destinations));
         }
+
         public Builder nextHopType(@Nullable Output<String> nextHopType) {
-            this.nextHopType = nextHopType;
+            $.nextHopType = nextHopType;
             return this;
         }
-        public Builder nextHopType(@Nullable String nextHopType) {
-            this.nextHopType = Codegen.ofNullable(nextHopType);
-            return this;
+
+        public Builder nextHopType(String nextHopType) {
+            return nextHopType(Output.of(nextHopType));
         }
+
         public Builder nextHops(@Nullable Output<List<String>> nextHops) {
-            this.nextHops = nextHops;
+            $.nextHops = nextHops;
             return this;
         }
-        public Builder nextHops(@Nullable List<String> nextHops) {
-            this.nextHops = Codegen.ofNullable(nextHops);
-            return this;
+
+        public Builder nextHops(List<String> nextHops) {
+            return nextHops(Output.of(nextHops));
         }
+
         public Builder nextHops(String... nextHops) {
             return nextHops(List.of(nextHops));
-        }        public VirtualHubRouteV2Args build() {
-            return new VirtualHubRouteV2Args(destinationType, destinations, nextHopType, nextHops);
+        }
+
+        public VirtualHubRouteV2Args build() {
+            return $;
         }
     }
+
 }

@@ -22,7 +22,7 @@ public final class GoogleCloudDatalabelingV1beta1AnnotationSpecResponse extends 
      * 
      */
     @Import(name="description", required=true)
-      private final String description;
+    private String description;
 
     public String description() {
         return this.description;
@@ -33,7 +33,7 @@ public final class GoogleCloudDatalabelingV1beta1AnnotationSpecResponse extends 
      * 
      */
     @Import(name="displayName", required=true)
-      private final String displayName;
+    private String displayName;
 
     public String displayName() {
         return this.displayName;
@@ -44,64 +44,59 @@ public final class GoogleCloudDatalabelingV1beta1AnnotationSpecResponse extends 
      * 
      */
     @Import(name="index", required=true)
-      private final Integer index;
+    private Integer index;
 
     public Integer index() {
         return this.index;
     }
 
-    public GoogleCloudDatalabelingV1beta1AnnotationSpecResponse(
-        String description,
-        String displayName,
-        Integer index) {
-        this.description = Objects.requireNonNull(description, "expected parameter 'description' to be non-null");
-        this.displayName = Objects.requireNonNull(displayName, "expected parameter 'displayName' to be non-null");
-        this.index = Objects.requireNonNull(index, "expected parameter 'index' to be non-null");
-    }
+    private GoogleCloudDatalabelingV1beta1AnnotationSpecResponse() {}
 
-    private GoogleCloudDatalabelingV1beta1AnnotationSpecResponse() {
-        this.description = null;
-        this.displayName = null;
-        this.index = null;
+    private GoogleCloudDatalabelingV1beta1AnnotationSpecResponse(GoogleCloudDatalabelingV1beta1AnnotationSpecResponse $) {
+        this.description = $.description;
+        this.displayName = $.displayName;
+        this.index = $.index;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudDatalabelingV1beta1AnnotationSpecResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String description;
-        private String displayName;
-        private Integer index;
+        private GoogleCloudDatalabelingV1beta1AnnotationSpecResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudDatalabelingV1beta1AnnotationSpecResponse();
         }
 
         public Builder(GoogleCloudDatalabelingV1beta1AnnotationSpecResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.description = defaults.description;
-    	      this.displayName = defaults.displayName;
-    	      this.index = defaults.index;
+            $ = new GoogleCloudDatalabelingV1beta1AnnotationSpecResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder description(String description) {
-            this.description = Objects.requireNonNull(description);
+            $.description = description;
             return this;
         }
+
         public Builder displayName(String displayName) {
-            this.displayName = Objects.requireNonNull(displayName);
+            $.displayName = displayName;
             return this;
         }
+
         public Builder index(Integer index) {
-            this.index = Objects.requireNonNull(index);
+            $.index = index;
             return this;
-        }        public GoogleCloudDatalabelingV1beta1AnnotationSpecResponse build() {
-            return new GoogleCloudDatalabelingV1beta1AnnotationSpecResponse(description, displayName, index);
+        }
+
+        public GoogleCloudDatalabelingV1beta1AnnotationSpecResponse build() {
+            $.description = Objects.requireNonNull($.description, "expected parameter 'description' to be non-null");
+            $.displayName = Objects.requireNonNull($.displayName, "expected parameter 'displayName' to be non-null");
+            $.index = Objects.requireNonNull($.index, "expected parameter 'index' to be non-null");
+            return $;
         }
     }
+
 }

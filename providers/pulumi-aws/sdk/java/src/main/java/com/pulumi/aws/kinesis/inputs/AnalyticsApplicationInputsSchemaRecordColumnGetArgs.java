@@ -5,9 +5,9 @@ package com.pulumi.aws.kinesis.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class AnalyticsApplicationInputsSchemaRecordColumnGetArgs extends c
      * 
      */
     @Import(name="mapping")
-      private final @Nullable Output<String> mapping;
+    private @Nullable Output<String> mapping;
 
-    public Output<String> mapping() {
-        return this.mapping == null ? Codegen.empty() : this.mapping;
+    public Optional<Output<String>> mapping() {
+        return Optional.ofNullable(this.mapping);
     }
 
     /**
@@ -31,7 +31,7 @@ public final class AnalyticsApplicationInputsSchemaRecordColumnGetArgs extends c
      * 
      */
     @Import(name="name", required=true)
-      private final Output<String> name;
+    private Output<String> name;
 
     public Output<String> name() {
         return this.name;
@@ -42,76 +42,70 @@ public final class AnalyticsApplicationInputsSchemaRecordColumnGetArgs extends c
      * 
      */
     @Import(name="sqlType", required=true)
-      private final Output<String> sqlType;
+    private Output<String> sqlType;
 
     public Output<String> sqlType() {
         return this.sqlType;
     }
 
-    public AnalyticsApplicationInputsSchemaRecordColumnGetArgs(
-        @Nullable Output<String> mapping,
-        Output<String> name,
-        Output<String> sqlType) {
-        this.mapping = mapping;
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.sqlType = Objects.requireNonNull(sqlType, "expected parameter 'sqlType' to be non-null");
-    }
+    private AnalyticsApplicationInputsSchemaRecordColumnGetArgs() {}
 
-    private AnalyticsApplicationInputsSchemaRecordColumnGetArgs() {
-        this.mapping = Codegen.empty();
-        this.name = Codegen.empty();
-        this.sqlType = Codegen.empty();
+    private AnalyticsApplicationInputsSchemaRecordColumnGetArgs(AnalyticsApplicationInputsSchemaRecordColumnGetArgs $) {
+        this.mapping = $.mapping;
+        this.name = $.name;
+        this.sqlType = $.sqlType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AnalyticsApplicationInputsSchemaRecordColumnGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> mapping;
-        private Output<String> name;
-        private Output<String> sqlType;
+        private AnalyticsApplicationInputsSchemaRecordColumnGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AnalyticsApplicationInputsSchemaRecordColumnGetArgs();
         }
 
         public Builder(AnalyticsApplicationInputsSchemaRecordColumnGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.mapping = defaults.mapping;
-    	      this.name = defaults.name;
-    	      this.sqlType = defaults.sqlType;
+            $ = new AnalyticsApplicationInputsSchemaRecordColumnGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder mapping(@Nullable Output<String> mapping) {
-            this.mapping = mapping;
+            $.mapping = mapping;
             return this;
         }
-        public Builder mapping(@Nullable String mapping) {
-            this.mapping = Codegen.ofNullable(mapping);
-            return this;
+
+        public Builder mapping(String mapping) {
+            return mapping(Output.of(mapping));
         }
+
         public Builder name(Output<String> name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Output.of(Objects.requireNonNull(name));
-            return this;
+            return name(Output.of(name));
         }
+
         public Builder sqlType(Output<String> sqlType) {
-            this.sqlType = Objects.requireNonNull(sqlType);
+            $.sqlType = sqlType;
             return this;
         }
+
         public Builder sqlType(String sqlType) {
-            this.sqlType = Output.of(Objects.requireNonNull(sqlType));
-            return this;
-        }        public AnalyticsApplicationInputsSchemaRecordColumnGetArgs build() {
-            return new AnalyticsApplicationInputsSchemaRecordColumnGetArgs(mapping, name, sqlType);
+            return sqlType(Output.of(sqlType));
+        }
+
+        public AnalyticsApplicationInputsSchemaRecordColumnGetArgs build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.sqlType = Objects.requireNonNull($.sqlType, "expected parameter 'sqlType' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,10 +5,10 @@ package com.pulumi.googlenative.container_v1beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.container_v1beta1.enums.WorkloadMetadataConfigMode;
 import com.pulumi.googlenative.container_v1beta1.enums.WorkloadMetadataConfigNodeMetadata;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class WorkloadMetadataConfigArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="mode")
-      private final @Nullable Output<WorkloadMetadataConfigMode> mode;
+    private @Nullable Output<WorkloadMetadataConfigMode> mode;
 
-    public Output<WorkloadMetadataConfigMode> mode() {
-        return this.mode == null ? Codegen.empty() : this.mode;
+    public Optional<Output<WorkloadMetadataConfigMode>> mode() {
+        return Optional.ofNullable(this.mode);
     }
 
     /**
@@ -36,63 +36,58 @@ public final class WorkloadMetadataConfigArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="nodeMetadata")
-      private final @Nullable Output<WorkloadMetadataConfigNodeMetadata> nodeMetadata;
+    private @Nullable Output<WorkloadMetadataConfigNodeMetadata> nodeMetadata;
 
-    public Output<WorkloadMetadataConfigNodeMetadata> nodeMetadata() {
-        return this.nodeMetadata == null ? Codegen.empty() : this.nodeMetadata;
+    public Optional<Output<WorkloadMetadataConfigNodeMetadata>> nodeMetadata() {
+        return Optional.ofNullable(this.nodeMetadata);
     }
 
-    public WorkloadMetadataConfigArgs(
-        @Nullable Output<WorkloadMetadataConfigMode> mode,
-        @Nullable Output<WorkloadMetadataConfigNodeMetadata> nodeMetadata) {
-        this.mode = mode;
-        this.nodeMetadata = nodeMetadata;
-    }
+    private WorkloadMetadataConfigArgs() {}
 
-    private WorkloadMetadataConfigArgs() {
-        this.mode = Codegen.empty();
-        this.nodeMetadata = Codegen.empty();
+    private WorkloadMetadataConfigArgs(WorkloadMetadataConfigArgs $) {
+        this.mode = $.mode;
+        this.nodeMetadata = $.nodeMetadata;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WorkloadMetadataConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<WorkloadMetadataConfigMode> mode;
-        private @Nullable Output<WorkloadMetadataConfigNodeMetadata> nodeMetadata;
+        private WorkloadMetadataConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new WorkloadMetadataConfigArgs();
         }
 
         public Builder(WorkloadMetadataConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.mode = defaults.mode;
-    	      this.nodeMetadata = defaults.nodeMetadata;
+            $ = new WorkloadMetadataConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder mode(@Nullable Output<WorkloadMetadataConfigMode> mode) {
-            this.mode = mode;
+            $.mode = mode;
             return this;
         }
-        public Builder mode(@Nullable WorkloadMetadataConfigMode mode) {
-            this.mode = Codegen.ofNullable(mode);
-            return this;
+
+        public Builder mode(WorkloadMetadataConfigMode mode) {
+            return mode(Output.of(mode));
         }
+
         public Builder nodeMetadata(@Nullable Output<WorkloadMetadataConfigNodeMetadata> nodeMetadata) {
-            this.nodeMetadata = nodeMetadata;
+            $.nodeMetadata = nodeMetadata;
             return this;
         }
-        public Builder nodeMetadata(@Nullable WorkloadMetadataConfigNodeMetadata nodeMetadata) {
-            this.nodeMetadata = Codegen.ofNullable(nodeMetadata);
-            return this;
-        }        public WorkloadMetadataConfigArgs build() {
-            return new WorkloadMetadataConfigArgs(mode, nodeMetadata);
+
+        public Builder nodeMetadata(WorkloadMetadataConfigNodeMetadata nodeMetadata) {
+            return nodeMetadata(Output.of(nodeMetadata));
+        }
+
+        public WorkloadMetadataConfigArgs build() {
+            return $;
         }
     }
+
 }

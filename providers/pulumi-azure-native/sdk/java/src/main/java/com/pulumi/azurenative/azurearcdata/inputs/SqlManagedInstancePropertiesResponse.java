@@ -25,10 +25,10 @@ public final class SqlManagedInstancePropertiesResponse extends com.pulumi.resou
      * 
      */
     @Import(name="admin")
-      private final @Nullable String admin;
+    private @Nullable String admin;
 
     public Optional<String> admin() {
-        return this.admin == null ? Optional.empty() : Optional.ofNullable(this.admin);
+        return Optional.ofNullable(this.admin);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class SqlManagedInstancePropertiesResponse extends com.pulumi.resou
      * 
      */
     @Import(name="basicLoginInformation")
-      private final @Nullable BasicLoginInformationResponse basicLoginInformation;
+    private @Nullable BasicLoginInformationResponse basicLoginInformation;
 
     public Optional<BasicLoginInformationResponse> basicLoginInformation() {
-        return this.basicLoginInformation == null ? Optional.empty() : Optional.ofNullable(this.basicLoginInformation);
+        return Optional.ofNullable(this.basicLoginInformation);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class SqlManagedInstancePropertiesResponse extends com.pulumi.resou
      * 
      */
     @Import(name="dataControllerId")
-      private final @Nullable String dataControllerId;
+    private @Nullable String dataControllerId;
 
     public Optional<String> dataControllerId() {
-        return this.dataControllerId == null ? Optional.empty() : Optional.ofNullable(this.dataControllerId);
+        return Optional.ofNullable(this.dataControllerId);
     }
 
     /**
@@ -58,10 +58,10 @@ public final class SqlManagedInstancePropertiesResponse extends com.pulumi.resou
      * 
      */
     @Import(name="endTime")
-      private final @Nullable String endTime;
+    private @Nullable String endTime;
 
     public Optional<String> endTime() {
-        return this.endTime == null ? Optional.empty() : Optional.ofNullable(this.endTime);
+        return Optional.ofNullable(this.endTime);
     }
 
     /**
@@ -69,10 +69,10 @@ public final class SqlManagedInstancePropertiesResponse extends com.pulumi.resou
      * 
      */
     @Import(name="k8sRaw")
-      private final @Nullable Object k8sRaw;
+    private @Nullable Object k8sRaw;
 
     public Optional<Object> k8sRaw() {
-        return this.k8sRaw == null ? Optional.empty() : Optional.ofNullable(this.k8sRaw);
+        return Optional.ofNullable(this.k8sRaw);
     }
 
     /**
@@ -80,14 +80,14 @@ public final class SqlManagedInstancePropertiesResponse extends com.pulumi.resou
      * 
      */
     @Import(name="lastUploadedDate")
-      private final @Nullable String lastUploadedDate;
+    private @Nullable String lastUploadedDate;
 
     public Optional<String> lastUploadedDate() {
-        return this.lastUploadedDate == null ? Optional.empty() : Optional.ofNullable(this.lastUploadedDate);
+        return Optional.ofNullable(this.lastUploadedDate);
     }
 
     @Import(name="provisioningState", required=true)
-      private final String provisioningState;
+    private String provisioningState;
 
     public String provisioningState() {
         return this.provisioningState;
@@ -98,109 +98,87 @@ public final class SqlManagedInstancePropertiesResponse extends com.pulumi.resou
      * 
      */
     @Import(name="startTime")
-      private final @Nullable String startTime;
+    private @Nullable String startTime;
 
     public Optional<String> startTime() {
-        return this.startTime == null ? Optional.empty() : Optional.ofNullable(this.startTime);
+        return Optional.ofNullable(this.startTime);
     }
 
-    public SqlManagedInstancePropertiesResponse(
-        @Nullable String admin,
-        @Nullable BasicLoginInformationResponse basicLoginInformation,
-        @Nullable String dataControllerId,
-        @Nullable String endTime,
-        @Nullable Object k8sRaw,
-        @Nullable String lastUploadedDate,
-        String provisioningState,
-        @Nullable String startTime) {
-        this.admin = admin;
-        this.basicLoginInformation = basicLoginInformation;
-        this.dataControllerId = dataControllerId;
-        this.endTime = endTime;
-        this.k8sRaw = k8sRaw;
-        this.lastUploadedDate = lastUploadedDate;
-        this.provisioningState = Objects.requireNonNull(provisioningState, "expected parameter 'provisioningState' to be non-null");
-        this.startTime = startTime;
-    }
+    private SqlManagedInstancePropertiesResponse() {}
 
-    private SqlManagedInstancePropertiesResponse() {
-        this.admin = null;
-        this.basicLoginInformation = null;
-        this.dataControllerId = null;
-        this.endTime = null;
-        this.k8sRaw = null;
-        this.lastUploadedDate = null;
-        this.provisioningState = null;
-        this.startTime = null;
+    private SqlManagedInstancePropertiesResponse(SqlManagedInstancePropertiesResponse $) {
+        this.admin = $.admin;
+        this.basicLoginInformation = $.basicLoginInformation;
+        this.dataControllerId = $.dataControllerId;
+        this.endTime = $.endTime;
+        this.k8sRaw = $.k8sRaw;
+        this.lastUploadedDate = $.lastUploadedDate;
+        this.provisioningState = $.provisioningState;
+        this.startTime = $.startTime;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SqlManagedInstancePropertiesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String admin;
-        private @Nullable BasicLoginInformationResponse basicLoginInformation;
-        private @Nullable String dataControllerId;
-        private @Nullable String endTime;
-        private @Nullable Object k8sRaw;
-        private @Nullable String lastUploadedDate;
-        private String provisioningState;
-        private @Nullable String startTime;
+        private SqlManagedInstancePropertiesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new SqlManagedInstancePropertiesResponse();
         }
 
         public Builder(SqlManagedInstancePropertiesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.admin = defaults.admin;
-    	      this.basicLoginInformation = defaults.basicLoginInformation;
-    	      this.dataControllerId = defaults.dataControllerId;
-    	      this.endTime = defaults.endTime;
-    	      this.k8sRaw = defaults.k8sRaw;
-    	      this.lastUploadedDate = defaults.lastUploadedDate;
-    	      this.provisioningState = defaults.provisioningState;
-    	      this.startTime = defaults.startTime;
+            $ = new SqlManagedInstancePropertiesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder admin(@Nullable String admin) {
-            this.admin = admin;
+            $.admin = admin;
             return this;
         }
+
         public Builder basicLoginInformation(@Nullable BasicLoginInformationResponse basicLoginInformation) {
-            this.basicLoginInformation = basicLoginInformation;
+            $.basicLoginInformation = basicLoginInformation;
             return this;
         }
+
         public Builder dataControllerId(@Nullable String dataControllerId) {
-            this.dataControllerId = dataControllerId;
+            $.dataControllerId = dataControllerId;
             return this;
         }
+
         public Builder endTime(@Nullable String endTime) {
-            this.endTime = endTime;
+            $.endTime = endTime;
             return this;
         }
+
         public Builder k8sRaw(@Nullable Object k8sRaw) {
-            this.k8sRaw = k8sRaw;
+            $.k8sRaw = k8sRaw;
             return this;
         }
+
         public Builder lastUploadedDate(@Nullable String lastUploadedDate) {
-            this.lastUploadedDate = lastUploadedDate;
+            $.lastUploadedDate = lastUploadedDate;
             return this;
         }
+
         public Builder provisioningState(String provisioningState) {
-            this.provisioningState = Objects.requireNonNull(provisioningState);
+            $.provisioningState = provisioningState;
             return this;
         }
+
         public Builder startTime(@Nullable String startTime) {
-            this.startTime = startTime;
+            $.startTime = startTime;
             return this;
-        }        public SqlManagedInstancePropertiesResponse build() {
-            return new SqlManagedInstancePropertiesResponse(admin, basicLoginInformation, dataControllerId, endTime, k8sRaw, lastUploadedDate, provisioningState, startTime);
+        }
+
+        public SqlManagedInstancePropertiesResponse build() {
+            $.provisioningState = Objects.requireNonNull($.provisioningState, "expected parameter 'provisioningState' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,13 +5,13 @@ package com.pulumi.googlenative.gameservices_v1beta.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.gameservices_v1beta.enums.ConditionIam;
 import com.pulumi.googlenative.gameservices_v1beta.enums.ConditionOp;
 import com.pulumi.googlenative.gameservices_v1beta.enums.ConditionSys;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -28,10 +28,10 @@ public final class ConditionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="iam")
-      private final @Nullable Output<ConditionIam> iam;
+    private @Nullable Output<ConditionIam> iam;
 
-    public Output<ConditionIam> iam() {
-        return this.iam == null ? Codegen.empty() : this.iam;
+    public Optional<Output<ConditionIam>> iam() {
+        return Optional.ofNullable(this.iam);
     }
 
     /**
@@ -39,10 +39,10 @@ public final class ConditionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="op")
-      private final @Nullable Output<ConditionOp> op;
+    private @Nullable Output<ConditionOp> op;
 
-    public Output<ConditionOp> op() {
-        return this.op == null ? Codegen.empty() : this.op;
+    public Optional<Output<ConditionOp>> op() {
+        return Optional.ofNullable(this.op);
     }
 
     /**
@@ -50,10 +50,10 @@ public final class ConditionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="svc")
-      private final @Nullable Output<String> svc;
+    private @Nullable Output<String> svc;
 
-    public Output<String> svc() {
-        return this.svc == null ? Codegen.empty() : this.svc;
+    public Optional<Output<String>> svc() {
+        return Optional.ofNullable(this.svc);
     }
 
     /**
@@ -61,10 +61,10 @@ public final class ConditionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="sys")
-      private final @Nullable Output<ConditionSys> sys;
+    private @Nullable Output<ConditionSys> sys;
 
-    public Output<ConditionSys> sys() {
-        return this.sys == null ? Codegen.empty() : this.sys;
+    public Optional<Output<ConditionSys>> sys() {
+        return Optional.ofNullable(this.sys);
     }
 
     /**
@@ -72,105 +72,92 @@ public final class ConditionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="values")
-      private final @Nullable Output<List<String>> values;
+    private @Nullable Output<List<String>> values;
 
-    public Output<List<String>> values() {
-        return this.values == null ? Codegen.empty() : this.values;
+    public Optional<Output<List<String>>> values() {
+        return Optional.ofNullable(this.values);
     }
 
-    public ConditionArgs(
-        @Nullable Output<ConditionIam> iam,
-        @Nullable Output<ConditionOp> op,
-        @Nullable Output<String> svc,
-        @Nullable Output<ConditionSys> sys,
-        @Nullable Output<List<String>> values) {
-        this.iam = iam;
-        this.op = op;
-        this.svc = svc;
-        this.sys = sys;
-        this.values = values;
-    }
+    private ConditionArgs() {}
 
-    private ConditionArgs() {
-        this.iam = Codegen.empty();
-        this.op = Codegen.empty();
-        this.svc = Codegen.empty();
-        this.sys = Codegen.empty();
-        this.values = Codegen.empty();
+    private ConditionArgs(ConditionArgs $) {
+        this.iam = $.iam;
+        this.op = $.op;
+        this.svc = $.svc;
+        this.sys = $.sys;
+        this.values = $.values;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ConditionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<ConditionIam> iam;
-        private @Nullable Output<ConditionOp> op;
-        private @Nullable Output<String> svc;
-        private @Nullable Output<ConditionSys> sys;
-        private @Nullable Output<List<String>> values;
+        private ConditionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ConditionArgs();
         }
 
         public Builder(ConditionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.iam = defaults.iam;
-    	      this.op = defaults.op;
-    	      this.svc = defaults.svc;
-    	      this.sys = defaults.sys;
-    	      this.values = defaults.values;
+            $ = new ConditionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder iam(@Nullable Output<ConditionIam> iam) {
-            this.iam = iam;
+            $.iam = iam;
             return this;
         }
-        public Builder iam(@Nullable ConditionIam iam) {
-            this.iam = Codegen.ofNullable(iam);
-            return this;
+
+        public Builder iam(ConditionIam iam) {
+            return iam(Output.of(iam));
         }
+
         public Builder op(@Nullable Output<ConditionOp> op) {
-            this.op = op;
+            $.op = op;
             return this;
         }
-        public Builder op(@Nullable ConditionOp op) {
-            this.op = Codegen.ofNullable(op);
-            return this;
+
+        public Builder op(ConditionOp op) {
+            return op(Output.of(op));
         }
+
         public Builder svc(@Nullable Output<String> svc) {
-            this.svc = svc;
+            $.svc = svc;
             return this;
         }
-        public Builder svc(@Nullable String svc) {
-            this.svc = Codegen.ofNullable(svc);
-            return this;
+
+        public Builder svc(String svc) {
+            return svc(Output.of(svc));
         }
+
         public Builder sys(@Nullable Output<ConditionSys> sys) {
-            this.sys = sys;
+            $.sys = sys;
             return this;
         }
-        public Builder sys(@Nullable ConditionSys sys) {
-            this.sys = Codegen.ofNullable(sys);
-            return this;
+
+        public Builder sys(ConditionSys sys) {
+            return sys(Output.of(sys));
         }
+
         public Builder values(@Nullable Output<List<String>> values) {
-            this.values = values;
+            $.values = values;
             return this;
         }
-        public Builder values(@Nullable List<String> values) {
-            this.values = Codegen.ofNullable(values);
-            return this;
+
+        public Builder values(List<String> values) {
+            return values(Output.of(values));
         }
+
         public Builder values(String... values) {
             return values(List.of(values));
-        }        public ConditionArgs build() {
-            return new ConditionArgs(iam, op, svc, sys, values);
+        }
+
+        public ConditionArgs build() {
+            return $;
         }
     }
+
 }

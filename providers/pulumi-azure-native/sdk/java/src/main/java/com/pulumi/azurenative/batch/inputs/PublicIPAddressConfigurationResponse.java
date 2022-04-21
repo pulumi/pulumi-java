@@ -24,10 +24,10 @@ public final class PublicIPAddressConfigurationResponse extends com.pulumi.resou
      * 
      */
     @Import(name="ipAddressIds")
-      private final @Nullable List<String> ipAddressIds;
+    private @Nullable List<String> ipAddressIds;
 
-    public List<String> ipAddressIds() {
-        return this.ipAddressIds == null ? List.of() : this.ipAddressIds;
+    public Optional<List<String>> ipAddressIds() {
+        return Optional.ofNullable(this.ipAddressIds);
     }
 
     /**
@@ -35,58 +35,54 @@ public final class PublicIPAddressConfigurationResponse extends com.pulumi.resou
      * 
      */
     @Import(name="provision")
-      private final @Nullable String provision;
+    private @Nullable String provision;
 
     public Optional<String> provision() {
-        return this.provision == null ? Optional.empty() : Optional.ofNullable(this.provision);
+        return Optional.ofNullable(this.provision);
     }
 
-    public PublicIPAddressConfigurationResponse(
-        @Nullable List<String> ipAddressIds,
-        @Nullable String provision) {
-        this.ipAddressIds = ipAddressIds;
-        this.provision = provision;
-    }
+    private PublicIPAddressConfigurationResponse() {}
 
-    private PublicIPAddressConfigurationResponse() {
-        this.ipAddressIds = List.of();
-        this.provision = null;
+    private PublicIPAddressConfigurationResponse(PublicIPAddressConfigurationResponse $) {
+        this.ipAddressIds = $.ipAddressIds;
+        this.provision = $.provision;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PublicIPAddressConfigurationResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<String> ipAddressIds;
-        private @Nullable String provision;
+        private PublicIPAddressConfigurationResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new PublicIPAddressConfigurationResponse();
         }
 
         public Builder(PublicIPAddressConfigurationResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.ipAddressIds = defaults.ipAddressIds;
-    	      this.provision = defaults.provision;
+            $ = new PublicIPAddressConfigurationResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder ipAddressIds(@Nullable List<String> ipAddressIds) {
-            this.ipAddressIds = ipAddressIds;
+            $.ipAddressIds = ipAddressIds;
             return this;
         }
+
         public Builder ipAddressIds(String... ipAddressIds) {
             return ipAddressIds(List.of(ipAddressIds));
         }
+
         public Builder provision(@Nullable String provision) {
-            this.provision = provision;
+            $.provision = provision;
             return this;
-        }        public PublicIPAddressConfigurationResponse build() {
-            return new PublicIPAddressConfigurationResponse(ipAddressIds, provision);
+        }
+
+        public PublicIPAddressConfigurationResponse build() {
+            return $;
         }
     }
+
 }

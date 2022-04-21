@@ -8,6 +8,7 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +25,10 @@ public final class CopyVideoArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="label")
-      private final @Nullable Output<String> label;
+    private @Nullable Output<String> label;
 
-    public Output<String> label() {
-        return this.label == null ? Codegen.empty() : this.label;
+    public Optional<Output<String>> label() {
+        return Optional.ofNullable(this.label);
     }
 
     /**
@@ -36,63 +37,59 @@ public final class CopyVideoArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="odataType", required=true)
-      private final Output<String> odataType;
+    private Output<String> odataType;
 
     public Output<String> odataType() {
         return this.odataType;
     }
 
-    public CopyVideoArgs(
-        @Nullable Output<String> label,
-        Output<String> odataType) {
-        this.label = label;
-        this.odataType = Codegen.stringProp("odataType").output().arg(odataType).require();
-    }
+    private CopyVideoArgs() {}
 
-    private CopyVideoArgs() {
-        this.label = Codegen.empty();
-        this.odataType = Codegen.empty();
+    private CopyVideoArgs(CopyVideoArgs $) {
+        this.label = $.label;
+        this.odataType = $.odataType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CopyVideoArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> label;
-        private Output<String> odataType;
+        private CopyVideoArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CopyVideoArgs();
         }
 
         public Builder(CopyVideoArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.label = defaults.label;
-    	      this.odataType = defaults.odataType;
+            $ = new CopyVideoArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder label(@Nullable Output<String> label) {
-            this.label = label;
+            $.label = label;
             return this;
         }
-        public Builder label(@Nullable String label) {
-            this.label = Codegen.ofNullable(label);
-            return this;
+
+        public Builder label(String label) {
+            return label(Output.of(label));
         }
+
         public Builder odataType(Output<String> odataType) {
-            this.odataType = Objects.requireNonNull(odataType);
+            $.odataType = odataType;
             return this;
         }
+
         public Builder odataType(String odataType) {
-            this.odataType = Output.of(Objects.requireNonNull(odataType));
-            return this;
-        }        public CopyVideoArgs build() {
-            return new CopyVideoArgs(label, odataType);
+            return odataType(Output.of(odataType));
+        }
+
+        public CopyVideoArgs build() {
+            $.odataType = Codegen.stringProp("odataType").output().arg($.odataType).require();
+            return $;
         }
     }
+
 }

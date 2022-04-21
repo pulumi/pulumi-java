@@ -6,10 +6,10 @@ package com.pulumi.azurenative.cdn.inputs;
 import com.pulumi.azurenative.cdn.inputs.ResourceReferenceArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class SecurityPolicyWebApplicationFirewallAssociationArgs extends c
      * 
      */
     @Import(name="domains")
-      private final @Nullable Output<List<ResourceReferenceArgs>> domains;
+    private @Nullable Output<List<ResourceReferenceArgs>> domains;
 
-    public Output<List<ResourceReferenceArgs>> domains() {
-        return this.domains == null ? Codegen.empty() : this.domains;
+    public Optional<Output<List<ResourceReferenceArgs>>> domains() {
+        return Optional.ofNullable(this.domains);
     }
 
     /**
@@ -37,69 +37,66 @@ public final class SecurityPolicyWebApplicationFirewallAssociationArgs extends c
      * 
      */
     @Import(name="patternsToMatch")
-      private final @Nullable Output<List<String>> patternsToMatch;
+    private @Nullable Output<List<String>> patternsToMatch;
 
-    public Output<List<String>> patternsToMatch() {
-        return this.patternsToMatch == null ? Codegen.empty() : this.patternsToMatch;
+    public Optional<Output<List<String>>> patternsToMatch() {
+        return Optional.ofNullable(this.patternsToMatch);
     }
 
-    public SecurityPolicyWebApplicationFirewallAssociationArgs(
-        @Nullable Output<List<ResourceReferenceArgs>> domains,
-        @Nullable Output<List<String>> patternsToMatch) {
-        this.domains = domains;
-        this.patternsToMatch = patternsToMatch;
-    }
+    private SecurityPolicyWebApplicationFirewallAssociationArgs() {}
 
-    private SecurityPolicyWebApplicationFirewallAssociationArgs() {
-        this.domains = Codegen.empty();
-        this.patternsToMatch = Codegen.empty();
+    private SecurityPolicyWebApplicationFirewallAssociationArgs(SecurityPolicyWebApplicationFirewallAssociationArgs $) {
+        this.domains = $.domains;
+        this.patternsToMatch = $.patternsToMatch;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SecurityPolicyWebApplicationFirewallAssociationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<ResourceReferenceArgs>> domains;
-        private @Nullable Output<List<String>> patternsToMatch;
+        private SecurityPolicyWebApplicationFirewallAssociationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SecurityPolicyWebApplicationFirewallAssociationArgs();
         }
 
         public Builder(SecurityPolicyWebApplicationFirewallAssociationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.domains = defaults.domains;
-    	      this.patternsToMatch = defaults.patternsToMatch;
+            $ = new SecurityPolicyWebApplicationFirewallAssociationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder domains(@Nullable Output<List<ResourceReferenceArgs>> domains) {
-            this.domains = domains;
+            $.domains = domains;
             return this;
         }
-        public Builder domains(@Nullable List<ResourceReferenceArgs> domains) {
-            this.domains = Codegen.ofNullable(domains);
-            return this;
+
+        public Builder domains(List<ResourceReferenceArgs> domains) {
+            return domains(Output.of(domains));
         }
+
         public Builder domains(ResourceReferenceArgs... domains) {
             return domains(List.of(domains));
         }
+
         public Builder patternsToMatch(@Nullable Output<List<String>> patternsToMatch) {
-            this.patternsToMatch = patternsToMatch;
+            $.patternsToMatch = patternsToMatch;
             return this;
         }
-        public Builder patternsToMatch(@Nullable List<String> patternsToMatch) {
-            this.patternsToMatch = Codegen.ofNullable(patternsToMatch);
-            return this;
+
+        public Builder patternsToMatch(List<String> patternsToMatch) {
+            return patternsToMatch(Output.of(patternsToMatch));
         }
+
         public Builder patternsToMatch(String... patternsToMatch) {
             return patternsToMatch(List.of(patternsToMatch));
-        }        public SecurityPolicyWebApplicationFirewallAssociationArgs build() {
-            return new SecurityPolicyWebApplicationFirewallAssociationArgs(domains, patternsToMatch);
+        }
+
+        public SecurityPolicyWebApplicationFirewallAssociationArgs build() {
+            return $;
         }
     }
+
 }

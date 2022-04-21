@@ -17,7 +17,7 @@ public final class GetExpressRouteCrossConnectionPeeringArgs extends com.pulumi.
      * 
      */
     @Import(name="crossConnectionName", required=true)
-      private final String crossConnectionName;
+    private String crossConnectionName;
 
     public String crossConnectionName() {
         return this.crossConnectionName;
@@ -28,7 +28,7 @@ public final class GetExpressRouteCrossConnectionPeeringArgs extends com.pulumi.
      * 
      */
     @Import(name="peeringName", required=true)
-      private final String peeringName;
+    private String peeringName;
 
     public String peeringName() {
         return this.peeringName;
@@ -39,64 +39,59 @@ public final class GetExpressRouteCrossConnectionPeeringArgs extends com.pulumi.
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public GetExpressRouteCrossConnectionPeeringArgs(
-        String crossConnectionName,
-        String peeringName,
-        String resourceGroupName) {
-        this.crossConnectionName = Objects.requireNonNull(crossConnectionName, "expected parameter 'crossConnectionName' to be non-null");
-        this.peeringName = Objects.requireNonNull(peeringName, "expected parameter 'peeringName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private GetExpressRouteCrossConnectionPeeringArgs() {}
 
-    private GetExpressRouteCrossConnectionPeeringArgs() {
-        this.crossConnectionName = null;
-        this.peeringName = null;
-        this.resourceGroupName = null;
+    private GetExpressRouteCrossConnectionPeeringArgs(GetExpressRouteCrossConnectionPeeringArgs $) {
+        this.crossConnectionName = $.crossConnectionName;
+        this.peeringName = $.peeringName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetExpressRouteCrossConnectionPeeringArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String crossConnectionName;
-        private String peeringName;
-        private String resourceGroupName;
+        private GetExpressRouteCrossConnectionPeeringArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetExpressRouteCrossConnectionPeeringArgs();
         }
 
         public Builder(GetExpressRouteCrossConnectionPeeringArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.crossConnectionName = defaults.crossConnectionName;
-    	      this.peeringName = defaults.peeringName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new GetExpressRouteCrossConnectionPeeringArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder crossConnectionName(String crossConnectionName) {
-            this.crossConnectionName = Objects.requireNonNull(crossConnectionName);
+            $.crossConnectionName = crossConnectionName;
             return this;
         }
+
         public Builder peeringName(String peeringName) {
-            this.peeringName = Objects.requireNonNull(peeringName);
+            $.peeringName = peeringName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public GetExpressRouteCrossConnectionPeeringArgs build() {
-            return new GetExpressRouteCrossConnectionPeeringArgs(crossConnectionName, peeringName, resourceGroupName);
+        }
+
+        public GetExpressRouteCrossConnectionPeeringArgs build() {
+            $.crossConnectionName = Objects.requireNonNull($.crossConnectionName, "expected parameter 'crossConnectionName' to be non-null");
+            $.peeringName = Objects.requireNonNull($.peeringName, "expected parameter 'peeringName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

@@ -7,8 +7,8 @@ import com.pulumi.awsnative.lookoutmetrics.inputs.AlertLambdaConfigurationArgs;
 import com.pulumi.awsnative.lookoutmetrics.inputs.AlertSNSConfigurationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -17,70 +17,65 @@ public final class AlertActionArgs extends com.pulumi.resources.ResourceArgs {
     public static final AlertActionArgs Empty = new AlertActionArgs();
 
     @Import(name="lambdaConfiguration")
-      private final @Nullable Output<AlertLambdaConfigurationArgs> lambdaConfiguration;
+    private @Nullable Output<AlertLambdaConfigurationArgs> lambdaConfiguration;
 
-    public Output<AlertLambdaConfigurationArgs> lambdaConfiguration() {
-        return this.lambdaConfiguration == null ? Codegen.empty() : this.lambdaConfiguration;
+    public Optional<Output<AlertLambdaConfigurationArgs>> lambdaConfiguration() {
+        return Optional.ofNullable(this.lambdaConfiguration);
     }
 
     @Import(name="sNSConfiguration")
-      private final @Nullable Output<AlertSNSConfigurationArgs> sNSConfiguration;
+    private @Nullable Output<AlertSNSConfigurationArgs> sNSConfiguration;
 
-    public Output<AlertSNSConfigurationArgs> sNSConfiguration() {
-        return this.sNSConfiguration == null ? Codegen.empty() : this.sNSConfiguration;
+    public Optional<Output<AlertSNSConfigurationArgs>> sNSConfiguration() {
+        return Optional.ofNullable(this.sNSConfiguration);
     }
 
-    public AlertActionArgs(
-        @Nullable Output<AlertLambdaConfigurationArgs> lambdaConfiguration,
-        @Nullable Output<AlertSNSConfigurationArgs> sNSConfiguration) {
-        this.lambdaConfiguration = lambdaConfiguration;
-        this.sNSConfiguration = sNSConfiguration;
-    }
+    private AlertActionArgs() {}
 
-    private AlertActionArgs() {
-        this.lambdaConfiguration = Codegen.empty();
-        this.sNSConfiguration = Codegen.empty();
+    private AlertActionArgs(AlertActionArgs $) {
+        this.lambdaConfiguration = $.lambdaConfiguration;
+        this.sNSConfiguration = $.sNSConfiguration;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AlertActionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<AlertLambdaConfigurationArgs> lambdaConfiguration;
-        private @Nullable Output<AlertSNSConfigurationArgs> sNSConfiguration;
+        private AlertActionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AlertActionArgs();
         }
 
         public Builder(AlertActionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.lambdaConfiguration = defaults.lambdaConfiguration;
-    	      this.sNSConfiguration = defaults.sNSConfiguration;
+            $ = new AlertActionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder lambdaConfiguration(@Nullable Output<AlertLambdaConfigurationArgs> lambdaConfiguration) {
-            this.lambdaConfiguration = lambdaConfiguration;
+            $.lambdaConfiguration = lambdaConfiguration;
             return this;
         }
-        public Builder lambdaConfiguration(@Nullable AlertLambdaConfigurationArgs lambdaConfiguration) {
-            this.lambdaConfiguration = Codegen.ofNullable(lambdaConfiguration);
-            return this;
+
+        public Builder lambdaConfiguration(AlertLambdaConfigurationArgs lambdaConfiguration) {
+            return lambdaConfiguration(Output.of(lambdaConfiguration));
         }
+
         public Builder sNSConfiguration(@Nullable Output<AlertSNSConfigurationArgs> sNSConfiguration) {
-            this.sNSConfiguration = sNSConfiguration;
+            $.sNSConfiguration = sNSConfiguration;
             return this;
         }
-        public Builder sNSConfiguration(@Nullable AlertSNSConfigurationArgs sNSConfiguration) {
-            this.sNSConfiguration = Codegen.ofNullable(sNSConfiguration);
-            return this;
-        }        public AlertActionArgs build() {
-            return new AlertActionArgs(lambdaConfiguration, sNSConfiguration);
+
+        public Builder sNSConfiguration(AlertSNSConfigurationArgs sNSConfiguration) {
+            return sNSConfiguration(Output.of(sNSConfiguration));
+        }
+
+        public AlertActionArgs build() {
+            return $;
         }
     }
+
 }

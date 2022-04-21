@@ -9,12 +9,12 @@ import com.pulumi.azurenative.automation.inputs.RunbookDraftArgs;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,7 +27,7 @@ public final class RunbookArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="automationAccountName", required=true)
-      private final Output<String> automationAccountName;
+    private Output<String> automationAccountName;
 
     public Output<String> automationAccountName() {
         return this.automationAccountName;
@@ -38,10 +38,10 @@ public final class RunbookArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -49,10 +49,10 @@ public final class RunbookArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="draft")
-      private final @Nullable Output<RunbookDraftArgs> draft;
+    private @Nullable Output<RunbookDraftArgs> draft;
 
-    public Output<RunbookDraftArgs> draft() {
-        return this.draft == null ? Codegen.empty() : this.draft;
+    public Optional<Output<RunbookDraftArgs>> draft() {
+        return Optional.ofNullable(this.draft);
     }
 
     /**
@@ -60,10 +60,10 @@ public final class RunbookArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -71,10 +71,10 @@ public final class RunbookArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="logActivityTrace")
-      private final @Nullable Output<Integer> logActivityTrace;
+    private @Nullable Output<Integer> logActivityTrace;
 
-    public Output<Integer> logActivityTrace() {
-        return this.logActivityTrace == null ? Codegen.empty() : this.logActivityTrace;
+    public Optional<Output<Integer>> logActivityTrace() {
+        return Optional.ofNullable(this.logActivityTrace);
     }
 
     /**
@@ -82,10 +82,10 @@ public final class RunbookArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="logProgress")
-      private final @Nullable Output<Boolean> logProgress;
+    private @Nullable Output<Boolean> logProgress;
 
-    public Output<Boolean> logProgress() {
-        return this.logProgress == null ? Codegen.empty() : this.logProgress;
+    public Optional<Output<Boolean>> logProgress() {
+        return Optional.ofNullable(this.logProgress);
     }
 
     /**
@@ -93,10 +93,10 @@ public final class RunbookArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="logVerbose")
-      private final @Nullable Output<Boolean> logVerbose;
+    private @Nullable Output<Boolean> logVerbose;
 
-    public Output<Boolean> logVerbose() {
-        return this.logVerbose == null ? Codegen.empty() : this.logVerbose;
+    public Optional<Output<Boolean>> logVerbose() {
+        return Optional.ofNullable(this.logVerbose);
     }
 
     /**
@@ -104,10 +104,10 @@ public final class RunbookArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -115,10 +115,10 @@ public final class RunbookArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="publishContentLink")
-      private final @Nullable Output<ContentLinkArgs> publishContentLink;
+    private @Nullable Output<ContentLinkArgs> publishContentLink;
 
-    public Output<ContentLinkArgs> publishContentLink() {
-        return this.publishContentLink == null ? Codegen.empty() : this.publishContentLink;
+    public Optional<Output<ContentLinkArgs>> publishContentLink() {
+        return Optional.ofNullable(this.publishContentLink);
     }
 
     /**
@@ -126,7 +126,7 @@ public final class RunbookArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -137,10 +137,10 @@ public final class RunbookArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="runbookName")
-      private final @Nullable Output<String> runbookName;
+    private @Nullable Output<String> runbookName;
 
-    public Output<String> runbookName() {
-        return this.runbookName == null ? Codegen.empty() : this.runbookName;
+    public Optional<Output<String>> runbookName() {
+        return Optional.ofNullable(this.runbookName);
     }
 
     /**
@@ -148,7 +148,7 @@ public final class RunbookArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="runbookType", required=true)
-      private final Output<Either<String,RunbookTypeEnum>> runbookType;
+    private Output<Either<String,RunbookTypeEnum>> runbookType;
 
     public Output<Either<String,RunbookTypeEnum>> runbookType() {
         return this.runbookType;
@@ -159,206 +159,171 @@ public final class RunbookArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public RunbookArgs(
-        Output<String> automationAccountName,
-        @Nullable Output<String> description,
-        @Nullable Output<RunbookDraftArgs> draft,
-        @Nullable Output<String> location,
-        @Nullable Output<Integer> logActivityTrace,
-        @Nullable Output<Boolean> logProgress,
-        @Nullable Output<Boolean> logVerbose,
-        @Nullable Output<String> name,
-        @Nullable Output<ContentLinkArgs> publishContentLink,
-        Output<String> resourceGroupName,
-        @Nullable Output<String> runbookName,
-        Output<Either<String,RunbookTypeEnum>> runbookType,
-        @Nullable Output<Map<String,String>> tags) {
-        this.automationAccountName = Objects.requireNonNull(automationAccountName, "expected parameter 'automationAccountName' to be non-null");
-        this.description = description;
-        this.draft = draft;
-        this.location = location;
-        this.logActivityTrace = logActivityTrace;
-        this.logProgress = logProgress;
-        this.logVerbose = logVerbose;
-        this.name = name;
-        this.publishContentLink = publishContentLink;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.runbookName = runbookName;
-        this.runbookType = Objects.requireNonNull(runbookType, "expected parameter 'runbookType' to be non-null");
-        this.tags = tags;
-    }
+    private RunbookArgs() {}
 
-    private RunbookArgs() {
-        this.automationAccountName = Codegen.empty();
-        this.description = Codegen.empty();
-        this.draft = Codegen.empty();
-        this.location = Codegen.empty();
-        this.logActivityTrace = Codegen.empty();
-        this.logProgress = Codegen.empty();
-        this.logVerbose = Codegen.empty();
-        this.name = Codegen.empty();
-        this.publishContentLink = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.runbookName = Codegen.empty();
-        this.runbookType = Codegen.empty();
-        this.tags = Codegen.empty();
+    private RunbookArgs(RunbookArgs $) {
+        this.automationAccountName = $.automationAccountName;
+        this.description = $.description;
+        this.draft = $.draft;
+        this.location = $.location;
+        this.logActivityTrace = $.logActivityTrace;
+        this.logProgress = $.logProgress;
+        this.logVerbose = $.logVerbose;
+        this.name = $.name;
+        this.publishContentLink = $.publishContentLink;
+        this.resourceGroupName = $.resourceGroupName;
+        this.runbookName = $.runbookName;
+        this.runbookType = $.runbookType;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RunbookArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> automationAccountName;
-        private @Nullable Output<String> description;
-        private @Nullable Output<RunbookDraftArgs> draft;
-        private @Nullable Output<String> location;
-        private @Nullable Output<Integer> logActivityTrace;
-        private @Nullable Output<Boolean> logProgress;
-        private @Nullable Output<Boolean> logVerbose;
-        private @Nullable Output<String> name;
-        private @Nullable Output<ContentLinkArgs> publishContentLink;
-        private Output<String> resourceGroupName;
-        private @Nullable Output<String> runbookName;
-        private Output<Either<String,RunbookTypeEnum>> runbookType;
-        private @Nullable Output<Map<String,String>> tags;
+        private RunbookArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RunbookArgs();
         }
 
         public Builder(RunbookArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.automationAccountName = defaults.automationAccountName;
-    	      this.description = defaults.description;
-    	      this.draft = defaults.draft;
-    	      this.location = defaults.location;
-    	      this.logActivityTrace = defaults.logActivityTrace;
-    	      this.logProgress = defaults.logProgress;
-    	      this.logVerbose = defaults.logVerbose;
-    	      this.name = defaults.name;
-    	      this.publishContentLink = defaults.publishContentLink;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.runbookName = defaults.runbookName;
-    	      this.runbookType = defaults.runbookType;
-    	      this.tags = defaults.tags;
+            $ = new RunbookArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder automationAccountName(Output<String> automationAccountName) {
-            this.automationAccountName = Objects.requireNonNull(automationAccountName);
+            $.automationAccountName = automationAccountName;
             return this;
         }
+
         public Builder automationAccountName(String automationAccountName) {
-            this.automationAccountName = Output.of(Objects.requireNonNull(automationAccountName));
-            return this;
+            return automationAccountName(Output.of(automationAccountName));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder draft(@Nullable Output<RunbookDraftArgs> draft) {
-            this.draft = draft;
+            $.draft = draft;
             return this;
         }
-        public Builder draft(@Nullable RunbookDraftArgs draft) {
-            this.draft = Codegen.ofNullable(draft);
-            return this;
+
+        public Builder draft(RunbookDraftArgs draft) {
+            return draft(Output.of(draft));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder logActivityTrace(@Nullable Output<Integer> logActivityTrace) {
-            this.logActivityTrace = logActivityTrace;
+            $.logActivityTrace = logActivityTrace;
             return this;
         }
-        public Builder logActivityTrace(@Nullable Integer logActivityTrace) {
-            this.logActivityTrace = Codegen.ofNullable(logActivityTrace);
-            return this;
+
+        public Builder logActivityTrace(Integer logActivityTrace) {
+            return logActivityTrace(Output.of(logActivityTrace));
         }
+
         public Builder logProgress(@Nullable Output<Boolean> logProgress) {
-            this.logProgress = logProgress;
+            $.logProgress = logProgress;
             return this;
         }
-        public Builder logProgress(@Nullable Boolean logProgress) {
-            this.logProgress = Codegen.ofNullable(logProgress);
-            return this;
+
+        public Builder logProgress(Boolean logProgress) {
+            return logProgress(Output.of(logProgress));
         }
+
         public Builder logVerbose(@Nullable Output<Boolean> logVerbose) {
-            this.logVerbose = logVerbose;
+            $.logVerbose = logVerbose;
             return this;
         }
-        public Builder logVerbose(@Nullable Boolean logVerbose) {
-            this.logVerbose = Codegen.ofNullable(logVerbose);
-            return this;
+
+        public Builder logVerbose(Boolean logVerbose) {
+            return logVerbose(Output.of(logVerbose));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder publishContentLink(@Nullable Output<ContentLinkArgs> publishContentLink) {
-            this.publishContentLink = publishContentLink;
+            $.publishContentLink = publishContentLink;
             return this;
         }
-        public Builder publishContentLink(@Nullable ContentLinkArgs publishContentLink) {
-            this.publishContentLink = Codegen.ofNullable(publishContentLink);
-            return this;
+
+        public Builder publishContentLink(ContentLinkArgs publishContentLink) {
+            return publishContentLink(Output.of(publishContentLink));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder runbookName(@Nullable Output<String> runbookName) {
-            this.runbookName = runbookName;
+            $.runbookName = runbookName;
             return this;
         }
-        public Builder runbookName(@Nullable String runbookName) {
-            this.runbookName = Codegen.ofNullable(runbookName);
-            return this;
+
+        public Builder runbookName(String runbookName) {
+            return runbookName(Output.of(runbookName));
         }
+
         public Builder runbookType(Output<Either<String,RunbookTypeEnum>> runbookType) {
-            this.runbookType = Objects.requireNonNull(runbookType);
+            $.runbookType = runbookType;
             return this;
         }
+
         public Builder runbookType(Either<String,RunbookTypeEnum> runbookType) {
-            this.runbookType = Output.of(Objects.requireNonNull(runbookType));
-            return this;
+            return runbookType(Output.of(runbookType));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
-        }        public RunbookArgs build() {
-            return new RunbookArgs(automationAccountName, description, draft, location, logActivityTrace, logProgress, logVerbose, name, publishContentLink, resourceGroupName, runbookName, runbookType, tags);
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
+        }
+
+        public RunbookArgs build() {
+            $.automationAccountName = Objects.requireNonNull($.automationAccountName, "expected parameter 'automationAccountName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.runbookType = Objects.requireNonNull($.runbookType, "expected parameter 'runbookType' to be non-null");
+            return $;
         }
     }
+
 }

@@ -17,7 +17,7 @@ public final class GetScopeMapArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="registryName", required=true)
-      private final String registryName;
+    private String registryName;
 
     public String registryName() {
         return this.registryName;
@@ -28,7 +28,7 @@ public final class GetScopeMapArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -39,64 +39,59 @@ public final class GetScopeMapArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="scopeMapName", required=true)
-      private final String scopeMapName;
+    private String scopeMapName;
 
     public String scopeMapName() {
         return this.scopeMapName;
     }
 
-    public GetScopeMapArgs(
-        String registryName,
-        String resourceGroupName,
-        String scopeMapName) {
-        this.registryName = Objects.requireNonNull(registryName, "expected parameter 'registryName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.scopeMapName = Objects.requireNonNull(scopeMapName, "expected parameter 'scopeMapName' to be non-null");
-    }
+    private GetScopeMapArgs() {}
 
-    private GetScopeMapArgs() {
-        this.registryName = null;
-        this.resourceGroupName = null;
-        this.scopeMapName = null;
+    private GetScopeMapArgs(GetScopeMapArgs $) {
+        this.registryName = $.registryName;
+        this.resourceGroupName = $.resourceGroupName;
+        this.scopeMapName = $.scopeMapName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetScopeMapArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String registryName;
-        private String resourceGroupName;
-        private String scopeMapName;
+        private GetScopeMapArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetScopeMapArgs();
         }
 
         public Builder(GetScopeMapArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.registryName = defaults.registryName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.scopeMapName = defaults.scopeMapName;
+            $ = new GetScopeMapArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder registryName(String registryName) {
-            this.registryName = Objects.requireNonNull(registryName);
+            $.registryName = registryName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder scopeMapName(String scopeMapName) {
-            this.scopeMapName = Objects.requireNonNull(scopeMapName);
+            $.scopeMapName = scopeMapName;
             return this;
-        }        public GetScopeMapArgs build() {
-            return new GetScopeMapArgs(registryName, resourceGroupName, scopeMapName);
+        }
+
+        public GetScopeMapArgs build() {
+            $.registryName = Objects.requireNonNull($.registryName, "expected parameter 'registryName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.scopeMapName = Objects.requireNonNull($.scopeMapName, "expected parameter 'scopeMapName' to be non-null");
+            return $;
         }
     }
+
 }

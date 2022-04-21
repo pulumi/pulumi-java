@@ -19,7 +19,7 @@ public final class SslPolicyWarningsItemResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="code", required=true)
-      private final String code;
+    private String code;
 
     public String code() {
         return this.code;
@@ -30,7 +30,7 @@ public final class SslPolicyWarningsItemResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="data", required=true)
-      private final List<SslPolicyWarningsItemDataItemResponse> data;
+    private List<SslPolicyWarningsItemDataItemResponse> data;
 
     public List<SslPolicyWarningsItemDataItemResponse> data() {
         return this.data;
@@ -41,67 +41,63 @@ public final class SslPolicyWarningsItemResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="message", required=true)
-      private final String message;
+    private String message;
 
     public String message() {
         return this.message;
     }
 
-    public SslPolicyWarningsItemResponse(
-        String code,
-        List<SslPolicyWarningsItemDataItemResponse> data,
-        String message) {
-        this.code = Objects.requireNonNull(code, "expected parameter 'code' to be non-null");
-        this.data = Objects.requireNonNull(data, "expected parameter 'data' to be non-null");
-        this.message = Objects.requireNonNull(message, "expected parameter 'message' to be non-null");
-    }
+    private SslPolicyWarningsItemResponse() {}
 
-    private SslPolicyWarningsItemResponse() {
-        this.code = null;
-        this.data = List.of();
-        this.message = null;
+    private SslPolicyWarningsItemResponse(SslPolicyWarningsItemResponse $) {
+        this.code = $.code;
+        this.data = $.data;
+        this.message = $.message;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SslPolicyWarningsItemResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String code;
-        private List<SslPolicyWarningsItemDataItemResponse> data;
-        private String message;
+        private SslPolicyWarningsItemResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new SslPolicyWarningsItemResponse();
         }
 
         public Builder(SslPolicyWarningsItemResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.code = defaults.code;
-    	      this.data = defaults.data;
-    	      this.message = defaults.message;
+            $ = new SslPolicyWarningsItemResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder code(String code) {
-            this.code = Objects.requireNonNull(code);
+            $.code = code;
             return this;
         }
+
         public Builder data(List<SslPolicyWarningsItemDataItemResponse> data) {
-            this.data = Objects.requireNonNull(data);
+            $.data = data;
             return this;
         }
+
         public Builder data(SslPolicyWarningsItemDataItemResponse... data) {
             return data(List.of(data));
         }
+
         public Builder message(String message) {
-            this.message = Objects.requireNonNull(message);
+            $.message = message;
             return this;
-        }        public SslPolicyWarningsItemResponse build() {
-            return new SslPolicyWarningsItemResponse(code, data, message);
+        }
+
+        public SslPolicyWarningsItemResponse build() {
+            $.code = Objects.requireNonNull($.code, "expected parameter 'code' to be non-null");
+            $.data = Objects.requireNonNull($.data, "expected parameter 'data' to be non-null");
+            $.message = Objects.requireNonNull($.message, "expected parameter 'message' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,10 +5,10 @@ package com.pulumi.gcp.appengine.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class FirewallRuleState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="action")
-      private final @Nullable Output<String> action;
+    private @Nullable Output<String> action;
 
-    public Output<String> action() {
-        return this.action == null ? Codegen.empty() : this.action;
+    public Optional<Output<String>> action() {
+        return Optional.ofNullable(this.action);
     }
 
     /**
@@ -33,10 +33,10 @@ public final class FirewallRuleState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -48,10 +48,10 @@ public final class FirewallRuleState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="priority")
-      private final @Nullable Output<Integer> priority;
+    private @Nullable Output<Integer> priority;
 
-    public Output<Integer> priority() {
-        return this.priority == null ? Codegen.empty() : this.priority;
+    public Optional<Output<Integer>> priority() {
+        return Optional.ofNullable(this.priority);
     }
 
     /**
@@ -60,10 +60,10 @@ public final class FirewallRuleState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -71,102 +71,88 @@ public final class FirewallRuleState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="sourceRange")
-      private final @Nullable Output<String> sourceRange;
+    private @Nullable Output<String> sourceRange;
 
-    public Output<String> sourceRange() {
-        return this.sourceRange == null ? Codegen.empty() : this.sourceRange;
+    public Optional<Output<String>> sourceRange() {
+        return Optional.ofNullable(this.sourceRange);
     }
 
-    public FirewallRuleState(
-        @Nullable Output<String> action,
-        @Nullable Output<String> description,
-        @Nullable Output<Integer> priority,
-        @Nullable Output<String> project,
-        @Nullable Output<String> sourceRange) {
-        this.action = action;
-        this.description = description;
-        this.priority = priority;
-        this.project = project;
-        this.sourceRange = sourceRange;
-    }
+    private FirewallRuleState() {}
 
-    private FirewallRuleState() {
-        this.action = Codegen.empty();
-        this.description = Codegen.empty();
-        this.priority = Codegen.empty();
-        this.project = Codegen.empty();
-        this.sourceRange = Codegen.empty();
+    private FirewallRuleState(FirewallRuleState $) {
+        this.action = $.action;
+        this.description = $.description;
+        this.priority = $.priority;
+        this.project = $.project;
+        this.sourceRange = $.sourceRange;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FirewallRuleState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> action;
-        private @Nullable Output<String> description;
-        private @Nullable Output<Integer> priority;
-        private @Nullable Output<String> project;
-        private @Nullable Output<String> sourceRange;
+        private FirewallRuleState $;
 
         public Builder() {
-    	      // Empty
+            $ = new FirewallRuleState();
         }
 
         public Builder(FirewallRuleState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.action = defaults.action;
-    	      this.description = defaults.description;
-    	      this.priority = defaults.priority;
-    	      this.project = defaults.project;
-    	      this.sourceRange = defaults.sourceRange;
+            $ = new FirewallRuleState(Objects.requireNonNull(defaults));
         }
 
         public Builder action(@Nullable Output<String> action) {
-            this.action = action;
+            $.action = action;
             return this;
         }
-        public Builder action(@Nullable String action) {
-            this.action = Codegen.ofNullable(action);
-            return this;
+
+        public Builder action(String action) {
+            return action(Output.of(action));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder priority(@Nullable Output<Integer> priority) {
-            this.priority = priority;
+            $.priority = priority;
             return this;
         }
-        public Builder priority(@Nullable Integer priority) {
-            this.priority = Codegen.ofNullable(priority);
-            return this;
+
+        public Builder priority(Integer priority) {
+            return priority(Output.of(priority));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder sourceRange(@Nullable Output<String> sourceRange) {
-            this.sourceRange = sourceRange;
+            $.sourceRange = sourceRange;
             return this;
         }
-        public Builder sourceRange(@Nullable String sourceRange) {
-            this.sourceRange = Codegen.ofNullable(sourceRange);
-            return this;
-        }        public FirewallRuleState build() {
-            return new FirewallRuleState(action, description, priority, project, sourceRange);
+
+        public Builder sourceRange(String sourceRange) {
+            return sourceRange(Output.of(sourceRange));
+        }
+
+        public FirewallRuleState build() {
+            return $;
         }
     }
+
 }

@@ -5,7 +5,6 @@ package com.pulumi.googlenative.bigquery_v2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.bigquery_v2.inputs.JobConfigurationExtractArgs;
 import com.pulumi.googlenative.bigquery_v2.inputs.JobConfigurationLoadArgs;
 import com.pulumi.googlenative.bigquery_v2.inputs.JobConfigurationQueryArgs;
@@ -14,6 +13,7 @@ import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class JobConfigurationArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="copy")
-      private final @Nullable Output<JobConfigurationTableCopyArgs> copy;
+    private @Nullable Output<JobConfigurationTableCopyArgs> copy;
 
-    public Output<JobConfigurationTableCopyArgs> copy() {
-        return this.copy == null ? Codegen.empty() : this.copy;
+    public Optional<Output<JobConfigurationTableCopyArgs>> copy() {
+        return Optional.ofNullable(this.copy);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class JobConfigurationArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="dryRun")
-      private final @Nullable Output<Boolean> dryRun;
+    private @Nullable Output<Boolean> dryRun;
 
-    public Output<Boolean> dryRun() {
-        return this.dryRun == null ? Codegen.empty() : this.dryRun;
+    public Optional<Output<Boolean>> dryRun() {
+        return Optional.ofNullable(this.dryRun);
     }
 
     /**
@@ -48,10 +48,10 @@ public final class JobConfigurationArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="extract")
-      private final @Nullable Output<JobConfigurationExtractArgs> extract;
+    private @Nullable Output<JobConfigurationExtractArgs> extract;
 
-    public Output<JobConfigurationExtractArgs> extract() {
-        return this.extract == null ? Codegen.empty() : this.extract;
+    public Optional<Output<JobConfigurationExtractArgs>> extract() {
+        return Optional.ofNullable(this.extract);
     }
 
     /**
@@ -59,10 +59,10 @@ public final class JobConfigurationArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="jobTimeoutMs")
-      private final @Nullable Output<String> jobTimeoutMs;
+    private @Nullable Output<String> jobTimeoutMs;
 
-    public Output<String> jobTimeoutMs() {
-        return this.jobTimeoutMs == null ? Codegen.empty() : this.jobTimeoutMs;
+    public Optional<Output<String>> jobTimeoutMs() {
+        return Optional.ofNullable(this.jobTimeoutMs);
     }
 
     /**
@@ -70,10 +70,10 @@ public final class JobConfigurationArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="labels")
-      private final @Nullable Output<Map<String,String>> labels;
+    private @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> labels() {
-        return this.labels == null ? Codegen.empty() : this.labels;
+    public Optional<Output<Map<String,String>>> labels() {
+        return Optional.ofNullable(this.labels);
     }
 
     /**
@@ -81,10 +81,10 @@ public final class JobConfigurationArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="load")
-      private final @Nullable Output<JobConfigurationLoadArgs> load;
+    private @Nullable Output<JobConfigurationLoadArgs> load;
 
-    public Output<JobConfigurationLoadArgs> load() {
-        return this.load == null ? Codegen.empty() : this.load;
+    public Optional<Output<JobConfigurationLoadArgs>> load() {
+        return Optional.ofNullable(this.load);
     }
 
     /**
@@ -92,128 +92,108 @@ public final class JobConfigurationArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="query")
-      private final @Nullable Output<JobConfigurationQueryArgs> query;
+    private @Nullable Output<JobConfigurationQueryArgs> query;
 
-    public Output<JobConfigurationQueryArgs> query() {
-        return this.query == null ? Codegen.empty() : this.query;
+    public Optional<Output<JobConfigurationQueryArgs>> query() {
+        return Optional.ofNullable(this.query);
     }
 
-    public JobConfigurationArgs(
-        @Nullable Output<JobConfigurationTableCopyArgs> copy,
-        @Nullable Output<Boolean> dryRun,
-        @Nullable Output<JobConfigurationExtractArgs> extract,
-        @Nullable Output<String> jobTimeoutMs,
-        @Nullable Output<Map<String,String>> labels,
-        @Nullable Output<JobConfigurationLoadArgs> load,
-        @Nullable Output<JobConfigurationQueryArgs> query) {
-        this.copy = copy;
-        this.dryRun = dryRun;
-        this.extract = extract;
-        this.jobTimeoutMs = jobTimeoutMs;
-        this.labels = labels;
-        this.load = load;
-        this.query = query;
-    }
+    private JobConfigurationArgs() {}
 
-    private JobConfigurationArgs() {
-        this.copy = Codegen.empty();
-        this.dryRun = Codegen.empty();
-        this.extract = Codegen.empty();
-        this.jobTimeoutMs = Codegen.empty();
-        this.labels = Codegen.empty();
-        this.load = Codegen.empty();
-        this.query = Codegen.empty();
+    private JobConfigurationArgs(JobConfigurationArgs $) {
+        this.copy = $.copy;
+        this.dryRun = $.dryRun;
+        this.extract = $.extract;
+        this.jobTimeoutMs = $.jobTimeoutMs;
+        this.labels = $.labels;
+        this.load = $.load;
+        this.query = $.query;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(JobConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<JobConfigurationTableCopyArgs> copy;
-        private @Nullable Output<Boolean> dryRun;
-        private @Nullable Output<JobConfigurationExtractArgs> extract;
-        private @Nullable Output<String> jobTimeoutMs;
-        private @Nullable Output<Map<String,String>> labels;
-        private @Nullable Output<JobConfigurationLoadArgs> load;
-        private @Nullable Output<JobConfigurationQueryArgs> query;
+        private JobConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new JobConfigurationArgs();
         }
 
         public Builder(JobConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.copy = defaults.copy;
-    	      this.dryRun = defaults.dryRun;
-    	      this.extract = defaults.extract;
-    	      this.jobTimeoutMs = defaults.jobTimeoutMs;
-    	      this.labels = defaults.labels;
-    	      this.load = defaults.load;
-    	      this.query = defaults.query;
+            $ = new JobConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder copy(@Nullable Output<JobConfigurationTableCopyArgs> copy) {
-            this.copy = copy;
+            $.copy = copy;
             return this;
         }
-        public Builder copy(@Nullable JobConfigurationTableCopyArgs copy) {
-            this.copy = Codegen.ofNullable(copy);
-            return this;
+
+        public Builder copy(JobConfigurationTableCopyArgs copy) {
+            return copy(Output.of(copy));
         }
+
         public Builder dryRun(@Nullable Output<Boolean> dryRun) {
-            this.dryRun = dryRun;
+            $.dryRun = dryRun;
             return this;
         }
-        public Builder dryRun(@Nullable Boolean dryRun) {
-            this.dryRun = Codegen.ofNullable(dryRun);
-            return this;
+
+        public Builder dryRun(Boolean dryRun) {
+            return dryRun(Output.of(dryRun));
         }
+
         public Builder extract(@Nullable Output<JobConfigurationExtractArgs> extract) {
-            this.extract = extract;
+            $.extract = extract;
             return this;
         }
-        public Builder extract(@Nullable JobConfigurationExtractArgs extract) {
-            this.extract = Codegen.ofNullable(extract);
-            return this;
+
+        public Builder extract(JobConfigurationExtractArgs extract) {
+            return extract(Output.of(extract));
         }
+
         public Builder jobTimeoutMs(@Nullable Output<String> jobTimeoutMs) {
-            this.jobTimeoutMs = jobTimeoutMs;
+            $.jobTimeoutMs = jobTimeoutMs;
             return this;
         }
-        public Builder jobTimeoutMs(@Nullable String jobTimeoutMs) {
-            this.jobTimeoutMs = Codegen.ofNullable(jobTimeoutMs);
-            return this;
+
+        public Builder jobTimeoutMs(String jobTimeoutMs) {
+            return jobTimeoutMs(Output.of(jobTimeoutMs));
         }
+
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
-            this.labels = labels;
+            $.labels = labels;
             return this;
         }
-        public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Codegen.ofNullable(labels);
-            return this;
+
+        public Builder labels(Map<String,String> labels) {
+            return labels(Output.of(labels));
         }
+
         public Builder load(@Nullable Output<JobConfigurationLoadArgs> load) {
-            this.load = load;
+            $.load = load;
             return this;
         }
-        public Builder load(@Nullable JobConfigurationLoadArgs load) {
-            this.load = Codegen.ofNullable(load);
-            return this;
+
+        public Builder load(JobConfigurationLoadArgs load) {
+            return load(Output.of(load));
         }
+
         public Builder query(@Nullable Output<JobConfigurationQueryArgs> query) {
-            this.query = query;
+            $.query = query;
             return this;
         }
-        public Builder query(@Nullable JobConfigurationQueryArgs query) {
-            this.query = Codegen.ofNullable(query);
-            return this;
-        }        public JobConfigurationArgs build() {
-            return new JobConfigurationArgs(copy, dryRun, extract, jobTimeoutMs, labels, load, query);
+
+        public Builder query(JobConfigurationQueryArgs query) {
+            return query(Output.of(query));
+        }
+
+        public JobConfigurationArgs build() {
+            return $;
         }
     }
+
 }

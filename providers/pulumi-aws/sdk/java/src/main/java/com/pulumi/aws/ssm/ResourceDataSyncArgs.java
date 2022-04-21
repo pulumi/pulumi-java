@@ -6,9 +6,9 @@ package com.pulumi.aws.ssm;
 import com.pulumi.aws.ssm.inputs.ResourceDataSyncS3DestinationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class ResourceDataSyncArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -32,63 +32,59 @@ public final class ResourceDataSyncArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="s3Destination", required=true)
-      private final Output<ResourceDataSyncS3DestinationArgs> s3Destination;
+    private Output<ResourceDataSyncS3DestinationArgs> s3Destination;
 
     public Output<ResourceDataSyncS3DestinationArgs> s3Destination() {
         return this.s3Destination;
     }
 
-    public ResourceDataSyncArgs(
-        @Nullable Output<String> name,
-        Output<ResourceDataSyncS3DestinationArgs> s3Destination) {
-        this.name = name;
-        this.s3Destination = Objects.requireNonNull(s3Destination, "expected parameter 's3Destination' to be non-null");
-    }
+    private ResourceDataSyncArgs() {}
 
-    private ResourceDataSyncArgs() {
-        this.name = Codegen.empty();
-        this.s3Destination = Codegen.empty();
+    private ResourceDataSyncArgs(ResourceDataSyncArgs $) {
+        this.name = $.name;
+        this.s3Destination = $.s3Destination;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ResourceDataSyncArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> name;
-        private Output<ResourceDataSyncS3DestinationArgs> s3Destination;
+        private ResourceDataSyncArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ResourceDataSyncArgs();
         }
 
         public Builder(ResourceDataSyncArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.s3Destination = defaults.s3Destination;
+            $ = new ResourceDataSyncArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder s3Destination(Output<ResourceDataSyncS3DestinationArgs> s3Destination) {
-            this.s3Destination = Objects.requireNonNull(s3Destination);
+            $.s3Destination = s3Destination;
             return this;
         }
+
         public Builder s3Destination(ResourceDataSyncS3DestinationArgs s3Destination) {
-            this.s3Destination = Output.of(Objects.requireNonNull(s3Destination));
-            return this;
-        }        public ResourceDataSyncArgs build() {
-            return new ResourceDataSyncArgs(name, s3Destination);
+            return s3Destination(Output.of(s3Destination));
+        }
+
+        public ResourceDataSyncArgs build() {
+            $.s3Destination = Objects.requireNonNull($.s3Destination, "expected parameter 's3Destination' to be non-null");
+            return $;
         }
     }
+
 }

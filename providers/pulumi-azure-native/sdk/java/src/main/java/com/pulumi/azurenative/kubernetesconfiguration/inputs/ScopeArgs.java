@@ -7,8 +7,8 @@ import com.pulumi.azurenative.kubernetesconfiguration.inputs.ScopeClusterArgs;
 import com.pulumi.azurenative.kubernetesconfiguration.inputs.ScopeNamespaceArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class ScopeArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="cluster")
-      private final @Nullable Output<ScopeClusterArgs> cluster;
+    private @Nullable Output<ScopeClusterArgs> cluster;
 
-    public Output<ScopeClusterArgs> cluster() {
-        return this.cluster == null ? Codegen.empty() : this.cluster;
+    public Optional<Output<ScopeClusterArgs>> cluster() {
+        return Optional.ofNullable(this.cluster);
     }
 
     /**
@@ -36,63 +36,58 @@ public final class ScopeArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="namespace")
-      private final @Nullable Output<ScopeNamespaceArgs> namespace;
+    private @Nullable Output<ScopeNamespaceArgs> namespace;
 
-    public Output<ScopeNamespaceArgs> namespace() {
-        return this.namespace == null ? Codegen.empty() : this.namespace;
+    public Optional<Output<ScopeNamespaceArgs>> namespace() {
+        return Optional.ofNullable(this.namespace);
     }
 
-    public ScopeArgs(
-        @Nullable Output<ScopeClusterArgs> cluster,
-        @Nullable Output<ScopeNamespaceArgs> namespace) {
-        this.cluster = cluster;
-        this.namespace = namespace;
-    }
+    private ScopeArgs() {}
 
-    private ScopeArgs() {
-        this.cluster = Codegen.empty();
-        this.namespace = Codegen.empty();
+    private ScopeArgs(ScopeArgs $) {
+        this.cluster = $.cluster;
+        this.namespace = $.namespace;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ScopeArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<ScopeClusterArgs> cluster;
-        private @Nullable Output<ScopeNamespaceArgs> namespace;
+        private ScopeArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ScopeArgs();
         }
 
         public Builder(ScopeArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cluster = defaults.cluster;
-    	      this.namespace = defaults.namespace;
+            $ = new ScopeArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder cluster(@Nullable Output<ScopeClusterArgs> cluster) {
-            this.cluster = cluster;
+            $.cluster = cluster;
             return this;
         }
-        public Builder cluster(@Nullable ScopeClusterArgs cluster) {
-            this.cluster = Codegen.ofNullable(cluster);
-            return this;
+
+        public Builder cluster(ScopeClusterArgs cluster) {
+            return cluster(Output.of(cluster));
         }
+
         public Builder namespace(@Nullable Output<ScopeNamespaceArgs> namespace) {
-            this.namespace = namespace;
+            $.namespace = namespace;
             return this;
         }
-        public Builder namespace(@Nullable ScopeNamespaceArgs namespace) {
-            this.namespace = Codegen.ofNullable(namespace);
-            return this;
-        }        public ScopeArgs build() {
-            return new ScopeArgs(cluster, namespace);
+
+        public Builder namespace(ScopeNamespaceArgs namespace) {
+            return namespace(Output.of(namespace));
+        }
+
+        public ScopeArgs build() {
+            return $;
         }
     }
+
 }

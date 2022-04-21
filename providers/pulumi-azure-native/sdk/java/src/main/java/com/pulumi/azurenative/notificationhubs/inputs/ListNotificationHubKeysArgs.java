@@ -17,7 +17,7 @@ public final class ListNotificationHubKeysArgs extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="authorizationRuleName", required=true)
-      private final String authorizationRuleName;
+    private String authorizationRuleName;
 
     public String authorizationRuleName() {
         return this.authorizationRuleName;
@@ -28,7 +28,7 @@ public final class ListNotificationHubKeysArgs extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="namespaceName", required=true)
-      private final String namespaceName;
+    private String namespaceName;
 
     public String namespaceName() {
         return this.namespaceName;
@@ -39,7 +39,7 @@ public final class ListNotificationHubKeysArgs extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="notificationHubName", required=true)
-      private final String notificationHubName;
+    private String notificationHubName;
 
     public String notificationHubName() {
         return this.notificationHubName;
@@ -50,73 +50,66 @@ public final class ListNotificationHubKeysArgs extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public ListNotificationHubKeysArgs(
-        String authorizationRuleName,
-        String namespaceName,
-        String notificationHubName,
-        String resourceGroupName) {
-        this.authorizationRuleName = Objects.requireNonNull(authorizationRuleName, "expected parameter 'authorizationRuleName' to be non-null");
-        this.namespaceName = Objects.requireNonNull(namespaceName, "expected parameter 'namespaceName' to be non-null");
-        this.notificationHubName = Objects.requireNonNull(notificationHubName, "expected parameter 'notificationHubName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private ListNotificationHubKeysArgs() {}
 
-    private ListNotificationHubKeysArgs() {
-        this.authorizationRuleName = null;
-        this.namespaceName = null;
-        this.notificationHubName = null;
-        this.resourceGroupName = null;
+    private ListNotificationHubKeysArgs(ListNotificationHubKeysArgs $) {
+        this.authorizationRuleName = $.authorizationRuleName;
+        this.namespaceName = $.namespaceName;
+        this.notificationHubName = $.notificationHubName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ListNotificationHubKeysArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String authorizationRuleName;
-        private String namespaceName;
-        private String notificationHubName;
-        private String resourceGroupName;
+        private ListNotificationHubKeysArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ListNotificationHubKeysArgs();
         }
 
         public Builder(ListNotificationHubKeysArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.authorizationRuleName = defaults.authorizationRuleName;
-    	      this.namespaceName = defaults.namespaceName;
-    	      this.notificationHubName = defaults.notificationHubName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new ListNotificationHubKeysArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder authorizationRuleName(String authorizationRuleName) {
-            this.authorizationRuleName = Objects.requireNonNull(authorizationRuleName);
+            $.authorizationRuleName = authorizationRuleName;
             return this;
         }
+
         public Builder namespaceName(String namespaceName) {
-            this.namespaceName = Objects.requireNonNull(namespaceName);
+            $.namespaceName = namespaceName;
             return this;
         }
+
         public Builder notificationHubName(String notificationHubName) {
-            this.notificationHubName = Objects.requireNonNull(notificationHubName);
+            $.notificationHubName = notificationHubName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public ListNotificationHubKeysArgs build() {
-            return new ListNotificationHubKeysArgs(authorizationRuleName, namespaceName, notificationHubName, resourceGroupName);
+        }
+
+        public ListNotificationHubKeysArgs build() {
+            $.authorizationRuleName = Objects.requireNonNull($.authorizationRuleName, "expected parameter 'authorizationRuleName' to be non-null");
+            $.namespaceName = Objects.requireNonNull($.namespaceName, "expected parameter 'namespaceName' to be non-null");
+            $.notificationHubName = Objects.requireNonNull($.notificationHubName, "expected parameter 'notificationHubName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

@@ -21,7 +21,7 @@ public final class ResourceGroupResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="groupId", required=true)
-      private final String groupId;
+    private String groupId;
 
     public String groupId() {
         return this.groupId;
@@ -32,55 +32,52 @@ public final class ResourceGroupResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="resourceType", required=true)
-      private final String resourceType;
+    private String resourceType;
 
     public String resourceType() {
         return this.resourceType;
     }
 
-    public ResourceGroupResponse(
-        String groupId,
-        String resourceType) {
-        this.groupId = Objects.requireNonNull(groupId, "expected parameter 'groupId' to be non-null");
-        this.resourceType = Objects.requireNonNull(resourceType, "expected parameter 'resourceType' to be non-null");
-    }
+    private ResourceGroupResponse() {}
 
-    private ResourceGroupResponse() {
-        this.groupId = null;
-        this.resourceType = null;
+    private ResourceGroupResponse(ResourceGroupResponse $) {
+        this.groupId = $.groupId;
+        this.resourceType = $.resourceType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ResourceGroupResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String groupId;
-        private String resourceType;
+        private ResourceGroupResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ResourceGroupResponse();
         }
 
         public Builder(ResourceGroupResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.groupId = defaults.groupId;
-    	      this.resourceType = defaults.resourceType;
+            $ = new ResourceGroupResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder groupId(String groupId) {
-            this.groupId = Objects.requireNonNull(groupId);
+            $.groupId = groupId;
             return this;
         }
+
         public Builder resourceType(String resourceType) {
-            this.resourceType = Objects.requireNonNull(resourceType);
+            $.resourceType = resourceType;
             return this;
-        }        public ResourceGroupResponse build() {
-            return new ResourceGroupResponse(groupId, resourceType);
+        }
+
+        public ResourceGroupResponse build() {
+            $.groupId = Objects.requireNonNull($.groupId, "expected parameter 'groupId' to be non-null");
+            $.resourceType = Objects.requireNonNull($.resourceType, "expected parameter 'resourceType' to be non-null");
+            return $;
         }
     }
+
 }

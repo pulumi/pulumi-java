@@ -11,6 +11,7 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,7 +28,7 @@ public final class ComponentSetupArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="componentName", required=true)
-      private final Output<String> componentName;
+    private Output<String> componentName;
 
     public Output<String> componentName() {
         return this.componentName;
@@ -38,10 +39,10 @@ public final class ComponentSetupArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="licenseKey")
-      private final @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> licenseKey;
+    private @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> licenseKey;
 
-    public Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> licenseKey() {
-        return this.licenseKey == null ? Codegen.empty() : this.licenseKey;
+    public Optional<Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>>> licenseKey() {
+        return Optional.ofNullable(this.licenseKey);
     }
 
     /**
@@ -50,76 +51,70 @@ public final class ComponentSetupArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="type", required=true)
-      private final Output<String> type;
+    private Output<String> type;
 
     public Output<String> type() {
         return this.type;
     }
 
-    public ComponentSetupArgs(
-        Output<String> componentName,
-        @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> licenseKey,
-        Output<String> type) {
-        this.componentName = Objects.requireNonNull(componentName, "expected parameter 'componentName' to be non-null");
-        this.licenseKey = licenseKey;
-        this.type = Codegen.stringProp("type").output().arg(type).require();
-    }
+    private ComponentSetupArgs() {}
 
-    private ComponentSetupArgs() {
-        this.componentName = Codegen.empty();
-        this.licenseKey = Codegen.empty();
-        this.type = Codegen.empty();
+    private ComponentSetupArgs(ComponentSetupArgs $) {
+        this.componentName = $.componentName;
+        this.licenseKey = $.licenseKey;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ComponentSetupArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> componentName;
-        private @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> licenseKey;
-        private Output<String> type;
+        private ComponentSetupArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ComponentSetupArgs();
         }
 
         public Builder(ComponentSetupArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.componentName = defaults.componentName;
-    	      this.licenseKey = defaults.licenseKey;
-    	      this.type = defaults.type;
+            $ = new ComponentSetupArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder componentName(Output<String> componentName) {
-            this.componentName = Objects.requireNonNull(componentName);
+            $.componentName = componentName;
             return this;
         }
+
         public Builder componentName(String componentName) {
-            this.componentName = Output.of(Objects.requireNonNull(componentName));
-            return this;
+            return componentName(Output.of(componentName));
         }
+
         public Builder licenseKey(@Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> licenseKey) {
-            this.licenseKey = licenseKey;
+            $.licenseKey = licenseKey;
             return this;
         }
-        public Builder licenseKey(@Nullable Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs> licenseKey) {
-            this.licenseKey = Codegen.ofNullable(licenseKey);
-            return this;
+
+        public Builder licenseKey(Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs> licenseKey) {
+            return licenseKey(Output.of(licenseKey));
         }
+
         public Builder type(Output<String> type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Output.of(Objects.requireNonNull(type));
-            return this;
-        }        public ComponentSetupArgs build() {
-            return new ComponentSetupArgs(componentName, licenseKey, type);
+            return type(Output.of(type));
+        }
+
+        public ComponentSetupArgs build() {
+            $.componentName = Objects.requireNonNull($.componentName, "expected parameter 'componentName' to be non-null");
+            $.type = Codegen.stringProp("type").output().arg($.type).require();
+            return $;
         }
     }
+
 }

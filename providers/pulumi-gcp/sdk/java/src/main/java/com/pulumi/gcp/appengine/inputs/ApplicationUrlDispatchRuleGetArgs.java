@@ -5,9 +5,9 @@ package com.pulumi.gcp.appengine.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -16,90 +16,82 @@ public final class ApplicationUrlDispatchRuleGetArgs extends com.pulumi.resource
     public static final ApplicationUrlDispatchRuleGetArgs Empty = new ApplicationUrlDispatchRuleGetArgs();
 
     @Import(name="domain")
-      private final @Nullable Output<String> domain;
+    private @Nullable Output<String> domain;
 
-    public Output<String> domain() {
-        return this.domain == null ? Codegen.empty() : this.domain;
+    public Optional<Output<String>> domain() {
+        return Optional.ofNullable(this.domain);
     }
 
     @Import(name="path")
-      private final @Nullable Output<String> path;
+    private @Nullable Output<String> path;
 
-    public Output<String> path() {
-        return this.path == null ? Codegen.empty() : this.path;
+    public Optional<Output<String>> path() {
+        return Optional.ofNullable(this.path);
     }
 
     @Import(name="service")
-      private final @Nullable Output<String> service;
+    private @Nullable Output<String> service;
 
-    public Output<String> service() {
-        return this.service == null ? Codegen.empty() : this.service;
+    public Optional<Output<String>> service() {
+        return Optional.ofNullable(this.service);
     }
 
-    public ApplicationUrlDispatchRuleGetArgs(
-        @Nullable Output<String> domain,
-        @Nullable Output<String> path,
-        @Nullable Output<String> service) {
-        this.domain = domain;
-        this.path = path;
-        this.service = service;
-    }
+    private ApplicationUrlDispatchRuleGetArgs() {}
 
-    private ApplicationUrlDispatchRuleGetArgs() {
-        this.domain = Codegen.empty();
-        this.path = Codegen.empty();
-        this.service = Codegen.empty();
+    private ApplicationUrlDispatchRuleGetArgs(ApplicationUrlDispatchRuleGetArgs $) {
+        this.domain = $.domain;
+        this.path = $.path;
+        this.service = $.service;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ApplicationUrlDispatchRuleGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> domain;
-        private @Nullable Output<String> path;
-        private @Nullable Output<String> service;
+        private ApplicationUrlDispatchRuleGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ApplicationUrlDispatchRuleGetArgs();
         }
 
         public Builder(ApplicationUrlDispatchRuleGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.domain = defaults.domain;
-    	      this.path = defaults.path;
-    	      this.service = defaults.service;
+            $ = new ApplicationUrlDispatchRuleGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder domain(@Nullable Output<String> domain) {
-            this.domain = domain;
+            $.domain = domain;
             return this;
         }
-        public Builder domain(@Nullable String domain) {
-            this.domain = Codegen.ofNullable(domain);
-            return this;
+
+        public Builder domain(String domain) {
+            return domain(Output.of(domain));
         }
+
         public Builder path(@Nullable Output<String> path) {
-            this.path = path;
+            $.path = path;
             return this;
         }
-        public Builder path(@Nullable String path) {
-            this.path = Codegen.ofNullable(path);
-            return this;
+
+        public Builder path(String path) {
+            return path(Output.of(path));
         }
+
         public Builder service(@Nullable Output<String> service) {
-            this.service = service;
+            $.service = service;
             return this;
         }
-        public Builder service(@Nullable String service) {
-            this.service = Codegen.ofNullable(service);
-            return this;
-        }        public ApplicationUrlDispatchRuleGetArgs build() {
-            return new ApplicationUrlDispatchRuleGetArgs(domain, path, service);
+
+        public Builder service(String service) {
+            return service(Output.of(service));
+        }
+
+        public ApplicationUrlDispatchRuleGetArgs build() {
+            return $;
         }
     }
+
 }

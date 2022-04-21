@@ -24,10 +24,10 @@ public final class ContainerResourcesResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="cpu")
-      private final @Nullable Double cpu;
+    private @Nullable Double cpu;
 
     public Optional<Double> cpu() {
-        return this.cpu == null ? Optional.empty() : Optional.ofNullable(this.cpu);
+        return Optional.ofNullable(this.cpu);
     }
 
     /**
@@ -35,55 +35,50 @@ public final class ContainerResourcesResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="memory")
-      private final @Nullable String memory;
+    private @Nullable String memory;
 
     public Optional<String> memory() {
-        return this.memory == null ? Optional.empty() : Optional.ofNullable(this.memory);
+        return Optional.ofNullable(this.memory);
     }
 
-    public ContainerResourcesResponse(
-        @Nullable Double cpu,
-        @Nullable String memory) {
-        this.cpu = cpu;
-        this.memory = memory;
-    }
+    private ContainerResourcesResponse() {}
 
-    private ContainerResourcesResponse() {
-        this.cpu = null;
-        this.memory = null;
+    private ContainerResourcesResponse(ContainerResourcesResponse $) {
+        this.cpu = $.cpu;
+        this.memory = $.memory;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ContainerResourcesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Double cpu;
-        private @Nullable String memory;
+        private ContainerResourcesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ContainerResourcesResponse();
         }
 
         public Builder(ContainerResourcesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cpu = defaults.cpu;
-    	      this.memory = defaults.memory;
+            $ = new ContainerResourcesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder cpu(@Nullable Double cpu) {
-            this.cpu = cpu;
+            $.cpu = cpu;
             return this;
         }
+
         public Builder memory(@Nullable String memory) {
-            this.memory = memory;
+            $.memory = memory;
             return this;
-        }        public ContainerResourcesResponse build() {
-            return new ContainerResourcesResponse(cpu, memory);
+        }
+
+        public ContainerResourcesResponse build() {
+            return $;
         }
     }
+
 }

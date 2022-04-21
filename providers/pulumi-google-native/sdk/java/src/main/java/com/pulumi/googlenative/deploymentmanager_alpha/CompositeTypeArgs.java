@@ -5,13 +5,13 @@ package com.pulumi.googlenative.deploymentmanager_alpha;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.deploymentmanager_alpha.enums.CompositeTypeStatus;
 import com.pulumi.googlenative.deploymentmanager_alpha.inputs.CompositeTypeLabelEntryArgs;
 import com.pulumi.googlenative.deploymentmanager_alpha.inputs.TemplateContentsArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,17 +24,17 @@ public final class CompositeTypeArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     @Import(name="id")
-      private final @Nullable Output<String> id;
+    private @Nullable Output<String> id;
 
-    public Output<String> id() {
-        return this.id == null ? Codegen.empty() : this.id;
+    public Optional<Output<String>> id() {
+        return Optional.ofNullable(this.id);
     }
 
     /**
@@ -42,10 +42,10 @@ public final class CompositeTypeArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="labels")
-      private final @Nullable Output<List<CompositeTypeLabelEntryArgs>> labels;
+    private @Nullable Output<List<CompositeTypeLabelEntryArgs>> labels;
 
-    public Output<List<CompositeTypeLabelEntryArgs>> labels() {
-        return this.labels == null ? Codegen.empty() : this.labels;
+    public Optional<Output<List<CompositeTypeLabelEntryArgs>>> labels() {
+        return Optional.ofNullable(this.labels);
     }
 
     /**
@@ -53,24 +53,24 @@ public final class CompositeTypeArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     @Import(name="status")
-      private final @Nullable Output<CompositeTypeStatus> status;
+    private @Nullable Output<CompositeTypeStatus> status;
 
-    public Output<CompositeTypeStatus> status() {
-        return this.status == null ? Codegen.empty() : this.status;
+    public Optional<Output<CompositeTypeStatus>> status() {
+        return Optional.ofNullable(this.status);
     }
 
     /**
@@ -78,131 +78,112 @@ public final class CompositeTypeArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="templateContents")
-      private final @Nullable Output<TemplateContentsArgs> templateContents;
+    private @Nullable Output<TemplateContentsArgs> templateContents;
 
-    public Output<TemplateContentsArgs> templateContents() {
-        return this.templateContents == null ? Codegen.empty() : this.templateContents;
+    public Optional<Output<TemplateContentsArgs>> templateContents() {
+        return Optional.ofNullable(this.templateContents);
     }
 
-    public CompositeTypeArgs(
-        @Nullable Output<String> description,
-        @Nullable Output<String> id,
-        @Nullable Output<List<CompositeTypeLabelEntryArgs>> labels,
-        @Nullable Output<String> name,
-        @Nullable Output<String> project,
-        @Nullable Output<CompositeTypeStatus> status,
-        @Nullable Output<TemplateContentsArgs> templateContents) {
-        this.description = description;
-        this.id = id;
-        this.labels = labels;
-        this.name = name;
-        this.project = project;
-        this.status = status;
-        this.templateContents = templateContents;
-    }
+    private CompositeTypeArgs() {}
 
-    private CompositeTypeArgs() {
-        this.description = Codegen.empty();
-        this.id = Codegen.empty();
-        this.labels = Codegen.empty();
-        this.name = Codegen.empty();
-        this.project = Codegen.empty();
-        this.status = Codegen.empty();
-        this.templateContents = Codegen.empty();
+    private CompositeTypeArgs(CompositeTypeArgs $) {
+        this.description = $.description;
+        this.id = $.id;
+        this.labels = $.labels;
+        this.name = $.name;
+        this.project = $.project;
+        this.status = $.status;
+        this.templateContents = $.templateContents;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CompositeTypeArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> description;
-        private @Nullable Output<String> id;
-        private @Nullable Output<List<CompositeTypeLabelEntryArgs>> labels;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> project;
-        private @Nullable Output<CompositeTypeStatus> status;
-        private @Nullable Output<TemplateContentsArgs> templateContents;
+        private CompositeTypeArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CompositeTypeArgs();
         }
 
         public Builder(CompositeTypeArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.description = defaults.description;
-    	      this.id = defaults.id;
-    	      this.labels = defaults.labels;
-    	      this.name = defaults.name;
-    	      this.project = defaults.project;
-    	      this.status = defaults.status;
-    	      this.templateContents = defaults.templateContents;
+            $ = new CompositeTypeArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder id(@Nullable Output<String> id) {
-            this.id = id;
+            $.id = id;
             return this;
         }
-        public Builder id(@Nullable String id) {
-            this.id = Codegen.ofNullable(id);
-            return this;
+
+        public Builder id(String id) {
+            return id(Output.of(id));
         }
+
         public Builder labels(@Nullable Output<List<CompositeTypeLabelEntryArgs>> labels) {
-            this.labels = labels;
+            $.labels = labels;
             return this;
         }
-        public Builder labels(@Nullable List<CompositeTypeLabelEntryArgs> labels) {
-            this.labels = Codegen.ofNullable(labels);
-            return this;
+
+        public Builder labels(List<CompositeTypeLabelEntryArgs> labels) {
+            return labels(Output.of(labels));
         }
+
         public Builder labels(CompositeTypeLabelEntryArgs... labels) {
             return labels(List.of(labels));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder status(@Nullable Output<CompositeTypeStatus> status) {
-            this.status = status;
+            $.status = status;
             return this;
         }
-        public Builder status(@Nullable CompositeTypeStatus status) {
-            this.status = Codegen.ofNullable(status);
-            return this;
+
+        public Builder status(CompositeTypeStatus status) {
+            return status(Output.of(status));
         }
+
         public Builder templateContents(@Nullable Output<TemplateContentsArgs> templateContents) {
-            this.templateContents = templateContents;
+            $.templateContents = templateContents;
             return this;
         }
-        public Builder templateContents(@Nullable TemplateContentsArgs templateContents) {
-            this.templateContents = Codegen.ofNullable(templateContents);
-            return this;
-        }        public CompositeTypeArgs build() {
-            return new CompositeTypeArgs(description, id, labels, name, project, status, templateContents);
+
+        public Builder templateContents(TemplateContentsArgs templateContents) {
+            return templateContents(Output.of(templateContents));
+        }
+
+        public CompositeTypeArgs build() {
+            return $;
         }
     }
+
 }

@@ -5,7 +5,6 @@ package com.pulumi.googlenative.clouddeploy_v1;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.clouddeploy_v1.inputs.AnthosClusterArgs;
 import com.pulumi.googlenative.clouddeploy_v1.inputs.ExecutionConfigArgs;
 import com.pulumi.googlenative.clouddeploy_v1.inputs.GkeClusterArgs;
@@ -14,6 +13,7 @@ import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class TargetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="annotations")
-      private final @Nullable Output<Map<String,String>> annotations;
+    private @Nullable Output<Map<String,String>> annotations;
 
-    public Output<Map<String,String>> annotations() {
-        return this.annotations == null ? Codegen.empty() : this.annotations;
+    public Optional<Output<Map<String,String>>> annotations() {
+        return Optional.ofNullable(this.annotations);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class TargetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="anthosCluster")
-      private final @Nullable Output<AnthosClusterArgs> anthosCluster;
+    private @Nullable Output<AnthosClusterArgs> anthosCluster;
 
-    public Output<AnthosClusterArgs> anthosCluster() {
-        return this.anthosCluster == null ? Codegen.empty() : this.anthosCluster;
+    public Optional<Output<AnthosClusterArgs>> anthosCluster() {
+        return Optional.ofNullable(this.anthosCluster);
     }
 
     /**
@@ -48,10 +48,10 @@ public final class TargetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -59,10 +59,10 @@ public final class TargetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="etag")
-      private final @Nullable Output<String> etag;
+    private @Nullable Output<String> etag;
 
-    public Output<String> etag() {
-        return this.etag == null ? Codegen.empty() : this.etag;
+    public Optional<Output<String>> etag() {
+        return Optional.ofNullable(this.etag);
     }
 
     /**
@@ -70,10 +70,10 @@ public final class TargetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="executionConfigs")
-      private final @Nullable Output<List<ExecutionConfigArgs>> executionConfigs;
+    private @Nullable Output<List<ExecutionConfigArgs>> executionConfigs;
 
-    public Output<List<ExecutionConfigArgs>> executionConfigs() {
-        return this.executionConfigs == null ? Codegen.empty() : this.executionConfigs;
+    public Optional<Output<List<ExecutionConfigArgs>>> executionConfigs() {
+        return Optional.ofNullable(this.executionConfigs);
     }
 
     /**
@@ -81,10 +81,10 @@ public final class TargetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="gke")
-      private final @Nullable Output<GkeClusterArgs> gke;
+    private @Nullable Output<GkeClusterArgs> gke;
 
-    public Output<GkeClusterArgs> gke() {
-        return this.gke == null ? Codegen.empty() : this.gke;
+    public Optional<Output<GkeClusterArgs>> gke() {
+        return Optional.ofNullable(this.gke);
     }
 
     /**
@@ -92,17 +92,17 @@ public final class TargetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="labels")
-      private final @Nullable Output<Map<String,String>> labels;
+    private @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> labels() {
-        return this.labels == null ? Codegen.empty() : this.labels;
+    public Optional<Output<Map<String,String>>> labels() {
+        return Optional.ofNullable(this.labels);
     }
 
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -110,24 +110,24 @@ public final class TargetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     @Import(name="requestId")
-      private final @Nullable Output<String> requestId;
+    private @Nullable Output<String> requestId;
 
-    public Output<String> requestId() {
-        return this.requestId == null ? Codegen.empty() : this.requestId;
+    public Optional<Output<String>> requestId() {
+        return Optional.ofNullable(this.requestId);
     }
 
     /**
@@ -135,236 +135,197 @@ public final class TargetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="requireApproval")
-      private final @Nullable Output<Boolean> requireApproval;
+    private @Nullable Output<Boolean> requireApproval;
 
-    public Output<Boolean> requireApproval() {
-        return this.requireApproval == null ? Codegen.empty() : this.requireApproval;
+    public Optional<Output<Boolean>> requireApproval() {
+        return Optional.ofNullable(this.requireApproval);
     }
 
     @Import(name="targetId", required=true)
-      private final Output<String> targetId;
+    private Output<String> targetId;
 
     public Output<String> targetId() {
         return this.targetId;
     }
 
     @Import(name="validateOnly")
-      private final @Nullable Output<String> validateOnly;
+    private @Nullable Output<String> validateOnly;
 
-    public Output<String> validateOnly() {
-        return this.validateOnly == null ? Codegen.empty() : this.validateOnly;
+    public Optional<Output<String>> validateOnly() {
+        return Optional.ofNullable(this.validateOnly);
     }
 
-    public TargetArgs(
-        @Nullable Output<Map<String,String>> annotations,
-        @Nullable Output<AnthosClusterArgs> anthosCluster,
-        @Nullable Output<String> description,
-        @Nullable Output<String> etag,
-        @Nullable Output<List<ExecutionConfigArgs>> executionConfigs,
-        @Nullable Output<GkeClusterArgs> gke,
-        @Nullable Output<Map<String,String>> labels,
-        @Nullable Output<String> location,
-        @Nullable Output<String> name,
-        @Nullable Output<String> project,
-        @Nullable Output<String> requestId,
-        @Nullable Output<Boolean> requireApproval,
-        Output<String> targetId,
-        @Nullable Output<String> validateOnly) {
-        this.annotations = annotations;
-        this.anthosCluster = anthosCluster;
-        this.description = description;
-        this.etag = etag;
-        this.executionConfigs = executionConfigs;
-        this.gke = gke;
-        this.labels = labels;
-        this.location = location;
-        this.name = name;
-        this.project = project;
-        this.requestId = requestId;
-        this.requireApproval = requireApproval;
-        this.targetId = Objects.requireNonNull(targetId, "expected parameter 'targetId' to be non-null");
-        this.validateOnly = validateOnly;
-    }
+    private TargetArgs() {}
 
-    private TargetArgs() {
-        this.annotations = Codegen.empty();
-        this.anthosCluster = Codegen.empty();
-        this.description = Codegen.empty();
-        this.etag = Codegen.empty();
-        this.executionConfigs = Codegen.empty();
-        this.gke = Codegen.empty();
-        this.labels = Codegen.empty();
-        this.location = Codegen.empty();
-        this.name = Codegen.empty();
-        this.project = Codegen.empty();
-        this.requestId = Codegen.empty();
-        this.requireApproval = Codegen.empty();
-        this.targetId = Codegen.empty();
-        this.validateOnly = Codegen.empty();
+    private TargetArgs(TargetArgs $) {
+        this.annotations = $.annotations;
+        this.anthosCluster = $.anthosCluster;
+        this.description = $.description;
+        this.etag = $.etag;
+        this.executionConfigs = $.executionConfigs;
+        this.gke = $.gke;
+        this.labels = $.labels;
+        this.location = $.location;
+        this.name = $.name;
+        this.project = $.project;
+        this.requestId = $.requestId;
+        this.requireApproval = $.requireApproval;
+        this.targetId = $.targetId;
+        this.validateOnly = $.validateOnly;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TargetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Map<String,String>> annotations;
-        private @Nullable Output<AnthosClusterArgs> anthosCluster;
-        private @Nullable Output<String> description;
-        private @Nullable Output<String> etag;
-        private @Nullable Output<List<ExecutionConfigArgs>> executionConfigs;
-        private @Nullable Output<GkeClusterArgs> gke;
-        private @Nullable Output<Map<String,String>> labels;
-        private @Nullable Output<String> location;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> project;
-        private @Nullable Output<String> requestId;
-        private @Nullable Output<Boolean> requireApproval;
-        private Output<String> targetId;
-        private @Nullable Output<String> validateOnly;
+        private TargetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TargetArgs();
         }
 
         public Builder(TargetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.annotations = defaults.annotations;
-    	      this.anthosCluster = defaults.anthosCluster;
-    	      this.description = defaults.description;
-    	      this.etag = defaults.etag;
-    	      this.executionConfigs = defaults.executionConfigs;
-    	      this.gke = defaults.gke;
-    	      this.labels = defaults.labels;
-    	      this.location = defaults.location;
-    	      this.name = defaults.name;
-    	      this.project = defaults.project;
-    	      this.requestId = defaults.requestId;
-    	      this.requireApproval = defaults.requireApproval;
-    	      this.targetId = defaults.targetId;
-    	      this.validateOnly = defaults.validateOnly;
+            $ = new TargetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder annotations(@Nullable Output<Map<String,String>> annotations) {
-            this.annotations = annotations;
+            $.annotations = annotations;
             return this;
         }
-        public Builder annotations(@Nullable Map<String,String> annotations) {
-            this.annotations = Codegen.ofNullable(annotations);
-            return this;
+
+        public Builder annotations(Map<String,String> annotations) {
+            return annotations(Output.of(annotations));
         }
+
         public Builder anthosCluster(@Nullable Output<AnthosClusterArgs> anthosCluster) {
-            this.anthosCluster = anthosCluster;
+            $.anthosCluster = anthosCluster;
             return this;
         }
-        public Builder anthosCluster(@Nullable AnthosClusterArgs anthosCluster) {
-            this.anthosCluster = Codegen.ofNullable(anthosCluster);
-            return this;
+
+        public Builder anthosCluster(AnthosClusterArgs anthosCluster) {
+            return anthosCluster(Output.of(anthosCluster));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder etag(@Nullable Output<String> etag) {
-            this.etag = etag;
+            $.etag = etag;
             return this;
         }
-        public Builder etag(@Nullable String etag) {
-            this.etag = Codegen.ofNullable(etag);
-            return this;
+
+        public Builder etag(String etag) {
+            return etag(Output.of(etag));
         }
+
         public Builder executionConfigs(@Nullable Output<List<ExecutionConfigArgs>> executionConfigs) {
-            this.executionConfigs = executionConfigs;
+            $.executionConfigs = executionConfigs;
             return this;
         }
-        public Builder executionConfigs(@Nullable List<ExecutionConfigArgs> executionConfigs) {
-            this.executionConfigs = Codegen.ofNullable(executionConfigs);
-            return this;
+
+        public Builder executionConfigs(List<ExecutionConfigArgs> executionConfigs) {
+            return executionConfigs(Output.of(executionConfigs));
         }
+
         public Builder executionConfigs(ExecutionConfigArgs... executionConfigs) {
             return executionConfigs(List.of(executionConfigs));
         }
+
         public Builder gke(@Nullable Output<GkeClusterArgs> gke) {
-            this.gke = gke;
+            $.gke = gke;
             return this;
         }
-        public Builder gke(@Nullable GkeClusterArgs gke) {
-            this.gke = Codegen.ofNullable(gke);
-            return this;
+
+        public Builder gke(GkeClusterArgs gke) {
+            return gke(Output.of(gke));
         }
+
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
-            this.labels = labels;
+            $.labels = labels;
             return this;
         }
-        public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Codegen.ofNullable(labels);
-            return this;
+
+        public Builder labels(Map<String,String> labels) {
+            return labels(Output.of(labels));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder requestId(@Nullable Output<String> requestId) {
-            this.requestId = requestId;
+            $.requestId = requestId;
             return this;
         }
-        public Builder requestId(@Nullable String requestId) {
-            this.requestId = Codegen.ofNullable(requestId);
-            return this;
+
+        public Builder requestId(String requestId) {
+            return requestId(Output.of(requestId));
         }
+
         public Builder requireApproval(@Nullable Output<Boolean> requireApproval) {
-            this.requireApproval = requireApproval;
+            $.requireApproval = requireApproval;
             return this;
         }
-        public Builder requireApproval(@Nullable Boolean requireApproval) {
-            this.requireApproval = Codegen.ofNullable(requireApproval);
-            return this;
+
+        public Builder requireApproval(Boolean requireApproval) {
+            return requireApproval(Output.of(requireApproval));
         }
+
         public Builder targetId(Output<String> targetId) {
-            this.targetId = Objects.requireNonNull(targetId);
+            $.targetId = targetId;
             return this;
         }
+
         public Builder targetId(String targetId) {
-            this.targetId = Output.of(Objects.requireNonNull(targetId));
-            return this;
+            return targetId(Output.of(targetId));
         }
+
         public Builder validateOnly(@Nullable Output<String> validateOnly) {
-            this.validateOnly = validateOnly;
+            $.validateOnly = validateOnly;
             return this;
         }
-        public Builder validateOnly(@Nullable String validateOnly) {
-            this.validateOnly = Codegen.ofNullable(validateOnly);
-            return this;
-        }        public TargetArgs build() {
-            return new TargetArgs(annotations, anthosCluster, description, etag, executionConfigs, gke, labels, location, name, project, requestId, requireApproval, targetId, validateOnly);
+
+        public Builder validateOnly(String validateOnly) {
+            return validateOnly(Output.of(validateOnly));
+        }
+
+        public TargetArgs build() {
+            $.targetId = Objects.requireNonNull($.targetId, "expected parameter 'targetId' to be non-null");
+            return $;
         }
     }
+
 }

@@ -22,7 +22,7 @@ public final class RsaTokenKeyResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="alg", required=true)
-      private final String alg;
+    private String alg;
 
     public String alg() {
         return this.alg;
@@ -33,7 +33,7 @@ public final class RsaTokenKeyResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="e", required=true)
-      private final String e;
+    private String e;
 
     public String e() {
         return this.e;
@@ -44,7 +44,7 @@ public final class RsaTokenKeyResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="kid", required=true)
-      private final String kid;
+    private String kid;
 
     public String kid() {
         return this.kid;
@@ -55,7 +55,7 @@ public final class RsaTokenKeyResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="n", required=true)
-      private final String n;
+    private String n;
 
     public String n() {
         return this.n;
@@ -67,82 +67,73 @@ public final class RsaTokenKeyResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
     }
 
-    public RsaTokenKeyResponse(
-        String alg,
-        String e,
-        String kid,
-        String n,
-        String type) {
-        this.alg = Objects.requireNonNull(alg, "expected parameter 'alg' to be non-null");
-        this.e = Objects.requireNonNull(e, "expected parameter 'e' to be non-null");
-        this.kid = Objects.requireNonNull(kid, "expected parameter 'kid' to be non-null");
-        this.n = Objects.requireNonNull(n, "expected parameter 'n' to be non-null");
-        this.type = Codegen.stringProp("type").arg(type).require();
-    }
+    private RsaTokenKeyResponse() {}
 
-    private RsaTokenKeyResponse() {
-        this.alg = null;
-        this.e = null;
-        this.kid = null;
-        this.n = null;
-        this.type = null;
+    private RsaTokenKeyResponse(RsaTokenKeyResponse $) {
+        this.alg = $.alg;
+        this.e = $.e;
+        this.kid = $.kid;
+        this.n = $.n;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RsaTokenKeyResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String alg;
-        private String e;
-        private String kid;
-        private String n;
-        private String type;
+        private RsaTokenKeyResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new RsaTokenKeyResponse();
         }
 
         public Builder(RsaTokenKeyResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.alg = defaults.alg;
-    	      this.e = defaults.e;
-    	      this.kid = defaults.kid;
-    	      this.n = defaults.n;
-    	      this.type = defaults.type;
+            $ = new RsaTokenKeyResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder alg(String alg) {
-            this.alg = Objects.requireNonNull(alg);
+            $.alg = alg;
             return this;
         }
+
         public Builder e(String e) {
-            this.e = Objects.requireNonNull(e);
+            $.e = e;
             return this;
         }
+
         public Builder kid(String kid) {
-            this.kid = Objects.requireNonNull(kid);
+            $.kid = kid;
             return this;
         }
+
         public Builder n(String n) {
-            this.n = Objects.requireNonNull(n);
+            $.n = n;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
-        }        public RsaTokenKeyResponse build() {
-            return new RsaTokenKeyResponse(alg, e, kid, n, type);
+        }
+
+        public RsaTokenKeyResponse build() {
+            $.alg = Objects.requireNonNull($.alg, "expected parameter 'alg' to be non-null");
+            $.e = Objects.requireNonNull($.e, "expected parameter 'e' to be non-null");
+            $.kid = Objects.requireNonNull($.kid, "expected parameter 'kid' to be non-null");
+            $.n = Objects.requireNonNull($.n, "expected parameter 'n' to be non-null");
+            $.type = Codegen.stringProp("type").arg($.type).require();
+            return $;
         }
     }
+
 }

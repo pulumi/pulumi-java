@@ -24,7 +24,7 @@ public final class WaitStepPropertiesArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="attributes", required=true)
-      private final Output<WaitStepAttributesArgs> attributes;
+    private Output<WaitStepAttributesArgs> attributes;
 
     public Output<WaitStepAttributesArgs> attributes() {
         return this.attributes;
@@ -36,63 +36,60 @@ public final class WaitStepPropertiesArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="stepType", required=true)
-      private final Output<String> stepType;
+    private Output<String> stepType;
 
     public Output<String> stepType() {
         return this.stepType;
     }
 
-    public WaitStepPropertiesArgs(
-        Output<WaitStepAttributesArgs> attributes,
-        Output<String> stepType) {
-        this.attributes = Objects.requireNonNull(attributes, "expected parameter 'attributes' to be non-null");
-        this.stepType = Codegen.stringProp("stepType").output().arg(stepType).require();
-    }
+    private WaitStepPropertiesArgs() {}
 
-    private WaitStepPropertiesArgs() {
-        this.attributes = Codegen.empty();
-        this.stepType = Codegen.empty();
+    private WaitStepPropertiesArgs(WaitStepPropertiesArgs $) {
+        this.attributes = $.attributes;
+        this.stepType = $.stepType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WaitStepPropertiesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<WaitStepAttributesArgs> attributes;
-        private Output<String> stepType;
+        private WaitStepPropertiesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new WaitStepPropertiesArgs();
         }
 
         public Builder(WaitStepPropertiesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.attributes = defaults.attributes;
-    	      this.stepType = defaults.stepType;
+            $ = new WaitStepPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder attributes(Output<WaitStepAttributesArgs> attributes) {
-            this.attributes = Objects.requireNonNull(attributes);
+            $.attributes = attributes;
             return this;
         }
+
         public Builder attributes(WaitStepAttributesArgs attributes) {
-            this.attributes = Output.of(Objects.requireNonNull(attributes));
-            return this;
+            return attributes(Output.of(attributes));
         }
+
         public Builder stepType(Output<String> stepType) {
-            this.stepType = Objects.requireNonNull(stepType);
+            $.stepType = stepType;
             return this;
         }
+
         public Builder stepType(String stepType) {
-            this.stepType = Output.of(Objects.requireNonNull(stepType));
-            return this;
-        }        public WaitStepPropertiesArgs build() {
-            return new WaitStepPropertiesArgs(attributes, stepType);
+            return stepType(Output.of(stepType));
+        }
+
+        public WaitStepPropertiesArgs build() {
+            $.attributes = Objects.requireNonNull($.attributes, "expected parameter 'attributes' to be non-null");
+            $.stepType = Codegen.stringProp("stepType").output().arg($.stepType).require();
+            return $;
         }
     }
+
 }

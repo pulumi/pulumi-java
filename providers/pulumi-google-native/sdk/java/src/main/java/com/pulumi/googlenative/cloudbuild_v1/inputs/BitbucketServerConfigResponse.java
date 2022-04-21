@@ -24,7 +24,7 @@ public final class BitbucketServerConfigResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="apiKey", required=true)
-      private final String apiKey;
+    private String apiKey;
 
     public String apiKey() {
         return this.apiKey;
@@ -35,7 +35,7 @@ public final class BitbucketServerConfigResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="connectedRepositories", required=true)
-      private final List<BitbucketServerRepositoryIdResponse> connectedRepositories;
+    private List<BitbucketServerRepositoryIdResponse> connectedRepositories;
 
     public List<BitbucketServerRepositoryIdResponse> connectedRepositories() {
         return this.connectedRepositories;
@@ -46,7 +46,7 @@ public final class BitbucketServerConfigResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="createTime", required=true)
-      private final String createTime;
+    private String createTime;
 
     public String createTime() {
         return this.createTime;
@@ -57,7 +57,7 @@ public final class BitbucketServerConfigResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="hostUri", required=true)
-      private final String hostUri;
+    private String hostUri;
 
     public String hostUri() {
         return this.hostUri;
@@ -68,7 +68,7 @@ public final class BitbucketServerConfigResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -79,7 +79,7 @@ public final class BitbucketServerConfigResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="peeredNetwork", required=true)
-      private final String peeredNetwork;
+    private String peeredNetwork;
 
     public String peeredNetwork() {
         return this.peeredNetwork;
@@ -90,7 +90,7 @@ public final class BitbucketServerConfigResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="secrets", required=true)
-      private final BitbucketServerSecretsResponse secrets;
+    private BitbucketServerSecretsResponse secrets;
 
     public BitbucketServerSecretsResponse secrets() {
         return this.secrets;
@@ -101,7 +101,7 @@ public final class BitbucketServerConfigResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="sslCa", required=true)
-      private final String sslCa;
+    private String sslCa;
 
     public String sslCa() {
         return this.sslCa;
@@ -112,7 +112,7 @@ public final class BitbucketServerConfigResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="username", required=true)
-      private final String username;
+    private String username;
 
     public String username() {
         return this.username;
@@ -123,130 +123,112 @@ public final class BitbucketServerConfigResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="webhookKey", required=true)
-      private final String webhookKey;
+    private String webhookKey;
 
     public String webhookKey() {
         return this.webhookKey;
     }
 
-    public BitbucketServerConfigResponse(
-        String apiKey,
-        List<BitbucketServerRepositoryIdResponse> connectedRepositories,
-        String createTime,
-        String hostUri,
-        String name,
-        String peeredNetwork,
-        BitbucketServerSecretsResponse secrets,
-        String sslCa,
-        String username,
-        String webhookKey) {
-        this.apiKey = Objects.requireNonNull(apiKey, "expected parameter 'apiKey' to be non-null");
-        this.connectedRepositories = Objects.requireNonNull(connectedRepositories, "expected parameter 'connectedRepositories' to be non-null");
-        this.createTime = Objects.requireNonNull(createTime, "expected parameter 'createTime' to be non-null");
-        this.hostUri = Objects.requireNonNull(hostUri, "expected parameter 'hostUri' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.peeredNetwork = Objects.requireNonNull(peeredNetwork, "expected parameter 'peeredNetwork' to be non-null");
-        this.secrets = Objects.requireNonNull(secrets, "expected parameter 'secrets' to be non-null");
-        this.sslCa = Objects.requireNonNull(sslCa, "expected parameter 'sslCa' to be non-null");
-        this.username = Objects.requireNonNull(username, "expected parameter 'username' to be non-null");
-        this.webhookKey = Objects.requireNonNull(webhookKey, "expected parameter 'webhookKey' to be non-null");
-    }
+    private BitbucketServerConfigResponse() {}
 
-    private BitbucketServerConfigResponse() {
-        this.apiKey = null;
-        this.connectedRepositories = List.of();
-        this.createTime = null;
-        this.hostUri = null;
-        this.name = null;
-        this.peeredNetwork = null;
-        this.secrets = null;
-        this.sslCa = null;
-        this.username = null;
-        this.webhookKey = null;
+    private BitbucketServerConfigResponse(BitbucketServerConfigResponse $) {
+        this.apiKey = $.apiKey;
+        this.connectedRepositories = $.connectedRepositories;
+        this.createTime = $.createTime;
+        this.hostUri = $.hostUri;
+        this.name = $.name;
+        this.peeredNetwork = $.peeredNetwork;
+        this.secrets = $.secrets;
+        this.sslCa = $.sslCa;
+        this.username = $.username;
+        this.webhookKey = $.webhookKey;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BitbucketServerConfigResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String apiKey;
-        private List<BitbucketServerRepositoryIdResponse> connectedRepositories;
-        private String createTime;
-        private String hostUri;
-        private String name;
-        private String peeredNetwork;
-        private BitbucketServerSecretsResponse secrets;
-        private String sslCa;
-        private String username;
-        private String webhookKey;
+        private BitbucketServerConfigResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new BitbucketServerConfigResponse();
         }
 
         public Builder(BitbucketServerConfigResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.apiKey = defaults.apiKey;
-    	      this.connectedRepositories = defaults.connectedRepositories;
-    	      this.createTime = defaults.createTime;
-    	      this.hostUri = defaults.hostUri;
-    	      this.name = defaults.name;
-    	      this.peeredNetwork = defaults.peeredNetwork;
-    	      this.secrets = defaults.secrets;
-    	      this.sslCa = defaults.sslCa;
-    	      this.username = defaults.username;
-    	      this.webhookKey = defaults.webhookKey;
+            $ = new BitbucketServerConfigResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder apiKey(String apiKey) {
-            this.apiKey = Objects.requireNonNull(apiKey);
+            $.apiKey = apiKey;
             return this;
         }
+
         public Builder connectedRepositories(List<BitbucketServerRepositoryIdResponse> connectedRepositories) {
-            this.connectedRepositories = Objects.requireNonNull(connectedRepositories);
+            $.connectedRepositories = connectedRepositories;
             return this;
         }
+
         public Builder connectedRepositories(BitbucketServerRepositoryIdResponse... connectedRepositories) {
             return connectedRepositories(List.of(connectedRepositories));
         }
+
         public Builder createTime(String createTime) {
-            this.createTime = Objects.requireNonNull(createTime);
+            $.createTime = createTime;
             return this;
         }
+
         public Builder hostUri(String hostUri) {
-            this.hostUri = Objects.requireNonNull(hostUri);
+            $.hostUri = hostUri;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder peeredNetwork(String peeredNetwork) {
-            this.peeredNetwork = Objects.requireNonNull(peeredNetwork);
+            $.peeredNetwork = peeredNetwork;
             return this;
         }
+
         public Builder secrets(BitbucketServerSecretsResponse secrets) {
-            this.secrets = Objects.requireNonNull(secrets);
+            $.secrets = secrets;
             return this;
         }
+
         public Builder sslCa(String sslCa) {
-            this.sslCa = Objects.requireNonNull(sslCa);
+            $.sslCa = sslCa;
             return this;
         }
+
         public Builder username(String username) {
-            this.username = Objects.requireNonNull(username);
+            $.username = username;
             return this;
         }
+
         public Builder webhookKey(String webhookKey) {
-            this.webhookKey = Objects.requireNonNull(webhookKey);
+            $.webhookKey = webhookKey;
             return this;
-        }        public BitbucketServerConfigResponse build() {
-            return new BitbucketServerConfigResponse(apiKey, connectedRepositories, createTime, hostUri, name, peeredNetwork, secrets, sslCa, username, webhookKey);
+        }
+
+        public BitbucketServerConfigResponse build() {
+            $.apiKey = Objects.requireNonNull($.apiKey, "expected parameter 'apiKey' to be non-null");
+            $.connectedRepositories = Objects.requireNonNull($.connectedRepositories, "expected parameter 'connectedRepositories' to be non-null");
+            $.createTime = Objects.requireNonNull($.createTime, "expected parameter 'createTime' to be non-null");
+            $.hostUri = Objects.requireNonNull($.hostUri, "expected parameter 'hostUri' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.peeredNetwork = Objects.requireNonNull($.peeredNetwork, "expected parameter 'peeredNetwork' to be non-null");
+            $.secrets = Objects.requireNonNull($.secrets, "expected parameter 'secrets' to be non-null");
+            $.sslCa = Objects.requireNonNull($.sslCa, "expected parameter 'sslCa' to be non-null");
+            $.username = Objects.requireNonNull($.username, "expected parameter 'username' to be non-null");
+            $.webhookKey = Objects.requireNonNull($.webhookKey, "expected parameter 'webhookKey' to be non-null");
+            return $;
         }
     }
+
 }

@@ -6,8 +6,8 @@ package com.pulumi.awsnative.ssmincidents.inputs;
 import com.pulumi.awsnative.ssmincidents.inputs.ResponsePlanSsmAutomationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,49 +20,48 @@ public final class ResponsePlanActionArgs extends com.pulumi.resources.ResourceA
     public static final ResponsePlanActionArgs Empty = new ResponsePlanActionArgs();
 
     @Import(name="ssmAutomation")
-      private final @Nullable Output<ResponsePlanSsmAutomationArgs> ssmAutomation;
+    private @Nullable Output<ResponsePlanSsmAutomationArgs> ssmAutomation;
 
-    public Output<ResponsePlanSsmAutomationArgs> ssmAutomation() {
-        return this.ssmAutomation == null ? Codegen.empty() : this.ssmAutomation;
+    public Optional<Output<ResponsePlanSsmAutomationArgs>> ssmAutomation() {
+        return Optional.ofNullable(this.ssmAutomation);
     }
 
-    public ResponsePlanActionArgs(@Nullable Output<ResponsePlanSsmAutomationArgs> ssmAutomation) {
-        this.ssmAutomation = ssmAutomation;
-    }
+    private ResponsePlanActionArgs() {}
 
-    private ResponsePlanActionArgs() {
-        this.ssmAutomation = Codegen.empty();
+    private ResponsePlanActionArgs(ResponsePlanActionArgs $) {
+        this.ssmAutomation = $.ssmAutomation;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ResponsePlanActionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<ResponsePlanSsmAutomationArgs> ssmAutomation;
+        private ResponsePlanActionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ResponsePlanActionArgs();
         }
 
         public Builder(ResponsePlanActionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.ssmAutomation = defaults.ssmAutomation;
+            $ = new ResponsePlanActionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder ssmAutomation(@Nullable Output<ResponsePlanSsmAutomationArgs> ssmAutomation) {
-            this.ssmAutomation = ssmAutomation;
+            $.ssmAutomation = ssmAutomation;
             return this;
         }
-        public Builder ssmAutomation(@Nullable ResponsePlanSsmAutomationArgs ssmAutomation) {
-            this.ssmAutomation = Codegen.ofNullable(ssmAutomation);
-            return this;
-        }        public ResponsePlanActionArgs build() {
-            return new ResponsePlanActionArgs(ssmAutomation);
+
+        public Builder ssmAutomation(ResponsePlanSsmAutomationArgs ssmAutomation) {
+            return ssmAutomation(Output.of(ssmAutomation));
+        }
+
+        public ResponsePlanActionArgs build() {
+            return $;
         }
     }
+
 }

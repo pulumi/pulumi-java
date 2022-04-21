@@ -6,9 +6,9 @@ package com.pulumi.awsnative.elasticloadbalancingv2.inputs;
 import com.pulumi.awsnative.elasticloadbalancingv2.inputs.ListenerRuleQueryStringKeyValueArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -17,52 +17,52 @@ public final class ListenerRuleQueryStringConfigArgs extends com.pulumi.resource
     public static final ListenerRuleQueryStringConfigArgs Empty = new ListenerRuleQueryStringConfigArgs();
 
     @Import(name="values")
-      private final @Nullable Output<List<ListenerRuleQueryStringKeyValueArgs>> values;
+    private @Nullable Output<List<ListenerRuleQueryStringKeyValueArgs>> values;
 
-    public Output<List<ListenerRuleQueryStringKeyValueArgs>> values() {
-        return this.values == null ? Codegen.empty() : this.values;
+    public Optional<Output<List<ListenerRuleQueryStringKeyValueArgs>>> values() {
+        return Optional.ofNullable(this.values);
     }
 
-    public ListenerRuleQueryStringConfigArgs(@Nullable Output<List<ListenerRuleQueryStringKeyValueArgs>> values) {
-        this.values = values;
-    }
+    private ListenerRuleQueryStringConfigArgs() {}
 
-    private ListenerRuleQueryStringConfigArgs() {
-        this.values = Codegen.empty();
+    private ListenerRuleQueryStringConfigArgs(ListenerRuleQueryStringConfigArgs $) {
+        this.values = $.values;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ListenerRuleQueryStringConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<ListenerRuleQueryStringKeyValueArgs>> values;
+        private ListenerRuleQueryStringConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ListenerRuleQueryStringConfigArgs();
         }
 
         public Builder(ListenerRuleQueryStringConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.values = defaults.values;
+            $ = new ListenerRuleQueryStringConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder values(@Nullable Output<List<ListenerRuleQueryStringKeyValueArgs>> values) {
-            this.values = values;
+            $.values = values;
             return this;
         }
-        public Builder values(@Nullable List<ListenerRuleQueryStringKeyValueArgs> values) {
-            this.values = Codegen.ofNullable(values);
-            return this;
+
+        public Builder values(List<ListenerRuleQueryStringKeyValueArgs> values) {
+            return values(Output.of(values));
         }
+
         public Builder values(ListenerRuleQueryStringKeyValueArgs... values) {
             return values(List.of(values));
-        }        public ListenerRuleQueryStringConfigArgs build() {
-            return new ListenerRuleQueryStringConfigArgs(values);
+        }
+
+        public ListenerRuleQueryStringConfigArgs build() {
+            return $;
         }
     }
+
 }

@@ -7,10 +7,10 @@ import com.pulumi.awsnative.sagemaker.inputs.AppImageConfigKernelGatewayImageCon
 import com.pulumi.awsnative.sagemaker.inputs.AppImageConfigTagArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,10 @@ public final class AppImageConfigArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="appImageConfigName")
-      private final @Nullable Output<String> appImageConfigName;
+    private @Nullable Output<String> appImageConfigName;
 
-    public Output<String> appImageConfigName() {
-        return this.appImageConfigName == null ? Codegen.empty() : this.appImageConfigName;
+    public Optional<Output<String>> appImageConfigName() {
+        return Optional.ofNullable(this.appImageConfigName);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class AppImageConfigArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="kernelGatewayImageConfig")
-      private final @Nullable Output<AppImageConfigKernelGatewayImageConfigArgs> kernelGatewayImageConfig;
+    private @Nullable Output<AppImageConfigKernelGatewayImageConfigArgs> kernelGatewayImageConfig;
 
-    public Output<AppImageConfigKernelGatewayImageConfigArgs> kernelGatewayImageConfig() {
-        return this.kernelGatewayImageConfig == null ? Codegen.empty() : this.kernelGatewayImageConfig;
+    public Optional<Output<AppImageConfigKernelGatewayImageConfigArgs>> kernelGatewayImageConfig() {
+        return Optional.ofNullable(this.kernelGatewayImageConfig);
     }
 
     /**
@@ -45,79 +45,72 @@ public final class AppImageConfigArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<List<AppImageConfigTagArgs>> tags;
+    private @Nullable Output<List<AppImageConfigTagArgs>> tags;
 
-    public Output<List<AppImageConfigTagArgs>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<List<AppImageConfigTagArgs>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public AppImageConfigArgs(
-        @Nullable Output<String> appImageConfigName,
-        @Nullable Output<AppImageConfigKernelGatewayImageConfigArgs> kernelGatewayImageConfig,
-        @Nullable Output<List<AppImageConfigTagArgs>> tags) {
-        this.appImageConfigName = appImageConfigName;
-        this.kernelGatewayImageConfig = kernelGatewayImageConfig;
-        this.tags = tags;
-    }
+    private AppImageConfigArgs() {}
 
-    private AppImageConfigArgs() {
-        this.appImageConfigName = Codegen.empty();
-        this.kernelGatewayImageConfig = Codegen.empty();
-        this.tags = Codegen.empty();
+    private AppImageConfigArgs(AppImageConfigArgs $) {
+        this.appImageConfigName = $.appImageConfigName;
+        this.kernelGatewayImageConfig = $.kernelGatewayImageConfig;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AppImageConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> appImageConfigName;
-        private @Nullable Output<AppImageConfigKernelGatewayImageConfigArgs> kernelGatewayImageConfig;
-        private @Nullable Output<List<AppImageConfigTagArgs>> tags;
+        private AppImageConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AppImageConfigArgs();
         }
 
         public Builder(AppImageConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.appImageConfigName = defaults.appImageConfigName;
-    	      this.kernelGatewayImageConfig = defaults.kernelGatewayImageConfig;
-    	      this.tags = defaults.tags;
+            $ = new AppImageConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder appImageConfigName(@Nullable Output<String> appImageConfigName) {
-            this.appImageConfigName = appImageConfigName;
+            $.appImageConfigName = appImageConfigName;
             return this;
         }
-        public Builder appImageConfigName(@Nullable String appImageConfigName) {
-            this.appImageConfigName = Codegen.ofNullable(appImageConfigName);
-            return this;
+
+        public Builder appImageConfigName(String appImageConfigName) {
+            return appImageConfigName(Output.of(appImageConfigName));
         }
+
         public Builder kernelGatewayImageConfig(@Nullable Output<AppImageConfigKernelGatewayImageConfigArgs> kernelGatewayImageConfig) {
-            this.kernelGatewayImageConfig = kernelGatewayImageConfig;
+            $.kernelGatewayImageConfig = kernelGatewayImageConfig;
             return this;
         }
-        public Builder kernelGatewayImageConfig(@Nullable AppImageConfigKernelGatewayImageConfigArgs kernelGatewayImageConfig) {
-            this.kernelGatewayImageConfig = Codegen.ofNullable(kernelGatewayImageConfig);
-            return this;
+
+        public Builder kernelGatewayImageConfig(AppImageConfigKernelGatewayImageConfigArgs kernelGatewayImageConfig) {
+            return kernelGatewayImageConfig(Output.of(kernelGatewayImageConfig));
         }
+
         public Builder tags(@Nullable Output<List<AppImageConfigTagArgs>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable List<AppImageConfigTagArgs> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(List<AppImageConfigTagArgs> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tags(AppImageConfigTagArgs... tags) {
             return tags(List.of(tags));
-        }        public AppImageConfigArgs build() {
-            return new AppImageConfigArgs(appImageConfigName, kernelGatewayImageConfig, tags);
+        }
+
+        public AppImageConfigArgs build() {
+            return $;
         }
     }
+
 }

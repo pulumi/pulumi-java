@@ -20,10 +20,10 @@ public final class ClusterEndpoint extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="address")
-      private final @Nullable String address;
+    private @Nullable String address;
 
     public Optional<String> address() {
-        return this.address == null ? Optional.empty() : Optional.ofNullable(this.address);
+        return Optional.ofNullable(this.address);
     }
 
     /**
@@ -31,55 +31,50 @@ public final class ClusterEndpoint extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="port")
-      private final @Nullable Integer port;
+    private @Nullable Integer port;
 
     public Optional<Integer> port() {
-        return this.port == null ? Optional.empty() : Optional.ofNullable(this.port);
+        return Optional.ofNullable(this.port);
     }
 
-    public ClusterEndpoint(
-        @Nullable String address,
-        @Nullable Integer port) {
-        this.address = address;
-        this.port = port;
-    }
+    private ClusterEndpoint() {}
 
-    private ClusterEndpoint() {
-        this.address = null;
-        this.port = null;
+    private ClusterEndpoint(ClusterEndpoint $) {
+        this.address = $.address;
+        this.port = $.port;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ClusterEndpoint defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String address;
-        private @Nullable Integer port;
+        private ClusterEndpoint $;
 
         public Builder() {
-    	      // Empty
+            $ = new ClusterEndpoint();
         }
 
         public Builder(ClusterEndpoint defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.address = defaults.address;
-    	      this.port = defaults.port;
+            $ = new ClusterEndpoint(Objects.requireNonNull(defaults));
         }
 
         public Builder address(@Nullable String address) {
-            this.address = address;
+            $.address = address;
             return this;
         }
+
         public Builder port(@Nullable Integer port) {
-            this.port = port;
+            $.port = port;
             return this;
-        }        public ClusterEndpoint build() {
-            return new ClusterEndpoint(address, port);
+        }
+
+        public ClusterEndpoint build() {
+            return $;
         }
     }
+
 }

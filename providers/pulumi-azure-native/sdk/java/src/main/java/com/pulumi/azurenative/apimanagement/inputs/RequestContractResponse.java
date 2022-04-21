@@ -26,10 +26,10 @@ public final class RequestContractResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="description")
-      private final @Nullable String description;
+    private @Nullable String description;
 
     public Optional<String> description() {
-        return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class RequestContractResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="headers")
-      private final @Nullable List<ParameterContractResponse> headers;
+    private @Nullable List<ParameterContractResponse> headers;
 
-    public List<ParameterContractResponse> headers() {
-        return this.headers == null ? List.of() : this.headers;
+    public Optional<List<ParameterContractResponse>> headers() {
+        return Optional.ofNullable(this.headers);
     }
 
     /**
@@ -48,10 +48,10 @@ public final class RequestContractResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="queryParameters")
-      private final @Nullable List<ParameterContractResponse> queryParameters;
+    private @Nullable List<ParameterContractResponse> queryParameters;
 
-    public List<ParameterContractResponse> queryParameters() {
-        return this.queryParameters == null ? List.of() : this.queryParameters;
+    public Optional<List<ParameterContractResponse>> queryParameters() {
+        return Optional.ofNullable(this.queryParameters);
     }
 
     /**
@@ -59,82 +59,74 @@ public final class RequestContractResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="representations")
-      private final @Nullable List<RepresentationContractResponse> representations;
+    private @Nullable List<RepresentationContractResponse> representations;
 
-    public List<RepresentationContractResponse> representations() {
-        return this.representations == null ? List.of() : this.representations;
+    public Optional<List<RepresentationContractResponse>> representations() {
+        return Optional.ofNullable(this.representations);
     }
 
-    public RequestContractResponse(
-        @Nullable String description,
-        @Nullable List<ParameterContractResponse> headers,
-        @Nullable List<ParameterContractResponse> queryParameters,
-        @Nullable List<RepresentationContractResponse> representations) {
-        this.description = description;
-        this.headers = headers;
-        this.queryParameters = queryParameters;
-        this.representations = representations;
-    }
+    private RequestContractResponse() {}
 
-    private RequestContractResponse() {
-        this.description = null;
-        this.headers = List.of();
-        this.queryParameters = List.of();
-        this.representations = List.of();
+    private RequestContractResponse(RequestContractResponse $) {
+        this.description = $.description;
+        this.headers = $.headers;
+        this.queryParameters = $.queryParameters;
+        this.representations = $.representations;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RequestContractResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String description;
-        private @Nullable List<ParameterContractResponse> headers;
-        private @Nullable List<ParameterContractResponse> queryParameters;
-        private @Nullable List<RepresentationContractResponse> representations;
+        private RequestContractResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new RequestContractResponse();
         }
 
         public Builder(RequestContractResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.description = defaults.description;
-    	      this.headers = defaults.headers;
-    	      this.queryParameters = defaults.queryParameters;
-    	      this.representations = defaults.representations;
+            $ = new RequestContractResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder description(@Nullable String description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
+
         public Builder headers(@Nullable List<ParameterContractResponse> headers) {
-            this.headers = headers;
+            $.headers = headers;
             return this;
         }
+
         public Builder headers(ParameterContractResponse... headers) {
             return headers(List.of(headers));
         }
+
         public Builder queryParameters(@Nullable List<ParameterContractResponse> queryParameters) {
-            this.queryParameters = queryParameters;
+            $.queryParameters = queryParameters;
             return this;
         }
+
         public Builder queryParameters(ParameterContractResponse... queryParameters) {
             return queryParameters(List.of(queryParameters));
         }
+
         public Builder representations(@Nullable List<RepresentationContractResponse> representations) {
-            this.representations = representations;
+            $.representations = representations;
             return this;
         }
+
         public Builder representations(RepresentationContractResponse... representations) {
             return representations(List.of(representations));
-        }        public RequestContractResponse build() {
-            return new RequestContractResponse(description, headers, queryParameters, representations);
+        }
+
+        public RequestContractResponse build() {
+            return $;
         }
     }
+
 }

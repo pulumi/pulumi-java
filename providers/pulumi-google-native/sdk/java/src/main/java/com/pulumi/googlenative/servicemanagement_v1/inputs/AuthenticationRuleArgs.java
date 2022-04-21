@@ -5,13 +5,13 @@ package com.pulumi.googlenative.servicemanagement_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.servicemanagement_v1.inputs.AuthRequirementArgs;
 import com.pulumi.googlenative.servicemanagement_v1.inputs.OAuthRequirementsArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -28,10 +28,10 @@ public final class AuthenticationRuleArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="allowWithoutCredential")
-      private final @Nullable Output<Boolean> allowWithoutCredential;
+    private @Nullable Output<Boolean> allowWithoutCredential;
 
-    public Output<Boolean> allowWithoutCredential() {
-        return this.allowWithoutCredential == null ? Codegen.empty() : this.allowWithoutCredential;
+    public Optional<Output<Boolean>> allowWithoutCredential() {
+        return Optional.ofNullable(this.allowWithoutCredential);
     }
 
     /**
@@ -39,10 +39,10 @@ public final class AuthenticationRuleArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="oauth")
-      private final @Nullable Output<OAuthRequirementsArgs> oauth;
+    private @Nullable Output<OAuthRequirementsArgs> oauth;
 
-    public Output<OAuthRequirementsArgs> oauth() {
-        return this.oauth == null ? Codegen.empty() : this.oauth;
+    public Optional<Output<OAuthRequirementsArgs>> oauth() {
+        return Optional.ofNullable(this.oauth);
     }
 
     /**
@@ -50,10 +50,10 @@ public final class AuthenticationRuleArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="requirements")
-      private final @Nullable Output<List<AuthRequirementArgs>> requirements;
+    private @Nullable Output<List<AuthRequirementArgs>> requirements;
 
-    public Output<List<AuthRequirementArgs>> requirements() {
-        return this.requirements == null ? Codegen.empty() : this.requirements;
+    public Optional<Output<List<AuthRequirementArgs>>> requirements() {
+        return Optional.ofNullable(this.requirements);
     }
 
     /**
@@ -61,92 +61,82 @@ public final class AuthenticationRuleArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="selector")
-      private final @Nullable Output<String> selector;
+    private @Nullable Output<String> selector;
 
-    public Output<String> selector() {
-        return this.selector == null ? Codegen.empty() : this.selector;
+    public Optional<Output<String>> selector() {
+        return Optional.ofNullable(this.selector);
     }
 
-    public AuthenticationRuleArgs(
-        @Nullable Output<Boolean> allowWithoutCredential,
-        @Nullable Output<OAuthRequirementsArgs> oauth,
-        @Nullable Output<List<AuthRequirementArgs>> requirements,
-        @Nullable Output<String> selector) {
-        this.allowWithoutCredential = allowWithoutCredential;
-        this.oauth = oauth;
-        this.requirements = requirements;
-        this.selector = selector;
-    }
+    private AuthenticationRuleArgs() {}
 
-    private AuthenticationRuleArgs() {
-        this.allowWithoutCredential = Codegen.empty();
-        this.oauth = Codegen.empty();
-        this.requirements = Codegen.empty();
-        this.selector = Codegen.empty();
+    private AuthenticationRuleArgs(AuthenticationRuleArgs $) {
+        this.allowWithoutCredential = $.allowWithoutCredential;
+        this.oauth = $.oauth;
+        this.requirements = $.requirements;
+        this.selector = $.selector;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AuthenticationRuleArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> allowWithoutCredential;
-        private @Nullable Output<OAuthRequirementsArgs> oauth;
-        private @Nullable Output<List<AuthRequirementArgs>> requirements;
-        private @Nullable Output<String> selector;
+        private AuthenticationRuleArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AuthenticationRuleArgs();
         }
 
         public Builder(AuthenticationRuleArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.allowWithoutCredential = defaults.allowWithoutCredential;
-    	      this.oauth = defaults.oauth;
-    	      this.requirements = defaults.requirements;
-    	      this.selector = defaults.selector;
+            $ = new AuthenticationRuleArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder allowWithoutCredential(@Nullable Output<Boolean> allowWithoutCredential) {
-            this.allowWithoutCredential = allowWithoutCredential;
+            $.allowWithoutCredential = allowWithoutCredential;
             return this;
         }
-        public Builder allowWithoutCredential(@Nullable Boolean allowWithoutCredential) {
-            this.allowWithoutCredential = Codegen.ofNullable(allowWithoutCredential);
-            return this;
+
+        public Builder allowWithoutCredential(Boolean allowWithoutCredential) {
+            return allowWithoutCredential(Output.of(allowWithoutCredential));
         }
+
         public Builder oauth(@Nullable Output<OAuthRequirementsArgs> oauth) {
-            this.oauth = oauth;
+            $.oauth = oauth;
             return this;
         }
-        public Builder oauth(@Nullable OAuthRequirementsArgs oauth) {
-            this.oauth = Codegen.ofNullable(oauth);
-            return this;
+
+        public Builder oauth(OAuthRequirementsArgs oauth) {
+            return oauth(Output.of(oauth));
         }
+
         public Builder requirements(@Nullable Output<List<AuthRequirementArgs>> requirements) {
-            this.requirements = requirements;
+            $.requirements = requirements;
             return this;
         }
-        public Builder requirements(@Nullable List<AuthRequirementArgs> requirements) {
-            this.requirements = Codegen.ofNullable(requirements);
-            return this;
+
+        public Builder requirements(List<AuthRequirementArgs> requirements) {
+            return requirements(Output.of(requirements));
         }
+
         public Builder requirements(AuthRequirementArgs... requirements) {
             return requirements(List.of(requirements));
         }
+
         public Builder selector(@Nullable Output<String> selector) {
-            this.selector = selector;
+            $.selector = selector;
             return this;
         }
-        public Builder selector(@Nullable String selector) {
-            this.selector = Codegen.ofNullable(selector);
-            return this;
-        }        public AuthenticationRuleArgs build() {
-            return new AuthenticationRuleArgs(allowWithoutCredential, oauth, requirements, selector);
+
+        public Builder selector(String selector) {
+            return selector(Output.of(selector));
+        }
+
+        public AuthenticationRuleArgs build() {
+            return $;
         }
     }
+
 }

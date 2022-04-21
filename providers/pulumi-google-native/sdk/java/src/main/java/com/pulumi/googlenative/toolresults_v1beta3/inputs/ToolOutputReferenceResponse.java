@@ -23,7 +23,7 @@ public final class ToolOutputReferenceResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="creationTime", required=true)
-      private final TimestampResponse creationTime;
+    private TimestampResponse creationTime;
 
     public TimestampResponse creationTime() {
         return this.creationTime;
@@ -34,7 +34,7 @@ public final class ToolOutputReferenceResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="output", required=true)
-      private final FileReferenceResponse output;
+    private FileReferenceResponse output;
 
     public FileReferenceResponse output() {
         return this.output;
@@ -45,64 +45,59 @@ public final class ToolOutputReferenceResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="testCase", required=true)
-      private final TestCaseReferenceResponse testCase;
+    private TestCaseReferenceResponse testCase;
 
     public TestCaseReferenceResponse testCase() {
         return this.testCase;
     }
 
-    public ToolOutputReferenceResponse(
-        TimestampResponse creationTime,
-        FileReferenceResponse output,
-        TestCaseReferenceResponse testCase) {
-        this.creationTime = Objects.requireNonNull(creationTime, "expected parameter 'creationTime' to be non-null");
-        this.output = Objects.requireNonNull(output, "expected parameter 'output' to be non-null");
-        this.testCase = Objects.requireNonNull(testCase, "expected parameter 'testCase' to be non-null");
-    }
+    private ToolOutputReferenceResponse() {}
 
-    private ToolOutputReferenceResponse() {
-        this.creationTime = null;
-        this.output = null;
-        this.testCase = null;
+    private ToolOutputReferenceResponse(ToolOutputReferenceResponse $) {
+        this.creationTime = $.creationTime;
+        this.output = $.output;
+        this.testCase = $.testCase;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ToolOutputReferenceResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private TimestampResponse creationTime;
-        private FileReferenceResponse output;
-        private TestCaseReferenceResponse testCase;
+        private ToolOutputReferenceResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ToolOutputReferenceResponse();
         }
 
         public Builder(ToolOutputReferenceResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.creationTime = defaults.creationTime;
-    	      this.output = defaults.output;
-    	      this.testCase = defaults.testCase;
+            $ = new ToolOutputReferenceResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder creationTime(TimestampResponse creationTime) {
-            this.creationTime = Objects.requireNonNull(creationTime);
+            $.creationTime = creationTime;
             return this;
         }
+
         public Builder output(FileReferenceResponse output) {
-            this.output = Objects.requireNonNull(output);
+            $.output = output;
             return this;
         }
+
         public Builder testCase(TestCaseReferenceResponse testCase) {
-            this.testCase = Objects.requireNonNull(testCase);
+            $.testCase = testCase;
             return this;
-        }        public ToolOutputReferenceResponse build() {
-            return new ToolOutputReferenceResponse(creationTime, output, testCase);
+        }
+
+        public ToolOutputReferenceResponse build() {
+            $.creationTime = Objects.requireNonNull($.creationTime, "expected parameter 'creationTime' to be non-null");
+            $.output = Objects.requireNonNull($.output, "expected parameter 'output' to be non-null");
+            $.testCase = Objects.requireNonNull($.testCase, "expected parameter 'testCase' to be non-null");
+            return $;
         }
     }
+
 }

@@ -22,7 +22,7 @@ public final class WorkerConfigResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="diskSizeGb", required=true)
-      private final String diskSizeGb;
+    private String diskSizeGb;
 
     public String diskSizeGb() {
         return this.diskSizeGb;
@@ -33,7 +33,7 @@ public final class WorkerConfigResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="machineType", required=true)
-      private final String machineType;
+    private String machineType;
 
     public String machineType() {
         return this.machineType;
@@ -44,64 +44,59 @@ public final class WorkerConfigResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="noExternalIp", required=true)
-      private final Boolean noExternalIp;
+    private Boolean noExternalIp;
 
     public Boolean noExternalIp() {
         return this.noExternalIp;
     }
 
-    public WorkerConfigResponse(
-        String diskSizeGb,
-        String machineType,
-        Boolean noExternalIp) {
-        this.diskSizeGb = Objects.requireNonNull(diskSizeGb, "expected parameter 'diskSizeGb' to be non-null");
-        this.machineType = Objects.requireNonNull(machineType, "expected parameter 'machineType' to be non-null");
-        this.noExternalIp = Objects.requireNonNull(noExternalIp, "expected parameter 'noExternalIp' to be non-null");
-    }
+    private WorkerConfigResponse() {}
 
-    private WorkerConfigResponse() {
-        this.diskSizeGb = null;
-        this.machineType = null;
-        this.noExternalIp = null;
+    private WorkerConfigResponse(WorkerConfigResponse $) {
+        this.diskSizeGb = $.diskSizeGb;
+        this.machineType = $.machineType;
+        this.noExternalIp = $.noExternalIp;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WorkerConfigResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String diskSizeGb;
-        private String machineType;
-        private Boolean noExternalIp;
+        private WorkerConfigResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new WorkerConfigResponse();
         }
 
         public Builder(WorkerConfigResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.diskSizeGb = defaults.diskSizeGb;
-    	      this.machineType = defaults.machineType;
-    	      this.noExternalIp = defaults.noExternalIp;
+            $ = new WorkerConfigResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder diskSizeGb(String diskSizeGb) {
-            this.diskSizeGb = Objects.requireNonNull(diskSizeGb);
+            $.diskSizeGb = diskSizeGb;
             return this;
         }
+
         public Builder machineType(String machineType) {
-            this.machineType = Objects.requireNonNull(machineType);
+            $.machineType = machineType;
             return this;
         }
+
         public Builder noExternalIp(Boolean noExternalIp) {
-            this.noExternalIp = Objects.requireNonNull(noExternalIp);
+            $.noExternalIp = noExternalIp;
             return this;
-        }        public WorkerConfigResponse build() {
-            return new WorkerConfigResponse(diskSizeGb, machineType, noExternalIp);
+        }
+
+        public WorkerConfigResponse build() {
+            $.diskSizeGb = Objects.requireNonNull($.diskSizeGb, "expected parameter 'diskSizeGb' to be non-null");
+            $.machineType = Objects.requireNonNull($.machineType, "expected parameter 'machineType' to be non-null");
+            $.noExternalIp = Objects.requireNonNull($.noExternalIp, "expected parameter 'noExternalIp' to be non-null");
+            return $;
         }
     }
+
 }

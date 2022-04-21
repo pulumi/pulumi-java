@@ -24,7 +24,7 @@ public final class AvailablePatchSummaryResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="assessmentActivityId", required=true)
-      private final String assessmentActivityId;
+    private String assessmentActivityId;
 
     public String assessmentActivityId() {
         return this.assessmentActivityId;
@@ -35,7 +35,7 @@ public final class AvailablePatchSummaryResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="criticalAndSecurityPatchCount", required=true)
-      private final Integer criticalAndSecurityPatchCount;
+    private Integer criticalAndSecurityPatchCount;
 
     public Integer criticalAndSecurityPatchCount() {
         return this.criticalAndSecurityPatchCount;
@@ -46,7 +46,7 @@ public final class AvailablePatchSummaryResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="error", required=true)
-      private final ApiErrorResponse error;
+    private ApiErrorResponse error;
 
     public ApiErrorResponse error() {
         return this.error;
@@ -57,7 +57,7 @@ public final class AvailablePatchSummaryResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="lastModifiedTime", required=true)
-      private final String lastModifiedTime;
+    private String lastModifiedTime;
 
     public String lastModifiedTime() {
         return this.lastModifiedTime;
@@ -68,7 +68,7 @@ public final class AvailablePatchSummaryResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="otherPatchCount", required=true)
-      private final Integer otherPatchCount;
+    private Integer otherPatchCount;
 
     public Integer otherPatchCount() {
         return this.otherPatchCount;
@@ -79,7 +79,7 @@ public final class AvailablePatchSummaryResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="rebootPending", required=true)
-      private final Boolean rebootPending;
+    private Boolean rebootPending;
 
     public Boolean rebootPending() {
         return this.rebootPending;
@@ -90,7 +90,7 @@ public final class AvailablePatchSummaryResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="startTime", required=true)
-      private final String startTime;
+    private String startTime;
 
     public String startTime() {
         return this.startTime;
@@ -101,109 +101,94 @@ public final class AvailablePatchSummaryResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="status", required=true)
-      private final String status;
+    private String status;
 
     public String status() {
         return this.status;
     }
 
-    public AvailablePatchSummaryResponse(
-        String assessmentActivityId,
-        Integer criticalAndSecurityPatchCount,
-        ApiErrorResponse error,
-        String lastModifiedTime,
-        Integer otherPatchCount,
-        Boolean rebootPending,
-        String startTime,
-        String status) {
-        this.assessmentActivityId = Objects.requireNonNull(assessmentActivityId, "expected parameter 'assessmentActivityId' to be non-null");
-        this.criticalAndSecurityPatchCount = Objects.requireNonNull(criticalAndSecurityPatchCount, "expected parameter 'criticalAndSecurityPatchCount' to be non-null");
-        this.error = Objects.requireNonNull(error, "expected parameter 'error' to be non-null");
-        this.lastModifiedTime = Objects.requireNonNull(lastModifiedTime, "expected parameter 'lastModifiedTime' to be non-null");
-        this.otherPatchCount = Objects.requireNonNull(otherPatchCount, "expected parameter 'otherPatchCount' to be non-null");
-        this.rebootPending = Objects.requireNonNull(rebootPending, "expected parameter 'rebootPending' to be non-null");
-        this.startTime = Objects.requireNonNull(startTime, "expected parameter 'startTime' to be non-null");
-        this.status = Objects.requireNonNull(status, "expected parameter 'status' to be non-null");
-    }
+    private AvailablePatchSummaryResponse() {}
 
-    private AvailablePatchSummaryResponse() {
-        this.assessmentActivityId = null;
-        this.criticalAndSecurityPatchCount = null;
-        this.error = null;
-        this.lastModifiedTime = null;
-        this.otherPatchCount = null;
-        this.rebootPending = null;
-        this.startTime = null;
-        this.status = null;
+    private AvailablePatchSummaryResponse(AvailablePatchSummaryResponse $) {
+        this.assessmentActivityId = $.assessmentActivityId;
+        this.criticalAndSecurityPatchCount = $.criticalAndSecurityPatchCount;
+        this.error = $.error;
+        this.lastModifiedTime = $.lastModifiedTime;
+        this.otherPatchCount = $.otherPatchCount;
+        this.rebootPending = $.rebootPending;
+        this.startTime = $.startTime;
+        this.status = $.status;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AvailablePatchSummaryResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String assessmentActivityId;
-        private Integer criticalAndSecurityPatchCount;
-        private ApiErrorResponse error;
-        private String lastModifiedTime;
-        private Integer otherPatchCount;
-        private Boolean rebootPending;
-        private String startTime;
-        private String status;
+        private AvailablePatchSummaryResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AvailablePatchSummaryResponse();
         }
 
         public Builder(AvailablePatchSummaryResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.assessmentActivityId = defaults.assessmentActivityId;
-    	      this.criticalAndSecurityPatchCount = defaults.criticalAndSecurityPatchCount;
-    	      this.error = defaults.error;
-    	      this.lastModifiedTime = defaults.lastModifiedTime;
-    	      this.otherPatchCount = defaults.otherPatchCount;
-    	      this.rebootPending = defaults.rebootPending;
-    	      this.startTime = defaults.startTime;
-    	      this.status = defaults.status;
+            $ = new AvailablePatchSummaryResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder assessmentActivityId(String assessmentActivityId) {
-            this.assessmentActivityId = Objects.requireNonNull(assessmentActivityId);
+            $.assessmentActivityId = assessmentActivityId;
             return this;
         }
+
         public Builder criticalAndSecurityPatchCount(Integer criticalAndSecurityPatchCount) {
-            this.criticalAndSecurityPatchCount = Objects.requireNonNull(criticalAndSecurityPatchCount);
+            $.criticalAndSecurityPatchCount = criticalAndSecurityPatchCount;
             return this;
         }
+
         public Builder error(ApiErrorResponse error) {
-            this.error = Objects.requireNonNull(error);
+            $.error = error;
             return this;
         }
+
         public Builder lastModifiedTime(String lastModifiedTime) {
-            this.lastModifiedTime = Objects.requireNonNull(lastModifiedTime);
+            $.lastModifiedTime = lastModifiedTime;
             return this;
         }
+
         public Builder otherPatchCount(Integer otherPatchCount) {
-            this.otherPatchCount = Objects.requireNonNull(otherPatchCount);
+            $.otherPatchCount = otherPatchCount;
             return this;
         }
+
         public Builder rebootPending(Boolean rebootPending) {
-            this.rebootPending = Objects.requireNonNull(rebootPending);
+            $.rebootPending = rebootPending;
             return this;
         }
+
         public Builder startTime(String startTime) {
-            this.startTime = Objects.requireNonNull(startTime);
+            $.startTime = startTime;
             return this;
         }
+
         public Builder status(String status) {
-            this.status = Objects.requireNonNull(status);
+            $.status = status;
             return this;
-        }        public AvailablePatchSummaryResponse build() {
-            return new AvailablePatchSummaryResponse(assessmentActivityId, criticalAndSecurityPatchCount, error, lastModifiedTime, otherPatchCount, rebootPending, startTime, status);
+        }
+
+        public AvailablePatchSummaryResponse build() {
+            $.assessmentActivityId = Objects.requireNonNull($.assessmentActivityId, "expected parameter 'assessmentActivityId' to be non-null");
+            $.criticalAndSecurityPatchCount = Objects.requireNonNull($.criticalAndSecurityPatchCount, "expected parameter 'criticalAndSecurityPatchCount' to be non-null");
+            $.error = Objects.requireNonNull($.error, "expected parameter 'error' to be non-null");
+            $.lastModifiedTime = Objects.requireNonNull($.lastModifiedTime, "expected parameter 'lastModifiedTime' to be non-null");
+            $.otherPatchCount = Objects.requireNonNull($.otherPatchCount, "expected parameter 'otherPatchCount' to be non-null");
+            $.rebootPending = Objects.requireNonNull($.rebootPending, "expected parameter 'rebootPending' to be non-null");
+            $.startTime = Objects.requireNonNull($.startTime, "expected parameter 'startTime' to be non-null");
+            $.status = Objects.requireNonNull($.status, "expected parameter 'status' to be non-null");
+            return $;
         }
     }
+
 }

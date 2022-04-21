@@ -5,11 +5,11 @@ package com.pulumi.docker.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.docker.inputs.ServiceEndpointSpecPortArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -18,73 +18,69 @@ public final class ServiceEndpointSpecArgs extends com.pulumi.resources.Resource
     public static final ServiceEndpointSpecArgs Empty = new ServiceEndpointSpecArgs();
 
     @Import(name="mode")
-      private final @Nullable Output<String> mode;
+    private @Nullable Output<String> mode;
 
-    public Output<String> mode() {
-        return this.mode == null ? Codegen.empty() : this.mode;
+    public Optional<Output<String>> mode() {
+        return Optional.ofNullable(this.mode);
     }
 
     @Import(name="ports")
-      private final @Nullable Output<List<ServiceEndpointSpecPortArgs>> ports;
+    private @Nullable Output<List<ServiceEndpointSpecPortArgs>> ports;
 
-    public Output<List<ServiceEndpointSpecPortArgs>> ports() {
-        return this.ports == null ? Codegen.empty() : this.ports;
+    public Optional<Output<List<ServiceEndpointSpecPortArgs>>> ports() {
+        return Optional.ofNullable(this.ports);
     }
 
-    public ServiceEndpointSpecArgs(
-        @Nullable Output<String> mode,
-        @Nullable Output<List<ServiceEndpointSpecPortArgs>> ports) {
-        this.mode = mode;
-        this.ports = ports;
-    }
+    private ServiceEndpointSpecArgs() {}
 
-    private ServiceEndpointSpecArgs() {
-        this.mode = Codegen.empty();
-        this.ports = Codegen.empty();
+    private ServiceEndpointSpecArgs(ServiceEndpointSpecArgs $) {
+        this.mode = $.mode;
+        this.ports = $.ports;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ServiceEndpointSpecArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> mode;
-        private @Nullable Output<List<ServiceEndpointSpecPortArgs>> ports;
+        private ServiceEndpointSpecArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ServiceEndpointSpecArgs();
         }
 
         public Builder(ServiceEndpointSpecArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.mode = defaults.mode;
-    	      this.ports = defaults.ports;
+            $ = new ServiceEndpointSpecArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder mode(@Nullable Output<String> mode) {
-            this.mode = mode;
+            $.mode = mode;
             return this;
         }
-        public Builder mode(@Nullable String mode) {
-            this.mode = Codegen.ofNullable(mode);
-            return this;
+
+        public Builder mode(String mode) {
+            return mode(Output.of(mode));
         }
+
         public Builder ports(@Nullable Output<List<ServiceEndpointSpecPortArgs>> ports) {
-            this.ports = ports;
+            $.ports = ports;
             return this;
         }
-        public Builder ports(@Nullable List<ServiceEndpointSpecPortArgs> ports) {
-            this.ports = Codegen.ofNullable(ports);
-            return this;
+
+        public Builder ports(List<ServiceEndpointSpecPortArgs> ports) {
+            return ports(Output.of(ports));
         }
+
         public Builder ports(ServiceEndpointSpecPortArgs... ports) {
             return ports(List.of(ports));
-        }        public ServiceEndpointSpecArgs build() {
-            return new ServiceEndpointSpecArgs(mode, ports);
+        }
+
+        public ServiceEndpointSpecArgs build() {
+            return $;
         }
     }
+
 }

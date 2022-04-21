@@ -10,6 +10,7 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +27,10 @@ public final class ExtensionStatusArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="code")
-      private final @Nullable Output<String> code;
+    private @Nullable Output<String> code;
 
-    public Output<String> code() {
-        return this.code == null ? Codegen.empty() : this.code;
+    public Optional<Output<String>> code() {
+        return Optional.ofNullable(this.code);
     }
 
     /**
@@ -37,10 +38,10 @@ public final class ExtensionStatusArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="displayStatus")
-      private final @Nullable Output<String> displayStatus;
+    private @Nullable Output<String> displayStatus;
 
-    public Output<String> displayStatus() {
-        return this.displayStatus == null ? Codegen.empty() : this.displayStatus;
+    public Optional<Output<String>> displayStatus() {
+        return Optional.ofNullable(this.displayStatus);
     }
 
     /**
@@ -48,10 +49,10 @@ public final class ExtensionStatusArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="level")
-      private final @Nullable Output<Either<String,LevelType>> level;
+    private @Nullable Output<Either<String,LevelType>> level;
 
-    public Output<Either<String,LevelType>> level() {
-        return this.level == null ? Codegen.empty() : this.level;
+    public Optional<Output<Either<String,LevelType>>> level() {
+        return Optional.ofNullable(this.level);
     }
 
     /**
@@ -59,10 +60,10 @@ public final class ExtensionStatusArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="message")
-      private final @Nullable Output<String> message;
+    private @Nullable Output<String> message;
 
-    public Output<String> message() {
-        return this.message == null ? Codegen.empty() : this.message;
+    public Optional<Output<String>> message() {
+        return Optional.ofNullable(this.message);
     }
 
     /**
@@ -70,102 +71,89 @@ public final class ExtensionStatusArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="time")
-      private final @Nullable Output<String> time;
+    private @Nullable Output<String> time;
 
-    public Output<String> time() {
-        return this.time == null ? Codegen.empty() : this.time;
+    public Optional<Output<String>> time() {
+        return Optional.ofNullable(this.time);
     }
 
-    public ExtensionStatusArgs(
-        @Nullable Output<String> code,
-        @Nullable Output<String> displayStatus,
-        @Nullable Output<Either<String,LevelType>> level,
-        @Nullable Output<String> message,
-        @Nullable Output<String> time) {
-        this.code = code;
-        this.displayStatus = displayStatus;
-        this.level = Codegen.stringProp("level").left(LevelType.class).output().arg(level).def("Information").getNullable();
-        this.message = message;
-        this.time = time;
-    }
+    private ExtensionStatusArgs() {}
 
-    private ExtensionStatusArgs() {
-        this.code = Codegen.empty();
-        this.displayStatus = Codegen.empty();
-        this.level = Codegen.empty();
-        this.message = Codegen.empty();
-        this.time = Codegen.empty();
+    private ExtensionStatusArgs(ExtensionStatusArgs $) {
+        this.code = $.code;
+        this.displayStatus = $.displayStatus;
+        this.level = $.level;
+        this.message = $.message;
+        this.time = $.time;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ExtensionStatusArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> code;
-        private @Nullable Output<String> displayStatus;
-        private @Nullable Output<Either<String,LevelType>> level;
-        private @Nullable Output<String> message;
-        private @Nullable Output<String> time;
+        private ExtensionStatusArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ExtensionStatusArgs();
         }
 
         public Builder(ExtensionStatusArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.code = defaults.code;
-    	      this.displayStatus = defaults.displayStatus;
-    	      this.level = defaults.level;
-    	      this.message = defaults.message;
-    	      this.time = defaults.time;
+            $ = new ExtensionStatusArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder code(@Nullable Output<String> code) {
-            this.code = code;
+            $.code = code;
             return this;
         }
-        public Builder code(@Nullable String code) {
-            this.code = Codegen.ofNullable(code);
-            return this;
+
+        public Builder code(String code) {
+            return code(Output.of(code));
         }
+
         public Builder displayStatus(@Nullable Output<String> displayStatus) {
-            this.displayStatus = displayStatus;
+            $.displayStatus = displayStatus;
             return this;
         }
-        public Builder displayStatus(@Nullable String displayStatus) {
-            this.displayStatus = Codegen.ofNullable(displayStatus);
-            return this;
+
+        public Builder displayStatus(String displayStatus) {
+            return displayStatus(Output.of(displayStatus));
         }
+
         public Builder level(@Nullable Output<Either<String,LevelType>> level) {
-            this.level = level;
+            $.level = level;
             return this;
         }
-        public Builder level(@Nullable Either<String,LevelType> level) {
-            this.level = Codegen.ofNullable(level);
-            return this;
+
+        public Builder level(Either<String,LevelType> level) {
+            return level(Output.of(level));
         }
+
         public Builder message(@Nullable Output<String> message) {
-            this.message = message;
+            $.message = message;
             return this;
         }
-        public Builder message(@Nullable String message) {
-            this.message = Codegen.ofNullable(message);
-            return this;
+
+        public Builder message(String message) {
+            return message(Output.of(message));
         }
+
         public Builder time(@Nullable Output<String> time) {
-            this.time = time;
+            $.time = time;
             return this;
         }
-        public Builder time(@Nullable String time) {
-            this.time = Codegen.ofNullable(time);
-            return this;
-        }        public ExtensionStatusArgs build() {
-            return new ExtensionStatusArgs(code, displayStatus, level, message, time);
+
+        public Builder time(String time) {
+            return time(Output.of(time));
+        }
+
+        public ExtensionStatusArgs build() {
+            $.level = Codegen.stringProp("level").left(LevelType.class).output().arg($.level).def("Information").getNullable();
+            return $;
         }
     }
+
 }

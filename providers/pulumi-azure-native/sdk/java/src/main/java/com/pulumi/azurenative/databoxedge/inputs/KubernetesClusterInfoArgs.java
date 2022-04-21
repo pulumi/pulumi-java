@@ -5,7 +5,6 @@ package com.pulumi.azurenative.databoxedge.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,49 +22,49 @@ public final class KubernetesClusterInfoArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="version", required=true)
-      private final Output<String> version;
+    private Output<String> version;
 
     public Output<String> version() {
         return this.version;
     }
 
-    public KubernetesClusterInfoArgs(Output<String> version) {
-        this.version = Objects.requireNonNull(version, "expected parameter 'version' to be non-null");
-    }
+    private KubernetesClusterInfoArgs() {}
 
-    private KubernetesClusterInfoArgs() {
-        this.version = Codegen.empty();
+    private KubernetesClusterInfoArgs(KubernetesClusterInfoArgs $) {
+        this.version = $.version;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(KubernetesClusterInfoArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> version;
+        private KubernetesClusterInfoArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new KubernetesClusterInfoArgs();
         }
 
         public Builder(KubernetesClusterInfoArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.version = defaults.version;
+            $ = new KubernetesClusterInfoArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder version(Output<String> version) {
-            this.version = Objects.requireNonNull(version);
+            $.version = version;
             return this;
         }
+
         public Builder version(String version) {
-            this.version = Output.of(Objects.requireNonNull(version));
-            return this;
-        }        public KubernetesClusterInfoArgs build() {
-            return new KubernetesClusterInfoArgs(version);
+            return version(Output.of(version));
+        }
+
+        public KubernetesClusterInfoArgs build() {
+            $.version = Objects.requireNonNull($.version, "expected parameter 'version' to be non-null");
+            return $;
         }
     }
+
 }

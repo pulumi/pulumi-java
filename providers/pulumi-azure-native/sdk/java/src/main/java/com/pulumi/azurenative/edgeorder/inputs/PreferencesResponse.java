@@ -27,10 +27,10 @@ public final class PreferencesResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="encryptionPreferences")
-      private final @Nullable EncryptionPreferencesResponse encryptionPreferences;
+    private @Nullable EncryptionPreferencesResponse encryptionPreferences;
 
     public Optional<EncryptionPreferencesResponse> encryptionPreferences() {
-        return this.encryptionPreferences == null ? Optional.empty() : Optional.ofNullable(this.encryptionPreferences);
+        return Optional.ofNullable(this.encryptionPreferences);
     }
 
     /**
@@ -38,10 +38,10 @@ public final class PreferencesResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="managementResourcePreferences")
-      private final @Nullable ManagementResourcePreferencesResponse managementResourcePreferences;
+    private @Nullable ManagementResourcePreferencesResponse managementResourcePreferences;
 
     public Optional<ManagementResourcePreferencesResponse> managementResourcePreferences() {
-        return this.managementResourcePreferences == null ? Optional.empty() : Optional.ofNullable(this.managementResourcePreferences);
+        return Optional.ofNullable(this.managementResourcePreferences);
     }
 
     /**
@@ -49,10 +49,10 @@ public final class PreferencesResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="notificationPreferences")
-      private final @Nullable List<NotificationPreferenceResponse> notificationPreferences;
+    private @Nullable List<NotificationPreferenceResponse> notificationPreferences;
 
-    public List<NotificationPreferenceResponse> notificationPreferences() {
-        return this.notificationPreferences == null ? List.of() : this.notificationPreferences;
+    public Optional<List<NotificationPreferenceResponse>> notificationPreferences() {
+        return Optional.ofNullable(this.notificationPreferences);
     }
 
     /**
@@ -60,76 +60,66 @@ public final class PreferencesResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="transportPreferences")
-      private final @Nullable TransportPreferencesResponse transportPreferences;
+    private @Nullable TransportPreferencesResponse transportPreferences;
 
     public Optional<TransportPreferencesResponse> transportPreferences() {
-        return this.transportPreferences == null ? Optional.empty() : Optional.ofNullable(this.transportPreferences);
+        return Optional.ofNullable(this.transportPreferences);
     }
 
-    public PreferencesResponse(
-        @Nullable EncryptionPreferencesResponse encryptionPreferences,
-        @Nullable ManagementResourcePreferencesResponse managementResourcePreferences,
-        @Nullable List<NotificationPreferenceResponse> notificationPreferences,
-        @Nullable TransportPreferencesResponse transportPreferences) {
-        this.encryptionPreferences = encryptionPreferences;
-        this.managementResourcePreferences = managementResourcePreferences;
-        this.notificationPreferences = notificationPreferences;
-        this.transportPreferences = transportPreferences;
-    }
+    private PreferencesResponse() {}
 
-    private PreferencesResponse() {
-        this.encryptionPreferences = null;
-        this.managementResourcePreferences = null;
-        this.notificationPreferences = List.of();
-        this.transportPreferences = null;
+    private PreferencesResponse(PreferencesResponse $) {
+        this.encryptionPreferences = $.encryptionPreferences;
+        this.managementResourcePreferences = $.managementResourcePreferences;
+        this.notificationPreferences = $.notificationPreferences;
+        this.transportPreferences = $.transportPreferences;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PreferencesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable EncryptionPreferencesResponse encryptionPreferences;
-        private @Nullable ManagementResourcePreferencesResponse managementResourcePreferences;
-        private @Nullable List<NotificationPreferenceResponse> notificationPreferences;
-        private @Nullable TransportPreferencesResponse transportPreferences;
+        private PreferencesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new PreferencesResponse();
         }
 
         public Builder(PreferencesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.encryptionPreferences = defaults.encryptionPreferences;
-    	      this.managementResourcePreferences = defaults.managementResourcePreferences;
-    	      this.notificationPreferences = defaults.notificationPreferences;
-    	      this.transportPreferences = defaults.transportPreferences;
+            $ = new PreferencesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder encryptionPreferences(@Nullable EncryptionPreferencesResponse encryptionPreferences) {
-            this.encryptionPreferences = encryptionPreferences;
+            $.encryptionPreferences = encryptionPreferences;
             return this;
         }
+
         public Builder managementResourcePreferences(@Nullable ManagementResourcePreferencesResponse managementResourcePreferences) {
-            this.managementResourcePreferences = managementResourcePreferences;
+            $.managementResourcePreferences = managementResourcePreferences;
             return this;
         }
+
         public Builder notificationPreferences(@Nullable List<NotificationPreferenceResponse> notificationPreferences) {
-            this.notificationPreferences = notificationPreferences;
+            $.notificationPreferences = notificationPreferences;
             return this;
         }
+
         public Builder notificationPreferences(NotificationPreferenceResponse... notificationPreferences) {
             return notificationPreferences(List.of(notificationPreferences));
         }
+
         public Builder transportPreferences(@Nullable TransportPreferencesResponse transportPreferences) {
-            this.transportPreferences = transportPreferences;
+            $.transportPreferences = transportPreferences;
             return this;
-        }        public PreferencesResponse build() {
-            return new PreferencesResponse(encryptionPreferences, managementResourcePreferences, notificationPreferences, transportPreferences);
+        }
+
+        public PreferencesResponse build() {
+            return $;
         }
     }
+
 }

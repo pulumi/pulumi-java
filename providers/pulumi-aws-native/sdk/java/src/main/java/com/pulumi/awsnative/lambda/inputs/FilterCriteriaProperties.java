@@ -24,48 +24,48 @@ public final class FilterCriteriaProperties extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="filters")
-      private final @Nullable List<EventSourceMappingFilter> filters;
+    private @Nullable List<EventSourceMappingFilter> filters;
 
-    public List<EventSourceMappingFilter> filters() {
-        return this.filters == null ? List.of() : this.filters;
+    public Optional<List<EventSourceMappingFilter>> filters() {
+        return Optional.ofNullable(this.filters);
     }
 
-    public FilterCriteriaProperties(@Nullable List<EventSourceMappingFilter> filters) {
-        this.filters = filters;
-    }
+    private FilterCriteriaProperties() {}
 
-    private FilterCriteriaProperties() {
-        this.filters = List.of();
+    private FilterCriteriaProperties(FilterCriteriaProperties $) {
+        this.filters = $.filters;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FilterCriteriaProperties defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<EventSourceMappingFilter> filters;
+        private FilterCriteriaProperties $;
 
         public Builder() {
-    	      // Empty
+            $ = new FilterCriteriaProperties();
         }
 
         public Builder(FilterCriteriaProperties defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.filters = defaults.filters;
+            $ = new FilterCriteriaProperties(Objects.requireNonNull(defaults));
         }
 
         public Builder filters(@Nullable List<EventSourceMappingFilter> filters) {
-            this.filters = filters;
+            $.filters = filters;
             return this;
         }
+
         public Builder filters(EventSourceMappingFilter... filters) {
             return filters(List.of(filters));
-        }        public FilterCriteriaProperties build() {
-            return new FilterCriteriaProperties(filters);
+        }
+
+        public FilterCriteriaProperties build() {
+            return $;
         }
     }
+
 }

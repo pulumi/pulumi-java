@@ -24,7 +24,7 @@ public final class StreamingPathResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="encryptionScheme", required=true)
-      private final String encryptionScheme;
+    private String encryptionScheme;
 
     public String encryptionScheme() {
         return this.encryptionScheme;
@@ -35,10 +35,10 @@ public final class StreamingPathResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="paths")
-      private final @Nullable List<String> paths;
+    private @Nullable List<String> paths;
 
-    public List<String> paths() {
-        return this.paths == null ? List.of() : this.paths;
+    public Optional<List<String>> paths() {
+        return Optional.ofNullable(this.paths);
     }
 
     /**
@@ -46,67 +46,62 @@ public final class StreamingPathResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="streamingProtocol", required=true)
-      private final String streamingProtocol;
+    private String streamingProtocol;
 
     public String streamingProtocol() {
         return this.streamingProtocol;
     }
 
-    public StreamingPathResponse(
-        String encryptionScheme,
-        @Nullable List<String> paths,
-        String streamingProtocol) {
-        this.encryptionScheme = Objects.requireNonNull(encryptionScheme, "expected parameter 'encryptionScheme' to be non-null");
-        this.paths = paths;
-        this.streamingProtocol = Objects.requireNonNull(streamingProtocol, "expected parameter 'streamingProtocol' to be non-null");
-    }
+    private StreamingPathResponse() {}
 
-    private StreamingPathResponse() {
-        this.encryptionScheme = null;
-        this.paths = List.of();
-        this.streamingProtocol = null;
+    private StreamingPathResponse(StreamingPathResponse $) {
+        this.encryptionScheme = $.encryptionScheme;
+        this.paths = $.paths;
+        this.streamingProtocol = $.streamingProtocol;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(StreamingPathResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String encryptionScheme;
-        private @Nullable List<String> paths;
-        private String streamingProtocol;
+        private StreamingPathResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new StreamingPathResponse();
         }
 
         public Builder(StreamingPathResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.encryptionScheme = defaults.encryptionScheme;
-    	      this.paths = defaults.paths;
-    	      this.streamingProtocol = defaults.streamingProtocol;
+            $ = new StreamingPathResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder encryptionScheme(String encryptionScheme) {
-            this.encryptionScheme = Objects.requireNonNull(encryptionScheme);
+            $.encryptionScheme = encryptionScheme;
             return this;
         }
+
         public Builder paths(@Nullable List<String> paths) {
-            this.paths = paths;
+            $.paths = paths;
             return this;
         }
+
         public Builder paths(String... paths) {
             return paths(List.of(paths));
         }
+
         public Builder streamingProtocol(String streamingProtocol) {
-            this.streamingProtocol = Objects.requireNonNull(streamingProtocol);
+            $.streamingProtocol = streamingProtocol;
             return this;
-        }        public StreamingPathResponse build() {
-            return new StreamingPathResponse(encryptionScheme, paths, streamingProtocol);
+        }
+
+        public StreamingPathResponse build() {
+            $.encryptionScheme = Objects.requireNonNull($.encryptionScheme, "expected parameter 'encryptionScheme' to be non-null");
+            $.streamingProtocol = Objects.requireNonNull($.streamingProtocol, "expected parameter 'streamingProtocol' to be non-null");
+            return $;
         }
     }
+
 }

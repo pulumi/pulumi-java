@@ -6,10 +6,10 @@ package com.pulumi.awsnative.eks.inputs;
 import com.pulumi.awsnative.eks.inputs.ClusterEncryptionConfigProviderPropertiesArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class ClusterEncryptionConfigArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="provider")
-      private final @Nullable Output<ClusterEncryptionConfigProviderPropertiesArgs> provider;
+    private @Nullable Output<ClusterEncryptionConfigProviderPropertiesArgs> provider;
 
-    public Output<ClusterEncryptionConfigProviderPropertiesArgs> provider() {
-        return this.provider == null ? Codegen.empty() : this.provider;
+    public Optional<Output<ClusterEncryptionConfigProviderPropertiesArgs>> provider() {
+        return Optional.ofNullable(this.provider);
     }
 
     /**
@@ -37,66 +37,62 @@ public final class ClusterEncryptionConfigArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="resources")
-      private final @Nullable Output<List<String>> resources;
+    private @Nullable Output<List<String>> resources;
 
-    public Output<List<String>> resources() {
-        return this.resources == null ? Codegen.empty() : this.resources;
+    public Optional<Output<List<String>>> resources() {
+        return Optional.ofNullable(this.resources);
     }
 
-    public ClusterEncryptionConfigArgs(
-        @Nullable Output<ClusterEncryptionConfigProviderPropertiesArgs> provider,
-        @Nullable Output<List<String>> resources) {
-        this.provider = provider;
-        this.resources = resources;
-    }
+    private ClusterEncryptionConfigArgs() {}
 
-    private ClusterEncryptionConfigArgs() {
-        this.provider = Codegen.empty();
-        this.resources = Codegen.empty();
+    private ClusterEncryptionConfigArgs(ClusterEncryptionConfigArgs $) {
+        this.provider = $.provider;
+        this.resources = $.resources;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ClusterEncryptionConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<ClusterEncryptionConfigProviderPropertiesArgs> provider;
-        private @Nullable Output<List<String>> resources;
+        private ClusterEncryptionConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ClusterEncryptionConfigArgs();
         }
 
         public Builder(ClusterEncryptionConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.provider = defaults.provider;
-    	      this.resources = defaults.resources;
+            $ = new ClusterEncryptionConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder provider(@Nullable Output<ClusterEncryptionConfigProviderPropertiesArgs> provider) {
-            this.provider = provider;
+            $.provider = provider;
             return this;
         }
-        public Builder provider(@Nullable ClusterEncryptionConfigProviderPropertiesArgs provider) {
-            this.provider = Codegen.ofNullable(provider);
-            return this;
+
+        public Builder provider(ClusterEncryptionConfigProviderPropertiesArgs provider) {
+            return provider(Output.of(provider));
         }
+
         public Builder resources(@Nullable Output<List<String>> resources) {
-            this.resources = resources;
+            $.resources = resources;
             return this;
         }
-        public Builder resources(@Nullable List<String> resources) {
-            this.resources = Codegen.ofNullable(resources);
-            return this;
+
+        public Builder resources(List<String> resources) {
+            return resources(Output.of(resources));
         }
+
         public Builder resources(String... resources) {
             return resources(List.of(resources));
-        }        public ClusterEncryptionConfigArgs build() {
-            return new ClusterEncryptionConfigArgs(provider, resources);
+        }
+
+        public ClusterEncryptionConfigArgs build() {
+            return $;
         }
     }
+
 }

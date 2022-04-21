@@ -20,10 +20,10 @@ public final class AppResourceSpec extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="instanceType")
-      private final @Nullable AppResourceSpecInstanceType instanceType;
+    private @Nullable AppResourceSpecInstanceType instanceType;
 
     public Optional<AppResourceSpecInstanceType> instanceType() {
-        return this.instanceType == null ? Optional.empty() : Optional.ofNullable(this.instanceType);
+        return Optional.ofNullable(this.instanceType);
     }
 
     /**
@@ -31,10 +31,10 @@ public final class AppResourceSpec extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="sageMakerImageArn")
-      private final @Nullable String sageMakerImageArn;
+    private @Nullable String sageMakerImageArn;
 
     public Optional<String> sageMakerImageArn() {
-        return this.sageMakerImageArn == null ? Optional.empty() : Optional.ofNullable(this.sageMakerImageArn);
+        return Optional.ofNullable(this.sageMakerImageArn);
     }
 
     /**
@@ -42,64 +42,56 @@ public final class AppResourceSpec extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="sageMakerImageVersionArn")
-      private final @Nullable String sageMakerImageVersionArn;
+    private @Nullable String sageMakerImageVersionArn;
 
     public Optional<String> sageMakerImageVersionArn() {
-        return this.sageMakerImageVersionArn == null ? Optional.empty() : Optional.ofNullable(this.sageMakerImageVersionArn);
+        return Optional.ofNullable(this.sageMakerImageVersionArn);
     }
 
-    public AppResourceSpec(
-        @Nullable AppResourceSpecInstanceType instanceType,
-        @Nullable String sageMakerImageArn,
-        @Nullable String sageMakerImageVersionArn) {
-        this.instanceType = instanceType;
-        this.sageMakerImageArn = sageMakerImageArn;
-        this.sageMakerImageVersionArn = sageMakerImageVersionArn;
-    }
+    private AppResourceSpec() {}
 
-    private AppResourceSpec() {
-        this.instanceType = null;
-        this.sageMakerImageArn = null;
-        this.sageMakerImageVersionArn = null;
+    private AppResourceSpec(AppResourceSpec $) {
+        this.instanceType = $.instanceType;
+        this.sageMakerImageArn = $.sageMakerImageArn;
+        this.sageMakerImageVersionArn = $.sageMakerImageVersionArn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AppResourceSpec defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable AppResourceSpecInstanceType instanceType;
-        private @Nullable String sageMakerImageArn;
-        private @Nullable String sageMakerImageVersionArn;
+        private AppResourceSpec $;
 
         public Builder() {
-    	      // Empty
+            $ = new AppResourceSpec();
         }
 
         public Builder(AppResourceSpec defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.instanceType = defaults.instanceType;
-    	      this.sageMakerImageArn = defaults.sageMakerImageArn;
-    	      this.sageMakerImageVersionArn = defaults.sageMakerImageVersionArn;
+            $ = new AppResourceSpec(Objects.requireNonNull(defaults));
         }
 
         public Builder instanceType(@Nullable AppResourceSpecInstanceType instanceType) {
-            this.instanceType = instanceType;
+            $.instanceType = instanceType;
             return this;
         }
+
         public Builder sageMakerImageArn(@Nullable String sageMakerImageArn) {
-            this.sageMakerImageArn = sageMakerImageArn;
+            $.sageMakerImageArn = sageMakerImageArn;
             return this;
         }
+
         public Builder sageMakerImageVersionArn(@Nullable String sageMakerImageVersionArn) {
-            this.sageMakerImageVersionArn = sageMakerImageVersionArn;
+            $.sageMakerImageVersionArn = sageMakerImageVersionArn;
             return this;
-        }        public AppResourceSpec build() {
-            return new AppResourceSpec(instanceType, sageMakerImageArn, sageMakerImageVersionArn);
+        }
+
+        public AppResourceSpec build() {
+            return $;
         }
     }
+
 }

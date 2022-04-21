@@ -24,10 +24,10 @@ public final class TelegramChannelPropertiesResponse extends com.pulumi.resource
      * 
      */
     @Import(name="accessToken")
-      private final @Nullable String accessToken;
+    private @Nullable String accessToken;
 
     public Optional<String> accessToken() {
-        return this.accessToken == null ? Optional.empty() : Optional.ofNullable(this.accessToken);
+        return Optional.ofNullable(this.accessToken);
     }
 
     /**
@@ -35,7 +35,7 @@ public final class TelegramChannelPropertiesResponse extends com.pulumi.resource
      * 
      */
     @Import(name="isEnabled", required=true)
-      private final Boolean isEnabled;
+    private Boolean isEnabled;
 
     public Boolean isEnabled() {
         return this.isEnabled;
@@ -46,64 +46,57 @@ public final class TelegramChannelPropertiesResponse extends com.pulumi.resource
      * 
      */
     @Import(name="isValidated")
-      private final @Nullable Boolean isValidated;
+    private @Nullable Boolean isValidated;
 
     public Optional<Boolean> isValidated() {
-        return this.isValidated == null ? Optional.empty() : Optional.ofNullable(this.isValidated);
+        return Optional.ofNullable(this.isValidated);
     }
 
-    public TelegramChannelPropertiesResponse(
-        @Nullable String accessToken,
-        Boolean isEnabled,
-        @Nullable Boolean isValidated) {
-        this.accessToken = accessToken;
-        this.isEnabled = Objects.requireNonNull(isEnabled, "expected parameter 'isEnabled' to be non-null");
-        this.isValidated = isValidated;
-    }
+    private TelegramChannelPropertiesResponse() {}
 
-    private TelegramChannelPropertiesResponse() {
-        this.accessToken = null;
-        this.isEnabled = null;
-        this.isValidated = null;
+    private TelegramChannelPropertiesResponse(TelegramChannelPropertiesResponse $) {
+        this.accessToken = $.accessToken;
+        this.isEnabled = $.isEnabled;
+        this.isValidated = $.isValidated;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TelegramChannelPropertiesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String accessToken;
-        private Boolean isEnabled;
-        private @Nullable Boolean isValidated;
+        private TelegramChannelPropertiesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new TelegramChannelPropertiesResponse();
         }
 
         public Builder(TelegramChannelPropertiesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accessToken = defaults.accessToken;
-    	      this.isEnabled = defaults.isEnabled;
-    	      this.isValidated = defaults.isValidated;
+            $ = new TelegramChannelPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder accessToken(@Nullable String accessToken) {
-            this.accessToken = accessToken;
+            $.accessToken = accessToken;
             return this;
         }
+
         public Builder isEnabled(Boolean isEnabled) {
-            this.isEnabled = Objects.requireNonNull(isEnabled);
+            $.isEnabled = isEnabled;
             return this;
         }
+
         public Builder isValidated(@Nullable Boolean isValidated) {
-            this.isValidated = isValidated;
+            $.isValidated = isValidated;
             return this;
-        }        public TelegramChannelPropertiesResponse build() {
-            return new TelegramChannelPropertiesResponse(accessToken, isEnabled, isValidated);
+        }
+
+        public TelegramChannelPropertiesResponse build() {
+            $.isEnabled = Objects.requireNonNull($.isEnabled, "expected parameter 'isEnabled' to be non-null");
+            return $;
         }
     }
+
 }

@@ -18,7 +18,7 @@ public final class GetDomainVpcOption extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="availabilityZones", required=true)
-      private final List<String> availabilityZones;
+    private List<String> availabilityZones;
 
     public List<String> availabilityZones() {
         return this.availabilityZones;
@@ -29,7 +29,7 @@ public final class GetDomainVpcOption extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="securityGroupIds", required=true)
-      private final List<String> securityGroupIds;
+    private List<String> securityGroupIds;
 
     public List<String> securityGroupIds() {
         return this.securityGroupIds;
@@ -40,7 +40,7 @@ public final class GetDomainVpcOption extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="subnetIds", required=true)
-      private final List<String> subnetIds;
+    private List<String> subnetIds;
 
     public List<String> subnetIds() {
         return this.subnetIds;
@@ -51,82 +51,78 @@ public final class GetDomainVpcOption extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="vpcId", required=true)
-      private final String vpcId;
+    private String vpcId;
 
     public String vpcId() {
         return this.vpcId;
     }
 
-    public GetDomainVpcOption(
-        List<String> availabilityZones,
-        List<String> securityGroupIds,
-        List<String> subnetIds,
-        String vpcId) {
-        this.availabilityZones = Objects.requireNonNull(availabilityZones, "expected parameter 'availabilityZones' to be non-null");
-        this.securityGroupIds = Objects.requireNonNull(securityGroupIds, "expected parameter 'securityGroupIds' to be non-null");
-        this.subnetIds = Objects.requireNonNull(subnetIds, "expected parameter 'subnetIds' to be non-null");
-        this.vpcId = Objects.requireNonNull(vpcId, "expected parameter 'vpcId' to be non-null");
-    }
+    private GetDomainVpcOption() {}
 
-    private GetDomainVpcOption() {
-        this.availabilityZones = List.of();
-        this.securityGroupIds = List.of();
-        this.subnetIds = List.of();
-        this.vpcId = null;
+    private GetDomainVpcOption(GetDomainVpcOption $) {
+        this.availabilityZones = $.availabilityZones;
+        this.securityGroupIds = $.securityGroupIds;
+        this.subnetIds = $.subnetIds;
+        this.vpcId = $.vpcId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetDomainVpcOption defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<String> availabilityZones;
-        private List<String> securityGroupIds;
-        private List<String> subnetIds;
-        private String vpcId;
+        private GetDomainVpcOption $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetDomainVpcOption();
         }
 
         public Builder(GetDomainVpcOption defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.availabilityZones = defaults.availabilityZones;
-    	      this.securityGroupIds = defaults.securityGroupIds;
-    	      this.subnetIds = defaults.subnetIds;
-    	      this.vpcId = defaults.vpcId;
+            $ = new GetDomainVpcOption(Objects.requireNonNull(defaults));
         }
 
         public Builder availabilityZones(List<String> availabilityZones) {
-            this.availabilityZones = Objects.requireNonNull(availabilityZones);
+            $.availabilityZones = availabilityZones;
             return this;
         }
+
         public Builder availabilityZones(String... availabilityZones) {
             return availabilityZones(List.of(availabilityZones));
         }
+
         public Builder securityGroupIds(List<String> securityGroupIds) {
-            this.securityGroupIds = Objects.requireNonNull(securityGroupIds);
+            $.securityGroupIds = securityGroupIds;
             return this;
         }
+
         public Builder securityGroupIds(String... securityGroupIds) {
             return securityGroupIds(List.of(securityGroupIds));
         }
+
         public Builder subnetIds(List<String> subnetIds) {
-            this.subnetIds = Objects.requireNonNull(subnetIds);
+            $.subnetIds = subnetIds;
             return this;
         }
+
         public Builder subnetIds(String... subnetIds) {
             return subnetIds(List.of(subnetIds));
         }
+
         public Builder vpcId(String vpcId) {
-            this.vpcId = Objects.requireNonNull(vpcId);
+            $.vpcId = vpcId;
             return this;
-        }        public GetDomainVpcOption build() {
-            return new GetDomainVpcOption(availabilityZones, securityGroupIds, subnetIds, vpcId);
+        }
+
+        public GetDomainVpcOption build() {
+            $.availabilityZones = Objects.requireNonNull($.availabilityZones, "expected parameter 'availabilityZones' to be non-null");
+            $.securityGroupIds = Objects.requireNonNull($.securityGroupIds, "expected parameter 'securityGroupIds' to be non-null");
+            $.subnetIds = Objects.requireNonNull($.subnetIds, "expected parameter 'subnetIds' to be non-null");
+            $.vpcId = Objects.requireNonNull($.vpcId, "expected parameter 'vpcId' to be non-null");
+            return $;
         }
     }
+
 }

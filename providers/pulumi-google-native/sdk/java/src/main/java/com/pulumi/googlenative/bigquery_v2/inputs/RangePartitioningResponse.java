@@ -18,7 +18,7 @@ public final class RangePartitioningResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="field", required=true)
-      private final String field;
+    private String field;
 
     public String field() {
         return this.field;
@@ -29,55 +29,52 @@ public final class RangePartitioningResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="range", required=true)
-      private final RangePartitioningRangeResponse range;
+    private RangePartitioningRangeResponse range;
 
     public RangePartitioningRangeResponse range() {
         return this.range;
     }
 
-    public RangePartitioningResponse(
-        String field,
-        RangePartitioningRangeResponse range) {
-        this.field = Objects.requireNonNull(field, "expected parameter 'field' to be non-null");
-        this.range = Objects.requireNonNull(range, "expected parameter 'range' to be non-null");
-    }
+    private RangePartitioningResponse() {}
 
-    private RangePartitioningResponse() {
-        this.field = null;
-        this.range = null;
+    private RangePartitioningResponse(RangePartitioningResponse $) {
+        this.field = $.field;
+        this.range = $.range;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RangePartitioningResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String field;
-        private RangePartitioningRangeResponse range;
+        private RangePartitioningResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new RangePartitioningResponse();
         }
 
         public Builder(RangePartitioningResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.field = defaults.field;
-    	      this.range = defaults.range;
+            $ = new RangePartitioningResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder field(String field) {
-            this.field = Objects.requireNonNull(field);
+            $.field = field;
             return this;
         }
+
         public Builder range(RangePartitioningRangeResponse range) {
-            this.range = Objects.requireNonNull(range);
+            $.range = range;
             return this;
-        }        public RangePartitioningResponse build() {
-            return new RangePartitioningResponse(field, range);
+        }
+
+        public RangePartitioningResponse build() {
+            $.field = Objects.requireNonNull($.field, "expected parameter 'field' to be non-null");
+            $.range = Objects.requireNonNull($.range, "expected parameter 'range' to be non-null");
+            return $;
         }
     }
+
 }

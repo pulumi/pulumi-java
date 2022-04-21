@@ -7,11 +7,11 @@ import com.pulumi.aws.directoryservice.inputs.DirectoryConnectSettingsArgs;
 import com.pulumi.aws.directoryservice.inputs.DirectoryVpcSettingsArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class DirectoryArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="alias")
-      private final @Nullable Output<String> alias;
+    private @Nullable Output<String> alias;
 
-    public Output<String> alias() {
-        return this.alias == null ? Codegen.empty() : this.alias;
+    public Optional<Output<String>> alias() {
+        return Optional.ofNullable(this.alias);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class DirectoryArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="connectSettings")
-      private final @Nullable Output<DirectoryConnectSettingsArgs> connectSettings;
+    private @Nullable Output<DirectoryConnectSettingsArgs> connectSettings;
 
-    public Output<DirectoryConnectSettingsArgs> connectSettings() {
-        return this.connectSettings == null ? Codegen.empty() : this.connectSettings;
+    public Optional<Output<DirectoryConnectSettingsArgs>> connectSettings() {
+        return Optional.ofNullable(this.connectSettings);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class DirectoryArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -57,10 +57,10 @@ public final class DirectoryArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="edition")
-      private final @Nullable Output<String> edition;
+    private @Nullable Output<String> edition;
 
-    public Output<String> edition() {
-        return this.edition == null ? Codegen.empty() : this.edition;
+    public Optional<Output<String>> edition() {
+        return Optional.ofNullable(this.edition);
     }
 
     /**
@@ -68,10 +68,10 @@ public final class DirectoryArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="enableSso")
-      private final @Nullable Output<Boolean> enableSso;
+    private @Nullable Output<Boolean> enableSso;
 
-    public Output<Boolean> enableSso() {
-        return this.enableSso == null ? Codegen.empty() : this.enableSso;
+    public Optional<Output<Boolean>> enableSso() {
+        return Optional.ofNullable(this.enableSso);
     }
 
     /**
@@ -79,7 +79,7 @@ public final class DirectoryArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name", required=true)
-      private final Output<String> name;
+    private Output<String> name;
 
     public Output<String> name() {
         return this.name;
@@ -90,7 +90,7 @@ public final class DirectoryArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="password", required=true)
-      private final Output<String> password;
+    private Output<String> password;
 
     public Output<String> password() {
         return this.password;
@@ -101,10 +101,10 @@ public final class DirectoryArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="shortName")
-      private final @Nullable Output<String> shortName;
+    private @Nullable Output<String> shortName;
 
-    public Output<String> shortName() {
-        return this.shortName == null ? Codegen.empty() : this.shortName;
+    public Optional<Output<String>> shortName() {
+        return Optional.ofNullable(this.shortName);
     }
 
     /**
@@ -112,10 +112,10 @@ public final class DirectoryArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="size")
-      private final @Nullable Output<String> size;
+    private @Nullable Output<String> size;
 
-    public Output<String> size() {
-        return this.size == null ? Codegen.empty() : this.size;
+    public Optional<Output<String>> size() {
+        return Optional.ofNullable(this.size);
     }
 
     /**
@@ -123,10 +123,10 @@ public final class DirectoryArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -134,10 +134,10 @@ public final class DirectoryArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="type")
-      private final @Nullable Output<String> type;
+    private @Nullable Output<String> type;
 
-    public Output<String> type() {
-        return this.type == null ? Codegen.empty() : this.type;
+    public Optional<Output<String>> type() {
+        return Optional.ofNullable(this.type);
     }
 
     /**
@@ -145,193 +145,160 @@ public final class DirectoryArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="vpcSettings")
-      private final @Nullable Output<DirectoryVpcSettingsArgs> vpcSettings;
+    private @Nullable Output<DirectoryVpcSettingsArgs> vpcSettings;
 
-    public Output<DirectoryVpcSettingsArgs> vpcSettings() {
-        return this.vpcSettings == null ? Codegen.empty() : this.vpcSettings;
+    public Optional<Output<DirectoryVpcSettingsArgs>> vpcSettings() {
+        return Optional.ofNullable(this.vpcSettings);
     }
 
-    public DirectoryArgs(
-        @Nullable Output<String> alias,
-        @Nullable Output<DirectoryConnectSettingsArgs> connectSettings,
-        @Nullable Output<String> description,
-        @Nullable Output<String> edition,
-        @Nullable Output<Boolean> enableSso,
-        Output<String> name,
-        Output<String> password,
-        @Nullable Output<String> shortName,
-        @Nullable Output<String> size,
-        @Nullable Output<Map<String,String>> tags,
-        @Nullable Output<String> type,
-        @Nullable Output<DirectoryVpcSettingsArgs> vpcSettings) {
-        this.alias = alias;
-        this.connectSettings = connectSettings;
-        this.description = description;
-        this.edition = edition;
-        this.enableSso = enableSso;
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.password = Objects.requireNonNull(password, "expected parameter 'password' to be non-null");
-        this.shortName = shortName;
-        this.size = size;
-        this.tags = tags;
-        this.type = type;
-        this.vpcSettings = vpcSettings;
-    }
+    private DirectoryArgs() {}
 
-    private DirectoryArgs() {
-        this.alias = Codegen.empty();
-        this.connectSettings = Codegen.empty();
-        this.description = Codegen.empty();
-        this.edition = Codegen.empty();
-        this.enableSso = Codegen.empty();
-        this.name = Codegen.empty();
-        this.password = Codegen.empty();
-        this.shortName = Codegen.empty();
-        this.size = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.type = Codegen.empty();
-        this.vpcSettings = Codegen.empty();
+    private DirectoryArgs(DirectoryArgs $) {
+        this.alias = $.alias;
+        this.connectSettings = $.connectSettings;
+        this.description = $.description;
+        this.edition = $.edition;
+        this.enableSso = $.enableSso;
+        this.name = $.name;
+        this.password = $.password;
+        this.shortName = $.shortName;
+        this.size = $.size;
+        this.tags = $.tags;
+        this.type = $.type;
+        this.vpcSettings = $.vpcSettings;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DirectoryArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> alias;
-        private @Nullable Output<DirectoryConnectSettingsArgs> connectSettings;
-        private @Nullable Output<String> description;
-        private @Nullable Output<String> edition;
-        private @Nullable Output<Boolean> enableSso;
-        private Output<String> name;
-        private Output<String> password;
-        private @Nullable Output<String> shortName;
-        private @Nullable Output<String> size;
-        private @Nullable Output<Map<String,String>> tags;
-        private @Nullable Output<String> type;
-        private @Nullable Output<DirectoryVpcSettingsArgs> vpcSettings;
+        private DirectoryArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DirectoryArgs();
         }
 
         public Builder(DirectoryArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.alias = defaults.alias;
-    	      this.connectSettings = defaults.connectSettings;
-    	      this.description = defaults.description;
-    	      this.edition = defaults.edition;
-    	      this.enableSso = defaults.enableSso;
-    	      this.name = defaults.name;
-    	      this.password = defaults.password;
-    	      this.shortName = defaults.shortName;
-    	      this.size = defaults.size;
-    	      this.tags = defaults.tags;
-    	      this.type = defaults.type;
-    	      this.vpcSettings = defaults.vpcSettings;
+            $ = new DirectoryArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder alias(@Nullable Output<String> alias) {
-            this.alias = alias;
+            $.alias = alias;
             return this;
         }
-        public Builder alias(@Nullable String alias) {
-            this.alias = Codegen.ofNullable(alias);
-            return this;
+
+        public Builder alias(String alias) {
+            return alias(Output.of(alias));
         }
+
         public Builder connectSettings(@Nullable Output<DirectoryConnectSettingsArgs> connectSettings) {
-            this.connectSettings = connectSettings;
+            $.connectSettings = connectSettings;
             return this;
         }
-        public Builder connectSettings(@Nullable DirectoryConnectSettingsArgs connectSettings) {
-            this.connectSettings = Codegen.ofNullable(connectSettings);
-            return this;
+
+        public Builder connectSettings(DirectoryConnectSettingsArgs connectSettings) {
+            return connectSettings(Output.of(connectSettings));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder edition(@Nullable Output<String> edition) {
-            this.edition = edition;
+            $.edition = edition;
             return this;
         }
-        public Builder edition(@Nullable String edition) {
-            this.edition = Codegen.ofNullable(edition);
-            return this;
+
+        public Builder edition(String edition) {
+            return edition(Output.of(edition));
         }
+
         public Builder enableSso(@Nullable Output<Boolean> enableSso) {
-            this.enableSso = enableSso;
+            $.enableSso = enableSso;
             return this;
         }
-        public Builder enableSso(@Nullable Boolean enableSso) {
-            this.enableSso = Codegen.ofNullable(enableSso);
-            return this;
+
+        public Builder enableSso(Boolean enableSso) {
+            return enableSso(Output.of(enableSso));
         }
+
         public Builder name(Output<String> name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Output.of(Objects.requireNonNull(name));
-            return this;
+            return name(Output.of(name));
         }
+
         public Builder password(Output<String> password) {
-            this.password = Objects.requireNonNull(password);
+            $.password = password;
             return this;
         }
+
         public Builder password(String password) {
-            this.password = Output.of(Objects.requireNonNull(password));
-            return this;
+            return password(Output.of(password));
         }
+
         public Builder shortName(@Nullable Output<String> shortName) {
-            this.shortName = shortName;
+            $.shortName = shortName;
             return this;
         }
-        public Builder shortName(@Nullable String shortName) {
-            this.shortName = Codegen.ofNullable(shortName);
-            return this;
+
+        public Builder shortName(String shortName) {
+            return shortName(Output.of(shortName));
         }
+
         public Builder size(@Nullable Output<String> size) {
-            this.size = size;
+            $.size = size;
             return this;
         }
-        public Builder size(@Nullable String size) {
-            this.size = Codegen.ofNullable(size);
-            return this;
+
+        public Builder size(String size) {
+            return size(Output.of(size));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder type(@Nullable Output<String> type) {
-            this.type = type;
+            $.type = type;
             return this;
         }
-        public Builder type(@Nullable String type) {
-            this.type = Codegen.ofNullable(type);
-            return this;
+
+        public Builder type(String type) {
+            return type(Output.of(type));
         }
+
         public Builder vpcSettings(@Nullable Output<DirectoryVpcSettingsArgs> vpcSettings) {
-            this.vpcSettings = vpcSettings;
+            $.vpcSettings = vpcSettings;
             return this;
         }
-        public Builder vpcSettings(@Nullable DirectoryVpcSettingsArgs vpcSettings) {
-            this.vpcSettings = Codegen.ofNullable(vpcSettings);
-            return this;
-        }        public DirectoryArgs build() {
-            return new DirectoryArgs(alias, connectSettings, description, edition, enableSso, name, password, shortName, size, tags, type, vpcSettings);
+
+        public Builder vpcSettings(DirectoryVpcSettingsArgs vpcSettings) {
+            return vpcSettings(Output.of(vpcSettings));
+        }
+
+        public DirectoryArgs build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.password = Objects.requireNonNull($.password, "expected parameter 'password' to be non-null");
+            return $;
         }
     }
+
 }

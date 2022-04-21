@@ -6,7 +6,6 @@ package com.pulumi.awsnative.apprunner.inputs;
 import com.pulumi.awsnative.apprunner.enums.ServiceSourceCodeVersionType;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -24,7 +23,7 @@ public final class ServiceSourceCodeVersionArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="type", required=true)
-      private final Output<ServiceSourceCodeVersionType> type;
+    private Output<ServiceSourceCodeVersionType> type;
 
     public Output<ServiceSourceCodeVersionType> type() {
         return this.type;
@@ -35,63 +34,60 @@ public final class ServiceSourceCodeVersionArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="value", required=true)
-      private final Output<String> value;
+    private Output<String> value;
 
     public Output<String> value() {
         return this.value;
     }
 
-    public ServiceSourceCodeVersionArgs(
-        Output<ServiceSourceCodeVersionType> type,
-        Output<String> value) {
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-        this.value = Objects.requireNonNull(value, "expected parameter 'value' to be non-null");
-    }
+    private ServiceSourceCodeVersionArgs() {}
 
-    private ServiceSourceCodeVersionArgs() {
-        this.type = Codegen.empty();
-        this.value = Codegen.empty();
+    private ServiceSourceCodeVersionArgs(ServiceSourceCodeVersionArgs $) {
+        this.type = $.type;
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ServiceSourceCodeVersionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<ServiceSourceCodeVersionType> type;
-        private Output<String> value;
+        private ServiceSourceCodeVersionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ServiceSourceCodeVersionArgs();
         }
 
         public Builder(ServiceSourceCodeVersionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.type = defaults.type;
-    	      this.value = defaults.value;
+            $ = new ServiceSourceCodeVersionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder type(Output<ServiceSourceCodeVersionType> type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder type(ServiceSourceCodeVersionType type) {
-            this.type = Output.of(Objects.requireNonNull(type));
-            return this;
+            return type(Output.of(type));
         }
+
         public Builder value(Output<String> value) {
-            this.value = Objects.requireNonNull(value);
+            $.value = value;
             return this;
         }
+
         public Builder value(String value) {
-            this.value = Output.of(Objects.requireNonNull(value));
-            return this;
-        }        public ServiceSourceCodeVersionArgs build() {
-            return new ServiceSourceCodeVersionArgs(type, value);
+            return value(Output.of(value));
+        }
+
+        public ServiceSourceCodeVersionArgs build() {
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            $.value = Objects.requireNonNull($.value, "expected parameter 'value' to be non-null");
+            return $;
         }
     }
+
 }

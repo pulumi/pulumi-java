@@ -21,10 +21,10 @@ public final class GetEntityInsightsArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="addDefaultExtendedTimeRange")
-      private final @Nullable Boolean addDefaultExtendedTimeRange;
+    private @Nullable Boolean addDefaultExtendedTimeRange;
 
     public Optional<Boolean> addDefaultExtendedTimeRange() {
-        return this.addDefaultExtendedTimeRange == null ? Optional.empty() : Optional.ofNullable(this.addDefaultExtendedTimeRange);
+        return Optional.ofNullable(this.addDefaultExtendedTimeRange);
     }
 
     /**
@@ -32,7 +32,7 @@ public final class GetEntityInsightsArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="endTime", required=true)
-      private final String endTime;
+    private String endTime;
 
     public String endTime() {
         return this.endTime;
@@ -43,7 +43,7 @@ public final class GetEntityInsightsArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="entityId", required=true)
-      private final String entityId;
+    private String entityId;
 
     public String entityId() {
         return this.entityId;
@@ -54,10 +54,10 @@ public final class GetEntityInsightsArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="insightQueryIds")
-      private final @Nullable List<String> insightQueryIds;
+    private @Nullable List<String> insightQueryIds;
 
-    public List<String> insightQueryIds() {
-        return this.insightQueryIds == null ? List.of() : this.insightQueryIds;
+    public Optional<List<String>> insightQueryIds() {
+        return Optional.ofNullable(this.insightQueryIds);
     }
 
     /**
@@ -65,7 +65,7 @@ public final class GetEntityInsightsArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="operationalInsightsResourceProvider", required=true)
-      private final String operationalInsightsResourceProvider;
+    private String operationalInsightsResourceProvider;
 
     public String operationalInsightsResourceProvider() {
         return this.operationalInsightsResourceProvider;
@@ -76,7 +76,7 @@ public final class GetEntityInsightsArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -87,7 +87,7 @@ public final class GetEntityInsightsArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="startTime", required=true)
-      private final String startTime;
+    private String startTime;
 
     public String startTime() {
         return this.startTime;
@@ -98,112 +98,96 @@ public final class GetEntityInsightsArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="workspaceName", required=true)
-      private final String workspaceName;
+    private String workspaceName;
 
     public String workspaceName() {
         return this.workspaceName;
     }
 
-    public GetEntityInsightsArgs(
-        @Nullable Boolean addDefaultExtendedTimeRange,
-        String endTime,
-        String entityId,
-        @Nullable List<String> insightQueryIds,
-        String operationalInsightsResourceProvider,
-        String resourceGroupName,
-        String startTime,
-        String workspaceName) {
-        this.addDefaultExtendedTimeRange = addDefaultExtendedTimeRange;
-        this.endTime = Objects.requireNonNull(endTime, "expected parameter 'endTime' to be non-null");
-        this.entityId = Objects.requireNonNull(entityId, "expected parameter 'entityId' to be non-null");
-        this.insightQueryIds = insightQueryIds;
-        this.operationalInsightsResourceProvider = Objects.requireNonNull(operationalInsightsResourceProvider, "expected parameter 'operationalInsightsResourceProvider' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.startTime = Objects.requireNonNull(startTime, "expected parameter 'startTime' to be non-null");
-        this.workspaceName = Objects.requireNonNull(workspaceName, "expected parameter 'workspaceName' to be non-null");
-    }
+    private GetEntityInsightsArgs() {}
 
-    private GetEntityInsightsArgs() {
-        this.addDefaultExtendedTimeRange = null;
-        this.endTime = null;
-        this.entityId = null;
-        this.insightQueryIds = List.of();
-        this.operationalInsightsResourceProvider = null;
-        this.resourceGroupName = null;
-        this.startTime = null;
-        this.workspaceName = null;
+    private GetEntityInsightsArgs(GetEntityInsightsArgs $) {
+        this.addDefaultExtendedTimeRange = $.addDefaultExtendedTimeRange;
+        this.endTime = $.endTime;
+        this.entityId = $.entityId;
+        this.insightQueryIds = $.insightQueryIds;
+        this.operationalInsightsResourceProvider = $.operationalInsightsResourceProvider;
+        this.resourceGroupName = $.resourceGroupName;
+        this.startTime = $.startTime;
+        this.workspaceName = $.workspaceName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetEntityInsightsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Boolean addDefaultExtendedTimeRange;
-        private String endTime;
-        private String entityId;
-        private @Nullable List<String> insightQueryIds;
-        private String operationalInsightsResourceProvider;
-        private String resourceGroupName;
-        private String startTime;
-        private String workspaceName;
+        private GetEntityInsightsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetEntityInsightsArgs();
         }
 
         public Builder(GetEntityInsightsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.addDefaultExtendedTimeRange = defaults.addDefaultExtendedTimeRange;
-    	      this.endTime = defaults.endTime;
-    	      this.entityId = defaults.entityId;
-    	      this.insightQueryIds = defaults.insightQueryIds;
-    	      this.operationalInsightsResourceProvider = defaults.operationalInsightsResourceProvider;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.startTime = defaults.startTime;
-    	      this.workspaceName = defaults.workspaceName;
+            $ = new GetEntityInsightsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder addDefaultExtendedTimeRange(@Nullable Boolean addDefaultExtendedTimeRange) {
-            this.addDefaultExtendedTimeRange = addDefaultExtendedTimeRange;
+            $.addDefaultExtendedTimeRange = addDefaultExtendedTimeRange;
             return this;
         }
+
         public Builder endTime(String endTime) {
-            this.endTime = Objects.requireNonNull(endTime);
+            $.endTime = endTime;
             return this;
         }
+
         public Builder entityId(String entityId) {
-            this.entityId = Objects.requireNonNull(entityId);
+            $.entityId = entityId;
             return this;
         }
+
         public Builder insightQueryIds(@Nullable List<String> insightQueryIds) {
-            this.insightQueryIds = insightQueryIds;
+            $.insightQueryIds = insightQueryIds;
             return this;
         }
+
         public Builder insightQueryIds(String... insightQueryIds) {
             return insightQueryIds(List.of(insightQueryIds));
         }
+
         public Builder operationalInsightsResourceProvider(String operationalInsightsResourceProvider) {
-            this.operationalInsightsResourceProvider = Objects.requireNonNull(operationalInsightsResourceProvider);
+            $.operationalInsightsResourceProvider = operationalInsightsResourceProvider;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder startTime(String startTime) {
-            this.startTime = Objects.requireNonNull(startTime);
+            $.startTime = startTime;
             return this;
         }
+
         public Builder workspaceName(String workspaceName) {
-            this.workspaceName = Objects.requireNonNull(workspaceName);
+            $.workspaceName = workspaceName;
             return this;
-        }        public GetEntityInsightsArgs build() {
-            return new GetEntityInsightsArgs(addDefaultExtendedTimeRange, endTime, entityId, insightQueryIds, operationalInsightsResourceProvider, resourceGroupName, startTime, workspaceName);
+        }
+
+        public GetEntityInsightsArgs build() {
+            $.endTime = Objects.requireNonNull($.endTime, "expected parameter 'endTime' to be non-null");
+            $.entityId = Objects.requireNonNull($.entityId, "expected parameter 'entityId' to be non-null");
+            $.operationalInsightsResourceProvider = Objects.requireNonNull($.operationalInsightsResourceProvider, "expected parameter 'operationalInsightsResourceProvider' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.startTime = Objects.requireNonNull($.startTime, "expected parameter 'startTime' to be non-null");
+            $.workspaceName = Objects.requireNonNull($.workspaceName, "expected parameter 'workspaceName' to be non-null");
+            return $;
         }
     }
+
 }

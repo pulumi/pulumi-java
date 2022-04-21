@@ -8,9 +8,9 @@ import com.pulumi.azurenative.synapse.inputs.TableLevelSharingPropertiesArgs;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,10 @@ public final class KustoPoolAttachedDatabaseConfigurationArgs extends com.pulumi
      * 
      */
     @Import(name="attachedDatabaseConfigurationName")
-      private final @Nullable Output<String> attachedDatabaseConfigurationName;
+    private @Nullable Output<String> attachedDatabaseConfigurationName;
 
-    public Output<String> attachedDatabaseConfigurationName() {
-        return this.attachedDatabaseConfigurationName == null ? Codegen.empty() : this.attachedDatabaseConfigurationName;
+    public Optional<Output<String>> attachedDatabaseConfigurationName() {
+        return Optional.ofNullable(this.attachedDatabaseConfigurationName);
     }
 
     /**
@@ -34,7 +34,7 @@ public final class KustoPoolAttachedDatabaseConfigurationArgs extends com.pulumi
      * 
      */
     @Import(name="databaseName", required=true)
-      private final Output<String> databaseName;
+    private Output<String> databaseName;
 
     public Output<String> databaseName() {
         return this.databaseName;
@@ -45,7 +45,7 @@ public final class KustoPoolAttachedDatabaseConfigurationArgs extends com.pulumi
      * 
      */
     @Import(name="defaultPrincipalsModificationKind", required=true)
-      private final Output<Either<String,DefaultPrincipalsModificationKind>> defaultPrincipalsModificationKind;
+    private Output<Either<String,DefaultPrincipalsModificationKind>> defaultPrincipalsModificationKind;
 
     public Output<Either<String,DefaultPrincipalsModificationKind>> defaultPrincipalsModificationKind() {
         return this.defaultPrincipalsModificationKind;
@@ -56,7 +56,7 @@ public final class KustoPoolAttachedDatabaseConfigurationArgs extends com.pulumi
      * 
      */
     @Import(name="kustoPoolName", required=true)
-      private final Output<String> kustoPoolName;
+    private Output<String> kustoPoolName;
 
     public Output<String> kustoPoolName() {
         return this.kustoPoolName;
@@ -67,7 +67,7 @@ public final class KustoPoolAttachedDatabaseConfigurationArgs extends com.pulumi
      * 
      */
     @Import(name="kustoPoolResourceId", required=true)
-      private final Output<String> kustoPoolResourceId;
+    private Output<String> kustoPoolResourceId;
 
     public Output<String> kustoPoolResourceId() {
         return this.kustoPoolResourceId;
@@ -78,10 +78,10 @@ public final class KustoPoolAttachedDatabaseConfigurationArgs extends com.pulumi
      * 
      */
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -89,7 +89,7 @@ public final class KustoPoolAttachedDatabaseConfigurationArgs extends com.pulumi
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -100,10 +100,10 @@ public final class KustoPoolAttachedDatabaseConfigurationArgs extends com.pulumi
      * 
      */
     @Import(name="tableLevelSharingProperties")
-      private final @Nullable Output<TableLevelSharingPropertiesArgs> tableLevelSharingProperties;
+    private @Nullable Output<TableLevelSharingPropertiesArgs> tableLevelSharingProperties;
 
-    public Output<TableLevelSharingPropertiesArgs> tableLevelSharingProperties() {
-        return this.tableLevelSharingProperties == null ? Codegen.empty() : this.tableLevelSharingProperties;
+    public Optional<Output<TableLevelSharingPropertiesArgs>> tableLevelSharingProperties() {
+        return Optional.ofNullable(this.tableLevelSharingProperties);
     }
 
     /**
@@ -111,154 +111,134 @@ public final class KustoPoolAttachedDatabaseConfigurationArgs extends com.pulumi
      * 
      */
     @Import(name="workspaceName", required=true)
-      private final Output<String> workspaceName;
+    private Output<String> workspaceName;
 
     public Output<String> workspaceName() {
         return this.workspaceName;
     }
 
-    public KustoPoolAttachedDatabaseConfigurationArgs(
-        @Nullable Output<String> attachedDatabaseConfigurationName,
-        Output<String> databaseName,
-        Output<Either<String,DefaultPrincipalsModificationKind>> defaultPrincipalsModificationKind,
-        Output<String> kustoPoolName,
-        Output<String> kustoPoolResourceId,
-        @Nullable Output<String> location,
-        Output<String> resourceGroupName,
-        @Nullable Output<TableLevelSharingPropertiesArgs> tableLevelSharingProperties,
-        Output<String> workspaceName) {
-        this.attachedDatabaseConfigurationName = attachedDatabaseConfigurationName;
-        this.databaseName = Objects.requireNonNull(databaseName, "expected parameter 'databaseName' to be non-null");
-        this.defaultPrincipalsModificationKind = Objects.requireNonNull(defaultPrincipalsModificationKind, "expected parameter 'defaultPrincipalsModificationKind' to be non-null");
-        this.kustoPoolName = Objects.requireNonNull(kustoPoolName, "expected parameter 'kustoPoolName' to be non-null");
-        this.kustoPoolResourceId = Objects.requireNonNull(kustoPoolResourceId, "expected parameter 'kustoPoolResourceId' to be non-null");
-        this.location = location;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.tableLevelSharingProperties = tableLevelSharingProperties;
-        this.workspaceName = Objects.requireNonNull(workspaceName, "expected parameter 'workspaceName' to be non-null");
-    }
+    private KustoPoolAttachedDatabaseConfigurationArgs() {}
 
-    private KustoPoolAttachedDatabaseConfigurationArgs() {
-        this.attachedDatabaseConfigurationName = Codegen.empty();
-        this.databaseName = Codegen.empty();
-        this.defaultPrincipalsModificationKind = Codegen.empty();
-        this.kustoPoolName = Codegen.empty();
-        this.kustoPoolResourceId = Codegen.empty();
-        this.location = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.tableLevelSharingProperties = Codegen.empty();
-        this.workspaceName = Codegen.empty();
+    private KustoPoolAttachedDatabaseConfigurationArgs(KustoPoolAttachedDatabaseConfigurationArgs $) {
+        this.attachedDatabaseConfigurationName = $.attachedDatabaseConfigurationName;
+        this.databaseName = $.databaseName;
+        this.defaultPrincipalsModificationKind = $.defaultPrincipalsModificationKind;
+        this.kustoPoolName = $.kustoPoolName;
+        this.kustoPoolResourceId = $.kustoPoolResourceId;
+        this.location = $.location;
+        this.resourceGroupName = $.resourceGroupName;
+        this.tableLevelSharingProperties = $.tableLevelSharingProperties;
+        this.workspaceName = $.workspaceName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(KustoPoolAttachedDatabaseConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> attachedDatabaseConfigurationName;
-        private Output<String> databaseName;
-        private Output<Either<String,DefaultPrincipalsModificationKind>> defaultPrincipalsModificationKind;
-        private Output<String> kustoPoolName;
-        private Output<String> kustoPoolResourceId;
-        private @Nullable Output<String> location;
-        private Output<String> resourceGroupName;
-        private @Nullable Output<TableLevelSharingPropertiesArgs> tableLevelSharingProperties;
-        private Output<String> workspaceName;
+        private KustoPoolAttachedDatabaseConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new KustoPoolAttachedDatabaseConfigurationArgs();
         }
 
         public Builder(KustoPoolAttachedDatabaseConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.attachedDatabaseConfigurationName = defaults.attachedDatabaseConfigurationName;
-    	      this.databaseName = defaults.databaseName;
-    	      this.defaultPrincipalsModificationKind = defaults.defaultPrincipalsModificationKind;
-    	      this.kustoPoolName = defaults.kustoPoolName;
-    	      this.kustoPoolResourceId = defaults.kustoPoolResourceId;
-    	      this.location = defaults.location;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.tableLevelSharingProperties = defaults.tableLevelSharingProperties;
-    	      this.workspaceName = defaults.workspaceName;
+            $ = new KustoPoolAttachedDatabaseConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder attachedDatabaseConfigurationName(@Nullable Output<String> attachedDatabaseConfigurationName) {
-            this.attachedDatabaseConfigurationName = attachedDatabaseConfigurationName;
+            $.attachedDatabaseConfigurationName = attachedDatabaseConfigurationName;
             return this;
         }
-        public Builder attachedDatabaseConfigurationName(@Nullable String attachedDatabaseConfigurationName) {
-            this.attachedDatabaseConfigurationName = Codegen.ofNullable(attachedDatabaseConfigurationName);
-            return this;
+
+        public Builder attachedDatabaseConfigurationName(String attachedDatabaseConfigurationName) {
+            return attachedDatabaseConfigurationName(Output.of(attachedDatabaseConfigurationName));
         }
+
         public Builder databaseName(Output<String> databaseName) {
-            this.databaseName = Objects.requireNonNull(databaseName);
+            $.databaseName = databaseName;
             return this;
         }
+
         public Builder databaseName(String databaseName) {
-            this.databaseName = Output.of(Objects.requireNonNull(databaseName));
-            return this;
+            return databaseName(Output.of(databaseName));
         }
+
         public Builder defaultPrincipalsModificationKind(Output<Either<String,DefaultPrincipalsModificationKind>> defaultPrincipalsModificationKind) {
-            this.defaultPrincipalsModificationKind = Objects.requireNonNull(defaultPrincipalsModificationKind);
+            $.defaultPrincipalsModificationKind = defaultPrincipalsModificationKind;
             return this;
         }
+
         public Builder defaultPrincipalsModificationKind(Either<String,DefaultPrincipalsModificationKind> defaultPrincipalsModificationKind) {
-            this.defaultPrincipalsModificationKind = Output.of(Objects.requireNonNull(defaultPrincipalsModificationKind));
-            return this;
+            return defaultPrincipalsModificationKind(Output.of(defaultPrincipalsModificationKind));
         }
+
         public Builder kustoPoolName(Output<String> kustoPoolName) {
-            this.kustoPoolName = Objects.requireNonNull(kustoPoolName);
+            $.kustoPoolName = kustoPoolName;
             return this;
         }
+
         public Builder kustoPoolName(String kustoPoolName) {
-            this.kustoPoolName = Output.of(Objects.requireNonNull(kustoPoolName));
-            return this;
+            return kustoPoolName(Output.of(kustoPoolName));
         }
+
         public Builder kustoPoolResourceId(Output<String> kustoPoolResourceId) {
-            this.kustoPoolResourceId = Objects.requireNonNull(kustoPoolResourceId);
+            $.kustoPoolResourceId = kustoPoolResourceId;
             return this;
         }
+
         public Builder kustoPoolResourceId(String kustoPoolResourceId) {
-            this.kustoPoolResourceId = Output.of(Objects.requireNonNull(kustoPoolResourceId));
-            return this;
+            return kustoPoolResourceId(Output.of(kustoPoolResourceId));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder tableLevelSharingProperties(@Nullable Output<TableLevelSharingPropertiesArgs> tableLevelSharingProperties) {
-            this.tableLevelSharingProperties = tableLevelSharingProperties;
+            $.tableLevelSharingProperties = tableLevelSharingProperties;
             return this;
         }
-        public Builder tableLevelSharingProperties(@Nullable TableLevelSharingPropertiesArgs tableLevelSharingProperties) {
-            this.tableLevelSharingProperties = Codegen.ofNullable(tableLevelSharingProperties);
-            return this;
+
+        public Builder tableLevelSharingProperties(TableLevelSharingPropertiesArgs tableLevelSharingProperties) {
+            return tableLevelSharingProperties(Output.of(tableLevelSharingProperties));
         }
+
         public Builder workspaceName(Output<String> workspaceName) {
-            this.workspaceName = Objects.requireNonNull(workspaceName);
+            $.workspaceName = workspaceName;
             return this;
         }
+
         public Builder workspaceName(String workspaceName) {
-            this.workspaceName = Output.of(Objects.requireNonNull(workspaceName));
-            return this;
-        }        public KustoPoolAttachedDatabaseConfigurationArgs build() {
-            return new KustoPoolAttachedDatabaseConfigurationArgs(attachedDatabaseConfigurationName, databaseName, defaultPrincipalsModificationKind, kustoPoolName, kustoPoolResourceId, location, resourceGroupName, tableLevelSharingProperties, workspaceName);
+            return workspaceName(Output.of(workspaceName));
+        }
+
+        public KustoPoolAttachedDatabaseConfigurationArgs build() {
+            $.databaseName = Objects.requireNonNull($.databaseName, "expected parameter 'databaseName' to be non-null");
+            $.defaultPrincipalsModificationKind = Objects.requireNonNull($.defaultPrincipalsModificationKind, "expected parameter 'defaultPrincipalsModificationKind' to be non-null");
+            $.kustoPoolName = Objects.requireNonNull($.kustoPoolName, "expected parameter 'kustoPoolName' to be non-null");
+            $.kustoPoolResourceId = Objects.requireNonNull($.kustoPoolResourceId, "expected parameter 'kustoPoolResourceId' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.workspaceName = Objects.requireNonNull($.workspaceName, "expected parameter 'workspaceName' to be non-null");
+            return $;
         }
     }
+
 }

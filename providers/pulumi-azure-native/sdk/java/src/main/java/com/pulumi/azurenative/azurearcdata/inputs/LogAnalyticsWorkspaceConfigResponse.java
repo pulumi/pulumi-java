@@ -23,45 +23,44 @@ public final class LogAnalyticsWorkspaceConfigResponse extends com.pulumi.resour
      * 
      */
     @Import(name="workspaceId")
-      private final @Nullable String workspaceId;
+    private @Nullable String workspaceId;
 
     public Optional<String> workspaceId() {
-        return this.workspaceId == null ? Optional.empty() : Optional.ofNullable(this.workspaceId);
+        return Optional.ofNullable(this.workspaceId);
     }
 
-    public LogAnalyticsWorkspaceConfigResponse(@Nullable String workspaceId) {
-        this.workspaceId = workspaceId;
-    }
+    private LogAnalyticsWorkspaceConfigResponse() {}
 
-    private LogAnalyticsWorkspaceConfigResponse() {
-        this.workspaceId = null;
+    private LogAnalyticsWorkspaceConfigResponse(LogAnalyticsWorkspaceConfigResponse $) {
+        this.workspaceId = $.workspaceId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LogAnalyticsWorkspaceConfigResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String workspaceId;
+        private LogAnalyticsWorkspaceConfigResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new LogAnalyticsWorkspaceConfigResponse();
         }
 
         public Builder(LogAnalyticsWorkspaceConfigResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.workspaceId = defaults.workspaceId;
+            $ = new LogAnalyticsWorkspaceConfigResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder workspaceId(@Nullable String workspaceId) {
-            this.workspaceId = workspaceId;
+            $.workspaceId = workspaceId;
             return this;
-        }        public LogAnalyticsWorkspaceConfigResponse build() {
-            return new LogAnalyticsWorkspaceConfigResponse(workspaceId);
+        }
+
+        public LogAnalyticsWorkspaceConfigResponse build() {
+            return $;
         }
     }
+
 }

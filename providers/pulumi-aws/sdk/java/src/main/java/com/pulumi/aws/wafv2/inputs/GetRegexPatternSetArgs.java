@@ -17,7 +17,7 @@ public final class GetRegexPatternSetArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -28,55 +28,52 @@ public final class GetRegexPatternSetArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="scope", required=true)
-      private final String scope;
+    private String scope;
 
     public String scope() {
         return this.scope;
     }
 
-    public GetRegexPatternSetArgs(
-        String name,
-        String scope) {
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.scope = Objects.requireNonNull(scope, "expected parameter 'scope' to be non-null");
-    }
+    private GetRegexPatternSetArgs() {}
 
-    private GetRegexPatternSetArgs() {
-        this.name = null;
-        this.scope = null;
+    private GetRegexPatternSetArgs(GetRegexPatternSetArgs $) {
+        this.name = $.name;
+        this.scope = $.scope;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetRegexPatternSetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String name;
-        private String scope;
+        private GetRegexPatternSetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetRegexPatternSetArgs();
         }
 
         public Builder(GetRegexPatternSetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.scope = defaults.scope;
+            $ = new GetRegexPatternSetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder scope(String scope) {
-            this.scope = Objects.requireNonNull(scope);
+            $.scope = scope;
             return this;
-        }        public GetRegexPatternSetArgs build() {
-            return new GetRegexPatternSetArgs(name, scope);
+        }
+
+        public GetRegexPatternSetArgs build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.scope = Objects.requireNonNull($.scope, "expected parameter 'scope' to be non-null");
+            return $;
         }
     }
+
 }

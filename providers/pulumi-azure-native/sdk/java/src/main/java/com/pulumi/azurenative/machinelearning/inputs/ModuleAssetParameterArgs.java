@@ -6,10 +6,10 @@ package com.pulumi.azurenative.machinelearning.inputs;
 import com.pulumi.azurenative.machinelearning.inputs.ModeValueInfoArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class ModuleAssetParameterArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="modeValuesInfo")
-      private final @Nullable Output<Map<String,ModeValueInfoArgs>> modeValuesInfo;
+    private @Nullable Output<Map<String,ModeValueInfoArgs>> modeValuesInfo;
 
-    public Output<Map<String,ModeValueInfoArgs>> modeValuesInfo() {
-        return this.modeValuesInfo == null ? Codegen.empty() : this.modeValuesInfo;
+    public Optional<Output<Map<String,ModeValueInfoArgs>>> modeValuesInfo() {
+        return Optional.ofNullable(this.modeValuesInfo);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class ModuleAssetParameterArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -48,76 +48,68 @@ public final class ModuleAssetParameterArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="parameterType")
-      private final @Nullable Output<String> parameterType;
+    private @Nullable Output<String> parameterType;
 
-    public Output<String> parameterType() {
-        return this.parameterType == null ? Codegen.empty() : this.parameterType;
+    public Optional<Output<String>> parameterType() {
+        return Optional.ofNullable(this.parameterType);
     }
 
-    public ModuleAssetParameterArgs(
-        @Nullable Output<Map<String,ModeValueInfoArgs>> modeValuesInfo,
-        @Nullable Output<String> name,
-        @Nullable Output<String> parameterType) {
-        this.modeValuesInfo = modeValuesInfo;
-        this.name = name;
-        this.parameterType = parameterType;
-    }
+    private ModuleAssetParameterArgs() {}
 
-    private ModuleAssetParameterArgs() {
-        this.modeValuesInfo = Codegen.empty();
-        this.name = Codegen.empty();
-        this.parameterType = Codegen.empty();
+    private ModuleAssetParameterArgs(ModuleAssetParameterArgs $) {
+        this.modeValuesInfo = $.modeValuesInfo;
+        this.name = $.name;
+        this.parameterType = $.parameterType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ModuleAssetParameterArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Map<String,ModeValueInfoArgs>> modeValuesInfo;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> parameterType;
+        private ModuleAssetParameterArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ModuleAssetParameterArgs();
         }
 
         public Builder(ModuleAssetParameterArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.modeValuesInfo = defaults.modeValuesInfo;
-    	      this.name = defaults.name;
-    	      this.parameterType = defaults.parameterType;
+            $ = new ModuleAssetParameterArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder modeValuesInfo(@Nullable Output<Map<String,ModeValueInfoArgs>> modeValuesInfo) {
-            this.modeValuesInfo = modeValuesInfo;
+            $.modeValuesInfo = modeValuesInfo;
             return this;
         }
-        public Builder modeValuesInfo(@Nullable Map<String,ModeValueInfoArgs> modeValuesInfo) {
-            this.modeValuesInfo = Codegen.ofNullable(modeValuesInfo);
-            return this;
+
+        public Builder modeValuesInfo(Map<String,ModeValueInfoArgs> modeValuesInfo) {
+            return modeValuesInfo(Output.of(modeValuesInfo));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder parameterType(@Nullable Output<String> parameterType) {
-            this.parameterType = parameterType;
+            $.parameterType = parameterType;
             return this;
         }
-        public Builder parameterType(@Nullable String parameterType) {
-            this.parameterType = Codegen.ofNullable(parameterType);
-            return this;
-        }        public ModuleAssetParameterArgs build() {
-            return new ModuleAssetParameterArgs(modeValuesInfo, name, parameterType);
+
+        public Builder parameterType(String parameterType) {
+            return parameterType(Output.of(parameterType));
+        }
+
+        public ModuleAssetParameterArgs build() {
+            return $;
         }
     }
+
 }

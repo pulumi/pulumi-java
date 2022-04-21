@@ -15,78 +15,72 @@ public final class GetGameServerDeploymentArgs extends com.pulumi.resources.Invo
     public static final GetGameServerDeploymentArgs Empty = new GetGameServerDeploymentArgs();
 
     @Import(name="gameServerDeploymentId", required=true)
-      private final String gameServerDeploymentId;
+    private String gameServerDeploymentId;
 
     public String gameServerDeploymentId() {
         return this.gameServerDeploymentId;
     }
 
     @Import(name="location", required=true)
-      private final String location;
+    private String location;
 
     public String location() {
         return this.location;
     }
 
     @Import(name="project")
-      private final @Nullable String project;
+    private @Nullable String project;
 
     public Optional<String> project() {
-        return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
+        return Optional.ofNullable(this.project);
     }
 
-    public GetGameServerDeploymentArgs(
-        String gameServerDeploymentId,
-        String location,
-        @Nullable String project) {
-        this.gameServerDeploymentId = Objects.requireNonNull(gameServerDeploymentId, "expected parameter 'gameServerDeploymentId' to be non-null");
-        this.location = Objects.requireNonNull(location, "expected parameter 'location' to be non-null");
-        this.project = project;
-    }
+    private GetGameServerDeploymentArgs() {}
 
-    private GetGameServerDeploymentArgs() {
-        this.gameServerDeploymentId = null;
-        this.location = null;
-        this.project = null;
+    private GetGameServerDeploymentArgs(GetGameServerDeploymentArgs $) {
+        this.gameServerDeploymentId = $.gameServerDeploymentId;
+        this.location = $.location;
+        this.project = $.project;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetGameServerDeploymentArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String gameServerDeploymentId;
-        private String location;
-        private @Nullable String project;
+        private GetGameServerDeploymentArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetGameServerDeploymentArgs();
         }
 
         public Builder(GetGameServerDeploymentArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.gameServerDeploymentId = defaults.gameServerDeploymentId;
-    	      this.location = defaults.location;
-    	      this.project = defaults.project;
+            $ = new GetGameServerDeploymentArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder gameServerDeploymentId(String gameServerDeploymentId) {
-            this.gameServerDeploymentId = Objects.requireNonNull(gameServerDeploymentId);
+            $.gameServerDeploymentId = gameServerDeploymentId;
             return this;
         }
+
         public Builder location(String location) {
-            this.location = Objects.requireNonNull(location);
+            $.location = location;
             return this;
         }
+
         public Builder project(@Nullable String project) {
-            this.project = project;
+            $.project = project;
             return this;
-        }        public GetGameServerDeploymentArgs build() {
-            return new GetGameServerDeploymentArgs(gameServerDeploymentId, location, project);
+        }
+
+        public GetGameServerDeploymentArgs build() {
+            $.gameServerDeploymentId = Objects.requireNonNull($.gameServerDeploymentId, "expected parameter 'gameServerDeploymentId' to be non-null");
+            $.location = Objects.requireNonNull($.location, "expected parameter 'location' to be non-null");
+            return $;
         }
     }
+
 }

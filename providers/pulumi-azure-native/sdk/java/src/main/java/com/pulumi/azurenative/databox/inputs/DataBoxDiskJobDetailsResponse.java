@@ -40,7 +40,7 @@ public final class DataBoxDiskJobDetailsResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="chainOfCustodySasKey", required=true)
-      private final String chainOfCustodySasKey;
+    private String chainOfCustodySasKey;
 
     public String chainOfCustodySasKey() {
         return this.chainOfCustodySasKey;
@@ -51,7 +51,7 @@ public final class DataBoxDiskJobDetailsResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="contactDetails", required=true)
-      private final ContactDetailsResponse contactDetails;
+    private ContactDetailsResponse contactDetails;
 
     public ContactDetailsResponse contactDetails() {
         return this.contactDetails;
@@ -62,7 +62,7 @@ public final class DataBoxDiskJobDetailsResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="copyLogDetails", required=true)
-      private final List<Object> copyLogDetails;
+    private List<Object> copyLogDetails;
 
     public List<Object> copyLogDetails() {
         return this.copyLogDetails;
@@ -73,7 +73,7 @@ public final class DataBoxDiskJobDetailsResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="copyProgress", required=true)
-      private final List<DataBoxDiskCopyProgressResponse> copyProgress;
+    private List<DataBoxDiskCopyProgressResponse> copyProgress;
 
     public List<DataBoxDiskCopyProgressResponse> copyProgress() {
         return this.copyProgress;
@@ -84,10 +84,10 @@ public final class DataBoxDiskJobDetailsResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="dataExportDetails")
-      private final @Nullable List<DataExportDetailsResponse> dataExportDetails;
+    private @Nullable List<DataExportDetailsResponse> dataExportDetails;
 
-    public List<DataExportDetailsResponse> dataExportDetails() {
-        return this.dataExportDetails == null ? List.of() : this.dataExportDetails;
+    public Optional<List<DataExportDetailsResponse>> dataExportDetails() {
+        return Optional.ofNullable(this.dataExportDetails);
     }
 
     /**
@@ -95,10 +95,10 @@ public final class DataBoxDiskJobDetailsResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="dataImportDetails")
-      private final @Nullable List<DataImportDetailsResponse> dataImportDetails;
+    private @Nullable List<DataImportDetailsResponse> dataImportDetails;
 
-    public List<DataImportDetailsResponse> dataImportDetails() {
-        return this.dataImportDetails == null ? List.of() : this.dataImportDetails;
+    public Optional<List<DataImportDetailsResponse>> dataImportDetails() {
+        return Optional.ofNullable(this.dataImportDetails);
     }
 
     /**
@@ -106,7 +106,7 @@ public final class DataBoxDiskJobDetailsResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="deliveryPackage", required=true)
-      private final PackageShippingDetailsResponse deliveryPackage;
+    private PackageShippingDetailsResponse deliveryPackage;
 
     public PackageShippingDetailsResponse deliveryPackage() {
         return this.deliveryPackage;
@@ -117,7 +117,7 @@ public final class DataBoxDiskJobDetailsResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="disksAndSizeDetails", required=true)
-      private final Map<String,Integer> disksAndSizeDetails;
+    private Map<String,Integer> disksAndSizeDetails;
 
     public Map<String,Integer> disksAndSizeDetails() {
         return this.disksAndSizeDetails;
@@ -128,10 +128,10 @@ public final class DataBoxDiskJobDetailsResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="expectedDataSizeInTeraBytes")
-      private final @Nullable Integer expectedDataSizeInTeraBytes;
+    private @Nullable Integer expectedDataSizeInTeraBytes;
 
     public Optional<Integer> expectedDataSizeInTeraBytes() {
-        return this.expectedDataSizeInTeraBytes == null ? Optional.empty() : Optional.ofNullable(this.expectedDataSizeInTeraBytes);
+        return Optional.ofNullable(this.expectedDataSizeInTeraBytes);
     }
 
     /**
@@ -140,7 +140,7 @@ public final class DataBoxDiskJobDetailsResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="jobDetailsType", required=true)
-      private final String jobDetailsType;
+    private String jobDetailsType;
 
     public String jobDetailsType() {
         return this.jobDetailsType;
@@ -151,7 +151,7 @@ public final class DataBoxDiskJobDetailsResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="jobStages", required=true)
-      private final List<JobStagesResponse> jobStages;
+    private List<JobStagesResponse> jobStages;
 
     public List<JobStagesResponse> jobStages() {
         return this.jobStages;
@@ -162,10 +162,10 @@ public final class DataBoxDiskJobDetailsResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="keyEncryptionKey")
-      private final @Nullable KeyEncryptionKeyResponse keyEncryptionKey;
+    private @Nullable KeyEncryptionKeyResponse keyEncryptionKey;
 
     public Optional<KeyEncryptionKeyResponse> keyEncryptionKey() {
-        return this.keyEncryptionKey == null ? Optional.empty() : Optional.ofNullable(this.keyEncryptionKey);
+        return Optional.ofNullable(this.keyEncryptionKey);
     }
 
     /**
@@ -173,10 +173,10 @@ public final class DataBoxDiskJobDetailsResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="passkey")
-      private final @Nullable String passkey;
+    private @Nullable String passkey;
 
     public Optional<String> passkey() {
-        return this.passkey == null ? Optional.empty() : Optional.ofNullable(this.passkey);
+        return Optional.ofNullable(this.passkey);
     }
 
     /**
@@ -184,10 +184,10 @@ public final class DataBoxDiskJobDetailsResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="preferences")
-      private final @Nullable PreferencesResponse preferences;
+    private @Nullable PreferencesResponse preferences;
 
     public Optional<PreferencesResponse> preferences() {
-        return this.preferences == null ? Optional.empty() : Optional.ofNullable(this.preferences);
+        return Optional.ofNullable(this.preferences);
     }
 
     /**
@@ -195,10 +195,10 @@ public final class DataBoxDiskJobDetailsResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="preferredDisks")
-      private final @Nullable Map<String,Integer> preferredDisks;
+    private @Nullable Map<String,Integer> preferredDisks;
 
-    public Map<String,Integer> preferredDisks() {
-        return this.preferredDisks == null ? Map.of() : this.preferredDisks;
+    public Optional<Map<String,Integer>> preferredDisks() {
+        return Optional.ofNullable(this.preferredDisks);
     }
 
     /**
@@ -206,7 +206,7 @@ public final class DataBoxDiskJobDetailsResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="returnPackage", required=true)
-      private final PackageShippingDetailsResponse returnPackage;
+    private PackageShippingDetailsResponse returnPackage;
 
     public PackageShippingDetailsResponse returnPackage() {
         return this.returnPackage;
@@ -217,7 +217,7 @@ public final class DataBoxDiskJobDetailsResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="reverseShipmentLabelSasKey", required=true)
-      private final String reverseShipmentLabelSasKey;
+    private String reverseShipmentLabelSasKey;
 
     public String reverseShipmentLabelSasKey() {
         return this.reverseShipmentLabelSasKey;
@@ -228,214 +228,176 @@ public final class DataBoxDiskJobDetailsResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="shippingAddress")
-      private final @Nullable ShippingAddressResponse shippingAddress;
+    private @Nullable ShippingAddressResponse shippingAddress;
 
     public Optional<ShippingAddressResponse> shippingAddress() {
-        return this.shippingAddress == null ? Optional.empty() : Optional.ofNullable(this.shippingAddress);
+        return Optional.ofNullable(this.shippingAddress);
     }
 
-    public DataBoxDiskJobDetailsResponse(
-        String chainOfCustodySasKey,
-        ContactDetailsResponse contactDetails,
-        List<Object> copyLogDetails,
-        List<DataBoxDiskCopyProgressResponse> copyProgress,
-        @Nullable List<DataExportDetailsResponse> dataExportDetails,
-        @Nullable List<DataImportDetailsResponse> dataImportDetails,
-        PackageShippingDetailsResponse deliveryPackage,
-        Map<String,Integer> disksAndSizeDetails,
-        @Nullable Integer expectedDataSizeInTeraBytes,
-        String jobDetailsType,
-        List<JobStagesResponse> jobStages,
-        @Nullable KeyEncryptionKeyResponse keyEncryptionKey,
-        @Nullable String passkey,
-        @Nullable PreferencesResponse preferences,
-        @Nullable Map<String,Integer> preferredDisks,
-        PackageShippingDetailsResponse returnPackage,
-        String reverseShipmentLabelSasKey,
-        @Nullable ShippingAddressResponse shippingAddress) {
-        this.chainOfCustodySasKey = Objects.requireNonNull(chainOfCustodySasKey, "expected parameter 'chainOfCustodySasKey' to be non-null");
-        this.contactDetails = Objects.requireNonNull(contactDetails, "expected parameter 'contactDetails' to be non-null");
-        this.copyLogDetails = Objects.requireNonNull(copyLogDetails, "expected parameter 'copyLogDetails' to be non-null");
-        this.copyProgress = Objects.requireNonNull(copyProgress, "expected parameter 'copyProgress' to be non-null");
-        this.dataExportDetails = dataExportDetails;
-        this.dataImportDetails = dataImportDetails;
-        this.deliveryPackage = Objects.requireNonNull(deliveryPackage, "expected parameter 'deliveryPackage' to be non-null");
-        this.disksAndSizeDetails = Objects.requireNonNull(disksAndSizeDetails, "expected parameter 'disksAndSizeDetails' to be non-null");
-        this.expectedDataSizeInTeraBytes = expectedDataSizeInTeraBytes;
-        this.jobDetailsType = Codegen.stringProp("jobDetailsType").arg(jobDetailsType).require();
-        this.jobStages = Objects.requireNonNull(jobStages, "expected parameter 'jobStages' to be non-null");
-        this.keyEncryptionKey = keyEncryptionKey;
-        this.passkey = passkey;
-        this.preferences = preferences;
-        this.preferredDisks = preferredDisks;
-        this.returnPackage = Objects.requireNonNull(returnPackage, "expected parameter 'returnPackage' to be non-null");
-        this.reverseShipmentLabelSasKey = Objects.requireNonNull(reverseShipmentLabelSasKey, "expected parameter 'reverseShipmentLabelSasKey' to be non-null");
-        this.shippingAddress = shippingAddress;
-    }
+    private DataBoxDiskJobDetailsResponse() {}
 
-    private DataBoxDiskJobDetailsResponse() {
-        this.chainOfCustodySasKey = null;
-        this.contactDetails = null;
-        this.copyLogDetails = List.of();
-        this.copyProgress = List.of();
-        this.dataExportDetails = List.of();
-        this.dataImportDetails = List.of();
-        this.deliveryPackage = null;
-        this.disksAndSizeDetails = Map.of();
-        this.expectedDataSizeInTeraBytes = null;
-        this.jobDetailsType = null;
-        this.jobStages = List.of();
-        this.keyEncryptionKey = null;
-        this.passkey = null;
-        this.preferences = null;
-        this.preferredDisks = Map.of();
-        this.returnPackage = null;
-        this.reverseShipmentLabelSasKey = null;
-        this.shippingAddress = null;
+    private DataBoxDiskJobDetailsResponse(DataBoxDiskJobDetailsResponse $) {
+        this.chainOfCustodySasKey = $.chainOfCustodySasKey;
+        this.contactDetails = $.contactDetails;
+        this.copyLogDetails = $.copyLogDetails;
+        this.copyProgress = $.copyProgress;
+        this.dataExportDetails = $.dataExportDetails;
+        this.dataImportDetails = $.dataImportDetails;
+        this.deliveryPackage = $.deliveryPackage;
+        this.disksAndSizeDetails = $.disksAndSizeDetails;
+        this.expectedDataSizeInTeraBytes = $.expectedDataSizeInTeraBytes;
+        this.jobDetailsType = $.jobDetailsType;
+        this.jobStages = $.jobStages;
+        this.keyEncryptionKey = $.keyEncryptionKey;
+        this.passkey = $.passkey;
+        this.preferences = $.preferences;
+        this.preferredDisks = $.preferredDisks;
+        this.returnPackage = $.returnPackage;
+        this.reverseShipmentLabelSasKey = $.reverseShipmentLabelSasKey;
+        this.shippingAddress = $.shippingAddress;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DataBoxDiskJobDetailsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String chainOfCustodySasKey;
-        private ContactDetailsResponse contactDetails;
-        private List<Object> copyLogDetails;
-        private List<DataBoxDiskCopyProgressResponse> copyProgress;
-        private @Nullable List<DataExportDetailsResponse> dataExportDetails;
-        private @Nullable List<DataImportDetailsResponse> dataImportDetails;
-        private PackageShippingDetailsResponse deliveryPackage;
-        private Map<String,Integer> disksAndSizeDetails;
-        private @Nullable Integer expectedDataSizeInTeraBytes;
-        private String jobDetailsType;
-        private List<JobStagesResponse> jobStages;
-        private @Nullable KeyEncryptionKeyResponse keyEncryptionKey;
-        private @Nullable String passkey;
-        private @Nullable PreferencesResponse preferences;
-        private @Nullable Map<String,Integer> preferredDisks;
-        private PackageShippingDetailsResponse returnPackage;
-        private String reverseShipmentLabelSasKey;
-        private @Nullable ShippingAddressResponse shippingAddress;
+        private DataBoxDiskJobDetailsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new DataBoxDiskJobDetailsResponse();
         }
 
         public Builder(DataBoxDiskJobDetailsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.chainOfCustodySasKey = defaults.chainOfCustodySasKey;
-    	      this.contactDetails = defaults.contactDetails;
-    	      this.copyLogDetails = defaults.copyLogDetails;
-    	      this.copyProgress = defaults.copyProgress;
-    	      this.dataExportDetails = defaults.dataExportDetails;
-    	      this.dataImportDetails = defaults.dataImportDetails;
-    	      this.deliveryPackage = defaults.deliveryPackage;
-    	      this.disksAndSizeDetails = defaults.disksAndSizeDetails;
-    	      this.expectedDataSizeInTeraBytes = defaults.expectedDataSizeInTeraBytes;
-    	      this.jobDetailsType = defaults.jobDetailsType;
-    	      this.jobStages = defaults.jobStages;
-    	      this.keyEncryptionKey = defaults.keyEncryptionKey;
-    	      this.passkey = defaults.passkey;
-    	      this.preferences = defaults.preferences;
-    	      this.preferredDisks = defaults.preferredDisks;
-    	      this.returnPackage = defaults.returnPackage;
-    	      this.reverseShipmentLabelSasKey = defaults.reverseShipmentLabelSasKey;
-    	      this.shippingAddress = defaults.shippingAddress;
+            $ = new DataBoxDiskJobDetailsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder chainOfCustodySasKey(String chainOfCustodySasKey) {
-            this.chainOfCustodySasKey = Objects.requireNonNull(chainOfCustodySasKey);
+            $.chainOfCustodySasKey = chainOfCustodySasKey;
             return this;
         }
+
         public Builder contactDetails(ContactDetailsResponse contactDetails) {
-            this.contactDetails = Objects.requireNonNull(contactDetails);
+            $.contactDetails = contactDetails;
             return this;
         }
+
         public Builder copyLogDetails(List<Object> copyLogDetails) {
-            this.copyLogDetails = Objects.requireNonNull(copyLogDetails);
+            $.copyLogDetails = copyLogDetails;
             return this;
         }
+
         public Builder copyLogDetails(Object... copyLogDetails) {
             return copyLogDetails(List.of(copyLogDetails));
         }
+
         public Builder copyProgress(List<DataBoxDiskCopyProgressResponse> copyProgress) {
-            this.copyProgress = Objects.requireNonNull(copyProgress);
+            $.copyProgress = copyProgress;
             return this;
         }
+
         public Builder copyProgress(DataBoxDiskCopyProgressResponse... copyProgress) {
             return copyProgress(List.of(copyProgress));
         }
+
         public Builder dataExportDetails(@Nullable List<DataExportDetailsResponse> dataExportDetails) {
-            this.dataExportDetails = dataExportDetails;
+            $.dataExportDetails = dataExportDetails;
             return this;
         }
+
         public Builder dataExportDetails(DataExportDetailsResponse... dataExportDetails) {
             return dataExportDetails(List.of(dataExportDetails));
         }
+
         public Builder dataImportDetails(@Nullable List<DataImportDetailsResponse> dataImportDetails) {
-            this.dataImportDetails = dataImportDetails;
+            $.dataImportDetails = dataImportDetails;
             return this;
         }
+
         public Builder dataImportDetails(DataImportDetailsResponse... dataImportDetails) {
             return dataImportDetails(List.of(dataImportDetails));
         }
+
         public Builder deliveryPackage(PackageShippingDetailsResponse deliveryPackage) {
-            this.deliveryPackage = Objects.requireNonNull(deliveryPackage);
+            $.deliveryPackage = deliveryPackage;
             return this;
         }
+
         public Builder disksAndSizeDetails(Map<String,Integer> disksAndSizeDetails) {
-            this.disksAndSizeDetails = Objects.requireNonNull(disksAndSizeDetails);
+            $.disksAndSizeDetails = disksAndSizeDetails;
             return this;
         }
+
         public Builder expectedDataSizeInTeraBytes(@Nullable Integer expectedDataSizeInTeraBytes) {
-            this.expectedDataSizeInTeraBytes = expectedDataSizeInTeraBytes;
+            $.expectedDataSizeInTeraBytes = expectedDataSizeInTeraBytes;
             return this;
         }
+
         public Builder jobDetailsType(String jobDetailsType) {
-            this.jobDetailsType = Objects.requireNonNull(jobDetailsType);
+            $.jobDetailsType = jobDetailsType;
             return this;
         }
+
         public Builder jobStages(List<JobStagesResponse> jobStages) {
-            this.jobStages = Objects.requireNonNull(jobStages);
+            $.jobStages = jobStages;
             return this;
         }
+
         public Builder jobStages(JobStagesResponse... jobStages) {
             return jobStages(List.of(jobStages));
         }
+
         public Builder keyEncryptionKey(@Nullable KeyEncryptionKeyResponse keyEncryptionKey) {
-            this.keyEncryptionKey = keyEncryptionKey;
+            $.keyEncryptionKey = keyEncryptionKey;
             return this;
         }
+
         public Builder passkey(@Nullable String passkey) {
-            this.passkey = passkey;
+            $.passkey = passkey;
             return this;
         }
+
         public Builder preferences(@Nullable PreferencesResponse preferences) {
-            this.preferences = preferences;
+            $.preferences = preferences;
             return this;
         }
+
         public Builder preferredDisks(@Nullable Map<String,Integer> preferredDisks) {
-            this.preferredDisks = preferredDisks;
+            $.preferredDisks = preferredDisks;
             return this;
         }
+
         public Builder returnPackage(PackageShippingDetailsResponse returnPackage) {
-            this.returnPackage = Objects.requireNonNull(returnPackage);
+            $.returnPackage = returnPackage;
             return this;
         }
+
         public Builder reverseShipmentLabelSasKey(String reverseShipmentLabelSasKey) {
-            this.reverseShipmentLabelSasKey = Objects.requireNonNull(reverseShipmentLabelSasKey);
+            $.reverseShipmentLabelSasKey = reverseShipmentLabelSasKey;
             return this;
         }
+
         public Builder shippingAddress(@Nullable ShippingAddressResponse shippingAddress) {
-            this.shippingAddress = shippingAddress;
+            $.shippingAddress = shippingAddress;
             return this;
-        }        public DataBoxDiskJobDetailsResponse build() {
-            return new DataBoxDiskJobDetailsResponse(chainOfCustodySasKey, contactDetails, copyLogDetails, copyProgress, dataExportDetails, dataImportDetails, deliveryPackage, disksAndSizeDetails, expectedDataSizeInTeraBytes, jobDetailsType, jobStages, keyEncryptionKey, passkey, preferences, preferredDisks, returnPackage, reverseShipmentLabelSasKey, shippingAddress);
+        }
+
+        public DataBoxDiskJobDetailsResponse build() {
+            $.chainOfCustodySasKey = Objects.requireNonNull($.chainOfCustodySasKey, "expected parameter 'chainOfCustodySasKey' to be non-null");
+            $.contactDetails = Objects.requireNonNull($.contactDetails, "expected parameter 'contactDetails' to be non-null");
+            $.copyLogDetails = Objects.requireNonNull($.copyLogDetails, "expected parameter 'copyLogDetails' to be non-null");
+            $.copyProgress = Objects.requireNonNull($.copyProgress, "expected parameter 'copyProgress' to be non-null");
+            $.deliveryPackage = Objects.requireNonNull($.deliveryPackage, "expected parameter 'deliveryPackage' to be non-null");
+            $.disksAndSizeDetails = Objects.requireNonNull($.disksAndSizeDetails, "expected parameter 'disksAndSizeDetails' to be non-null");
+            $.jobDetailsType = Codegen.stringProp("jobDetailsType").arg($.jobDetailsType).require();
+            $.jobStages = Objects.requireNonNull($.jobStages, "expected parameter 'jobStages' to be non-null");
+            $.returnPackage = Objects.requireNonNull($.returnPackage, "expected parameter 'returnPackage' to be non-null");
+            $.reverseShipmentLabelSasKey = Objects.requireNonNull($.reverseShipmentLabelSasKey, "expected parameter 'reverseShipmentLabelSasKey' to be non-null");
+            return $;
         }
     }
+
 }

@@ -21,7 +21,7 @@ public final class PublicAdvertisedPrefixPublicDelegatedPrefixResponse extends c
      * 
      */
     @Import(name="ipRange", required=true)
-      private final String ipRange;
+    private String ipRange;
 
     public String ipRange() {
         return this.ipRange;
@@ -32,7 +32,7 @@ public final class PublicAdvertisedPrefixPublicDelegatedPrefixResponse extends c
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -43,7 +43,7 @@ public final class PublicAdvertisedPrefixPublicDelegatedPrefixResponse extends c
      * 
      */
     @Import(name="project", required=true)
-      private final String project;
+    private String project;
 
     public String project() {
         return this.project;
@@ -54,7 +54,7 @@ public final class PublicAdvertisedPrefixPublicDelegatedPrefixResponse extends c
      * 
      */
     @Import(name="region", required=true)
-      private final String region;
+    private String region;
 
     public String region() {
         return this.region;
@@ -65,82 +65,73 @@ public final class PublicAdvertisedPrefixPublicDelegatedPrefixResponse extends c
      * 
      */
     @Import(name="status", required=true)
-      private final String status;
+    private String status;
 
     public String status() {
         return this.status;
     }
 
-    public PublicAdvertisedPrefixPublicDelegatedPrefixResponse(
-        String ipRange,
-        String name,
-        String project,
-        String region,
-        String status) {
-        this.ipRange = Objects.requireNonNull(ipRange, "expected parameter 'ipRange' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.project = Objects.requireNonNull(project, "expected parameter 'project' to be non-null");
-        this.region = Objects.requireNonNull(region, "expected parameter 'region' to be non-null");
-        this.status = Objects.requireNonNull(status, "expected parameter 'status' to be non-null");
-    }
+    private PublicAdvertisedPrefixPublicDelegatedPrefixResponse() {}
 
-    private PublicAdvertisedPrefixPublicDelegatedPrefixResponse() {
-        this.ipRange = null;
-        this.name = null;
-        this.project = null;
-        this.region = null;
-        this.status = null;
+    private PublicAdvertisedPrefixPublicDelegatedPrefixResponse(PublicAdvertisedPrefixPublicDelegatedPrefixResponse $) {
+        this.ipRange = $.ipRange;
+        this.name = $.name;
+        this.project = $.project;
+        this.region = $.region;
+        this.status = $.status;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PublicAdvertisedPrefixPublicDelegatedPrefixResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String ipRange;
-        private String name;
-        private String project;
-        private String region;
-        private String status;
+        private PublicAdvertisedPrefixPublicDelegatedPrefixResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new PublicAdvertisedPrefixPublicDelegatedPrefixResponse();
         }
 
         public Builder(PublicAdvertisedPrefixPublicDelegatedPrefixResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.ipRange = defaults.ipRange;
-    	      this.name = defaults.name;
-    	      this.project = defaults.project;
-    	      this.region = defaults.region;
-    	      this.status = defaults.status;
+            $ = new PublicAdvertisedPrefixPublicDelegatedPrefixResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder ipRange(String ipRange) {
-            this.ipRange = Objects.requireNonNull(ipRange);
+            $.ipRange = ipRange;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder project(String project) {
-            this.project = Objects.requireNonNull(project);
+            $.project = project;
             return this;
         }
+
         public Builder region(String region) {
-            this.region = Objects.requireNonNull(region);
+            $.region = region;
             return this;
         }
+
         public Builder status(String status) {
-            this.status = Objects.requireNonNull(status);
+            $.status = status;
             return this;
-        }        public PublicAdvertisedPrefixPublicDelegatedPrefixResponse build() {
-            return new PublicAdvertisedPrefixPublicDelegatedPrefixResponse(ipRange, name, project, region, status);
+        }
+
+        public PublicAdvertisedPrefixPublicDelegatedPrefixResponse build() {
+            $.ipRange = Objects.requireNonNull($.ipRange, "expected parameter 'ipRange' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.project = Objects.requireNonNull($.project, "expected parameter 'project' to be non-null");
+            $.region = Objects.requireNonNull($.region, "expected parameter 'region' to be non-null");
+            $.status = Objects.requireNonNull($.status, "expected parameter 'status' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,7 +5,6 @@ package com.pulumi.aws.route53;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,49 +18,49 @@ public final class ResolverDnsSecConfigArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="resourceId", required=true)
-      private final Output<String> resourceId;
+    private Output<String> resourceId;
 
     public Output<String> resourceId() {
         return this.resourceId;
     }
 
-    public ResolverDnsSecConfigArgs(Output<String> resourceId) {
-        this.resourceId = Objects.requireNonNull(resourceId, "expected parameter 'resourceId' to be non-null");
-    }
+    private ResolverDnsSecConfigArgs() {}
 
-    private ResolverDnsSecConfigArgs() {
-        this.resourceId = Codegen.empty();
+    private ResolverDnsSecConfigArgs(ResolverDnsSecConfigArgs $) {
+        this.resourceId = $.resourceId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ResolverDnsSecConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> resourceId;
+        private ResolverDnsSecConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ResolverDnsSecConfigArgs();
         }
 
         public Builder(ResolverDnsSecConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.resourceId = defaults.resourceId;
+            $ = new ResolverDnsSecConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder resourceId(Output<String> resourceId) {
-            this.resourceId = Objects.requireNonNull(resourceId);
+            $.resourceId = resourceId;
             return this;
         }
+
         public Builder resourceId(String resourceId) {
-            this.resourceId = Output.of(Objects.requireNonNull(resourceId));
-            return this;
-        }        public ResolverDnsSecConfigArgs build() {
-            return new ResolverDnsSecConfigArgs(resourceId);
+            return resourceId(Output.of(resourceId));
+        }
+
+        public ResolverDnsSecConfigArgs build() {
+            $.resourceId = Objects.requireNonNull($.resourceId, "expected parameter 'resourceId' to be non-null");
+            return $;
         }
     }
+
 }

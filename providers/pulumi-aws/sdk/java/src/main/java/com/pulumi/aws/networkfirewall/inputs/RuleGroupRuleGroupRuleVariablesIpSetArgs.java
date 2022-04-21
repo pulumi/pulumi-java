@@ -6,7 +6,6 @@ package com.pulumi.aws.networkfirewall.inputs;
 import com.pulumi.aws.networkfirewall.inputs.RuleGroupRuleGroupRuleVariablesIpSetIpSetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +19,7 @@ public final class RuleGroupRuleGroupRuleVariablesIpSetArgs extends com.pulumi.r
      * 
      */
     @Import(name="ipSet", required=true)
-      private final Output<RuleGroupRuleGroupRuleVariablesIpSetIpSetArgs> ipSet;
+    private Output<RuleGroupRuleGroupRuleVariablesIpSetIpSetArgs> ipSet;
 
     public Output<RuleGroupRuleGroupRuleVariablesIpSetIpSetArgs> ipSet() {
         return this.ipSet;
@@ -31,63 +30,60 @@ public final class RuleGroupRuleGroupRuleVariablesIpSetArgs extends com.pulumi.r
      * 
      */
     @Import(name="key", required=true)
-      private final Output<String> key;
+    private Output<String> key;
 
     public Output<String> key() {
         return this.key;
     }
 
-    public RuleGroupRuleGroupRuleVariablesIpSetArgs(
-        Output<RuleGroupRuleGroupRuleVariablesIpSetIpSetArgs> ipSet,
-        Output<String> key) {
-        this.ipSet = Objects.requireNonNull(ipSet, "expected parameter 'ipSet' to be non-null");
-        this.key = Objects.requireNonNull(key, "expected parameter 'key' to be non-null");
-    }
+    private RuleGroupRuleGroupRuleVariablesIpSetArgs() {}
 
-    private RuleGroupRuleGroupRuleVariablesIpSetArgs() {
-        this.ipSet = Codegen.empty();
-        this.key = Codegen.empty();
+    private RuleGroupRuleGroupRuleVariablesIpSetArgs(RuleGroupRuleGroupRuleVariablesIpSetArgs $) {
+        this.ipSet = $.ipSet;
+        this.key = $.key;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RuleGroupRuleGroupRuleVariablesIpSetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<RuleGroupRuleGroupRuleVariablesIpSetIpSetArgs> ipSet;
-        private Output<String> key;
+        private RuleGroupRuleGroupRuleVariablesIpSetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RuleGroupRuleGroupRuleVariablesIpSetArgs();
         }
 
         public Builder(RuleGroupRuleGroupRuleVariablesIpSetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.ipSet = defaults.ipSet;
-    	      this.key = defaults.key;
+            $ = new RuleGroupRuleGroupRuleVariablesIpSetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder ipSet(Output<RuleGroupRuleGroupRuleVariablesIpSetIpSetArgs> ipSet) {
-            this.ipSet = Objects.requireNonNull(ipSet);
+            $.ipSet = ipSet;
             return this;
         }
+
         public Builder ipSet(RuleGroupRuleGroupRuleVariablesIpSetIpSetArgs ipSet) {
-            this.ipSet = Output.of(Objects.requireNonNull(ipSet));
-            return this;
+            return ipSet(Output.of(ipSet));
         }
+
         public Builder key(Output<String> key) {
-            this.key = Objects.requireNonNull(key);
+            $.key = key;
             return this;
         }
+
         public Builder key(String key) {
-            this.key = Output.of(Objects.requireNonNull(key));
-            return this;
-        }        public RuleGroupRuleGroupRuleVariablesIpSetArgs build() {
-            return new RuleGroupRuleGroupRuleVariablesIpSetArgs(ipSet, key);
+            return key(Output.of(key));
+        }
+
+        public RuleGroupRuleGroupRuleVariablesIpSetArgs build() {
+            $.ipSet = Objects.requireNonNull($.ipSet, "expected parameter 'ipSet' to be non-null");
+            $.key = Objects.requireNonNull($.key, "expected parameter 'key' to be non-null");
+            return $;
         }
     }
+
 }

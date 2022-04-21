@@ -6,7 +6,6 @@ package com.pulumi.aws.cloudfront.inputs;
 import com.pulumi.aws.cloudfront.inputs.RealtimeLogConfigEndpointKinesisStreamConfigArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +19,7 @@ public final class RealtimeLogConfigEndpointArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="kinesisStreamConfig", required=true)
-      private final Output<RealtimeLogConfigEndpointKinesisStreamConfigArgs> kinesisStreamConfig;
+    private Output<RealtimeLogConfigEndpointKinesisStreamConfigArgs> kinesisStreamConfig;
 
     public Output<RealtimeLogConfigEndpointKinesisStreamConfigArgs> kinesisStreamConfig() {
         return this.kinesisStreamConfig;
@@ -31,63 +30,60 @@ public final class RealtimeLogConfigEndpointArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="streamType", required=true)
-      private final Output<String> streamType;
+    private Output<String> streamType;
 
     public Output<String> streamType() {
         return this.streamType;
     }
 
-    public RealtimeLogConfigEndpointArgs(
-        Output<RealtimeLogConfigEndpointKinesisStreamConfigArgs> kinesisStreamConfig,
-        Output<String> streamType) {
-        this.kinesisStreamConfig = Objects.requireNonNull(kinesisStreamConfig, "expected parameter 'kinesisStreamConfig' to be non-null");
-        this.streamType = Objects.requireNonNull(streamType, "expected parameter 'streamType' to be non-null");
-    }
+    private RealtimeLogConfigEndpointArgs() {}
 
-    private RealtimeLogConfigEndpointArgs() {
-        this.kinesisStreamConfig = Codegen.empty();
-        this.streamType = Codegen.empty();
+    private RealtimeLogConfigEndpointArgs(RealtimeLogConfigEndpointArgs $) {
+        this.kinesisStreamConfig = $.kinesisStreamConfig;
+        this.streamType = $.streamType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RealtimeLogConfigEndpointArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<RealtimeLogConfigEndpointKinesisStreamConfigArgs> kinesisStreamConfig;
-        private Output<String> streamType;
+        private RealtimeLogConfigEndpointArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RealtimeLogConfigEndpointArgs();
         }
 
         public Builder(RealtimeLogConfigEndpointArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.kinesisStreamConfig = defaults.kinesisStreamConfig;
-    	      this.streamType = defaults.streamType;
+            $ = new RealtimeLogConfigEndpointArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder kinesisStreamConfig(Output<RealtimeLogConfigEndpointKinesisStreamConfigArgs> kinesisStreamConfig) {
-            this.kinesisStreamConfig = Objects.requireNonNull(kinesisStreamConfig);
+            $.kinesisStreamConfig = kinesisStreamConfig;
             return this;
         }
+
         public Builder kinesisStreamConfig(RealtimeLogConfigEndpointKinesisStreamConfigArgs kinesisStreamConfig) {
-            this.kinesisStreamConfig = Output.of(Objects.requireNonNull(kinesisStreamConfig));
-            return this;
+            return kinesisStreamConfig(Output.of(kinesisStreamConfig));
         }
+
         public Builder streamType(Output<String> streamType) {
-            this.streamType = Objects.requireNonNull(streamType);
+            $.streamType = streamType;
             return this;
         }
+
         public Builder streamType(String streamType) {
-            this.streamType = Output.of(Objects.requireNonNull(streamType));
-            return this;
-        }        public RealtimeLogConfigEndpointArgs build() {
-            return new RealtimeLogConfigEndpointArgs(kinesisStreamConfig, streamType);
+            return streamType(Output.of(streamType));
+        }
+
+        public RealtimeLogConfigEndpointArgs build() {
+            $.kinesisStreamConfig = Objects.requireNonNull($.kinesisStreamConfig, "expected parameter 'kinesisStreamConfig' to be non-null");
+            $.streamType = Objects.requireNonNull($.streamType, "expected parameter 'streamType' to be non-null");
+            return $;
         }
     }
+
 }

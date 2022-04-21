@@ -13,62 +13,59 @@ public final class GetFolderContactArgs extends com.pulumi.resources.InvokeArgs 
     public static final GetFolderContactArgs Empty = new GetFolderContactArgs();
 
     @Import(name="contactId", required=true)
-      private final String contactId;
+    private String contactId;
 
     public String contactId() {
         return this.contactId;
     }
 
     @Import(name="folderId", required=true)
-      private final String folderId;
+    private String folderId;
 
     public String folderId() {
         return this.folderId;
     }
 
-    public GetFolderContactArgs(
-        String contactId,
-        String folderId) {
-        this.contactId = Objects.requireNonNull(contactId, "expected parameter 'contactId' to be non-null");
-        this.folderId = Objects.requireNonNull(folderId, "expected parameter 'folderId' to be non-null");
-    }
+    private GetFolderContactArgs() {}
 
-    private GetFolderContactArgs() {
-        this.contactId = null;
-        this.folderId = null;
+    private GetFolderContactArgs(GetFolderContactArgs $) {
+        this.contactId = $.contactId;
+        this.folderId = $.folderId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetFolderContactArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String contactId;
-        private String folderId;
+        private GetFolderContactArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetFolderContactArgs();
         }
 
         public Builder(GetFolderContactArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.contactId = defaults.contactId;
-    	      this.folderId = defaults.folderId;
+            $ = new GetFolderContactArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder contactId(String contactId) {
-            this.contactId = Objects.requireNonNull(contactId);
+            $.contactId = contactId;
             return this;
         }
+
         public Builder folderId(String folderId) {
-            this.folderId = Objects.requireNonNull(folderId);
+            $.folderId = folderId;
             return this;
-        }        public GetFolderContactArgs build() {
-            return new GetFolderContactArgs(contactId, folderId);
+        }
+
+        public GetFolderContactArgs build() {
+            $.contactId = Objects.requireNonNull($.contactId, "expected parameter 'contactId' to be non-null");
+            $.folderId = Objects.requireNonNull($.folderId, "expected parameter 'folderId' to be non-null");
+            return $;
         }
     }
+
 }

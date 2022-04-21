@@ -5,12 +5,12 @@ package com.pulumi.googlenative.containeranalysis_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.containeranalysis_v1.inputs.JwtArgs;
 import com.pulumi.googlenative.containeranalysis_v1.inputs.SignatureArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +27,10 @@ public final class AttestationOccurrenceArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="jwts")
-      private final @Nullable Output<List<JwtArgs>> jwts;
+    private @Nullable Output<List<JwtArgs>> jwts;
 
-    public Output<List<JwtArgs>> jwts() {
-        return this.jwts == null ? Codegen.empty() : this.jwts;
+    public Optional<Output<List<JwtArgs>>> jwts() {
+        return Optional.ofNullable(this.jwts);
     }
 
     /**
@@ -38,7 +38,7 @@ public final class AttestationOccurrenceArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="serializedPayload", required=true)
-      private final Output<String> serializedPayload;
+    private Output<String> serializedPayload;
 
     public Output<String> serializedPayload() {
         return this.serializedPayload;
@@ -49,82 +49,77 @@ public final class AttestationOccurrenceArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="signatures")
-      private final @Nullable Output<List<SignatureArgs>> signatures;
+    private @Nullable Output<List<SignatureArgs>> signatures;
 
-    public Output<List<SignatureArgs>> signatures() {
-        return this.signatures == null ? Codegen.empty() : this.signatures;
+    public Optional<Output<List<SignatureArgs>>> signatures() {
+        return Optional.ofNullable(this.signatures);
     }
 
-    public AttestationOccurrenceArgs(
-        @Nullable Output<List<JwtArgs>> jwts,
-        Output<String> serializedPayload,
-        @Nullable Output<List<SignatureArgs>> signatures) {
-        this.jwts = jwts;
-        this.serializedPayload = Objects.requireNonNull(serializedPayload, "expected parameter 'serializedPayload' to be non-null");
-        this.signatures = signatures;
-    }
+    private AttestationOccurrenceArgs() {}
 
-    private AttestationOccurrenceArgs() {
-        this.jwts = Codegen.empty();
-        this.serializedPayload = Codegen.empty();
-        this.signatures = Codegen.empty();
+    private AttestationOccurrenceArgs(AttestationOccurrenceArgs $) {
+        this.jwts = $.jwts;
+        this.serializedPayload = $.serializedPayload;
+        this.signatures = $.signatures;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AttestationOccurrenceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<JwtArgs>> jwts;
-        private Output<String> serializedPayload;
-        private @Nullable Output<List<SignatureArgs>> signatures;
+        private AttestationOccurrenceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AttestationOccurrenceArgs();
         }
 
         public Builder(AttestationOccurrenceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.jwts = defaults.jwts;
-    	      this.serializedPayload = defaults.serializedPayload;
-    	      this.signatures = defaults.signatures;
+            $ = new AttestationOccurrenceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder jwts(@Nullable Output<List<JwtArgs>> jwts) {
-            this.jwts = jwts;
+            $.jwts = jwts;
             return this;
         }
-        public Builder jwts(@Nullable List<JwtArgs> jwts) {
-            this.jwts = Codegen.ofNullable(jwts);
-            return this;
+
+        public Builder jwts(List<JwtArgs> jwts) {
+            return jwts(Output.of(jwts));
         }
+
         public Builder jwts(JwtArgs... jwts) {
             return jwts(List.of(jwts));
         }
+
         public Builder serializedPayload(Output<String> serializedPayload) {
-            this.serializedPayload = Objects.requireNonNull(serializedPayload);
+            $.serializedPayload = serializedPayload;
             return this;
         }
+
         public Builder serializedPayload(String serializedPayload) {
-            this.serializedPayload = Output.of(Objects.requireNonNull(serializedPayload));
-            return this;
+            return serializedPayload(Output.of(serializedPayload));
         }
+
         public Builder signatures(@Nullable Output<List<SignatureArgs>> signatures) {
-            this.signatures = signatures;
+            $.signatures = signatures;
             return this;
         }
-        public Builder signatures(@Nullable List<SignatureArgs> signatures) {
-            this.signatures = Codegen.ofNullable(signatures);
-            return this;
+
+        public Builder signatures(List<SignatureArgs> signatures) {
+            return signatures(Output.of(signatures));
         }
+
         public Builder signatures(SignatureArgs... signatures) {
             return signatures(List.of(signatures));
-        }        public AttestationOccurrenceArgs build() {
-            return new AttestationOccurrenceArgs(jwts, serializedPayload, signatures);
+        }
+
+        public AttestationOccurrenceArgs build() {
+            $.serializedPayload = Objects.requireNonNull($.serializedPayload, "expected parameter 'serializedPayload' to be non-null");
+            return $;
         }
     }
+
 }

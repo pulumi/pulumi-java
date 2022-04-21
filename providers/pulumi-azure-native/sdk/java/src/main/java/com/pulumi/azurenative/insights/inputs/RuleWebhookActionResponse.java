@@ -26,7 +26,7 @@ public final class RuleWebhookActionResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="odataType", required=true)
-      private final String odataType;
+    private String odataType;
 
     public String odataType() {
         return this.odataType;
@@ -37,10 +37,10 @@ public final class RuleWebhookActionResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="properties")
-      private final @Nullable Map<String,String> properties;
+    private @Nullable Map<String,String> properties;
 
-    public Map<String,String> properties() {
-        return this.properties == null ? Map.of() : this.properties;
+    public Optional<Map<String,String>> properties() {
+        return Optional.ofNullable(this.properties);
     }
 
     /**
@@ -48,64 +48,57 @@ public final class RuleWebhookActionResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="serviceUri")
-      private final @Nullable String serviceUri;
+    private @Nullable String serviceUri;
 
     public Optional<String> serviceUri() {
-        return this.serviceUri == null ? Optional.empty() : Optional.ofNullable(this.serviceUri);
+        return Optional.ofNullable(this.serviceUri);
     }
 
-    public RuleWebhookActionResponse(
-        String odataType,
-        @Nullable Map<String,String> properties,
-        @Nullable String serviceUri) {
-        this.odataType = Codegen.stringProp("odataType").arg(odataType).require();
-        this.properties = properties;
-        this.serviceUri = serviceUri;
-    }
+    private RuleWebhookActionResponse() {}
 
-    private RuleWebhookActionResponse() {
-        this.odataType = null;
-        this.properties = Map.of();
-        this.serviceUri = null;
+    private RuleWebhookActionResponse(RuleWebhookActionResponse $) {
+        this.odataType = $.odataType;
+        this.properties = $.properties;
+        this.serviceUri = $.serviceUri;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RuleWebhookActionResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String odataType;
-        private @Nullable Map<String,String> properties;
-        private @Nullable String serviceUri;
+        private RuleWebhookActionResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new RuleWebhookActionResponse();
         }
 
         public Builder(RuleWebhookActionResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.odataType = defaults.odataType;
-    	      this.properties = defaults.properties;
-    	      this.serviceUri = defaults.serviceUri;
+            $ = new RuleWebhookActionResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder odataType(String odataType) {
-            this.odataType = Objects.requireNonNull(odataType);
+            $.odataType = odataType;
             return this;
         }
+
         public Builder properties(@Nullable Map<String,String> properties) {
-            this.properties = properties;
+            $.properties = properties;
             return this;
         }
+
         public Builder serviceUri(@Nullable String serviceUri) {
-            this.serviceUri = serviceUri;
+            $.serviceUri = serviceUri;
             return this;
-        }        public RuleWebhookActionResponse build() {
-            return new RuleWebhookActionResponse(odataType, properties, serviceUri);
+        }
+
+        public RuleWebhookActionResponse build() {
+            $.odataType = Codegen.stringProp("odataType").arg($.odataType).require();
+            return $;
         }
     }
+
 }

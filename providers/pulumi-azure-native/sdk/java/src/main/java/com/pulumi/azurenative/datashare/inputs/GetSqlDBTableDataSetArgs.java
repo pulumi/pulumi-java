@@ -17,7 +17,7 @@ public final class GetSqlDBTableDataSetArgs extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="accountName", required=true)
-      private final String accountName;
+    private String accountName;
 
     public String accountName() {
         return this.accountName;
@@ -28,7 +28,7 @@ public final class GetSqlDBTableDataSetArgs extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="dataSetName", required=true)
-      private final String dataSetName;
+    private String dataSetName;
 
     public String dataSetName() {
         return this.dataSetName;
@@ -39,7 +39,7 @@ public final class GetSqlDBTableDataSetArgs extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -50,73 +50,66 @@ public final class GetSqlDBTableDataSetArgs extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="shareName", required=true)
-      private final String shareName;
+    private String shareName;
 
     public String shareName() {
         return this.shareName;
     }
 
-    public GetSqlDBTableDataSetArgs(
-        String accountName,
-        String dataSetName,
-        String resourceGroupName,
-        String shareName) {
-        this.accountName = Objects.requireNonNull(accountName, "expected parameter 'accountName' to be non-null");
-        this.dataSetName = Objects.requireNonNull(dataSetName, "expected parameter 'dataSetName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.shareName = Objects.requireNonNull(shareName, "expected parameter 'shareName' to be non-null");
-    }
+    private GetSqlDBTableDataSetArgs() {}
 
-    private GetSqlDBTableDataSetArgs() {
-        this.accountName = null;
-        this.dataSetName = null;
-        this.resourceGroupName = null;
-        this.shareName = null;
+    private GetSqlDBTableDataSetArgs(GetSqlDBTableDataSetArgs $) {
+        this.accountName = $.accountName;
+        this.dataSetName = $.dataSetName;
+        this.resourceGroupName = $.resourceGroupName;
+        this.shareName = $.shareName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetSqlDBTableDataSetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String accountName;
-        private String dataSetName;
-        private String resourceGroupName;
-        private String shareName;
+        private GetSqlDBTableDataSetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetSqlDBTableDataSetArgs();
         }
 
         public Builder(GetSqlDBTableDataSetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accountName = defaults.accountName;
-    	      this.dataSetName = defaults.dataSetName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.shareName = defaults.shareName;
+            $ = new GetSqlDBTableDataSetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder accountName(String accountName) {
-            this.accountName = Objects.requireNonNull(accountName);
+            $.accountName = accountName;
             return this;
         }
+
         public Builder dataSetName(String dataSetName) {
-            this.dataSetName = Objects.requireNonNull(dataSetName);
+            $.dataSetName = dataSetName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder shareName(String shareName) {
-            this.shareName = Objects.requireNonNull(shareName);
+            $.shareName = shareName;
             return this;
-        }        public GetSqlDBTableDataSetArgs build() {
-            return new GetSqlDBTableDataSetArgs(accountName, dataSetName, resourceGroupName, shareName);
+        }
+
+        public GetSqlDBTableDataSetArgs build() {
+            $.accountName = Objects.requireNonNull($.accountName, "expected parameter 'accountName' to be non-null");
+            $.dataSetName = Objects.requireNonNull($.dataSetName, "expected parameter 'dataSetName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.shareName = Objects.requireNonNull($.shareName, "expected parameter 'shareName' to be non-null");
+            return $;
         }
     }
+
 }

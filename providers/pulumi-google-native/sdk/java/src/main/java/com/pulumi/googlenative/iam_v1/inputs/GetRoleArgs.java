@@ -15,62 +15,58 @@ public final class GetRoleArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetRoleArgs Empty = new GetRoleArgs();
 
     @Import(name="project")
-      private final @Nullable String project;
+    private @Nullable String project;
 
     public Optional<String> project() {
-        return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
+        return Optional.ofNullable(this.project);
     }
 
     @Import(name="roleId", required=true)
-      private final String roleId;
+    private String roleId;
 
     public String roleId() {
         return this.roleId;
     }
 
-    public GetRoleArgs(
-        @Nullable String project,
-        String roleId) {
-        this.project = project;
-        this.roleId = Objects.requireNonNull(roleId, "expected parameter 'roleId' to be non-null");
-    }
+    private GetRoleArgs() {}
 
-    private GetRoleArgs() {
-        this.project = null;
-        this.roleId = null;
+    private GetRoleArgs(GetRoleArgs $) {
+        this.project = $.project;
+        this.roleId = $.roleId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetRoleArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String project;
-        private String roleId;
+        private GetRoleArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetRoleArgs();
         }
 
         public Builder(GetRoleArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.project = defaults.project;
-    	      this.roleId = defaults.roleId;
+            $ = new GetRoleArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder project(@Nullable String project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
+
         public Builder roleId(String roleId) {
-            this.roleId = Objects.requireNonNull(roleId);
+            $.roleId = roleId;
             return this;
-        }        public GetRoleArgs build() {
-            return new GetRoleArgs(project, roleId);
+        }
+
+        public GetRoleArgs build() {
+            $.roleId = Objects.requireNonNull($.roleId, "expected parameter 'roleId' to be non-null");
+            return $;
         }
     }
+
 }

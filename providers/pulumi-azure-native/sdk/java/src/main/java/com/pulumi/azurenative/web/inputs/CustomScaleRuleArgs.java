@@ -6,11 +6,11 @@ package com.pulumi.azurenative.web.inputs;
 import com.pulumi.azurenative.web.inputs.ScaleRuleAuthArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +27,10 @@ public final class CustomScaleRuleArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="auth")
-      private final @Nullable Output<List<ScaleRuleAuthArgs>> auth;
+    private @Nullable Output<List<ScaleRuleAuthArgs>> auth;
 
-    public Output<List<ScaleRuleAuthArgs>> auth() {
-        return this.auth == null ? Codegen.empty() : this.auth;
+    public Optional<Output<List<ScaleRuleAuthArgs>>> auth() {
+        return Optional.ofNullable(this.auth);
     }
 
     /**
@@ -38,10 +38,10 @@ public final class CustomScaleRuleArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="metadata")
-      private final @Nullable Output<Map<String,String>> metadata;
+    private @Nullable Output<Map<String,String>> metadata;
 
-    public Output<Map<String,String>> metadata() {
-        return this.metadata == null ? Codegen.empty() : this.metadata;
+    public Optional<Output<Map<String,String>>> metadata() {
+        return Optional.ofNullable(this.metadata);
     }
 
     /**
@@ -50,79 +50,72 @@ public final class CustomScaleRuleArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="type")
-      private final @Nullable Output<String> type;
+    private @Nullable Output<String> type;
 
-    public Output<String> type() {
-        return this.type == null ? Codegen.empty() : this.type;
+    public Optional<Output<String>> type() {
+        return Optional.ofNullable(this.type);
     }
 
-    public CustomScaleRuleArgs(
-        @Nullable Output<List<ScaleRuleAuthArgs>> auth,
-        @Nullable Output<Map<String,String>> metadata,
-        @Nullable Output<String> type) {
-        this.auth = auth;
-        this.metadata = metadata;
-        this.type = type;
-    }
+    private CustomScaleRuleArgs() {}
 
-    private CustomScaleRuleArgs() {
-        this.auth = Codegen.empty();
-        this.metadata = Codegen.empty();
-        this.type = Codegen.empty();
+    private CustomScaleRuleArgs(CustomScaleRuleArgs $) {
+        this.auth = $.auth;
+        this.metadata = $.metadata;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CustomScaleRuleArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<ScaleRuleAuthArgs>> auth;
-        private @Nullable Output<Map<String,String>> metadata;
-        private @Nullable Output<String> type;
+        private CustomScaleRuleArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CustomScaleRuleArgs();
         }
 
         public Builder(CustomScaleRuleArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.auth = defaults.auth;
-    	      this.metadata = defaults.metadata;
-    	      this.type = defaults.type;
+            $ = new CustomScaleRuleArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder auth(@Nullable Output<List<ScaleRuleAuthArgs>> auth) {
-            this.auth = auth;
+            $.auth = auth;
             return this;
         }
-        public Builder auth(@Nullable List<ScaleRuleAuthArgs> auth) {
-            this.auth = Codegen.ofNullable(auth);
-            return this;
+
+        public Builder auth(List<ScaleRuleAuthArgs> auth) {
+            return auth(Output.of(auth));
         }
+
         public Builder auth(ScaleRuleAuthArgs... auth) {
             return auth(List.of(auth));
         }
+
         public Builder metadata(@Nullable Output<Map<String,String>> metadata) {
-            this.metadata = metadata;
+            $.metadata = metadata;
             return this;
         }
-        public Builder metadata(@Nullable Map<String,String> metadata) {
-            this.metadata = Codegen.ofNullable(metadata);
-            return this;
+
+        public Builder metadata(Map<String,String> metadata) {
+            return metadata(Output.of(metadata));
         }
+
         public Builder type(@Nullable Output<String> type) {
-            this.type = type;
+            $.type = type;
             return this;
         }
-        public Builder type(@Nullable String type) {
-            this.type = Codegen.ofNullable(type);
-            return this;
-        }        public CustomScaleRuleArgs build() {
-            return new CustomScaleRuleArgs(auth, metadata, type);
+
+        public Builder type(String type) {
+            return type(Output.of(type));
+        }
+
+        public CustomScaleRuleArgs build() {
+            return $;
         }
     }
+
 }

@@ -3,7 +3,7 @@
 
 package com.pulumi.googlenative.containeranalysis_v1alpha1.inputs;
 
-import java.util.Objects;
+
 
 
 /**
@@ -14,28 +14,19 @@ public final class SlsaBuilderResponse extends com.pulumi.resources.InvokeArgs {
 
     public static final SlsaBuilderResponse Empty = new SlsaBuilderResponse();
 
-    public SlsaBuilderResponse() {
-    }
-
     public static Builder builder() {
         return new Builder();
     }
 
-    public static Builder builder(SlsaBuilderResponse defaults) {
-        return new Builder(defaults);
-    }
-
     public static final class Builder {
+        private SlsaBuilderResponse $;
 
         public Builder() {
-    	      // Empty
-        }
-
-        public Builder(SlsaBuilderResponse defaults) {
-    	      Objects.requireNonNull(defaults);
+            $ = new SlsaBuilderResponse();
         }
         public SlsaBuilderResponse build() {
-            return new SlsaBuilderResponse();
+            return $;
         }
     }
+
 }

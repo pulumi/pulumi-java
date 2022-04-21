@@ -5,9 +5,9 @@ package com.pulumi.awsnative.evidently.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -16,110 +16,102 @@ public final class LaunchGroupObjectArgs extends com.pulumi.resources.ResourceAr
     public static final LaunchGroupObjectArgs Empty = new LaunchGroupObjectArgs();
 
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     @Import(name="feature", required=true)
-      private final Output<String> feature;
+    private Output<String> feature;
 
     public Output<String> feature() {
         return this.feature;
     }
 
     @Import(name="groupName", required=true)
-      private final Output<String> groupName;
+    private Output<String> groupName;
 
     public Output<String> groupName() {
         return this.groupName;
     }
 
     @Import(name="variation", required=true)
-      private final Output<String> variation;
+    private Output<String> variation;
 
     public Output<String> variation() {
         return this.variation;
     }
 
-    public LaunchGroupObjectArgs(
-        @Nullable Output<String> description,
-        Output<String> feature,
-        Output<String> groupName,
-        Output<String> variation) {
-        this.description = description;
-        this.feature = Objects.requireNonNull(feature, "expected parameter 'feature' to be non-null");
-        this.groupName = Objects.requireNonNull(groupName, "expected parameter 'groupName' to be non-null");
-        this.variation = Objects.requireNonNull(variation, "expected parameter 'variation' to be non-null");
-    }
+    private LaunchGroupObjectArgs() {}
 
-    private LaunchGroupObjectArgs() {
-        this.description = Codegen.empty();
-        this.feature = Codegen.empty();
-        this.groupName = Codegen.empty();
-        this.variation = Codegen.empty();
+    private LaunchGroupObjectArgs(LaunchGroupObjectArgs $) {
+        this.description = $.description;
+        this.feature = $.feature;
+        this.groupName = $.groupName;
+        this.variation = $.variation;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LaunchGroupObjectArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> description;
-        private Output<String> feature;
-        private Output<String> groupName;
-        private Output<String> variation;
+        private LaunchGroupObjectArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new LaunchGroupObjectArgs();
         }
 
         public Builder(LaunchGroupObjectArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.description = defaults.description;
-    	      this.feature = defaults.feature;
-    	      this.groupName = defaults.groupName;
-    	      this.variation = defaults.variation;
+            $ = new LaunchGroupObjectArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder feature(Output<String> feature) {
-            this.feature = Objects.requireNonNull(feature);
+            $.feature = feature;
             return this;
         }
+
         public Builder feature(String feature) {
-            this.feature = Output.of(Objects.requireNonNull(feature));
-            return this;
+            return feature(Output.of(feature));
         }
+
         public Builder groupName(Output<String> groupName) {
-            this.groupName = Objects.requireNonNull(groupName);
+            $.groupName = groupName;
             return this;
         }
+
         public Builder groupName(String groupName) {
-            this.groupName = Output.of(Objects.requireNonNull(groupName));
-            return this;
+            return groupName(Output.of(groupName));
         }
+
         public Builder variation(Output<String> variation) {
-            this.variation = Objects.requireNonNull(variation);
+            $.variation = variation;
             return this;
         }
+
         public Builder variation(String variation) {
-            this.variation = Output.of(Objects.requireNonNull(variation));
-            return this;
-        }        public LaunchGroupObjectArgs build() {
-            return new LaunchGroupObjectArgs(description, feature, groupName, variation);
+            return variation(Output.of(variation));
+        }
+
+        public LaunchGroupObjectArgs build() {
+            $.feature = Objects.requireNonNull($.feature, "expected parameter 'feature' to be non-null");
+            $.groupName = Objects.requireNonNull($.groupName, "expected parameter 'groupName' to be non-null");
+            $.variation = Objects.requireNonNull($.variation, "expected parameter 'variation' to be non-null");
+            return $;
         }
     }
+
 }

@@ -13,45 +13,45 @@ public final class TopicRulePutItemInput extends com.pulumi.resources.InvokeArgs
     public static final TopicRulePutItemInput Empty = new TopicRulePutItemInput();
 
     @Import(name="tableName", required=true)
-      private final String tableName;
+    private String tableName;
 
     public String tableName() {
         return this.tableName;
     }
 
-    public TopicRulePutItemInput(String tableName) {
-        this.tableName = Objects.requireNonNull(tableName, "expected parameter 'tableName' to be non-null");
-    }
+    private TopicRulePutItemInput() {}
 
-    private TopicRulePutItemInput() {
-        this.tableName = null;
+    private TopicRulePutItemInput(TopicRulePutItemInput $) {
+        this.tableName = $.tableName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TopicRulePutItemInput defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String tableName;
+        private TopicRulePutItemInput $;
 
         public Builder() {
-    	      // Empty
+            $ = new TopicRulePutItemInput();
         }
 
         public Builder(TopicRulePutItemInput defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.tableName = defaults.tableName;
+            $ = new TopicRulePutItemInput(Objects.requireNonNull(defaults));
         }
 
         public Builder tableName(String tableName) {
-            this.tableName = Objects.requireNonNull(tableName);
+            $.tableName = tableName;
             return this;
-        }        public TopicRulePutItemInput build() {
-            return new TopicRulePutItemInput(tableName);
+        }
+
+        public TopicRulePutItemInput build() {
+            $.tableName = Objects.requireNonNull($.tableName, "expected parameter 'tableName' to be non-null");
+            return $;
         }
     }
+
 }

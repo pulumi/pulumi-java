@@ -22,7 +22,7 @@ public final class CapacityReservationPropertiesResponse extends com.pulumi.reso
      * 
      */
     @Import(name="lastSkuUpdate", required=true)
-      private final String lastSkuUpdate;
+    private String lastSkuUpdate;
 
     public String lastSkuUpdate() {
         return this.lastSkuUpdate;
@@ -33,55 +33,52 @@ public final class CapacityReservationPropertiesResponse extends com.pulumi.reso
      * 
      */
     @Import(name="minCapacity", required=true)
-      private final Double minCapacity;
+    private Double minCapacity;
 
     public Double minCapacity() {
         return this.minCapacity;
     }
 
-    public CapacityReservationPropertiesResponse(
-        String lastSkuUpdate,
-        Double minCapacity) {
-        this.lastSkuUpdate = Objects.requireNonNull(lastSkuUpdate, "expected parameter 'lastSkuUpdate' to be non-null");
-        this.minCapacity = Objects.requireNonNull(minCapacity, "expected parameter 'minCapacity' to be non-null");
-    }
+    private CapacityReservationPropertiesResponse() {}
 
-    private CapacityReservationPropertiesResponse() {
-        this.lastSkuUpdate = null;
-        this.minCapacity = null;
+    private CapacityReservationPropertiesResponse(CapacityReservationPropertiesResponse $) {
+        this.lastSkuUpdate = $.lastSkuUpdate;
+        this.minCapacity = $.minCapacity;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CapacityReservationPropertiesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String lastSkuUpdate;
-        private Double minCapacity;
+        private CapacityReservationPropertiesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new CapacityReservationPropertiesResponse();
         }
 
         public Builder(CapacityReservationPropertiesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.lastSkuUpdate = defaults.lastSkuUpdate;
-    	      this.minCapacity = defaults.minCapacity;
+            $ = new CapacityReservationPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder lastSkuUpdate(String lastSkuUpdate) {
-            this.lastSkuUpdate = Objects.requireNonNull(lastSkuUpdate);
+            $.lastSkuUpdate = lastSkuUpdate;
             return this;
         }
+
         public Builder minCapacity(Double minCapacity) {
-            this.minCapacity = Objects.requireNonNull(minCapacity);
+            $.minCapacity = minCapacity;
             return this;
-        }        public CapacityReservationPropertiesResponse build() {
-            return new CapacityReservationPropertiesResponse(lastSkuUpdate, minCapacity);
+        }
+
+        public CapacityReservationPropertiesResponse build() {
+            $.lastSkuUpdate = Objects.requireNonNull($.lastSkuUpdate, "expected parameter 'lastSkuUpdate' to be non-null");
+            $.minCapacity = Objects.requireNonNull($.minCapacity, "expected parameter 'minCapacity' to be non-null");
+            return $;
         }
     }
+
 }

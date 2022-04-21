@@ -5,9 +5,9 @@ package com.pulumi.aws.shield.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class ProtectionHealthCheckAssociationState extends com.pulumi.reso
      * 
      */
     @Import(name="healthCheckArn")
-      private final @Nullable Output<String> healthCheckArn;
+    private @Nullable Output<String> healthCheckArn;
 
-    public Output<String> healthCheckArn() {
-        return this.healthCheckArn == null ? Codegen.empty() : this.healthCheckArn;
+    public Optional<Output<String>> healthCheckArn() {
+        return Optional.ofNullable(this.healthCheckArn);
     }
 
     /**
@@ -31,63 +31,58 @@ public final class ProtectionHealthCheckAssociationState extends com.pulumi.reso
      * 
      */
     @Import(name="shieldProtectionId")
-      private final @Nullable Output<String> shieldProtectionId;
+    private @Nullable Output<String> shieldProtectionId;
 
-    public Output<String> shieldProtectionId() {
-        return this.shieldProtectionId == null ? Codegen.empty() : this.shieldProtectionId;
+    public Optional<Output<String>> shieldProtectionId() {
+        return Optional.ofNullable(this.shieldProtectionId);
     }
 
-    public ProtectionHealthCheckAssociationState(
-        @Nullable Output<String> healthCheckArn,
-        @Nullable Output<String> shieldProtectionId) {
-        this.healthCheckArn = healthCheckArn;
-        this.shieldProtectionId = shieldProtectionId;
-    }
+    private ProtectionHealthCheckAssociationState() {}
 
-    private ProtectionHealthCheckAssociationState() {
-        this.healthCheckArn = Codegen.empty();
-        this.shieldProtectionId = Codegen.empty();
+    private ProtectionHealthCheckAssociationState(ProtectionHealthCheckAssociationState $) {
+        this.healthCheckArn = $.healthCheckArn;
+        this.shieldProtectionId = $.shieldProtectionId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ProtectionHealthCheckAssociationState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> healthCheckArn;
-        private @Nullable Output<String> shieldProtectionId;
+        private ProtectionHealthCheckAssociationState $;
 
         public Builder() {
-    	      // Empty
+            $ = new ProtectionHealthCheckAssociationState();
         }
 
         public Builder(ProtectionHealthCheckAssociationState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.healthCheckArn = defaults.healthCheckArn;
-    	      this.shieldProtectionId = defaults.shieldProtectionId;
+            $ = new ProtectionHealthCheckAssociationState(Objects.requireNonNull(defaults));
         }
 
         public Builder healthCheckArn(@Nullable Output<String> healthCheckArn) {
-            this.healthCheckArn = healthCheckArn;
+            $.healthCheckArn = healthCheckArn;
             return this;
         }
-        public Builder healthCheckArn(@Nullable String healthCheckArn) {
-            this.healthCheckArn = Codegen.ofNullable(healthCheckArn);
-            return this;
+
+        public Builder healthCheckArn(String healthCheckArn) {
+            return healthCheckArn(Output.of(healthCheckArn));
         }
+
         public Builder shieldProtectionId(@Nullable Output<String> shieldProtectionId) {
-            this.shieldProtectionId = shieldProtectionId;
+            $.shieldProtectionId = shieldProtectionId;
             return this;
         }
-        public Builder shieldProtectionId(@Nullable String shieldProtectionId) {
-            this.shieldProtectionId = Codegen.ofNullable(shieldProtectionId);
-            return this;
-        }        public ProtectionHealthCheckAssociationState build() {
-            return new ProtectionHealthCheckAssociationState(healthCheckArn, shieldProtectionId);
+
+        public Builder shieldProtectionId(String shieldProtectionId) {
+            return shieldProtectionId(Output.of(shieldProtectionId));
+        }
+
+        public ProtectionHealthCheckAssociationState build() {
+            return $;
         }
     }
+
 }

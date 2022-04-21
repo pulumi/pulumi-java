@@ -5,10 +5,10 @@ package com.pulumi.gcp.apigateway;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.apigateway.inputs.ApiConfigIamMemberConditionArgs;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,28 +22,28 @@ public final class ApiConfigIamMemberArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="api", required=true)
-      private final Output<String> api;
+    private Output<String> api;
 
     public Output<String> api() {
         return this.api;
     }
 
     @Import(name="apiConfig", required=true)
-      private final Output<String> apiConfig;
+    private Output<String> apiConfig;
 
     public Output<String> apiConfig() {
         return this.apiConfig;
     }
 
     @Import(name="condition")
-      private final @Nullable Output<ApiConfigIamMemberConditionArgs> condition;
+    private @Nullable Output<ApiConfigIamMemberConditionArgs> condition;
 
-    public Output<ApiConfigIamMemberConditionArgs> condition() {
-        return this.condition == null ? Codegen.empty() : this.condition;
+    public Optional<Output<ApiConfigIamMemberConditionArgs>> condition() {
+        return Optional.ofNullable(this.condition);
     }
 
     @Import(name="member", required=true)
-      private final Output<String> member;
+    private Output<String> member;
 
     public Output<String> member() {
         return this.member;
@@ -55,10 +55,10 @@ public final class ApiConfigIamMemberArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -68,115 +68,102 @@ public final class ApiConfigIamMemberArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="role", required=true)
-      private final Output<String> role;
+    private Output<String> role;
 
     public Output<String> role() {
         return this.role;
     }
 
-    public ApiConfigIamMemberArgs(
-        Output<String> api,
-        Output<String> apiConfig,
-        @Nullable Output<ApiConfigIamMemberConditionArgs> condition,
-        Output<String> member,
-        @Nullable Output<String> project,
-        Output<String> role) {
-        this.api = Objects.requireNonNull(api, "expected parameter 'api' to be non-null");
-        this.apiConfig = Objects.requireNonNull(apiConfig, "expected parameter 'apiConfig' to be non-null");
-        this.condition = condition;
-        this.member = Objects.requireNonNull(member, "expected parameter 'member' to be non-null");
-        this.project = project;
-        this.role = Objects.requireNonNull(role, "expected parameter 'role' to be non-null");
-    }
+    private ApiConfigIamMemberArgs() {}
 
-    private ApiConfigIamMemberArgs() {
-        this.api = Codegen.empty();
-        this.apiConfig = Codegen.empty();
-        this.condition = Codegen.empty();
-        this.member = Codegen.empty();
-        this.project = Codegen.empty();
-        this.role = Codegen.empty();
+    private ApiConfigIamMemberArgs(ApiConfigIamMemberArgs $) {
+        this.api = $.api;
+        this.apiConfig = $.apiConfig;
+        this.condition = $.condition;
+        this.member = $.member;
+        this.project = $.project;
+        this.role = $.role;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ApiConfigIamMemberArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> api;
-        private Output<String> apiConfig;
-        private @Nullable Output<ApiConfigIamMemberConditionArgs> condition;
-        private Output<String> member;
-        private @Nullable Output<String> project;
-        private Output<String> role;
+        private ApiConfigIamMemberArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ApiConfigIamMemberArgs();
         }
 
         public Builder(ApiConfigIamMemberArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.api = defaults.api;
-    	      this.apiConfig = defaults.apiConfig;
-    	      this.condition = defaults.condition;
-    	      this.member = defaults.member;
-    	      this.project = defaults.project;
-    	      this.role = defaults.role;
+            $ = new ApiConfigIamMemberArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder api(Output<String> api) {
-            this.api = Objects.requireNonNull(api);
+            $.api = api;
             return this;
         }
+
         public Builder api(String api) {
-            this.api = Output.of(Objects.requireNonNull(api));
-            return this;
+            return api(Output.of(api));
         }
+
         public Builder apiConfig(Output<String> apiConfig) {
-            this.apiConfig = Objects.requireNonNull(apiConfig);
+            $.apiConfig = apiConfig;
             return this;
         }
+
         public Builder apiConfig(String apiConfig) {
-            this.apiConfig = Output.of(Objects.requireNonNull(apiConfig));
-            return this;
+            return apiConfig(Output.of(apiConfig));
         }
+
         public Builder condition(@Nullable Output<ApiConfigIamMemberConditionArgs> condition) {
-            this.condition = condition;
+            $.condition = condition;
             return this;
         }
-        public Builder condition(@Nullable ApiConfigIamMemberConditionArgs condition) {
-            this.condition = Codegen.ofNullable(condition);
-            return this;
+
+        public Builder condition(ApiConfigIamMemberConditionArgs condition) {
+            return condition(Output.of(condition));
         }
+
         public Builder member(Output<String> member) {
-            this.member = Objects.requireNonNull(member);
+            $.member = member;
             return this;
         }
+
         public Builder member(String member) {
-            this.member = Output.of(Objects.requireNonNull(member));
-            return this;
+            return member(Output.of(member));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder role(Output<String> role) {
-            this.role = Objects.requireNonNull(role);
+            $.role = role;
             return this;
         }
+
         public Builder role(String role) {
-            this.role = Output.of(Objects.requireNonNull(role));
-            return this;
-        }        public ApiConfigIamMemberArgs build() {
-            return new ApiConfigIamMemberArgs(api, apiConfig, condition, member, project, role);
+            return role(Output.of(role));
+        }
+
+        public ApiConfigIamMemberArgs build() {
+            $.api = Objects.requireNonNull($.api, "expected parameter 'api' to be non-null");
+            $.apiConfig = Objects.requireNonNull($.apiConfig, "expected parameter 'apiConfig' to be non-null");
+            $.member = Objects.requireNonNull($.member, "expected parameter 'member' to be non-null");
+            $.role = Objects.requireNonNull($.role, "expected parameter 'role' to be non-null");
+            return $;
         }
     }
+
 }

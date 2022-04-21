@@ -17,7 +17,7 @@ public final class GetEmailTemplateArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -28,7 +28,7 @@ public final class GetEmailTemplateArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="serviceName", required=true)
-      private final String serviceName;
+    private String serviceName;
 
     public String serviceName() {
         return this.serviceName;
@@ -39,64 +39,59 @@ public final class GetEmailTemplateArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="templateName", required=true)
-      private final String templateName;
+    private String templateName;
 
     public String templateName() {
         return this.templateName;
     }
 
-    public GetEmailTemplateArgs(
-        String resourceGroupName,
-        String serviceName,
-        String templateName) {
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.serviceName = Objects.requireNonNull(serviceName, "expected parameter 'serviceName' to be non-null");
-        this.templateName = Objects.requireNonNull(templateName, "expected parameter 'templateName' to be non-null");
-    }
+    private GetEmailTemplateArgs() {}
 
-    private GetEmailTemplateArgs() {
-        this.resourceGroupName = null;
-        this.serviceName = null;
-        this.templateName = null;
+    private GetEmailTemplateArgs(GetEmailTemplateArgs $) {
+        this.resourceGroupName = $.resourceGroupName;
+        this.serviceName = $.serviceName;
+        this.templateName = $.templateName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetEmailTemplateArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String resourceGroupName;
-        private String serviceName;
-        private String templateName;
+        private GetEmailTemplateArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetEmailTemplateArgs();
         }
 
         public Builder(GetEmailTemplateArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.serviceName = defaults.serviceName;
-    	      this.templateName = defaults.templateName;
+            $ = new GetEmailTemplateArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder serviceName(String serviceName) {
-            this.serviceName = Objects.requireNonNull(serviceName);
+            $.serviceName = serviceName;
             return this;
         }
+
         public Builder templateName(String templateName) {
-            this.templateName = Objects.requireNonNull(templateName);
+            $.templateName = templateName;
             return this;
-        }        public GetEmailTemplateArgs build() {
-            return new GetEmailTemplateArgs(resourceGroupName, serviceName, templateName);
+        }
+
+        public GetEmailTemplateArgs build() {
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.serviceName = Objects.requireNonNull($.serviceName, "expected parameter 'serviceName' to be non-null");
+            $.templateName = Objects.requireNonNull($.templateName, "expected parameter 'templateName' to be non-null");
+            return $;
         }
     }
+
 }

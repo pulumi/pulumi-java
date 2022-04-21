@@ -5,12 +5,12 @@ package com.pulumi.gcp.datacatalog.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.datacatalog.inputs.EntryBigqueryTableSpecTableSpecGetArgs;
 import com.pulumi.gcp.datacatalog.inputs.EntryBigqueryTableSpecViewSpecGetArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -19,96 +19,90 @@ public final class EntryBigqueryTableSpecGetArgs extends com.pulumi.resources.Re
     public static final EntryBigqueryTableSpecGetArgs Empty = new EntryBigqueryTableSpecGetArgs();
 
     @Import(name="tableSourceType")
-      private final @Nullable Output<String> tableSourceType;
+    private @Nullable Output<String> tableSourceType;
 
-    public Output<String> tableSourceType() {
-        return this.tableSourceType == null ? Codegen.empty() : this.tableSourceType;
+    public Optional<Output<String>> tableSourceType() {
+        return Optional.ofNullable(this.tableSourceType);
     }
 
     @Import(name="tableSpecs")
-      private final @Nullable Output<List<EntryBigqueryTableSpecTableSpecGetArgs>> tableSpecs;
+    private @Nullable Output<List<EntryBigqueryTableSpecTableSpecGetArgs>> tableSpecs;
 
-    public Output<List<EntryBigqueryTableSpecTableSpecGetArgs>> tableSpecs() {
-        return this.tableSpecs == null ? Codegen.empty() : this.tableSpecs;
+    public Optional<Output<List<EntryBigqueryTableSpecTableSpecGetArgs>>> tableSpecs() {
+        return Optional.ofNullable(this.tableSpecs);
     }
 
     @Import(name="viewSpecs")
-      private final @Nullable Output<List<EntryBigqueryTableSpecViewSpecGetArgs>> viewSpecs;
+    private @Nullable Output<List<EntryBigqueryTableSpecViewSpecGetArgs>> viewSpecs;
 
-    public Output<List<EntryBigqueryTableSpecViewSpecGetArgs>> viewSpecs() {
-        return this.viewSpecs == null ? Codegen.empty() : this.viewSpecs;
+    public Optional<Output<List<EntryBigqueryTableSpecViewSpecGetArgs>>> viewSpecs() {
+        return Optional.ofNullable(this.viewSpecs);
     }
 
-    public EntryBigqueryTableSpecGetArgs(
-        @Nullable Output<String> tableSourceType,
-        @Nullable Output<List<EntryBigqueryTableSpecTableSpecGetArgs>> tableSpecs,
-        @Nullable Output<List<EntryBigqueryTableSpecViewSpecGetArgs>> viewSpecs) {
-        this.tableSourceType = tableSourceType;
-        this.tableSpecs = tableSpecs;
-        this.viewSpecs = viewSpecs;
-    }
+    private EntryBigqueryTableSpecGetArgs() {}
 
-    private EntryBigqueryTableSpecGetArgs() {
-        this.tableSourceType = Codegen.empty();
-        this.tableSpecs = Codegen.empty();
-        this.viewSpecs = Codegen.empty();
+    private EntryBigqueryTableSpecGetArgs(EntryBigqueryTableSpecGetArgs $) {
+        this.tableSourceType = $.tableSourceType;
+        this.tableSpecs = $.tableSpecs;
+        this.viewSpecs = $.viewSpecs;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EntryBigqueryTableSpecGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> tableSourceType;
-        private @Nullable Output<List<EntryBigqueryTableSpecTableSpecGetArgs>> tableSpecs;
-        private @Nullable Output<List<EntryBigqueryTableSpecViewSpecGetArgs>> viewSpecs;
+        private EntryBigqueryTableSpecGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new EntryBigqueryTableSpecGetArgs();
         }
 
         public Builder(EntryBigqueryTableSpecGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.tableSourceType = defaults.tableSourceType;
-    	      this.tableSpecs = defaults.tableSpecs;
-    	      this.viewSpecs = defaults.viewSpecs;
+            $ = new EntryBigqueryTableSpecGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder tableSourceType(@Nullable Output<String> tableSourceType) {
-            this.tableSourceType = tableSourceType;
+            $.tableSourceType = tableSourceType;
             return this;
         }
-        public Builder tableSourceType(@Nullable String tableSourceType) {
-            this.tableSourceType = Codegen.ofNullable(tableSourceType);
-            return this;
+
+        public Builder tableSourceType(String tableSourceType) {
+            return tableSourceType(Output.of(tableSourceType));
         }
+
         public Builder tableSpecs(@Nullable Output<List<EntryBigqueryTableSpecTableSpecGetArgs>> tableSpecs) {
-            this.tableSpecs = tableSpecs;
+            $.tableSpecs = tableSpecs;
             return this;
         }
-        public Builder tableSpecs(@Nullable List<EntryBigqueryTableSpecTableSpecGetArgs> tableSpecs) {
-            this.tableSpecs = Codegen.ofNullable(tableSpecs);
-            return this;
+
+        public Builder tableSpecs(List<EntryBigqueryTableSpecTableSpecGetArgs> tableSpecs) {
+            return tableSpecs(Output.of(tableSpecs));
         }
+
         public Builder tableSpecs(EntryBigqueryTableSpecTableSpecGetArgs... tableSpecs) {
             return tableSpecs(List.of(tableSpecs));
         }
+
         public Builder viewSpecs(@Nullable Output<List<EntryBigqueryTableSpecViewSpecGetArgs>> viewSpecs) {
-            this.viewSpecs = viewSpecs;
+            $.viewSpecs = viewSpecs;
             return this;
         }
-        public Builder viewSpecs(@Nullable List<EntryBigqueryTableSpecViewSpecGetArgs> viewSpecs) {
-            this.viewSpecs = Codegen.ofNullable(viewSpecs);
-            return this;
+
+        public Builder viewSpecs(List<EntryBigqueryTableSpecViewSpecGetArgs> viewSpecs) {
+            return viewSpecs(Output.of(viewSpecs));
         }
+
         public Builder viewSpecs(EntryBigqueryTableSpecViewSpecGetArgs... viewSpecs) {
             return viewSpecs(List.of(viewSpecs));
-        }        public EntryBigqueryTableSpecGetArgs build() {
-            return new EntryBigqueryTableSpecGetArgs(tableSourceType, tableSpecs, viewSpecs);
+        }
+
+        public EntryBigqueryTableSpecGetArgs build() {
+            return $;
         }
     }
+
 }

@@ -27,6 +27,7 @@ import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -39,10 +40,10 @@ public final class DatabaseAccountArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="accountName")
-      private final @Nullable Output<String> accountName;
+    private @Nullable Output<String> accountName;
 
-    public Output<String> accountName() {
-        return this.accountName == null ? Codegen.empty() : this.accountName;
+    public Optional<Output<String>> accountName() {
+        return Optional.ofNullable(this.accountName);
     }
 
     /**
@@ -50,10 +51,10 @@ public final class DatabaseAccountArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="apiProperties")
-      private final @Nullable Output<ApiPropertiesArgs> apiProperties;
+    private @Nullable Output<ApiPropertiesArgs> apiProperties;
 
-    public Output<ApiPropertiesArgs> apiProperties() {
-        return this.apiProperties == null ? Codegen.empty() : this.apiProperties;
+    public Optional<Output<ApiPropertiesArgs>> apiProperties() {
+        return Optional.ofNullable(this.apiProperties);
     }
 
     /**
@@ -61,10 +62,10 @@ public final class DatabaseAccountArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="backupPolicy")
-      private final @Nullable Output<Either<ContinuousModeBackupPolicyArgs,PeriodicModeBackupPolicyArgs>> backupPolicy;
+    private @Nullable Output<Either<ContinuousModeBackupPolicyArgs,PeriodicModeBackupPolicyArgs>> backupPolicy;
 
-    public Output<Either<ContinuousModeBackupPolicyArgs,PeriodicModeBackupPolicyArgs>> backupPolicy() {
-        return this.backupPolicy == null ? Codegen.empty() : this.backupPolicy;
+    public Optional<Output<Either<ContinuousModeBackupPolicyArgs,PeriodicModeBackupPolicyArgs>>> backupPolicy() {
+        return Optional.ofNullable(this.backupPolicy);
     }
 
     /**
@@ -72,10 +73,10 @@ public final class DatabaseAccountArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="capabilities")
-      private final @Nullable Output<List<CapabilityArgs>> capabilities;
+    private @Nullable Output<List<CapabilityArgs>> capabilities;
 
-    public Output<List<CapabilityArgs>> capabilities() {
-        return this.capabilities == null ? Codegen.empty() : this.capabilities;
+    public Optional<Output<List<CapabilityArgs>>> capabilities() {
+        return Optional.ofNullable(this.capabilities);
     }
 
     /**
@@ -83,10 +84,10 @@ public final class DatabaseAccountArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="connectorOffer")
-      private final @Nullable Output<Either<String,ConnectorOffer>> connectorOffer;
+    private @Nullable Output<Either<String,ConnectorOffer>> connectorOffer;
 
-    public Output<Either<String,ConnectorOffer>> connectorOffer() {
-        return this.connectorOffer == null ? Codegen.empty() : this.connectorOffer;
+    public Optional<Output<Either<String,ConnectorOffer>>> connectorOffer() {
+        return Optional.ofNullable(this.connectorOffer);
     }
 
     /**
@@ -94,10 +95,10 @@ public final class DatabaseAccountArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="consistencyPolicy")
-      private final @Nullable Output<ConsistencyPolicyArgs> consistencyPolicy;
+    private @Nullable Output<ConsistencyPolicyArgs> consistencyPolicy;
 
-    public Output<ConsistencyPolicyArgs> consistencyPolicy() {
-        return this.consistencyPolicy == null ? Codegen.empty() : this.consistencyPolicy;
+    public Optional<Output<ConsistencyPolicyArgs>> consistencyPolicy() {
+        return Optional.ofNullable(this.consistencyPolicy);
     }
 
     /**
@@ -105,10 +106,10 @@ public final class DatabaseAccountArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="cors")
-      private final @Nullable Output<List<CorsPolicyArgs>> cors;
+    private @Nullable Output<List<CorsPolicyArgs>> cors;
 
-    public Output<List<CorsPolicyArgs>> cors() {
-        return this.cors == null ? Codegen.empty() : this.cors;
+    public Optional<Output<List<CorsPolicyArgs>>> cors() {
+        return Optional.ofNullable(this.cors);
     }
 
     /**
@@ -116,7 +117,7 @@ public final class DatabaseAccountArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="databaseAccountOfferType", required=true)
-      private final Output<DatabaseAccountOfferType> databaseAccountOfferType;
+    private Output<DatabaseAccountOfferType> databaseAccountOfferType;
 
     public Output<DatabaseAccountOfferType> databaseAccountOfferType() {
         return this.databaseAccountOfferType;
@@ -127,10 +128,10 @@ public final class DatabaseAccountArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="defaultIdentity")
-      private final @Nullable Output<String> defaultIdentity;
+    private @Nullable Output<String> defaultIdentity;
 
-    public Output<String> defaultIdentity() {
-        return this.defaultIdentity == null ? Codegen.empty() : this.defaultIdentity;
+    public Optional<Output<String>> defaultIdentity() {
+        return Optional.ofNullable(this.defaultIdentity);
     }
 
     /**
@@ -138,10 +139,10 @@ public final class DatabaseAccountArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="disableKeyBasedMetadataWriteAccess")
-      private final @Nullable Output<Boolean> disableKeyBasedMetadataWriteAccess;
+    private @Nullable Output<Boolean> disableKeyBasedMetadataWriteAccess;
 
-    public Output<Boolean> disableKeyBasedMetadataWriteAccess() {
-        return this.disableKeyBasedMetadataWriteAccess == null ? Codegen.empty() : this.disableKeyBasedMetadataWriteAccess;
+    public Optional<Output<Boolean>> disableKeyBasedMetadataWriteAccess() {
+        return Optional.ofNullable(this.disableKeyBasedMetadataWriteAccess);
     }
 
     /**
@@ -149,10 +150,10 @@ public final class DatabaseAccountArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="enableAnalyticalStorage")
-      private final @Nullable Output<Boolean> enableAnalyticalStorage;
+    private @Nullable Output<Boolean> enableAnalyticalStorage;
 
-    public Output<Boolean> enableAnalyticalStorage() {
-        return this.enableAnalyticalStorage == null ? Codegen.empty() : this.enableAnalyticalStorage;
+    public Optional<Output<Boolean>> enableAnalyticalStorage() {
+        return Optional.ofNullable(this.enableAnalyticalStorage);
     }
 
     /**
@@ -160,10 +161,10 @@ public final class DatabaseAccountArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="enableAutomaticFailover")
-      private final @Nullable Output<Boolean> enableAutomaticFailover;
+    private @Nullable Output<Boolean> enableAutomaticFailover;
 
-    public Output<Boolean> enableAutomaticFailover() {
-        return this.enableAutomaticFailover == null ? Codegen.empty() : this.enableAutomaticFailover;
+    public Optional<Output<Boolean>> enableAutomaticFailover() {
+        return Optional.ofNullable(this.enableAutomaticFailover);
     }
 
     /**
@@ -171,10 +172,10 @@ public final class DatabaseAccountArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="enableCassandraConnector")
-      private final @Nullable Output<Boolean> enableCassandraConnector;
+    private @Nullable Output<Boolean> enableCassandraConnector;
 
-    public Output<Boolean> enableCassandraConnector() {
-        return this.enableCassandraConnector == null ? Codegen.empty() : this.enableCassandraConnector;
+    public Optional<Output<Boolean>> enableCassandraConnector() {
+        return Optional.ofNullable(this.enableCassandraConnector);
     }
 
     /**
@@ -182,10 +183,10 @@ public final class DatabaseAccountArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="enableFreeTier")
-      private final @Nullable Output<Boolean> enableFreeTier;
+    private @Nullable Output<Boolean> enableFreeTier;
 
-    public Output<Boolean> enableFreeTier() {
-        return this.enableFreeTier == null ? Codegen.empty() : this.enableFreeTier;
+    public Optional<Output<Boolean>> enableFreeTier() {
+        return Optional.ofNullable(this.enableFreeTier);
     }
 
     /**
@@ -193,10 +194,10 @@ public final class DatabaseAccountArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="enableMultipleWriteLocations")
-      private final @Nullable Output<Boolean> enableMultipleWriteLocations;
+    private @Nullable Output<Boolean> enableMultipleWriteLocations;
 
-    public Output<Boolean> enableMultipleWriteLocations() {
-        return this.enableMultipleWriteLocations == null ? Codegen.empty() : this.enableMultipleWriteLocations;
+    public Optional<Output<Boolean>> enableMultipleWriteLocations() {
+        return Optional.ofNullable(this.enableMultipleWriteLocations);
     }
 
     /**
@@ -204,10 +205,10 @@ public final class DatabaseAccountArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="identity")
-      private final @Nullable Output<ManagedServiceIdentityArgs> identity;
+    private @Nullable Output<ManagedServiceIdentityArgs> identity;
 
-    public Output<ManagedServiceIdentityArgs> identity() {
-        return this.identity == null ? Codegen.empty() : this.identity;
+    public Optional<Output<ManagedServiceIdentityArgs>> identity() {
+        return Optional.ofNullable(this.identity);
     }
 
     /**
@@ -215,10 +216,10 @@ public final class DatabaseAccountArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="ipRules")
-      private final @Nullable Output<List<IpAddressOrRangeArgs>> ipRules;
+    private @Nullable Output<List<IpAddressOrRangeArgs>> ipRules;
 
-    public Output<List<IpAddressOrRangeArgs>> ipRules() {
-        return this.ipRules == null ? Codegen.empty() : this.ipRules;
+    public Optional<Output<List<IpAddressOrRangeArgs>>> ipRules() {
+        return Optional.ofNullable(this.ipRules);
     }
 
     /**
@@ -226,10 +227,10 @@ public final class DatabaseAccountArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="isVirtualNetworkFilterEnabled")
-      private final @Nullable Output<Boolean> isVirtualNetworkFilterEnabled;
+    private @Nullable Output<Boolean> isVirtualNetworkFilterEnabled;
 
-    public Output<Boolean> isVirtualNetworkFilterEnabled() {
-        return this.isVirtualNetworkFilterEnabled == null ? Codegen.empty() : this.isVirtualNetworkFilterEnabled;
+    public Optional<Output<Boolean>> isVirtualNetworkFilterEnabled() {
+        return Optional.ofNullable(this.isVirtualNetworkFilterEnabled);
     }
 
     /**
@@ -237,10 +238,10 @@ public final class DatabaseAccountArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="keyVaultKeyUri")
-      private final @Nullable Output<String> keyVaultKeyUri;
+    private @Nullable Output<String> keyVaultKeyUri;
 
-    public Output<String> keyVaultKeyUri() {
-        return this.keyVaultKeyUri == null ? Codegen.empty() : this.keyVaultKeyUri;
+    public Optional<Output<String>> keyVaultKeyUri() {
+        return Optional.ofNullable(this.keyVaultKeyUri);
     }
 
     /**
@@ -248,10 +249,10 @@ public final class DatabaseAccountArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="kind")
-      private final @Nullable Output<Either<String,DatabaseAccountKind>> kind;
+    private @Nullable Output<Either<String,DatabaseAccountKind>> kind;
 
-    public Output<Either<String,DatabaseAccountKind>> kind() {
-        return this.kind == null ? Codegen.empty() : this.kind;
+    public Optional<Output<Either<String,DatabaseAccountKind>>> kind() {
+        return Optional.ofNullable(this.kind);
     }
 
     /**
@@ -259,10 +260,10 @@ public final class DatabaseAccountArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -270,7 +271,7 @@ public final class DatabaseAccountArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="locations", required=true)
-      private final Output<List<LocationArgs>> locations;
+    private Output<List<LocationArgs>> locations;
 
     public Output<List<LocationArgs>> locations() {
         return this.locations;
@@ -281,10 +282,10 @@ public final class DatabaseAccountArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="networkAclBypass")
-      private final @Nullable Output<NetworkAclBypass> networkAclBypass;
+    private @Nullable Output<NetworkAclBypass> networkAclBypass;
 
-    public Output<NetworkAclBypass> networkAclBypass() {
-        return this.networkAclBypass == null ? Codegen.empty() : this.networkAclBypass;
+    public Optional<Output<NetworkAclBypass>> networkAclBypass() {
+        return Optional.ofNullable(this.networkAclBypass);
     }
 
     /**
@@ -292,10 +293,10 @@ public final class DatabaseAccountArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="networkAclBypassResourceIds")
-      private final @Nullable Output<List<String>> networkAclBypassResourceIds;
+    private @Nullable Output<List<String>> networkAclBypassResourceIds;
 
-    public Output<List<String>> networkAclBypassResourceIds() {
-        return this.networkAclBypassResourceIds == null ? Codegen.empty() : this.networkAclBypassResourceIds;
+    public Optional<Output<List<String>>> networkAclBypassResourceIds() {
+        return Optional.ofNullable(this.networkAclBypassResourceIds);
     }
 
     /**
@@ -303,10 +304,10 @@ public final class DatabaseAccountArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="publicNetworkAccess")
-      private final @Nullable Output<Either<String,PublicNetworkAccess>> publicNetworkAccess;
+    private @Nullable Output<Either<String,PublicNetworkAccess>> publicNetworkAccess;
 
-    public Output<Either<String,PublicNetworkAccess>> publicNetworkAccess() {
-        return this.publicNetworkAccess == null ? Codegen.empty() : this.publicNetworkAccess;
+    public Optional<Output<Either<String,PublicNetworkAccess>>> publicNetworkAccess() {
+        return Optional.ofNullable(this.publicNetworkAccess);
     }
 
     /**
@@ -314,7 +315,7 @@ public final class DatabaseAccountArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -325,10 +326,10 @@ public final class DatabaseAccountArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -336,419 +337,346 @@ public final class DatabaseAccountArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="virtualNetworkRules")
-      private final @Nullable Output<List<VirtualNetworkRuleArgs>> virtualNetworkRules;
+    private @Nullable Output<List<VirtualNetworkRuleArgs>> virtualNetworkRules;
 
-    public Output<List<VirtualNetworkRuleArgs>> virtualNetworkRules() {
-        return this.virtualNetworkRules == null ? Codegen.empty() : this.virtualNetworkRules;
+    public Optional<Output<List<VirtualNetworkRuleArgs>>> virtualNetworkRules() {
+        return Optional.ofNullable(this.virtualNetworkRules);
     }
 
-    public DatabaseAccountArgs(
-        @Nullable Output<String> accountName,
-        @Nullable Output<ApiPropertiesArgs> apiProperties,
-        @Nullable Output<Either<ContinuousModeBackupPolicyArgs,PeriodicModeBackupPolicyArgs>> backupPolicy,
-        @Nullable Output<List<CapabilityArgs>> capabilities,
-        @Nullable Output<Either<String,ConnectorOffer>> connectorOffer,
-        @Nullable Output<ConsistencyPolicyArgs> consistencyPolicy,
-        @Nullable Output<List<CorsPolicyArgs>> cors,
-        Output<DatabaseAccountOfferType> databaseAccountOfferType,
-        @Nullable Output<String> defaultIdentity,
-        @Nullable Output<Boolean> disableKeyBasedMetadataWriteAccess,
-        @Nullable Output<Boolean> enableAnalyticalStorage,
-        @Nullable Output<Boolean> enableAutomaticFailover,
-        @Nullable Output<Boolean> enableCassandraConnector,
-        @Nullable Output<Boolean> enableFreeTier,
-        @Nullable Output<Boolean> enableMultipleWriteLocations,
-        @Nullable Output<ManagedServiceIdentityArgs> identity,
-        @Nullable Output<List<IpAddressOrRangeArgs>> ipRules,
-        @Nullable Output<Boolean> isVirtualNetworkFilterEnabled,
-        @Nullable Output<String> keyVaultKeyUri,
-        @Nullable Output<Either<String,DatabaseAccountKind>> kind,
-        @Nullable Output<String> location,
-        Output<List<LocationArgs>> locations,
-        @Nullable Output<NetworkAclBypass> networkAclBypass,
-        @Nullable Output<List<String>> networkAclBypassResourceIds,
-        @Nullable Output<Either<String,PublicNetworkAccess>> publicNetworkAccess,
-        Output<String> resourceGroupName,
-        @Nullable Output<Map<String,String>> tags,
-        @Nullable Output<List<VirtualNetworkRuleArgs>> virtualNetworkRules) {
-        this.accountName = accountName;
-        this.apiProperties = apiProperties;
-        this.backupPolicy = backupPolicy;
-        this.capabilities = capabilities;
-        this.connectorOffer = connectorOffer;
-        this.consistencyPolicy = consistencyPolicy;
-        this.cors = cors;
-        this.databaseAccountOfferType = Objects.requireNonNull(databaseAccountOfferType, "expected parameter 'databaseAccountOfferType' to be non-null");
-        this.defaultIdentity = defaultIdentity;
-        this.disableKeyBasedMetadataWriteAccess = disableKeyBasedMetadataWriteAccess;
-        this.enableAnalyticalStorage = enableAnalyticalStorage;
-        this.enableAutomaticFailover = enableAutomaticFailover;
-        this.enableCassandraConnector = enableCassandraConnector;
-        this.enableFreeTier = enableFreeTier;
-        this.enableMultipleWriteLocations = enableMultipleWriteLocations;
-        this.identity = identity;
-        this.ipRules = ipRules;
-        this.isVirtualNetworkFilterEnabled = isVirtualNetworkFilterEnabled;
-        this.keyVaultKeyUri = keyVaultKeyUri;
-        this.kind = Codegen.stringProp("kind").left(DatabaseAccountKind.class).output().arg(kind).def("GlobalDocumentDB").getNullable();
-        this.location = location;
-        this.locations = Objects.requireNonNull(locations, "expected parameter 'locations' to be non-null");
-        this.networkAclBypass = networkAclBypass;
-        this.networkAclBypassResourceIds = networkAclBypassResourceIds;
-        this.publicNetworkAccess = publicNetworkAccess;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.tags = tags;
-        this.virtualNetworkRules = virtualNetworkRules;
-    }
+    private DatabaseAccountArgs() {}
 
-    private DatabaseAccountArgs() {
-        this.accountName = Codegen.empty();
-        this.apiProperties = Codegen.empty();
-        this.backupPolicy = Codegen.empty();
-        this.capabilities = Codegen.empty();
-        this.connectorOffer = Codegen.empty();
-        this.consistencyPolicy = Codegen.empty();
-        this.cors = Codegen.empty();
-        this.databaseAccountOfferType = Codegen.empty();
-        this.defaultIdentity = Codegen.empty();
-        this.disableKeyBasedMetadataWriteAccess = Codegen.empty();
-        this.enableAnalyticalStorage = Codegen.empty();
-        this.enableAutomaticFailover = Codegen.empty();
-        this.enableCassandraConnector = Codegen.empty();
-        this.enableFreeTier = Codegen.empty();
-        this.enableMultipleWriteLocations = Codegen.empty();
-        this.identity = Codegen.empty();
-        this.ipRules = Codegen.empty();
-        this.isVirtualNetworkFilterEnabled = Codegen.empty();
-        this.keyVaultKeyUri = Codegen.empty();
-        this.kind = Codegen.empty();
-        this.location = Codegen.empty();
-        this.locations = Codegen.empty();
-        this.networkAclBypass = Codegen.empty();
-        this.networkAclBypassResourceIds = Codegen.empty();
-        this.publicNetworkAccess = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.virtualNetworkRules = Codegen.empty();
+    private DatabaseAccountArgs(DatabaseAccountArgs $) {
+        this.accountName = $.accountName;
+        this.apiProperties = $.apiProperties;
+        this.backupPolicy = $.backupPolicy;
+        this.capabilities = $.capabilities;
+        this.connectorOffer = $.connectorOffer;
+        this.consistencyPolicy = $.consistencyPolicy;
+        this.cors = $.cors;
+        this.databaseAccountOfferType = $.databaseAccountOfferType;
+        this.defaultIdentity = $.defaultIdentity;
+        this.disableKeyBasedMetadataWriteAccess = $.disableKeyBasedMetadataWriteAccess;
+        this.enableAnalyticalStorage = $.enableAnalyticalStorage;
+        this.enableAutomaticFailover = $.enableAutomaticFailover;
+        this.enableCassandraConnector = $.enableCassandraConnector;
+        this.enableFreeTier = $.enableFreeTier;
+        this.enableMultipleWriteLocations = $.enableMultipleWriteLocations;
+        this.identity = $.identity;
+        this.ipRules = $.ipRules;
+        this.isVirtualNetworkFilterEnabled = $.isVirtualNetworkFilterEnabled;
+        this.keyVaultKeyUri = $.keyVaultKeyUri;
+        this.kind = $.kind;
+        this.location = $.location;
+        this.locations = $.locations;
+        this.networkAclBypass = $.networkAclBypass;
+        this.networkAclBypassResourceIds = $.networkAclBypassResourceIds;
+        this.publicNetworkAccess = $.publicNetworkAccess;
+        this.resourceGroupName = $.resourceGroupName;
+        this.tags = $.tags;
+        this.virtualNetworkRules = $.virtualNetworkRules;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DatabaseAccountArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> accountName;
-        private @Nullable Output<ApiPropertiesArgs> apiProperties;
-        private @Nullable Output<Either<ContinuousModeBackupPolicyArgs,PeriodicModeBackupPolicyArgs>> backupPolicy;
-        private @Nullable Output<List<CapabilityArgs>> capabilities;
-        private @Nullable Output<Either<String,ConnectorOffer>> connectorOffer;
-        private @Nullable Output<ConsistencyPolicyArgs> consistencyPolicy;
-        private @Nullable Output<List<CorsPolicyArgs>> cors;
-        private Output<DatabaseAccountOfferType> databaseAccountOfferType;
-        private @Nullable Output<String> defaultIdentity;
-        private @Nullable Output<Boolean> disableKeyBasedMetadataWriteAccess;
-        private @Nullable Output<Boolean> enableAnalyticalStorage;
-        private @Nullable Output<Boolean> enableAutomaticFailover;
-        private @Nullable Output<Boolean> enableCassandraConnector;
-        private @Nullable Output<Boolean> enableFreeTier;
-        private @Nullable Output<Boolean> enableMultipleWriteLocations;
-        private @Nullable Output<ManagedServiceIdentityArgs> identity;
-        private @Nullable Output<List<IpAddressOrRangeArgs>> ipRules;
-        private @Nullable Output<Boolean> isVirtualNetworkFilterEnabled;
-        private @Nullable Output<String> keyVaultKeyUri;
-        private @Nullable Output<Either<String,DatabaseAccountKind>> kind;
-        private @Nullable Output<String> location;
-        private Output<List<LocationArgs>> locations;
-        private @Nullable Output<NetworkAclBypass> networkAclBypass;
-        private @Nullable Output<List<String>> networkAclBypassResourceIds;
-        private @Nullable Output<Either<String,PublicNetworkAccess>> publicNetworkAccess;
-        private Output<String> resourceGroupName;
-        private @Nullable Output<Map<String,String>> tags;
-        private @Nullable Output<List<VirtualNetworkRuleArgs>> virtualNetworkRules;
+        private DatabaseAccountArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DatabaseAccountArgs();
         }
 
         public Builder(DatabaseAccountArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accountName = defaults.accountName;
-    	      this.apiProperties = defaults.apiProperties;
-    	      this.backupPolicy = defaults.backupPolicy;
-    	      this.capabilities = defaults.capabilities;
-    	      this.connectorOffer = defaults.connectorOffer;
-    	      this.consistencyPolicy = defaults.consistencyPolicy;
-    	      this.cors = defaults.cors;
-    	      this.databaseAccountOfferType = defaults.databaseAccountOfferType;
-    	      this.defaultIdentity = defaults.defaultIdentity;
-    	      this.disableKeyBasedMetadataWriteAccess = defaults.disableKeyBasedMetadataWriteAccess;
-    	      this.enableAnalyticalStorage = defaults.enableAnalyticalStorage;
-    	      this.enableAutomaticFailover = defaults.enableAutomaticFailover;
-    	      this.enableCassandraConnector = defaults.enableCassandraConnector;
-    	      this.enableFreeTier = defaults.enableFreeTier;
-    	      this.enableMultipleWriteLocations = defaults.enableMultipleWriteLocations;
-    	      this.identity = defaults.identity;
-    	      this.ipRules = defaults.ipRules;
-    	      this.isVirtualNetworkFilterEnabled = defaults.isVirtualNetworkFilterEnabled;
-    	      this.keyVaultKeyUri = defaults.keyVaultKeyUri;
-    	      this.kind = defaults.kind;
-    	      this.location = defaults.location;
-    	      this.locations = defaults.locations;
-    	      this.networkAclBypass = defaults.networkAclBypass;
-    	      this.networkAclBypassResourceIds = defaults.networkAclBypassResourceIds;
-    	      this.publicNetworkAccess = defaults.publicNetworkAccess;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.tags = defaults.tags;
-    	      this.virtualNetworkRules = defaults.virtualNetworkRules;
+            $ = new DatabaseAccountArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder accountName(@Nullable Output<String> accountName) {
-            this.accountName = accountName;
+            $.accountName = accountName;
             return this;
         }
-        public Builder accountName(@Nullable String accountName) {
-            this.accountName = Codegen.ofNullable(accountName);
-            return this;
+
+        public Builder accountName(String accountName) {
+            return accountName(Output.of(accountName));
         }
+
         public Builder apiProperties(@Nullable Output<ApiPropertiesArgs> apiProperties) {
-            this.apiProperties = apiProperties;
+            $.apiProperties = apiProperties;
             return this;
         }
-        public Builder apiProperties(@Nullable ApiPropertiesArgs apiProperties) {
-            this.apiProperties = Codegen.ofNullable(apiProperties);
-            return this;
+
+        public Builder apiProperties(ApiPropertiesArgs apiProperties) {
+            return apiProperties(Output.of(apiProperties));
         }
+
         public Builder backupPolicy(@Nullable Output<Either<ContinuousModeBackupPolicyArgs,PeriodicModeBackupPolicyArgs>> backupPolicy) {
-            this.backupPolicy = backupPolicy;
+            $.backupPolicy = backupPolicy;
             return this;
         }
-        public Builder backupPolicy(@Nullable Either<ContinuousModeBackupPolicyArgs,PeriodicModeBackupPolicyArgs> backupPolicy) {
-            this.backupPolicy = Codegen.ofNullable(backupPolicy);
-            return this;
+
+        public Builder backupPolicy(Either<ContinuousModeBackupPolicyArgs,PeriodicModeBackupPolicyArgs> backupPolicy) {
+            return backupPolicy(Output.of(backupPolicy));
         }
+
         public Builder capabilities(@Nullable Output<List<CapabilityArgs>> capabilities) {
-            this.capabilities = capabilities;
+            $.capabilities = capabilities;
             return this;
         }
-        public Builder capabilities(@Nullable List<CapabilityArgs> capabilities) {
-            this.capabilities = Codegen.ofNullable(capabilities);
-            return this;
+
+        public Builder capabilities(List<CapabilityArgs> capabilities) {
+            return capabilities(Output.of(capabilities));
         }
+
         public Builder capabilities(CapabilityArgs... capabilities) {
             return capabilities(List.of(capabilities));
         }
+
         public Builder connectorOffer(@Nullable Output<Either<String,ConnectorOffer>> connectorOffer) {
-            this.connectorOffer = connectorOffer;
+            $.connectorOffer = connectorOffer;
             return this;
         }
-        public Builder connectorOffer(@Nullable Either<String,ConnectorOffer> connectorOffer) {
-            this.connectorOffer = Codegen.ofNullable(connectorOffer);
-            return this;
+
+        public Builder connectorOffer(Either<String,ConnectorOffer> connectorOffer) {
+            return connectorOffer(Output.of(connectorOffer));
         }
+
         public Builder consistencyPolicy(@Nullable Output<ConsistencyPolicyArgs> consistencyPolicy) {
-            this.consistencyPolicy = consistencyPolicy;
+            $.consistencyPolicy = consistencyPolicy;
             return this;
         }
-        public Builder consistencyPolicy(@Nullable ConsistencyPolicyArgs consistencyPolicy) {
-            this.consistencyPolicy = Codegen.ofNullable(consistencyPolicy);
-            return this;
+
+        public Builder consistencyPolicy(ConsistencyPolicyArgs consistencyPolicy) {
+            return consistencyPolicy(Output.of(consistencyPolicy));
         }
+
         public Builder cors(@Nullable Output<List<CorsPolicyArgs>> cors) {
-            this.cors = cors;
+            $.cors = cors;
             return this;
         }
-        public Builder cors(@Nullable List<CorsPolicyArgs> cors) {
-            this.cors = Codegen.ofNullable(cors);
-            return this;
+
+        public Builder cors(List<CorsPolicyArgs> cors) {
+            return cors(Output.of(cors));
         }
+
         public Builder cors(CorsPolicyArgs... cors) {
             return cors(List.of(cors));
         }
+
         public Builder databaseAccountOfferType(Output<DatabaseAccountOfferType> databaseAccountOfferType) {
-            this.databaseAccountOfferType = Objects.requireNonNull(databaseAccountOfferType);
+            $.databaseAccountOfferType = databaseAccountOfferType;
             return this;
         }
+
         public Builder databaseAccountOfferType(DatabaseAccountOfferType databaseAccountOfferType) {
-            this.databaseAccountOfferType = Output.of(Objects.requireNonNull(databaseAccountOfferType));
-            return this;
+            return databaseAccountOfferType(Output.of(databaseAccountOfferType));
         }
+
         public Builder defaultIdentity(@Nullable Output<String> defaultIdentity) {
-            this.defaultIdentity = defaultIdentity;
+            $.defaultIdentity = defaultIdentity;
             return this;
         }
-        public Builder defaultIdentity(@Nullable String defaultIdentity) {
-            this.defaultIdentity = Codegen.ofNullable(defaultIdentity);
-            return this;
+
+        public Builder defaultIdentity(String defaultIdentity) {
+            return defaultIdentity(Output.of(defaultIdentity));
         }
+
         public Builder disableKeyBasedMetadataWriteAccess(@Nullable Output<Boolean> disableKeyBasedMetadataWriteAccess) {
-            this.disableKeyBasedMetadataWriteAccess = disableKeyBasedMetadataWriteAccess;
+            $.disableKeyBasedMetadataWriteAccess = disableKeyBasedMetadataWriteAccess;
             return this;
         }
-        public Builder disableKeyBasedMetadataWriteAccess(@Nullable Boolean disableKeyBasedMetadataWriteAccess) {
-            this.disableKeyBasedMetadataWriteAccess = Codegen.ofNullable(disableKeyBasedMetadataWriteAccess);
-            return this;
+
+        public Builder disableKeyBasedMetadataWriteAccess(Boolean disableKeyBasedMetadataWriteAccess) {
+            return disableKeyBasedMetadataWriteAccess(Output.of(disableKeyBasedMetadataWriteAccess));
         }
+
         public Builder enableAnalyticalStorage(@Nullable Output<Boolean> enableAnalyticalStorage) {
-            this.enableAnalyticalStorage = enableAnalyticalStorage;
+            $.enableAnalyticalStorage = enableAnalyticalStorage;
             return this;
         }
-        public Builder enableAnalyticalStorage(@Nullable Boolean enableAnalyticalStorage) {
-            this.enableAnalyticalStorage = Codegen.ofNullable(enableAnalyticalStorage);
-            return this;
+
+        public Builder enableAnalyticalStorage(Boolean enableAnalyticalStorage) {
+            return enableAnalyticalStorage(Output.of(enableAnalyticalStorage));
         }
+
         public Builder enableAutomaticFailover(@Nullable Output<Boolean> enableAutomaticFailover) {
-            this.enableAutomaticFailover = enableAutomaticFailover;
+            $.enableAutomaticFailover = enableAutomaticFailover;
             return this;
         }
-        public Builder enableAutomaticFailover(@Nullable Boolean enableAutomaticFailover) {
-            this.enableAutomaticFailover = Codegen.ofNullable(enableAutomaticFailover);
-            return this;
+
+        public Builder enableAutomaticFailover(Boolean enableAutomaticFailover) {
+            return enableAutomaticFailover(Output.of(enableAutomaticFailover));
         }
+
         public Builder enableCassandraConnector(@Nullable Output<Boolean> enableCassandraConnector) {
-            this.enableCassandraConnector = enableCassandraConnector;
+            $.enableCassandraConnector = enableCassandraConnector;
             return this;
         }
-        public Builder enableCassandraConnector(@Nullable Boolean enableCassandraConnector) {
-            this.enableCassandraConnector = Codegen.ofNullable(enableCassandraConnector);
-            return this;
+
+        public Builder enableCassandraConnector(Boolean enableCassandraConnector) {
+            return enableCassandraConnector(Output.of(enableCassandraConnector));
         }
+
         public Builder enableFreeTier(@Nullable Output<Boolean> enableFreeTier) {
-            this.enableFreeTier = enableFreeTier;
+            $.enableFreeTier = enableFreeTier;
             return this;
         }
-        public Builder enableFreeTier(@Nullable Boolean enableFreeTier) {
-            this.enableFreeTier = Codegen.ofNullable(enableFreeTier);
-            return this;
+
+        public Builder enableFreeTier(Boolean enableFreeTier) {
+            return enableFreeTier(Output.of(enableFreeTier));
         }
+
         public Builder enableMultipleWriteLocations(@Nullable Output<Boolean> enableMultipleWriteLocations) {
-            this.enableMultipleWriteLocations = enableMultipleWriteLocations;
+            $.enableMultipleWriteLocations = enableMultipleWriteLocations;
             return this;
         }
-        public Builder enableMultipleWriteLocations(@Nullable Boolean enableMultipleWriteLocations) {
-            this.enableMultipleWriteLocations = Codegen.ofNullable(enableMultipleWriteLocations);
-            return this;
+
+        public Builder enableMultipleWriteLocations(Boolean enableMultipleWriteLocations) {
+            return enableMultipleWriteLocations(Output.of(enableMultipleWriteLocations));
         }
+
         public Builder identity(@Nullable Output<ManagedServiceIdentityArgs> identity) {
-            this.identity = identity;
+            $.identity = identity;
             return this;
         }
-        public Builder identity(@Nullable ManagedServiceIdentityArgs identity) {
-            this.identity = Codegen.ofNullable(identity);
-            return this;
+
+        public Builder identity(ManagedServiceIdentityArgs identity) {
+            return identity(Output.of(identity));
         }
+
         public Builder ipRules(@Nullable Output<List<IpAddressOrRangeArgs>> ipRules) {
-            this.ipRules = ipRules;
+            $.ipRules = ipRules;
             return this;
         }
-        public Builder ipRules(@Nullable List<IpAddressOrRangeArgs> ipRules) {
-            this.ipRules = Codegen.ofNullable(ipRules);
-            return this;
+
+        public Builder ipRules(List<IpAddressOrRangeArgs> ipRules) {
+            return ipRules(Output.of(ipRules));
         }
+
         public Builder ipRules(IpAddressOrRangeArgs... ipRules) {
             return ipRules(List.of(ipRules));
         }
+
         public Builder isVirtualNetworkFilterEnabled(@Nullable Output<Boolean> isVirtualNetworkFilterEnabled) {
-            this.isVirtualNetworkFilterEnabled = isVirtualNetworkFilterEnabled;
+            $.isVirtualNetworkFilterEnabled = isVirtualNetworkFilterEnabled;
             return this;
         }
-        public Builder isVirtualNetworkFilterEnabled(@Nullable Boolean isVirtualNetworkFilterEnabled) {
-            this.isVirtualNetworkFilterEnabled = Codegen.ofNullable(isVirtualNetworkFilterEnabled);
-            return this;
+
+        public Builder isVirtualNetworkFilterEnabled(Boolean isVirtualNetworkFilterEnabled) {
+            return isVirtualNetworkFilterEnabled(Output.of(isVirtualNetworkFilterEnabled));
         }
+
         public Builder keyVaultKeyUri(@Nullable Output<String> keyVaultKeyUri) {
-            this.keyVaultKeyUri = keyVaultKeyUri;
+            $.keyVaultKeyUri = keyVaultKeyUri;
             return this;
         }
-        public Builder keyVaultKeyUri(@Nullable String keyVaultKeyUri) {
-            this.keyVaultKeyUri = Codegen.ofNullable(keyVaultKeyUri);
-            return this;
+
+        public Builder keyVaultKeyUri(String keyVaultKeyUri) {
+            return keyVaultKeyUri(Output.of(keyVaultKeyUri));
         }
+
         public Builder kind(@Nullable Output<Either<String,DatabaseAccountKind>> kind) {
-            this.kind = kind;
+            $.kind = kind;
             return this;
         }
-        public Builder kind(@Nullable Either<String,DatabaseAccountKind> kind) {
-            this.kind = Codegen.ofNullable(kind);
-            return this;
+
+        public Builder kind(Either<String,DatabaseAccountKind> kind) {
+            return kind(Output.of(kind));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder locations(Output<List<LocationArgs>> locations) {
-            this.locations = Objects.requireNonNull(locations);
+            $.locations = locations;
             return this;
         }
+
         public Builder locations(List<LocationArgs> locations) {
-            this.locations = Output.of(Objects.requireNonNull(locations));
-            return this;
+            return locations(Output.of(locations));
         }
+
         public Builder locations(LocationArgs... locations) {
             return locations(List.of(locations));
         }
+
         public Builder networkAclBypass(@Nullable Output<NetworkAclBypass> networkAclBypass) {
-            this.networkAclBypass = networkAclBypass;
+            $.networkAclBypass = networkAclBypass;
             return this;
         }
-        public Builder networkAclBypass(@Nullable NetworkAclBypass networkAclBypass) {
-            this.networkAclBypass = Codegen.ofNullable(networkAclBypass);
-            return this;
+
+        public Builder networkAclBypass(NetworkAclBypass networkAclBypass) {
+            return networkAclBypass(Output.of(networkAclBypass));
         }
+
         public Builder networkAclBypassResourceIds(@Nullable Output<List<String>> networkAclBypassResourceIds) {
-            this.networkAclBypassResourceIds = networkAclBypassResourceIds;
+            $.networkAclBypassResourceIds = networkAclBypassResourceIds;
             return this;
         }
-        public Builder networkAclBypassResourceIds(@Nullable List<String> networkAclBypassResourceIds) {
-            this.networkAclBypassResourceIds = Codegen.ofNullable(networkAclBypassResourceIds);
-            return this;
+
+        public Builder networkAclBypassResourceIds(List<String> networkAclBypassResourceIds) {
+            return networkAclBypassResourceIds(Output.of(networkAclBypassResourceIds));
         }
+
         public Builder networkAclBypassResourceIds(String... networkAclBypassResourceIds) {
             return networkAclBypassResourceIds(List.of(networkAclBypassResourceIds));
         }
+
         public Builder publicNetworkAccess(@Nullable Output<Either<String,PublicNetworkAccess>> publicNetworkAccess) {
-            this.publicNetworkAccess = publicNetworkAccess;
+            $.publicNetworkAccess = publicNetworkAccess;
             return this;
         }
-        public Builder publicNetworkAccess(@Nullable Either<String,PublicNetworkAccess> publicNetworkAccess) {
-            this.publicNetworkAccess = Codegen.ofNullable(publicNetworkAccess);
-            return this;
+
+        public Builder publicNetworkAccess(Either<String,PublicNetworkAccess> publicNetworkAccess) {
+            return publicNetworkAccess(Output.of(publicNetworkAccess));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder virtualNetworkRules(@Nullable Output<List<VirtualNetworkRuleArgs>> virtualNetworkRules) {
-            this.virtualNetworkRules = virtualNetworkRules;
+            $.virtualNetworkRules = virtualNetworkRules;
             return this;
         }
-        public Builder virtualNetworkRules(@Nullable List<VirtualNetworkRuleArgs> virtualNetworkRules) {
-            this.virtualNetworkRules = Codegen.ofNullable(virtualNetworkRules);
-            return this;
+
+        public Builder virtualNetworkRules(List<VirtualNetworkRuleArgs> virtualNetworkRules) {
+            return virtualNetworkRules(Output.of(virtualNetworkRules));
         }
+
         public Builder virtualNetworkRules(VirtualNetworkRuleArgs... virtualNetworkRules) {
             return virtualNetworkRules(List.of(virtualNetworkRules));
-        }        public DatabaseAccountArgs build() {
-            return new DatabaseAccountArgs(accountName, apiProperties, backupPolicy, capabilities, connectorOffer, consistencyPolicy, cors, databaseAccountOfferType, defaultIdentity, disableKeyBasedMetadataWriteAccess, enableAnalyticalStorage, enableAutomaticFailover, enableCassandraConnector, enableFreeTier, enableMultipleWriteLocations, identity, ipRules, isVirtualNetworkFilterEnabled, keyVaultKeyUri, kind, location, locations, networkAclBypass, networkAclBypassResourceIds, publicNetworkAccess, resourceGroupName, tags, virtualNetworkRules);
+        }
+
+        public DatabaseAccountArgs build() {
+            $.databaseAccountOfferType = Objects.requireNonNull($.databaseAccountOfferType, "expected parameter 'databaseAccountOfferType' to be non-null");
+            $.kind = Codegen.stringProp("kind").left(DatabaseAccountKind.class).output().arg($.kind).def("GlobalDocumentDB").getNullable();
+            $.locations = Objects.requireNonNull($.locations, "expected parameter 'locations' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

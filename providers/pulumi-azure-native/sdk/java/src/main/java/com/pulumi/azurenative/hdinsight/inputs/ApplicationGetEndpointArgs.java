@@ -5,10 +5,10 @@ package com.pulumi.azurenative.hdinsight.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class ApplicationGetEndpointArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="destinationPort")
-      private final @Nullable Output<Integer> destinationPort;
+    private @Nullable Output<Integer> destinationPort;
 
-    public Output<Integer> destinationPort() {
-        return this.destinationPort == null ? Codegen.empty() : this.destinationPort;
+    public Optional<Output<Integer>> destinationPort() {
+        return Optional.ofNullable(this.destinationPort);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class ApplicationGetEndpointArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class ApplicationGetEndpointArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="privateIPAddress")
-      private final @Nullable Output<String> privateIPAddress;
+    private @Nullable Output<String> privateIPAddress;
 
-    public Output<String> privateIPAddress() {
-        return this.privateIPAddress == null ? Codegen.empty() : this.privateIPAddress;
+    public Optional<Output<String>> privateIPAddress() {
+        return Optional.ofNullable(this.privateIPAddress);
     }
 
     /**
@@ -58,89 +58,78 @@ public final class ApplicationGetEndpointArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="publicPort")
-      private final @Nullable Output<Integer> publicPort;
+    private @Nullable Output<Integer> publicPort;
 
-    public Output<Integer> publicPort() {
-        return this.publicPort == null ? Codegen.empty() : this.publicPort;
+    public Optional<Output<Integer>> publicPort() {
+        return Optional.ofNullable(this.publicPort);
     }
 
-    public ApplicationGetEndpointArgs(
-        @Nullable Output<Integer> destinationPort,
-        @Nullable Output<String> location,
-        @Nullable Output<String> privateIPAddress,
-        @Nullable Output<Integer> publicPort) {
-        this.destinationPort = destinationPort;
-        this.location = location;
-        this.privateIPAddress = privateIPAddress;
-        this.publicPort = publicPort;
-    }
+    private ApplicationGetEndpointArgs() {}
 
-    private ApplicationGetEndpointArgs() {
-        this.destinationPort = Codegen.empty();
-        this.location = Codegen.empty();
-        this.privateIPAddress = Codegen.empty();
-        this.publicPort = Codegen.empty();
+    private ApplicationGetEndpointArgs(ApplicationGetEndpointArgs $) {
+        this.destinationPort = $.destinationPort;
+        this.location = $.location;
+        this.privateIPAddress = $.privateIPAddress;
+        this.publicPort = $.publicPort;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ApplicationGetEndpointArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> destinationPort;
-        private @Nullable Output<String> location;
-        private @Nullable Output<String> privateIPAddress;
-        private @Nullable Output<Integer> publicPort;
+        private ApplicationGetEndpointArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ApplicationGetEndpointArgs();
         }
 
         public Builder(ApplicationGetEndpointArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.destinationPort = defaults.destinationPort;
-    	      this.location = defaults.location;
-    	      this.privateIPAddress = defaults.privateIPAddress;
-    	      this.publicPort = defaults.publicPort;
+            $ = new ApplicationGetEndpointArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder destinationPort(@Nullable Output<Integer> destinationPort) {
-            this.destinationPort = destinationPort;
+            $.destinationPort = destinationPort;
             return this;
         }
-        public Builder destinationPort(@Nullable Integer destinationPort) {
-            this.destinationPort = Codegen.ofNullable(destinationPort);
-            return this;
+
+        public Builder destinationPort(Integer destinationPort) {
+            return destinationPort(Output.of(destinationPort));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder privateIPAddress(@Nullable Output<String> privateIPAddress) {
-            this.privateIPAddress = privateIPAddress;
+            $.privateIPAddress = privateIPAddress;
             return this;
         }
-        public Builder privateIPAddress(@Nullable String privateIPAddress) {
-            this.privateIPAddress = Codegen.ofNullable(privateIPAddress);
-            return this;
+
+        public Builder privateIPAddress(String privateIPAddress) {
+            return privateIPAddress(Output.of(privateIPAddress));
         }
+
         public Builder publicPort(@Nullable Output<Integer> publicPort) {
-            this.publicPort = publicPort;
+            $.publicPort = publicPort;
             return this;
         }
-        public Builder publicPort(@Nullable Integer publicPort) {
-            this.publicPort = Codegen.ofNullable(publicPort);
-            return this;
-        }        public ApplicationGetEndpointArgs build() {
-            return new ApplicationGetEndpointArgs(destinationPort, location, privateIPAddress, publicPort);
+
+        public Builder publicPort(Integer publicPort) {
+            return publicPort(Output.of(publicPort));
+        }
+
+        public ApplicationGetEndpointArgs build() {
+            return $;
         }
     }
+
 }

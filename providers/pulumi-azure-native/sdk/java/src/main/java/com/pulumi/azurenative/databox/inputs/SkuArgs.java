@@ -7,9 +7,9 @@ import com.pulumi.azurenative.databox.enums.SkuName;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class SkuArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="displayName")
-      private final @Nullable Output<String> displayName;
+    private @Nullable Output<String> displayName;
 
-    public Output<String> displayName() {
-        return this.displayName == null ? Codegen.empty() : this.displayName;
+    public Optional<Output<String>> displayName() {
+        return Optional.ofNullable(this.displayName);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class SkuArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="family")
-      private final @Nullable Output<String> family;
+    private @Nullable Output<String> family;
 
-    public Output<String> family() {
-        return this.family == null ? Codegen.empty() : this.family;
+    public Optional<Output<String>> family() {
+        return Optional.ofNullable(this.family);
     }
 
     /**
@@ -48,76 +48,69 @@ public final class SkuArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name", required=true)
-      private final Output<Either<String,SkuName>> name;
+    private Output<Either<String,SkuName>> name;
 
     public Output<Either<String,SkuName>> name() {
         return this.name;
     }
 
-    public SkuArgs(
-        @Nullable Output<String> displayName,
-        @Nullable Output<String> family,
-        Output<Either<String,SkuName>> name) {
-        this.displayName = displayName;
-        this.family = family;
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-    }
+    private SkuArgs() {}
 
-    private SkuArgs() {
-        this.displayName = Codegen.empty();
-        this.family = Codegen.empty();
-        this.name = Codegen.empty();
+    private SkuArgs(SkuArgs $) {
+        this.displayName = $.displayName;
+        this.family = $.family;
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SkuArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> displayName;
-        private @Nullable Output<String> family;
-        private Output<Either<String,SkuName>> name;
+        private SkuArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SkuArgs();
         }
 
         public Builder(SkuArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.displayName = defaults.displayName;
-    	      this.family = defaults.family;
-    	      this.name = defaults.name;
+            $ = new SkuArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder displayName(@Nullable Output<String> displayName) {
-            this.displayName = displayName;
+            $.displayName = displayName;
             return this;
         }
-        public Builder displayName(@Nullable String displayName) {
-            this.displayName = Codegen.ofNullable(displayName);
-            return this;
+
+        public Builder displayName(String displayName) {
+            return displayName(Output.of(displayName));
         }
+
         public Builder family(@Nullable Output<String> family) {
-            this.family = family;
+            $.family = family;
             return this;
         }
-        public Builder family(@Nullable String family) {
-            this.family = Codegen.ofNullable(family);
-            return this;
+
+        public Builder family(String family) {
+            return family(Output.of(family));
         }
+
         public Builder name(Output<Either<String,SkuName>> name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder name(Either<String,SkuName> name) {
-            this.name = Output.of(Objects.requireNonNull(name));
-            return this;
-        }        public SkuArgs build() {
-            return new SkuArgs(displayName, family, name);
+            return name(Output.of(name));
+        }
+
+        public SkuArgs build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            return $;
         }
     }
+
 }

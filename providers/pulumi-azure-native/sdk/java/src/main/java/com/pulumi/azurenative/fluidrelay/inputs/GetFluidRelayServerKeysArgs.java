@@ -17,7 +17,7 @@ public final class GetFluidRelayServerKeysArgs extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -28,55 +28,52 @@ public final class GetFluidRelayServerKeysArgs extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="resourceGroup", required=true)
-      private final String resourceGroup;
+    private String resourceGroup;
 
     public String resourceGroup() {
         return this.resourceGroup;
     }
 
-    public GetFluidRelayServerKeysArgs(
-        String name,
-        String resourceGroup) {
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.resourceGroup = Objects.requireNonNull(resourceGroup, "expected parameter 'resourceGroup' to be non-null");
-    }
+    private GetFluidRelayServerKeysArgs() {}
 
-    private GetFluidRelayServerKeysArgs() {
-        this.name = null;
-        this.resourceGroup = null;
+    private GetFluidRelayServerKeysArgs(GetFluidRelayServerKeysArgs $) {
+        this.name = $.name;
+        this.resourceGroup = $.resourceGroup;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetFluidRelayServerKeysArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String name;
-        private String resourceGroup;
+        private GetFluidRelayServerKeysArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetFluidRelayServerKeysArgs();
         }
 
         public Builder(GetFluidRelayServerKeysArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.resourceGroup = defaults.resourceGroup;
+            $ = new GetFluidRelayServerKeysArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder resourceGroup(String resourceGroup) {
-            this.resourceGroup = Objects.requireNonNull(resourceGroup);
+            $.resourceGroup = resourceGroup;
             return this;
-        }        public GetFluidRelayServerKeysArgs build() {
-            return new GetFluidRelayServerKeysArgs(name, resourceGroup);
+        }
+
+        public GetFluidRelayServerKeysArgs build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.resourceGroup = Objects.requireNonNull($.resourceGroup, "expected parameter 'resourceGroup' to be non-null");
+            return $;
         }
     }
+
 }

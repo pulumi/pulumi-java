@@ -11,6 +11,7 @@ import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +28,10 @@ public final class VirtualNetworkResourceSettingsArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="addressSpace")
-      private final @Nullable Output<List<String>> addressSpace;
+    private @Nullable Output<List<String>> addressSpace;
 
-    public Output<List<String>> addressSpace() {
-        return this.addressSpace == null ? Codegen.empty() : this.addressSpace;
+    public Optional<Output<List<String>>> addressSpace() {
+        return Optional.ofNullable(this.addressSpace);
     }
 
     /**
@@ -39,10 +40,10 @@ public final class VirtualNetworkResourceSettingsArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="dnsServers")
-      private final @Nullable Output<List<String>> dnsServers;
+    private @Nullable Output<List<String>> dnsServers;
 
-    public Output<List<String>> dnsServers() {
-        return this.dnsServers == null ? Codegen.empty() : this.dnsServers;
+    public Optional<Output<List<String>>> dnsServers() {
+        return Optional.ofNullable(this.dnsServers);
     }
 
     /**
@@ -51,10 +52,10 @@ public final class VirtualNetworkResourceSettingsArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="enableDdosProtection")
-      private final @Nullable Output<Boolean> enableDdosProtection;
+    private @Nullable Output<Boolean> enableDdosProtection;
 
-    public Output<Boolean> enableDdosProtection() {
-        return this.enableDdosProtection == null ? Codegen.empty() : this.enableDdosProtection;
+    public Optional<Output<Boolean>> enableDdosProtection() {
+        return Optional.ofNullable(this.enableDdosProtection);
     }
 
     /**
@@ -63,7 +64,7 @@ public final class VirtualNetworkResourceSettingsArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="resourceType", required=true)
-      private final Output<String> resourceType;
+    private Output<String> resourceType;
 
     public Output<String> resourceType() {
         return this.resourceType;
@@ -74,10 +75,10 @@ public final class VirtualNetworkResourceSettingsArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="subnets")
-      private final @Nullable Output<List<SubnetResourceSettingsArgs>> subnets;
+    private @Nullable Output<List<SubnetResourceSettingsArgs>> subnets;
 
-    public Output<List<SubnetResourceSettingsArgs>> subnets() {
-        return this.subnets == null ? Codegen.empty() : this.subnets;
+    public Optional<Output<List<SubnetResourceSettingsArgs>>> subnets() {
+        return Optional.ofNullable(this.subnets);
     }
 
     /**
@@ -85,124 +86,112 @@ public final class VirtualNetworkResourceSettingsArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="targetResourceName", required=true)
-      private final Output<String> targetResourceName;
+    private Output<String> targetResourceName;
 
     public Output<String> targetResourceName() {
         return this.targetResourceName;
     }
 
-    public VirtualNetworkResourceSettingsArgs(
-        @Nullable Output<List<String>> addressSpace,
-        @Nullable Output<List<String>> dnsServers,
-        @Nullable Output<Boolean> enableDdosProtection,
-        Output<String> resourceType,
-        @Nullable Output<List<SubnetResourceSettingsArgs>> subnets,
-        Output<String> targetResourceName) {
-        this.addressSpace = addressSpace;
-        this.dnsServers = dnsServers;
-        this.enableDdosProtection = enableDdosProtection;
-        this.resourceType = Codegen.stringProp("resourceType").output().arg(resourceType).require();
-        this.subnets = subnets;
-        this.targetResourceName = Objects.requireNonNull(targetResourceName, "expected parameter 'targetResourceName' to be non-null");
-    }
+    private VirtualNetworkResourceSettingsArgs() {}
 
-    private VirtualNetworkResourceSettingsArgs() {
-        this.addressSpace = Codegen.empty();
-        this.dnsServers = Codegen.empty();
-        this.enableDdosProtection = Codegen.empty();
-        this.resourceType = Codegen.empty();
-        this.subnets = Codegen.empty();
-        this.targetResourceName = Codegen.empty();
+    private VirtualNetworkResourceSettingsArgs(VirtualNetworkResourceSettingsArgs $) {
+        this.addressSpace = $.addressSpace;
+        this.dnsServers = $.dnsServers;
+        this.enableDdosProtection = $.enableDdosProtection;
+        this.resourceType = $.resourceType;
+        this.subnets = $.subnets;
+        this.targetResourceName = $.targetResourceName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VirtualNetworkResourceSettingsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> addressSpace;
-        private @Nullable Output<List<String>> dnsServers;
-        private @Nullable Output<Boolean> enableDdosProtection;
-        private Output<String> resourceType;
-        private @Nullable Output<List<SubnetResourceSettingsArgs>> subnets;
-        private Output<String> targetResourceName;
+        private VirtualNetworkResourceSettingsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new VirtualNetworkResourceSettingsArgs();
         }
 
         public Builder(VirtualNetworkResourceSettingsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.addressSpace = defaults.addressSpace;
-    	      this.dnsServers = defaults.dnsServers;
-    	      this.enableDdosProtection = defaults.enableDdosProtection;
-    	      this.resourceType = defaults.resourceType;
-    	      this.subnets = defaults.subnets;
-    	      this.targetResourceName = defaults.targetResourceName;
+            $ = new VirtualNetworkResourceSettingsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder addressSpace(@Nullable Output<List<String>> addressSpace) {
-            this.addressSpace = addressSpace;
+            $.addressSpace = addressSpace;
             return this;
         }
-        public Builder addressSpace(@Nullable List<String> addressSpace) {
-            this.addressSpace = Codegen.ofNullable(addressSpace);
-            return this;
+
+        public Builder addressSpace(List<String> addressSpace) {
+            return addressSpace(Output.of(addressSpace));
         }
+
         public Builder addressSpace(String... addressSpace) {
             return addressSpace(List.of(addressSpace));
         }
+
         public Builder dnsServers(@Nullable Output<List<String>> dnsServers) {
-            this.dnsServers = dnsServers;
+            $.dnsServers = dnsServers;
             return this;
         }
-        public Builder dnsServers(@Nullable List<String> dnsServers) {
-            this.dnsServers = Codegen.ofNullable(dnsServers);
-            return this;
+
+        public Builder dnsServers(List<String> dnsServers) {
+            return dnsServers(Output.of(dnsServers));
         }
+
         public Builder dnsServers(String... dnsServers) {
             return dnsServers(List.of(dnsServers));
         }
+
         public Builder enableDdosProtection(@Nullable Output<Boolean> enableDdosProtection) {
-            this.enableDdosProtection = enableDdosProtection;
+            $.enableDdosProtection = enableDdosProtection;
             return this;
         }
-        public Builder enableDdosProtection(@Nullable Boolean enableDdosProtection) {
-            this.enableDdosProtection = Codegen.ofNullable(enableDdosProtection);
-            return this;
+
+        public Builder enableDdosProtection(Boolean enableDdosProtection) {
+            return enableDdosProtection(Output.of(enableDdosProtection));
         }
+
         public Builder resourceType(Output<String> resourceType) {
-            this.resourceType = Objects.requireNonNull(resourceType);
+            $.resourceType = resourceType;
             return this;
         }
+
         public Builder resourceType(String resourceType) {
-            this.resourceType = Output.of(Objects.requireNonNull(resourceType));
-            return this;
+            return resourceType(Output.of(resourceType));
         }
+
         public Builder subnets(@Nullable Output<List<SubnetResourceSettingsArgs>> subnets) {
-            this.subnets = subnets;
+            $.subnets = subnets;
             return this;
         }
-        public Builder subnets(@Nullable List<SubnetResourceSettingsArgs> subnets) {
-            this.subnets = Codegen.ofNullable(subnets);
-            return this;
+
+        public Builder subnets(List<SubnetResourceSettingsArgs> subnets) {
+            return subnets(Output.of(subnets));
         }
+
         public Builder subnets(SubnetResourceSettingsArgs... subnets) {
             return subnets(List.of(subnets));
         }
+
         public Builder targetResourceName(Output<String> targetResourceName) {
-            this.targetResourceName = Objects.requireNonNull(targetResourceName);
+            $.targetResourceName = targetResourceName;
             return this;
         }
+
         public Builder targetResourceName(String targetResourceName) {
-            this.targetResourceName = Output.of(Objects.requireNonNull(targetResourceName));
-            return this;
-        }        public VirtualNetworkResourceSettingsArgs build() {
-            return new VirtualNetworkResourceSettingsArgs(addressSpace, dnsServers, enableDdosProtection, resourceType, subnets, targetResourceName);
+            return targetResourceName(Output.of(targetResourceName));
+        }
+
+        public VirtualNetworkResourceSettingsArgs build() {
+            $.resourceType = Codegen.stringProp("resourceType").output().arg($.resourceType).require();
+            $.targetResourceName = Objects.requireNonNull($.targetResourceName, "expected parameter 'targetResourceName' to be non-null");
+            return $;
         }
     }
+
 }

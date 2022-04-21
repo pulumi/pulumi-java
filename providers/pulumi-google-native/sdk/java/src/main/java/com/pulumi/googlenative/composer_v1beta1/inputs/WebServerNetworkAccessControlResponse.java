@@ -22,48 +22,49 @@ public final class WebServerNetworkAccessControlResponse extends com.pulumi.reso
      * 
      */
     @Import(name="allowedIpRanges", required=true)
-      private final List<AllowedIpRangeResponse> allowedIpRanges;
+    private List<AllowedIpRangeResponse> allowedIpRanges;
 
     public List<AllowedIpRangeResponse> allowedIpRanges() {
         return this.allowedIpRanges;
     }
 
-    public WebServerNetworkAccessControlResponse(List<AllowedIpRangeResponse> allowedIpRanges) {
-        this.allowedIpRanges = Objects.requireNonNull(allowedIpRanges, "expected parameter 'allowedIpRanges' to be non-null");
-    }
+    private WebServerNetworkAccessControlResponse() {}
 
-    private WebServerNetworkAccessControlResponse() {
-        this.allowedIpRanges = List.of();
+    private WebServerNetworkAccessControlResponse(WebServerNetworkAccessControlResponse $) {
+        this.allowedIpRanges = $.allowedIpRanges;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WebServerNetworkAccessControlResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<AllowedIpRangeResponse> allowedIpRanges;
+        private WebServerNetworkAccessControlResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new WebServerNetworkAccessControlResponse();
         }
 
         public Builder(WebServerNetworkAccessControlResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.allowedIpRanges = defaults.allowedIpRanges;
+            $ = new WebServerNetworkAccessControlResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder allowedIpRanges(List<AllowedIpRangeResponse> allowedIpRanges) {
-            this.allowedIpRanges = Objects.requireNonNull(allowedIpRanges);
+            $.allowedIpRanges = allowedIpRanges;
             return this;
         }
+
         public Builder allowedIpRanges(AllowedIpRangeResponse... allowedIpRanges) {
             return allowedIpRanges(List.of(allowedIpRanges));
-        }        public WebServerNetworkAccessControlResponse build() {
-            return new WebServerNetworkAccessControlResponse(allowedIpRanges);
+        }
+
+        public WebServerNetworkAccessControlResponse build() {
+            $.allowedIpRanges = Objects.requireNonNull($.allowedIpRanges, "expected parameter 'allowedIpRanges' to be non-null");
+            return $;
         }
     }
+
 }

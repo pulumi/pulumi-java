@@ -5,9 +5,9 @@ package com.pulumi.googlenative.dataproc_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,7 +24,7 @@ public final class InstanceGroupAutoscalingPolicyConfigArgs extends com.pulumi.r
      * 
      */
     @Import(name="maxInstances", required=true)
-      private final Output<Integer> maxInstances;
+    private Output<Integer> maxInstances;
 
     public Output<Integer> maxInstances() {
         return this.maxInstances;
@@ -35,10 +35,10 @@ public final class InstanceGroupAutoscalingPolicyConfigArgs extends com.pulumi.r
      * 
      */
     @Import(name="minInstances")
-      private final @Nullable Output<Integer> minInstances;
+    private @Nullable Output<Integer> minInstances;
 
-    public Output<Integer> minInstances() {
-        return this.minInstances == null ? Codegen.empty() : this.minInstances;
+    public Optional<Output<Integer>> minInstances() {
+        return Optional.ofNullable(this.minInstances);
     }
 
     /**
@@ -46,76 +46,69 @@ public final class InstanceGroupAutoscalingPolicyConfigArgs extends com.pulumi.r
      * 
      */
     @Import(name="weight")
-      private final @Nullable Output<Integer> weight;
+    private @Nullable Output<Integer> weight;
 
-    public Output<Integer> weight() {
-        return this.weight == null ? Codegen.empty() : this.weight;
+    public Optional<Output<Integer>> weight() {
+        return Optional.ofNullable(this.weight);
     }
 
-    public InstanceGroupAutoscalingPolicyConfigArgs(
-        Output<Integer> maxInstances,
-        @Nullable Output<Integer> minInstances,
-        @Nullable Output<Integer> weight) {
-        this.maxInstances = Objects.requireNonNull(maxInstances, "expected parameter 'maxInstances' to be non-null");
-        this.minInstances = minInstances;
-        this.weight = weight;
-    }
+    private InstanceGroupAutoscalingPolicyConfigArgs() {}
 
-    private InstanceGroupAutoscalingPolicyConfigArgs() {
-        this.maxInstances = Codegen.empty();
-        this.minInstances = Codegen.empty();
-        this.weight = Codegen.empty();
+    private InstanceGroupAutoscalingPolicyConfigArgs(InstanceGroupAutoscalingPolicyConfigArgs $) {
+        this.maxInstances = $.maxInstances;
+        this.minInstances = $.minInstances;
+        this.weight = $.weight;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(InstanceGroupAutoscalingPolicyConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Integer> maxInstances;
-        private @Nullable Output<Integer> minInstances;
-        private @Nullable Output<Integer> weight;
+        private InstanceGroupAutoscalingPolicyConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new InstanceGroupAutoscalingPolicyConfigArgs();
         }
 
         public Builder(InstanceGroupAutoscalingPolicyConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.maxInstances = defaults.maxInstances;
-    	      this.minInstances = defaults.minInstances;
-    	      this.weight = defaults.weight;
+            $ = new InstanceGroupAutoscalingPolicyConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder maxInstances(Output<Integer> maxInstances) {
-            this.maxInstances = Objects.requireNonNull(maxInstances);
+            $.maxInstances = maxInstances;
             return this;
         }
+
         public Builder maxInstances(Integer maxInstances) {
-            this.maxInstances = Output.of(Objects.requireNonNull(maxInstances));
-            return this;
+            return maxInstances(Output.of(maxInstances));
         }
+
         public Builder minInstances(@Nullable Output<Integer> minInstances) {
-            this.minInstances = minInstances;
+            $.minInstances = minInstances;
             return this;
         }
-        public Builder minInstances(@Nullable Integer minInstances) {
-            this.minInstances = Codegen.ofNullable(minInstances);
-            return this;
+
+        public Builder minInstances(Integer minInstances) {
+            return minInstances(Output.of(minInstances));
         }
+
         public Builder weight(@Nullable Output<Integer> weight) {
-            this.weight = weight;
+            $.weight = weight;
             return this;
         }
-        public Builder weight(@Nullable Integer weight) {
-            this.weight = Codegen.ofNullable(weight);
-            return this;
-        }        public InstanceGroupAutoscalingPolicyConfigArgs build() {
-            return new InstanceGroupAutoscalingPolicyConfigArgs(maxInstances, minInstances, weight);
+
+        public Builder weight(Integer weight) {
+            return weight(Output.of(weight));
+        }
+
+        public InstanceGroupAutoscalingPolicyConfigArgs build() {
+            $.maxInstances = Objects.requireNonNull($.maxInstances, "expected parameter 'maxInstances' to be non-null");
+            return $;
         }
     }
+
 }

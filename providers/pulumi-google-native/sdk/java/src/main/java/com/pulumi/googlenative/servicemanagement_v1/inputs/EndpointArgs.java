@@ -5,10 +5,10 @@ package com.pulumi.googlenative.servicemanagement_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class EndpointArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="allowCors")
-      private final @Nullable Output<Boolean> allowCors;
+    private @Nullable Output<Boolean> allowCors;
 
-    public Output<Boolean> allowCors() {
-        return this.allowCors == null ? Codegen.empty() : this.allowCors;
+    public Optional<Output<Boolean>> allowCors() {
+        return Optional.ofNullable(this.allowCors);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class EndpointArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -47,76 +47,68 @@ public final class EndpointArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="target")
-      private final @Nullable Output<String> target;
+    private @Nullable Output<String> target;
 
-    public Output<String> target() {
-        return this.target == null ? Codegen.empty() : this.target;
+    public Optional<Output<String>> target() {
+        return Optional.ofNullable(this.target);
     }
 
-    public EndpointArgs(
-        @Nullable Output<Boolean> allowCors,
-        @Nullable Output<String> name,
-        @Nullable Output<String> target) {
-        this.allowCors = allowCors;
-        this.name = name;
-        this.target = target;
-    }
+    private EndpointArgs() {}
 
-    private EndpointArgs() {
-        this.allowCors = Codegen.empty();
-        this.name = Codegen.empty();
-        this.target = Codegen.empty();
+    private EndpointArgs(EndpointArgs $) {
+        this.allowCors = $.allowCors;
+        this.name = $.name;
+        this.target = $.target;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EndpointArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> allowCors;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> target;
+        private EndpointArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new EndpointArgs();
         }
 
         public Builder(EndpointArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.allowCors = defaults.allowCors;
-    	      this.name = defaults.name;
-    	      this.target = defaults.target;
+            $ = new EndpointArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder allowCors(@Nullable Output<Boolean> allowCors) {
-            this.allowCors = allowCors;
+            $.allowCors = allowCors;
             return this;
         }
-        public Builder allowCors(@Nullable Boolean allowCors) {
-            this.allowCors = Codegen.ofNullable(allowCors);
-            return this;
+
+        public Builder allowCors(Boolean allowCors) {
+            return allowCors(Output.of(allowCors));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder target(@Nullable Output<String> target) {
-            this.target = target;
+            $.target = target;
             return this;
         }
-        public Builder target(@Nullable String target) {
-            this.target = Codegen.ofNullable(target);
-            return this;
-        }        public EndpointArgs build() {
-            return new EndpointArgs(allowCors, name, target);
+
+        public Builder target(String target) {
+            return target(Output.of(target));
+        }
+
+        public EndpointArgs build() {
+            return $;
         }
     }
+
 }

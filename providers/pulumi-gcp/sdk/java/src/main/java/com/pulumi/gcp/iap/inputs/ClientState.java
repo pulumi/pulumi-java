@@ -5,9 +5,9 @@ package com.pulumi.gcp.iap.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class ClientState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="brand")
-      private final @Nullable Output<String> brand;
+    private @Nullable Output<String> brand;
 
-    public Output<String> brand() {
-        return this.brand == null ? Codegen.empty() : this.brand;
+    public Optional<Output<String>> brand() {
+        return Optional.ofNullable(this.brand);
     }
 
     /**
@@ -33,10 +33,10 @@ public final class ClientState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="clientId")
-      private final @Nullable Output<String> clientId;
+    private @Nullable Output<String> clientId;
 
-    public Output<String> clientId() {
-        return this.clientId == null ? Codegen.empty() : this.clientId;
+    public Optional<Output<String>> clientId() {
+        return Optional.ofNullable(this.clientId);
     }
 
     /**
@@ -44,10 +44,10 @@ public final class ClientState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="displayName")
-      private final @Nullable Output<String> displayName;
+    private @Nullable Output<String> displayName;
 
-    public Output<String> displayName() {
-        return this.displayName == null ? Codegen.empty() : this.displayName;
+    public Optional<Output<String>> displayName() {
+        return Optional.ofNullable(this.displayName);
     }
 
     /**
@@ -55,89 +55,78 @@ public final class ClientState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="secret")
-      private final @Nullable Output<String> secret;
+    private @Nullable Output<String> secret;
 
-    public Output<String> secret() {
-        return this.secret == null ? Codegen.empty() : this.secret;
+    public Optional<Output<String>> secret() {
+        return Optional.ofNullable(this.secret);
     }
 
-    public ClientState(
-        @Nullable Output<String> brand,
-        @Nullable Output<String> clientId,
-        @Nullable Output<String> displayName,
-        @Nullable Output<String> secret) {
-        this.brand = brand;
-        this.clientId = clientId;
-        this.displayName = displayName;
-        this.secret = secret;
-    }
+    private ClientState() {}
 
-    private ClientState() {
-        this.brand = Codegen.empty();
-        this.clientId = Codegen.empty();
-        this.displayName = Codegen.empty();
-        this.secret = Codegen.empty();
+    private ClientState(ClientState $) {
+        this.brand = $.brand;
+        this.clientId = $.clientId;
+        this.displayName = $.displayName;
+        this.secret = $.secret;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ClientState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> brand;
-        private @Nullable Output<String> clientId;
-        private @Nullable Output<String> displayName;
-        private @Nullable Output<String> secret;
+        private ClientState $;
 
         public Builder() {
-    	      // Empty
+            $ = new ClientState();
         }
 
         public Builder(ClientState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.brand = defaults.brand;
-    	      this.clientId = defaults.clientId;
-    	      this.displayName = defaults.displayName;
-    	      this.secret = defaults.secret;
+            $ = new ClientState(Objects.requireNonNull(defaults));
         }
 
         public Builder brand(@Nullable Output<String> brand) {
-            this.brand = brand;
+            $.brand = brand;
             return this;
         }
-        public Builder brand(@Nullable String brand) {
-            this.brand = Codegen.ofNullable(brand);
-            return this;
+
+        public Builder brand(String brand) {
+            return brand(Output.of(brand));
         }
+
         public Builder clientId(@Nullable Output<String> clientId) {
-            this.clientId = clientId;
+            $.clientId = clientId;
             return this;
         }
-        public Builder clientId(@Nullable String clientId) {
-            this.clientId = Codegen.ofNullable(clientId);
-            return this;
+
+        public Builder clientId(String clientId) {
+            return clientId(Output.of(clientId));
         }
+
         public Builder displayName(@Nullable Output<String> displayName) {
-            this.displayName = displayName;
+            $.displayName = displayName;
             return this;
         }
-        public Builder displayName(@Nullable String displayName) {
-            this.displayName = Codegen.ofNullable(displayName);
-            return this;
+
+        public Builder displayName(String displayName) {
+            return displayName(Output.of(displayName));
         }
+
         public Builder secret(@Nullable Output<String> secret) {
-            this.secret = secret;
+            $.secret = secret;
             return this;
         }
-        public Builder secret(@Nullable String secret) {
-            this.secret = Codegen.ofNullable(secret);
-            return this;
-        }        public ClientState build() {
-            return new ClientState(brand, clientId, displayName, secret);
+
+        public Builder secret(String secret) {
+            return secret(Output.of(secret));
+        }
+
+        public ClientState build() {
+            return $;
         }
     }
+
 }

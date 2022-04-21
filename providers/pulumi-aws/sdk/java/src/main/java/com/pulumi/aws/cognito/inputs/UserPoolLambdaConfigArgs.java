@@ -7,9 +7,9 @@ import com.pulumi.aws.cognito.inputs.UserPoolLambdaConfigCustomEmailSenderArgs;
 import com.pulumi.aws.cognito.inputs.UserPoolLambdaConfigCustomSmsSenderArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class UserPoolLambdaConfigArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="createAuthChallenge")
-      private final @Nullable Output<String> createAuthChallenge;
+    private @Nullable Output<String> createAuthChallenge;
 
-    public Output<String> createAuthChallenge() {
-        return this.createAuthChallenge == null ? Codegen.empty() : this.createAuthChallenge;
+    public Optional<Output<String>> createAuthChallenge() {
+        return Optional.ofNullable(this.createAuthChallenge);
     }
 
     /**
@@ -33,10 +33,10 @@ public final class UserPoolLambdaConfigArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="customEmailSender")
-      private final @Nullable Output<UserPoolLambdaConfigCustomEmailSenderArgs> customEmailSender;
+    private @Nullable Output<UserPoolLambdaConfigCustomEmailSenderArgs> customEmailSender;
 
-    public Output<UserPoolLambdaConfigCustomEmailSenderArgs> customEmailSender() {
-        return this.customEmailSender == null ? Codegen.empty() : this.customEmailSender;
+    public Optional<Output<UserPoolLambdaConfigCustomEmailSenderArgs>> customEmailSender() {
+        return Optional.ofNullable(this.customEmailSender);
     }
 
     /**
@@ -44,10 +44,10 @@ public final class UserPoolLambdaConfigArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="customMessage")
-      private final @Nullable Output<String> customMessage;
+    private @Nullable Output<String> customMessage;
 
-    public Output<String> customMessage() {
-        return this.customMessage == null ? Codegen.empty() : this.customMessage;
+    public Optional<Output<String>> customMessage() {
+        return Optional.ofNullable(this.customMessage);
     }
 
     /**
@@ -55,10 +55,10 @@ public final class UserPoolLambdaConfigArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="customSmsSender")
-      private final @Nullable Output<UserPoolLambdaConfigCustomSmsSenderArgs> customSmsSender;
+    private @Nullable Output<UserPoolLambdaConfigCustomSmsSenderArgs> customSmsSender;
 
-    public Output<UserPoolLambdaConfigCustomSmsSenderArgs> customSmsSender() {
-        return this.customSmsSender == null ? Codegen.empty() : this.customSmsSender;
+    public Optional<Output<UserPoolLambdaConfigCustomSmsSenderArgs>> customSmsSender() {
+        return Optional.ofNullable(this.customSmsSender);
     }
 
     /**
@@ -66,10 +66,10 @@ public final class UserPoolLambdaConfigArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="defineAuthChallenge")
-      private final @Nullable Output<String> defineAuthChallenge;
+    private @Nullable Output<String> defineAuthChallenge;
 
-    public Output<String> defineAuthChallenge() {
-        return this.defineAuthChallenge == null ? Codegen.empty() : this.defineAuthChallenge;
+    public Optional<Output<String>> defineAuthChallenge() {
+        return Optional.ofNullable(this.defineAuthChallenge);
     }
 
     /**
@@ -77,10 +77,10 @@ public final class UserPoolLambdaConfigArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="kmsKeyId")
-      private final @Nullable Output<String> kmsKeyId;
+    private @Nullable Output<String> kmsKeyId;
 
-    public Output<String> kmsKeyId() {
-        return this.kmsKeyId == null ? Codegen.empty() : this.kmsKeyId;
+    public Optional<Output<String>> kmsKeyId() {
+        return Optional.ofNullable(this.kmsKeyId);
     }
 
     /**
@@ -88,10 +88,10 @@ public final class UserPoolLambdaConfigArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="postAuthentication")
-      private final @Nullable Output<String> postAuthentication;
+    private @Nullable Output<String> postAuthentication;
 
-    public Output<String> postAuthentication() {
-        return this.postAuthentication == null ? Codegen.empty() : this.postAuthentication;
+    public Optional<Output<String>> postAuthentication() {
+        return Optional.ofNullable(this.postAuthentication);
     }
 
     /**
@@ -99,10 +99,10 @@ public final class UserPoolLambdaConfigArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="postConfirmation")
-      private final @Nullable Output<String> postConfirmation;
+    private @Nullable Output<String> postConfirmation;
 
-    public Output<String> postConfirmation() {
-        return this.postConfirmation == null ? Codegen.empty() : this.postConfirmation;
+    public Optional<Output<String>> postConfirmation() {
+        return Optional.ofNullable(this.postConfirmation);
     }
 
     /**
@@ -110,10 +110,10 @@ public final class UserPoolLambdaConfigArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="preAuthentication")
-      private final @Nullable Output<String> preAuthentication;
+    private @Nullable Output<String> preAuthentication;
 
-    public Output<String> preAuthentication() {
-        return this.preAuthentication == null ? Codegen.empty() : this.preAuthentication;
+    public Optional<Output<String>> preAuthentication() {
+        return Optional.ofNullable(this.preAuthentication);
     }
 
     /**
@@ -121,10 +121,10 @@ public final class UserPoolLambdaConfigArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="preSignUp")
-      private final @Nullable Output<String> preSignUp;
+    private @Nullable Output<String> preSignUp;
 
-    public Output<String> preSignUp() {
-        return this.preSignUp == null ? Codegen.empty() : this.preSignUp;
+    public Optional<Output<String>> preSignUp() {
+        return Optional.ofNullable(this.preSignUp);
     }
 
     /**
@@ -132,10 +132,10 @@ public final class UserPoolLambdaConfigArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="preTokenGeneration")
-      private final @Nullable Output<String> preTokenGeneration;
+    private @Nullable Output<String> preTokenGeneration;
 
-    public Output<String> preTokenGeneration() {
-        return this.preTokenGeneration == null ? Codegen.empty() : this.preTokenGeneration;
+    public Optional<Output<String>> preTokenGeneration() {
+        return Optional.ofNullable(this.preTokenGeneration);
     }
 
     /**
@@ -143,10 +143,10 @@ public final class UserPoolLambdaConfigArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="userMigration")
-      private final @Nullable Output<String> userMigration;
+    private @Nullable Output<String> userMigration;
 
-    public Output<String> userMigration() {
-        return this.userMigration == null ? Codegen.empty() : this.userMigration;
+    public Optional<Output<String>> userMigration() {
+        return Optional.ofNullable(this.userMigration);
     }
 
     /**
@@ -154,206 +154,168 @@ public final class UserPoolLambdaConfigArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="verifyAuthChallengeResponse")
-      private final @Nullable Output<String> verifyAuthChallengeResponse;
+    private @Nullable Output<String> verifyAuthChallengeResponse;
 
-    public Output<String> verifyAuthChallengeResponse() {
-        return this.verifyAuthChallengeResponse == null ? Codegen.empty() : this.verifyAuthChallengeResponse;
+    public Optional<Output<String>> verifyAuthChallengeResponse() {
+        return Optional.ofNullable(this.verifyAuthChallengeResponse);
     }
 
-    public UserPoolLambdaConfigArgs(
-        @Nullable Output<String> createAuthChallenge,
-        @Nullable Output<UserPoolLambdaConfigCustomEmailSenderArgs> customEmailSender,
-        @Nullable Output<String> customMessage,
-        @Nullable Output<UserPoolLambdaConfigCustomSmsSenderArgs> customSmsSender,
-        @Nullable Output<String> defineAuthChallenge,
-        @Nullable Output<String> kmsKeyId,
-        @Nullable Output<String> postAuthentication,
-        @Nullable Output<String> postConfirmation,
-        @Nullable Output<String> preAuthentication,
-        @Nullable Output<String> preSignUp,
-        @Nullable Output<String> preTokenGeneration,
-        @Nullable Output<String> userMigration,
-        @Nullable Output<String> verifyAuthChallengeResponse) {
-        this.createAuthChallenge = createAuthChallenge;
-        this.customEmailSender = customEmailSender;
-        this.customMessage = customMessage;
-        this.customSmsSender = customSmsSender;
-        this.defineAuthChallenge = defineAuthChallenge;
-        this.kmsKeyId = kmsKeyId;
-        this.postAuthentication = postAuthentication;
-        this.postConfirmation = postConfirmation;
-        this.preAuthentication = preAuthentication;
-        this.preSignUp = preSignUp;
-        this.preTokenGeneration = preTokenGeneration;
-        this.userMigration = userMigration;
-        this.verifyAuthChallengeResponse = verifyAuthChallengeResponse;
-    }
+    private UserPoolLambdaConfigArgs() {}
 
-    private UserPoolLambdaConfigArgs() {
-        this.createAuthChallenge = Codegen.empty();
-        this.customEmailSender = Codegen.empty();
-        this.customMessage = Codegen.empty();
-        this.customSmsSender = Codegen.empty();
-        this.defineAuthChallenge = Codegen.empty();
-        this.kmsKeyId = Codegen.empty();
-        this.postAuthentication = Codegen.empty();
-        this.postConfirmation = Codegen.empty();
-        this.preAuthentication = Codegen.empty();
-        this.preSignUp = Codegen.empty();
-        this.preTokenGeneration = Codegen.empty();
-        this.userMigration = Codegen.empty();
-        this.verifyAuthChallengeResponse = Codegen.empty();
+    private UserPoolLambdaConfigArgs(UserPoolLambdaConfigArgs $) {
+        this.createAuthChallenge = $.createAuthChallenge;
+        this.customEmailSender = $.customEmailSender;
+        this.customMessage = $.customMessage;
+        this.customSmsSender = $.customSmsSender;
+        this.defineAuthChallenge = $.defineAuthChallenge;
+        this.kmsKeyId = $.kmsKeyId;
+        this.postAuthentication = $.postAuthentication;
+        this.postConfirmation = $.postConfirmation;
+        this.preAuthentication = $.preAuthentication;
+        this.preSignUp = $.preSignUp;
+        this.preTokenGeneration = $.preTokenGeneration;
+        this.userMigration = $.userMigration;
+        this.verifyAuthChallengeResponse = $.verifyAuthChallengeResponse;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(UserPoolLambdaConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> createAuthChallenge;
-        private @Nullable Output<UserPoolLambdaConfigCustomEmailSenderArgs> customEmailSender;
-        private @Nullable Output<String> customMessage;
-        private @Nullable Output<UserPoolLambdaConfigCustomSmsSenderArgs> customSmsSender;
-        private @Nullable Output<String> defineAuthChallenge;
-        private @Nullable Output<String> kmsKeyId;
-        private @Nullable Output<String> postAuthentication;
-        private @Nullable Output<String> postConfirmation;
-        private @Nullable Output<String> preAuthentication;
-        private @Nullable Output<String> preSignUp;
-        private @Nullable Output<String> preTokenGeneration;
-        private @Nullable Output<String> userMigration;
-        private @Nullable Output<String> verifyAuthChallengeResponse;
+        private UserPoolLambdaConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new UserPoolLambdaConfigArgs();
         }
 
         public Builder(UserPoolLambdaConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.createAuthChallenge = defaults.createAuthChallenge;
-    	      this.customEmailSender = defaults.customEmailSender;
-    	      this.customMessage = defaults.customMessage;
-    	      this.customSmsSender = defaults.customSmsSender;
-    	      this.defineAuthChallenge = defaults.defineAuthChallenge;
-    	      this.kmsKeyId = defaults.kmsKeyId;
-    	      this.postAuthentication = defaults.postAuthentication;
-    	      this.postConfirmation = defaults.postConfirmation;
-    	      this.preAuthentication = defaults.preAuthentication;
-    	      this.preSignUp = defaults.preSignUp;
-    	      this.preTokenGeneration = defaults.preTokenGeneration;
-    	      this.userMigration = defaults.userMigration;
-    	      this.verifyAuthChallengeResponse = defaults.verifyAuthChallengeResponse;
+            $ = new UserPoolLambdaConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder createAuthChallenge(@Nullable Output<String> createAuthChallenge) {
-            this.createAuthChallenge = createAuthChallenge;
+            $.createAuthChallenge = createAuthChallenge;
             return this;
         }
-        public Builder createAuthChallenge(@Nullable String createAuthChallenge) {
-            this.createAuthChallenge = Codegen.ofNullable(createAuthChallenge);
-            return this;
+
+        public Builder createAuthChallenge(String createAuthChallenge) {
+            return createAuthChallenge(Output.of(createAuthChallenge));
         }
+
         public Builder customEmailSender(@Nullable Output<UserPoolLambdaConfigCustomEmailSenderArgs> customEmailSender) {
-            this.customEmailSender = customEmailSender;
+            $.customEmailSender = customEmailSender;
             return this;
         }
-        public Builder customEmailSender(@Nullable UserPoolLambdaConfigCustomEmailSenderArgs customEmailSender) {
-            this.customEmailSender = Codegen.ofNullable(customEmailSender);
-            return this;
+
+        public Builder customEmailSender(UserPoolLambdaConfigCustomEmailSenderArgs customEmailSender) {
+            return customEmailSender(Output.of(customEmailSender));
         }
+
         public Builder customMessage(@Nullable Output<String> customMessage) {
-            this.customMessage = customMessage;
+            $.customMessage = customMessage;
             return this;
         }
-        public Builder customMessage(@Nullable String customMessage) {
-            this.customMessage = Codegen.ofNullable(customMessage);
-            return this;
+
+        public Builder customMessage(String customMessage) {
+            return customMessage(Output.of(customMessage));
         }
+
         public Builder customSmsSender(@Nullable Output<UserPoolLambdaConfigCustomSmsSenderArgs> customSmsSender) {
-            this.customSmsSender = customSmsSender;
+            $.customSmsSender = customSmsSender;
             return this;
         }
-        public Builder customSmsSender(@Nullable UserPoolLambdaConfigCustomSmsSenderArgs customSmsSender) {
-            this.customSmsSender = Codegen.ofNullable(customSmsSender);
-            return this;
+
+        public Builder customSmsSender(UserPoolLambdaConfigCustomSmsSenderArgs customSmsSender) {
+            return customSmsSender(Output.of(customSmsSender));
         }
+
         public Builder defineAuthChallenge(@Nullable Output<String> defineAuthChallenge) {
-            this.defineAuthChallenge = defineAuthChallenge;
+            $.defineAuthChallenge = defineAuthChallenge;
             return this;
         }
-        public Builder defineAuthChallenge(@Nullable String defineAuthChallenge) {
-            this.defineAuthChallenge = Codegen.ofNullable(defineAuthChallenge);
-            return this;
+
+        public Builder defineAuthChallenge(String defineAuthChallenge) {
+            return defineAuthChallenge(Output.of(defineAuthChallenge));
         }
+
         public Builder kmsKeyId(@Nullable Output<String> kmsKeyId) {
-            this.kmsKeyId = kmsKeyId;
+            $.kmsKeyId = kmsKeyId;
             return this;
         }
-        public Builder kmsKeyId(@Nullable String kmsKeyId) {
-            this.kmsKeyId = Codegen.ofNullable(kmsKeyId);
-            return this;
+
+        public Builder kmsKeyId(String kmsKeyId) {
+            return kmsKeyId(Output.of(kmsKeyId));
         }
+
         public Builder postAuthentication(@Nullable Output<String> postAuthentication) {
-            this.postAuthentication = postAuthentication;
+            $.postAuthentication = postAuthentication;
             return this;
         }
-        public Builder postAuthentication(@Nullable String postAuthentication) {
-            this.postAuthentication = Codegen.ofNullable(postAuthentication);
-            return this;
+
+        public Builder postAuthentication(String postAuthentication) {
+            return postAuthentication(Output.of(postAuthentication));
         }
+
         public Builder postConfirmation(@Nullable Output<String> postConfirmation) {
-            this.postConfirmation = postConfirmation;
+            $.postConfirmation = postConfirmation;
             return this;
         }
-        public Builder postConfirmation(@Nullable String postConfirmation) {
-            this.postConfirmation = Codegen.ofNullable(postConfirmation);
-            return this;
+
+        public Builder postConfirmation(String postConfirmation) {
+            return postConfirmation(Output.of(postConfirmation));
         }
+
         public Builder preAuthentication(@Nullable Output<String> preAuthentication) {
-            this.preAuthentication = preAuthentication;
+            $.preAuthentication = preAuthentication;
             return this;
         }
-        public Builder preAuthentication(@Nullable String preAuthentication) {
-            this.preAuthentication = Codegen.ofNullable(preAuthentication);
-            return this;
+
+        public Builder preAuthentication(String preAuthentication) {
+            return preAuthentication(Output.of(preAuthentication));
         }
+
         public Builder preSignUp(@Nullable Output<String> preSignUp) {
-            this.preSignUp = preSignUp;
+            $.preSignUp = preSignUp;
             return this;
         }
-        public Builder preSignUp(@Nullable String preSignUp) {
-            this.preSignUp = Codegen.ofNullable(preSignUp);
-            return this;
+
+        public Builder preSignUp(String preSignUp) {
+            return preSignUp(Output.of(preSignUp));
         }
+
         public Builder preTokenGeneration(@Nullable Output<String> preTokenGeneration) {
-            this.preTokenGeneration = preTokenGeneration;
+            $.preTokenGeneration = preTokenGeneration;
             return this;
         }
-        public Builder preTokenGeneration(@Nullable String preTokenGeneration) {
-            this.preTokenGeneration = Codegen.ofNullable(preTokenGeneration);
-            return this;
+
+        public Builder preTokenGeneration(String preTokenGeneration) {
+            return preTokenGeneration(Output.of(preTokenGeneration));
         }
+
         public Builder userMigration(@Nullable Output<String> userMigration) {
-            this.userMigration = userMigration;
+            $.userMigration = userMigration;
             return this;
         }
-        public Builder userMigration(@Nullable String userMigration) {
-            this.userMigration = Codegen.ofNullable(userMigration);
-            return this;
+
+        public Builder userMigration(String userMigration) {
+            return userMigration(Output.of(userMigration));
         }
+
         public Builder verifyAuthChallengeResponse(@Nullable Output<String> verifyAuthChallengeResponse) {
-            this.verifyAuthChallengeResponse = verifyAuthChallengeResponse;
+            $.verifyAuthChallengeResponse = verifyAuthChallengeResponse;
             return this;
         }
-        public Builder verifyAuthChallengeResponse(@Nullable String verifyAuthChallengeResponse) {
-            this.verifyAuthChallengeResponse = Codegen.ofNullable(verifyAuthChallengeResponse);
-            return this;
-        }        public UserPoolLambdaConfigArgs build() {
-            return new UserPoolLambdaConfigArgs(createAuthChallenge, customEmailSender, customMessage, customSmsSender, defineAuthChallenge, kmsKeyId, postAuthentication, postConfirmation, preAuthentication, preSignUp, preTokenGeneration, userMigration, verifyAuthChallengeResponse);
+
+        public Builder verifyAuthChallengeResponse(String verifyAuthChallengeResponse) {
+            return verifyAuthChallengeResponse(Output.of(verifyAuthChallengeResponse));
+        }
+
+        public UserPoolLambdaConfigArgs build() {
+            return $;
         }
     }
+
 }

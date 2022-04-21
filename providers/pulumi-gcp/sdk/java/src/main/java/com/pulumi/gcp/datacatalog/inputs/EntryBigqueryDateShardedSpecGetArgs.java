@@ -5,10 +5,10 @@ package com.pulumi.gcp.datacatalog.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -17,90 +17,82 @@ public final class EntryBigqueryDateShardedSpecGetArgs extends com.pulumi.resour
     public static final EntryBigqueryDateShardedSpecGetArgs Empty = new EntryBigqueryDateShardedSpecGetArgs();
 
     @Import(name="dataset")
-      private final @Nullable Output<String> dataset;
+    private @Nullable Output<String> dataset;
 
-    public Output<String> dataset() {
-        return this.dataset == null ? Codegen.empty() : this.dataset;
+    public Optional<Output<String>> dataset() {
+        return Optional.ofNullable(this.dataset);
     }
 
     @Import(name="shardCount")
-      private final @Nullable Output<Integer> shardCount;
+    private @Nullable Output<Integer> shardCount;
 
-    public Output<Integer> shardCount() {
-        return this.shardCount == null ? Codegen.empty() : this.shardCount;
+    public Optional<Output<Integer>> shardCount() {
+        return Optional.ofNullable(this.shardCount);
     }
 
     @Import(name="tablePrefix")
-      private final @Nullable Output<String> tablePrefix;
+    private @Nullable Output<String> tablePrefix;
 
-    public Output<String> tablePrefix() {
-        return this.tablePrefix == null ? Codegen.empty() : this.tablePrefix;
+    public Optional<Output<String>> tablePrefix() {
+        return Optional.ofNullable(this.tablePrefix);
     }
 
-    public EntryBigqueryDateShardedSpecGetArgs(
-        @Nullable Output<String> dataset,
-        @Nullable Output<Integer> shardCount,
-        @Nullable Output<String> tablePrefix) {
-        this.dataset = dataset;
-        this.shardCount = shardCount;
-        this.tablePrefix = tablePrefix;
-    }
+    private EntryBigqueryDateShardedSpecGetArgs() {}
 
-    private EntryBigqueryDateShardedSpecGetArgs() {
-        this.dataset = Codegen.empty();
-        this.shardCount = Codegen.empty();
-        this.tablePrefix = Codegen.empty();
+    private EntryBigqueryDateShardedSpecGetArgs(EntryBigqueryDateShardedSpecGetArgs $) {
+        this.dataset = $.dataset;
+        this.shardCount = $.shardCount;
+        this.tablePrefix = $.tablePrefix;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EntryBigqueryDateShardedSpecGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> dataset;
-        private @Nullable Output<Integer> shardCount;
-        private @Nullable Output<String> tablePrefix;
+        private EntryBigqueryDateShardedSpecGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new EntryBigqueryDateShardedSpecGetArgs();
         }
 
         public Builder(EntryBigqueryDateShardedSpecGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dataset = defaults.dataset;
-    	      this.shardCount = defaults.shardCount;
-    	      this.tablePrefix = defaults.tablePrefix;
+            $ = new EntryBigqueryDateShardedSpecGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder dataset(@Nullable Output<String> dataset) {
-            this.dataset = dataset;
+            $.dataset = dataset;
             return this;
         }
-        public Builder dataset(@Nullable String dataset) {
-            this.dataset = Codegen.ofNullable(dataset);
-            return this;
+
+        public Builder dataset(String dataset) {
+            return dataset(Output.of(dataset));
         }
+
         public Builder shardCount(@Nullable Output<Integer> shardCount) {
-            this.shardCount = shardCount;
+            $.shardCount = shardCount;
             return this;
         }
-        public Builder shardCount(@Nullable Integer shardCount) {
-            this.shardCount = Codegen.ofNullable(shardCount);
-            return this;
+
+        public Builder shardCount(Integer shardCount) {
+            return shardCount(Output.of(shardCount));
         }
+
         public Builder tablePrefix(@Nullable Output<String> tablePrefix) {
-            this.tablePrefix = tablePrefix;
+            $.tablePrefix = tablePrefix;
             return this;
         }
-        public Builder tablePrefix(@Nullable String tablePrefix) {
-            this.tablePrefix = Codegen.ofNullable(tablePrefix);
-            return this;
-        }        public EntryBigqueryDateShardedSpecGetArgs build() {
-            return new EntryBigqueryDateShardedSpecGetArgs(dataset, shardCount, tablePrefix);
+
+        public Builder tablePrefix(String tablePrefix) {
+            return tablePrefix(Output.of(tablePrefix));
+        }
+
+        public EntryBigqueryDateShardedSpecGetArgs build() {
+            return $;
         }
     }
+
 }

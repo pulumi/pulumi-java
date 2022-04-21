@@ -6,10 +6,10 @@ package com.pulumi.kubernetes.apps_v1beta1.inputs;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class RollingUpdateDeploymentArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="maxSurge")
-      private final @Nullable Output<Either<Integer,String>> maxSurge;
+    private @Nullable Output<Either<Integer,String>> maxSurge;
 
-    public Output<Either<Integer,String>> maxSurge() {
-        return this.maxSurge == null ? Codegen.empty() : this.maxSurge;
+    public Optional<Output<Either<Integer,String>>> maxSurge() {
+        return Optional.ofNullable(this.maxSurge);
     }
 
     /**
@@ -37,63 +37,58 @@ public final class RollingUpdateDeploymentArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="maxUnavailable")
-      private final @Nullable Output<Either<Integer,String>> maxUnavailable;
+    private @Nullable Output<Either<Integer,String>> maxUnavailable;
 
-    public Output<Either<Integer,String>> maxUnavailable() {
-        return this.maxUnavailable == null ? Codegen.empty() : this.maxUnavailable;
+    public Optional<Output<Either<Integer,String>>> maxUnavailable() {
+        return Optional.ofNullable(this.maxUnavailable);
     }
 
-    public RollingUpdateDeploymentArgs(
-        @Nullable Output<Either<Integer,String>> maxSurge,
-        @Nullable Output<Either<Integer,String>> maxUnavailable) {
-        this.maxSurge = maxSurge;
-        this.maxUnavailable = maxUnavailable;
-    }
+    private RollingUpdateDeploymentArgs() {}
 
-    private RollingUpdateDeploymentArgs() {
-        this.maxSurge = Codegen.empty();
-        this.maxUnavailable = Codegen.empty();
+    private RollingUpdateDeploymentArgs(RollingUpdateDeploymentArgs $) {
+        this.maxSurge = $.maxSurge;
+        this.maxUnavailable = $.maxUnavailable;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RollingUpdateDeploymentArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Either<Integer,String>> maxSurge;
-        private @Nullable Output<Either<Integer,String>> maxUnavailable;
+        private RollingUpdateDeploymentArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RollingUpdateDeploymentArgs();
         }
 
         public Builder(RollingUpdateDeploymentArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.maxSurge = defaults.maxSurge;
-    	      this.maxUnavailable = defaults.maxUnavailable;
+            $ = new RollingUpdateDeploymentArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder maxSurge(@Nullable Output<Either<Integer,String>> maxSurge) {
-            this.maxSurge = maxSurge;
+            $.maxSurge = maxSurge;
             return this;
         }
-        public Builder maxSurge(@Nullable Either<Integer,String> maxSurge) {
-            this.maxSurge = Codegen.ofNullable(maxSurge);
-            return this;
+
+        public Builder maxSurge(Either<Integer,String> maxSurge) {
+            return maxSurge(Output.of(maxSurge));
         }
+
         public Builder maxUnavailable(@Nullable Output<Either<Integer,String>> maxUnavailable) {
-            this.maxUnavailable = maxUnavailable;
+            $.maxUnavailable = maxUnavailable;
             return this;
         }
-        public Builder maxUnavailable(@Nullable Either<Integer,String> maxUnavailable) {
-            this.maxUnavailable = Codegen.ofNullable(maxUnavailable);
-            return this;
-        }        public RollingUpdateDeploymentArgs build() {
-            return new RollingUpdateDeploymentArgs(maxSurge, maxUnavailable);
+
+        public Builder maxUnavailable(Either<Integer,String> maxUnavailable) {
+            return maxUnavailable(Output.of(maxUnavailable));
+        }
+
+        public RollingUpdateDeploymentArgs build() {
+            return $;
         }
     }
+
 }

@@ -8,10 +8,10 @@ import com.pulumi.awsnative.customerprofiles.inputs.IntegrationConnectorOperator
 import com.pulumi.awsnative.customerprofiles.inputs.IntegrationTaskPropertiesMapArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,136 +20,126 @@ public final class IntegrationTaskArgs extends com.pulumi.resources.ResourceArgs
     public static final IntegrationTaskArgs Empty = new IntegrationTaskArgs();
 
     @Import(name="connectorOperator")
-      private final @Nullable Output<IntegrationConnectorOperatorArgs> connectorOperator;
+    private @Nullable Output<IntegrationConnectorOperatorArgs> connectorOperator;
 
-    public Output<IntegrationConnectorOperatorArgs> connectorOperator() {
-        return this.connectorOperator == null ? Codegen.empty() : this.connectorOperator;
+    public Optional<Output<IntegrationConnectorOperatorArgs>> connectorOperator() {
+        return Optional.ofNullable(this.connectorOperator);
     }
 
     @Import(name="destinationField")
-      private final @Nullable Output<String> destinationField;
+    private @Nullable Output<String> destinationField;
 
-    public Output<String> destinationField() {
-        return this.destinationField == null ? Codegen.empty() : this.destinationField;
+    public Optional<Output<String>> destinationField() {
+        return Optional.ofNullable(this.destinationField);
     }
 
     @Import(name="sourceFields", required=true)
-      private final Output<List<String>> sourceFields;
+    private Output<List<String>> sourceFields;
 
     public Output<List<String>> sourceFields() {
         return this.sourceFields;
     }
 
     @Import(name="taskProperties")
-      private final @Nullable Output<List<IntegrationTaskPropertiesMapArgs>> taskProperties;
+    private @Nullable Output<List<IntegrationTaskPropertiesMapArgs>> taskProperties;
 
-    public Output<List<IntegrationTaskPropertiesMapArgs>> taskProperties() {
-        return this.taskProperties == null ? Codegen.empty() : this.taskProperties;
+    public Optional<Output<List<IntegrationTaskPropertiesMapArgs>>> taskProperties() {
+        return Optional.ofNullable(this.taskProperties);
     }
 
     @Import(name="taskType", required=true)
-      private final Output<IntegrationTaskType> taskType;
+    private Output<IntegrationTaskType> taskType;
 
     public Output<IntegrationTaskType> taskType() {
         return this.taskType;
     }
 
-    public IntegrationTaskArgs(
-        @Nullable Output<IntegrationConnectorOperatorArgs> connectorOperator,
-        @Nullable Output<String> destinationField,
-        Output<List<String>> sourceFields,
-        @Nullable Output<List<IntegrationTaskPropertiesMapArgs>> taskProperties,
-        Output<IntegrationTaskType> taskType) {
-        this.connectorOperator = connectorOperator;
-        this.destinationField = destinationField;
-        this.sourceFields = Objects.requireNonNull(sourceFields, "expected parameter 'sourceFields' to be non-null");
-        this.taskProperties = taskProperties;
-        this.taskType = Objects.requireNonNull(taskType, "expected parameter 'taskType' to be non-null");
-    }
+    private IntegrationTaskArgs() {}
 
-    private IntegrationTaskArgs() {
-        this.connectorOperator = Codegen.empty();
-        this.destinationField = Codegen.empty();
-        this.sourceFields = Codegen.empty();
-        this.taskProperties = Codegen.empty();
-        this.taskType = Codegen.empty();
+    private IntegrationTaskArgs(IntegrationTaskArgs $) {
+        this.connectorOperator = $.connectorOperator;
+        this.destinationField = $.destinationField;
+        this.sourceFields = $.sourceFields;
+        this.taskProperties = $.taskProperties;
+        this.taskType = $.taskType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(IntegrationTaskArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<IntegrationConnectorOperatorArgs> connectorOperator;
-        private @Nullable Output<String> destinationField;
-        private Output<List<String>> sourceFields;
-        private @Nullable Output<List<IntegrationTaskPropertiesMapArgs>> taskProperties;
-        private Output<IntegrationTaskType> taskType;
+        private IntegrationTaskArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new IntegrationTaskArgs();
         }
 
         public Builder(IntegrationTaskArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.connectorOperator = defaults.connectorOperator;
-    	      this.destinationField = defaults.destinationField;
-    	      this.sourceFields = defaults.sourceFields;
-    	      this.taskProperties = defaults.taskProperties;
-    	      this.taskType = defaults.taskType;
+            $ = new IntegrationTaskArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder connectorOperator(@Nullable Output<IntegrationConnectorOperatorArgs> connectorOperator) {
-            this.connectorOperator = connectorOperator;
+            $.connectorOperator = connectorOperator;
             return this;
         }
-        public Builder connectorOperator(@Nullable IntegrationConnectorOperatorArgs connectorOperator) {
-            this.connectorOperator = Codegen.ofNullable(connectorOperator);
-            return this;
+
+        public Builder connectorOperator(IntegrationConnectorOperatorArgs connectorOperator) {
+            return connectorOperator(Output.of(connectorOperator));
         }
+
         public Builder destinationField(@Nullable Output<String> destinationField) {
-            this.destinationField = destinationField;
+            $.destinationField = destinationField;
             return this;
         }
-        public Builder destinationField(@Nullable String destinationField) {
-            this.destinationField = Codegen.ofNullable(destinationField);
-            return this;
+
+        public Builder destinationField(String destinationField) {
+            return destinationField(Output.of(destinationField));
         }
+
         public Builder sourceFields(Output<List<String>> sourceFields) {
-            this.sourceFields = Objects.requireNonNull(sourceFields);
+            $.sourceFields = sourceFields;
             return this;
         }
+
         public Builder sourceFields(List<String> sourceFields) {
-            this.sourceFields = Output.of(Objects.requireNonNull(sourceFields));
-            return this;
+            return sourceFields(Output.of(sourceFields));
         }
+
         public Builder sourceFields(String... sourceFields) {
             return sourceFields(List.of(sourceFields));
         }
+
         public Builder taskProperties(@Nullable Output<List<IntegrationTaskPropertiesMapArgs>> taskProperties) {
-            this.taskProperties = taskProperties;
+            $.taskProperties = taskProperties;
             return this;
         }
-        public Builder taskProperties(@Nullable List<IntegrationTaskPropertiesMapArgs> taskProperties) {
-            this.taskProperties = Codegen.ofNullable(taskProperties);
-            return this;
+
+        public Builder taskProperties(List<IntegrationTaskPropertiesMapArgs> taskProperties) {
+            return taskProperties(Output.of(taskProperties));
         }
+
         public Builder taskProperties(IntegrationTaskPropertiesMapArgs... taskProperties) {
             return taskProperties(List.of(taskProperties));
         }
+
         public Builder taskType(Output<IntegrationTaskType> taskType) {
-            this.taskType = Objects.requireNonNull(taskType);
+            $.taskType = taskType;
             return this;
         }
+
         public Builder taskType(IntegrationTaskType taskType) {
-            this.taskType = Output.of(Objects.requireNonNull(taskType));
-            return this;
-        }        public IntegrationTaskArgs build() {
-            return new IntegrationTaskArgs(connectorOperator, destinationField, sourceFields, taskProperties, taskType);
+            return taskType(Output.of(taskType));
+        }
+
+        public IntegrationTaskArgs build() {
+            $.sourceFields = Objects.requireNonNull($.sourceFields, "expected parameter 'sourceFields' to be non-null");
+            $.taskType = Objects.requireNonNull($.taskType, "expected parameter 'taskType' to be non-null");
+            return $;
         }
     }
+
 }

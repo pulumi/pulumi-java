@@ -5,9 +5,9 @@ package com.pulumi.awsnative.acmpca;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,7 +20,7 @@ public final class CertificateAuthorityActivationArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="certificate", required=true)
-      private final Output<String> certificate;
+    private Output<String> certificate;
 
     public Output<String> certificate() {
         return this.certificate;
@@ -31,7 +31,7 @@ public final class CertificateAuthorityActivationArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="certificateAuthorityArn", required=true)
-      private final Output<String> certificateAuthorityArn;
+    private Output<String> certificateAuthorityArn;
 
     public Output<String> certificateAuthorityArn() {
         return this.certificateAuthorityArn;
@@ -42,10 +42,10 @@ public final class CertificateAuthorityActivationArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="certificateChain")
-      private final @Nullable Output<String> certificateChain;
+    private @Nullable Output<String> certificateChain;
 
-    public Output<String> certificateChain() {
-        return this.certificateChain == null ? Codegen.empty() : this.certificateChain;
+    public Optional<Output<String>> certificateChain() {
+        return Optional.ofNullable(this.certificateChain);
     }
 
     /**
@@ -53,89 +53,80 @@ public final class CertificateAuthorityActivationArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="status")
-      private final @Nullable Output<String> status;
+    private @Nullable Output<String> status;
 
-    public Output<String> status() {
-        return this.status == null ? Codegen.empty() : this.status;
+    public Optional<Output<String>> status() {
+        return Optional.ofNullable(this.status);
     }
 
-    public CertificateAuthorityActivationArgs(
-        Output<String> certificate,
-        Output<String> certificateAuthorityArn,
-        @Nullable Output<String> certificateChain,
-        @Nullable Output<String> status) {
-        this.certificate = Objects.requireNonNull(certificate, "expected parameter 'certificate' to be non-null");
-        this.certificateAuthorityArn = Objects.requireNonNull(certificateAuthorityArn, "expected parameter 'certificateAuthorityArn' to be non-null");
-        this.certificateChain = certificateChain;
-        this.status = status;
-    }
+    private CertificateAuthorityActivationArgs() {}
 
-    private CertificateAuthorityActivationArgs() {
-        this.certificate = Codegen.empty();
-        this.certificateAuthorityArn = Codegen.empty();
-        this.certificateChain = Codegen.empty();
-        this.status = Codegen.empty();
+    private CertificateAuthorityActivationArgs(CertificateAuthorityActivationArgs $) {
+        this.certificate = $.certificate;
+        this.certificateAuthorityArn = $.certificateAuthorityArn;
+        this.certificateChain = $.certificateChain;
+        this.status = $.status;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CertificateAuthorityActivationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> certificate;
-        private Output<String> certificateAuthorityArn;
-        private @Nullable Output<String> certificateChain;
-        private @Nullable Output<String> status;
+        private CertificateAuthorityActivationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CertificateAuthorityActivationArgs();
         }
 
         public Builder(CertificateAuthorityActivationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.certificate = defaults.certificate;
-    	      this.certificateAuthorityArn = defaults.certificateAuthorityArn;
-    	      this.certificateChain = defaults.certificateChain;
-    	      this.status = defaults.status;
+            $ = new CertificateAuthorityActivationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder certificate(Output<String> certificate) {
-            this.certificate = Objects.requireNonNull(certificate);
+            $.certificate = certificate;
             return this;
         }
+
         public Builder certificate(String certificate) {
-            this.certificate = Output.of(Objects.requireNonNull(certificate));
-            return this;
+            return certificate(Output.of(certificate));
         }
+
         public Builder certificateAuthorityArn(Output<String> certificateAuthorityArn) {
-            this.certificateAuthorityArn = Objects.requireNonNull(certificateAuthorityArn);
+            $.certificateAuthorityArn = certificateAuthorityArn;
             return this;
         }
+
         public Builder certificateAuthorityArn(String certificateAuthorityArn) {
-            this.certificateAuthorityArn = Output.of(Objects.requireNonNull(certificateAuthorityArn));
-            return this;
+            return certificateAuthorityArn(Output.of(certificateAuthorityArn));
         }
+
         public Builder certificateChain(@Nullable Output<String> certificateChain) {
-            this.certificateChain = certificateChain;
+            $.certificateChain = certificateChain;
             return this;
         }
-        public Builder certificateChain(@Nullable String certificateChain) {
-            this.certificateChain = Codegen.ofNullable(certificateChain);
-            return this;
+
+        public Builder certificateChain(String certificateChain) {
+            return certificateChain(Output.of(certificateChain));
         }
+
         public Builder status(@Nullable Output<String> status) {
-            this.status = status;
+            $.status = status;
             return this;
         }
-        public Builder status(@Nullable String status) {
-            this.status = Codegen.ofNullable(status);
-            return this;
-        }        public CertificateAuthorityActivationArgs build() {
-            return new CertificateAuthorityActivationArgs(certificate, certificateAuthorityArn, certificateChain, status);
+
+        public Builder status(String status) {
+            return status(Output.of(status));
+        }
+
+        public CertificateAuthorityActivationArgs build() {
+            $.certificate = Objects.requireNonNull($.certificate, "expected parameter 'certificate' to be non-null");
+            $.certificateAuthorityArn = Objects.requireNonNull($.certificateAuthorityArn, "expected parameter 'certificateAuthorityArn' to be non-null");
+            return $;
         }
     }
+
 }

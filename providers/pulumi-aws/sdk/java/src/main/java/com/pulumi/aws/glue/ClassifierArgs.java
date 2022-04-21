@@ -9,9 +9,9 @@ import com.pulumi.aws.glue.inputs.ClassifierJsonClassifierArgs;
 import com.pulumi.aws.glue.inputs.ClassifierXmlClassifierArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class ClassifierArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="csvClassifier")
-      private final @Nullable Output<ClassifierCsvClassifierArgs> csvClassifier;
+    private @Nullable Output<ClassifierCsvClassifierArgs> csvClassifier;
 
-    public Output<ClassifierCsvClassifierArgs> csvClassifier() {
-        return this.csvClassifier == null ? Codegen.empty() : this.csvClassifier;
+    public Optional<Output<ClassifierCsvClassifierArgs>> csvClassifier() {
+        return Optional.ofNullable(this.csvClassifier);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class ClassifierArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="grokClassifier")
-      private final @Nullable Output<ClassifierGrokClassifierArgs> grokClassifier;
+    private @Nullable Output<ClassifierGrokClassifierArgs> grokClassifier;
 
-    public Output<ClassifierGrokClassifierArgs> grokClassifier() {
-        return this.grokClassifier == null ? Codegen.empty() : this.grokClassifier;
+    public Optional<Output<ClassifierGrokClassifierArgs>> grokClassifier() {
+        return Optional.ofNullable(this.grokClassifier);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class ClassifierArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="jsonClassifier")
-      private final @Nullable Output<ClassifierJsonClassifierArgs> jsonClassifier;
+    private @Nullable Output<ClassifierJsonClassifierArgs> jsonClassifier;
 
-    public Output<ClassifierJsonClassifierArgs> jsonClassifier() {
-        return this.jsonClassifier == null ? Codegen.empty() : this.jsonClassifier;
+    public Optional<Output<ClassifierJsonClassifierArgs>> jsonClassifier() {
+        return Optional.ofNullable(this.jsonClassifier);
     }
 
     /**
@@ -57,10 +57,10 @@ public final class ClassifierArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -68,102 +68,88 @@ public final class ClassifierArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="xmlClassifier")
-      private final @Nullable Output<ClassifierXmlClassifierArgs> xmlClassifier;
+    private @Nullable Output<ClassifierXmlClassifierArgs> xmlClassifier;
 
-    public Output<ClassifierXmlClassifierArgs> xmlClassifier() {
-        return this.xmlClassifier == null ? Codegen.empty() : this.xmlClassifier;
+    public Optional<Output<ClassifierXmlClassifierArgs>> xmlClassifier() {
+        return Optional.ofNullable(this.xmlClassifier);
     }
 
-    public ClassifierArgs(
-        @Nullable Output<ClassifierCsvClassifierArgs> csvClassifier,
-        @Nullable Output<ClassifierGrokClassifierArgs> grokClassifier,
-        @Nullable Output<ClassifierJsonClassifierArgs> jsonClassifier,
-        @Nullable Output<String> name,
-        @Nullable Output<ClassifierXmlClassifierArgs> xmlClassifier) {
-        this.csvClassifier = csvClassifier;
-        this.grokClassifier = grokClassifier;
-        this.jsonClassifier = jsonClassifier;
-        this.name = name;
-        this.xmlClassifier = xmlClassifier;
-    }
+    private ClassifierArgs() {}
 
-    private ClassifierArgs() {
-        this.csvClassifier = Codegen.empty();
-        this.grokClassifier = Codegen.empty();
-        this.jsonClassifier = Codegen.empty();
-        this.name = Codegen.empty();
-        this.xmlClassifier = Codegen.empty();
+    private ClassifierArgs(ClassifierArgs $) {
+        this.csvClassifier = $.csvClassifier;
+        this.grokClassifier = $.grokClassifier;
+        this.jsonClassifier = $.jsonClassifier;
+        this.name = $.name;
+        this.xmlClassifier = $.xmlClassifier;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ClassifierArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<ClassifierCsvClassifierArgs> csvClassifier;
-        private @Nullable Output<ClassifierGrokClassifierArgs> grokClassifier;
-        private @Nullable Output<ClassifierJsonClassifierArgs> jsonClassifier;
-        private @Nullable Output<String> name;
-        private @Nullable Output<ClassifierXmlClassifierArgs> xmlClassifier;
+        private ClassifierArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ClassifierArgs();
         }
 
         public Builder(ClassifierArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.csvClassifier = defaults.csvClassifier;
-    	      this.grokClassifier = defaults.grokClassifier;
-    	      this.jsonClassifier = defaults.jsonClassifier;
-    	      this.name = defaults.name;
-    	      this.xmlClassifier = defaults.xmlClassifier;
+            $ = new ClassifierArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder csvClassifier(@Nullable Output<ClassifierCsvClassifierArgs> csvClassifier) {
-            this.csvClassifier = csvClassifier;
+            $.csvClassifier = csvClassifier;
             return this;
         }
-        public Builder csvClassifier(@Nullable ClassifierCsvClassifierArgs csvClassifier) {
-            this.csvClassifier = Codegen.ofNullable(csvClassifier);
-            return this;
+
+        public Builder csvClassifier(ClassifierCsvClassifierArgs csvClassifier) {
+            return csvClassifier(Output.of(csvClassifier));
         }
+
         public Builder grokClassifier(@Nullable Output<ClassifierGrokClassifierArgs> grokClassifier) {
-            this.grokClassifier = grokClassifier;
+            $.grokClassifier = grokClassifier;
             return this;
         }
-        public Builder grokClassifier(@Nullable ClassifierGrokClassifierArgs grokClassifier) {
-            this.grokClassifier = Codegen.ofNullable(grokClassifier);
-            return this;
+
+        public Builder grokClassifier(ClassifierGrokClassifierArgs grokClassifier) {
+            return grokClassifier(Output.of(grokClassifier));
         }
+
         public Builder jsonClassifier(@Nullable Output<ClassifierJsonClassifierArgs> jsonClassifier) {
-            this.jsonClassifier = jsonClassifier;
+            $.jsonClassifier = jsonClassifier;
             return this;
         }
-        public Builder jsonClassifier(@Nullable ClassifierJsonClassifierArgs jsonClassifier) {
-            this.jsonClassifier = Codegen.ofNullable(jsonClassifier);
-            return this;
+
+        public Builder jsonClassifier(ClassifierJsonClassifierArgs jsonClassifier) {
+            return jsonClassifier(Output.of(jsonClassifier));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder xmlClassifier(@Nullable Output<ClassifierXmlClassifierArgs> xmlClassifier) {
-            this.xmlClassifier = xmlClassifier;
+            $.xmlClassifier = xmlClassifier;
             return this;
         }
-        public Builder xmlClassifier(@Nullable ClassifierXmlClassifierArgs xmlClassifier) {
-            this.xmlClassifier = Codegen.ofNullable(xmlClassifier);
-            return this;
-        }        public ClassifierArgs build() {
-            return new ClassifierArgs(csvClassifier, grokClassifier, jsonClassifier, name, xmlClassifier);
+
+        public Builder xmlClassifier(ClassifierXmlClassifierArgs xmlClassifier) {
+            return xmlClassifier(Output.of(xmlClassifier));
+        }
+
+        public ClassifierArgs build() {
+            return $;
         }
     }
+
 }

@@ -17,45 +17,45 @@ public final class GetClusterIdentityOidc extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="issuer", required=true)
-      private final String issuer;
+    private String issuer;
 
     public String issuer() {
         return this.issuer;
     }
 
-    public GetClusterIdentityOidc(String issuer) {
-        this.issuer = Objects.requireNonNull(issuer, "expected parameter 'issuer' to be non-null");
-    }
+    private GetClusterIdentityOidc() {}
 
-    private GetClusterIdentityOidc() {
-        this.issuer = null;
+    private GetClusterIdentityOidc(GetClusterIdentityOidc $) {
+        this.issuer = $.issuer;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetClusterIdentityOidc defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String issuer;
+        private GetClusterIdentityOidc $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetClusterIdentityOidc();
         }
 
         public Builder(GetClusterIdentityOidc defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.issuer = defaults.issuer;
+            $ = new GetClusterIdentityOidc(Objects.requireNonNull(defaults));
         }
 
         public Builder issuer(String issuer) {
-            this.issuer = Objects.requireNonNull(issuer);
+            $.issuer = issuer;
             return this;
-        }        public GetClusterIdentityOidc build() {
-            return new GetClusterIdentityOidc(issuer);
+        }
+
+        public GetClusterIdentityOidc build() {
+            $.issuer = Objects.requireNonNull($.issuer, "expected parameter 'issuer' to be non-null");
+            return $;
         }
     }
+
 }

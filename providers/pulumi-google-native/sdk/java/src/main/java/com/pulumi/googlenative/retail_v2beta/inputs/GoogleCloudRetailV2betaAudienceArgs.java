@@ -5,10 +5,10 @@ package com.pulumi.googlenative.retail_v2beta.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class GoogleCloudRetailV2betaAudienceArgs extends com.pulumi.resour
      * 
      */
     @Import(name="ageGroups")
-      private final @Nullable Output<List<String>> ageGroups;
+    private @Nullable Output<List<String>> ageGroups;
 
-    public Output<List<String>> ageGroups() {
-        return this.ageGroups == null ? Codegen.empty() : this.ageGroups;
+    public Optional<Output<List<String>>> ageGroups() {
+        return Optional.ofNullable(this.ageGroups);
     }
 
     /**
@@ -36,69 +36,66 @@ public final class GoogleCloudRetailV2betaAudienceArgs extends com.pulumi.resour
      * 
      */
     @Import(name="genders")
-      private final @Nullable Output<List<String>> genders;
+    private @Nullable Output<List<String>> genders;
 
-    public Output<List<String>> genders() {
-        return this.genders == null ? Codegen.empty() : this.genders;
+    public Optional<Output<List<String>>> genders() {
+        return Optional.ofNullable(this.genders);
     }
 
-    public GoogleCloudRetailV2betaAudienceArgs(
-        @Nullable Output<List<String>> ageGroups,
-        @Nullable Output<List<String>> genders) {
-        this.ageGroups = ageGroups;
-        this.genders = genders;
-    }
+    private GoogleCloudRetailV2betaAudienceArgs() {}
 
-    private GoogleCloudRetailV2betaAudienceArgs() {
-        this.ageGroups = Codegen.empty();
-        this.genders = Codegen.empty();
+    private GoogleCloudRetailV2betaAudienceArgs(GoogleCloudRetailV2betaAudienceArgs $) {
+        this.ageGroups = $.ageGroups;
+        this.genders = $.genders;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudRetailV2betaAudienceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> ageGroups;
-        private @Nullable Output<List<String>> genders;
+        private GoogleCloudRetailV2betaAudienceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudRetailV2betaAudienceArgs();
         }
 
         public Builder(GoogleCloudRetailV2betaAudienceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.ageGroups = defaults.ageGroups;
-    	      this.genders = defaults.genders;
+            $ = new GoogleCloudRetailV2betaAudienceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder ageGroups(@Nullable Output<List<String>> ageGroups) {
-            this.ageGroups = ageGroups;
+            $.ageGroups = ageGroups;
             return this;
         }
-        public Builder ageGroups(@Nullable List<String> ageGroups) {
-            this.ageGroups = Codegen.ofNullable(ageGroups);
-            return this;
+
+        public Builder ageGroups(List<String> ageGroups) {
+            return ageGroups(Output.of(ageGroups));
         }
+
         public Builder ageGroups(String... ageGroups) {
             return ageGroups(List.of(ageGroups));
         }
+
         public Builder genders(@Nullable Output<List<String>> genders) {
-            this.genders = genders;
+            $.genders = genders;
             return this;
         }
-        public Builder genders(@Nullable List<String> genders) {
-            this.genders = Codegen.ofNullable(genders);
-            return this;
+
+        public Builder genders(List<String> genders) {
+            return genders(Output.of(genders));
         }
+
         public Builder genders(String... genders) {
             return genders(List.of(genders));
-        }        public GoogleCloudRetailV2betaAudienceArgs build() {
-            return new GoogleCloudRetailV2betaAudienceArgs(ageGroups, genders);
+        }
+
+        public GoogleCloudRetailV2betaAudienceArgs build() {
+            return $;
         }
     }
+
 }

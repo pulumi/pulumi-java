@@ -21,7 +21,7 @@ public final class PeeringServicePrefixEventResponse extends com.pulumi.resource
      * 
      */
     @Import(name="eventDescription", required=true)
-      private final String eventDescription;
+    private String eventDescription;
 
     public String eventDescription() {
         return this.eventDescription;
@@ -32,7 +32,7 @@ public final class PeeringServicePrefixEventResponse extends com.pulumi.resource
      * 
      */
     @Import(name="eventLevel", required=true)
-      private final String eventLevel;
+    private String eventLevel;
 
     public String eventLevel() {
         return this.eventLevel;
@@ -43,7 +43,7 @@ public final class PeeringServicePrefixEventResponse extends com.pulumi.resource
      * 
      */
     @Import(name="eventSummary", required=true)
-      private final String eventSummary;
+    private String eventSummary;
 
     public String eventSummary() {
         return this.eventSummary;
@@ -54,7 +54,7 @@ public final class PeeringServicePrefixEventResponse extends com.pulumi.resource
      * 
      */
     @Import(name="eventTimestamp", required=true)
-      private final String eventTimestamp;
+    private String eventTimestamp;
 
     public String eventTimestamp() {
         return this.eventTimestamp;
@@ -65,82 +65,73 @@ public final class PeeringServicePrefixEventResponse extends com.pulumi.resource
      * 
      */
     @Import(name="eventType", required=true)
-      private final String eventType;
+    private String eventType;
 
     public String eventType() {
         return this.eventType;
     }
 
-    public PeeringServicePrefixEventResponse(
-        String eventDescription,
-        String eventLevel,
-        String eventSummary,
-        String eventTimestamp,
-        String eventType) {
-        this.eventDescription = Objects.requireNonNull(eventDescription, "expected parameter 'eventDescription' to be non-null");
-        this.eventLevel = Objects.requireNonNull(eventLevel, "expected parameter 'eventLevel' to be non-null");
-        this.eventSummary = Objects.requireNonNull(eventSummary, "expected parameter 'eventSummary' to be non-null");
-        this.eventTimestamp = Objects.requireNonNull(eventTimestamp, "expected parameter 'eventTimestamp' to be non-null");
-        this.eventType = Objects.requireNonNull(eventType, "expected parameter 'eventType' to be non-null");
-    }
+    private PeeringServicePrefixEventResponse() {}
 
-    private PeeringServicePrefixEventResponse() {
-        this.eventDescription = null;
-        this.eventLevel = null;
-        this.eventSummary = null;
-        this.eventTimestamp = null;
-        this.eventType = null;
+    private PeeringServicePrefixEventResponse(PeeringServicePrefixEventResponse $) {
+        this.eventDescription = $.eventDescription;
+        this.eventLevel = $.eventLevel;
+        this.eventSummary = $.eventSummary;
+        this.eventTimestamp = $.eventTimestamp;
+        this.eventType = $.eventType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PeeringServicePrefixEventResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String eventDescription;
-        private String eventLevel;
-        private String eventSummary;
-        private String eventTimestamp;
-        private String eventType;
+        private PeeringServicePrefixEventResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new PeeringServicePrefixEventResponse();
         }
 
         public Builder(PeeringServicePrefixEventResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.eventDescription = defaults.eventDescription;
-    	      this.eventLevel = defaults.eventLevel;
-    	      this.eventSummary = defaults.eventSummary;
-    	      this.eventTimestamp = defaults.eventTimestamp;
-    	      this.eventType = defaults.eventType;
+            $ = new PeeringServicePrefixEventResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder eventDescription(String eventDescription) {
-            this.eventDescription = Objects.requireNonNull(eventDescription);
+            $.eventDescription = eventDescription;
             return this;
         }
+
         public Builder eventLevel(String eventLevel) {
-            this.eventLevel = Objects.requireNonNull(eventLevel);
+            $.eventLevel = eventLevel;
             return this;
         }
+
         public Builder eventSummary(String eventSummary) {
-            this.eventSummary = Objects.requireNonNull(eventSummary);
+            $.eventSummary = eventSummary;
             return this;
         }
+
         public Builder eventTimestamp(String eventTimestamp) {
-            this.eventTimestamp = Objects.requireNonNull(eventTimestamp);
+            $.eventTimestamp = eventTimestamp;
             return this;
         }
+
         public Builder eventType(String eventType) {
-            this.eventType = Objects.requireNonNull(eventType);
+            $.eventType = eventType;
             return this;
-        }        public PeeringServicePrefixEventResponse build() {
-            return new PeeringServicePrefixEventResponse(eventDescription, eventLevel, eventSummary, eventTimestamp, eventType);
+        }
+
+        public PeeringServicePrefixEventResponse build() {
+            $.eventDescription = Objects.requireNonNull($.eventDescription, "expected parameter 'eventDescription' to be non-null");
+            $.eventLevel = Objects.requireNonNull($.eventLevel, "expected parameter 'eventLevel' to be non-null");
+            $.eventSummary = Objects.requireNonNull($.eventSummary, "expected parameter 'eventSummary' to be non-null");
+            $.eventTimestamp = Objects.requireNonNull($.eventTimestamp, "expected parameter 'eventTimestamp' to be non-null");
+            $.eventType = Objects.requireNonNull($.eventType, "expected parameter 'eventType' to be non-null");
+            return $;
         }
     }
+
 }

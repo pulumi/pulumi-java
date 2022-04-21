@@ -23,7 +23,7 @@ public final class ValidateMigrationInputSqlServerSqlMISyncTaskOutputResponse ex
      * 
      */
     @Import(name="id", required=true)
-      private final String id;
+    private String id;
 
     public String id() {
         return this.id;
@@ -34,7 +34,7 @@ public final class ValidateMigrationInputSqlServerSqlMISyncTaskOutputResponse ex
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -45,67 +45,63 @@ public final class ValidateMigrationInputSqlServerSqlMISyncTaskOutputResponse ex
      * 
      */
     @Import(name="validationErrors", required=true)
-      private final List<ReportableExceptionResponse> validationErrors;
+    private List<ReportableExceptionResponse> validationErrors;
 
     public List<ReportableExceptionResponse> validationErrors() {
         return this.validationErrors;
     }
 
-    public ValidateMigrationInputSqlServerSqlMISyncTaskOutputResponse(
-        String id,
-        String name,
-        List<ReportableExceptionResponse> validationErrors) {
-        this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.validationErrors = Objects.requireNonNull(validationErrors, "expected parameter 'validationErrors' to be non-null");
-    }
+    private ValidateMigrationInputSqlServerSqlMISyncTaskOutputResponse() {}
 
-    private ValidateMigrationInputSqlServerSqlMISyncTaskOutputResponse() {
-        this.id = null;
-        this.name = null;
-        this.validationErrors = List.of();
+    private ValidateMigrationInputSqlServerSqlMISyncTaskOutputResponse(ValidateMigrationInputSqlServerSqlMISyncTaskOutputResponse $) {
+        this.id = $.id;
+        this.name = $.name;
+        this.validationErrors = $.validationErrors;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ValidateMigrationInputSqlServerSqlMISyncTaskOutputResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String id;
-        private String name;
-        private List<ReportableExceptionResponse> validationErrors;
+        private ValidateMigrationInputSqlServerSqlMISyncTaskOutputResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ValidateMigrationInputSqlServerSqlMISyncTaskOutputResponse();
         }
 
         public Builder(ValidateMigrationInputSqlServerSqlMISyncTaskOutputResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.id = defaults.id;
-    	      this.name = defaults.name;
-    	      this.validationErrors = defaults.validationErrors;
+            $ = new ValidateMigrationInputSqlServerSqlMISyncTaskOutputResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder id(String id) {
-            this.id = Objects.requireNonNull(id);
+            $.id = id;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder validationErrors(List<ReportableExceptionResponse> validationErrors) {
-            this.validationErrors = Objects.requireNonNull(validationErrors);
+            $.validationErrors = validationErrors;
             return this;
         }
+
         public Builder validationErrors(ReportableExceptionResponse... validationErrors) {
             return validationErrors(List.of(validationErrors));
-        }        public ValidateMigrationInputSqlServerSqlMISyncTaskOutputResponse build() {
-            return new ValidateMigrationInputSqlServerSqlMISyncTaskOutputResponse(id, name, validationErrors);
+        }
+
+        public ValidateMigrationInputSqlServerSqlMISyncTaskOutputResponse build() {
+            $.id = Objects.requireNonNull($.id, "expected parameter 'id' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.validationErrors = Objects.requireNonNull($.validationErrors, "expected parameter 'validationErrors' to be non-null");
+            return $;
         }
     }
+
 }

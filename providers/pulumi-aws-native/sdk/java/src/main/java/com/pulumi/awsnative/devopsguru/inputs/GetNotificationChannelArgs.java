@@ -17,45 +17,45 @@ public final class GetNotificationChannelArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="id", required=true)
-      private final String id;
+    private String id;
 
     public String id() {
         return this.id;
     }
 
-    public GetNotificationChannelArgs(String id) {
-        this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
-    }
+    private GetNotificationChannelArgs() {}
 
-    private GetNotificationChannelArgs() {
-        this.id = null;
+    private GetNotificationChannelArgs(GetNotificationChannelArgs $) {
+        this.id = $.id;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetNotificationChannelArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String id;
+        private GetNotificationChannelArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetNotificationChannelArgs();
         }
 
         public Builder(GetNotificationChannelArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.id = defaults.id;
+            $ = new GetNotificationChannelArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder id(String id) {
-            this.id = Objects.requireNonNull(id);
+            $.id = id;
             return this;
-        }        public GetNotificationChannelArgs build() {
-            return new GetNotificationChannelArgs(id);
+        }
+
+        public GetNotificationChannelArgs build() {
+            $.id = Objects.requireNonNull($.id, "expected parameter 'id' to be non-null");
+            return $;
         }
     }
+
 }

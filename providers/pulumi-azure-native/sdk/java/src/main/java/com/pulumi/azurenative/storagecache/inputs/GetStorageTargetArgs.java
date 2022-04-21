@@ -17,7 +17,7 @@ public final class GetStorageTargetArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="cacheName", required=true)
-      private final String cacheName;
+    private String cacheName;
 
     public String cacheName() {
         return this.cacheName;
@@ -28,7 +28,7 @@ public final class GetStorageTargetArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -39,64 +39,59 @@ public final class GetStorageTargetArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="storageTargetName", required=true)
-      private final String storageTargetName;
+    private String storageTargetName;
 
     public String storageTargetName() {
         return this.storageTargetName;
     }
 
-    public GetStorageTargetArgs(
-        String cacheName,
-        String resourceGroupName,
-        String storageTargetName) {
-        this.cacheName = Objects.requireNonNull(cacheName, "expected parameter 'cacheName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.storageTargetName = Objects.requireNonNull(storageTargetName, "expected parameter 'storageTargetName' to be non-null");
-    }
+    private GetStorageTargetArgs() {}
 
-    private GetStorageTargetArgs() {
-        this.cacheName = null;
-        this.resourceGroupName = null;
-        this.storageTargetName = null;
+    private GetStorageTargetArgs(GetStorageTargetArgs $) {
+        this.cacheName = $.cacheName;
+        this.resourceGroupName = $.resourceGroupName;
+        this.storageTargetName = $.storageTargetName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetStorageTargetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String cacheName;
-        private String resourceGroupName;
-        private String storageTargetName;
+        private GetStorageTargetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetStorageTargetArgs();
         }
 
         public Builder(GetStorageTargetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cacheName = defaults.cacheName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.storageTargetName = defaults.storageTargetName;
+            $ = new GetStorageTargetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder cacheName(String cacheName) {
-            this.cacheName = Objects.requireNonNull(cacheName);
+            $.cacheName = cacheName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder storageTargetName(String storageTargetName) {
-            this.storageTargetName = Objects.requireNonNull(storageTargetName);
+            $.storageTargetName = storageTargetName;
             return this;
-        }        public GetStorageTargetArgs build() {
-            return new GetStorageTargetArgs(cacheName, resourceGroupName, storageTargetName);
+        }
+
+        public GetStorageTargetArgs build() {
+            $.cacheName = Objects.requireNonNull($.cacheName, "expected parameter 'cacheName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.storageTargetName = Objects.requireNonNull($.storageTargetName, "expected parameter 'storageTargetName' to be non-null");
+            return $;
         }
     }
+
 }

@@ -26,10 +26,10 @@ public final class InquiryInfoResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="errorDetail")
-      private final @Nullable ErrorDetailResponse errorDetail;
+    private @Nullable ErrorDetailResponse errorDetail;
 
     public Optional<ErrorDetailResponse> errorDetail() {
-        return this.errorDetail == null ? Optional.empty() : Optional.ofNullable(this.errorDetail);
+        return Optional.ofNullable(this.errorDetail);
     }
 
     /**
@@ -38,10 +38,10 @@ public final class InquiryInfoResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="inquiryDetails")
-      private final @Nullable List<WorkloadInquiryDetailsResponse> inquiryDetails;
+    private @Nullable List<WorkloadInquiryDetailsResponse> inquiryDetails;
 
-    public List<WorkloadInquiryDetailsResponse> inquiryDetails() {
-        return this.inquiryDetails == null ? List.of() : this.inquiryDetails;
+    public Optional<List<WorkloadInquiryDetailsResponse>> inquiryDetails() {
+        return Optional.ofNullable(this.inquiryDetails);
     }
 
     /**
@@ -50,67 +50,60 @@ public final class InquiryInfoResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="status")
-      private final @Nullable String status;
+    private @Nullable String status;
 
     public Optional<String> status() {
-        return this.status == null ? Optional.empty() : Optional.ofNullable(this.status);
+        return Optional.ofNullable(this.status);
     }
 
-    public InquiryInfoResponse(
-        @Nullable ErrorDetailResponse errorDetail,
-        @Nullable List<WorkloadInquiryDetailsResponse> inquiryDetails,
-        @Nullable String status) {
-        this.errorDetail = errorDetail;
-        this.inquiryDetails = inquiryDetails;
-        this.status = status;
-    }
+    private InquiryInfoResponse() {}
 
-    private InquiryInfoResponse() {
-        this.errorDetail = null;
-        this.inquiryDetails = List.of();
-        this.status = null;
+    private InquiryInfoResponse(InquiryInfoResponse $) {
+        this.errorDetail = $.errorDetail;
+        this.inquiryDetails = $.inquiryDetails;
+        this.status = $.status;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(InquiryInfoResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable ErrorDetailResponse errorDetail;
-        private @Nullable List<WorkloadInquiryDetailsResponse> inquiryDetails;
-        private @Nullable String status;
+        private InquiryInfoResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new InquiryInfoResponse();
         }
 
         public Builder(InquiryInfoResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.errorDetail = defaults.errorDetail;
-    	      this.inquiryDetails = defaults.inquiryDetails;
-    	      this.status = defaults.status;
+            $ = new InquiryInfoResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder errorDetail(@Nullable ErrorDetailResponse errorDetail) {
-            this.errorDetail = errorDetail;
+            $.errorDetail = errorDetail;
             return this;
         }
+
         public Builder inquiryDetails(@Nullable List<WorkloadInquiryDetailsResponse> inquiryDetails) {
-            this.inquiryDetails = inquiryDetails;
+            $.inquiryDetails = inquiryDetails;
             return this;
         }
+
         public Builder inquiryDetails(WorkloadInquiryDetailsResponse... inquiryDetails) {
             return inquiryDetails(List.of(inquiryDetails));
         }
+
         public Builder status(@Nullable String status) {
-            this.status = status;
+            $.status = status;
             return this;
-        }        public InquiryInfoResponse build() {
-            return new InquiryInfoResponse(errorDetail, inquiryDetails, status);
+        }
+
+        public InquiryInfoResponse build() {
+            return $;
         }
     }
+
 }

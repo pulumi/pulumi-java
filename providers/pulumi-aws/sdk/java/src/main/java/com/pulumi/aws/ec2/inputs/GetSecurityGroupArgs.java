@@ -22,10 +22,10 @@ public final class GetSecurityGroupArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="filters")
-      private final @Nullable List<GetSecurityGroupFilter> filters;
+    private @Nullable List<GetSecurityGroupFilter> filters;
 
-    public List<GetSecurityGroupFilter> filters() {
-        return this.filters == null ? List.of() : this.filters;
+    public Optional<List<GetSecurityGroupFilter>> filters() {
+        return Optional.ofNullable(this.filters);
     }
 
     /**
@@ -33,10 +33,10 @@ public final class GetSecurityGroupArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="id")
-      private final @Nullable String id;
+    private @Nullable String id;
 
     public Optional<String> id() {
-        return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
+        return Optional.ofNullable(this.id);
     }
 
     /**
@@ -45,10 +45,10 @@ public final class GetSecurityGroupArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="name")
-      private final @Nullable String name;
+    private @Nullable String name;
 
     public Optional<String> name() {
-        return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -57,10 +57,10 @@ public final class GetSecurityGroupArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="tags")
-      private final @Nullable Map<String,String> tags;
+    private @Nullable Map<String,String> tags;
 
-    public Map<String,String> tags() {
-        return this.tags == null ? Map.of() : this.tags;
+    public Optional<Map<String,String>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -68,85 +68,72 @@ public final class GetSecurityGroupArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="vpcId")
-      private final @Nullable String vpcId;
+    private @Nullable String vpcId;
 
     public Optional<String> vpcId() {
-        return this.vpcId == null ? Optional.empty() : Optional.ofNullable(this.vpcId);
+        return Optional.ofNullable(this.vpcId);
     }
 
-    public GetSecurityGroupArgs(
-        @Nullable List<GetSecurityGroupFilter> filters,
-        @Nullable String id,
-        @Nullable String name,
-        @Nullable Map<String,String> tags,
-        @Nullable String vpcId) {
-        this.filters = filters;
-        this.id = id;
-        this.name = name;
-        this.tags = tags;
-        this.vpcId = vpcId;
-    }
+    private GetSecurityGroupArgs() {}
 
-    private GetSecurityGroupArgs() {
-        this.filters = List.of();
-        this.id = null;
-        this.name = null;
-        this.tags = Map.of();
-        this.vpcId = null;
+    private GetSecurityGroupArgs(GetSecurityGroupArgs $) {
+        this.filters = $.filters;
+        this.id = $.id;
+        this.name = $.name;
+        this.tags = $.tags;
+        this.vpcId = $.vpcId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetSecurityGroupArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<GetSecurityGroupFilter> filters;
-        private @Nullable String id;
-        private @Nullable String name;
-        private @Nullable Map<String,String> tags;
-        private @Nullable String vpcId;
+        private GetSecurityGroupArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetSecurityGroupArgs();
         }
 
         public Builder(GetSecurityGroupArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.filters = defaults.filters;
-    	      this.id = defaults.id;
-    	      this.name = defaults.name;
-    	      this.tags = defaults.tags;
-    	      this.vpcId = defaults.vpcId;
+            $ = new GetSecurityGroupArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder filters(@Nullable List<GetSecurityGroupFilter> filters) {
-            this.filters = filters;
+            $.filters = filters;
             return this;
         }
+
         public Builder filters(GetSecurityGroupFilter... filters) {
             return filters(List.of(filters));
         }
+
         public Builder id(@Nullable String id) {
-            this.id = id;
+            $.id = id;
             return this;
         }
+
         public Builder name(@Nullable String name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
+
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
+
         public Builder vpcId(@Nullable String vpcId) {
-            this.vpcId = vpcId;
+            $.vpcId = vpcId;
             return this;
-        }        public GetSecurityGroupArgs build() {
-            return new GetSecurityGroupArgs(filters, id, name, tags, vpcId);
+        }
+
+        public GetSecurityGroupArgs build() {
+            return $;
         }
     }
+
 }

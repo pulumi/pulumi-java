@@ -26,10 +26,10 @@ public final class ResponsePlanIncidentTemplate extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="dedupeString")
-      private final @Nullable String dedupeString;
+    private @Nullable String dedupeString;
 
     public Optional<String> dedupeString() {
-        return this.dedupeString == null ? Optional.empty() : Optional.ofNullable(this.dedupeString);
+        return Optional.ofNullable(this.dedupeString);
     }
 
     /**
@@ -37,7 +37,7 @@ public final class ResponsePlanIncidentTemplate extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="impact", required=true)
-      private final Integer impact;
+    private Integer impact;
 
     public Integer impact() {
         return this.impact;
@@ -48,10 +48,10 @@ public final class ResponsePlanIncidentTemplate extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="notificationTargets")
-      private final @Nullable List<ResponsePlanNotificationTargetItem> notificationTargets;
+    private @Nullable List<ResponsePlanNotificationTargetItem> notificationTargets;
 
-    public List<ResponsePlanNotificationTargetItem> notificationTargets() {
-        return this.notificationTargets == null ? List.of() : this.notificationTargets;
+    public Optional<List<ResponsePlanNotificationTargetItem>> notificationTargets() {
+        return Optional.ofNullable(this.notificationTargets);
     }
 
     /**
@@ -59,10 +59,10 @@ public final class ResponsePlanIncidentTemplate extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="summary")
-      private final @Nullable String summary;
+    private @Nullable String summary;
 
     public Optional<String> summary() {
-        return this.summary == null ? Optional.empty() : Optional.ofNullable(this.summary);
+        return Optional.ofNullable(this.summary);
     }
 
     /**
@@ -70,85 +70,74 @@ public final class ResponsePlanIncidentTemplate extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="title", required=true)
-      private final String title;
+    private String title;
 
     public String title() {
         return this.title;
     }
 
-    public ResponsePlanIncidentTemplate(
-        @Nullable String dedupeString,
-        Integer impact,
-        @Nullable List<ResponsePlanNotificationTargetItem> notificationTargets,
-        @Nullable String summary,
-        String title) {
-        this.dedupeString = dedupeString;
-        this.impact = Objects.requireNonNull(impact, "expected parameter 'impact' to be non-null");
-        this.notificationTargets = notificationTargets;
-        this.summary = summary;
-        this.title = Objects.requireNonNull(title, "expected parameter 'title' to be non-null");
-    }
+    private ResponsePlanIncidentTemplate() {}
 
-    private ResponsePlanIncidentTemplate() {
-        this.dedupeString = null;
-        this.impact = null;
-        this.notificationTargets = List.of();
-        this.summary = null;
-        this.title = null;
+    private ResponsePlanIncidentTemplate(ResponsePlanIncidentTemplate $) {
+        this.dedupeString = $.dedupeString;
+        this.impact = $.impact;
+        this.notificationTargets = $.notificationTargets;
+        this.summary = $.summary;
+        this.title = $.title;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ResponsePlanIncidentTemplate defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String dedupeString;
-        private Integer impact;
-        private @Nullable List<ResponsePlanNotificationTargetItem> notificationTargets;
-        private @Nullable String summary;
-        private String title;
+        private ResponsePlanIncidentTemplate $;
 
         public Builder() {
-    	      // Empty
+            $ = new ResponsePlanIncidentTemplate();
         }
 
         public Builder(ResponsePlanIncidentTemplate defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dedupeString = defaults.dedupeString;
-    	      this.impact = defaults.impact;
-    	      this.notificationTargets = defaults.notificationTargets;
-    	      this.summary = defaults.summary;
-    	      this.title = defaults.title;
+            $ = new ResponsePlanIncidentTemplate(Objects.requireNonNull(defaults));
         }
 
         public Builder dedupeString(@Nullable String dedupeString) {
-            this.dedupeString = dedupeString;
+            $.dedupeString = dedupeString;
             return this;
         }
+
         public Builder impact(Integer impact) {
-            this.impact = Objects.requireNonNull(impact);
+            $.impact = impact;
             return this;
         }
+
         public Builder notificationTargets(@Nullable List<ResponsePlanNotificationTargetItem> notificationTargets) {
-            this.notificationTargets = notificationTargets;
+            $.notificationTargets = notificationTargets;
             return this;
         }
+
         public Builder notificationTargets(ResponsePlanNotificationTargetItem... notificationTargets) {
             return notificationTargets(List.of(notificationTargets));
         }
+
         public Builder summary(@Nullable String summary) {
-            this.summary = summary;
+            $.summary = summary;
             return this;
         }
+
         public Builder title(String title) {
-            this.title = Objects.requireNonNull(title);
+            $.title = title;
             return this;
-        }        public ResponsePlanIncidentTemplate build() {
-            return new ResponsePlanIncidentTemplate(dedupeString, impact, notificationTargets, summary, title);
+        }
+
+        public ResponsePlanIncidentTemplate build() {
+            $.impact = Objects.requireNonNull($.impact, "expected parameter 'impact' to be non-null");
+            $.title = Objects.requireNonNull($.title, "expected parameter 'title' to be non-null");
+            return $;
         }
     }
+
 }

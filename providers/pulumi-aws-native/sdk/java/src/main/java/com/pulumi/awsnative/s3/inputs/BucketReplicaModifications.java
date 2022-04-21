@@ -17,45 +17,45 @@ public final class BucketReplicaModifications extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="status", required=true)
-      private final BucketReplicaModificationsStatus status;
+    private BucketReplicaModificationsStatus status;
 
     public BucketReplicaModificationsStatus status() {
         return this.status;
     }
 
-    public BucketReplicaModifications(BucketReplicaModificationsStatus status) {
-        this.status = Objects.requireNonNull(status, "expected parameter 'status' to be non-null");
-    }
+    private BucketReplicaModifications() {}
 
-    private BucketReplicaModifications() {
-        this.status = null;
+    private BucketReplicaModifications(BucketReplicaModifications $) {
+        this.status = $.status;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BucketReplicaModifications defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private BucketReplicaModificationsStatus status;
+        private BucketReplicaModifications $;
 
         public Builder() {
-    	      // Empty
+            $ = new BucketReplicaModifications();
         }
 
         public Builder(BucketReplicaModifications defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.status = defaults.status;
+            $ = new BucketReplicaModifications(Objects.requireNonNull(defaults));
         }
 
         public Builder status(BucketReplicaModificationsStatus status) {
-            this.status = Objects.requireNonNull(status);
+            $.status = status;
             return this;
-        }        public BucketReplicaModifications build() {
-            return new BucketReplicaModifications(status);
+        }
+
+        public BucketReplicaModifications build() {
+            $.status = Objects.requireNonNull($.status, "expected parameter 'status' to be non-null");
+            return $;
         }
     }
+
 }

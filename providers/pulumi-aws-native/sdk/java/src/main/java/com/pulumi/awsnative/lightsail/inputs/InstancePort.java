@@ -25,10 +25,10 @@ public final class InstancePort extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="accessDirection")
-      private final @Nullable String accessDirection;
+    private @Nullable String accessDirection;
 
     public Optional<String> accessDirection() {
-        return this.accessDirection == null ? Optional.empty() : Optional.ofNullable(this.accessDirection);
+        return Optional.ofNullable(this.accessDirection);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class InstancePort extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="accessFrom")
-      private final @Nullable String accessFrom;
+    private @Nullable String accessFrom;
 
     public Optional<String> accessFrom() {
-        return this.accessFrom == null ? Optional.empty() : Optional.ofNullable(this.accessFrom);
+        return Optional.ofNullable(this.accessFrom);
     }
 
     /**
@@ -47,24 +47,24 @@ public final class InstancePort extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="accessType")
-      private final @Nullable String accessType;
+    private @Nullable String accessType;
 
     public Optional<String> accessType() {
-        return this.accessType == null ? Optional.empty() : Optional.ofNullable(this.accessType);
+        return Optional.ofNullable(this.accessType);
     }
 
     @Import(name="cidrListAliases")
-      private final @Nullable List<String> cidrListAliases;
+    private @Nullable List<String> cidrListAliases;
 
-    public List<String> cidrListAliases() {
-        return this.cidrListAliases == null ? List.of() : this.cidrListAliases;
+    public Optional<List<String>> cidrListAliases() {
+        return Optional.ofNullable(this.cidrListAliases);
     }
 
     @Import(name="cidrs")
-      private final @Nullable List<String> cidrs;
+    private @Nullable List<String> cidrs;
 
-    public List<String> cidrs() {
-        return this.cidrs == null ? List.of() : this.cidrs;
+    public Optional<List<String>> cidrs() {
+        return Optional.ofNullable(this.cidrs);
     }
 
     /**
@@ -72,10 +72,10 @@ public final class InstancePort extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="commonName")
-      private final @Nullable String commonName;
+    private @Nullable String commonName;
 
     public Optional<String> commonName() {
-        return this.commonName == null ? Optional.empty() : Optional.ofNullable(this.commonName);
+        return Optional.ofNullable(this.commonName);
     }
 
     /**
@@ -83,17 +83,17 @@ public final class InstancePort extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="fromPort")
-      private final @Nullable Integer fromPort;
+    private @Nullable Integer fromPort;
 
     public Optional<Integer> fromPort() {
-        return this.fromPort == null ? Optional.empty() : Optional.ofNullable(this.fromPort);
+        return Optional.ofNullable(this.fromPort);
     }
 
     @Import(name="ipv6Cidrs")
-      private final @Nullable List<String> ipv6Cidrs;
+    private @Nullable List<String> ipv6Cidrs;
 
-    public List<String> ipv6Cidrs() {
-        return this.ipv6Cidrs == null ? List.of() : this.ipv6Cidrs;
+    public Optional<List<String>> ipv6Cidrs() {
+        return Optional.ofNullable(this.ipv6Cidrs);
     }
 
     /**
@@ -101,10 +101,10 @@ public final class InstancePort extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="protocol")
-      private final @Nullable String protocol;
+    private @Nullable String protocol;
 
     public Optional<String> protocol() {
-        return this.protocol == null ? Optional.empty() : Optional.ofNullable(this.protocol);
+        return Optional.ofNullable(this.protocol);
     }
 
     /**
@@ -112,136 +112,110 @@ public final class InstancePort extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="toPort")
-      private final @Nullable Integer toPort;
+    private @Nullable Integer toPort;
 
     public Optional<Integer> toPort() {
-        return this.toPort == null ? Optional.empty() : Optional.ofNullable(this.toPort);
+        return Optional.ofNullable(this.toPort);
     }
 
-    public InstancePort(
-        @Nullable String accessDirection,
-        @Nullable String accessFrom,
-        @Nullable String accessType,
-        @Nullable List<String> cidrListAliases,
-        @Nullable List<String> cidrs,
-        @Nullable String commonName,
-        @Nullable Integer fromPort,
-        @Nullable List<String> ipv6Cidrs,
-        @Nullable String protocol,
-        @Nullable Integer toPort) {
-        this.accessDirection = accessDirection;
-        this.accessFrom = accessFrom;
-        this.accessType = accessType;
-        this.cidrListAliases = cidrListAliases;
-        this.cidrs = cidrs;
-        this.commonName = commonName;
-        this.fromPort = fromPort;
-        this.ipv6Cidrs = ipv6Cidrs;
-        this.protocol = protocol;
-        this.toPort = toPort;
-    }
+    private InstancePort() {}
 
-    private InstancePort() {
-        this.accessDirection = null;
-        this.accessFrom = null;
-        this.accessType = null;
-        this.cidrListAliases = List.of();
-        this.cidrs = List.of();
-        this.commonName = null;
-        this.fromPort = null;
-        this.ipv6Cidrs = List.of();
-        this.protocol = null;
-        this.toPort = null;
+    private InstancePort(InstancePort $) {
+        this.accessDirection = $.accessDirection;
+        this.accessFrom = $.accessFrom;
+        this.accessType = $.accessType;
+        this.cidrListAliases = $.cidrListAliases;
+        this.cidrs = $.cidrs;
+        this.commonName = $.commonName;
+        this.fromPort = $.fromPort;
+        this.ipv6Cidrs = $.ipv6Cidrs;
+        this.protocol = $.protocol;
+        this.toPort = $.toPort;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(InstancePort defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String accessDirection;
-        private @Nullable String accessFrom;
-        private @Nullable String accessType;
-        private @Nullable List<String> cidrListAliases;
-        private @Nullable List<String> cidrs;
-        private @Nullable String commonName;
-        private @Nullable Integer fromPort;
-        private @Nullable List<String> ipv6Cidrs;
-        private @Nullable String protocol;
-        private @Nullable Integer toPort;
+        private InstancePort $;
 
         public Builder() {
-    	      // Empty
+            $ = new InstancePort();
         }
 
         public Builder(InstancePort defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accessDirection = defaults.accessDirection;
-    	      this.accessFrom = defaults.accessFrom;
-    	      this.accessType = defaults.accessType;
-    	      this.cidrListAliases = defaults.cidrListAliases;
-    	      this.cidrs = defaults.cidrs;
-    	      this.commonName = defaults.commonName;
-    	      this.fromPort = defaults.fromPort;
-    	      this.ipv6Cidrs = defaults.ipv6Cidrs;
-    	      this.protocol = defaults.protocol;
-    	      this.toPort = defaults.toPort;
+            $ = new InstancePort(Objects.requireNonNull(defaults));
         }
 
         public Builder accessDirection(@Nullable String accessDirection) {
-            this.accessDirection = accessDirection;
+            $.accessDirection = accessDirection;
             return this;
         }
+
         public Builder accessFrom(@Nullable String accessFrom) {
-            this.accessFrom = accessFrom;
+            $.accessFrom = accessFrom;
             return this;
         }
+
         public Builder accessType(@Nullable String accessType) {
-            this.accessType = accessType;
+            $.accessType = accessType;
             return this;
         }
+
         public Builder cidrListAliases(@Nullable List<String> cidrListAliases) {
-            this.cidrListAliases = cidrListAliases;
+            $.cidrListAliases = cidrListAliases;
             return this;
         }
+
         public Builder cidrListAliases(String... cidrListAliases) {
             return cidrListAliases(List.of(cidrListAliases));
         }
+
         public Builder cidrs(@Nullable List<String> cidrs) {
-            this.cidrs = cidrs;
+            $.cidrs = cidrs;
             return this;
         }
+
         public Builder cidrs(String... cidrs) {
             return cidrs(List.of(cidrs));
         }
+
         public Builder commonName(@Nullable String commonName) {
-            this.commonName = commonName;
+            $.commonName = commonName;
             return this;
         }
+
         public Builder fromPort(@Nullable Integer fromPort) {
-            this.fromPort = fromPort;
+            $.fromPort = fromPort;
             return this;
         }
+
         public Builder ipv6Cidrs(@Nullable List<String> ipv6Cidrs) {
-            this.ipv6Cidrs = ipv6Cidrs;
+            $.ipv6Cidrs = ipv6Cidrs;
             return this;
         }
+
         public Builder ipv6Cidrs(String... ipv6Cidrs) {
             return ipv6Cidrs(List.of(ipv6Cidrs));
         }
+
         public Builder protocol(@Nullable String protocol) {
-            this.protocol = protocol;
+            $.protocol = protocol;
             return this;
         }
+
         public Builder toPort(@Nullable Integer toPort) {
-            this.toPort = toPort;
+            $.toPort = toPort;
             return this;
-        }        public InstancePort build() {
-            return new InstancePort(accessDirection, accessFrom, accessType, cidrListAliases, cidrs, commonName, fromPort, ipv6Cidrs, protocol, toPort);
+        }
+
+        public InstancePort build() {
+            return $;
         }
     }
+
 }

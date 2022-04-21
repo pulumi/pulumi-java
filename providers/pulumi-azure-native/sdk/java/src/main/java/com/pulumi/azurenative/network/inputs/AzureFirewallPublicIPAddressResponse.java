@@ -23,45 +23,44 @@ public final class AzureFirewallPublicIPAddressResponse extends com.pulumi.resou
      * 
      */
     @Import(name="address")
-      private final @Nullable String address;
+    private @Nullable String address;
 
     public Optional<String> address() {
-        return this.address == null ? Optional.empty() : Optional.ofNullable(this.address);
+        return Optional.ofNullable(this.address);
     }
 
-    public AzureFirewallPublicIPAddressResponse(@Nullable String address) {
-        this.address = address;
-    }
+    private AzureFirewallPublicIPAddressResponse() {}
 
-    private AzureFirewallPublicIPAddressResponse() {
-        this.address = null;
+    private AzureFirewallPublicIPAddressResponse(AzureFirewallPublicIPAddressResponse $) {
+        this.address = $.address;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AzureFirewallPublicIPAddressResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String address;
+        private AzureFirewallPublicIPAddressResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AzureFirewallPublicIPAddressResponse();
         }
 
         public Builder(AzureFirewallPublicIPAddressResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.address = defaults.address;
+            $ = new AzureFirewallPublicIPAddressResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder address(@Nullable String address) {
-            this.address = address;
+            $.address = address;
             return this;
-        }        public AzureFirewallPublicIPAddressResponse build() {
-            return new AzureFirewallPublicIPAddressResponse(address);
+        }
+
+        public AzureFirewallPublicIPAddressResponse build() {
+            return $;
         }
     }
+
 }

@@ -10,6 +10,7 @@ import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +27,10 @@ public final class TrafficWeightArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="latestRevision")
-      private final @Nullable Output<Boolean> latestRevision;
+    private @Nullable Output<Boolean> latestRevision;
 
-    public Output<Boolean> latestRevision() {
-        return this.latestRevision == null ? Codegen.empty() : this.latestRevision;
+    public Optional<Output<Boolean>> latestRevision() {
+        return Optional.ofNullable(this.latestRevision);
     }
 
     /**
@@ -37,10 +38,10 @@ public final class TrafficWeightArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="revisionName")
-      private final @Nullable Output<String> revisionName;
+    private @Nullable Output<String> revisionName;
 
-    public Output<String> revisionName() {
-        return this.revisionName == null ? Codegen.empty() : this.revisionName;
+    public Optional<Output<String>> revisionName() {
+        return Optional.ofNullable(this.revisionName);
     }
 
     /**
@@ -48,76 +49,69 @@ public final class TrafficWeightArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="weight")
-      private final @Nullable Output<Integer> weight;
+    private @Nullable Output<Integer> weight;
 
-    public Output<Integer> weight() {
-        return this.weight == null ? Codegen.empty() : this.weight;
+    public Optional<Output<Integer>> weight() {
+        return Optional.ofNullable(this.weight);
     }
 
-    public TrafficWeightArgs(
-        @Nullable Output<Boolean> latestRevision,
-        @Nullable Output<String> revisionName,
-        @Nullable Output<Integer> weight) {
-        this.latestRevision = Codegen.booleanProp("latestRevision").output().arg(latestRevision).def(false).getNullable();
-        this.revisionName = revisionName;
-        this.weight = weight;
-    }
+    private TrafficWeightArgs() {}
 
-    private TrafficWeightArgs() {
-        this.latestRevision = Codegen.empty();
-        this.revisionName = Codegen.empty();
-        this.weight = Codegen.empty();
+    private TrafficWeightArgs(TrafficWeightArgs $) {
+        this.latestRevision = $.latestRevision;
+        this.revisionName = $.revisionName;
+        this.weight = $.weight;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TrafficWeightArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> latestRevision;
-        private @Nullable Output<String> revisionName;
-        private @Nullable Output<Integer> weight;
+        private TrafficWeightArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TrafficWeightArgs();
         }
 
         public Builder(TrafficWeightArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.latestRevision = defaults.latestRevision;
-    	      this.revisionName = defaults.revisionName;
-    	      this.weight = defaults.weight;
+            $ = new TrafficWeightArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder latestRevision(@Nullable Output<Boolean> latestRevision) {
-            this.latestRevision = latestRevision;
+            $.latestRevision = latestRevision;
             return this;
         }
-        public Builder latestRevision(@Nullable Boolean latestRevision) {
-            this.latestRevision = Codegen.ofNullable(latestRevision);
-            return this;
+
+        public Builder latestRevision(Boolean latestRevision) {
+            return latestRevision(Output.of(latestRevision));
         }
+
         public Builder revisionName(@Nullable Output<String> revisionName) {
-            this.revisionName = revisionName;
+            $.revisionName = revisionName;
             return this;
         }
-        public Builder revisionName(@Nullable String revisionName) {
-            this.revisionName = Codegen.ofNullable(revisionName);
-            return this;
+
+        public Builder revisionName(String revisionName) {
+            return revisionName(Output.of(revisionName));
         }
+
         public Builder weight(@Nullable Output<Integer> weight) {
-            this.weight = weight;
+            $.weight = weight;
             return this;
         }
-        public Builder weight(@Nullable Integer weight) {
-            this.weight = Codegen.ofNullable(weight);
-            return this;
-        }        public TrafficWeightArgs build() {
-            return new TrafficWeightArgs(latestRevision, revisionName, weight);
+
+        public Builder weight(Integer weight) {
+            return weight(Output.of(weight));
+        }
+
+        public TrafficWeightArgs build() {
+            $.latestRevision = Codegen.booleanProp("latestRevision").output().arg($.latestRevision).def(false).getNullable();
+            return $;
         }
     }
+
 }

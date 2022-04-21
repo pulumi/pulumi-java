@@ -5,9 +5,9 @@ package com.pulumi.gcp.monitoring.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class UptimeCheckConfigResourceGroupArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="groupId")
-      private final @Nullable Output<String> groupId;
+    private @Nullable Output<String> groupId;
 
-    public Output<String> groupId() {
-        return this.groupId == null ? Codegen.empty() : this.groupId;
+    public Optional<Output<String>> groupId() {
+        return Optional.ofNullable(this.groupId);
     }
 
     /**
@@ -32,63 +32,58 @@ public final class UptimeCheckConfigResourceGroupArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="resourceType")
-      private final @Nullable Output<String> resourceType;
+    private @Nullable Output<String> resourceType;
 
-    public Output<String> resourceType() {
-        return this.resourceType == null ? Codegen.empty() : this.resourceType;
+    public Optional<Output<String>> resourceType() {
+        return Optional.ofNullable(this.resourceType);
     }
 
-    public UptimeCheckConfigResourceGroupArgs(
-        @Nullable Output<String> groupId,
-        @Nullable Output<String> resourceType) {
-        this.groupId = groupId;
-        this.resourceType = resourceType;
-    }
+    private UptimeCheckConfigResourceGroupArgs() {}
 
-    private UptimeCheckConfigResourceGroupArgs() {
-        this.groupId = Codegen.empty();
-        this.resourceType = Codegen.empty();
+    private UptimeCheckConfigResourceGroupArgs(UptimeCheckConfigResourceGroupArgs $) {
+        this.groupId = $.groupId;
+        this.resourceType = $.resourceType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(UptimeCheckConfigResourceGroupArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> groupId;
-        private @Nullable Output<String> resourceType;
+        private UptimeCheckConfigResourceGroupArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new UptimeCheckConfigResourceGroupArgs();
         }
 
         public Builder(UptimeCheckConfigResourceGroupArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.groupId = defaults.groupId;
-    	      this.resourceType = defaults.resourceType;
+            $ = new UptimeCheckConfigResourceGroupArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder groupId(@Nullable Output<String> groupId) {
-            this.groupId = groupId;
+            $.groupId = groupId;
             return this;
         }
-        public Builder groupId(@Nullable String groupId) {
-            this.groupId = Codegen.ofNullable(groupId);
-            return this;
+
+        public Builder groupId(String groupId) {
+            return groupId(Output.of(groupId));
         }
+
         public Builder resourceType(@Nullable Output<String> resourceType) {
-            this.resourceType = resourceType;
+            $.resourceType = resourceType;
             return this;
         }
-        public Builder resourceType(@Nullable String resourceType) {
-            this.resourceType = Codegen.ofNullable(resourceType);
-            return this;
-        }        public UptimeCheckConfigResourceGroupArgs build() {
-            return new UptimeCheckConfigResourceGroupArgs(groupId, resourceType);
+
+        public Builder resourceType(String resourceType) {
+            return resourceType(Output.of(resourceType));
+        }
+
+        public UptimeCheckConfigResourceGroupArgs build() {
+            return $;
         }
     }
+
 }

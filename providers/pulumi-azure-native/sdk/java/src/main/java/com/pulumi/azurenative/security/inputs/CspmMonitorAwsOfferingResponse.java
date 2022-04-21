@@ -25,7 +25,7 @@ public final class CspmMonitorAwsOfferingResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="description", required=true)
-      private final String description;
+    private String description;
 
     public String description() {
         return this.description;
@@ -36,10 +36,10 @@ public final class CspmMonitorAwsOfferingResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="nativeCloudConnection")
-      private final @Nullable CspmMonitorAwsOfferingResponseNativeCloudConnection nativeCloudConnection;
+    private @Nullable CspmMonitorAwsOfferingResponseNativeCloudConnection nativeCloudConnection;
 
     public Optional<CspmMonitorAwsOfferingResponseNativeCloudConnection> nativeCloudConnection() {
-        return this.nativeCloudConnection == null ? Optional.empty() : Optional.ofNullable(this.nativeCloudConnection);
+        return Optional.ofNullable(this.nativeCloudConnection);
     }
 
     /**
@@ -48,64 +48,58 @@ public final class CspmMonitorAwsOfferingResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="offeringType", required=true)
-      private final String offeringType;
+    private String offeringType;
 
     public String offeringType() {
         return this.offeringType;
     }
 
-    public CspmMonitorAwsOfferingResponse(
-        String description,
-        @Nullable CspmMonitorAwsOfferingResponseNativeCloudConnection nativeCloudConnection,
-        String offeringType) {
-        this.description = Objects.requireNonNull(description, "expected parameter 'description' to be non-null");
-        this.nativeCloudConnection = nativeCloudConnection;
-        this.offeringType = Codegen.stringProp("offeringType").arg(offeringType).require();
-    }
+    private CspmMonitorAwsOfferingResponse() {}
 
-    private CspmMonitorAwsOfferingResponse() {
-        this.description = null;
-        this.nativeCloudConnection = null;
-        this.offeringType = null;
+    private CspmMonitorAwsOfferingResponse(CspmMonitorAwsOfferingResponse $) {
+        this.description = $.description;
+        this.nativeCloudConnection = $.nativeCloudConnection;
+        this.offeringType = $.offeringType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CspmMonitorAwsOfferingResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String description;
-        private @Nullable CspmMonitorAwsOfferingResponseNativeCloudConnection nativeCloudConnection;
-        private String offeringType;
+        private CspmMonitorAwsOfferingResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new CspmMonitorAwsOfferingResponse();
         }
 
         public Builder(CspmMonitorAwsOfferingResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.description = defaults.description;
-    	      this.nativeCloudConnection = defaults.nativeCloudConnection;
-    	      this.offeringType = defaults.offeringType;
+            $ = new CspmMonitorAwsOfferingResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder description(String description) {
-            this.description = Objects.requireNonNull(description);
+            $.description = description;
             return this;
         }
+
         public Builder nativeCloudConnection(@Nullable CspmMonitorAwsOfferingResponseNativeCloudConnection nativeCloudConnection) {
-            this.nativeCloudConnection = nativeCloudConnection;
+            $.nativeCloudConnection = nativeCloudConnection;
             return this;
         }
+
         public Builder offeringType(String offeringType) {
-            this.offeringType = Objects.requireNonNull(offeringType);
+            $.offeringType = offeringType;
             return this;
-        }        public CspmMonitorAwsOfferingResponse build() {
-            return new CspmMonitorAwsOfferingResponse(description, nativeCloudConnection, offeringType);
+        }
+
+        public CspmMonitorAwsOfferingResponse build() {
+            $.description = Objects.requireNonNull($.description, "expected parameter 'description' to be non-null");
+            $.offeringType = Codegen.stringProp("offeringType").arg($.offeringType).require();
+            return $;
         }
     }
+
 }

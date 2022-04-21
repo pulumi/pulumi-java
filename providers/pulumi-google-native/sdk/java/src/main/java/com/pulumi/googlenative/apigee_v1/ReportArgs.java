@@ -5,12 +5,12 @@ package com.pulumi.googlenative.apigee_v1;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.apigee_v1.inputs.GoogleCloudApigeeV1CustomReportMetricArgs;
 import com.pulumi.googlenative.apigee_v1.inputs.GoogleCloudApigeeV1ReportPropertyArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,10 @@ public final class ReportArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="chartType")
-      private final @Nullable Output<String> chartType;
+    private @Nullable Output<String> chartType;
 
-    public Output<String> chartType() {
-        return this.chartType == null ? Codegen.empty() : this.chartType;
+    public Optional<Output<String>> chartType() {
+        return Optional.ofNullable(this.chartType);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class ReportArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="comments")
-      private final @Nullable Output<List<String>> comments;
+    private @Nullable Output<List<String>> comments;
 
-    public Output<List<String>> comments() {
-        return this.comments == null ? Codegen.empty() : this.comments;
+    public Optional<Output<List<String>>> comments() {
+        return Optional.ofNullable(this.comments);
     }
 
     /**
@@ -45,10 +45,10 @@ public final class ReportArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="dimensions")
-      private final @Nullable Output<List<String>> dimensions;
+    private @Nullable Output<List<String>> dimensions;
 
-    public Output<List<String>> dimensions() {
-        return this.dimensions == null ? Codegen.empty() : this.dimensions;
+    public Optional<Output<List<String>>> dimensions() {
+        return Optional.ofNullable(this.dimensions);
     }
 
     /**
@@ -56,10 +56,10 @@ public final class ReportArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="displayName")
-      private final @Nullable Output<String> displayName;
+    private @Nullable Output<String> displayName;
 
-    public Output<String> displayName() {
-        return this.displayName == null ? Codegen.empty() : this.displayName;
+    public Optional<Output<String>> displayName() {
+        return Optional.ofNullable(this.displayName);
     }
 
     /**
@@ -67,10 +67,10 @@ public final class ReportArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="filter")
-      private final @Nullable Output<String> filter;
+    private @Nullable Output<String> filter;
 
-    public Output<String> filter() {
-        return this.filter == null ? Codegen.empty() : this.filter;
+    public Optional<Output<String>> filter() {
+        return Optional.ofNullable(this.filter);
     }
 
     /**
@@ -78,10 +78,10 @@ public final class ReportArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="fromTime")
-      private final @Nullable Output<String> fromTime;
+    private @Nullable Output<String> fromTime;
 
-    public Output<String> fromTime() {
-        return this.fromTime == null ? Codegen.empty() : this.fromTime;
+    public Optional<Output<String>> fromTime() {
+        return Optional.ofNullable(this.fromTime);
     }
 
     /**
@@ -89,10 +89,10 @@ public final class ReportArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="limit")
-      private final @Nullable Output<String> limit;
+    private @Nullable Output<String> limit;
 
-    public Output<String> limit() {
-        return this.limit == null ? Codegen.empty() : this.limit;
+    public Optional<Output<String>> limit() {
+        return Optional.ofNullable(this.limit);
     }
 
     /**
@@ -100,7 +100,7 @@ public final class ReportArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="metrics", required=true)
-      private final Output<List<GoogleCloudApigeeV1CustomReportMetricArgs>> metrics;
+    private Output<List<GoogleCloudApigeeV1CustomReportMetricArgs>> metrics;
 
     public Output<List<GoogleCloudApigeeV1CustomReportMetricArgs>> metrics() {
         return this.metrics;
@@ -111,10 +111,10 @@ public final class ReportArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -122,14 +122,14 @@ public final class ReportArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="offset")
-      private final @Nullable Output<String> offset;
+    private @Nullable Output<String> offset;
 
-    public Output<String> offset() {
-        return this.offset == null ? Codegen.empty() : this.offset;
+    public Optional<Output<String>> offset() {
+        return Optional.ofNullable(this.offset);
     }
 
     @Import(name="organizationId", required=true)
-      private final Output<String> organizationId;
+    private Output<String> organizationId;
 
     public Output<String> organizationId() {
         return this.organizationId;
@@ -140,10 +140,10 @@ public final class ReportArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="properties")
-      private final @Nullable Output<List<GoogleCloudApigeeV1ReportPropertyArgs>> properties;
+    private @Nullable Output<List<GoogleCloudApigeeV1ReportPropertyArgs>> properties;
 
-    public Output<List<GoogleCloudApigeeV1ReportPropertyArgs>> properties() {
-        return this.properties == null ? Codegen.empty() : this.properties;
+    public Optional<Output<List<GoogleCloudApigeeV1ReportPropertyArgs>>> properties() {
+        return Optional.ofNullable(this.properties);
     }
 
     /**
@@ -151,10 +151,10 @@ public final class ReportArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="sortByCols")
-      private final @Nullable Output<List<String>> sortByCols;
+    private @Nullable Output<List<String>> sortByCols;
 
-    public Output<List<String>> sortByCols() {
-        return this.sortByCols == null ? Codegen.empty() : this.sortByCols;
+    public Optional<Output<List<String>>> sortByCols() {
+        return Optional.ofNullable(this.sortByCols);
     }
 
     /**
@@ -162,10 +162,10 @@ public final class ReportArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="sortOrder")
-      private final @Nullable Output<String> sortOrder;
+    private @Nullable Output<String> sortOrder;
 
-    public Output<String> sortOrder() {
-        return this.sortOrder == null ? Codegen.empty() : this.sortOrder;
+    public Optional<Output<String>> sortOrder() {
+        return Optional.ofNullable(this.sortOrder);
     }
 
     /**
@@ -173,10 +173,10 @@ public final class ReportArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<List<String>> tags;
+    private @Nullable Output<List<String>> tags;
 
-    public Output<List<String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<List<String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -184,10 +184,10 @@ public final class ReportArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="timeUnit")
-      private final @Nullable Output<String> timeUnit;
+    private @Nullable Output<String> timeUnit;
 
-    public Output<String> timeUnit() {
-        return this.timeUnit == null ? Codegen.empty() : this.timeUnit;
+    public Optional<Output<String>> timeUnit() {
+        return Optional.ofNullable(this.timeUnit);
     }
 
     /**
@@ -195,10 +195,10 @@ public final class ReportArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="toTime")
-      private final @Nullable Output<String> toTime;
+    private @Nullable Output<String> toTime;
 
-    public Output<String> toTime() {
-        return this.toTime == null ? Codegen.empty() : this.toTime;
+    public Optional<Output<String>> toTime() {
+        return Optional.ofNullable(this.toTime);
     }
 
     /**
@@ -206,289 +206,244 @@ public final class ReportArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="topk")
-      private final @Nullable Output<String> topk;
+    private @Nullable Output<String> topk;
 
-    public Output<String> topk() {
-        return this.topk == null ? Codegen.empty() : this.topk;
+    public Optional<Output<String>> topk() {
+        return Optional.ofNullable(this.topk);
     }
 
-    public ReportArgs(
-        @Nullable Output<String> chartType,
-        @Nullable Output<List<String>> comments,
-        @Nullable Output<List<String>> dimensions,
-        @Nullable Output<String> displayName,
-        @Nullable Output<String> filter,
-        @Nullable Output<String> fromTime,
-        @Nullable Output<String> limit,
-        Output<List<GoogleCloudApigeeV1CustomReportMetricArgs>> metrics,
-        @Nullable Output<String> name,
-        @Nullable Output<String> offset,
-        Output<String> organizationId,
-        @Nullable Output<List<GoogleCloudApigeeV1ReportPropertyArgs>> properties,
-        @Nullable Output<List<String>> sortByCols,
-        @Nullable Output<String> sortOrder,
-        @Nullable Output<List<String>> tags,
-        @Nullable Output<String> timeUnit,
-        @Nullable Output<String> toTime,
-        @Nullable Output<String> topk) {
-        this.chartType = chartType;
-        this.comments = comments;
-        this.dimensions = dimensions;
-        this.displayName = displayName;
-        this.filter = filter;
-        this.fromTime = fromTime;
-        this.limit = limit;
-        this.metrics = Objects.requireNonNull(metrics, "expected parameter 'metrics' to be non-null");
-        this.name = name;
-        this.offset = offset;
-        this.organizationId = Objects.requireNonNull(organizationId, "expected parameter 'organizationId' to be non-null");
-        this.properties = properties;
-        this.sortByCols = sortByCols;
-        this.sortOrder = sortOrder;
-        this.tags = tags;
-        this.timeUnit = timeUnit;
-        this.toTime = toTime;
-        this.topk = topk;
-    }
+    private ReportArgs() {}
 
-    private ReportArgs() {
-        this.chartType = Codegen.empty();
-        this.comments = Codegen.empty();
-        this.dimensions = Codegen.empty();
-        this.displayName = Codegen.empty();
-        this.filter = Codegen.empty();
-        this.fromTime = Codegen.empty();
-        this.limit = Codegen.empty();
-        this.metrics = Codegen.empty();
-        this.name = Codegen.empty();
-        this.offset = Codegen.empty();
-        this.organizationId = Codegen.empty();
-        this.properties = Codegen.empty();
-        this.sortByCols = Codegen.empty();
-        this.sortOrder = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.timeUnit = Codegen.empty();
-        this.toTime = Codegen.empty();
-        this.topk = Codegen.empty();
+    private ReportArgs(ReportArgs $) {
+        this.chartType = $.chartType;
+        this.comments = $.comments;
+        this.dimensions = $.dimensions;
+        this.displayName = $.displayName;
+        this.filter = $.filter;
+        this.fromTime = $.fromTime;
+        this.limit = $.limit;
+        this.metrics = $.metrics;
+        this.name = $.name;
+        this.offset = $.offset;
+        this.organizationId = $.organizationId;
+        this.properties = $.properties;
+        this.sortByCols = $.sortByCols;
+        this.sortOrder = $.sortOrder;
+        this.tags = $.tags;
+        this.timeUnit = $.timeUnit;
+        this.toTime = $.toTime;
+        this.topk = $.topk;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ReportArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> chartType;
-        private @Nullable Output<List<String>> comments;
-        private @Nullable Output<List<String>> dimensions;
-        private @Nullable Output<String> displayName;
-        private @Nullable Output<String> filter;
-        private @Nullable Output<String> fromTime;
-        private @Nullable Output<String> limit;
-        private Output<List<GoogleCloudApigeeV1CustomReportMetricArgs>> metrics;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> offset;
-        private Output<String> organizationId;
-        private @Nullable Output<List<GoogleCloudApigeeV1ReportPropertyArgs>> properties;
-        private @Nullable Output<List<String>> sortByCols;
-        private @Nullable Output<String> sortOrder;
-        private @Nullable Output<List<String>> tags;
-        private @Nullable Output<String> timeUnit;
-        private @Nullable Output<String> toTime;
-        private @Nullable Output<String> topk;
+        private ReportArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ReportArgs();
         }
 
         public Builder(ReportArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.chartType = defaults.chartType;
-    	      this.comments = defaults.comments;
-    	      this.dimensions = defaults.dimensions;
-    	      this.displayName = defaults.displayName;
-    	      this.filter = defaults.filter;
-    	      this.fromTime = defaults.fromTime;
-    	      this.limit = defaults.limit;
-    	      this.metrics = defaults.metrics;
-    	      this.name = defaults.name;
-    	      this.offset = defaults.offset;
-    	      this.organizationId = defaults.organizationId;
-    	      this.properties = defaults.properties;
-    	      this.sortByCols = defaults.sortByCols;
-    	      this.sortOrder = defaults.sortOrder;
-    	      this.tags = defaults.tags;
-    	      this.timeUnit = defaults.timeUnit;
-    	      this.toTime = defaults.toTime;
-    	      this.topk = defaults.topk;
+            $ = new ReportArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder chartType(@Nullable Output<String> chartType) {
-            this.chartType = chartType;
+            $.chartType = chartType;
             return this;
         }
-        public Builder chartType(@Nullable String chartType) {
-            this.chartType = Codegen.ofNullable(chartType);
-            return this;
+
+        public Builder chartType(String chartType) {
+            return chartType(Output.of(chartType));
         }
+
         public Builder comments(@Nullable Output<List<String>> comments) {
-            this.comments = comments;
+            $.comments = comments;
             return this;
         }
-        public Builder comments(@Nullable List<String> comments) {
-            this.comments = Codegen.ofNullable(comments);
-            return this;
+
+        public Builder comments(List<String> comments) {
+            return comments(Output.of(comments));
         }
+
         public Builder comments(String... comments) {
             return comments(List.of(comments));
         }
+
         public Builder dimensions(@Nullable Output<List<String>> dimensions) {
-            this.dimensions = dimensions;
+            $.dimensions = dimensions;
             return this;
         }
-        public Builder dimensions(@Nullable List<String> dimensions) {
-            this.dimensions = Codegen.ofNullable(dimensions);
-            return this;
+
+        public Builder dimensions(List<String> dimensions) {
+            return dimensions(Output.of(dimensions));
         }
+
         public Builder dimensions(String... dimensions) {
             return dimensions(List.of(dimensions));
         }
+
         public Builder displayName(@Nullable Output<String> displayName) {
-            this.displayName = displayName;
+            $.displayName = displayName;
             return this;
         }
-        public Builder displayName(@Nullable String displayName) {
-            this.displayName = Codegen.ofNullable(displayName);
-            return this;
+
+        public Builder displayName(String displayName) {
+            return displayName(Output.of(displayName));
         }
+
         public Builder filter(@Nullable Output<String> filter) {
-            this.filter = filter;
+            $.filter = filter;
             return this;
         }
-        public Builder filter(@Nullable String filter) {
-            this.filter = Codegen.ofNullable(filter);
-            return this;
+
+        public Builder filter(String filter) {
+            return filter(Output.of(filter));
         }
+
         public Builder fromTime(@Nullable Output<String> fromTime) {
-            this.fromTime = fromTime;
+            $.fromTime = fromTime;
             return this;
         }
-        public Builder fromTime(@Nullable String fromTime) {
-            this.fromTime = Codegen.ofNullable(fromTime);
-            return this;
+
+        public Builder fromTime(String fromTime) {
+            return fromTime(Output.of(fromTime));
         }
+
         public Builder limit(@Nullable Output<String> limit) {
-            this.limit = limit;
+            $.limit = limit;
             return this;
         }
-        public Builder limit(@Nullable String limit) {
-            this.limit = Codegen.ofNullable(limit);
-            return this;
+
+        public Builder limit(String limit) {
+            return limit(Output.of(limit));
         }
+
         public Builder metrics(Output<List<GoogleCloudApigeeV1CustomReportMetricArgs>> metrics) {
-            this.metrics = Objects.requireNonNull(metrics);
+            $.metrics = metrics;
             return this;
         }
+
         public Builder metrics(List<GoogleCloudApigeeV1CustomReportMetricArgs> metrics) {
-            this.metrics = Output.of(Objects.requireNonNull(metrics));
-            return this;
+            return metrics(Output.of(metrics));
         }
+
         public Builder metrics(GoogleCloudApigeeV1CustomReportMetricArgs... metrics) {
             return metrics(List.of(metrics));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder offset(@Nullable Output<String> offset) {
-            this.offset = offset;
+            $.offset = offset;
             return this;
         }
-        public Builder offset(@Nullable String offset) {
-            this.offset = Codegen.ofNullable(offset);
-            return this;
+
+        public Builder offset(String offset) {
+            return offset(Output.of(offset));
         }
+
         public Builder organizationId(Output<String> organizationId) {
-            this.organizationId = Objects.requireNonNull(organizationId);
+            $.organizationId = organizationId;
             return this;
         }
+
         public Builder organizationId(String organizationId) {
-            this.organizationId = Output.of(Objects.requireNonNull(organizationId));
-            return this;
+            return organizationId(Output.of(organizationId));
         }
+
         public Builder properties(@Nullable Output<List<GoogleCloudApigeeV1ReportPropertyArgs>> properties) {
-            this.properties = properties;
+            $.properties = properties;
             return this;
         }
-        public Builder properties(@Nullable List<GoogleCloudApigeeV1ReportPropertyArgs> properties) {
-            this.properties = Codegen.ofNullable(properties);
-            return this;
+
+        public Builder properties(List<GoogleCloudApigeeV1ReportPropertyArgs> properties) {
+            return properties(Output.of(properties));
         }
+
         public Builder properties(GoogleCloudApigeeV1ReportPropertyArgs... properties) {
             return properties(List.of(properties));
         }
+
         public Builder sortByCols(@Nullable Output<List<String>> sortByCols) {
-            this.sortByCols = sortByCols;
+            $.sortByCols = sortByCols;
             return this;
         }
-        public Builder sortByCols(@Nullable List<String> sortByCols) {
-            this.sortByCols = Codegen.ofNullable(sortByCols);
-            return this;
+
+        public Builder sortByCols(List<String> sortByCols) {
+            return sortByCols(Output.of(sortByCols));
         }
+
         public Builder sortByCols(String... sortByCols) {
             return sortByCols(List.of(sortByCols));
         }
+
         public Builder sortOrder(@Nullable Output<String> sortOrder) {
-            this.sortOrder = sortOrder;
+            $.sortOrder = sortOrder;
             return this;
         }
-        public Builder sortOrder(@Nullable String sortOrder) {
-            this.sortOrder = Codegen.ofNullable(sortOrder);
-            return this;
+
+        public Builder sortOrder(String sortOrder) {
+            return sortOrder(Output.of(sortOrder));
         }
+
         public Builder tags(@Nullable Output<List<String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable List<String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(List<String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tags(String... tags) {
             return tags(List.of(tags));
         }
+
         public Builder timeUnit(@Nullable Output<String> timeUnit) {
-            this.timeUnit = timeUnit;
+            $.timeUnit = timeUnit;
             return this;
         }
-        public Builder timeUnit(@Nullable String timeUnit) {
-            this.timeUnit = Codegen.ofNullable(timeUnit);
-            return this;
+
+        public Builder timeUnit(String timeUnit) {
+            return timeUnit(Output.of(timeUnit));
         }
+
         public Builder toTime(@Nullable Output<String> toTime) {
-            this.toTime = toTime;
+            $.toTime = toTime;
             return this;
         }
-        public Builder toTime(@Nullable String toTime) {
-            this.toTime = Codegen.ofNullable(toTime);
-            return this;
+
+        public Builder toTime(String toTime) {
+            return toTime(Output.of(toTime));
         }
+
         public Builder topk(@Nullable Output<String> topk) {
-            this.topk = topk;
+            $.topk = topk;
             return this;
         }
-        public Builder topk(@Nullable String topk) {
-            this.topk = Codegen.ofNullable(topk);
-            return this;
-        }        public ReportArgs build() {
-            return new ReportArgs(chartType, comments, dimensions, displayName, filter, fromTime, limit, metrics, name, offset, organizationId, properties, sortByCols, sortOrder, tags, timeUnit, toTime, topk);
+
+        public Builder topk(String topk) {
+            return topk(Output.of(topk));
+        }
+
+        public ReportArgs build() {
+            $.metrics = Objects.requireNonNull($.metrics, "expected parameter 'metrics' to be non-null");
+            $.organizationId = Objects.requireNonNull($.organizationId, "expected parameter 'organizationId' to be non-null");
+            return $;
         }
     }
+
 }

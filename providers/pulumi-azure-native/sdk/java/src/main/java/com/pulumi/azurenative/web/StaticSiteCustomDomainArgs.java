@@ -8,6 +8,7 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +21,10 @@ public final class StaticSiteCustomDomainArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="domainName")
-      private final @Nullable Output<String> domainName;
+    private @Nullable Output<String> domainName;
 
-    public Output<String> domainName() {
-        return this.domainName == null ? Codegen.empty() : this.domainName;
+    public Optional<Output<String>> domainName() {
+        return Optional.ofNullable(this.domainName);
     }
 
     /**
@@ -31,10 +32,10 @@ public final class StaticSiteCustomDomainArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="kind")
-      private final @Nullable Output<String> kind;
+    private @Nullable Output<String> kind;
 
-    public Output<String> kind() {
-        return this.kind == null ? Codegen.empty() : this.kind;
+    public Optional<Output<String>> kind() {
+        return Optional.ofNullable(this.kind);
     }
 
     /**
@@ -42,7 +43,7 @@ public final class StaticSiteCustomDomainArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="name", required=true)
-      private final Output<String> name;
+    private Output<String> name;
 
     public Output<String> name() {
         return this.name;
@@ -53,7 +54,7 @@ public final class StaticSiteCustomDomainArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -64,102 +65,91 @@ public final class StaticSiteCustomDomainArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="validationMethod")
-      private final @Nullable Output<String> validationMethod;
+    private @Nullable Output<String> validationMethod;
 
-    public Output<String> validationMethod() {
-        return this.validationMethod == null ? Codegen.empty() : this.validationMethod;
+    public Optional<Output<String>> validationMethod() {
+        return Optional.ofNullable(this.validationMethod);
     }
 
-    public StaticSiteCustomDomainArgs(
-        @Nullable Output<String> domainName,
-        @Nullable Output<String> kind,
-        Output<String> name,
-        Output<String> resourceGroupName,
-        @Nullable Output<String> validationMethod) {
-        this.domainName = domainName;
-        this.kind = kind;
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.validationMethod = Codegen.stringProp("validationMethod").output().arg(validationMethod).def("cname-delegation").getNullable();
-    }
+    private StaticSiteCustomDomainArgs() {}
 
-    private StaticSiteCustomDomainArgs() {
-        this.domainName = Codegen.empty();
-        this.kind = Codegen.empty();
-        this.name = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.validationMethod = Codegen.empty();
+    private StaticSiteCustomDomainArgs(StaticSiteCustomDomainArgs $) {
+        this.domainName = $.domainName;
+        this.kind = $.kind;
+        this.name = $.name;
+        this.resourceGroupName = $.resourceGroupName;
+        this.validationMethod = $.validationMethod;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(StaticSiteCustomDomainArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> domainName;
-        private @Nullable Output<String> kind;
-        private Output<String> name;
-        private Output<String> resourceGroupName;
-        private @Nullable Output<String> validationMethod;
+        private StaticSiteCustomDomainArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new StaticSiteCustomDomainArgs();
         }
 
         public Builder(StaticSiteCustomDomainArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.domainName = defaults.domainName;
-    	      this.kind = defaults.kind;
-    	      this.name = defaults.name;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.validationMethod = defaults.validationMethod;
+            $ = new StaticSiteCustomDomainArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder domainName(@Nullable Output<String> domainName) {
-            this.domainName = domainName;
+            $.domainName = domainName;
             return this;
         }
-        public Builder domainName(@Nullable String domainName) {
-            this.domainName = Codegen.ofNullable(domainName);
-            return this;
+
+        public Builder domainName(String domainName) {
+            return domainName(Output.of(domainName));
         }
+
         public Builder kind(@Nullable Output<String> kind) {
-            this.kind = kind;
+            $.kind = kind;
             return this;
         }
-        public Builder kind(@Nullable String kind) {
-            this.kind = Codegen.ofNullable(kind);
-            return this;
+
+        public Builder kind(String kind) {
+            return kind(Output.of(kind));
         }
+
         public Builder name(Output<String> name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Output.of(Objects.requireNonNull(name));
-            return this;
+            return name(Output.of(name));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder validationMethod(@Nullable Output<String> validationMethod) {
-            this.validationMethod = validationMethod;
+            $.validationMethod = validationMethod;
             return this;
         }
-        public Builder validationMethod(@Nullable String validationMethod) {
-            this.validationMethod = Codegen.ofNullable(validationMethod);
-            return this;
-        }        public StaticSiteCustomDomainArgs build() {
-            return new StaticSiteCustomDomainArgs(domainName, kind, name, resourceGroupName, validationMethod);
+
+        public Builder validationMethod(String validationMethod) {
+            return validationMethod(Output.of(validationMethod));
+        }
+
+        public StaticSiteCustomDomainArgs build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.validationMethod = Codegen.stringProp("validationMethod").output().arg($.validationMethod).def("cname-delegation").getNullable();
+            return $;
         }
     }
+
 }

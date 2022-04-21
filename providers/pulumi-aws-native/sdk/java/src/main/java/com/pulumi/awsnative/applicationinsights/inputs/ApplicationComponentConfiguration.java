@@ -25,10 +25,10 @@ public final class ApplicationComponentConfiguration extends com.pulumi.resource
      * 
      */
     @Import(name="configurationDetails")
-      private final @Nullable ApplicationConfigurationDetails configurationDetails;
+    private @Nullable ApplicationConfigurationDetails configurationDetails;
 
     public Optional<ApplicationConfigurationDetails> configurationDetails() {
-        return this.configurationDetails == null ? Optional.empty() : Optional.ofNullable(this.configurationDetails);
+        return Optional.ofNullable(this.configurationDetails);
     }
 
     /**
@@ -36,58 +36,54 @@ public final class ApplicationComponentConfiguration extends com.pulumi.resource
      * 
      */
     @Import(name="subComponentTypeConfigurations")
-      private final @Nullable List<ApplicationSubComponentTypeConfiguration> subComponentTypeConfigurations;
+    private @Nullable List<ApplicationSubComponentTypeConfiguration> subComponentTypeConfigurations;
 
-    public List<ApplicationSubComponentTypeConfiguration> subComponentTypeConfigurations() {
-        return this.subComponentTypeConfigurations == null ? List.of() : this.subComponentTypeConfigurations;
+    public Optional<List<ApplicationSubComponentTypeConfiguration>> subComponentTypeConfigurations() {
+        return Optional.ofNullable(this.subComponentTypeConfigurations);
     }
 
-    public ApplicationComponentConfiguration(
-        @Nullable ApplicationConfigurationDetails configurationDetails,
-        @Nullable List<ApplicationSubComponentTypeConfiguration> subComponentTypeConfigurations) {
-        this.configurationDetails = configurationDetails;
-        this.subComponentTypeConfigurations = subComponentTypeConfigurations;
-    }
+    private ApplicationComponentConfiguration() {}
 
-    private ApplicationComponentConfiguration() {
-        this.configurationDetails = null;
-        this.subComponentTypeConfigurations = List.of();
+    private ApplicationComponentConfiguration(ApplicationComponentConfiguration $) {
+        this.configurationDetails = $.configurationDetails;
+        this.subComponentTypeConfigurations = $.subComponentTypeConfigurations;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ApplicationComponentConfiguration defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable ApplicationConfigurationDetails configurationDetails;
-        private @Nullable List<ApplicationSubComponentTypeConfiguration> subComponentTypeConfigurations;
+        private ApplicationComponentConfiguration $;
 
         public Builder() {
-    	      // Empty
+            $ = new ApplicationComponentConfiguration();
         }
 
         public Builder(ApplicationComponentConfiguration defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.configurationDetails = defaults.configurationDetails;
-    	      this.subComponentTypeConfigurations = defaults.subComponentTypeConfigurations;
+            $ = new ApplicationComponentConfiguration(Objects.requireNonNull(defaults));
         }
 
         public Builder configurationDetails(@Nullable ApplicationConfigurationDetails configurationDetails) {
-            this.configurationDetails = configurationDetails;
+            $.configurationDetails = configurationDetails;
             return this;
         }
+
         public Builder subComponentTypeConfigurations(@Nullable List<ApplicationSubComponentTypeConfiguration> subComponentTypeConfigurations) {
-            this.subComponentTypeConfigurations = subComponentTypeConfigurations;
+            $.subComponentTypeConfigurations = subComponentTypeConfigurations;
             return this;
         }
+
         public Builder subComponentTypeConfigurations(ApplicationSubComponentTypeConfiguration... subComponentTypeConfigurations) {
             return subComponentTypeConfigurations(List.of(subComponentTypeConfigurations));
-        }        public ApplicationComponentConfiguration build() {
-            return new ApplicationComponentConfiguration(configurationDetails, subComponentTypeConfigurations);
+        }
+
+        public ApplicationComponentConfiguration build() {
+            return $;
         }
     }
+
 }

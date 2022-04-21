@@ -23,10 +23,10 @@ public final class MetricsTagRulesPropertiesResponse extends com.pulumi.resource
     public static final MetricsTagRulesPropertiesResponse Empty = new MetricsTagRulesPropertiesResponse();
 
     @Import(name="metricRules")
-      private final @Nullable List<MetricRulesResponse> metricRules;
+    private @Nullable List<MetricRulesResponse> metricRules;
 
-    public List<MetricRulesResponse> metricRules() {
-        return this.metricRules == null ? List.of() : this.metricRules;
+    public Optional<List<MetricRulesResponse>> metricRules() {
+        return Optional.ofNullable(this.metricRules);
     }
 
     /**
@@ -34,7 +34,7 @@ public final class MetricsTagRulesPropertiesResponse extends com.pulumi.resource
      * 
      */
     @Import(name="provisioningState", required=true)
-      private final String provisioningState;
+    private String provisioningState;
 
     public String provisioningState() {
         return this.provisioningState;
@@ -45,10 +45,10 @@ public final class MetricsTagRulesPropertiesResponse extends com.pulumi.resource
      * 
      */
     @Import(name="sendMetrics")
-      private final @Nullable Boolean sendMetrics;
+    private @Nullable Boolean sendMetrics;
 
     public Optional<Boolean> sendMetrics() {
-        return this.sendMetrics == null ? Optional.empty() : Optional.ofNullable(this.sendMetrics);
+        return Optional.ofNullable(this.sendMetrics);
     }
 
     /**
@@ -56,76 +56,68 @@ public final class MetricsTagRulesPropertiesResponse extends com.pulumi.resource
      * 
      */
     @Import(name="systemData", required=true)
-      private final SystemDataResponse systemData;
+    private SystemDataResponse systemData;
 
     public SystemDataResponse systemData() {
         return this.systemData;
     }
 
-    public MetricsTagRulesPropertiesResponse(
-        @Nullable List<MetricRulesResponse> metricRules,
-        String provisioningState,
-        @Nullable Boolean sendMetrics,
-        SystemDataResponse systemData) {
-        this.metricRules = metricRules;
-        this.provisioningState = Objects.requireNonNull(provisioningState, "expected parameter 'provisioningState' to be non-null");
-        this.sendMetrics = sendMetrics;
-        this.systemData = Objects.requireNonNull(systemData, "expected parameter 'systemData' to be non-null");
-    }
+    private MetricsTagRulesPropertiesResponse() {}
 
-    private MetricsTagRulesPropertiesResponse() {
-        this.metricRules = List.of();
-        this.provisioningState = null;
-        this.sendMetrics = null;
-        this.systemData = null;
+    private MetricsTagRulesPropertiesResponse(MetricsTagRulesPropertiesResponse $) {
+        this.metricRules = $.metricRules;
+        this.provisioningState = $.provisioningState;
+        this.sendMetrics = $.sendMetrics;
+        this.systemData = $.systemData;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MetricsTagRulesPropertiesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<MetricRulesResponse> metricRules;
-        private String provisioningState;
-        private @Nullable Boolean sendMetrics;
-        private SystemDataResponse systemData;
+        private MetricsTagRulesPropertiesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new MetricsTagRulesPropertiesResponse();
         }
 
         public Builder(MetricsTagRulesPropertiesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.metricRules = defaults.metricRules;
-    	      this.provisioningState = defaults.provisioningState;
-    	      this.sendMetrics = defaults.sendMetrics;
-    	      this.systemData = defaults.systemData;
+            $ = new MetricsTagRulesPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder metricRules(@Nullable List<MetricRulesResponse> metricRules) {
-            this.metricRules = metricRules;
+            $.metricRules = metricRules;
             return this;
         }
+
         public Builder metricRules(MetricRulesResponse... metricRules) {
             return metricRules(List.of(metricRules));
         }
+
         public Builder provisioningState(String provisioningState) {
-            this.provisioningState = Objects.requireNonNull(provisioningState);
+            $.provisioningState = provisioningState;
             return this;
         }
+
         public Builder sendMetrics(@Nullable Boolean sendMetrics) {
-            this.sendMetrics = sendMetrics;
+            $.sendMetrics = sendMetrics;
             return this;
         }
+
         public Builder systemData(SystemDataResponse systemData) {
-            this.systemData = Objects.requireNonNull(systemData);
+            $.systemData = systemData;
             return this;
-        }        public MetricsTagRulesPropertiesResponse build() {
-            return new MetricsTagRulesPropertiesResponse(metricRules, provisioningState, sendMetrics, systemData);
+        }
+
+        public MetricsTagRulesPropertiesResponse build() {
+            $.provisioningState = Objects.requireNonNull($.provisioningState, "expected parameter 'provisioningState' to be non-null");
+            $.systemData = Objects.requireNonNull($.systemData, "expected parameter 'systemData' to be non-null");
+            return $;
         }
     }
+
 }

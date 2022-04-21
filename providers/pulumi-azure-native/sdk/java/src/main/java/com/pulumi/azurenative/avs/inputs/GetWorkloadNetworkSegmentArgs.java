@@ -17,7 +17,7 @@ public final class GetWorkloadNetworkSegmentArgs extends com.pulumi.resources.In
      * 
      */
     @Import(name="privateCloudName", required=true)
-      private final String privateCloudName;
+    private String privateCloudName;
 
     public String privateCloudName() {
         return this.privateCloudName;
@@ -28,7 +28,7 @@ public final class GetWorkloadNetworkSegmentArgs extends com.pulumi.resources.In
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -39,64 +39,59 @@ public final class GetWorkloadNetworkSegmentArgs extends com.pulumi.resources.In
      * 
      */
     @Import(name="segmentId", required=true)
-      private final String segmentId;
+    private String segmentId;
 
     public String segmentId() {
         return this.segmentId;
     }
 
-    public GetWorkloadNetworkSegmentArgs(
-        String privateCloudName,
-        String resourceGroupName,
-        String segmentId) {
-        this.privateCloudName = Objects.requireNonNull(privateCloudName, "expected parameter 'privateCloudName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.segmentId = Objects.requireNonNull(segmentId, "expected parameter 'segmentId' to be non-null");
-    }
+    private GetWorkloadNetworkSegmentArgs() {}
 
-    private GetWorkloadNetworkSegmentArgs() {
-        this.privateCloudName = null;
-        this.resourceGroupName = null;
-        this.segmentId = null;
+    private GetWorkloadNetworkSegmentArgs(GetWorkloadNetworkSegmentArgs $) {
+        this.privateCloudName = $.privateCloudName;
+        this.resourceGroupName = $.resourceGroupName;
+        this.segmentId = $.segmentId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetWorkloadNetworkSegmentArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String privateCloudName;
-        private String resourceGroupName;
-        private String segmentId;
+        private GetWorkloadNetworkSegmentArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetWorkloadNetworkSegmentArgs();
         }
 
         public Builder(GetWorkloadNetworkSegmentArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.privateCloudName = defaults.privateCloudName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.segmentId = defaults.segmentId;
+            $ = new GetWorkloadNetworkSegmentArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder privateCloudName(String privateCloudName) {
-            this.privateCloudName = Objects.requireNonNull(privateCloudName);
+            $.privateCloudName = privateCloudName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder segmentId(String segmentId) {
-            this.segmentId = Objects.requireNonNull(segmentId);
+            $.segmentId = segmentId;
             return this;
-        }        public GetWorkloadNetworkSegmentArgs build() {
-            return new GetWorkloadNetworkSegmentArgs(privateCloudName, resourceGroupName, segmentId);
+        }
+
+        public GetWorkloadNetworkSegmentArgs build() {
+            $.privateCloudName = Objects.requireNonNull($.privateCloudName, "expected parameter 'privateCloudName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.segmentId = Objects.requireNonNull($.segmentId, "expected parameter 'segmentId' to be non-null");
+            return $;
         }
     }
+
 }

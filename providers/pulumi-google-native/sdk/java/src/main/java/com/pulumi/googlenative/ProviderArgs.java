@@ -9,6 +9,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +22,10 @@ public final class ProviderArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="appendUserAgent")
-      private final @Nullable Output<String> appendUserAgent;
+    private @Nullable Output<String> appendUserAgent;
 
-    public Output<String> appendUserAgent() {
-        return this.appendUserAgent == null ? Codegen.empty() : this.appendUserAgent;
+    public Optional<Output<String>> appendUserAgent() {
+        return Optional.ofNullable(this.appendUserAgent);
     }
 
     /**
@@ -32,10 +33,10 @@ public final class ProviderArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="disablePartnerName", json=true)
-      private final @Nullable Output<Boolean> disablePartnerName;
+    private @Nullable Output<Boolean> disablePartnerName;
 
-    public Output<Boolean> disablePartnerName() {
-        return this.disablePartnerName == null ? Codegen.empty() : this.disablePartnerName;
+    public Optional<Output<Boolean>> disablePartnerName() {
+        return Optional.ofNullable(this.disablePartnerName);
     }
 
     /**
@@ -43,10 +44,10 @@ public final class ProviderArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="partnerName")
-      private final @Nullable Output<String> partnerName;
+    private @Nullable Output<String> partnerName;
 
-    public Output<String> partnerName() {
-        return this.partnerName == null ? Codegen.empty() : this.partnerName;
+    public Optional<Output<String>> partnerName() {
+        return Optional.ofNullable(this.partnerName);
     }
 
     /**
@@ -54,10 +55,10 @@ public final class ProviderArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -65,10 +66,10 @@ public final class ProviderArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="region")
-      private final @Nullable Output<String> region;
+    private @Nullable Output<String> region;
 
-    public Output<String> region() {
-        return this.region == null ? Codegen.empty() : this.region;
+    public Optional<Output<String>> region() {
+        return Optional.ofNullable(this.region);
     }
 
     /**
@@ -76,115 +77,104 @@ public final class ProviderArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="zone")
-      private final @Nullable Output<String> zone;
+    private @Nullable Output<String> zone;
 
-    public Output<String> zone() {
-        return this.zone == null ? Codegen.empty() : this.zone;
+    public Optional<Output<String>> zone() {
+        return Optional.ofNullable(this.zone);
     }
 
-    public ProviderArgs(
-        @Nullable Output<String> appendUserAgent,
-        @Nullable Output<Boolean> disablePartnerName,
-        @Nullable Output<String> partnerName,
-        @Nullable Output<String> project,
-        @Nullable Output<String> region,
-        @Nullable Output<String> zone) {
-        this.appendUserAgent = Codegen.stringProp("appendUserAgent").output().arg(appendUserAgent).env("GOOGLE_APPEND_USER_AGENT").getNullable();
-        this.disablePartnerName = Codegen.booleanProp("disablePartnerName").output().arg(disablePartnerName).env("GOOGLE_DISABLE_PARTNER_NAME").getNullable();
-        this.partnerName = Codegen.stringProp("partnerName").output().arg(partnerName).env("GOOGLE_PARTNER_NAME").getNullable();
-        this.project = Codegen.stringProp("project").output().arg(project).env("GOOGLE_PROJECT", "GOOGLE_CLOUD_PROJECT", "GCLOUD_PROJECT", "CLOUDSDK_CORE_PROJECT").getNullable();
-        this.region = Codegen.stringProp("region").output().arg(region).env("GOOGLE_REGION", "GCLOUD_REGION", "CLOUDSDK_COMPUTE_REGION").getNullable();
-        this.zone = Codegen.stringProp("zone").output().arg(zone).env("GOOGLE_ZONE", "GCLOUD_ZONE", "CLOUDSDK_COMPUTE_ZONE").getNullable();
-    }
+    private ProviderArgs() {}
 
-    private ProviderArgs() {
-        this.appendUserAgent = Codegen.empty();
-        this.disablePartnerName = Codegen.empty();
-        this.partnerName = Codegen.empty();
-        this.project = Codegen.empty();
-        this.region = Codegen.empty();
-        this.zone = Codegen.empty();
+    private ProviderArgs(ProviderArgs $) {
+        this.appendUserAgent = $.appendUserAgent;
+        this.disablePartnerName = $.disablePartnerName;
+        this.partnerName = $.partnerName;
+        this.project = $.project;
+        this.region = $.region;
+        this.zone = $.zone;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ProviderArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> appendUserAgent;
-        private @Nullable Output<Boolean> disablePartnerName;
-        private @Nullable Output<String> partnerName;
-        private @Nullable Output<String> project;
-        private @Nullable Output<String> region;
-        private @Nullable Output<String> zone;
+        private ProviderArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ProviderArgs();
         }
 
         public Builder(ProviderArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.appendUserAgent = defaults.appendUserAgent;
-    	      this.disablePartnerName = defaults.disablePartnerName;
-    	      this.partnerName = defaults.partnerName;
-    	      this.project = defaults.project;
-    	      this.region = defaults.region;
-    	      this.zone = defaults.zone;
+            $ = new ProviderArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder appendUserAgent(@Nullable Output<String> appendUserAgent) {
-            this.appendUserAgent = appendUserAgent;
+            $.appendUserAgent = appendUserAgent;
             return this;
         }
-        public Builder appendUserAgent(@Nullable String appendUserAgent) {
-            this.appendUserAgent = Codegen.ofNullable(appendUserAgent);
-            return this;
+
+        public Builder appendUserAgent(String appendUserAgent) {
+            return appendUserAgent(Output.of(appendUserAgent));
         }
+
         public Builder disablePartnerName(@Nullable Output<Boolean> disablePartnerName) {
-            this.disablePartnerName = disablePartnerName;
+            $.disablePartnerName = disablePartnerName;
             return this;
         }
-        public Builder disablePartnerName(@Nullable Boolean disablePartnerName) {
-            this.disablePartnerName = Codegen.ofNullable(disablePartnerName);
-            return this;
+
+        public Builder disablePartnerName(Boolean disablePartnerName) {
+            return disablePartnerName(Output.of(disablePartnerName));
         }
+
         public Builder partnerName(@Nullable Output<String> partnerName) {
-            this.partnerName = partnerName;
+            $.partnerName = partnerName;
             return this;
         }
-        public Builder partnerName(@Nullable String partnerName) {
-            this.partnerName = Codegen.ofNullable(partnerName);
-            return this;
+
+        public Builder partnerName(String partnerName) {
+            return partnerName(Output.of(partnerName));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder region(@Nullable Output<String> region) {
-            this.region = region;
+            $.region = region;
             return this;
         }
-        public Builder region(@Nullable String region) {
-            this.region = Codegen.ofNullable(region);
-            return this;
+
+        public Builder region(String region) {
+            return region(Output.of(region));
         }
+
         public Builder zone(@Nullable Output<String> zone) {
-            this.zone = zone;
+            $.zone = zone;
             return this;
         }
-        public Builder zone(@Nullable String zone) {
-            this.zone = Codegen.ofNullable(zone);
-            return this;
-        }        public ProviderArgs build() {
-            return new ProviderArgs(appendUserAgent, disablePartnerName, partnerName, project, region, zone);
+
+        public Builder zone(String zone) {
+            return zone(Output.of(zone));
+        }
+
+        public ProviderArgs build() {
+            $.appendUserAgent = Codegen.stringProp("appendUserAgent").output().arg($.appendUserAgent).env("GOOGLE_APPEND_USER_AGENT").getNullable();
+            $.disablePartnerName = Codegen.booleanProp("disablePartnerName").output().arg($.disablePartnerName).env("GOOGLE_DISABLE_PARTNER_NAME").getNullable();
+            $.partnerName = Codegen.stringProp("partnerName").output().arg($.partnerName).env("GOOGLE_PARTNER_NAME").getNullable();
+            $.project = Codegen.stringProp("project").output().arg($.project).env("GOOGLE_PROJECT", "GOOGLE_CLOUD_PROJECT", "GCLOUD_PROJECT", "CLOUDSDK_CORE_PROJECT").getNullable();
+            $.region = Codegen.stringProp("region").output().arg($.region).env("GOOGLE_REGION", "GCLOUD_REGION", "CLOUDSDK_COMPUTE_REGION").getNullable();
+            $.zone = Codegen.stringProp("zone").output().arg($.zone).env("GOOGLE_ZONE", "GCLOUD_ZONE", "CLOUDSDK_COMPUTE_ZONE").getNullable();
+            return $;
         }
     }
+
 }

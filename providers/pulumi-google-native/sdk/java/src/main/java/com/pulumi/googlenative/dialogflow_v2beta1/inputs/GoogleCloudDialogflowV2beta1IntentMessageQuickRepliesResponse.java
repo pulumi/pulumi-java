@@ -22,7 +22,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageQuickRepliesResponse
      * 
      */
     @Import(name="quickReplies", required=true)
-      private final List<String> quickReplies;
+    private List<String> quickReplies;
 
     public List<String> quickReplies() {
         return this.quickReplies;
@@ -33,58 +33,56 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageQuickRepliesResponse
      * 
      */
     @Import(name="title", required=true)
-      private final String title;
+    private String title;
 
     public String title() {
         return this.title;
     }
 
-    public GoogleCloudDialogflowV2beta1IntentMessageQuickRepliesResponse(
-        List<String> quickReplies,
-        String title) {
-        this.quickReplies = Objects.requireNonNull(quickReplies, "expected parameter 'quickReplies' to be non-null");
-        this.title = Objects.requireNonNull(title, "expected parameter 'title' to be non-null");
-    }
+    private GoogleCloudDialogflowV2beta1IntentMessageQuickRepliesResponse() {}
 
-    private GoogleCloudDialogflowV2beta1IntentMessageQuickRepliesResponse() {
-        this.quickReplies = List.of();
-        this.title = null;
+    private GoogleCloudDialogflowV2beta1IntentMessageQuickRepliesResponse(GoogleCloudDialogflowV2beta1IntentMessageQuickRepliesResponse $) {
+        this.quickReplies = $.quickReplies;
+        this.title = $.title;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudDialogflowV2beta1IntentMessageQuickRepliesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<String> quickReplies;
-        private String title;
+        private GoogleCloudDialogflowV2beta1IntentMessageQuickRepliesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudDialogflowV2beta1IntentMessageQuickRepliesResponse();
         }
 
         public Builder(GoogleCloudDialogflowV2beta1IntentMessageQuickRepliesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.quickReplies = defaults.quickReplies;
-    	      this.title = defaults.title;
+            $ = new GoogleCloudDialogflowV2beta1IntentMessageQuickRepliesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder quickReplies(List<String> quickReplies) {
-            this.quickReplies = Objects.requireNonNull(quickReplies);
+            $.quickReplies = quickReplies;
             return this;
         }
+
         public Builder quickReplies(String... quickReplies) {
             return quickReplies(List.of(quickReplies));
         }
+
         public Builder title(String title) {
-            this.title = Objects.requireNonNull(title);
+            $.title = title;
             return this;
-        }        public GoogleCloudDialogflowV2beta1IntentMessageQuickRepliesResponse build() {
-            return new GoogleCloudDialogflowV2beta1IntentMessageQuickRepliesResponse(quickReplies, title);
+        }
+
+        public GoogleCloudDialogflowV2beta1IntentMessageQuickRepliesResponse build() {
+            $.quickReplies = Objects.requireNonNull($.quickReplies, "expected parameter 'quickReplies' to be non-null");
+            $.title = Objects.requireNonNull($.title, "expected parameter 'title' to be non-null");
+            return $;
         }
     }
+
 }

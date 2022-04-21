@@ -18,7 +18,7 @@ public final class GetDistributionConfigurationDistributionAmiDistributionConfig
      * 
      */
     @Import(name="userGroups", required=true)
-      private final List<String> userGroups;
+    private List<String> userGroups;
 
     public List<String> userGroups() {
         return this.userGroups;
@@ -29,61 +29,60 @@ public final class GetDistributionConfigurationDistributionAmiDistributionConfig
      * 
      */
     @Import(name="userIds", required=true)
-      private final List<String> userIds;
+    private List<String> userIds;
 
     public List<String> userIds() {
         return this.userIds;
     }
 
-    public GetDistributionConfigurationDistributionAmiDistributionConfigurationLaunchPermission(
-        List<String> userGroups,
-        List<String> userIds) {
-        this.userGroups = Objects.requireNonNull(userGroups, "expected parameter 'userGroups' to be non-null");
-        this.userIds = Objects.requireNonNull(userIds, "expected parameter 'userIds' to be non-null");
-    }
+    private GetDistributionConfigurationDistributionAmiDistributionConfigurationLaunchPermission() {}
 
-    private GetDistributionConfigurationDistributionAmiDistributionConfigurationLaunchPermission() {
-        this.userGroups = List.of();
-        this.userIds = List.of();
+    private GetDistributionConfigurationDistributionAmiDistributionConfigurationLaunchPermission(GetDistributionConfigurationDistributionAmiDistributionConfigurationLaunchPermission $) {
+        this.userGroups = $.userGroups;
+        this.userIds = $.userIds;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetDistributionConfigurationDistributionAmiDistributionConfigurationLaunchPermission defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<String> userGroups;
-        private List<String> userIds;
+        private GetDistributionConfigurationDistributionAmiDistributionConfigurationLaunchPermission $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetDistributionConfigurationDistributionAmiDistributionConfigurationLaunchPermission();
         }
 
         public Builder(GetDistributionConfigurationDistributionAmiDistributionConfigurationLaunchPermission defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.userGroups = defaults.userGroups;
-    	      this.userIds = defaults.userIds;
+            $ = new GetDistributionConfigurationDistributionAmiDistributionConfigurationLaunchPermission(Objects.requireNonNull(defaults));
         }
 
         public Builder userGroups(List<String> userGroups) {
-            this.userGroups = Objects.requireNonNull(userGroups);
+            $.userGroups = userGroups;
             return this;
         }
+
         public Builder userGroups(String... userGroups) {
             return userGroups(List.of(userGroups));
         }
+
         public Builder userIds(List<String> userIds) {
-            this.userIds = Objects.requireNonNull(userIds);
+            $.userIds = userIds;
             return this;
         }
+
         public Builder userIds(String... userIds) {
             return userIds(List.of(userIds));
-        }        public GetDistributionConfigurationDistributionAmiDistributionConfigurationLaunchPermission build() {
-            return new GetDistributionConfigurationDistributionAmiDistributionConfigurationLaunchPermission(userGroups, userIds);
+        }
+
+        public GetDistributionConfigurationDistributionAmiDistributionConfigurationLaunchPermission build() {
+            $.userGroups = Objects.requireNonNull($.userGroups, "expected parameter 'userGroups' to be non-null");
+            $.userIds = Objects.requireNonNull($.userIds, "expected parameter 'userIds' to be non-null");
+            return $;
         }
     }
+
 }

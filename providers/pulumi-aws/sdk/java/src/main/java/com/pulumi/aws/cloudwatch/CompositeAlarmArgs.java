@@ -5,12 +5,12 @@ package com.pulumi.aws.cloudwatch;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,10 @@ public final class CompositeAlarmArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="actionsEnabled")
-      private final @Nullable Output<Boolean> actionsEnabled;
+    private @Nullable Output<Boolean> actionsEnabled;
 
-    public Output<Boolean> actionsEnabled() {
-        return this.actionsEnabled == null ? Codegen.empty() : this.actionsEnabled;
+    public Optional<Output<Boolean>> actionsEnabled() {
+        return Optional.ofNullable(this.actionsEnabled);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class CompositeAlarmArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="alarmActions")
-      private final @Nullable Output<List<String>> alarmActions;
+    private @Nullable Output<List<String>> alarmActions;
 
-    public Output<List<String>> alarmActions() {
-        return this.alarmActions == null ? Codegen.empty() : this.alarmActions;
+    public Optional<Output<List<String>>> alarmActions() {
+        return Optional.ofNullable(this.alarmActions);
     }
 
     /**
@@ -45,10 +45,10 @@ public final class CompositeAlarmArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="alarmDescription")
-      private final @Nullable Output<String> alarmDescription;
+    private @Nullable Output<String> alarmDescription;
 
-    public Output<String> alarmDescription() {
-        return this.alarmDescription == null ? Codegen.empty() : this.alarmDescription;
+    public Optional<Output<String>> alarmDescription() {
+        return Optional.ofNullable(this.alarmDescription);
     }
 
     /**
@@ -56,7 +56,7 @@ public final class CompositeAlarmArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="alarmName", required=true)
-      private final Output<String> alarmName;
+    private Output<String> alarmName;
 
     public Output<String> alarmName() {
         return this.alarmName;
@@ -67,7 +67,7 @@ public final class CompositeAlarmArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="alarmRule", required=true)
-      private final Output<String> alarmRule;
+    private Output<String> alarmRule;
 
     public Output<String> alarmRule() {
         return this.alarmRule;
@@ -78,10 +78,10 @@ public final class CompositeAlarmArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="insufficientDataActions")
-      private final @Nullable Output<List<String>> insufficientDataActions;
+    private @Nullable Output<List<String>> insufficientDataActions;
 
-    public Output<List<String>> insufficientDataActions() {
-        return this.insufficientDataActions == null ? Codegen.empty() : this.insufficientDataActions;
+    public Optional<Output<List<String>>> insufficientDataActions() {
+        return Optional.ofNullable(this.insufficientDataActions);
     }
 
     /**
@@ -89,10 +89,10 @@ public final class CompositeAlarmArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="okActions")
-      private final @Nullable Output<List<String>> okActions;
+    private @Nullable Output<List<String>> okActions;
 
-    public Output<List<String>> okActions() {
-        return this.okActions == null ? Codegen.empty() : this.okActions;
+    public Optional<Output<List<String>>> okActions() {
+        return Optional.ofNullable(this.okActions);
     }
 
     /**
@@ -100,150 +100,132 @@ public final class CompositeAlarmArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public CompositeAlarmArgs(
-        @Nullable Output<Boolean> actionsEnabled,
-        @Nullable Output<List<String>> alarmActions,
-        @Nullable Output<String> alarmDescription,
-        Output<String> alarmName,
-        Output<String> alarmRule,
-        @Nullable Output<List<String>> insufficientDataActions,
-        @Nullable Output<List<String>> okActions,
-        @Nullable Output<Map<String,String>> tags) {
-        this.actionsEnabled = actionsEnabled;
-        this.alarmActions = alarmActions;
-        this.alarmDescription = alarmDescription;
-        this.alarmName = Objects.requireNonNull(alarmName, "expected parameter 'alarmName' to be non-null");
-        this.alarmRule = Objects.requireNonNull(alarmRule, "expected parameter 'alarmRule' to be non-null");
-        this.insufficientDataActions = insufficientDataActions;
-        this.okActions = okActions;
-        this.tags = tags;
-    }
+    private CompositeAlarmArgs() {}
 
-    private CompositeAlarmArgs() {
-        this.actionsEnabled = Codegen.empty();
-        this.alarmActions = Codegen.empty();
-        this.alarmDescription = Codegen.empty();
-        this.alarmName = Codegen.empty();
-        this.alarmRule = Codegen.empty();
-        this.insufficientDataActions = Codegen.empty();
-        this.okActions = Codegen.empty();
-        this.tags = Codegen.empty();
+    private CompositeAlarmArgs(CompositeAlarmArgs $) {
+        this.actionsEnabled = $.actionsEnabled;
+        this.alarmActions = $.alarmActions;
+        this.alarmDescription = $.alarmDescription;
+        this.alarmName = $.alarmName;
+        this.alarmRule = $.alarmRule;
+        this.insufficientDataActions = $.insufficientDataActions;
+        this.okActions = $.okActions;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CompositeAlarmArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> actionsEnabled;
-        private @Nullable Output<List<String>> alarmActions;
-        private @Nullable Output<String> alarmDescription;
-        private Output<String> alarmName;
-        private Output<String> alarmRule;
-        private @Nullable Output<List<String>> insufficientDataActions;
-        private @Nullable Output<List<String>> okActions;
-        private @Nullable Output<Map<String,String>> tags;
+        private CompositeAlarmArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CompositeAlarmArgs();
         }
 
         public Builder(CompositeAlarmArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.actionsEnabled = defaults.actionsEnabled;
-    	      this.alarmActions = defaults.alarmActions;
-    	      this.alarmDescription = defaults.alarmDescription;
-    	      this.alarmName = defaults.alarmName;
-    	      this.alarmRule = defaults.alarmRule;
-    	      this.insufficientDataActions = defaults.insufficientDataActions;
-    	      this.okActions = defaults.okActions;
-    	      this.tags = defaults.tags;
+            $ = new CompositeAlarmArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder actionsEnabled(@Nullable Output<Boolean> actionsEnabled) {
-            this.actionsEnabled = actionsEnabled;
+            $.actionsEnabled = actionsEnabled;
             return this;
         }
-        public Builder actionsEnabled(@Nullable Boolean actionsEnabled) {
-            this.actionsEnabled = Codegen.ofNullable(actionsEnabled);
-            return this;
+
+        public Builder actionsEnabled(Boolean actionsEnabled) {
+            return actionsEnabled(Output.of(actionsEnabled));
         }
+
         public Builder alarmActions(@Nullable Output<List<String>> alarmActions) {
-            this.alarmActions = alarmActions;
+            $.alarmActions = alarmActions;
             return this;
         }
-        public Builder alarmActions(@Nullable List<String> alarmActions) {
-            this.alarmActions = Codegen.ofNullable(alarmActions);
-            return this;
+
+        public Builder alarmActions(List<String> alarmActions) {
+            return alarmActions(Output.of(alarmActions));
         }
+
         public Builder alarmActions(String... alarmActions) {
             return alarmActions(List.of(alarmActions));
         }
+
         public Builder alarmDescription(@Nullable Output<String> alarmDescription) {
-            this.alarmDescription = alarmDescription;
+            $.alarmDescription = alarmDescription;
             return this;
         }
-        public Builder alarmDescription(@Nullable String alarmDescription) {
-            this.alarmDescription = Codegen.ofNullable(alarmDescription);
-            return this;
+
+        public Builder alarmDescription(String alarmDescription) {
+            return alarmDescription(Output.of(alarmDescription));
         }
+
         public Builder alarmName(Output<String> alarmName) {
-            this.alarmName = Objects.requireNonNull(alarmName);
+            $.alarmName = alarmName;
             return this;
         }
+
         public Builder alarmName(String alarmName) {
-            this.alarmName = Output.of(Objects.requireNonNull(alarmName));
-            return this;
+            return alarmName(Output.of(alarmName));
         }
+
         public Builder alarmRule(Output<String> alarmRule) {
-            this.alarmRule = Objects.requireNonNull(alarmRule);
+            $.alarmRule = alarmRule;
             return this;
         }
+
         public Builder alarmRule(String alarmRule) {
-            this.alarmRule = Output.of(Objects.requireNonNull(alarmRule));
-            return this;
+            return alarmRule(Output.of(alarmRule));
         }
+
         public Builder insufficientDataActions(@Nullable Output<List<String>> insufficientDataActions) {
-            this.insufficientDataActions = insufficientDataActions;
+            $.insufficientDataActions = insufficientDataActions;
             return this;
         }
-        public Builder insufficientDataActions(@Nullable List<String> insufficientDataActions) {
-            this.insufficientDataActions = Codegen.ofNullable(insufficientDataActions);
-            return this;
+
+        public Builder insufficientDataActions(List<String> insufficientDataActions) {
+            return insufficientDataActions(Output.of(insufficientDataActions));
         }
+
         public Builder insufficientDataActions(String... insufficientDataActions) {
             return insufficientDataActions(List.of(insufficientDataActions));
         }
+
         public Builder okActions(@Nullable Output<List<String>> okActions) {
-            this.okActions = okActions;
+            $.okActions = okActions;
             return this;
         }
-        public Builder okActions(@Nullable List<String> okActions) {
-            this.okActions = Codegen.ofNullable(okActions);
-            return this;
+
+        public Builder okActions(List<String> okActions) {
+            return okActions(Output.of(okActions));
         }
+
         public Builder okActions(String... okActions) {
             return okActions(List.of(okActions));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
-        }        public CompositeAlarmArgs build() {
-            return new CompositeAlarmArgs(actionsEnabled, alarmActions, alarmDescription, alarmName, alarmRule, insufficientDataActions, okActions, tags);
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
+        }
+
+        public CompositeAlarmArgs build() {
+            $.alarmName = Objects.requireNonNull($.alarmName, "expected parameter 'alarmName' to be non-null");
+            $.alarmRule = Objects.requireNonNull($.alarmRule, "expected parameter 'alarmRule' to be non-null");
+            return $;
         }
     }
+
 }

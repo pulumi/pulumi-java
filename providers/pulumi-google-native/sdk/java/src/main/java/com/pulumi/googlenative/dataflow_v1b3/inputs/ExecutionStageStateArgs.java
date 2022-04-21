@@ -5,10 +5,10 @@ package com.pulumi.googlenative.dataflow_v1b3.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.dataflow_v1b3.enums.ExecutionStageStateExecutionStageState;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class ExecutionStageStateArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="currentStateTime")
-      private final @Nullable Output<String> currentStateTime;
+    private @Nullable Output<String> currentStateTime;
 
-    public Output<String> currentStateTime() {
-        return this.currentStateTime == null ? Codegen.empty() : this.currentStateTime;
+    public Optional<Output<String>> currentStateTime() {
+        return Optional.ofNullable(this.currentStateTime);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class ExecutionStageStateArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="executionStageName")
-      private final @Nullable Output<String> executionStageName;
+    private @Nullable Output<String> executionStageName;
 
-    public Output<String> executionStageName() {
-        return this.executionStageName == null ? Codegen.empty() : this.executionStageName;
+    public Optional<Output<String>> executionStageName() {
+        return Optional.ofNullable(this.executionStageName);
     }
 
     /**
@@ -47,76 +47,68 @@ public final class ExecutionStageStateArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="executionStageState")
-      private final @Nullable Output<ExecutionStageStateExecutionStageState> executionStageState;
+    private @Nullable Output<ExecutionStageStateExecutionStageState> executionStageState;
 
-    public Output<ExecutionStageStateExecutionStageState> executionStageState() {
-        return this.executionStageState == null ? Codegen.empty() : this.executionStageState;
+    public Optional<Output<ExecutionStageStateExecutionStageState>> executionStageState() {
+        return Optional.ofNullable(this.executionStageState);
     }
 
-    public ExecutionStageStateArgs(
-        @Nullable Output<String> currentStateTime,
-        @Nullable Output<String> executionStageName,
-        @Nullable Output<ExecutionStageStateExecutionStageState> executionStageState) {
-        this.currentStateTime = currentStateTime;
-        this.executionStageName = executionStageName;
-        this.executionStageState = executionStageState;
-    }
+    private ExecutionStageStateArgs() {}
 
-    private ExecutionStageStateArgs() {
-        this.currentStateTime = Codegen.empty();
-        this.executionStageName = Codegen.empty();
-        this.executionStageState = Codegen.empty();
+    private ExecutionStageStateArgs(ExecutionStageStateArgs $) {
+        this.currentStateTime = $.currentStateTime;
+        this.executionStageName = $.executionStageName;
+        this.executionStageState = $.executionStageState;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ExecutionStageStateArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> currentStateTime;
-        private @Nullable Output<String> executionStageName;
-        private @Nullable Output<ExecutionStageStateExecutionStageState> executionStageState;
+        private ExecutionStageStateArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ExecutionStageStateArgs();
         }
 
         public Builder(ExecutionStageStateArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.currentStateTime = defaults.currentStateTime;
-    	      this.executionStageName = defaults.executionStageName;
-    	      this.executionStageState = defaults.executionStageState;
+            $ = new ExecutionStageStateArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder currentStateTime(@Nullable Output<String> currentStateTime) {
-            this.currentStateTime = currentStateTime;
+            $.currentStateTime = currentStateTime;
             return this;
         }
-        public Builder currentStateTime(@Nullable String currentStateTime) {
-            this.currentStateTime = Codegen.ofNullable(currentStateTime);
-            return this;
+
+        public Builder currentStateTime(String currentStateTime) {
+            return currentStateTime(Output.of(currentStateTime));
         }
+
         public Builder executionStageName(@Nullable Output<String> executionStageName) {
-            this.executionStageName = executionStageName;
+            $.executionStageName = executionStageName;
             return this;
         }
-        public Builder executionStageName(@Nullable String executionStageName) {
-            this.executionStageName = Codegen.ofNullable(executionStageName);
-            return this;
+
+        public Builder executionStageName(String executionStageName) {
+            return executionStageName(Output.of(executionStageName));
         }
+
         public Builder executionStageState(@Nullable Output<ExecutionStageStateExecutionStageState> executionStageState) {
-            this.executionStageState = executionStageState;
+            $.executionStageState = executionStageState;
             return this;
         }
-        public Builder executionStageState(@Nullable ExecutionStageStateExecutionStageState executionStageState) {
-            this.executionStageState = Codegen.ofNullable(executionStageState);
-            return this;
-        }        public ExecutionStageStateArgs build() {
-            return new ExecutionStageStateArgs(currentStateTime, executionStageName, executionStageState);
+
+        public Builder executionStageState(ExecutionStageStateExecutionStageState executionStageState) {
+            return executionStageState(Output.of(executionStageState));
+        }
+
+        public ExecutionStageStateArgs build() {
+            return $;
         }
     }
+
 }

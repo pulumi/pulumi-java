@@ -23,10 +23,10 @@ public final class BackendProxyContractResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="password")
-      private final @Nullable String password;
+    private @Nullable String password;
 
     public Optional<String> password() {
-        return this.password == null ? Optional.empty() : Optional.ofNullable(this.password);
+        return Optional.ofNullable(this.password);
     }
 
     /**
@@ -34,7 +34,7 @@ public final class BackendProxyContractResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="url", required=true)
-      private final String url;
+    private String url;
 
     public String url() {
         return this.url;
@@ -45,64 +45,57 @@ public final class BackendProxyContractResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="username")
-      private final @Nullable String username;
+    private @Nullable String username;
 
     public Optional<String> username() {
-        return this.username == null ? Optional.empty() : Optional.ofNullable(this.username);
+        return Optional.ofNullable(this.username);
     }
 
-    public BackendProxyContractResponse(
-        @Nullable String password,
-        String url,
-        @Nullable String username) {
-        this.password = password;
-        this.url = Objects.requireNonNull(url, "expected parameter 'url' to be non-null");
-        this.username = username;
-    }
+    private BackendProxyContractResponse() {}
 
-    private BackendProxyContractResponse() {
-        this.password = null;
-        this.url = null;
-        this.username = null;
+    private BackendProxyContractResponse(BackendProxyContractResponse $) {
+        this.password = $.password;
+        this.url = $.url;
+        this.username = $.username;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BackendProxyContractResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String password;
-        private String url;
-        private @Nullable String username;
+        private BackendProxyContractResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new BackendProxyContractResponse();
         }
 
         public Builder(BackendProxyContractResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.password = defaults.password;
-    	      this.url = defaults.url;
-    	      this.username = defaults.username;
+            $ = new BackendProxyContractResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder password(@Nullable String password) {
-            this.password = password;
+            $.password = password;
             return this;
         }
+
         public Builder url(String url) {
-            this.url = Objects.requireNonNull(url);
+            $.url = url;
             return this;
         }
+
         public Builder username(@Nullable String username) {
-            this.username = username;
+            $.username = username;
             return this;
-        }        public BackendProxyContractResponse build() {
-            return new BackendProxyContractResponse(password, url, username);
+        }
+
+        public BackendProxyContractResponse build() {
+            $.url = Objects.requireNonNull($.url, "expected parameter 'url' to be non-null");
+            return $;
         }
     }
+
 }

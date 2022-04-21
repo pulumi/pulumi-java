@@ -5,9 +5,9 @@ package com.pulumi.aws.glue.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,7 +20,7 @@ public final class DataCatalogEncryptionSettingsDataCatalogEncryptionSettingsEnc
      * 
      */
     @Import(name="catalogEncryptionMode", required=true)
-      private final Output<String> catalogEncryptionMode;
+    private Output<String> catalogEncryptionMode;
 
     public Output<String> catalogEncryptionMode() {
         return this.catalogEncryptionMode;
@@ -31,63 +31,59 @@ public final class DataCatalogEncryptionSettingsDataCatalogEncryptionSettingsEnc
      * 
      */
     @Import(name="sseAwsKmsKeyId")
-      private final @Nullable Output<String> sseAwsKmsKeyId;
+    private @Nullable Output<String> sseAwsKmsKeyId;
 
-    public Output<String> sseAwsKmsKeyId() {
-        return this.sseAwsKmsKeyId == null ? Codegen.empty() : this.sseAwsKmsKeyId;
+    public Optional<Output<String>> sseAwsKmsKeyId() {
+        return Optional.ofNullable(this.sseAwsKmsKeyId);
     }
 
-    public DataCatalogEncryptionSettingsDataCatalogEncryptionSettingsEncryptionAtRestArgs(
-        Output<String> catalogEncryptionMode,
-        @Nullable Output<String> sseAwsKmsKeyId) {
-        this.catalogEncryptionMode = Objects.requireNonNull(catalogEncryptionMode, "expected parameter 'catalogEncryptionMode' to be non-null");
-        this.sseAwsKmsKeyId = sseAwsKmsKeyId;
-    }
+    private DataCatalogEncryptionSettingsDataCatalogEncryptionSettingsEncryptionAtRestArgs() {}
 
-    private DataCatalogEncryptionSettingsDataCatalogEncryptionSettingsEncryptionAtRestArgs() {
-        this.catalogEncryptionMode = Codegen.empty();
-        this.sseAwsKmsKeyId = Codegen.empty();
+    private DataCatalogEncryptionSettingsDataCatalogEncryptionSettingsEncryptionAtRestArgs(DataCatalogEncryptionSettingsDataCatalogEncryptionSettingsEncryptionAtRestArgs $) {
+        this.catalogEncryptionMode = $.catalogEncryptionMode;
+        this.sseAwsKmsKeyId = $.sseAwsKmsKeyId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DataCatalogEncryptionSettingsDataCatalogEncryptionSettingsEncryptionAtRestArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> catalogEncryptionMode;
-        private @Nullable Output<String> sseAwsKmsKeyId;
+        private DataCatalogEncryptionSettingsDataCatalogEncryptionSettingsEncryptionAtRestArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DataCatalogEncryptionSettingsDataCatalogEncryptionSettingsEncryptionAtRestArgs();
         }
 
         public Builder(DataCatalogEncryptionSettingsDataCatalogEncryptionSettingsEncryptionAtRestArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.catalogEncryptionMode = defaults.catalogEncryptionMode;
-    	      this.sseAwsKmsKeyId = defaults.sseAwsKmsKeyId;
+            $ = new DataCatalogEncryptionSettingsDataCatalogEncryptionSettingsEncryptionAtRestArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder catalogEncryptionMode(Output<String> catalogEncryptionMode) {
-            this.catalogEncryptionMode = Objects.requireNonNull(catalogEncryptionMode);
+            $.catalogEncryptionMode = catalogEncryptionMode;
             return this;
         }
+
         public Builder catalogEncryptionMode(String catalogEncryptionMode) {
-            this.catalogEncryptionMode = Output.of(Objects.requireNonNull(catalogEncryptionMode));
-            return this;
+            return catalogEncryptionMode(Output.of(catalogEncryptionMode));
         }
+
         public Builder sseAwsKmsKeyId(@Nullable Output<String> sseAwsKmsKeyId) {
-            this.sseAwsKmsKeyId = sseAwsKmsKeyId;
+            $.sseAwsKmsKeyId = sseAwsKmsKeyId;
             return this;
         }
-        public Builder sseAwsKmsKeyId(@Nullable String sseAwsKmsKeyId) {
-            this.sseAwsKmsKeyId = Codegen.ofNullable(sseAwsKmsKeyId);
-            return this;
-        }        public DataCatalogEncryptionSettingsDataCatalogEncryptionSettingsEncryptionAtRestArgs build() {
-            return new DataCatalogEncryptionSettingsDataCatalogEncryptionSettingsEncryptionAtRestArgs(catalogEncryptionMode, sseAwsKmsKeyId);
+
+        public Builder sseAwsKmsKeyId(String sseAwsKmsKeyId) {
+            return sseAwsKmsKeyId(Output.of(sseAwsKmsKeyId));
+        }
+
+        public DataCatalogEncryptionSettingsDataCatalogEncryptionSettingsEncryptionAtRestArgs build() {
+            $.catalogEncryptionMode = Objects.requireNonNull($.catalogEncryptionMode, "expected parameter 'catalogEncryptionMode' to be non-null");
+            return $;
         }
     }
+
 }

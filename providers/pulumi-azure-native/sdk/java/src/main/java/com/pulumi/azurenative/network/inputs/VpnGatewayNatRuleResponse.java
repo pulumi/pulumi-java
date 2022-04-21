@@ -26,7 +26,7 @@ public final class VpnGatewayNatRuleResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="egressVpnSiteLinkConnections", required=true)
-      private final List<SubResourceResponse> egressVpnSiteLinkConnections;
+    private List<SubResourceResponse> egressVpnSiteLinkConnections;
 
     public List<SubResourceResponse> egressVpnSiteLinkConnections() {
         return this.egressVpnSiteLinkConnections;
@@ -37,7 +37,7 @@ public final class VpnGatewayNatRuleResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="etag", required=true)
-      private final String etag;
+    private String etag;
 
     public String etag() {
         return this.etag;
@@ -48,10 +48,10 @@ public final class VpnGatewayNatRuleResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="externalMappings")
-      private final @Nullable List<VpnNatRuleMappingResponse> externalMappings;
+    private @Nullable List<VpnNatRuleMappingResponse> externalMappings;
 
-    public List<VpnNatRuleMappingResponse> externalMappings() {
-        return this.externalMappings == null ? List.of() : this.externalMappings;
+    public Optional<List<VpnNatRuleMappingResponse>> externalMappings() {
+        return Optional.ofNullable(this.externalMappings);
     }
 
     /**
@@ -59,10 +59,10 @@ public final class VpnGatewayNatRuleResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="id")
-      private final @Nullable String id;
+    private @Nullable String id;
 
     public Optional<String> id() {
-        return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
+        return Optional.ofNullable(this.id);
     }
 
     /**
@@ -70,7 +70,7 @@ public final class VpnGatewayNatRuleResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="ingressVpnSiteLinkConnections", required=true)
-      private final List<SubResourceResponse> ingressVpnSiteLinkConnections;
+    private List<SubResourceResponse> ingressVpnSiteLinkConnections;
 
     public List<SubResourceResponse> ingressVpnSiteLinkConnections() {
         return this.ingressVpnSiteLinkConnections;
@@ -81,10 +81,10 @@ public final class VpnGatewayNatRuleResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="internalMappings")
-      private final @Nullable List<VpnNatRuleMappingResponse> internalMappings;
+    private @Nullable List<VpnNatRuleMappingResponse> internalMappings;
 
-    public List<VpnNatRuleMappingResponse> internalMappings() {
-        return this.internalMappings == null ? List.of() : this.internalMappings;
+    public Optional<List<VpnNatRuleMappingResponse>> internalMappings() {
+        return Optional.ofNullable(this.internalMappings);
     }
 
     /**
@@ -92,10 +92,10 @@ public final class VpnGatewayNatRuleResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="ipConfigurationId")
-      private final @Nullable String ipConfigurationId;
+    private @Nullable String ipConfigurationId;
 
     public Optional<String> ipConfigurationId() {
-        return this.ipConfigurationId == null ? Optional.empty() : Optional.ofNullable(this.ipConfigurationId);
+        return Optional.ofNullable(this.ipConfigurationId);
     }
 
     /**
@@ -103,10 +103,10 @@ public final class VpnGatewayNatRuleResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="mode")
-      private final @Nullable String mode;
+    private @Nullable String mode;
 
     public Optional<String> mode() {
-        return this.mode == null ? Optional.empty() : Optional.ofNullable(this.mode);
+        return Optional.ofNullable(this.mode);
     }
 
     /**
@@ -114,10 +114,10 @@ public final class VpnGatewayNatRuleResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="name")
-      private final @Nullable String name;
+    private @Nullable String name;
 
     public Optional<String> name() {
-        return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -125,7 +125,7 @@ public final class VpnGatewayNatRuleResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="provisioningState", required=true)
-      private final String provisioningState;
+    private String provisioningState;
 
     public String provisioningState() {
         return this.provisioningState;
@@ -136,148 +136,125 @@ public final class VpnGatewayNatRuleResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
     }
 
-    public VpnGatewayNatRuleResponse(
-        List<SubResourceResponse> egressVpnSiteLinkConnections,
-        String etag,
-        @Nullable List<VpnNatRuleMappingResponse> externalMappings,
-        @Nullable String id,
-        List<SubResourceResponse> ingressVpnSiteLinkConnections,
-        @Nullable List<VpnNatRuleMappingResponse> internalMappings,
-        @Nullable String ipConfigurationId,
-        @Nullable String mode,
-        @Nullable String name,
-        String provisioningState,
-        String type) {
-        this.egressVpnSiteLinkConnections = Objects.requireNonNull(egressVpnSiteLinkConnections, "expected parameter 'egressVpnSiteLinkConnections' to be non-null");
-        this.etag = Objects.requireNonNull(etag, "expected parameter 'etag' to be non-null");
-        this.externalMappings = externalMappings;
-        this.id = id;
-        this.ingressVpnSiteLinkConnections = Objects.requireNonNull(ingressVpnSiteLinkConnections, "expected parameter 'ingressVpnSiteLinkConnections' to be non-null");
-        this.internalMappings = internalMappings;
-        this.ipConfigurationId = ipConfigurationId;
-        this.mode = mode;
-        this.name = name;
-        this.provisioningState = Objects.requireNonNull(provisioningState, "expected parameter 'provisioningState' to be non-null");
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private VpnGatewayNatRuleResponse() {}
 
-    private VpnGatewayNatRuleResponse() {
-        this.egressVpnSiteLinkConnections = List.of();
-        this.etag = null;
-        this.externalMappings = List.of();
-        this.id = null;
-        this.ingressVpnSiteLinkConnections = List.of();
-        this.internalMappings = List.of();
-        this.ipConfigurationId = null;
-        this.mode = null;
-        this.name = null;
-        this.provisioningState = null;
-        this.type = null;
+    private VpnGatewayNatRuleResponse(VpnGatewayNatRuleResponse $) {
+        this.egressVpnSiteLinkConnections = $.egressVpnSiteLinkConnections;
+        this.etag = $.etag;
+        this.externalMappings = $.externalMappings;
+        this.id = $.id;
+        this.ingressVpnSiteLinkConnections = $.ingressVpnSiteLinkConnections;
+        this.internalMappings = $.internalMappings;
+        this.ipConfigurationId = $.ipConfigurationId;
+        this.mode = $.mode;
+        this.name = $.name;
+        this.provisioningState = $.provisioningState;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VpnGatewayNatRuleResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<SubResourceResponse> egressVpnSiteLinkConnections;
-        private String etag;
-        private @Nullable List<VpnNatRuleMappingResponse> externalMappings;
-        private @Nullable String id;
-        private List<SubResourceResponse> ingressVpnSiteLinkConnections;
-        private @Nullable List<VpnNatRuleMappingResponse> internalMappings;
-        private @Nullable String ipConfigurationId;
-        private @Nullable String mode;
-        private @Nullable String name;
-        private String provisioningState;
-        private String type;
+        private VpnGatewayNatRuleResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new VpnGatewayNatRuleResponse();
         }
 
         public Builder(VpnGatewayNatRuleResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.egressVpnSiteLinkConnections = defaults.egressVpnSiteLinkConnections;
-    	      this.etag = defaults.etag;
-    	      this.externalMappings = defaults.externalMappings;
-    	      this.id = defaults.id;
-    	      this.ingressVpnSiteLinkConnections = defaults.ingressVpnSiteLinkConnections;
-    	      this.internalMappings = defaults.internalMappings;
-    	      this.ipConfigurationId = defaults.ipConfigurationId;
-    	      this.mode = defaults.mode;
-    	      this.name = defaults.name;
-    	      this.provisioningState = defaults.provisioningState;
-    	      this.type = defaults.type;
+            $ = new VpnGatewayNatRuleResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder egressVpnSiteLinkConnections(List<SubResourceResponse> egressVpnSiteLinkConnections) {
-            this.egressVpnSiteLinkConnections = Objects.requireNonNull(egressVpnSiteLinkConnections);
+            $.egressVpnSiteLinkConnections = egressVpnSiteLinkConnections;
             return this;
         }
+
         public Builder egressVpnSiteLinkConnections(SubResourceResponse... egressVpnSiteLinkConnections) {
             return egressVpnSiteLinkConnections(List.of(egressVpnSiteLinkConnections));
         }
+
         public Builder etag(String etag) {
-            this.etag = Objects.requireNonNull(etag);
+            $.etag = etag;
             return this;
         }
+
         public Builder externalMappings(@Nullable List<VpnNatRuleMappingResponse> externalMappings) {
-            this.externalMappings = externalMappings;
+            $.externalMappings = externalMappings;
             return this;
         }
+
         public Builder externalMappings(VpnNatRuleMappingResponse... externalMappings) {
             return externalMappings(List.of(externalMappings));
         }
+
         public Builder id(@Nullable String id) {
-            this.id = id;
+            $.id = id;
             return this;
         }
+
         public Builder ingressVpnSiteLinkConnections(List<SubResourceResponse> ingressVpnSiteLinkConnections) {
-            this.ingressVpnSiteLinkConnections = Objects.requireNonNull(ingressVpnSiteLinkConnections);
+            $.ingressVpnSiteLinkConnections = ingressVpnSiteLinkConnections;
             return this;
         }
+
         public Builder ingressVpnSiteLinkConnections(SubResourceResponse... ingressVpnSiteLinkConnections) {
             return ingressVpnSiteLinkConnections(List.of(ingressVpnSiteLinkConnections));
         }
+
         public Builder internalMappings(@Nullable List<VpnNatRuleMappingResponse> internalMappings) {
-            this.internalMappings = internalMappings;
+            $.internalMappings = internalMappings;
             return this;
         }
+
         public Builder internalMappings(VpnNatRuleMappingResponse... internalMappings) {
             return internalMappings(List.of(internalMappings));
         }
+
         public Builder ipConfigurationId(@Nullable String ipConfigurationId) {
-            this.ipConfigurationId = ipConfigurationId;
+            $.ipConfigurationId = ipConfigurationId;
             return this;
         }
+
         public Builder mode(@Nullable String mode) {
-            this.mode = mode;
+            $.mode = mode;
             return this;
         }
+
         public Builder name(@Nullable String name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
+
         public Builder provisioningState(String provisioningState) {
-            this.provisioningState = Objects.requireNonNull(provisioningState);
+            $.provisioningState = provisioningState;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
-        }        public VpnGatewayNatRuleResponse build() {
-            return new VpnGatewayNatRuleResponse(egressVpnSiteLinkConnections, etag, externalMappings, id, ingressVpnSiteLinkConnections, internalMappings, ipConfigurationId, mode, name, provisioningState, type);
+        }
+
+        public VpnGatewayNatRuleResponse build() {
+            $.egressVpnSiteLinkConnections = Objects.requireNonNull($.egressVpnSiteLinkConnections, "expected parameter 'egressVpnSiteLinkConnections' to be non-null");
+            $.etag = Objects.requireNonNull($.etag, "expected parameter 'etag' to be non-null");
+            $.ingressVpnSiteLinkConnections = Objects.requireNonNull($.ingressVpnSiteLinkConnections, "expected parameter 'ingressVpnSiteLinkConnections' to be non-null");
+            $.provisioningState = Objects.requireNonNull($.provisioningState, "expected parameter 'provisioningState' to be non-null");
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

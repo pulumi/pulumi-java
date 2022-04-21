@@ -5,7 +5,6 @@ package com.pulumi.googlenative.datalabeling_v1beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.datalabeling_v1beta1.inputs.GoogleCloudDatalabelingV1beta1BoundingPolyConfigArgs;
 import com.pulumi.googlenative.datalabeling_v1beta1.inputs.GoogleCloudDatalabelingV1beta1EvaluationConfigArgs;
 import com.pulumi.googlenative.datalabeling_v1beta1.inputs.GoogleCloudDatalabelingV1beta1EvaluationJobAlertConfigArgs;
@@ -18,6 +17,7 @@ import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -34,7 +34,7 @@ public final class GoogleCloudDatalabelingV1beta1EvaluationJobConfigArgs extends
      * 
      */
     @Import(name="bigqueryImportKeys", required=true)
-      private final Output<Map<String,String>> bigqueryImportKeys;
+    private Output<Map<String,String>> bigqueryImportKeys;
 
     public Output<Map<String,String>> bigqueryImportKeys() {
         return this.bigqueryImportKeys;
@@ -45,10 +45,10 @@ public final class GoogleCloudDatalabelingV1beta1EvaluationJobConfigArgs extends
      * 
      */
     @Import(name="boundingPolyConfig")
-      private final @Nullable Output<GoogleCloudDatalabelingV1beta1BoundingPolyConfigArgs> boundingPolyConfig;
+    private @Nullable Output<GoogleCloudDatalabelingV1beta1BoundingPolyConfigArgs> boundingPolyConfig;
 
-    public Output<GoogleCloudDatalabelingV1beta1BoundingPolyConfigArgs> boundingPolyConfig() {
-        return this.boundingPolyConfig == null ? Codegen.empty() : this.boundingPolyConfig;
+    public Optional<Output<GoogleCloudDatalabelingV1beta1BoundingPolyConfigArgs>> boundingPolyConfig() {
+        return Optional.ofNullable(this.boundingPolyConfig);
     }
 
     /**
@@ -56,7 +56,7 @@ public final class GoogleCloudDatalabelingV1beta1EvaluationJobConfigArgs extends
      * 
      */
     @Import(name="evaluationConfig", required=true)
-      private final Output<GoogleCloudDatalabelingV1beta1EvaluationConfigArgs> evaluationConfig;
+    private Output<GoogleCloudDatalabelingV1beta1EvaluationConfigArgs> evaluationConfig;
 
     public Output<GoogleCloudDatalabelingV1beta1EvaluationConfigArgs> evaluationConfig() {
         return this.evaluationConfig;
@@ -67,10 +67,10 @@ public final class GoogleCloudDatalabelingV1beta1EvaluationJobConfigArgs extends
      * 
      */
     @Import(name="evaluationJobAlertConfig")
-      private final @Nullable Output<GoogleCloudDatalabelingV1beta1EvaluationJobAlertConfigArgs> evaluationJobAlertConfig;
+    private @Nullable Output<GoogleCloudDatalabelingV1beta1EvaluationJobAlertConfigArgs> evaluationJobAlertConfig;
 
-    public Output<GoogleCloudDatalabelingV1beta1EvaluationJobAlertConfigArgs> evaluationJobAlertConfig() {
-        return this.evaluationJobAlertConfig == null ? Codegen.empty() : this.evaluationJobAlertConfig;
+    public Optional<Output<GoogleCloudDatalabelingV1beta1EvaluationJobAlertConfigArgs>> evaluationJobAlertConfig() {
+        return Optional.ofNullable(this.evaluationJobAlertConfig);
     }
 
     /**
@@ -78,7 +78,7 @@ public final class GoogleCloudDatalabelingV1beta1EvaluationJobConfigArgs extends
      * 
      */
     @Import(name="exampleCount", required=true)
-      private final Output<Integer> exampleCount;
+    private Output<Integer> exampleCount;
 
     public Output<Integer> exampleCount() {
         return this.exampleCount;
@@ -89,7 +89,7 @@ public final class GoogleCloudDatalabelingV1beta1EvaluationJobConfigArgs extends
      * 
      */
     @Import(name="exampleSamplePercentage", required=true)
-      private final Output<Double> exampleSamplePercentage;
+    private Output<Double> exampleSamplePercentage;
 
     public Output<Double> exampleSamplePercentage() {
         return this.exampleSamplePercentage;
@@ -100,10 +100,10 @@ public final class GoogleCloudDatalabelingV1beta1EvaluationJobConfigArgs extends
      * 
      */
     @Import(name="humanAnnotationConfig")
-      private final @Nullable Output<GoogleCloudDatalabelingV1beta1HumanAnnotationConfigArgs> humanAnnotationConfig;
+    private @Nullable Output<GoogleCloudDatalabelingV1beta1HumanAnnotationConfigArgs> humanAnnotationConfig;
 
-    public Output<GoogleCloudDatalabelingV1beta1HumanAnnotationConfigArgs> humanAnnotationConfig() {
-        return this.humanAnnotationConfig == null ? Codegen.empty() : this.humanAnnotationConfig;
+    public Optional<Output<GoogleCloudDatalabelingV1beta1HumanAnnotationConfigArgs>> humanAnnotationConfig() {
+        return Optional.ofNullable(this.humanAnnotationConfig);
     }
 
     /**
@@ -111,10 +111,10 @@ public final class GoogleCloudDatalabelingV1beta1EvaluationJobConfigArgs extends
      * 
      */
     @Import(name="imageClassificationConfig")
-      private final @Nullable Output<GoogleCloudDatalabelingV1beta1ImageClassificationConfigArgs> imageClassificationConfig;
+    private @Nullable Output<GoogleCloudDatalabelingV1beta1ImageClassificationConfigArgs> imageClassificationConfig;
 
-    public Output<GoogleCloudDatalabelingV1beta1ImageClassificationConfigArgs> imageClassificationConfig() {
-        return this.imageClassificationConfig == null ? Codegen.empty() : this.imageClassificationConfig;
+    public Optional<Output<GoogleCloudDatalabelingV1beta1ImageClassificationConfigArgs>> imageClassificationConfig() {
+        return Optional.ofNullable(this.imageClassificationConfig);
     }
 
     /**
@@ -122,10 +122,10 @@ public final class GoogleCloudDatalabelingV1beta1EvaluationJobConfigArgs extends
      * 
      */
     @Import(name="inputConfig")
-      private final @Nullable Output<GoogleCloudDatalabelingV1beta1InputConfigArgs> inputConfig;
+    private @Nullable Output<GoogleCloudDatalabelingV1beta1InputConfigArgs> inputConfig;
 
-    public Output<GoogleCloudDatalabelingV1beta1InputConfigArgs> inputConfig() {
-        return this.inputConfig == null ? Codegen.empty() : this.inputConfig;
+    public Optional<Output<GoogleCloudDatalabelingV1beta1InputConfigArgs>> inputConfig() {
+        return Optional.ofNullable(this.inputConfig);
     }
 
     /**
@@ -133,167 +133,142 @@ public final class GoogleCloudDatalabelingV1beta1EvaluationJobConfigArgs extends
      * 
      */
     @Import(name="textClassificationConfig")
-      private final @Nullable Output<GoogleCloudDatalabelingV1beta1TextClassificationConfigArgs> textClassificationConfig;
+    private @Nullable Output<GoogleCloudDatalabelingV1beta1TextClassificationConfigArgs> textClassificationConfig;
 
-    public Output<GoogleCloudDatalabelingV1beta1TextClassificationConfigArgs> textClassificationConfig() {
-        return this.textClassificationConfig == null ? Codegen.empty() : this.textClassificationConfig;
+    public Optional<Output<GoogleCloudDatalabelingV1beta1TextClassificationConfigArgs>> textClassificationConfig() {
+        return Optional.ofNullable(this.textClassificationConfig);
     }
 
-    public GoogleCloudDatalabelingV1beta1EvaluationJobConfigArgs(
-        Output<Map<String,String>> bigqueryImportKeys,
-        @Nullable Output<GoogleCloudDatalabelingV1beta1BoundingPolyConfigArgs> boundingPolyConfig,
-        Output<GoogleCloudDatalabelingV1beta1EvaluationConfigArgs> evaluationConfig,
-        @Nullable Output<GoogleCloudDatalabelingV1beta1EvaluationJobAlertConfigArgs> evaluationJobAlertConfig,
-        Output<Integer> exampleCount,
-        Output<Double> exampleSamplePercentage,
-        @Nullable Output<GoogleCloudDatalabelingV1beta1HumanAnnotationConfigArgs> humanAnnotationConfig,
-        @Nullable Output<GoogleCloudDatalabelingV1beta1ImageClassificationConfigArgs> imageClassificationConfig,
-        @Nullable Output<GoogleCloudDatalabelingV1beta1InputConfigArgs> inputConfig,
-        @Nullable Output<GoogleCloudDatalabelingV1beta1TextClassificationConfigArgs> textClassificationConfig) {
-        this.bigqueryImportKeys = Objects.requireNonNull(bigqueryImportKeys, "expected parameter 'bigqueryImportKeys' to be non-null");
-        this.boundingPolyConfig = boundingPolyConfig;
-        this.evaluationConfig = Objects.requireNonNull(evaluationConfig, "expected parameter 'evaluationConfig' to be non-null");
-        this.evaluationJobAlertConfig = evaluationJobAlertConfig;
-        this.exampleCount = Objects.requireNonNull(exampleCount, "expected parameter 'exampleCount' to be non-null");
-        this.exampleSamplePercentage = Objects.requireNonNull(exampleSamplePercentage, "expected parameter 'exampleSamplePercentage' to be non-null");
-        this.humanAnnotationConfig = humanAnnotationConfig;
-        this.imageClassificationConfig = imageClassificationConfig;
-        this.inputConfig = inputConfig;
-        this.textClassificationConfig = textClassificationConfig;
-    }
+    private GoogleCloudDatalabelingV1beta1EvaluationJobConfigArgs() {}
 
-    private GoogleCloudDatalabelingV1beta1EvaluationJobConfigArgs() {
-        this.bigqueryImportKeys = Codegen.empty();
-        this.boundingPolyConfig = Codegen.empty();
-        this.evaluationConfig = Codegen.empty();
-        this.evaluationJobAlertConfig = Codegen.empty();
-        this.exampleCount = Codegen.empty();
-        this.exampleSamplePercentage = Codegen.empty();
-        this.humanAnnotationConfig = Codegen.empty();
-        this.imageClassificationConfig = Codegen.empty();
-        this.inputConfig = Codegen.empty();
-        this.textClassificationConfig = Codegen.empty();
+    private GoogleCloudDatalabelingV1beta1EvaluationJobConfigArgs(GoogleCloudDatalabelingV1beta1EvaluationJobConfigArgs $) {
+        this.bigqueryImportKeys = $.bigqueryImportKeys;
+        this.boundingPolyConfig = $.boundingPolyConfig;
+        this.evaluationConfig = $.evaluationConfig;
+        this.evaluationJobAlertConfig = $.evaluationJobAlertConfig;
+        this.exampleCount = $.exampleCount;
+        this.exampleSamplePercentage = $.exampleSamplePercentage;
+        this.humanAnnotationConfig = $.humanAnnotationConfig;
+        this.imageClassificationConfig = $.imageClassificationConfig;
+        this.inputConfig = $.inputConfig;
+        this.textClassificationConfig = $.textClassificationConfig;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudDatalabelingV1beta1EvaluationJobConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Map<String,String>> bigqueryImportKeys;
-        private @Nullable Output<GoogleCloudDatalabelingV1beta1BoundingPolyConfigArgs> boundingPolyConfig;
-        private Output<GoogleCloudDatalabelingV1beta1EvaluationConfigArgs> evaluationConfig;
-        private @Nullable Output<GoogleCloudDatalabelingV1beta1EvaluationJobAlertConfigArgs> evaluationJobAlertConfig;
-        private Output<Integer> exampleCount;
-        private Output<Double> exampleSamplePercentage;
-        private @Nullable Output<GoogleCloudDatalabelingV1beta1HumanAnnotationConfigArgs> humanAnnotationConfig;
-        private @Nullable Output<GoogleCloudDatalabelingV1beta1ImageClassificationConfigArgs> imageClassificationConfig;
-        private @Nullable Output<GoogleCloudDatalabelingV1beta1InputConfigArgs> inputConfig;
-        private @Nullable Output<GoogleCloudDatalabelingV1beta1TextClassificationConfigArgs> textClassificationConfig;
+        private GoogleCloudDatalabelingV1beta1EvaluationJobConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudDatalabelingV1beta1EvaluationJobConfigArgs();
         }
 
         public Builder(GoogleCloudDatalabelingV1beta1EvaluationJobConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.bigqueryImportKeys = defaults.bigqueryImportKeys;
-    	      this.boundingPolyConfig = defaults.boundingPolyConfig;
-    	      this.evaluationConfig = defaults.evaluationConfig;
-    	      this.evaluationJobAlertConfig = defaults.evaluationJobAlertConfig;
-    	      this.exampleCount = defaults.exampleCount;
-    	      this.exampleSamplePercentage = defaults.exampleSamplePercentage;
-    	      this.humanAnnotationConfig = defaults.humanAnnotationConfig;
-    	      this.imageClassificationConfig = defaults.imageClassificationConfig;
-    	      this.inputConfig = defaults.inputConfig;
-    	      this.textClassificationConfig = defaults.textClassificationConfig;
+            $ = new GoogleCloudDatalabelingV1beta1EvaluationJobConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder bigqueryImportKeys(Output<Map<String,String>> bigqueryImportKeys) {
-            this.bigqueryImportKeys = Objects.requireNonNull(bigqueryImportKeys);
+            $.bigqueryImportKeys = bigqueryImportKeys;
             return this;
         }
+
         public Builder bigqueryImportKeys(Map<String,String> bigqueryImportKeys) {
-            this.bigqueryImportKeys = Output.of(Objects.requireNonNull(bigqueryImportKeys));
-            return this;
+            return bigqueryImportKeys(Output.of(bigqueryImportKeys));
         }
+
         public Builder boundingPolyConfig(@Nullable Output<GoogleCloudDatalabelingV1beta1BoundingPolyConfigArgs> boundingPolyConfig) {
-            this.boundingPolyConfig = boundingPolyConfig;
+            $.boundingPolyConfig = boundingPolyConfig;
             return this;
         }
-        public Builder boundingPolyConfig(@Nullable GoogleCloudDatalabelingV1beta1BoundingPolyConfigArgs boundingPolyConfig) {
-            this.boundingPolyConfig = Codegen.ofNullable(boundingPolyConfig);
-            return this;
+
+        public Builder boundingPolyConfig(GoogleCloudDatalabelingV1beta1BoundingPolyConfigArgs boundingPolyConfig) {
+            return boundingPolyConfig(Output.of(boundingPolyConfig));
         }
+
         public Builder evaluationConfig(Output<GoogleCloudDatalabelingV1beta1EvaluationConfigArgs> evaluationConfig) {
-            this.evaluationConfig = Objects.requireNonNull(evaluationConfig);
+            $.evaluationConfig = evaluationConfig;
             return this;
         }
+
         public Builder evaluationConfig(GoogleCloudDatalabelingV1beta1EvaluationConfigArgs evaluationConfig) {
-            this.evaluationConfig = Output.of(Objects.requireNonNull(evaluationConfig));
-            return this;
+            return evaluationConfig(Output.of(evaluationConfig));
         }
+
         public Builder evaluationJobAlertConfig(@Nullable Output<GoogleCloudDatalabelingV1beta1EvaluationJobAlertConfigArgs> evaluationJobAlertConfig) {
-            this.evaluationJobAlertConfig = evaluationJobAlertConfig;
+            $.evaluationJobAlertConfig = evaluationJobAlertConfig;
             return this;
         }
-        public Builder evaluationJobAlertConfig(@Nullable GoogleCloudDatalabelingV1beta1EvaluationJobAlertConfigArgs evaluationJobAlertConfig) {
-            this.evaluationJobAlertConfig = Codegen.ofNullable(evaluationJobAlertConfig);
-            return this;
+
+        public Builder evaluationJobAlertConfig(GoogleCloudDatalabelingV1beta1EvaluationJobAlertConfigArgs evaluationJobAlertConfig) {
+            return evaluationJobAlertConfig(Output.of(evaluationJobAlertConfig));
         }
+
         public Builder exampleCount(Output<Integer> exampleCount) {
-            this.exampleCount = Objects.requireNonNull(exampleCount);
+            $.exampleCount = exampleCount;
             return this;
         }
+
         public Builder exampleCount(Integer exampleCount) {
-            this.exampleCount = Output.of(Objects.requireNonNull(exampleCount));
-            return this;
+            return exampleCount(Output.of(exampleCount));
         }
+
         public Builder exampleSamplePercentage(Output<Double> exampleSamplePercentage) {
-            this.exampleSamplePercentage = Objects.requireNonNull(exampleSamplePercentage);
+            $.exampleSamplePercentage = exampleSamplePercentage;
             return this;
         }
+
         public Builder exampleSamplePercentage(Double exampleSamplePercentage) {
-            this.exampleSamplePercentage = Output.of(Objects.requireNonNull(exampleSamplePercentage));
-            return this;
+            return exampleSamplePercentage(Output.of(exampleSamplePercentage));
         }
+
         public Builder humanAnnotationConfig(@Nullable Output<GoogleCloudDatalabelingV1beta1HumanAnnotationConfigArgs> humanAnnotationConfig) {
-            this.humanAnnotationConfig = humanAnnotationConfig;
+            $.humanAnnotationConfig = humanAnnotationConfig;
             return this;
         }
-        public Builder humanAnnotationConfig(@Nullable GoogleCloudDatalabelingV1beta1HumanAnnotationConfigArgs humanAnnotationConfig) {
-            this.humanAnnotationConfig = Codegen.ofNullable(humanAnnotationConfig);
-            return this;
+
+        public Builder humanAnnotationConfig(GoogleCloudDatalabelingV1beta1HumanAnnotationConfigArgs humanAnnotationConfig) {
+            return humanAnnotationConfig(Output.of(humanAnnotationConfig));
         }
+
         public Builder imageClassificationConfig(@Nullable Output<GoogleCloudDatalabelingV1beta1ImageClassificationConfigArgs> imageClassificationConfig) {
-            this.imageClassificationConfig = imageClassificationConfig;
+            $.imageClassificationConfig = imageClassificationConfig;
             return this;
         }
-        public Builder imageClassificationConfig(@Nullable GoogleCloudDatalabelingV1beta1ImageClassificationConfigArgs imageClassificationConfig) {
-            this.imageClassificationConfig = Codegen.ofNullable(imageClassificationConfig);
-            return this;
+
+        public Builder imageClassificationConfig(GoogleCloudDatalabelingV1beta1ImageClassificationConfigArgs imageClassificationConfig) {
+            return imageClassificationConfig(Output.of(imageClassificationConfig));
         }
+
         public Builder inputConfig(@Nullable Output<GoogleCloudDatalabelingV1beta1InputConfigArgs> inputConfig) {
-            this.inputConfig = inputConfig;
+            $.inputConfig = inputConfig;
             return this;
         }
-        public Builder inputConfig(@Nullable GoogleCloudDatalabelingV1beta1InputConfigArgs inputConfig) {
-            this.inputConfig = Codegen.ofNullable(inputConfig);
-            return this;
+
+        public Builder inputConfig(GoogleCloudDatalabelingV1beta1InputConfigArgs inputConfig) {
+            return inputConfig(Output.of(inputConfig));
         }
+
         public Builder textClassificationConfig(@Nullable Output<GoogleCloudDatalabelingV1beta1TextClassificationConfigArgs> textClassificationConfig) {
-            this.textClassificationConfig = textClassificationConfig;
+            $.textClassificationConfig = textClassificationConfig;
             return this;
         }
-        public Builder textClassificationConfig(@Nullable GoogleCloudDatalabelingV1beta1TextClassificationConfigArgs textClassificationConfig) {
-            this.textClassificationConfig = Codegen.ofNullable(textClassificationConfig);
-            return this;
-        }        public GoogleCloudDatalabelingV1beta1EvaluationJobConfigArgs build() {
-            return new GoogleCloudDatalabelingV1beta1EvaluationJobConfigArgs(bigqueryImportKeys, boundingPolyConfig, evaluationConfig, evaluationJobAlertConfig, exampleCount, exampleSamplePercentage, humanAnnotationConfig, imageClassificationConfig, inputConfig, textClassificationConfig);
+
+        public Builder textClassificationConfig(GoogleCloudDatalabelingV1beta1TextClassificationConfigArgs textClassificationConfig) {
+            return textClassificationConfig(Output.of(textClassificationConfig));
+        }
+
+        public GoogleCloudDatalabelingV1beta1EvaluationJobConfigArgs build() {
+            $.bigqueryImportKeys = Objects.requireNonNull($.bigqueryImportKeys, "expected parameter 'bigqueryImportKeys' to be non-null");
+            $.evaluationConfig = Objects.requireNonNull($.evaluationConfig, "expected parameter 'evaluationConfig' to be non-null");
+            $.exampleCount = Objects.requireNonNull($.exampleCount, "expected parameter 'exampleCount' to be non-null");
+            $.exampleSamplePercentage = Objects.requireNonNull($.exampleSamplePercentage, "expected parameter 'exampleSamplePercentage' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,11 +5,11 @@ package com.pulumi.googlenative.transcoder_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.transcoder_v1.inputs.AnimationEndArgs;
 import com.pulumi.googlenative.transcoder_v1.inputs.AnimationFadeArgs;
 import com.pulumi.googlenative.transcoder_v1.inputs.AnimationStaticArgs;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class AnimationArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="animationEnd")
-      private final @Nullable Output<AnimationEndArgs> animationEnd;
+    private @Nullable Output<AnimationEndArgs> animationEnd;
 
-    public Output<AnimationEndArgs> animationEnd() {
-        return this.animationEnd == null ? Codegen.empty() : this.animationEnd;
+    public Optional<Output<AnimationEndArgs>> animationEnd() {
+        return Optional.ofNullable(this.animationEnd);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class AnimationArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="animationFade")
-      private final @Nullable Output<AnimationFadeArgs> animationFade;
+    private @Nullable Output<AnimationFadeArgs> animationFade;
 
-    public Output<AnimationFadeArgs> animationFade() {
-        return this.animationFade == null ? Codegen.empty() : this.animationFade;
+    public Optional<Output<AnimationFadeArgs>> animationFade() {
+        return Optional.ofNullable(this.animationFade);
     }
 
     /**
@@ -48,76 +48,68 @@ public final class AnimationArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="animationStatic")
-      private final @Nullable Output<AnimationStaticArgs> animationStatic;
+    private @Nullable Output<AnimationStaticArgs> animationStatic;
 
-    public Output<AnimationStaticArgs> animationStatic() {
-        return this.animationStatic == null ? Codegen.empty() : this.animationStatic;
+    public Optional<Output<AnimationStaticArgs>> animationStatic() {
+        return Optional.ofNullable(this.animationStatic);
     }
 
-    public AnimationArgs(
-        @Nullable Output<AnimationEndArgs> animationEnd,
-        @Nullable Output<AnimationFadeArgs> animationFade,
-        @Nullable Output<AnimationStaticArgs> animationStatic) {
-        this.animationEnd = animationEnd;
-        this.animationFade = animationFade;
-        this.animationStatic = animationStatic;
-    }
+    private AnimationArgs() {}
 
-    private AnimationArgs() {
-        this.animationEnd = Codegen.empty();
-        this.animationFade = Codegen.empty();
-        this.animationStatic = Codegen.empty();
+    private AnimationArgs(AnimationArgs $) {
+        this.animationEnd = $.animationEnd;
+        this.animationFade = $.animationFade;
+        this.animationStatic = $.animationStatic;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AnimationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<AnimationEndArgs> animationEnd;
-        private @Nullable Output<AnimationFadeArgs> animationFade;
-        private @Nullable Output<AnimationStaticArgs> animationStatic;
+        private AnimationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AnimationArgs();
         }
 
         public Builder(AnimationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.animationEnd = defaults.animationEnd;
-    	      this.animationFade = defaults.animationFade;
-    	      this.animationStatic = defaults.animationStatic;
+            $ = new AnimationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder animationEnd(@Nullable Output<AnimationEndArgs> animationEnd) {
-            this.animationEnd = animationEnd;
+            $.animationEnd = animationEnd;
             return this;
         }
-        public Builder animationEnd(@Nullable AnimationEndArgs animationEnd) {
-            this.animationEnd = Codegen.ofNullable(animationEnd);
-            return this;
+
+        public Builder animationEnd(AnimationEndArgs animationEnd) {
+            return animationEnd(Output.of(animationEnd));
         }
+
         public Builder animationFade(@Nullable Output<AnimationFadeArgs> animationFade) {
-            this.animationFade = animationFade;
+            $.animationFade = animationFade;
             return this;
         }
-        public Builder animationFade(@Nullable AnimationFadeArgs animationFade) {
-            this.animationFade = Codegen.ofNullable(animationFade);
-            return this;
+
+        public Builder animationFade(AnimationFadeArgs animationFade) {
+            return animationFade(Output.of(animationFade));
         }
+
         public Builder animationStatic(@Nullable Output<AnimationStaticArgs> animationStatic) {
-            this.animationStatic = animationStatic;
+            $.animationStatic = animationStatic;
             return this;
         }
-        public Builder animationStatic(@Nullable AnimationStaticArgs animationStatic) {
-            this.animationStatic = Codegen.ofNullable(animationStatic);
-            return this;
-        }        public AnimationArgs build() {
-            return new AnimationArgs(animationEnd, animationFade, animationStatic);
+
+        public Builder animationStatic(AnimationStaticArgs animationStatic) {
+            return animationStatic(Output.of(animationStatic));
+        }
+
+        public AnimationArgs build() {
+            return $;
         }
     }
+
 }

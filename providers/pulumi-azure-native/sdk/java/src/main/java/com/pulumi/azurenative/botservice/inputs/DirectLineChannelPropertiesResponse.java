@@ -25,10 +25,10 @@ public final class DirectLineChannelPropertiesResponse extends com.pulumi.resour
      * 
      */
     @Import(name="directLineEmbedCode")
-      private final @Nullable String directLineEmbedCode;
+    private @Nullable String directLineEmbedCode;
 
     public Optional<String> directLineEmbedCode() {
-        return this.directLineEmbedCode == null ? Optional.empty() : Optional.ofNullable(this.directLineEmbedCode);
+        return Optional.ofNullable(this.directLineEmbedCode);
     }
 
     /**
@@ -36,58 +36,54 @@ public final class DirectLineChannelPropertiesResponse extends com.pulumi.resour
      * 
      */
     @Import(name="sites")
-      private final @Nullable List<DirectLineSiteResponse> sites;
+    private @Nullable List<DirectLineSiteResponse> sites;
 
-    public List<DirectLineSiteResponse> sites() {
-        return this.sites == null ? List.of() : this.sites;
+    public Optional<List<DirectLineSiteResponse>> sites() {
+        return Optional.ofNullable(this.sites);
     }
 
-    public DirectLineChannelPropertiesResponse(
-        @Nullable String directLineEmbedCode,
-        @Nullable List<DirectLineSiteResponse> sites) {
-        this.directLineEmbedCode = directLineEmbedCode;
-        this.sites = sites;
-    }
+    private DirectLineChannelPropertiesResponse() {}
 
-    private DirectLineChannelPropertiesResponse() {
-        this.directLineEmbedCode = null;
-        this.sites = List.of();
+    private DirectLineChannelPropertiesResponse(DirectLineChannelPropertiesResponse $) {
+        this.directLineEmbedCode = $.directLineEmbedCode;
+        this.sites = $.sites;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DirectLineChannelPropertiesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String directLineEmbedCode;
-        private @Nullable List<DirectLineSiteResponse> sites;
+        private DirectLineChannelPropertiesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new DirectLineChannelPropertiesResponse();
         }
 
         public Builder(DirectLineChannelPropertiesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.directLineEmbedCode = defaults.directLineEmbedCode;
-    	      this.sites = defaults.sites;
+            $ = new DirectLineChannelPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder directLineEmbedCode(@Nullable String directLineEmbedCode) {
-            this.directLineEmbedCode = directLineEmbedCode;
+            $.directLineEmbedCode = directLineEmbedCode;
             return this;
         }
+
         public Builder sites(@Nullable List<DirectLineSiteResponse> sites) {
-            this.sites = sites;
+            $.sites = sites;
             return this;
         }
+
         public Builder sites(DirectLineSiteResponse... sites) {
             return sites(List.of(sites));
-        }        public DirectLineChannelPropertiesResponse build() {
-            return new DirectLineChannelPropertiesResponse(directLineEmbedCode, sites);
+        }
+
+        public DirectLineChannelPropertiesResponse build() {
+            return $;
         }
     }
+
 }

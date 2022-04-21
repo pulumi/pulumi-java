@@ -22,7 +22,7 @@ public final class GoogleCloudApigeeV1OperationResponse extends com.pulumi.resou
      * 
      */
     @Import(name="methods", required=true)
-      private final List<String> methods;
+    private List<String> methods;
 
     public List<String> methods() {
         return this.methods;
@@ -33,58 +33,56 @@ public final class GoogleCloudApigeeV1OperationResponse extends com.pulumi.resou
      * 
      */
     @Import(name="resource", required=true)
-      private final String resource;
+    private String resource;
 
     public String resource() {
         return this.resource;
     }
 
-    public GoogleCloudApigeeV1OperationResponse(
-        List<String> methods,
-        String resource) {
-        this.methods = Objects.requireNonNull(methods, "expected parameter 'methods' to be non-null");
-        this.resource = Objects.requireNonNull(resource, "expected parameter 'resource' to be non-null");
-    }
+    private GoogleCloudApigeeV1OperationResponse() {}
 
-    private GoogleCloudApigeeV1OperationResponse() {
-        this.methods = List.of();
-        this.resource = null;
+    private GoogleCloudApigeeV1OperationResponse(GoogleCloudApigeeV1OperationResponse $) {
+        this.methods = $.methods;
+        this.resource = $.resource;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudApigeeV1OperationResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<String> methods;
-        private String resource;
+        private GoogleCloudApigeeV1OperationResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudApigeeV1OperationResponse();
         }
 
         public Builder(GoogleCloudApigeeV1OperationResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.methods = defaults.methods;
-    	      this.resource = defaults.resource;
+            $ = new GoogleCloudApigeeV1OperationResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder methods(List<String> methods) {
-            this.methods = Objects.requireNonNull(methods);
+            $.methods = methods;
             return this;
         }
+
         public Builder methods(String... methods) {
             return methods(List.of(methods));
         }
+
         public Builder resource(String resource) {
-            this.resource = Objects.requireNonNull(resource);
+            $.resource = resource;
             return this;
-        }        public GoogleCloudApigeeV1OperationResponse build() {
-            return new GoogleCloudApigeeV1OperationResponse(methods, resource);
+        }
+
+        public GoogleCloudApigeeV1OperationResponse build() {
+            $.methods = Objects.requireNonNull($.methods, "expected parameter 'methods' to be non-null");
+            $.resource = Objects.requireNonNull($.resource, "expected parameter 'resource' to be non-null");
+            return $;
         }
     }
+
 }

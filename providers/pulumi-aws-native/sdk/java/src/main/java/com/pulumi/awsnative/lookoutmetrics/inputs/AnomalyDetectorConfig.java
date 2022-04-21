@@ -17,45 +17,45 @@ public final class AnomalyDetectorConfig extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="anomalyDetectorFrequency", required=true)
-      private final AnomalyDetectorFrequency anomalyDetectorFrequency;
+    private AnomalyDetectorFrequency anomalyDetectorFrequency;
 
     public AnomalyDetectorFrequency anomalyDetectorFrequency() {
         return this.anomalyDetectorFrequency;
     }
 
-    public AnomalyDetectorConfig(AnomalyDetectorFrequency anomalyDetectorFrequency) {
-        this.anomalyDetectorFrequency = Objects.requireNonNull(anomalyDetectorFrequency, "expected parameter 'anomalyDetectorFrequency' to be non-null");
-    }
+    private AnomalyDetectorConfig() {}
 
-    private AnomalyDetectorConfig() {
-        this.anomalyDetectorFrequency = null;
+    private AnomalyDetectorConfig(AnomalyDetectorConfig $) {
+        this.anomalyDetectorFrequency = $.anomalyDetectorFrequency;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AnomalyDetectorConfig defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private AnomalyDetectorFrequency anomalyDetectorFrequency;
+        private AnomalyDetectorConfig $;
 
         public Builder() {
-    	      // Empty
+            $ = new AnomalyDetectorConfig();
         }
 
         public Builder(AnomalyDetectorConfig defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.anomalyDetectorFrequency = defaults.anomalyDetectorFrequency;
+            $ = new AnomalyDetectorConfig(Objects.requireNonNull(defaults));
         }
 
         public Builder anomalyDetectorFrequency(AnomalyDetectorFrequency anomalyDetectorFrequency) {
-            this.anomalyDetectorFrequency = Objects.requireNonNull(anomalyDetectorFrequency);
+            $.anomalyDetectorFrequency = anomalyDetectorFrequency;
             return this;
-        }        public AnomalyDetectorConfig build() {
-            return new AnomalyDetectorConfig(anomalyDetectorFrequency);
+        }
+
+        public AnomalyDetectorConfig build() {
+            $.anomalyDetectorFrequency = Objects.requireNonNull($.anomalyDetectorFrequency, "expected parameter 'anomalyDetectorFrequency' to be non-null");
+            return $;
         }
     }
+
 }

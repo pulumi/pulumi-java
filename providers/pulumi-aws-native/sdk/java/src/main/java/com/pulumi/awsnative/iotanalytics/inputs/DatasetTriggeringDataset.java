@@ -13,45 +13,45 @@ public final class DatasetTriggeringDataset extends com.pulumi.resources.InvokeA
     public static final DatasetTriggeringDataset Empty = new DatasetTriggeringDataset();
 
     @Import(name="datasetName", required=true)
-      private final String datasetName;
+    private String datasetName;
 
     public String datasetName() {
         return this.datasetName;
     }
 
-    public DatasetTriggeringDataset(String datasetName) {
-        this.datasetName = Objects.requireNonNull(datasetName, "expected parameter 'datasetName' to be non-null");
-    }
+    private DatasetTriggeringDataset() {}
 
-    private DatasetTriggeringDataset() {
-        this.datasetName = null;
+    private DatasetTriggeringDataset(DatasetTriggeringDataset $) {
+        this.datasetName = $.datasetName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DatasetTriggeringDataset defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String datasetName;
+        private DatasetTriggeringDataset $;
 
         public Builder() {
-    	      // Empty
+            $ = new DatasetTriggeringDataset();
         }
 
         public Builder(DatasetTriggeringDataset defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.datasetName = defaults.datasetName;
+            $ = new DatasetTriggeringDataset(Objects.requireNonNull(defaults));
         }
 
         public Builder datasetName(String datasetName) {
-            this.datasetName = Objects.requireNonNull(datasetName);
+            $.datasetName = datasetName;
             return this;
-        }        public DatasetTriggeringDataset build() {
-            return new DatasetTriggeringDataset(datasetName);
+        }
+
+        public DatasetTriggeringDataset build() {
+            $.datasetName = Objects.requireNonNull($.datasetName, "expected parameter 'datasetName' to be non-null");
+            return $;
         }
     }
+
 }

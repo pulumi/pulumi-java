@@ -27,10 +27,10 @@ public final class RoutingPropertiesResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="endpoints")
-      private final @Nullable RoutingEndpointsResponse endpoints;
+    private @Nullable RoutingEndpointsResponse endpoints;
 
     public Optional<RoutingEndpointsResponse> endpoints() {
-        return this.endpoints == null ? Optional.empty() : Optional.ofNullable(this.endpoints);
+        return Optional.ofNullable(this.endpoints);
     }
 
     /**
@@ -38,10 +38,10 @@ public final class RoutingPropertiesResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="enrichments")
-      private final @Nullable List<EnrichmentPropertiesResponse> enrichments;
+    private @Nullable List<EnrichmentPropertiesResponse> enrichments;
 
-    public List<EnrichmentPropertiesResponse> enrichments() {
-        return this.enrichments == null ? List.of() : this.enrichments;
+    public Optional<List<EnrichmentPropertiesResponse>> enrichments() {
+        return Optional.ofNullable(this.enrichments);
     }
 
     /**
@@ -49,10 +49,10 @@ public final class RoutingPropertiesResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="fallbackRoute")
-      private final @Nullable FallbackRoutePropertiesResponse fallbackRoute;
+    private @Nullable FallbackRoutePropertiesResponse fallbackRoute;
 
     public Optional<FallbackRoutePropertiesResponse> fallbackRoute() {
-        return this.fallbackRoute == null ? Optional.empty() : Optional.ofNullable(this.fallbackRoute);
+        return Optional.ofNullable(this.fallbackRoute);
     }
 
     /**
@@ -60,79 +60,70 @@ public final class RoutingPropertiesResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="routes")
-      private final @Nullable List<RoutePropertiesResponse> routes;
+    private @Nullable List<RoutePropertiesResponse> routes;
 
-    public List<RoutePropertiesResponse> routes() {
-        return this.routes == null ? List.of() : this.routes;
+    public Optional<List<RoutePropertiesResponse>> routes() {
+        return Optional.ofNullable(this.routes);
     }
 
-    public RoutingPropertiesResponse(
-        @Nullable RoutingEndpointsResponse endpoints,
-        @Nullable List<EnrichmentPropertiesResponse> enrichments,
-        @Nullable FallbackRoutePropertiesResponse fallbackRoute,
-        @Nullable List<RoutePropertiesResponse> routes) {
-        this.endpoints = endpoints;
-        this.enrichments = enrichments;
-        this.fallbackRoute = fallbackRoute;
-        this.routes = routes;
-    }
+    private RoutingPropertiesResponse() {}
 
-    private RoutingPropertiesResponse() {
-        this.endpoints = null;
-        this.enrichments = List.of();
-        this.fallbackRoute = null;
-        this.routes = List.of();
+    private RoutingPropertiesResponse(RoutingPropertiesResponse $) {
+        this.endpoints = $.endpoints;
+        this.enrichments = $.enrichments;
+        this.fallbackRoute = $.fallbackRoute;
+        this.routes = $.routes;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RoutingPropertiesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable RoutingEndpointsResponse endpoints;
-        private @Nullable List<EnrichmentPropertiesResponse> enrichments;
-        private @Nullable FallbackRoutePropertiesResponse fallbackRoute;
-        private @Nullable List<RoutePropertiesResponse> routes;
+        private RoutingPropertiesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new RoutingPropertiesResponse();
         }
 
         public Builder(RoutingPropertiesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.endpoints = defaults.endpoints;
-    	      this.enrichments = defaults.enrichments;
-    	      this.fallbackRoute = defaults.fallbackRoute;
-    	      this.routes = defaults.routes;
+            $ = new RoutingPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder endpoints(@Nullable RoutingEndpointsResponse endpoints) {
-            this.endpoints = endpoints;
+            $.endpoints = endpoints;
             return this;
         }
+
         public Builder enrichments(@Nullable List<EnrichmentPropertiesResponse> enrichments) {
-            this.enrichments = enrichments;
+            $.enrichments = enrichments;
             return this;
         }
+
         public Builder enrichments(EnrichmentPropertiesResponse... enrichments) {
             return enrichments(List.of(enrichments));
         }
+
         public Builder fallbackRoute(@Nullable FallbackRoutePropertiesResponse fallbackRoute) {
-            this.fallbackRoute = fallbackRoute;
+            $.fallbackRoute = fallbackRoute;
             return this;
         }
+
         public Builder routes(@Nullable List<RoutePropertiesResponse> routes) {
-            this.routes = routes;
+            $.routes = routes;
             return this;
         }
+
         public Builder routes(RoutePropertiesResponse... routes) {
             return routes(List.of(routes));
-        }        public RoutingPropertiesResponse build() {
-            return new RoutingPropertiesResponse(endpoints, enrichments, fallbackRoute, routes);
+        }
+
+        public RoutingPropertiesResponse build() {
+            return $;
         }
     }
+
 }

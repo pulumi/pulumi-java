@@ -5,9 +5,9 @@ package com.pulumi.aws.eks.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class NodeGroupUpdateConfigGetArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="maxUnavailable")
-      private final @Nullable Output<Integer> maxUnavailable;
+    private @Nullable Output<Integer> maxUnavailable;
 
-    public Output<Integer> maxUnavailable() {
-        return this.maxUnavailable == null ? Codegen.empty() : this.maxUnavailable;
+    public Optional<Output<Integer>> maxUnavailable() {
+        return Optional.ofNullable(this.maxUnavailable);
     }
 
     /**
@@ -31,63 +31,58 @@ public final class NodeGroupUpdateConfigGetArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="maxUnavailablePercentage")
-      private final @Nullable Output<Integer> maxUnavailablePercentage;
+    private @Nullable Output<Integer> maxUnavailablePercentage;
 
-    public Output<Integer> maxUnavailablePercentage() {
-        return this.maxUnavailablePercentage == null ? Codegen.empty() : this.maxUnavailablePercentage;
+    public Optional<Output<Integer>> maxUnavailablePercentage() {
+        return Optional.ofNullable(this.maxUnavailablePercentage);
     }
 
-    public NodeGroupUpdateConfigGetArgs(
-        @Nullable Output<Integer> maxUnavailable,
-        @Nullable Output<Integer> maxUnavailablePercentage) {
-        this.maxUnavailable = maxUnavailable;
-        this.maxUnavailablePercentage = maxUnavailablePercentage;
-    }
+    private NodeGroupUpdateConfigGetArgs() {}
 
-    private NodeGroupUpdateConfigGetArgs() {
-        this.maxUnavailable = Codegen.empty();
-        this.maxUnavailablePercentage = Codegen.empty();
+    private NodeGroupUpdateConfigGetArgs(NodeGroupUpdateConfigGetArgs $) {
+        this.maxUnavailable = $.maxUnavailable;
+        this.maxUnavailablePercentage = $.maxUnavailablePercentage;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NodeGroupUpdateConfigGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> maxUnavailable;
-        private @Nullable Output<Integer> maxUnavailablePercentage;
+        private NodeGroupUpdateConfigGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new NodeGroupUpdateConfigGetArgs();
         }
 
         public Builder(NodeGroupUpdateConfigGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.maxUnavailable = defaults.maxUnavailable;
-    	      this.maxUnavailablePercentage = defaults.maxUnavailablePercentage;
+            $ = new NodeGroupUpdateConfigGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder maxUnavailable(@Nullable Output<Integer> maxUnavailable) {
-            this.maxUnavailable = maxUnavailable;
+            $.maxUnavailable = maxUnavailable;
             return this;
         }
-        public Builder maxUnavailable(@Nullable Integer maxUnavailable) {
-            this.maxUnavailable = Codegen.ofNullable(maxUnavailable);
-            return this;
+
+        public Builder maxUnavailable(Integer maxUnavailable) {
+            return maxUnavailable(Output.of(maxUnavailable));
         }
+
         public Builder maxUnavailablePercentage(@Nullable Output<Integer> maxUnavailablePercentage) {
-            this.maxUnavailablePercentage = maxUnavailablePercentage;
+            $.maxUnavailablePercentage = maxUnavailablePercentage;
             return this;
         }
-        public Builder maxUnavailablePercentage(@Nullable Integer maxUnavailablePercentage) {
-            this.maxUnavailablePercentage = Codegen.ofNullable(maxUnavailablePercentage);
-            return this;
-        }        public NodeGroupUpdateConfigGetArgs build() {
-            return new NodeGroupUpdateConfigGetArgs(maxUnavailable, maxUnavailablePercentage);
+
+        public Builder maxUnavailablePercentage(Integer maxUnavailablePercentage) {
+            return maxUnavailablePercentage(Output.of(maxUnavailablePercentage));
+        }
+
+        public NodeGroupUpdateConfigGetArgs build() {
+            return $;
         }
     }
+
 }

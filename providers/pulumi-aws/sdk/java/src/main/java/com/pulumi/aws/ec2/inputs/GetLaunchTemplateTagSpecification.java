@@ -14,7 +14,7 @@ public final class GetLaunchTemplateTagSpecification extends com.pulumi.resource
     public static final GetLaunchTemplateTagSpecification Empty = new GetLaunchTemplateTagSpecification();
 
     @Import(name="resourceType", required=true)
-      private final String resourceType;
+    private String resourceType;
 
     public String resourceType() {
         return this.resourceType;
@@ -25,55 +25,52 @@ public final class GetLaunchTemplateTagSpecification extends com.pulumi.resource
      * 
      */
     @Import(name="tags", required=true)
-      private final Map<String,String> tags;
+    private Map<String,String> tags;
 
     public Map<String,String> tags() {
         return this.tags;
     }
 
-    public GetLaunchTemplateTagSpecification(
-        String resourceType,
-        Map<String,String> tags) {
-        this.resourceType = Objects.requireNonNull(resourceType, "expected parameter 'resourceType' to be non-null");
-        this.tags = Objects.requireNonNull(tags, "expected parameter 'tags' to be non-null");
-    }
+    private GetLaunchTemplateTagSpecification() {}
 
-    private GetLaunchTemplateTagSpecification() {
-        this.resourceType = null;
-        this.tags = Map.of();
+    private GetLaunchTemplateTagSpecification(GetLaunchTemplateTagSpecification $) {
+        this.resourceType = $.resourceType;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetLaunchTemplateTagSpecification defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String resourceType;
-        private Map<String,String> tags;
+        private GetLaunchTemplateTagSpecification $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetLaunchTemplateTagSpecification();
         }
 
         public Builder(GetLaunchTemplateTagSpecification defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.resourceType = defaults.resourceType;
-    	      this.tags = defaults.tags;
+            $ = new GetLaunchTemplateTagSpecification(Objects.requireNonNull(defaults));
         }
 
         public Builder resourceType(String resourceType) {
-            this.resourceType = Objects.requireNonNull(resourceType);
+            $.resourceType = resourceType;
             return this;
         }
+
         public Builder tags(Map<String,String> tags) {
-            this.tags = Objects.requireNonNull(tags);
+            $.tags = tags;
             return this;
-        }        public GetLaunchTemplateTagSpecification build() {
-            return new GetLaunchTemplateTagSpecification(resourceType, tags);
+        }
+
+        public GetLaunchTemplateTagSpecification build() {
+            $.resourceType = Objects.requireNonNull($.resourceType, "expected parameter 'resourceType' to be non-null");
+            $.tags = Objects.requireNonNull($.tags, "expected parameter 'tags' to be non-null");
+            return $;
         }
     }
+
 }

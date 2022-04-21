@@ -5,7 +5,6 @@ package com.pulumi.aws.iot;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,7 +18,7 @@ public final class ThingPrincipalAttachmentArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="principal", required=true)
-      private final Output<String> principal;
+    private Output<String> principal;
 
     public Output<String> principal() {
         return this.principal;
@@ -30,63 +29,60 @@ public final class ThingPrincipalAttachmentArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="thing", required=true)
-      private final Output<String> thing;
+    private Output<String> thing;
 
     public Output<String> thing() {
         return this.thing;
     }
 
-    public ThingPrincipalAttachmentArgs(
-        Output<String> principal,
-        Output<String> thing) {
-        this.principal = Objects.requireNonNull(principal, "expected parameter 'principal' to be non-null");
-        this.thing = Objects.requireNonNull(thing, "expected parameter 'thing' to be non-null");
-    }
+    private ThingPrincipalAttachmentArgs() {}
 
-    private ThingPrincipalAttachmentArgs() {
-        this.principal = Codegen.empty();
-        this.thing = Codegen.empty();
+    private ThingPrincipalAttachmentArgs(ThingPrincipalAttachmentArgs $) {
+        this.principal = $.principal;
+        this.thing = $.thing;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ThingPrincipalAttachmentArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> principal;
-        private Output<String> thing;
+        private ThingPrincipalAttachmentArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ThingPrincipalAttachmentArgs();
         }
 
         public Builder(ThingPrincipalAttachmentArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.principal = defaults.principal;
-    	      this.thing = defaults.thing;
+            $ = new ThingPrincipalAttachmentArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder principal(Output<String> principal) {
-            this.principal = Objects.requireNonNull(principal);
+            $.principal = principal;
             return this;
         }
+
         public Builder principal(String principal) {
-            this.principal = Output.of(Objects.requireNonNull(principal));
-            return this;
+            return principal(Output.of(principal));
         }
+
         public Builder thing(Output<String> thing) {
-            this.thing = Objects.requireNonNull(thing);
+            $.thing = thing;
             return this;
         }
+
         public Builder thing(String thing) {
-            this.thing = Output.of(Objects.requireNonNull(thing));
-            return this;
-        }        public ThingPrincipalAttachmentArgs build() {
-            return new ThingPrincipalAttachmentArgs(principal, thing);
+            return thing(Output.of(thing));
+        }
+
+        public ThingPrincipalAttachmentArgs build() {
+            $.principal = Objects.requireNonNull($.principal, "expected parameter 'principal' to be non-null");
+            $.thing = Objects.requireNonNull($.thing, "expected parameter 'thing' to be non-null");
+            return $;
         }
     }
+
 }

@@ -14,6 +14,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -30,10 +31,10 @@ public final class EncryptionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="encryptionIdentity")
-      private final @Nullable Output<EncryptionIdentityArgs> encryptionIdentity;
+    private @Nullable Output<EncryptionIdentityArgs> encryptionIdentity;
 
-    public Output<EncryptionIdentityArgs> encryptionIdentity() {
-        return this.encryptionIdentity == null ? Codegen.empty() : this.encryptionIdentity;
+    public Optional<Output<EncryptionIdentityArgs>> encryptionIdentity() {
+        return Optional.ofNullable(this.encryptionIdentity);
     }
 
     /**
@@ -41,7 +42,7 @@ public final class EncryptionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="keySource", required=true)
-      private final Output<Either<String,KeySource>> keySource;
+    private Output<Either<String,KeySource>> keySource;
 
     public Output<Either<String,KeySource>> keySource() {
         return this.keySource;
@@ -52,10 +53,10 @@ public final class EncryptionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="keyVaultProperties")
-      private final @Nullable Output<KeyVaultPropertiesArgs> keyVaultProperties;
+    private @Nullable Output<KeyVaultPropertiesArgs> keyVaultProperties;
 
-    public Output<KeyVaultPropertiesArgs> keyVaultProperties() {
-        return this.keyVaultProperties == null ? Codegen.empty() : this.keyVaultProperties;
+    public Optional<Output<KeyVaultPropertiesArgs>> keyVaultProperties() {
+        return Optional.ofNullable(this.keyVaultProperties);
     }
 
     /**
@@ -63,10 +64,10 @@ public final class EncryptionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="requireInfrastructureEncryption")
-      private final @Nullable Output<Boolean> requireInfrastructureEncryption;
+    private @Nullable Output<Boolean> requireInfrastructureEncryption;
 
-    public Output<Boolean> requireInfrastructureEncryption() {
-        return this.requireInfrastructureEncryption == null ? Codegen.empty() : this.requireInfrastructureEncryption;
+    public Optional<Output<Boolean>> requireInfrastructureEncryption() {
+        return Optional.ofNullable(this.requireInfrastructureEncryption);
     }
 
     /**
@@ -74,102 +75,89 @@ public final class EncryptionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="services")
-      private final @Nullable Output<EncryptionServicesArgs> services;
+    private @Nullable Output<EncryptionServicesArgs> services;
 
-    public Output<EncryptionServicesArgs> services() {
-        return this.services == null ? Codegen.empty() : this.services;
+    public Optional<Output<EncryptionServicesArgs>> services() {
+        return Optional.ofNullable(this.services);
     }
 
-    public EncryptionArgs(
-        @Nullable Output<EncryptionIdentityArgs> encryptionIdentity,
-        Output<Either<String,KeySource>> keySource,
-        @Nullable Output<KeyVaultPropertiesArgs> keyVaultProperties,
-        @Nullable Output<Boolean> requireInfrastructureEncryption,
-        @Nullable Output<EncryptionServicesArgs> services) {
-        this.encryptionIdentity = encryptionIdentity;
-        this.keySource = Codegen.stringProp("keySource").left(KeySource.class).output().arg(keySource).def("Microsoft.Storage").require();
-        this.keyVaultProperties = keyVaultProperties;
-        this.requireInfrastructureEncryption = requireInfrastructureEncryption;
-        this.services = services;
-    }
+    private EncryptionArgs() {}
 
-    private EncryptionArgs() {
-        this.encryptionIdentity = Codegen.empty();
-        this.keySource = Codegen.empty();
-        this.keyVaultProperties = Codegen.empty();
-        this.requireInfrastructureEncryption = Codegen.empty();
-        this.services = Codegen.empty();
+    private EncryptionArgs(EncryptionArgs $) {
+        this.encryptionIdentity = $.encryptionIdentity;
+        this.keySource = $.keySource;
+        this.keyVaultProperties = $.keyVaultProperties;
+        this.requireInfrastructureEncryption = $.requireInfrastructureEncryption;
+        this.services = $.services;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EncryptionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<EncryptionIdentityArgs> encryptionIdentity;
-        private Output<Either<String,KeySource>> keySource;
-        private @Nullable Output<KeyVaultPropertiesArgs> keyVaultProperties;
-        private @Nullable Output<Boolean> requireInfrastructureEncryption;
-        private @Nullable Output<EncryptionServicesArgs> services;
+        private EncryptionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new EncryptionArgs();
         }
 
         public Builder(EncryptionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.encryptionIdentity = defaults.encryptionIdentity;
-    	      this.keySource = defaults.keySource;
-    	      this.keyVaultProperties = defaults.keyVaultProperties;
-    	      this.requireInfrastructureEncryption = defaults.requireInfrastructureEncryption;
-    	      this.services = defaults.services;
+            $ = new EncryptionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder encryptionIdentity(@Nullable Output<EncryptionIdentityArgs> encryptionIdentity) {
-            this.encryptionIdentity = encryptionIdentity;
+            $.encryptionIdentity = encryptionIdentity;
             return this;
         }
-        public Builder encryptionIdentity(@Nullable EncryptionIdentityArgs encryptionIdentity) {
-            this.encryptionIdentity = Codegen.ofNullable(encryptionIdentity);
-            return this;
+
+        public Builder encryptionIdentity(EncryptionIdentityArgs encryptionIdentity) {
+            return encryptionIdentity(Output.of(encryptionIdentity));
         }
+
         public Builder keySource(Output<Either<String,KeySource>> keySource) {
-            this.keySource = Objects.requireNonNull(keySource);
+            $.keySource = keySource;
             return this;
         }
+
         public Builder keySource(Either<String,KeySource> keySource) {
-            this.keySource = Output.of(Objects.requireNonNull(keySource));
-            return this;
+            return keySource(Output.of(keySource));
         }
+
         public Builder keyVaultProperties(@Nullable Output<KeyVaultPropertiesArgs> keyVaultProperties) {
-            this.keyVaultProperties = keyVaultProperties;
+            $.keyVaultProperties = keyVaultProperties;
             return this;
         }
-        public Builder keyVaultProperties(@Nullable KeyVaultPropertiesArgs keyVaultProperties) {
-            this.keyVaultProperties = Codegen.ofNullable(keyVaultProperties);
-            return this;
+
+        public Builder keyVaultProperties(KeyVaultPropertiesArgs keyVaultProperties) {
+            return keyVaultProperties(Output.of(keyVaultProperties));
         }
+
         public Builder requireInfrastructureEncryption(@Nullable Output<Boolean> requireInfrastructureEncryption) {
-            this.requireInfrastructureEncryption = requireInfrastructureEncryption;
+            $.requireInfrastructureEncryption = requireInfrastructureEncryption;
             return this;
         }
-        public Builder requireInfrastructureEncryption(@Nullable Boolean requireInfrastructureEncryption) {
-            this.requireInfrastructureEncryption = Codegen.ofNullable(requireInfrastructureEncryption);
-            return this;
+
+        public Builder requireInfrastructureEncryption(Boolean requireInfrastructureEncryption) {
+            return requireInfrastructureEncryption(Output.of(requireInfrastructureEncryption));
         }
+
         public Builder services(@Nullable Output<EncryptionServicesArgs> services) {
-            this.services = services;
+            $.services = services;
             return this;
         }
-        public Builder services(@Nullable EncryptionServicesArgs services) {
-            this.services = Codegen.ofNullable(services);
-            return this;
-        }        public EncryptionArgs build() {
-            return new EncryptionArgs(encryptionIdentity, keySource, keyVaultProperties, requireInfrastructureEncryption, services);
+
+        public Builder services(EncryptionServicesArgs services) {
+            return services(Output.of(services));
+        }
+
+        public EncryptionArgs build() {
+            $.keySource = Codegen.stringProp("keySource").left(KeySource.class).output().arg($.keySource).def("Microsoft.Storage").require();
+            return $;
         }
     }
+
 }

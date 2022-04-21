@@ -17,65 +17,61 @@ public final class SpotFleetLaunchTemplateConfig extends com.pulumi.resources.In
     public static final SpotFleetLaunchTemplateConfig Empty = new SpotFleetLaunchTemplateConfig();
 
     @Import(name="launchTemplateSpecification")
-      private final @Nullable SpotFleetFleetLaunchTemplateSpecification launchTemplateSpecification;
+    private @Nullable SpotFleetFleetLaunchTemplateSpecification launchTemplateSpecification;
 
     public Optional<SpotFleetFleetLaunchTemplateSpecification> launchTemplateSpecification() {
-        return this.launchTemplateSpecification == null ? Optional.empty() : Optional.ofNullable(this.launchTemplateSpecification);
+        return Optional.ofNullable(this.launchTemplateSpecification);
     }
 
     @Import(name="overrides")
-      private final @Nullable List<SpotFleetLaunchTemplateOverrides> overrides;
+    private @Nullable List<SpotFleetLaunchTemplateOverrides> overrides;
 
-    public List<SpotFleetLaunchTemplateOverrides> overrides() {
-        return this.overrides == null ? List.of() : this.overrides;
+    public Optional<List<SpotFleetLaunchTemplateOverrides>> overrides() {
+        return Optional.ofNullable(this.overrides);
     }
 
-    public SpotFleetLaunchTemplateConfig(
-        @Nullable SpotFleetFleetLaunchTemplateSpecification launchTemplateSpecification,
-        @Nullable List<SpotFleetLaunchTemplateOverrides> overrides) {
-        this.launchTemplateSpecification = launchTemplateSpecification;
-        this.overrides = overrides;
-    }
+    private SpotFleetLaunchTemplateConfig() {}
 
-    private SpotFleetLaunchTemplateConfig() {
-        this.launchTemplateSpecification = null;
-        this.overrides = List.of();
+    private SpotFleetLaunchTemplateConfig(SpotFleetLaunchTemplateConfig $) {
+        this.launchTemplateSpecification = $.launchTemplateSpecification;
+        this.overrides = $.overrides;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SpotFleetLaunchTemplateConfig defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable SpotFleetFleetLaunchTemplateSpecification launchTemplateSpecification;
-        private @Nullable List<SpotFleetLaunchTemplateOverrides> overrides;
+        private SpotFleetLaunchTemplateConfig $;
 
         public Builder() {
-    	      // Empty
+            $ = new SpotFleetLaunchTemplateConfig();
         }
 
         public Builder(SpotFleetLaunchTemplateConfig defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.launchTemplateSpecification = defaults.launchTemplateSpecification;
-    	      this.overrides = defaults.overrides;
+            $ = new SpotFleetLaunchTemplateConfig(Objects.requireNonNull(defaults));
         }
 
         public Builder launchTemplateSpecification(@Nullable SpotFleetFleetLaunchTemplateSpecification launchTemplateSpecification) {
-            this.launchTemplateSpecification = launchTemplateSpecification;
+            $.launchTemplateSpecification = launchTemplateSpecification;
             return this;
         }
+
         public Builder overrides(@Nullable List<SpotFleetLaunchTemplateOverrides> overrides) {
-            this.overrides = overrides;
+            $.overrides = overrides;
             return this;
         }
+
         public Builder overrides(SpotFleetLaunchTemplateOverrides... overrides) {
             return overrides(List.of(overrides));
-        }        public SpotFleetLaunchTemplateConfig build() {
-            return new SpotFleetLaunchTemplateConfig(launchTemplateSpecification, overrides);
+        }
+
+        public SpotFleetLaunchTemplateConfig build() {
+            return $;
         }
     }
+
 }

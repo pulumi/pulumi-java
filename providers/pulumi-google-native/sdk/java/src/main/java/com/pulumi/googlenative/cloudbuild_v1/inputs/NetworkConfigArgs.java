@@ -5,10 +5,10 @@ package com.pulumi.googlenative.cloudbuild_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.cloudbuild_v1.enums.NetworkConfigEgressOption;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class NetworkConfigArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="egressOption")
-      private final @Nullable Output<NetworkConfigEgressOption> egressOption;
+    private @Nullable Output<NetworkConfigEgressOption> egressOption;
 
-    public Output<NetworkConfigEgressOption> egressOption() {
-        return this.egressOption == null ? Codegen.empty() : this.egressOption;
+    public Optional<Output<NetworkConfigEgressOption>> egressOption() {
+        return Optional.ofNullable(this.egressOption);
     }
 
     /**
@@ -36,63 +36,59 @@ public final class NetworkConfigArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="peeredNetwork", required=true)
-      private final Output<String> peeredNetwork;
+    private Output<String> peeredNetwork;
 
     public Output<String> peeredNetwork() {
         return this.peeredNetwork;
     }
 
-    public NetworkConfigArgs(
-        @Nullable Output<NetworkConfigEgressOption> egressOption,
-        Output<String> peeredNetwork) {
-        this.egressOption = egressOption;
-        this.peeredNetwork = Objects.requireNonNull(peeredNetwork, "expected parameter 'peeredNetwork' to be non-null");
-    }
+    private NetworkConfigArgs() {}
 
-    private NetworkConfigArgs() {
-        this.egressOption = Codegen.empty();
-        this.peeredNetwork = Codegen.empty();
+    private NetworkConfigArgs(NetworkConfigArgs $) {
+        this.egressOption = $.egressOption;
+        this.peeredNetwork = $.peeredNetwork;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NetworkConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<NetworkConfigEgressOption> egressOption;
-        private Output<String> peeredNetwork;
+        private NetworkConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new NetworkConfigArgs();
         }
 
         public Builder(NetworkConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.egressOption = defaults.egressOption;
-    	      this.peeredNetwork = defaults.peeredNetwork;
+            $ = new NetworkConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder egressOption(@Nullable Output<NetworkConfigEgressOption> egressOption) {
-            this.egressOption = egressOption;
+            $.egressOption = egressOption;
             return this;
         }
-        public Builder egressOption(@Nullable NetworkConfigEgressOption egressOption) {
-            this.egressOption = Codegen.ofNullable(egressOption);
-            return this;
+
+        public Builder egressOption(NetworkConfigEgressOption egressOption) {
+            return egressOption(Output.of(egressOption));
         }
+
         public Builder peeredNetwork(Output<String> peeredNetwork) {
-            this.peeredNetwork = Objects.requireNonNull(peeredNetwork);
+            $.peeredNetwork = peeredNetwork;
             return this;
         }
+
         public Builder peeredNetwork(String peeredNetwork) {
-            this.peeredNetwork = Output.of(Objects.requireNonNull(peeredNetwork));
-            return this;
-        }        public NetworkConfigArgs build() {
-            return new NetworkConfigArgs(egressOption, peeredNetwork);
+            return peeredNetwork(Output.of(peeredNetwork));
+        }
+
+        public NetworkConfigArgs build() {
+            $.peeredNetwork = Objects.requireNonNull($.peeredNetwork, "expected parameter 'peeredNetwork' to be non-null");
+            return $;
         }
     }
+
 }

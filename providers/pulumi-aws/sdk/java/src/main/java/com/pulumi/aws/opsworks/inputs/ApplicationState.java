@@ -8,11 +8,11 @@ import com.pulumi.aws.opsworks.inputs.ApplicationEnvironmentGetArgs;
 import com.pulumi.aws.opsworks.inputs.ApplicationSslConfigurationGetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class ApplicationState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="appSources")
-      private final @Nullable Output<List<ApplicationAppSourceGetArgs>> appSources;
+    private @Nullable Output<List<ApplicationAppSourceGetArgs>> appSources;
 
-    public Output<List<ApplicationAppSourceGetArgs>> appSources() {
-        return this.appSources == null ? Codegen.empty() : this.appSources;
+    public Optional<Output<List<ApplicationAppSourceGetArgs>>> appSources() {
+        return Optional.ofNullable(this.appSources);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class ApplicationState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="autoBundleOnDeploy")
-      private final @Nullable Output<String> autoBundleOnDeploy;
+    private @Nullable Output<String> autoBundleOnDeploy;
 
-    public Output<String> autoBundleOnDeploy() {
-        return this.autoBundleOnDeploy == null ? Codegen.empty() : this.autoBundleOnDeploy;
+    public Optional<Output<String>> autoBundleOnDeploy() {
+        return Optional.ofNullable(this.autoBundleOnDeploy);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class ApplicationState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="awsFlowRubySettings")
-      private final @Nullable Output<String> awsFlowRubySettings;
+    private @Nullable Output<String> awsFlowRubySettings;
 
-    public Output<String> awsFlowRubySettings() {
-        return this.awsFlowRubySettings == null ? Codegen.empty() : this.awsFlowRubySettings;
+    public Optional<Output<String>> awsFlowRubySettings() {
+        return Optional.ofNullable(this.awsFlowRubySettings);
     }
 
     /**
@@ -58,10 +58,10 @@ public final class ApplicationState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="dataSourceArn")
-      private final @Nullable Output<String> dataSourceArn;
+    private @Nullable Output<String> dataSourceArn;
 
-    public Output<String> dataSourceArn() {
-        return this.dataSourceArn == null ? Codegen.empty() : this.dataSourceArn;
+    public Optional<Output<String>> dataSourceArn() {
+        return Optional.ofNullable(this.dataSourceArn);
     }
 
     /**
@@ -69,10 +69,10 @@ public final class ApplicationState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="dataSourceDatabaseName")
-      private final @Nullable Output<String> dataSourceDatabaseName;
+    private @Nullable Output<String> dataSourceDatabaseName;
 
-    public Output<String> dataSourceDatabaseName() {
-        return this.dataSourceDatabaseName == null ? Codegen.empty() : this.dataSourceDatabaseName;
+    public Optional<Output<String>> dataSourceDatabaseName() {
+        return Optional.ofNullable(this.dataSourceDatabaseName);
     }
 
     /**
@@ -80,10 +80,10 @@ public final class ApplicationState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="dataSourceType")
-      private final @Nullable Output<String> dataSourceType;
+    private @Nullable Output<String> dataSourceType;
 
-    public Output<String> dataSourceType() {
-        return this.dataSourceType == null ? Codegen.empty() : this.dataSourceType;
+    public Optional<Output<String>> dataSourceType() {
+        return Optional.ofNullable(this.dataSourceType);
     }
 
     /**
@@ -91,10 +91,10 @@ public final class ApplicationState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -102,10 +102,10 @@ public final class ApplicationState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="documentRoot")
-      private final @Nullable Output<String> documentRoot;
+    private @Nullable Output<String> documentRoot;
 
-    public Output<String> documentRoot() {
-        return this.documentRoot == null ? Codegen.empty() : this.documentRoot;
+    public Optional<Output<String>> documentRoot() {
+        return Optional.ofNullable(this.documentRoot);
     }
 
     /**
@@ -113,10 +113,10 @@ public final class ApplicationState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="domains")
-      private final @Nullable Output<List<String>> domains;
+    private @Nullable Output<List<String>> domains;
 
-    public Output<List<String>> domains() {
-        return this.domains == null ? Codegen.empty() : this.domains;
+    public Optional<Output<List<String>>> domains() {
+        return Optional.ofNullable(this.domains);
     }
 
     /**
@@ -124,10 +124,10 @@ public final class ApplicationState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="enableSsl")
-      private final @Nullable Output<Boolean> enableSsl;
+    private @Nullable Output<Boolean> enableSsl;
 
-    public Output<Boolean> enableSsl() {
-        return this.enableSsl == null ? Codegen.empty() : this.enableSsl;
+    public Optional<Output<Boolean>> enableSsl() {
+        return Optional.ofNullable(this.enableSsl);
     }
 
     /**
@@ -135,10 +135,10 @@ public final class ApplicationState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="environments")
-      private final @Nullable Output<List<ApplicationEnvironmentGetArgs>> environments;
+    private @Nullable Output<List<ApplicationEnvironmentGetArgs>> environments;
 
-    public Output<List<ApplicationEnvironmentGetArgs>> environments() {
-        return this.environments == null ? Codegen.empty() : this.environments;
+    public Optional<Output<List<ApplicationEnvironmentGetArgs>>> environments() {
+        return Optional.ofNullable(this.environments);
     }
 
     /**
@@ -146,10 +146,10 @@ public final class ApplicationState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -157,10 +157,10 @@ public final class ApplicationState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="railsEnv")
-      private final @Nullable Output<String> railsEnv;
+    private @Nullable Output<String> railsEnv;
 
-    public Output<String> railsEnv() {
-        return this.railsEnv == null ? Codegen.empty() : this.railsEnv;
+    public Optional<Output<String>> railsEnv() {
+        return Optional.ofNullable(this.railsEnv);
     }
 
     /**
@@ -168,10 +168,10 @@ public final class ApplicationState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="shortName")
-      private final @Nullable Output<String> shortName;
+    private @Nullable Output<String> shortName;
 
-    public Output<String> shortName() {
-        return this.shortName == null ? Codegen.empty() : this.shortName;
+    public Optional<Output<String>> shortName() {
+        return Optional.ofNullable(this.shortName);
     }
 
     /**
@@ -179,10 +179,10 @@ public final class ApplicationState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="sslConfigurations")
-      private final @Nullable Output<List<ApplicationSslConfigurationGetArgs>> sslConfigurations;
+    private @Nullable Output<List<ApplicationSslConfigurationGetArgs>> sslConfigurations;
 
-    public Output<List<ApplicationSslConfigurationGetArgs>> sslConfigurations() {
-        return this.sslConfigurations == null ? Codegen.empty() : this.sslConfigurations;
+    public Optional<Output<List<ApplicationSslConfigurationGetArgs>>> sslConfigurations() {
+        return Optional.ofNullable(this.sslConfigurations);
     }
 
     /**
@@ -190,10 +190,10 @@ public final class ApplicationState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="stackId")
-      private final @Nullable Output<String> stackId;
+    private @Nullable Output<String> stackId;
 
-    public Output<String> stackId() {
-        return this.stackId == null ? Codegen.empty() : this.stackId;
+    public Optional<Output<String>> stackId() {
+        return Optional.ofNullable(this.stackId);
     }
 
     /**
@@ -201,270 +201,224 @@ public final class ApplicationState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="type")
-      private final @Nullable Output<String> type;
+    private @Nullable Output<String> type;
 
-    public Output<String> type() {
-        return this.type == null ? Codegen.empty() : this.type;
+    public Optional<Output<String>> type() {
+        return Optional.ofNullable(this.type);
     }
 
-    public ApplicationState(
-        @Nullable Output<List<ApplicationAppSourceGetArgs>> appSources,
-        @Nullable Output<String> autoBundleOnDeploy,
-        @Nullable Output<String> awsFlowRubySettings,
-        @Nullable Output<String> dataSourceArn,
-        @Nullable Output<String> dataSourceDatabaseName,
-        @Nullable Output<String> dataSourceType,
-        @Nullable Output<String> description,
-        @Nullable Output<String> documentRoot,
-        @Nullable Output<List<String>> domains,
-        @Nullable Output<Boolean> enableSsl,
-        @Nullable Output<List<ApplicationEnvironmentGetArgs>> environments,
-        @Nullable Output<String> name,
-        @Nullable Output<String> railsEnv,
-        @Nullable Output<String> shortName,
-        @Nullable Output<List<ApplicationSslConfigurationGetArgs>> sslConfigurations,
-        @Nullable Output<String> stackId,
-        @Nullable Output<String> type) {
-        this.appSources = appSources;
-        this.autoBundleOnDeploy = autoBundleOnDeploy;
-        this.awsFlowRubySettings = awsFlowRubySettings;
-        this.dataSourceArn = dataSourceArn;
-        this.dataSourceDatabaseName = dataSourceDatabaseName;
-        this.dataSourceType = dataSourceType;
-        this.description = description;
-        this.documentRoot = documentRoot;
-        this.domains = domains;
-        this.enableSsl = enableSsl;
-        this.environments = environments;
-        this.name = name;
-        this.railsEnv = railsEnv;
-        this.shortName = shortName;
-        this.sslConfigurations = sslConfigurations;
-        this.stackId = stackId;
-        this.type = type;
-    }
+    private ApplicationState() {}
 
-    private ApplicationState() {
-        this.appSources = Codegen.empty();
-        this.autoBundleOnDeploy = Codegen.empty();
-        this.awsFlowRubySettings = Codegen.empty();
-        this.dataSourceArn = Codegen.empty();
-        this.dataSourceDatabaseName = Codegen.empty();
-        this.dataSourceType = Codegen.empty();
-        this.description = Codegen.empty();
-        this.documentRoot = Codegen.empty();
-        this.domains = Codegen.empty();
-        this.enableSsl = Codegen.empty();
-        this.environments = Codegen.empty();
-        this.name = Codegen.empty();
-        this.railsEnv = Codegen.empty();
-        this.shortName = Codegen.empty();
-        this.sslConfigurations = Codegen.empty();
-        this.stackId = Codegen.empty();
-        this.type = Codegen.empty();
+    private ApplicationState(ApplicationState $) {
+        this.appSources = $.appSources;
+        this.autoBundleOnDeploy = $.autoBundleOnDeploy;
+        this.awsFlowRubySettings = $.awsFlowRubySettings;
+        this.dataSourceArn = $.dataSourceArn;
+        this.dataSourceDatabaseName = $.dataSourceDatabaseName;
+        this.dataSourceType = $.dataSourceType;
+        this.description = $.description;
+        this.documentRoot = $.documentRoot;
+        this.domains = $.domains;
+        this.enableSsl = $.enableSsl;
+        this.environments = $.environments;
+        this.name = $.name;
+        this.railsEnv = $.railsEnv;
+        this.shortName = $.shortName;
+        this.sslConfigurations = $.sslConfigurations;
+        this.stackId = $.stackId;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ApplicationState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<ApplicationAppSourceGetArgs>> appSources;
-        private @Nullable Output<String> autoBundleOnDeploy;
-        private @Nullable Output<String> awsFlowRubySettings;
-        private @Nullable Output<String> dataSourceArn;
-        private @Nullable Output<String> dataSourceDatabaseName;
-        private @Nullable Output<String> dataSourceType;
-        private @Nullable Output<String> description;
-        private @Nullable Output<String> documentRoot;
-        private @Nullable Output<List<String>> domains;
-        private @Nullable Output<Boolean> enableSsl;
-        private @Nullable Output<List<ApplicationEnvironmentGetArgs>> environments;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> railsEnv;
-        private @Nullable Output<String> shortName;
-        private @Nullable Output<List<ApplicationSslConfigurationGetArgs>> sslConfigurations;
-        private @Nullable Output<String> stackId;
-        private @Nullable Output<String> type;
+        private ApplicationState $;
 
         public Builder() {
-    	      // Empty
+            $ = new ApplicationState();
         }
 
         public Builder(ApplicationState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.appSources = defaults.appSources;
-    	      this.autoBundleOnDeploy = defaults.autoBundleOnDeploy;
-    	      this.awsFlowRubySettings = defaults.awsFlowRubySettings;
-    	      this.dataSourceArn = defaults.dataSourceArn;
-    	      this.dataSourceDatabaseName = defaults.dataSourceDatabaseName;
-    	      this.dataSourceType = defaults.dataSourceType;
-    	      this.description = defaults.description;
-    	      this.documentRoot = defaults.documentRoot;
-    	      this.domains = defaults.domains;
-    	      this.enableSsl = defaults.enableSsl;
-    	      this.environments = defaults.environments;
-    	      this.name = defaults.name;
-    	      this.railsEnv = defaults.railsEnv;
-    	      this.shortName = defaults.shortName;
-    	      this.sslConfigurations = defaults.sslConfigurations;
-    	      this.stackId = defaults.stackId;
-    	      this.type = defaults.type;
+            $ = new ApplicationState(Objects.requireNonNull(defaults));
         }
 
         public Builder appSources(@Nullable Output<List<ApplicationAppSourceGetArgs>> appSources) {
-            this.appSources = appSources;
+            $.appSources = appSources;
             return this;
         }
-        public Builder appSources(@Nullable List<ApplicationAppSourceGetArgs> appSources) {
-            this.appSources = Codegen.ofNullable(appSources);
-            return this;
+
+        public Builder appSources(List<ApplicationAppSourceGetArgs> appSources) {
+            return appSources(Output.of(appSources));
         }
+
         public Builder appSources(ApplicationAppSourceGetArgs... appSources) {
             return appSources(List.of(appSources));
         }
+
         public Builder autoBundleOnDeploy(@Nullable Output<String> autoBundleOnDeploy) {
-            this.autoBundleOnDeploy = autoBundleOnDeploy;
+            $.autoBundleOnDeploy = autoBundleOnDeploy;
             return this;
         }
-        public Builder autoBundleOnDeploy(@Nullable String autoBundleOnDeploy) {
-            this.autoBundleOnDeploy = Codegen.ofNullable(autoBundleOnDeploy);
-            return this;
+
+        public Builder autoBundleOnDeploy(String autoBundleOnDeploy) {
+            return autoBundleOnDeploy(Output.of(autoBundleOnDeploy));
         }
+
         public Builder awsFlowRubySettings(@Nullable Output<String> awsFlowRubySettings) {
-            this.awsFlowRubySettings = awsFlowRubySettings;
+            $.awsFlowRubySettings = awsFlowRubySettings;
             return this;
         }
-        public Builder awsFlowRubySettings(@Nullable String awsFlowRubySettings) {
-            this.awsFlowRubySettings = Codegen.ofNullable(awsFlowRubySettings);
-            return this;
+
+        public Builder awsFlowRubySettings(String awsFlowRubySettings) {
+            return awsFlowRubySettings(Output.of(awsFlowRubySettings));
         }
+
         public Builder dataSourceArn(@Nullable Output<String> dataSourceArn) {
-            this.dataSourceArn = dataSourceArn;
+            $.dataSourceArn = dataSourceArn;
             return this;
         }
-        public Builder dataSourceArn(@Nullable String dataSourceArn) {
-            this.dataSourceArn = Codegen.ofNullable(dataSourceArn);
-            return this;
+
+        public Builder dataSourceArn(String dataSourceArn) {
+            return dataSourceArn(Output.of(dataSourceArn));
         }
+
         public Builder dataSourceDatabaseName(@Nullable Output<String> dataSourceDatabaseName) {
-            this.dataSourceDatabaseName = dataSourceDatabaseName;
+            $.dataSourceDatabaseName = dataSourceDatabaseName;
             return this;
         }
-        public Builder dataSourceDatabaseName(@Nullable String dataSourceDatabaseName) {
-            this.dataSourceDatabaseName = Codegen.ofNullable(dataSourceDatabaseName);
-            return this;
+
+        public Builder dataSourceDatabaseName(String dataSourceDatabaseName) {
+            return dataSourceDatabaseName(Output.of(dataSourceDatabaseName));
         }
+
         public Builder dataSourceType(@Nullable Output<String> dataSourceType) {
-            this.dataSourceType = dataSourceType;
+            $.dataSourceType = dataSourceType;
             return this;
         }
-        public Builder dataSourceType(@Nullable String dataSourceType) {
-            this.dataSourceType = Codegen.ofNullable(dataSourceType);
-            return this;
+
+        public Builder dataSourceType(String dataSourceType) {
+            return dataSourceType(Output.of(dataSourceType));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder documentRoot(@Nullable Output<String> documentRoot) {
-            this.documentRoot = documentRoot;
+            $.documentRoot = documentRoot;
             return this;
         }
-        public Builder documentRoot(@Nullable String documentRoot) {
-            this.documentRoot = Codegen.ofNullable(documentRoot);
-            return this;
+
+        public Builder documentRoot(String documentRoot) {
+            return documentRoot(Output.of(documentRoot));
         }
+
         public Builder domains(@Nullable Output<List<String>> domains) {
-            this.domains = domains;
+            $.domains = domains;
             return this;
         }
-        public Builder domains(@Nullable List<String> domains) {
-            this.domains = Codegen.ofNullable(domains);
-            return this;
+
+        public Builder domains(List<String> domains) {
+            return domains(Output.of(domains));
         }
+
         public Builder domains(String... domains) {
             return domains(List.of(domains));
         }
+
         public Builder enableSsl(@Nullable Output<Boolean> enableSsl) {
-            this.enableSsl = enableSsl;
+            $.enableSsl = enableSsl;
             return this;
         }
-        public Builder enableSsl(@Nullable Boolean enableSsl) {
-            this.enableSsl = Codegen.ofNullable(enableSsl);
-            return this;
+
+        public Builder enableSsl(Boolean enableSsl) {
+            return enableSsl(Output.of(enableSsl));
         }
+
         public Builder environments(@Nullable Output<List<ApplicationEnvironmentGetArgs>> environments) {
-            this.environments = environments;
+            $.environments = environments;
             return this;
         }
-        public Builder environments(@Nullable List<ApplicationEnvironmentGetArgs> environments) {
-            this.environments = Codegen.ofNullable(environments);
-            return this;
+
+        public Builder environments(List<ApplicationEnvironmentGetArgs> environments) {
+            return environments(Output.of(environments));
         }
+
         public Builder environments(ApplicationEnvironmentGetArgs... environments) {
             return environments(List.of(environments));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder railsEnv(@Nullable Output<String> railsEnv) {
-            this.railsEnv = railsEnv;
+            $.railsEnv = railsEnv;
             return this;
         }
-        public Builder railsEnv(@Nullable String railsEnv) {
-            this.railsEnv = Codegen.ofNullable(railsEnv);
-            return this;
+
+        public Builder railsEnv(String railsEnv) {
+            return railsEnv(Output.of(railsEnv));
         }
+
         public Builder shortName(@Nullable Output<String> shortName) {
-            this.shortName = shortName;
+            $.shortName = shortName;
             return this;
         }
-        public Builder shortName(@Nullable String shortName) {
-            this.shortName = Codegen.ofNullable(shortName);
-            return this;
+
+        public Builder shortName(String shortName) {
+            return shortName(Output.of(shortName));
         }
+
         public Builder sslConfigurations(@Nullable Output<List<ApplicationSslConfigurationGetArgs>> sslConfigurations) {
-            this.sslConfigurations = sslConfigurations;
+            $.sslConfigurations = sslConfigurations;
             return this;
         }
-        public Builder sslConfigurations(@Nullable List<ApplicationSslConfigurationGetArgs> sslConfigurations) {
-            this.sslConfigurations = Codegen.ofNullable(sslConfigurations);
-            return this;
+
+        public Builder sslConfigurations(List<ApplicationSslConfigurationGetArgs> sslConfigurations) {
+            return sslConfigurations(Output.of(sslConfigurations));
         }
+
         public Builder sslConfigurations(ApplicationSslConfigurationGetArgs... sslConfigurations) {
             return sslConfigurations(List.of(sslConfigurations));
         }
+
         public Builder stackId(@Nullable Output<String> stackId) {
-            this.stackId = stackId;
+            $.stackId = stackId;
             return this;
         }
-        public Builder stackId(@Nullable String stackId) {
-            this.stackId = Codegen.ofNullable(stackId);
-            return this;
+
+        public Builder stackId(String stackId) {
+            return stackId(Output.of(stackId));
         }
+
         public Builder type(@Nullable Output<String> type) {
-            this.type = type;
+            $.type = type;
             return this;
         }
-        public Builder type(@Nullable String type) {
-            this.type = Codegen.ofNullable(type);
-            return this;
-        }        public ApplicationState build() {
-            return new ApplicationState(appSources, autoBundleOnDeploy, awsFlowRubySettings, dataSourceArn, dataSourceDatabaseName, dataSourceType, description, documentRoot, domains, enableSsl, environments, name, railsEnv, shortName, sslConfigurations, stackId, type);
+
+        public Builder type(String type) {
+            return type(Output.of(type));
+        }
+
+        public ApplicationState build() {
+            return $;
         }
     }
+
 }

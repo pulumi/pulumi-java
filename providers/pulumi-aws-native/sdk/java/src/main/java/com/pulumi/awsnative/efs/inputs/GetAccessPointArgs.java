@@ -13,45 +13,45 @@ public final class GetAccessPointArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetAccessPointArgs Empty = new GetAccessPointArgs();
 
     @Import(name="accessPointId", required=true)
-      private final String accessPointId;
+    private String accessPointId;
 
     public String accessPointId() {
         return this.accessPointId;
     }
 
-    public GetAccessPointArgs(String accessPointId) {
-        this.accessPointId = Objects.requireNonNull(accessPointId, "expected parameter 'accessPointId' to be non-null");
-    }
+    private GetAccessPointArgs() {}
 
-    private GetAccessPointArgs() {
-        this.accessPointId = null;
+    private GetAccessPointArgs(GetAccessPointArgs $) {
+        this.accessPointId = $.accessPointId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetAccessPointArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String accessPointId;
+        private GetAccessPointArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetAccessPointArgs();
         }
 
         public Builder(GetAccessPointArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accessPointId = defaults.accessPointId;
+            $ = new GetAccessPointArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder accessPointId(String accessPointId) {
-            this.accessPointId = Objects.requireNonNull(accessPointId);
+            $.accessPointId = accessPointId;
             return this;
-        }        public GetAccessPointArgs build() {
-            return new GetAccessPointArgs(accessPointId);
+        }
+
+        public GetAccessPointArgs build() {
+            $.accessPointId = Objects.requireNonNull($.accessPointId, "expected parameter 'accessPointId' to be non-null");
+            return $;
         }
     }
+
 }

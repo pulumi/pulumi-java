@@ -6,9 +6,9 @@ package com.pulumi.azurenative.security.inputs;
 import com.pulumi.azurenative.security.inputs.AutomationTriggeringRuleArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,52 +21,52 @@ public final class AutomationRuleSetArgs extends com.pulumi.resources.ResourceAr
     public static final AutomationRuleSetArgs Empty = new AutomationRuleSetArgs();
 
     @Import(name="rules")
-      private final @Nullable Output<List<AutomationTriggeringRuleArgs>> rules;
+    private @Nullable Output<List<AutomationTriggeringRuleArgs>> rules;
 
-    public Output<List<AutomationTriggeringRuleArgs>> rules() {
-        return this.rules == null ? Codegen.empty() : this.rules;
+    public Optional<Output<List<AutomationTriggeringRuleArgs>>> rules() {
+        return Optional.ofNullable(this.rules);
     }
 
-    public AutomationRuleSetArgs(@Nullable Output<List<AutomationTriggeringRuleArgs>> rules) {
-        this.rules = rules;
-    }
+    private AutomationRuleSetArgs() {}
 
-    private AutomationRuleSetArgs() {
-        this.rules = Codegen.empty();
+    private AutomationRuleSetArgs(AutomationRuleSetArgs $) {
+        this.rules = $.rules;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AutomationRuleSetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<AutomationTriggeringRuleArgs>> rules;
+        private AutomationRuleSetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AutomationRuleSetArgs();
         }
 
         public Builder(AutomationRuleSetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.rules = defaults.rules;
+            $ = new AutomationRuleSetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder rules(@Nullable Output<List<AutomationTriggeringRuleArgs>> rules) {
-            this.rules = rules;
+            $.rules = rules;
             return this;
         }
-        public Builder rules(@Nullable List<AutomationTriggeringRuleArgs> rules) {
-            this.rules = Codegen.ofNullable(rules);
-            return this;
+
+        public Builder rules(List<AutomationTriggeringRuleArgs> rules) {
+            return rules(Output.of(rules));
         }
+
         public Builder rules(AutomationTriggeringRuleArgs... rules) {
             return rules(List.of(rules));
-        }        public AutomationRuleSetArgs build() {
-            return new AutomationRuleSetArgs(rules);
+        }
+
+        public AutomationRuleSetArgs build() {
+            return $;
         }
     }
+
 }

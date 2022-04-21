@@ -5,12 +5,12 @@ package com.pulumi.googlenative.containeranalysis_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.containeranalysis_v1.enums.VersionKind;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +27,10 @@ public final class VersionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="epoch")
-      private final @Nullable Output<Integer> epoch;
+    private @Nullable Output<Integer> epoch;
 
-    public Output<Integer> epoch() {
-        return this.epoch == null ? Codegen.empty() : this.epoch;
+    public Optional<Output<Integer>> epoch() {
+        return Optional.ofNullable(this.epoch);
     }
 
     /**
@@ -38,10 +38,10 @@ public final class VersionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="fullName")
-      private final @Nullable Output<String> fullName;
+    private @Nullable Output<String> fullName;
 
-    public Output<String> fullName() {
-        return this.fullName == null ? Codegen.empty() : this.fullName;
+    public Optional<Output<String>> fullName() {
+        return Optional.ofNullable(this.fullName);
     }
 
     /**
@@ -49,10 +49,10 @@ public final class VersionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="inclusive")
-      private final @Nullable Output<Boolean> inclusive;
+    private @Nullable Output<Boolean> inclusive;
 
-    public Output<Boolean> inclusive() {
-        return this.inclusive == null ? Codegen.empty() : this.inclusive;
+    public Optional<Output<Boolean>> inclusive() {
+        return Optional.ofNullable(this.inclusive);
     }
 
     /**
@@ -60,7 +60,7 @@ public final class VersionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="kind", required=true)
-      private final Output<VersionKind> kind;
+    private Output<VersionKind> kind;
 
     public Output<VersionKind> kind() {
         return this.kind;
@@ -71,10 +71,10 @@ public final class VersionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -82,115 +82,99 @@ public final class VersionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="revision")
-      private final @Nullable Output<String> revision;
+    private @Nullable Output<String> revision;
 
-    public Output<String> revision() {
-        return this.revision == null ? Codegen.empty() : this.revision;
+    public Optional<Output<String>> revision() {
+        return Optional.ofNullable(this.revision);
     }
 
-    public VersionArgs(
-        @Nullable Output<Integer> epoch,
-        @Nullable Output<String> fullName,
-        @Nullable Output<Boolean> inclusive,
-        Output<VersionKind> kind,
-        @Nullable Output<String> name,
-        @Nullable Output<String> revision) {
-        this.epoch = epoch;
-        this.fullName = fullName;
-        this.inclusive = inclusive;
-        this.kind = Objects.requireNonNull(kind, "expected parameter 'kind' to be non-null");
-        this.name = name;
-        this.revision = revision;
-    }
+    private VersionArgs() {}
 
-    private VersionArgs() {
-        this.epoch = Codegen.empty();
-        this.fullName = Codegen.empty();
-        this.inclusive = Codegen.empty();
-        this.kind = Codegen.empty();
-        this.name = Codegen.empty();
-        this.revision = Codegen.empty();
+    private VersionArgs(VersionArgs $) {
+        this.epoch = $.epoch;
+        this.fullName = $.fullName;
+        this.inclusive = $.inclusive;
+        this.kind = $.kind;
+        this.name = $.name;
+        this.revision = $.revision;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VersionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> epoch;
-        private @Nullable Output<String> fullName;
-        private @Nullable Output<Boolean> inclusive;
-        private Output<VersionKind> kind;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> revision;
+        private VersionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new VersionArgs();
         }
 
         public Builder(VersionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.epoch = defaults.epoch;
-    	      this.fullName = defaults.fullName;
-    	      this.inclusive = defaults.inclusive;
-    	      this.kind = defaults.kind;
-    	      this.name = defaults.name;
-    	      this.revision = defaults.revision;
+            $ = new VersionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder epoch(@Nullable Output<Integer> epoch) {
-            this.epoch = epoch;
+            $.epoch = epoch;
             return this;
         }
-        public Builder epoch(@Nullable Integer epoch) {
-            this.epoch = Codegen.ofNullable(epoch);
-            return this;
+
+        public Builder epoch(Integer epoch) {
+            return epoch(Output.of(epoch));
         }
+
         public Builder fullName(@Nullable Output<String> fullName) {
-            this.fullName = fullName;
+            $.fullName = fullName;
             return this;
         }
-        public Builder fullName(@Nullable String fullName) {
-            this.fullName = Codegen.ofNullable(fullName);
-            return this;
+
+        public Builder fullName(String fullName) {
+            return fullName(Output.of(fullName));
         }
+
         public Builder inclusive(@Nullable Output<Boolean> inclusive) {
-            this.inclusive = inclusive;
+            $.inclusive = inclusive;
             return this;
         }
-        public Builder inclusive(@Nullable Boolean inclusive) {
-            this.inclusive = Codegen.ofNullable(inclusive);
-            return this;
+
+        public Builder inclusive(Boolean inclusive) {
+            return inclusive(Output.of(inclusive));
         }
+
         public Builder kind(Output<VersionKind> kind) {
-            this.kind = Objects.requireNonNull(kind);
+            $.kind = kind;
             return this;
         }
+
         public Builder kind(VersionKind kind) {
-            this.kind = Output.of(Objects.requireNonNull(kind));
-            return this;
+            return kind(Output.of(kind));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder revision(@Nullable Output<String> revision) {
-            this.revision = revision;
+            $.revision = revision;
             return this;
         }
-        public Builder revision(@Nullable String revision) {
-            this.revision = Codegen.ofNullable(revision);
-            return this;
-        }        public VersionArgs build() {
-            return new VersionArgs(epoch, fullName, inclusive, kind, name, revision);
+
+        public Builder revision(String revision) {
+            return revision(Output.of(revision));
+        }
+
+        public VersionArgs build() {
+            $.kind = Objects.requireNonNull($.kind, "expected parameter 'kind' to be non-null");
+            return $;
         }
     }
+
 }

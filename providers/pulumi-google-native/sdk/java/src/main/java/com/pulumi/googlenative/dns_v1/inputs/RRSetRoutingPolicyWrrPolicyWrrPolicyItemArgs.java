@@ -5,11 +5,11 @@ package com.pulumi.googlenative.dns_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,17 +22,17 @@ public final class RRSetRoutingPolicyWrrPolicyWrrPolicyItemArgs extends com.pulu
     public static final RRSetRoutingPolicyWrrPolicyWrrPolicyItemArgs Empty = new RRSetRoutingPolicyWrrPolicyWrrPolicyItemArgs();
 
     @Import(name="kind")
-      private final @Nullable Output<String> kind;
+    private @Nullable Output<String> kind;
 
-    public Output<String> kind() {
-        return this.kind == null ? Codegen.empty() : this.kind;
+    public Optional<Output<String>> kind() {
+        return Optional.ofNullable(this.kind);
     }
 
     @Import(name="rrdatas")
-      private final @Nullable Output<List<String>> rrdatas;
+    private @Nullable Output<List<String>> rrdatas;
 
-    public Output<List<String>> rrdatas() {
-        return this.rrdatas == null ? Codegen.empty() : this.rrdatas;
+    public Optional<Output<List<String>>> rrdatas() {
+        return Optional.ofNullable(this.rrdatas);
     }
 
     /**
@@ -40,10 +40,10 @@ public final class RRSetRoutingPolicyWrrPolicyWrrPolicyItemArgs extends com.pulu
      * 
      */
     @Import(name="signatureRrdatas")
-      private final @Nullable Output<List<String>> signatureRrdatas;
+    private @Nullable Output<List<String>> signatureRrdatas;
 
-    public Output<List<String>> signatureRrdatas() {
-        return this.signatureRrdatas == null ? Codegen.empty() : this.signatureRrdatas;
+    public Optional<Output<List<String>>> signatureRrdatas() {
+        return Optional.ofNullable(this.signatureRrdatas);
     }
 
     /**
@@ -51,95 +51,86 @@ public final class RRSetRoutingPolicyWrrPolicyWrrPolicyItemArgs extends com.pulu
      * 
      */
     @Import(name="weight")
-      private final @Nullable Output<Double> weight;
+    private @Nullable Output<Double> weight;
 
-    public Output<Double> weight() {
-        return this.weight == null ? Codegen.empty() : this.weight;
+    public Optional<Output<Double>> weight() {
+        return Optional.ofNullable(this.weight);
     }
 
-    public RRSetRoutingPolicyWrrPolicyWrrPolicyItemArgs(
-        @Nullable Output<String> kind,
-        @Nullable Output<List<String>> rrdatas,
-        @Nullable Output<List<String>> signatureRrdatas,
-        @Nullable Output<Double> weight) {
-        this.kind = kind;
-        this.rrdatas = rrdatas;
-        this.signatureRrdatas = signatureRrdatas;
-        this.weight = weight;
-    }
+    private RRSetRoutingPolicyWrrPolicyWrrPolicyItemArgs() {}
 
-    private RRSetRoutingPolicyWrrPolicyWrrPolicyItemArgs() {
-        this.kind = Codegen.empty();
-        this.rrdatas = Codegen.empty();
-        this.signatureRrdatas = Codegen.empty();
-        this.weight = Codegen.empty();
+    private RRSetRoutingPolicyWrrPolicyWrrPolicyItemArgs(RRSetRoutingPolicyWrrPolicyWrrPolicyItemArgs $) {
+        this.kind = $.kind;
+        this.rrdatas = $.rrdatas;
+        this.signatureRrdatas = $.signatureRrdatas;
+        this.weight = $.weight;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RRSetRoutingPolicyWrrPolicyWrrPolicyItemArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> kind;
-        private @Nullable Output<List<String>> rrdatas;
-        private @Nullable Output<List<String>> signatureRrdatas;
-        private @Nullable Output<Double> weight;
+        private RRSetRoutingPolicyWrrPolicyWrrPolicyItemArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RRSetRoutingPolicyWrrPolicyWrrPolicyItemArgs();
         }
 
         public Builder(RRSetRoutingPolicyWrrPolicyWrrPolicyItemArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.kind = defaults.kind;
-    	      this.rrdatas = defaults.rrdatas;
-    	      this.signatureRrdatas = defaults.signatureRrdatas;
-    	      this.weight = defaults.weight;
+            $ = new RRSetRoutingPolicyWrrPolicyWrrPolicyItemArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder kind(@Nullable Output<String> kind) {
-            this.kind = kind;
+            $.kind = kind;
             return this;
         }
-        public Builder kind(@Nullable String kind) {
-            this.kind = Codegen.ofNullable(kind);
-            return this;
+
+        public Builder kind(String kind) {
+            return kind(Output.of(kind));
         }
+
         public Builder rrdatas(@Nullable Output<List<String>> rrdatas) {
-            this.rrdatas = rrdatas;
+            $.rrdatas = rrdatas;
             return this;
         }
-        public Builder rrdatas(@Nullable List<String> rrdatas) {
-            this.rrdatas = Codegen.ofNullable(rrdatas);
-            return this;
+
+        public Builder rrdatas(List<String> rrdatas) {
+            return rrdatas(Output.of(rrdatas));
         }
+
         public Builder rrdatas(String... rrdatas) {
             return rrdatas(List.of(rrdatas));
         }
+
         public Builder signatureRrdatas(@Nullable Output<List<String>> signatureRrdatas) {
-            this.signatureRrdatas = signatureRrdatas;
+            $.signatureRrdatas = signatureRrdatas;
             return this;
         }
-        public Builder signatureRrdatas(@Nullable List<String> signatureRrdatas) {
-            this.signatureRrdatas = Codegen.ofNullable(signatureRrdatas);
-            return this;
+
+        public Builder signatureRrdatas(List<String> signatureRrdatas) {
+            return signatureRrdatas(Output.of(signatureRrdatas));
         }
+
         public Builder signatureRrdatas(String... signatureRrdatas) {
             return signatureRrdatas(List.of(signatureRrdatas));
         }
+
         public Builder weight(@Nullable Output<Double> weight) {
-            this.weight = weight;
+            $.weight = weight;
             return this;
         }
-        public Builder weight(@Nullable Double weight) {
-            this.weight = Codegen.ofNullable(weight);
-            return this;
-        }        public RRSetRoutingPolicyWrrPolicyWrrPolicyItemArgs build() {
-            return new RRSetRoutingPolicyWrrPolicyWrrPolicyItemArgs(kind, rrdatas, signatureRrdatas, weight);
+
+        public Builder weight(Double weight) {
+            return weight(Output.of(weight));
+        }
+
+        public RRSetRoutingPolicyWrrPolicyWrrPolicyItemArgs build() {
+            return $;
         }
     }
+
 }

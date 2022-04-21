@@ -5,10 +5,10 @@ package com.pulumi.googlenative.monitoring_v3;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class GroupArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="displayName")
-      private final @Nullable Output<String> displayName;
+    private @Nullable Output<String> displayName;
 
-    public Output<String> displayName() {
-        return this.displayName == null ? Codegen.empty() : this.displayName;
+    public Optional<Output<String>> displayName() {
+        return Optional.ofNullable(this.displayName);
     }
 
     /**
@@ -32,10 +32,10 @@ public final class GroupArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="filter")
-      private final @Nullable Output<String> filter;
+    private @Nullable Output<String> filter;
 
-    public Output<String> filter() {
-        return this.filter == null ? Codegen.empty() : this.filter;
+    public Optional<Output<String>> filter() {
+        return Optional.ofNullable(this.filter);
     }
 
     /**
@@ -43,10 +43,10 @@ public final class GroupArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="isCluster")
-      private final @Nullable Output<Boolean> isCluster;
+    private @Nullable Output<Boolean> isCluster;
 
-    public Output<Boolean> isCluster() {
-        return this.isCluster == null ? Codegen.empty() : this.isCluster;
+    public Optional<Output<Boolean>> isCluster() {
+        return Optional.ofNullable(this.isCluster);
     }
 
     /**
@@ -54,129 +54,112 @@ public final class GroupArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="parentName")
-      private final @Nullable Output<String> parentName;
+    private @Nullable Output<String> parentName;
 
-    public Output<String> parentName() {
-        return this.parentName == null ? Codegen.empty() : this.parentName;
+    public Optional<Output<String>> parentName() {
+        return Optional.ofNullable(this.parentName);
     }
 
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     @Import(name="validateOnly")
-      private final @Nullable Output<String> validateOnly;
+    private @Nullable Output<String> validateOnly;
 
-    public Output<String> validateOnly() {
-        return this.validateOnly == null ? Codegen.empty() : this.validateOnly;
+    public Optional<Output<String>> validateOnly() {
+        return Optional.ofNullable(this.validateOnly);
     }
 
-    public GroupArgs(
-        @Nullable Output<String> displayName,
-        @Nullable Output<String> filter,
-        @Nullable Output<Boolean> isCluster,
-        @Nullable Output<String> parentName,
-        @Nullable Output<String> project,
-        @Nullable Output<String> validateOnly) {
-        this.displayName = displayName;
-        this.filter = filter;
-        this.isCluster = isCluster;
-        this.parentName = parentName;
-        this.project = project;
-        this.validateOnly = validateOnly;
-    }
+    private GroupArgs() {}
 
-    private GroupArgs() {
-        this.displayName = Codegen.empty();
-        this.filter = Codegen.empty();
-        this.isCluster = Codegen.empty();
-        this.parentName = Codegen.empty();
-        this.project = Codegen.empty();
-        this.validateOnly = Codegen.empty();
+    private GroupArgs(GroupArgs $) {
+        this.displayName = $.displayName;
+        this.filter = $.filter;
+        this.isCluster = $.isCluster;
+        this.parentName = $.parentName;
+        this.project = $.project;
+        this.validateOnly = $.validateOnly;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GroupArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> displayName;
-        private @Nullable Output<String> filter;
-        private @Nullable Output<Boolean> isCluster;
-        private @Nullable Output<String> parentName;
-        private @Nullable Output<String> project;
-        private @Nullable Output<String> validateOnly;
+        private GroupArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GroupArgs();
         }
 
         public Builder(GroupArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.displayName = defaults.displayName;
-    	      this.filter = defaults.filter;
-    	      this.isCluster = defaults.isCluster;
-    	      this.parentName = defaults.parentName;
-    	      this.project = defaults.project;
-    	      this.validateOnly = defaults.validateOnly;
+            $ = new GroupArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder displayName(@Nullable Output<String> displayName) {
-            this.displayName = displayName;
+            $.displayName = displayName;
             return this;
         }
-        public Builder displayName(@Nullable String displayName) {
-            this.displayName = Codegen.ofNullable(displayName);
-            return this;
+
+        public Builder displayName(String displayName) {
+            return displayName(Output.of(displayName));
         }
+
         public Builder filter(@Nullable Output<String> filter) {
-            this.filter = filter;
+            $.filter = filter;
             return this;
         }
-        public Builder filter(@Nullable String filter) {
-            this.filter = Codegen.ofNullable(filter);
-            return this;
+
+        public Builder filter(String filter) {
+            return filter(Output.of(filter));
         }
+
         public Builder isCluster(@Nullable Output<Boolean> isCluster) {
-            this.isCluster = isCluster;
+            $.isCluster = isCluster;
             return this;
         }
-        public Builder isCluster(@Nullable Boolean isCluster) {
-            this.isCluster = Codegen.ofNullable(isCluster);
-            return this;
+
+        public Builder isCluster(Boolean isCluster) {
+            return isCluster(Output.of(isCluster));
         }
+
         public Builder parentName(@Nullable Output<String> parentName) {
-            this.parentName = parentName;
+            $.parentName = parentName;
             return this;
         }
-        public Builder parentName(@Nullable String parentName) {
-            this.parentName = Codegen.ofNullable(parentName);
-            return this;
+
+        public Builder parentName(String parentName) {
+            return parentName(Output.of(parentName));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder validateOnly(@Nullable Output<String> validateOnly) {
-            this.validateOnly = validateOnly;
+            $.validateOnly = validateOnly;
             return this;
         }
-        public Builder validateOnly(@Nullable String validateOnly) {
-            this.validateOnly = Codegen.ofNullable(validateOnly);
-            return this;
-        }        public GroupArgs build() {
-            return new GroupArgs(displayName, filter, isCluster, parentName, project, validateOnly);
+
+        public Builder validateOnly(String validateOnly) {
+            return validateOnly(Output.of(validateOnly));
+        }
+
+        public GroupArgs build() {
+            return $;
         }
     }
+
 }

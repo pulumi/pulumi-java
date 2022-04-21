@@ -5,7 +5,6 @@ package com.pulumi.awsnative.appflow.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,49 +18,49 @@ public final class ConnectorProfileSingularConnectorProfileCredentialsArgs exten
      * 
      */
     @Import(name="apiKey", required=true)
-      private final Output<String> apiKey;
+    private Output<String> apiKey;
 
     public Output<String> apiKey() {
         return this.apiKey;
     }
 
-    public ConnectorProfileSingularConnectorProfileCredentialsArgs(Output<String> apiKey) {
-        this.apiKey = Objects.requireNonNull(apiKey, "expected parameter 'apiKey' to be non-null");
-    }
+    private ConnectorProfileSingularConnectorProfileCredentialsArgs() {}
 
-    private ConnectorProfileSingularConnectorProfileCredentialsArgs() {
-        this.apiKey = Codegen.empty();
+    private ConnectorProfileSingularConnectorProfileCredentialsArgs(ConnectorProfileSingularConnectorProfileCredentialsArgs $) {
+        this.apiKey = $.apiKey;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ConnectorProfileSingularConnectorProfileCredentialsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> apiKey;
+        private ConnectorProfileSingularConnectorProfileCredentialsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ConnectorProfileSingularConnectorProfileCredentialsArgs();
         }
 
         public Builder(ConnectorProfileSingularConnectorProfileCredentialsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.apiKey = defaults.apiKey;
+            $ = new ConnectorProfileSingularConnectorProfileCredentialsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder apiKey(Output<String> apiKey) {
-            this.apiKey = Objects.requireNonNull(apiKey);
+            $.apiKey = apiKey;
             return this;
         }
+
         public Builder apiKey(String apiKey) {
-            this.apiKey = Output.of(Objects.requireNonNull(apiKey));
-            return this;
-        }        public ConnectorProfileSingularConnectorProfileCredentialsArgs build() {
-            return new ConnectorProfileSingularConnectorProfileCredentialsArgs(apiKey);
+            return apiKey(Output.of(apiKey));
+        }
+
+        public ConnectorProfileSingularConnectorProfileCredentialsArgs build() {
+            $.apiKey = Objects.requireNonNull($.apiKey, "expected parameter 'apiKey' to be non-null");
+            return $;
         }
     }
+
 }

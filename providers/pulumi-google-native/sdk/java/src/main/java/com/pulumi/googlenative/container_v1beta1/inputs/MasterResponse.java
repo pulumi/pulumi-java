@@ -3,7 +3,7 @@
 
 package com.pulumi.googlenative.container_v1beta1.inputs;
 
-import java.util.Objects;
+
 
 
 /**
@@ -14,28 +14,19 @@ public final class MasterResponse extends com.pulumi.resources.InvokeArgs {
 
     public static final MasterResponse Empty = new MasterResponse();
 
-    public MasterResponse() {
-    }
-
     public static Builder builder() {
         return new Builder();
     }
 
-    public static Builder builder(MasterResponse defaults) {
-        return new Builder(defaults);
-    }
-
     public static final class Builder {
+        private MasterResponse $;
 
         public Builder() {
-    	      // Empty
-        }
-
-        public Builder(MasterResponse defaults) {
-    	      Objects.requireNonNull(defaults);
+            $ = new MasterResponse();
         }
         public MasterResponse build() {
-            return new MasterResponse();
+            return $;
         }
     }
+
 }

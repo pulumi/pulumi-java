@@ -23,6 +23,7 @@ import java.lang.Object;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -39,10 +40,10 @@ public final class EventSubscriptionFilterArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="advancedFilters")
-      private final @Nullable Output<List<Object>> advancedFilters;
+    private @Nullable Output<List<Object>> advancedFilters;
 
-    public Output<List<Object>> advancedFilters() {
-        return this.advancedFilters == null ? Codegen.empty() : this.advancedFilters;
+    public Optional<Output<List<Object>>> advancedFilters() {
+        return Optional.ofNullable(this.advancedFilters);
     }
 
     /**
@@ -50,10 +51,10 @@ public final class EventSubscriptionFilterArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="includedEventTypes")
-      private final @Nullable Output<List<String>> includedEventTypes;
+    private @Nullable Output<List<String>> includedEventTypes;
 
-    public Output<List<String>> includedEventTypes() {
-        return this.includedEventTypes == null ? Codegen.empty() : this.includedEventTypes;
+    public Optional<Output<List<String>>> includedEventTypes() {
+        return Optional.ofNullable(this.includedEventTypes);
     }
 
     /**
@@ -62,10 +63,10 @@ public final class EventSubscriptionFilterArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="isSubjectCaseSensitive")
-      private final @Nullable Output<Boolean> isSubjectCaseSensitive;
+    private @Nullable Output<Boolean> isSubjectCaseSensitive;
 
-    public Output<Boolean> isSubjectCaseSensitive() {
-        return this.isSubjectCaseSensitive == null ? Codegen.empty() : this.isSubjectCaseSensitive;
+    public Optional<Output<Boolean>> isSubjectCaseSensitive() {
+        return Optional.ofNullable(this.isSubjectCaseSensitive);
     }
 
     /**
@@ -75,10 +76,10 @@ public final class EventSubscriptionFilterArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="subjectBeginsWith")
-      private final @Nullable Output<String> subjectBeginsWith;
+    private @Nullable Output<String> subjectBeginsWith;
 
-    public Output<String> subjectBeginsWith() {
-        return this.subjectBeginsWith == null ? Codegen.empty() : this.subjectBeginsWith;
+    public Optional<Output<String>> subjectBeginsWith() {
+        return Optional.ofNullable(this.subjectBeginsWith);
     }
 
     /**
@@ -87,108 +88,97 @@ public final class EventSubscriptionFilterArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="subjectEndsWith")
-      private final @Nullable Output<String> subjectEndsWith;
+    private @Nullable Output<String> subjectEndsWith;
 
-    public Output<String> subjectEndsWith() {
-        return this.subjectEndsWith == null ? Codegen.empty() : this.subjectEndsWith;
+    public Optional<Output<String>> subjectEndsWith() {
+        return Optional.ofNullable(this.subjectEndsWith);
     }
 
-    public EventSubscriptionFilterArgs(
-        @Nullable Output<List<Object>> advancedFilters,
-        @Nullable Output<List<String>> includedEventTypes,
-        @Nullable Output<Boolean> isSubjectCaseSensitive,
-        @Nullable Output<String> subjectBeginsWith,
-        @Nullable Output<String> subjectEndsWith) {
-        this.advancedFilters = advancedFilters;
-        this.includedEventTypes = includedEventTypes;
-        this.isSubjectCaseSensitive = Codegen.booleanProp("isSubjectCaseSensitive").output().arg(isSubjectCaseSensitive).def(false).getNullable();
-        this.subjectBeginsWith = subjectBeginsWith;
-        this.subjectEndsWith = subjectEndsWith;
-    }
+    private EventSubscriptionFilterArgs() {}
 
-    private EventSubscriptionFilterArgs() {
-        this.advancedFilters = Codegen.empty();
-        this.includedEventTypes = Codegen.empty();
-        this.isSubjectCaseSensitive = Codegen.empty();
-        this.subjectBeginsWith = Codegen.empty();
-        this.subjectEndsWith = Codegen.empty();
+    private EventSubscriptionFilterArgs(EventSubscriptionFilterArgs $) {
+        this.advancedFilters = $.advancedFilters;
+        this.includedEventTypes = $.includedEventTypes;
+        this.isSubjectCaseSensitive = $.isSubjectCaseSensitive;
+        this.subjectBeginsWith = $.subjectBeginsWith;
+        this.subjectEndsWith = $.subjectEndsWith;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EventSubscriptionFilterArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<Object>> advancedFilters;
-        private @Nullable Output<List<String>> includedEventTypes;
-        private @Nullable Output<Boolean> isSubjectCaseSensitive;
-        private @Nullable Output<String> subjectBeginsWith;
-        private @Nullable Output<String> subjectEndsWith;
+        private EventSubscriptionFilterArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new EventSubscriptionFilterArgs();
         }
 
         public Builder(EventSubscriptionFilterArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.advancedFilters = defaults.advancedFilters;
-    	      this.includedEventTypes = defaults.includedEventTypes;
-    	      this.isSubjectCaseSensitive = defaults.isSubjectCaseSensitive;
-    	      this.subjectBeginsWith = defaults.subjectBeginsWith;
-    	      this.subjectEndsWith = defaults.subjectEndsWith;
+            $ = new EventSubscriptionFilterArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder advancedFilters(@Nullable Output<List<Object>> advancedFilters) {
-            this.advancedFilters = advancedFilters;
+            $.advancedFilters = advancedFilters;
             return this;
         }
-        public Builder advancedFilters(@Nullable List<Object> advancedFilters) {
-            this.advancedFilters = Codegen.ofNullable(advancedFilters);
-            return this;
+
+        public Builder advancedFilters(List<Object> advancedFilters) {
+            return advancedFilters(Output.of(advancedFilters));
         }
+
         public Builder advancedFilters(Object... advancedFilters) {
             return advancedFilters(List.of(advancedFilters));
         }
+
         public Builder includedEventTypes(@Nullable Output<List<String>> includedEventTypes) {
-            this.includedEventTypes = includedEventTypes;
+            $.includedEventTypes = includedEventTypes;
             return this;
         }
-        public Builder includedEventTypes(@Nullable List<String> includedEventTypes) {
-            this.includedEventTypes = Codegen.ofNullable(includedEventTypes);
-            return this;
+
+        public Builder includedEventTypes(List<String> includedEventTypes) {
+            return includedEventTypes(Output.of(includedEventTypes));
         }
+
         public Builder includedEventTypes(String... includedEventTypes) {
             return includedEventTypes(List.of(includedEventTypes));
         }
+
         public Builder isSubjectCaseSensitive(@Nullable Output<Boolean> isSubjectCaseSensitive) {
-            this.isSubjectCaseSensitive = isSubjectCaseSensitive;
+            $.isSubjectCaseSensitive = isSubjectCaseSensitive;
             return this;
         }
-        public Builder isSubjectCaseSensitive(@Nullable Boolean isSubjectCaseSensitive) {
-            this.isSubjectCaseSensitive = Codegen.ofNullable(isSubjectCaseSensitive);
-            return this;
+
+        public Builder isSubjectCaseSensitive(Boolean isSubjectCaseSensitive) {
+            return isSubjectCaseSensitive(Output.of(isSubjectCaseSensitive));
         }
+
         public Builder subjectBeginsWith(@Nullable Output<String> subjectBeginsWith) {
-            this.subjectBeginsWith = subjectBeginsWith;
+            $.subjectBeginsWith = subjectBeginsWith;
             return this;
         }
-        public Builder subjectBeginsWith(@Nullable String subjectBeginsWith) {
-            this.subjectBeginsWith = Codegen.ofNullable(subjectBeginsWith);
-            return this;
+
+        public Builder subjectBeginsWith(String subjectBeginsWith) {
+            return subjectBeginsWith(Output.of(subjectBeginsWith));
         }
+
         public Builder subjectEndsWith(@Nullable Output<String> subjectEndsWith) {
-            this.subjectEndsWith = subjectEndsWith;
+            $.subjectEndsWith = subjectEndsWith;
             return this;
         }
-        public Builder subjectEndsWith(@Nullable String subjectEndsWith) {
-            this.subjectEndsWith = Codegen.ofNullable(subjectEndsWith);
-            return this;
-        }        public EventSubscriptionFilterArgs build() {
-            return new EventSubscriptionFilterArgs(advancedFilters, includedEventTypes, isSubjectCaseSensitive, subjectBeginsWith, subjectEndsWith);
+
+        public Builder subjectEndsWith(String subjectEndsWith) {
+            return subjectEndsWith(Output.of(subjectEndsWith));
+        }
+
+        public EventSubscriptionFilterArgs build() {
+            $.isSubjectCaseSensitive = Codegen.booleanProp("isSubjectCaseSensitive").output().arg($.isSubjectCaseSensitive).def(false).getNullable();
+            return $;
         }
     }
+
 }

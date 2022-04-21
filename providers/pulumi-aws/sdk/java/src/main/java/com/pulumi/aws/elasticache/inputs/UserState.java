@@ -5,12 +5,12 @@ package com.pulumi.aws.elasticache.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,10 @@ public final class UserState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="accessString")
-      private final @Nullable Output<String> accessString;
+    private @Nullable Output<String> accessString;
 
-    public Output<String> accessString() {
-        return this.accessString == null ? Codegen.empty() : this.accessString;
+    public Optional<Output<String>> accessString() {
+        return Optional.ofNullable(this.accessString);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class UserState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="arn")
-      private final @Nullable Output<String> arn;
+    private @Nullable Output<String> arn;
 
-    public Output<String> arn() {
-        return this.arn == null ? Codegen.empty() : this.arn;
+    public Optional<Output<String>> arn() {
+        return Optional.ofNullable(this.arn);
     }
 
     /**
@@ -45,10 +45,10 @@ public final class UserState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="engine")
-      private final @Nullable Output<String> engine;
+    private @Nullable Output<String> engine;
 
-    public Output<String> engine() {
-        return this.engine == null ? Codegen.empty() : this.engine;
+    public Optional<Output<String>> engine() {
+        return Optional.ofNullable(this.engine);
     }
 
     /**
@@ -56,10 +56,10 @@ public final class UserState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="noPasswordRequired")
-      private final @Nullable Output<Boolean> noPasswordRequired;
+    private @Nullable Output<Boolean> noPasswordRequired;
 
-    public Output<Boolean> noPasswordRequired() {
-        return this.noPasswordRequired == null ? Codegen.empty() : this.noPasswordRequired;
+    public Optional<Output<Boolean>> noPasswordRequired() {
+        return Optional.ofNullable(this.noPasswordRequired);
     }
 
     /**
@@ -67,10 +67,10 @@ public final class UserState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="passwords")
-      private final @Nullable Output<List<String>> passwords;
+    private @Nullable Output<List<String>> passwords;
 
-    public Output<List<String>> passwords() {
-        return this.passwords == null ? Codegen.empty() : this.passwords;
+    public Optional<Output<List<String>>> passwords() {
+        return Optional.ofNullable(this.passwords);
     }
 
     /**
@@ -78,17 +78,17 @@ public final class UserState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     @Import(name="tagsAll")
-      private final @Nullable Output<Map<String,String>> tagsAll;
+    private @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> tagsAll() {
-        return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
+    public Optional<Output<Map<String,String>>> tagsAll() {
+        return Optional.ofNullable(this.tagsAll);
     }
 
     /**
@@ -96,10 +96,10 @@ public final class UserState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="userId")
-      private final @Nullable Output<String> userId;
+    private @Nullable Output<String> userId;
 
-    public Output<String> userId() {
-        return this.userId == null ? Codegen.empty() : this.userId;
+    public Optional<Output<String>> userId() {
+        return Optional.ofNullable(this.userId);
     }
 
     /**
@@ -107,157 +107,132 @@ public final class UserState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="userName")
-      private final @Nullable Output<String> userName;
+    private @Nullable Output<String> userName;
 
-    public Output<String> userName() {
-        return this.userName == null ? Codegen.empty() : this.userName;
+    public Optional<Output<String>> userName() {
+        return Optional.ofNullable(this.userName);
     }
 
-    public UserState(
-        @Nullable Output<String> accessString,
-        @Nullable Output<String> arn,
-        @Nullable Output<String> engine,
-        @Nullable Output<Boolean> noPasswordRequired,
-        @Nullable Output<List<String>> passwords,
-        @Nullable Output<Map<String,String>> tags,
-        @Nullable Output<Map<String,String>> tagsAll,
-        @Nullable Output<String> userId,
-        @Nullable Output<String> userName) {
-        this.accessString = accessString;
-        this.arn = arn;
-        this.engine = engine;
-        this.noPasswordRequired = noPasswordRequired;
-        this.passwords = passwords;
-        this.tags = tags;
-        this.tagsAll = tagsAll;
-        this.userId = userId;
-        this.userName = userName;
-    }
+    private UserState() {}
 
-    private UserState() {
-        this.accessString = Codegen.empty();
-        this.arn = Codegen.empty();
-        this.engine = Codegen.empty();
-        this.noPasswordRequired = Codegen.empty();
-        this.passwords = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.tagsAll = Codegen.empty();
-        this.userId = Codegen.empty();
-        this.userName = Codegen.empty();
+    private UserState(UserState $) {
+        this.accessString = $.accessString;
+        this.arn = $.arn;
+        this.engine = $.engine;
+        this.noPasswordRequired = $.noPasswordRequired;
+        this.passwords = $.passwords;
+        this.tags = $.tags;
+        this.tagsAll = $.tagsAll;
+        this.userId = $.userId;
+        this.userName = $.userName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(UserState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> accessString;
-        private @Nullable Output<String> arn;
-        private @Nullable Output<String> engine;
-        private @Nullable Output<Boolean> noPasswordRequired;
-        private @Nullable Output<List<String>> passwords;
-        private @Nullable Output<Map<String,String>> tags;
-        private @Nullable Output<Map<String,String>> tagsAll;
-        private @Nullable Output<String> userId;
-        private @Nullable Output<String> userName;
+        private UserState $;
 
         public Builder() {
-    	      // Empty
+            $ = new UserState();
         }
 
         public Builder(UserState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accessString = defaults.accessString;
-    	      this.arn = defaults.arn;
-    	      this.engine = defaults.engine;
-    	      this.noPasswordRequired = defaults.noPasswordRequired;
-    	      this.passwords = defaults.passwords;
-    	      this.tags = defaults.tags;
-    	      this.tagsAll = defaults.tagsAll;
-    	      this.userId = defaults.userId;
-    	      this.userName = defaults.userName;
+            $ = new UserState(Objects.requireNonNull(defaults));
         }
 
         public Builder accessString(@Nullable Output<String> accessString) {
-            this.accessString = accessString;
+            $.accessString = accessString;
             return this;
         }
-        public Builder accessString(@Nullable String accessString) {
-            this.accessString = Codegen.ofNullable(accessString);
-            return this;
+
+        public Builder accessString(String accessString) {
+            return accessString(Output.of(accessString));
         }
+
         public Builder arn(@Nullable Output<String> arn) {
-            this.arn = arn;
+            $.arn = arn;
             return this;
         }
-        public Builder arn(@Nullable String arn) {
-            this.arn = Codegen.ofNullable(arn);
-            return this;
+
+        public Builder arn(String arn) {
+            return arn(Output.of(arn));
         }
+
         public Builder engine(@Nullable Output<String> engine) {
-            this.engine = engine;
+            $.engine = engine;
             return this;
         }
-        public Builder engine(@Nullable String engine) {
-            this.engine = Codegen.ofNullable(engine);
-            return this;
+
+        public Builder engine(String engine) {
+            return engine(Output.of(engine));
         }
+
         public Builder noPasswordRequired(@Nullable Output<Boolean> noPasswordRequired) {
-            this.noPasswordRequired = noPasswordRequired;
+            $.noPasswordRequired = noPasswordRequired;
             return this;
         }
-        public Builder noPasswordRequired(@Nullable Boolean noPasswordRequired) {
-            this.noPasswordRequired = Codegen.ofNullable(noPasswordRequired);
-            return this;
+
+        public Builder noPasswordRequired(Boolean noPasswordRequired) {
+            return noPasswordRequired(Output.of(noPasswordRequired));
         }
+
         public Builder passwords(@Nullable Output<List<String>> passwords) {
-            this.passwords = passwords;
+            $.passwords = passwords;
             return this;
         }
-        public Builder passwords(@Nullable List<String> passwords) {
-            this.passwords = Codegen.ofNullable(passwords);
-            return this;
+
+        public Builder passwords(List<String> passwords) {
+            return passwords(Output.of(passwords));
         }
+
         public Builder passwords(String... passwords) {
             return passwords(List.of(passwords));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
-            this.tagsAll = tagsAll;
+            $.tagsAll = tagsAll;
             return this;
         }
-        public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Codegen.ofNullable(tagsAll);
-            return this;
+
+        public Builder tagsAll(Map<String,String> tagsAll) {
+            return tagsAll(Output.of(tagsAll));
         }
+
         public Builder userId(@Nullable Output<String> userId) {
-            this.userId = userId;
+            $.userId = userId;
             return this;
         }
-        public Builder userId(@Nullable String userId) {
-            this.userId = Codegen.ofNullable(userId);
-            return this;
+
+        public Builder userId(String userId) {
+            return userId(Output.of(userId));
         }
+
         public Builder userName(@Nullable Output<String> userName) {
-            this.userName = userName;
+            $.userName = userName;
             return this;
         }
-        public Builder userName(@Nullable String userName) {
-            this.userName = Codegen.ofNullable(userName);
-            return this;
-        }        public UserState build() {
-            return new UserState(accessString, arn, engine, noPasswordRequired, passwords, tags, tagsAll, userId, userName);
+
+        public Builder userName(String userName) {
+            return userName(Output.of(userName));
+        }
+
+        public UserState build() {
+            return $;
         }
     }
+
 }

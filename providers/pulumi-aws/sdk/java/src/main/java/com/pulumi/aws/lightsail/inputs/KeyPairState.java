@@ -5,9 +5,9 @@ package com.pulumi.aws.lightsail.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class KeyPairState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="arn")
-      private final @Nullable Output<String> arn;
+    private @Nullable Output<String> arn;
 
-    public Output<String> arn() {
-        return this.arn == null ? Codegen.empty() : this.arn;
+    public Optional<Output<String>> arn() {
+        return Optional.ofNullable(this.arn);
     }
 
     /**
@@ -32,10 +32,10 @@ public final class KeyPairState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="encryptedFingerprint")
-      private final @Nullable Output<String> encryptedFingerprint;
+    private @Nullable Output<String> encryptedFingerprint;
 
-    public Output<String> encryptedFingerprint() {
-        return this.encryptedFingerprint == null ? Codegen.empty() : this.encryptedFingerprint;
+    public Optional<Output<String>> encryptedFingerprint() {
+        return Optional.ofNullable(this.encryptedFingerprint);
     }
 
     /**
@@ -45,10 +45,10 @@ public final class KeyPairState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="encryptedPrivateKey")
-      private final @Nullable Output<String> encryptedPrivateKey;
+    private @Nullable Output<String> encryptedPrivateKey;
 
-    public Output<String> encryptedPrivateKey() {
-        return this.encryptedPrivateKey == null ? Codegen.empty() : this.encryptedPrivateKey;
+    public Optional<Output<String>> encryptedPrivateKey() {
+        return Optional.ofNullable(this.encryptedPrivateKey);
     }
 
     /**
@@ -56,10 +56,10 @@ public final class KeyPairState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="fingerprint")
-      private final @Nullable Output<String> fingerprint;
+    private @Nullable Output<String> fingerprint;
 
-    public Output<String> fingerprint() {
-        return this.fingerprint == null ? Codegen.empty() : this.fingerprint;
+    public Optional<Output<String>> fingerprint() {
+        return Optional.ofNullable(this.fingerprint);
     }
 
     /**
@@ -68,17 +68,17 @@ public final class KeyPairState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     @Import(name="namePrefix")
-      private final @Nullable Output<String> namePrefix;
+    private @Nullable Output<String> namePrefix;
 
-    public Output<String> namePrefix() {
-        return this.namePrefix == null ? Codegen.empty() : this.namePrefix;
+    public Optional<Output<String>> namePrefix() {
+        return Optional.ofNullable(this.namePrefix);
     }
 
     /**
@@ -87,10 +87,10 @@ public final class KeyPairState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="pgpKey")
-      private final @Nullable Output<String> pgpKey;
+    private @Nullable Output<String> pgpKey;
 
-    public Output<String> pgpKey() {
-        return this.pgpKey == null ? Codegen.empty() : this.pgpKey;
+    public Optional<Output<String>> pgpKey() {
+        return Optional.ofNullable(this.pgpKey);
     }
 
     /**
@@ -99,10 +99,10 @@ public final class KeyPairState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="privateKey")
-      private final @Nullable Output<String> privateKey;
+    private @Nullable Output<String> privateKey;
 
-    public Output<String> privateKey() {
-        return this.privateKey == null ? Codegen.empty() : this.privateKey;
+    public Optional<Output<String>> privateKey() {
+        return Optional.ofNullable(this.privateKey);
     }
 
     /**
@@ -111,154 +111,128 @@ public final class KeyPairState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="publicKey")
-      private final @Nullable Output<String> publicKey;
+    private @Nullable Output<String> publicKey;
 
-    public Output<String> publicKey() {
-        return this.publicKey == null ? Codegen.empty() : this.publicKey;
+    public Optional<Output<String>> publicKey() {
+        return Optional.ofNullable(this.publicKey);
     }
 
-    public KeyPairState(
-        @Nullable Output<String> arn,
-        @Nullable Output<String> encryptedFingerprint,
-        @Nullable Output<String> encryptedPrivateKey,
-        @Nullable Output<String> fingerprint,
-        @Nullable Output<String> name,
-        @Nullable Output<String> namePrefix,
-        @Nullable Output<String> pgpKey,
-        @Nullable Output<String> privateKey,
-        @Nullable Output<String> publicKey) {
-        this.arn = arn;
-        this.encryptedFingerprint = encryptedFingerprint;
-        this.encryptedPrivateKey = encryptedPrivateKey;
-        this.fingerprint = fingerprint;
-        this.name = name;
-        this.namePrefix = namePrefix;
-        this.pgpKey = pgpKey;
-        this.privateKey = privateKey;
-        this.publicKey = publicKey;
-    }
+    private KeyPairState() {}
 
-    private KeyPairState() {
-        this.arn = Codegen.empty();
-        this.encryptedFingerprint = Codegen.empty();
-        this.encryptedPrivateKey = Codegen.empty();
-        this.fingerprint = Codegen.empty();
-        this.name = Codegen.empty();
-        this.namePrefix = Codegen.empty();
-        this.pgpKey = Codegen.empty();
-        this.privateKey = Codegen.empty();
-        this.publicKey = Codegen.empty();
+    private KeyPairState(KeyPairState $) {
+        this.arn = $.arn;
+        this.encryptedFingerprint = $.encryptedFingerprint;
+        this.encryptedPrivateKey = $.encryptedPrivateKey;
+        this.fingerprint = $.fingerprint;
+        this.name = $.name;
+        this.namePrefix = $.namePrefix;
+        this.pgpKey = $.pgpKey;
+        this.privateKey = $.privateKey;
+        this.publicKey = $.publicKey;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(KeyPairState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> arn;
-        private @Nullable Output<String> encryptedFingerprint;
-        private @Nullable Output<String> encryptedPrivateKey;
-        private @Nullable Output<String> fingerprint;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> namePrefix;
-        private @Nullable Output<String> pgpKey;
-        private @Nullable Output<String> privateKey;
-        private @Nullable Output<String> publicKey;
+        private KeyPairState $;
 
         public Builder() {
-    	      // Empty
+            $ = new KeyPairState();
         }
 
         public Builder(KeyPairState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.arn = defaults.arn;
-    	      this.encryptedFingerprint = defaults.encryptedFingerprint;
-    	      this.encryptedPrivateKey = defaults.encryptedPrivateKey;
-    	      this.fingerprint = defaults.fingerprint;
-    	      this.name = defaults.name;
-    	      this.namePrefix = defaults.namePrefix;
-    	      this.pgpKey = defaults.pgpKey;
-    	      this.privateKey = defaults.privateKey;
-    	      this.publicKey = defaults.publicKey;
+            $ = new KeyPairState(Objects.requireNonNull(defaults));
         }
 
         public Builder arn(@Nullable Output<String> arn) {
-            this.arn = arn;
+            $.arn = arn;
             return this;
         }
-        public Builder arn(@Nullable String arn) {
-            this.arn = Codegen.ofNullable(arn);
-            return this;
+
+        public Builder arn(String arn) {
+            return arn(Output.of(arn));
         }
+
         public Builder encryptedFingerprint(@Nullable Output<String> encryptedFingerprint) {
-            this.encryptedFingerprint = encryptedFingerprint;
+            $.encryptedFingerprint = encryptedFingerprint;
             return this;
         }
-        public Builder encryptedFingerprint(@Nullable String encryptedFingerprint) {
-            this.encryptedFingerprint = Codegen.ofNullable(encryptedFingerprint);
-            return this;
+
+        public Builder encryptedFingerprint(String encryptedFingerprint) {
+            return encryptedFingerprint(Output.of(encryptedFingerprint));
         }
+
         public Builder encryptedPrivateKey(@Nullable Output<String> encryptedPrivateKey) {
-            this.encryptedPrivateKey = encryptedPrivateKey;
+            $.encryptedPrivateKey = encryptedPrivateKey;
             return this;
         }
-        public Builder encryptedPrivateKey(@Nullable String encryptedPrivateKey) {
-            this.encryptedPrivateKey = Codegen.ofNullable(encryptedPrivateKey);
-            return this;
+
+        public Builder encryptedPrivateKey(String encryptedPrivateKey) {
+            return encryptedPrivateKey(Output.of(encryptedPrivateKey));
         }
+
         public Builder fingerprint(@Nullable Output<String> fingerprint) {
-            this.fingerprint = fingerprint;
+            $.fingerprint = fingerprint;
             return this;
         }
-        public Builder fingerprint(@Nullable String fingerprint) {
-            this.fingerprint = Codegen.ofNullable(fingerprint);
-            return this;
+
+        public Builder fingerprint(String fingerprint) {
+            return fingerprint(Output.of(fingerprint));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder namePrefix(@Nullable Output<String> namePrefix) {
-            this.namePrefix = namePrefix;
+            $.namePrefix = namePrefix;
             return this;
         }
-        public Builder namePrefix(@Nullable String namePrefix) {
-            this.namePrefix = Codegen.ofNullable(namePrefix);
-            return this;
+
+        public Builder namePrefix(String namePrefix) {
+            return namePrefix(Output.of(namePrefix));
         }
+
         public Builder pgpKey(@Nullable Output<String> pgpKey) {
-            this.pgpKey = pgpKey;
+            $.pgpKey = pgpKey;
             return this;
         }
-        public Builder pgpKey(@Nullable String pgpKey) {
-            this.pgpKey = Codegen.ofNullable(pgpKey);
-            return this;
+
+        public Builder pgpKey(String pgpKey) {
+            return pgpKey(Output.of(pgpKey));
         }
+
         public Builder privateKey(@Nullable Output<String> privateKey) {
-            this.privateKey = privateKey;
+            $.privateKey = privateKey;
             return this;
         }
-        public Builder privateKey(@Nullable String privateKey) {
-            this.privateKey = Codegen.ofNullable(privateKey);
-            return this;
+
+        public Builder privateKey(String privateKey) {
+            return privateKey(Output.of(privateKey));
         }
+
         public Builder publicKey(@Nullable Output<String> publicKey) {
-            this.publicKey = publicKey;
+            $.publicKey = publicKey;
             return this;
         }
-        public Builder publicKey(@Nullable String publicKey) {
-            this.publicKey = Codegen.ofNullable(publicKey);
-            return this;
-        }        public KeyPairState build() {
-            return new KeyPairState(arn, encryptedFingerprint, encryptedPrivateKey, fingerprint, name, namePrefix, pgpKey, privateKey, publicKey);
+
+        public Builder publicKey(String publicKey) {
+            return publicKey(Output.of(publicKey));
+        }
+
+        public KeyPairState build() {
+            return $;
         }
     }
+
 }

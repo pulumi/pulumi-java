@@ -21,45 +21,45 @@ public final class LoggingConfigurationConditionActionConditionProperties extend
      * 
      */
     @Import(name="action", required=true)
-      private final LoggingConfigurationConditionActionConditionPropertiesAction action;
+    private LoggingConfigurationConditionActionConditionPropertiesAction action;
 
     public LoggingConfigurationConditionActionConditionPropertiesAction action() {
         return this.action;
     }
 
-    public LoggingConfigurationConditionActionConditionProperties(LoggingConfigurationConditionActionConditionPropertiesAction action) {
-        this.action = Objects.requireNonNull(action, "expected parameter 'action' to be non-null");
-    }
+    private LoggingConfigurationConditionActionConditionProperties() {}
 
-    private LoggingConfigurationConditionActionConditionProperties() {
-        this.action = null;
+    private LoggingConfigurationConditionActionConditionProperties(LoggingConfigurationConditionActionConditionProperties $) {
+        this.action = $.action;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LoggingConfigurationConditionActionConditionProperties defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private LoggingConfigurationConditionActionConditionPropertiesAction action;
+        private LoggingConfigurationConditionActionConditionProperties $;
 
         public Builder() {
-    	      // Empty
+            $ = new LoggingConfigurationConditionActionConditionProperties();
         }
 
         public Builder(LoggingConfigurationConditionActionConditionProperties defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.action = defaults.action;
+            $ = new LoggingConfigurationConditionActionConditionProperties(Objects.requireNonNull(defaults));
         }
 
         public Builder action(LoggingConfigurationConditionActionConditionPropertiesAction action) {
-            this.action = Objects.requireNonNull(action);
+            $.action = action;
             return this;
-        }        public LoggingConfigurationConditionActionConditionProperties build() {
-            return new LoggingConfigurationConditionActionConditionProperties(action);
+        }
+
+        public LoggingConfigurationConditionActionConditionProperties build() {
+            $.action = Objects.requireNonNull($.action, "expected parameter 'action' to be non-null");
+            return $;
         }
     }
+
 }

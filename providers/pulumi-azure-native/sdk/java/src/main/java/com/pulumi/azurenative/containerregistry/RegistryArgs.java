@@ -14,6 +14,7 @@ import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +27,10 @@ public final class RegistryArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="adminUserEnabled")
-      private final @Nullable Output<Boolean> adminUserEnabled;
+    private @Nullable Output<Boolean> adminUserEnabled;
 
-    public Output<Boolean> adminUserEnabled() {
-        return this.adminUserEnabled == null ? Codegen.empty() : this.adminUserEnabled;
+    public Optional<Output<Boolean>> adminUserEnabled() {
+        return Optional.ofNullable(this.adminUserEnabled);
     }
 
     /**
@@ -37,10 +38,10 @@ public final class RegistryArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -48,10 +49,10 @@ public final class RegistryArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="networkRuleSet")
-      private final @Nullable Output<NetworkRuleSetArgs> networkRuleSet;
+    private @Nullable Output<NetworkRuleSetArgs> networkRuleSet;
 
-    public Output<NetworkRuleSetArgs> networkRuleSet() {
-        return this.networkRuleSet == null ? Codegen.empty() : this.networkRuleSet;
+    public Optional<Output<NetworkRuleSetArgs>> networkRuleSet() {
+        return Optional.ofNullable(this.networkRuleSet);
     }
 
     /**
@@ -59,10 +60,10 @@ public final class RegistryArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="policies")
-      private final @Nullable Output<PoliciesArgs> policies;
+    private @Nullable Output<PoliciesArgs> policies;
 
-    public Output<PoliciesArgs> policies() {
-        return this.policies == null ? Codegen.empty() : this.policies;
+    public Optional<Output<PoliciesArgs>> policies() {
+        return Optional.ofNullable(this.policies);
     }
 
     /**
@@ -70,10 +71,10 @@ public final class RegistryArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="registryName")
-      private final @Nullable Output<String> registryName;
+    private @Nullable Output<String> registryName;
 
-    public Output<String> registryName() {
-        return this.registryName == null ? Codegen.empty() : this.registryName;
+    public Optional<Output<String>> registryName() {
+        return Optional.ofNullable(this.registryName);
     }
 
     /**
@@ -81,7 +82,7 @@ public final class RegistryArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -92,7 +93,7 @@ public final class RegistryArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="sku", required=true)
-      private final Output<SkuArgs> sku;
+    private Output<SkuArgs> sku;
 
     public Output<SkuArgs> sku() {
         return this.sku;
@@ -103,10 +104,10 @@ public final class RegistryArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="storageAccount")
-      private final @Nullable Output<StorageAccountPropertiesArgs> storageAccount;
+    private @Nullable Output<StorageAccountPropertiesArgs> storageAccount;
 
-    public Output<StorageAccountPropertiesArgs> storageAccount() {
-        return this.storageAccount == null ? Codegen.empty() : this.storageAccount;
+    public Optional<Output<StorageAccountPropertiesArgs>> storageAccount() {
+        return Optional.ofNullable(this.storageAccount);
     }
 
     /**
@@ -114,154 +115,131 @@ public final class RegistryArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public RegistryArgs(
-        @Nullable Output<Boolean> adminUserEnabled,
-        @Nullable Output<String> location,
-        @Nullable Output<NetworkRuleSetArgs> networkRuleSet,
-        @Nullable Output<PoliciesArgs> policies,
-        @Nullable Output<String> registryName,
-        Output<String> resourceGroupName,
-        Output<SkuArgs> sku,
-        @Nullable Output<StorageAccountPropertiesArgs> storageAccount,
-        @Nullable Output<Map<String,String>> tags) {
-        this.adminUserEnabled = Codegen.booleanProp("adminUserEnabled").output().arg(adminUserEnabled).def(false).getNullable();
-        this.location = location;
-        this.networkRuleSet = networkRuleSet;
-        this.policies = policies;
-        this.registryName = registryName;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.sku = Objects.requireNonNull(sku, "expected parameter 'sku' to be non-null");
-        this.storageAccount = storageAccount;
-        this.tags = tags;
-    }
+    private RegistryArgs() {}
 
-    private RegistryArgs() {
-        this.adminUserEnabled = Codegen.empty();
-        this.location = Codegen.empty();
-        this.networkRuleSet = Codegen.empty();
-        this.policies = Codegen.empty();
-        this.registryName = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.sku = Codegen.empty();
-        this.storageAccount = Codegen.empty();
-        this.tags = Codegen.empty();
+    private RegistryArgs(RegistryArgs $) {
+        this.adminUserEnabled = $.adminUserEnabled;
+        this.location = $.location;
+        this.networkRuleSet = $.networkRuleSet;
+        this.policies = $.policies;
+        this.registryName = $.registryName;
+        this.resourceGroupName = $.resourceGroupName;
+        this.sku = $.sku;
+        this.storageAccount = $.storageAccount;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RegistryArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> adminUserEnabled;
-        private @Nullable Output<String> location;
-        private @Nullable Output<NetworkRuleSetArgs> networkRuleSet;
-        private @Nullable Output<PoliciesArgs> policies;
-        private @Nullable Output<String> registryName;
-        private Output<String> resourceGroupName;
-        private Output<SkuArgs> sku;
-        private @Nullable Output<StorageAccountPropertiesArgs> storageAccount;
-        private @Nullable Output<Map<String,String>> tags;
+        private RegistryArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RegistryArgs();
         }
 
         public Builder(RegistryArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.adminUserEnabled = defaults.adminUserEnabled;
-    	      this.location = defaults.location;
-    	      this.networkRuleSet = defaults.networkRuleSet;
-    	      this.policies = defaults.policies;
-    	      this.registryName = defaults.registryName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.sku = defaults.sku;
-    	      this.storageAccount = defaults.storageAccount;
-    	      this.tags = defaults.tags;
+            $ = new RegistryArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder adminUserEnabled(@Nullable Output<Boolean> adminUserEnabled) {
-            this.adminUserEnabled = adminUserEnabled;
+            $.adminUserEnabled = adminUserEnabled;
             return this;
         }
-        public Builder adminUserEnabled(@Nullable Boolean adminUserEnabled) {
-            this.adminUserEnabled = Codegen.ofNullable(adminUserEnabled);
-            return this;
+
+        public Builder adminUserEnabled(Boolean adminUserEnabled) {
+            return adminUserEnabled(Output.of(adminUserEnabled));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder networkRuleSet(@Nullable Output<NetworkRuleSetArgs> networkRuleSet) {
-            this.networkRuleSet = networkRuleSet;
+            $.networkRuleSet = networkRuleSet;
             return this;
         }
-        public Builder networkRuleSet(@Nullable NetworkRuleSetArgs networkRuleSet) {
-            this.networkRuleSet = Codegen.ofNullable(networkRuleSet);
-            return this;
+
+        public Builder networkRuleSet(NetworkRuleSetArgs networkRuleSet) {
+            return networkRuleSet(Output.of(networkRuleSet));
         }
+
         public Builder policies(@Nullable Output<PoliciesArgs> policies) {
-            this.policies = policies;
+            $.policies = policies;
             return this;
         }
-        public Builder policies(@Nullable PoliciesArgs policies) {
-            this.policies = Codegen.ofNullable(policies);
-            return this;
+
+        public Builder policies(PoliciesArgs policies) {
+            return policies(Output.of(policies));
         }
+
         public Builder registryName(@Nullable Output<String> registryName) {
-            this.registryName = registryName;
+            $.registryName = registryName;
             return this;
         }
-        public Builder registryName(@Nullable String registryName) {
-            this.registryName = Codegen.ofNullable(registryName);
-            return this;
+
+        public Builder registryName(String registryName) {
+            return registryName(Output.of(registryName));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder sku(Output<SkuArgs> sku) {
-            this.sku = Objects.requireNonNull(sku);
+            $.sku = sku;
             return this;
         }
+
         public Builder sku(SkuArgs sku) {
-            this.sku = Output.of(Objects.requireNonNull(sku));
-            return this;
+            return sku(Output.of(sku));
         }
+
         public Builder storageAccount(@Nullable Output<StorageAccountPropertiesArgs> storageAccount) {
-            this.storageAccount = storageAccount;
+            $.storageAccount = storageAccount;
             return this;
         }
-        public Builder storageAccount(@Nullable StorageAccountPropertiesArgs storageAccount) {
-            this.storageAccount = Codegen.ofNullable(storageAccount);
-            return this;
+
+        public Builder storageAccount(StorageAccountPropertiesArgs storageAccount) {
+            return storageAccount(Output.of(storageAccount));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
-        }        public RegistryArgs build() {
-            return new RegistryArgs(adminUserEnabled, location, networkRuleSet, policies, registryName, resourceGroupName, sku, storageAccount, tags);
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
+        }
+
+        public RegistryArgs build() {
+            $.adminUserEnabled = Codegen.booleanProp("adminUserEnabled").output().arg($.adminUserEnabled).def(false).getNullable();
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.sku = Objects.requireNonNull($.sku, "expected parameter 'sku' to be non-null");
+            return $;
         }
     }
+
 }

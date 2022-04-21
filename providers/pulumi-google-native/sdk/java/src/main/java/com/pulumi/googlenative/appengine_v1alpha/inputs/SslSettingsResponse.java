@@ -22,7 +22,7 @@ public final class SslSettingsResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="certificateId", required=true)
-      private final String certificateId;
+    private String certificateId;
 
     public String certificateId() {
         return this.certificateId;
@@ -33,55 +33,52 @@ public final class SslSettingsResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="isManagedCertificate", required=true)
-      private final Boolean isManagedCertificate;
+    private Boolean isManagedCertificate;
 
     public Boolean isManagedCertificate() {
         return this.isManagedCertificate;
     }
 
-    public SslSettingsResponse(
-        String certificateId,
-        Boolean isManagedCertificate) {
-        this.certificateId = Objects.requireNonNull(certificateId, "expected parameter 'certificateId' to be non-null");
-        this.isManagedCertificate = Objects.requireNonNull(isManagedCertificate, "expected parameter 'isManagedCertificate' to be non-null");
-    }
+    private SslSettingsResponse() {}
 
-    private SslSettingsResponse() {
-        this.certificateId = null;
-        this.isManagedCertificate = null;
+    private SslSettingsResponse(SslSettingsResponse $) {
+        this.certificateId = $.certificateId;
+        this.isManagedCertificate = $.isManagedCertificate;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SslSettingsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String certificateId;
-        private Boolean isManagedCertificate;
+        private SslSettingsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new SslSettingsResponse();
         }
 
         public Builder(SslSettingsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.certificateId = defaults.certificateId;
-    	      this.isManagedCertificate = defaults.isManagedCertificate;
+            $ = new SslSettingsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder certificateId(String certificateId) {
-            this.certificateId = Objects.requireNonNull(certificateId);
+            $.certificateId = certificateId;
             return this;
         }
+
         public Builder isManagedCertificate(Boolean isManagedCertificate) {
-            this.isManagedCertificate = Objects.requireNonNull(isManagedCertificate);
+            $.isManagedCertificate = isManagedCertificate;
             return this;
-        }        public SslSettingsResponse build() {
-            return new SslSettingsResponse(certificateId, isManagedCertificate);
+        }
+
+        public SslSettingsResponse build() {
+            $.certificateId = Objects.requireNonNull($.certificateId, "expected parameter 'certificateId' to be non-null");
+            $.isManagedCertificate = Objects.requireNonNull($.isManagedCertificate, "expected parameter 'isManagedCertificate' to be non-null");
+            return $;
         }
     }
+
 }

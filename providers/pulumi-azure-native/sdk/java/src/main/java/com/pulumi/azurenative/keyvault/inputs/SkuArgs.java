@@ -8,7 +8,6 @@ import com.pulumi.azurenative.keyvault.enums.SkuName;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -26,7 +25,7 @@ public final class SkuArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="family", required=true)
-      private final Output<Either<String,SkuFamily>> family;
+    private Output<Either<String,SkuFamily>> family;
 
     public Output<Either<String,SkuFamily>> family() {
         return this.family;
@@ -37,63 +36,60 @@ public final class SkuArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name", required=true)
-      private final Output<SkuName> name;
+    private Output<SkuName> name;
 
     public Output<SkuName> name() {
         return this.name;
     }
 
-    public SkuArgs(
-        Output<Either<String,SkuFamily>> family,
-        Output<SkuName> name) {
-        this.family = Objects.requireNonNull(family, "expected parameter 'family' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-    }
+    private SkuArgs() {}
 
-    private SkuArgs() {
-        this.family = Codegen.empty();
-        this.name = Codegen.empty();
+    private SkuArgs(SkuArgs $) {
+        this.family = $.family;
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SkuArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Either<String,SkuFamily>> family;
-        private Output<SkuName> name;
+        private SkuArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SkuArgs();
         }
 
         public Builder(SkuArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.family = defaults.family;
-    	      this.name = defaults.name;
+            $ = new SkuArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder family(Output<Either<String,SkuFamily>> family) {
-            this.family = Objects.requireNonNull(family);
+            $.family = family;
             return this;
         }
+
         public Builder family(Either<String,SkuFamily> family) {
-            this.family = Output.of(Objects.requireNonNull(family));
-            return this;
+            return family(Output.of(family));
         }
+
         public Builder name(Output<SkuName> name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder name(SkuName name) {
-            this.name = Output.of(Objects.requireNonNull(name));
-            return this;
-        }        public SkuArgs build() {
-            return new SkuArgs(family, name);
+            return name(Output.of(name));
+        }
+
+        public SkuArgs build() {
+            $.family = Objects.requireNonNull($.family, "expected parameter 'family' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            return $;
         }
     }
+
 }

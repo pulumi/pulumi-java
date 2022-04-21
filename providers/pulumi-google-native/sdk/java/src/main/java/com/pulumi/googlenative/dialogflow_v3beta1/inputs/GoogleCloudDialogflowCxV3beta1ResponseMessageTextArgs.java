@@ -5,7 +5,6 @@ package com.pulumi.googlenative.dialogflow_v3beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,52 +23,53 @@ public final class GoogleCloudDialogflowCxV3beta1ResponseMessageTextArgs extends
      * 
      */
     @Import(name="text", required=true)
-      private final Output<List<String>> text;
+    private Output<List<String>> text;
 
     public Output<List<String>> text() {
         return this.text;
     }
 
-    public GoogleCloudDialogflowCxV3beta1ResponseMessageTextArgs(Output<List<String>> text) {
-        this.text = Objects.requireNonNull(text, "expected parameter 'text' to be non-null");
-    }
+    private GoogleCloudDialogflowCxV3beta1ResponseMessageTextArgs() {}
 
-    private GoogleCloudDialogflowCxV3beta1ResponseMessageTextArgs() {
-        this.text = Codegen.empty();
+    private GoogleCloudDialogflowCxV3beta1ResponseMessageTextArgs(GoogleCloudDialogflowCxV3beta1ResponseMessageTextArgs $) {
+        this.text = $.text;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudDialogflowCxV3beta1ResponseMessageTextArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<List<String>> text;
+        private GoogleCloudDialogflowCxV3beta1ResponseMessageTextArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudDialogflowCxV3beta1ResponseMessageTextArgs();
         }
 
         public Builder(GoogleCloudDialogflowCxV3beta1ResponseMessageTextArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.text = defaults.text;
+            $ = new GoogleCloudDialogflowCxV3beta1ResponseMessageTextArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder text(Output<List<String>> text) {
-            this.text = Objects.requireNonNull(text);
+            $.text = text;
             return this;
         }
+
         public Builder text(List<String> text) {
-            this.text = Output.of(Objects.requireNonNull(text));
-            return this;
+            return text(Output.of(text));
         }
+
         public Builder text(String... text) {
             return text(List.of(text));
-        }        public GoogleCloudDialogflowCxV3beta1ResponseMessageTextArgs build() {
-            return new GoogleCloudDialogflowCxV3beta1ResponseMessageTextArgs(text);
+        }
+
+        public GoogleCloudDialogflowCxV3beta1ResponseMessageTextArgs build() {
+            $.text = Objects.requireNonNull($.text, "expected parameter 'text' to be non-null");
+            return $;
         }
     }
+
 }

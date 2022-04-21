@@ -23,10 +23,10 @@ public final class InfrastructureConfigurationS3Logs extends com.pulumi.resource
      * 
      */
     @Import(name="s3BucketName")
-      private final @Nullable String s3BucketName;
+    private @Nullable String s3BucketName;
 
     public Optional<String> s3BucketName() {
-        return this.s3BucketName == null ? Optional.empty() : Optional.ofNullable(this.s3BucketName);
+        return Optional.ofNullable(this.s3BucketName);
     }
 
     /**
@@ -34,55 +34,50 @@ public final class InfrastructureConfigurationS3Logs extends com.pulumi.resource
      * 
      */
     @Import(name="s3KeyPrefix")
-      private final @Nullable String s3KeyPrefix;
+    private @Nullable String s3KeyPrefix;
 
     public Optional<String> s3KeyPrefix() {
-        return this.s3KeyPrefix == null ? Optional.empty() : Optional.ofNullable(this.s3KeyPrefix);
+        return Optional.ofNullable(this.s3KeyPrefix);
     }
 
-    public InfrastructureConfigurationS3Logs(
-        @Nullable String s3BucketName,
-        @Nullable String s3KeyPrefix) {
-        this.s3BucketName = s3BucketName;
-        this.s3KeyPrefix = s3KeyPrefix;
-    }
+    private InfrastructureConfigurationS3Logs() {}
 
-    private InfrastructureConfigurationS3Logs() {
-        this.s3BucketName = null;
-        this.s3KeyPrefix = null;
+    private InfrastructureConfigurationS3Logs(InfrastructureConfigurationS3Logs $) {
+        this.s3BucketName = $.s3BucketName;
+        this.s3KeyPrefix = $.s3KeyPrefix;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(InfrastructureConfigurationS3Logs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String s3BucketName;
-        private @Nullable String s3KeyPrefix;
+        private InfrastructureConfigurationS3Logs $;
 
         public Builder() {
-    	      // Empty
+            $ = new InfrastructureConfigurationS3Logs();
         }
 
         public Builder(InfrastructureConfigurationS3Logs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.s3BucketName = defaults.s3BucketName;
-    	      this.s3KeyPrefix = defaults.s3KeyPrefix;
+            $ = new InfrastructureConfigurationS3Logs(Objects.requireNonNull(defaults));
         }
 
         public Builder s3BucketName(@Nullable String s3BucketName) {
-            this.s3BucketName = s3BucketName;
+            $.s3BucketName = s3BucketName;
             return this;
         }
+
         public Builder s3KeyPrefix(@Nullable String s3KeyPrefix) {
-            this.s3KeyPrefix = s3KeyPrefix;
+            $.s3KeyPrefix = s3KeyPrefix;
             return this;
-        }        public InfrastructureConfigurationS3Logs build() {
-            return new InfrastructureConfigurationS3Logs(s3BucketName, s3KeyPrefix);
+        }
+
+        public InfrastructureConfigurationS3Logs build() {
+            return $;
         }
     }
+
 }

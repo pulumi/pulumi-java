@@ -17,7 +17,7 @@ public final class GetConfigurationStoreArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="configStoreName", required=true)
-      private final String configStoreName;
+    private String configStoreName;
 
     public String configStoreName() {
         return this.configStoreName;
@@ -28,55 +28,52 @@ public final class GetConfigurationStoreArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public GetConfigurationStoreArgs(
-        String configStoreName,
-        String resourceGroupName) {
-        this.configStoreName = Objects.requireNonNull(configStoreName, "expected parameter 'configStoreName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private GetConfigurationStoreArgs() {}
 
-    private GetConfigurationStoreArgs() {
-        this.configStoreName = null;
-        this.resourceGroupName = null;
+    private GetConfigurationStoreArgs(GetConfigurationStoreArgs $) {
+        this.configStoreName = $.configStoreName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetConfigurationStoreArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String configStoreName;
-        private String resourceGroupName;
+        private GetConfigurationStoreArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetConfigurationStoreArgs();
         }
 
         public Builder(GetConfigurationStoreArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.configStoreName = defaults.configStoreName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new GetConfigurationStoreArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder configStoreName(String configStoreName) {
-            this.configStoreName = Objects.requireNonNull(configStoreName);
+            $.configStoreName = configStoreName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public GetConfigurationStoreArgs build() {
-            return new GetConfigurationStoreArgs(configStoreName, resourceGroupName);
+        }
+
+        public GetConfigurationStoreArgs build() {
+            $.configStoreName = Objects.requireNonNull($.configStoreName, "expected parameter 'configStoreName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

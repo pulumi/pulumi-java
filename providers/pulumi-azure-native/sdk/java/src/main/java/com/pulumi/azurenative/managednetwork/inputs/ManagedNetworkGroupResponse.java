@@ -25,7 +25,7 @@ public final class ManagedNetworkGroupResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="etag", required=true)
-      private final String etag;
+    private String etag;
 
     public String etag() {
         return this.etag;
@@ -36,7 +36,7 @@ public final class ManagedNetworkGroupResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="id", required=true)
-      private final String id;
+    private String id;
 
     public String id() {
         return this.id;
@@ -47,10 +47,10 @@ public final class ManagedNetworkGroupResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="kind")
-      private final @Nullable String kind;
+    private @Nullable String kind;
 
     public Optional<String> kind() {
-        return this.kind == null ? Optional.empty() : Optional.ofNullable(this.kind);
+        return Optional.ofNullable(this.kind);
     }
 
     /**
@@ -58,10 +58,10 @@ public final class ManagedNetworkGroupResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="location")
-      private final @Nullable String location;
+    private @Nullable String location;
 
     public Optional<String> location() {
-        return this.location == null ? Optional.empty() : Optional.ofNullable(this.location);
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -69,10 +69,10 @@ public final class ManagedNetworkGroupResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="managementGroups")
-      private final @Nullable List<ResourceIdResponse> managementGroups;
+    private @Nullable List<ResourceIdResponse> managementGroups;
 
-    public List<ResourceIdResponse> managementGroups() {
-        return this.managementGroups == null ? List.of() : this.managementGroups;
+    public Optional<List<ResourceIdResponse>> managementGroups() {
+        return Optional.ofNullable(this.managementGroups);
     }
 
     /**
@@ -80,7 +80,7 @@ public final class ManagedNetworkGroupResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -91,7 +91,7 @@ public final class ManagedNetworkGroupResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="provisioningState", required=true)
-      private final String provisioningState;
+    private String provisioningState;
 
     public String provisioningState() {
         return this.provisioningState;
@@ -102,10 +102,10 @@ public final class ManagedNetworkGroupResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="subnets")
-      private final @Nullable List<ResourceIdResponse> subnets;
+    private @Nullable List<ResourceIdResponse> subnets;
 
-    public List<ResourceIdResponse> subnets() {
-        return this.subnets == null ? List.of() : this.subnets;
+    public Optional<List<ResourceIdResponse>> subnets() {
+        return Optional.ofNullable(this.subnets);
     }
 
     /**
@@ -113,10 +113,10 @@ public final class ManagedNetworkGroupResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="subscriptions")
-      private final @Nullable List<ResourceIdResponse> subscriptions;
+    private @Nullable List<ResourceIdResponse> subscriptions;
 
-    public List<ResourceIdResponse> subscriptions() {
-        return this.subscriptions == null ? List.of() : this.subscriptions;
+    public Optional<List<ResourceIdResponse>> subscriptions() {
+        return Optional.ofNullable(this.subscriptions);
     }
 
     /**
@@ -124,7 +124,7 @@ public final class ManagedNetworkGroupResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
@@ -135,148 +135,125 @@ public final class ManagedNetworkGroupResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="virtualNetworks")
-      private final @Nullable List<ResourceIdResponse> virtualNetworks;
+    private @Nullable List<ResourceIdResponse> virtualNetworks;
 
-    public List<ResourceIdResponse> virtualNetworks() {
-        return this.virtualNetworks == null ? List.of() : this.virtualNetworks;
+    public Optional<List<ResourceIdResponse>> virtualNetworks() {
+        return Optional.ofNullable(this.virtualNetworks);
     }
 
-    public ManagedNetworkGroupResponse(
-        String etag,
-        String id,
-        @Nullable String kind,
-        @Nullable String location,
-        @Nullable List<ResourceIdResponse> managementGroups,
-        String name,
-        String provisioningState,
-        @Nullable List<ResourceIdResponse> subnets,
-        @Nullable List<ResourceIdResponse> subscriptions,
-        String type,
-        @Nullable List<ResourceIdResponse> virtualNetworks) {
-        this.etag = Objects.requireNonNull(etag, "expected parameter 'etag' to be non-null");
-        this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
-        this.kind = kind;
-        this.location = location;
-        this.managementGroups = managementGroups;
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.provisioningState = Objects.requireNonNull(provisioningState, "expected parameter 'provisioningState' to be non-null");
-        this.subnets = subnets;
-        this.subscriptions = subscriptions;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-        this.virtualNetworks = virtualNetworks;
-    }
+    private ManagedNetworkGroupResponse() {}
 
-    private ManagedNetworkGroupResponse() {
-        this.etag = null;
-        this.id = null;
-        this.kind = null;
-        this.location = null;
-        this.managementGroups = List.of();
-        this.name = null;
-        this.provisioningState = null;
-        this.subnets = List.of();
-        this.subscriptions = List.of();
-        this.type = null;
-        this.virtualNetworks = List.of();
+    private ManagedNetworkGroupResponse(ManagedNetworkGroupResponse $) {
+        this.etag = $.etag;
+        this.id = $.id;
+        this.kind = $.kind;
+        this.location = $.location;
+        this.managementGroups = $.managementGroups;
+        this.name = $.name;
+        this.provisioningState = $.provisioningState;
+        this.subnets = $.subnets;
+        this.subscriptions = $.subscriptions;
+        this.type = $.type;
+        this.virtualNetworks = $.virtualNetworks;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ManagedNetworkGroupResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String etag;
-        private String id;
-        private @Nullable String kind;
-        private @Nullable String location;
-        private @Nullable List<ResourceIdResponse> managementGroups;
-        private String name;
-        private String provisioningState;
-        private @Nullable List<ResourceIdResponse> subnets;
-        private @Nullable List<ResourceIdResponse> subscriptions;
-        private String type;
-        private @Nullable List<ResourceIdResponse> virtualNetworks;
+        private ManagedNetworkGroupResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ManagedNetworkGroupResponse();
         }
 
         public Builder(ManagedNetworkGroupResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.etag = defaults.etag;
-    	      this.id = defaults.id;
-    	      this.kind = defaults.kind;
-    	      this.location = defaults.location;
-    	      this.managementGroups = defaults.managementGroups;
-    	      this.name = defaults.name;
-    	      this.provisioningState = defaults.provisioningState;
-    	      this.subnets = defaults.subnets;
-    	      this.subscriptions = defaults.subscriptions;
-    	      this.type = defaults.type;
-    	      this.virtualNetworks = defaults.virtualNetworks;
+            $ = new ManagedNetworkGroupResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder etag(String etag) {
-            this.etag = Objects.requireNonNull(etag);
+            $.etag = etag;
             return this;
         }
+
         public Builder id(String id) {
-            this.id = Objects.requireNonNull(id);
+            $.id = id;
             return this;
         }
+
         public Builder kind(@Nullable String kind) {
-            this.kind = kind;
+            $.kind = kind;
             return this;
         }
+
         public Builder location(@Nullable String location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
+
         public Builder managementGroups(@Nullable List<ResourceIdResponse> managementGroups) {
-            this.managementGroups = managementGroups;
+            $.managementGroups = managementGroups;
             return this;
         }
+
         public Builder managementGroups(ResourceIdResponse... managementGroups) {
             return managementGroups(List.of(managementGroups));
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder provisioningState(String provisioningState) {
-            this.provisioningState = Objects.requireNonNull(provisioningState);
+            $.provisioningState = provisioningState;
             return this;
         }
+
         public Builder subnets(@Nullable List<ResourceIdResponse> subnets) {
-            this.subnets = subnets;
+            $.subnets = subnets;
             return this;
         }
+
         public Builder subnets(ResourceIdResponse... subnets) {
             return subnets(List.of(subnets));
         }
+
         public Builder subscriptions(@Nullable List<ResourceIdResponse> subscriptions) {
-            this.subscriptions = subscriptions;
+            $.subscriptions = subscriptions;
             return this;
         }
+
         public Builder subscriptions(ResourceIdResponse... subscriptions) {
             return subscriptions(List.of(subscriptions));
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder virtualNetworks(@Nullable List<ResourceIdResponse> virtualNetworks) {
-            this.virtualNetworks = virtualNetworks;
+            $.virtualNetworks = virtualNetworks;
             return this;
         }
+
         public Builder virtualNetworks(ResourceIdResponse... virtualNetworks) {
             return virtualNetworks(List.of(virtualNetworks));
-        }        public ManagedNetworkGroupResponse build() {
-            return new ManagedNetworkGroupResponse(etag, id, kind, location, managementGroups, name, provisioningState, subnets, subscriptions, type, virtualNetworks);
+        }
+
+        public ManagedNetworkGroupResponse build() {
+            $.etag = Objects.requireNonNull($.etag, "expected parameter 'etag' to be non-null");
+            $.id = Objects.requireNonNull($.id, "expected parameter 'id' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.provisioningState = Objects.requireNonNull($.provisioningState, "expected parameter 'provisioningState' to be non-null");
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

@@ -33,10 +33,10 @@ public final class K8sOnlineDeploymentResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="appInsightsEnabled")
-      private final @Nullable Boolean appInsightsEnabled;
+    private @Nullable Boolean appInsightsEnabled;
 
     public Optional<Boolean> appInsightsEnabled() {
-        return this.appInsightsEnabled == null ? Optional.empty() : Optional.ofNullable(this.appInsightsEnabled);
+        return Optional.ofNullable(this.appInsightsEnabled);
     }
 
     /**
@@ -44,10 +44,10 @@ public final class K8sOnlineDeploymentResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="codeConfiguration")
-      private final @Nullable CodeConfigurationResponse codeConfiguration;
+    private @Nullable CodeConfigurationResponse codeConfiguration;
 
     public Optional<CodeConfigurationResponse> codeConfiguration() {
-        return this.codeConfiguration == null ? Optional.empty() : Optional.ofNullable(this.codeConfiguration);
+        return Optional.ofNullable(this.codeConfiguration);
     }
 
     /**
@@ -55,10 +55,10 @@ public final class K8sOnlineDeploymentResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="containerResourceRequirements")
-      private final @Nullable ContainerResourceRequirementsResponse containerResourceRequirements;
+    private @Nullable ContainerResourceRequirementsResponse containerResourceRequirements;
 
     public Optional<ContainerResourceRequirementsResponse> containerResourceRequirements() {
-        return this.containerResourceRequirements == null ? Optional.empty() : Optional.ofNullable(this.containerResourceRequirements);
+        return Optional.ofNullable(this.containerResourceRequirements);
     }
 
     /**
@@ -66,10 +66,10 @@ public final class K8sOnlineDeploymentResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="description")
-      private final @Nullable String description;
+    private @Nullable String description;
 
     public Optional<String> description() {
-        return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -78,7 +78,7 @@ public final class K8sOnlineDeploymentResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="endpointComputeType", required=true)
-      private final String endpointComputeType;
+    private String endpointComputeType;
 
     public String endpointComputeType() {
         return this.endpointComputeType;
@@ -89,10 +89,10 @@ public final class K8sOnlineDeploymentResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="environmentId")
-      private final @Nullable String environmentId;
+    private @Nullable String environmentId;
 
     public Optional<String> environmentId() {
-        return this.environmentId == null ? Optional.empty() : Optional.ofNullable(this.environmentId);
+        return Optional.ofNullable(this.environmentId);
     }
 
     /**
@@ -100,10 +100,10 @@ public final class K8sOnlineDeploymentResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="environmentVariables")
-      private final @Nullable Map<String,String> environmentVariables;
+    private @Nullable Map<String,String> environmentVariables;
 
-    public Map<String,String> environmentVariables() {
-        return this.environmentVariables == null ? Map.of() : this.environmentVariables;
+    public Optional<Map<String,String>> environmentVariables() {
+        return Optional.ofNullable(this.environmentVariables);
     }
 
     /**
@@ -111,10 +111,10 @@ public final class K8sOnlineDeploymentResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="livenessProbe")
-      private final @Nullable ProbeSettingsResponse livenessProbe;
+    private @Nullable ProbeSettingsResponse livenessProbe;
 
     public Optional<ProbeSettingsResponse> livenessProbe() {
-        return this.livenessProbe == null ? Optional.empty() : Optional.ofNullable(this.livenessProbe);
+        return Optional.ofNullable(this.livenessProbe);
     }
 
     /**
@@ -122,10 +122,10 @@ public final class K8sOnlineDeploymentResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="model")
-      private final @Nullable Object model;
+    private @Nullable Object model;
 
-    public Object model() {
-        return this.model == null ? null : this.model;
+    public Optional<Object> model() {
+        return Optional.ofNullable(this.model);
     }
 
     /**
@@ -133,10 +133,10 @@ public final class K8sOnlineDeploymentResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="properties")
-      private final @Nullable Map<String,String> properties;
+    private @Nullable Map<String,String> properties;
 
-    public Map<String,String> properties() {
-        return this.properties == null ? Map.of() : this.properties;
+    public Optional<Map<String,String>> properties() {
+        return Optional.ofNullable(this.properties);
     }
 
     /**
@@ -144,7 +144,7 @@ public final class K8sOnlineDeploymentResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="provisioningState", required=true)
-      private final String provisioningState;
+    private String provisioningState;
 
     public String provisioningState() {
         return this.provisioningState;
@@ -155,10 +155,10 @@ public final class K8sOnlineDeploymentResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="requestSettings")
-      private final @Nullable OnlineRequestSettingsResponse requestSettings;
+    private @Nullable OnlineRequestSettingsResponse requestSettings;
 
     public Optional<OnlineRequestSettingsResponse> requestSettings() {
-        return this.requestSettings == null ? Optional.empty() : Optional.ofNullable(this.requestSettings);
+        return Optional.ofNullable(this.requestSettings);
     }
 
     /**
@@ -166,154 +166,118 @@ public final class K8sOnlineDeploymentResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="scaleSettings")
-      private final @Nullable Either<AutoScaleSettingsResponse,ManualScaleSettingsResponse> scaleSettings;
+    private @Nullable Either<AutoScaleSettingsResponse,ManualScaleSettingsResponse> scaleSettings;
 
-    public Either<AutoScaleSettingsResponse,ManualScaleSettingsResponse> scaleSettings() {
-        return this.scaleSettings == null ? null : this.scaleSettings;
+    public Optional<Either<AutoScaleSettingsResponse,ManualScaleSettingsResponse>> scaleSettings() {
+        return Optional.ofNullable(this.scaleSettings);
     }
 
-    public K8sOnlineDeploymentResponse(
-        @Nullable Boolean appInsightsEnabled,
-        @Nullable CodeConfigurationResponse codeConfiguration,
-        @Nullable ContainerResourceRequirementsResponse containerResourceRequirements,
-        @Nullable String description,
-        String endpointComputeType,
-        @Nullable String environmentId,
-        @Nullable Map<String,String> environmentVariables,
-        @Nullable ProbeSettingsResponse livenessProbe,
-        @Nullable Object model,
-        @Nullable Map<String,String> properties,
-        String provisioningState,
-        @Nullable OnlineRequestSettingsResponse requestSettings,
-        @Nullable Either<AutoScaleSettingsResponse,ManualScaleSettingsResponse> scaleSettings) {
-        this.appInsightsEnabled = appInsightsEnabled;
-        this.codeConfiguration = codeConfiguration;
-        this.containerResourceRequirements = containerResourceRequirements;
-        this.description = description;
-        this.endpointComputeType = Codegen.stringProp("endpointComputeType").arg(endpointComputeType).require();
-        this.environmentId = environmentId;
-        this.environmentVariables = environmentVariables;
-        this.livenessProbe = livenessProbe;
-        this.model = model;
-        this.properties = properties;
-        this.provisioningState = Objects.requireNonNull(provisioningState, "expected parameter 'provisioningState' to be non-null");
-        this.requestSettings = requestSettings;
-        this.scaleSettings = scaleSettings;
-    }
+    private K8sOnlineDeploymentResponse() {}
 
-    private K8sOnlineDeploymentResponse() {
-        this.appInsightsEnabled = null;
-        this.codeConfiguration = null;
-        this.containerResourceRequirements = null;
-        this.description = null;
-        this.endpointComputeType = null;
-        this.environmentId = null;
-        this.environmentVariables = Map.of();
-        this.livenessProbe = null;
-        this.model = null;
-        this.properties = Map.of();
-        this.provisioningState = null;
-        this.requestSettings = null;
-        this.scaleSettings = null;
+    private K8sOnlineDeploymentResponse(K8sOnlineDeploymentResponse $) {
+        this.appInsightsEnabled = $.appInsightsEnabled;
+        this.codeConfiguration = $.codeConfiguration;
+        this.containerResourceRequirements = $.containerResourceRequirements;
+        this.description = $.description;
+        this.endpointComputeType = $.endpointComputeType;
+        this.environmentId = $.environmentId;
+        this.environmentVariables = $.environmentVariables;
+        this.livenessProbe = $.livenessProbe;
+        this.model = $.model;
+        this.properties = $.properties;
+        this.provisioningState = $.provisioningState;
+        this.requestSettings = $.requestSettings;
+        this.scaleSettings = $.scaleSettings;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(K8sOnlineDeploymentResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Boolean appInsightsEnabled;
-        private @Nullable CodeConfigurationResponse codeConfiguration;
-        private @Nullable ContainerResourceRequirementsResponse containerResourceRequirements;
-        private @Nullable String description;
-        private String endpointComputeType;
-        private @Nullable String environmentId;
-        private @Nullable Map<String,String> environmentVariables;
-        private @Nullable ProbeSettingsResponse livenessProbe;
-        private @Nullable Object model;
-        private @Nullable Map<String,String> properties;
-        private String provisioningState;
-        private @Nullable OnlineRequestSettingsResponse requestSettings;
-        private @Nullable Either<AutoScaleSettingsResponse,ManualScaleSettingsResponse> scaleSettings;
+        private K8sOnlineDeploymentResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new K8sOnlineDeploymentResponse();
         }
 
         public Builder(K8sOnlineDeploymentResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.appInsightsEnabled = defaults.appInsightsEnabled;
-    	      this.codeConfiguration = defaults.codeConfiguration;
-    	      this.containerResourceRequirements = defaults.containerResourceRequirements;
-    	      this.description = defaults.description;
-    	      this.endpointComputeType = defaults.endpointComputeType;
-    	      this.environmentId = defaults.environmentId;
-    	      this.environmentVariables = defaults.environmentVariables;
-    	      this.livenessProbe = defaults.livenessProbe;
-    	      this.model = defaults.model;
-    	      this.properties = defaults.properties;
-    	      this.provisioningState = defaults.provisioningState;
-    	      this.requestSettings = defaults.requestSettings;
-    	      this.scaleSettings = defaults.scaleSettings;
+            $ = new K8sOnlineDeploymentResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder appInsightsEnabled(@Nullable Boolean appInsightsEnabled) {
-            this.appInsightsEnabled = appInsightsEnabled;
+            $.appInsightsEnabled = appInsightsEnabled;
             return this;
         }
+
         public Builder codeConfiguration(@Nullable CodeConfigurationResponse codeConfiguration) {
-            this.codeConfiguration = codeConfiguration;
+            $.codeConfiguration = codeConfiguration;
             return this;
         }
+
         public Builder containerResourceRequirements(@Nullable ContainerResourceRequirementsResponse containerResourceRequirements) {
-            this.containerResourceRequirements = containerResourceRequirements;
+            $.containerResourceRequirements = containerResourceRequirements;
             return this;
         }
+
         public Builder description(@Nullable String description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
+
         public Builder endpointComputeType(String endpointComputeType) {
-            this.endpointComputeType = Objects.requireNonNull(endpointComputeType);
+            $.endpointComputeType = endpointComputeType;
             return this;
         }
+
         public Builder environmentId(@Nullable String environmentId) {
-            this.environmentId = environmentId;
+            $.environmentId = environmentId;
             return this;
         }
+
         public Builder environmentVariables(@Nullable Map<String,String> environmentVariables) {
-            this.environmentVariables = environmentVariables;
+            $.environmentVariables = environmentVariables;
             return this;
         }
+
         public Builder livenessProbe(@Nullable ProbeSettingsResponse livenessProbe) {
-            this.livenessProbe = livenessProbe;
+            $.livenessProbe = livenessProbe;
             return this;
         }
+
         public Builder model(@Nullable Object model) {
-            this.model = model;
+            $.model = model;
             return this;
         }
+
         public Builder properties(@Nullable Map<String,String> properties) {
-            this.properties = properties;
+            $.properties = properties;
             return this;
         }
+
         public Builder provisioningState(String provisioningState) {
-            this.provisioningState = Objects.requireNonNull(provisioningState);
+            $.provisioningState = provisioningState;
             return this;
         }
+
         public Builder requestSettings(@Nullable OnlineRequestSettingsResponse requestSettings) {
-            this.requestSettings = requestSettings;
+            $.requestSettings = requestSettings;
             return this;
         }
+
         public Builder scaleSettings(@Nullable Either<AutoScaleSettingsResponse,ManualScaleSettingsResponse> scaleSettings) {
-            this.scaleSettings = scaleSettings;
+            $.scaleSettings = scaleSettings;
             return this;
-        }        public K8sOnlineDeploymentResponse build() {
-            return new K8sOnlineDeploymentResponse(appInsightsEnabled, codeConfiguration, containerResourceRequirements, description, endpointComputeType, environmentId, environmentVariables, livenessProbe, model, properties, provisioningState, requestSettings, scaleSettings);
+        }
+
+        public K8sOnlineDeploymentResponse build() {
+            $.endpointComputeType = Codegen.stringProp("endpointComputeType").arg($.endpointComputeType).require();
+            $.provisioningState = Objects.requireNonNull($.provisioningState, "expected parameter 'provisioningState' to be non-null");
+            return $;
         }
     }
+
 }

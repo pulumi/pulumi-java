@@ -13,45 +13,45 @@ public final class GetOrganizationPolicyBooleanPolicy extends com.pulumi.resourc
     public static final GetOrganizationPolicyBooleanPolicy Empty = new GetOrganizationPolicyBooleanPolicy();
 
     @Import(name="enforced", required=true)
-      private final Boolean enforced;
+    private Boolean enforced;
 
     public Boolean enforced() {
         return this.enforced;
     }
 
-    public GetOrganizationPolicyBooleanPolicy(Boolean enforced) {
-        this.enforced = Objects.requireNonNull(enforced, "expected parameter 'enforced' to be non-null");
-    }
+    private GetOrganizationPolicyBooleanPolicy() {}
 
-    private GetOrganizationPolicyBooleanPolicy() {
-        this.enforced = null;
+    private GetOrganizationPolicyBooleanPolicy(GetOrganizationPolicyBooleanPolicy $) {
+        this.enforced = $.enforced;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetOrganizationPolicyBooleanPolicy defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Boolean enforced;
+        private GetOrganizationPolicyBooleanPolicy $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetOrganizationPolicyBooleanPolicy();
         }
 
         public Builder(GetOrganizationPolicyBooleanPolicy defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.enforced = defaults.enforced;
+            $ = new GetOrganizationPolicyBooleanPolicy(Objects.requireNonNull(defaults));
         }
 
         public Builder enforced(Boolean enforced) {
-            this.enforced = Objects.requireNonNull(enforced);
+            $.enforced = enforced;
             return this;
-        }        public GetOrganizationPolicyBooleanPolicy build() {
-            return new GetOrganizationPolicyBooleanPolicy(enforced);
+        }
+
+        public GetOrganizationPolicyBooleanPolicy build() {
+            $.enforced = Objects.requireNonNull($.enforced, "expected parameter 'enforced' to be non-null");
+            return $;
         }
     }
+
 }

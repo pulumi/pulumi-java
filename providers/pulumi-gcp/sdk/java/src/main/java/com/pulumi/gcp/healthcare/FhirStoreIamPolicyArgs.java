@@ -5,7 +5,6 @@ package com.pulumi.gcp.healthcare;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -22,7 +21,7 @@ public final class FhirStoreIamPolicyArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="fhirStoreId", required=true)
-      private final Output<String> fhirStoreId;
+    private Output<String> fhirStoreId;
 
     public Output<String> fhirStoreId() {
         return this.fhirStoreId;
@@ -34,63 +33,60 @@ public final class FhirStoreIamPolicyArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="policyData", required=true)
-      private final Output<String> policyData;
+    private Output<String> policyData;
 
     public Output<String> policyData() {
         return this.policyData;
     }
 
-    public FhirStoreIamPolicyArgs(
-        Output<String> fhirStoreId,
-        Output<String> policyData) {
-        this.fhirStoreId = Objects.requireNonNull(fhirStoreId, "expected parameter 'fhirStoreId' to be non-null");
-        this.policyData = Objects.requireNonNull(policyData, "expected parameter 'policyData' to be non-null");
-    }
+    private FhirStoreIamPolicyArgs() {}
 
-    private FhirStoreIamPolicyArgs() {
-        this.fhirStoreId = Codegen.empty();
-        this.policyData = Codegen.empty();
+    private FhirStoreIamPolicyArgs(FhirStoreIamPolicyArgs $) {
+        this.fhirStoreId = $.fhirStoreId;
+        this.policyData = $.policyData;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FhirStoreIamPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> fhirStoreId;
-        private Output<String> policyData;
+        private FhirStoreIamPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new FhirStoreIamPolicyArgs();
         }
 
         public Builder(FhirStoreIamPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.fhirStoreId = defaults.fhirStoreId;
-    	      this.policyData = defaults.policyData;
+            $ = new FhirStoreIamPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder fhirStoreId(Output<String> fhirStoreId) {
-            this.fhirStoreId = Objects.requireNonNull(fhirStoreId);
+            $.fhirStoreId = fhirStoreId;
             return this;
         }
+
         public Builder fhirStoreId(String fhirStoreId) {
-            this.fhirStoreId = Output.of(Objects.requireNonNull(fhirStoreId));
-            return this;
+            return fhirStoreId(Output.of(fhirStoreId));
         }
+
         public Builder policyData(Output<String> policyData) {
-            this.policyData = Objects.requireNonNull(policyData);
+            $.policyData = policyData;
             return this;
         }
+
         public Builder policyData(String policyData) {
-            this.policyData = Output.of(Objects.requireNonNull(policyData));
-            return this;
-        }        public FhirStoreIamPolicyArgs build() {
-            return new FhirStoreIamPolicyArgs(fhirStoreId, policyData);
+            return policyData(Output.of(policyData));
+        }
+
+        public FhirStoreIamPolicyArgs build() {
+            $.fhirStoreId = Objects.requireNonNull($.fhirStoreId, "expected parameter 'fhirStoreId' to be non-null");
+            $.policyData = Objects.requireNonNull($.policyData, "expected parameter 'policyData' to be non-null");
+            return $;
         }
     }
+
 }

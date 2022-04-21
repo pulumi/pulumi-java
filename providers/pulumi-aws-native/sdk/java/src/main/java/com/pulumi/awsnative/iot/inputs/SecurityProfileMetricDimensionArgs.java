@@ -6,9 +6,9 @@ package com.pulumi.awsnative.iot.inputs;
 import com.pulumi.awsnative.iot.enums.SecurityProfileMetricDimensionOperator;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,7 +25,7 @@ public final class SecurityProfileMetricDimensionArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="dimensionName", required=true)
-      private final Output<String> dimensionName;
+    private Output<String> dimensionName;
 
     public Output<String> dimensionName() {
         return this.dimensionName;
@@ -36,63 +36,59 @@ public final class SecurityProfileMetricDimensionArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="operator")
-      private final @Nullable Output<SecurityProfileMetricDimensionOperator> operator;
+    private @Nullable Output<SecurityProfileMetricDimensionOperator> operator;
 
-    public Output<SecurityProfileMetricDimensionOperator> operator() {
-        return this.operator == null ? Codegen.empty() : this.operator;
+    public Optional<Output<SecurityProfileMetricDimensionOperator>> operator() {
+        return Optional.ofNullable(this.operator);
     }
 
-    public SecurityProfileMetricDimensionArgs(
-        Output<String> dimensionName,
-        @Nullable Output<SecurityProfileMetricDimensionOperator> operator) {
-        this.dimensionName = Objects.requireNonNull(dimensionName, "expected parameter 'dimensionName' to be non-null");
-        this.operator = operator;
-    }
+    private SecurityProfileMetricDimensionArgs() {}
 
-    private SecurityProfileMetricDimensionArgs() {
-        this.dimensionName = Codegen.empty();
-        this.operator = Codegen.empty();
+    private SecurityProfileMetricDimensionArgs(SecurityProfileMetricDimensionArgs $) {
+        this.dimensionName = $.dimensionName;
+        this.operator = $.operator;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SecurityProfileMetricDimensionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> dimensionName;
-        private @Nullable Output<SecurityProfileMetricDimensionOperator> operator;
+        private SecurityProfileMetricDimensionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SecurityProfileMetricDimensionArgs();
         }
 
         public Builder(SecurityProfileMetricDimensionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dimensionName = defaults.dimensionName;
-    	      this.operator = defaults.operator;
+            $ = new SecurityProfileMetricDimensionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder dimensionName(Output<String> dimensionName) {
-            this.dimensionName = Objects.requireNonNull(dimensionName);
+            $.dimensionName = dimensionName;
             return this;
         }
+
         public Builder dimensionName(String dimensionName) {
-            this.dimensionName = Output.of(Objects.requireNonNull(dimensionName));
-            return this;
+            return dimensionName(Output.of(dimensionName));
         }
+
         public Builder operator(@Nullable Output<SecurityProfileMetricDimensionOperator> operator) {
-            this.operator = operator;
+            $.operator = operator;
             return this;
         }
-        public Builder operator(@Nullable SecurityProfileMetricDimensionOperator operator) {
-            this.operator = Codegen.ofNullable(operator);
-            return this;
-        }        public SecurityProfileMetricDimensionArgs build() {
-            return new SecurityProfileMetricDimensionArgs(dimensionName, operator);
+
+        public Builder operator(SecurityProfileMetricDimensionOperator operator) {
+            return operator(Output.of(operator));
+        }
+
+        public SecurityProfileMetricDimensionArgs build() {
+            $.dimensionName = Objects.requireNonNull($.dimensionName, "expected parameter 'dimensionName' to be non-null");
+            return $;
         }
     }
+
 }

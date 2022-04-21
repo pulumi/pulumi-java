@@ -6,8 +6,8 @@ package com.pulumi.awsnative.iot.inputs;
 import com.pulumi.awsnative.iot.enums.SecurityProfileMachineLearningDetectionConfigConfidenceLevel;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class SecurityProfileMachineLearningDetectionConfigArgs extends com
      * 
      */
     @Import(name="confidenceLevel")
-      private final @Nullable Output<SecurityProfileMachineLearningDetectionConfigConfidenceLevel> confidenceLevel;
+    private @Nullable Output<SecurityProfileMachineLearningDetectionConfigConfidenceLevel> confidenceLevel;
 
-    public Output<SecurityProfileMachineLearningDetectionConfigConfidenceLevel> confidenceLevel() {
-        return this.confidenceLevel == null ? Codegen.empty() : this.confidenceLevel;
+    public Optional<Output<SecurityProfileMachineLearningDetectionConfigConfidenceLevel>> confidenceLevel() {
+        return Optional.ofNullable(this.confidenceLevel);
     }
 
-    public SecurityProfileMachineLearningDetectionConfigArgs(@Nullable Output<SecurityProfileMachineLearningDetectionConfigConfidenceLevel> confidenceLevel) {
-        this.confidenceLevel = confidenceLevel;
-    }
+    private SecurityProfileMachineLearningDetectionConfigArgs() {}
 
-    private SecurityProfileMachineLearningDetectionConfigArgs() {
-        this.confidenceLevel = Codegen.empty();
+    private SecurityProfileMachineLearningDetectionConfigArgs(SecurityProfileMachineLearningDetectionConfigArgs $) {
+        this.confidenceLevel = $.confidenceLevel;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SecurityProfileMachineLearningDetectionConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<SecurityProfileMachineLearningDetectionConfigConfidenceLevel> confidenceLevel;
+        private SecurityProfileMachineLearningDetectionConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SecurityProfileMachineLearningDetectionConfigArgs();
         }
 
         public Builder(SecurityProfileMachineLearningDetectionConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.confidenceLevel = defaults.confidenceLevel;
+            $ = new SecurityProfileMachineLearningDetectionConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder confidenceLevel(@Nullable Output<SecurityProfileMachineLearningDetectionConfigConfidenceLevel> confidenceLevel) {
-            this.confidenceLevel = confidenceLevel;
+            $.confidenceLevel = confidenceLevel;
             return this;
         }
-        public Builder confidenceLevel(@Nullable SecurityProfileMachineLearningDetectionConfigConfidenceLevel confidenceLevel) {
-            this.confidenceLevel = Codegen.ofNullable(confidenceLevel);
-            return this;
-        }        public SecurityProfileMachineLearningDetectionConfigArgs build() {
-            return new SecurityProfileMachineLearningDetectionConfigArgs(confidenceLevel);
+
+        public Builder confidenceLevel(SecurityProfileMachineLearningDetectionConfigConfidenceLevel confidenceLevel) {
+            return confidenceLevel(Output.of(confidenceLevel));
+        }
+
+        public SecurityProfileMachineLearningDetectionConfigArgs build() {
+            return $;
         }
     }
+
 }

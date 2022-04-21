@@ -8,11 +8,11 @@ import com.pulumi.azurenative.network.inputs.ExtendedLocationArgs;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class CustomIPPrefixArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="cidr")
-      private final @Nullable Output<String> cidr;
+    private @Nullable Output<String> cidr;
 
-    public Output<String> cidr() {
-        return this.cidr == null ? Codegen.empty() : this.cidr;
+    public Optional<Output<String>> cidr() {
+        return Optional.ofNullable(this.cidr);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class CustomIPPrefixArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="commissionedState")
-      private final @Nullable Output<Either<String,CommissionedState>> commissionedState;
+    private @Nullable Output<Either<String,CommissionedState>> commissionedState;
 
-    public Output<Either<String,CommissionedState>> commissionedState() {
-        return this.commissionedState == null ? Codegen.empty() : this.commissionedState;
+    public Optional<Output<Either<String,CommissionedState>>> commissionedState() {
+        return Optional.ofNullable(this.commissionedState);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class CustomIPPrefixArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="customIpPrefixName")
-      private final @Nullable Output<String> customIpPrefixName;
+    private @Nullable Output<String> customIpPrefixName;
 
-    public Output<String> customIpPrefixName() {
-        return this.customIpPrefixName == null ? Codegen.empty() : this.customIpPrefixName;
+    public Optional<Output<String>> customIpPrefixName() {
+        return Optional.ofNullable(this.customIpPrefixName);
     }
 
     /**
@@ -58,10 +58,10 @@ public final class CustomIPPrefixArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="extendedLocation")
-      private final @Nullable Output<ExtendedLocationArgs> extendedLocation;
+    private @Nullable Output<ExtendedLocationArgs> extendedLocation;
 
-    public Output<ExtendedLocationArgs> extendedLocation() {
-        return this.extendedLocation == null ? Codegen.empty() : this.extendedLocation;
+    public Optional<Output<ExtendedLocationArgs>> extendedLocation() {
+        return Optional.ofNullable(this.extendedLocation);
     }
 
     /**
@@ -69,10 +69,10 @@ public final class CustomIPPrefixArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="id")
-      private final @Nullable Output<String> id;
+    private @Nullable Output<String> id;
 
-    public Output<String> id() {
-        return this.id == null ? Codegen.empty() : this.id;
+    public Optional<Output<String>> id() {
+        return Optional.ofNullable(this.id);
     }
 
     /**
@@ -80,10 +80,10 @@ public final class CustomIPPrefixArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -91,7 +91,7 @@ public final class CustomIPPrefixArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -102,10 +102,10 @@ public final class CustomIPPrefixArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -113,157 +113,133 @@ public final class CustomIPPrefixArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="zones")
-      private final @Nullable Output<List<String>> zones;
+    private @Nullable Output<List<String>> zones;
 
-    public Output<List<String>> zones() {
-        return this.zones == null ? Codegen.empty() : this.zones;
+    public Optional<Output<List<String>>> zones() {
+        return Optional.ofNullable(this.zones);
     }
 
-    public CustomIPPrefixArgs(
-        @Nullable Output<String> cidr,
-        @Nullable Output<Either<String,CommissionedState>> commissionedState,
-        @Nullable Output<String> customIpPrefixName,
-        @Nullable Output<ExtendedLocationArgs> extendedLocation,
-        @Nullable Output<String> id,
-        @Nullable Output<String> location,
-        Output<String> resourceGroupName,
-        @Nullable Output<Map<String,String>> tags,
-        @Nullable Output<List<String>> zones) {
-        this.cidr = cidr;
-        this.commissionedState = commissionedState;
-        this.customIpPrefixName = customIpPrefixName;
-        this.extendedLocation = extendedLocation;
-        this.id = id;
-        this.location = location;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.tags = tags;
-        this.zones = zones;
-    }
+    private CustomIPPrefixArgs() {}
 
-    private CustomIPPrefixArgs() {
-        this.cidr = Codegen.empty();
-        this.commissionedState = Codegen.empty();
-        this.customIpPrefixName = Codegen.empty();
-        this.extendedLocation = Codegen.empty();
-        this.id = Codegen.empty();
-        this.location = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.zones = Codegen.empty();
+    private CustomIPPrefixArgs(CustomIPPrefixArgs $) {
+        this.cidr = $.cidr;
+        this.commissionedState = $.commissionedState;
+        this.customIpPrefixName = $.customIpPrefixName;
+        this.extendedLocation = $.extendedLocation;
+        this.id = $.id;
+        this.location = $.location;
+        this.resourceGroupName = $.resourceGroupName;
+        this.tags = $.tags;
+        this.zones = $.zones;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CustomIPPrefixArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> cidr;
-        private @Nullable Output<Either<String,CommissionedState>> commissionedState;
-        private @Nullable Output<String> customIpPrefixName;
-        private @Nullable Output<ExtendedLocationArgs> extendedLocation;
-        private @Nullable Output<String> id;
-        private @Nullable Output<String> location;
-        private Output<String> resourceGroupName;
-        private @Nullable Output<Map<String,String>> tags;
-        private @Nullable Output<List<String>> zones;
+        private CustomIPPrefixArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CustomIPPrefixArgs();
         }
 
         public Builder(CustomIPPrefixArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cidr = defaults.cidr;
-    	      this.commissionedState = defaults.commissionedState;
-    	      this.customIpPrefixName = defaults.customIpPrefixName;
-    	      this.extendedLocation = defaults.extendedLocation;
-    	      this.id = defaults.id;
-    	      this.location = defaults.location;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.tags = defaults.tags;
-    	      this.zones = defaults.zones;
+            $ = new CustomIPPrefixArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder cidr(@Nullable Output<String> cidr) {
-            this.cidr = cidr;
+            $.cidr = cidr;
             return this;
         }
-        public Builder cidr(@Nullable String cidr) {
-            this.cidr = Codegen.ofNullable(cidr);
-            return this;
+
+        public Builder cidr(String cidr) {
+            return cidr(Output.of(cidr));
         }
+
         public Builder commissionedState(@Nullable Output<Either<String,CommissionedState>> commissionedState) {
-            this.commissionedState = commissionedState;
+            $.commissionedState = commissionedState;
             return this;
         }
-        public Builder commissionedState(@Nullable Either<String,CommissionedState> commissionedState) {
-            this.commissionedState = Codegen.ofNullable(commissionedState);
-            return this;
+
+        public Builder commissionedState(Either<String,CommissionedState> commissionedState) {
+            return commissionedState(Output.of(commissionedState));
         }
+
         public Builder customIpPrefixName(@Nullable Output<String> customIpPrefixName) {
-            this.customIpPrefixName = customIpPrefixName;
+            $.customIpPrefixName = customIpPrefixName;
             return this;
         }
-        public Builder customIpPrefixName(@Nullable String customIpPrefixName) {
-            this.customIpPrefixName = Codegen.ofNullable(customIpPrefixName);
-            return this;
+
+        public Builder customIpPrefixName(String customIpPrefixName) {
+            return customIpPrefixName(Output.of(customIpPrefixName));
         }
+
         public Builder extendedLocation(@Nullable Output<ExtendedLocationArgs> extendedLocation) {
-            this.extendedLocation = extendedLocation;
+            $.extendedLocation = extendedLocation;
             return this;
         }
-        public Builder extendedLocation(@Nullable ExtendedLocationArgs extendedLocation) {
-            this.extendedLocation = Codegen.ofNullable(extendedLocation);
-            return this;
+
+        public Builder extendedLocation(ExtendedLocationArgs extendedLocation) {
+            return extendedLocation(Output.of(extendedLocation));
         }
+
         public Builder id(@Nullable Output<String> id) {
-            this.id = id;
+            $.id = id;
             return this;
         }
-        public Builder id(@Nullable String id) {
-            this.id = Codegen.ofNullable(id);
-            return this;
+
+        public Builder id(String id) {
+            return id(Output.of(id));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder zones(@Nullable Output<List<String>> zones) {
-            this.zones = zones;
+            $.zones = zones;
             return this;
         }
-        public Builder zones(@Nullable List<String> zones) {
-            this.zones = Codegen.ofNullable(zones);
-            return this;
+
+        public Builder zones(List<String> zones) {
+            return zones(Output.of(zones));
         }
+
         public Builder zones(String... zones) {
             return zones(List.of(zones));
-        }        public CustomIPPrefixArgs build() {
-            return new CustomIPPrefixArgs(cidr, commissionedState, customIpPrefixName, extendedLocation, id, location, resourceGroupName, tags, zones);
+        }
+
+        public CustomIPPrefixArgs build() {
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

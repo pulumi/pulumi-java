@@ -27,10 +27,10 @@ public final class InitContainerDefinitionResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="command")
-      private final @Nullable List<String> command;
+    private @Nullable List<String> command;
 
-    public List<String> command() {
-        return this.command == null ? List.of() : this.command;
+    public Optional<List<String>> command() {
+        return Optional.ofNullable(this.command);
     }
 
     /**
@@ -38,10 +38,10 @@ public final class InitContainerDefinitionResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="environmentVariables")
-      private final @Nullable List<EnvironmentVariableResponse> environmentVariables;
+    private @Nullable List<EnvironmentVariableResponse> environmentVariables;
 
-    public List<EnvironmentVariableResponse> environmentVariables() {
-        return this.environmentVariables == null ? List.of() : this.environmentVariables;
+    public Optional<List<EnvironmentVariableResponse>> environmentVariables() {
+        return Optional.ofNullable(this.environmentVariables);
     }
 
     /**
@@ -49,10 +49,10 @@ public final class InitContainerDefinitionResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="image")
-      private final @Nullable String image;
+    private @Nullable String image;
 
     public Optional<String> image() {
-        return this.image == null ? Optional.empty() : Optional.ofNullable(this.image);
+        return Optional.ofNullable(this.image);
     }
 
     /**
@@ -60,7 +60,7 @@ public final class InitContainerDefinitionResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="instanceView", required=true)
-      private final InitContainerPropertiesDefinitionResponseInstanceView instanceView;
+    private InitContainerPropertiesDefinitionResponseInstanceView instanceView;
 
     public InitContainerPropertiesDefinitionResponseInstanceView instanceView() {
         return this.instanceView;
@@ -71,7 +71,7 @@ public final class InitContainerDefinitionResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -82,100 +82,88 @@ public final class InitContainerDefinitionResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="volumeMounts")
-      private final @Nullable List<VolumeMountResponse> volumeMounts;
+    private @Nullable List<VolumeMountResponse> volumeMounts;
 
-    public List<VolumeMountResponse> volumeMounts() {
-        return this.volumeMounts == null ? List.of() : this.volumeMounts;
+    public Optional<List<VolumeMountResponse>> volumeMounts() {
+        return Optional.ofNullable(this.volumeMounts);
     }
 
-    public InitContainerDefinitionResponse(
-        @Nullable List<String> command,
-        @Nullable List<EnvironmentVariableResponse> environmentVariables,
-        @Nullable String image,
-        InitContainerPropertiesDefinitionResponseInstanceView instanceView,
-        String name,
-        @Nullable List<VolumeMountResponse> volumeMounts) {
-        this.command = command;
-        this.environmentVariables = environmentVariables;
-        this.image = image;
-        this.instanceView = Objects.requireNonNull(instanceView, "expected parameter 'instanceView' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.volumeMounts = volumeMounts;
-    }
+    private InitContainerDefinitionResponse() {}
 
-    private InitContainerDefinitionResponse() {
-        this.command = List.of();
-        this.environmentVariables = List.of();
-        this.image = null;
-        this.instanceView = null;
-        this.name = null;
-        this.volumeMounts = List.of();
+    private InitContainerDefinitionResponse(InitContainerDefinitionResponse $) {
+        this.command = $.command;
+        this.environmentVariables = $.environmentVariables;
+        this.image = $.image;
+        this.instanceView = $.instanceView;
+        this.name = $.name;
+        this.volumeMounts = $.volumeMounts;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(InitContainerDefinitionResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<String> command;
-        private @Nullable List<EnvironmentVariableResponse> environmentVariables;
-        private @Nullable String image;
-        private InitContainerPropertiesDefinitionResponseInstanceView instanceView;
-        private String name;
-        private @Nullable List<VolumeMountResponse> volumeMounts;
+        private InitContainerDefinitionResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new InitContainerDefinitionResponse();
         }
 
         public Builder(InitContainerDefinitionResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.command = defaults.command;
-    	      this.environmentVariables = defaults.environmentVariables;
-    	      this.image = defaults.image;
-    	      this.instanceView = defaults.instanceView;
-    	      this.name = defaults.name;
-    	      this.volumeMounts = defaults.volumeMounts;
+            $ = new InitContainerDefinitionResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder command(@Nullable List<String> command) {
-            this.command = command;
+            $.command = command;
             return this;
         }
+
         public Builder command(String... command) {
             return command(List.of(command));
         }
+
         public Builder environmentVariables(@Nullable List<EnvironmentVariableResponse> environmentVariables) {
-            this.environmentVariables = environmentVariables;
+            $.environmentVariables = environmentVariables;
             return this;
         }
+
         public Builder environmentVariables(EnvironmentVariableResponse... environmentVariables) {
             return environmentVariables(List.of(environmentVariables));
         }
+
         public Builder image(@Nullable String image) {
-            this.image = image;
+            $.image = image;
             return this;
         }
+
         public Builder instanceView(InitContainerPropertiesDefinitionResponseInstanceView instanceView) {
-            this.instanceView = Objects.requireNonNull(instanceView);
+            $.instanceView = instanceView;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder volumeMounts(@Nullable List<VolumeMountResponse> volumeMounts) {
-            this.volumeMounts = volumeMounts;
+            $.volumeMounts = volumeMounts;
             return this;
         }
+
         public Builder volumeMounts(VolumeMountResponse... volumeMounts) {
             return volumeMounts(List.of(volumeMounts));
-        }        public InitContainerDefinitionResponse build() {
-            return new InitContainerDefinitionResponse(command, environmentVariables, image, instanceView, name, volumeMounts);
+        }
+
+        public InitContainerDefinitionResponse build() {
+            $.instanceView = Objects.requireNonNull($.instanceView, "expected parameter 'instanceView' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            return $;
         }
     }
+
 }

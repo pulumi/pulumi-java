@@ -6,10 +6,10 @@ package com.pulumi.azurenative.sql.inputs;
 import com.pulumi.azurenative.sql.inputs.SyncGroupSchemaTableColumnArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class SyncGroupSchemaTableArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="columns")
-      private final @Nullable Output<List<SyncGroupSchemaTableColumnArgs>> columns;
+    private @Nullable Output<List<SyncGroupSchemaTableColumnArgs>> columns;
 
-    public Output<List<SyncGroupSchemaTableColumnArgs>> columns() {
-        return this.columns == null ? Codegen.empty() : this.columns;
+    public Optional<Output<List<SyncGroupSchemaTableColumnArgs>>> columns() {
+        return Optional.ofNullable(this.columns);
     }
 
     /**
@@ -37,66 +37,62 @@ public final class SyncGroupSchemaTableArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="quotedName")
-      private final @Nullable Output<String> quotedName;
+    private @Nullable Output<String> quotedName;
 
-    public Output<String> quotedName() {
-        return this.quotedName == null ? Codegen.empty() : this.quotedName;
+    public Optional<Output<String>> quotedName() {
+        return Optional.ofNullable(this.quotedName);
     }
 
-    public SyncGroupSchemaTableArgs(
-        @Nullable Output<List<SyncGroupSchemaTableColumnArgs>> columns,
-        @Nullable Output<String> quotedName) {
-        this.columns = columns;
-        this.quotedName = quotedName;
-    }
+    private SyncGroupSchemaTableArgs() {}
 
-    private SyncGroupSchemaTableArgs() {
-        this.columns = Codegen.empty();
-        this.quotedName = Codegen.empty();
+    private SyncGroupSchemaTableArgs(SyncGroupSchemaTableArgs $) {
+        this.columns = $.columns;
+        this.quotedName = $.quotedName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SyncGroupSchemaTableArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<SyncGroupSchemaTableColumnArgs>> columns;
-        private @Nullable Output<String> quotedName;
+        private SyncGroupSchemaTableArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SyncGroupSchemaTableArgs();
         }
 
         public Builder(SyncGroupSchemaTableArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.columns = defaults.columns;
-    	      this.quotedName = defaults.quotedName;
+            $ = new SyncGroupSchemaTableArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder columns(@Nullable Output<List<SyncGroupSchemaTableColumnArgs>> columns) {
-            this.columns = columns;
+            $.columns = columns;
             return this;
         }
-        public Builder columns(@Nullable List<SyncGroupSchemaTableColumnArgs> columns) {
-            this.columns = Codegen.ofNullable(columns);
-            return this;
+
+        public Builder columns(List<SyncGroupSchemaTableColumnArgs> columns) {
+            return columns(Output.of(columns));
         }
+
         public Builder columns(SyncGroupSchemaTableColumnArgs... columns) {
             return columns(List.of(columns));
         }
+
         public Builder quotedName(@Nullable Output<String> quotedName) {
-            this.quotedName = quotedName;
+            $.quotedName = quotedName;
             return this;
         }
-        public Builder quotedName(@Nullable String quotedName) {
-            this.quotedName = Codegen.ofNullable(quotedName);
-            return this;
-        }        public SyncGroupSchemaTableArgs build() {
-            return new SyncGroupSchemaTableArgs(columns, quotedName);
+
+        public Builder quotedName(String quotedName) {
+            return quotedName(Output.of(quotedName));
+        }
+
+        public SyncGroupSchemaTableArgs build() {
+            return $;
         }
     }
+
 }

@@ -13,110 +13,101 @@ public final class GetDebugSessionArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetDebugSessionArgs Empty = new GetDebugSessionArgs();
 
     @Import(name="apiId", required=true)
-      private final String apiId;
+    private String apiId;
 
     public String apiId() {
         return this.apiId;
     }
 
     @Import(name="debugsessionId", required=true)
-      private final String debugsessionId;
+    private String debugsessionId;
 
     public String debugsessionId() {
         return this.debugsessionId;
     }
 
     @Import(name="environmentId", required=true)
-      private final String environmentId;
+    private String environmentId;
 
     public String environmentId() {
         return this.environmentId;
     }
 
     @Import(name="organizationId", required=true)
-      private final String organizationId;
+    private String organizationId;
 
     public String organizationId() {
         return this.organizationId;
     }
 
     @Import(name="revisionId", required=true)
-      private final String revisionId;
+    private String revisionId;
 
     public String revisionId() {
         return this.revisionId;
     }
 
-    public GetDebugSessionArgs(
-        String apiId,
-        String debugsessionId,
-        String environmentId,
-        String organizationId,
-        String revisionId) {
-        this.apiId = Objects.requireNonNull(apiId, "expected parameter 'apiId' to be non-null");
-        this.debugsessionId = Objects.requireNonNull(debugsessionId, "expected parameter 'debugsessionId' to be non-null");
-        this.environmentId = Objects.requireNonNull(environmentId, "expected parameter 'environmentId' to be non-null");
-        this.organizationId = Objects.requireNonNull(organizationId, "expected parameter 'organizationId' to be non-null");
-        this.revisionId = Objects.requireNonNull(revisionId, "expected parameter 'revisionId' to be non-null");
-    }
+    private GetDebugSessionArgs() {}
 
-    private GetDebugSessionArgs() {
-        this.apiId = null;
-        this.debugsessionId = null;
-        this.environmentId = null;
-        this.organizationId = null;
-        this.revisionId = null;
+    private GetDebugSessionArgs(GetDebugSessionArgs $) {
+        this.apiId = $.apiId;
+        this.debugsessionId = $.debugsessionId;
+        this.environmentId = $.environmentId;
+        this.organizationId = $.organizationId;
+        this.revisionId = $.revisionId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetDebugSessionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String apiId;
-        private String debugsessionId;
-        private String environmentId;
-        private String organizationId;
-        private String revisionId;
+        private GetDebugSessionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetDebugSessionArgs();
         }
 
         public Builder(GetDebugSessionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.apiId = defaults.apiId;
-    	      this.debugsessionId = defaults.debugsessionId;
-    	      this.environmentId = defaults.environmentId;
-    	      this.organizationId = defaults.organizationId;
-    	      this.revisionId = defaults.revisionId;
+            $ = new GetDebugSessionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder apiId(String apiId) {
-            this.apiId = Objects.requireNonNull(apiId);
+            $.apiId = apiId;
             return this;
         }
+
         public Builder debugsessionId(String debugsessionId) {
-            this.debugsessionId = Objects.requireNonNull(debugsessionId);
+            $.debugsessionId = debugsessionId;
             return this;
         }
+
         public Builder environmentId(String environmentId) {
-            this.environmentId = Objects.requireNonNull(environmentId);
+            $.environmentId = environmentId;
             return this;
         }
+
         public Builder organizationId(String organizationId) {
-            this.organizationId = Objects.requireNonNull(organizationId);
+            $.organizationId = organizationId;
             return this;
         }
+
         public Builder revisionId(String revisionId) {
-            this.revisionId = Objects.requireNonNull(revisionId);
+            $.revisionId = revisionId;
             return this;
-        }        public GetDebugSessionArgs build() {
-            return new GetDebugSessionArgs(apiId, debugsessionId, environmentId, organizationId, revisionId);
+        }
+
+        public GetDebugSessionArgs build() {
+            $.apiId = Objects.requireNonNull($.apiId, "expected parameter 'apiId' to be non-null");
+            $.debugsessionId = Objects.requireNonNull($.debugsessionId, "expected parameter 'debugsessionId' to be non-null");
+            $.environmentId = Objects.requireNonNull($.environmentId, "expected parameter 'environmentId' to be non-null");
+            $.organizationId = Objects.requireNonNull($.organizationId, "expected parameter 'organizationId' to be non-null");
+            $.revisionId = Objects.requireNonNull($.revisionId, "expected parameter 'revisionId' to be non-null");
+            return $;
         }
     }
+
 }

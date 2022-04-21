@@ -5,9 +5,9 @@ package com.pulumi.googlenative.gkehub_v1alpha2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class MultiCloudClusterArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="resourceLink")
-      private final @Nullable Output<String> resourceLink;
+    private @Nullable Output<String> resourceLink;
 
-    public Output<String> resourceLink() {
-        return this.resourceLink == null ? Codegen.empty() : this.resourceLink;
+    public Optional<Output<String>> resourceLink() {
+        return Optional.ofNullable(this.resourceLink);
     }
 
-    public MultiCloudClusterArgs(@Nullable Output<String> resourceLink) {
-        this.resourceLink = resourceLink;
-    }
+    private MultiCloudClusterArgs() {}
 
-    private MultiCloudClusterArgs() {
-        this.resourceLink = Codegen.empty();
+    private MultiCloudClusterArgs(MultiCloudClusterArgs $) {
+        this.resourceLink = $.resourceLink;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MultiCloudClusterArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> resourceLink;
+        private MultiCloudClusterArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new MultiCloudClusterArgs();
         }
 
         public Builder(MultiCloudClusterArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.resourceLink = defaults.resourceLink;
+            $ = new MultiCloudClusterArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder resourceLink(@Nullable Output<String> resourceLink) {
-            this.resourceLink = resourceLink;
+            $.resourceLink = resourceLink;
             return this;
         }
-        public Builder resourceLink(@Nullable String resourceLink) {
-            this.resourceLink = Codegen.ofNullable(resourceLink);
-            return this;
-        }        public MultiCloudClusterArgs build() {
-            return new MultiCloudClusterArgs(resourceLink);
+
+        public Builder resourceLink(String resourceLink) {
+            return resourceLink(Output.of(resourceLink));
+        }
+
+        public MultiCloudClusterArgs build() {
+            return $;
         }
     }
+
 }

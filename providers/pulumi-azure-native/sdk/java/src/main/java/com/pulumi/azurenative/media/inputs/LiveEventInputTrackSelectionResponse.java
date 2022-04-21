@@ -23,10 +23,10 @@ public final class LiveEventInputTrackSelectionResponse extends com.pulumi.resou
      * 
      */
     @Import(name="operation")
-      private final @Nullable String operation;
+    private @Nullable String operation;
 
     public Optional<String> operation() {
-        return this.operation == null ? Optional.empty() : Optional.ofNullable(this.operation);
+        return Optional.ofNullable(this.operation);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class LiveEventInputTrackSelectionResponse extends com.pulumi.resou
      * 
      */
     @Import(name="property")
-      private final @Nullable String property;
+    private @Nullable String property;
 
     public Optional<String> property() {
-        return this.property == null ? Optional.empty() : Optional.ofNullable(this.property);
+        return Optional.ofNullable(this.property);
     }
 
     /**
@@ -45,64 +45,56 @@ public final class LiveEventInputTrackSelectionResponse extends com.pulumi.resou
      * 
      */
     @Import(name="value")
-      private final @Nullable String value;
+    private @Nullable String value;
 
     public Optional<String> value() {
-        return this.value == null ? Optional.empty() : Optional.ofNullable(this.value);
+        return Optional.ofNullable(this.value);
     }
 
-    public LiveEventInputTrackSelectionResponse(
-        @Nullable String operation,
-        @Nullable String property,
-        @Nullable String value) {
-        this.operation = operation;
-        this.property = property;
-        this.value = value;
-    }
+    private LiveEventInputTrackSelectionResponse() {}
 
-    private LiveEventInputTrackSelectionResponse() {
-        this.operation = null;
-        this.property = null;
-        this.value = null;
+    private LiveEventInputTrackSelectionResponse(LiveEventInputTrackSelectionResponse $) {
+        this.operation = $.operation;
+        this.property = $.property;
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LiveEventInputTrackSelectionResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String operation;
-        private @Nullable String property;
-        private @Nullable String value;
+        private LiveEventInputTrackSelectionResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new LiveEventInputTrackSelectionResponse();
         }
 
         public Builder(LiveEventInputTrackSelectionResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.operation = defaults.operation;
-    	      this.property = defaults.property;
-    	      this.value = defaults.value;
+            $ = new LiveEventInputTrackSelectionResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder operation(@Nullable String operation) {
-            this.operation = operation;
+            $.operation = operation;
             return this;
         }
+
         public Builder property(@Nullable String property) {
-            this.property = property;
+            $.property = property;
             return this;
         }
+
         public Builder value(@Nullable String value) {
-            this.value = value;
+            $.value = value;
             return this;
-        }        public LiveEventInputTrackSelectionResponse build() {
-            return new LiveEventInputTrackSelectionResponse(operation, property, value);
+        }
+
+        public LiveEventInputTrackSelectionResponse build() {
+            return $;
         }
     }
+
 }

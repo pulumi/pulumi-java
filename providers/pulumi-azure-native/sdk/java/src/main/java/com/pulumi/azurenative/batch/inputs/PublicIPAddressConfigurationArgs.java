@@ -6,10 +6,10 @@ package com.pulumi.azurenative.batch.inputs;
 import com.pulumi.azurenative.batch.enums.IPAddressProvisioningType;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class PublicIPAddressConfigurationArgs extends com.pulumi.resources
      * 
      */
     @Import(name="ipAddressIds")
-      private final @Nullable Output<List<String>> ipAddressIds;
+    private @Nullable Output<List<String>> ipAddressIds;
 
-    public Output<List<String>> ipAddressIds() {
-        return this.ipAddressIds == null ? Codegen.empty() : this.ipAddressIds;
+    public Optional<Output<List<String>>> ipAddressIds() {
+        return Optional.ofNullable(this.ipAddressIds);
     }
 
     /**
@@ -37,66 +37,62 @@ public final class PublicIPAddressConfigurationArgs extends com.pulumi.resources
      * 
      */
     @Import(name="provision")
-      private final @Nullable Output<IPAddressProvisioningType> provision;
+    private @Nullable Output<IPAddressProvisioningType> provision;
 
-    public Output<IPAddressProvisioningType> provision() {
-        return this.provision == null ? Codegen.empty() : this.provision;
+    public Optional<Output<IPAddressProvisioningType>> provision() {
+        return Optional.ofNullable(this.provision);
     }
 
-    public PublicIPAddressConfigurationArgs(
-        @Nullable Output<List<String>> ipAddressIds,
-        @Nullable Output<IPAddressProvisioningType> provision) {
-        this.ipAddressIds = ipAddressIds;
-        this.provision = provision;
-    }
+    private PublicIPAddressConfigurationArgs() {}
 
-    private PublicIPAddressConfigurationArgs() {
-        this.ipAddressIds = Codegen.empty();
-        this.provision = Codegen.empty();
+    private PublicIPAddressConfigurationArgs(PublicIPAddressConfigurationArgs $) {
+        this.ipAddressIds = $.ipAddressIds;
+        this.provision = $.provision;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PublicIPAddressConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> ipAddressIds;
-        private @Nullable Output<IPAddressProvisioningType> provision;
+        private PublicIPAddressConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PublicIPAddressConfigurationArgs();
         }
 
         public Builder(PublicIPAddressConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.ipAddressIds = defaults.ipAddressIds;
-    	      this.provision = defaults.provision;
+            $ = new PublicIPAddressConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder ipAddressIds(@Nullable Output<List<String>> ipAddressIds) {
-            this.ipAddressIds = ipAddressIds;
+            $.ipAddressIds = ipAddressIds;
             return this;
         }
-        public Builder ipAddressIds(@Nullable List<String> ipAddressIds) {
-            this.ipAddressIds = Codegen.ofNullable(ipAddressIds);
-            return this;
+
+        public Builder ipAddressIds(List<String> ipAddressIds) {
+            return ipAddressIds(Output.of(ipAddressIds));
         }
+
         public Builder ipAddressIds(String... ipAddressIds) {
             return ipAddressIds(List.of(ipAddressIds));
         }
+
         public Builder provision(@Nullable Output<IPAddressProvisioningType> provision) {
-            this.provision = provision;
+            $.provision = provision;
             return this;
         }
-        public Builder provision(@Nullable IPAddressProvisioningType provision) {
-            this.provision = Codegen.ofNullable(provision);
-            return this;
-        }        public PublicIPAddressConfigurationArgs build() {
-            return new PublicIPAddressConfigurationArgs(ipAddressIds, provision);
+
+        public Builder provision(IPAddressProvisioningType provision) {
+            return provision(Output.of(provision));
+        }
+
+        public PublicIPAddressConfigurationArgs build() {
+            return $;
         }
     }
+
 }

@@ -21,7 +21,7 @@ public final class PackageResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="desiredState", required=true)
-      private final String desiredState;
+    private String desiredState;
 
     public String desiredState() {
         return this.desiredState;
@@ -32,7 +32,7 @@ public final class PackageResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="manager", required=true)
-      private final String manager;
+    private String manager;
 
     public String manager() {
         return this.manager;
@@ -43,64 +43,59 @@ public final class PackageResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
     }
 
-    public PackageResponse(
-        String desiredState,
-        String manager,
-        String name) {
-        this.desiredState = Objects.requireNonNull(desiredState, "expected parameter 'desiredState' to be non-null");
-        this.manager = Objects.requireNonNull(manager, "expected parameter 'manager' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-    }
+    private PackageResponse() {}
 
-    private PackageResponse() {
-        this.desiredState = null;
-        this.manager = null;
-        this.name = null;
+    private PackageResponse(PackageResponse $) {
+        this.desiredState = $.desiredState;
+        this.manager = $.manager;
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PackageResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String desiredState;
-        private String manager;
-        private String name;
+        private PackageResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new PackageResponse();
         }
 
         public Builder(PackageResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.desiredState = defaults.desiredState;
-    	      this.manager = defaults.manager;
-    	      this.name = defaults.name;
+            $ = new PackageResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder desiredState(String desiredState) {
-            this.desiredState = Objects.requireNonNull(desiredState);
+            $.desiredState = desiredState;
             return this;
         }
+
         public Builder manager(String manager) {
-            this.manager = Objects.requireNonNull(manager);
+            $.manager = manager;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
-        }        public PackageResponse build() {
-            return new PackageResponse(desiredState, manager, name);
+        }
+
+        public PackageResponse build() {
+            $.desiredState = Objects.requireNonNull($.desiredState, "expected parameter 'desiredState' to be non-null");
+            $.manager = Objects.requireNonNull($.manager, "expected parameter 'manager' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            return $;
         }
     }
+
 }

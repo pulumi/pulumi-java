@@ -23,10 +23,10 @@ public final class MsixPackageDependenciesResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="dependencyName")
-      private final @Nullable String dependencyName;
+    private @Nullable String dependencyName;
 
     public Optional<String> dependencyName() {
-        return this.dependencyName == null ? Optional.empty() : Optional.ofNullable(this.dependencyName);
+        return Optional.ofNullable(this.dependencyName);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class MsixPackageDependenciesResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="minVersion")
-      private final @Nullable String minVersion;
+    private @Nullable String minVersion;
 
     public Optional<String> minVersion() {
-        return this.minVersion == null ? Optional.empty() : Optional.ofNullable(this.minVersion);
+        return Optional.ofNullable(this.minVersion);
     }
 
     /**
@@ -45,64 +45,56 @@ public final class MsixPackageDependenciesResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="publisher")
-      private final @Nullable String publisher;
+    private @Nullable String publisher;
 
     public Optional<String> publisher() {
-        return this.publisher == null ? Optional.empty() : Optional.ofNullable(this.publisher);
+        return Optional.ofNullable(this.publisher);
     }
 
-    public MsixPackageDependenciesResponse(
-        @Nullable String dependencyName,
-        @Nullable String minVersion,
-        @Nullable String publisher) {
-        this.dependencyName = dependencyName;
-        this.minVersion = minVersion;
-        this.publisher = publisher;
-    }
+    private MsixPackageDependenciesResponse() {}
 
-    private MsixPackageDependenciesResponse() {
-        this.dependencyName = null;
-        this.minVersion = null;
-        this.publisher = null;
+    private MsixPackageDependenciesResponse(MsixPackageDependenciesResponse $) {
+        this.dependencyName = $.dependencyName;
+        this.minVersion = $.minVersion;
+        this.publisher = $.publisher;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MsixPackageDependenciesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String dependencyName;
-        private @Nullable String minVersion;
-        private @Nullable String publisher;
+        private MsixPackageDependenciesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new MsixPackageDependenciesResponse();
         }
 
         public Builder(MsixPackageDependenciesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dependencyName = defaults.dependencyName;
-    	      this.minVersion = defaults.minVersion;
-    	      this.publisher = defaults.publisher;
+            $ = new MsixPackageDependenciesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder dependencyName(@Nullable String dependencyName) {
-            this.dependencyName = dependencyName;
+            $.dependencyName = dependencyName;
             return this;
         }
+
         public Builder minVersion(@Nullable String minVersion) {
-            this.minVersion = minVersion;
+            $.minVersion = minVersion;
             return this;
         }
+
         public Builder publisher(@Nullable String publisher) {
-            this.publisher = publisher;
+            $.publisher = publisher;
             return this;
-        }        public MsixPackageDependenciesResponse build() {
-            return new MsixPackageDependenciesResponse(dependencyName, minVersion, publisher);
+        }
+
+        public MsixPackageDependenciesResponse build() {
+            return $;
         }
     }
+
 }

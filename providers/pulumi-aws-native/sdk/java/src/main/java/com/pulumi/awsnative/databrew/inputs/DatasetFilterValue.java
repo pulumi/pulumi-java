@@ -17,7 +17,7 @@ public final class DatasetFilterValue extends com.pulumi.resources.InvokeArgs {
     public static final DatasetFilterValue Empty = new DatasetFilterValue();
 
     @Import(name="value", required=true)
-      private final String value;
+    private String value;
 
     public String value() {
         return this.value;
@@ -28,55 +28,52 @@ public final class DatasetFilterValue extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="valueReference", required=true)
-      private final String valueReference;
+    private String valueReference;
 
     public String valueReference() {
         return this.valueReference;
     }
 
-    public DatasetFilterValue(
-        String value,
-        String valueReference) {
-        this.value = Objects.requireNonNull(value, "expected parameter 'value' to be non-null");
-        this.valueReference = Objects.requireNonNull(valueReference, "expected parameter 'valueReference' to be non-null");
-    }
+    private DatasetFilterValue() {}
 
-    private DatasetFilterValue() {
-        this.value = null;
-        this.valueReference = null;
+    private DatasetFilterValue(DatasetFilterValue $) {
+        this.value = $.value;
+        this.valueReference = $.valueReference;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DatasetFilterValue defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String value;
-        private String valueReference;
+        private DatasetFilterValue $;
 
         public Builder() {
-    	      // Empty
+            $ = new DatasetFilterValue();
         }
 
         public Builder(DatasetFilterValue defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.value = defaults.value;
-    	      this.valueReference = defaults.valueReference;
+            $ = new DatasetFilterValue(Objects.requireNonNull(defaults));
         }
 
         public Builder value(String value) {
-            this.value = Objects.requireNonNull(value);
+            $.value = value;
             return this;
         }
+
         public Builder valueReference(String valueReference) {
-            this.valueReference = Objects.requireNonNull(valueReference);
+            $.valueReference = valueReference;
             return this;
-        }        public DatasetFilterValue build() {
-            return new DatasetFilterValue(value, valueReference);
+        }
+
+        public DatasetFilterValue build() {
+            $.value = Objects.requireNonNull($.value, "expected parameter 'value' to be non-null");
+            $.valueReference = Objects.requireNonNull($.valueReference, "expected parameter 'valueReference' to be non-null");
+            return $;
         }
     }
+
 }

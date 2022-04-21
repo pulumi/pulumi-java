@@ -5,7 +5,6 @@ package com.pulumi.awsnative.ec2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -15,49 +14,49 @@ public final class SpotFleetTargetGroupArgs extends com.pulumi.resources.Resourc
     public static final SpotFleetTargetGroupArgs Empty = new SpotFleetTargetGroupArgs();
 
     @Import(name="arn", required=true)
-      private final Output<String> arn;
+    private Output<String> arn;
 
     public Output<String> arn() {
         return this.arn;
     }
 
-    public SpotFleetTargetGroupArgs(Output<String> arn) {
-        this.arn = Objects.requireNonNull(arn, "expected parameter 'arn' to be non-null");
-    }
+    private SpotFleetTargetGroupArgs() {}
 
-    private SpotFleetTargetGroupArgs() {
-        this.arn = Codegen.empty();
+    private SpotFleetTargetGroupArgs(SpotFleetTargetGroupArgs $) {
+        this.arn = $.arn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SpotFleetTargetGroupArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> arn;
+        private SpotFleetTargetGroupArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SpotFleetTargetGroupArgs();
         }
 
         public Builder(SpotFleetTargetGroupArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.arn = defaults.arn;
+            $ = new SpotFleetTargetGroupArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder arn(Output<String> arn) {
-            this.arn = Objects.requireNonNull(arn);
+            $.arn = arn;
             return this;
         }
+
         public Builder arn(String arn) {
-            this.arn = Output.of(Objects.requireNonNull(arn));
-            return this;
-        }        public SpotFleetTargetGroupArgs build() {
-            return new SpotFleetTargetGroupArgs(arn);
+            return arn(Output.of(arn));
+        }
+
+        public SpotFleetTargetGroupArgs build() {
+            $.arn = Objects.requireNonNull($.arn, "expected parameter 'arn' to be non-null");
+            return $;
         }
     }
+
 }

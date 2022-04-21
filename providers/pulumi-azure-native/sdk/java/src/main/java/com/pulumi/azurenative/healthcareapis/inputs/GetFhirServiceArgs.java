@@ -17,7 +17,7 @@ public final class GetFhirServiceArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="fhirServiceName", required=true)
-      private final String fhirServiceName;
+    private String fhirServiceName;
 
     public String fhirServiceName() {
         return this.fhirServiceName;
@@ -28,7 +28,7 @@ public final class GetFhirServiceArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -39,64 +39,59 @@ public final class GetFhirServiceArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="workspaceName", required=true)
-      private final String workspaceName;
+    private String workspaceName;
 
     public String workspaceName() {
         return this.workspaceName;
     }
 
-    public GetFhirServiceArgs(
-        String fhirServiceName,
-        String resourceGroupName,
-        String workspaceName) {
-        this.fhirServiceName = Objects.requireNonNull(fhirServiceName, "expected parameter 'fhirServiceName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.workspaceName = Objects.requireNonNull(workspaceName, "expected parameter 'workspaceName' to be non-null");
-    }
+    private GetFhirServiceArgs() {}
 
-    private GetFhirServiceArgs() {
-        this.fhirServiceName = null;
-        this.resourceGroupName = null;
-        this.workspaceName = null;
+    private GetFhirServiceArgs(GetFhirServiceArgs $) {
+        this.fhirServiceName = $.fhirServiceName;
+        this.resourceGroupName = $.resourceGroupName;
+        this.workspaceName = $.workspaceName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetFhirServiceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String fhirServiceName;
-        private String resourceGroupName;
-        private String workspaceName;
+        private GetFhirServiceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetFhirServiceArgs();
         }
 
         public Builder(GetFhirServiceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.fhirServiceName = defaults.fhirServiceName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.workspaceName = defaults.workspaceName;
+            $ = new GetFhirServiceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder fhirServiceName(String fhirServiceName) {
-            this.fhirServiceName = Objects.requireNonNull(fhirServiceName);
+            $.fhirServiceName = fhirServiceName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder workspaceName(String workspaceName) {
-            this.workspaceName = Objects.requireNonNull(workspaceName);
+            $.workspaceName = workspaceName;
             return this;
-        }        public GetFhirServiceArgs build() {
-            return new GetFhirServiceArgs(fhirServiceName, resourceGroupName, workspaceName);
+        }
+
+        public GetFhirServiceArgs build() {
+            $.fhirServiceName = Objects.requireNonNull($.fhirServiceName, "expected parameter 'fhirServiceName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.workspaceName = Objects.requireNonNull($.workspaceName, "expected parameter 'workspaceName' to be non-null");
+            return $;
         }
     }
+
 }

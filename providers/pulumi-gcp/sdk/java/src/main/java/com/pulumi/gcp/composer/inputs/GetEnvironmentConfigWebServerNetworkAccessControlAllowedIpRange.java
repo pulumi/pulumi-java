@@ -13,62 +13,59 @@ public final class GetEnvironmentConfigWebServerNetworkAccessControlAllowedIpRan
     public static final GetEnvironmentConfigWebServerNetworkAccessControlAllowedIpRange Empty = new GetEnvironmentConfigWebServerNetworkAccessControlAllowedIpRange();
 
     @Import(name="description", required=true)
-      private final String description;
+    private String description;
 
     public String description() {
         return this.description;
     }
 
     @Import(name="value", required=true)
-      private final String value;
+    private String value;
 
     public String value() {
         return this.value;
     }
 
-    public GetEnvironmentConfigWebServerNetworkAccessControlAllowedIpRange(
-        String description,
-        String value) {
-        this.description = Objects.requireNonNull(description, "expected parameter 'description' to be non-null");
-        this.value = Objects.requireNonNull(value, "expected parameter 'value' to be non-null");
-    }
+    private GetEnvironmentConfigWebServerNetworkAccessControlAllowedIpRange() {}
 
-    private GetEnvironmentConfigWebServerNetworkAccessControlAllowedIpRange() {
-        this.description = null;
-        this.value = null;
+    private GetEnvironmentConfigWebServerNetworkAccessControlAllowedIpRange(GetEnvironmentConfigWebServerNetworkAccessControlAllowedIpRange $) {
+        this.description = $.description;
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetEnvironmentConfigWebServerNetworkAccessControlAllowedIpRange defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String description;
-        private String value;
+        private GetEnvironmentConfigWebServerNetworkAccessControlAllowedIpRange $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetEnvironmentConfigWebServerNetworkAccessControlAllowedIpRange();
         }
 
         public Builder(GetEnvironmentConfigWebServerNetworkAccessControlAllowedIpRange defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.description = defaults.description;
-    	      this.value = defaults.value;
+            $ = new GetEnvironmentConfigWebServerNetworkAccessControlAllowedIpRange(Objects.requireNonNull(defaults));
         }
 
         public Builder description(String description) {
-            this.description = Objects.requireNonNull(description);
+            $.description = description;
             return this;
         }
+
         public Builder value(String value) {
-            this.value = Objects.requireNonNull(value);
+            $.value = value;
             return this;
-        }        public GetEnvironmentConfigWebServerNetworkAccessControlAllowedIpRange build() {
-            return new GetEnvironmentConfigWebServerNetworkAccessControlAllowedIpRange(description, value);
+        }
+
+        public GetEnvironmentConfigWebServerNetworkAccessControlAllowedIpRange build() {
+            $.description = Objects.requireNonNull($.description, "expected parameter 'description' to be non-null");
+            $.value = Objects.requireNonNull($.value, "expected parameter 'value' to be non-null");
+            return $;
         }
     }
+
 }

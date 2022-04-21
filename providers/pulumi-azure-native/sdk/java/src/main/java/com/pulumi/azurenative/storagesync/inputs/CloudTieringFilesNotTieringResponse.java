@@ -24,7 +24,7 @@ public final class CloudTieringFilesNotTieringResponse extends com.pulumi.resour
      * 
      */
     @Import(name="errors", required=true)
-      private final List<FilesNotTieringErrorResponse> errors;
+    private List<FilesNotTieringErrorResponse> errors;
 
     public List<FilesNotTieringErrorResponse> errors() {
         return this.errors;
@@ -35,7 +35,7 @@ public final class CloudTieringFilesNotTieringResponse extends com.pulumi.resour
      * 
      */
     @Import(name="lastUpdatedTimestamp", required=true)
-      private final String lastUpdatedTimestamp;
+    private String lastUpdatedTimestamp;
 
     public String lastUpdatedTimestamp() {
         return this.lastUpdatedTimestamp;
@@ -46,67 +46,63 @@ public final class CloudTieringFilesNotTieringResponse extends com.pulumi.resour
      * 
      */
     @Import(name="totalFileCount", required=true)
-      private final Double totalFileCount;
+    private Double totalFileCount;
 
     public Double totalFileCount() {
         return this.totalFileCount;
     }
 
-    public CloudTieringFilesNotTieringResponse(
-        List<FilesNotTieringErrorResponse> errors,
-        String lastUpdatedTimestamp,
-        Double totalFileCount) {
-        this.errors = Objects.requireNonNull(errors, "expected parameter 'errors' to be non-null");
-        this.lastUpdatedTimestamp = Objects.requireNonNull(lastUpdatedTimestamp, "expected parameter 'lastUpdatedTimestamp' to be non-null");
-        this.totalFileCount = Objects.requireNonNull(totalFileCount, "expected parameter 'totalFileCount' to be non-null");
-    }
+    private CloudTieringFilesNotTieringResponse() {}
 
-    private CloudTieringFilesNotTieringResponse() {
-        this.errors = List.of();
-        this.lastUpdatedTimestamp = null;
-        this.totalFileCount = null;
+    private CloudTieringFilesNotTieringResponse(CloudTieringFilesNotTieringResponse $) {
+        this.errors = $.errors;
+        this.lastUpdatedTimestamp = $.lastUpdatedTimestamp;
+        this.totalFileCount = $.totalFileCount;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CloudTieringFilesNotTieringResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<FilesNotTieringErrorResponse> errors;
-        private String lastUpdatedTimestamp;
-        private Double totalFileCount;
+        private CloudTieringFilesNotTieringResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new CloudTieringFilesNotTieringResponse();
         }
 
         public Builder(CloudTieringFilesNotTieringResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.errors = defaults.errors;
-    	      this.lastUpdatedTimestamp = defaults.lastUpdatedTimestamp;
-    	      this.totalFileCount = defaults.totalFileCount;
+            $ = new CloudTieringFilesNotTieringResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder errors(List<FilesNotTieringErrorResponse> errors) {
-            this.errors = Objects.requireNonNull(errors);
+            $.errors = errors;
             return this;
         }
+
         public Builder errors(FilesNotTieringErrorResponse... errors) {
             return errors(List.of(errors));
         }
+
         public Builder lastUpdatedTimestamp(String lastUpdatedTimestamp) {
-            this.lastUpdatedTimestamp = Objects.requireNonNull(lastUpdatedTimestamp);
+            $.lastUpdatedTimestamp = lastUpdatedTimestamp;
             return this;
         }
+
         public Builder totalFileCount(Double totalFileCount) {
-            this.totalFileCount = Objects.requireNonNull(totalFileCount);
+            $.totalFileCount = totalFileCount;
             return this;
-        }        public CloudTieringFilesNotTieringResponse build() {
-            return new CloudTieringFilesNotTieringResponse(errors, lastUpdatedTimestamp, totalFileCount);
+        }
+
+        public CloudTieringFilesNotTieringResponse build() {
+            $.errors = Objects.requireNonNull($.errors, "expected parameter 'errors' to be non-null");
+            $.lastUpdatedTimestamp = Objects.requireNonNull($.lastUpdatedTimestamp, "expected parameter 'lastUpdatedTimestamp' to be non-null");
+            $.totalFileCount = Objects.requireNonNull($.totalFileCount, "expected parameter 'totalFileCount' to be non-null");
+            return $;
         }
     }
+
 }

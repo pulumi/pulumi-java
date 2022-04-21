@@ -6,7 +6,6 @@ package com.pulumi.azurenative.dataprotection.inputs;
 import com.pulumi.azurenative.dataprotection.inputs.StorageSettingArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
 
@@ -24,52 +23,53 @@ public final class BackupVaultArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="storageSettings", required=true)
-      private final Output<List<StorageSettingArgs>> storageSettings;
+    private Output<List<StorageSettingArgs>> storageSettings;
 
     public Output<List<StorageSettingArgs>> storageSettings() {
         return this.storageSettings;
     }
 
-    public BackupVaultArgs(Output<List<StorageSettingArgs>> storageSettings) {
-        this.storageSettings = Objects.requireNonNull(storageSettings, "expected parameter 'storageSettings' to be non-null");
-    }
+    private BackupVaultArgs() {}
 
-    private BackupVaultArgs() {
-        this.storageSettings = Codegen.empty();
+    private BackupVaultArgs(BackupVaultArgs $) {
+        this.storageSettings = $.storageSettings;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BackupVaultArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<List<StorageSettingArgs>> storageSettings;
+        private BackupVaultArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new BackupVaultArgs();
         }
 
         public Builder(BackupVaultArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.storageSettings = defaults.storageSettings;
+            $ = new BackupVaultArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder storageSettings(Output<List<StorageSettingArgs>> storageSettings) {
-            this.storageSettings = Objects.requireNonNull(storageSettings);
+            $.storageSettings = storageSettings;
             return this;
         }
+
         public Builder storageSettings(List<StorageSettingArgs> storageSettings) {
-            this.storageSettings = Output.of(Objects.requireNonNull(storageSettings));
-            return this;
+            return storageSettings(Output.of(storageSettings));
         }
+
         public Builder storageSettings(StorageSettingArgs... storageSettings) {
             return storageSettings(List.of(storageSettings));
-        }        public BackupVaultArgs build() {
-            return new BackupVaultArgs(storageSettings);
+        }
+
+        public BackupVaultArgs build() {
+            $.storageSettings = Objects.requireNonNull($.storageSettings, "expected parameter 'storageSettings' to be non-null");
+            return $;
         }
     }
+
 }

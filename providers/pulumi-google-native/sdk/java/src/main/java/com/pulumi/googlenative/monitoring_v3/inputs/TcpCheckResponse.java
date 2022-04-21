@@ -21,45 +21,45 @@ public final class TcpCheckResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="port", required=true)
-      private final Integer port;
+    private Integer port;
 
     public Integer port() {
         return this.port;
     }
 
-    public TcpCheckResponse(Integer port) {
-        this.port = Objects.requireNonNull(port, "expected parameter 'port' to be non-null");
-    }
+    private TcpCheckResponse() {}
 
-    private TcpCheckResponse() {
-        this.port = null;
+    private TcpCheckResponse(TcpCheckResponse $) {
+        this.port = $.port;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TcpCheckResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Integer port;
+        private TcpCheckResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new TcpCheckResponse();
         }
 
         public Builder(TcpCheckResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.port = defaults.port;
+            $ = new TcpCheckResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder port(Integer port) {
-            this.port = Objects.requireNonNull(port);
+            $.port = port;
             return this;
-        }        public TcpCheckResponse build() {
-            return new TcpCheckResponse(port);
+        }
+
+        public TcpCheckResponse build() {
+            $.port = Objects.requireNonNull($.port, "expected parameter 'port' to be non-null");
+            return $;
         }
     }
+
 }

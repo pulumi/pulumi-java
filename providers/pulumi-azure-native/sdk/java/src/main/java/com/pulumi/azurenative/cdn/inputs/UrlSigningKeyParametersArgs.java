@@ -9,6 +9,7 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,7 +26,7 @@ public final class UrlSigningKeyParametersArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="keyId", required=true)
-      private final Output<String> keyId;
+    private Output<String> keyId;
 
     public Output<String> keyId() {
         return this.keyId;
@@ -36,7 +37,7 @@ public final class UrlSigningKeyParametersArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="secretSource", required=true)
-      private final Output<ResourceReferenceArgs> secretSource;
+    private Output<ResourceReferenceArgs> secretSource;
 
     public Output<ResourceReferenceArgs> secretSource() {
         return this.secretSource;
@@ -47,10 +48,10 @@ public final class UrlSigningKeyParametersArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="secretVersion")
-      private final @Nullable Output<String> secretVersion;
+    private @Nullable Output<String> secretVersion;
 
-    public Output<String> secretVersion() {
-        return this.secretVersion == null ? Codegen.empty() : this.secretVersion;
+    public Optional<Output<String>> secretVersion() {
+        return Optional.ofNullable(this.secretVersion);
     }
 
     /**
@@ -59,89 +60,81 @@ public final class UrlSigningKeyParametersArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="type", required=true)
-      private final Output<String> type;
+    private Output<String> type;
 
     public Output<String> type() {
         return this.type;
     }
 
-    public UrlSigningKeyParametersArgs(
-        Output<String> keyId,
-        Output<ResourceReferenceArgs> secretSource,
-        @Nullable Output<String> secretVersion,
-        Output<String> type) {
-        this.keyId = Objects.requireNonNull(keyId, "expected parameter 'keyId' to be non-null");
-        this.secretSource = Objects.requireNonNull(secretSource, "expected parameter 'secretSource' to be non-null");
-        this.secretVersion = secretVersion;
-        this.type = Codegen.stringProp("type").output().arg(type).require();
-    }
+    private UrlSigningKeyParametersArgs() {}
 
-    private UrlSigningKeyParametersArgs() {
-        this.keyId = Codegen.empty();
-        this.secretSource = Codegen.empty();
-        this.secretVersion = Codegen.empty();
-        this.type = Codegen.empty();
+    private UrlSigningKeyParametersArgs(UrlSigningKeyParametersArgs $) {
+        this.keyId = $.keyId;
+        this.secretSource = $.secretSource;
+        this.secretVersion = $.secretVersion;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(UrlSigningKeyParametersArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> keyId;
-        private Output<ResourceReferenceArgs> secretSource;
-        private @Nullable Output<String> secretVersion;
-        private Output<String> type;
+        private UrlSigningKeyParametersArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new UrlSigningKeyParametersArgs();
         }
 
         public Builder(UrlSigningKeyParametersArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.keyId = defaults.keyId;
-    	      this.secretSource = defaults.secretSource;
-    	      this.secretVersion = defaults.secretVersion;
-    	      this.type = defaults.type;
+            $ = new UrlSigningKeyParametersArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder keyId(Output<String> keyId) {
-            this.keyId = Objects.requireNonNull(keyId);
+            $.keyId = keyId;
             return this;
         }
+
         public Builder keyId(String keyId) {
-            this.keyId = Output.of(Objects.requireNonNull(keyId));
-            return this;
+            return keyId(Output.of(keyId));
         }
+
         public Builder secretSource(Output<ResourceReferenceArgs> secretSource) {
-            this.secretSource = Objects.requireNonNull(secretSource);
+            $.secretSource = secretSource;
             return this;
         }
+
         public Builder secretSource(ResourceReferenceArgs secretSource) {
-            this.secretSource = Output.of(Objects.requireNonNull(secretSource));
-            return this;
+            return secretSource(Output.of(secretSource));
         }
+
         public Builder secretVersion(@Nullable Output<String> secretVersion) {
-            this.secretVersion = secretVersion;
+            $.secretVersion = secretVersion;
             return this;
         }
-        public Builder secretVersion(@Nullable String secretVersion) {
-            this.secretVersion = Codegen.ofNullable(secretVersion);
-            return this;
+
+        public Builder secretVersion(String secretVersion) {
+            return secretVersion(Output.of(secretVersion));
         }
+
         public Builder type(Output<String> type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Output.of(Objects.requireNonNull(type));
-            return this;
-        }        public UrlSigningKeyParametersArgs build() {
-            return new UrlSigningKeyParametersArgs(keyId, secretSource, secretVersion, type);
+            return type(Output.of(type));
+        }
+
+        public UrlSigningKeyParametersArgs build() {
+            $.keyId = Objects.requireNonNull($.keyId, "expected parameter 'keyId' to be non-null");
+            $.secretSource = Objects.requireNonNull($.secretSource, "expected parameter 'secretSource' to be non-null");
+            $.type = Codegen.stringProp("type").output().arg($.type).require();
+            return $;
         }
     }
+
 }

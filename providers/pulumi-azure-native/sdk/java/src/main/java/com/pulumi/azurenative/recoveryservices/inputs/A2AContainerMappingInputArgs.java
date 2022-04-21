@@ -10,6 +10,7 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +27,10 @@ public final class A2AContainerMappingInputArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="agentAutoUpdateStatus")
-      private final @Nullable Output<Either<String,AgentAutoUpdateStatus>> agentAutoUpdateStatus;
+    private @Nullable Output<Either<String,AgentAutoUpdateStatus>> agentAutoUpdateStatus;
 
-    public Output<Either<String,AgentAutoUpdateStatus>> agentAutoUpdateStatus() {
-        return this.agentAutoUpdateStatus == null ? Codegen.empty() : this.agentAutoUpdateStatus;
+    public Optional<Output<Either<String,AgentAutoUpdateStatus>>> agentAutoUpdateStatus() {
+        return Optional.ofNullable(this.agentAutoUpdateStatus);
     }
 
     /**
@@ -37,10 +38,10 @@ public final class A2AContainerMappingInputArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="automationAccountArmId")
-      private final @Nullable Output<String> automationAccountArmId;
+    private @Nullable Output<String> automationAccountArmId;
 
-    public Output<String> automationAccountArmId() {
-        return this.automationAccountArmId == null ? Codegen.empty() : this.automationAccountArmId;
+    public Optional<Output<String>> automationAccountArmId() {
+        return Optional.ofNullable(this.automationAccountArmId);
     }
 
     /**
@@ -49,76 +50,69 @@ public final class A2AContainerMappingInputArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="instanceType")
-      private final @Nullable Output<String> instanceType;
+    private @Nullable Output<String> instanceType;
 
-    public Output<String> instanceType() {
-        return this.instanceType == null ? Codegen.empty() : this.instanceType;
+    public Optional<Output<String>> instanceType() {
+        return Optional.ofNullable(this.instanceType);
     }
 
-    public A2AContainerMappingInputArgs(
-        @Nullable Output<Either<String,AgentAutoUpdateStatus>> agentAutoUpdateStatus,
-        @Nullable Output<String> automationAccountArmId,
-        @Nullable Output<String> instanceType) {
-        this.agentAutoUpdateStatus = agentAutoUpdateStatus;
-        this.automationAccountArmId = automationAccountArmId;
-        this.instanceType = Codegen.stringProp("instanceType").output().arg(instanceType).getNullable();
-    }
+    private A2AContainerMappingInputArgs() {}
 
-    private A2AContainerMappingInputArgs() {
-        this.agentAutoUpdateStatus = Codegen.empty();
-        this.automationAccountArmId = Codegen.empty();
-        this.instanceType = Codegen.empty();
+    private A2AContainerMappingInputArgs(A2AContainerMappingInputArgs $) {
+        this.agentAutoUpdateStatus = $.agentAutoUpdateStatus;
+        this.automationAccountArmId = $.automationAccountArmId;
+        this.instanceType = $.instanceType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(A2AContainerMappingInputArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Either<String,AgentAutoUpdateStatus>> agentAutoUpdateStatus;
-        private @Nullable Output<String> automationAccountArmId;
-        private @Nullable Output<String> instanceType;
+        private A2AContainerMappingInputArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new A2AContainerMappingInputArgs();
         }
 
         public Builder(A2AContainerMappingInputArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.agentAutoUpdateStatus = defaults.agentAutoUpdateStatus;
-    	      this.automationAccountArmId = defaults.automationAccountArmId;
-    	      this.instanceType = defaults.instanceType;
+            $ = new A2AContainerMappingInputArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder agentAutoUpdateStatus(@Nullable Output<Either<String,AgentAutoUpdateStatus>> agentAutoUpdateStatus) {
-            this.agentAutoUpdateStatus = agentAutoUpdateStatus;
+            $.agentAutoUpdateStatus = agentAutoUpdateStatus;
             return this;
         }
-        public Builder agentAutoUpdateStatus(@Nullable Either<String,AgentAutoUpdateStatus> agentAutoUpdateStatus) {
-            this.agentAutoUpdateStatus = Codegen.ofNullable(agentAutoUpdateStatus);
-            return this;
+
+        public Builder agentAutoUpdateStatus(Either<String,AgentAutoUpdateStatus> agentAutoUpdateStatus) {
+            return agentAutoUpdateStatus(Output.of(agentAutoUpdateStatus));
         }
+
         public Builder automationAccountArmId(@Nullable Output<String> automationAccountArmId) {
-            this.automationAccountArmId = automationAccountArmId;
+            $.automationAccountArmId = automationAccountArmId;
             return this;
         }
-        public Builder automationAccountArmId(@Nullable String automationAccountArmId) {
-            this.automationAccountArmId = Codegen.ofNullable(automationAccountArmId);
-            return this;
+
+        public Builder automationAccountArmId(String automationAccountArmId) {
+            return automationAccountArmId(Output.of(automationAccountArmId));
         }
+
         public Builder instanceType(@Nullable Output<String> instanceType) {
-            this.instanceType = instanceType;
+            $.instanceType = instanceType;
             return this;
         }
-        public Builder instanceType(@Nullable String instanceType) {
-            this.instanceType = Codegen.ofNullable(instanceType);
-            return this;
-        }        public A2AContainerMappingInputArgs build() {
-            return new A2AContainerMappingInputArgs(agentAutoUpdateStatus, automationAccountArmId, instanceType);
+
+        public Builder instanceType(String instanceType) {
+            return instanceType(Output.of(instanceType));
+        }
+
+        public A2AContainerMappingInputArgs build() {
+            $.instanceType = Codegen.stringProp("instanceType").output().arg($.instanceType).getNullable();
+            return $;
         }
     }
+
 }

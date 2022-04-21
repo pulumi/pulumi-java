@@ -6,7 +6,6 @@ package com.pulumi.aws.kinesisanalyticsv2.inputs;
 import com.pulumi.aws.kinesisanalyticsv2.inputs.ApplicationApplicationConfigurationEnvironmentPropertiesPropertyGroupArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
 
@@ -20,52 +19,53 @@ public final class ApplicationApplicationConfigurationEnvironmentPropertiesArgs 
      * 
      */
     @Import(name="propertyGroups", required=true)
-      private final Output<List<ApplicationApplicationConfigurationEnvironmentPropertiesPropertyGroupArgs>> propertyGroups;
+    private Output<List<ApplicationApplicationConfigurationEnvironmentPropertiesPropertyGroupArgs>> propertyGroups;
 
     public Output<List<ApplicationApplicationConfigurationEnvironmentPropertiesPropertyGroupArgs>> propertyGroups() {
         return this.propertyGroups;
     }
 
-    public ApplicationApplicationConfigurationEnvironmentPropertiesArgs(Output<List<ApplicationApplicationConfigurationEnvironmentPropertiesPropertyGroupArgs>> propertyGroups) {
-        this.propertyGroups = Objects.requireNonNull(propertyGroups, "expected parameter 'propertyGroups' to be non-null");
-    }
+    private ApplicationApplicationConfigurationEnvironmentPropertiesArgs() {}
 
-    private ApplicationApplicationConfigurationEnvironmentPropertiesArgs() {
-        this.propertyGroups = Codegen.empty();
+    private ApplicationApplicationConfigurationEnvironmentPropertiesArgs(ApplicationApplicationConfigurationEnvironmentPropertiesArgs $) {
+        this.propertyGroups = $.propertyGroups;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ApplicationApplicationConfigurationEnvironmentPropertiesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<List<ApplicationApplicationConfigurationEnvironmentPropertiesPropertyGroupArgs>> propertyGroups;
+        private ApplicationApplicationConfigurationEnvironmentPropertiesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ApplicationApplicationConfigurationEnvironmentPropertiesArgs();
         }
 
         public Builder(ApplicationApplicationConfigurationEnvironmentPropertiesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.propertyGroups = defaults.propertyGroups;
+            $ = new ApplicationApplicationConfigurationEnvironmentPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder propertyGroups(Output<List<ApplicationApplicationConfigurationEnvironmentPropertiesPropertyGroupArgs>> propertyGroups) {
-            this.propertyGroups = Objects.requireNonNull(propertyGroups);
+            $.propertyGroups = propertyGroups;
             return this;
         }
+
         public Builder propertyGroups(List<ApplicationApplicationConfigurationEnvironmentPropertiesPropertyGroupArgs> propertyGroups) {
-            this.propertyGroups = Output.of(Objects.requireNonNull(propertyGroups));
-            return this;
+            return propertyGroups(Output.of(propertyGroups));
         }
+
         public Builder propertyGroups(ApplicationApplicationConfigurationEnvironmentPropertiesPropertyGroupArgs... propertyGroups) {
             return propertyGroups(List.of(propertyGroups));
-        }        public ApplicationApplicationConfigurationEnvironmentPropertiesArgs build() {
-            return new ApplicationApplicationConfigurationEnvironmentPropertiesArgs(propertyGroups);
+        }
+
+        public ApplicationApplicationConfigurationEnvironmentPropertiesArgs build() {
+            $.propertyGroups = Objects.requireNonNull($.propertyGroups, "expected parameter 'propertyGroups' to be non-null");
+            return $;
         }
     }
+
 }

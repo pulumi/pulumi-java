@@ -6,9 +6,9 @@ package com.pulumi.azurenative.netapp.inputs;
 import com.pulumi.azurenative.netapp.inputs.ExportPolicyRuleArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,52 +25,52 @@ public final class VolumePropertiesExportPolicyArgs extends com.pulumi.resources
      * 
      */
     @Import(name="rules")
-      private final @Nullable Output<List<ExportPolicyRuleArgs>> rules;
+    private @Nullable Output<List<ExportPolicyRuleArgs>> rules;
 
-    public Output<List<ExportPolicyRuleArgs>> rules() {
-        return this.rules == null ? Codegen.empty() : this.rules;
+    public Optional<Output<List<ExportPolicyRuleArgs>>> rules() {
+        return Optional.ofNullable(this.rules);
     }
 
-    public VolumePropertiesExportPolicyArgs(@Nullable Output<List<ExportPolicyRuleArgs>> rules) {
-        this.rules = rules;
-    }
+    private VolumePropertiesExportPolicyArgs() {}
 
-    private VolumePropertiesExportPolicyArgs() {
-        this.rules = Codegen.empty();
+    private VolumePropertiesExportPolicyArgs(VolumePropertiesExportPolicyArgs $) {
+        this.rules = $.rules;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VolumePropertiesExportPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<ExportPolicyRuleArgs>> rules;
+        private VolumePropertiesExportPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new VolumePropertiesExportPolicyArgs();
         }
 
         public Builder(VolumePropertiesExportPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.rules = defaults.rules;
+            $ = new VolumePropertiesExportPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder rules(@Nullable Output<List<ExportPolicyRuleArgs>> rules) {
-            this.rules = rules;
+            $.rules = rules;
             return this;
         }
-        public Builder rules(@Nullable List<ExportPolicyRuleArgs> rules) {
-            this.rules = Codegen.ofNullable(rules);
-            return this;
+
+        public Builder rules(List<ExportPolicyRuleArgs> rules) {
+            return rules(Output.of(rules));
         }
+
         public Builder rules(ExportPolicyRuleArgs... rules) {
             return rules(List.of(rules));
-        }        public VolumePropertiesExportPolicyArgs build() {
-            return new VolumePropertiesExportPolicyArgs(rules);
+        }
+
+        public VolumePropertiesExportPolicyArgs build() {
+            return $;
         }
     }
+
 }

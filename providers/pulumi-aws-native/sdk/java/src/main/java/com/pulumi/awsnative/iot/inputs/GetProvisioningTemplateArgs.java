@@ -13,45 +13,45 @@ public final class GetProvisioningTemplateArgs extends com.pulumi.resources.Invo
     public static final GetProvisioningTemplateArgs Empty = new GetProvisioningTemplateArgs();
 
     @Import(name="templateName", required=true)
-      private final String templateName;
+    private String templateName;
 
     public String templateName() {
         return this.templateName;
     }
 
-    public GetProvisioningTemplateArgs(String templateName) {
-        this.templateName = Objects.requireNonNull(templateName, "expected parameter 'templateName' to be non-null");
-    }
+    private GetProvisioningTemplateArgs() {}
 
-    private GetProvisioningTemplateArgs() {
-        this.templateName = null;
+    private GetProvisioningTemplateArgs(GetProvisioningTemplateArgs $) {
+        this.templateName = $.templateName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetProvisioningTemplateArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String templateName;
+        private GetProvisioningTemplateArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetProvisioningTemplateArgs();
         }
 
         public Builder(GetProvisioningTemplateArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.templateName = defaults.templateName;
+            $ = new GetProvisioningTemplateArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder templateName(String templateName) {
-            this.templateName = Objects.requireNonNull(templateName);
+            $.templateName = templateName;
             return this;
-        }        public GetProvisioningTemplateArgs build() {
-            return new GetProvisioningTemplateArgs(templateName);
+        }
+
+        public GetProvisioningTemplateArgs build() {
+            $.templateName = Objects.requireNonNull($.templateName, "expected parameter 'templateName' to be non-null");
+            return $;
         }
     }
+
 }

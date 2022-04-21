@@ -22,7 +22,7 @@ public final class ExecutionConfigResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="kmsKey", required=true)
-      private final String kmsKey;
+    private String kmsKey;
 
     public String kmsKey() {
         return this.kmsKey;
@@ -33,7 +33,7 @@ public final class ExecutionConfigResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="networkTags", required=true)
-      private final List<String> networkTags;
+    private List<String> networkTags;
 
     public List<String> networkTags() {
         return this.networkTags;
@@ -44,7 +44,7 @@ public final class ExecutionConfigResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="networkUri", required=true)
-      private final String networkUri;
+    private String networkUri;
 
     public String networkUri() {
         return this.networkUri;
@@ -55,7 +55,7 @@ public final class ExecutionConfigResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="serviceAccount", required=true)
-      private final String serviceAccount;
+    private String serviceAccount;
 
     public String serviceAccount() {
         return this.serviceAccount;
@@ -66,85 +66,77 @@ public final class ExecutionConfigResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="subnetworkUri", required=true)
-      private final String subnetworkUri;
+    private String subnetworkUri;
 
     public String subnetworkUri() {
         return this.subnetworkUri;
     }
 
-    public ExecutionConfigResponse(
-        String kmsKey,
-        List<String> networkTags,
-        String networkUri,
-        String serviceAccount,
-        String subnetworkUri) {
-        this.kmsKey = Objects.requireNonNull(kmsKey, "expected parameter 'kmsKey' to be non-null");
-        this.networkTags = Objects.requireNonNull(networkTags, "expected parameter 'networkTags' to be non-null");
-        this.networkUri = Objects.requireNonNull(networkUri, "expected parameter 'networkUri' to be non-null");
-        this.serviceAccount = Objects.requireNonNull(serviceAccount, "expected parameter 'serviceAccount' to be non-null");
-        this.subnetworkUri = Objects.requireNonNull(subnetworkUri, "expected parameter 'subnetworkUri' to be non-null");
-    }
+    private ExecutionConfigResponse() {}
 
-    private ExecutionConfigResponse() {
-        this.kmsKey = null;
-        this.networkTags = List.of();
-        this.networkUri = null;
-        this.serviceAccount = null;
-        this.subnetworkUri = null;
+    private ExecutionConfigResponse(ExecutionConfigResponse $) {
+        this.kmsKey = $.kmsKey;
+        this.networkTags = $.networkTags;
+        this.networkUri = $.networkUri;
+        this.serviceAccount = $.serviceAccount;
+        this.subnetworkUri = $.subnetworkUri;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ExecutionConfigResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String kmsKey;
-        private List<String> networkTags;
-        private String networkUri;
-        private String serviceAccount;
-        private String subnetworkUri;
+        private ExecutionConfigResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ExecutionConfigResponse();
         }
 
         public Builder(ExecutionConfigResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.kmsKey = defaults.kmsKey;
-    	      this.networkTags = defaults.networkTags;
-    	      this.networkUri = defaults.networkUri;
-    	      this.serviceAccount = defaults.serviceAccount;
-    	      this.subnetworkUri = defaults.subnetworkUri;
+            $ = new ExecutionConfigResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder kmsKey(String kmsKey) {
-            this.kmsKey = Objects.requireNonNull(kmsKey);
+            $.kmsKey = kmsKey;
             return this;
         }
+
         public Builder networkTags(List<String> networkTags) {
-            this.networkTags = Objects.requireNonNull(networkTags);
+            $.networkTags = networkTags;
             return this;
         }
+
         public Builder networkTags(String... networkTags) {
             return networkTags(List.of(networkTags));
         }
+
         public Builder networkUri(String networkUri) {
-            this.networkUri = Objects.requireNonNull(networkUri);
+            $.networkUri = networkUri;
             return this;
         }
+
         public Builder serviceAccount(String serviceAccount) {
-            this.serviceAccount = Objects.requireNonNull(serviceAccount);
+            $.serviceAccount = serviceAccount;
             return this;
         }
+
         public Builder subnetworkUri(String subnetworkUri) {
-            this.subnetworkUri = Objects.requireNonNull(subnetworkUri);
+            $.subnetworkUri = subnetworkUri;
             return this;
-        }        public ExecutionConfigResponse build() {
-            return new ExecutionConfigResponse(kmsKey, networkTags, networkUri, serviceAccount, subnetworkUri);
+        }
+
+        public ExecutionConfigResponse build() {
+            $.kmsKey = Objects.requireNonNull($.kmsKey, "expected parameter 'kmsKey' to be non-null");
+            $.networkTags = Objects.requireNonNull($.networkTags, "expected parameter 'networkTags' to be non-null");
+            $.networkUri = Objects.requireNonNull($.networkUri, "expected parameter 'networkUri' to be non-null");
+            $.serviceAccount = Objects.requireNonNull($.serviceAccount, "expected parameter 'serviceAccount' to be non-null");
+            $.subnetworkUri = Objects.requireNonNull($.subnetworkUri, "expected parameter 'subnetworkUri' to be non-null");
+            return $;
         }
     }
+
 }

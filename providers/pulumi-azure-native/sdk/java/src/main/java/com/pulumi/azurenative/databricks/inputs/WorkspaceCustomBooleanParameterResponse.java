@@ -22,7 +22,7 @@ public final class WorkspaceCustomBooleanParameterResponse extends com.pulumi.re
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
@@ -33,55 +33,52 @@ public final class WorkspaceCustomBooleanParameterResponse extends com.pulumi.re
      * 
      */
     @Import(name="value", required=true)
-      private final Boolean value;
+    private Boolean value;
 
     public Boolean value() {
         return this.value;
     }
 
-    public WorkspaceCustomBooleanParameterResponse(
-        String type,
-        Boolean value) {
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-        this.value = Objects.requireNonNull(value, "expected parameter 'value' to be non-null");
-    }
+    private WorkspaceCustomBooleanParameterResponse() {}
 
-    private WorkspaceCustomBooleanParameterResponse() {
-        this.type = null;
-        this.value = null;
+    private WorkspaceCustomBooleanParameterResponse(WorkspaceCustomBooleanParameterResponse $) {
+        this.type = $.type;
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WorkspaceCustomBooleanParameterResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String type;
-        private Boolean value;
+        private WorkspaceCustomBooleanParameterResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new WorkspaceCustomBooleanParameterResponse();
         }
 
         public Builder(WorkspaceCustomBooleanParameterResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.type = defaults.type;
-    	      this.value = defaults.value;
+            $ = new WorkspaceCustomBooleanParameterResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder value(Boolean value) {
-            this.value = Objects.requireNonNull(value);
+            $.value = value;
             return this;
-        }        public WorkspaceCustomBooleanParameterResponse build() {
-            return new WorkspaceCustomBooleanParameterResponse(type, value);
+        }
+
+        public WorkspaceCustomBooleanParameterResponse build() {
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            $.value = Objects.requireNonNull($.value, "expected parameter 'value' to be non-null");
+            return $;
         }
     }
+
 }

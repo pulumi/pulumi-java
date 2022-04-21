@@ -17,45 +17,45 @@ public final class GetIPAMArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="ipamId", required=true)
-      private final String ipamId;
+    private String ipamId;
 
     public String ipamId() {
         return this.ipamId;
     }
 
-    public GetIPAMArgs(String ipamId) {
-        this.ipamId = Objects.requireNonNull(ipamId, "expected parameter 'ipamId' to be non-null");
-    }
+    private GetIPAMArgs() {}
 
-    private GetIPAMArgs() {
-        this.ipamId = null;
+    private GetIPAMArgs(GetIPAMArgs $) {
+        this.ipamId = $.ipamId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetIPAMArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String ipamId;
+        private GetIPAMArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetIPAMArgs();
         }
 
         public Builder(GetIPAMArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.ipamId = defaults.ipamId;
+            $ = new GetIPAMArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder ipamId(String ipamId) {
-            this.ipamId = Objects.requireNonNull(ipamId);
+            $.ipamId = ipamId;
             return this;
-        }        public GetIPAMArgs build() {
-            return new GetIPAMArgs(ipamId);
+        }
+
+        public GetIPAMArgs build() {
+            $.ipamId = Objects.requireNonNull($.ipamId, "expected parameter 'ipamId' to be non-null");
+            return $;
         }
     }
+
 }

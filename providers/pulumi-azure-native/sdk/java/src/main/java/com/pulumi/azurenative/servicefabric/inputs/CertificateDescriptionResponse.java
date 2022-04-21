@@ -23,7 +23,7 @@ public final class CertificateDescriptionResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="thumbprint", required=true)
-      private final String thumbprint;
+    private String thumbprint;
 
     public String thumbprint() {
         return this.thumbprint;
@@ -34,10 +34,10 @@ public final class CertificateDescriptionResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="thumbprintSecondary")
-      private final @Nullable String thumbprintSecondary;
+    private @Nullable String thumbprintSecondary;
 
     public Optional<String> thumbprintSecondary() {
-        return this.thumbprintSecondary == null ? Optional.empty() : Optional.ofNullable(this.thumbprintSecondary);
+        return Optional.ofNullable(this.thumbprintSecondary);
     }
 
     /**
@@ -45,64 +45,57 @@ public final class CertificateDescriptionResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="x509StoreName")
-      private final @Nullable String x509StoreName;
+    private @Nullable String x509StoreName;
 
     public Optional<String> x509StoreName() {
-        return this.x509StoreName == null ? Optional.empty() : Optional.ofNullable(this.x509StoreName);
+        return Optional.ofNullable(this.x509StoreName);
     }
 
-    public CertificateDescriptionResponse(
-        String thumbprint,
-        @Nullable String thumbprintSecondary,
-        @Nullable String x509StoreName) {
-        this.thumbprint = Objects.requireNonNull(thumbprint, "expected parameter 'thumbprint' to be non-null");
-        this.thumbprintSecondary = thumbprintSecondary;
-        this.x509StoreName = x509StoreName;
-    }
+    private CertificateDescriptionResponse() {}
 
-    private CertificateDescriptionResponse() {
-        this.thumbprint = null;
-        this.thumbprintSecondary = null;
-        this.x509StoreName = null;
+    private CertificateDescriptionResponse(CertificateDescriptionResponse $) {
+        this.thumbprint = $.thumbprint;
+        this.thumbprintSecondary = $.thumbprintSecondary;
+        this.x509StoreName = $.x509StoreName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CertificateDescriptionResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String thumbprint;
-        private @Nullable String thumbprintSecondary;
-        private @Nullable String x509StoreName;
+        private CertificateDescriptionResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new CertificateDescriptionResponse();
         }
 
         public Builder(CertificateDescriptionResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.thumbprint = defaults.thumbprint;
-    	      this.thumbprintSecondary = defaults.thumbprintSecondary;
-    	      this.x509StoreName = defaults.x509StoreName;
+            $ = new CertificateDescriptionResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder thumbprint(String thumbprint) {
-            this.thumbprint = Objects.requireNonNull(thumbprint);
+            $.thumbprint = thumbprint;
             return this;
         }
+
         public Builder thumbprintSecondary(@Nullable String thumbprintSecondary) {
-            this.thumbprintSecondary = thumbprintSecondary;
+            $.thumbprintSecondary = thumbprintSecondary;
             return this;
         }
+
         public Builder x509StoreName(@Nullable String x509StoreName) {
-            this.x509StoreName = x509StoreName;
+            $.x509StoreName = x509StoreName;
             return this;
-        }        public CertificateDescriptionResponse build() {
-            return new CertificateDescriptionResponse(thumbprint, thumbprintSecondary, x509StoreName);
+        }
+
+        public CertificateDescriptionResponse build() {
+            $.thumbprint = Objects.requireNonNull($.thumbprint, "expected parameter 'thumbprint' to be non-null");
+            return $;
         }
     }
+
 }

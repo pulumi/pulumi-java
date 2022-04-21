@@ -24,48 +24,48 @@ public final class MongoIndexKeysResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="keys")
-      private final @Nullable List<String> keys;
+    private @Nullable List<String> keys;
 
-    public List<String> keys() {
-        return this.keys == null ? List.of() : this.keys;
+    public Optional<List<String>> keys() {
+        return Optional.ofNullable(this.keys);
     }
 
-    public MongoIndexKeysResponse(@Nullable List<String> keys) {
-        this.keys = keys;
-    }
+    private MongoIndexKeysResponse() {}
 
-    private MongoIndexKeysResponse() {
-        this.keys = List.of();
+    private MongoIndexKeysResponse(MongoIndexKeysResponse $) {
+        this.keys = $.keys;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MongoIndexKeysResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<String> keys;
+        private MongoIndexKeysResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new MongoIndexKeysResponse();
         }
 
         public Builder(MongoIndexKeysResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.keys = defaults.keys;
+            $ = new MongoIndexKeysResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder keys(@Nullable List<String> keys) {
-            this.keys = keys;
+            $.keys = keys;
             return this;
         }
+
         public Builder keys(String... keys) {
             return keys(List.of(keys));
-        }        public MongoIndexKeysResponse build() {
-            return new MongoIndexKeysResponse(keys);
+        }
+
+        public MongoIndexKeysResponse build() {
+            return $;
         }
     }
+
 }

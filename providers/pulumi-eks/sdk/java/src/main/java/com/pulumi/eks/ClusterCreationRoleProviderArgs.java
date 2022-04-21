@@ -5,9 +5,9 @@ package com.pulumi.eks;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -16,70 +16,65 @@ public final class ClusterCreationRoleProviderArgs extends com.pulumi.resources.
     public static final ClusterCreationRoleProviderArgs Empty = new ClusterCreationRoleProviderArgs();
 
     @Import(name="profile")
-      private final @Nullable Output<String> profile;
+    private @Nullable Output<String> profile;
 
-    public Output<String> profile() {
-        return this.profile == null ? Codegen.empty() : this.profile;
+    public Optional<Output<String>> profile() {
+        return Optional.ofNullable(this.profile);
     }
 
     @Import(name="region")
-      private final @Nullable Output<String> region;
+    private @Nullable Output<String> region;
 
-    public Output<String> region() {
-        return this.region == null ? Codegen.empty() : this.region;
+    public Optional<Output<String>> region() {
+        return Optional.ofNullable(this.region);
     }
 
-    public ClusterCreationRoleProviderArgs(
-        @Nullable Output<String> profile,
-        @Nullable Output<String> region) {
-        this.profile = profile;
-        this.region = region;
-    }
+    private ClusterCreationRoleProviderArgs() {}
 
-    private ClusterCreationRoleProviderArgs() {
-        this.profile = Codegen.empty();
-        this.region = Codegen.empty();
+    private ClusterCreationRoleProviderArgs(ClusterCreationRoleProviderArgs $) {
+        this.profile = $.profile;
+        this.region = $.region;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ClusterCreationRoleProviderArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> profile;
-        private @Nullable Output<String> region;
+        private ClusterCreationRoleProviderArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ClusterCreationRoleProviderArgs();
         }
 
         public Builder(ClusterCreationRoleProviderArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.profile = defaults.profile;
-    	      this.region = defaults.region;
+            $ = new ClusterCreationRoleProviderArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder profile(@Nullable Output<String> profile) {
-            this.profile = profile;
+            $.profile = profile;
             return this;
         }
-        public Builder profile(@Nullable String profile) {
-            this.profile = Codegen.ofNullable(profile);
-            return this;
+
+        public Builder profile(String profile) {
+            return profile(Output.of(profile));
         }
+
         public Builder region(@Nullable Output<String> region) {
-            this.region = region;
+            $.region = region;
             return this;
         }
-        public Builder region(@Nullable String region) {
-            this.region = Codegen.ofNullable(region);
-            return this;
-        }        public ClusterCreationRoleProviderArgs build() {
-            return new ClusterCreationRoleProviderArgs(profile, region);
+
+        public Builder region(String region) {
+            return region(Output.of(region));
+        }
+
+        public ClusterCreationRoleProviderArgs build() {
+            return $;
         }
     }
+
 }

@@ -8,9 +8,9 @@ import com.pulumi.azurenative.datafactory.inputs.DatasetReferenceArgs;
 import com.pulumi.azurenative.datafactory.inputs.LinkedServiceReferenceArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +27,10 @@ public final class DataFlowSinkArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="dataset")
-      private final @Nullable Output<DatasetReferenceArgs> dataset;
+    private @Nullable Output<DatasetReferenceArgs> dataset;
 
-    public Output<DatasetReferenceArgs> dataset() {
-        return this.dataset == null ? Codegen.empty() : this.dataset;
+    public Optional<Output<DatasetReferenceArgs>> dataset() {
+        return Optional.ofNullable(this.dataset);
     }
 
     /**
@@ -38,10 +38,10 @@ public final class DataFlowSinkArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -49,10 +49,10 @@ public final class DataFlowSinkArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="flowlet")
-      private final @Nullable Output<DataFlowReferenceArgs> flowlet;
+    private @Nullable Output<DataFlowReferenceArgs> flowlet;
 
-    public Output<DataFlowReferenceArgs> flowlet() {
-        return this.flowlet == null ? Codegen.empty() : this.flowlet;
+    public Optional<Output<DataFlowReferenceArgs>> flowlet() {
+        return Optional.ofNullable(this.flowlet);
     }
 
     /**
@@ -60,10 +60,10 @@ public final class DataFlowSinkArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="linkedService")
-      private final @Nullable Output<LinkedServiceReferenceArgs> linkedService;
+    private @Nullable Output<LinkedServiceReferenceArgs> linkedService;
 
-    public Output<LinkedServiceReferenceArgs> linkedService() {
-        return this.linkedService == null ? Codegen.empty() : this.linkedService;
+    public Optional<Output<LinkedServiceReferenceArgs>> linkedService() {
+        return Optional.ofNullable(this.linkedService);
     }
 
     /**
@@ -71,7 +71,7 @@ public final class DataFlowSinkArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name", required=true)
-      private final Output<String> name;
+    private Output<String> name;
 
     public Output<String> name() {
         return this.name;
@@ -82,115 +82,99 @@ public final class DataFlowSinkArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="schemaLinkedService")
-      private final @Nullable Output<LinkedServiceReferenceArgs> schemaLinkedService;
+    private @Nullable Output<LinkedServiceReferenceArgs> schemaLinkedService;
 
-    public Output<LinkedServiceReferenceArgs> schemaLinkedService() {
-        return this.schemaLinkedService == null ? Codegen.empty() : this.schemaLinkedService;
+    public Optional<Output<LinkedServiceReferenceArgs>> schemaLinkedService() {
+        return Optional.ofNullable(this.schemaLinkedService);
     }
 
-    public DataFlowSinkArgs(
-        @Nullable Output<DatasetReferenceArgs> dataset,
-        @Nullable Output<String> description,
-        @Nullable Output<DataFlowReferenceArgs> flowlet,
-        @Nullable Output<LinkedServiceReferenceArgs> linkedService,
-        Output<String> name,
-        @Nullable Output<LinkedServiceReferenceArgs> schemaLinkedService) {
-        this.dataset = dataset;
-        this.description = description;
-        this.flowlet = flowlet;
-        this.linkedService = linkedService;
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.schemaLinkedService = schemaLinkedService;
-    }
+    private DataFlowSinkArgs() {}
 
-    private DataFlowSinkArgs() {
-        this.dataset = Codegen.empty();
-        this.description = Codegen.empty();
-        this.flowlet = Codegen.empty();
-        this.linkedService = Codegen.empty();
-        this.name = Codegen.empty();
-        this.schemaLinkedService = Codegen.empty();
+    private DataFlowSinkArgs(DataFlowSinkArgs $) {
+        this.dataset = $.dataset;
+        this.description = $.description;
+        this.flowlet = $.flowlet;
+        this.linkedService = $.linkedService;
+        this.name = $.name;
+        this.schemaLinkedService = $.schemaLinkedService;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DataFlowSinkArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<DatasetReferenceArgs> dataset;
-        private @Nullable Output<String> description;
-        private @Nullable Output<DataFlowReferenceArgs> flowlet;
-        private @Nullable Output<LinkedServiceReferenceArgs> linkedService;
-        private Output<String> name;
-        private @Nullable Output<LinkedServiceReferenceArgs> schemaLinkedService;
+        private DataFlowSinkArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DataFlowSinkArgs();
         }
 
         public Builder(DataFlowSinkArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dataset = defaults.dataset;
-    	      this.description = defaults.description;
-    	      this.flowlet = defaults.flowlet;
-    	      this.linkedService = defaults.linkedService;
-    	      this.name = defaults.name;
-    	      this.schemaLinkedService = defaults.schemaLinkedService;
+            $ = new DataFlowSinkArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder dataset(@Nullable Output<DatasetReferenceArgs> dataset) {
-            this.dataset = dataset;
+            $.dataset = dataset;
             return this;
         }
-        public Builder dataset(@Nullable DatasetReferenceArgs dataset) {
-            this.dataset = Codegen.ofNullable(dataset);
-            return this;
+
+        public Builder dataset(DatasetReferenceArgs dataset) {
+            return dataset(Output.of(dataset));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder flowlet(@Nullable Output<DataFlowReferenceArgs> flowlet) {
-            this.flowlet = flowlet;
+            $.flowlet = flowlet;
             return this;
         }
-        public Builder flowlet(@Nullable DataFlowReferenceArgs flowlet) {
-            this.flowlet = Codegen.ofNullable(flowlet);
-            return this;
+
+        public Builder flowlet(DataFlowReferenceArgs flowlet) {
+            return flowlet(Output.of(flowlet));
         }
+
         public Builder linkedService(@Nullable Output<LinkedServiceReferenceArgs> linkedService) {
-            this.linkedService = linkedService;
+            $.linkedService = linkedService;
             return this;
         }
-        public Builder linkedService(@Nullable LinkedServiceReferenceArgs linkedService) {
-            this.linkedService = Codegen.ofNullable(linkedService);
-            return this;
+
+        public Builder linkedService(LinkedServiceReferenceArgs linkedService) {
+            return linkedService(Output.of(linkedService));
         }
+
         public Builder name(Output<String> name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Output.of(Objects.requireNonNull(name));
-            return this;
+            return name(Output.of(name));
         }
+
         public Builder schemaLinkedService(@Nullable Output<LinkedServiceReferenceArgs> schemaLinkedService) {
-            this.schemaLinkedService = schemaLinkedService;
+            $.schemaLinkedService = schemaLinkedService;
             return this;
         }
-        public Builder schemaLinkedService(@Nullable LinkedServiceReferenceArgs schemaLinkedService) {
-            this.schemaLinkedService = Codegen.ofNullable(schemaLinkedService);
-            return this;
-        }        public DataFlowSinkArgs build() {
-            return new DataFlowSinkArgs(dataset, description, flowlet, linkedService, name, schemaLinkedService);
+
+        public Builder schemaLinkedService(LinkedServiceReferenceArgs schemaLinkedService) {
+            return schemaLinkedService(Output.of(schemaLinkedService));
+        }
+
+        public DataFlowSinkArgs build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            return $;
         }
     }
+
 }

@@ -26,10 +26,10 @@ public final class VirtualMachineScaleSetStorageProfileResponse extends com.pulu
      * 
      */
     @Import(name="dataDisks")
-      private final @Nullable List<VirtualMachineScaleSetDataDiskResponse> dataDisks;
+    private @Nullable List<VirtualMachineScaleSetDataDiskResponse> dataDisks;
 
-    public List<VirtualMachineScaleSetDataDiskResponse> dataDisks() {
-        return this.dataDisks == null ? List.of() : this.dataDisks;
+    public Optional<List<VirtualMachineScaleSetDataDiskResponse>> dataDisks() {
+        return Optional.ofNullable(this.dataDisks);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class VirtualMachineScaleSetStorageProfileResponse extends com.pulu
      * 
      */
     @Import(name="imageReference")
-      private final @Nullable ImageReferenceResponse imageReference;
+    private @Nullable ImageReferenceResponse imageReference;
 
     public Optional<ImageReferenceResponse> imageReference() {
-        return this.imageReference == null ? Optional.empty() : Optional.ofNullable(this.imageReference);
+        return Optional.ofNullable(this.imageReference);
     }
 
     /**
@@ -48,67 +48,60 @@ public final class VirtualMachineScaleSetStorageProfileResponse extends com.pulu
      * 
      */
     @Import(name="osDisk")
-      private final @Nullable VirtualMachineScaleSetOSDiskResponse osDisk;
+    private @Nullable VirtualMachineScaleSetOSDiskResponse osDisk;
 
     public Optional<VirtualMachineScaleSetOSDiskResponse> osDisk() {
-        return this.osDisk == null ? Optional.empty() : Optional.ofNullable(this.osDisk);
+        return Optional.ofNullable(this.osDisk);
     }
 
-    public VirtualMachineScaleSetStorageProfileResponse(
-        @Nullable List<VirtualMachineScaleSetDataDiskResponse> dataDisks,
-        @Nullable ImageReferenceResponse imageReference,
-        @Nullable VirtualMachineScaleSetOSDiskResponse osDisk) {
-        this.dataDisks = dataDisks;
-        this.imageReference = imageReference;
-        this.osDisk = osDisk;
-    }
+    private VirtualMachineScaleSetStorageProfileResponse() {}
 
-    private VirtualMachineScaleSetStorageProfileResponse() {
-        this.dataDisks = List.of();
-        this.imageReference = null;
-        this.osDisk = null;
+    private VirtualMachineScaleSetStorageProfileResponse(VirtualMachineScaleSetStorageProfileResponse $) {
+        this.dataDisks = $.dataDisks;
+        this.imageReference = $.imageReference;
+        this.osDisk = $.osDisk;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VirtualMachineScaleSetStorageProfileResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<VirtualMachineScaleSetDataDiskResponse> dataDisks;
-        private @Nullable ImageReferenceResponse imageReference;
-        private @Nullable VirtualMachineScaleSetOSDiskResponse osDisk;
+        private VirtualMachineScaleSetStorageProfileResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new VirtualMachineScaleSetStorageProfileResponse();
         }
 
         public Builder(VirtualMachineScaleSetStorageProfileResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dataDisks = defaults.dataDisks;
-    	      this.imageReference = defaults.imageReference;
-    	      this.osDisk = defaults.osDisk;
+            $ = new VirtualMachineScaleSetStorageProfileResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder dataDisks(@Nullable List<VirtualMachineScaleSetDataDiskResponse> dataDisks) {
-            this.dataDisks = dataDisks;
+            $.dataDisks = dataDisks;
             return this;
         }
+
         public Builder dataDisks(VirtualMachineScaleSetDataDiskResponse... dataDisks) {
             return dataDisks(List.of(dataDisks));
         }
+
         public Builder imageReference(@Nullable ImageReferenceResponse imageReference) {
-            this.imageReference = imageReference;
+            $.imageReference = imageReference;
             return this;
         }
+
         public Builder osDisk(@Nullable VirtualMachineScaleSetOSDiskResponse osDisk) {
-            this.osDisk = osDisk;
+            $.osDisk = osDisk;
             return this;
-        }        public VirtualMachineScaleSetStorageProfileResponse build() {
-            return new VirtualMachineScaleSetStorageProfileResponse(dataDisks, imageReference, osDisk);
+        }
+
+        public VirtualMachineScaleSetStorageProfileResponse build() {
+            return $;
         }
     }
+
 }

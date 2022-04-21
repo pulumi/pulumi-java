@@ -5,11 +5,11 @@ package com.pulumi.aws.mq.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class BrokerLdapServerMetadataArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="hosts")
-      private final @Nullable Output<List<String>> hosts;
+    private @Nullable Output<List<String>> hosts;
 
-    public Output<List<String>> hosts() {
-        return this.hosts == null ? Codegen.empty() : this.hosts;
+    public Optional<Output<List<String>>> hosts() {
+        return Optional.ofNullable(this.hosts);
     }
 
     /**
@@ -33,10 +33,10 @@ public final class BrokerLdapServerMetadataArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="roleBase")
-      private final @Nullable Output<String> roleBase;
+    private @Nullable Output<String> roleBase;
 
-    public Output<String> roleBase() {
-        return this.roleBase == null ? Codegen.empty() : this.roleBase;
+    public Optional<Output<String>> roleBase() {
+        return Optional.ofNullable(this.roleBase);
     }
 
     /**
@@ -44,10 +44,10 @@ public final class BrokerLdapServerMetadataArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="roleName")
-      private final @Nullable Output<String> roleName;
+    private @Nullable Output<String> roleName;
 
-    public Output<String> roleName() {
-        return this.roleName == null ? Codegen.empty() : this.roleName;
+    public Optional<Output<String>> roleName() {
+        return Optional.ofNullable(this.roleName);
     }
 
     /**
@@ -55,10 +55,10 @@ public final class BrokerLdapServerMetadataArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="roleSearchMatching")
-      private final @Nullable Output<String> roleSearchMatching;
+    private @Nullable Output<String> roleSearchMatching;
 
-    public Output<String> roleSearchMatching() {
-        return this.roleSearchMatching == null ? Codegen.empty() : this.roleSearchMatching;
+    public Optional<Output<String>> roleSearchMatching() {
+        return Optional.ofNullable(this.roleSearchMatching);
     }
 
     /**
@@ -66,10 +66,10 @@ public final class BrokerLdapServerMetadataArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="roleSearchSubtree")
-      private final @Nullable Output<Boolean> roleSearchSubtree;
+    private @Nullable Output<Boolean> roleSearchSubtree;
 
-    public Output<Boolean> roleSearchSubtree() {
-        return this.roleSearchSubtree == null ? Codegen.empty() : this.roleSearchSubtree;
+    public Optional<Output<Boolean>> roleSearchSubtree() {
+        return Optional.ofNullable(this.roleSearchSubtree);
     }
 
     /**
@@ -77,10 +77,10 @@ public final class BrokerLdapServerMetadataArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="serviceAccountPassword")
-      private final @Nullable Output<String> serviceAccountPassword;
+    private @Nullable Output<String> serviceAccountPassword;
 
-    public Output<String> serviceAccountPassword() {
-        return this.serviceAccountPassword == null ? Codegen.empty() : this.serviceAccountPassword;
+    public Optional<Output<String>> serviceAccountPassword() {
+        return Optional.ofNullable(this.serviceAccountPassword);
     }
 
     /**
@@ -88,10 +88,10 @@ public final class BrokerLdapServerMetadataArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="serviceAccountUsername")
-      private final @Nullable Output<String> serviceAccountUsername;
+    private @Nullable Output<String> serviceAccountUsername;
 
-    public Output<String> serviceAccountUsername() {
-        return this.serviceAccountUsername == null ? Codegen.empty() : this.serviceAccountUsername;
+    public Optional<Output<String>> serviceAccountUsername() {
+        return Optional.ofNullable(this.serviceAccountUsername);
     }
 
     /**
@@ -99,10 +99,10 @@ public final class BrokerLdapServerMetadataArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="userBase")
-      private final @Nullable Output<String> userBase;
+    private @Nullable Output<String> userBase;
 
-    public Output<String> userBase() {
-        return this.userBase == null ? Codegen.empty() : this.userBase;
+    public Optional<Output<String>> userBase() {
+        return Optional.ofNullable(this.userBase);
     }
 
     /**
@@ -110,10 +110,10 @@ public final class BrokerLdapServerMetadataArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="userRoleName")
-      private final @Nullable Output<String> userRoleName;
+    private @Nullable Output<String> userRoleName;
 
-    public Output<String> userRoleName() {
-        return this.userRoleName == null ? Codegen.empty() : this.userRoleName;
+    public Optional<Output<String>> userRoleName() {
+        return Optional.ofNullable(this.userRoleName);
     }
 
     /**
@@ -121,10 +121,10 @@ public final class BrokerLdapServerMetadataArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="userSearchMatching")
-      private final @Nullable Output<String> userSearchMatching;
+    private @Nullable Output<String> userSearchMatching;
 
-    public Output<String> userSearchMatching() {
-        return this.userSearchMatching == null ? Codegen.empty() : this.userSearchMatching;
+    public Optional<Output<String>> userSearchMatching() {
+        return Optional.ofNullable(this.userSearchMatching);
     }
 
     /**
@@ -132,183 +132,152 @@ public final class BrokerLdapServerMetadataArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="userSearchSubtree")
-      private final @Nullable Output<Boolean> userSearchSubtree;
+    private @Nullable Output<Boolean> userSearchSubtree;
 
-    public Output<Boolean> userSearchSubtree() {
-        return this.userSearchSubtree == null ? Codegen.empty() : this.userSearchSubtree;
+    public Optional<Output<Boolean>> userSearchSubtree() {
+        return Optional.ofNullable(this.userSearchSubtree);
     }
 
-    public BrokerLdapServerMetadataArgs(
-        @Nullable Output<List<String>> hosts,
-        @Nullable Output<String> roleBase,
-        @Nullable Output<String> roleName,
-        @Nullable Output<String> roleSearchMatching,
-        @Nullable Output<Boolean> roleSearchSubtree,
-        @Nullable Output<String> serviceAccountPassword,
-        @Nullable Output<String> serviceAccountUsername,
-        @Nullable Output<String> userBase,
-        @Nullable Output<String> userRoleName,
-        @Nullable Output<String> userSearchMatching,
-        @Nullable Output<Boolean> userSearchSubtree) {
-        this.hosts = hosts;
-        this.roleBase = roleBase;
-        this.roleName = roleName;
-        this.roleSearchMatching = roleSearchMatching;
-        this.roleSearchSubtree = roleSearchSubtree;
-        this.serviceAccountPassword = serviceAccountPassword;
-        this.serviceAccountUsername = serviceAccountUsername;
-        this.userBase = userBase;
-        this.userRoleName = userRoleName;
-        this.userSearchMatching = userSearchMatching;
-        this.userSearchSubtree = userSearchSubtree;
-    }
+    private BrokerLdapServerMetadataArgs() {}
 
-    private BrokerLdapServerMetadataArgs() {
-        this.hosts = Codegen.empty();
-        this.roleBase = Codegen.empty();
-        this.roleName = Codegen.empty();
-        this.roleSearchMatching = Codegen.empty();
-        this.roleSearchSubtree = Codegen.empty();
-        this.serviceAccountPassword = Codegen.empty();
-        this.serviceAccountUsername = Codegen.empty();
-        this.userBase = Codegen.empty();
-        this.userRoleName = Codegen.empty();
-        this.userSearchMatching = Codegen.empty();
-        this.userSearchSubtree = Codegen.empty();
+    private BrokerLdapServerMetadataArgs(BrokerLdapServerMetadataArgs $) {
+        this.hosts = $.hosts;
+        this.roleBase = $.roleBase;
+        this.roleName = $.roleName;
+        this.roleSearchMatching = $.roleSearchMatching;
+        this.roleSearchSubtree = $.roleSearchSubtree;
+        this.serviceAccountPassword = $.serviceAccountPassword;
+        this.serviceAccountUsername = $.serviceAccountUsername;
+        this.userBase = $.userBase;
+        this.userRoleName = $.userRoleName;
+        this.userSearchMatching = $.userSearchMatching;
+        this.userSearchSubtree = $.userSearchSubtree;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BrokerLdapServerMetadataArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> hosts;
-        private @Nullable Output<String> roleBase;
-        private @Nullable Output<String> roleName;
-        private @Nullable Output<String> roleSearchMatching;
-        private @Nullable Output<Boolean> roleSearchSubtree;
-        private @Nullable Output<String> serviceAccountPassword;
-        private @Nullable Output<String> serviceAccountUsername;
-        private @Nullable Output<String> userBase;
-        private @Nullable Output<String> userRoleName;
-        private @Nullable Output<String> userSearchMatching;
-        private @Nullable Output<Boolean> userSearchSubtree;
+        private BrokerLdapServerMetadataArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new BrokerLdapServerMetadataArgs();
         }
 
         public Builder(BrokerLdapServerMetadataArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.hosts = defaults.hosts;
-    	      this.roleBase = defaults.roleBase;
-    	      this.roleName = defaults.roleName;
-    	      this.roleSearchMatching = defaults.roleSearchMatching;
-    	      this.roleSearchSubtree = defaults.roleSearchSubtree;
-    	      this.serviceAccountPassword = defaults.serviceAccountPassword;
-    	      this.serviceAccountUsername = defaults.serviceAccountUsername;
-    	      this.userBase = defaults.userBase;
-    	      this.userRoleName = defaults.userRoleName;
-    	      this.userSearchMatching = defaults.userSearchMatching;
-    	      this.userSearchSubtree = defaults.userSearchSubtree;
+            $ = new BrokerLdapServerMetadataArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder hosts(@Nullable Output<List<String>> hosts) {
-            this.hosts = hosts;
+            $.hosts = hosts;
             return this;
         }
-        public Builder hosts(@Nullable List<String> hosts) {
-            this.hosts = Codegen.ofNullable(hosts);
-            return this;
+
+        public Builder hosts(List<String> hosts) {
+            return hosts(Output.of(hosts));
         }
+
         public Builder hosts(String... hosts) {
             return hosts(List.of(hosts));
         }
+
         public Builder roleBase(@Nullable Output<String> roleBase) {
-            this.roleBase = roleBase;
+            $.roleBase = roleBase;
             return this;
         }
-        public Builder roleBase(@Nullable String roleBase) {
-            this.roleBase = Codegen.ofNullable(roleBase);
-            return this;
+
+        public Builder roleBase(String roleBase) {
+            return roleBase(Output.of(roleBase));
         }
+
         public Builder roleName(@Nullable Output<String> roleName) {
-            this.roleName = roleName;
+            $.roleName = roleName;
             return this;
         }
-        public Builder roleName(@Nullable String roleName) {
-            this.roleName = Codegen.ofNullable(roleName);
-            return this;
+
+        public Builder roleName(String roleName) {
+            return roleName(Output.of(roleName));
         }
+
         public Builder roleSearchMatching(@Nullable Output<String> roleSearchMatching) {
-            this.roleSearchMatching = roleSearchMatching;
+            $.roleSearchMatching = roleSearchMatching;
             return this;
         }
-        public Builder roleSearchMatching(@Nullable String roleSearchMatching) {
-            this.roleSearchMatching = Codegen.ofNullable(roleSearchMatching);
-            return this;
+
+        public Builder roleSearchMatching(String roleSearchMatching) {
+            return roleSearchMatching(Output.of(roleSearchMatching));
         }
+
         public Builder roleSearchSubtree(@Nullable Output<Boolean> roleSearchSubtree) {
-            this.roleSearchSubtree = roleSearchSubtree;
+            $.roleSearchSubtree = roleSearchSubtree;
             return this;
         }
-        public Builder roleSearchSubtree(@Nullable Boolean roleSearchSubtree) {
-            this.roleSearchSubtree = Codegen.ofNullable(roleSearchSubtree);
-            return this;
+
+        public Builder roleSearchSubtree(Boolean roleSearchSubtree) {
+            return roleSearchSubtree(Output.of(roleSearchSubtree));
         }
+
         public Builder serviceAccountPassword(@Nullable Output<String> serviceAccountPassword) {
-            this.serviceAccountPassword = serviceAccountPassword;
+            $.serviceAccountPassword = serviceAccountPassword;
             return this;
         }
-        public Builder serviceAccountPassword(@Nullable String serviceAccountPassword) {
-            this.serviceAccountPassword = Codegen.ofNullable(serviceAccountPassword);
-            return this;
+
+        public Builder serviceAccountPassword(String serviceAccountPassword) {
+            return serviceAccountPassword(Output.of(serviceAccountPassword));
         }
+
         public Builder serviceAccountUsername(@Nullable Output<String> serviceAccountUsername) {
-            this.serviceAccountUsername = serviceAccountUsername;
+            $.serviceAccountUsername = serviceAccountUsername;
             return this;
         }
-        public Builder serviceAccountUsername(@Nullable String serviceAccountUsername) {
-            this.serviceAccountUsername = Codegen.ofNullable(serviceAccountUsername);
-            return this;
+
+        public Builder serviceAccountUsername(String serviceAccountUsername) {
+            return serviceAccountUsername(Output.of(serviceAccountUsername));
         }
+
         public Builder userBase(@Nullable Output<String> userBase) {
-            this.userBase = userBase;
+            $.userBase = userBase;
             return this;
         }
-        public Builder userBase(@Nullable String userBase) {
-            this.userBase = Codegen.ofNullable(userBase);
-            return this;
+
+        public Builder userBase(String userBase) {
+            return userBase(Output.of(userBase));
         }
+
         public Builder userRoleName(@Nullable Output<String> userRoleName) {
-            this.userRoleName = userRoleName;
+            $.userRoleName = userRoleName;
             return this;
         }
-        public Builder userRoleName(@Nullable String userRoleName) {
-            this.userRoleName = Codegen.ofNullable(userRoleName);
-            return this;
+
+        public Builder userRoleName(String userRoleName) {
+            return userRoleName(Output.of(userRoleName));
         }
+
         public Builder userSearchMatching(@Nullable Output<String> userSearchMatching) {
-            this.userSearchMatching = userSearchMatching;
+            $.userSearchMatching = userSearchMatching;
             return this;
         }
-        public Builder userSearchMatching(@Nullable String userSearchMatching) {
-            this.userSearchMatching = Codegen.ofNullable(userSearchMatching);
-            return this;
+
+        public Builder userSearchMatching(String userSearchMatching) {
+            return userSearchMatching(Output.of(userSearchMatching));
         }
+
         public Builder userSearchSubtree(@Nullable Output<Boolean> userSearchSubtree) {
-            this.userSearchSubtree = userSearchSubtree;
+            $.userSearchSubtree = userSearchSubtree;
             return this;
         }
-        public Builder userSearchSubtree(@Nullable Boolean userSearchSubtree) {
-            this.userSearchSubtree = Codegen.ofNullable(userSearchSubtree);
-            return this;
-        }        public BrokerLdapServerMetadataArgs build() {
-            return new BrokerLdapServerMetadataArgs(hosts, roleBase, roleName, roleSearchMatching, roleSearchSubtree, serviceAccountPassword, serviceAccountUsername, userBase, userRoleName, userSearchMatching, userSearchSubtree);
+
+        public Builder userSearchSubtree(Boolean userSearchSubtree) {
+            return userSearchSubtree(Output.of(userSearchSubtree));
+        }
+
+        public BrokerLdapServerMetadataArgs build() {
+            return $;
         }
     }
+
 }

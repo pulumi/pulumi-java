@@ -15,45 +15,44 @@ public final class DeliveryStreamOutputFormatConfiguration extends com.pulumi.re
     public static final DeliveryStreamOutputFormatConfiguration Empty = new DeliveryStreamOutputFormatConfiguration();
 
     @Import(name="serializer")
-      private final @Nullable DeliveryStreamSerializer serializer;
+    private @Nullable DeliveryStreamSerializer serializer;
 
     public Optional<DeliveryStreamSerializer> serializer() {
-        return this.serializer == null ? Optional.empty() : Optional.ofNullable(this.serializer);
+        return Optional.ofNullable(this.serializer);
     }
 
-    public DeliveryStreamOutputFormatConfiguration(@Nullable DeliveryStreamSerializer serializer) {
-        this.serializer = serializer;
-    }
+    private DeliveryStreamOutputFormatConfiguration() {}
 
-    private DeliveryStreamOutputFormatConfiguration() {
-        this.serializer = null;
+    private DeliveryStreamOutputFormatConfiguration(DeliveryStreamOutputFormatConfiguration $) {
+        this.serializer = $.serializer;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DeliveryStreamOutputFormatConfiguration defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable DeliveryStreamSerializer serializer;
+        private DeliveryStreamOutputFormatConfiguration $;
 
         public Builder() {
-    	      // Empty
+            $ = new DeliveryStreamOutputFormatConfiguration();
         }
 
         public Builder(DeliveryStreamOutputFormatConfiguration defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.serializer = defaults.serializer;
+            $ = new DeliveryStreamOutputFormatConfiguration(Objects.requireNonNull(defaults));
         }
 
         public Builder serializer(@Nullable DeliveryStreamSerializer serializer) {
-            this.serializer = serializer;
+            $.serializer = serializer;
             return this;
-        }        public DeliveryStreamOutputFormatConfiguration build() {
-            return new DeliveryStreamOutputFormatConfiguration(serializer);
+        }
+
+        public DeliveryStreamOutputFormatConfiguration build() {
+            return $;
         }
     }
+
 }

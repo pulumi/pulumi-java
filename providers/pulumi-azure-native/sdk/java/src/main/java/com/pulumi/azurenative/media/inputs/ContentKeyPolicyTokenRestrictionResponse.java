@@ -30,10 +30,10 @@ public final class ContentKeyPolicyTokenRestrictionResponse extends com.pulumi.r
      * 
      */
     @Import(name="alternateVerificationKeys")
-      private final @Nullable List<Object> alternateVerificationKeys;
+    private @Nullable List<Object> alternateVerificationKeys;
 
-    public List<Object> alternateVerificationKeys() {
-        return this.alternateVerificationKeys == null ? List.of() : this.alternateVerificationKeys;
+    public Optional<List<Object>> alternateVerificationKeys() {
+        return Optional.ofNullable(this.alternateVerificationKeys);
     }
 
     /**
@@ -41,7 +41,7 @@ public final class ContentKeyPolicyTokenRestrictionResponse extends com.pulumi.r
      * 
      */
     @Import(name="audience", required=true)
-      private final String audience;
+    private String audience;
 
     public String audience() {
         return this.audience;
@@ -52,7 +52,7 @@ public final class ContentKeyPolicyTokenRestrictionResponse extends com.pulumi.r
      * 
      */
     @Import(name="issuer", required=true)
-      private final String issuer;
+    private String issuer;
 
     public String issuer() {
         return this.issuer;
@@ -64,7 +64,7 @@ public final class ContentKeyPolicyTokenRestrictionResponse extends com.pulumi.r
      * 
      */
     @Import(name="odataType", required=true)
-      private final String odataType;
+    private String odataType;
 
     public String odataType() {
         return this.odataType;
@@ -75,10 +75,10 @@ public final class ContentKeyPolicyTokenRestrictionResponse extends com.pulumi.r
      * 
      */
     @Import(name="openIdConnectDiscoveryDocument")
-      private final @Nullable String openIdConnectDiscoveryDocument;
+    private @Nullable String openIdConnectDiscoveryDocument;
 
     public Optional<String> openIdConnectDiscoveryDocument() {
-        return this.openIdConnectDiscoveryDocument == null ? Optional.empty() : Optional.ofNullable(this.openIdConnectDiscoveryDocument);
+        return Optional.ofNullable(this.openIdConnectDiscoveryDocument);
     }
 
     /**
@@ -86,7 +86,7 @@ public final class ContentKeyPolicyTokenRestrictionResponse extends com.pulumi.r
      * 
      */
     @Import(name="primaryVerificationKey", required=true)
-      private final Object primaryVerificationKey;
+    private Object primaryVerificationKey;
 
     public Object primaryVerificationKey() {
         return this.primaryVerificationKey;
@@ -97,10 +97,10 @@ public final class ContentKeyPolicyTokenRestrictionResponse extends com.pulumi.r
      * 
      */
     @Import(name="requiredClaims")
-      private final @Nullable List<ContentKeyPolicyTokenClaimResponse> requiredClaims;
+    private @Nullable List<ContentKeyPolicyTokenClaimResponse> requiredClaims;
 
-    public List<ContentKeyPolicyTokenClaimResponse> requiredClaims() {
-        return this.requiredClaims == null ? List.of() : this.requiredClaims;
+    public Optional<List<ContentKeyPolicyTokenClaimResponse>> requiredClaims() {
+        return Optional.ofNullable(this.requiredClaims);
     }
 
     /**
@@ -108,115 +108,99 @@ public final class ContentKeyPolicyTokenRestrictionResponse extends com.pulumi.r
      * 
      */
     @Import(name="restrictionTokenType", required=true)
-      private final String restrictionTokenType;
+    private String restrictionTokenType;
 
     public String restrictionTokenType() {
         return this.restrictionTokenType;
     }
 
-    public ContentKeyPolicyTokenRestrictionResponse(
-        @Nullable List<Object> alternateVerificationKeys,
-        String audience,
-        String issuer,
-        String odataType,
-        @Nullable String openIdConnectDiscoveryDocument,
-        Object primaryVerificationKey,
-        @Nullable List<ContentKeyPolicyTokenClaimResponse> requiredClaims,
-        String restrictionTokenType) {
-        this.alternateVerificationKeys = alternateVerificationKeys;
-        this.audience = Objects.requireNonNull(audience, "expected parameter 'audience' to be non-null");
-        this.issuer = Objects.requireNonNull(issuer, "expected parameter 'issuer' to be non-null");
-        this.odataType = Codegen.stringProp("odataType").arg(odataType).require();
-        this.openIdConnectDiscoveryDocument = openIdConnectDiscoveryDocument;
-        this.primaryVerificationKey = Objects.requireNonNull(primaryVerificationKey, "expected parameter 'primaryVerificationKey' to be non-null");
-        this.requiredClaims = requiredClaims;
-        this.restrictionTokenType = Objects.requireNonNull(restrictionTokenType, "expected parameter 'restrictionTokenType' to be non-null");
-    }
+    private ContentKeyPolicyTokenRestrictionResponse() {}
 
-    private ContentKeyPolicyTokenRestrictionResponse() {
-        this.alternateVerificationKeys = List.of();
-        this.audience = null;
-        this.issuer = null;
-        this.odataType = null;
-        this.openIdConnectDiscoveryDocument = null;
-        this.primaryVerificationKey = null;
-        this.requiredClaims = List.of();
-        this.restrictionTokenType = null;
+    private ContentKeyPolicyTokenRestrictionResponse(ContentKeyPolicyTokenRestrictionResponse $) {
+        this.alternateVerificationKeys = $.alternateVerificationKeys;
+        this.audience = $.audience;
+        this.issuer = $.issuer;
+        this.odataType = $.odataType;
+        this.openIdConnectDiscoveryDocument = $.openIdConnectDiscoveryDocument;
+        this.primaryVerificationKey = $.primaryVerificationKey;
+        this.requiredClaims = $.requiredClaims;
+        this.restrictionTokenType = $.restrictionTokenType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ContentKeyPolicyTokenRestrictionResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<Object> alternateVerificationKeys;
-        private String audience;
-        private String issuer;
-        private String odataType;
-        private @Nullable String openIdConnectDiscoveryDocument;
-        private Object primaryVerificationKey;
-        private @Nullable List<ContentKeyPolicyTokenClaimResponse> requiredClaims;
-        private String restrictionTokenType;
+        private ContentKeyPolicyTokenRestrictionResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ContentKeyPolicyTokenRestrictionResponse();
         }
 
         public Builder(ContentKeyPolicyTokenRestrictionResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.alternateVerificationKeys = defaults.alternateVerificationKeys;
-    	      this.audience = defaults.audience;
-    	      this.issuer = defaults.issuer;
-    	      this.odataType = defaults.odataType;
-    	      this.openIdConnectDiscoveryDocument = defaults.openIdConnectDiscoveryDocument;
-    	      this.primaryVerificationKey = defaults.primaryVerificationKey;
-    	      this.requiredClaims = defaults.requiredClaims;
-    	      this.restrictionTokenType = defaults.restrictionTokenType;
+            $ = new ContentKeyPolicyTokenRestrictionResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder alternateVerificationKeys(@Nullable List<Object> alternateVerificationKeys) {
-            this.alternateVerificationKeys = alternateVerificationKeys;
+            $.alternateVerificationKeys = alternateVerificationKeys;
             return this;
         }
+
         public Builder alternateVerificationKeys(Object... alternateVerificationKeys) {
             return alternateVerificationKeys(List.of(alternateVerificationKeys));
         }
+
         public Builder audience(String audience) {
-            this.audience = Objects.requireNonNull(audience);
+            $.audience = audience;
             return this;
         }
+
         public Builder issuer(String issuer) {
-            this.issuer = Objects.requireNonNull(issuer);
+            $.issuer = issuer;
             return this;
         }
+
         public Builder odataType(String odataType) {
-            this.odataType = Objects.requireNonNull(odataType);
+            $.odataType = odataType;
             return this;
         }
+
         public Builder openIdConnectDiscoveryDocument(@Nullable String openIdConnectDiscoveryDocument) {
-            this.openIdConnectDiscoveryDocument = openIdConnectDiscoveryDocument;
+            $.openIdConnectDiscoveryDocument = openIdConnectDiscoveryDocument;
             return this;
         }
+
         public Builder primaryVerificationKey(Object primaryVerificationKey) {
-            this.primaryVerificationKey = Objects.requireNonNull(primaryVerificationKey);
+            $.primaryVerificationKey = primaryVerificationKey;
             return this;
         }
+
         public Builder requiredClaims(@Nullable List<ContentKeyPolicyTokenClaimResponse> requiredClaims) {
-            this.requiredClaims = requiredClaims;
+            $.requiredClaims = requiredClaims;
             return this;
         }
+
         public Builder requiredClaims(ContentKeyPolicyTokenClaimResponse... requiredClaims) {
             return requiredClaims(List.of(requiredClaims));
         }
+
         public Builder restrictionTokenType(String restrictionTokenType) {
-            this.restrictionTokenType = Objects.requireNonNull(restrictionTokenType);
+            $.restrictionTokenType = restrictionTokenType;
             return this;
-        }        public ContentKeyPolicyTokenRestrictionResponse build() {
-            return new ContentKeyPolicyTokenRestrictionResponse(alternateVerificationKeys, audience, issuer, odataType, openIdConnectDiscoveryDocument, primaryVerificationKey, requiredClaims, restrictionTokenType);
+        }
+
+        public ContentKeyPolicyTokenRestrictionResponse build() {
+            $.audience = Objects.requireNonNull($.audience, "expected parameter 'audience' to be non-null");
+            $.issuer = Objects.requireNonNull($.issuer, "expected parameter 'issuer' to be non-null");
+            $.odataType = Codegen.stringProp("odataType").arg($.odataType).require();
+            $.primaryVerificationKey = Objects.requireNonNull($.primaryVerificationKey, "expected parameter 'primaryVerificationKey' to be non-null");
+            $.restrictionTokenType = Objects.requireNonNull($.restrictionTokenType, "expected parameter 'restrictionTokenType' to be non-null");
+            return $;
         }
     }
+
 }

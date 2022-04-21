@@ -21,7 +21,7 @@ public final class GooglePrivacyDlpV2ProximityResponse extends com.pulumi.resour
      * 
      */
     @Import(name="windowAfter", required=true)
-      private final Integer windowAfter;
+    private Integer windowAfter;
 
     public Integer windowAfter() {
         return this.windowAfter;
@@ -32,55 +32,52 @@ public final class GooglePrivacyDlpV2ProximityResponse extends com.pulumi.resour
      * 
      */
     @Import(name="windowBefore", required=true)
-      private final Integer windowBefore;
+    private Integer windowBefore;
 
     public Integer windowBefore() {
         return this.windowBefore;
     }
 
-    public GooglePrivacyDlpV2ProximityResponse(
-        Integer windowAfter,
-        Integer windowBefore) {
-        this.windowAfter = Objects.requireNonNull(windowAfter, "expected parameter 'windowAfter' to be non-null");
-        this.windowBefore = Objects.requireNonNull(windowBefore, "expected parameter 'windowBefore' to be non-null");
-    }
+    private GooglePrivacyDlpV2ProximityResponse() {}
 
-    private GooglePrivacyDlpV2ProximityResponse() {
-        this.windowAfter = null;
-        this.windowBefore = null;
+    private GooglePrivacyDlpV2ProximityResponse(GooglePrivacyDlpV2ProximityResponse $) {
+        this.windowAfter = $.windowAfter;
+        this.windowBefore = $.windowBefore;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GooglePrivacyDlpV2ProximityResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Integer windowAfter;
-        private Integer windowBefore;
+        private GooglePrivacyDlpV2ProximityResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GooglePrivacyDlpV2ProximityResponse();
         }
 
         public Builder(GooglePrivacyDlpV2ProximityResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.windowAfter = defaults.windowAfter;
-    	      this.windowBefore = defaults.windowBefore;
+            $ = new GooglePrivacyDlpV2ProximityResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder windowAfter(Integer windowAfter) {
-            this.windowAfter = Objects.requireNonNull(windowAfter);
+            $.windowAfter = windowAfter;
             return this;
         }
+
         public Builder windowBefore(Integer windowBefore) {
-            this.windowBefore = Objects.requireNonNull(windowBefore);
+            $.windowBefore = windowBefore;
             return this;
-        }        public GooglePrivacyDlpV2ProximityResponse build() {
-            return new GooglePrivacyDlpV2ProximityResponse(windowAfter, windowBefore);
+        }
+
+        public GooglePrivacyDlpV2ProximityResponse build() {
+            $.windowAfter = Objects.requireNonNull($.windowAfter, "expected parameter 'windowAfter' to be non-null");
+            $.windowBefore = Objects.requireNonNull($.windowBefore, "expected parameter 'windowBefore' to be non-null");
+            return $;
         }
     }
+
 }

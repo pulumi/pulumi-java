@@ -17,7 +17,7 @@ public final class GetClusterPrincipalAssignmentArgs extends com.pulumi.resource
      * 
      */
     @Import(name="clusterName", required=true)
-      private final String clusterName;
+    private String clusterName;
 
     public String clusterName() {
         return this.clusterName;
@@ -28,7 +28,7 @@ public final class GetClusterPrincipalAssignmentArgs extends com.pulumi.resource
      * 
      */
     @Import(name="principalAssignmentName", required=true)
-      private final String principalAssignmentName;
+    private String principalAssignmentName;
 
     public String principalAssignmentName() {
         return this.principalAssignmentName;
@@ -39,64 +39,59 @@ public final class GetClusterPrincipalAssignmentArgs extends com.pulumi.resource
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public GetClusterPrincipalAssignmentArgs(
-        String clusterName,
-        String principalAssignmentName,
-        String resourceGroupName) {
-        this.clusterName = Objects.requireNonNull(clusterName, "expected parameter 'clusterName' to be non-null");
-        this.principalAssignmentName = Objects.requireNonNull(principalAssignmentName, "expected parameter 'principalAssignmentName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private GetClusterPrincipalAssignmentArgs() {}
 
-    private GetClusterPrincipalAssignmentArgs() {
-        this.clusterName = null;
-        this.principalAssignmentName = null;
-        this.resourceGroupName = null;
+    private GetClusterPrincipalAssignmentArgs(GetClusterPrincipalAssignmentArgs $) {
+        this.clusterName = $.clusterName;
+        this.principalAssignmentName = $.principalAssignmentName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetClusterPrincipalAssignmentArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String clusterName;
-        private String principalAssignmentName;
-        private String resourceGroupName;
+        private GetClusterPrincipalAssignmentArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetClusterPrincipalAssignmentArgs();
         }
 
         public Builder(GetClusterPrincipalAssignmentArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.clusterName = defaults.clusterName;
-    	      this.principalAssignmentName = defaults.principalAssignmentName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new GetClusterPrincipalAssignmentArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder clusterName(String clusterName) {
-            this.clusterName = Objects.requireNonNull(clusterName);
+            $.clusterName = clusterName;
             return this;
         }
+
         public Builder principalAssignmentName(String principalAssignmentName) {
-            this.principalAssignmentName = Objects.requireNonNull(principalAssignmentName);
+            $.principalAssignmentName = principalAssignmentName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public GetClusterPrincipalAssignmentArgs build() {
-            return new GetClusterPrincipalAssignmentArgs(clusterName, principalAssignmentName, resourceGroupName);
+        }
+
+        public GetClusterPrincipalAssignmentArgs build() {
+            $.clusterName = Objects.requireNonNull($.clusterName, "expected parameter 'clusterName' to be non-null");
+            $.principalAssignmentName = Objects.requireNonNull($.principalAssignmentName, "expected parameter 'principalAssignmentName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,7 +5,6 @@ package com.pulumi.googlenative.privateca_v1beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.Objects;
 
@@ -23,7 +22,7 @@ public final class IssuingOptionsArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="includeCaCertUrl", required=true)
-      private final Output<Boolean> includeCaCertUrl;
+    private Output<Boolean> includeCaCertUrl;
 
     public Output<Boolean> includeCaCertUrl() {
         return this.includeCaCertUrl;
@@ -34,63 +33,60 @@ public final class IssuingOptionsArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="includeCrlAccessUrl", required=true)
-      private final Output<Boolean> includeCrlAccessUrl;
+    private Output<Boolean> includeCrlAccessUrl;
 
     public Output<Boolean> includeCrlAccessUrl() {
         return this.includeCrlAccessUrl;
     }
 
-    public IssuingOptionsArgs(
-        Output<Boolean> includeCaCertUrl,
-        Output<Boolean> includeCrlAccessUrl) {
-        this.includeCaCertUrl = Objects.requireNonNull(includeCaCertUrl, "expected parameter 'includeCaCertUrl' to be non-null");
-        this.includeCrlAccessUrl = Objects.requireNonNull(includeCrlAccessUrl, "expected parameter 'includeCrlAccessUrl' to be non-null");
-    }
+    private IssuingOptionsArgs() {}
 
-    private IssuingOptionsArgs() {
-        this.includeCaCertUrl = Codegen.empty();
-        this.includeCrlAccessUrl = Codegen.empty();
+    private IssuingOptionsArgs(IssuingOptionsArgs $) {
+        this.includeCaCertUrl = $.includeCaCertUrl;
+        this.includeCrlAccessUrl = $.includeCrlAccessUrl;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(IssuingOptionsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Boolean> includeCaCertUrl;
-        private Output<Boolean> includeCrlAccessUrl;
+        private IssuingOptionsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new IssuingOptionsArgs();
         }
 
         public Builder(IssuingOptionsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.includeCaCertUrl = defaults.includeCaCertUrl;
-    	      this.includeCrlAccessUrl = defaults.includeCrlAccessUrl;
+            $ = new IssuingOptionsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder includeCaCertUrl(Output<Boolean> includeCaCertUrl) {
-            this.includeCaCertUrl = Objects.requireNonNull(includeCaCertUrl);
+            $.includeCaCertUrl = includeCaCertUrl;
             return this;
         }
+
         public Builder includeCaCertUrl(Boolean includeCaCertUrl) {
-            this.includeCaCertUrl = Output.of(Objects.requireNonNull(includeCaCertUrl));
-            return this;
+            return includeCaCertUrl(Output.of(includeCaCertUrl));
         }
+
         public Builder includeCrlAccessUrl(Output<Boolean> includeCrlAccessUrl) {
-            this.includeCrlAccessUrl = Objects.requireNonNull(includeCrlAccessUrl);
+            $.includeCrlAccessUrl = includeCrlAccessUrl;
             return this;
         }
+
         public Builder includeCrlAccessUrl(Boolean includeCrlAccessUrl) {
-            this.includeCrlAccessUrl = Output.of(Objects.requireNonNull(includeCrlAccessUrl));
-            return this;
-        }        public IssuingOptionsArgs build() {
-            return new IssuingOptionsArgs(includeCaCertUrl, includeCrlAccessUrl);
+            return includeCrlAccessUrl(Output.of(includeCrlAccessUrl));
+        }
+
+        public IssuingOptionsArgs build() {
+            $.includeCaCertUrl = Objects.requireNonNull($.includeCaCertUrl, "expected parameter 'includeCaCertUrl' to be non-null");
+            $.includeCrlAccessUrl = Objects.requireNonNull($.includeCrlAccessUrl, "expected parameter 'includeCrlAccessUrl' to be non-null");
+            return $;
         }
     }
+
 }

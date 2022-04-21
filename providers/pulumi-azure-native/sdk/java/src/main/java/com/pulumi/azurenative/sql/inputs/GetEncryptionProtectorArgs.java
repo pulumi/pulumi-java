@@ -17,7 +17,7 @@ public final class GetEncryptionProtectorArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="encryptionProtectorName", required=true)
-      private final String encryptionProtectorName;
+    private String encryptionProtectorName;
 
     public String encryptionProtectorName() {
         return this.encryptionProtectorName;
@@ -28,7 +28,7 @@ public final class GetEncryptionProtectorArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -39,64 +39,59 @@ public final class GetEncryptionProtectorArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="serverName", required=true)
-      private final String serverName;
+    private String serverName;
 
     public String serverName() {
         return this.serverName;
     }
 
-    public GetEncryptionProtectorArgs(
-        String encryptionProtectorName,
-        String resourceGroupName,
-        String serverName) {
-        this.encryptionProtectorName = Objects.requireNonNull(encryptionProtectorName, "expected parameter 'encryptionProtectorName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.serverName = Objects.requireNonNull(serverName, "expected parameter 'serverName' to be non-null");
-    }
+    private GetEncryptionProtectorArgs() {}
 
-    private GetEncryptionProtectorArgs() {
-        this.encryptionProtectorName = null;
-        this.resourceGroupName = null;
-        this.serverName = null;
+    private GetEncryptionProtectorArgs(GetEncryptionProtectorArgs $) {
+        this.encryptionProtectorName = $.encryptionProtectorName;
+        this.resourceGroupName = $.resourceGroupName;
+        this.serverName = $.serverName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetEncryptionProtectorArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String encryptionProtectorName;
-        private String resourceGroupName;
-        private String serverName;
+        private GetEncryptionProtectorArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetEncryptionProtectorArgs();
         }
 
         public Builder(GetEncryptionProtectorArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.encryptionProtectorName = defaults.encryptionProtectorName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.serverName = defaults.serverName;
+            $ = new GetEncryptionProtectorArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder encryptionProtectorName(String encryptionProtectorName) {
-            this.encryptionProtectorName = Objects.requireNonNull(encryptionProtectorName);
+            $.encryptionProtectorName = encryptionProtectorName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder serverName(String serverName) {
-            this.serverName = Objects.requireNonNull(serverName);
+            $.serverName = serverName;
             return this;
-        }        public GetEncryptionProtectorArgs build() {
-            return new GetEncryptionProtectorArgs(encryptionProtectorName, resourceGroupName, serverName);
+        }
+
+        public GetEncryptionProtectorArgs build() {
+            $.encryptionProtectorName = Objects.requireNonNull($.encryptionProtectorName, "expected parameter 'encryptionProtectorName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.serverName = Objects.requireNonNull($.serverName, "expected parameter 'serverName' to be non-null");
+            return $;
         }
     }
+
 }

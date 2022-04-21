@@ -5,11 +5,11 @@ package com.pulumi.googlenative.toolresults_v1beta3.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.toolresults_v1beta3.enums.PrimaryStepRollUp;
 import com.pulumi.googlenative.toolresults_v1beta3.inputs.IndividualOutcomeArgs;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class PrimaryStepArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="individualOutcome")
-      private final @Nullable Output<List<IndividualOutcomeArgs>> individualOutcome;
+    private @Nullable Output<List<IndividualOutcomeArgs>> individualOutcome;
 
-    public Output<List<IndividualOutcomeArgs>> individualOutcome() {
-        return this.individualOutcome == null ? Codegen.empty() : this.individualOutcome;
+    public Optional<Output<List<IndividualOutcomeArgs>>> individualOutcome() {
+        return Optional.ofNullable(this.individualOutcome);
     }
 
     /**
@@ -37,66 +37,62 @@ public final class PrimaryStepArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="rollUp")
-      private final @Nullable Output<PrimaryStepRollUp> rollUp;
+    private @Nullable Output<PrimaryStepRollUp> rollUp;
 
-    public Output<PrimaryStepRollUp> rollUp() {
-        return this.rollUp == null ? Codegen.empty() : this.rollUp;
+    public Optional<Output<PrimaryStepRollUp>> rollUp() {
+        return Optional.ofNullable(this.rollUp);
     }
 
-    public PrimaryStepArgs(
-        @Nullable Output<List<IndividualOutcomeArgs>> individualOutcome,
-        @Nullable Output<PrimaryStepRollUp> rollUp) {
-        this.individualOutcome = individualOutcome;
-        this.rollUp = rollUp;
-    }
+    private PrimaryStepArgs() {}
 
-    private PrimaryStepArgs() {
-        this.individualOutcome = Codegen.empty();
-        this.rollUp = Codegen.empty();
+    private PrimaryStepArgs(PrimaryStepArgs $) {
+        this.individualOutcome = $.individualOutcome;
+        this.rollUp = $.rollUp;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PrimaryStepArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<IndividualOutcomeArgs>> individualOutcome;
-        private @Nullable Output<PrimaryStepRollUp> rollUp;
+        private PrimaryStepArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PrimaryStepArgs();
         }
 
         public Builder(PrimaryStepArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.individualOutcome = defaults.individualOutcome;
-    	      this.rollUp = defaults.rollUp;
+            $ = new PrimaryStepArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder individualOutcome(@Nullable Output<List<IndividualOutcomeArgs>> individualOutcome) {
-            this.individualOutcome = individualOutcome;
+            $.individualOutcome = individualOutcome;
             return this;
         }
-        public Builder individualOutcome(@Nullable List<IndividualOutcomeArgs> individualOutcome) {
-            this.individualOutcome = Codegen.ofNullable(individualOutcome);
-            return this;
+
+        public Builder individualOutcome(List<IndividualOutcomeArgs> individualOutcome) {
+            return individualOutcome(Output.of(individualOutcome));
         }
+
         public Builder individualOutcome(IndividualOutcomeArgs... individualOutcome) {
             return individualOutcome(List.of(individualOutcome));
         }
+
         public Builder rollUp(@Nullable Output<PrimaryStepRollUp> rollUp) {
-            this.rollUp = rollUp;
+            $.rollUp = rollUp;
             return this;
         }
-        public Builder rollUp(@Nullable PrimaryStepRollUp rollUp) {
-            this.rollUp = Codegen.ofNullable(rollUp);
-            return this;
-        }        public PrimaryStepArgs build() {
-            return new PrimaryStepArgs(individualOutcome, rollUp);
+
+        public Builder rollUp(PrimaryStepRollUp rollUp) {
+            return rollUp(Output.of(rollUp));
+        }
+
+        public PrimaryStepArgs build() {
+            return $;
         }
     }
+
 }

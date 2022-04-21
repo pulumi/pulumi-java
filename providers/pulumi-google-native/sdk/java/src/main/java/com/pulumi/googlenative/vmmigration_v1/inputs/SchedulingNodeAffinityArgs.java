@@ -5,11 +5,11 @@ package com.pulumi.googlenative.vmmigration_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.vmmigration_v1.enums.SchedulingNodeAffinityOperator;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class SchedulingNodeAffinityArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="key")
-      private final @Nullable Output<String> key;
+    private @Nullable Output<String> key;
 
-    public Output<String> key() {
-        return this.key == null ? Codegen.empty() : this.key;
+    public Optional<Output<String>> key() {
+        return Optional.ofNullable(this.key);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class SchedulingNodeAffinityArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="operator")
-      private final @Nullable Output<SchedulingNodeAffinityOperator> operator;
+    private @Nullable Output<SchedulingNodeAffinityOperator> operator;
 
-    public Output<SchedulingNodeAffinityOperator> operator() {
-        return this.operator == null ? Codegen.empty() : this.operator;
+    public Optional<Output<SchedulingNodeAffinityOperator>> operator() {
+        return Optional.ofNullable(this.operator);
     }
 
     /**
@@ -48,79 +48,72 @@ public final class SchedulingNodeAffinityArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="values")
-      private final @Nullable Output<List<String>> values;
+    private @Nullable Output<List<String>> values;
 
-    public Output<List<String>> values() {
-        return this.values == null ? Codegen.empty() : this.values;
+    public Optional<Output<List<String>>> values() {
+        return Optional.ofNullable(this.values);
     }
 
-    public SchedulingNodeAffinityArgs(
-        @Nullable Output<String> key,
-        @Nullable Output<SchedulingNodeAffinityOperator> operator,
-        @Nullable Output<List<String>> values) {
-        this.key = key;
-        this.operator = operator;
-        this.values = values;
-    }
+    private SchedulingNodeAffinityArgs() {}
 
-    private SchedulingNodeAffinityArgs() {
-        this.key = Codegen.empty();
-        this.operator = Codegen.empty();
-        this.values = Codegen.empty();
+    private SchedulingNodeAffinityArgs(SchedulingNodeAffinityArgs $) {
+        this.key = $.key;
+        this.operator = $.operator;
+        this.values = $.values;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SchedulingNodeAffinityArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> key;
-        private @Nullable Output<SchedulingNodeAffinityOperator> operator;
-        private @Nullable Output<List<String>> values;
+        private SchedulingNodeAffinityArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SchedulingNodeAffinityArgs();
         }
 
         public Builder(SchedulingNodeAffinityArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.key = defaults.key;
-    	      this.operator = defaults.operator;
-    	      this.values = defaults.values;
+            $ = new SchedulingNodeAffinityArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder key(@Nullable Output<String> key) {
-            this.key = key;
+            $.key = key;
             return this;
         }
-        public Builder key(@Nullable String key) {
-            this.key = Codegen.ofNullable(key);
-            return this;
+
+        public Builder key(String key) {
+            return key(Output.of(key));
         }
+
         public Builder operator(@Nullable Output<SchedulingNodeAffinityOperator> operator) {
-            this.operator = operator;
+            $.operator = operator;
             return this;
         }
-        public Builder operator(@Nullable SchedulingNodeAffinityOperator operator) {
-            this.operator = Codegen.ofNullable(operator);
-            return this;
+
+        public Builder operator(SchedulingNodeAffinityOperator operator) {
+            return operator(Output.of(operator));
         }
+
         public Builder values(@Nullable Output<List<String>> values) {
-            this.values = values;
+            $.values = values;
             return this;
         }
-        public Builder values(@Nullable List<String> values) {
-            this.values = Codegen.ofNullable(values);
-            return this;
+
+        public Builder values(List<String> values) {
+            return values(Output.of(values));
         }
+
         public Builder values(String... values) {
             return values(List.of(values));
-        }        public SchedulingNodeAffinityArgs build() {
-            return new SchedulingNodeAffinityArgs(key, operator, values);
+        }
+
+        public SchedulingNodeAffinityArgs build() {
+            return $;
         }
     }
+
 }

@@ -5,11 +5,11 @@ package com.pulumi.gcp.osconfig.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class GuestPoliciesRecipeInstallStepMsiInstallationArgs extends com
      * 
      */
     @Import(name="allowedExitCodes")
-      private final @Nullable Output<List<Integer>> allowedExitCodes;
+    private @Nullable Output<List<Integer>> allowedExitCodes;
 
-    public Output<List<Integer>> allowedExitCodes() {
-        return this.allowedExitCodes == null ? Codegen.empty() : this.allowedExitCodes;
+    public Optional<Output<List<Integer>>> allowedExitCodes() {
+        return Optional.ofNullable(this.allowedExitCodes);
     }
 
     /**
@@ -33,7 +33,7 @@ public final class GuestPoliciesRecipeInstallStepMsiInstallationArgs extends com
      * 
      */
     @Import(name="artifactId", required=true)
-      private final Output<String> artifactId;
+    private Output<String> artifactId;
 
     public Output<String> artifactId() {
         return this.artifactId;
@@ -44,82 +44,77 @@ public final class GuestPoliciesRecipeInstallStepMsiInstallationArgs extends com
      * 
      */
     @Import(name="flags")
-      private final @Nullable Output<List<String>> flags;
+    private @Nullable Output<List<String>> flags;
 
-    public Output<List<String>> flags() {
-        return this.flags == null ? Codegen.empty() : this.flags;
+    public Optional<Output<List<String>>> flags() {
+        return Optional.ofNullable(this.flags);
     }
 
-    public GuestPoliciesRecipeInstallStepMsiInstallationArgs(
-        @Nullable Output<List<Integer>> allowedExitCodes,
-        Output<String> artifactId,
-        @Nullable Output<List<String>> flags) {
-        this.allowedExitCodes = allowedExitCodes;
-        this.artifactId = Objects.requireNonNull(artifactId, "expected parameter 'artifactId' to be non-null");
-        this.flags = flags;
-    }
+    private GuestPoliciesRecipeInstallStepMsiInstallationArgs() {}
 
-    private GuestPoliciesRecipeInstallStepMsiInstallationArgs() {
-        this.allowedExitCodes = Codegen.empty();
-        this.artifactId = Codegen.empty();
-        this.flags = Codegen.empty();
+    private GuestPoliciesRecipeInstallStepMsiInstallationArgs(GuestPoliciesRecipeInstallStepMsiInstallationArgs $) {
+        this.allowedExitCodes = $.allowedExitCodes;
+        this.artifactId = $.artifactId;
+        this.flags = $.flags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GuestPoliciesRecipeInstallStepMsiInstallationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<Integer>> allowedExitCodes;
-        private Output<String> artifactId;
-        private @Nullable Output<List<String>> flags;
+        private GuestPoliciesRecipeInstallStepMsiInstallationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GuestPoliciesRecipeInstallStepMsiInstallationArgs();
         }
 
         public Builder(GuestPoliciesRecipeInstallStepMsiInstallationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.allowedExitCodes = defaults.allowedExitCodes;
-    	      this.artifactId = defaults.artifactId;
-    	      this.flags = defaults.flags;
+            $ = new GuestPoliciesRecipeInstallStepMsiInstallationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder allowedExitCodes(@Nullable Output<List<Integer>> allowedExitCodes) {
-            this.allowedExitCodes = allowedExitCodes;
+            $.allowedExitCodes = allowedExitCodes;
             return this;
         }
-        public Builder allowedExitCodes(@Nullable List<Integer> allowedExitCodes) {
-            this.allowedExitCodes = Codegen.ofNullable(allowedExitCodes);
-            return this;
+
+        public Builder allowedExitCodes(List<Integer> allowedExitCodes) {
+            return allowedExitCodes(Output.of(allowedExitCodes));
         }
+
         public Builder allowedExitCodes(Integer... allowedExitCodes) {
             return allowedExitCodes(List.of(allowedExitCodes));
         }
+
         public Builder artifactId(Output<String> artifactId) {
-            this.artifactId = Objects.requireNonNull(artifactId);
+            $.artifactId = artifactId;
             return this;
         }
+
         public Builder artifactId(String artifactId) {
-            this.artifactId = Output.of(Objects.requireNonNull(artifactId));
-            return this;
+            return artifactId(Output.of(artifactId));
         }
+
         public Builder flags(@Nullable Output<List<String>> flags) {
-            this.flags = flags;
+            $.flags = flags;
             return this;
         }
-        public Builder flags(@Nullable List<String> flags) {
-            this.flags = Codegen.ofNullable(flags);
-            return this;
+
+        public Builder flags(List<String> flags) {
+            return flags(Output.of(flags));
         }
+
         public Builder flags(String... flags) {
             return flags(List.of(flags));
-        }        public GuestPoliciesRecipeInstallStepMsiInstallationArgs build() {
-            return new GuestPoliciesRecipeInstallStepMsiInstallationArgs(allowedExitCodes, artifactId, flags);
+        }
+
+        public GuestPoliciesRecipeInstallStepMsiInstallationArgs build() {
+            $.artifactId = Objects.requireNonNull($.artifactId, "expected parameter 'artifactId' to be non-null");
+            return $;
         }
     }
+
 }

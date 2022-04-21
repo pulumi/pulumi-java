@@ -10,6 +10,7 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,7 +23,7 @@ public final class CloudEdgeManagementRoleArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="deviceName", required=true)
-      private final Output<String> deviceName;
+    private Output<String> deviceName;
 
     public Output<String> deviceName() {
         return this.deviceName;
@@ -34,7 +35,7 @@ public final class CloudEdgeManagementRoleArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="kind", required=true)
-      private final Output<String> kind;
+    private Output<String> kind;
 
     public Output<String> kind() {
         return this.kind;
@@ -45,10 +46,10 @@ public final class CloudEdgeManagementRoleArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -56,7 +57,7 @@ public final class CloudEdgeManagementRoleArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -67,102 +68,92 @@ public final class CloudEdgeManagementRoleArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="roleStatus", required=true)
-      private final Output<Either<String,RoleStatus>> roleStatus;
+    private Output<Either<String,RoleStatus>> roleStatus;
 
     public Output<Either<String,RoleStatus>> roleStatus() {
         return this.roleStatus;
     }
 
-    public CloudEdgeManagementRoleArgs(
-        Output<String> deviceName,
-        Output<String> kind,
-        @Nullable Output<String> name,
-        Output<String> resourceGroupName,
-        Output<Either<String,RoleStatus>> roleStatus) {
-        this.deviceName = Objects.requireNonNull(deviceName, "expected parameter 'deviceName' to be non-null");
-        this.kind = Codegen.stringProp("kind").output().arg(kind).require();
-        this.name = name;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.roleStatus = Objects.requireNonNull(roleStatus, "expected parameter 'roleStatus' to be non-null");
-    }
+    private CloudEdgeManagementRoleArgs() {}
 
-    private CloudEdgeManagementRoleArgs() {
-        this.deviceName = Codegen.empty();
-        this.kind = Codegen.empty();
-        this.name = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.roleStatus = Codegen.empty();
+    private CloudEdgeManagementRoleArgs(CloudEdgeManagementRoleArgs $) {
+        this.deviceName = $.deviceName;
+        this.kind = $.kind;
+        this.name = $.name;
+        this.resourceGroupName = $.resourceGroupName;
+        this.roleStatus = $.roleStatus;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CloudEdgeManagementRoleArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> deviceName;
-        private Output<String> kind;
-        private @Nullable Output<String> name;
-        private Output<String> resourceGroupName;
-        private Output<Either<String,RoleStatus>> roleStatus;
+        private CloudEdgeManagementRoleArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CloudEdgeManagementRoleArgs();
         }
 
         public Builder(CloudEdgeManagementRoleArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.deviceName = defaults.deviceName;
-    	      this.kind = defaults.kind;
-    	      this.name = defaults.name;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.roleStatus = defaults.roleStatus;
+            $ = new CloudEdgeManagementRoleArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder deviceName(Output<String> deviceName) {
-            this.deviceName = Objects.requireNonNull(deviceName);
+            $.deviceName = deviceName;
             return this;
         }
+
         public Builder deviceName(String deviceName) {
-            this.deviceName = Output.of(Objects.requireNonNull(deviceName));
-            return this;
+            return deviceName(Output.of(deviceName));
         }
+
         public Builder kind(Output<String> kind) {
-            this.kind = Objects.requireNonNull(kind);
+            $.kind = kind;
             return this;
         }
+
         public Builder kind(String kind) {
-            this.kind = Output.of(Objects.requireNonNull(kind));
-            return this;
+            return kind(Output.of(kind));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder roleStatus(Output<Either<String,RoleStatus>> roleStatus) {
-            this.roleStatus = Objects.requireNonNull(roleStatus);
+            $.roleStatus = roleStatus;
             return this;
         }
+
         public Builder roleStatus(Either<String,RoleStatus> roleStatus) {
-            this.roleStatus = Output.of(Objects.requireNonNull(roleStatus));
-            return this;
-        }        public CloudEdgeManagementRoleArgs build() {
-            return new CloudEdgeManagementRoleArgs(deviceName, kind, name, resourceGroupName, roleStatus);
+            return roleStatus(Output.of(roleStatus));
+        }
+
+        public CloudEdgeManagementRoleArgs build() {
+            $.deviceName = Objects.requireNonNull($.deviceName, "expected parameter 'deviceName' to be non-null");
+            $.kind = Codegen.stringProp("kind").output().arg($.kind).require();
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.roleStatus = Objects.requireNonNull($.roleStatus, "expected parameter 'roleStatus' to be non-null");
+            return $;
         }
     }
+
 }

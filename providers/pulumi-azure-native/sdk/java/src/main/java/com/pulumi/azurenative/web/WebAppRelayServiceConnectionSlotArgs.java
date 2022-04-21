@@ -5,10 +5,10 @@ package com.pulumi.azurenative.web;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -17,31 +17,31 @@ public final class WebAppRelayServiceConnectionSlotArgs extends com.pulumi.resou
     public static final WebAppRelayServiceConnectionSlotArgs Empty = new WebAppRelayServiceConnectionSlotArgs();
 
     @Import(name="biztalkUri")
-      private final @Nullable Output<String> biztalkUri;
+    private @Nullable Output<String> biztalkUri;
 
-    public Output<String> biztalkUri() {
-        return this.biztalkUri == null ? Codegen.empty() : this.biztalkUri;
+    public Optional<Output<String>> biztalkUri() {
+        return Optional.ofNullable(this.biztalkUri);
     }
 
     @Import(name="entityConnectionString")
-      private final @Nullable Output<String> entityConnectionString;
+    private @Nullable Output<String> entityConnectionString;
 
-    public Output<String> entityConnectionString() {
-        return this.entityConnectionString == null ? Codegen.empty() : this.entityConnectionString;
+    public Optional<Output<String>> entityConnectionString() {
+        return Optional.ofNullable(this.entityConnectionString);
     }
 
     @Import(name="entityName")
-      private final @Nullable Output<String> entityName;
+    private @Nullable Output<String> entityName;
 
-    public Output<String> entityName() {
-        return this.entityName == null ? Codegen.empty() : this.entityName;
+    public Optional<Output<String>> entityName() {
+        return Optional.ofNullable(this.entityName);
     }
 
     @Import(name="hostname")
-      private final @Nullable Output<String> hostname;
+    private @Nullable Output<String> hostname;
 
-    public Output<String> hostname() {
-        return this.hostname == null ? Codegen.empty() : this.hostname;
+    public Optional<Output<String>> hostname() {
+        return Optional.ofNullable(this.hostname);
     }
 
     /**
@@ -49,10 +49,10 @@ public final class WebAppRelayServiceConnectionSlotArgs extends com.pulumi.resou
      * 
      */
     @Import(name="kind")
-      private final @Nullable Output<String> kind;
+    private @Nullable Output<String> kind;
 
-    public Output<String> kind() {
-        return this.kind == null ? Codegen.empty() : this.kind;
+    public Optional<Output<String>> kind() {
+        return Optional.ofNullable(this.kind);
     }
 
     /**
@@ -60,24 +60,24 @@ public final class WebAppRelayServiceConnectionSlotArgs extends com.pulumi.resou
      * 
      */
     @Import(name="name", required=true)
-      private final Output<String> name;
+    private Output<String> name;
 
     public Output<String> name() {
         return this.name;
     }
 
     @Import(name="port")
-      private final @Nullable Output<Integer> port;
+    private @Nullable Output<Integer> port;
 
-    public Output<Integer> port() {
-        return this.port == null ? Codegen.empty() : this.port;
+    public Optional<Output<Integer>> port() {
+        return Optional.ofNullable(this.port);
     }
 
     @Import(name="resourceConnectionString")
-      private final @Nullable Output<String> resourceConnectionString;
+    private @Nullable Output<String> resourceConnectionString;
 
-    public Output<String> resourceConnectionString() {
-        return this.resourceConnectionString == null ? Codegen.empty() : this.resourceConnectionString;
+    public Optional<Output<String>> resourceConnectionString() {
+        return Optional.ofNullable(this.resourceConnectionString);
     }
 
     /**
@@ -85,17 +85,17 @@ public final class WebAppRelayServiceConnectionSlotArgs extends com.pulumi.resou
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
     @Import(name="resourceType")
-      private final @Nullable Output<String> resourceType;
+    private @Nullable Output<String> resourceType;
 
-    public Output<String> resourceType() {
-        return this.resourceType == null ? Codegen.empty() : this.resourceType;
+    public Optional<Output<String>> resourceType() {
+        return Optional.ofNullable(this.resourceType);
     }
 
     /**
@@ -103,180 +103,151 @@ public final class WebAppRelayServiceConnectionSlotArgs extends com.pulumi.resou
      * 
      */
     @Import(name="slot", required=true)
-      private final Output<String> slot;
+    private Output<String> slot;
 
     public Output<String> slot() {
         return this.slot;
     }
 
-    public WebAppRelayServiceConnectionSlotArgs(
-        @Nullable Output<String> biztalkUri,
-        @Nullable Output<String> entityConnectionString,
-        @Nullable Output<String> entityName,
-        @Nullable Output<String> hostname,
-        @Nullable Output<String> kind,
-        Output<String> name,
-        @Nullable Output<Integer> port,
-        @Nullable Output<String> resourceConnectionString,
-        Output<String> resourceGroupName,
-        @Nullable Output<String> resourceType,
-        Output<String> slot) {
-        this.biztalkUri = biztalkUri;
-        this.entityConnectionString = entityConnectionString;
-        this.entityName = entityName;
-        this.hostname = hostname;
-        this.kind = kind;
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.port = port;
-        this.resourceConnectionString = resourceConnectionString;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.resourceType = resourceType;
-        this.slot = Objects.requireNonNull(slot, "expected parameter 'slot' to be non-null");
-    }
+    private WebAppRelayServiceConnectionSlotArgs() {}
 
-    private WebAppRelayServiceConnectionSlotArgs() {
-        this.biztalkUri = Codegen.empty();
-        this.entityConnectionString = Codegen.empty();
-        this.entityName = Codegen.empty();
-        this.hostname = Codegen.empty();
-        this.kind = Codegen.empty();
-        this.name = Codegen.empty();
-        this.port = Codegen.empty();
-        this.resourceConnectionString = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.resourceType = Codegen.empty();
-        this.slot = Codegen.empty();
+    private WebAppRelayServiceConnectionSlotArgs(WebAppRelayServiceConnectionSlotArgs $) {
+        this.biztalkUri = $.biztalkUri;
+        this.entityConnectionString = $.entityConnectionString;
+        this.entityName = $.entityName;
+        this.hostname = $.hostname;
+        this.kind = $.kind;
+        this.name = $.name;
+        this.port = $.port;
+        this.resourceConnectionString = $.resourceConnectionString;
+        this.resourceGroupName = $.resourceGroupName;
+        this.resourceType = $.resourceType;
+        this.slot = $.slot;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WebAppRelayServiceConnectionSlotArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> biztalkUri;
-        private @Nullable Output<String> entityConnectionString;
-        private @Nullable Output<String> entityName;
-        private @Nullable Output<String> hostname;
-        private @Nullable Output<String> kind;
-        private Output<String> name;
-        private @Nullable Output<Integer> port;
-        private @Nullable Output<String> resourceConnectionString;
-        private Output<String> resourceGroupName;
-        private @Nullable Output<String> resourceType;
-        private Output<String> slot;
+        private WebAppRelayServiceConnectionSlotArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new WebAppRelayServiceConnectionSlotArgs();
         }
 
         public Builder(WebAppRelayServiceConnectionSlotArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.biztalkUri = defaults.biztalkUri;
-    	      this.entityConnectionString = defaults.entityConnectionString;
-    	      this.entityName = defaults.entityName;
-    	      this.hostname = defaults.hostname;
-    	      this.kind = defaults.kind;
-    	      this.name = defaults.name;
-    	      this.port = defaults.port;
-    	      this.resourceConnectionString = defaults.resourceConnectionString;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.resourceType = defaults.resourceType;
-    	      this.slot = defaults.slot;
+            $ = new WebAppRelayServiceConnectionSlotArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder biztalkUri(@Nullable Output<String> biztalkUri) {
-            this.biztalkUri = biztalkUri;
+            $.biztalkUri = biztalkUri;
             return this;
         }
-        public Builder biztalkUri(@Nullable String biztalkUri) {
-            this.biztalkUri = Codegen.ofNullable(biztalkUri);
-            return this;
+
+        public Builder biztalkUri(String biztalkUri) {
+            return biztalkUri(Output.of(biztalkUri));
         }
+
         public Builder entityConnectionString(@Nullable Output<String> entityConnectionString) {
-            this.entityConnectionString = entityConnectionString;
+            $.entityConnectionString = entityConnectionString;
             return this;
         }
-        public Builder entityConnectionString(@Nullable String entityConnectionString) {
-            this.entityConnectionString = Codegen.ofNullable(entityConnectionString);
-            return this;
+
+        public Builder entityConnectionString(String entityConnectionString) {
+            return entityConnectionString(Output.of(entityConnectionString));
         }
+
         public Builder entityName(@Nullable Output<String> entityName) {
-            this.entityName = entityName;
+            $.entityName = entityName;
             return this;
         }
-        public Builder entityName(@Nullable String entityName) {
-            this.entityName = Codegen.ofNullable(entityName);
-            return this;
+
+        public Builder entityName(String entityName) {
+            return entityName(Output.of(entityName));
         }
+
         public Builder hostname(@Nullable Output<String> hostname) {
-            this.hostname = hostname;
+            $.hostname = hostname;
             return this;
         }
-        public Builder hostname(@Nullable String hostname) {
-            this.hostname = Codegen.ofNullable(hostname);
-            return this;
+
+        public Builder hostname(String hostname) {
+            return hostname(Output.of(hostname));
         }
+
         public Builder kind(@Nullable Output<String> kind) {
-            this.kind = kind;
+            $.kind = kind;
             return this;
         }
-        public Builder kind(@Nullable String kind) {
-            this.kind = Codegen.ofNullable(kind);
-            return this;
+
+        public Builder kind(String kind) {
+            return kind(Output.of(kind));
         }
+
         public Builder name(Output<String> name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Output.of(Objects.requireNonNull(name));
-            return this;
+            return name(Output.of(name));
         }
+
         public Builder port(@Nullable Output<Integer> port) {
-            this.port = port;
+            $.port = port;
             return this;
         }
-        public Builder port(@Nullable Integer port) {
-            this.port = Codegen.ofNullable(port);
-            return this;
+
+        public Builder port(Integer port) {
+            return port(Output.of(port));
         }
+
         public Builder resourceConnectionString(@Nullable Output<String> resourceConnectionString) {
-            this.resourceConnectionString = resourceConnectionString;
+            $.resourceConnectionString = resourceConnectionString;
             return this;
         }
-        public Builder resourceConnectionString(@Nullable String resourceConnectionString) {
-            this.resourceConnectionString = Codegen.ofNullable(resourceConnectionString);
-            return this;
+
+        public Builder resourceConnectionString(String resourceConnectionString) {
+            return resourceConnectionString(Output.of(resourceConnectionString));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder resourceType(@Nullable Output<String> resourceType) {
-            this.resourceType = resourceType;
+            $.resourceType = resourceType;
             return this;
         }
-        public Builder resourceType(@Nullable String resourceType) {
-            this.resourceType = Codegen.ofNullable(resourceType);
-            return this;
+
+        public Builder resourceType(String resourceType) {
+            return resourceType(Output.of(resourceType));
         }
+
         public Builder slot(Output<String> slot) {
-            this.slot = Objects.requireNonNull(slot);
+            $.slot = slot;
             return this;
         }
+
         public Builder slot(String slot) {
-            this.slot = Output.of(Objects.requireNonNull(slot));
-            return this;
-        }        public WebAppRelayServiceConnectionSlotArgs build() {
-            return new WebAppRelayServiceConnectionSlotArgs(biztalkUri, entityConnectionString, entityName, hostname, kind, name, port, resourceConnectionString, resourceGroupName, resourceType, slot);
+            return slot(Output.of(slot));
+        }
+
+        public WebAppRelayServiceConnectionSlotArgs build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.slot = Objects.requireNonNull($.slot, "expected parameter 'slot' to be non-null");
+            return $;
         }
     }
+
 }

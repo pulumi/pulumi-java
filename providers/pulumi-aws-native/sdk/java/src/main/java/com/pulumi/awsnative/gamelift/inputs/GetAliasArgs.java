@@ -17,45 +17,45 @@ public final class GetAliasArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="aliasId", required=true)
-      private final String aliasId;
+    private String aliasId;
 
     public String aliasId() {
         return this.aliasId;
     }
 
-    public GetAliasArgs(String aliasId) {
-        this.aliasId = Objects.requireNonNull(aliasId, "expected parameter 'aliasId' to be non-null");
-    }
+    private GetAliasArgs() {}
 
-    private GetAliasArgs() {
-        this.aliasId = null;
+    private GetAliasArgs(GetAliasArgs $) {
+        this.aliasId = $.aliasId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetAliasArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String aliasId;
+        private GetAliasArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetAliasArgs();
         }
 
         public Builder(GetAliasArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.aliasId = defaults.aliasId;
+            $ = new GetAliasArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder aliasId(String aliasId) {
-            this.aliasId = Objects.requireNonNull(aliasId);
+            $.aliasId = aliasId;
             return this;
-        }        public GetAliasArgs build() {
-            return new GetAliasArgs(aliasId);
+        }
+
+        public GetAliasArgs build() {
+            $.aliasId = Objects.requireNonNull($.aliasId, "expected parameter 'aliasId' to be non-null");
+            return $;
         }
     }
+
 }

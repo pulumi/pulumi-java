@@ -29,17 +29,17 @@ public final class PackagingConfigurationDashPackage extends com.pulumi.resource
      * 
      */
     @Import(name="dashManifests", required=true)
-      private final List<PackagingConfigurationDashManifest> dashManifests;
+    private List<PackagingConfigurationDashManifest> dashManifests;
 
     public List<PackagingConfigurationDashManifest> dashManifests() {
         return this.dashManifests;
     }
 
     @Import(name="encryption")
-      private final @Nullable PackagingConfigurationDashEncryption encryption;
+    private @Nullable PackagingConfigurationDashEncryption encryption;
 
     public Optional<PackagingConfigurationDashEncryption> encryption() {
-        return this.encryption == null ? Optional.empty() : Optional.ofNullable(this.encryption);
+        return Optional.ofNullable(this.encryption);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class PackagingConfigurationDashPackage extends com.pulumi.resource
      * 
      */
     @Import(name="includeEncoderConfigurationInSegments")
-      private final @Nullable Boolean includeEncoderConfigurationInSegments;
+    private @Nullable Boolean includeEncoderConfigurationInSegments;
 
     public Optional<Boolean> includeEncoderConfigurationInSegments() {
-        return this.includeEncoderConfigurationInSegments == null ? Optional.empty() : Optional.ofNullable(this.includeEncoderConfigurationInSegments);
+        return Optional.ofNullable(this.includeEncoderConfigurationInSegments);
     }
 
     /**
@@ -58,17 +58,17 @@ public final class PackagingConfigurationDashPackage extends com.pulumi.resource
      * 
      */
     @Import(name="periodTriggers")
-      private final @Nullable List<PackagingConfigurationDashPackagePeriodTriggersItem> periodTriggers;
+    private @Nullable List<PackagingConfigurationDashPackagePeriodTriggersItem> periodTriggers;
 
-    public List<PackagingConfigurationDashPackagePeriodTriggersItem> periodTriggers() {
-        return this.periodTriggers == null ? List.of() : this.periodTriggers;
+    public Optional<List<PackagingConfigurationDashPackagePeriodTriggersItem>> periodTriggers() {
+        return Optional.ofNullable(this.periodTriggers);
     }
 
     @Import(name="segmentDurationSeconds")
-      private final @Nullable Integer segmentDurationSeconds;
+    private @Nullable Integer segmentDurationSeconds;
 
     public Optional<Integer> segmentDurationSeconds() {
-        return this.segmentDurationSeconds == null ? Optional.empty() : Optional.ofNullable(this.segmentDurationSeconds);
+        return Optional.ofNullable(this.segmentDurationSeconds);
     }
 
     /**
@@ -76,97 +76,83 @@ public final class PackagingConfigurationDashPackage extends com.pulumi.resource
      * 
      */
     @Import(name="segmentTemplateFormat")
-      private final @Nullable PackagingConfigurationDashPackageSegmentTemplateFormat segmentTemplateFormat;
+    private @Nullable PackagingConfigurationDashPackageSegmentTemplateFormat segmentTemplateFormat;
 
     public Optional<PackagingConfigurationDashPackageSegmentTemplateFormat> segmentTemplateFormat() {
-        return this.segmentTemplateFormat == null ? Optional.empty() : Optional.ofNullable(this.segmentTemplateFormat);
+        return Optional.ofNullable(this.segmentTemplateFormat);
     }
 
-    public PackagingConfigurationDashPackage(
-        List<PackagingConfigurationDashManifest> dashManifests,
-        @Nullable PackagingConfigurationDashEncryption encryption,
-        @Nullable Boolean includeEncoderConfigurationInSegments,
-        @Nullable List<PackagingConfigurationDashPackagePeriodTriggersItem> periodTriggers,
-        @Nullable Integer segmentDurationSeconds,
-        @Nullable PackagingConfigurationDashPackageSegmentTemplateFormat segmentTemplateFormat) {
-        this.dashManifests = Objects.requireNonNull(dashManifests, "expected parameter 'dashManifests' to be non-null");
-        this.encryption = encryption;
-        this.includeEncoderConfigurationInSegments = includeEncoderConfigurationInSegments;
-        this.periodTriggers = periodTriggers;
-        this.segmentDurationSeconds = segmentDurationSeconds;
-        this.segmentTemplateFormat = segmentTemplateFormat;
-    }
+    private PackagingConfigurationDashPackage() {}
 
-    private PackagingConfigurationDashPackage() {
-        this.dashManifests = List.of();
-        this.encryption = null;
-        this.includeEncoderConfigurationInSegments = null;
-        this.periodTriggers = List.of();
-        this.segmentDurationSeconds = null;
-        this.segmentTemplateFormat = null;
+    private PackagingConfigurationDashPackage(PackagingConfigurationDashPackage $) {
+        this.dashManifests = $.dashManifests;
+        this.encryption = $.encryption;
+        this.includeEncoderConfigurationInSegments = $.includeEncoderConfigurationInSegments;
+        this.periodTriggers = $.periodTriggers;
+        this.segmentDurationSeconds = $.segmentDurationSeconds;
+        this.segmentTemplateFormat = $.segmentTemplateFormat;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PackagingConfigurationDashPackage defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<PackagingConfigurationDashManifest> dashManifests;
-        private @Nullable PackagingConfigurationDashEncryption encryption;
-        private @Nullable Boolean includeEncoderConfigurationInSegments;
-        private @Nullable List<PackagingConfigurationDashPackagePeriodTriggersItem> periodTriggers;
-        private @Nullable Integer segmentDurationSeconds;
-        private @Nullable PackagingConfigurationDashPackageSegmentTemplateFormat segmentTemplateFormat;
+        private PackagingConfigurationDashPackage $;
 
         public Builder() {
-    	      // Empty
+            $ = new PackagingConfigurationDashPackage();
         }
 
         public Builder(PackagingConfigurationDashPackage defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dashManifests = defaults.dashManifests;
-    	      this.encryption = defaults.encryption;
-    	      this.includeEncoderConfigurationInSegments = defaults.includeEncoderConfigurationInSegments;
-    	      this.periodTriggers = defaults.periodTriggers;
-    	      this.segmentDurationSeconds = defaults.segmentDurationSeconds;
-    	      this.segmentTemplateFormat = defaults.segmentTemplateFormat;
+            $ = new PackagingConfigurationDashPackage(Objects.requireNonNull(defaults));
         }
 
         public Builder dashManifests(List<PackagingConfigurationDashManifest> dashManifests) {
-            this.dashManifests = Objects.requireNonNull(dashManifests);
+            $.dashManifests = dashManifests;
             return this;
         }
+
         public Builder dashManifests(PackagingConfigurationDashManifest... dashManifests) {
             return dashManifests(List.of(dashManifests));
         }
+
         public Builder encryption(@Nullable PackagingConfigurationDashEncryption encryption) {
-            this.encryption = encryption;
+            $.encryption = encryption;
             return this;
         }
+
         public Builder includeEncoderConfigurationInSegments(@Nullable Boolean includeEncoderConfigurationInSegments) {
-            this.includeEncoderConfigurationInSegments = includeEncoderConfigurationInSegments;
+            $.includeEncoderConfigurationInSegments = includeEncoderConfigurationInSegments;
             return this;
         }
+
         public Builder periodTriggers(@Nullable List<PackagingConfigurationDashPackagePeriodTriggersItem> periodTriggers) {
-            this.periodTriggers = periodTriggers;
+            $.periodTriggers = periodTriggers;
             return this;
         }
+
         public Builder periodTriggers(PackagingConfigurationDashPackagePeriodTriggersItem... periodTriggers) {
             return periodTriggers(List.of(periodTriggers));
         }
+
         public Builder segmentDurationSeconds(@Nullable Integer segmentDurationSeconds) {
-            this.segmentDurationSeconds = segmentDurationSeconds;
+            $.segmentDurationSeconds = segmentDurationSeconds;
             return this;
         }
+
         public Builder segmentTemplateFormat(@Nullable PackagingConfigurationDashPackageSegmentTemplateFormat segmentTemplateFormat) {
-            this.segmentTemplateFormat = segmentTemplateFormat;
+            $.segmentTemplateFormat = segmentTemplateFormat;
             return this;
-        }        public PackagingConfigurationDashPackage build() {
-            return new PackagingConfigurationDashPackage(dashManifests, encryption, includeEncoderConfigurationInSegments, periodTriggers, segmentDurationSeconds, segmentTemplateFormat);
+        }
+
+        public PackagingConfigurationDashPackage build() {
+            $.dashManifests = Objects.requireNonNull($.dashManifests, "expected parameter 'dashManifests' to be non-null");
+            return $;
         }
     }
+
 }

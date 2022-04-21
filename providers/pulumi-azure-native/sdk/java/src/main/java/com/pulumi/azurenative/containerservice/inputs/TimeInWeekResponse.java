@@ -25,10 +25,10 @@ public final class TimeInWeekResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="day")
-      private final @Nullable String day;
+    private @Nullable String day;
 
     public Optional<String> day() {
-        return this.day == null ? Optional.empty() : Optional.ofNullable(this.day);
+        return Optional.ofNullable(this.day);
     }
 
     /**
@@ -36,58 +36,54 @@ public final class TimeInWeekResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="hourSlots")
-      private final @Nullable List<Integer> hourSlots;
+    private @Nullable List<Integer> hourSlots;
 
-    public List<Integer> hourSlots() {
-        return this.hourSlots == null ? List.of() : this.hourSlots;
+    public Optional<List<Integer>> hourSlots() {
+        return Optional.ofNullable(this.hourSlots);
     }
 
-    public TimeInWeekResponse(
-        @Nullable String day,
-        @Nullable List<Integer> hourSlots) {
-        this.day = day;
-        this.hourSlots = hourSlots;
-    }
+    private TimeInWeekResponse() {}
 
-    private TimeInWeekResponse() {
-        this.day = null;
-        this.hourSlots = List.of();
+    private TimeInWeekResponse(TimeInWeekResponse $) {
+        this.day = $.day;
+        this.hourSlots = $.hourSlots;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TimeInWeekResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String day;
-        private @Nullable List<Integer> hourSlots;
+        private TimeInWeekResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new TimeInWeekResponse();
         }
 
         public Builder(TimeInWeekResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.day = defaults.day;
-    	      this.hourSlots = defaults.hourSlots;
+            $ = new TimeInWeekResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder day(@Nullable String day) {
-            this.day = day;
+            $.day = day;
             return this;
         }
+
         public Builder hourSlots(@Nullable List<Integer> hourSlots) {
-            this.hourSlots = hourSlots;
+            $.hourSlots = hourSlots;
             return this;
         }
+
         public Builder hourSlots(Integer... hourSlots) {
             return hourSlots(List.of(hourSlots));
-        }        public TimeInWeekResponse build() {
-            return new TimeInWeekResponse(day, hourSlots);
+        }
+
+        public TimeInWeekResponse build() {
+            return $;
         }
     }
+
 }

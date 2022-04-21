@@ -24,10 +24,10 @@ public final class HttpLogsConfigResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="azureBlobStorage")
-      private final @Nullable AzureBlobStorageHttpLogsConfigResponse azureBlobStorage;
+    private @Nullable AzureBlobStorageHttpLogsConfigResponse azureBlobStorage;
 
     public Optional<AzureBlobStorageHttpLogsConfigResponse> azureBlobStorage() {
-        return this.azureBlobStorage == null ? Optional.empty() : Optional.ofNullable(this.azureBlobStorage);
+        return Optional.ofNullable(this.azureBlobStorage);
     }
 
     /**
@@ -35,55 +35,50 @@ public final class HttpLogsConfigResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="fileSystem")
-      private final @Nullable FileSystemHttpLogsConfigResponse fileSystem;
+    private @Nullable FileSystemHttpLogsConfigResponse fileSystem;
 
     public Optional<FileSystemHttpLogsConfigResponse> fileSystem() {
-        return this.fileSystem == null ? Optional.empty() : Optional.ofNullable(this.fileSystem);
+        return Optional.ofNullable(this.fileSystem);
     }
 
-    public HttpLogsConfigResponse(
-        @Nullable AzureBlobStorageHttpLogsConfigResponse azureBlobStorage,
-        @Nullable FileSystemHttpLogsConfigResponse fileSystem) {
-        this.azureBlobStorage = azureBlobStorage;
-        this.fileSystem = fileSystem;
-    }
+    private HttpLogsConfigResponse() {}
 
-    private HttpLogsConfigResponse() {
-        this.azureBlobStorage = null;
-        this.fileSystem = null;
+    private HttpLogsConfigResponse(HttpLogsConfigResponse $) {
+        this.azureBlobStorage = $.azureBlobStorage;
+        this.fileSystem = $.fileSystem;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(HttpLogsConfigResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable AzureBlobStorageHttpLogsConfigResponse azureBlobStorage;
-        private @Nullable FileSystemHttpLogsConfigResponse fileSystem;
+        private HttpLogsConfigResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new HttpLogsConfigResponse();
         }
 
         public Builder(HttpLogsConfigResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.azureBlobStorage = defaults.azureBlobStorage;
-    	      this.fileSystem = defaults.fileSystem;
+            $ = new HttpLogsConfigResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder azureBlobStorage(@Nullable AzureBlobStorageHttpLogsConfigResponse azureBlobStorage) {
-            this.azureBlobStorage = azureBlobStorage;
+            $.azureBlobStorage = azureBlobStorage;
             return this;
         }
+
         public Builder fileSystem(@Nullable FileSystemHttpLogsConfigResponse fileSystem) {
-            this.fileSystem = fileSystem;
+            $.fileSystem = fileSystem;
             return this;
-        }        public HttpLogsConfigResponse build() {
-            return new HttpLogsConfigResponse(azureBlobStorage, fileSystem);
+        }
+
+        public HttpLogsConfigResponse build() {
+            return $;
         }
     }
+
 }

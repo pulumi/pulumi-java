@@ -10,10 +10,10 @@ import com.pulumi.azurenative.containerinstance.inputs.ResourceRequirementsArgs;
 import com.pulumi.azurenative.containerinstance.inputs.VolumeMountArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -30,10 +30,10 @@ public final class ContainerArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="command")
-      private final @Nullable Output<List<String>> command;
+    private @Nullable Output<List<String>> command;
 
-    public Output<List<String>> command() {
-        return this.command == null ? Codegen.empty() : this.command;
+    public Optional<Output<List<String>>> command() {
+        return Optional.ofNullable(this.command);
     }
 
     /**
@@ -41,10 +41,10 @@ public final class ContainerArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="environmentVariables")
-      private final @Nullable Output<List<EnvironmentVariableArgs>> environmentVariables;
+    private @Nullable Output<List<EnvironmentVariableArgs>> environmentVariables;
 
-    public Output<List<EnvironmentVariableArgs>> environmentVariables() {
-        return this.environmentVariables == null ? Codegen.empty() : this.environmentVariables;
+    public Optional<Output<List<EnvironmentVariableArgs>>> environmentVariables() {
+        return Optional.ofNullable(this.environmentVariables);
     }
 
     /**
@@ -52,7 +52,7 @@ public final class ContainerArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="image", required=true)
-      private final Output<String> image;
+    private Output<String> image;
 
     public Output<String> image() {
         return this.image;
@@ -63,10 +63,10 @@ public final class ContainerArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="livenessProbe")
-      private final @Nullable Output<ContainerProbeArgs> livenessProbe;
+    private @Nullable Output<ContainerProbeArgs> livenessProbe;
 
-    public Output<ContainerProbeArgs> livenessProbe() {
-        return this.livenessProbe == null ? Codegen.empty() : this.livenessProbe;
+    public Optional<Output<ContainerProbeArgs>> livenessProbe() {
+        return Optional.ofNullable(this.livenessProbe);
     }
 
     /**
@@ -74,7 +74,7 @@ public final class ContainerArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name", required=true)
-      private final Output<String> name;
+    private Output<String> name;
 
     public Output<String> name() {
         return this.name;
@@ -85,10 +85,10 @@ public final class ContainerArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="ports")
-      private final @Nullable Output<List<ContainerPortArgs>> ports;
+    private @Nullable Output<List<ContainerPortArgs>> ports;
 
-    public Output<List<ContainerPortArgs>> ports() {
-        return this.ports == null ? Codegen.empty() : this.ports;
+    public Optional<Output<List<ContainerPortArgs>>> ports() {
+        return Optional.ofNullable(this.ports);
     }
 
     /**
@@ -96,10 +96,10 @@ public final class ContainerArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="readinessProbe")
-      private final @Nullable Output<ContainerProbeArgs> readinessProbe;
+    private @Nullable Output<ContainerProbeArgs> readinessProbe;
 
-    public Output<ContainerProbeArgs> readinessProbe() {
-        return this.readinessProbe == null ? Codegen.empty() : this.readinessProbe;
+    public Optional<Output<ContainerProbeArgs>> readinessProbe() {
+        return Optional.ofNullable(this.readinessProbe);
     }
 
     /**
@@ -107,7 +107,7 @@ public final class ContainerArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resources", required=true)
-      private final Output<ResourceRequirementsArgs> resources;
+    private Output<ResourceRequirementsArgs> resources;
 
     public Output<ResourceRequirementsArgs> resources() {
         return this.resources;
@@ -118,166 +118,147 @@ public final class ContainerArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="volumeMounts")
-      private final @Nullable Output<List<VolumeMountArgs>> volumeMounts;
+    private @Nullable Output<List<VolumeMountArgs>> volumeMounts;
 
-    public Output<List<VolumeMountArgs>> volumeMounts() {
-        return this.volumeMounts == null ? Codegen.empty() : this.volumeMounts;
+    public Optional<Output<List<VolumeMountArgs>>> volumeMounts() {
+        return Optional.ofNullable(this.volumeMounts);
     }
 
-    public ContainerArgs(
-        @Nullable Output<List<String>> command,
-        @Nullable Output<List<EnvironmentVariableArgs>> environmentVariables,
-        Output<String> image,
-        @Nullable Output<ContainerProbeArgs> livenessProbe,
-        Output<String> name,
-        @Nullable Output<List<ContainerPortArgs>> ports,
-        @Nullable Output<ContainerProbeArgs> readinessProbe,
-        Output<ResourceRequirementsArgs> resources,
-        @Nullable Output<List<VolumeMountArgs>> volumeMounts) {
-        this.command = command;
-        this.environmentVariables = environmentVariables;
-        this.image = Objects.requireNonNull(image, "expected parameter 'image' to be non-null");
-        this.livenessProbe = livenessProbe;
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.ports = ports;
-        this.readinessProbe = readinessProbe;
-        this.resources = Objects.requireNonNull(resources, "expected parameter 'resources' to be non-null");
-        this.volumeMounts = volumeMounts;
-    }
+    private ContainerArgs() {}
 
-    private ContainerArgs() {
-        this.command = Codegen.empty();
-        this.environmentVariables = Codegen.empty();
-        this.image = Codegen.empty();
-        this.livenessProbe = Codegen.empty();
-        this.name = Codegen.empty();
-        this.ports = Codegen.empty();
-        this.readinessProbe = Codegen.empty();
-        this.resources = Codegen.empty();
-        this.volumeMounts = Codegen.empty();
+    private ContainerArgs(ContainerArgs $) {
+        this.command = $.command;
+        this.environmentVariables = $.environmentVariables;
+        this.image = $.image;
+        this.livenessProbe = $.livenessProbe;
+        this.name = $.name;
+        this.ports = $.ports;
+        this.readinessProbe = $.readinessProbe;
+        this.resources = $.resources;
+        this.volumeMounts = $.volumeMounts;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ContainerArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> command;
-        private @Nullable Output<List<EnvironmentVariableArgs>> environmentVariables;
-        private Output<String> image;
-        private @Nullable Output<ContainerProbeArgs> livenessProbe;
-        private Output<String> name;
-        private @Nullable Output<List<ContainerPortArgs>> ports;
-        private @Nullable Output<ContainerProbeArgs> readinessProbe;
-        private Output<ResourceRequirementsArgs> resources;
-        private @Nullable Output<List<VolumeMountArgs>> volumeMounts;
+        private ContainerArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ContainerArgs();
         }
 
         public Builder(ContainerArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.command = defaults.command;
-    	      this.environmentVariables = defaults.environmentVariables;
-    	      this.image = defaults.image;
-    	      this.livenessProbe = defaults.livenessProbe;
-    	      this.name = defaults.name;
-    	      this.ports = defaults.ports;
-    	      this.readinessProbe = defaults.readinessProbe;
-    	      this.resources = defaults.resources;
-    	      this.volumeMounts = defaults.volumeMounts;
+            $ = new ContainerArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder command(@Nullable Output<List<String>> command) {
-            this.command = command;
+            $.command = command;
             return this;
         }
-        public Builder command(@Nullable List<String> command) {
-            this.command = Codegen.ofNullable(command);
-            return this;
+
+        public Builder command(List<String> command) {
+            return command(Output.of(command));
         }
+
         public Builder command(String... command) {
             return command(List.of(command));
         }
+
         public Builder environmentVariables(@Nullable Output<List<EnvironmentVariableArgs>> environmentVariables) {
-            this.environmentVariables = environmentVariables;
+            $.environmentVariables = environmentVariables;
             return this;
         }
-        public Builder environmentVariables(@Nullable List<EnvironmentVariableArgs> environmentVariables) {
-            this.environmentVariables = Codegen.ofNullable(environmentVariables);
-            return this;
+
+        public Builder environmentVariables(List<EnvironmentVariableArgs> environmentVariables) {
+            return environmentVariables(Output.of(environmentVariables));
         }
+
         public Builder environmentVariables(EnvironmentVariableArgs... environmentVariables) {
             return environmentVariables(List.of(environmentVariables));
         }
+
         public Builder image(Output<String> image) {
-            this.image = Objects.requireNonNull(image);
+            $.image = image;
             return this;
         }
+
         public Builder image(String image) {
-            this.image = Output.of(Objects.requireNonNull(image));
-            return this;
+            return image(Output.of(image));
         }
+
         public Builder livenessProbe(@Nullable Output<ContainerProbeArgs> livenessProbe) {
-            this.livenessProbe = livenessProbe;
+            $.livenessProbe = livenessProbe;
             return this;
         }
-        public Builder livenessProbe(@Nullable ContainerProbeArgs livenessProbe) {
-            this.livenessProbe = Codegen.ofNullable(livenessProbe);
-            return this;
+
+        public Builder livenessProbe(ContainerProbeArgs livenessProbe) {
+            return livenessProbe(Output.of(livenessProbe));
         }
+
         public Builder name(Output<String> name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Output.of(Objects.requireNonNull(name));
-            return this;
+            return name(Output.of(name));
         }
+
         public Builder ports(@Nullable Output<List<ContainerPortArgs>> ports) {
-            this.ports = ports;
+            $.ports = ports;
             return this;
         }
-        public Builder ports(@Nullable List<ContainerPortArgs> ports) {
-            this.ports = Codegen.ofNullable(ports);
-            return this;
+
+        public Builder ports(List<ContainerPortArgs> ports) {
+            return ports(Output.of(ports));
         }
+
         public Builder ports(ContainerPortArgs... ports) {
             return ports(List.of(ports));
         }
+
         public Builder readinessProbe(@Nullable Output<ContainerProbeArgs> readinessProbe) {
-            this.readinessProbe = readinessProbe;
+            $.readinessProbe = readinessProbe;
             return this;
         }
-        public Builder readinessProbe(@Nullable ContainerProbeArgs readinessProbe) {
-            this.readinessProbe = Codegen.ofNullable(readinessProbe);
-            return this;
+
+        public Builder readinessProbe(ContainerProbeArgs readinessProbe) {
+            return readinessProbe(Output.of(readinessProbe));
         }
+
         public Builder resources(Output<ResourceRequirementsArgs> resources) {
-            this.resources = Objects.requireNonNull(resources);
+            $.resources = resources;
             return this;
         }
+
         public Builder resources(ResourceRequirementsArgs resources) {
-            this.resources = Output.of(Objects.requireNonNull(resources));
-            return this;
+            return resources(Output.of(resources));
         }
+
         public Builder volumeMounts(@Nullable Output<List<VolumeMountArgs>> volumeMounts) {
-            this.volumeMounts = volumeMounts;
+            $.volumeMounts = volumeMounts;
             return this;
         }
-        public Builder volumeMounts(@Nullable List<VolumeMountArgs> volumeMounts) {
-            this.volumeMounts = Codegen.ofNullable(volumeMounts);
-            return this;
+
+        public Builder volumeMounts(List<VolumeMountArgs> volumeMounts) {
+            return volumeMounts(Output.of(volumeMounts));
         }
+
         public Builder volumeMounts(VolumeMountArgs... volumeMounts) {
             return volumeMounts(List.of(volumeMounts));
-        }        public ContainerArgs build() {
-            return new ContainerArgs(command, environmentVariables, image, livenessProbe, name, ports, readinessProbe, resources, volumeMounts);
+        }
+
+        public ContainerArgs build() {
+            $.image = Objects.requireNonNull($.image, "expected parameter 'image' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.resources = Objects.requireNonNull($.resources, "expected parameter 'resources' to be non-null");
+            return $;
         }
     }
+
 }

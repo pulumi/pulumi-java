@@ -5,10 +5,10 @@ package com.pulumi.azurenative.policyinsights.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,52 +25,52 @@ public final class RemediationFiltersArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="locations")
-      private final @Nullable Output<List<String>> locations;
+    private @Nullable Output<List<String>> locations;
 
-    public Output<List<String>> locations() {
-        return this.locations == null ? Codegen.empty() : this.locations;
+    public Optional<Output<List<String>>> locations() {
+        return Optional.ofNullable(this.locations);
     }
 
-    public RemediationFiltersArgs(@Nullable Output<List<String>> locations) {
-        this.locations = locations;
-    }
+    private RemediationFiltersArgs() {}
 
-    private RemediationFiltersArgs() {
-        this.locations = Codegen.empty();
+    private RemediationFiltersArgs(RemediationFiltersArgs $) {
+        this.locations = $.locations;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RemediationFiltersArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> locations;
+        private RemediationFiltersArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RemediationFiltersArgs();
         }
 
         public Builder(RemediationFiltersArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.locations = defaults.locations;
+            $ = new RemediationFiltersArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder locations(@Nullable Output<List<String>> locations) {
-            this.locations = locations;
+            $.locations = locations;
             return this;
         }
-        public Builder locations(@Nullable List<String> locations) {
-            this.locations = Codegen.ofNullable(locations);
-            return this;
+
+        public Builder locations(List<String> locations) {
+            return locations(Output.of(locations));
         }
+
         public Builder locations(String... locations) {
             return locations(List.of(locations));
-        }        public RemediationFiltersArgs build() {
-            return new RemediationFiltersArgs(locations);
+        }
+
+        public RemediationFiltersArgs build() {
+            return $;
         }
     }
+
 }

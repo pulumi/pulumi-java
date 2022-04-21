@@ -5,13 +5,13 @@ package com.pulumi.googlenative.dlp_v2;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.dlp_v2.enums.JobTriggerStatus;
 import com.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2InspectJobConfigArgs;
 import com.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2TriggerArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class JobTriggerArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class JobTriggerArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="displayName")
-      private final @Nullable Output<String> displayName;
+    private @Nullable Output<String> displayName;
 
-    public Output<String> displayName() {
-        return this.displayName == null ? Codegen.empty() : this.displayName;
+    public Optional<Output<String>> displayName() {
+        return Optional.ofNullable(this.displayName);
     }
 
     /**
@@ -46,17 +46,17 @@ public final class JobTriggerArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="inspectJob")
-      private final @Nullable Output<GooglePrivacyDlpV2InspectJobConfigArgs> inspectJob;
+    private @Nullable Output<GooglePrivacyDlpV2InspectJobConfigArgs> inspectJob;
 
-    public Output<GooglePrivacyDlpV2InspectJobConfigArgs> inspectJob() {
-        return this.inspectJob == null ? Codegen.empty() : this.inspectJob;
+    public Optional<Output<GooglePrivacyDlpV2InspectJobConfigArgs>> inspectJob() {
+        return Optional.ofNullable(this.inspectJob);
     }
 
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -64,17 +64,17 @@ public final class JobTriggerArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -82,7 +82,7 @@ public final class JobTriggerArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="status", required=true)
-      private final Output<JobTriggerStatus> status;
+    private Output<JobTriggerStatus> status;
 
     public Output<JobTriggerStatus> status() {
         return this.status;
@@ -93,10 +93,10 @@ public final class JobTriggerArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="triggerId")
-      private final @Nullable Output<String> triggerId;
+    private @Nullable Output<String> triggerId;
 
-    public Output<String> triggerId() {
-        return this.triggerId == null ? Codegen.empty() : this.triggerId;
+    public Optional<Output<String>> triggerId() {
+        return Optional.ofNullable(this.triggerId);
     }
 
     /**
@@ -104,157 +104,133 @@ public final class JobTriggerArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="triggers")
-      private final @Nullable Output<List<GooglePrivacyDlpV2TriggerArgs>> triggers;
+    private @Nullable Output<List<GooglePrivacyDlpV2TriggerArgs>> triggers;
 
-    public Output<List<GooglePrivacyDlpV2TriggerArgs>> triggers() {
-        return this.triggers == null ? Codegen.empty() : this.triggers;
+    public Optional<Output<List<GooglePrivacyDlpV2TriggerArgs>>> triggers() {
+        return Optional.ofNullable(this.triggers);
     }
 
-    public JobTriggerArgs(
-        @Nullable Output<String> description,
-        @Nullable Output<String> displayName,
-        @Nullable Output<GooglePrivacyDlpV2InspectJobConfigArgs> inspectJob,
-        @Nullable Output<String> location,
-        @Nullable Output<String> name,
-        @Nullable Output<String> project,
-        Output<JobTriggerStatus> status,
-        @Nullable Output<String> triggerId,
-        @Nullable Output<List<GooglePrivacyDlpV2TriggerArgs>> triggers) {
-        this.description = description;
-        this.displayName = displayName;
-        this.inspectJob = inspectJob;
-        this.location = location;
-        this.name = name;
-        this.project = project;
-        this.status = Objects.requireNonNull(status, "expected parameter 'status' to be non-null");
-        this.triggerId = triggerId;
-        this.triggers = triggers;
-    }
+    private JobTriggerArgs() {}
 
-    private JobTriggerArgs() {
-        this.description = Codegen.empty();
-        this.displayName = Codegen.empty();
-        this.inspectJob = Codegen.empty();
-        this.location = Codegen.empty();
-        this.name = Codegen.empty();
-        this.project = Codegen.empty();
-        this.status = Codegen.empty();
-        this.triggerId = Codegen.empty();
-        this.triggers = Codegen.empty();
+    private JobTriggerArgs(JobTriggerArgs $) {
+        this.description = $.description;
+        this.displayName = $.displayName;
+        this.inspectJob = $.inspectJob;
+        this.location = $.location;
+        this.name = $.name;
+        this.project = $.project;
+        this.status = $.status;
+        this.triggerId = $.triggerId;
+        this.triggers = $.triggers;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(JobTriggerArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> description;
-        private @Nullable Output<String> displayName;
-        private @Nullable Output<GooglePrivacyDlpV2InspectJobConfigArgs> inspectJob;
-        private @Nullable Output<String> location;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> project;
-        private Output<JobTriggerStatus> status;
-        private @Nullable Output<String> triggerId;
-        private @Nullable Output<List<GooglePrivacyDlpV2TriggerArgs>> triggers;
+        private JobTriggerArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new JobTriggerArgs();
         }
 
         public Builder(JobTriggerArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.description = defaults.description;
-    	      this.displayName = defaults.displayName;
-    	      this.inspectJob = defaults.inspectJob;
-    	      this.location = defaults.location;
-    	      this.name = defaults.name;
-    	      this.project = defaults.project;
-    	      this.status = defaults.status;
-    	      this.triggerId = defaults.triggerId;
-    	      this.triggers = defaults.triggers;
+            $ = new JobTriggerArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder displayName(@Nullable Output<String> displayName) {
-            this.displayName = displayName;
+            $.displayName = displayName;
             return this;
         }
-        public Builder displayName(@Nullable String displayName) {
-            this.displayName = Codegen.ofNullable(displayName);
-            return this;
+
+        public Builder displayName(String displayName) {
+            return displayName(Output.of(displayName));
         }
+
         public Builder inspectJob(@Nullable Output<GooglePrivacyDlpV2InspectJobConfigArgs> inspectJob) {
-            this.inspectJob = inspectJob;
+            $.inspectJob = inspectJob;
             return this;
         }
-        public Builder inspectJob(@Nullable GooglePrivacyDlpV2InspectJobConfigArgs inspectJob) {
-            this.inspectJob = Codegen.ofNullable(inspectJob);
-            return this;
+
+        public Builder inspectJob(GooglePrivacyDlpV2InspectJobConfigArgs inspectJob) {
+            return inspectJob(Output.of(inspectJob));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder status(Output<JobTriggerStatus> status) {
-            this.status = Objects.requireNonNull(status);
+            $.status = status;
             return this;
         }
+
         public Builder status(JobTriggerStatus status) {
-            this.status = Output.of(Objects.requireNonNull(status));
-            return this;
+            return status(Output.of(status));
         }
+
         public Builder triggerId(@Nullable Output<String> triggerId) {
-            this.triggerId = triggerId;
+            $.triggerId = triggerId;
             return this;
         }
-        public Builder triggerId(@Nullable String triggerId) {
-            this.triggerId = Codegen.ofNullable(triggerId);
-            return this;
+
+        public Builder triggerId(String triggerId) {
+            return triggerId(Output.of(triggerId));
         }
+
         public Builder triggers(@Nullable Output<List<GooglePrivacyDlpV2TriggerArgs>> triggers) {
-            this.triggers = triggers;
+            $.triggers = triggers;
             return this;
         }
-        public Builder triggers(@Nullable List<GooglePrivacyDlpV2TriggerArgs> triggers) {
-            this.triggers = Codegen.ofNullable(triggers);
-            return this;
+
+        public Builder triggers(List<GooglePrivacyDlpV2TriggerArgs> triggers) {
+            return triggers(Output.of(triggers));
         }
+
         public Builder triggers(GooglePrivacyDlpV2TriggerArgs... triggers) {
             return triggers(List.of(triggers));
-        }        public JobTriggerArgs build() {
-            return new JobTriggerArgs(description, displayName, inspectJob, location, name, project, status, triggerId, triggers);
+        }
+
+        public JobTriggerArgs build() {
+            $.status = Objects.requireNonNull($.status, "expected parameter 'status' to be non-null");
+            return $;
         }
     }
+
 }

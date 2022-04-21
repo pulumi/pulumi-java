@@ -11,6 +11,7 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,7 +24,7 @@ public final class ScheduledTriggerArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="accountName", required=true)
-      private final Output<String> accountName;
+    private Output<String> accountName;
 
     public Output<String> accountName() {
         return this.accountName;
@@ -35,7 +36,7 @@ public final class ScheduledTriggerArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="kind", required=true)
-      private final Output<String> kind;
+    private Output<String> kind;
 
     public Output<String> kind() {
         return this.kind;
@@ -46,7 +47,7 @@ public final class ScheduledTriggerArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="recurrenceInterval", required=true)
-      private final Output<Either<String,RecurrenceInterval>> recurrenceInterval;
+    private Output<Either<String,RecurrenceInterval>> recurrenceInterval;
 
     public Output<Either<String,RecurrenceInterval>> recurrenceInterval() {
         return this.recurrenceInterval;
@@ -57,7 +58,7 @@ public final class ScheduledTriggerArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -68,7 +69,7 @@ public final class ScheduledTriggerArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="shareSubscriptionName", required=true)
-      private final Output<String> shareSubscriptionName;
+    private Output<String> shareSubscriptionName;
 
     public Output<String> shareSubscriptionName() {
         return this.shareSubscriptionName;
@@ -79,10 +80,10 @@ public final class ScheduledTriggerArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="synchronizationMode")
-      private final @Nullable Output<Either<String,SynchronizationMode>> synchronizationMode;
+    private @Nullable Output<Either<String,SynchronizationMode>> synchronizationMode;
 
-    public Output<Either<String,SynchronizationMode>> synchronizationMode() {
-        return this.synchronizationMode == null ? Codegen.empty() : this.synchronizationMode;
+    public Optional<Output<Either<String,SynchronizationMode>>> synchronizationMode() {
+        return Optional.ofNullable(this.synchronizationMode);
     }
 
     /**
@@ -90,7 +91,7 @@ public final class ScheduledTriggerArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="synchronizationTime", required=true)
-      private final Output<String> synchronizationTime;
+    private Output<String> synchronizationTime;
 
     public Output<String> synchronizationTime() {
         return this.synchronizationTime;
@@ -101,141 +102,124 @@ public final class ScheduledTriggerArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="triggerName")
-      private final @Nullable Output<String> triggerName;
+    private @Nullable Output<String> triggerName;
 
-    public Output<String> triggerName() {
-        return this.triggerName == null ? Codegen.empty() : this.triggerName;
+    public Optional<Output<String>> triggerName() {
+        return Optional.ofNullable(this.triggerName);
     }
 
-    public ScheduledTriggerArgs(
-        Output<String> accountName,
-        Output<String> kind,
-        Output<Either<String,RecurrenceInterval>> recurrenceInterval,
-        Output<String> resourceGroupName,
-        Output<String> shareSubscriptionName,
-        @Nullable Output<Either<String,SynchronizationMode>> synchronizationMode,
-        Output<String> synchronizationTime,
-        @Nullable Output<String> triggerName) {
-        this.accountName = Objects.requireNonNull(accountName, "expected parameter 'accountName' to be non-null");
-        this.kind = Codegen.stringProp("kind").output().arg(kind).require();
-        this.recurrenceInterval = Objects.requireNonNull(recurrenceInterval, "expected parameter 'recurrenceInterval' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.shareSubscriptionName = Objects.requireNonNull(shareSubscriptionName, "expected parameter 'shareSubscriptionName' to be non-null");
-        this.synchronizationMode = synchronizationMode;
-        this.synchronizationTime = Objects.requireNonNull(synchronizationTime, "expected parameter 'synchronizationTime' to be non-null");
-        this.triggerName = triggerName;
-    }
+    private ScheduledTriggerArgs() {}
 
-    private ScheduledTriggerArgs() {
-        this.accountName = Codegen.empty();
-        this.kind = Codegen.empty();
-        this.recurrenceInterval = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.shareSubscriptionName = Codegen.empty();
-        this.synchronizationMode = Codegen.empty();
-        this.synchronizationTime = Codegen.empty();
-        this.triggerName = Codegen.empty();
+    private ScheduledTriggerArgs(ScheduledTriggerArgs $) {
+        this.accountName = $.accountName;
+        this.kind = $.kind;
+        this.recurrenceInterval = $.recurrenceInterval;
+        this.resourceGroupName = $.resourceGroupName;
+        this.shareSubscriptionName = $.shareSubscriptionName;
+        this.synchronizationMode = $.synchronizationMode;
+        this.synchronizationTime = $.synchronizationTime;
+        this.triggerName = $.triggerName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ScheduledTriggerArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> accountName;
-        private Output<String> kind;
-        private Output<Either<String,RecurrenceInterval>> recurrenceInterval;
-        private Output<String> resourceGroupName;
-        private Output<String> shareSubscriptionName;
-        private @Nullable Output<Either<String,SynchronizationMode>> synchronizationMode;
-        private Output<String> synchronizationTime;
-        private @Nullable Output<String> triggerName;
+        private ScheduledTriggerArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ScheduledTriggerArgs();
         }
 
         public Builder(ScheduledTriggerArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accountName = defaults.accountName;
-    	      this.kind = defaults.kind;
-    	      this.recurrenceInterval = defaults.recurrenceInterval;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.shareSubscriptionName = defaults.shareSubscriptionName;
-    	      this.synchronizationMode = defaults.synchronizationMode;
-    	      this.synchronizationTime = defaults.synchronizationTime;
-    	      this.triggerName = defaults.triggerName;
+            $ = new ScheduledTriggerArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder accountName(Output<String> accountName) {
-            this.accountName = Objects.requireNonNull(accountName);
+            $.accountName = accountName;
             return this;
         }
+
         public Builder accountName(String accountName) {
-            this.accountName = Output.of(Objects.requireNonNull(accountName));
-            return this;
+            return accountName(Output.of(accountName));
         }
+
         public Builder kind(Output<String> kind) {
-            this.kind = Objects.requireNonNull(kind);
+            $.kind = kind;
             return this;
         }
+
         public Builder kind(String kind) {
-            this.kind = Output.of(Objects.requireNonNull(kind));
-            return this;
+            return kind(Output.of(kind));
         }
+
         public Builder recurrenceInterval(Output<Either<String,RecurrenceInterval>> recurrenceInterval) {
-            this.recurrenceInterval = Objects.requireNonNull(recurrenceInterval);
+            $.recurrenceInterval = recurrenceInterval;
             return this;
         }
+
         public Builder recurrenceInterval(Either<String,RecurrenceInterval> recurrenceInterval) {
-            this.recurrenceInterval = Output.of(Objects.requireNonNull(recurrenceInterval));
-            return this;
+            return recurrenceInterval(Output.of(recurrenceInterval));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder shareSubscriptionName(Output<String> shareSubscriptionName) {
-            this.shareSubscriptionName = Objects.requireNonNull(shareSubscriptionName);
+            $.shareSubscriptionName = shareSubscriptionName;
             return this;
         }
+
         public Builder shareSubscriptionName(String shareSubscriptionName) {
-            this.shareSubscriptionName = Output.of(Objects.requireNonNull(shareSubscriptionName));
-            return this;
+            return shareSubscriptionName(Output.of(shareSubscriptionName));
         }
+
         public Builder synchronizationMode(@Nullable Output<Either<String,SynchronizationMode>> synchronizationMode) {
-            this.synchronizationMode = synchronizationMode;
+            $.synchronizationMode = synchronizationMode;
             return this;
         }
-        public Builder synchronizationMode(@Nullable Either<String,SynchronizationMode> synchronizationMode) {
-            this.synchronizationMode = Codegen.ofNullable(synchronizationMode);
-            return this;
+
+        public Builder synchronizationMode(Either<String,SynchronizationMode> synchronizationMode) {
+            return synchronizationMode(Output.of(synchronizationMode));
         }
+
         public Builder synchronizationTime(Output<String> synchronizationTime) {
-            this.synchronizationTime = Objects.requireNonNull(synchronizationTime);
+            $.synchronizationTime = synchronizationTime;
             return this;
         }
+
         public Builder synchronizationTime(String synchronizationTime) {
-            this.synchronizationTime = Output.of(Objects.requireNonNull(synchronizationTime));
-            return this;
+            return synchronizationTime(Output.of(synchronizationTime));
         }
+
         public Builder triggerName(@Nullable Output<String> triggerName) {
-            this.triggerName = triggerName;
+            $.triggerName = triggerName;
             return this;
         }
-        public Builder triggerName(@Nullable String triggerName) {
-            this.triggerName = Codegen.ofNullable(triggerName);
-            return this;
-        }        public ScheduledTriggerArgs build() {
-            return new ScheduledTriggerArgs(accountName, kind, recurrenceInterval, resourceGroupName, shareSubscriptionName, synchronizationMode, synchronizationTime, triggerName);
+
+        public Builder triggerName(String triggerName) {
+            return triggerName(Output.of(triggerName));
+        }
+
+        public ScheduledTriggerArgs build() {
+            $.accountName = Objects.requireNonNull($.accountName, "expected parameter 'accountName' to be non-null");
+            $.kind = Codegen.stringProp("kind").output().arg($.kind).require();
+            $.recurrenceInterval = Objects.requireNonNull($.recurrenceInterval, "expected parameter 'recurrenceInterval' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.shareSubscriptionName = Objects.requireNonNull($.shareSubscriptionName, "expected parameter 'shareSubscriptionName' to be non-null");
+            $.synchronizationTime = Objects.requireNonNull($.synchronizationTime, "expected parameter 'synchronizationTime' to be non-null");
+            return $;
         }
     }
+
 }

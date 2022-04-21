@@ -5,11 +5,11 @@ package com.pulumi.aws.storagegateway;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,7 +22,7 @@ public final class StoredIscsiVolumeArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="diskId", required=true)
-      private final Output<String> diskId;
+    private Output<String> diskId;
 
     public Output<String> diskId() {
         return this.diskId;
@@ -33,7 +33,7 @@ public final class StoredIscsiVolumeArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="gatewayArn", required=true)
-      private final Output<String> gatewayArn;
+    private Output<String> gatewayArn;
 
     public Output<String> gatewayArn() {
         return this.gatewayArn;
@@ -44,10 +44,10 @@ public final class StoredIscsiVolumeArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="kmsEncrypted")
-      private final @Nullable Output<Boolean> kmsEncrypted;
+    private @Nullable Output<Boolean> kmsEncrypted;
 
-    public Output<Boolean> kmsEncrypted() {
-        return this.kmsEncrypted == null ? Codegen.empty() : this.kmsEncrypted;
+    public Optional<Output<Boolean>> kmsEncrypted() {
+        return Optional.ofNullable(this.kmsEncrypted);
     }
 
     /**
@@ -55,10 +55,10 @@ public final class StoredIscsiVolumeArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="kmsKey")
-      private final @Nullable Output<String> kmsKey;
+    private @Nullable Output<String> kmsKey;
 
-    public Output<String> kmsKey() {
-        return this.kmsKey == null ? Codegen.empty() : this.kmsKey;
+    public Optional<Output<String>> kmsKey() {
+        return Optional.ofNullable(this.kmsKey);
     }
 
     /**
@@ -66,7 +66,7 @@ public final class StoredIscsiVolumeArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="networkInterfaceId", required=true)
-      private final Output<String> networkInterfaceId;
+    private Output<String> networkInterfaceId;
 
     public Output<String> networkInterfaceId() {
         return this.networkInterfaceId;
@@ -77,7 +77,7 @@ public final class StoredIscsiVolumeArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="preserveExistingData", required=true)
-      private final Output<Boolean> preserveExistingData;
+    private Output<Boolean> preserveExistingData;
 
     public Output<Boolean> preserveExistingData() {
         return this.preserveExistingData;
@@ -88,10 +88,10 @@ public final class StoredIscsiVolumeArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="snapshotId")
-      private final @Nullable Output<String> snapshotId;
+    private @Nullable Output<String> snapshotId;
 
-    public Output<String> snapshotId() {
-        return this.snapshotId == null ? Codegen.empty() : this.snapshotId;
+    public Optional<Output<String>> snapshotId() {
+        return Optional.ofNullable(this.snapshotId);
     }
 
     /**
@@ -99,10 +99,10 @@ public final class StoredIscsiVolumeArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -110,154 +110,133 @@ public final class StoredIscsiVolumeArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="targetName", required=true)
-      private final Output<String> targetName;
+    private Output<String> targetName;
 
     public Output<String> targetName() {
         return this.targetName;
     }
 
-    public StoredIscsiVolumeArgs(
-        Output<String> diskId,
-        Output<String> gatewayArn,
-        @Nullable Output<Boolean> kmsEncrypted,
-        @Nullable Output<String> kmsKey,
-        Output<String> networkInterfaceId,
-        Output<Boolean> preserveExistingData,
-        @Nullable Output<String> snapshotId,
-        @Nullable Output<Map<String,String>> tags,
-        Output<String> targetName) {
-        this.diskId = Objects.requireNonNull(diskId, "expected parameter 'diskId' to be non-null");
-        this.gatewayArn = Objects.requireNonNull(gatewayArn, "expected parameter 'gatewayArn' to be non-null");
-        this.kmsEncrypted = kmsEncrypted;
-        this.kmsKey = kmsKey;
-        this.networkInterfaceId = Objects.requireNonNull(networkInterfaceId, "expected parameter 'networkInterfaceId' to be non-null");
-        this.preserveExistingData = Objects.requireNonNull(preserveExistingData, "expected parameter 'preserveExistingData' to be non-null");
-        this.snapshotId = snapshotId;
-        this.tags = tags;
-        this.targetName = Objects.requireNonNull(targetName, "expected parameter 'targetName' to be non-null");
-    }
+    private StoredIscsiVolumeArgs() {}
 
-    private StoredIscsiVolumeArgs() {
-        this.diskId = Codegen.empty();
-        this.gatewayArn = Codegen.empty();
-        this.kmsEncrypted = Codegen.empty();
-        this.kmsKey = Codegen.empty();
-        this.networkInterfaceId = Codegen.empty();
-        this.preserveExistingData = Codegen.empty();
-        this.snapshotId = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.targetName = Codegen.empty();
+    private StoredIscsiVolumeArgs(StoredIscsiVolumeArgs $) {
+        this.diskId = $.diskId;
+        this.gatewayArn = $.gatewayArn;
+        this.kmsEncrypted = $.kmsEncrypted;
+        this.kmsKey = $.kmsKey;
+        this.networkInterfaceId = $.networkInterfaceId;
+        this.preserveExistingData = $.preserveExistingData;
+        this.snapshotId = $.snapshotId;
+        this.tags = $.tags;
+        this.targetName = $.targetName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(StoredIscsiVolumeArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> diskId;
-        private Output<String> gatewayArn;
-        private @Nullable Output<Boolean> kmsEncrypted;
-        private @Nullable Output<String> kmsKey;
-        private Output<String> networkInterfaceId;
-        private Output<Boolean> preserveExistingData;
-        private @Nullable Output<String> snapshotId;
-        private @Nullable Output<Map<String,String>> tags;
-        private Output<String> targetName;
+        private StoredIscsiVolumeArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new StoredIscsiVolumeArgs();
         }
 
         public Builder(StoredIscsiVolumeArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.diskId = defaults.diskId;
-    	      this.gatewayArn = defaults.gatewayArn;
-    	      this.kmsEncrypted = defaults.kmsEncrypted;
-    	      this.kmsKey = defaults.kmsKey;
-    	      this.networkInterfaceId = defaults.networkInterfaceId;
-    	      this.preserveExistingData = defaults.preserveExistingData;
-    	      this.snapshotId = defaults.snapshotId;
-    	      this.tags = defaults.tags;
-    	      this.targetName = defaults.targetName;
+            $ = new StoredIscsiVolumeArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder diskId(Output<String> diskId) {
-            this.diskId = Objects.requireNonNull(diskId);
+            $.diskId = diskId;
             return this;
         }
+
         public Builder diskId(String diskId) {
-            this.diskId = Output.of(Objects.requireNonNull(diskId));
-            return this;
+            return diskId(Output.of(diskId));
         }
+
         public Builder gatewayArn(Output<String> gatewayArn) {
-            this.gatewayArn = Objects.requireNonNull(gatewayArn);
+            $.gatewayArn = gatewayArn;
             return this;
         }
+
         public Builder gatewayArn(String gatewayArn) {
-            this.gatewayArn = Output.of(Objects.requireNonNull(gatewayArn));
-            return this;
+            return gatewayArn(Output.of(gatewayArn));
         }
+
         public Builder kmsEncrypted(@Nullable Output<Boolean> kmsEncrypted) {
-            this.kmsEncrypted = kmsEncrypted;
+            $.kmsEncrypted = kmsEncrypted;
             return this;
         }
-        public Builder kmsEncrypted(@Nullable Boolean kmsEncrypted) {
-            this.kmsEncrypted = Codegen.ofNullable(kmsEncrypted);
-            return this;
+
+        public Builder kmsEncrypted(Boolean kmsEncrypted) {
+            return kmsEncrypted(Output.of(kmsEncrypted));
         }
+
         public Builder kmsKey(@Nullable Output<String> kmsKey) {
-            this.kmsKey = kmsKey;
+            $.kmsKey = kmsKey;
             return this;
         }
-        public Builder kmsKey(@Nullable String kmsKey) {
-            this.kmsKey = Codegen.ofNullable(kmsKey);
-            return this;
+
+        public Builder kmsKey(String kmsKey) {
+            return kmsKey(Output.of(kmsKey));
         }
+
         public Builder networkInterfaceId(Output<String> networkInterfaceId) {
-            this.networkInterfaceId = Objects.requireNonNull(networkInterfaceId);
+            $.networkInterfaceId = networkInterfaceId;
             return this;
         }
+
         public Builder networkInterfaceId(String networkInterfaceId) {
-            this.networkInterfaceId = Output.of(Objects.requireNonNull(networkInterfaceId));
-            return this;
+            return networkInterfaceId(Output.of(networkInterfaceId));
         }
+
         public Builder preserveExistingData(Output<Boolean> preserveExistingData) {
-            this.preserveExistingData = Objects.requireNonNull(preserveExistingData);
+            $.preserveExistingData = preserveExistingData;
             return this;
         }
+
         public Builder preserveExistingData(Boolean preserveExistingData) {
-            this.preserveExistingData = Output.of(Objects.requireNonNull(preserveExistingData));
-            return this;
+            return preserveExistingData(Output.of(preserveExistingData));
         }
+
         public Builder snapshotId(@Nullable Output<String> snapshotId) {
-            this.snapshotId = snapshotId;
+            $.snapshotId = snapshotId;
             return this;
         }
-        public Builder snapshotId(@Nullable String snapshotId) {
-            this.snapshotId = Codegen.ofNullable(snapshotId);
-            return this;
+
+        public Builder snapshotId(String snapshotId) {
+            return snapshotId(Output.of(snapshotId));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder targetName(Output<String> targetName) {
-            this.targetName = Objects.requireNonNull(targetName);
+            $.targetName = targetName;
             return this;
         }
+
         public Builder targetName(String targetName) {
-            this.targetName = Output.of(Objects.requireNonNull(targetName));
-            return this;
-        }        public StoredIscsiVolumeArgs build() {
-            return new StoredIscsiVolumeArgs(diskId, gatewayArn, kmsEncrypted, kmsKey, networkInterfaceId, preserveExistingData, snapshotId, tags, targetName);
+            return targetName(Output.of(targetName));
+        }
+
+        public StoredIscsiVolumeArgs build() {
+            $.diskId = Objects.requireNonNull($.diskId, "expected parameter 'diskId' to be non-null");
+            $.gatewayArn = Objects.requireNonNull($.gatewayArn, "expected parameter 'gatewayArn' to be non-null");
+            $.networkInterfaceId = Objects.requireNonNull($.networkInterfaceId, "expected parameter 'networkInterfaceId' to be non-null");
+            $.preserveExistingData = Objects.requireNonNull($.preserveExistingData, "expected parameter 'preserveExistingData' to be non-null");
+            $.targetName = Objects.requireNonNull($.targetName, "expected parameter 'targetName' to be non-null");
+            return $;
         }
     }
+
 }

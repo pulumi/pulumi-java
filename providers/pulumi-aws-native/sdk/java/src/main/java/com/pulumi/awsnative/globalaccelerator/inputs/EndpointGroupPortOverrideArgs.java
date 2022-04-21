@@ -5,7 +5,6 @@ package com.pulumi.awsnative.globalaccelerator.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -19,70 +18,67 @@ public final class EndpointGroupPortOverrideArgs extends com.pulumi.resources.Re
     public static final EndpointGroupPortOverrideArgs Empty = new EndpointGroupPortOverrideArgs();
 
     @Import(name="endpointPort", required=true)
-      private final Output<Integer> endpointPort;
+    private Output<Integer> endpointPort;
 
     public Output<Integer> endpointPort() {
         return this.endpointPort;
     }
 
     @Import(name="listenerPort", required=true)
-      private final Output<Integer> listenerPort;
+    private Output<Integer> listenerPort;
 
     public Output<Integer> listenerPort() {
         return this.listenerPort;
     }
 
-    public EndpointGroupPortOverrideArgs(
-        Output<Integer> endpointPort,
-        Output<Integer> listenerPort) {
-        this.endpointPort = Objects.requireNonNull(endpointPort, "expected parameter 'endpointPort' to be non-null");
-        this.listenerPort = Objects.requireNonNull(listenerPort, "expected parameter 'listenerPort' to be non-null");
-    }
+    private EndpointGroupPortOverrideArgs() {}
 
-    private EndpointGroupPortOverrideArgs() {
-        this.endpointPort = Codegen.empty();
-        this.listenerPort = Codegen.empty();
+    private EndpointGroupPortOverrideArgs(EndpointGroupPortOverrideArgs $) {
+        this.endpointPort = $.endpointPort;
+        this.listenerPort = $.listenerPort;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EndpointGroupPortOverrideArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Integer> endpointPort;
-        private Output<Integer> listenerPort;
+        private EndpointGroupPortOverrideArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new EndpointGroupPortOverrideArgs();
         }
 
         public Builder(EndpointGroupPortOverrideArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.endpointPort = defaults.endpointPort;
-    	      this.listenerPort = defaults.listenerPort;
+            $ = new EndpointGroupPortOverrideArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder endpointPort(Output<Integer> endpointPort) {
-            this.endpointPort = Objects.requireNonNull(endpointPort);
+            $.endpointPort = endpointPort;
             return this;
         }
+
         public Builder endpointPort(Integer endpointPort) {
-            this.endpointPort = Output.of(Objects.requireNonNull(endpointPort));
-            return this;
+            return endpointPort(Output.of(endpointPort));
         }
+
         public Builder listenerPort(Output<Integer> listenerPort) {
-            this.listenerPort = Objects.requireNonNull(listenerPort);
+            $.listenerPort = listenerPort;
             return this;
         }
+
         public Builder listenerPort(Integer listenerPort) {
-            this.listenerPort = Output.of(Objects.requireNonNull(listenerPort));
-            return this;
-        }        public EndpointGroupPortOverrideArgs build() {
-            return new EndpointGroupPortOverrideArgs(endpointPort, listenerPort);
+            return listenerPort(Output.of(listenerPort));
+        }
+
+        public EndpointGroupPortOverrideArgs build() {
+            $.endpointPort = Objects.requireNonNull($.endpointPort, "expected parameter 'endpointPort' to be non-null");
+            $.listenerPort = Objects.requireNonNull($.listenerPort, "expected parameter 'listenerPort' to be non-null");
+            return $;
         }
     }
+
 }

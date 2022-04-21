@@ -24,10 +24,10 @@ public final class WorkspaceFeaturesResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="clusterResourceId")
-      private final @Nullable String clusterResourceId;
+    private @Nullable String clusterResourceId;
 
     public Optional<String> clusterResourceId() {
-        return this.clusterResourceId == null ? Optional.empty() : Optional.ofNullable(this.clusterResourceId);
+        return Optional.ofNullable(this.clusterResourceId);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class WorkspaceFeaturesResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="disableLocalAuth")
-      private final @Nullable Boolean disableLocalAuth;
+    private @Nullable Boolean disableLocalAuth;
 
     public Optional<Boolean> disableLocalAuth() {
-        return this.disableLocalAuth == null ? Optional.empty() : Optional.ofNullable(this.disableLocalAuth);
+        return Optional.ofNullable(this.disableLocalAuth);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class WorkspaceFeaturesResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="enableDataExport")
-      private final @Nullable Boolean enableDataExport;
+    private @Nullable Boolean enableDataExport;
 
     public Optional<Boolean> enableDataExport() {
-        return this.enableDataExport == null ? Optional.empty() : Optional.ofNullable(this.enableDataExport);
+        return Optional.ofNullable(this.enableDataExport);
     }
 
     /**
@@ -57,10 +57,10 @@ public final class WorkspaceFeaturesResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="enableLogAccessUsingOnlyResourcePermissions")
-      private final @Nullable Boolean enableLogAccessUsingOnlyResourcePermissions;
+    private @Nullable Boolean enableLogAccessUsingOnlyResourcePermissions;
 
     public Optional<Boolean> enableLogAccessUsingOnlyResourcePermissions() {
-        return this.enableLogAccessUsingOnlyResourcePermissions == null ? Optional.empty() : Optional.ofNullable(this.enableLogAccessUsingOnlyResourcePermissions);
+        return Optional.ofNullable(this.enableLogAccessUsingOnlyResourcePermissions);
     }
 
     /**
@@ -68,82 +68,68 @@ public final class WorkspaceFeaturesResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="immediatePurgeDataOn30Days")
-      private final @Nullable Boolean immediatePurgeDataOn30Days;
+    private @Nullable Boolean immediatePurgeDataOn30Days;
 
     public Optional<Boolean> immediatePurgeDataOn30Days() {
-        return this.immediatePurgeDataOn30Days == null ? Optional.empty() : Optional.ofNullable(this.immediatePurgeDataOn30Days);
+        return Optional.ofNullable(this.immediatePurgeDataOn30Days);
     }
 
-    public WorkspaceFeaturesResponse(
-        @Nullable String clusterResourceId,
-        @Nullable Boolean disableLocalAuth,
-        @Nullable Boolean enableDataExport,
-        @Nullable Boolean enableLogAccessUsingOnlyResourcePermissions,
-        @Nullable Boolean immediatePurgeDataOn30Days) {
-        this.clusterResourceId = clusterResourceId;
-        this.disableLocalAuth = disableLocalAuth;
-        this.enableDataExport = enableDataExport;
-        this.enableLogAccessUsingOnlyResourcePermissions = enableLogAccessUsingOnlyResourcePermissions;
-        this.immediatePurgeDataOn30Days = immediatePurgeDataOn30Days;
-    }
+    private WorkspaceFeaturesResponse() {}
 
-    private WorkspaceFeaturesResponse() {
-        this.clusterResourceId = null;
-        this.disableLocalAuth = null;
-        this.enableDataExport = null;
-        this.enableLogAccessUsingOnlyResourcePermissions = null;
-        this.immediatePurgeDataOn30Days = null;
+    private WorkspaceFeaturesResponse(WorkspaceFeaturesResponse $) {
+        this.clusterResourceId = $.clusterResourceId;
+        this.disableLocalAuth = $.disableLocalAuth;
+        this.enableDataExport = $.enableDataExport;
+        this.enableLogAccessUsingOnlyResourcePermissions = $.enableLogAccessUsingOnlyResourcePermissions;
+        this.immediatePurgeDataOn30Days = $.immediatePurgeDataOn30Days;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WorkspaceFeaturesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String clusterResourceId;
-        private @Nullable Boolean disableLocalAuth;
-        private @Nullable Boolean enableDataExport;
-        private @Nullable Boolean enableLogAccessUsingOnlyResourcePermissions;
-        private @Nullable Boolean immediatePurgeDataOn30Days;
+        private WorkspaceFeaturesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new WorkspaceFeaturesResponse();
         }
 
         public Builder(WorkspaceFeaturesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.clusterResourceId = defaults.clusterResourceId;
-    	      this.disableLocalAuth = defaults.disableLocalAuth;
-    	      this.enableDataExport = defaults.enableDataExport;
-    	      this.enableLogAccessUsingOnlyResourcePermissions = defaults.enableLogAccessUsingOnlyResourcePermissions;
-    	      this.immediatePurgeDataOn30Days = defaults.immediatePurgeDataOn30Days;
+            $ = new WorkspaceFeaturesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder clusterResourceId(@Nullable String clusterResourceId) {
-            this.clusterResourceId = clusterResourceId;
+            $.clusterResourceId = clusterResourceId;
             return this;
         }
+
         public Builder disableLocalAuth(@Nullable Boolean disableLocalAuth) {
-            this.disableLocalAuth = disableLocalAuth;
+            $.disableLocalAuth = disableLocalAuth;
             return this;
         }
+
         public Builder enableDataExport(@Nullable Boolean enableDataExport) {
-            this.enableDataExport = enableDataExport;
+            $.enableDataExport = enableDataExport;
             return this;
         }
+
         public Builder enableLogAccessUsingOnlyResourcePermissions(@Nullable Boolean enableLogAccessUsingOnlyResourcePermissions) {
-            this.enableLogAccessUsingOnlyResourcePermissions = enableLogAccessUsingOnlyResourcePermissions;
+            $.enableLogAccessUsingOnlyResourcePermissions = enableLogAccessUsingOnlyResourcePermissions;
             return this;
         }
+
         public Builder immediatePurgeDataOn30Days(@Nullable Boolean immediatePurgeDataOn30Days) {
-            this.immediatePurgeDataOn30Days = immediatePurgeDataOn30Days;
+            $.immediatePurgeDataOn30Days = immediatePurgeDataOn30Days;
             return this;
-        }        public WorkspaceFeaturesResponse build() {
-            return new WorkspaceFeaturesResponse(clusterResourceId, disableLocalAuth, enableDataExport, enableLogAccessUsingOnlyResourcePermissions, immediatePurgeDataOn30Days);
+        }
+
+        public WorkspaceFeaturesResponse build() {
+            return $;
         }
     }
+
 }

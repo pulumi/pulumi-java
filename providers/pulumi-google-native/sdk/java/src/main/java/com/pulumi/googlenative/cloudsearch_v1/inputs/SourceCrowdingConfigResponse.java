@@ -21,7 +21,7 @@ public final class SourceCrowdingConfigResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="numResults", required=true)
-      private final Integer numResults;
+    private Integer numResults;
 
     public Integer numResults() {
         return this.numResults;
@@ -32,55 +32,52 @@ public final class SourceCrowdingConfigResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="numSuggestions", required=true)
-      private final Integer numSuggestions;
+    private Integer numSuggestions;
 
     public Integer numSuggestions() {
         return this.numSuggestions;
     }
 
-    public SourceCrowdingConfigResponse(
-        Integer numResults,
-        Integer numSuggestions) {
-        this.numResults = Objects.requireNonNull(numResults, "expected parameter 'numResults' to be non-null");
-        this.numSuggestions = Objects.requireNonNull(numSuggestions, "expected parameter 'numSuggestions' to be non-null");
-    }
+    private SourceCrowdingConfigResponse() {}
 
-    private SourceCrowdingConfigResponse() {
-        this.numResults = null;
-        this.numSuggestions = null;
+    private SourceCrowdingConfigResponse(SourceCrowdingConfigResponse $) {
+        this.numResults = $.numResults;
+        this.numSuggestions = $.numSuggestions;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SourceCrowdingConfigResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Integer numResults;
-        private Integer numSuggestions;
+        private SourceCrowdingConfigResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new SourceCrowdingConfigResponse();
         }
 
         public Builder(SourceCrowdingConfigResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.numResults = defaults.numResults;
-    	      this.numSuggestions = defaults.numSuggestions;
+            $ = new SourceCrowdingConfigResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder numResults(Integer numResults) {
-            this.numResults = Objects.requireNonNull(numResults);
+            $.numResults = numResults;
             return this;
         }
+
         public Builder numSuggestions(Integer numSuggestions) {
-            this.numSuggestions = Objects.requireNonNull(numSuggestions);
+            $.numSuggestions = numSuggestions;
             return this;
-        }        public SourceCrowdingConfigResponse build() {
-            return new SourceCrowdingConfigResponse(numResults, numSuggestions);
+        }
+
+        public SourceCrowdingConfigResponse build() {
+            $.numResults = Objects.requireNonNull($.numResults, "expected parameter 'numResults' to be non-null");
+            $.numSuggestions = Objects.requireNonNull($.numSuggestions, "expected parameter 'numSuggestions' to be non-null");
+            return $;
         }
     }
+
 }

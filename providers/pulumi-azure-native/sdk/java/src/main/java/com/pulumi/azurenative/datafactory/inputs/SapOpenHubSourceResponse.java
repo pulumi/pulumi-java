@@ -25,10 +25,10 @@ public final class SapOpenHubSourceResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="additionalColumns")
-      private final @Nullable Object additionalColumns;
+    private @Nullable Object additionalColumns;
 
     public Optional<Object> additionalColumns() {
-        return this.additionalColumns == null ? Optional.empty() : Optional.ofNullable(this.additionalColumns);
+        return Optional.ofNullable(this.additionalColumns);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class SapOpenHubSourceResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="baseRequestId")
-      private final @Nullable Object baseRequestId;
+    private @Nullable Object baseRequestId;
 
     public Optional<Object> baseRequestId() {
-        return this.baseRequestId == null ? Optional.empty() : Optional.ofNullable(this.baseRequestId);
+        return Optional.ofNullable(this.baseRequestId);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class SapOpenHubSourceResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="customRfcReadTableFunctionModule")
-      private final @Nullable Object customRfcReadTableFunctionModule;
+    private @Nullable Object customRfcReadTableFunctionModule;
 
     public Optional<Object> customRfcReadTableFunctionModule() {
-        return this.customRfcReadTableFunctionModule == null ? Optional.empty() : Optional.ofNullable(this.customRfcReadTableFunctionModule);
+        return Optional.ofNullable(this.customRfcReadTableFunctionModule);
     }
 
     /**
@@ -58,10 +58,10 @@ public final class SapOpenHubSourceResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="disableMetricsCollection")
-      private final @Nullable Object disableMetricsCollection;
+    private @Nullable Object disableMetricsCollection;
 
     public Optional<Object> disableMetricsCollection() {
-        return this.disableMetricsCollection == null ? Optional.empty() : Optional.ofNullable(this.disableMetricsCollection);
+        return Optional.ofNullable(this.disableMetricsCollection);
     }
 
     /**
@@ -69,10 +69,10 @@ public final class SapOpenHubSourceResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="excludeLastRequest")
-      private final @Nullable Object excludeLastRequest;
+    private @Nullable Object excludeLastRequest;
 
     public Optional<Object> excludeLastRequest() {
-        return this.excludeLastRequest == null ? Optional.empty() : Optional.ofNullable(this.excludeLastRequest);
+        return Optional.ofNullable(this.excludeLastRequest);
     }
 
     /**
@@ -80,10 +80,10 @@ public final class SapOpenHubSourceResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="maxConcurrentConnections")
-      private final @Nullable Object maxConcurrentConnections;
+    private @Nullable Object maxConcurrentConnections;
 
     public Optional<Object> maxConcurrentConnections() {
-        return this.maxConcurrentConnections == null ? Optional.empty() : Optional.ofNullable(this.maxConcurrentConnections);
+        return Optional.ofNullable(this.maxConcurrentConnections);
     }
 
     /**
@@ -91,10 +91,10 @@ public final class SapOpenHubSourceResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="queryTimeout")
-      private final @Nullable Object queryTimeout;
+    private @Nullable Object queryTimeout;
 
     public Optional<Object> queryTimeout() {
-        return this.queryTimeout == null ? Optional.empty() : Optional.ofNullable(this.queryTimeout);
+        return Optional.ofNullable(this.queryTimeout);
     }
 
     /**
@@ -102,10 +102,10 @@ public final class SapOpenHubSourceResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="sapDataColumnDelimiter")
-      private final @Nullable Object sapDataColumnDelimiter;
+    private @Nullable Object sapDataColumnDelimiter;
 
     public Optional<Object> sapDataColumnDelimiter() {
-        return this.sapDataColumnDelimiter == null ? Optional.empty() : Optional.ofNullable(this.sapDataColumnDelimiter);
+        return Optional.ofNullable(this.sapDataColumnDelimiter);
     }
 
     /**
@@ -113,10 +113,10 @@ public final class SapOpenHubSourceResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="sourceRetryCount")
-      private final @Nullable Object sourceRetryCount;
+    private @Nullable Object sourceRetryCount;
 
     public Optional<Object> sourceRetryCount() {
-        return this.sourceRetryCount == null ? Optional.empty() : Optional.ofNullable(this.sourceRetryCount);
+        return Optional.ofNullable(this.sourceRetryCount);
     }
 
     /**
@@ -124,10 +124,10 @@ public final class SapOpenHubSourceResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="sourceRetryWait")
-      private final @Nullable Object sourceRetryWait;
+    private @Nullable Object sourceRetryWait;
 
     public Optional<Object> sourceRetryWait() {
-        return this.sourceRetryWait == null ? Optional.empty() : Optional.ofNullable(this.sourceRetryWait);
+        return Optional.ofNullable(this.sourceRetryWait);
     }
 
     /**
@@ -136,136 +136,105 @@ public final class SapOpenHubSourceResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
     }
 
-    public SapOpenHubSourceResponse(
-        @Nullable Object additionalColumns,
-        @Nullable Object baseRequestId,
-        @Nullable Object customRfcReadTableFunctionModule,
-        @Nullable Object disableMetricsCollection,
-        @Nullable Object excludeLastRequest,
-        @Nullable Object maxConcurrentConnections,
-        @Nullable Object queryTimeout,
-        @Nullable Object sapDataColumnDelimiter,
-        @Nullable Object sourceRetryCount,
-        @Nullable Object sourceRetryWait,
-        String type) {
-        this.additionalColumns = additionalColumns;
-        this.baseRequestId = baseRequestId;
-        this.customRfcReadTableFunctionModule = customRfcReadTableFunctionModule;
-        this.disableMetricsCollection = disableMetricsCollection;
-        this.excludeLastRequest = excludeLastRequest;
-        this.maxConcurrentConnections = maxConcurrentConnections;
-        this.queryTimeout = queryTimeout;
-        this.sapDataColumnDelimiter = sapDataColumnDelimiter;
-        this.sourceRetryCount = sourceRetryCount;
-        this.sourceRetryWait = sourceRetryWait;
-        this.type = Codegen.stringProp("type").arg(type).require();
-    }
+    private SapOpenHubSourceResponse() {}
 
-    private SapOpenHubSourceResponse() {
-        this.additionalColumns = null;
-        this.baseRequestId = null;
-        this.customRfcReadTableFunctionModule = null;
-        this.disableMetricsCollection = null;
-        this.excludeLastRequest = null;
-        this.maxConcurrentConnections = null;
-        this.queryTimeout = null;
-        this.sapDataColumnDelimiter = null;
-        this.sourceRetryCount = null;
-        this.sourceRetryWait = null;
-        this.type = null;
+    private SapOpenHubSourceResponse(SapOpenHubSourceResponse $) {
+        this.additionalColumns = $.additionalColumns;
+        this.baseRequestId = $.baseRequestId;
+        this.customRfcReadTableFunctionModule = $.customRfcReadTableFunctionModule;
+        this.disableMetricsCollection = $.disableMetricsCollection;
+        this.excludeLastRequest = $.excludeLastRequest;
+        this.maxConcurrentConnections = $.maxConcurrentConnections;
+        this.queryTimeout = $.queryTimeout;
+        this.sapDataColumnDelimiter = $.sapDataColumnDelimiter;
+        this.sourceRetryCount = $.sourceRetryCount;
+        this.sourceRetryWait = $.sourceRetryWait;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SapOpenHubSourceResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Object additionalColumns;
-        private @Nullable Object baseRequestId;
-        private @Nullable Object customRfcReadTableFunctionModule;
-        private @Nullable Object disableMetricsCollection;
-        private @Nullable Object excludeLastRequest;
-        private @Nullable Object maxConcurrentConnections;
-        private @Nullable Object queryTimeout;
-        private @Nullable Object sapDataColumnDelimiter;
-        private @Nullable Object sourceRetryCount;
-        private @Nullable Object sourceRetryWait;
-        private String type;
+        private SapOpenHubSourceResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new SapOpenHubSourceResponse();
         }
 
         public Builder(SapOpenHubSourceResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.additionalColumns = defaults.additionalColumns;
-    	      this.baseRequestId = defaults.baseRequestId;
-    	      this.customRfcReadTableFunctionModule = defaults.customRfcReadTableFunctionModule;
-    	      this.disableMetricsCollection = defaults.disableMetricsCollection;
-    	      this.excludeLastRequest = defaults.excludeLastRequest;
-    	      this.maxConcurrentConnections = defaults.maxConcurrentConnections;
-    	      this.queryTimeout = defaults.queryTimeout;
-    	      this.sapDataColumnDelimiter = defaults.sapDataColumnDelimiter;
-    	      this.sourceRetryCount = defaults.sourceRetryCount;
-    	      this.sourceRetryWait = defaults.sourceRetryWait;
-    	      this.type = defaults.type;
+            $ = new SapOpenHubSourceResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder additionalColumns(@Nullable Object additionalColumns) {
-            this.additionalColumns = additionalColumns;
+            $.additionalColumns = additionalColumns;
             return this;
         }
+
         public Builder baseRequestId(@Nullable Object baseRequestId) {
-            this.baseRequestId = baseRequestId;
+            $.baseRequestId = baseRequestId;
             return this;
         }
+
         public Builder customRfcReadTableFunctionModule(@Nullable Object customRfcReadTableFunctionModule) {
-            this.customRfcReadTableFunctionModule = customRfcReadTableFunctionModule;
+            $.customRfcReadTableFunctionModule = customRfcReadTableFunctionModule;
             return this;
         }
+
         public Builder disableMetricsCollection(@Nullable Object disableMetricsCollection) {
-            this.disableMetricsCollection = disableMetricsCollection;
+            $.disableMetricsCollection = disableMetricsCollection;
             return this;
         }
+
         public Builder excludeLastRequest(@Nullable Object excludeLastRequest) {
-            this.excludeLastRequest = excludeLastRequest;
+            $.excludeLastRequest = excludeLastRequest;
             return this;
         }
+
         public Builder maxConcurrentConnections(@Nullable Object maxConcurrentConnections) {
-            this.maxConcurrentConnections = maxConcurrentConnections;
+            $.maxConcurrentConnections = maxConcurrentConnections;
             return this;
         }
+
         public Builder queryTimeout(@Nullable Object queryTimeout) {
-            this.queryTimeout = queryTimeout;
+            $.queryTimeout = queryTimeout;
             return this;
         }
+
         public Builder sapDataColumnDelimiter(@Nullable Object sapDataColumnDelimiter) {
-            this.sapDataColumnDelimiter = sapDataColumnDelimiter;
+            $.sapDataColumnDelimiter = sapDataColumnDelimiter;
             return this;
         }
+
         public Builder sourceRetryCount(@Nullable Object sourceRetryCount) {
-            this.sourceRetryCount = sourceRetryCount;
+            $.sourceRetryCount = sourceRetryCount;
             return this;
         }
+
         public Builder sourceRetryWait(@Nullable Object sourceRetryWait) {
-            this.sourceRetryWait = sourceRetryWait;
+            $.sourceRetryWait = sourceRetryWait;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
-        }        public SapOpenHubSourceResponse build() {
-            return new SapOpenHubSourceResponse(additionalColumns, baseRequestId, customRfcReadTableFunctionModule, disableMetricsCollection, excludeLastRequest, maxConcurrentConnections, queryTimeout, sapDataColumnDelimiter, sourceRetryCount, sourceRetryWait, type);
+        }
+
+        public SapOpenHubSourceResponse build() {
+            $.type = Codegen.stringProp("type").arg($.type).require();
+            return $;
         }
     }
+
 }

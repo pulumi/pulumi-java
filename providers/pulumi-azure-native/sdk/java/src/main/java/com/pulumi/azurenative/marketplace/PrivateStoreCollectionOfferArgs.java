@@ -6,12 +6,12 @@ package com.pulumi.azurenative.marketplace;
 import com.pulumi.azurenative.marketplace.inputs.PlanArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,7 +24,7 @@ public final class PrivateStoreCollectionOfferArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="collectionId", required=true)
-      private final Output<String> collectionId;
+    private Output<String> collectionId;
 
     public Output<String> collectionId() {
         return this.collectionId;
@@ -35,10 +35,10 @@ public final class PrivateStoreCollectionOfferArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="eTag")
-      private final @Nullable Output<String> eTag;
+    private @Nullable Output<String> eTag;
 
-    public Output<String> eTag() {
-        return this.eTag == null ? Codegen.empty() : this.eTag;
+    public Optional<Output<String>> eTag() {
+        return Optional.ofNullable(this.eTag);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class PrivateStoreCollectionOfferArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="iconFileUris")
-      private final @Nullable Output<Map<String,String>> iconFileUris;
+    private @Nullable Output<Map<String,String>> iconFileUris;
 
-    public Output<Map<String,String>> iconFileUris() {
-        return this.iconFileUris == null ? Codegen.empty() : this.iconFileUris;
+    public Optional<Output<Map<String,String>>> iconFileUris() {
+        return Optional.ofNullable(this.iconFileUris);
     }
 
     /**
@@ -57,10 +57,10 @@ public final class PrivateStoreCollectionOfferArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="offerId")
-      private final @Nullable Output<String> offerId;
+    private @Nullable Output<String> offerId;
 
-    public Output<String> offerId() {
-        return this.offerId == null ? Codegen.empty() : this.offerId;
+    public Optional<Output<String>> offerId() {
+        return Optional.ofNullable(this.offerId);
     }
 
     /**
@@ -68,10 +68,10 @@ public final class PrivateStoreCollectionOfferArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="plans")
-      private final @Nullable Output<List<PlanArgs>> plans;
+    private @Nullable Output<List<PlanArgs>> plans;
 
-    public Output<List<PlanArgs>> plans() {
-        return this.plans == null ? Codegen.empty() : this.plans;
+    public Optional<Output<List<PlanArgs>>> plans() {
+        return Optional.ofNullable(this.plans);
     }
 
     /**
@@ -79,7 +79,7 @@ public final class PrivateStoreCollectionOfferArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="privateStoreId", required=true)
-      private final Output<String> privateStoreId;
+    private Output<String> privateStoreId;
 
     public Output<String> privateStoreId() {
         return this.privateStoreId;
@@ -90,10 +90,10 @@ public final class PrivateStoreCollectionOfferArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="specificPlanIdsLimitation")
-      private final @Nullable Output<List<String>> specificPlanIdsLimitation;
+    private @Nullable Output<List<String>> specificPlanIdsLimitation;
 
-    public Output<List<String>> specificPlanIdsLimitation() {
-        return this.specificPlanIdsLimitation == null ? Codegen.empty() : this.specificPlanIdsLimitation;
+    public Optional<Output<List<String>>> specificPlanIdsLimitation() {
+        return Optional.ofNullable(this.specificPlanIdsLimitation);
     }
 
     /**
@@ -101,147 +101,128 @@ public final class PrivateStoreCollectionOfferArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="updateSuppressedDueIdempotence")
-      private final @Nullable Output<Boolean> updateSuppressedDueIdempotence;
+    private @Nullable Output<Boolean> updateSuppressedDueIdempotence;
 
-    public Output<Boolean> updateSuppressedDueIdempotence() {
-        return this.updateSuppressedDueIdempotence == null ? Codegen.empty() : this.updateSuppressedDueIdempotence;
+    public Optional<Output<Boolean>> updateSuppressedDueIdempotence() {
+        return Optional.ofNullable(this.updateSuppressedDueIdempotence);
     }
 
-    public PrivateStoreCollectionOfferArgs(
-        Output<String> collectionId,
-        @Nullable Output<String> eTag,
-        @Nullable Output<Map<String,String>> iconFileUris,
-        @Nullable Output<String> offerId,
-        @Nullable Output<List<PlanArgs>> plans,
-        Output<String> privateStoreId,
-        @Nullable Output<List<String>> specificPlanIdsLimitation,
-        @Nullable Output<Boolean> updateSuppressedDueIdempotence) {
-        this.collectionId = Objects.requireNonNull(collectionId, "expected parameter 'collectionId' to be non-null");
-        this.eTag = eTag;
-        this.iconFileUris = iconFileUris;
-        this.offerId = offerId;
-        this.plans = plans;
-        this.privateStoreId = Objects.requireNonNull(privateStoreId, "expected parameter 'privateStoreId' to be non-null");
-        this.specificPlanIdsLimitation = specificPlanIdsLimitation;
-        this.updateSuppressedDueIdempotence = updateSuppressedDueIdempotence;
-    }
+    private PrivateStoreCollectionOfferArgs() {}
 
-    private PrivateStoreCollectionOfferArgs() {
-        this.collectionId = Codegen.empty();
-        this.eTag = Codegen.empty();
-        this.iconFileUris = Codegen.empty();
-        this.offerId = Codegen.empty();
-        this.plans = Codegen.empty();
-        this.privateStoreId = Codegen.empty();
-        this.specificPlanIdsLimitation = Codegen.empty();
-        this.updateSuppressedDueIdempotence = Codegen.empty();
+    private PrivateStoreCollectionOfferArgs(PrivateStoreCollectionOfferArgs $) {
+        this.collectionId = $.collectionId;
+        this.eTag = $.eTag;
+        this.iconFileUris = $.iconFileUris;
+        this.offerId = $.offerId;
+        this.plans = $.plans;
+        this.privateStoreId = $.privateStoreId;
+        this.specificPlanIdsLimitation = $.specificPlanIdsLimitation;
+        this.updateSuppressedDueIdempotence = $.updateSuppressedDueIdempotence;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PrivateStoreCollectionOfferArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> collectionId;
-        private @Nullable Output<String> eTag;
-        private @Nullable Output<Map<String,String>> iconFileUris;
-        private @Nullable Output<String> offerId;
-        private @Nullable Output<List<PlanArgs>> plans;
-        private Output<String> privateStoreId;
-        private @Nullable Output<List<String>> specificPlanIdsLimitation;
-        private @Nullable Output<Boolean> updateSuppressedDueIdempotence;
+        private PrivateStoreCollectionOfferArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PrivateStoreCollectionOfferArgs();
         }
 
         public Builder(PrivateStoreCollectionOfferArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.collectionId = defaults.collectionId;
-    	      this.eTag = defaults.eTag;
-    	      this.iconFileUris = defaults.iconFileUris;
-    	      this.offerId = defaults.offerId;
-    	      this.plans = defaults.plans;
-    	      this.privateStoreId = defaults.privateStoreId;
-    	      this.specificPlanIdsLimitation = defaults.specificPlanIdsLimitation;
-    	      this.updateSuppressedDueIdempotence = defaults.updateSuppressedDueIdempotence;
+            $ = new PrivateStoreCollectionOfferArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder collectionId(Output<String> collectionId) {
-            this.collectionId = Objects.requireNonNull(collectionId);
+            $.collectionId = collectionId;
             return this;
         }
+
         public Builder collectionId(String collectionId) {
-            this.collectionId = Output.of(Objects.requireNonNull(collectionId));
-            return this;
+            return collectionId(Output.of(collectionId));
         }
+
         public Builder eTag(@Nullable Output<String> eTag) {
-            this.eTag = eTag;
+            $.eTag = eTag;
             return this;
         }
-        public Builder eTag(@Nullable String eTag) {
-            this.eTag = Codegen.ofNullable(eTag);
-            return this;
+
+        public Builder eTag(String eTag) {
+            return eTag(Output.of(eTag));
         }
+
         public Builder iconFileUris(@Nullable Output<Map<String,String>> iconFileUris) {
-            this.iconFileUris = iconFileUris;
+            $.iconFileUris = iconFileUris;
             return this;
         }
-        public Builder iconFileUris(@Nullable Map<String,String> iconFileUris) {
-            this.iconFileUris = Codegen.ofNullable(iconFileUris);
-            return this;
+
+        public Builder iconFileUris(Map<String,String> iconFileUris) {
+            return iconFileUris(Output.of(iconFileUris));
         }
+
         public Builder offerId(@Nullable Output<String> offerId) {
-            this.offerId = offerId;
+            $.offerId = offerId;
             return this;
         }
-        public Builder offerId(@Nullable String offerId) {
-            this.offerId = Codegen.ofNullable(offerId);
-            return this;
+
+        public Builder offerId(String offerId) {
+            return offerId(Output.of(offerId));
         }
+
         public Builder plans(@Nullable Output<List<PlanArgs>> plans) {
-            this.plans = plans;
+            $.plans = plans;
             return this;
         }
-        public Builder plans(@Nullable List<PlanArgs> plans) {
-            this.plans = Codegen.ofNullable(plans);
-            return this;
+
+        public Builder plans(List<PlanArgs> plans) {
+            return plans(Output.of(plans));
         }
+
         public Builder plans(PlanArgs... plans) {
             return plans(List.of(plans));
         }
+
         public Builder privateStoreId(Output<String> privateStoreId) {
-            this.privateStoreId = Objects.requireNonNull(privateStoreId);
+            $.privateStoreId = privateStoreId;
             return this;
         }
+
         public Builder privateStoreId(String privateStoreId) {
-            this.privateStoreId = Output.of(Objects.requireNonNull(privateStoreId));
-            return this;
+            return privateStoreId(Output.of(privateStoreId));
         }
+
         public Builder specificPlanIdsLimitation(@Nullable Output<List<String>> specificPlanIdsLimitation) {
-            this.specificPlanIdsLimitation = specificPlanIdsLimitation;
+            $.specificPlanIdsLimitation = specificPlanIdsLimitation;
             return this;
         }
-        public Builder specificPlanIdsLimitation(@Nullable List<String> specificPlanIdsLimitation) {
-            this.specificPlanIdsLimitation = Codegen.ofNullable(specificPlanIdsLimitation);
-            return this;
+
+        public Builder specificPlanIdsLimitation(List<String> specificPlanIdsLimitation) {
+            return specificPlanIdsLimitation(Output.of(specificPlanIdsLimitation));
         }
+
         public Builder specificPlanIdsLimitation(String... specificPlanIdsLimitation) {
             return specificPlanIdsLimitation(List.of(specificPlanIdsLimitation));
         }
+
         public Builder updateSuppressedDueIdempotence(@Nullable Output<Boolean> updateSuppressedDueIdempotence) {
-            this.updateSuppressedDueIdempotence = updateSuppressedDueIdempotence;
+            $.updateSuppressedDueIdempotence = updateSuppressedDueIdempotence;
             return this;
         }
-        public Builder updateSuppressedDueIdempotence(@Nullable Boolean updateSuppressedDueIdempotence) {
-            this.updateSuppressedDueIdempotence = Codegen.ofNullable(updateSuppressedDueIdempotence);
-            return this;
-        }        public PrivateStoreCollectionOfferArgs build() {
-            return new PrivateStoreCollectionOfferArgs(collectionId, eTag, iconFileUris, offerId, plans, privateStoreId, specificPlanIdsLimitation, updateSuppressedDueIdempotence);
+
+        public Builder updateSuppressedDueIdempotence(Boolean updateSuppressedDueIdempotence) {
+            return updateSuppressedDueIdempotence(Output.of(updateSuppressedDueIdempotence));
+        }
+
+        public PrivateStoreCollectionOfferArgs build() {
+            $.collectionId = Objects.requireNonNull($.collectionId, "expected parameter 'collectionId' to be non-null");
+            $.privateStoreId = Objects.requireNonNull($.privateStoreId, "expected parameter 'privateStoreId' to be non-null");
+            return $;
         }
     }
+
 }

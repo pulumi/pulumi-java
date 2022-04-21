@@ -6,8 +6,8 @@ package com.pulumi.azurenative.databricks.inputs;
 import com.pulumi.azurenative.databricks.inputs.EncryptionArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class WorkspaceEncryptionParameterArgs extends com.pulumi.resources
      * 
      */
     @Import(name="value")
-      private final @Nullable Output<EncryptionArgs> value;
+    private @Nullable Output<EncryptionArgs> value;
 
-    public Output<EncryptionArgs> value() {
-        return this.value == null ? Codegen.empty() : this.value;
+    public Optional<Output<EncryptionArgs>> value() {
+        return Optional.ofNullable(this.value);
     }
 
-    public WorkspaceEncryptionParameterArgs(@Nullable Output<EncryptionArgs> value) {
-        this.value = value;
-    }
+    private WorkspaceEncryptionParameterArgs() {}
 
-    private WorkspaceEncryptionParameterArgs() {
-        this.value = Codegen.empty();
+    private WorkspaceEncryptionParameterArgs(WorkspaceEncryptionParameterArgs $) {
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WorkspaceEncryptionParameterArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<EncryptionArgs> value;
+        private WorkspaceEncryptionParameterArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new WorkspaceEncryptionParameterArgs();
         }
 
         public Builder(WorkspaceEncryptionParameterArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.value = defaults.value;
+            $ = new WorkspaceEncryptionParameterArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder value(@Nullable Output<EncryptionArgs> value) {
-            this.value = value;
+            $.value = value;
             return this;
         }
-        public Builder value(@Nullable EncryptionArgs value) {
-            this.value = Codegen.ofNullable(value);
-            return this;
-        }        public WorkspaceEncryptionParameterArgs build() {
-            return new WorkspaceEncryptionParameterArgs(value);
+
+        public Builder value(EncryptionArgs value) {
+            return value(Output.of(value));
+        }
+
+        public WorkspaceEncryptionParameterArgs build() {
+            return $;
         }
     }
+
 }

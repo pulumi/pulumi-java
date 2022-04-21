@@ -5,9 +5,9 @@ package com.pulumi.gcp.vertex.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.vertex.inputs.AiFeatureStoreEntityTypeMonitoringConfigSnapshotAnalysisGetArgs;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,49 +21,48 @@ public final class AiFeatureStoreEntityTypeMonitoringConfigGetArgs extends com.p
      * 
      */
     @Import(name="snapshotAnalysis")
-      private final @Nullable Output<AiFeatureStoreEntityTypeMonitoringConfigSnapshotAnalysisGetArgs> snapshotAnalysis;
+    private @Nullable Output<AiFeatureStoreEntityTypeMonitoringConfigSnapshotAnalysisGetArgs> snapshotAnalysis;
 
-    public Output<AiFeatureStoreEntityTypeMonitoringConfigSnapshotAnalysisGetArgs> snapshotAnalysis() {
-        return this.snapshotAnalysis == null ? Codegen.empty() : this.snapshotAnalysis;
+    public Optional<Output<AiFeatureStoreEntityTypeMonitoringConfigSnapshotAnalysisGetArgs>> snapshotAnalysis() {
+        return Optional.ofNullable(this.snapshotAnalysis);
     }
 
-    public AiFeatureStoreEntityTypeMonitoringConfigGetArgs(@Nullable Output<AiFeatureStoreEntityTypeMonitoringConfigSnapshotAnalysisGetArgs> snapshotAnalysis) {
-        this.snapshotAnalysis = snapshotAnalysis;
-    }
+    private AiFeatureStoreEntityTypeMonitoringConfigGetArgs() {}
 
-    private AiFeatureStoreEntityTypeMonitoringConfigGetArgs() {
-        this.snapshotAnalysis = Codegen.empty();
+    private AiFeatureStoreEntityTypeMonitoringConfigGetArgs(AiFeatureStoreEntityTypeMonitoringConfigGetArgs $) {
+        this.snapshotAnalysis = $.snapshotAnalysis;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AiFeatureStoreEntityTypeMonitoringConfigGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<AiFeatureStoreEntityTypeMonitoringConfigSnapshotAnalysisGetArgs> snapshotAnalysis;
+        private AiFeatureStoreEntityTypeMonitoringConfigGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AiFeatureStoreEntityTypeMonitoringConfigGetArgs();
         }
 
         public Builder(AiFeatureStoreEntityTypeMonitoringConfigGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.snapshotAnalysis = defaults.snapshotAnalysis;
+            $ = new AiFeatureStoreEntityTypeMonitoringConfigGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder snapshotAnalysis(@Nullable Output<AiFeatureStoreEntityTypeMonitoringConfigSnapshotAnalysisGetArgs> snapshotAnalysis) {
-            this.snapshotAnalysis = snapshotAnalysis;
+            $.snapshotAnalysis = snapshotAnalysis;
             return this;
         }
-        public Builder snapshotAnalysis(@Nullable AiFeatureStoreEntityTypeMonitoringConfigSnapshotAnalysisGetArgs snapshotAnalysis) {
-            this.snapshotAnalysis = Codegen.ofNullable(snapshotAnalysis);
-            return this;
-        }        public AiFeatureStoreEntityTypeMonitoringConfigGetArgs build() {
-            return new AiFeatureStoreEntityTypeMonitoringConfigGetArgs(snapshotAnalysis);
+
+        public Builder snapshotAnalysis(AiFeatureStoreEntityTypeMonitoringConfigSnapshotAnalysisGetArgs snapshotAnalysis) {
+            return snapshotAnalysis(Output.of(snapshotAnalysis));
+        }
+
+        public AiFeatureStoreEntityTypeMonitoringConfigGetArgs build() {
+            return $;
         }
     }
+
 }

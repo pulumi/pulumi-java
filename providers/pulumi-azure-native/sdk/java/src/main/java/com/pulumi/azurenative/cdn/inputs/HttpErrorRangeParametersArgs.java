@@ -5,9 +5,9 @@ package com.pulumi.azurenative.cdn.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class HttpErrorRangeParametersArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="begin")
-      private final @Nullable Output<Integer> begin;
+    private @Nullable Output<Integer> begin;
 
-    public Output<Integer> begin() {
-        return this.begin == null ? Codegen.empty() : this.begin;
+    public Optional<Output<Integer>> begin() {
+        return Optional.ofNullable(this.begin);
     }
 
     /**
@@ -35,63 +35,58 @@ public final class HttpErrorRangeParametersArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="end")
-      private final @Nullable Output<Integer> end;
+    private @Nullable Output<Integer> end;
 
-    public Output<Integer> end() {
-        return this.end == null ? Codegen.empty() : this.end;
+    public Optional<Output<Integer>> end() {
+        return Optional.ofNullable(this.end);
     }
 
-    public HttpErrorRangeParametersArgs(
-        @Nullable Output<Integer> begin,
-        @Nullable Output<Integer> end) {
-        this.begin = begin;
-        this.end = end;
-    }
+    private HttpErrorRangeParametersArgs() {}
 
-    private HttpErrorRangeParametersArgs() {
-        this.begin = Codegen.empty();
-        this.end = Codegen.empty();
+    private HttpErrorRangeParametersArgs(HttpErrorRangeParametersArgs $) {
+        this.begin = $.begin;
+        this.end = $.end;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(HttpErrorRangeParametersArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> begin;
-        private @Nullable Output<Integer> end;
+        private HttpErrorRangeParametersArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new HttpErrorRangeParametersArgs();
         }
 
         public Builder(HttpErrorRangeParametersArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.begin = defaults.begin;
-    	      this.end = defaults.end;
+            $ = new HttpErrorRangeParametersArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder begin(@Nullable Output<Integer> begin) {
-            this.begin = begin;
+            $.begin = begin;
             return this;
         }
-        public Builder begin(@Nullable Integer begin) {
-            this.begin = Codegen.ofNullable(begin);
-            return this;
+
+        public Builder begin(Integer begin) {
+            return begin(Output.of(begin));
         }
+
         public Builder end(@Nullable Output<Integer> end) {
-            this.end = end;
+            $.end = end;
             return this;
         }
-        public Builder end(@Nullable Integer end) {
-            this.end = Codegen.ofNullable(end);
-            return this;
-        }        public HttpErrorRangeParametersArgs build() {
-            return new HttpErrorRangeParametersArgs(begin, end);
+
+        public Builder end(Integer end) {
+            return end(Output.of(end));
+        }
+
+        public HttpErrorRangeParametersArgs build() {
+            return $;
         }
     }
+
 }

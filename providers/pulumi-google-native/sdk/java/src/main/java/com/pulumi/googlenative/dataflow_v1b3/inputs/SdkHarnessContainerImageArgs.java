@@ -5,10 +5,10 @@ package com.pulumi.googlenative.dataflow_v1b3.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class SdkHarnessContainerImageArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="containerImage")
-      private final @Nullable Output<String> containerImage;
+    private @Nullable Output<String> containerImage;
 
-    public Output<String> containerImage() {
-        return this.containerImage == null ? Codegen.empty() : this.containerImage;
+    public Optional<Output<String>> containerImage() {
+        return Optional.ofNullable(this.containerImage);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class SdkHarnessContainerImageArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="environmentId")
-      private final @Nullable Output<String> environmentId;
+    private @Nullable Output<String> environmentId;
 
-    public Output<String> environmentId() {
-        return this.environmentId == null ? Codegen.empty() : this.environmentId;
+    public Optional<Output<String>> environmentId() {
+        return Optional.ofNullable(this.environmentId);
     }
 
     /**
@@ -47,76 +47,68 @@ public final class SdkHarnessContainerImageArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="useSingleCorePerContainer")
-      private final @Nullable Output<Boolean> useSingleCorePerContainer;
+    private @Nullable Output<Boolean> useSingleCorePerContainer;
 
-    public Output<Boolean> useSingleCorePerContainer() {
-        return this.useSingleCorePerContainer == null ? Codegen.empty() : this.useSingleCorePerContainer;
+    public Optional<Output<Boolean>> useSingleCorePerContainer() {
+        return Optional.ofNullable(this.useSingleCorePerContainer);
     }
 
-    public SdkHarnessContainerImageArgs(
-        @Nullable Output<String> containerImage,
-        @Nullable Output<String> environmentId,
-        @Nullable Output<Boolean> useSingleCorePerContainer) {
-        this.containerImage = containerImage;
-        this.environmentId = environmentId;
-        this.useSingleCorePerContainer = useSingleCorePerContainer;
-    }
+    private SdkHarnessContainerImageArgs() {}
 
-    private SdkHarnessContainerImageArgs() {
-        this.containerImage = Codegen.empty();
-        this.environmentId = Codegen.empty();
-        this.useSingleCorePerContainer = Codegen.empty();
+    private SdkHarnessContainerImageArgs(SdkHarnessContainerImageArgs $) {
+        this.containerImage = $.containerImage;
+        this.environmentId = $.environmentId;
+        this.useSingleCorePerContainer = $.useSingleCorePerContainer;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SdkHarnessContainerImageArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> containerImage;
-        private @Nullable Output<String> environmentId;
-        private @Nullable Output<Boolean> useSingleCorePerContainer;
+        private SdkHarnessContainerImageArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SdkHarnessContainerImageArgs();
         }
 
         public Builder(SdkHarnessContainerImageArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.containerImage = defaults.containerImage;
-    	      this.environmentId = defaults.environmentId;
-    	      this.useSingleCorePerContainer = defaults.useSingleCorePerContainer;
+            $ = new SdkHarnessContainerImageArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder containerImage(@Nullable Output<String> containerImage) {
-            this.containerImage = containerImage;
+            $.containerImage = containerImage;
             return this;
         }
-        public Builder containerImage(@Nullable String containerImage) {
-            this.containerImage = Codegen.ofNullable(containerImage);
-            return this;
+
+        public Builder containerImage(String containerImage) {
+            return containerImage(Output.of(containerImage));
         }
+
         public Builder environmentId(@Nullable Output<String> environmentId) {
-            this.environmentId = environmentId;
+            $.environmentId = environmentId;
             return this;
         }
-        public Builder environmentId(@Nullable String environmentId) {
-            this.environmentId = Codegen.ofNullable(environmentId);
-            return this;
+
+        public Builder environmentId(String environmentId) {
+            return environmentId(Output.of(environmentId));
         }
+
         public Builder useSingleCorePerContainer(@Nullable Output<Boolean> useSingleCorePerContainer) {
-            this.useSingleCorePerContainer = useSingleCorePerContainer;
+            $.useSingleCorePerContainer = useSingleCorePerContainer;
             return this;
         }
-        public Builder useSingleCorePerContainer(@Nullable Boolean useSingleCorePerContainer) {
-            this.useSingleCorePerContainer = Codegen.ofNullable(useSingleCorePerContainer);
-            return this;
-        }        public SdkHarnessContainerImageArgs build() {
-            return new SdkHarnessContainerImageArgs(containerImage, environmentId, useSingleCorePerContainer);
+
+        public Builder useSingleCorePerContainer(Boolean useSingleCorePerContainer) {
+            return useSingleCorePerContainer(Output.of(useSingleCorePerContainer));
+        }
+
+        public SdkHarnessContainerImageArgs build() {
+            return $;
         }
     }
+
 }

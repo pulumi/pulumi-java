@@ -21,45 +21,45 @@ public final class ResourcePolicyInstanceSchedulePolicyScheduleResponse extends 
      * 
      */
     @Import(name="schedule", required=true)
-      private final String schedule;
+    private String schedule;
 
     public String schedule() {
         return this.schedule;
     }
 
-    public ResourcePolicyInstanceSchedulePolicyScheduleResponse(String schedule) {
-        this.schedule = Objects.requireNonNull(schedule, "expected parameter 'schedule' to be non-null");
-    }
+    private ResourcePolicyInstanceSchedulePolicyScheduleResponse() {}
 
-    private ResourcePolicyInstanceSchedulePolicyScheduleResponse() {
-        this.schedule = null;
+    private ResourcePolicyInstanceSchedulePolicyScheduleResponse(ResourcePolicyInstanceSchedulePolicyScheduleResponse $) {
+        this.schedule = $.schedule;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ResourcePolicyInstanceSchedulePolicyScheduleResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String schedule;
+        private ResourcePolicyInstanceSchedulePolicyScheduleResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ResourcePolicyInstanceSchedulePolicyScheduleResponse();
         }
 
         public Builder(ResourcePolicyInstanceSchedulePolicyScheduleResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.schedule = defaults.schedule;
+            $ = new ResourcePolicyInstanceSchedulePolicyScheduleResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder schedule(String schedule) {
-            this.schedule = Objects.requireNonNull(schedule);
+            $.schedule = schedule;
             return this;
-        }        public ResourcePolicyInstanceSchedulePolicyScheduleResponse build() {
-            return new ResourcePolicyInstanceSchedulePolicyScheduleResponse(schedule);
+        }
+
+        public ResourcePolicyInstanceSchedulePolicyScheduleResponse build() {
+            $.schedule = Objects.requireNonNull($.schedule, "expected parameter 'schedule' to be non-null");
+            return $;
         }
     }
+
 }

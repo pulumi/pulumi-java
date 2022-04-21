@@ -26,10 +26,10 @@ public final class ServiceCodeConfigurationValues extends com.pulumi.resources.I
      * 
      */
     @Import(name="buildCommand")
-      private final @Nullable String buildCommand;
+    private @Nullable String buildCommand;
 
     public Optional<String> buildCommand() {
-        return this.buildCommand == null ? Optional.empty() : Optional.ofNullable(this.buildCommand);
+        return Optional.ofNullable(this.buildCommand);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class ServiceCodeConfigurationValues extends com.pulumi.resources.I
      * 
      */
     @Import(name="port")
-      private final @Nullable String port;
+    private @Nullable String port;
 
     public Optional<String> port() {
-        return this.port == null ? Optional.empty() : Optional.ofNullable(this.port);
+        return Optional.ofNullable(this.port);
     }
 
     /**
@@ -48,17 +48,17 @@ public final class ServiceCodeConfigurationValues extends com.pulumi.resources.I
      * 
      */
     @Import(name="runtime", required=true)
-      private final ServiceCodeConfigurationValuesRuntime runtime;
+    private ServiceCodeConfigurationValuesRuntime runtime;
 
     public ServiceCodeConfigurationValuesRuntime runtime() {
         return this.runtime;
     }
 
     @Import(name="runtimeEnvironmentVariables")
-      private final @Nullable List<ServiceKeyValuePair> runtimeEnvironmentVariables;
+    private @Nullable List<ServiceKeyValuePair> runtimeEnvironmentVariables;
 
-    public List<ServiceKeyValuePair> runtimeEnvironmentVariables() {
-        return this.runtimeEnvironmentVariables == null ? List.of() : this.runtimeEnvironmentVariables;
+    public Optional<List<ServiceKeyValuePair>> runtimeEnvironmentVariables() {
+        return Optional.ofNullable(this.runtimeEnvironmentVariables);
     }
 
     /**
@@ -66,85 +66,73 @@ public final class ServiceCodeConfigurationValues extends com.pulumi.resources.I
      * 
      */
     @Import(name="startCommand")
-      private final @Nullable String startCommand;
+    private @Nullable String startCommand;
 
     public Optional<String> startCommand() {
-        return this.startCommand == null ? Optional.empty() : Optional.ofNullable(this.startCommand);
+        return Optional.ofNullable(this.startCommand);
     }
 
-    public ServiceCodeConfigurationValues(
-        @Nullable String buildCommand,
-        @Nullable String port,
-        ServiceCodeConfigurationValuesRuntime runtime,
-        @Nullable List<ServiceKeyValuePair> runtimeEnvironmentVariables,
-        @Nullable String startCommand) {
-        this.buildCommand = buildCommand;
-        this.port = port;
-        this.runtime = Objects.requireNonNull(runtime, "expected parameter 'runtime' to be non-null");
-        this.runtimeEnvironmentVariables = runtimeEnvironmentVariables;
-        this.startCommand = startCommand;
-    }
+    private ServiceCodeConfigurationValues() {}
 
-    private ServiceCodeConfigurationValues() {
-        this.buildCommand = null;
-        this.port = null;
-        this.runtime = null;
-        this.runtimeEnvironmentVariables = List.of();
-        this.startCommand = null;
+    private ServiceCodeConfigurationValues(ServiceCodeConfigurationValues $) {
+        this.buildCommand = $.buildCommand;
+        this.port = $.port;
+        this.runtime = $.runtime;
+        this.runtimeEnvironmentVariables = $.runtimeEnvironmentVariables;
+        this.startCommand = $.startCommand;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ServiceCodeConfigurationValues defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String buildCommand;
-        private @Nullable String port;
-        private ServiceCodeConfigurationValuesRuntime runtime;
-        private @Nullable List<ServiceKeyValuePair> runtimeEnvironmentVariables;
-        private @Nullable String startCommand;
+        private ServiceCodeConfigurationValues $;
 
         public Builder() {
-    	      // Empty
+            $ = new ServiceCodeConfigurationValues();
         }
 
         public Builder(ServiceCodeConfigurationValues defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.buildCommand = defaults.buildCommand;
-    	      this.port = defaults.port;
-    	      this.runtime = defaults.runtime;
-    	      this.runtimeEnvironmentVariables = defaults.runtimeEnvironmentVariables;
-    	      this.startCommand = defaults.startCommand;
+            $ = new ServiceCodeConfigurationValues(Objects.requireNonNull(defaults));
         }
 
         public Builder buildCommand(@Nullable String buildCommand) {
-            this.buildCommand = buildCommand;
+            $.buildCommand = buildCommand;
             return this;
         }
+
         public Builder port(@Nullable String port) {
-            this.port = port;
+            $.port = port;
             return this;
         }
+
         public Builder runtime(ServiceCodeConfigurationValuesRuntime runtime) {
-            this.runtime = Objects.requireNonNull(runtime);
+            $.runtime = runtime;
             return this;
         }
+
         public Builder runtimeEnvironmentVariables(@Nullable List<ServiceKeyValuePair> runtimeEnvironmentVariables) {
-            this.runtimeEnvironmentVariables = runtimeEnvironmentVariables;
+            $.runtimeEnvironmentVariables = runtimeEnvironmentVariables;
             return this;
         }
+
         public Builder runtimeEnvironmentVariables(ServiceKeyValuePair... runtimeEnvironmentVariables) {
             return runtimeEnvironmentVariables(List.of(runtimeEnvironmentVariables));
         }
+
         public Builder startCommand(@Nullable String startCommand) {
-            this.startCommand = startCommand;
+            $.startCommand = startCommand;
             return this;
-        }        public ServiceCodeConfigurationValues build() {
-            return new ServiceCodeConfigurationValues(buildCommand, port, runtime, runtimeEnvironmentVariables, startCommand);
+        }
+
+        public ServiceCodeConfigurationValues build() {
+            $.runtime = Objects.requireNonNull($.runtime, "expected parameter 'runtime' to be non-null");
+            return $;
         }
     }
+
 }

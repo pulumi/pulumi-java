@@ -5,7 +5,6 @@ package com.pulumi.awsnative.lex.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +19,7 @@ public final class BotSlotPriorityArgs extends com.pulumi.resources.ResourceArgs
     public static final BotSlotPriorityArgs Empty = new BotSlotPriorityArgs();
 
     @Import(name="priority", required=true)
-      private final Output<Integer> priority;
+    private Output<Integer> priority;
 
     public Output<Integer> priority() {
         return this.priority;
@@ -31,63 +30,60 @@ public final class BotSlotPriorityArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="slotName", required=true)
-      private final Output<String> slotName;
+    private Output<String> slotName;
 
     public Output<String> slotName() {
         return this.slotName;
     }
 
-    public BotSlotPriorityArgs(
-        Output<Integer> priority,
-        Output<String> slotName) {
-        this.priority = Objects.requireNonNull(priority, "expected parameter 'priority' to be non-null");
-        this.slotName = Objects.requireNonNull(slotName, "expected parameter 'slotName' to be non-null");
-    }
+    private BotSlotPriorityArgs() {}
 
-    private BotSlotPriorityArgs() {
-        this.priority = Codegen.empty();
-        this.slotName = Codegen.empty();
+    private BotSlotPriorityArgs(BotSlotPriorityArgs $) {
+        this.priority = $.priority;
+        this.slotName = $.slotName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BotSlotPriorityArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Integer> priority;
-        private Output<String> slotName;
+        private BotSlotPriorityArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new BotSlotPriorityArgs();
         }
 
         public Builder(BotSlotPriorityArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.priority = defaults.priority;
-    	      this.slotName = defaults.slotName;
+            $ = new BotSlotPriorityArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder priority(Output<Integer> priority) {
-            this.priority = Objects.requireNonNull(priority);
+            $.priority = priority;
             return this;
         }
+
         public Builder priority(Integer priority) {
-            this.priority = Output.of(Objects.requireNonNull(priority));
-            return this;
+            return priority(Output.of(priority));
         }
+
         public Builder slotName(Output<String> slotName) {
-            this.slotName = Objects.requireNonNull(slotName);
+            $.slotName = slotName;
             return this;
         }
+
         public Builder slotName(String slotName) {
-            this.slotName = Output.of(Objects.requireNonNull(slotName));
-            return this;
-        }        public BotSlotPriorityArgs build() {
-            return new BotSlotPriorityArgs(priority, slotName);
+            return slotName(Output.of(slotName));
+        }
+
+        public BotSlotPriorityArgs build() {
+            $.priority = Objects.requireNonNull($.priority, "expected parameter 'priority' to be non-null");
+            $.slotName = Objects.requireNonNull($.slotName, "expected parameter 'slotName' to be non-null");
+            return $;
         }
     }
+
 }

@@ -24,7 +24,7 @@ public final class ProcessServerDetailsResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="availableMemoryInBytes", required=true)
-      private final Double availableMemoryInBytes;
+    private Double availableMemoryInBytes;
 
     public Double availableMemoryInBytes() {
         return this.availableMemoryInBytes;
@@ -35,7 +35,7 @@ public final class ProcessServerDetailsResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="availableSpaceInBytes", required=true)
-      private final Double availableSpaceInBytes;
+    private Double availableSpaceInBytes;
 
     public Double availableSpaceInBytes() {
         return this.availableSpaceInBytes;
@@ -46,7 +46,7 @@ public final class ProcessServerDetailsResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="freeSpacePercentage", required=true)
-      private final Double freeSpacePercentage;
+    private Double freeSpacePercentage;
 
     public Double freeSpacePercentage() {
         return this.freeSpacePercentage;
@@ -57,7 +57,7 @@ public final class ProcessServerDetailsResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="health", required=true)
-      private final String health;
+    private String health;
 
     public String health() {
         return this.health;
@@ -68,7 +68,7 @@ public final class ProcessServerDetailsResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="healthErrors", required=true)
-      private final List<HealthErrorResponse> healthErrors;
+    private List<HealthErrorResponse> healthErrors;
 
     public List<HealthErrorResponse> healthErrors() {
         return this.healthErrors;
@@ -79,7 +79,7 @@ public final class ProcessServerDetailsResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="historicHealth", required=true)
-      private final String historicHealth;
+    private String historicHealth;
 
     public String historicHealth() {
         return this.historicHealth;
@@ -90,7 +90,7 @@ public final class ProcessServerDetailsResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="id", required=true)
-      private final String id;
+    private String id;
 
     public String id() {
         return this.id;
@@ -101,7 +101,7 @@ public final class ProcessServerDetailsResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="lastHeartbeatUtc", required=true)
-      private final String lastHeartbeatUtc;
+    private String lastHeartbeatUtc;
 
     public String lastHeartbeatUtc() {
         return this.lastHeartbeatUtc;
@@ -112,7 +112,7 @@ public final class ProcessServerDetailsResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="memoryUsagePercentage", required=true)
-      private final Double memoryUsagePercentage;
+    private Double memoryUsagePercentage;
 
     public Double memoryUsagePercentage() {
         return this.memoryUsagePercentage;
@@ -123,7 +123,7 @@ public final class ProcessServerDetailsResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -134,7 +134,7 @@ public final class ProcessServerDetailsResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="processorUsagePercentage", required=true)
-      private final Double processorUsagePercentage;
+    private Double processorUsagePercentage;
 
     public Double processorUsagePercentage() {
         return this.processorUsagePercentage;
@@ -145,7 +145,7 @@ public final class ProcessServerDetailsResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="throughputInBytes", required=true)
-      private final Double throughputInBytes;
+    private Double throughputInBytes;
 
     public Double throughputInBytes() {
         return this.throughputInBytes;
@@ -156,7 +156,7 @@ public final class ProcessServerDetailsResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="throughputUploadPendingDataInBytes", required=true)
-      private final Double throughputUploadPendingDataInBytes;
+    private Double throughputUploadPendingDataInBytes;
 
     public Double throughputUploadPendingDataInBytes() {
         return this.throughputUploadPendingDataInBytes;
@@ -167,7 +167,7 @@ public final class ProcessServerDetailsResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="totalMemoryInBytes", required=true)
-      private final Double totalMemoryInBytes;
+    private Double totalMemoryInBytes;
 
     public Double totalMemoryInBytes() {
         return this.totalMemoryInBytes;
@@ -178,7 +178,7 @@ public final class ProcessServerDetailsResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="totalSpaceInBytes", required=true)
-      private final Double totalSpaceInBytes;
+    private Double totalSpaceInBytes;
 
     public Double totalSpaceInBytes() {
         return this.totalSpaceInBytes;
@@ -189,7 +189,7 @@ public final class ProcessServerDetailsResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="usedMemoryInBytes", required=true)
-      private final Double usedMemoryInBytes;
+    private Double usedMemoryInBytes;
 
     public Double usedMemoryInBytes() {
         return this.usedMemoryInBytes;
@@ -200,7 +200,7 @@ public final class ProcessServerDetailsResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="usedSpaceInBytes", required=true)
-      private final Double usedSpaceInBytes;
+    private Double usedSpaceInBytes;
 
     public Double usedSpaceInBytes() {
         return this.usedSpaceInBytes;
@@ -211,202 +211,168 @@ public final class ProcessServerDetailsResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="version", required=true)
-      private final String version;
+    private String version;
 
     public String version() {
         return this.version;
     }
 
-    public ProcessServerDetailsResponse(
-        Double availableMemoryInBytes,
-        Double availableSpaceInBytes,
-        Double freeSpacePercentage,
-        String health,
-        List<HealthErrorResponse> healthErrors,
-        String historicHealth,
-        String id,
-        String lastHeartbeatUtc,
-        Double memoryUsagePercentage,
-        String name,
-        Double processorUsagePercentage,
-        Double throughputInBytes,
-        Double throughputUploadPendingDataInBytes,
-        Double totalMemoryInBytes,
-        Double totalSpaceInBytes,
-        Double usedMemoryInBytes,
-        Double usedSpaceInBytes,
-        String version) {
-        this.availableMemoryInBytes = Objects.requireNonNull(availableMemoryInBytes, "expected parameter 'availableMemoryInBytes' to be non-null");
-        this.availableSpaceInBytes = Objects.requireNonNull(availableSpaceInBytes, "expected parameter 'availableSpaceInBytes' to be non-null");
-        this.freeSpacePercentage = Objects.requireNonNull(freeSpacePercentage, "expected parameter 'freeSpacePercentage' to be non-null");
-        this.health = Objects.requireNonNull(health, "expected parameter 'health' to be non-null");
-        this.healthErrors = Objects.requireNonNull(healthErrors, "expected parameter 'healthErrors' to be non-null");
-        this.historicHealth = Objects.requireNonNull(historicHealth, "expected parameter 'historicHealth' to be non-null");
-        this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
-        this.lastHeartbeatUtc = Objects.requireNonNull(lastHeartbeatUtc, "expected parameter 'lastHeartbeatUtc' to be non-null");
-        this.memoryUsagePercentage = Objects.requireNonNull(memoryUsagePercentage, "expected parameter 'memoryUsagePercentage' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.processorUsagePercentage = Objects.requireNonNull(processorUsagePercentage, "expected parameter 'processorUsagePercentage' to be non-null");
-        this.throughputInBytes = Objects.requireNonNull(throughputInBytes, "expected parameter 'throughputInBytes' to be non-null");
-        this.throughputUploadPendingDataInBytes = Objects.requireNonNull(throughputUploadPendingDataInBytes, "expected parameter 'throughputUploadPendingDataInBytes' to be non-null");
-        this.totalMemoryInBytes = Objects.requireNonNull(totalMemoryInBytes, "expected parameter 'totalMemoryInBytes' to be non-null");
-        this.totalSpaceInBytes = Objects.requireNonNull(totalSpaceInBytes, "expected parameter 'totalSpaceInBytes' to be non-null");
-        this.usedMemoryInBytes = Objects.requireNonNull(usedMemoryInBytes, "expected parameter 'usedMemoryInBytes' to be non-null");
-        this.usedSpaceInBytes = Objects.requireNonNull(usedSpaceInBytes, "expected parameter 'usedSpaceInBytes' to be non-null");
-        this.version = Objects.requireNonNull(version, "expected parameter 'version' to be non-null");
-    }
+    private ProcessServerDetailsResponse() {}
 
-    private ProcessServerDetailsResponse() {
-        this.availableMemoryInBytes = null;
-        this.availableSpaceInBytes = null;
-        this.freeSpacePercentage = null;
-        this.health = null;
-        this.healthErrors = List.of();
-        this.historicHealth = null;
-        this.id = null;
-        this.lastHeartbeatUtc = null;
-        this.memoryUsagePercentage = null;
-        this.name = null;
-        this.processorUsagePercentage = null;
-        this.throughputInBytes = null;
-        this.throughputUploadPendingDataInBytes = null;
-        this.totalMemoryInBytes = null;
-        this.totalSpaceInBytes = null;
-        this.usedMemoryInBytes = null;
-        this.usedSpaceInBytes = null;
-        this.version = null;
+    private ProcessServerDetailsResponse(ProcessServerDetailsResponse $) {
+        this.availableMemoryInBytes = $.availableMemoryInBytes;
+        this.availableSpaceInBytes = $.availableSpaceInBytes;
+        this.freeSpacePercentage = $.freeSpacePercentage;
+        this.health = $.health;
+        this.healthErrors = $.healthErrors;
+        this.historicHealth = $.historicHealth;
+        this.id = $.id;
+        this.lastHeartbeatUtc = $.lastHeartbeatUtc;
+        this.memoryUsagePercentage = $.memoryUsagePercentage;
+        this.name = $.name;
+        this.processorUsagePercentage = $.processorUsagePercentage;
+        this.throughputInBytes = $.throughputInBytes;
+        this.throughputUploadPendingDataInBytes = $.throughputUploadPendingDataInBytes;
+        this.totalMemoryInBytes = $.totalMemoryInBytes;
+        this.totalSpaceInBytes = $.totalSpaceInBytes;
+        this.usedMemoryInBytes = $.usedMemoryInBytes;
+        this.usedSpaceInBytes = $.usedSpaceInBytes;
+        this.version = $.version;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ProcessServerDetailsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Double availableMemoryInBytes;
-        private Double availableSpaceInBytes;
-        private Double freeSpacePercentage;
-        private String health;
-        private List<HealthErrorResponse> healthErrors;
-        private String historicHealth;
-        private String id;
-        private String lastHeartbeatUtc;
-        private Double memoryUsagePercentage;
-        private String name;
-        private Double processorUsagePercentage;
-        private Double throughputInBytes;
-        private Double throughputUploadPendingDataInBytes;
-        private Double totalMemoryInBytes;
-        private Double totalSpaceInBytes;
-        private Double usedMemoryInBytes;
-        private Double usedSpaceInBytes;
-        private String version;
+        private ProcessServerDetailsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ProcessServerDetailsResponse();
         }
 
         public Builder(ProcessServerDetailsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.availableMemoryInBytes = defaults.availableMemoryInBytes;
-    	      this.availableSpaceInBytes = defaults.availableSpaceInBytes;
-    	      this.freeSpacePercentage = defaults.freeSpacePercentage;
-    	      this.health = defaults.health;
-    	      this.healthErrors = defaults.healthErrors;
-    	      this.historicHealth = defaults.historicHealth;
-    	      this.id = defaults.id;
-    	      this.lastHeartbeatUtc = defaults.lastHeartbeatUtc;
-    	      this.memoryUsagePercentage = defaults.memoryUsagePercentage;
-    	      this.name = defaults.name;
-    	      this.processorUsagePercentage = defaults.processorUsagePercentage;
-    	      this.throughputInBytes = defaults.throughputInBytes;
-    	      this.throughputUploadPendingDataInBytes = defaults.throughputUploadPendingDataInBytes;
-    	      this.totalMemoryInBytes = defaults.totalMemoryInBytes;
-    	      this.totalSpaceInBytes = defaults.totalSpaceInBytes;
-    	      this.usedMemoryInBytes = defaults.usedMemoryInBytes;
-    	      this.usedSpaceInBytes = defaults.usedSpaceInBytes;
-    	      this.version = defaults.version;
+            $ = new ProcessServerDetailsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder availableMemoryInBytes(Double availableMemoryInBytes) {
-            this.availableMemoryInBytes = Objects.requireNonNull(availableMemoryInBytes);
+            $.availableMemoryInBytes = availableMemoryInBytes;
             return this;
         }
+
         public Builder availableSpaceInBytes(Double availableSpaceInBytes) {
-            this.availableSpaceInBytes = Objects.requireNonNull(availableSpaceInBytes);
+            $.availableSpaceInBytes = availableSpaceInBytes;
             return this;
         }
+
         public Builder freeSpacePercentage(Double freeSpacePercentage) {
-            this.freeSpacePercentage = Objects.requireNonNull(freeSpacePercentage);
+            $.freeSpacePercentage = freeSpacePercentage;
             return this;
         }
+
         public Builder health(String health) {
-            this.health = Objects.requireNonNull(health);
+            $.health = health;
             return this;
         }
+
         public Builder healthErrors(List<HealthErrorResponse> healthErrors) {
-            this.healthErrors = Objects.requireNonNull(healthErrors);
+            $.healthErrors = healthErrors;
             return this;
         }
+
         public Builder healthErrors(HealthErrorResponse... healthErrors) {
             return healthErrors(List.of(healthErrors));
         }
+
         public Builder historicHealth(String historicHealth) {
-            this.historicHealth = Objects.requireNonNull(historicHealth);
+            $.historicHealth = historicHealth;
             return this;
         }
+
         public Builder id(String id) {
-            this.id = Objects.requireNonNull(id);
+            $.id = id;
             return this;
         }
+
         public Builder lastHeartbeatUtc(String lastHeartbeatUtc) {
-            this.lastHeartbeatUtc = Objects.requireNonNull(lastHeartbeatUtc);
+            $.lastHeartbeatUtc = lastHeartbeatUtc;
             return this;
         }
+
         public Builder memoryUsagePercentage(Double memoryUsagePercentage) {
-            this.memoryUsagePercentage = Objects.requireNonNull(memoryUsagePercentage);
+            $.memoryUsagePercentage = memoryUsagePercentage;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder processorUsagePercentage(Double processorUsagePercentage) {
-            this.processorUsagePercentage = Objects.requireNonNull(processorUsagePercentage);
+            $.processorUsagePercentage = processorUsagePercentage;
             return this;
         }
+
         public Builder throughputInBytes(Double throughputInBytes) {
-            this.throughputInBytes = Objects.requireNonNull(throughputInBytes);
+            $.throughputInBytes = throughputInBytes;
             return this;
         }
+
         public Builder throughputUploadPendingDataInBytes(Double throughputUploadPendingDataInBytes) {
-            this.throughputUploadPendingDataInBytes = Objects.requireNonNull(throughputUploadPendingDataInBytes);
+            $.throughputUploadPendingDataInBytes = throughputUploadPendingDataInBytes;
             return this;
         }
+
         public Builder totalMemoryInBytes(Double totalMemoryInBytes) {
-            this.totalMemoryInBytes = Objects.requireNonNull(totalMemoryInBytes);
+            $.totalMemoryInBytes = totalMemoryInBytes;
             return this;
         }
+
         public Builder totalSpaceInBytes(Double totalSpaceInBytes) {
-            this.totalSpaceInBytes = Objects.requireNonNull(totalSpaceInBytes);
+            $.totalSpaceInBytes = totalSpaceInBytes;
             return this;
         }
+
         public Builder usedMemoryInBytes(Double usedMemoryInBytes) {
-            this.usedMemoryInBytes = Objects.requireNonNull(usedMemoryInBytes);
+            $.usedMemoryInBytes = usedMemoryInBytes;
             return this;
         }
+
         public Builder usedSpaceInBytes(Double usedSpaceInBytes) {
-            this.usedSpaceInBytes = Objects.requireNonNull(usedSpaceInBytes);
+            $.usedSpaceInBytes = usedSpaceInBytes;
             return this;
         }
+
         public Builder version(String version) {
-            this.version = Objects.requireNonNull(version);
+            $.version = version;
             return this;
-        }        public ProcessServerDetailsResponse build() {
-            return new ProcessServerDetailsResponse(availableMemoryInBytes, availableSpaceInBytes, freeSpacePercentage, health, healthErrors, historicHealth, id, lastHeartbeatUtc, memoryUsagePercentage, name, processorUsagePercentage, throughputInBytes, throughputUploadPendingDataInBytes, totalMemoryInBytes, totalSpaceInBytes, usedMemoryInBytes, usedSpaceInBytes, version);
+        }
+
+        public ProcessServerDetailsResponse build() {
+            $.availableMemoryInBytes = Objects.requireNonNull($.availableMemoryInBytes, "expected parameter 'availableMemoryInBytes' to be non-null");
+            $.availableSpaceInBytes = Objects.requireNonNull($.availableSpaceInBytes, "expected parameter 'availableSpaceInBytes' to be non-null");
+            $.freeSpacePercentage = Objects.requireNonNull($.freeSpacePercentage, "expected parameter 'freeSpacePercentage' to be non-null");
+            $.health = Objects.requireNonNull($.health, "expected parameter 'health' to be non-null");
+            $.healthErrors = Objects.requireNonNull($.healthErrors, "expected parameter 'healthErrors' to be non-null");
+            $.historicHealth = Objects.requireNonNull($.historicHealth, "expected parameter 'historicHealth' to be non-null");
+            $.id = Objects.requireNonNull($.id, "expected parameter 'id' to be non-null");
+            $.lastHeartbeatUtc = Objects.requireNonNull($.lastHeartbeatUtc, "expected parameter 'lastHeartbeatUtc' to be non-null");
+            $.memoryUsagePercentage = Objects.requireNonNull($.memoryUsagePercentage, "expected parameter 'memoryUsagePercentage' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.processorUsagePercentage = Objects.requireNonNull($.processorUsagePercentage, "expected parameter 'processorUsagePercentage' to be non-null");
+            $.throughputInBytes = Objects.requireNonNull($.throughputInBytes, "expected parameter 'throughputInBytes' to be non-null");
+            $.throughputUploadPendingDataInBytes = Objects.requireNonNull($.throughputUploadPendingDataInBytes, "expected parameter 'throughputUploadPendingDataInBytes' to be non-null");
+            $.totalMemoryInBytes = Objects.requireNonNull($.totalMemoryInBytes, "expected parameter 'totalMemoryInBytes' to be non-null");
+            $.totalSpaceInBytes = Objects.requireNonNull($.totalSpaceInBytes, "expected parameter 'totalSpaceInBytes' to be non-null");
+            $.usedMemoryInBytes = Objects.requireNonNull($.usedMemoryInBytes, "expected parameter 'usedMemoryInBytes' to be non-null");
+            $.usedSpaceInBytes = Objects.requireNonNull($.usedSpaceInBytes, "expected parameter 'usedSpaceInBytes' to be non-null");
+            $.version = Objects.requireNonNull($.version, "expected parameter 'version' to be non-null");
+            return $;
         }
     }
+
 }

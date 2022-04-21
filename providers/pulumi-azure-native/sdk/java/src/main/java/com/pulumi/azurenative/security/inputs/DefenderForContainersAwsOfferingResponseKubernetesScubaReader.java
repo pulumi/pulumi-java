@@ -23,45 +23,44 @@ public final class DefenderForContainersAwsOfferingResponseKubernetesScubaReader
      * 
      */
     @Import(name="cloudRoleArn")
-      private final @Nullable String cloudRoleArn;
+    private @Nullable String cloudRoleArn;
 
     public Optional<String> cloudRoleArn() {
-        return this.cloudRoleArn == null ? Optional.empty() : Optional.ofNullable(this.cloudRoleArn);
+        return Optional.ofNullable(this.cloudRoleArn);
     }
 
-    public DefenderForContainersAwsOfferingResponseKubernetesScubaReader(@Nullable String cloudRoleArn) {
-        this.cloudRoleArn = cloudRoleArn;
-    }
+    private DefenderForContainersAwsOfferingResponseKubernetesScubaReader() {}
 
-    private DefenderForContainersAwsOfferingResponseKubernetesScubaReader() {
-        this.cloudRoleArn = null;
+    private DefenderForContainersAwsOfferingResponseKubernetesScubaReader(DefenderForContainersAwsOfferingResponseKubernetesScubaReader $) {
+        this.cloudRoleArn = $.cloudRoleArn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DefenderForContainersAwsOfferingResponseKubernetesScubaReader defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String cloudRoleArn;
+        private DefenderForContainersAwsOfferingResponseKubernetesScubaReader $;
 
         public Builder() {
-    	      // Empty
+            $ = new DefenderForContainersAwsOfferingResponseKubernetesScubaReader();
         }
 
         public Builder(DefenderForContainersAwsOfferingResponseKubernetesScubaReader defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cloudRoleArn = defaults.cloudRoleArn;
+            $ = new DefenderForContainersAwsOfferingResponseKubernetesScubaReader(Objects.requireNonNull(defaults));
         }
 
         public Builder cloudRoleArn(@Nullable String cloudRoleArn) {
-            this.cloudRoleArn = cloudRoleArn;
+            $.cloudRoleArn = cloudRoleArn;
             return this;
-        }        public DefenderForContainersAwsOfferingResponseKubernetesScubaReader build() {
-            return new DefenderForContainersAwsOfferingResponseKubernetesScubaReader(cloudRoleArn);
+        }
+
+        public DefenderForContainersAwsOfferingResponseKubernetesScubaReader build() {
+            return $;
         }
     }
+
 }

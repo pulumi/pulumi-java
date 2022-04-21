@@ -5,7 +5,6 @@ package com.pulumi.gcp.dataproc.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,49 +18,49 @@ public final class ClusterClusterConfigAutoscalingConfigGetArgs extends com.pulu
      * 
      */
     @Import(name="policyUri", required=true)
-      private final Output<String> policyUri;
+    private Output<String> policyUri;
 
     public Output<String> policyUri() {
         return this.policyUri;
     }
 
-    public ClusterClusterConfigAutoscalingConfigGetArgs(Output<String> policyUri) {
-        this.policyUri = Objects.requireNonNull(policyUri, "expected parameter 'policyUri' to be non-null");
-    }
+    private ClusterClusterConfigAutoscalingConfigGetArgs() {}
 
-    private ClusterClusterConfigAutoscalingConfigGetArgs() {
-        this.policyUri = Codegen.empty();
+    private ClusterClusterConfigAutoscalingConfigGetArgs(ClusterClusterConfigAutoscalingConfigGetArgs $) {
+        this.policyUri = $.policyUri;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ClusterClusterConfigAutoscalingConfigGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> policyUri;
+        private ClusterClusterConfigAutoscalingConfigGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ClusterClusterConfigAutoscalingConfigGetArgs();
         }
 
         public Builder(ClusterClusterConfigAutoscalingConfigGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.policyUri = defaults.policyUri;
+            $ = new ClusterClusterConfigAutoscalingConfigGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder policyUri(Output<String> policyUri) {
-            this.policyUri = Objects.requireNonNull(policyUri);
+            $.policyUri = policyUri;
             return this;
         }
+
         public Builder policyUri(String policyUri) {
-            this.policyUri = Output.of(Objects.requireNonNull(policyUri));
-            return this;
-        }        public ClusterClusterConfigAutoscalingConfigGetArgs build() {
-            return new ClusterClusterConfigAutoscalingConfigGetArgs(policyUri);
+            return policyUri(Output.of(policyUri));
+        }
+
+        public ClusterClusterConfigAutoscalingConfigGetArgs build() {
+            $.policyUri = Objects.requireNonNull($.policyUri, "expected parameter 'policyUri' to be non-null");
+            return $;
         }
     }
+
 }

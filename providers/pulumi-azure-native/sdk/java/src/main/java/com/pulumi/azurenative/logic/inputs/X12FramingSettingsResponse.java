@@ -23,7 +23,7 @@ public final class X12FramingSettingsResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="characterSet", required=true)
-      private final String characterSet;
+    private String characterSet;
 
     public String characterSet() {
         return this.characterSet;
@@ -34,7 +34,7 @@ public final class X12FramingSettingsResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="componentSeparator", required=true)
-      private final Integer componentSeparator;
+    private Integer componentSeparator;
 
     public Integer componentSeparator() {
         return this.componentSeparator;
@@ -45,7 +45,7 @@ public final class X12FramingSettingsResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="dataElementSeparator", required=true)
-      private final Integer dataElementSeparator;
+    private Integer dataElementSeparator;
 
     public Integer dataElementSeparator() {
         return this.dataElementSeparator;
@@ -56,7 +56,7 @@ public final class X12FramingSettingsResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="replaceCharacter", required=true)
-      private final Integer replaceCharacter;
+    private Integer replaceCharacter;
 
     public Integer replaceCharacter() {
         return this.replaceCharacter;
@@ -67,7 +67,7 @@ public final class X12FramingSettingsResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="replaceSeparatorsInPayload", required=true)
-      private final Boolean replaceSeparatorsInPayload;
+    private Boolean replaceSeparatorsInPayload;
 
     public Boolean replaceSeparatorsInPayload() {
         return this.replaceSeparatorsInPayload;
@@ -78,7 +78,7 @@ public final class X12FramingSettingsResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="segmentTerminator", required=true)
-      private final Integer segmentTerminator;
+    private Integer segmentTerminator;
 
     public Integer segmentTerminator() {
         return this.segmentTerminator;
@@ -89,100 +89,87 @@ public final class X12FramingSettingsResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="segmentTerminatorSuffix", required=true)
-      private final String segmentTerminatorSuffix;
+    private String segmentTerminatorSuffix;
 
     public String segmentTerminatorSuffix() {
         return this.segmentTerminatorSuffix;
     }
 
-    public X12FramingSettingsResponse(
-        String characterSet,
-        Integer componentSeparator,
-        Integer dataElementSeparator,
-        Integer replaceCharacter,
-        Boolean replaceSeparatorsInPayload,
-        Integer segmentTerminator,
-        String segmentTerminatorSuffix) {
-        this.characterSet = Objects.requireNonNull(characterSet, "expected parameter 'characterSet' to be non-null");
-        this.componentSeparator = Objects.requireNonNull(componentSeparator, "expected parameter 'componentSeparator' to be non-null");
-        this.dataElementSeparator = Objects.requireNonNull(dataElementSeparator, "expected parameter 'dataElementSeparator' to be non-null");
-        this.replaceCharacter = Objects.requireNonNull(replaceCharacter, "expected parameter 'replaceCharacter' to be non-null");
-        this.replaceSeparatorsInPayload = Objects.requireNonNull(replaceSeparatorsInPayload, "expected parameter 'replaceSeparatorsInPayload' to be non-null");
-        this.segmentTerminator = Objects.requireNonNull(segmentTerminator, "expected parameter 'segmentTerminator' to be non-null");
-        this.segmentTerminatorSuffix = Objects.requireNonNull(segmentTerminatorSuffix, "expected parameter 'segmentTerminatorSuffix' to be non-null");
-    }
+    private X12FramingSettingsResponse() {}
 
-    private X12FramingSettingsResponse() {
-        this.characterSet = null;
-        this.componentSeparator = null;
-        this.dataElementSeparator = null;
-        this.replaceCharacter = null;
-        this.replaceSeparatorsInPayload = null;
-        this.segmentTerminator = null;
-        this.segmentTerminatorSuffix = null;
+    private X12FramingSettingsResponse(X12FramingSettingsResponse $) {
+        this.characterSet = $.characterSet;
+        this.componentSeparator = $.componentSeparator;
+        this.dataElementSeparator = $.dataElementSeparator;
+        this.replaceCharacter = $.replaceCharacter;
+        this.replaceSeparatorsInPayload = $.replaceSeparatorsInPayload;
+        this.segmentTerminator = $.segmentTerminator;
+        this.segmentTerminatorSuffix = $.segmentTerminatorSuffix;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(X12FramingSettingsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String characterSet;
-        private Integer componentSeparator;
-        private Integer dataElementSeparator;
-        private Integer replaceCharacter;
-        private Boolean replaceSeparatorsInPayload;
-        private Integer segmentTerminator;
-        private String segmentTerminatorSuffix;
+        private X12FramingSettingsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new X12FramingSettingsResponse();
         }
 
         public Builder(X12FramingSettingsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.characterSet = defaults.characterSet;
-    	      this.componentSeparator = defaults.componentSeparator;
-    	      this.dataElementSeparator = defaults.dataElementSeparator;
-    	      this.replaceCharacter = defaults.replaceCharacter;
-    	      this.replaceSeparatorsInPayload = defaults.replaceSeparatorsInPayload;
-    	      this.segmentTerminator = defaults.segmentTerminator;
-    	      this.segmentTerminatorSuffix = defaults.segmentTerminatorSuffix;
+            $ = new X12FramingSettingsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder characterSet(String characterSet) {
-            this.characterSet = Objects.requireNonNull(characterSet);
+            $.characterSet = characterSet;
             return this;
         }
+
         public Builder componentSeparator(Integer componentSeparator) {
-            this.componentSeparator = Objects.requireNonNull(componentSeparator);
+            $.componentSeparator = componentSeparator;
             return this;
         }
+
         public Builder dataElementSeparator(Integer dataElementSeparator) {
-            this.dataElementSeparator = Objects.requireNonNull(dataElementSeparator);
+            $.dataElementSeparator = dataElementSeparator;
             return this;
         }
+
         public Builder replaceCharacter(Integer replaceCharacter) {
-            this.replaceCharacter = Objects.requireNonNull(replaceCharacter);
+            $.replaceCharacter = replaceCharacter;
             return this;
         }
+
         public Builder replaceSeparatorsInPayload(Boolean replaceSeparatorsInPayload) {
-            this.replaceSeparatorsInPayload = Objects.requireNonNull(replaceSeparatorsInPayload);
+            $.replaceSeparatorsInPayload = replaceSeparatorsInPayload;
             return this;
         }
+
         public Builder segmentTerminator(Integer segmentTerminator) {
-            this.segmentTerminator = Objects.requireNonNull(segmentTerminator);
+            $.segmentTerminator = segmentTerminator;
             return this;
         }
+
         public Builder segmentTerminatorSuffix(String segmentTerminatorSuffix) {
-            this.segmentTerminatorSuffix = Objects.requireNonNull(segmentTerminatorSuffix);
+            $.segmentTerminatorSuffix = segmentTerminatorSuffix;
             return this;
-        }        public X12FramingSettingsResponse build() {
-            return new X12FramingSettingsResponse(characterSet, componentSeparator, dataElementSeparator, replaceCharacter, replaceSeparatorsInPayload, segmentTerminator, segmentTerminatorSuffix);
+        }
+
+        public X12FramingSettingsResponse build() {
+            $.characterSet = Objects.requireNonNull($.characterSet, "expected parameter 'characterSet' to be non-null");
+            $.componentSeparator = Objects.requireNonNull($.componentSeparator, "expected parameter 'componentSeparator' to be non-null");
+            $.dataElementSeparator = Objects.requireNonNull($.dataElementSeparator, "expected parameter 'dataElementSeparator' to be non-null");
+            $.replaceCharacter = Objects.requireNonNull($.replaceCharacter, "expected parameter 'replaceCharacter' to be non-null");
+            $.replaceSeparatorsInPayload = Objects.requireNonNull($.replaceSeparatorsInPayload, "expected parameter 'replaceSeparatorsInPayload' to be non-null");
+            $.segmentTerminator = Objects.requireNonNull($.segmentTerminator, "expected parameter 'segmentTerminator' to be non-null");
+            $.segmentTerminatorSuffix = Objects.requireNonNull($.segmentTerminatorSuffix, "expected parameter 'segmentTerminatorSuffix' to be non-null");
+            return $;
         }
     }
+
 }

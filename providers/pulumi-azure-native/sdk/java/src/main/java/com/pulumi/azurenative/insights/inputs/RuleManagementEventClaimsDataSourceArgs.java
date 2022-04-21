@@ -5,9 +5,9 @@ package com.pulumi.azurenative.insights.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class RuleManagementEventClaimsDataSourceArgs extends com.pulumi.re
      * 
      */
     @Import(name="emailAddress")
-      private final @Nullable Output<String> emailAddress;
+    private @Nullable Output<String> emailAddress;
 
-    public Output<String> emailAddress() {
-        return this.emailAddress == null ? Codegen.empty() : this.emailAddress;
+    public Optional<Output<String>> emailAddress() {
+        return Optional.ofNullable(this.emailAddress);
     }
 
-    public RuleManagementEventClaimsDataSourceArgs(@Nullable Output<String> emailAddress) {
-        this.emailAddress = emailAddress;
-    }
+    private RuleManagementEventClaimsDataSourceArgs() {}
 
-    private RuleManagementEventClaimsDataSourceArgs() {
-        this.emailAddress = Codegen.empty();
+    private RuleManagementEventClaimsDataSourceArgs(RuleManagementEventClaimsDataSourceArgs $) {
+        this.emailAddress = $.emailAddress;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RuleManagementEventClaimsDataSourceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> emailAddress;
+        private RuleManagementEventClaimsDataSourceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RuleManagementEventClaimsDataSourceArgs();
         }
 
         public Builder(RuleManagementEventClaimsDataSourceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.emailAddress = defaults.emailAddress;
+            $ = new RuleManagementEventClaimsDataSourceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder emailAddress(@Nullable Output<String> emailAddress) {
-            this.emailAddress = emailAddress;
+            $.emailAddress = emailAddress;
             return this;
         }
-        public Builder emailAddress(@Nullable String emailAddress) {
-            this.emailAddress = Codegen.ofNullable(emailAddress);
-            return this;
-        }        public RuleManagementEventClaimsDataSourceArgs build() {
-            return new RuleManagementEventClaimsDataSourceArgs(emailAddress);
+
+        public Builder emailAddress(String emailAddress) {
+            return emailAddress(Output.of(emailAddress));
+        }
+
+        public RuleManagementEventClaimsDataSourceArgs build() {
+            return $;
         }
     }
+
 }

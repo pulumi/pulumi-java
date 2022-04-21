@@ -17,7 +17,7 @@ public final class GetSecurityRuleArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="networkSecurityGroupName", required=true)
-      private final String networkSecurityGroupName;
+    private String networkSecurityGroupName;
 
     public String networkSecurityGroupName() {
         return this.networkSecurityGroupName;
@@ -28,7 +28,7 @@ public final class GetSecurityRuleArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -39,64 +39,59 @@ public final class GetSecurityRuleArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="securityRuleName", required=true)
-      private final String securityRuleName;
+    private String securityRuleName;
 
     public String securityRuleName() {
         return this.securityRuleName;
     }
 
-    public GetSecurityRuleArgs(
-        String networkSecurityGroupName,
-        String resourceGroupName,
-        String securityRuleName) {
-        this.networkSecurityGroupName = Objects.requireNonNull(networkSecurityGroupName, "expected parameter 'networkSecurityGroupName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.securityRuleName = Objects.requireNonNull(securityRuleName, "expected parameter 'securityRuleName' to be non-null");
-    }
+    private GetSecurityRuleArgs() {}
 
-    private GetSecurityRuleArgs() {
-        this.networkSecurityGroupName = null;
-        this.resourceGroupName = null;
-        this.securityRuleName = null;
+    private GetSecurityRuleArgs(GetSecurityRuleArgs $) {
+        this.networkSecurityGroupName = $.networkSecurityGroupName;
+        this.resourceGroupName = $.resourceGroupName;
+        this.securityRuleName = $.securityRuleName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetSecurityRuleArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String networkSecurityGroupName;
-        private String resourceGroupName;
-        private String securityRuleName;
+        private GetSecurityRuleArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetSecurityRuleArgs();
         }
 
         public Builder(GetSecurityRuleArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.networkSecurityGroupName = defaults.networkSecurityGroupName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.securityRuleName = defaults.securityRuleName;
+            $ = new GetSecurityRuleArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder networkSecurityGroupName(String networkSecurityGroupName) {
-            this.networkSecurityGroupName = Objects.requireNonNull(networkSecurityGroupName);
+            $.networkSecurityGroupName = networkSecurityGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder securityRuleName(String securityRuleName) {
-            this.securityRuleName = Objects.requireNonNull(securityRuleName);
+            $.securityRuleName = securityRuleName;
             return this;
-        }        public GetSecurityRuleArgs build() {
-            return new GetSecurityRuleArgs(networkSecurityGroupName, resourceGroupName, securityRuleName);
+        }
+
+        public GetSecurityRuleArgs build() {
+            $.networkSecurityGroupName = Objects.requireNonNull($.networkSecurityGroupName, "expected parameter 'networkSecurityGroupName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.securityRuleName = Objects.requireNonNull($.securityRuleName, "expected parameter 'securityRuleName' to be non-null");
+            return $;
         }
     }
+
 }

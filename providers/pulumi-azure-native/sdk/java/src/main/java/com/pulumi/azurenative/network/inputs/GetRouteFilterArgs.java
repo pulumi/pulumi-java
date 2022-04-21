@@ -19,10 +19,10 @@ public final class GetRouteFilterArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="expand")
-      private final @Nullable String expand;
+    private @Nullable String expand;
 
     public Optional<String> expand() {
-        return this.expand == null ? Optional.empty() : Optional.ofNullable(this.expand);
+        return Optional.ofNullable(this.expand);
     }
 
     /**
@@ -30,7 +30,7 @@ public final class GetRouteFilterArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -41,64 +41,58 @@ public final class GetRouteFilterArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="routeFilterName", required=true)
-      private final String routeFilterName;
+    private String routeFilterName;
 
     public String routeFilterName() {
         return this.routeFilterName;
     }
 
-    public GetRouteFilterArgs(
-        @Nullable String expand,
-        String resourceGroupName,
-        String routeFilterName) {
-        this.expand = expand;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.routeFilterName = Objects.requireNonNull(routeFilterName, "expected parameter 'routeFilterName' to be non-null");
-    }
+    private GetRouteFilterArgs() {}
 
-    private GetRouteFilterArgs() {
-        this.expand = null;
-        this.resourceGroupName = null;
-        this.routeFilterName = null;
+    private GetRouteFilterArgs(GetRouteFilterArgs $) {
+        this.expand = $.expand;
+        this.resourceGroupName = $.resourceGroupName;
+        this.routeFilterName = $.routeFilterName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetRouteFilterArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String expand;
-        private String resourceGroupName;
-        private String routeFilterName;
+        private GetRouteFilterArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetRouteFilterArgs();
         }
 
         public Builder(GetRouteFilterArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.expand = defaults.expand;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.routeFilterName = defaults.routeFilterName;
+            $ = new GetRouteFilterArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder expand(@Nullable String expand) {
-            this.expand = expand;
+            $.expand = expand;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder routeFilterName(String routeFilterName) {
-            this.routeFilterName = Objects.requireNonNull(routeFilterName);
+            $.routeFilterName = routeFilterName;
             return this;
-        }        public GetRouteFilterArgs build() {
-            return new GetRouteFilterArgs(expand, resourceGroupName, routeFilterName);
+        }
+
+        public GetRouteFilterArgs build() {
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.routeFilterName = Objects.requireNonNull($.routeFilterName, "expected parameter 'routeFilterName' to be non-null");
+            return $;
         }
     }
+
 }

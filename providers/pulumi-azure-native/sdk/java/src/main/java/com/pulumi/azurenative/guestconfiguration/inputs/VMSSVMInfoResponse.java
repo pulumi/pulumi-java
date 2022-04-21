@@ -21,7 +21,7 @@ public final class VMSSVMInfoResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="complianceStatus", required=true)
-      private final String complianceStatus;
+    private String complianceStatus;
 
     public String complianceStatus() {
         return this.complianceStatus;
@@ -32,7 +32,7 @@ public final class VMSSVMInfoResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="lastComplianceChecked", required=true)
-      private final String lastComplianceChecked;
+    private String lastComplianceChecked;
 
     public String lastComplianceChecked() {
         return this.lastComplianceChecked;
@@ -43,7 +43,7 @@ public final class VMSSVMInfoResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="latestReportId", required=true)
-      private final String latestReportId;
+    private String latestReportId;
 
     public String latestReportId() {
         return this.latestReportId;
@@ -54,7 +54,7 @@ public final class VMSSVMInfoResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="vmId", required=true)
-      private final String vmId;
+    private String vmId;
 
     public String vmId() {
         return this.vmId;
@@ -65,82 +65,73 @@ public final class VMSSVMInfoResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="vmResourceId", required=true)
-      private final String vmResourceId;
+    private String vmResourceId;
 
     public String vmResourceId() {
         return this.vmResourceId;
     }
 
-    public VMSSVMInfoResponse(
-        String complianceStatus,
-        String lastComplianceChecked,
-        String latestReportId,
-        String vmId,
-        String vmResourceId) {
-        this.complianceStatus = Objects.requireNonNull(complianceStatus, "expected parameter 'complianceStatus' to be non-null");
-        this.lastComplianceChecked = Objects.requireNonNull(lastComplianceChecked, "expected parameter 'lastComplianceChecked' to be non-null");
-        this.latestReportId = Objects.requireNonNull(latestReportId, "expected parameter 'latestReportId' to be non-null");
-        this.vmId = Objects.requireNonNull(vmId, "expected parameter 'vmId' to be non-null");
-        this.vmResourceId = Objects.requireNonNull(vmResourceId, "expected parameter 'vmResourceId' to be non-null");
-    }
+    private VMSSVMInfoResponse() {}
 
-    private VMSSVMInfoResponse() {
-        this.complianceStatus = null;
-        this.lastComplianceChecked = null;
-        this.latestReportId = null;
-        this.vmId = null;
-        this.vmResourceId = null;
+    private VMSSVMInfoResponse(VMSSVMInfoResponse $) {
+        this.complianceStatus = $.complianceStatus;
+        this.lastComplianceChecked = $.lastComplianceChecked;
+        this.latestReportId = $.latestReportId;
+        this.vmId = $.vmId;
+        this.vmResourceId = $.vmResourceId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VMSSVMInfoResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String complianceStatus;
-        private String lastComplianceChecked;
-        private String latestReportId;
-        private String vmId;
-        private String vmResourceId;
+        private VMSSVMInfoResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new VMSSVMInfoResponse();
         }
 
         public Builder(VMSSVMInfoResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.complianceStatus = defaults.complianceStatus;
-    	      this.lastComplianceChecked = defaults.lastComplianceChecked;
-    	      this.latestReportId = defaults.latestReportId;
-    	      this.vmId = defaults.vmId;
-    	      this.vmResourceId = defaults.vmResourceId;
+            $ = new VMSSVMInfoResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder complianceStatus(String complianceStatus) {
-            this.complianceStatus = Objects.requireNonNull(complianceStatus);
+            $.complianceStatus = complianceStatus;
             return this;
         }
+
         public Builder lastComplianceChecked(String lastComplianceChecked) {
-            this.lastComplianceChecked = Objects.requireNonNull(lastComplianceChecked);
+            $.lastComplianceChecked = lastComplianceChecked;
             return this;
         }
+
         public Builder latestReportId(String latestReportId) {
-            this.latestReportId = Objects.requireNonNull(latestReportId);
+            $.latestReportId = latestReportId;
             return this;
         }
+
         public Builder vmId(String vmId) {
-            this.vmId = Objects.requireNonNull(vmId);
+            $.vmId = vmId;
             return this;
         }
+
         public Builder vmResourceId(String vmResourceId) {
-            this.vmResourceId = Objects.requireNonNull(vmResourceId);
+            $.vmResourceId = vmResourceId;
             return this;
-        }        public VMSSVMInfoResponse build() {
-            return new VMSSVMInfoResponse(complianceStatus, lastComplianceChecked, latestReportId, vmId, vmResourceId);
+        }
+
+        public VMSSVMInfoResponse build() {
+            $.complianceStatus = Objects.requireNonNull($.complianceStatus, "expected parameter 'complianceStatus' to be non-null");
+            $.lastComplianceChecked = Objects.requireNonNull($.lastComplianceChecked, "expected parameter 'lastComplianceChecked' to be non-null");
+            $.latestReportId = Objects.requireNonNull($.latestReportId, "expected parameter 'latestReportId' to be non-null");
+            $.vmId = Objects.requireNonNull($.vmId, "expected parameter 'vmId' to be non-null");
+            $.vmResourceId = Objects.requireNonNull($.vmResourceId, "expected parameter 'vmResourceId' to be non-null");
+            return $;
         }
     }
+
 }

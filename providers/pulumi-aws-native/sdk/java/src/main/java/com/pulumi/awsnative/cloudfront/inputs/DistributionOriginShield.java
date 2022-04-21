@@ -16,62 +16,57 @@ public final class DistributionOriginShield extends com.pulumi.resources.InvokeA
     public static final DistributionOriginShield Empty = new DistributionOriginShield();
 
     @Import(name="enabled")
-      private final @Nullable Boolean enabled;
+    private @Nullable Boolean enabled;
 
     public Optional<Boolean> enabled() {
-        return this.enabled == null ? Optional.empty() : Optional.ofNullable(this.enabled);
+        return Optional.ofNullable(this.enabled);
     }
 
     @Import(name="originShieldRegion")
-      private final @Nullable String originShieldRegion;
+    private @Nullable String originShieldRegion;
 
     public Optional<String> originShieldRegion() {
-        return this.originShieldRegion == null ? Optional.empty() : Optional.ofNullable(this.originShieldRegion);
+        return Optional.ofNullable(this.originShieldRegion);
     }
 
-    public DistributionOriginShield(
-        @Nullable Boolean enabled,
-        @Nullable String originShieldRegion) {
-        this.enabled = enabled;
-        this.originShieldRegion = originShieldRegion;
-    }
+    private DistributionOriginShield() {}
 
-    private DistributionOriginShield() {
-        this.enabled = null;
-        this.originShieldRegion = null;
+    private DistributionOriginShield(DistributionOriginShield $) {
+        this.enabled = $.enabled;
+        this.originShieldRegion = $.originShieldRegion;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DistributionOriginShield defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Boolean enabled;
-        private @Nullable String originShieldRegion;
+        private DistributionOriginShield $;
 
         public Builder() {
-    	      // Empty
+            $ = new DistributionOriginShield();
         }
 
         public Builder(DistributionOriginShield defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.enabled = defaults.enabled;
-    	      this.originShieldRegion = defaults.originShieldRegion;
+            $ = new DistributionOriginShield(Objects.requireNonNull(defaults));
         }
 
         public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = enabled;
+            $.enabled = enabled;
             return this;
         }
+
         public Builder originShieldRegion(@Nullable String originShieldRegion) {
-            this.originShieldRegion = originShieldRegion;
+            $.originShieldRegion = originShieldRegion;
             return this;
-        }        public DistributionOriginShield build() {
-            return new DistributionOriginShield(enabled, originShieldRegion);
+        }
+
+        public DistributionOriginShield build() {
+            return $;
         }
     }
+
 }

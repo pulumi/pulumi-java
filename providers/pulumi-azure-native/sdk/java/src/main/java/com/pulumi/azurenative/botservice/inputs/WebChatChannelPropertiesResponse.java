@@ -25,10 +25,10 @@ public final class WebChatChannelPropertiesResponse extends com.pulumi.resources
      * 
      */
     @Import(name="sites")
-      private final @Nullable List<WebChatSiteResponse> sites;
+    private @Nullable List<WebChatSiteResponse> sites;
 
-    public List<WebChatSiteResponse> sites() {
-        return this.sites == null ? List.of() : this.sites;
+    public Optional<List<WebChatSiteResponse>> sites() {
+        return Optional.ofNullable(this.sites);
     }
 
     /**
@@ -36,58 +36,55 @@ public final class WebChatChannelPropertiesResponse extends com.pulumi.resources
      * 
      */
     @Import(name="webChatEmbedCode", required=true)
-      private final String webChatEmbedCode;
+    private String webChatEmbedCode;
 
     public String webChatEmbedCode() {
         return this.webChatEmbedCode;
     }
 
-    public WebChatChannelPropertiesResponse(
-        @Nullable List<WebChatSiteResponse> sites,
-        String webChatEmbedCode) {
-        this.sites = sites;
-        this.webChatEmbedCode = Objects.requireNonNull(webChatEmbedCode, "expected parameter 'webChatEmbedCode' to be non-null");
-    }
+    private WebChatChannelPropertiesResponse() {}
 
-    private WebChatChannelPropertiesResponse() {
-        this.sites = List.of();
-        this.webChatEmbedCode = null;
+    private WebChatChannelPropertiesResponse(WebChatChannelPropertiesResponse $) {
+        this.sites = $.sites;
+        this.webChatEmbedCode = $.webChatEmbedCode;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WebChatChannelPropertiesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<WebChatSiteResponse> sites;
-        private String webChatEmbedCode;
+        private WebChatChannelPropertiesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new WebChatChannelPropertiesResponse();
         }
 
         public Builder(WebChatChannelPropertiesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.sites = defaults.sites;
-    	      this.webChatEmbedCode = defaults.webChatEmbedCode;
+            $ = new WebChatChannelPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder sites(@Nullable List<WebChatSiteResponse> sites) {
-            this.sites = sites;
+            $.sites = sites;
             return this;
         }
+
         public Builder sites(WebChatSiteResponse... sites) {
             return sites(List.of(sites));
         }
+
         public Builder webChatEmbedCode(String webChatEmbedCode) {
-            this.webChatEmbedCode = Objects.requireNonNull(webChatEmbedCode);
+            $.webChatEmbedCode = webChatEmbedCode;
             return this;
-        }        public WebChatChannelPropertiesResponse build() {
-            return new WebChatChannelPropertiesResponse(sites, webChatEmbedCode);
+        }
+
+        public WebChatChannelPropertiesResponse build() {
+            $.webChatEmbedCode = Objects.requireNonNull($.webChatEmbedCode, "expected parameter 'webChatEmbedCode' to be non-null");
+            return $;
         }
     }
+
 }

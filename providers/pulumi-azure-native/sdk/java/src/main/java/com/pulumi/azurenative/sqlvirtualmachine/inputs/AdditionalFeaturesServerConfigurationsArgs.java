@@ -5,9 +5,9 @@ package com.pulumi.azurenative.sqlvirtualmachine.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class AdditionalFeaturesServerConfigurationsArgs extends com.pulumi
      * 
      */
     @Import(name="isRServicesEnabled")
-      private final @Nullable Output<Boolean> isRServicesEnabled;
+    private @Nullable Output<Boolean> isRServicesEnabled;
 
-    public Output<Boolean> isRServicesEnabled() {
-        return this.isRServicesEnabled == null ? Codegen.empty() : this.isRServicesEnabled;
+    public Optional<Output<Boolean>> isRServicesEnabled() {
+        return Optional.ofNullable(this.isRServicesEnabled);
     }
 
-    public AdditionalFeaturesServerConfigurationsArgs(@Nullable Output<Boolean> isRServicesEnabled) {
-        this.isRServicesEnabled = isRServicesEnabled;
-    }
+    private AdditionalFeaturesServerConfigurationsArgs() {}
 
-    private AdditionalFeaturesServerConfigurationsArgs() {
-        this.isRServicesEnabled = Codegen.empty();
+    private AdditionalFeaturesServerConfigurationsArgs(AdditionalFeaturesServerConfigurationsArgs $) {
+        this.isRServicesEnabled = $.isRServicesEnabled;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AdditionalFeaturesServerConfigurationsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> isRServicesEnabled;
+        private AdditionalFeaturesServerConfigurationsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AdditionalFeaturesServerConfigurationsArgs();
         }
 
         public Builder(AdditionalFeaturesServerConfigurationsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.isRServicesEnabled = defaults.isRServicesEnabled;
+            $ = new AdditionalFeaturesServerConfigurationsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder isRServicesEnabled(@Nullable Output<Boolean> isRServicesEnabled) {
-            this.isRServicesEnabled = isRServicesEnabled;
+            $.isRServicesEnabled = isRServicesEnabled;
             return this;
         }
-        public Builder isRServicesEnabled(@Nullable Boolean isRServicesEnabled) {
-            this.isRServicesEnabled = Codegen.ofNullable(isRServicesEnabled);
-            return this;
-        }        public AdditionalFeaturesServerConfigurationsArgs build() {
-            return new AdditionalFeaturesServerConfigurationsArgs(isRServicesEnabled);
+
+        public Builder isRServicesEnabled(Boolean isRServicesEnabled) {
+            return isRServicesEnabled(Output.of(isRServicesEnabled));
+        }
+
+        public AdditionalFeaturesServerConfigurationsArgs build() {
+            return $;
         }
     }
+
 }

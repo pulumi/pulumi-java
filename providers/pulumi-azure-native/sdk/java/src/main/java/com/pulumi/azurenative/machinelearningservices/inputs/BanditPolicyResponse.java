@@ -26,10 +26,10 @@ public final class BanditPolicyResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="delayEvaluation")
-      private final @Nullable Integer delayEvaluation;
+    private @Nullable Integer delayEvaluation;
 
     public Optional<Integer> delayEvaluation() {
-        return this.delayEvaluation == null ? Optional.empty() : Optional.ofNullable(this.delayEvaluation);
+        return Optional.ofNullable(this.delayEvaluation);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class BanditPolicyResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="evaluationInterval")
-      private final @Nullable Integer evaluationInterval;
+    private @Nullable Integer evaluationInterval;
 
     public Optional<Integer> evaluationInterval() {
-        return this.evaluationInterval == null ? Optional.empty() : Optional.ofNullable(this.evaluationInterval);
+        return Optional.ofNullable(this.evaluationInterval);
     }
 
     /**
@@ -48,7 +48,7 @@ public final class BanditPolicyResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="policyType", required=true)
-      private final String policyType;
+    private String policyType;
 
     public String policyType() {
         return this.policyType;
@@ -59,10 +59,10 @@ public final class BanditPolicyResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="slackAmount")
-      private final @Nullable Double slackAmount;
+    private @Nullable Double slackAmount;
 
     public Optional<Double> slackAmount() {
-        return this.slackAmount == null ? Optional.empty() : Optional.ofNullable(this.slackAmount);
+        return Optional.ofNullable(this.slackAmount);
     }
 
     /**
@@ -70,82 +70,69 @@ public final class BanditPolicyResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="slackFactor")
-      private final @Nullable Double slackFactor;
+    private @Nullable Double slackFactor;
 
     public Optional<Double> slackFactor() {
-        return this.slackFactor == null ? Optional.empty() : Optional.ofNullable(this.slackFactor);
+        return Optional.ofNullable(this.slackFactor);
     }
 
-    public BanditPolicyResponse(
-        @Nullable Integer delayEvaluation,
-        @Nullable Integer evaluationInterval,
-        String policyType,
-        @Nullable Double slackAmount,
-        @Nullable Double slackFactor) {
-        this.delayEvaluation = delayEvaluation;
-        this.evaluationInterval = evaluationInterval;
-        this.policyType = Codegen.stringProp("policyType").arg(policyType).require();
-        this.slackAmount = slackAmount;
-        this.slackFactor = slackFactor;
-    }
+    private BanditPolicyResponse() {}
 
-    private BanditPolicyResponse() {
-        this.delayEvaluation = null;
-        this.evaluationInterval = null;
-        this.policyType = null;
-        this.slackAmount = null;
-        this.slackFactor = null;
+    private BanditPolicyResponse(BanditPolicyResponse $) {
+        this.delayEvaluation = $.delayEvaluation;
+        this.evaluationInterval = $.evaluationInterval;
+        this.policyType = $.policyType;
+        this.slackAmount = $.slackAmount;
+        this.slackFactor = $.slackFactor;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BanditPolicyResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Integer delayEvaluation;
-        private @Nullable Integer evaluationInterval;
-        private String policyType;
-        private @Nullable Double slackAmount;
-        private @Nullable Double slackFactor;
+        private BanditPolicyResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new BanditPolicyResponse();
         }
 
         public Builder(BanditPolicyResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.delayEvaluation = defaults.delayEvaluation;
-    	      this.evaluationInterval = defaults.evaluationInterval;
-    	      this.policyType = defaults.policyType;
-    	      this.slackAmount = defaults.slackAmount;
-    	      this.slackFactor = defaults.slackFactor;
+            $ = new BanditPolicyResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder delayEvaluation(@Nullable Integer delayEvaluation) {
-            this.delayEvaluation = delayEvaluation;
+            $.delayEvaluation = delayEvaluation;
             return this;
         }
+
         public Builder evaluationInterval(@Nullable Integer evaluationInterval) {
-            this.evaluationInterval = evaluationInterval;
+            $.evaluationInterval = evaluationInterval;
             return this;
         }
+
         public Builder policyType(String policyType) {
-            this.policyType = Objects.requireNonNull(policyType);
+            $.policyType = policyType;
             return this;
         }
+
         public Builder slackAmount(@Nullable Double slackAmount) {
-            this.slackAmount = slackAmount;
+            $.slackAmount = slackAmount;
             return this;
         }
+
         public Builder slackFactor(@Nullable Double slackFactor) {
-            this.slackFactor = slackFactor;
+            $.slackFactor = slackFactor;
             return this;
-        }        public BanditPolicyResponse build() {
-            return new BanditPolicyResponse(delayEvaluation, evaluationInterval, policyType, slackAmount, slackFactor);
+        }
+
+        public BanditPolicyResponse build() {
+            $.policyType = Codegen.stringProp("policyType").arg($.policyType).require();
+            return $;
         }
     }
+
 }

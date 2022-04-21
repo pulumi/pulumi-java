@@ -5,7 +5,6 @@ package com.pulumi.googlenative.secretmanager_v1beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.secretmanager_v1beta1.inputs.ReplicaArgs;
 import java.util.List;
 import java.util.Objects;
@@ -24,52 +23,53 @@ public final class UserManagedArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="replicas", required=true)
-      private final Output<List<ReplicaArgs>> replicas;
+    private Output<List<ReplicaArgs>> replicas;
 
     public Output<List<ReplicaArgs>> replicas() {
         return this.replicas;
     }
 
-    public UserManagedArgs(Output<List<ReplicaArgs>> replicas) {
-        this.replicas = Objects.requireNonNull(replicas, "expected parameter 'replicas' to be non-null");
-    }
+    private UserManagedArgs() {}
 
-    private UserManagedArgs() {
-        this.replicas = Codegen.empty();
+    private UserManagedArgs(UserManagedArgs $) {
+        this.replicas = $.replicas;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(UserManagedArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<List<ReplicaArgs>> replicas;
+        private UserManagedArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new UserManagedArgs();
         }
 
         public Builder(UserManagedArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.replicas = defaults.replicas;
+            $ = new UserManagedArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder replicas(Output<List<ReplicaArgs>> replicas) {
-            this.replicas = Objects.requireNonNull(replicas);
+            $.replicas = replicas;
             return this;
         }
+
         public Builder replicas(List<ReplicaArgs> replicas) {
-            this.replicas = Output.of(Objects.requireNonNull(replicas));
-            return this;
+            return replicas(Output.of(replicas));
         }
+
         public Builder replicas(ReplicaArgs... replicas) {
             return replicas(List.of(replicas));
-        }        public UserManagedArgs build() {
-            return new UserManagedArgs(replicas);
+        }
+
+        public UserManagedArgs build() {
+            $.replicas = Objects.requireNonNull($.replicas, "expected parameter 'replicas' to be non-null");
+            return $;
         }
     }
+
 }

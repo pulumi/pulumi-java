@@ -23,7 +23,7 @@ public final class AllowedSubjectAltNamesResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="allowCustomSans", required=true)
-      private final Boolean allowCustomSans;
+    private Boolean allowCustomSans;
 
     public Boolean allowCustomSans() {
         return this.allowCustomSans;
@@ -34,7 +34,7 @@ public final class AllowedSubjectAltNamesResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="allowGlobbingDnsWildcards", required=true)
-      private final Boolean allowGlobbingDnsWildcards;
+    private Boolean allowGlobbingDnsWildcards;
 
     public Boolean allowGlobbingDnsWildcards() {
         return this.allowGlobbingDnsWildcards;
@@ -45,7 +45,7 @@ public final class AllowedSubjectAltNamesResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="allowedDnsNames", required=true)
-      private final List<String> allowedDnsNames;
+    private List<String> allowedDnsNames;
 
     public List<String> allowedDnsNames() {
         return this.allowedDnsNames;
@@ -56,7 +56,7 @@ public final class AllowedSubjectAltNamesResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="allowedEmailAddresses", required=true)
-      private final List<String> allowedEmailAddresses;
+    private List<String> allowedEmailAddresses;
 
     public List<String> allowedEmailAddresses() {
         return this.allowedEmailAddresses;
@@ -67,7 +67,7 @@ public final class AllowedSubjectAltNamesResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="allowedIps", required=true)
-      private final List<String> allowedIps;
+    private List<String> allowedIps;
 
     public List<String> allowedIps() {
         return this.allowedIps;
@@ -78,103 +78,96 @@ public final class AllowedSubjectAltNamesResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="allowedUris", required=true)
-      private final List<String> allowedUris;
+    private List<String> allowedUris;
 
     public List<String> allowedUris() {
         return this.allowedUris;
     }
 
-    public AllowedSubjectAltNamesResponse(
-        Boolean allowCustomSans,
-        Boolean allowGlobbingDnsWildcards,
-        List<String> allowedDnsNames,
-        List<String> allowedEmailAddresses,
-        List<String> allowedIps,
-        List<String> allowedUris) {
-        this.allowCustomSans = Objects.requireNonNull(allowCustomSans, "expected parameter 'allowCustomSans' to be non-null");
-        this.allowGlobbingDnsWildcards = Objects.requireNonNull(allowGlobbingDnsWildcards, "expected parameter 'allowGlobbingDnsWildcards' to be non-null");
-        this.allowedDnsNames = Objects.requireNonNull(allowedDnsNames, "expected parameter 'allowedDnsNames' to be non-null");
-        this.allowedEmailAddresses = Objects.requireNonNull(allowedEmailAddresses, "expected parameter 'allowedEmailAddresses' to be non-null");
-        this.allowedIps = Objects.requireNonNull(allowedIps, "expected parameter 'allowedIps' to be non-null");
-        this.allowedUris = Objects.requireNonNull(allowedUris, "expected parameter 'allowedUris' to be non-null");
-    }
+    private AllowedSubjectAltNamesResponse() {}
 
-    private AllowedSubjectAltNamesResponse() {
-        this.allowCustomSans = null;
-        this.allowGlobbingDnsWildcards = null;
-        this.allowedDnsNames = List.of();
-        this.allowedEmailAddresses = List.of();
-        this.allowedIps = List.of();
-        this.allowedUris = List.of();
+    private AllowedSubjectAltNamesResponse(AllowedSubjectAltNamesResponse $) {
+        this.allowCustomSans = $.allowCustomSans;
+        this.allowGlobbingDnsWildcards = $.allowGlobbingDnsWildcards;
+        this.allowedDnsNames = $.allowedDnsNames;
+        this.allowedEmailAddresses = $.allowedEmailAddresses;
+        this.allowedIps = $.allowedIps;
+        this.allowedUris = $.allowedUris;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AllowedSubjectAltNamesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Boolean allowCustomSans;
-        private Boolean allowGlobbingDnsWildcards;
-        private List<String> allowedDnsNames;
-        private List<String> allowedEmailAddresses;
-        private List<String> allowedIps;
-        private List<String> allowedUris;
+        private AllowedSubjectAltNamesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AllowedSubjectAltNamesResponse();
         }
 
         public Builder(AllowedSubjectAltNamesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.allowCustomSans = defaults.allowCustomSans;
-    	      this.allowGlobbingDnsWildcards = defaults.allowGlobbingDnsWildcards;
-    	      this.allowedDnsNames = defaults.allowedDnsNames;
-    	      this.allowedEmailAddresses = defaults.allowedEmailAddresses;
-    	      this.allowedIps = defaults.allowedIps;
-    	      this.allowedUris = defaults.allowedUris;
+            $ = new AllowedSubjectAltNamesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder allowCustomSans(Boolean allowCustomSans) {
-            this.allowCustomSans = Objects.requireNonNull(allowCustomSans);
+            $.allowCustomSans = allowCustomSans;
             return this;
         }
+
         public Builder allowGlobbingDnsWildcards(Boolean allowGlobbingDnsWildcards) {
-            this.allowGlobbingDnsWildcards = Objects.requireNonNull(allowGlobbingDnsWildcards);
+            $.allowGlobbingDnsWildcards = allowGlobbingDnsWildcards;
             return this;
         }
+
         public Builder allowedDnsNames(List<String> allowedDnsNames) {
-            this.allowedDnsNames = Objects.requireNonNull(allowedDnsNames);
+            $.allowedDnsNames = allowedDnsNames;
             return this;
         }
+
         public Builder allowedDnsNames(String... allowedDnsNames) {
             return allowedDnsNames(List.of(allowedDnsNames));
         }
+
         public Builder allowedEmailAddresses(List<String> allowedEmailAddresses) {
-            this.allowedEmailAddresses = Objects.requireNonNull(allowedEmailAddresses);
+            $.allowedEmailAddresses = allowedEmailAddresses;
             return this;
         }
+
         public Builder allowedEmailAddresses(String... allowedEmailAddresses) {
             return allowedEmailAddresses(List.of(allowedEmailAddresses));
         }
+
         public Builder allowedIps(List<String> allowedIps) {
-            this.allowedIps = Objects.requireNonNull(allowedIps);
+            $.allowedIps = allowedIps;
             return this;
         }
+
         public Builder allowedIps(String... allowedIps) {
             return allowedIps(List.of(allowedIps));
         }
+
         public Builder allowedUris(List<String> allowedUris) {
-            this.allowedUris = Objects.requireNonNull(allowedUris);
+            $.allowedUris = allowedUris;
             return this;
         }
+
         public Builder allowedUris(String... allowedUris) {
             return allowedUris(List.of(allowedUris));
-        }        public AllowedSubjectAltNamesResponse build() {
-            return new AllowedSubjectAltNamesResponse(allowCustomSans, allowGlobbingDnsWildcards, allowedDnsNames, allowedEmailAddresses, allowedIps, allowedUris);
+        }
+
+        public AllowedSubjectAltNamesResponse build() {
+            $.allowCustomSans = Objects.requireNonNull($.allowCustomSans, "expected parameter 'allowCustomSans' to be non-null");
+            $.allowGlobbingDnsWildcards = Objects.requireNonNull($.allowGlobbingDnsWildcards, "expected parameter 'allowGlobbingDnsWildcards' to be non-null");
+            $.allowedDnsNames = Objects.requireNonNull($.allowedDnsNames, "expected parameter 'allowedDnsNames' to be non-null");
+            $.allowedEmailAddresses = Objects.requireNonNull($.allowedEmailAddresses, "expected parameter 'allowedEmailAddresses' to be non-null");
+            $.allowedIps = Objects.requireNonNull($.allowedIps, "expected parameter 'allowedIps' to be non-null");
+            $.allowedUris = Objects.requireNonNull($.allowedUris, "expected parameter 'allowedUris' to be non-null");
+            return $;
         }
     }
+
 }

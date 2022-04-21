@@ -5,9 +5,9 @@ package com.pulumi.aws.inspector.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class AssessmentTargetState extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="arn")
-      private final @Nullable Output<String> arn;
+    private @Nullable Output<String> arn;
 
-    public Output<String> arn() {
-        return this.arn == null ? Codegen.empty() : this.arn;
+    public Optional<Output<String>> arn() {
+        return Optional.ofNullable(this.arn);
     }
 
     /**
@@ -31,10 +31,10 @@ public final class AssessmentTargetState extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -42,76 +42,68 @@ public final class AssessmentTargetState extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="resourceGroupArn")
-      private final @Nullable Output<String> resourceGroupArn;
+    private @Nullable Output<String> resourceGroupArn;
 
-    public Output<String> resourceGroupArn() {
-        return this.resourceGroupArn == null ? Codegen.empty() : this.resourceGroupArn;
+    public Optional<Output<String>> resourceGroupArn() {
+        return Optional.ofNullable(this.resourceGroupArn);
     }
 
-    public AssessmentTargetState(
-        @Nullable Output<String> arn,
-        @Nullable Output<String> name,
-        @Nullable Output<String> resourceGroupArn) {
-        this.arn = arn;
-        this.name = name;
-        this.resourceGroupArn = resourceGroupArn;
-    }
+    private AssessmentTargetState() {}
 
-    private AssessmentTargetState() {
-        this.arn = Codegen.empty();
-        this.name = Codegen.empty();
-        this.resourceGroupArn = Codegen.empty();
+    private AssessmentTargetState(AssessmentTargetState $) {
+        this.arn = $.arn;
+        this.name = $.name;
+        this.resourceGroupArn = $.resourceGroupArn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AssessmentTargetState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> arn;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> resourceGroupArn;
+        private AssessmentTargetState $;
 
         public Builder() {
-    	      // Empty
+            $ = new AssessmentTargetState();
         }
 
         public Builder(AssessmentTargetState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.arn = defaults.arn;
-    	      this.name = defaults.name;
-    	      this.resourceGroupArn = defaults.resourceGroupArn;
+            $ = new AssessmentTargetState(Objects.requireNonNull(defaults));
         }
 
         public Builder arn(@Nullable Output<String> arn) {
-            this.arn = arn;
+            $.arn = arn;
             return this;
         }
-        public Builder arn(@Nullable String arn) {
-            this.arn = Codegen.ofNullable(arn);
-            return this;
+
+        public Builder arn(String arn) {
+            return arn(Output.of(arn));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder resourceGroupArn(@Nullable Output<String> resourceGroupArn) {
-            this.resourceGroupArn = resourceGroupArn;
+            $.resourceGroupArn = resourceGroupArn;
             return this;
         }
-        public Builder resourceGroupArn(@Nullable String resourceGroupArn) {
-            this.resourceGroupArn = Codegen.ofNullable(resourceGroupArn);
-            return this;
-        }        public AssessmentTargetState build() {
-            return new AssessmentTargetState(arn, name, resourceGroupArn);
+
+        public Builder resourceGroupArn(String resourceGroupArn) {
+            return resourceGroupArn(Output.of(resourceGroupArn));
+        }
+
+        public AssessmentTargetState build() {
+            return $;
         }
     }
+
 }

@@ -5,10 +5,10 @@ package com.pulumi.googlenative.servicemanagement_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class CustomErrorRuleArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="isErrorType")
-      private final @Nullable Output<Boolean> isErrorType;
+    private @Nullable Output<Boolean> isErrorType;
 
-    public Output<Boolean> isErrorType() {
-        return this.isErrorType == null ? Codegen.empty() : this.isErrorType;
+    public Optional<Output<Boolean>> isErrorType() {
+        return Optional.ofNullable(this.isErrorType);
     }
 
     /**
@@ -36,63 +36,58 @@ public final class CustomErrorRuleArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="selector")
-      private final @Nullable Output<String> selector;
+    private @Nullable Output<String> selector;
 
-    public Output<String> selector() {
-        return this.selector == null ? Codegen.empty() : this.selector;
+    public Optional<Output<String>> selector() {
+        return Optional.ofNullable(this.selector);
     }
 
-    public CustomErrorRuleArgs(
-        @Nullable Output<Boolean> isErrorType,
-        @Nullable Output<String> selector) {
-        this.isErrorType = isErrorType;
-        this.selector = selector;
-    }
+    private CustomErrorRuleArgs() {}
 
-    private CustomErrorRuleArgs() {
-        this.isErrorType = Codegen.empty();
-        this.selector = Codegen.empty();
+    private CustomErrorRuleArgs(CustomErrorRuleArgs $) {
+        this.isErrorType = $.isErrorType;
+        this.selector = $.selector;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CustomErrorRuleArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> isErrorType;
-        private @Nullable Output<String> selector;
+        private CustomErrorRuleArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CustomErrorRuleArgs();
         }
 
         public Builder(CustomErrorRuleArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.isErrorType = defaults.isErrorType;
-    	      this.selector = defaults.selector;
+            $ = new CustomErrorRuleArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder isErrorType(@Nullable Output<Boolean> isErrorType) {
-            this.isErrorType = isErrorType;
+            $.isErrorType = isErrorType;
             return this;
         }
-        public Builder isErrorType(@Nullable Boolean isErrorType) {
-            this.isErrorType = Codegen.ofNullable(isErrorType);
-            return this;
+
+        public Builder isErrorType(Boolean isErrorType) {
+            return isErrorType(Output.of(isErrorType));
         }
+
         public Builder selector(@Nullable Output<String> selector) {
-            this.selector = selector;
+            $.selector = selector;
             return this;
         }
-        public Builder selector(@Nullable String selector) {
-            this.selector = Codegen.ofNullable(selector);
-            return this;
-        }        public CustomErrorRuleArgs build() {
-            return new CustomErrorRuleArgs(isErrorType, selector);
+
+        public Builder selector(String selector) {
+            return selector(Output.of(selector));
+        }
+
+        public CustomErrorRuleArgs build() {
+            return $;
         }
     }
+
 }

@@ -21,78 +21,72 @@ public final class RuleGroupJsonBody extends com.pulumi.resources.InvokeArgs {
     public static final RuleGroupJsonBody Empty = new RuleGroupJsonBody();
 
     @Import(name="invalidFallbackBehavior")
-      private final @Nullable RuleGroupBodyParsingFallbackBehavior invalidFallbackBehavior;
+    private @Nullable RuleGroupBodyParsingFallbackBehavior invalidFallbackBehavior;
 
     public Optional<RuleGroupBodyParsingFallbackBehavior> invalidFallbackBehavior() {
-        return this.invalidFallbackBehavior == null ? Optional.empty() : Optional.ofNullable(this.invalidFallbackBehavior);
+        return Optional.ofNullable(this.invalidFallbackBehavior);
     }
 
     @Import(name="matchPattern", required=true)
-      private final RuleGroupJsonMatchPattern matchPattern;
+    private RuleGroupJsonMatchPattern matchPattern;
 
     public RuleGroupJsonMatchPattern matchPattern() {
         return this.matchPattern;
     }
 
     @Import(name="matchScope", required=true)
-      private final RuleGroupJsonMatchScope matchScope;
+    private RuleGroupJsonMatchScope matchScope;
 
     public RuleGroupJsonMatchScope matchScope() {
         return this.matchScope;
     }
 
-    public RuleGroupJsonBody(
-        @Nullable RuleGroupBodyParsingFallbackBehavior invalidFallbackBehavior,
-        RuleGroupJsonMatchPattern matchPattern,
-        RuleGroupJsonMatchScope matchScope) {
-        this.invalidFallbackBehavior = invalidFallbackBehavior;
-        this.matchPattern = Objects.requireNonNull(matchPattern, "expected parameter 'matchPattern' to be non-null");
-        this.matchScope = Objects.requireNonNull(matchScope, "expected parameter 'matchScope' to be non-null");
-    }
+    private RuleGroupJsonBody() {}
 
-    private RuleGroupJsonBody() {
-        this.invalidFallbackBehavior = null;
-        this.matchPattern = null;
-        this.matchScope = null;
+    private RuleGroupJsonBody(RuleGroupJsonBody $) {
+        this.invalidFallbackBehavior = $.invalidFallbackBehavior;
+        this.matchPattern = $.matchPattern;
+        this.matchScope = $.matchScope;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RuleGroupJsonBody defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable RuleGroupBodyParsingFallbackBehavior invalidFallbackBehavior;
-        private RuleGroupJsonMatchPattern matchPattern;
-        private RuleGroupJsonMatchScope matchScope;
+        private RuleGroupJsonBody $;
 
         public Builder() {
-    	      // Empty
+            $ = new RuleGroupJsonBody();
         }
 
         public Builder(RuleGroupJsonBody defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.invalidFallbackBehavior = defaults.invalidFallbackBehavior;
-    	      this.matchPattern = defaults.matchPattern;
-    	      this.matchScope = defaults.matchScope;
+            $ = new RuleGroupJsonBody(Objects.requireNonNull(defaults));
         }
 
         public Builder invalidFallbackBehavior(@Nullable RuleGroupBodyParsingFallbackBehavior invalidFallbackBehavior) {
-            this.invalidFallbackBehavior = invalidFallbackBehavior;
+            $.invalidFallbackBehavior = invalidFallbackBehavior;
             return this;
         }
+
         public Builder matchPattern(RuleGroupJsonMatchPattern matchPattern) {
-            this.matchPattern = Objects.requireNonNull(matchPattern);
+            $.matchPattern = matchPattern;
             return this;
         }
+
         public Builder matchScope(RuleGroupJsonMatchScope matchScope) {
-            this.matchScope = Objects.requireNonNull(matchScope);
+            $.matchScope = matchScope;
             return this;
-        }        public RuleGroupJsonBody build() {
-            return new RuleGroupJsonBody(invalidFallbackBehavior, matchPattern, matchScope);
+        }
+
+        public RuleGroupJsonBody build() {
+            $.matchPattern = Objects.requireNonNull($.matchPattern, "expected parameter 'matchPattern' to be non-null");
+            $.matchScope = Objects.requireNonNull($.matchScope, "expected parameter 'matchScope' to be non-null");
+            return $;
         }
     }
+
 }

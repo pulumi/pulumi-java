@@ -5,7 +5,6 @@ package com.pulumi.aws.ec2;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,7 +18,7 @@ public final class NetworkInterfaceSecurityGroupAttachmentArgs extends com.pulum
      * 
      */
     @Import(name="networkInterfaceId", required=true)
-      private final Output<String> networkInterfaceId;
+    private Output<String> networkInterfaceId;
 
     public Output<String> networkInterfaceId() {
         return this.networkInterfaceId;
@@ -30,63 +29,60 @@ public final class NetworkInterfaceSecurityGroupAttachmentArgs extends com.pulum
      * 
      */
     @Import(name="securityGroupId", required=true)
-      private final Output<String> securityGroupId;
+    private Output<String> securityGroupId;
 
     public Output<String> securityGroupId() {
         return this.securityGroupId;
     }
 
-    public NetworkInterfaceSecurityGroupAttachmentArgs(
-        Output<String> networkInterfaceId,
-        Output<String> securityGroupId) {
-        this.networkInterfaceId = Objects.requireNonNull(networkInterfaceId, "expected parameter 'networkInterfaceId' to be non-null");
-        this.securityGroupId = Objects.requireNonNull(securityGroupId, "expected parameter 'securityGroupId' to be non-null");
-    }
+    private NetworkInterfaceSecurityGroupAttachmentArgs() {}
 
-    private NetworkInterfaceSecurityGroupAttachmentArgs() {
-        this.networkInterfaceId = Codegen.empty();
-        this.securityGroupId = Codegen.empty();
+    private NetworkInterfaceSecurityGroupAttachmentArgs(NetworkInterfaceSecurityGroupAttachmentArgs $) {
+        this.networkInterfaceId = $.networkInterfaceId;
+        this.securityGroupId = $.securityGroupId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NetworkInterfaceSecurityGroupAttachmentArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> networkInterfaceId;
-        private Output<String> securityGroupId;
+        private NetworkInterfaceSecurityGroupAttachmentArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new NetworkInterfaceSecurityGroupAttachmentArgs();
         }
 
         public Builder(NetworkInterfaceSecurityGroupAttachmentArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.networkInterfaceId = defaults.networkInterfaceId;
-    	      this.securityGroupId = defaults.securityGroupId;
+            $ = new NetworkInterfaceSecurityGroupAttachmentArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder networkInterfaceId(Output<String> networkInterfaceId) {
-            this.networkInterfaceId = Objects.requireNonNull(networkInterfaceId);
+            $.networkInterfaceId = networkInterfaceId;
             return this;
         }
+
         public Builder networkInterfaceId(String networkInterfaceId) {
-            this.networkInterfaceId = Output.of(Objects.requireNonNull(networkInterfaceId));
-            return this;
+            return networkInterfaceId(Output.of(networkInterfaceId));
         }
+
         public Builder securityGroupId(Output<String> securityGroupId) {
-            this.securityGroupId = Objects.requireNonNull(securityGroupId);
+            $.securityGroupId = securityGroupId;
             return this;
         }
+
         public Builder securityGroupId(String securityGroupId) {
-            this.securityGroupId = Output.of(Objects.requireNonNull(securityGroupId));
-            return this;
-        }        public NetworkInterfaceSecurityGroupAttachmentArgs build() {
-            return new NetworkInterfaceSecurityGroupAttachmentArgs(networkInterfaceId, securityGroupId);
+            return securityGroupId(Output.of(securityGroupId));
+        }
+
+        public NetworkInterfaceSecurityGroupAttachmentArgs build() {
+            $.networkInterfaceId = Objects.requireNonNull($.networkInterfaceId, "expected parameter 'networkInterfaceId' to be non-null");
+            $.securityGroupId = Objects.requireNonNull($.securityGroupId, "expected parameter 'securityGroupId' to be non-null");
+            return $;
         }
     }
+
 }

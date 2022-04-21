@@ -19,7 +19,7 @@ public final class GetProductArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="filters", required=true)
-      private final List<GetProductFilter> filters;
+    private List<GetProductFilter> filters;
 
     public List<GetProductFilter> filters() {
         return this.filters;
@@ -30,58 +30,56 @@ public final class GetProductArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="serviceCode", required=true)
-      private final String serviceCode;
+    private String serviceCode;
 
     public String serviceCode() {
         return this.serviceCode;
     }
 
-    public GetProductArgs(
-        List<GetProductFilter> filters,
-        String serviceCode) {
-        this.filters = Objects.requireNonNull(filters, "expected parameter 'filters' to be non-null");
-        this.serviceCode = Objects.requireNonNull(serviceCode, "expected parameter 'serviceCode' to be non-null");
-    }
+    private GetProductArgs() {}
 
-    private GetProductArgs() {
-        this.filters = List.of();
-        this.serviceCode = null;
+    private GetProductArgs(GetProductArgs $) {
+        this.filters = $.filters;
+        this.serviceCode = $.serviceCode;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetProductArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<GetProductFilter> filters;
-        private String serviceCode;
+        private GetProductArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetProductArgs();
         }
 
         public Builder(GetProductArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.filters = defaults.filters;
-    	      this.serviceCode = defaults.serviceCode;
+            $ = new GetProductArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder filters(List<GetProductFilter> filters) {
-            this.filters = Objects.requireNonNull(filters);
+            $.filters = filters;
             return this;
         }
+
         public Builder filters(GetProductFilter... filters) {
             return filters(List.of(filters));
         }
+
         public Builder serviceCode(String serviceCode) {
-            this.serviceCode = Objects.requireNonNull(serviceCode);
+            $.serviceCode = serviceCode;
             return this;
-        }        public GetProductArgs build() {
-            return new GetProductArgs(filters, serviceCode);
+        }
+
+        public GetProductArgs build() {
+            $.filters = Objects.requireNonNull($.filters, "expected parameter 'filters' to be non-null");
+            $.serviceCode = Objects.requireNonNull($.serviceCode, "expected parameter 'serviceCode' to be non-null");
+            return $;
         }
     }
+
 }

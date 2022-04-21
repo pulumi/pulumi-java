@@ -13,7 +13,7 @@ public final class GetServiceTemplateSpecContainerVolumeMount extends com.pulumi
     public static final GetServiceTemplateSpecContainerVolumeMount Empty = new GetServiceTemplateSpecContainerVolumeMount();
 
     @Import(name="mountPath", required=true)
-      private final String mountPath;
+    private String mountPath;
 
     public String mountPath() {
         return this.mountPath;
@@ -24,55 +24,52 @@ public final class GetServiceTemplateSpecContainerVolumeMount extends com.pulumi
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
     }
 
-    public GetServiceTemplateSpecContainerVolumeMount(
-        String mountPath,
-        String name) {
-        this.mountPath = Objects.requireNonNull(mountPath, "expected parameter 'mountPath' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-    }
+    private GetServiceTemplateSpecContainerVolumeMount() {}
 
-    private GetServiceTemplateSpecContainerVolumeMount() {
-        this.mountPath = null;
-        this.name = null;
+    private GetServiceTemplateSpecContainerVolumeMount(GetServiceTemplateSpecContainerVolumeMount $) {
+        this.mountPath = $.mountPath;
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetServiceTemplateSpecContainerVolumeMount defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String mountPath;
-        private String name;
+        private GetServiceTemplateSpecContainerVolumeMount $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetServiceTemplateSpecContainerVolumeMount();
         }
 
         public Builder(GetServiceTemplateSpecContainerVolumeMount defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.mountPath = defaults.mountPath;
-    	      this.name = defaults.name;
+            $ = new GetServiceTemplateSpecContainerVolumeMount(Objects.requireNonNull(defaults));
         }
 
         public Builder mountPath(String mountPath) {
-            this.mountPath = Objects.requireNonNull(mountPath);
+            $.mountPath = mountPath;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
-        }        public GetServiceTemplateSpecContainerVolumeMount build() {
-            return new GetServiceTemplateSpecContainerVolumeMount(mountPath, name);
+        }
+
+        public GetServiceTemplateSpecContainerVolumeMount build() {
+            $.mountPath = Objects.requireNonNull($.mountPath, "expected parameter 'mountPath' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            return $;
         }
     }
+
 }

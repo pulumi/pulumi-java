@@ -13,45 +13,45 @@ public final class GetLaunchTemplateCreditSpecification extends com.pulumi.resou
     public static final GetLaunchTemplateCreditSpecification Empty = new GetLaunchTemplateCreditSpecification();
 
     @Import(name="cpuCredits", required=true)
-      private final String cpuCredits;
+    private String cpuCredits;
 
     public String cpuCredits() {
         return this.cpuCredits;
     }
 
-    public GetLaunchTemplateCreditSpecification(String cpuCredits) {
-        this.cpuCredits = Objects.requireNonNull(cpuCredits, "expected parameter 'cpuCredits' to be non-null");
-    }
+    private GetLaunchTemplateCreditSpecification() {}
 
-    private GetLaunchTemplateCreditSpecification() {
-        this.cpuCredits = null;
+    private GetLaunchTemplateCreditSpecification(GetLaunchTemplateCreditSpecification $) {
+        this.cpuCredits = $.cpuCredits;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetLaunchTemplateCreditSpecification defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String cpuCredits;
+        private GetLaunchTemplateCreditSpecification $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetLaunchTemplateCreditSpecification();
         }
 
         public Builder(GetLaunchTemplateCreditSpecification defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cpuCredits = defaults.cpuCredits;
+            $ = new GetLaunchTemplateCreditSpecification(Objects.requireNonNull(defaults));
         }
 
         public Builder cpuCredits(String cpuCredits) {
-            this.cpuCredits = Objects.requireNonNull(cpuCredits);
+            $.cpuCredits = cpuCredits;
             return this;
-        }        public GetLaunchTemplateCreditSpecification build() {
-            return new GetLaunchTemplateCreditSpecification(cpuCredits);
+        }
+
+        public GetLaunchTemplateCreditSpecification build() {
+            $.cpuCredits = Objects.requireNonNull($.cpuCredits, "expected parameter 'cpuCredits' to be non-null");
+            return $;
         }
     }
+
 }

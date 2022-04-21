@@ -24,10 +24,10 @@ public final class ExpressRouteLinkResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="adminState")
-      private final @Nullable String adminState;
+    private @Nullable String adminState;
 
     public Optional<String> adminState() {
-        return this.adminState == null ? Optional.empty() : Optional.ofNullable(this.adminState);
+        return Optional.ofNullable(this.adminState);
     }
 
     /**
@@ -35,7 +35,7 @@ public final class ExpressRouteLinkResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="connectorType", required=true)
-      private final String connectorType;
+    private String connectorType;
 
     public String connectorType() {
         return this.connectorType;
@@ -46,7 +46,7 @@ public final class ExpressRouteLinkResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="etag", required=true)
-      private final String etag;
+    private String etag;
 
     public String etag() {
         return this.etag;
@@ -57,10 +57,10 @@ public final class ExpressRouteLinkResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="id")
-      private final @Nullable String id;
+    private @Nullable String id;
 
     public Optional<String> id() {
-        return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
+        return Optional.ofNullable(this.id);
     }
 
     /**
@@ -68,7 +68,7 @@ public final class ExpressRouteLinkResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="interfaceName", required=true)
-      private final String interfaceName;
+    private String interfaceName;
 
     public String interfaceName() {
         return this.interfaceName;
@@ -79,10 +79,10 @@ public final class ExpressRouteLinkResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="macSecConfig")
-      private final @Nullable ExpressRouteLinkMacSecConfigResponse macSecConfig;
+    private @Nullable ExpressRouteLinkMacSecConfigResponse macSecConfig;
 
     public Optional<ExpressRouteLinkMacSecConfigResponse> macSecConfig() {
-        return this.macSecConfig == null ? Optional.empty() : Optional.ofNullable(this.macSecConfig);
+        return Optional.ofNullable(this.macSecConfig);
     }
 
     /**
@@ -90,10 +90,10 @@ public final class ExpressRouteLinkResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="name")
-      private final @Nullable String name;
+    private @Nullable String name;
 
     public Optional<String> name() {
-        return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -101,7 +101,7 @@ public final class ExpressRouteLinkResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="patchPanelId", required=true)
-      private final String patchPanelId;
+    private String patchPanelId;
 
     public String patchPanelId() {
         return this.patchPanelId;
@@ -112,7 +112,7 @@ public final class ExpressRouteLinkResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="provisioningState", required=true)
-      private final String provisioningState;
+    private String provisioningState;
 
     public String provisioningState() {
         return this.provisioningState;
@@ -123,7 +123,7 @@ public final class ExpressRouteLinkResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="rackId", required=true)
-      private final String rackId;
+    private String rackId;
 
     public String rackId() {
         return this.rackId;
@@ -134,136 +134,111 @@ public final class ExpressRouteLinkResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="routerName", required=true)
-      private final String routerName;
+    private String routerName;
 
     public String routerName() {
         return this.routerName;
     }
 
-    public ExpressRouteLinkResponse(
-        @Nullable String adminState,
-        String connectorType,
-        String etag,
-        @Nullable String id,
-        String interfaceName,
-        @Nullable ExpressRouteLinkMacSecConfigResponse macSecConfig,
-        @Nullable String name,
-        String patchPanelId,
-        String provisioningState,
-        String rackId,
-        String routerName) {
-        this.adminState = adminState;
-        this.connectorType = Objects.requireNonNull(connectorType, "expected parameter 'connectorType' to be non-null");
-        this.etag = Objects.requireNonNull(etag, "expected parameter 'etag' to be non-null");
-        this.id = id;
-        this.interfaceName = Objects.requireNonNull(interfaceName, "expected parameter 'interfaceName' to be non-null");
-        this.macSecConfig = macSecConfig;
-        this.name = name;
-        this.patchPanelId = Objects.requireNonNull(patchPanelId, "expected parameter 'patchPanelId' to be non-null");
-        this.provisioningState = Objects.requireNonNull(provisioningState, "expected parameter 'provisioningState' to be non-null");
-        this.rackId = Objects.requireNonNull(rackId, "expected parameter 'rackId' to be non-null");
-        this.routerName = Objects.requireNonNull(routerName, "expected parameter 'routerName' to be non-null");
-    }
+    private ExpressRouteLinkResponse() {}
 
-    private ExpressRouteLinkResponse() {
-        this.adminState = null;
-        this.connectorType = null;
-        this.etag = null;
-        this.id = null;
-        this.interfaceName = null;
-        this.macSecConfig = null;
-        this.name = null;
-        this.patchPanelId = null;
-        this.provisioningState = null;
-        this.rackId = null;
-        this.routerName = null;
+    private ExpressRouteLinkResponse(ExpressRouteLinkResponse $) {
+        this.adminState = $.adminState;
+        this.connectorType = $.connectorType;
+        this.etag = $.etag;
+        this.id = $.id;
+        this.interfaceName = $.interfaceName;
+        this.macSecConfig = $.macSecConfig;
+        this.name = $.name;
+        this.patchPanelId = $.patchPanelId;
+        this.provisioningState = $.provisioningState;
+        this.rackId = $.rackId;
+        this.routerName = $.routerName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ExpressRouteLinkResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String adminState;
-        private String connectorType;
-        private String etag;
-        private @Nullable String id;
-        private String interfaceName;
-        private @Nullable ExpressRouteLinkMacSecConfigResponse macSecConfig;
-        private @Nullable String name;
-        private String patchPanelId;
-        private String provisioningState;
-        private String rackId;
-        private String routerName;
+        private ExpressRouteLinkResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ExpressRouteLinkResponse();
         }
 
         public Builder(ExpressRouteLinkResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.adminState = defaults.adminState;
-    	      this.connectorType = defaults.connectorType;
-    	      this.etag = defaults.etag;
-    	      this.id = defaults.id;
-    	      this.interfaceName = defaults.interfaceName;
-    	      this.macSecConfig = defaults.macSecConfig;
-    	      this.name = defaults.name;
-    	      this.patchPanelId = defaults.patchPanelId;
-    	      this.provisioningState = defaults.provisioningState;
-    	      this.rackId = defaults.rackId;
-    	      this.routerName = defaults.routerName;
+            $ = new ExpressRouteLinkResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder adminState(@Nullable String adminState) {
-            this.adminState = adminState;
+            $.adminState = adminState;
             return this;
         }
+
         public Builder connectorType(String connectorType) {
-            this.connectorType = Objects.requireNonNull(connectorType);
+            $.connectorType = connectorType;
             return this;
         }
+
         public Builder etag(String etag) {
-            this.etag = Objects.requireNonNull(etag);
+            $.etag = etag;
             return this;
         }
+
         public Builder id(@Nullable String id) {
-            this.id = id;
+            $.id = id;
             return this;
         }
+
         public Builder interfaceName(String interfaceName) {
-            this.interfaceName = Objects.requireNonNull(interfaceName);
+            $.interfaceName = interfaceName;
             return this;
         }
+
         public Builder macSecConfig(@Nullable ExpressRouteLinkMacSecConfigResponse macSecConfig) {
-            this.macSecConfig = macSecConfig;
+            $.macSecConfig = macSecConfig;
             return this;
         }
+
         public Builder name(@Nullable String name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
+
         public Builder patchPanelId(String patchPanelId) {
-            this.patchPanelId = Objects.requireNonNull(patchPanelId);
+            $.patchPanelId = patchPanelId;
             return this;
         }
+
         public Builder provisioningState(String provisioningState) {
-            this.provisioningState = Objects.requireNonNull(provisioningState);
+            $.provisioningState = provisioningState;
             return this;
         }
+
         public Builder rackId(String rackId) {
-            this.rackId = Objects.requireNonNull(rackId);
+            $.rackId = rackId;
             return this;
         }
+
         public Builder routerName(String routerName) {
-            this.routerName = Objects.requireNonNull(routerName);
+            $.routerName = routerName;
             return this;
-        }        public ExpressRouteLinkResponse build() {
-            return new ExpressRouteLinkResponse(adminState, connectorType, etag, id, interfaceName, macSecConfig, name, patchPanelId, provisioningState, rackId, routerName);
+        }
+
+        public ExpressRouteLinkResponse build() {
+            $.connectorType = Objects.requireNonNull($.connectorType, "expected parameter 'connectorType' to be non-null");
+            $.etag = Objects.requireNonNull($.etag, "expected parameter 'etag' to be non-null");
+            $.interfaceName = Objects.requireNonNull($.interfaceName, "expected parameter 'interfaceName' to be non-null");
+            $.patchPanelId = Objects.requireNonNull($.patchPanelId, "expected parameter 'patchPanelId' to be non-null");
+            $.provisioningState = Objects.requireNonNull($.provisioningState, "expected parameter 'provisioningState' to be non-null");
+            $.rackId = Objects.requireNonNull($.rackId, "expected parameter 'rackId' to be non-null");
+            $.routerName = Objects.requireNonNull($.routerName, "expected parameter 'routerName' to be non-null");
+            return $;
         }
     }
+
 }

@@ -22,7 +22,7 @@ public final class DataSourcePostgreSqlParameters extends com.pulumi.resources.I
      * 
      */
     @Import(name="database", required=true)
-      private final String database;
+    private String database;
 
     public String database() {
         return this.database;
@@ -33,7 +33,7 @@ public final class DataSourcePostgreSqlParameters extends com.pulumi.resources.I
      * 
      */
     @Import(name="host", required=true)
-      private final String host;
+    private String host;
 
     public String host() {
         return this.host;
@@ -44,64 +44,59 @@ public final class DataSourcePostgreSqlParameters extends com.pulumi.resources.I
      * 
      */
     @Import(name="port", required=true)
-      private final Double port;
+    private Double port;
 
     public Double port() {
         return this.port;
     }
 
-    public DataSourcePostgreSqlParameters(
-        String database,
-        String host,
-        Double port) {
-        this.database = Objects.requireNonNull(database, "expected parameter 'database' to be non-null");
-        this.host = Objects.requireNonNull(host, "expected parameter 'host' to be non-null");
-        this.port = Objects.requireNonNull(port, "expected parameter 'port' to be non-null");
-    }
+    private DataSourcePostgreSqlParameters() {}
 
-    private DataSourcePostgreSqlParameters() {
-        this.database = null;
-        this.host = null;
-        this.port = null;
+    private DataSourcePostgreSqlParameters(DataSourcePostgreSqlParameters $) {
+        this.database = $.database;
+        this.host = $.host;
+        this.port = $.port;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DataSourcePostgreSqlParameters defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String database;
-        private String host;
-        private Double port;
+        private DataSourcePostgreSqlParameters $;
 
         public Builder() {
-    	      // Empty
+            $ = new DataSourcePostgreSqlParameters();
         }
 
         public Builder(DataSourcePostgreSqlParameters defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.database = defaults.database;
-    	      this.host = defaults.host;
-    	      this.port = defaults.port;
+            $ = new DataSourcePostgreSqlParameters(Objects.requireNonNull(defaults));
         }
 
         public Builder database(String database) {
-            this.database = Objects.requireNonNull(database);
+            $.database = database;
             return this;
         }
+
         public Builder host(String host) {
-            this.host = Objects.requireNonNull(host);
+            $.host = host;
             return this;
         }
+
         public Builder port(Double port) {
-            this.port = Objects.requireNonNull(port);
+            $.port = port;
             return this;
-        }        public DataSourcePostgreSqlParameters build() {
-            return new DataSourcePostgreSqlParameters(database, host, port);
+        }
+
+        public DataSourcePostgreSqlParameters build() {
+            $.database = Objects.requireNonNull($.database, "expected parameter 'database' to be non-null");
+            $.host = Objects.requireNonNull($.host, "expected parameter 'host' to be non-null");
+            $.port = Objects.requireNonNull($.port, "expected parameter 'port' to be non-null");
+            return $;
         }
     }
+
 }

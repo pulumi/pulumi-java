@@ -22,7 +22,7 @@ public final class KeyVaultAndKeyReferenceResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="keyUrl", required=true)
-      private final String keyUrl;
+    private String keyUrl;
 
     public String keyUrl() {
         return this.keyUrl;
@@ -33,55 +33,52 @@ public final class KeyVaultAndKeyReferenceResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="sourceVault", required=true)
-      private final SourceVaultResponse sourceVault;
+    private SourceVaultResponse sourceVault;
 
     public SourceVaultResponse sourceVault() {
         return this.sourceVault;
     }
 
-    public KeyVaultAndKeyReferenceResponse(
-        String keyUrl,
-        SourceVaultResponse sourceVault) {
-        this.keyUrl = Objects.requireNonNull(keyUrl, "expected parameter 'keyUrl' to be non-null");
-        this.sourceVault = Objects.requireNonNull(sourceVault, "expected parameter 'sourceVault' to be non-null");
-    }
+    private KeyVaultAndKeyReferenceResponse() {}
 
-    private KeyVaultAndKeyReferenceResponse() {
-        this.keyUrl = null;
-        this.sourceVault = null;
+    private KeyVaultAndKeyReferenceResponse(KeyVaultAndKeyReferenceResponse $) {
+        this.keyUrl = $.keyUrl;
+        this.sourceVault = $.sourceVault;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(KeyVaultAndKeyReferenceResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String keyUrl;
-        private SourceVaultResponse sourceVault;
+        private KeyVaultAndKeyReferenceResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new KeyVaultAndKeyReferenceResponse();
         }
 
         public Builder(KeyVaultAndKeyReferenceResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.keyUrl = defaults.keyUrl;
-    	      this.sourceVault = defaults.sourceVault;
+            $ = new KeyVaultAndKeyReferenceResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder keyUrl(String keyUrl) {
-            this.keyUrl = Objects.requireNonNull(keyUrl);
+            $.keyUrl = keyUrl;
             return this;
         }
+
         public Builder sourceVault(SourceVaultResponse sourceVault) {
-            this.sourceVault = Objects.requireNonNull(sourceVault);
+            $.sourceVault = sourceVault;
             return this;
-        }        public KeyVaultAndKeyReferenceResponse build() {
-            return new KeyVaultAndKeyReferenceResponse(keyUrl, sourceVault);
+        }
+
+        public KeyVaultAndKeyReferenceResponse build() {
+            $.keyUrl = Objects.requireNonNull($.keyUrl, "expected parameter 'keyUrl' to be non-null");
+            $.sourceVault = Objects.requireNonNull($.sourceVault, "expected parameter 'sourceVault' to be non-null");
+            return $;
         }
     }
+
 }

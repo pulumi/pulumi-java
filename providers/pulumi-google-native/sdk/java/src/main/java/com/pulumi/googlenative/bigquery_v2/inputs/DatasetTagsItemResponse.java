@@ -17,7 +17,7 @@ public final class DatasetTagsItemResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="tagKey", required=true)
-      private final String tagKey;
+    private String tagKey;
 
     public String tagKey() {
         return this.tagKey;
@@ -28,55 +28,52 @@ public final class DatasetTagsItemResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="tagValue", required=true)
-      private final String tagValue;
+    private String tagValue;
 
     public String tagValue() {
         return this.tagValue;
     }
 
-    public DatasetTagsItemResponse(
-        String tagKey,
-        String tagValue) {
-        this.tagKey = Objects.requireNonNull(tagKey, "expected parameter 'tagKey' to be non-null");
-        this.tagValue = Objects.requireNonNull(tagValue, "expected parameter 'tagValue' to be non-null");
-    }
+    private DatasetTagsItemResponse() {}
 
-    private DatasetTagsItemResponse() {
-        this.tagKey = null;
-        this.tagValue = null;
+    private DatasetTagsItemResponse(DatasetTagsItemResponse $) {
+        this.tagKey = $.tagKey;
+        this.tagValue = $.tagValue;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DatasetTagsItemResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String tagKey;
-        private String tagValue;
+        private DatasetTagsItemResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new DatasetTagsItemResponse();
         }
 
         public Builder(DatasetTagsItemResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.tagKey = defaults.tagKey;
-    	      this.tagValue = defaults.tagValue;
+            $ = new DatasetTagsItemResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder tagKey(String tagKey) {
-            this.tagKey = Objects.requireNonNull(tagKey);
+            $.tagKey = tagKey;
             return this;
         }
+
         public Builder tagValue(String tagValue) {
-            this.tagValue = Objects.requireNonNull(tagValue);
+            $.tagValue = tagValue;
             return this;
-        }        public DatasetTagsItemResponse build() {
-            return new DatasetTagsItemResponse(tagKey, tagValue);
+        }
+
+        public DatasetTagsItemResponse build() {
+            $.tagKey = Objects.requireNonNull($.tagKey, "expected parameter 'tagKey' to be non-null");
+            $.tagValue = Objects.requireNonNull($.tagValue, "expected parameter 'tagValue' to be non-null");
+            return $;
         }
     }
+
 }

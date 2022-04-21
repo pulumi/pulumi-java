@@ -19,10 +19,10 @@ public final class GetMountTargetArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="accessPointId")
-      private final @Nullable String accessPointId;
+    private @Nullable String accessPointId;
 
     public Optional<String> accessPointId() {
-        return this.accessPointId == null ? Optional.empty() : Optional.ofNullable(this.accessPointId);
+        return Optional.ofNullable(this.accessPointId);
     }
 
     /**
@@ -30,10 +30,10 @@ public final class GetMountTargetArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="fileSystemId")
-      private final @Nullable String fileSystemId;
+    private @Nullable String fileSystemId;
 
     public Optional<String> fileSystemId() {
-        return this.fileSystemId == null ? Optional.empty() : Optional.ofNullable(this.fileSystemId);
+        return Optional.ofNullable(this.fileSystemId);
     }
 
     /**
@@ -41,64 +41,56 @@ public final class GetMountTargetArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="mountTargetId")
-      private final @Nullable String mountTargetId;
+    private @Nullable String mountTargetId;
 
     public Optional<String> mountTargetId() {
-        return this.mountTargetId == null ? Optional.empty() : Optional.ofNullable(this.mountTargetId);
+        return Optional.ofNullable(this.mountTargetId);
     }
 
-    public GetMountTargetArgs(
-        @Nullable String accessPointId,
-        @Nullable String fileSystemId,
-        @Nullable String mountTargetId) {
-        this.accessPointId = accessPointId;
-        this.fileSystemId = fileSystemId;
-        this.mountTargetId = mountTargetId;
-    }
+    private GetMountTargetArgs() {}
 
-    private GetMountTargetArgs() {
-        this.accessPointId = null;
-        this.fileSystemId = null;
-        this.mountTargetId = null;
+    private GetMountTargetArgs(GetMountTargetArgs $) {
+        this.accessPointId = $.accessPointId;
+        this.fileSystemId = $.fileSystemId;
+        this.mountTargetId = $.mountTargetId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetMountTargetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String accessPointId;
-        private @Nullable String fileSystemId;
-        private @Nullable String mountTargetId;
+        private GetMountTargetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetMountTargetArgs();
         }
 
         public Builder(GetMountTargetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accessPointId = defaults.accessPointId;
-    	      this.fileSystemId = defaults.fileSystemId;
-    	      this.mountTargetId = defaults.mountTargetId;
+            $ = new GetMountTargetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder accessPointId(@Nullable String accessPointId) {
-            this.accessPointId = accessPointId;
+            $.accessPointId = accessPointId;
             return this;
         }
+
         public Builder fileSystemId(@Nullable String fileSystemId) {
-            this.fileSystemId = fileSystemId;
+            $.fileSystemId = fileSystemId;
             return this;
         }
+
         public Builder mountTargetId(@Nullable String mountTargetId) {
-            this.mountTargetId = mountTargetId;
+            $.mountTargetId = mountTargetId;
             return this;
-        }        public GetMountTargetArgs build() {
-            return new GetMountTargetArgs(accessPointId, fileSystemId, mountTargetId);
+        }
+
+        public GetMountTargetArgs build() {
+            return $;
         }
     }
+
 }

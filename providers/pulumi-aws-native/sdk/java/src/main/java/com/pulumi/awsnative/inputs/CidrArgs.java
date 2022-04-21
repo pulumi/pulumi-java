@@ -14,78 +14,73 @@ public final class CidrArgs extends com.pulumi.resources.InvokeArgs {
     public static final CidrArgs Empty = new CidrArgs();
 
     @Import(name="cidrBits", required=true)
-      private final Integer cidrBits;
+    private Integer cidrBits;
 
     public Integer cidrBits() {
         return this.cidrBits;
     }
 
     @Import(name="count", required=true)
-      private final Integer count;
+    private Integer count;
 
     public Integer count() {
         return this.count;
     }
 
     @Import(name="ipBlock", required=true)
-      private final String ipBlock;
+    private String ipBlock;
 
     public String ipBlock() {
         return this.ipBlock;
     }
 
-    public CidrArgs(
-        Integer cidrBits,
-        Integer count,
-        String ipBlock) {
-        this.cidrBits = Objects.requireNonNull(cidrBits, "expected parameter 'cidrBits' to be non-null");
-        this.count = Objects.requireNonNull(count, "expected parameter 'count' to be non-null");
-        this.ipBlock = Objects.requireNonNull(ipBlock, "expected parameter 'ipBlock' to be non-null");
-    }
+    private CidrArgs() {}
 
-    private CidrArgs() {
-        this.cidrBits = null;
-        this.count = null;
-        this.ipBlock = null;
+    private CidrArgs(CidrArgs $) {
+        this.cidrBits = $.cidrBits;
+        this.count = $.count;
+        this.ipBlock = $.ipBlock;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CidrArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Integer cidrBits;
-        private Integer count;
-        private String ipBlock;
+        private CidrArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CidrArgs();
         }
 
         public Builder(CidrArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cidrBits = defaults.cidrBits;
-    	      this.count = defaults.count;
-    	      this.ipBlock = defaults.ipBlock;
+            $ = new CidrArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder cidrBits(Integer cidrBits) {
-            this.cidrBits = Objects.requireNonNull(cidrBits);
+            $.cidrBits = cidrBits;
             return this;
         }
+
         public Builder count(Integer count) {
-            this.count = Objects.requireNonNull(count);
+            $.count = count;
             return this;
         }
+
         public Builder ipBlock(String ipBlock) {
-            this.ipBlock = Objects.requireNonNull(ipBlock);
+            $.ipBlock = ipBlock;
             return this;
-        }        public CidrArgs build() {
-            return new CidrArgs(cidrBits, count, ipBlock);
+        }
+
+        public CidrArgs build() {
+            $.cidrBits = Objects.requireNonNull($.cidrBits, "expected parameter 'cidrBits' to be non-null");
+            $.count = Objects.requireNonNull($.count, "expected parameter 'count' to be non-null");
+            $.ipBlock = Objects.requireNonNull($.ipBlock, "expected parameter 'ipBlock' to be non-null");
+            return $;
         }
     }
+
 }

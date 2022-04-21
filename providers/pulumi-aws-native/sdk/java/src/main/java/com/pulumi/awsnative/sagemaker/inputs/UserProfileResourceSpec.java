@@ -20,10 +20,10 @@ public final class UserProfileResourceSpec extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="instanceType")
-      private final @Nullable UserProfileResourceSpecInstanceType instanceType;
+    private @Nullable UserProfileResourceSpecInstanceType instanceType;
 
     public Optional<UserProfileResourceSpecInstanceType> instanceType() {
-        return this.instanceType == null ? Optional.empty() : Optional.ofNullable(this.instanceType);
+        return Optional.ofNullable(this.instanceType);
     }
 
     /**
@@ -31,10 +31,10 @@ public final class UserProfileResourceSpec extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="sageMakerImageArn")
-      private final @Nullable String sageMakerImageArn;
+    private @Nullable String sageMakerImageArn;
 
     public Optional<String> sageMakerImageArn() {
-        return this.sageMakerImageArn == null ? Optional.empty() : Optional.ofNullable(this.sageMakerImageArn);
+        return Optional.ofNullable(this.sageMakerImageArn);
     }
 
     /**
@@ -42,64 +42,56 @@ public final class UserProfileResourceSpec extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="sageMakerImageVersionArn")
-      private final @Nullable String sageMakerImageVersionArn;
+    private @Nullable String sageMakerImageVersionArn;
 
     public Optional<String> sageMakerImageVersionArn() {
-        return this.sageMakerImageVersionArn == null ? Optional.empty() : Optional.ofNullable(this.sageMakerImageVersionArn);
+        return Optional.ofNullable(this.sageMakerImageVersionArn);
     }
 
-    public UserProfileResourceSpec(
-        @Nullable UserProfileResourceSpecInstanceType instanceType,
-        @Nullable String sageMakerImageArn,
-        @Nullable String sageMakerImageVersionArn) {
-        this.instanceType = instanceType;
-        this.sageMakerImageArn = sageMakerImageArn;
-        this.sageMakerImageVersionArn = sageMakerImageVersionArn;
-    }
+    private UserProfileResourceSpec() {}
 
-    private UserProfileResourceSpec() {
-        this.instanceType = null;
-        this.sageMakerImageArn = null;
-        this.sageMakerImageVersionArn = null;
+    private UserProfileResourceSpec(UserProfileResourceSpec $) {
+        this.instanceType = $.instanceType;
+        this.sageMakerImageArn = $.sageMakerImageArn;
+        this.sageMakerImageVersionArn = $.sageMakerImageVersionArn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(UserProfileResourceSpec defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable UserProfileResourceSpecInstanceType instanceType;
-        private @Nullable String sageMakerImageArn;
-        private @Nullable String sageMakerImageVersionArn;
+        private UserProfileResourceSpec $;
 
         public Builder() {
-    	      // Empty
+            $ = new UserProfileResourceSpec();
         }
 
         public Builder(UserProfileResourceSpec defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.instanceType = defaults.instanceType;
-    	      this.sageMakerImageArn = defaults.sageMakerImageArn;
-    	      this.sageMakerImageVersionArn = defaults.sageMakerImageVersionArn;
+            $ = new UserProfileResourceSpec(Objects.requireNonNull(defaults));
         }
 
         public Builder instanceType(@Nullable UserProfileResourceSpecInstanceType instanceType) {
-            this.instanceType = instanceType;
+            $.instanceType = instanceType;
             return this;
         }
+
         public Builder sageMakerImageArn(@Nullable String sageMakerImageArn) {
-            this.sageMakerImageArn = sageMakerImageArn;
+            $.sageMakerImageArn = sageMakerImageArn;
             return this;
         }
+
         public Builder sageMakerImageVersionArn(@Nullable String sageMakerImageVersionArn) {
-            this.sageMakerImageVersionArn = sageMakerImageVersionArn;
+            $.sageMakerImageVersionArn = sageMakerImageVersionArn;
             return this;
-        }        public UserProfileResourceSpec build() {
-            return new UserProfileResourceSpec(instanceType, sageMakerImageArn, sageMakerImageVersionArn);
+        }
+
+        public UserProfileResourceSpec build() {
+            return $;
         }
     }
+
 }

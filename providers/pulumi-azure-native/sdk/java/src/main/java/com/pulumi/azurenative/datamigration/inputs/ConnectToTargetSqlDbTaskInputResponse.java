@@ -21,45 +21,45 @@ public final class ConnectToTargetSqlDbTaskInputResponse extends com.pulumi.reso
      * 
      */
     @Import(name="targetConnectionInfo", required=true)
-      private final SqlConnectionInfoResponse targetConnectionInfo;
+    private SqlConnectionInfoResponse targetConnectionInfo;
 
     public SqlConnectionInfoResponse targetConnectionInfo() {
         return this.targetConnectionInfo;
     }
 
-    public ConnectToTargetSqlDbTaskInputResponse(SqlConnectionInfoResponse targetConnectionInfo) {
-        this.targetConnectionInfo = Objects.requireNonNull(targetConnectionInfo, "expected parameter 'targetConnectionInfo' to be non-null");
-    }
+    private ConnectToTargetSqlDbTaskInputResponse() {}
 
-    private ConnectToTargetSqlDbTaskInputResponse() {
-        this.targetConnectionInfo = null;
+    private ConnectToTargetSqlDbTaskInputResponse(ConnectToTargetSqlDbTaskInputResponse $) {
+        this.targetConnectionInfo = $.targetConnectionInfo;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ConnectToTargetSqlDbTaskInputResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private SqlConnectionInfoResponse targetConnectionInfo;
+        private ConnectToTargetSqlDbTaskInputResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ConnectToTargetSqlDbTaskInputResponse();
         }
 
         public Builder(ConnectToTargetSqlDbTaskInputResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.targetConnectionInfo = defaults.targetConnectionInfo;
+            $ = new ConnectToTargetSqlDbTaskInputResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder targetConnectionInfo(SqlConnectionInfoResponse targetConnectionInfo) {
-            this.targetConnectionInfo = Objects.requireNonNull(targetConnectionInfo);
+            $.targetConnectionInfo = targetConnectionInfo;
             return this;
-        }        public ConnectToTargetSqlDbTaskInputResponse build() {
-            return new ConnectToTargetSqlDbTaskInputResponse(targetConnectionInfo);
+        }
+
+        public ConnectToTargetSqlDbTaskInputResponse build() {
+            $.targetConnectionInfo = Objects.requireNonNull($.targetConnectionInfo, "expected parameter 'targetConnectionInfo' to be non-null");
+            return $;
         }
     }
+
 }

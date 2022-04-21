@@ -5,7 +5,6 @@ package com.pulumi.gcp.diagflow.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +22,7 @@ public final class EntityTypeEntityGetArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="synonyms", required=true)
-      private final Output<List<String>> synonyms;
+    private Output<List<String>> synonyms;
 
     public Output<List<String>> synonyms() {
         return this.synonyms;
@@ -39,66 +38,64 @@ public final class EntityTypeEntityGetArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="value", required=true)
-      private final Output<String> value;
+    private Output<String> value;
 
     public Output<String> value() {
         return this.value;
     }
 
-    public EntityTypeEntityGetArgs(
-        Output<List<String>> synonyms,
-        Output<String> value) {
-        this.synonyms = Objects.requireNonNull(synonyms, "expected parameter 'synonyms' to be non-null");
-        this.value = Objects.requireNonNull(value, "expected parameter 'value' to be non-null");
-    }
+    private EntityTypeEntityGetArgs() {}
 
-    private EntityTypeEntityGetArgs() {
-        this.synonyms = Codegen.empty();
-        this.value = Codegen.empty();
+    private EntityTypeEntityGetArgs(EntityTypeEntityGetArgs $) {
+        this.synonyms = $.synonyms;
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EntityTypeEntityGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<List<String>> synonyms;
-        private Output<String> value;
+        private EntityTypeEntityGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new EntityTypeEntityGetArgs();
         }
 
         public Builder(EntityTypeEntityGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.synonyms = defaults.synonyms;
-    	      this.value = defaults.value;
+            $ = new EntityTypeEntityGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder synonyms(Output<List<String>> synonyms) {
-            this.synonyms = Objects.requireNonNull(synonyms);
+            $.synonyms = synonyms;
             return this;
         }
+
         public Builder synonyms(List<String> synonyms) {
-            this.synonyms = Output.of(Objects.requireNonNull(synonyms));
-            return this;
+            return synonyms(Output.of(synonyms));
         }
+
         public Builder synonyms(String... synonyms) {
             return synonyms(List.of(synonyms));
         }
+
         public Builder value(Output<String> value) {
-            this.value = Objects.requireNonNull(value);
+            $.value = value;
             return this;
         }
+
         public Builder value(String value) {
-            this.value = Output.of(Objects.requireNonNull(value));
-            return this;
-        }        public EntityTypeEntityGetArgs build() {
-            return new EntityTypeEntityGetArgs(synonyms, value);
+            return value(Output.of(value));
+        }
+
+        public EntityTypeEntityGetArgs build() {
+            $.synonyms = Objects.requireNonNull($.synonyms, "expected parameter 'synonyms' to be non-null");
+            $.value = Objects.requireNonNull($.value, "expected parameter 'value' to be non-null");
+            return $;
         }
     }
+
 }

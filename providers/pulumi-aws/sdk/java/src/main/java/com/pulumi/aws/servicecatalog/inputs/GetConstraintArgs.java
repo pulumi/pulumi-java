@@ -19,10 +19,10 @@ public final class GetConstraintArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="acceptLanguage")
-      private final @Nullable String acceptLanguage;
+    private @Nullable String acceptLanguage;
 
     public Optional<String> acceptLanguage() {
-        return this.acceptLanguage == null ? Optional.empty() : Optional.ofNullable(this.acceptLanguage);
+        return Optional.ofNullable(this.acceptLanguage);
     }
 
     /**
@@ -30,10 +30,10 @@ public final class GetConstraintArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable String description;
+    private @Nullable String description;
 
     public Optional<String> description() {
-        return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -41,64 +41,57 @@ public final class GetConstraintArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="id", required=true)
-      private final String id;
+    private String id;
 
     public String id() {
         return this.id;
     }
 
-    public GetConstraintArgs(
-        @Nullable String acceptLanguage,
-        @Nullable String description,
-        String id) {
-        this.acceptLanguage = acceptLanguage;
-        this.description = description;
-        this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
-    }
+    private GetConstraintArgs() {}
 
-    private GetConstraintArgs() {
-        this.acceptLanguage = null;
-        this.description = null;
-        this.id = null;
+    private GetConstraintArgs(GetConstraintArgs $) {
+        this.acceptLanguage = $.acceptLanguage;
+        this.description = $.description;
+        this.id = $.id;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetConstraintArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String acceptLanguage;
-        private @Nullable String description;
-        private String id;
+        private GetConstraintArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetConstraintArgs();
         }
 
         public Builder(GetConstraintArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.acceptLanguage = defaults.acceptLanguage;
-    	      this.description = defaults.description;
-    	      this.id = defaults.id;
+            $ = new GetConstraintArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder acceptLanguage(@Nullable String acceptLanguage) {
-            this.acceptLanguage = acceptLanguage;
+            $.acceptLanguage = acceptLanguage;
             return this;
         }
+
         public Builder description(@Nullable String description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
+
         public Builder id(String id) {
-            this.id = Objects.requireNonNull(id);
+            $.id = id;
             return this;
-        }        public GetConstraintArgs build() {
-            return new GetConstraintArgs(acceptLanguage, description, id);
+        }
+
+        public GetConstraintArgs build() {
+            $.id = Objects.requireNonNull($.id, "expected parameter 'id' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,10 +5,10 @@ package com.pulumi.azurenative.batch.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class LinuxUserConfigurationArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="gid")
-      private final @Nullable Output<Integer> gid;
+    private @Nullable Output<Integer> gid;
 
-    public Output<Integer> gid() {
-        return this.gid == null ? Codegen.empty() : this.gid;
+    public Optional<Output<Integer>> gid() {
+        return Optional.ofNullable(this.gid);
     }
 
     /**
@@ -32,10 +32,10 @@ public final class LinuxUserConfigurationArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="sshPrivateKey")
-      private final @Nullable Output<String> sshPrivateKey;
+    private @Nullable Output<String> sshPrivateKey;
 
-    public Output<String> sshPrivateKey() {
-        return this.sshPrivateKey == null ? Codegen.empty() : this.sshPrivateKey;
+    public Optional<Output<String>> sshPrivateKey() {
+        return Optional.ofNullable(this.sshPrivateKey);
     }
 
     /**
@@ -43,76 +43,68 @@ public final class LinuxUserConfigurationArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="uid")
-      private final @Nullable Output<Integer> uid;
+    private @Nullable Output<Integer> uid;
 
-    public Output<Integer> uid() {
-        return this.uid == null ? Codegen.empty() : this.uid;
+    public Optional<Output<Integer>> uid() {
+        return Optional.ofNullable(this.uid);
     }
 
-    public LinuxUserConfigurationArgs(
-        @Nullable Output<Integer> gid,
-        @Nullable Output<String> sshPrivateKey,
-        @Nullable Output<Integer> uid) {
-        this.gid = gid;
-        this.sshPrivateKey = sshPrivateKey;
-        this.uid = uid;
-    }
+    private LinuxUserConfigurationArgs() {}
 
-    private LinuxUserConfigurationArgs() {
-        this.gid = Codegen.empty();
-        this.sshPrivateKey = Codegen.empty();
-        this.uid = Codegen.empty();
+    private LinuxUserConfigurationArgs(LinuxUserConfigurationArgs $) {
+        this.gid = $.gid;
+        this.sshPrivateKey = $.sshPrivateKey;
+        this.uid = $.uid;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LinuxUserConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> gid;
-        private @Nullable Output<String> sshPrivateKey;
-        private @Nullable Output<Integer> uid;
+        private LinuxUserConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new LinuxUserConfigurationArgs();
         }
 
         public Builder(LinuxUserConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.gid = defaults.gid;
-    	      this.sshPrivateKey = defaults.sshPrivateKey;
-    	      this.uid = defaults.uid;
+            $ = new LinuxUserConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder gid(@Nullable Output<Integer> gid) {
-            this.gid = gid;
+            $.gid = gid;
             return this;
         }
-        public Builder gid(@Nullable Integer gid) {
-            this.gid = Codegen.ofNullable(gid);
-            return this;
+
+        public Builder gid(Integer gid) {
+            return gid(Output.of(gid));
         }
+
         public Builder sshPrivateKey(@Nullable Output<String> sshPrivateKey) {
-            this.sshPrivateKey = sshPrivateKey;
+            $.sshPrivateKey = sshPrivateKey;
             return this;
         }
-        public Builder sshPrivateKey(@Nullable String sshPrivateKey) {
-            this.sshPrivateKey = Codegen.ofNullable(sshPrivateKey);
-            return this;
+
+        public Builder sshPrivateKey(String sshPrivateKey) {
+            return sshPrivateKey(Output.of(sshPrivateKey));
         }
+
         public Builder uid(@Nullable Output<Integer> uid) {
-            this.uid = uid;
+            $.uid = uid;
             return this;
         }
-        public Builder uid(@Nullable Integer uid) {
-            this.uid = Codegen.ofNullable(uid);
-            return this;
-        }        public LinuxUserConfigurationArgs build() {
-            return new LinuxUserConfigurationArgs(gid, sshPrivateKey, uid);
+
+        public Builder uid(Integer uid) {
+            return uid(Output.of(uid));
+        }
+
+        public LinuxUserConfigurationArgs build() {
+            return $;
         }
     }
+
 }

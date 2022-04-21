@@ -23,10 +23,10 @@ public final class PacketCaptureStorageLocationResponse extends com.pulumi.resou
      * 
      */
     @Import(name="filePath")
-      private final @Nullable String filePath;
+    private @Nullable String filePath;
 
     public Optional<String> filePath() {
-        return this.filePath == null ? Optional.empty() : Optional.ofNullable(this.filePath);
+        return Optional.ofNullable(this.filePath);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class PacketCaptureStorageLocationResponse extends com.pulumi.resou
      * 
      */
     @Import(name="storageId")
-      private final @Nullable String storageId;
+    private @Nullable String storageId;
 
     public Optional<String> storageId() {
-        return this.storageId == null ? Optional.empty() : Optional.ofNullable(this.storageId);
+        return Optional.ofNullable(this.storageId);
     }
 
     /**
@@ -45,64 +45,56 @@ public final class PacketCaptureStorageLocationResponse extends com.pulumi.resou
      * 
      */
     @Import(name="storagePath")
-      private final @Nullable String storagePath;
+    private @Nullable String storagePath;
 
     public Optional<String> storagePath() {
-        return this.storagePath == null ? Optional.empty() : Optional.ofNullable(this.storagePath);
+        return Optional.ofNullable(this.storagePath);
     }
 
-    public PacketCaptureStorageLocationResponse(
-        @Nullable String filePath,
-        @Nullable String storageId,
-        @Nullable String storagePath) {
-        this.filePath = filePath;
-        this.storageId = storageId;
-        this.storagePath = storagePath;
-    }
+    private PacketCaptureStorageLocationResponse() {}
 
-    private PacketCaptureStorageLocationResponse() {
-        this.filePath = null;
-        this.storageId = null;
-        this.storagePath = null;
+    private PacketCaptureStorageLocationResponse(PacketCaptureStorageLocationResponse $) {
+        this.filePath = $.filePath;
+        this.storageId = $.storageId;
+        this.storagePath = $.storagePath;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PacketCaptureStorageLocationResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String filePath;
-        private @Nullable String storageId;
-        private @Nullable String storagePath;
+        private PacketCaptureStorageLocationResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new PacketCaptureStorageLocationResponse();
         }
 
         public Builder(PacketCaptureStorageLocationResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.filePath = defaults.filePath;
-    	      this.storageId = defaults.storageId;
-    	      this.storagePath = defaults.storagePath;
+            $ = new PacketCaptureStorageLocationResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder filePath(@Nullable String filePath) {
-            this.filePath = filePath;
+            $.filePath = filePath;
             return this;
         }
+
         public Builder storageId(@Nullable String storageId) {
-            this.storageId = storageId;
+            $.storageId = storageId;
             return this;
         }
+
         public Builder storagePath(@Nullable String storagePath) {
-            this.storagePath = storagePath;
+            $.storagePath = storagePath;
             return this;
-        }        public PacketCaptureStorageLocationResponse build() {
-            return new PacketCaptureStorageLocationResponse(filePath, storageId, storagePath);
+        }
+
+        public PacketCaptureStorageLocationResponse build() {
+            return $;
         }
     }
+
 }

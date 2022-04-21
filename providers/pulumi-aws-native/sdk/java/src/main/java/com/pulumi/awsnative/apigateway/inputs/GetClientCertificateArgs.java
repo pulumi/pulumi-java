@@ -17,45 +17,45 @@ public final class GetClientCertificateArgs extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="clientCertificateId", required=true)
-      private final String clientCertificateId;
+    private String clientCertificateId;
 
     public String clientCertificateId() {
         return this.clientCertificateId;
     }
 
-    public GetClientCertificateArgs(String clientCertificateId) {
-        this.clientCertificateId = Objects.requireNonNull(clientCertificateId, "expected parameter 'clientCertificateId' to be non-null");
-    }
+    private GetClientCertificateArgs() {}
 
-    private GetClientCertificateArgs() {
-        this.clientCertificateId = null;
+    private GetClientCertificateArgs(GetClientCertificateArgs $) {
+        this.clientCertificateId = $.clientCertificateId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetClientCertificateArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String clientCertificateId;
+        private GetClientCertificateArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetClientCertificateArgs();
         }
 
         public Builder(GetClientCertificateArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.clientCertificateId = defaults.clientCertificateId;
+            $ = new GetClientCertificateArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder clientCertificateId(String clientCertificateId) {
-            this.clientCertificateId = Objects.requireNonNull(clientCertificateId);
+            $.clientCertificateId = clientCertificateId;
             return this;
-        }        public GetClientCertificateArgs build() {
-            return new GetClientCertificateArgs(clientCertificateId);
+        }
+
+        public GetClientCertificateArgs build() {
+            $.clientCertificateId = Objects.requireNonNull($.clientCertificateId, "expected parameter 'clientCertificateId' to be non-null");
+            return $;
         }
     }
+
 }

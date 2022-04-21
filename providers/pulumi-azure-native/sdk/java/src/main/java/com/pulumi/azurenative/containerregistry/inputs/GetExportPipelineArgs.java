@@ -17,7 +17,7 @@ public final class GetExportPipelineArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="exportPipelineName", required=true)
-      private final String exportPipelineName;
+    private String exportPipelineName;
 
     public String exportPipelineName() {
         return this.exportPipelineName;
@@ -28,7 +28,7 @@ public final class GetExportPipelineArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="registryName", required=true)
-      private final String registryName;
+    private String registryName;
 
     public String registryName() {
         return this.registryName;
@@ -39,64 +39,59 @@ public final class GetExportPipelineArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public GetExportPipelineArgs(
-        String exportPipelineName,
-        String registryName,
-        String resourceGroupName) {
-        this.exportPipelineName = Objects.requireNonNull(exportPipelineName, "expected parameter 'exportPipelineName' to be non-null");
-        this.registryName = Objects.requireNonNull(registryName, "expected parameter 'registryName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private GetExportPipelineArgs() {}
 
-    private GetExportPipelineArgs() {
-        this.exportPipelineName = null;
-        this.registryName = null;
-        this.resourceGroupName = null;
+    private GetExportPipelineArgs(GetExportPipelineArgs $) {
+        this.exportPipelineName = $.exportPipelineName;
+        this.registryName = $.registryName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetExportPipelineArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String exportPipelineName;
-        private String registryName;
-        private String resourceGroupName;
+        private GetExportPipelineArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetExportPipelineArgs();
         }
 
         public Builder(GetExportPipelineArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.exportPipelineName = defaults.exportPipelineName;
-    	      this.registryName = defaults.registryName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new GetExportPipelineArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder exportPipelineName(String exportPipelineName) {
-            this.exportPipelineName = Objects.requireNonNull(exportPipelineName);
+            $.exportPipelineName = exportPipelineName;
             return this;
         }
+
         public Builder registryName(String registryName) {
-            this.registryName = Objects.requireNonNull(registryName);
+            $.registryName = registryName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public GetExportPipelineArgs build() {
-            return new GetExportPipelineArgs(exportPipelineName, registryName, resourceGroupName);
+        }
+
+        public GetExportPipelineArgs build() {
+            $.exportPipelineName = Objects.requireNonNull($.exportPipelineName, "expected parameter 'exportPipelineName' to be non-null");
+            $.registryName = Objects.requireNonNull($.registryName, "expected parameter 'registryName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

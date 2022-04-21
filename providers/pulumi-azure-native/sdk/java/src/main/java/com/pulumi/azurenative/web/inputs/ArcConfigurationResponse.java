@@ -16,126 +16,109 @@ public final class ArcConfigurationResponse extends com.pulumi.resources.InvokeA
     public static final ArcConfigurationResponse Empty = new ArcConfigurationResponse();
 
     @Import(name="artifactStorageAccessMode")
-      private final @Nullable String artifactStorageAccessMode;
+    private @Nullable String artifactStorageAccessMode;
 
     public Optional<String> artifactStorageAccessMode() {
-        return this.artifactStorageAccessMode == null ? Optional.empty() : Optional.ofNullable(this.artifactStorageAccessMode);
+        return Optional.ofNullable(this.artifactStorageAccessMode);
     }
 
     @Import(name="artifactStorageClassName")
-      private final @Nullable String artifactStorageClassName;
+    private @Nullable String artifactStorageClassName;
 
     public Optional<String> artifactStorageClassName() {
-        return this.artifactStorageClassName == null ? Optional.empty() : Optional.ofNullable(this.artifactStorageClassName);
+        return Optional.ofNullable(this.artifactStorageClassName);
     }
 
     @Import(name="artifactStorageMountPath")
-      private final @Nullable String artifactStorageMountPath;
+    private @Nullable String artifactStorageMountPath;
 
     public Optional<String> artifactStorageMountPath() {
-        return this.artifactStorageMountPath == null ? Optional.empty() : Optional.ofNullable(this.artifactStorageMountPath);
+        return Optional.ofNullable(this.artifactStorageMountPath);
     }
 
     @Import(name="artifactStorageNodeName")
-      private final @Nullable String artifactStorageNodeName;
+    private @Nullable String artifactStorageNodeName;
 
     public Optional<String> artifactStorageNodeName() {
-        return this.artifactStorageNodeName == null ? Optional.empty() : Optional.ofNullable(this.artifactStorageNodeName);
+        return Optional.ofNullable(this.artifactStorageNodeName);
     }
 
     @Import(name="artifactsStorageType")
-      private final @Nullable String artifactsStorageType;
+    private @Nullable String artifactsStorageType;
 
     public Optional<String> artifactsStorageType() {
-        return this.artifactsStorageType == null ? Optional.empty() : Optional.ofNullable(this.artifactsStorageType);
+        return Optional.ofNullable(this.artifactsStorageType);
     }
 
     @Import(name="frontEndServiceConfiguration")
-      private final @Nullable FrontEndConfigurationResponse frontEndServiceConfiguration;
+    private @Nullable FrontEndConfigurationResponse frontEndServiceConfiguration;
 
     public Optional<FrontEndConfigurationResponse> frontEndServiceConfiguration() {
-        return this.frontEndServiceConfiguration == null ? Optional.empty() : Optional.ofNullable(this.frontEndServiceConfiguration);
+        return Optional.ofNullable(this.frontEndServiceConfiguration);
     }
 
-    public ArcConfigurationResponse(
-        @Nullable String artifactStorageAccessMode,
-        @Nullable String artifactStorageClassName,
-        @Nullable String artifactStorageMountPath,
-        @Nullable String artifactStorageNodeName,
-        @Nullable String artifactsStorageType,
-        @Nullable FrontEndConfigurationResponse frontEndServiceConfiguration) {
-        this.artifactStorageAccessMode = artifactStorageAccessMode;
-        this.artifactStorageClassName = artifactStorageClassName;
-        this.artifactStorageMountPath = artifactStorageMountPath;
-        this.artifactStorageNodeName = artifactStorageNodeName;
-        this.artifactsStorageType = artifactsStorageType;
-        this.frontEndServiceConfiguration = frontEndServiceConfiguration;
-    }
+    private ArcConfigurationResponse() {}
 
-    private ArcConfigurationResponse() {
-        this.artifactStorageAccessMode = null;
-        this.artifactStorageClassName = null;
-        this.artifactStorageMountPath = null;
-        this.artifactStorageNodeName = null;
-        this.artifactsStorageType = null;
-        this.frontEndServiceConfiguration = null;
+    private ArcConfigurationResponse(ArcConfigurationResponse $) {
+        this.artifactStorageAccessMode = $.artifactStorageAccessMode;
+        this.artifactStorageClassName = $.artifactStorageClassName;
+        this.artifactStorageMountPath = $.artifactStorageMountPath;
+        this.artifactStorageNodeName = $.artifactStorageNodeName;
+        this.artifactsStorageType = $.artifactsStorageType;
+        this.frontEndServiceConfiguration = $.frontEndServiceConfiguration;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ArcConfigurationResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String artifactStorageAccessMode;
-        private @Nullable String artifactStorageClassName;
-        private @Nullable String artifactStorageMountPath;
-        private @Nullable String artifactStorageNodeName;
-        private @Nullable String artifactsStorageType;
-        private @Nullable FrontEndConfigurationResponse frontEndServiceConfiguration;
+        private ArcConfigurationResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ArcConfigurationResponse();
         }
 
         public Builder(ArcConfigurationResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.artifactStorageAccessMode = defaults.artifactStorageAccessMode;
-    	      this.artifactStorageClassName = defaults.artifactStorageClassName;
-    	      this.artifactStorageMountPath = defaults.artifactStorageMountPath;
-    	      this.artifactStorageNodeName = defaults.artifactStorageNodeName;
-    	      this.artifactsStorageType = defaults.artifactsStorageType;
-    	      this.frontEndServiceConfiguration = defaults.frontEndServiceConfiguration;
+            $ = new ArcConfigurationResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder artifactStorageAccessMode(@Nullable String artifactStorageAccessMode) {
-            this.artifactStorageAccessMode = artifactStorageAccessMode;
+            $.artifactStorageAccessMode = artifactStorageAccessMode;
             return this;
         }
+
         public Builder artifactStorageClassName(@Nullable String artifactStorageClassName) {
-            this.artifactStorageClassName = artifactStorageClassName;
+            $.artifactStorageClassName = artifactStorageClassName;
             return this;
         }
+
         public Builder artifactStorageMountPath(@Nullable String artifactStorageMountPath) {
-            this.artifactStorageMountPath = artifactStorageMountPath;
+            $.artifactStorageMountPath = artifactStorageMountPath;
             return this;
         }
+
         public Builder artifactStorageNodeName(@Nullable String artifactStorageNodeName) {
-            this.artifactStorageNodeName = artifactStorageNodeName;
+            $.artifactStorageNodeName = artifactStorageNodeName;
             return this;
         }
+
         public Builder artifactsStorageType(@Nullable String artifactsStorageType) {
-            this.artifactsStorageType = artifactsStorageType;
+            $.artifactsStorageType = artifactsStorageType;
             return this;
         }
+
         public Builder frontEndServiceConfiguration(@Nullable FrontEndConfigurationResponse frontEndServiceConfiguration) {
-            this.frontEndServiceConfiguration = frontEndServiceConfiguration;
+            $.frontEndServiceConfiguration = frontEndServiceConfiguration;
             return this;
-        }        public ArcConfigurationResponse build() {
-            return new ArcConfigurationResponse(artifactStorageAccessMode, artifactStorageClassName, artifactStorageMountPath, artifactStorageNodeName, artifactsStorageType, frontEndServiceConfiguration);
+        }
+
+        public ArcConfigurationResponse build() {
+            return $;
         }
     }
+
 }

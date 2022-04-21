@@ -8,9 +8,9 @@ import com.pulumi.azurenative.security.inputs.SuppressionAlertsScopeArgs;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,7 +23,7 @@ public final class AlertsSuppressionRuleArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="alertType", required=true)
-      private final Output<String> alertType;
+    private Output<String> alertType;
 
     public Output<String> alertType() {
         return this.alertType;
@@ -34,10 +34,10 @@ public final class AlertsSuppressionRuleArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="alertsSuppressionRuleName")
-      private final @Nullable Output<String> alertsSuppressionRuleName;
+    private @Nullable Output<String> alertsSuppressionRuleName;
 
-    public Output<String> alertsSuppressionRuleName() {
-        return this.alertsSuppressionRuleName == null ? Codegen.empty() : this.alertsSuppressionRuleName;
+    public Optional<Output<String>> alertsSuppressionRuleName() {
+        return Optional.ofNullable(this.alertsSuppressionRuleName);
     }
 
     /**
@@ -45,10 +45,10 @@ public final class AlertsSuppressionRuleArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="comment")
-      private final @Nullable Output<String> comment;
+    private @Nullable Output<String> comment;
 
-    public Output<String> comment() {
-        return this.comment == null ? Codegen.empty() : this.comment;
+    public Optional<Output<String>> comment() {
+        return Optional.ofNullable(this.comment);
     }
 
     /**
@@ -56,10 +56,10 @@ public final class AlertsSuppressionRuleArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="expirationDateUtc")
-      private final @Nullable Output<String> expirationDateUtc;
+    private @Nullable Output<String> expirationDateUtc;
 
-    public Output<String> expirationDateUtc() {
-        return this.expirationDateUtc == null ? Codegen.empty() : this.expirationDateUtc;
+    public Optional<Output<String>> expirationDateUtc() {
+        return Optional.ofNullable(this.expirationDateUtc);
     }
 
     /**
@@ -67,7 +67,7 @@ public final class AlertsSuppressionRuleArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="reason", required=true)
-      private final Output<String> reason;
+    private Output<String> reason;
 
     public Output<String> reason() {
         return this.reason;
@@ -78,7 +78,7 @@ public final class AlertsSuppressionRuleArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="state", required=true)
-      private final Output<Either<String,RuleState>> state;
+    private Output<Either<String,RuleState>> state;
 
     public Output<Either<String,RuleState>> state() {
         return this.state;
@@ -89,128 +89,111 @@ public final class AlertsSuppressionRuleArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="suppressionAlertsScope")
-      private final @Nullable Output<SuppressionAlertsScopeArgs> suppressionAlertsScope;
+    private @Nullable Output<SuppressionAlertsScopeArgs> suppressionAlertsScope;
 
-    public Output<SuppressionAlertsScopeArgs> suppressionAlertsScope() {
-        return this.suppressionAlertsScope == null ? Codegen.empty() : this.suppressionAlertsScope;
+    public Optional<Output<SuppressionAlertsScopeArgs>> suppressionAlertsScope() {
+        return Optional.ofNullable(this.suppressionAlertsScope);
     }
 
-    public AlertsSuppressionRuleArgs(
-        Output<String> alertType,
-        @Nullable Output<String> alertsSuppressionRuleName,
-        @Nullable Output<String> comment,
-        @Nullable Output<String> expirationDateUtc,
-        Output<String> reason,
-        Output<Either<String,RuleState>> state,
-        @Nullable Output<SuppressionAlertsScopeArgs> suppressionAlertsScope) {
-        this.alertType = Objects.requireNonNull(alertType, "expected parameter 'alertType' to be non-null");
-        this.alertsSuppressionRuleName = alertsSuppressionRuleName;
-        this.comment = comment;
-        this.expirationDateUtc = expirationDateUtc;
-        this.reason = Objects.requireNonNull(reason, "expected parameter 'reason' to be non-null");
-        this.state = Objects.requireNonNull(state, "expected parameter 'state' to be non-null");
-        this.suppressionAlertsScope = suppressionAlertsScope;
-    }
+    private AlertsSuppressionRuleArgs() {}
 
-    private AlertsSuppressionRuleArgs() {
-        this.alertType = Codegen.empty();
-        this.alertsSuppressionRuleName = Codegen.empty();
-        this.comment = Codegen.empty();
-        this.expirationDateUtc = Codegen.empty();
-        this.reason = Codegen.empty();
-        this.state = Codegen.empty();
-        this.suppressionAlertsScope = Codegen.empty();
+    private AlertsSuppressionRuleArgs(AlertsSuppressionRuleArgs $) {
+        this.alertType = $.alertType;
+        this.alertsSuppressionRuleName = $.alertsSuppressionRuleName;
+        this.comment = $.comment;
+        this.expirationDateUtc = $.expirationDateUtc;
+        this.reason = $.reason;
+        this.state = $.state;
+        this.suppressionAlertsScope = $.suppressionAlertsScope;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AlertsSuppressionRuleArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> alertType;
-        private @Nullable Output<String> alertsSuppressionRuleName;
-        private @Nullable Output<String> comment;
-        private @Nullable Output<String> expirationDateUtc;
-        private Output<String> reason;
-        private Output<Either<String,RuleState>> state;
-        private @Nullable Output<SuppressionAlertsScopeArgs> suppressionAlertsScope;
+        private AlertsSuppressionRuleArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AlertsSuppressionRuleArgs();
         }
 
         public Builder(AlertsSuppressionRuleArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.alertType = defaults.alertType;
-    	      this.alertsSuppressionRuleName = defaults.alertsSuppressionRuleName;
-    	      this.comment = defaults.comment;
-    	      this.expirationDateUtc = defaults.expirationDateUtc;
-    	      this.reason = defaults.reason;
-    	      this.state = defaults.state;
-    	      this.suppressionAlertsScope = defaults.suppressionAlertsScope;
+            $ = new AlertsSuppressionRuleArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder alertType(Output<String> alertType) {
-            this.alertType = Objects.requireNonNull(alertType);
+            $.alertType = alertType;
             return this;
         }
+
         public Builder alertType(String alertType) {
-            this.alertType = Output.of(Objects.requireNonNull(alertType));
-            return this;
+            return alertType(Output.of(alertType));
         }
+
         public Builder alertsSuppressionRuleName(@Nullable Output<String> alertsSuppressionRuleName) {
-            this.alertsSuppressionRuleName = alertsSuppressionRuleName;
+            $.alertsSuppressionRuleName = alertsSuppressionRuleName;
             return this;
         }
-        public Builder alertsSuppressionRuleName(@Nullable String alertsSuppressionRuleName) {
-            this.alertsSuppressionRuleName = Codegen.ofNullable(alertsSuppressionRuleName);
-            return this;
+
+        public Builder alertsSuppressionRuleName(String alertsSuppressionRuleName) {
+            return alertsSuppressionRuleName(Output.of(alertsSuppressionRuleName));
         }
+
         public Builder comment(@Nullable Output<String> comment) {
-            this.comment = comment;
+            $.comment = comment;
             return this;
         }
-        public Builder comment(@Nullable String comment) {
-            this.comment = Codegen.ofNullable(comment);
-            return this;
+
+        public Builder comment(String comment) {
+            return comment(Output.of(comment));
         }
+
         public Builder expirationDateUtc(@Nullable Output<String> expirationDateUtc) {
-            this.expirationDateUtc = expirationDateUtc;
+            $.expirationDateUtc = expirationDateUtc;
             return this;
         }
-        public Builder expirationDateUtc(@Nullable String expirationDateUtc) {
-            this.expirationDateUtc = Codegen.ofNullable(expirationDateUtc);
-            return this;
+
+        public Builder expirationDateUtc(String expirationDateUtc) {
+            return expirationDateUtc(Output.of(expirationDateUtc));
         }
+
         public Builder reason(Output<String> reason) {
-            this.reason = Objects.requireNonNull(reason);
+            $.reason = reason;
             return this;
         }
+
         public Builder reason(String reason) {
-            this.reason = Output.of(Objects.requireNonNull(reason));
-            return this;
+            return reason(Output.of(reason));
         }
+
         public Builder state(Output<Either<String,RuleState>> state) {
-            this.state = Objects.requireNonNull(state);
+            $.state = state;
             return this;
         }
+
         public Builder state(Either<String,RuleState> state) {
-            this.state = Output.of(Objects.requireNonNull(state));
-            return this;
+            return state(Output.of(state));
         }
+
         public Builder suppressionAlertsScope(@Nullable Output<SuppressionAlertsScopeArgs> suppressionAlertsScope) {
-            this.suppressionAlertsScope = suppressionAlertsScope;
+            $.suppressionAlertsScope = suppressionAlertsScope;
             return this;
         }
-        public Builder suppressionAlertsScope(@Nullable SuppressionAlertsScopeArgs suppressionAlertsScope) {
-            this.suppressionAlertsScope = Codegen.ofNullable(suppressionAlertsScope);
-            return this;
-        }        public AlertsSuppressionRuleArgs build() {
-            return new AlertsSuppressionRuleArgs(alertType, alertsSuppressionRuleName, comment, expirationDateUtc, reason, state, suppressionAlertsScope);
+
+        public Builder suppressionAlertsScope(SuppressionAlertsScopeArgs suppressionAlertsScope) {
+            return suppressionAlertsScope(Output.of(suppressionAlertsScope));
+        }
+
+        public AlertsSuppressionRuleArgs build() {
+            $.alertType = Objects.requireNonNull($.alertType, "expected parameter 'alertType' to be non-null");
+            $.reason = Objects.requireNonNull($.reason, "expected parameter 'reason' to be non-null");
+            $.state = Objects.requireNonNull($.state, "expected parameter 'state' to be non-null");
+            return $;
         }
     }
+
 }

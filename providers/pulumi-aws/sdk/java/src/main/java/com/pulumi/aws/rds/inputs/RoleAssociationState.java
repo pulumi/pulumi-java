@@ -5,9 +5,9 @@ package com.pulumi.aws.rds.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class RoleAssociationState extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="dbInstanceIdentifier")
-      private final @Nullable Output<String> dbInstanceIdentifier;
+    private @Nullable Output<String> dbInstanceIdentifier;
 
-    public Output<String> dbInstanceIdentifier() {
-        return this.dbInstanceIdentifier == null ? Codegen.empty() : this.dbInstanceIdentifier;
+    public Optional<Output<String>> dbInstanceIdentifier() {
+        return Optional.ofNullable(this.dbInstanceIdentifier);
     }
 
     /**
@@ -31,10 +31,10 @@ public final class RoleAssociationState extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="featureName")
-      private final @Nullable Output<String> featureName;
+    private @Nullable Output<String> featureName;
 
-    public Output<String> featureName() {
-        return this.featureName == null ? Codegen.empty() : this.featureName;
+    public Optional<Output<String>> featureName() {
+        return Optional.ofNullable(this.featureName);
     }
 
     /**
@@ -42,76 +42,68 @@ public final class RoleAssociationState extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="roleArn")
-      private final @Nullable Output<String> roleArn;
+    private @Nullable Output<String> roleArn;
 
-    public Output<String> roleArn() {
-        return this.roleArn == null ? Codegen.empty() : this.roleArn;
+    public Optional<Output<String>> roleArn() {
+        return Optional.ofNullable(this.roleArn);
     }
 
-    public RoleAssociationState(
-        @Nullable Output<String> dbInstanceIdentifier,
-        @Nullable Output<String> featureName,
-        @Nullable Output<String> roleArn) {
-        this.dbInstanceIdentifier = dbInstanceIdentifier;
-        this.featureName = featureName;
-        this.roleArn = roleArn;
-    }
+    private RoleAssociationState() {}
 
-    private RoleAssociationState() {
-        this.dbInstanceIdentifier = Codegen.empty();
-        this.featureName = Codegen.empty();
-        this.roleArn = Codegen.empty();
+    private RoleAssociationState(RoleAssociationState $) {
+        this.dbInstanceIdentifier = $.dbInstanceIdentifier;
+        this.featureName = $.featureName;
+        this.roleArn = $.roleArn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RoleAssociationState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> dbInstanceIdentifier;
-        private @Nullable Output<String> featureName;
-        private @Nullable Output<String> roleArn;
+        private RoleAssociationState $;
 
         public Builder() {
-    	      // Empty
+            $ = new RoleAssociationState();
         }
 
         public Builder(RoleAssociationState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dbInstanceIdentifier = defaults.dbInstanceIdentifier;
-    	      this.featureName = defaults.featureName;
-    	      this.roleArn = defaults.roleArn;
+            $ = new RoleAssociationState(Objects.requireNonNull(defaults));
         }
 
         public Builder dbInstanceIdentifier(@Nullable Output<String> dbInstanceIdentifier) {
-            this.dbInstanceIdentifier = dbInstanceIdentifier;
+            $.dbInstanceIdentifier = dbInstanceIdentifier;
             return this;
         }
-        public Builder dbInstanceIdentifier(@Nullable String dbInstanceIdentifier) {
-            this.dbInstanceIdentifier = Codegen.ofNullable(dbInstanceIdentifier);
-            return this;
+
+        public Builder dbInstanceIdentifier(String dbInstanceIdentifier) {
+            return dbInstanceIdentifier(Output.of(dbInstanceIdentifier));
         }
+
         public Builder featureName(@Nullable Output<String> featureName) {
-            this.featureName = featureName;
+            $.featureName = featureName;
             return this;
         }
-        public Builder featureName(@Nullable String featureName) {
-            this.featureName = Codegen.ofNullable(featureName);
-            return this;
+
+        public Builder featureName(String featureName) {
+            return featureName(Output.of(featureName));
         }
+
         public Builder roleArn(@Nullable Output<String> roleArn) {
-            this.roleArn = roleArn;
+            $.roleArn = roleArn;
             return this;
         }
-        public Builder roleArn(@Nullable String roleArn) {
-            this.roleArn = Codegen.ofNullable(roleArn);
-            return this;
-        }        public RoleAssociationState build() {
-            return new RoleAssociationState(dbInstanceIdentifier, featureName, roleArn);
+
+        public Builder roleArn(String roleArn) {
+            return roleArn(Output.of(roleArn));
+        }
+
+        public RoleAssociationState build() {
+            return $;
         }
     }
+
 }

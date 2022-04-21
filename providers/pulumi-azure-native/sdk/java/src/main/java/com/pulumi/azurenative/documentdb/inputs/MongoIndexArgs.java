@@ -7,8 +7,8 @@ import com.pulumi.azurenative.documentdb.inputs.MongoIndexKeysArgs;
 import com.pulumi.azurenative.documentdb.inputs.MongoIndexOptionsArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class MongoIndexArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="key")
-      private final @Nullable Output<MongoIndexKeysArgs> key;
+    private @Nullable Output<MongoIndexKeysArgs> key;
 
-    public Output<MongoIndexKeysArgs> key() {
-        return this.key == null ? Codegen.empty() : this.key;
+    public Optional<Output<MongoIndexKeysArgs>> key() {
+        return Optional.ofNullable(this.key);
     }
 
     /**
@@ -36,63 +36,58 @@ public final class MongoIndexArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="options")
-      private final @Nullable Output<MongoIndexOptionsArgs> options;
+    private @Nullable Output<MongoIndexOptionsArgs> options;
 
-    public Output<MongoIndexOptionsArgs> options() {
-        return this.options == null ? Codegen.empty() : this.options;
+    public Optional<Output<MongoIndexOptionsArgs>> options() {
+        return Optional.ofNullable(this.options);
     }
 
-    public MongoIndexArgs(
-        @Nullable Output<MongoIndexKeysArgs> key,
-        @Nullable Output<MongoIndexOptionsArgs> options) {
-        this.key = key;
-        this.options = options;
-    }
+    private MongoIndexArgs() {}
 
-    private MongoIndexArgs() {
-        this.key = Codegen.empty();
-        this.options = Codegen.empty();
+    private MongoIndexArgs(MongoIndexArgs $) {
+        this.key = $.key;
+        this.options = $.options;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MongoIndexArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<MongoIndexKeysArgs> key;
-        private @Nullable Output<MongoIndexOptionsArgs> options;
+        private MongoIndexArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new MongoIndexArgs();
         }
 
         public Builder(MongoIndexArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.key = defaults.key;
-    	      this.options = defaults.options;
+            $ = new MongoIndexArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder key(@Nullable Output<MongoIndexKeysArgs> key) {
-            this.key = key;
+            $.key = key;
             return this;
         }
-        public Builder key(@Nullable MongoIndexKeysArgs key) {
-            this.key = Codegen.ofNullable(key);
-            return this;
+
+        public Builder key(MongoIndexKeysArgs key) {
+            return key(Output.of(key));
         }
+
         public Builder options(@Nullable Output<MongoIndexOptionsArgs> options) {
-            this.options = options;
+            $.options = options;
             return this;
         }
-        public Builder options(@Nullable MongoIndexOptionsArgs options) {
-            this.options = Codegen.ofNullable(options);
-            return this;
-        }        public MongoIndexArgs build() {
-            return new MongoIndexArgs(key, options);
+
+        public Builder options(MongoIndexOptionsArgs options) {
+            return options(Output.of(options));
+        }
+
+        public MongoIndexArgs build() {
+            return $;
         }
     }
+
 }

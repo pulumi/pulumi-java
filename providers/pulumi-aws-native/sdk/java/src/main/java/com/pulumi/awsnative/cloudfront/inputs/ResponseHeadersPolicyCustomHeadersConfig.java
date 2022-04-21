@@ -14,48 +14,49 @@ public final class ResponseHeadersPolicyCustomHeadersConfig extends com.pulumi.r
     public static final ResponseHeadersPolicyCustomHeadersConfig Empty = new ResponseHeadersPolicyCustomHeadersConfig();
 
     @Import(name="items", required=true)
-      private final List<ResponseHeadersPolicyCustomHeader> items;
+    private List<ResponseHeadersPolicyCustomHeader> items;
 
     public List<ResponseHeadersPolicyCustomHeader> items() {
         return this.items;
     }
 
-    public ResponseHeadersPolicyCustomHeadersConfig(List<ResponseHeadersPolicyCustomHeader> items) {
-        this.items = Objects.requireNonNull(items, "expected parameter 'items' to be non-null");
-    }
+    private ResponseHeadersPolicyCustomHeadersConfig() {}
 
-    private ResponseHeadersPolicyCustomHeadersConfig() {
-        this.items = List.of();
+    private ResponseHeadersPolicyCustomHeadersConfig(ResponseHeadersPolicyCustomHeadersConfig $) {
+        this.items = $.items;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ResponseHeadersPolicyCustomHeadersConfig defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<ResponseHeadersPolicyCustomHeader> items;
+        private ResponseHeadersPolicyCustomHeadersConfig $;
 
         public Builder() {
-    	      // Empty
+            $ = new ResponseHeadersPolicyCustomHeadersConfig();
         }
 
         public Builder(ResponseHeadersPolicyCustomHeadersConfig defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.items = defaults.items;
+            $ = new ResponseHeadersPolicyCustomHeadersConfig(Objects.requireNonNull(defaults));
         }
 
         public Builder items(List<ResponseHeadersPolicyCustomHeader> items) {
-            this.items = Objects.requireNonNull(items);
+            $.items = items;
             return this;
         }
+
         public Builder items(ResponseHeadersPolicyCustomHeader... items) {
             return items(List.of(items));
-        }        public ResponseHeadersPolicyCustomHeadersConfig build() {
-            return new ResponseHeadersPolicyCustomHeadersConfig(items);
+        }
+
+        public ResponseHeadersPolicyCustomHeadersConfig build() {
+            $.items = Objects.requireNonNull($.items, "expected parameter 'items' to be non-null");
+            return $;
         }
     }
+
 }

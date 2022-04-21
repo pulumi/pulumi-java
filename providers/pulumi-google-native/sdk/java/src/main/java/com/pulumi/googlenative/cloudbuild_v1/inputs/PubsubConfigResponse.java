@@ -21,7 +21,7 @@ public final class PubsubConfigResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="serviceAccountEmail", required=true)
-      private final String serviceAccountEmail;
+    private String serviceAccountEmail;
 
     public String serviceAccountEmail() {
         return this.serviceAccountEmail;
@@ -32,7 +32,7 @@ public final class PubsubConfigResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="state", required=true)
-      private final String state;
+    private String state;
 
     public String state() {
         return this.state;
@@ -43,7 +43,7 @@ public final class PubsubConfigResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="subscription", required=true)
-      private final String subscription;
+    private String subscription;
 
     public String subscription() {
         return this.subscription;
@@ -54,73 +54,66 @@ public final class PubsubConfigResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="topic", required=true)
-      private final String topic;
+    private String topic;
 
     public String topic() {
         return this.topic;
     }
 
-    public PubsubConfigResponse(
-        String serviceAccountEmail,
-        String state,
-        String subscription,
-        String topic) {
-        this.serviceAccountEmail = Objects.requireNonNull(serviceAccountEmail, "expected parameter 'serviceAccountEmail' to be non-null");
-        this.state = Objects.requireNonNull(state, "expected parameter 'state' to be non-null");
-        this.subscription = Objects.requireNonNull(subscription, "expected parameter 'subscription' to be non-null");
-        this.topic = Objects.requireNonNull(topic, "expected parameter 'topic' to be non-null");
-    }
+    private PubsubConfigResponse() {}
 
-    private PubsubConfigResponse() {
-        this.serviceAccountEmail = null;
-        this.state = null;
-        this.subscription = null;
-        this.topic = null;
+    private PubsubConfigResponse(PubsubConfigResponse $) {
+        this.serviceAccountEmail = $.serviceAccountEmail;
+        this.state = $.state;
+        this.subscription = $.subscription;
+        this.topic = $.topic;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PubsubConfigResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String serviceAccountEmail;
-        private String state;
-        private String subscription;
-        private String topic;
+        private PubsubConfigResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new PubsubConfigResponse();
         }
 
         public Builder(PubsubConfigResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.serviceAccountEmail = defaults.serviceAccountEmail;
-    	      this.state = defaults.state;
-    	      this.subscription = defaults.subscription;
-    	      this.topic = defaults.topic;
+            $ = new PubsubConfigResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder serviceAccountEmail(String serviceAccountEmail) {
-            this.serviceAccountEmail = Objects.requireNonNull(serviceAccountEmail);
+            $.serviceAccountEmail = serviceAccountEmail;
             return this;
         }
+
         public Builder state(String state) {
-            this.state = Objects.requireNonNull(state);
+            $.state = state;
             return this;
         }
+
         public Builder subscription(String subscription) {
-            this.subscription = Objects.requireNonNull(subscription);
+            $.subscription = subscription;
             return this;
         }
+
         public Builder topic(String topic) {
-            this.topic = Objects.requireNonNull(topic);
+            $.topic = topic;
             return this;
-        }        public PubsubConfigResponse build() {
-            return new PubsubConfigResponse(serviceAccountEmail, state, subscription, topic);
+        }
+
+        public PubsubConfigResponse build() {
+            $.serviceAccountEmail = Objects.requireNonNull($.serviceAccountEmail, "expected parameter 'serviceAccountEmail' to be non-null");
+            $.state = Objects.requireNonNull($.state, "expected parameter 'state' to be non-null");
+            $.subscription = Objects.requireNonNull($.subscription, "expected parameter 'subscription' to be non-null");
+            $.topic = Objects.requireNonNull($.topic, "expected parameter 'topic' to be non-null");
+            return $;
         }
     }
+
 }

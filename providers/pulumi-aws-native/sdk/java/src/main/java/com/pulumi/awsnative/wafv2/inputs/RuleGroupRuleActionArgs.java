@@ -9,8 +9,8 @@ import com.pulumi.awsnative.wafv2.inputs.RuleGroupRuleActionCaptchaPropertiesArg
 import com.pulumi.awsnative.wafv2.inputs.RuleGroupRuleActionCountPropertiesArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +27,10 @@ public final class RuleGroupRuleActionArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="allow")
-      private final @Nullable Output<RuleGroupRuleActionAllowPropertiesArgs> allow;
+    private @Nullable Output<RuleGroupRuleActionAllowPropertiesArgs> allow;
 
-    public Output<RuleGroupRuleActionAllowPropertiesArgs> allow() {
-        return this.allow == null ? Codegen.empty() : this.allow;
+    public Optional<Output<RuleGroupRuleActionAllowPropertiesArgs>> allow() {
+        return Optional.ofNullable(this.allow);
     }
 
     /**
@@ -38,10 +38,10 @@ public final class RuleGroupRuleActionArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="block")
-      private final @Nullable Output<RuleGroupRuleActionBlockPropertiesArgs> block;
+    private @Nullable Output<RuleGroupRuleActionBlockPropertiesArgs> block;
 
-    public Output<RuleGroupRuleActionBlockPropertiesArgs> block() {
-        return this.block == null ? Codegen.empty() : this.block;
+    public Optional<Output<RuleGroupRuleActionBlockPropertiesArgs>> block() {
+        return Optional.ofNullable(this.block);
     }
 
     /**
@@ -49,10 +49,10 @@ public final class RuleGroupRuleActionArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="captcha")
-      private final @Nullable Output<RuleGroupRuleActionCaptchaPropertiesArgs> captcha;
+    private @Nullable Output<RuleGroupRuleActionCaptchaPropertiesArgs> captcha;
 
-    public Output<RuleGroupRuleActionCaptchaPropertiesArgs> captcha() {
-        return this.captcha == null ? Codegen.empty() : this.captcha;
+    public Optional<Output<RuleGroupRuleActionCaptchaPropertiesArgs>> captcha() {
+        return Optional.ofNullable(this.captcha);
     }
 
     /**
@@ -60,89 +60,78 @@ public final class RuleGroupRuleActionArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="count")
-      private final @Nullable Output<RuleGroupRuleActionCountPropertiesArgs> count;
+    private @Nullable Output<RuleGroupRuleActionCountPropertiesArgs> count;
 
-    public Output<RuleGroupRuleActionCountPropertiesArgs> count() {
-        return this.count == null ? Codegen.empty() : this.count;
+    public Optional<Output<RuleGroupRuleActionCountPropertiesArgs>> count() {
+        return Optional.ofNullable(this.count);
     }
 
-    public RuleGroupRuleActionArgs(
-        @Nullable Output<RuleGroupRuleActionAllowPropertiesArgs> allow,
-        @Nullable Output<RuleGroupRuleActionBlockPropertiesArgs> block,
-        @Nullable Output<RuleGroupRuleActionCaptchaPropertiesArgs> captcha,
-        @Nullable Output<RuleGroupRuleActionCountPropertiesArgs> count) {
-        this.allow = allow;
-        this.block = block;
-        this.captcha = captcha;
-        this.count = count;
-    }
+    private RuleGroupRuleActionArgs() {}
 
-    private RuleGroupRuleActionArgs() {
-        this.allow = Codegen.empty();
-        this.block = Codegen.empty();
-        this.captcha = Codegen.empty();
-        this.count = Codegen.empty();
+    private RuleGroupRuleActionArgs(RuleGroupRuleActionArgs $) {
+        this.allow = $.allow;
+        this.block = $.block;
+        this.captcha = $.captcha;
+        this.count = $.count;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RuleGroupRuleActionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<RuleGroupRuleActionAllowPropertiesArgs> allow;
-        private @Nullable Output<RuleGroupRuleActionBlockPropertiesArgs> block;
-        private @Nullable Output<RuleGroupRuleActionCaptchaPropertiesArgs> captcha;
-        private @Nullable Output<RuleGroupRuleActionCountPropertiesArgs> count;
+        private RuleGroupRuleActionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RuleGroupRuleActionArgs();
         }
 
         public Builder(RuleGroupRuleActionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.allow = defaults.allow;
-    	      this.block = defaults.block;
-    	      this.captcha = defaults.captcha;
-    	      this.count = defaults.count;
+            $ = new RuleGroupRuleActionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder allow(@Nullable Output<RuleGroupRuleActionAllowPropertiesArgs> allow) {
-            this.allow = allow;
+            $.allow = allow;
             return this;
         }
-        public Builder allow(@Nullable RuleGroupRuleActionAllowPropertiesArgs allow) {
-            this.allow = Codegen.ofNullable(allow);
-            return this;
+
+        public Builder allow(RuleGroupRuleActionAllowPropertiesArgs allow) {
+            return allow(Output.of(allow));
         }
+
         public Builder block(@Nullable Output<RuleGroupRuleActionBlockPropertiesArgs> block) {
-            this.block = block;
+            $.block = block;
             return this;
         }
-        public Builder block(@Nullable RuleGroupRuleActionBlockPropertiesArgs block) {
-            this.block = Codegen.ofNullable(block);
-            return this;
+
+        public Builder block(RuleGroupRuleActionBlockPropertiesArgs block) {
+            return block(Output.of(block));
         }
+
         public Builder captcha(@Nullable Output<RuleGroupRuleActionCaptchaPropertiesArgs> captcha) {
-            this.captcha = captcha;
+            $.captcha = captcha;
             return this;
         }
-        public Builder captcha(@Nullable RuleGroupRuleActionCaptchaPropertiesArgs captcha) {
-            this.captcha = Codegen.ofNullable(captcha);
-            return this;
+
+        public Builder captcha(RuleGroupRuleActionCaptchaPropertiesArgs captcha) {
+            return captcha(Output.of(captcha));
         }
+
         public Builder count(@Nullable Output<RuleGroupRuleActionCountPropertiesArgs> count) {
-            this.count = count;
+            $.count = count;
             return this;
         }
-        public Builder count(@Nullable RuleGroupRuleActionCountPropertiesArgs count) {
-            this.count = Codegen.ofNullable(count);
-            return this;
-        }        public RuleGroupRuleActionArgs build() {
-            return new RuleGroupRuleActionArgs(allow, block, captcha, count);
+
+        public Builder count(RuleGroupRuleActionCountPropertiesArgs count) {
+            return count(Output.of(count));
+        }
+
+        public RuleGroupRuleActionArgs build() {
+            return $;
         }
     }
+
 }

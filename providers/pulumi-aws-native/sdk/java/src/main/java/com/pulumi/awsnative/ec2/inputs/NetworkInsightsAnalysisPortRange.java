@@ -15,62 +15,57 @@ public final class NetworkInsightsAnalysisPortRange extends com.pulumi.resources
     public static final NetworkInsightsAnalysisPortRange Empty = new NetworkInsightsAnalysisPortRange();
 
     @Import(name="from")
-      private final @Nullable Integer from;
+    private @Nullable Integer from;
 
     public Optional<Integer> from() {
-        return this.from == null ? Optional.empty() : Optional.ofNullable(this.from);
+        return Optional.ofNullable(this.from);
     }
 
     @Import(name="to")
-      private final @Nullable Integer to;
+    private @Nullable Integer to;
 
     public Optional<Integer> to() {
-        return this.to == null ? Optional.empty() : Optional.ofNullable(this.to);
+        return Optional.ofNullable(this.to);
     }
 
-    public NetworkInsightsAnalysisPortRange(
-        @Nullable Integer from,
-        @Nullable Integer to) {
-        this.from = from;
-        this.to = to;
-    }
+    private NetworkInsightsAnalysisPortRange() {}
 
-    private NetworkInsightsAnalysisPortRange() {
-        this.from = null;
-        this.to = null;
+    private NetworkInsightsAnalysisPortRange(NetworkInsightsAnalysisPortRange $) {
+        this.from = $.from;
+        this.to = $.to;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NetworkInsightsAnalysisPortRange defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Integer from;
-        private @Nullable Integer to;
+        private NetworkInsightsAnalysisPortRange $;
 
         public Builder() {
-    	      // Empty
+            $ = new NetworkInsightsAnalysisPortRange();
         }
 
         public Builder(NetworkInsightsAnalysisPortRange defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.from = defaults.from;
-    	      this.to = defaults.to;
+            $ = new NetworkInsightsAnalysisPortRange(Objects.requireNonNull(defaults));
         }
 
         public Builder from(@Nullable Integer from) {
-            this.from = from;
+            $.from = from;
             return this;
         }
+
         public Builder to(@Nullable Integer to) {
-            this.to = to;
+            $.to = to;
             return this;
-        }        public NetworkInsightsAnalysisPortRange build() {
-            return new NetworkInsightsAnalysisPortRange(from, to);
+        }
+
+        public NetworkInsightsAnalysisPortRange build() {
+            return $;
         }
     }
+
 }

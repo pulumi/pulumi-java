@@ -5,10 +5,10 @@ package com.pulumi.googlenative.bigquery_v2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.bigquery_v2.enums.StandardSqlDataTypeTypeKind;
 import com.pulumi.googlenative.bigquery_v2.inputs.StandardSqlStructTypeArgs;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class StandardSqlDataTypeArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="arrayElementType")
-      private final @Nullable Output<StandardSqlDataTypeArgs> arrayElementType;
+    private @Nullable Output<StandardSqlDataTypeArgs> arrayElementType;
 
-    public Output<StandardSqlDataTypeArgs> arrayElementType() {
-        return this.arrayElementType == null ? Codegen.empty() : this.arrayElementType;
+    public Optional<Output<StandardSqlDataTypeArgs>> arrayElementType() {
+        return Optional.ofNullable(this.arrayElementType);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class StandardSqlDataTypeArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="structType")
-      private final @Nullable Output<StandardSqlStructTypeArgs> structType;
+    private @Nullable Output<StandardSqlStructTypeArgs> structType;
 
-    public Output<StandardSqlStructTypeArgs> structType() {
-        return this.structType == null ? Codegen.empty() : this.structType;
+    public Optional<Output<StandardSqlStructTypeArgs>> structType() {
+        return Optional.ofNullable(this.structType);
     }
 
     /**
@@ -47,76 +47,69 @@ public final class StandardSqlDataTypeArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="typeKind", required=true)
-      private final Output<StandardSqlDataTypeTypeKind> typeKind;
+    private Output<StandardSqlDataTypeTypeKind> typeKind;
 
     public Output<StandardSqlDataTypeTypeKind> typeKind() {
         return this.typeKind;
     }
 
-    public StandardSqlDataTypeArgs(
-        @Nullable Output<StandardSqlDataTypeArgs> arrayElementType,
-        @Nullable Output<StandardSqlStructTypeArgs> structType,
-        Output<StandardSqlDataTypeTypeKind> typeKind) {
-        this.arrayElementType = arrayElementType;
-        this.structType = structType;
-        this.typeKind = Objects.requireNonNull(typeKind, "expected parameter 'typeKind' to be non-null");
-    }
+    private StandardSqlDataTypeArgs() {}
 
-    private StandardSqlDataTypeArgs() {
-        this.arrayElementType = Codegen.empty();
-        this.structType = Codegen.empty();
-        this.typeKind = Codegen.empty();
+    private StandardSqlDataTypeArgs(StandardSqlDataTypeArgs $) {
+        this.arrayElementType = $.arrayElementType;
+        this.structType = $.structType;
+        this.typeKind = $.typeKind;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(StandardSqlDataTypeArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<StandardSqlDataTypeArgs> arrayElementType;
-        private @Nullable Output<StandardSqlStructTypeArgs> structType;
-        private Output<StandardSqlDataTypeTypeKind> typeKind;
+        private StandardSqlDataTypeArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new StandardSqlDataTypeArgs();
         }
 
         public Builder(StandardSqlDataTypeArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.arrayElementType = defaults.arrayElementType;
-    	      this.structType = defaults.structType;
-    	      this.typeKind = defaults.typeKind;
+            $ = new StandardSqlDataTypeArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder arrayElementType(@Nullable Output<StandardSqlDataTypeArgs> arrayElementType) {
-            this.arrayElementType = arrayElementType;
+            $.arrayElementType = arrayElementType;
             return this;
         }
-        public Builder arrayElementType(@Nullable StandardSqlDataTypeArgs arrayElementType) {
-            this.arrayElementType = Codegen.ofNullable(arrayElementType);
-            return this;
+
+        public Builder arrayElementType(StandardSqlDataTypeArgs arrayElementType) {
+            return arrayElementType(Output.of(arrayElementType));
         }
+
         public Builder structType(@Nullable Output<StandardSqlStructTypeArgs> structType) {
-            this.structType = structType;
+            $.structType = structType;
             return this;
         }
-        public Builder structType(@Nullable StandardSqlStructTypeArgs structType) {
-            this.structType = Codegen.ofNullable(structType);
-            return this;
+
+        public Builder structType(StandardSqlStructTypeArgs structType) {
+            return structType(Output.of(structType));
         }
+
         public Builder typeKind(Output<StandardSqlDataTypeTypeKind> typeKind) {
-            this.typeKind = Objects.requireNonNull(typeKind);
+            $.typeKind = typeKind;
             return this;
         }
+
         public Builder typeKind(StandardSqlDataTypeTypeKind typeKind) {
-            this.typeKind = Output.of(Objects.requireNonNull(typeKind));
-            return this;
-        }        public StandardSqlDataTypeArgs build() {
-            return new StandardSqlDataTypeArgs(arrayElementType, structType, typeKind);
+            return typeKind(Output.of(typeKind));
+        }
+
+        public StandardSqlDataTypeArgs build() {
+            $.typeKind = Objects.requireNonNull($.typeKind, "expected parameter 'typeKind' to be non-null");
+            return $;
         }
     }
+
 }

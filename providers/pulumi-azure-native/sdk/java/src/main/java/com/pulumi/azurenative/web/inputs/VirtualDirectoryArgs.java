@@ -5,9 +5,9 @@ package com.pulumi.azurenative.web.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class VirtualDirectoryArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="physicalPath")
-      private final @Nullable Output<String> physicalPath;
+    private @Nullable Output<String> physicalPath;
 
-    public Output<String> physicalPath() {
-        return this.physicalPath == null ? Codegen.empty() : this.physicalPath;
+    public Optional<Output<String>> physicalPath() {
+        return Optional.ofNullable(this.physicalPath);
     }
 
     /**
@@ -35,63 +35,58 @@ public final class VirtualDirectoryArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="virtualPath")
-      private final @Nullable Output<String> virtualPath;
+    private @Nullable Output<String> virtualPath;
 
-    public Output<String> virtualPath() {
-        return this.virtualPath == null ? Codegen.empty() : this.virtualPath;
+    public Optional<Output<String>> virtualPath() {
+        return Optional.ofNullable(this.virtualPath);
     }
 
-    public VirtualDirectoryArgs(
-        @Nullable Output<String> physicalPath,
-        @Nullable Output<String> virtualPath) {
-        this.physicalPath = physicalPath;
-        this.virtualPath = virtualPath;
-    }
+    private VirtualDirectoryArgs() {}
 
-    private VirtualDirectoryArgs() {
-        this.physicalPath = Codegen.empty();
-        this.virtualPath = Codegen.empty();
+    private VirtualDirectoryArgs(VirtualDirectoryArgs $) {
+        this.physicalPath = $.physicalPath;
+        this.virtualPath = $.virtualPath;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VirtualDirectoryArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> physicalPath;
-        private @Nullable Output<String> virtualPath;
+        private VirtualDirectoryArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new VirtualDirectoryArgs();
         }
 
         public Builder(VirtualDirectoryArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.physicalPath = defaults.physicalPath;
-    	      this.virtualPath = defaults.virtualPath;
+            $ = new VirtualDirectoryArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder physicalPath(@Nullable Output<String> physicalPath) {
-            this.physicalPath = physicalPath;
+            $.physicalPath = physicalPath;
             return this;
         }
-        public Builder physicalPath(@Nullable String physicalPath) {
-            this.physicalPath = Codegen.ofNullable(physicalPath);
-            return this;
+
+        public Builder physicalPath(String physicalPath) {
+            return physicalPath(Output.of(physicalPath));
         }
+
         public Builder virtualPath(@Nullable Output<String> virtualPath) {
-            this.virtualPath = virtualPath;
+            $.virtualPath = virtualPath;
             return this;
         }
-        public Builder virtualPath(@Nullable String virtualPath) {
-            this.virtualPath = Codegen.ofNullable(virtualPath);
-            return this;
-        }        public VirtualDirectoryArgs build() {
-            return new VirtualDirectoryArgs(physicalPath, virtualPath);
+
+        public Builder virtualPath(String virtualPath) {
+            return virtualPath(Output.of(virtualPath));
+        }
+
+        public VirtualDirectoryArgs build() {
+            return $;
         }
     }
+
 }

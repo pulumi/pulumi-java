@@ -5,10 +5,10 @@ package com.pulumi.aws.securityhub;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,7 +21,7 @@ public final class FindingAggregatorArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="linkingMode", required=true)
-      private final Output<String> linkingMode;
+    private Output<String> linkingMode;
 
     public Output<String> linkingMode() {
         return this.linkingMode;
@@ -32,66 +32,63 @@ public final class FindingAggregatorArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="specifiedRegions")
-      private final @Nullable Output<List<String>> specifiedRegions;
+    private @Nullable Output<List<String>> specifiedRegions;
 
-    public Output<List<String>> specifiedRegions() {
-        return this.specifiedRegions == null ? Codegen.empty() : this.specifiedRegions;
+    public Optional<Output<List<String>>> specifiedRegions() {
+        return Optional.ofNullable(this.specifiedRegions);
     }
 
-    public FindingAggregatorArgs(
-        Output<String> linkingMode,
-        @Nullable Output<List<String>> specifiedRegions) {
-        this.linkingMode = Objects.requireNonNull(linkingMode, "expected parameter 'linkingMode' to be non-null");
-        this.specifiedRegions = specifiedRegions;
-    }
+    private FindingAggregatorArgs() {}
 
-    private FindingAggregatorArgs() {
-        this.linkingMode = Codegen.empty();
-        this.specifiedRegions = Codegen.empty();
+    private FindingAggregatorArgs(FindingAggregatorArgs $) {
+        this.linkingMode = $.linkingMode;
+        this.specifiedRegions = $.specifiedRegions;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FindingAggregatorArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> linkingMode;
-        private @Nullable Output<List<String>> specifiedRegions;
+        private FindingAggregatorArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new FindingAggregatorArgs();
         }
 
         public Builder(FindingAggregatorArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.linkingMode = defaults.linkingMode;
-    	      this.specifiedRegions = defaults.specifiedRegions;
+            $ = new FindingAggregatorArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder linkingMode(Output<String> linkingMode) {
-            this.linkingMode = Objects.requireNonNull(linkingMode);
+            $.linkingMode = linkingMode;
             return this;
         }
+
         public Builder linkingMode(String linkingMode) {
-            this.linkingMode = Output.of(Objects.requireNonNull(linkingMode));
-            return this;
+            return linkingMode(Output.of(linkingMode));
         }
+
         public Builder specifiedRegions(@Nullable Output<List<String>> specifiedRegions) {
-            this.specifiedRegions = specifiedRegions;
+            $.specifiedRegions = specifiedRegions;
             return this;
         }
-        public Builder specifiedRegions(@Nullable List<String> specifiedRegions) {
-            this.specifiedRegions = Codegen.ofNullable(specifiedRegions);
-            return this;
+
+        public Builder specifiedRegions(List<String> specifiedRegions) {
+            return specifiedRegions(Output.of(specifiedRegions));
         }
+
         public Builder specifiedRegions(String... specifiedRegions) {
             return specifiedRegions(List.of(specifiedRegions));
-        }        public FindingAggregatorArgs build() {
-            return new FindingAggregatorArgs(linkingMode, specifiedRegions);
+        }
+
+        public FindingAggregatorArgs build() {
+            $.linkingMode = Objects.requireNonNull($.linkingMode, "expected parameter 'linkingMode' to be non-null");
+            return $;
         }
     }
+
 }

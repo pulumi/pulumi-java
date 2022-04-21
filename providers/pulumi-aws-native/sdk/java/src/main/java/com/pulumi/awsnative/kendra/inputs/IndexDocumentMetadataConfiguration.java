@@ -18,94 +18,85 @@ public final class IndexDocumentMetadataConfiguration extends com.pulumi.resourc
     public static final IndexDocumentMetadataConfiguration Empty = new IndexDocumentMetadataConfiguration();
 
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
     }
 
     @Import(name="relevance")
-      private final @Nullable IndexRelevance relevance;
+    private @Nullable IndexRelevance relevance;
 
     public Optional<IndexRelevance> relevance() {
-        return this.relevance == null ? Optional.empty() : Optional.ofNullable(this.relevance);
+        return Optional.ofNullable(this.relevance);
     }
 
     @Import(name="search")
-      private final @Nullable IndexSearch search;
+    private @Nullable IndexSearch search;
 
     public Optional<IndexSearch> search() {
-        return this.search == null ? Optional.empty() : Optional.ofNullable(this.search);
+        return Optional.ofNullable(this.search);
     }
 
     @Import(name="type", required=true)
-      private final IndexDocumentAttributeValueType type;
+    private IndexDocumentAttributeValueType type;
 
     public IndexDocumentAttributeValueType type() {
         return this.type;
     }
 
-    public IndexDocumentMetadataConfiguration(
-        String name,
-        @Nullable IndexRelevance relevance,
-        @Nullable IndexSearch search,
-        IndexDocumentAttributeValueType type) {
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.relevance = relevance;
-        this.search = search;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private IndexDocumentMetadataConfiguration() {}
 
-    private IndexDocumentMetadataConfiguration() {
-        this.name = null;
-        this.relevance = null;
-        this.search = null;
-        this.type = null;
+    private IndexDocumentMetadataConfiguration(IndexDocumentMetadataConfiguration $) {
+        this.name = $.name;
+        this.relevance = $.relevance;
+        this.search = $.search;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(IndexDocumentMetadataConfiguration defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String name;
-        private @Nullable IndexRelevance relevance;
-        private @Nullable IndexSearch search;
-        private IndexDocumentAttributeValueType type;
+        private IndexDocumentMetadataConfiguration $;
 
         public Builder() {
-    	      // Empty
+            $ = new IndexDocumentMetadataConfiguration();
         }
 
         public Builder(IndexDocumentMetadataConfiguration defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.relevance = defaults.relevance;
-    	      this.search = defaults.search;
-    	      this.type = defaults.type;
+            $ = new IndexDocumentMetadataConfiguration(Objects.requireNonNull(defaults));
         }
 
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder relevance(@Nullable IndexRelevance relevance) {
-            this.relevance = relevance;
+            $.relevance = relevance;
             return this;
         }
+
         public Builder search(@Nullable IndexSearch search) {
-            this.search = search;
+            $.search = search;
             return this;
         }
+
         public Builder type(IndexDocumentAttributeValueType type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
-        }        public IndexDocumentMetadataConfiguration build() {
-            return new IndexDocumentMetadataConfiguration(name, relevance, search, type);
+        }
+
+        public IndexDocumentMetadataConfiguration build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

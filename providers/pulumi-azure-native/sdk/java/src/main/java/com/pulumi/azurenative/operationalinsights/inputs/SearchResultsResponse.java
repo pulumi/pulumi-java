@@ -24,10 +24,10 @@ public final class SearchResultsResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="description")
-      private final @Nullable String description;
+    private @Nullable String description;
 
     public Optional<String> description() {
-        return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class SearchResultsResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="endSearchTime")
-      private final @Nullable String endSearchTime;
+    private @Nullable String endSearchTime;
 
     public Optional<String> endSearchTime() {
-        return this.endSearchTime == null ? Optional.empty() : Optional.ofNullable(this.endSearchTime);
+        return Optional.ofNullable(this.endSearchTime);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class SearchResultsResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="limit")
-      private final @Nullable Integer limit;
+    private @Nullable Integer limit;
 
     public Optional<Integer> limit() {
-        return this.limit == null ? Optional.empty() : Optional.ofNullable(this.limit);
+        return Optional.ofNullable(this.limit);
     }
 
     /**
@@ -57,10 +57,10 @@ public final class SearchResultsResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="query")
-      private final @Nullable String query;
+    private @Nullable String query;
 
     public Optional<String> query() {
-        return this.query == null ? Optional.empty() : Optional.ofNullable(this.query);
+        return Optional.ofNullable(this.query);
     }
 
     /**
@@ -68,7 +68,7 @@ public final class SearchResultsResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="sourceTable", required=true)
-      private final String sourceTable;
+    private String sourceTable;
 
     public String sourceTable() {
         return this.sourceTable;
@@ -79,91 +79,75 @@ public final class SearchResultsResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="startSearchTime")
-      private final @Nullable String startSearchTime;
+    private @Nullable String startSearchTime;
 
     public Optional<String> startSearchTime() {
-        return this.startSearchTime == null ? Optional.empty() : Optional.ofNullable(this.startSearchTime);
+        return Optional.ofNullable(this.startSearchTime);
     }
 
-    public SearchResultsResponse(
-        @Nullable String description,
-        @Nullable String endSearchTime,
-        @Nullable Integer limit,
-        @Nullable String query,
-        String sourceTable,
-        @Nullable String startSearchTime) {
-        this.description = description;
-        this.endSearchTime = endSearchTime;
-        this.limit = limit;
-        this.query = query;
-        this.sourceTable = Objects.requireNonNull(sourceTable, "expected parameter 'sourceTable' to be non-null");
-        this.startSearchTime = startSearchTime;
-    }
+    private SearchResultsResponse() {}
 
-    private SearchResultsResponse() {
-        this.description = null;
-        this.endSearchTime = null;
-        this.limit = null;
-        this.query = null;
-        this.sourceTable = null;
-        this.startSearchTime = null;
+    private SearchResultsResponse(SearchResultsResponse $) {
+        this.description = $.description;
+        this.endSearchTime = $.endSearchTime;
+        this.limit = $.limit;
+        this.query = $.query;
+        this.sourceTable = $.sourceTable;
+        this.startSearchTime = $.startSearchTime;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SearchResultsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String description;
-        private @Nullable String endSearchTime;
-        private @Nullable Integer limit;
-        private @Nullable String query;
-        private String sourceTable;
-        private @Nullable String startSearchTime;
+        private SearchResultsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new SearchResultsResponse();
         }
 
         public Builder(SearchResultsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.description = defaults.description;
-    	      this.endSearchTime = defaults.endSearchTime;
-    	      this.limit = defaults.limit;
-    	      this.query = defaults.query;
-    	      this.sourceTable = defaults.sourceTable;
-    	      this.startSearchTime = defaults.startSearchTime;
+            $ = new SearchResultsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder description(@Nullable String description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
+
         public Builder endSearchTime(@Nullable String endSearchTime) {
-            this.endSearchTime = endSearchTime;
+            $.endSearchTime = endSearchTime;
             return this;
         }
+
         public Builder limit(@Nullable Integer limit) {
-            this.limit = limit;
+            $.limit = limit;
             return this;
         }
+
         public Builder query(@Nullable String query) {
-            this.query = query;
+            $.query = query;
             return this;
         }
+
         public Builder sourceTable(String sourceTable) {
-            this.sourceTable = Objects.requireNonNull(sourceTable);
+            $.sourceTable = sourceTable;
             return this;
         }
+
         public Builder startSearchTime(@Nullable String startSearchTime) {
-            this.startSearchTime = startSearchTime;
+            $.startSearchTime = startSearchTime;
             return this;
-        }        public SearchResultsResponse build() {
-            return new SearchResultsResponse(description, endSearchTime, limit, query, sourceTable, startSearchTime);
+        }
+
+        public SearchResultsResponse build() {
+            $.sourceTable = Objects.requireNonNull($.sourceTable, "expected parameter 'sourceTable' to be non-null");
+            return $;
         }
     }
+
 }

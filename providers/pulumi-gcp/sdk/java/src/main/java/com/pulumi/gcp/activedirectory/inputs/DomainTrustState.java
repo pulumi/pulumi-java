@@ -5,11 +5,11 @@ package com.pulumi.gcp.activedirectory.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,10 @@ public final class DomainTrustState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="domain")
-      private final @Nullable Output<String> domain;
+    private @Nullable Output<String> domain;
 
-    public Output<String> domain() {
-        return this.domain == null ? Codegen.empty() : this.domain;
+    public Optional<Output<String>> domain() {
+        return Optional.ofNullable(this.domain);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class DomainTrustState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class DomainTrustState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="selectiveAuthentication")
-      private final @Nullable Output<Boolean> selectiveAuthentication;
+    private @Nullable Output<Boolean> selectiveAuthentication;
 
-    public Output<Boolean> selectiveAuthentication() {
-        return this.selectiveAuthentication == null ? Codegen.empty() : this.selectiveAuthentication;
+    public Optional<Output<Boolean>> selectiveAuthentication() {
+        return Optional.ofNullable(this.selectiveAuthentication);
     }
 
     /**
@@ -57,10 +57,10 @@ public final class DomainTrustState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="targetDnsIpAddresses")
-      private final @Nullable Output<List<String>> targetDnsIpAddresses;
+    private @Nullable Output<List<String>> targetDnsIpAddresses;
 
-    public Output<List<String>> targetDnsIpAddresses() {
-        return this.targetDnsIpAddresses == null ? Codegen.empty() : this.targetDnsIpAddresses;
+    public Optional<Output<List<String>>> targetDnsIpAddresses() {
+        return Optional.ofNullable(this.targetDnsIpAddresses);
     }
 
     /**
@@ -68,10 +68,10 @@ public final class DomainTrustState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="targetDomainName")
-      private final @Nullable Output<String> targetDomainName;
+    private @Nullable Output<String> targetDomainName;
 
-    public Output<String> targetDomainName() {
-        return this.targetDomainName == null ? Codegen.empty() : this.targetDomainName;
+    public Optional<Output<String>> targetDomainName() {
+        return Optional.ofNullable(this.targetDomainName);
     }
 
     /**
@@ -80,10 +80,10 @@ public final class DomainTrustState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="trustDirection")
-      private final @Nullable Output<String> trustDirection;
+    private @Nullable Output<String> trustDirection;
 
-    public Output<String> trustDirection() {
-        return this.trustDirection == null ? Codegen.empty() : this.trustDirection;
+    public Optional<Output<String>> trustDirection() {
+        return Optional.ofNullable(this.trustDirection);
     }
 
     /**
@@ -92,10 +92,10 @@ public final class DomainTrustState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="trustHandshakeSecret")
-      private final @Nullable Output<String> trustHandshakeSecret;
+    private @Nullable Output<String> trustHandshakeSecret;
 
-    public Output<String> trustHandshakeSecret() {
-        return this.trustHandshakeSecret == null ? Codegen.empty() : this.trustHandshakeSecret;
+    public Optional<Output<String>> trustHandshakeSecret() {
+        return Optional.ofNullable(this.trustHandshakeSecret);
     }
 
     /**
@@ -104,144 +104,122 @@ public final class DomainTrustState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="trustType")
-      private final @Nullable Output<String> trustType;
+    private @Nullable Output<String> trustType;
 
-    public Output<String> trustType() {
-        return this.trustType == null ? Codegen.empty() : this.trustType;
+    public Optional<Output<String>> trustType() {
+        return Optional.ofNullable(this.trustType);
     }
 
-    public DomainTrustState(
-        @Nullable Output<String> domain,
-        @Nullable Output<String> project,
-        @Nullable Output<Boolean> selectiveAuthentication,
-        @Nullable Output<List<String>> targetDnsIpAddresses,
-        @Nullable Output<String> targetDomainName,
-        @Nullable Output<String> trustDirection,
-        @Nullable Output<String> trustHandshakeSecret,
-        @Nullable Output<String> trustType) {
-        this.domain = domain;
-        this.project = project;
-        this.selectiveAuthentication = selectiveAuthentication;
-        this.targetDnsIpAddresses = targetDnsIpAddresses;
-        this.targetDomainName = targetDomainName;
-        this.trustDirection = trustDirection;
-        this.trustHandshakeSecret = trustHandshakeSecret;
-        this.trustType = trustType;
-    }
+    private DomainTrustState() {}
 
-    private DomainTrustState() {
-        this.domain = Codegen.empty();
-        this.project = Codegen.empty();
-        this.selectiveAuthentication = Codegen.empty();
-        this.targetDnsIpAddresses = Codegen.empty();
-        this.targetDomainName = Codegen.empty();
-        this.trustDirection = Codegen.empty();
-        this.trustHandshakeSecret = Codegen.empty();
-        this.trustType = Codegen.empty();
+    private DomainTrustState(DomainTrustState $) {
+        this.domain = $.domain;
+        this.project = $.project;
+        this.selectiveAuthentication = $.selectiveAuthentication;
+        this.targetDnsIpAddresses = $.targetDnsIpAddresses;
+        this.targetDomainName = $.targetDomainName;
+        this.trustDirection = $.trustDirection;
+        this.trustHandshakeSecret = $.trustHandshakeSecret;
+        this.trustType = $.trustType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DomainTrustState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> domain;
-        private @Nullable Output<String> project;
-        private @Nullable Output<Boolean> selectiveAuthentication;
-        private @Nullable Output<List<String>> targetDnsIpAddresses;
-        private @Nullable Output<String> targetDomainName;
-        private @Nullable Output<String> trustDirection;
-        private @Nullable Output<String> trustHandshakeSecret;
-        private @Nullable Output<String> trustType;
+        private DomainTrustState $;
 
         public Builder() {
-    	      // Empty
+            $ = new DomainTrustState();
         }
 
         public Builder(DomainTrustState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.domain = defaults.domain;
-    	      this.project = defaults.project;
-    	      this.selectiveAuthentication = defaults.selectiveAuthentication;
-    	      this.targetDnsIpAddresses = defaults.targetDnsIpAddresses;
-    	      this.targetDomainName = defaults.targetDomainName;
-    	      this.trustDirection = defaults.trustDirection;
-    	      this.trustHandshakeSecret = defaults.trustHandshakeSecret;
-    	      this.trustType = defaults.trustType;
+            $ = new DomainTrustState(Objects.requireNonNull(defaults));
         }
 
         public Builder domain(@Nullable Output<String> domain) {
-            this.domain = domain;
+            $.domain = domain;
             return this;
         }
-        public Builder domain(@Nullable String domain) {
-            this.domain = Codegen.ofNullable(domain);
-            return this;
+
+        public Builder domain(String domain) {
+            return domain(Output.of(domain));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder selectiveAuthentication(@Nullable Output<Boolean> selectiveAuthentication) {
-            this.selectiveAuthentication = selectiveAuthentication;
+            $.selectiveAuthentication = selectiveAuthentication;
             return this;
         }
-        public Builder selectiveAuthentication(@Nullable Boolean selectiveAuthentication) {
-            this.selectiveAuthentication = Codegen.ofNullable(selectiveAuthentication);
-            return this;
+
+        public Builder selectiveAuthentication(Boolean selectiveAuthentication) {
+            return selectiveAuthentication(Output.of(selectiveAuthentication));
         }
+
         public Builder targetDnsIpAddresses(@Nullable Output<List<String>> targetDnsIpAddresses) {
-            this.targetDnsIpAddresses = targetDnsIpAddresses;
+            $.targetDnsIpAddresses = targetDnsIpAddresses;
             return this;
         }
-        public Builder targetDnsIpAddresses(@Nullable List<String> targetDnsIpAddresses) {
-            this.targetDnsIpAddresses = Codegen.ofNullable(targetDnsIpAddresses);
-            return this;
+
+        public Builder targetDnsIpAddresses(List<String> targetDnsIpAddresses) {
+            return targetDnsIpAddresses(Output.of(targetDnsIpAddresses));
         }
+
         public Builder targetDnsIpAddresses(String... targetDnsIpAddresses) {
             return targetDnsIpAddresses(List.of(targetDnsIpAddresses));
         }
+
         public Builder targetDomainName(@Nullable Output<String> targetDomainName) {
-            this.targetDomainName = targetDomainName;
+            $.targetDomainName = targetDomainName;
             return this;
         }
-        public Builder targetDomainName(@Nullable String targetDomainName) {
-            this.targetDomainName = Codegen.ofNullable(targetDomainName);
-            return this;
+
+        public Builder targetDomainName(String targetDomainName) {
+            return targetDomainName(Output.of(targetDomainName));
         }
+
         public Builder trustDirection(@Nullable Output<String> trustDirection) {
-            this.trustDirection = trustDirection;
+            $.trustDirection = trustDirection;
             return this;
         }
-        public Builder trustDirection(@Nullable String trustDirection) {
-            this.trustDirection = Codegen.ofNullable(trustDirection);
-            return this;
+
+        public Builder trustDirection(String trustDirection) {
+            return trustDirection(Output.of(trustDirection));
         }
+
         public Builder trustHandshakeSecret(@Nullable Output<String> trustHandshakeSecret) {
-            this.trustHandshakeSecret = trustHandshakeSecret;
+            $.trustHandshakeSecret = trustHandshakeSecret;
             return this;
         }
-        public Builder trustHandshakeSecret(@Nullable String trustHandshakeSecret) {
-            this.trustHandshakeSecret = Codegen.ofNullable(trustHandshakeSecret);
-            return this;
+
+        public Builder trustHandshakeSecret(String trustHandshakeSecret) {
+            return trustHandshakeSecret(Output.of(trustHandshakeSecret));
         }
+
         public Builder trustType(@Nullable Output<String> trustType) {
-            this.trustType = trustType;
+            $.trustType = trustType;
             return this;
         }
-        public Builder trustType(@Nullable String trustType) {
-            this.trustType = Codegen.ofNullable(trustType);
-            return this;
-        }        public DomainTrustState build() {
-            return new DomainTrustState(domain, project, selectiveAuthentication, targetDnsIpAddresses, targetDomainName, trustDirection, trustHandshakeSecret, trustType);
+
+        public Builder trustType(String trustType) {
+            return trustType(Output.of(trustType));
+        }
+
+        public DomainTrustState build() {
+            return $;
         }
     }
+
 }

@@ -21,7 +21,7 @@ public final class MethodMapResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="create", required=true)
-      private final String create;
+    private String create;
 
     public String create() {
         return this.create;
@@ -32,7 +32,7 @@ public final class MethodMapResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="delete", required=true)
-      private final String delete;
+    private String delete;
 
     public String delete() {
         return this.delete;
@@ -43,7 +43,7 @@ public final class MethodMapResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="get", required=true)
-      private final String get;
+    private String get;
 
     public String get() {
         return this.get;
@@ -54,7 +54,7 @@ public final class MethodMapResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="setIamPolicy", required=true)
-      private final String setIamPolicy;
+    private String setIamPolicy;
 
     public String setIamPolicy() {
         return this.setIamPolicy;
@@ -65,82 +65,73 @@ public final class MethodMapResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="update", required=true)
-      private final String update;
+    private String update;
 
     public String update() {
         return this.update;
     }
 
-    public MethodMapResponse(
-        String create,
-        String delete,
-        String get,
-        String setIamPolicy,
-        String update) {
-        this.create = Objects.requireNonNull(create, "expected parameter 'create' to be non-null");
-        this.delete = Objects.requireNonNull(delete, "expected parameter 'delete' to be non-null");
-        this.get = Objects.requireNonNull(get, "expected parameter 'get' to be non-null");
-        this.setIamPolicy = Objects.requireNonNull(setIamPolicy, "expected parameter 'setIamPolicy' to be non-null");
-        this.update = Objects.requireNonNull(update, "expected parameter 'update' to be non-null");
-    }
+    private MethodMapResponse() {}
 
-    private MethodMapResponse() {
-        this.create = null;
-        this.delete = null;
-        this.get = null;
-        this.setIamPolicy = null;
-        this.update = null;
+    private MethodMapResponse(MethodMapResponse $) {
+        this.create = $.create;
+        this.delete = $.delete;
+        this.get = $.get;
+        this.setIamPolicy = $.setIamPolicy;
+        this.update = $.update;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MethodMapResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String create;
-        private String delete;
-        private String get;
-        private String setIamPolicy;
-        private String update;
+        private MethodMapResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new MethodMapResponse();
         }
 
         public Builder(MethodMapResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.create = defaults.create;
-    	      this.delete = defaults.delete;
-    	      this.get = defaults.get;
-    	      this.setIamPolicy = defaults.setIamPolicy;
-    	      this.update = defaults.update;
+            $ = new MethodMapResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder create(String create) {
-            this.create = Objects.requireNonNull(create);
+            $.create = create;
             return this;
         }
+
         public Builder delete(String delete) {
-            this.delete = Objects.requireNonNull(delete);
+            $.delete = delete;
             return this;
         }
+
         public Builder get(String get) {
-            this.get = Objects.requireNonNull(get);
+            $.get = get;
             return this;
         }
+
         public Builder setIamPolicy(String setIamPolicy) {
-            this.setIamPolicy = Objects.requireNonNull(setIamPolicy);
+            $.setIamPolicy = setIamPolicy;
             return this;
         }
+
         public Builder update(String update) {
-            this.update = Objects.requireNonNull(update);
+            $.update = update;
             return this;
-        }        public MethodMapResponse build() {
-            return new MethodMapResponse(create, delete, get, setIamPolicy, update);
+        }
+
+        public MethodMapResponse build() {
+            $.create = Objects.requireNonNull($.create, "expected parameter 'create' to be non-null");
+            $.delete = Objects.requireNonNull($.delete, "expected parameter 'delete' to be non-null");
+            $.get = Objects.requireNonNull($.get, "expected parameter 'get' to be non-null");
+            $.setIamPolicy = Objects.requireNonNull($.setIamPolicy, "expected parameter 'setIamPolicy' to be non-null");
+            $.update = Objects.requireNonNull($.update, "expected parameter 'update' to be non-null");
+            return $;
         }
     }
+
 }

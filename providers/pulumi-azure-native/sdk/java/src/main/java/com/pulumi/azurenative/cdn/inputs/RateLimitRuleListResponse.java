@@ -24,48 +24,48 @@ public final class RateLimitRuleListResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="rules")
-      private final @Nullable List<RateLimitRuleResponse> rules;
+    private @Nullable List<RateLimitRuleResponse> rules;
 
-    public List<RateLimitRuleResponse> rules() {
-        return this.rules == null ? List.of() : this.rules;
+    public Optional<List<RateLimitRuleResponse>> rules() {
+        return Optional.ofNullable(this.rules);
     }
 
-    public RateLimitRuleListResponse(@Nullable List<RateLimitRuleResponse> rules) {
-        this.rules = rules;
-    }
+    private RateLimitRuleListResponse() {}
 
-    private RateLimitRuleListResponse() {
-        this.rules = List.of();
+    private RateLimitRuleListResponse(RateLimitRuleListResponse $) {
+        this.rules = $.rules;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RateLimitRuleListResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<RateLimitRuleResponse> rules;
+        private RateLimitRuleListResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new RateLimitRuleListResponse();
         }
 
         public Builder(RateLimitRuleListResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.rules = defaults.rules;
+            $ = new RateLimitRuleListResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder rules(@Nullable List<RateLimitRuleResponse> rules) {
-            this.rules = rules;
+            $.rules = rules;
             return this;
         }
+
         public Builder rules(RateLimitRuleResponse... rules) {
             return rules(List.of(rules));
-        }        public RateLimitRuleListResponse build() {
-            return new RateLimitRuleListResponse(rules);
+        }
+
+        public RateLimitRuleListResponse build() {
+            return $;
         }
     }
+
 }

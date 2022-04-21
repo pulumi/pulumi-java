@@ -6,9 +6,9 @@ package com.pulumi.awsnative.sagemaker.inputs;
 import com.pulumi.awsnative.sagemaker.inputs.ModelBiasJobDefinitionConstraintsResourceArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,70 +21,65 @@ public final class ModelBiasJobDefinitionModelBiasBaselineConfigArgs extends com
     public static final ModelBiasJobDefinitionModelBiasBaselineConfigArgs Empty = new ModelBiasJobDefinitionModelBiasBaselineConfigArgs();
 
     @Import(name="baseliningJobName")
-      private final @Nullable Output<String> baseliningJobName;
+    private @Nullable Output<String> baseliningJobName;
 
-    public Output<String> baseliningJobName() {
-        return this.baseliningJobName == null ? Codegen.empty() : this.baseliningJobName;
+    public Optional<Output<String>> baseliningJobName() {
+        return Optional.ofNullable(this.baseliningJobName);
     }
 
     @Import(name="constraintsResource")
-      private final @Nullable Output<ModelBiasJobDefinitionConstraintsResourceArgs> constraintsResource;
+    private @Nullable Output<ModelBiasJobDefinitionConstraintsResourceArgs> constraintsResource;
 
-    public Output<ModelBiasJobDefinitionConstraintsResourceArgs> constraintsResource() {
-        return this.constraintsResource == null ? Codegen.empty() : this.constraintsResource;
+    public Optional<Output<ModelBiasJobDefinitionConstraintsResourceArgs>> constraintsResource() {
+        return Optional.ofNullable(this.constraintsResource);
     }
 
-    public ModelBiasJobDefinitionModelBiasBaselineConfigArgs(
-        @Nullable Output<String> baseliningJobName,
-        @Nullable Output<ModelBiasJobDefinitionConstraintsResourceArgs> constraintsResource) {
-        this.baseliningJobName = baseliningJobName;
-        this.constraintsResource = constraintsResource;
-    }
+    private ModelBiasJobDefinitionModelBiasBaselineConfigArgs() {}
 
-    private ModelBiasJobDefinitionModelBiasBaselineConfigArgs() {
-        this.baseliningJobName = Codegen.empty();
-        this.constraintsResource = Codegen.empty();
+    private ModelBiasJobDefinitionModelBiasBaselineConfigArgs(ModelBiasJobDefinitionModelBiasBaselineConfigArgs $) {
+        this.baseliningJobName = $.baseliningJobName;
+        this.constraintsResource = $.constraintsResource;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ModelBiasJobDefinitionModelBiasBaselineConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> baseliningJobName;
-        private @Nullable Output<ModelBiasJobDefinitionConstraintsResourceArgs> constraintsResource;
+        private ModelBiasJobDefinitionModelBiasBaselineConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ModelBiasJobDefinitionModelBiasBaselineConfigArgs();
         }
 
         public Builder(ModelBiasJobDefinitionModelBiasBaselineConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.baseliningJobName = defaults.baseliningJobName;
-    	      this.constraintsResource = defaults.constraintsResource;
+            $ = new ModelBiasJobDefinitionModelBiasBaselineConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder baseliningJobName(@Nullable Output<String> baseliningJobName) {
-            this.baseliningJobName = baseliningJobName;
+            $.baseliningJobName = baseliningJobName;
             return this;
         }
-        public Builder baseliningJobName(@Nullable String baseliningJobName) {
-            this.baseliningJobName = Codegen.ofNullable(baseliningJobName);
-            return this;
+
+        public Builder baseliningJobName(String baseliningJobName) {
+            return baseliningJobName(Output.of(baseliningJobName));
         }
+
         public Builder constraintsResource(@Nullable Output<ModelBiasJobDefinitionConstraintsResourceArgs> constraintsResource) {
-            this.constraintsResource = constraintsResource;
+            $.constraintsResource = constraintsResource;
             return this;
         }
-        public Builder constraintsResource(@Nullable ModelBiasJobDefinitionConstraintsResourceArgs constraintsResource) {
-            this.constraintsResource = Codegen.ofNullable(constraintsResource);
-            return this;
-        }        public ModelBiasJobDefinitionModelBiasBaselineConfigArgs build() {
-            return new ModelBiasJobDefinitionModelBiasBaselineConfigArgs(baseliningJobName, constraintsResource);
+
+        public Builder constraintsResource(ModelBiasJobDefinitionConstraintsResourceArgs constraintsResource) {
+            return constraintsResource(Output.of(constraintsResource));
+        }
+
+        public ModelBiasJobDefinitionModelBiasBaselineConfigArgs build() {
+            return $;
         }
     }
+
 }

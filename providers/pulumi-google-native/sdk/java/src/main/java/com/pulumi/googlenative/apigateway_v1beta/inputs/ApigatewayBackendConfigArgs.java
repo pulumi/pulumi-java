@@ -5,9 +5,9 @@ package com.pulumi.googlenative.apigateway_v1beta.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class ApigatewayBackendConfigArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="googleServiceAccount")
-      private final @Nullable Output<String> googleServiceAccount;
+    private @Nullable Output<String> googleServiceAccount;
 
-    public Output<String> googleServiceAccount() {
-        return this.googleServiceAccount == null ? Codegen.empty() : this.googleServiceAccount;
+    public Optional<Output<String>> googleServiceAccount() {
+        return Optional.ofNullable(this.googleServiceAccount);
     }
 
-    public ApigatewayBackendConfigArgs(@Nullable Output<String> googleServiceAccount) {
-        this.googleServiceAccount = googleServiceAccount;
-    }
+    private ApigatewayBackendConfigArgs() {}
 
-    private ApigatewayBackendConfigArgs() {
-        this.googleServiceAccount = Codegen.empty();
+    private ApigatewayBackendConfigArgs(ApigatewayBackendConfigArgs $) {
+        this.googleServiceAccount = $.googleServiceAccount;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ApigatewayBackendConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> googleServiceAccount;
+        private ApigatewayBackendConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ApigatewayBackendConfigArgs();
         }
 
         public Builder(ApigatewayBackendConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.googleServiceAccount = defaults.googleServiceAccount;
+            $ = new ApigatewayBackendConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder googleServiceAccount(@Nullable Output<String> googleServiceAccount) {
-            this.googleServiceAccount = googleServiceAccount;
+            $.googleServiceAccount = googleServiceAccount;
             return this;
         }
-        public Builder googleServiceAccount(@Nullable String googleServiceAccount) {
-            this.googleServiceAccount = Codegen.ofNullable(googleServiceAccount);
-            return this;
-        }        public ApigatewayBackendConfigArgs build() {
-            return new ApigatewayBackendConfigArgs(googleServiceAccount);
+
+        public Builder googleServiceAccount(String googleServiceAccount) {
+            return googleServiceAccount(Output.of(googleServiceAccount));
+        }
+
+        public ApigatewayBackendConfigArgs build() {
+            return $;
         }
     }
+
 }

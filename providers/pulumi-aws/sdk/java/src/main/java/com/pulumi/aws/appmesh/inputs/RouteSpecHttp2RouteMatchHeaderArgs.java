@@ -6,10 +6,10 @@ package com.pulumi.aws.appmesh.inputs;
 import com.pulumi.aws.appmesh.inputs.RouteSpecHttp2RouteMatchHeaderMatchArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class RouteSpecHttp2RouteMatchHeaderArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="invert")
-      private final @Nullable Output<Boolean> invert;
+    private @Nullable Output<Boolean> invert;
 
-    public Output<Boolean> invert() {
-        return this.invert == null ? Codegen.empty() : this.invert;
+    public Optional<Output<Boolean>> invert() {
+        return Optional.ofNullable(this.invert);
     }
 
     /**
@@ -33,10 +33,10 @@ public final class RouteSpecHttp2RouteMatchHeaderArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="match")
-      private final @Nullable Output<RouteSpecHttp2RouteMatchHeaderMatchArgs> match;
+    private @Nullable Output<RouteSpecHttp2RouteMatchHeaderMatchArgs> match;
 
-    public Output<RouteSpecHttp2RouteMatchHeaderMatchArgs> match() {
-        return this.match == null ? Codegen.empty() : this.match;
+    public Optional<Output<RouteSpecHttp2RouteMatchHeaderMatchArgs>> match() {
+        return Optional.ofNullable(this.match);
     }
 
     /**
@@ -44,76 +44,69 @@ public final class RouteSpecHttp2RouteMatchHeaderArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="name", required=true)
-      private final Output<String> name;
+    private Output<String> name;
 
     public Output<String> name() {
         return this.name;
     }
 
-    public RouteSpecHttp2RouteMatchHeaderArgs(
-        @Nullable Output<Boolean> invert,
-        @Nullable Output<RouteSpecHttp2RouteMatchHeaderMatchArgs> match,
-        Output<String> name) {
-        this.invert = invert;
-        this.match = match;
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-    }
+    private RouteSpecHttp2RouteMatchHeaderArgs() {}
 
-    private RouteSpecHttp2RouteMatchHeaderArgs() {
-        this.invert = Codegen.empty();
-        this.match = Codegen.empty();
-        this.name = Codegen.empty();
+    private RouteSpecHttp2RouteMatchHeaderArgs(RouteSpecHttp2RouteMatchHeaderArgs $) {
+        this.invert = $.invert;
+        this.match = $.match;
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RouteSpecHttp2RouteMatchHeaderArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> invert;
-        private @Nullable Output<RouteSpecHttp2RouteMatchHeaderMatchArgs> match;
-        private Output<String> name;
+        private RouteSpecHttp2RouteMatchHeaderArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RouteSpecHttp2RouteMatchHeaderArgs();
         }
 
         public Builder(RouteSpecHttp2RouteMatchHeaderArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.invert = defaults.invert;
-    	      this.match = defaults.match;
-    	      this.name = defaults.name;
+            $ = new RouteSpecHttp2RouteMatchHeaderArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder invert(@Nullable Output<Boolean> invert) {
-            this.invert = invert;
+            $.invert = invert;
             return this;
         }
-        public Builder invert(@Nullable Boolean invert) {
-            this.invert = Codegen.ofNullable(invert);
-            return this;
+
+        public Builder invert(Boolean invert) {
+            return invert(Output.of(invert));
         }
+
         public Builder match(@Nullable Output<RouteSpecHttp2RouteMatchHeaderMatchArgs> match) {
-            this.match = match;
+            $.match = match;
             return this;
         }
-        public Builder match(@Nullable RouteSpecHttp2RouteMatchHeaderMatchArgs match) {
-            this.match = Codegen.ofNullable(match);
-            return this;
+
+        public Builder match(RouteSpecHttp2RouteMatchHeaderMatchArgs match) {
+            return match(Output.of(match));
         }
+
         public Builder name(Output<String> name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Output.of(Objects.requireNonNull(name));
-            return this;
-        }        public RouteSpecHttp2RouteMatchHeaderArgs build() {
-            return new RouteSpecHttp2RouteMatchHeaderArgs(invert, match, name);
+            return name(Output.of(name));
+        }
+
+        public RouteSpecHttp2RouteMatchHeaderArgs build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            return $;
         }
     }
+
 }

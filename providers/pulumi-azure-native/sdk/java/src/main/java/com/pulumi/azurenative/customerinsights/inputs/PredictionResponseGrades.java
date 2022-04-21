@@ -24,10 +24,10 @@ public final class PredictionResponseGrades extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="gradeName")
-      private final @Nullable String gradeName;
+    private @Nullable String gradeName;
 
     public Optional<String> gradeName() {
-        return this.gradeName == null ? Optional.empty() : Optional.ofNullable(this.gradeName);
+        return Optional.ofNullable(this.gradeName);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class PredictionResponseGrades extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="maxScoreThreshold")
-      private final @Nullable Integer maxScoreThreshold;
+    private @Nullable Integer maxScoreThreshold;
 
     public Optional<Integer> maxScoreThreshold() {
-        return this.maxScoreThreshold == null ? Optional.empty() : Optional.ofNullable(this.maxScoreThreshold);
+        return Optional.ofNullable(this.maxScoreThreshold);
     }
 
     /**
@@ -46,64 +46,56 @@ public final class PredictionResponseGrades extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="minScoreThreshold")
-      private final @Nullable Integer minScoreThreshold;
+    private @Nullable Integer minScoreThreshold;
 
     public Optional<Integer> minScoreThreshold() {
-        return this.minScoreThreshold == null ? Optional.empty() : Optional.ofNullable(this.minScoreThreshold);
+        return Optional.ofNullable(this.minScoreThreshold);
     }
 
-    public PredictionResponseGrades(
-        @Nullable String gradeName,
-        @Nullable Integer maxScoreThreshold,
-        @Nullable Integer minScoreThreshold) {
-        this.gradeName = gradeName;
-        this.maxScoreThreshold = maxScoreThreshold;
-        this.minScoreThreshold = minScoreThreshold;
-    }
+    private PredictionResponseGrades() {}
 
-    private PredictionResponseGrades() {
-        this.gradeName = null;
-        this.maxScoreThreshold = null;
-        this.minScoreThreshold = null;
+    private PredictionResponseGrades(PredictionResponseGrades $) {
+        this.gradeName = $.gradeName;
+        this.maxScoreThreshold = $.maxScoreThreshold;
+        this.minScoreThreshold = $.minScoreThreshold;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PredictionResponseGrades defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String gradeName;
-        private @Nullable Integer maxScoreThreshold;
-        private @Nullable Integer minScoreThreshold;
+        private PredictionResponseGrades $;
 
         public Builder() {
-    	      // Empty
+            $ = new PredictionResponseGrades();
         }
 
         public Builder(PredictionResponseGrades defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.gradeName = defaults.gradeName;
-    	      this.maxScoreThreshold = defaults.maxScoreThreshold;
-    	      this.minScoreThreshold = defaults.minScoreThreshold;
+            $ = new PredictionResponseGrades(Objects.requireNonNull(defaults));
         }
 
         public Builder gradeName(@Nullable String gradeName) {
-            this.gradeName = gradeName;
+            $.gradeName = gradeName;
             return this;
         }
+
         public Builder maxScoreThreshold(@Nullable Integer maxScoreThreshold) {
-            this.maxScoreThreshold = maxScoreThreshold;
+            $.maxScoreThreshold = maxScoreThreshold;
             return this;
         }
+
         public Builder minScoreThreshold(@Nullable Integer minScoreThreshold) {
-            this.minScoreThreshold = minScoreThreshold;
+            $.minScoreThreshold = minScoreThreshold;
             return this;
-        }        public PredictionResponseGrades build() {
-            return new PredictionResponseGrades(gradeName, maxScoreThreshold, minScoreThreshold);
+        }
+
+        public PredictionResponseGrades build() {
+            return $;
         }
     }
+
 }

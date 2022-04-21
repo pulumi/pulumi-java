@@ -10,6 +10,7 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,7 +28,7 @@ public final class SqlElasticPoolResourceSettingsArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="resourceType", required=true)
-      private final Output<String> resourceType;
+    private Output<String> resourceType;
 
     public Output<String> resourceType() {
         return this.resourceType;
@@ -38,7 +39,7 @@ public final class SqlElasticPoolResourceSettingsArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="targetResourceName", required=true)
-      private final Output<String> targetResourceName;
+    private Output<String> targetResourceName;
 
     public Output<String> targetResourceName() {
         return this.targetResourceName;
@@ -49,76 +50,70 @@ public final class SqlElasticPoolResourceSettingsArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="zoneRedundant")
-      private final @Nullable Output<Either<String,ZoneRedundant>> zoneRedundant;
+    private @Nullable Output<Either<String,ZoneRedundant>> zoneRedundant;
 
-    public Output<Either<String,ZoneRedundant>> zoneRedundant() {
-        return this.zoneRedundant == null ? Codegen.empty() : this.zoneRedundant;
+    public Optional<Output<Either<String,ZoneRedundant>>> zoneRedundant() {
+        return Optional.ofNullable(this.zoneRedundant);
     }
 
-    public SqlElasticPoolResourceSettingsArgs(
-        Output<String> resourceType,
-        Output<String> targetResourceName,
-        @Nullable Output<Either<String,ZoneRedundant>> zoneRedundant) {
-        this.resourceType = Codegen.stringProp("resourceType").output().arg(resourceType).require();
-        this.targetResourceName = Objects.requireNonNull(targetResourceName, "expected parameter 'targetResourceName' to be non-null");
-        this.zoneRedundant = zoneRedundant;
-    }
+    private SqlElasticPoolResourceSettingsArgs() {}
 
-    private SqlElasticPoolResourceSettingsArgs() {
-        this.resourceType = Codegen.empty();
-        this.targetResourceName = Codegen.empty();
-        this.zoneRedundant = Codegen.empty();
+    private SqlElasticPoolResourceSettingsArgs(SqlElasticPoolResourceSettingsArgs $) {
+        this.resourceType = $.resourceType;
+        this.targetResourceName = $.targetResourceName;
+        this.zoneRedundant = $.zoneRedundant;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SqlElasticPoolResourceSettingsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> resourceType;
-        private Output<String> targetResourceName;
-        private @Nullable Output<Either<String,ZoneRedundant>> zoneRedundant;
+        private SqlElasticPoolResourceSettingsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SqlElasticPoolResourceSettingsArgs();
         }
 
         public Builder(SqlElasticPoolResourceSettingsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.resourceType = defaults.resourceType;
-    	      this.targetResourceName = defaults.targetResourceName;
-    	      this.zoneRedundant = defaults.zoneRedundant;
+            $ = new SqlElasticPoolResourceSettingsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder resourceType(Output<String> resourceType) {
-            this.resourceType = Objects.requireNonNull(resourceType);
+            $.resourceType = resourceType;
             return this;
         }
+
         public Builder resourceType(String resourceType) {
-            this.resourceType = Output.of(Objects.requireNonNull(resourceType));
-            return this;
+            return resourceType(Output.of(resourceType));
         }
+
         public Builder targetResourceName(Output<String> targetResourceName) {
-            this.targetResourceName = Objects.requireNonNull(targetResourceName);
+            $.targetResourceName = targetResourceName;
             return this;
         }
+
         public Builder targetResourceName(String targetResourceName) {
-            this.targetResourceName = Output.of(Objects.requireNonNull(targetResourceName));
-            return this;
+            return targetResourceName(Output.of(targetResourceName));
         }
+
         public Builder zoneRedundant(@Nullable Output<Either<String,ZoneRedundant>> zoneRedundant) {
-            this.zoneRedundant = zoneRedundant;
+            $.zoneRedundant = zoneRedundant;
             return this;
         }
-        public Builder zoneRedundant(@Nullable Either<String,ZoneRedundant> zoneRedundant) {
-            this.zoneRedundant = Codegen.ofNullable(zoneRedundant);
-            return this;
-        }        public SqlElasticPoolResourceSettingsArgs build() {
-            return new SqlElasticPoolResourceSettingsArgs(resourceType, targetResourceName, zoneRedundant);
+
+        public Builder zoneRedundant(Either<String,ZoneRedundant> zoneRedundant) {
+            return zoneRedundant(Output.of(zoneRedundant));
+        }
+
+        public SqlElasticPoolResourceSettingsArgs build() {
+            $.resourceType = Codegen.stringProp("resourceType").output().arg($.resourceType).require();
+            $.targetResourceName = Objects.requireNonNull($.targetResourceName, "expected parameter 'targetResourceName' to be non-null");
+            return $;
         }
     }
+
 }

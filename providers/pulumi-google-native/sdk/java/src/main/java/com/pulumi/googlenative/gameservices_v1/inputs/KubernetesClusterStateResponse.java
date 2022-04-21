@@ -21,7 +21,7 @@ public final class KubernetesClusterStateResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="agonesVersionInstalled", required=true)
-      private final String agonesVersionInstalled;
+    private String agonesVersionInstalled;
 
     public String agonesVersionInstalled() {
         return this.agonesVersionInstalled;
@@ -32,7 +32,7 @@ public final class KubernetesClusterStateResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="agonesVersionTargeted", required=true)
-      private final String agonesVersionTargeted;
+    private String agonesVersionTargeted;
 
     public String agonesVersionTargeted() {
         return this.agonesVersionTargeted;
@@ -43,7 +43,7 @@ public final class KubernetesClusterStateResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="installationState", required=true)
-      private final String installationState;
+    private String installationState;
 
     public String installationState() {
         return this.installationState;
@@ -54,7 +54,7 @@ public final class KubernetesClusterStateResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="kubernetesVersionInstalled", required=true)
-      private final String kubernetesVersionInstalled;
+    private String kubernetesVersionInstalled;
 
     public String kubernetesVersionInstalled() {
         return this.kubernetesVersionInstalled;
@@ -65,7 +65,7 @@ public final class KubernetesClusterStateResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="provider", required=true)
-      private final String provider;
+    private String provider;
 
     public String provider() {
         return this.provider;
@@ -76,91 +76,80 @@ public final class KubernetesClusterStateResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="versionInstalledErrorMessage", required=true)
-      private final String versionInstalledErrorMessage;
+    private String versionInstalledErrorMessage;
 
     public String versionInstalledErrorMessage() {
         return this.versionInstalledErrorMessage;
     }
 
-    public KubernetesClusterStateResponse(
-        String agonesVersionInstalled,
-        String agonesVersionTargeted,
-        String installationState,
-        String kubernetesVersionInstalled,
-        String provider,
-        String versionInstalledErrorMessage) {
-        this.agonesVersionInstalled = Objects.requireNonNull(agonesVersionInstalled, "expected parameter 'agonesVersionInstalled' to be non-null");
-        this.agonesVersionTargeted = Objects.requireNonNull(agonesVersionTargeted, "expected parameter 'agonesVersionTargeted' to be non-null");
-        this.installationState = Objects.requireNonNull(installationState, "expected parameter 'installationState' to be non-null");
-        this.kubernetesVersionInstalled = Objects.requireNonNull(kubernetesVersionInstalled, "expected parameter 'kubernetesVersionInstalled' to be non-null");
-        this.provider = Objects.requireNonNull(provider, "expected parameter 'provider' to be non-null");
-        this.versionInstalledErrorMessage = Objects.requireNonNull(versionInstalledErrorMessage, "expected parameter 'versionInstalledErrorMessage' to be non-null");
-    }
+    private KubernetesClusterStateResponse() {}
 
-    private KubernetesClusterStateResponse() {
-        this.agonesVersionInstalled = null;
-        this.agonesVersionTargeted = null;
-        this.installationState = null;
-        this.kubernetesVersionInstalled = null;
-        this.provider = null;
-        this.versionInstalledErrorMessage = null;
+    private KubernetesClusterStateResponse(KubernetesClusterStateResponse $) {
+        this.agonesVersionInstalled = $.agonesVersionInstalled;
+        this.agonesVersionTargeted = $.agonesVersionTargeted;
+        this.installationState = $.installationState;
+        this.kubernetesVersionInstalled = $.kubernetesVersionInstalled;
+        this.provider = $.provider;
+        this.versionInstalledErrorMessage = $.versionInstalledErrorMessage;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(KubernetesClusterStateResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String agonesVersionInstalled;
-        private String agonesVersionTargeted;
-        private String installationState;
-        private String kubernetesVersionInstalled;
-        private String provider;
-        private String versionInstalledErrorMessage;
+        private KubernetesClusterStateResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new KubernetesClusterStateResponse();
         }
 
         public Builder(KubernetesClusterStateResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.agonesVersionInstalled = defaults.agonesVersionInstalled;
-    	      this.agonesVersionTargeted = defaults.agonesVersionTargeted;
-    	      this.installationState = defaults.installationState;
-    	      this.kubernetesVersionInstalled = defaults.kubernetesVersionInstalled;
-    	      this.provider = defaults.provider;
-    	      this.versionInstalledErrorMessage = defaults.versionInstalledErrorMessage;
+            $ = new KubernetesClusterStateResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder agonesVersionInstalled(String agonesVersionInstalled) {
-            this.agonesVersionInstalled = Objects.requireNonNull(agonesVersionInstalled);
+            $.agonesVersionInstalled = agonesVersionInstalled;
             return this;
         }
+
         public Builder agonesVersionTargeted(String agonesVersionTargeted) {
-            this.agonesVersionTargeted = Objects.requireNonNull(agonesVersionTargeted);
+            $.agonesVersionTargeted = agonesVersionTargeted;
             return this;
         }
+
         public Builder installationState(String installationState) {
-            this.installationState = Objects.requireNonNull(installationState);
+            $.installationState = installationState;
             return this;
         }
+
         public Builder kubernetesVersionInstalled(String kubernetesVersionInstalled) {
-            this.kubernetesVersionInstalled = Objects.requireNonNull(kubernetesVersionInstalled);
+            $.kubernetesVersionInstalled = kubernetesVersionInstalled;
             return this;
         }
+
         public Builder provider(String provider) {
-            this.provider = Objects.requireNonNull(provider);
+            $.provider = provider;
             return this;
         }
+
         public Builder versionInstalledErrorMessage(String versionInstalledErrorMessage) {
-            this.versionInstalledErrorMessage = Objects.requireNonNull(versionInstalledErrorMessage);
+            $.versionInstalledErrorMessage = versionInstalledErrorMessage;
             return this;
-        }        public KubernetesClusterStateResponse build() {
-            return new KubernetesClusterStateResponse(agonesVersionInstalled, agonesVersionTargeted, installationState, kubernetesVersionInstalled, provider, versionInstalledErrorMessage);
+        }
+
+        public KubernetesClusterStateResponse build() {
+            $.agonesVersionInstalled = Objects.requireNonNull($.agonesVersionInstalled, "expected parameter 'agonesVersionInstalled' to be non-null");
+            $.agonesVersionTargeted = Objects.requireNonNull($.agonesVersionTargeted, "expected parameter 'agonesVersionTargeted' to be non-null");
+            $.installationState = Objects.requireNonNull($.installationState, "expected parameter 'installationState' to be non-null");
+            $.kubernetesVersionInstalled = Objects.requireNonNull($.kubernetesVersionInstalled, "expected parameter 'kubernetesVersionInstalled' to be non-null");
+            $.provider = Objects.requireNonNull($.provider, "expected parameter 'provider' to be non-null");
+            $.versionInstalledErrorMessage = Objects.requireNonNull($.versionInstalledErrorMessage, "expected parameter 'versionInstalledErrorMessage' to be non-null");
+            return $;
         }
     }
+
 }

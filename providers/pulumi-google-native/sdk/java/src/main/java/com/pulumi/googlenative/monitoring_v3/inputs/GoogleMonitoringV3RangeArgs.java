@@ -5,9 +5,9 @@ package com.pulumi.googlenative.monitoring_v3.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class GoogleMonitoringV3RangeArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="max")
-      private final @Nullable Output<Double> max;
+    private @Nullable Output<Double> max;
 
-    public Output<Double> max() {
-        return this.max == null ? Codegen.empty() : this.max;
+    public Optional<Output<Double>> max() {
+        return Optional.ofNullable(this.max);
     }
 
     /**
@@ -35,63 +35,58 @@ public final class GoogleMonitoringV3RangeArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="min")
-      private final @Nullable Output<Double> min;
+    private @Nullable Output<Double> min;
 
-    public Output<Double> min() {
-        return this.min == null ? Codegen.empty() : this.min;
+    public Optional<Output<Double>> min() {
+        return Optional.ofNullable(this.min);
     }
 
-    public GoogleMonitoringV3RangeArgs(
-        @Nullable Output<Double> max,
-        @Nullable Output<Double> min) {
-        this.max = max;
-        this.min = min;
-    }
+    private GoogleMonitoringV3RangeArgs() {}
 
-    private GoogleMonitoringV3RangeArgs() {
-        this.max = Codegen.empty();
-        this.min = Codegen.empty();
+    private GoogleMonitoringV3RangeArgs(GoogleMonitoringV3RangeArgs $) {
+        this.max = $.max;
+        this.min = $.min;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleMonitoringV3RangeArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Double> max;
-        private @Nullable Output<Double> min;
+        private GoogleMonitoringV3RangeArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleMonitoringV3RangeArgs();
         }
 
         public Builder(GoogleMonitoringV3RangeArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.max = defaults.max;
-    	      this.min = defaults.min;
+            $ = new GoogleMonitoringV3RangeArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder max(@Nullable Output<Double> max) {
-            this.max = max;
+            $.max = max;
             return this;
         }
-        public Builder max(@Nullable Double max) {
-            this.max = Codegen.ofNullable(max);
-            return this;
+
+        public Builder max(Double max) {
+            return max(Output.of(max));
         }
+
         public Builder min(@Nullable Output<Double> min) {
-            this.min = min;
+            $.min = min;
             return this;
         }
-        public Builder min(@Nullable Double min) {
-            this.min = Codegen.ofNullable(min);
-            return this;
-        }        public GoogleMonitoringV3RangeArgs build() {
-            return new GoogleMonitoringV3RangeArgs(max, min);
+
+        public Builder min(Double min) {
+            return min(Output.of(min));
+        }
+
+        public GoogleMonitoringV3RangeArgs build() {
+            return $;
         }
     }
+
 }

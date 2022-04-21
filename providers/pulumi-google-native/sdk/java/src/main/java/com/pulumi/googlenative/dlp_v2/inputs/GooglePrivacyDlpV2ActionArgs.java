@@ -5,7 +5,6 @@ package com.pulumi.googlenative.dlp_v2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2JobNotificationEmailsArgs;
 import com.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2PublishFindingsToCloudDataCatalogArgs;
 import com.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2PublishSummaryToCsccArgs;
@@ -13,6 +12,7 @@ import com.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2PublishToPubSubAr
 import com.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2PublishToStackdriverArgs;
 import com.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2SaveFindingsArgs;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -29,10 +29,10 @@ public final class GooglePrivacyDlpV2ActionArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="jobNotificationEmails")
-      private final @Nullable Output<GooglePrivacyDlpV2JobNotificationEmailsArgs> jobNotificationEmails;
+    private @Nullable Output<GooglePrivacyDlpV2JobNotificationEmailsArgs> jobNotificationEmails;
 
-    public Output<GooglePrivacyDlpV2JobNotificationEmailsArgs> jobNotificationEmails() {
-        return this.jobNotificationEmails == null ? Codegen.empty() : this.jobNotificationEmails;
+    public Optional<Output<GooglePrivacyDlpV2JobNotificationEmailsArgs>> jobNotificationEmails() {
+        return Optional.ofNullable(this.jobNotificationEmails);
     }
 
     /**
@@ -40,10 +40,10 @@ public final class GooglePrivacyDlpV2ActionArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="pubSub")
-      private final @Nullable Output<GooglePrivacyDlpV2PublishToPubSubArgs> pubSub;
+    private @Nullable Output<GooglePrivacyDlpV2PublishToPubSubArgs> pubSub;
 
-    public Output<GooglePrivacyDlpV2PublishToPubSubArgs> pubSub() {
-        return this.pubSub == null ? Codegen.empty() : this.pubSub;
+    public Optional<Output<GooglePrivacyDlpV2PublishToPubSubArgs>> pubSub() {
+        return Optional.ofNullable(this.pubSub);
     }
 
     /**
@@ -51,10 +51,10 @@ public final class GooglePrivacyDlpV2ActionArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="publishFindingsToCloudDataCatalog")
-      private final @Nullable Output<GooglePrivacyDlpV2PublishFindingsToCloudDataCatalogArgs> publishFindingsToCloudDataCatalog;
+    private @Nullable Output<GooglePrivacyDlpV2PublishFindingsToCloudDataCatalogArgs> publishFindingsToCloudDataCatalog;
 
-    public Output<GooglePrivacyDlpV2PublishFindingsToCloudDataCatalogArgs> publishFindingsToCloudDataCatalog() {
-        return this.publishFindingsToCloudDataCatalog == null ? Codegen.empty() : this.publishFindingsToCloudDataCatalog;
+    public Optional<Output<GooglePrivacyDlpV2PublishFindingsToCloudDataCatalogArgs>> publishFindingsToCloudDataCatalog() {
+        return Optional.ofNullable(this.publishFindingsToCloudDataCatalog);
     }
 
     /**
@@ -62,10 +62,10 @@ public final class GooglePrivacyDlpV2ActionArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="publishSummaryToCscc")
-      private final @Nullable Output<GooglePrivacyDlpV2PublishSummaryToCsccArgs> publishSummaryToCscc;
+    private @Nullable Output<GooglePrivacyDlpV2PublishSummaryToCsccArgs> publishSummaryToCscc;
 
-    public Output<GooglePrivacyDlpV2PublishSummaryToCsccArgs> publishSummaryToCscc() {
-        return this.publishSummaryToCscc == null ? Codegen.empty() : this.publishSummaryToCscc;
+    public Optional<Output<GooglePrivacyDlpV2PublishSummaryToCsccArgs>> publishSummaryToCscc() {
+        return Optional.ofNullable(this.publishSummaryToCscc);
     }
 
     /**
@@ -73,10 +73,10 @@ public final class GooglePrivacyDlpV2ActionArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="publishToStackdriver")
-      private final @Nullable Output<GooglePrivacyDlpV2PublishToStackdriverArgs> publishToStackdriver;
+    private @Nullable Output<GooglePrivacyDlpV2PublishToStackdriverArgs> publishToStackdriver;
 
-    public Output<GooglePrivacyDlpV2PublishToStackdriverArgs> publishToStackdriver() {
-        return this.publishToStackdriver == null ? Codegen.empty() : this.publishToStackdriver;
+    public Optional<Output<GooglePrivacyDlpV2PublishToStackdriverArgs>> publishToStackdriver() {
+        return Optional.ofNullable(this.publishToStackdriver);
     }
 
     /**
@@ -84,115 +84,98 @@ public final class GooglePrivacyDlpV2ActionArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="saveFindings")
-      private final @Nullable Output<GooglePrivacyDlpV2SaveFindingsArgs> saveFindings;
+    private @Nullable Output<GooglePrivacyDlpV2SaveFindingsArgs> saveFindings;
 
-    public Output<GooglePrivacyDlpV2SaveFindingsArgs> saveFindings() {
-        return this.saveFindings == null ? Codegen.empty() : this.saveFindings;
+    public Optional<Output<GooglePrivacyDlpV2SaveFindingsArgs>> saveFindings() {
+        return Optional.ofNullable(this.saveFindings);
     }
 
-    public GooglePrivacyDlpV2ActionArgs(
-        @Nullable Output<GooglePrivacyDlpV2JobNotificationEmailsArgs> jobNotificationEmails,
-        @Nullable Output<GooglePrivacyDlpV2PublishToPubSubArgs> pubSub,
-        @Nullable Output<GooglePrivacyDlpV2PublishFindingsToCloudDataCatalogArgs> publishFindingsToCloudDataCatalog,
-        @Nullable Output<GooglePrivacyDlpV2PublishSummaryToCsccArgs> publishSummaryToCscc,
-        @Nullable Output<GooglePrivacyDlpV2PublishToStackdriverArgs> publishToStackdriver,
-        @Nullable Output<GooglePrivacyDlpV2SaveFindingsArgs> saveFindings) {
-        this.jobNotificationEmails = jobNotificationEmails;
-        this.pubSub = pubSub;
-        this.publishFindingsToCloudDataCatalog = publishFindingsToCloudDataCatalog;
-        this.publishSummaryToCscc = publishSummaryToCscc;
-        this.publishToStackdriver = publishToStackdriver;
-        this.saveFindings = saveFindings;
-    }
+    private GooglePrivacyDlpV2ActionArgs() {}
 
-    private GooglePrivacyDlpV2ActionArgs() {
-        this.jobNotificationEmails = Codegen.empty();
-        this.pubSub = Codegen.empty();
-        this.publishFindingsToCloudDataCatalog = Codegen.empty();
-        this.publishSummaryToCscc = Codegen.empty();
-        this.publishToStackdriver = Codegen.empty();
-        this.saveFindings = Codegen.empty();
+    private GooglePrivacyDlpV2ActionArgs(GooglePrivacyDlpV2ActionArgs $) {
+        this.jobNotificationEmails = $.jobNotificationEmails;
+        this.pubSub = $.pubSub;
+        this.publishFindingsToCloudDataCatalog = $.publishFindingsToCloudDataCatalog;
+        this.publishSummaryToCscc = $.publishSummaryToCscc;
+        this.publishToStackdriver = $.publishToStackdriver;
+        this.saveFindings = $.saveFindings;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GooglePrivacyDlpV2ActionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<GooglePrivacyDlpV2JobNotificationEmailsArgs> jobNotificationEmails;
-        private @Nullable Output<GooglePrivacyDlpV2PublishToPubSubArgs> pubSub;
-        private @Nullable Output<GooglePrivacyDlpV2PublishFindingsToCloudDataCatalogArgs> publishFindingsToCloudDataCatalog;
-        private @Nullable Output<GooglePrivacyDlpV2PublishSummaryToCsccArgs> publishSummaryToCscc;
-        private @Nullable Output<GooglePrivacyDlpV2PublishToStackdriverArgs> publishToStackdriver;
-        private @Nullable Output<GooglePrivacyDlpV2SaveFindingsArgs> saveFindings;
+        private GooglePrivacyDlpV2ActionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GooglePrivacyDlpV2ActionArgs();
         }
 
         public Builder(GooglePrivacyDlpV2ActionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.jobNotificationEmails = defaults.jobNotificationEmails;
-    	      this.pubSub = defaults.pubSub;
-    	      this.publishFindingsToCloudDataCatalog = defaults.publishFindingsToCloudDataCatalog;
-    	      this.publishSummaryToCscc = defaults.publishSummaryToCscc;
-    	      this.publishToStackdriver = defaults.publishToStackdriver;
-    	      this.saveFindings = defaults.saveFindings;
+            $ = new GooglePrivacyDlpV2ActionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder jobNotificationEmails(@Nullable Output<GooglePrivacyDlpV2JobNotificationEmailsArgs> jobNotificationEmails) {
-            this.jobNotificationEmails = jobNotificationEmails;
+            $.jobNotificationEmails = jobNotificationEmails;
             return this;
         }
-        public Builder jobNotificationEmails(@Nullable GooglePrivacyDlpV2JobNotificationEmailsArgs jobNotificationEmails) {
-            this.jobNotificationEmails = Codegen.ofNullable(jobNotificationEmails);
-            return this;
+
+        public Builder jobNotificationEmails(GooglePrivacyDlpV2JobNotificationEmailsArgs jobNotificationEmails) {
+            return jobNotificationEmails(Output.of(jobNotificationEmails));
         }
+
         public Builder pubSub(@Nullable Output<GooglePrivacyDlpV2PublishToPubSubArgs> pubSub) {
-            this.pubSub = pubSub;
+            $.pubSub = pubSub;
             return this;
         }
-        public Builder pubSub(@Nullable GooglePrivacyDlpV2PublishToPubSubArgs pubSub) {
-            this.pubSub = Codegen.ofNullable(pubSub);
-            return this;
+
+        public Builder pubSub(GooglePrivacyDlpV2PublishToPubSubArgs pubSub) {
+            return pubSub(Output.of(pubSub));
         }
+
         public Builder publishFindingsToCloudDataCatalog(@Nullable Output<GooglePrivacyDlpV2PublishFindingsToCloudDataCatalogArgs> publishFindingsToCloudDataCatalog) {
-            this.publishFindingsToCloudDataCatalog = publishFindingsToCloudDataCatalog;
+            $.publishFindingsToCloudDataCatalog = publishFindingsToCloudDataCatalog;
             return this;
         }
-        public Builder publishFindingsToCloudDataCatalog(@Nullable GooglePrivacyDlpV2PublishFindingsToCloudDataCatalogArgs publishFindingsToCloudDataCatalog) {
-            this.publishFindingsToCloudDataCatalog = Codegen.ofNullable(publishFindingsToCloudDataCatalog);
-            return this;
+
+        public Builder publishFindingsToCloudDataCatalog(GooglePrivacyDlpV2PublishFindingsToCloudDataCatalogArgs publishFindingsToCloudDataCatalog) {
+            return publishFindingsToCloudDataCatalog(Output.of(publishFindingsToCloudDataCatalog));
         }
+
         public Builder publishSummaryToCscc(@Nullable Output<GooglePrivacyDlpV2PublishSummaryToCsccArgs> publishSummaryToCscc) {
-            this.publishSummaryToCscc = publishSummaryToCscc;
+            $.publishSummaryToCscc = publishSummaryToCscc;
             return this;
         }
-        public Builder publishSummaryToCscc(@Nullable GooglePrivacyDlpV2PublishSummaryToCsccArgs publishSummaryToCscc) {
-            this.publishSummaryToCscc = Codegen.ofNullable(publishSummaryToCscc);
-            return this;
+
+        public Builder publishSummaryToCscc(GooglePrivacyDlpV2PublishSummaryToCsccArgs publishSummaryToCscc) {
+            return publishSummaryToCscc(Output.of(publishSummaryToCscc));
         }
+
         public Builder publishToStackdriver(@Nullable Output<GooglePrivacyDlpV2PublishToStackdriverArgs> publishToStackdriver) {
-            this.publishToStackdriver = publishToStackdriver;
+            $.publishToStackdriver = publishToStackdriver;
             return this;
         }
-        public Builder publishToStackdriver(@Nullable GooglePrivacyDlpV2PublishToStackdriverArgs publishToStackdriver) {
-            this.publishToStackdriver = Codegen.ofNullable(publishToStackdriver);
-            return this;
+
+        public Builder publishToStackdriver(GooglePrivacyDlpV2PublishToStackdriverArgs publishToStackdriver) {
+            return publishToStackdriver(Output.of(publishToStackdriver));
         }
+
         public Builder saveFindings(@Nullable Output<GooglePrivacyDlpV2SaveFindingsArgs> saveFindings) {
-            this.saveFindings = saveFindings;
+            $.saveFindings = saveFindings;
             return this;
         }
-        public Builder saveFindings(@Nullable GooglePrivacyDlpV2SaveFindingsArgs saveFindings) {
-            this.saveFindings = Codegen.ofNullable(saveFindings);
-            return this;
-        }        public GooglePrivacyDlpV2ActionArgs build() {
-            return new GooglePrivacyDlpV2ActionArgs(jobNotificationEmails, pubSub, publishFindingsToCloudDataCatalog, publishSummaryToCscc, publishToStackdriver, saveFindings);
+
+        public Builder saveFindings(GooglePrivacyDlpV2SaveFindingsArgs saveFindings) {
+            return saveFindings(Output.of(saveFindings));
+        }
+
+        public GooglePrivacyDlpV2ActionArgs build() {
+            return $;
         }
     }
+
 }

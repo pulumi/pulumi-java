@@ -23,7 +23,7 @@ public final class AssetFileEncryptionMetadataResponse extends com.pulumi.resour
      * 
      */
     @Import(name="assetFileId", required=true)
-      private final String assetFileId;
+    private String assetFileId;
 
     public String assetFileId() {
         return this.assetFileId;
@@ -34,10 +34,10 @@ public final class AssetFileEncryptionMetadataResponse extends com.pulumi.resour
      * 
      */
     @Import(name="assetFileName")
-      private final @Nullable String assetFileName;
+    private @Nullable String assetFileName;
 
     public Optional<String> assetFileName() {
-        return this.assetFileName == null ? Optional.empty() : Optional.ofNullable(this.assetFileName);
+        return Optional.ofNullable(this.assetFileName);
     }
 
     /**
@@ -45,64 +45,57 @@ public final class AssetFileEncryptionMetadataResponse extends com.pulumi.resour
      * 
      */
     @Import(name="initializationVector")
-      private final @Nullable String initializationVector;
+    private @Nullable String initializationVector;
 
     public Optional<String> initializationVector() {
-        return this.initializationVector == null ? Optional.empty() : Optional.ofNullable(this.initializationVector);
+        return Optional.ofNullable(this.initializationVector);
     }
 
-    public AssetFileEncryptionMetadataResponse(
-        String assetFileId,
-        @Nullable String assetFileName,
-        @Nullable String initializationVector) {
-        this.assetFileId = Objects.requireNonNull(assetFileId, "expected parameter 'assetFileId' to be non-null");
-        this.assetFileName = assetFileName;
-        this.initializationVector = initializationVector;
-    }
+    private AssetFileEncryptionMetadataResponse() {}
 
-    private AssetFileEncryptionMetadataResponse() {
-        this.assetFileId = null;
-        this.assetFileName = null;
-        this.initializationVector = null;
+    private AssetFileEncryptionMetadataResponse(AssetFileEncryptionMetadataResponse $) {
+        this.assetFileId = $.assetFileId;
+        this.assetFileName = $.assetFileName;
+        this.initializationVector = $.initializationVector;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AssetFileEncryptionMetadataResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String assetFileId;
-        private @Nullable String assetFileName;
-        private @Nullable String initializationVector;
+        private AssetFileEncryptionMetadataResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AssetFileEncryptionMetadataResponse();
         }
 
         public Builder(AssetFileEncryptionMetadataResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.assetFileId = defaults.assetFileId;
-    	      this.assetFileName = defaults.assetFileName;
-    	      this.initializationVector = defaults.initializationVector;
+            $ = new AssetFileEncryptionMetadataResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder assetFileId(String assetFileId) {
-            this.assetFileId = Objects.requireNonNull(assetFileId);
+            $.assetFileId = assetFileId;
             return this;
         }
+
         public Builder assetFileName(@Nullable String assetFileName) {
-            this.assetFileName = assetFileName;
+            $.assetFileName = assetFileName;
             return this;
         }
+
         public Builder initializationVector(@Nullable String initializationVector) {
-            this.initializationVector = initializationVector;
+            $.initializationVector = initializationVector;
             return this;
-        }        public AssetFileEncryptionMetadataResponse build() {
-            return new AssetFileEncryptionMetadataResponse(assetFileId, assetFileName, initializationVector);
+        }
+
+        public AssetFileEncryptionMetadataResponse build() {
+            $.assetFileId = Objects.requireNonNull($.assetFileId, "expected parameter 'assetFileId' to be non-null");
+            return $;
         }
     }
+
 }

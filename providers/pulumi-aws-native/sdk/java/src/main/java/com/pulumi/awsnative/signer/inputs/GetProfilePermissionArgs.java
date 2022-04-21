@@ -13,62 +13,59 @@ public final class GetProfilePermissionArgs extends com.pulumi.resources.InvokeA
     public static final GetProfilePermissionArgs Empty = new GetProfilePermissionArgs();
 
     @Import(name="profileName", required=true)
-      private final String profileName;
+    private String profileName;
 
     public String profileName() {
         return this.profileName;
     }
 
     @Import(name="statementId", required=true)
-      private final String statementId;
+    private String statementId;
 
     public String statementId() {
         return this.statementId;
     }
 
-    public GetProfilePermissionArgs(
-        String profileName,
-        String statementId) {
-        this.profileName = Objects.requireNonNull(profileName, "expected parameter 'profileName' to be non-null");
-        this.statementId = Objects.requireNonNull(statementId, "expected parameter 'statementId' to be non-null");
-    }
+    private GetProfilePermissionArgs() {}
 
-    private GetProfilePermissionArgs() {
-        this.profileName = null;
-        this.statementId = null;
+    private GetProfilePermissionArgs(GetProfilePermissionArgs $) {
+        this.profileName = $.profileName;
+        this.statementId = $.statementId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetProfilePermissionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String profileName;
-        private String statementId;
+        private GetProfilePermissionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetProfilePermissionArgs();
         }
 
         public Builder(GetProfilePermissionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.profileName = defaults.profileName;
-    	      this.statementId = defaults.statementId;
+            $ = new GetProfilePermissionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder profileName(String profileName) {
-            this.profileName = Objects.requireNonNull(profileName);
+            $.profileName = profileName;
             return this;
         }
+
         public Builder statementId(String statementId) {
-            this.statementId = Objects.requireNonNull(statementId);
+            $.statementId = statementId;
             return this;
-        }        public GetProfilePermissionArgs build() {
-            return new GetProfilePermissionArgs(profileName, statementId);
+        }
+
+        public GetProfilePermissionArgs build() {
+            $.profileName = Objects.requireNonNull($.profileName, "expected parameter 'profileName' to be non-null");
+            $.statementId = Objects.requireNonNull($.statementId, "expected parameter 'statementId' to be non-null");
+            return $;
         }
     }
+
 }

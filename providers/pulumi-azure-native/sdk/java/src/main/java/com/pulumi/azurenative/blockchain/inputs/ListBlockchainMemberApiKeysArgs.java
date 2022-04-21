@@ -17,7 +17,7 @@ public final class ListBlockchainMemberApiKeysArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="blockchainMemberName", required=true)
-      private final String blockchainMemberName;
+    private String blockchainMemberName;
 
     public String blockchainMemberName() {
         return this.blockchainMemberName;
@@ -28,55 +28,52 @@ public final class ListBlockchainMemberApiKeysArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public ListBlockchainMemberApiKeysArgs(
-        String blockchainMemberName,
-        String resourceGroupName) {
-        this.blockchainMemberName = Objects.requireNonNull(blockchainMemberName, "expected parameter 'blockchainMemberName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private ListBlockchainMemberApiKeysArgs() {}
 
-    private ListBlockchainMemberApiKeysArgs() {
-        this.blockchainMemberName = null;
-        this.resourceGroupName = null;
+    private ListBlockchainMemberApiKeysArgs(ListBlockchainMemberApiKeysArgs $) {
+        this.blockchainMemberName = $.blockchainMemberName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ListBlockchainMemberApiKeysArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String blockchainMemberName;
-        private String resourceGroupName;
+        private ListBlockchainMemberApiKeysArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ListBlockchainMemberApiKeysArgs();
         }
 
         public Builder(ListBlockchainMemberApiKeysArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.blockchainMemberName = defaults.blockchainMemberName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new ListBlockchainMemberApiKeysArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder blockchainMemberName(String blockchainMemberName) {
-            this.blockchainMemberName = Objects.requireNonNull(blockchainMemberName);
+            $.blockchainMemberName = blockchainMemberName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public ListBlockchainMemberApiKeysArgs build() {
-            return new ListBlockchainMemberApiKeysArgs(blockchainMemberName, resourceGroupName);
+        }
+
+        public ListBlockchainMemberApiKeysArgs build() {
+            $.blockchainMemberName = Objects.requireNonNull($.blockchainMemberName, "expected parameter 'blockchainMemberName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

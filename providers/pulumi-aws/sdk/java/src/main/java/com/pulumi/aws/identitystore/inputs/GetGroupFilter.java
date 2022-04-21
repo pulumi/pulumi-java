@@ -17,7 +17,7 @@ public final class GetGroupFilter extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="attributePath", required=true)
-      private final String attributePath;
+    private String attributePath;
 
     public String attributePath() {
         return this.attributePath;
@@ -28,55 +28,52 @@ public final class GetGroupFilter extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="attributeValue", required=true)
-      private final String attributeValue;
+    private String attributeValue;
 
     public String attributeValue() {
         return this.attributeValue;
     }
 
-    public GetGroupFilter(
-        String attributePath,
-        String attributeValue) {
-        this.attributePath = Objects.requireNonNull(attributePath, "expected parameter 'attributePath' to be non-null");
-        this.attributeValue = Objects.requireNonNull(attributeValue, "expected parameter 'attributeValue' to be non-null");
-    }
+    private GetGroupFilter() {}
 
-    private GetGroupFilter() {
-        this.attributePath = null;
-        this.attributeValue = null;
+    private GetGroupFilter(GetGroupFilter $) {
+        this.attributePath = $.attributePath;
+        this.attributeValue = $.attributeValue;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetGroupFilter defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String attributePath;
-        private String attributeValue;
+        private GetGroupFilter $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetGroupFilter();
         }
 
         public Builder(GetGroupFilter defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.attributePath = defaults.attributePath;
-    	      this.attributeValue = defaults.attributeValue;
+            $ = new GetGroupFilter(Objects.requireNonNull(defaults));
         }
 
         public Builder attributePath(String attributePath) {
-            this.attributePath = Objects.requireNonNull(attributePath);
+            $.attributePath = attributePath;
             return this;
         }
+
         public Builder attributeValue(String attributeValue) {
-            this.attributeValue = Objects.requireNonNull(attributeValue);
+            $.attributeValue = attributeValue;
             return this;
-        }        public GetGroupFilter build() {
-            return new GetGroupFilter(attributePath, attributeValue);
+        }
+
+        public GetGroupFilter build() {
+            $.attributePath = Objects.requireNonNull($.attributePath, "expected parameter 'attributePath' to be non-null");
+            $.attributeValue = Objects.requireNonNull($.attributeValue, "expected parameter 'attributeValue' to be non-null");
+            return $;
         }
     }
+
 }

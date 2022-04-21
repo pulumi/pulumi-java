@@ -5,10 +5,10 @@ package com.pulumi.googlenative.memcache_v1beta2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,49 +21,48 @@ public final class MemcacheParametersArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="params")
-      private final @Nullable Output<Map<String,String>> params;
+    private @Nullable Output<Map<String,String>> params;
 
-    public Output<Map<String,String>> params() {
-        return this.params == null ? Codegen.empty() : this.params;
+    public Optional<Output<Map<String,String>>> params() {
+        return Optional.ofNullable(this.params);
     }
 
-    public MemcacheParametersArgs(@Nullable Output<Map<String,String>> params) {
-        this.params = params;
-    }
+    private MemcacheParametersArgs() {}
 
-    private MemcacheParametersArgs() {
-        this.params = Codegen.empty();
+    private MemcacheParametersArgs(MemcacheParametersArgs $) {
+        this.params = $.params;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MemcacheParametersArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Map<String,String>> params;
+        private MemcacheParametersArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new MemcacheParametersArgs();
         }
 
         public Builder(MemcacheParametersArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.params = defaults.params;
+            $ = new MemcacheParametersArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder params(@Nullable Output<Map<String,String>> params) {
-            this.params = params;
+            $.params = params;
             return this;
         }
-        public Builder params(@Nullable Map<String,String> params) {
-            this.params = Codegen.ofNullable(params);
-            return this;
-        }        public MemcacheParametersArgs build() {
-            return new MemcacheParametersArgs(params);
+
+        public Builder params(Map<String,String> params) {
+            return params(Output.of(params));
+        }
+
+        public MemcacheParametersArgs build() {
+            return $;
         }
     }
+
 }

@@ -18,7 +18,7 @@ public final class BucketLifecycleRuleItemResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="action", required=true)
-      private final BucketLifecycleRuleItemActionResponse action;
+    private BucketLifecycleRuleItemActionResponse action;
 
     public BucketLifecycleRuleItemActionResponse action() {
         return this.action;
@@ -29,55 +29,52 @@ public final class BucketLifecycleRuleItemResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="condition", required=true)
-      private final BucketLifecycleRuleItemConditionResponse condition;
+    private BucketLifecycleRuleItemConditionResponse condition;
 
     public BucketLifecycleRuleItemConditionResponse condition() {
         return this.condition;
     }
 
-    public BucketLifecycleRuleItemResponse(
-        BucketLifecycleRuleItemActionResponse action,
-        BucketLifecycleRuleItemConditionResponse condition) {
-        this.action = Objects.requireNonNull(action, "expected parameter 'action' to be non-null");
-        this.condition = Objects.requireNonNull(condition, "expected parameter 'condition' to be non-null");
-    }
+    private BucketLifecycleRuleItemResponse() {}
 
-    private BucketLifecycleRuleItemResponse() {
-        this.action = null;
-        this.condition = null;
+    private BucketLifecycleRuleItemResponse(BucketLifecycleRuleItemResponse $) {
+        this.action = $.action;
+        this.condition = $.condition;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BucketLifecycleRuleItemResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private BucketLifecycleRuleItemActionResponse action;
-        private BucketLifecycleRuleItemConditionResponse condition;
+        private BucketLifecycleRuleItemResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new BucketLifecycleRuleItemResponse();
         }
 
         public Builder(BucketLifecycleRuleItemResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.action = defaults.action;
-    	      this.condition = defaults.condition;
+            $ = new BucketLifecycleRuleItemResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder action(BucketLifecycleRuleItemActionResponse action) {
-            this.action = Objects.requireNonNull(action);
+            $.action = action;
             return this;
         }
+
         public Builder condition(BucketLifecycleRuleItemConditionResponse condition) {
-            this.condition = Objects.requireNonNull(condition);
+            $.condition = condition;
             return this;
-        }        public BucketLifecycleRuleItemResponse build() {
-            return new BucketLifecycleRuleItemResponse(action, condition);
+        }
+
+        public BucketLifecycleRuleItemResponse build() {
+            $.action = Objects.requireNonNull($.action, "expected parameter 'action' to be non-null");
+            $.condition = Objects.requireNonNull($.condition, "expected parameter 'condition' to be non-null");
+            return $;
         }
     }
+
 }

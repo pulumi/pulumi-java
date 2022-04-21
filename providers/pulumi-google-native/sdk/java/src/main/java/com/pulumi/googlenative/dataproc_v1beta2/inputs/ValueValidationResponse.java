@@ -22,48 +22,49 @@ public final class ValueValidationResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="values", required=true)
-      private final List<String> values;
+    private List<String> values;
 
     public List<String> values() {
         return this.values;
     }
 
-    public ValueValidationResponse(List<String> values) {
-        this.values = Objects.requireNonNull(values, "expected parameter 'values' to be non-null");
-    }
+    private ValueValidationResponse() {}
 
-    private ValueValidationResponse() {
-        this.values = List.of();
+    private ValueValidationResponse(ValueValidationResponse $) {
+        this.values = $.values;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ValueValidationResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<String> values;
+        private ValueValidationResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ValueValidationResponse();
         }
 
         public Builder(ValueValidationResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.values = defaults.values;
+            $ = new ValueValidationResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder values(List<String> values) {
-            this.values = Objects.requireNonNull(values);
+            $.values = values;
             return this;
         }
+
         public Builder values(String... values) {
             return values(List.of(values));
-        }        public ValueValidationResponse build() {
-            return new ValueValidationResponse(values);
+        }
+
+        public ValueValidationResponse build() {
+            $.values = Objects.requireNonNull($.values, "expected parameter 'values' to be non-null");
+            return $;
         }
     }
+
 }

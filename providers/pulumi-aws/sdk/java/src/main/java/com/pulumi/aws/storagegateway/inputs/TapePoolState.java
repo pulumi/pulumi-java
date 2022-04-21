@@ -5,11 +5,11 @@ package com.pulumi.aws.storagegateway.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class TapePoolState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="arn")
-      private final @Nullable Output<String> arn;
+    private @Nullable Output<String> arn;
 
-    public Output<String> arn() {
-        return this.arn == null ? Codegen.empty() : this.arn;
+    public Optional<Output<String>> arn() {
+        return Optional.ofNullable(this.arn);
     }
 
     /**
@@ -33,10 +33,10 @@ public final class TapePoolState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="poolName")
-      private final @Nullable Output<String> poolName;
+    private @Nullable Output<String> poolName;
 
-    public Output<String> poolName() {
-        return this.poolName == null ? Codegen.empty() : this.poolName;
+    public Optional<Output<String>> poolName() {
+        return Optional.ofNullable(this.poolName);
     }
 
     /**
@@ -44,10 +44,10 @@ public final class TapePoolState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="retentionLockTimeInDays")
-      private final @Nullable Output<Integer> retentionLockTimeInDays;
+    private @Nullable Output<Integer> retentionLockTimeInDays;
 
-    public Output<Integer> retentionLockTimeInDays() {
-        return this.retentionLockTimeInDays == null ? Codegen.empty() : this.retentionLockTimeInDays;
+    public Optional<Output<Integer>> retentionLockTimeInDays() {
+        return Optional.ofNullable(this.retentionLockTimeInDays);
     }
 
     /**
@@ -55,10 +55,10 @@ public final class TapePoolState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="retentionLockType")
-      private final @Nullable Output<String> retentionLockType;
+    private @Nullable Output<String> retentionLockType;
 
-    public Output<String> retentionLockType() {
-        return this.retentionLockType == null ? Codegen.empty() : this.retentionLockType;
+    public Optional<Output<String>> retentionLockType() {
+        return Optional.ofNullable(this.retentionLockType);
     }
 
     /**
@@ -66,10 +66,10 @@ public final class TapePoolState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="storageClass")
-      private final @Nullable Output<String> storageClass;
+    private @Nullable Output<String> storageClass;
 
-    public Output<String> storageClass() {
-        return this.storageClass == null ? Codegen.empty() : this.storageClass;
+    public Optional<Output<String>> storageClass() {
+        return Optional.ofNullable(this.storageClass);
     }
 
     /**
@@ -77,10 +77,10 @@ public final class TapePoolState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -88,128 +88,108 @@ public final class TapePoolState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tagsAll")
-      private final @Nullable Output<Map<String,String>> tagsAll;
+    private @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> tagsAll() {
-        return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
+    public Optional<Output<Map<String,String>>> tagsAll() {
+        return Optional.ofNullable(this.tagsAll);
     }
 
-    public TapePoolState(
-        @Nullable Output<String> arn,
-        @Nullable Output<String> poolName,
-        @Nullable Output<Integer> retentionLockTimeInDays,
-        @Nullable Output<String> retentionLockType,
-        @Nullable Output<String> storageClass,
-        @Nullable Output<Map<String,String>> tags,
-        @Nullable Output<Map<String,String>> tagsAll) {
-        this.arn = arn;
-        this.poolName = poolName;
-        this.retentionLockTimeInDays = retentionLockTimeInDays;
-        this.retentionLockType = retentionLockType;
-        this.storageClass = storageClass;
-        this.tags = tags;
-        this.tagsAll = tagsAll;
-    }
+    private TapePoolState() {}
 
-    private TapePoolState() {
-        this.arn = Codegen.empty();
-        this.poolName = Codegen.empty();
-        this.retentionLockTimeInDays = Codegen.empty();
-        this.retentionLockType = Codegen.empty();
-        this.storageClass = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.tagsAll = Codegen.empty();
+    private TapePoolState(TapePoolState $) {
+        this.arn = $.arn;
+        this.poolName = $.poolName;
+        this.retentionLockTimeInDays = $.retentionLockTimeInDays;
+        this.retentionLockType = $.retentionLockType;
+        this.storageClass = $.storageClass;
+        this.tags = $.tags;
+        this.tagsAll = $.tagsAll;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TapePoolState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> arn;
-        private @Nullable Output<String> poolName;
-        private @Nullable Output<Integer> retentionLockTimeInDays;
-        private @Nullable Output<String> retentionLockType;
-        private @Nullable Output<String> storageClass;
-        private @Nullable Output<Map<String,String>> tags;
-        private @Nullable Output<Map<String,String>> tagsAll;
+        private TapePoolState $;
 
         public Builder() {
-    	      // Empty
+            $ = new TapePoolState();
         }
 
         public Builder(TapePoolState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.arn = defaults.arn;
-    	      this.poolName = defaults.poolName;
-    	      this.retentionLockTimeInDays = defaults.retentionLockTimeInDays;
-    	      this.retentionLockType = defaults.retentionLockType;
-    	      this.storageClass = defaults.storageClass;
-    	      this.tags = defaults.tags;
-    	      this.tagsAll = defaults.tagsAll;
+            $ = new TapePoolState(Objects.requireNonNull(defaults));
         }
 
         public Builder arn(@Nullable Output<String> arn) {
-            this.arn = arn;
+            $.arn = arn;
             return this;
         }
-        public Builder arn(@Nullable String arn) {
-            this.arn = Codegen.ofNullable(arn);
-            return this;
+
+        public Builder arn(String arn) {
+            return arn(Output.of(arn));
         }
+
         public Builder poolName(@Nullable Output<String> poolName) {
-            this.poolName = poolName;
+            $.poolName = poolName;
             return this;
         }
-        public Builder poolName(@Nullable String poolName) {
-            this.poolName = Codegen.ofNullable(poolName);
-            return this;
+
+        public Builder poolName(String poolName) {
+            return poolName(Output.of(poolName));
         }
+
         public Builder retentionLockTimeInDays(@Nullable Output<Integer> retentionLockTimeInDays) {
-            this.retentionLockTimeInDays = retentionLockTimeInDays;
+            $.retentionLockTimeInDays = retentionLockTimeInDays;
             return this;
         }
-        public Builder retentionLockTimeInDays(@Nullable Integer retentionLockTimeInDays) {
-            this.retentionLockTimeInDays = Codegen.ofNullable(retentionLockTimeInDays);
-            return this;
+
+        public Builder retentionLockTimeInDays(Integer retentionLockTimeInDays) {
+            return retentionLockTimeInDays(Output.of(retentionLockTimeInDays));
         }
+
         public Builder retentionLockType(@Nullable Output<String> retentionLockType) {
-            this.retentionLockType = retentionLockType;
+            $.retentionLockType = retentionLockType;
             return this;
         }
-        public Builder retentionLockType(@Nullable String retentionLockType) {
-            this.retentionLockType = Codegen.ofNullable(retentionLockType);
-            return this;
+
+        public Builder retentionLockType(String retentionLockType) {
+            return retentionLockType(Output.of(retentionLockType));
         }
+
         public Builder storageClass(@Nullable Output<String> storageClass) {
-            this.storageClass = storageClass;
+            $.storageClass = storageClass;
             return this;
         }
-        public Builder storageClass(@Nullable String storageClass) {
-            this.storageClass = Codegen.ofNullable(storageClass);
-            return this;
+
+        public Builder storageClass(String storageClass) {
+            return storageClass(Output.of(storageClass));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
-            this.tagsAll = tagsAll;
+            $.tagsAll = tagsAll;
             return this;
         }
-        public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Codegen.ofNullable(tagsAll);
-            return this;
-        }        public TapePoolState build() {
-            return new TapePoolState(arn, poolName, retentionLockTimeInDays, retentionLockType, storageClass, tags, tagsAll);
+
+        public Builder tagsAll(Map<String,String> tagsAll) {
+            return tagsAll(Output.of(tagsAll));
+        }
+
+        public TapePoolState build() {
+            return $;
         }
     }
+
 }

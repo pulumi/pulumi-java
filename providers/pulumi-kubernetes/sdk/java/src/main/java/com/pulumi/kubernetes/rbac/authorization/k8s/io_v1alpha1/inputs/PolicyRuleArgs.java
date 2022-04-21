@@ -5,10 +5,10 @@ package com.pulumi.kubernetes.rbac.authorization.k8s.io_v1alpha1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class PolicyRuleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="apiGroups")
-      private final @Nullable Output<List<String>> apiGroups;
+    private @Nullable Output<List<String>> apiGroups;
 
-    public Output<List<String>> apiGroups() {
-        return this.apiGroups == null ? Codegen.empty() : this.apiGroups;
+    public Optional<Output<List<String>>> apiGroups() {
+        return Optional.ofNullable(this.apiGroups);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class PolicyRuleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="nonResourceURLs")
-      private final @Nullable Output<List<String>> nonResourceURLs;
+    private @Nullable Output<List<String>> nonResourceURLs;
 
-    public Output<List<String>> nonResourceURLs() {
-        return this.nonResourceURLs == null ? Codegen.empty() : this.nonResourceURLs;
+    public Optional<Output<List<String>>> nonResourceURLs() {
+        return Optional.ofNullable(this.nonResourceURLs);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class PolicyRuleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceNames")
-      private final @Nullable Output<List<String>> resourceNames;
+    private @Nullable Output<List<String>> resourceNames;
 
-    public Output<List<String>> resourceNames() {
-        return this.resourceNames == null ? Codegen.empty() : this.resourceNames;
+    public Optional<Output<List<String>>> resourceNames() {
+        return Optional.ofNullable(this.resourceNames);
     }
 
     /**
@@ -58,10 +58,10 @@ public final class PolicyRuleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resources")
-      private final @Nullable Output<List<String>> resources;
+    private @Nullable Output<List<String>> resources;
 
-    public Output<List<String>> resources() {
-        return this.resources == null ? Codegen.empty() : this.resources;
+    public Optional<Output<List<String>>> resources() {
+        return Optional.ofNullable(this.resources);
     }
 
     /**
@@ -69,117 +69,109 @@ public final class PolicyRuleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="verbs", required=true)
-      private final Output<List<String>> verbs;
+    private Output<List<String>> verbs;
 
     public Output<List<String>> verbs() {
         return this.verbs;
     }
 
-    public PolicyRuleArgs(
-        @Nullable Output<List<String>> apiGroups,
-        @Nullable Output<List<String>> nonResourceURLs,
-        @Nullable Output<List<String>> resourceNames,
-        @Nullable Output<List<String>> resources,
-        Output<List<String>> verbs) {
-        this.apiGroups = apiGroups;
-        this.nonResourceURLs = nonResourceURLs;
-        this.resourceNames = resourceNames;
-        this.resources = resources;
-        this.verbs = Objects.requireNonNull(verbs, "expected parameter 'verbs' to be non-null");
-    }
+    private PolicyRuleArgs() {}
 
-    private PolicyRuleArgs() {
-        this.apiGroups = Codegen.empty();
-        this.nonResourceURLs = Codegen.empty();
-        this.resourceNames = Codegen.empty();
-        this.resources = Codegen.empty();
-        this.verbs = Codegen.empty();
+    private PolicyRuleArgs(PolicyRuleArgs $) {
+        this.apiGroups = $.apiGroups;
+        this.nonResourceURLs = $.nonResourceURLs;
+        this.resourceNames = $.resourceNames;
+        this.resources = $.resources;
+        this.verbs = $.verbs;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PolicyRuleArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> apiGroups;
-        private @Nullable Output<List<String>> nonResourceURLs;
-        private @Nullable Output<List<String>> resourceNames;
-        private @Nullable Output<List<String>> resources;
-        private Output<List<String>> verbs;
+        private PolicyRuleArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PolicyRuleArgs();
         }
 
         public Builder(PolicyRuleArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.apiGroups = defaults.apiGroups;
-    	      this.nonResourceURLs = defaults.nonResourceURLs;
-    	      this.resourceNames = defaults.resourceNames;
-    	      this.resources = defaults.resources;
-    	      this.verbs = defaults.verbs;
+            $ = new PolicyRuleArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder apiGroups(@Nullable Output<List<String>> apiGroups) {
-            this.apiGroups = apiGroups;
+            $.apiGroups = apiGroups;
             return this;
         }
-        public Builder apiGroups(@Nullable List<String> apiGroups) {
-            this.apiGroups = Codegen.ofNullable(apiGroups);
-            return this;
+
+        public Builder apiGroups(List<String> apiGroups) {
+            return apiGroups(Output.of(apiGroups));
         }
+
         public Builder apiGroups(String... apiGroups) {
             return apiGroups(List.of(apiGroups));
         }
+
         public Builder nonResourceURLs(@Nullable Output<List<String>> nonResourceURLs) {
-            this.nonResourceURLs = nonResourceURLs;
+            $.nonResourceURLs = nonResourceURLs;
             return this;
         }
-        public Builder nonResourceURLs(@Nullable List<String> nonResourceURLs) {
-            this.nonResourceURLs = Codegen.ofNullable(nonResourceURLs);
-            return this;
+
+        public Builder nonResourceURLs(List<String> nonResourceURLs) {
+            return nonResourceURLs(Output.of(nonResourceURLs));
         }
+
         public Builder nonResourceURLs(String... nonResourceURLs) {
             return nonResourceURLs(List.of(nonResourceURLs));
         }
+
         public Builder resourceNames(@Nullable Output<List<String>> resourceNames) {
-            this.resourceNames = resourceNames;
+            $.resourceNames = resourceNames;
             return this;
         }
-        public Builder resourceNames(@Nullable List<String> resourceNames) {
-            this.resourceNames = Codegen.ofNullable(resourceNames);
-            return this;
+
+        public Builder resourceNames(List<String> resourceNames) {
+            return resourceNames(Output.of(resourceNames));
         }
+
         public Builder resourceNames(String... resourceNames) {
             return resourceNames(List.of(resourceNames));
         }
+
         public Builder resources(@Nullable Output<List<String>> resources) {
-            this.resources = resources;
+            $.resources = resources;
             return this;
         }
-        public Builder resources(@Nullable List<String> resources) {
-            this.resources = Codegen.ofNullable(resources);
-            return this;
+
+        public Builder resources(List<String> resources) {
+            return resources(Output.of(resources));
         }
+
         public Builder resources(String... resources) {
             return resources(List.of(resources));
         }
+
         public Builder verbs(Output<List<String>> verbs) {
-            this.verbs = Objects.requireNonNull(verbs);
+            $.verbs = verbs;
             return this;
         }
+
         public Builder verbs(List<String> verbs) {
-            this.verbs = Output.of(Objects.requireNonNull(verbs));
-            return this;
+            return verbs(Output.of(verbs));
         }
+
         public Builder verbs(String... verbs) {
             return verbs(List.of(verbs));
-        }        public PolicyRuleArgs build() {
-            return new PolicyRuleArgs(apiGroups, nonResourceURLs, resourceNames, resources, verbs);
+        }
+
+        public PolicyRuleArgs build() {
+            $.verbs = Objects.requireNonNull($.verbs, "expected parameter 'verbs' to be non-null");
+            return $;
         }
     }
+
 }

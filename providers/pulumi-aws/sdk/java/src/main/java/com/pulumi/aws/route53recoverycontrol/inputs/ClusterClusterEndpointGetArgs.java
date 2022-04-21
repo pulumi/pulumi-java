@@ -5,9 +5,9 @@ package com.pulumi.aws.route53recoverycontrol.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class ClusterClusterEndpointGetArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="endpoint")
-      private final @Nullable Output<String> endpoint;
+    private @Nullable Output<String> endpoint;
 
-    public Output<String> endpoint() {
-        return this.endpoint == null ? Codegen.empty() : this.endpoint;
+    public Optional<Output<String>> endpoint() {
+        return Optional.ofNullable(this.endpoint);
     }
 
     /**
@@ -31,63 +31,58 @@ public final class ClusterClusterEndpointGetArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="region")
-      private final @Nullable Output<String> region;
+    private @Nullable Output<String> region;
 
-    public Output<String> region() {
-        return this.region == null ? Codegen.empty() : this.region;
+    public Optional<Output<String>> region() {
+        return Optional.ofNullable(this.region);
     }
 
-    public ClusterClusterEndpointGetArgs(
-        @Nullable Output<String> endpoint,
-        @Nullable Output<String> region) {
-        this.endpoint = endpoint;
-        this.region = region;
-    }
+    private ClusterClusterEndpointGetArgs() {}
 
-    private ClusterClusterEndpointGetArgs() {
-        this.endpoint = Codegen.empty();
-        this.region = Codegen.empty();
+    private ClusterClusterEndpointGetArgs(ClusterClusterEndpointGetArgs $) {
+        this.endpoint = $.endpoint;
+        this.region = $.region;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ClusterClusterEndpointGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> endpoint;
-        private @Nullable Output<String> region;
+        private ClusterClusterEndpointGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ClusterClusterEndpointGetArgs();
         }
 
         public Builder(ClusterClusterEndpointGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.endpoint = defaults.endpoint;
-    	      this.region = defaults.region;
+            $ = new ClusterClusterEndpointGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder endpoint(@Nullable Output<String> endpoint) {
-            this.endpoint = endpoint;
+            $.endpoint = endpoint;
             return this;
         }
-        public Builder endpoint(@Nullable String endpoint) {
-            this.endpoint = Codegen.ofNullable(endpoint);
-            return this;
+
+        public Builder endpoint(String endpoint) {
+            return endpoint(Output.of(endpoint));
         }
+
         public Builder region(@Nullable Output<String> region) {
-            this.region = region;
+            $.region = region;
             return this;
         }
-        public Builder region(@Nullable String region) {
-            this.region = Codegen.ofNullable(region);
-            return this;
-        }        public ClusterClusterEndpointGetArgs build() {
-            return new ClusterClusterEndpointGetArgs(endpoint, region);
+
+        public Builder region(String region) {
+            return region(Output.of(region));
+        }
+
+        public ClusterClusterEndpointGetArgs build() {
+            return $;
         }
     }
+
 }

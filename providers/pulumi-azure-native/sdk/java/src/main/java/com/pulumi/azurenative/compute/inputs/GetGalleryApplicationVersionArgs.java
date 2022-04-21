@@ -19,10 +19,10 @@ public final class GetGalleryApplicationVersionArgs extends com.pulumi.resources
      * 
      */
     @Import(name="expand")
-      private final @Nullable String expand;
+    private @Nullable String expand;
 
     public Optional<String> expand() {
-        return this.expand == null ? Optional.empty() : Optional.ofNullable(this.expand);
+        return Optional.ofNullable(this.expand);
     }
 
     /**
@@ -30,7 +30,7 @@ public final class GetGalleryApplicationVersionArgs extends com.pulumi.resources
      * 
      */
     @Import(name="galleryApplicationName", required=true)
-      private final String galleryApplicationName;
+    private String galleryApplicationName;
 
     public String galleryApplicationName() {
         return this.galleryApplicationName;
@@ -41,7 +41,7 @@ public final class GetGalleryApplicationVersionArgs extends com.pulumi.resources
      * 
      */
     @Import(name="galleryApplicationVersionName", required=true)
-      private final String galleryApplicationVersionName;
+    private String galleryApplicationVersionName;
 
     public String galleryApplicationVersionName() {
         return this.galleryApplicationVersionName;
@@ -52,7 +52,7 @@ public final class GetGalleryApplicationVersionArgs extends com.pulumi.resources
      * 
      */
     @Import(name="galleryName", required=true)
-      private final String galleryName;
+    private String galleryName;
 
     public String galleryName() {
         return this.galleryName;
@@ -63,82 +63,72 @@ public final class GetGalleryApplicationVersionArgs extends com.pulumi.resources
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public GetGalleryApplicationVersionArgs(
-        @Nullable String expand,
-        String galleryApplicationName,
-        String galleryApplicationVersionName,
-        String galleryName,
-        String resourceGroupName) {
-        this.expand = expand;
-        this.galleryApplicationName = Objects.requireNonNull(galleryApplicationName, "expected parameter 'galleryApplicationName' to be non-null");
-        this.galleryApplicationVersionName = Objects.requireNonNull(galleryApplicationVersionName, "expected parameter 'galleryApplicationVersionName' to be non-null");
-        this.galleryName = Objects.requireNonNull(galleryName, "expected parameter 'galleryName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private GetGalleryApplicationVersionArgs() {}
 
-    private GetGalleryApplicationVersionArgs() {
-        this.expand = null;
-        this.galleryApplicationName = null;
-        this.galleryApplicationVersionName = null;
-        this.galleryName = null;
-        this.resourceGroupName = null;
+    private GetGalleryApplicationVersionArgs(GetGalleryApplicationVersionArgs $) {
+        this.expand = $.expand;
+        this.galleryApplicationName = $.galleryApplicationName;
+        this.galleryApplicationVersionName = $.galleryApplicationVersionName;
+        this.galleryName = $.galleryName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetGalleryApplicationVersionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String expand;
-        private String galleryApplicationName;
-        private String galleryApplicationVersionName;
-        private String galleryName;
-        private String resourceGroupName;
+        private GetGalleryApplicationVersionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetGalleryApplicationVersionArgs();
         }
 
         public Builder(GetGalleryApplicationVersionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.expand = defaults.expand;
-    	      this.galleryApplicationName = defaults.galleryApplicationName;
-    	      this.galleryApplicationVersionName = defaults.galleryApplicationVersionName;
-    	      this.galleryName = defaults.galleryName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new GetGalleryApplicationVersionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder expand(@Nullable String expand) {
-            this.expand = expand;
+            $.expand = expand;
             return this;
         }
+
         public Builder galleryApplicationName(String galleryApplicationName) {
-            this.galleryApplicationName = Objects.requireNonNull(galleryApplicationName);
+            $.galleryApplicationName = galleryApplicationName;
             return this;
         }
+
         public Builder galleryApplicationVersionName(String galleryApplicationVersionName) {
-            this.galleryApplicationVersionName = Objects.requireNonNull(galleryApplicationVersionName);
+            $.galleryApplicationVersionName = galleryApplicationVersionName;
             return this;
         }
+
         public Builder galleryName(String galleryName) {
-            this.galleryName = Objects.requireNonNull(galleryName);
+            $.galleryName = galleryName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public GetGalleryApplicationVersionArgs build() {
-            return new GetGalleryApplicationVersionArgs(expand, galleryApplicationName, galleryApplicationVersionName, galleryName, resourceGroupName);
+        }
+
+        public GetGalleryApplicationVersionArgs build() {
+            $.galleryApplicationName = Objects.requireNonNull($.galleryApplicationName, "expected parameter 'galleryApplicationName' to be non-null");
+            $.galleryApplicationVersionName = Objects.requireNonNull($.galleryApplicationVersionName, "expected parameter 'galleryApplicationVersionName' to be non-null");
+            $.galleryName = Objects.requireNonNull($.galleryName, "expected parameter 'galleryName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

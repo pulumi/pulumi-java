@@ -5,7 +5,6 @@ package com.pulumi.aws.glue.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,49 +18,49 @@ public final class ClassifierJsonClassifierArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="jsonPath", required=true)
-      private final Output<String> jsonPath;
+    private Output<String> jsonPath;
 
     public Output<String> jsonPath() {
         return this.jsonPath;
     }
 
-    public ClassifierJsonClassifierArgs(Output<String> jsonPath) {
-        this.jsonPath = Objects.requireNonNull(jsonPath, "expected parameter 'jsonPath' to be non-null");
-    }
+    private ClassifierJsonClassifierArgs() {}
 
-    private ClassifierJsonClassifierArgs() {
-        this.jsonPath = Codegen.empty();
+    private ClassifierJsonClassifierArgs(ClassifierJsonClassifierArgs $) {
+        this.jsonPath = $.jsonPath;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ClassifierJsonClassifierArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> jsonPath;
+        private ClassifierJsonClassifierArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ClassifierJsonClassifierArgs();
         }
 
         public Builder(ClassifierJsonClassifierArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.jsonPath = defaults.jsonPath;
+            $ = new ClassifierJsonClassifierArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder jsonPath(Output<String> jsonPath) {
-            this.jsonPath = Objects.requireNonNull(jsonPath);
+            $.jsonPath = jsonPath;
             return this;
         }
+
         public Builder jsonPath(String jsonPath) {
-            this.jsonPath = Output.of(Objects.requireNonNull(jsonPath));
-            return this;
-        }        public ClassifierJsonClassifierArgs build() {
-            return new ClassifierJsonClassifierArgs(jsonPath);
+            return jsonPath(Output.of(jsonPath));
+        }
+
+        public ClassifierJsonClassifierArgs build() {
+            $.jsonPath = Objects.requireNonNull($.jsonPath, "expected parameter 'jsonPath' to be non-null");
+            return $;
         }
     }
+
 }

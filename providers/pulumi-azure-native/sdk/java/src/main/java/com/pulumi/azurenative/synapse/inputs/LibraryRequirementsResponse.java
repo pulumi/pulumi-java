@@ -23,10 +23,10 @@ public final class LibraryRequirementsResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="content")
-      private final @Nullable String content;
+    private @Nullable String content;
 
     public Optional<String> content() {
-        return this.content == null ? Optional.empty() : Optional.ofNullable(this.content);
+        return Optional.ofNullable(this.content);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class LibraryRequirementsResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="filename")
-      private final @Nullable String filename;
+    private @Nullable String filename;
 
     public Optional<String> filename() {
-        return this.filename == null ? Optional.empty() : Optional.ofNullable(this.filename);
+        return Optional.ofNullable(this.filename);
     }
 
     /**
@@ -45,64 +45,57 @@ public final class LibraryRequirementsResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="time", required=true)
-      private final String time;
+    private String time;
 
     public String time() {
         return this.time;
     }
 
-    public LibraryRequirementsResponse(
-        @Nullable String content,
-        @Nullable String filename,
-        String time) {
-        this.content = content;
-        this.filename = filename;
-        this.time = Objects.requireNonNull(time, "expected parameter 'time' to be non-null");
-    }
+    private LibraryRequirementsResponse() {}
 
-    private LibraryRequirementsResponse() {
-        this.content = null;
-        this.filename = null;
-        this.time = null;
+    private LibraryRequirementsResponse(LibraryRequirementsResponse $) {
+        this.content = $.content;
+        this.filename = $.filename;
+        this.time = $.time;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LibraryRequirementsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String content;
-        private @Nullable String filename;
-        private String time;
+        private LibraryRequirementsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new LibraryRequirementsResponse();
         }
 
         public Builder(LibraryRequirementsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.content = defaults.content;
-    	      this.filename = defaults.filename;
-    	      this.time = defaults.time;
+            $ = new LibraryRequirementsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder content(@Nullable String content) {
-            this.content = content;
+            $.content = content;
             return this;
         }
+
         public Builder filename(@Nullable String filename) {
-            this.filename = filename;
+            $.filename = filename;
             return this;
         }
+
         public Builder time(String time) {
-            this.time = Objects.requireNonNull(time);
+            $.time = time;
             return this;
-        }        public LibraryRequirementsResponse build() {
-            return new LibraryRequirementsResponse(content, filename, time);
+        }
+
+        public LibraryRequirementsResponse build() {
+            $.time = Objects.requireNonNull($.time, "expected parameter 'time' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,11 +5,11 @@ package com.pulumi.googlenative.websecurityscanner_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.websecurityscanner_v1.inputs.CustomAccountArgs;
 import com.pulumi.googlenative.websecurityscanner_v1.inputs.GoogleAccountArgs;
 import com.pulumi.googlenative.websecurityscanner_v1.inputs.IapCredentialArgs;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class AuthenticationArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="customAccount")
-      private final @Nullable Output<CustomAccountArgs> customAccount;
+    private @Nullable Output<CustomAccountArgs> customAccount;
 
-    public Output<CustomAccountArgs> customAccount() {
-        return this.customAccount == null ? Codegen.empty() : this.customAccount;
+    public Optional<Output<CustomAccountArgs>> customAccount() {
+        return Optional.ofNullable(this.customAccount);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class AuthenticationArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="googleAccount")
-      private final @Nullable Output<GoogleAccountArgs> googleAccount;
+    private @Nullable Output<GoogleAccountArgs> googleAccount;
 
-    public Output<GoogleAccountArgs> googleAccount() {
-        return this.googleAccount == null ? Codegen.empty() : this.googleAccount;
+    public Optional<Output<GoogleAccountArgs>> googleAccount() {
+        return Optional.ofNullable(this.googleAccount);
     }
 
     /**
@@ -48,76 +48,68 @@ public final class AuthenticationArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="iapCredential")
-      private final @Nullable Output<IapCredentialArgs> iapCredential;
+    private @Nullable Output<IapCredentialArgs> iapCredential;
 
-    public Output<IapCredentialArgs> iapCredential() {
-        return this.iapCredential == null ? Codegen.empty() : this.iapCredential;
+    public Optional<Output<IapCredentialArgs>> iapCredential() {
+        return Optional.ofNullable(this.iapCredential);
     }
 
-    public AuthenticationArgs(
-        @Nullable Output<CustomAccountArgs> customAccount,
-        @Nullable Output<GoogleAccountArgs> googleAccount,
-        @Nullable Output<IapCredentialArgs> iapCredential) {
-        this.customAccount = customAccount;
-        this.googleAccount = googleAccount;
-        this.iapCredential = iapCredential;
-    }
+    private AuthenticationArgs() {}
 
-    private AuthenticationArgs() {
-        this.customAccount = Codegen.empty();
-        this.googleAccount = Codegen.empty();
-        this.iapCredential = Codegen.empty();
+    private AuthenticationArgs(AuthenticationArgs $) {
+        this.customAccount = $.customAccount;
+        this.googleAccount = $.googleAccount;
+        this.iapCredential = $.iapCredential;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AuthenticationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<CustomAccountArgs> customAccount;
-        private @Nullable Output<GoogleAccountArgs> googleAccount;
-        private @Nullable Output<IapCredentialArgs> iapCredential;
+        private AuthenticationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AuthenticationArgs();
         }
 
         public Builder(AuthenticationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.customAccount = defaults.customAccount;
-    	      this.googleAccount = defaults.googleAccount;
-    	      this.iapCredential = defaults.iapCredential;
+            $ = new AuthenticationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder customAccount(@Nullable Output<CustomAccountArgs> customAccount) {
-            this.customAccount = customAccount;
+            $.customAccount = customAccount;
             return this;
         }
-        public Builder customAccount(@Nullable CustomAccountArgs customAccount) {
-            this.customAccount = Codegen.ofNullable(customAccount);
-            return this;
+
+        public Builder customAccount(CustomAccountArgs customAccount) {
+            return customAccount(Output.of(customAccount));
         }
+
         public Builder googleAccount(@Nullable Output<GoogleAccountArgs> googleAccount) {
-            this.googleAccount = googleAccount;
+            $.googleAccount = googleAccount;
             return this;
         }
-        public Builder googleAccount(@Nullable GoogleAccountArgs googleAccount) {
-            this.googleAccount = Codegen.ofNullable(googleAccount);
-            return this;
+
+        public Builder googleAccount(GoogleAccountArgs googleAccount) {
+            return googleAccount(Output.of(googleAccount));
         }
+
         public Builder iapCredential(@Nullable Output<IapCredentialArgs> iapCredential) {
-            this.iapCredential = iapCredential;
+            $.iapCredential = iapCredential;
             return this;
         }
-        public Builder iapCredential(@Nullable IapCredentialArgs iapCredential) {
-            this.iapCredential = Codegen.ofNullable(iapCredential);
-            return this;
-        }        public AuthenticationArgs build() {
-            return new AuthenticationArgs(customAccount, googleAccount, iapCredential);
+
+        public Builder iapCredential(IapCredentialArgs iapCredential) {
+            return iapCredential(Output.of(iapCredential));
+        }
+
+        public AuthenticationArgs build() {
+            return $;
         }
     }
+
 }

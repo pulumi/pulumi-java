@@ -7,13 +7,13 @@ import com.pulumi.azurenative.insights.inputs.WorkbookTemplateGalleryArgs;
 import com.pulumi.azurenative.insights.inputs.WorkbookTemplateLocalizedGalleryArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class WorkbookTemplateArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="author")
-      private final @Nullable Output<String> author;
+    private @Nullable Output<String> author;
 
-    public Output<String> author() {
-        return this.author == null ? Codegen.empty() : this.author;
+    public Optional<Output<String>> author() {
+        return Optional.ofNullable(this.author);
     }
 
     /**
@@ -37,7 +37,7 @@ public final class WorkbookTemplateArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="galleries", required=true)
-      private final Output<List<WorkbookTemplateGalleryArgs>> galleries;
+    private Output<List<WorkbookTemplateGalleryArgs>> galleries;
 
     public Output<List<WorkbookTemplateGalleryArgs>> galleries() {
         return this.galleries;
@@ -48,10 +48,10 @@ public final class WorkbookTemplateArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="localized")
-      private final @Nullable Output<Map<String,List<WorkbookTemplateLocalizedGalleryArgs>>> localized;
+    private @Nullable Output<Map<String,List<WorkbookTemplateLocalizedGalleryArgs>>> localized;
 
-    public Output<Map<String,List<WorkbookTemplateLocalizedGalleryArgs>>> localized() {
-        return this.localized == null ? Codegen.empty() : this.localized;
+    public Optional<Output<Map<String,List<WorkbookTemplateLocalizedGalleryArgs>>>> localized() {
+        return Optional.ofNullable(this.localized);
     }
 
     /**
@@ -59,10 +59,10 @@ public final class WorkbookTemplateArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -70,10 +70,10 @@ public final class WorkbookTemplateArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="priority")
-      private final @Nullable Output<Integer> priority;
+    private @Nullable Output<Integer> priority;
 
-    public Output<Integer> priority() {
-        return this.priority == null ? Codegen.empty() : this.priority;
+    public Optional<Output<Integer>> priority() {
+        return Optional.ofNullable(this.priority);
     }
 
     /**
@@ -81,7 +81,7 @@ public final class WorkbookTemplateArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -92,10 +92,10 @@ public final class WorkbookTemplateArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="resourceName")
-      private final @Nullable Output<String> resourceName;
+    private @Nullable Output<String> resourceName;
 
-    public Output<String> resourceName() {
-        return this.resourceName == null ? Codegen.empty() : this.resourceName;
+    public Optional<Output<String>> resourceName() {
+        return Optional.ofNullable(this.resourceName);
     }
 
     /**
@@ -103,10 +103,10 @@ public final class WorkbookTemplateArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -114,157 +114,135 @@ public final class WorkbookTemplateArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="templateData", required=true)
-      private final Output<Object> templateData;
+    private Output<Object> templateData;
 
     public Output<Object> templateData() {
         return this.templateData;
     }
 
-    public WorkbookTemplateArgs(
-        @Nullable Output<String> author,
-        Output<List<WorkbookTemplateGalleryArgs>> galleries,
-        @Nullable Output<Map<String,List<WorkbookTemplateLocalizedGalleryArgs>>> localized,
-        @Nullable Output<String> location,
-        @Nullable Output<Integer> priority,
-        Output<String> resourceGroupName,
-        @Nullable Output<String> resourceName,
-        @Nullable Output<Map<String,String>> tags,
-        Output<Object> templateData) {
-        this.author = author;
-        this.galleries = Objects.requireNonNull(galleries, "expected parameter 'galleries' to be non-null");
-        this.localized = localized;
-        this.location = location;
-        this.priority = priority;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.resourceName = resourceName;
-        this.tags = tags;
-        this.templateData = Objects.requireNonNull(templateData, "expected parameter 'templateData' to be non-null");
-    }
+    private WorkbookTemplateArgs() {}
 
-    private WorkbookTemplateArgs() {
-        this.author = Codegen.empty();
-        this.galleries = Codegen.empty();
-        this.localized = Codegen.empty();
-        this.location = Codegen.empty();
-        this.priority = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.resourceName = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.templateData = Codegen.empty();
+    private WorkbookTemplateArgs(WorkbookTemplateArgs $) {
+        this.author = $.author;
+        this.galleries = $.galleries;
+        this.localized = $.localized;
+        this.location = $.location;
+        this.priority = $.priority;
+        this.resourceGroupName = $.resourceGroupName;
+        this.resourceName = $.resourceName;
+        this.tags = $.tags;
+        this.templateData = $.templateData;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WorkbookTemplateArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> author;
-        private Output<List<WorkbookTemplateGalleryArgs>> galleries;
-        private @Nullable Output<Map<String,List<WorkbookTemplateLocalizedGalleryArgs>>> localized;
-        private @Nullable Output<String> location;
-        private @Nullable Output<Integer> priority;
-        private Output<String> resourceGroupName;
-        private @Nullable Output<String> resourceName;
-        private @Nullable Output<Map<String,String>> tags;
-        private Output<Object> templateData;
+        private WorkbookTemplateArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new WorkbookTemplateArgs();
         }
 
         public Builder(WorkbookTemplateArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.author = defaults.author;
-    	      this.galleries = defaults.galleries;
-    	      this.localized = defaults.localized;
-    	      this.location = defaults.location;
-    	      this.priority = defaults.priority;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.resourceName = defaults.resourceName;
-    	      this.tags = defaults.tags;
-    	      this.templateData = defaults.templateData;
+            $ = new WorkbookTemplateArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder author(@Nullable Output<String> author) {
-            this.author = author;
+            $.author = author;
             return this;
         }
-        public Builder author(@Nullable String author) {
-            this.author = Codegen.ofNullable(author);
-            return this;
+
+        public Builder author(String author) {
+            return author(Output.of(author));
         }
+
         public Builder galleries(Output<List<WorkbookTemplateGalleryArgs>> galleries) {
-            this.galleries = Objects.requireNonNull(galleries);
+            $.galleries = galleries;
             return this;
         }
+
         public Builder galleries(List<WorkbookTemplateGalleryArgs> galleries) {
-            this.galleries = Output.of(Objects.requireNonNull(galleries));
-            return this;
+            return galleries(Output.of(galleries));
         }
+
         public Builder galleries(WorkbookTemplateGalleryArgs... galleries) {
             return galleries(List.of(galleries));
         }
+
         public Builder localized(@Nullable Output<Map<String,List<WorkbookTemplateLocalizedGalleryArgs>>> localized) {
-            this.localized = localized;
+            $.localized = localized;
             return this;
         }
-        public Builder localized(@Nullable Map<String,List<WorkbookTemplateLocalizedGalleryArgs>> localized) {
-            this.localized = Codegen.ofNullable(localized);
-            return this;
+
+        public Builder localized(Map<String,List<WorkbookTemplateLocalizedGalleryArgs>> localized) {
+            return localized(Output.of(localized));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder priority(@Nullable Output<Integer> priority) {
-            this.priority = priority;
+            $.priority = priority;
             return this;
         }
-        public Builder priority(@Nullable Integer priority) {
-            this.priority = Codegen.ofNullable(priority);
-            return this;
+
+        public Builder priority(Integer priority) {
+            return priority(Output.of(priority));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder resourceName(@Nullable Output<String> resourceName) {
-            this.resourceName = resourceName;
+            $.resourceName = resourceName;
             return this;
         }
-        public Builder resourceName(@Nullable String resourceName) {
-            this.resourceName = Codegen.ofNullable(resourceName);
-            return this;
+
+        public Builder resourceName(String resourceName) {
+            return resourceName(Output.of(resourceName));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder templateData(Output<Object> templateData) {
-            this.templateData = Objects.requireNonNull(templateData);
+            $.templateData = templateData;
             return this;
         }
+
         public Builder templateData(Object templateData) {
-            this.templateData = Output.of(Objects.requireNonNull(templateData));
-            return this;
-        }        public WorkbookTemplateArgs build() {
-            return new WorkbookTemplateArgs(author, galleries, localized, location, priority, resourceGroupName, resourceName, tags, templateData);
+            return templateData(Output.of(templateData));
+        }
+
+        public WorkbookTemplateArgs build() {
+            $.galleries = Objects.requireNonNull($.galleries, "expected parameter 'galleries' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.templateData = Objects.requireNonNull($.templateData, "expected parameter 'templateData' to be non-null");
+            return $;
         }
     }
+
 }

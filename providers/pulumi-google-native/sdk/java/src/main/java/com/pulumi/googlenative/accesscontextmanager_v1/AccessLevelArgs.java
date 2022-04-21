@@ -5,11 +5,11 @@ package com.pulumi.googlenative.accesscontextmanager_v1;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.accesscontextmanager_v1.inputs.BasicLevelArgs;
 import com.pulumi.googlenative.accesscontextmanager_v1.inputs.CustomLevelArgs;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -18,7 +18,7 @@ public final class AccessLevelArgs extends com.pulumi.resources.ResourceArgs {
     public static final AccessLevelArgs Empty = new AccessLevelArgs();
 
     @Import(name="accessPolicyId", required=true)
-      private final Output<String> accessPolicyId;
+    private Output<String> accessPolicyId;
 
     public Output<String> accessPolicyId() {
         return this.accessPolicyId;
@@ -29,10 +29,10 @@ public final class AccessLevelArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="basic")
-      private final @Nullable Output<BasicLevelArgs> basic;
+    private @Nullable Output<BasicLevelArgs> basic;
 
-    public Output<BasicLevelArgs> basic() {
-        return this.basic == null ? Codegen.empty() : this.basic;
+    public Optional<Output<BasicLevelArgs>> basic() {
+        return Optional.ofNullable(this.basic);
     }
 
     /**
@@ -40,10 +40,10 @@ public final class AccessLevelArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="custom")
-      private final @Nullable Output<CustomLevelArgs> custom;
+    private @Nullable Output<CustomLevelArgs> custom;
 
-    public Output<CustomLevelArgs> custom() {
-        return this.custom == null ? Codegen.empty() : this.custom;
+    public Optional<Output<CustomLevelArgs>> custom() {
+        return Optional.ofNullable(this.custom);
     }
 
     /**
@@ -51,10 +51,10 @@ public final class AccessLevelArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -62,10 +62,10 @@ public final class AccessLevelArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -73,115 +73,99 @@ public final class AccessLevelArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="title")
-      private final @Nullable Output<String> title;
+    private @Nullable Output<String> title;
 
-    public Output<String> title() {
-        return this.title == null ? Codegen.empty() : this.title;
+    public Optional<Output<String>> title() {
+        return Optional.ofNullable(this.title);
     }
 
-    public AccessLevelArgs(
-        Output<String> accessPolicyId,
-        @Nullable Output<BasicLevelArgs> basic,
-        @Nullable Output<CustomLevelArgs> custom,
-        @Nullable Output<String> description,
-        @Nullable Output<String> name,
-        @Nullable Output<String> title) {
-        this.accessPolicyId = Objects.requireNonNull(accessPolicyId, "expected parameter 'accessPolicyId' to be non-null");
-        this.basic = basic;
-        this.custom = custom;
-        this.description = description;
-        this.name = name;
-        this.title = title;
-    }
+    private AccessLevelArgs() {}
 
-    private AccessLevelArgs() {
-        this.accessPolicyId = Codegen.empty();
-        this.basic = Codegen.empty();
-        this.custom = Codegen.empty();
-        this.description = Codegen.empty();
-        this.name = Codegen.empty();
-        this.title = Codegen.empty();
+    private AccessLevelArgs(AccessLevelArgs $) {
+        this.accessPolicyId = $.accessPolicyId;
+        this.basic = $.basic;
+        this.custom = $.custom;
+        this.description = $.description;
+        this.name = $.name;
+        this.title = $.title;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AccessLevelArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> accessPolicyId;
-        private @Nullable Output<BasicLevelArgs> basic;
-        private @Nullable Output<CustomLevelArgs> custom;
-        private @Nullable Output<String> description;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> title;
+        private AccessLevelArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AccessLevelArgs();
         }
 
         public Builder(AccessLevelArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accessPolicyId = defaults.accessPolicyId;
-    	      this.basic = defaults.basic;
-    	      this.custom = defaults.custom;
-    	      this.description = defaults.description;
-    	      this.name = defaults.name;
-    	      this.title = defaults.title;
+            $ = new AccessLevelArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder accessPolicyId(Output<String> accessPolicyId) {
-            this.accessPolicyId = Objects.requireNonNull(accessPolicyId);
+            $.accessPolicyId = accessPolicyId;
             return this;
         }
+
         public Builder accessPolicyId(String accessPolicyId) {
-            this.accessPolicyId = Output.of(Objects.requireNonNull(accessPolicyId));
-            return this;
+            return accessPolicyId(Output.of(accessPolicyId));
         }
+
         public Builder basic(@Nullable Output<BasicLevelArgs> basic) {
-            this.basic = basic;
+            $.basic = basic;
             return this;
         }
-        public Builder basic(@Nullable BasicLevelArgs basic) {
-            this.basic = Codegen.ofNullable(basic);
-            return this;
+
+        public Builder basic(BasicLevelArgs basic) {
+            return basic(Output.of(basic));
         }
+
         public Builder custom(@Nullable Output<CustomLevelArgs> custom) {
-            this.custom = custom;
+            $.custom = custom;
             return this;
         }
-        public Builder custom(@Nullable CustomLevelArgs custom) {
-            this.custom = Codegen.ofNullable(custom);
-            return this;
+
+        public Builder custom(CustomLevelArgs custom) {
+            return custom(Output.of(custom));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder title(@Nullable Output<String> title) {
-            this.title = title;
+            $.title = title;
             return this;
         }
-        public Builder title(@Nullable String title) {
-            this.title = Codegen.ofNullable(title);
-            return this;
-        }        public AccessLevelArgs build() {
-            return new AccessLevelArgs(accessPolicyId, basic, custom, description, name, title);
+
+        public Builder title(String title) {
+            return title(Output.of(title));
+        }
+
+        public AccessLevelArgs build() {
+            $.accessPolicyId = Objects.requireNonNull($.accessPolicyId, "expected parameter 'accessPolicyId' to be non-null");
+            return $;
         }
     }
+
 }

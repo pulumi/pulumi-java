@@ -6,7 +6,6 @@ package com.pulumi.aws.s3.inputs;
 import com.pulumi.aws.s3.inputs.AnalyticsConfigurationStorageClassAnalysisDataExportDestinationS3BucketDestinationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
 
 
@@ -19,49 +18,49 @@ public final class AnalyticsConfigurationStorageClassAnalysisDataExportDestinati
      * 
      */
     @Import(name="s3BucketDestination", required=true)
-      private final Output<AnalyticsConfigurationStorageClassAnalysisDataExportDestinationS3BucketDestinationArgs> s3BucketDestination;
+    private Output<AnalyticsConfigurationStorageClassAnalysisDataExportDestinationS3BucketDestinationArgs> s3BucketDestination;
 
     public Output<AnalyticsConfigurationStorageClassAnalysisDataExportDestinationS3BucketDestinationArgs> s3BucketDestination() {
         return this.s3BucketDestination;
     }
 
-    public AnalyticsConfigurationStorageClassAnalysisDataExportDestinationArgs(Output<AnalyticsConfigurationStorageClassAnalysisDataExportDestinationS3BucketDestinationArgs> s3BucketDestination) {
-        this.s3BucketDestination = Objects.requireNonNull(s3BucketDestination, "expected parameter 's3BucketDestination' to be non-null");
-    }
+    private AnalyticsConfigurationStorageClassAnalysisDataExportDestinationArgs() {}
 
-    private AnalyticsConfigurationStorageClassAnalysisDataExportDestinationArgs() {
-        this.s3BucketDestination = Codegen.empty();
+    private AnalyticsConfigurationStorageClassAnalysisDataExportDestinationArgs(AnalyticsConfigurationStorageClassAnalysisDataExportDestinationArgs $) {
+        this.s3BucketDestination = $.s3BucketDestination;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AnalyticsConfigurationStorageClassAnalysisDataExportDestinationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<AnalyticsConfigurationStorageClassAnalysisDataExportDestinationS3BucketDestinationArgs> s3BucketDestination;
+        private AnalyticsConfigurationStorageClassAnalysisDataExportDestinationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AnalyticsConfigurationStorageClassAnalysisDataExportDestinationArgs();
         }
 
         public Builder(AnalyticsConfigurationStorageClassAnalysisDataExportDestinationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.s3BucketDestination = defaults.s3BucketDestination;
+            $ = new AnalyticsConfigurationStorageClassAnalysisDataExportDestinationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder s3BucketDestination(Output<AnalyticsConfigurationStorageClassAnalysisDataExportDestinationS3BucketDestinationArgs> s3BucketDestination) {
-            this.s3BucketDestination = Objects.requireNonNull(s3BucketDestination);
+            $.s3BucketDestination = s3BucketDestination;
             return this;
         }
+
         public Builder s3BucketDestination(AnalyticsConfigurationStorageClassAnalysisDataExportDestinationS3BucketDestinationArgs s3BucketDestination) {
-            this.s3BucketDestination = Output.of(Objects.requireNonNull(s3BucketDestination));
-            return this;
-        }        public AnalyticsConfigurationStorageClassAnalysisDataExportDestinationArgs build() {
-            return new AnalyticsConfigurationStorageClassAnalysisDataExportDestinationArgs(s3BucketDestination);
+            return s3BucketDestination(Output.of(s3BucketDestination));
+        }
+
+        public AnalyticsConfigurationStorageClassAnalysisDataExportDestinationArgs build() {
+            $.s3BucketDestination = Objects.requireNonNull($.s3BucketDestination, "expected parameter 's3BucketDestination' to be non-null");
+            return $;
         }
     }
+
 }

@@ -7,12 +7,12 @@ import com.pulumi.awsnative.ec2.inputs.SpotFleetInstanceIpv6AddressArgs;
 import com.pulumi.awsnative.ec2.inputs.SpotFleetPrivateIpAddressSpecificationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,259 +21,230 @@ public final class SpotFleetInstanceNetworkInterfaceSpecificationArgs extends co
     public static final SpotFleetInstanceNetworkInterfaceSpecificationArgs Empty = new SpotFleetInstanceNetworkInterfaceSpecificationArgs();
 
     @Import(name="associatePublicIpAddress")
-      private final @Nullable Output<Boolean> associatePublicIpAddress;
+    private @Nullable Output<Boolean> associatePublicIpAddress;
 
-    public Output<Boolean> associatePublicIpAddress() {
-        return this.associatePublicIpAddress == null ? Codegen.empty() : this.associatePublicIpAddress;
+    public Optional<Output<Boolean>> associatePublicIpAddress() {
+        return Optional.ofNullable(this.associatePublicIpAddress);
     }
 
     @Import(name="deleteOnTermination")
-      private final @Nullable Output<Boolean> deleteOnTermination;
+    private @Nullable Output<Boolean> deleteOnTermination;
 
-    public Output<Boolean> deleteOnTermination() {
-        return this.deleteOnTermination == null ? Codegen.empty() : this.deleteOnTermination;
+    public Optional<Output<Boolean>> deleteOnTermination() {
+        return Optional.ofNullable(this.deleteOnTermination);
     }
 
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     @Import(name="deviceIndex")
-      private final @Nullable Output<Integer> deviceIndex;
+    private @Nullable Output<Integer> deviceIndex;
 
-    public Output<Integer> deviceIndex() {
-        return this.deviceIndex == null ? Codegen.empty() : this.deviceIndex;
+    public Optional<Output<Integer>> deviceIndex() {
+        return Optional.ofNullable(this.deviceIndex);
     }
 
     @Import(name="groups")
-      private final @Nullable Output<List<String>> groups;
+    private @Nullable Output<List<String>> groups;
 
-    public Output<List<String>> groups() {
-        return this.groups == null ? Codegen.empty() : this.groups;
+    public Optional<Output<List<String>>> groups() {
+        return Optional.ofNullable(this.groups);
     }
 
     @Import(name="ipv6AddressCount")
-      private final @Nullable Output<Integer> ipv6AddressCount;
+    private @Nullable Output<Integer> ipv6AddressCount;
 
-    public Output<Integer> ipv6AddressCount() {
-        return this.ipv6AddressCount == null ? Codegen.empty() : this.ipv6AddressCount;
+    public Optional<Output<Integer>> ipv6AddressCount() {
+        return Optional.ofNullable(this.ipv6AddressCount);
     }
 
     @Import(name="ipv6Addresses")
-      private final @Nullable Output<List<SpotFleetInstanceIpv6AddressArgs>> ipv6Addresses;
+    private @Nullable Output<List<SpotFleetInstanceIpv6AddressArgs>> ipv6Addresses;
 
-    public Output<List<SpotFleetInstanceIpv6AddressArgs>> ipv6Addresses() {
-        return this.ipv6Addresses == null ? Codegen.empty() : this.ipv6Addresses;
+    public Optional<Output<List<SpotFleetInstanceIpv6AddressArgs>>> ipv6Addresses() {
+        return Optional.ofNullable(this.ipv6Addresses);
     }
 
     @Import(name="networkInterfaceId")
-      private final @Nullable Output<String> networkInterfaceId;
+    private @Nullable Output<String> networkInterfaceId;
 
-    public Output<String> networkInterfaceId() {
-        return this.networkInterfaceId == null ? Codegen.empty() : this.networkInterfaceId;
+    public Optional<Output<String>> networkInterfaceId() {
+        return Optional.ofNullable(this.networkInterfaceId);
     }
 
     @Import(name="privateIpAddresses")
-      private final @Nullable Output<List<SpotFleetPrivateIpAddressSpecificationArgs>> privateIpAddresses;
+    private @Nullable Output<List<SpotFleetPrivateIpAddressSpecificationArgs>> privateIpAddresses;
 
-    public Output<List<SpotFleetPrivateIpAddressSpecificationArgs>> privateIpAddresses() {
-        return this.privateIpAddresses == null ? Codegen.empty() : this.privateIpAddresses;
+    public Optional<Output<List<SpotFleetPrivateIpAddressSpecificationArgs>>> privateIpAddresses() {
+        return Optional.ofNullable(this.privateIpAddresses);
     }
 
     @Import(name="secondaryPrivateIpAddressCount")
-      private final @Nullable Output<Integer> secondaryPrivateIpAddressCount;
+    private @Nullable Output<Integer> secondaryPrivateIpAddressCount;
 
-    public Output<Integer> secondaryPrivateIpAddressCount() {
-        return this.secondaryPrivateIpAddressCount == null ? Codegen.empty() : this.secondaryPrivateIpAddressCount;
+    public Optional<Output<Integer>> secondaryPrivateIpAddressCount() {
+        return Optional.ofNullable(this.secondaryPrivateIpAddressCount);
     }
 
     @Import(name="subnetId")
-      private final @Nullable Output<String> subnetId;
+    private @Nullable Output<String> subnetId;
 
-    public Output<String> subnetId() {
-        return this.subnetId == null ? Codegen.empty() : this.subnetId;
+    public Optional<Output<String>> subnetId() {
+        return Optional.ofNullable(this.subnetId);
     }
 
-    public SpotFleetInstanceNetworkInterfaceSpecificationArgs(
-        @Nullable Output<Boolean> associatePublicIpAddress,
-        @Nullable Output<Boolean> deleteOnTermination,
-        @Nullable Output<String> description,
-        @Nullable Output<Integer> deviceIndex,
-        @Nullable Output<List<String>> groups,
-        @Nullable Output<Integer> ipv6AddressCount,
-        @Nullable Output<List<SpotFleetInstanceIpv6AddressArgs>> ipv6Addresses,
-        @Nullable Output<String> networkInterfaceId,
-        @Nullable Output<List<SpotFleetPrivateIpAddressSpecificationArgs>> privateIpAddresses,
-        @Nullable Output<Integer> secondaryPrivateIpAddressCount,
-        @Nullable Output<String> subnetId) {
-        this.associatePublicIpAddress = associatePublicIpAddress;
-        this.deleteOnTermination = deleteOnTermination;
-        this.description = description;
-        this.deviceIndex = deviceIndex;
-        this.groups = groups;
-        this.ipv6AddressCount = ipv6AddressCount;
-        this.ipv6Addresses = ipv6Addresses;
-        this.networkInterfaceId = networkInterfaceId;
-        this.privateIpAddresses = privateIpAddresses;
-        this.secondaryPrivateIpAddressCount = secondaryPrivateIpAddressCount;
-        this.subnetId = subnetId;
-    }
+    private SpotFleetInstanceNetworkInterfaceSpecificationArgs() {}
 
-    private SpotFleetInstanceNetworkInterfaceSpecificationArgs() {
-        this.associatePublicIpAddress = Codegen.empty();
-        this.deleteOnTermination = Codegen.empty();
-        this.description = Codegen.empty();
-        this.deviceIndex = Codegen.empty();
-        this.groups = Codegen.empty();
-        this.ipv6AddressCount = Codegen.empty();
-        this.ipv6Addresses = Codegen.empty();
-        this.networkInterfaceId = Codegen.empty();
-        this.privateIpAddresses = Codegen.empty();
-        this.secondaryPrivateIpAddressCount = Codegen.empty();
-        this.subnetId = Codegen.empty();
+    private SpotFleetInstanceNetworkInterfaceSpecificationArgs(SpotFleetInstanceNetworkInterfaceSpecificationArgs $) {
+        this.associatePublicIpAddress = $.associatePublicIpAddress;
+        this.deleteOnTermination = $.deleteOnTermination;
+        this.description = $.description;
+        this.deviceIndex = $.deviceIndex;
+        this.groups = $.groups;
+        this.ipv6AddressCount = $.ipv6AddressCount;
+        this.ipv6Addresses = $.ipv6Addresses;
+        this.networkInterfaceId = $.networkInterfaceId;
+        this.privateIpAddresses = $.privateIpAddresses;
+        this.secondaryPrivateIpAddressCount = $.secondaryPrivateIpAddressCount;
+        this.subnetId = $.subnetId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SpotFleetInstanceNetworkInterfaceSpecificationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> associatePublicIpAddress;
-        private @Nullable Output<Boolean> deleteOnTermination;
-        private @Nullable Output<String> description;
-        private @Nullable Output<Integer> deviceIndex;
-        private @Nullable Output<List<String>> groups;
-        private @Nullable Output<Integer> ipv6AddressCount;
-        private @Nullable Output<List<SpotFleetInstanceIpv6AddressArgs>> ipv6Addresses;
-        private @Nullable Output<String> networkInterfaceId;
-        private @Nullable Output<List<SpotFleetPrivateIpAddressSpecificationArgs>> privateIpAddresses;
-        private @Nullable Output<Integer> secondaryPrivateIpAddressCount;
-        private @Nullable Output<String> subnetId;
+        private SpotFleetInstanceNetworkInterfaceSpecificationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SpotFleetInstanceNetworkInterfaceSpecificationArgs();
         }
 
         public Builder(SpotFleetInstanceNetworkInterfaceSpecificationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.associatePublicIpAddress = defaults.associatePublicIpAddress;
-    	      this.deleteOnTermination = defaults.deleteOnTermination;
-    	      this.description = defaults.description;
-    	      this.deviceIndex = defaults.deviceIndex;
-    	      this.groups = defaults.groups;
-    	      this.ipv6AddressCount = defaults.ipv6AddressCount;
-    	      this.ipv6Addresses = defaults.ipv6Addresses;
-    	      this.networkInterfaceId = defaults.networkInterfaceId;
-    	      this.privateIpAddresses = defaults.privateIpAddresses;
-    	      this.secondaryPrivateIpAddressCount = defaults.secondaryPrivateIpAddressCount;
-    	      this.subnetId = defaults.subnetId;
+            $ = new SpotFleetInstanceNetworkInterfaceSpecificationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder associatePublicIpAddress(@Nullable Output<Boolean> associatePublicIpAddress) {
-            this.associatePublicIpAddress = associatePublicIpAddress;
+            $.associatePublicIpAddress = associatePublicIpAddress;
             return this;
         }
-        public Builder associatePublicIpAddress(@Nullable Boolean associatePublicIpAddress) {
-            this.associatePublicIpAddress = Codegen.ofNullable(associatePublicIpAddress);
-            return this;
+
+        public Builder associatePublicIpAddress(Boolean associatePublicIpAddress) {
+            return associatePublicIpAddress(Output.of(associatePublicIpAddress));
         }
+
         public Builder deleteOnTermination(@Nullable Output<Boolean> deleteOnTermination) {
-            this.deleteOnTermination = deleteOnTermination;
+            $.deleteOnTermination = deleteOnTermination;
             return this;
         }
-        public Builder deleteOnTermination(@Nullable Boolean deleteOnTermination) {
-            this.deleteOnTermination = Codegen.ofNullable(deleteOnTermination);
-            return this;
+
+        public Builder deleteOnTermination(Boolean deleteOnTermination) {
+            return deleteOnTermination(Output.of(deleteOnTermination));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder deviceIndex(@Nullable Output<Integer> deviceIndex) {
-            this.deviceIndex = deviceIndex;
+            $.deviceIndex = deviceIndex;
             return this;
         }
-        public Builder deviceIndex(@Nullable Integer deviceIndex) {
-            this.deviceIndex = Codegen.ofNullable(deviceIndex);
-            return this;
+
+        public Builder deviceIndex(Integer deviceIndex) {
+            return deviceIndex(Output.of(deviceIndex));
         }
+
         public Builder groups(@Nullable Output<List<String>> groups) {
-            this.groups = groups;
+            $.groups = groups;
             return this;
         }
-        public Builder groups(@Nullable List<String> groups) {
-            this.groups = Codegen.ofNullable(groups);
-            return this;
+
+        public Builder groups(List<String> groups) {
+            return groups(Output.of(groups));
         }
+
         public Builder groups(String... groups) {
             return groups(List.of(groups));
         }
+
         public Builder ipv6AddressCount(@Nullable Output<Integer> ipv6AddressCount) {
-            this.ipv6AddressCount = ipv6AddressCount;
+            $.ipv6AddressCount = ipv6AddressCount;
             return this;
         }
-        public Builder ipv6AddressCount(@Nullable Integer ipv6AddressCount) {
-            this.ipv6AddressCount = Codegen.ofNullable(ipv6AddressCount);
-            return this;
+
+        public Builder ipv6AddressCount(Integer ipv6AddressCount) {
+            return ipv6AddressCount(Output.of(ipv6AddressCount));
         }
+
         public Builder ipv6Addresses(@Nullable Output<List<SpotFleetInstanceIpv6AddressArgs>> ipv6Addresses) {
-            this.ipv6Addresses = ipv6Addresses;
+            $.ipv6Addresses = ipv6Addresses;
             return this;
         }
-        public Builder ipv6Addresses(@Nullable List<SpotFleetInstanceIpv6AddressArgs> ipv6Addresses) {
-            this.ipv6Addresses = Codegen.ofNullable(ipv6Addresses);
-            return this;
+
+        public Builder ipv6Addresses(List<SpotFleetInstanceIpv6AddressArgs> ipv6Addresses) {
+            return ipv6Addresses(Output.of(ipv6Addresses));
         }
+
         public Builder ipv6Addresses(SpotFleetInstanceIpv6AddressArgs... ipv6Addresses) {
             return ipv6Addresses(List.of(ipv6Addresses));
         }
+
         public Builder networkInterfaceId(@Nullable Output<String> networkInterfaceId) {
-            this.networkInterfaceId = networkInterfaceId;
+            $.networkInterfaceId = networkInterfaceId;
             return this;
         }
-        public Builder networkInterfaceId(@Nullable String networkInterfaceId) {
-            this.networkInterfaceId = Codegen.ofNullable(networkInterfaceId);
-            return this;
+
+        public Builder networkInterfaceId(String networkInterfaceId) {
+            return networkInterfaceId(Output.of(networkInterfaceId));
         }
+
         public Builder privateIpAddresses(@Nullable Output<List<SpotFleetPrivateIpAddressSpecificationArgs>> privateIpAddresses) {
-            this.privateIpAddresses = privateIpAddresses;
+            $.privateIpAddresses = privateIpAddresses;
             return this;
         }
-        public Builder privateIpAddresses(@Nullable List<SpotFleetPrivateIpAddressSpecificationArgs> privateIpAddresses) {
-            this.privateIpAddresses = Codegen.ofNullable(privateIpAddresses);
-            return this;
+
+        public Builder privateIpAddresses(List<SpotFleetPrivateIpAddressSpecificationArgs> privateIpAddresses) {
+            return privateIpAddresses(Output.of(privateIpAddresses));
         }
+
         public Builder privateIpAddresses(SpotFleetPrivateIpAddressSpecificationArgs... privateIpAddresses) {
             return privateIpAddresses(List.of(privateIpAddresses));
         }
+
         public Builder secondaryPrivateIpAddressCount(@Nullable Output<Integer> secondaryPrivateIpAddressCount) {
-            this.secondaryPrivateIpAddressCount = secondaryPrivateIpAddressCount;
+            $.secondaryPrivateIpAddressCount = secondaryPrivateIpAddressCount;
             return this;
         }
-        public Builder secondaryPrivateIpAddressCount(@Nullable Integer secondaryPrivateIpAddressCount) {
-            this.secondaryPrivateIpAddressCount = Codegen.ofNullable(secondaryPrivateIpAddressCount);
-            return this;
+
+        public Builder secondaryPrivateIpAddressCount(Integer secondaryPrivateIpAddressCount) {
+            return secondaryPrivateIpAddressCount(Output.of(secondaryPrivateIpAddressCount));
         }
+
         public Builder subnetId(@Nullable Output<String> subnetId) {
-            this.subnetId = subnetId;
+            $.subnetId = subnetId;
             return this;
         }
-        public Builder subnetId(@Nullable String subnetId) {
-            this.subnetId = Codegen.ofNullable(subnetId);
-            return this;
-        }        public SpotFleetInstanceNetworkInterfaceSpecificationArgs build() {
-            return new SpotFleetInstanceNetworkInterfaceSpecificationArgs(associatePublicIpAddress, deleteOnTermination, description, deviceIndex, groups, ipv6AddressCount, ipv6Addresses, networkInterfaceId, privateIpAddresses, secondaryPrivateIpAddressCount, subnetId);
+
+        public Builder subnetId(String subnetId) {
+            return subnetId(Output.of(subnetId));
+        }
+
+        public SpotFleetInstanceNetworkInterfaceSpecificationArgs build() {
+            return $;
         }
     }
+
 }

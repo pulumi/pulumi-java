@@ -5,11 +5,11 @@ package com.pulumi.googlenative.privateca_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.privateca_v1.enums.CertificateExtensionConstraintsKnownExtensionsItem;
 import com.pulumi.googlenative.privateca_v1.inputs.ObjectIdArgs;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class CertificateExtensionConstraintsArgs extends com.pulumi.resour
      * 
      */
     @Import(name="additionalExtensions")
-      private final @Nullable Output<List<ObjectIdArgs>> additionalExtensions;
+    private @Nullable Output<List<ObjectIdArgs>> additionalExtensions;
 
-    public Output<List<ObjectIdArgs>> additionalExtensions() {
-        return this.additionalExtensions == null ? Codegen.empty() : this.additionalExtensions;
+    public Optional<Output<List<ObjectIdArgs>>> additionalExtensions() {
+        return Optional.ofNullable(this.additionalExtensions);
     }
 
     /**
@@ -37,69 +37,66 @@ public final class CertificateExtensionConstraintsArgs extends com.pulumi.resour
      * 
      */
     @Import(name="knownExtensions")
-      private final @Nullable Output<List<CertificateExtensionConstraintsKnownExtensionsItem>> knownExtensions;
+    private @Nullable Output<List<CertificateExtensionConstraintsKnownExtensionsItem>> knownExtensions;
 
-    public Output<List<CertificateExtensionConstraintsKnownExtensionsItem>> knownExtensions() {
-        return this.knownExtensions == null ? Codegen.empty() : this.knownExtensions;
+    public Optional<Output<List<CertificateExtensionConstraintsKnownExtensionsItem>>> knownExtensions() {
+        return Optional.ofNullable(this.knownExtensions);
     }
 
-    public CertificateExtensionConstraintsArgs(
-        @Nullable Output<List<ObjectIdArgs>> additionalExtensions,
-        @Nullable Output<List<CertificateExtensionConstraintsKnownExtensionsItem>> knownExtensions) {
-        this.additionalExtensions = additionalExtensions;
-        this.knownExtensions = knownExtensions;
-    }
+    private CertificateExtensionConstraintsArgs() {}
 
-    private CertificateExtensionConstraintsArgs() {
-        this.additionalExtensions = Codegen.empty();
-        this.knownExtensions = Codegen.empty();
+    private CertificateExtensionConstraintsArgs(CertificateExtensionConstraintsArgs $) {
+        this.additionalExtensions = $.additionalExtensions;
+        this.knownExtensions = $.knownExtensions;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CertificateExtensionConstraintsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<ObjectIdArgs>> additionalExtensions;
-        private @Nullable Output<List<CertificateExtensionConstraintsKnownExtensionsItem>> knownExtensions;
+        private CertificateExtensionConstraintsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CertificateExtensionConstraintsArgs();
         }
 
         public Builder(CertificateExtensionConstraintsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.additionalExtensions = defaults.additionalExtensions;
-    	      this.knownExtensions = defaults.knownExtensions;
+            $ = new CertificateExtensionConstraintsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder additionalExtensions(@Nullable Output<List<ObjectIdArgs>> additionalExtensions) {
-            this.additionalExtensions = additionalExtensions;
+            $.additionalExtensions = additionalExtensions;
             return this;
         }
-        public Builder additionalExtensions(@Nullable List<ObjectIdArgs> additionalExtensions) {
-            this.additionalExtensions = Codegen.ofNullable(additionalExtensions);
-            return this;
+
+        public Builder additionalExtensions(List<ObjectIdArgs> additionalExtensions) {
+            return additionalExtensions(Output.of(additionalExtensions));
         }
+
         public Builder additionalExtensions(ObjectIdArgs... additionalExtensions) {
             return additionalExtensions(List.of(additionalExtensions));
         }
+
         public Builder knownExtensions(@Nullable Output<List<CertificateExtensionConstraintsKnownExtensionsItem>> knownExtensions) {
-            this.knownExtensions = knownExtensions;
+            $.knownExtensions = knownExtensions;
             return this;
         }
-        public Builder knownExtensions(@Nullable List<CertificateExtensionConstraintsKnownExtensionsItem> knownExtensions) {
-            this.knownExtensions = Codegen.ofNullable(knownExtensions);
-            return this;
+
+        public Builder knownExtensions(List<CertificateExtensionConstraintsKnownExtensionsItem> knownExtensions) {
+            return knownExtensions(Output.of(knownExtensions));
         }
+
         public Builder knownExtensions(CertificateExtensionConstraintsKnownExtensionsItem... knownExtensions) {
             return knownExtensions(List.of(knownExtensions));
-        }        public CertificateExtensionConstraintsArgs build() {
-            return new CertificateExtensionConstraintsArgs(additionalExtensions, knownExtensions);
+        }
+
+        public CertificateExtensionConstraintsArgs build() {
+            return $;
         }
     }
+
 }

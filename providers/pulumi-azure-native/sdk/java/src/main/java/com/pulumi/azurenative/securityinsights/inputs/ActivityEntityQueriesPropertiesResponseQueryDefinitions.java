@@ -23,45 +23,44 @@ public final class ActivityEntityQueriesPropertiesResponseQueryDefinitions exten
      * 
      */
     @Import(name="query")
-      private final @Nullable String query;
+    private @Nullable String query;
 
     public Optional<String> query() {
-        return this.query == null ? Optional.empty() : Optional.ofNullable(this.query);
+        return Optional.ofNullable(this.query);
     }
 
-    public ActivityEntityQueriesPropertiesResponseQueryDefinitions(@Nullable String query) {
-        this.query = query;
-    }
+    private ActivityEntityQueriesPropertiesResponseQueryDefinitions() {}
 
-    private ActivityEntityQueriesPropertiesResponseQueryDefinitions() {
-        this.query = null;
+    private ActivityEntityQueriesPropertiesResponseQueryDefinitions(ActivityEntityQueriesPropertiesResponseQueryDefinitions $) {
+        this.query = $.query;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ActivityEntityQueriesPropertiesResponseQueryDefinitions defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String query;
+        private ActivityEntityQueriesPropertiesResponseQueryDefinitions $;
 
         public Builder() {
-    	      // Empty
+            $ = new ActivityEntityQueriesPropertiesResponseQueryDefinitions();
         }
 
         public Builder(ActivityEntityQueriesPropertiesResponseQueryDefinitions defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.query = defaults.query;
+            $ = new ActivityEntityQueriesPropertiesResponseQueryDefinitions(Objects.requireNonNull(defaults));
         }
 
         public Builder query(@Nullable String query) {
-            this.query = query;
+            $.query = query;
             return this;
-        }        public ActivityEntityQueriesPropertiesResponseQueryDefinitions build() {
-            return new ActivityEntityQueriesPropertiesResponseQueryDefinitions(query);
+        }
+
+        public ActivityEntityQueriesPropertiesResponseQueryDefinitions build() {
+            return $;
         }
     }
+
 }

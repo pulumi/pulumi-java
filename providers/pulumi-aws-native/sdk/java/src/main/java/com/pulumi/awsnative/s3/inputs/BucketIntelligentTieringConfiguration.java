@@ -23,7 +23,7 @@ public final class BucketIntelligentTieringConfiguration extends com.pulumi.reso
      * 
      */
     @Import(name="id", required=true)
-      private final String id;
+    private String id;
 
     public String id() {
         return this.id;
@@ -34,10 +34,10 @@ public final class BucketIntelligentTieringConfiguration extends com.pulumi.reso
      * 
      */
     @Import(name="prefix")
-      private final @Nullable String prefix;
+    private @Nullable String prefix;
 
     public Optional<String> prefix() {
-        return this.prefix == null ? Optional.empty() : Optional.ofNullable(this.prefix);
+        return Optional.ofNullable(this.prefix);
     }
 
     /**
@@ -45,7 +45,7 @@ public final class BucketIntelligentTieringConfiguration extends com.pulumi.reso
      * 
      */
     @Import(name="status", required=true)
-      private final BucketIntelligentTieringConfigurationStatus status;
+    private BucketIntelligentTieringConfigurationStatus status;
 
     public BucketIntelligentTieringConfigurationStatus status() {
         return this.status;
@@ -56,10 +56,10 @@ public final class BucketIntelligentTieringConfiguration extends com.pulumi.reso
      * 
      */
     @Import(name="tagFilters")
-      private final @Nullable List<BucketTagFilter> tagFilters;
+    private @Nullable List<BucketTagFilter> tagFilters;
 
-    public List<BucketTagFilter> tagFilters() {
-        return this.tagFilters == null ? List.of() : this.tagFilters;
+    public Optional<List<BucketTagFilter>> tagFilters() {
+        return Optional.ofNullable(this.tagFilters);
     }
 
     /**
@@ -67,88 +67,79 @@ public final class BucketIntelligentTieringConfiguration extends com.pulumi.reso
      * 
      */
     @Import(name="tierings", required=true)
-      private final List<BucketTiering> tierings;
+    private List<BucketTiering> tierings;
 
     public List<BucketTiering> tierings() {
         return this.tierings;
     }
 
-    public BucketIntelligentTieringConfiguration(
-        String id,
-        @Nullable String prefix,
-        BucketIntelligentTieringConfigurationStatus status,
-        @Nullable List<BucketTagFilter> tagFilters,
-        List<BucketTiering> tierings) {
-        this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
-        this.prefix = prefix;
-        this.status = Objects.requireNonNull(status, "expected parameter 'status' to be non-null");
-        this.tagFilters = tagFilters;
-        this.tierings = Objects.requireNonNull(tierings, "expected parameter 'tierings' to be non-null");
-    }
+    private BucketIntelligentTieringConfiguration() {}
 
-    private BucketIntelligentTieringConfiguration() {
-        this.id = null;
-        this.prefix = null;
-        this.status = null;
-        this.tagFilters = List.of();
-        this.tierings = List.of();
+    private BucketIntelligentTieringConfiguration(BucketIntelligentTieringConfiguration $) {
+        this.id = $.id;
+        this.prefix = $.prefix;
+        this.status = $.status;
+        this.tagFilters = $.tagFilters;
+        this.tierings = $.tierings;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BucketIntelligentTieringConfiguration defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String id;
-        private @Nullable String prefix;
-        private BucketIntelligentTieringConfigurationStatus status;
-        private @Nullable List<BucketTagFilter> tagFilters;
-        private List<BucketTiering> tierings;
+        private BucketIntelligentTieringConfiguration $;
 
         public Builder() {
-    	      // Empty
+            $ = new BucketIntelligentTieringConfiguration();
         }
 
         public Builder(BucketIntelligentTieringConfiguration defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.id = defaults.id;
-    	      this.prefix = defaults.prefix;
-    	      this.status = defaults.status;
-    	      this.tagFilters = defaults.tagFilters;
-    	      this.tierings = defaults.tierings;
+            $ = new BucketIntelligentTieringConfiguration(Objects.requireNonNull(defaults));
         }
 
         public Builder id(String id) {
-            this.id = Objects.requireNonNull(id);
+            $.id = id;
             return this;
         }
+
         public Builder prefix(@Nullable String prefix) {
-            this.prefix = prefix;
+            $.prefix = prefix;
             return this;
         }
+
         public Builder status(BucketIntelligentTieringConfigurationStatus status) {
-            this.status = Objects.requireNonNull(status);
+            $.status = status;
             return this;
         }
+
         public Builder tagFilters(@Nullable List<BucketTagFilter> tagFilters) {
-            this.tagFilters = tagFilters;
+            $.tagFilters = tagFilters;
             return this;
         }
+
         public Builder tagFilters(BucketTagFilter... tagFilters) {
             return tagFilters(List.of(tagFilters));
         }
+
         public Builder tierings(List<BucketTiering> tierings) {
-            this.tierings = Objects.requireNonNull(tierings);
+            $.tierings = tierings;
             return this;
         }
+
         public Builder tierings(BucketTiering... tierings) {
             return tierings(List.of(tierings));
-        }        public BucketIntelligentTieringConfiguration build() {
-            return new BucketIntelligentTieringConfiguration(id, prefix, status, tagFilters, tierings);
+        }
+
+        public BucketIntelligentTieringConfiguration build() {
+            $.id = Objects.requireNonNull($.id, "expected parameter 'id' to be non-null");
+            $.status = Objects.requireNonNull($.status, "expected parameter 'status' to be non-null");
+            $.tierings = Objects.requireNonNull($.tierings, "expected parameter 'tierings' to be non-null");
+            return $;
         }
     }
+
 }

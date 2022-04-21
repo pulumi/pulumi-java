@@ -21,7 +21,7 @@ public final class GoogleCloudRetailV2alphaPriceInfoPriceRangeResponse extends c
      * 
      */
     @Import(name="originalPrice", required=true)
-      private final GoogleCloudRetailV2alphaIntervalResponse originalPrice;
+    private GoogleCloudRetailV2alphaIntervalResponse originalPrice;
 
     public GoogleCloudRetailV2alphaIntervalResponse originalPrice() {
         return this.originalPrice;
@@ -32,55 +32,52 @@ public final class GoogleCloudRetailV2alphaPriceInfoPriceRangeResponse extends c
      * 
      */
     @Import(name="price", required=true)
-      private final GoogleCloudRetailV2alphaIntervalResponse price;
+    private GoogleCloudRetailV2alphaIntervalResponse price;
 
     public GoogleCloudRetailV2alphaIntervalResponse price() {
         return this.price;
     }
 
-    public GoogleCloudRetailV2alphaPriceInfoPriceRangeResponse(
-        GoogleCloudRetailV2alphaIntervalResponse originalPrice,
-        GoogleCloudRetailV2alphaIntervalResponse price) {
-        this.originalPrice = Objects.requireNonNull(originalPrice, "expected parameter 'originalPrice' to be non-null");
-        this.price = Objects.requireNonNull(price, "expected parameter 'price' to be non-null");
-    }
+    private GoogleCloudRetailV2alphaPriceInfoPriceRangeResponse() {}
 
-    private GoogleCloudRetailV2alphaPriceInfoPriceRangeResponse() {
-        this.originalPrice = null;
-        this.price = null;
+    private GoogleCloudRetailV2alphaPriceInfoPriceRangeResponse(GoogleCloudRetailV2alphaPriceInfoPriceRangeResponse $) {
+        this.originalPrice = $.originalPrice;
+        this.price = $.price;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudRetailV2alphaPriceInfoPriceRangeResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private GoogleCloudRetailV2alphaIntervalResponse originalPrice;
-        private GoogleCloudRetailV2alphaIntervalResponse price;
+        private GoogleCloudRetailV2alphaPriceInfoPriceRangeResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudRetailV2alphaPriceInfoPriceRangeResponse();
         }
 
         public Builder(GoogleCloudRetailV2alphaPriceInfoPriceRangeResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.originalPrice = defaults.originalPrice;
-    	      this.price = defaults.price;
+            $ = new GoogleCloudRetailV2alphaPriceInfoPriceRangeResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder originalPrice(GoogleCloudRetailV2alphaIntervalResponse originalPrice) {
-            this.originalPrice = Objects.requireNonNull(originalPrice);
+            $.originalPrice = originalPrice;
             return this;
         }
+
         public Builder price(GoogleCloudRetailV2alphaIntervalResponse price) {
-            this.price = Objects.requireNonNull(price);
+            $.price = price;
             return this;
-        }        public GoogleCloudRetailV2alphaPriceInfoPriceRangeResponse build() {
-            return new GoogleCloudRetailV2alphaPriceInfoPriceRangeResponse(originalPrice, price);
+        }
+
+        public GoogleCloudRetailV2alphaPriceInfoPriceRangeResponse build() {
+            $.originalPrice = Objects.requireNonNull($.originalPrice, "expected parameter 'originalPrice' to be non-null");
+            $.price = Objects.requireNonNull($.price, "expected parameter 'price' to be non-null");
+            return $;
         }
     }
+
 }

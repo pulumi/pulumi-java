@@ -5,10 +5,10 @@ package com.pulumi.azurenative.datafactory.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class ManagedPrivateEndpointArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="fqdns")
-      private final @Nullable Output<List<String>> fqdns;
+    private @Nullable Output<List<String>> fqdns;
 
-    public Output<List<String>> fqdns() {
-        return this.fqdns == null ? Codegen.empty() : this.fqdns;
+    public Optional<Output<List<String>>> fqdns() {
+        return Optional.ofNullable(this.fqdns);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class ManagedPrivateEndpointArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="groupId")
-      private final @Nullable Output<String> groupId;
+    private @Nullable Output<String> groupId;
 
-    public Output<String> groupId() {
-        return this.groupId == null ? Codegen.empty() : this.groupId;
+    public Optional<Output<String>> groupId() {
+        return Optional.ofNullable(this.groupId);
     }
 
     /**
@@ -47,79 +47,72 @@ public final class ManagedPrivateEndpointArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="privateLinkResourceId")
-      private final @Nullable Output<String> privateLinkResourceId;
+    private @Nullable Output<String> privateLinkResourceId;
 
-    public Output<String> privateLinkResourceId() {
-        return this.privateLinkResourceId == null ? Codegen.empty() : this.privateLinkResourceId;
+    public Optional<Output<String>> privateLinkResourceId() {
+        return Optional.ofNullable(this.privateLinkResourceId);
     }
 
-    public ManagedPrivateEndpointArgs(
-        @Nullable Output<List<String>> fqdns,
-        @Nullable Output<String> groupId,
-        @Nullable Output<String> privateLinkResourceId) {
-        this.fqdns = fqdns;
-        this.groupId = groupId;
-        this.privateLinkResourceId = privateLinkResourceId;
-    }
+    private ManagedPrivateEndpointArgs() {}
 
-    private ManagedPrivateEndpointArgs() {
-        this.fqdns = Codegen.empty();
-        this.groupId = Codegen.empty();
-        this.privateLinkResourceId = Codegen.empty();
+    private ManagedPrivateEndpointArgs(ManagedPrivateEndpointArgs $) {
+        this.fqdns = $.fqdns;
+        this.groupId = $.groupId;
+        this.privateLinkResourceId = $.privateLinkResourceId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ManagedPrivateEndpointArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> fqdns;
-        private @Nullable Output<String> groupId;
-        private @Nullable Output<String> privateLinkResourceId;
+        private ManagedPrivateEndpointArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ManagedPrivateEndpointArgs();
         }
 
         public Builder(ManagedPrivateEndpointArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.fqdns = defaults.fqdns;
-    	      this.groupId = defaults.groupId;
-    	      this.privateLinkResourceId = defaults.privateLinkResourceId;
+            $ = new ManagedPrivateEndpointArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder fqdns(@Nullable Output<List<String>> fqdns) {
-            this.fqdns = fqdns;
+            $.fqdns = fqdns;
             return this;
         }
-        public Builder fqdns(@Nullable List<String> fqdns) {
-            this.fqdns = Codegen.ofNullable(fqdns);
-            return this;
+
+        public Builder fqdns(List<String> fqdns) {
+            return fqdns(Output.of(fqdns));
         }
+
         public Builder fqdns(String... fqdns) {
             return fqdns(List.of(fqdns));
         }
+
         public Builder groupId(@Nullable Output<String> groupId) {
-            this.groupId = groupId;
+            $.groupId = groupId;
             return this;
         }
-        public Builder groupId(@Nullable String groupId) {
-            this.groupId = Codegen.ofNullable(groupId);
-            return this;
+
+        public Builder groupId(String groupId) {
+            return groupId(Output.of(groupId));
         }
+
         public Builder privateLinkResourceId(@Nullable Output<String> privateLinkResourceId) {
-            this.privateLinkResourceId = privateLinkResourceId;
+            $.privateLinkResourceId = privateLinkResourceId;
             return this;
         }
-        public Builder privateLinkResourceId(@Nullable String privateLinkResourceId) {
-            this.privateLinkResourceId = Codegen.ofNullable(privateLinkResourceId);
-            return this;
-        }        public ManagedPrivateEndpointArgs build() {
-            return new ManagedPrivateEndpointArgs(fqdns, groupId, privateLinkResourceId);
+
+        public Builder privateLinkResourceId(String privateLinkResourceId) {
+            return privateLinkResourceId(Output.of(privateLinkResourceId));
+        }
+
+        public ManagedPrivateEndpointArgs build() {
+            return $;
         }
     }
+
 }

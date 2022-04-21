@@ -13,45 +13,45 @@ public final class GetClusterAddonsConfigHttpLoadBalancing extends com.pulumi.re
     public static final GetClusterAddonsConfigHttpLoadBalancing Empty = new GetClusterAddonsConfigHttpLoadBalancing();
 
     @Import(name="disabled", required=true)
-      private final Boolean disabled;
+    private Boolean disabled;
 
     public Boolean disabled() {
         return this.disabled;
     }
 
-    public GetClusterAddonsConfigHttpLoadBalancing(Boolean disabled) {
-        this.disabled = Objects.requireNonNull(disabled, "expected parameter 'disabled' to be non-null");
-    }
+    private GetClusterAddonsConfigHttpLoadBalancing() {}
 
-    private GetClusterAddonsConfigHttpLoadBalancing() {
-        this.disabled = null;
+    private GetClusterAddonsConfigHttpLoadBalancing(GetClusterAddonsConfigHttpLoadBalancing $) {
+        this.disabled = $.disabled;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetClusterAddonsConfigHttpLoadBalancing defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Boolean disabled;
+        private GetClusterAddonsConfigHttpLoadBalancing $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetClusterAddonsConfigHttpLoadBalancing();
         }
 
         public Builder(GetClusterAddonsConfigHttpLoadBalancing defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.disabled = defaults.disabled;
+            $ = new GetClusterAddonsConfigHttpLoadBalancing(Objects.requireNonNull(defaults));
         }
 
         public Builder disabled(Boolean disabled) {
-            this.disabled = Objects.requireNonNull(disabled);
+            $.disabled = disabled;
             return this;
-        }        public GetClusterAddonsConfigHttpLoadBalancing build() {
-            return new GetClusterAddonsConfigHttpLoadBalancing(disabled);
+        }
+
+        public GetClusterAddonsConfigHttpLoadBalancing build() {
+            $.disabled = Objects.requireNonNull($.disabled, "expected parameter 'disabled' to be non-null");
+            return $;
         }
     }
+
 }

@@ -27,7 +27,7 @@ public final class NetworkRuleSetPropertiesResponse extends com.pulumi.resources
      * 
      */
     @Import(name="applyToBuiltInEventHubEndpoint", required=true)
-      private final Boolean applyToBuiltInEventHubEndpoint;
+    private Boolean applyToBuiltInEventHubEndpoint;
 
     public Boolean applyToBuiltInEventHubEndpoint() {
         return this.applyToBuiltInEventHubEndpoint;
@@ -38,10 +38,10 @@ public final class NetworkRuleSetPropertiesResponse extends com.pulumi.resources
      * 
      */
     @Import(name="defaultAction")
-      private final @Nullable String defaultAction;
+    private @Nullable String defaultAction;
 
     public Optional<String> defaultAction() {
-        return this.defaultAction == null ? Optional.empty() : Optional.ofNullable(this.defaultAction);
+        return Optional.ofNullable(this.defaultAction);
     }
 
     /**
@@ -49,67 +49,63 @@ public final class NetworkRuleSetPropertiesResponse extends com.pulumi.resources
      * 
      */
     @Import(name="ipRules", required=true)
-      private final List<NetworkRuleSetIpRuleResponse> ipRules;
+    private List<NetworkRuleSetIpRuleResponse> ipRules;
 
     public List<NetworkRuleSetIpRuleResponse> ipRules() {
         return this.ipRules;
     }
 
-    public NetworkRuleSetPropertiesResponse(
-        Boolean applyToBuiltInEventHubEndpoint,
-        @Nullable String defaultAction,
-        List<NetworkRuleSetIpRuleResponse> ipRules) {
-        this.applyToBuiltInEventHubEndpoint = Objects.requireNonNull(applyToBuiltInEventHubEndpoint, "expected parameter 'applyToBuiltInEventHubEndpoint' to be non-null");
-        this.defaultAction = Codegen.stringProp("defaultAction").arg(defaultAction).def("Deny").getNullable();
-        this.ipRules = Objects.requireNonNull(ipRules, "expected parameter 'ipRules' to be non-null");
-    }
+    private NetworkRuleSetPropertiesResponse() {}
 
-    private NetworkRuleSetPropertiesResponse() {
-        this.applyToBuiltInEventHubEndpoint = null;
-        this.defaultAction = null;
-        this.ipRules = List.of();
+    private NetworkRuleSetPropertiesResponse(NetworkRuleSetPropertiesResponse $) {
+        this.applyToBuiltInEventHubEndpoint = $.applyToBuiltInEventHubEndpoint;
+        this.defaultAction = $.defaultAction;
+        this.ipRules = $.ipRules;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NetworkRuleSetPropertiesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Boolean applyToBuiltInEventHubEndpoint;
-        private @Nullable String defaultAction;
-        private List<NetworkRuleSetIpRuleResponse> ipRules;
+        private NetworkRuleSetPropertiesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new NetworkRuleSetPropertiesResponse();
         }
 
         public Builder(NetworkRuleSetPropertiesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.applyToBuiltInEventHubEndpoint = defaults.applyToBuiltInEventHubEndpoint;
-    	      this.defaultAction = defaults.defaultAction;
-    	      this.ipRules = defaults.ipRules;
+            $ = new NetworkRuleSetPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder applyToBuiltInEventHubEndpoint(Boolean applyToBuiltInEventHubEndpoint) {
-            this.applyToBuiltInEventHubEndpoint = Objects.requireNonNull(applyToBuiltInEventHubEndpoint);
+            $.applyToBuiltInEventHubEndpoint = applyToBuiltInEventHubEndpoint;
             return this;
         }
+
         public Builder defaultAction(@Nullable String defaultAction) {
-            this.defaultAction = defaultAction;
+            $.defaultAction = defaultAction;
             return this;
         }
+
         public Builder ipRules(List<NetworkRuleSetIpRuleResponse> ipRules) {
-            this.ipRules = Objects.requireNonNull(ipRules);
+            $.ipRules = ipRules;
             return this;
         }
+
         public Builder ipRules(NetworkRuleSetIpRuleResponse... ipRules) {
             return ipRules(List.of(ipRules));
-        }        public NetworkRuleSetPropertiesResponse build() {
-            return new NetworkRuleSetPropertiesResponse(applyToBuiltInEventHubEndpoint, defaultAction, ipRules);
+        }
+
+        public NetworkRuleSetPropertiesResponse build() {
+            $.applyToBuiltInEventHubEndpoint = Objects.requireNonNull($.applyToBuiltInEventHubEndpoint, "expected parameter 'applyToBuiltInEventHubEndpoint' to be non-null");
+            $.defaultAction = Codegen.stringProp("defaultAction").arg($.defaultAction).def("Deny").getNullable();
+            $.ipRules = Objects.requireNonNull($.ipRules, "expected parameter 'ipRules' to be non-null");
+            return $;
         }
     }
+
 }

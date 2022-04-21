@@ -6,8 +6,8 @@ package com.pulumi.azurenative.hybridnetwork.inputs;
 import com.pulumi.azurenative.hybridnetwork.inputs.SshConfigurationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class LinuxConfigurationArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="ssh")
-      private final @Nullable Output<SshConfigurationArgs> ssh;
+    private @Nullable Output<SshConfigurationArgs> ssh;
 
-    public Output<SshConfigurationArgs> ssh() {
-        return this.ssh == null ? Codegen.empty() : this.ssh;
+    public Optional<Output<SshConfigurationArgs>> ssh() {
+        return Optional.ofNullable(this.ssh);
     }
 
-    public LinuxConfigurationArgs(@Nullable Output<SshConfigurationArgs> ssh) {
-        this.ssh = ssh;
-    }
+    private LinuxConfigurationArgs() {}
 
-    private LinuxConfigurationArgs() {
-        this.ssh = Codegen.empty();
+    private LinuxConfigurationArgs(LinuxConfigurationArgs $) {
+        this.ssh = $.ssh;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LinuxConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<SshConfigurationArgs> ssh;
+        private LinuxConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new LinuxConfigurationArgs();
         }
 
         public Builder(LinuxConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.ssh = defaults.ssh;
+            $ = new LinuxConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder ssh(@Nullable Output<SshConfigurationArgs> ssh) {
-            this.ssh = ssh;
+            $.ssh = ssh;
             return this;
         }
-        public Builder ssh(@Nullable SshConfigurationArgs ssh) {
-            this.ssh = Codegen.ofNullable(ssh);
-            return this;
-        }        public LinuxConfigurationArgs build() {
-            return new LinuxConfigurationArgs(ssh);
+
+        public Builder ssh(SshConfigurationArgs ssh) {
+            return ssh(Output.of(ssh));
+        }
+
+        public LinuxConfigurationArgs build() {
+            return $;
         }
     }
+
 }

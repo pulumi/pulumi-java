@@ -5,10 +5,10 @@ package com.pulumi.aws.servicediscovery.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class ServiceHealthCheckConfigGetArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="failureThreshold")
-      private final @Nullable Output<Integer> failureThreshold;
+    private @Nullable Output<Integer> failureThreshold;
 
-    public Output<Integer> failureThreshold() {
-        return this.failureThreshold == null ? Codegen.empty() : this.failureThreshold;
+    public Optional<Output<Integer>> failureThreshold() {
+        return Optional.ofNullable(this.failureThreshold);
     }
 
     /**
@@ -32,10 +32,10 @@ public final class ServiceHealthCheckConfigGetArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="resourcePath")
-      private final @Nullable Output<String> resourcePath;
+    private @Nullable Output<String> resourcePath;
 
-    public Output<String> resourcePath() {
-        return this.resourcePath == null ? Codegen.empty() : this.resourcePath;
+    public Optional<Output<String>> resourcePath() {
+        return Optional.ofNullable(this.resourcePath);
     }
 
     /**
@@ -43,76 +43,68 @@ public final class ServiceHealthCheckConfigGetArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="type")
-      private final @Nullable Output<String> type;
+    private @Nullable Output<String> type;
 
-    public Output<String> type() {
-        return this.type == null ? Codegen.empty() : this.type;
+    public Optional<Output<String>> type() {
+        return Optional.ofNullable(this.type);
     }
 
-    public ServiceHealthCheckConfigGetArgs(
-        @Nullable Output<Integer> failureThreshold,
-        @Nullable Output<String> resourcePath,
-        @Nullable Output<String> type) {
-        this.failureThreshold = failureThreshold;
-        this.resourcePath = resourcePath;
-        this.type = type;
-    }
+    private ServiceHealthCheckConfigGetArgs() {}
 
-    private ServiceHealthCheckConfigGetArgs() {
-        this.failureThreshold = Codegen.empty();
-        this.resourcePath = Codegen.empty();
-        this.type = Codegen.empty();
+    private ServiceHealthCheckConfigGetArgs(ServiceHealthCheckConfigGetArgs $) {
+        this.failureThreshold = $.failureThreshold;
+        this.resourcePath = $.resourcePath;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ServiceHealthCheckConfigGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> failureThreshold;
-        private @Nullable Output<String> resourcePath;
-        private @Nullable Output<String> type;
+        private ServiceHealthCheckConfigGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ServiceHealthCheckConfigGetArgs();
         }
 
         public Builder(ServiceHealthCheckConfigGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.failureThreshold = defaults.failureThreshold;
-    	      this.resourcePath = defaults.resourcePath;
-    	      this.type = defaults.type;
+            $ = new ServiceHealthCheckConfigGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder failureThreshold(@Nullable Output<Integer> failureThreshold) {
-            this.failureThreshold = failureThreshold;
+            $.failureThreshold = failureThreshold;
             return this;
         }
-        public Builder failureThreshold(@Nullable Integer failureThreshold) {
-            this.failureThreshold = Codegen.ofNullable(failureThreshold);
-            return this;
+
+        public Builder failureThreshold(Integer failureThreshold) {
+            return failureThreshold(Output.of(failureThreshold));
         }
+
         public Builder resourcePath(@Nullable Output<String> resourcePath) {
-            this.resourcePath = resourcePath;
+            $.resourcePath = resourcePath;
             return this;
         }
-        public Builder resourcePath(@Nullable String resourcePath) {
-            this.resourcePath = Codegen.ofNullable(resourcePath);
-            return this;
+
+        public Builder resourcePath(String resourcePath) {
+            return resourcePath(Output.of(resourcePath));
         }
+
         public Builder type(@Nullable Output<String> type) {
-            this.type = type;
+            $.type = type;
             return this;
         }
-        public Builder type(@Nullable String type) {
-            this.type = Codegen.ofNullable(type);
-            return this;
-        }        public ServiceHealthCheckConfigGetArgs build() {
-            return new ServiceHealthCheckConfigGetArgs(failureThreshold, resourcePath, type);
+
+        public Builder type(String type) {
+            return type(Output.of(type));
+        }
+
+        public ServiceHealthCheckConfigGetArgs build() {
+            return $;
         }
     }
+
 }

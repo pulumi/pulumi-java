@@ -23,10 +23,10 @@ public final class AddressPrefixItemResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="addressPrefix")
-      private final @Nullable String addressPrefix;
+    private @Nullable String addressPrefix;
 
     public Optional<String> addressPrefix() {
-        return this.addressPrefix == null ? Optional.empty() : Optional.ofNullable(this.addressPrefix);
+        return Optional.ofNullable(this.addressPrefix);
     }
 
     /**
@@ -34,55 +34,50 @@ public final class AddressPrefixItemResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="addressPrefixType")
-      private final @Nullable String addressPrefixType;
+    private @Nullable String addressPrefixType;
 
     public Optional<String> addressPrefixType() {
-        return this.addressPrefixType == null ? Optional.empty() : Optional.ofNullable(this.addressPrefixType);
+        return Optional.ofNullable(this.addressPrefixType);
     }
 
-    public AddressPrefixItemResponse(
-        @Nullable String addressPrefix,
-        @Nullable String addressPrefixType) {
-        this.addressPrefix = addressPrefix;
-        this.addressPrefixType = addressPrefixType;
-    }
+    private AddressPrefixItemResponse() {}
 
-    private AddressPrefixItemResponse() {
-        this.addressPrefix = null;
-        this.addressPrefixType = null;
+    private AddressPrefixItemResponse(AddressPrefixItemResponse $) {
+        this.addressPrefix = $.addressPrefix;
+        this.addressPrefixType = $.addressPrefixType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AddressPrefixItemResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String addressPrefix;
-        private @Nullable String addressPrefixType;
+        private AddressPrefixItemResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AddressPrefixItemResponse();
         }
 
         public Builder(AddressPrefixItemResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.addressPrefix = defaults.addressPrefix;
-    	      this.addressPrefixType = defaults.addressPrefixType;
+            $ = new AddressPrefixItemResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder addressPrefix(@Nullable String addressPrefix) {
-            this.addressPrefix = addressPrefix;
+            $.addressPrefix = addressPrefix;
             return this;
         }
+
         public Builder addressPrefixType(@Nullable String addressPrefixType) {
-            this.addressPrefixType = addressPrefixType;
+            $.addressPrefixType = addressPrefixType;
             return this;
-        }        public AddressPrefixItemResponse build() {
-            return new AddressPrefixItemResponse(addressPrefix, addressPrefixType);
+        }
+
+        public AddressPrefixItemResponse build() {
+            return $;
         }
     }
+
 }

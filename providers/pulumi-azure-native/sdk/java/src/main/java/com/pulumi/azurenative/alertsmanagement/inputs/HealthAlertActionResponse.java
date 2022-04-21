@@ -24,10 +24,10 @@ public final class HealthAlertActionResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="actionGroupId")
-      private final @Nullable String actionGroupId;
+    private @Nullable String actionGroupId;
 
     public Optional<String> actionGroupId() {
-        return this.actionGroupId == null ? Optional.empty() : Optional.ofNullable(this.actionGroupId);
+        return Optional.ofNullable(this.actionGroupId);
     }
 
     /**
@@ -35,55 +35,50 @@ public final class HealthAlertActionResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="webHookProperties")
-      private final @Nullable Map<String,String> webHookProperties;
+    private @Nullable Map<String,String> webHookProperties;
 
-    public Map<String,String> webHookProperties() {
-        return this.webHookProperties == null ? Map.of() : this.webHookProperties;
+    public Optional<Map<String,String>> webHookProperties() {
+        return Optional.ofNullable(this.webHookProperties);
     }
 
-    public HealthAlertActionResponse(
-        @Nullable String actionGroupId,
-        @Nullable Map<String,String> webHookProperties) {
-        this.actionGroupId = actionGroupId;
-        this.webHookProperties = webHookProperties;
-    }
+    private HealthAlertActionResponse() {}
 
-    private HealthAlertActionResponse() {
-        this.actionGroupId = null;
-        this.webHookProperties = Map.of();
+    private HealthAlertActionResponse(HealthAlertActionResponse $) {
+        this.actionGroupId = $.actionGroupId;
+        this.webHookProperties = $.webHookProperties;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(HealthAlertActionResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String actionGroupId;
-        private @Nullable Map<String,String> webHookProperties;
+        private HealthAlertActionResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new HealthAlertActionResponse();
         }
 
         public Builder(HealthAlertActionResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.actionGroupId = defaults.actionGroupId;
-    	      this.webHookProperties = defaults.webHookProperties;
+            $ = new HealthAlertActionResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder actionGroupId(@Nullable String actionGroupId) {
-            this.actionGroupId = actionGroupId;
+            $.actionGroupId = actionGroupId;
             return this;
         }
+
         public Builder webHookProperties(@Nullable Map<String,String> webHookProperties) {
-            this.webHookProperties = webHookProperties;
+            $.webHookProperties = webHookProperties;
             return this;
-        }        public HealthAlertActionResponse build() {
-            return new HealthAlertActionResponse(actionGroupId, webHookProperties);
+        }
+
+        public HealthAlertActionResponse build() {
+            return $;
         }
     }
+
 }

@@ -16,62 +16,58 @@ public final class DeliveryStreamEncryptionConfigurationInput extends com.pulumi
     public static final DeliveryStreamEncryptionConfigurationInput Empty = new DeliveryStreamEncryptionConfigurationInput();
 
     @Import(name="keyARN")
-      private final @Nullable String keyARN;
+    private @Nullable String keyARN;
 
     public Optional<String> keyARN() {
-        return this.keyARN == null ? Optional.empty() : Optional.ofNullable(this.keyARN);
+        return Optional.ofNullable(this.keyARN);
     }
 
     @Import(name="keyType", required=true)
-      private final DeliveryStreamEncryptionConfigurationInputKeyType keyType;
+    private DeliveryStreamEncryptionConfigurationInputKeyType keyType;
 
     public DeliveryStreamEncryptionConfigurationInputKeyType keyType() {
         return this.keyType;
     }
 
-    public DeliveryStreamEncryptionConfigurationInput(
-        @Nullable String keyARN,
-        DeliveryStreamEncryptionConfigurationInputKeyType keyType) {
-        this.keyARN = keyARN;
-        this.keyType = Objects.requireNonNull(keyType, "expected parameter 'keyType' to be non-null");
-    }
+    private DeliveryStreamEncryptionConfigurationInput() {}
 
-    private DeliveryStreamEncryptionConfigurationInput() {
-        this.keyARN = null;
-        this.keyType = null;
+    private DeliveryStreamEncryptionConfigurationInput(DeliveryStreamEncryptionConfigurationInput $) {
+        this.keyARN = $.keyARN;
+        this.keyType = $.keyType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DeliveryStreamEncryptionConfigurationInput defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String keyARN;
-        private DeliveryStreamEncryptionConfigurationInputKeyType keyType;
+        private DeliveryStreamEncryptionConfigurationInput $;
 
         public Builder() {
-    	      // Empty
+            $ = new DeliveryStreamEncryptionConfigurationInput();
         }
 
         public Builder(DeliveryStreamEncryptionConfigurationInput defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.keyARN = defaults.keyARN;
-    	      this.keyType = defaults.keyType;
+            $ = new DeliveryStreamEncryptionConfigurationInput(Objects.requireNonNull(defaults));
         }
 
         public Builder keyARN(@Nullable String keyARN) {
-            this.keyARN = keyARN;
+            $.keyARN = keyARN;
             return this;
         }
+
         public Builder keyType(DeliveryStreamEncryptionConfigurationInputKeyType keyType) {
-            this.keyType = Objects.requireNonNull(keyType);
+            $.keyType = keyType;
             return this;
-        }        public DeliveryStreamEncryptionConfigurationInput build() {
-            return new DeliveryStreamEncryptionConfigurationInput(keyARN, keyType);
+        }
+
+        public DeliveryStreamEncryptionConfigurationInput build() {
+            $.keyType = Objects.requireNonNull($.keyType, "expected parameter 'keyType' to be non-null");
+            return $;
         }
     }
+
 }

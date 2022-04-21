@@ -5,7 +5,6 @@ package com.pulumi.awsnative.redshift.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,49 +18,49 @@ public final class ScheduledActionPauseClusterMessageArgs extends com.pulumi.res
     public static final ScheduledActionPauseClusterMessageArgs Empty = new ScheduledActionPauseClusterMessageArgs();
 
     @Import(name="clusterIdentifier", required=true)
-      private final Output<String> clusterIdentifier;
+    private Output<String> clusterIdentifier;
 
     public Output<String> clusterIdentifier() {
         return this.clusterIdentifier;
     }
 
-    public ScheduledActionPauseClusterMessageArgs(Output<String> clusterIdentifier) {
-        this.clusterIdentifier = Objects.requireNonNull(clusterIdentifier, "expected parameter 'clusterIdentifier' to be non-null");
-    }
+    private ScheduledActionPauseClusterMessageArgs() {}
 
-    private ScheduledActionPauseClusterMessageArgs() {
-        this.clusterIdentifier = Codegen.empty();
+    private ScheduledActionPauseClusterMessageArgs(ScheduledActionPauseClusterMessageArgs $) {
+        this.clusterIdentifier = $.clusterIdentifier;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ScheduledActionPauseClusterMessageArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> clusterIdentifier;
+        private ScheduledActionPauseClusterMessageArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ScheduledActionPauseClusterMessageArgs();
         }
 
         public Builder(ScheduledActionPauseClusterMessageArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.clusterIdentifier = defaults.clusterIdentifier;
+            $ = new ScheduledActionPauseClusterMessageArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder clusterIdentifier(Output<String> clusterIdentifier) {
-            this.clusterIdentifier = Objects.requireNonNull(clusterIdentifier);
+            $.clusterIdentifier = clusterIdentifier;
             return this;
         }
+
         public Builder clusterIdentifier(String clusterIdentifier) {
-            this.clusterIdentifier = Output.of(Objects.requireNonNull(clusterIdentifier));
-            return this;
-        }        public ScheduledActionPauseClusterMessageArgs build() {
-            return new ScheduledActionPauseClusterMessageArgs(clusterIdentifier);
+            return clusterIdentifier(Output.of(clusterIdentifier));
+        }
+
+        public ScheduledActionPauseClusterMessageArgs build() {
+            $.clusterIdentifier = Objects.requireNonNull($.clusterIdentifier, "expected parameter 'clusterIdentifier' to be non-null");
+            return $;
         }
     }
+
 }

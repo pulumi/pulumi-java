@@ -5,9 +5,9 @@ package com.pulumi.awsnative.appflow.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,49 +20,48 @@ public final class FlowIncrementalPullConfigArgs extends com.pulumi.resources.Re
     public static final FlowIncrementalPullConfigArgs Empty = new FlowIncrementalPullConfigArgs();
 
     @Import(name="datetimeTypeFieldName")
-      private final @Nullable Output<String> datetimeTypeFieldName;
+    private @Nullable Output<String> datetimeTypeFieldName;
 
-    public Output<String> datetimeTypeFieldName() {
-        return this.datetimeTypeFieldName == null ? Codegen.empty() : this.datetimeTypeFieldName;
+    public Optional<Output<String>> datetimeTypeFieldName() {
+        return Optional.ofNullable(this.datetimeTypeFieldName);
     }
 
-    public FlowIncrementalPullConfigArgs(@Nullable Output<String> datetimeTypeFieldName) {
-        this.datetimeTypeFieldName = datetimeTypeFieldName;
-    }
+    private FlowIncrementalPullConfigArgs() {}
 
-    private FlowIncrementalPullConfigArgs() {
-        this.datetimeTypeFieldName = Codegen.empty();
+    private FlowIncrementalPullConfigArgs(FlowIncrementalPullConfigArgs $) {
+        this.datetimeTypeFieldName = $.datetimeTypeFieldName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FlowIncrementalPullConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> datetimeTypeFieldName;
+        private FlowIncrementalPullConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new FlowIncrementalPullConfigArgs();
         }
 
         public Builder(FlowIncrementalPullConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.datetimeTypeFieldName = defaults.datetimeTypeFieldName;
+            $ = new FlowIncrementalPullConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder datetimeTypeFieldName(@Nullable Output<String> datetimeTypeFieldName) {
-            this.datetimeTypeFieldName = datetimeTypeFieldName;
+            $.datetimeTypeFieldName = datetimeTypeFieldName;
             return this;
         }
-        public Builder datetimeTypeFieldName(@Nullable String datetimeTypeFieldName) {
-            this.datetimeTypeFieldName = Codegen.ofNullable(datetimeTypeFieldName);
-            return this;
-        }        public FlowIncrementalPullConfigArgs build() {
-            return new FlowIncrementalPullConfigArgs(datetimeTypeFieldName);
+
+        public Builder datetimeTypeFieldName(String datetimeTypeFieldName) {
+            return datetimeTypeFieldName(Output.of(datetimeTypeFieldName));
+        }
+
+        public FlowIncrementalPullConfigArgs build() {
+            return $;
         }
     }
+
 }

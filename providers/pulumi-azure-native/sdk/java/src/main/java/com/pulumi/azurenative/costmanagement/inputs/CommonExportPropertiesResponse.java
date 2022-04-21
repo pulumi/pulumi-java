@@ -26,7 +26,7 @@ public final class CommonExportPropertiesResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="definition", required=true)
-      private final ExportDefinitionResponse definition;
+    private ExportDefinitionResponse definition;
 
     public ExportDefinitionResponse definition() {
         return this.definition;
@@ -37,7 +37,7 @@ public final class CommonExportPropertiesResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="deliveryInfo", required=true)
-      private final ExportDeliveryInfoResponse deliveryInfo;
+    private ExportDeliveryInfoResponse deliveryInfo;
 
     public ExportDeliveryInfoResponse deliveryInfo() {
         return this.deliveryInfo;
@@ -48,10 +48,10 @@ public final class CommonExportPropertiesResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="format")
-      private final @Nullable String format;
+    private @Nullable String format;
 
     public Optional<String> format() {
-        return this.format == null ? Optional.empty() : Optional.ofNullable(this.format);
+        return Optional.ofNullable(this.format);
     }
 
     /**
@@ -59,7 +59,7 @@ public final class CommonExportPropertiesResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="nextRunTimeEstimate", required=true)
-      private final String nextRunTimeEstimate;
+    private String nextRunTimeEstimate;
 
     public String nextRunTimeEstimate() {
         return this.nextRunTimeEstimate;
@@ -70,82 +70,71 @@ public final class CommonExportPropertiesResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="runHistory")
-      private final @Nullable ExportExecutionListResultResponse runHistory;
+    private @Nullable ExportExecutionListResultResponse runHistory;
 
     public Optional<ExportExecutionListResultResponse> runHistory() {
-        return this.runHistory == null ? Optional.empty() : Optional.ofNullable(this.runHistory);
+        return Optional.ofNullable(this.runHistory);
     }
 
-    public CommonExportPropertiesResponse(
-        ExportDefinitionResponse definition,
-        ExportDeliveryInfoResponse deliveryInfo,
-        @Nullable String format,
-        String nextRunTimeEstimate,
-        @Nullable ExportExecutionListResultResponse runHistory) {
-        this.definition = Objects.requireNonNull(definition, "expected parameter 'definition' to be non-null");
-        this.deliveryInfo = Objects.requireNonNull(deliveryInfo, "expected parameter 'deliveryInfo' to be non-null");
-        this.format = format;
-        this.nextRunTimeEstimate = Objects.requireNonNull(nextRunTimeEstimate, "expected parameter 'nextRunTimeEstimate' to be non-null");
-        this.runHistory = runHistory;
-    }
+    private CommonExportPropertiesResponse() {}
 
-    private CommonExportPropertiesResponse() {
-        this.definition = null;
-        this.deliveryInfo = null;
-        this.format = null;
-        this.nextRunTimeEstimate = null;
-        this.runHistory = null;
+    private CommonExportPropertiesResponse(CommonExportPropertiesResponse $) {
+        this.definition = $.definition;
+        this.deliveryInfo = $.deliveryInfo;
+        this.format = $.format;
+        this.nextRunTimeEstimate = $.nextRunTimeEstimate;
+        this.runHistory = $.runHistory;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CommonExportPropertiesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private ExportDefinitionResponse definition;
-        private ExportDeliveryInfoResponse deliveryInfo;
-        private @Nullable String format;
-        private String nextRunTimeEstimate;
-        private @Nullable ExportExecutionListResultResponse runHistory;
+        private CommonExportPropertiesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new CommonExportPropertiesResponse();
         }
 
         public Builder(CommonExportPropertiesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.definition = defaults.definition;
-    	      this.deliveryInfo = defaults.deliveryInfo;
-    	      this.format = defaults.format;
-    	      this.nextRunTimeEstimate = defaults.nextRunTimeEstimate;
-    	      this.runHistory = defaults.runHistory;
+            $ = new CommonExportPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder definition(ExportDefinitionResponse definition) {
-            this.definition = Objects.requireNonNull(definition);
+            $.definition = definition;
             return this;
         }
+
         public Builder deliveryInfo(ExportDeliveryInfoResponse deliveryInfo) {
-            this.deliveryInfo = Objects.requireNonNull(deliveryInfo);
+            $.deliveryInfo = deliveryInfo;
             return this;
         }
+
         public Builder format(@Nullable String format) {
-            this.format = format;
+            $.format = format;
             return this;
         }
+
         public Builder nextRunTimeEstimate(String nextRunTimeEstimate) {
-            this.nextRunTimeEstimate = Objects.requireNonNull(nextRunTimeEstimate);
+            $.nextRunTimeEstimate = nextRunTimeEstimate;
             return this;
         }
+
         public Builder runHistory(@Nullable ExportExecutionListResultResponse runHistory) {
-            this.runHistory = runHistory;
+            $.runHistory = runHistory;
             return this;
-        }        public CommonExportPropertiesResponse build() {
-            return new CommonExportPropertiesResponse(definition, deliveryInfo, format, nextRunTimeEstimate, runHistory);
+        }
+
+        public CommonExportPropertiesResponse build() {
+            $.definition = Objects.requireNonNull($.definition, "expected parameter 'definition' to be non-null");
+            $.deliveryInfo = Objects.requireNonNull($.deliveryInfo, "expected parameter 'deliveryInfo' to be non-null");
+            $.nextRunTimeEstimate = Objects.requireNonNull($.nextRunTimeEstimate, "expected parameter 'nextRunTimeEstimate' to be non-null");
+            return $;
         }
     }
+
 }

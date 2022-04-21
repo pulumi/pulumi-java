@@ -6,9 +6,9 @@ package com.pulumi.azurenative.providerhub;
 import com.pulumi.azurenative.providerhub.inputs.SkuResourcePropertiesArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,7 +21,7 @@ public final class SkusNestedResourceTypeThirdArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="nestedResourceTypeFirst", required=true)
-      private final Output<String> nestedResourceTypeFirst;
+    private Output<String> nestedResourceTypeFirst;
 
     public Output<String> nestedResourceTypeFirst() {
         return this.nestedResourceTypeFirst;
@@ -32,7 +32,7 @@ public final class SkusNestedResourceTypeThirdArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="nestedResourceTypeSecond", required=true)
-      private final Output<String> nestedResourceTypeSecond;
+    private Output<String> nestedResourceTypeSecond;
 
     public Output<String> nestedResourceTypeSecond() {
         return this.nestedResourceTypeSecond;
@@ -43,17 +43,17 @@ public final class SkusNestedResourceTypeThirdArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="nestedResourceTypeThird", required=true)
-      private final Output<String> nestedResourceTypeThird;
+    private Output<String> nestedResourceTypeThird;
 
     public Output<String> nestedResourceTypeThird() {
         return this.nestedResourceTypeThird;
     }
 
     @Import(name="properties")
-      private final @Nullable Output<SkuResourcePropertiesArgs> properties;
+    private @Nullable Output<SkuResourcePropertiesArgs> properties;
 
-    public Output<SkuResourcePropertiesArgs> properties() {
-        return this.properties == null ? Codegen.empty() : this.properties;
+    public Optional<Output<SkuResourcePropertiesArgs>> properties() {
+        return Optional.ofNullable(this.properties);
     }
 
     /**
@@ -61,7 +61,7 @@ public final class SkusNestedResourceTypeThirdArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="providerNamespace", required=true)
-      private final Output<String> providerNamespace;
+    private Output<String> providerNamespace;
 
     public Output<String> providerNamespace() {
         return this.providerNamespace;
@@ -72,7 +72,7 @@ public final class SkusNestedResourceTypeThirdArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="resourceType", required=true)
-      private final Output<String> resourceType;
+    private Output<String> resourceType;
 
     public Output<String> resourceType() {
         return this.resourceType;
@@ -83,128 +83,113 @@ public final class SkusNestedResourceTypeThirdArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="sku")
-      private final @Nullable Output<String> sku;
+    private @Nullable Output<String> sku;
 
-    public Output<String> sku() {
-        return this.sku == null ? Codegen.empty() : this.sku;
+    public Optional<Output<String>> sku() {
+        return Optional.ofNullable(this.sku);
     }
 
-    public SkusNestedResourceTypeThirdArgs(
-        Output<String> nestedResourceTypeFirst,
-        Output<String> nestedResourceTypeSecond,
-        Output<String> nestedResourceTypeThird,
-        @Nullable Output<SkuResourcePropertiesArgs> properties,
-        Output<String> providerNamespace,
-        Output<String> resourceType,
-        @Nullable Output<String> sku) {
-        this.nestedResourceTypeFirst = Objects.requireNonNull(nestedResourceTypeFirst, "expected parameter 'nestedResourceTypeFirst' to be non-null");
-        this.nestedResourceTypeSecond = Objects.requireNonNull(nestedResourceTypeSecond, "expected parameter 'nestedResourceTypeSecond' to be non-null");
-        this.nestedResourceTypeThird = Objects.requireNonNull(nestedResourceTypeThird, "expected parameter 'nestedResourceTypeThird' to be non-null");
-        this.properties = properties;
-        this.providerNamespace = Objects.requireNonNull(providerNamespace, "expected parameter 'providerNamespace' to be non-null");
-        this.resourceType = Objects.requireNonNull(resourceType, "expected parameter 'resourceType' to be non-null");
-        this.sku = sku;
-    }
+    private SkusNestedResourceTypeThirdArgs() {}
 
-    private SkusNestedResourceTypeThirdArgs() {
-        this.nestedResourceTypeFirst = Codegen.empty();
-        this.nestedResourceTypeSecond = Codegen.empty();
-        this.nestedResourceTypeThird = Codegen.empty();
-        this.properties = Codegen.empty();
-        this.providerNamespace = Codegen.empty();
-        this.resourceType = Codegen.empty();
-        this.sku = Codegen.empty();
+    private SkusNestedResourceTypeThirdArgs(SkusNestedResourceTypeThirdArgs $) {
+        this.nestedResourceTypeFirst = $.nestedResourceTypeFirst;
+        this.nestedResourceTypeSecond = $.nestedResourceTypeSecond;
+        this.nestedResourceTypeThird = $.nestedResourceTypeThird;
+        this.properties = $.properties;
+        this.providerNamespace = $.providerNamespace;
+        this.resourceType = $.resourceType;
+        this.sku = $.sku;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SkusNestedResourceTypeThirdArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> nestedResourceTypeFirst;
-        private Output<String> nestedResourceTypeSecond;
-        private Output<String> nestedResourceTypeThird;
-        private @Nullable Output<SkuResourcePropertiesArgs> properties;
-        private Output<String> providerNamespace;
-        private Output<String> resourceType;
-        private @Nullable Output<String> sku;
+        private SkusNestedResourceTypeThirdArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SkusNestedResourceTypeThirdArgs();
         }
 
         public Builder(SkusNestedResourceTypeThirdArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.nestedResourceTypeFirst = defaults.nestedResourceTypeFirst;
-    	      this.nestedResourceTypeSecond = defaults.nestedResourceTypeSecond;
-    	      this.nestedResourceTypeThird = defaults.nestedResourceTypeThird;
-    	      this.properties = defaults.properties;
-    	      this.providerNamespace = defaults.providerNamespace;
-    	      this.resourceType = defaults.resourceType;
-    	      this.sku = defaults.sku;
+            $ = new SkusNestedResourceTypeThirdArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder nestedResourceTypeFirst(Output<String> nestedResourceTypeFirst) {
-            this.nestedResourceTypeFirst = Objects.requireNonNull(nestedResourceTypeFirst);
+            $.nestedResourceTypeFirst = nestedResourceTypeFirst;
             return this;
         }
+
         public Builder nestedResourceTypeFirst(String nestedResourceTypeFirst) {
-            this.nestedResourceTypeFirst = Output.of(Objects.requireNonNull(nestedResourceTypeFirst));
-            return this;
+            return nestedResourceTypeFirst(Output.of(nestedResourceTypeFirst));
         }
+
         public Builder nestedResourceTypeSecond(Output<String> nestedResourceTypeSecond) {
-            this.nestedResourceTypeSecond = Objects.requireNonNull(nestedResourceTypeSecond);
+            $.nestedResourceTypeSecond = nestedResourceTypeSecond;
             return this;
         }
+
         public Builder nestedResourceTypeSecond(String nestedResourceTypeSecond) {
-            this.nestedResourceTypeSecond = Output.of(Objects.requireNonNull(nestedResourceTypeSecond));
-            return this;
+            return nestedResourceTypeSecond(Output.of(nestedResourceTypeSecond));
         }
+
         public Builder nestedResourceTypeThird(Output<String> nestedResourceTypeThird) {
-            this.nestedResourceTypeThird = Objects.requireNonNull(nestedResourceTypeThird);
+            $.nestedResourceTypeThird = nestedResourceTypeThird;
             return this;
         }
+
         public Builder nestedResourceTypeThird(String nestedResourceTypeThird) {
-            this.nestedResourceTypeThird = Output.of(Objects.requireNonNull(nestedResourceTypeThird));
-            return this;
+            return nestedResourceTypeThird(Output.of(nestedResourceTypeThird));
         }
+
         public Builder properties(@Nullable Output<SkuResourcePropertiesArgs> properties) {
-            this.properties = properties;
+            $.properties = properties;
             return this;
         }
-        public Builder properties(@Nullable SkuResourcePropertiesArgs properties) {
-            this.properties = Codegen.ofNullable(properties);
-            return this;
+
+        public Builder properties(SkuResourcePropertiesArgs properties) {
+            return properties(Output.of(properties));
         }
+
         public Builder providerNamespace(Output<String> providerNamespace) {
-            this.providerNamespace = Objects.requireNonNull(providerNamespace);
+            $.providerNamespace = providerNamespace;
             return this;
         }
+
         public Builder providerNamespace(String providerNamespace) {
-            this.providerNamespace = Output.of(Objects.requireNonNull(providerNamespace));
-            return this;
+            return providerNamespace(Output.of(providerNamespace));
         }
+
         public Builder resourceType(Output<String> resourceType) {
-            this.resourceType = Objects.requireNonNull(resourceType);
+            $.resourceType = resourceType;
             return this;
         }
+
         public Builder resourceType(String resourceType) {
-            this.resourceType = Output.of(Objects.requireNonNull(resourceType));
-            return this;
+            return resourceType(Output.of(resourceType));
         }
+
         public Builder sku(@Nullable Output<String> sku) {
-            this.sku = sku;
+            $.sku = sku;
             return this;
         }
-        public Builder sku(@Nullable String sku) {
-            this.sku = Codegen.ofNullable(sku);
-            return this;
-        }        public SkusNestedResourceTypeThirdArgs build() {
-            return new SkusNestedResourceTypeThirdArgs(nestedResourceTypeFirst, nestedResourceTypeSecond, nestedResourceTypeThird, properties, providerNamespace, resourceType, sku);
+
+        public Builder sku(String sku) {
+            return sku(Output.of(sku));
+        }
+
+        public SkusNestedResourceTypeThirdArgs build() {
+            $.nestedResourceTypeFirst = Objects.requireNonNull($.nestedResourceTypeFirst, "expected parameter 'nestedResourceTypeFirst' to be non-null");
+            $.nestedResourceTypeSecond = Objects.requireNonNull($.nestedResourceTypeSecond, "expected parameter 'nestedResourceTypeSecond' to be non-null");
+            $.nestedResourceTypeThird = Objects.requireNonNull($.nestedResourceTypeThird, "expected parameter 'nestedResourceTypeThird' to be non-null");
+            $.providerNamespace = Objects.requireNonNull($.providerNamespace, "expected parameter 'providerNamespace' to be non-null");
+            $.resourceType = Objects.requireNonNull($.resourceType, "expected parameter 'resourceType' to be non-null");
+            return $;
         }
     }
+
 }

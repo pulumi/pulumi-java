@@ -15,81 +15,77 @@ public final class GetClusterResourceUsageExportConfig extends com.pulumi.resour
     public static final GetClusterResourceUsageExportConfig Empty = new GetClusterResourceUsageExportConfig();
 
     @Import(name="bigqueryDestinations", required=true)
-      private final List<GetClusterResourceUsageExportConfigBigqueryDestination> bigqueryDestinations;
+    private List<GetClusterResourceUsageExportConfigBigqueryDestination> bigqueryDestinations;
 
     public List<GetClusterResourceUsageExportConfigBigqueryDestination> bigqueryDestinations() {
         return this.bigqueryDestinations;
     }
 
     @Import(name="enableNetworkEgressMetering", required=true)
-      private final Boolean enableNetworkEgressMetering;
+    private Boolean enableNetworkEgressMetering;
 
     public Boolean enableNetworkEgressMetering() {
         return this.enableNetworkEgressMetering;
     }
 
     @Import(name="enableResourceConsumptionMetering", required=true)
-      private final Boolean enableResourceConsumptionMetering;
+    private Boolean enableResourceConsumptionMetering;
 
     public Boolean enableResourceConsumptionMetering() {
         return this.enableResourceConsumptionMetering;
     }
 
-    public GetClusterResourceUsageExportConfig(
-        List<GetClusterResourceUsageExportConfigBigqueryDestination> bigqueryDestinations,
-        Boolean enableNetworkEgressMetering,
-        Boolean enableResourceConsumptionMetering) {
-        this.bigqueryDestinations = Objects.requireNonNull(bigqueryDestinations, "expected parameter 'bigqueryDestinations' to be non-null");
-        this.enableNetworkEgressMetering = Objects.requireNonNull(enableNetworkEgressMetering, "expected parameter 'enableNetworkEgressMetering' to be non-null");
-        this.enableResourceConsumptionMetering = Objects.requireNonNull(enableResourceConsumptionMetering, "expected parameter 'enableResourceConsumptionMetering' to be non-null");
-    }
+    private GetClusterResourceUsageExportConfig() {}
 
-    private GetClusterResourceUsageExportConfig() {
-        this.bigqueryDestinations = List.of();
-        this.enableNetworkEgressMetering = null;
-        this.enableResourceConsumptionMetering = null;
+    private GetClusterResourceUsageExportConfig(GetClusterResourceUsageExportConfig $) {
+        this.bigqueryDestinations = $.bigqueryDestinations;
+        this.enableNetworkEgressMetering = $.enableNetworkEgressMetering;
+        this.enableResourceConsumptionMetering = $.enableResourceConsumptionMetering;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetClusterResourceUsageExportConfig defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<GetClusterResourceUsageExportConfigBigqueryDestination> bigqueryDestinations;
-        private Boolean enableNetworkEgressMetering;
-        private Boolean enableResourceConsumptionMetering;
+        private GetClusterResourceUsageExportConfig $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetClusterResourceUsageExportConfig();
         }
 
         public Builder(GetClusterResourceUsageExportConfig defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.bigqueryDestinations = defaults.bigqueryDestinations;
-    	      this.enableNetworkEgressMetering = defaults.enableNetworkEgressMetering;
-    	      this.enableResourceConsumptionMetering = defaults.enableResourceConsumptionMetering;
+            $ = new GetClusterResourceUsageExportConfig(Objects.requireNonNull(defaults));
         }
 
         public Builder bigqueryDestinations(List<GetClusterResourceUsageExportConfigBigqueryDestination> bigqueryDestinations) {
-            this.bigqueryDestinations = Objects.requireNonNull(bigqueryDestinations);
+            $.bigqueryDestinations = bigqueryDestinations;
             return this;
         }
+
         public Builder bigqueryDestinations(GetClusterResourceUsageExportConfigBigqueryDestination... bigqueryDestinations) {
             return bigqueryDestinations(List.of(bigqueryDestinations));
         }
+
         public Builder enableNetworkEgressMetering(Boolean enableNetworkEgressMetering) {
-            this.enableNetworkEgressMetering = Objects.requireNonNull(enableNetworkEgressMetering);
+            $.enableNetworkEgressMetering = enableNetworkEgressMetering;
             return this;
         }
+
         public Builder enableResourceConsumptionMetering(Boolean enableResourceConsumptionMetering) {
-            this.enableResourceConsumptionMetering = Objects.requireNonNull(enableResourceConsumptionMetering);
+            $.enableResourceConsumptionMetering = enableResourceConsumptionMetering;
             return this;
-        }        public GetClusterResourceUsageExportConfig build() {
-            return new GetClusterResourceUsageExportConfig(bigqueryDestinations, enableNetworkEgressMetering, enableResourceConsumptionMetering);
+        }
+
+        public GetClusterResourceUsageExportConfig build() {
+            $.bigqueryDestinations = Objects.requireNonNull($.bigqueryDestinations, "expected parameter 'bigqueryDestinations' to be non-null");
+            $.enableNetworkEgressMetering = Objects.requireNonNull($.enableNetworkEgressMetering, "expected parameter 'enableNetworkEgressMetering' to be non-null");
+            $.enableResourceConsumptionMetering = Objects.requireNonNull($.enableResourceConsumptionMetering, "expected parameter 'enableResourceConsumptionMetering' to be non-null");
+            return $;
         }
     }
+
 }

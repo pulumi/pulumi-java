@@ -5,7 +5,6 @@ package com.pulumi.googlenative.compute_beta.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.compute_beta.enums.SecurityPolicyRuleDirection;
 import com.pulumi.googlenative.compute_beta.inputs.SecurityPolicyRuleHttpHeaderActionArgs;
 import com.pulumi.googlenative.compute_beta.inputs.SecurityPolicyRuleMatcherArgs;
@@ -16,6 +15,7 @@ import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -32,10 +32,10 @@ public final class SecurityPolicyRuleArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="action")
-      private final @Nullable Output<String> action;
+    private @Nullable Output<String> action;
 
-    public Output<String> action() {
-        return this.action == null ? Codegen.empty() : this.action;
+    public Optional<Output<String>> action() {
+        return Optional.ofNullable(this.action);
     }
 
     /**
@@ -43,10 +43,10 @@ public final class SecurityPolicyRuleArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -54,10 +54,10 @@ public final class SecurityPolicyRuleArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="direction")
-      private final @Nullable Output<SecurityPolicyRuleDirection> direction;
+    private @Nullable Output<SecurityPolicyRuleDirection> direction;
 
-    public Output<SecurityPolicyRuleDirection> direction() {
-        return this.direction == null ? Codegen.empty() : this.direction;
+    public Optional<Output<SecurityPolicyRuleDirection>> direction() {
+        return Optional.ofNullable(this.direction);
     }
 
     /**
@@ -65,10 +65,10 @@ public final class SecurityPolicyRuleArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="enableLogging")
-      private final @Nullable Output<Boolean> enableLogging;
+    private @Nullable Output<Boolean> enableLogging;
 
-    public Output<Boolean> enableLogging() {
-        return this.enableLogging == null ? Codegen.empty() : this.enableLogging;
+    public Optional<Output<Boolean>> enableLogging() {
+        return Optional.ofNullable(this.enableLogging);
     }
 
     /**
@@ -76,10 +76,10 @@ public final class SecurityPolicyRuleArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="headerAction")
-      private final @Nullable Output<SecurityPolicyRuleHttpHeaderActionArgs> headerAction;
+    private @Nullable Output<SecurityPolicyRuleHttpHeaderActionArgs> headerAction;
 
-    public Output<SecurityPolicyRuleHttpHeaderActionArgs> headerAction() {
-        return this.headerAction == null ? Codegen.empty() : this.headerAction;
+    public Optional<Output<SecurityPolicyRuleHttpHeaderActionArgs>> headerAction() {
+        return Optional.ofNullable(this.headerAction);
     }
 
     /**
@@ -87,10 +87,10 @@ public final class SecurityPolicyRuleArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="match")
-      private final @Nullable Output<SecurityPolicyRuleMatcherArgs> match;
+    private @Nullable Output<SecurityPolicyRuleMatcherArgs> match;
 
-    public Output<SecurityPolicyRuleMatcherArgs> match() {
-        return this.match == null ? Codegen.empty() : this.match;
+    public Optional<Output<SecurityPolicyRuleMatcherArgs>> match() {
+        return Optional.ofNullable(this.match);
     }
 
     /**
@@ -98,10 +98,10 @@ public final class SecurityPolicyRuleArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="preview")
-      private final @Nullable Output<Boolean> preview;
+    private @Nullable Output<Boolean> preview;
 
-    public Output<Boolean> preview() {
-        return this.preview == null ? Codegen.empty() : this.preview;
+    public Optional<Output<Boolean>> preview() {
+        return Optional.ofNullable(this.preview);
     }
 
     /**
@@ -109,10 +109,10 @@ public final class SecurityPolicyRuleArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="priority")
-      private final @Nullable Output<Integer> priority;
+    private @Nullable Output<Integer> priority;
 
-    public Output<Integer> priority() {
-        return this.priority == null ? Codegen.empty() : this.priority;
+    public Optional<Output<Integer>> priority() {
+        return Optional.ofNullable(this.priority);
     }
 
     /**
@@ -120,10 +120,10 @@ public final class SecurityPolicyRuleArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="rateLimitOptions")
-      private final @Nullable Output<SecurityPolicyRuleRateLimitOptionsArgs> rateLimitOptions;
+    private @Nullable Output<SecurityPolicyRuleRateLimitOptionsArgs> rateLimitOptions;
 
-    public Output<SecurityPolicyRuleRateLimitOptionsArgs> rateLimitOptions() {
-        return this.rateLimitOptions == null ? Codegen.empty() : this.rateLimitOptions;
+    public Optional<Output<SecurityPolicyRuleRateLimitOptionsArgs>> rateLimitOptions() {
+        return Optional.ofNullable(this.rateLimitOptions);
     }
 
     /**
@@ -131,10 +131,10 @@ public final class SecurityPolicyRuleArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="redirectOptions")
-      private final @Nullable Output<SecurityPolicyRuleRedirectOptionsArgs> redirectOptions;
+    private @Nullable Output<SecurityPolicyRuleRedirectOptionsArgs> redirectOptions;
 
-    public Output<SecurityPolicyRuleRedirectOptionsArgs> redirectOptions() {
-        return this.redirectOptions == null ? Codegen.empty() : this.redirectOptions;
+    public Optional<Output<SecurityPolicyRuleRedirectOptionsArgs>> redirectOptions() {
+        return Optional.ofNullable(this.redirectOptions);
     }
 
     /**
@@ -142,10 +142,10 @@ public final class SecurityPolicyRuleArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="ruleNumber")
-      private final @Nullable Output<String> ruleNumber;
+    private @Nullable Output<String> ruleNumber;
 
-    public Output<String> ruleNumber() {
-        return this.ruleNumber == null ? Codegen.empty() : this.ruleNumber;
+    public Optional<Output<String>> ruleNumber() {
+        return Optional.ofNullable(this.ruleNumber);
     }
 
     /**
@@ -153,10 +153,10 @@ public final class SecurityPolicyRuleArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="targetResources")
-      private final @Nullable Output<List<String>> targetResources;
+    private @Nullable Output<List<String>> targetResources;
 
-    public Output<List<String>> targetResources() {
-        return this.targetResources == null ? Codegen.empty() : this.targetResources;
+    public Optional<Output<List<String>>> targetResources() {
+        return Optional.ofNullable(this.targetResources);
     }
 
     /**
@@ -164,212 +164,176 @@ public final class SecurityPolicyRuleArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="targetServiceAccounts")
-      private final @Nullable Output<List<String>> targetServiceAccounts;
+    private @Nullable Output<List<String>> targetServiceAccounts;
 
-    public Output<List<String>> targetServiceAccounts() {
-        return this.targetServiceAccounts == null ? Codegen.empty() : this.targetServiceAccounts;
+    public Optional<Output<List<String>>> targetServiceAccounts() {
+        return Optional.ofNullable(this.targetServiceAccounts);
     }
 
-    public SecurityPolicyRuleArgs(
-        @Nullable Output<String> action,
-        @Nullable Output<String> description,
-        @Nullable Output<SecurityPolicyRuleDirection> direction,
-        @Nullable Output<Boolean> enableLogging,
-        @Nullable Output<SecurityPolicyRuleHttpHeaderActionArgs> headerAction,
-        @Nullable Output<SecurityPolicyRuleMatcherArgs> match,
-        @Nullable Output<Boolean> preview,
-        @Nullable Output<Integer> priority,
-        @Nullable Output<SecurityPolicyRuleRateLimitOptionsArgs> rateLimitOptions,
-        @Nullable Output<SecurityPolicyRuleRedirectOptionsArgs> redirectOptions,
-        @Nullable Output<String> ruleNumber,
-        @Nullable Output<List<String>> targetResources,
-        @Nullable Output<List<String>> targetServiceAccounts) {
-        this.action = action;
-        this.description = description;
-        this.direction = direction;
-        this.enableLogging = enableLogging;
-        this.headerAction = headerAction;
-        this.match = match;
-        this.preview = preview;
-        this.priority = priority;
-        this.rateLimitOptions = rateLimitOptions;
-        this.redirectOptions = redirectOptions;
-        this.ruleNumber = ruleNumber;
-        this.targetResources = targetResources;
-        this.targetServiceAccounts = targetServiceAccounts;
-    }
+    private SecurityPolicyRuleArgs() {}
 
-    private SecurityPolicyRuleArgs() {
-        this.action = Codegen.empty();
-        this.description = Codegen.empty();
-        this.direction = Codegen.empty();
-        this.enableLogging = Codegen.empty();
-        this.headerAction = Codegen.empty();
-        this.match = Codegen.empty();
-        this.preview = Codegen.empty();
-        this.priority = Codegen.empty();
-        this.rateLimitOptions = Codegen.empty();
-        this.redirectOptions = Codegen.empty();
-        this.ruleNumber = Codegen.empty();
-        this.targetResources = Codegen.empty();
-        this.targetServiceAccounts = Codegen.empty();
+    private SecurityPolicyRuleArgs(SecurityPolicyRuleArgs $) {
+        this.action = $.action;
+        this.description = $.description;
+        this.direction = $.direction;
+        this.enableLogging = $.enableLogging;
+        this.headerAction = $.headerAction;
+        this.match = $.match;
+        this.preview = $.preview;
+        this.priority = $.priority;
+        this.rateLimitOptions = $.rateLimitOptions;
+        this.redirectOptions = $.redirectOptions;
+        this.ruleNumber = $.ruleNumber;
+        this.targetResources = $.targetResources;
+        this.targetServiceAccounts = $.targetServiceAccounts;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SecurityPolicyRuleArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> action;
-        private @Nullable Output<String> description;
-        private @Nullable Output<SecurityPolicyRuleDirection> direction;
-        private @Nullable Output<Boolean> enableLogging;
-        private @Nullable Output<SecurityPolicyRuleHttpHeaderActionArgs> headerAction;
-        private @Nullable Output<SecurityPolicyRuleMatcherArgs> match;
-        private @Nullable Output<Boolean> preview;
-        private @Nullable Output<Integer> priority;
-        private @Nullable Output<SecurityPolicyRuleRateLimitOptionsArgs> rateLimitOptions;
-        private @Nullable Output<SecurityPolicyRuleRedirectOptionsArgs> redirectOptions;
-        private @Nullable Output<String> ruleNumber;
-        private @Nullable Output<List<String>> targetResources;
-        private @Nullable Output<List<String>> targetServiceAccounts;
+        private SecurityPolicyRuleArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SecurityPolicyRuleArgs();
         }
 
         public Builder(SecurityPolicyRuleArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.action = defaults.action;
-    	      this.description = defaults.description;
-    	      this.direction = defaults.direction;
-    	      this.enableLogging = defaults.enableLogging;
-    	      this.headerAction = defaults.headerAction;
-    	      this.match = defaults.match;
-    	      this.preview = defaults.preview;
-    	      this.priority = defaults.priority;
-    	      this.rateLimitOptions = defaults.rateLimitOptions;
-    	      this.redirectOptions = defaults.redirectOptions;
-    	      this.ruleNumber = defaults.ruleNumber;
-    	      this.targetResources = defaults.targetResources;
-    	      this.targetServiceAccounts = defaults.targetServiceAccounts;
+            $ = new SecurityPolicyRuleArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder action(@Nullable Output<String> action) {
-            this.action = action;
+            $.action = action;
             return this;
         }
-        public Builder action(@Nullable String action) {
-            this.action = Codegen.ofNullable(action);
-            return this;
+
+        public Builder action(String action) {
+            return action(Output.of(action));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder direction(@Nullable Output<SecurityPolicyRuleDirection> direction) {
-            this.direction = direction;
+            $.direction = direction;
             return this;
         }
-        public Builder direction(@Nullable SecurityPolicyRuleDirection direction) {
-            this.direction = Codegen.ofNullable(direction);
-            return this;
+
+        public Builder direction(SecurityPolicyRuleDirection direction) {
+            return direction(Output.of(direction));
         }
+
         public Builder enableLogging(@Nullable Output<Boolean> enableLogging) {
-            this.enableLogging = enableLogging;
+            $.enableLogging = enableLogging;
             return this;
         }
-        public Builder enableLogging(@Nullable Boolean enableLogging) {
-            this.enableLogging = Codegen.ofNullable(enableLogging);
-            return this;
+
+        public Builder enableLogging(Boolean enableLogging) {
+            return enableLogging(Output.of(enableLogging));
         }
+
         public Builder headerAction(@Nullable Output<SecurityPolicyRuleHttpHeaderActionArgs> headerAction) {
-            this.headerAction = headerAction;
+            $.headerAction = headerAction;
             return this;
         }
-        public Builder headerAction(@Nullable SecurityPolicyRuleHttpHeaderActionArgs headerAction) {
-            this.headerAction = Codegen.ofNullable(headerAction);
-            return this;
+
+        public Builder headerAction(SecurityPolicyRuleHttpHeaderActionArgs headerAction) {
+            return headerAction(Output.of(headerAction));
         }
+
         public Builder match(@Nullable Output<SecurityPolicyRuleMatcherArgs> match) {
-            this.match = match;
+            $.match = match;
             return this;
         }
-        public Builder match(@Nullable SecurityPolicyRuleMatcherArgs match) {
-            this.match = Codegen.ofNullable(match);
-            return this;
+
+        public Builder match(SecurityPolicyRuleMatcherArgs match) {
+            return match(Output.of(match));
         }
+
         public Builder preview(@Nullable Output<Boolean> preview) {
-            this.preview = preview;
+            $.preview = preview;
             return this;
         }
-        public Builder preview(@Nullable Boolean preview) {
-            this.preview = Codegen.ofNullable(preview);
-            return this;
+
+        public Builder preview(Boolean preview) {
+            return preview(Output.of(preview));
         }
+
         public Builder priority(@Nullable Output<Integer> priority) {
-            this.priority = priority;
+            $.priority = priority;
             return this;
         }
-        public Builder priority(@Nullable Integer priority) {
-            this.priority = Codegen.ofNullable(priority);
-            return this;
+
+        public Builder priority(Integer priority) {
+            return priority(Output.of(priority));
         }
+
         public Builder rateLimitOptions(@Nullable Output<SecurityPolicyRuleRateLimitOptionsArgs> rateLimitOptions) {
-            this.rateLimitOptions = rateLimitOptions;
+            $.rateLimitOptions = rateLimitOptions;
             return this;
         }
-        public Builder rateLimitOptions(@Nullable SecurityPolicyRuleRateLimitOptionsArgs rateLimitOptions) {
-            this.rateLimitOptions = Codegen.ofNullable(rateLimitOptions);
-            return this;
+
+        public Builder rateLimitOptions(SecurityPolicyRuleRateLimitOptionsArgs rateLimitOptions) {
+            return rateLimitOptions(Output.of(rateLimitOptions));
         }
+
         public Builder redirectOptions(@Nullable Output<SecurityPolicyRuleRedirectOptionsArgs> redirectOptions) {
-            this.redirectOptions = redirectOptions;
+            $.redirectOptions = redirectOptions;
             return this;
         }
-        public Builder redirectOptions(@Nullable SecurityPolicyRuleRedirectOptionsArgs redirectOptions) {
-            this.redirectOptions = Codegen.ofNullable(redirectOptions);
-            return this;
+
+        public Builder redirectOptions(SecurityPolicyRuleRedirectOptionsArgs redirectOptions) {
+            return redirectOptions(Output.of(redirectOptions));
         }
+
         public Builder ruleNumber(@Nullable Output<String> ruleNumber) {
-            this.ruleNumber = ruleNumber;
+            $.ruleNumber = ruleNumber;
             return this;
         }
-        public Builder ruleNumber(@Nullable String ruleNumber) {
-            this.ruleNumber = Codegen.ofNullable(ruleNumber);
-            return this;
+
+        public Builder ruleNumber(String ruleNumber) {
+            return ruleNumber(Output.of(ruleNumber));
         }
+
         public Builder targetResources(@Nullable Output<List<String>> targetResources) {
-            this.targetResources = targetResources;
+            $.targetResources = targetResources;
             return this;
         }
-        public Builder targetResources(@Nullable List<String> targetResources) {
-            this.targetResources = Codegen.ofNullable(targetResources);
-            return this;
+
+        public Builder targetResources(List<String> targetResources) {
+            return targetResources(Output.of(targetResources));
         }
+
         public Builder targetResources(String... targetResources) {
             return targetResources(List.of(targetResources));
         }
+
         public Builder targetServiceAccounts(@Nullable Output<List<String>> targetServiceAccounts) {
-            this.targetServiceAccounts = targetServiceAccounts;
+            $.targetServiceAccounts = targetServiceAccounts;
             return this;
         }
-        public Builder targetServiceAccounts(@Nullable List<String> targetServiceAccounts) {
-            this.targetServiceAccounts = Codegen.ofNullable(targetServiceAccounts);
-            return this;
+
+        public Builder targetServiceAccounts(List<String> targetServiceAccounts) {
+            return targetServiceAccounts(Output.of(targetServiceAccounts));
         }
+
         public Builder targetServiceAccounts(String... targetServiceAccounts) {
             return targetServiceAccounts(List.of(targetServiceAccounts));
-        }        public SecurityPolicyRuleArgs build() {
-            return new SecurityPolicyRuleArgs(action, description, direction, enableLogging, headerAction, match, preview, priority, rateLimitOptions, redirectOptions, ruleNumber, targetResources, targetServiceAccounts);
+        }
+
+        public SecurityPolicyRuleArgs build() {
+            return $;
         }
     }
+
 }

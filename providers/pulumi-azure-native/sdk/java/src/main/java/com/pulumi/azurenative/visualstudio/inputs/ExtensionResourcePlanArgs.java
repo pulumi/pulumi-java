@@ -5,9 +5,9 @@ package com.pulumi.azurenative.visualstudio.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class ExtensionResourcePlanArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class ExtensionResourcePlanArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="product")
-      private final @Nullable Output<String> product;
+    private @Nullable Output<String> product;
 
-    public Output<String> product() {
-        return this.product == null ? Codegen.empty() : this.product;
+    public Optional<Output<String>> product() {
+        return Optional.ofNullable(this.product);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class ExtensionResourcePlanArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="promotionCode")
-      private final @Nullable Output<String> promotionCode;
+    private @Nullable Output<String> promotionCode;
 
-    public Output<String> promotionCode() {
-        return this.promotionCode == null ? Codegen.empty() : this.promotionCode;
+    public Optional<Output<String>> promotionCode() {
+        return Optional.ofNullable(this.promotionCode);
     }
 
     /**
@@ -57,10 +57,10 @@ public final class ExtensionResourcePlanArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="publisher")
-      private final @Nullable Output<String> publisher;
+    private @Nullable Output<String> publisher;
 
-    public Output<String> publisher() {
-        return this.publisher == null ? Codegen.empty() : this.publisher;
+    public Optional<Output<String>> publisher() {
+        return Optional.ofNullable(this.publisher);
     }
 
     /**
@@ -68,102 +68,88 @@ public final class ExtensionResourcePlanArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="version")
-      private final @Nullable Output<String> version;
+    private @Nullable Output<String> version;
 
-    public Output<String> version() {
-        return this.version == null ? Codegen.empty() : this.version;
+    public Optional<Output<String>> version() {
+        return Optional.ofNullable(this.version);
     }
 
-    public ExtensionResourcePlanArgs(
-        @Nullable Output<String> name,
-        @Nullable Output<String> product,
-        @Nullable Output<String> promotionCode,
-        @Nullable Output<String> publisher,
-        @Nullable Output<String> version) {
-        this.name = name;
-        this.product = product;
-        this.promotionCode = promotionCode;
-        this.publisher = publisher;
-        this.version = version;
-    }
+    private ExtensionResourcePlanArgs() {}
 
-    private ExtensionResourcePlanArgs() {
-        this.name = Codegen.empty();
-        this.product = Codegen.empty();
-        this.promotionCode = Codegen.empty();
-        this.publisher = Codegen.empty();
-        this.version = Codegen.empty();
+    private ExtensionResourcePlanArgs(ExtensionResourcePlanArgs $) {
+        this.name = $.name;
+        this.product = $.product;
+        this.promotionCode = $.promotionCode;
+        this.publisher = $.publisher;
+        this.version = $.version;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ExtensionResourcePlanArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> product;
-        private @Nullable Output<String> promotionCode;
-        private @Nullable Output<String> publisher;
-        private @Nullable Output<String> version;
+        private ExtensionResourcePlanArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ExtensionResourcePlanArgs();
         }
 
         public Builder(ExtensionResourcePlanArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.product = defaults.product;
-    	      this.promotionCode = defaults.promotionCode;
-    	      this.publisher = defaults.publisher;
-    	      this.version = defaults.version;
+            $ = new ExtensionResourcePlanArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder product(@Nullable Output<String> product) {
-            this.product = product;
+            $.product = product;
             return this;
         }
-        public Builder product(@Nullable String product) {
-            this.product = Codegen.ofNullable(product);
-            return this;
+
+        public Builder product(String product) {
+            return product(Output.of(product));
         }
+
         public Builder promotionCode(@Nullable Output<String> promotionCode) {
-            this.promotionCode = promotionCode;
+            $.promotionCode = promotionCode;
             return this;
         }
-        public Builder promotionCode(@Nullable String promotionCode) {
-            this.promotionCode = Codegen.ofNullable(promotionCode);
-            return this;
+
+        public Builder promotionCode(String promotionCode) {
+            return promotionCode(Output.of(promotionCode));
         }
+
         public Builder publisher(@Nullable Output<String> publisher) {
-            this.publisher = publisher;
+            $.publisher = publisher;
             return this;
         }
-        public Builder publisher(@Nullable String publisher) {
-            this.publisher = Codegen.ofNullable(publisher);
-            return this;
+
+        public Builder publisher(String publisher) {
+            return publisher(Output.of(publisher));
         }
+
         public Builder version(@Nullable Output<String> version) {
-            this.version = version;
+            $.version = version;
             return this;
         }
-        public Builder version(@Nullable String version) {
-            this.version = Codegen.ofNullable(version);
-            return this;
-        }        public ExtensionResourcePlanArgs build() {
-            return new ExtensionResourcePlanArgs(name, product, promotionCode, publisher, version);
+
+        public Builder version(String version) {
+            return version(Output.of(version));
+        }
+
+        public ExtensionResourcePlanArgs build() {
+            return $;
         }
     }
+
 }

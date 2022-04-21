@@ -5,11 +5,11 @@ package com.pulumi.azurenative.devices.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class IotHubDefinitionDescriptionArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="allocationWeight")
-      private final @Nullable Output<Integer> allocationWeight;
+    private @Nullable Output<Integer> allocationWeight;
 
-    public Output<Integer> allocationWeight() {
-        return this.allocationWeight == null ? Codegen.empty() : this.allocationWeight;
+    public Optional<Output<Integer>> allocationWeight() {
+        return Optional.ofNullable(this.allocationWeight);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class IotHubDefinitionDescriptionArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="applyAllocationPolicy")
-      private final @Nullable Output<Boolean> applyAllocationPolicy;
+    private @Nullable Output<Boolean> applyAllocationPolicy;
 
-    public Output<Boolean> applyAllocationPolicy() {
-        return this.applyAllocationPolicy == null ? Codegen.empty() : this.applyAllocationPolicy;
+    public Optional<Output<Boolean>> applyAllocationPolicy() {
+        return Optional.ofNullable(this.applyAllocationPolicy);
     }
 
     /**
@@ -48,7 +48,7 @@ public final class IotHubDefinitionDescriptionArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="connectionString", required=true)
-      private final Output<String> connectionString;
+    private Output<String> connectionString;
 
     public Output<String> connectionString() {
         return this.connectionString;
@@ -59,89 +59,80 @@ public final class IotHubDefinitionDescriptionArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="location", required=true)
-      private final Output<String> location;
+    private Output<String> location;
 
     public Output<String> location() {
         return this.location;
     }
 
-    public IotHubDefinitionDescriptionArgs(
-        @Nullable Output<Integer> allocationWeight,
-        @Nullable Output<Boolean> applyAllocationPolicy,
-        Output<String> connectionString,
-        Output<String> location) {
-        this.allocationWeight = allocationWeight;
-        this.applyAllocationPolicy = applyAllocationPolicy;
-        this.connectionString = Objects.requireNonNull(connectionString, "expected parameter 'connectionString' to be non-null");
-        this.location = Objects.requireNonNull(location, "expected parameter 'location' to be non-null");
-    }
+    private IotHubDefinitionDescriptionArgs() {}
 
-    private IotHubDefinitionDescriptionArgs() {
-        this.allocationWeight = Codegen.empty();
-        this.applyAllocationPolicy = Codegen.empty();
-        this.connectionString = Codegen.empty();
-        this.location = Codegen.empty();
+    private IotHubDefinitionDescriptionArgs(IotHubDefinitionDescriptionArgs $) {
+        this.allocationWeight = $.allocationWeight;
+        this.applyAllocationPolicy = $.applyAllocationPolicy;
+        this.connectionString = $.connectionString;
+        this.location = $.location;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(IotHubDefinitionDescriptionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> allocationWeight;
-        private @Nullable Output<Boolean> applyAllocationPolicy;
-        private Output<String> connectionString;
-        private Output<String> location;
+        private IotHubDefinitionDescriptionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new IotHubDefinitionDescriptionArgs();
         }
 
         public Builder(IotHubDefinitionDescriptionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.allocationWeight = defaults.allocationWeight;
-    	      this.applyAllocationPolicy = defaults.applyAllocationPolicy;
-    	      this.connectionString = defaults.connectionString;
-    	      this.location = defaults.location;
+            $ = new IotHubDefinitionDescriptionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder allocationWeight(@Nullable Output<Integer> allocationWeight) {
-            this.allocationWeight = allocationWeight;
+            $.allocationWeight = allocationWeight;
             return this;
         }
-        public Builder allocationWeight(@Nullable Integer allocationWeight) {
-            this.allocationWeight = Codegen.ofNullable(allocationWeight);
-            return this;
+
+        public Builder allocationWeight(Integer allocationWeight) {
+            return allocationWeight(Output.of(allocationWeight));
         }
+
         public Builder applyAllocationPolicy(@Nullable Output<Boolean> applyAllocationPolicy) {
-            this.applyAllocationPolicy = applyAllocationPolicy;
+            $.applyAllocationPolicy = applyAllocationPolicy;
             return this;
         }
-        public Builder applyAllocationPolicy(@Nullable Boolean applyAllocationPolicy) {
-            this.applyAllocationPolicy = Codegen.ofNullable(applyAllocationPolicy);
-            return this;
+
+        public Builder applyAllocationPolicy(Boolean applyAllocationPolicy) {
+            return applyAllocationPolicy(Output.of(applyAllocationPolicy));
         }
+
         public Builder connectionString(Output<String> connectionString) {
-            this.connectionString = Objects.requireNonNull(connectionString);
+            $.connectionString = connectionString;
             return this;
         }
+
         public Builder connectionString(String connectionString) {
-            this.connectionString = Output.of(Objects.requireNonNull(connectionString));
-            return this;
+            return connectionString(Output.of(connectionString));
         }
+
         public Builder location(Output<String> location) {
-            this.location = Objects.requireNonNull(location);
+            $.location = location;
             return this;
         }
+
         public Builder location(String location) {
-            this.location = Output.of(Objects.requireNonNull(location));
-            return this;
-        }        public IotHubDefinitionDescriptionArgs build() {
-            return new IotHubDefinitionDescriptionArgs(allocationWeight, applyAllocationPolicy, connectionString, location);
+            return location(Output.of(location));
+        }
+
+        public IotHubDefinitionDescriptionArgs build() {
+            $.connectionString = Objects.requireNonNull($.connectionString, "expected parameter 'connectionString' to be non-null");
+            $.location = Objects.requireNonNull($.location, "expected parameter 'location' to be non-null");
+            return $;
         }
     }
+
 }

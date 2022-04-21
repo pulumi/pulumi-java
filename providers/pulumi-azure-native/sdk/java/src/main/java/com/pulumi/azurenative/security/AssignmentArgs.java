@@ -8,11 +8,11 @@ import com.pulumi.azurenative.security.inputs.AssignedStandardItemArgs;
 import com.pulumi.azurenative.security.inputs.AssignmentPropertiesAdditionalDataArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class AssignmentArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="additionalData")
-      private final @Nullable Output<AssignmentPropertiesAdditionalDataArgs> additionalData;
+    private @Nullable Output<AssignmentPropertiesAdditionalDataArgs> additionalData;
 
-    public Output<AssignmentPropertiesAdditionalDataArgs> additionalData() {
-        return this.additionalData == null ? Codegen.empty() : this.additionalData;
+    public Optional<Output<AssignmentPropertiesAdditionalDataArgs>> additionalData() {
+        return Optional.ofNullable(this.additionalData);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class AssignmentArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="assignedComponent")
-      private final @Nullable Output<AssignedComponentItemArgs> assignedComponent;
+    private @Nullable Output<AssignedComponentItemArgs> assignedComponent;
 
-    public Output<AssignedComponentItemArgs> assignedComponent() {
-        return this.assignedComponent == null ? Codegen.empty() : this.assignedComponent;
+    public Optional<Output<AssignedComponentItemArgs>> assignedComponent() {
+        return Optional.ofNullable(this.assignedComponent);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class AssignmentArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="assignedStandard")
-      private final @Nullable Output<AssignedStandardItemArgs> assignedStandard;
+    private @Nullable Output<AssignedStandardItemArgs> assignedStandard;
 
-    public Output<AssignedStandardItemArgs> assignedStandard() {
-        return this.assignedStandard == null ? Codegen.empty() : this.assignedStandard;
+    public Optional<Output<AssignedStandardItemArgs>> assignedStandard() {
+        return Optional.ofNullable(this.assignedStandard);
     }
 
     /**
@@ -58,10 +58,10 @@ public final class AssignmentArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="assignmentId")
-      private final @Nullable Output<String> assignmentId;
+    private @Nullable Output<String> assignmentId;
 
-    public Output<String> assignmentId() {
-        return this.assignmentId == null ? Codegen.empty() : this.assignmentId;
+    public Optional<Output<String>> assignmentId() {
+        return Optional.ofNullable(this.assignmentId);
     }
 
     /**
@@ -69,10 +69,10 @@ public final class AssignmentArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -80,10 +80,10 @@ public final class AssignmentArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="displayName")
-      private final @Nullable Output<String> displayName;
+    private @Nullable Output<String> displayName;
 
-    public Output<String> displayName() {
-        return this.displayName == null ? Codegen.empty() : this.displayName;
+    public Optional<Output<String>> displayName() {
+        return Optional.ofNullable(this.displayName);
     }
 
     /**
@@ -91,10 +91,10 @@ public final class AssignmentArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="effect")
-      private final @Nullable Output<String> effect;
+    private @Nullable Output<String> effect;
 
-    public Output<String> effect() {
-        return this.effect == null ? Codegen.empty() : this.effect;
+    public Optional<Output<String>> effect() {
+        return Optional.ofNullable(this.effect);
     }
 
     /**
@@ -102,10 +102,10 @@ public final class AssignmentArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="expiresOn")
-      private final @Nullable Output<String> expiresOn;
+    private @Nullable Output<String> expiresOn;
 
-    public Output<String> expiresOn() {
-        return this.expiresOn == null ? Codegen.empty() : this.expiresOn;
+    public Optional<Output<String>> expiresOn() {
+        return Optional.ofNullable(this.expiresOn);
     }
 
     /**
@@ -113,10 +113,10 @@ public final class AssignmentArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="kind")
-      private final @Nullable Output<String> kind;
+    private @Nullable Output<String> kind;
 
-    public Output<String> kind() {
-        return this.kind == null ? Codegen.empty() : this.kind;
+    public Optional<Output<String>> kind() {
+        return Optional.ofNullable(this.kind);
     }
 
     /**
@@ -124,10 +124,10 @@ public final class AssignmentArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -135,10 +135,10 @@ public final class AssignmentArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="metadata")
-      private final @Nullable Output<Object> metadata;
+    private @Nullable Output<Object> metadata;
 
-    public Output<Object> metadata() {
-        return this.metadata == null ? Codegen.empty() : this.metadata;
+    public Optional<Output<Object>> metadata() {
+        return Optional.ofNullable(this.metadata);
     }
 
     /**
@@ -146,7 +146,7 @@ public final class AssignmentArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -157,10 +157,10 @@ public final class AssignmentArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="scope")
-      private final @Nullable Output<String> scope;
+    private @Nullable Output<String> scope;
 
-    public Output<String> scope() {
-        return this.scope == null ? Codegen.empty() : this.scope;
+    public Optional<Output<String>> scope() {
+        return Optional.ofNullable(this.scope);
     }
 
     /**
@@ -168,219 +168,179 @@ public final class AssignmentArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public AssignmentArgs(
-        @Nullable Output<AssignmentPropertiesAdditionalDataArgs> additionalData,
-        @Nullable Output<AssignedComponentItemArgs> assignedComponent,
-        @Nullable Output<AssignedStandardItemArgs> assignedStandard,
-        @Nullable Output<String> assignmentId,
-        @Nullable Output<String> description,
-        @Nullable Output<String> displayName,
-        @Nullable Output<String> effect,
-        @Nullable Output<String> expiresOn,
-        @Nullable Output<String> kind,
-        @Nullable Output<String> location,
-        @Nullable Output<Object> metadata,
-        Output<String> resourceGroupName,
-        @Nullable Output<String> scope,
-        @Nullable Output<Map<String,String>> tags) {
-        this.additionalData = additionalData;
-        this.assignedComponent = assignedComponent;
-        this.assignedStandard = assignedStandard;
-        this.assignmentId = assignmentId;
-        this.description = description;
-        this.displayName = displayName;
-        this.effect = effect;
-        this.expiresOn = expiresOn;
-        this.kind = kind;
-        this.location = location;
-        this.metadata = metadata;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.scope = scope;
-        this.tags = tags;
-    }
+    private AssignmentArgs() {}
 
-    private AssignmentArgs() {
-        this.additionalData = Codegen.empty();
-        this.assignedComponent = Codegen.empty();
-        this.assignedStandard = Codegen.empty();
-        this.assignmentId = Codegen.empty();
-        this.description = Codegen.empty();
-        this.displayName = Codegen.empty();
-        this.effect = Codegen.empty();
-        this.expiresOn = Codegen.empty();
-        this.kind = Codegen.empty();
-        this.location = Codegen.empty();
-        this.metadata = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.scope = Codegen.empty();
-        this.tags = Codegen.empty();
+    private AssignmentArgs(AssignmentArgs $) {
+        this.additionalData = $.additionalData;
+        this.assignedComponent = $.assignedComponent;
+        this.assignedStandard = $.assignedStandard;
+        this.assignmentId = $.assignmentId;
+        this.description = $.description;
+        this.displayName = $.displayName;
+        this.effect = $.effect;
+        this.expiresOn = $.expiresOn;
+        this.kind = $.kind;
+        this.location = $.location;
+        this.metadata = $.metadata;
+        this.resourceGroupName = $.resourceGroupName;
+        this.scope = $.scope;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AssignmentArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<AssignmentPropertiesAdditionalDataArgs> additionalData;
-        private @Nullable Output<AssignedComponentItemArgs> assignedComponent;
-        private @Nullable Output<AssignedStandardItemArgs> assignedStandard;
-        private @Nullable Output<String> assignmentId;
-        private @Nullable Output<String> description;
-        private @Nullable Output<String> displayName;
-        private @Nullable Output<String> effect;
-        private @Nullable Output<String> expiresOn;
-        private @Nullable Output<String> kind;
-        private @Nullable Output<String> location;
-        private @Nullable Output<Object> metadata;
-        private Output<String> resourceGroupName;
-        private @Nullable Output<String> scope;
-        private @Nullable Output<Map<String,String>> tags;
+        private AssignmentArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AssignmentArgs();
         }
 
         public Builder(AssignmentArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.additionalData = defaults.additionalData;
-    	      this.assignedComponent = defaults.assignedComponent;
-    	      this.assignedStandard = defaults.assignedStandard;
-    	      this.assignmentId = defaults.assignmentId;
-    	      this.description = defaults.description;
-    	      this.displayName = defaults.displayName;
-    	      this.effect = defaults.effect;
-    	      this.expiresOn = defaults.expiresOn;
-    	      this.kind = defaults.kind;
-    	      this.location = defaults.location;
-    	      this.metadata = defaults.metadata;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.scope = defaults.scope;
-    	      this.tags = defaults.tags;
+            $ = new AssignmentArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder additionalData(@Nullable Output<AssignmentPropertiesAdditionalDataArgs> additionalData) {
-            this.additionalData = additionalData;
+            $.additionalData = additionalData;
             return this;
         }
-        public Builder additionalData(@Nullable AssignmentPropertiesAdditionalDataArgs additionalData) {
-            this.additionalData = Codegen.ofNullable(additionalData);
-            return this;
+
+        public Builder additionalData(AssignmentPropertiesAdditionalDataArgs additionalData) {
+            return additionalData(Output.of(additionalData));
         }
+
         public Builder assignedComponent(@Nullable Output<AssignedComponentItemArgs> assignedComponent) {
-            this.assignedComponent = assignedComponent;
+            $.assignedComponent = assignedComponent;
             return this;
         }
-        public Builder assignedComponent(@Nullable AssignedComponentItemArgs assignedComponent) {
-            this.assignedComponent = Codegen.ofNullable(assignedComponent);
-            return this;
+
+        public Builder assignedComponent(AssignedComponentItemArgs assignedComponent) {
+            return assignedComponent(Output.of(assignedComponent));
         }
+
         public Builder assignedStandard(@Nullable Output<AssignedStandardItemArgs> assignedStandard) {
-            this.assignedStandard = assignedStandard;
+            $.assignedStandard = assignedStandard;
             return this;
         }
-        public Builder assignedStandard(@Nullable AssignedStandardItemArgs assignedStandard) {
-            this.assignedStandard = Codegen.ofNullable(assignedStandard);
-            return this;
+
+        public Builder assignedStandard(AssignedStandardItemArgs assignedStandard) {
+            return assignedStandard(Output.of(assignedStandard));
         }
+
         public Builder assignmentId(@Nullable Output<String> assignmentId) {
-            this.assignmentId = assignmentId;
+            $.assignmentId = assignmentId;
             return this;
         }
-        public Builder assignmentId(@Nullable String assignmentId) {
-            this.assignmentId = Codegen.ofNullable(assignmentId);
-            return this;
+
+        public Builder assignmentId(String assignmentId) {
+            return assignmentId(Output.of(assignmentId));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder displayName(@Nullable Output<String> displayName) {
-            this.displayName = displayName;
+            $.displayName = displayName;
             return this;
         }
-        public Builder displayName(@Nullable String displayName) {
-            this.displayName = Codegen.ofNullable(displayName);
-            return this;
+
+        public Builder displayName(String displayName) {
+            return displayName(Output.of(displayName));
         }
+
         public Builder effect(@Nullable Output<String> effect) {
-            this.effect = effect;
+            $.effect = effect;
             return this;
         }
-        public Builder effect(@Nullable String effect) {
-            this.effect = Codegen.ofNullable(effect);
-            return this;
+
+        public Builder effect(String effect) {
+            return effect(Output.of(effect));
         }
+
         public Builder expiresOn(@Nullable Output<String> expiresOn) {
-            this.expiresOn = expiresOn;
+            $.expiresOn = expiresOn;
             return this;
         }
-        public Builder expiresOn(@Nullable String expiresOn) {
-            this.expiresOn = Codegen.ofNullable(expiresOn);
-            return this;
+
+        public Builder expiresOn(String expiresOn) {
+            return expiresOn(Output.of(expiresOn));
         }
+
         public Builder kind(@Nullable Output<String> kind) {
-            this.kind = kind;
+            $.kind = kind;
             return this;
         }
-        public Builder kind(@Nullable String kind) {
-            this.kind = Codegen.ofNullable(kind);
-            return this;
+
+        public Builder kind(String kind) {
+            return kind(Output.of(kind));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder metadata(@Nullable Output<Object> metadata) {
-            this.metadata = metadata;
+            $.metadata = metadata;
             return this;
         }
-        public Builder metadata(@Nullable Object metadata) {
-            this.metadata = Codegen.ofNullable(metadata);
-            return this;
+
+        public Builder metadata(Object metadata) {
+            return metadata(Output.of(metadata));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder scope(@Nullable Output<String> scope) {
-            this.scope = scope;
+            $.scope = scope;
             return this;
         }
-        public Builder scope(@Nullable String scope) {
-            this.scope = Codegen.ofNullable(scope);
-            return this;
+
+        public Builder scope(String scope) {
+            return scope(Output.of(scope));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
-        }        public AssignmentArgs build() {
-            return new AssignmentArgs(additionalData, assignedComponent, assignedStandard, assignmentId, description, displayName, effect, expiresOn, kind, location, metadata, resourceGroupName, scope, tags);
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
+        }
+
+        public AssignmentArgs build() {
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

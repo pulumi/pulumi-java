@@ -7,10 +7,10 @@ import com.pulumi.azurenative.signalrservice.enums.SignalRRequestType;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +27,10 @@ public final class PrivateEndpointACLArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="allow")
-      private final @Nullable Output<List<Either<String,SignalRRequestType>>> allow;
+    private @Nullable Output<List<Either<String,SignalRRequestType>>> allow;
 
-    public Output<List<Either<String,SignalRRequestType>>> allow() {
-        return this.allow == null ? Codegen.empty() : this.allow;
+    public Optional<Output<List<Either<String,SignalRRequestType>>>> allow() {
+        return Optional.ofNullable(this.allow);
     }
 
     /**
@@ -38,10 +38,10 @@ public final class PrivateEndpointACLArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="deny")
-      private final @Nullable Output<List<Either<String,SignalRRequestType>>> deny;
+    private @Nullable Output<List<Either<String,SignalRRequestType>>> deny;
 
-    public Output<List<Either<String,SignalRRequestType>>> deny() {
-        return this.deny == null ? Codegen.empty() : this.deny;
+    public Optional<Output<List<Either<String,SignalRRequestType>>>> deny() {
+        return Optional.ofNullable(this.deny);
     }
 
     /**
@@ -49,82 +49,77 @@ public final class PrivateEndpointACLArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="name", required=true)
-      private final Output<String> name;
+    private Output<String> name;
 
     public Output<String> name() {
         return this.name;
     }
 
-    public PrivateEndpointACLArgs(
-        @Nullable Output<List<Either<String,SignalRRequestType>>> allow,
-        @Nullable Output<List<Either<String,SignalRRequestType>>> deny,
-        Output<String> name) {
-        this.allow = allow;
-        this.deny = deny;
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-    }
+    private PrivateEndpointACLArgs() {}
 
-    private PrivateEndpointACLArgs() {
-        this.allow = Codegen.empty();
-        this.deny = Codegen.empty();
-        this.name = Codegen.empty();
+    private PrivateEndpointACLArgs(PrivateEndpointACLArgs $) {
+        this.allow = $.allow;
+        this.deny = $.deny;
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PrivateEndpointACLArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<Either<String,SignalRRequestType>>> allow;
-        private @Nullable Output<List<Either<String,SignalRRequestType>>> deny;
-        private Output<String> name;
+        private PrivateEndpointACLArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PrivateEndpointACLArgs();
         }
 
         public Builder(PrivateEndpointACLArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.allow = defaults.allow;
-    	      this.deny = defaults.deny;
-    	      this.name = defaults.name;
+            $ = new PrivateEndpointACLArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder allow(@Nullable Output<List<Either<String,SignalRRequestType>>> allow) {
-            this.allow = allow;
+            $.allow = allow;
             return this;
         }
-        public Builder allow(@Nullable List<Either<String,SignalRRequestType>> allow) {
-            this.allow = Codegen.ofNullable(allow);
-            return this;
+
+        public Builder allow(List<Either<String,SignalRRequestType>> allow) {
+            return allow(Output.of(allow));
         }
+
         public Builder allow(Either<String,SignalRRequestType>... allow) {
             return allow(List.of(allow));
         }
+
         public Builder deny(@Nullable Output<List<Either<String,SignalRRequestType>>> deny) {
-            this.deny = deny;
+            $.deny = deny;
             return this;
         }
-        public Builder deny(@Nullable List<Either<String,SignalRRequestType>> deny) {
-            this.deny = Codegen.ofNullable(deny);
-            return this;
+
+        public Builder deny(List<Either<String,SignalRRequestType>> deny) {
+            return deny(Output.of(deny));
         }
+
         public Builder deny(Either<String,SignalRRequestType>... deny) {
             return deny(List.of(deny));
         }
+
         public Builder name(Output<String> name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Output.of(Objects.requireNonNull(name));
-            return this;
-        }        public PrivateEndpointACLArgs build() {
-            return new PrivateEndpointACLArgs(allow, deny, name);
+            return name(Output.of(name));
+        }
+
+        public PrivateEndpointACLArgs build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            return $;
         }
     }
+
 }

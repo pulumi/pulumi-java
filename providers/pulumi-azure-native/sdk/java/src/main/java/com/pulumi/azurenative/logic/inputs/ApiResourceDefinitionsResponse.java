@@ -23,10 +23,10 @@ public final class ApiResourceDefinitionsResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="modifiedSwaggerUrl")
-      private final @Nullable String modifiedSwaggerUrl;
+    private @Nullable String modifiedSwaggerUrl;
 
     public Optional<String> modifiedSwaggerUrl() {
-        return this.modifiedSwaggerUrl == null ? Optional.empty() : Optional.ofNullable(this.modifiedSwaggerUrl);
+        return Optional.ofNullable(this.modifiedSwaggerUrl);
     }
 
     /**
@@ -34,55 +34,50 @@ public final class ApiResourceDefinitionsResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="originalSwaggerUrl")
-      private final @Nullable String originalSwaggerUrl;
+    private @Nullable String originalSwaggerUrl;
 
     public Optional<String> originalSwaggerUrl() {
-        return this.originalSwaggerUrl == null ? Optional.empty() : Optional.ofNullable(this.originalSwaggerUrl);
+        return Optional.ofNullable(this.originalSwaggerUrl);
     }
 
-    public ApiResourceDefinitionsResponse(
-        @Nullable String modifiedSwaggerUrl,
-        @Nullable String originalSwaggerUrl) {
-        this.modifiedSwaggerUrl = modifiedSwaggerUrl;
-        this.originalSwaggerUrl = originalSwaggerUrl;
-    }
+    private ApiResourceDefinitionsResponse() {}
 
-    private ApiResourceDefinitionsResponse() {
-        this.modifiedSwaggerUrl = null;
-        this.originalSwaggerUrl = null;
+    private ApiResourceDefinitionsResponse(ApiResourceDefinitionsResponse $) {
+        this.modifiedSwaggerUrl = $.modifiedSwaggerUrl;
+        this.originalSwaggerUrl = $.originalSwaggerUrl;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ApiResourceDefinitionsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String modifiedSwaggerUrl;
-        private @Nullable String originalSwaggerUrl;
+        private ApiResourceDefinitionsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ApiResourceDefinitionsResponse();
         }
 
         public Builder(ApiResourceDefinitionsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.modifiedSwaggerUrl = defaults.modifiedSwaggerUrl;
-    	      this.originalSwaggerUrl = defaults.originalSwaggerUrl;
+            $ = new ApiResourceDefinitionsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder modifiedSwaggerUrl(@Nullable String modifiedSwaggerUrl) {
-            this.modifiedSwaggerUrl = modifiedSwaggerUrl;
+            $.modifiedSwaggerUrl = modifiedSwaggerUrl;
             return this;
         }
+
         public Builder originalSwaggerUrl(@Nullable String originalSwaggerUrl) {
-            this.originalSwaggerUrl = originalSwaggerUrl;
+            $.originalSwaggerUrl = originalSwaggerUrl;
             return this;
-        }        public ApiResourceDefinitionsResponse build() {
-            return new ApiResourceDefinitionsResponse(modifiedSwaggerUrl, originalSwaggerUrl);
+        }
+
+        public ApiResourceDefinitionsResponse build() {
+            return $;
         }
     }
+
 }

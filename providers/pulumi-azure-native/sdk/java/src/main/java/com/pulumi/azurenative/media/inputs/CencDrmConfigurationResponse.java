@@ -24,10 +24,10 @@ public final class CencDrmConfigurationResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="playReady")
-      private final @Nullable StreamingPolicyPlayReadyConfigurationResponse playReady;
+    private @Nullable StreamingPolicyPlayReadyConfigurationResponse playReady;
 
     public Optional<StreamingPolicyPlayReadyConfigurationResponse> playReady() {
-        return this.playReady == null ? Optional.empty() : Optional.ofNullable(this.playReady);
+        return Optional.ofNullable(this.playReady);
     }
 
     /**
@@ -35,55 +35,50 @@ public final class CencDrmConfigurationResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="widevine")
-      private final @Nullable StreamingPolicyWidevineConfigurationResponse widevine;
+    private @Nullable StreamingPolicyWidevineConfigurationResponse widevine;
 
     public Optional<StreamingPolicyWidevineConfigurationResponse> widevine() {
-        return this.widevine == null ? Optional.empty() : Optional.ofNullable(this.widevine);
+        return Optional.ofNullable(this.widevine);
     }
 
-    public CencDrmConfigurationResponse(
-        @Nullable StreamingPolicyPlayReadyConfigurationResponse playReady,
-        @Nullable StreamingPolicyWidevineConfigurationResponse widevine) {
-        this.playReady = playReady;
-        this.widevine = widevine;
-    }
+    private CencDrmConfigurationResponse() {}
 
-    private CencDrmConfigurationResponse() {
-        this.playReady = null;
-        this.widevine = null;
+    private CencDrmConfigurationResponse(CencDrmConfigurationResponse $) {
+        this.playReady = $.playReady;
+        this.widevine = $.widevine;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CencDrmConfigurationResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable StreamingPolicyPlayReadyConfigurationResponse playReady;
-        private @Nullable StreamingPolicyWidevineConfigurationResponse widevine;
+        private CencDrmConfigurationResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new CencDrmConfigurationResponse();
         }
 
         public Builder(CencDrmConfigurationResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.playReady = defaults.playReady;
-    	      this.widevine = defaults.widevine;
+            $ = new CencDrmConfigurationResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder playReady(@Nullable StreamingPolicyPlayReadyConfigurationResponse playReady) {
-            this.playReady = playReady;
+            $.playReady = playReady;
             return this;
         }
+
         public Builder widevine(@Nullable StreamingPolicyWidevineConfigurationResponse widevine) {
-            this.widevine = widevine;
+            $.widevine = widevine;
             return this;
-        }        public CencDrmConfigurationResponse build() {
-            return new CencDrmConfigurationResponse(playReady, widevine);
+        }
+
+        public CencDrmConfigurationResponse build() {
+            return $;
         }
     }
+
 }

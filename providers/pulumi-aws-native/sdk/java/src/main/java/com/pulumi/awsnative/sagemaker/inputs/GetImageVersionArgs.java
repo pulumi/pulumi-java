@@ -13,45 +13,45 @@ public final class GetImageVersionArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetImageVersionArgs Empty = new GetImageVersionArgs();
 
     @Import(name="imageVersionArn", required=true)
-      private final String imageVersionArn;
+    private String imageVersionArn;
 
     public String imageVersionArn() {
         return this.imageVersionArn;
     }
 
-    public GetImageVersionArgs(String imageVersionArn) {
-        this.imageVersionArn = Objects.requireNonNull(imageVersionArn, "expected parameter 'imageVersionArn' to be non-null");
-    }
+    private GetImageVersionArgs() {}
 
-    private GetImageVersionArgs() {
-        this.imageVersionArn = null;
+    private GetImageVersionArgs(GetImageVersionArgs $) {
+        this.imageVersionArn = $.imageVersionArn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetImageVersionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String imageVersionArn;
+        private GetImageVersionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetImageVersionArgs();
         }
 
         public Builder(GetImageVersionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.imageVersionArn = defaults.imageVersionArn;
+            $ = new GetImageVersionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder imageVersionArn(String imageVersionArn) {
-            this.imageVersionArn = Objects.requireNonNull(imageVersionArn);
+            $.imageVersionArn = imageVersionArn;
             return this;
-        }        public GetImageVersionArgs build() {
-            return new GetImageVersionArgs(imageVersionArn);
+        }
+
+        public GetImageVersionArgs build() {
+            $.imageVersionArn = Objects.requireNonNull($.imageVersionArn, "expected parameter 'imageVersionArn' to be non-null");
+            return $;
         }
     }
+
 }

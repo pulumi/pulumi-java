@@ -22,7 +22,7 @@ public final class GoogleCloudMlV1__SchedulingResponse extends com.pulumi.resour
      * 
      */
     @Import(name="maxRunningTime", required=true)
-      private final String maxRunningTime;
+    private String maxRunningTime;
 
     public String maxRunningTime() {
         return this.maxRunningTime;
@@ -33,7 +33,7 @@ public final class GoogleCloudMlV1__SchedulingResponse extends com.pulumi.resour
      * 
      */
     @Import(name="maxWaitTime", required=true)
-      private final String maxWaitTime;
+    private String maxWaitTime;
 
     public String maxWaitTime() {
         return this.maxWaitTime;
@@ -44,64 +44,59 @@ public final class GoogleCloudMlV1__SchedulingResponse extends com.pulumi.resour
      * 
      */
     @Import(name="priority", required=true)
-      private final Integer priority;
+    private Integer priority;
 
     public Integer priority() {
         return this.priority;
     }
 
-    public GoogleCloudMlV1__SchedulingResponse(
-        String maxRunningTime,
-        String maxWaitTime,
-        Integer priority) {
-        this.maxRunningTime = Objects.requireNonNull(maxRunningTime, "expected parameter 'maxRunningTime' to be non-null");
-        this.maxWaitTime = Objects.requireNonNull(maxWaitTime, "expected parameter 'maxWaitTime' to be non-null");
-        this.priority = Objects.requireNonNull(priority, "expected parameter 'priority' to be non-null");
-    }
+    private GoogleCloudMlV1__SchedulingResponse() {}
 
-    private GoogleCloudMlV1__SchedulingResponse() {
-        this.maxRunningTime = null;
-        this.maxWaitTime = null;
-        this.priority = null;
+    private GoogleCloudMlV1__SchedulingResponse(GoogleCloudMlV1__SchedulingResponse $) {
+        this.maxRunningTime = $.maxRunningTime;
+        this.maxWaitTime = $.maxWaitTime;
+        this.priority = $.priority;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudMlV1__SchedulingResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String maxRunningTime;
-        private String maxWaitTime;
-        private Integer priority;
+        private GoogleCloudMlV1__SchedulingResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudMlV1__SchedulingResponse();
         }
 
         public Builder(GoogleCloudMlV1__SchedulingResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.maxRunningTime = defaults.maxRunningTime;
-    	      this.maxWaitTime = defaults.maxWaitTime;
-    	      this.priority = defaults.priority;
+            $ = new GoogleCloudMlV1__SchedulingResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder maxRunningTime(String maxRunningTime) {
-            this.maxRunningTime = Objects.requireNonNull(maxRunningTime);
+            $.maxRunningTime = maxRunningTime;
             return this;
         }
+
         public Builder maxWaitTime(String maxWaitTime) {
-            this.maxWaitTime = Objects.requireNonNull(maxWaitTime);
+            $.maxWaitTime = maxWaitTime;
             return this;
         }
+
         public Builder priority(Integer priority) {
-            this.priority = Objects.requireNonNull(priority);
+            $.priority = priority;
             return this;
-        }        public GoogleCloudMlV1__SchedulingResponse build() {
-            return new GoogleCloudMlV1__SchedulingResponse(maxRunningTime, maxWaitTime, priority);
+        }
+
+        public GoogleCloudMlV1__SchedulingResponse build() {
+            $.maxRunningTime = Objects.requireNonNull($.maxRunningTime, "expected parameter 'maxRunningTime' to be non-null");
+            $.maxWaitTime = Objects.requireNonNull($.maxWaitTime, "expected parameter 'maxWaitTime' to be non-null");
+            $.priority = Objects.requireNonNull($.priority, "expected parameter 'priority' to be non-null");
+            return $;
         }
     }
+
 }

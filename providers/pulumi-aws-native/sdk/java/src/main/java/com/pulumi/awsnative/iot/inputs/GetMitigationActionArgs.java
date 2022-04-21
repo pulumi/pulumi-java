@@ -17,45 +17,45 @@ public final class GetMitigationActionArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="actionName", required=true)
-      private final String actionName;
+    private String actionName;
 
     public String actionName() {
         return this.actionName;
     }
 
-    public GetMitigationActionArgs(String actionName) {
-        this.actionName = Objects.requireNonNull(actionName, "expected parameter 'actionName' to be non-null");
-    }
+    private GetMitigationActionArgs() {}
 
-    private GetMitigationActionArgs() {
-        this.actionName = null;
+    private GetMitigationActionArgs(GetMitigationActionArgs $) {
+        this.actionName = $.actionName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetMitigationActionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String actionName;
+        private GetMitigationActionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetMitigationActionArgs();
         }
 
         public Builder(GetMitigationActionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.actionName = defaults.actionName;
+            $ = new GetMitigationActionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder actionName(String actionName) {
-            this.actionName = Objects.requireNonNull(actionName);
+            $.actionName = actionName;
             return this;
-        }        public GetMitigationActionArgs build() {
-            return new GetMitigationActionArgs(actionName);
+        }
+
+        public GetMitigationActionArgs build() {
+            $.actionName = Objects.requireNonNull($.actionName, "expected parameter 'actionName' to be non-null");
+            return $;
         }
     }
+
 }

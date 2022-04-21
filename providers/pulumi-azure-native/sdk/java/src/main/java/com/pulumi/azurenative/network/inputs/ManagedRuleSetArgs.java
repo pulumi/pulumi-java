@@ -6,10 +6,10 @@ package com.pulumi.azurenative.network.inputs;
 import com.pulumi.azurenative.network.inputs.ManagedRuleGroupOverrideArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class ManagedRuleSetArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="ruleGroupOverrides")
-      private final @Nullable Output<List<ManagedRuleGroupOverrideArgs>> ruleGroupOverrides;
+    private @Nullable Output<List<ManagedRuleGroupOverrideArgs>> ruleGroupOverrides;
 
-    public Output<List<ManagedRuleGroupOverrideArgs>> ruleGroupOverrides() {
-        return this.ruleGroupOverrides == null ? Codegen.empty() : this.ruleGroupOverrides;
+    public Optional<Output<List<ManagedRuleGroupOverrideArgs>>> ruleGroupOverrides() {
+        return Optional.ofNullable(this.ruleGroupOverrides);
     }
 
     /**
@@ -37,7 +37,7 @@ public final class ManagedRuleSetArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="ruleSetType", required=true)
-      private final Output<String> ruleSetType;
+    private Output<String> ruleSetType;
 
     public Output<String> ruleSetType() {
         return this.ruleSetType;
@@ -48,79 +48,74 @@ public final class ManagedRuleSetArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="ruleSetVersion", required=true)
-      private final Output<String> ruleSetVersion;
+    private Output<String> ruleSetVersion;
 
     public Output<String> ruleSetVersion() {
         return this.ruleSetVersion;
     }
 
-    public ManagedRuleSetArgs(
-        @Nullable Output<List<ManagedRuleGroupOverrideArgs>> ruleGroupOverrides,
-        Output<String> ruleSetType,
-        Output<String> ruleSetVersion) {
-        this.ruleGroupOverrides = ruleGroupOverrides;
-        this.ruleSetType = Objects.requireNonNull(ruleSetType, "expected parameter 'ruleSetType' to be non-null");
-        this.ruleSetVersion = Objects.requireNonNull(ruleSetVersion, "expected parameter 'ruleSetVersion' to be non-null");
-    }
+    private ManagedRuleSetArgs() {}
 
-    private ManagedRuleSetArgs() {
-        this.ruleGroupOverrides = Codegen.empty();
-        this.ruleSetType = Codegen.empty();
-        this.ruleSetVersion = Codegen.empty();
+    private ManagedRuleSetArgs(ManagedRuleSetArgs $) {
+        this.ruleGroupOverrides = $.ruleGroupOverrides;
+        this.ruleSetType = $.ruleSetType;
+        this.ruleSetVersion = $.ruleSetVersion;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ManagedRuleSetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<ManagedRuleGroupOverrideArgs>> ruleGroupOverrides;
-        private Output<String> ruleSetType;
-        private Output<String> ruleSetVersion;
+        private ManagedRuleSetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ManagedRuleSetArgs();
         }
 
         public Builder(ManagedRuleSetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.ruleGroupOverrides = defaults.ruleGroupOverrides;
-    	      this.ruleSetType = defaults.ruleSetType;
-    	      this.ruleSetVersion = defaults.ruleSetVersion;
+            $ = new ManagedRuleSetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder ruleGroupOverrides(@Nullable Output<List<ManagedRuleGroupOverrideArgs>> ruleGroupOverrides) {
-            this.ruleGroupOverrides = ruleGroupOverrides;
+            $.ruleGroupOverrides = ruleGroupOverrides;
             return this;
         }
-        public Builder ruleGroupOverrides(@Nullable List<ManagedRuleGroupOverrideArgs> ruleGroupOverrides) {
-            this.ruleGroupOverrides = Codegen.ofNullable(ruleGroupOverrides);
-            return this;
+
+        public Builder ruleGroupOverrides(List<ManagedRuleGroupOverrideArgs> ruleGroupOverrides) {
+            return ruleGroupOverrides(Output.of(ruleGroupOverrides));
         }
+
         public Builder ruleGroupOverrides(ManagedRuleGroupOverrideArgs... ruleGroupOverrides) {
             return ruleGroupOverrides(List.of(ruleGroupOverrides));
         }
+
         public Builder ruleSetType(Output<String> ruleSetType) {
-            this.ruleSetType = Objects.requireNonNull(ruleSetType);
+            $.ruleSetType = ruleSetType;
             return this;
         }
+
         public Builder ruleSetType(String ruleSetType) {
-            this.ruleSetType = Output.of(Objects.requireNonNull(ruleSetType));
-            return this;
+            return ruleSetType(Output.of(ruleSetType));
         }
+
         public Builder ruleSetVersion(Output<String> ruleSetVersion) {
-            this.ruleSetVersion = Objects.requireNonNull(ruleSetVersion);
+            $.ruleSetVersion = ruleSetVersion;
             return this;
         }
+
         public Builder ruleSetVersion(String ruleSetVersion) {
-            this.ruleSetVersion = Output.of(Objects.requireNonNull(ruleSetVersion));
-            return this;
-        }        public ManagedRuleSetArgs build() {
-            return new ManagedRuleSetArgs(ruleGroupOverrides, ruleSetType, ruleSetVersion);
+            return ruleSetVersion(Output.of(ruleSetVersion));
+        }
+
+        public ManagedRuleSetArgs build() {
+            $.ruleSetType = Objects.requireNonNull($.ruleSetType, "expected parameter 'ruleSetType' to be non-null");
+            $.ruleSetVersion = Objects.requireNonNull($.ruleSetVersion, "expected parameter 'ruleSetVersion' to be non-null");
+            return $;
         }
     }
+
 }

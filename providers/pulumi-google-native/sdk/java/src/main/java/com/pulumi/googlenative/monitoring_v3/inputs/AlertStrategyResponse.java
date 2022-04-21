@@ -22,7 +22,7 @@ public final class AlertStrategyResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="autoClose", required=true)
-      private final String autoClose;
+    private String autoClose;
 
     public String autoClose() {
         return this.autoClose;
@@ -33,55 +33,52 @@ public final class AlertStrategyResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="notificationRateLimit", required=true)
-      private final NotificationRateLimitResponse notificationRateLimit;
+    private NotificationRateLimitResponse notificationRateLimit;
 
     public NotificationRateLimitResponse notificationRateLimit() {
         return this.notificationRateLimit;
     }
 
-    public AlertStrategyResponse(
-        String autoClose,
-        NotificationRateLimitResponse notificationRateLimit) {
-        this.autoClose = Objects.requireNonNull(autoClose, "expected parameter 'autoClose' to be non-null");
-        this.notificationRateLimit = Objects.requireNonNull(notificationRateLimit, "expected parameter 'notificationRateLimit' to be non-null");
-    }
+    private AlertStrategyResponse() {}
 
-    private AlertStrategyResponse() {
-        this.autoClose = null;
-        this.notificationRateLimit = null;
+    private AlertStrategyResponse(AlertStrategyResponse $) {
+        this.autoClose = $.autoClose;
+        this.notificationRateLimit = $.notificationRateLimit;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AlertStrategyResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String autoClose;
-        private NotificationRateLimitResponse notificationRateLimit;
+        private AlertStrategyResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AlertStrategyResponse();
         }
 
         public Builder(AlertStrategyResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.autoClose = defaults.autoClose;
-    	      this.notificationRateLimit = defaults.notificationRateLimit;
+            $ = new AlertStrategyResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder autoClose(String autoClose) {
-            this.autoClose = Objects.requireNonNull(autoClose);
+            $.autoClose = autoClose;
             return this;
         }
+
         public Builder notificationRateLimit(NotificationRateLimitResponse notificationRateLimit) {
-            this.notificationRateLimit = Objects.requireNonNull(notificationRateLimit);
+            $.notificationRateLimit = notificationRateLimit;
             return this;
-        }        public AlertStrategyResponse build() {
-            return new AlertStrategyResponse(autoClose, notificationRateLimit);
+        }
+
+        public AlertStrategyResponse build() {
+            $.autoClose = Objects.requireNonNull($.autoClose, "expected parameter 'autoClose' to be non-null");
+            $.notificationRateLimit = Objects.requireNonNull($.notificationRateLimit, "expected parameter 'notificationRateLimit' to be non-null");
+            return $;
         }
     }
+
 }

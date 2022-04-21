@@ -5,9 +5,9 @@ package com.pulumi.azurenative.policyinsights.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class AttestationEvidenceArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -35,63 +35,58 @@ public final class AttestationEvidenceArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="sourceUri")
-      private final @Nullable Output<String> sourceUri;
+    private @Nullable Output<String> sourceUri;
 
-    public Output<String> sourceUri() {
-        return this.sourceUri == null ? Codegen.empty() : this.sourceUri;
+    public Optional<Output<String>> sourceUri() {
+        return Optional.ofNullable(this.sourceUri);
     }
 
-    public AttestationEvidenceArgs(
-        @Nullable Output<String> description,
-        @Nullable Output<String> sourceUri) {
-        this.description = description;
-        this.sourceUri = sourceUri;
-    }
+    private AttestationEvidenceArgs() {}
 
-    private AttestationEvidenceArgs() {
-        this.description = Codegen.empty();
-        this.sourceUri = Codegen.empty();
+    private AttestationEvidenceArgs(AttestationEvidenceArgs $) {
+        this.description = $.description;
+        this.sourceUri = $.sourceUri;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AttestationEvidenceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> description;
-        private @Nullable Output<String> sourceUri;
+        private AttestationEvidenceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AttestationEvidenceArgs();
         }
 
         public Builder(AttestationEvidenceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.description = defaults.description;
-    	      this.sourceUri = defaults.sourceUri;
+            $ = new AttestationEvidenceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder sourceUri(@Nullable Output<String> sourceUri) {
-            this.sourceUri = sourceUri;
+            $.sourceUri = sourceUri;
             return this;
         }
-        public Builder sourceUri(@Nullable String sourceUri) {
-            this.sourceUri = Codegen.ofNullable(sourceUri);
-            return this;
-        }        public AttestationEvidenceArgs build() {
-            return new AttestationEvidenceArgs(description, sourceUri);
+
+        public Builder sourceUri(String sourceUri) {
+            return sourceUri(Output.of(sourceUri));
+        }
+
+        public AttestationEvidenceArgs build() {
+            return $;
         }
     }
+
 }

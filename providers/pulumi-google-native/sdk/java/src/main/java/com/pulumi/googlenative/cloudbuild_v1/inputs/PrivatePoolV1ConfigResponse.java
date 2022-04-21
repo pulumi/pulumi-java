@@ -22,7 +22,7 @@ public final class PrivatePoolV1ConfigResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="networkConfig", required=true)
-      private final NetworkConfigResponse networkConfig;
+    private NetworkConfigResponse networkConfig;
 
     public NetworkConfigResponse networkConfig() {
         return this.networkConfig;
@@ -33,55 +33,52 @@ public final class PrivatePoolV1ConfigResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="workerConfig", required=true)
-      private final WorkerConfigResponse workerConfig;
+    private WorkerConfigResponse workerConfig;
 
     public WorkerConfigResponse workerConfig() {
         return this.workerConfig;
     }
 
-    public PrivatePoolV1ConfigResponse(
-        NetworkConfigResponse networkConfig,
-        WorkerConfigResponse workerConfig) {
-        this.networkConfig = Objects.requireNonNull(networkConfig, "expected parameter 'networkConfig' to be non-null");
-        this.workerConfig = Objects.requireNonNull(workerConfig, "expected parameter 'workerConfig' to be non-null");
-    }
+    private PrivatePoolV1ConfigResponse() {}
 
-    private PrivatePoolV1ConfigResponse() {
-        this.networkConfig = null;
-        this.workerConfig = null;
+    private PrivatePoolV1ConfigResponse(PrivatePoolV1ConfigResponse $) {
+        this.networkConfig = $.networkConfig;
+        this.workerConfig = $.workerConfig;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PrivatePoolV1ConfigResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private NetworkConfigResponse networkConfig;
-        private WorkerConfigResponse workerConfig;
+        private PrivatePoolV1ConfigResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new PrivatePoolV1ConfigResponse();
         }
 
         public Builder(PrivatePoolV1ConfigResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.networkConfig = defaults.networkConfig;
-    	      this.workerConfig = defaults.workerConfig;
+            $ = new PrivatePoolV1ConfigResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder networkConfig(NetworkConfigResponse networkConfig) {
-            this.networkConfig = Objects.requireNonNull(networkConfig);
+            $.networkConfig = networkConfig;
             return this;
         }
+
         public Builder workerConfig(WorkerConfigResponse workerConfig) {
-            this.workerConfig = Objects.requireNonNull(workerConfig);
+            $.workerConfig = workerConfig;
             return this;
-        }        public PrivatePoolV1ConfigResponse build() {
-            return new PrivatePoolV1ConfigResponse(networkConfig, workerConfig);
+        }
+
+        public PrivatePoolV1ConfigResponse build() {
+            $.networkConfig = Objects.requireNonNull($.networkConfig, "expected parameter 'networkConfig' to be non-null");
+            $.workerConfig = Objects.requireNonNull($.workerConfig, "expected parameter 'workerConfig' to be non-null");
+            return $;
         }
     }
+
 }

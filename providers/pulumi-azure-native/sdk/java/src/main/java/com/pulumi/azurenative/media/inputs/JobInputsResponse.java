@@ -30,10 +30,10 @@ public final class JobInputsResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="inputs")
-      private final @Nullable List<Object> inputs;
+    private @Nullable List<Object> inputs;
 
-    public List<Object> inputs() {
-        return this.inputs == null ? List.of() : this.inputs;
+    public Optional<List<Object>> inputs() {
+        return Optional.ofNullable(this.inputs);
     }
 
     /**
@@ -42,58 +42,55 @@ public final class JobInputsResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="odataType", required=true)
-      private final String odataType;
+    private String odataType;
 
     public String odataType() {
         return this.odataType;
     }
 
-    public JobInputsResponse(
-        @Nullable List<Object> inputs,
-        String odataType) {
-        this.inputs = inputs;
-        this.odataType = Codegen.stringProp("odataType").arg(odataType).require();
-    }
+    private JobInputsResponse() {}
 
-    private JobInputsResponse() {
-        this.inputs = List.of();
-        this.odataType = null;
+    private JobInputsResponse(JobInputsResponse $) {
+        this.inputs = $.inputs;
+        this.odataType = $.odataType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(JobInputsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<Object> inputs;
-        private String odataType;
+        private JobInputsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new JobInputsResponse();
         }
 
         public Builder(JobInputsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.inputs = defaults.inputs;
-    	      this.odataType = defaults.odataType;
+            $ = new JobInputsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder inputs(@Nullable List<Object> inputs) {
-            this.inputs = inputs;
+            $.inputs = inputs;
             return this;
         }
+
         public Builder inputs(Object... inputs) {
             return inputs(List.of(inputs));
         }
+
         public Builder odataType(String odataType) {
-            this.odataType = Objects.requireNonNull(odataType);
+            $.odataType = odataType;
             return this;
-        }        public JobInputsResponse build() {
-            return new JobInputsResponse(inputs, odataType);
+        }
+
+        public JobInputsResponse build() {
+            $.odataType = Codegen.stringProp("odataType").arg($.odataType).require();
+            return $;
         }
     }
+
 }

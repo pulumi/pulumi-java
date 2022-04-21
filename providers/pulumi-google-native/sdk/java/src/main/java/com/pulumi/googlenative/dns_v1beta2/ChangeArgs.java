@@ -5,13 +5,13 @@ package com.pulumi.googlenative.dns_v1beta2;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.dns_v1beta2.enums.ChangeStatus;
 import com.pulumi.googlenative.dns_v1beta2.inputs.ResourceRecordSetArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,17 +24,17 @@ public final class ChangeArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="additions")
-      private final @Nullable Output<List<ResourceRecordSetArgs>> additions;
+    private @Nullable Output<List<ResourceRecordSetArgs>> additions;
 
-    public Output<List<ResourceRecordSetArgs>> additions() {
-        return this.additions == null ? Codegen.empty() : this.additions;
+    public Optional<Output<List<ResourceRecordSetArgs>>> additions() {
+        return Optional.ofNullable(this.additions);
     }
 
     @Import(name="clientOperationId")
-      private final @Nullable Output<String> clientOperationId;
+    private @Nullable Output<String> clientOperationId;
 
-    public Output<String> clientOperationId() {
-        return this.clientOperationId == null ? Codegen.empty() : this.clientOperationId;
+    public Optional<Output<String>> clientOperationId() {
+        return Optional.ofNullable(this.clientOperationId);
     }
 
     /**
@@ -42,10 +42,10 @@ public final class ChangeArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="deletions")
-      private final @Nullable Output<List<ResourceRecordSetArgs>> deletions;
+    private @Nullable Output<List<ResourceRecordSetArgs>> deletions;
 
-    public Output<List<ResourceRecordSetArgs>> deletions() {
-        return this.deletions == null ? Codegen.empty() : this.deletions;
+    public Optional<Output<List<ResourceRecordSetArgs>>> deletions() {
+        return Optional.ofNullable(this.deletions);
     }
 
     /**
@@ -53,10 +53,10 @@ public final class ChangeArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="id")
-      private final @Nullable Output<String> id;
+    private @Nullable Output<String> id;
 
-    public Output<String> id() {
-        return this.id == null ? Codegen.empty() : this.id;
+    public Optional<Output<String>> id() {
+        return Optional.ofNullable(this.id);
     }
 
     /**
@@ -64,31 +64,31 @@ public final class ChangeArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="isServing")
-      private final @Nullable Output<Boolean> isServing;
+    private @Nullable Output<Boolean> isServing;
 
-    public Output<Boolean> isServing() {
-        return this.isServing == null ? Codegen.empty() : this.isServing;
+    public Optional<Output<Boolean>> isServing() {
+        return Optional.ofNullable(this.isServing);
     }
 
     @Import(name="kind")
-      private final @Nullable Output<String> kind;
+    private @Nullable Output<String> kind;
 
-    public Output<String> kind() {
-        return this.kind == null ? Codegen.empty() : this.kind;
+    public Optional<Output<String>> kind() {
+        return Optional.ofNullable(this.kind);
     }
 
     @Import(name="managedZone", required=true)
-      private final Output<String> managedZone;
+    private Output<String> managedZone;
 
     public Output<String> managedZone() {
         return this.managedZone;
     }
 
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -96,10 +96,10 @@ public final class ChangeArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="startTime")
-      private final @Nullable Output<String> startTime;
+    private @Nullable Output<String> startTime;
 
-    public Output<String> startTime() {
-        return this.startTime == null ? Codegen.empty() : this.startTime;
+    public Optional<Output<String>> startTime() {
+        return Optional.ofNullable(this.startTime);
     }
 
     /**
@@ -107,173 +107,147 @@ public final class ChangeArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="status")
-      private final @Nullable Output<ChangeStatus> status;
+    private @Nullable Output<ChangeStatus> status;
 
-    public Output<ChangeStatus> status() {
-        return this.status == null ? Codegen.empty() : this.status;
+    public Optional<Output<ChangeStatus>> status() {
+        return Optional.ofNullable(this.status);
     }
 
-    public ChangeArgs(
-        @Nullable Output<List<ResourceRecordSetArgs>> additions,
-        @Nullable Output<String> clientOperationId,
-        @Nullable Output<List<ResourceRecordSetArgs>> deletions,
-        @Nullable Output<String> id,
-        @Nullable Output<Boolean> isServing,
-        @Nullable Output<String> kind,
-        Output<String> managedZone,
-        @Nullable Output<String> project,
-        @Nullable Output<String> startTime,
-        @Nullable Output<ChangeStatus> status) {
-        this.additions = additions;
-        this.clientOperationId = clientOperationId;
-        this.deletions = deletions;
-        this.id = id;
-        this.isServing = isServing;
-        this.kind = kind;
-        this.managedZone = Objects.requireNonNull(managedZone, "expected parameter 'managedZone' to be non-null");
-        this.project = project;
-        this.startTime = startTime;
-        this.status = status;
-    }
+    private ChangeArgs() {}
 
-    private ChangeArgs() {
-        this.additions = Codegen.empty();
-        this.clientOperationId = Codegen.empty();
-        this.deletions = Codegen.empty();
-        this.id = Codegen.empty();
-        this.isServing = Codegen.empty();
-        this.kind = Codegen.empty();
-        this.managedZone = Codegen.empty();
-        this.project = Codegen.empty();
-        this.startTime = Codegen.empty();
-        this.status = Codegen.empty();
+    private ChangeArgs(ChangeArgs $) {
+        this.additions = $.additions;
+        this.clientOperationId = $.clientOperationId;
+        this.deletions = $.deletions;
+        this.id = $.id;
+        this.isServing = $.isServing;
+        this.kind = $.kind;
+        this.managedZone = $.managedZone;
+        this.project = $.project;
+        this.startTime = $.startTime;
+        this.status = $.status;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ChangeArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<ResourceRecordSetArgs>> additions;
-        private @Nullable Output<String> clientOperationId;
-        private @Nullable Output<List<ResourceRecordSetArgs>> deletions;
-        private @Nullable Output<String> id;
-        private @Nullable Output<Boolean> isServing;
-        private @Nullable Output<String> kind;
-        private Output<String> managedZone;
-        private @Nullable Output<String> project;
-        private @Nullable Output<String> startTime;
-        private @Nullable Output<ChangeStatus> status;
+        private ChangeArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ChangeArgs();
         }
 
         public Builder(ChangeArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.additions = defaults.additions;
-    	      this.clientOperationId = defaults.clientOperationId;
-    	      this.deletions = defaults.deletions;
-    	      this.id = defaults.id;
-    	      this.isServing = defaults.isServing;
-    	      this.kind = defaults.kind;
-    	      this.managedZone = defaults.managedZone;
-    	      this.project = defaults.project;
-    	      this.startTime = defaults.startTime;
-    	      this.status = defaults.status;
+            $ = new ChangeArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder additions(@Nullable Output<List<ResourceRecordSetArgs>> additions) {
-            this.additions = additions;
+            $.additions = additions;
             return this;
         }
-        public Builder additions(@Nullable List<ResourceRecordSetArgs> additions) {
-            this.additions = Codegen.ofNullable(additions);
-            return this;
+
+        public Builder additions(List<ResourceRecordSetArgs> additions) {
+            return additions(Output.of(additions));
         }
+
         public Builder additions(ResourceRecordSetArgs... additions) {
             return additions(List.of(additions));
         }
+
         public Builder clientOperationId(@Nullable Output<String> clientOperationId) {
-            this.clientOperationId = clientOperationId;
+            $.clientOperationId = clientOperationId;
             return this;
         }
-        public Builder clientOperationId(@Nullable String clientOperationId) {
-            this.clientOperationId = Codegen.ofNullable(clientOperationId);
-            return this;
+
+        public Builder clientOperationId(String clientOperationId) {
+            return clientOperationId(Output.of(clientOperationId));
         }
+
         public Builder deletions(@Nullable Output<List<ResourceRecordSetArgs>> deletions) {
-            this.deletions = deletions;
+            $.deletions = deletions;
             return this;
         }
-        public Builder deletions(@Nullable List<ResourceRecordSetArgs> deletions) {
-            this.deletions = Codegen.ofNullable(deletions);
-            return this;
+
+        public Builder deletions(List<ResourceRecordSetArgs> deletions) {
+            return deletions(Output.of(deletions));
         }
+
         public Builder deletions(ResourceRecordSetArgs... deletions) {
             return deletions(List.of(deletions));
         }
+
         public Builder id(@Nullable Output<String> id) {
-            this.id = id;
+            $.id = id;
             return this;
         }
-        public Builder id(@Nullable String id) {
-            this.id = Codegen.ofNullable(id);
-            return this;
+
+        public Builder id(String id) {
+            return id(Output.of(id));
         }
+
         public Builder isServing(@Nullable Output<Boolean> isServing) {
-            this.isServing = isServing;
+            $.isServing = isServing;
             return this;
         }
-        public Builder isServing(@Nullable Boolean isServing) {
-            this.isServing = Codegen.ofNullable(isServing);
-            return this;
+
+        public Builder isServing(Boolean isServing) {
+            return isServing(Output.of(isServing));
         }
+
         public Builder kind(@Nullable Output<String> kind) {
-            this.kind = kind;
+            $.kind = kind;
             return this;
         }
-        public Builder kind(@Nullable String kind) {
-            this.kind = Codegen.ofNullable(kind);
-            return this;
+
+        public Builder kind(String kind) {
+            return kind(Output.of(kind));
         }
+
         public Builder managedZone(Output<String> managedZone) {
-            this.managedZone = Objects.requireNonNull(managedZone);
+            $.managedZone = managedZone;
             return this;
         }
+
         public Builder managedZone(String managedZone) {
-            this.managedZone = Output.of(Objects.requireNonNull(managedZone));
-            return this;
+            return managedZone(Output.of(managedZone));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder startTime(@Nullable Output<String> startTime) {
-            this.startTime = startTime;
+            $.startTime = startTime;
             return this;
         }
-        public Builder startTime(@Nullable String startTime) {
-            this.startTime = Codegen.ofNullable(startTime);
-            return this;
+
+        public Builder startTime(String startTime) {
+            return startTime(Output.of(startTime));
         }
+
         public Builder status(@Nullable Output<ChangeStatus> status) {
-            this.status = status;
+            $.status = status;
             return this;
         }
-        public Builder status(@Nullable ChangeStatus status) {
-            this.status = Codegen.ofNullable(status);
-            return this;
-        }        public ChangeArgs build() {
-            return new ChangeArgs(additions, clientOperationId, deletions, id, isServing, kind, managedZone, project, startTime, status);
+
+        public Builder status(ChangeStatus status) {
+            return status(Output.of(status));
+        }
+
+        public ChangeArgs build() {
+            $.managedZone = Objects.requireNonNull($.managedZone, "expected parameter 'managedZone' to be non-null");
+            return $;
         }
     }
+
 }

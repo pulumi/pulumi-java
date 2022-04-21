@@ -5,7 +5,6 @@ package com.pulumi.kubernetes.apps_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.kubernetes.apps_v1.inputs.StatefulSetPersistentVolumeClaimRetentionPolicyArgs;
 import com.pulumi.kubernetes.apps_v1.inputs.StatefulSetUpdateStrategyArgs;
 import com.pulumi.kubernetes.core_v1.inputs.PersistentVolumeClaimArgs;
@@ -15,6 +14,7 @@ import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -31,10 +31,10 @@ public final class StatefulSetSpecArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="minReadySeconds")
-      private final @Nullable Output<Integer> minReadySeconds;
+    private @Nullable Output<Integer> minReadySeconds;
 
-    public Output<Integer> minReadySeconds() {
-        return this.minReadySeconds == null ? Codegen.empty() : this.minReadySeconds;
+    public Optional<Output<Integer>> minReadySeconds() {
+        return Optional.ofNullable(this.minReadySeconds);
     }
 
     /**
@@ -42,10 +42,10 @@ public final class StatefulSetSpecArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="persistentVolumeClaimRetentionPolicy")
-      private final @Nullable Output<StatefulSetPersistentVolumeClaimRetentionPolicyArgs> persistentVolumeClaimRetentionPolicy;
+    private @Nullable Output<StatefulSetPersistentVolumeClaimRetentionPolicyArgs> persistentVolumeClaimRetentionPolicy;
 
-    public Output<StatefulSetPersistentVolumeClaimRetentionPolicyArgs> persistentVolumeClaimRetentionPolicy() {
-        return this.persistentVolumeClaimRetentionPolicy == null ? Codegen.empty() : this.persistentVolumeClaimRetentionPolicy;
+    public Optional<Output<StatefulSetPersistentVolumeClaimRetentionPolicyArgs>> persistentVolumeClaimRetentionPolicy() {
+        return Optional.ofNullable(this.persistentVolumeClaimRetentionPolicy);
     }
 
     /**
@@ -57,10 +57,10 @@ public final class StatefulSetSpecArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="podManagementPolicy")
-      private final @Nullable Output<String> podManagementPolicy;
+    private @Nullable Output<String> podManagementPolicy;
 
-    public Output<String> podManagementPolicy() {
-        return this.podManagementPolicy == null ? Codegen.empty() : this.podManagementPolicy;
+    public Optional<Output<String>> podManagementPolicy() {
+        return Optional.ofNullable(this.podManagementPolicy);
     }
 
     /**
@@ -68,10 +68,10 @@ public final class StatefulSetSpecArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="replicas")
-      private final @Nullable Output<Integer> replicas;
+    private @Nullable Output<Integer> replicas;
 
-    public Output<Integer> replicas() {
-        return this.replicas == null ? Codegen.empty() : this.replicas;
+    public Optional<Output<Integer>> replicas() {
+        return Optional.ofNullable(this.replicas);
     }
 
     /**
@@ -79,10 +79,10 @@ public final class StatefulSetSpecArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="revisionHistoryLimit")
-      private final @Nullable Output<Integer> revisionHistoryLimit;
+    private @Nullable Output<Integer> revisionHistoryLimit;
 
-    public Output<Integer> revisionHistoryLimit() {
-        return this.revisionHistoryLimit == null ? Codegen.empty() : this.revisionHistoryLimit;
+    public Optional<Output<Integer>> revisionHistoryLimit() {
+        return Optional.ofNullable(this.revisionHistoryLimit);
     }
 
     /**
@@ -90,7 +90,7 @@ public final class StatefulSetSpecArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="selector", required=true)
-      private final Output<LabelSelectorArgs> selector;
+    private Output<LabelSelectorArgs> selector;
 
     public Output<LabelSelectorArgs> selector() {
         return this.selector;
@@ -101,7 +101,7 @@ public final class StatefulSetSpecArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="serviceName", required=true)
-      private final Output<String> serviceName;
+    private Output<String> serviceName;
 
     public Output<String> serviceName() {
         return this.serviceName;
@@ -112,7 +112,7 @@ public final class StatefulSetSpecArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="template", required=true)
-      private final Output<PodTemplateSpecArgs> template;
+    private Output<PodTemplateSpecArgs> template;
 
     public Output<PodTemplateSpecArgs> template() {
         return this.template;
@@ -123,10 +123,10 @@ public final class StatefulSetSpecArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="updateStrategy")
-      private final @Nullable Output<StatefulSetUpdateStrategyArgs> updateStrategy;
+    private @Nullable Output<StatefulSetUpdateStrategyArgs> updateStrategy;
 
-    public Output<StatefulSetUpdateStrategyArgs> updateStrategy() {
-        return this.updateStrategy == null ? Codegen.empty() : this.updateStrategy;
+    public Optional<Output<StatefulSetUpdateStrategyArgs>> updateStrategy() {
+        return Optional.ofNullable(this.updateStrategy);
     }
 
     /**
@@ -134,170 +134,145 @@ public final class StatefulSetSpecArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="volumeClaimTemplates")
-      private final @Nullable Output<List<PersistentVolumeClaimArgs>> volumeClaimTemplates;
+    private @Nullable Output<List<PersistentVolumeClaimArgs>> volumeClaimTemplates;
 
-    public Output<List<PersistentVolumeClaimArgs>> volumeClaimTemplates() {
-        return this.volumeClaimTemplates == null ? Codegen.empty() : this.volumeClaimTemplates;
+    public Optional<Output<List<PersistentVolumeClaimArgs>>> volumeClaimTemplates() {
+        return Optional.ofNullable(this.volumeClaimTemplates);
     }
 
-    public StatefulSetSpecArgs(
-        @Nullable Output<Integer> minReadySeconds,
-        @Nullable Output<StatefulSetPersistentVolumeClaimRetentionPolicyArgs> persistentVolumeClaimRetentionPolicy,
-        @Nullable Output<String> podManagementPolicy,
-        @Nullable Output<Integer> replicas,
-        @Nullable Output<Integer> revisionHistoryLimit,
-        Output<LabelSelectorArgs> selector,
-        Output<String> serviceName,
-        Output<PodTemplateSpecArgs> template,
-        @Nullable Output<StatefulSetUpdateStrategyArgs> updateStrategy,
-        @Nullable Output<List<PersistentVolumeClaimArgs>> volumeClaimTemplates) {
-        this.minReadySeconds = minReadySeconds;
-        this.persistentVolumeClaimRetentionPolicy = persistentVolumeClaimRetentionPolicy;
-        this.podManagementPolicy = podManagementPolicy;
-        this.replicas = replicas;
-        this.revisionHistoryLimit = revisionHistoryLimit;
-        this.selector = Objects.requireNonNull(selector, "expected parameter 'selector' to be non-null");
-        this.serviceName = Objects.requireNonNull(serviceName, "expected parameter 'serviceName' to be non-null");
-        this.template = Objects.requireNonNull(template, "expected parameter 'template' to be non-null");
-        this.updateStrategy = updateStrategy;
-        this.volumeClaimTemplates = volumeClaimTemplates;
-    }
+    private StatefulSetSpecArgs() {}
 
-    private StatefulSetSpecArgs() {
-        this.minReadySeconds = Codegen.empty();
-        this.persistentVolumeClaimRetentionPolicy = Codegen.empty();
-        this.podManagementPolicy = Codegen.empty();
-        this.replicas = Codegen.empty();
-        this.revisionHistoryLimit = Codegen.empty();
-        this.selector = Codegen.empty();
-        this.serviceName = Codegen.empty();
-        this.template = Codegen.empty();
-        this.updateStrategy = Codegen.empty();
-        this.volumeClaimTemplates = Codegen.empty();
+    private StatefulSetSpecArgs(StatefulSetSpecArgs $) {
+        this.minReadySeconds = $.minReadySeconds;
+        this.persistentVolumeClaimRetentionPolicy = $.persistentVolumeClaimRetentionPolicy;
+        this.podManagementPolicy = $.podManagementPolicy;
+        this.replicas = $.replicas;
+        this.revisionHistoryLimit = $.revisionHistoryLimit;
+        this.selector = $.selector;
+        this.serviceName = $.serviceName;
+        this.template = $.template;
+        this.updateStrategy = $.updateStrategy;
+        this.volumeClaimTemplates = $.volumeClaimTemplates;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(StatefulSetSpecArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> minReadySeconds;
-        private @Nullable Output<StatefulSetPersistentVolumeClaimRetentionPolicyArgs> persistentVolumeClaimRetentionPolicy;
-        private @Nullable Output<String> podManagementPolicy;
-        private @Nullable Output<Integer> replicas;
-        private @Nullable Output<Integer> revisionHistoryLimit;
-        private Output<LabelSelectorArgs> selector;
-        private Output<String> serviceName;
-        private Output<PodTemplateSpecArgs> template;
-        private @Nullable Output<StatefulSetUpdateStrategyArgs> updateStrategy;
-        private @Nullable Output<List<PersistentVolumeClaimArgs>> volumeClaimTemplates;
+        private StatefulSetSpecArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new StatefulSetSpecArgs();
         }
 
         public Builder(StatefulSetSpecArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.minReadySeconds = defaults.minReadySeconds;
-    	      this.persistentVolumeClaimRetentionPolicy = defaults.persistentVolumeClaimRetentionPolicy;
-    	      this.podManagementPolicy = defaults.podManagementPolicy;
-    	      this.replicas = defaults.replicas;
-    	      this.revisionHistoryLimit = defaults.revisionHistoryLimit;
-    	      this.selector = defaults.selector;
-    	      this.serviceName = defaults.serviceName;
-    	      this.template = defaults.template;
-    	      this.updateStrategy = defaults.updateStrategy;
-    	      this.volumeClaimTemplates = defaults.volumeClaimTemplates;
+            $ = new StatefulSetSpecArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder minReadySeconds(@Nullable Output<Integer> minReadySeconds) {
-            this.minReadySeconds = minReadySeconds;
+            $.minReadySeconds = minReadySeconds;
             return this;
         }
-        public Builder minReadySeconds(@Nullable Integer minReadySeconds) {
-            this.minReadySeconds = Codegen.ofNullable(minReadySeconds);
-            return this;
+
+        public Builder minReadySeconds(Integer minReadySeconds) {
+            return minReadySeconds(Output.of(minReadySeconds));
         }
+
         public Builder persistentVolumeClaimRetentionPolicy(@Nullable Output<StatefulSetPersistentVolumeClaimRetentionPolicyArgs> persistentVolumeClaimRetentionPolicy) {
-            this.persistentVolumeClaimRetentionPolicy = persistentVolumeClaimRetentionPolicy;
+            $.persistentVolumeClaimRetentionPolicy = persistentVolumeClaimRetentionPolicy;
             return this;
         }
-        public Builder persistentVolumeClaimRetentionPolicy(@Nullable StatefulSetPersistentVolumeClaimRetentionPolicyArgs persistentVolumeClaimRetentionPolicy) {
-            this.persistentVolumeClaimRetentionPolicy = Codegen.ofNullable(persistentVolumeClaimRetentionPolicy);
-            return this;
+
+        public Builder persistentVolumeClaimRetentionPolicy(StatefulSetPersistentVolumeClaimRetentionPolicyArgs persistentVolumeClaimRetentionPolicy) {
+            return persistentVolumeClaimRetentionPolicy(Output.of(persistentVolumeClaimRetentionPolicy));
         }
+
         public Builder podManagementPolicy(@Nullable Output<String> podManagementPolicy) {
-            this.podManagementPolicy = podManagementPolicy;
+            $.podManagementPolicy = podManagementPolicy;
             return this;
         }
-        public Builder podManagementPolicy(@Nullable String podManagementPolicy) {
-            this.podManagementPolicy = Codegen.ofNullable(podManagementPolicy);
-            return this;
+
+        public Builder podManagementPolicy(String podManagementPolicy) {
+            return podManagementPolicy(Output.of(podManagementPolicy));
         }
+
         public Builder replicas(@Nullable Output<Integer> replicas) {
-            this.replicas = replicas;
+            $.replicas = replicas;
             return this;
         }
-        public Builder replicas(@Nullable Integer replicas) {
-            this.replicas = Codegen.ofNullable(replicas);
-            return this;
+
+        public Builder replicas(Integer replicas) {
+            return replicas(Output.of(replicas));
         }
+
         public Builder revisionHistoryLimit(@Nullable Output<Integer> revisionHistoryLimit) {
-            this.revisionHistoryLimit = revisionHistoryLimit;
+            $.revisionHistoryLimit = revisionHistoryLimit;
             return this;
         }
-        public Builder revisionHistoryLimit(@Nullable Integer revisionHistoryLimit) {
-            this.revisionHistoryLimit = Codegen.ofNullable(revisionHistoryLimit);
-            return this;
+
+        public Builder revisionHistoryLimit(Integer revisionHistoryLimit) {
+            return revisionHistoryLimit(Output.of(revisionHistoryLimit));
         }
+
         public Builder selector(Output<LabelSelectorArgs> selector) {
-            this.selector = Objects.requireNonNull(selector);
+            $.selector = selector;
             return this;
         }
+
         public Builder selector(LabelSelectorArgs selector) {
-            this.selector = Output.of(Objects.requireNonNull(selector));
-            return this;
+            return selector(Output.of(selector));
         }
+
         public Builder serviceName(Output<String> serviceName) {
-            this.serviceName = Objects.requireNonNull(serviceName);
+            $.serviceName = serviceName;
             return this;
         }
+
         public Builder serviceName(String serviceName) {
-            this.serviceName = Output.of(Objects.requireNonNull(serviceName));
-            return this;
+            return serviceName(Output.of(serviceName));
         }
+
         public Builder template(Output<PodTemplateSpecArgs> template) {
-            this.template = Objects.requireNonNull(template);
+            $.template = template;
             return this;
         }
+
         public Builder template(PodTemplateSpecArgs template) {
-            this.template = Output.of(Objects.requireNonNull(template));
-            return this;
+            return template(Output.of(template));
         }
+
         public Builder updateStrategy(@Nullable Output<StatefulSetUpdateStrategyArgs> updateStrategy) {
-            this.updateStrategy = updateStrategy;
+            $.updateStrategy = updateStrategy;
             return this;
         }
-        public Builder updateStrategy(@Nullable StatefulSetUpdateStrategyArgs updateStrategy) {
-            this.updateStrategy = Codegen.ofNullable(updateStrategy);
-            return this;
+
+        public Builder updateStrategy(StatefulSetUpdateStrategyArgs updateStrategy) {
+            return updateStrategy(Output.of(updateStrategy));
         }
+
         public Builder volumeClaimTemplates(@Nullable Output<List<PersistentVolumeClaimArgs>> volumeClaimTemplates) {
-            this.volumeClaimTemplates = volumeClaimTemplates;
+            $.volumeClaimTemplates = volumeClaimTemplates;
             return this;
         }
-        public Builder volumeClaimTemplates(@Nullable List<PersistentVolumeClaimArgs> volumeClaimTemplates) {
-            this.volumeClaimTemplates = Codegen.ofNullable(volumeClaimTemplates);
-            return this;
+
+        public Builder volumeClaimTemplates(List<PersistentVolumeClaimArgs> volumeClaimTemplates) {
+            return volumeClaimTemplates(Output.of(volumeClaimTemplates));
         }
+
         public Builder volumeClaimTemplates(PersistentVolumeClaimArgs... volumeClaimTemplates) {
             return volumeClaimTemplates(List.of(volumeClaimTemplates));
-        }        public StatefulSetSpecArgs build() {
-            return new StatefulSetSpecArgs(minReadySeconds, persistentVolumeClaimRetentionPolicy, podManagementPolicy, replicas, revisionHistoryLimit, selector, serviceName, template, updateStrategy, volumeClaimTemplates);
+        }
+
+        public StatefulSetSpecArgs build() {
+            $.selector = Objects.requireNonNull($.selector, "expected parameter 'selector' to be non-null");
+            $.serviceName = Objects.requireNonNull($.serviceName, "expected parameter 'serviceName' to be non-null");
+            $.template = Objects.requireNonNull($.template, "expected parameter 'template' to be non-null");
+            return $;
         }
     }
+
 }

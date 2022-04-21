@@ -21,7 +21,7 @@ public final class ApplianceNetworkConfigurationResponse extends com.pulumi.reso
      * 
      */
     @Import(name="macAddress", required=true)
-      private final String macAddress;
+    private String macAddress;
 
     public String macAddress() {
         return this.macAddress;
@@ -32,55 +32,52 @@ public final class ApplianceNetworkConfigurationResponse extends com.pulumi.reso
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
     }
 
-    public ApplianceNetworkConfigurationResponse(
-        String macAddress,
-        String name) {
-        this.macAddress = Objects.requireNonNull(macAddress, "expected parameter 'macAddress' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-    }
+    private ApplianceNetworkConfigurationResponse() {}
 
-    private ApplianceNetworkConfigurationResponse() {
-        this.macAddress = null;
-        this.name = null;
+    private ApplianceNetworkConfigurationResponse(ApplianceNetworkConfigurationResponse $) {
+        this.macAddress = $.macAddress;
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ApplianceNetworkConfigurationResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String macAddress;
-        private String name;
+        private ApplianceNetworkConfigurationResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ApplianceNetworkConfigurationResponse();
         }
 
         public Builder(ApplianceNetworkConfigurationResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.macAddress = defaults.macAddress;
-    	      this.name = defaults.name;
+            $ = new ApplianceNetworkConfigurationResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder macAddress(String macAddress) {
-            this.macAddress = Objects.requireNonNull(macAddress);
+            $.macAddress = macAddress;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
-        }        public ApplianceNetworkConfigurationResponse build() {
-            return new ApplianceNetworkConfigurationResponse(macAddress, name);
+        }
+
+        public ApplianceNetworkConfigurationResponse build() {
+            $.macAddress = Objects.requireNonNull($.macAddress, "expected parameter 'macAddress' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            return $;
         }
     }
+
 }

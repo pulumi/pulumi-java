@@ -25,10 +25,10 @@ public final class GalleryOSDiskImageResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="hostCaching")
-      private final @Nullable String hostCaching;
+    private @Nullable String hostCaching;
 
     public Optional<String> hostCaching() {
-        return this.hostCaching == null ? Optional.empty() : Optional.ofNullable(this.hostCaching);
+        return Optional.ofNullable(this.hostCaching);
     }
 
     /**
@@ -36,7 +36,7 @@ public final class GalleryOSDiskImageResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="sizeInGB", required=true)
-      private final Integer sizeInGB;
+    private Integer sizeInGB;
 
     public Integer sizeInGB() {
         return this.sizeInGB;
@@ -47,64 +47,57 @@ public final class GalleryOSDiskImageResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="source")
-      private final @Nullable GalleryArtifactVersionSourceResponse source;
+    private @Nullable GalleryArtifactVersionSourceResponse source;
 
     public Optional<GalleryArtifactVersionSourceResponse> source() {
-        return this.source == null ? Optional.empty() : Optional.ofNullable(this.source);
+        return Optional.ofNullable(this.source);
     }
 
-    public GalleryOSDiskImageResponse(
-        @Nullable String hostCaching,
-        Integer sizeInGB,
-        @Nullable GalleryArtifactVersionSourceResponse source) {
-        this.hostCaching = hostCaching;
-        this.sizeInGB = Objects.requireNonNull(sizeInGB, "expected parameter 'sizeInGB' to be non-null");
-        this.source = source;
-    }
+    private GalleryOSDiskImageResponse() {}
 
-    private GalleryOSDiskImageResponse() {
-        this.hostCaching = null;
-        this.sizeInGB = null;
-        this.source = null;
+    private GalleryOSDiskImageResponse(GalleryOSDiskImageResponse $) {
+        this.hostCaching = $.hostCaching;
+        this.sizeInGB = $.sizeInGB;
+        this.source = $.source;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GalleryOSDiskImageResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String hostCaching;
-        private Integer sizeInGB;
-        private @Nullable GalleryArtifactVersionSourceResponse source;
+        private GalleryOSDiskImageResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GalleryOSDiskImageResponse();
         }
 
         public Builder(GalleryOSDiskImageResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.hostCaching = defaults.hostCaching;
-    	      this.sizeInGB = defaults.sizeInGB;
-    	      this.source = defaults.source;
+            $ = new GalleryOSDiskImageResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder hostCaching(@Nullable String hostCaching) {
-            this.hostCaching = hostCaching;
+            $.hostCaching = hostCaching;
             return this;
         }
+
         public Builder sizeInGB(Integer sizeInGB) {
-            this.sizeInGB = Objects.requireNonNull(sizeInGB);
+            $.sizeInGB = sizeInGB;
             return this;
         }
+
         public Builder source(@Nullable GalleryArtifactVersionSourceResponse source) {
-            this.source = source;
+            $.source = source;
             return this;
-        }        public GalleryOSDiskImageResponse build() {
-            return new GalleryOSDiskImageResponse(hostCaching, sizeInGB, source);
+        }
+
+        public GalleryOSDiskImageResponse build() {
+            $.sizeInGB = Objects.requireNonNull($.sizeInGB, "expected parameter 'sizeInGB' to be non-null");
+            return $;
         }
     }
+
 }

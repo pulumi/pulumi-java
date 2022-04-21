@@ -5,7 +5,6 @@ package com.pulumi.aws.s3.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,49 +18,49 @@ public final class BucketReplicationConfigRuleExistingObjectReplicationGetArgs e
      * 
      */
     @Import(name="status", required=true)
-      private final Output<String> status;
+    private Output<String> status;
 
     public Output<String> status() {
         return this.status;
     }
 
-    public BucketReplicationConfigRuleExistingObjectReplicationGetArgs(Output<String> status) {
-        this.status = Objects.requireNonNull(status, "expected parameter 'status' to be non-null");
-    }
+    private BucketReplicationConfigRuleExistingObjectReplicationGetArgs() {}
 
-    private BucketReplicationConfigRuleExistingObjectReplicationGetArgs() {
-        this.status = Codegen.empty();
+    private BucketReplicationConfigRuleExistingObjectReplicationGetArgs(BucketReplicationConfigRuleExistingObjectReplicationGetArgs $) {
+        this.status = $.status;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BucketReplicationConfigRuleExistingObjectReplicationGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> status;
+        private BucketReplicationConfigRuleExistingObjectReplicationGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new BucketReplicationConfigRuleExistingObjectReplicationGetArgs();
         }
 
         public Builder(BucketReplicationConfigRuleExistingObjectReplicationGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.status = defaults.status;
+            $ = new BucketReplicationConfigRuleExistingObjectReplicationGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder status(Output<String> status) {
-            this.status = Objects.requireNonNull(status);
+            $.status = status;
             return this;
         }
+
         public Builder status(String status) {
-            this.status = Output.of(Objects.requireNonNull(status));
-            return this;
-        }        public BucketReplicationConfigRuleExistingObjectReplicationGetArgs build() {
-            return new BucketReplicationConfigRuleExistingObjectReplicationGetArgs(status);
+            return status(Output.of(status));
+        }
+
+        public BucketReplicationConfigRuleExistingObjectReplicationGetArgs build() {
+            $.status = Objects.requireNonNull($.status, "expected parameter 'status' to be non-null");
+            return $;
         }
     }
+
 }

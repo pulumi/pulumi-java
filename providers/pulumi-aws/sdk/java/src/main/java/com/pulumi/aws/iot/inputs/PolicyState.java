@@ -5,9 +5,9 @@ package com.pulumi.aws.iot.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class PolicyState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="arn")
-      private final @Nullable Output<String> arn;
+    private @Nullable Output<String> arn;
 
-    public Output<String> arn() {
-        return this.arn == null ? Codegen.empty() : this.arn;
+    public Optional<Output<String>> arn() {
+        return Optional.ofNullable(this.arn);
     }
 
     /**
@@ -31,10 +31,10 @@ public final class PolicyState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="defaultVersionId")
-      private final @Nullable Output<String> defaultVersionId;
+    private @Nullable Output<String> defaultVersionId;
 
-    public Output<String> defaultVersionId() {
-        return this.defaultVersionId == null ? Codegen.empty() : this.defaultVersionId;
+    public Optional<Output<String>> defaultVersionId() {
+        return Optional.ofNullable(this.defaultVersionId);
     }
 
     /**
@@ -42,10 +42,10 @@ public final class PolicyState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -53,89 +53,78 @@ public final class PolicyState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="policy")
-      private final @Nullable Output<String> policy;
+    private @Nullable Output<String> policy;
 
-    public Output<String> policy() {
-        return this.policy == null ? Codegen.empty() : this.policy;
+    public Optional<Output<String>> policy() {
+        return Optional.ofNullable(this.policy);
     }
 
-    public PolicyState(
-        @Nullable Output<String> arn,
-        @Nullable Output<String> defaultVersionId,
-        @Nullable Output<String> name,
-        @Nullable Output<String> policy) {
-        this.arn = arn;
-        this.defaultVersionId = defaultVersionId;
-        this.name = name;
-        this.policy = policy;
-    }
+    private PolicyState() {}
 
-    private PolicyState() {
-        this.arn = Codegen.empty();
-        this.defaultVersionId = Codegen.empty();
-        this.name = Codegen.empty();
-        this.policy = Codegen.empty();
+    private PolicyState(PolicyState $) {
+        this.arn = $.arn;
+        this.defaultVersionId = $.defaultVersionId;
+        this.name = $.name;
+        this.policy = $.policy;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PolicyState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> arn;
-        private @Nullable Output<String> defaultVersionId;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> policy;
+        private PolicyState $;
 
         public Builder() {
-    	      // Empty
+            $ = new PolicyState();
         }
 
         public Builder(PolicyState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.arn = defaults.arn;
-    	      this.defaultVersionId = defaults.defaultVersionId;
-    	      this.name = defaults.name;
-    	      this.policy = defaults.policy;
+            $ = new PolicyState(Objects.requireNonNull(defaults));
         }
 
         public Builder arn(@Nullable Output<String> arn) {
-            this.arn = arn;
+            $.arn = arn;
             return this;
         }
-        public Builder arn(@Nullable String arn) {
-            this.arn = Codegen.ofNullable(arn);
-            return this;
+
+        public Builder arn(String arn) {
+            return arn(Output.of(arn));
         }
+
         public Builder defaultVersionId(@Nullable Output<String> defaultVersionId) {
-            this.defaultVersionId = defaultVersionId;
+            $.defaultVersionId = defaultVersionId;
             return this;
         }
-        public Builder defaultVersionId(@Nullable String defaultVersionId) {
-            this.defaultVersionId = Codegen.ofNullable(defaultVersionId);
-            return this;
+
+        public Builder defaultVersionId(String defaultVersionId) {
+            return defaultVersionId(Output.of(defaultVersionId));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder policy(@Nullable Output<String> policy) {
-            this.policy = policy;
+            $.policy = policy;
             return this;
         }
-        public Builder policy(@Nullable String policy) {
-            this.policy = Codegen.ofNullable(policy);
-            return this;
-        }        public PolicyState build() {
-            return new PolicyState(arn, defaultVersionId, name, policy);
+
+        public Builder policy(String policy) {
+            return policy(Output.of(policy));
+        }
+
+        public PolicyState build() {
+            return $;
         }
     }
+
 }

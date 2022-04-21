@@ -14,6 +14,7 @@ import java.lang.Double;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -30,10 +31,10 @@ public final class AzureBackupServerContainerArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="backupManagementType")
-      private final @Nullable Output<Either<String,BackupManagementType>> backupManagementType;
+    private @Nullable Output<Either<String,BackupManagementType>> backupManagementType;
 
-    public Output<Either<String,BackupManagementType>> backupManagementType() {
-        return this.backupManagementType == null ? Codegen.empty() : this.backupManagementType;
+    public Optional<Output<Either<String,BackupManagementType>>> backupManagementType() {
+        return Optional.ofNullable(this.backupManagementType);
     }
 
     /**
@@ -41,10 +42,10 @@ public final class AzureBackupServerContainerArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="canReRegister")
-      private final @Nullable Output<Boolean> canReRegister;
+    private @Nullable Output<Boolean> canReRegister;
 
-    public Output<Boolean> canReRegister() {
-        return this.canReRegister == null ? Codegen.empty() : this.canReRegister;
+    public Optional<Output<Boolean>> canReRegister() {
+        return Optional.ofNullable(this.canReRegister);
     }
 
     /**
@@ -52,10 +53,10 @@ public final class AzureBackupServerContainerArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="containerId")
-      private final @Nullable Output<String> containerId;
+    private @Nullable Output<String> containerId;
 
-    public Output<String> containerId() {
-        return this.containerId == null ? Codegen.empty() : this.containerId;
+    public Optional<Output<String>> containerId() {
+        return Optional.ofNullable(this.containerId);
     }
 
     /**
@@ -67,7 +68,7 @@ public final class AzureBackupServerContainerArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="containerType", required=true)
-      private final Output<String> containerType;
+    private Output<String> containerType;
 
     public Output<String> containerType() {
         return this.containerType;
@@ -78,10 +79,10 @@ public final class AzureBackupServerContainerArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="dpmAgentVersion")
-      private final @Nullable Output<String> dpmAgentVersion;
+    private @Nullable Output<String> dpmAgentVersion;
 
-    public Output<String> dpmAgentVersion() {
-        return this.dpmAgentVersion == null ? Codegen.empty() : this.dpmAgentVersion;
+    public Optional<Output<String>> dpmAgentVersion() {
+        return Optional.ofNullable(this.dpmAgentVersion);
     }
 
     /**
@@ -89,10 +90,10 @@ public final class AzureBackupServerContainerArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="dpmServers")
-      private final @Nullable Output<List<String>> dpmServers;
+    private @Nullable Output<List<String>> dpmServers;
 
-    public Output<List<String>> dpmServers() {
-        return this.dpmServers == null ? Codegen.empty() : this.dpmServers;
+    public Optional<Output<List<String>>> dpmServers() {
+        return Optional.ofNullable(this.dpmServers);
     }
 
     /**
@@ -100,10 +101,10 @@ public final class AzureBackupServerContainerArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="extendedInfo")
-      private final @Nullable Output<DPMContainerExtendedInfoArgs> extendedInfo;
+    private @Nullable Output<DPMContainerExtendedInfoArgs> extendedInfo;
 
-    public Output<DPMContainerExtendedInfoArgs> extendedInfo() {
-        return this.extendedInfo == null ? Codegen.empty() : this.extendedInfo;
+    public Optional<Output<DPMContainerExtendedInfoArgs>> extendedInfo() {
+        return Optional.ofNullable(this.extendedInfo);
     }
 
     /**
@@ -111,10 +112,10 @@ public final class AzureBackupServerContainerArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="friendlyName")
-      private final @Nullable Output<String> friendlyName;
+    private @Nullable Output<String> friendlyName;
 
-    public Output<String> friendlyName() {
-        return this.friendlyName == null ? Codegen.empty() : this.friendlyName;
+    public Optional<Output<String>> friendlyName() {
+        return Optional.ofNullable(this.friendlyName);
     }
 
     /**
@@ -122,10 +123,10 @@ public final class AzureBackupServerContainerArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="healthStatus")
-      private final @Nullable Output<String> healthStatus;
+    private @Nullable Output<String> healthStatus;
 
-    public Output<String> healthStatus() {
-        return this.healthStatus == null ? Codegen.empty() : this.healthStatus;
+    public Optional<Output<String>> healthStatus() {
+        return Optional.ofNullable(this.healthStatus);
     }
 
     /**
@@ -133,10 +134,10 @@ public final class AzureBackupServerContainerArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="protectedItemCount")
-      private final @Nullable Output<Double> protectedItemCount;
+    private @Nullable Output<Double> protectedItemCount;
 
-    public Output<Double> protectedItemCount() {
-        return this.protectedItemCount == null ? Codegen.empty() : this.protectedItemCount;
+    public Optional<Output<Double>> protectedItemCount() {
+        return Optional.ofNullable(this.protectedItemCount);
     }
 
     /**
@@ -144,10 +145,10 @@ public final class AzureBackupServerContainerArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="protectionStatus")
-      private final @Nullable Output<String> protectionStatus;
+    private @Nullable Output<String> protectionStatus;
 
-    public Output<String> protectionStatus() {
-        return this.protectionStatus == null ? Codegen.empty() : this.protectionStatus;
+    public Optional<Output<String>> protectionStatus() {
+        return Optional.ofNullable(this.protectionStatus);
     }
 
     /**
@@ -155,10 +156,10 @@ public final class AzureBackupServerContainerArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="registrationStatus")
-      private final @Nullable Output<String> registrationStatus;
+    private @Nullable Output<String> registrationStatus;
 
-    public Output<String> registrationStatus() {
-        return this.registrationStatus == null ? Codegen.empty() : this.registrationStatus;
+    public Optional<Output<String>> registrationStatus() {
+        return Optional.ofNullable(this.registrationStatus);
     }
 
     /**
@@ -166,209 +167,173 @@ public final class AzureBackupServerContainerArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="upgradeAvailable")
-      private final @Nullable Output<Boolean> upgradeAvailable;
+    private @Nullable Output<Boolean> upgradeAvailable;
 
-    public Output<Boolean> upgradeAvailable() {
-        return this.upgradeAvailable == null ? Codegen.empty() : this.upgradeAvailable;
+    public Optional<Output<Boolean>> upgradeAvailable() {
+        return Optional.ofNullable(this.upgradeAvailable);
     }
 
-    public AzureBackupServerContainerArgs(
-        @Nullable Output<Either<String,BackupManagementType>> backupManagementType,
-        @Nullable Output<Boolean> canReRegister,
-        @Nullable Output<String> containerId,
-        Output<String> containerType,
-        @Nullable Output<String> dpmAgentVersion,
-        @Nullable Output<List<String>> dpmServers,
-        @Nullable Output<DPMContainerExtendedInfoArgs> extendedInfo,
-        @Nullable Output<String> friendlyName,
-        @Nullable Output<String> healthStatus,
-        @Nullable Output<Double> protectedItemCount,
-        @Nullable Output<String> protectionStatus,
-        @Nullable Output<String> registrationStatus,
-        @Nullable Output<Boolean> upgradeAvailable) {
-        this.backupManagementType = backupManagementType;
-        this.canReRegister = canReRegister;
-        this.containerId = containerId;
-        this.containerType = Codegen.stringProp("containerType").output().arg(containerType).require();
-        this.dpmAgentVersion = dpmAgentVersion;
-        this.dpmServers = dpmServers;
-        this.extendedInfo = extendedInfo;
-        this.friendlyName = friendlyName;
-        this.healthStatus = healthStatus;
-        this.protectedItemCount = protectedItemCount;
-        this.protectionStatus = protectionStatus;
-        this.registrationStatus = registrationStatus;
-        this.upgradeAvailable = upgradeAvailable;
-    }
+    private AzureBackupServerContainerArgs() {}
 
-    private AzureBackupServerContainerArgs() {
-        this.backupManagementType = Codegen.empty();
-        this.canReRegister = Codegen.empty();
-        this.containerId = Codegen.empty();
-        this.containerType = Codegen.empty();
-        this.dpmAgentVersion = Codegen.empty();
-        this.dpmServers = Codegen.empty();
-        this.extendedInfo = Codegen.empty();
-        this.friendlyName = Codegen.empty();
-        this.healthStatus = Codegen.empty();
-        this.protectedItemCount = Codegen.empty();
-        this.protectionStatus = Codegen.empty();
-        this.registrationStatus = Codegen.empty();
-        this.upgradeAvailable = Codegen.empty();
+    private AzureBackupServerContainerArgs(AzureBackupServerContainerArgs $) {
+        this.backupManagementType = $.backupManagementType;
+        this.canReRegister = $.canReRegister;
+        this.containerId = $.containerId;
+        this.containerType = $.containerType;
+        this.dpmAgentVersion = $.dpmAgentVersion;
+        this.dpmServers = $.dpmServers;
+        this.extendedInfo = $.extendedInfo;
+        this.friendlyName = $.friendlyName;
+        this.healthStatus = $.healthStatus;
+        this.protectedItemCount = $.protectedItemCount;
+        this.protectionStatus = $.protectionStatus;
+        this.registrationStatus = $.registrationStatus;
+        this.upgradeAvailable = $.upgradeAvailable;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AzureBackupServerContainerArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Either<String,BackupManagementType>> backupManagementType;
-        private @Nullable Output<Boolean> canReRegister;
-        private @Nullable Output<String> containerId;
-        private Output<String> containerType;
-        private @Nullable Output<String> dpmAgentVersion;
-        private @Nullable Output<List<String>> dpmServers;
-        private @Nullable Output<DPMContainerExtendedInfoArgs> extendedInfo;
-        private @Nullable Output<String> friendlyName;
-        private @Nullable Output<String> healthStatus;
-        private @Nullable Output<Double> protectedItemCount;
-        private @Nullable Output<String> protectionStatus;
-        private @Nullable Output<String> registrationStatus;
-        private @Nullable Output<Boolean> upgradeAvailable;
+        private AzureBackupServerContainerArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AzureBackupServerContainerArgs();
         }
 
         public Builder(AzureBackupServerContainerArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.backupManagementType = defaults.backupManagementType;
-    	      this.canReRegister = defaults.canReRegister;
-    	      this.containerId = defaults.containerId;
-    	      this.containerType = defaults.containerType;
-    	      this.dpmAgentVersion = defaults.dpmAgentVersion;
-    	      this.dpmServers = defaults.dpmServers;
-    	      this.extendedInfo = defaults.extendedInfo;
-    	      this.friendlyName = defaults.friendlyName;
-    	      this.healthStatus = defaults.healthStatus;
-    	      this.protectedItemCount = defaults.protectedItemCount;
-    	      this.protectionStatus = defaults.protectionStatus;
-    	      this.registrationStatus = defaults.registrationStatus;
-    	      this.upgradeAvailable = defaults.upgradeAvailable;
+            $ = new AzureBackupServerContainerArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder backupManagementType(@Nullable Output<Either<String,BackupManagementType>> backupManagementType) {
-            this.backupManagementType = backupManagementType;
+            $.backupManagementType = backupManagementType;
             return this;
         }
-        public Builder backupManagementType(@Nullable Either<String,BackupManagementType> backupManagementType) {
-            this.backupManagementType = Codegen.ofNullable(backupManagementType);
-            return this;
+
+        public Builder backupManagementType(Either<String,BackupManagementType> backupManagementType) {
+            return backupManagementType(Output.of(backupManagementType));
         }
+
         public Builder canReRegister(@Nullable Output<Boolean> canReRegister) {
-            this.canReRegister = canReRegister;
+            $.canReRegister = canReRegister;
             return this;
         }
-        public Builder canReRegister(@Nullable Boolean canReRegister) {
-            this.canReRegister = Codegen.ofNullable(canReRegister);
-            return this;
+
+        public Builder canReRegister(Boolean canReRegister) {
+            return canReRegister(Output.of(canReRegister));
         }
+
         public Builder containerId(@Nullable Output<String> containerId) {
-            this.containerId = containerId;
+            $.containerId = containerId;
             return this;
         }
-        public Builder containerId(@Nullable String containerId) {
-            this.containerId = Codegen.ofNullable(containerId);
-            return this;
+
+        public Builder containerId(String containerId) {
+            return containerId(Output.of(containerId));
         }
+
         public Builder containerType(Output<String> containerType) {
-            this.containerType = Objects.requireNonNull(containerType);
+            $.containerType = containerType;
             return this;
         }
+
         public Builder containerType(String containerType) {
-            this.containerType = Output.of(Objects.requireNonNull(containerType));
-            return this;
+            return containerType(Output.of(containerType));
         }
+
         public Builder dpmAgentVersion(@Nullable Output<String> dpmAgentVersion) {
-            this.dpmAgentVersion = dpmAgentVersion;
+            $.dpmAgentVersion = dpmAgentVersion;
             return this;
         }
-        public Builder dpmAgentVersion(@Nullable String dpmAgentVersion) {
-            this.dpmAgentVersion = Codegen.ofNullable(dpmAgentVersion);
-            return this;
+
+        public Builder dpmAgentVersion(String dpmAgentVersion) {
+            return dpmAgentVersion(Output.of(dpmAgentVersion));
         }
+
         public Builder dpmServers(@Nullable Output<List<String>> dpmServers) {
-            this.dpmServers = dpmServers;
+            $.dpmServers = dpmServers;
             return this;
         }
-        public Builder dpmServers(@Nullable List<String> dpmServers) {
-            this.dpmServers = Codegen.ofNullable(dpmServers);
-            return this;
+
+        public Builder dpmServers(List<String> dpmServers) {
+            return dpmServers(Output.of(dpmServers));
         }
+
         public Builder dpmServers(String... dpmServers) {
             return dpmServers(List.of(dpmServers));
         }
+
         public Builder extendedInfo(@Nullable Output<DPMContainerExtendedInfoArgs> extendedInfo) {
-            this.extendedInfo = extendedInfo;
+            $.extendedInfo = extendedInfo;
             return this;
         }
-        public Builder extendedInfo(@Nullable DPMContainerExtendedInfoArgs extendedInfo) {
-            this.extendedInfo = Codegen.ofNullable(extendedInfo);
-            return this;
+
+        public Builder extendedInfo(DPMContainerExtendedInfoArgs extendedInfo) {
+            return extendedInfo(Output.of(extendedInfo));
         }
+
         public Builder friendlyName(@Nullable Output<String> friendlyName) {
-            this.friendlyName = friendlyName;
+            $.friendlyName = friendlyName;
             return this;
         }
-        public Builder friendlyName(@Nullable String friendlyName) {
-            this.friendlyName = Codegen.ofNullable(friendlyName);
-            return this;
+
+        public Builder friendlyName(String friendlyName) {
+            return friendlyName(Output.of(friendlyName));
         }
+
         public Builder healthStatus(@Nullable Output<String> healthStatus) {
-            this.healthStatus = healthStatus;
+            $.healthStatus = healthStatus;
             return this;
         }
-        public Builder healthStatus(@Nullable String healthStatus) {
-            this.healthStatus = Codegen.ofNullable(healthStatus);
-            return this;
+
+        public Builder healthStatus(String healthStatus) {
+            return healthStatus(Output.of(healthStatus));
         }
+
         public Builder protectedItemCount(@Nullable Output<Double> protectedItemCount) {
-            this.protectedItemCount = protectedItemCount;
+            $.protectedItemCount = protectedItemCount;
             return this;
         }
-        public Builder protectedItemCount(@Nullable Double protectedItemCount) {
-            this.protectedItemCount = Codegen.ofNullable(protectedItemCount);
-            return this;
+
+        public Builder protectedItemCount(Double protectedItemCount) {
+            return protectedItemCount(Output.of(protectedItemCount));
         }
+
         public Builder protectionStatus(@Nullable Output<String> protectionStatus) {
-            this.protectionStatus = protectionStatus;
+            $.protectionStatus = protectionStatus;
             return this;
         }
-        public Builder protectionStatus(@Nullable String protectionStatus) {
-            this.protectionStatus = Codegen.ofNullable(protectionStatus);
-            return this;
+
+        public Builder protectionStatus(String protectionStatus) {
+            return protectionStatus(Output.of(protectionStatus));
         }
+
         public Builder registrationStatus(@Nullable Output<String> registrationStatus) {
-            this.registrationStatus = registrationStatus;
+            $.registrationStatus = registrationStatus;
             return this;
         }
-        public Builder registrationStatus(@Nullable String registrationStatus) {
-            this.registrationStatus = Codegen.ofNullable(registrationStatus);
-            return this;
+
+        public Builder registrationStatus(String registrationStatus) {
+            return registrationStatus(Output.of(registrationStatus));
         }
+
         public Builder upgradeAvailable(@Nullable Output<Boolean> upgradeAvailable) {
-            this.upgradeAvailable = upgradeAvailable;
+            $.upgradeAvailable = upgradeAvailable;
             return this;
         }
-        public Builder upgradeAvailable(@Nullable Boolean upgradeAvailable) {
-            this.upgradeAvailable = Codegen.ofNullable(upgradeAvailable);
-            return this;
-        }        public AzureBackupServerContainerArgs build() {
-            return new AzureBackupServerContainerArgs(backupManagementType, canReRegister, containerId, containerType, dpmAgentVersion, dpmServers, extendedInfo, friendlyName, healthStatus, protectedItemCount, protectionStatus, registrationStatus, upgradeAvailable);
+
+        public Builder upgradeAvailable(Boolean upgradeAvailable) {
+            return upgradeAvailable(Output.of(upgradeAvailable));
+        }
+
+        public AzureBackupServerContainerArgs build() {
+            $.containerType = Codegen.stringProp("containerType").output().arg($.containerType).require();
+            return $;
         }
     }
+
 }

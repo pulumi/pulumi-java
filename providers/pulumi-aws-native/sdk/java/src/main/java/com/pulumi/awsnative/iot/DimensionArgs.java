@@ -7,10 +7,10 @@ import com.pulumi.awsnative.iot.enums.DimensionType;
 import com.pulumi.awsnative.iot.inputs.DimensionTagArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,10 @@ public final class DimensionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -34,7 +34,7 @@ public final class DimensionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="stringValues", required=true)
-      private final Output<List<String>> stringValues;
+    private Output<List<String>> stringValues;
 
     public Output<List<String>> stringValues() {
         return this.stringValues;
@@ -45,10 +45,10 @@ public final class DimensionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<List<DimensionTagArgs>> tags;
+    private @Nullable Output<List<DimensionTagArgs>> tags;
 
-    public Output<List<DimensionTagArgs>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<List<DimensionTagArgs>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -56,95 +56,88 @@ public final class DimensionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="type", required=true)
-      private final Output<DimensionType> type;
+    private Output<DimensionType> type;
 
     public Output<DimensionType> type() {
         return this.type;
     }
 
-    public DimensionArgs(
-        @Nullable Output<String> name,
-        Output<List<String>> stringValues,
-        @Nullable Output<List<DimensionTagArgs>> tags,
-        Output<DimensionType> type) {
-        this.name = name;
-        this.stringValues = Objects.requireNonNull(stringValues, "expected parameter 'stringValues' to be non-null");
-        this.tags = tags;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private DimensionArgs() {}
 
-    private DimensionArgs() {
-        this.name = Codegen.empty();
-        this.stringValues = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.type = Codegen.empty();
+    private DimensionArgs(DimensionArgs $) {
+        this.name = $.name;
+        this.stringValues = $.stringValues;
+        this.tags = $.tags;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DimensionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> name;
-        private Output<List<String>> stringValues;
-        private @Nullable Output<List<DimensionTagArgs>> tags;
-        private Output<DimensionType> type;
+        private DimensionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DimensionArgs();
         }
 
         public Builder(DimensionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.stringValues = defaults.stringValues;
-    	      this.tags = defaults.tags;
-    	      this.type = defaults.type;
+            $ = new DimensionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder stringValues(Output<List<String>> stringValues) {
-            this.stringValues = Objects.requireNonNull(stringValues);
+            $.stringValues = stringValues;
             return this;
         }
+
         public Builder stringValues(List<String> stringValues) {
-            this.stringValues = Output.of(Objects.requireNonNull(stringValues));
-            return this;
+            return stringValues(Output.of(stringValues));
         }
+
         public Builder stringValues(String... stringValues) {
             return stringValues(List.of(stringValues));
         }
+
         public Builder tags(@Nullable Output<List<DimensionTagArgs>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable List<DimensionTagArgs> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(List<DimensionTagArgs> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tags(DimensionTagArgs... tags) {
             return tags(List.of(tags));
         }
+
         public Builder type(Output<DimensionType> type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder type(DimensionType type) {
-            this.type = Output.of(Objects.requireNonNull(type));
-            return this;
-        }        public DimensionArgs build() {
-            return new DimensionArgs(name, stringValues, tags, type);
+            return type(Output.of(type));
+        }
+
+        public DimensionArgs build() {
+            $.stringValues = Objects.requireNonNull($.stringValues, "expected parameter 'stringValues' to be non-null");
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

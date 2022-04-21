@@ -5,10 +5,10 @@ package com.pulumi.gcp.compute.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class ResourcePolicyGroupPlacementPolicyArgs extends com.pulumi.res
      * 
      */
     @Import(name="availabilityDomainCount")
-      private final @Nullable Output<Integer> availabilityDomainCount;
+    private @Nullable Output<Integer> availabilityDomainCount;
 
-    public Output<Integer> availabilityDomainCount() {
-        return this.availabilityDomainCount == null ? Codegen.empty() : this.availabilityDomainCount;
+    public Optional<Output<Integer>> availabilityDomainCount() {
+        return Optional.ofNullable(this.availabilityDomainCount);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class ResourcePolicyGroupPlacementPolicyArgs extends com.pulumi.res
      * 
      */
     @Import(name="collocation")
-      private final @Nullable Output<String> collocation;
+    private @Nullable Output<String> collocation;
 
-    public Output<String> collocation() {
-        return this.collocation == null ? Codegen.empty() : this.collocation;
+    public Optional<Output<String>> collocation() {
+        return Optional.ofNullable(this.collocation);
     }
 
     /**
@@ -48,76 +48,68 @@ public final class ResourcePolicyGroupPlacementPolicyArgs extends com.pulumi.res
      * 
      */
     @Import(name="vmCount")
-      private final @Nullable Output<Integer> vmCount;
+    private @Nullable Output<Integer> vmCount;
 
-    public Output<Integer> vmCount() {
-        return this.vmCount == null ? Codegen.empty() : this.vmCount;
+    public Optional<Output<Integer>> vmCount() {
+        return Optional.ofNullable(this.vmCount);
     }
 
-    public ResourcePolicyGroupPlacementPolicyArgs(
-        @Nullable Output<Integer> availabilityDomainCount,
-        @Nullable Output<String> collocation,
-        @Nullable Output<Integer> vmCount) {
-        this.availabilityDomainCount = availabilityDomainCount;
-        this.collocation = collocation;
-        this.vmCount = vmCount;
-    }
+    private ResourcePolicyGroupPlacementPolicyArgs() {}
 
-    private ResourcePolicyGroupPlacementPolicyArgs() {
-        this.availabilityDomainCount = Codegen.empty();
-        this.collocation = Codegen.empty();
-        this.vmCount = Codegen.empty();
+    private ResourcePolicyGroupPlacementPolicyArgs(ResourcePolicyGroupPlacementPolicyArgs $) {
+        this.availabilityDomainCount = $.availabilityDomainCount;
+        this.collocation = $.collocation;
+        this.vmCount = $.vmCount;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ResourcePolicyGroupPlacementPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> availabilityDomainCount;
-        private @Nullable Output<String> collocation;
-        private @Nullable Output<Integer> vmCount;
+        private ResourcePolicyGroupPlacementPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ResourcePolicyGroupPlacementPolicyArgs();
         }
 
         public Builder(ResourcePolicyGroupPlacementPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.availabilityDomainCount = defaults.availabilityDomainCount;
-    	      this.collocation = defaults.collocation;
-    	      this.vmCount = defaults.vmCount;
+            $ = new ResourcePolicyGroupPlacementPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder availabilityDomainCount(@Nullable Output<Integer> availabilityDomainCount) {
-            this.availabilityDomainCount = availabilityDomainCount;
+            $.availabilityDomainCount = availabilityDomainCount;
             return this;
         }
-        public Builder availabilityDomainCount(@Nullable Integer availabilityDomainCount) {
-            this.availabilityDomainCount = Codegen.ofNullable(availabilityDomainCount);
-            return this;
+
+        public Builder availabilityDomainCount(Integer availabilityDomainCount) {
+            return availabilityDomainCount(Output.of(availabilityDomainCount));
         }
+
         public Builder collocation(@Nullable Output<String> collocation) {
-            this.collocation = collocation;
+            $.collocation = collocation;
             return this;
         }
-        public Builder collocation(@Nullable String collocation) {
-            this.collocation = Codegen.ofNullable(collocation);
-            return this;
+
+        public Builder collocation(String collocation) {
+            return collocation(Output.of(collocation));
         }
+
         public Builder vmCount(@Nullable Output<Integer> vmCount) {
-            this.vmCount = vmCount;
+            $.vmCount = vmCount;
             return this;
         }
-        public Builder vmCount(@Nullable Integer vmCount) {
-            this.vmCount = Codegen.ofNullable(vmCount);
-            return this;
-        }        public ResourcePolicyGroupPlacementPolicyArgs build() {
-            return new ResourcePolicyGroupPlacementPolicyArgs(availabilityDomainCount, collocation, vmCount);
+
+        public Builder vmCount(Integer vmCount) {
+            return vmCount(Output.of(vmCount));
+        }
+
+        public ResourcePolicyGroupPlacementPolicyArgs build() {
+            return $;
         }
     }
+
 }

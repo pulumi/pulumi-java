@@ -13,45 +13,45 @@ public final class GetWarmPoolArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetWarmPoolArgs Empty = new GetWarmPoolArgs();
 
     @Import(name="autoScalingGroupName", required=true)
-      private final String autoScalingGroupName;
+    private String autoScalingGroupName;
 
     public String autoScalingGroupName() {
         return this.autoScalingGroupName;
     }
 
-    public GetWarmPoolArgs(String autoScalingGroupName) {
-        this.autoScalingGroupName = Objects.requireNonNull(autoScalingGroupName, "expected parameter 'autoScalingGroupName' to be non-null");
-    }
+    private GetWarmPoolArgs() {}
 
-    private GetWarmPoolArgs() {
-        this.autoScalingGroupName = null;
+    private GetWarmPoolArgs(GetWarmPoolArgs $) {
+        this.autoScalingGroupName = $.autoScalingGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetWarmPoolArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String autoScalingGroupName;
+        private GetWarmPoolArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetWarmPoolArgs();
         }
 
         public Builder(GetWarmPoolArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.autoScalingGroupName = defaults.autoScalingGroupName;
+            $ = new GetWarmPoolArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder autoScalingGroupName(String autoScalingGroupName) {
-            this.autoScalingGroupName = Objects.requireNonNull(autoScalingGroupName);
+            $.autoScalingGroupName = autoScalingGroupName;
             return this;
-        }        public GetWarmPoolArgs build() {
-            return new GetWarmPoolArgs(autoScalingGroupName);
+        }
+
+        public GetWarmPoolArgs build() {
+            $.autoScalingGroupName = Objects.requireNonNull($.autoScalingGroupName, "expected parameter 'autoScalingGroupName' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,11 +5,11 @@ package com.pulumi.googlenative.toolresults_v1beta3.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.toolresults_v1beta3.inputs.FileReferenceArgs;
 import com.pulumi.googlenative.toolresults_v1beta3.inputs.TestCaseReferenceArgs;
 import com.pulumi.googlenative.toolresults_v1beta3.inputs.TimestampArgs;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class ToolOutputReferenceArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="creationTime")
-      private final @Nullable Output<TimestampArgs> creationTime;
+    private @Nullable Output<TimestampArgs> creationTime;
 
-    public Output<TimestampArgs> creationTime() {
-        return this.creationTime == null ? Codegen.empty() : this.creationTime;
+    public Optional<Output<TimestampArgs>> creationTime() {
+        return Optional.ofNullable(this.creationTime);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class ToolOutputReferenceArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="output")
-      private final @Nullable Output<FileReferenceArgs> output;
+    private @Nullable Output<FileReferenceArgs> output;
 
-    public Output<FileReferenceArgs> output() {
-        return this.output == null ? Codegen.empty() : this.output;
+    public Optional<Output<FileReferenceArgs>> output() {
+        return Optional.ofNullable(this.output);
     }
 
     /**
@@ -48,76 +48,68 @@ public final class ToolOutputReferenceArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="testCase")
-      private final @Nullable Output<TestCaseReferenceArgs> testCase;
+    private @Nullable Output<TestCaseReferenceArgs> testCase;
 
-    public Output<TestCaseReferenceArgs> testCase() {
-        return this.testCase == null ? Codegen.empty() : this.testCase;
+    public Optional<Output<TestCaseReferenceArgs>> testCase() {
+        return Optional.ofNullable(this.testCase);
     }
 
-    public ToolOutputReferenceArgs(
-        @Nullable Output<TimestampArgs> creationTime,
-        @Nullable Output<FileReferenceArgs> output,
-        @Nullable Output<TestCaseReferenceArgs> testCase) {
-        this.creationTime = creationTime;
-        this.output = output;
-        this.testCase = testCase;
-    }
+    private ToolOutputReferenceArgs() {}
 
-    private ToolOutputReferenceArgs() {
-        this.creationTime = Codegen.empty();
-        this.output = Codegen.empty();
-        this.testCase = Codegen.empty();
+    private ToolOutputReferenceArgs(ToolOutputReferenceArgs $) {
+        this.creationTime = $.creationTime;
+        this.output = $.output;
+        this.testCase = $.testCase;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ToolOutputReferenceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<TimestampArgs> creationTime;
-        private @Nullable Output<FileReferenceArgs> output;
-        private @Nullable Output<TestCaseReferenceArgs> testCase;
+        private ToolOutputReferenceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ToolOutputReferenceArgs();
         }
 
         public Builder(ToolOutputReferenceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.creationTime = defaults.creationTime;
-    	      this.output = defaults.output;
-    	      this.testCase = defaults.testCase;
+            $ = new ToolOutputReferenceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder creationTime(@Nullable Output<TimestampArgs> creationTime) {
-            this.creationTime = creationTime;
+            $.creationTime = creationTime;
             return this;
         }
-        public Builder creationTime(@Nullable TimestampArgs creationTime) {
-            this.creationTime = Codegen.ofNullable(creationTime);
-            return this;
+
+        public Builder creationTime(TimestampArgs creationTime) {
+            return creationTime(Output.of(creationTime));
         }
+
         public Builder output(@Nullable Output<FileReferenceArgs> output) {
-            this.output = output;
+            $.output = output;
             return this;
         }
-        public Builder output(@Nullable FileReferenceArgs output) {
-            this.output = Codegen.ofNullable(output);
-            return this;
+
+        public Builder output(FileReferenceArgs output) {
+            return output(Output.of(output));
         }
+
         public Builder testCase(@Nullable Output<TestCaseReferenceArgs> testCase) {
-            this.testCase = testCase;
+            $.testCase = testCase;
             return this;
         }
-        public Builder testCase(@Nullable TestCaseReferenceArgs testCase) {
-            this.testCase = Codegen.ofNullable(testCase);
-            return this;
-        }        public ToolOutputReferenceArgs build() {
-            return new ToolOutputReferenceArgs(creationTime, output, testCase);
+
+        public Builder testCase(TestCaseReferenceArgs testCase) {
+            return testCase(Output.of(testCase));
+        }
+
+        public ToolOutputReferenceArgs build() {
+            return $;
         }
     }
+
 }

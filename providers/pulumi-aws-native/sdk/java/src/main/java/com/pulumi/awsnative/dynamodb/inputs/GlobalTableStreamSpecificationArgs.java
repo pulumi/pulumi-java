@@ -5,7 +5,6 @@ package com.pulumi.awsnative.dynamodb.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -15,49 +14,49 @@ public final class GlobalTableStreamSpecificationArgs extends com.pulumi.resourc
     public static final GlobalTableStreamSpecificationArgs Empty = new GlobalTableStreamSpecificationArgs();
 
     @Import(name="streamViewType", required=true)
-      private final Output<String> streamViewType;
+    private Output<String> streamViewType;
 
     public Output<String> streamViewType() {
         return this.streamViewType;
     }
 
-    public GlobalTableStreamSpecificationArgs(Output<String> streamViewType) {
-        this.streamViewType = Objects.requireNonNull(streamViewType, "expected parameter 'streamViewType' to be non-null");
-    }
+    private GlobalTableStreamSpecificationArgs() {}
 
-    private GlobalTableStreamSpecificationArgs() {
-        this.streamViewType = Codegen.empty();
+    private GlobalTableStreamSpecificationArgs(GlobalTableStreamSpecificationArgs $) {
+        this.streamViewType = $.streamViewType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GlobalTableStreamSpecificationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> streamViewType;
+        private GlobalTableStreamSpecificationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GlobalTableStreamSpecificationArgs();
         }
 
         public Builder(GlobalTableStreamSpecificationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.streamViewType = defaults.streamViewType;
+            $ = new GlobalTableStreamSpecificationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder streamViewType(Output<String> streamViewType) {
-            this.streamViewType = Objects.requireNonNull(streamViewType);
+            $.streamViewType = streamViewType;
             return this;
         }
+
         public Builder streamViewType(String streamViewType) {
-            this.streamViewType = Output.of(Objects.requireNonNull(streamViewType));
-            return this;
-        }        public GlobalTableStreamSpecificationArgs build() {
-            return new GlobalTableStreamSpecificationArgs(streamViewType);
+            return streamViewType(Output.of(streamViewType));
+        }
+
+        public GlobalTableStreamSpecificationArgs build() {
+            $.streamViewType = Objects.requireNonNull($.streamViewType, "expected parameter 'streamViewType' to be non-null");
+            return $;
         }
     }
+
 }

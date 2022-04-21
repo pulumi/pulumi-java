@@ -24,48 +24,48 @@ public final class ConfigurationServiceGitPropertyResponse extends com.pulumi.re
      * 
      */
     @Import(name="repositories")
-      private final @Nullable List<ConfigurationServiceGitRepositoryResponse> repositories;
+    private @Nullable List<ConfigurationServiceGitRepositoryResponse> repositories;
 
-    public List<ConfigurationServiceGitRepositoryResponse> repositories() {
-        return this.repositories == null ? List.of() : this.repositories;
+    public Optional<List<ConfigurationServiceGitRepositoryResponse>> repositories() {
+        return Optional.ofNullable(this.repositories);
     }
 
-    public ConfigurationServiceGitPropertyResponse(@Nullable List<ConfigurationServiceGitRepositoryResponse> repositories) {
-        this.repositories = repositories;
-    }
+    private ConfigurationServiceGitPropertyResponse() {}
 
-    private ConfigurationServiceGitPropertyResponse() {
-        this.repositories = List.of();
+    private ConfigurationServiceGitPropertyResponse(ConfigurationServiceGitPropertyResponse $) {
+        this.repositories = $.repositories;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ConfigurationServiceGitPropertyResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<ConfigurationServiceGitRepositoryResponse> repositories;
+        private ConfigurationServiceGitPropertyResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ConfigurationServiceGitPropertyResponse();
         }
 
         public Builder(ConfigurationServiceGitPropertyResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.repositories = defaults.repositories;
+            $ = new ConfigurationServiceGitPropertyResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder repositories(@Nullable List<ConfigurationServiceGitRepositoryResponse> repositories) {
-            this.repositories = repositories;
+            $.repositories = repositories;
             return this;
         }
+
         public Builder repositories(ConfigurationServiceGitRepositoryResponse... repositories) {
             return repositories(List.of(repositories));
-        }        public ConfigurationServiceGitPropertyResponse build() {
-            return new ConfigurationServiceGitPropertyResponse(repositories);
+        }
+
+        public ConfigurationServiceGitPropertyResponse build() {
+            return $;
         }
     }
+
 }

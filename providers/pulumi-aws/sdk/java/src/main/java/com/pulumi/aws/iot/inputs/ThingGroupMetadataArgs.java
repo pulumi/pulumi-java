@@ -6,10 +6,10 @@ package com.pulumi.aws.iot.inputs;
 import com.pulumi.aws.iot.inputs.ThingGroupMetadataRootToParentGroupArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -18,10 +18,10 @@ public final class ThingGroupMetadataArgs extends com.pulumi.resources.ResourceA
     public static final ThingGroupMetadataArgs Empty = new ThingGroupMetadataArgs();
 
     @Import(name="creationDate")
-      private final @Nullable Output<String> creationDate;
+    private @Nullable Output<String> creationDate;
 
-    public Output<String> creationDate() {
-        return this.creationDate == null ? Codegen.empty() : this.creationDate;
+    public Optional<Output<String>> creationDate() {
+        return Optional.ofNullable(this.creationDate);
     }
 
     /**
@@ -29,86 +29,79 @@ public final class ThingGroupMetadataArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="parentGroupName")
-      private final @Nullable Output<String> parentGroupName;
+    private @Nullable Output<String> parentGroupName;
 
-    public Output<String> parentGroupName() {
-        return this.parentGroupName == null ? Codegen.empty() : this.parentGroupName;
+    public Optional<Output<String>> parentGroupName() {
+        return Optional.ofNullable(this.parentGroupName);
     }
 
     @Import(name="rootToParentGroups")
-      private final @Nullable Output<List<ThingGroupMetadataRootToParentGroupArgs>> rootToParentGroups;
+    private @Nullable Output<List<ThingGroupMetadataRootToParentGroupArgs>> rootToParentGroups;
 
-    public Output<List<ThingGroupMetadataRootToParentGroupArgs>> rootToParentGroups() {
-        return this.rootToParentGroups == null ? Codegen.empty() : this.rootToParentGroups;
+    public Optional<Output<List<ThingGroupMetadataRootToParentGroupArgs>>> rootToParentGroups() {
+        return Optional.ofNullable(this.rootToParentGroups);
     }
 
-    public ThingGroupMetadataArgs(
-        @Nullable Output<String> creationDate,
-        @Nullable Output<String> parentGroupName,
-        @Nullable Output<List<ThingGroupMetadataRootToParentGroupArgs>> rootToParentGroups) {
-        this.creationDate = creationDate;
-        this.parentGroupName = parentGroupName;
-        this.rootToParentGroups = rootToParentGroups;
-    }
+    private ThingGroupMetadataArgs() {}
 
-    private ThingGroupMetadataArgs() {
-        this.creationDate = Codegen.empty();
-        this.parentGroupName = Codegen.empty();
-        this.rootToParentGroups = Codegen.empty();
+    private ThingGroupMetadataArgs(ThingGroupMetadataArgs $) {
+        this.creationDate = $.creationDate;
+        this.parentGroupName = $.parentGroupName;
+        this.rootToParentGroups = $.rootToParentGroups;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ThingGroupMetadataArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> creationDate;
-        private @Nullable Output<String> parentGroupName;
-        private @Nullable Output<List<ThingGroupMetadataRootToParentGroupArgs>> rootToParentGroups;
+        private ThingGroupMetadataArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ThingGroupMetadataArgs();
         }
 
         public Builder(ThingGroupMetadataArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.creationDate = defaults.creationDate;
-    	      this.parentGroupName = defaults.parentGroupName;
-    	      this.rootToParentGroups = defaults.rootToParentGroups;
+            $ = new ThingGroupMetadataArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder creationDate(@Nullable Output<String> creationDate) {
-            this.creationDate = creationDate;
+            $.creationDate = creationDate;
             return this;
         }
-        public Builder creationDate(@Nullable String creationDate) {
-            this.creationDate = Codegen.ofNullable(creationDate);
-            return this;
+
+        public Builder creationDate(String creationDate) {
+            return creationDate(Output.of(creationDate));
         }
+
         public Builder parentGroupName(@Nullable Output<String> parentGroupName) {
-            this.parentGroupName = parentGroupName;
+            $.parentGroupName = parentGroupName;
             return this;
         }
-        public Builder parentGroupName(@Nullable String parentGroupName) {
-            this.parentGroupName = Codegen.ofNullable(parentGroupName);
-            return this;
+
+        public Builder parentGroupName(String parentGroupName) {
+            return parentGroupName(Output.of(parentGroupName));
         }
+
         public Builder rootToParentGroups(@Nullable Output<List<ThingGroupMetadataRootToParentGroupArgs>> rootToParentGroups) {
-            this.rootToParentGroups = rootToParentGroups;
+            $.rootToParentGroups = rootToParentGroups;
             return this;
         }
-        public Builder rootToParentGroups(@Nullable List<ThingGroupMetadataRootToParentGroupArgs> rootToParentGroups) {
-            this.rootToParentGroups = Codegen.ofNullable(rootToParentGroups);
-            return this;
+
+        public Builder rootToParentGroups(List<ThingGroupMetadataRootToParentGroupArgs> rootToParentGroups) {
+            return rootToParentGroups(Output.of(rootToParentGroups));
         }
+
         public Builder rootToParentGroups(ThingGroupMetadataRootToParentGroupArgs... rootToParentGroups) {
             return rootToParentGroups(List.of(rootToParentGroups));
-        }        public ThingGroupMetadataArgs build() {
-            return new ThingGroupMetadataArgs(creationDate, parentGroupName, rootToParentGroups);
+        }
+
+        public ThingGroupMetadataArgs build() {
+            return $;
         }
     }
+
 }

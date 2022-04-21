@@ -5,10 +5,10 @@ package com.pulumi.gcp.healthcare.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class Hl7StoreParserConfigArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="allowNullHeader")
-      private final @Nullable Output<Boolean> allowNullHeader;
+    private @Nullable Output<Boolean> allowNullHeader;
 
-    public Output<Boolean> allowNullHeader() {
-        return this.allowNullHeader == null ? Codegen.empty() : this.allowNullHeader;
+    public Optional<Output<Boolean>> allowNullHeader() {
+        return Optional.ofNullable(this.allowNullHeader);
     }
 
     /**
@@ -33,10 +33,10 @@ public final class Hl7StoreParserConfigArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="schema")
-      private final @Nullable Output<String> schema;
+    private @Nullable Output<String> schema;
 
-    public Output<String> schema() {
-        return this.schema == null ? Codegen.empty() : this.schema;
+    public Optional<Output<String>> schema() {
+        return Optional.ofNullable(this.schema);
     }
 
     /**
@@ -45,10 +45,10 @@ public final class Hl7StoreParserConfigArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="segmentTerminator")
-      private final @Nullable Output<String> segmentTerminator;
+    private @Nullable Output<String> segmentTerminator;
 
-    public Output<String> segmentTerminator() {
-        return this.segmentTerminator == null ? Codegen.empty() : this.segmentTerminator;
+    public Optional<Output<String>> segmentTerminator() {
+        return Optional.ofNullable(this.segmentTerminator);
     }
 
     /**
@@ -58,89 +58,78 @@ public final class Hl7StoreParserConfigArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="version")
-      private final @Nullable Output<String> version;
+    private @Nullable Output<String> version;
 
-    public Output<String> version() {
-        return this.version == null ? Codegen.empty() : this.version;
+    public Optional<Output<String>> version() {
+        return Optional.ofNullable(this.version);
     }
 
-    public Hl7StoreParserConfigArgs(
-        @Nullable Output<Boolean> allowNullHeader,
-        @Nullable Output<String> schema,
-        @Nullable Output<String> segmentTerminator,
-        @Nullable Output<String> version) {
-        this.allowNullHeader = allowNullHeader;
-        this.schema = schema;
-        this.segmentTerminator = segmentTerminator;
-        this.version = version;
-    }
+    private Hl7StoreParserConfigArgs() {}
 
-    private Hl7StoreParserConfigArgs() {
-        this.allowNullHeader = Codegen.empty();
-        this.schema = Codegen.empty();
-        this.segmentTerminator = Codegen.empty();
-        this.version = Codegen.empty();
+    private Hl7StoreParserConfigArgs(Hl7StoreParserConfigArgs $) {
+        this.allowNullHeader = $.allowNullHeader;
+        this.schema = $.schema;
+        this.segmentTerminator = $.segmentTerminator;
+        this.version = $.version;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(Hl7StoreParserConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> allowNullHeader;
-        private @Nullable Output<String> schema;
-        private @Nullable Output<String> segmentTerminator;
-        private @Nullable Output<String> version;
+        private Hl7StoreParserConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new Hl7StoreParserConfigArgs();
         }
 
         public Builder(Hl7StoreParserConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.allowNullHeader = defaults.allowNullHeader;
-    	      this.schema = defaults.schema;
-    	      this.segmentTerminator = defaults.segmentTerminator;
-    	      this.version = defaults.version;
+            $ = new Hl7StoreParserConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder allowNullHeader(@Nullable Output<Boolean> allowNullHeader) {
-            this.allowNullHeader = allowNullHeader;
+            $.allowNullHeader = allowNullHeader;
             return this;
         }
-        public Builder allowNullHeader(@Nullable Boolean allowNullHeader) {
-            this.allowNullHeader = Codegen.ofNullable(allowNullHeader);
-            return this;
+
+        public Builder allowNullHeader(Boolean allowNullHeader) {
+            return allowNullHeader(Output.of(allowNullHeader));
         }
+
         public Builder schema(@Nullable Output<String> schema) {
-            this.schema = schema;
+            $.schema = schema;
             return this;
         }
-        public Builder schema(@Nullable String schema) {
-            this.schema = Codegen.ofNullable(schema);
-            return this;
+
+        public Builder schema(String schema) {
+            return schema(Output.of(schema));
         }
+
         public Builder segmentTerminator(@Nullable Output<String> segmentTerminator) {
-            this.segmentTerminator = segmentTerminator;
+            $.segmentTerminator = segmentTerminator;
             return this;
         }
-        public Builder segmentTerminator(@Nullable String segmentTerminator) {
-            this.segmentTerminator = Codegen.ofNullable(segmentTerminator);
-            return this;
+
+        public Builder segmentTerminator(String segmentTerminator) {
+            return segmentTerminator(Output.of(segmentTerminator));
         }
+
         public Builder version(@Nullable Output<String> version) {
-            this.version = version;
+            $.version = version;
             return this;
         }
-        public Builder version(@Nullable String version) {
-            this.version = Codegen.ofNullable(version);
-            return this;
-        }        public Hl7StoreParserConfigArgs build() {
-            return new Hl7StoreParserConfigArgs(allowNullHeader, schema, segmentTerminator, version);
+
+        public Builder version(String version) {
+            return version(Output.of(version));
+        }
+
+        public Hl7StoreParserConfigArgs build() {
+            return $;
         }
     }
+
 }

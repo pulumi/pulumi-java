@@ -22,7 +22,7 @@ public final class AutoscalingPolicyCpuUtilizationResponse extends com.pulumi.re
      * 
      */
     @Import(name="predictiveMethod", required=true)
-      private final String predictiveMethod;
+    private String predictiveMethod;
 
     public String predictiveMethod() {
         return this.predictiveMethod;
@@ -33,55 +33,52 @@ public final class AutoscalingPolicyCpuUtilizationResponse extends com.pulumi.re
      * 
      */
     @Import(name="utilizationTarget", required=true)
-      private final Double utilizationTarget;
+    private Double utilizationTarget;
 
     public Double utilizationTarget() {
         return this.utilizationTarget;
     }
 
-    public AutoscalingPolicyCpuUtilizationResponse(
-        String predictiveMethod,
-        Double utilizationTarget) {
-        this.predictiveMethod = Objects.requireNonNull(predictiveMethod, "expected parameter 'predictiveMethod' to be non-null");
-        this.utilizationTarget = Objects.requireNonNull(utilizationTarget, "expected parameter 'utilizationTarget' to be non-null");
-    }
+    private AutoscalingPolicyCpuUtilizationResponse() {}
 
-    private AutoscalingPolicyCpuUtilizationResponse() {
-        this.predictiveMethod = null;
-        this.utilizationTarget = null;
+    private AutoscalingPolicyCpuUtilizationResponse(AutoscalingPolicyCpuUtilizationResponse $) {
+        this.predictiveMethod = $.predictiveMethod;
+        this.utilizationTarget = $.utilizationTarget;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AutoscalingPolicyCpuUtilizationResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String predictiveMethod;
-        private Double utilizationTarget;
+        private AutoscalingPolicyCpuUtilizationResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AutoscalingPolicyCpuUtilizationResponse();
         }
 
         public Builder(AutoscalingPolicyCpuUtilizationResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.predictiveMethod = defaults.predictiveMethod;
-    	      this.utilizationTarget = defaults.utilizationTarget;
+            $ = new AutoscalingPolicyCpuUtilizationResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder predictiveMethod(String predictiveMethod) {
-            this.predictiveMethod = Objects.requireNonNull(predictiveMethod);
+            $.predictiveMethod = predictiveMethod;
             return this;
         }
+
         public Builder utilizationTarget(Double utilizationTarget) {
-            this.utilizationTarget = Objects.requireNonNull(utilizationTarget);
+            $.utilizationTarget = utilizationTarget;
             return this;
-        }        public AutoscalingPolicyCpuUtilizationResponse build() {
-            return new AutoscalingPolicyCpuUtilizationResponse(predictiveMethod, utilizationTarget);
+        }
+
+        public AutoscalingPolicyCpuUtilizationResponse build() {
+            $.predictiveMethod = Objects.requireNonNull($.predictiveMethod, "expected parameter 'predictiveMethod' to be non-null");
+            $.utilizationTarget = Objects.requireNonNull($.utilizationTarget, "expected parameter 'utilizationTarget' to be non-null");
+            return $;
         }
     }
+
 }

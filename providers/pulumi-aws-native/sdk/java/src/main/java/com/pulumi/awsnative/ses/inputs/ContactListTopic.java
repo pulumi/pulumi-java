@@ -15,7 +15,7 @@ public final class ContactListTopic extends com.pulumi.resources.InvokeArgs {
     public static final ContactListTopic Empty = new ContactListTopic();
 
     @Import(name="defaultSubscriptionStatus", required=true)
-      private final String defaultSubscriptionStatus;
+    private String defaultSubscriptionStatus;
 
     public String defaultSubscriptionStatus() {
         return this.defaultSubscriptionStatus;
@@ -26,10 +26,10 @@ public final class ContactListTopic extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable String description;
+    private @Nullable String description;
 
     public Optional<String> description() {
-        return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -37,7 +37,7 @@ public final class ContactListTopic extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="displayName", required=true)
-      private final String displayName;
+    private String displayName;
 
     public String displayName() {
         return this.displayName;
@@ -48,73 +48,65 @@ public final class ContactListTopic extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="topicName", required=true)
-      private final String topicName;
+    private String topicName;
 
     public String topicName() {
         return this.topicName;
     }
 
-    public ContactListTopic(
-        String defaultSubscriptionStatus,
-        @Nullable String description,
-        String displayName,
-        String topicName) {
-        this.defaultSubscriptionStatus = Objects.requireNonNull(defaultSubscriptionStatus, "expected parameter 'defaultSubscriptionStatus' to be non-null");
-        this.description = description;
-        this.displayName = Objects.requireNonNull(displayName, "expected parameter 'displayName' to be non-null");
-        this.topicName = Objects.requireNonNull(topicName, "expected parameter 'topicName' to be non-null");
-    }
+    private ContactListTopic() {}
 
-    private ContactListTopic() {
-        this.defaultSubscriptionStatus = null;
-        this.description = null;
-        this.displayName = null;
-        this.topicName = null;
+    private ContactListTopic(ContactListTopic $) {
+        this.defaultSubscriptionStatus = $.defaultSubscriptionStatus;
+        this.description = $.description;
+        this.displayName = $.displayName;
+        this.topicName = $.topicName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ContactListTopic defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String defaultSubscriptionStatus;
-        private @Nullable String description;
-        private String displayName;
-        private String topicName;
+        private ContactListTopic $;
 
         public Builder() {
-    	      // Empty
+            $ = new ContactListTopic();
         }
 
         public Builder(ContactListTopic defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.defaultSubscriptionStatus = defaults.defaultSubscriptionStatus;
-    	      this.description = defaults.description;
-    	      this.displayName = defaults.displayName;
-    	      this.topicName = defaults.topicName;
+            $ = new ContactListTopic(Objects.requireNonNull(defaults));
         }
 
         public Builder defaultSubscriptionStatus(String defaultSubscriptionStatus) {
-            this.defaultSubscriptionStatus = Objects.requireNonNull(defaultSubscriptionStatus);
+            $.defaultSubscriptionStatus = defaultSubscriptionStatus;
             return this;
         }
+
         public Builder description(@Nullable String description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
+
         public Builder displayName(String displayName) {
-            this.displayName = Objects.requireNonNull(displayName);
+            $.displayName = displayName;
             return this;
         }
+
         public Builder topicName(String topicName) {
-            this.topicName = Objects.requireNonNull(topicName);
+            $.topicName = topicName;
             return this;
-        }        public ContactListTopic build() {
-            return new ContactListTopic(defaultSubscriptionStatus, description, displayName, topicName);
+        }
+
+        public ContactListTopic build() {
+            $.defaultSubscriptionStatus = Objects.requireNonNull($.defaultSubscriptionStatus, "expected parameter 'defaultSubscriptionStatus' to be non-null");
+            $.displayName = Objects.requireNonNull($.displayName, "expected parameter 'displayName' to be non-null");
+            $.topicName = Objects.requireNonNull($.topicName, "expected parameter 'topicName' to be non-null");
+            return $;
         }
     }
+
 }

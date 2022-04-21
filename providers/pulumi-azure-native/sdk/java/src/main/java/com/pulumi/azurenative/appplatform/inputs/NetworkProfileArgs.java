@@ -5,9 +5,9 @@ package com.pulumi.azurenative.appplatform.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class NetworkProfileArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="appNetworkResourceGroup")
-      private final @Nullable Output<String> appNetworkResourceGroup;
+    private @Nullable Output<String> appNetworkResourceGroup;
 
-    public Output<String> appNetworkResourceGroup() {
-        return this.appNetworkResourceGroup == null ? Codegen.empty() : this.appNetworkResourceGroup;
+    public Optional<Output<String>> appNetworkResourceGroup() {
+        return Optional.ofNullable(this.appNetworkResourceGroup);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class NetworkProfileArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="appSubnetId")
-      private final @Nullable Output<String> appSubnetId;
+    private @Nullable Output<String> appSubnetId;
 
-    public Output<String> appSubnetId() {
-        return this.appSubnetId == null ? Codegen.empty() : this.appSubnetId;
+    public Optional<Output<String>> appSubnetId() {
+        return Optional.ofNullable(this.appSubnetId);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class NetworkProfileArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="serviceCidr")
-      private final @Nullable Output<String> serviceCidr;
+    private @Nullable Output<String> serviceCidr;
 
-    public Output<String> serviceCidr() {
-        return this.serviceCidr == null ? Codegen.empty() : this.serviceCidr;
+    public Optional<Output<String>> serviceCidr() {
+        return Optional.ofNullable(this.serviceCidr);
     }
 
     /**
@@ -57,10 +57,10 @@ public final class NetworkProfileArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="serviceRuntimeNetworkResourceGroup")
-      private final @Nullable Output<String> serviceRuntimeNetworkResourceGroup;
+    private @Nullable Output<String> serviceRuntimeNetworkResourceGroup;
 
-    public Output<String> serviceRuntimeNetworkResourceGroup() {
-        return this.serviceRuntimeNetworkResourceGroup == null ? Codegen.empty() : this.serviceRuntimeNetworkResourceGroup;
+    public Optional<Output<String>> serviceRuntimeNetworkResourceGroup() {
+        return Optional.ofNullable(this.serviceRuntimeNetworkResourceGroup);
     }
 
     /**
@@ -68,102 +68,88 @@ public final class NetworkProfileArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="serviceRuntimeSubnetId")
-      private final @Nullable Output<String> serviceRuntimeSubnetId;
+    private @Nullable Output<String> serviceRuntimeSubnetId;
 
-    public Output<String> serviceRuntimeSubnetId() {
-        return this.serviceRuntimeSubnetId == null ? Codegen.empty() : this.serviceRuntimeSubnetId;
+    public Optional<Output<String>> serviceRuntimeSubnetId() {
+        return Optional.ofNullable(this.serviceRuntimeSubnetId);
     }
 
-    public NetworkProfileArgs(
-        @Nullable Output<String> appNetworkResourceGroup,
-        @Nullable Output<String> appSubnetId,
-        @Nullable Output<String> serviceCidr,
-        @Nullable Output<String> serviceRuntimeNetworkResourceGroup,
-        @Nullable Output<String> serviceRuntimeSubnetId) {
-        this.appNetworkResourceGroup = appNetworkResourceGroup;
-        this.appSubnetId = appSubnetId;
-        this.serviceCidr = serviceCidr;
-        this.serviceRuntimeNetworkResourceGroup = serviceRuntimeNetworkResourceGroup;
-        this.serviceRuntimeSubnetId = serviceRuntimeSubnetId;
-    }
+    private NetworkProfileArgs() {}
 
-    private NetworkProfileArgs() {
-        this.appNetworkResourceGroup = Codegen.empty();
-        this.appSubnetId = Codegen.empty();
-        this.serviceCidr = Codegen.empty();
-        this.serviceRuntimeNetworkResourceGroup = Codegen.empty();
-        this.serviceRuntimeSubnetId = Codegen.empty();
+    private NetworkProfileArgs(NetworkProfileArgs $) {
+        this.appNetworkResourceGroup = $.appNetworkResourceGroup;
+        this.appSubnetId = $.appSubnetId;
+        this.serviceCidr = $.serviceCidr;
+        this.serviceRuntimeNetworkResourceGroup = $.serviceRuntimeNetworkResourceGroup;
+        this.serviceRuntimeSubnetId = $.serviceRuntimeSubnetId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NetworkProfileArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> appNetworkResourceGroup;
-        private @Nullable Output<String> appSubnetId;
-        private @Nullable Output<String> serviceCidr;
-        private @Nullable Output<String> serviceRuntimeNetworkResourceGroup;
-        private @Nullable Output<String> serviceRuntimeSubnetId;
+        private NetworkProfileArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new NetworkProfileArgs();
         }
 
         public Builder(NetworkProfileArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.appNetworkResourceGroup = defaults.appNetworkResourceGroup;
-    	      this.appSubnetId = defaults.appSubnetId;
-    	      this.serviceCidr = defaults.serviceCidr;
-    	      this.serviceRuntimeNetworkResourceGroup = defaults.serviceRuntimeNetworkResourceGroup;
-    	      this.serviceRuntimeSubnetId = defaults.serviceRuntimeSubnetId;
+            $ = new NetworkProfileArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder appNetworkResourceGroup(@Nullable Output<String> appNetworkResourceGroup) {
-            this.appNetworkResourceGroup = appNetworkResourceGroup;
+            $.appNetworkResourceGroup = appNetworkResourceGroup;
             return this;
         }
-        public Builder appNetworkResourceGroup(@Nullable String appNetworkResourceGroup) {
-            this.appNetworkResourceGroup = Codegen.ofNullable(appNetworkResourceGroup);
-            return this;
+
+        public Builder appNetworkResourceGroup(String appNetworkResourceGroup) {
+            return appNetworkResourceGroup(Output.of(appNetworkResourceGroup));
         }
+
         public Builder appSubnetId(@Nullable Output<String> appSubnetId) {
-            this.appSubnetId = appSubnetId;
+            $.appSubnetId = appSubnetId;
             return this;
         }
-        public Builder appSubnetId(@Nullable String appSubnetId) {
-            this.appSubnetId = Codegen.ofNullable(appSubnetId);
-            return this;
+
+        public Builder appSubnetId(String appSubnetId) {
+            return appSubnetId(Output.of(appSubnetId));
         }
+
         public Builder serviceCidr(@Nullable Output<String> serviceCidr) {
-            this.serviceCidr = serviceCidr;
+            $.serviceCidr = serviceCidr;
             return this;
         }
-        public Builder serviceCidr(@Nullable String serviceCidr) {
-            this.serviceCidr = Codegen.ofNullable(serviceCidr);
-            return this;
+
+        public Builder serviceCidr(String serviceCidr) {
+            return serviceCidr(Output.of(serviceCidr));
         }
+
         public Builder serviceRuntimeNetworkResourceGroup(@Nullable Output<String> serviceRuntimeNetworkResourceGroup) {
-            this.serviceRuntimeNetworkResourceGroup = serviceRuntimeNetworkResourceGroup;
+            $.serviceRuntimeNetworkResourceGroup = serviceRuntimeNetworkResourceGroup;
             return this;
         }
-        public Builder serviceRuntimeNetworkResourceGroup(@Nullable String serviceRuntimeNetworkResourceGroup) {
-            this.serviceRuntimeNetworkResourceGroup = Codegen.ofNullable(serviceRuntimeNetworkResourceGroup);
-            return this;
+
+        public Builder serviceRuntimeNetworkResourceGroup(String serviceRuntimeNetworkResourceGroup) {
+            return serviceRuntimeNetworkResourceGroup(Output.of(serviceRuntimeNetworkResourceGroup));
         }
+
         public Builder serviceRuntimeSubnetId(@Nullable Output<String> serviceRuntimeSubnetId) {
-            this.serviceRuntimeSubnetId = serviceRuntimeSubnetId;
+            $.serviceRuntimeSubnetId = serviceRuntimeSubnetId;
             return this;
         }
-        public Builder serviceRuntimeSubnetId(@Nullable String serviceRuntimeSubnetId) {
-            this.serviceRuntimeSubnetId = Codegen.ofNullable(serviceRuntimeSubnetId);
-            return this;
-        }        public NetworkProfileArgs build() {
-            return new NetworkProfileArgs(appNetworkResourceGroup, appSubnetId, serviceCidr, serviceRuntimeNetworkResourceGroup, serviceRuntimeSubnetId);
+
+        public Builder serviceRuntimeSubnetId(String serviceRuntimeSubnetId) {
+            return serviceRuntimeSubnetId(Output.of(serviceRuntimeSubnetId));
+        }
+
+        public NetworkProfileArgs build() {
+            return $;
         }
     }
+
 }

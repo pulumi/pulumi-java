@@ -19,45 +19,44 @@ public final class WebACLAllowAction extends com.pulumi.resources.InvokeArgs {
     public static final WebACLAllowAction Empty = new WebACLAllowAction();
 
     @Import(name="customRequestHandling")
-      private final @Nullable WebACLCustomRequestHandling customRequestHandling;
+    private @Nullable WebACLCustomRequestHandling customRequestHandling;
 
     public Optional<WebACLCustomRequestHandling> customRequestHandling() {
-        return this.customRequestHandling == null ? Optional.empty() : Optional.ofNullable(this.customRequestHandling);
+        return Optional.ofNullable(this.customRequestHandling);
     }
 
-    public WebACLAllowAction(@Nullable WebACLCustomRequestHandling customRequestHandling) {
-        this.customRequestHandling = customRequestHandling;
-    }
+    private WebACLAllowAction() {}
 
-    private WebACLAllowAction() {
-        this.customRequestHandling = null;
+    private WebACLAllowAction(WebACLAllowAction $) {
+        this.customRequestHandling = $.customRequestHandling;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WebACLAllowAction defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable WebACLCustomRequestHandling customRequestHandling;
+        private WebACLAllowAction $;
 
         public Builder() {
-    	      // Empty
+            $ = new WebACLAllowAction();
         }
 
         public Builder(WebACLAllowAction defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.customRequestHandling = defaults.customRequestHandling;
+            $ = new WebACLAllowAction(Objects.requireNonNull(defaults));
         }
 
         public Builder customRequestHandling(@Nullable WebACLCustomRequestHandling customRequestHandling) {
-            this.customRequestHandling = customRequestHandling;
+            $.customRequestHandling = customRequestHandling;
             return this;
-        }        public WebACLAllowAction build() {
-            return new WebACLAllowAction(customRequestHandling);
+        }
+
+        public WebACLAllowAction build() {
+            return $;
         }
     }
+
 }

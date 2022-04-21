@@ -22,7 +22,7 @@ public final class FirewallLogConfigResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="enable", required=true)
-      private final Boolean enable;
+    private Boolean enable;
 
     public Boolean enable() {
         return this.enable;
@@ -33,55 +33,52 @@ public final class FirewallLogConfigResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="metadata", required=true)
-      private final String metadata;
+    private String metadata;
 
     public String metadata() {
         return this.metadata;
     }
 
-    public FirewallLogConfigResponse(
-        Boolean enable,
-        String metadata) {
-        this.enable = Objects.requireNonNull(enable, "expected parameter 'enable' to be non-null");
-        this.metadata = Objects.requireNonNull(metadata, "expected parameter 'metadata' to be non-null");
-    }
+    private FirewallLogConfigResponse() {}
 
-    private FirewallLogConfigResponse() {
-        this.enable = null;
-        this.metadata = null;
+    private FirewallLogConfigResponse(FirewallLogConfigResponse $) {
+        this.enable = $.enable;
+        this.metadata = $.metadata;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FirewallLogConfigResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Boolean enable;
-        private String metadata;
+        private FirewallLogConfigResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new FirewallLogConfigResponse();
         }
 
         public Builder(FirewallLogConfigResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.enable = defaults.enable;
-    	      this.metadata = defaults.metadata;
+            $ = new FirewallLogConfigResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder enable(Boolean enable) {
-            this.enable = Objects.requireNonNull(enable);
+            $.enable = enable;
             return this;
         }
+
         public Builder metadata(String metadata) {
-            this.metadata = Objects.requireNonNull(metadata);
+            $.metadata = metadata;
             return this;
-        }        public FirewallLogConfigResponse build() {
-            return new FirewallLogConfigResponse(enable, metadata);
+        }
+
+        public FirewallLogConfigResponse build() {
+            $.enable = Objects.requireNonNull($.enable, "expected parameter 'enable' to be non-null");
+            $.metadata = Objects.requireNonNull($.metadata, "expected parameter 'metadata' to be non-null");
+            return $;
         }
     }
+
 }

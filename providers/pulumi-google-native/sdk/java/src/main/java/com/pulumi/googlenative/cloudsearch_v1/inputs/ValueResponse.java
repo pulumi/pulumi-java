@@ -20,126 +20,115 @@ public final class ValueResponse extends com.pulumi.resources.InvokeArgs {
     public static final ValueResponse Empty = new ValueResponse();
 
     @Import(name="booleanValue", required=true)
-      private final Boolean booleanValue;
+    private Boolean booleanValue;
 
     public Boolean booleanValue() {
         return this.booleanValue;
     }
 
     @Import(name="dateValue", required=true)
-      private final DateResponse dateValue;
+    private DateResponse dateValue;
 
     public DateResponse dateValue() {
         return this.dateValue;
     }
 
     @Import(name="doubleValue", required=true)
-      private final Double doubleValue;
+    private Double doubleValue;
 
     public Double doubleValue() {
         return this.doubleValue;
     }
 
     @Import(name="integerValue", required=true)
-      private final String integerValue;
+    private String integerValue;
 
     public String integerValue() {
         return this.integerValue;
     }
 
     @Import(name="stringValue", required=true)
-      private final String stringValue;
+    private String stringValue;
 
     public String stringValue() {
         return this.stringValue;
     }
 
     @Import(name="timestampValue", required=true)
-      private final String timestampValue;
+    private String timestampValue;
 
     public String timestampValue() {
         return this.timestampValue;
     }
 
-    public ValueResponse(
-        Boolean booleanValue,
-        DateResponse dateValue,
-        Double doubleValue,
-        String integerValue,
-        String stringValue,
-        String timestampValue) {
-        this.booleanValue = Objects.requireNonNull(booleanValue, "expected parameter 'booleanValue' to be non-null");
-        this.dateValue = Objects.requireNonNull(dateValue, "expected parameter 'dateValue' to be non-null");
-        this.doubleValue = Objects.requireNonNull(doubleValue, "expected parameter 'doubleValue' to be non-null");
-        this.integerValue = Objects.requireNonNull(integerValue, "expected parameter 'integerValue' to be non-null");
-        this.stringValue = Objects.requireNonNull(stringValue, "expected parameter 'stringValue' to be non-null");
-        this.timestampValue = Objects.requireNonNull(timestampValue, "expected parameter 'timestampValue' to be non-null");
-    }
+    private ValueResponse() {}
 
-    private ValueResponse() {
-        this.booleanValue = null;
-        this.dateValue = null;
-        this.doubleValue = null;
-        this.integerValue = null;
-        this.stringValue = null;
-        this.timestampValue = null;
+    private ValueResponse(ValueResponse $) {
+        this.booleanValue = $.booleanValue;
+        this.dateValue = $.dateValue;
+        this.doubleValue = $.doubleValue;
+        this.integerValue = $.integerValue;
+        this.stringValue = $.stringValue;
+        this.timestampValue = $.timestampValue;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ValueResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Boolean booleanValue;
-        private DateResponse dateValue;
-        private Double doubleValue;
-        private String integerValue;
-        private String stringValue;
-        private String timestampValue;
+        private ValueResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ValueResponse();
         }
 
         public Builder(ValueResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.booleanValue = defaults.booleanValue;
-    	      this.dateValue = defaults.dateValue;
-    	      this.doubleValue = defaults.doubleValue;
-    	      this.integerValue = defaults.integerValue;
-    	      this.stringValue = defaults.stringValue;
-    	      this.timestampValue = defaults.timestampValue;
+            $ = new ValueResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder booleanValue(Boolean booleanValue) {
-            this.booleanValue = Objects.requireNonNull(booleanValue);
+            $.booleanValue = booleanValue;
             return this;
         }
+
         public Builder dateValue(DateResponse dateValue) {
-            this.dateValue = Objects.requireNonNull(dateValue);
+            $.dateValue = dateValue;
             return this;
         }
+
         public Builder doubleValue(Double doubleValue) {
-            this.doubleValue = Objects.requireNonNull(doubleValue);
+            $.doubleValue = doubleValue;
             return this;
         }
+
         public Builder integerValue(String integerValue) {
-            this.integerValue = Objects.requireNonNull(integerValue);
+            $.integerValue = integerValue;
             return this;
         }
+
         public Builder stringValue(String stringValue) {
-            this.stringValue = Objects.requireNonNull(stringValue);
+            $.stringValue = stringValue;
             return this;
         }
+
         public Builder timestampValue(String timestampValue) {
-            this.timestampValue = Objects.requireNonNull(timestampValue);
+            $.timestampValue = timestampValue;
             return this;
-        }        public ValueResponse build() {
-            return new ValueResponse(booleanValue, dateValue, doubleValue, integerValue, stringValue, timestampValue);
+        }
+
+        public ValueResponse build() {
+            $.booleanValue = Objects.requireNonNull($.booleanValue, "expected parameter 'booleanValue' to be non-null");
+            $.dateValue = Objects.requireNonNull($.dateValue, "expected parameter 'dateValue' to be non-null");
+            $.doubleValue = Objects.requireNonNull($.doubleValue, "expected parameter 'doubleValue' to be non-null");
+            $.integerValue = Objects.requireNonNull($.integerValue, "expected parameter 'integerValue' to be non-null");
+            $.stringValue = Objects.requireNonNull($.stringValue, "expected parameter 'stringValue' to be non-null");
+            $.timestampValue = Objects.requireNonNull($.timestampValue, "expected parameter 'timestampValue' to be non-null");
+            return $;
         }
     }
+
 }

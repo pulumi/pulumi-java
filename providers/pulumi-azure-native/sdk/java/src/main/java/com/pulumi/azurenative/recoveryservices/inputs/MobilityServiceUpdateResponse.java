@@ -23,10 +23,10 @@ public final class MobilityServiceUpdateResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="osType")
-      private final @Nullable String osType;
+    private @Nullable String osType;
 
     public Optional<String> osType() {
-        return this.osType == null ? Optional.empty() : Optional.ofNullable(this.osType);
+        return Optional.ofNullable(this.osType);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class MobilityServiceUpdateResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="rebootStatus")
-      private final @Nullable String rebootStatus;
+    private @Nullable String rebootStatus;
 
     public Optional<String> rebootStatus() {
-        return this.rebootStatus == null ? Optional.empty() : Optional.ofNullable(this.rebootStatus);
+        return Optional.ofNullable(this.rebootStatus);
     }
 
     /**
@@ -45,64 +45,56 @@ public final class MobilityServiceUpdateResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="version")
-      private final @Nullable String version;
+    private @Nullable String version;
 
     public Optional<String> version() {
-        return this.version == null ? Optional.empty() : Optional.ofNullable(this.version);
+        return Optional.ofNullable(this.version);
     }
 
-    public MobilityServiceUpdateResponse(
-        @Nullable String osType,
-        @Nullable String rebootStatus,
-        @Nullable String version) {
-        this.osType = osType;
-        this.rebootStatus = rebootStatus;
-        this.version = version;
-    }
+    private MobilityServiceUpdateResponse() {}
 
-    private MobilityServiceUpdateResponse() {
-        this.osType = null;
-        this.rebootStatus = null;
-        this.version = null;
+    private MobilityServiceUpdateResponse(MobilityServiceUpdateResponse $) {
+        this.osType = $.osType;
+        this.rebootStatus = $.rebootStatus;
+        this.version = $.version;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MobilityServiceUpdateResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String osType;
-        private @Nullable String rebootStatus;
-        private @Nullable String version;
+        private MobilityServiceUpdateResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new MobilityServiceUpdateResponse();
         }
 
         public Builder(MobilityServiceUpdateResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.osType = defaults.osType;
-    	      this.rebootStatus = defaults.rebootStatus;
-    	      this.version = defaults.version;
+            $ = new MobilityServiceUpdateResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder osType(@Nullable String osType) {
-            this.osType = osType;
+            $.osType = osType;
             return this;
         }
+
         public Builder rebootStatus(@Nullable String rebootStatus) {
-            this.rebootStatus = rebootStatus;
+            $.rebootStatus = rebootStatus;
             return this;
         }
+
         public Builder version(@Nullable String version) {
-            this.version = version;
+            $.version = version;
             return this;
-        }        public MobilityServiceUpdateResponse build() {
-            return new MobilityServiceUpdateResponse(osType, rebootStatus, version);
+        }
+
+        public MobilityServiceUpdateResponse build() {
+            return $;
         }
     }
+
 }

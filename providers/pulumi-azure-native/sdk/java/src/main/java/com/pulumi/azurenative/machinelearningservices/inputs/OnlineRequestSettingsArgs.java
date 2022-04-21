@@ -5,10 +5,10 @@ package com.pulumi.azurenative.machinelearningservices.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class OnlineRequestSettingsArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="maxConcurrentRequestsPerInstance")
-      private final @Nullable Output<Integer> maxConcurrentRequestsPerInstance;
+    private @Nullable Output<Integer> maxConcurrentRequestsPerInstance;
 
-    public Output<Integer> maxConcurrentRequestsPerInstance() {
-        return this.maxConcurrentRequestsPerInstance == null ? Codegen.empty() : this.maxConcurrentRequestsPerInstance;
+    public Optional<Output<Integer>> maxConcurrentRequestsPerInstance() {
+        return Optional.ofNullable(this.maxConcurrentRequestsPerInstance);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class OnlineRequestSettingsArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="maxQueueWait")
-      private final @Nullable Output<String> maxQueueWait;
+    private @Nullable Output<String> maxQueueWait;
 
-    public Output<String> maxQueueWait() {
-        return this.maxQueueWait == null ? Codegen.empty() : this.maxQueueWait;
+    public Optional<Output<String>> maxQueueWait() {
+        return Optional.ofNullable(this.maxQueueWait);
     }
 
     /**
@@ -47,76 +47,68 @@ public final class OnlineRequestSettingsArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="requestTimeout")
-      private final @Nullable Output<String> requestTimeout;
+    private @Nullable Output<String> requestTimeout;
 
-    public Output<String> requestTimeout() {
-        return this.requestTimeout == null ? Codegen.empty() : this.requestTimeout;
+    public Optional<Output<String>> requestTimeout() {
+        return Optional.ofNullable(this.requestTimeout);
     }
 
-    public OnlineRequestSettingsArgs(
-        @Nullable Output<Integer> maxConcurrentRequestsPerInstance,
-        @Nullable Output<String> maxQueueWait,
-        @Nullable Output<String> requestTimeout) {
-        this.maxConcurrentRequestsPerInstance = maxConcurrentRequestsPerInstance;
-        this.maxQueueWait = maxQueueWait;
-        this.requestTimeout = requestTimeout;
-    }
+    private OnlineRequestSettingsArgs() {}
 
-    private OnlineRequestSettingsArgs() {
-        this.maxConcurrentRequestsPerInstance = Codegen.empty();
-        this.maxQueueWait = Codegen.empty();
-        this.requestTimeout = Codegen.empty();
+    private OnlineRequestSettingsArgs(OnlineRequestSettingsArgs $) {
+        this.maxConcurrentRequestsPerInstance = $.maxConcurrentRequestsPerInstance;
+        this.maxQueueWait = $.maxQueueWait;
+        this.requestTimeout = $.requestTimeout;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(OnlineRequestSettingsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> maxConcurrentRequestsPerInstance;
-        private @Nullable Output<String> maxQueueWait;
-        private @Nullable Output<String> requestTimeout;
+        private OnlineRequestSettingsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new OnlineRequestSettingsArgs();
         }
 
         public Builder(OnlineRequestSettingsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.maxConcurrentRequestsPerInstance = defaults.maxConcurrentRequestsPerInstance;
-    	      this.maxQueueWait = defaults.maxQueueWait;
-    	      this.requestTimeout = defaults.requestTimeout;
+            $ = new OnlineRequestSettingsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder maxConcurrentRequestsPerInstance(@Nullable Output<Integer> maxConcurrentRequestsPerInstance) {
-            this.maxConcurrentRequestsPerInstance = maxConcurrentRequestsPerInstance;
+            $.maxConcurrentRequestsPerInstance = maxConcurrentRequestsPerInstance;
             return this;
         }
-        public Builder maxConcurrentRequestsPerInstance(@Nullable Integer maxConcurrentRequestsPerInstance) {
-            this.maxConcurrentRequestsPerInstance = Codegen.ofNullable(maxConcurrentRequestsPerInstance);
-            return this;
+
+        public Builder maxConcurrentRequestsPerInstance(Integer maxConcurrentRequestsPerInstance) {
+            return maxConcurrentRequestsPerInstance(Output.of(maxConcurrentRequestsPerInstance));
         }
+
         public Builder maxQueueWait(@Nullable Output<String> maxQueueWait) {
-            this.maxQueueWait = maxQueueWait;
+            $.maxQueueWait = maxQueueWait;
             return this;
         }
-        public Builder maxQueueWait(@Nullable String maxQueueWait) {
-            this.maxQueueWait = Codegen.ofNullable(maxQueueWait);
-            return this;
+
+        public Builder maxQueueWait(String maxQueueWait) {
+            return maxQueueWait(Output.of(maxQueueWait));
         }
+
         public Builder requestTimeout(@Nullable Output<String> requestTimeout) {
-            this.requestTimeout = requestTimeout;
+            $.requestTimeout = requestTimeout;
             return this;
         }
-        public Builder requestTimeout(@Nullable String requestTimeout) {
-            this.requestTimeout = Codegen.ofNullable(requestTimeout);
-            return this;
-        }        public OnlineRequestSettingsArgs build() {
-            return new OnlineRequestSettingsArgs(maxConcurrentRequestsPerInstance, maxQueueWait, requestTimeout);
+
+        public Builder requestTimeout(String requestTimeout) {
+            return requestTimeout(Output.of(requestTimeout));
+        }
+
+        public OnlineRequestSettingsArgs build() {
+            return $;
         }
     }
+
 }

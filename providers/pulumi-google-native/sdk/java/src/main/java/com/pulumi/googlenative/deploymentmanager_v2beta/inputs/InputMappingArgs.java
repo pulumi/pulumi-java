@@ -5,10 +5,10 @@ package com.pulumi.googlenative.deploymentmanager_v2beta.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.deploymentmanager_v2beta.enums.InputMappingLocation;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class InputMappingArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="fieldName")
-      private final @Nullable Output<String> fieldName;
+    private @Nullable Output<String> fieldName;
 
-    public Output<String> fieldName() {
-        return this.fieldName == null ? Codegen.empty() : this.fieldName;
+    public Optional<Output<String>> fieldName() {
+        return Optional.ofNullable(this.fieldName);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class InputMappingArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="location")
-      private final @Nullable Output<InputMappingLocation> location;
+    private @Nullable Output<InputMappingLocation> location;
 
-    public Output<InputMappingLocation> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<InputMappingLocation>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class InputMappingArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="methodMatch")
-      private final @Nullable Output<String> methodMatch;
+    private @Nullable Output<String> methodMatch;
 
-    public Output<String> methodMatch() {
-        return this.methodMatch == null ? Codegen.empty() : this.methodMatch;
+    public Optional<Output<String>> methodMatch() {
+        return Optional.ofNullable(this.methodMatch);
     }
 
     /**
@@ -58,89 +58,78 @@ public final class InputMappingArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="value")
-      private final @Nullable Output<String> value;
+    private @Nullable Output<String> value;
 
-    public Output<String> value() {
-        return this.value == null ? Codegen.empty() : this.value;
+    public Optional<Output<String>> value() {
+        return Optional.ofNullable(this.value);
     }
 
-    public InputMappingArgs(
-        @Nullable Output<String> fieldName,
-        @Nullable Output<InputMappingLocation> location,
-        @Nullable Output<String> methodMatch,
-        @Nullable Output<String> value) {
-        this.fieldName = fieldName;
-        this.location = location;
-        this.methodMatch = methodMatch;
-        this.value = value;
-    }
+    private InputMappingArgs() {}
 
-    private InputMappingArgs() {
-        this.fieldName = Codegen.empty();
-        this.location = Codegen.empty();
-        this.methodMatch = Codegen.empty();
-        this.value = Codegen.empty();
+    private InputMappingArgs(InputMappingArgs $) {
+        this.fieldName = $.fieldName;
+        this.location = $.location;
+        this.methodMatch = $.methodMatch;
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(InputMappingArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> fieldName;
-        private @Nullable Output<InputMappingLocation> location;
-        private @Nullable Output<String> methodMatch;
-        private @Nullable Output<String> value;
+        private InputMappingArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new InputMappingArgs();
         }
 
         public Builder(InputMappingArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.fieldName = defaults.fieldName;
-    	      this.location = defaults.location;
-    	      this.methodMatch = defaults.methodMatch;
-    	      this.value = defaults.value;
+            $ = new InputMappingArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder fieldName(@Nullable Output<String> fieldName) {
-            this.fieldName = fieldName;
+            $.fieldName = fieldName;
             return this;
         }
-        public Builder fieldName(@Nullable String fieldName) {
-            this.fieldName = Codegen.ofNullable(fieldName);
-            return this;
+
+        public Builder fieldName(String fieldName) {
+            return fieldName(Output.of(fieldName));
         }
+
         public Builder location(@Nullable Output<InputMappingLocation> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable InputMappingLocation location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(InputMappingLocation location) {
+            return location(Output.of(location));
         }
+
         public Builder methodMatch(@Nullable Output<String> methodMatch) {
-            this.methodMatch = methodMatch;
+            $.methodMatch = methodMatch;
             return this;
         }
-        public Builder methodMatch(@Nullable String methodMatch) {
-            this.methodMatch = Codegen.ofNullable(methodMatch);
-            return this;
+
+        public Builder methodMatch(String methodMatch) {
+            return methodMatch(Output.of(methodMatch));
         }
+
         public Builder value(@Nullable Output<String> value) {
-            this.value = value;
+            $.value = value;
             return this;
         }
-        public Builder value(@Nullable String value) {
-            this.value = Codegen.ofNullable(value);
-            return this;
-        }        public InputMappingArgs build() {
-            return new InputMappingArgs(fieldName, location, methodMatch, value);
+
+        public Builder value(String value) {
+            return value(Output.of(value));
+        }
+
+        public InputMappingArgs build() {
+            return $;
         }
     }
+
 }

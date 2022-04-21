@@ -15,62 +15,57 @@ public final class FilterPortRangeFilter extends com.pulumi.resources.InvokeArgs
     public static final FilterPortRangeFilter Empty = new FilterPortRangeFilter();
 
     @Import(name="beginInclusive")
-      private final @Nullable Integer beginInclusive;
+    private @Nullable Integer beginInclusive;
 
     public Optional<Integer> beginInclusive() {
-        return this.beginInclusive == null ? Optional.empty() : Optional.ofNullable(this.beginInclusive);
+        return Optional.ofNullable(this.beginInclusive);
     }
 
     @Import(name="endInclusive")
-      private final @Nullable Integer endInclusive;
+    private @Nullable Integer endInclusive;
 
     public Optional<Integer> endInclusive() {
-        return this.endInclusive == null ? Optional.empty() : Optional.ofNullable(this.endInclusive);
+        return Optional.ofNullable(this.endInclusive);
     }
 
-    public FilterPortRangeFilter(
-        @Nullable Integer beginInclusive,
-        @Nullable Integer endInclusive) {
-        this.beginInclusive = beginInclusive;
-        this.endInclusive = endInclusive;
-    }
+    private FilterPortRangeFilter() {}
 
-    private FilterPortRangeFilter() {
-        this.beginInclusive = null;
-        this.endInclusive = null;
+    private FilterPortRangeFilter(FilterPortRangeFilter $) {
+        this.beginInclusive = $.beginInclusive;
+        this.endInclusive = $.endInclusive;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FilterPortRangeFilter defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Integer beginInclusive;
-        private @Nullable Integer endInclusive;
+        private FilterPortRangeFilter $;
 
         public Builder() {
-    	      // Empty
+            $ = new FilterPortRangeFilter();
         }
 
         public Builder(FilterPortRangeFilter defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.beginInclusive = defaults.beginInclusive;
-    	      this.endInclusive = defaults.endInclusive;
+            $ = new FilterPortRangeFilter(Objects.requireNonNull(defaults));
         }
 
         public Builder beginInclusive(@Nullable Integer beginInclusive) {
-            this.beginInclusive = beginInclusive;
+            $.beginInclusive = beginInclusive;
             return this;
         }
+
         public Builder endInclusive(@Nullable Integer endInclusive) {
-            this.endInclusive = endInclusive;
+            $.endInclusive = endInclusive;
             return this;
-        }        public FilterPortRangeFilter build() {
-            return new FilterPortRangeFilter(beginInclusive, endInclusive);
+        }
+
+        public FilterPortRangeFilter build() {
+            return $;
         }
     }
+
 }

@@ -5,7 +5,6 @@ package com.pulumi.azurenative.dataprotection.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,49 +22,49 @@ public final class RetentionTagArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tagName", required=true)
-      private final Output<String> tagName;
+    private Output<String> tagName;
 
     public Output<String> tagName() {
         return this.tagName;
     }
 
-    public RetentionTagArgs(Output<String> tagName) {
-        this.tagName = Objects.requireNonNull(tagName, "expected parameter 'tagName' to be non-null");
-    }
+    private RetentionTagArgs() {}
 
-    private RetentionTagArgs() {
-        this.tagName = Codegen.empty();
+    private RetentionTagArgs(RetentionTagArgs $) {
+        this.tagName = $.tagName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RetentionTagArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> tagName;
+        private RetentionTagArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RetentionTagArgs();
         }
 
         public Builder(RetentionTagArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.tagName = defaults.tagName;
+            $ = new RetentionTagArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder tagName(Output<String> tagName) {
-            this.tagName = Objects.requireNonNull(tagName);
+            $.tagName = tagName;
             return this;
         }
+
         public Builder tagName(String tagName) {
-            this.tagName = Output.of(Objects.requireNonNull(tagName));
-            return this;
-        }        public RetentionTagArgs build() {
-            return new RetentionTagArgs(tagName);
+            return tagName(Output.of(tagName));
+        }
+
+        public RetentionTagArgs build() {
+            $.tagName = Objects.requireNonNull($.tagName, "expected parameter 'tagName' to be non-null");
+            return $;
         }
     }
+
 }

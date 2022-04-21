@@ -6,10 +6,10 @@ package com.pulumi.aws.glue.inputs;
 import com.pulumi.aws.glue.inputs.CatalogTableStorageDescriptorSchemaReferenceSchemaIdGetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class CatalogTableStorageDescriptorSchemaReferenceGetArgs extends c
      * 
      */
     @Import(name="schemaId")
-      private final @Nullable Output<CatalogTableStorageDescriptorSchemaReferenceSchemaIdGetArgs> schemaId;
+    private @Nullable Output<CatalogTableStorageDescriptorSchemaReferenceSchemaIdGetArgs> schemaId;
 
-    public Output<CatalogTableStorageDescriptorSchemaReferenceSchemaIdGetArgs> schemaId() {
-        return this.schemaId == null ? Codegen.empty() : this.schemaId;
+    public Optional<Output<CatalogTableStorageDescriptorSchemaReferenceSchemaIdGetArgs>> schemaId() {
+        return Optional.ofNullable(this.schemaId);
     }
 
     /**
@@ -33,10 +33,10 @@ public final class CatalogTableStorageDescriptorSchemaReferenceGetArgs extends c
      * 
      */
     @Import(name="schemaVersionId")
-      private final @Nullable Output<String> schemaVersionId;
+    private @Nullable Output<String> schemaVersionId;
 
-    public Output<String> schemaVersionId() {
-        return this.schemaVersionId == null ? Codegen.empty() : this.schemaVersionId;
+    public Optional<Output<String>> schemaVersionId() {
+        return Optional.ofNullable(this.schemaVersionId);
     }
 
     /**
@@ -44,76 +44,69 @@ public final class CatalogTableStorageDescriptorSchemaReferenceGetArgs extends c
      * 
      */
     @Import(name="schemaVersionNumber", required=true)
-      private final Output<Integer> schemaVersionNumber;
+    private Output<Integer> schemaVersionNumber;
 
     public Output<Integer> schemaVersionNumber() {
         return this.schemaVersionNumber;
     }
 
-    public CatalogTableStorageDescriptorSchemaReferenceGetArgs(
-        @Nullable Output<CatalogTableStorageDescriptorSchemaReferenceSchemaIdGetArgs> schemaId,
-        @Nullable Output<String> schemaVersionId,
-        Output<Integer> schemaVersionNumber) {
-        this.schemaId = schemaId;
-        this.schemaVersionId = schemaVersionId;
-        this.schemaVersionNumber = Objects.requireNonNull(schemaVersionNumber, "expected parameter 'schemaVersionNumber' to be non-null");
-    }
+    private CatalogTableStorageDescriptorSchemaReferenceGetArgs() {}
 
-    private CatalogTableStorageDescriptorSchemaReferenceGetArgs() {
-        this.schemaId = Codegen.empty();
-        this.schemaVersionId = Codegen.empty();
-        this.schemaVersionNumber = Codegen.empty();
+    private CatalogTableStorageDescriptorSchemaReferenceGetArgs(CatalogTableStorageDescriptorSchemaReferenceGetArgs $) {
+        this.schemaId = $.schemaId;
+        this.schemaVersionId = $.schemaVersionId;
+        this.schemaVersionNumber = $.schemaVersionNumber;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CatalogTableStorageDescriptorSchemaReferenceGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<CatalogTableStorageDescriptorSchemaReferenceSchemaIdGetArgs> schemaId;
-        private @Nullable Output<String> schemaVersionId;
-        private Output<Integer> schemaVersionNumber;
+        private CatalogTableStorageDescriptorSchemaReferenceGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CatalogTableStorageDescriptorSchemaReferenceGetArgs();
         }
 
         public Builder(CatalogTableStorageDescriptorSchemaReferenceGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.schemaId = defaults.schemaId;
-    	      this.schemaVersionId = defaults.schemaVersionId;
-    	      this.schemaVersionNumber = defaults.schemaVersionNumber;
+            $ = new CatalogTableStorageDescriptorSchemaReferenceGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder schemaId(@Nullable Output<CatalogTableStorageDescriptorSchemaReferenceSchemaIdGetArgs> schemaId) {
-            this.schemaId = schemaId;
+            $.schemaId = schemaId;
             return this;
         }
-        public Builder schemaId(@Nullable CatalogTableStorageDescriptorSchemaReferenceSchemaIdGetArgs schemaId) {
-            this.schemaId = Codegen.ofNullable(schemaId);
-            return this;
+
+        public Builder schemaId(CatalogTableStorageDescriptorSchemaReferenceSchemaIdGetArgs schemaId) {
+            return schemaId(Output.of(schemaId));
         }
+
         public Builder schemaVersionId(@Nullable Output<String> schemaVersionId) {
-            this.schemaVersionId = schemaVersionId;
+            $.schemaVersionId = schemaVersionId;
             return this;
         }
-        public Builder schemaVersionId(@Nullable String schemaVersionId) {
-            this.schemaVersionId = Codegen.ofNullable(schemaVersionId);
-            return this;
+
+        public Builder schemaVersionId(String schemaVersionId) {
+            return schemaVersionId(Output.of(schemaVersionId));
         }
+
         public Builder schemaVersionNumber(Output<Integer> schemaVersionNumber) {
-            this.schemaVersionNumber = Objects.requireNonNull(schemaVersionNumber);
+            $.schemaVersionNumber = schemaVersionNumber;
             return this;
         }
+
         public Builder schemaVersionNumber(Integer schemaVersionNumber) {
-            this.schemaVersionNumber = Output.of(Objects.requireNonNull(schemaVersionNumber));
-            return this;
-        }        public CatalogTableStorageDescriptorSchemaReferenceGetArgs build() {
-            return new CatalogTableStorageDescriptorSchemaReferenceGetArgs(schemaId, schemaVersionId, schemaVersionNumber);
+            return schemaVersionNumber(Output.of(schemaVersionNumber));
+        }
+
+        public CatalogTableStorageDescriptorSchemaReferenceGetArgs build() {
+            $.schemaVersionNumber = Objects.requireNonNull($.schemaVersionNumber, "expected parameter 'schemaVersionNumber' to be non-null");
+            return $;
         }
     }
+
 }

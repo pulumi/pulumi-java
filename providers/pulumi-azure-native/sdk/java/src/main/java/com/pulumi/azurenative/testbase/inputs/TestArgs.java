@@ -8,11 +8,11 @@ import com.pulumi.azurenative.testbase.inputs.CommandArgs;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -29,7 +29,7 @@ public final class TestArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="commands", required=true)
-      private final Output<List<CommandArgs>> commands;
+    private Output<List<CommandArgs>> commands;
 
     public Output<List<CommandArgs>> commands() {
         return this.commands;
@@ -40,10 +40,10 @@ public final class TestArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="isActive")
-      private final @Nullable Output<Boolean> isActive;
+    private @Nullable Output<Boolean> isActive;
 
-    public Output<Boolean> isActive() {
-        return this.isActive == null ? Codegen.empty() : this.isActive;
+    public Optional<Output<Boolean>> isActive() {
+        return Optional.ofNullable(this.isActive);
     }
 
     /**
@@ -51,79 +51,74 @@ public final class TestArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="testType", required=true)
-      private final Output<Either<String,TestType>> testType;
+    private Output<Either<String,TestType>> testType;
 
     public Output<Either<String,TestType>> testType() {
         return this.testType;
     }
 
-    public TestArgs(
-        Output<List<CommandArgs>> commands,
-        @Nullable Output<Boolean> isActive,
-        Output<Either<String,TestType>> testType) {
-        this.commands = Objects.requireNonNull(commands, "expected parameter 'commands' to be non-null");
-        this.isActive = isActive;
-        this.testType = Objects.requireNonNull(testType, "expected parameter 'testType' to be non-null");
-    }
+    private TestArgs() {}
 
-    private TestArgs() {
-        this.commands = Codegen.empty();
-        this.isActive = Codegen.empty();
-        this.testType = Codegen.empty();
+    private TestArgs(TestArgs $) {
+        this.commands = $.commands;
+        this.isActive = $.isActive;
+        this.testType = $.testType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TestArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<List<CommandArgs>> commands;
-        private @Nullable Output<Boolean> isActive;
-        private Output<Either<String,TestType>> testType;
+        private TestArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TestArgs();
         }
 
         public Builder(TestArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.commands = defaults.commands;
-    	      this.isActive = defaults.isActive;
-    	      this.testType = defaults.testType;
+            $ = new TestArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder commands(Output<List<CommandArgs>> commands) {
-            this.commands = Objects.requireNonNull(commands);
+            $.commands = commands;
             return this;
         }
+
         public Builder commands(List<CommandArgs> commands) {
-            this.commands = Output.of(Objects.requireNonNull(commands));
-            return this;
+            return commands(Output.of(commands));
         }
+
         public Builder commands(CommandArgs... commands) {
             return commands(List.of(commands));
         }
+
         public Builder isActive(@Nullable Output<Boolean> isActive) {
-            this.isActive = isActive;
+            $.isActive = isActive;
             return this;
         }
-        public Builder isActive(@Nullable Boolean isActive) {
-            this.isActive = Codegen.ofNullable(isActive);
-            return this;
+
+        public Builder isActive(Boolean isActive) {
+            return isActive(Output.of(isActive));
         }
+
         public Builder testType(Output<Either<String,TestType>> testType) {
-            this.testType = Objects.requireNonNull(testType);
+            $.testType = testType;
             return this;
         }
+
         public Builder testType(Either<String,TestType> testType) {
-            this.testType = Output.of(Objects.requireNonNull(testType));
-            return this;
-        }        public TestArgs build() {
-            return new TestArgs(commands, isActive, testType);
+            return testType(Output.of(testType));
+        }
+
+        public TestArgs build() {
+            $.commands = Objects.requireNonNull($.commands, "expected parameter 'commands' to be non-null");
+            $.testType = Objects.requireNonNull($.testType, "expected parameter 'testType' to be non-null");
+            return $;
         }
     }
+
 }

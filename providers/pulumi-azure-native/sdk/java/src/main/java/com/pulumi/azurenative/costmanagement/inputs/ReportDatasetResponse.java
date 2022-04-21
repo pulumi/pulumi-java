@@ -29,10 +29,10 @@ public final class ReportDatasetResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="aggregation")
-      private final @Nullable Map<String,ReportAggregationResponse> aggregation;
+    private @Nullable Map<String,ReportAggregationResponse> aggregation;
 
-    public Map<String,ReportAggregationResponse> aggregation() {
-        return this.aggregation == null ? Map.of() : this.aggregation;
+    public Optional<Map<String,ReportAggregationResponse>> aggregation() {
+        return Optional.ofNullable(this.aggregation);
     }
 
     /**
@@ -40,10 +40,10 @@ public final class ReportDatasetResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="configuration")
-      private final @Nullable ReportDatasetConfigurationResponse configuration;
+    private @Nullable ReportDatasetConfigurationResponse configuration;
 
     public Optional<ReportDatasetConfigurationResponse> configuration() {
-        return this.configuration == null ? Optional.empty() : Optional.ofNullable(this.configuration);
+        return Optional.ofNullable(this.configuration);
     }
 
     /**
@@ -51,10 +51,10 @@ public final class ReportDatasetResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="filter")
-      private final @Nullable ReportFilterResponse filter;
+    private @Nullable ReportFilterResponse filter;
 
     public Optional<ReportFilterResponse> filter() {
-        return this.filter == null ? Optional.empty() : Optional.ofNullable(this.filter);
+        return Optional.ofNullable(this.filter);
     }
 
     /**
@@ -62,10 +62,10 @@ public final class ReportDatasetResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="granularity")
-      private final @Nullable String granularity;
+    private @Nullable String granularity;
 
     public Optional<String> granularity() {
-        return this.granularity == null ? Optional.empty() : Optional.ofNullable(this.granularity);
+        return Optional.ofNullable(this.granularity);
     }
 
     /**
@@ -73,85 +73,72 @@ public final class ReportDatasetResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="grouping")
-      private final @Nullable List<ReportGroupingResponse> grouping;
+    private @Nullable List<ReportGroupingResponse> grouping;
 
-    public List<ReportGroupingResponse> grouping() {
-        return this.grouping == null ? List.of() : this.grouping;
+    public Optional<List<ReportGroupingResponse>> grouping() {
+        return Optional.ofNullable(this.grouping);
     }
 
-    public ReportDatasetResponse(
-        @Nullable Map<String,ReportAggregationResponse> aggregation,
-        @Nullable ReportDatasetConfigurationResponse configuration,
-        @Nullable ReportFilterResponse filter,
-        @Nullable String granularity,
-        @Nullable List<ReportGroupingResponse> grouping) {
-        this.aggregation = aggregation;
-        this.configuration = configuration;
-        this.filter = filter;
-        this.granularity = granularity;
-        this.grouping = grouping;
-    }
+    private ReportDatasetResponse() {}
 
-    private ReportDatasetResponse() {
-        this.aggregation = Map.of();
-        this.configuration = null;
-        this.filter = null;
-        this.granularity = null;
-        this.grouping = List.of();
+    private ReportDatasetResponse(ReportDatasetResponse $) {
+        this.aggregation = $.aggregation;
+        this.configuration = $.configuration;
+        this.filter = $.filter;
+        this.granularity = $.granularity;
+        this.grouping = $.grouping;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ReportDatasetResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Map<String,ReportAggregationResponse> aggregation;
-        private @Nullable ReportDatasetConfigurationResponse configuration;
-        private @Nullable ReportFilterResponse filter;
-        private @Nullable String granularity;
-        private @Nullable List<ReportGroupingResponse> grouping;
+        private ReportDatasetResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ReportDatasetResponse();
         }
 
         public Builder(ReportDatasetResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.aggregation = defaults.aggregation;
-    	      this.configuration = defaults.configuration;
-    	      this.filter = defaults.filter;
-    	      this.granularity = defaults.granularity;
-    	      this.grouping = defaults.grouping;
+            $ = new ReportDatasetResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder aggregation(@Nullable Map<String,ReportAggregationResponse> aggregation) {
-            this.aggregation = aggregation;
+            $.aggregation = aggregation;
             return this;
         }
+
         public Builder configuration(@Nullable ReportDatasetConfigurationResponse configuration) {
-            this.configuration = configuration;
+            $.configuration = configuration;
             return this;
         }
+
         public Builder filter(@Nullable ReportFilterResponse filter) {
-            this.filter = filter;
+            $.filter = filter;
             return this;
         }
+
         public Builder granularity(@Nullable String granularity) {
-            this.granularity = granularity;
+            $.granularity = granularity;
             return this;
         }
+
         public Builder grouping(@Nullable List<ReportGroupingResponse> grouping) {
-            this.grouping = grouping;
+            $.grouping = grouping;
             return this;
         }
+
         public Builder grouping(ReportGroupingResponse... grouping) {
             return grouping(List.of(grouping));
-        }        public ReportDatasetResponse build() {
-            return new ReportDatasetResponse(aggregation, configuration, filter, granularity, grouping);
+        }
+
+        public ReportDatasetResponse build() {
+            return $;
         }
     }
+
 }

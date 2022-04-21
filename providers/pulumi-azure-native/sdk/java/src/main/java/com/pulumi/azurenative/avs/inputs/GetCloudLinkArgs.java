@@ -17,7 +17,7 @@ public final class GetCloudLinkArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="cloudLinkName", required=true)
-      private final String cloudLinkName;
+    private String cloudLinkName;
 
     public String cloudLinkName() {
         return this.cloudLinkName;
@@ -28,7 +28,7 @@ public final class GetCloudLinkArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="privateCloudName", required=true)
-      private final String privateCloudName;
+    private String privateCloudName;
 
     public String privateCloudName() {
         return this.privateCloudName;
@@ -39,64 +39,59 @@ public final class GetCloudLinkArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public GetCloudLinkArgs(
-        String cloudLinkName,
-        String privateCloudName,
-        String resourceGroupName) {
-        this.cloudLinkName = Objects.requireNonNull(cloudLinkName, "expected parameter 'cloudLinkName' to be non-null");
-        this.privateCloudName = Objects.requireNonNull(privateCloudName, "expected parameter 'privateCloudName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private GetCloudLinkArgs() {}
 
-    private GetCloudLinkArgs() {
-        this.cloudLinkName = null;
-        this.privateCloudName = null;
-        this.resourceGroupName = null;
+    private GetCloudLinkArgs(GetCloudLinkArgs $) {
+        this.cloudLinkName = $.cloudLinkName;
+        this.privateCloudName = $.privateCloudName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetCloudLinkArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String cloudLinkName;
-        private String privateCloudName;
-        private String resourceGroupName;
+        private GetCloudLinkArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetCloudLinkArgs();
         }
 
         public Builder(GetCloudLinkArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cloudLinkName = defaults.cloudLinkName;
-    	      this.privateCloudName = defaults.privateCloudName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new GetCloudLinkArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder cloudLinkName(String cloudLinkName) {
-            this.cloudLinkName = Objects.requireNonNull(cloudLinkName);
+            $.cloudLinkName = cloudLinkName;
             return this;
         }
+
         public Builder privateCloudName(String privateCloudName) {
-            this.privateCloudName = Objects.requireNonNull(privateCloudName);
+            $.privateCloudName = privateCloudName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public GetCloudLinkArgs build() {
-            return new GetCloudLinkArgs(cloudLinkName, privateCloudName, resourceGroupName);
+        }
+
+        public GetCloudLinkArgs build() {
+            $.cloudLinkName = Objects.requireNonNull($.cloudLinkName, "expected parameter 'cloudLinkName' to be non-null");
+            $.privateCloudName = Objects.requireNonNull($.privateCloudName, "expected parameter 'privateCloudName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

@@ -26,10 +26,10 @@ public final class IpSecurityRestrictionResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="action")
-      private final @Nullable String action;
+    private @Nullable String action;
 
     public Optional<String> action() {
-        return this.action == null ? Optional.empty() : Optional.ofNullable(this.action);
+        return Optional.ofNullable(this.action);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class IpSecurityRestrictionResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="description")
-      private final @Nullable String description;
+    private @Nullable String description;
 
     public Optional<String> description() {
-        return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -63,10 +63,10 @@ public final class IpSecurityRestrictionResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="headers")
-      private final @Nullable Map<String,List<String>> headers;
+    private @Nullable Map<String,List<String>> headers;
 
-    public Map<String,List<String>> headers() {
-        return this.headers == null ? Map.of() : this.headers;
+    public Optional<Map<String,List<String>>> headers() {
+        return Optional.ofNullable(this.headers);
     }
 
     /**
@@ -77,10 +77,10 @@ public final class IpSecurityRestrictionResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="ipAddress")
-      private final @Nullable String ipAddress;
+    private @Nullable String ipAddress;
 
     public Optional<String> ipAddress() {
-        return this.ipAddress == null ? Optional.empty() : Optional.ofNullable(this.ipAddress);
+        return Optional.ofNullable(this.ipAddress);
     }
 
     /**
@@ -88,10 +88,10 @@ public final class IpSecurityRestrictionResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="name")
-      private final @Nullable String name;
+    private @Nullable String name;
 
     public Optional<String> name() {
-        return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -99,10 +99,10 @@ public final class IpSecurityRestrictionResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="priority")
-      private final @Nullable Integer priority;
+    private @Nullable Integer priority;
 
     public Optional<Integer> priority() {
-        return this.priority == null ? Optional.empty() : Optional.ofNullable(this.priority);
+        return Optional.ofNullable(this.priority);
     }
 
     /**
@@ -110,10 +110,10 @@ public final class IpSecurityRestrictionResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="subnetMask")
-      private final @Nullable String subnetMask;
+    private @Nullable String subnetMask;
 
     public Optional<String> subnetMask() {
-        return this.subnetMask == null ? Optional.empty() : Optional.ofNullable(this.subnetMask);
+        return Optional.ofNullable(this.subnetMask);
     }
 
     /**
@@ -121,10 +121,10 @@ public final class IpSecurityRestrictionResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="subnetTrafficTag")
-      private final @Nullable Integer subnetTrafficTag;
+    private @Nullable Integer subnetTrafficTag;
 
     public Optional<Integer> subnetTrafficTag() {
-        return this.subnetTrafficTag == null ? Optional.empty() : Optional.ofNullable(this.subnetTrafficTag);
+        return Optional.ofNullable(this.subnetTrafficTag);
     }
 
     /**
@@ -132,10 +132,10 @@ public final class IpSecurityRestrictionResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="tag")
-      private final @Nullable String tag;
+    private @Nullable String tag;
 
     public Optional<String> tag() {
-        return this.tag == null ? Optional.empty() : Optional.ofNullable(this.tag);
+        return Optional.ofNullable(this.tag);
     }
 
     /**
@@ -143,10 +143,10 @@ public final class IpSecurityRestrictionResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="vnetSubnetResourceId")
-      private final @Nullable String vnetSubnetResourceId;
+    private @Nullable String vnetSubnetResourceId;
 
     public Optional<String> vnetSubnetResourceId() {
-        return this.vnetSubnetResourceId == null ? Optional.empty() : Optional.ofNullable(this.vnetSubnetResourceId);
+        return Optional.ofNullable(this.vnetSubnetResourceId);
     }
 
     /**
@@ -154,136 +154,104 @@ public final class IpSecurityRestrictionResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="vnetTrafficTag")
-      private final @Nullable Integer vnetTrafficTag;
+    private @Nullable Integer vnetTrafficTag;
 
     public Optional<Integer> vnetTrafficTag() {
-        return this.vnetTrafficTag == null ? Optional.empty() : Optional.ofNullable(this.vnetTrafficTag);
+        return Optional.ofNullable(this.vnetTrafficTag);
     }
 
-    public IpSecurityRestrictionResponse(
-        @Nullable String action,
-        @Nullable String description,
-        @Nullable Map<String,List<String>> headers,
-        @Nullable String ipAddress,
-        @Nullable String name,
-        @Nullable Integer priority,
-        @Nullable String subnetMask,
-        @Nullable Integer subnetTrafficTag,
-        @Nullable String tag,
-        @Nullable String vnetSubnetResourceId,
-        @Nullable Integer vnetTrafficTag) {
-        this.action = action;
-        this.description = description;
-        this.headers = headers;
-        this.ipAddress = ipAddress;
-        this.name = name;
-        this.priority = priority;
-        this.subnetMask = subnetMask;
-        this.subnetTrafficTag = subnetTrafficTag;
-        this.tag = tag;
-        this.vnetSubnetResourceId = vnetSubnetResourceId;
-        this.vnetTrafficTag = vnetTrafficTag;
-    }
+    private IpSecurityRestrictionResponse() {}
 
-    private IpSecurityRestrictionResponse() {
-        this.action = null;
-        this.description = null;
-        this.headers = Map.of();
-        this.ipAddress = null;
-        this.name = null;
-        this.priority = null;
-        this.subnetMask = null;
-        this.subnetTrafficTag = null;
-        this.tag = null;
-        this.vnetSubnetResourceId = null;
-        this.vnetTrafficTag = null;
+    private IpSecurityRestrictionResponse(IpSecurityRestrictionResponse $) {
+        this.action = $.action;
+        this.description = $.description;
+        this.headers = $.headers;
+        this.ipAddress = $.ipAddress;
+        this.name = $.name;
+        this.priority = $.priority;
+        this.subnetMask = $.subnetMask;
+        this.subnetTrafficTag = $.subnetTrafficTag;
+        this.tag = $.tag;
+        this.vnetSubnetResourceId = $.vnetSubnetResourceId;
+        this.vnetTrafficTag = $.vnetTrafficTag;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(IpSecurityRestrictionResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String action;
-        private @Nullable String description;
-        private @Nullable Map<String,List<String>> headers;
-        private @Nullable String ipAddress;
-        private @Nullable String name;
-        private @Nullable Integer priority;
-        private @Nullable String subnetMask;
-        private @Nullable Integer subnetTrafficTag;
-        private @Nullable String tag;
-        private @Nullable String vnetSubnetResourceId;
-        private @Nullable Integer vnetTrafficTag;
+        private IpSecurityRestrictionResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new IpSecurityRestrictionResponse();
         }
 
         public Builder(IpSecurityRestrictionResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.action = defaults.action;
-    	      this.description = defaults.description;
-    	      this.headers = defaults.headers;
-    	      this.ipAddress = defaults.ipAddress;
-    	      this.name = defaults.name;
-    	      this.priority = defaults.priority;
-    	      this.subnetMask = defaults.subnetMask;
-    	      this.subnetTrafficTag = defaults.subnetTrafficTag;
-    	      this.tag = defaults.tag;
-    	      this.vnetSubnetResourceId = defaults.vnetSubnetResourceId;
-    	      this.vnetTrafficTag = defaults.vnetTrafficTag;
+            $ = new IpSecurityRestrictionResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder action(@Nullable String action) {
-            this.action = action;
+            $.action = action;
             return this;
         }
+
         public Builder description(@Nullable String description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
+
         public Builder headers(@Nullable Map<String,List<String>> headers) {
-            this.headers = headers;
+            $.headers = headers;
             return this;
         }
+
         public Builder ipAddress(@Nullable String ipAddress) {
-            this.ipAddress = ipAddress;
+            $.ipAddress = ipAddress;
             return this;
         }
+
         public Builder name(@Nullable String name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
+
         public Builder priority(@Nullable Integer priority) {
-            this.priority = priority;
+            $.priority = priority;
             return this;
         }
+
         public Builder subnetMask(@Nullable String subnetMask) {
-            this.subnetMask = subnetMask;
+            $.subnetMask = subnetMask;
             return this;
         }
+
         public Builder subnetTrafficTag(@Nullable Integer subnetTrafficTag) {
-            this.subnetTrafficTag = subnetTrafficTag;
+            $.subnetTrafficTag = subnetTrafficTag;
             return this;
         }
+
         public Builder tag(@Nullable String tag) {
-            this.tag = tag;
+            $.tag = tag;
             return this;
         }
+
         public Builder vnetSubnetResourceId(@Nullable String vnetSubnetResourceId) {
-            this.vnetSubnetResourceId = vnetSubnetResourceId;
+            $.vnetSubnetResourceId = vnetSubnetResourceId;
             return this;
         }
+
         public Builder vnetTrafficTag(@Nullable Integer vnetTrafficTag) {
-            this.vnetTrafficTag = vnetTrafficTag;
+            $.vnetTrafficTag = vnetTrafficTag;
             return this;
-        }        public IpSecurityRestrictionResponse build() {
-            return new IpSecurityRestrictionResponse(action, description, headers, ipAddress, name, priority, subnetMask, subnetTrafficTag, tag, vnetSubnetResourceId, vnetTrafficTag);
+        }
+
+        public IpSecurityRestrictionResponse build() {
+            return $;
         }
     }
+
 }

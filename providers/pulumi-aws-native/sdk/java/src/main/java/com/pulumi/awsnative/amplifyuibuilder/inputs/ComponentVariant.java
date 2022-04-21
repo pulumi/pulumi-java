@@ -16,62 +16,57 @@ public final class ComponentVariant extends com.pulumi.resources.InvokeArgs {
     public static final ComponentVariant Empty = new ComponentVariant();
 
     @Import(name="overrides")
-      private final @Nullable ComponentOverrides overrides;
+    private @Nullable ComponentOverrides overrides;
 
     public Optional<ComponentOverrides> overrides() {
-        return this.overrides == null ? Optional.empty() : Optional.ofNullable(this.overrides);
+        return Optional.ofNullable(this.overrides);
     }
 
     @Import(name="variantValues")
-      private final @Nullable ComponentVariantValues variantValues;
+    private @Nullable ComponentVariantValues variantValues;
 
     public Optional<ComponentVariantValues> variantValues() {
-        return this.variantValues == null ? Optional.empty() : Optional.ofNullable(this.variantValues);
+        return Optional.ofNullable(this.variantValues);
     }
 
-    public ComponentVariant(
-        @Nullable ComponentOverrides overrides,
-        @Nullable ComponentVariantValues variantValues) {
-        this.overrides = overrides;
-        this.variantValues = variantValues;
-    }
+    private ComponentVariant() {}
 
-    private ComponentVariant() {
-        this.overrides = null;
-        this.variantValues = null;
+    private ComponentVariant(ComponentVariant $) {
+        this.overrides = $.overrides;
+        this.variantValues = $.variantValues;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ComponentVariant defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable ComponentOverrides overrides;
-        private @Nullable ComponentVariantValues variantValues;
+        private ComponentVariant $;
 
         public Builder() {
-    	      // Empty
+            $ = new ComponentVariant();
         }
 
         public Builder(ComponentVariant defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.overrides = defaults.overrides;
-    	      this.variantValues = defaults.variantValues;
+            $ = new ComponentVariant(Objects.requireNonNull(defaults));
         }
 
         public Builder overrides(@Nullable ComponentOverrides overrides) {
-            this.overrides = overrides;
+            $.overrides = overrides;
             return this;
         }
+
         public Builder variantValues(@Nullable ComponentVariantValues variantValues) {
-            this.variantValues = variantValues;
+            $.variantValues = variantValues;
             return this;
-        }        public ComponentVariant build() {
-            return new ComponentVariant(overrides, variantValues);
+        }
+
+        public ComponentVariant build() {
+            return $;
         }
     }
+
 }

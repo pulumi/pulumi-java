@@ -18,97 +18,89 @@ public final class DataSourceSalesforceStandardObjectConfiguration extends com.p
     public static final DataSourceSalesforceStandardObjectConfiguration Empty = new DataSourceSalesforceStandardObjectConfiguration();
 
     @Import(name="documentDataFieldName", required=true)
-      private final String documentDataFieldName;
+    private String documentDataFieldName;
 
     public String documentDataFieldName() {
         return this.documentDataFieldName;
     }
 
     @Import(name="documentTitleFieldName")
-      private final @Nullable String documentTitleFieldName;
+    private @Nullable String documentTitleFieldName;
 
     public Optional<String> documentTitleFieldName() {
-        return this.documentTitleFieldName == null ? Optional.empty() : Optional.ofNullable(this.documentTitleFieldName);
+        return Optional.ofNullable(this.documentTitleFieldName);
     }
 
     @Import(name="fieldMappings")
-      private final @Nullable List<DataSourceToIndexFieldMapping> fieldMappings;
+    private @Nullable List<DataSourceToIndexFieldMapping> fieldMappings;
 
-    public List<DataSourceToIndexFieldMapping> fieldMappings() {
-        return this.fieldMappings == null ? List.of() : this.fieldMappings;
+    public Optional<List<DataSourceToIndexFieldMapping>> fieldMappings() {
+        return Optional.ofNullable(this.fieldMappings);
     }
 
     @Import(name="name", required=true)
-      private final DataSourceSalesforceStandardObjectName name;
+    private DataSourceSalesforceStandardObjectName name;
 
     public DataSourceSalesforceStandardObjectName name() {
         return this.name;
     }
 
-    public DataSourceSalesforceStandardObjectConfiguration(
-        String documentDataFieldName,
-        @Nullable String documentTitleFieldName,
-        @Nullable List<DataSourceToIndexFieldMapping> fieldMappings,
-        DataSourceSalesforceStandardObjectName name) {
-        this.documentDataFieldName = Objects.requireNonNull(documentDataFieldName, "expected parameter 'documentDataFieldName' to be non-null");
-        this.documentTitleFieldName = documentTitleFieldName;
-        this.fieldMappings = fieldMappings;
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-    }
+    private DataSourceSalesforceStandardObjectConfiguration() {}
 
-    private DataSourceSalesforceStandardObjectConfiguration() {
-        this.documentDataFieldName = null;
-        this.documentTitleFieldName = null;
-        this.fieldMappings = List.of();
-        this.name = null;
+    private DataSourceSalesforceStandardObjectConfiguration(DataSourceSalesforceStandardObjectConfiguration $) {
+        this.documentDataFieldName = $.documentDataFieldName;
+        this.documentTitleFieldName = $.documentTitleFieldName;
+        this.fieldMappings = $.fieldMappings;
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DataSourceSalesforceStandardObjectConfiguration defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String documentDataFieldName;
-        private @Nullable String documentTitleFieldName;
-        private @Nullable List<DataSourceToIndexFieldMapping> fieldMappings;
-        private DataSourceSalesforceStandardObjectName name;
+        private DataSourceSalesforceStandardObjectConfiguration $;
 
         public Builder() {
-    	      // Empty
+            $ = new DataSourceSalesforceStandardObjectConfiguration();
         }
 
         public Builder(DataSourceSalesforceStandardObjectConfiguration defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.documentDataFieldName = defaults.documentDataFieldName;
-    	      this.documentTitleFieldName = defaults.documentTitleFieldName;
-    	      this.fieldMappings = defaults.fieldMappings;
-    	      this.name = defaults.name;
+            $ = new DataSourceSalesforceStandardObjectConfiguration(Objects.requireNonNull(defaults));
         }
 
         public Builder documentDataFieldName(String documentDataFieldName) {
-            this.documentDataFieldName = Objects.requireNonNull(documentDataFieldName);
+            $.documentDataFieldName = documentDataFieldName;
             return this;
         }
+
         public Builder documentTitleFieldName(@Nullable String documentTitleFieldName) {
-            this.documentTitleFieldName = documentTitleFieldName;
+            $.documentTitleFieldName = documentTitleFieldName;
             return this;
         }
+
         public Builder fieldMappings(@Nullable List<DataSourceToIndexFieldMapping> fieldMappings) {
-            this.fieldMappings = fieldMappings;
+            $.fieldMappings = fieldMappings;
             return this;
         }
+
         public Builder fieldMappings(DataSourceToIndexFieldMapping... fieldMappings) {
             return fieldMappings(List.of(fieldMappings));
         }
+
         public Builder name(DataSourceSalesforceStandardObjectName name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
-        }        public DataSourceSalesforceStandardObjectConfiguration build() {
-            return new DataSourceSalesforceStandardObjectConfiguration(documentDataFieldName, documentTitleFieldName, fieldMappings, name);
+        }
+
+        public DataSourceSalesforceStandardObjectConfiguration build() {
+            $.documentDataFieldName = Objects.requireNonNull($.documentDataFieldName, "expected parameter 'documentDataFieldName' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            return $;
         }
     }
+
 }

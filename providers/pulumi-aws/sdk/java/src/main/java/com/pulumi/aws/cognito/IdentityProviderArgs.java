@@ -5,11 +5,11 @@ package com.pulumi.aws.cognito;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class IdentityProviderArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="attributeMapping")
-      private final @Nullable Output<Map<String,String>> attributeMapping;
+    private @Nullable Output<Map<String,String>> attributeMapping;
 
-    public Output<Map<String,String>> attributeMapping() {
-        return this.attributeMapping == null ? Codegen.empty() : this.attributeMapping;
+    public Optional<Output<Map<String,String>>> attributeMapping() {
+        return Optional.ofNullable(this.attributeMapping);
     }
 
     /**
@@ -33,10 +33,10 @@ public final class IdentityProviderArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="idpIdentifiers")
-      private final @Nullable Output<List<String>> idpIdentifiers;
+    private @Nullable Output<List<String>> idpIdentifiers;
 
-    public Output<List<String>> idpIdentifiers() {
-        return this.idpIdentifiers == null ? Codegen.empty() : this.idpIdentifiers;
+    public Optional<Output<List<String>>> idpIdentifiers() {
+        return Optional.ofNullable(this.idpIdentifiers);
     }
 
     /**
@@ -44,7 +44,7 @@ public final class IdentityProviderArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="providerDetails", required=true)
-      private final Output<Map<String,String>> providerDetails;
+    private Output<Map<String,String>> providerDetails;
 
     public Output<Map<String,String>> providerDetails() {
         return this.providerDetails;
@@ -55,7 +55,7 @@ public final class IdentityProviderArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="providerName", required=true)
-      private final Output<String> providerName;
+    private Output<String> providerName;
 
     public Output<String> providerName() {
         return this.providerName;
@@ -66,7 +66,7 @@ public final class IdentityProviderArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="providerType", required=true)
-      private final Output<String> providerType;
+    private Output<String> providerType;
 
     public Output<String> providerType() {
         return this.providerType;
@@ -77,118 +77,106 @@ public final class IdentityProviderArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="userPoolId", required=true)
-      private final Output<String> userPoolId;
+    private Output<String> userPoolId;
 
     public Output<String> userPoolId() {
         return this.userPoolId;
     }
 
-    public IdentityProviderArgs(
-        @Nullable Output<Map<String,String>> attributeMapping,
-        @Nullable Output<List<String>> idpIdentifiers,
-        Output<Map<String,String>> providerDetails,
-        Output<String> providerName,
-        Output<String> providerType,
-        Output<String> userPoolId) {
-        this.attributeMapping = attributeMapping;
-        this.idpIdentifiers = idpIdentifiers;
-        this.providerDetails = Objects.requireNonNull(providerDetails, "expected parameter 'providerDetails' to be non-null");
-        this.providerName = Objects.requireNonNull(providerName, "expected parameter 'providerName' to be non-null");
-        this.providerType = Objects.requireNonNull(providerType, "expected parameter 'providerType' to be non-null");
-        this.userPoolId = Objects.requireNonNull(userPoolId, "expected parameter 'userPoolId' to be non-null");
-    }
+    private IdentityProviderArgs() {}
 
-    private IdentityProviderArgs() {
-        this.attributeMapping = Codegen.empty();
-        this.idpIdentifiers = Codegen.empty();
-        this.providerDetails = Codegen.empty();
-        this.providerName = Codegen.empty();
-        this.providerType = Codegen.empty();
-        this.userPoolId = Codegen.empty();
+    private IdentityProviderArgs(IdentityProviderArgs $) {
+        this.attributeMapping = $.attributeMapping;
+        this.idpIdentifiers = $.idpIdentifiers;
+        this.providerDetails = $.providerDetails;
+        this.providerName = $.providerName;
+        this.providerType = $.providerType;
+        this.userPoolId = $.userPoolId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(IdentityProviderArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Map<String,String>> attributeMapping;
-        private @Nullable Output<List<String>> idpIdentifiers;
-        private Output<Map<String,String>> providerDetails;
-        private Output<String> providerName;
-        private Output<String> providerType;
-        private Output<String> userPoolId;
+        private IdentityProviderArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new IdentityProviderArgs();
         }
 
         public Builder(IdentityProviderArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.attributeMapping = defaults.attributeMapping;
-    	      this.idpIdentifiers = defaults.idpIdentifiers;
-    	      this.providerDetails = defaults.providerDetails;
-    	      this.providerName = defaults.providerName;
-    	      this.providerType = defaults.providerType;
-    	      this.userPoolId = defaults.userPoolId;
+            $ = new IdentityProviderArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder attributeMapping(@Nullable Output<Map<String,String>> attributeMapping) {
-            this.attributeMapping = attributeMapping;
+            $.attributeMapping = attributeMapping;
             return this;
         }
-        public Builder attributeMapping(@Nullable Map<String,String> attributeMapping) {
-            this.attributeMapping = Codegen.ofNullable(attributeMapping);
-            return this;
+
+        public Builder attributeMapping(Map<String,String> attributeMapping) {
+            return attributeMapping(Output.of(attributeMapping));
         }
+
         public Builder idpIdentifiers(@Nullable Output<List<String>> idpIdentifiers) {
-            this.idpIdentifiers = idpIdentifiers;
+            $.idpIdentifiers = idpIdentifiers;
             return this;
         }
-        public Builder idpIdentifiers(@Nullable List<String> idpIdentifiers) {
-            this.idpIdentifiers = Codegen.ofNullable(idpIdentifiers);
-            return this;
+
+        public Builder idpIdentifiers(List<String> idpIdentifiers) {
+            return idpIdentifiers(Output.of(idpIdentifiers));
         }
+
         public Builder idpIdentifiers(String... idpIdentifiers) {
             return idpIdentifiers(List.of(idpIdentifiers));
         }
+
         public Builder providerDetails(Output<Map<String,String>> providerDetails) {
-            this.providerDetails = Objects.requireNonNull(providerDetails);
+            $.providerDetails = providerDetails;
             return this;
         }
+
         public Builder providerDetails(Map<String,String> providerDetails) {
-            this.providerDetails = Output.of(Objects.requireNonNull(providerDetails));
-            return this;
+            return providerDetails(Output.of(providerDetails));
         }
+
         public Builder providerName(Output<String> providerName) {
-            this.providerName = Objects.requireNonNull(providerName);
+            $.providerName = providerName;
             return this;
         }
+
         public Builder providerName(String providerName) {
-            this.providerName = Output.of(Objects.requireNonNull(providerName));
-            return this;
+            return providerName(Output.of(providerName));
         }
+
         public Builder providerType(Output<String> providerType) {
-            this.providerType = Objects.requireNonNull(providerType);
+            $.providerType = providerType;
             return this;
         }
+
         public Builder providerType(String providerType) {
-            this.providerType = Output.of(Objects.requireNonNull(providerType));
-            return this;
+            return providerType(Output.of(providerType));
         }
+
         public Builder userPoolId(Output<String> userPoolId) {
-            this.userPoolId = Objects.requireNonNull(userPoolId);
+            $.userPoolId = userPoolId;
             return this;
         }
+
         public Builder userPoolId(String userPoolId) {
-            this.userPoolId = Output.of(Objects.requireNonNull(userPoolId));
-            return this;
-        }        public IdentityProviderArgs build() {
-            return new IdentityProviderArgs(attributeMapping, idpIdentifiers, providerDetails, providerName, providerType, userPoolId);
+            return userPoolId(Output.of(userPoolId));
+        }
+
+        public IdentityProviderArgs build() {
+            $.providerDetails = Objects.requireNonNull($.providerDetails, "expected parameter 'providerDetails' to be non-null");
+            $.providerName = Objects.requireNonNull($.providerName, "expected parameter 'providerName' to be non-null");
+            $.providerType = Objects.requireNonNull($.providerType, "expected parameter 'providerType' to be non-null");
+            $.userPoolId = Objects.requireNonNull($.userPoolId, "expected parameter 'userPoolId' to be non-null");
+            return $;
         }
     }
+
 }

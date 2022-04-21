@@ -25,10 +25,10 @@ public final class LogSettingsResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="copyActivityLogSettings")
-      private final @Nullable CopyActivityLogSettingsResponse copyActivityLogSettings;
+    private @Nullable CopyActivityLogSettingsResponse copyActivityLogSettings;
 
     public Optional<CopyActivityLogSettingsResponse> copyActivityLogSettings() {
-        return this.copyActivityLogSettings == null ? Optional.empty() : Optional.ofNullable(this.copyActivityLogSettings);
+        return Optional.ofNullable(this.copyActivityLogSettings);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class LogSettingsResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="enableCopyActivityLog")
-      private final @Nullable Object enableCopyActivityLog;
+    private @Nullable Object enableCopyActivityLog;
 
     public Optional<Object> enableCopyActivityLog() {
-        return this.enableCopyActivityLog == null ? Optional.empty() : Optional.ofNullable(this.enableCopyActivityLog);
+        return Optional.ofNullable(this.enableCopyActivityLog);
     }
 
     /**
@@ -47,64 +47,57 @@ public final class LogSettingsResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="logLocationSettings", required=true)
-      private final LogLocationSettingsResponse logLocationSettings;
+    private LogLocationSettingsResponse logLocationSettings;
 
     public LogLocationSettingsResponse logLocationSettings() {
         return this.logLocationSettings;
     }
 
-    public LogSettingsResponse(
-        @Nullable CopyActivityLogSettingsResponse copyActivityLogSettings,
-        @Nullable Object enableCopyActivityLog,
-        LogLocationSettingsResponse logLocationSettings) {
-        this.copyActivityLogSettings = copyActivityLogSettings;
-        this.enableCopyActivityLog = enableCopyActivityLog;
-        this.logLocationSettings = Objects.requireNonNull(logLocationSettings, "expected parameter 'logLocationSettings' to be non-null");
-    }
+    private LogSettingsResponse() {}
 
-    private LogSettingsResponse() {
-        this.copyActivityLogSettings = null;
-        this.enableCopyActivityLog = null;
-        this.logLocationSettings = null;
+    private LogSettingsResponse(LogSettingsResponse $) {
+        this.copyActivityLogSettings = $.copyActivityLogSettings;
+        this.enableCopyActivityLog = $.enableCopyActivityLog;
+        this.logLocationSettings = $.logLocationSettings;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LogSettingsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable CopyActivityLogSettingsResponse copyActivityLogSettings;
-        private @Nullable Object enableCopyActivityLog;
-        private LogLocationSettingsResponse logLocationSettings;
+        private LogSettingsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new LogSettingsResponse();
         }
 
         public Builder(LogSettingsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.copyActivityLogSettings = defaults.copyActivityLogSettings;
-    	      this.enableCopyActivityLog = defaults.enableCopyActivityLog;
-    	      this.logLocationSettings = defaults.logLocationSettings;
+            $ = new LogSettingsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder copyActivityLogSettings(@Nullable CopyActivityLogSettingsResponse copyActivityLogSettings) {
-            this.copyActivityLogSettings = copyActivityLogSettings;
+            $.copyActivityLogSettings = copyActivityLogSettings;
             return this;
         }
+
         public Builder enableCopyActivityLog(@Nullable Object enableCopyActivityLog) {
-            this.enableCopyActivityLog = enableCopyActivityLog;
+            $.enableCopyActivityLog = enableCopyActivityLog;
             return this;
         }
+
         public Builder logLocationSettings(LogLocationSettingsResponse logLocationSettings) {
-            this.logLocationSettings = Objects.requireNonNull(logLocationSettings);
+            $.logLocationSettings = logLocationSettings;
             return this;
-        }        public LogSettingsResponse build() {
-            return new LogSettingsResponse(copyActivityLogSettings, enableCopyActivityLog, logLocationSettings);
+        }
+
+        public LogSettingsResponse build() {
+            $.logLocationSettings = Objects.requireNonNull($.logLocationSettings, "expected parameter 'logLocationSettings' to be non-null");
+            return $;
         }
     }
+
 }

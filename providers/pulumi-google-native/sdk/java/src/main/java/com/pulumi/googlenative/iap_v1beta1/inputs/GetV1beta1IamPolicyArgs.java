@@ -13,45 +13,45 @@ public final class GetV1beta1IamPolicyArgs extends com.pulumi.resources.InvokeAr
     public static final GetV1beta1IamPolicyArgs Empty = new GetV1beta1IamPolicyArgs();
 
     @Import(name="v1beta1Id", required=true)
-      private final String v1beta1Id;
+    private String v1beta1Id;
 
     public String v1beta1Id() {
         return this.v1beta1Id;
     }
 
-    public GetV1beta1IamPolicyArgs(String v1beta1Id) {
-        this.v1beta1Id = Objects.requireNonNull(v1beta1Id, "expected parameter 'v1beta1Id' to be non-null");
-    }
+    private GetV1beta1IamPolicyArgs() {}
 
-    private GetV1beta1IamPolicyArgs() {
-        this.v1beta1Id = null;
+    private GetV1beta1IamPolicyArgs(GetV1beta1IamPolicyArgs $) {
+        this.v1beta1Id = $.v1beta1Id;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetV1beta1IamPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String v1beta1Id;
+        private GetV1beta1IamPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetV1beta1IamPolicyArgs();
         }
 
         public Builder(GetV1beta1IamPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.v1beta1Id = defaults.v1beta1Id;
+            $ = new GetV1beta1IamPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder v1beta1Id(String v1beta1Id) {
-            this.v1beta1Id = Objects.requireNonNull(v1beta1Id);
+            $.v1beta1Id = v1beta1Id;
             return this;
-        }        public GetV1beta1IamPolicyArgs build() {
-            return new GetV1beta1IamPolicyArgs(v1beta1Id);
+        }
+
+        public GetV1beta1IamPolicyArgs build() {
+            $.v1beta1Id = Objects.requireNonNull($.v1beta1Id, "expected parameter 'v1beta1Id' to be non-null");
+            return $;
         }
     }
+
 }

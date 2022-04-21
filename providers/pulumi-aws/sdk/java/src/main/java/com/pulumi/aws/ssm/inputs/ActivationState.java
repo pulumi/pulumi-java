@@ -5,12 +5,12 @@ package com.pulumi.aws.ssm.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,10 @@ public final class ActivationState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="activationCode")
-      private final @Nullable Output<String> activationCode;
+    private @Nullable Output<String> activationCode;
 
-    public Output<String> activationCode() {
-        return this.activationCode == null ? Codegen.empty() : this.activationCode;
+    public Optional<Output<String>> activationCode() {
+        return Optional.ofNullable(this.activationCode);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class ActivationState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -45,10 +45,10 @@ public final class ActivationState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="expirationDate")
-      private final @Nullable Output<String> expirationDate;
+    private @Nullable Output<String> expirationDate;
 
-    public Output<String> expirationDate() {
-        return this.expirationDate == null ? Codegen.empty() : this.expirationDate;
+    public Optional<Output<String>> expirationDate() {
+        return Optional.ofNullable(this.expirationDate);
     }
 
     /**
@@ -56,10 +56,10 @@ public final class ActivationState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="expired")
-      private final @Nullable Output<Boolean> expired;
+    private @Nullable Output<Boolean> expired;
 
-    public Output<Boolean> expired() {
-        return this.expired == null ? Codegen.empty() : this.expired;
+    public Optional<Output<Boolean>> expired() {
+        return Optional.ofNullable(this.expired);
     }
 
     /**
@@ -67,10 +67,10 @@ public final class ActivationState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="iamRole")
-      private final @Nullable Output<String> iamRole;
+    private @Nullable Output<String> iamRole;
 
-    public Output<String> iamRole() {
-        return this.iamRole == null ? Codegen.empty() : this.iamRole;
+    public Optional<Output<String>> iamRole() {
+        return Optional.ofNullable(this.iamRole);
     }
 
     /**
@@ -78,10 +78,10 @@ public final class ActivationState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -89,10 +89,10 @@ public final class ActivationState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="registrationCount")
-      private final @Nullable Output<Integer> registrationCount;
+    private @Nullable Output<Integer> registrationCount;
 
-    public Output<Integer> registrationCount() {
-        return this.registrationCount == null ? Codegen.empty() : this.registrationCount;
+    public Optional<Output<Integer>> registrationCount() {
+        return Optional.ofNullable(this.registrationCount);
     }
 
     /**
@@ -100,10 +100,10 @@ public final class ActivationState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="registrationLimit")
-      private final @Nullable Output<Integer> registrationLimit;
+    private @Nullable Output<Integer> registrationLimit;
 
-    public Output<Integer> registrationLimit() {
-        return this.registrationLimit == null ? Codegen.empty() : this.registrationLimit;
+    public Optional<Output<Integer>> registrationLimit() {
+        return Optional.ofNullable(this.registrationLimit);
     }
 
     /**
@@ -111,10 +111,10 @@ public final class ActivationState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -122,167 +122,138 @@ public final class ActivationState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tagsAll")
-      private final @Nullable Output<Map<String,String>> tagsAll;
+    private @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> tagsAll() {
-        return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
+    public Optional<Output<Map<String,String>>> tagsAll() {
+        return Optional.ofNullable(this.tagsAll);
     }
 
-    public ActivationState(
-        @Nullable Output<String> activationCode,
-        @Nullable Output<String> description,
-        @Nullable Output<String> expirationDate,
-        @Nullable Output<Boolean> expired,
-        @Nullable Output<String> iamRole,
-        @Nullable Output<String> name,
-        @Nullable Output<Integer> registrationCount,
-        @Nullable Output<Integer> registrationLimit,
-        @Nullable Output<Map<String,String>> tags,
-        @Nullable Output<Map<String,String>> tagsAll) {
-        this.activationCode = activationCode;
-        this.description = description;
-        this.expirationDate = expirationDate;
-        this.expired = expired;
-        this.iamRole = iamRole;
-        this.name = name;
-        this.registrationCount = registrationCount;
-        this.registrationLimit = registrationLimit;
-        this.tags = tags;
-        this.tagsAll = tagsAll;
-    }
+    private ActivationState() {}
 
-    private ActivationState() {
-        this.activationCode = Codegen.empty();
-        this.description = Codegen.empty();
-        this.expirationDate = Codegen.empty();
-        this.expired = Codegen.empty();
-        this.iamRole = Codegen.empty();
-        this.name = Codegen.empty();
-        this.registrationCount = Codegen.empty();
-        this.registrationLimit = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.tagsAll = Codegen.empty();
+    private ActivationState(ActivationState $) {
+        this.activationCode = $.activationCode;
+        this.description = $.description;
+        this.expirationDate = $.expirationDate;
+        this.expired = $.expired;
+        this.iamRole = $.iamRole;
+        this.name = $.name;
+        this.registrationCount = $.registrationCount;
+        this.registrationLimit = $.registrationLimit;
+        this.tags = $.tags;
+        this.tagsAll = $.tagsAll;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ActivationState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> activationCode;
-        private @Nullable Output<String> description;
-        private @Nullable Output<String> expirationDate;
-        private @Nullable Output<Boolean> expired;
-        private @Nullable Output<String> iamRole;
-        private @Nullable Output<String> name;
-        private @Nullable Output<Integer> registrationCount;
-        private @Nullable Output<Integer> registrationLimit;
-        private @Nullable Output<Map<String,String>> tags;
-        private @Nullable Output<Map<String,String>> tagsAll;
+        private ActivationState $;
 
         public Builder() {
-    	      // Empty
+            $ = new ActivationState();
         }
 
         public Builder(ActivationState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.activationCode = defaults.activationCode;
-    	      this.description = defaults.description;
-    	      this.expirationDate = defaults.expirationDate;
-    	      this.expired = defaults.expired;
-    	      this.iamRole = defaults.iamRole;
-    	      this.name = defaults.name;
-    	      this.registrationCount = defaults.registrationCount;
-    	      this.registrationLimit = defaults.registrationLimit;
-    	      this.tags = defaults.tags;
-    	      this.tagsAll = defaults.tagsAll;
+            $ = new ActivationState(Objects.requireNonNull(defaults));
         }
 
         public Builder activationCode(@Nullable Output<String> activationCode) {
-            this.activationCode = activationCode;
+            $.activationCode = activationCode;
             return this;
         }
-        public Builder activationCode(@Nullable String activationCode) {
-            this.activationCode = Codegen.ofNullable(activationCode);
-            return this;
+
+        public Builder activationCode(String activationCode) {
+            return activationCode(Output.of(activationCode));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder expirationDate(@Nullable Output<String> expirationDate) {
-            this.expirationDate = expirationDate;
+            $.expirationDate = expirationDate;
             return this;
         }
-        public Builder expirationDate(@Nullable String expirationDate) {
-            this.expirationDate = Codegen.ofNullable(expirationDate);
-            return this;
+
+        public Builder expirationDate(String expirationDate) {
+            return expirationDate(Output.of(expirationDate));
         }
+
         public Builder expired(@Nullable Output<Boolean> expired) {
-            this.expired = expired;
+            $.expired = expired;
             return this;
         }
-        public Builder expired(@Nullable Boolean expired) {
-            this.expired = Codegen.ofNullable(expired);
-            return this;
+
+        public Builder expired(Boolean expired) {
+            return expired(Output.of(expired));
         }
+
         public Builder iamRole(@Nullable Output<String> iamRole) {
-            this.iamRole = iamRole;
+            $.iamRole = iamRole;
             return this;
         }
-        public Builder iamRole(@Nullable String iamRole) {
-            this.iamRole = Codegen.ofNullable(iamRole);
-            return this;
+
+        public Builder iamRole(String iamRole) {
+            return iamRole(Output.of(iamRole));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder registrationCount(@Nullable Output<Integer> registrationCount) {
-            this.registrationCount = registrationCount;
+            $.registrationCount = registrationCount;
             return this;
         }
-        public Builder registrationCount(@Nullable Integer registrationCount) {
-            this.registrationCount = Codegen.ofNullable(registrationCount);
-            return this;
+
+        public Builder registrationCount(Integer registrationCount) {
+            return registrationCount(Output.of(registrationCount));
         }
+
         public Builder registrationLimit(@Nullable Output<Integer> registrationLimit) {
-            this.registrationLimit = registrationLimit;
+            $.registrationLimit = registrationLimit;
             return this;
         }
-        public Builder registrationLimit(@Nullable Integer registrationLimit) {
-            this.registrationLimit = Codegen.ofNullable(registrationLimit);
-            return this;
+
+        public Builder registrationLimit(Integer registrationLimit) {
+            return registrationLimit(Output.of(registrationLimit));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
-            this.tagsAll = tagsAll;
+            $.tagsAll = tagsAll;
             return this;
         }
-        public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Codegen.ofNullable(tagsAll);
-            return this;
-        }        public ActivationState build() {
-            return new ActivationState(activationCode, description, expirationDate, expired, iamRole, name, registrationCount, registrationLimit, tags, tagsAll);
+
+        public Builder tagsAll(Map<String,String> tagsAll) {
+            return tagsAll(Output.of(tagsAll));
+        }
+
+        public ActivationState build() {
+            return $;
         }
     }
+
 }

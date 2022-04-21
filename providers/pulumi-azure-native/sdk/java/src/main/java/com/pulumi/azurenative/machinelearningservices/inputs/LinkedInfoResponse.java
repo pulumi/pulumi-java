@@ -23,10 +23,10 @@ public final class LinkedInfoResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="linkedId")
-      private final @Nullable String linkedId;
+    private @Nullable String linkedId;
 
     public Optional<String> linkedId() {
-        return this.linkedId == null ? Optional.empty() : Optional.ofNullable(this.linkedId);
+        return Optional.ofNullable(this.linkedId);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class LinkedInfoResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="linkedResourceName")
-      private final @Nullable String linkedResourceName;
+    private @Nullable String linkedResourceName;
 
     public Optional<String> linkedResourceName() {
-        return this.linkedResourceName == null ? Optional.empty() : Optional.ofNullable(this.linkedResourceName);
+        return Optional.ofNullable(this.linkedResourceName);
     }
 
     /**
@@ -45,64 +45,56 @@ public final class LinkedInfoResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="origin")
-      private final @Nullable String origin;
+    private @Nullable String origin;
 
     public Optional<String> origin() {
-        return this.origin == null ? Optional.empty() : Optional.ofNullable(this.origin);
+        return Optional.ofNullable(this.origin);
     }
 
-    public LinkedInfoResponse(
-        @Nullable String linkedId,
-        @Nullable String linkedResourceName,
-        @Nullable String origin) {
-        this.linkedId = linkedId;
-        this.linkedResourceName = linkedResourceName;
-        this.origin = origin;
-    }
+    private LinkedInfoResponse() {}
 
-    private LinkedInfoResponse() {
-        this.linkedId = null;
-        this.linkedResourceName = null;
-        this.origin = null;
+    private LinkedInfoResponse(LinkedInfoResponse $) {
+        this.linkedId = $.linkedId;
+        this.linkedResourceName = $.linkedResourceName;
+        this.origin = $.origin;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LinkedInfoResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String linkedId;
-        private @Nullable String linkedResourceName;
-        private @Nullable String origin;
+        private LinkedInfoResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new LinkedInfoResponse();
         }
 
         public Builder(LinkedInfoResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.linkedId = defaults.linkedId;
-    	      this.linkedResourceName = defaults.linkedResourceName;
-    	      this.origin = defaults.origin;
+            $ = new LinkedInfoResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder linkedId(@Nullable String linkedId) {
-            this.linkedId = linkedId;
+            $.linkedId = linkedId;
             return this;
         }
+
         public Builder linkedResourceName(@Nullable String linkedResourceName) {
-            this.linkedResourceName = linkedResourceName;
+            $.linkedResourceName = linkedResourceName;
             return this;
         }
+
         public Builder origin(@Nullable String origin) {
-            this.origin = origin;
+            $.origin = origin;
             return this;
-        }        public LinkedInfoResponse build() {
-            return new LinkedInfoResponse(linkedId, linkedResourceName, origin);
+        }
+
+        public LinkedInfoResponse build() {
+            return $;
         }
     }
+
 }

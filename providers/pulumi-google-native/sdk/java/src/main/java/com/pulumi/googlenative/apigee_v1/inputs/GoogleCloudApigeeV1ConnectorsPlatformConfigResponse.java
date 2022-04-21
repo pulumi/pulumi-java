@@ -22,7 +22,7 @@ public final class GoogleCloudApigeeV1ConnectorsPlatformConfigResponse extends c
      * 
      */
     @Import(name="enabled", required=true)
-      private final Boolean enabled;
+    private Boolean enabled;
 
     public Boolean enabled() {
         return this.enabled;
@@ -33,55 +33,52 @@ public final class GoogleCloudApigeeV1ConnectorsPlatformConfigResponse extends c
      * 
      */
     @Import(name="expiresAt", required=true)
-      private final String expiresAt;
+    private String expiresAt;
 
     public String expiresAt() {
         return this.expiresAt;
     }
 
-    public GoogleCloudApigeeV1ConnectorsPlatformConfigResponse(
-        Boolean enabled,
-        String expiresAt) {
-        this.enabled = Objects.requireNonNull(enabled, "expected parameter 'enabled' to be non-null");
-        this.expiresAt = Objects.requireNonNull(expiresAt, "expected parameter 'expiresAt' to be non-null");
-    }
+    private GoogleCloudApigeeV1ConnectorsPlatformConfigResponse() {}
 
-    private GoogleCloudApigeeV1ConnectorsPlatformConfigResponse() {
-        this.enabled = null;
-        this.expiresAt = null;
+    private GoogleCloudApigeeV1ConnectorsPlatformConfigResponse(GoogleCloudApigeeV1ConnectorsPlatformConfigResponse $) {
+        this.enabled = $.enabled;
+        this.expiresAt = $.expiresAt;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudApigeeV1ConnectorsPlatformConfigResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Boolean enabled;
-        private String expiresAt;
+        private GoogleCloudApigeeV1ConnectorsPlatformConfigResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudApigeeV1ConnectorsPlatformConfigResponse();
         }
 
         public Builder(GoogleCloudApigeeV1ConnectorsPlatformConfigResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.enabled = defaults.enabled;
-    	      this.expiresAt = defaults.expiresAt;
+            $ = new GoogleCloudApigeeV1ConnectorsPlatformConfigResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder enabled(Boolean enabled) {
-            this.enabled = Objects.requireNonNull(enabled);
+            $.enabled = enabled;
             return this;
         }
+
         public Builder expiresAt(String expiresAt) {
-            this.expiresAt = Objects.requireNonNull(expiresAt);
+            $.expiresAt = expiresAt;
             return this;
-        }        public GoogleCloudApigeeV1ConnectorsPlatformConfigResponse build() {
-            return new GoogleCloudApigeeV1ConnectorsPlatformConfigResponse(enabled, expiresAt);
+        }
+
+        public GoogleCloudApigeeV1ConnectorsPlatformConfigResponse build() {
+            $.enabled = Objects.requireNonNull($.enabled, "expected parameter 'enabled' to be non-null");
+            $.expiresAt = Objects.requireNonNull($.expiresAt, "expected parameter 'expiresAt' to be non-null");
+            return $;
         }
     }
+
 }

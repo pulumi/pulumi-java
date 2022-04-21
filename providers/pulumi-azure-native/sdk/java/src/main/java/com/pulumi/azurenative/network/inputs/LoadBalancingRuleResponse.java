@@ -26,10 +26,10 @@ public final class LoadBalancingRuleResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="backendAddressPool")
-      private final @Nullable SubResourceResponse backendAddressPool;
+    private @Nullable SubResourceResponse backendAddressPool;
 
     public Optional<SubResourceResponse> backendAddressPool() {
-        return this.backendAddressPool == null ? Optional.empty() : Optional.ofNullable(this.backendAddressPool);
+        return Optional.ofNullable(this.backendAddressPool);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class LoadBalancingRuleResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="backendPort")
-      private final @Nullable Integer backendPort;
+    private @Nullable Integer backendPort;
 
     public Optional<Integer> backendPort() {
-        return this.backendPort == null ? Optional.empty() : Optional.ofNullable(this.backendPort);
+        return Optional.ofNullable(this.backendPort);
     }
 
     /**
@@ -48,10 +48,10 @@ public final class LoadBalancingRuleResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="disableOutboundSnat")
-      private final @Nullable Boolean disableOutboundSnat;
+    private @Nullable Boolean disableOutboundSnat;
 
     public Optional<Boolean> disableOutboundSnat() {
-        return this.disableOutboundSnat == null ? Optional.empty() : Optional.ofNullable(this.disableOutboundSnat);
+        return Optional.ofNullable(this.disableOutboundSnat);
     }
 
     /**
@@ -59,10 +59,10 @@ public final class LoadBalancingRuleResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="enableFloatingIP")
-      private final @Nullable Boolean enableFloatingIP;
+    private @Nullable Boolean enableFloatingIP;
 
     public Optional<Boolean> enableFloatingIP() {
-        return this.enableFloatingIP == null ? Optional.empty() : Optional.ofNullable(this.enableFloatingIP);
+        return Optional.ofNullable(this.enableFloatingIP);
     }
 
     /**
@@ -70,10 +70,10 @@ public final class LoadBalancingRuleResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="enableTcpReset")
-      private final @Nullable Boolean enableTcpReset;
+    private @Nullable Boolean enableTcpReset;
 
     public Optional<Boolean> enableTcpReset() {
-        return this.enableTcpReset == null ? Optional.empty() : Optional.ofNullable(this.enableTcpReset);
+        return Optional.ofNullable(this.enableTcpReset);
     }
 
     /**
@@ -81,7 +81,7 @@ public final class LoadBalancingRuleResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="etag", required=true)
-      private final String etag;
+    private String etag;
 
     public String etag() {
         return this.etag;
@@ -92,10 +92,10 @@ public final class LoadBalancingRuleResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="frontendIPConfiguration")
-      private final @Nullable SubResourceResponse frontendIPConfiguration;
+    private @Nullable SubResourceResponse frontendIPConfiguration;
 
     public Optional<SubResourceResponse> frontendIPConfiguration() {
-        return this.frontendIPConfiguration == null ? Optional.empty() : Optional.ofNullable(this.frontendIPConfiguration);
+        return Optional.ofNullable(this.frontendIPConfiguration);
     }
 
     /**
@@ -103,7 +103,7 @@ public final class LoadBalancingRuleResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="frontendPort", required=true)
-      private final Integer frontendPort;
+    private Integer frontendPort;
 
     public Integer frontendPort() {
         return this.frontendPort;
@@ -114,10 +114,10 @@ public final class LoadBalancingRuleResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="id")
-      private final @Nullable String id;
+    private @Nullable String id;
 
     public Optional<String> id() {
-        return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
+        return Optional.ofNullable(this.id);
     }
 
     /**
@@ -125,10 +125,10 @@ public final class LoadBalancingRuleResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="idleTimeoutInMinutes")
-      private final @Nullable Integer idleTimeoutInMinutes;
+    private @Nullable Integer idleTimeoutInMinutes;
 
     public Optional<Integer> idleTimeoutInMinutes() {
-        return this.idleTimeoutInMinutes == null ? Optional.empty() : Optional.ofNullable(this.idleTimeoutInMinutes);
+        return Optional.ofNullable(this.idleTimeoutInMinutes);
     }
 
     /**
@@ -136,10 +136,10 @@ public final class LoadBalancingRuleResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="loadDistribution")
-      private final @Nullable String loadDistribution;
+    private @Nullable String loadDistribution;
 
     public Optional<String> loadDistribution() {
-        return this.loadDistribution == null ? Optional.empty() : Optional.ofNullable(this.loadDistribution);
+        return Optional.ofNullable(this.loadDistribution);
     }
 
     /**
@@ -147,10 +147,10 @@ public final class LoadBalancingRuleResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="name")
-      private final @Nullable String name;
+    private @Nullable String name;
 
     public Optional<String> name() {
-        return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -158,10 +158,10 @@ public final class LoadBalancingRuleResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="probe")
-      private final @Nullable SubResourceResponse probe;
+    private @Nullable SubResourceResponse probe;
 
     public Optional<SubResourceResponse> probe() {
-        return this.probe == null ? Optional.empty() : Optional.ofNullable(this.probe);
+        return Optional.ofNullable(this.probe);
     }
 
     /**
@@ -169,7 +169,7 @@ public final class LoadBalancingRuleResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="protocol", required=true)
-      private final String protocol;
+    private String protocol;
 
     public String protocol() {
         return this.protocol;
@@ -180,7 +180,7 @@ public final class LoadBalancingRuleResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="provisioningState", required=true)
-      private final String provisioningState;
+    private String provisioningState;
 
     public String provisioningState() {
         return this.provisioningState;
@@ -191,181 +191,139 @@ public final class LoadBalancingRuleResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
     }
 
-    public LoadBalancingRuleResponse(
-        @Nullable SubResourceResponse backendAddressPool,
-        @Nullable Integer backendPort,
-        @Nullable Boolean disableOutboundSnat,
-        @Nullable Boolean enableFloatingIP,
-        @Nullable Boolean enableTcpReset,
-        String etag,
-        @Nullable SubResourceResponse frontendIPConfiguration,
-        Integer frontendPort,
-        @Nullable String id,
-        @Nullable Integer idleTimeoutInMinutes,
-        @Nullable String loadDistribution,
-        @Nullable String name,
-        @Nullable SubResourceResponse probe,
-        String protocol,
-        String provisioningState,
-        String type) {
-        this.backendAddressPool = backendAddressPool;
-        this.backendPort = backendPort;
-        this.disableOutboundSnat = disableOutboundSnat;
-        this.enableFloatingIP = enableFloatingIP;
-        this.enableTcpReset = enableTcpReset;
-        this.etag = Objects.requireNonNull(etag, "expected parameter 'etag' to be non-null");
-        this.frontendIPConfiguration = frontendIPConfiguration;
-        this.frontendPort = Objects.requireNonNull(frontendPort, "expected parameter 'frontendPort' to be non-null");
-        this.id = id;
-        this.idleTimeoutInMinutes = idleTimeoutInMinutes;
-        this.loadDistribution = loadDistribution;
-        this.name = name;
-        this.probe = probe;
-        this.protocol = Objects.requireNonNull(protocol, "expected parameter 'protocol' to be non-null");
-        this.provisioningState = Objects.requireNonNull(provisioningState, "expected parameter 'provisioningState' to be non-null");
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private LoadBalancingRuleResponse() {}
 
-    private LoadBalancingRuleResponse() {
-        this.backendAddressPool = null;
-        this.backendPort = null;
-        this.disableOutboundSnat = null;
-        this.enableFloatingIP = null;
-        this.enableTcpReset = null;
-        this.etag = null;
-        this.frontendIPConfiguration = null;
-        this.frontendPort = null;
-        this.id = null;
-        this.idleTimeoutInMinutes = null;
-        this.loadDistribution = null;
-        this.name = null;
-        this.probe = null;
-        this.protocol = null;
-        this.provisioningState = null;
-        this.type = null;
+    private LoadBalancingRuleResponse(LoadBalancingRuleResponse $) {
+        this.backendAddressPool = $.backendAddressPool;
+        this.backendPort = $.backendPort;
+        this.disableOutboundSnat = $.disableOutboundSnat;
+        this.enableFloatingIP = $.enableFloatingIP;
+        this.enableTcpReset = $.enableTcpReset;
+        this.etag = $.etag;
+        this.frontendIPConfiguration = $.frontendIPConfiguration;
+        this.frontendPort = $.frontendPort;
+        this.id = $.id;
+        this.idleTimeoutInMinutes = $.idleTimeoutInMinutes;
+        this.loadDistribution = $.loadDistribution;
+        this.name = $.name;
+        this.probe = $.probe;
+        this.protocol = $.protocol;
+        this.provisioningState = $.provisioningState;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LoadBalancingRuleResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable SubResourceResponse backendAddressPool;
-        private @Nullable Integer backendPort;
-        private @Nullable Boolean disableOutboundSnat;
-        private @Nullable Boolean enableFloatingIP;
-        private @Nullable Boolean enableTcpReset;
-        private String etag;
-        private @Nullable SubResourceResponse frontendIPConfiguration;
-        private Integer frontendPort;
-        private @Nullable String id;
-        private @Nullable Integer idleTimeoutInMinutes;
-        private @Nullable String loadDistribution;
-        private @Nullable String name;
-        private @Nullable SubResourceResponse probe;
-        private String protocol;
-        private String provisioningState;
-        private String type;
+        private LoadBalancingRuleResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new LoadBalancingRuleResponse();
         }
 
         public Builder(LoadBalancingRuleResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.backendAddressPool = defaults.backendAddressPool;
-    	      this.backendPort = defaults.backendPort;
-    	      this.disableOutboundSnat = defaults.disableOutboundSnat;
-    	      this.enableFloatingIP = defaults.enableFloatingIP;
-    	      this.enableTcpReset = defaults.enableTcpReset;
-    	      this.etag = defaults.etag;
-    	      this.frontendIPConfiguration = defaults.frontendIPConfiguration;
-    	      this.frontendPort = defaults.frontendPort;
-    	      this.id = defaults.id;
-    	      this.idleTimeoutInMinutes = defaults.idleTimeoutInMinutes;
-    	      this.loadDistribution = defaults.loadDistribution;
-    	      this.name = defaults.name;
-    	      this.probe = defaults.probe;
-    	      this.protocol = defaults.protocol;
-    	      this.provisioningState = defaults.provisioningState;
-    	      this.type = defaults.type;
+            $ = new LoadBalancingRuleResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder backendAddressPool(@Nullable SubResourceResponse backendAddressPool) {
-            this.backendAddressPool = backendAddressPool;
+            $.backendAddressPool = backendAddressPool;
             return this;
         }
+
         public Builder backendPort(@Nullable Integer backendPort) {
-            this.backendPort = backendPort;
+            $.backendPort = backendPort;
             return this;
         }
+
         public Builder disableOutboundSnat(@Nullable Boolean disableOutboundSnat) {
-            this.disableOutboundSnat = disableOutboundSnat;
+            $.disableOutboundSnat = disableOutboundSnat;
             return this;
         }
+
         public Builder enableFloatingIP(@Nullable Boolean enableFloatingIP) {
-            this.enableFloatingIP = enableFloatingIP;
+            $.enableFloatingIP = enableFloatingIP;
             return this;
         }
+
         public Builder enableTcpReset(@Nullable Boolean enableTcpReset) {
-            this.enableTcpReset = enableTcpReset;
+            $.enableTcpReset = enableTcpReset;
             return this;
         }
+
         public Builder etag(String etag) {
-            this.etag = Objects.requireNonNull(etag);
+            $.etag = etag;
             return this;
         }
+
         public Builder frontendIPConfiguration(@Nullable SubResourceResponse frontendIPConfiguration) {
-            this.frontendIPConfiguration = frontendIPConfiguration;
+            $.frontendIPConfiguration = frontendIPConfiguration;
             return this;
         }
+
         public Builder frontendPort(Integer frontendPort) {
-            this.frontendPort = Objects.requireNonNull(frontendPort);
+            $.frontendPort = frontendPort;
             return this;
         }
+
         public Builder id(@Nullable String id) {
-            this.id = id;
+            $.id = id;
             return this;
         }
+
         public Builder idleTimeoutInMinutes(@Nullable Integer idleTimeoutInMinutes) {
-            this.idleTimeoutInMinutes = idleTimeoutInMinutes;
+            $.idleTimeoutInMinutes = idleTimeoutInMinutes;
             return this;
         }
+
         public Builder loadDistribution(@Nullable String loadDistribution) {
-            this.loadDistribution = loadDistribution;
+            $.loadDistribution = loadDistribution;
             return this;
         }
+
         public Builder name(@Nullable String name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
+
         public Builder probe(@Nullable SubResourceResponse probe) {
-            this.probe = probe;
+            $.probe = probe;
             return this;
         }
+
         public Builder protocol(String protocol) {
-            this.protocol = Objects.requireNonNull(protocol);
+            $.protocol = protocol;
             return this;
         }
+
         public Builder provisioningState(String provisioningState) {
-            this.provisioningState = Objects.requireNonNull(provisioningState);
+            $.provisioningState = provisioningState;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
-        }        public LoadBalancingRuleResponse build() {
-            return new LoadBalancingRuleResponse(backendAddressPool, backendPort, disableOutboundSnat, enableFloatingIP, enableTcpReset, etag, frontendIPConfiguration, frontendPort, id, idleTimeoutInMinutes, loadDistribution, name, probe, protocol, provisioningState, type);
+        }
+
+        public LoadBalancingRuleResponse build() {
+            $.etag = Objects.requireNonNull($.etag, "expected parameter 'etag' to be non-null");
+            $.frontendPort = Objects.requireNonNull($.frontendPort, "expected parameter 'frontendPort' to be non-null");
+            $.protocol = Objects.requireNonNull($.protocol, "expected parameter 'protocol' to be non-null");
+            $.provisioningState = Objects.requireNonNull($.provisioningState, "expected parameter 'provisioningState' to be non-null");
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

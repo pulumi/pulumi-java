@@ -17,45 +17,45 @@ public final class GetDomainClusterConfigZoneAwarenessConfig extends com.pulumi.
      * 
      */
     @Import(name="availabilityZoneCount", required=true)
-      private final Integer availabilityZoneCount;
+    private Integer availabilityZoneCount;
 
     public Integer availabilityZoneCount() {
         return this.availabilityZoneCount;
     }
 
-    public GetDomainClusterConfigZoneAwarenessConfig(Integer availabilityZoneCount) {
-        this.availabilityZoneCount = Objects.requireNonNull(availabilityZoneCount, "expected parameter 'availabilityZoneCount' to be non-null");
-    }
+    private GetDomainClusterConfigZoneAwarenessConfig() {}
 
-    private GetDomainClusterConfigZoneAwarenessConfig() {
-        this.availabilityZoneCount = null;
+    private GetDomainClusterConfigZoneAwarenessConfig(GetDomainClusterConfigZoneAwarenessConfig $) {
+        this.availabilityZoneCount = $.availabilityZoneCount;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetDomainClusterConfigZoneAwarenessConfig defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Integer availabilityZoneCount;
+        private GetDomainClusterConfigZoneAwarenessConfig $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetDomainClusterConfigZoneAwarenessConfig();
         }
 
         public Builder(GetDomainClusterConfigZoneAwarenessConfig defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.availabilityZoneCount = defaults.availabilityZoneCount;
+            $ = new GetDomainClusterConfigZoneAwarenessConfig(Objects.requireNonNull(defaults));
         }
 
         public Builder availabilityZoneCount(Integer availabilityZoneCount) {
-            this.availabilityZoneCount = Objects.requireNonNull(availabilityZoneCount);
+            $.availabilityZoneCount = availabilityZoneCount;
             return this;
-        }        public GetDomainClusterConfigZoneAwarenessConfig build() {
-            return new GetDomainClusterConfigZoneAwarenessConfig(availabilityZoneCount);
+        }
+
+        public GetDomainClusterConfigZoneAwarenessConfig build() {
+            $.availabilityZoneCount = Objects.requireNonNull($.availabilityZoneCount, "expected parameter 'availabilityZoneCount' to be non-null");
+            return $;
         }
     }
+
 }

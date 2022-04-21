@@ -16,78 +16,70 @@ public final class InAppTemplateHeaderConfig extends com.pulumi.resources.Invoke
     public static final InAppTemplateHeaderConfig Empty = new InAppTemplateHeaderConfig();
 
     @Import(name="alignment")
-      private final @Nullable InAppTemplateAlignment alignment;
+    private @Nullable InAppTemplateAlignment alignment;
 
     public Optional<InAppTemplateAlignment> alignment() {
-        return this.alignment == null ? Optional.empty() : Optional.ofNullable(this.alignment);
+        return Optional.ofNullable(this.alignment);
     }
 
     @Import(name="header")
-      private final @Nullable String header;
+    private @Nullable String header;
 
     public Optional<String> header() {
-        return this.header == null ? Optional.empty() : Optional.ofNullable(this.header);
+        return Optional.ofNullable(this.header);
     }
 
     @Import(name="textColor")
-      private final @Nullable String textColor;
+    private @Nullable String textColor;
 
     public Optional<String> textColor() {
-        return this.textColor == null ? Optional.empty() : Optional.ofNullable(this.textColor);
+        return Optional.ofNullable(this.textColor);
     }
 
-    public InAppTemplateHeaderConfig(
-        @Nullable InAppTemplateAlignment alignment,
-        @Nullable String header,
-        @Nullable String textColor) {
-        this.alignment = alignment;
-        this.header = header;
-        this.textColor = textColor;
-    }
+    private InAppTemplateHeaderConfig() {}
 
-    private InAppTemplateHeaderConfig() {
-        this.alignment = null;
-        this.header = null;
-        this.textColor = null;
+    private InAppTemplateHeaderConfig(InAppTemplateHeaderConfig $) {
+        this.alignment = $.alignment;
+        this.header = $.header;
+        this.textColor = $.textColor;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(InAppTemplateHeaderConfig defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable InAppTemplateAlignment alignment;
-        private @Nullable String header;
-        private @Nullable String textColor;
+        private InAppTemplateHeaderConfig $;
 
         public Builder() {
-    	      // Empty
+            $ = new InAppTemplateHeaderConfig();
         }
 
         public Builder(InAppTemplateHeaderConfig defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.alignment = defaults.alignment;
-    	      this.header = defaults.header;
-    	      this.textColor = defaults.textColor;
+            $ = new InAppTemplateHeaderConfig(Objects.requireNonNull(defaults));
         }
 
         public Builder alignment(@Nullable InAppTemplateAlignment alignment) {
-            this.alignment = alignment;
+            $.alignment = alignment;
             return this;
         }
+
         public Builder header(@Nullable String header) {
-            this.header = header;
+            $.header = header;
             return this;
         }
+
         public Builder textColor(@Nullable String textColor) {
-            this.textColor = textColor;
+            $.textColor = textColor;
             return this;
-        }        public InAppTemplateHeaderConfig build() {
-            return new InAppTemplateHeaderConfig(alignment, header, textColor);
+        }
+
+        public InAppTemplateHeaderConfig build() {
+            return $;
         }
     }
+
 }

@@ -25,7 +25,7 @@ public final class DomainMappingStatusResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="conditions", required=true)
-      private final List<GoogleCloudRunV1ConditionResponse> conditions;
+    private List<GoogleCloudRunV1ConditionResponse> conditions;
 
     public List<GoogleCloudRunV1ConditionResponse> conditions() {
         return this.conditions;
@@ -36,7 +36,7 @@ public final class DomainMappingStatusResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="mappedRouteName", required=true)
-      private final String mappedRouteName;
+    private String mappedRouteName;
 
     public String mappedRouteName() {
         return this.mappedRouteName;
@@ -47,7 +47,7 @@ public final class DomainMappingStatusResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="observedGeneration", required=true)
-      private final Integer observedGeneration;
+    private Integer observedGeneration;
 
     public Integer observedGeneration() {
         return this.observedGeneration;
@@ -58,7 +58,7 @@ public final class DomainMappingStatusResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="resourceRecords", required=true)
-      private final List<ResourceRecordResponse> resourceRecords;
+    private List<ResourceRecordResponse> resourceRecords;
 
     public List<ResourceRecordResponse> resourceRecords() {
         return this.resourceRecords;
@@ -69,88 +69,81 @@ public final class DomainMappingStatusResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="url", required=true)
-      private final String url;
+    private String url;
 
     public String url() {
         return this.url;
     }
 
-    public DomainMappingStatusResponse(
-        List<GoogleCloudRunV1ConditionResponse> conditions,
-        String mappedRouteName,
-        Integer observedGeneration,
-        List<ResourceRecordResponse> resourceRecords,
-        String url) {
-        this.conditions = Objects.requireNonNull(conditions, "expected parameter 'conditions' to be non-null");
-        this.mappedRouteName = Objects.requireNonNull(mappedRouteName, "expected parameter 'mappedRouteName' to be non-null");
-        this.observedGeneration = Objects.requireNonNull(observedGeneration, "expected parameter 'observedGeneration' to be non-null");
-        this.resourceRecords = Objects.requireNonNull(resourceRecords, "expected parameter 'resourceRecords' to be non-null");
-        this.url = Objects.requireNonNull(url, "expected parameter 'url' to be non-null");
-    }
+    private DomainMappingStatusResponse() {}
 
-    private DomainMappingStatusResponse() {
-        this.conditions = List.of();
-        this.mappedRouteName = null;
-        this.observedGeneration = null;
-        this.resourceRecords = List.of();
-        this.url = null;
+    private DomainMappingStatusResponse(DomainMappingStatusResponse $) {
+        this.conditions = $.conditions;
+        this.mappedRouteName = $.mappedRouteName;
+        this.observedGeneration = $.observedGeneration;
+        this.resourceRecords = $.resourceRecords;
+        this.url = $.url;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DomainMappingStatusResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<GoogleCloudRunV1ConditionResponse> conditions;
-        private String mappedRouteName;
-        private Integer observedGeneration;
-        private List<ResourceRecordResponse> resourceRecords;
-        private String url;
+        private DomainMappingStatusResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new DomainMappingStatusResponse();
         }
 
         public Builder(DomainMappingStatusResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.conditions = defaults.conditions;
-    	      this.mappedRouteName = defaults.mappedRouteName;
-    	      this.observedGeneration = defaults.observedGeneration;
-    	      this.resourceRecords = defaults.resourceRecords;
-    	      this.url = defaults.url;
+            $ = new DomainMappingStatusResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder conditions(List<GoogleCloudRunV1ConditionResponse> conditions) {
-            this.conditions = Objects.requireNonNull(conditions);
+            $.conditions = conditions;
             return this;
         }
+
         public Builder conditions(GoogleCloudRunV1ConditionResponse... conditions) {
             return conditions(List.of(conditions));
         }
+
         public Builder mappedRouteName(String mappedRouteName) {
-            this.mappedRouteName = Objects.requireNonNull(mappedRouteName);
+            $.mappedRouteName = mappedRouteName;
             return this;
         }
+
         public Builder observedGeneration(Integer observedGeneration) {
-            this.observedGeneration = Objects.requireNonNull(observedGeneration);
+            $.observedGeneration = observedGeneration;
             return this;
         }
+
         public Builder resourceRecords(List<ResourceRecordResponse> resourceRecords) {
-            this.resourceRecords = Objects.requireNonNull(resourceRecords);
+            $.resourceRecords = resourceRecords;
             return this;
         }
+
         public Builder resourceRecords(ResourceRecordResponse... resourceRecords) {
             return resourceRecords(List.of(resourceRecords));
         }
+
         public Builder url(String url) {
-            this.url = Objects.requireNonNull(url);
+            $.url = url;
             return this;
-        }        public DomainMappingStatusResponse build() {
-            return new DomainMappingStatusResponse(conditions, mappedRouteName, observedGeneration, resourceRecords, url);
+        }
+
+        public DomainMappingStatusResponse build() {
+            $.conditions = Objects.requireNonNull($.conditions, "expected parameter 'conditions' to be non-null");
+            $.mappedRouteName = Objects.requireNonNull($.mappedRouteName, "expected parameter 'mappedRouteName' to be non-null");
+            $.observedGeneration = Objects.requireNonNull($.observedGeneration, "expected parameter 'observedGeneration' to be non-null");
+            $.resourceRecords = Objects.requireNonNull($.resourceRecords, "expected parameter 'resourceRecords' to be non-null");
+            $.url = Objects.requireNonNull($.url, "expected parameter 'url' to be non-null");
+            return $;
         }
     }
+
 }

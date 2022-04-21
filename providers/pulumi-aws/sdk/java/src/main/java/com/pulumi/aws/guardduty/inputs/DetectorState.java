@@ -6,11 +6,11 @@ package com.pulumi.aws.guardduty.inputs;
 import com.pulumi.aws.guardduty.inputs.DetectorDatasourcesGetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,10 @@ public final class DetectorState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="accountId")
-      private final @Nullable Output<String> accountId;
+    private @Nullable Output<String> accountId;
 
-    public Output<String> accountId() {
-        return this.accountId == null ? Codegen.empty() : this.accountId;
+    public Optional<Output<String>> accountId() {
+        return Optional.ofNullable(this.accountId);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class DetectorState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="arn")
-      private final @Nullable Output<String> arn;
+    private @Nullable Output<String> arn;
 
-    public Output<String> arn() {
-        return this.arn == null ? Codegen.empty() : this.arn;
+    public Optional<Output<String>> arn() {
+        return Optional.ofNullable(this.arn);
     }
 
     /**
@@ -45,10 +45,10 @@ public final class DetectorState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="datasources")
-      private final @Nullable Output<DetectorDatasourcesGetArgs> datasources;
+    private @Nullable Output<DetectorDatasourcesGetArgs> datasources;
 
-    public Output<DetectorDatasourcesGetArgs> datasources() {
-        return this.datasources == null ? Codegen.empty() : this.datasources;
+    public Optional<Output<DetectorDatasourcesGetArgs>> datasources() {
+        return Optional.ofNullable(this.datasources);
     }
 
     /**
@@ -56,10 +56,10 @@ public final class DetectorState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="enable")
-      private final @Nullable Output<Boolean> enable;
+    private @Nullable Output<Boolean> enable;
 
-    public Output<Boolean> enable() {
-        return this.enable == null ? Codegen.empty() : this.enable;
+    public Optional<Output<Boolean>> enable() {
+        return Optional.ofNullable(this.enable);
     }
 
     /**
@@ -67,10 +67,10 @@ public final class DetectorState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="findingPublishingFrequency")
-      private final @Nullable Output<String> findingPublishingFrequency;
+    private @Nullable Output<String> findingPublishingFrequency;
 
-    public Output<String> findingPublishingFrequency() {
-        return this.findingPublishingFrequency == null ? Codegen.empty() : this.findingPublishingFrequency;
+    public Optional<Output<String>> findingPublishingFrequency() {
+        return Optional.ofNullable(this.findingPublishingFrequency);
     }
 
     /**
@@ -78,10 +78,10 @@ public final class DetectorState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -89,128 +89,108 @@ public final class DetectorState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tagsAll")
-      private final @Nullable Output<Map<String,String>> tagsAll;
+    private @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> tagsAll() {
-        return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
+    public Optional<Output<Map<String,String>>> tagsAll() {
+        return Optional.ofNullable(this.tagsAll);
     }
 
-    public DetectorState(
-        @Nullable Output<String> accountId,
-        @Nullable Output<String> arn,
-        @Nullable Output<DetectorDatasourcesGetArgs> datasources,
-        @Nullable Output<Boolean> enable,
-        @Nullable Output<String> findingPublishingFrequency,
-        @Nullable Output<Map<String,String>> tags,
-        @Nullable Output<Map<String,String>> tagsAll) {
-        this.accountId = accountId;
-        this.arn = arn;
-        this.datasources = datasources;
-        this.enable = enable;
-        this.findingPublishingFrequency = findingPublishingFrequency;
-        this.tags = tags;
-        this.tagsAll = tagsAll;
-    }
+    private DetectorState() {}
 
-    private DetectorState() {
-        this.accountId = Codegen.empty();
-        this.arn = Codegen.empty();
-        this.datasources = Codegen.empty();
-        this.enable = Codegen.empty();
-        this.findingPublishingFrequency = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.tagsAll = Codegen.empty();
+    private DetectorState(DetectorState $) {
+        this.accountId = $.accountId;
+        this.arn = $.arn;
+        this.datasources = $.datasources;
+        this.enable = $.enable;
+        this.findingPublishingFrequency = $.findingPublishingFrequency;
+        this.tags = $.tags;
+        this.tagsAll = $.tagsAll;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DetectorState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> accountId;
-        private @Nullable Output<String> arn;
-        private @Nullable Output<DetectorDatasourcesGetArgs> datasources;
-        private @Nullable Output<Boolean> enable;
-        private @Nullable Output<String> findingPublishingFrequency;
-        private @Nullable Output<Map<String,String>> tags;
-        private @Nullable Output<Map<String,String>> tagsAll;
+        private DetectorState $;
 
         public Builder() {
-    	      // Empty
+            $ = new DetectorState();
         }
 
         public Builder(DetectorState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accountId = defaults.accountId;
-    	      this.arn = defaults.arn;
-    	      this.datasources = defaults.datasources;
-    	      this.enable = defaults.enable;
-    	      this.findingPublishingFrequency = defaults.findingPublishingFrequency;
-    	      this.tags = defaults.tags;
-    	      this.tagsAll = defaults.tagsAll;
+            $ = new DetectorState(Objects.requireNonNull(defaults));
         }
 
         public Builder accountId(@Nullable Output<String> accountId) {
-            this.accountId = accountId;
+            $.accountId = accountId;
             return this;
         }
-        public Builder accountId(@Nullable String accountId) {
-            this.accountId = Codegen.ofNullable(accountId);
-            return this;
+
+        public Builder accountId(String accountId) {
+            return accountId(Output.of(accountId));
         }
+
         public Builder arn(@Nullable Output<String> arn) {
-            this.arn = arn;
+            $.arn = arn;
             return this;
         }
-        public Builder arn(@Nullable String arn) {
-            this.arn = Codegen.ofNullable(arn);
-            return this;
+
+        public Builder arn(String arn) {
+            return arn(Output.of(arn));
         }
+
         public Builder datasources(@Nullable Output<DetectorDatasourcesGetArgs> datasources) {
-            this.datasources = datasources;
+            $.datasources = datasources;
             return this;
         }
-        public Builder datasources(@Nullable DetectorDatasourcesGetArgs datasources) {
-            this.datasources = Codegen.ofNullable(datasources);
-            return this;
+
+        public Builder datasources(DetectorDatasourcesGetArgs datasources) {
+            return datasources(Output.of(datasources));
         }
+
         public Builder enable(@Nullable Output<Boolean> enable) {
-            this.enable = enable;
+            $.enable = enable;
             return this;
         }
-        public Builder enable(@Nullable Boolean enable) {
-            this.enable = Codegen.ofNullable(enable);
-            return this;
+
+        public Builder enable(Boolean enable) {
+            return enable(Output.of(enable));
         }
+
         public Builder findingPublishingFrequency(@Nullable Output<String> findingPublishingFrequency) {
-            this.findingPublishingFrequency = findingPublishingFrequency;
+            $.findingPublishingFrequency = findingPublishingFrequency;
             return this;
         }
-        public Builder findingPublishingFrequency(@Nullable String findingPublishingFrequency) {
-            this.findingPublishingFrequency = Codegen.ofNullable(findingPublishingFrequency);
-            return this;
+
+        public Builder findingPublishingFrequency(String findingPublishingFrequency) {
+            return findingPublishingFrequency(Output.of(findingPublishingFrequency));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
-            this.tagsAll = tagsAll;
+            $.tagsAll = tagsAll;
             return this;
         }
-        public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Codegen.ofNullable(tagsAll);
-            return this;
-        }        public DetectorState build() {
-            return new DetectorState(accountId, arn, datasources, enable, findingPublishingFrequency, tags, tagsAll);
+
+        public Builder tagsAll(Map<String,String> tagsAll) {
+            return tagsAll(Output.of(tagsAll));
+        }
+
+        public DetectorState build() {
+            return $;
         }
     }
+
 }

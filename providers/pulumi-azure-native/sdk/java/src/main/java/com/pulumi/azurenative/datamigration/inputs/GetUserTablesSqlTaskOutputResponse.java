@@ -25,7 +25,7 @@ public final class GetUserTablesSqlTaskOutputResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="databasesToTables", required=true)
-      private final Map<String,List<DatabaseTableResponse>> databasesToTables;
+    private Map<String,List<DatabaseTableResponse>> databasesToTables;
 
     public Map<String,List<DatabaseTableResponse>> databasesToTables() {
         return this.databasesToTables;
@@ -36,7 +36,7 @@ public final class GetUserTablesSqlTaskOutputResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="id", required=true)
-      private final String id;
+    private String id;
 
     public String id() {
         return this.id;
@@ -47,67 +47,63 @@ public final class GetUserTablesSqlTaskOutputResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="validationErrors", required=true)
-      private final List<ReportableExceptionResponse> validationErrors;
+    private List<ReportableExceptionResponse> validationErrors;
 
     public List<ReportableExceptionResponse> validationErrors() {
         return this.validationErrors;
     }
 
-    public GetUserTablesSqlTaskOutputResponse(
-        Map<String,List<DatabaseTableResponse>> databasesToTables,
-        String id,
-        List<ReportableExceptionResponse> validationErrors) {
-        this.databasesToTables = Objects.requireNonNull(databasesToTables, "expected parameter 'databasesToTables' to be non-null");
-        this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
-        this.validationErrors = Objects.requireNonNull(validationErrors, "expected parameter 'validationErrors' to be non-null");
-    }
+    private GetUserTablesSqlTaskOutputResponse() {}
 
-    private GetUserTablesSqlTaskOutputResponse() {
-        this.databasesToTables = Map.of();
-        this.id = null;
-        this.validationErrors = List.of();
+    private GetUserTablesSqlTaskOutputResponse(GetUserTablesSqlTaskOutputResponse $) {
+        this.databasesToTables = $.databasesToTables;
+        this.id = $.id;
+        this.validationErrors = $.validationErrors;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetUserTablesSqlTaskOutputResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Map<String,List<DatabaseTableResponse>> databasesToTables;
-        private String id;
-        private List<ReportableExceptionResponse> validationErrors;
+        private GetUserTablesSqlTaskOutputResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetUserTablesSqlTaskOutputResponse();
         }
 
         public Builder(GetUserTablesSqlTaskOutputResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.databasesToTables = defaults.databasesToTables;
-    	      this.id = defaults.id;
-    	      this.validationErrors = defaults.validationErrors;
+            $ = new GetUserTablesSqlTaskOutputResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder databasesToTables(Map<String,List<DatabaseTableResponse>> databasesToTables) {
-            this.databasesToTables = Objects.requireNonNull(databasesToTables);
+            $.databasesToTables = databasesToTables;
             return this;
         }
+
         public Builder id(String id) {
-            this.id = Objects.requireNonNull(id);
+            $.id = id;
             return this;
         }
+
         public Builder validationErrors(List<ReportableExceptionResponse> validationErrors) {
-            this.validationErrors = Objects.requireNonNull(validationErrors);
+            $.validationErrors = validationErrors;
             return this;
         }
+
         public Builder validationErrors(ReportableExceptionResponse... validationErrors) {
             return validationErrors(List.of(validationErrors));
-        }        public GetUserTablesSqlTaskOutputResponse build() {
-            return new GetUserTablesSqlTaskOutputResponse(databasesToTables, id, validationErrors);
+        }
+
+        public GetUserTablesSqlTaskOutputResponse build() {
+            $.databasesToTables = Objects.requireNonNull($.databasesToTables, "expected parameter 'databasesToTables' to be non-null");
+            $.id = Objects.requireNonNull($.id, "expected parameter 'id' to be non-null");
+            $.validationErrors = Objects.requireNonNull($.validationErrors, "expected parameter 'validationErrors' to be non-null");
+            return $;
         }
     }
+
 }

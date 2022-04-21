@@ -17,45 +17,45 @@ public final class GetSiteArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="scope", required=true)
-      private final String scope;
+    private String scope;
 
     public String scope() {
         return this.scope;
     }
 
-    public GetSiteArgs(String scope) {
-        this.scope = Objects.requireNonNull(scope, "expected parameter 'scope' to be non-null");
-    }
+    private GetSiteArgs() {}
 
-    private GetSiteArgs() {
-        this.scope = null;
+    private GetSiteArgs(GetSiteArgs $) {
+        this.scope = $.scope;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetSiteArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String scope;
+        private GetSiteArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetSiteArgs();
         }
 
         public Builder(GetSiteArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.scope = defaults.scope;
+            $ = new GetSiteArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder scope(String scope) {
-            this.scope = Objects.requireNonNull(scope);
+            $.scope = scope;
             return this;
-        }        public GetSiteArgs build() {
-            return new GetSiteArgs(scope);
+        }
+
+        public GetSiteArgs build() {
+            $.scope = Objects.requireNonNull($.scope, "expected parameter 'scope' to be non-null");
+            return $;
         }
     }
+
 }

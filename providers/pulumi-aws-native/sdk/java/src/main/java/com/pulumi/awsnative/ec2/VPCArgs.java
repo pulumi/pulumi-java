@@ -6,11 +6,11 @@ package com.pulumi.awsnative.ec2;
 import com.pulumi.awsnative.ec2.inputs.VPCTagArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,7 +23,7 @@ public final class VPCArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="cidrBlock", required=true)
-      private final Output<String> cidrBlock;
+    private Output<String> cidrBlock;
 
     public Output<String> cidrBlock() {
         return this.cidrBlock;
@@ -34,10 +34,10 @@ public final class VPCArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="enableDnsHostnames")
-      private final @Nullable Output<Boolean> enableDnsHostnames;
+    private @Nullable Output<Boolean> enableDnsHostnames;
 
-    public Output<Boolean> enableDnsHostnames() {
-        return this.enableDnsHostnames == null ? Codegen.empty() : this.enableDnsHostnames;
+    public Optional<Output<Boolean>> enableDnsHostnames() {
+        return Optional.ofNullable(this.enableDnsHostnames);
     }
 
     /**
@@ -45,10 +45,10 @@ public final class VPCArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="enableDnsSupport")
-      private final @Nullable Output<Boolean> enableDnsSupport;
+    private @Nullable Output<Boolean> enableDnsSupport;
 
-    public Output<Boolean> enableDnsSupport() {
-        return this.enableDnsSupport == null ? Codegen.empty() : this.enableDnsSupport;
+    public Optional<Output<Boolean>> enableDnsSupport() {
+        return Optional.ofNullable(this.enableDnsSupport);
     }
 
     /**
@@ -62,10 +62,10 @@ public final class VPCArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="instanceTenancy")
-      private final @Nullable Output<String> instanceTenancy;
+    private @Nullable Output<String> instanceTenancy;
 
-    public Output<String> instanceTenancy() {
-        return this.instanceTenancy == null ? Codegen.empty() : this.instanceTenancy;
+    public Optional<Output<String>> instanceTenancy() {
+        return Optional.ofNullable(this.instanceTenancy);
     }
 
     /**
@@ -73,105 +73,93 @@ public final class VPCArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<List<VPCTagArgs>> tags;
+    private @Nullable Output<List<VPCTagArgs>> tags;
 
-    public Output<List<VPCTagArgs>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<List<VPCTagArgs>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public VPCArgs(
-        Output<String> cidrBlock,
-        @Nullable Output<Boolean> enableDnsHostnames,
-        @Nullable Output<Boolean> enableDnsSupport,
-        @Nullable Output<String> instanceTenancy,
-        @Nullable Output<List<VPCTagArgs>> tags) {
-        this.cidrBlock = Objects.requireNonNull(cidrBlock, "expected parameter 'cidrBlock' to be non-null");
-        this.enableDnsHostnames = enableDnsHostnames;
-        this.enableDnsSupport = enableDnsSupport;
-        this.instanceTenancy = instanceTenancy;
-        this.tags = tags;
-    }
+    private VPCArgs() {}
 
-    private VPCArgs() {
-        this.cidrBlock = Codegen.empty();
-        this.enableDnsHostnames = Codegen.empty();
-        this.enableDnsSupport = Codegen.empty();
-        this.instanceTenancy = Codegen.empty();
-        this.tags = Codegen.empty();
+    private VPCArgs(VPCArgs $) {
+        this.cidrBlock = $.cidrBlock;
+        this.enableDnsHostnames = $.enableDnsHostnames;
+        this.enableDnsSupport = $.enableDnsSupport;
+        this.instanceTenancy = $.instanceTenancy;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VPCArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> cidrBlock;
-        private @Nullable Output<Boolean> enableDnsHostnames;
-        private @Nullable Output<Boolean> enableDnsSupport;
-        private @Nullable Output<String> instanceTenancy;
-        private @Nullable Output<List<VPCTagArgs>> tags;
+        private VPCArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new VPCArgs();
         }
 
         public Builder(VPCArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cidrBlock = defaults.cidrBlock;
-    	      this.enableDnsHostnames = defaults.enableDnsHostnames;
-    	      this.enableDnsSupport = defaults.enableDnsSupport;
-    	      this.instanceTenancy = defaults.instanceTenancy;
-    	      this.tags = defaults.tags;
+            $ = new VPCArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder cidrBlock(Output<String> cidrBlock) {
-            this.cidrBlock = Objects.requireNonNull(cidrBlock);
+            $.cidrBlock = cidrBlock;
             return this;
         }
+
         public Builder cidrBlock(String cidrBlock) {
-            this.cidrBlock = Output.of(Objects.requireNonNull(cidrBlock));
-            return this;
+            return cidrBlock(Output.of(cidrBlock));
         }
+
         public Builder enableDnsHostnames(@Nullable Output<Boolean> enableDnsHostnames) {
-            this.enableDnsHostnames = enableDnsHostnames;
+            $.enableDnsHostnames = enableDnsHostnames;
             return this;
         }
-        public Builder enableDnsHostnames(@Nullable Boolean enableDnsHostnames) {
-            this.enableDnsHostnames = Codegen.ofNullable(enableDnsHostnames);
-            return this;
+
+        public Builder enableDnsHostnames(Boolean enableDnsHostnames) {
+            return enableDnsHostnames(Output.of(enableDnsHostnames));
         }
+
         public Builder enableDnsSupport(@Nullable Output<Boolean> enableDnsSupport) {
-            this.enableDnsSupport = enableDnsSupport;
+            $.enableDnsSupport = enableDnsSupport;
             return this;
         }
-        public Builder enableDnsSupport(@Nullable Boolean enableDnsSupport) {
-            this.enableDnsSupport = Codegen.ofNullable(enableDnsSupport);
-            return this;
+
+        public Builder enableDnsSupport(Boolean enableDnsSupport) {
+            return enableDnsSupport(Output.of(enableDnsSupport));
         }
+
         public Builder instanceTenancy(@Nullable Output<String> instanceTenancy) {
-            this.instanceTenancy = instanceTenancy;
+            $.instanceTenancy = instanceTenancy;
             return this;
         }
-        public Builder instanceTenancy(@Nullable String instanceTenancy) {
-            this.instanceTenancy = Codegen.ofNullable(instanceTenancy);
-            return this;
+
+        public Builder instanceTenancy(String instanceTenancy) {
+            return instanceTenancy(Output.of(instanceTenancy));
         }
+
         public Builder tags(@Nullable Output<List<VPCTagArgs>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable List<VPCTagArgs> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(List<VPCTagArgs> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tags(VPCTagArgs... tags) {
             return tags(List.of(tags));
-        }        public VPCArgs build() {
-            return new VPCArgs(cidrBlock, enableDnsHostnames, enableDnsSupport, instanceTenancy, tags);
+        }
+
+        public VPCArgs build() {
+            $.cidrBlock = Objects.requireNonNull($.cidrBlock, "expected parameter 'cidrBlock' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,10 +5,10 @@ package com.pulumi.googlenative.compute_alpha;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.compute_alpha.enums.PublicAdvertisedPrefixStatus;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class PublicAdvertisedPrefixArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -32,10 +32,10 @@ public final class PublicAdvertisedPrefixArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="dnsVerificationIp")
-      private final @Nullable Output<String> dnsVerificationIp;
+    private @Nullable Output<String> dnsVerificationIp;
 
-    public Output<String> dnsVerificationIp() {
-        return this.dnsVerificationIp == null ? Codegen.empty() : this.dnsVerificationIp;
+    public Optional<Output<String>> dnsVerificationIp() {
+        return Optional.ofNullable(this.dnsVerificationIp);
     }
 
     /**
@@ -43,10 +43,10 @@ public final class PublicAdvertisedPrefixArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="ipCidrRange")
-      private final @Nullable Output<String> ipCidrRange;
+    private @Nullable Output<String> ipCidrRange;
 
-    public Output<String> ipCidrRange() {
-        return this.ipCidrRange == null ? Codegen.empty() : this.ipCidrRange;
+    public Optional<Output<String>> ipCidrRange() {
+        return Optional.ofNullable(this.ipCidrRange);
     }
 
     /**
@@ -54,24 +54,24 @@ public final class PublicAdvertisedPrefixArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     @Import(name="requestId")
-      private final @Nullable Output<String> requestId;
+    private @Nullable Output<String> requestId;
 
-    public Output<String> requestId() {
-        return this.requestId == null ? Codegen.empty() : this.requestId;
+    public Optional<Output<String>> requestId() {
+        return Optional.ofNullable(this.requestId);
     }
 
     /**
@@ -79,128 +79,108 @@ public final class PublicAdvertisedPrefixArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="status")
-      private final @Nullable Output<PublicAdvertisedPrefixStatus> status;
+    private @Nullable Output<PublicAdvertisedPrefixStatus> status;
 
-    public Output<PublicAdvertisedPrefixStatus> status() {
-        return this.status == null ? Codegen.empty() : this.status;
+    public Optional<Output<PublicAdvertisedPrefixStatus>> status() {
+        return Optional.ofNullable(this.status);
     }
 
-    public PublicAdvertisedPrefixArgs(
-        @Nullable Output<String> description,
-        @Nullable Output<String> dnsVerificationIp,
-        @Nullable Output<String> ipCidrRange,
-        @Nullable Output<String> name,
-        @Nullable Output<String> project,
-        @Nullable Output<String> requestId,
-        @Nullable Output<PublicAdvertisedPrefixStatus> status) {
-        this.description = description;
-        this.dnsVerificationIp = dnsVerificationIp;
-        this.ipCidrRange = ipCidrRange;
-        this.name = name;
-        this.project = project;
-        this.requestId = requestId;
-        this.status = status;
-    }
+    private PublicAdvertisedPrefixArgs() {}
 
-    private PublicAdvertisedPrefixArgs() {
-        this.description = Codegen.empty();
-        this.dnsVerificationIp = Codegen.empty();
-        this.ipCidrRange = Codegen.empty();
-        this.name = Codegen.empty();
-        this.project = Codegen.empty();
-        this.requestId = Codegen.empty();
-        this.status = Codegen.empty();
+    private PublicAdvertisedPrefixArgs(PublicAdvertisedPrefixArgs $) {
+        this.description = $.description;
+        this.dnsVerificationIp = $.dnsVerificationIp;
+        this.ipCidrRange = $.ipCidrRange;
+        this.name = $.name;
+        this.project = $.project;
+        this.requestId = $.requestId;
+        this.status = $.status;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PublicAdvertisedPrefixArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> description;
-        private @Nullable Output<String> dnsVerificationIp;
-        private @Nullable Output<String> ipCidrRange;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> project;
-        private @Nullable Output<String> requestId;
-        private @Nullable Output<PublicAdvertisedPrefixStatus> status;
+        private PublicAdvertisedPrefixArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PublicAdvertisedPrefixArgs();
         }
 
         public Builder(PublicAdvertisedPrefixArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.description = defaults.description;
-    	      this.dnsVerificationIp = defaults.dnsVerificationIp;
-    	      this.ipCidrRange = defaults.ipCidrRange;
-    	      this.name = defaults.name;
-    	      this.project = defaults.project;
-    	      this.requestId = defaults.requestId;
-    	      this.status = defaults.status;
+            $ = new PublicAdvertisedPrefixArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder dnsVerificationIp(@Nullable Output<String> dnsVerificationIp) {
-            this.dnsVerificationIp = dnsVerificationIp;
+            $.dnsVerificationIp = dnsVerificationIp;
             return this;
         }
-        public Builder dnsVerificationIp(@Nullable String dnsVerificationIp) {
-            this.dnsVerificationIp = Codegen.ofNullable(dnsVerificationIp);
-            return this;
+
+        public Builder dnsVerificationIp(String dnsVerificationIp) {
+            return dnsVerificationIp(Output.of(dnsVerificationIp));
         }
+
         public Builder ipCidrRange(@Nullable Output<String> ipCidrRange) {
-            this.ipCidrRange = ipCidrRange;
+            $.ipCidrRange = ipCidrRange;
             return this;
         }
-        public Builder ipCidrRange(@Nullable String ipCidrRange) {
-            this.ipCidrRange = Codegen.ofNullable(ipCidrRange);
-            return this;
+
+        public Builder ipCidrRange(String ipCidrRange) {
+            return ipCidrRange(Output.of(ipCidrRange));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder requestId(@Nullable Output<String> requestId) {
-            this.requestId = requestId;
+            $.requestId = requestId;
             return this;
         }
-        public Builder requestId(@Nullable String requestId) {
-            this.requestId = Codegen.ofNullable(requestId);
-            return this;
+
+        public Builder requestId(String requestId) {
+            return requestId(Output.of(requestId));
         }
+
         public Builder status(@Nullable Output<PublicAdvertisedPrefixStatus> status) {
-            this.status = status;
+            $.status = status;
             return this;
         }
-        public Builder status(@Nullable PublicAdvertisedPrefixStatus status) {
-            this.status = Codegen.ofNullable(status);
-            return this;
-        }        public PublicAdvertisedPrefixArgs build() {
-            return new PublicAdvertisedPrefixArgs(description, dnsVerificationIp, ipCidrRange, name, project, requestId, status);
+
+        public Builder status(PublicAdvertisedPrefixStatus status) {
+            return status(Output.of(status));
+        }
+
+        public PublicAdvertisedPrefixArgs build() {
+            return $;
         }
     }
+
 }

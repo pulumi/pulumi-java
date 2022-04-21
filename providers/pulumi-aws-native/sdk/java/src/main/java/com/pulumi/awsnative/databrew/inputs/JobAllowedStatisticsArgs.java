@@ -5,7 +5,6 @@ package com.pulumi.awsnative.databrew.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -16,52 +15,53 @@ public final class JobAllowedStatisticsArgs extends com.pulumi.resources.Resourc
     public static final JobAllowedStatisticsArgs Empty = new JobAllowedStatisticsArgs();
 
     @Import(name="statistics", required=true)
-      private final Output<List<String>> statistics;
+    private Output<List<String>> statistics;
 
     public Output<List<String>> statistics() {
         return this.statistics;
     }
 
-    public JobAllowedStatisticsArgs(Output<List<String>> statistics) {
-        this.statistics = Objects.requireNonNull(statistics, "expected parameter 'statistics' to be non-null");
-    }
+    private JobAllowedStatisticsArgs() {}
 
-    private JobAllowedStatisticsArgs() {
-        this.statistics = Codegen.empty();
+    private JobAllowedStatisticsArgs(JobAllowedStatisticsArgs $) {
+        this.statistics = $.statistics;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(JobAllowedStatisticsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<List<String>> statistics;
+        private JobAllowedStatisticsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new JobAllowedStatisticsArgs();
         }
 
         public Builder(JobAllowedStatisticsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.statistics = defaults.statistics;
+            $ = new JobAllowedStatisticsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder statistics(Output<List<String>> statistics) {
-            this.statistics = Objects.requireNonNull(statistics);
+            $.statistics = statistics;
             return this;
         }
+
         public Builder statistics(List<String> statistics) {
-            this.statistics = Output.of(Objects.requireNonNull(statistics));
-            return this;
+            return statistics(Output.of(statistics));
         }
+
         public Builder statistics(String... statistics) {
             return statistics(List.of(statistics));
-        }        public JobAllowedStatisticsArgs build() {
-            return new JobAllowedStatisticsArgs(statistics);
+        }
+
+        public JobAllowedStatisticsArgs build() {
+            $.statistics = Objects.requireNonNull($.statistics, "expected parameter 'statistics' to be non-null");
+            return $;
         }
     }
+
 }

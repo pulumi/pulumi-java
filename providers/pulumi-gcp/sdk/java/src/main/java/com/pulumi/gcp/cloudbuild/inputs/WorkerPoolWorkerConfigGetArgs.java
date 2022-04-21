@@ -5,11 +5,11 @@ package com.pulumi.gcp.cloudbuild.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class WorkerPoolWorkerConfigGetArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="diskSizeGb")
-      private final @Nullable Output<Integer> diskSizeGb;
+    private @Nullable Output<Integer> diskSizeGb;
 
-    public Output<Integer> diskSizeGb() {
-        return this.diskSizeGb == null ? Codegen.empty() : this.diskSizeGb;
+    public Optional<Output<Integer>> diskSizeGb() {
+        return Optional.ofNullable(this.diskSizeGb);
     }
 
     /**
@@ -33,10 +33,10 @@ public final class WorkerPoolWorkerConfigGetArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="machineType")
-      private final @Nullable Output<String> machineType;
+    private @Nullable Output<String> machineType;
 
-    public Output<String> machineType() {
-        return this.machineType == null ? Codegen.empty() : this.machineType;
+    public Optional<Output<String>> machineType() {
+        return Optional.ofNullable(this.machineType);
     }
 
     /**
@@ -44,76 +44,68 @@ public final class WorkerPoolWorkerConfigGetArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="noExternalIp")
-      private final @Nullable Output<Boolean> noExternalIp;
+    private @Nullable Output<Boolean> noExternalIp;
 
-    public Output<Boolean> noExternalIp() {
-        return this.noExternalIp == null ? Codegen.empty() : this.noExternalIp;
+    public Optional<Output<Boolean>> noExternalIp() {
+        return Optional.ofNullable(this.noExternalIp);
     }
 
-    public WorkerPoolWorkerConfigGetArgs(
-        @Nullable Output<Integer> diskSizeGb,
-        @Nullable Output<String> machineType,
-        @Nullable Output<Boolean> noExternalIp) {
-        this.diskSizeGb = diskSizeGb;
-        this.machineType = machineType;
-        this.noExternalIp = noExternalIp;
-    }
+    private WorkerPoolWorkerConfigGetArgs() {}
 
-    private WorkerPoolWorkerConfigGetArgs() {
-        this.diskSizeGb = Codegen.empty();
-        this.machineType = Codegen.empty();
-        this.noExternalIp = Codegen.empty();
+    private WorkerPoolWorkerConfigGetArgs(WorkerPoolWorkerConfigGetArgs $) {
+        this.diskSizeGb = $.diskSizeGb;
+        this.machineType = $.machineType;
+        this.noExternalIp = $.noExternalIp;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WorkerPoolWorkerConfigGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> diskSizeGb;
-        private @Nullable Output<String> machineType;
-        private @Nullable Output<Boolean> noExternalIp;
+        private WorkerPoolWorkerConfigGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new WorkerPoolWorkerConfigGetArgs();
         }
 
         public Builder(WorkerPoolWorkerConfigGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.diskSizeGb = defaults.diskSizeGb;
-    	      this.machineType = defaults.machineType;
-    	      this.noExternalIp = defaults.noExternalIp;
+            $ = new WorkerPoolWorkerConfigGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder diskSizeGb(@Nullable Output<Integer> diskSizeGb) {
-            this.diskSizeGb = diskSizeGb;
+            $.diskSizeGb = diskSizeGb;
             return this;
         }
-        public Builder diskSizeGb(@Nullable Integer diskSizeGb) {
-            this.diskSizeGb = Codegen.ofNullable(diskSizeGb);
-            return this;
+
+        public Builder diskSizeGb(Integer diskSizeGb) {
+            return diskSizeGb(Output.of(diskSizeGb));
         }
+
         public Builder machineType(@Nullable Output<String> machineType) {
-            this.machineType = machineType;
+            $.machineType = machineType;
             return this;
         }
-        public Builder machineType(@Nullable String machineType) {
-            this.machineType = Codegen.ofNullable(machineType);
-            return this;
+
+        public Builder machineType(String machineType) {
+            return machineType(Output.of(machineType));
         }
+
         public Builder noExternalIp(@Nullable Output<Boolean> noExternalIp) {
-            this.noExternalIp = noExternalIp;
+            $.noExternalIp = noExternalIp;
             return this;
         }
-        public Builder noExternalIp(@Nullable Boolean noExternalIp) {
-            this.noExternalIp = Codegen.ofNullable(noExternalIp);
-            return this;
-        }        public WorkerPoolWorkerConfigGetArgs build() {
-            return new WorkerPoolWorkerConfigGetArgs(diskSizeGb, machineType, noExternalIp);
+
+        public Builder noExternalIp(Boolean noExternalIp) {
+            return noExternalIp(Output.of(noExternalIp));
+        }
+
+        public WorkerPoolWorkerConfigGetArgs build() {
+            return $;
         }
     }
+
 }

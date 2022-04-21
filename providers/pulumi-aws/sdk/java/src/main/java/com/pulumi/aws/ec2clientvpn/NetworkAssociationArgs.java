@@ -5,10 +5,10 @@ package com.pulumi.aws.ec2clientvpn;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,7 +21,7 @@ public final class NetworkAssociationArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="clientVpnEndpointId", required=true)
-      private final Output<String> clientVpnEndpointId;
+    private Output<String> clientVpnEndpointId;
 
     public Output<String> clientVpnEndpointId() {
         return this.clientVpnEndpointId;
@@ -32,10 +32,10 @@ public final class NetworkAssociationArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="securityGroups")
-      private final @Nullable Output<List<String>> securityGroups;
+    private @Nullable Output<List<String>> securityGroups;
 
-    public Output<List<String>> securityGroups() {
-        return this.securityGroups == null ? Codegen.empty() : this.securityGroups;
+    public Optional<Output<List<String>>> securityGroups() {
+        return Optional.ofNullable(this.securityGroups);
     }
 
     /**
@@ -43,79 +43,74 @@ public final class NetworkAssociationArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="subnetId", required=true)
-      private final Output<String> subnetId;
+    private Output<String> subnetId;
 
     public Output<String> subnetId() {
         return this.subnetId;
     }
 
-    public NetworkAssociationArgs(
-        Output<String> clientVpnEndpointId,
-        @Nullable Output<List<String>> securityGroups,
-        Output<String> subnetId) {
-        this.clientVpnEndpointId = Objects.requireNonNull(clientVpnEndpointId, "expected parameter 'clientVpnEndpointId' to be non-null");
-        this.securityGroups = securityGroups;
-        this.subnetId = Objects.requireNonNull(subnetId, "expected parameter 'subnetId' to be non-null");
-    }
+    private NetworkAssociationArgs() {}
 
-    private NetworkAssociationArgs() {
-        this.clientVpnEndpointId = Codegen.empty();
-        this.securityGroups = Codegen.empty();
-        this.subnetId = Codegen.empty();
+    private NetworkAssociationArgs(NetworkAssociationArgs $) {
+        this.clientVpnEndpointId = $.clientVpnEndpointId;
+        this.securityGroups = $.securityGroups;
+        this.subnetId = $.subnetId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NetworkAssociationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> clientVpnEndpointId;
-        private @Nullable Output<List<String>> securityGroups;
-        private Output<String> subnetId;
+        private NetworkAssociationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new NetworkAssociationArgs();
         }
 
         public Builder(NetworkAssociationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.clientVpnEndpointId = defaults.clientVpnEndpointId;
-    	      this.securityGroups = defaults.securityGroups;
-    	      this.subnetId = defaults.subnetId;
+            $ = new NetworkAssociationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder clientVpnEndpointId(Output<String> clientVpnEndpointId) {
-            this.clientVpnEndpointId = Objects.requireNonNull(clientVpnEndpointId);
+            $.clientVpnEndpointId = clientVpnEndpointId;
             return this;
         }
+
         public Builder clientVpnEndpointId(String clientVpnEndpointId) {
-            this.clientVpnEndpointId = Output.of(Objects.requireNonNull(clientVpnEndpointId));
-            return this;
+            return clientVpnEndpointId(Output.of(clientVpnEndpointId));
         }
+
         public Builder securityGroups(@Nullable Output<List<String>> securityGroups) {
-            this.securityGroups = securityGroups;
+            $.securityGroups = securityGroups;
             return this;
         }
-        public Builder securityGroups(@Nullable List<String> securityGroups) {
-            this.securityGroups = Codegen.ofNullable(securityGroups);
-            return this;
+
+        public Builder securityGroups(List<String> securityGroups) {
+            return securityGroups(Output.of(securityGroups));
         }
+
         public Builder securityGroups(String... securityGroups) {
             return securityGroups(List.of(securityGroups));
         }
+
         public Builder subnetId(Output<String> subnetId) {
-            this.subnetId = Objects.requireNonNull(subnetId);
+            $.subnetId = subnetId;
             return this;
         }
+
         public Builder subnetId(String subnetId) {
-            this.subnetId = Output.of(Objects.requireNonNull(subnetId));
-            return this;
-        }        public NetworkAssociationArgs build() {
-            return new NetworkAssociationArgs(clientVpnEndpointId, securityGroups, subnetId);
+            return subnetId(Output.of(subnetId));
+        }
+
+        public NetworkAssociationArgs build() {
+            $.clientVpnEndpointId = Objects.requireNonNull($.clientVpnEndpointId, "expected parameter 'clientVpnEndpointId' to be non-null");
+            $.subnetId = Objects.requireNonNull($.subnetId, "expected parameter 'subnetId' to be non-null");
+            return $;
         }
     }
+
 }

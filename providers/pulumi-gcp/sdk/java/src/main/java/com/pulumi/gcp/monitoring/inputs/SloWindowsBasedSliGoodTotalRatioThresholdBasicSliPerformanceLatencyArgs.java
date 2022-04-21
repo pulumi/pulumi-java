@@ -5,7 +5,6 @@ package com.pulumi.gcp.monitoring.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,49 +20,49 @@ public final class SloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceL
      * 
      */
     @Import(name="threshold", required=true)
-      private final Output<String> threshold;
+    private Output<String> threshold;
 
     public Output<String> threshold() {
         return this.threshold;
     }
 
-    public SloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceLatencyArgs(Output<String> threshold) {
-        this.threshold = Objects.requireNonNull(threshold, "expected parameter 'threshold' to be non-null");
-    }
+    private SloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceLatencyArgs() {}
 
-    private SloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceLatencyArgs() {
-        this.threshold = Codegen.empty();
+    private SloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceLatencyArgs(SloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceLatencyArgs $) {
+        this.threshold = $.threshold;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceLatencyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> threshold;
+        private SloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceLatencyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceLatencyArgs();
         }
 
         public Builder(SloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceLatencyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.threshold = defaults.threshold;
+            $ = new SloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceLatencyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder threshold(Output<String> threshold) {
-            this.threshold = Objects.requireNonNull(threshold);
+            $.threshold = threshold;
             return this;
         }
+
         public Builder threshold(String threshold) {
-            this.threshold = Output.of(Objects.requireNonNull(threshold));
-            return this;
-        }        public SloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceLatencyArgs build() {
-            return new SloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceLatencyArgs(threshold);
+            return threshold(Output.of(threshold));
+        }
+
+        public SloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceLatencyArgs build() {
+            $.threshold = Objects.requireNonNull($.threshold, "expected parameter 'threshold' to be non-null");
+            return $;
         }
     }
+
 }

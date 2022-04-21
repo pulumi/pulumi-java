@@ -5,13 +5,13 @@ package com.pulumi.eks.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.kubernetes.meta_v1.inputs.ObjectMetaArgs;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -28,10 +28,10 @@ public final class StorageClassArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="allowVolumeExpansion")
-      private final @Nullable Output<Boolean> allowVolumeExpansion;
+    private @Nullable Output<Boolean> allowVolumeExpansion;
 
-    public Output<Boolean> allowVolumeExpansion() {
-        return this.allowVolumeExpansion == null ? Codegen.empty() : this.allowVolumeExpansion;
+    public Optional<Output<Boolean>> allowVolumeExpansion() {
+        return Optional.ofNullable(this.allowVolumeExpansion);
     }
 
     /**
@@ -43,10 +43,10 @@ public final class StorageClassArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="default")
-      private final @Nullable Output<Boolean> default_;
+    private @Nullable Output<Boolean> default_;
 
-    public Output<Boolean> default_() {
-        return this.default_ == null ? Codegen.empty() : this.default_;
+    public Optional<Output<Boolean>> default_() {
+        return Optional.ofNullable(this.default_);
     }
 
     /**
@@ -54,10 +54,10 @@ public final class StorageClassArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="encrypted")
-      private final @Nullable Output<Boolean> encrypted;
+    private @Nullable Output<Boolean> encrypted;
 
-    public Output<Boolean> encrypted() {
-        return this.encrypted == null ? Codegen.empty() : this.encrypted;
+    public Optional<Output<Boolean>> encrypted() {
+        return Optional.ofNullable(this.encrypted);
     }
 
     /**
@@ -65,10 +65,10 @@ public final class StorageClassArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="iopsPerGb")
-      private final @Nullable Output<Integer> iopsPerGb;
+    private @Nullable Output<Integer> iopsPerGb;
 
-    public Output<Integer> iopsPerGb() {
-        return this.iopsPerGb == null ? Codegen.empty() : this.iopsPerGb;
+    public Optional<Output<Integer>> iopsPerGb() {
+        return Optional.ofNullable(this.iopsPerGb);
     }
 
     /**
@@ -76,10 +76,10 @@ public final class StorageClassArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="kmsKeyId")
-      private final @Nullable Output<String> kmsKeyId;
+    private @Nullable Output<String> kmsKeyId;
 
-    public Output<String> kmsKeyId() {
-        return this.kmsKeyId == null ? Codegen.empty() : this.kmsKeyId;
+    public Optional<Output<String>> kmsKeyId() {
+        return Optional.ofNullable(this.kmsKeyId);
     }
 
     /**
@@ -87,10 +87,10 @@ public final class StorageClassArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="metadata")
-      private final @Nullable Output<ObjectMetaArgs> metadata;
+    private @Nullable Output<ObjectMetaArgs> metadata;
 
-    public Output<ObjectMetaArgs> metadata() {
-        return this.metadata == null ? Codegen.empty() : this.metadata;
+    public Optional<Output<ObjectMetaArgs>> metadata() {
+        return Optional.ofNullable(this.metadata);
     }
 
     /**
@@ -98,10 +98,10 @@ public final class StorageClassArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="mountOptions")
-      private final @Nullable Output<List<String>> mountOptions;
+    private @Nullable Output<List<String>> mountOptions;
 
-    public Output<List<String>> mountOptions() {
-        return this.mountOptions == null ? Codegen.empty() : this.mountOptions;
+    public Optional<Output<List<String>>> mountOptions() {
+        return Optional.ofNullable(this.mountOptions);
     }
 
     /**
@@ -109,10 +109,10 @@ public final class StorageClassArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="reclaimPolicy")
-      private final @Nullable Output<String> reclaimPolicy;
+    private @Nullable Output<String> reclaimPolicy;
 
-    public Output<String> reclaimPolicy() {
-        return this.reclaimPolicy == null ? Codegen.empty() : this.reclaimPolicy;
+    public Optional<Output<String>> reclaimPolicy() {
+        return Optional.ofNullable(this.reclaimPolicy);
     }
 
     /**
@@ -120,7 +120,7 @@ public final class StorageClassArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="type", required=true)
-      private final Output<String> type;
+    private Output<String> type;
 
     public Output<String> type() {
         return this.type;
@@ -131,10 +131,10 @@ public final class StorageClassArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="volumeBindingMode")
-      private final @Nullable Output<String> volumeBindingMode;
+    private @Nullable Output<String> volumeBindingMode;
 
-    public Output<String> volumeBindingMode() {
-        return this.volumeBindingMode == null ? Codegen.empty() : this.volumeBindingMode;
+    public Optional<Output<String>> volumeBindingMode() {
+        return Optional.ofNullable(this.volumeBindingMode);
     }
 
     /**
@@ -142,186 +142,157 @@ public final class StorageClassArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="zones")
-      private final @Nullable Output<List<String>> zones;
+    private @Nullable Output<List<String>> zones;
 
-    public Output<List<String>> zones() {
-        return this.zones == null ? Codegen.empty() : this.zones;
+    public Optional<Output<List<String>>> zones() {
+        return Optional.ofNullable(this.zones);
     }
 
-    public StorageClassArgs(
-        @Nullable Output<Boolean> allowVolumeExpansion,
-        @Nullable Output<Boolean> default_,
-        @Nullable Output<Boolean> encrypted,
-        @Nullable Output<Integer> iopsPerGb,
-        @Nullable Output<String> kmsKeyId,
-        @Nullable Output<ObjectMetaArgs> metadata,
-        @Nullable Output<List<String>> mountOptions,
-        @Nullable Output<String> reclaimPolicy,
-        Output<String> type,
-        @Nullable Output<String> volumeBindingMode,
-        @Nullable Output<List<String>> zones) {
-        this.allowVolumeExpansion = allowVolumeExpansion;
-        this.default_ = default_;
-        this.encrypted = encrypted;
-        this.iopsPerGb = iopsPerGb;
-        this.kmsKeyId = kmsKeyId;
-        this.metadata = metadata;
-        this.mountOptions = mountOptions;
-        this.reclaimPolicy = reclaimPolicy;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-        this.volumeBindingMode = volumeBindingMode;
-        this.zones = zones;
-    }
+    private StorageClassArgs() {}
 
-    private StorageClassArgs() {
-        this.allowVolumeExpansion = Codegen.empty();
-        this.default_ = Codegen.empty();
-        this.encrypted = Codegen.empty();
-        this.iopsPerGb = Codegen.empty();
-        this.kmsKeyId = Codegen.empty();
-        this.metadata = Codegen.empty();
-        this.mountOptions = Codegen.empty();
-        this.reclaimPolicy = Codegen.empty();
-        this.type = Codegen.empty();
-        this.volumeBindingMode = Codegen.empty();
-        this.zones = Codegen.empty();
+    private StorageClassArgs(StorageClassArgs $) {
+        this.allowVolumeExpansion = $.allowVolumeExpansion;
+        this.default_ = $.default_;
+        this.encrypted = $.encrypted;
+        this.iopsPerGb = $.iopsPerGb;
+        this.kmsKeyId = $.kmsKeyId;
+        this.metadata = $.metadata;
+        this.mountOptions = $.mountOptions;
+        this.reclaimPolicy = $.reclaimPolicy;
+        this.type = $.type;
+        this.volumeBindingMode = $.volumeBindingMode;
+        this.zones = $.zones;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(StorageClassArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> allowVolumeExpansion;
-        private @Nullable Output<Boolean> default_;
-        private @Nullable Output<Boolean> encrypted;
-        private @Nullable Output<Integer> iopsPerGb;
-        private @Nullable Output<String> kmsKeyId;
-        private @Nullable Output<ObjectMetaArgs> metadata;
-        private @Nullable Output<List<String>> mountOptions;
-        private @Nullable Output<String> reclaimPolicy;
-        private Output<String> type;
-        private @Nullable Output<String> volumeBindingMode;
-        private @Nullable Output<List<String>> zones;
+        private StorageClassArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new StorageClassArgs();
         }
 
         public Builder(StorageClassArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.allowVolumeExpansion = defaults.allowVolumeExpansion;
-    	      this.default_ = defaults.default_;
-    	      this.encrypted = defaults.encrypted;
-    	      this.iopsPerGb = defaults.iopsPerGb;
-    	      this.kmsKeyId = defaults.kmsKeyId;
-    	      this.metadata = defaults.metadata;
-    	      this.mountOptions = defaults.mountOptions;
-    	      this.reclaimPolicy = defaults.reclaimPolicy;
-    	      this.type = defaults.type;
-    	      this.volumeBindingMode = defaults.volumeBindingMode;
-    	      this.zones = defaults.zones;
+            $ = new StorageClassArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder allowVolumeExpansion(@Nullable Output<Boolean> allowVolumeExpansion) {
-            this.allowVolumeExpansion = allowVolumeExpansion;
+            $.allowVolumeExpansion = allowVolumeExpansion;
             return this;
         }
-        public Builder allowVolumeExpansion(@Nullable Boolean allowVolumeExpansion) {
-            this.allowVolumeExpansion = Codegen.ofNullable(allowVolumeExpansion);
-            return this;
+
+        public Builder allowVolumeExpansion(Boolean allowVolumeExpansion) {
+            return allowVolumeExpansion(Output.of(allowVolumeExpansion));
         }
+
         public Builder default_(@Nullable Output<Boolean> default_) {
-            this.default_ = default_;
+            $.default_ = default_;
             return this;
         }
-        public Builder default_(@Nullable Boolean default_) {
-            this.default_ = Codegen.ofNullable(default_);
-            return this;
+
+        public Builder default_(Boolean default_) {
+            return default_(Output.of(default_));
         }
+
         public Builder encrypted(@Nullable Output<Boolean> encrypted) {
-            this.encrypted = encrypted;
+            $.encrypted = encrypted;
             return this;
         }
-        public Builder encrypted(@Nullable Boolean encrypted) {
-            this.encrypted = Codegen.ofNullable(encrypted);
-            return this;
+
+        public Builder encrypted(Boolean encrypted) {
+            return encrypted(Output.of(encrypted));
         }
+
         public Builder iopsPerGb(@Nullable Output<Integer> iopsPerGb) {
-            this.iopsPerGb = iopsPerGb;
+            $.iopsPerGb = iopsPerGb;
             return this;
         }
-        public Builder iopsPerGb(@Nullable Integer iopsPerGb) {
-            this.iopsPerGb = Codegen.ofNullable(iopsPerGb);
-            return this;
+
+        public Builder iopsPerGb(Integer iopsPerGb) {
+            return iopsPerGb(Output.of(iopsPerGb));
         }
+
         public Builder kmsKeyId(@Nullable Output<String> kmsKeyId) {
-            this.kmsKeyId = kmsKeyId;
+            $.kmsKeyId = kmsKeyId;
             return this;
         }
-        public Builder kmsKeyId(@Nullable String kmsKeyId) {
-            this.kmsKeyId = Codegen.ofNullable(kmsKeyId);
-            return this;
+
+        public Builder kmsKeyId(String kmsKeyId) {
+            return kmsKeyId(Output.of(kmsKeyId));
         }
+
         public Builder metadata(@Nullable Output<ObjectMetaArgs> metadata) {
-            this.metadata = metadata;
+            $.metadata = metadata;
             return this;
         }
-        public Builder metadata(@Nullable ObjectMetaArgs metadata) {
-            this.metadata = Codegen.ofNullable(metadata);
-            return this;
+
+        public Builder metadata(ObjectMetaArgs metadata) {
+            return metadata(Output.of(metadata));
         }
+
         public Builder mountOptions(@Nullable Output<List<String>> mountOptions) {
-            this.mountOptions = mountOptions;
+            $.mountOptions = mountOptions;
             return this;
         }
-        public Builder mountOptions(@Nullable List<String> mountOptions) {
-            this.mountOptions = Codegen.ofNullable(mountOptions);
-            return this;
+
+        public Builder mountOptions(List<String> mountOptions) {
+            return mountOptions(Output.of(mountOptions));
         }
+
         public Builder mountOptions(String... mountOptions) {
             return mountOptions(List.of(mountOptions));
         }
+
         public Builder reclaimPolicy(@Nullable Output<String> reclaimPolicy) {
-            this.reclaimPolicy = reclaimPolicy;
+            $.reclaimPolicy = reclaimPolicy;
             return this;
         }
-        public Builder reclaimPolicy(@Nullable String reclaimPolicy) {
-            this.reclaimPolicy = Codegen.ofNullable(reclaimPolicy);
-            return this;
+
+        public Builder reclaimPolicy(String reclaimPolicy) {
+            return reclaimPolicy(Output.of(reclaimPolicy));
         }
+
         public Builder type(Output<String> type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Output.of(Objects.requireNonNull(type));
-            return this;
+            return type(Output.of(type));
         }
+
         public Builder volumeBindingMode(@Nullable Output<String> volumeBindingMode) {
-            this.volumeBindingMode = volumeBindingMode;
+            $.volumeBindingMode = volumeBindingMode;
             return this;
         }
-        public Builder volumeBindingMode(@Nullable String volumeBindingMode) {
-            this.volumeBindingMode = Codegen.ofNullable(volumeBindingMode);
-            return this;
+
+        public Builder volumeBindingMode(String volumeBindingMode) {
+            return volumeBindingMode(Output.of(volumeBindingMode));
         }
+
         public Builder zones(@Nullable Output<List<String>> zones) {
-            this.zones = zones;
+            $.zones = zones;
             return this;
         }
-        public Builder zones(@Nullable List<String> zones) {
-            this.zones = Codegen.ofNullable(zones);
-            return this;
+
+        public Builder zones(List<String> zones) {
+            return zones(Output.of(zones));
         }
+
         public Builder zones(String... zones) {
             return zones(List.of(zones));
-        }        public StorageClassArgs build() {
-            return new StorageClassArgs(allowVolumeExpansion, default_, encrypted, iopsPerGb, kmsKeyId, metadata, mountOptions, reclaimPolicy, type, volumeBindingMode, zones);
+        }
+
+        public StorageClassArgs build() {
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

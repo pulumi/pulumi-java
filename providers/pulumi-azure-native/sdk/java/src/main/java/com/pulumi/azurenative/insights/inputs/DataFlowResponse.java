@@ -24,10 +24,10 @@ public final class DataFlowResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="destinations")
-      private final @Nullable List<String> destinations;
+    private @Nullable List<String> destinations;
 
-    public List<String> destinations() {
-        return this.destinations == null ? List.of() : this.destinations;
+    public Optional<List<String>> destinations() {
+        return Optional.ofNullable(this.destinations);
     }
 
     /**
@@ -35,61 +35,58 @@ public final class DataFlowResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="streams")
-      private final @Nullable List<String> streams;
+    private @Nullable List<String> streams;
 
-    public List<String> streams() {
-        return this.streams == null ? List.of() : this.streams;
+    public Optional<List<String>> streams() {
+        return Optional.ofNullable(this.streams);
     }
 
-    public DataFlowResponse(
-        @Nullable List<String> destinations,
-        @Nullable List<String> streams) {
-        this.destinations = destinations;
-        this.streams = streams;
-    }
+    private DataFlowResponse() {}
 
-    private DataFlowResponse() {
-        this.destinations = List.of();
-        this.streams = List.of();
+    private DataFlowResponse(DataFlowResponse $) {
+        this.destinations = $.destinations;
+        this.streams = $.streams;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DataFlowResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<String> destinations;
-        private @Nullable List<String> streams;
+        private DataFlowResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new DataFlowResponse();
         }
 
         public Builder(DataFlowResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.destinations = defaults.destinations;
-    	      this.streams = defaults.streams;
+            $ = new DataFlowResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder destinations(@Nullable List<String> destinations) {
-            this.destinations = destinations;
+            $.destinations = destinations;
             return this;
         }
+
         public Builder destinations(String... destinations) {
             return destinations(List.of(destinations));
         }
+
         public Builder streams(@Nullable List<String> streams) {
-            this.streams = streams;
+            $.streams = streams;
             return this;
         }
+
         public Builder streams(String... streams) {
             return streams(List.of(streams));
-        }        public DataFlowResponse build() {
-            return new DataFlowResponse(destinations, streams);
+        }
+
+        public DataFlowResponse build() {
+            return $;
         }
     }
+
 }

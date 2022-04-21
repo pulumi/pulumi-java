@@ -26,7 +26,7 @@ public final class AutoScalingResourceMetricArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="kind", required=true)
-      private final Output<String> kind;
+    private Output<String> kind;
 
     public Output<String> kind() {
         return this.kind;
@@ -37,63 +37,60 @@ public final class AutoScalingResourceMetricArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="name", required=true)
-      private final Output<Either<String,AutoScalingResourceMetricName>> name;
+    private Output<Either<String,AutoScalingResourceMetricName>> name;
 
     public Output<Either<String,AutoScalingResourceMetricName>> name() {
         return this.name;
     }
 
-    public AutoScalingResourceMetricArgs(
-        Output<String> kind,
-        Output<Either<String,AutoScalingResourceMetricName>> name) {
-        this.kind = Codegen.stringProp("kind").output().arg(kind).require();
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-    }
+    private AutoScalingResourceMetricArgs() {}
 
-    private AutoScalingResourceMetricArgs() {
-        this.kind = Codegen.empty();
-        this.name = Codegen.empty();
+    private AutoScalingResourceMetricArgs(AutoScalingResourceMetricArgs $) {
+        this.kind = $.kind;
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AutoScalingResourceMetricArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> kind;
-        private Output<Either<String,AutoScalingResourceMetricName>> name;
+        private AutoScalingResourceMetricArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AutoScalingResourceMetricArgs();
         }
 
         public Builder(AutoScalingResourceMetricArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.kind = defaults.kind;
-    	      this.name = defaults.name;
+            $ = new AutoScalingResourceMetricArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder kind(Output<String> kind) {
-            this.kind = Objects.requireNonNull(kind);
+            $.kind = kind;
             return this;
         }
+
         public Builder kind(String kind) {
-            this.kind = Output.of(Objects.requireNonNull(kind));
-            return this;
+            return kind(Output.of(kind));
         }
+
         public Builder name(Output<Either<String,AutoScalingResourceMetricName>> name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder name(Either<String,AutoScalingResourceMetricName> name) {
-            this.name = Output.of(Objects.requireNonNull(name));
-            return this;
-        }        public AutoScalingResourceMetricArgs build() {
-            return new AutoScalingResourceMetricArgs(kind, name);
+            return name(Output.of(name));
+        }
+
+        public AutoScalingResourceMetricArgs build() {
+            $.kind = Codegen.stringProp("kind").output().arg($.kind).require();
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            return $;
         }
     }
+
 }

@@ -24,7 +24,7 @@ public final class BaseImageTriggerResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="baseImageTriggerType", required=true)
-      private final String baseImageTriggerType;
+    private String baseImageTriggerType;
 
     public String baseImageTriggerType() {
         return this.baseImageTriggerType;
@@ -35,7 +35,7 @@ public final class BaseImageTriggerResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -46,10 +46,10 @@ public final class BaseImageTriggerResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="status")
-      private final @Nullable String status;
+    private @Nullable String status;
 
     public Optional<String> status() {
-        return this.status == null ? Optional.empty() : Optional.ofNullable(this.status);
+        return Optional.ofNullable(this.status);
     }
 
     /**
@@ -57,10 +57,10 @@ public final class BaseImageTriggerResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="updateTriggerEndpoint")
-      private final @Nullable String updateTriggerEndpoint;
+    private @Nullable String updateTriggerEndpoint;
 
     public Optional<String> updateTriggerEndpoint() {
-        return this.updateTriggerEndpoint == null ? Optional.empty() : Optional.ofNullable(this.updateTriggerEndpoint);
+        return Optional.ofNullable(this.updateTriggerEndpoint);
     }
 
     /**
@@ -68,82 +68,71 @@ public final class BaseImageTriggerResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="updateTriggerPayloadType")
-      private final @Nullable String updateTriggerPayloadType;
+    private @Nullable String updateTriggerPayloadType;
 
     public Optional<String> updateTriggerPayloadType() {
-        return this.updateTriggerPayloadType == null ? Optional.empty() : Optional.ofNullable(this.updateTriggerPayloadType);
+        return Optional.ofNullable(this.updateTriggerPayloadType);
     }
 
-    public BaseImageTriggerResponse(
-        String baseImageTriggerType,
-        String name,
-        @Nullable String status,
-        @Nullable String updateTriggerEndpoint,
-        @Nullable String updateTriggerPayloadType) {
-        this.baseImageTriggerType = Objects.requireNonNull(baseImageTriggerType, "expected parameter 'baseImageTriggerType' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.status = Codegen.stringProp("status").arg(status).def("Enabled").getNullable();
-        this.updateTriggerEndpoint = updateTriggerEndpoint;
-        this.updateTriggerPayloadType = updateTriggerPayloadType;
-    }
+    private BaseImageTriggerResponse() {}
 
-    private BaseImageTriggerResponse() {
-        this.baseImageTriggerType = null;
-        this.name = null;
-        this.status = null;
-        this.updateTriggerEndpoint = null;
-        this.updateTriggerPayloadType = null;
+    private BaseImageTriggerResponse(BaseImageTriggerResponse $) {
+        this.baseImageTriggerType = $.baseImageTriggerType;
+        this.name = $.name;
+        this.status = $.status;
+        this.updateTriggerEndpoint = $.updateTriggerEndpoint;
+        this.updateTriggerPayloadType = $.updateTriggerPayloadType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BaseImageTriggerResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String baseImageTriggerType;
-        private String name;
-        private @Nullable String status;
-        private @Nullable String updateTriggerEndpoint;
-        private @Nullable String updateTriggerPayloadType;
+        private BaseImageTriggerResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new BaseImageTriggerResponse();
         }
 
         public Builder(BaseImageTriggerResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.baseImageTriggerType = defaults.baseImageTriggerType;
-    	      this.name = defaults.name;
-    	      this.status = defaults.status;
-    	      this.updateTriggerEndpoint = defaults.updateTriggerEndpoint;
-    	      this.updateTriggerPayloadType = defaults.updateTriggerPayloadType;
+            $ = new BaseImageTriggerResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder baseImageTriggerType(String baseImageTriggerType) {
-            this.baseImageTriggerType = Objects.requireNonNull(baseImageTriggerType);
+            $.baseImageTriggerType = baseImageTriggerType;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder status(@Nullable String status) {
-            this.status = status;
+            $.status = status;
             return this;
         }
+
         public Builder updateTriggerEndpoint(@Nullable String updateTriggerEndpoint) {
-            this.updateTriggerEndpoint = updateTriggerEndpoint;
+            $.updateTriggerEndpoint = updateTriggerEndpoint;
             return this;
         }
+
         public Builder updateTriggerPayloadType(@Nullable String updateTriggerPayloadType) {
-            this.updateTriggerPayloadType = updateTriggerPayloadType;
+            $.updateTriggerPayloadType = updateTriggerPayloadType;
             return this;
-        }        public BaseImageTriggerResponse build() {
-            return new BaseImageTriggerResponse(baseImageTriggerType, name, status, updateTriggerEndpoint, updateTriggerPayloadType);
+        }
+
+        public BaseImageTriggerResponse build() {
+            $.baseImageTriggerType = Objects.requireNonNull($.baseImageTriggerType, "expected parameter 'baseImageTriggerType' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.status = Codegen.stringProp("status").arg($.status).def("Enabled").getNullable();
+            return $;
         }
     }
+
 }

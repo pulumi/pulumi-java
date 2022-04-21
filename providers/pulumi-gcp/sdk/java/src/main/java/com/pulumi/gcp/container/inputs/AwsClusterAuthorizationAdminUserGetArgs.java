@@ -5,7 +5,6 @@ package com.pulumi.gcp.container.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,49 +18,49 @@ public final class AwsClusterAuthorizationAdminUserGetArgs extends com.pulumi.re
      * 
      */
     @Import(name="username", required=true)
-      private final Output<String> username;
+    private Output<String> username;
 
     public Output<String> username() {
         return this.username;
     }
 
-    public AwsClusterAuthorizationAdminUserGetArgs(Output<String> username) {
-        this.username = Objects.requireNonNull(username, "expected parameter 'username' to be non-null");
-    }
+    private AwsClusterAuthorizationAdminUserGetArgs() {}
 
-    private AwsClusterAuthorizationAdminUserGetArgs() {
-        this.username = Codegen.empty();
+    private AwsClusterAuthorizationAdminUserGetArgs(AwsClusterAuthorizationAdminUserGetArgs $) {
+        this.username = $.username;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AwsClusterAuthorizationAdminUserGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> username;
+        private AwsClusterAuthorizationAdminUserGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AwsClusterAuthorizationAdminUserGetArgs();
         }
 
         public Builder(AwsClusterAuthorizationAdminUserGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.username = defaults.username;
+            $ = new AwsClusterAuthorizationAdminUserGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder username(Output<String> username) {
-            this.username = Objects.requireNonNull(username);
+            $.username = username;
             return this;
         }
+
         public Builder username(String username) {
-            this.username = Output.of(Objects.requireNonNull(username));
-            return this;
-        }        public AwsClusterAuthorizationAdminUserGetArgs build() {
-            return new AwsClusterAuthorizationAdminUserGetArgs(username);
+            return username(Output.of(username));
+        }
+
+        public AwsClusterAuthorizationAdminUserGetArgs build() {
+            $.username = Objects.requireNonNull($.username, "expected parameter 'username' to be non-null");
+            return $;
         }
     }
+
 }

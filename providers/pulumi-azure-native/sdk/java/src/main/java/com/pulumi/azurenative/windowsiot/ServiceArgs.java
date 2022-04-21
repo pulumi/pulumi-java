@@ -5,11 +5,11 @@ package com.pulumi.azurenative.windowsiot;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class ServiceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="adminDomainName")
-      private final @Nullable Output<String> adminDomainName;
+    private @Nullable Output<String> adminDomainName;
 
-    public Output<String> adminDomainName() {
-        return this.adminDomainName == null ? Codegen.empty() : this.adminDomainName;
+    public Optional<Output<String>> adminDomainName() {
+        return Optional.ofNullable(this.adminDomainName);
     }
 
     /**
@@ -33,10 +33,10 @@ public final class ServiceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="billingDomainName")
-      private final @Nullable Output<String> billingDomainName;
+    private @Nullable Output<String> billingDomainName;
 
-    public Output<String> billingDomainName() {
-        return this.billingDomainName == null ? Codegen.empty() : this.billingDomainName;
+    public Optional<Output<String>> billingDomainName() {
+        return Optional.ofNullable(this.billingDomainName);
     }
 
     /**
@@ -44,10 +44,10 @@ public final class ServiceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="deviceName")
-      private final @Nullable Output<String> deviceName;
+    private @Nullable Output<String> deviceName;
 
-    public Output<String> deviceName() {
-        return this.deviceName == null ? Codegen.empty() : this.deviceName;
+    public Optional<Output<String>> deviceName() {
+        return Optional.ofNullable(this.deviceName);
     }
 
     /**
@@ -55,10 +55,10 @@ public final class ServiceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -66,10 +66,10 @@ public final class ServiceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="notes")
-      private final @Nullable Output<String> notes;
+    private @Nullable Output<String> notes;
 
-    public Output<String> notes() {
-        return this.notes == null ? Codegen.empty() : this.notes;
+    public Optional<Output<String>> notes() {
+        return Optional.ofNullable(this.notes);
     }
 
     /**
@@ -77,10 +77,10 @@ public final class ServiceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="quantity")
-      private final @Nullable Output<Double> quantity;
+    private @Nullable Output<Double> quantity;
 
-    public Output<Double> quantity() {
-        return this.quantity == null ? Codegen.empty() : this.quantity;
+    public Optional<Output<Double>> quantity() {
+        return Optional.ofNullable(this.quantity);
     }
 
     /**
@@ -88,7 +88,7 @@ public final class ServiceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -99,141 +99,119 @@ public final class ServiceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public ServiceArgs(
-        @Nullable Output<String> adminDomainName,
-        @Nullable Output<String> billingDomainName,
-        @Nullable Output<String> deviceName,
-        @Nullable Output<String> location,
-        @Nullable Output<String> notes,
-        @Nullable Output<Double> quantity,
-        Output<String> resourceGroupName,
-        @Nullable Output<Map<String,String>> tags) {
-        this.adminDomainName = adminDomainName;
-        this.billingDomainName = billingDomainName;
-        this.deviceName = deviceName;
-        this.location = location;
-        this.notes = notes;
-        this.quantity = quantity;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.tags = tags;
-    }
+    private ServiceArgs() {}
 
-    private ServiceArgs() {
-        this.adminDomainName = Codegen.empty();
-        this.billingDomainName = Codegen.empty();
-        this.deviceName = Codegen.empty();
-        this.location = Codegen.empty();
-        this.notes = Codegen.empty();
-        this.quantity = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.tags = Codegen.empty();
+    private ServiceArgs(ServiceArgs $) {
+        this.adminDomainName = $.adminDomainName;
+        this.billingDomainName = $.billingDomainName;
+        this.deviceName = $.deviceName;
+        this.location = $.location;
+        this.notes = $.notes;
+        this.quantity = $.quantity;
+        this.resourceGroupName = $.resourceGroupName;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ServiceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> adminDomainName;
-        private @Nullable Output<String> billingDomainName;
-        private @Nullable Output<String> deviceName;
-        private @Nullable Output<String> location;
-        private @Nullable Output<String> notes;
-        private @Nullable Output<Double> quantity;
-        private Output<String> resourceGroupName;
-        private @Nullable Output<Map<String,String>> tags;
+        private ServiceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ServiceArgs();
         }
 
         public Builder(ServiceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.adminDomainName = defaults.adminDomainName;
-    	      this.billingDomainName = defaults.billingDomainName;
-    	      this.deviceName = defaults.deviceName;
-    	      this.location = defaults.location;
-    	      this.notes = defaults.notes;
-    	      this.quantity = defaults.quantity;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.tags = defaults.tags;
+            $ = new ServiceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder adminDomainName(@Nullable Output<String> adminDomainName) {
-            this.adminDomainName = adminDomainName;
+            $.adminDomainName = adminDomainName;
             return this;
         }
-        public Builder adminDomainName(@Nullable String adminDomainName) {
-            this.adminDomainName = Codegen.ofNullable(adminDomainName);
-            return this;
+
+        public Builder adminDomainName(String adminDomainName) {
+            return adminDomainName(Output.of(adminDomainName));
         }
+
         public Builder billingDomainName(@Nullable Output<String> billingDomainName) {
-            this.billingDomainName = billingDomainName;
+            $.billingDomainName = billingDomainName;
             return this;
         }
-        public Builder billingDomainName(@Nullable String billingDomainName) {
-            this.billingDomainName = Codegen.ofNullable(billingDomainName);
-            return this;
+
+        public Builder billingDomainName(String billingDomainName) {
+            return billingDomainName(Output.of(billingDomainName));
         }
+
         public Builder deviceName(@Nullable Output<String> deviceName) {
-            this.deviceName = deviceName;
+            $.deviceName = deviceName;
             return this;
         }
-        public Builder deviceName(@Nullable String deviceName) {
-            this.deviceName = Codegen.ofNullable(deviceName);
-            return this;
+
+        public Builder deviceName(String deviceName) {
+            return deviceName(Output.of(deviceName));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder notes(@Nullable Output<String> notes) {
-            this.notes = notes;
+            $.notes = notes;
             return this;
         }
-        public Builder notes(@Nullable String notes) {
-            this.notes = Codegen.ofNullable(notes);
-            return this;
+
+        public Builder notes(String notes) {
+            return notes(Output.of(notes));
         }
+
         public Builder quantity(@Nullable Output<Double> quantity) {
-            this.quantity = quantity;
+            $.quantity = quantity;
             return this;
         }
-        public Builder quantity(@Nullable Double quantity) {
-            this.quantity = Codegen.ofNullable(quantity);
-            return this;
+
+        public Builder quantity(Double quantity) {
+            return quantity(Output.of(quantity));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
-        }        public ServiceArgs build() {
-            return new ServiceArgs(adminDomainName, billingDomainName, deviceName, location, notes, quantity, resourceGroupName, tags);
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
+        }
+
+        public ServiceArgs build() {
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

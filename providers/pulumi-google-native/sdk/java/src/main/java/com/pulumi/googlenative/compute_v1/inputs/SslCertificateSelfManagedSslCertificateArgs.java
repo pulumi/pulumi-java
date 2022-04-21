@@ -5,9 +5,9 @@ package com.pulumi.googlenative.compute_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class SslCertificateSelfManagedSslCertificateArgs extends com.pulum
      * 
      */
     @Import(name="certificate")
-      private final @Nullable Output<String> certificate;
+    private @Nullable Output<String> certificate;
 
-    public Output<String> certificate() {
-        return this.certificate == null ? Codegen.empty() : this.certificate;
+    public Optional<Output<String>> certificate() {
+        return Optional.ofNullable(this.certificate);
     }
 
     /**
@@ -35,63 +35,58 @@ public final class SslCertificateSelfManagedSslCertificateArgs extends com.pulum
      * 
      */
     @Import(name="privateKey")
-      private final @Nullable Output<String> privateKey;
+    private @Nullable Output<String> privateKey;
 
-    public Output<String> privateKey() {
-        return this.privateKey == null ? Codegen.empty() : this.privateKey;
+    public Optional<Output<String>> privateKey() {
+        return Optional.ofNullable(this.privateKey);
     }
 
-    public SslCertificateSelfManagedSslCertificateArgs(
-        @Nullable Output<String> certificate,
-        @Nullable Output<String> privateKey) {
-        this.certificate = certificate;
-        this.privateKey = privateKey;
-    }
+    private SslCertificateSelfManagedSslCertificateArgs() {}
 
-    private SslCertificateSelfManagedSslCertificateArgs() {
-        this.certificate = Codegen.empty();
-        this.privateKey = Codegen.empty();
+    private SslCertificateSelfManagedSslCertificateArgs(SslCertificateSelfManagedSslCertificateArgs $) {
+        this.certificate = $.certificate;
+        this.privateKey = $.privateKey;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SslCertificateSelfManagedSslCertificateArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> certificate;
-        private @Nullable Output<String> privateKey;
+        private SslCertificateSelfManagedSslCertificateArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SslCertificateSelfManagedSslCertificateArgs();
         }
 
         public Builder(SslCertificateSelfManagedSslCertificateArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.certificate = defaults.certificate;
-    	      this.privateKey = defaults.privateKey;
+            $ = new SslCertificateSelfManagedSslCertificateArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder certificate(@Nullable Output<String> certificate) {
-            this.certificate = certificate;
+            $.certificate = certificate;
             return this;
         }
-        public Builder certificate(@Nullable String certificate) {
-            this.certificate = Codegen.ofNullable(certificate);
-            return this;
+
+        public Builder certificate(String certificate) {
+            return certificate(Output.of(certificate));
         }
+
         public Builder privateKey(@Nullable Output<String> privateKey) {
-            this.privateKey = privateKey;
+            $.privateKey = privateKey;
             return this;
         }
-        public Builder privateKey(@Nullable String privateKey) {
-            this.privateKey = Codegen.ofNullable(privateKey);
-            return this;
-        }        public SslCertificateSelfManagedSslCertificateArgs build() {
-            return new SslCertificateSelfManagedSslCertificateArgs(certificate, privateKey);
+
+        public Builder privateKey(String privateKey) {
+            return privateKey(Output.of(privateKey));
+        }
+
+        public SslCertificateSelfManagedSslCertificateArgs build() {
+            return $;
         }
     }
+
 }

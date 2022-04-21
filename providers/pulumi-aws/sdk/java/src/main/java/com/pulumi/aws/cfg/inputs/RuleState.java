@@ -7,10 +7,10 @@ import com.pulumi.aws.cfg.inputs.RuleScopeGetArgs;
 import com.pulumi.aws.cfg.inputs.RuleSourceGetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,10 @@ public final class RuleState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="arn")
-      private final @Nullable Output<String> arn;
+    private @Nullable Output<String> arn;
 
-    public Output<String> arn() {
-        return this.arn == null ? Codegen.empty() : this.arn;
+    public Optional<Output<String>> arn() {
+        return Optional.ofNullable(this.arn);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class RuleState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -45,10 +45,10 @@ public final class RuleState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="inputParameters")
-      private final @Nullable Output<String> inputParameters;
+    private @Nullable Output<String> inputParameters;
 
-    public Output<String> inputParameters() {
-        return this.inputParameters == null ? Codegen.empty() : this.inputParameters;
+    public Optional<Output<String>> inputParameters() {
+        return Optional.ofNullable(this.inputParameters);
     }
 
     /**
@@ -56,10 +56,10 @@ public final class RuleState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="maximumExecutionFrequency")
-      private final @Nullable Output<String> maximumExecutionFrequency;
+    private @Nullable Output<String> maximumExecutionFrequency;
 
-    public Output<String> maximumExecutionFrequency() {
-        return this.maximumExecutionFrequency == null ? Codegen.empty() : this.maximumExecutionFrequency;
+    public Optional<Output<String>> maximumExecutionFrequency() {
+        return Optional.ofNullable(this.maximumExecutionFrequency);
     }
 
     /**
@@ -67,10 +67,10 @@ public final class RuleState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -78,10 +78,10 @@ public final class RuleState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="ruleId")
-      private final @Nullable Output<String> ruleId;
+    private @Nullable Output<String> ruleId;
 
-    public Output<String> ruleId() {
-        return this.ruleId == null ? Codegen.empty() : this.ruleId;
+    public Optional<Output<String>> ruleId() {
+        return Optional.ofNullable(this.ruleId);
     }
 
     /**
@@ -89,10 +89,10 @@ public final class RuleState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="scope")
-      private final @Nullable Output<RuleScopeGetArgs> scope;
+    private @Nullable Output<RuleScopeGetArgs> scope;
 
-    public Output<RuleScopeGetArgs> scope() {
-        return this.scope == null ? Codegen.empty() : this.scope;
+    public Optional<Output<RuleScopeGetArgs>> scope() {
+        return Optional.ofNullable(this.scope);
     }
 
     /**
@@ -100,10 +100,10 @@ public final class RuleState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="source")
-      private final @Nullable Output<RuleSourceGetArgs> source;
+    private @Nullable Output<RuleSourceGetArgs> source;
 
-    public Output<RuleSourceGetArgs> source() {
-        return this.source == null ? Codegen.empty() : this.source;
+    public Optional<Output<RuleSourceGetArgs>> source() {
+        return Optional.ofNullable(this.source);
     }
 
     /**
@@ -111,10 +111,10 @@ public final class RuleState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -122,167 +122,138 @@ public final class RuleState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tagsAll")
-      private final @Nullable Output<Map<String,String>> tagsAll;
+    private @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> tagsAll() {
-        return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
+    public Optional<Output<Map<String,String>>> tagsAll() {
+        return Optional.ofNullable(this.tagsAll);
     }
 
-    public RuleState(
-        @Nullable Output<String> arn,
-        @Nullable Output<String> description,
-        @Nullable Output<String> inputParameters,
-        @Nullable Output<String> maximumExecutionFrequency,
-        @Nullable Output<String> name,
-        @Nullable Output<String> ruleId,
-        @Nullable Output<RuleScopeGetArgs> scope,
-        @Nullable Output<RuleSourceGetArgs> source,
-        @Nullable Output<Map<String,String>> tags,
-        @Nullable Output<Map<String,String>> tagsAll) {
-        this.arn = arn;
-        this.description = description;
-        this.inputParameters = inputParameters;
-        this.maximumExecutionFrequency = maximumExecutionFrequency;
-        this.name = name;
-        this.ruleId = ruleId;
-        this.scope = scope;
-        this.source = source;
-        this.tags = tags;
-        this.tagsAll = tagsAll;
-    }
+    private RuleState() {}
 
-    private RuleState() {
-        this.arn = Codegen.empty();
-        this.description = Codegen.empty();
-        this.inputParameters = Codegen.empty();
-        this.maximumExecutionFrequency = Codegen.empty();
-        this.name = Codegen.empty();
-        this.ruleId = Codegen.empty();
-        this.scope = Codegen.empty();
-        this.source = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.tagsAll = Codegen.empty();
+    private RuleState(RuleState $) {
+        this.arn = $.arn;
+        this.description = $.description;
+        this.inputParameters = $.inputParameters;
+        this.maximumExecutionFrequency = $.maximumExecutionFrequency;
+        this.name = $.name;
+        this.ruleId = $.ruleId;
+        this.scope = $.scope;
+        this.source = $.source;
+        this.tags = $.tags;
+        this.tagsAll = $.tagsAll;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RuleState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> arn;
-        private @Nullable Output<String> description;
-        private @Nullable Output<String> inputParameters;
-        private @Nullable Output<String> maximumExecutionFrequency;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> ruleId;
-        private @Nullable Output<RuleScopeGetArgs> scope;
-        private @Nullable Output<RuleSourceGetArgs> source;
-        private @Nullable Output<Map<String,String>> tags;
-        private @Nullable Output<Map<String,String>> tagsAll;
+        private RuleState $;
 
         public Builder() {
-    	      // Empty
+            $ = new RuleState();
         }
 
         public Builder(RuleState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.arn = defaults.arn;
-    	      this.description = defaults.description;
-    	      this.inputParameters = defaults.inputParameters;
-    	      this.maximumExecutionFrequency = defaults.maximumExecutionFrequency;
-    	      this.name = defaults.name;
-    	      this.ruleId = defaults.ruleId;
-    	      this.scope = defaults.scope;
-    	      this.source = defaults.source;
-    	      this.tags = defaults.tags;
-    	      this.tagsAll = defaults.tagsAll;
+            $ = new RuleState(Objects.requireNonNull(defaults));
         }
 
         public Builder arn(@Nullable Output<String> arn) {
-            this.arn = arn;
+            $.arn = arn;
             return this;
         }
-        public Builder arn(@Nullable String arn) {
-            this.arn = Codegen.ofNullable(arn);
-            return this;
+
+        public Builder arn(String arn) {
+            return arn(Output.of(arn));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder inputParameters(@Nullable Output<String> inputParameters) {
-            this.inputParameters = inputParameters;
+            $.inputParameters = inputParameters;
             return this;
         }
-        public Builder inputParameters(@Nullable String inputParameters) {
-            this.inputParameters = Codegen.ofNullable(inputParameters);
-            return this;
+
+        public Builder inputParameters(String inputParameters) {
+            return inputParameters(Output.of(inputParameters));
         }
+
         public Builder maximumExecutionFrequency(@Nullable Output<String> maximumExecutionFrequency) {
-            this.maximumExecutionFrequency = maximumExecutionFrequency;
+            $.maximumExecutionFrequency = maximumExecutionFrequency;
             return this;
         }
-        public Builder maximumExecutionFrequency(@Nullable String maximumExecutionFrequency) {
-            this.maximumExecutionFrequency = Codegen.ofNullable(maximumExecutionFrequency);
-            return this;
+
+        public Builder maximumExecutionFrequency(String maximumExecutionFrequency) {
+            return maximumExecutionFrequency(Output.of(maximumExecutionFrequency));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder ruleId(@Nullable Output<String> ruleId) {
-            this.ruleId = ruleId;
+            $.ruleId = ruleId;
             return this;
         }
-        public Builder ruleId(@Nullable String ruleId) {
-            this.ruleId = Codegen.ofNullable(ruleId);
-            return this;
+
+        public Builder ruleId(String ruleId) {
+            return ruleId(Output.of(ruleId));
         }
+
         public Builder scope(@Nullable Output<RuleScopeGetArgs> scope) {
-            this.scope = scope;
+            $.scope = scope;
             return this;
         }
-        public Builder scope(@Nullable RuleScopeGetArgs scope) {
-            this.scope = Codegen.ofNullable(scope);
-            return this;
+
+        public Builder scope(RuleScopeGetArgs scope) {
+            return scope(Output.of(scope));
         }
+
         public Builder source(@Nullable Output<RuleSourceGetArgs> source) {
-            this.source = source;
+            $.source = source;
             return this;
         }
-        public Builder source(@Nullable RuleSourceGetArgs source) {
-            this.source = Codegen.ofNullable(source);
-            return this;
+
+        public Builder source(RuleSourceGetArgs source) {
+            return source(Output.of(source));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
-            this.tagsAll = tagsAll;
+            $.tagsAll = tagsAll;
             return this;
         }
-        public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Codegen.ofNullable(tagsAll);
-            return this;
-        }        public RuleState build() {
-            return new RuleState(arn, description, inputParameters, maximumExecutionFrequency, name, ruleId, scope, source, tags, tagsAll);
+
+        public Builder tagsAll(Map<String,String> tagsAll) {
+            return tagsAll(Output.of(tagsAll));
+        }
+
+        public RuleState build() {
+            return $;
         }
     }
+
 }

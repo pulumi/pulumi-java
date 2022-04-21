@@ -5,9 +5,9 @@ package com.pulumi.aws.ec2clientvpn;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,7 +20,7 @@ public final class RouteArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="clientVpnEndpointId", required=true)
-      private final Output<String> clientVpnEndpointId;
+    private Output<String> clientVpnEndpointId;
 
     public Output<String> clientVpnEndpointId() {
         return this.clientVpnEndpointId;
@@ -31,10 +31,10 @@ public final class RouteArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -42,7 +42,7 @@ public final class RouteArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="destinationCidrBlock", required=true)
-      private final Output<String> destinationCidrBlock;
+    private Output<String> destinationCidrBlock;
 
     public Output<String> destinationCidrBlock() {
         return this.destinationCidrBlock;
@@ -53,89 +53,81 @@ public final class RouteArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="targetVpcSubnetId", required=true)
-      private final Output<String> targetVpcSubnetId;
+    private Output<String> targetVpcSubnetId;
 
     public Output<String> targetVpcSubnetId() {
         return this.targetVpcSubnetId;
     }
 
-    public RouteArgs(
-        Output<String> clientVpnEndpointId,
-        @Nullable Output<String> description,
-        Output<String> destinationCidrBlock,
-        Output<String> targetVpcSubnetId) {
-        this.clientVpnEndpointId = Objects.requireNonNull(clientVpnEndpointId, "expected parameter 'clientVpnEndpointId' to be non-null");
-        this.description = description;
-        this.destinationCidrBlock = Objects.requireNonNull(destinationCidrBlock, "expected parameter 'destinationCidrBlock' to be non-null");
-        this.targetVpcSubnetId = Objects.requireNonNull(targetVpcSubnetId, "expected parameter 'targetVpcSubnetId' to be non-null");
-    }
+    private RouteArgs() {}
 
-    private RouteArgs() {
-        this.clientVpnEndpointId = Codegen.empty();
-        this.description = Codegen.empty();
-        this.destinationCidrBlock = Codegen.empty();
-        this.targetVpcSubnetId = Codegen.empty();
+    private RouteArgs(RouteArgs $) {
+        this.clientVpnEndpointId = $.clientVpnEndpointId;
+        this.description = $.description;
+        this.destinationCidrBlock = $.destinationCidrBlock;
+        this.targetVpcSubnetId = $.targetVpcSubnetId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RouteArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> clientVpnEndpointId;
-        private @Nullable Output<String> description;
-        private Output<String> destinationCidrBlock;
-        private Output<String> targetVpcSubnetId;
+        private RouteArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RouteArgs();
         }
 
         public Builder(RouteArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.clientVpnEndpointId = defaults.clientVpnEndpointId;
-    	      this.description = defaults.description;
-    	      this.destinationCidrBlock = defaults.destinationCidrBlock;
-    	      this.targetVpcSubnetId = defaults.targetVpcSubnetId;
+            $ = new RouteArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder clientVpnEndpointId(Output<String> clientVpnEndpointId) {
-            this.clientVpnEndpointId = Objects.requireNonNull(clientVpnEndpointId);
+            $.clientVpnEndpointId = clientVpnEndpointId;
             return this;
         }
+
         public Builder clientVpnEndpointId(String clientVpnEndpointId) {
-            this.clientVpnEndpointId = Output.of(Objects.requireNonNull(clientVpnEndpointId));
-            return this;
+            return clientVpnEndpointId(Output.of(clientVpnEndpointId));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder destinationCidrBlock(Output<String> destinationCidrBlock) {
-            this.destinationCidrBlock = Objects.requireNonNull(destinationCidrBlock);
+            $.destinationCidrBlock = destinationCidrBlock;
             return this;
         }
+
         public Builder destinationCidrBlock(String destinationCidrBlock) {
-            this.destinationCidrBlock = Output.of(Objects.requireNonNull(destinationCidrBlock));
-            return this;
+            return destinationCidrBlock(Output.of(destinationCidrBlock));
         }
+
         public Builder targetVpcSubnetId(Output<String> targetVpcSubnetId) {
-            this.targetVpcSubnetId = Objects.requireNonNull(targetVpcSubnetId);
+            $.targetVpcSubnetId = targetVpcSubnetId;
             return this;
         }
+
         public Builder targetVpcSubnetId(String targetVpcSubnetId) {
-            this.targetVpcSubnetId = Output.of(Objects.requireNonNull(targetVpcSubnetId));
-            return this;
-        }        public RouteArgs build() {
-            return new RouteArgs(clientVpnEndpointId, description, destinationCidrBlock, targetVpcSubnetId);
+            return targetVpcSubnetId(Output.of(targetVpcSubnetId));
+        }
+
+        public RouteArgs build() {
+            $.clientVpnEndpointId = Objects.requireNonNull($.clientVpnEndpointId, "expected parameter 'clientVpnEndpointId' to be non-null");
+            $.destinationCidrBlock = Objects.requireNonNull($.destinationCidrBlock, "expected parameter 'destinationCidrBlock' to be non-null");
+            $.targetVpcSubnetId = Objects.requireNonNull($.targetVpcSubnetId, "expected parameter 'targetVpcSubnetId' to be non-null");
+            return $;
         }
     }
+
 }

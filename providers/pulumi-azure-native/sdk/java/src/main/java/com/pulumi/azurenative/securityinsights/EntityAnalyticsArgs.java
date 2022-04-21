@@ -8,6 +8,7 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,7 +22,7 @@ public final class EntityAnalyticsArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="kind", required=true)
-      private final Output<String> kind;
+    private Output<String> kind;
 
     public Output<String> kind() {
         return this.kind;
@@ -32,7 +33,7 @@ public final class EntityAnalyticsArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="operationalInsightsResourceProvider", required=true)
-      private final Output<String> operationalInsightsResourceProvider;
+    private Output<String> operationalInsightsResourceProvider;
 
     public Output<String> operationalInsightsResourceProvider() {
         return this.operationalInsightsResourceProvider;
@@ -43,7 +44,7 @@ public final class EntityAnalyticsArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -54,10 +55,10 @@ public final class EntityAnalyticsArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="settingsName")
-      private final @Nullable Output<String> settingsName;
+    private @Nullable Output<String> settingsName;
 
-    public Output<String> settingsName() {
-        return this.settingsName == null ? Codegen.empty() : this.settingsName;
+    public Optional<Output<String>> settingsName() {
+        return Optional.ofNullable(this.settingsName);
     }
 
     /**
@@ -65,102 +66,92 @@ public final class EntityAnalyticsArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="workspaceName", required=true)
-      private final Output<String> workspaceName;
+    private Output<String> workspaceName;
 
     public Output<String> workspaceName() {
         return this.workspaceName;
     }
 
-    public EntityAnalyticsArgs(
-        Output<String> kind,
-        Output<String> operationalInsightsResourceProvider,
-        Output<String> resourceGroupName,
-        @Nullable Output<String> settingsName,
-        Output<String> workspaceName) {
-        this.kind = Codegen.stringProp("kind").output().arg(kind).require();
-        this.operationalInsightsResourceProvider = Objects.requireNonNull(operationalInsightsResourceProvider, "expected parameter 'operationalInsightsResourceProvider' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.settingsName = settingsName;
-        this.workspaceName = Objects.requireNonNull(workspaceName, "expected parameter 'workspaceName' to be non-null");
-    }
+    private EntityAnalyticsArgs() {}
 
-    private EntityAnalyticsArgs() {
-        this.kind = Codegen.empty();
-        this.operationalInsightsResourceProvider = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.settingsName = Codegen.empty();
-        this.workspaceName = Codegen.empty();
+    private EntityAnalyticsArgs(EntityAnalyticsArgs $) {
+        this.kind = $.kind;
+        this.operationalInsightsResourceProvider = $.operationalInsightsResourceProvider;
+        this.resourceGroupName = $.resourceGroupName;
+        this.settingsName = $.settingsName;
+        this.workspaceName = $.workspaceName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EntityAnalyticsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> kind;
-        private Output<String> operationalInsightsResourceProvider;
-        private Output<String> resourceGroupName;
-        private @Nullable Output<String> settingsName;
-        private Output<String> workspaceName;
+        private EntityAnalyticsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new EntityAnalyticsArgs();
         }
 
         public Builder(EntityAnalyticsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.kind = defaults.kind;
-    	      this.operationalInsightsResourceProvider = defaults.operationalInsightsResourceProvider;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.settingsName = defaults.settingsName;
-    	      this.workspaceName = defaults.workspaceName;
+            $ = new EntityAnalyticsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder kind(Output<String> kind) {
-            this.kind = Objects.requireNonNull(kind);
+            $.kind = kind;
             return this;
         }
+
         public Builder kind(String kind) {
-            this.kind = Output.of(Objects.requireNonNull(kind));
-            return this;
+            return kind(Output.of(kind));
         }
+
         public Builder operationalInsightsResourceProvider(Output<String> operationalInsightsResourceProvider) {
-            this.operationalInsightsResourceProvider = Objects.requireNonNull(operationalInsightsResourceProvider);
+            $.operationalInsightsResourceProvider = operationalInsightsResourceProvider;
             return this;
         }
+
         public Builder operationalInsightsResourceProvider(String operationalInsightsResourceProvider) {
-            this.operationalInsightsResourceProvider = Output.of(Objects.requireNonNull(operationalInsightsResourceProvider));
-            return this;
+            return operationalInsightsResourceProvider(Output.of(operationalInsightsResourceProvider));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder settingsName(@Nullable Output<String> settingsName) {
-            this.settingsName = settingsName;
+            $.settingsName = settingsName;
             return this;
         }
-        public Builder settingsName(@Nullable String settingsName) {
-            this.settingsName = Codegen.ofNullable(settingsName);
-            return this;
+
+        public Builder settingsName(String settingsName) {
+            return settingsName(Output.of(settingsName));
         }
+
         public Builder workspaceName(Output<String> workspaceName) {
-            this.workspaceName = Objects.requireNonNull(workspaceName);
+            $.workspaceName = workspaceName;
             return this;
         }
+
         public Builder workspaceName(String workspaceName) {
-            this.workspaceName = Output.of(Objects.requireNonNull(workspaceName));
-            return this;
-        }        public EntityAnalyticsArgs build() {
-            return new EntityAnalyticsArgs(kind, operationalInsightsResourceProvider, resourceGroupName, settingsName, workspaceName);
+            return workspaceName(Output.of(workspaceName));
+        }
+
+        public EntityAnalyticsArgs build() {
+            $.kind = Codegen.stringProp("kind").output().arg($.kind).require();
+            $.operationalInsightsResourceProvider = Objects.requireNonNull($.operationalInsightsResourceProvider, "expected parameter 'operationalInsightsResourceProvider' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.workspaceName = Objects.requireNonNull($.workspaceName, "expected parameter 'workspaceName' to be non-null");
+            return $;
         }
     }
+
 }

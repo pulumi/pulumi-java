@@ -17,7 +17,7 @@ public final class GetBackupScheduleArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="backupPolicyName", required=true)
-      private final String backupPolicyName;
+    private String backupPolicyName;
 
     public String backupPolicyName() {
         return this.backupPolicyName;
@@ -28,7 +28,7 @@ public final class GetBackupScheduleArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="backupScheduleName", required=true)
-      private final String backupScheduleName;
+    private String backupScheduleName;
 
     public String backupScheduleName() {
         return this.backupScheduleName;
@@ -39,7 +39,7 @@ public final class GetBackupScheduleArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="deviceName", required=true)
-      private final String deviceName;
+    private String deviceName;
 
     public String deviceName() {
         return this.deviceName;
@@ -50,7 +50,7 @@ public final class GetBackupScheduleArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="managerName", required=true)
-      private final String managerName;
+    private String managerName;
 
     public String managerName() {
         return this.managerName;
@@ -61,82 +61,73 @@ public final class GetBackupScheduleArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public GetBackupScheduleArgs(
-        String backupPolicyName,
-        String backupScheduleName,
-        String deviceName,
-        String managerName,
-        String resourceGroupName) {
-        this.backupPolicyName = Objects.requireNonNull(backupPolicyName, "expected parameter 'backupPolicyName' to be non-null");
-        this.backupScheduleName = Objects.requireNonNull(backupScheduleName, "expected parameter 'backupScheduleName' to be non-null");
-        this.deviceName = Objects.requireNonNull(deviceName, "expected parameter 'deviceName' to be non-null");
-        this.managerName = Objects.requireNonNull(managerName, "expected parameter 'managerName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private GetBackupScheduleArgs() {}
 
-    private GetBackupScheduleArgs() {
-        this.backupPolicyName = null;
-        this.backupScheduleName = null;
-        this.deviceName = null;
-        this.managerName = null;
-        this.resourceGroupName = null;
+    private GetBackupScheduleArgs(GetBackupScheduleArgs $) {
+        this.backupPolicyName = $.backupPolicyName;
+        this.backupScheduleName = $.backupScheduleName;
+        this.deviceName = $.deviceName;
+        this.managerName = $.managerName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetBackupScheduleArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String backupPolicyName;
-        private String backupScheduleName;
-        private String deviceName;
-        private String managerName;
-        private String resourceGroupName;
+        private GetBackupScheduleArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetBackupScheduleArgs();
         }
 
         public Builder(GetBackupScheduleArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.backupPolicyName = defaults.backupPolicyName;
-    	      this.backupScheduleName = defaults.backupScheduleName;
-    	      this.deviceName = defaults.deviceName;
-    	      this.managerName = defaults.managerName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new GetBackupScheduleArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder backupPolicyName(String backupPolicyName) {
-            this.backupPolicyName = Objects.requireNonNull(backupPolicyName);
+            $.backupPolicyName = backupPolicyName;
             return this;
         }
+
         public Builder backupScheduleName(String backupScheduleName) {
-            this.backupScheduleName = Objects.requireNonNull(backupScheduleName);
+            $.backupScheduleName = backupScheduleName;
             return this;
         }
+
         public Builder deviceName(String deviceName) {
-            this.deviceName = Objects.requireNonNull(deviceName);
+            $.deviceName = deviceName;
             return this;
         }
+
         public Builder managerName(String managerName) {
-            this.managerName = Objects.requireNonNull(managerName);
+            $.managerName = managerName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public GetBackupScheduleArgs build() {
-            return new GetBackupScheduleArgs(backupPolicyName, backupScheduleName, deviceName, managerName, resourceGroupName);
+        }
+
+        public GetBackupScheduleArgs build() {
+            $.backupPolicyName = Objects.requireNonNull($.backupPolicyName, "expected parameter 'backupPolicyName' to be non-null");
+            $.backupScheduleName = Objects.requireNonNull($.backupScheduleName, "expected parameter 'backupScheduleName' to be non-null");
+            $.deviceName = Objects.requireNonNull($.deviceName, "expected parameter 'deviceName' to be non-null");
+            $.managerName = Objects.requireNonNull($.managerName, "expected parameter 'managerName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

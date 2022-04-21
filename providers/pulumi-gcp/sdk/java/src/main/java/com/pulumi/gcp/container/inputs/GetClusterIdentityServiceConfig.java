@@ -13,45 +13,45 @@ public final class GetClusterIdentityServiceConfig extends com.pulumi.resources.
     public static final GetClusterIdentityServiceConfig Empty = new GetClusterIdentityServiceConfig();
 
     @Import(name="enabled", required=true)
-      private final Boolean enabled;
+    private Boolean enabled;
 
     public Boolean enabled() {
         return this.enabled;
     }
 
-    public GetClusterIdentityServiceConfig(Boolean enabled) {
-        this.enabled = Objects.requireNonNull(enabled, "expected parameter 'enabled' to be non-null");
-    }
+    private GetClusterIdentityServiceConfig() {}
 
-    private GetClusterIdentityServiceConfig() {
-        this.enabled = null;
+    private GetClusterIdentityServiceConfig(GetClusterIdentityServiceConfig $) {
+        this.enabled = $.enabled;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetClusterIdentityServiceConfig defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Boolean enabled;
+        private GetClusterIdentityServiceConfig $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetClusterIdentityServiceConfig();
         }
 
         public Builder(GetClusterIdentityServiceConfig defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.enabled = defaults.enabled;
+            $ = new GetClusterIdentityServiceConfig(Objects.requireNonNull(defaults));
         }
 
         public Builder enabled(Boolean enabled) {
-            this.enabled = Objects.requireNonNull(enabled);
+            $.enabled = enabled;
             return this;
-        }        public GetClusterIdentityServiceConfig build() {
-            return new GetClusterIdentityServiceConfig(enabled);
+        }
+
+        public GetClusterIdentityServiceConfig build() {
+            $.enabled = Objects.requireNonNull($.enabled, "expected parameter 'enabled' to be non-null");
+            return $;
         }
     }
+
 }

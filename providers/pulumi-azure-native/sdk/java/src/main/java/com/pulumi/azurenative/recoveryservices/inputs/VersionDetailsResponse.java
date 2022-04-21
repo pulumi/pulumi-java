@@ -23,10 +23,10 @@ public final class VersionDetailsResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="expiryDate")
-      private final @Nullable String expiryDate;
+    private @Nullable String expiryDate;
 
     public Optional<String> expiryDate() {
-        return this.expiryDate == null ? Optional.empty() : Optional.ofNullable(this.expiryDate);
+        return Optional.ofNullable(this.expiryDate);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class VersionDetailsResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="status")
-      private final @Nullable String status;
+    private @Nullable String status;
 
     public Optional<String> status() {
-        return this.status == null ? Optional.empty() : Optional.ofNullable(this.status);
+        return Optional.ofNullable(this.status);
     }
 
     /**
@@ -45,64 +45,56 @@ public final class VersionDetailsResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="version")
-      private final @Nullable String version;
+    private @Nullable String version;
 
     public Optional<String> version() {
-        return this.version == null ? Optional.empty() : Optional.ofNullable(this.version);
+        return Optional.ofNullable(this.version);
     }
 
-    public VersionDetailsResponse(
-        @Nullable String expiryDate,
-        @Nullable String status,
-        @Nullable String version) {
-        this.expiryDate = expiryDate;
-        this.status = status;
-        this.version = version;
-    }
+    private VersionDetailsResponse() {}
 
-    private VersionDetailsResponse() {
-        this.expiryDate = null;
-        this.status = null;
-        this.version = null;
+    private VersionDetailsResponse(VersionDetailsResponse $) {
+        this.expiryDate = $.expiryDate;
+        this.status = $.status;
+        this.version = $.version;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VersionDetailsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String expiryDate;
-        private @Nullable String status;
-        private @Nullable String version;
+        private VersionDetailsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new VersionDetailsResponse();
         }
 
         public Builder(VersionDetailsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.expiryDate = defaults.expiryDate;
-    	      this.status = defaults.status;
-    	      this.version = defaults.version;
+            $ = new VersionDetailsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder expiryDate(@Nullable String expiryDate) {
-            this.expiryDate = expiryDate;
+            $.expiryDate = expiryDate;
             return this;
         }
+
         public Builder status(@Nullable String status) {
-            this.status = status;
+            $.status = status;
             return this;
         }
+
         public Builder version(@Nullable String version) {
-            this.version = version;
+            $.version = version;
             return this;
-        }        public VersionDetailsResponse build() {
-            return new VersionDetailsResponse(expiryDate, status, version);
+        }
+
+        public VersionDetailsResponse build() {
+            return $;
         }
     }
+
 }

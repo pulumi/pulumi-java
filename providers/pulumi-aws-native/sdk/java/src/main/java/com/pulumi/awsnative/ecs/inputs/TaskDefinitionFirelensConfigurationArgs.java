@@ -5,10 +5,10 @@ package com.pulumi.awsnative.ecs.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -17,70 +17,65 @@ public final class TaskDefinitionFirelensConfigurationArgs extends com.pulumi.re
     public static final TaskDefinitionFirelensConfigurationArgs Empty = new TaskDefinitionFirelensConfigurationArgs();
 
     @Import(name="options")
-      private final @Nullable Output<Object> options;
+    private @Nullable Output<Object> options;
 
-    public Output<Object> options() {
-        return this.options == null ? Codegen.empty() : this.options;
+    public Optional<Output<Object>> options() {
+        return Optional.ofNullable(this.options);
     }
 
     @Import(name="type")
-      private final @Nullable Output<String> type;
+    private @Nullable Output<String> type;
 
-    public Output<String> type() {
-        return this.type == null ? Codegen.empty() : this.type;
+    public Optional<Output<String>> type() {
+        return Optional.ofNullable(this.type);
     }
 
-    public TaskDefinitionFirelensConfigurationArgs(
-        @Nullable Output<Object> options,
-        @Nullable Output<String> type) {
-        this.options = options;
-        this.type = type;
-    }
+    private TaskDefinitionFirelensConfigurationArgs() {}
 
-    private TaskDefinitionFirelensConfigurationArgs() {
-        this.options = Codegen.empty();
-        this.type = Codegen.empty();
+    private TaskDefinitionFirelensConfigurationArgs(TaskDefinitionFirelensConfigurationArgs $) {
+        this.options = $.options;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TaskDefinitionFirelensConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Object> options;
-        private @Nullable Output<String> type;
+        private TaskDefinitionFirelensConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TaskDefinitionFirelensConfigurationArgs();
         }
 
         public Builder(TaskDefinitionFirelensConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.options = defaults.options;
-    	      this.type = defaults.type;
+            $ = new TaskDefinitionFirelensConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder options(@Nullable Output<Object> options) {
-            this.options = options;
+            $.options = options;
             return this;
         }
-        public Builder options(@Nullable Object options) {
-            this.options = Codegen.ofNullable(options);
-            return this;
+
+        public Builder options(Object options) {
+            return options(Output.of(options));
         }
+
         public Builder type(@Nullable Output<String> type) {
-            this.type = type;
+            $.type = type;
             return this;
         }
-        public Builder type(@Nullable String type) {
-            this.type = Codegen.ofNullable(type);
-            return this;
-        }        public TaskDefinitionFirelensConfigurationArgs build() {
-            return new TaskDefinitionFirelensConfigurationArgs(options, type);
+
+        public Builder type(String type) {
+            return type(Output.of(type));
+        }
+
+        public TaskDefinitionFirelensConfigurationArgs build() {
+            return $;
         }
     }
+
 }

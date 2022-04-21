@@ -23,7 +23,7 @@ public final class MigrateSyncCompleteCommandOutputResponse extends com.pulumi.r
      * 
      */
     @Import(name="errors", required=true)
-      private final List<ReportableExceptionResponse> errors;
+    private List<ReportableExceptionResponse> errors;
 
     public List<ReportableExceptionResponse> errors() {
         return this.errors;
@@ -34,58 +34,56 @@ public final class MigrateSyncCompleteCommandOutputResponse extends com.pulumi.r
      * 
      */
     @Import(name="id", required=true)
-      private final String id;
+    private String id;
 
     public String id() {
         return this.id;
     }
 
-    public MigrateSyncCompleteCommandOutputResponse(
-        List<ReportableExceptionResponse> errors,
-        String id) {
-        this.errors = Objects.requireNonNull(errors, "expected parameter 'errors' to be non-null");
-        this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
-    }
+    private MigrateSyncCompleteCommandOutputResponse() {}
 
-    private MigrateSyncCompleteCommandOutputResponse() {
-        this.errors = List.of();
-        this.id = null;
+    private MigrateSyncCompleteCommandOutputResponse(MigrateSyncCompleteCommandOutputResponse $) {
+        this.errors = $.errors;
+        this.id = $.id;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MigrateSyncCompleteCommandOutputResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<ReportableExceptionResponse> errors;
-        private String id;
+        private MigrateSyncCompleteCommandOutputResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new MigrateSyncCompleteCommandOutputResponse();
         }
 
         public Builder(MigrateSyncCompleteCommandOutputResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.errors = defaults.errors;
-    	      this.id = defaults.id;
+            $ = new MigrateSyncCompleteCommandOutputResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder errors(List<ReportableExceptionResponse> errors) {
-            this.errors = Objects.requireNonNull(errors);
+            $.errors = errors;
             return this;
         }
+
         public Builder errors(ReportableExceptionResponse... errors) {
             return errors(List.of(errors));
         }
+
         public Builder id(String id) {
-            this.id = Objects.requireNonNull(id);
+            $.id = id;
             return this;
-        }        public MigrateSyncCompleteCommandOutputResponse build() {
-            return new MigrateSyncCompleteCommandOutputResponse(errors, id);
+        }
+
+        public MigrateSyncCompleteCommandOutputResponse build() {
+            $.errors = Objects.requireNonNull($.errors, "expected parameter 'errors' to be non-null");
+            $.id = Objects.requireNonNull($.id, "expected parameter 'id' to be non-null");
+            return $;
         }
     }
+
 }

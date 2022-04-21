@@ -26,7 +26,7 @@ public final class BranchResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="actions", required=true)
-      private final List<Object> actions;
+    private List<Object> actions;
 
     public List<Object> actions() {
         return this.actions;
@@ -37,58 +37,56 @@ public final class BranchResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
     }
 
-    public BranchResponse(
-        List<Object> actions,
-        String name) {
-        this.actions = Objects.requireNonNull(actions, "expected parameter 'actions' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-    }
+    private BranchResponse() {}
 
-    private BranchResponse() {
-        this.actions = List.of();
-        this.name = null;
+    private BranchResponse(BranchResponse $) {
+        this.actions = $.actions;
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BranchResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<Object> actions;
-        private String name;
+        private BranchResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new BranchResponse();
         }
 
         public Builder(BranchResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.actions = defaults.actions;
-    	      this.name = defaults.name;
+            $ = new BranchResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder actions(List<Object> actions) {
-            this.actions = Objects.requireNonNull(actions);
+            $.actions = actions;
             return this;
         }
+
         public Builder actions(Object... actions) {
             return actions(List.of(actions));
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
-        }        public BranchResponse build() {
-            return new BranchResponse(actions, name);
+        }
+
+        public BranchResponse build() {
+            $.actions = Objects.requireNonNull($.actions, "expected parameter 'actions' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            return $;
         }
     }
+
 }

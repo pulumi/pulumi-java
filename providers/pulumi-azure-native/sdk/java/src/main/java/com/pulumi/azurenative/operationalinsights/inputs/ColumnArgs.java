@@ -8,9 +8,9 @@ import com.pulumi.azurenative.operationalinsights.enums.ColumnTypeEnum;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +27,10 @@ public final class ColumnArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="dataTypeHint")
-      private final @Nullable Output<Either<String,ColumnDataTypeHintEnum>> dataTypeHint;
+    private @Nullable Output<Either<String,ColumnDataTypeHintEnum>> dataTypeHint;
 
-    public Output<Either<String,ColumnDataTypeHintEnum>> dataTypeHint() {
-        return this.dataTypeHint == null ? Codegen.empty() : this.dataTypeHint;
+    public Optional<Output<Either<String,ColumnDataTypeHintEnum>>> dataTypeHint() {
+        return Optional.ofNullable(this.dataTypeHint);
     }
 
     /**
@@ -38,10 +38,10 @@ public final class ColumnArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -49,10 +49,10 @@ public final class ColumnArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="displayName")
-      private final @Nullable Output<String> displayName;
+    private @Nullable Output<String> displayName;
 
-    public Output<String> displayName() {
-        return this.displayName == null ? Codegen.empty() : this.displayName;
+    public Optional<Output<String>> displayName() {
+        return Optional.ofNullable(this.displayName);
     }
 
     /**
@@ -60,10 +60,10 @@ public final class ColumnArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -71,102 +71,88 @@ public final class ColumnArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="type")
-      private final @Nullable Output<Either<String,ColumnTypeEnum>> type;
+    private @Nullable Output<Either<String,ColumnTypeEnum>> type;
 
-    public Output<Either<String,ColumnTypeEnum>> type() {
-        return this.type == null ? Codegen.empty() : this.type;
+    public Optional<Output<Either<String,ColumnTypeEnum>>> type() {
+        return Optional.ofNullable(this.type);
     }
 
-    public ColumnArgs(
-        @Nullable Output<Either<String,ColumnDataTypeHintEnum>> dataTypeHint,
-        @Nullable Output<String> description,
-        @Nullable Output<String> displayName,
-        @Nullable Output<String> name,
-        @Nullable Output<Either<String,ColumnTypeEnum>> type) {
-        this.dataTypeHint = dataTypeHint;
-        this.description = description;
-        this.displayName = displayName;
-        this.name = name;
-        this.type = type;
-    }
+    private ColumnArgs() {}
 
-    private ColumnArgs() {
-        this.dataTypeHint = Codegen.empty();
-        this.description = Codegen.empty();
-        this.displayName = Codegen.empty();
-        this.name = Codegen.empty();
-        this.type = Codegen.empty();
+    private ColumnArgs(ColumnArgs $) {
+        this.dataTypeHint = $.dataTypeHint;
+        this.description = $.description;
+        this.displayName = $.displayName;
+        this.name = $.name;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ColumnArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Either<String,ColumnDataTypeHintEnum>> dataTypeHint;
-        private @Nullable Output<String> description;
-        private @Nullable Output<String> displayName;
-        private @Nullable Output<String> name;
-        private @Nullable Output<Either<String,ColumnTypeEnum>> type;
+        private ColumnArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ColumnArgs();
         }
 
         public Builder(ColumnArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dataTypeHint = defaults.dataTypeHint;
-    	      this.description = defaults.description;
-    	      this.displayName = defaults.displayName;
-    	      this.name = defaults.name;
-    	      this.type = defaults.type;
+            $ = new ColumnArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder dataTypeHint(@Nullable Output<Either<String,ColumnDataTypeHintEnum>> dataTypeHint) {
-            this.dataTypeHint = dataTypeHint;
+            $.dataTypeHint = dataTypeHint;
             return this;
         }
-        public Builder dataTypeHint(@Nullable Either<String,ColumnDataTypeHintEnum> dataTypeHint) {
-            this.dataTypeHint = Codegen.ofNullable(dataTypeHint);
-            return this;
+
+        public Builder dataTypeHint(Either<String,ColumnDataTypeHintEnum> dataTypeHint) {
+            return dataTypeHint(Output.of(dataTypeHint));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder displayName(@Nullable Output<String> displayName) {
-            this.displayName = displayName;
+            $.displayName = displayName;
             return this;
         }
-        public Builder displayName(@Nullable String displayName) {
-            this.displayName = Codegen.ofNullable(displayName);
-            return this;
+
+        public Builder displayName(String displayName) {
+            return displayName(Output.of(displayName));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder type(@Nullable Output<Either<String,ColumnTypeEnum>> type) {
-            this.type = type;
+            $.type = type;
             return this;
         }
-        public Builder type(@Nullable Either<String,ColumnTypeEnum> type) {
-            this.type = Codegen.ofNullable(type);
-            return this;
-        }        public ColumnArgs build() {
-            return new ColumnArgs(dataTypeHint, description, displayName, name, type);
+
+        public Builder type(Either<String,ColumnTypeEnum> type) {
+            return type(Output.of(type));
+        }
+
+        public ColumnArgs build() {
+            return $;
         }
     }
+
 }

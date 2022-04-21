@@ -8,8 +8,8 @@ import com.pulumi.azurenative.containerregistry.inputs.RetentionPolicyArgs;
 import com.pulumi.azurenative.containerregistry.inputs.TrustPolicyArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class PoliciesArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="quarantinePolicy")
-      private final @Nullable Output<QuarantinePolicyArgs> quarantinePolicy;
+    private @Nullable Output<QuarantinePolicyArgs> quarantinePolicy;
 
-    public Output<QuarantinePolicyArgs> quarantinePolicy() {
-        return this.quarantinePolicy == null ? Codegen.empty() : this.quarantinePolicy;
+    public Optional<Output<QuarantinePolicyArgs>> quarantinePolicy() {
+        return Optional.ofNullable(this.quarantinePolicy);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class PoliciesArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="retentionPolicy")
-      private final @Nullable Output<RetentionPolicyArgs> retentionPolicy;
+    private @Nullable Output<RetentionPolicyArgs> retentionPolicy;
 
-    public Output<RetentionPolicyArgs> retentionPolicy() {
-        return this.retentionPolicy == null ? Codegen.empty() : this.retentionPolicy;
+    public Optional<Output<RetentionPolicyArgs>> retentionPolicy() {
+        return Optional.ofNullable(this.retentionPolicy);
     }
 
     /**
@@ -48,76 +48,68 @@ public final class PoliciesArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="trustPolicy")
-      private final @Nullable Output<TrustPolicyArgs> trustPolicy;
+    private @Nullable Output<TrustPolicyArgs> trustPolicy;
 
-    public Output<TrustPolicyArgs> trustPolicy() {
-        return this.trustPolicy == null ? Codegen.empty() : this.trustPolicy;
+    public Optional<Output<TrustPolicyArgs>> trustPolicy() {
+        return Optional.ofNullable(this.trustPolicy);
     }
 
-    public PoliciesArgs(
-        @Nullable Output<QuarantinePolicyArgs> quarantinePolicy,
-        @Nullable Output<RetentionPolicyArgs> retentionPolicy,
-        @Nullable Output<TrustPolicyArgs> trustPolicy) {
-        this.quarantinePolicy = quarantinePolicy;
-        this.retentionPolicy = retentionPolicy;
-        this.trustPolicy = trustPolicy;
-    }
+    private PoliciesArgs() {}
 
-    private PoliciesArgs() {
-        this.quarantinePolicy = Codegen.empty();
-        this.retentionPolicy = Codegen.empty();
-        this.trustPolicy = Codegen.empty();
+    private PoliciesArgs(PoliciesArgs $) {
+        this.quarantinePolicy = $.quarantinePolicy;
+        this.retentionPolicy = $.retentionPolicy;
+        this.trustPolicy = $.trustPolicy;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PoliciesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<QuarantinePolicyArgs> quarantinePolicy;
-        private @Nullable Output<RetentionPolicyArgs> retentionPolicy;
-        private @Nullable Output<TrustPolicyArgs> trustPolicy;
+        private PoliciesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PoliciesArgs();
         }
 
         public Builder(PoliciesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.quarantinePolicy = defaults.quarantinePolicy;
-    	      this.retentionPolicy = defaults.retentionPolicy;
-    	      this.trustPolicy = defaults.trustPolicy;
+            $ = new PoliciesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder quarantinePolicy(@Nullable Output<QuarantinePolicyArgs> quarantinePolicy) {
-            this.quarantinePolicy = quarantinePolicy;
+            $.quarantinePolicy = quarantinePolicy;
             return this;
         }
-        public Builder quarantinePolicy(@Nullable QuarantinePolicyArgs quarantinePolicy) {
-            this.quarantinePolicy = Codegen.ofNullable(quarantinePolicy);
-            return this;
+
+        public Builder quarantinePolicy(QuarantinePolicyArgs quarantinePolicy) {
+            return quarantinePolicy(Output.of(quarantinePolicy));
         }
+
         public Builder retentionPolicy(@Nullable Output<RetentionPolicyArgs> retentionPolicy) {
-            this.retentionPolicy = retentionPolicy;
+            $.retentionPolicy = retentionPolicy;
             return this;
         }
-        public Builder retentionPolicy(@Nullable RetentionPolicyArgs retentionPolicy) {
-            this.retentionPolicy = Codegen.ofNullable(retentionPolicy);
-            return this;
+
+        public Builder retentionPolicy(RetentionPolicyArgs retentionPolicy) {
+            return retentionPolicy(Output.of(retentionPolicy));
         }
+
         public Builder trustPolicy(@Nullable Output<TrustPolicyArgs> trustPolicy) {
-            this.trustPolicy = trustPolicy;
+            $.trustPolicy = trustPolicy;
             return this;
         }
-        public Builder trustPolicy(@Nullable TrustPolicyArgs trustPolicy) {
-            this.trustPolicy = Codegen.ofNullable(trustPolicy);
-            return this;
-        }        public PoliciesArgs build() {
-            return new PoliciesArgs(quarantinePolicy, retentionPolicy, trustPolicy);
+
+        public Builder trustPolicy(TrustPolicyArgs trustPolicy) {
+            return trustPolicy(Output.of(trustPolicy));
+        }
+
+        public PoliciesArgs build() {
+            return $;
         }
     }
+
 }

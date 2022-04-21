@@ -24,10 +24,10 @@ public final class ImagePipelineSchedule extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="pipelineExecutionStartCondition")
-      private final @Nullable ImagePipelineSchedulePipelineExecutionStartCondition pipelineExecutionStartCondition;
+    private @Nullable ImagePipelineSchedulePipelineExecutionStartCondition pipelineExecutionStartCondition;
 
     public Optional<ImagePipelineSchedulePipelineExecutionStartCondition> pipelineExecutionStartCondition() {
-        return this.pipelineExecutionStartCondition == null ? Optional.empty() : Optional.ofNullable(this.pipelineExecutionStartCondition);
+        return Optional.ofNullable(this.pipelineExecutionStartCondition);
     }
 
     /**
@@ -35,55 +35,50 @@ public final class ImagePipelineSchedule extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="scheduleExpression")
-      private final @Nullable String scheduleExpression;
+    private @Nullable String scheduleExpression;
 
     public Optional<String> scheduleExpression() {
-        return this.scheduleExpression == null ? Optional.empty() : Optional.ofNullable(this.scheduleExpression);
+        return Optional.ofNullable(this.scheduleExpression);
     }
 
-    public ImagePipelineSchedule(
-        @Nullable ImagePipelineSchedulePipelineExecutionStartCondition pipelineExecutionStartCondition,
-        @Nullable String scheduleExpression) {
-        this.pipelineExecutionStartCondition = pipelineExecutionStartCondition;
-        this.scheduleExpression = scheduleExpression;
-    }
+    private ImagePipelineSchedule() {}
 
-    private ImagePipelineSchedule() {
-        this.pipelineExecutionStartCondition = null;
-        this.scheduleExpression = null;
+    private ImagePipelineSchedule(ImagePipelineSchedule $) {
+        this.pipelineExecutionStartCondition = $.pipelineExecutionStartCondition;
+        this.scheduleExpression = $.scheduleExpression;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ImagePipelineSchedule defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable ImagePipelineSchedulePipelineExecutionStartCondition pipelineExecutionStartCondition;
-        private @Nullable String scheduleExpression;
+        private ImagePipelineSchedule $;
 
         public Builder() {
-    	      // Empty
+            $ = new ImagePipelineSchedule();
         }
 
         public Builder(ImagePipelineSchedule defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.pipelineExecutionStartCondition = defaults.pipelineExecutionStartCondition;
-    	      this.scheduleExpression = defaults.scheduleExpression;
+            $ = new ImagePipelineSchedule(Objects.requireNonNull(defaults));
         }
 
         public Builder pipelineExecutionStartCondition(@Nullable ImagePipelineSchedulePipelineExecutionStartCondition pipelineExecutionStartCondition) {
-            this.pipelineExecutionStartCondition = pipelineExecutionStartCondition;
+            $.pipelineExecutionStartCondition = pipelineExecutionStartCondition;
             return this;
         }
+
         public Builder scheduleExpression(@Nullable String scheduleExpression) {
-            this.scheduleExpression = scheduleExpression;
+            $.scheduleExpression = scheduleExpression;
             return this;
-        }        public ImagePipelineSchedule build() {
-            return new ImagePipelineSchedule(pipelineExecutionStartCondition, scheduleExpression);
+        }
+
+        public ImagePipelineSchedule build() {
+            return $;
         }
     }
+
 }

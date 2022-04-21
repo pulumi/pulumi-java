@@ -5,9 +5,9 @@ package com.pulumi.googlenative.cloudfunctions_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class SourceRepositoryArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="url")
-      private final @Nullable Output<String> url;
+    private @Nullable Output<String> url;
 
-    public Output<String> url() {
-        return this.url == null ? Codegen.empty() : this.url;
+    public Optional<Output<String>> url() {
+        return Optional.ofNullable(this.url);
     }
 
-    public SourceRepositoryArgs(@Nullable Output<String> url) {
-        this.url = url;
-    }
+    private SourceRepositoryArgs() {}
 
-    private SourceRepositoryArgs() {
-        this.url = Codegen.empty();
+    private SourceRepositoryArgs(SourceRepositoryArgs $) {
+        this.url = $.url;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SourceRepositoryArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> url;
+        private SourceRepositoryArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SourceRepositoryArgs();
         }
 
         public Builder(SourceRepositoryArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.url = defaults.url;
+            $ = new SourceRepositoryArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder url(@Nullable Output<String> url) {
-            this.url = url;
+            $.url = url;
             return this;
         }
-        public Builder url(@Nullable String url) {
-            this.url = Codegen.ofNullable(url);
-            return this;
-        }        public SourceRepositoryArgs build() {
-            return new SourceRepositoryArgs(url);
+
+        public Builder url(String url) {
+            return url(Output.of(url));
+        }
+
+        public SourceRepositoryArgs build() {
+            return $;
         }
     }
+
 }

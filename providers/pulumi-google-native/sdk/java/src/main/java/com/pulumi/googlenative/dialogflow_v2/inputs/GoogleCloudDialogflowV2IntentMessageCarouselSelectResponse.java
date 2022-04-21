@@ -22,48 +22,49 @@ public final class GoogleCloudDialogflowV2IntentMessageCarouselSelectResponse ex
      * 
      */
     @Import(name="items", required=true)
-      private final List<GoogleCloudDialogflowV2IntentMessageCarouselSelectItemResponse> items;
+    private List<GoogleCloudDialogflowV2IntentMessageCarouselSelectItemResponse> items;
 
     public List<GoogleCloudDialogflowV2IntentMessageCarouselSelectItemResponse> items() {
         return this.items;
     }
 
-    public GoogleCloudDialogflowV2IntentMessageCarouselSelectResponse(List<GoogleCloudDialogflowV2IntentMessageCarouselSelectItemResponse> items) {
-        this.items = Objects.requireNonNull(items, "expected parameter 'items' to be non-null");
-    }
+    private GoogleCloudDialogflowV2IntentMessageCarouselSelectResponse() {}
 
-    private GoogleCloudDialogflowV2IntentMessageCarouselSelectResponse() {
-        this.items = List.of();
+    private GoogleCloudDialogflowV2IntentMessageCarouselSelectResponse(GoogleCloudDialogflowV2IntentMessageCarouselSelectResponse $) {
+        this.items = $.items;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudDialogflowV2IntentMessageCarouselSelectResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<GoogleCloudDialogflowV2IntentMessageCarouselSelectItemResponse> items;
+        private GoogleCloudDialogflowV2IntentMessageCarouselSelectResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudDialogflowV2IntentMessageCarouselSelectResponse();
         }
 
         public Builder(GoogleCloudDialogflowV2IntentMessageCarouselSelectResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.items = defaults.items;
+            $ = new GoogleCloudDialogflowV2IntentMessageCarouselSelectResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder items(List<GoogleCloudDialogflowV2IntentMessageCarouselSelectItemResponse> items) {
-            this.items = Objects.requireNonNull(items);
+            $.items = items;
             return this;
         }
+
         public Builder items(GoogleCloudDialogflowV2IntentMessageCarouselSelectItemResponse... items) {
             return items(List.of(items));
-        }        public GoogleCloudDialogflowV2IntentMessageCarouselSelectResponse build() {
-            return new GoogleCloudDialogflowV2IntentMessageCarouselSelectResponse(items);
+        }
+
+        public GoogleCloudDialogflowV2IntentMessageCarouselSelectResponse build() {
+            $.items = Objects.requireNonNull($.items, "expected parameter 'items' to be non-null");
+            return $;
         }
     }
+
 }

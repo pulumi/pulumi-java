@@ -6,11 +6,11 @@ package com.pulumi.aws.s3control.inputs;
 import com.pulumi.aws.s3control.inputs.ObjectLambdaAccessPointConfigurationTransformationConfigurationGetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,10 @@ public final class ObjectLambdaAccessPointConfigurationGetArgs extends com.pulum
      * 
      */
     @Import(name="allowedFeatures")
-      private final @Nullable Output<List<String>> allowedFeatures;
+    private @Nullable Output<List<String>> allowedFeatures;
 
-    public Output<List<String>> allowedFeatures() {
-        return this.allowedFeatures == null ? Codegen.empty() : this.allowedFeatures;
+    public Optional<Output<List<String>>> allowedFeatures() {
+        return Optional.ofNullable(this.allowedFeatures);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class ObjectLambdaAccessPointConfigurationGetArgs extends com.pulum
      * 
      */
     @Import(name="cloudWatchMetricsEnabled")
-      private final @Nullable Output<Boolean> cloudWatchMetricsEnabled;
+    private @Nullable Output<Boolean> cloudWatchMetricsEnabled;
 
-    public Output<Boolean> cloudWatchMetricsEnabled() {
-        return this.cloudWatchMetricsEnabled == null ? Codegen.empty() : this.cloudWatchMetricsEnabled;
+    public Optional<Output<Boolean>> cloudWatchMetricsEnabled() {
+        return Optional.ofNullable(this.cloudWatchMetricsEnabled);
     }
 
     /**
@@ -45,7 +45,7 @@ public final class ObjectLambdaAccessPointConfigurationGetArgs extends com.pulum
      * 
      */
     @Import(name="supportingAccessPoint", required=true)
-      private final Output<String> supportingAccessPoint;
+    private Output<String> supportingAccessPoint;
 
     public Output<String> supportingAccessPoint() {
         return this.supportingAccessPoint;
@@ -56,95 +56,88 @@ public final class ObjectLambdaAccessPointConfigurationGetArgs extends com.pulum
      * 
      */
     @Import(name="transformationConfigurations", required=true)
-      private final Output<List<ObjectLambdaAccessPointConfigurationTransformationConfigurationGetArgs>> transformationConfigurations;
+    private Output<List<ObjectLambdaAccessPointConfigurationTransformationConfigurationGetArgs>> transformationConfigurations;
 
     public Output<List<ObjectLambdaAccessPointConfigurationTransformationConfigurationGetArgs>> transformationConfigurations() {
         return this.transformationConfigurations;
     }
 
-    public ObjectLambdaAccessPointConfigurationGetArgs(
-        @Nullable Output<List<String>> allowedFeatures,
-        @Nullable Output<Boolean> cloudWatchMetricsEnabled,
-        Output<String> supportingAccessPoint,
-        Output<List<ObjectLambdaAccessPointConfigurationTransformationConfigurationGetArgs>> transformationConfigurations) {
-        this.allowedFeatures = allowedFeatures;
-        this.cloudWatchMetricsEnabled = cloudWatchMetricsEnabled;
-        this.supportingAccessPoint = Objects.requireNonNull(supportingAccessPoint, "expected parameter 'supportingAccessPoint' to be non-null");
-        this.transformationConfigurations = Objects.requireNonNull(transformationConfigurations, "expected parameter 'transformationConfigurations' to be non-null");
-    }
+    private ObjectLambdaAccessPointConfigurationGetArgs() {}
 
-    private ObjectLambdaAccessPointConfigurationGetArgs() {
-        this.allowedFeatures = Codegen.empty();
-        this.cloudWatchMetricsEnabled = Codegen.empty();
-        this.supportingAccessPoint = Codegen.empty();
-        this.transformationConfigurations = Codegen.empty();
+    private ObjectLambdaAccessPointConfigurationGetArgs(ObjectLambdaAccessPointConfigurationGetArgs $) {
+        this.allowedFeatures = $.allowedFeatures;
+        this.cloudWatchMetricsEnabled = $.cloudWatchMetricsEnabled;
+        this.supportingAccessPoint = $.supportingAccessPoint;
+        this.transformationConfigurations = $.transformationConfigurations;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ObjectLambdaAccessPointConfigurationGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> allowedFeatures;
-        private @Nullable Output<Boolean> cloudWatchMetricsEnabled;
-        private Output<String> supportingAccessPoint;
-        private Output<List<ObjectLambdaAccessPointConfigurationTransformationConfigurationGetArgs>> transformationConfigurations;
+        private ObjectLambdaAccessPointConfigurationGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ObjectLambdaAccessPointConfigurationGetArgs();
         }
 
         public Builder(ObjectLambdaAccessPointConfigurationGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.allowedFeatures = defaults.allowedFeatures;
-    	      this.cloudWatchMetricsEnabled = defaults.cloudWatchMetricsEnabled;
-    	      this.supportingAccessPoint = defaults.supportingAccessPoint;
-    	      this.transformationConfigurations = defaults.transformationConfigurations;
+            $ = new ObjectLambdaAccessPointConfigurationGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder allowedFeatures(@Nullable Output<List<String>> allowedFeatures) {
-            this.allowedFeatures = allowedFeatures;
+            $.allowedFeatures = allowedFeatures;
             return this;
         }
-        public Builder allowedFeatures(@Nullable List<String> allowedFeatures) {
-            this.allowedFeatures = Codegen.ofNullable(allowedFeatures);
-            return this;
+
+        public Builder allowedFeatures(List<String> allowedFeatures) {
+            return allowedFeatures(Output.of(allowedFeatures));
         }
+
         public Builder allowedFeatures(String... allowedFeatures) {
             return allowedFeatures(List.of(allowedFeatures));
         }
+
         public Builder cloudWatchMetricsEnabled(@Nullable Output<Boolean> cloudWatchMetricsEnabled) {
-            this.cloudWatchMetricsEnabled = cloudWatchMetricsEnabled;
+            $.cloudWatchMetricsEnabled = cloudWatchMetricsEnabled;
             return this;
         }
-        public Builder cloudWatchMetricsEnabled(@Nullable Boolean cloudWatchMetricsEnabled) {
-            this.cloudWatchMetricsEnabled = Codegen.ofNullable(cloudWatchMetricsEnabled);
-            return this;
+
+        public Builder cloudWatchMetricsEnabled(Boolean cloudWatchMetricsEnabled) {
+            return cloudWatchMetricsEnabled(Output.of(cloudWatchMetricsEnabled));
         }
+
         public Builder supportingAccessPoint(Output<String> supportingAccessPoint) {
-            this.supportingAccessPoint = Objects.requireNonNull(supportingAccessPoint);
+            $.supportingAccessPoint = supportingAccessPoint;
             return this;
         }
+
         public Builder supportingAccessPoint(String supportingAccessPoint) {
-            this.supportingAccessPoint = Output.of(Objects.requireNonNull(supportingAccessPoint));
-            return this;
+            return supportingAccessPoint(Output.of(supportingAccessPoint));
         }
+
         public Builder transformationConfigurations(Output<List<ObjectLambdaAccessPointConfigurationTransformationConfigurationGetArgs>> transformationConfigurations) {
-            this.transformationConfigurations = Objects.requireNonNull(transformationConfigurations);
+            $.transformationConfigurations = transformationConfigurations;
             return this;
         }
+
         public Builder transformationConfigurations(List<ObjectLambdaAccessPointConfigurationTransformationConfigurationGetArgs> transformationConfigurations) {
-            this.transformationConfigurations = Output.of(Objects.requireNonNull(transformationConfigurations));
-            return this;
+            return transformationConfigurations(Output.of(transformationConfigurations));
         }
+
         public Builder transformationConfigurations(ObjectLambdaAccessPointConfigurationTransformationConfigurationGetArgs... transformationConfigurations) {
             return transformationConfigurations(List.of(transformationConfigurations));
-        }        public ObjectLambdaAccessPointConfigurationGetArgs build() {
-            return new ObjectLambdaAccessPointConfigurationGetArgs(allowedFeatures, cloudWatchMetricsEnabled, supportingAccessPoint, transformationConfigurations);
+        }
+
+        public ObjectLambdaAccessPointConfigurationGetArgs build() {
+            $.supportingAccessPoint = Objects.requireNonNull($.supportingAccessPoint, "expected parameter 'supportingAccessPoint' to be non-null");
+            $.transformationConfigurations = Objects.requireNonNull($.transformationConfigurations, "expected parameter 'transformationConfigurations' to be non-null");
+            return $;
         }
     }
+
 }

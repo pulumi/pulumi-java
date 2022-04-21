@@ -15,6 +15,7 @@ import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +28,10 @@ public final class ReleaseArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="atomic")
-      private final @Nullable Output<Boolean> atomic;
+    private @Nullable Output<Boolean> atomic;
 
-    public Output<Boolean> atomic() {
-        return this.atomic == null ? Codegen.empty() : this.atomic;
+    public Optional<Output<Boolean>> atomic() {
+        return Optional.ofNullable(this.atomic);
     }
 
     /**
@@ -38,7 +39,7 @@ public final class ReleaseArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="chart", required=true)
-      private final Output<String> chart;
+    private Output<String> chart;
 
     public Output<String> chart() {
         return this.chart;
@@ -49,17 +50,17 @@ public final class ReleaseArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="cleanupOnFail")
-      private final @Nullable Output<Boolean> cleanupOnFail;
+    private @Nullable Output<Boolean> cleanupOnFail;
 
-    public Output<Boolean> cleanupOnFail() {
-        return this.cleanupOnFail == null ? Codegen.empty() : this.cleanupOnFail;
+    public Optional<Output<Boolean>> cleanupOnFail() {
+        return Optional.ofNullable(this.cleanupOnFail);
     }
 
     @Import(name="compat")
-      private final @Nullable Output<String> compat;
+    private @Nullable Output<String> compat;
 
-    public Output<String> compat() {
-        return this.compat == null ? Codegen.empty() : this.compat;
+    public Optional<Output<String>> compat() {
+        return Optional.ofNullable(this.compat);
     }
 
     /**
@@ -67,10 +68,10 @@ public final class ReleaseArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="createNamespace")
-      private final @Nullable Output<Boolean> createNamespace;
+    private @Nullable Output<Boolean> createNamespace;
 
-    public Output<Boolean> createNamespace() {
-        return this.createNamespace == null ? Codegen.empty() : this.createNamespace;
+    public Optional<Output<Boolean>> createNamespace() {
+        return Optional.ofNullable(this.createNamespace);
     }
 
     /**
@@ -78,10 +79,10 @@ public final class ReleaseArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="dependencyUpdate")
-      private final @Nullable Output<Boolean> dependencyUpdate;
+    private @Nullable Output<Boolean> dependencyUpdate;
 
-    public Output<Boolean> dependencyUpdate() {
-        return this.dependencyUpdate == null ? Codegen.empty() : this.dependencyUpdate;
+    public Optional<Output<Boolean>> dependencyUpdate() {
+        return Optional.ofNullable(this.dependencyUpdate);
     }
 
     /**
@@ -89,10 +90,10 @@ public final class ReleaseArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -100,10 +101,10 @@ public final class ReleaseArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="devel")
-      private final @Nullable Output<Boolean> devel;
+    private @Nullable Output<Boolean> devel;
 
-    public Output<Boolean> devel() {
-        return this.devel == null ? Codegen.empty() : this.devel;
+    public Optional<Output<Boolean>> devel() {
+        return Optional.ofNullable(this.devel);
     }
 
     /**
@@ -111,10 +112,10 @@ public final class ReleaseArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="disableCRDHooks")
-      private final @Nullable Output<Boolean> disableCRDHooks;
+    private @Nullable Output<Boolean> disableCRDHooks;
 
-    public Output<Boolean> disableCRDHooks() {
-        return this.disableCRDHooks == null ? Codegen.empty() : this.disableCRDHooks;
+    public Optional<Output<Boolean>> disableCRDHooks() {
+        return Optional.ofNullable(this.disableCRDHooks);
     }
 
     /**
@@ -122,10 +123,10 @@ public final class ReleaseArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="disableOpenapiValidation")
-      private final @Nullable Output<Boolean> disableOpenapiValidation;
+    private @Nullable Output<Boolean> disableOpenapiValidation;
 
-    public Output<Boolean> disableOpenapiValidation() {
-        return this.disableOpenapiValidation == null ? Codegen.empty() : this.disableOpenapiValidation;
+    public Optional<Output<Boolean>> disableOpenapiValidation() {
+        return Optional.ofNullable(this.disableOpenapiValidation);
     }
 
     /**
@@ -133,10 +134,10 @@ public final class ReleaseArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="disableWebhooks")
-      private final @Nullable Output<Boolean> disableWebhooks;
+    private @Nullable Output<Boolean> disableWebhooks;
 
-    public Output<Boolean> disableWebhooks() {
-        return this.disableWebhooks == null ? Codegen.empty() : this.disableWebhooks;
+    public Optional<Output<Boolean>> disableWebhooks() {
+        return Optional.ofNullable(this.disableWebhooks);
     }
 
     /**
@@ -144,10 +145,10 @@ public final class ReleaseArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="forceUpdate")
-      private final @Nullable Output<Boolean> forceUpdate;
+    private @Nullable Output<Boolean> forceUpdate;
 
-    public Output<Boolean> forceUpdate() {
-        return this.forceUpdate == null ? Codegen.empty() : this.forceUpdate;
+    public Optional<Output<Boolean>> forceUpdate() {
+        return Optional.ofNullable(this.forceUpdate);
     }
 
     /**
@@ -155,10 +156,10 @@ public final class ReleaseArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="keyring")
-      private final @Nullable Output<String> keyring;
+    private @Nullable Output<String> keyring;
 
-    public Output<String> keyring() {
-        return this.keyring == null ? Codegen.empty() : this.keyring;
+    public Optional<Output<String>> keyring() {
+        return Optional.ofNullable(this.keyring);
     }
 
     /**
@@ -166,10 +167,10 @@ public final class ReleaseArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="lint")
-      private final @Nullable Output<Boolean> lint;
+    private @Nullable Output<Boolean> lint;
 
-    public Output<Boolean> lint() {
-        return this.lint == null ? Codegen.empty() : this.lint;
+    public Optional<Output<Boolean>> lint() {
+        return Optional.ofNullable(this.lint);
     }
 
     /**
@@ -177,10 +178,10 @@ public final class ReleaseArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="manifest")
-      private final @Nullable Output<Map<String,Object>> manifest;
+    private @Nullable Output<Map<String,Object>> manifest;
 
-    public Output<Map<String,Object>> manifest() {
-        return this.manifest == null ? Codegen.empty() : this.manifest;
+    public Optional<Output<Map<String,Object>>> manifest() {
+        return Optional.ofNullable(this.manifest);
     }
 
     /**
@@ -188,10 +189,10 @@ public final class ReleaseArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="maxHistory")
-      private final @Nullable Output<Integer> maxHistory;
+    private @Nullable Output<Integer> maxHistory;
 
-    public Output<Integer> maxHistory() {
-        return this.maxHistory == null ? Codegen.empty() : this.maxHistory;
+    public Optional<Output<Integer>> maxHistory() {
+        return Optional.ofNullable(this.maxHistory);
     }
 
     /**
@@ -199,10 +200,10 @@ public final class ReleaseArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -210,10 +211,10 @@ public final class ReleaseArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="namespace")
-      private final @Nullable Output<String> namespace;
+    private @Nullable Output<String> namespace;
 
-    public Output<String> namespace() {
-        return this.namespace == null ? Codegen.empty() : this.namespace;
+    public Optional<Output<String>> namespace() {
+        return Optional.ofNullable(this.namespace);
     }
 
     /**
@@ -221,10 +222,10 @@ public final class ReleaseArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="postrender")
-      private final @Nullable Output<String> postrender;
+    private @Nullable Output<String> postrender;
 
-    public Output<String> postrender() {
-        return this.postrender == null ? Codegen.empty() : this.postrender;
+    public Optional<Output<String>> postrender() {
+        return Optional.ofNullable(this.postrender);
     }
 
     /**
@@ -232,10 +233,10 @@ public final class ReleaseArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="recreatePods")
-      private final @Nullable Output<Boolean> recreatePods;
+    private @Nullable Output<Boolean> recreatePods;
 
-    public Output<Boolean> recreatePods() {
-        return this.recreatePods == null ? Codegen.empty() : this.recreatePods;
+    public Optional<Output<Boolean>> recreatePods() {
+        return Optional.ofNullable(this.recreatePods);
     }
 
     /**
@@ -243,10 +244,10 @@ public final class ReleaseArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="renderSubchartNotes")
-      private final @Nullable Output<Boolean> renderSubchartNotes;
+    private @Nullable Output<Boolean> renderSubchartNotes;
 
-    public Output<Boolean> renderSubchartNotes() {
-        return this.renderSubchartNotes == null ? Codegen.empty() : this.renderSubchartNotes;
+    public Optional<Output<Boolean>> renderSubchartNotes() {
+        return Optional.ofNullable(this.renderSubchartNotes);
     }
 
     /**
@@ -254,10 +255,10 @@ public final class ReleaseArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="replace")
-      private final @Nullable Output<Boolean> replace;
+    private @Nullable Output<Boolean> replace;
 
-    public Output<Boolean> replace() {
-        return this.replace == null ? Codegen.empty() : this.replace;
+    public Optional<Output<Boolean>> replace() {
+        return Optional.ofNullable(this.replace);
     }
 
     /**
@@ -265,10 +266,10 @@ public final class ReleaseArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="repositoryOpts")
-      private final @Nullable Output<RepositoryOptsArgs> repositoryOpts;
+    private @Nullable Output<RepositoryOptsArgs> repositoryOpts;
 
-    public Output<RepositoryOptsArgs> repositoryOpts() {
-        return this.repositoryOpts == null ? Codegen.empty() : this.repositoryOpts;
+    public Optional<Output<RepositoryOptsArgs>> repositoryOpts() {
+        return Optional.ofNullable(this.repositoryOpts);
     }
 
     /**
@@ -276,10 +277,10 @@ public final class ReleaseArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resetValues")
-      private final @Nullable Output<Boolean> resetValues;
+    private @Nullable Output<Boolean> resetValues;
 
-    public Output<Boolean> resetValues() {
-        return this.resetValues == null ? Codegen.empty() : this.resetValues;
+    public Optional<Output<Boolean>> resetValues() {
+        return Optional.ofNullable(this.resetValues);
     }
 
     /**
@@ -287,10 +288,10 @@ public final class ReleaseArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceNames")
-      private final @Nullable Output<Map<String,List<String>>> resourceNames;
+    private @Nullable Output<Map<String,List<String>>> resourceNames;
 
-    public Output<Map<String,List<String>>> resourceNames() {
-        return this.resourceNames == null ? Codegen.empty() : this.resourceNames;
+    public Optional<Output<Map<String,List<String>>>> resourceNames() {
+        return Optional.ofNullable(this.resourceNames);
     }
 
     /**
@@ -298,10 +299,10 @@ public final class ReleaseArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="reuseValues")
-      private final @Nullable Output<Boolean> reuseValues;
+    private @Nullable Output<Boolean> reuseValues;
 
-    public Output<Boolean> reuseValues() {
-        return this.reuseValues == null ? Codegen.empty() : this.reuseValues;
+    public Optional<Output<Boolean>> reuseValues() {
+        return Optional.ofNullable(this.reuseValues);
     }
 
     /**
@@ -309,10 +310,10 @@ public final class ReleaseArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="skipAwait")
-      private final @Nullable Output<Boolean> skipAwait;
+    private @Nullable Output<Boolean> skipAwait;
 
-    public Output<Boolean> skipAwait() {
-        return this.skipAwait == null ? Codegen.empty() : this.skipAwait;
+    public Optional<Output<Boolean>> skipAwait() {
+        return Optional.ofNullable(this.skipAwait);
     }
 
     /**
@@ -320,10 +321,10 @@ public final class ReleaseArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="skipCrds")
-      private final @Nullable Output<Boolean> skipCrds;
+    private @Nullable Output<Boolean> skipCrds;
 
-    public Output<Boolean> skipCrds() {
-        return this.skipCrds == null ? Codegen.empty() : this.skipCrds;
+    public Optional<Output<Boolean>> skipCrds() {
+        return Optional.ofNullable(this.skipCrds);
     }
 
     /**
@@ -331,10 +332,10 @@ public final class ReleaseArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="timeout")
-      private final @Nullable Output<Integer> timeout;
+    private @Nullable Output<Integer> timeout;
 
-    public Output<Integer> timeout() {
-        return this.timeout == null ? Codegen.empty() : this.timeout;
+    public Optional<Output<Integer>> timeout() {
+        return Optional.ofNullable(this.timeout);
     }
 
     /**
@@ -342,10 +343,10 @@ public final class ReleaseArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="valueYamlFiles")
-      private final @Nullable Output<List<AssetOrArchive>> valueYamlFiles;
+    private @Nullable Output<List<AssetOrArchive>> valueYamlFiles;
 
-    public Output<List<AssetOrArchive>> valueYamlFiles() {
-        return this.valueYamlFiles == null ? Codegen.empty() : this.valueYamlFiles;
+    public Optional<Output<List<AssetOrArchive>>> valueYamlFiles() {
+        return Optional.ofNullable(this.valueYamlFiles);
     }
 
     /**
@@ -353,10 +354,10 @@ public final class ReleaseArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="values")
-      private final @Nullable Output<Map<String,Object>> values;
+    private @Nullable Output<Map<String,Object>> values;
 
-    public Output<Map<String,Object>> values() {
-        return this.values == null ? Codegen.empty() : this.values;
+    public Optional<Output<Map<String,Object>>> values() {
+        return Optional.ofNullable(this.values);
     }
 
     /**
@@ -364,10 +365,10 @@ public final class ReleaseArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="verify")
-      private final @Nullable Output<Boolean> verify;
+    private @Nullable Output<Boolean> verify;
 
-    public Output<Boolean> verify() {
-        return this.verify == null ? Codegen.empty() : this.verify;
+    public Optional<Output<Boolean>> verify() {
+        return Optional.ofNullable(this.verify);
     }
 
     /**
@@ -375,10 +376,10 @@ public final class ReleaseArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="version")
-      private final @Nullable Output<String> version;
+    private @Nullable Output<String> version;
 
-    public Output<String> version() {
-        return this.version == null ? Codegen.empty() : this.version;
+    public Optional<Output<String>> version() {
+        return Optional.ofNullable(this.version);
     }
 
     /**
@@ -386,482 +387,384 @@ public final class ReleaseArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="waitForJobs")
-      private final @Nullable Output<Boolean> waitForJobs;
+    private @Nullable Output<Boolean> waitForJobs;
 
-    public Output<Boolean> waitForJobs() {
-        return this.waitForJobs == null ? Codegen.empty() : this.waitForJobs;
+    public Optional<Output<Boolean>> waitForJobs() {
+        return Optional.ofNullable(this.waitForJobs);
     }
 
-    public ReleaseArgs(
-        @Nullable Output<Boolean> atomic,
-        Output<String> chart,
-        @Nullable Output<Boolean> cleanupOnFail,
-        @Nullable Output<String> compat,
-        @Nullable Output<Boolean> createNamespace,
-        @Nullable Output<Boolean> dependencyUpdate,
-        @Nullable Output<String> description,
-        @Nullable Output<Boolean> devel,
-        @Nullable Output<Boolean> disableCRDHooks,
-        @Nullable Output<Boolean> disableOpenapiValidation,
-        @Nullable Output<Boolean> disableWebhooks,
-        @Nullable Output<Boolean> forceUpdate,
-        @Nullable Output<String> keyring,
-        @Nullable Output<Boolean> lint,
-        @Nullable Output<Map<String,Object>> manifest,
-        @Nullable Output<Integer> maxHistory,
-        @Nullable Output<String> name,
-        @Nullable Output<String> namespace,
-        @Nullable Output<String> postrender,
-        @Nullable Output<Boolean> recreatePods,
-        @Nullable Output<Boolean> renderSubchartNotes,
-        @Nullable Output<Boolean> replace,
-        @Nullable Output<RepositoryOptsArgs> repositoryOpts,
-        @Nullable Output<Boolean> resetValues,
-        @Nullable Output<Map<String,List<String>>> resourceNames,
-        @Nullable Output<Boolean> reuseValues,
-        @Nullable Output<Boolean> skipAwait,
-        @Nullable Output<Boolean> skipCrds,
-        @Nullable Output<Integer> timeout,
-        @Nullable Output<List<AssetOrArchive>> valueYamlFiles,
-        @Nullable Output<Map<String,Object>> values,
-        @Nullable Output<Boolean> verify,
-        @Nullable Output<String> version,
-        @Nullable Output<Boolean> waitForJobs) {
-        this.atomic = atomic;
-        this.chart = Objects.requireNonNull(chart, "expected parameter 'chart' to be non-null");
-        this.cleanupOnFail = cleanupOnFail;
-        this.compat = Codegen.stringProp("compat").output().arg(compat).getNullable();
-        this.createNamespace = createNamespace;
-        this.dependencyUpdate = dependencyUpdate;
-        this.description = description;
-        this.devel = devel;
-        this.disableCRDHooks = disableCRDHooks;
-        this.disableOpenapiValidation = disableOpenapiValidation;
-        this.disableWebhooks = disableWebhooks;
-        this.forceUpdate = forceUpdate;
-        this.keyring = keyring;
-        this.lint = lint;
-        this.manifest = manifest;
-        this.maxHistory = maxHistory;
-        this.name = name;
-        this.namespace = namespace;
-        this.postrender = postrender;
-        this.recreatePods = recreatePods;
-        this.renderSubchartNotes = renderSubchartNotes;
-        this.replace = replace;
-        this.repositoryOpts = repositoryOpts;
-        this.resetValues = resetValues;
-        this.resourceNames = resourceNames;
-        this.reuseValues = reuseValues;
-        this.skipAwait = skipAwait;
-        this.skipCrds = skipCrds;
-        this.timeout = timeout;
-        this.valueYamlFiles = valueYamlFiles;
-        this.values = values;
-        this.verify = verify;
-        this.version = version;
-        this.waitForJobs = waitForJobs;
-    }
+    private ReleaseArgs() {}
 
-    private ReleaseArgs() {
-        this.atomic = Codegen.empty();
-        this.chart = Codegen.empty();
-        this.cleanupOnFail = Codegen.empty();
-        this.compat = Codegen.empty();
-        this.createNamespace = Codegen.empty();
-        this.dependencyUpdate = Codegen.empty();
-        this.description = Codegen.empty();
-        this.devel = Codegen.empty();
-        this.disableCRDHooks = Codegen.empty();
-        this.disableOpenapiValidation = Codegen.empty();
-        this.disableWebhooks = Codegen.empty();
-        this.forceUpdate = Codegen.empty();
-        this.keyring = Codegen.empty();
-        this.lint = Codegen.empty();
-        this.manifest = Codegen.empty();
-        this.maxHistory = Codegen.empty();
-        this.name = Codegen.empty();
-        this.namespace = Codegen.empty();
-        this.postrender = Codegen.empty();
-        this.recreatePods = Codegen.empty();
-        this.renderSubchartNotes = Codegen.empty();
-        this.replace = Codegen.empty();
-        this.repositoryOpts = Codegen.empty();
-        this.resetValues = Codegen.empty();
-        this.resourceNames = Codegen.empty();
-        this.reuseValues = Codegen.empty();
-        this.skipAwait = Codegen.empty();
-        this.skipCrds = Codegen.empty();
-        this.timeout = Codegen.empty();
-        this.valueYamlFiles = Codegen.empty();
-        this.values = Codegen.empty();
-        this.verify = Codegen.empty();
-        this.version = Codegen.empty();
-        this.waitForJobs = Codegen.empty();
+    private ReleaseArgs(ReleaseArgs $) {
+        this.atomic = $.atomic;
+        this.chart = $.chart;
+        this.cleanupOnFail = $.cleanupOnFail;
+        this.compat = $.compat;
+        this.createNamespace = $.createNamespace;
+        this.dependencyUpdate = $.dependencyUpdate;
+        this.description = $.description;
+        this.devel = $.devel;
+        this.disableCRDHooks = $.disableCRDHooks;
+        this.disableOpenapiValidation = $.disableOpenapiValidation;
+        this.disableWebhooks = $.disableWebhooks;
+        this.forceUpdate = $.forceUpdate;
+        this.keyring = $.keyring;
+        this.lint = $.lint;
+        this.manifest = $.manifest;
+        this.maxHistory = $.maxHistory;
+        this.name = $.name;
+        this.namespace = $.namespace;
+        this.postrender = $.postrender;
+        this.recreatePods = $.recreatePods;
+        this.renderSubchartNotes = $.renderSubchartNotes;
+        this.replace = $.replace;
+        this.repositoryOpts = $.repositoryOpts;
+        this.resetValues = $.resetValues;
+        this.resourceNames = $.resourceNames;
+        this.reuseValues = $.reuseValues;
+        this.skipAwait = $.skipAwait;
+        this.skipCrds = $.skipCrds;
+        this.timeout = $.timeout;
+        this.valueYamlFiles = $.valueYamlFiles;
+        this.values = $.values;
+        this.verify = $.verify;
+        this.version = $.version;
+        this.waitForJobs = $.waitForJobs;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ReleaseArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> atomic;
-        private Output<String> chart;
-        private @Nullable Output<Boolean> cleanupOnFail;
-        private @Nullable Output<String> compat;
-        private @Nullable Output<Boolean> createNamespace;
-        private @Nullable Output<Boolean> dependencyUpdate;
-        private @Nullable Output<String> description;
-        private @Nullable Output<Boolean> devel;
-        private @Nullable Output<Boolean> disableCRDHooks;
-        private @Nullable Output<Boolean> disableOpenapiValidation;
-        private @Nullable Output<Boolean> disableWebhooks;
-        private @Nullable Output<Boolean> forceUpdate;
-        private @Nullable Output<String> keyring;
-        private @Nullable Output<Boolean> lint;
-        private @Nullable Output<Map<String,Object>> manifest;
-        private @Nullable Output<Integer> maxHistory;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> namespace;
-        private @Nullable Output<String> postrender;
-        private @Nullable Output<Boolean> recreatePods;
-        private @Nullable Output<Boolean> renderSubchartNotes;
-        private @Nullable Output<Boolean> replace;
-        private @Nullable Output<RepositoryOptsArgs> repositoryOpts;
-        private @Nullable Output<Boolean> resetValues;
-        private @Nullable Output<Map<String,List<String>>> resourceNames;
-        private @Nullable Output<Boolean> reuseValues;
-        private @Nullable Output<Boolean> skipAwait;
-        private @Nullable Output<Boolean> skipCrds;
-        private @Nullable Output<Integer> timeout;
-        private @Nullable Output<List<AssetOrArchive>> valueYamlFiles;
-        private @Nullable Output<Map<String,Object>> values;
-        private @Nullable Output<Boolean> verify;
-        private @Nullable Output<String> version;
-        private @Nullable Output<Boolean> waitForJobs;
+        private ReleaseArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ReleaseArgs();
         }
 
         public Builder(ReleaseArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.atomic = defaults.atomic;
-    	      this.chart = defaults.chart;
-    	      this.cleanupOnFail = defaults.cleanupOnFail;
-    	      this.compat = defaults.compat;
-    	      this.createNamespace = defaults.createNamespace;
-    	      this.dependencyUpdate = defaults.dependencyUpdate;
-    	      this.description = defaults.description;
-    	      this.devel = defaults.devel;
-    	      this.disableCRDHooks = defaults.disableCRDHooks;
-    	      this.disableOpenapiValidation = defaults.disableOpenapiValidation;
-    	      this.disableWebhooks = defaults.disableWebhooks;
-    	      this.forceUpdate = defaults.forceUpdate;
-    	      this.keyring = defaults.keyring;
-    	      this.lint = defaults.lint;
-    	      this.manifest = defaults.manifest;
-    	      this.maxHistory = defaults.maxHistory;
-    	      this.name = defaults.name;
-    	      this.namespace = defaults.namespace;
-    	      this.postrender = defaults.postrender;
-    	      this.recreatePods = defaults.recreatePods;
-    	      this.renderSubchartNotes = defaults.renderSubchartNotes;
-    	      this.replace = defaults.replace;
-    	      this.repositoryOpts = defaults.repositoryOpts;
-    	      this.resetValues = defaults.resetValues;
-    	      this.resourceNames = defaults.resourceNames;
-    	      this.reuseValues = defaults.reuseValues;
-    	      this.skipAwait = defaults.skipAwait;
-    	      this.skipCrds = defaults.skipCrds;
-    	      this.timeout = defaults.timeout;
-    	      this.valueYamlFiles = defaults.valueYamlFiles;
-    	      this.values = defaults.values;
-    	      this.verify = defaults.verify;
-    	      this.version = defaults.version;
-    	      this.waitForJobs = defaults.waitForJobs;
+            $ = new ReleaseArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder atomic(@Nullable Output<Boolean> atomic) {
-            this.atomic = atomic;
+            $.atomic = atomic;
             return this;
         }
-        public Builder atomic(@Nullable Boolean atomic) {
-            this.atomic = Codegen.ofNullable(atomic);
-            return this;
+
+        public Builder atomic(Boolean atomic) {
+            return atomic(Output.of(atomic));
         }
+
         public Builder chart(Output<String> chart) {
-            this.chart = Objects.requireNonNull(chart);
+            $.chart = chart;
             return this;
         }
+
         public Builder chart(String chart) {
-            this.chart = Output.of(Objects.requireNonNull(chart));
-            return this;
+            return chart(Output.of(chart));
         }
+
         public Builder cleanupOnFail(@Nullable Output<Boolean> cleanupOnFail) {
-            this.cleanupOnFail = cleanupOnFail;
+            $.cleanupOnFail = cleanupOnFail;
             return this;
         }
-        public Builder cleanupOnFail(@Nullable Boolean cleanupOnFail) {
-            this.cleanupOnFail = Codegen.ofNullable(cleanupOnFail);
-            return this;
+
+        public Builder cleanupOnFail(Boolean cleanupOnFail) {
+            return cleanupOnFail(Output.of(cleanupOnFail));
         }
+
         public Builder compat(@Nullable Output<String> compat) {
-            this.compat = compat;
+            $.compat = compat;
             return this;
         }
-        public Builder compat(@Nullable String compat) {
-            this.compat = Codegen.ofNullable(compat);
-            return this;
+
+        public Builder compat(String compat) {
+            return compat(Output.of(compat));
         }
+
         public Builder createNamespace(@Nullable Output<Boolean> createNamespace) {
-            this.createNamespace = createNamespace;
+            $.createNamespace = createNamespace;
             return this;
         }
-        public Builder createNamespace(@Nullable Boolean createNamespace) {
-            this.createNamespace = Codegen.ofNullable(createNamespace);
-            return this;
+
+        public Builder createNamespace(Boolean createNamespace) {
+            return createNamespace(Output.of(createNamespace));
         }
+
         public Builder dependencyUpdate(@Nullable Output<Boolean> dependencyUpdate) {
-            this.dependencyUpdate = dependencyUpdate;
+            $.dependencyUpdate = dependencyUpdate;
             return this;
         }
-        public Builder dependencyUpdate(@Nullable Boolean dependencyUpdate) {
-            this.dependencyUpdate = Codegen.ofNullable(dependencyUpdate);
-            return this;
+
+        public Builder dependencyUpdate(Boolean dependencyUpdate) {
+            return dependencyUpdate(Output.of(dependencyUpdate));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder devel(@Nullable Output<Boolean> devel) {
-            this.devel = devel;
+            $.devel = devel;
             return this;
         }
-        public Builder devel(@Nullable Boolean devel) {
-            this.devel = Codegen.ofNullable(devel);
-            return this;
+
+        public Builder devel(Boolean devel) {
+            return devel(Output.of(devel));
         }
+
         public Builder disableCRDHooks(@Nullable Output<Boolean> disableCRDHooks) {
-            this.disableCRDHooks = disableCRDHooks;
+            $.disableCRDHooks = disableCRDHooks;
             return this;
         }
-        public Builder disableCRDHooks(@Nullable Boolean disableCRDHooks) {
-            this.disableCRDHooks = Codegen.ofNullable(disableCRDHooks);
-            return this;
+
+        public Builder disableCRDHooks(Boolean disableCRDHooks) {
+            return disableCRDHooks(Output.of(disableCRDHooks));
         }
+
         public Builder disableOpenapiValidation(@Nullable Output<Boolean> disableOpenapiValidation) {
-            this.disableOpenapiValidation = disableOpenapiValidation;
+            $.disableOpenapiValidation = disableOpenapiValidation;
             return this;
         }
-        public Builder disableOpenapiValidation(@Nullable Boolean disableOpenapiValidation) {
-            this.disableOpenapiValidation = Codegen.ofNullable(disableOpenapiValidation);
-            return this;
+
+        public Builder disableOpenapiValidation(Boolean disableOpenapiValidation) {
+            return disableOpenapiValidation(Output.of(disableOpenapiValidation));
         }
+
         public Builder disableWebhooks(@Nullable Output<Boolean> disableWebhooks) {
-            this.disableWebhooks = disableWebhooks;
+            $.disableWebhooks = disableWebhooks;
             return this;
         }
-        public Builder disableWebhooks(@Nullable Boolean disableWebhooks) {
-            this.disableWebhooks = Codegen.ofNullable(disableWebhooks);
-            return this;
+
+        public Builder disableWebhooks(Boolean disableWebhooks) {
+            return disableWebhooks(Output.of(disableWebhooks));
         }
+
         public Builder forceUpdate(@Nullable Output<Boolean> forceUpdate) {
-            this.forceUpdate = forceUpdate;
+            $.forceUpdate = forceUpdate;
             return this;
         }
-        public Builder forceUpdate(@Nullable Boolean forceUpdate) {
-            this.forceUpdate = Codegen.ofNullable(forceUpdate);
-            return this;
+
+        public Builder forceUpdate(Boolean forceUpdate) {
+            return forceUpdate(Output.of(forceUpdate));
         }
+
         public Builder keyring(@Nullable Output<String> keyring) {
-            this.keyring = keyring;
+            $.keyring = keyring;
             return this;
         }
-        public Builder keyring(@Nullable String keyring) {
-            this.keyring = Codegen.ofNullable(keyring);
-            return this;
+
+        public Builder keyring(String keyring) {
+            return keyring(Output.of(keyring));
         }
+
         public Builder lint(@Nullable Output<Boolean> lint) {
-            this.lint = lint;
+            $.lint = lint;
             return this;
         }
-        public Builder lint(@Nullable Boolean lint) {
-            this.lint = Codegen.ofNullable(lint);
-            return this;
+
+        public Builder lint(Boolean lint) {
+            return lint(Output.of(lint));
         }
+
         public Builder manifest(@Nullable Output<Map<String,Object>> manifest) {
-            this.manifest = manifest;
+            $.manifest = manifest;
             return this;
         }
-        public Builder manifest(@Nullable Map<String,Object> manifest) {
-            this.manifest = Codegen.ofNullable(manifest);
-            return this;
+
+        public Builder manifest(Map<String,Object> manifest) {
+            return manifest(Output.of(manifest));
         }
+
         public Builder maxHistory(@Nullable Output<Integer> maxHistory) {
-            this.maxHistory = maxHistory;
+            $.maxHistory = maxHistory;
             return this;
         }
-        public Builder maxHistory(@Nullable Integer maxHistory) {
-            this.maxHistory = Codegen.ofNullable(maxHistory);
-            return this;
+
+        public Builder maxHistory(Integer maxHistory) {
+            return maxHistory(Output.of(maxHistory));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder namespace(@Nullable Output<String> namespace) {
-            this.namespace = namespace;
+            $.namespace = namespace;
             return this;
         }
-        public Builder namespace(@Nullable String namespace) {
-            this.namespace = Codegen.ofNullable(namespace);
-            return this;
+
+        public Builder namespace(String namespace) {
+            return namespace(Output.of(namespace));
         }
+
         public Builder postrender(@Nullable Output<String> postrender) {
-            this.postrender = postrender;
+            $.postrender = postrender;
             return this;
         }
-        public Builder postrender(@Nullable String postrender) {
-            this.postrender = Codegen.ofNullable(postrender);
-            return this;
+
+        public Builder postrender(String postrender) {
+            return postrender(Output.of(postrender));
         }
+
         public Builder recreatePods(@Nullable Output<Boolean> recreatePods) {
-            this.recreatePods = recreatePods;
+            $.recreatePods = recreatePods;
             return this;
         }
-        public Builder recreatePods(@Nullable Boolean recreatePods) {
-            this.recreatePods = Codegen.ofNullable(recreatePods);
-            return this;
+
+        public Builder recreatePods(Boolean recreatePods) {
+            return recreatePods(Output.of(recreatePods));
         }
+
         public Builder renderSubchartNotes(@Nullable Output<Boolean> renderSubchartNotes) {
-            this.renderSubchartNotes = renderSubchartNotes;
+            $.renderSubchartNotes = renderSubchartNotes;
             return this;
         }
-        public Builder renderSubchartNotes(@Nullable Boolean renderSubchartNotes) {
-            this.renderSubchartNotes = Codegen.ofNullable(renderSubchartNotes);
-            return this;
+
+        public Builder renderSubchartNotes(Boolean renderSubchartNotes) {
+            return renderSubchartNotes(Output.of(renderSubchartNotes));
         }
+
         public Builder replace(@Nullable Output<Boolean> replace) {
-            this.replace = replace;
+            $.replace = replace;
             return this;
         }
-        public Builder replace(@Nullable Boolean replace) {
-            this.replace = Codegen.ofNullable(replace);
-            return this;
+
+        public Builder replace(Boolean replace) {
+            return replace(Output.of(replace));
         }
+
         public Builder repositoryOpts(@Nullable Output<RepositoryOptsArgs> repositoryOpts) {
-            this.repositoryOpts = repositoryOpts;
+            $.repositoryOpts = repositoryOpts;
             return this;
         }
-        public Builder repositoryOpts(@Nullable RepositoryOptsArgs repositoryOpts) {
-            this.repositoryOpts = Codegen.ofNullable(repositoryOpts);
-            return this;
+
+        public Builder repositoryOpts(RepositoryOptsArgs repositoryOpts) {
+            return repositoryOpts(Output.of(repositoryOpts));
         }
+
         public Builder resetValues(@Nullable Output<Boolean> resetValues) {
-            this.resetValues = resetValues;
+            $.resetValues = resetValues;
             return this;
         }
-        public Builder resetValues(@Nullable Boolean resetValues) {
-            this.resetValues = Codegen.ofNullable(resetValues);
-            return this;
+
+        public Builder resetValues(Boolean resetValues) {
+            return resetValues(Output.of(resetValues));
         }
+
         public Builder resourceNames(@Nullable Output<Map<String,List<String>>> resourceNames) {
-            this.resourceNames = resourceNames;
+            $.resourceNames = resourceNames;
             return this;
         }
-        public Builder resourceNames(@Nullable Map<String,List<String>> resourceNames) {
-            this.resourceNames = Codegen.ofNullable(resourceNames);
-            return this;
+
+        public Builder resourceNames(Map<String,List<String>> resourceNames) {
+            return resourceNames(Output.of(resourceNames));
         }
+
         public Builder reuseValues(@Nullable Output<Boolean> reuseValues) {
-            this.reuseValues = reuseValues;
+            $.reuseValues = reuseValues;
             return this;
         }
-        public Builder reuseValues(@Nullable Boolean reuseValues) {
-            this.reuseValues = Codegen.ofNullable(reuseValues);
-            return this;
+
+        public Builder reuseValues(Boolean reuseValues) {
+            return reuseValues(Output.of(reuseValues));
         }
+
         public Builder skipAwait(@Nullable Output<Boolean> skipAwait) {
-            this.skipAwait = skipAwait;
+            $.skipAwait = skipAwait;
             return this;
         }
-        public Builder skipAwait(@Nullable Boolean skipAwait) {
-            this.skipAwait = Codegen.ofNullable(skipAwait);
-            return this;
+
+        public Builder skipAwait(Boolean skipAwait) {
+            return skipAwait(Output.of(skipAwait));
         }
+
         public Builder skipCrds(@Nullable Output<Boolean> skipCrds) {
-            this.skipCrds = skipCrds;
+            $.skipCrds = skipCrds;
             return this;
         }
-        public Builder skipCrds(@Nullable Boolean skipCrds) {
-            this.skipCrds = Codegen.ofNullable(skipCrds);
-            return this;
+
+        public Builder skipCrds(Boolean skipCrds) {
+            return skipCrds(Output.of(skipCrds));
         }
+
         public Builder timeout(@Nullable Output<Integer> timeout) {
-            this.timeout = timeout;
+            $.timeout = timeout;
             return this;
         }
-        public Builder timeout(@Nullable Integer timeout) {
-            this.timeout = Codegen.ofNullable(timeout);
-            return this;
+
+        public Builder timeout(Integer timeout) {
+            return timeout(Output.of(timeout));
         }
+
         public Builder valueYamlFiles(@Nullable Output<List<AssetOrArchive>> valueYamlFiles) {
-            this.valueYamlFiles = valueYamlFiles;
+            $.valueYamlFiles = valueYamlFiles;
             return this;
         }
-        public Builder valueYamlFiles(@Nullable List<AssetOrArchive> valueYamlFiles) {
-            this.valueYamlFiles = Codegen.ofNullable(valueYamlFiles);
-            return this;
+
+        public Builder valueYamlFiles(List<AssetOrArchive> valueYamlFiles) {
+            return valueYamlFiles(Output.of(valueYamlFiles));
         }
+
         public Builder valueYamlFiles(AssetOrArchive... valueYamlFiles) {
             return valueYamlFiles(List.of(valueYamlFiles));
         }
+
         public Builder values(@Nullable Output<Map<String,Object>> values) {
-            this.values = values;
+            $.values = values;
             return this;
         }
-        public Builder values(@Nullable Map<String,Object> values) {
-            this.values = Codegen.ofNullable(values);
-            return this;
+
+        public Builder values(Map<String,Object> values) {
+            return values(Output.of(values));
         }
+
         public Builder verify(@Nullable Output<Boolean> verify) {
-            this.verify = verify;
+            $.verify = verify;
             return this;
         }
-        public Builder verify(@Nullable Boolean verify) {
-            this.verify = Codegen.ofNullable(verify);
-            return this;
+
+        public Builder verify(Boolean verify) {
+            return verify(Output.of(verify));
         }
+
         public Builder version(@Nullable Output<String> version) {
-            this.version = version;
+            $.version = version;
             return this;
         }
-        public Builder version(@Nullable String version) {
-            this.version = Codegen.ofNullable(version);
-            return this;
+
+        public Builder version(String version) {
+            return version(Output.of(version));
         }
+
         public Builder waitForJobs(@Nullable Output<Boolean> waitForJobs) {
-            this.waitForJobs = waitForJobs;
+            $.waitForJobs = waitForJobs;
             return this;
         }
-        public Builder waitForJobs(@Nullable Boolean waitForJobs) {
-            this.waitForJobs = Codegen.ofNullable(waitForJobs);
-            return this;
-        }        public ReleaseArgs build() {
-            return new ReleaseArgs(atomic, chart, cleanupOnFail, compat, createNamespace, dependencyUpdate, description, devel, disableCRDHooks, disableOpenapiValidation, disableWebhooks, forceUpdate, keyring, lint, manifest, maxHistory, name, namespace, postrender, recreatePods, renderSubchartNotes, replace, repositoryOpts, resetValues, resourceNames, reuseValues, skipAwait, skipCrds, timeout, valueYamlFiles, values, verify, version, waitForJobs);
+
+        public Builder waitForJobs(Boolean waitForJobs) {
+            return waitForJobs(Output.of(waitForJobs));
+        }
+
+        public ReleaseArgs build() {
+            $.chart = Objects.requireNonNull($.chart, "expected parameter 'chart' to be non-null");
+            $.compat = Codegen.stringProp("compat").output().arg($.compat).getNullable();
+            return $;
         }
     }
+
 }

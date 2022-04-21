@@ -22,7 +22,7 @@ public final class GoogleCloudApigeeV1RateRangeResponse extends com.pulumi.resou
      * 
      */
     @Import(name="end", required=true)
-      private final String end;
+    private String end;
 
     public String end() {
         return this.end;
@@ -33,7 +33,7 @@ public final class GoogleCloudApigeeV1RateRangeResponse extends com.pulumi.resou
      * 
      */
     @Import(name="fee", required=true)
-      private final GoogleTypeMoneyResponse fee;
+    private GoogleTypeMoneyResponse fee;
 
     public GoogleTypeMoneyResponse fee() {
         return this.fee;
@@ -44,64 +44,59 @@ public final class GoogleCloudApigeeV1RateRangeResponse extends com.pulumi.resou
      * 
      */
     @Import(name="start", required=true)
-      private final String start;
+    private String start;
 
     public String start() {
         return this.start;
     }
 
-    public GoogleCloudApigeeV1RateRangeResponse(
-        String end,
-        GoogleTypeMoneyResponse fee,
-        String start) {
-        this.end = Objects.requireNonNull(end, "expected parameter 'end' to be non-null");
-        this.fee = Objects.requireNonNull(fee, "expected parameter 'fee' to be non-null");
-        this.start = Objects.requireNonNull(start, "expected parameter 'start' to be non-null");
-    }
+    private GoogleCloudApigeeV1RateRangeResponse() {}
 
-    private GoogleCloudApigeeV1RateRangeResponse() {
-        this.end = null;
-        this.fee = null;
-        this.start = null;
+    private GoogleCloudApigeeV1RateRangeResponse(GoogleCloudApigeeV1RateRangeResponse $) {
+        this.end = $.end;
+        this.fee = $.fee;
+        this.start = $.start;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudApigeeV1RateRangeResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String end;
-        private GoogleTypeMoneyResponse fee;
-        private String start;
+        private GoogleCloudApigeeV1RateRangeResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudApigeeV1RateRangeResponse();
         }
 
         public Builder(GoogleCloudApigeeV1RateRangeResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.end = defaults.end;
-    	      this.fee = defaults.fee;
-    	      this.start = defaults.start;
+            $ = new GoogleCloudApigeeV1RateRangeResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder end(String end) {
-            this.end = Objects.requireNonNull(end);
+            $.end = end;
             return this;
         }
+
         public Builder fee(GoogleTypeMoneyResponse fee) {
-            this.fee = Objects.requireNonNull(fee);
+            $.fee = fee;
             return this;
         }
+
         public Builder start(String start) {
-            this.start = Objects.requireNonNull(start);
+            $.start = start;
             return this;
-        }        public GoogleCloudApigeeV1RateRangeResponse build() {
-            return new GoogleCloudApigeeV1RateRangeResponse(end, fee, start);
+        }
+
+        public GoogleCloudApigeeV1RateRangeResponse build() {
+            $.end = Objects.requireNonNull($.end, "expected parameter 'end' to be non-null");
+            $.fee = Objects.requireNonNull($.fee, "expected parameter 'fee' to be non-null");
+            $.start = Objects.requireNonNull($.start, "expected parameter 'start' to be non-null");
+            return $;
         }
     }
+
 }

@@ -21,7 +21,7 @@ public final class GcsProfileResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="bucketName", required=true)
-      private final String bucketName;
+    private String bucketName;
 
     public String bucketName() {
         return this.bucketName;
@@ -32,55 +32,52 @@ public final class GcsProfileResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="rootPath", required=true)
-      private final String rootPath;
+    private String rootPath;
 
     public String rootPath() {
         return this.rootPath;
     }
 
-    public GcsProfileResponse(
-        String bucketName,
-        String rootPath) {
-        this.bucketName = Objects.requireNonNull(bucketName, "expected parameter 'bucketName' to be non-null");
-        this.rootPath = Objects.requireNonNull(rootPath, "expected parameter 'rootPath' to be non-null");
-    }
+    private GcsProfileResponse() {}
 
-    private GcsProfileResponse() {
-        this.bucketName = null;
-        this.rootPath = null;
+    private GcsProfileResponse(GcsProfileResponse $) {
+        this.bucketName = $.bucketName;
+        this.rootPath = $.rootPath;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GcsProfileResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String bucketName;
-        private String rootPath;
+        private GcsProfileResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GcsProfileResponse();
         }
 
         public Builder(GcsProfileResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.bucketName = defaults.bucketName;
-    	      this.rootPath = defaults.rootPath;
+            $ = new GcsProfileResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder bucketName(String bucketName) {
-            this.bucketName = Objects.requireNonNull(bucketName);
+            $.bucketName = bucketName;
             return this;
         }
+
         public Builder rootPath(String rootPath) {
-            this.rootPath = Objects.requireNonNull(rootPath);
+            $.rootPath = rootPath;
             return this;
-        }        public GcsProfileResponse build() {
-            return new GcsProfileResponse(bucketName, rootPath);
+        }
+
+        public GcsProfileResponse build() {
+            $.bucketName = Objects.requireNonNull($.bucketName, "expected parameter 'bucketName' to be non-null");
+            $.rootPath = Objects.requireNonNull($.rootPath, "expected parameter 'rootPath' to be non-null");
+            return $;
         }
     }
+
 }

@@ -22,7 +22,7 @@ public final class ShareSubscriptionSynchronizationResponse extends com.pulumi.r
      * 
      */
     @Import(name="durationMs", required=true)
-      private final Integer durationMs;
+    private Integer durationMs;
 
     public Integer durationMs() {
         return this.durationMs;
@@ -33,7 +33,7 @@ public final class ShareSubscriptionSynchronizationResponse extends com.pulumi.r
      * 
      */
     @Import(name="endTime", required=true)
-      private final String endTime;
+    private String endTime;
 
     public String endTime() {
         return this.endTime;
@@ -44,7 +44,7 @@ public final class ShareSubscriptionSynchronizationResponse extends com.pulumi.r
      * 
      */
     @Import(name="message", required=true)
-      private final String message;
+    private String message;
 
     public String message() {
         return this.message;
@@ -55,7 +55,7 @@ public final class ShareSubscriptionSynchronizationResponse extends com.pulumi.r
      * 
      */
     @Import(name="startTime", required=true)
-      private final String startTime;
+    private String startTime;
 
     public String startTime() {
         return this.startTime;
@@ -66,7 +66,7 @@ public final class ShareSubscriptionSynchronizationResponse extends com.pulumi.r
      * 
      */
     @Import(name="status", required=true)
-      private final String status;
+    private String status;
 
     public String status() {
         return this.status;
@@ -77,7 +77,7 @@ public final class ShareSubscriptionSynchronizationResponse extends com.pulumi.r
      * 
      */
     @Import(name="synchronizationId", required=true)
-      private final String synchronizationId;
+    private String synchronizationId;
 
     public String synchronizationId() {
         return this.synchronizationId;
@@ -88,100 +88,87 @@ public final class ShareSubscriptionSynchronizationResponse extends com.pulumi.r
      * 
      */
     @Import(name="synchronizationMode", required=true)
-      private final String synchronizationMode;
+    private String synchronizationMode;
 
     public String synchronizationMode() {
         return this.synchronizationMode;
     }
 
-    public ShareSubscriptionSynchronizationResponse(
-        Integer durationMs,
-        String endTime,
-        String message,
-        String startTime,
-        String status,
-        String synchronizationId,
-        String synchronizationMode) {
-        this.durationMs = Objects.requireNonNull(durationMs, "expected parameter 'durationMs' to be non-null");
-        this.endTime = Objects.requireNonNull(endTime, "expected parameter 'endTime' to be non-null");
-        this.message = Objects.requireNonNull(message, "expected parameter 'message' to be non-null");
-        this.startTime = Objects.requireNonNull(startTime, "expected parameter 'startTime' to be non-null");
-        this.status = Objects.requireNonNull(status, "expected parameter 'status' to be non-null");
-        this.synchronizationId = Objects.requireNonNull(synchronizationId, "expected parameter 'synchronizationId' to be non-null");
-        this.synchronizationMode = Objects.requireNonNull(synchronizationMode, "expected parameter 'synchronizationMode' to be non-null");
-    }
+    private ShareSubscriptionSynchronizationResponse() {}
 
-    private ShareSubscriptionSynchronizationResponse() {
-        this.durationMs = null;
-        this.endTime = null;
-        this.message = null;
-        this.startTime = null;
-        this.status = null;
-        this.synchronizationId = null;
-        this.synchronizationMode = null;
+    private ShareSubscriptionSynchronizationResponse(ShareSubscriptionSynchronizationResponse $) {
+        this.durationMs = $.durationMs;
+        this.endTime = $.endTime;
+        this.message = $.message;
+        this.startTime = $.startTime;
+        this.status = $.status;
+        this.synchronizationId = $.synchronizationId;
+        this.synchronizationMode = $.synchronizationMode;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ShareSubscriptionSynchronizationResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Integer durationMs;
-        private String endTime;
-        private String message;
-        private String startTime;
-        private String status;
-        private String synchronizationId;
-        private String synchronizationMode;
+        private ShareSubscriptionSynchronizationResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ShareSubscriptionSynchronizationResponse();
         }
 
         public Builder(ShareSubscriptionSynchronizationResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.durationMs = defaults.durationMs;
-    	      this.endTime = defaults.endTime;
-    	      this.message = defaults.message;
-    	      this.startTime = defaults.startTime;
-    	      this.status = defaults.status;
-    	      this.synchronizationId = defaults.synchronizationId;
-    	      this.synchronizationMode = defaults.synchronizationMode;
+            $ = new ShareSubscriptionSynchronizationResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder durationMs(Integer durationMs) {
-            this.durationMs = Objects.requireNonNull(durationMs);
+            $.durationMs = durationMs;
             return this;
         }
+
         public Builder endTime(String endTime) {
-            this.endTime = Objects.requireNonNull(endTime);
+            $.endTime = endTime;
             return this;
         }
+
         public Builder message(String message) {
-            this.message = Objects.requireNonNull(message);
+            $.message = message;
             return this;
         }
+
         public Builder startTime(String startTime) {
-            this.startTime = Objects.requireNonNull(startTime);
+            $.startTime = startTime;
             return this;
         }
+
         public Builder status(String status) {
-            this.status = Objects.requireNonNull(status);
+            $.status = status;
             return this;
         }
+
         public Builder synchronizationId(String synchronizationId) {
-            this.synchronizationId = Objects.requireNonNull(synchronizationId);
+            $.synchronizationId = synchronizationId;
             return this;
         }
+
         public Builder synchronizationMode(String synchronizationMode) {
-            this.synchronizationMode = Objects.requireNonNull(synchronizationMode);
+            $.synchronizationMode = synchronizationMode;
             return this;
-        }        public ShareSubscriptionSynchronizationResponse build() {
-            return new ShareSubscriptionSynchronizationResponse(durationMs, endTime, message, startTime, status, synchronizationId, synchronizationMode);
+        }
+
+        public ShareSubscriptionSynchronizationResponse build() {
+            $.durationMs = Objects.requireNonNull($.durationMs, "expected parameter 'durationMs' to be non-null");
+            $.endTime = Objects.requireNonNull($.endTime, "expected parameter 'endTime' to be non-null");
+            $.message = Objects.requireNonNull($.message, "expected parameter 'message' to be non-null");
+            $.startTime = Objects.requireNonNull($.startTime, "expected parameter 'startTime' to be non-null");
+            $.status = Objects.requireNonNull($.status, "expected parameter 'status' to be non-null");
+            $.synchronizationId = Objects.requireNonNull($.synchronizationId, "expected parameter 'synchronizationId' to be non-null");
+            $.synchronizationMode = Objects.requireNonNull($.synchronizationMode, "expected parameter 'synchronizationMode' to be non-null");
+            return $;
         }
     }
+
 }

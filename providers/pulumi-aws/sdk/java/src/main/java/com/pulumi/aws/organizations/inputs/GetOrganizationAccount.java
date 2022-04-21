@@ -17,7 +17,7 @@ public final class GetOrganizationAccount extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="arn", required=true)
-      private final String arn;
+    private String arn;
 
     public String arn() {
         return this.arn;
@@ -28,7 +28,7 @@ public final class GetOrganizationAccount extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="email", required=true)
-      private final String email;
+    private String email;
 
     public String email() {
         return this.email;
@@ -39,7 +39,7 @@ public final class GetOrganizationAccount extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="id", required=true)
-      private final String id;
+    private String id;
 
     public String id() {
         return this.id;
@@ -50,7 +50,7 @@ public final class GetOrganizationAccount extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -61,82 +61,73 @@ public final class GetOrganizationAccount extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="status", required=true)
-      private final String status;
+    private String status;
 
     public String status() {
         return this.status;
     }
 
-    public GetOrganizationAccount(
-        String arn,
-        String email,
-        String id,
-        String name,
-        String status) {
-        this.arn = Objects.requireNonNull(arn, "expected parameter 'arn' to be non-null");
-        this.email = Objects.requireNonNull(email, "expected parameter 'email' to be non-null");
-        this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.status = Objects.requireNonNull(status, "expected parameter 'status' to be non-null");
-    }
+    private GetOrganizationAccount() {}
 
-    private GetOrganizationAccount() {
-        this.arn = null;
-        this.email = null;
-        this.id = null;
-        this.name = null;
-        this.status = null;
+    private GetOrganizationAccount(GetOrganizationAccount $) {
+        this.arn = $.arn;
+        this.email = $.email;
+        this.id = $.id;
+        this.name = $.name;
+        this.status = $.status;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetOrganizationAccount defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String arn;
-        private String email;
-        private String id;
-        private String name;
-        private String status;
+        private GetOrganizationAccount $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetOrganizationAccount();
         }
 
         public Builder(GetOrganizationAccount defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.arn = defaults.arn;
-    	      this.email = defaults.email;
-    	      this.id = defaults.id;
-    	      this.name = defaults.name;
-    	      this.status = defaults.status;
+            $ = new GetOrganizationAccount(Objects.requireNonNull(defaults));
         }
 
         public Builder arn(String arn) {
-            this.arn = Objects.requireNonNull(arn);
+            $.arn = arn;
             return this;
         }
+
         public Builder email(String email) {
-            this.email = Objects.requireNonNull(email);
+            $.email = email;
             return this;
         }
+
         public Builder id(String id) {
-            this.id = Objects.requireNonNull(id);
+            $.id = id;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder status(String status) {
-            this.status = Objects.requireNonNull(status);
+            $.status = status;
             return this;
-        }        public GetOrganizationAccount build() {
-            return new GetOrganizationAccount(arn, email, id, name, status);
+        }
+
+        public GetOrganizationAccount build() {
+            $.arn = Objects.requireNonNull($.arn, "expected parameter 'arn' to be non-null");
+            $.email = Objects.requireNonNull($.email, "expected parameter 'email' to be non-null");
+            $.id = Objects.requireNonNull($.id, "expected parameter 'id' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.status = Objects.requireNonNull($.status, "expected parameter 'status' to be non-null");
+            return $;
         }
     }
+
 }

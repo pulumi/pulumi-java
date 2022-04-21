@@ -6,8 +6,8 @@ package com.pulumi.azurenative.changeanalysis.inputs;
 import com.pulumi.azurenative.changeanalysis.inputs.NotificationSettingsArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class ConfigurationProfileResourcePropertiesArgs extends com.pulumi
      * 
      */
     @Import(name="notifications")
-      private final @Nullable Output<NotificationSettingsArgs> notifications;
+    private @Nullable Output<NotificationSettingsArgs> notifications;
 
-    public Output<NotificationSettingsArgs> notifications() {
-        return this.notifications == null ? Codegen.empty() : this.notifications;
+    public Optional<Output<NotificationSettingsArgs>> notifications() {
+        return Optional.ofNullable(this.notifications);
     }
 
-    public ConfigurationProfileResourcePropertiesArgs(@Nullable Output<NotificationSettingsArgs> notifications) {
-        this.notifications = notifications;
-    }
+    private ConfigurationProfileResourcePropertiesArgs() {}
 
-    private ConfigurationProfileResourcePropertiesArgs() {
-        this.notifications = Codegen.empty();
+    private ConfigurationProfileResourcePropertiesArgs(ConfigurationProfileResourcePropertiesArgs $) {
+        this.notifications = $.notifications;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ConfigurationProfileResourcePropertiesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<NotificationSettingsArgs> notifications;
+        private ConfigurationProfileResourcePropertiesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ConfigurationProfileResourcePropertiesArgs();
         }
 
         public Builder(ConfigurationProfileResourcePropertiesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.notifications = defaults.notifications;
+            $ = new ConfigurationProfileResourcePropertiesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder notifications(@Nullable Output<NotificationSettingsArgs> notifications) {
-            this.notifications = notifications;
+            $.notifications = notifications;
             return this;
         }
-        public Builder notifications(@Nullable NotificationSettingsArgs notifications) {
-            this.notifications = Codegen.ofNullable(notifications);
-            return this;
-        }        public ConfigurationProfileResourcePropertiesArgs build() {
-            return new ConfigurationProfileResourcePropertiesArgs(notifications);
+
+        public Builder notifications(NotificationSettingsArgs notifications) {
+            return notifications(Output.of(notifications));
+        }
+
+        public ConfigurationProfileResourcePropertiesArgs build() {
+            return $;
         }
     }
+
 }

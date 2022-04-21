@@ -8,10 +8,10 @@ import com.pulumi.aws.datapipeline.inputs.PipelineDefinitionParameterValueGetArg
 import com.pulumi.aws.datapipeline.inputs.PipelineDefinitionPipelineObjectGetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class PipelineDefinitionState extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="parameterObjects")
-      private final @Nullable Output<List<PipelineDefinitionParameterObjectGetArgs>> parameterObjects;
+    private @Nullable Output<List<PipelineDefinitionParameterObjectGetArgs>> parameterObjects;
 
-    public Output<List<PipelineDefinitionParameterObjectGetArgs>> parameterObjects() {
-        return this.parameterObjects == null ? Codegen.empty() : this.parameterObjects;
+    public Optional<Output<List<PipelineDefinitionParameterObjectGetArgs>>> parameterObjects() {
+        return Optional.ofNullable(this.parameterObjects);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class PipelineDefinitionState extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="parameterValues")
-      private final @Nullable Output<List<PipelineDefinitionParameterValueGetArgs>> parameterValues;
+    private @Nullable Output<List<PipelineDefinitionParameterValueGetArgs>> parameterValues;
 
-    public Output<List<PipelineDefinitionParameterValueGetArgs>> parameterValues() {
-        return this.parameterValues == null ? Codegen.empty() : this.parameterValues;
+    public Optional<Output<List<PipelineDefinitionParameterValueGetArgs>>> parameterValues() {
+        return Optional.ofNullable(this.parameterValues);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class PipelineDefinitionState extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="pipelineId")
-      private final @Nullable Output<String> pipelineId;
+    private @Nullable Output<String> pipelineId;
 
-    public Output<String> pipelineId() {
-        return this.pipelineId == null ? Codegen.empty() : this.pipelineId;
+    public Optional<Output<String>> pipelineId() {
+        return Optional.ofNullable(this.pipelineId);
     }
 
     /**
@@ -57,98 +57,90 @@ public final class PipelineDefinitionState extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="pipelineObjects")
-      private final @Nullable Output<List<PipelineDefinitionPipelineObjectGetArgs>> pipelineObjects;
+    private @Nullable Output<List<PipelineDefinitionPipelineObjectGetArgs>> pipelineObjects;
 
-    public Output<List<PipelineDefinitionPipelineObjectGetArgs>> pipelineObjects() {
-        return this.pipelineObjects == null ? Codegen.empty() : this.pipelineObjects;
+    public Optional<Output<List<PipelineDefinitionPipelineObjectGetArgs>>> pipelineObjects() {
+        return Optional.ofNullable(this.pipelineObjects);
     }
 
-    public PipelineDefinitionState(
-        @Nullable Output<List<PipelineDefinitionParameterObjectGetArgs>> parameterObjects,
-        @Nullable Output<List<PipelineDefinitionParameterValueGetArgs>> parameterValues,
-        @Nullable Output<String> pipelineId,
-        @Nullable Output<List<PipelineDefinitionPipelineObjectGetArgs>> pipelineObjects) {
-        this.parameterObjects = parameterObjects;
-        this.parameterValues = parameterValues;
-        this.pipelineId = pipelineId;
-        this.pipelineObjects = pipelineObjects;
-    }
+    private PipelineDefinitionState() {}
 
-    private PipelineDefinitionState() {
-        this.parameterObjects = Codegen.empty();
-        this.parameterValues = Codegen.empty();
-        this.pipelineId = Codegen.empty();
-        this.pipelineObjects = Codegen.empty();
+    private PipelineDefinitionState(PipelineDefinitionState $) {
+        this.parameterObjects = $.parameterObjects;
+        this.parameterValues = $.parameterValues;
+        this.pipelineId = $.pipelineId;
+        this.pipelineObjects = $.pipelineObjects;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PipelineDefinitionState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<PipelineDefinitionParameterObjectGetArgs>> parameterObjects;
-        private @Nullable Output<List<PipelineDefinitionParameterValueGetArgs>> parameterValues;
-        private @Nullable Output<String> pipelineId;
-        private @Nullable Output<List<PipelineDefinitionPipelineObjectGetArgs>> pipelineObjects;
+        private PipelineDefinitionState $;
 
         public Builder() {
-    	      // Empty
+            $ = new PipelineDefinitionState();
         }
 
         public Builder(PipelineDefinitionState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.parameterObjects = defaults.parameterObjects;
-    	      this.parameterValues = defaults.parameterValues;
-    	      this.pipelineId = defaults.pipelineId;
-    	      this.pipelineObjects = defaults.pipelineObjects;
+            $ = new PipelineDefinitionState(Objects.requireNonNull(defaults));
         }
 
         public Builder parameterObjects(@Nullable Output<List<PipelineDefinitionParameterObjectGetArgs>> parameterObjects) {
-            this.parameterObjects = parameterObjects;
+            $.parameterObjects = parameterObjects;
             return this;
         }
-        public Builder parameterObjects(@Nullable List<PipelineDefinitionParameterObjectGetArgs> parameterObjects) {
-            this.parameterObjects = Codegen.ofNullable(parameterObjects);
-            return this;
+
+        public Builder parameterObjects(List<PipelineDefinitionParameterObjectGetArgs> parameterObjects) {
+            return parameterObjects(Output.of(parameterObjects));
         }
+
         public Builder parameterObjects(PipelineDefinitionParameterObjectGetArgs... parameterObjects) {
             return parameterObjects(List.of(parameterObjects));
         }
+
         public Builder parameterValues(@Nullable Output<List<PipelineDefinitionParameterValueGetArgs>> parameterValues) {
-            this.parameterValues = parameterValues;
+            $.parameterValues = parameterValues;
             return this;
         }
-        public Builder parameterValues(@Nullable List<PipelineDefinitionParameterValueGetArgs> parameterValues) {
-            this.parameterValues = Codegen.ofNullable(parameterValues);
-            return this;
+
+        public Builder parameterValues(List<PipelineDefinitionParameterValueGetArgs> parameterValues) {
+            return parameterValues(Output.of(parameterValues));
         }
+
         public Builder parameterValues(PipelineDefinitionParameterValueGetArgs... parameterValues) {
             return parameterValues(List.of(parameterValues));
         }
+
         public Builder pipelineId(@Nullable Output<String> pipelineId) {
-            this.pipelineId = pipelineId;
+            $.pipelineId = pipelineId;
             return this;
         }
-        public Builder pipelineId(@Nullable String pipelineId) {
-            this.pipelineId = Codegen.ofNullable(pipelineId);
-            return this;
+
+        public Builder pipelineId(String pipelineId) {
+            return pipelineId(Output.of(pipelineId));
         }
+
         public Builder pipelineObjects(@Nullable Output<List<PipelineDefinitionPipelineObjectGetArgs>> pipelineObjects) {
-            this.pipelineObjects = pipelineObjects;
+            $.pipelineObjects = pipelineObjects;
             return this;
         }
-        public Builder pipelineObjects(@Nullable List<PipelineDefinitionPipelineObjectGetArgs> pipelineObjects) {
-            this.pipelineObjects = Codegen.ofNullable(pipelineObjects);
-            return this;
+
+        public Builder pipelineObjects(List<PipelineDefinitionPipelineObjectGetArgs> pipelineObjects) {
+            return pipelineObjects(Output.of(pipelineObjects));
         }
+
         public Builder pipelineObjects(PipelineDefinitionPipelineObjectGetArgs... pipelineObjects) {
             return pipelineObjects(List.of(pipelineObjects));
-        }        public PipelineDefinitionState build() {
-            return new PipelineDefinitionState(parameterObjects, parameterValues, pipelineId, pipelineObjects);
+        }
+
+        public PipelineDefinitionState build() {
+            return $;
         }
     }
+
 }

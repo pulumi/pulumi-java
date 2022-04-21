@@ -3,35 +3,26 @@
 
 package com.pulumi.azurenative.insights.inputs;
 
-import java.util.Objects;
+
 
 
 public final class ListEASubscriptionListMigrationDatePostArgs extends com.pulumi.resources.InvokeArgs {
 
     public static final ListEASubscriptionListMigrationDatePostArgs Empty = new ListEASubscriptionListMigrationDatePostArgs();
 
-    public ListEASubscriptionListMigrationDatePostArgs() {
-    }
-
     public static Builder builder() {
         return new Builder();
     }
 
-    public static Builder builder(ListEASubscriptionListMigrationDatePostArgs defaults) {
-        return new Builder(defaults);
-    }
-
     public static final class Builder {
+        private ListEASubscriptionListMigrationDatePostArgs $;
 
         public Builder() {
-    	      // Empty
-        }
-
-        public Builder(ListEASubscriptionListMigrationDatePostArgs defaults) {
-    	      Objects.requireNonNull(defaults);
+            $ = new ListEASubscriptionListMigrationDatePostArgs();
         }
         public ListEASubscriptionListMigrationDatePostArgs build() {
-            return new ListEASubscriptionListMigrationDatePostArgs();
+            return $;
         }
     }
+
 }

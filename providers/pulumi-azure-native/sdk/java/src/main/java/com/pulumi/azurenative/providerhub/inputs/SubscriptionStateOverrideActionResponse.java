@@ -13,62 +13,59 @@ public final class SubscriptionStateOverrideActionResponse extends com.pulumi.re
     public static final SubscriptionStateOverrideActionResponse Empty = new SubscriptionStateOverrideActionResponse();
 
     @Import(name="action", required=true)
-      private final String action;
+    private String action;
 
     public String action() {
         return this.action;
     }
 
     @Import(name="state", required=true)
-      private final String state;
+    private String state;
 
     public String state() {
         return this.state;
     }
 
-    public SubscriptionStateOverrideActionResponse(
-        String action,
-        String state) {
-        this.action = Objects.requireNonNull(action, "expected parameter 'action' to be non-null");
-        this.state = Objects.requireNonNull(state, "expected parameter 'state' to be non-null");
-    }
+    private SubscriptionStateOverrideActionResponse() {}
 
-    private SubscriptionStateOverrideActionResponse() {
-        this.action = null;
-        this.state = null;
+    private SubscriptionStateOverrideActionResponse(SubscriptionStateOverrideActionResponse $) {
+        this.action = $.action;
+        this.state = $.state;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SubscriptionStateOverrideActionResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String action;
-        private String state;
+        private SubscriptionStateOverrideActionResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new SubscriptionStateOverrideActionResponse();
         }
 
         public Builder(SubscriptionStateOverrideActionResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.action = defaults.action;
-    	      this.state = defaults.state;
+            $ = new SubscriptionStateOverrideActionResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder action(String action) {
-            this.action = Objects.requireNonNull(action);
+            $.action = action;
             return this;
         }
+
         public Builder state(String state) {
-            this.state = Objects.requireNonNull(state);
+            $.state = state;
             return this;
-        }        public SubscriptionStateOverrideActionResponse build() {
-            return new SubscriptionStateOverrideActionResponse(action, state);
+        }
+
+        public SubscriptionStateOverrideActionResponse build() {
+            $.action = Objects.requireNonNull($.action, "expected parameter 'action' to be non-null");
+            $.state = Objects.requireNonNull($.state, "expected parameter 'state' to be non-null");
+            return $;
         }
     }
+
 }

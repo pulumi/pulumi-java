@@ -23,45 +23,44 @@ public final class OsProfileResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="linuxOperatingSystemProfile")
-      private final @Nullable LinuxOperatingSystemProfileResponse linuxOperatingSystemProfile;
+    private @Nullable LinuxOperatingSystemProfileResponse linuxOperatingSystemProfile;
 
     public Optional<LinuxOperatingSystemProfileResponse> linuxOperatingSystemProfile() {
-        return this.linuxOperatingSystemProfile == null ? Optional.empty() : Optional.ofNullable(this.linuxOperatingSystemProfile);
+        return Optional.ofNullable(this.linuxOperatingSystemProfile);
     }
 
-    public OsProfileResponse(@Nullable LinuxOperatingSystemProfileResponse linuxOperatingSystemProfile) {
-        this.linuxOperatingSystemProfile = linuxOperatingSystemProfile;
-    }
+    private OsProfileResponse() {}
 
-    private OsProfileResponse() {
-        this.linuxOperatingSystemProfile = null;
+    private OsProfileResponse(OsProfileResponse $) {
+        this.linuxOperatingSystemProfile = $.linuxOperatingSystemProfile;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(OsProfileResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable LinuxOperatingSystemProfileResponse linuxOperatingSystemProfile;
+        private OsProfileResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new OsProfileResponse();
         }
 
         public Builder(OsProfileResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.linuxOperatingSystemProfile = defaults.linuxOperatingSystemProfile;
+            $ = new OsProfileResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder linuxOperatingSystemProfile(@Nullable LinuxOperatingSystemProfileResponse linuxOperatingSystemProfile) {
-            this.linuxOperatingSystemProfile = linuxOperatingSystemProfile;
+            $.linuxOperatingSystemProfile = linuxOperatingSystemProfile;
             return this;
-        }        public OsProfileResponse build() {
-            return new OsProfileResponse(linuxOperatingSystemProfile);
+        }
+
+        public OsProfileResponse build() {
+            return $;
         }
     }
+
 }

@@ -6,9 +6,9 @@ package com.pulumi.azurenative.connectedvmwarevsphere.inputs;
 import com.pulumi.azurenative.connectedvmwarevsphere.inputs.VirtualDiskArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,52 +25,52 @@ public final class StorageProfileArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="disks")
-      private final @Nullable Output<List<VirtualDiskArgs>> disks;
+    private @Nullable Output<List<VirtualDiskArgs>> disks;
 
-    public Output<List<VirtualDiskArgs>> disks() {
-        return this.disks == null ? Codegen.empty() : this.disks;
+    public Optional<Output<List<VirtualDiskArgs>>> disks() {
+        return Optional.ofNullable(this.disks);
     }
 
-    public StorageProfileArgs(@Nullable Output<List<VirtualDiskArgs>> disks) {
-        this.disks = disks;
-    }
+    private StorageProfileArgs() {}
 
-    private StorageProfileArgs() {
-        this.disks = Codegen.empty();
+    private StorageProfileArgs(StorageProfileArgs $) {
+        this.disks = $.disks;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(StorageProfileArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<VirtualDiskArgs>> disks;
+        private StorageProfileArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new StorageProfileArgs();
         }
 
         public Builder(StorageProfileArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.disks = defaults.disks;
+            $ = new StorageProfileArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder disks(@Nullable Output<List<VirtualDiskArgs>> disks) {
-            this.disks = disks;
+            $.disks = disks;
             return this;
         }
-        public Builder disks(@Nullable List<VirtualDiskArgs> disks) {
-            this.disks = Codegen.ofNullable(disks);
-            return this;
+
+        public Builder disks(List<VirtualDiskArgs> disks) {
+            return disks(Output.of(disks));
         }
+
         public Builder disks(VirtualDiskArgs... disks) {
             return disks(List.of(disks));
-        }        public StorageProfileArgs build() {
-            return new StorageProfileArgs(disks);
+        }
+
+        public StorageProfileArgs build() {
+            return $;
         }
     }
+
 }

@@ -23,7 +23,7 @@ public final class ImageResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="alpha", required=true)
-      private final Double alpha;
+    private Double alpha;
 
     public Double alpha() {
         return this.alpha;
@@ -34,7 +34,7 @@ public final class ImageResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resolution", required=true)
-      private final NormalizedCoordinateResponse resolution;
+    private NormalizedCoordinateResponse resolution;
 
     public NormalizedCoordinateResponse resolution() {
         return this.resolution;
@@ -45,64 +45,59 @@ public final class ImageResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="uri", required=true)
-      private final String uri;
+    private String uri;
 
     public String uri() {
         return this.uri;
     }
 
-    public ImageResponse(
-        Double alpha,
-        NormalizedCoordinateResponse resolution,
-        String uri) {
-        this.alpha = Objects.requireNonNull(alpha, "expected parameter 'alpha' to be non-null");
-        this.resolution = Objects.requireNonNull(resolution, "expected parameter 'resolution' to be non-null");
-        this.uri = Objects.requireNonNull(uri, "expected parameter 'uri' to be non-null");
-    }
+    private ImageResponse() {}
 
-    private ImageResponse() {
-        this.alpha = null;
-        this.resolution = null;
-        this.uri = null;
+    private ImageResponse(ImageResponse $) {
+        this.alpha = $.alpha;
+        this.resolution = $.resolution;
+        this.uri = $.uri;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ImageResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Double alpha;
-        private NormalizedCoordinateResponse resolution;
-        private String uri;
+        private ImageResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ImageResponse();
         }
 
         public Builder(ImageResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.alpha = defaults.alpha;
-    	      this.resolution = defaults.resolution;
-    	      this.uri = defaults.uri;
+            $ = new ImageResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder alpha(Double alpha) {
-            this.alpha = Objects.requireNonNull(alpha);
+            $.alpha = alpha;
             return this;
         }
+
         public Builder resolution(NormalizedCoordinateResponse resolution) {
-            this.resolution = Objects.requireNonNull(resolution);
+            $.resolution = resolution;
             return this;
         }
+
         public Builder uri(String uri) {
-            this.uri = Objects.requireNonNull(uri);
+            $.uri = uri;
             return this;
-        }        public ImageResponse build() {
-            return new ImageResponse(alpha, resolution, uri);
+        }
+
+        public ImageResponse build() {
+            $.alpha = Objects.requireNonNull($.alpha, "expected parameter 'alpha' to be non-null");
+            $.resolution = Objects.requireNonNull($.resolution, "expected parameter 'resolution' to be non-null");
+            $.uri = Objects.requireNonNull($.uri, "expected parameter 'uri' to be non-null");
+            return $;
         }
     }
+
 }

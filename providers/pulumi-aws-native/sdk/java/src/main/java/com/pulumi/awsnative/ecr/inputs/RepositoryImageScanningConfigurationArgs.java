@@ -5,9 +5,9 @@ package com.pulumi.awsnative.ecr.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,49 +20,48 @@ public final class RepositoryImageScanningConfigurationArgs extends com.pulumi.r
     public static final RepositoryImageScanningConfigurationArgs Empty = new RepositoryImageScanningConfigurationArgs();
 
     @Import(name="scanOnPush")
-      private final @Nullable Output<Boolean> scanOnPush;
+    private @Nullable Output<Boolean> scanOnPush;
 
-    public Output<Boolean> scanOnPush() {
-        return this.scanOnPush == null ? Codegen.empty() : this.scanOnPush;
+    public Optional<Output<Boolean>> scanOnPush() {
+        return Optional.ofNullable(this.scanOnPush);
     }
 
-    public RepositoryImageScanningConfigurationArgs(@Nullable Output<Boolean> scanOnPush) {
-        this.scanOnPush = scanOnPush;
-    }
+    private RepositoryImageScanningConfigurationArgs() {}
 
-    private RepositoryImageScanningConfigurationArgs() {
-        this.scanOnPush = Codegen.empty();
+    private RepositoryImageScanningConfigurationArgs(RepositoryImageScanningConfigurationArgs $) {
+        this.scanOnPush = $.scanOnPush;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RepositoryImageScanningConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> scanOnPush;
+        private RepositoryImageScanningConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RepositoryImageScanningConfigurationArgs();
         }
 
         public Builder(RepositoryImageScanningConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.scanOnPush = defaults.scanOnPush;
+            $ = new RepositoryImageScanningConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder scanOnPush(@Nullable Output<Boolean> scanOnPush) {
-            this.scanOnPush = scanOnPush;
+            $.scanOnPush = scanOnPush;
             return this;
         }
-        public Builder scanOnPush(@Nullable Boolean scanOnPush) {
-            this.scanOnPush = Codegen.ofNullable(scanOnPush);
-            return this;
-        }        public RepositoryImageScanningConfigurationArgs build() {
-            return new RepositoryImageScanningConfigurationArgs(scanOnPush);
+
+        public Builder scanOnPush(Boolean scanOnPush) {
+            return scanOnPush(Output.of(scanOnPush));
+        }
+
+        public RepositoryImageScanningConfigurationArgs build() {
+            return $;
         }
     }
+
 }

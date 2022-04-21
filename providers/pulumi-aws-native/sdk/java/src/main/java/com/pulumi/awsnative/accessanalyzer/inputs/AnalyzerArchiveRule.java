@@ -19,7 +19,7 @@ public final class AnalyzerArchiveRule extends com.pulumi.resources.InvokeArgs {
     public static final AnalyzerArchiveRule Empty = new AnalyzerArchiveRule();
 
     @Import(name="filter", required=true)
-      private final List<AnalyzerFilter> filter;
+    private List<AnalyzerFilter> filter;
 
     public List<AnalyzerFilter> filter() {
         return this.filter;
@@ -30,58 +30,56 @@ public final class AnalyzerArchiveRule extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="ruleName", required=true)
-      private final String ruleName;
+    private String ruleName;
 
     public String ruleName() {
         return this.ruleName;
     }
 
-    public AnalyzerArchiveRule(
-        List<AnalyzerFilter> filter,
-        String ruleName) {
-        this.filter = Objects.requireNonNull(filter, "expected parameter 'filter' to be non-null");
-        this.ruleName = Objects.requireNonNull(ruleName, "expected parameter 'ruleName' to be non-null");
-    }
+    private AnalyzerArchiveRule() {}
 
-    private AnalyzerArchiveRule() {
-        this.filter = List.of();
-        this.ruleName = null;
+    private AnalyzerArchiveRule(AnalyzerArchiveRule $) {
+        this.filter = $.filter;
+        this.ruleName = $.ruleName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AnalyzerArchiveRule defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<AnalyzerFilter> filter;
-        private String ruleName;
+        private AnalyzerArchiveRule $;
 
         public Builder() {
-    	      // Empty
+            $ = new AnalyzerArchiveRule();
         }
 
         public Builder(AnalyzerArchiveRule defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.filter = defaults.filter;
-    	      this.ruleName = defaults.ruleName;
+            $ = new AnalyzerArchiveRule(Objects.requireNonNull(defaults));
         }
 
         public Builder filter(List<AnalyzerFilter> filter) {
-            this.filter = Objects.requireNonNull(filter);
+            $.filter = filter;
             return this;
         }
+
         public Builder filter(AnalyzerFilter... filter) {
             return filter(List.of(filter));
         }
+
         public Builder ruleName(String ruleName) {
-            this.ruleName = Objects.requireNonNull(ruleName);
+            $.ruleName = ruleName;
             return this;
-        }        public AnalyzerArchiveRule build() {
-            return new AnalyzerArchiveRule(filter, ruleName);
+        }
+
+        public AnalyzerArchiveRule build() {
+            $.filter = Objects.requireNonNull($.filter, "expected parameter 'filter' to be non-null");
+            $.ruleName = Objects.requireNonNull($.ruleName, "expected parameter 'ruleName' to be non-null");
+            return $;
         }
     }
+
 }

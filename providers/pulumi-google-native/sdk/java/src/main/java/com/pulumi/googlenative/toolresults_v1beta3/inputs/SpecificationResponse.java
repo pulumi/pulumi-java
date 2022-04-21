@@ -22,7 +22,7 @@ public final class SpecificationResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="androidTest", required=true)
-      private final AndroidTestResponse androidTest;
+    private AndroidTestResponse androidTest;
 
     public AndroidTestResponse androidTest() {
         return this.androidTest;
@@ -33,55 +33,52 @@ public final class SpecificationResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="iosTest", required=true)
-      private final IosTestResponse iosTest;
+    private IosTestResponse iosTest;
 
     public IosTestResponse iosTest() {
         return this.iosTest;
     }
 
-    public SpecificationResponse(
-        AndroidTestResponse androidTest,
-        IosTestResponse iosTest) {
-        this.androidTest = Objects.requireNonNull(androidTest, "expected parameter 'androidTest' to be non-null");
-        this.iosTest = Objects.requireNonNull(iosTest, "expected parameter 'iosTest' to be non-null");
-    }
+    private SpecificationResponse() {}
 
-    private SpecificationResponse() {
-        this.androidTest = null;
-        this.iosTest = null;
+    private SpecificationResponse(SpecificationResponse $) {
+        this.androidTest = $.androidTest;
+        this.iosTest = $.iosTest;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SpecificationResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private AndroidTestResponse androidTest;
-        private IosTestResponse iosTest;
+        private SpecificationResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new SpecificationResponse();
         }
 
         public Builder(SpecificationResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.androidTest = defaults.androidTest;
-    	      this.iosTest = defaults.iosTest;
+            $ = new SpecificationResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder androidTest(AndroidTestResponse androidTest) {
-            this.androidTest = Objects.requireNonNull(androidTest);
+            $.androidTest = androidTest;
             return this;
         }
+
         public Builder iosTest(IosTestResponse iosTest) {
-            this.iosTest = Objects.requireNonNull(iosTest);
+            $.iosTest = iosTest;
             return this;
-        }        public SpecificationResponse build() {
-            return new SpecificationResponse(androidTest, iosTest);
+        }
+
+        public SpecificationResponse build() {
+            $.androidTest = Objects.requireNonNull($.androidTest, "expected parameter 'androidTest' to be non-null");
+            $.iosTest = Objects.requireNonNull($.iosTest, "expected parameter 'iosTest' to be non-null");
+            return $;
         }
     }
+
 }

@@ -25,7 +25,7 @@ public final class GoogleCloudDialogflowV2FulfillmentResponse extends com.pulumi
      * 
      */
     @Import(name="displayName", required=true)
-      private final String displayName;
+    private String displayName;
 
     public String displayName() {
         return this.displayName;
@@ -36,7 +36,7 @@ public final class GoogleCloudDialogflowV2FulfillmentResponse extends com.pulumi
      * 
      */
     @Import(name="enabled", required=true)
-      private final Boolean enabled;
+    private Boolean enabled;
 
     public Boolean enabled() {
         return this.enabled;
@@ -47,7 +47,7 @@ public final class GoogleCloudDialogflowV2FulfillmentResponse extends com.pulumi
      * 
      */
     @Import(name="features", required=true)
-      private final List<GoogleCloudDialogflowV2FulfillmentFeatureResponse> features;
+    private List<GoogleCloudDialogflowV2FulfillmentFeatureResponse> features;
 
     public List<GoogleCloudDialogflowV2FulfillmentFeatureResponse> features() {
         return this.features;
@@ -58,7 +58,7 @@ public final class GoogleCloudDialogflowV2FulfillmentResponse extends com.pulumi
      * 
      */
     @Import(name="genericWebService", required=true)
-      private final GoogleCloudDialogflowV2FulfillmentGenericWebServiceResponse genericWebService;
+    private GoogleCloudDialogflowV2FulfillmentGenericWebServiceResponse genericWebService;
 
     public GoogleCloudDialogflowV2FulfillmentGenericWebServiceResponse genericWebService() {
         return this.genericWebService;
@@ -69,85 +69,77 @@ public final class GoogleCloudDialogflowV2FulfillmentResponse extends com.pulumi
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
     }
 
-    public GoogleCloudDialogflowV2FulfillmentResponse(
-        String displayName,
-        Boolean enabled,
-        List<GoogleCloudDialogflowV2FulfillmentFeatureResponse> features,
-        GoogleCloudDialogflowV2FulfillmentGenericWebServiceResponse genericWebService,
-        String name) {
-        this.displayName = Objects.requireNonNull(displayName, "expected parameter 'displayName' to be non-null");
-        this.enabled = Objects.requireNonNull(enabled, "expected parameter 'enabled' to be non-null");
-        this.features = Objects.requireNonNull(features, "expected parameter 'features' to be non-null");
-        this.genericWebService = Objects.requireNonNull(genericWebService, "expected parameter 'genericWebService' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-    }
+    private GoogleCloudDialogflowV2FulfillmentResponse() {}
 
-    private GoogleCloudDialogflowV2FulfillmentResponse() {
-        this.displayName = null;
-        this.enabled = null;
-        this.features = List.of();
-        this.genericWebService = null;
-        this.name = null;
+    private GoogleCloudDialogflowV2FulfillmentResponse(GoogleCloudDialogflowV2FulfillmentResponse $) {
+        this.displayName = $.displayName;
+        this.enabled = $.enabled;
+        this.features = $.features;
+        this.genericWebService = $.genericWebService;
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudDialogflowV2FulfillmentResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String displayName;
-        private Boolean enabled;
-        private List<GoogleCloudDialogflowV2FulfillmentFeatureResponse> features;
-        private GoogleCloudDialogflowV2FulfillmentGenericWebServiceResponse genericWebService;
-        private String name;
+        private GoogleCloudDialogflowV2FulfillmentResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudDialogflowV2FulfillmentResponse();
         }
 
         public Builder(GoogleCloudDialogflowV2FulfillmentResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.displayName = defaults.displayName;
-    	      this.enabled = defaults.enabled;
-    	      this.features = defaults.features;
-    	      this.genericWebService = defaults.genericWebService;
-    	      this.name = defaults.name;
+            $ = new GoogleCloudDialogflowV2FulfillmentResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder displayName(String displayName) {
-            this.displayName = Objects.requireNonNull(displayName);
+            $.displayName = displayName;
             return this;
         }
+
         public Builder enabled(Boolean enabled) {
-            this.enabled = Objects.requireNonNull(enabled);
+            $.enabled = enabled;
             return this;
         }
+
         public Builder features(List<GoogleCloudDialogflowV2FulfillmentFeatureResponse> features) {
-            this.features = Objects.requireNonNull(features);
+            $.features = features;
             return this;
         }
+
         public Builder features(GoogleCloudDialogflowV2FulfillmentFeatureResponse... features) {
             return features(List.of(features));
         }
+
         public Builder genericWebService(GoogleCloudDialogflowV2FulfillmentGenericWebServiceResponse genericWebService) {
-            this.genericWebService = Objects.requireNonNull(genericWebService);
+            $.genericWebService = genericWebService;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
-        }        public GoogleCloudDialogflowV2FulfillmentResponse build() {
-            return new GoogleCloudDialogflowV2FulfillmentResponse(displayName, enabled, features, genericWebService, name);
+        }
+
+        public GoogleCloudDialogflowV2FulfillmentResponse build() {
+            $.displayName = Objects.requireNonNull($.displayName, "expected parameter 'displayName' to be non-null");
+            $.enabled = Objects.requireNonNull($.enabled, "expected parameter 'enabled' to be non-null");
+            $.features = Objects.requireNonNull($.features, "expected parameter 'features' to be non-null");
+            $.genericWebService = Objects.requireNonNull($.genericWebService, "expected parameter 'genericWebService' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            return $;
         }
     }
+
 }

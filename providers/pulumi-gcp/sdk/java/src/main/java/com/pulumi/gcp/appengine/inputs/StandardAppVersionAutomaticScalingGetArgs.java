@@ -5,11 +5,11 @@ package com.pulumi.gcp.appengine.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.appengine.inputs.StandardAppVersionAutomaticScalingStandardSchedulerSettingsGetArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,10 @@ public final class StandardAppVersionAutomaticScalingGetArgs extends com.pulumi.
      * 
      */
     @Import(name="maxConcurrentRequests")
-      private final @Nullable Output<Integer> maxConcurrentRequests;
+    private @Nullable Output<Integer> maxConcurrentRequests;
 
-    public Output<Integer> maxConcurrentRequests() {
-        return this.maxConcurrentRequests == null ? Codegen.empty() : this.maxConcurrentRequests;
+    public Optional<Output<Integer>> maxConcurrentRequests() {
+        return Optional.ofNullable(this.maxConcurrentRequests);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class StandardAppVersionAutomaticScalingGetArgs extends com.pulumi.
      * 
      */
     @Import(name="maxIdleInstances")
-      private final @Nullable Output<Integer> maxIdleInstances;
+    private @Nullable Output<Integer> maxIdleInstances;
 
-    public Output<Integer> maxIdleInstances() {
-        return this.maxIdleInstances == null ? Codegen.empty() : this.maxIdleInstances;
+    public Optional<Output<Integer>> maxIdleInstances() {
+        return Optional.ofNullable(this.maxIdleInstances);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class StandardAppVersionAutomaticScalingGetArgs extends com.pulumi.
      * 
      */
     @Import(name="maxPendingLatency")
-      private final @Nullable Output<String> maxPendingLatency;
+    private @Nullable Output<String> maxPendingLatency;
 
-    public Output<String> maxPendingLatency() {
-        return this.maxPendingLatency == null ? Codegen.empty() : this.maxPendingLatency;
+    public Optional<Output<String>> maxPendingLatency() {
+        return Optional.ofNullable(this.maxPendingLatency);
     }
 
     /**
@@ -57,10 +57,10 @@ public final class StandardAppVersionAutomaticScalingGetArgs extends com.pulumi.
      * 
      */
     @Import(name="minIdleInstances")
-      private final @Nullable Output<Integer> minIdleInstances;
+    private @Nullable Output<Integer> minIdleInstances;
 
-    public Output<Integer> minIdleInstances() {
-        return this.minIdleInstances == null ? Codegen.empty() : this.minIdleInstances;
+    public Optional<Output<Integer>> minIdleInstances() {
+        return Optional.ofNullable(this.minIdleInstances);
     }
 
     /**
@@ -69,10 +69,10 @@ public final class StandardAppVersionAutomaticScalingGetArgs extends com.pulumi.
      * 
      */
     @Import(name="minPendingLatency")
-      private final @Nullable Output<String> minPendingLatency;
+    private @Nullable Output<String> minPendingLatency;
 
-    public Output<String> minPendingLatency() {
-        return this.minPendingLatency == null ? Codegen.empty() : this.minPendingLatency;
+    public Optional<Output<String>> minPendingLatency() {
+        return Optional.ofNullable(this.minPendingLatency);
     }
 
     /**
@@ -81,115 +81,98 @@ public final class StandardAppVersionAutomaticScalingGetArgs extends com.pulumi.
      * 
      */
     @Import(name="standardSchedulerSettings")
-      private final @Nullable Output<StandardAppVersionAutomaticScalingStandardSchedulerSettingsGetArgs> standardSchedulerSettings;
+    private @Nullable Output<StandardAppVersionAutomaticScalingStandardSchedulerSettingsGetArgs> standardSchedulerSettings;
 
-    public Output<StandardAppVersionAutomaticScalingStandardSchedulerSettingsGetArgs> standardSchedulerSettings() {
-        return this.standardSchedulerSettings == null ? Codegen.empty() : this.standardSchedulerSettings;
+    public Optional<Output<StandardAppVersionAutomaticScalingStandardSchedulerSettingsGetArgs>> standardSchedulerSettings() {
+        return Optional.ofNullable(this.standardSchedulerSettings);
     }
 
-    public StandardAppVersionAutomaticScalingGetArgs(
-        @Nullable Output<Integer> maxConcurrentRequests,
-        @Nullable Output<Integer> maxIdleInstances,
-        @Nullable Output<String> maxPendingLatency,
-        @Nullable Output<Integer> minIdleInstances,
-        @Nullable Output<String> minPendingLatency,
-        @Nullable Output<StandardAppVersionAutomaticScalingStandardSchedulerSettingsGetArgs> standardSchedulerSettings) {
-        this.maxConcurrentRequests = maxConcurrentRequests;
-        this.maxIdleInstances = maxIdleInstances;
-        this.maxPendingLatency = maxPendingLatency;
-        this.minIdleInstances = minIdleInstances;
-        this.minPendingLatency = minPendingLatency;
-        this.standardSchedulerSettings = standardSchedulerSettings;
-    }
+    private StandardAppVersionAutomaticScalingGetArgs() {}
 
-    private StandardAppVersionAutomaticScalingGetArgs() {
-        this.maxConcurrentRequests = Codegen.empty();
-        this.maxIdleInstances = Codegen.empty();
-        this.maxPendingLatency = Codegen.empty();
-        this.minIdleInstances = Codegen.empty();
-        this.minPendingLatency = Codegen.empty();
-        this.standardSchedulerSettings = Codegen.empty();
+    private StandardAppVersionAutomaticScalingGetArgs(StandardAppVersionAutomaticScalingGetArgs $) {
+        this.maxConcurrentRequests = $.maxConcurrentRequests;
+        this.maxIdleInstances = $.maxIdleInstances;
+        this.maxPendingLatency = $.maxPendingLatency;
+        this.minIdleInstances = $.minIdleInstances;
+        this.minPendingLatency = $.minPendingLatency;
+        this.standardSchedulerSettings = $.standardSchedulerSettings;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(StandardAppVersionAutomaticScalingGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> maxConcurrentRequests;
-        private @Nullable Output<Integer> maxIdleInstances;
-        private @Nullable Output<String> maxPendingLatency;
-        private @Nullable Output<Integer> minIdleInstances;
-        private @Nullable Output<String> minPendingLatency;
-        private @Nullable Output<StandardAppVersionAutomaticScalingStandardSchedulerSettingsGetArgs> standardSchedulerSettings;
+        private StandardAppVersionAutomaticScalingGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new StandardAppVersionAutomaticScalingGetArgs();
         }
 
         public Builder(StandardAppVersionAutomaticScalingGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.maxConcurrentRequests = defaults.maxConcurrentRequests;
-    	      this.maxIdleInstances = defaults.maxIdleInstances;
-    	      this.maxPendingLatency = defaults.maxPendingLatency;
-    	      this.minIdleInstances = defaults.minIdleInstances;
-    	      this.minPendingLatency = defaults.minPendingLatency;
-    	      this.standardSchedulerSettings = defaults.standardSchedulerSettings;
+            $ = new StandardAppVersionAutomaticScalingGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder maxConcurrentRequests(@Nullable Output<Integer> maxConcurrentRequests) {
-            this.maxConcurrentRequests = maxConcurrentRequests;
+            $.maxConcurrentRequests = maxConcurrentRequests;
             return this;
         }
-        public Builder maxConcurrentRequests(@Nullable Integer maxConcurrentRequests) {
-            this.maxConcurrentRequests = Codegen.ofNullable(maxConcurrentRequests);
-            return this;
+
+        public Builder maxConcurrentRequests(Integer maxConcurrentRequests) {
+            return maxConcurrentRequests(Output.of(maxConcurrentRequests));
         }
+
         public Builder maxIdleInstances(@Nullable Output<Integer> maxIdleInstances) {
-            this.maxIdleInstances = maxIdleInstances;
+            $.maxIdleInstances = maxIdleInstances;
             return this;
         }
-        public Builder maxIdleInstances(@Nullable Integer maxIdleInstances) {
-            this.maxIdleInstances = Codegen.ofNullable(maxIdleInstances);
-            return this;
+
+        public Builder maxIdleInstances(Integer maxIdleInstances) {
+            return maxIdleInstances(Output.of(maxIdleInstances));
         }
+
         public Builder maxPendingLatency(@Nullable Output<String> maxPendingLatency) {
-            this.maxPendingLatency = maxPendingLatency;
+            $.maxPendingLatency = maxPendingLatency;
             return this;
         }
-        public Builder maxPendingLatency(@Nullable String maxPendingLatency) {
-            this.maxPendingLatency = Codegen.ofNullable(maxPendingLatency);
-            return this;
+
+        public Builder maxPendingLatency(String maxPendingLatency) {
+            return maxPendingLatency(Output.of(maxPendingLatency));
         }
+
         public Builder minIdleInstances(@Nullable Output<Integer> minIdleInstances) {
-            this.minIdleInstances = minIdleInstances;
+            $.minIdleInstances = minIdleInstances;
             return this;
         }
-        public Builder minIdleInstances(@Nullable Integer minIdleInstances) {
-            this.minIdleInstances = Codegen.ofNullable(minIdleInstances);
-            return this;
+
+        public Builder minIdleInstances(Integer minIdleInstances) {
+            return minIdleInstances(Output.of(minIdleInstances));
         }
+
         public Builder minPendingLatency(@Nullable Output<String> minPendingLatency) {
-            this.minPendingLatency = minPendingLatency;
+            $.minPendingLatency = minPendingLatency;
             return this;
         }
-        public Builder minPendingLatency(@Nullable String minPendingLatency) {
-            this.minPendingLatency = Codegen.ofNullable(minPendingLatency);
-            return this;
+
+        public Builder minPendingLatency(String minPendingLatency) {
+            return minPendingLatency(Output.of(minPendingLatency));
         }
+
         public Builder standardSchedulerSettings(@Nullable Output<StandardAppVersionAutomaticScalingStandardSchedulerSettingsGetArgs> standardSchedulerSettings) {
-            this.standardSchedulerSettings = standardSchedulerSettings;
+            $.standardSchedulerSettings = standardSchedulerSettings;
             return this;
         }
-        public Builder standardSchedulerSettings(@Nullable StandardAppVersionAutomaticScalingStandardSchedulerSettingsGetArgs standardSchedulerSettings) {
-            this.standardSchedulerSettings = Codegen.ofNullable(standardSchedulerSettings);
-            return this;
-        }        public StandardAppVersionAutomaticScalingGetArgs build() {
-            return new StandardAppVersionAutomaticScalingGetArgs(maxConcurrentRequests, maxIdleInstances, maxPendingLatency, minIdleInstances, minPendingLatency, standardSchedulerSettings);
+
+        public Builder standardSchedulerSettings(StandardAppVersionAutomaticScalingStandardSchedulerSettingsGetArgs standardSchedulerSettings) {
+            return standardSchedulerSettings(Output.of(standardSchedulerSettings));
+        }
+
+        public StandardAppVersionAutomaticScalingGetArgs build() {
+            return $;
         }
     }
+
 }

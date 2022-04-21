@@ -5,7 +5,6 @@ package com.pulumi.gcp.osconfig.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -20,49 +19,49 @@ public final class PatchDeploymentInstanceFilterGroupLabelGetArgs extends com.pu
      * 
      */
     @Import(name="labels", required=true)
-      private final Output<Map<String,String>> labels;
+    private Output<Map<String,String>> labels;
 
     public Output<Map<String,String>> labels() {
         return this.labels;
     }
 
-    public PatchDeploymentInstanceFilterGroupLabelGetArgs(Output<Map<String,String>> labels) {
-        this.labels = Objects.requireNonNull(labels, "expected parameter 'labels' to be non-null");
-    }
+    private PatchDeploymentInstanceFilterGroupLabelGetArgs() {}
 
-    private PatchDeploymentInstanceFilterGroupLabelGetArgs() {
-        this.labels = Codegen.empty();
+    private PatchDeploymentInstanceFilterGroupLabelGetArgs(PatchDeploymentInstanceFilterGroupLabelGetArgs $) {
+        this.labels = $.labels;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PatchDeploymentInstanceFilterGroupLabelGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Map<String,String>> labels;
+        private PatchDeploymentInstanceFilterGroupLabelGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PatchDeploymentInstanceFilterGroupLabelGetArgs();
         }
 
         public Builder(PatchDeploymentInstanceFilterGroupLabelGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.labels = defaults.labels;
+            $ = new PatchDeploymentInstanceFilterGroupLabelGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder labels(Output<Map<String,String>> labels) {
-            this.labels = Objects.requireNonNull(labels);
+            $.labels = labels;
             return this;
         }
+
         public Builder labels(Map<String,String> labels) {
-            this.labels = Output.of(Objects.requireNonNull(labels));
-            return this;
-        }        public PatchDeploymentInstanceFilterGroupLabelGetArgs build() {
-            return new PatchDeploymentInstanceFilterGroupLabelGetArgs(labels);
+            return labels(Output.of(labels));
+        }
+
+        public PatchDeploymentInstanceFilterGroupLabelGetArgs build() {
+            $.labels = Objects.requireNonNull($.labels, "expected parameter 'labels' to be non-null");
+            return $;
         }
     }
+
 }

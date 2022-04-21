@@ -6,9 +6,9 @@ package com.pulumi.awsnative.iotevents.inputs;
 import com.pulumi.awsnative.iotevents.inputs.DetectorModelPayloadArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,70 +21,66 @@ public final class DetectorModelLambdaArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="functionArn", required=true)
-      private final Output<String> functionArn;
+    private Output<String> functionArn;
 
     public Output<String> functionArn() {
         return this.functionArn;
     }
 
     @Import(name="payload")
-      private final @Nullable Output<DetectorModelPayloadArgs> payload;
+    private @Nullable Output<DetectorModelPayloadArgs> payload;
 
-    public Output<DetectorModelPayloadArgs> payload() {
-        return this.payload == null ? Codegen.empty() : this.payload;
+    public Optional<Output<DetectorModelPayloadArgs>> payload() {
+        return Optional.ofNullable(this.payload);
     }
 
-    public DetectorModelLambdaArgs(
-        Output<String> functionArn,
-        @Nullable Output<DetectorModelPayloadArgs> payload) {
-        this.functionArn = Objects.requireNonNull(functionArn, "expected parameter 'functionArn' to be non-null");
-        this.payload = payload;
-    }
+    private DetectorModelLambdaArgs() {}
 
-    private DetectorModelLambdaArgs() {
-        this.functionArn = Codegen.empty();
-        this.payload = Codegen.empty();
+    private DetectorModelLambdaArgs(DetectorModelLambdaArgs $) {
+        this.functionArn = $.functionArn;
+        this.payload = $.payload;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DetectorModelLambdaArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> functionArn;
-        private @Nullable Output<DetectorModelPayloadArgs> payload;
+        private DetectorModelLambdaArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DetectorModelLambdaArgs();
         }
 
         public Builder(DetectorModelLambdaArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.functionArn = defaults.functionArn;
-    	      this.payload = defaults.payload;
+            $ = new DetectorModelLambdaArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder functionArn(Output<String> functionArn) {
-            this.functionArn = Objects.requireNonNull(functionArn);
+            $.functionArn = functionArn;
             return this;
         }
+
         public Builder functionArn(String functionArn) {
-            this.functionArn = Output.of(Objects.requireNonNull(functionArn));
-            return this;
+            return functionArn(Output.of(functionArn));
         }
+
         public Builder payload(@Nullable Output<DetectorModelPayloadArgs> payload) {
-            this.payload = payload;
+            $.payload = payload;
             return this;
         }
-        public Builder payload(@Nullable DetectorModelPayloadArgs payload) {
-            this.payload = Codegen.ofNullable(payload);
-            return this;
-        }        public DetectorModelLambdaArgs build() {
-            return new DetectorModelLambdaArgs(functionArn, payload);
+
+        public Builder payload(DetectorModelPayloadArgs payload) {
+            return payload(Output.of(payload));
+        }
+
+        public DetectorModelLambdaArgs build() {
+            $.functionArn = Objects.requireNonNull($.functionArn, "expected parameter 'functionArn' to be non-null");
+            return $;
         }
     }
+
 }

@@ -22,7 +22,7 @@ public final class AttributeResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="attributeDefinitionId", required=true)
-      private final String attributeDefinitionId;
+    private String attributeDefinitionId;
 
     public String attributeDefinitionId() {
         return this.attributeDefinitionId;
@@ -33,58 +33,56 @@ public final class AttributeResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="values", required=true)
-      private final List<String> values;
+    private List<String> values;
 
     public List<String> values() {
         return this.values;
     }
 
-    public AttributeResponse(
-        String attributeDefinitionId,
-        List<String> values) {
-        this.attributeDefinitionId = Objects.requireNonNull(attributeDefinitionId, "expected parameter 'attributeDefinitionId' to be non-null");
-        this.values = Objects.requireNonNull(values, "expected parameter 'values' to be non-null");
-    }
+    private AttributeResponse() {}
 
-    private AttributeResponse() {
-        this.attributeDefinitionId = null;
-        this.values = List.of();
+    private AttributeResponse(AttributeResponse $) {
+        this.attributeDefinitionId = $.attributeDefinitionId;
+        this.values = $.values;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AttributeResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String attributeDefinitionId;
-        private List<String> values;
+        private AttributeResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AttributeResponse();
         }
 
         public Builder(AttributeResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.attributeDefinitionId = defaults.attributeDefinitionId;
-    	      this.values = defaults.values;
+            $ = new AttributeResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder attributeDefinitionId(String attributeDefinitionId) {
-            this.attributeDefinitionId = Objects.requireNonNull(attributeDefinitionId);
+            $.attributeDefinitionId = attributeDefinitionId;
             return this;
         }
+
         public Builder values(List<String> values) {
-            this.values = Objects.requireNonNull(values);
+            $.values = values;
             return this;
         }
+
         public Builder values(String... values) {
             return values(List.of(values));
-        }        public AttributeResponse build() {
-            return new AttributeResponse(attributeDefinitionId, values);
+        }
+
+        public AttributeResponse build() {
+            $.attributeDefinitionId = Objects.requireNonNull($.attributeDefinitionId, "expected parameter 'attributeDefinitionId' to be non-null");
+            $.values = Objects.requireNonNull($.values, "expected parameter 'values' to be non-null");
+            return $;
         }
     }
+
 }

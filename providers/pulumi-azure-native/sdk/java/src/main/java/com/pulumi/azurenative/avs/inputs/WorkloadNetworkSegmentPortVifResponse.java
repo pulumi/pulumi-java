@@ -23,45 +23,44 @@ public final class WorkloadNetworkSegmentPortVifResponse extends com.pulumi.reso
      * 
      */
     @Import(name="portName")
-      private final @Nullable String portName;
+    private @Nullable String portName;
 
     public Optional<String> portName() {
-        return this.portName == null ? Optional.empty() : Optional.ofNullable(this.portName);
+        return Optional.ofNullable(this.portName);
     }
 
-    public WorkloadNetworkSegmentPortVifResponse(@Nullable String portName) {
-        this.portName = portName;
-    }
+    private WorkloadNetworkSegmentPortVifResponse() {}
 
-    private WorkloadNetworkSegmentPortVifResponse() {
-        this.portName = null;
+    private WorkloadNetworkSegmentPortVifResponse(WorkloadNetworkSegmentPortVifResponse $) {
+        this.portName = $.portName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WorkloadNetworkSegmentPortVifResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String portName;
+        private WorkloadNetworkSegmentPortVifResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new WorkloadNetworkSegmentPortVifResponse();
         }
 
         public Builder(WorkloadNetworkSegmentPortVifResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.portName = defaults.portName;
+            $ = new WorkloadNetworkSegmentPortVifResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder portName(@Nullable String portName) {
-            this.portName = portName;
+            $.portName = portName;
             return this;
-        }        public WorkloadNetworkSegmentPortVifResponse build() {
-            return new WorkloadNetworkSegmentPortVifResponse(portName);
+        }
+
+        public WorkloadNetworkSegmentPortVifResponse build() {
+            return $;
         }
     }
+
 }

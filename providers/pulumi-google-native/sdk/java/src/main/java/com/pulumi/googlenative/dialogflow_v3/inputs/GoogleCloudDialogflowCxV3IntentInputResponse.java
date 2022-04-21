@@ -21,45 +21,45 @@ public final class GoogleCloudDialogflowCxV3IntentInputResponse extends com.pulu
      * 
      */
     @Import(name="intent", required=true)
-      private final String intent;
+    private String intent;
 
     public String intent() {
         return this.intent;
     }
 
-    public GoogleCloudDialogflowCxV3IntentInputResponse(String intent) {
-        this.intent = Objects.requireNonNull(intent, "expected parameter 'intent' to be non-null");
-    }
+    private GoogleCloudDialogflowCxV3IntentInputResponse() {}
 
-    private GoogleCloudDialogflowCxV3IntentInputResponse() {
-        this.intent = null;
+    private GoogleCloudDialogflowCxV3IntentInputResponse(GoogleCloudDialogflowCxV3IntentInputResponse $) {
+        this.intent = $.intent;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudDialogflowCxV3IntentInputResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String intent;
+        private GoogleCloudDialogflowCxV3IntentInputResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudDialogflowCxV3IntentInputResponse();
         }
 
         public Builder(GoogleCloudDialogflowCxV3IntentInputResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.intent = defaults.intent;
+            $ = new GoogleCloudDialogflowCxV3IntentInputResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder intent(String intent) {
-            this.intent = Objects.requireNonNull(intent);
+            $.intent = intent;
             return this;
-        }        public GoogleCloudDialogflowCxV3IntentInputResponse build() {
-            return new GoogleCloudDialogflowCxV3IntentInputResponse(intent);
+        }
+
+        public GoogleCloudDialogflowCxV3IntentInputResponse build() {
+            $.intent = Objects.requireNonNull($.intent, "expected parameter 'intent' to be non-null");
+            return $;
         }
     }
+
 }

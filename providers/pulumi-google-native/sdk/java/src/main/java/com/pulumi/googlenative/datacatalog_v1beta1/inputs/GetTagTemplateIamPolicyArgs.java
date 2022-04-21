@@ -15,78 +15,72 @@ public final class GetTagTemplateIamPolicyArgs extends com.pulumi.resources.Invo
     public static final GetTagTemplateIamPolicyArgs Empty = new GetTagTemplateIamPolicyArgs();
 
     @Import(name="location", required=true)
-      private final String location;
+    private String location;
 
     public String location() {
         return this.location;
     }
 
     @Import(name="project")
-      private final @Nullable String project;
+    private @Nullable String project;
 
     public Optional<String> project() {
-        return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
+        return Optional.ofNullable(this.project);
     }
 
     @Import(name="tagTemplateId", required=true)
-      private final String tagTemplateId;
+    private String tagTemplateId;
 
     public String tagTemplateId() {
         return this.tagTemplateId;
     }
 
-    public GetTagTemplateIamPolicyArgs(
-        String location,
-        @Nullable String project,
-        String tagTemplateId) {
-        this.location = Objects.requireNonNull(location, "expected parameter 'location' to be non-null");
-        this.project = project;
-        this.tagTemplateId = Objects.requireNonNull(tagTemplateId, "expected parameter 'tagTemplateId' to be non-null");
-    }
+    private GetTagTemplateIamPolicyArgs() {}
 
-    private GetTagTemplateIamPolicyArgs() {
-        this.location = null;
-        this.project = null;
-        this.tagTemplateId = null;
+    private GetTagTemplateIamPolicyArgs(GetTagTemplateIamPolicyArgs $) {
+        this.location = $.location;
+        this.project = $.project;
+        this.tagTemplateId = $.tagTemplateId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetTagTemplateIamPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String location;
-        private @Nullable String project;
-        private String tagTemplateId;
+        private GetTagTemplateIamPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetTagTemplateIamPolicyArgs();
         }
 
         public Builder(GetTagTemplateIamPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.location = defaults.location;
-    	      this.project = defaults.project;
-    	      this.tagTemplateId = defaults.tagTemplateId;
+            $ = new GetTagTemplateIamPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder location(String location) {
-            this.location = Objects.requireNonNull(location);
+            $.location = location;
             return this;
         }
+
         public Builder project(@Nullable String project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
+
         public Builder tagTemplateId(String tagTemplateId) {
-            this.tagTemplateId = Objects.requireNonNull(tagTemplateId);
+            $.tagTemplateId = tagTemplateId;
             return this;
-        }        public GetTagTemplateIamPolicyArgs build() {
-            return new GetTagTemplateIamPolicyArgs(location, project, tagTemplateId);
+        }
+
+        public GetTagTemplateIamPolicyArgs build() {
+            $.location = Objects.requireNonNull($.location, "expected parameter 'location' to be non-null");
+            $.tagTemplateId = Objects.requireNonNull($.tagTemplateId, "expected parameter 'tagTemplateId' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,12 +5,12 @@ package com.pulumi.aws.ec2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,10 @@ public final class InstanceRootBlockDeviceGetArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="deleteOnTermination")
-      private final @Nullable Output<Boolean> deleteOnTermination;
+    private @Nullable Output<Boolean> deleteOnTermination;
 
-    public Output<Boolean> deleteOnTermination() {
-        return this.deleteOnTermination == null ? Codegen.empty() : this.deleteOnTermination;
+    public Optional<Output<Boolean>> deleteOnTermination() {
+        return Optional.ofNullable(this.deleteOnTermination);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class InstanceRootBlockDeviceGetArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="deviceName")
-      private final @Nullable Output<String> deviceName;
+    private @Nullable Output<String> deviceName;
 
-    public Output<String> deviceName() {
-        return this.deviceName == null ? Codegen.empty() : this.deviceName;
+    public Optional<Output<String>> deviceName() {
+        return Optional.ofNullable(this.deviceName);
     }
 
     /**
@@ -45,10 +45,10 @@ public final class InstanceRootBlockDeviceGetArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="encrypted")
-      private final @Nullable Output<Boolean> encrypted;
+    private @Nullable Output<Boolean> encrypted;
 
-    public Output<Boolean> encrypted() {
-        return this.encrypted == null ? Codegen.empty() : this.encrypted;
+    public Optional<Output<Boolean>> encrypted() {
+        return Optional.ofNullable(this.encrypted);
     }
 
     /**
@@ -56,10 +56,10 @@ public final class InstanceRootBlockDeviceGetArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="iops")
-      private final @Nullable Output<Integer> iops;
+    private @Nullable Output<Integer> iops;
 
-    public Output<Integer> iops() {
-        return this.iops == null ? Codegen.empty() : this.iops;
+    public Optional<Output<Integer>> iops() {
+        return Optional.ofNullable(this.iops);
     }
 
     /**
@@ -67,10 +67,10 @@ public final class InstanceRootBlockDeviceGetArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="kmsKeyId")
-      private final @Nullable Output<String> kmsKeyId;
+    private @Nullable Output<String> kmsKeyId;
 
-    public Output<String> kmsKeyId() {
-        return this.kmsKeyId == null ? Codegen.empty() : this.kmsKeyId;
+    public Optional<Output<String>> kmsKeyId() {
+        return Optional.ofNullable(this.kmsKeyId);
     }
 
     /**
@@ -78,10 +78,10 @@ public final class InstanceRootBlockDeviceGetArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -89,10 +89,10 @@ public final class InstanceRootBlockDeviceGetArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="throughput")
-      private final @Nullable Output<Integer> throughput;
+    private @Nullable Output<Integer> throughput;
 
-    public Output<Integer> throughput() {
-        return this.throughput == null ? Codegen.empty() : this.throughput;
+    public Optional<Output<Integer>> throughput() {
+        return Optional.ofNullable(this.throughput);
     }
 
     /**
@@ -100,10 +100,10 @@ public final class InstanceRootBlockDeviceGetArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="volumeId")
-      private final @Nullable Output<String> volumeId;
+    private @Nullable Output<String> volumeId;
 
-    public Output<String> volumeId() {
-        return this.volumeId == null ? Codegen.empty() : this.volumeId;
+    public Optional<Output<String>> volumeId() {
+        return Optional.ofNullable(this.volumeId);
     }
 
     /**
@@ -111,10 +111,10 @@ public final class InstanceRootBlockDeviceGetArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="volumeSize")
-      private final @Nullable Output<Integer> volumeSize;
+    private @Nullable Output<Integer> volumeSize;
 
-    public Output<Integer> volumeSize() {
-        return this.volumeSize == null ? Codegen.empty() : this.volumeSize;
+    public Optional<Output<Integer>> volumeSize() {
+        return Optional.ofNullable(this.volumeSize);
     }
 
     /**
@@ -122,167 +122,138 @@ public final class InstanceRootBlockDeviceGetArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="volumeType")
-      private final @Nullable Output<String> volumeType;
+    private @Nullable Output<String> volumeType;
 
-    public Output<String> volumeType() {
-        return this.volumeType == null ? Codegen.empty() : this.volumeType;
+    public Optional<Output<String>> volumeType() {
+        return Optional.ofNullable(this.volumeType);
     }
 
-    public InstanceRootBlockDeviceGetArgs(
-        @Nullable Output<Boolean> deleteOnTermination,
-        @Nullable Output<String> deviceName,
-        @Nullable Output<Boolean> encrypted,
-        @Nullable Output<Integer> iops,
-        @Nullable Output<String> kmsKeyId,
-        @Nullable Output<Map<String,String>> tags,
-        @Nullable Output<Integer> throughput,
-        @Nullable Output<String> volumeId,
-        @Nullable Output<Integer> volumeSize,
-        @Nullable Output<String> volumeType) {
-        this.deleteOnTermination = deleteOnTermination;
-        this.deviceName = deviceName;
-        this.encrypted = encrypted;
-        this.iops = iops;
-        this.kmsKeyId = kmsKeyId;
-        this.tags = tags;
-        this.throughput = throughput;
-        this.volumeId = volumeId;
-        this.volumeSize = volumeSize;
-        this.volumeType = volumeType;
-    }
+    private InstanceRootBlockDeviceGetArgs() {}
 
-    private InstanceRootBlockDeviceGetArgs() {
-        this.deleteOnTermination = Codegen.empty();
-        this.deviceName = Codegen.empty();
-        this.encrypted = Codegen.empty();
-        this.iops = Codegen.empty();
-        this.kmsKeyId = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.throughput = Codegen.empty();
-        this.volumeId = Codegen.empty();
-        this.volumeSize = Codegen.empty();
-        this.volumeType = Codegen.empty();
+    private InstanceRootBlockDeviceGetArgs(InstanceRootBlockDeviceGetArgs $) {
+        this.deleteOnTermination = $.deleteOnTermination;
+        this.deviceName = $.deviceName;
+        this.encrypted = $.encrypted;
+        this.iops = $.iops;
+        this.kmsKeyId = $.kmsKeyId;
+        this.tags = $.tags;
+        this.throughput = $.throughput;
+        this.volumeId = $.volumeId;
+        this.volumeSize = $.volumeSize;
+        this.volumeType = $.volumeType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(InstanceRootBlockDeviceGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> deleteOnTermination;
-        private @Nullable Output<String> deviceName;
-        private @Nullable Output<Boolean> encrypted;
-        private @Nullable Output<Integer> iops;
-        private @Nullable Output<String> kmsKeyId;
-        private @Nullable Output<Map<String,String>> tags;
-        private @Nullable Output<Integer> throughput;
-        private @Nullable Output<String> volumeId;
-        private @Nullable Output<Integer> volumeSize;
-        private @Nullable Output<String> volumeType;
+        private InstanceRootBlockDeviceGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new InstanceRootBlockDeviceGetArgs();
         }
 
         public Builder(InstanceRootBlockDeviceGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.deleteOnTermination = defaults.deleteOnTermination;
-    	      this.deviceName = defaults.deviceName;
-    	      this.encrypted = defaults.encrypted;
-    	      this.iops = defaults.iops;
-    	      this.kmsKeyId = defaults.kmsKeyId;
-    	      this.tags = defaults.tags;
-    	      this.throughput = defaults.throughput;
-    	      this.volumeId = defaults.volumeId;
-    	      this.volumeSize = defaults.volumeSize;
-    	      this.volumeType = defaults.volumeType;
+            $ = new InstanceRootBlockDeviceGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder deleteOnTermination(@Nullable Output<Boolean> deleteOnTermination) {
-            this.deleteOnTermination = deleteOnTermination;
+            $.deleteOnTermination = deleteOnTermination;
             return this;
         }
-        public Builder deleteOnTermination(@Nullable Boolean deleteOnTermination) {
-            this.deleteOnTermination = Codegen.ofNullable(deleteOnTermination);
-            return this;
+
+        public Builder deleteOnTermination(Boolean deleteOnTermination) {
+            return deleteOnTermination(Output.of(deleteOnTermination));
         }
+
         public Builder deviceName(@Nullable Output<String> deviceName) {
-            this.deviceName = deviceName;
+            $.deviceName = deviceName;
             return this;
         }
-        public Builder deviceName(@Nullable String deviceName) {
-            this.deviceName = Codegen.ofNullable(deviceName);
-            return this;
+
+        public Builder deviceName(String deviceName) {
+            return deviceName(Output.of(deviceName));
         }
+
         public Builder encrypted(@Nullable Output<Boolean> encrypted) {
-            this.encrypted = encrypted;
+            $.encrypted = encrypted;
             return this;
         }
-        public Builder encrypted(@Nullable Boolean encrypted) {
-            this.encrypted = Codegen.ofNullable(encrypted);
-            return this;
+
+        public Builder encrypted(Boolean encrypted) {
+            return encrypted(Output.of(encrypted));
         }
+
         public Builder iops(@Nullable Output<Integer> iops) {
-            this.iops = iops;
+            $.iops = iops;
             return this;
         }
-        public Builder iops(@Nullable Integer iops) {
-            this.iops = Codegen.ofNullable(iops);
-            return this;
+
+        public Builder iops(Integer iops) {
+            return iops(Output.of(iops));
         }
+
         public Builder kmsKeyId(@Nullable Output<String> kmsKeyId) {
-            this.kmsKeyId = kmsKeyId;
+            $.kmsKeyId = kmsKeyId;
             return this;
         }
-        public Builder kmsKeyId(@Nullable String kmsKeyId) {
-            this.kmsKeyId = Codegen.ofNullable(kmsKeyId);
-            return this;
+
+        public Builder kmsKeyId(String kmsKeyId) {
+            return kmsKeyId(Output.of(kmsKeyId));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder throughput(@Nullable Output<Integer> throughput) {
-            this.throughput = throughput;
+            $.throughput = throughput;
             return this;
         }
-        public Builder throughput(@Nullable Integer throughput) {
-            this.throughput = Codegen.ofNullable(throughput);
-            return this;
+
+        public Builder throughput(Integer throughput) {
+            return throughput(Output.of(throughput));
         }
+
         public Builder volumeId(@Nullable Output<String> volumeId) {
-            this.volumeId = volumeId;
+            $.volumeId = volumeId;
             return this;
         }
-        public Builder volumeId(@Nullable String volumeId) {
-            this.volumeId = Codegen.ofNullable(volumeId);
-            return this;
+
+        public Builder volumeId(String volumeId) {
+            return volumeId(Output.of(volumeId));
         }
+
         public Builder volumeSize(@Nullable Output<Integer> volumeSize) {
-            this.volumeSize = volumeSize;
+            $.volumeSize = volumeSize;
             return this;
         }
-        public Builder volumeSize(@Nullable Integer volumeSize) {
-            this.volumeSize = Codegen.ofNullable(volumeSize);
-            return this;
+
+        public Builder volumeSize(Integer volumeSize) {
+            return volumeSize(Output.of(volumeSize));
         }
+
         public Builder volumeType(@Nullable Output<String> volumeType) {
-            this.volumeType = volumeType;
+            $.volumeType = volumeType;
             return this;
         }
-        public Builder volumeType(@Nullable String volumeType) {
-            this.volumeType = Codegen.ofNullable(volumeType);
-            return this;
-        }        public InstanceRootBlockDeviceGetArgs build() {
-            return new InstanceRootBlockDeviceGetArgs(deleteOnTermination, deviceName, encrypted, iops, kmsKeyId, tags, throughput, volumeId, volumeSize, volumeType);
+
+        public Builder volumeType(String volumeType) {
+            return volumeType(Output.of(volumeType));
+        }
+
+        public InstanceRootBlockDeviceGetArgs build() {
+            return $;
         }
     }
+
 }

@@ -17,7 +17,7 @@ public final class GetEventHubArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="eventHubName", required=true)
-      private final String eventHubName;
+    private String eventHubName;
 
     public String eventHubName() {
         return this.eventHubName;
@@ -28,7 +28,7 @@ public final class GetEventHubArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="namespaceName", required=true)
-      private final String namespaceName;
+    private String namespaceName;
 
     public String namespaceName() {
         return this.namespaceName;
@@ -39,64 +39,59 @@ public final class GetEventHubArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public GetEventHubArgs(
-        String eventHubName,
-        String namespaceName,
-        String resourceGroupName) {
-        this.eventHubName = Objects.requireNonNull(eventHubName, "expected parameter 'eventHubName' to be non-null");
-        this.namespaceName = Objects.requireNonNull(namespaceName, "expected parameter 'namespaceName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private GetEventHubArgs() {}
 
-    private GetEventHubArgs() {
-        this.eventHubName = null;
-        this.namespaceName = null;
-        this.resourceGroupName = null;
+    private GetEventHubArgs(GetEventHubArgs $) {
+        this.eventHubName = $.eventHubName;
+        this.namespaceName = $.namespaceName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetEventHubArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String eventHubName;
-        private String namespaceName;
-        private String resourceGroupName;
+        private GetEventHubArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetEventHubArgs();
         }
 
         public Builder(GetEventHubArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.eventHubName = defaults.eventHubName;
-    	      this.namespaceName = defaults.namespaceName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new GetEventHubArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder eventHubName(String eventHubName) {
-            this.eventHubName = Objects.requireNonNull(eventHubName);
+            $.eventHubName = eventHubName;
             return this;
         }
+
         public Builder namespaceName(String namespaceName) {
-            this.namespaceName = Objects.requireNonNull(namespaceName);
+            $.namespaceName = namespaceName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public GetEventHubArgs build() {
-            return new GetEventHubArgs(eventHubName, namespaceName, resourceGroupName);
+        }
+
+        public GetEventHubArgs build() {
+            $.eventHubName = Objects.requireNonNull($.eventHubName, "expected parameter 'eventHubName' to be non-null");
+            $.namespaceName = Objects.requireNonNull($.namespaceName, "expected parameter 'namespaceName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

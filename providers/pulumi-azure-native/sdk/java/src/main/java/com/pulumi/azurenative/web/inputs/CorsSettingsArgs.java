@@ -5,11 +5,11 @@ package com.pulumi.azurenative.web.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +27,10 @@ public final class CorsSettingsArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="allowedOrigins")
-      private final @Nullable Output<List<String>> allowedOrigins;
+    private @Nullable Output<List<String>> allowedOrigins;
 
-    public Output<List<String>> allowedOrigins() {
-        return this.allowedOrigins == null ? Codegen.empty() : this.allowedOrigins;
+    public Optional<Output<List<String>>> allowedOrigins() {
+        return Optional.ofNullable(this.allowedOrigins);
     }
 
     /**
@@ -40,66 +40,62 @@ public final class CorsSettingsArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="supportCredentials")
-      private final @Nullable Output<Boolean> supportCredentials;
+    private @Nullable Output<Boolean> supportCredentials;
 
-    public Output<Boolean> supportCredentials() {
-        return this.supportCredentials == null ? Codegen.empty() : this.supportCredentials;
+    public Optional<Output<Boolean>> supportCredentials() {
+        return Optional.ofNullable(this.supportCredentials);
     }
 
-    public CorsSettingsArgs(
-        @Nullable Output<List<String>> allowedOrigins,
-        @Nullable Output<Boolean> supportCredentials) {
-        this.allowedOrigins = allowedOrigins;
-        this.supportCredentials = supportCredentials;
-    }
+    private CorsSettingsArgs() {}
 
-    private CorsSettingsArgs() {
-        this.allowedOrigins = Codegen.empty();
-        this.supportCredentials = Codegen.empty();
+    private CorsSettingsArgs(CorsSettingsArgs $) {
+        this.allowedOrigins = $.allowedOrigins;
+        this.supportCredentials = $.supportCredentials;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CorsSettingsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> allowedOrigins;
-        private @Nullable Output<Boolean> supportCredentials;
+        private CorsSettingsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CorsSettingsArgs();
         }
 
         public Builder(CorsSettingsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.allowedOrigins = defaults.allowedOrigins;
-    	      this.supportCredentials = defaults.supportCredentials;
+            $ = new CorsSettingsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder allowedOrigins(@Nullable Output<List<String>> allowedOrigins) {
-            this.allowedOrigins = allowedOrigins;
+            $.allowedOrigins = allowedOrigins;
             return this;
         }
-        public Builder allowedOrigins(@Nullable List<String> allowedOrigins) {
-            this.allowedOrigins = Codegen.ofNullable(allowedOrigins);
-            return this;
+
+        public Builder allowedOrigins(List<String> allowedOrigins) {
+            return allowedOrigins(Output.of(allowedOrigins));
         }
+
         public Builder allowedOrigins(String... allowedOrigins) {
             return allowedOrigins(List.of(allowedOrigins));
         }
+
         public Builder supportCredentials(@Nullable Output<Boolean> supportCredentials) {
-            this.supportCredentials = supportCredentials;
+            $.supportCredentials = supportCredentials;
             return this;
         }
-        public Builder supportCredentials(@Nullable Boolean supportCredentials) {
-            this.supportCredentials = Codegen.ofNullable(supportCredentials);
-            return this;
-        }        public CorsSettingsArgs build() {
-            return new CorsSettingsArgs(allowedOrigins, supportCredentials);
+
+        public Builder supportCredentials(Boolean supportCredentials) {
+            return supportCredentials(Output.of(supportCredentials));
+        }
+
+        public CorsSettingsArgs build() {
+            return $;
         }
     }
+
 }

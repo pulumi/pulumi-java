@@ -19,10 +19,10 @@ public final class GetVirtualMachineScaleSetArgs extends com.pulumi.resources.In
      * 
      */
     @Import(name="expand")
-      private final @Nullable String expand;
+    private @Nullable String expand;
 
     public Optional<String> expand() {
-        return this.expand == null ? Optional.empty() : Optional.ofNullable(this.expand);
+        return Optional.ofNullable(this.expand);
     }
 
     /**
@@ -30,7 +30,7 @@ public final class GetVirtualMachineScaleSetArgs extends com.pulumi.resources.In
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -41,64 +41,58 @@ public final class GetVirtualMachineScaleSetArgs extends com.pulumi.resources.In
      * 
      */
     @Import(name="vmScaleSetName", required=true)
-      private final String vmScaleSetName;
+    private String vmScaleSetName;
 
     public String vmScaleSetName() {
         return this.vmScaleSetName;
     }
 
-    public GetVirtualMachineScaleSetArgs(
-        @Nullable String expand,
-        String resourceGroupName,
-        String vmScaleSetName) {
-        this.expand = expand;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.vmScaleSetName = Objects.requireNonNull(vmScaleSetName, "expected parameter 'vmScaleSetName' to be non-null");
-    }
+    private GetVirtualMachineScaleSetArgs() {}
 
-    private GetVirtualMachineScaleSetArgs() {
-        this.expand = null;
-        this.resourceGroupName = null;
-        this.vmScaleSetName = null;
+    private GetVirtualMachineScaleSetArgs(GetVirtualMachineScaleSetArgs $) {
+        this.expand = $.expand;
+        this.resourceGroupName = $.resourceGroupName;
+        this.vmScaleSetName = $.vmScaleSetName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetVirtualMachineScaleSetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String expand;
-        private String resourceGroupName;
-        private String vmScaleSetName;
+        private GetVirtualMachineScaleSetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetVirtualMachineScaleSetArgs();
         }
 
         public Builder(GetVirtualMachineScaleSetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.expand = defaults.expand;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.vmScaleSetName = defaults.vmScaleSetName;
+            $ = new GetVirtualMachineScaleSetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder expand(@Nullable String expand) {
-            this.expand = expand;
+            $.expand = expand;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder vmScaleSetName(String vmScaleSetName) {
-            this.vmScaleSetName = Objects.requireNonNull(vmScaleSetName);
+            $.vmScaleSetName = vmScaleSetName;
             return this;
-        }        public GetVirtualMachineScaleSetArgs build() {
-            return new GetVirtualMachineScaleSetArgs(expand, resourceGroupName, vmScaleSetName);
+        }
+
+        public GetVirtualMachineScaleSetArgs build() {
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.vmScaleSetName = Objects.requireNonNull($.vmScaleSetName, "expected parameter 'vmScaleSetName' to be non-null");
+            return $;
         }
     }
+
 }

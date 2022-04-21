@@ -29,10 +29,10 @@ public final class RoutingRuleResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="acceptedProtocols")
-      private final @Nullable List<String> acceptedProtocols;
+    private @Nullable List<String> acceptedProtocols;
 
-    public List<String> acceptedProtocols() {
-        return this.acceptedProtocols == null ? List.of() : this.acceptedProtocols;
+    public Optional<List<String>> acceptedProtocols() {
+        return Optional.ofNullable(this.acceptedProtocols);
     }
 
     /**
@@ -40,10 +40,10 @@ public final class RoutingRuleResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="enabledState")
-      private final @Nullable String enabledState;
+    private @Nullable String enabledState;
 
     public Optional<String> enabledState() {
-        return this.enabledState == null ? Optional.empty() : Optional.ofNullable(this.enabledState);
+        return Optional.ofNullable(this.enabledState);
     }
 
     /**
@@ -51,10 +51,10 @@ public final class RoutingRuleResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="frontendEndpoints")
-      private final @Nullable List<SubResourceResponse> frontendEndpoints;
+    private @Nullable List<SubResourceResponse> frontendEndpoints;
 
-    public List<SubResourceResponse> frontendEndpoints() {
-        return this.frontendEndpoints == null ? List.of() : this.frontendEndpoints;
+    public Optional<List<SubResourceResponse>> frontendEndpoints() {
+        return Optional.ofNullable(this.frontendEndpoints);
     }
 
     /**
@@ -62,10 +62,10 @@ public final class RoutingRuleResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="id")
-      private final @Nullable String id;
+    private @Nullable String id;
 
     public Optional<String> id() {
-        return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
+        return Optional.ofNullable(this.id);
     }
 
     /**
@@ -73,10 +73,10 @@ public final class RoutingRuleResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable String name;
+    private @Nullable String name;
 
     public Optional<String> name() {
-        return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -84,10 +84,10 @@ public final class RoutingRuleResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="patternsToMatch")
-      private final @Nullable List<String> patternsToMatch;
+    private @Nullable List<String> patternsToMatch;
 
-    public List<String> patternsToMatch() {
-        return this.patternsToMatch == null ? List.of() : this.patternsToMatch;
+    public Optional<List<String>> patternsToMatch() {
+        return Optional.ofNullable(this.patternsToMatch);
     }
 
     /**
@@ -95,7 +95,7 @@ public final class RoutingRuleResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceState", required=true)
-      private final String resourceState;
+    private String resourceState;
 
     public String resourceState() {
         return this.resourceState;
@@ -106,10 +106,10 @@ public final class RoutingRuleResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="routeConfiguration")
-      private final @Nullable Either<ForwardingConfigurationResponse,RedirectConfigurationResponse> routeConfiguration;
+    private @Nullable Either<ForwardingConfigurationResponse,RedirectConfigurationResponse> routeConfiguration;
 
-    public Either<ForwardingConfigurationResponse,RedirectConfigurationResponse> routeConfiguration() {
-        return this.routeConfiguration == null ? null : this.routeConfiguration;
+    public Optional<Either<ForwardingConfigurationResponse,RedirectConfigurationResponse>> routeConfiguration() {
+        return Optional.ofNullable(this.routeConfiguration);
     }
 
     /**
@@ -117,10 +117,10 @@ public final class RoutingRuleResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="rulesEngine")
-      private final @Nullable SubResourceResponse rulesEngine;
+    private @Nullable SubResourceResponse rulesEngine;
 
     public Optional<SubResourceResponse> rulesEngine() {
-        return this.rulesEngine == null ? Optional.empty() : Optional.ofNullable(this.rulesEngine);
+        return Optional.ofNullable(this.rulesEngine);
     }
 
     /**
@@ -128,7 +128,7 @@ public final class RoutingRuleResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
@@ -139,145 +139,118 @@ public final class RoutingRuleResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="webApplicationFirewallPolicyLink")
-      private final @Nullable RoutingRuleUpdateParametersResponseWebApplicationFirewallPolicyLink webApplicationFirewallPolicyLink;
+    private @Nullable RoutingRuleUpdateParametersResponseWebApplicationFirewallPolicyLink webApplicationFirewallPolicyLink;
 
     public Optional<RoutingRuleUpdateParametersResponseWebApplicationFirewallPolicyLink> webApplicationFirewallPolicyLink() {
-        return this.webApplicationFirewallPolicyLink == null ? Optional.empty() : Optional.ofNullable(this.webApplicationFirewallPolicyLink);
+        return Optional.ofNullable(this.webApplicationFirewallPolicyLink);
     }
 
-    public RoutingRuleResponse(
-        @Nullable List<String> acceptedProtocols,
-        @Nullable String enabledState,
-        @Nullable List<SubResourceResponse> frontendEndpoints,
-        @Nullable String id,
-        @Nullable String name,
-        @Nullable List<String> patternsToMatch,
-        String resourceState,
-        @Nullable Either<ForwardingConfigurationResponse,RedirectConfigurationResponse> routeConfiguration,
-        @Nullable SubResourceResponse rulesEngine,
-        String type,
-        @Nullable RoutingRuleUpdateParametersResponseWebApplicationFirewallPolicyLink webApplicationFirewallPolicyLink) {
-        this.acceptedProtocols = acceptedProtocols;
-        this.enabledState = enabledState;
-        this.frontendEndpoints = frontendEndpoints;
-        this.id = id;
-        this.name = name;
-        this.patternsToMatch = patternsToMatch;
-        this.resourceState = Objects.requireNonNull(resourceState, "expected parameter 'resourceState' to be non-null");
-        this.routeConfiguration = routeConfiguration;
-        this.rulesEngine = rulesEngine;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-        this.webApplicationFirewallPolicyLink = webApplicationFirewallPolicyLink;
-    }
+    private RoutingRuleResponse() {}
 
-    private RoutingRuleResponse() {
-        this.acceptedProtocols = List.of();
-        this.enabledState = null;
-        this.frontendEndpoints = List.of();
-        this.id = null;
-        this.name = null;
-        this.patternsToMatch = List.of();
-        this.resourceState = null;
-        this.routeConfiguration = null;
-        this.rulesEngine = null;
-        this.type = null;
-        this.webApplicationFirewallPolicyLink = null;
+    private RoutingRuleResponse(RoutingRuleResponse $) {
+        this.acceptedProtocols = $.acceptedProtocols;
+        this.enabledState = $.enabledState;
+        this.frontendEndpoints = $.frontendEndpoints;
+        this.id = $.id;
+        this.name = $.name;
+        this.patternsToMatch = $.patternsToMatch;
+        this.resourceState = $.resourceState;
+        this.routeConfiguration = $.routeConfiguration;
+        this.rulesEngine = $.rulesEngine;
+        this.type = $.type;
+        this.webApplicationFirewallPolicyLink = $.webApplicationFirewallPolicyLink;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RoutingRuleResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<String> acceptedProtocols;
-        private @Nullable String enabledState;
-        private @Nullable List<SubResourceResponse> frontendEndpoints;
-        private @Nullable String id;
-        private @Nullable String name;
-        private @Nullable List<String> patternsToMatch;
-        private String resourceState;
-        private @Nullable Either<ForwardingConfigurationResponse,RedirectConfigurationResponse> routeConfiguration;
-        private @Nullable SubResourceResponse rulesEngine;
-        private String type;
-        private @Nullable RoutingRuleUpdateParametersResponseWebApplicationFirewallPolicyLink webApplicationFirewallPolicyLink;
+        private RoutingRuleResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new RoutingRuleResponse();
         }
 
         public Builder(RoutingRuleResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.acceptedProtocols = defaults.acceptedProtocols;
-    	      this.enabledState = defaults.enabledState;
-    	      this.frontendEndpoints = defaults.frontendEndpoints;
-    	      this.id = defaults.id;
-    	      this.name = defaults.name;
-    	      this.patternsToMatch = defaults.patternsToMatch;
-    	      this.resourceState = defaults.resourceState;
-    	      this.routeConfiguration = defaults.routeConfiguration;
-    	      this.rulesEngine = defaults.rulesEngine;
-    	      this.type = defaults.type;
-    	      this.webApplicationFirewallPolicyLink = defaults.webApplicationFirewallPolicyLink;
+            $ = new RoutingRuleResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder acceptedProtocols(@Nullable List<String> acceptedProtocols) {
-            this.acceptedProtocols = acceptedProtocols;
+            $.acceptedProtocols = acceptedProtocols;
             return this;
         }
+
         public Builder acceptedProtocols(String... acceptedProtocols) {
             return acceptedProtocols(List.of(acceptedProtocols));
         }
+
         public Builder enabledState(@Nullable String enabledState) {
-            this.enabledState = enabledState;
+            $.enabledState = enabledState;
             return this;
         }
+
         public Builder frontendEndpoints(@Nullable List<SubResourceResponse> frontendEndpoints) {
-            this.frontendEndpoints = frontendEndpoints;
+            $.frontendEndpoints = frontendEndpoints;
             return this;
         }
+
         public Builder frontendEndpoints(SubResourceResponse... frontendEndpoints) {
             return frontendEndpoints(List.of(frontendEndpoints));
         }
+
         public Builder id(@Nullable String id) {
-            this.id = id;
+            $.id = id;
             return this;
         }
+
         public Builder name(@Nullable String name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
+
         public Builder patternsToMatch(@Nullable List<String> patternsToMatch) {
-            this.patternsToMatch = patternsToMatch;
+            $.patternsToMatch = patternsToMatch;
             return this;
         }
+
         public Builder patternsToMatch(String... patternsToMatch) {
             return patternsToMatch(List.of(patternsToMatch));
         }
+
         public Builder resourceState(String resourceState) {
-            this.resourceState = Objects.requireNonNull(resourceState);
+            $.resourceState = resourceState;
             return this;
         }
+
         public Builder routeConfiguration(@Nullable Either<ForwardingConfigurationResponse,RedirectConfigurationResponse> routeConfiguration) {
-            this.routeConfiguration = routeConfiguration;
+            $.routeConfiguration = routeConfiguration;
             return this;
         }
+
         public Builder rulesEngine(@Nullable SubResourceResponse rulesEngine) {
-            this.rulesEngine = rulesEngine;
+            $.rulesEngine = rulesEngine;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder webApplicationFirewallPolicyLink(@Nullable RoutingRuleUpdateParametersResponseWebApplicationFirewallPolicyLink webApplicationFirewallPolicyLink) {
-            this.webApplicationFirewallPolicyLink = webApplicationFirewallPolicyLink;
+            $.webApplicationFirewallPolicyLink = webApplicationFirewallPolicyLink;
             return this;
-        }        public RoutingRuleResponse build() {
-            return new RoutingRuleResponse(acceptedProtocols, enabledState, frontendEndpoints, id, name, patternsToMatch, resourceState, routeConfiguration, rulesEngine, type, webApplicationFirewallPolicyLink);
+        }
+
+        public RoutingRuleResponse build() {
+            $.resourceState = Objects.requireNonNull($.resourceState, "expected parameter 'resourceState' to be non-null");
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

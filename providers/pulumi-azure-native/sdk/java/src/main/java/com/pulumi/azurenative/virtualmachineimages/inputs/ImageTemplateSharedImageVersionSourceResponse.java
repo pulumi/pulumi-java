@@ -22,7 +22,7 @@ public final class ImageTemplateSharedImageVersionSourceResponse extends com.pul
      * 
      */
     @Import(name="imageVersionId", required=true)
-      private final String imageVersionId;
+    private String imageVersionId;
 
     public String imageVersionId() {
         return this.imageVersionId;
@@ -34,55 +34,52 @@ public final class ImageTemplateSharedImageVersionSourceResponse extends com.pul
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
     }
 
-    public ImageTemplateSharedImageVersionSourceResponse(
-        String imageVersionId,
-        String type) {
-        this.imageVersionId = Objects.requireNonNull(imageVersionId, "expected parameter 'imageVersionId' to be non-null");
-        this.type = Codegen.stringProp("type").arg(type).require();
-    }
+    private ImageTemplateSharedImageVersionSourceResponse() {}
 
-    private ImageTemplateSharedImageVersionSourceResponse() {
-        this.imageVersionId = null;
-        this.type = null;
+    private ImageTemplateSharedImageVersionSourceResponse(ImageTemplateSharedImageVersionSourceResponse $) {
+        this.imageVersionId = $.imageVersionId;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ImageTemplateSharedImageVersionSourceResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String imageVersionId;
-        private String type;
+        private ImageTemplateSharedImageVersionSourceResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ImageTemplateSharedImageVersionSourceResponse();
         }
 
         public Builder(ImageTemplateSharedImageVersionSourceResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.imageVersionId = defaults.imageVersionId;
-    	      this.type = defaults.type;
+            $ = new ImageTemplateSharedImageVersionSourceResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder imageVersionId(String imageVersionId) {
-            this.imageVersionId = Objects.requireNonNull(imageVersionId);
+            $.imageVersionId = imageVersionId;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
-        }        public ImageTemplateSharedImageVersionSourceResponse build() {
-            return new ImageTemplateSharedImageVersionSourceResponse(imageVersionId, type);
+        }
+
+        public ImageTemplateSharedImageVersionSourceResponse build() {
+            $.imageVersionId = Objects.requireNonNull($.imageVersionId, "expected parameter 'imageVersionId' to be non-null");
+            $.type = Codegen.stringProp("type").arg($.type).require();
+            return $;
         }
     }
+
 }

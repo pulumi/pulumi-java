@@ -22,7 +22,7 @@ public final class SqlOutOfDiskReportResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="sqlMinRecommendedIncreaseSizeGb", required=true)
-      private final Integer sqlMinRecommendedIncreaseSizeGb;
+    private Integer sqlMinRecommendedIncreaseSizeGb;
 
     public Integer sqlMinRecommendedIncreaseSizeGb() {
         return this.sqlMinRecommendedIncreaseSizeGb;
@@ -33,55 +33,52 @@ public final class SqlOutOfDiskReportResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="sqlOutOfDiskState", required=true)
-      private final String sqlOutOfDiskState;
+    private String sqlOutOfDiskState;
 
     public String sqlOutOfDiskState() {
         return this.sqlOutOfDiskState;
     }
 
-    public SqlOutOfDiskReportResponse(
-        Integer sqlMinRecommendedIncreaseSizeGb,
-        String sqlOutOfDiskState) {
-        this.sqlMinRecommendedIncreaseSizeGb = Objects.requireNonNull(sqlMinRecommendedIncreaseSizeGb, "expected parameter 'sqlMinRecommendedIncreaseSizeGb' to be non-null");
-        this.sqlOutOfDiskState = Objects.requireNonNull(sqlOutOfDiskState, "expected parameter 'sqlOutOfDiskState' to be non-null");
-    }
+    private SqlOutOfDiskReportResponse() {}
 
-    private SqlOutOfDiskReportResponse() {
-        this.sqlMinRecommendedIncreaseSizeGb = null;
-        this.sqlOutOfDiskState = null;
+    private SqlOutOfDiskReportResponse(SqlOutOfDiskReportResponse $) {
+        this.sqlMinRecommendedIncreaseSizeGb = $.sqlMinRecommendedIncreaseSizeGb;
+        this.sqlOutOfDiskState = $.sqlOutOfDiskState;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SqlOutOfDiskReportResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Integer sqlMinRecommendedIncreaseSizeGb;
-        private String sqlOutOfDiskState;
+        private SqlOutOfDiskReportResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new SqlOutOfDiskReportResponse();
         }
 
         public Builder(SqlOutOfDiskReportResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.sqlMinRecommendedIncreaseSizeGb = defaults.sqlMinRecommendedIncreaseSizeGb;
-    	      this.sqlOutOfDiskState = defaults.sqlOutOfDiskState;
+            $ = new SqlOutOfDiskReportResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder sqlMinRecommendedIncreaseSizeGb(Integer sqlMinRecommendedIncreaseSizeGb) {
-            this.sqlMinRecommendedIncreaseSizeGb = Objects.requireNonNull(sqlMinRecommendedIncreaseSizeGb);
+            $.sqlMinRecommendedIncreaseSizeGb = sqlMinRecommendedIncreaseSizeGb;
             return this;
         }
+
         public Builder sqlOutOfDiskState(String sqlOutOfDiskState) {
-            this.sqlOutOfDiskState = Objects.requireNonNull(sqlOutOfDiskState);
+            $.sqlOutOfDiskState = sqlOutOfDiskState;
             return this;
-        }        public SqlOutOfDiskReportResponse build() {
-            return new SqlOutOfDiskReportResponse(sqlMinRecommendedIncreaseSizeGb, sqlOutOfDiskState);
+        }
+
+        public SqlOutOfDiskReportResponse build() {
+            $.sqlMinRecommendedIncreaseSizeGb = Objects.requireNonNull($.sqlMinRecommendedIncreaseSizeGb, "expected parameter 'sqlMinRecommendedIncreaseSizeGb' to be non-null");
+            $.sqlOutOfDiskState = Objects.requireNonNull($.sqlOutOfDiskState, "expected parameter 'sqlOutOfDiskState' to be non-null");
+            return $;
         }
     }
+
 }

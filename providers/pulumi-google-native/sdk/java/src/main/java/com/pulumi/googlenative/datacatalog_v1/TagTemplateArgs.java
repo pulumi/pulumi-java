@@ -5,11 +5,11 @@ package com.pulumi.googlenative.datacatalog_v1;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class TagTemplateArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="displayName")
-      private final @Nullable Output<String> displayName;
+    private @Nullable Output<String> displayName;
 
-    public Output<String> displayName() {
-        return this.displayName == null ? Codegen.empty() : this.displayName;
+    public Optional<Output<String>> displayName() {
+        return Optional.ofNullable(this.displayName);
     }
 
     /**
@@ -33,7 +33,7 @@ public final class TagTemplateArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="fields", required=true)
-      private final Output<Map<String,String>> fields;
+    private Output<Map<String,String>> fields;
 
     public Output<Map<String,String>> fields() {
         return this.fields;
@@ -44,17 +44,17 @@ public final class TagTemplateArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="isPubliclyReadable")
-      private final @Nullable Output<Boolean> isPubliclyReadable;
+    private @Nullable Output<Boolean> isPubliclyReadable;
 
-    public Output<Boolean> isPubliclyReadable() {
-        return this.isPubliclyReadable == null ? Codegen.empty() : this.isPubliclyReadable;
+    public Optional<Output<Boolean>> isPubliclyReadable() {
+        return Optional.ofNullable(this.isPubliclyReadable);
     }
 
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -62,142 +62,124 @@ public final class TagTemplateArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     @Import(name="tagTemplateId", required=true)
-      private final Output<String> tagTemplateId;
+    private Output<String> tagTemplateId;
 
     public Output<String> tagTemplateId() {
         return this.tagTemplateId;
     }
 
-    public TagTemplateArgs(
-        @Nullable Output<String> displayName,
-        Output<Map<String,String>> fields,
-        @Nullable Output<Boolean> isPubliclyReadable,
-        @Nullable Output<String> location,
-        @Nullable Output<String> name,
-        @Nullable Output<String> project,
-        Output<String> tagTemplateId) {
-        this.displayName = displayName;
-        this.fields = Objects.requireNonNull(fields, "expected parameter 'fields' to be non-null");
-        this.isPubliclyReadable = isPubliclyReadable;
-        this.location = location;
-        this.name = name;
-        this.project = project;
-        this.tagTemplateId = Objects.requireNonNull(tagTemplateId, "expected parameter 'tagTemplateId' to be non-null");
-    }
+    private TagTemplateArgs() {}
 
-    private TagTemplateArgs() {
-        this.displayName = Codegen.empty();
-        this.fields = Codegen.empty();
-        this.isPubliclyReadable = Codegen.empty();
-        this.location = Codegen.empty();
-        this.name = Codegen.empty();
-        this.project = Codegen.empty();
-        this.tagTemplateId = Codegen.empty();
+    private TagTemplateArgs(TagTemplateArgs $) {
+        this.displayName = $.displayName;
+        this.fields = $.fields;
+        this.isPubliclyReadable = $.isPubliclyReadable;
+        this.location = $.location;
+        this.name = $.name;
+        this.project = $.project;
+        this.tagTemplateId = $.tagTemplateId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TagTemplateArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> displayName;
-        private Output<Map<String,String>> fields;
-        private @Nullable Output<Boolean> isPubliclyReadable;
-        private @Nullable Output<String> location;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> project;
-        private Output<String> tagTemplateId;
+        private TagTemplateArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TagTemplateArgs();
         }
 
         public Builder(TagTemplateArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.displayName = defaults.displayName;
-    	      this.fields = defaults.fields;
-    	      this.isPubliclyReadable = defaults.isPubliclyReadable;
-    	      this.location = defaults.location;
-    	      this.name = defaults.name;
-    	      this.project = defaults.project;
-    	      this.tagTemplateId = defaults.tagTemplateId;
+            $ = new TagTemplateArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder displayName(@Nullable Output<String> displayName) {
-            this.displayName = displayName;
+            $.displayName = displayName;
             return this;
         }
-        public Builder displayName(@Nullable String displayName) {
-            this.displayName = Codegen.ofNullable(displayName);
-            return this;
+
+        public Builder displayName(String displayName) {
+            return displayName(Output.of(displayName));
         }
+
         public Builder fields(Output<Map<String,String>> fields) {
-            this.fields = Objects.requireNonNull(fields);
+            $.fields = fields;
             return this;
         }
+
         public Builder fields(Map<String,String> fields) {
-            this.fields = Output.of(Objects.requireNonNull(fields));
-            return this;
+            return fields(Output.of(fields));
         }
+
         public Builder isPubliclyReadable(@Nullable Output<Boolean> isPubliclyReadable) {
-            this.isPubliclyReadable = isPubliclyReadable;
+            $.isPubliclyReadable = isPubliclyReadable;
             return this;
         }
-        public Builder isPubliclyReadable(@Nullable Boolean isPubliclyReadable) {
-            this.isPubliclyReadable = Codegen.ofNullable(isPubliclyReadable);
-            return this;
+
+        public Builder isPubliclyReadable(Boolean isPubliclyReadable) {
+            return isPubliclyReadable(Output.of(isPubliclyReadable));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder tagTemplateId(Output<String> tagTemplateId) {
-            this.tagTemplateId = Objects.requireNonNull(tagTemplateId);
+            $.tagTemplateId = tagTemplateId;
             return this;
         }
+
         public Builder tagTemplateId(String tagTemplateId) {
-            this.tagTemplateId = Output.of(Objects.requireNonNull(tagTemplateId));
-            return this;
-        }        public TagTemplateArgs build() {
-            return new TagTemplateArgs(displayName, fields, isPubliclyReadable, location, name, project, tagTemplateId);
+            return tagTemplateId(Output.of(tagTemplateId));
+        }
+
+        public TagTemplateArgs build() {
+            $.fields = Objects.requireNonNull($.fields, "expected parameter 'fields' to be non-null");
+            $.tagTemplateId = Objects.requireNonNull($.tagTemplateId, "expected parameter 'tagTemplateId' to be non-null");
+            return $;
         }
     }
+
 }

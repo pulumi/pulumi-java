@@ -23,45 +23,44 @@ public final class PropertiesResponseNetworkInjection extends com.pulumi.resourc
      * 
      */
     @Import(name="virtualNetworks")
-      private final @Nullable VirtualNetworkPropertiesListResponse virtualNetworks;
+    private @Nullable VirtualNetworkPropertiesListResponse virtualNetworks;
 
     public Optional<VirtualNetworkPropertiesListResponse> virtualNetworks() {
-        return this.virtualNetworks == null ? Optional.empty() : Optional.ofNullable(this.virtualNetworks);
+        return Optional.ofNullable(this.virtualNetworks);
     }
 
-    public PropertiesResponseNetworkInjection(@Nullable VirtualNetworkPropertiesListResponse virtualNetworks) {
-        this.virtualNetworks = virtualNetworks;
-    }
+    private PropertiesResponseNetworkInjection() {}
 
-    private PropertiesResponseNetworkInjection() {
-        this.virtualNetworks = null;
+    private PropertiesResponseNetworkInjection(PropertiesResponseNetworkInjection $) {
+        this.virtualNetworks = $.virtualNetworks;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PropertiesResponseNetworkInjection defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable VirtualNetworkPropertiesListResponse virtualNetworks;
+        private PropertiesResponseNetworkInjection $;
 
         public Builder() {
-    	      // Empty
+            $ = new PropertiesResponseNetworkInjection();
         }
 
         public Builder(PropertiesResponseNetworkInjection defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.virtualNetworks = defaults.virtualNetworks;
+            $ = new PropertiesResponseNetworkInjection(Objects.requireNonNull(defaults));
         }
 
         public Builder virtualNetworks(@Nullable VirtualNetworkPropertiesListResponse virtualNetworks) {
-            this.virtualNetworks = virtualNetworks;
+            $.virtualNetworks = virtualNetworks;
             return this;
-        }        public PropertiesResponseNetworkInjection build() {
-            return new PropertiesResponseNetworkInjection(virtualNetworks);
+        }
+
+        public PropertiesResponseNetworkInjection build() {
+            return $;
         }
     }
+
 }

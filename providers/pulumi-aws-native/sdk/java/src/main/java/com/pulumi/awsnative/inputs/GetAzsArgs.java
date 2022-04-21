@@ -15,45 +15,44 @@ public final class GetAzsArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetAzsArgs Empty = new GetAzsArgs();
 
     @Import(name="region")
-      private final @Nullable String region;
+    private @Nullable String region;
 
     public Optional<String> region() {
-        return this.region == null ? Optional.empty() : Optional.ofNullable(this.region);
+        return Optional.ofNullable(this.region);
     }
 
-    public GetAzsArgs(@Nullable String region) {
-        this.region = region;
-    }
+    private GetAzsArgs() {}
 
-    private GetAzsArgs() {
-        this.region = null;
+    private GetAzsArgs(GetAzsArgs $) {
+        this.region = $.region;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetAzsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String region;
+        private GetAzsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetAzsArgs();
         }
 
         public Builder(GetAzsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.region = defaults.region;
+            $ = new GetAzsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder region(@Nullable String region) {
-            this.region = region;
+            $.region = region;
             return this;
-        }        public GetAzsArgs build() {
-            return new GetAzsArgs(region);
+        }
+
+        public GetAzsArgs build() {
+            return $;
         }
     }
+
 }

@@ -5,7 +5,6 @@ package com.pulumi.azurenative.media.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,52 +23,53 @@ public final class OutputFileArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="labels", required=true)
-      private final Output<List<String>> labels;
+    private Output<List<String>> labels;
 
     public Output<List<String>> labels() {
         return this.labels;
     }
 
-    public OutputFileArgs(Output<List<String>> labels) {
-        this.labels = Objects.requireNonNull(labels, "expected parameter 'labels' to be non-null");
-    }
+    private OutputFileArgs() {}
 
-    private OutputFileArgs() {
-        this.labels = Codegen.empty();
+    private OutputFileArgs(OutputFileArgs $) {
+        this.labels = $.labels;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(OutputFileArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<List<String>> labels;
+        private OutputFileArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new OutputFileArgs();
         }
 
         public Builder(OutputFileArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.labels = defaults.labels;
+            $ = new OutputFileArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder labels(Output<List<String>> labels) {
-            this.labels = Objects.requireNonNull(labels);
+            $.labels = labels;
             return this;
         }
+
         public Builder labels(List<String> labels) {
-            this.labels = Output.of(Objects.requireNonNull(labels));
-            return this;
+            return labels(Output.of(labels));
         }
+
         public Builder labels(String... labels) {
             return labels(List.of(labels));
-        }        public OutputFileArgs build() {
-            return new OutputFileArgs(labels);
+        }
+
+        public OutputFileArgs build() {
+            $.labels = Objects.requireNonNull($.labels, "expected parameter 'labels' to be non-null");
+            return $;
         }
     }
+
 }

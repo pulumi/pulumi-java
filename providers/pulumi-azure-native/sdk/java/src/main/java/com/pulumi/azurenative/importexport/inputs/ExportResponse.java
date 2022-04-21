@@ -24,10 +24,10 @@ public final class ExportResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="blobListBlobPath")
-      private final @Nullable String blobListBlobPath;
+    private @Nullable String blobListBlobPath;
 
     public Optional<String> blobListBlobPath() {
-        return this.blobListBlobPath == null ? Optional.empty() : Optional.ofNullable(this.blobListBlobPath);
+        return Optional.ofNullable(this.blobListBlobPath);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class ExportResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="blobPath")
-      private final @Nullable List<String> blobPath;
+    private @Nullable List<String> blobPath;
 
-    public List<String> blobPath() {
-        return this.blobPath == null ? List.of() : this.blobPath;
+    public Optional<List<String>> blobPath() {
+        return Optional.ofNullable(this.blobPath);
     }
 
     /**
@@ -46,70 +46,64 @@ public final class ExportResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="blobPathPrefix")
-      private final @Nullable List<String> blobPathPrefix;
+    private @Nullable List<String> blobPathPrefix;
 
-    public List<String> blobPathPrefix() {
-        return this.blobPathPrefix == null ? List.of() : this.blobPathPrefix;
+    public Optional<List<String>> blobPathPrefix() {
+        return Optional.ofNullable(this.blobPathPrefix);
     }
 
-    public ExportResponse(
-        @Nullable String blobListBlobPath,
-        @Nullable List<String> blobPath,
-        @Nullable List<String> blobPathPrefix) {
-        this.blobListBlobPath = blobListBlobPath;
-        this.blobPath = blobPath;
-        this.blobPathPrefix = blobPathPrefix;
-    }
+    private ExportResponse() {}
 
-    private ExportResponse() {
-        this.blobListBlobPath = null;
-        this.blobPath = List.of();
-        this.blobPathPrefix = List.of();
+    private ExportResponse(ExportResponse $) {
+        this.blobListBlobPath = $.blobListBlobPath;
+        this.blobPath = $.blobPath;
+        this.blobPathPrefix = $.blobPathPrefix;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ExportResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String blobListBlobPath;
-        private @Nullable List<String> blobPath;
-        private @Nullable List<String> blobPathPrefix;
+        private ExportResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ExportResponse();
         }
 
         public Builder(ExportResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.blobListBlobPath = defaults.blobListBlobPath;
-    	      this.blobPath = defaults.blobPath;
-    	      this.blobPathPrefix = defaults.blobPathPrefix;
+            $ = new ExportResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder blobListBlobPath(@Nullable String blobListBlobPath) {
-            this.blobListBlobPath = blobListBlobPath;
+            $.blobListBlobPath = blobListBlobPath;
             return this;
         }
+
         public Builder blobPath(@Nullable List<String> blobPath) {
-            this.blobPath = blobPath;
+            $.blobPath = blobPath;
             return this;
         }
+
         public Builder blobPath(String... blobPath) {
             return blobPath(List.of(blobPath));
         }
+
         public Builder blobPathPrefix(@Nullable List<String> blobPathPrefix) {
-            this.blobPathPrefix = blobPathPrefix;
+            $.blobPathPrefix = blobPathPrefix;
             return this;
         }
+
         public Builder blobPathPrefix(String... blobPathPrefix) {
             return blobPathPrefix(List.of(blobPathPrefix));
-        }        public ExportResponse build() {
-            return new ExportResponse(blobListBlobPath, blobPath, blobPathPrefix);
+        }
+
+        public ExportResponse build() {
+            return $;
         }
     }
+
 }

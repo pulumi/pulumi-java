@@ -17,45 +17,45 @@ public final class GetResourcePolicyArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="policyName", required=true)
-      private final String policyName;
+    private String policyName;
 
     public String policyName() {
         return this.policyName;
     }
 
-    public GetResourcePolicyArgs(String policyName) {
-        this.policyName = Objects.requireNonNull(policyName, "expected parameter 'policyName' to be non-null");
-    }
+    private GetResourcePolicyArgs() {}
 
-    private GetResourcePolicyArgs() {
-        this.policyName = null;
+    private GetResourcePolicyArgs(GetResourcePolicyArgs $) {
+        this.policyName = $.policyName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetResourcePolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String policyName;
+        private GetResourcePolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetResourcePolicyArgs();
         }
 
         public Builder(GetResourcePolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.policyName = defaults.policyName;
+            $ = new GetResourcePolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder policyName(String policyName) {
-            this.policyName = Objects.requireNonNull(policyName);
+            $.policyName = policyName;
             return this;
-        }        public GetResourcePolicyArgs build() {
-            return new GetResourcePolicyArgs(policyName);
+        }
+
+        public GetResourcePolicyArgs build() {
+            $.policyName = Objects.requireNonNull($.policyName, "expected parameter 'policyName' to be non-null");
+            return $;
         }
     }
+
 }

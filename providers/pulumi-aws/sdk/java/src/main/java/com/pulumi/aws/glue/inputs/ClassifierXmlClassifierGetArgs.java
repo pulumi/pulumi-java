@@ -5,7 +5,6 @@ package com.pulumi.aws.glue.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,7 +18,7 @@ public final class ClassifierXmlClassifierGetArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="classification", required=true)
-      private final Output<String> classification;
+    private Output<String> classification;
 
     public Output<String> classification() {
         return this.classification;
@@ -30,63 +29,60 @@ public final class ClassifierXmlClassifierGetArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="rowTag", required=true)
-      private final Output<String> rowTag;
+    private Output<String> rowTag;
 
     public Output<String> rowTag() {
         return this.rowTag;
     }
 
-    public ClassifierXmlClassifierGetArgs(
-        Output<String> classification,
-        Output<String> rowTag) {
-        this.classification = Objects.requireNonNull(classification, "expected parameter 'classification' to be non-null");
-        this.rowTag = Objects.requireNonNull(rowTag, "expected parameter 'rowTag' to be non-null");
-    }
+    private ClassifierXmlClassifierGetArgs() {}
 
-    private ClassifierXmlClassifierGetArgs() {
-        this.classification = Codegen.empty();
-        this.rowTag = Codegen.empty();
+    private ClassifierXmlClassifierGetArgs(ClassifierXmlClassifierGetArgs $) {
+        this.classification = $.classification;
+        this.rowTag = $.rowTag;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ClassifierXmlClassifierGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> classification;
-        private Output<String> rowTag;
+        private ClassifierXmlClassifierGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ClassifierXmlClassifierGetArgs();
         }
 
         public Builder(ClassifierXmlClassifierGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.classification = defaults.classification;
-    	      this.rowTag = defaults.rowTag;
+            $ = new ClassifierXmlClassifierGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder classification(Output<String> classification) {
-            this.classification = Objects.requireNonNull(classification);
+            $.classification = classification;
             return this;
         }
+
         public Builder classification(String classification) {
-            this.classification = Output.of(Objects.requireNonNull(classification));
-            return this;
+            return classification(Output.of(classification));
         }
+
         public Builder rowTag(Output<String> rowTag) {
-            this.rowTag = Objects.requireNonNull(rowTag);
+            $.rowTag = rowTag;
             return this;
         }
+
         public Builder rowTag(String rowTag) {
-            this.rowTag = Output.of(Objects.requireNonNull(rowTag));
-            return this;
-        }        public ClassifierXmlClassifierGetArgs build() {
-            return new ClassifierXmlClassifierGetArgs(classification, rowTag);
+            return rowTag(Output.of(rowTag));
+        }
+
+        public ClassifierXmlClassifierGetArgs build() {
+            $.classification = Objects.requireNonNull($.classification, "expected parameter 'classification' to be non-null");
+            $.rowTag = Objects.requireNonNull($.rowTag, "expected parameter 'rowTag' to be non-null");
+            return $;
         }
     }
+
 }

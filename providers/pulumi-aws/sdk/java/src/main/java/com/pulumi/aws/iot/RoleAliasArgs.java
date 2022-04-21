@@ -5,10 +5,10 @@ package com.pulumi.aws.iot;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,7 +21,7 @@ public final class RoleAliasArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="alias", required=true)
-      private final Output<String> alias;
+    private Output<String> alias;
 
     public Output<String> alias() {
         return this.alias;
@@ -32,10 +32,10 @@ public final class RoleAliasArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="credentialDuration")
-      private final @Nullable Output<Integer> credentialDuration;
+    private @Nullable Output<Integer> credentialDuration;
 
-    public Output<Integer> credentialDuration() {
-        return this.credentialDuration == null ? Codegen.empty() : this.credentialDuration;
+    public Optional<Output<Integer>> credentialDuration() {
+        return Optional.ofNullable(this.credentialDuration);
     }
 
     /**
@@ -43,76 +43,70 @@ public final class RoleAliasArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="roleArn", required=true)
-      private final Output<String> roleArn;
+    private Output<String> roleArn;
 
     public Output<String> roleArn() {
         return this.roleArn;
     }
 
-    public RoleAliasArgs(
-        Output<String> alias,
-        @Nullable Output<Integer> credentialDuration,
-        Output<String> roleArn) {
-        this.alias = Objects.requireNonNull(alias, "expected parameter 'alias' to be non-null");
-        this.credentialDuration = credentialDuration;
-        this.roleArn = Objects.requireNonNull(roleArn, "expected parameter 'roleArn' to be non-null");
-    }
+    private RoleAliasArgs() {}
 
-    private RoleAliasArgs() {
-        this.alias = Codegen.empty();
-        this.credentialDuration = Codegen.empty();
-        this.roleArn = Codegen.empty();
+    private RoleAliasArgs(RoleAliasArgs $) {
+        this.alias = $.alias;
+        this.credentialDuration = $.credentialDuration;
+        this.roleArn = $.roleArn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RoleAliasArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> alias;
-        private @Nullable Output<Integer> credentialDuration;
-        private Output<String> roleArn;
+        private RoleAliasArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RoleAliasArgs();
         }
 
         public Builder(RoleAliasArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.alias = defaults.alias;
-    	      this.credentialDuration = defaults.credentialDuration;
-    	      this.roleArn = defaults.roleArn;
+            $ = new RoleAliasArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder alias(Output<String> alias) {
-            this.alias = Objects.requireNonNull(alias);
+            $.alias = alias;
             return this;
         }
+
         public Builder alias(String alias) {
-            this.alias = Output.of(Objects.requireNonNull(alias));
-            return this;
+            return alias(Output.of(alias));
         }
+
         public Builder credentialDuration(@Nullable Output<Integer> credentialDuration) {
-            this.credentialDuration = credentialDuration;
+            $.credentialDuration = credentialDuration;
             return this;
         }
-        public Builder credentialDuration(@Nullable Integer credentialDuration) {
-            this.credentialDuration = Codegen.ofNullable(credentialDuration);
-            return this;
+
+        public Builder credentialDuration(Integer credentialDuration) {
+            return credentialDuration(Output.of(credentialDuration));
         }
+
         public Builder roleArn(Output<String> roleArn) {
-            this.roleArn = Objects.requireNonNull(roleArn);
+            $.roleArn = roleArn;
             return this;
         }
+
         public Builder roleArn(String roleArn) {
-            this.roleArn = Output.of(Objects.requireNonNull(roleArn));
-            return this;
-        }        public RoleAliasArgs build() {
-            return new RoleAliasArgs(alias, credentialDuration, roleArn);
+            return roleArn(Output.of(roleArn));
+        }
+
+        public RoleAliasArgs build() {
+            $.alias = Objects.requireNonNull($.alias, "expected parameter 'alias' to be non-null");
+            $.roleArn = Objects.requireNonNull($.roleArn, "expected parameter 'roleArn' to be non-null");
+            return $;
         }
     }
+
 }

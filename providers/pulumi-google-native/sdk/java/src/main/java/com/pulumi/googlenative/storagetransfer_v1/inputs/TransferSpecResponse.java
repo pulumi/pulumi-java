@@ -29,7 +29,7 @@ public final class TransferSpecResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="awsS3DataSource", required=true)
-      private final AwsS3DataResponse awsS3DataSource;
+    private AwsS3DataResponse awsS3DataSource;
 
     public AwsS3DataResponse awsS3DataSource() {
         return this.awsS3DataSource;
@@ -40,7 +40,7 @@ public final class TransferSpecResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="azureBlobStorageDataSource", required=true)
-      private final AzureBlobStorageDataResponse azureBlobStorageDataSource;
+    private AzureBlobStorageDataResponse azureBlobStorageDataSource;
 
     public AzureBlobStorageDataResponse azureBlobStorageDataSource() {
         return this.azureBlobStorageDataSource;
@@ -51,7 +51,7 @@ public final class TransferSpecResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="gcsDataSink", required=true)
-      private final GcsDataResponse gcsDataSink;
+    private GcsDataResponse gcsDataSink;
 
     public GcsDataResponse gcsDataSink() {
         return this.gcsDataSink;
@@ -62,7 +62,7 @@ public final class TransferSpecResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="gcsDataSource", required=true)
-      private final GcsDataResponse gcsDataSource;
+    private GcsDataResponse gcsDataSource;
 
     public GcsDataResponse gcsDataSource() {
         return this.gcsDataSource;
@@ -73,7 +73,7 @@ public final class TransferSpecResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="gcsIntermediateDataLocation", required=true)
-      private final GcsDataResponse gcsIntermediateDataLocation;
+    private GcsDataResponse gcsIntermediateDataLocation;
 
     public GcsDataResponse gcsIntermediateDataLocation() {
         return this.gcsIntermediateDataLocation;
@@ -84,7 +84,7 @@ public final class TransferSpecResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="httpDataSource", required=true)
-      private final HttpDataResponse httpDataSource;
+    private HttpDataResponse httpDataSource;
 
     public HttpDataResponse httpDataSource() {
         return this.httpDataSource;
@@ -95,7 +95,7 @@ public final class TransferSpecResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="objectConditions", required=true)
-      private final ObjectConditionsResponse objectConditions;
+    private ObjectConditionsResponse objectConditions;
 
     public ObjectConditionsResponse objectConditions() {
         return this.objectConditions;
@@ -106,7 +106,7 @@ public final class TransferSpecResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="posixDataSink", required=true)
-      private final PosixFilesystemResponse posixDataSink;
+    private PosixFilesystemResponse posixDataSink;
 
     public PosixFilesystemResponse posixDataSink() {
         return this.posixDataSink;
@@ -117,7 +117,7 @@ public final class TransferSpecResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="posixDataSource", required=true)
-      private final PosixFilesystemResponse posixDataSource;
+    private PosixFilesystemResponse posixDataSource;
 
     public PosixFilesystemResponse posixDataSource() {
         return this.posixDataSource;
@@ -128,7 +128,7 @@ public final class TransferSpecResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="sinkAgentPoolName", required=true)
-      private final String sinkAgentPoolName;
+    private String sinkAgentPoolName;
 
     public String sinkAgentPoolName() {
         return this.sinkAgentPoolName;
@@ -139,7 +139,7 @@ public final class TransferSpecResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="sourceAgentPoolName", required=true)
-      private final String sourceAgentPoolName;
+    private String sourceAgentPoolName;
 
     public String sourceAgentPoolName() {
         return this.sourceAgentPoolName;
@@ -150,7 +150,7 @@ public final class TransferSpecResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="transferManifest", required=true)
-      private final TransferManifestResponse transferManifest;
+    private TransferManifestResponse transferManifest;
 
     public TransferManifestResponse transferManifest() {
         return this.transferManifest;
@@ -161,154 +161,129 @@ public final class TransferSpecResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="transferOptions", required=true)
-      private final TransferOptionsResponse transferOptions;
+    private TransferOptionsResponse transferOptions;
 
     public TransferOptionsResponse transferOptions() {
         return this.transferOptions;
     }
 
-    public TransferSpecResponse(
-        AwsS3DataResponse awsS3DataSource,
-        AzureBlobStorageDataResponse azureBlobStorageDataSource,
-        GcsDataResponse gcsDataSink,
-        GcsDataResponse gcsDataSource,
-        GcsDataResponse gcsIntermediateDataLocation,
-        HttpDataResponse httpDataSource,
-        ObjectConditionsResponse objectConditions,
-        PosixFilesystemResponse posixDataSink,
-        PosixFilesystemResponse posixDataSource,
-        String sinkAgentPoolName,
-        String sourceAgentPoolName,
-        TransferManifestResponse transferManifest,
-        TransferOptionsResponse transferOptions) {
-        this.awsS3DataSource = Objects.requireNonNull(awsS3DataSource, "expected parameter 'awsS3DataSource' to be non-null");
-        this.azureBlobStorageDataSource = Objects.requireNonNull(azureBlobStorageDataSource, "expected parameter 'azureBlobStorageDataSource' to be non-null");
-        this.gcsDataSink = Objects.requireNonNull(gcsDataSink, "expected parameter 'gcsDataSink' to be non-null");
-        this.gcsDataSource = Objects.requireNonNull(gcsDataSource, "expected parameter 'gcsDataSource' to be non-null");
-        this.gcsIntermediateDataLocation = Objects.requireNonNull(gcsIntermediateDataLocation, "expected parameter 'gcsIntermediateDataLocation' to be non-null");
-        this.httpDataSource = Objects.requireNonNull(httpDataSource, "expected parameter 'httpDataSource' to be non-null");
-        this.objectConditions = Objects.requireNonNull(objectConditions, "expected parameter 'objectConditions' to be non-null");
-        this.posixDataSink = Objects.requireNonNull(posixDataSink, "expected parameter 'posixDataSink' to be non-null");
-        this.posixDataSource = Objects.requireNonNull(posixDataSource, "expected parameter 'posixDataSource' to be non-null");
-        this.sinkAgentPoolName = Objects.requireNonNull(sinkAgentPoolName, "expected parameter 'sinkAgentPoolName' to be non-null");
-        this.sourceAgentPoolName = Objects.requireNonNull(sourceAgentPoolName, "expected parameter 'sourceAgentPoolName' to be non-null");
-        this.transferManifest = Objects.requireNonNull(transferManifest, "expected parameter 'transferManifest' to be non-null");
-        this.transferOptions = Objects.requireNonNull(transferOptions, "expected parameter 'transferOptions' to be non-null");
-    }
+    private TransferSpecResponse() {}
 
-    private TransferSpecResponse() {
-        this.awsS3DataSource = null;
-        this.azureBlobStorageDataSource = null;
-        this.gcsDataSink = null;
-        this.gcsDataSource = null;
-        this.gcsIntermediateDataLocation = null;
-        this.httpDataSource = null;
-        this.objectConditions = null;
-        this.posixDataSink = null;
-        this.posixDataSource = null;
-        this.sinkAgentPoolName = null;
-        this.sourceAgentPoolName = null;
-        this.transferManifest = null;
-        this.transferOptions = null;
+    private TransferSpecResponse(TransferSpecResponse $) {
+        this.awsS3DataSource = $.awsS3DataSource;
+        this.azureBlobStorageDataSource = $.azureBlobStorageDataSource;
+        this.gcsDataSink = $.gcsDataSink;
+        this.gcsDataSource = $.gcsDataSource;
+        this.gcsIntermediateDataLocation = $.gcsIntermediateDataLocation;
+        this.httpDataSource = $.httpDataSource;
+        this.objectConditions = $.objectConditions;
+        this.posixDataSink = $.posixDataSink;
+        this.posixDataSource = $.posixDataSource;
+        this.sinkAgentPoolName = $.sinkAgentPoolName;
+        this.sourceAgentPoolName = $.sourceAgentPoolName;
+        this.transferManifest = $.transferManifest;
+        this.transferOptions = $.transferOptions;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TransferSpecResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private AwsS3DataResponse awsS3DataSource;
-        private AzureBlobStorageDataResponse azureBlobStorageDataSource;
-        private GcsDataResponse gcsDataSink;
-        private GcsDataResponse gcsDataSource;
-        private GcsDataResponse gcsIntermediateDataLocation;
-        private HttpDataResponse httpDataSource;
-        private ObjectConditionsResponse objectConditions;
-        private PosixFilesystemResponse posixDataSink;
-        private PosixFilesystemResponse posixDataSource;
-        private String sinkAgentPoolName;
-        private String sourceAgentPoolName;
-        private TransferManifestResponse transferManifest;
-        private TransferOptionsResponse transferOptions;
+        private TransferSpecResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new TransferSpecResponse();
         }
 
         public Builder(TransferSpecResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.awsS3DataSource = defaults.awsS3DataSource;
-    	      this.azureBlobStorageDataSource = defaults.azureBlobStorageDataSource;
-    	      this.gcsDataSink = defaults.gcsDataSink;
-    	      this.gcsDataSource = defaults.gcsDataSource;
-    	      this.gcsIntermediateDataLocation = defaults.gcsIntermediateDataLocation;
-    	      this.httpDataSource = defaults.httpDataSource;
-    	      this.objectConditions = defaults.objectConditions;
-    	      this.posixDataSink = defaults.posixDataSink;
-    	      this.posixDataSource = defaults.posixDataSource;
-    	      this.sinkAgentPoolName = defaults.sinkAgentPoolName;
-    	      this.sourceAgentPoolName = defaults.sourceAgentPoolName;
-    	      this.transferManifest = defaults.transferManifest;
-    	      this.transferOptions = defaults.transferOptions;
+            $ = new TransferSpecResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder awsS3DataSource(AwsS3DataResponse awsS3DataSource) {
-            this.awsS3DataSource = Objects.requireNonNull(awsS3DataSource);
+            $.awsS3DataSource = awsS3DataSource;
             return this;
         }
+
         public Builder azureBlobStorageDataSource(AzureBlobStorageDataResponse azureBlobStorageDataSource) {
-            this.azureBlobStorageDataSource = Objects.requireNonNull(azureBlobStorageDataSource);
+            $.azureBlobStorageDataSource = azureBlobStorageDataSource;
             return this;
         }
+
         public Builder gcsDataSink(GcsDataResponse gcsDataSink) {
-            this.gcsDataSink = Objects.requireNonNull(gcsDataSink);
+            $.gcsDataSink = gcsDataSink;
             return this;
         }
+
         public Builder gcsDataSource(GcsDataResponse gcsDataSource) {
-            this.gcsDataSource = Objects.requireNonNull(gcsDataSource);
+            $.gcsDataSource = gcsDataSource;
             return this;
         }
+
         public Builder gcsIntermediateDataLocation(GcsDataResponse gcsIntermediateDataLocation) {
-            this.gcsIntermediateDataLocation = Objects.requireNonNull(gcsIntermediateDataLocation);
+            $.gcsIntermediateDataLocation = gcsIntermediateDataLocation;
             return this;
         }
+
         public Builder httpDataSource(HttpDataResponse httpDataSource) {
-            this.httpDataSource = Objects.requireNonNull(httpDataSource);
+            $.httpDataSource = httpDataSource;
             return this;
         }
+
         public Builder objectConditions(ObjectConditionsResponse objectConditions) {
-            this.objectConditions = Objects.requireNonNull(objectConditions);
+            $.objectConditions = objectConditions;
             return this;
         }
+
         public Builder posixDataSink(PosixFilesystemResponse posixDataSink) {
-            this.posixDataSink = Objects.requireNonNull(posixDataSink);
+            $.posixDataSink = posixDataSink;
             return this;
         }
+
         public Builder posixDataSource(PosixFilesystemResponse posixDataSource) {
-            this.posixDataSource = Objects.requireNonNull(posixDataSource);
+            $.posixDataSource = posixDataSource;
             return this;
         }
+
         public Builder sinkAgentPoolName(String sinkAgentPoolName) {
-            this.sinkAgentPoolName = Objects.requireNonNull(sinkAgentPoolName);
+            $.sinkAgentPoolName = sinkAgentPoolName;
             return this;
         }
+
         public Builder sourceAgentPoolName(String sourceAgentPoolName) {
-            this.sourceAgentPoolName = Objects.requireNonNull(sourceAgentPoolName);
+            $.sourceAgentPoolName = sourceAgentPoolName;
             return this;
         }
+
         public Builder transferManifest(TransferManifestResponse transferManifest) {
-            this.transferManifest = Objects.requireNonNull(transferManifest);
+            $.transferManifest = transferManifest;
             return this;
         }
+
         public Builder transferOptions(TransferOptionsResponse transferOptions) {
-            this.transferOptions = Objects.requireNonNull(transferOptions);
+            $.transferOptions = transferOptions;
             return this;
-        }        public TransferSpecResponse build() {
-            return new TransferSpecResponse(awsS3DataSource, azureBlobStorageDataSource, gcsDataSink, gcsDataSource, gcsIntermediateDataLocation, httpDataSource, objectConditions, posixDataSink, posixDataSource, sinkAgentPoolName, sourceAgentPoolName, transferManifest, transferOptions);
+        }
+
+        public TransferSpecResponse build() {
+            $.awsS3DataSource = Objects.requireNonNull($.awsS3DataSource, "expected parameter 'awsS3DataSource' to be non-null");
+            $.azureBlobStorageDataSource = Objects.requireNonNull($.azureBlobStorageDataSource, "expected parameter 'azureBlobStorageDataSource' to be non-null");
+            $.gcsDataSink = Objects.requireNonNull($.gcsDataSink, "expected parameter 'gcsDataSink' to be non-null");
+            $.gcsDataSource = Objects.requireNonNull($.gcsDataSource, "expected parameter 'gcsDataSource' to be non-null");
+            $.gcsIntermediateDataLocation = Objects.requireNonNull($.gcsIntermediateDataLocation, "expected parameter 'gcsIntermediateDataLocation' to be non-null");
+            $.httpDataSource = Objects.requireNonNull($.httpDataSource, "expected parameter 'httpDataSource' to be non-null");
+            $.objectConditions = Objects.requireNonNull($.objectConditions, "expected parameter 'objectConditions' to be non-null");
+            $.posixDataSink = Objects.requireNonNull($.posixDataSink, "expected parameter 'posixDataSink' to be non-null");
+            $.posixDataSource = Objects.requireNonNull($.posixDataSource, "expected parameter 'posixDataSource' to be non-null");
+            $.sinkAgentPoolName = Objects.requireNonNull($.sinkAgentPoolName, "expected parameter 'sinkAgentPoolName' to be non-null");
+            $.sourceAgentPoolName = Objects.requireNonNull($.sourceAgentPoolName, "expected parameter 'sourceAgentPoolName' to be non-null");
+            $.transferManifest = Objects.requireNonNull($.transferManifest, "expected parameter 'transferManifest' to be non-null");
+            $.transferOptions = Objects.requireNonNull($.transferOptions, "expected parameter 'transferOptions' to be non-null");
+            return $;
         }
     }
+
 }

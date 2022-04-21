@@ -5,10 +5,10 @@ package com.pulumi.azurenative.devices;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class DpsCertificateArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="certificate")
-      private final @Nullable Output<String> certificate;
+    private @Nullable Output<String> certificate;
 
-    public Output<String> certificate() {
-        return this.certificate == null ? Codegen.empty() : this.certificate;
+    public Optional<Output<String>> certificate() {
+        return Optional.ofNullable(this.certificate);
     }
 
     /**
@@ -32,10 +32,10 @@ public final class DpsCertificateArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="certificateName")
-      private final @Nullable Output<String> certificateName;
+    private @Nullable Output<String> certificateName;
 
-    public Output<String> certificateName() {
-        return this.certificateName == null ? Codegen.empty() : this.certificateName;
+    public Optional<Output<String>> certificateName() {
+        return Optional.ofNullable(this.certificateName);
     }
 
     /**
@@ -43,10 +43,10 @@ public final class DpsCertificateArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="isVerified")
-      private final @Nullable Output<Boolean> isVerified;
+    private @Nullable Output<Boolean> isVerified;
 
-    public Output<Boolean> isVerified() {
-        return this.isVerified == null ? Codegen.empty() : this.isVerified;
+    public Optional<Output<Boolean>> isVerified() {
+        return Optional.ofNullable(this.isVerified);
     }
 
     /**
@@ -54,7 +54,7 @@ public final class DpsCertificateArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="provisioningServiceName", required=true)
-      private final Output<String> provisioningServiceName;
+    private Output<String> provisioningServiceName;
 
     public Output<String> provisioningServiceName() {
         return this.provisioningServiceName;
@@ -65,102 +65,90 @@ public final class DpsCertificateArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public DpsCertificateArgs(
-        @Nullable Output<String> certificate,
-        @Nullable Output<String> certificateName,
-        @Nullable Output<Boolean> isVerified,
-        Output<String> provisioningServiceName,
-        Output<String> resourceGroupName) {
-        this.certificate = certificate;
-        this.certificateName = certificateName;
-        this.isVerified = isVerified;
-        this.provisioningServiceName = Objects.requireNonNull(provisioningServiceName, "expected parameter 'provisioningServiceName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private DpsCertificateArgs() {}
 
-    private DpsCertificateArgs() {
-        this.certificate = Codegen.empty();
-        this.certificateName = Codegen.empty();
-        this.isVerified = Codegen.empty();
-        this.provisioningServiceName = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
+    private DpsCertificateArgs(DpsCertificateArgs $) {
+        this.certificate = $.certificate;
+        this.certificateName = $.certificateName;
+        this.isVerified = $.isVerified;
+        this.provisioningServiceName = $.provisioningServiceName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DpsCertificateArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> certificate;
-        private @Nullable Output<String> certificateName;
-        private @Nullable Output<Boolean> isVerified;
-        private Output<String> provisioningServiceName;
-        private Output<String> resourceGroupName;
+        private DpsCertificateArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DpsCertificateArgs();
         }
 
         public Builder(DpsCertificateArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.certificate = defaults.certificate;
-    	      this.certificateName = defaults.certificateName;
-    	      this.isVerified = defaults.isVerified;
-    	      this.provisioningServiceName = defaults.provisioningServiceName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new DpsCertificateArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder certificate(@Nullable Output<String> certificate) {
-            this.certificate = certificate;
+            $.certificate = certificate;
             return this;
         }
-        public Builder certificate(@Nullable String certificate) {
-            this.certificate = Codegen.ofNullable(certificate);
-            return this;
+
+        public Builder certificate(String certificate) {
+            return certificate(Output.of(certificate));
         }
+
         public Builder certificateName(@Nullable Output<String> certificateName) {
-            this.certificateName = certificateName;
+            $.certificateName = certificateName;
             return this;
         }
-        public Builder certificateName(@Nullable String certificateName) {
-            this.certificateName = Codegen.ofNullable(certificateName);
-            return this;
+
+        public Builder certificateName(String certificateName) {
+            return certificateName(Output.of(certificateName));
         }
+
         public Builder isVerified(@Nullable Output<Boolean> isVerified) {
-            this.isVerified = isVerified;
+            $.isVerified = isVerified;
             return this;
         }
-        public Builder isVerified(@Nullable Boolean isVerified) {
-            this.isVerified = Codegen.ofNullable(isVerified);
-            return this;
+
+        public Builder isVerified(Boolean isVerified) {
+            return isVerified(Output.of(isVerified));
         }
+
         public Builder provisioningServiceName(Output<String> provisioningServiceName) {
-            this.provisioningServiceName = Objects.requireNonNull(provisioningServiceName);
+            $.provisioningServiceName = provisioningServiceName;
             return this;
         }
+
         public Builder provisioningServiceName(String provisioningServiceName) {
-            this.provisioningServiceName = Output.of(Objects.requireNonNull(provisioningServiceName));
-            return this;
+            return provisioningServiceName(Output.of(provisioningServiceName));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
-        }        public DpsCertificateArgs build() {
-            return new DpsCertificateArgs(certificate, certificateName, isVerified, provisioningServiceName, resourceGroupName);
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        public DpsCertificateArgs build() {
+            $.provisioningServiceName = Objects.requireNonNull($.provisioningServiceName, "expected parameter 'provisioningServiceName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

@@ -21,7 +21,7 @@ public final class BackendAuthorizationHeaderCredentialsResponse extends com.pul
      * 
      */
     @Import(name="parameter", required=true)
-      private final String parameter;
+    private String parameter;
 
     public String parameter() {
         return this.parameter;
@@ -32,55 +32,52 @@ public final class BackendAuthorizationHeaderCredentialsResponse extends com.pul
      * 
      */
     @Import(name="scheme", required=true)
-      private final String scheme;
+    private String scheme;
 
     public String scheme() {
         return this.scheme;
     }
 
-    public BackendAuthorizationHeaderCredentialsResponse(
-        String parameter,
-        String scheme) {
-        this.parameter = Objects.requireNonNull(parameter, "expected parameter 'parameter' to be non-null");
-        this.scheme = Objects.requireNonNull(scheme, "expected parameter 'scheme' to be non-null");
-    }
+    private BackendAuthorizationHeaderCredentialsResponse() {}
 
-    private BackendAuthorizationHeaderCredentialsResponse() {
-        this.parameter = null;
-        this.scheme = null;
+    private BackendAuthorizationHeaderCredentialsResponse(BackendAuthorizationHeaderCredentialsResponse $) {
+        this.parameter = $.parameter;
+        this.scheme = $.scheme;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BackendAuthorizationHeaderCredentialsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String parameter;
-        private String scheme;
+        private BackendAuthorizationHeaderCredentialsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new BackendAuthorizationHeaderCredentialsResponse();
         }
 
         public Builder(BackendAuthorizationHeaderCredentialsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.parameter = defaults.parameter;
-    	      this.scheme = defaults.scheme;
+            $ = new BackendAuthorizationHeaderCredentialsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder parameter(String parameter) {
-            this.parameter = Objects.requireNonNull(parameter);
+            $.parameter = parameter;
             return this;
         }
+
         public Builder scheme(String scheme) {
-            this.scheme = Objects.requireNonNull(scheme);
+            $.scheme = scheme;
             return this;
-        }        public BackendAuthorizationHeaderCredentialsResponse build() {
-            return new BackendAuthorizationHeaderCredentialsResponse(parameter, scheme);
+        }
+
+        public BackendAuthorizationHeaderCredentialsResponse build() {
+            $.parameter = Objects.requireNonNull($.parameter, "expected parameter 'parameter' to be non-null");
+            $.scheme = Objects.requireNonNull($.scheme, "expected parameter 'scheme' to be non-null");
+            return $;
         }
     }
+
 }

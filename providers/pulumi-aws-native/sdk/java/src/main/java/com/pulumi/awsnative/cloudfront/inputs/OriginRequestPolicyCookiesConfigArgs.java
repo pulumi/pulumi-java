@@ -5,10 +5,10 @@ package com.pulumi.awsnative.cloudfront.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -17,73 +17,70 @@ public final class OriginRequestPolicyCookiesConfigArgs extends com.pulumi.resou
     public static final OriginRequestPolicyCookiesConfigArgs Empty = new OriginRequestPolicyCookiesConfigArgs();
 
     @Import(name="cookieBehavior", required=true)
-      private final Output<String> cookieBehavior;
+    private Output<String> cookieBehavior;
 
     public Output<String> cookieBehavior() {
         return this.cookieBehavior;
     }
 
     @Import(name="cookies")
-      private final @Nullable Output<List<String>> cookies;
+    private @Nullable Output<List<String>> cookies;
 
-    public Output<List<String>> cookies() {
-        return this.cookies == null ? Codegen.empty() : this.cookies;
+    public Optional<Output<List<String>>> cookies() {
+        return Optional.ofNullable(this.cookies);
     }
 
-    public OriginRequestPolicyCookiesConfigArgs(
-        Output<String> cookieBehavior,
-        @Nullable Output<List<String>> cookies) {
-        this.cookieBehavior = Objects.requireNonNull(cookieBehavior, "expected parameter 'cookieBehavior' to be non-null");
-        this.cookies = cookies;
-    }
+    private OriginRequestPolicyCookiesConfigArgs() {}
 
-    private OriginRequestPolicyCookiesConfigArgs() {
-        this.cookieBehavior = Codegen.empty();
-        this.cookies = Codegen.empty();
+    private OriginRequestPolicyCookiesConfigArgs(OriginRequestPolicyCookiesConfigArgs $) {
+        this.cookieBehavior = $.cookieBehavior;
+        this.cookies = $.cookies;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(OriginRequestPolicyCookiesConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> cookieBehavior;
-        private @Nullable Output<List<String>> cookies;
+        private OriginRequestPolicyCookiesConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new OriginRequestPolicyCookiesConfigArgs();
         }
 
         public Builder(OriginRequestPolicyCookiesConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cookieBehavior = defaults.cookieBehavior;
-    	      this.cookies = defaults.cookies;
+            $ = new OriginRequestPolicyCookiesConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder cookieBehavior(Output<String> cookieBehavior) {
-            this.cookieBehavior = Objects.requireNonNull(cookieBehavior);
+            $.cookieBehavior = cookieBehavior;
             return this;
         }
+
         public Builder cookieBehavior(String cookieBehavior) {
-            this.cookieBehavior = Output.of(Objects.requireNonNull(cookieBehavior));
-            return this;
+            return cookieBehavior(Output.of(cookieBehavior));
         }
+
         public Builder cookies(@Nullable Output<List<String>> cookies) {
-            this.cookies = cookies;
+            $.cookies = cookies;
             return this;
         }
-        public Builder cookies(@Nullable List<String> cookies) {
-            this.cookies = Codegen.ofNullable(cookies);
-            return this;
+
+        public Builder cookies(List<String> cookies) {
+            return cookies(Output.of(cookies));
         }
+
         public Builder cookies(String... cookies) {
             return cookies(List.of(cookies));
-        }        public OriginRequestPolicyCookiesConfigArgs build() {
-            return new OriginRequestPolicyCookiesConfigArgs(cookieBehavior, cookies);
+        }
+
+        public OriginRequestPolicyCookiesConfigArgs build() {
+            $.cookieBehavior = Objects.requireNonNull($.cookieBehavior, "expected parameter 'cookieBehavior' to be non-null");
+            return $;
         }
     }
+
 }

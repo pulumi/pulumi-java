@@ -17,94 +17,83 @@ public final class DomainEBSOptions extends com.pulumi.resources.InvokeArgs {
     public static final DomainEBSOptions Empty = new DomainEBSOptions();
 
     @Import(name="eBSEnabled")
-      private final @Nullable Boolean eBSEnabled;
+    private @Nullable Boolean eBSEnabled;
 
     public Optional<Boolean> eBSEnabled() {
-        return this.eBSEnabled == null ? Optional.empty() : Optional.ofNullable(this.eBSEnabled);
+        return Optional.ofNullable(this.eBSEnabled);
     }
 
     @Import(name="iops")
-      private final @Nullable Integer iops;
+    private @Nullable Integer iops;
 
     public Optional<Integer> iops() {
-        return this.iops == null ? Optional.empty() : Optional.ofNullable(this.iops);
+        return Optional.ofNullable(this.iops);
     }
 
     @Import(name="volumeSize")
-      private final @Nullable Integer volumeSize;
+    private @Nullable Integer volumeSize;
 
     public Optional<Integer> volumeSize() {
-        return this.volumeSize == null ? Optional.empty() : Optional.ofNullable(this.volumeSize);
+        return Optional.ofNullable(this.volumeSize);
     }
 
     @Import(name="volumeType")
-      private final @Nullable String volumeType;
+    private @Nullable String volumeType;
 
     public Optional<String> volumeType() {
-        return this.volumeType == null ? Optional.empty() : Optional.ofNullable(this.volumeType);
+        return Optional.ofNullable(this.volumeType);
     }
 
-    public DomainEBSOptions(
-        @Nullable Boolean eBSEnabled,
-        @Nullable Integer iops,
-        @Nullable Integer volumeSize,
-        @Nullable String volumeType) {
-        this.eBSEnabled = eBSEnabled;
-        this.iops = iops;
-        this.volumeSize = volumeSize;
-        this.volumeType = volumeType;
-    }
+    private DomainEBSOptions() {}
 
-    private DomainEBSOptions() {
-        this.eBSEnabled = null;
-        this.iops = null;
-        this.volumeSize = null;
-        this.volumeType = null;
+    private DomainEBSOptions(DomainEBSOptions $) {
+        this.eBSEnabled = $.eBSEnabled;
+        this.iops = $.iops;
+        this.volumeSize = $.volumeSize;
+        this.volumeType = $.volumeType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DomainEBSOptions defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Boolean eBSEnabled;
-        private @Nullable Integer iops;
-        private @Nullable Integer volumeSize;
-        private @Nullable String volumeType;
+        private DomainEBSOptions $;
 
         public Builder() {
-    	      // Empty
+            $ = new DomainEBSOptions();
         }
 
         public Builder(DomainEBSOptions defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.eBSEnabled = defaults.eBSEnabled;
-    	      this.iops = defaults.iops;
-    	      this.volumeSize = defaults.volumeSize;
-    	      this.volumeType = defaults.volumeType;
+            $ = new DomainEBSOptions(Objects.requireNonNull(defaults));
         }
 
         public Builder eBSEnabled(@Nullable Boolean eBSEnabled) {
-            this.eBSEnabled = eBSEnabled;
+            $.eBSEnabled = eBSEnabled;
             return this;
         }
+
         public Builder iops(@Nullable Integer iops) {
-            this.iops = iops;
+            $.iops = iops;
             return this;
         }
+
         public Builder volumeSize(@Nullable Integer volumeSize) {
-            this.volumeSize = volumeSize;
+            $.volumeSize = volumeSize;
             return this;
         }
+
         public Builder volumeType(@Nullable String volumeType) {
-            this.volumeType = volumeType;
+            $.volumeType = volumeType;
             return this;
-        }        public DomainEBSOptions build() {
-            return new DomainEBSOptions(eBSEnabled, iops, volumeSize, volumeType);
+        }
+
+        public DomainEBSOptions build() {
+            return $;
         }
     }
+
 }

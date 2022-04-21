@@ -5,10 +5,10 @@ package com.pulumi.gcp.notebooks.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -17,49 +17,48 @@ public final class RuntimeMetricGetArgs extends com.pulumi.resources.ResourceArg
     public static final RuntimeMetricGetArgs Empty = new RuntimeMetricGetArgs();
 
     @Import(name="systemMetrics")
-      private final @Nullable Output<Map<String,String>> systemMetrics;
+    private @Nullable Output<Map<String,String>> systemMetrics;
 
-    public Output<Map<String,String>> systemMetrics() {
-        return this.systemMetrics == null ? Codegen.empty() : this.systemMetrics;
+    public Optional<Output<Map<String,String>>> systemMetrics() {
+        return Optional.ofNullable(this.systemMetrics);
     }
 
-    public RuntimeMetricGetArgs(@Nullable Output<Map<String,String>> systemMetrics) {
-        this.systemMetrics = systemMetrics;
-    }
+    private RuntimeMetricGetArgs() {}
 
-    private RuntimeMetricGetArgs() {
-        this.systemMetrics = Codegen.empty();
+    private RuntimeMetricGetArgs(RuntimeMetricGetArgs $) {
+        this.systemMetrics = $.systemMetrics;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RuntimeMetricGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Map<String,String>> systemMetrics;
+        private RuntimeMetricGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RuntimeMetricGetArgs();
         }
 
         public Builder(RuntimeMetricGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.systemMetrics = defaults.systemMetrics;
+            $ = new RuntimeMetricGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder systemMetrics(@Nullable Output<Map<String,String>> systemMetrics) {
-            this.systemMetrics = systemMetrics;
+            $.systemMetrics = systemMetrics;
             return this;
         }
-        public Builder systemMetrics(@Nullable Map<String,String> systemMetrics) {
-            this.systemMetrics = Codegen.ofNullable(systemMetrics);
-            return this;
-        }        public RuntimeMetricGetArgs build() {
-            return new RuntimeMetricGetArgs(systemMetrics);
+
+        public Builder systemMetrics(Map<String,String> systemMetrics) {
+            return systemMetrics(Output.of(systemMetrics));
+        }
+
+        public RuntimeMetricGetArgs build() {
+            return $;
         }
     }
+
 }

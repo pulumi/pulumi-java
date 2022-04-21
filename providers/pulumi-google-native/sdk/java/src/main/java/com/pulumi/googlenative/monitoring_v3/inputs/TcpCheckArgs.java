@@ -5,9 +5,9 @@ package com.pulumi.googlenative.monitoring_v3.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class TcpCheckArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="port")
-      private final @Nullable Output<Integer> port;
+    private @Nullable Output<Integer> port;
 
-    public Output<Integer> port() {
-        return this.port == null ? Codegen.empty() : this.port;
+    public Optional<Output<Integer>> port() {
+        return Optional.ofNullable(this.port);
     }
 
-    public TcpCheckArgs(@Nullable Output<Integer> port) {
-        this.port = port;
-    }
+    private TcpCheckArgs() {}
 
-    private TcpCheckArgs() {
-        this.port = Codegen.empty();
+    private TcpCheckArgs(TcpCheckArgs $) {
+        this.port = $.port;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TcpCheckArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> port;
+        private TcpCheckArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TcpCheckArgs();
         }
 
         public Builder(TcpCheckArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.port = defaults.port;
+            $ = new TcpCheckArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder port(@Nullable Output<Integer> port) {
-            this.port = port;
+            $.port = port;
             return this;
         }
-        public Builder port(@Nullable Integer port) {
-            this.port = Codegen.ofNullable(port);
-            return this;
-        }        public TcpCheckArgs build() {
-            return new TcpCheckArgs(port);
+
+        public Builder port(Integer port) {
+            return port(Output.of(port));
+        }
+
+        public TcpCheckArgs build() {
+            return $;
         }
     }
+
 }

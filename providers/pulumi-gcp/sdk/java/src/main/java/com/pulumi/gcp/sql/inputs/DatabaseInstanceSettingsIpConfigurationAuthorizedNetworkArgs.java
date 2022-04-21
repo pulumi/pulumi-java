@@ -5,9 +5,9 @@ package com.pulumi.gcp.sql.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class DatabaseInstanceSettingsIpConfigurationAuthorizedNetworkArgs 
      * 
      */
     @Import(name="expirationTime")
-      private final @Nullable Output<String> expirationTime;
+    private @Nullable Output<String> expirationTime;
 
-    public Output<String> expirationTime() {
-        return this.expirationTime == null ? Codegen.empty() : this.expirationTime;
+    public Optional<Output<String>> expirationTime() {
+        return Optional.ofNullable(this.expirationTime);
     }
 
     /**
@@ -32,10 +32,10 @@ public final class DatabaseInstanceSettingsIpConfigurationAuthorizedNetworkArgs 
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -45,76 +45,69 @@ public final class DatabaseInstanceSettingsIpConfigurationAuthorizedNetworkArgs 
      * 
      */
     @Import(name="value", required=true)
-      private final Output<String> value;
+    private Output<String> value;
 
     public Output<String> value() {
         return this.value;
     }
 
-    public DatabaseInstanceSettingsIpConfigurationAuthorizedNetworkArgs(
-        @Nullable Output<String> expirationTime,
-        @Nullable Output<String> name,
-        Output<String> value) {
-        this.expirationTime = expirationTime;
-        this.name = name;
-        this.value = Objects.requireNonNull(value, "expected parameter 'value' to be non-null");
-    }
+    private DatabaseInstanceSettingsIpConfigurationAuthorizedNetworkArgs() {}
 
-    private DatabaseInstanceSettingsIpConfigurationAuthorizedNetworkArgs() {
-        this.expirationTime = Codegen.empty();
-        this.name = Codegen.empty();
-        this.value = Codegen.empty();
+    private DatabaseInstanceSettingsIpConfigurationAuthorizedNetworkArgs(DatabaseInstanceSettingsIpConfigurationAuthorizedNetworkArgs $) {
+        this.expirationTime = $.expirationTime;
+        this.name = $.name;
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DatabaseInstanceSettingsIpConfigurationAuthorizedNetworkArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> expirationTime;
-        private @Nullable Output<String> name;
-        private Output<String> value;
+        private DatabaseInstanceSettingsIpConfigurationAuthorizedNetworkArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DatabaseInstanceSettingsIpConfigurationAuthorizedNetworkArgs();
         }
 
         public Builder(DatabaseInstanceSettingsIpConfigurationAuthorizedNetworkArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.expirationTime = defaults.expirationTime;
-    	      this.name = defaults.name;
-    	      this.value = defaults.value;
+            $ = new DatabaseInstanceSettingsIpConfigurationAuthorizedNetworkArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder expirationTime(@Nullable Output<String> expirationTime) {
-            this.expirationTime = expirationTime;
+            $.expirationTime = expirationTime;
             return this;
         }
-        public Builder expirationTime(@Nullable String expirationTime) {
-            this.expirationTime = Codegen.ofNullable(expirationTime);
-            return this;
+
+        public Builder expirationTime(String expirationTime) {
+            return expirationTime(Output.of(expirationTime));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder value(Output<String> value) {
-            this.value = Objects.requireNonNull(value);
+            $.value = value;
             return this;
         }
+
         public Builder value(String value) {
-            this.value = Output.of(Objects.requireNonNull(value));
-            return this;
-        }        public DatabaseInstanceSettingsIpConfigurationAuthorizedNetworkArgs build() {
-            return new DatabaseInstanceSettingsIpConfigurationAuthorizedNetworkArgs(expirationTime, name, value);
+            return value(Output.of(value));
+        }
+
+        public DatabaseInstanceSettingsIpConfigurationAuthorizedNetworkArgs build() {
+            $.value = Objects.requireNonNull($.value, "expected parameter 'value' to be non-null");
+            return $;
         }
     }
+
 }

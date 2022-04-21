@@ -17,7 +17,7 @@ public final class GetMongoDBResourceMongoRoleDefinitionArgs extends com.pulumi.
      * 
      */
     @Import(name="accountName", required=true)
-      private final String accountName;
+    private String accountName;
 
     public String accountName() {
         return this.accountName;
@@ -28,7 +28,7 @@ public final class GetMongoDBResourceMongoRoleDefinitionArgs extends com.pulumi.
      * 
      */
     @Import(name="mongoRoleDefinitionId", required=true)
-      private final String mongoRoleDefinitionId;
+    private String mongoRoleDefinitionId;
 
     public String mongoRoleDefinitionId() {
         return this.mongoRoleDefinitionId;
@@ -39,64 +39,59 @@ public final class GetMongoDBResourceMongoRoleDefinitionArgs extends com.pulumi.
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public GetMongoDBResourceMongoRoleDefinitionArgs(
-        String accountName,
-        String mongoRoleDefinitionId,
-        String resourceGroupName) {
-        this.accountName = Objects.requireNonNull(accountName, "expected parameter 'accountName' to be non-null");
-        this.mongoRoleDefinitionId = Objects.requireNonNull(mongoRoleDefinitionId, "expected parameter 'mongoRoleDefinitionId' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private GetMongoDBResourceMongoRoleDefinitionArgs() {}
 
-    private GetMongoDBResourceMongoRoleDefinitionArgs() {
-        this.accountName = null;
-        this.mongoRoleDefinitionId = null;
-        this.resourceGroupName = null;
+    private GetMongoDBResourceMongoRoleDefinitionArgs(GetMongoDBResourceMongoRoleDefinitionArgs $) {
+        this.accountName = $.accountName;
+        this.mongoRoleDefinitionId = $.mongoRoleDefinitionId;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetMongoDBResourceMongoRoleDefinitionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String accountName;
-        private String mongoRoleDefinitionId;
-        private String resourceGroupName;
+        private GetMongoDBResourceMongoRoleDefinitionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetMongoDBResourceMongoRoleDefinitionArgs();
         }
 
         public Builder(GetMongoDBResourceMongoRoleDefinitionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accountName = defaults.accountName;
-    	      this.mongoRoleDefinitionId = defaults.mongoRoleDefinitionId;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new GetMongoDBResourceMongoRoleDefinitionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder accountName(String accountName) {
-            this.accountName = Objects.requireNonNull(accountName);
+            $.accountName = accountName;
             return this;
         }
+
         public Builder mongoRoleDefinitionId(String mongoRoleDefinitionId) {
-            this.mongoRoleDefinitionId = Objects.requireNonNull(mongoRoleDefinitionId);
+            $.mongoRoleDefinitionId = mongoRoleDefinitionId;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public GetMongoDBResourceMongoRoleDefinitionArgs build() {
-            return new GetMongoDBResourceMongoRoleDefinitionArgs(accountName, mongoRoleDefinitionId, resourceGroupName);
+        }
+
+        public GetMongoDBResourceMongoRoleDefinitionArgs build() {
+            $.accountName = Objects.requireNonNull($.accountName, "expected parameter 'accountName' to be non-null");
+            $.mongoRoleDefinitionId = Objects.requireNonNull($.mongoRoleDefinitionId, "expected parameter 'mongoRoleDefinitionId' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

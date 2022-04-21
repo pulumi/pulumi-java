@@ -9,6 +9,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,7 +27,7 @@ public final class MpiArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="distributionType", required=true)
-      private final Output<String> distributionType;
+    private Output<String> distributionType;
 
     public Output<String> distributionType() {
         return this.distributionType;
@@ -37,63 +38,59 @@ public final class MpiArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="processCountPerInstance")
-      private final @Nullable Output<Integer> processCountPerInstance;
+    private @Nullable Output<Integer> processCountPerInstance;
 
-    public Output<Integer> processCountPerInstance() {
-        return this.processCountPerInstance == null ? Codegen.empty() : this.processCountPerInstance;
+    public Optional<Output<Integer>> processCountPerInstance() {
+        return Optional.ofNullable(this.processCountPerInstance);
     }
 
-    public MpiArgs(
-        Output<String> distributionType,
-        @Nullable Output<Integer> processCountPerInstance) {
-        this.distributionType = Codegen.stringProp("distributionType").output().arg(distributionType).require();
-        this.processCountPerInstance = processCountPerInstance;
-    }
+    private MpiArgs() {}
 
-    private MpiArgs() {
-        this.distributionType = Codegen.empty();
-        this.processCountPerInstance = Codegen.empty();
+    private MpiArgs(MpiArgs $) {
+        this.distributionType = $.distributionType;
+        this.processCountPerInstance = $.processCountPerInstance;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MpiArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> distributionType;
-        private @Nullable Output<Integer> processCountPerInstance;
+        private MpiArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new MpiArgs();
         }
 
         public Builder(MpiArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.distributionType = defaults.distributionType;
-    	      this.processCountPerInstance = defaults.processCountPerInstance;
+            $ = new MpiArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder distributionType(Output<String> distributionType) {
-            this.distributionType = Objects.requireNonNull(distributionType);
+            $.distributionType = distributionType;
             return this;
         }
+
         public Builder distributionType(String distributionType) {
-            this.distributionType = Output.of(Objects.requireNonNull(distributionType));
-            return this;
+            return distributionType(Output.of(distributionType));
         }
+
         public Builder processCountPerInstance(@Nullable Output<Integer> processCountPerInstance) {
-            this.processCountPerInstance = processCountPerInstance;
+            $.processCountPerInstance = processCountPerInstance;
             return this;
         }
-        public Builder processCountPerInstance(@Nullable Integer processCountPerInstance) {
-            this.processCountPerInstance = Codegen.ofNullable(processCountPerInstance);
-            return this;
-        }        public MpiArgs build() {
-            return new MpiArgs(distributionType, processCountPerInstance);
+
+        public Builder processCountPerInstance(Integer processCountPerInstance) {
+            return processCountPerInstance(Output.of(processCountPerInstance));
+        }
+
+        public MpiArgs build() {
+            $.distributionType = Codegen.stringProp("distributionType").output().arg($.distributionType).require();
+            return $;
         }
     }
+
 }

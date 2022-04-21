@@ -5,7 +5,6 @@ package com.pulumi.gcp.compute;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,49 +18,49 @@ public final class SharedVPCHostProjectArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="project", required=true)
-      private final Output<String> project;
+    private Output<String> project;
 
     public Output<String> project() {
         return this.project;
     }
 
-    public SharedVPCHostProjectArgs(Output<String> project) {
-        this.project = Objects.requireNonNull(project, "expected parameter 'project' to be non-null");
-    }
+    private SharedVPCHostProjectArgs() {}
 
-    private SharedVPCHostProjectArgs() {
-        this.project = Codegen.empty();
+    private SharedVPCHostProjectArgs(SharedVPCHostProjectArgs $) {
+        this.project = $.project;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SharedVPCHostProjectArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> project;
+        private SharedVPCHostProjectArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SharedVPCHostProjectArgs();
         }
 
         public Builder(SharedVPCHostProjectArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.project = defaults.project;
+            $ = new SharedVPCHostProjectArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder project(Output<String> project) {
-            this.project = Objects.requireNonNull(project);
+            $.project = project;
             return this;
         }
+
         public Builder project(String project) {
-            this.project = Output.of(Objects.requireNonNull(project));
-            return this;
-        }        public SharedVPCHostProjectArgs build() {
-            return new SharedVPCHostProjectArgs(project);
+            return project(Output.of(project));
+        }
+
+        public SharedVPCHostProjectArgs build() {
+            $.project = Objects.requireNonNull($.project, "expected parameter 'project' to be non-null");
+            return $;
         }
     }
+
 }

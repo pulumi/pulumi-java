@@ -24,48 +24,48 @@ public final class DiskEncryptionConfigurationResponse extends com.pulumi.resour
      * 
      */
     @Import(name="targets")
-      private final @Nullable List<String> targets;
+    private @Nullable List<String> targets;
 
-    public List<String> targets() {
-        return this.targets == null ? List.of() : this.targets;
+    public Optional<List<String>> targets() {
+        return Optional.ofNullable(this.targets);
     }
 
-    public DiskEncryptionConfigurationResponse(@Nullable List<String> targets) {
-        this.targets = targets;
-    }
+    private DiskEncryptionConfigurationResponse() {}
 
-    private DiskEncryptionConfigurationResponse() {
-        this.targets = List.of();
+    private DiskEncryptionConfigurationResponse(DiskEncryptionConfigurationResponse $) {
+        this.targets = $.targets;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DiskEncryptionConfigurationResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<String> targets;
+        private DiskEncryptionConfigurationResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new DiskEncryptionConfigurationResponse();
         }
 
         public Builder(DiskEncryptionConfigurationResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.targets = defaults.targets;
+            $ = new DiskEncryptionConfigurationResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder targets(@Nullable List<String> targets) {
-            this.targets = targets;
+            $.targets = targets;
             return this;
         }
+
         public Builder targets(String... targets) {
             return targets(List.of(targets));
-        }        public DiskEncryptionConfigurationResponse build() {
-            return new DiskEncryptionConfigurationResponse(targets);
+        }
+
+        public DiskEncryptionConfigurationResponse build() {
+            return $;
         }
     }
+
 }

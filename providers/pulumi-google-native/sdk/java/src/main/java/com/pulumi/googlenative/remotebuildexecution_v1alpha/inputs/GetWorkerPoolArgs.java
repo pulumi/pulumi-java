@@ -15,78 +15,72 @@ public final class GetWorkerPoolArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetWorkerPoolArgs Empty = new GetWorkerPoolArgs();
 
     @Import(name="instanceId", required=true)
-      private final String instanceId;
+    private String instanceId;
 
     public String instanceId() {
         return this.instanceId;
     }
 
     @Import(name="project")
-      private final @Nullable String project;
+    private @Nullable String project;
 
     public Optional<String> project() {
-        return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
+        return Optional.ofNullable(this.project);
     }
 
     @Import(name="workerpoolId", required=true)
-      private final String workerpoolId;
+    private String workerpoolId;
 
     public String workerpoolId() {
         return this.workerpoolId;
     }
 
-    public GetWorkerPoolArgs(
-        String instanceId,
-        @Nullable String project,
-        String workerpoolId) {
-        this.instanceId = Objects.requireNonNull(instanceId, "expected parameter 'instanceId' to be non-null");
-        this.project = project;
-        this.workerpoolId = Objects.requireNonNull(workerpoolId, "expected parameter 'workerpoolId' to be non-null");
-    }
+    private GetWorkerPoolArgs() {}
 
-    private GetWorkerPoolArgs() {
-        this.instanceId = null;
-        this.project = null;
-        this.workerpoolId = null;
+    private GetWorkerPoolArgs(GetWorkerPoolArgs $) {
+        this.instanceId = $.instanceId;
+        this.project = $.project;
+        this.workerpoolId = $.workerpoolId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetWorkerPoolArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String instanceId;
-        private @Nullable String project;
-        private String workerpoolId;
+        private GetWorkerPoolArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetWorkerPoolArgs();
         }
 
         public Builder(GetWorkerPoolArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.instanceId = defaults.instanceId;
-    	      this.project = defaults.project;
-    	      this.workerpoolId = defaults.workerpoolId;
+            $ = new GetWorkerPoolArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder instanceId(String instanceId) {
-            this.instanceId = Objects.requireNonNull(instanceId);
+            $.instanceId = instanceId;
             return this;
         }
+
         public Builder project(@Nullable String project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
+
         public Builder workerpoolId(String workerpoolId) {
-            this.workerpoolId = Objects.requireNonNull(workerpoolId);
+            $.workerpoolId = workerpoolId;
             return this;
-        }        public GetWorkerPoolArgs build() {
-            return new GetWorkerPoolArgs(instanceId, project, workerpoolId);
+        }
+
+        public GetWorkerPoolArgs build() {
+            $.instanceId = Objects.requireNonNull($.instanceId, "expected parameter 'instanceId' to be non-null");
+            $.workerpoolId = Objects.requireNonNull($.workerpoolId, "expected parameter 'workerpoolId' to be non-null");
+            return $;
         }
     }
+
 }

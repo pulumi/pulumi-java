@@ -7,10 +7,10 @@ import com.pulumi.azurenative.cdn.enums.ResponseBasedDetectedErrorTypes;
 import com.pulumi.azurenative.cdn.inputs.HttpErrorRangeParametersArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +27,10 @@ public final class ResponseBasedOriginErrorDetectionParametersArgs extends com.p
      * 
      */
     @Import(name="httpErrorRanges")
-      private final @Nullable Output<List<HttpErrorRangeParametersArgs>> httpErrorRanges;
+    private @Nullable Output<List<HttpErrorRangeParametersArgs>> httpErrorRanges;
 
-    public Output<List<HttpErrorRangeParametersArgs>> httpErrorRanges() {
-        return this.httpErrorRanges == null ? Codegen.empty() : this.httpErrorRanges;
+    public Optional<Output<List<HttpErrorRangeParametersArgs>>> httpErrorRanges() {
+        return Optional.ofNullable(this.httpErrorRanges);
     }
 
     /**
@@ -38,10 +38,10 @@ public final class ResponseBasedOriginErrorDetectionParametersArgs extends com.p
      * 
      */
     @Import(name="responseBasedDetectedErrorTypes")
-      private final @Nullable Output<ResponseBasedDetectedErrorTypes> responseBasedDetectedErrorTypes;
+    private @Nullable Output<ResponseBasedDetectedErrorTypes> responseBasedDetectedErrorTypes;
 
-    public Output<ResponseBasedDetectedErrorTypes> responseBasedDetectedErrorTypes() {
-        return this.responseBasedDetectedErrorTypes == null ? Codegen.empty() : this.responseBasedDetectedErrorTypes;
+    public Optional<Output<ResponseBasedDetectedErrorTypes>> responseBasedDetectedErrorTypes() {
+        return Optional.ofNullable(this.responseBasedDetectedErrorTypes);
     }
 
     /**
@@ -49,79 +49,72 @@ public final class ResponseBasedOriginErrorDetectionParametersArgs extends com.p
      * 
      */
     @Import(name="responseBasedFailoverThresholdPercentage")
-      private final @Nullable Output<Integer> responseBasedFailoverThresholdPercentage;
+    private @Nullable Output<Integer> responseBasedFailoverThresholdPercentage;
 
-    public Output<Integer> responseBasedFailoverThresholdPercentage() {
-        return this.responseBasedFailoverThresholdPercentage == null ? Codegen.empty() : this.responseBasedFailoverThresholdPercentage;
+    public Optional<Output<Integer>> responseBasedFailoverThresholdPercentage() {
+        return Optional.ofNullable(this.responseBasedFailoverThresholdPercentage);
     }
 
-    public ResponseBasedOriginErrorDetectionParametersArgs(
-        @Nullable Output<List<HttpErrorRangeParametersArgs>> httpErrorRanges,
-        @Nullable Output<ResponseBasedDetectedErrorTypes> responseBasedDetectedErrorTypes,
-        @Nullable Output<Integer> responseBasedFailoverThresholdPercentage) {
-        this.httpErrorRanges = httpErrorRanges;
-        this.responseBasedDetectedErrorTypes = responseBasedDetectedErrorTypes;
-        this.responseBasedFailoverThresholdPercentage = responseBasedFailoverThresholdPercentage;
-    }
+    private ResponseBasedOriginErrorDetectionParametersArgs() {}
 
-    private ResponseBasedOriginErrorDetectionParametersArgs() {
-        this.httpErrorRanges = Codegen.empty();
-        this.responseBasedDetectedErrorTypes = Codegen.empty();
-        this.responseBasedFailoverThresholdPercentage = Codegen.empty();
+    private ResponseBasedOriginErrorDetectionParametersArgs(ResponseBasedOriginErrorDetectionParametersArgs $) {
+        this.httpErrorRanges = $.httpErrorRanges;
+        this.responseBasedDetectedErrorTypes = $.responseBasedDetectedErrorTypes;
+        this.responseBasedFailoverThresholdPercentage = $.responseBasedFailoverThresholdPercentage;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ResponseBasedOriginErrorDetectionParametersArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<HttpErrorRangeParametersArgs>> httpErrorRanges;
-        private @Nullable Output<ResponseBasedDetectedErrorTypes> responseBasedDetectedErrorTypes;
-        private @Nullable Output<Integer> responseBasedFailoverThresholdPercentage;
+        private ResponseBasedOriginErrorDetectionParametersArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ResponseBasedOriginErrorDetectionParametersArgs();
         }
 
         public Builder(ResponseBasedOriginErrorDetectionParametersArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.httpErrorRanges = defaults.httpErrorRanges;
-    	      this.responseBasedDetectedErrorTypes = defaults.responseBasedDetectedErrorTypes;
-    	      this.responseBasedFailoverThresholdPercentage = defaults.responseBasedFailoverThresholdPercentage;
+            $ = new ResponseBasedOriginErrorDetectionParametersArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder httpErrorRanges(@Nullable Output<List<HttpErrorRangeParametersArgs>> httpErrorRanges) {
-            this.httpErrorRanges = httpErrorRanges;
+            $.httpErrorRanges = httpErrorRanges;
             return this;
         }
-        public Builder httpErrorRanges(@Nullable List<HttpErrorRangeParametersArgs> httpErrorRanges) {
-            this.httpErrorRanges = Codegen.ofNullable(httpErrorRanges);
-            return this;
+
+        public Builder httpErrorRanges(List<HttpErrorRangeParametersArgs> httpErrorRanges) {
+            return httpErrorRanges(Output.of(httpErrorRanges));
         }
+
         public Builder httpErrorRanges(HttpErrorRangeParametersArgs... httpErrorRanges) {
             return httpErrorRanges(List.of(httpErrorRanges));
         }
+
         public Builder responseBasedDetectedErrorTypes(@Nullable Output<ResponseBasedDetectedErrorTypes> responseBasedDetectedErrorTypes) {
-            this.responseBasedDetectedErrorTypes = responseBasedDetectedErrorTypes;
+            $.responseBasedDetectedErrorTypes = responseBasedDetectedErrorTypes;
             return this;
         }
-        public Builder responseBasedDetectedErrorTypes(@Nullable ResponseBasedDetectedErrorTypes responseBasedDetectedErrorTypes) {
-            this.responseBasedDetectedErrorTypes = Codegen.ofNullable(responseBasedDetectedErrorTypes);
-            return this;
+
+        public Builder responseBasedDetectedErrorTypes(ResponseBasedDetectedErrorTypes responseBasedDetectedErrorTypes) {
+            return responseBasedDetectedErrorTypes(Output.of(responseBasedDetectedErrorTypes));
         }
+
         public Builder responseBasedFailoverThresholdPercentage(@Nullable Output<Integer> responseBasedFailoverThresholdPercentage) {
-            this.responseBasedFailoverThresholdPercentage = responseBasedFailoverThresholdPercentage;
+            $.responseBasedFailoverThresholdPercentage = responseBasedFailoverThresholdPercentage;
             return this;
         }
-        public Builder responseBasedFailoverThresholdPercentage(@Nullable Integer responseBasedFailoverThresholdPercentage) {
-            this.responseBasedFailoverThresholdPercentage = Codegen.ofNullable(responseBasedFailoverThresholdPercentage);
-            return this;
-        }        public ResponseBasedOriginErrorDetectionParametersArgs build() {
-            return new ResponseBasedOriginErrorDetectionParametersArgs(httpErrorRanges, responseBasedDetectedErrorTypes, responseBasedFailoverThresholdPercentage);
+
+        public Builder responseBasedFailoverThresholdPercentage(Integer responseBasedFailoverThresholdPercentage) {
+            return responseBasedFailoverThresholdPercentage(Output.of(responseBasedFailoverThresholdPercentage));
+        }
+
+        public ResponseBasedOriginErrorDetectionParametersArgs build() {
+            return $;
         }
     }
+
 }

@@ -22,48 +22,49 @@ public final class InputDefinition extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="attributes", required=true)
-      private final List<InputAttribute> attributes;
+    private List<InputAttribute> attributes;
 
     public List<InputAttribute> attributes() {
         return this.attributes;
     }
 
-    public InputDefinition(List<InputAttribute> attributes) {
-        this.attributes = Objects.requireNonNull(attributes, "expected parameter 'attributes' to be non-null");
-    }
+    private InputDefinition() {}
 
-    private InputDefinition() {
-        this.attributes = List.of();
+    private InputDefinition(InputDefinition $) {
+        this.attributes = $.attributes;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(InputDefinition defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<InputAttribute> attributes;
+        private InputDefinition $;
 
         public Builder() {
-    	      // Empty
+            $ = new InputDefinition();
         }
 
         public Builder(InputDefinition defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.attributes = defaults.attributes;
+            $ = new InputDefinition(Objects.requireNonNull(defaults));
         }
 
         public Builder attributes(List<InputAttribute> attributes) {
-            this.attributes = Objects.requireNonNull(attributes);
+            $.attributes = attributes;
             return this;
         }
+
         public Builder attributes(InputAttribute... attributes) {
             return attributes(List.of(attributes));
-        }        public InputDefinition build() {
-            return new InputDefinition(attributes);
+        }
+
+        public InputDefinition build() {
+            $.attributes = Objects.requireNonNull($.attributes, "expected parameter 'attributes' to be non-null");
+            return $;
         }
     }
+
 }

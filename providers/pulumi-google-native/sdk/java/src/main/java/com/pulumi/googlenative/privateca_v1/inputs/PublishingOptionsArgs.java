@@ -5,9 +5,9 @@ package com.pulumi.googlenative.privateca_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class PublishingOptionsArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="publishCaCert")
-      private final @Nullable Output<Boolean> publishCaCert;
+    private @Nullable Output<Boolean> publishCaCert;
 
-    public Output<Boolean> publishCaCert() {
-        return this.publishCaCert == null ? Codegen.empty() : this.publishCaCert;
+    public Optional<Output<Boolean>> publishCaCert() {
+        return Optional.ofNullable(this.publishCaCert);
     }
 
     /**
@@ -35,63 +35,58 @@ public final class PublishingOptionsArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="publishCrl")
-      private final @Nullable Output<Boolean> publishCrl;
+    private @Nullable Output<Boolean> publishCrl;
 
-    public Output<Boolean> publishCrl() {
-        return this.publishCrl == null ? Codegen.empty() : this.publishCrl;
+    public Optional<Output<Boolean>> publishCrl() {
+        return Optional.ofNullable(this.publishCrl);
     }
 
-    public PublishingOptionsArgs(
-        @Nullable Output<Boolean> publishCaCert,
-        @Nullable Output<Boolean> publishCrl) {
-        this.publishCaCert = publishCaCert;
-        this.publishCrl = publishCrl;
-    }
+    private PublishingOptionsArgs() {}
 
-    private PublishingOptionsArgs() {
-        this.publishCaCert = Codegen.empty();
-        this.publishCrl = Codegen.empty();
+    private PublishingOptionsArgs(PublishingOptionsArgs $) {
+        this.publishCaCert = $.publishCaCert;
+        this.publishCrl = $.publishCrl;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PublishingOptionsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> publishCaCert;
-        private @Nullable Output<Boolean> publishCrl;
+        private PublishingOptionsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PublishingOptionsArgs();
         }
 
         public Builder(PublishingOptionsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.publishCaCert = defaults.publishCaCert;
-    	      this.publishCrl = defaults.publishCrl;
+            $ = new PublishingOptionsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder publishCaCert(@Nullable Output<Boolean> publishCaCert) {
-            this.publishCaCert = publishCaCert;
+            $.publishCaCert = publishCaCert;
             return this;
         }
-        public Builder publishCaCert(@Nullable Boolean publishCaCert) {
-            this.publishCaCert = Codegen.ofNullable(publishCaCert);
-            return this;
+
+        public Builder publishCaCert(Boolean publishCaCert) {
+            return publishCaCert(Output.of(publishCaCert));
         }
+
         public Builder publishCrl(@Nullable Output<Boolean> publishCrl) {
-            this.publishCrl = publishCrl;
+            $.publishCrl = publishCrl;
             return this;
         }
-        public Builder publishCrl(@Nullable Boolean publishCrl) {
-            this.publishCrl = Codegen.ofNullable(publishCrl);
-            return this;
-        }        public PublishingOptionsArgs build() {
-            return new PublishingOptionsArgs(publishCaCert, publishCrl);
+
+        public Builder publishCrl(Boolean publishCrl) {
+            return publishCrl(Output.of(publishCrl));
+        }
+
+        public PublishingOptionsArgs build() {
+            return $;
         }
     }
+
 }

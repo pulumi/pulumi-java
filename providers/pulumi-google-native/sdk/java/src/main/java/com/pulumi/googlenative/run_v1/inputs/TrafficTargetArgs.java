@@ -5,11 +5,11 @@ package com.pulumi.googlenative.run_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class TrafficTargetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="configurationName")
-      private final @Nullable Output<String> configurationName;
+    private @Nullable Output<String> configurationName;
 
-    public Output<String> configurationName() {
-        return this.configurationName == null ? Codegen.empty() : this.configurationName;
+    public Optional<Output<String>> configurationName() {
+        return Optional.ofNullable(this.configurationName);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class TrafficTargetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="latestRevision")
-      private final @Nullable Output<Boolean> latestRevision;
+    private @Nullable Output<Boolean> latestRevision;
 
-    public Output<Boolean> latestRevision() {
-        return this.latestRevision == null ? Codegen.empty() : this.latestRevision;
+    public Optional<Output<Boolean>> latestRevision() {
+        return Optional.ofNullable(this.latestRevision);
     }
 
     /**
@@ -48,10 +48,10 @@ public final class TrafficTargetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="percent")
-      private final @Nullable Output<Integer> percent;
+    private @Nullable Output<Integer> percent;
 
-    public Output<Integer> percent() {
-        return this.percent == null ? Codegen.empty() : this.percent;
+    public Optional<Output<Integer>> percent() {
+        return Optional.ofNullable(this.percent);
     }
 
     /**
@@ -59,10 +59,10 @@ public final class TrafficTargetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="revisionName")
-      private final @Nullable Output<String> revisionName;
+    private @Nullable Output<String> revisionName;
 
-    public Output<String> revisionName() {
-        return this.revisionName == null ? Codegen.empty() : this.revisionName;
+    public Optional<Output<String>> revisionName() {
+        return Optional.ofNullable(this.revisionName);
     }
 
     /**
@@ -70,102 +70,88 @@ public final class TrafficTargetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tag")
-      private final @Nullable Output<String> tag;
+    private @Nullable Output<String> tag;
 
-    public Output<String> tag() {
-        return this.tag == null ? Codegen.empty() : this.tag;
+    public Optional<Output<String>> tag() {
+        return Optional.ofNullable(this.tag);
     }
 
-    public TrafficTargetArgs(
-        @Nullable Output<String> configurationName,
-        @Nullable Output<Boolean> latestRevision,
-        @Nullable Output<Integer> percent,
-        @Nullable Output<String> revisionName,
-        @Nullable Output<String> tag) {
-        this.configurationName = configurationName;
-        this.latestRevision = latestRevision;
-        this.percent = percent;
-        this.revisionName = revisionName;
-        this.tag = tag;
-    }
+    private TrafficTargetArgs() {}
 
-    private TrafficTargetArgs() {
-        this.configurationName = Codegen.empty();
-        this.latestRevision = Codegen.empty();
-        this.percent = Codegen.empty();
-        this.revisionName = Codegen.empty();
-        this.tag = Codegen.empty();
+    private TrafficTargetArgs(TrafficTargetArgs $) {
+        this.configurationName = $.configurationName;
+        this.latestRevision = $.latestRevision;
+        this.percent = $.percent;
+        this.revisionName = $.revisionName;
+        this.tag = $.tag;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TrafficTargetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> configurationName;
-        private @Nullable Output<Boolean> latestRevision;
-        private @Nullable Output<Integer> percent;
-        private @Nullable Output<String> revisionName;
-        private @Nullable Output<String> tag;
+        private TrafficTargetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TrafficTargetArgs();
         }
 
         public Builder(TrafficTargetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.configurationName = defaults.configurationName;
-    	      this.latestRevision = defaults.latestRevision;
-    	      this.percent = defaults.percent;
-    	      this.revisionName = defaults.revisionName;
-    	      this.tag = defaults.tag;
+            $ = new TrafficTargetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder configurationName(@Nullable Output<String> configurationName) {
-            this.configurationName = configurationName;
+            $.configurationName = configurationName;
             return this;
         }
-        public Builder configurationName(@Nullable String configurationName) {
-            this.configurationName = Codegen.ofNullable(configurationName);
-            return this;
+
+        public Builder configurationName(String configurationName) {
+            return configurationName(Output.of(configurationName));
         }
+
         public Builder latestRevision(@Nullable Output<Boolean> latestRevision) {
-            this.latestRevision = latestRevision;
+            $.latestRevision = latestRevision;
             return this;
         }
-        public Builder latestRevision(@Nullable Boolean latestRevision) {
-            this.latestRevision = Codegen.ofNullable(latestRevision);
-            return this;
+
+        public Builder latestRevision(Boolean latestRevision) {
+            return latestRevision(Output.of(latestRevision));
         }
+
         public Builder percent(@Nullable Output<Integer> percent) {
-            this.percent = percent;
+            $.percent = percent;
             return this;
         }
-        public Builder percent(@Nullable Integer percent) {
-            this.percent = Codegen.ofNullable(percent);
-            return this;
+
+        public Builder percent(Integer percent) {
+            return percent(Output.of(percent));
         }
+
         public Builder revisionName(@Nullable Output<String> revisionName) {
-            this.revisionName = revisionName;
+            $.revisionName = revisionName;
             return this;
         }
-        public Builder revisionName(@Nullable String revisionName) {
-            this.revisionName = Codegen.ofNullable(revisionName);
-            return this;
+
+        public Builder revisionName(String revisionName) {
+            return revisionName(Output.of(revisionName));
         }
+
         public Builder tag(@Nullable Output<String> tag) {
-            this.tag = tag;
+            $.tag = tag;
             return this;
         }
-        public Builder tag(@Nullable String tag) {
-            this.tag = Codegen.ofNullable(tag);
-            return this;
-        }        public TrafficTargetArgs build() {
-            return new TrafficTargetArgs(configurationName, latestRevision, percent, revisionName, tag);
+
+        public Builder tag(String tag) {
+            return tag(Output.of(tag));
+        }
+
+        public TrafficTargetArgs build() {
+            return $;
         }
     }
+
 }

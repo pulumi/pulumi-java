@@ -21,7 +21,7 @@ public final class MethodSelectorResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="method", required=true)
-      private final String method;
+    private String method;
 
     public String method() {
         return this.method;
@@ -32,55 +32,52 @@ public final class MethodSelectorResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="permission", required=true)
-      private final String permission;
+    private String permission;
 
     public String permission() {
         return this.permission;
     }
 
-    public MethodSelectorResponse(
-        String method,
-        String permission) {
-        this.method = Objects.requireNonNull(method, "expected parameter 'method' to be non-null");
-        this.permission = Objects.requireNonNull(permission, "expected parameter 'permission' to be non-null");
-    }
+    private MethodSelectorResponse() {}
 
-    private MethodSelectorResponse() {
-        this.method = null;
-        this.permission = null;
+    private MethodSelectorResponse(MethodSelectorResponse $) {
+        this.method = $.method;
+        this.permission = $.permission;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MethodSelectorResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String method;
-        private String permission;
+        private MethodSelectorResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new MethodSelectorResponse();
         }
 
         public Builder(MethodSelectorResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.method = defaults.method;
-    	      this.permission = defaults.permission;
+            $ = new MethodSelectorResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder method(String method) {
-            this.method = Objects.requireNonNull(method);
+            $.method = method;
             return this;
         }
+
         public Builder permission(String permission) {
-            this.permission = Objects.requireNonNull(permission);
+            $.permission = permission;
             return this;
-        }        public MethodSelectorResponse build() {
-            return new MethodSelectorResponse(method, permission);
+        }
+
+        public MethodSelectorResponse build() {
+            $.method = Objects.requireNonNull($.method, "expected parameter 'method' to be non-null");
+            $.permission = Objects.requireNonNull($.permission, "expected parameter 'permission' to be non-null");
+            return $;
         }
     }
+
 }

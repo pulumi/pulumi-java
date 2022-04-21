@@ -6,9 +6,9 @@ package com.pulumi.aws.appsync.inputs;
 import com.pulumi.aws.appsync.inputs.ResolverSyncConfigLambdaConflictHandlerConfigArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class ResolverSyncConfigArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="conflictDetection")
-      private final @Nullable Output<String> conflictDetection;
+    private @Nullable Output<String> conflictDetection;
 
-    public Output<String> conflictDetection() {
-        return this.conflictDetection == null ? Codegen.empty() : this.conflictDetection;
+    public Optional<Output<String>> conflictDetection() {
+        return Optional.ofNullable(this.conflictDetection);
     }
 
     /**
@@ -32,10 +32,10 @@ public final class ResolverSyncConfigArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="conflictHandler")
-      private final @Nullable Output<String> conflictHandler;
+    private @Nullable Output<String> conflictHandler;
 
-    public Output<String> conflictHandler() {
-        return this.conflictHandler == null ? Codegen.empty() : this.conflictHandler;
+    public Optional<Output<String>> conflictHandler() {
+        return Optional.ofNullable(this.conflictHandler);
     }
 
     /**
@@ -43,76 +43,68 @@ public final class ResolverSyncConfigArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="lambdaConflictHandlerConfig")
-      private final @Nullable Output<ResolverSyncConfigLambdaConflictHandlerConfigArgs> lambdaConflictHandlerConfig;
+    private @Nullable Output<ResolverSyncConfigLambdaConflictHandlerConfigArgs> lambdaConflictHandlerConfig;
 
-    public Output<ResolverSyncConfigLambdaConflictHandlerConfigArgs> lambdaConflictHandlerConfig() {
-        return this.lambdaConflictHandlerConfig == null ? Codegen.empty() : this.lambdaConflictHandlerConfig;
+    public Optional<Output<ResolverSyncConfigLambdaConflictHandlerConfigArgs>> lambdaConflictHandlerConfig() {
+        return Optional.ofNullable(this.lambdaConflictHandlerConfig);
     }
 
-    public ResolverSyncConfigArgs(
-        @Nullable Output<String> conflictDetection,
-        @Nullable Output<String> conflictHandler,
-        @Nullable Output<ResolverSyncConfigLambdaConflictHandlerConfigArgs> lambdaConflictHandlerConfig) {
-        this.conflictDetection = conflictDetection;
-        this.conflictHandler = conflictHandler;
-        this.lambdaConflictHandlerConfig = lambdaConflictHandlerConfig;
-    }
+    private ResolverSyncConfigArgs() {}
 
-    private ResolverSyncConfigArgs() {
-        this.conflictDetection = Codegen.empty();
-        this.conflictHandler = Codegen.empty();
-        this.lambdaConflictHandlerConfig = Codegen.empty();
+    private ResolverSyncConfigArgs(ResolverSyncConfigArgs $) {
+        this.conflictDetection = $.conflictDetection;
+        this.conflictHandler = $.conflictHandler;
+        this.lambdaConflictHandlerConfig = $.lambdaConflictHandlerConfig;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ResolverSyncConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> conflictDetection;
-        private @Nullable Output<String> conflictHandler;
-        private @Nullable Output<ResolverSyncConfigLambdaConflictHandlerConfigArgs> lambdaConflictHandlerConfig;
+        private ResolverSyncConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ResolverSyncConfigArgs();
         }
 
         public Builder(ResolverSyncConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.conflictDetection = defaults.conflictDetection;
-    	      this.conflictHandler = defaults.conflictHandler;
-    	      this.lambdaConflictHandlerConfig = defaults.lambdaConflictHandlerConfig;
+            $ = new ResolverSyncConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder conflictDetection(@Nullable Output<String> conflictDetection) {
-            this.conflictDetection = conflictDetection;
+            $.conflictDetection = conflictDetection;
             return this;
         }
-        public Builder conflictDetection(@Nullable String conflictDetection) {
-            this.conflictDetection = Codegen.ofNullable(conflictDetection);
-            return this;
+
+        public Builder conflictDetection(String conflictDetection) {
+            return conflictDetection(Output.of(conflictDetection));
         }
+
         public Builder conflictHandler(@Nullable Output<String> conflictHandler) {
-            this.conflictHandler = conflictHandler;
+            $.conflictHandler = conflictHandler;
             return this;
         }
-        public Builder conflictHandler(@Nullable String conflictHandler) {
-            this.conflictHandler = Codegen.ofNullable(conflictHandler);
-            return this;
+
+        public Builder conflictHandler(String conflictHandler) {
+            return conflictHandler(Output.of(conflictHandler));
         }
+
         public Builder lambdaConflictHandlerConfig(@Nullable Output<ResolverSyncConfigLambdaConflictHandlerConfigArgs> lambdaConflictHandlerConfig) {
-            this.lambdaConflictHandlerConfig = lambdaConflictHandlerConfig;
+            $.lambdaConflictHandlerConfig = lambdaConflictHandlerConfig;
             return this;
         }
-        public Builder lambdaConflictHandlerConfig(@Nullable ResolverSyncConfigLambdaConflictHandlerConfigArgs lambdaConflictHandlerConfig) {
-            this.lambdaConflictHandlerConfig = Codegen.ofNullable(lambdaConflictHandlerConfig);
-            return this;
-        }        public ResolverSyncConfigArgs build() {
-            return new ResolverSyncConfigArgs(conflictDetection, conflictHandler, lambdaConflictHandlerConfig);
+
+        public Builder lambdaConflictHandlerConfig(ResolverSyncConfigLambdaConflictHandlerConfigArgs lambdaConflictHandlerConfig) {
+            return lambdaConflictHandlerConfig(Output.of(lambdaConflictHandlerConfig));
+        }
+
+        public ResolverSyncConfigArgs build() {
+            return $;
         }
     }
+
 }

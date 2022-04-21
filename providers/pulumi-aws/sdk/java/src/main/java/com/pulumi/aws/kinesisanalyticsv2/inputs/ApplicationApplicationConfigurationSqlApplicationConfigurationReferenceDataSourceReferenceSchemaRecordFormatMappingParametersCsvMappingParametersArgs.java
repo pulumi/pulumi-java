@@ -5,7 +5,6 @@ package com.pulumi.aws.kinesisanalyticsv2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,7 +18,7 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
      * 
      */
     @Import(name="recordColumnDelimiter", required=true)
-      private final Output<String> recordColumnDelimiter;
+    private Output<String> recordColumnDelimiter;
 
     public Output<String> recordColumnDelimiter() {
         return this.recordColumnDelimiter;
@@ -30,63 +29,60 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
      * 
      */
     @Import(name="recordRowDelimiter", required=true)
-      private final Output<String> recordRowDelimiter;
+    private Output<String> recordRowDelimiter;
 
     public Output<String> recordRowDelimiter() {
         return this.recordRowDelimiter;
     }
 
-    public ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordFormatMappingParametersCsvMappingParametersArgs(
-        Output<String> recordColumnDelimiter,
-        Output<String> recordRowDelimiter) {
-        this.recordColumnDelimiter = Objects.requireNonNull(recordColumnDelimiter, "expected parameter 'recordColumnDelimiter' to be non-null");
-        this.recordRowDelimiter = Objects.requireNonNull(recordRowDelimiter, "expected parameter 'recordRowDelimiter' to be non-null");
-    }
+    private ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordFormatMappingParametersCsvMappingParametersArgs() {}
 
-    private ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordFormatMappingParametersCsvMappingParametersArgs() {
-        this.recordColumnDelimiter = Codegen.empty();
-        this.recordRowDelimiter = Codegen.empty();
+    private ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordFormatMappingParametersCsvMappingParametersArgs(ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordFormatMappingParametersCsvMappingParametersArgs $) {
+        this.recordColumnDelimiter = $.recordColumnDelimiter;
+        this.recordRowDelimiter = $.recordRowDelimiter;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordFormatMappingParametersCsvMappingParametersArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> recordColumnDelimiter;
-        private Output<String> recordRowDelimiter;
+        private ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordFormatMappingParametersCsvMappingParametersArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordFormatMappingParametersCsvMappingParametersArgs();
         }
 
         public Builder(ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordFormatMappingParametersCsvMappingParametersArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.recordColumnDelimiter = defaults.recordColumnDelimiter;
-    	      this.recordRowDelimiter = defaults.recordRowDelimiter;
+            $ = new ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordFormatMappingParametersCsvMappingParametersArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder recordColumnDelimiter(Output<String> recordColumnDelimiter) {
-            this.recordColumnDelimiter = Objects.requireNonNull(recordColumnDelimiter);
+            $.recordColumnDelimiter = recordColumnDelimiter;
             return this;
         }
+
         public Builder recordColumnDelimiter(String recordColumnDelimiter) {
-            this.recordColumnDelimiter = Output.of(Objects.requireNonNull(recordColumnDelimiter));
-            return this;
+            return recordColumnDelimiter(Output.of(recordColumnDelimiter));
         }
+
         public Builder recordRowDelimiter(Output<String> recordRowDelimiter) {
-            this.recordRowDelimiter = Objects.requireNonNull(recordRowDelimiter);
+            $.recordRowDelimiter = recordRowDelimiter;
             return this;
         }
+
         public Builder recordRowDelimiter(String recordRowDelimiter) {
-            this.recordRowDelimiter = Output.of(Objects.requireNonNull(recordRowDelimiter));
-            return this;
-        }        public ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordFormatMappingParametersCsvMappingParametersArgs build() {
-            return new ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordFormatMappingParametersCsvMappingParametersArgs(recordColumnDelimiter, recordRowDelimiter);
+            return recordRowDelimiter(Output.of(recordRowDelimiter));
+        }
+
+        public ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordFormatMappingParametersCsvMappingParametersArgs build() {
+            $.recordColumnDelimiter = Objects.requireNonNull($.recordColumnDelimiter, "expected parameter 'recordColumnDelimiter' to be non-null");
+            $.recordRowDelimiter = Objects.requireNonNull($.recordRowDelimiter, "expected parameter 'recordRowDelimiter' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,12 +5,12 @@ package com.pulumi.aws.xray;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,10 @@ public final class SamplingRuleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="attributes")
-      private final @Nullable Output<Map<String,String>> attributes;
+    private @Nullable Output<Map<String,String>> attributes;
 
-    public Output<Map<String,String>> attributes() {
-        return this.attributes == null ? Codegen.empty() : this.attributes;
+    public Optional<Output<Map<String,String>>> attributes() {
+        return Optional.ofNullable(this.attributes);
     }
 
     /**
@@ -34,7 +34,7 @@ public final class SamplingRuleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="fixedRate", required=true)
-      private final Output<Double> fixedRate;
+    private Output<Double> fixedRate;
 
     public Output<Double> fixedRate() {
         return this.fixedRate;
@@ -45,7 +45,7 @@ public final class SamplingRuleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="host", required=true)
-      private final Output<String> host;
+    private Output<String> host;
 
     public Output<String> host() {
         return this.host;
@@ -56,7 +56,7 @@ public final class SamplingRuleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="httpMethod", required=true)
-      private final Output<String> httpMethod;
+    private Output<String> httpMethod;
 
     public Output<String> httpMethod() {
         return this.httpMethod;
@@ -67,7 +67,7 @@ public final class SamplingRuleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="priority", required=true)
-      private final Output<Integer> priority;
+    private Output<Integer> priority;
 
     public Output<Integer> priority() {
         return this.priority;
@@ -78,7 +78,7 @@ public final class SamplingRuleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="reservoirSize", required=true)
-      private final Output<Integer> reservoirSize;
+    private Output<Integer> reservoirSize;
 
     public Output<Integer> reservoirSize() {
         return this.reservoirSize;
@@ -89,7 +89,7 @@ public final class SamplingRuleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceArn", required=true)
-      private final Output<String> resourceArn;
+    private Output<String> resourceArn;
 
     public Output<String> resourceArn() {
         return this.resourceArn;
@@ -100,10 +100,10 @@ public final class SamplingRuleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="ruleName")
-      private final @Nullable Output<String> ruleName;
+    private @Nullable Output<String> ruleName;
 
-    public Output<String> ruleName() {
-        return this.ruleName == null ? Codegen.empty() : this.ruleName;
+    public Optional<Output<String>> ruleName() {
+        return Optional.ofNullable(this.ruleName);
     }
 
     /**
@@ -111,7 +111,7 @@ public final class SamplingRuleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="serviceName", required=true)
-      private final Output<String> serviceName;
+    private Output<String> serviceName;
 
     public Output<String> serviceName() {
         return this.serviceName;
@@ -122,7 +122,7 @@ public final class SamplingRuleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="serviceType", required=true)
-      private final Output<String> serviceType;
+    private Output<String> serviceType;
 
     public Output<String> serviceType() {
         return this.serviceType;
@@ -133,10 +133,10 @@ public final class SamplingRuleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -144,7 +144,7 @@ public final class SamplingRuleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="urlPath", required=true)
-      private final Output<String> urlPath;
+    private Output<String> urlPath;
 
     public Output<String> urlPath() {
         return this.urlPath;
@@ -155,206 +155,178 @@ public final class SamplingRuleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="version", required=true)
-      private final Output<Integer> version;
+    private Output<Integer> version;
 
     public Output<Integer> version() {
         return this.version;
     }
 
-    public SamplingRuleArgs(
-        @Nullable Output<Map<String,String>> attributes,
-        Output<Double> fixedRate,
-        Output<String> host,
-        Output<String> httpMethod,
-        Output<Integer> priority,
-        Output<Integer> reservoirSize,
-        Output<String> resourceArn,
-        @Nullable Output<String> ruleName,
-        Output<String> serviceName,
-        Output<String> serviceType,
-        @Nullable Output<Map<String,String>> tags,
-        Output<String> urlPath,
-        Output<Integer> version) {
-        this.attributes = attributes;
-        this.fixedRate = Objects.requireNonNull(fixedRate, "expected parameter 'fixedRate' to be non-null");
-        this.host = Objects.requireNonNull(host, "expected parameter 'host' to be non-null");
-        this.httpMethod = Objects.requireNonNull(httpMethod, "expected parameter 'httpMethod' to be non-null");
-        this.priority = Objects.requireNonNull(priority, "expected parameter 'priority' to be non-null");
-        this.reservoirSize = Objects.requireNonNull(reservoirSize, "expected parameter 'reservoirSize' to be non-null");
-        this.resourceArn = Objects.requireNonNull(resourceArn, "expected parameter 'resourceArn' to be non-null");
-        this.ruleName = ruleName;
-        this.serviceName = Objects.requireNonNull(serviceName, "expected parameter 'serviceName' to be non-null");
-        this.serviceType = Objects.requireNonNull(serviceType, "expected parameter 'serviceType' to be non-null");
-        this.tags = tags;
-        this.urlPath = Objects.requireNonNull(urlPath, "expected parameter 'urlPath' to be non-null");
-        this.version = Objects.requireNonNull(version, "expected parameter 'version' to be non-null");
-    }
+    private SamplingRuleArgs() {}
 
-    private SamplingRuleArgs() {
-        this.attributes = Codegen.empty();
-        this.fixedRate = Codegen.empty();
-        this.host = Codegen.empty();
-        this.httpMethod = Codegen.empty();
-        this.priority = Codegen.empty();
-        this.reservoirSize = Codegen.empty();
-        this.resourceArn = Codegen.empty();
-        this.ruleName = Codegen.empty();
-        this.serviceName = Codegen.empty();
-        this.serviceType = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.urlPath = Codegen.empty();
-        this.version = Codegen.empty();
+    private SamplingRuleArgs(SamplingRuleArgs $) {
+        this.attributes = $.attributes;
+        this.fixedRate = $.fixedRate;
+        this.host = $.host;
+        this.httpMethod = $.httpMethod;
+        this.priority = $.priority;
+        this.reservoirSize = $.reservoirSize;
+        this.resourceArn = $.resourceArn;
+        this.ruleName = $.ruleName;
+        this.serviceName = $.serviceName;
+        this.serviceType = $.serviceType;
+        this.tags = $.tags;
+        this.urlPath = $.urlPath;
+        this.version = $.version;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SamplingRuleArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Map<String,String>> attributes;
-        private Output<Double> fixedRate;
-        private Output<String> host;
-        private Output<String> httpMethod;
-        private Output<Integer> priority;
-        private Output<Integer> reservoirSize;
-        private Output<String> resourceArn;
-        private @Nullable Output<String> ruleName;
-        private Output<String> serviceName;
-        private Output<String> serviceType;
-        private @Nullable Output<Map<String,String>> tags;
-        private Output<String> urlPath;
-        private Output<Integer> version;
+        private SamplingRuleArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SamplingRuleArgs();
         }
 
         public Builder(SamplingRuleArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.attributes = defaults.attributes;
-    	      this.fixedRate = defaults.fixedRate;
-    	      this.host = defaults.host;
-    	      this.httpMethod = defaults.httpMethod;
-    	      this.priority = defaults.priority;
-    	      this.reservoirSize = defaults.reservoirSize;
-    	      this.resourceArn = defaults.resourceArn;
-    	      this.ruleName = defaults.ruleName;
-    	      this.serviceName = defaults.serviceName;
-    	      this.serviceType = defaults.serviceType;
-    	      this.tags = defaults.tags;
-    	      this.urlPath = defaults.urlPath;
-    	      this.version = defaults.version;
+            $ = new SamplingRuleArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder attributes(@Nullable Output<Map<String,String>> attributes) {
-            this.attributes = attributes;
+            $.attributes = attributes;
             return this;
         }
-        public Builder attributes(@Nullable Map<String,String> attributes) {
-            this.attributes = Codegen.ofNullable(attributes);
-            return this;
+
+        public Builder attributes(Map<String,String> attributes) {
+            return attributes(Output.of(attributes));
         }
+
         public Builder fixedRate(Output<Double> fixedRate) {
-            this.fixedRate = Objects.requireNonNull(fixedRate);
+            $.fixedRate = fixedRate;
             return this;
         }
+
         public Builder fixedRate(Double fixedRate) {
-            this.fixedRate = Output.of(Objects.requireNonNull(fixedRate));
-            return this;
+            return fixedRate(Output.of(fixedRate));
         }
+
         public Builder host(Output<String> host) {
-            this.host = Objects.requireNonNull(host);
+            $.host = host;
             return this;
         }
+
         public Builder host(String host) {
-            this.host = Output.of(Objects.requireNonNull(host));
-            return this;
+            return host(Output.of(host));
         }
+
         public Builder httpMethod(Output<String> httpMethod) {
-            this.httpMethod = Objects.requireNonNull(httpMethod);
+            $.httpMethod = httpMethod;
             return this;
         }
+
         public Builder httpMethod(String httpMethod) {
-            this.httpMethod = Output.of(Objects.requireNonNull(httpMethod));
-            return this;
+            return httpMethod(Output.of(httpMethod));
         }
+
         public Builder priority(Output<Integer> priority) {
-            this.priority = Objects.requireNonNull(priority);
+            $.priority = priority;
             return this;
         }
+
         public Builder priority(Integer priority) {
-            this.priority = Output.of(Objects.requireNonNull(priority));
-            return this;
+            return priority(Output.of(priority));
         }
+
         public Builder reservoirSize(Output<Integer> reservoirSize) {
-            this.reservoirSize = Objects.requireNonNull(reservoirSize);
+            $.reservoirSize = reservoirSize;
             return this;
         }
+
         public Builder reservoirSize(Integer reservoirSize) {
-            this.reservoirSize = Output.of(Objects.requireNonNull(reservoirSize));
-            return this;
+            return reservoirSize(Output.of(reservoirSize));
         }
+
         public Builder resourceArn(Output<String> resourceArn) {
-            this.resourceArn = Objects.requireNonNull(resourceArn);
+            $.resourceArn = resourceArn;
             return this;
         }
+
         public Builder resourceArn(String resourceArn) {
-            this.resourceArn = Output.of(Objects.requireNonNull(resourceArn));
-            return this;
+            return resourceArn(Output.of(resourceArn));
         }
+
         public Builder ruleName(@Nullable Output<String> ruleName) {
-            this.ruleName = ruleName;
+            $.ruleName = ruleName;
             return this;
         }
-        public Builder ruleName(@Nullable String ruleName) {
-            this.ruleName = Codegen.ofNullable(ruleName);
-            return this;
+
+        public Builder ruleName(String ruleName) {
+            return ruleName(Output.of(ruleName));
         }
+
         public Builder serviceName(Output<String> serviceName) {
-            this.serviceName = Objects.requireNonNull(serviceName);
+            $.serviceName = serviceName;
             return this;
         }
+
         public Builder serviceName(String serviceName) {
-            this.serviceName = Output.of(Objects.requireNonNull(serviceName));
-            return this;
+            return serviceName(Output.of(serviceName));
         }
+
         public Builder serviceType(Output<String> serviceType) {
-            this.serviceType = Objects.requireNonNull(serviceType);
+            $.serviceType = serviceType;
             return this;
         }
+
         public Builder serviceType(String serviceType) {
-            this.serviceType = Output.of(Objects.requireNonNull(serviceType));
-            return this;
+            return serviceType(Output.of(serviceType));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder urlPath(Output<String> urlPath) {
-            this.urlPath = Objects.requireNonNull(urlPath);
+            $.urlPath = urlPath;
             return this;
         }
+
         public Builder urlPath(String urlPath) {
-            this.urlPath = Output.of(Objects.requireNonNull(urlPath));
-            return this;
+            return urlPath(Output.of(urlPath));
         }
+
         public Builder version(Output<Integer> version) {
-            this.version = Objects.requireNonNull(version);
+            $.version = version;
             return this;
         }
+
         public Builder version(Integer version) {
-            this.version = Output.of(Objects.requireNonNull(version));
-            return this;
-        }        public SamplingRuleArgs build() {
-            return new SamplingRuleArgs(attributes, fixedRate, host, httpMethod, priority, reservoirSize, resourceArn, ruleName, serviceName, serviceType, tags, urlPath, version);
+            return version(Output.of(version));
+        }
+
+        public SamplingRuleArgs build() {
+            $.fixedRate = Objects.requireNonNull($.fixedRate, "expected parameter 'fixedRate' to be non-null");
+            $.host = Objects.requireNonNull($.host, "expected parameter 'host' to be non-null");
+            $.httpMethod = Objects.requireNonNull($.httpMethod, "expected parameter 'httpMethod' to be non-null");
+            $.priority = Objects.requireNonNull($.priority, "expected parameter 'priority' to be non-null");
+            $.reservoirSize = Objects.requireNonNull($.reservoirSize, "expected parameter 'reservoirSize' to be non-null");
+            $.resourceArn = Objects.requireNonNull($.resourceArn, "expected parameter 'resourceArn' to be non-null");
+            $.serviceName = Objects.requireNonNull($.serviceName, "expected parameter 'serviceName' to be non-null");
+            $.serviceType = Objects.requireNonNull($.serviceType, "expected parameter 'serviceType' to be non-null");
+            $.urlPath = Objects.requireNonNull($.urlPath, "expected parameter 'urlPath' to be non-null");
+            $.version = Objects.requireNonNull($.version, "expected parameter 'version' to be non-null");
+            return $;
         }
     }
+
 }

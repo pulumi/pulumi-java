@@ -5,9 +5,9 @@ package com.pulumi.azurenative.machinelearningservices.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class DatabricksPropertiesArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="databricksAccessToken")
-      private final @Nullable Output<String> databricksAccessToken;
+    private @Nullable Output<String> databricksAccessToken;
 
-    public Output<String> databricksAccessToken() {
-        return this.databricksAccessToken == null ? Codegen.empty() : this.databricksAccessToken;
+    public Optional<Output<String>> databricksAccessToken() {
+        return Optional.ofNullable(this.databricksAccessToken);
     }
 
     /**
@@ -31,63 +31,58 @@ public final class DatabricksPropertiesArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="workspaceUrl")
-      private final @Nullable Output<String> workspaceUrl;
+    private @Nullable Output<String> workspaceUrl;
 
-    public Output<String> workspaceUrl() {
-        return this.workspaceUrl == null ? Codegen.empty() : this.workspaceUrl;
+    public Optional<Output<String>> workspaceUrl() {
+        return Optional.ofNullable(this.workspaceUrl);
     }
 
-    public DatabricksPropertiesArgs(
-        @Nullable Output<String> databricksAccessToken,
-        @Nullable Output<String> workspaceUrl) {
-        this.databricksAccessToken = databricksAccessToken;
-        this.workspaceUrl = workspaceUrl;
-    }
+    private DatabricksPropertiesArgs() {}
 
-    private DatabricksPropertiesArgs() {
-        this.databricksAccessToken = Codegen.empty();
-        this.workspaceUrl = Codegen.empty();
+    private DatabricksPropertiesArgs(DatabricksPropertiesArgs $) {
+        this.databricksAccessToken = $.databricksAccessToken;
+        this.workspaceUrl = $.workspaceUrl;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DatabricksPropertiesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> databricksAccessToken;
-        private @Nullable Output<String> workspaceUrl;
+        private DatabricksPropertiesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DatabricksPropertiesArgs();
         }
 
         public Builder(DatabricksPropertiesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.databricksAccessToken = defaults.databricksAccessToken;
-    	      this.workspaceUrl = defaults.workspaceUrl;
+            $ = new DatabricksPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder databricksAccessToken(@Nullable Output<String> databricksAccessToken) {
-            this.databricksAccessToken = databricksAccessToken;
+            $.databricksAccessToken = databricksAccessToken;
             return this;
         }
-        public Builder databricksAccessToken(@Nullable String databricksAccessToken) {
-            this.databricksAccessToken = Codegen.ofNullable(databricksAccessToken);
-            return this;
+
+        public Builder databricksAccessToken(String databricksAccessToken) {
+            return databricksAccessToken(Output.of(databricksAccessToken));
         }
+
         public Builder workspaceUrl(@Nullable Output<String> workspaceUrl) {
-            this.workspaceUrl = workspaceUrl;
+            $.workspaceUrl = workspaceUrl;
             return this;
         }
-        public Builder workspaceUrl(@Nullable String workspaceUrl) {
-            this.workspaceUrl = Codegen.ofNullable(workspaceUrl);
-            return this;
-        }        public DatabricksPropertiesArgs build() {
-            return new DatabricksPropertiesArgs(databricksAccessToken, workspaceUrl);
+
+        public Builder workspaceUrl(String workspaceUrl) {
+            return workspaceUrl(Output.of(workspaceUrl));
+        }
+
+        public DatabricksPropertiesArgs build() {
+            return $;
         }
     }
+
 }

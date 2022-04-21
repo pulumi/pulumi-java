@@ -17,7 +17,7 @@ public final class GetPipelineJobArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="accountName", required=true)
-      private final String accountName;
+    private String accountName;
 
     public String accountName() {
         return this.accountName;
@@ -28,7 +28,7 @@ public final class GetPipelineJobArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="pipelineJobName", required=true)
-      private final String pipelineJobName;
+    private String pipelineJobName;
 
     public String pipelineJobName() {
         return this.pipelineJobName;
@@ -39,64 +39,59 @@ public final class GetPipelineJobArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public GetPipelineJobArgs(
-        String accountName,
-        String pipelineJobName,
-        String resourceGroupName) {
-        this.accountName = Objects.requireNonNull(accountName, "expected parameter 'accountName' to be non-null");
-        this.pipelineJobName = Objects.requireNonNull(pipelineJobName, "expected parameter 'pipelineJobName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private GetPipelineJobArgs() {}
 
-    private GetPipelineJobArgs() {
-        this.accountName = null;
-        this.pipelineJobName = null;
-        this.resourceGroupName = null;
+    private GetPipelineJobArgs(GetPipelineJobArgs $) {
+        this.accountName = $.accountName;
+        this.pipelineJobName = $.pipelineJobName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetPipelineJobArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String accountName;
-        private String pipelineJobName;
-        private String resourceGroupName;
+        private GetPipelineJobArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetPipelineJobArgs();
         }
 
         public Builder(GetPipelineJobArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accountName = defaults.accountName;
-    	      this.pipelineJobName = defaults.pipelineJobName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new GetPipelineJobArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder accountName(String accountName) {
-            this.accountName = Objects.requireNonNull(accountName);
+            $.accountName = accountName;
             return this;
         }
+
         public Builder pipelineJobName(String pipelineJobName) {
-            this.pipelineJobName = Objects.requireNonNull(pipelineJobName);
+            $.pipelineJobName = pipelineJobName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public GetPipelineJobArgs build() {
-            return new GetPipelineJobArgs(accountName, pipelineJobName, resourceGroupName);
+        }
+
+        public GetPipelineJobArgs build() {
+            $.accountName = Objects.requireNonNull($.accountName, "expected parameter 'accountName' to be non-null");
+            $.pipelineJobName = Objects.requireNonNull($.pipelineJobName, "expected parameter 'pipelineJobName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

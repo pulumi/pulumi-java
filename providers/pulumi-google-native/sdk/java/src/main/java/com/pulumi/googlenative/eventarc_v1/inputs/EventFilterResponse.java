@@ -21,7 +21,7 @@ public final class EventFilterResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="attribute", required=true)
-      private final String attribute;
+    private String attribute;
 
     public String attribute() {
         return this.attribute;
@@ -32,55 +32,52 @@ public final class EventFilterResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="value", required=true)
-      private final String value;
+    private String value;
 
     public String value() {
         return this.value;
     }
 
-    public EventFilterResponse(
-        String attribute,
-        String value) {
-        this.attribute = Objects.requireNonNull(attribute, "expected parameter 'attribute' to be non-null");
-        this.value = Objects.requireNonNull(value, "expected parameter 'value' to be non-null");
-    }
+    private EventFilterResponse() {}
 
-    private EventFilterResponse() {
-        this.attribute = null;
-        this.value = null;
+    private EventFilterResponse(EventFilterResponse $) {
+        this.attribute = $.attribute;
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EventFilterResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String attribute;
-        private String value;
+        private EventFilterResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new EventFilterResponse();
         }
 
         public Builder(EventFilterResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.attribute = defaults.attribute;
-    	      this.value = defaults.value;
+            $ = new EventFilterResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder attribute(String attribute) {
-            this.attribute = Objects.requireNonNull(attribute);
+            $.attribute = attribute;
             return this;
         }
+
         public Builder value(String value) {
-            this.value = Objects.requireNonNull(value);
+            $.value = value;
             return this;
-        }        public EventFilterResponse build() {
-            return new EventFilterResponse(attribute, value);
+        }
+
+        public EventFilterResponse build() {
+            $.attribute = Objects.requireNonNull($.attribute, "expected parameter 'attribute' to be non-null");
+            $.value = Objects.requireNonNull($.value, "expected parameter 'value' to be non-null");
+            return $;
         }
     }
+
 }

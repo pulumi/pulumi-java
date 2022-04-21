@@ -5,7 +5,6 @@ package com.pulumi.aws.ec2;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,7 +18,7 @@ public final class VpnGatewayAttachmentArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="vpcId", required=true)
-      private final Output<String> vpcId;
+    private Output<String> vpcId;
 
     public Output<String> vpcId() {
         return this.vpcId;
@@ -30,63 +29,60 @@ public final class VpnGatewayAttachmentArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="vpnGatewayId", required=true)
-      private final Output<String> vpnGatewayId;
+    private Output<String> vpnGatewayId;
 
     public Output<String> vpnGatewayId() {
         return this.vpnGatewayId;
     }
 
-    public VpnGatewayAttachmentArgs(
-        Output<String> vpcId,
-        Output<String> vpnGatewayId) {
-        this.vpcId = Objects.requireNonNull(vpcId, "expected parameter 'vpcId' to be non-null");
-        this.vpnGatewayId = Objects.requireNonNull(vpnGatewayId, "expected parameter 'vpnGatewayId' to be non-null");
-    }
+    private VpnGatewayAttachmentArgs() {}
 
-    private VpnGatewayAttachmentArgs() {
-        this.vpcId = Codegen.empty();
-        this.vpnGatewayId = Codegen.empty();
+    private VpnGatewayAttachmentArgs(VpnGatewayAttachmentArgs $) {
+        this.vpcId = $.vpcId;
+        this.vpnGatewayId = $.vpnGatewayId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VpnGatewayAttachmentArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> vpcId;
-        private Output<String> vpnGatewayId;
+        private VpnGatewayAttachmentArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new VpnGatewayAttachmentArgs();
         }
 
         public Builder(VpnGatewayAttachmentArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.vpcId = defaults.vpcId;
-    	      this.vpnGatewayId = defaults.vpnGatewayId;
+            $ = new VpnGatewayAttachmentArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder vpcId(Output<String> vpcId) {
-            this.vpcId = Objects.requireNonNull(vpcId);
+            $.vpcId = vpcId;
             return this;
         }
+
         public Builder vpcId(String vpcId) {
-            this.vpcId = Output.of(Objects.requireNonNull(vpcId));
-            return this;
+            return vpcId(Output.of(vpcId));
         }
+
         public Builder vpnGatewayId(Output<String> vpnGatewayId) {
-            this.vpnGatewayId = Objects.requireNonNull(vpnGatewayId);
+            $.vpnGatewayId = vpnGatewayId;
             return this;
         }
+
         public Builder vpnGatewayId(String vpnGatewayId) {
-            this.vpnGatewayId = Output.of(Objects.requireNonNull(vpnGatewayId));
-            return this;
-        }        public VpnGatewayAttachmentArgs build() {
-            return new VpnGatewayAttachmentArgs(vpcId, vpnGatewayId);
+            return vpnGatewayId(Output.of(vpnGatewayId));
+        }
+
+        public VpnGatewayAttachmentArgs build() {
+            $.vpcId = Objects.requireNonNull($.vpcId, "expected parameter 'vpcId' to be non-null");
+            $.vpnGatewayId = Objects.requireNonNull($.vpnGatewayId, "expected parameter 'vpnGatewayId' to be non-null");
+            return $;
         }
     }
+
 }

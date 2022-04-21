@@ -5,11 +5,11 @@ package com.pulumi.azurenative.appplatform.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class BindingResourcePropertiesArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="bindingParameters")
-      private final @Nullable Output<Map<String,Object>> bindingParameters;
+    private @Nullable Output<Map<String,Object>> bindingParameters;
 
-    public Output<Map<String,Object>> bindingParameters() {
-        return this.bindingParameters == null ? Codegen.empty() : this.bindingParameters;
+    public Optional<Output<Map<String,Object>>> bindingParameters() {
+        return Optional.ofNullable(this.bindingParameters);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class BindingResourcePropertiesArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="key")
-      private final @Nullable Output<String> key;
+    private @Nullable Output<String> key;
 
-    public Output<String> key() {
-        return this.key == null ? Codegen.empty() : this.key;
+    public Optional<Output<String>> key() {
+        return Optional.ofNullable(this.key);
     }
 
     /**
@@ -48,76 +48,68 @@ public final class BindingResourcePropertiesArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="resourceId")
-      private final @Nullable Output<String> resourceId;
+    private @Nullable Output<String> resourceId;
 
-    public Output<String> resourceId() {
-        return this.resourceId == null ? Codegen.empty() : this.resourceId;
+    public Optional<Output<String>> resourceId() {
+        return Optional.ofNullable(this.resourceId);
     }
 
-    public BindingResourcePropertiesArgs(
-        @Nullable Output<Map<String,Object>> bindingParameters,
-        @Nullable Output<String> key,
-        @Nullable Output<String> resourceId) {
-        this.bindingParameters = bindingParameters;
-        this.key = key;
-        this.resourceId = resourceId;
-    }
+    private BindingResourcePropertiesArgs() {}
 
-    private BindingResourcePropertiesArgs() {
-        this.bindingParameters = Codegen.empty();
-        this.key = Codegen.empty();
-        this.resourceId = Codegen.empty();
+    private BindingResourcePropertiesArgs(BindingResourcePropertiesArgs $) {
+        this.bindingParameters = $.bindingParameters;
+        this.key = $.key;
+        this.resourceId = $.resourceId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BindingResourcePropertiesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Map<String,Object>> bindingParameters;
-        private @Nullable Output<String> key;
-        private @Nullable Output<String> resourceId;
+        private BindingResourcePropertiesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new BindingResourcePropertiesArgs();
         }
 
         public Builder(BindingResourcePropertiesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.bindingParameters = defaults.bindingParameters;
-    	      this.key = defaults.key;
-    	      this.resourceId = defaults.resourceId;
+            $ = new BindingResourcePropertiesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder bindingParameters(@Nullable Output<Map<String,Object>> bindingParameters) {
-            this.bindingParameters = bindingParameters;
+            $.bindingParameters = bindingParameters;
             return this;
         }
-        public Builder bindingParameters(@Nullable Map<String,Object> bindingParameters) {
-            this.bindingParameters = Codegen.ofNullable(bindingParameters);
-            return this;
+
+        public Builder bindingParameters(Map<String,Object> bindingParameters) {
+            return bindingParameters(Output.of(bindingParameters));
         }
+
         public Builder key(@Nullable Output<String> key) {
-            this.key = key;
+            $.key = key;
             return this;
         }
-        public Builder key(@Nullable String key) {
-            this.key = Codegen.ofNullable(key);
-            return this;
+
+        public Builder key(String key) {
+            return key(Output.of(key));
         }
+
         public Builder resourceId(@Nullable Output<String> resourceId) {
-            this.resourceId = resourceId;
+            $.resourceId = resourceId;
             return this;
         }
-        public Builder resourceId(@Nullable String resourceId) {
-            this.resourceId = Codegen.ofNullable(resourceId);
-            return this;
-        }        public BindingResourcePropertiesArgs build() {
-            return new BindingResourcePropertiesArgs(bindingParameters, key, resourceId);
+
+        public Builder resourceId(String resourceId) {
+            return resourceId(Output.of(resourceId));
+        }
+
+        public BindingResourcePropertiesArgs build() {
+            return $;
         }
     }
+
 }

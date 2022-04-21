@@ -5,11 +5,11 @@ package com.pulumi.googlenative.privateca_v1beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.privateca_v1beta1.inputs.PublicKeyArgs;
 import com.pulumi.googlenative.privateca_v1beta1.inputs.ReusableConfigWrapperArgs;
 import com.pulumi.googlenative.privateca_v1beta1.inputs.SubjectConfigArgs;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class CertificateConfigArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="publicKey")
-      private final @Nullable Output<PublicKeyArgs> publicKey;
+    private @Nullable Output<PublicKeyArgs> publicKey;
 
-    public Output<PublicKeyArgs> publicKey() {
-        return this.publicKey == null ? Codegen.empty() : this.publicKey;
+    public Optional<Output<PublicKeyArgs>> publicKey() {
+        return Optional.ofNullable(this.publicKey);
     }
 
     /**
@@ -37,7 +37,7 @@ public final class CertificateConfigArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="reusableConfig", required=true)
-      private final Output<ReusableConfigWrapperArgs> reusableConfig;
+    private Output<ReusableConfigWrapperArgs> reusableConfig;
 
     public Output<ReusableConfigWrapperArgs> reusableConfig() {
         return this.reusableConfig;
@@ -48,76 +48,70 @@ public final class CertificateConfigArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="subjectConfig", required=true)
-      private final Output<SubjectConfigArgs> subjectConfig;
+    private Output<SubjectConfigArgs> subjectConfig;
 
     public Output<SubjectConfigArgs> subjectConfig() {
         return this.subjectConfig;
     }
 
-    public CertificateConfigArgs(
-        @Nullable Output<PublicKeyArgs> publicKey,
-        Output<ReusableConfigWrapperArgs> reusableConfig,
-        Output<SubjectConfigArgs> subjectConfig) {
-        this.publicKey = publicKey;
-        this.reusableConfig = Objects.requireNonNull(reusableConfig, "expected parameter 'reusableConfig' to be non-null");
-        this.subjectConfig = Objects.requireNonNull(subjectConfig, "expected parameter 'subjectConfig' to be non-null");
-    }
+    private CertificateConfigArgs() {}
 
-    private CertificateConfigArgs() {
-        this.publicKey = Codegen.empty();
-        this.reusableConfig = Codegen.empty();
-        this.subjectConfig = Codegen.empty();
+    private CertificateConfigArgs(CertificateConfigArgs $) {
+        this.publicKey = $.publicKey;
+        this.reusableConfig = $.reusableConfig;
+        this.subjectConfig = $.subjectConfig;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CertificateConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<PublicKeyArgs> publicKey;
-        private Output<ReusableConfigWrapperArgs> reusableConfig;
-        private Output<SubjectConfigArgs> subjectConfig;
+        private CertificateConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CertificateConfigArgs();
         }
 
         public Builder(CertificateConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.publicKey = defaults.publicKey;
-    	      this.reusableConfig = defaults.reusableConfig;
-    	      this.subjectConfig = defaults.subjectConfig;
+            $ = new CertificateConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder publicKey(@Nullable Output<PublicKeyArgs> publicKey) {
-            this.publicKey = publicKey;
+            $.publicKey = publicKey;
             return this;
         }
-        public Builder publicKey(@Nullable PublicKeyArgs publicKey) {
-            this.publicKey = Codegen.ofNullable(publicKey);
-            return this;
+
+        public Builder publicKey(PublicKeyArgs publicKey) {
+            return publicKey(Output.of(publicKey));
         }
+
         public Builder reusableConfig(Output<ReusableConfigWrapperArgs> reusableConfig) {
-            this.reusableConfig = Objects.requireNonNull(reusableConfig);
+            $.reusableConfig = reusableConfig;
             return this;
         }
+
         public Builder reusableConfig(ReusableConfigWrapperArgs reusableConfig) {
-            this.reusableConfig = Output.of(Objects.requireNonNull(reusableConfig));
-            return this;
+            return reusableConfig(Output.of(reusableConfig));
         }
+
         public Builder subjectConfig(Output<SubjectConfigArgs> subjectConfig) {
-            this.subjectConfig = Objects.requireNonNull(subjectConfig);
+            $.subjectConfig = subjectConfig;
             return this;
         }
+
         public Builder subjectConfig(SubjectConfigArgs subjectConfig) {
-            this.subjectConfig = Output.of(Objects.requireNonNull(subjectConfig));
-            return this;
-        }        public CertificateConfigArgs build() {
-            return new CertificateConfigArgs(publicKey, reusableConfig, subjectConfig);
+            return subjectConfig(Output.of(subjectConfig));
+        }
+
+        public CertificateConfigArgs build() {
+            $.reusableConfig = Objects.requireNonNull($.reusableConfig, "expected parameter 'reusableConfig' to be non-null");
+            $.subjectConfig = Objects.requireNonNull($.subjectConfig, "expected parameter 'subjectConfig' to be non-null");
+            return $;
         }
     }
+
 }

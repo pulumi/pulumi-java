@@ -24,10 +24,10 @@ public final class NetworkInterfacePropertiesResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="dnsName")
-      private final @Nullable String dnsName;
+    private @Nullable String dnsName;
 
     public Optional<String> dnsName() {
-        return this.dnsName == null ? Optional.empty() : Optional.ofNullable(this.dnsName);
+        return Optional.ofNullable(this.dnsName);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class NetworkInterfacePropertiesResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="privateIpAddress")
-      private final @Nullable String privateIpAddress;
+    private @Nullable String privateIpAddress;
 
     public Optional<String> privateIpAddress() {
-        return this.privateIpAddress == null ? Optional.empty() : Optional.ofNullable(this.privateIpAddress);
+        return Optional.ofNullable(this.privateIpAddress);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class NetworkInterfacePropertiesResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="publicIpAddress")
-      private final @Nullable String publicIpAddress;
+    private @Nullable String publicIpAddress;
 
     public Optional<String> publicIpAddress() {
-        return this.publicIpAddress == null ? Optional.empty() : Optional.ofNullable(this.publicIpAddress);
+        return Optional.ofNullable(this.publicIpAddress);
     }
 
     /**
@@ -57,10 +57,10 @@ public final class NetworkInterfacePropertiesResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="publicIpAddressId")
-      private final @Nullable String publicIpAddressId;
+    private @Nullable String publicIpAddressId;
 
     public Optional<String> publicIpAddressId() {
-        return this.publicIpAddressId == null ? Optional.empty() : Optional.ofNullable(this.publicIpAddressId);
+        return Optional.ofNullable(this.publicIpAddressId);
     }
 
     /**
@@ -68,10 +68,10 @@ public final class NetworkInterfacePropertiesResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="rdpAuthority")
-      private final @Nullable String rdpAuthority;
+    private @Nullable String rdpAuthority;
 
     public Optional<String> rdpAuthority() {
-        return this.rdpAuthority == null ? Optional.empty() : Optional.ofNullable(this.rdpAuthority);
+        return Optional.ofNullable(this.rdpAuthority);
     }
 
     /**
@@ -79,10 +79,10 @@ public final class NetworkInterfacePropertiesResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="sharedPublicIpAddressConfiguration")
-      private final @Nullable SharedPublicIpAddressConfigurationResponse sharedPublicIpAddressConfiguration;
+    private @Nullable SharedPublicIpAddressConfigurationResponse sharedPublicIpAddressConfiguration;
 
     public Optional<SharedPublicIpAddressConfigurationResponse> sharedPublicIpAddressConfiguration() {
-        return this.sharedPublicIpAddressConfiguration == null ? Optional.empty() : Optional.ofNullable(this.sharedPublicIpAddressConfiguration);
+        return Optional.ofNullable(this.sharedPublicIpAddressConfiguration);
     }
 
     /**
@@ -90,10 +90,10 @@ public final class NetworkInterfacePropertiesResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="sshAuthority")
-      private final @Nullable String sshAuthority;
+    private @Nullable String sshAuthority;
 
     public Optional<String> sshAuthority() {
-        return this.sshAuthority == null ? Optional.empty() : Optional.ofNullable(this.sshAuthority);
+        return Optional.ofNullable(this.sshAuthority);
     }
 
     /**
@@ -101,10 +101,10 @@ public final class NetworkInterfacePropertiesResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="subnetId")
-      private final @Nullable String subnetId;
+    private @Nullable String subnetId;
 
     public Optional<String> subnetId() {
-        return this.subnetId == null ? Optional.empty() : Optional.ofNullable(this.subnetId);
+        return Optional.ofNullable(this.subnetId);
     }
 
     /**
@@ -112,118 +112,92 @@ public final class NetworkInterfacePropertiesResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="virtualNetworkId")
-      private final @Nullable String virtualNetworkId;
+    private @Nullable String virtualNetworkId;
 
     public Optional<String> virtualNetworkId() {
-        return this.virtualNetworkId == null ? Optional.empty() : Optional.ofNullable(this.virtualNetworkId);
+        return Optional.ofNullable(this.virtualNetworkId);
     }
 
-    public NetworkInterfacePropertiesResponse(
-        @Nullable String dnsName,
-        @Nullable String privateIpAddress,
-        @Nullable String publicIpAddress,
-        @Nullable String publicIpAddressId,
-        @Nullable String rdpAuthority,
-        @Nullable SharedPublicIpAddressConfigurationResponse sharedPublicIpAddressConfiguration,
-        @Nullable String sshAuthority,
-        @Nullable String subnetId,
-        @Nullable String virtualNetworkId) {
-        this.dnsName = dnsName;
-        this.privateIpAddress = privateIpAddress;
-        this.publicIpAddress = publicIpAddress;
-        this.publicIpAddressId = publicIpAddressId;
-        this.rdpAuthority = rdpAuthority;
-        this.sharedPublicIpAddressConfiguration = sharedPublicIpAddressConfiguration;
-        this.sshAuthority = sshAuthority;
-        this.subnetId = subnetId;
-        this.virtualNetworkId = virtualNetworkId;
-    }
+    private NetworkInterfacePropertiesResponse() {}
 
-    private NetworkInterfacePropertiesResponse() {
-        this.dnsName = null;
-        this.privateIpAddress = null;
-        this.publicIpAddress = null;
-        this.publicIpAddressId = null;
-        this.rdpAuthority = null;
-        this.sharedPublicIpAddressConfiguration = null;
-        this.sshAuthority = null;
-        this.subnetId = null;
-        this.virtualNetworkId = null;
+    private NetworkInterfacePropertiesResponse(NetworkInterfacePropertiesResponse $) {
+        this.dnsName = $.dnsName;
+        this.privateIpAddress = $.privateIpAddress;
+        this.publicIpAddress = $.publicIpAddress;
+        this.publicIpAddressId = $.publicIpAddressId;
+        this.rdpAuthority = $.rdpAuthority;
+        this.sharedPublicIpAddressConfiguration = $.sharedPublicIpAddressConfiguration;
+        this.sshAuthority = $.sshAuthority;
+        this.subnetId = $.subnetId;
+        this.virtualNetworkId = $.virtualNetworkId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NetworkInterfacePropertiesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String dnsName;
-        private @Nullable String privateIpAddress;
-        private @Nullable String publicIpAddress;
-        private @Nullable String publicIpAddressId;
-        private @Nullable String rdpAuthority;
-        private @Nullable SharedPublicIpAddressConfigurationResponse sharedPublicIpAddressConfiguration;
-        private @Nullable String sshAuthority;
-        private @Nullable String subnetId;
-        private @Nullable String virtualNetworkId;
+        private NetworkInterfacePropertiesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new NetworkInterfacePropertiesResponse();
         }
 
         public Builder(NetworkInterfacePropertiesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dnsName = defaults.dnsName;
-    	      this.privateIpAddress = defaults.privateIpAddress;
-    	      this.publicIpAddress = defaults.publicIpAddress;
-    	      this.publicIpAddressId = defaults.publicIpAddressId;
-    	      this.rdpAuthority = defaults.rdpAuthority;
-    	      this.sharedPublicIpAddressConfiguration = defaults.sharedPublicIpAddressConfiguration;
-    	      this.sshAuthority = defaults.sshAuthority;
-    	      this.subnetId = defaults.subnetId;
-    	      this.virtualNetworkId = defaults.virtualNetworkId;
+            $ = new NetworkInterfacePropertiesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder dnsName(@Nullable String dnsName) {
-            this.dnsName = dnsName;
+            $.dnsName = dnsName;
             return this;
         }
+
         public Builder privateIpAddress(@Nullable String privateIpAddress) {
-            this.privateIpAddress = privateIpAddress;
+            $.privateIpAddress = privateIpAddress;
             return this;
         }
+
         public Builder publicIpAddress(@Nullable String publicIpAddress) {
-            this.publicIpAddress = publicIpAddress;
+            $.publicIpAddress = publicIpAddress;
             return this;
         }
+
         public Builder publicIpAddressId(@Nullable String publicIpAddressId) {
-            this.publicIpAddressId = publicIpAddressId;
+            $.publicIpAddressId = publicIpAddressId;
             return this;
         }
+
         public Builder rdpAuthority(@Nullable String rdpAuthority) {
-            this.rdpAuthority = rdpAuthority;
+            $.rdpAuthority = rdpAuthority;
             return this;
         }
+
         public Builder sharedPublicIpAddressConfiguration(@Nullable SharedPublicIpAddressConfigurationResponse sharedPublicIpAddressConfiguration) {
-            this.sharedPublicIpAddressConfiguration = sharedPublicIpAddressConfiguration;
+            $.sharedPublicIpAddressConfiguration = sharedPublicIpAddressConfiguration;
             return this;
         }
+
         public Builder sshAuthority(@Nullable String sshAuthority) {
-            this.sshAuthority = sshAuthority;
+            $.sshAuthority = sshAuthority;
             return this;
         }
+
         public Builder subnetId(@Nullable String subnetId) {
-            this.subnetId = subnetId;
+            $.subnetId = subnetId;
             return this;
         }
+
         public Builder virtualNetworkId(@Nullable String virtualNetworkId) {
-            this.virtualNetworkId = virtualNetworkId;
+            $.virtualNetworkId = virtualNetworkId;
             return this;
-        }        public NetworkInterfacePropertiesResponse build() {
-            return new NetworkInterfacePropertiesResponse(dnsName, privateIpAddress, publicIpAddress, publicIpAddressId, rdpAuthority, sharedPublicIpAddressConfiguration, sshAuthority, subnetId, virtualNetworkId);
+        }
+
+        public NetworkInterfacePropertiesResponse build() {
+            return $;
         }
     }
+
 }

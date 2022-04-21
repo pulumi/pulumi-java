@@ -21,45 +21,45 @@ public final class UniformShardingResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="numShards", required=true)
-      private final Integer numShards;
+    private Integer numShards;
 
     public Integer numShards() {
         return this.numShards;
     }
 
-    public UniformShardingResponse(Integer numShards) {
-        this.numShards = Objects.requireNonNull(numShards, "expected parameter 'numShards' to be non-null");
-    }
+    private UniformShardingResponse() {}
 
-    private UniformShardingResponse() {
-        this.numShards = null;
+    private UniformShardingResponse(UniformShardingResponse $) {
+        this.numShards = $.numShards;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(UniformShardingResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Integer numShards;
+        private UniformShardingResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new UniformShardingResponse();
         }
 
         public Builder(UniformShardingResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.numShards = defaults.numShards;
+            $ = new UniformShardingResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder numShards(Integer numShards) {
-            this.numShards = Objects.requireNonNull(numShards);
+            $.numShards = numShards;
             return this;
-        }        public UniformShardingResponse build() {
-            return new UniformShardingResponse(numShards);
+        }
+
+        public UniformShardingResponse build() {
+            $.numShards = Objects.requireNonNull($.numShards, "expected parameter 'numShards' to be non-null");
+            return $;
         }
     }
+
 }

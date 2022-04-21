@@ -5,7 +5,6 @@ package com.pulumi.awsnative.ssmincidents.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,49 +18,49 @@ public final class ReplicationSetRegionConfigurationArgs extends com.pulumi.reso
     public static final ReplicationSetRegionConfigurationArgs Empty = new ReplicationSetRegionConfigurationArgs();
 
     @Import(name="sseKmsKeyId", required=true)
-      private final Output<String> sseKmsKeyId;
+    private Output<String> sseKmsKeyId;
 
     public Output<String> sseKmsKeyId() {
         return this.sseKmsKeyId;
     }
 
-    public ReplicationSetRegionConfigurationArgs(Output<String> sseKmsKeyId) {
-        this.sseKmsKeyId = Objects.requireNonNull(sseKmsKeyId, "expected parameter 'sseKmsKeyId' to be non-null");
-    }
+    private ReplicationSetRegionConfigurationArgs() {}
 
-    private ReplicationSetRegionConfigurationArgs() {
-        this.sseKmsKeyId = Codegen.empty();
+    private ReplicationSetRegionConfigurationArgs(ReplicationSetRegionConfigurationArgs $) {
+        this.sseKmsKeyId = $.sseKmsKeyId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ReplicationSetRegionConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> sseKmsKeyId;
+        private ReplicationSetRegionConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ReplicationSetRegionConfigurationArgs();
         }
 
         public Builder(ReplicationSetRegionConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.sseKmsKeyId = defaults.sseKmsKeyId;
+            $ = new ReplicationSetRegionConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder sseKmsKeyId(Output<String> sseKmsKeyId) {
-            this.sseKmsKeyId = Objects.requireNonNull(sseKmsKeyId);
+            $.sseKmsKeyId = sseKmsKeyId;
             return this;
         }
+
         public Builder sseKmsKeyId(String sseKmsKeyId) {
-            this.sseKmsKeyId = Output.of(Objects.requireNonNull(sseKmsKeyId));
-            return this;
-        }        public ReplicationSetRegionConfigurationArgs build() {
-            return new ReplicationSetRegionConfigurationArgs(sseKmsKeyId);
+            return sseKmsKeyId(Output.of(sseKmsKeyId));
+        }
+
+        public ReplicationSetRegionConfigurationArgs build() {
+            $.sseKmsKeyId = Objects.requireNonNull($.sseKmsKeyId, "expected parameter 'sseKmsKeyId' to be non-null");
+            return $;
         }
     }
+
 }

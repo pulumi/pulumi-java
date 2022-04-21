@@ -5,7 +5,6 @@ package com.pulumi.aws.cloudfront.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +19,7 @@ public final class ResponseHeadersPolicySecurityHeadersConfigReferrerPolicyGetAr
      * 
      */
     @Import(name="override", required=true)
-      private final Output<Boolean> override;
+    private Output<Boolean> override;
 
     public Output<Boolean> override() {
         return this.override;
@@ -31,63 +30,60 @@ public final class ResponseHeadersPolicySecurityHeadersConfigReferrerPolicyGetAr
      * 
      */
     @Import(name="referrerPolicy", required=true)
-      private final Output<String> referrerPolicy;
+    private Output<String> referrerPolicy;
 
     public Output<String> referrerPolicy() {
         return this.referrerPolicy;
     }
 
-    public ResponseHeadersPolicySecurityHeadersConfigReferrerPolicyGetArgs(
-        Output<Boolean> override,
-        Output<String> referrerPolicy) {
-        this.override = Objects.requireNonNull(override, "expected parameter 'override' to be non-null");
-        this.referrerPolicy = Objects.requireNonNull(referrerPolicy, "expected parameter 'referrerPolicy' to be non-null");
-    }
+    private ResponseHeadersPolicySecurityHeadersConfigReferrerPolicyGetArgs() {}
 
-    private ResponseHeadersPolicySecurityHeadersConfigReferrerPolicyGetArgs() {
-        this.override = Codegen.empty();
-        this.referrerPolicy = Codegen.empty();
+    private ResponseHeadersPolicySecurityHeadersConfigReferrerPolicyGetArgs(ResponseHeadersPolicySecurityHeadersConfigReferrerPolicyGetArgs $) {
+        this.override = $.override;
+        this.referrerPolicy = $.referrerPolicy;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ResponseHeadersPolicySecurityHeadersConfigReferrerPolicyGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Boolean> override;
-        private Output<String> referrerPolicy;
+        private ResponseHeadersPolicySecurityHeadersConfigReferrerPolicyGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ResponseHeadersPolicySecurityHeadersConfigReferrerPolicyGetArgs();
         }
 
         public Builder(ResponseHeadersPolicySecurityHeadersConfigReferrerPolicyGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.override = defaults.override;
-    	      this.referrerPolicy = defaults.referrerPolicy;
+            $ = new ResponseHeadersPolicySecurityHeadersConfigReferrerPolicyGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder override(Output<Boolean> override) {
-            this.override = Objects.requireNonNull(override);
+            $.override = override;
             return this;
         }
+
         public Builder override(Boolean override) {
-            this.override = Output.of(Objects.requireNonNull(override));
-            return this;
+            return override(Output.of(override));
         }
+
         public Builder referrerPolicy(Output<String> referrerPolicy) {
-            this.referrerPolicy = Objects.requireNonNull(referrerPolicy);
+            $.referrerPolicy = referrerPolicy;
             return this;
         }
+
         public Builder referrerPolicy(String referrerPolicy) {
-            this.referrerPolicy = Output.of(Objects.requireNonNull(referrerPolicy));
-            return this;
-        }        public ResponseHeadersPolicySecurityHeadersConfigReferrerPolicyGetArgs build() {
-            return new ResponseHeadersPolicySecurityHeadersConfigReferrerPolicyGetArgs(override, referrerPolicy);
+            return referrerPolicy(Output.of(referrerPolicy));
+        }
+
+        public ResponseHeadersPolicySecurityHeadersConfigReferrerPolicyGetArgs build() {
+            $.override = Objects.requireNonNull($.override, "expected parameter 'override' to be non-null");
+            $.referrerPolicy = Objects.requireNonNull($.referrerPolicy, "expected parameter 'referrerPolicy' to be non-null");
+            return $;
         }
     }
+
 }

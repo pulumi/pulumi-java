@@ -13,45 +13,45 @@ public final class GetDataflowEndpointGroupArgs extends com.pulumi.resources.Inv
     public static final GetDataflowEndpointGroupArgs Empty = new GetDataflowEndpointGroupArgs();
 
     @Import(name="id", required=true)
-      private final String id;
+    private String id;
 
     public String id() {
         return this.id;
     }
 
-    public GetDataflowEndpointGroupArgs(String id) {
-        this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
-    }
+    private GetDataflowEndpointGroupArgs() {}
 
-    private GetDataflowEndpointGroupArgs() {
-        this.id = null;
+    private GetDataflowEndpointGroupArgs(GetDataflowEndpointGroupArgs $) {
+        this.id = $.id;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetDataflowEndpointGroupArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String id;
+        private GetDataflowEndpointGroupArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetDataflowEndpointGroupArgs();
         }
 
         public Builder(GetDataflowEndpointGroupArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.id = defaults.id;
+            $ = new GetDataflowEndpointGroupArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder id(String id) {
-            this.id = Objects.requireNonNull(id);
+            $.id = id;
             return this;
-        }        public GetDataflowEndpointGroupArgs build() {
-            return new GetDataflowEndpointGroupArgs(id);
+        }
+
+        public GetDataflowEndpointGroupArgs build() {
+            $.id = Objects.requireNonNull($.id, "expected parameter 'id' to be non-null");
+            return $;
         }
     }
+
 }

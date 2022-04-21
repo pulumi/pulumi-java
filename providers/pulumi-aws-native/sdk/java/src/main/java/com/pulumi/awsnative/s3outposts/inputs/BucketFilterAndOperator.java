@@ -3,35 +3,26 @@
 
 package com.pulumi.awsnative.s3outposts.inputs;
 
-import java.util.Objects;
+
 
 
 public final class BucketFilterAndOperator extends com.pulumi.resources.InvokeArgs {
 
     public static final BucketFilterAndOperator Empty = new BucketFilterAndOperator();
 
-    public BucketFilterAndOperator() {
-    }
-
     public static Builder builder() {
         return new Builder();
     }
 
-    public static Builder builder(BucketFilterAndOperator defaults) {
-        return new Builder(defaults);
-    }
-
     public static final class Builder {
+        private BucketFilterAndOperator $;
 
         public Builder() {
-    	      // Empty
-        }
-
-        public Builder(BucketFilterAndOperator defaults) {
-    	      Objects.requireNonNull(defaults);
+            $ = new BucketFilterAndOperator();
         }
         public BucketFilterAndOperator build() {
-            return new BucketFilterAndOperator();
+            return $;
         }
     }
+
 }

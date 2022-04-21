@@ -5,7 +5,6 @@ package com.pulumi.azurenative.customerinsights.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,7 +22,7 @@ public final class PredictionMappingsArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="grade", required=true)
-      private final Output<String> grade;
+    private Output<String> grade;
 
     public Output<String> grade() {
         return this.grade;
@@ -34,7 +33,7 @@ public final class PredictionMappingsArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="reason", required=true)
-      private final Output<String> reason;
+    private Output<String> reason;
 
     public Output<String> reason() {
         return this.reason;
@@ -45,76 +44,71 @@ public final class PredictionMappingsArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="score", required=true)
-      private final Output<String> score;
+    private Output<String> score;
 
     public Output<String> score() {
         return this.score;
     }
 
-    public PredictionMappingsArgs(
-        Output<String> grade,
-        Output<String> reason,
-        Output<String> score) {
-        this.grade = Objects.requireNonNull(grade, "expected parameter 'grade' to be non-null");
-        this.reason = Objects.requireNonNull(reason, "expected parameter 'reason' to be non-null");
-        this.score = Objects.requireNonNull(score, "expected parameter 'score' to be non-null");
-    }
+    private PredictionMappingsArgs() {}
 
-    private PredictionMappingsArgs() {
-        this.grade = Codegen.empty();
-        this.reason = Codegen.empty();
-        this.score = Codegen.empty();
+    private PredictionMappingsArgs(PredictionMappingsArgs $) {
+        this.grade = $.grade;
+        this.reason = $.reason;
+        this.score = $.score;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PredictionMappingsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> grade;
-        private Output<String> reason;
-        private Output<String> score;
+        private PredictionMappingsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PredictionMappingsArgs();
         }
 
         public Builder(PredictionMappingsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.grade = defaults.grade;
-    	      this.reason = defaults.reason;
-    	      this.score = defaults.score;
+            $ = new PredictionMappingsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder grade(Output<String> grade) {
-            this.grade = Objects.requireNonNull(grade);
+            $.grade = grade;
             return this;
         }
+
         public Builder grade(String grade) {
-            this.grade = Output.of(Objects.requireNonNull(grade));
-            return this;
+            return grade(Output.of(grade));
         }
+
         public Builder reason(Output<String> reason) {
-            this.reason = Objects.requireNonNull(reason);
+            $.reason = reason;
             return this;
         }
+
         public Builder reason(String reason) {
-            this.reason = Output.of(Objects.requireNonNull(reason));
-            return this;
+            return reason(Output.of(reason));
         }
+
         public Builder score(Output<String> score) {
-            this.score = Objects.requireNonNull(score);
+            $.score = score;
             return this;
         }
+
         public Builder score(String score) {
-            this.score = Output.of(Objects.requireNonNull(score));
-            return this;
-        }        public PredictionMappingsArgs build() {
-            return new PredictionMappingsArgs(grade, reason, score);
+            return score(Output.of(score));
+        }
+
+        public PredictionMappingsArgs build() {
+            $.grade = Objects.requireNonNull($.grade, "expected parameter 'grade' to be non-null");
+            $.reason = Objects.requireNonNull($.reason, "expected parameter 'reason' to be non-null");
+            $.score = Objects.requireNonNull($.score, "expected parameter 'score' to be non-null");
+            return $;
         }
     }
+
 }

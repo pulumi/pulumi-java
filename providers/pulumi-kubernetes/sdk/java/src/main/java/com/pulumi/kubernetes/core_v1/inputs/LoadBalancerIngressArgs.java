@@ -5,11 +5,11 @@ package com.pulumi.kubernetes.core_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.kubernetes.core_v1.inputs.PortStatusArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class LoadBalancerIngressArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="hostname")
-      private final @Nullable Output<String> hostname;
+    private @Nullable Output<String> hostname;
 
-    public Output<String> hostname() {
-        return this.hostname == null ? Codegen.empty() : this.hostname;
+    public Optional<Output<String>> hostname() {
+        return Optional.ofNullable(this.hostname);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class LoadBalancerIngressArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="ip")
-      private final @Nullable Output<String> ip;
+    private @Nullable Output<String> ip;
 
-    public Output<String> ip() {
-        return this.ip == null ? Codegen.empty() : this.ip;
+    public Optional<Output<String>> ip() {
+        return Optional.ofNullable(this.ip);
     }
 
     /**
@@ -48,79 +48,72 @@ public final class LoadBalancerIngressArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="ports")
-      private final @Nullable Output<List<PortStatusArgs>> ports;
+    private @Nullable Output<List<PortStatusArgs>> ports;
 
-    public Output<List<PortStatusArgs>> ports() {
-        return this.ports == null ? Codegen.empty() : this.ports;
+    public Optional<Output<List<PortStatusArgs>>> ports() {
+        return Optional.ofNullable(this.ports);
     }
 
-    public LoadBalancerIngressArgs(
-        @Nullable Output<String> hostname,
-        @Nullable Output<String> ip,
-        @Nullable Output<List<PortStatusArgs>> ports) {
-        this.hostname = hostname;
-        this.ip = ip;
-        this.ports = ports;
-    }
+    private LoadBalancerIngressArgs() {}
 
-    private LoadBalancerIngressArgs() {
-        this.hostname = Codegen.empty();
-        this.ip = Codegen.empty();
-        this.ports = Codegen.empty();
+    private LoadBalancerIngressArgs(LoadBalancerIngressArgs $) {
+        this.hostname = $.hostname;
+        this.ip = $.ip;
+        this.ports = $.ports;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LoadBalancerIngressArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> hostname;
-        private @Nullable Output<String> ip;
-        private @Nullable Output<List<PortStatusArgs>> ports;
+        private LoadBalancerIngressArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new LoadBalancerIngressArgs();
         }
 
         public Builder(LoadBalancerIngressArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.hostname = defaults.hostname;
-    	      this.ip = defaults.ip;
-    	      this.ports = defaults.ports;
+            $ = new LoadBalancerIngressArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder hostname(@Nullable Output<String> hostname) {
-            this.hostname = hostname;
+            $.hostname = hostname;
             return this;
         }
-        public Builder hostname(@Nullable String hostname) {
-            this.hostname = Codegen.ofNullable(hostname);
-            return this;
+
+        public Builder hostname(String hostname) {
+            return hostname(Output.of(hostname));
         }
+
         public Builder ip(@Nullable Output<String> ip) {
-            this.ip = ip;
+            $.ip = ip;
             return this;
         }
-        public Builder ip(@Nullable String ip) {
-            this.ip = Codegen.ofNullable(ip);
-            return this;
+
+        public Builder ip(String ip) {
+            return ip(Output.of(ip));
         }
+
         public Builder ports(@Nullable Output<List<PortStatusArgs>> ports) {
-            this.ports = ports;
+            $.ports = ports;
             return this;
         }
-        public Builder ports(@Nullable List<PortStatusArgs> ports) {
-            this.ports = Codegen.ofNullable(ports);
-            return this;
+
+        public Builder ports(List<PortStatusArgs> ports) {
+            return ports(Output.of(ports));
         }
+
         public Builder ports(PortStatusArgs... ports) {
             return ports(List.of(ports));
-        }        public LoadBalancerIngressArgs build() {
-            return new LoadBalancerIngressArgs(hostname, ip, ports);
+        }
+
+        public LoadBalancerIngressArgs build() {
+            return $;
         }
     }
+
 }

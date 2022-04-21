@@ -5,10 +5,10 @@ package com.pulumi.aws.ec2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class ProxyProtocolPolicyState extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="instancePorts")
-      private final @Nullable Output<List<String>> instancePorts;
+    private @Nullable Output<List<String>> instancePorts;
 
-    public Output<List<String>> instancePorts() {
-        return this.instancePorts == null ? Codegen.empty() : this.instancePorts;
+    public Optional<Output<List<String>>> instancePorts() {
+        return Optional.ofNullable(this.instancePorts);
     }
 
     /**
@@ -34,66 +34,62 @@ public final class ProxyProtocolPolicyState extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="loadBalancer")
-      private final @Nullable Output<String> loadBalancer;
+    private @Nullable Output<String> loadBalancer;
 
-    public Output<String> loadBalancer() {
-        return this.loadBalancer == null ? Codegen.empty() : this.loadBalancer;
+    public Optional<Output<String>> loadBalancer() {
+        return Optional.ofNullable(this.loadBalancer);
     }
 
-    public ProxyProtocolPolicyState(
-        @Nullable Output<List<String>> instancePorts,
-        @Nullable Output<String> loadBalancer) {
-        this.instancePorts = instancePorts;
-        this.loadBalancer = loadBalancer;
-    }
+    private ProxyProtocolPolicyState() {}
 
-    private ProxyProtocolPolicyState() {
-        this.instancePorts = Codegen.empty();
-        this.loadBalancer = Codegen.empty();
+    private ProxyProtocolPolicyState(ProxyProtocolPolicyState $) {
+        this.instancePorts = $.instancePorts;
+        this.loadBalancer = $.loadBalancer;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ProxyProtocolPolicyState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> instancePorts;
-        private @Nullable Output<String> loadBalancer;
+        private ProxyProtocolPolicyState $;
 
         public Builder() {
-    	      // Empty
+            $ = new ProxyProtocolPolicyState();
         }
 
         public Builder(ProxyProtocolPolicyState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.instancePorts = defaults.instancePorts;
-    	      this.loadBalancer = defaults.loadBalancer;
+            $ = new ProxyProtocolPolicyState(Objects.requireNonNull(defaults));
         }
 
         public Builder instancePorts(@Nullable Output<List<String>> instancePorts) {
-            this.instancePorts = instancePorts;
+            $.instancePorts = instancePorts;
             return this;
         }
-        public Builder instancePorts(@Nullable List<String> instancePorts) {
-            this.instancePorts = Codegen.ofNullable(instancePorts);
-            return this;
+
+        public Builder instancePorts(List<String> instancePorts) {
+            return instancePorts(Output.of(instancePorts));
         }
+
         public Builder instancePorts(String... instancePorts) {
             return instancePorts(List.of(instancePorts));
         }
+
         public Builder loadBalancer(@Nullable Output<String> loadBalancer) {
-            this.loadBalancer = loadBalancer;
+            $.loadBalancer = loadBalancer;
             return this;
         }
-        public Builder loadBalancer(@Nullable String loadBalancer) {
-            this.loadBalancer = Codegen.ofNullable(loadBalancer);
-            return this;
-        }        public ProxyProtocolPolicyState build() {
-            return new ProxyProtocolPolicyState(instancePorts, loadBalancer);
+
+        public Builder loadBalancer(String loadBalancer) {
+            return loadBalancer(Output.of(loadBalancer));
+        }
+
+        public ProxyProtocolPolicyState build() {
+            return $;
         }
     }
+
 }

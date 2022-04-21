@@ -13,78 +13,73 @@ public final class GetDatabaseInstanceIpAddress extends com.pulumi.resources.Inv
     public static final GetDatabaseInstanceIpAddress Empty = new GetDatabaseInstanceIpAddress();
 
     @Import(name="ipAddress", required=true)
-      private final String ipAddress;
+    private String ipAddress;
 
     public String ipAddress() {
         return this.ipAddress;
     }
 
     @Import(name="timeToRetire", required=true)
-      private final String timeToRetire;
+    private String timeToRetire;
 
     public String timeToRetire() {
         return this.timeToRetire;
     }
 
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
     }
 
-    public GetDatabaseInstanceIpAddress(
-        String ipAddress,
-        String timeToRetire,
-        String type) {
-        this.ipAddress = Objects.requireNonNull(ipAddress, "expected parameter 'ipAddress' to be non-null");
-        this.timeToRetire = Objects.requireNonNull(timeToRetire, "expected parameter 'timeToRetire' to be non-null");
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private GetDatabaseInstanceIpAddress() {}
 
-    private GetDatabaseInstanceIpAddress() {
-        this.ipAddress = null;
-        this.timeToRetire = null;
-        this.type = null;
+    private GetDatabaseInstanceIpAddress(GetDatabaseInstanceIpAddress $) {
+        this.ipAddress = $.ipAddress;
+        this.timeToRetire = $.timeToRetire;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetDatabaseInstanceIpAddress defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String ipAddress;
-        private String timeToRetire;
-        private String type;
+        private GetDatabaseInstanceIpAddress $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetDatabaseInstanceIpAddress();
         }
 
         public Builder(GetDatabaseInstanceIpAddress defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.ipAddress = defaults.ipAddress;
-    	      this.timeToRetire = defaults.timeToRetire;
-    	      this.type = defaults.type;
+            $ = new GetDatabaseInstanceIpAddress(Objects.requireNonNull(defaults));
         }
 
         public Builder ipAddress(String ipAddress) {
-            this.ipAddress = Objects.requireNonNull(ipAddress);
+            $.ipAddress = ipAddress;
             return this;
         }
+
         public Builder timeToRetire(String timeToRetire) {
-            this.timeToRetire = Objects.requireNonNull(timeToRetire);
+            $.timeToRetire = timeToRetire;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
-        }        public GetDatabaseInstanceIpAddress build() {
-            return new GetDatabaseInstanceIpAddress(ipAddress, timeToRetire, type);
+        }
+
+        public GetDatabaseInstanceIpAddress build() {
+            $.ipAddress = Objects.requireNonNull($.ipAddress, "expected parameter 'ipAddress' to be non-null");
+            $.timeToRetire = Objects.requireNonNull($.timeToRetire, "expected parameter 'timeToRetire' to be non-null");
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

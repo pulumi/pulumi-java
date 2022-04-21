@@ -5,9 +5,9 @@ package com.pulumi.googlenative.dlp_v2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2CryptoKeyArgs;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class GooglePrivacyDlpV2CryptoHashConfigArgs extends com.pulumi.res
      * 
      */
     @Import(name="cryptoKey")
-      private final @Nullable Output<GooglePrivacyDlpV2CryptoKeyArgs> cryptoKey;
+    private @Nullable Output<GooglePrivacyDlpV2CryptoKeyArgs> cryptoKey;
 
-    public Output<GooglePrivacyDlpV2CryptoKeyArgs> cryptoKey() {
-        return this.cryptoKey == null ? Codegen.empty() : this.cryptoKey;
+    public Optional<Output<GooglePrivacyDlpV2CryptoKeyArgs>> cryptoKey() {
+        return Optional.ofNullable(this.cryptoKey);
     }
 
-    public GooglePrivacyDlpV2CryptoHashConfigArgs(@Nullable Output<GooglePrivacyDlpV2CryptoKeyArgs> cryptoKey) {
-        this.cryptoKey = cryptoKey;
-    }
+    private GooglePrivacyDlpV2CryptoHashConfigArgs() {}
 
-    private GooglePrivacyDlpV2CryptoHashConfigArgs() {
-        this.cryptoKey = Codegen.empty();
+    private GooglePrivacyDlpV2CryptoHashConfigArgs(GooglePrivacyDlpV2CryptoHashConfigArgs $) {
+        this.cryptoKey = $.cryptoKey;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GooglePrivacyDlpV2CryptoHashConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<GooglePrivacyDlpV2CryptoKeyArgs> cryptoKey;
+        private GooglePrivacyDlpV2CryptoHashConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GooglePrivacyDlpV2CryptoHashConfigArgs();
         }
 
         public Builder(GooglePrivacyDlpV2CryptoHashConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cryptoKey = defaults.cryptoKey;
+            $ = new GooglePrivacyDlpV2CryptoHashConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder cryptoKey(@Nullable Output<GooglePrivacyDlpV2CryptoKeyArgs> cryptoKey) {
-            this.cryptoKey = cryptoKey;
+            $.cryptoKey = cryptoKey;
             return this;
         }
-        public Builder cryptoKey(@Nullable GooglePrivacyDlpV2CryptoKeyArgs cryptoKey) {
-            this.cryptoKey = Codegen.ofNullable(cryptoKey);
-            return this;
-        }        public GooglePrivacyDlpV2CryptoHashConfigArgs build() {
-            return new GooglePrivacyDlpV2CryptoHashConfigArgs(cryptoKey);
+
+        public Builder cryptoKey(GooglePrivacyDlpV2CryptoKeyArgs cryptoKey) {
+            return cryptoKey(Output.of(cryptoKey));
+        }
+
+        public GooglePrivacyDlpV2CryptoHashConfigArgs build() {
+            return $;
         }
     }
+
 }

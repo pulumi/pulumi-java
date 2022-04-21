@@ -23,45 +23,44 @@ public final class IpAddressRangeResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="addressRange")
-      private final @Nullable String addressRange;
+    private @Nullable String addressRange;
 
     public Optional<String> addressRange() {
-        return this.addressRange == null ? Optional.empty() : Optional.ofNullable(this.addressRange);
+        return Optional.ofNullable(this.addressRange);
     }
 
-    public IpAddressRangeResponse(@Nullable String addressRange) {
-        this.addressRange = addressRange;
-    }
+    private IpAddressRangeResponse() {}
 
-    private IpAddressRangeResponse() {
-        this.addressRange = null;
+    private IpAddressRangeResponse(IpAddressRangeResponse $) {
+        this.addressRange = $.addressRange;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(IpAddressRangeResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String addressRange;
+        private IpAddressRangeResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new IpAddressRangeResponse();
         }
 
         public Builder(IpAddressRangeResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.addressRange = defaults.addressRange;
+            $ = new IpAddressRangeResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder addressRange(@Nullable String addressRange) {
-            this.addressRange = addressRange;
+            $.addressRange = addressRange;
             return this;
-        }        public IpAddressRangeResponse build() {
-            return new IpAddressRangeResponse(addressRange);
+        }
+
+        public IpAddressRangeResponse build() {
+            return $;
         }
     }
+
 }

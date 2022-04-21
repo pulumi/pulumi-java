@@ -5,7 +5,6 @@ package com.pulumi.aws.cloudfront.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,7 +18,7 @@ public final class FieldLevelEncryptionConfigQueryArgProfileConfigQueryArgProfil
      * 
      */
     @Import(name="profileId", required=true)
-      private final Output<String> profileId;
+    private Output<String> profileId;
 
     public Output<String> profileId() {
         return this.profileId;
@@ -30,63 +29,60 @@ public final class FieldLevelEncryptionConfigQueryArgProfileConfigQueryArgProfil
      * 
      */
     @Import(name="queryArg", required=true)
-      private final Output<String> queryArg;
+    private Output<String> queryArg;
 
     public Output<String> queryArg() {
         return this.queryArg;
     }
 
-    public FieldLevelEncryptionConfigQueryArgProfileConfigQueryArgProfilesItemGetArgs(
-        Output<String> profileId,
-        Output<String> queryArg) {
-        this.profileId = Objects.requireNonNull(profileId, "expected parameter 'profileId' to be non-null");
-        this.queryArg = Objects.requireNonNull(queryArg, "expected parameter 'queryArg' to be non-null");
-    }
+    private FieldLevelEncryptionConfigQueryArgProfileConfigQueryArgProfilesItemGetArgs() {}
 
-    private FieldLevelEncryptionConfigQueryArgProfileConfigQueryArgProfilesItemGetArgs() {
-        this.profileId = Codegen.empty();
-        this.queryArg = Codegen.empty();
+    private FieldLevelEncryptionConfigQueryArgProfileConfigQueryArgProfilesItemGetArgs(FieldLevelEncryptionConfigQueryArgProfileConfigQueryArgProfilesItemGetArgs $) {
+        this.profileId = $.profileId;
+        this.queryArg = $.queryArg;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FieldLevelEncryptionConfigQueryArgProfileConfigQueryArgProfilesItemGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> profileId;
-        private Output<String> queryArg;
+        private FieldLevelEncryptionConfigQueryArgProfileConfigQueryArgProfilesItemGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new FieldLevelEncryptionConfigQueryArgProfileConfigQueryArgProfilesItemGetArgs();
         }
 
         public Builder(FieldLevelEncryptionConfigQueryArgProfileConfigQueryArgProfilesItemGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.profileId = defaults.profileId;
-    	      this.queryArg = defaults.queryArg;
+            $ = new FieldLevelEncryptionConfigQueryArgProfileConfigQueryArgProfilesItemGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder profileId(Output<String> profileId) {
-            this.profileId = Objects.requireNonNull(profileId);
+            $.profileId = profileId;
             return this;
         }
+
         public Builder profileId(String profileId) {
-            this.profileId = Output.of(Objects.requireNonNull(profileId));
-            return this;
+            return profileId(Output.of(profileId));
         }
+
         public Builder queryArg(Output<String> queryArg) {
-            this.queryArg = Objects.requireNonNull(queryArg);
+            $.queryArg = queryArg;
             return this;
         }
+
         public Builder queryArg(String queryArg) {
-            this.queryArg = Output.of(Objects.requireNonNull(queryArg));
-            return this;
-        }        public FieldLevelEncryptionConfigQueryArgProfileConfigQueryArgProfilesItemGetArgs build() {
-            return new FieldLevelEncryptionConfigQueryArgProfileConfigQueryArgProfilesItemGetArgs(profileId, queryArg);
+            return queryArg(Output.of(queryArg));
+        }
+
+        public FieldLevelEncryptionConfigQueryArgProfileConfigQueryArgProfilesItemGetArgs build() {
+            $.profileId = Objects.requireNonNull($.profileId, "expected parameter 'profileId' to be non-null");
+            $.queryArg = Objects.requireNonNull($.queryArg, "expected parameter 'queryArg' to be non-null");
+            return $;
         }
     }
+
 }

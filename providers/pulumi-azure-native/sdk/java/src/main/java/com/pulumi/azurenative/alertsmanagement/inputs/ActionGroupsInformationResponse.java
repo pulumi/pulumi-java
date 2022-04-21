@@ -24,10 +24,10 @@ public final class ActionGroupsInformationResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="customEmailSubject")
-      private final @Nullable String customEmailSubject;
+    private @Nullable String customEmailSubject;
 
     public Optional<String> customEmailSubject() {
-        return this.customEmailSubject == null ? Optional.empty() : Optional.ofNullable(this.customEmailSubject);
+        return Optional.ofNullable(this.customEmailSubject);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class ActionGroupsInformationResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="customWebhookPayload")
-      private final @Nullable String customWebhookPayload;
+    private @Nullable String customWebhookPayload;
 
     public Optional<String> customWebhookPayload() {
-        return this.customWebhookPayload == null ? Optional.empty() : Optional.ofNullable(this.customWebhookPayload);
+        return Optional.ofNullable(this.customWebhookPayload);
     }
 
     /**
@@ -46,67 +46,61 @@ public final class ActionGroupsInformationResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="groupIds", required=true)
-      private final List<String> groupIds;
+    private List<String> groupIds;
 
     public List<String> groupIds() {
         return this.groupIds;
     }
 
-    public ActionGroupsInformationResponse(
-        @Nullable String customEmailSubject,
-        @Nullable String customWebhookPayload,
-        List<String> groupIds) {
-        this.customEmailSubject = customEmailSubject;
-        this.customWebhookPayload = customWebhookPayload;
-        this.groupIds = Objects.requireNonNull(groupIds, "expected parameter 'groupIds' to be non-null");
-    }
+    private ActionGroupsInformationResponse() {}
 
-    private ActionGroupsInformationResponse() {
-        this.customEmailSubject = null;
-        this.customWebhookPayload = null;
-        this.groupIds = List.of();
+    private ActionGroupsInformationResponse(ActionGroupsInformationResponse $) {
+        this.customEmailSubject = $.customEmailSubject;
+        this.customWebhookPayload = $.customWebhookPayload;
+        this.groupIds = $.groupIds;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ActionGroupsInformationResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String customEmailSubject;
-        private @Nullable String customWebhookPayload;
-        private List<String> groupIds;
+        private ActionGroupsInformationResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ActionGroupsInformationResponse();
         }
 
         public Builder(ActionGroupsInformationResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.customEmailSubject = defaults.customEmailSubject;
-    	      this.customWebhookPayload = defaults.customWebhookPayload;
-    	      this.groupIds = defaults.groupIds;
+            $ = new ActionGroupsInformationResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder customEmailSubject(@Nullable String customEmailSubject) {
-            this.customEmailSubject = customEmailSubject;
+            $.customEmailSubject = customEmailSubject;
             return this;
         }
+
         public Builder customWebhookPayload(@Nullable String customWebhookPayload) {
-            this.customWebhookPayload = customWebhookPayload;
+            $.customWebhookPayload = customWebhookPayload;
             return this;
         }
+
         public Builder groupIds(List<String> groupIds) {
-            this.groupIds = Objects.requireNonNull(groupIds);
+            $.groupIds = groupIds;
             return this;
         }
+
         public Builder groupIds(String... groupIds) {
             return groupIds(List.of(groupIds));
-        }        public ActionGroupsInformationResponse build() {
-            return new ActionGroupsInformationResponse(customEmailSubject, customWebhookPayload, groupIds);
+        }
+
+        public ActionGroupsInformationResponse build() {
+            $.groupIds = Objects.requireNonNull($.groupIds, "expected parameter 'groupIds' to be non-null");
+            return $;
         }
     }
+
 }

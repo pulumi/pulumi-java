@@ -5,7 +5,6 @@ package com.pulumi.gcp.container.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,7 +18,7 @@ public final class ClusterNodeConfigTaintArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="effect", required=true)
-      private final Output<String> effect;
+    private Output<String> effect;
 
     public Output<String> effect() {
         return this.effect;
@@ -30,7 +29,7 @@ public final class ClusterNodeConfigTaintArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="key", required=true)
-      private final Output<String> key;
+    private Output<String> key;
 
     public Output<String> key() {
         return this.key;
@@ -41,76 +40,71 @@ public final class ClusterNodeConfigTaintArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="value", required=true)
-      private final Output<String> value;
+    private Output<String> value;
 
     public Output<String> value() {
         return this.value;
     }
 
-    public ClusterNodeConfigTaintArgs(
-        Output<String> effect,
-        Output<String> key,
-        Output<String> value) {
-        this.effect = Objects.requireNonNull(effect, "expected parameter 'effect' to be non-null");
-        this.key = Objects.requireNonNull(key, "expected parameter 'key' to be non-null");
-        this.value = Objects.requireNonNull(value, "expected parameter 'value' to be non-null");
-    }
+    private ClusterNodeConfigTaintArgs() {}
 
-    private ClusterNodeConfigTaintArgs() {
-        this.effect = Codegen.empty();
-        this.key = Codegen.empty();
-        this.value = Codegen.empty();
+    private ClusterNodeConfigTaintArgs(ClusterNodeConfigTaintArgs $) {
+        this.effect = $.effect;
+        this.key = $.key;
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ClusterNodeConfigTaintArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> effect;
-        private Output<String> key;
-        private Output<String> value;
+        private ClusterNodeConfigTaintArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ClusterNodeConfigTaintArgs();
         }
 
         public Builder(ClusterNodeConfigTaintArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.effect = defaults.effect;
-    	      this.key = defaults.key;
-    	      this.value = defaults.value;
+            $ = new ClusterNodeConfigTaintArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder effect(Output<String> effect) {
-            this.effect = Objects.requireNonNull(effect);
+            $.effect = effect;
             return this;
         }
+
         public Builder effect(String effect) {
-            this.effect = Output.of(Objects.requireNonNull(effect));
-            return this;
+            return effect(Output.of(effect));
         }
+
         public Builder key(Output<String> key) {
-            this.key = Objects.requireNonNull(key);
+            $.key = key;
             return this;
         }
+
         public Builder key(String key) {
-            this.key = Output.of(Objects.requireNonNull(key));
-            return this;
+            return key(Output.of(key));
         }
+
         public Builder value(Output<String> value) {
-            this.value = Objects.requireNonNull(value);
+            $.value = value;
             return this;
         }
+
         public Builder value(String value) {
-            this.value = Output.of(Objects.requireNonNull(value));
-            return this;
-        }        public ClusterNodeConfigTaintArgs build() {
-            return new ClusterNodeConfigTaintArgs(effect, key, value);
+            return value(Output.of(value));
+        }
+
+        public ClusterNodeConfigTaintArgs build() {
+            $.effect = Objects.requireNonNull($.effect, "expected parameter 'effect' to be non-null");
+            $.key = Objects.requireNonNull($.key, "expected parameter 'key' to be non-null");
+            $.value = Objects.requireNonNull($.value, "expected parameter 'value' to be non-null");
+            return $;
         }
     }
+
 }

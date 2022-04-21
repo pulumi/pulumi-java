@@ -25,7 +25,7 @@ public final class RecurringScheduleResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="endTime", required=true)
-      private final String endTime;
+    private String endTime;
 
     public String endTime() {
         return this.endTime;
@@ -36,7 +36,7 @@ public final class RecurringScheduleResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="frequency", required=true)
-      private final String frequency;
+    private String frequency;
 
     public String frequency() {
         return this.frequency;
@@ -47,7 +47,7 @@ public final class RecurringScheduleResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="lastExecuteTime", required=true)
-      private final String lastExecuteTime;
+    private String lastExecuteTime;
 
     public String lastExecuteTime() {
         return this.lastExecuteTime;
@@ -58,7 +58,7 @@ public final class RecurringScheduleResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="monthly", required=true)
-      private final MonthlyScheduleResponse monthly;
+    private MonthlyScheduleResponse monthly;
 
     public MonthlyScheduleResponse monthly() {
         return this.monthly;
@@ -69,7 +69,7 @@ public final class RecurringScheduleResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="nextExecuteTime", required=true)
-      private final String nextExecuteTime;
+    private String nextExecuteTime;
 
     public String nextExecuteTime() {
         return this.nextExecuteTime;
@@ -80,7 +80,7 @@ public final class RecurringScheduleResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="startTime", required=true)
-      private final String startTime;
+    private String startTime;
 
     public String startTime() {
         return this.startTime;
@@ -91,7 +91,7 @@ public final class RecurringScheduleResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="timeOfDay", required=true)
-      private final TimeOfDayResponse timeOfDay;
+    private TimeOfDayResponse timeOfDay;
 
     public TimeOfDayResponse timeOfDay() {
         return this.timeOfDay;
@@ -102,7 +102,7 @@ public final class RecurringScheduleResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="timeZone", required=true)
-      private final TimeZoneResponse timeZone;
+    private TimeZoneResponse timeZone;
 
     public TimeZoneResponse timeZone() {
         return this.timeZone;
@@ -113,118 +113,101 @@ public final class RecurringScheduleResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="weekly", required=true)
-      private final WeeklyScheduleResponse weekly;
+    private WeeklyScheduleResponse weekly;
 
     public WeeklyScheduleResponse weekly() {
         return this.weekly;
     }
 
-    public RecurringScheduleResponse(
-        String endTime,
-        String frequency,
-        String lastExecuteTime,
-        MonthlyScheduleResponse monthly,
-        String nextExecuteTime,
-        String startTime,
-        TimeOfDayResponse timeOfDay,
-        TimeZoneResponse timeZone,
-        WeeklyScheduleResponse weekly) {
-        this.endTime = Objects.requireNonNull(endTime, "expected parameter 'endTime' to be non-null");
-        this.frequency = Objects.requireNonNull(frequency, "expected parameter 'frequency' to be non-null");
-        this.lastExecuteTime = Objects.requireNonNull(lastExecuteTime, "expected parameter 'lastExecuteTime' to be non-null");
-        this.monthly = Objects.requireNonNull(monthly, "expected parameter 'monthly' to be non-null");
-        this.nextExecuteTime = Objects.requireNonNull(nextExecuteTime, "expected parameter 'nextExecuteTime' to be non-null");
-        this.startTime = Objects.requireNonNull(startTime, "expected parameter 'startTime' to be non-null");
-        this.timeOfDay = Objects.requireNonNull(timeOfDay, "expected parameter 'timeOfDay' to be non-null");
-        this.timeZone = Objects.requireNonNull(timeZone, "expected parameter 'timeZone' to be non-null");
-        this.weekly = Objects.requireNonNull(weekly, "expected parameter 'weekly' to be non-null");
-    }
+    private RecurringScheduleResponse() {}
 
-    private RecurringScheduleResponse() {
-        this.endTime = null;
-        this.frequency = null;
-        this.lastExecuteTime = null;
-        this.monthly = null;
-        this.nextExecuteTime = null;
-        this.startTime = null;
-        this.timeOfDay = null;
-        this.timeZone = null;
-        this.weekly = null;
+    private RecurringScheduleResponse(RecurringScheduleResponse $) {
+        this.endTime = $.endTime;
+        this.frequency = $.frequency;
+        this.lastExecuteTime = $.lastExecuteTime;
+        this.monthly = $.monthly;
+        this.nextExecuteTime = $.nextExecuteTime;
+        this.startTime = $.startTime;
+        this.timeOfDay = $.timeOfDay;
+        this.timeZone = $.timeZone;
+        this.weekly = $.weekly;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RecurringScheduleResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String endTime;
-        private String frequency;
-        private String lastExecuteTime;
-        private MonthlyScheduleResponse monthly;
-        private String nextExecuteTime;
-        private String startTime;
-        private TimeOfDayResponse timeOfDay;
-        private TimeZoneResponse timeZone;
-        private WeeklyScheduleResponse weekly;
+        private RecurringScheduleResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new RecurringScheduleResponse();
         }
 
         public Builder(RecurringScheduleResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.endTime = defaults.endTime;
-    	      this.frequency = defaults.frequency;
-    	      this.lastExecuteTime = defaults.lastExecuteTime;
-    	      this.monthly = defaults.monthly;
-    	      this.nextExecuteTime = defaults.nextExecuteTime;
-    	      this.startTime = defaults.startTime;
-    	      this.timeOfDay = defaults.timeOfDay;
-    	      this.timeZone = defaults.timeZone;
-    	      this.weekly = defaults.weekly;
+            $ = new RecurringScheduleResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder endTime(String endTime) {
-            this.endTime = Objects.requireNonNull(endTime);
+            $.endTime = endTime;
             return this;
         }
+
         public Builder frequency(String frequency) {
-            this.frequency = Objects.requireNonNull(frequency);
+            $.frequency = frequency;
             return this;
         }
+
         public Builder lastExecuteTime(String lastExecuteTime) {
-            this.lastExecuteTime = Objects.requireNonNull(lastExecuteTime);
+            $.lastExecuteTime = lastExecuteTime;
             return this;
         }
+
         public Builder monthly(MonthlyScheduleResponse monthly) {
-            this.monthly = Objects.requireNonNull(monthly);
+            $.monthly = monthly;
             return this;
         }
+
         public Builder nextExecuteTime(String nextExecuteTime) {
-            this.nextExecuteTime = Objects.requireNonNull(nextExecuteTime);
+            $.nextExecuteTime = nextExecuteTime;
             return this;
         }
+
         public Builder startTime(String startTime) {
-            this.startTime = Objects.requireNonNull(startTime);
+            $.startTime = startTime;
             return this;
         }
+
         public Builder timeOfDay(TimeOfDayResponse timeOfDay) {
-            this.timeOfDay = Objects.requireNonNull(timeOfDay);
+            $.timeOfDay = timeOfDay;
             return this;
         }
+
         public Builder timeZone(TimeZoneResponse timeZone) {
-            this.timeZone = Objects.requireNonNull(timeZone);
+            $.timeZone = timeZone;
             return this;
         }
+
         public Builder weekly(WeeklyScheduleResponse weekly) {
-            this.weekly = Objects.requireNonNull(weekly);
+            $.weekly = weekly;
             return this;
-        }        public RecurringScheduleResponse build() {
-            return new RecurringScheduleResponse(endTime, frequency, lastExecuteTime, monthly, nextExecuteTime, startTime, timeOfDay, timeZone, weekly);
+        }
+
+        public RecurringScheduleResponse build() {
+            $.endTime = Objects.requireNonNull($.endTime, "expected parameter 'endTime' to be non-null");
+            $.frequency = Objects.requireNonNull($.frequency, "expected parameter 'frequency' to be non-null");
+            $.lastExecuteTime = Objects.requireNonNull($.lastExecuteTime, "expected parameter 'lastExecuteTime' to be non-null");
+            $.monthly = Objects.requireNonNull($.monthly, "expected parameter 'monthly' to be non-null");
+            $.nextExecuteTime = Objects.requireNonNull($.nextExecuteTime, "expected parameter 'nextExecuteTime' to be non-null");
+            $.startTime = Objects.requireNonNull($.startTime, "expected parameter 'startTime' to be non-null");
+            $.timeOfDay = Objects.requireNonNull($.timeOfDay, "expected parameter 'timeOfDay' to be non-null");
+            $.timeZone = Objects.requireNonNull($.timeZone, "expected parameter 'timeZone' to be non-null");
+            $.weekly = Objects.requireNonNull($.weekly, "expected parameter 'weekly' to be non-null");
+            return $;
         }
     }
+
 }

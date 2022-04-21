@@ -5,7 +5,6 @@ package com.pulumi.gcp.container.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.Objects;
 
@@ -15,49 +14,49 @@ public final class ClusterMasterAuthClientCertificateConfigGetArgs extends com.p
     public static final ClusterMasterAuthClientCertificateConfigGetArgs Empty = new ClusterMasterAuthClientCertificateConfigGetArgs();
 
     @Import(name="issueClientCertificate", required=true)
-      private final Output<Boolean> issueClientCertificate;
+    private Output<Boolean> issueClientCertificate;
 
     public Output<Boolean> issueClientCertificate() {
         return this.issueClientCertificate;
     }
 
-    public ClusterMasterAuthClientCertificateConfigGetArgs(Output<Boolean> issueClientCertificate) {
-        this.issueClientCertificate = Objects.requireNonNull(issueClientCertificate, "expected parameter 'issueClientCertificate' to be non-null");
-    }
+    private ClusterMasterAuthClientCertificateConfigGetArgs() {}
 
-    private ClusterMasterAuthClientCertificateConfigGetArgs() {
-        this.issueClientCertificate = Codegen.empty();
+    private ClusterMasterAuthClientCertificateConfigGetArgs(ClusterMasterAuthClientCertificateConfigGetArgs $) {
+        this.issueClientCertificate = $.issueClientCertificate;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ClusterMasterAuthClientCertificateConfigGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Boolean> issueClientCertificate;
+        private ClusterMasterAuthClientCertificateConfigGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ClusterMasterAuthClientCertificateConfigGetArgs();
         }
 
         public Builder(ClusterMasterAuthClientCertificateConfigGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.issueClientCertificate = defaults.issueClientCertificate;
+            $ = new ClusterMasterAuthClientCertificateConfigGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder issueClientCertificate(Output<Boolean> issueClientCertificate) {
-            this.issueClientCertificate = Objects.requireNonNull(issueClientCertificate);
+            $.issueClientCertificate = issueClientCertificate;
             return this;
         }
+
         public Builder issueClientCertificate(Boolean issueClientCertificate) {
-            this.issueClientCertificate = Output.of(Objects.requireNonNull(issueClientCertificate));
-            return this;
-        }        public ClusterMasterAuthClientCertificateConfigGetArgs build() {
-            return new ClusterMasterAuthClientCertificateConfigGetArgs(issueClientCertificate);
+            return issueClientCertificate(Output.of(issueClientCertificate));
+        }
+
+        public ClusterMasterAuthClientCertificateConfigGetArgs build() {
+            $.issueClientCertificate = Objects.requireNonNull($.issueClientCertificate, "expected parameter 'issueClientCertificate' to be non-null");
+            return $;
         }
     }
+
 }

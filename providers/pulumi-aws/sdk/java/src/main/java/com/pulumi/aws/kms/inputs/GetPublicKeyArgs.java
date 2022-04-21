@@ -20,10 +20,10 @@ public final class GetPublicKeyArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="grantTokens")
-      private final @Nullable List<String> grantTokens;
+    private @Nullable List<String> grantTokens;
 
-    public List<String> grantTokens() {
-        return this.grantTokens == null ? List.of() : this.grantTokens;
+    public Optional<List<String>> grantTokens() {
+        return Optional.ofNullable(this.grantTokens);
     }
 
     /**
@@ -35,58 +35,55 @@ public final class GetPublicKeyArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="keyId", required=true)
-      private final String keyId;
+    private String keyId;
 
     public String keyId() {
         return this.keyId;
     }
 
-    public GetPublicKeyArgs(
-        @Nullable List<String> grantTokens,
-        String keyId) {
-        this.grantTokens = grantTokens;
-        this.keyId = Objects.requireNonNull(keyId, "expected parameter 'keyId' to be non-null");
-    }
+    private GetPublicKeyArgs() {}
 
-    private GetPublicKeyArgs() {
-        this.grantTokens = List.of();
-        this.keyId = null;
+    private GetPublicKeyArgs(GetPublicKeyArgs $) {
+        this.grantTokens = $.grantTokens;
+        this.keyId = $.keyId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetPublicKeyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<String> grantTokens;
-        private String keyId;
+        private GetPublicKeyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetPublicKeyArgs();
         }
 
         public Builder(GetPublicKeyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.grantTokens = defaults.grantTokens;
-    	      this.keyId = defaults.keyId;
+            $ = new GetPublicKeyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder grantTokens(@Nullable List<String> grantTokens) {
-            this.grantTokens = grantTokens;
+            $.grantTokens = grantTokens;
             return this;
         }
+
         public Builder grantTokens(String... grantTokens) {
             return grantTokens(List.of(grantTokens));
         }
+
         public Builder keyId(String keyId) {
-            this.keyId = Objects.requireNonNull(keyId);
+            $.keyId = keyId;
             return this;
-        }        public GetPublicKeyArgs build() {
-            return new GetPublicKeyArgs(grantTokens, keyId);
+        }
+
+        public GetPublicKeyArgs build() {
+            $.keyId = Objects.requireNonNull($.keyId, "expected parameter 'keyId' to be non-null");
+            return $;
         }
     }
+
 }

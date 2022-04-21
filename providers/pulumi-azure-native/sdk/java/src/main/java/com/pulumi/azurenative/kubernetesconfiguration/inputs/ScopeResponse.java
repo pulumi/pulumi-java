@@ -24,10 +24,10 @@ public final class ScopeResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="cluster")
-      private final @Nullable ScopeClusterResponse cluster;
+    private @Nullable ScopeClusterResponse cluster;
 
     public Optional<ScopeClusterResponse> cluster() {
-        return this.cluster == null ? Optional.empty() : Optional.ofNullable(this.cluster);
+        return Optional.ofNullable(this.cluster);
     }
 
     /**
@@ -35,55 +35,50 @@ public final class ScopeResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="namespace")
-      private final @Nullable ScopeNamespaceResponse namespace;
+    private @Nullable ScopeNamespaceResponse namespace;
 
     public Optional<ScopeNamespaceResponse> namespace() {
-        return this.namespace == null ? Optional.empty() : Optional.ofNullable(this.namespace);
+        return Optional.ofNullable(this.namespace);
     }
 
-    public ScopeResponse(
-        @Nullable ScopeClusterResponse cluster,
-        @Nullable ScopeNamespaceResponse namespace) {
-        this.cluster = cluster;
-        this.namespace = namespace;
-    }
+    private ScopeResponse() {}
 
-    private ScopeResponse() {
-        this.cluster = null;
-        this.namespace = null;
+    private ScopeResponse(ScopeResponse $) {
+        this.cluster = $.cluster;
+        this.namespace = $.namespace;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ScopeResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable ScopeClusterResponse cluster;
-        private @Nullable ScopeNamespaceResponse namespace;
+        private ScopeResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ScopeResponse();
         }
 
         public Builder(ScopeResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cluster = defaults.cluster;
-    	      this.namespace = defaults.namespace;
+            $ = new ScopeResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder cluster(@Nullable ScopeClusterResponse cluster) {
-            this.cluster = cluster;
+            $.cluster = cluster;
             return this;
         }
+
         public Builder namespace(@Nullable ScopeNamespaceResponse namespace) {
-            this.namespace = namespace;
+            $.namespace = namespace;
             return this;
-        }        public ScopeResponse build() {
-            return new ScopeResponse(cluster, namespace);
+        }
+
+        public ScopeResponse build() {
+            return $;
         }
     }
+
 }

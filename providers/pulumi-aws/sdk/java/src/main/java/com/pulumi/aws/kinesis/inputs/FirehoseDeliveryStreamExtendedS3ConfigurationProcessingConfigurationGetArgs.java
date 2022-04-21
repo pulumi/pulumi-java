@@ -6,10 +6,10 @@ package com.pulumi.aws.kinesis.inputs;
 import com.pulumi.aws.kinesis.inputs.FirehoseDeliveryStreamExtendedS3ConfigurationProcessingConfigurationProcessorGetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class FirehoseDeliveryStreamExtendedS3ConfigurationProcessingConfig
      * 
      */
     @Import(name="enabled")
-      private final @Nullable Output<Boolean> enabled;
+    private @Nullable Output<Boolean> enabled;
 
-    public Output<Boolean> enabled() {
-        return this.enabled == null ? Codegen.empty() : this.enabled;
+    public Optional<Output<Boolean>> enabled() {
+        return Optional.ofNullable(this.enabled);
     }
 
     /**
@@ -33,66 +33,62 @@ public final class FirehoseDeliveryStreamExtendedS3ConfigurationProcessingConfig
      * 
      */
     @Import(name="processors")
-      private final @Nullable Output<List<FirehoseDeliveryStreamExtendedS3ConfigurationProcessingConfigurationProcessorGetArgs>> processors;
+    private @Nullable Output<List<FirehoseDeliveryStreamExtendedS3ConfigurationProcessingConfigurationProcessorGetArgs>> processors;
 
-    public Output<List<FirehoseDeliveryStreamExtendedS3ConfigurationProcessingConfigurationProcessorGetArgs>> processors() {
-        return this.processors == null ? Codegen.empty() : this.processors;
+    public Optional<Output<List<FirehoseDeliveryStreamExtendedS3ConfigurationProcessingConfigurationProcessorGetArgs>>> processors() {
+        return Optional.ofNullable(this.processors);
     }
 
-    public FirehoseDeliveryStreamExtendedS3ConfigurationProcessingConfigurationGetArgs(
-        @Nullable Output<Boolean> enabled,
-        @Nullable Output<List<FirehoseDeliveryStreamExtendedS3ConfigurationProcessingConfigurationProcessorGetArgs>> processors) {
-        this.enabled = enabled;
-        this.processors = processors;
-    }
+    private FirehoseDeliveryStreamExtendedS3ConfigurationProcessingConfigurationGetArgs() {}
 
-    private FirehoseDeliveryStreamExtendedS3ConfigurationProcessingConfigurationGetArgs() {
-        this.enabled = Codegen.empty();
-        this.processors = Codegen.empty();
+    private FirehoseDeliveryStreamExtendedS3ConfigurationProcessingConfigurationGetArgs(FirehoseDeliveryStreamExtendedS3ConfigurationProcessingConfigurationGetArgs $) {
+        this.enabled = $.enabled;
+        this.processors = $.processors;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FirehoseDeliveryStreamExtendedS3ConfigurationProcessingConfigurationGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> enabled;
-        private @Nullable Output<List<FirehoseDeliveryStreamExtendedS3ConfigurationProcessingConfigurationProcessorGetArgs>> processors;
+        private FirehoseDeliveryStreamExtendedS3ConfigurationProcessingConfigurationGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new FirehoseDeliveryStreamExtendedS3ConfigurationProcessingConfigurationGetArgs();
         }
 
         public Builder(FirehoseDeliveryStreamExtendedS3ConfigurationProcessingConfigurationGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.enabled = defaults.enabled;
-    	      this.processors = defaults.processors;
+            $ = new FirehoseDeliveryStreamExtendedS3ConfigurationProcessingConfigurationGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder enabled(@Nullable Output<Boolean> enabled) {
-            this.enabled = enabled;
+            $.enabled = enabled;
             return this;
         }
-        public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Codegen.ofNullable(enabled);
-            return this;
+
+        public Builder enabled(Boolean enabled) {
+            return enabled(Output.of(enabled));
         }
+
         public Builder processors(@Nullable Output<List<FirehoseDeliveryStreamExtendedS3ConfigurationProcessingConfigurationProcessorGetArgs>> processors) {
-            this.processors = processors;
+            $.processors = processors;
             return this;
         }
-        public Builder processors(@Nullable List<FirehoseDeliveryStreamExtendedS3ConfigurationProcessingConfigurationProcessorGetArgs> processors) {
-            this.processors = Codegen.ofNullable(processors);
-            return this;
+
+        public Builder processors(List<FirehoseDeliveryStreamExtendedS3ConfigurationProcessingConfigurationProcessorGetArgs> processors) {
+            return processors(Output.of(processors));
         }
+
         public Builder processors(FirehoseDeliveryStreamExtendedS3ConfigurationProcessingConfigurationProcessorGetArgs... processors) {
             return processors(List.of(processors));
-        }        public FirehoseDeliveryStreamExtendedS3ConfigurationProcessingConfigurationGetArgs build() {
-            return new FirehoseDeliveryStreamExtendedS3ConfigurationProcessingConfigurationGetArgs(enabled, processors);
+        }
+
+        public FirehoseDeliveryStreamExtendedS3ConfigurationProcessingConfigurationGetArgs build() {
+            return $;
         }
     }
+
 }

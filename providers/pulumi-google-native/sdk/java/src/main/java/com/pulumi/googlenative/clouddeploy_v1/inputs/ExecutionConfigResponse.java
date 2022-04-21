@@ -24,7 +24,7 @@ public final class ExecutionConfigResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="artifactStorage", required=true)
-      private final String artifactStorage;
+    private String artifactStorage;
 
     public String artifactStorage() {
         return this.artifactStorage;
@@ -35,7 +35,7 @@ public final class ExecutionConfigResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="defaultPool", required=true)
-      private final DefaultPoolResponse defaultPool;
+    private DefaultPoolResponse defaultPool;
 
     public DefaultPoolResponse defaultPool() {
         return this.defaultPool;
@@ -46,7 +46,7 @@ public final class ExecutionConfigResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="privatePool", required=true)
-      private final PrivatePoolResponse privatePool;
+    private PrivatePoolResponse privatePool;
 
     public PrivatePoolResponse privatePool() {
         return this.privatePool;
@@ -57,7 +57,7 @@ public final class ExecutionConfigResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="serviceAccount", required=true)
-      private final String serviceAccount;
+    private String serviceAccount;
 
     public String serviceAccount() {
         return this.serviceAccount;
@@ -68,7 +68,7 @@ public final class ExecutionConfigResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="usages", required=true)
-      private final List<String> usages;
+    private List<String> usages;
 
     public List<String> usages() {
         return this.usages;
@@ -79,94 +79,84 @@ public final class ExecutionConfigResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="workerPool", required=true)
-      private final String workerPool;
+    private String workerPool;
 
     public String workerPool() {
         return this.workerPool;
     }
 
-    public ExecutionConfigResponse(
-        String artifactStorage,
-        DefaultPoolResponse defaultPool,
-        PrivatePoolResponse privatePool,
-        String serviceAccount,
-        List<String> usages,
-        String workerPool) {
-        this.artifactStorage = Objects.requireNonNull(artifactStorage, "expected parameter 'artifactStorage' to be non-null");
-        this.defaultPool = Objects.requireNonNull(defaultPool, "expected parameter 'defaultPool' to be non-null");
-        this.privatePool = Objects.requireNonNull(privatePool, "expected parameter 'privatePool' to be non-null");
-        this.serviceAccount = Objects.requireNonNull(serviceAccount, "expected parameter 'serviceAccount' to be non-null");
-        this.usages = Objects.requireNonNull(usages, "expected parameter 'usages' to be non-null");
-        this.workerPool = Objects.requireNonNull(workerPool, "expected parameter 'workerPool' to be non-null");
-    }
+    private ExecutionConfigResponse() {}
 
-    private ExecutionConfigResponse() {
-        this.artifactStorage = null;
-        this.defaultPool = null;
-        this.privatePool = null;
-        this.serviceAccount = null;
-        this.usages = List.of();
-        this.workerPool = null;
+    private ExecutionConfigResponse(ExecutionConfigResponse $) {
+        this.artifactStorage = $.artifactStorage;
+        this.defaultPool = $.defaultPool;
+        this.privatePool = $.privatePool;
+        this.serviceAccount = $.serviceAccount;
+        this.usages = $.usages;
+        this.workerPool = $.workerPool;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ExecutionConfigResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String artifactStorage;
-        private DefaultPoolResponse defaultPool;
-        private PrivatePoolResponse privatePool;
-        private String serviceAccount;
-        private List<String> usages;
-        private String workerPool;
+        private ExecutionConfigResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ExecutionConfigResponse();
         }
 
         public Builder(ExecutionConfigResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.artifactStorage = defaults.artifactStorage;
-    	      this.defaultPool = defaults.defaultPool;
-    	      this.privatePool = defaults.privatePool;
-    	      this.serviceAccount = defaults.serviceAccount;
-    	      this.usages = defaults.usages;
-    	      this.workerPool = defaults.workerPool;
+            $ = new ExecutionConfigResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder artifactStorage(String artifactStorage) {
-            this.artifactStorage = Objects.requireNonNull(artifactStorage);
+            $.artifactStorage = artifactStorage;
             return this;
         }
+
         public Builder defaultPool(DefaultPoolResponse defaultPool) {
-            this.defaultPool = Objects.requireNonNull(defaultPool);
+            $.defaultPool = defaultPool;
             return this;
         }
+
         public Builder privatePool(PrivatePoolResponse privatePool) {
-            this.privatePool = Objects.requireNonNull(privatePool);
+            $.privatePool = privatePool;
             return this;
         }
+
         public Builder serviceAccount(String serviceAccount) {
-            this.serviceAccount = Objects.requireNonNull(serviceAccount);
+            $.serviceAccount = serviceAccount;
             return this;
         }
+
         public Builder usages(List<String> usages) {
-            this.usages = Objects.requireNonNull(usages);
+            $.usages = usages;
             return this;
         }
+
         public Builder usages(String... usages) {
             return usages(List.of(usages));
         }
+
         public Builder workerPool(String workerPool) {
-            this.workerPool = Objects.requireNonNull(workerPool);
+            $.workerPool = workerPool;
             return this;
-        }        public ExecutionConfigResponse build() {
-            return new ExecutionConfigResponse(artifactStorage, defaultPool, privatePool, serviceAccount, usages, workerPool);
+        }
+
+        public ExecutionConfigResponse build() {
+            $.artifactStorage = Objects.requireNonNull($.artifactStorage, "expected parameter 'artifactStorage' to be non-null");
+            $.defaultPool = Objects.requireNonNull($.defaultPool, "expected parameter 'defaultPool' to be non-null");
+            $.privatePool = Objects.requireNonNull($.privatePool, "expected parameter 'privatePool' to be non-null");
+            $.serviceAccount = Objects.requireNonNull($.serviceAccount, "expected parameter 'serviceAccount' to be non-null");
+            $.usages = Objects.requireNonNull($.usages, "expected parameter 'usages' to be non-null");
+            $.workerPool = Objects.requireNonNull($.workerPool, "expected parameter 'workerPool' to be non-null");
+            return $;
         }
     }
+
 }

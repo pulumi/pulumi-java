@@ -17,45 +17,45 @@ public final class GetFlowArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="flowName", required=true)
-      private final String flowName;
+    private String flowName;
 
     public String flowName() {
         return this.flowName;
     }
 
-    public GetFlowArgs(String flowName) {
-        this.flowName = Objects.requireNonNull(flowName, "expected parameter 'flowName' to be non-null");
-    }
+    private GetFlowArgs() {}
 
-    private GetFlowArgs() {
-        this.flowName = null;
+    private GetFlowArgs(GetFlowArgs $) {
+        this.flowName = $.flowName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetFlowArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String flowName;
+        private GetFlowArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetFlowArgs();
         }
 
         public Builder(GetFlowArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.flowName = defaults.flowName;
+            $ = new GetFlowArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder flowName(String flowName) {
-            this.flowName = Objects.requireNonNull(flowName);
+            $.flowName = flowName;
             return this;
-        }        public GetFlowArgs build() {
-            return new GetFlowArgs(flowName);
+        }
+
+        public GetFlowArgs build() {
+            $.flowName = Objects.requireNonNull($.flowName, "expected parameter 'flowName' to be non-null");
+            return $;
         }
     }
+
 }

@@ -17,7 +17,7 @@ public final class GetSourceControlConfigurationArgs extends com.pulumi.resource
      * 
      */
     @Import(name="clusterName", required=true)
-      private final String clusterName;
+    private String clusterName;
 
     public String clusterName() {
         return this.clusterName;
@@ -28,7 +28,7 @@ public final class GetSourceControlConfigurationArgs extends com.pulumi.resource
      * 
      */
     @Import(name="clusterResourceName", required=true)
-      private final String clusterResourceName;
+    private String clusterResourceName;
 
     public String clusterResourceName() {
         return this.clusterResourceName;
@@ -39,7 +39,7 @@ public final class GetSourceControlConfigurationArgs extends com.pulumi.resource
      * 
      */
     @Import(name="clusterRp", required=true)
-      private final String clusterRp;
+    private String clusterRp;
 
     public String clusterRp() {
         return this.clusterRp;
@@ -50,7 +50,7 @@ public final class GetSourceControlConfigurationArgs extends com.pulumi.resource
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -61,82 +61,73 @@ public final class GetSourceControlConfigurationArgs extends com.pulumi.resource
      * 
      */
     @Import(name="sourceControlConfigurationName", required=true)
-      private final String sourceControlConfigurationName;
+    private String sourceControlConfigurationName;
 
     public String sourceControlConfigurationName() {
         return this.sourceControlConfigurationName;
     }
 
-    public GetSourceControlConfigurationArgs(
-        String clusterName,
-        String clusterResourceName,
-        String clusterRp,
-        String resourceGroupName,
-        String sourceControlConfigurationName) {
-        this.clusterName = Objects.requireNonNull(clusterName, "expected parameter 'clusterName' to be non-null");
-        this.clusterResourceName = Objects.requireNonNull(clusterResourceName, "expected parameter 'clusterResourceName' to be non-null");
-        this.clusterRp = Objects.requireNonNull(clusterRp, "expected parameter 'clusterRp' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.sourceControlConfigurationName = Objects.requireNonNull(sourceControlConfigurationName, "expected parameter 'sourceControlConfigurationName' to be non-null");
-    }
+    private GetSourceControlConfigurationArgs() {}
 
-    private GetSourceControlConfigurationArgs() {
-        this.clusterName = null;
-        this.clusterResourceName = null;
-        this.clusterRp = null;
-        this.resourceGroupName = null;
-        this.sourceControlConfigurationName = null;
+    private GetSourceControlConfigurationArgs(GetSourceControlConfigurationArgs $) {
+        this.clusterName = $.clusterName;
+        this.clusterResourceName = $.clusterResourceName;
+        this.clusterRp = $.clusterRp;
+        this.resourceGroupName = $.resourceGroupName;
+        this.sourceControlConfigurationName = $.sourceControlConfigurationName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetSourceControlConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String clusterName;
-        private String clusterResourceName;
-        private String clusterRp;
-        private String resourceGroupName;
-        private String sourceControlConfigurationName;
+        private GetSourceControlConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetSourceControlConfigurationArgs();
         }
 
         public Builder(GetSourceControlConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.clusterName = defaults.clusterName;
-    	      this.clusterResourceName = defaults.clusterResourceName;
-    	      this.clusterRp = defaults.clusterRp;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.sourceControlConfigurationName = defaults.sourceControlConfigurationName;
+            $ = new GetSourceControlConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder clusterName(String clusterName) {
-            this.clusterName = Objects.requireNonNull(clusterName);
+            $.clusterName = clusterName;
             return this;
         }
+
         public Builder clusterResourceName(String clusterResourceName) {
-            this.clusterResourceName = Objects.requireNonNull(clusterResourceName);
+            $.clusterResourceName = clusterResourceName;
             return this;
         }
+
         public Builder clusterRp(String clusterRp) {
-            this.clusterRp = Objects.requireNonNull(clusterRp);
+            $.clusterRp = clusterRp;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder sourceControlConfigurationName(String sourceControlConfigurationName) {
-            this.sourceControlConfigurationName = Objects.requireNonNull(sourceControlConfigurationName);
+            $.sourceControlConfigurationName = sourceControlConfigurationName;
             return this;
-        }        public GetSourceControlConfigurationArgs build() {
-            return new GetSourceControlConfigurationArgs(clusterName, clusterResourceName, clusterRp, resourceGroupName, sourceControlConfigurationName);
+        }
+
+        public GetSourceControlConfigurationArgs build() {
+            $.clusterName = Objects.requireNonNull($.clusterName, "expected parameter 'clusterName' to be non-null");
+            $.clusterResourceName = Objects.requireNonNull($.clusterResourceName, "expected parameter 'clusterResourceName' to be non-null");
+            $.clusterRp = Objects.requireNonNull($.clusterRp, "expected parameter 'clusterRp' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.sourceControlConfigurationName = Objects.requireNonNull($.sourceControlConfigurationName, "expected parameter 'sourceControlConfigurationName' to be non-null");
+            return $;
         }
     }
+
 }

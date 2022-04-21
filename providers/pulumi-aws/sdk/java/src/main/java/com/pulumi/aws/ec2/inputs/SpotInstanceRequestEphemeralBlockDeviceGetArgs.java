@@ -5,10 +5,10 @@ package com.pulumi.aws.ec2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,7 +21,7 @@ public final class SpotInstanceRequestEphemeralBlockDeviceGetArgs extends com.pu
      * 
      */
     @Import(name="deviceName", required=true)
-      private final Output<String> deviceName;
+    private Output<String> deviceName;
 
     public Output<String> deviceName() {
         return this.deviceName;
@@ -32,10 +32,10 @@ public final class SpotInstanceRequestEphemeralBlockDeviceGetArgs extends com.pu
      * 
      */
     @Import(name="noDevice")
-      private final @Nullable Output<Boolean> noDevice;
+    private @Nullable Output<Boolean> noDevice;
 
-    public Output<Boolean> noDevice() {
-        return this.noDevice == null ? Codegen.empty() : this.noDevice;
+    public Optional<Output<Boolean>> noDevice() {
+        return Optional.ofNullable(this.noDevice);
     }
 
     /**
@@ -43,76 +43,69 @@ public final class SpotInstanceRequestEphemeralBlockDeviceGetArgs extends com.pu
      * 
      */
     @Import(name="virtualName")
-      private final @Nullable Output<String> virtualName;
+    private @Nullable Output<String> virtualName;
 
-    public Output<String> virtualName() {
-        return this.virtualName == null ? Codegen.empty() : this.virtualName;
+    public Optional<Output<String>> virtualName() {
+        return Optional.ofNullable(this.virtualName);
     }
 
-    public SpotInstanceRequestEphemeralBlockDeviceGetArgs(
-        Output<String> deviceName,
-        @Nullable Output<Boolean> noDevice,
-        @Nullable Output<String> virtualName) {
-        this.deviceName = Objects.requireNonNull(deviceName, "expected parameter 'deviceName' to be non-null");
-        this.noDevice = noDevice;
-        this.virtualName = virtualName;
-    }
+    private SpotInstanceRequestEphemeralBlockDeviceGetArgs() {}
 
-    private SpotInstanceRequestEphemeralBlockDeviceGetArgs() {
-        this.deviceName = Codegen.empty();
-        this.noDevice = Codegen.empty();
-        this.virtualName = Codegen.empty();
+    private SpotInstanceRequestEphemeralBlockDeviceGetArgs(SpotInstanceRequestEphemeralBlockDeviceGetArgs $) {
+        this.deviceName = $.deviceName;
+        this.noDevice = $.noDevice;
+        this.virtualName = $.virtualName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SpotInstanceRequestEphemeralBlockDeviceGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> deviceName;
-        private @Nullable Output<Boolean> noDevice;
-        private @Nullable Output<String> virtualName;
+        private SpotInstanceRequestEphemeralBlockDeviceGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SpotInstanceRequestEphemeralBlockDeviceGetArgs();
         }
 
         public Builder(SpotInstanceRequestEphemeralBlockDeviceGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.deviceName = defaults.deviceName;
-    	      this.noDevice = defaults.noDevice;
-    	      this.virtualName = defaults.virtualName;
+            $ = new SpotInstanceRequestEphemeralBlockDeviceGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder deviceName(Output<String> deviceName) {
-            this.deviceName = Objects.requireNonNull(deviceName);
+            $.deviceName = deviceName;
             return this;
         }
+
         public Builder deviceName(String deviceName) {
-            this.deviceName = Output.of(Objects.requireNonNull(deviceName));
-            return this;
+            return deviceName(Output.of(deviceName));
         }
+
         public Builder noDevice(@Nullable Output<Boolean> noDevice) {
-            this.noDevice = noDevice;
+            $.noDevice = noDevice;
             return this;
         }
-        public Builder noDevice(@Nullable Boolean noDevice) {
-            this.noDevice = Codegen.ofNullable(noDevice);
-            return this;
+
+        public Builder noDevice(Boolean noDevice) {
+            return noDevice(Output.of(noDevice));
         }
+
         public Builder virtualName(@Nullable Output<String> virtualName) {
-            this.virtualName = virtualName;
+            $.virtualName = virtualName;
             return this;
         }
-        public Builder virtualName(@Nullable String virtualName) {
-            this.virtualName = Codegen.ofNullable(virtualName);
-            return this;
-        }        public SpotInstanceRequestEphemeralBlockDeviceGetArgs build() {
-            return new SpotInstanceRequestEphemeralBlockDeviceGetArgs(deviceName, noDevice, virtualName);
+
+        public Builder virtualName(String virtualName) {
+            return virtualName(Output.of(virtualName));
+        }
+
+        public SpotInstanceRequestEphemeralBlockDeviceGetArgs build() {
+            $.deviceName = Objects.requireNonNull($.deviceName, "expected parameter 'deviceName' to be non-null");
+            return $;
         }
     }
+
 }

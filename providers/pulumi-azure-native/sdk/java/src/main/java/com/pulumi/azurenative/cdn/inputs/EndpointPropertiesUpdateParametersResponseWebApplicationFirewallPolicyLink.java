@@ -23,45 +23,44 @@ public final class EndpointPropertiesUpdateParametersResponseWebApplicationFirew
      * 
      */
     @Import(name="id")
-      private final @Nullable String id;
+    private @Nullable String id;
 
     public Optional<String> id() {
-        return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
+        return Optional.ofNullable(this.id);
     }
 
-    public EndpointPropertiesUpdateParametersResponseWebApplicationFirewallPolicyLink(@Nullable String id) {
-        this.id = id;
-    }
+    private EndpointPropertiesUpdateParametersResponseWebApplicationFirewallPolicyLink() {}
 
-    private EndpointPropertiesUpdateParametersResponseWebApplicationFirewallPolicyLink() {
-        this.id = null;
+    private EndpointPropertiesUpdateParametersResponseWebApplicationFirewallPolicyLink(EndpointPropertiesUpdateParametersResponseWebApplicationFirewallPolicyLink $) {
+        this.id = $.id;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EndpointPropertiesUpdateParametersResponseWebApplicationFirewallPolicyLink defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String id;
+        private EndpointPropertiesUpdateParametersResponseWebApplicationFirewallPolicyLink $;
 
         public Builder() {
-    	      // Empty
+            $ = new EndpointPropertiesUpdateParametersResponseWebApplicationFirewallPolicyLink();
         }
 
         public Builder(EndpointPropertiesUpdateParametersResponseWebApplicationFirewallPolicyLink defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.id = defaults.id;
+            $ = new EndpointPropertiesUpdateParametersResponseWebApplicationFirewallPolicyLink(Objects.requireNonNull(defaults));
         }
 
         public Builder id(@Nullable String id) {
-            this.id = id;
+            $.id = id;
             return this;
-        }        public EndpointPropertiesUpdateParametersResponseWebApplicationFirewallPolicyLink build() {
-            return new EndpointPropertiesUpdateParametersResponseWebApplicationFirewallPolicyLink(id);
+        }
+
+        public EndpointPropertiesUpdateParametersResponseWebApplicationFirewallPolicyLink build() {
+            return $;
         }
     }
+
 }

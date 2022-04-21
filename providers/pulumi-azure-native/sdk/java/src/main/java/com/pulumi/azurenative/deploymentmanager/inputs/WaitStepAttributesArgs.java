@@ -5,7 +5,6 @@ package com.pulumi.azurenative.deploymentmanager.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,49 +22,49 @@ public final class WaitStepAttributesArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="duration", required=true)
-      private final Output<String> duration;
+    private Output<String> duration;
 
     public Output<String> duration() {
         return this.duration;
     }
 
-    public WaitStepAttributesArgs(Output<String> duration) {
-        this.duration = Objects.requireNonNull(duration, "expected parameter 'duration' to be non-null");
-    }
+    private WaitStepAttributesArgs() {}
 
-    private WaitStepAttributesArgs() {
-        this.duration = Codegen.empty();
+    private WaitStepAttributesArgs(WaitStepAttributesArgs $) {
+        this.duration = $.duration;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WaitStepAttributesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> duration;
+        private WaitStepAttributesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new WaitStepAttributesArgs();
         }
 
         public Builder(WaitStepAttributesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.duration = defaults.duration;
+            $ = new WaitStepAttributesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder duration(Output<String> duration) {
-            this.duration = Objects.requireNonNull(duration);
+            $.duration = duration;
             return this;
         }
+
         public Builder duration(String duration) {
-            this.duration = Output.of(Objects.requireNonNull(duration));
-            return this;
-        }        public WaitStepAttributesArgs build() {
-            return new WaitStepAttributesArgs(duration);
+            return duration(Output.of(duration));
+        }
+
+        public WaitStepAttributesArgs build() {
+            $.duration = Objects.requireNonNull($.duration, "expected parameter 'duration' to be non-null");
+            return $;
         }
     }
+
 }

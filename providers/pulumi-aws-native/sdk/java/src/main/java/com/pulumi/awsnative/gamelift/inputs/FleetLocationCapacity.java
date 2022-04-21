@@ -21,7 +21,7 @@ public final class FleetLocationCapacity extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="desiredEC2Instances", required=true)
-      private final Integer desiredEC2Instances;
+    private Integer desiredEC2Instances;
 
     public Integer desiredEC2Instances() {
         return this.desiredEC2Instances;
@@ -32,7 +32,7 @@ public final class FleetLocationCapacity extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="maxSize", required=true)
-      private final Integer maxSize;
+    private Integer maxSize;
 
     public Integer maxSize() {
         return this.maxSize;
@@ -43,64 +43,59 @@ public final class FleetLocationCapacity extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="minSize", required=true)
-      private final Integer minSize;
+    private Integer minSize;
 
     public Integer minSize() {
         return this.minSize;
     }
 
-    public FleetLocationCapacity(
-        Integer desiredEC2Instances,
-        Integer maxSize,
-        Integer minSize) {
-        this.desiredEC2Instances = Objects.requireNonNull(desiredEC2Instances, "expected parameter 'desiredEC2Instances' to be non-null");
-        this.maxSize = Objects.requireNonNull(maxSize, "expected parameter 'maxSize' to be non-null");
-        this.minSize = Objects.requireNonNull(minSize, "expected parameter 'minSize' to be non-null");
-    }
+    private FleetLocationCapacity() {}
 
-    private FleetLocationCapacity() {
-        this.desiredEC2Instances = null;
-        this.maxSize = null;
-        this.minSize = null;
+    private FleetLocationCapacity(FleetLocationCapacity $) {
+        this.desiredEC2Instances = $.desiredEC2Instances;
+        this.maxSize = $.maxSize;
+        this.minSize = $.minSize;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FleetLocationCapacity defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Integer desiredEC2Instances;
-        private Integer maxSize;
-        private Integer minSize;
+        private FleetLocationCapacity $;
 
         public Builder() {
-    	      // Empty
+            $ = new FleetLocationCapacity();
         }
 
         public Builder(FleetLocationCapacity defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.desiredEC2Instances = defaults.desiredEC2Instances;
-    	      this.maxSize = defaults.maxSize;
-    	      this.minSize = defaults.minSize;
+            $ = new FleetLocationCapacity(Objects.requireNonNull(defaults));
         }
 
         public Builder desiredEC2Instances(Integer desiredEC2Instances) {
-            this.desiredEC2Instances = Objects.requireNonNull(desiredEC2Instances);
+            $.desiredEC2Instances = desiredEC2Instances;
             return this;
         }
+
         public Builder maxSize(Integer maxSize) {
-            this.maxSize = Objects.requireNonNull(maxSize);
+            $.maxSize = maxSize;
             return this;
         }
+
         public Builder minSize(Integer minSize) {
-            this.minSize = Objects.requireNonNull(minSize);
+            $.minSize = minSize;
             return this;
-        }        public FleetLocationCapacity build() {
-            return new FleetLocationCapacity(desiredEC2Instances, maxSize, minSize);
+        }
+
+        public FleetLocationCapacity build() {
+            $.desiredEC2Instances = Objects.requireNonNull($.desiredEC2Instances, "expected parameter 'desiredEC2Instances' to be non-null");
+            $.maxSize = Objects.requireNonNull($.maxSize, "expected parameter 'maxSize' to be non-null");
+            $.minSize = Objects.requireNonNull($.minSize, "expected parameter 'minSize' to be non-null");
+            return $;
         }
     }
+
 }

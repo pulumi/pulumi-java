@@ -15,62 +15,58 @@ public final class GetTopicArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetTopicArgs Empty = new GetTopicArgs();
 
     @Import(name="project")
-      private final @Nullable String project;
+    private @Nullable String project;
 
     public Optional<String> project() {
-        return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
+        return Optional.ofNullable(this.project);
     }
 
     @Import(name="topicId", required=true)
-      private final String topicId;
+    private String topicId;
 
     public String topicId() {
         return this.topicId;
     }
 
-    public GetTopicArgs(
-        @Nullable String project,
-        String topicId) {
-        this.project = project;
-        this.topicId = Objects.requireNonNull(topicId, "expected parameter 'topicId' to be non-null");
-    }
+    private GetTopicArgs() {}
 
-    private GetTopicArgs() {
-        this.project = null;
-        this.topicId = null;
+    private GetTopicArgs(GetTopicArgs $) {
+        this.project = $.project;
+        this.topicId = $.topicId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetTopicArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String project;
-        private String topicId;
+        private GetTopicArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetTopicArgs();
         }
 
         public Builder(GetTopicArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.project = defaults.project;
-    	      this.topicId = defaults.topicId;
+            $ = new GetTopicArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder project(@Nullable String project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
+
         public Builder topicId(String topicId) {
-            this.topicId = Objects.requireNonNull(topicId);
+            $.topicId = topicId;
             return this;
-        }        public GetTopicArgs build() {
-            return new GetTopicArgs(project, topicId);
+        }
+
+        public GetTopicArgs build() {
+            $.topicId = Objects.requireNonNull($.topicId, "expected parameter 'topicId' to be non-null");
+            return $;
         }
     }
+
 }

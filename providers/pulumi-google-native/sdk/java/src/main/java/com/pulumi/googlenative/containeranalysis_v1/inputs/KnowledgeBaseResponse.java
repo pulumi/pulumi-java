@@ -17,7 +17,7 @@ public final class KnowledgeBaseResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -28,55 +28,52 @@ public final class KnowledgeBaseResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="url", required=true)
-      private final String url;
+    private String url;
 
     public String url() {
         return this.url;
     }
 
-    public KnowledgeBaseResponse(
-        String name,
-        String url) {
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.url = Objects.requireNonNull(url, "expected parameter 'url' to be non-null");
-    }
+    private KnowledgeBaseResponse() {}
 
-    private KnowledgeBaseResponse() {
-        this.name = null;
-        this.url = null;
+    private KnowledgeBaseResponse(KnowledgeBaseResponse $) {
+        this.name = $.name;
+        this.url = $.url;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(KnowledgeBaseResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String name;
-        private String url;
+        private KnowledgeBaseResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new KnowledgeBaseResponse();
         }
 
         public Builder(KnowledgeBaseResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.url = defaults.url;
+            $ = new KnowledgeBaseResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder url(String url) {
-            this.url = Objects.requireNonNull(url);
+            $.url = url;
             return this;
-        }        public KnowledgeBaseResponse build() {
-            return new KnowledgeBaseResponse(name, url);
+        }
+
+        public KnowledgeBaseResponse build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.url = Objects.requireNonNull($.url, "expected parameter 'url' to be non-null");
+            return $;
         }
     }
+
 }

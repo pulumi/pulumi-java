@@ -17,116 +17,104 @@ public final class ExtendedErrorInfoResponse extends com.pulumi.resources.Invoke
     public static final ExtendedErrorInfoResponse Empty = new ExtendedErrorInfoResponse();
 
     @Import(name="additionalInfo")
-      private final @Nullable List<TypedErrorInfoResponse> additionalInfo;
+    private @Nullable List<TypedErrorInfoResponse> additionalInfo;
 
-    public List<TypedErrorInfoResponse> additionalInfo() {
-        return this.additionalInfo == null ? List.of() : this.additionalInfo;
+    public Optional<List<TypedErrorInfoResponse>> additionalInfo() {
+        return Optional.ofNullable(this.additionalInfo);
     }
 
     @Import(name="code")
-      private final @Nullable String code;
+    private @Nullable String code;
 
     public Optional<String> code() {
-        return this.code == null ? Optional.empty() : Optional.ofNullable(this.code);
+        return Optional.ofNullable(this.code);
     }
 
     @Import(name="details")
-      private final @Nullable List<ExtendedErrorInfoResponse> details;
+    private @Nullable List<ExtendedErrorInfoResponse> details;
 
-    public List<ExtendedErrorInfoResponse> details() {
-        return this.details == null ? List.of() : this.details;
+    public Optional<List<ExtendedErrorInfoResponse>> details() {
+        return Optional.ofNullable(this.details);
     }
 
     @Import(name="message")
-      private final @Nullable String message;
+    private @Nullable String message;
 
     public Optional<String> message() {
-        return this.message == null ? Optional.empty() : Optional.ofNullable(this.message);
+        return Optional.ofNullable(this.message);
     }
 
     @Import(name="target")
-      private final @Nullable String target;
+    private @Nullable String target;
 
     public Optional<String> target() {
-        return this.target == null ? Optional.empty() : Optional.ofNullable(this.target);
+        return Optional.ofNullable(this.target);
     }
 
-    public ExtendedErrorInfoResponse(
-        @Nullable List<TypedErrorInfoResponse> additionalInfo,
-        @Nullable String code,
-        @Nullable List<ExtendedErrorInfoResponse> details,
-        @Nullable String message,
-        @Nullable String target) {
-        this.additionalInfo = additionalInfo;
-        this.code = code;
-        this.details = details;
-        this.message = message;
-        this.target = target;
-    }
+    private ExtendedErrorInfoResponse() {}
 
-    private ExtendedErrorInfoResponse() {
-        this.additionalInfo = List.of();
-        this.code = null;
-        this.details = List.of();
-        this.message = null;
-        this.target = null;
+    private ExtendedErrorInfoResponse(ExtendedErrorInfoResponse $) {
+        this.additionalInfo = $.additionalInfo;
+        this.code = $.code;
+        this.details = $.details;
+        this.message = $.message;
+        this.target = $.target;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ExtendedErrorInfoResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<TypedErrorInfoResponse> additionalInfo;
-        private @Nullable String code;
-        private @Nullable List<ExtendedErrorInfoResponse> details;
-        private @Nullable String message;
-        private @Nullable String target;
+        private ExtendedErrorInfoResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ExtendedErrorInfoResponse();
         }
 
         public Builder(ExtendedErrorInfoResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.additionalInfo = defaults.additionalInfo;
-    	      this.code = defaults.code;
-    	      this.details = defaults.details;
-    	      this.message = defaults.message;
-    	      this.target = defaults.target;
+            $ = new ExtendedErrorInfoResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder additionalInfo(@Nullable List<TypedErrorInfoResponse> additionalInfo) {
-            this.additionalInfo = additionalInfo;
+            $.additionalInfo = additionalInfo;
             return this;
         }
+
         public Builder additionalInfo(TypedErrorInfoResponse... additionalInfo) {
             return additionalInfo(List.of(additionalInfo));
         }
+
         public Builder code(@Nullable String code) {
-            this.code = code;
+            $.code = code;
             return this;
         }
+
         public Builder details(@Nullable List<ExtendedErrorInfoResponse> details) {
-            this.details = details;
+            $.details = details;
             return this;
         }
+
         public Builder details(ExtendedErrorInfoResponse... details) {
             return details(List.of(details));
         }
+
         public Builder message(@Nullable String message) {
-            this.message = message;
+            $.message = message;
             return this;
         }
+
         public Builder target(@Nullable String target) {
-            this.target = target;
+            $.target = target;
             return this;
-        }        public ExtendedErrorInfoResponse build() {
-            return new ExtendedErrorInfoResponse(additionalInfo, code, details, message, target);
+        }
+
+        public ExtendedErrorInfoResponse build() {
+            return $;
         }
     }
+
 }

@@ -24,48 +24,48 @@ public final class SignalRCorsSettingsResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="allowedOrigins")
-      private final @Nullable List<String> allowedOrigins;
+    private @Nullable List<String> allowedOrigins;
 
-    public List<String> allowedOrigins() {
-        return this.allowedOrigins == null ? List.of() : this.allowedOrigins;
+    public Optional<List<String>> allowedOrigins() {
+        return Optional.ofNullable(this.allowedOrigins);
     }
 
-    public SignalRCorsSettingsResponse(@Nullable List<String> allowedOrigins) {
-        this.allowedOrigins = allowedOrigins;
-    }
+    private SignalRCorsSettingsResponse() {}
 
-    private SignalRCorsSettingsResponse() {
-        this.allowedOrigins = List.of();
+    private SignalRCorsSettingsResponse(SignalRCorsSettingsResponse $) {
+        this.allowedOrigins = $.allowedOrigins;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SignalRCorsSettingsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<String> allowedOrigins;
+        private SignalRCorsSettingsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new SignalRCorsSettingsResponse();
         }
 
         public Builder(SignalRCorsSettingsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.allowedOrigins = defaults.allowedOrigins;
+            $ = new SignalRCorsSettingsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder allowedOrigins(@Nullable List<String> allowedOrigins) {
-            this.allowedOrigins = allowedOrigins;
+            $.allowedOrigins = allowedOrigins;
             return this;
         }
+
         public Builder allowedOrigins(String... allowedOrigins) {
             return allowedOrigins(List.of(allowedOrigins));
-        }        public SignalRCorsSettingsResponse build() {
-            return new SignalRCorsSettingsResponse(allowedOrigins);
+        }
+
+        public SignalRCorsSettingsResponse build() {
+            return $;
         }
     }
+
 }

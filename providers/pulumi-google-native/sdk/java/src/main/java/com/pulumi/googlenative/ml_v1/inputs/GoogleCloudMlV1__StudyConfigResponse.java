@@ -25,7 +25,7 @@ public final class GoogleCloudMlV1__StudyConfigResponse extends com.pulumi.resou
      * 
      */
     @Import(name="algorithm", required=true)
-      private final String algorithm;
+    private String algorithm;
 
     public String algorithm() {
         return this.algorithm;
@@ -36,7 +36,7 @@ public final class GoogleCloudMlV1__StudyConfigResponse extends com.pulumi.resou
      * 
      */
     @Import(name="automatedStoppingConfig", required=true)
-      private final GoogleCloudMlV1__AutomatedStoppingConfigResponse automatedStoppingConfig;
+    private GoogleCloudMlV1__AutomatedStoppingConfigResponse automatedStoppingConfig;
 
     public GoogleCloudMlV1__AutomatedStoppingConfigResponse automatedStoppingConfig() {
         return this.automatedStoppingConfig;
@@ -47,7 +47,7 @@ public final class GoogleCloudMlV1__StudyConfigResponse extends com.pulumi.resou
      * 
      */
     @Import(name="metrics", required=true)
-      private final List<GoogleCloudMlV1_StudyConfig_MetricSpecResponse> metrics;
+    private List<GoogleCloudMlV1_StudyConfig_MetricSpecResponse> metrics;
 
     public List<GoogleCloudMlV1_StudyConfig_MetricSpecResponse> metrics() {
         return this.metrics;
@@ -58,79 +58,74 @@ public final class GoogleCloudMlV1__StudyConfigResponse extends com.pulumi.resou
      * 
      */
     @Import(name="parameters", required=true)
-      private final List<GoogleCloudMlV1_StudyConfig_ParameterSpecResponse> parameters;
+    private List<GoogleCloudMlV1_StudyConfig_ParameterSpecResponse> parameters;
 
     public List<GoogleCloudMlV1_StudyConfig_ParameterSpecResponse> parameters() {
         return this.parameters;
     }
 
-    public GoogleCloudMlV1__StudyConfigResponse(
-        String algorithm,
-        GoogleCloudMlV1__AutomatedStoppingConfigResponse automatedStoppingConfig,
-        List<GoogleCloudMlV1_StudyConfig_MetricSpecResponse> metrics,
-        List<GoogleCloudMlV1_StudyConfig_ParameterSpecResponse> parameters) {
-        this.algorithm = Objects.requireNonNull(algorithm, "expected parameter 'algorithm' to be non-null");
-        this.automatedStoppingConfig = Objects.requireNonNull(automatedStoppingConfig, "expected parameter 'automatedStoppingConfig' to be non-null");
-        this.metrics = Objects.requireNonNull(metrics, "expected parameter 'metrics' to be non-null");
-        this.parameters = Objects.requireNonNull(parameters, "expected parameter 'parameters' to be non-null");
-    }
+    private GoogleCloudMlV1__StudyConfigResponse() {}
 
-    private GoogleCloudMlV1__StudyConfigResponse() {
-        this.algorithm = null;
-        this.automatedStoppingConfig = null;
-        this.metrics = List.of();
-        this.parameters = List.of();
+    private GoogleCloudMlV1__StudyConfigResponse(GoogleCloudMlV1__StudyConfigResponse $) {
+        this.algorithm = $.algorithm;
+        this.automatedStoppingConfig = $.automatedStoppingConfig;
+        this.metrics = $.metrics;
+        this.parameters = $.parameters;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudMlV1__StudyConfigResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String algorithm;
-        private GoogleCloudMlV1__AutomatedStoppingConfigResponse automatedStoppingConfig;
-        private List<GoogleCloudMlV1_StudyConfig_MetricSpecResponse> metrics;
-        private List<GoogleCloudMlV1_StudyConfig_ParameterSpecResponse> parameters;
+        private GoogleCloudMlV1__StudyConfigResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudMlV1__StudyConfigResponse();
         }
 
         public Builder(GoogleCloudMlV1__StudyConfigResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.algorithm = defaults.algorithm;
-    	      this.automatedStoppingConfig = defaults.automatedStoppingConfig;
-    	      this.metrics = defaults.metrics;
-    	      this.parameters = defaults.parameters;
+            $ = new GoogleCloudMlV1__StudyConfigResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder algorithm(String algorithm) {
-            this.algorithm = Objects.requireNonNull(algorithm);
+            $.algorithm = algorithm;
             return this;
         }
+
         public Builder automatedStoppingConfig(GoogleCloudMlV1__AutomatedStoppingConfigResponse automatedStoppingConfig) {
-            this.automatedStoppingConfig = Objects.requireNonNull(automatedStoppingConfig);
+            $.automatedStoppingConfig = automatedStoppingConfig;
             return this;
         }
+
         public Builder metrics(List<GoogleCloudMlV1_StudyConfig_MetricSpecResponse> metrics) {
-            this.metrics = Objects.requireNonNull(metrics);
+            $.metrics = metrics;
             return this;
         }
+
         public Builder metrics(GoogleCloudMlV1_StudyConfig_MetricSpecResponse... metrics) {
             return metrics(List.of(metrics));
         }
+
         public Builder parameters(List<GoogleCloudMlV1_StudyConfig_ParameterSpecResponse> parameters) {
-            this.parameters = Objects.requireNonNull(parameters);
+            $.parameters = parameters;
             return this;
         }
+
         public Builder parameters(GoogleCloudMlV1_StudyConfig_ParameterSpecResponse... parameters) {
             return parameters(List.of(parameters));
-        }        public GoogleCloudMlV1__StudyConfigResponse build() {
-            return new GoogleCloudMlV1__StudyConfigResponse(algorithm, automatedStoppingConfig, metrics, parameters);
+        }
+
+        public GoogleCloudMlV1__StudyConfigResponse build() {
+            $.algorithm = Objects.requireNonNull($.algorithm, "expected parameter 'algorithm' to be non-null");
+            $.automatedStoppingConfig = Objects.requireNonNull($.automatedStoppingConfig, "expected parameter 'automatedStoppingConfig' to be non-null");
+            $.metrics = Objects.requireNonNull($.metrics, "expected parameter 'metrics' to be non-null");
+            $.parameters = Objects.requireNonNull($.parameters, "expected parameter 'parameters' to be non-null");
+            return $;
         }
     }
+
 }

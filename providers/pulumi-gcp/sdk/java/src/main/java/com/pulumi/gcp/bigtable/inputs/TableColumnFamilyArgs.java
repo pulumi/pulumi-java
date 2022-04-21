@@ -5,7 +5,6 @@ package com.pulumi.gcp.bigtable.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,49 +18,49 @@ public final class TableColumnFamilyArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="family", required=true)
-      private final Output<String> family;
+    private Output<String> family;
 
     public Output<String> family() {
         return this.family;
     }
 
-    public TableColumnFamilyArgs(Output<String> family) {
-        this.family = Objects.requireNonNull(family, "expected parameter 'family' to be non-null");
-    }
+    private TableColumnFamilyArgs() {}
 
-    private TableColumnFamilyArgs() {
-        this.family = Codegen.empty();
+    private TableColumnFamilyArgs(TableColumnFamilyArgs $) {
+        this.family = $.family;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TableColumnFamilyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> family;
+        private TableColumnFamilyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TableColumnFamilyArgs();
         }
 
         public Builder(TableColumnFamilyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.family = defaults.family;
+            $ = new TableColumnFamilyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder family(Output<String> family) {
-            this.family = Objects.requireNonNull(family);
+            $.family = family;
             return this;
         }
+
         public Builder family(String family) {
-            this.family = Output.of(Objects.requireNonNull(family));
-            return this;
-        }        public TableColumnFamilyArgs build() {
-            return new TableColumnFamilyArgs(family);
+            return family(Output.of(family));
+        }
+
+        public TableColumnFamilyArgs build() {
+            $.family = Objects.requireNonNull($.family, "expected parameter 'family' to be non-null");
+            return $;
         }
     }
+
 }

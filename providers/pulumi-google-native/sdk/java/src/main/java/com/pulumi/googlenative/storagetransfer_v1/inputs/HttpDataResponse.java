@@ -21,45 +21,45 @@ public final class HttpDataResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="listUrl", required=true)
-      private final String listUrl;
+    private String listUrl;
 
     public String listUrl() {
         return this.listUrl;
     }
 
-    public HttpDataResponse(String listUrl) {
-        this.listUrl = Objects.requireNonNull(listUrl, "expected parameter 'listUrl' to be non-null");
-    }
+    private HttpDataResponse() {}
 
-    private HttpDataResponse() {
-        this.listUrl = null;
+    private HttpDataResponse(HttpDataResponse $) {
+        this.listUrl = $.listUrl;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(HttpDataResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String listUrl;
+        private HttpDataResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new HttpDataResponse();
         }
 
         public Builder(HttpDataResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.listUrl = defaults.listUrl;
+            $ = new HttpDataResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder listUrl(String listUrl) {
-            this.listUrl = Objects.requireNonNull(listUrl);
+            $.listUrl = listUrl;
             return this;
-        }        public HttpDataResponse build() {
-            return new HttpDataResponse(listUrl);
+        }
+
+        public HttpDataResponse build() {
+            $.listUrl = Objects.requireNonNull($.listUrl, "expected parameter 'listUrl' to be non-null");
+            return $;
         }
     }
+
 }

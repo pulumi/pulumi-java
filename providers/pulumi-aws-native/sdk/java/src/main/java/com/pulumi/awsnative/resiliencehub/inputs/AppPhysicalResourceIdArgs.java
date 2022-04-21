@@ -5,9 +5,9 @@ package com.pulumi.awsnative.resiliencehub.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -16,110 +16,101 @@ public final class AppPhysicalResourceIdArgs extends com.pulumi.resources.Resour
     public static final AppPhysicalResourceIdArgs Empty = new AppPhysicalResourceIdArgs();
 
     @Import(name="awsAccountId")
-      private final @Nullable Output<String> awsAccountId;
+    private @Nullable Output<String> awsAccountId;
 
-    public Output<String> awsAccountId() {
-        return this.awsAccountId == null ? Codegen.empty() : this.awsAccountId;
+    public Optional<Output<String>> awsAccountId() {
+        return Optional.ofNullable(this.awsAccountId);
     }
 
     @Import(name="awsRegion")
-      private final @Nullable Output<String> awsRegion;
+    private @Nullable Output<String> awsRegion;
 
-    public Output<String> awsRegion() {
-        return this.awsRegion == null ? Codegen.empty() : this.awsRegion;
+    public Optional<Output<String>> awsRegion() {
+        return Optional.ofNullable(this.awsRegion);
     }
 
     @Import(name="identifier", required=true)
-      private final Output<String> identifier;
+    private Output<String> identifier;
 
     public Output<String> identifier() {
         return this.identifier;
     }
 
     @Import(name="type", required=true)
-      private final Output<String> type;
+    private Output<String> type;
 
     public Output<String> type() {
         return this.type;
     }
 
-    public AppPhysicalResourceIdArgs(
-        @Nullable Output<String> awsAccountId,
-        @Nullable Output<String> awsRegion,
-        Output<String> identifier,
-        Output<String> type) {
-        this.awsAccountId = awsAccountId;
-        this.awsRegion = awsRegion;
-        this.identifier = Objects.requireNonNull(identifier, "expected parameter 'identifier' to be non-null");
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private AppPhysicalResourceIdArgs() {}
 
-    private AppPhysicalResourceIdArgs() {
-        this.awsAccountId = Codegen.empty();
-        this.awsRegion = Codegen.empty();
-        this.identifier = Codegen.empty();
-        this.type = Codegen.empty();
+    private AppPhysicalResourceIdArgs(AppPhysicalResourceIdArgs $) {
+        this.awsAccountId = $.awsAccountId;
+        this.awsRegion = $.awsRegion;
+        this.identifier = $.identifier;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AppPhysicalResourceIdArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> awsAccountId;
-        private @Nullable Output<String> awsRegion;
-        private Output<String> identifier;
-        private Output<String> type;
+        private AppPhysicalResourceIdArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AppPhysicalResourceIdArgs();
         }
 
         public Builder(AppPhysicalResourceIdArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.awsAccountId = defaults.awsAccountId;
-    	      this.awsRegion = defaults.awsRegion;
-    	      this.identifier = defaults.identifier;
-    	      this.type = defaults.type;
+            $ = new AppPhysicalResourceIdArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder awsAccountId(@Nullable Output<String> awsAccountId) {
-            this.awsAccountId = awsAccountId;
+            $.awsAccountId = awsAccountId;
             return this;
         }
-        public Builder awsAccountId(@Nullable String awsAccountId) {
-            this.awsAccountId = Codegen.ofNullable(awsAccountId);
-            return this;
+
+        public Builder awsAccountId(String awsAccountId) {
+            return awsAccountId(Output.of(awsAccountId));
         }
+
         public Builder awsRegion(@Nullable Output<String> awsRegion) {
-            this.awsRegion = awsRegion;
+            $.awsRegion = awsRegion;
             return this;
         }
-        public Builder awsRegion(@Nullable String awsRegion) {
-            this.awsRegion = Codegen.ofNullable(awsRegion);
-            return this;
+
+        public Builder awsRegion(String awsRegion) {
+            return awsRegion(Output.of(awsRegion));
         }
+
         public Builder identifier(Output<String> identifier) {
-            this.identifier = Objects.requireNonNull(identifier);
+            $.identifier = identifier;
             return this;
         }
+
         public Builder identifier(String identifier) {
-            this.identifier = Output.of(Objects.requireNonNull(identifier));
-            return this;
+            return identifier(Output.of(identifier));
         }
+
         public Builder type(Output<String> type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Output.of(Objects.requireNonNull(type));
-            return this;
-        }        public AppPhysicalResourceIdArgs build() {
-            return new AppPhysicalResourceIdArgs(awsAccountId, awsRegion, identifier, type);
+            return type(Output.of(type));
+        }
+
+        public AppPhysicalResourceIdArgs build() {
+            $.identifier = Objects.requireNonNull($.identifier, "expected parameter 'identifier' to be non-null");
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,9 +5,9 @@ package com.pulumi.azurenative.servicefabricmesh.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class ResourceLimitsArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="cpu")
-      private final @Nullable Output<Double> cpu;
+    private @Nullable Output<Double> cpu;
 
-    public Output<Double> cpu() {
-        return this.cpu == null ? Codegen.empty() : this.cpu;
+    public Optional<Output<Double>> cpu() {
+        return Optional.ofNullable(this.cpu);
     }
 
     /**
@@ -35,63 +35,58 @@ public final class ResourceLimitsArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="memoryInGB")
-      private final @Nullable Output<Double> memoryInGB;
+    private @Nullable Output<Double> memoryInGB;
 
-    public Output<Double> memoryInGB() {
-        return this.memoryInGB == null ? Codegen.empty() : this.memoryInGB;
+    public Optional<Output<Double>> memoryInGB() {
+        return Optional.ofNullable(this.memoryInGB);
     }
 
-    public ResourceLimitsArgs(
-        @Nullable Output<Double> cpu,
-        @Nullable Output<Double> memoryInGB) {
-        this.cpu = cpu;
-        this.memoryInGB = memoryInGB;
-    }
+    private ResourceLimitsArgs() {}
 
-    private ResourceLimitsArgs() {
-        this.cpu = Codegen.empty();
-        this.memoryInGB = Codegen.empty();
+    private ResourceLimitsArgs(ResourceLimitsArgs $) {
+        this.cpu = $.cpu;
+        this.memoryInGB = $.memoryInGB;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ResourceLimitsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Double> cpu;
-        private @Nullable Output<Double> memoryInGB;
+        private ResourceLimitsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ResourceLimitsArgs();
         }
 
         public Builder(ResourceLimitsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cpu = defaults.cpu;
-    	      this.memoryInGB = defaults.memoryInGB;
+            $ = new ResourceLimitsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder cpu(@Nullable Output<Double> cpu) {
-            this.cpu = cpu;
+            $.cpu = cpu;
             return this;
         }
-        public Builder cpu(@Nullable Double cpu) {
-            this.cpu = Codegen.ofNullable(cpu);
-            return this;
+
+        public Builder cpu(Double cpu) {
+            return cpu(Output.of(cpu));
         }
+
         public Builder memoryInGB(@Nullable Output<Double> memoryInGB) {
-            this.memoryInGB = memoryInGB;
+            $.memoryInGB = memoryInGB;
             return this;
         }
-        public Builder memoryInGB(@Nullable Double memoryInGB) {
-            this.memoryInGB = Codegen.ofNullable(memoryInGB);
-            return this;
-        }        public ResourceLimitsArgs build() {
-            return new ResourceLimitsArgs(cpu, memoryInGB);
+
+        public Builder memoryInGB(Double memoryInGB) {
+            return memoryInGB(Output.of(memoryInGB));
+        }
+
+        public ResourceLimitsArgs build() {
+            return $;
         }
     }
+
 }

@@ -6,9 +6,9 @@ package com.pulumi.azurenative.batch;
 import com.pulumi.azurenative.batch.enums.CertificateFormat;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,7 +21,7 @@ public final class CertificateArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="accountName", required=true)
-      private final Output<String> accountName;
+    private Output<String> accountName;
 
     public Output<String> accountName() {
         return this.accountName;
@@ -32,10 +32,10 @@ public final class CertificateArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="certificateName")
-      private final @Nullable Output<String> certificateName;
+    private @Nullable Output<String> certificateName;
 
-    public Output<String> certificateName() {
-        return this.certificateName == null ? Codegen.empty() : this.certificateName;
+    public Optional<Output<String>> certificateName() {
+        return Optional.ofNullable(this.certificateName);
     }
 
     /**
@@ -43,7 +43,7 @@ public final class CertificateArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="data", required=true)
-      private final Output<String> data;
+    private Output<String> data;
 
     public Output<String> data() {
         return this.data;
@@ -54,10 +54,10 @@ public final class CertificateArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="format")
-      private final @Nullable Output<CertificateFormat> format;
+    private @Nullable Output<CertificateFormat> format;
 
-    public Output<CertificateFormat> format() {
-        return this.format == null ? Codegen.empty() : this.format;
+    public Optional<Output<CertificateFormat>> format() {
+        return Optional.ofNullable(this.format);
     }
 
     /**
@@ -65,10 +65,10 @@ public final class CertificateArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="password")
-      private final @Nullable Output<String> password;
+    private @Nullable Output<String> password;
 
-    public Output<String> password() {
-        return this.password == null ? Codegen.empty() : this.password;
+    public Optional<Output<String>> password() {
+        return Optional.ofNullable(this.password);
     }
 
     /**
@@ -76,7 +76,7 @@ public final class CertificateArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -87,10 +87,10 @@ public final class CertificateArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="thumbprint")
-      private final @Nullable Output<String> thumbprint;
+    private @Nullable Output<String> thumbprint;
 
-    public Output<String> thumbprint() {
-        return this.thumbprint == null ? Codegen.empty() : this.thumbprint;
+    public Optional<Output<String>> thumbprint() {
+        return Optional.ofNullable(this.thumbprint);
     }
 
     /**
@@ -98,141 +98,121 @@ public final class CertificateArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="thumbprintAlgorithm")
-      private final @Nullable Output<String> thumbprintAlgorithm;
+    private @Nullable Output<String> thumbprintAlgorithm;
 
-    public Output<String> thumbprintAlgorithm() {
-        return this.thumbprintAlgorithm == null ? Codegen.empty() : this.thumbprintAlgorithm;
+    public Optional<Output<String>> thumbprintAlgorithm() {
+        return Optional.ofNullable(this.thumbprintAlgorithm);
     }
 
-    public CertificateArgs(
-        Output<String> accountName,
-        @Nullable Output<String> certificateName,
-        Output<String> data,
-        @Nullable Output<CertificateFormat> format,
-        @Nullable Output<String> password,
-        Output<String> resourceGroupName,
-        @Nullable Output<String> thumbprint,
-        @Nullable Output<String> thumbprintAlgorithm) {
-        this.accountName = Objects.requireNonNull(accountName, "expected parameter 'accountName' to be non-null");
-        this.certificateName = certificateName;
-        this.data = Objects.requireNonNull(data, "expected parameter 'data' to be non-null");
-        this.format = format;
-        this.password = password;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.thumbprint = thumbprint;
-        this.thumbprintAlgorithm = thumbprintAlgorithm;
-    }
+    private CertificateArgs() {}
 
-    private CertificateArgs() {
-        this.accountName = Codegen.empty();
-        this.certificateName = Codegen.empty();
-        this.data = Codegen.empty();
-        this.format = Codegen.empty();
-        this.password = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.thumbprint = Codegen.empty();
-        this.thumbprintAlgorithm = Codegen.empty();
+    private CertificateArgs(CertificateArgs $) {
+        this.accountName = $.accountName;
+        this.certificateName = $.certificateName;
+        this.data = $.data;
+        this.format = $.format;
+        this.password = $.password;
+        this.resourceGroupName = $.resourceGroupName;
+        this.thumbprint = $.thumbprint;
+        this.thumbprintAlgorithm = $.thumbprintAlgorithm;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CertificateArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> accountName;
-        private @Nullable Output<String> certificateName;
-        private Output<String> data;
-        private @Nullable Output<CertificateFormat> format;
-        private @Nullable Output<String> password;
-        private Output<String> resourceGroupName;
-        private @Nullable Output<String> thumbprint;
-        private @Nullable Output<String> thumbprintAlgorithm;
+        private CertificateArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CertificateArgs();
         }
 
         public Builder(CertificateArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accountName = defaults.accountName;
-    	      this.certificateName = defaults.certificateName;
-    	      this.data = defaults.data;
-    	      this.format = defaults.format;
-    	      this.password = defaults.password;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.thumbprint = defaults.thumbprint;
-    	      this.thumbprintAlgorithm = defaults.thumbprintAlgorithm;
+            $ = new CertificateArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder accountName(Output<String> accountName) {
-            this.accountName = Objects.requireNonNull(accountName);
+            $.accountName = accountName;
             return this;
         }
+
         public Builder accountName(String accountName) {
-            this.accountName = Output.of(Objects.requireNonNull(accountName));
-            return this;
+            return accountName(Output.of(accountName));
         }
+
         public Builder certificateName(@Nullable Output<String> certificateName) {
-            this.certificateName = certificateName;
+            $.certificateName = certificateName;
             return this;
         }
-        public Builder certificateName(@Nullable String certificateName) {
-            this.certificateName = Codegen.ofNullable(certificateName);
-            return this;
+
+        public Builder certificateName(String certificateName) {
+            return certificateName(Output.of(certificateName));
         }
+
         public Builder data(Output<String> data) {
-            this.data = Objects.requireNonNull(data);
+            $.data = data;
             return this;
         }
+
         public Builder data(String data) {
-            this.data = Output.of(Objects.requireNonNull(data));
-            return this;
+            return data(Output.of(data));
         }
+
         public Builder format(@Nullable Output<CertificateFormat> format) {
-            this.format = format;
+            $.format = format;
             return this;
         }
-        public Builder format(@Nullable CertificateFormat format) {
-            this.format = Codegen.ofNullable(format);
-            return this;
+
+        public Builder format(CertificateFormat format) {
+            return format(Output.of(format));
         }
+
         public Builder password(@Nullable Output<String> password) {
-            this.password = password;
+            $.password = password;
             return this;
         }
-        public Builder password(@Nullable String password) {
-            this.password = Codegen.ofNullable(password);
-            return this;
+
+        public Builder password(String password) {
+            return password(Output.of(password));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder thumbprint(@Nullable Output<String> thumbprint) {
-            this.thumbprint = thumbprint;
+            $.thumbprint = thumbprint;
             return this;
         }
-        public Builder thumbprint(@Nullable String thumbprint) {
-            this.thumbprint = Codegen.ofNullable(thumbprint);
-            return this;
+
+        public Builder thumbprint(String thumbprint) {
+            return thumbprint(Output.of(thumbprint));
         }
+
         public Builder thumbprintAlgorithm(@Nullable Output<String> thumbprintAlgorithm) {
-            this.thumbprintAlgorithm = thumbprintAlgorithm;
+            $.thumbprintAlgorithm = thumbprintAlgorithm;
             return this;
         }
-        public Builder thumbprintAlgorithm(@Nullable String thumbprintAlgorithm) {
-            this.thumbprintAlgorithm = Codegen.ofNullable(thumbprintAlgorithm);
-            return this;
-        }        public CertificateArgs build() {
-            return new CertificateArgs(accountName, certificateName, data, format, password, resourceGroupName, thumbprint, thumbprintAlgorithm);
+
+        public Builder thumbprintAlgorithm(String thumbprintAlgorithm) {
+            return thumbprintAlgorithm(Output.of(thumbprintAlgorithm));
+        }
+
+        public CertificateArgs build() {
+            $.accountName = Objects.requireNonNull($.accountName, "expected parameter 'accountName' to be non-null");
+            $.data = Objects.requireNonNull($.data, "expected parameter 'data' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

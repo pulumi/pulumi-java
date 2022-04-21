@@ -23,10 +23,10 @@ public final class OsProfileResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="adminUsername")
-      private final @Nullable String adminUsername;
+    private @Nullable String adminUsername;
 
     public Optional<String> adminUsername() {
-        return this.adminUsername == null ? Optional.empty() : Optional.ofNullable(this.adminUsername);
+        return Optional.ofNullable(this.adminUsername);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class OsProfileResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="computerName")
-      private final @Nullable String computerName;
+    private @Nullable String computerName;
 
     public Optional<String> computerName() {
-        return this.computerName == null ? Optional.empty() : Optional.ofNullable(this.computerName);
+        return Optional.ofNullable(this.computerName);
     }
 
     /**
@@ -45,7 +45,7 @@ public final class OsProfileResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="osName", required=true)
-      private final String osName;
+    private String osName;
 
     public String osName() {
         return this.osName;
@@ -56,10 +56,10 @@ public final class OsProfileResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="osType")
-      private final @Nullable String osType;
+    private @Nullable String osType;
 
     public Optional<String> osType() {
-        return this.osType == null ? Optional.empty() : Optional.ofNullable(this.osType);
+        return Optional.ofNullable(this.osType);
     }
 
     /**
@@ -67,7 +67,7 @@ public final class OsProfileResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="toolsRunningStatus", required=true)
-      private final String toolsRunningStatus;
+    private String toolsRunningStatus;
 
     public String toolsRunningStatus() {
         return this.toolsRunningStatus;
@@ -78,7 +78,7 @@ public final class OsProfileResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="toolsVersion", required=true)
-      private final String toolsVersion;
+    private String toolsVersion;
 
     public String toolsVersion() {
         return this.toolsVersion;
@@ -89,100 +89,84 @@ public final class OsProfileResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="toolsVersionStatus", required=true)
-      private final String toolsVersionStatus;
+    private String toolsVersionStatus;
 
     public String toolsVersionStatus() {
         return this.toolsVersionStatus;
     }
 
-    public OsProfileResponse(
-        @Nullable String adminUsername,
-        @Nullable String computerName,
-        String osName,
-        @Nullable String osType,
-        String toolsRunningStatus,
-        String toolsVersion,
-        String toolsVersionStatus) {
-        this.adminUsername = adminUsername;
-        this.computerName = computerName;
-        this.osName = Objects.requireNonNull(osName, "expected parameter 'osName' to be non-null");
-        this.osType = osType;
-        this.toolsRunningStatus = Objects.requireNonNull(toolsRunningStatus, "expected parameter 'toolsRunningStatus' to be non-null");
-        this.toolsVersion = Objects.requireNonNull(toolsVersion, "expected parameter 'toolsVersion' to be non-null");
-        this.toolsVersionStatus = Objects.requireNonNull(toolsVersionStatus, "expected parameter 'toolsVersionStatus' to be non-null");
-    }
+    private OsProfileResponse() {}
 
-    private OsProfileResponse() {
-        this.adminUsername = null;
-        this.computerName = null;
-        this.osName = null;
-        this.osType = null;
-        this.toolsRunningStatus = null;
-        this.toolsVersion = null;
-        this.toolsVersionStatus = null;
+    private OsProfileResponse(OsProfileResponse $) {
+        this.adminUsername = $.adminUsername;
+        this.computerName = $.computerName;
+        this.osName = $.osName;
+        this.osType = $.osType;
+        this.toolsRunningStatus = $.toolsRunningStatus;
+        this.toolsVersion = $.toolsVersion;
+        this.toolsVersionStatus = $.toolsVersionStatus;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(OsProfileResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String adminUsername;
-        private @Nullable String computerName;
-        private String osName;
-        private @Nullable String osType;
-        private String toolsRunningStatus;
-        private String toolsVersion;
-        private String toolsVersionStatus;
+        private OsProfileResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new OsProfileResponse();
         }
 
         public Builder(OsProfileResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.adminUsername = defaults.adminUsername;
-    	      this.computerName = defaults.computerName;
-    	      this.osName = defaults.osName;
-    	      this.osType = defaults.osType;
-    	      this.toolsRunningStatus = defaults.toolsRunningStatus;
-    	      this.toolsVersion = defaults.toolsVersion;
-    	      this.toolsVersionStatus = defaults.toolsVersionStatus;
+            $ = new OsProfileResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder adminUsername(@Nullable String adminUsername) {
-            this.adminUsername = adminUsername;
+            $.adminUsername = adminUsername;
             return this;
         }
+
         public Builder computerName(@Nullable String computerName) {
-            this.computerName = computerName;
+            $.computerName = computerName;
             return this;
         }
+
         public Builder osName(String osName) {
-            this.osName = Objects.requireNonNull(osName);
+            $.osName = osName;
             return this;
         }
+
         public Builder osType(@Nullable String osType) {
-            this.osType = osType;
+            $.osType = osType;
             return this;
         }
+
         public Builder toolsRunningStatus(String toolsRunningStatus) {
-            this.toolsRunningStatus = Objects.requireNonNull(toolsRunningStatus);
+            $.toolsRunningStatus = toolsRunningStatus;
             return this;
         }
+
         public Builder toolsVersion(String toolsVersion) {
-            this.toolsVersion = Objects.requireNonNull(toolsVersion);
+            $.toolsVersion = toolsVersion;
             return this;
         }
+
         public Builder toolsVersionStatus(String toolsVersionStatus) {
-            this.toolsVersionStatus = Objects.requireNonNull(toolsVersionStatus);
+            $.toolsVersionStatus = toolsVersionStatus;
             return this;
-        }        public OsProfileResponse build() {
-            return new OsProfileResponse(adminUsername, computerName, osName, osType, toolsRunningStatus, toolsVersion, toolsVersionStatus);
+        }
+
+        public OsProfileResponse build() {
+            $.osName = Objects.requireNonNull($.osName, "expected parameter 'osName' to be non-null");
+            $.toolsRunningStatus = Objects.requireNonNull($.toolsRunningStatus, "expected parameter 'toolsRunningStatus' to be non-null");
+            $.toolsVersion = Objects.requireNonNull($.toolsVersion, "expected parameter 'toolsVersion' to be non-null");
+            $.toolsVersionStatus = Objects.requireNonNull($.toolsVersionStatus, "expected parameter 'toolsVersionStatus' to be non-null");
+            return $;
         }
     }
+
 }

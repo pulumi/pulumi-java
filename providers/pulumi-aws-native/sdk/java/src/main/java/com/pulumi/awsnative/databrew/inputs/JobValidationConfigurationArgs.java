@@ -6,9 +6,9 @@ package com.pulumi.awsnative.databrew.inputs;
 import com.pulumi.awsnative.databrew.enums.JobValidationMode;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,70 +25,66 @@ public final class JobValidationConfigurationArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="rulesetArn", required=true)
-      private final Output<String> rulesetArn;
+    private Output<String> rulesetArn;
 
     public Output<String> rulesetArn() {
         return this.rulesetArn;
     }
 
     @Import(name="validationMode")
-      private final @Nullable Output<JobValidationMode> validationMode;
+    private @Nullable Output<JobValidationMode> validationMode;
 
-    public Output<JobValidationMode> validationMode() {
-        return this.validationMode == null ? Codegen.empty() : this.validationMode;
+    public Optional<Output<JobValidationMode>> validationMode() {
+        return Optional.ofNullable(this.validationMode);
     }
 
-    public JobValidationConfigurationArgs(
-        Output<String> rulesetArn,
-        @Nullable Output<JobValidationMode> validationMode) {
-        this.rulesetArn = Objects.requireNonNull(rulesetArn, "expected parameter 'rulesetArn' to be non-null");
-        this.validationMode = validationMode;
-    }
+    private JobValidationConfigurationArgs() {}
 
-    private JobValidationConfigurationArgs() {
-        this.rulesetArn = Codegen.empty();
-        this.validationMode = Codegen.empty();
+    private JobValidationConfigurationArgs(JobValidationConfigurationArgs $) {
+        this.rulesetArn = $.rulesetArn;
+        this.validationMode = $.validationMode;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(JobValidationConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> rulesetArn;
-        private @Nullable Output<JobValidationMode> validationMode;
+        private JobValidationConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new JobValidationConfigurationArgs();
         }
 
         public Builder(JobValidationConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.rulesetArn = defaults.rulesetArn;
-    	      this.validationMode = defaults.validationMode;
+            $ = new JobValidationConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder rulesetArn(Output<String> rulesetArn) {
-            this.rulesetArn = Objects.requireNonNull(rulesetArn);
+            $.rulesetArn = rulesetArn;
             return this;
         }
+
         public Builder rulesetArn(String rulesetArn) {
-            this.rulesetArn = Output.of(Objects.requireNonNull(rulesetArn));
-            return this;
+            return rulesetArn(Output.of(rulesetArn));
         }
+
         public Builder validationMode(@Nullable Output<JobValidationMode> validationMode) {
-            this.validationMode = validationMode;
+            $.validationMode = validationMode;
             return this;
         }
-        public Builder validationMode(@Nullable JobValidationMode validationMode) {
-            this.validationMode = Codegen.ofNullable(validationMode);
-            return this;
-        }        public JobValidationConfigurationArgs build() {
-            return new JobValidationConfigurationArgs(rulesetArn, validationMode);
+
+        public Builder validationMode(JobValidationMode validationMode) {
+            return validationMode(Output.of(validationMode));
+        }
+
+        public JobValidationConfigurationArgs build() {
+            $.rulesetArn = Objects.requireNonNull($.rulesetArn, "expected parameter 'rulesetArn' to be non-null");
+            return $;
         }
     }
+
 }

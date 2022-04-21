@@ -21,45 +21,45 @@ public final class GoogleCloudDialogflowV2IntentMessageTableCardCellResponse ext
      * 
      */
     @Import(name="text", required=true)
-      private final String text;
+    private String text;
 
     public String text() {
         return this.text;
     }
 
-    public GoogleCloudDialogflowV2IntentMessageTableCardCellResponse(String text) {
-        this.text = Objects.requireNonNull(text, "expected parameter 'text' to be non-null");
-    }
+    private GoogleCloudDialogflowV2IntentMessageTableCardCellResponse() {}
 
-    private GoogleCloudDialogflowV2IntentMessageTableCardCellResponse() {
-        this.text = null;
+    private GoogleCloudDialogflowV2IntentMessageTableCardCellResponse(GoogleCloudDialogflowV2IntentMessageTableCardCellResponse $) {
+        this.text = $.text;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudDialogflowV2IntentMessageTableCardCellResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String text;
+        private GoogleCloudDialogflowV2IntentMessageTableCardCellResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudDialogflowV2IntentMessageTableCardCellResponse();
         }
 
         public Builder(GoogleCloudDialogflowV2IntentMessageTableCardCellResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.text = defaults.text;
+            $ = new GoogleCloudDialogflowV2IntentMessageTableCardCellResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder text(String text) {
-            this.text = Objects.requireNonNull(text);
+            $.text = text;
             return this;
-        }        public GoogleCloudDialogflowV2IntentMessageTableCardCellResponse build() {
-            return new GoogleCloudDialogflowV2IntentMessageTableCardCellResponse(text);
+        }
+
+        public GoogleCloudDialogflowV2IntentMessageTableCardCellResponse build() {
+            $.text = Objects.requireNonNull($.text, "expected parameter 'text' to be non-null");
+            return $;
         }
     }
+
 }

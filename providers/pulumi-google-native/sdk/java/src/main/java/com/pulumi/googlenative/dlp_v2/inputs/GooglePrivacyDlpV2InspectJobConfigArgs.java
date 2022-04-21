@@ -5,13 +5,13 @@ package com.pulumi.googlenative.dlp_v2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2ActionArgs;
 import com.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2InspectConfigArgs;
 import com.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2StorageConfigArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -28,10 +28,10 @@ public final class GooglePrivacyDlpV2InspectJobConfigArgs extends com.pulumi.res
      * 
      */
     @Import(name="actions")
-      private final @Nullable Output<List<GooglePrivacyDlpV2ActionArgs>> actions;
+    private @Nullable Output<List<GooglePrivacyDlpV2ActionArgs>> actions;
 
-    public Output<List<GooglePrivacyDlpV2ActionArgs>> actions() {
-        return this.actions == null ? Codegen.empty() : this.actions;
+    public Optional<Output<List<GooglePrivacyDlpV2ActionArgs>>> actions() {
+        return Optional.ofNullable(this.actions);
     }
 
     /**
@@ -39,10 +39,10 @@ public final class GooglePrivacyDlpV2InspectJobConfigArgs extends com.pulumi.res
      * 
      */
     @Import(name="inspectConfig")
-      private final @Nullable Output<GooglePrivacyDlpV2InspectConfigArgs> inspectConfig;
+    private @Nullable Output<GooglePrivacyDlpV2InspectConfigArgs> inspectConfig;
 
-    public Output<GooglePrivacyDlpV2InspectConfigArgs> inspectConfig() {
-        return this.inspectConfig == null ? Codegen.empty() : this.inspectConfig;
+    public Optional<Output<GooglePrivacyDlpV2InspectConfigArgs>> inspectConfig() {
+        return Optional.ofNullable(this.inspectConfig);
     }
 
     /**
@@ -50,10 +50,10 @@ public final class GooglePrivacyDlpV2InspectJobConfigArgs extends com.pulumi.res
      * 
      */
     @Import(name="inspectTemplateName")
-      private final @Nullable Output<String> inspectTemplateName;
+    private @Nullable Output<String> inspectTemplateName;
 
-    public Output<String> inspectTemplateName() {
-        return this.inspectTemplateName == null ? Codegen.empty() : this.inspectTemplateName;
+    public Optional<Output<String>> inspectTemplateName() {
+        return Optional.ofNullable(this.inspectTemplateName);
     }
 
     /**
@@ -61,92 +61,82 @@ public final class GooglePrivacyDlpV2InspectJobConfigArgs extends com.pulumi.res
      * 
      */
     @Import(name="storageConfig")
-      private final @Nullable Output<GooglePrivacyDlpV2StorageConfigArgs> storageConfig;
+    private @Nullable Output<GooglePrivacyDlpV2StorageConfigArgs> storageConfig;
 
-    public Output<GooglePrivacyDlpV2StorageConfigArgs> storageConfig() {
-        return this.storageConfig == null ? Codegen.empty() : this.storageConfig;
+    public Optional<Output<GooglePrivacyDlpV2StorageConfigArgs>> storageConfig() {
+        return Optional.ofNullable(this.storageConfig);
     }
 
-    public GooglePrivacyDlpV2InspectJobConfigArgs(
-        @Nullable Output<List<GooglePrivacyDlpV2ActionArgs>> actions,
-        @Nullable Output<GooglePrivacyDlpV2InspectConfigArgs> inspectConfig,
-        @Nullable Output<String> inspectTemplateName,
-        @Nullable Output<GooglePrivacyDlpV2StorageConfigArgs> storageConfig) {
-        this.actions = actions;
-        this.inspectConfig = inspectConfig;
-        this.inspectTemplateName = inspectTemplateName;
-        this.storageConfig = storageConfig;
-    }
+    private GooglePrivacyDlpV2InspectJobConfigArgs() {}
 
-    private GooglePrivacyDlpV2InspectJobConfigArgs() {
-        this.actions = Codegen.empty();
-        this.inspectConfig = Codegen.empty();
-        this.inspectTemplateName = Codegen.empty();
-        this.storageConfig = Codegen.empty();
+    private GooglePrivacyDlpV2InspectJobConfigArgs(GooglePrivacyDlpV2InspectJobConfigArgs $) {
+        this.actions = $.actions;
+        this.inspectConfig = $.inspectConfig;
+        this.inspectTemplateName = $.inspectTemplateName;
+        this.storageConfig = $.storageConfig;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GooglePrivacyDlpV2InspectJobConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<GooglePrivacyDlpV2ActionArgs>> actions;
-        private @Nullable Output<GooglePrivacyDlpV2InspectConfigArgs> inspectConfig;
-        private @Nullable Output<String> inspectTemplateName;
-        private @Nullable Output<GooglePrivacyDlpV2StorageConfigArgs> storageConfig;
+        private GooglePrivacyDlpV2InspectJobConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GooglePrivacyDlpV2InspectJobConfigArgs();
         }
 
         public Builder(GooglePrivacyDlpV2InspectJobConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.actions = defaults.actions;
-    	      this.inspectConfig = defaults.inspectConfig;
-    	      this.inspectTemplateName = defaults.inspectTemplateName;
-    	      this.storageConfig = defaults.storageConfig;
+            $ = new GooglePrivacyDlpV2InspectJobConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder actions(@Nullable Output<List<GooglePrivacyDlpV2ActionArgs>> actions) {
-            this.actions = actions;
+            $.actions = actions;
             return this;
         }
-        public Builder actions(@Nullable List<GooglePrivacyDlpV2ActionArgs> actions) {
-            this.actions = Codegen.ofNullable(actions);
-            return this;
+
+        public Builder actions(List<GooglePrivacyDlpV2ActionArgs> actions) {
+            return actions(Output.of(actions));
         }
+
         public Builder actions(GooglePrivacyDlpV2ActionArgs... actions) {
             return actions(List.of(actions));
         }
+
         public Builder inspectConfig(@Nullable Output<GooglePrivacyDlpV2InspectConfigArgs> inspectConfig) {
-            this.inspectConfig = inspectConfig;
+            $.inspectConfig = inspectConfig;
             return this;
         }
-        public Builder inspectConfig(@Nullable GooglePrivacyDlpV2InspectConfigArgs inspectConfig) {
-            this.inspectConfig = Codegen.ofNullable(inspectConfig);
-            return this;
+
+        public Builder inspectConfig(GooglePrivacyDlpV2InspectConfigArgs inspectConfig) {
+            return inspectConfig(Output.of(inspectConfig));
         }
+
         public Builder inspectTemplateName(@Nullable Output<String> inspectTemplateName) {
-            this.inspectTemplateName = inspectTemplateName;
+            $.inspectTemplateName = inspectTemplateName;
             return this;
         }
-        public Builder inspectTemplateName(@Nullable String inspectTemplateName) {
-            this.inspectTemplateName = Codegen.ofNullable(inspectTemplateName);
-            return this;
+
+        public Builder inspectTemplateName(String inspectTemplateName) {
+            return inspectTemplateName(Output.of(inspectTemplateName));
         }
+
         public Builder storageConfig(@Nullable Output<GooglePrivacyDlpV2StorageConfigArgs> storageConfig) {
-            this.storageConfig = storageConfig;
+            $.storageConfig = storageConfig;
             return this;
         }
-        public Builder storageConfig(@Nullable GooglePrivacyDlpV2StorageConfigArgs storageConfig) {
-            this.storageConfig = Codegen.ofNullable(storageConfig);
-            return this;
-        }        public GooglePrivacyDlpV2InspectJobConfigArgs build() {
-            return new GooglePrivacyDlpV2InspectJobConfigArgs(actions, inspectConfig, inspectTemplateName, storageConfig);
+
+        public Builder storageConfig(GooglePrivacyDlpV2StorageConfigArgs storageConfig) {
+            return storageConfig(Output.of(storageConfig));
+        }
+
+        public GooglePrivacyDlpV2InspectJobConfigArgs build() {
+            return $;
         }
     }
+
 }

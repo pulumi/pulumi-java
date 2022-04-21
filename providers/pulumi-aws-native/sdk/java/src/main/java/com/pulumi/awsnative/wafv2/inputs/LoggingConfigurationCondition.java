@@ -20,10 +20,10 @@ public final class LoggingConfigurationCondition extends com.pulumi.resources.In
      * 
      */
     @Import(name="actionCondition")
-      private final @Nullable LoggingConfigurationConditionActionConditionProperties actionCondition;
+    private @Nullable LoggingConfigurationConditionActionConditionProperties actionCondition;
 
     public Optional<LoggingConfigurationConditionActionConditionProperties> actionCondition() {
-        return this.actionCondition == null ? Optional.empty() : Optional.ofNullable(this.actionCondition);
+        return Optional.ofNullable(this.actionCondition);
     }
 
     /**
@@ -31,55 +31,50 @@ public final class LoggingConfigurationCondition extends com.pulumi.resources.In
      * 
      */
     @Import(name="labelNameCondition")
-      private final @Nullable LoggingConfigurationConditionLabelNameConditionProperties labelNameCondition;
+    private @Nullable LoggingConfigurationConditionLabelNameConditionProperties labelNameCondition;
 
     public Optional<LoggingConfigurationConditionLabelNameConditionProperties> labelNameCondition() {
-        return this.labelNameCondition == null ? Optional.empty() : Optional.ofNullable(this.labelNameCondition);
+        return Optional.ofNullable(this.labelNameCondition);
     }
 
-    public LoggingConfigurationCondition(
-        @Nullable LoggingConfigurationConditionActionConditionProperties actionCondition,
-        @Nullable LoggingConfigurationConditionLabelNameConditionProperties labelNameCondition) {
-        this.actionCondition = actionCondition;
-        this.labelNameCondition = labelNameCondition;
-    }
+    private LoggingConfigurationCondition() {}
 
-    private LoggingConfigurationCondition() {
-        this.actionCondition = null;
-        this.labelNameCondition = null;
+    private LoggingConfigurationCondition(LoggingConfigurationCondition $) {
+        this.actionCondition = $.actionCondition;
+        this.labelNameCondition = $.labelNameCondition;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LoggingConfigurationCondition defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable LoggingConfigurationConditionActionConditionProperties actionCondition;
-        private @Nullable LoggingConfigurationConditionLabelNameConditionProperties labelNameCondition;
+        private LoggingConfigurationCondition $;
 
         public Builder() {
-    	      // Empty
+            $ = new LoggingConfigurationCondition();
         }
 
         public Builder(LoggingConfigurationCondition defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.actionCondition = defaults.actionCondition;
-    	      this.labelNameCondition = defaults.labelNameCondition;
+            $ = new LoggingConfigurationCondition(Objects.requireNonNull(defaults));
         }
 
         public Builder actionCondition(@Nullable LoggingConfigurationConditionActionConditionProperties actionCondition) {
-            this.actionCondition = actionCondition;
+            $.actionCondition = actionCondition;
             return this;
         }
+
         public Builder labelNameCondition(@Nullable LoggingConfigurationConditionLabelNameConditionProperties labelNameCondition) {
-            this.labelNameCondition = labelNameCondition;
+            $.labelNameCondition = labelNameCondition;
             return this;
-        }        public LoggingConfigurationCondition build() {
-            return new LoggingConfigurationCondition(actionCondition, labelNameCondition);
+        }
+
+        public LoggingConfigurationCondition build() {
+            return $;
         }
     }
+
 }

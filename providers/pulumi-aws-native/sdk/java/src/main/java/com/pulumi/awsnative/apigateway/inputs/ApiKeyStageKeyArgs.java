@@ -5,9 +5,9 @@ package com.pulumi.awsnative.apigateway.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class ApiKeyStageKeyArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="restApiId")
-      private final @Nullable Output<String> restApiId;
+    private @Nullable Output<String> restApiId;
 
-    public Output<String> restApiId() {
-        return this.restApiId == null ? Codegen.empty() : this.restApiId;
+    public Optional<Output<String>> restApiId() {
+        return Optional.ofNullable(this.restApiId);
     }
 
     /**
@@ -31,63 +31,58 @@ public final class ApiKeyStageKeyArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="stageName")
-      private final @Nullable Output<String> stageName;
+    private @Nullable Output<String> stageName;
 
-    public Output<String> stageName() {
-        return this.stageName == null ? Codegen.empty() : this.stageName;
+    public Optional<Output<String>> stageName() {
+        return Optional.ofNullable(this.stageName);
     }
 
-    public ApiKeyStageKeyArgs(
-        @Nullable Output<String> restApiId,
-        @Nullable Output<String> stageName) {
-        this.restApiId = restApiId;
-        this.stageName = stageName;
-    }
+    private ApiKeyStageKeyArgs() {}
 
-    private ApiKeyStageKeyArgs() {
-        this.restApiId = Codegen.empty();
-        this.stageName = Codegen.empty();
+    private ApiKeyStageKeyArgs(ApiKeyStageKeyArgs $) {
+        this.restApiId = $.restApiId;
+        this.stageName = $.stageName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ApiKeyStageKeyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> restApiId;
-        private @Nullable Output<String> stageName;
+        private ApiKeyStageKeyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ApiKeyStageKeyArgs();
         }
 
         public Builder(ApiKeyStageKeyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.restApiId = defaults.restApiId;
-    	      this.stageName = defaults.stageName;
+            $ = new ApiKeyStageKeyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder restApiId(@Nullable Output<String> restApiId) {
-            this.restApiId = restApiId;
+            $.restApiId = restApiId;
             return this;
         }
-        public Builder restApiId(@Nullable String restApiId) {
-            this.restApiId = Codegen.ofNullable(restApiId);
-            return this;
+
+        public Builder restApiId(String restApiId) {
+            return restApiId(Output.of(restApiId));
         }
+
         public Builder stageName(@Nullable Output<String> stageName) {
-            this.stageName = stageName;
+            $.stageName = stageName;
             return this;
         }
-        public Builder stageName(@Nullable String stageName) {
-            this.stageName = Codegen.ofNullable(stageName);
-            return this;
-        }        public ApiKeyStageKeyArgs build() {
-            return new ApiKeyStageKeyArgs(restApiId, stageName);
+
+        public Builder stageName(String stageName) {
+            return stageName(Output.of(stageName));
+        }
+
+        public ApiKeyStageKeyArgs build() {
+            return $;
         }
     }
+
 }

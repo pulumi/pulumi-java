@@ -22,7 +22,7 @@ public final class ServiceRegistryResourceRequestsResponse extends com.pulumi.re
      * 
      */
     @Import(name="cpu", required=true)
-      private final String cpu;
+    private String cpu;
 
     public String cpu() {
         return this.cpu;
@@ -33,7 +33,7 @@ public final class ServiceRegistryResourceRequestsResponse extends com.pulumi.re
      * 
      */
     @Import(name="instanceCount", required=true)
-      private final Integer instanceCount;
+    private Integer instanceCount;
 
     public Integer instanceCount() {
         return this.instanceCount;
@@ -44,64 +44,59 @@ public final class ServiceRegistryResourceRequestsResponse extends com.pulumi.re
      * 
      */
     @Import(name="memory", required=true)
-      private final String memory;
+    private String memory;
 
     public String memory() {
         return this.memory;
     }
 
-    public ServiceRegistryResourceRequestsResponse(
-        String cpu,
-        Integer instanceCount,
-        String memory) {
-        this.cpu = Objects.requireNonNull(cpu, "expected parameter 'cpu' to be non-null");
-        this.instanceCount = Objects.requireNonNull(instanceCount, "expected parameter 'instanceCount' to be non-null");
-        this.memory = Objects.requireNonNull(memory, "expected parameter 'memory' to be non-null");
-    }
+    private ServiceRegistryResourceRequestsResponse() {}
 
-    private ServiceRegistryResourceRequestsResponse() {
-        this.cpu = null;
-        this.instanceCount = null;
-        this.memory = null;
+    private ServiceRegistryResourceRequestsResponse(ServiceRegistryResourceRequestsResponse $) {
+        this.cpu = $.cpu;
+        this.instanceCount = $.instanceCount;
+        this.memory = $.memory;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ServiceRegistryResourceRequestsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String cpu;
-        private Integer instanceCount;
-        private String memory;
+        private ServiceRegistryResourceRequestsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ServiceRegistryResourceRequestsResponse();
         }
 
         public Builder(ServiceRegistryResourceRequestsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cpu = defaults.cpu;
-    	      this.instanceCount = defaults.instanceCount;
-    	      this.memory = defaults.memory;
+            $ = new ServiceRegistryResourceRequestsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder cpu(String cpu) {
-            this.cpu = Objects.requireNonNull(cpu);
+            $.cpu = cpu;
             return this;
         }
+
         public Builder instanceCount(Integer instanceCount) {
-            this.instanceCount = Objects.requireNonNull(instanceCount);
+            $.instanceCount = instanceCount;
             return this;
         }
+
         public Builder memory(String memory) {
-            this.memory = Objects.requireNonNull(memory);
+            $.memory = memory;
             return this;
-        }        public ServiceRegistryResourceRequestsResponse build() {
-            return new ServiceRegistryResourceRequestsResponse(cpu, instanceCount, memory);
+        }
+
+        public ServiceRegistryResourceRequestsResponse build() {
+            $.cpu = Objects.requireNonNull($.cpu, "expected parameter 'cpu' to be non-null");
+            $.instanceCount = Objects.requireNonNull($.instanceCount, "expected parameter 'instanceCount' to be non-null");
+            $.memory = Objects.requireNonNull($.memory, "expected parameter 'memory' to be non-null");
+            return $;
         }
     }
+
 }

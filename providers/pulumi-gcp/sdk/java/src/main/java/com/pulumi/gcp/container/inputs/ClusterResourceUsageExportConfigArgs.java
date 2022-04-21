@@ -5,10 +5,10 @@ package com.pulumi.gcp.container.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.container.inputs.ClusterResourceUsageExportConfigBigqueryDestinationArgs;
 import java.lang.Boolean;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,7 +21,7 @@ public final class ClusterResourceUsageExportConfigArgs extends com.pulumi.resou
      * 
      */
     @Import(name="bigqueryDestination", required=true)
-      private final Output<ClusterResourceUsageExportConfigBigqueryDestinationArgs> bigqueryDestination;
+    private Output<ClusterResourceUsageExportConfigBigqueryDestinationArgs> bigqueryDestination;
 
     public Output<ClusterResourceUsageExportConfigBigqueryDestinationArgs> bigqueryDestination() {
         return this.bigqueryDestination;
@@ -33,10 +33,10 @@ public final class ClusterResourceUsageExportConfigArgs extends com.pulumi.resou
      * 
      */
     @Import(name="enableNetworkEgressMetering")
-      private final @Nullable Output<Boolean> enableNetworkEgressMetering;
+    private @Nullable Output<Boolean> enableNetworkEgressMetering;
 
-    public Output<Boolean> enableNetworkEgressMetering() {
-        return this.enableNetworkEgressMetering == null ? Codegen.empty() : this.enableNetworkEgressMetering;
+    public Optional<Output<Boolean>> enableNetworkEgressMetering() {
+        return Optional.ofNullable(this.enableNetworkEgressMetering);
     }
 
     /**
@@ -48,76 +48,69 @@ public final class ClusterResourceUsageExportConfigArgs extends com.pulumi.resou
      * 
      */
     @Import(name="enableResourceConsumptionMetering")
-      private final @Nullable Output<Boolean> enableResourceConsumptionMetering;
+    private @Nullable Output<Boolean> enableResourceConsumptionMetering;
 
-    public Output<Boolean> enableResourceConsumptionMetering() {
-        return this.enableResourceConsumptionMetering == null ? Codegen.empty() : this.enableResourceConsumptionMetering;
+    public Optional<Output<Boolean>> enableResourceConsumptionMetering() {
+        return Optional.ofNullable(this.enableResourceConsumptionMetering);
     }
 
-    public ClusterResourceUsageExportConfigArgs(
-        Output<ClusterResourceUsageExportConfigBigqueryDestinationArgs> bigqueryDestination,
-        @Nullable Output<Boolean> enableNetworkEgressMetering,
-        @Nullable Output<Boolean> enableResourceConsumptionMetering) {
-        this.bigqueryDestination = Objects.requireNonNull(bigqueryDestination, "expected parameter 'bigqueryDestination' to be non-null");
-        this.enableNetworkEgressMetering = enableNetworkEgressMetering;
-        this.enableResourceConsumptionMetering = enableResourceConsumptionMetering;
-    }
+    private ClusterResourceUsageExportConfigArgs() {}
 
-    private ClusterResourceUsageExportConfigArgs() {
-        this.bigqueryDestination = Codegen.empty();
-        this.enableNetworkEgressMetering = Codegen.empty();
-        this.enableResourceConsumptionMetering = Codegen.empty();
+    private ClusterResourceUsageExportConfigArgs(ClusterResourceUsageExportConfigArgs $) {
+        this.bigqueryDestination = $.bigqueryDestination;
+        this.enableNetworkEgressMetering = $.enableNetworkEgressMetering;
+        this.enableResourceConsumptionMetering = $.enableResourceConsumptionMetering;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ClusterResourceUsageExportConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<ClusterResourceUsageExportConfigBigqueryDestinationArgs> bigqueryDestination;
-        private @Nullable Output<Boolean> enableNetworkEgressMetering;
-        private @Nullable Output<Boolean> enableResourceConsumptionMetering;
+        private ClusterResourceUsageExportConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ClusterResourceUsageExportConfigArgs();
         }
 
         public Builder(ClusterResourceUsageExportConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.bigqueryDestination = defaults.bigqueryDestination;
-    	      this.enableNetworkEgressMetering = defaults.enableNetworkEgressMetering;
-    	      this.enableResourceConsumptionMetering = defaults.enableResourceConsumptionMetering;
+            $ = new ClusterResourceUsageExportConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder bigqueryDestination(Output<ClusterResourceUsageExportConfigBigqueryDestinationArgs> bigqueryDestination) {
-            this.bigqueryDestination = Objects.requireNonNull(bigqueryDestination);
+            $.bigqueryDestination = bigqueryDestination;
             return this;
         }
+
         public Builder bigqueryDestination(ClusterResourceUsageExportConfigBigqueryDestinationArgs bigqueryDestination) {
-            this.bigqueryDestination = Output.of(Objects.requireNonNull(bigqueryDestination));
-            return this;
+            return bigqueryDestination(Output.of(bigqueryDestination));
         }
+
         public Builder enableNetworkEgressMetering(@Nullable Output<Boolean> enableNetworkEgressMetering) {
-            this.enableNetworkEgressMetering = enableNetworkEgressMetering;
+            $.enableNetworkEgressMetering = enableNetworkEgressMetering;
             return this;
         }
-        public Builder enableNetworkEgressMetering(@Nullable Boolean enableNetworkEgressMetering) {
-            this.enableNetworkEgressMetering = Codegen.ofNullable(enableNetworkEgressMetering);
-            return this;
+
+        public Builder enableNetworkEgressMetering(Boolean enableNetworkEgressMetering) {
+            return enableNetworkEgressMetering(Output.of(enableNetworkEgressMetering));
         }
+
         public Builder enableResourceConsumptionMetering(@Nullable Output<Boolean> enableResourceConsumptionMetering) {
-            this.enableResourceConsumptionMetering = enableResourceConsumptionMetering;
+            $.enableResourceConsumptionMetering = enableResourceConsumptionMetering;
             return this;
         }
-        public Builder enableResourceConsumptionMetering(@Nullable Boolean enableResourceConsumptionMetering) {
-            this.enableResourceConsumptionMetering = Codegen.ofNullable(enableResourceConsumptionMetering);
-            return this;
-        }        public ClusterResourceUsageExportConfigArgs build() {
-            return new ClusterResourceUsageExportConfigArgs(bigqueryDestination, enableNetworkEgressMetering, enableResourceConsumptionMetering);
+
+        public Builder enableResourceConsumptionMetering(Boolean enableResourceConsumptionMetering) {
+            return enableResourceConsumptionMetering(Output.of(enableResourceConsumptionMetering));
+        }
+
+        public ClusterResourceUsageExportConfigArgs build() {
+            $.bigqueryDestination = Objects.requireNonNull($.bigqueryDestination, "expected parameter 'bigqueryDestination' to be non-null");
+            return $;
         }
     }
+
 }

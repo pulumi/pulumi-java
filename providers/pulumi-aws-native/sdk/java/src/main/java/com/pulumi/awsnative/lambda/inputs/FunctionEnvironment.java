@@ -23,45 +23,44 @@ public final class FunctionEnvironment extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="variables")
-      private final @Nullable Object variables;
+    private @Nullable Object variables;
 
     public Optional<Object> variables() {
-        return this.variables == null ? Optional.empty() : Optional.ofNullable(this.variables);
+        return Optional.ofNullable(this.variables);
     }
 
-    public FunctionEnvironment(@Nullable Object variables) {
-        this.variables = variables;
-    }
+    private FunctionEnvironment() {}
 
-    private FunctionEnvironment() {
-        this.variables = null;
+    private FunctionEnvironment(FunctionEnvironment $) {
+        this.variables = $.variables;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FunctionEnvironment defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Object variables;
+        private FunctionEnvironment $;
 
         public Builder() {
-    	      // Empty
+            $ = new FunctionEnvironment();
         }
 
         public Builder(FunctionEnvironment defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.variables = defaults.variables;
+            $ = new FunctionEnvironment(Objects.requireNonNull(defaults));
         }
 
         public Builder variables(@Nullable Object variables) {
-            this.variables = variables;
+            $.variables = variables;
             return this;
-        }        public FunctionEnvironment build() {
-            return new FunctionEnvironment(variables);
+        }
+
+        public FunctionEnvironment build() {
+            return $;
         }
     }
+
 }

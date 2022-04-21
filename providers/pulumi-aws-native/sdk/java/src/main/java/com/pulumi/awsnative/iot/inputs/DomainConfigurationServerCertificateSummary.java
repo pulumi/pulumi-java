@@ -16,78 +16,70 @@ public final class DomainConfigurationServerCertificateSummary extends com.pulum
     public static final DomainConfigurationServerCertificateSummary Empty = new DomainConfigurationServerCertificateSummary();
 
     @Import(name="serverCertificateArn")
-      private final @Nullable String serverCertificateArn;
+    private @Nullable String serverCertificateArn;
 
     public Optional<String> serverCertificateArn() {
-        return this.serverCertificateArn == null ? Optional.empty() : Optional.ofNullable(this.serverCertificateArn);
+        return Optional.ofNullable(this.serverCertificateArn);
     }
 
     @Import(name="serverCertificateStatus")
-      private final @Nullable DomainConfigurationServerCertificateSummaryServerCertificateStatus serverCertificateStatus;
+    private @Nullable DomainConfigurationServerCertificateSummaryServerCertificateStatus serverCertificateStatus;
 
     public Optional<DomainConfigurationServerCertificateSummaryServerCertificateStatus> serverCertificateStatus() {
-        return this.serverCertificateStatus == null ? Optional.empty() : Optional.ofNullable(this.serverCertificateStatus);
+        return Optional.ofNullable(this.serverCertificateStatus);
     }
 
     @Import(name="serverCertificateStatusDetail")
-      private final @Nullable String serverCertificateStatusDetail;
+    private @Nullable String serverCertificateStatusDetail;
 
     public Optional<String> serverCertificateStatusDetail() {
-        return this.serverCertificateStatusDetail == null ? Optional.empty() : Optional.ofNullable(this.serverCertificateStatusDetail);
+        return Optional.ofNullable(this.serverCertificateStatusDetail);
     }
 
-    public DomainConfigurationServerCertificateSummary(
-        @Nullable String serverCertificateArn,
-        @Nullable DomainConfigurationServerCertificateSummaryServerCertificateStatus serverCertificateStatus,
-        @Nullable String serverCertificateStatusDetail) {
-        this.serverCertificateArn = serverCertificateArn;
-        this.serverCertificateStatus = serverCertificateStatus;
-        this.serverCertificateStatusDetail = serverCertificateStatusDetail;
-    }
+    private DomainConfigurationServerCertificateSummary() {}
 
-    private DomainConfigurationServerCertificateSummary() {
-        this.serverCertificateArn = null;
-        this.serverCertificateStatus = null;
-        this.serverCertificateStatusDetail = null;
+    private DomainConfigurationServerCertificateSummary(DomainConfigurationServerCertificateSummary $) {
+        this.serverCertificateArn = $.serverCertificateArn;
+        this.serverCertificateStatus = $.serverCertificateStatus;
+        this.serverCertificateStatusDetail = $.serverCertificateStatusDetail;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DomainConfigurationServerCertificateSummary defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String serverCertificateArn;
-        private @Nullable DomainConfigurationServerCertificateSummaryServerCertificateStatus serverCertificateStatus;
-        private @Nullable String serverCertificateStatusDetail;
+        private DomainConfigurationServerCertificateSummary $;
 
         public Builder() {
-    	      // Empty
+            $ = new DomainConfigurationServerCertificateSummary();
         }
 
         public Builder(DomainConfigurationServerCertificateSummary defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.serverCertificateArn = defaults.serverCertificateArn;
-    	      this.serverCertificateStatus = defaults.serverCertificateStatus;
-    	      this.serverCertificateStatusDetail = defaults.serverCertificateStatusDetail;
+            $ = new DomainConfigurationServerCertificateSummary(Objects.requireNonNull(defaults));
         }
 
         public Builder serverCertificateArn(@Nullable String serverCertificateArn) {
-            this.serverCertificateArn = serverCertificateArn;
+            $.serverCertificateArn = serverCertificateArn;
             return this;
         }
+
         public Builder serverCertificateStatus(@Nullable DomainConfigurationServerCertificateSummaryServerCertificateStatus serverCertificateStatus) {
-            this.serverCertificateStatus = serverCertificateStatus;
+            $.serverCertificateStatus = serverCertificateStatus;
             return this;
         }
+
         public Builder serverCertificateStatusDetail(@Nullable String serverCertificateStatusDetail) {
-            this.serverCertificateStatusDetail = serverCertificateStatusDetail;
+            $.serverCertificateStatusDetail = serverCertificateStatusDetail;
             return this;
-        }        public DomainConfigurationServerCertificateSummary build() {
-            return new DomainConfigurationServerCertificateSummary(serverCertificateArn, serverCertificateStatus, serverCertificateStatusDetail);
+        }
+
+        public DomainConfigurationServerCertificateSummary build() {
+            return $;
         }
     }
+
 }

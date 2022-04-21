@@ -21,45 +21,45 @@ public final class PublicIpReferenceResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="sourceArmResourceId", required=true)
-      private final String sourceArmResourceId;
+    private String sourceArmResourceId;
 
     public String sourceArmResourceId() {
         return this.sourceArmResourceId;
     }
 
-    public PublicIpReferenceResponse(String sourceArmResourceId) {
-        this.sourceArmResourceId = Objects.requireNonNull(sourceArmResourceId, "expected parameter 'sourceArmResourceId' to be non-null");
-    }
+    private PublicIpReferenceResponse() {}
 
-    private PublicIpReferenceResponse() {
-        this.sourceArmResourceId = null;
+    private PublicIpReferenceResponse(PublicIpReferenceResponse $) {
+        this.sourceArmResourceId = $.sourceArmResourceId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PublicIpReferenceResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String sourceArmResourceId;
+        private PublicIpReferenceResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new PublicIpReferenceResponse();
         }
 
         public Builder(PublicIpReferenceResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.sourceArmResourceId = defaults.sourceArmResourceId;
+            $ = new PublicIpReferenceResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder sourceArmResourceId(String sourceArmResourceId) {
-            this.sourceArmResourceId = Objects.requireNonNull(sourceArmResourceId);
+            $.sourceArmResourceId = sourceArmResourceId;
             return this;
-        }        public PublicIpReferenceResponse build() {
-            return new PublicIpReferenceResponse(sourceArmResourceId);
+        }
+
+        public PublicIpReferenceResponse build() {
+            $.sourceArmResourceId = Objects.requireNonNull($.sourceArmResourceId, "expected parameter 'sourceArmResourceId' to be non-null");
+            return $;
         }
     }
+
 }

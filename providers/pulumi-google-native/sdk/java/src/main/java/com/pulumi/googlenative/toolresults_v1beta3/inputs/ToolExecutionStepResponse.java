@@ -21,45 +21,45 @@ public final class ToolExecutionStepResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="toolExecution", required=true)
-      private final ToolExecutionResponse toolExecution;
+    private ToolExecutionResponse toolExecution;
 
     public ToolExecutionResponse toolExecution() {
         return this.toolExecution;
     }
 
-    public ToolExecutionStepResponse(ToolExecutionResponse toolExecution) {
-        this.toolExecution = Objects.requireNonNull(toolExecution, "expected parameter 'toolExecution' to be non-null");
-    }
+    private ToolExecutionStepResponse() {}
 
-    private ToolExecutionStepResponse() {
-        this.toolExecution = null;
+    private ToolExecutionStepResponse(ToolExecutionStepResponse $) {
+        this.toolExecution = $.toolExecution;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ToolExecutionStepResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private ToolExecutionResponse toolExecution;
+        private ToolExecutionStepResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ToolExecutionStepResponse();
         }
 
         public Builder(ToolExecutionStepResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.toolExecution = defaults.toolExecution;
+            $ = new ToolExecutionStepResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder toolExecution(ToolExecutionResponse toolExecution) {
-            this.toolExecution = Objects.requireNonNull(toolExecution);
+            $.toolExecution = toolExecution;
             return this;
-        }        public ToolExecutionStepResponse build() {
-            return new ToolExecutionStepResponse(toolExecution);
+        }
+
+        public ToolExecutionStepResponse build() {
+            $.toolExecution = Objects.requireNonNull($.toolExecution, "expected parameter 'toolExecution' to be non-null");
+            return $;
         }
     }
+
 }

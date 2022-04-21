@@ -6,10 +6,10 @@ package com.pulumi.azurenative.network.inputs;
 import com.pulumi.azurenative.network.inputs.ApplicationGatewayBackendAddressArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class ApplicationGatewayBackendAddressPoolArgs extends com.pulumi.r
      * 
      */
     @Import(name="backendAddresses")
-      private final @Nullable Output<List<ApplicationGatewayBackendAddressArgs>> backendAddresses;
+    private @Nullable Output<List<ApplicationGatewayBackendAddressArgs>> backendAddresses;
 
-    public Output<List<ApplicationGatewayBackendAddressArgs>> backendAddresses() {
-        return this.backendAddresses == null ? Codegen.empty() : this.backendAddresses;
+    public Optional<Output<List<ApplicationGatewayBackendAddressArgs>>> backendAddresses() {
+        return Optional.ofNullable(this.backendAddresses);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class ApplicationGatewayBackendAddressPoolArgs extends com.pulumi.r
      * 
      */
     @Import(name="id")
-      private final @Nullable Output<String> id;
+    private @Nullable Output<String> id;
 
-    public Output<String> id() {
-        return this.id == null ? Codegen.empty() : this.id;
+    public Optional<Output<String>> id() {
+        return Optional.ofNullable(this.id);
     }
 
     /**
@@ -48,79 +48,72 @@ public final class ApplicationGatewayBackendAddressPoolArgs extends com.pulumi.r
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
-    public ApplicationGatewayBackendAddressPoolArgs(
-        @Nullable Output<List<ApplicationGatewayBackendAddressArgs>> backendAddresses,
-        @Nullable Output<String> id,
-        @Nullable Output<String> name) {
-        this.backendAddresses = backendAddresses;
-        this.id = id;
-        this.name = name;
-    }
+    private ApplicationGatewayBackendAddressPoolArgs() {}
 
-    private ApplicationGatewayBackendAddressPoolArgs() {
-        this.backendAddresses = Codegen.empty();
-        this.id = Codegen.empty();
-        this.name = Codegen.empty();
+    private ApplicationGatewayBackendAddressPoolArgs(ApplicationGatewayBackendAddressPoolArgs $) {
+        this.backendAddresses = $.backendAddresses;
+        this.id = $.id;
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ApplicationGatewayBackendAddressPoolArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<ApplicationGatewayBackendAddressArgs>> backendAddresses;
-        private @Nullable Output<String> id;
-        private @Nullable Output<String> name;
+        private ApplicationGatewayBackendAddressPoolArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ApplicationGatewayBackendAddressPoolArgs();
         }
 
         public Builder(ApplicationGatewayBackendAddressPoolArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.backendAddresses = defaults.backendAddresses;
-    	      this.id = defaults.id;
-    	      this.name = defaults.name;
+            $ = new ApplicationGatewayBackendAddressPoolArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder backendAddresses(@Nullable Output<List<ApplicationGatewayBackendAddressArgs>> backendAddresses) {
-            this.backendAddresses = backendAddresses;
+            $.backendAddresses = backendAddresses;
             return this;
         }
-        public Builder backendAddresses(@Nullable List<ApplicationGatewayBackendAddressArgs> backendAddresses) {
-            this.backendAddresses = Codegen.ofNullable(backendAddresses);
-            return this;
+
+        public Builder backendAddresses(List<ApplicationGatewayBackendAddressArgs> backendAddresses) {
+            return backendAddresses(Output.of(backendAddresses));
         }
+
         public Builder backendAddresses(ApplicationGatewayBackendAddressArgs... backendAddresses) {
             return backendAddresses(List.of(backendAddresses));
         }
+
         public Builder id(@Nullable Output<String> id) {
-            this.id = id;
+            $.id = id;
             return this;
         }
-        public Builder id(@Nullable String id) {
-            this.id = Codegen.ofNullable(id);
-            return this;
+
+        public Builder id(String id) {
+            return id(Output.of(id));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
-        }        public ApplicationGatewayBackendAddressPoolArgs build() {
-            return new ApplicationGatewayBackendAddressPoolArgs(backendAddresses, id, name);
+
+        public Builder name(String name) {
+            return name(Output.of(name));
+        }
+
+        public ApplicationGatewayBackendAddressPoolArgs build() {
+            return $;
         }
     }
+
 }

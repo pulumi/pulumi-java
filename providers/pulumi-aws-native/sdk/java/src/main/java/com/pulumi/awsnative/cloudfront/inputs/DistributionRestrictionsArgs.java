@@ -6,7 +6,6 @@ package com.pulumi.awsnative.cloudfront.inputs;
 import com.pulumi.awsnative.cloudfront.inputs.DistributionGeoRestrictionArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
 
 
@@ -15,49 +14,49 @@ public final class DistributionRestrictionsArgs extends com.pulumi.resources.Res
     public static final DistributionRestrictionsArgs Empty = new DistributionRestrictionsArgs();
 
     @Import(name="geoRestriction", required=true)
-      private final Output<DistributionGeoRestrictionArgs> geoRestriction;
+    private Output<DistributionGeoRestrictionArgs> geoRestriction;
 
     public Output<DistributionGeoRestrictionArgs> geoRestriction() {
         return this.geoRestriction;
     }
 
-    public DistributionRestrictionsArgs(Output<DistributionGeoRestrictionArgs> geoRestriction) {
-        this.geoRestriction = Objects.requireNonNull(geoRestriction, "expected parameter 'geoRestriction' to be non-null");
-    }
+    private DistributionRestrictionsArgs() {}
 
-    private DistributionRestrictionsArgs() {
-        this.geoRestriction = Codegen.empty();
+    private DistributionRestrictionsArgs(DistributionRestrictionsArgs $) {
+        this.geoRestriction = $.geoRestriction;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DistributionRestrictionsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<DistributionGeoRestrictionArgs> geoRestriction;
+        private DistributionRestrictionsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DistributionRestrictionsArgs();
         }
 
         public Builder(DistributionRestrictionsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.geoRestriction = defaults.geoRestriction;
+            $ = new DistributionRestrictionsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder geoRestriction(Output<DistributionGeoRestrictionArgs> geoRestriction) {
-            this.geoRestriction = Objects.requireNonNull(geoRestriction);
+            $.geoRestriction = geoRestriction;
             return this;
         }
+
         public Builder geoRestriction(DistributionGeoRestrictionArgs geoRestriction) {
-            this.geoRestriction = Output.of(Objects.requireNonNull(geoRestriction));
-            return this;
-        }        public DistributionRestrictionsArgs build() {
-            return new DistributionRestrictionsArgs(geoRestriction);
+            return geoRestriction(Output.of(geoRestriction));
+        }
+
+        public DistributionRestrictionsArgs build() {
+            $.geoRestriction = Objects.requireNonNull($.geoRestriction, "expected parameter 'geoRestriction' to be non-null");
+            return $;
         }
     }
+
 }

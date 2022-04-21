@@ -5,7 +5,6 @@ package com.pulumi.aws.ses;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,49 +18,49 @@ public final class ActiveReceiptRuleSetArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="ruleSetName", required=true)
-      private final Output<String> ruleSetName;
+    private Output<String> ruleSetName;
 
     public Output<String> ruleSetName() {
         return this.ruleSetName;
     }
 
-    public ActiveReceiptRuleSetArgs(Output<String> ruleSetName) {
-        this.ruleSetName = Objects.requireNonNull(ruleSetName, "expected parameter 'ruleSetName' to be non-null");
-    }
+    private ActiveReceiptRuleSetArgs() {}
 
-    private ActiveReceiptRuleSetArgs() {
-        this.ruleSetName = Codegen.empty();
+    private ActiveReceiptRuleSetArgs(ActiveReceiptRuleSetArgs $) {
+        this.ruleSetName = $.ruleSetName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ActiveReceiptRuleSetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> ruleSetName;
+        private ActiveReceiptRuleSetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ActiveReceiptRuleSetArgs();
         }
 
         public Builder(ActiveReceiptRuleSetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.ruleSetName = defaults.ruleSetName;
+            $ = new ActiveReceiptRuleSetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder ruleSetName(Output<String> ruleSetName) {
-            this.ruleSetName = Objects.requireNonNull(ruleSetName);
+            $.ruleSetName = ruleSetName;
             return this;
         }
+
         public Builder ruleSetName(String ruleSetName) {
-            this.ruleSetName = Output.of(Objects.requireNonNull(ruleSetName));
-            return this;
-        }        public ActiveReceiptRuleSetArgs build() {
-            return new ActiveReceiptRuleSetArgs(ruleSetName);
+            return ruleSetName(Output.of(ruleSetName));
+        }
+
+        public ActiveReceiptRuleSetArgs build() {
+            $.ruleSetName = Objects.requireNonNull($.ruleSetName, "expected parameter 'ruleSetName' to be non-null");
+            return $;
         }
     }
+
 }

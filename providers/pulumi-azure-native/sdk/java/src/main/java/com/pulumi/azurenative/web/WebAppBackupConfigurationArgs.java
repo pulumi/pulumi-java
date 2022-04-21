@@ -7,11 +7,11 @@ import com.pulumi.azurenative.web.inputs.BackupScheduleArgs;
 import com.pulumi.azurenative.web.inputs.DatabaseBackupSettingArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class WebAppBackupConfigurationArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="backupName")
-      private final @Nullable Output<String> backupName;
+    private @Nullable Output<String> backupName;
 
-    public Output<String> backupName() {
-        return this.backupName == null ? Codegen.empty() : this.backupName;
+    public Optional<Output<String>> backupName() {
+        return Optional.ofNullable(this.backupName);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class WebAppBackupConfigurationArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="backupSchedule")
-      private final @Nullable Output<BackupScheduleArgs> backupSchedule;
+    private @Nullable Output<BackupScheduleArgs> backupSchedule;
 
-    public Output<BackupScheduleArgs> backupSchedule() {
-        return this.backupSchedule == null ? Codegen.empty() : this.backupSchedule;
+    public Optional<Output<BackupScheduleArgs>> backupSchedule() {
+        return Optional.ofNullable(this.backupSchedule);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class WebAppBackupConfigurationArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="databases")
-      private final @Nullable Output<List<DatabaseBackupSettingArgs>> databases;
+    private @Nullable Output<List<DatabaseBackupSettingArgs>> databases;
 
-    public Output<List<DatabaseBackupSettingArgs>> databases() {
-        return this.databases == null ? Codegen.empty() : this.databases;
+    public Optional<Output<List<DatabaseBackupSettingArgs>>> databases() {
+        return Optional.ofNullable(this.databases);
     }
 
     /**
@@ -57,10 +57,10 @@ public final class WebAppBackupConfigurationArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="enabled")
-      private final @Nullable Output<Boolean> enabled;
+    private @Nullable Output<Boolean> enabled;
 
-    public Output<Boolean> enabled() {
-        return this.enabled == null ? Codegen.empty() : this.enabled;
+    public Optional<Output<Boolean>> enabled() {
+        return Optional.ofNullable(this.enabled);
     }
 
     /**
@@ -68,10 +68,10 @@ public final class WebAppBackupConfigurationArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="kind")
-      private final @Nullable Output<String> kind;
+    private @Nullable Output<String> kind;
 
-    public Output<String> kind() {
-        return this.kind == null ? Codegen.empty() : this.kind;
+    public Optional<Output<String>> kind() {
+        return Optional.ofNullable(this.kind);
     }
 
     /**
@@ -79,7 +79,7 @@ public final class WebAppBackupConfigurationArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="name", required=true)
-      private final Output<String> name;
+    private Output<String> name;
 
     public Output<String> name() {
         return this.name;
@@ -90,7 +90,7 @@ public final class WebAppBackupConfigurationArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -101,144 +101,125 @@ public final class WebAppBackupConfigurationArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="storageAccountUrl", required=true)
-      private final Output<String> storageAccountUrl;
+    private Output<String> storageAccountUrl;
 
     public Output<String> storageAccountUrl() {
         return this.storageAccountUrl;
     }
 
-    public WebAppBackupConfigurationArgs(
-        @Nullable Output<String> backupName,
-        @Nullable Output<BackupScheduleArgs> backupSchedule,
-        @Nullable Output<List<DatabaseBackupSettingArgs>> databases,
-        @Nullable Output<Boolean> enabled,
-        @Nullable Output<String> kind,
-        Output<String> name,
-        Output<String> resourceGroupName,
-        Output<String> storageAccountUrl) {
-        this.backupName = backupName;
-        this.backupSchedule = backupSchedule;
-        this.databases = databases;
-        this.enabled = enabled;
-        this.kind = kind;
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.storageAccountUrl = Objects.requireNonNull(storageAccountUrl, "expected parameter 'storageAccountUrl' to be non-null");
-    }
+    private WebAppBackupConfigurationArgs() {}
 
-    private WebAppBackupConfigurationArgs() {
-        this.backupName = Codegen.empty();
-        this.backupSchedule = Codegen.empty();
-        this.databases = Codegen.empty();
-        this.enabled = Codegen.empty();
-        this.kind = Codegen.empty();
-        this.name = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.storageAccountUrl = Codegen.empty();
+    private WebAppBackupConfigurationArgs(WebAppBackupConfigurationArgs $) {
+        this.backupName = $.backupName;
+        this.backupSchedule = $.backupSchedule;
+        this.databases = $.databases;
+        this.enabled = $.enabled;
+        this.kind = $.kind;
+        this.name = $.name;
+        this.resourceGroupName = $.resourceGroupName;
+        this.storageAccountUrl = $.storageAccountUrl;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WebAppBackupConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> backupName;
-        private @Nullable Output<BackupScheduleArgs> backupSchedule;
-        private @Nullable Output<List<DatabaseBackupSettingArgs>> databases;
-        private @Nullable Output<Boolean> enabled;
-        private @Nullable Output<String> kind;
-        private Output<String> name;
-        private Output<String> resourceGroupName;
-        private Output<String> storageAccountUrl;
+        private WebAppBackupConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new WebAppBackupConfigurationArgs();
         }
 
         public Builder(WebAppBackupConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.backupName = defaults.backupName;
-    	      this.backupSchedule = defaults.backupSchedule;
-    	      this.databases = defaults.databases;
-    	      this.enabled = defaults.enabled;
-    	      this.kind = defaults.kind;
-    	      this.name = defaults.name;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.storageAccountUrl = defaults.storageAccountUrl;
+            $ = new WebAppBackupConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder backupName(@Nullable Output<String> backupName) {
-            this.backupName = backupName;
+            $.backupName = backupName;
             return this;
         }
-        public Builder backupName(@Nullable String backupName) {
-            this.backupName = Codegen.ofNullable(backupName);
-            return this;
+
+        public Builder backupName(String backupName) {
+            return backupName(Output.of(backupName));
         }
+
         public Builder backupSchedule(@Nullable Output<BackupScheduleArgs> backupSchedule) {
-            this.backupSchedule = backupSchedule;
+            $.backupSchedule = backupSchedule;
             return this;
         }
-        public Builder backupSchedule(@Nullable BackupScheduleArgs backupSchedule) {
-            this.backupSchedule = Codegen.ofNullable(backupSchedule);
-            return this;
+
+        public Builder backupSchedule(BackupScheduleArgs backupSchedule) {
+            return backupSchedule(Output.of(backupSchedule));
         }
+
         public Builder databases(@Nullable Output<List<DatabaseBackupSettingArgs>> databases) {
-            this.databases = databases;
+            $.databases = databases;
             return this;
         }
-        public Builder databases(@Nullable List<DatabaseBackupSettingArgs> databases) {
-            this.databases = Codegen.ofNullable(databases);
-            return this;
+
+        public Builder databases(List<DatabaseBackupSettingArgs> databases) {
+            return databases(Output.of(databases));
         }
+
         public Builder databases(DatabaseBackupSettingArgs... databases) {
             return databases(List.of(databases));
         }
+
         public Builder enabled(@Nullable Output<Boolean> enabled) {
-            this.enabled = enabled;
+            $.enabled = enabled;
             return this;
         }
-        public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Codegen.ofNullable(enabled);
-            return this;
+
+        public Builder enabled(Boolean enabled) {
+            return enabled(Output.of(enabled));
         }
+
         public Builder kind(@Nullable Output<String> kind) {
-            this.kind = kind;
+            $.kind = kind;
             return this;
         }
-        public Builder kind(@Nullable String kind) {
-            this.kind = Codegen.ofNullable(kind);
-            return this;
+
+        public Builder kind(String kind) {
+            return kind(Output.of(kind));
         }
+
         public Builder name(Output<String> name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Output.of(Objects.requireNonNull(name));
-            return this;
+            return name(Output.of(name));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder storageAccountUrl(Output<String> storageAccountUrl) {
-            this.storageAccountUrl = Objects.requireNonNull(storageAccountUrl);
+            $.storageAccountUrl = storageAccountUrl;
             return this;
         }
+
         public Builder storageAccountUrl(String storageAccountUrl) {
-            this.storageAccountUrl = Output.of(Objects.requireNonNull(storageAccountUrl));
-            return this;
-        }        public WebAppBackupConfigurationArgs build() {
-            return new WebAppBackupConfigurationArgs(backupName, backupSchedule, databases, enabled, kind, name, resourceGroupName, storageAccountUrl);
+            return storageAccountUrl(Output.of(storageAccountUrl));
+        }
+
+        public WebAppBackupConfigurationArgs build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.storageAccountUrl = Objects.requireNonNull($.storageAccountUrl, "expected parameter 'storageAccountUrl' to be non-null");
+            return $;
         }
     }
+
 }

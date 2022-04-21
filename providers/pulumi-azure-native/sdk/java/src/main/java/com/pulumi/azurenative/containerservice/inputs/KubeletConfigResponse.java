@@ -26,10 +26,10 @@ public final class KubeletConfigResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="allowedUnsafeSysctls")
-      private final @Nullable List<String> allowedUnsafeSysctls;
+    private @Nullable List<String> allowedUnsafeSysctls;
 
-    public List<String> allowedUnsafeSysctls() {
-        return this.allowedUnsafeSysctls == null ? List.of() : this.allowedUnsafeSysctls;
+    public Optional<List<String>> allowedUnsafeSysctls() {
+        return Optional.ofNullable(this.allowedUnsafeSysctls);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class KubeletConfigResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="containerLogMaxFiles")
-      private final @Nullable Integer containerLogMaxFiles;
+    private @Nullable Integer containerLogMaxFiles;
 
     public Optional<Integer> containerLogMaxFiles() {
-        return this.containerLogMaxFiles == null ? Optional.empty() : Optional.ofNullable(this.containerLogMaxFiles);
+        return Optional.ofNullable(this.containerLogMaxFiles);
     }
 
     /**
@@ -48,10 +48,10 @@ public final class KubeletConfigResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="containerLogMaxSizeMB")
-      private final @Nullable Integer containerLogMaxSizeMB;
+    private @Nullable Integer containerLogMaxSizeMB;
 
     public Optional<Integer> containerLogMaxSizeMB() {
-        return this.containerLogMaxSizeMB == null ? Optional.empty() : Optional.ofNullable(this.containerLogMaxSizeMB);
+        return Optional.ofNullable(this.containerLogMaxSizeMB);
     }
 
     /**
@@ -59,10 +59,10 @@ public final class KubeletConfigResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="cpuCfsQuota")
-      private final @Nullable Boolean cpuCfsQuota;
+    private @Nullable Boolean cpuCfsQuota;
 
     public Optional<Boolean> cpuCfsQuota() {
-        return this.cpuCfsQuota == null ? Optional.empty() : Optional.ofNullable(this.cpuCfsQuota);
+        return Optional.ofNullable(this.cpuCfsQuota);
     }
 
     /**
@@ -70,10 +70,10 @@ public final class KubeletConfigResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="cpuCfsQuotaPeriod")
-      private final @Nullable String cpuCfsQuotaPeriod;
+    private @Nullable String cpuCfsQuotaPeriod;
 
     public Optional<String> cpuCfsQuotaPeriod() {
-        return this.cpuCfsQuotaPeriod == null ? Optional.empty() : Optional.ofNullable(this.cpuCfsQuotaPeriod);
+        return Optional.ofNullable(this.cpuCfsQuotaPeriod);
     }
 
     /**
@@ -81,10 +81,10 @@ public final class KubeletConfigResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="cpuManagerPolicy")
-      private final @Nullable String cpuManagerPolicy;
+    private @Nullable String cpuManagerPolicy;
 
     public Optional<String> cpuManagerPolicy() {
-        return this.cpuManagerPolicy == null ? Optional.empty() : Optional.ofNullable(this.cpuManagerPolicy);
+        return Optional.ofNullable(this.cpuManagerPolicy);
     }
 
     /**
@@ -92,10 +92,10 @@ public final class KubeletConfigResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="failSwapOn")
-      private final @Nullable Boolean failSwapOn;
+    private @Nullable Boolean failSwapOn;
 
     public Optional<Boolean> failSwapOn() {
-        return this.failSwapOn == null ? Optional.empty() : Optional.ofNullable(this.failSwapOn);
+        return Optional.ofNullable(this.failSwapOn);
     }
 
     /**
@@ -103,10 +103,10 @@ public final class KubeletConfigResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="imageGcHighThreshold")
-      private final @Nullable Integer imageGcHighThreshold;
+    private @Nullable Integer imageGcHighThreshold;
 
     public Optional<Integer> imageGcHighThreshold() {
-        return this.imageGcHighThreshold == null ? Optional.empty() : Optional.ofNullable(this.imageGcHighThreshold);
+        return Optional.ofNullable(this.imageGcHighThreshold);
     }
 
     /**
@@ -114,10 +114,10 @@ public final class KubeletConfigResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="imageGcLowThreshold")
-      private final @Nullable Integer imageGcLowThreshold;
+    private @Nullable Integer imageGcLowThreshold;
 
     public Optional<Integer> imageGcLowThreshold() {
-        return this.imageGcLowThreshold == null ? Optional.empty() : Optional.ofNullable(this.imageGcLowThreshold);
+        return Optional.ofNullable(this.imageGcLowThreshold);
     }
 
     /**
@@ -125,10 +125,10 @@ public final class KubeletConfigResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="podMaxPids")
-      private final @Nullable Integer podMaxPids;
+    private @Nullable Integer podMaxPids;
 
     public Optional<Integer> podMaxPids() {
-        return this.podMaxPids == null ? Optional.empty() : Optional.ofNullable(this.podMaxPids);
+        return Optional.ofNullable(this.podMaxPids);
     }
 
     /**
@@ -136,139 +136,108 @@ public final class KubeletConfigResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="topologyManagerPolicy")
-      private final @Nullable String topologyManagerPolicy;
+    private @Nullable String topologyManagerPolicy;
 
     public Optional<String> topologyManagerPolicy() {
-        return this.topologyManagerPolicy == null ? Optional.empty() : Optional.ofNullable(this.topologyManagerPolicy);
+        return Optional.ofNullable(this.topologyManagerPolicy);
     }
 
-    public KubeletConfigResponse(
-        @Nullable List<String> allowedUnsafeSysctls,
-        @Nullable Integer containerLogMaxFiles,
-        @Nullable Integer containerLogMaxSizeMB,
-        @Nullable Boolean cpuCfsQuota,
-        @Nullable String cpuCfsQuotaPeriod,
-        @Nullable String cpuManagerPolicy,
-        @Nullable Boolean failSwapOn,
-        @Nullable Integer imageGcHighThreshold,
-        @Nullable Integer imageGcLowThreshold,
-        @Nullable Integer podMaxPids,
-        @Nullable String topologyManagerPolicy) {
-        this.allowedUnsafeSysctls = allowedUnsafeSysctls;
-        this.containerLogMaxFiles = containerLogMaxFiles;
-        this.containerLogMaxSizeMB = containerLogMaxSizeMB;
-        this.cpuCfsQuota = cpuCfsQuota;
-        this.cpuCfsQuotaPeriod = cpuCfsQuotaPeriod;
-        this.cpuManagerPolicy = cpuManagerPolicy;
-        this.failSwapOn = failSwapOn;
-        this.imageGcHighThreshold = imageGcHighThreshold;
-        this.imageGcLowThreshold = imageGcLowThreshold;
-        this.podMaxPids = podMaxPids;
-        this.topologyManagerPolicy = topologyManagerPolicy;
-    }
+    private KubeletConfigResponse() {}
 
-    private KubeletConfigResponse() {
-        this.allowedUnsafeSysctls = List.of();
-        this.containerLogMaxFiles = null;
-        this.containerLogMaxSizeMB = null;
-        this.cpuCfsQuota = null;
-        this.cpuCfsQuotaPeriod = null;
-        this.cpuManagerPolicy = null;
-        this.failSwapOn = null;
-        this.imageGcHighThreshold = null;
-        this.imageGcLowThreshold = null;
-        this.podMaxPids = null;
-        this.topologyManagerPolicy = null;
+    private KubeletConfigResponse(KubeletConfigResponse $) {
+        this.allowedUnsafeSysctls = $.allowedUnsafeSysctls;
+        this.containerLogMaxFiles = $.containerLogMaxFiles;
+        this.containerLogMaxSizeMB = $.containerLogMaxSizeMB;
+        this.cpuCfsQuota = $.cpuCfsQuota;
+        this.cpuCfsQuotaPeriod = $.cpuCfsQuotaPeriod;
+        this.cpuManagerPolicy = $.cpuManagerPolicy;
+        this.failSwapOn = $.failSwapOn;
+        this.imageGcHighThreshold = $.imageGcHighThreshold;
+        this.imageGcLowThreshold = $.imageGcLowThreshold;
+        this.podMaxPids = $.podMaxPids;
+        this.topologyManagerPolicy = $.topologyManagerPolicy;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(KubeletConfigResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<String> allowedUnsafeSysctls;
-        private @Nullable Integer containerLogMaxFiles;
-        private @Nullable Integer containerLogMaxSizeMB;
-        private @Nullable Boolean cpuCfsQuota;
-        private @Nullable String cpuCfsQuotaPeriod;
-        private @Nullable String cpuManagerPolicy;
-        private @Nullable Boolean failSwapOn;
-        private @Nullable Integer imageGcHighThreshold;
-        private @Nullable Integer imageGcLowThreshold;
-        private @Nullable Integer podMaxPids;
-        private @Nullable String topologyManagerPolicy;
+        private KubeletConfigResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new KubeletConfigResponse();
         }
 
         public Builder(KubeletConfigResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.allowedUnsafeSysctls = defaults.allowedUnsafeSysctls;
-    	      this.containerLogMaxFiles = defaults.containerLogMaxFiles;
-    	      this.containerLogMaxSizeMB = defaults.containerLogMaxSizeMB;
-    	      this.cpuCfsQuota = defaults.cpuCfsQuota;
-    	      this.cpuCfsQuotaPeriod = defaults.cpuCfsQuotaPeriod;
-    	      this.cpuManagerPolicy = defaults.cpuManagerPolicy;
-    	      this.failSwapOn = defaults.failSwapOn;
-    	      this.imageGcHighThreshold = defaults.imageGcHighThreshold;
-    	      this.imageGcLowThreshold = defaults.imageGcLowThreshold;
-    	      this.podMaxPids = defaults.podMaxPids;
-    	      this.topologyManagerPolicy = defaults.topologyManagerPolicy;
+            $ = new KubeletConfigResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder allowedUnsafeSysctls(@Nullable List<String> allowedUnsafeSysctls) {
-            this.allowedUnsafeSysctls = allowedUnsafeSysctls;
+            $.allowedUnsafeSysctls = allowedUnsafeSysctls;
             return this;
         }
+
         public Builder allowedUnsafeSysctls(String... allowedUnsafeSysctls) {
             return allowedUnsafeSysctls(List.of(allowedUnsafeSysctls));
         }
+
         public Builder containerLogMaxFiles(@Nullable Integer containerLogMaxFiles) {
-            this.containerLogMaxFiles = containerLogMaxFiles;
+            $.containerLogMaxFiles = containerLogMaxFiles;
             return this;
         }
+
         public Builder containerLogMaxSizeMB(@Nullable Integer containerLogMaxSizeMB) {
-            this.containerLogMaxSizeMB = containerLogMaxSizeMB;
+            $.containerLogMaxSizeMB = containerLogMaxSizeMB;
             return this;
         }
+
         public Builder cpuCfsQuota(@Nullable Boolean cpuCfsQuota) {
-            this.cpuCfsQuota = cpuCfsQuota;
+            $.cpuCfsQuota = cpuCfsQuota;
             return this;
         }
+
         public Builder cpuCfsQuotaPeriod(@Nullable String cpuCfsQuotaPeriod) {
-            this.cpuCfsQuotaPeriod = cpuCfsQuotaPeriod;
+            $.cpuCfsQuotaPeriod = cpuCfsQuotaPeriod;
             return this;
         }
+
         public Builder cpuManagerPolicy(@Nullable String cpuManagerPolicy) {
-            this.cpuManagerPolicy = cpuManagerPolicy;
+            $.cpuManagerPolicy = cpuManagerPolicy;
             return this;
         }
+
         public Builder failSwapOn(@Nullable Boolean failSwapOn) {
-            this.failSwapOn = failSwapOn;
+            $.failSwapOn = failSwapOn;
             return this;
         }
+
         public Builder imageGcHighThreshold(@Nullable Integer imageGcHighThreshold) {
-            this.imageGcHighThreshold = imageGcHighThreshold;
+            $.imageGcHighThreshold = imageGcHighThreshold;
             return this;
         }
+
         public Builder imageGcLowThreshold(@Nullable Integer imageGcLowThreshold) {
-            this.imageGcLowThreshold = imageGcLowThreshold;
+            $.imageGcLowThreshold = imageGcLowThreshold;
             return this;
         }
+
         public Builder podMaxPids(@Nullable Integer podMaxPids) {
-            this.podMaxPids = podMaxPids;
+            $.podMaxPids = podMaxPids;
             return this;
         }
+
         public Builder topologyManagerPolicy(@Nullable String topologyManagerPolicy) {
-            this.topologyManagerPolicy = topologyManagerPolicy;
+            $.topologyManagerPolicy = topologyManagerPolicy;
             return this;
-        }        public KubeletConfigResponse build() {
-            return new KubeletConfigResponse(allowedUnsafeSysctls, containerLogMaxFiles, containerLogMaxSizeMB, cpuCfsQuota, cpuCfsQuotaPeriod, cpuManagerPolicy, failSwapOn, imageGcHighThreshold, imageGcLowThreshold, podMaxPids, topologyManagerPolicy);
+        }
+
+        public KubeletConfigResponse build() {
+            return $;
         }
     }
+
 }

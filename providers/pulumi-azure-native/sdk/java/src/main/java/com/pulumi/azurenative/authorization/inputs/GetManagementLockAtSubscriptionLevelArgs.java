@@ -17,45 +17,45 @@ public final class GetManagementLockAtSubscriptionLevelArgs extends com.pulumi.r
      * 
      */
     @Import(name="lockName", required=true)
-      private final String lockName;
+    private String lockName;
 
     public String lockName() {
         return this.lockName;
     }
 
-    public GetManagementLockAtSubscriptionLevelArgs(String lockName) {
-        this.lockName = Objects.requireNonNull(lockName, "expected parameter 'lockName' to be non-null");
-    }
+    private GetManagementLockAtSubscriptionLevelArgs() {}
 
-    private GetManagementLockAtSubscriptionLevelArgs() {
-        this.lockName = null;
+    private GetManagementLockAtSubscriptionLevelArgs(GetManagementLockAtSubscriptionLevelArgs $) {
+        this.lockName = $.lockName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetManagementLockAtSubscriptionLevelArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String lockName;
+        private GetManagementLockAtSubscriptionLevelArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetManagementLockAtSubscriptionLevelArgs();
         }
 
         public Builder(GetManagementLockAtSubscriptionLevelArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.lockName = defaults.lockName;
+            $ = new GetManagementLockAtSubscriptionLevelArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder lockName(String lockName) {
-            this.lockName = Objects.requireNonNull(lockName);
+            $.lockName = lockName;
             return this;
-        }        public GetManagementLockAtSubscriptionLevelArgs build() {
-            return new GetManagementLockAtSubscriptionLevelArgs(lockName);
+        }
+
+        public GetManagementLockAtSubscriptionLevelArgs build() {
+            $.lockName = Objects.requireNonNull($.lockName, "expected parameter 'lockName' to be non-null");
+            return $;
         }
     }
+
 }

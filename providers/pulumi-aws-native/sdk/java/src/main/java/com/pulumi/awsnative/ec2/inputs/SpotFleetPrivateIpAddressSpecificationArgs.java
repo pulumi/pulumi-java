@@ -5,10 +5,10 @@ package com.pulumi.awsnative.ec2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -17,70 +17,66 @@ public final class SpotFleetPrivateIpAddressSpecificationArgs extends com.pulumi
     public static final SpotFleetPrivateIpAddressSpecificationArgs Empty = new SpotFleetPrivateIpAddressSpecificationArgs();
 
     @Import(name="primary")
-      private final @Nullable Output<Boolean> primary;
+    private @Nullable Output<Boolean> primary;
 
-    public Output<Boolean> primary() {
-        return this.primary == null ? Codegen.empty() : this.primary;
+    public Optional<Output<Boolean>> primary() {
+        return Optional.ofNullable(this.primary);
     }
 
     @Import(name="privateIpAddress", required=true)
-      private final Output<String> privateIpAddress;
+    private Output<String> privateIpAddress;
 
     public Output<String> privateIpAddress() {
         return this.privateIpAddress;
     }
 
-    public SpotFleetPrivateIpAddressSpecificationArgs(
-        @Nullable Output<Boolean> primary,
-        Output<String> privateIpAddress) {
-        this.primary = primary;
-        this.privateIpAddress = Objects.requireNonNull(privateIpAddress, "expected parameter 'privateIpAddress' to be non-null");
-    }
+    private SpotFleetPrivateIpAddressSpecificationArgs() {}
 
-    private SpotFleetPrivateIpAddressSpecificationArgs() {
-        this.primary = Codegen.empty();
-        this.privateIpAddress = Codegen.empty();
+    private SpotFleetPrivateIpAddressSpecificationArgs(SpotFleetPrivateIpAddressSpecificationArgs $) {
+        this.primary = $.primary;
+        this.privateIpAddress = $.privateIpAddress;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SpotFleetPrivateIpAddressSpecificationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> primary;
-        private Output<String> privateIpAddress;
+        private SpotFleetPrivateIpAddressSpecificationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SpotFleetPrivateIpAddressSpecificationArgs();
         }
 
         public Builder(SpotFleetPrivateIpAddressSpecificationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.primary = defaults.primary;
-    	      this.privateIpAddress = defaults.privateIpAddress;
+            $ = new SpotFleetPrivateIpAddressSpecificationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder primary(@Nullable Output<Boolean> primary) {
-            this.primary = primary;
+            $.primary = primary;
             return this;
         }
-        public Builder primary(@Nullable Boolean primary) {
-            this.primary = Codegen.ofNullable(primary);
-            return this;
+
+        public Builder primary(Boolean primary) {
+            return primary(Output.of(primary));
         }
+
         public Builder privateIpAddress(Output<String> privateIpAddress) {
-            this.privateIpAddress = Objects.requireNonNull(privateIpAddress);
+            $.privateIpAddress = privateIpAddress;
             return this;
         }
+
         public Builder privateIpAddress(String privateIpAddress) {
-            this.privateIpAddress = Output.of(Objects.requireNonNull(privateIpAddress));
-            return this;
-        }        public SpotFleetPrivateIpAddressSpecificationArgs build() {
-            return new SpotFleetPrivateIpAddressSpecificationArgs(primary, privateIpAddress);
+            return privateIpAddress(Output.of(privateIpAddress));
+        }
+
+        public SpotFleetPrivateIpAddressSpecificationArgs build() {
+            $.privateIpAddress = Objects.requireNonNull($.privateIpAddress, "expected parameter 'privateIpAddress' to be non-null");
+            return $;
         }
     }
+
 }

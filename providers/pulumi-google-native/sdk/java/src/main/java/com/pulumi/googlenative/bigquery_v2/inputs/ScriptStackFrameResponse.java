@@ -18,7 +18,7 @@ public final class ScriptStackFrameResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="endColumn", required=true)
-      private final Integer endColumn;
+    private Integer endColumn;
 
     public Integer endColumn() {
         return this.endColumn;
@@ -29,7 +29,7 @@ public final class ScriptStackFrameResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="endLine", required=true)
-      private final Integer endLine;
+    private Integer endLine;
 
     public Integer endLine() {
         return this.endLine;
@@ -40,7 +40,7 @@ public final class ScriptStackFrameResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="procedureId", required=true)
-      private final String procedureId;
+    private String procedureId;
 
     public String procedureId() {
         return this.procedureId;
@@ -51,7 +51,7 @@ public final class ScriptStackFrameResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="startColumn", required=true)
-      private final Integer startColumn;
+    private Integer startColumn;
 
     public Integer startColumn() {
         return this.startColumn;
@@ -62,7 +62,7 @@ public final class ScriptStackFrameResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="startLine", required=true)
-      private final Integer startLine;
+    private Integer startLine;
 
     public Integer startLine() {
         return this.startLine;
@@ -73,91 +73,80 @@ public final class ScriptStackFrameResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="text", required=true)
-      private final String text;
+    private String text;
 
     public String text() {
         return this.text;
     }
 
-    public ScriptStackFrameResponse(
-        Integer endColumn,
-        Integer endLine,
-        String procedureId,
-        Integer startColumn,
-        Integer startLine,
-        String text) {
-        this.endColumn = Objects.requireNonNull(endColumn, "expected parameter 'endColumn' to be non-null");
-        this.endLine = Objects.requireNonNull(endLine, "expected parameter 'endLine' to be non-null");
-        this.procedureId = Objects.requireNonNull(procedureId, "expected parameter 'procedureId' to be non-null");
-        this.startColumn = Objects.requireNonNull(startColumn, "expected parameter 'startColumn' to be non-null");
-        this.startLine = Objects.requireNonNull(startLine, "expected parameter 'startLine' to be non-null");
-        this.text = Objects.requireNonNull(text, "expected parameter 'text' to be non-null");
-    }
+    private ScriptStackFrameResponse() {}
 
-    private ScriptStackFrameResponse() {
-        this.endColumn = null;
-        this.endLine = null;
-        this.procedureId = null;
-        this.startColumn = null;
-        this.startLine = null;
-        this.text = null;
+    private ScriptStackFrameResponse(ScriptStackFrameResponse $) {
+        this.endColumn = $.endColumn;
+        this.endLine = $.endLine;
+        this.procedureId = $.procedureId;
+        this.startColumn = $.startColumn;
+        this.startLine = $.startLine;
+        this.text = $.text;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ScriptStackFrameResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Integer endColumn;
-        private Integer endLine;
-        private String procedureId;
-        private Integer startColumn;
-        private Integer startLine;
-        private String text;
+        private ScriptStackFrameResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ScriptStackFrameResponse();
         }
 
         public Builder(ScriptStackFrameResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.endColumn = defaults.endColumn;
-    	      this.endLine = defaults.endLine;
-    	      this.procedureId = defaults.procedureId;
-    	      this.startColumn = defaults.startColumn;
-    	      this.startLine = defaults.startLine;
-    	      this.text = defaults.text;
+            $ = new ScriptStackFrameResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder endColumn(Integer endColumn) {
-            this.endColumn = Objects.requireNonNull(endColumn);
+            $.endColumn = endColumn;
             return this;
         }
+
         public Builder endLine(Integer endLine) {
-            this.endLine = Objects.requireNonNull(endLine);
+            $.endLine = endLine;
             return this;
         }
+
         public Builder procedureId(String procedureId) {
-            this.procedureId = Objects.requireNonNull(procedureId);
+            $.procedureId = procedureId;
             return this;
         }
+
         public Builder startColumn(Integer startColumn) {
-            this.startColumn = Objects.requireNonNull(startColumn);
+            $.startColumn = startColumn;
             return this;
         }
+
         public Builder startLine(Integer startLine) {
-            this.startLine = Objects.requireNonNull(startLine);
+            $.startLine = startLine;
             return this;
         }
+
         public Builder text(String text) {
-            this.text = Objects.requireNonNull(text);
+            $.text = text;
             return this;
-        }        public ScriptStackFrameResponse build() {
-            return new ScriptStackFrameResponse(endColumn, endLine, procedureId, startColumn, startLine, text);
+        }
+
+        public ScriptStackFrameResponse build() {
+            $.endColumn = Objects.requireNonNull($.endColumn, "expected parameter 'endColumn' to be non-null");
+            $.endLine = Objects.requireNonNull($.endLine, "expected parameter 'endLine' to be non-null");
+            $.procedureId = Objects.requireNonNull($.procedureId, "expected parameter 'procedureId' to be non-null");
+            $.startColumn = Objects.requireNonNull($.startColumn, "expected parameter 'startColumn' to be non-null");
+            $.startLine = Objects.requireNonNull($.startLine, "expected parameter 'startLine' to be non-null");
+            $.text = Objects.requireNonNull($.text, "expected parameter 'text' to be non-null");
+            return $;
         }
     }
+
 }

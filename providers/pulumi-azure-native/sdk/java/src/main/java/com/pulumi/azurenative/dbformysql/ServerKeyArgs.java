@@ -7,9 +7,9 @@ import com.pulumi.azurenative.dbformysql.enums.ServerKeyType;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class ServerKeyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="keyName")
-      private final @Nullable Output<String> keyName;
+    private @Nullable Output<String> keyName;
 
-    public Output<String> keyName() {
-        return this.keyName == null ? Codegen.empty() : this.keyName;
+    public Optional<Output<String>> keyName() {
+        return Optional.ofNullable(this.keyName);
     }
 
     /**
@@ -33,7 +33,7 @@ public final class ServerKeyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -44,7 +44,7 @@ public final class ServerKeyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="serverKeyType", required=true)
-      private final Output<Either<String,ServerKeyType>> serverKeyType;
+    private Output<Either<String,ServerKeyType>> serverKeyType;
 
     public Output<Either<String,ServerKeyType>> serverKeyType() {
         return this.serverKeyType;
@@ -55,7 +55,7 @@ public final class ServerKeyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="serverName", required=true)
-      private final Output<String> serverName;
+    private Output<String> serverName;
 
     public Output<String> serverName() {
         return this.serverName;
@@ -66,102 +66,91 @@ public final class ServerKeyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="uri")
-      private final @Nullable Output<String> uri;
+    private @Nullable Output<String> uri;
 
-    public Output<String> uri() {
-        return this.uri == null ? Codegen.empty() : this.uri;
+    public Optional<Output<String>> uri() {
+        return Optional.ofNullable(this.uri);
     }
 
-    public ServerKeyArgs(
-        @Nullable Output<String> keyName,
-        Output<String> resourceGroupName,
-        Output<Either<String,ServerKeyType>> serverKeyType,
-        Output<String> serverName,
-        @Nullable Output<String> uri) {
-        this.keyName = keyName;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.serverKeyType = Objects.requireNonNull(serverKeyType, "expected parameter 'serverKeyType' to be non-null");
-        this.serverName = Objects.requireNonNull(serverName, "expected parameter 'serverName' to be non-null");
-        this.uri = uri;
-    }
+    private ServerKeyArgs() {}
 
-    private ServerKeyArgs() {
-        this.keyName = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.serverKeyType = Codegen.empty();
-        this.serverName = Codegen.empty();
-        this.uri = Codegen.empty();
+    private ServerKeyArgs(ServerKeyArgs $) {
+        this.keyName = $.keyName;
+        this.resourceGroupName = $.resourceGroupName;
+        this.serverKeyType = $.serverKeyType;
+        this.serverName = $.serverName;
+        this.uri = $.uri;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ServerKeyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> keyName;
-        private Output<String> resourceGroupName;
-        private Output<Either<String,ServerKeyType>> serverKeyType;
-        private Output<String> serverName;
-        private @Nullable Output<String> uri;
+        private ServerKeyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ServerKeyArgs();
         }
 
         public Builder(ServerKeyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.keyName = defaults.keyName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.serverKeyType = defaults.serverKeyType;
-    	      this.serverName = defaults.serverName;
-    	      this.uri = defaults.uri;
+            $ = new ServerKeyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder keyName(@Nullable Output<String> keyName) {
-            this.keyName = keyName;
+            $.keyName = keyName;
             return this;
         }
-        public Builder keyName(@Nullable String keyName) {
-            this.keyName = Codegen.ofNullable(keyName);
-            return this;
+
+        public Builder keyName(String keyName) {
+            return keyName(Output.of(keyName));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder serverKeyType(Output<Either<String,ServerKeyType>> serverKeyType) {
-            this.serverKeyType = Objects.requireNonNull(serverKeyType);
+            $.serverKeyType = serverKeyType;
             return this;
         }
+
         public Builder serverKeyType(Either<String,ServerKeyType> serverKeyType) {
-            this.serverKeyType = Output.of(Objects.requireNonNull(serverKeyType));
-            return this;
+            return serverKeyType(Output.of(serverKeyType));
         }
+
         public Builder serverName(Output<String> serverName) {
-            this.serverName = Objects.requireNonNull(serverName);
+            $.serverName = serverName;
             return this;
         }
+
         public Builder serverName(String serverName) {
-            this.serverName = Output.of(Objects.requireNonNull(serverName));
-            return this;
+            return serverName(Output.of(serverName));
         }
+
         public Builder uri(@Nullable Output<String> uri) {
-            this.uri = uri;
+            $.uri = uri;
             return this;
         }
-        public Builder uri(@Nullable String uri) {
-            this.uri = Codegen.ofNullable(uri);
-            return this;
-        }        public ServerKeyArgs build() {
-            return new ServerKeyArgs(keyName, resourceGroupName, serverKeyType, serverName, uri);
+
+        public Builder uri(String uri) {
+            return uri(Output.of(uri));
+        }
+
+        public ServerKeyArgs build() {
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.serverKeyType = Objects.requireNonNull($.serverKeyType, "expected parameter 'serverKeyType' to be non-null");
+            $.serverName = Objects.requireNonNull($.serverName, "expected parameter 'serverName' to be non-null");
+            return $;
         }
     }
+
 }

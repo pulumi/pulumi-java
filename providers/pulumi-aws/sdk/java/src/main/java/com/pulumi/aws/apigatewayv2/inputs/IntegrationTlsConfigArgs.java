@@ -5,9 +5,9 @@ package com.pulumi.aws.apigatewayv2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,49 +20,48 @@ public final class IntegrationTlsConfigArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="serverNameToVerify")
-      private final @Nullable Output<String> serverNameToVerify;
+    private @Nullable Output<String> serverNameToVerify;
 
-    public Output<String> serverNameToVerify() {
-        return this.serverNameToVerify == null ? Codegen.empty() : this.serverNameToVerify;
+    public Optional<Output<String>> serverNameToVerify() {
+        return Optional.ofNullable(this.serverNameToVerify);
     }
 
-    public IntegrationTlsConfigArgs(@Nullable Output<String> serverNameToVerify) {
-        this.serverNameToVerify = serverNameToVerify;
-    }
+    private IntegrationTlsConfigArgs() {}
 
-    private IntegrationTlsConfigArgs() {
-        this.serverNameToVerify = Codegen.empty();
+    private IntegrationTlsConfigArgs(IntegrationTlsConfigArgs $) {
+        this.serverNameToVerify = $.serverNameToVerify;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(IntegrationTlsConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> serverNameToVerify;
+        private IntegrationTlsConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new IntegrationTlsConfigArgs();
         }
 
         public Builder(IntegrationTlsConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.serverNameToVerify = defaults.serverNameToVerify;
+            $ = new IntegrationTlsConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder serverNameToVerify(@Nullable Output<String> serverNameToVerify) {
-            this.serverNameToVerify = serverNameToVerify;
+            $.serverNameToVerify = serverNameToVerify;
             return this;
         }
-        public Builder serverNameToVerify(@Nullable String serverNameToVerify) {
-            this.serverNameToVerify = Codegen.ofNullable(serverNameToVerify);
-            return this;
-        }        public IntegrationTlsConfigArgs build() {
-            return new IntegrationTlsConfigArgs(serverNameToVerify);
+
+        public Builder serverNameToVerify(String serverNameToVerify) {
+            return serverNameToVerify(Output.of(serverNameToVerify));
+        }
+
+        public IntegrationTlsConfigArgs build() {
+            return $;
         }
     }
+
 }

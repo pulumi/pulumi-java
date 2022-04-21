@@ -5,7 +5,6 @@ package com.pulumi.kubernetes.autoscaling_v2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.kubernetes.autoscaling_v2.inputs.MetricIdentifierArgs;
 import com.pulumi.kubernetes.autoscaling_v2.inputs.MetricValueStatusArgs;
 import java.util.Objects;
@@ -24,7 +23,7 @@ public final class ExternalMetricStatusArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="current", required=true)
-      private final Output<MetricValueStatusArgs> current;
+    private Output<MetricValueStatusArgs> current;
 
     public Output<MetricValueStatusArgs> current() {
         return this.current;
@@ -35,63 +34,60 @@ public final class ExternalMetricStatusArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="metric", required=true)
-      private final Output<MetricIdentifierArgs> metric;
+    private Output<MetricIdentifierArgs> metric;
 
     public Output<MetricIdentifierArgs> metric() {
         return this.metric;
     }
 
-    public ExternalMetricStatusArgs(
-        Output<MetricValueStatusArgs> current,
-        Output<MetricIdentifierArgs> metric) {
-        this.current = Objects.requireNonNull(current, "expected parameter 'current' to be non-null");
-        this.metric = Objects.requireNonNull(metric, "expected parameter 'metric' to be non-null");
-    }
+    private ExternalMetricStatusArgs() {}
 
-    private ExternalMetricStatusArgs() {
-        this.current = Codegen.empty();
-        this.metric = Codegen.empty();
+    private ExternalMetricStatusArgs(ExternalMetricStatusArgs $) {
+        this.current = $.current;
+        this.metric = $.metric;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ExternalMetricStatusArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<MetricValueStatusArgs> current;
-        private Output<MetricIdentifierArgs> metric;
+        private ExternalMetricStatusArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ExternalMetricStatusArgs();
         }
 
         public Builder(ExternalMetricStatusArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.current = defaults.current;
-    	      this.metric = defaults.metric;
+            $ = new ExternalMetricStatusArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder current(Output<MetricValueStatusArgs> current) {
-            this.current = Objects.requireNonNull(current);
+            $.current = current;
             return this;
         }
+
         public Builder current(MetricValueStatusArgs current) {
-            this.current = Output.of(Objects.requireNonNull(current));
-            return this;
+            return current(Output.of(current));
         }
+
         public Builder metric(Output<MetricIdentifierArgs> metric) {
-            this.metric = Objects.requireNonNull(metric);
+            $.metric = metric;
             return this;
         }
+
         public Builder metric(MetricIdentifierArgs metric) {
-            this.metric = Output.of(Objects.requireNonNull(metric));
-            return this;
-        }        public ExternalMetricStatusArgs build() {
-            return new ExternalMetricStatusArgs(current, metric);
+            return metric(Output.of(metric));
+        }
+
+        public ExternalMetricStatusArgs build() {
+            $.current = Objects.requireNonNull($.current, "expected parameter 'current' to be non-null");
+            $.metric = Objects.requireNonNull($.metric, "expected parameter 'metric' to be non-null");
+            return $;
         }
     }
+
 }

@@ -8,9 +8,9 @@ import com.pulumi.azurenative.synapse.enums.PrincipalType;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,7 +23,7 @@ public final class DatabasePrincipalAssignmentArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="databaseName", required=true)
-      private final Output<String> databaseName;
+    private Output<String> databaseName;
 
     public Output<String> databaseName() {
         return this.databaseName;
@@ -34,7 +34,7 @@ public final class DatabasePrincipalAssignmentArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="kustoPoolName", required=true)
-      private final Output<String> kustoPoolName;
+    private Output<String> kustoPoolName;
 
     public Output<String> kustoPoolName() {
         return this.kustoPoolName;
@@ -45,10 +45,10 @@ public final class DatabasePrincipalAssignmentArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="principalAssignmentName")
-      private final @Nullable Output<String> principalAssignmentName;
+    private @Nullable Output<String> principalAssignmentName;
 
-    public Output<String> principalAssignmentName() {
-        return this.principalAssignmentName == null ? Codegen.empty() : this.principalAssignmentName;
+    public Optional<Output<String>> principalAssignmentName() {
+        return Optional.ofNullable(this.principalAssignmentName);
     }
 
     /**
@@ -56,7 +56,7 @@ public final class DatabasePrincipalAssignmentArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="principalId", required=true)
-      private final Output<String> principalId;
+    private Output<String> principalId;
 
     public Output<String> principalId() {
         return this.principalId;
@@ -67,7 +67,7 @@ public final class DatabasePrincipalAssignmentArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="principalType", required=true)
-      private final Output<Either<String,PrincipalType>> principalType;
+    private Output<Either<String,PrincipalType>> principalType;
 
     public Output<Either<String,PrincipalType>> principalType() {
         return this.principalType;
@@ -78,7 +78,7 @@ public final class DatabasePrincipalAssignmentArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -89,7 +89,7 @@ public final class DatabasePrincipalAssignmentArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="role", required=true)
-      private final Output<Either<String,DatabasePrincipalRole>> role;
+    private Output<Either<String,DatabasePrincipalRole>> role;
 
     public Output<Either<String,DatabasePrincipalRole>> role() {
         return this.role;
@@ -100,10 +100,10 @@ public final class DatabasePrincipalAssignmentArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="tenantId")
-      private final @Nullable Output<String> tenantId;
+    private @Nullable Output<String> tenantId;
 
-    public Output<String> tenantId() {
-        return this.tenantId == null ? Codegen.empty() : this.tenantId;
+    public Optional<Output<String>> tenantId() {
+        return Optional.ofNullable(this.tenantId);
     }
 
     /**
@@ -111,154 +111,135 @@ public final class DatabasePrincipalAssignmentArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="workspaceName", required=true)
-      private final Output<String> workspaceName;
+    private Output<String> workspaceName;
 
     public Output<String> workspaceName() {
         return this.workspaceName;
     }
 
-    public DatabasePrincipalAssignmentArgs(
-        Output<String> databaseName,
-        Output<String> kustoPoolName,
-        @Nullable Output<String> principalAssignmentName,
-        Output<String> principalId,
-        Output<Either<String,PrincipalType>> principalType,
-        Output<String> resourceGroupName,
-        Output<Either<String,DatabasePrincipalRole>> role,
-        @Nullable Output<String> tenantId,
-        Output<String> workspaceName) {
-        this.databaseName = Objects.requireNonNull(databaseName, "expected parameter 'databaseName' to be non-null");
-        this.kustoPoolName = Objects.requireNonNull(kustoPoolName, "expected parameter 'kustoPoolName' to be non-null");
-        this.principalAssignmentName = principalAssignmentName;
-        this.principalId = Objects.requireNonNull(principalId, "expected parameter 'principalId' to be non-null");
-        this.principalType = Objects.requireNonNull(principalType, "expected parameter 'principalType' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.role = Objects.requireNonNull(role, "expected parameter 'role' to be non-null");
-        this.tenantId = tenantId;
-        this.workspaceName = Objects.requireNonNull(workspaceName, "expected parameter 'workspaceName' to be non-null");
-    }
+    private DatabasePrincipalAssignmentArgs() {}
 
-    private DatabasePrincipalAssignmentArgs() {
-        this.databaseName = Codegen.empty();
-        this.kustoPoolName = Codegen.empty();
-        this.principalAssignmentName = Codegen.empty();
-        this.principalId = Codegen.empty();
-        this.principalType = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.role = Codegen.empty();
-        this.tenantId = Codegen.empty();
-        this.workspaceName = Codegen.empty();
+    private DatabasePrincipalAssignmentArgs(DatabasePrincipalAssignmentArgs $) {
+        this.databaseName = $.databaseName;
+        this.kustoPoolName = $.kustoPoolName;
+        this.principalAssignmentName = $.principalAssignmentName;
+        this.principalId = $.principalId;
+        this.principalType = $.principalType;
+        this.resourceGroupName = $.resourceGroupName;
+        this.role = $.role;
+        this.tenantId = $.tenantId;
+        this.workspaceName = $.workspaceName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DatabasePrincipalAssignmentArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> databaseName;
-        private Output<String> kustoPoolName;
-        private @Nullable Output<String> principalAssignmentName;
-        private Output<String> principalId;
-        private Output<Either<String,PrincipalType>> principalType;
-        private Output<String> resourceGroupName;
-        private Output<Either<String,DatabasePrincipalRole>> role;
-        private @Nullable Output<String> tenantId;
-        private Output<String> workspaceName;
+        private DatabasePrincipalAssignmentArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DatabasePrincipalAssignmentArgs();
         }
 
         public Builder(DatabasePrincipalAssignmentArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.databaseName = defaults.databaseName;
-    	      this.kustoPoolName = defaults.kustoPoolName;
-    	      this.principalAssignmentName = defaults.principalAssignmentName;
-    	      this.principalId = defaults.principalId;
-    	      this.principalType = defaults.principalType;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.role = defaults.role;
-    	      this.tenantId = defaults.tenantId;
-    	      this.workspaceName = defaults.workspaceName;
+            $ = new DatabasePrincipalAssignmentArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder databaseName(Output<String> databaseName) {
-            this.databaseName = Objects.requireNonNull(databaseName);
+            $.databaseName = databaseName;
             return this;
         }
+
         public Builder databaseName(String databaseName) {
-            this.databaseName = Output.of(Objects.requireNonNull(databaseName));
-            return this;
+            return databaseName(Output.of(databaseName));
         }
+
         public Builder kustoPoolName(Output<String> kustoPoolName) {
-            this.kustoPoolName = Objects.requireNonNull(kustoPoolName);
+            $.kustoPoolName = kustoPoolName;
             return this;
         }
+
         public Builder kustoPoolName(String kustoPoolName) {
-            this.kustoPoolName = Output.of(Objects.requireNonNull(kustoPoolName));
-            return this;
+            return kustoPoolName(Output.of(kustoPoolName));
         }
+
         public Builder principalAssignmentName(@Nullable Output<String> principalAssignmentName) {
-            this.principalAssignmentName = principalAssignmentName;
+            $.principalAssignmentName = principalAssignmentName;
             return this;
         }
-        public Builder principalAssignmentName(@Nullable String principalAssignmentName) {
-            this.principalAssignmentName = Codegen.ofNullable(principalAssignmentName);
-            return this;
+
+        public Builder principalAssignmentName(String principalAssignmentName) {
+            return principalAssignmentName(Output.of(principalAssignmentName));
         }
+
         public Builder principalId(Output<String> principalId) {
-            this.principalId = Objects.requireNonNull(principalId);
+            $.principalId = principalId;
             return this;
         }
+
         public Builder principalId(String principalId) {
-            this.principalId = Output.of(Objects.requireNonNull(principalId));
-            return this;
+            return principalId(Output.of(principalId));
         }
+
         public Builder principalType(Output<Either<String,PrincipalType>> principalType) {
-            this.principalType = Objects.requireNonNull(principalType);
+            $.principalType = principalType;
             return this;
         }
+
         public Builder principalType(Either<String,PrincipalType> principalType) {
-            this.principalType = Output.of(Objects.requireNonNull(principalType));
-            return this;
+            return principalType(Output.of(principalType));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder role(Output<Either<String,DatabasePrincipalRole>> role) {
-            this.role = Objects.requireNonNull(role);
+            $.role = role;
             return this;
         }
+
         public Builder role(Either<String,DatabasePrincipalRole> role) {
-            this.role = Output.of(Objects.requireNonNull(role));
-            return this;
+            return role(Output.of(role));
         }
+
         public Builder tenantId(@Nullable Output<String> tenantId) {
-            this.tenantId = tenantId;
+            $.tenantId = tenantId;
             return this;
         }
-        public Builder tenantId(@Nullable String tenantId) {
-            this.tenantId = Codegen.ofNullable(tenantId);
-            return this;
+
+        public Builder tenantId(String tenantId) {
+            return tenantId(Output.of(tenantId));
         }
+
         public Builder workspaceName(Output<String> workspaceName) {
-            this.workspaceName = Objects.requireNonNull(workspaceName);
+            $.workspaceName = workspaceName;
             return this;
         }
+
         public Builder workspaceName(String workspaceName) {
-            this.workspaceName = Output.of(Objects.requireNonNull(workspaceName));
-            return this;
-        }        public DatabasePrincipalAssignmentArgs build() {
-            return new DatabasePrincipalAssignmentArgs(databaseName, kustoPoolName, principalAssignmentName, principalId, principalType, resourceGroupName, role, tenantId, workspaceName);
+            return workspaceName(Output.of(workspaceName));
+        }
+
+        public DatabasePrincipalAssignmentArgs build() {
+            $.databaseName = Objects.requireNonNull($.databaseName, "expected parameter 'databaseName' to be non-null");
+            $.kustoPoolName = Objects.requireNonNull($.kustoPoolName, "expected parameter 'kustoPoolName' to be non-null");
+            $.principalId = Objects.requireNonNull($.principalId, "expected parameter 'principalId' to be non-null");
+            $.principalType = Objects.requireNonNull($.principalType, "expected parameter 'principalType' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.role = Objects.requireNonNull($.role, "expected parameter 'role' to be non-null");
+            $.workspaceName = Objects.requireNonNull($.workspaceName, "expected parameter 'workspaceName' to be non-null");
+            return $;
         }
     }
+
 }

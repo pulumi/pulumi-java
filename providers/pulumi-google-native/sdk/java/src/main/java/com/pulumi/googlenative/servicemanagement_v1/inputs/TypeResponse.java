@@ -25,7 +25,7 @@ public final class TypeResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="fields", required=true)
-      private final List<FieldResponse> fields;
+    private List<FieldResponse> fields;
 
     public List<FieldResponse> fields() {
         return this.fields;
@@ -36,7 +36,7 @@ public final class TypeResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -47,7 +47,7 @@ public final class TypeResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="oneofs", required=true)
-      private final List<String> oneofs;
+    private List<String> oneofs;
 
     public List<String> oneofs() {
         return this.oneofs;
@@ -58,7 +58,7 @@ public final class TypeResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="options", required=true)
-      private final List<OptionResponse> options;
+    private List<OptionResponse> options;
 
     public List<OptionResponse> options() {
         return this.options;
@@ -69,7 +69,7 @@ public final class TypeResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="sourceContext", required=true)
-      private final SourceContextResponse sourceContext;
+    private SourceContextResponse sourceContext;
 
     public SourceContextResponse sourceContext() {
         return this.sourceContext;
@@ -80,100 +80,92 @@ public final class TypeResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="syntax", required=true)
-      private final String syntax;
+    private String syntax;
 
     public String syntax() {
         return this.syntax;
     }
 
-    public TypeResponse(
-        List<FieldResponse> fields,
-        String name,
-        List<String> oneofs,
-        List<OptionResponse> options,
-        SourceContextResponse sourceContext,
-        String syntax) {
-        this.fields = Objects.requireNonNull(fields, "expected parameter 'fields' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.oneofs = Objects.requireNonNull(oneofs, "expected parameter 'oneofs' to be non-null");
-        this.options = Objects.requireNonNull(options, "expected parameter 'options' to be non-null");
-        this.sourceContext = Objects.requireNonNull(sourceContext, "expected parameter 'sourceContext' to be non-null");
-        this.syntax = Objects.requireNonNull(syntax, "expected parameter 'syntax' to be non-null");
-    }
+    private TypeResponse() {}
 
-    private TypeResponse() {
-        this.fields = List.of();
-        this.name = null;
-        this.oneofs = List.of();
-        this.options = List.of();
-        this.sourceContext = null;
-        this.syntax = null;
+    private TypeResponse(TypeResponse $) {
+        this.fields = $.fields;
+        this.name = $.name;
+        this.oneofs = $.oneofs;
+        this.options = $.options;
+        this.sourceContext = $.sourceContext;
+        this.syntax = $.syntax;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TypeResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<FieldResponse> fields;
-        private String name;
-        private List<String> oneofs;
-        private List<OptionResponse> options;
-        private SourceContextResponse sourceContext;
-        private String syntax;
+        private TypeResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new TypeResponse();
         }
 
         public Builder(TypeResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.fields = defaults.fields;
-    	      this.name = defaults.name;
-    	      this.oneofs = defaults.oneofs;
-    	      this.options = defaults.options;
-    	      this.sourceContext = defaults.sourceContext;
-    	      this.syntax = defaults.syntax;
+            $ = new TypeResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder fields(List<FieldResponse> fields) {
-            this.fields = Objects.requireNonNull(fields);
+            $.fields = fields;
             return this;
         }
+
         public Builder fields(FieldResponse... fields) {
             return fields(List.of(fields));
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder oneofs(List<String> oneofs) {
-            this.oneofs = Objects.requireNonNull(oneofs);
+            $.oneofs = oneofs;
             return this;
         }
+
         public Builder oneofs(String... oneofs) {
             return oneofs(List.of(oneofs));
         }
+
         public Builder options(List<OptionResponse> options) {
-            this.options = Objects.requireNonNull(options);
+            $.options = options;
             return this;
         }
+
         public Builder options(OptionResponse... options) {
             return options(List.of(options));
         }
+
         public Builder sourceContext(SourceContextResponse sourceContext) {
-            this.sourceContext = Objects.requireNonNull(sourceContext);
+            $.sourceContext = sourceContext;
             return this;
         }
+
         public Builder syntax(String syntax) {
-            this.syntax = Objects.requireNonNull(syntax);
+            $.syntax = syntax;
             return this;
-        }        public TypeResponse build() {
-            return new TypeResponse(fields, name, oneofs, options, sourceContext, syntax);
+        }
+
+        public TypeResponse build() {
+            $.fields = Objects.requireNonNull($.fields, "expected parameter 'fields' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.oneofs = Objects.requireNonNull($.oneofs, "expected parameter 'oneofs' to be non-null");
+            $.options = Objects.requireNonNull($.options, "expected parameter 'options' to be non-null");
+            $.sourceContext = Objects.requireNonNull($.sourceContext, "expected parameter 'sourceContext' to be non-null");
+            $.syntax = Objects.requireNonNull($.syntax, "expected parameter 'syntax' to be non-null");
+            return $;
         }
     }
+
 }

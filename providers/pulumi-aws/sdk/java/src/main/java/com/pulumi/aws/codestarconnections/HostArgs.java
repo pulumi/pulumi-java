@@ -6,9 +6,9 @@ package com.pulumi.aws.codestarconnections;
 import com.pulumi.aws.codestarconnections.inputs.HostVpcConfigurationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class HostArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -32,7 +32,7 @@ public final class HostArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="providerEndpoint", required=true)
-      private final Output<String> providerEndpoint;
+    private Output<String> providerEndpoint;
 
     public Output<String> providerEndpoint() {
         return this.providerEndpoint;
@@ -43,7 +43,7 @@ public final class HostArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="providerType", required=true)
-      private final Output<String> providerType;
+    private Output<String> providerType;
 
     public Output<String> providerType() {
         return this.providerType;
@@ -54,89 +54,80 @@ public final class HostArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="vpcConfiguration")
-      private final @Nullable Output<HostVpcConfigurationArgs> vpcConfiguration;
+    private @Nullable Output<HostVpcConfigurationArgs> vpcConfiguration;
 
-    public Output<HostVpcConfigurationArgs> vpcConfiguration() {
-        return this.vpcConfiguration == null ? Codegen.empty() : this.vpcConfiguration;
+    public Optional<Output<HostVpcConfigurationArgs>> vpcConfiguration() {
+        return Optional.ofNullable(this.vpcConfiguration);
     }
 
-    public HostArgs(
-        @Nullable Output<String> name,
-        Output<String> providerEndpoint,
-        Output<String> providerType,
-        @Nullable Output<HostVpcConfigurationArgs> vpcConfiguration) {
-        this.name = name;
-        this.providerEndpoint = Objects.requireNonNull(providerEndpoint, "expected parameter 'providerEndpoint' to be non-null");
-        this.providerType = Objects.requireNonNull(providerType, "expected parameter 'providerType' to be non-null");
-        this.vpcConfiguration = vpcConfiguration;
-    }
+    private HostArgs() {}
 
-    private HostArgs() {
-        this.name = Codegen.empty();
-        this.providerEndpoint = Codegen.empty();
-        this.providerType = Codegen.empty();
-        this.vpcConfiguration = Codegen.empty();
+    private HostArgs(HostArgs $) {
+        this.name = $.name;
+        this.providerEndpoint = $.providerEndpoint;
+        this.providerType = $.providerType;
+        this.vpcConfiguration = $.vpcConfiguration;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(HostArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> name;
-        private Output<String> providerEndpoint;
-        private Output<String> providerType;
-        private @Nullable Output<HostVpcConfigurationArgs> vpcConfiguration;
+        private HostArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new HostArgs();
         }
 
         public Builder(HostArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.providerEndpoint = defaults.providerEndpoint;
-    	      this.providerType = defaults.providerType;
-    	      this.vpcConfiguration = defaults.vpcConfiguration;
+            $ = new HostArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder providerEndpoint(Output<String> providerEndpoint) {
-            this.providerEndpoint = Objects.requireNonNull(providerEndpoint);
+            $.providerEndpoint = providerEndpoint;
             return this;
         }
+
         public Builder providerEndpoint(String providerEndpoint) {
-            this.providerEndpoint = Output.of(Objects.requireNonNull(providerEndpoint));
-            return this;
+            return providerEndpoint(Output.of(providerEndpoint));
         }
+
         public Builder providerType(Output<String> providerType) {
-            this.providerType = Objects.requireNonNull(providerType);
+            $.providerType = providerType;
             return this;
         }
+
         public Builder providerType(String providerType) {
-            this.providerType = Output.of(Objects.requireNonNull(providerType));
-            return this;
+            return providerType(Output.of(providerType));
         }
+
         public Builder vpcConfiguration(@Nullable Output<HostVpcConfigurationArgs> vpcConfiguration) {
-            this.vpcConfiguration = vpcConfiguration;
+            $.vpcConfiguration = vpcConfiguration;
             return this;
         }
-        public Builder vpcConfiguration(@Nullable HostVpcConfigurationArgs vpcConfiguration) {
-            this.vpcConfiguration = Codegen.ofNullable(vpcConfiguration);
-            return this;
-        }        public HostArgs build() {
-            return new HostArgs(name, providerEndpoint, providerType, vpcConfiguration);
+
+        public Builder vpcConfiguration(HostVpcConfigurationArgs vpcConfiguration) {
+            return vpcConfiguration(Output.of(vpcConfiguration));
+        }
+
+        public HostArgs build() {
+            $.providerEndpoint = Objects.requireNonNull($.providerEndpoint, "expected parameter 'providerEndpoint' to be non-null");
+            $.providerType = Objects.requireNonNull($.providerType, "expected parameter 'providerType' to be non-null");
+            return $;
         }
     }
+
 }

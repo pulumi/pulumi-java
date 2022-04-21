@@ -21,7 +21,7 @@ public final class NodeMonitoringDataResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="additionalProperties", required=true)
-      private final Map<String,Object> additionalProperties;
+    private Map<String,Object> additionalProperties;
 
     public Map<String,Object> additionalProperties() {
         return this.additionalProperties;
@@ -32,7 +32,7 @@ public final class NodeMonitoringDataResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="availableMemoryInMB", required=true)
-      private final Integer availableMemoryInMB;
+    private Integer availableMemoryInMB;
 
     public Integer availableMemoryInMB() {
         return this.availableMemoryInMB;
@@ -43,7 +43,7 @@ public final class NodeMonitoringDataResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="concurrentJobsLimit", required=true)
-      private final Integer concurrentJobsLimit;
+    private Integer concurrentJobsLimit;
 
     public Integer concurrentJobsLimit() {
         return this.concurrentJobsLimit;
@@ -54,7 +54,7 @@ public final class NodeMonitoringDataResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="concurrentJobsRunning", required=true)
-      private final Integer concurrentJobsRunning;
+    private Integer concurrentJobsRunning;
 
     public Integer concurrentJobsRunning() {
         return this.concurrentJobsRunning;
@@ -65,7 +65,7 @@ public final class NodeMonitoringDataResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="cpuUtilization", required=true)
-      private final Integer cpuUtilization;
+    private Integer cpuUtilization;
 
     public Integer cpuUtilization() {
         return this.cpuUtilization;
@@ -76,7 +76,7 @@ public final class NodeMonitoringDataResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="maxConcurrentJobs", required=true)
-      private final Integer maxConcurrentJobs;
+    private Integer maxConcurrentJobs;
 
     public Integer maxConcurrentJobs() {
         return this.maxConcurrentJobs;
@@ -87,7 +87,7 @@ public final class NodeMonitoringDataResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="nodeName", required=true)
-      private final String nodeName;
+    private String nodeName;
 
     public String nodeName() {
         return this.nodeName;
@@ -98,7 +98,7 @@ public final class NodeMonitoringDataResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="receivedBytes", required=true)
-      private final Double receivedBytes;
+    private Double receivedBytes;
 
     public Double receivedBytes() {
         return this.receivedBytes;
@@ -109,118 +109,101 @@ public final class NodeMonitoringDataResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="sentBytes", required=true)
-      private final Double sentBytes;
+    private Double sentBytes;
 
     public Double sentBytes() {
         return this.sentBytes;
     }
 
-    public NodeMonitoringDataResponse(
-        Map<String,Object> additionalProperties,
-        Integer availableMemoryInMB,
-        Integer concurrentJobsLimit,
-        Integer concurrentJobsRunning,
-        Integer cpuUtilization,
-        Integer maxConcurrentJobs,
-        String nodeName,
-        Double receivedBytes,
-        Double sentBytes) {
-        this.additionalProperties = Objects.requireNonNull(additionalProperties, "expected parameter 'additionalProperties' to be non-null");
-        this.availableMemoryInMB = Objects.requireNonNull(availableMemoryInMB, "expected parameter 'availableMemoryInMB' to be non-null");
-        this.concurrentJobsLimit = Objects.requireNonNull(concurrentJobsLimit, "expected parameter 'concurrentJobsLimit' to be non-null");
-        this.concurrentJobsRunning = Objects.requireNonNull(concurrentJobsRunning, "expected parameter 'concurrentJobsRunning' to be non-null");
-        this.cpuUtilization = Objects.requireNonNull(cpuUtilization, "expected parameter 'cpuUtilization' to be non-null");
-        this.maxConcurrentJobs = Objects.requireNonNull(maxConcurrentJobs, "expected parameter 'maxConcurrentJobs' to be non-null");
-        this.nodeName = Objects.requireNonNull(nodeName, "expected parameter 'nodeName' to be non-null");
-        this.receivedBytes = Objects.requireNonNull(receivedBytes, "expected parameter 'receivedBytes' to be non-null");
-        this.sentBytes = Objects.requireNonNull(sentBytes, "expected parameter 'sentBytes' to be non-null");
-    }
+    private NodeMonitoringDataResponse() {}
 
-    private NodeMonitoringDataResponse() {
-        this.additionalProperties = Map.of();
-        this.availableMemoryInMB = null;
-        this.concurrentJobsLimit = null;
-        this.concurrentJobsRunning = null;
-        this.cpuUtilization = null;
-        this.maxConcurrentJobs = null;
-        this.nodeName = null;
-        this.receivedBytes = null;
-        this.sentBytes = null;
+    private NodeMonitoringDataResponse(NodeMonitoringDataResponse $) {
+        this.additionalProperties = $.additionalProperties;
+        this.availableMemoryInMB = $.availableMemoryInMB;
+        this.concurrentJobsLimit = $.concurrentJobsLimit;
+        this.concurrentJobsRunning = $.concurrentJobsRunning;
+        this.cpuUtilization = $.cpuUtilization;
+        this.maxConcurrentJobs = $.maxConcurrentJobs;
+        this.nodeName = $.nodeName;
+        this.receivedBytes = $.receivedBytes;
+        this.sentBytes = $.sentBytes;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NodeMonitoringDataResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Map<String,Object> additionalProperties;
-        private Integer availableMemoryInMB;
-        private Integer concurrentJobsLimit;
-        private Integer concurrentJobsRunning;
-        private Integer cpuUtilization;
-        private Integer maxConcurrentJobs;
-        private String nodeName;
-        private Double receivedBytes;
-        private Double sentBytes;
+        private NodeMonitoringDataResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new NodeMonitoringDataResponse();
         }
 
         public Builder(NodeMonitoringDataResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.additionalProperties = defaults.additionalProperties;
-    	      this.availableMemoryInMB = defaults.availableMemoryInMB;
-    	      this.concurrentJobsLimit = defaults.concurrentJobsLimit;
-    	      this.concurrentJobsRunning = defaults.concurrentJobsRunning;
-    	      this.cpuUtilization = defaults.cpuUtilization;
-    	      this.maxConcurrentJobs = defaults.maxConcurrentJobs;
-    	      this.nodeName = defaults.nodeName;
-    	      this.receivedBytes = defaults.receivedBytes;
-    	      this.sentBytes = defaults.sentBytes;
+            $ = new NodeMonitoringDataResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder additionalProperties(Map<String,Object> additionalProperties) {
-            this.additionalProperties = Objects.requireNonNull(additionalProperties);
+            $.additionalProperties = additionalProperties;
             return this;
         }
+
         public Builder availableMemoryInMB(Integer availableMemoryInMB) {
-            this.availableMemoryInMB = Objects.requireNonNull(availableMemoryInMB);
+            $.availableMemoryInMB = availableMemoryInMB;
             return this;
         }
+
         public Builder concurrentJobsLimit(Integer concurrentJobsLimit) {
-            this.concurrentJobsLimit = Objects.requireNonNull(concurrentJobsLimit);
+            $.concurrentJobsLimit = concurrentJobsLimit;
             return this;
         }
+
         public Builder concurrentJobsRunning(Integer concurrentJobsRunning) {
-            this.concurrentJobsRunning = Objects.requireNonNull(concurrentJobsRunning);
+            $.concurrentJobsRunning = concurrentJobsRunning;
             return this;
         }
+
         public Builder cpuUtilization(Integer cpuUtilization) {
-            this.cpuUtilization = Objects.requireNonNull(cpuUtilization);
+            $.cpuUtilization = cpuUtilization;
             return this;
         }
+
         public Builder maxConcurrentJobs(Integer maxConcurrentJobs) {
-            this.maxConcurrentJobs = Objects.requireNonNull(maxConcurrentJobs);
+            $.maxConcurrentJobs = maxConcurrentJobs;
             return this;
         }
+
         public Builder nodeName(String nodeName) {
-            this.nodeName = Objects.requireNonNull(nodeName);
+            $.nodeName = nodeName;
             return this;
         }
+
         public Builder receivedBytes(Double receivedBytes) {
-            this.receivedBytes = Objects.requireNonNull(receivedBytes);
+            $.receivedBytes = receivedBytes;
             return this;
         }
+
         public Builder sentBytes(Double sentBytes) {
-            this.sentBytes = Objects.requireNonNull(sentBytes);
+            $.sentBytes = sentBytes;
             return this;
-        }        public NodeMonitoringDataResponse build() {
-            return new NodeMonitoringDataResponse(additionalProperties, availableMemoryInMB, concurrentJobsLimit, concurrentJobsRunning, cpuUtilization, maxConcurrentJobs, nodeName, receivedBytes, sentBytes);
+        }
+
+        public NodeMonitoringDataResponse build() {
+            $.additionalProperties = Objects.requireNonNull($.additionalProperties, "expected parameter 'additionalProperties' to be non-null");
+            $.availableMemoryInMB = Objects.requireNonNull($.availableMemoryInMB, "expected parameter 'availableMemoryInMB' to be non-null");
+            $.concurrentJobsLimit = Objects.requireNonNull($.concurrentJobsLimit, "expected parameter 'concurrentJobsLimit' to be non-null");
+            $.concurrentJobsRunning = Objects.requireNonNull($.concurrentJobsRunning, "expected parameter 'concurrentJobsRunning' to be non-null");
+            $.cpuUtilization = Objects.requireNonNull($.cpuUtilization, "expected parameter 'cpuUtilization' to be non-null");
+            $.maxConcurrentJobs = Objects.requireNonNull($.maxConcurrentJobs, "expected parameter 'maxConcurrentJobs' to be non-null");
+            $.nodeName = Objects.requireNonNull($.nodeName, "expected parameter 'nodeName' to be non-null");
+            $.receivedBytes = Objects.requireNonNull($.receivedBytes, "expected parameter 'receivedBytes' to be non-null");
+            $.sentBytes = Objects.requireNonNull($.sentBytes, "expected parameter 'sentBytes' to be non-null");
+            return $;
         }
     }
+
 }

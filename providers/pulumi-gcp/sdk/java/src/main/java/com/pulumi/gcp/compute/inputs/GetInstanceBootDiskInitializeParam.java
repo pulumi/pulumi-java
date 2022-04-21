@@ -20,7 +20,7 @@ public final class GetInstanceBootDiskInitializeParam extends com.pulumi.resourc
      * 
      */
     @Import(name="image", required=true)
-      private final String image;
+    private String image;
 
     public String image() {
         return this.image;
@@ -31,7 +31,7 @@ public final class GetInstanceBootDiskInitializeParam extends com.pulumi.resourc
      * 
      */
     @Import(name="labels", required=true)
-      private final Map<String,Object> labels;
+    private Map<String,Object> labels;
 
     public Map<String,Object> labels() {
         return this.labels;
@@ -42,7 +42,7 @@ public final class GetInstanceBootDiskInitializeParam extends com.pulumi.resourc
      * 
      */
     @Import(name="size", required=true)
-      private final Integer size;
+    private Integer size;
 
     public Integer size() {
         return this.size;
@@ -53,73 +53,66 @@ public final class GetInstanceBootDiskInitializeParam extends com.pulumi.resourc
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
     }
 
-    public GetInstanceBootDiskInitializeParam(
-        String image,
-        Map<String,Object> labels,
-        Integer size,
-        String type) {
-        this.image = Objects.requireNonNull(image, "expected parameter 'image' to be non-null");
-        this.labels = Objects.requireNonNull(labels, "expected parameter 'labels' to be non-null");
-        this.size = Objects.requireNonNull(size, "expected parameter 'size' to be non-null");
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private GetInstanceBootDiskInitializeParam() {}
 
-    private GetInstanceBootDiskInitializeParam() {
-        this.image = null;
-        this.labels = Map.of();
-        this.size = null;
-        this.type = null;
+    private GetInstanceBootDiskInitializeParam(GetInstanceBootDiskInitializeParam $) {
+        this.image = $.image;
+        this.labels = $.labels;
+        this.size = $.size;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetInstanceBootDiskInitializeParam defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String image;
-        private Map<String,Object> labels;
-        private Integer size;
-        private String type;
+        private GetInstanceBootDiskInitializeParam $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetInstanceBootDiskInitializeParam();
         }
 
         public Builder(GetInstanceBootDiskInitializeParam defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.image = defaults.image;
-    	      this.labels = defaults.labels;
-    	      this.size = defaults.size;
-    	      this.type = defaults.type;
+            $ = new GetInstanceBootDiskInitializeParam(Objects.requireNonNull(defaults));
         }
 
         public Builder image(String image) {
-            this.image = Objects.requireNonNull(image);
+            $.image = image;
             return this;
         }
+
         public Builder labels(Map<String,Object> labels) {
-            this.labels = Objects.requireNonNull(labels);
+            $.labels = labels;
             return this;
         }
+
         public Builder size(Integer size) {
-            this.size = Objects.requireNonNull(size);
+            $.size = size;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
-        }        public GetInstanceBootDiskInitializeParam build() {
-            return new GetInstanceBootDiskInitializeParam(image, labels, size, type);
+        }
+
+        public GetInstanceBootDiskInitializeParam build() {
+            $.image = Objects.requireNonNull($.image, "expected parameter 'image' to be non-null");
+            $.labels = Objects.requireNonNull($.labels, "expected parameter 'labels' to be non-null");
+            $.size = Objects.requireNonNull($.size, "expected parameter 'size' to be non-null");
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

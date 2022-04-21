@@ -5,7 +5,6 @@ package com.pulumi.aws.ses;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,49 +18,49 @@ public final class DomainIdentityVerificationArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="domain", required=true)
-      private final Output<String> domain;
+    private Output<String> domain;
 
     public Output<String> domain() {
         return this.domain;
     }
 
-    public DomainIdentityVerificationArgs(Output<String> domain) {
-        this.domain = Objects.requireNonNull(domain, "expected parameter 'domain' to be non-null");
-    }
+    private DomainIdentityVerificationArgs() {}
 
-    private DomainIdentityVerificationArgs() {
-        this.domain = Codegen.empty();
+    private DomainIdentityVerificationArgs(DomainIdentityVerificationArgs $) {
+        this.domain = $.domain;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DomainIdentityVerificationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> domain;
+        private DomainIdentityVerificationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DomainIdentityVerificationArgs();
         }
 
         public Builder(DomainIdentityVerificationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.domain = defaults.domain;
+            $ = new DomainIdentityVerificationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder domain(Output<String> domain) {
-            this.domain = Objects.requireNonNull(domain);
+            $.domain = domain;
             return this;
         }
+
         public Builder domain(String domain) {
-            this.domain = Output.of(Objects.requireNonNull(domain));
-            return this;
-        }        public DomainIdentityVerificationArgs build() {
-            return new DomainIdentityVerificationArgs(domain);
+            return domain(Output.of(domain));
+        }
+
+        public DomainIdentityVerificationArgs build() {
+            $.domain = Objects.requireNonNull($.domain, "expected parameter 'domain' to be non-null");
+            return $;
         }
     }
+
 }

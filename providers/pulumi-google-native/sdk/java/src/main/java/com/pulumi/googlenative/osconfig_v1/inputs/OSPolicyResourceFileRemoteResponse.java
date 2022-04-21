@@ -21,7 +21,7 @@ public final class OSPolicyResourceFileRemoteResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="sha256Checksum", required=true)
-      private final String sha256Checksum;
+    private String sha256Checksum;
 
     public String sha256Checksum() {
         return this.sha256Checksum;
@@ -32,55 +32,52 @@ public final class OSPolicyResourceFileRemoteResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="uri", required=true)
-      private final String uri;
+    private String uri;
 
     public String uri() {
         return this.uri;
     }
 
-    public OSPolicyResourceFileRemoteResponse(
-        String sha256Checksum,
-        String uri) {
-        this.sha256Checksum = Objects.requireNonNull(sha256Checksum, "expected parameter 'sha256Checksum' to be non-null");
-        this.uri = Objects.requireNonNull(uri, "expected parameter 'uri' to be non-null");
-    }
+    private OSPolicyResourceFileRemoteResponse() {}
 
-    private OSPolicyResourceFileRemoteResponse() {
-        this.sha256Checksum = null;
-        this.uri = null;
+    private OSPolicyResourceFileRemoteResponse(OSPolicyResourceFileRemoteResponse $) {
+        this.sha256Checksum = $.sha256Checksum;
+        this.uri = $.uri;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(OSPolicyResourceFileRemoteResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String sha256Checksum;
-        private String uri;
+        private OSPolicyResourceFileRemoteResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new OSPolicyResourceFileRemoteResponse();
         }
 
         public Builder(OSPolicyResourceFileRemoteResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.sha256Checksum = defaults.sha256Checksum;
-    	      this.uri = defaults.uri;
+            $ = new OSPolicyResourceFileRemoteResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder sha256Checksum(String sha256Checksum) {
-            this.sha256Checksum = Objects.requireNonNull(sha256Checksum);
+            $.sha256Checksum = sha256Checksum;
             return this;
         }
+
         public Builder uri(String uri) {
-            this.uri = Objects.requireNonNull(uri);
+            $.uri = uri;
             return this;
-        }        public OSPolicyResourceFileRemoteResponse build() {
-            return new OSPolicyResourceFileRemoteResponse(sha256Checksum, uri);
+        }
+
+        public OSPolicyResourceFileRemoteResponse build() {
+            $.sha256Checksum = Objects.requireNonNull($.sha256Checksum, "expected parameter 'sha256Checksum' to be non-null");
+            $.uri = Objects.requireNonNull($.uri, "expected parameter 'uri' to be non-null");
+            return $;
         }
     }
+
 }

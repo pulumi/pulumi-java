@@ -22,48 +22,49 @@ public final class UserManagedResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="replicas", required=true)
-      private final List<ReplicaResponse> replicas;
+    private List<ReplicaResponse> replicas;
 
     public List<ReplicaResponse> replicas() {
         return this.replicas;
     }
 
-    public UserManagedResponse(List<ReplicaResponse> replicas) {
-        this.replicas = Objects.requireNonNull(replicas, "expected parameter 'replicas' to be non-null");
-    }
+    private UserManagedResponse() {}
 
-    private UserManagedResponse() {
-        this.replicas = List.of();
+    private UserManagedResponse(UserManagedResponse $) {
+        this.replicas = $.replicas;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(UserManagedResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<ReplicaResponse> replicas;
+        private UserManagedResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new UserManagedResponse();
         }
 
         public Builder(UserManagedResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.replicas = defaults.replicas;
+            $ = new UserManagedResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder replicas(List<ReplicaResponse> replicas) {
-            this.replicas = Objects.requireNonNull(replicas);
+            $.replicas = replicas;
             return this;
         }
+
         public Builder replicas(ReplicaResponse... replicas) {
             return replicas(List.of(replicas));
-        }        public UserManagedResponse build() {
-            return new UserManagedResponse(replicas);
+        }
+
+        public UserManagedResponse build() {
+            $.replicas = Objects.requireNonNull($.replicas, "expected parameter 'replicas' to be non-null");
+            return $;
         }
     }
+
 }

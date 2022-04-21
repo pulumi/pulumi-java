@@ -7,10 +7,10 @@ import com.pulumi.aws.dlm.inputs.LifecyclePolicyPolicyDetailsScheduleCrossRegion
 import com.pulumi.aws.dlm.inputs.LifecyclePolicyPolicyDetailsScheduleCrossRegionCopyRuleRetainRuleArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,10 @@ public final class LifecyclePolicyPolicyDetailsScheduleCrossRegionCopyRuleArgs e
      * 
      */
     @Import(name="cmkArn")
-      private final @Nullable Output<String> cmkArn;
+    private @Nullable Output<String> cmkArn;
 
-    public Output<String> cmkArn() {
-        return this.cmkArn == null ? Codegen.empty() : this.cmkArn;
+    public Optional<Output<String>> cmkArn() {
+        return Optional.ofNullable(this.cmkArn);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class LifecyclePolicyPolicyDetailsScheduleCrossRegionCopyRuleArgs e
      * 
      */
     @Import(name="copyTags")
-      private final @Nullable Output<Boolean> copyTags;
+    private @Nullable Output<Boolean> copyTags;
 
-    public Output<Boolean> copyTags() {
-        return this.copyTags == null ? Codegen.empty() : this.copyTags;
+    public Optional<Output<Boolean>> copyTags() {
+        return Optional.ofNullable(this.copyTags);
     }
 
     /**
@@ -45,10 +45,10 @@ public final class LifecyclePolicyPolicyDetailsScheduleCrossRegionCopyRuleArgs e
      * 
      */
     @Import(name="deprecateRule")
-      private final @Nullable Output<LifecyclePolicyPolicyDetailsScheduleCrossRegionCopyRuleDeprecateRuleArgs> deprecateRule;
+    private @Nullable Output<LifecyclePolicyPolicyDetailsScheduleCrossRegionCopyRuleDeprecateRuleArgs> deprecateRule;
 
-    public Output<LifecyclePolicyPolicyDetailsScheduleCrossRegionCopyRuleDeprecateRuleArgs> deprecateRule() {
-        return this.deprecateRule == null ? Codegen.empty() : this.deprecateRule;
+    public Optional<Output<LifecyclePolicyPolicyDetailsScheduleCrossRegionCopyRuleDeprecateRuleArgs>> deprecateRule() {
+        return Optional.ofNullable(this.deprecateRule);
     }
 
     /**
@@ -56,7 +56,7 @@ public final class LifecyclePolicyPolicyDetailsScheduleCrossRegionCopyRuleArgs e
      * 
      */
     @Import(name="encrypted", required=true)
-      private final Output<Boolean> encrypted;
+    private Output<Boolean> encrypted;
 
     public Output<Boolean> encrypted() {
         return this.encrypted;
@@ -67,10 +67,10 @@ public final class LifecyclePolicyPolicyDetailsScheduleCrossRegionCopyRuleArgs e
      * 
      */
     @Import(name="retainRule")
-      private final @Nullable Output<LifecyclePolicyPolicyDetailsScheduleCrossRegionCopyRuleRetainRuleArgs> retainRule;
+    private @Nullable Output<LifecyclePolicyPolicyDetailsScheduleCrossRegionCopyRuleRetainRuleArgs> retainRule;
 
-    public Output<LifecyclePolicyPolicyDetailsScheduleCrossRegionCopyRuleRetainRuleArgs> retainRule() {
-        return this.retainRule == null ? Codegen.empty() : this.retainRule;
+    public Optional<Output<LifecyclePolicyPolicyDetailsScheduleCrossRegionCopyRuleRetainRuleArgs>> retainRule() {
+        return Optional.ofNullable(this.retainRule);
     }
 
     /**
@@ -78,115 +78,100 @@ public final class LifecyclePolicyPolicyDetailsScheduleCrossRegionCopyRuleArgs e
      * 
      */
     @Import(name="target", required=true)
-      private final Output<String> target;
+    private Output<String> target;
 
     public Output<String> target() {
         return this.target;
     }
 
-    public LifecyclePolicyPolicyDetailsScheduleCrossRegionCopyRuleArgs(
-        @Nullable Output<String> cmkArn,
-        @Nullable Output<Boolean> copyTags,
-        @Nullable Output<LifecyclePolicyPolicyDetailsScheduleCrossRegionCopyRuleDeprecateRuleArgs> deprecateRule,
-        Output<Boolean> encrypted,
-        @Nullable Output<LifecyclePolicyPolicyDetailsScheduleCrossRegionCopyRuleRetainRuleArgs> retainRule,
-        Output<String> target) {
-        this.cmkArn = cmkArn;
-        this.copyTags = copyTags;
-        this.deprecateRule = deprecateRule;
-        this.encrypted = Objects.requireNonNull(encrypted, "expected parameter 'encrypted' to be non-null");
-        this.retainRule = retainRule;
-        this.target = Objects.requireNonNull(target, "expected parameter 'target' to be non-null");
-    }
+    private LifecyclePolicyPolicyDetailsScheduleCrossRegionCopyRuleArgs() {}
 
-    private LifecyclePolicyPolicyDetailsScheduleCrossRegionCopyRuleArgs() {
-        this.cmkArn = Codegen.empty();
-        this.copyTags = Codegen.empty();
-        this.deprecateRule = Codegen.empty();
-        this.encrypted = Codegen.empty();
-        this.retainRule = Codegen.empty();
-        this.target = Codegen.empty();
+    private LifecyclePolicyPolicyDetailsScheduleCrossRegionCopyRuleArgs(LifecyclePolicyPolicyDetailsScheduleCrossRegionCopyRuleArgs $) {
+        this.cmkArn = $.cmkArn;
+        this.copyTags = $.copyTags;
+        this.deprecateRule = $.deprecateRule;
+        this.encrypted = $.encrypted;
+        this.retainRule = $.retainRule;
+        this.target = $.target;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LifecyclePolicyPolicyDetailsScheduleCrossRegionCopyRuleArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> cmkArn;
-        private @Nullable Output<Boolean> copyTags;
-        private @Nullable Output<LifecyclePolicyPolicyDetailsScheduleCrossRegionCopyRuleDeprecateRuleArgs> deprecateRule;
-        private Output<Boolean> encrypted;
-        private @Nullable Output<LifecyclePolicyPolicyDetailsScheduleCrossRegionCopyRuleRetainRuleArgs> retainRule;
-        private Output<String> target;
+        private LifecyclePolicyPolicyDetailsScheduleCrossRegionCopyRuleArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new LifecyclePolicyPolicyDetailsScheduleCrossRegionCopyRuleArgs();
         }
 
         public Builder(LifecyclePolicyPolicyDetailsScheduleCrossRegionCopyRuleArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cmkArn = defaults.cmkArn;
-    	      this.copyTags = defaults.copyTags;
-    	      this.deprecateRule = defaults.deprecateRule;
-    	      this.encrypted = defaults.encrypted;
-    	      this.retainRule = defaults.retainRule;
-    	      this.target = defaults.target;
+            $ = new LifecyclePolicyPolicyDetailsScheduleCrossRegionCopyRuleArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder cmkArn(@Nullable Output<String> cmkArn) {
-            this.cmkArn = cmkArn;
+            $.cmkArn = cmkArn;
             return this;
         }
-        public Builder cmkArn(@Nullable String cmkArn) {
-            this.cmkArn = Codegen.ofNullable(cmkArn);
-            return this;
+
+        public Builder cmkArn(String cmkArn) {
+            return cmkArn(Output.of(cmkArn));
         }
+
         public Builder copyTags(@Nullable Output<Boolean> copyTags) {
-            this.copyTags = copyTags;
+            $.copyTags = copyTags;
             return this;
         }
-        public Builder copyTags(@Nullable Boolean copyTags) {
-            this.copyTags = Codegen.ofNullable(copyTags);
-            return this;
+
+        public Builder copyTags(Boolean copyTags) {
+            return copyTags(Output.of(copyTags));
         }
+
         public Builder deprecateRule(@Nullable Output<LifecyclePolicyPolicyDetailsScheduleCrossRegionCopyRuleDeprecateRuleArgs> deprecateRule) {
-            this.deprecateRule = deprecateRule;
+            $.deprecateRule = deprecateRule;
             return this;
         }
-        public Builder deprecateRule(@Nullable LifecyclePolicyPolicyDetailsScheduleCrossRegionCopyRuleDeprecateRuleArgs deprecateRule) {
-            this.deprecateRule = Codegen.ofNullable(deprecateRule);
-            return this;
+
+        public Builder deprecateRule(LifecyclePolicyPolicyDetailsScheduleCrossRegionCopyRuleDeprecateRuleArgs deprecateRule) {
+            return deprecateRule(Output.of(deprecateRule));
         }
+
         public Builder encrypted(Output<Boolean> encrypted) {
-            this.encrypted = Objects.requireNonNull(encrypted);
+            $.encrypted = encrypted;
             return this;
         }
+
         public Builder encrypted(Boolean encrypted) {
-            this.encrypted = Output.of(Objects.requireNonNull(encrypted));
-            return this;
+            return encrypted(Output.of(encrypted));
         }
+
         public Builder retainRule(@Nullable Output<LifecyclePolicyPolicyDetailsScheduleCrossRegionCopyRuleRetainRuleArgs> retainRule) {
-            this.retainRule = retainRule;
+            $.retainRule = retainRule;
             return this;
         }
-        public Builder retainRule(@Nullable LifecyclePolicyPolicyDetailsScheduleCrossRegionCopyRuleRetainRuleArgs retainRule) {
-            this.retainRule = Codegen.ofNullable(retainRule);
-            return this;
+
+        public Builder retainRule(LifecyclePolicyPolicyDetailsScheduleCrossRegionCopyRuleRetainRuleArgs retainRule) {
+            return retainRule(Output.of(retainRule));
         }
+
         public Builder target(Output<String> target) {
-            this.target = Objects.requireNonNull(target);
+            $.target = target;
             return this;
         }
+
         public Builder target(String target) {
-            this.target = Output.of(Objects.requireNonNull(target));
-            return this;
-        }        public LifecyclePolicyPolicyDetailsScheduleCrossRegionCopyRuleArgs build() {
-            return new LifecyclePolicyPolicyDetailsScheduleCrossRegionCopyRuleArgs(cmkArn, copyTags, deprecateRule, encrypted, retainRule, target);
+            return target(Output.of(target));
+        }
+
+        public LifecyclePolicyPolicyDetailsScheduleCrossRegionCopyRuleArgs build() {
+            $.encrypted = Objects.requireNonNull($.encrypted, "expected parameter 'encrypted' to be non-null");
+            $.target = Objects.requireNonNull($.target, "expected parameter 'target' to be non-null");
+            return $;
         }
     }
+
 }

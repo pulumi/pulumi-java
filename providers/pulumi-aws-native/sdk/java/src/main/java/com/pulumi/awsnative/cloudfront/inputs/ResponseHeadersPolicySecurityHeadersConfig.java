@@ -20,126 +20,109 @@ public final class ResponseHeadersPolicySecurityHeadersConfig extends com.pulumi
     public static final ResponseHeadersPolicySecurityHeadersConfig Empty = new ResponseHeadersPolicySecurityHeadersConfig();
 
     @Import(name="contentSecurityPolicy")
-      private final @Nullable ResponseHeadersPolicyContentSecurityPolicy contentSecurityPolicy;
+    private @Nullable ResponseHeadersPolicyContentSecurityPolicy contentSecurityPolicy;
 
     public Optional<ResponseHeadersPolicyContentSecurityPolicy> contentSecurityPolicy() {
-        return this.contentSecurityPolicy == null ? Optional.empty() : Optional.ofNullable(this.contentSecurityPolicy);
+        return Optional.ofNullable(this.contentSecurityPolicy);
     }
 
     @Import(name="contentTypeOptions")
-      private final @Nullable ResponseHeadersPolicyContentTypeOptions contentTypeOptions;
+    private @Nullable ResponseHeadersPolicyContentTypeOptions contentTypeOptions;
 
     public Optional<ResponseHeadersPolicyContentTypeOptions> contentTypeOptions() {
-        return this.contentTypeOptions == null ? Optional.empty() : Optional.ofNullable(this.contentTypeOptions);
+        return Optional.ofNullable(this.contentTypeOptions);
     }
 
     @Import(name="frameOptions")
-      private final @Nullable ResponseHeadersPolicyFrameOptions frameOptions;
+    private @Nullable ResponseHeadersPolicyFrameOptions frameOptions;
 
     public Optional<ResponseHeadersPolicyFrameOptions> frameOptions() {
-        return this.frameOptions == null ? Optional.empty() : Optional.ofNullable(this.frameOptions);
+        return Optional.ofNullable(this.frameOptions);
     }
 
     @Import(name="referrerPolicy")
-      private final @Nullable ResponseHeadersPolicyReferrerPolicy referrerPolicy;
+    private @Nullable ResponseHeadersPolicyReferrerPolicy referrerPolicy;
 
     public Optional<ResponseHeadersPolicyReferrerPolicy> referrerPolicy() {
-        return this.referrerPolicy == null ? Optional.empty() : Optional.ofNullable(this.referrerPolicy);
+        return Optional.ofNullable(this.referrerPolicy);
     }
 
     @Import(name="strictTransportSecurity")
-      private final @Nullable ResponseHeadersPolicyStrictTransportSecurity strictTransportSecurity;
+    private @Nullable ResponseHeadersPolicyStrictTransportSecurity strictTransportSecurity;
 
     public Optional<ResponseHeadersPolicyStrictTransportSecurity> strictTransportSecurity() {
-        return this.strictTransportSecurity == null ? Optional.empty() : Optional.ofNullable(this.strictTransportSecurity);
+        return Optional.ofNullable(this.strictTransportSecurity);
     }
 
     @Import(name="xSSProtection")
-      private final @Nullable ResponseHeadersPolicyXSSProtection xSSProtection;
+    private @Nullable ResponseHeadersPolicyXSSProtection xSSProtection;
 
     public Optional<ResponseHeadersPolicyXSSProtection> xSSProtection() {
-        return this.xSSProtection == null ? Optional.empty() : Optional.ofNullable(this.xSSProtection);
+        return Optional.ofNullable(this.xSSProtection);
     }
 
-    public ResponseHeadersPolicySecurityHeadersConfig(
-        @Nullable ResponseHeadersPolicyContentSecurityPolicy contentSecurityPolicy,
-        @Nullable ResponseHeadersPolicyContentTypeOptions contentTypeOptions,
-        @Nullable ResponseHeadersPolicyFrameOptions frameOptions,
-        @Nullable ResponseHeadersPolicyReferrerPolicy referrerPolicy,
-        @Nullable ResponseHeadersPolicyStrictTransportSecurity strictTransportSecurity,
-        @Nullable ResponseHeadersPolicyXSSProtection xSSProtection) {
-        this.contentSecurityPolicy = contentSecurityPolicy;
-        this.contentTypeOptions = contentTypeOptions;
-        this.frameOptions = frameOptions;
-        this.referrerPolicy = referrerPolicy;
-        this.strictTransportSecurity = strictTransportSecurity;
-        this.xSSProtection = xSSProtection;
-    }
+    private ResponseHeadersPolicySecurityHeadersConfig() {}
 
-    private ResponseHeadersPolicySecurityHeadersConfig() {
-        this.contentSecurityPolicy = null;
-        this.contentTypeOptions = null;
-        this.frameOptions = null;
-        this.referrerPolicy = null;
-        this.strictTransportSecurity = null;
-        this.xSSProtection = null;
+    private ResponseHeadersPolicySecurityHeadersConfig(ResponseHeadersPolicySecurityHeadersConfig $) {
+        this.contentSecurityPolicy = $.contentSecurityPolicy;
+        this.contentTypeOptions = $.contentTypeOptions;
+        this.frameOptions = $.frameOptions;
+        this.referrerPolicy = $.referrerPolicy;
+        this.strictTransportSecurity = $.strictTransportSecurity;
+        this.xSSProtection = $.xSSProtection;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ResponseHeadersPolicySecurityHeadersConfig defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable ResponseHeadersPolicyContentSecurityPolicy contentSecurityPolicy;
-        private @Nullable ResponseHeadersPolicyContentTypeOptions contentTypeOptions;
-        private @Nullable ResponseHeadersPolicyFrameOptions frameOptions;
-        private @Nullable ResponseHeadersPolicyReferrerPolicy referrerPolicy;
-        private @Nullable ResponseHeadersPolicyStrictTransportSecurity strictTransportSecurity;
-        private @Nullable ResponseHeadersPolicyXSSProtection xSSProtection;
+        private ResponseHeadersPolicySecurityHeadersConfig $;
 
         public Builder() {
-    	      // Empty
+            $ = new ResponseHeadersPolicySecurityHeadersConfig();
         }
 
         public Builder(ResponseHeadersPolicySecurityHeadersConfig defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.contentSecurityPolicy = defaults.contentSecurityPolicy;
-    	      this.contentTypeOptions = defaults.contentTypeOptions;
-    	      this.frameOptions = defaults.frameOptions;
-    	      this.referrerPolicy = defaults.referrerPolicy;
-    	      this.strictTransportSecurity = defaults.strictTransportSecurity;
-    	      this.xSSProtection = defaults.xSSProtection;
+            $ = new ResponseHeadersPolicySecurityHeadersConfig(Objects.requireNonNull(defaults));
         }
 
         public Builder contentSecurityPolicy(@Nullable ResponseHeadersPolicyContentSecurityPolicy contentSecurityPolicy) {
-            this.contentSecurityPolicy = contentSecurityPolicy;
+            $.contentSecurityPolicy = contentSecurityPolicy;
             return this;
         }
+
         public Builder contentTypeOptions(@Nullable ResponseHeadersPolicyContentTypeOptions contentTypeOptions) {
-            this.contentTypeOptions = contentTypeOptions;
+            $.contentTypeOptions = contentTypeOptions;
             return this;
         }
+
         public Builder frameOptions(@Nullable ResponseHeadersPolicyFrameOptions frameOptions) {
-            this.frameOptions = frameOptions;
+            $.frameOptions = frameOptions;
             return this;
         }
+
         public Builder referrerPolicy(@Nullable ResponseHeadersPolicyReferrerPolicy referrerPolicy) {
-            this.referrerPolicy = referrerPolicy;
+            $.referrerPolicy = referrerPolicy;
             return this;
         }
+
         public Builder strictTransportSecurity(@Nullable ResponseHeadersPolicyStrictTransportSecurity strictTransportSecurity) {
-            this.strictTransportSecurity = strictTransportSecurity;
+            $.strictTransportSecurity = strictTransportSecurity;
             return this;
         }
+
         public Builder xSSProtection(@Nullable ResponseHeadersPolicyXSSProtection xSSProtection) {
-            this.xSSProtection = xSSProtection;
+            $.xSSProtection = xSSProtection;
             return this;
-        }        public ResponseHeadersPolicySecurityHeadersConfig build() {
-            return new ResponseHeadersPolicySecurityHeadersConfig(contentSecurityPolicy, contentTypeOptions, frameOptions, referrerPolicy, strictTransportSecurity, xSSProtection);
+        }
+
+        public ResponseHeadersPolicySecurityHeadersConfig build() {
+            return $;
         }
     }
+
 }

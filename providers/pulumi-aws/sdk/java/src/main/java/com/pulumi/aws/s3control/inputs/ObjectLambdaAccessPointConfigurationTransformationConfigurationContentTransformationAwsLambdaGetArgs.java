@@ -5,9 +5,9 @@ package com.pulumi.aws.s3control.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,7 +20,7 @@ public final class ObjectLambdaAccessPointConfigurationTransformationConfigurati
      * 
      */
     @Import(name="functionArn", required=true)
-      private final Output<String> functionArn;
+    private Output<String> functionArn;
 
     public Output<String> functionArn() {
         return this.functionArn;
@@ -31,63 +31,59 @@ public final class ObjectLambdaAccessPointConfigurationTransformationConfigurati
      * 
      */
     @Import(name="functionPayload")
-      private final @Nullable Output<String> functionPayload;
+    private @Nullable Output<String> functionPayload;
 
-    public Output<String> functionPayload() {
-        return this.functionPayload == null ? Codegen.empty() : this.functionPayload;
+    public Optional<Output<String>> functionPayload() {
+        return Optional.ofNullable(this.functionPayload);
     }
 
-    public ObjectLambdaAccessPointConfigurationTransformationConfigurationContentTransformationAwsLambdaGetArgs(
-        Output<String> functionArn,
-        @Nullable Output<String> functionPayload) {
-        this.functionArn = Objects.requireNonNull(functionArn, "expected parameter 'functionArn' to be non-null");
-        this.functionPayload = functionPayload;
-    }
+    private ObjectLambdaAccessPointConfigurationTransformationConfigurationContentTransformationAwsLambdaGetArgs() {}
 
-    private ObjectLambdaAccessPointConfigurationTransformationConfigurationContentTransformationAwsLambdaGetArgs() {
-        this.functionArn = Codegen.empty();
-        this.functionPayload = Codegen.empty();
+    private ObjectLambdaAccessPointConfigurationTransformationConfigurationContentTransformationAwsLambdaGetArgs(ObjectLambdaAccessPointConfigurationTransformationConfigurationContentTransformationAwsLambdaGetArgs $) {
+        this.functionArn = $.functionArn;
+        this.functionPayload = $.functionPayload;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ObjectLambdaAccessPointConfigurationTransformationConfigurationContentTransformationAwsLambdaGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> functionArn;
-        private @Nullable Output<String> functionPayload;
+        private ObjectLambdaAccessPointConfigurationTransformationConfigurationContentTransformationAwsLambdaGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ObjectLambdaAccessPointConfigurationTransformationConfigurationContentTransformationAwsLambdaGetArgs();
         }
 
         public Builder(ObjectLambdaAccessPointConfigurationTransformationConfigurationContentTransformationAwsLambdaGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.functionArn = defaults.functionArn;
-    	      this.functionPayload = defaults.functionPayload;
+            $ = new ObjectLambdaAccessPointConfigurationTransformationConfigurationContentTransformationAwsLambdaGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder functionArn(Output<String> functionArn) {
-            this.functionArn = Objects.requireNonNull(functionArn);
+            $.functionArn = functionArn;
             return this;
         }
+
         public Builder functionArn(String functionArn) {
-            this.functionArn = Output.of(Objects.requireNonNull(functionArn));
-            return this;
+            return functionArn(Output.of(functionArn));
         }
+
         public Builder functionPayload(@Nullable Output<String> functionPayload) {
-            this.functionPayload = functionPayload;
+            $.functionPayload = functionPayload;
             return this;
         }
-        public Builder functionPayload(@Nullable String functionPayload) {
-            this.functionPayload = Codegen.ofNullable(functionPayload);
-            return this;
-        }        public ObjectLambdaAccessPointConfigurationTransformationConfigurationContentTransformationAwsLambdaGetArgs build() {
-            return new ObjectLambdaAccessPointConfigurationTransformationConfigurationContentTransformationAwsLambdaGetArgs(functionArn, functionPayload);
+
+        public Builder functionPayload(String functionPayload) {
+            return functionPayload(Output.of(functionPayload));
+        }
+
+        public ObjectLambdaAccessPointConfigurationTransformationConfigurationContentTransformationAwsLambdaGetArgs build() {
+            $.functionArn = Objects.requireNonNull($.functionArn, "expected parameter 'functionArn' to be non-null");
+            return $;
         }
     }
+
 }

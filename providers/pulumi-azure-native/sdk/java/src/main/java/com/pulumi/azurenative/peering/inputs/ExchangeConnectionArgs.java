@@ -6,10 +6,10 @@ package com.pulumi.azurenative.peering.inputs;
 import com.pulumi.azurenative.peering.inputs.BgpSessionArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class ExchangeConnectionArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="bgpSession")
-      private final @Nullable Output<BgpSessionArgs> bgpSession;
+    private @Nullable Output<BgpSessionArgs> bgpSession;
 
-    public Output<BgpSessionArgs> bgpSession() {
-        return this.bgpSession == null ? Codegen.empty() : this.bgpSession;
+    public Optional<Output<BgpSessionArgs>> bgpSession() {
+        return Optional.ofNullable(this.bgpSession);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class ExchangeConnectionArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="connectionIdentifier")
-      private final @Nullable Output<String> connectionIdentifier;
+    private @Nullable Output<String> connectionIdentifier;
 
-    public Output<String> connectionIdentifier() {
-        return this.connectionIdentifier == null ? Codegen.empty() : this.connectionIdentifier;
+    public Optional<Output<String>> connectionIdentifier() {
+        return Optional.ofNullable(this.connectionIdentifier);
     }
 
     /**
@@ -48,76 +48,68 @@ public final class ExchangeConnectionArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="peeringDBFacilityId")
-      private final @Nullable Output<Integer> peeringDBFacilityId;
+    private @Nullable Output<Integer> peeringDBFacilityId;
 
-    public Output<Integer> peeringDBFacilityId() {
-        return this.peeringDBFacilityId == null ? Codegen.empty() : this.peeringDBFacilityId;
+    public Optional<Output<Integer>> peeringDBFacilityId() {
+        return Optional.ofNullable(this.peeringDBFacilityId);
     }
 
-    public ExchangeConnectionArgs(
-        @Nullable Output<BgpSessionArgs> bgpSession,
-        @Nullable Output<String> connectionIdentifier,
-        @Nullable Output<Integer> peeringDBFacilityId) {
-        this.bgpSession = bgpSession;
-        this.connectionIdentifier = connectionIdentifier;
-        this.peeringDBFacilityId = peeringDBFacilityId;
-    }
+    private ExchangeConnectionArgs() {}
 
-    private ExchangeConnectionArgs() {
-        this.bgpSession = Codegen.empty();
-        this.connectionIdentifier = Codegen.empty();
-        this.peeringDBFacilityId = Codegen.empty();
+    private ExchangeConnectionArgs(ExchangeConnectionArgs $) {
+        this.bgpSession = $.bgpSession;
+        this.connectionIdentifier = $.connectionIdentifier;
+        this.peeringDBFacilityId = $.peeringDBFacilityId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ExchangeConnectionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<BgpSessionArgs> bgpSession;
-        private @Nullable Output<String> connectionIdentifier;
-        private @Nullable Output<Integer> peeringDBFacilityId;
+        private ExchangeConnectionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ExchangeConnectionArgs();
         }
 
         public Builder(ExchangeConnectionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.bgpSession = defaults.bgpSession;
-    	      this.connectionIdentifier = defaults.connectionIdentifier;
-    	      this.peeringDBFacilityId = defaults.peeringDBFacilityId;
+            $ = new ExchangeConnectionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder bgpSession(@Nullable Output<BgpSessionArgs> bgpSession) {
-            this.bgpSession = bgpSession;
+            $.bgpSession = bgpSession;
             return this;
         }
-        public Builder bgpSession(@Nullable BgpSessionArgs bgpSession) {
-            this.bgpSession = Codegen.ofNullable(bgpSession);
-            return this;
+
+        public Builder bgpSession(BgpSessionArgs bgpSession) {
+            return bgpSession(Output.of(bgpSession));
         }
+
         public Builder connectionIdentifier(@Nullable Output<String> connectionIdentifier) {
-            this.connectionIdentifier = connectionIdentifier;
+            $.connectionIdentifier = connectionIdentifier;
             return this;
         }
-        public Builder connectionIdentifier(@Nullable String connectionIdentifier) {
-            this.connectionIdentifier = Codegen.ofNullable(connectionIdentifier);
-            return this;
+
+        public Builder connectionIdentifier(String connectionIdentifier) {
+            return connectionIdentifier(Output.of(connectionIdentifier));
         }
+
         public Builder peeringDBFacilityId(@Nullable Output<Integer> peeringDBFacilityId) {
-            this.peeringDBFacilityId = peeringDBFacilityId;
+            $.peeringDBFacilityId = peeringDBFacilityId;
             return this;
         }
-        public Builder peeringDBFacilityId(@Nullable Integer peeringDBFacilityId) {
-            this.peeringDBFacilityId = Codegen.ofNullable(peeringDBFacilityId);
-            return this;
-        }        public ExchangeConnectionArgs build() {
-            return new ExchangeConnectionArgs(bgpSession, connectionIdentifier, peeringDBFacilityId);
+
+        public Builder peeringDBFacilityId(Integer peeringDBFacilityId) {
+            return peeringDBFacilityId(Output.of(peeringDBFacilityId));
+        }
+
+        public ExchangeConnectionArgs build() {
+            return $;
         }
     }
+
 }

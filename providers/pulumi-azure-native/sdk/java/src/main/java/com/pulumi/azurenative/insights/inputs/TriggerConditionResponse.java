@@ -25,10 +25,10 @@ public final class TriggerConditionResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="metricTrigger")
-      private final @Nullable LogMetricTriggerResponse metricTrigger;
+    private @Nullable LogMetricTriggerResponse metricTrigger;
 
     public Optional<LogMetricTriggerResponse> metricTrigger() {
-        return this.metricTrigger == null ? Optional.empty() : Optional.ofNullable(this.metricTrigger);
+        return Optional.ofNullable(this.metricTrigger);
     }
 
     /**
@@ -36,7 +36,7 @@ public final class TriggerConditionResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="threshold", required=true)
-      private final Double threshold;
+    private Double threshold;
 
     public Double threshold() {
         return this.threshold;
@@ -47,64 +47,58 @@ public final class TriggerConditionResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="thresholdOperator", required=true)
-      private final String thresholdOperator;
+    private String thresholdOperator;
 
     public String thresholdOperator() {
         return this.thresholdOperator;
     }
 
-    public TriggerConditionResponse(
-        @Nullable LogMetricTriggerResponse metricTrigger,
-        Double threshold,
-        String thresholdOperator) {
-        this.metricTrigger = metricTrigger;
-        this.threshold = Objects.requireNonNull(threshold, "expected parameter 'threshold' to be non-null");
-        this.thresholdOperator = Objects.requireNonNull(thresholdOperator, "expected parameter 'thresholdOperator' to be non-null");
-    }
+    private TriggerConditionResponse() {}
 
-    private TriggerConditionResponse() {
-        this.metricTrigger = null;
-        this.threshold = null;
-        this.thresholdOperator = null;
+    private TriggerConditionResponse(TriggerConditionResponse $) {
+        this.metricTrigger = $.metricTrigger;
+        this.threshold = $.threshold;
+        this.thresholdOperator = $.thresholdOperator;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TriggerConditionResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable LogMetricTriggerResponse metricTrigger;
-        private Double threshold;
-        private String thresholdOperator;
+        private TriggerConditionResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new TriggerConditionResponse();
         }
 
         public Builder(TriggerConditionResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.metricTrigger = defaults.metricTrigger;
-    	      this.threshold = defaults.threshold;
-    	      this.thresholdOperator = defaults.thresholdOperator;
+            $ = new TriggerConditionResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder metricTrigger(@Nullable LogMetricTriggerResponse metricTrigger) {
-            this.metricTrigger = metricTrigger;
+            $.metricTrigger = metricTrigger;
             return this;
         }
+
         public Builder threshold(Double threshold) {
-            this.threshold = Objects.requireNonNull(threshold);
+            $.threshold = threshold;
             return this;
         }
+
         public Builder thresholdOperator(String thresholdOperator) {
-            this.thresholdOperator = Objects.requireNonNull(thresholdOperator);
+            $.thresholdOperator = thresholdOperator;
             return this;
-        }        public TriggerConditionResponse build() {
-            return new TriggerConditionResponse(metricTrigger, threshold, thresholdOperator);
+        }
+
+        public TriggerConditionResponse build() {
+            $.threshold = Objects.requireNonNull($.threshold, "expected parameter 'threshold' to be non-null");
+            $.thresholdOperator = Objects.requireNonNull($.thresholdOperator, "expected parameter 'thresholdOperator' to be non-null");
+            return $;
         }
     }
+
 }

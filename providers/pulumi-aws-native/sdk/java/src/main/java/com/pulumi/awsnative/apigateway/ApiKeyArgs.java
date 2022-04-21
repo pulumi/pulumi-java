@@ -7,11 +7,11 @@ import com.pulumi.awsnative.apigateway.inputs.ApiKeyStageKeyArgs;
 import com.pulumi.awsnative.apigateway.inputs.ApiKeyTagArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class ApiKeyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="customerId")
-      private final @Nullable Output<String> customerId;
+    private @Nullable Output<String> customerId;
 
-    public Output<String> customerId() {
-        return this.customerId == null ? Codegen.empty() : this.customerId;
+    public Optional<Output<String>> customerId() {
+        return Optional.ofNullable(this.customerId);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class ApiKeyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class ApiKeyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="enabled")
-      private final @Nullable Output<Boolean> enabled;
+    private @Nullable Output<Boolean> enabled;
 
-    public Output<Boolean> enabled() {
-        return this.enabled == null ? Codegen.empty() : this.enabled;
+    public Optional<Output<Boolean>> enabled() {
+        return Optional.ofNullable(this.enabled);
     }
 
     /**
@@ -57,10 +57,10 @@ public final class ApiKeyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="generateDistinctId")
-      private final @Nullable Output<Boolean> generateDistinctId;
+    private @Nullable Output<Boolean> generateDistinctId;
 
-    public Output<Boolean> generateDistinctId() {
-        return this.generateDistinctId == null ? Codegen.empty() : this.generateDistinctId;
+    public Optional<Output<Boolean>> generateDistinctId() {
+        return Optional.ofNullable(this.generateDistinctId);
     }
 
     /**
@@ -68,10 +68,10 @@ public final class ApiKeyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -79,10 +79,10 @@ public final class ApiKeyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="stageKeys")
-      private final @Nullable Output<List<ApiKeyStageKeyArgs>> stageKeys;
+    private @Nullable Output<List<ApiKeyStageKeyArgs>> stageKeys;
 
-    public Output<List<ApiKeyStageKeyArgs>> stageKeys() {
-        return this.stageKeys == null ? Codegen.empty() : this.stageKeys;
+    public Optional<Output<List<ApiKeyStageKeyArgs>>> stageKeys() {
+        return Optional.ofNullable(this.stageKeys);
     }
 
     /**
@@ -90,10 +90,10 @@ public final class ApiKeyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<List<ApiKeyTagArgs>> tags;
+    private @Nullable Output<List<ApiKeyTagArgs>> tags;
 
-    public Output<List<ApiKeyTagArgs>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<List<ApiKeyTagArgs>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -101,147 +101,126 @@ public final class ApiKeyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="value")
-      private final @Nullable Output<String> value;
+    private @Nullable Output<String> value;
 
-    public Output<String> value() {
-        return this.value == null ? Codegen.empty() : this.value;
+    public Optional<Output<String>> value() {
+        return Optional.ofNullable(this.value);
     }
 
-    public ApiKeyArgs(
-        @Nullable Output<String> customerId,
-        @Nullable Output<String> description,
-        @Nullable Output<Boolean> enabled,
-        @Nullable Output<Boolean> generateDistinctId,
-        @Nullable Output<String> name,
-        @Nullable Output<List<ApiKeyStageKeyArgs>> stageKeys,
-        @Nullable Output<List<ApiKeyTagArgs>> tags,
-        @Nullable Output<String> value) {
-        this.customerId = customerId;
-        this.description = description;
-        this.enabled = enabled;
-        this.generateDistinctId = generateDistinctId;
-        this.name = name;
-        this.stageKeys = stageKeys;
-        this.tags = tags;
-        this.value = value;
-    }
+    private ApiKeyArgs() {}
 
-    private ApiKeyArgs() {
-        this.customerId = Codegen.empty();
-        this.description = Codegen.empty();
-        this.enabled = Codegen.empty();
-        this.generateDistinctId = Codegen.empty();
-        this.name = Codegen.empty();
-        this.stageKeys = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.value = Codegen.empty();
+    private ApiKeyArgs(ApiKeyArgs $) {
+        this.customerId = $.customerId;
+        this.description = $.description;
+        this.enabled = $.enabled;
+        this.generateDistinctId = $.generateDistinctId;
+        this.name = $.name;
+        this.stageKeys = $.stageKeys;
+        this.tags = $.tags;
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ApiKeyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> customerId;
-        private @Nullable Output<String> description;
-        private @Nullable Output<Boolean> enabled;
-        private @Nullable Output<Boolean> generateDistinctId;
-        private @Nullable Output<String> name;
-        private @Nullable Output<List<ApiKeyStageKeyArgs>> stageKeys;
-        private @Nullable Output<List<ApiKeyTagArgs>> tags;
-        private @Nullable Output<String> value;
+        private ApiKeyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ApiKeyArgs();
         }
 
         public Builder(ApiKeyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.customerId = defaults.customerId;
-    	      this.description = defaults.description;
-    	      this.enabled = defaults.enabled;
-    	      this.generateDistinctId = defaults.generateDistinctId;
-    	      this.name = defaults.name;
-    	      this.stageKeys = defaults.stageKeys;
-    	      this.tags = defaults.tags;
-    	      this.value = defaults.value;
+            $ = new ApiKeyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder customerId(@Nullable Output<String> customerId) {
-            this.customerId = customerId;
+            $.customerId = customerId;
             return this;
         }
-        public Builder customerId(@Nullable String customerId) {
-            this.customerId = Codegen.ofNullable(customerId);
-            return this;
+
+        public Builder customerId(String customerId) {
+            return customerId(Output.of(customerId));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder enabled(@Nullable Output<Boolean> enabled) {
-            this.enabled = enabled;
+            $.enabled = enabled;
             return this;
         }
-        public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Codegen.ofNullable(enabled);
-            return this;
+
+        public Builder enabled(Boolean enabled) {
+            return enabled(Output.of(enabled));
         }
+
         public Builder generateDistinctId(@Nullable Output<Boolean> generateDistinctId) {
-            this.generateDistinctId = generateDistinctId;
+            $.generateDistinctId = generateDistinctId;
             return this;
         }
-        public Builder generateDistinctId(@Nullable Boolean generateDistinctId) {
-            this.generateDistinctId = Codegen.ofNullable(generateDistinctId);
-            return this;
+
+        public Builder generateDistinctId(Boolean generateDistinctId) {
+            return generateDistinctId(Output.of(generateDistinctId));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder stageKeys(@Nullable Output<List<ApiKeyStageKeyArgs>> stageKeys) {
-            this.stageKeys = stageKeys;
+            $.stageKeys = stageKeys;
             return this;
         }
-        public Builder stageKeys(@Nullable List<ApiKeyStageKeyArgs> stageKeys) {
-            this.stageKeys = Codegen.ofNullable(stageKeys);
-            return this;
+
+        public Builder stageKeys(List<ApiKeyStageKeyArgs> stageKeys) {
+            return stageKeys(Output.of(stageKeys));
         }
+
         public Builder stageKeys(ApiKeyStageKeyArgs... stageKeys) {
             return stageKeys(List.of(stageKeys));
         }
+
         public Builder tags(@Nullable Output<List<ApiKeyTagArgs>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable List<ApiKeyTagArgs> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(List<ApiKeyTagArgs> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tags(ApiKeyTagArgs... tags) {
             return tags(List.of(tags));
         }
+
         public Builder value(@Nullable Output<String> value) {
-            this.value = value;
+            $.value = value;
             return this;
         }
-        public Builder value(@Nullable String value) {
-            this.value = Codegen.ofNullable(value);
-            return this;
-        }        public ApiKeyArgs build() {
-            return new ApiKeyArgs(customerId, description, enabled, generateDistinctId, name, stageKeys, tags, value);
+
+        public Builder value(String value) {
+            return value(Output.of(value));
+        }
+
+        public ApiKeyArgs build() {
+            return $;
         }
     }
+
 }

@@ -17,45 +17,45 @@ public final class GetHookTypeConfigArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="typeArn", required=true)
-      private final String typeArn;
+    private String typeArn;
 
     public String typeArn() {
         return this.typeArn;
     }
 
-    public GetHookTypeConfigArgs(String typeArn) {
-        this.typeArn = Objects.requireNonNull(typeArn, "expected parameter 'typeArn' to be non-null");
-    }
+    private GetHookTypeConfigArgs() {}
 
-    private GetHookTypeConfigArgs() {
-        this.typeArn = null;
+    private GetHookTypeConfigArgs(GetHookTypeConfigArgs $) {
+        this.typeArn = $.typeArn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetHookTypeConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String typeArn;
+        private GetHookTypeConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetHookTypeConfigArgs();
         }
 
         public Builder(GetHookTypeConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.typeArn = defaults.typeArn;
+            $ = new GetHookTypeConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder typeArn(String typeArn) {
-            this.typeArn = Objects.requireNonNull(typeArn);
+            $.typeArn = typeArn;
             return this;
-        }        public GetHookTypeConfigArgs build() {
-            return new GetHookTypeConfigArgs(typeArn);
+        }
+
+        public GetHookTypeConfigArgs build() {
+            $.typeArn = Objects.requireNonNull($.typeArn, "expected parameter 'typeArn' to be non-null");
+            return $;
         }
     }
+
 }

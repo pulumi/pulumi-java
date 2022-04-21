@@ -22,7 +22,7 @@ public final class UserDefinedResourcesPropertiesResponse extends com.pulumi.res
      * 
      */
     @Import(name="query", required=true)
-      private final String query;
+    private String query;
 
     public String query() {
         return this.query;
@@ -33,58 +33,56 @@ public final class UserDefinedResourcesPropertiesResponse extends com.pulumi.res
      * 
      */
     @Import(name="querySubscriptions", required=true)
-      private final List<String> querySubscriptions;
+    private List<String> querySubscriptions;
 
     public List<String> querySubscriptions() {
         return this.querySubscriptions;
     }
 
-    public UserDefinedResourcesPropertiesResponse(
-        String query,
-        List<String> querySubscriptions) {
-        this.query = Objects.requireNonNull(query, "expected parameter 'query' to be non-null");
-        this.querySubscriptions = Objects.requireNonNull(querySubscriptions, "expected parameter 'querySubscriptions' to be non-null");
-    }
+    private UserDefinedResourcesPropertiesResponse() {}
 
-    private UserDefinedResourcesPropertiesResponse() {
-        this.query = null;
-        this.querySubscriptions = List.of();
+    private UserDefinedResourcesPropertiesResponse(UserDefinedResourcesPropertiesResponse $) {
+        this.query = $.query;
+        this.querySubscriptions = $.querySubscriptions;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(UserDefinedResourcesPropertiesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String query;
-        private List<String> querySubscriptions;
+        private UserDefinedResourcesPropertiesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new UserDefinedResourcesPropertiesResponse();
         }
 
         public Builder(UserDefinedResourcesPropertiesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.query = defaults.query;
-    	      this.querySubscriptions = defaults.querySubscriptions;
+            $ = new UserDefinedResourcesPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder query(String query) {
-            this.query = Objects.requireNonNull(query);
+            $.query = query;
             return this;
         }
+
         public Builder querySubscriptions(List<String> querySubscriptions) {
-            this.querySubscriptions = Objects.requireNonNull(querySubscriptions);
+            $.querySubscriptions = querySubscriptions;
             return this;
         }
+
         public Builder querySubscriptions(String... querySubscriptions) {
             return querySubscriptions(List.of(querySubscriptions));
-        }        public UserDefinedResourcesPropertiesResponse build() {
-            return new UserDefinedResourcesPropertiesResponse(query, querySubscriptions);
+        }
+
+        public UserDefinedResourcesPropertiesResponse build() {
+            $.query = Objects.requireNonNull($.query, "expected parameter 'query' to be non-null");
+            $.querySubscriptions = Objects.requireNonNull($.querySubscriptions, "expected parameter 'querySubscriptions' to be non-null");
+            return $;
         }
     }
+
 }

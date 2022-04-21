@@ -5,9 +5,9 @@ package com.pulumi.aws.securityhub.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class InviteAccepterState extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="invitationId")
-      private final @Nullable Output<String> invitationId;
+    private @Nullable Output<String> invitationId;
 
-    public Output<String> invitationId() {
-        return this.invitationId == null ? Codegen.empty() : this.invitationId;
+    public Optional<Output<String>> invitationId() {
+        return Optional.ofNullable(this.invitationId);
     }
 
     /**
@@ -31,63 +31,58 @@ public final class InviteAccepterState extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="masterId")
-      private final @Nullable Output<String> masterId;
+    private @Nullable Output<String> masterId;
 
-    public Output<String> masterId() {
-        return this.masterId == null ? Codegen.empty() : this.masterId;
+    public Optional<Output<String>> masterId() {
+        return Optional.ofNullable(this.masterId);
     }
 
-    public InviteAccepterState(
-        @Nullable Output<String> invitationId,
-        @Nullable Output<String> masterId) {
-        this.invitationId = invitationId;
-        this.masterId = masterId;
-    }
+    private InviteAccepterState() {}
 
-    private InviteAccepterState() {
-        this.invitationId = Codegen.empty();
-        this.masterId = Codegen.empty();
+    private InviteAccepterState(InviteAccepterState $) {
+        this.invitationId = $.invitationId;
+        this.masterId = $.masterId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(InviteAccepterState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> invitationId;
-        private @Nullable Output<String> masterId;
+        private InviteAccepterState $;
 
         public Builder() {
-    	      // Empty
+            $ = new InviteAccepterState();
         }
 
         public Builder(InviteAccepterState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.invitationId = defaults.invitationId;
-    	      this.masterId = defaults.masterId;
+            $ = new InviteAccepterState(Objects.requireNonNull(defaults));
         }
 
         public Builder invitationId(@Nullable Output<String> invitationId) {
-            this.invitationId = invitationId;
+            $.invitationId = invitationId;
             return this;
         }
-        public Builder invitationId(@Nullable String invitationId) {
-            this.invitationId = Codegen.ofNullable(invitationId);
-            return this;
+
+        public Builder invitationId(String invitationId) {
+            return invitationId(Output.of(invitationId));
         }
+
         public Builder masterId(@Nullable Output<String> masterId) {
-            this.masterId = masterId;
+            $.masterId = masterId;
             return this;
         }
-        public Builder masterId(@Nullable String masterId) {
-            this.masterId = Codegen.ofNullable(masterId);
-            return this;
-        }        public InviteAccepterState build() {
-            return new InviteAccepterState(invitationId, masterId);
+
+        public Builder masterId(String masterId) {
+            return masterId(Output.of(masterId));
+        }
+
+        public InviteAccepterState build() {
+            return $;
         }
     }
+
 }

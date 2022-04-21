@@ -13,62 +13,59 @@ public final class GetBackendServiceOutlierDetectionBaseEjectionTime extends com
     public static final GetBackendServiceOutlierDetectionBaseEjectionTime Empty = new GetBackendServiceOutlierDetectionBaseEjectionTime();
 
     @Import(name="nanos", required=true)
-      private final Integer nanos;
+    private Integer nanos;
 
     public Integer nanos() {
         return this.nanos;
     }
 
     @Import(name="seconds", required=true)
-      private final Integer seconds;
+    private Integer seconds;
 
     public Integer seconds() {
         return this.seconds;
     }
 
-    public GetBackendServiceOutlierDetectionBaseEjectionTime(
-        Integer nanos,
-        Integer seconds) {
-        this.nanos = Objects.requireNonNull(nanos, "expected parameter 'nanos' to be non-null");
-        this.seconds = Objects.requireNonNull(seconds, "expected parameter 'seconds' to be non-null");
-    }
+    private GetBackendServiceOutlierDetectionBaseEjectionTime() {}
 
-    private GetBackendServiceOutlierDetectionBaseEjectionTime() {
-        this.nanos = null;
-        this.seconds = null;
+    private GetBackendServiceOutlierDetectionBaseEjectionTime(GetBackendServiceOutlierDetectionBaseEjectionTime $) {
+        this.nanos = $.nanos;
+        this.seconds = $.seconds;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetBackendServiceOutlierDetectionBaseEjectionTime defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Integer nanos;
-        private Integer seconds;
+        private GetBackendServiceOutlierDetectionBaseEjectionTime $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetBackendServiceOutlierDetectionBaseEjectionTime();
         }
 
         public Builder(GetBackendServiceOutlierDetectionBaseEjectionTime defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.nanos = defaults.nanos;
-    	      this.seconds = defaults.seconds;
+            $ = new GetBackendServiceOutlierDetectionBaseEjectionTime(Objects.requireNonNull(defaults));
         }
 
         public Builder nanos(Integer nanos) {
-            this.nanos = Objects.requireNonNull(nanos);
+            $.nanos = nanos;
             return this;
         }
+
         public Builder seconds(Integer seconds) {
-            this.seconds = Objects.requireNonNull(seconds);
+            $.seconds = seconds;
             return this;
-        }        public GetBackendServiceOutlierDetectionBaseEjectionTime build() {
-            return new GetBackendServiceOutlierDetectionBaseEjectionTime(nanos, seconds);
+        }
+
+        public GetBackendServiceOutlierDetectionBaseEjectionTime build() {
+            $.nanos = Objects.requireNonNull($.nanos, "expected parameter 'nanos' to be non-null");
+            $.seconds = Objects.requireNonNull($.seconds, "expected parameter 'seconds' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,10 +5,10 @@ package com.pulumi.azurenative.dynamics365fraudprotection.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,52 +25,52 @@ public final class DFPInstanceAdministratorsArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="members")
-      private final @Nullable Output<List<String>> members;
+    private @Nullable Output<List<String>> members;
 
-    public Output<List<String>> members() {
-        return this.members == null ? Codegen.empty() : this.members;
+    public Optional<Output<List<String>>> members() {
+        return Optional.ofNullable(this.members);
     }
 
-    public DFPInstanceAdministratorsArgs(@Nullable Output<List<String>> members) {
-        this.members = members;
-    }
+    private DFPInstanceAdministratorsArgs() {}
 
-    private DFPInstanceAdministratorsArgs() {
-        this.members = Codegen.empty();
+    private DFPInstanceAdministratorsArgs(DFPInstanceAdministratorsArgs $) {
+        this.members = $.members;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DFPInstanceAdministratorsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> members;
+        private DFPInstanceAdministratorsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DFPInstanceAdministratorsArgs();
         }
 
         public Builder(DFPInstanceAdministratorsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.members = defaults.members;
+            $ = new DFPInstanceAdministratorsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder members(@Nullable Output<List<String>> members) {
-            this.members = members;
+            $.members = members;
             return this;
         }
-        public Builder members(@Nullable List<String> members) {
-            this.members = Codegen.ofNullable(members);
-            return this;
+
+        public Builder members(List<String> members) {
+            return members(Output.of(members));
         }
+
         public Builder members(String... members) {
             return members(List.of(members));
-        }        public DFPInstanceAdministratorsArgs build() {
-            return new DFPInstanceAdministratorsArgs(members);
+        }
+
+        public DFPInstanceAdministratorsArgs build() {
+            return $;
         }
     }
+
 }

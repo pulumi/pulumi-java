@@ -5,9 +5,9 @@ package com.pulumi.googlenative.datalabeling_v1beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class GoogleCloudDatalabelingV1beta1SentimentConfigArgs extends com
      * 
      */
     @Import(name="enableLabelSentimentSelection")
-      private final @Nullable Output<Boolean> enableLabelSentimentSelection;
+    private @Nullable Output<Boolean> enableLabelSentimentSelection;
 
-    public Output<Boolean> enableLabelSentimentSelection() {
-        return this.enableLabelSentimentSelection == null ? Codegen.empty() : this.enableLabelSentimentSelection;
+    public Optional<Output<Boolean>> enableLabelSentimentSelection() {
+        return Optional.ofNullable(this.enableLabelSentimentSelection);
     }
 
-    public GoogleCloudDatalabelingV1beta1SentimentConfigArgs(@Nullable Output<Boolean> enableLabelSentimentSelection) {
-        this.enableLabelSentimentSelection = enableLabelSentimentSelection;
-    }
+    private GoogleCloudDatalabelingV1beta1SentimentConfigArgs() {}
 
-    private GoogleCloudDatalabelingV1beta1SentimentConfigArgs() {
-        this.enableLabelSentimentSelection = Codegen.empty();
+    private GoogleCloudDatalabelingV1beta1SentimentConfigArgs(GoogleCloudDatalabelingV1beta1SentimentConfigArgs $) {
+        this.enableLabelSentimentSelection = $.enableLabelSentimentSelection;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudDatalabelingV1beta1SentimentConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> enableLabelSentimentSelection;
+        private GoogleCloudDatalabelingV1beta1SentimentConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudDatalabelingV1beta1SentimentConfigArgs();
         }
 
         public Builder(GoogleCloudDatalabelingV1beta1SentimentConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.enableLabelSentimentSelection = defaults.enableLabelSentimentSelection;
+            $ = new GoogleCloudDatalabelingV1beta1SentimentConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder enableLabelSentimentSelection(@Nullable Output<Boolean> enableLabelSentimentSelection) {
-            this.enableLabelSentimentSelection = enableLabelSentimentSelection;
+            $.enableLabelSentimentSelection = enableLabelSentimentSelection;
             return this;
         }
-        public Builder enableLabelSentimentSelection(@Nullable Boolean enableLabelSentimentSelection) {
-            this.enableLabelSentimentSelection = Codegen.ofNullable(enableLabelSentimentSelection);
-            return this;
-        }        public GoogleCloudDatalabelingV1beta1SentimentConfigArgs build() {
-            return new GoogleCloudDatalabelingV1beta1SentimentConfigArgs(enableLabelSentimentSelection);
+
+        public Builder enableLabelSentimentSelection(Boolean enableLabelSentimentSelection) {
+            return enableLabelSentimentSelection(Output.of(enableLabelSentimentSelection));
+        }
+
+        public GoogleCloudDatalabelingV1beta1SentimentConfigArgs build() {
+            return $;
         }
     }
+
 }

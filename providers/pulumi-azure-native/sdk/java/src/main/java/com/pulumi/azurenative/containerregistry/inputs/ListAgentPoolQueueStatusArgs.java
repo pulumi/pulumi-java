@@ -17,7 +17,7 @@ public final class ListAgentPoolQueueStatusArgs extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="agentPoolName", required=true)
-      private final String agentPoolName;
+    private String agentPoolName;
 
     public String agentPoolName() {
         return this.agentPoolName;
@@ -28,7 +28,7 @@ public final class ListAgentPoolQueueStatusArgs extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="registryName", required=true)
-      private final String registryName;
+    private String registryName;
 
     public String registryName() {
         return this.registryName;
@@ -39,64 +39,59 @@ public final class ListAgentPoolQueueStatusArgs extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public ListAgentPoolQueueStatusArgs(
-        String agentPoolName,
-        String registryName,
-        String resourceGroupName) {
-        this.agentPoolName = Objects.requireNonNull(agentPoolName, "expected parameter 'agentPoolName' to be non-null");
-        this.registryName = Objects.requireNonNull(registryName, "expected parameter 'registryName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private ListAgentPoolQueueStatusArgs() {}
 
-    private ListAgentPoolQueueStatusArgs() {
-        this.agentPoolName = null;
-        this.registryName = null;
-        this.resourceGroupName = null;
+    private ListAgentPoolQueueStatusArgs(ListAgentPoolQueueStatusArgs $) {
+        this.agentPoolName = $.agentPoolName;
+        this.registryName = $.registryName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ListAgentPoolQueueStatusArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String agentPoolName;
-        private String registryName;
-        private String resourceGroupName;
+        private ListAgentPoolQueueStatusArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ListAgentPoolQueueStatusArgs();
         }
 
         public Builder(ListAgentPoolQueueStatusArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.agentPoolName = defaults.agentPoolName;
-    	      this.registryName = defaults.registryName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new ListAgentPoolQueueStatusArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder agentPoolName(String agentPoolName) {
-            this.agentPoolName = Objects.requireNonNull(agentPoolName);
+            $.agentPoolName = agentPoolName;
             return this;
         }
+
         public Builder registryName(String registryName) {
-            this.registryName = Objects.requireNonNull(registryName);
+            $.registryName = registryName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public ListAgentPoolQueueStatusArgs build() {
-            return new ListAgentPoolQueueStatusArgs(agentPoolName, registryName, resourceGroupName);
+        }
+
+        public ListAgentPoolQueueStatusArgs build() {
+            $.agentPoolName = Objects.requireNonNull($.agentPoolName, "expected parameter 'agentPoolName' to be non-null");
+            $.registryName = Objects.requireNonNull($.registryName, "expected parameter 'registryName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

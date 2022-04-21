@@ -22,7 +22,7 @@ public final class GoogleCloudRetailV2betaFulfillmentInfoResponse extends com.pu
      * 
      */
     @Import(name="placeIds", required=true)
-      private final List<String> placeIds;
+    private List<String> placeIds;
 
     public List<String> placeIds() {
         return this.placeIds;
@@ -33,58 +33,56 @@ public final class GoogleCloudRetailV2betaFulfillmentInfoResponse extends com.pu
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
     }
 
-    public GoogleCloudRetailV2betaFulfillmentInfoResponse(
-        List<String> placeIds,
-        String type) {
-        this.placeIds = Objects.requireNonNull(placeIds, "expected parameter 'placeIds' to be non-null");
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private GoogleCloudRetailV2betaFulfillmentInfoResponse() {}
 
-    private GoogleCloudRetailV2betaFulfillmentInfoResponse() {
-        this.placeIds = List.of();
-        this.type = null;
+    private GoogleCloudRetailV2betaFulfillmentInfoResponse(GoogleCloudRetailV2betaFulfillmentInfoResponse $) {
+        this.placeIds = $.placeIds;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudRetailV2betaFulfillmentInfoResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<String> placeIds;
-        private String type;
+        private GoogleCloudRetailV2betaFulfillmentInfoResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudRetailV2betaFulfillmentInfoResponse();
         }
 
         public Builder(GoogleCloudRetailV2betaFulfillmentInfoResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.placeIds = defaults.placeIds;
-    	      this.type = defaults.type;
+            $ = new GoogleCloudRetailV2betaFulfillmentInfoResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder placeIds(List<String> placeIds) {
-            this.placeIds = Objects.requireNonNull(placeIds);
+            $.placeIds = placeIds;
             return this;
         }
+
         public Builder placeIds(String... placeIds) {
             return placeIds(List.of(placeIds));
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
-        }        public GoogleCloudRetailV2betaFulfillmentInfoResponse build() {
-            return new GoogleCloudRetailV2betaFulfillmentInfoResponse(placeIds, type);
+        }
+
+        public GoogleCloudRetailV2betaFulfillmentInfoResponse build() {
+            $.placeIds = Objects.requireNonNull($.placeIds, "expected parameter 'placeIds' to be non-null");
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

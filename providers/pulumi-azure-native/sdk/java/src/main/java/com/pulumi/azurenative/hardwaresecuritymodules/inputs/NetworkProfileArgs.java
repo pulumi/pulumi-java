@@ -7,9 +7,9 @@ import com.pulumi.azurenative.hardwaresecuritymodules.inputs.ApiEntityReferenceA
 import com.pulumi.azurenative.hardwaresecuritymodules.inputs.NetworkInterfaceArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class NetworkProfileArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="networkInterfaces")
-      private final @Nullable Output<List<NetworkInterfaceArgs>> networkInterfaces;
+    private @Nullable Output<List<NetworkInterfaceArgs>> networkInterfaces;
 
-    public Output<List<NetworkInterfaceArgs>> networkInterfaces() {
-        return this.networkInterfaces == null ? Codegen.empty() : this.networkInterfaces;
+    public Optional<Output<List<NetworkInterfaceArgs>>> networkInterfaces() {
+        return Optional.ofNullable(this.networkInterfaces);
     }
 
     /**
@@ -33,66 +33,62 @@ public final class NetworkProfileArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="subnet")
-      private final @Nullable Output<ApiEntityReferenceArgs> subnet;
+    private @Nullable Output<ApiEntityReferenceArgs> subnet;
 
-    public Output<ApiEntityReferenceArgs> subnet() {
-        return this.subnet == null ? Codegen.empty() : this.subnet;
+    public Optional<Output<ApiEntityReferenceArgs>> subnet() {
+        return Optional.ofNullable(this.subnet);
     }
 
-    public NetworkProfileArgs(
-        @Nullable Output<List<NetworkInterfaceArgs>> networkInterfaces,
-        @Nullable Output<ApiEntityReferenceArgs> subnet) {
-        this.networkInterfaces = networkInterfaces;
-        this.subnet = subnet;
-    }
+    private NetworkProfileArgs() {}
 
-    private NetworkProfileArgs() {
-        this.networkInterfaces = Codegen.empty();
-        this.subnet = Codegen.empty();
+    private NetworkProfileArgs(NetworkProfileArgs $) {
+        this.networkInterfaces = $.networkInterfaces;
+        this.subnet = $.subnet;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NetworkProfileArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<NetworkInterfaceArgs>> networkInterfaces;
-        private @Nullable Output<ApiEntityReferenceArgs> subnet;
+        private NetworkProfileArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new NetworkProfileArgs();
         }
 
         public Builder(NetworkProfileArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.networkInterfaces = defaults.networkInterfaces;
-    	      this.subnet = defaults.subnet;
+            $ = new NetworkProfileArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder networkInterfaces(@Nullable Output<List<NetworkInterfaceArgs>> networkInterfaces) {
-            this.networkInterfaces = networkInterfaces;
+            $.networkInterfaces = networkInterfaces;
             return this;
         }
-        public Builder networkInterfaces(@Nullable List<NetworkInterfaceArgs> networkInterfaces) {
-            this.networkInterfaces = Codegen.ofNullable(networkInterfaces);
-            return this;
+
+        public Builder networkInterfaces(List<NetworkInterfaceArgs> networkInterfaces) {
+            return networkInterfaces(Output.of(networkInterfaces));
         }
+
         public Builder networkInterfaces(NetworkInterfaceArgs... networkInterfaces) {
             return networkInterfaces(List.of(networkInterfaces));
         }
+
         public Builder subnet(@Nullable Output<ApiEntityReferenceArgs> subnet) {
-            this.subnet = subnet;
+            $.subnet = subnet;
             return this;
         }
-        public Builder subnet(@Nullable ApiEntityReferenceArgs subnet) {
-            this.subnet = Codegen.ofNullable(subnet);
-            return this;
-        }        public NetworkProfileArgs build() {
-            return new NetworkProfileArgs(networkInterfaces, subnet);
+
+        public Builder subnet(ApiEntityReferenceArgs subnet) {
+            return subnet(Output.of(subnet));
+        }
+
+        public NetworkProfileArgs build() {
+            return $;
         }
     }
+
 }

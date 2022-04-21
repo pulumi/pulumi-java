@@ -5,10 +5,10 @@ package com.pulumi.googlenative.securitycenter_v1;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.securitycenter_v1.inputs.StreamingConfigArgs;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -17,7 +17,7 @@ public final class NotificationConfigArgs extends com.pulumi.resources.ResourceA
     public static final NotificationConfigArgs Empty = new NotificationConfigArgs();
 
     @Import(name="configId", required=true)
-      private final Output<String> configId;
+    private Output<String> configId;
 
     public Output<String> configId() {
         return this.configId;
@@ -28,10 +28,10 @@ public final class NotificationConfigArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -39,14 +39,14 @@ public final class NotificationConfigArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     @Import(name="organizationId", required=true)
-      private final Output<String> organizationId;
+    private Output<String> organizationId;
 
     public Output<String> organizationId() {
         return this.organizationId;
@@ -57,10 +57,10 @@ public final class NotificationConfigArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="pubsubTopic")
-      private final @Nullable Output<String> pubsubTopic;
+    private @Nullable Output<String> pubsubTopic;
 
-    public Output<String> pubsubTopic() {
-        return this.pubsubTopic == null ? Codegen.empty() : this.pubsubTopic;
+    public Optional<Output<String>> pubsubTopic() {
+        return Optional.ofNullable(this.pubsubTopic);
     }
 
     /**
@@ -68,115 +68,100 @@ public final class NotificationConfigArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="streamingConfig")
-      private final @Nullable Output<StreamingConfigArgs> streamingConfig;
+    private @Nullable Output<StreamingConfigArgs> streamingConfig;
 
-    public Output<StreamingConfigArgs> streamingConfig() {
-        return this.streamingConfig == null ? Codegen.empty() : this.streamingConfig;
+    public Optional<Output<StreamingConfigArgs>> streamingConfig() {
+        return Optional.ofNullable(this.streamingConfig);
     }
 
-    public NotificationConfigArgs(
-        Output<String> configId,
-        @Nullable Output<String> description,
-        @Nullable Output<String> name,
-        Output<String> organizationId,
-        @Nullable Output<String> pubsubTopic,
-        @Nullable Output<StreamingConfigArgs> streamingConfig) {
-        this.configId = Objects.requireNonNull(configId, "expected parameter 'configId' to be non-null");
-        this.description = description;
-        this.name = name;
-        this.organizationId = Objects.requireNonNull(organizationId, "expected parameter 'organizationId' to be non-null");
-        this.pubsubTopic = pubsubTopic;
-        this.streamingConfig = streamingConfig;
-    }
+    private NotificationConfigArgs() {}
 
-    private NotificationConfigArgs() {
-        this.configId = Codegen.empty();
-        this.description = Codegen.empty();
-        this.name = Codegen.empty();
-        this.organizationId = Codegen.empty();
-        this.pubsubTopic = Codegen.empty();
-        this.streamingConfig = Codegen.empty();
+    private NotificationConfigArgs(NotificationConfigArgs $) {
+        this.configId = $.configId;
+        this.description = $.description;
+        this.name = $.name;
+        this.organizationId = $.organizationId;
+        this.pubsubTopic = $.pubsubTopic;
+        this.streamingConfig = $.streamingConfig;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NotificationConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> configId;
-        private @Nullable Output<String> description;
-        private @Nullable Output<String> name;
-        private Output<String> organizationId;
-        private @Nullable Output<String> pubsubTopic;
-        private @Nullable Output<StreamingConfigArgs> streamingConfig;
+        private NotificationConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new NotificationConfigArgs();
         }
 
         public Builder(NotificationConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.configId = defaults.configId;
-    	      this.description = defaults.description;
-    	      this.name = defaults.name;
-    	      this.organizationId = defaults.organizationId;
-    	      this.pubsubTopic = defaults.pubsubTopic;
-    	      this.streamingConfig = defaults.streamingConfig;
+            $ = new NotificationConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder configId(Output<String> configId) {
-            this.configId = Objects.requireNonNull(configId);
+            $.configId = configId;
             return this;
         }
+
         public Builder configId(String configId) {
-            this.configId = Output.of(Objects.requireNonNull(configId));
-            return this;
+            return configId(Output.of(configId));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder organizationId(Output<String> organizationId) {
-            this.organizationId = Objects.requireNonNull(organizationId);
+            $.organizationId = organizationId;
             return this;
         }
+
         public Builder organizationId(String organizationId) {
-            this.organizationId = Output.of(Objects.requireNonNull(organizationId));
-            return this;
+            return organizationId(Output.of(organizationId));
         }
+
         public Builder pubsubTopic(@Nullable Output<String> pubsubTopic) {
-            this.pubsubTopic = pubsubTopic;
+            $.pubsubTopic = pubsubTopic;
             return this;
         }
-        public Builder pubsubTopic(@Nullable String pubsubTopic) {
-            this.pubsubTopic = Codegen.ofNullable(pubsubTopic);
-            return this;
+
+        public Builder pubsubTopic(String pubsubTopic) {
+            return pubsubTopic(Output.of(pubsubTopic));
         }
+
         public Builder streamingConfig(@Nullable Output<StreamingConfigArgs> streamingConfig) {
-            this.streamingConfig = streamingConfig;
+            $.streamingConfig = streamingConfig;
             return this;
         }
-        public Builder streamingConfig(@Nullable StreamingConfigArgs streamingConfig) {
-            this.streamingConfig = Codegen.ofNullable(streamingConfig);
-            return this;
-        }        public NotificationConfigArgs build() {
-            return new NotificationConfigArgs(configId, description, name, organizationId, pubsubTopic, streamingConfig);
+
+        public Builder streamingConfig(StreamingConfigArgs streamingConfig) {
+            return streamingConfig(Output.of(streamingConfig));
+        }
+
+        public NotificationConfigArgs build() {
+            $.configId = Objects.requireNonNull($.configId, "expected parameter 'configId' to be non-null");
+            $.organizationId = Objects.requireNonNull($.organizationId, "expected parameter 'organizationId' to be non-null");
+            return $;
         }
     }
+
 }

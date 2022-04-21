@@ -13,45 +13,45 @@ public final class GetClusterAddonsConfigConfigConnectorConfig extends com.pulum
     public static final GetClusterAddonsConfigConfigConnectorConfig Empty = new GetClusterAddonsConfigConfigConnectorConfig();
 
     @Import(name="enabled", required=true)
-      private final Boolean enabled;
+    private Boolean enabled;
 
     public Boolean enabled() {
         return this.enabled;
     }
 
-    public GetClusterAddonsConfigConfigConnectorConfig(Boolean enabled) {
-        this.enabled = Objects.requireNonNull(enabled, "expected parameter 'enabled' to be non-null");
-    }
+    private GetClusterAddonsConfigConfigConnectorConfig() {}
 
-    private GetClusterAddonsConfigConfigConnectorConfig() {
-        this.enabled = null;
+    private GetClusterAddonsConfigConfigConnectorConfig(GetClusterAddonsConfigConfigConnectorConfig $) {
+        this.enabled = $.enabled;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetClusterAddonsConfigConfigConnectorConfig defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Boolean enabled;
+        private GetClusterAddonsConfigConfigConnectorConfig $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetClusterAddonsConfigConfigConnectorConfig();
         }
 
         public Builder(GetClusterAddonsConfigConfigConnectorConfig defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.enabled = defaults.enabled;
+            $ = new GetClusterAddonsConfigConfigConnectorConfig(Objects.requireNonNull(defaults));
         }
 
         public Builder enabled(Boolean enabled) {
-            this.enabled = Objects.requireNonNull(enabled);
+            $.enabled = enabled;
             return this;
-        }        public GetClusterAddonsConfigConfigConnectorConfig build() {
-            return new GetClusterAddonsConfigConfigConnectorConfig(enabled);
+        }
+
+        public GetClusterAddonsConfigConfigConnectorConfig build() {
+            $.enabled = Objects.requireNonNull($.enabled, "expected parameter 'enabled' to be non-null");
+            return $;
         }
     }
+
 }

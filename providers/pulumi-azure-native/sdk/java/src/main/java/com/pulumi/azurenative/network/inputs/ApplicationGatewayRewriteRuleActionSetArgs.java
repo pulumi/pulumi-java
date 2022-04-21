@@ -7,9 +7,9 @@ import com.pulumi.azurenative.network.inputs.ApplicationGatewayHeaderConfigurati
 import com.pulumi.azurenative.network.inputs.ApplicationGatewayUrlConfigurationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class ApplicationGatewayRewriteRuleActionSetArgs extends com.pulumi
      * 
      */
     @Import(name="requestHeaderConfigurations")
-      private final @Nullable Output<List<ApplicationGatewayHeaderConfigurationArgs>> requestHeaderConfigurations;
+    private @Nullable Output<List<ApplicationGatewayHeaderConfigurationArgs>> requestHeaderConfigurations;
 
-    public Output<List<ApplicationGatewayHeaderConfigurationArgs>> requestHeaderConfigurations() {
-        return this.requestHeaderConfigurations == null ? Codegen.empty() : this.requestHeaderConfigurations;
+    public Optional<Output<List<ApplicationGatewayHeaderConfigurationArgs>>> requestHeaderConfigurations() {
+        return Optional.ofNullable(this.requestHeaderConfigurations);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class ApplicationGatewayRewriteRuleActionSetArgs extends com.pulumi
      * 
      */
     @Import(name="responseHeaderConfigurations")
-      private final @Nullable Output<List<ApplicationGatewayHeaderConfigurationArgs>> responseHeaderConfigurations;
+    private @Nullable Output<List<ApplicationGatewayHeaderConfigurationArgs>> responseHeaderConfigurations;
 
-    public Output<List<ApplicationGatewayHeaderConfigurationArgs>> responseHeaderConfigurations() {
-        return this.responseHeaderConfigurations == null ? Codegen.empty() : this.responseHeaderConfigurations;
+    public Optional<Output<List<ApplicationGatewayHeaderConfigurationArgs>>> responseHeaderConfigurations() {
+        return Optional.ofNullable(this.responseHeaderConfigurations);
     }
 
     /**
@@ -48,82 +48,76 @@ public final class ApplicationGatewayRewriteRuleActionSetArgs extends com.pulumi
      * 
      */
     @Import(name="urlConfiguration")
-      private final @Nullable Output<ApplicationGatewayUrlConfigurationArgs> urlConfiguration;
+    private @Nullable Output<ApplicationGatewayUrlConfigurationArgs> urlConfiguration;
 
-    public Output<ApplicationGatewayUrlConfigurationArgs> urlConfiguration() {
-        return this.urlConfiguration == null ? Codegen.empty() : this.urlConfiguration;
+    public Optional<Output<ApplicationGatewayUrlConfigurationArgs>> urlConfiguration() {
+        return Optional.ofNullable(this.urlConfiguration);
     }
 
-    public ApplicationGatewayRewriteRuleActionSetArgs(
-        @Nullable Output<List<ApplicationGatewayHeaderConfigurationArgs>> requestHeaderConfigurations,
-        @Nullable Output<List<ApplicationGatewayHeaderConfigurationArgs>> responseHeaderConfigurations,
-        @Nullable Output<ApplicationGatewayUrlConfigurationArgs> urlConfiguration) {
-        this.requestHeaderConfigurations = requestHeaderConfigurations;
-        this.responseHeaderConfigurations = responseHeaderConfigurations;
-        this.urlConfiguration = urlConfiguration;
-    }
+    private ApplicationGatewayRewriteRuleActionSetArgs() {}
 
-    private ApplicationGatewayRewriteRuleActionSetArgs() {
-        this.requestHeaderConfigurations = Codegen.empty();
-        this.responseHeaderConfigurations = Codegen.empty();
-        this.urlConfiguration = Codegen.empty();
+    private ApplicationGatewayRewriteRuleActionSetArgs(ApplicationGatewayRewriteRuleActionSetArgs $) {
+        this.requestHeaderConfigurations = $.requestHeaderConfigurations;
+        this.responseHeaderConfigurations = $.responseHeaderConfigurations;
+        this.urlConfiguration = $.urlConfiguration;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ApplicationGatewayRewriteRuleActionSetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<ApplicationGatewayHeaderConfigurationArgs>> requestHeaderConfigurations;
-        private @Nullable Output<List<ApplicationGatewayHeaderConfigurationArgs>> responseHeaderConfigurations;
-        private @Nullable Output<ApplicationGatewayUrlConfigurationArgs> urlConfiguration;
+        private ApplicationGatewayRewriteRuleActionSetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ApplicationGatewayRewriteRuleActionSetArgs();
         }
 
         public Builder(ApplicationGatewayRewriteRuleActionSetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.requestHeaderConfigurations = defaults.requestHeaderConfigurations;
-    	      this.responseHeaderConfigurations = defaults.responseHeaderConfigurations;
-    	      this.urlConfiguration = defaults.urlConfiguration;
+            $ = new ApplicationGatewayRewriteRuleActionSetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder requestHeaderConfigurations(@Nullable Output<List<ApplicationGatewayHeaderConfigurationArgs>> requestHeaderConfigurations) {
-            this.requestHeaderConfigurations = requestHeaderConfigurations;
+            $.requestHeaderConfigurations = requestHeaderConfigurations;
             return this;
         }
-        public Builder requestHeaderConfigurations(@Nullable List<ApplicationGatewayHeaderConfigurationArgs> requestHeaderConfigurations) {
-            this.requestHeaderConfigurations = Codegen.ofNullable(requestHeaderConfigurations);
-            return this;
+
+        public Builder requestHeaderConfigurations(List<ApplicationGatewayHeaderConfigurationArgs> requestHeaderConfigurations) {
+            return requestHeaderConfigurations(Output.of(requestHeaderConfigurations));
         }
+
         public Builder requestHeaderConfigurations(ApplicationGatewayHeaderConfigurationArgs... requestHeaderConfigurations) {
             return requestHeaderConfigurations(List.of(requestHeaderConfigurations));
         }
+
         public Builder responseHeaderConfigurations(@Nullable Output<List<ApplicationGatewayHeaderConfigurationArgs>> responseHeaderConfigurations) {
-            this.responseHeaderConfigurations = responseHeaderConfigurations;
+            $.responseHeaderConfigurations = responseHeaderConfigurations;
             return this;
         }
-        public Builder responseHeaderConfigurations(@Nullable List<ApplicationGatewayHeaderConfigurationArgs> responseHeaderConfigurations) {
-            this.responseHeaderConfigurations = Codegen.ofNullable(responseHeaderConfigurations);
-            return this;
+
+        public Builder responseHeaderConfigurations(List<ApplicationGatewayHeaderConfigurationArgs> responseHeaderConfigurations) {
+            return responseHeaderConfigurations(Output.of(responseHeaderConfigurations));
         }
+
         public Builder responseHeaderConfigurations(ApplicationGatewayHeaderConfigurationArgs... responseHeaderConfigurations) {
             return responseHeaderConfigurations(List.of(responseHeaderConfigurations));
         }
+
         public Builder urlConfiguration(@Nullable Output<ApplicationGatewayUrlConfigurationArgs> urlConfiguration) {
-            this.urlConfiguration = urlConfiguration;
+            $.urlConfiguration = urlConfiguration;
             return this;
         }
-        public Builder urlConfiguration(@Nullable ApplicationGatewayUrlConfigurationArgs urlConfiguration) {
-            this.urlConfiguration = Codegen.ofNullable(urlConfiguration);
-            return this;
-        }        public ApplicationGatewayRewriteRuleActionSetArgs build() {
-            return new ApplicationGatewayRewriteRuleActionSetArgs(requestHeaderConfigurations, responseHeaderConfigurations, urlConfiguration);
+
+        public Builder urlConfiguration(ApplicationGatewayUrlConfigurationArgs urlConfiguration) {
+            return urlConfiguration(Output.of(urlConfiguration));
+        }
+
+        public ApplicationGatewayRewriteRuleActionSetArgs build() {
+            return $;
         }
     }
+
 }

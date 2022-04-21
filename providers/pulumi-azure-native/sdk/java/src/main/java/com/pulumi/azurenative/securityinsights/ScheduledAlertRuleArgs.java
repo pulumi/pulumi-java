@@ -15,6 +15,7 @@ import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +28,10 @@ public final class ScheduledAlertRuleArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="alertRuleTemplateName")
-      private final @Nullable Output<String> alertRuleTemplateName;
+    private @Nullable Output<String> alertRuleTemplateName;
 
-    public Output<String> alertRuleTemplateName() {
-        return this.alertRuleTemplateName == null ? Codegen.empty() : this.alertRuleTemplateName;
+    public Optional<Output<String>> alertRuleTemplateName() {
+        return Optional.ofNullable(this.alertRuleTemplateName);
     }
 
     /**
@@ -38,10 +39,10 @@ public final class ScheduledAlertRuleArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -49,7 +50,7 @@ public final class ScheduledAlertRuleArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="displayName", required=true)
-      private final Output<String> displayName;
+    private Output<String> displayName;
 
     public Output<String> displayName() {
         return this.displayName;
@@ -60,7 +61,7 @@ public final class ScheduledAlertRuleArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="enabled", required=true)
-      private final Output<Boolean> enabled;
+    private Output<Boolean> enabled;
 
     public Output<Boolean> enabled() {
         return this.enabled;
@@ -72,7 +73,7 @@ public final class ScheduledAlertRuleArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="kind", required=true)
-      private final Output<String> kind;
+    private Output<String> kind;
 
     public Output<String> kind() {
         return this.kind;
@@ -83,7 +84,7 @@ public final class ScheduledAlertRuleArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="query", required=true)
-      private final Output<String> query;
+    private Output<String> query;
 
     public Output<String> query() {
         return this.query;
@@ -94,7 +95,7 @@ public final class ScheduledAlertRuleArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="queryFrequency", required=true)
-      private final Output<String> queryFrequency;
+    private Output<String> queryFrequency;
 
     public Output<String> queryFrequency() {
         return this.queryFrequency;
@@ -105,7 +106,7 @@ public final class ScheduledAlertRuleArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="queryPeriod", required=true)
-      private final Output<String> queryPeriod;
+    private Output<String> queryPeriod;
 
     public Output<String> queryPeriod() {
         return this.queryPeriod;
@@ -116,7 +117,7 @@ public final class ScheduledAlertRuleArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -127,10 +128,10 @@ public final class ScheduledAlertRuleArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="ruleId")
-      private final @Nullable Output<String> ruleId;
+    private @Nullable Output<String> ruleId;
 
-    public Output<String> ruleId() {
-        return this.ruleId == null ? Codegen.empty() : this.ruleId;
+    public Optional<Output<String>> ruleId() {
+        return Optional.ofNullable(this.ruleId);
     }
 
     /**
@@ -138,7 +139,7 @@ public final class ScheduledAlertRuleArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="severity", required=true)
-      private final Output<Either<String,AlertSeverity>> severity;
+    private Output<Either<String,AlertSeverity>> severity;
 
     public Output<Either<String,AlertSeverity>> severity() {
         return this.severity;
@@ -149,7 +150,7 @@ public final class ScheduledAlertRuleArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="suppressionDuration", required=true)
-      private final Output<String> suppressionDuration;
+    private Output<String> suppressionDuration;
 
     public Output<String> suppressionDuration() {
         return this.suppressionDuration;
@@ -160,7 +161,7 @@ public final class ScheduledAlertRuleArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="suppressionEnabled", required=true)
-      private final Output<Boolean> suppressionEnabled;
+    private Output<Boolean> suppressionEnabled;
 
     public Output<Boolean> suppressionEnabled() {
         return this.suppressionEnabled;
@@ -171,10 +172,10 @@ public final class ScheduledAlertRuleArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="tactics")
-      private final @Nullable Output<List<Either<String,AttackTactic>>> tactics;
+    private @Nullable Output<List<Either<String,AttackTactic>>> tactics;
 
-    public Output<List<Either<String,AttackTactic>>> tactics() {
-        return this.tactics == null ? Codegen.empty() : this.tactics;
+    public Optional<Output<List<Either<String,AttackTactic>>>> tactics() {
+        return Optional.ofNullable(this.tactics);
     }
 
     /**
@@ -182,7 +183,7 @@ public final class ScheduledAlertRuleArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="triggerOperator", required=true)
-      private final Output<TriggerOperator> triggerOperator;
+    private Output<TriggerOperator> triggerOperator;
 
     public Output<TriggerOperator> triggerOperator() {
         return this.triggerOperator;
@@ -193,7 +194,7 @@ public final class ScheduledAlertRuleArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="triggerThreshold", required=true)
-      private final Output<Integer> triggerThreshold;
+    private Output<Integer> triggerThreshold;
 
     public Output<Integer> triggerThreshold() {
         return this.triggerThreshold;
@@ -204,261 +205,225 @@ public final class ScheduledAlertRuleArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="workspaceName", required=true)
-      private final Output<String> workspaceName;
+    private Output<String> workspaceName;
 
     public Output<String> workspaceName() {
         return this.workspaceName;
     }
 
-    public ScheduledAlertRuleArgs(
-        @Nullable Output<String> alertRuleTemplateName,
-        @Nullable Output<String> description,
-        Output<String> displayName,
-        Output<Boolean> enabled,
-        Output<String> kind,
-        Output<String> query,
-        Output<String> queryFrequency,
-        Output<String> queryPeriod,
-        Output<String> resourceGroupName,
-        @Nullable Output<String> ruleId,
-        Output<Either<String,AlertSeverity>> severity,
-        Output<String> suppressionDuration,
-        Output<Boolean> suppressionEnabled,
-        @Nullable Output<List<Either<String,AttackTactic>>> tactics,
-        Output<TriggerOperator> triggerOperator,
-        Output<Integer> triggerThreshold,
-        Output<String> workspaceName) {
-        this.alertRuleTemplateName = alertRuleTemplateName;
-        this.description = description;
-        this.displayName = Objects.requireNonNull(displayName, "expected parameter 'displayName' to be non-null");
-        this.enabled = Objects.requireNonNull(enabled, "expected parameter 'enabled' to be non-null");
-        this.kind = Codegen.stringProp("kind").output().arg(kind).require();
-        this.query = Objects.requireNonNull(query, "expected parameter 'query' to be non-null");
-        this.queryFrequency = Objects.requireNonNull(queryFrequency, "expected parameter 'queryFrequency' to be non-null");
-        this.queryPeriod = Objects.requireNonNull(queryPeriod, "expected parameter 'queryPeriod' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.ruleId = ruleId;
-        this.severity = Objects.requireNonNull(severity, "expected parameter 'severity' to be non-null");
-        this.suppressionDuration = Objects.requireNonNull(suppressionDuration, "expected parameter 'suppressionDuration' to be non-null");
-        this.suppressionEnabled = Objects.requireNonNull(suppressionEnabled, "expected parameter 'suppressionEnabled' to be non-null");
-        this.tactics = tactics;
-        this.triggerOperator = Objects.requireNonNull(triggerOperator, "expected parameter 'triggerOperator' to be non-null");
-        this.triggerThreshold = Objects.requireNonNull(triggerThreshold, "expected parameter 'triggerThreshold' to be non-null");
-        this.workspaceName = Objects.requireNonNull(workspaceName, "expected parameter 'workspaceName' to be non-null");
-    }
+    private ScheduledAlertRuleArgs() {}
 
-    private ScheduledAlertRuleArgs() {
-        this.alertRuleTemplateName = Codegen.empty();
-        this.description = Codegen.empty();
-        this.displayName = Codegen.empty();
-        this.enabled = Codegen.empty();
-        this.kind = Codegen.empty();
-        this.query = Codegen.empty();
-        this.queryFrequency = Codegen.empty();
-        this.queryPeriod = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.ruleId = Codegen.empty();
-        this.severity = Codegen.empty();
-        this.suppressionDuration = Codegen.empty();
-        this.suppressionEnabled = Codegen.empty();
-        this.tactics = Codegen.empty();
-        this.triggerOperator = Codegen.empty();
-        this.triggerThreshold = Codegen.empty();
-        this.workspaceName = Codegen.empty();
+    private ScheduledAlertRuleArgs(ScheduledAlertRuleArgs $) {
+        this.alertRuleTemplateName = $.alertRuleTemplateName;
+        this.description = $.description;
+        this.displayName = $.displayName;
+        this.enabled = $.enabled;
+        this.kind = $.kind;
+        this.query = $.query;
+        this.queryFrequency = $.queryFrequency;
+        this.queryPeriod = $.queryPeriod;
+        this.resourceGroupName = $.resourceGroupName;
+        this.ruleId = $.ruleId;
+        this.severity = $.severity;
+        this.suppressionDuration = $.suppressionDuration;
+        this.suppressionEnabled = $.suppressionEnabled;
+        this.tactics = $.tactics;
+        this.triggerOperator = $.triggerOperator;
+        this.triggerThreshold = $.triggerThreshold;
+        this.workspaceName = $.workspaceName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ScheduledAlertRuleArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> alertRuleTemplateName;
-        private @Nullable Output<String> description;
-        private Output<String> displayName;
-        private Output<Boolean> enabled;
-        private Output<String> kind;
-        private Output<String> query;
-        private Output<String> queryFrequency;
-        private Output<String> queryPeriod;
-        private Output<String> resourceGroupName;
-        private @Nullable Output<String> ruleId;
-        private Output<Either<String,AlertSeverity>> severity;
-        private Output<String> suppressionDuration;
-        private Output<Boolean> suppressionEnabled;
-        private @Nullable Output<List<Either<String,AttackTactic>>> tactics;
-        private Output<TriggerOperator> triggerOperator;
-        private Output<Integer> triggerThreshold;
-        private Output<String> workspaceName;
+        private ScheduledAlertRuleArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ScheduledAlertRuleArgs();
         }
 
         public Builder(ScheduledAlertRuleArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.alertRuleTemplateName = defaults.alertRuleTemplateName;
-    	      this.description = defaults.description;
-    	      this.displayName = defaults.displayName;
-    	      this.enabled = defaults.enabled;
-    	      this.kind = defaults.kind;
-    	      this.query = defaults.query;
-    	      this.queryFrequency = defaults.queryFrequency;
-    	      this.queryPeriod = defaults.queryPeriod;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.ruleId = defaults.ruleId;
-    	      this.severity = defaults.severity;
-    	      this.suppressionDuration = defaults.suppressionDuration;
-    	      this.suppressionEnabled = defaults.suppressionEnabled;
-    	      this.tactics = defaults.tactics;
-    	      this.triggerOperator = defaults.triggerOperator;
-    	      this.triggerThreshold = defaults.triggerThreshold;
-    	      this.workspaceName = defaults.workspaceName;
+            $ = new ScheduledAlertRuleArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder alertRuleTemplateName(@Nullable Output<String> alertRuleTemplateName) {
-            this.alertRuleTemplateName = alertRuleTemplateName;
+            $.alertRuleTemplateName = alertRuleTemplateName;
             return this;
         }
-        public Builder alertRuleTemplateName(@Nullable String alertRuleTemplateName) {
-            this.alertRuleTemplateName = Codegen.ofNullable(alertRuleTemplateName);
-            return this;
+
+        public Builder alertRuleTemplateName(String alertRuleTemplateName) {
+            return alertRuleTemplateName(Output.of(alertRuleTemplateName));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder displayName(Output<String> displayName) {
-            this.displayName = Objects.requireNonNull(displayName);
+            $.displayName = displayName;
             return this;
         }
+
         public Builder displayName(String displayName) {
-            this.displayName = Output.of(Objects.requireNonNull(displayName));
-            return this;
+            return displayName(Output.of(displayName));
         }
+
         public Builder enabled(Output<Boolean> enabled) {
-            this.enabled = Objects.requireNonNull(enabled);
+            $.enabled = enabled;
             return this;
         }
+
         public Builder enabled(Boolean enabled) {
-            this.enabled = Output.of(Objects.requireNonNull(enabled));
-            return this;
+            return enabled(Output.of(enabled));
         }
+
         public Builder kind(Output<String> kind) {
-            this.kind = Objects.requireNonNull(kind);
+            $.kind = kind;
             return this;
         }
+
         public Builder kind(String kind) {
-            this.kind = Output.of(Objects.requireNonNull(kind));
-            return this;
+            return kind(Output.of(kind));
         }
+
         public Builder query(Output<String> query) {
-            this.query = Objects.requireNonNull(query);
+            $.query = query;
             return this;
         }
+
         public Builder query(String query) {
-            this.query = Output.of(Objects.requireNonNull(query));
-            return this;
+            return query(Output.of(query));
         }
+
         public Builder queryFrequency(Output<String> queryFrequency) {
-            this.queryFrequency = Objects.requireNonNull(queryFrequency);
+            $.queryFrequency = queryFrequency;
             return this;
         }
+
         public Builder queryFrequency(String queryFrequency) {
-            this.queryFrequency = Output.of(Objects.requireNonNull(queryFrequency));
-            return this;
+            return queryFrequency(Output.of(queryFrequency));
         }
+
         public Builder queryPeriod(Output<String> queryPeriod) {
-            this.queryPeriod = Objects.requireNonNull(queryPeriod);
+            $.queryPeriod = queryPeriod;
             return this;
         }
+
         public Builder queryPeriod(String queryPeriod) {
-            this.queryPeriod = Output.of(Objects.requireNonNull(queryPeriod));
-            return this;
+            return queryPeriod(Output.of(queryPeriod));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder ruleId(@Nullable Output<String> ruleId) {
-            this.ruleId = ruleId;
+            $.ruleId = ruleId;
             return this;
         }
-        public Builder ruleId(@Nullable String ruleId) {
-            this.ruleId = Codegen.ofNullable(ruleId);
-            return this;
+
+        public Builder ruleId(String ruleId) {
+            return ruleId(Output.of(ruleId));
         }
+
         public Builder severity(Output<Either<String,AlertSeverity>> severity) {
-            this.severity = Objects.requireNonNull(severity);
+            $.severity = severity;
             return this;
         }
+
         public Builder severity(Either<String,AlertSeverity> severity) {
-            this.severity = Output.of(Objects.requireNonNull(severity));
-            return this;
+            return severity(Output.of(severity));
         }
+
         public Builder suppressionDuration(Output<String> suppressionDuration) {
-            this.suppressionDuration = Objects.requireNonNull(suppressionDuration);
+            $.suppressionDuration = suppressionDuration;
             return this;
         }
+
         public Builder suppressionDuration(String suppressionDuration) {
-            this.suppressionDuration = Output.of(Objects.requireNonNull(suppressionDuration));
-            return this;
+            return suppressionDuration(Output.of(suppressionDuration));
         }
+
         public Builder suppressionEnabled(Output<Boolean> suppressionEnabled) {
-            this.suppressionEnabled = Objects.requireNonNull(suppressionEnabled);
+            $.suppressionEnabled = suppressionEnabled;
             return this;
         }
+
         public Builder suppressionEnabled(Boolean suppressionEnabled) {
-            this.suppressionEnabled = Output.of(Objects.requireNonNull(suppressionEnabled));
-            return this;
+            return suppressionEnabled(Output.of(suppressionEnabled));
         }
+
         public Builder tactics(@Nullable Output<List<Either<String,AttackTactic>>> tactics) {
-            this.tactics = tactics;
+            $.tactics = tactics;
             return this;
         }
-        public Builder tactics(@Nullable List<Either<String,AttackTactic>> tactics) {
-            this.tactics = Codegen.ofNullable(tactics);
-            return this;
+
+        public Builder tactics(List<Either<String,AttackTactic>> tactics) {
+            return tactics(Output.of(tactics));
         }
+
         public Builder tactics(Either<String,AttackTactic>... tactics) {
             return tactics(List.of(tactics));
         }
+
         public Builder triggerOperator(Output<TriggerOperator> triggerOperator) {
-            this.triggerOperator = Objects.requireNonNull(triggerOperator);
+            $.triggerOperator = triggerOperator;
             return this;
         }
+
         public Builder triggerOperator(TriggerOperator triggerOperator) {
-            this.triggerOperator = Output.of(Objects.requireNonNull(triggerOperator));
-            return this;
+            return triggerOperator(Output.of(triggerOperator));
         }
+
         public Builder triggerThreshold(Output<Integer> triggerThreshold) {
-            this.triggerThreshold = Objects.requireNonNull(triggerThreshold);
+            $.triggerThreshold = triggerThreshold;
             return this;
         }
+
         public Builder triggerThreshold(Integer triggerThreshold) {
-            this.triggerThreshold = Output.of(Objects.requireNonNull(triggerThreshold));
-            return this;
+            return triggerThreshold(Output.of(triggerThreshold));
         }
+
         public Builder workspaceName(Output<String> workspaceName) {
-            this.workspaceName = Objects.requireNonNull(workspaceName);
+            $.workspaceName = workspaceName;
             return this;
         }
+
         public Builder workspaceName(String workspaceName) {
-            this.workspaceName = Output.of(Objects.requireNonNull(workspaceName));
-            return this;
-        }        public ScheduledAlertRuleArgs build() {
-            return new ScheduledAlertRuleArgs(alertRuleTemplateName, description, displayName, enabled, kind, query, queryFrequency, queryPeriod, resourceGroupName, ruleId, severity, suppressionDuration, suppressionEnabled, tactics, triggerOperator, triggerThreshold, workspaceName);
+            return workspaceName(Output.of(workspaceName));
+        }
+
+        public ScheduledAlertRuleArgs build() {
+            $.displayName = Objects.requireNonNull($.displayName, "expected parameter 'displayName' to be non-null");
+            $.enabled = Objects.requireNonNull($.enabled, "expected parameter 'enabled' to be non-null");
+            $.kind = Codegen.stringProp("kind").output().arg($.kind).require();
+            $.query = Objects.requireNonNull($.query, "expected parameter 'query' to be non-null");
+            $.queryFrequency = Objects.requireNonNull($.queryFrequency, "expected parameter 'queryFrequency' to be non-null");
+            $.queryPeriod = Objects.requireNonNull($.queryPeriod, "expected parameter 'queryPeriod' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.severity = Objects.requireNonNull($.severity, "expected parameter 'severity' to be non-null");
+            $.suppressionDuration = Objects.requireNonNull($.suppressionDuration, "expected parameter 'suppressionDuration' to be non-null");
+            $.suppressionEnabled = Objects.requireNonNull($.suppressionEnabled, "expected parameter 'suppressionEnabled' to be non-null");
+            $.triggerOperator = Objects.requireNonNull($.triggerOperator, "expected parameter 'triggerOperator' to be non-null");
+            $.triggerThreshold = Objects.requireNonNull($.triggerThreshold, "expected parameter 'triggerThreshold' to be non-null");
+            $.workspaceName = Objects.requireNonNull($.workspaceName, "expected parameter 'workspaceName' to be non-null");
+            return $;
         }
     }
+
 }

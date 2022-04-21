@@ -23,7 +23,7 @@ public final class ExportRecurrencePeriodResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="from", required=true)
-      private final String from;
+    private String from;
 
     public String from() {
         return this.from;
@@ -34,55 +34,51 @@ public final class ExportRecurrencePeriodResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="to")
-      private final @Nullable String to;
+    private @Nullable String to;
 
     public Optional<String> to() {
-        return this.to == null ? Optional.empty() : Optional.ofNullable(this.to);
+        return Optional.ofNullable(this.to);
     }
 
-    public ExportRecurrencePeriodResponse(
-        String from,
-        @Nullable String to) {
-        this.from = Objects.requireNonNull(from, "expected parameter 'from' to be non-null");
-        this.to = to;
-    }
+    private ExportRecurrencePeriodResponse() {}
 
-    private ExportRecurrencePeriodResponse() {
-        this.from = null;
-        this.to = null;
+    private ExportRecurrencePeriodResponse(ExportRecurrencePeriodResponse $) {
+        this.from = $.from;
+        this.to = $.to;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ExportRecurrencePeriodResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String from;
-        private @Nullable String to;
+        private ExportRecurrencePeriodResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ExportRecurrencePeriodResponse();
         }
 
         public Builder(ExportRecurrencePeriodResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.from = defaults.from;
-    	      this.to = defaults.to;
+            $ = new ExportRecurrencePeriodResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder from(String from) {
-            this.from = Objects.requireNonNull(from);
+            $.from = from;
             return this;
         }
+
         public Builder to(@Nullable String to) {
-            this.to = to;
+            $.to = to;
             return this;
-        }        public ExportRecurrencePeriodResponse build() {
-            return new ExportRecurrencePeriodResponse(from, to);
+        }
+
+        public ExportRecurrencePeriodResponse build() {
+            $.from = Objects.requireNonNull($.from, "expected parameter 'from' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,11 +5,11 @@ package com.pulumi.googlenative.transcoder_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.transcoder_v1.inputs.H264CodecSettingsArgs;
 import com.pulumi.googlenative.transcoder_v1.inputs.H265CodecSettingsArgs;
 import com.pulumi.googlenative.transcoder_v1.inputs.Vp9CodecSettingsArgs;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class VideoStreamArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="h264")
-      private final @Nullable Output<H264CodecSettingsArgs> h264;
+    private @Nullable Output<H264CodecSettingsArgs> h264;
 
-    public Output<H264CodecSettingsArgs> h264() {
-        return this.h264 == null ? Codegen.empty() : this.h264;
+    public Optional<Output<H264CodecSettingsArgs>> h264() {
+        return Optional.ofNullable(this.h264);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class VideoStreamArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="h265")
-      private final @Nullable Output<H265CodecSettingsArgs> h265;
+    private @Nullable Output<H265CodecSettingsArgs> h265;
 
-    public Output<H265CodecSettingsArgs> h265() {
-        return this.h265 == null ? Codegen.empty() : this.h265;
+    public Optional<Output<H265CodecSettingsArgs>> h265() {
+        return Optional.ofNullable(this.h265);
     }
 
     /**
@@ -48,76 +48,68 @@ public final class VideoStreamArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="vp9")
-      private final @Nullable Output<Vp9CodecSettingsArgs> vp9;
+    private @Nullable Output<Vp9CodecSettingsArgs> vp9;
 
-    public Output<Vp9CodecSettingsArgs> vp9() {
-        return this.vp9 == null ? Codegen.empty() : this.vp9;
+    public Optional<Output<Vp9CodecSettingsArgs>> vp9() {
+        return Optional.ofNullable(this.vp9);
     }
 
-    public VideoStreamArgs(
-        @Nullable Output<H264CodecSettingsArgs> h264,
-        @Nullable Output<H265CodecSettingsArgs> h265,
-        @Nullable Output<Vp9CodecSettingsArgs> vp9) {
-        this.h264 = h264;
-        this.h265 = h265;
-        this.vp9 = vp9;
-    }
+    private VideoStreamArgs() {}
 
-    private VideoStreamArgs() {
-        this.h264 = Codegen.empty();
-        this.h265 = Codegen.empty();
-        this.vp9 = Codegen.empty();
+    private VideoStreamArgs(VideoStreamArgs $) {
+        this.h264 = $.h264;
+        this.h265 = $.h265;
+        this.vp9 = $.vp9;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VideoStreamArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<H264CodecSettingsArgs> h264;
-        private @Nullable Output<H265CodecSettingsArgs> h265;
-        private @Nullable Output<Vp9CodecSettingsArgs> vp9;
+        private VideoStreamArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new VideoStreamArgs();
         }
 
         public Builder(VideoStreamArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.h264 = defaults.h264;
-    	      this.h265 = defaults.h265;
-    	      this.vp9 = defaults.vp9;
+            $ = new VideoStreamArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder h264(@Nullable Output<H264CodecSettingsArgs> h264) {
-            this.h264 = h264;
+            $.h264 = h264;
             return this;
         }
-        public Builder h264(@Nullable H264CodecSettingsArgs h264) {
-            this.h264 = Codegen.ofNullable(h264);
-            return this;
+
+        public Builder h264(H264CodecSettingsArgs h264) {
+            return h264(Output.of(h264));
         }
+
         public Builder h265(@Nullable Output<H265CodecSettingsArgs> h265) {
-            this.h265 = h265;
+            $.h265 = h265;
             return this;
         }
-        public Builder h265(@Nullable H265CodecSettingsArgs h265) {
-            this.h265 = Codegen.ofNullable(h265);
-            return this;
+
+        public Builder h265(H265CodecSettingsArgs h265) {
+            return h265(Output.of(h265));
         }
+
         public Builder vp9(@Nullable Output<Vp9CodecSettingsArgs> vp9) {
-            this.vp9 = vp9;
+            $.vp9 = vp9;
             return this;
         }
-        public Builder vp9(@Nullable Vp9CodecSettingsArgs vp9) {
-            this.vp9 = Codegen.ofNullable(vp9);
-            return this;
-        }        public VideoStreamArgs build() {
-            return new VideoStreamArgs(h264, h265, vp9);
+
+        public Builder vp9(Vp9CodecSettingsArgs vp9) {
+            return vp9(Output.of(vp9));
+        }
+
+        public VideoStreamArgs build() {
+            return $;
         }
     }
+
 }

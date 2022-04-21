@@ -22,7 +22,7 @@ public final class LocationHDFSNameNode extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="hostname", required=true)
-      private final String hostname;
+    private String hostname;
 
     public String hostname() {
         return this.hostname;
@@ -33,55 +33,52 @@ public final class LocationHDFSNameNode extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="port", required=true)
-      private final Integer port;
+    private Integer port;
 
     public Integer port() {
         return this.port;
     }
 
-    public LocationHDFSNameNode(
-        String hostname,
-        Integer port) {
-        this.hostname = Objects.requireNonNull(hostname, "expected parameter 'hostname' to be non-null");
-        this.port = Objects.requireNonNull(port, "expected parameter 'port' to be non-null");
-    }
+    private LocationHDFSNameNode() {}
 
-    private LocationHDFSNameNode() {
-        this.hostname = null;
-        this.port = null;
+    private LocationHDFSNameNode(LocationHDFSNameNode $) {
+        this.hostname = $.hostname;
+        this.port = $.port;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LocationHDFSNameNode defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String hostname;
-        private Integer port;
+        private LocationHDFSNameNode $;
 
         public Builder() {
-    	      // Empty
+            $ = new LocationHDFSNameNode();
         }
 
         public Builder(LocationHDFSNameNode defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.hostname = defaults.hostname;
-    	      this.port = defaults.port;
+            $ = new LocationHDFSNameNode(Objects.requireNonNull(defaults));
         }
 
         public Builder hostname(String hostname) {
-            this.hostname = Objects.requireNonNull(hostname);
+            $.hostname = hostname;
             return this;
         }
+
         public Builder port(Integer port) {
-            this.port = Objects.requireNonNull(port);
+            $.port = port;
             return this;
-        }        public LocationHDFSNameNode build() {
-            return new LocationHDFSNameNode(hostname, port);
+        }
+
+        public LocationHDFSNameNode build() {
+            $.hostname = Objects.requireNonNull($.hostname, "expected parameter 'hostname' to be non-null");
+            $.port = Objects.requireNonNull($.port, "expected parameter 'port' to be non-null");
+            return $;
         }
     }
+
 }

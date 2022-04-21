@@ -7,9 +7,9 @@ import com.pulumi.awsnative.elasticloadbalancingv2.inputs.ListenerTargetGroupSti
 import com.pulumi.awsnative.elasticloadbalancingv2.inputs.ListenerTargetGroupTupleArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -18,73 +18,69 @@ public final class ListenerForwardConfigArgs extends com.pulumi.resources.Resour
     public static final ListenerForwardConfigArgs Empty = new ListenerForwardConfigArgs();
 
     @Import(name="targetGroupStickinessConfig")
-      private final @Nullable Output<ListenerTargetGroupStickinessConfigArgs> targetGroupStickinessConfig;
+    private @Nullable Output<ListenerTargetGroupStickinessConfigArgs> targetGroupStickinessConfig;
 
-    public Output<ListenerTargetGroupStickinessConfigArgs> targetGroupStickinessConfig() {
-        return this.targetGroupStickinessConfig == null ? Codegen.empty() : this.targetGroupStickinessConfig;
+    public Optional<Output<ListenerTargetGroupStickinessConfigArgs>> targetGroupStickinessConfig() {
+        return Optional.ofNullable(this.targetGroupStickinessConfig);
     }
 
     @Import(name="targetGroups")
-      private final @Nullable Output<List<ListenerTargetGroupTupleArgs>> targetGroups;
+    private @Nullable Output<List<ListenerTargetGroupTupleArgs>> targetGroups;
 
-    public Output<List<ListenerTargetGroupTupleArgs>> targetGroups() {
-        return this.targetGroups == null ? Codegen.empty() : this.targetGroups;
+    public Optional<Output<List<ListenerTargetGroupTupleArgs>>> targetGroups() {
+        return Optional.ofNullable(this.targetGroups);
     }
 
-    public ListenerForwardConfigArgs(
-        @Nullable Output<ListenerTargetGroupStickinessConfigArgs> targetGroupStickinessConfig,
-        @Nullable Output<List<ListenerTargetGroupTupleArgs>> targetGroups) {
-        this.targetGroupStickinessConfig = targetGroupStickinessConfig;
-        this.targetGroups = targetGroups;
-    }
+    private ListenerForwardConfigArgs() {}
 
-    private ListenerForwardConfigArgs() {
-        this.targetGroupStickinessConfig = Codegen.empty();
-        this.targetGroups = Codegen.empty();
+    private ListenerForwardConfigArgs(ListenerForwardConfigArgs $) {
+        this.targetGroupStickinessConfig = $.targetGroupStickinessConfig;
+        this.targetGroups = $.targetGroups;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ListenerForwardConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<ListenerTargetGroupStickinessConfigArgs> targetGroupStickinessConfig;
-        private @Nullable Output<List<ListenerTargetGroupTupleArgs>> targetGroups;
+        private ListenerForwardConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ListenerForwardConfigArgs();
         }
 
         public Builder(ListenerForwardConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.targetGroupStickinessConfig = defaults.targetGroupStickinessConfig;
-    	      this.targetGroups = defaults.targetGroups;
+            $ = new ListenerForwardConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder targetGroupStickinessConfig(@Nullable Output<ListenerTargetGroupStickinessConfigArgs> targetGroupStickinessConfig) {
-            this.targetGroupStickinessConfig = targetGroupStickinessConfig;
+            $.targetGroupStickinessConfig = targetGroupStickinessConfig;
             return this;
         }
-        public Builder targetGroupStickinessConfig(@Nullable ListenerTargetGroupStickinessConfigArgs targetGroupStickinessConfig) {
-            this.targetGroupStickinessConfig = Codegen.ofNullable(targetGroupStickinessConfig);
-            return this;
+
+        public Builder targetGroupStickinessConfig(ListenerTargetGroupStickinessConfigArgs targetGroupStickinessConfig) {
+            return targetGroupStickinessConfig(Output.of(targetGroupStickinessConfig));
         }
+
         public Builder targetGroups(@Nullable Output<List<ListenerTargetGroupTupleArgs>> targetGroups) {
-            this.targetGroups = targetGroups;
+            $.targetGroups = targetGroups;
             return this;
         }
-        public Builder targetGroups(@Nullable List<ListenerTargetGroupTupleArgs> targetGroups) {
-            this.targetGroups = Codegen.ofNullable(targetGroups);
-            return this;
+
+        public Builder targetGroups(List<ListenerTargetGroupTupleArgs> targetGroups) {
+            return targetGroups(Output.of(targetGroups));
         }
+
         public Builder targetGroups(ListenerTargetGroupTupleArgs... targetGroups) {
             return targetGroups(List.of(targetGroups));
-        }        public ListenerForwardConfigArgs build() {
-            return new ListenerForwardConfigArgs(targetGroupStickinessConfig, targetGroups);
+        }
+
+        public ListenerForwardConfigArgs build() {
+            return $;
         }
     }
+
 }

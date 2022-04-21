@@ -5,9 +5,9 @@ package com.pulumi.gcp.accesscontextmanager.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class ServicePerimeterResourceState extends com.pulumi.resources.Re
      * 
      */
     @Import(name="perimeterName")
-      private final @Nullable Output<String> perimeterName;
+    private @Nullable Output<String> perimeterName;
 
-    public Output<String> perimeterName() {
-        return this.perimeterName == null ? Codegen.empty() : this.perimeterName;
+    public Optional<Output<String>> perimeterName() {
+        return Optional.ofNullable(this.perimeterName);
     }
 
     /**
@@ -33,63 +33,58 @@ public final class ServicePerimeterResourceState extends com.pulumi.resources.Re
      * 
      */
     @Import(name="resource")
-      private final @Nullable Output<String> resource;
+    private @Nullable Output<String> resource;
 
-    public Output<String> resource() {
-        return this.resource == null ? Codegen.empty() : this.resource;
+    public Optional<Output<String>> resource() {
+        return Optional.ofNullable(this.resource);
     }
 
-    public ServicePerimeterResourceState(
-        @Nullable Output<String> perimeterName,
-        @Nullable Output<String> resource) {
-        this.perimeterName = perimeterName;
-        this.resource = resource;
-    }
+    private ServicePerimeterResourceState() {}
 
-    private ServicePerimeterResourceState() {
-        this.perimeterName = Codegen.empty();
-        this.resource = Codegen.empty();
+    private ServicePerimeterResourceState(ServicePerimeterResourceState $) {
+        this.perimeterName = $.perimeterName;
+        this.resource = $.resource;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ServicePerimeterResourceState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> perimeterName;
-        private @Nullable Output<String> resource;
+        private ServicePerimeterResourceState $;
 
         public Builder() {
-    	      // Empty
+            $ = new ServicePerimeterResourceState();
         }
 
         public Builder(ServicePerimeterResourceState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.perimeterName = defaults.perimeterName;
-    	      this.resource = defaults.resource;
+            $ = new ServicePerimeterResourceState(Objects.requireNonNull(defaults));
         }
 
         public Builder perimeterName(@Nullable Output<String> perimeterName) {
-            this.perimeterName = perimeterName;
+            $.perimeterName = perimeterName;
             return this;
         }
-        public Builder perimeterName(@Nullable String perimeterName) {
-            this.perimeterName = Codegen.ofNullable(perimeterName);
-            return this;
+
+        public Builder perimeterName(String perimeterName) {
+            return perimeterName(Output.of(perimeterName));
         }
+
         public Builder resource(@Nullable Output<String> resource) {
-            this.resource = resource;
+            $.resource = resource;
             return this;
         }
-        public Builder resource(@Nullable String resource) {
-            this.resource = Codegen.ofNullable(resource);
-            return this;
-        }        public ServicePerimeterResourceState build() {
-            return new ServicePerimeterResourceState(perimeterName, resource);
+
+        public Builder resource(String resource) {
+            return resource(Output.of(resource));
+        }
+
+        public ServicePerimeterResourceState build() {
+            return $;
         }
     }
+
 }

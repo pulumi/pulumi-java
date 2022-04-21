@@ -15,62 +15,58 @@ public final class GetNoteArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetNoteArgs Empty = new GetNoteArgs();
 
     @Import(name="noteId", required=true)
-      private final String noteId;
+    private String noteId;
 
     public String noteId() {
         return this.noteId;
     }
 
     @Import(name="project")
-      private final @Nullable String project;
+    private @Nullable String project;
 
     public Optional<String> project() {
-        return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
+        return Optional.ofNullable(this.project);
     }
 
-    public GetNoteArgs(
-        String noteId,
-        @Nullable String project) {
-        this.noteId = Objects.requireNonNull(noteId, "expected parameter 'noteId' to be non-null");
-        this.project = project;
-    }
+    private GetNoteArgs() {}
 
-    private GetNoteArgs() {
-        this.noteId = null;
-        this.project = null;
+    private GetNoteArgs(GetNoteArgs $) {
+        this.noteId = $.noteId;
+        this.project = $.project;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetNoteArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String noteId;
-        private @Nullable String project;
+        private GetNoteArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetNoteArgs();
         }
 
         public Builder(GetNoteArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.noteId = defaults.noteId;
-    	      this.project = defaults.project;
+            $ = new GetNoteArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder noteId(String noteId) {
-            this.noteId = Objects.requireNonNull(noteId);
+            $.noteId = noteId;
             return this;
         }
+
         public Builder project(@Nullable String project) {
-            this.project = project;
+            $.project = project;
             return this;
-        }        public GetNoteArgs build() {
-            return new GetNoteArgs(noteId, project);
+        }
+
+        public GetNoteArgs build() {
+            $.noteId = Objects.requireNonNull($.noteId, "expected parameter 'noteId' to be non-null");
+            return $;
         }
     }
+
 }

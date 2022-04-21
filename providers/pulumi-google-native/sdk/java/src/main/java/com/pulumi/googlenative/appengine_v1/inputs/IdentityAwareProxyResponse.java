@@ -22,7 +22,7 @@ public final class IdentityAwareProxyResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="enabled", required=true)
-      private final Boolean enabled;
+    private Boolean enabled;
 
     public Boolean enabled() {
         return this.enabled;
@@ -33,7 +33,7 @@ public final class IdentityAwareProxyResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="oauth2ClientId", required=true)
-      private final String oauth2ClientId;
+    private String oauth2ClientId;
 
     public String oauth2ClientId() {
         return this.oauth2ClientId;
@@ -44,7 +44,7 @@ public final class IdentityAwareProxyResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="oauth2ClientSecret", required=true)
-      private final String oauth2ClientSecret;
+    private String oauth2ClientSecret;
 
     public String oauth2ClientSecret() {
         return this.oauth2ClientSecret;
@@ -55,73 +55,66 @@ public final class IdentityAwareProxyResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="oauth2ClientSecretSha256", required=true)
-      private final String oauth2ClientSecretSha256;
+    private String oauth2ClientSecretSha256;
 
     public String oauth2ClientSecretSha256() {
         return this.oauth2ClientSecretSha256;
     }
 
-    public IdentityAwareProxyResponse(
-        Boolean enabled,
-        String oauth2ClientId,
-        String oauth2ClientSecret,
-        String oauth2ClientSecretSha256) {
-        this.enabled = Objects.requireNonNull(enabled, "expected parameter 'enabled' to be non-null");
-        this.oauth2ClientId = Objects.requireNonNull(oauth2ClientId, "expected parameter 'oauth2ClientId' to be non-null");
-        this.oauth2ClientSecret = Objects.requireNonNull(oauth2ClientSecret, "expected parameter 'oauth2ClientSecret' to be non-null");
-        this.oauth2ClientSecretSha256 = Objects.requireNonNull(oauth2ClientSecretSha256, "expected parameter 'oauth2ClientSecretSha256' to be non-null");
-    }
+    private IdentityAwareProxyResponse() {}
 
-    private IdentityAwareProxyResponse() {
-        this.enabled = null;
-        this.oauth2ClientId = null;
-        this.oauth2ClientSecret = null;
-        this.oauth2ClientSecretSha256 = null;
+    private IdentityAwareProxyResponse(IdentityAwareProxyResponse $) {
+        this.enabled = $.enabled;
+        this.oauth2ClientId = $.oauth2ClientId;
+        this.oauth2ClientSecret = $.oauth2ClientSecret;
+        this.oauth2ClientSecretSha256 = $.oauth2ClientSecretSha256;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(IdentityAwareProxyResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Boolean enabled;
-        private String oauth2ClientId;
-        private String oauth2ClientSecret;
-        private String oauth2ClientSecretSha256;
+        private IdentityAwareProxyResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new IdentityAwareProxyResponse();
         }
 
         public Builder(IdentityAwareProxyResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.enabled = defaults.enabled;
-    	      this.oauth2ClientId = defaults.oauth2ClientId;
-    	      this.oauth2ClientSecret = defaults.oauth2ClientSecret;
-    	      this.oauth2ClientSecretSha256 = defaults.oauth2ClientSecretSha256;
+            $ = new IdentityAwareProxyResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder enabled(Boolean enabled) {
-            this.enabled = Objects.requireNonNull(enabled);
+            $.enabled = enabled;
             return this;
         }
+
         public Builder oauth2ClientId(String oauth2ClientId) {
-            this.oauth2ClientId = Objects.requireNonNull(oauth2ClientId);
+            $.oauth2ClientId = oauth2ClientId;
             return this;
         }
+
         public Builder oauth2ClientSecret(String oauth2ClientSecret) {
-            this.oauth2ClientSecret = Objects.requireNonNull(oauth2ClientSecret);
+            $.oauth2ClientSecret = oauth2ClientSecret;
             return this;
         }
+
         public Builder oauth2ClientSecretSha256(String oauth2ClientSecretSha256) {
-            this.oauth2ClientSecretSha256 = Objects.requireNonNull(oauth2ClientSecretSha256);
+            $.oauth2ClientSecretSha256 = oauth2ClientSecretSha256;
             return this;
-        }        public IdentityAwareProxyResponse build() {
-            return new IdentityAwareProxyResponse(enabled, oauth2ClientId, oauth2ClientSecret, oauth2ClientSecretSha256);
+        }
+
+        public IdentityAwareProxyResponse build() {
+            $.enabled = Objects.requireNonNull($.enabled, "expected parameter 'enabled' to be non-null");
+            $.oauth2ClientId = Objects.requireNonNull($.oauth2ClientId, "expected parameter 'oauth2ClientId' to be non-null");
+            $.oauth2ClientSecret = Objects.requireNonNull($.oauth2ClientSecret, "expected parameter 'oauth2ClientSecret' to be non-null");
+            $.oauth2ClientSecretSha256 = Objects.requireNonNull($.oauth2ClientSecretSha256, "expected parameter 'oauth2ClientSecretSha256' to be non-null");
+            return $;
         }
     }
+
 }

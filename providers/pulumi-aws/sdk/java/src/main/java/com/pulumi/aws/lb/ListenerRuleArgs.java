@@ -7,12 +7,12 @@ import com.pulumi.aws.lb.inputs.ListenerRuleActionArgs;
 import com.pulumi.aws.lb.inputs.ListenerRuleConditionArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,7 +25,7 @@ public final class ListenerRuleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="actions", required=true)
-      private final Output<List<ListenerRuleActionArgs>> actions;
+    private Output<List<ListenerRuleActionArgs>> actions;
 
     public Output<List<ListenerRuleActionArgs>> actions() {
         return this.actions;
@@ -36,7 +36,7 @@ public final class ListenerRuleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="conditions", required=true)
-      private final Output<List<ListenerRuleConditionArgs>> conditions;
+    private Output<List<ListenerRuleConditionArgs>> conditions;
 
     public Output<List<ListenerRuleConditionArgs>> conditions() {
         return this.conditions;
@@ -47,7 +47,7 @@ public final class ListenerRuleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="listenerArn", required=true)
-      private final Output<String> listenerArn;
+    private Output<String> listenerArn;
 
     public Output<String> listenerArn() {
         return this.listenerArn;
@@ -58,10 +58,10 @@ public final class ListenerRuleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="priority")
-      private final @Nullable Output<Integer> priority;
+    private @Nullable Output<Integer> priority;
 
-    public Output<Integer> priority() {
-        return this.priority == null ? Codegen.empty() : this.priority;
+    public Optional<Output<Integer>> priority() {
+        return Optional.ofNullable(this.priority);
     }
 
     /**
@@ -69,108 +69,99 @@ public final class ListenerRuleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public ListenerRuleArgs(
-        Output<List<ListenerRuleActionArgs>> actions,
-        Output<List<ListenerRuleConditionArgs>> conditions,
-        Output<String> listenerArn,
-        @Nullable Output<Integer> priority,
-        @Nullable Output<Map<String,String>> tags) {
-        this.actions = Objects.requireNonNull(actions, "expected parameter 'actions' to be non-null");
-        this.conditions = Objects.requireNonNull(conditions, "expected parameter 'conditions' to be non-null");
-        this.listenerArn = Objects.requireNonNull(listenerArn, "expected parameter 'listenerArn' to be non-null");
-        this.priority = priority;
-        this.tags = tags;
-    }
+    private ListenerRuleArgs() {}
 
-    private ListenerRuleArgs() {
-        this.actions = Codegen.empty();
-        this.conditions = Codegen.empty();
-        this.listenerArn = Codegen.empty();
-        this.priority = Codegen.empty();
-        this.tags = Codegen.empty();
+    private ListenerRuleArgs(ListenerRuleArgs $) {
+        this.actions = $.actions;
+        this.conditions = $.conditions;
+        this.listenerArn = $.listenerArn;
+        this.priority = $.priority;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ListenerRuleArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<List<ListenerRuleActionArgs>> actions;
-        private Output<List<ListenerRuleConditionArgs>> conditions;
-        private Output<String> listenerArn;
-        private @Nullable Output<Integer> priority;
-        private @Nullable Output<Map<String,String>> tags;
+        private ListenerRuleArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ListenerRuleArgs();
         }
 
         public Builder(ListenerRuleArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.actions = defaults.actions;
-    	      this.conditions = defaults.conditions;
-    	      this.listenerArn = defaults.listenerArn;
-    	      this.priority = defaults.priority;
-    	      this.tags = defaults.tags;
+            $ = new ListenerRuleArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder actions(Output<List<ListenerRuleActionArgs>> actions) {
-            this.actions = Objects.requireNonNull(actions);
+            $.actions = actions;
             return this;
         }
+
         public Builder actions(List<ListenerRuleActionArgs> actions) {
-            this.actions = Output.of(Objects.requireNonNull(actions));
-            return this;
+            return actions(Output.of(actions));
         }
+
         public Builder actions(ListenerRuleActionArgs... actions) {
             return actions(List.of(actions));
         }
+
         public Builder conditions(Output<List<ListenerRuleConditionArgs>> conditions) {
-            this.conditions = Objects.requireNonNull(conditions);
+            $.conditions = conditions;
             return this;
         }
+
         public Builder conditions(List<ListenerRuleConditionArgs> conditions) {
-            this.conditions = Output.of(Objects.requireNonNull(conditions));
-            return this;
+            return conditions(Output.of(conditions));
         }
+
         public Builder conditions(ListenerRuleConditionArgs... conditions) {
             return conditions(List.of(conditions));
         }
+
         public Builder listenerArn(Output<String> listenerArn) {
-            this.listenerArn = Objects.requireNonNull(listenerArn);
+            $.listenerArn = listenerArn;
             return this;
         }
+
         public Builder listenerArn(String listenerArn) {
-            this.listenerArn = Output.of(Objects.requireNonNull(listenerArn));
-            return this;
+            return listenerArn(Output.of(listenerArn));
         }
+
         public Builder priority(@Nullable Output<Integer> priority) {
-            this.priority = priority;
+            $.priority = priority;
             return this;
         }
-        public Builder priority(@Nullable Integer priority) {
-            this.priority = Codegen.ofNullable(priority);
-            return this;
+
+        public Builder priority(Integer priority) {
+            return priority(Output.of(priority));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
-        }        public ListenerRuleArgs build() {
-            return new ListenerRuleArgs(actions, conditions, listenerArn, priority, tags);
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
+        }
+
+        public ListenerRuleArgs build() {
+            $.actions = Objects.requireNonNull($.actions, "expected parameter 'actions' to be non-null");
+            $.conditions = Objects.requireNonNull($.conditions, "expected parameter 'conditions' to be non-null");
+            $.listenerArn = Objects.requireNonNull($.listenerArn, "expected parameter 'listenerArn' to be non-null");
+            return $;
         }
     }
+
 }

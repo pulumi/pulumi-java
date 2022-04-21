@@ -22,7 +22,7 @@ public final class StageResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="profiles", required=true)
-      private final List<String> profiles;
+    private List<String> profiles;
 
     public List<String> profiles() {
         return this.profiles;
@@ -33,58 +33,56 @@ public final class StageResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="targetId", required=true)
-      private final String targetId;
+    private String targetId;
 
     public String targetId() {
         return this.targetId;
     }
 
-    public StageResponse(
-        List<String> profiles,
-        String targetId) {
-        this.profiles = Objects.requireNonNull(profiles, "expected parameter 'profiles' to be non-null");
-        this.targetId = Objects.requireNonNull(targetId, "expected parameter 'targetId' to be non-null");
-    }
+    private StageResponse() {}
 
-    private StageResponse() {
-        this.profiles = List.of();
-        this.targetId = null;
+    private StageResponse(StageResponse $) {
+        this.profiles = $.profiles;
+        this.targetId = $.targetId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(StageResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<String> profiles;
-        private String targetId;
+        private StageResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new StageResponse();
         }
 
         public Builder(StageResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.profiles = defaults.profiles;
-    	      this.targetId = defaults.targetId;
+            $ = new StageResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder profiles(List<String> profiles) {
-            this.profiles = Objects.requireNonNull(profiles);
+            $.profiles = profiles;
             return this;
         }
+
         public Builder profiles(String... profiles) {
             return profiles(List.of(profiles));
         }
+
         public Builder targetId(String targetId) {
-            this.targetId = Objects.requireNonNull(targetId);
+            $.targetId = targetId;
             return this;
-        }        public StageResponse build() {
-            return new StageResponse(profiles, targetId);
+        }
+
+        public StageResponse build() {
+            $.profiles = Objects.requireNonNull($.profiles, "expected parameter 'profiles' to be non-null");
+            $.targetId = Objects.requireNonNull($.targetId, "expected parameter 'targetId' to be non-null");
+            return $;
         }
     }
+
 }

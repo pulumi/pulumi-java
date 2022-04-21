@@ -5,9 +5,9 @@ package com.pulumi.kubernetes.core_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.kubernetes.core_v1.inputs.LifecycleHandlerArgs;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class LifecycleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="postStart")
-      private final @Nullable Output<LifecycleHandlerArgs> postStart;
+    private @Nullable Output<LifecycleHandlerArgs> postStart;
 
-    public Output<LifecycleHandlerArgs> postStart() {
-        return this.postStart == null ? Codegen.empty() : this.postStart;
+    public Optional<Output<LifecycleHandlerArgs>> postStart() {
+        return Optional.ofNullable(this.postStart);
     }
 
     /**
@@ -35,63 +35,58 @@ public final class LifecycleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="preStop")
-      private final @Nullable Output<LifecycleHandlerArgs> preStop;
+    private @Nullable Output<LifecycleHandlerArgs> preStop;
 
-    public Output<LifecycleHandlerArgs> preStop() {
-        return this.preStop == null ? Codegen.empty() : this.preStop;
+    public Optional<Output<LifecycleHandlerArgs>> preStop() {
+        return Optional.ofNullable(this.preStop);
     }
 
-    public LifecycleArgs(
-        @Nullable Output<LifecycleHandlerArgs> postStart,
-        @Nullable Output<LifecycleHandlerArgs> preStop) {
-        this.postStart = postStart;
-        this.preStop = preStop;
-    }
+    private LifecycleArgs() {}
 
-    private LifecycleArgs() {
-        this.postStart = Codegen.empty();
-        this.preStop = Codegen.empty();
+    private LifecycleArgs(LifecycleArgs $) {
+        this.postStart = $.postStart;
+        this.preStop = $.preStop;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LifecycleArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<LifecycleHandlerArgs> postStart;
-        private @Nullable Output<LifecycleHandlerArgs> preStop;
+        private LifecycleArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new LifecycleArgs();
         }
 
         public Builder(LifecycleArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.postStart = defaults.postStart;
-    	      this.preStop = defaults.preStop;
+            $ = new LifecycleArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder postStart(@Nullable Output<LifecycleHandlerArgs> postStart) {
-            this.postStart = postStart;
+            $.postStart = postStart;
             return this;
         }
-        public Builder postStart(@Nullable LifecycleHandlerArgs postStart) {
-            this.postStart = Codegen.ofNullable(postStart);
-            return this;
+
+        public Builder postStart(LifecycleHandlerArgs postStart) {
+            return postStart(Output.of(postStart));
         }
+
         public Builder preStop(@Nullable Output<LifecycleHandlerArgs> preStop) {
-            this.preStop = preStop;
+            $.preStop = preStop;
             return this;
         }
-        public Builder preStop(@Nullable LifecycleHandlerArgs preStop) {
-            this.preStop = Codegen.ofNullable(preStop);
-            return this;
-        }        public LifecycleArgs build() {
-            return new LifecycleArgs(postStart, preStop);
+
+        public Builder preStop(LifecycleHandlerArgs preStop) {
+            return preStop(Output.of(preStop));
+        }
+
+        public LifecycleArgs build() {
+            return $;
         }
     }
+
 }

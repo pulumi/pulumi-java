@@ -26,7 +26,7 @@ public final class PyTorchResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="distributionType", required=true)
-      private final String distributionType;
+    private String distributionType;
 
     public String distributionType() {
         return this.distributionType;
@@ -37,55 +37,51 @@ public final class PyTorchResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="processCount")
-      private final @Nullable Integer processCount;
+    private @Nullable Integer processCount;
 
     public Optional<Integer> processCount() {
-        return this.processCount == null ? Optional.empty() : Optional.ofNullable(this.processCount);
+        return Optional.ofNullable(this.processCount);
     }
 
-    public PyTorchResponse(
-        String distributionType,
-        @Nullable Integer processCount) {
-        this.distributionType = Codegen.stringProp("distributionType").arg(distributionType).require();
-        this.processCount = processCount;
-    }
+    private PyTorchResponse() {}
 
-    private PyTorchResponse() {
-        this.distributionType = null;
-        this.processCount = null;
+    private PyTorchResponse(PyTorchResponse $) {
+        this.distributionType = $.distributionType;
+        this.processCount = $.processCount;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PyTorchResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String distributionType;
-        private @Nullable Integer processCount;
+        private PyTorchResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new PyTorchResponse();
         }
 
         public Builder(PyTorchResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.distributionType = defaults.distributionType;
-    	      this.processCount = defaults.processCount;
+            $ = new PyTorchResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder distributionType(String distributionType) {
-            this.distributionType = Objects.requireNonNull(distributionType);
+            $.distributionType = distributionType;
             return this;
         }
+
         public Builder processCount(@Nullable Integer processCount) {
-            this.processCount = processCount;
+            $.processCount = processCount;
             return this;
-        }        public PyTorchResponse build() {
-            return new PyTorchResponse(distributionType, processCount);
+        }
+
+        public PyTorchResponse build() {
+            $.distributionType = Codegen.stringProp("distributionType").arg($.distributionType).require();
+            return $;
         }
     }
+
 }

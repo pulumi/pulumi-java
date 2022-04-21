@@ -23,7 +23,7 @@ public final class ArtifactsResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="images", required=true)
-      private final List<String> images;
+    private List<String> images;
 
     public List<String> images() {
         return this.images;
@@ -34,58 +34,56 @@ public final class ArtifactsResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="objects", required=true)
-      private final ArtifactObjectsResponse objects;
+    private ArtifactObjectsResponse objects;
 
     public ArtifactObjectsResponse objects() {
         return this.objects;
     }
 
-    public ArtifactsResponse(
-        List<String> images,
-        ArtifactObjectsResponse objects) {
-        this.images = Objects.requireNonNull(images, "expected parameter 'images' to be non-null");
-        this.objects = Objects.requireNonNull(objects, "expected parameter 'objects' to be non-null");
-    }
+    private ArtifactsResponse() {}
 
-    private ArtifactsResponse() {
-        this.images = List.of();
-        this.objects = null;
+    private ArtifactsResponse(ArtifactsResponse $) {
+        this.images = $.images;
+        this.objects = $.objects;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ArtifactsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<String> images;
-        private ArtifactObjectsResponse objects;
+        private ArtifactsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ArtifactsResponse();
         }
 
         public Builder(ArtifactsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.images = defaults.images;
-    	      this.objects = defaults.objects;
+            $ = new ArtifactsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder images(List<String> images) {
-            this.images = Objects.requireNonNull(images);
+            $.images = images;
             return this;
         }
+
         public Builder images(String... images) {
             return images(List.of(images));
         }
+
         public Builder objects(ArtifactObjectsResponse objects) {
-            this.objects = Objects.requireNonNull(objects);
+            $.objects = objects;
             return this;
-        }        public ArtifactsResponse build() {
-            return new ArtifactsResponse(images, objects);
+        }
+
+        public ArtifactsResponse build() {
+            $.images = Objects.requireNonNull($.images, "expected parameter 'images' to be non-null");
+            $.objects = Objects.requireNonNull($.objects, "expected parameter 'objects' to be non-null");
+            return $;
         }
     }
+
 }

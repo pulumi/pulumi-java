@@ -5,9 +5,9 @@ package com.pulumi.googlenative.datastream_v1alpha1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class MysqlSslConfigArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="caCertificate")
-      private final @Nullable Output<String> caCertificate;
+    private @Nullable Output<String> caCertificate;
 
-    public Output<String> caCertificate() {
-        return this.caCertificate == null ? Codegen.empty() : this.caCertificate;
+    public Optional<Output<String>> caCertificate() {
+        return Optional.ofNullable(this.caCertificate);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class MysqlSslConfigArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="clientCertificate")
-      private final @Nullable Output<String> clientCertificate;
+    private @Nullable Output<String> clientCertificate;
 
-    public Output<String> clientCertificate() {
-        return this.clientCertificate == null ? Codegen.empty() : this.clientCertificate;
+    public Optional<Output<String>> clientCertificate() {
+        return Optional.ofNullable(this.clientCertificate);
     }
 
     /**
@@ -46,76 +46,68 @@ public final class MysqlSslConfigArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="clientKey")
-      private final @Nullable Output<String> clientKey;
+    private @Nullable Output<String> clientKey;
 
-    public Output<String> clientKey() {
-        return this.clientKey == null ? Codegen.empty() : this.clientKey;
+    public Optional<Output<String>> clientKey() {
+        return Optional.ofNullable(this.clientKey);
     }
 
-    public MysqlSslConfigArgs(
-        @Nullable Output<String> caCertificate,
-        @Nullable Output<String> clientCertificate,
-        @Nullable Output<String> clientKey) {
-        this.caCertificate = caCertificate;
-        this.clientCertificate = clientCertificate;
-        this.clientKey = clientKey;
-    }
+    private MysqlSslConfigArgs() {}
 
-    private MysqlSslConfigArgs() {
-        this.caCertificate = Codegen.empty();
-        this.clientCertificate = Codegen.empty();
-        this.clientKey = Codegen.empty();
+    private MysqlSslConfigArgs(MysqlSslConfigArgs $) {
+        this.caCertificate = $.caCertificate;
+        this.clientCertificate = $.clientCertificate;
+        this.clientKey = $.clientKey;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MysqlSslConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> caCertificate;
-        private @Nullable Output<String> clientCertificate;
-        private @Nullable Output<String> clientKey;
+        private MysqlSslConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new MysqlSslConfigArgs();
         }
 
         public Builder(MysqlSslConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.caCertificate = defaults.caCertificate;
-    	      this.clientCertificate = defaults.clientCertificate;
-    	      this.clientKey = defaults.clientKey;
+            $ = new MysqlSslConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder caCertificate(@Nullable Output<String> caCertificate) {
-            this.caCertificate = caCertificate;
+            $.caCertificate = caCertificate;
             return this;
         }
-        public Builder caCertificate(@Nullable String caCertificate) {
-            this.caCertificate = Codegen.ofNullable(caCertificate);
-            return this;
+
+        public Builder caCertificate(String caCertificate) {
+            return caCertificate(Output.of(caCertificate));
         }
+
         public Builder clientCertificate(@Nullable Output<String> clientCertificate) {
-            this.clientCertificate = clientCertificate;
+            $.clientCertificate = clientCertificate;
             return this;
         }
-        public Builder clientCertificate(@Nullable String clientCertificate) {
-            this.clientCertificate = Codegen.ofNullable(clientCertificate);
-            return this;
+
+        public Builder clientCertificate(String clientCertificate) {
+            return clientCertificate(Output.of(clientCertificate));
         }
+
         public Builder clientKey(@Nullable Output<String> clientKey) {
-            this.clientKey = clientKey;
+            $.clientKey = clientKey;
             return this;
         }
-        public Builder clientKey(@Nullable String clientKey) {
-            this.clientKey = Codegen.ofNullable(clientKey);
-            return this;
-        }        public MysqlSslConfigArgs build() {
-            return new MysqlSslConfigArgs(caCertificate, clientCertificate, clientKey);
+
+        public Builder clientKey(String clientKey) {
+            return clientKey(Output.of(clientKey));
+        }
+
+        public MysqlSslConfigArgs build() {
+            return $;
         }
     }
+
 }

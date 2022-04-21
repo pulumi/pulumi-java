@@ -3,7 +3,7 @@
 
 package com.pulumi.googlenative.datastream_v1alpha1.inputs;
 
-import java.util.Objects;
+
 
 
 /**
@@ -14,28 +14,19 @@ public final class StaticServiceIpConnectivityArgs extends com.pulumi.resources.
 
     public static final StaticServiceIpConnectivityArgs Empty = new StaticServiceIpConnectivityArgs();
 
-    public StaticServiceIpConnectivityArgs() {
-    }
-
     public static Builder builder() {
         return new Builder();
     }
 
-    public static Builder builder(StaticServiceIpConnectivityArgs defaults) {
-        return new Builder(defaults);
-    }
-
     public static final class Builder {
+        private StaticServiceIpConnectivityArgs $;
 
         public Builder() {
-    	      // Empty
-        }
-
-        public Builder(StaticServiceIpConnectivityArgs defaults) {
-    	      Objects.requireNonNull(defaults);
+            $ = new StaticServiceIpConnectivityArgs();
         }
         public StaticServiceIpConnectivityArgs build() {
-            return new StaticServiceIpConnectivityArgs();
+            return $;
         }
     }
+
 }

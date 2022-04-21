@@ -24,10 +24,10 @@ public final class FirewallPolicyIntrusionDetectionResponse extends com.pulumi.r
      * 
      */
     @Import(name="configuration")
-      private final @Nullable FirewallPolicyIntrusionDetectionConfigurationResponse configuration;
+    private @Nullable FirewallPolicyIntrusionDetectionConfigurationResponse configuration;
 
     public Optional<FirewallPolicyIntrusionDetectionConfigurationResponse> configuration() {
-        return this.configuration == null ? Optional.empty() : Optional.ofNullable(this.configuration);
+        return Optional.ofNullable(this.configuration);
     }
 
     /**
@@ -35,55 +35,50 @@ public final class FirewallPolicyIntrusionDetectionResponse extends com.pulumi.r
      * 
      */
     @Import(name="mode")
-      private final @Nullable String mode;
+    private @Nullable String mode;
 
     public Optional<String> mode() {
-        return this.mode == null ? Optional.empty() : Optional.ofNullable(this.mode);
+        return Optional.ofNullable(this.mode);
     }
 
-    public FirewallPolicyIntrusionDetectionResponse(
-        @Nullable FirewallPolicyIntrusionDetectionConfigurationResponse configuration,
-        @Nullable String mode) {
-        this.configuration = configuration;
-        this.mode = mode;
-    }
+    private FirewallPolicyIntrusionDetectionResponse() {}
 
-    private FirewallPolicyIntrusionDetectionResponse() {
-        this.configuration = null;
-        this.mode = null;
+    private FirewallPolicyIntrusionDetectionResponse(FirewallPolicyIntrusionDetectionResponse $) {
+        this.configuration = $.configuration;
+        this.mode = $.mode;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FirewallPolicyIntrusionDetectionResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable FirewallPolicyIntrusionDetectionConfigurationResponse configuration;
-        private @Nullable String mode;
+        private FirewallPolicyIntrusionDetectionResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new FirewallPolicyIntrusionDetectionResponse();
         }
 
         public Builder(FirewallPolicyIntrusionDetectionResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.configuration = defaults.configuration;
-    	      this.mode = defaults.mode;
+            $ = new FirewallPolicyIntrusionDetectionResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder configuration(@Nullable FirewallPolicyIntrusionDetectionConfigurationResponse configuration) {
-            this.configuration = configuration;
+            $.configuration = configuration;
             return this;
         }
+
         public Builder mode(@Nullable String mode) {
-            this.mode = mode;
+            $.mode = mode;
             return this;
-        }        public FirewallPolicyIntrusionDetectionResponse build() {
-            return new FirewallPolicyIntrusionDetectionResponse(configuration, mode);
+        }
+
+        public FirewallPolicyIntrusionDetectionResponse build() {
+            return $;
         }
     }
+
 }

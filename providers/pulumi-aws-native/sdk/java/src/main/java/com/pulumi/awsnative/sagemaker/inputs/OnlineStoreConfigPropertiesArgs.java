@@ -6,9 +6,9 @@ package com.pulumi.awsnative.sagemaker.inputs;
 import com.pulumi.awsnative.sagemaker.inputs.FeatureGroupOnlineStoreSecurityConfigArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -17,70 +17,65 @@ public final class OnlineStoreConfigPropertiesArgs extends com.pulumi.resources.
     public static final OnlineStoreConfigPropertiesArgs Empty = new OnlineStoreConfigPropertiesArgs();
 
     @Import(name="enableOnlineStore")
-      private final @Nullable Output<Boolean> enableOnlineStore;
+    private @Nullable Output<Boolean> enableOnlineStore;
 
-    public Output<Boolean> enableOnlineStore() {
-        return this.enableOnlineStore == null ? Codegen.empty() : this.enableOnlineStore;
+    public Optional<Output<Boolean>> enableOnlineStore() {
+        return Optional.ofNullable(this.enableOnlineStore);
     }
 
     @Import(name="securityConfig")
-      private final @Nullable Output<FeatureGroupOnlineStoreSecurityConfigArgs> securityConfig;
+    private @Nullable Output<FeatureGroupOnlineStoreSecurityConfigArgs> securityConfig;
 
-    public Output<FeatureGroupOnlineStoreSecurityConfigArgs> securityConfig() {
-        return this.securityConfig == null ? Codegen.empty() : this.securityConfig;
+    public Optional<Output<FeatureGroupOnlineStoreSecurityConfigArgs>> securityConfig() {
+        return Optional.ofNullable(this.securityConfig);
     }
 
-    public OnlineStoreConfigPropertiesArgs(
-        @Nullable Output<Boolean> enableOnlineStore,
-        @Nullable Output<FeatureGroupOnlineStoreSecurityConfigArgs> securityConfig) {
-        this.enableOnlineStore = enableOnlineStore;
-        this.securityConfig = securityConfig;
-    }
+    private OnlineStoreConfigPropertiesArgs() {}
 
-    private OnlineStoreConfigPropertiesArgs() {
-        this.enableOnlineStore = Codegen.empty();
-        this.securityConfig = Codegen.empty();
+    private OnlineStoreConfigPropertiesArgs(OnlineStoreConfigPropertiesArgs $) {
+        this.enableOnlineStore = $.enableOnlineStore;
+        this.securityConfig = $.securityConfig;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(OnlineStoreConfigPropertiesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> enableOnlineStore;
-        private @Nullable Output<FeatureGroupOnlineStoreSecurityConfigArgs> securityConfig;
+        private OnlineStoreConfigPropertiesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new OnlineStoreConfigPropertiesArgs();
         }
 
         public Builder(OnlineStoreConfigPropertiesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.enableOnlineStore = defaults.enableOnlineStore;
-    	      this.securityConfig = defaults.securityConfig;
+            $ = new OnlineStoreConfigPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder enableOnlineStore(@Nullable Output<Boolean> enableOnlineStore) {
-            this.enableOnlineStore = enableOnlineStore;
+            $.enableOnlineStore = enableOnlineStore;
             return this;
         }
-        public Builder enableOnlineStore(@Nullable Boolean enableOnlineStore) {
-            this.enableOnlineStore = Codegen.ofNullable(enableOnlineStore);
-            return this;
+
+        public Builder enableOnlineStore(Boolean enableOnlineStore) {
+            return enableOnlineStore(Output.of(enableOnlineStore));
         }
+
         public Builder securityConfig(@Nullable Output<FeatureGroupOnlineStoreSecurityConfigArgs> securityConfig) {
-            this.securityConfig = securityConfig;
+            $.securityConfig = securityConfig;
             return this;
         }
-        public Builder securityConfig(@Nullable FeatureGroupOnlineStoreSecurityConfigArgs securityConfig) {
-            this.securityConfig = Codegen.ofNullable(securityConfig);
-            return this;
-        }        public OnlineStoreConfigPropertiesArgs build() {
-            return new OnlineStoreConfigPropertiesArgs(enableOnlineStore, securityConfig);
+
+        public Builder securityConfig(FeatureGroupOnlineStoreSecurityConfigArgs securityConfig) {
+            return securityConfig(Output.of(securityConfig));
+        }
+
+        public OnlineStoreConfigPropertiesArgs build() {
+            return $;
         }
     }
+
 }

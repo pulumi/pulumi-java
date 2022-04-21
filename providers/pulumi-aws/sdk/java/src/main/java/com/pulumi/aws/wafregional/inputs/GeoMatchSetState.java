@@ -6,10 +6,10 @@ package com.pulumi.aws.wafregional.inputs;
 import com.pulumi.aws.wafregional.inputs.GeoMatchSetGeoMatchConstraintGetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class GeoMatchSetState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="geoMatchConstraints")
-      private final @Nullable Output<List<GeoMatchSetGeoMatchConstraintGetArgs>> geoMatchConstraints;
+    private @Nullable Output<List<GeoMatchSetGeoMatchConstraintGetArgs>> geoMatchConstraints;
 
-    public Output<List<GeoMatchSetGeoMatchConstraintGetArgs>> geoMatchConstraints() {
-        return this.geoMatchConstraints == null ? Codegen.empty() : this.geoMatchConstraints;
+    public Optional<Output<List<GeoMatchSetGeoMatchConstraintGetArgs>>> geoMatchConstraints() {
+        return Optional.ofNullable(this.geoMatchConstraints);
     }
 
     /**
@@ -33,66 +33,62 @@ public final class GeoMatchSetState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
-    public GeoMatchSetState(
-        @Nullable Output<List<GeoMatchSetGeoMatchConstraintGetArgs>> geoMatchConstraints,
-        @Nullable Output<String> name) {
-        this.geoMatchConstraints = geoMatchConstraints;
-        this.name = name;
-    }
+    private GeoMatchSetState() {}
 
-    private GeoMatchSetState() {
-        this.geoMatchConstraints = Codegen.empty();
-        this.name = Codegen.empty();
+    private GeoMatchSetState(GeoMatchSetState $) {
+        this.geoMatchConstraints = $.geoMatchConstraints;
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GeoMatchSetState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<GeoMatchSetGeoMatchConstraintGetArgs>> geoMatchConstraints;
-        private @Nullable Output<String> name;
+        private GeoMatchSetState $;
 
         public Builder() {
-    	      // Empty
+            $ = new GeoMatchSetState();
         }
 
         public Builder(GeoMatchSetState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.geoMatchConstraints = defaults.geoMatchConstraints;
-    	      this.name = defaults.name;
+            $ = new GeoMatchSetState(Objects.requireNonNull(defaults));
         }
 
         public Builder geoMatchConstraints(@Nullable Output<List<GeoMatchSetGeoMatchConstraintGetArgs>> geoMatchConstraints) {
-            this.geoMatchConstraints = geoMatchConstraints;
+            $.geoMatchConstraints = geoMatchConstraints;
             return this;
         }
-        public Builder geoMatchConstraints(@Nullable List<GeoMatchSetGeoMatchConstraintGetArgs> geoMatchConstraints) {
-            this.geoMatchConstraints = Codegen.ofNullable(geoMatchConstraints);
-            return this;
+
+        public Builder geoMatchConstraints(List<GeoMatchSetGeoMatchConstraintGetArgs> geoMatchConstraints) {
+            return geoMatchConstraints(Output.of(geoMatchConstraints));
         }
+
         public Builder geoMatchConstraints(GeoMatchSetGeoMatchConstraintGetArgs... geoMatchConstraints) {
             return geoMatchConstraints(List.of(geoMatchConstraints));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
-        }        public GeoMatchSetState build() {
-            return new GeoMatchSetState(geoMatchConstraints, name);
+
+        public Builder name(String name) {
+            return name(Output.of(name));
+        }
+
+        public GeoMatchSetState build() {
+            return $;
         }
     }
+
 }

@@ -23,10 +23,10 @@ public final class VideoScaleResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="height")
-      private final @Nullable String height;
+    private @Nullable String height;
 
     public Optional<String> height() {
-        return this.height == null ? Optional.empty() : Optional.ofNullable(this.height);
+        return Optional.ofNullable(this.height);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class VideoScaleResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="mode")
-      private final @Nullable String mode;
+    private @Nullable String mode;
 
     public Optional<String> mode() {
-        return this.mode == null ? Optional.empty() : Optional.ofNullable(this.mode);
+        return Optional.ofNullable(this.mode);
     }
 
     /**
@@ -45,64 +45,56 @@ public final class VideoScaleResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="width")
-      private final @Nullable String width;
+    private @Nullable String width;
 
     public Optional<String> width() {
-        return this.width == null ? Optional.empty() : Optional.ofNullable(this.width);
+        return Optional.ofNullable(this.width);
     }
 
-    public VideoScaleResponse(
-        @Nullable String height,
-        @Nullable String mode,
-        @Nullable String width) {
-        this.height = height;
-        this.mode = mode;
-        this.width = width;
-    }
+    private VideoScaleResponse() {}
 
-    private VideoScaleResponse() {
-        this.height = null;
-        this.mode = null;
-        this.width = null;
+    private VideoScaleResponse(VideoScaleResponse $) {
+        this.height = $.height;
+        this.mode = $.mode;
+        this.width = $.width;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VideoScaleResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String height;
-        private @Nullable String mode;
-        private @Nullable String width;
+        private VideoScaleResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new VideoScaleResponse();
         }
 
         public Builder(VideoScaleResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.height = defaults.height;
-    	      this.mode = defaults.mode;
-    	      this.width = defaults.width;
+            $ = new VideoScaleResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder height(@Nullable String height) {
-            this.height = height;
+            $.height = height;
             return this;
         }
+
         public Builder mode(@Nullable String mode) {
-            this.mode = mode;
+            $.mode = mode;
             return this;
         }
+
         public Builder width(@Nullable String width) {
-            this.width = width;
+            $.width = width;
             return this;
-        }        public VideoScaleResponse build() {
-            return new VideoScaleResponse(height, mode, width);
+        }
+
+        public VideoScaleResponse build() {
+            return $;
         }
     }
+
 }

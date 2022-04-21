@@ -5,10 +5,10 @@ package com.pulumi.awsnative.kafkaconnect.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class ConnectorS3LogDeliveryArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="bucket")
-      private final @Nullable Output<String> bucket;
+    private @Nullable Output<String> bucket;
 
-    public Output<String> bucket() {
-        return this.bucket == null ? Codegen.empty() : this.bucket;
+    public Optional<Output<String>> bucket() {
+        return Optional.ofNullable(this.bucket);
     }
 
     /**
@@ -36,7 +36,7 @@ public final class ConnectorS3LogDeliveryArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="enabled", required=true)
-      private final Output<Boolean> enabled;
+    private Output<Boolean> enabled;
 
     public Output<Boolean> enabled() {
         return this.enabled;
@@ -47,76 +47,69 @@ public final class ConnectorS3LogDeliveryArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="prefix")
-      private final @Nullable Output<String> prefix;
+    private @Nullable Output<String> prefix;
 
-    public Output<String> prefix() {
-        return this.prefix == null ? Codegen.empty() : this.prefix;
+    public Optional<Output<String>> prefix() {
+        return Optional.ofNullable(this.prefix);
     }
 
-    public ConnectorS3LogDeliveryArgs(
-        @Nullable Output<String> bucket,
-        Output<Boolean> enabled,
-        @Nullable Output<String> prefix) {
-        this.bucket = bucket;
-        this.enabled = Objects.requireNonNull(enabled, "expected parameter 'enabled' to be non-null");
-        this.prefix = prefix;
-    }
+    private ConnectorS3LogDeliveryArgs() {}
 
-    private ConnectorS3LogDeliveryArgs() {
-        this.bucket = Codegen.empty();
-        this.enabled = Codegen.empty();
-        this.prefix = Codegen.empty();
+    private ConnectorS3LogDeliveryArgs(ConnectorS3LogDeliveryArgs $) {
+        this.bucket = $.bucket;
+        this.enabled = $.enabled;
+        this.prefix = $.prefix;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ConnectorS3LogDeliveryArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> bucket;
-        private Output<Boolean> enabled;
-        private @Nullable Output<String> prefix;
+        private ConnectorS3LogDeliveryArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ConnectorS3LogDeliveryArgs();
         }
 
         public Builder(ConnectorS3LogDeliveryArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.bucket = defaults.bucket;
-    	      this.enabled = defaults.enabled;
-    	      this.prefix = defaults.prefix;
+            $ = new ConnectorS3LogDeliveryArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder bucket(@Nullable Output<String> bucket) {
-            this.bucket = bucket;
+            $.bucket = bucket;
             return this;
         }
-        public Builder bucket(@Nullable String bucket) {
-            this.bucket = Codegen.ofNullable(bucket);
-            return this;
+
+        public Builder bucket(String bucket) {
+            return bucket(Output.of(bucket));
         }
+
         public Builder enabled(Output<Boolean> enabled) {
-            this.enabled = Objects.requireNonNull(enabled);
+            $.enabled = enabled;
             return this;
         }
+
         public Builder enabled(Boolean enabled) {
-            this.enabled = Output.of(Objects.requireNonNull(enabled));
-            return this;
+            return enabled(Output.of(enabled));
         }
+
         public Builder prefix(@Nullable Output<String> prefix) {
-            this.prefix = prefix;
+            $.prefix = prefix;
             return this;
         }
-        public Builder prefix(@Nullable String prefix) {
-            this.prefix = Codegen.ofNullable(prefix);
-            return this;
-        }        public ConnectorS3LogDeliveryArgs build() {
-            return new ConnectorS3LogDeliveryArgs(bucket, enabled, prefix);
+
+        public Builder prefix(String prefix) {
+            return prefix(Output.of(prefix));
+        }
+
+        public ConnectorS3LogDeliveryArgs build() {
+            $.enabled = Objects.requireNonNull($.enabled, "expected parameter 'enabled' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,12 +5,12 @@ package com.pulumi.gcp.compute.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.compute.inputs.ManagedSslCertificateManagedGetArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,10 @@ public final class ManagedSslCertificateState extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="certificateId")
-      private final @Nullable Output<Integer> certificateId;
+    private @Nullable Output<Integer> certificateId;
 
-    public Output<Integer> certificateId() {
-        return this.certificateId == null ? Codegen.empty() : this.certificateId;
+    public Optional<Output<Integer>> certificateId() {
+        return Optional.ofNullable(this.certificateId);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class ManagedSslCertificateState extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="creationTimestamp")
-      private final @Nullable Output<String> creationTimestamp;
+    private @Nullable Output<String> creationTimestamp;
 
-    public Output<String> creationTimestamp() {
-        return this.creationTimestamp == null ? Codegen.empty() : this.creationTimestamp;
+    public Optional<Output<String>> creationTimestamp() {
+        return Optional.ofNullable(this.creationTimestamp);
     }
 
     /**
@@ -45,10 +45,10 @@ public final class ManagedSslCertificateState extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -56,10 +56,10 @@ public final class ManagedSslCertificateState extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="expireTime")
-      private final @Nullable Output<String> expireTime;
+    private @Nullable Output<String> expireTime;
 
-    public Output<String> expireTime() {
-        return this.expireTime == null ? Codegen.empty() : this.expireTime;
+    public Optional<Output<String>> expireTime() {
+        return Optional.ofNullable(this.expireTime);
     }
 
     /**
@@ -69,10 +69,10 @@ public final class ManagedSslCertificateState extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="managed")
-      private final @Nullable Output<ManagedSslCertificateManagedGetArgs> managed;
+    private @Nullable Output<ManagedSslCertificateManagedGetArgs> managed;
 
-    public Output<ManagedSslCertificateManagedGetArgs> managed() {
-        return this.managed == null ? Codegen.empty() : this.managed;
+    public Optional<Output<ManagedSslCertificateManagedGetArgs>> managed() {
+        return Optional.ofNullable(this.managed);
     }
 
     /**
@@ -86,10 +86,10 @@ public final class ManagedSslCertificateState extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -98,10 +98,10 @@ public final class ManagedSslCertificateState extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -109,10 +109,10 @@ public final class ManagedSslCertificateState extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="selfLink")
-      private final @Nullable Output<String> selfLink;
+    private @Nullable Output<String> selfLink;
 
-    public Output<String> selfLink() {
-        return this.selfLink == null ? Codegen.empty() : this.selfLink;
+    public Optional<Output<String>> selfLink() {
+        return Optional.ofNullable(this.selfLink);
     }
 
     /**
@@ -120,10 +120,10 @@ public final class ManagedSslCertificateState extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="subjectAlternativeNames")
-      private final @Nullable Output<List<String>> subjectAlternativeNames;
+    private @Nullable Output<List<String>> subjectAlternativeNames;
 
-    public Output<List<String>> subjectAlternativeNames() {
-        return this.subjectAlternativeNames == null ? Codegen.empty() : this.subjectAlternativeNames;
+    public Optional<Output<List<String>>> subjectAlternativeNames() {
+        return Optional.ofNullable(this.subjectAlternativeNames);
     }
 
     /**
@@ -134,170 +134,142 @@ public final class ManagedSslCertificateState extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="type")
-      private final @Nullable Output<String> type;
+    private @Nullable Output<String> type;
 
-    public Output<String> type() {
-        return this.type == null ? Codegen.empty() : this.type;
+    public Optional<Output<String>> type() {
+        return Optional.ofNullable(this.type);
     }
 
-    public ManagedSslCertificateState(
-        @Nullable Output<Integer> certificateId,
-        @Nullable Output<String> creationTimestamp,
-        @Nullable Output<String> description,
-        @Nullable Output<String> expireTime,
-        @Nullable Output<ManagedSslCertificateManagedGetArgs> managed,
-        @Nullable Output<String> name,
-        @Nullable Output<String> project,
-        @Nullable Output<String> selfLink,
-        @Nullable Output<List<String>> subjectAlternativeNames,
-        @Nullable Output<String> type) {
-        this.certificateId = certificateId;
-        this.creationTimestamp = creationTimestamp;
-        this.description = description;
-        this.expireTime = expireTime;
-        this.managed = managed;
-        this.name = name;
-        this.project = project;
-        this.selfLink = selfLink;
-        this.subjectAlternativeNames = subjectAlternativeNames;
-        this.type = type;
-    }
+    private ManagedSslCertificateState() {}
 
-    private ManagedSslCertificateState() {
-        this.certificateId = Codegen.empty();
-        this.creationTimestamp = Codegen.empty();
-        this.description = Codegen.empty();
-        this.expireTime = Codegen.empty();
-        this.managed = Codegen.empty();
-        this.name = Codegen.empty();
-        this.project = Codegen.empty();
-        this.selfLink = Codegen.empty();
-        this.subjectAlternativeNames = Codegen.empty();
-        this.type = Codegen.empty();
+    private ManagedSslCertificateState(ManagedSslCertificateState $) {
+        this.certificateId = $.certificateId;
+        this.creationTimestamp = $.creationTimestamp;
+        this.description = $.description;
+        this.expireTime = $.expireTime;
+        this.managed = $.managed;
+        this.name = $.name;
+        this.project = $.project;
+        this.selfLink = $.selfLink;
+        this.subjectAlternativeNames = $.subjectAlternativeNames;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ManagedSslCertificateState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> certificateId;
-        private @Nullable Output<String> creationTimestamp;
-        private @Nullable Output<String> description;
-        private @Nullable Output<String> expireTime;
-        private @Nullable Output<ManagedSslCertificateManagedGetArgs> managed;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> project;
-        private @Nullable Output<String> selfLink;
-        private @Nullable Output<List<String>> subjectAlternativeNames;
-        private @Nullable Output<String> type;
+        private ManagedSslCertificateState $;
 
         public Builder() {
-    	      // Empty
+            $ = new ManagedSslCertificateState();
         }
 
         public Builder(ManagedSslCertificateState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.certificateId = defaults.certificateId;
-    	      this.creationTimestamp = defaults.creationTimestamp;
-    	      this.description = defaults.description;
-    	      this.expireTime = defaults.expireTime;
-    	      this.managed = defaults.managed;
-    	      this.name = defaults.name;
-    	      this.project = defaults.project;
-    	      this.selfLink = defaults.selfLink;
-    	      this.subjectAlternativeNames = defaults.subjectAlternativeNames;
-    	      this.type = defaults.type;
+            $ = new ManagedSslCertificateState(Objects.requireNonNull(defaults));
         }
 
         public Builder certificateId(@Nullable Output<Integer> certificateId) {
-            this.certificateId = certificateId;
+            $.certificateId = certificateId;
             return this;
         }
-        public Builder certificateId(@Nullable Integer certificateId) {
-            this.certificateId = Codegen.ofNullable(certificateId);
-            return this;
+
+        public Builder certificateId(Integer certificateId) {
+            return certificateId(Output.of(certificateId));
         }
+
         public Builder creationTimestamp(@Nullable Output<String> creationTimestamp) {
-            this.creationTimestamp = creationTimestamp;
+            $.creationTimestamp = creationTimestamp;
             return this;
         }
-        public Builder creationTimestamp(@Nullable String creationTimestamp) {
-            this.creationTimestamp = Codegen.ofNullable(creationTimestamp);
-            return this;
+
+        public Builder creationTimestamp(String creationTimestamp) {
+            return creationTimestamp(Output.of(creationTimestamp));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder expireTime(@Nullable Output<String> expireTime) {
-            this.expireTime = expireTime;
+            $.expireTime = expireTime;
             return this;
         }
-        public Builder expireTime(@Nullable String expireTime) {
-            this.expireTime = Codegen.ofNullable(expireTime);
-            return this;
+
+        public Builder expireTime(String expireTime) {
+            return expireTime(Output.of(expireTime));
         }
+
         public Builder managed(@Nullable Output<ManagedSslCertificateManagedGetArgs> managed) {
-            this.managed = managed;
+            $.managed = managed;
             return this;
         }
-        public Builder managed(@Nullable ManagedSslCertificateManagedGetArgs managed) {
-            this.managed = Codegen.ofNullable(managed);
-            return this;
+
+        public Builder managed(ManagedSslCertificateManagedGetArgs managed) {
+            return managed(Output.of(managed));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder selfLink(@Nullable Output<String> selfLink) {
-            this.selfLink = selfLink;
+            $.selfLink = selfLink;
             return this;
         }
-        public Builder selfLink(@Nullable String selfLink) {
-            this.selfLink = Codegen.ofNullable(selfLink);
-            return this;
+
+        public Builder selfLink(String selfLink) {
+            return selfLink(Output.of(selfLink));
         }
+
         public Builder subjectAlternativeNames(@Nullable Output<List<String>> subjectAlternativeNames) {
-            this.subjectAlternativeNames = subjectAlternativeNames;
+            $.subjectAlternativeNames = subjectAlternativeNames;
             return this;
         }
-        public Builder subjectAlternativeNames(@Nullable List<String> subjectAlternativeNames) {
-            this.subjectAlternativeNames = Codegen.ofNullable(subjectAlternativeNames);
-            return this;
+
+        public Builder subjectAlternativeNames(List<String> subjectAlternativeNames) {
+            return subjectAlternativeNames(Output.of(subjectAlternativeNames));
         }
+
         public Builder subjectAlternativeNames(String... subjectAlternativeNames) {
             return subjectAlternativeNames(List.of(subjectAlternativeNames));
         }
+
         public Builder type(@Nullable Output<String> type) {
-            this.type = type;
+            $.type = type;
             return this;
         }
-        public Builder type(@Nullable String type) {
-            this.type = Codegen.ofNullable(type);
-            return this;
-        }        public ManagedSslCertificateState build() {
-            return new ManagedSslCertificateState(certificateId, creationTimestamp, description, expireTime, managed, name, project, selfLink, subjectAlternativeNames, type);
+
+        public Builder type(String type) {
+            return type(Output.of(type));
+        }
+
+        public ManagedSslCertificateState build() {
+            return $;
         }
     }
+
 }

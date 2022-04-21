@@ -13,78 +13,73 @@ public final class GetServiceActionAssociationArgs extends com.pulumi.resources.
     public static final GetServiceActionAssociationArgs Empty = new GetServiceActionAssociationArgs();
 
     @Import(name="productId", required=true)
-      private final String productId;
+    private String productId;
 
     public String productId() {
         return this.productId;
     }
 
     @Import(name="provisioningArtifactId", required=true)
-      private final String provisioningArtifactId;
+    private String provisioningArtifactId;
 
     public String provisioningArtifactId() {
         return this.provisioningArtifactId;
     }
 
     @Import(name="serviceActionId", required=true)
-      private final String serviceActionId;
+    private String serviceActionId;
 
     public String serviceActionId() {
         return this.serviceActionId;
     }
 
-    public GetServiceActionAssociationArgs(
-        String productId,
-        String provisioningArtifactId,
-        String serviceActionId) {
-        this.productId = Objects.requireNonNull(productId, "expected parameter 'productId' to be non-null");
-        this.provisioningArtifactId = Objects.requireNonNull(provisioningArtifactId, "expected parameter 'provisioningArtifactId' to be non-null");
-        this.serviceActionId = Objects.requireNonNull(serviceActionId, "expected parameter 'serviceActionId' to be non-null");
-    }
+    private GetServiceActionAssociationArgs() {}
 
-    private GetServiceActionAssociationArgs() {
-        this.productId = null;
-        this.provisioningArtifactId = null;
-        this.serviceActionId = null;
+    private GetServiceActionAssociationArgs(GetServiceActionAssociationArgs $) {
+        this.productId = $.productId;
+        this.provisioningArtifactId = $.provisioningArtifactId;
+        this.serviceActionId = $.serviceActionId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetServiceActionAssociationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String productId;
-        private String provisioningArtifactId;
-        private String serviceActionId;
+        private GetServiceActionAssociationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetServiceActionAssociationArgs();
         }
 
         public Builder(GetServiceActionAssociationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.productId = defaults.productId;
-    	      this.provisioningArtifactId = defaults.provisioningArtifactId;
-    	      this.serviceActionId = defaults.serviceActionId;
+            $ = new GetServiceActionAssociationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder productId(String productId) {
-            this.productId = Objects.requireNonNull(productId);
+            $.productId = productId;
             return this;
         }
+
         public Builder provisioningArtifactId(String provisioningArtifactId) {
-            this.provisioningArtifactId = Objects.requireNonNull(provisioningArtifactId);
+            $.provisioningArtifactId = provisioningArtifactId;
             return this;
         }
+
         public Builder serviceActionId(String serviceActionId) {
-            this.serviceActionId = Objects.requireNonNull(serviceActionId);
+            $.serviceActionId = serviceActionId;
             return this;
-        }        public GetServiceActionAssociationArgs build() {
-            return new GetServiceActionAssociationArgs(productId, provisioningArtifactId, serviceActionId);
+        }
+
+        public GetServiceActionAssociationArgs build() {
+            $.productId = Objects.requireNonNull($.productId, "expected parameter 'productId' to be non-null");
+            $.provisioningArtifactId = Objects.requireNonNull($.provisioningArtifactId, "expected parameter 'provisioningArtifactId' to be non-null");
+            $.serviceActionId = Objects.requireNonNull($.serviceActionId, "expected parameter 'serviceActionId' to be non-null");
+            return $;
         }
     }
+
 }

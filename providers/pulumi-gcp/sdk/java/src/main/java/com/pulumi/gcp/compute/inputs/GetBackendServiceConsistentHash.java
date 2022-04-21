@@ -16,81 +16,77 @@ public final class GetBackendServiceConsistentHash extends com.pulumi.resources.
     public static final GetBackendServiceConsistentHash Empty = new GetBackendServiceConsistentHash();
 
     @Import(name="httpCookies", required=true)
-      private final List<GetBackendServiceConsistentHashHttpCooky> httpCookies;
+    private List<GetBackendServiceConsistentHashHttpCooky> httpCookies;
 
     public List<GetBackendServiceConsistentHashHttpCooky> httpCookies() {
         return this.httpCookies;
     }
 
     @Import(name="httpHeaderName", required=true)
-      private final String httpHeaderName;
+    private String httpHeaderName;
 
     public String httpHeaderName() {
         return this.httpHeaderName;
     }
 
     @Import(name="minimumRingSize", required=true)
-      private final Integer minimumRingSize;
+    private Integer minimumRingSize;
 
     public Integer minimumRingSize() {
         return this.minimumRingSize;
     }
 
-    public GetBackendServiceConsistentHash(
-        List<GetBackendServiceConsistentHashHttpCooky> httpCookies,
-        String httpHeaderName,
-        Integer minimumRingSize) {
-        this.httpCookies = Objects.requireNonNull(httpCookies, "expected parameter 'httpCookies' to be non-null");
-        this.httpHeaderName = Objects.requireNonNull(httpHeaderName, "expected parameter 'httpHeaderName' to be non-null");
-        this.minimumRingSize = Objects.requireNonNull(minimumRingSize, "expected parameter 'minimumRingSize' to be non-null");
-    }
+    private GetBackendServiceConsistentHash() {}
 
-    private GetBackendServiceConsistentHash() {
-        this.httpCookies = List.of();
-        this.httpHeaderName = null;
-        this.minimumRingSize = null;
+    private GetBackendServiceConsistentHash(GetBackendServiceConsistentHash $) {
+        this.httpCookies = $.httpCookies;
+        this.httpHeaderName = $.httpHeaderName;
+        this.minimumRingSize = $.minimumRingSize;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetBackendServiceConsistentHash defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<GetBackendServiceConsistentHashHttpCooky> httpCookies;
-        private String httpHeaderName;
-        private Integer minimumRingSize;
+        private GetBackendServiceConsistentHash $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetBackendServiceConsistentHash();
         }
 
         public Builder(GetBackendServiceConsistentHash defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.httpCookies = defaults.httpCookies;
-    	      this.httpHeaderName = defaults.httpHeaderName;
-    	      this.minimumRingSize = defaults.minimumRingSize;
+            $ = new GetBackendServiceConsistentHash(Objects.requireNonNull(defaults));
         }
 
         public Builder httpCookies(List<GetBackendServiceConsistentHashHttpCooky> httpCookies) {
-            this.httpCookies = Objects.requireNonNull(httpCookies);
+            $.httpCookies = httpCookies;
             return this;
         }
+
         public Builder httpCookies(GetBackendServiceConsistentHashHttpCooky... httpCookies) {
             return httpCookies(List.of(httpCookies));
         }
+
         public Builder httpHeaderName(String httpHeaderName) {
-            this.httpHeaderName = Objects.requireNonNull(httpHeaderName);
+            $.httpHeaderName = httpHeaderName;
             return this;
         }
+
         public Builder minimumRingSize(Integer minimumRingSize) {
-            this.minimumRingSize = Objects.requireNonNull(minimumRingSize);
+            $.minimumRingSize = minimumRingSize;
             return this;
-        }        public GetBackendServiceConsistentHash build() {
-            return new GetBackendServiceConsistentHash(httpCookies, httpHeaderName, minimumRingSize);
+        }
+
+        public GetBackendServiceConsistentHash build() {
+            $.httpCookies = Objects.requireNonNull($.httpCookies, "expected parameter 'httpCookies' to be non-null");
+            $.httpHeaderName = Objects.requireNonNull($.httpHeaderName, "expected parameter 'httpHeaderName' to be non-null");
+            $.minimumRingSize = Objects.requireNonNull($.minimumRingSize, "expected parameter 'minimumRingSize' to be non-null");
+            return $;
         }
     }
+
 }

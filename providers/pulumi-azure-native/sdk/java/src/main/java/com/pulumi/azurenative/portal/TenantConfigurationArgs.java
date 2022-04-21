@@ -5,10 +5,10 @@ package com.pulumi.azurenative.portal;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class TenantConfigurationArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="configurationName")
-      private final @Nullable Output<String> configurationName;
+    private @Nullable Output<String> configurationName;
 
-    public Output<String> configurationName() {
-        return this.configurationName == null ? Codegen.empty() : this.configurationName;
+    public Optional<Output<String>> configurationName() {
+        return Optional.ofNullable(this.configurationName);
     }
 
     /**
@@ -32,63 +32,58 @@ public final class TenantConfigurationArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="enforcePrivateMarkdownStorage")
-      private final @Nullable Output<Boolean> enforcePrivateMarkdownStorage;
+    private @Nullable Output<Boolean> enforcePrivateMarkdownStorage;
 
-    public Output<Boolean> enforcePrivateMarkdownStorage() {
-        return this.enforcePrivateMarkdownStorage == null ? Codegen.empty() : this.enforcePrivateMarkdownStorage;
+    public Optional<Output<Boolean>> enforcePrivateMarkdownStorage() {
+        return Optional.ofNullable(this.enforcePrivateMarkdownStorage);
     }
 
-    public TenantConfigurationArgs(
-        @Nullable Output<String> configurationName,
-        @Nullable Output<Boolean> enforcePrivateMarkdownStorage) {
-        this.configurationName = configurationName;
-        this.enforcePrivateMarkdownStorage = enforcePrivateMarkdownStorage;
-    }
+    private TenantConfigurationArgs() {}
 
-    private TenantConfigurationArgs() {
-        this.configurationName = Codegen.empty();
-        this.enforcePrivateMarkdownStorage = Codegen.empty();
+    private TenantConfigurationArgs(TenantConfigurationArgs $) {
+        this.configurationName = $.configurationName;
+        this.enforcePrivateMarkdownStorage = $.enforcePrivateMarkdownStorage;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TenantConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> configurationName;
-        private @Nullable Output<Boolean> enforcePrivateMarkdownStorage;
+        private TenantConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TenantConfigurationArgs();
         }
 
         public Builder(TenantConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.configurationName = defaults.configurationName;
-    	      this.enforcePrivateMarkdownStorage = defaults.enforcePrivateMarkdownStorage;
+            $ = new TenantConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder configurationName(@Nullable Output<String> configurationName) {
-            this.configurationName = configurationName;
+            $.configurationName = configurationName;
             return this;
         }
-        public Builder configurationName(@Nullable String configurationName) {
-            this.configurationName = Codegen.ofNullable(configurationName);
-            return this;
+
+        public Builder configurationName(String configurationName) {
+            return configurationName(Output.of(configurationName));
         }
+
         public Builder enforcePrivateMarkdownStorage(@Nullable Output<Boolean> enforcePrivateMarkdownStorage) {
-            this.enforcePrivateMarkdownStorage = enforcePrivateMarkdownStorage;
+            $.enforcePrivateMarkdownStorage = enforcePrivateMarkdownStorage;
             return this;
         }
-        public Builder enforcePrivateMarkdownStorage(@Nullable Boolean enforcePrivateMarkdownStorage) {
-            this.enforcePrivateMarkdownStorage = Codegen.ofNullable(enforcePrivateMarkdownStorage);
-            return this;
-        }        public TenantConfigurationArgs build() {
-            return new TenantConfigurationArgs(configurationName, enforcePrivateMarkdownStorage);
+
+        public Builder enforcePrivateMarkdownStorage(Boolean enforcePrivateMarkdownStorage) {
+            return enforcePrivateMarkdownStorage(Output.of(enforcePrivateMarkdownStorage));
+        }
+
+        public TenantConfigurationArgs build() {
+            return $;
         }
     }
+
 }

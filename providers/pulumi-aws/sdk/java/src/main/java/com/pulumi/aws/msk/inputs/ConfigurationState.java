@@ -5,11 +5,11 @@ package com.pulumi.aws.msk.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class ConfigurationState extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="arn")
-      private final @Nullable Output<String> arn;
+    private @Nullable Output<String> arn;
 
-    public Output<String> arn() {
-        return this.arn == null ? Codegen.empty() : this.arn;
+    public Optional<Output<String>> arn() {
+        return Optional.ofNullable(this.arn);
     }
 
     /**
@@ -33,10 +33,10 @@ public final class ConfigurationState extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -44,10 +44,10 @@ public final class ConfigurationState extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="kafkaVersions")
-      private final @Nullable Output<List<String>> kafkaVersions;
+    private @Nullable Output<List<String>> kafkaVersions;
 
-    public Output<List<String>> kafkaVersions() {
-        return this.kafkaVersions == null ? Codegen.empty() : this.kafkaVersions;
+    public Optional<Output<List<String>>> kafkaVersions() {
+        return Optional.ofNullable(this.kafkaVersions);
     }
 
     /**
@@ -55,10 +55,10 @@ public final class ConfigurationState extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="latestRevision")
-      private final @Nullable Output<Integer> latestRevision;
+    private @Nullable Output<Integer> latestRevision;
 
-    public Output<Integer> latestRevision() {
-        return this.latestRevision == null ? Codegen.empty() : this.latestRevision;
+    public Optional<Output<Integer>> latestRevision() {
+        return Optional.ofNullable(this.latestRevision);
     }
 
     /**
@@ -66,10 +66,10 @@ public final class ConfigurationState extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -77,118 +77,102 @@ public final class ConfigurationState extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="serverProperties")
-      private final @Nullable Output<String> serverProperties;
+    private @Nullable Output<String> serverProperties;
 
-    public Output<String> serverProperties() {
-        return this.serverProperties == null ? Codegen.empty() : this.serverProperties;
+    public Optional<Output<String>> serverProperties() {
+        return Optional.ofNullable(this.serverProperties);
     }
 
-    public ConfigurationState(
-        @Nullable Output<String> arn,
-        @Nullable Output<String> description,
-        @Nullable Output<List<String>> kafkaVersions,
-        @Nullable Output<Integer> latestRevision,
-        @Nullable Output<String> name,
-        @Nullable Output<String> serverProperties) {
-        this.arn = arn;
-        this.description = description;
-        this.kafkaVersions = kafkaVersions;
-        this.latestRevision = latestRevision;
-        this.name = name;
-        this.serverProperties = serverProperties;
-    }
+    private ConfigurationState() {}
 
-    private ConfigurationState() {
-        this.arn = Codegen.empty();
-        this.description = Codegen.empty();
-        this.kafkaVersions = Codegen.empty();
-        this.latestRevision = Codegen.empty();
-        this.name = Codegen.empty();
-        this.serverProperties = Codegen.empty();
+    private ConfigurationState(ConfigurationState $) {
+        this.arn = $.arn;
+        this.description = $.description;
+        this.kafkaVersions = $.kafkaVersions;
+        this.latestRevision = $.latestRevision;
+        this.name = $.name;
+        this.serverProperties = $.serverProperties;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ConfigurationState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> arn;
-        private @Nullable Output<String> description;
-        private @Nullable Output<List<String>> kafkaVersions;
-        private @Nullable Output<Integer> latestRevision;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> serverProperties;
+        private ConfigurationState $;
 
         public Builder() {
-    	      // Empty
+            $ = new ConfigurationState();
         }
 
         public Builder(ConfigurationState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.arn = defaults.arn;
-    	      this.description = defaults.description;
-    	      this.kafkaVersions = defaults.kafkaVersions;
-    	      this.latestRevision = defaults.latestRevision;
-    	      this.name = defaults.name;
-    	      this.serverProperties = defaults.serverProperties;
+            $ = new ConfigurationState(Objects.requireNonNull(defaults));
         }
 
         public Builder arn(@Nullable Output<String> arn) {
-            this.arn = arn;
+            $.arn = arn;
             return this;
         }
-        public Builder arn(@Nullable String arn) {
-            this.arn = Codegen.ofNullable(arn);
-            return this;
+
+        public Builder arn(String arn) {
+            return arn(Output.of(arn));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder kafkaVersions(@Nullable Output<List<String>> kafkaVersions) {
-            this.kafkaVersions = kafkaVersions;
+            $.kafkaVersions = kafkaVersions;
             return this;
         }
-        public Builder kafkaVersions(@Nullable List<String> kafkaVersions) {
-            this.kafkaVersions = Codegen.ofNullable(kafkaVersions);
-            return this;
+
+        public Builder kafkaVersions(List<String> kafkaVersions) {
+            return kafkaVersions(Output.of(kafkaVersions));
         }
+
         public Builder kafkaVersions(String... kafkaVersions) {
             return kafkaVersions(List.of(kafkaVersions));
         }
+
         public Builder latestRevision(@Nullable Output<Integer> latestRevision) {
-            this.latestRevision = latestRevision;
+            $.latestRevision = latestRevision;
             return this;
         }
-        public Builder latestRevision(@Nullable Integer latestRevision) {
-            this.latestRevision = Codegen.ofNullable(latestRevision);
-            return this;
+
+        public Builder latestRevision(Integer latestRevision) {
+            return latestRevision(Output.of(latestRevision));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder serverProperties(@Nullable Output<String> serverProperties) {
-            this.serverProperties = serverProperties;
+            $.serverProperties = serverProperties;
             return this;
         }
-        public Builder serverProperties(@Nullable String serverProperties) {
-            this.serverProperties = Codegen.ofNullable(serverProperties);
-            return this;
-        }        public ConfigurationState build() {
-            return new ConfigurationState(arn, description, kafkaVersions, latestRevision, name, serverProperties);
+
+        public Builder serverProperties(String serverProperties) {
+            return serverProperties(Output.of(serverProperties));
+        }
+
+        public ConfigurationState build() {
+            return $;
         }
     }
+
 }

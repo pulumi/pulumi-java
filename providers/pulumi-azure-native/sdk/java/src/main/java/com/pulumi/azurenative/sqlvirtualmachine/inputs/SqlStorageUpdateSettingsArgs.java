@@ -7,10 +7,10 @@ import com.pulumi.azurenative.sqlvirtualmachine.enums.DiskConfigurationType;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +27,10 @@ public final class SqlStorageUpdateSettingsArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="diskConfigurationType")
-      private final @Nullable Output<Either<String,DiskConfigurationType>> diskConfigurationType;
+    private @Nullable Output<Either<String,DiskConfigurationType>> diskConfigurationType;
 
-    public Output<Either<String,DiskConfigurationType>> diskConfigurationType() {
-        return this.diskConfigurationType == null ? Codegen.empty() : this.diskConfigurationType;
+    public Optional<Output<Either<String,DiskConfigurationType>>> diskConfigurationType() {
+        return Optional.ofNullable(this.diskConfigurationType);
     }
 
     /**
@@ -38,10 +38,10 @@ public final class SqlStorageUpdateSettingsArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="diskCount")
-      private final @Nullable Output<Integer> diskCount;
+    private @Nullable Output<Integer> diskCount;
 
-    public Output<Integer> diskCount() {
-        return this.diskCount == null ? Codegen.empty() : this.diskCount;
+    public Optional<Output<Integer>> diskCount() {
+        return Optional.ofNullable(this.diskCount);
     }
 
     /**
@@ -49,76 +49,68 @@ public final class SqlStorageUpdateSettingsArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="startingDeviceId")
-      private final @Nullable Output<Integer> startingDeviceId;
+    private @Nullable Output<Integer> startingDeviceId;
 
-    public Output<Integer> startingDeviceId() {
-        return this.startingDeviceId == null ? Codegen.empty() : this.startingDeviceId;
+    public Optional<Output<Integer>> startingDeviceId() {
+        return Optional.ofNullable(this.startingDeviceId);
     }
 
-    public SqlStorageUpdateSettingsArgs(
-        @Nullable Output<Either<String,DiskConfigurationType>> diskConfigurationType,
-        @Nullable Output<Integer> diskCount,
-        @Nullable Output<Integer> startingDeviceId) {
-        this.diskConfigurationType = diskConfigurationType;
-        this.diskCount = diskCount;
-        this.startingDeviceId = startingDeviceId;
-    }
+    private SqlStorageUpdateSettingsArgs() {}
 
-    private SqlStorageUpdateSettingsArgs() {
-        this.diskConfigurationType = Codegen.empty();
-        this.diskCount = Codegen.empty();
-        this.startingDeviceId = Codegen.empty();
+    private SqlStorageUpdateSettingsArgs(SqlStorageUpdateSettingsArgs $) {
+        this.diskConfigurationType = $.diskConfigurationType;
+        this.diskCount = $.diskCount;
+        this.startingDeviceId = $.startingDeviceId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SqlStorageUpdateSettingsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Either<String,DiskConfigurationType>> diskConfigurationType;
-        private @Nullable Output<Integer> diskCount;
-        private @Nullable Output<Integer> startingDeviceId;
+        private SqlStorageUpdateSettingsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SqlStorageUpdateSettingsArgs();
         }
 
         public Builder(SqlStorageUpdateSettingsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.diskConfigurationType = defaults.diskConfigurationType;
-    	      this.diskCount = defaults.diskCount;
-    	      this.startingDeviceId = defaults.startingDeviceId;
+            $ = new SqlStorageUpdateSettingsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder diskConfigurationType(@Nullable Output<Either<String,DiskConfigurationType>> diskConfigurationType) {
-            this.diskConfigurationType = diskConfigurationType;
+            $.diskConfigurationType = diskConfigurationType;
             return this;
         }
-        public Builder diskConfigurationType(@Nullable Either<String,DiskConfigurationType> diskConfigurationType) {
-            this.diskConfigurationType = Codegen.ofNullable(diskConfigurationType);
-            return this;
+
+        public Builder diskConfigurationType(Either<String,DiskConfigurationType> diskConfigurationType) {
+            return diskConfigurationType(Output.of(diskConfigurationType));
         }
+
         public Builder diskCount(@Nullable Output<Integer> diskCount) {
-            this.diskCount = diskCount;
+            $.diskCount = diskCount;
             return this;
         }
-        public Builder diskCount(@Nullable Integer diskCount) {
-            this.diskCount = Codegen.ofNullable(diskCount);
-            return this;
+
+        public Builder diskCount(Integer diskCount) {
+            return diskCount(Output.of(diskCount));
         }
+
         public Builder startingDeviceId(@Nullable Output<Integer> startingDeviceId) {
-            this.startingDeviceId = startingDeviceId;
+            $.startingDeviceId = startingDeviceId;
             return this;
         }
-        public Builder startingDeviceId(@Nullable Integer startingDeviceId) {
-            this.startingDeviceId = Codegen.ofNullable(startingDeviceId);
-            return this;
-        }        public SqlStorageUpdateSettingsArgs build() {
-            return new SqlStorageUpdateSettingsArgs(diskConfigurationType, diskCount, startingDeviceId);
+
+        public Builder startingDeviceId(Integer startingDeviceId) {
+            return startingDeviceId(Output.of(startingDeviceId));
+        }
+
+        public SqlStorageUpdateSettingsArgs build() {
+            return $;
         }
     }
+
 }

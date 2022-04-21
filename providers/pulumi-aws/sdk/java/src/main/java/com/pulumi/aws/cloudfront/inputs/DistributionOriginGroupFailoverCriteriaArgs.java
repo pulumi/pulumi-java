@@ -5,7 +5,6 @@ package com.pulumi.aws.cloudfront.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.List;
 import java.util.Objects;
@@ -20,52 +19,53 @@ public final class DistributionOriginGroupFailoverCriteriaArgs extends com.pulum
      * 
      */
     @Import(name="statusCodes", required=true)
-      private final Output<List<Integer>> statusCodes;
+    private Output<List<Integer>> statusCodes;
 
     public Output<List<Integer>> statusCodes() {
         return this.statusCodes;
     }
 
-    public DistributionOriginGroupFailoverCriteriaArgs(Output<List<Integer>> statusCodes) {
-        this.statusCodes = Objects.requireNonNull(statusCodes, "expected parameter 'statusCodes' to be non-null");
-    }
+    private DistributionOriginGroupFailoverCriteriaArgs() {}
 
-    private DistributionOriginGroupFailoverCriteriaArgs() {
-        this.statusCodes = Codegen.empty();
+    private DistributionOriginGroupFailoverCriteriaArgs(DistributionOriginGroupFailoverCriteriaArgs $) {
+        this.statusCodes = $.statusCodes;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DistributionOriginGroupFailoverCriteriaArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<List<Integer>> statusCodes;
+        private DistributionOriginGroupFailoverCriteriaArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DistributionOriginGroupFailoverCriteriaArgs();
         }
 
         public Builder(DistributionOriginGroupFailoverCriteriaArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.statusCodes = defaults.statusCodes;
+            $ = new DistributionOriginGroupFailoverCriteriaArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder statusCodes(Output<List<Integer>> statusCodes) {
-            this.statusCodes = Objects.requireNonNull(statusCodes);
+            $.statusCodes = statusCodes;
             return this;
         }
+
         public Builder statusCodes(List<Integer> statusCodes) {
-            this.statusCodes = Output.of(Objects.requireNonNull(statusCodes));
-            return this;
+            return statusCodes(Output.of(statusCodes));
         }
+
         public Builder statusCodes(Integer... statusCodes) {
             return statusCodes(List.of(statusCodes));
-        }        public DistributionOriginGroupFailoverCriteriaArgs build() {
-            return new DistributionOriginGroupFailoverCriteriaArgs(statusCodes);
+        }
+
+        public DistributionOriginGroupFailoverCriteriaArgs build() {
+            $.statusCodes = Objects.requireNonNull($.statusCodes, "expected parameter 'statusCodes' to be non-null");
+            return $;
         }
     }
+
 }

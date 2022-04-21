@@ -25,10 +25,10 @@ public final class AzureDataLakeStoreWriteSettingsResponse extends com.pulumi.re
      * 
      */
     @Import(name="copyBehavior")
-      private final @Nullable Object copyBehavior;
+    private @Nullable Object copyBehavior;
 
     public Optional<Object> copyBehavior() {
-        return this.copyBehavior == null ? Optional.empty() : Optional.ofNullable(this.copyBehavior);
+        return Optional.ofNullable(this.copyBehavior);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class AzureDataLakeStoreWriteSettingsResponse extends com.pulumi.re
      * 
      */
     @Import(name="disableMetricsCollection")
-      private final @Nullable Object disableMetricsCollection;
+    private @Nullable Object disableMetricsCollection;
 
     public Optional<Object> disableMetricsCollection() {
-        return this.disableMetricsCollection == null ? Optional.empty() : Optional.ofNullable(this.disableMetricsCollection);
+        return Optional.ofNullable(this.disableMetricsCollection);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class AzureDataLakeStoreWriteSettingsResponse extends com.pulumi.re
      * 
      */
     @Import(name="expiryDateTime")
-      private final @Nullable Object expiryDateTime;
+    private @Nullable Object expiryDateTime;
 
     public Optional<Object> expiryDateTime() {
-        return this.expiryDateTime == null ? Optional.empty() : Optional.ofNullable(this.expiryDateTime);
+        return Optional.ofNullable(this.expiryDateTime);
     }
 
     /**
@@ -58,10 +58,10 @@ public final class AzureDataLakeStoreWriteSettingsResponse extends com.pulumi.re
      * 
      */
     @Import(name="maxConcurrentConnections")
-      private final @Nullable Object maxConcurrentConnections;
+    private @Nullable Object maxConcurrentConnections;
 
     public Optional<Object> maxConcurrentConnections() {
-        return this.maxConcurrentConnections == null ? Optional.empty() : Optional.ofNullable(this.maxConcurrentConnections);
+        return Optional.ofNullable(this.maxConcurrentConnections);
     }
 
     /**
@@ -70,82 +70,69 @@ public final class AzureDataLakeStoreWriteSettingsResponse extends com.pulumi.re
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
     }
 
-    public AzureDataLakeStoreWriteSettingsResponse(
-        @Nullable Object copyBehavior,
-        @Nullable Object disableMetricsCollection,
-        @Nullable Object expiryDateTime,
-        @Nullable Object maxConcurrentConnections,
-        String type) {
-        this.copyBehavior = copyBehavior;
-        this.disableMetricsCollection = disableMetricsCollection;
-        this.expiryDateTime = expiryDateTime;
-        this.maxConcurrentConnections = maxConcurrentConnections;
-        this.type = Codegen.stringProp("type").arg(type).require();
-    }
+    private AzureDataLakeStoreWriteSettingsResponse() {}
 
-    private AzureDataLakeStoreWriteSettingsResponse() {
-        this.copyBehavior = null;
-        this.disableMetricsCollection = null;
-        this.expiryDateTime = null;
-        this.maxConcurrentConnections = null;
-        this.type = null;
+    private AzureDataLakeStoreWriteSettingsResponse(AzureDataLakeStoreWriteSettingsResponse $) {
+        this.copyBehavior = $.copyBehavior;
+        this.disableMetricsCollection = $.disableMetricsCollection;
+        this.expiryDateTime = $.expiryDateTime;
+        this.maxConcurrentConnections = $.maxConcurrentConnections;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AzureDataLakeStoreWriteSettingsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Object copyBehavior;
-        private @Nullable Object disableMetricsCollection;
-        private @Nullable Object expiryDateTime;
-        private @Nullable Object maxConcurrentConnections;
-        private String type;
+        private AzureDataLakeStoreWriteSettingsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AzureDataLakeStoreWriteSettingsResponse();
         }
 
         public Builder(AzureDataLakeStoreWriteSettingsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.copyBehavior = defaults.copyBehavior;
-    	      this.disableMetricsCollection = defaults.disableMetricsCollection;
-    	      this.expiryDateTime = defaults.expiryDateTime;
-    	      this.maxConcurrentConnections = defaults.maxConcurrentConnections;
-    	      this.type = defaults.type;
+            $ = new AzureDataLakeStoreWriteSettingsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder copyBehavior(@Nullable Object copyBehavior) {
-            this.copyBehavior = copyBehavior;
+            $.copyBehavior = copyBehavior;
             return this;
         }
+
         public Builder disableMetricsCollection(@Nullable Object disableMetricsCollection) {
-            this.disableMetricsCollection = disableMetricsCollection;
+            $.disableMetricsCollection = disableMetricsCollection;
             return this;
         }
+
         public Builder expiryDateTime(@Nullable Object expiryDateTime) {
-            this.expiryDateTime = expiryDateTime;
+            $.expiryDateTime = expiryDateTime;
             return this;
         }
+
         public Builder maxConcurrentConnections(@Nullable Object maxConcurrentConnections) {
-            this.maxConcurrentConnections = maxConcurrentConnections;
+            $.maxConcurrentConnections = maxConcurrentConnections;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
-        }        public AzureDataLakeStoreWriteSettingsResponse build() {
-            return new AzureDataLakeStoreWriteSettingsResponse(copyBehavior, disableMetricsCollection, expiryDateTime, maxConcurrentConnections, type);
+        }
+
+        public AzureDataLakeStoreWriteSettingsResponse build() {
+            $.type = Codegen.stringProp("type").arg($.type).require();
+            return $;
         }
     }
+
 }

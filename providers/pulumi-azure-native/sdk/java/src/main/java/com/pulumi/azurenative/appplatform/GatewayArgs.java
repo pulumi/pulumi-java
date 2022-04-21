@@ -7,9 +7,9 @@ import com.pulumi.azurenative.appplatform.inputs.GatewayPropertiesArgs;
 import com.pulumi.azurenative.appplatform.inputs.SkuArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class GatewayArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="gatewayName")
-      private final @Nullable Output<String> gatewayName;
+    private @Nullable Output<String> gatewayName;
 
-    public Output<String> gatewayName() {
-        return this.gatewayName == null ? Codegen.empty() : this.gatewayName;
+    public Optional<Output<String>> gatewayName() {
+        return Optional.ofNullable(this.gatewayName);
     }
 
     /**
@@ -33,10 +33,10 @@ public final class GatewayArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="properties")
-      private final @Nullable Output<GatewayPropertiesArgs> properties;
+    private @Nullable Output<GatewayPropertiesArgs> properties;
 
-    public Output<GatewayPropertiesArgs> properties() {
-        return this.properties == null ? Codegen.empty() : this.properties;
+    public Optional<Output<GatewayPropertiesArgs>> properties() {
+        return Optional.ofNullable(this.properties);
     }
 
     /**
@@ -44,7 +44,7 @@ public final class GatewayArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -55,7 +55,7 @@ public final class GatewayArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="serviceName", required=true)
-      private final Output<String> serviceName;
+    private Output<String> serviceName;
 
     public Output<String> serviceName() {
         return this.serviceName;
@@ -66,102 +66,90 @@ public final class GatewayArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="sku")
-      private final @Nullable Output<SkuArgs> sku;
+    private @Nullable Output<SkuArgs> sku;
 
-    public Output<SkuArgs> sku() {
-        return this.sku == null ? Codegen.empty() : this.sku;
+    public Optional<Output<SkuArgs>> sku() {
+        return Optional.ofNullable(this.sku);
     }
 
-    public GatewayArgs(
-        @Nullable Output<String> gatewayName,
-        @Nullable Output<GatewayPropertiesArgs> properties,
-        Output<String> resourceGroupName,
-        Output<String> serviceName,
-        @Nullable Output<SkuArgs> sku) {
-        this.gatewayName = gatewayName;
-        this.properties = properties;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.serviceName = Objects.requireNonNull(serviceName, "expected parameter 'serviceName' to be non-null");
-        this.sku = sku;
-    }
+    private GatewayArgs() {}
 
-    private GatewayArgs() {
-        this.gatewayName = Codegen.empty();
-        this.properties = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.serviceName = Codegen.empty();
-        this.sku = Codegen.empty();
+    private GatewayArgs(GatewayArgs $) {
+        this.gatewayName = $.gatewayName;
+        this.properties = $.properties;
+        this.resourceGroupName = $.resourceGroupName;
+        this.serviceName = $.serviceName;
+        this.sku = $.sku;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GatewayArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> gatewayName;
-        private @Nullable Output<GatewayPropertiesArgs> properties;
-        private Output<String> resourceGroupName;
-        private Output<String> serviceName;
-        private @Nullable Output<SkuArgs> sku;
+        private GatewayArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GatewayArgs();
         }
 
         public Builder(GatewayArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.gatewayName = defaults.gatewayName;
-    	      this.properties = defaults.properties;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.serviceName = defaults.serviceName;
-    	      this.sku = defaults.sku;
+            $ = new GatewayArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder gatewayName(@Nullable Output<String> gatewayName) {
-            this.gatewayName = gatewayName;
+            $.gatewayName = gatewayName;
             return this;
         }
-        public Builder gatewayName(@Nullable String gatewayName) {
-            this.gatewayName = Codegen.ofNullable(gatewayName);
-            return this;
+
+        public Builder gatewayName(String gatewayName) {
+            return gatewayName(Output.of(gatewayName));
         }
+
         public Builder properties(@Nullable Output<GatewayPropertiesArgs> properties) {
-            this.properties = properties;
+            $.properties = properties;
             return this;
         }
-        public Builder properties(@Nullable GatewayPropertiesArgs properties) {
-            this.properties = Codegen.ofNullable(properties);
-            return this;
+
+        public Builder properties(GatewayPropertiesArgs properties) {
+            return properties(Output.of(properties));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder serviceName(Output<String> serviceName) {
-            this.serviceName = Objects.requireNonNull(serviceName);
+            $.serviceName = serviceName;
             return this;
         }
+
         public Builder serviceName(String serviceName) {
-            this.serviceName = Output.of(Objects.requireNonNull(serviceName));
-            return this;
+            return serviceName(Output.of(serviceName));
         }
+
         public Builder sku(@Nullable Output<SkuArgs> sku) {
-            this.sku = sku;
+            $.sku = sku;
             return this;
         }
-        public Builder sku(@Nullable SkuArgs sku) {
-            this.sku = Codegen.ofNullable(sku);
-            return this;
-        }        public GatewayArgs build() {
-            return new GatewayArgs(gatewayName, properties, resourceGroupName, serviceName, sku);
+
+        public Builder sku(SkuArgs sku) {
+            return sku(Output.of(sku));
+        }
+
+        public GatewayArgs build() {
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.serviceName = Objects.requireNonNull($.serviceName, "expected parameter 'serviceName' to be non-null");
+            return $;
         }
     }
+
 }

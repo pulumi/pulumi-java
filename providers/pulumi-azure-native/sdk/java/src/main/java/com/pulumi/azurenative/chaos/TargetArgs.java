@@ -5,10 +5,10 @@ package com.pulumi.azurenative.chaos;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class TargetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -32,7 +32,7 @@ public final class TargetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="parentProviderNamespace", required=true)
-      private final Output<String> parentProviderNamespace;
+    private Output<String> parentProviderNamespace;
 
     public Output<String> parentProviderNamespace() {
         return this.parentProviderNamespace;
@@ -43,7 +43,7 @@ public final class TargetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="parentResourceName", required=true)
-      private final Output<String> parentResourceName;
+    private Output<String> parentResourceName;
 
     public Output<String> parentResourceName() {
         return this.parentResourceName;
@@ -54,7 +54,7 @@ public final class TargetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="parentResourceType", required=true)
-      private final Output<String> parentResourceType;
+    private Output<String> parentResourceType;
 
     public Output<String> parentResourceType() {
         return this.parentResourceType;
@@ -65,7 +65,7 @@ public final class TargetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="properties", required=true)
-      private final Output<Object> properties;
+    private Output<Object> properties;
 
     public Output<Object> properties() {
         return this.properties;
@@ -76,7 +76,7 @@ public final class TargetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -87,128 +87,113 @@ public final class TargetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="targetName")
-      private final @Nullable Output<String> targetName;
+    private @Nullable Output<String> targetName;
 
-    public Output<String> targetName() {
-        return this.targetName == null ? Codegen.empty() : this.targetName;
+    public Optional<Output<String>> targetName() {
+        return Optional.ofNullable(this.targetName);
     }
 
-    public TargetArgs(
-        @Nullable Output<String> location,
-        Output<String> parentProviderNamespace,
-        Output<String> parentResourceName,
-        Output<String> parentResourceType,
-        Output<Object> properties,
-        Output<String> resourceGroupName,
-        @Nullable Output<String> targetName) {
-        this.location = location;
-        this.parentProviderNamespace = Objects.requireNonNull(parentProviderNamespace, "expected parameter 'parentProviderNamespace' to be non-null");
-        this.parentResourceName = Objects.requireNonNull(parentResourceName, "expected parameter 'parentResourceName' to be non-null");
-        this.parentResourceType = Objects.requireNonNull(parentResourceType, "expected parameter 'parentResourceType' to be non-null");
-        this.properties = Objects.requireNonNull(properties, "expected parameter 'properties' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.targetName = targetName;
-    }
+    private TargetArgs() {}
 
-    private TargetArgs() {
-        this.location = Codegen.empty();
-        this.parentProviderNamespace = Codegen.empty();
-        this.parentResourceName = Codegen.empty();
-        this.parentResourceType = Codegen.empty();
-        this.properties = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.targetName = Codegen.empty();
+    private TargetArgs(TargetArgs $) {
+        this.location = $.location;
+        this.parentProviderNamespace = $.parentProviderNamespace;
+        this.parentResourceName = $.parentResourceName;
+        this.parentResourceType = $.parentResourceType;
+        this.properties = $.properties;
+        this.resourceGroupName = $.resourceGroupName;
+        this.targetName = $.targetName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TargetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> location;
-        private Output<String> parentProviderNamespace;
-        private Output<String> parentResourceName;
-        private Output<String> parentResourceType;
-        private Output<Object> properties;
-        private Output<String> resourceGroupName;
-        private @Nullable Output<String> targetName;
+        private TargetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TargetArgs();
         }
 
         public Builder(TargetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.location = defaults.location;
-    	      this.parentProviderNamespace = defaults.parentProviderNamespace;
-    	      this.parentResourceName = defaults.parentResourceName;
-    	      this.parentResourceType = defaults.parentResourceType;
-    	      this.properties = defaults.properties;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.targetName = defaults.targetName;
+            $ = new TargetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder parentProviderNamespace(Output<String> parentProviderNamespace) {
-            this.parentProviderNamespace = Objects.requireNonNull(parentProviderNamespace);
+            $.parentProviderNamespace = parentProviderNamespace;
             return this;
         }
+
         public Builder parentProviderNamespace(String parentProviderNamespace) {
-            this.parentProviderNamespace = Output.of(Objects.requireNonNull(parentProviderNamespace));
-            return this;
+            return parentProviderNamespace(Output.of(parentProviderNamespace));
         }
+
         public Builder parentResourceName(Output<String> parentResourceName) {
-            this.parentResourceName = Objects.requireNonNull(parentResourceName);
+            $.parentResourceName = parentResourceName;
             return this;
         }
+
         public Builder parentResourceName(String parentResourceName) {
-            this.parentResourceName = Output.of(Objects.requireNonNull(parentResourceName));
-            return this;
+            return parentResourceName(Output.of(parentResourceName));
         }
+
         public Builder parentResourceType(Output<String> parentResourceType) {
-            this.parentResourceType = Objects.requireNonNull(parentResourceType);
+            $.parentResourceType = parentResourceType;
             return this;
         }
+
         public Builder parentResourceType(String parentResourceType) {
-            this.parentResourceType = Output.of(Objects.requireNonNull(parentResourceType));
-            return this;
+            return parentResourceType(Output.of(parentResourceType));
         }
+
         public Builder properties(Output<Object> properties) {
-            this.properties = Objects.requireNonNull(properties);
+            $.properties = properties;
             return this;
         }
+
         public Builder properties(Object properties) {
-            this.properties = Output.of(Objects.requireNonNull(properties));
-            return this;
+            return properties(Output.of(properties));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder targetName(@Nullable Output<String> targetName) {
-            this.targetName = targetName;
+            $.targetName = targetName;
             return this;
         }
-        public Builder targetName(@Nullable String targetName) {
-            this.targetName = Codegen.ofNullable(targetName);
-            return this;
-        }        public TargetArgs build() {
-            return new TargetArgs(location, parentProviderNamespace, parentResourceName, parentResourceType, properties, resourceGroupName, targetName);
+
+        public Builder targetName(String targetName) {
+            return targetName(Output.of(targetName));
+        }
+
+        public TargetArgs build() {
+            $.parentProviderNamespace = Objects.requireNonNull($.parentProviderNamespace, "expected parameter 'parentProviderNamespace' to be non-null");
+            $.parentResourceName = Objects.requireNonNull($.parentResourceName, "expected parameter 'parentResourceName' to be non-null");
+            $.parentResourceType = Objects.requireNonNull($.parentResourceType, "expected parameter 'parentResourceType' to be non-null");
+            $.properties = Objects.requireNonNull($.properties, "expected parameter 'properties' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

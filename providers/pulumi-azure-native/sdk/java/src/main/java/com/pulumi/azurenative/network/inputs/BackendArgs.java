@@ -7,10 +7,10 @@ import com.pulumi.azurenative.network.enums.BackendEnabledState;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +27,10 @@ public final class BackendArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="address")
-      private final @Nullable Output<String> address;
+    private @Nullable Output<String> address;
 
-    public Output<String> address() {
-        return this.address == null ? Codegen.empty() : this.address;
+    public Optional<Output<String>> address() {
+        return Optional.ofNullable(this.address);
     }
 
     /**
@@ -38,10 +38,10 @@ public final class BackendArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="backendHostHeader")
-      private final @Nullable Output<String> backendHostHeader;
+    private @Nullable Output<String> backendHostHeader;
 
-    public Output<String> backendHostHeader() {
-        return this.backendHostHeader == null ? Codegen.empty() : this.backendHostHeader;
+    public Optional<Output<String>> backendHostHeader() {
+        return Optional.ofNullable(this.backendHostHeader);
     }
 
     /**
@@ -49,10 +49,10 @@ public final class BackendArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="enabledState")
-      private final @Nullable Output<Either<String,BackendEnabledState>> enabledState;
+    private @Nullable Output<Either<String,BackendEnabledState>> enabledState;
 
-    public Output<Either<String,BackendEnabledState>> enabledState() {
-        return this.enabledState == null ? Codegen.empty() : this.enabledState;
+    public Optional<Output<Either<String,BackendEnabledState>>> enabledState() {
+        return Optional.ofNullable(this.enabledState);
     }
 
     /**
@@ -60,10 +60,10 @@ public final class BackendArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="httpPort")
-      private final @Nullable Output<Integer> httpPort;
+    private @Nullable Output<Integer> httpPort;
 
-    public Output<Integer> httpPort() {
-        return this.httpPort == null ? Codegen.empty() : this.httpPort;
+    public Optional<Output<Integer>> httpPort() {
+        return Optional.ofNullable(this.httpPort);
     }
 
     /**
@@ -71,10 +71,10 @@ public final class BackendArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="httpsPort")
-      private final @Nullable Output<Integer> httpsPort;
+    private @Nullable Output<Integer> httpsPort;
 
-    public Output<Integer> httpsPort() {
-        return this.httpsPort == null ? Codegen.empty() : this.httpsPort;
+    public Optional<Output<Integer>> httpsPort() {
+        return Optional.ofNullable(this.httpsPort);
     }
 
     /**
@@ -82,10 +82,10 @@ public final class BackendArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="priority")
-      private final @Nullable Output<Integer> priority;
+    private @Nullable Output<Integer> priority;
 
-    public Output<Integer> priority() {
-        return this.priority == null ? Codegen.empty() : this.priority;
+    public Optional<Output<Integer>> priority() {
+        return Optional.ofNullable(this.priority);
     }
 
     /**
@@ -93,10 +93,10 @@ public final class BackendArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="privateLinkAlias")
-      private final @Nullable Output<String> privateLinkAlias;
+    private @Nullable Output<String> privateLinkAlias;
 
-    public Output<String> privateLinkAlias() {
-        return this.privateLinkAlias == null ? Codegen.empty() : this.privateLinkAlias;
+    public Optional<Output<String>> privateLinkAlias() {
+        return Optional.ofNullable(this.privateLinkAlias);
     }
 
     /**
@@ -104,10 +104,10 @@ public final class BackendArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="privateLinkApprovalMessage")
-      private final @Nullable Output<String> privateLinkApprovalMessage;
+    private @Nullable Output<String> privateLinkApprovalMessage;
 
-    public Output<String> privateLinkApprovalMessage() {
-        return this.privateLinkApprovalMessage == null ? Codegen.empty() : this.privateLinkApprovalMessage;
+    public Optional<Output<String>> privateLinkApprovalMessage() {
+        return Optional.ofNullable(this.privateLinkApprovalMessage);
     }
 
     /**
@@ -115,10 +115,10 @@ public final class BackendArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="privateLinkLocation")
-      private final @Nullable Output<String> privateLinkLocation;
+    private @Nullable Output<String> privateLinkLocation;
 
-    public Output<String> privateLinkLocation() {
-        return this.privateLinkLocation == null ? Codegen.empty() : this.privateLinkLocation;
+    public Optional<Output<String>> privateLinkLocation() {
+        return Optional.ofNullable(this.privateLinkLocation);
     }
 
     /**
@@ -126,10 +126,10 @@ public final class BackendArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="privateLinkResourceId")
-      private final @Nullable Output<String> privateLinkResourceId;
+    private @Nullable Output<String> privateLinkResourceId;
 
-    public Output<String> privateLinkResourceId() {
-        return this.privateLinkResourceId == null ? Codegen.empty() : this.privateLinkResourceId;
+    public Optional<Output<String>> privateLinkResourceId() {
+        return Optional.ofNullable(this.privateLinkResourceId);
     }
 
     /**
@@ -137,180 +137,148 @@ public final class BackendArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="weight")
-      private final @Nullable Output<Integer> weight;
+    private @Nullable Output<Integer> weight;
 
-    public Output<Integer> weight() {
-        return this.weight == null ? Codegen.empty() : this.weight;
+    public Optional<Output<Integer>> weight() {
+        return Optional.ofNullable(this.weight);
     }
 
-    public BackendArgs(
-        @Nullable Output<String> address,
-        @Nullable Output<String> backendHostHeader,
-        @Nullable Output<Either<String,BackendEnabledState>> enabledState,
-        @Nullable Output<Integer> httpPort,
-        @Nullable Output<Integer> httpsPort,
-        @Nullable Output<Integer> priority,
-        @Nullable Output<String> privateLinkAlias,
-        @Nullable Output<String> privateLinkApprovalMessage,
-        @Nullable Output<String> privateLinkLocation,
-        @Nullable Output<String> privateLinkResourceId,
-        @Nullable Output<Integer> weight) {
-        this.address = address;
-        this.backendHostHeader = backendHostHeader;
-        this.enabledState = enabledState;
-        this.httpPort = httpPort;
-        this.httpsPort = httpsPort;
-        this.priority = priority;
-        this.privateLinkAlias = privateLinkAlias;
-        this.privateLinkApprovalMessage = privateLinkApprovalMessage;
-        this.privateLinkLocation = privateLinkLocation;
-        this.privateLinkResourceId = privateLinkResourceId;
-        this.weight = weight;
-    }
+    private BackendArgs() {}
 
-    private BackendArgs() {
-        this.address = Codegen.empty();
-        this.backendHostHeader = Codegen.empty();
-        this.enabledState = Codegen.empty();
-        this.httpPort = Codegen.empty();
-        this.httpsPort = Codegen.empty();
-        this.priority = Codegen.empty();
-        this.privateLinkAlias = Codegen.empty();
-        this.privateLinkApprovalMessage = Codegen.empty();
-        this.privateLinkLocation = Codegen.empty();
-        this.privateLinkResourceId = Codegen.empty();
-        this.weight = Codegen.empty();
+    private BackendArgs(BackendArgs $) {
+        this.address = $.address;
+        this.backendHostHeader = $.backendHostHeader;
+        this.enabledState = $.enabledState;
+        this.httpPort = $.httpPort;
+        this.httpsPort = $.httpsPort;
+        this.priority = $.priority;
+        this.privateLinkAlias = $.privateLinkAlias;
+        this.privateLinkApprovalMessage = $.privateLinkApprovalMessage;
+        this.privateLinkLocation = $.privateLinkLocation;
+        this.privateLinkResourceId = $.privateLinkResourceId;
+        this.weight = $.weight;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BackendArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> address;
-        private @Nullable Output<String> backendHostHeader;
-        private @Nullable Output<Either<String,BackendEnabledState>> enabledState;
-        private @Nullable Output<Integer> httpPort;
-        private @Nullable Output<Integer> httpsPort;
-        private @Nullable Output<Integer> priority;
-        private @Nullable Output<String> privateLinkAlias;
-        private @Nullable Output<String> privateLinkApprovalMessage;
-        private @Nullable Output<String> privateLinkLocation;
-        private @Nullable Output<String> privateLinkResourceId;
-        private @Nullable Output<Integer> weight;
+        private BackendArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new BackendArgs();
         }
 
         public Builder(BackendArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.address = defaults.address;
-    	      this.backendHostHeader = defaults.backendHostHeader;
-    	      this.enabledState = defaults.enabledState;
-    	      this.httpPort = defaults.httpPort;
-    	      this.httpsPort = defaults.httpsPort;
-    	      this.priority = defaults.priority;
-    	      this.privateLinkAlias = defaults.privateLinkAlias;
-    	      this.privateLinkApprovalMessage = defaults.privateLinkApprovalMessage;
-    	      this.privateLinkLocation = defaults.privateLinkLocation;
-    	      this.privateLinkResourceId = defaults.privateLinkResourceId;
-    	      this.weight = defaults.weight;
+            $ = new BackendArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder address(@Nullable Output<String> address) {
-            this.address = address;
+            $.address = address;
             return this;
         }
-        public Builder address(@Nullable String address) {
-            this.address = Codegen.ofNullable(address);
-            return this;
+
+        public Builder address(String address) {
+            return address(Output.of(address));
         }
+
         public Builder backendHostHeader(@Nullable Output<String> backendHostHeader) {
-            this.backendHostHeader = backendHostHeader;
+            $.backendHostHeader = backendHostHeader;
             return this;
         }
-        public Builder backendHostHeader(@Nullable String backendHostHeader) {
-            this.backendHostHeader = Codegen.ofNullable(backendHostHeader);
-            return this;
+
+        public Builder backendHostHeader(String backendHostHeader) {
+            return backendHostHeader(Output.of(backendHostHeader));
         }
+
         public Builder enabledState(@Nullable Output<Either<String,BackendEnabledState>> enabledState) {
-            this.enabledState = enabledState;
+            $.enabledState = enabledState;
             return this;
         }
-        public Builder enabledState(@Nullable Either<String,BackendEnabledState> enabledState) {
-            this.enabledState = Codegen.ofNullable(enabledState);
-            return this;
+
+        public Builder enabledState(Either<String,BackendEnabledState> enabledState) {
+            return enabledState(Output.of(enabledState));
         }
+
         public Builder httpPort(@Nullable Output<Integer> httpPort) {
-            this.httpPort = httpPort;
+            $.httpPort = httpPort;
             return this;
         }
-        public Builder httpPort(@Nullable Integer httpPort) {
-            this.httpPort = Codegen.ofNullable(httpPort);
-            return this;
+
+        public Builder httpPort(Integer httpPort) {
+            return httpPort(Output.of(httpPort));
         }
+
         public Builder httpsPort(@Nullable Output<Integer> httpsPort) {
-            this.httpsPort = httpsPort;
+            $.httpsPort = httpsPort;
             return this;
         }
-        public Builder httpsPort(@Nullable Integer httpsPort) {
-            this.httpsPort = Codegen.ofNullable(httpsPort);
-            return this;
+
+        public Builder httpsPort(Integer httpsPort) {
+            return httpsPort(Output.of(httpsPort));
         }
+
         public Builder priority(@Nullable Output<Integer> priority) {
-            this.priority = priority;
+            $.priority = priority;
             return this;
         }
-        public Builder priority(@Nullable Integer priority) {
-            this.priority = Codegen.ofNullable(priority);
-            return this;
+
+        public Builder priority(Integer priority) {
+            return priority(Output.of(priority));
         }
+
         public Builder privateLinkAlias(@Nullable Output<String> privateLinkAlias) {
-            this.privateLinkAlias = privateLinkAlias;
+            $.privateLinkAlias = privateLinkAlias;
             return this;
         }
-        public Builder privateLinkAlias(@Nullable String privateLinkAlias) {
-            this.privateLinkAlias = Codegen.ofNullable(privateLinkAlias);
-            return this;
+
+        public Builder privateLinkAlias(String privateLinkAlias) {
+            return privateLinkAlias(Output.of(privateLinkAlias));
         }
+
         public Builder privateLinkApprovalMessage(@Nullable Output<String> privateLinkApprovalMessage) {
-            this.privateLinkApprovalMessage = privateLinkApprovalMessage;
+            $.privateLinkApprovalMessage = privateLinkApprovalMessage;
             return this;
         }
-        public Builder privateLinkApprovalMessage(@Nullable String privateLinkApprovalMessage) {
-            this.privateLinkApprovalMessage = Codegen.ofNullable(privateLinkApprovalMessage);
-            return this;
+
+        public Builder privateLinkApprovalMessage(String privateLinkApprovalMessage) {
+            return privateLinkApprovalMessage(Output.of(privateLinkApprovalMessage));
         }
+
         public Builder privateLinkLocation(@Nullable Output<String> privateLinkLocation) {
-            this.privateLinkLocation = privateLinkLocation;
+            $.privateLinkLocation = privateLinkLocation;
             return this;
         }
-        public Builder privateLinkLocation(@Nullable String privateLinkLocation) {
-            this.privateLinkLocation = Codegen.ofNullable(privateLinkLocation);
-            return this;
+
+        public Builder privateLinkLocation(String privateLinkLocation) {
+            return privateLinkLocation(Output.of(privateLinkLocation));
         }
+
         public Builder privateLinkResourceId(@Nullable Output<String> privateLinkResourceId) {
-            this.privateLinkResourceId = privateLinkResourceId;
+            $.privateLinkResourceId = privateLinkResourceId;
             return this;
         }
-        public Builder privateLinkResourceId(@Nullable String privateLinkResourceId) {
-            this.privateLinkResourceId = Codegen.ofNullable(privateLinkResourceId);
-            return this;
+
+        public Builder privateLinkResourceId(String privateLinkResourceId) {
+            return privateLinkResourceId(Output.of(privateLinkResourceId));
         }
+
         public Builder weight(@Nullable Output<Integer> weight) {
-            this.weight = weight;
+            $.weight = weight;
             return this;
         }
-        public Builder weight(@Nullable Integer weight) {
-            this.weight = Codegen.ofNullable(weight);
-            return this;
-        }        public BackendArgs build() {
-            return new BackendArgs(address, backendHostHeader, enabledState, httpPort, httpsPort, priority, privateLinkAlias, privateLinkApprovalMessage, privateLinkLocation, privateLinkResourceId, weight);
+
+        public Builder weight(Integer weight) {
+            return weight(Output.of(weight));
+        }
+
+        public BackendArgs build() {
+            return $;
         }
     }
+
 }

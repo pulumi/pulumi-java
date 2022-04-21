@@ -23,10 +23,10 @@ public final class StorageInsightStatusResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="description")
-      private final @Nullable String description;
+    private @Nullable String description;
 
     public Optional<String> description() {
-        return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -34,55 +34,51 @@ public final class StorageInsightStatusResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="state", required=true)
-      private final String state;
+    private String state;
 
     public String state() {
         return this.state;
     }
 
-    public StorageInsightStatusResponse(
-        @Nullable String description,
-        String state) {
-        this.description = description;
-        this.state = Objects.requireNonNull(state, "expected parameter 'state' to be non-null");
-    }
+    private StorageInsightStatusResponse() {}
 
-    private StorageInsightStatusResponse() {
-        this.description = null;
-        this.state = null;
+    private StorageInsightStatusResponse(StorageInsightStatusResponse $) {
+        this.description = $.description;
+        this.state = $.state;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(StorageInsightStatusResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String description;
-        private String state;
+        private StorageInsightStatusResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new StorageInsightStatusResponse();
         }
 
         public Builder(StorageInsightStatusResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.description = defaults.description;
-    	      this.state = defaults.state;
+            $ = new StorageInsightStatusResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder description(@Nullable String description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
+
         public Builder state(String state) {
-            this.state = Objects.requireNonNull(state);
+            $.state = state;
             return this;
-        }        public StorageInsightStatusResponse build() {
-            return new StorageInsightStatusResponse(description, state);
+        }
+
+        public StorageInsightStatusResponse build() {
+            $.state = Objects.requireNonNull($.state, "expected parameter 'state' to be non-null");
+            return $;
         }
     }
+
 }

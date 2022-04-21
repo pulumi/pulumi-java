@@ -23,10 +23,10 @@ public final class FlowEndpointsConfigurationResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="connector")
-      private final @Nullable FlowEndpointsResponse connector;
+    private @Nullable FlowEndpointsResponse connector;
 
     public Optional<FlowEndpointsResponse> connector() {
-        return this.connector == null ? Optional.empty() : Optional.ofNullable(this.connector);
+        return Optional.ofNullable(this.connector);
     }
 
     /**
@@ -34,55 +34,50 @@ public final class FlowEndpointsConfigurationResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="workflow")
-      private final @Nullable FlowEndpointsResponse workflow;
+    private @Nullable FlowEndpointsResponse workflow;
 
     public Optional<FlowEndpointsResponse> workflow() {
-        return this.workflow == null ? Optional.empty() : Optional.ofNullable(this.workflow);
+        return Optional.ofNullable(this.workflow);
     }
 
-    public FlowEndpointsConfigurationResponse(
-        @Nullable FlowEndpointsResponse connector,
-        @Nullable FlowEndpointsResponse workflow) {
-        this.connector = connector;
-        this.workflow = workflow;
-    }
+    private FlowEndpointsConfigurationResponse() {}
 
-    private FlowEndpointsConfigurationResponse() {
-        this.connector = null;
-        this.workflow = null;
+    private FlowEndpointsConfigurationResponse(FlowEndpointsConfigurationResponse $) {
+        this.connector = $.connector;
+        this.workflow = $.workflow;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FlowEndpointsConfigurationResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable FlowEndpointsResponse connector;
-        private @Nullable FlowEndpointsResponse workflow;
+        private FlowEndpointsConfigurationResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new FlowEndpointsConfigurationResponse();
         }
 
         public Builder(FlowEndpointsConfigurationResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.connector = defaults.connector;
-    	      this.workflow = defaults.workflow;
+            $ = new FlowEndpointsConfigurationResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder connector(@Nullable FlowEndpointsResponse connector) {
-            this.connector = connector;
+            $.connector = connector;
             return this;
         }
+
         public Builder workflow(@Nullable FlowEndpointsResponse workflow) {
-            this.workflow = workflow;
+            $.workflow = workflow;
             return this;
-        }        public FlowEndpointsConfigurationResponse build() {
-            return new FlowEndpointsConfigurationResponse(connector, workflow);
+        }
+
+        public FlowEndpointsConfigurationResponse build() {
+            return $;
         }
     }
+
 }

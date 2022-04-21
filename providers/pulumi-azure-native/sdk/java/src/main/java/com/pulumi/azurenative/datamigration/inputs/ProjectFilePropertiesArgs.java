@@ -5,9 +5,9 @@ package com.pulumi.azurenative.datamigration.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class ProjectFilePropertiesArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="extension")
-      private final @Nullable Output<String> extension;
+    private @Nullable Output<String> extension;
 
-    public Output<String> extension() {
-        return this.extension == null ? Codegen.empty() : this.extension;
+    public Optional<Output<String>> extension() {
+        return Optional.ofNullable(this.extension);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class ProjectFilePropertiesArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="filePath")
-      private final @Nullable Output<String> filePath;
+    private @Nullable Output<String> filePath;
 
-    public Output<String> filePath() {
-        return this.filePath == null ? Codegen.empty() : this.filePath;
+    public Optional<Output<String>> filePath() {
+        return Optional.ofNullable(this.filePath);
     }
 
     /**
@@ -46,76 +46,68 @@ public final class ProjectFilePropertiesArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="mediaType")
-      private final @Nullable Output<String> mediaType;
+    private @Nullable Output<String> mediaType;
 
-    public Output<String> mediaType() {
-        return this.mediaType == null ? Codegen.empty() : this.mediaType;
+    public Optional<Output<String>> mediaType() {
+        return Optional.ofNullable(this.mediaType);
     }
 
-    public ProjectFilePropertiesArgs(
-        @Nullable Output<String> extension,
-        @Nullable Output<String> filePath,
-        @Nullable Output<String> mediaType) {
-        this.extension = extension;
-        this.filePath = filePath;
-        this.mediaType = mediaType;
-    }
+    private ProjectFilePropertiesArgs() {}
 
-    private ProjectFilePropertiesArgs() {
-        this.extension = Codegen.empty();
-        this.filePath = Codegen.empty();
-        this.mediaType = Codegen.empty();
+    private ProjectFilePropertiesArgs(ProjectFilePropertiesArgs $) {
+        this.extension = $.extension;
+        this.filePath = $.filePath;
+        this.mediaType = $.mediaType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ProjectFilePropertiesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> extension;
-        private @Nullable Output<String> filePath;
-        private @Nullable Output<String> mediaType;
+        private ProjectFilePropertiesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ProjectFilePropertiesArgs();
         }
 
         public Builder(ProjectFilePropertiesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.extension = defaults.extension;
-    	      this.filePath = defaults.filePath;
-    	      this.mediaType = defaults.mediaType;
+            $ = new ProjectFilePropertiesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder extension(@Nullable Output<String> extension) {
-            this.extension = extension;
+            $.extension = extension;
             return this;
         }
-        public Builder extension(@Nullable String extension) {
-            this.extension = Codegen.ofNullable(extension);
-            return this;
+
+        public Builder extension(String extension) {
+            return extension(Output.of(extension));
         }
+
         public Builder filePath(@Nullable Output<String> filePath) {
-            this.filePath = filePath;
+            $.filePath = filePath;
             return this;
         }
-        public Builder filePath(@Nullable String filePath) {
-            this.filePath = Codegen.ofNullable(filePath);
-            return this;
+
+        public Builder filePath(String filePath) {
+            return filePath(Output.of(filePath));
         }
+
         public Builder mediaType(@Nullable Output<String> mediaType) {
-            this.mediaType = mediaType;
+            $.mediaType = mediaType;
             return this;
         }
-        public Builder mediaType(@Nullable String mediaType) {
-            this.mediaType = Codegen.ofNullable(mediaType);
-            return this;
-        }        public ProjectFilePropertiesArgs build() {
-            return new ProjectFilePropertiesArgs(extension, filePath, mediaType);
+
+        public Builder mediaType(String mediaType) {
+            return mediaType(Output.of(mediaType));
+        }
+
+        public ProjectFilePropertiesArgs build() {
+            return $;
         }
     }
+
 }

@@ -17,7 +17,7 @@ public final class GetQueueArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="accountName", required=true)
-      private final String accountName;
+    private String accountName;
 
     public String accountName() {
         return this.accountName;
@@ -28,7 +28,7 @@ public final class GetQueueArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="queueName", required=true)
-      private final String queueName;
+    private String queueName;
 
     public String queueName() {
         return this.queueName;
@@ -39,64 +39,59 @@ public final class GetQueueArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public GetQueueArgs(
-        String accountName,
-        String queueName,
-        String resourceGroupName) {
-        this.accountName = Objects.requireNonNull(accountName, "expected parameter 'accountName' to be non-null");
-        this.queueName = Objects.requireNonNull(queueName, "expected parameter 'queueName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private GetQueueArgs() {}
 
-    private GetQueueArgs() {
-        this.accountName = null;
-        this.queueName = null;
-        this.resourceGroupName = null;
+    private GetQueueArgs(GetQueueArgs $) {
+        this.accountName = $.accountName;
+        this.queueName = $.queueName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetQueueArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String accountName;
-        private String queueName;
-        private String resourceGroupName;
+        private GetQueueArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetQueueArgs();
         }
 
         public Builder(GetQueueArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accountName = defaults.accountName;
-    	      this.queueName = defaults.queueName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new GetQueueArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder accountName(String accountName) {
-            this.accountName = Objects.requireNonNull(accountName);
+            $.accountName = accountName;
             return this;
         }
+
         public Builder queueName(String queueName) {
-            this.queueName = Objects.requireNonNull(queueName);
+            $.queueName = queueName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public GetQueueArgs build() {
-            return new GetQueueArgs(accountName, queueName, resourceGroupName);
+        }
+
+        public GetQueueArgs build() {
+            $.accountName = Objects.requireNonNull($.accountName, "expected parameter 'accountName' to be non-null");
+            $.queueName = Objects.requireNonNull($.queueName, "expected parameter 'queueName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

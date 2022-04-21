@@ -5,9 +5,9 @@ package com.pulumi.googlenative.gkehub_v1beta.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class MultiClusterIngressFeatureSpecArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="configMembership")
-      private final @Nullable Output<String> configMembership;
+    private @Nullable Output<String> configMembership;
 
-    public Output<String> configMembership() {
-        return this.configMembership == null ? Codegen.empty() : this.configMembership;
+    public Optional<Output<String>> configMembership() {
+        return Optional.ofNullable(this.configMembership);
     }
 
-    public MultiClusterIngressFeatureSpecArgs(@Nullable Output<String> configMembership) {
-        this.configMembership = configMembership;
-    }
+    private MultiClusterIngressFeatureSpecArgs() {}
 
-    private MultiClusterIngressFeatureSpecArgs() {
-        this.configMembership = Codegen.empty();
+    private MultiClusterIngressFeatureSpecArgs(MultiClusterIngressFeatureSpecArgs $) {
+        this.configMembership = $.configMembership;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MultiClusterIngressFeatureSpecArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> configMembership;
+        private MultiClusterIngressFeatureSpecArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new MultiClusterIngressFeatureSpecArgs();
         }
 
         public Builder(MultiClusterIngressFeatureSpecArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.configMembership = defaults.configMembership;
+            $ = new MultiClusterIngressFeatureSpecArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder configMembership(@Nullable Output<String> configMembership) {
-            this.configMembership = configMembership;
+            $.configMembership = configMembership;
             return this;
         }
-        public Builder configMembership(@Nullable String configMembership) {
-            this.configMembership = Codegen.ofNullable(configMembership);
-            return this;
-        }        public MultiClusterIngressFeatureSpecArgs build() {
-            return new MultiClusterIngressFeatureSpecArgs(configMembership);
+
+        public Builder configMembership(String configMembership) {
+            return configMembership(Output.of(configMembership));
+        }
+
+        public MultiClusterIngressFeatureSpecArgs build() {
+            return $;
         }
     }
+
 }

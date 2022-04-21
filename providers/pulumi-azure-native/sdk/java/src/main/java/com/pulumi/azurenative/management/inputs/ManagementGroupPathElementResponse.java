@@ -23,10 +23,10 @@ public final class ManagementGroupPathElementResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="displayName")
-      private final @Nullable String displayName;
+    private @Nullable String displayName;
 
     public Optional<String> displayName() {
-        return this.displayName == null ? Optional.empty() : Optional.ofNullable(this.displayName);
+        return Optional.ofNullable(this.displayName);
     }
 
     /**
@@ -34,55 +34,50 @@ public final class ManagementGroupPathElementResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="name")
-      private final @Nullable String name;
+    private @Nullable String name;
 
     public Optional<String> name() {
-        return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
+        return Optional.ofNullable(this.name);
     }
 
-    public ManagementGroupPathElementResponse(
-        @Nullable String displayName,
-        @Nullable String name) {
-        this.displayName = displayName;
-        this.name = name;
-    }
+    private ManagementGroupPathElementResponse() {}
 
-    private ManagementGroupPathElementResponse() {
-        this.displayName = null;
-        this.name = null;
+    private ManagementGroupPathElementResponse(ManagementGroupPathElementResponse $) {
+        this.displayName = $.displayName;
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ManagementGroupPathElementResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String displayName;
-        private @Nullable String name;
+        private ManagementGroupPathElementResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ManagementGroupPathElementResponse();
         }
 
         public Builder(ManagementGroupPathElementResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.displayName = defaults.displayName;
-    	      this.name = defaults.name;
+            $ = new ManagementGroupPathElementResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = displayName;
+            $.displayName = displayName;
             return this;
         }
+
         public Builder name(@Nullable String name) {
-            this.name = name;
+            $.name = name;
             return this;
-        }        public ManagementGroupPathElementResponse build() {
-            return new ManagementGroupPathElementResponse(displayName, name);
+        }
+
+        public ManagementGroupPathElementResponse build() {
+            return $;
         }
     }
+
 }

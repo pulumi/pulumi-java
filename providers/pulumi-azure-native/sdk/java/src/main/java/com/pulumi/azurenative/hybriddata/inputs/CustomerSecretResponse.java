@@ -21,7 +21,7 @@ public final class CustomerSecretResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="algorithm", required=true)
-      private final String algorithm;
+    private String algorithm;
 
     public String algorithm() {
         return this.algorithm;
@@ -32,7 +32,7 @@ public final class CustomerSecretResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="keyIdentifier", required=true)
-      private final String keyIdentifier;
+    private String keyIdentifier;
 
     public String keyIdentifier() {
         return this.keyIdentifier;
@@ -43,64 +43,59 @@ public final class CustomerSecretResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="keyValue", required=true)
-      private final String keyValue;
+    private String keyValue;
 
     public String keyValue() {
         return this.keyValue;
     }
 
-    public CustomerSecretResponse(
-        String algorithm,
-        String keyIdentifier,
-        String keyValue) {
-        this.algorithm = Objects.requireNonNull(algorithm, "expected parameter 'algorithm' to be non-null");
-        this.keyIdentifier = Objects.requireNonNull(keyIdentifier, "expected parameter 'keyIdentifier' to be non-null");
-        this.keyValue = Objects.requireNonNull(keyValue, "expected parameter 'keyValue' to be non-null");
-    }
+    private CustomerSecretResponse() {}
 
-    private CustomerSecretResponse() {
-        this.algorithm = null;
-        this.keyIdentifier = null;
-        this.keyValue = null;
+    private CustomerSecretResponse(CustomerSecretResponse $) {
+        this.algorithm = $.algorithm;
+        this.keyIdentifier = $.keyIdentifier;
+        this.keyValue = $.keyValue;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CustomerSecretResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String algorithm;
-        private String keyIdentifier;
-        private String keyValue;
+        private CustomerSecretResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new CustomerSecretResponse();
         }
 
         public Builder(CustomerSecretResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.algorithm = defaults.algorithm;
-    	      this.keyIdentifier = defaults.keyIdentifier;
-    	      this.keyValue = defaults.keyValue;
+            $ = new CustomerSecretResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder algorithm(String algorithm) {
-            this.algorithm = Objects.requireNonNull(algorithm);
+            $.algorithm = algorithm;
             return this;
         }
+
         public Builder keyIdentifier(String keyIdentifier) {
-            this.keyIdentifier = Objects.requireNonNull(keyIdentifier);
+            $.keyIdentifier = keyIdentifier;
             return this;
         }
+
         public Builder keyValue(String keyValue) {
-            this.keyValue = Objects.requireNonNull(keyValue);
+            $.keyValue = keyValue;
             return this;
-        }        public CustomerSecretResponse build() {
-            return new CustomerSecretResponse(algorithm, keyIdentifier, keyValue);
+        }
+
+        public CustomerSecretResponse build() {
+            $.algorithm = Objects.requireNonNull($.algorithm, "expected parameter 'algorithm' to be non-null");
+            $.keyIdentifier = Objects.requireNonNull($.keyIdentifier, "expected parameter 'keyIdentifier' to be non-null");
+            $.keyValue = Objects.requireNonNull($.keyValue, "expected parameter 'keyValue' to be non-null");
+            return $;
         }
     }
+
 }

@@ -22,7 +22,7 @@ public final class ConnectToTargetSqlDbTaskOutputResponse extends com.pulumi.res
      * 
      */
     @Import(name="databases", required=true)
-      private final Map<String,String> databases;
+    private Map<String,String> databases;
 
     public Map<String,String> databases() {
         return this.databases;
@@ -33,7 +33,7 @@ public final class ConnectToTargetSqlDbTaskOutputResponse extends com.pulumi.res
      * 
      */
     @Import(name="id", required=true)
-      private final String id;
+    private String id;
 
     public String id() {
         return this.id;
@@ -44,7 +44,7 @@ public final class ConnectToTargetSqlDbTaskOutputResponse extends com.pulumi.res
      * 
      */
     @Import(name="targetServerBrandVersion", required=true)
-      private final String targetServerBrandVersion;
+    private String targetServerBrandVersion;
 
     public String targetServerBrandVersion() {
         return this.targetServerBrandVersion;
@@ -55,73 +55,66 @@ public final class ConnectToTargetSqlDbTaskOutputResponse extends com.pulumi.res
      * 
      */
     @Import(name="targetServerVersion", required=true)
-      private final String targetServerVersion;
+    private String targetServerVersion;
 
     public String targetServerVersion() {
         return this.targetServerVersion;
     }
 
-    public ConnectToTargetSqlDbTaskOutputResponse(
-        Map<String,String> databases,
-        String id,
-        String targetServerBrandVersion,
-        String targetServerVersion) {
-        this.databases = Objects.requireNonNull(databases, "expected parameter 'databases' to be non-null");
-        this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
-        this.targetServerBrandVersion = Objects.requireNonNull(targetServerBrandVersion, "expected parameter 'targetServerBrandVersion' to be non-null");
-        this.targetServerVersion = Objects.requireNonNull(targetServerVersion, "expected parameter 'targetServerVersion' to be non-null");
-    }
+    private ConnectToTargetSqlDbTaskOutputResponse() {}
 
-    private ConnectToTargetSqlDbTaskOutputResponse() {
-        this.databases = Map.of();
-        this.id = null;
-        this.targetServerBrandVersion = null;
-        this.targetServerVersion = null;
+    private ConnectToTargetSqlDbTaskOutputResponse(ConnectToTargetSqlDbTaskOutputResponse $) {
+        this.databases = $.databases;
+        this.id = $.id;
+        this.targetServerBrandVersion = $.targetServerBrandVersion;
+        this.targetServerVersion = $.targetServerVersion;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ConnectToTargetSqlDbTaskOutputResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Map<String,String> databases;
-        private String id;
-        private String targetServerBrandVersion;
-        private String targetServerVersion;
+        private ConnectToTargetSqlDbTaskOutputResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ConnectToTargetSqlDbTaskOutputResponse();
         }
 
         public Builder(ConnectToTargetSqlDbTaskOutputResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.databases = defaults.databases;
-    	      this.id = defaults.id;
-    	      this.targetServerBrandVersion = defaults.targetServerBrandVersion;
-    	      this.targetServerVersion = defaults.targetServerVersion;
+            $ = new ConnectToTargetSqlDbTaskOutputResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder databases(Map<String,String> databases) {
-            this.databases = Objects.requireNonNull(databases);
+            $.databases = databases;
             return this;
         }
+
         public Builder id(String id) {
-            this.id = Objects.requireNonNull(id);
+            $.id = id;
             return this;
         }
+
         public Builder targetServerBrandVersion(String targetServerBrandVersion) {
-            this.targetServerBrandVersion = Objects.requireNonNull(targetServerBrandVersion);
+            $.targetServerBrandVersion = targetServerBrandVersion;
             return this;
         }
+
         public Builder targetServerVersion(String targetServerVersion) {
-            this.targetServerVersion = Objects.requireNonNull(targetServerVersion);
+            $.targetServerVersion = targetServerVersion;
             return this;
-        }        public ConnectToTargetSqlDbTaskOutputResponse build() {
-            return new ConnectToTargetSqlDbTaskOutputResponse(databases, id, targetServerBrandVersion, targetServerVersion);
+        }
+
+        public ConnectToTargetSqlDbTaskOutputResponse build() {
+            $.databases = Objects.requireNonNull($.databases, "expected parameter 'databases' to be non-null");
+            $.id = Objects.requireNonNull($.id, "expected parameter 'id' to be non-null");
+            $.targetServerBrandVersion = Objects.requireNonNull($.targetServerBrandVersion, "expected parameter 'targetServerBrandVersion' to be non-null");
+            $.targetServerVersion = Objects.requireNonNull($.targetServerVersion, "expected parameter 'targetServerVersion' to be non-null");
+            return $;
         }
     }
+
 }

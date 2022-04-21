@@ -3,35 +3,26 @@
 
 package com.pulumi.awsnative.iotanalytics.inputs;
 
-import java.util.Objects;
+
 
 
 public final class DatastoreJsonConfigurationArgs extends com.pulumi.resources.ResourceArgs {
 
     public static final DatastoreJsonConfigurationArgs Empty = new DatastoreJsonConfigurationArgs();
 
-    public DatastoreJsonConfigurationArgs() {
-    }
-
     public static Builder builder() {
         return new Builder();
     }
 
-    public static Builder builder(DatastoreJsonConfigurationArgs defaults) {
-        return new Builder(defaults);
-    }
-
     public static final class Builder {
+        private DatastoreJsonConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
-        }
-
-        public Builder(DatastoreJsonConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
+            $ = new DatastoreJsonConfigurationArgs();
         }
         public DatastoreJsonConfigurationArgs build() {
-            return new DatastoreJsonConfigurationArgs();
+            return $;
         }
     }
+
 }

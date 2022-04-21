@@ -6,11 +6,11 @@ package com.pulumi.awsnative.codeartifact;
 import com.pulumi.awsnative.codeartifact.inputs.RepositoryTagArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,10 @@ public final class RepositoryArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class RepositoryArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="externalConnections")
-      private final @Nullable Output<List<String>> externalConnections;
+    private @Nullable Output<List<String>> externalConnections;
 
-    public Output<List<String>> externalConnections() {
-        return this.externalConnections == null ? Codegen.empty() : this.externalConnections;
+    public Optional<Output<List<String>>> externalConnections() {
+        return Optional.ofNullable(this.externalConnections);
     }
 
     /**
@@ -45,10 +45,10 @@ public final class RepositoryArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="permissionsPolicyDocument")
-      private final @Nullable Output<Object> permissionsPolicyDocument;
+    private @Nullable Output<Object> permissionsPolicyDocument;
 
-    public Output<Object> permissionsPolicyDocument() {
-        return this.permissionsPolicyDocument == null ? Codegen.empty() : this.permissionsPolicyDocument;
+    public Optional<Output<Object>> permissionsPolicyDocument() {
+        return Optional.ofNullable(this.permissionsPolicyDocument);
     }
 
     /**
@@ -56,10 +56,10 @@ public final class RepositoryArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="repositoryName")
-      private final @Nullable Output<String> repositoryName;
+    private @Nullable Output<String> repositoryName;
 
-    public Output<String> repositoryName() {
-        return this.repositoryName == null ? Codegen.empty() : this.repositoryName;
+    public Optional<Output<String>> repositoryName() {
+        return Optional.ofNullable(this.repositoryName);
     }
 
     /**
@@ -67,10 +67,10 @@ public final class RepositoryArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<List<RepositoryTagArgs>> tags;
+    private @Nullable Output<List<RepositoryTagArgs>> tags;
 
-    public Output<List<RepositoryTagArgs>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<List<RepositoryTagArgs>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -78,124 +78,110 @@ public final class RepositoryArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="upstreams")
-      private final @Nullable Output<List<String>> upstreams;
+    private @Nullable Output<List<String>> upstreams;
 
-    public Output<List<String>> upstreams() {
-        return this.upstreams == null ? Codegen.empty() : this.upstreams;
+    public Optional<Output<List<String>>> upstreams() {
+        return Optional.ofNullable(this.upstreams);
     }
 
-    public RepositoryArgs(
-        @Nullable Output<String> description,
-        @Nullable Output<List<String>> externalConnections,
-        @Nullable Output<Object> permissionsPolicyDocument,
-        @Nullable Output<String> repositoryName,
-        @Nullable Output<List<RepositoryTagArgs>> tags,
-        @Nullable Output<List<String>> upstreams) {
-        this.description = description;
-        this.externalConnections = externalConnections;
-        this.permissionsPolicyDocument = permissionsPolicyDocument;
-        this.repositoryName = repositoryName;
-        this.tags = tags;
-        this.upstreams = upstreams;
-    }
+    private RepositoryArgs() {}
 
-    private RepositoryArgs() {
-        this.description = Codegen.empty();
-        this.externalConnections = Codegen.empty();
-        this.permissionsPolicyDocument = Codegen.empty();
-        this.repositoryName = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.upstreams = Codegen.empty();
+    private RepositoryArgs(RepositoryArgs $) {
+        this.description = $.description;
+        this.externalConnections = $.externalConnections;
+        this.permissionsPolicyDocument = $.permissionsPolicyDocument;
+        this.repositoryName = $.repositoryName;
+        this.tags = $.tags;
+        this.upstreams = $.upstreams;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RepositoryArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> description;
-        private @Nullable Output<List<String>> externalConnections;
-        private @Nullable Output<Object> permissionsPolicyDocument;
-        private @Nullable Output<String> repositoryName;
-        private @Nullable Output<List<RepositoryTagArgs>> tags;
-        private @Nullable Output<List<String>> upstreams;
+        private RepositoryArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RepositoryArgs();
         }
 
         public Builder(RepositoryArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.description = defaults.description;
-    	      this.externalConnections = defaults.externalConnections;
-    	      this.permissionsPolicyDocument = defaults.permissionsPolicyDocument;
-    	      this.repositoryName = defaults.repositoryName;
-    	      this.tags = defaults.tags;
-    	      this.upstreams = defaults.upstreams;
+            $ = new RepositoryArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder externalConnections(@Nullable Output<List<String>> externalConnections) {
-            this.externalConnections = externalConnections;
+            $.externalConnections = externalConnections;
             return this;
         }
-        public Builder externalConnections(@Nullable List<String> externalConnections) {
-            this.externalConnections = Codegen.ofNullable(externalConnections);
-            return this;
+
+        public Builder externalConnections(List<String> externalConnections) {
+            return externalConnections(Output.of(externalConnections));
         }
+
         public Builder externalConnections(String... externalConnections) {
             return externalConnections(List.of(externalConnections));
         }
+
         public Builder permissionsPolicyDocument(@Nullable Output<Object> permissionsPolicyDocument) {
-            this.permissionsPolicyDocument = permissionsPolicyDocument;
+            $.permissionsPolicyDocument = permissionsPolicyDocument;
             return this;
         }
-        public Builder permissionsPolicyDocument(@Nullable Object permissionsPolicyDocument) {
-            this.permissionsPolicyDocument = Codegen.ofNullable(permissionsPolicyDocument);
-            return this;
+
+        public Builder permissionsPolicyDocument(Object permissionsPolicyDocument) {
+            return permissionsPolicyDocument(Output.of(permissionsPolicyDocument));
         }
+
         public Builder repositoryName(@Nullable Output<String> repositoryName) {
-            this.repositoryName = repositoryName;
+            $.repositoryName = repositoryName;
             return this;
         }
-        public Builder repositoryName(@Nullable String repositoryName) {
-            this.repositoryName = Codegen.ofNullable(repositoryName);
-            return this;
+
+        public Builder repositoryName(String repositoryName) {
+            return repositoryName(Output.of(repositoryName));
         }
+
         public Builder tags(@Nullable Output<List<RepositoryTagArgs>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable List<RepositoryTagArgs> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(List<RepositoryTagArgs> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tags(RepositoryTagArgs... tags) {
             return tags(List.of(tags));
         }
+
         public Builder upstreams(@Nullable Output<List<String>> upstreams) {
-            this.upstreams = upstreams;
+            $.upstreams = upstreams;
             return this;
         }
-        public Builder upstreams(@Nullable List<String> upstreams) {
-            this.upstreams = Codegen.ofNullable(upstreams);
-            return this;
+
+        public Builder upstreams(List<String> upstreams) {
+            return upstreams(Output.of(upstreams));
         }
+
         public Builder upstreams(String... upstreams) {
             return upstreams(List.of(upstreams));
-        }        public RepositoryArgs build() {
-            return new RepositoryArgs(description, externalConnections, permissionsPolicyDocument, repositoryName, tags, upstreams);
+        }
+
+        public RepositoryArgs build() {
+            return $;
         }
     }
+
 }

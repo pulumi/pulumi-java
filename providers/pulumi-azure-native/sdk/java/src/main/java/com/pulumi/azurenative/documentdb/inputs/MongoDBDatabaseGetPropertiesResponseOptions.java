@@ -20,10 +20,10 @@ public final class MongoDBDatabaseGetPropertiesResponseOptions extends com.pulum
      * 
      */
     @Import(name="autoscaleSettings")
-      private final @Nullable AutoscaleSettingsResponse autoscaleSettings;
+    private @Nullable AutoscaleSettingsResponse autoscaleSettings;
 
     public Optional<AutoscaleSettingsResponse> autoscaleSettings() {
-        return this.autoscaleSettings == null ? Optional.empty() : Optional.ofNullable(this.autoscaleSettings);
+        return Optional.ofNullable(this.autoscaleSettings);
     }
 
     /**
@@ -31,55 +31,50 @@ public final class MongoDBDatabaseGetPropertiesResponseOptions extends com.pulum
      * 
      */
     @Import(name="throughput")
-      private final @Nullable Integer throughput;
+    private @Nullable Integer throughput;
 
     public Optional<Integer> throughput() {
-        return this.throughput == null ? Optional.empty() : Optional.ofNullable(this.throughput);
+        return Optional.ofNullable(this.throughput);
     }
 
-    public MongoDBDatabaseGetPropertiesResponseOptions(
-        @Nullable AutoscaleSettingsResponse autoscaleSettings,
-        @Nullable Integer throughput) {
-        this.autoscaleSettings = autoscaleSettings;
-        this.throughput = throughput;
-    }
+    private MongoDBDatabaseGetPropertiesResponseOptions() {}
 
-    private MongoDBDatabaseGetPropertiesResponseOptions() {
-        this.autoscaleSettings = null;
-        this.throughput = null;
+    private MongoDBDatabaseGetPropertiesResponseOptions(MongoDBDatabaseGetPropertiesResponseOptions $) {
+        this.autoscaleSettings = $.autoscaleSettings;
+        this.throughput = $.throughput;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MongoDBDatabaseGetPropertiesResponseOptions defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable AutoscaleSettingsResponse autoscaleSettings;
-        private @Nullable Integer throughput;
+        private MongoDBDatabaseGetPropertiesResponseOptions $;
 
         public Builder() {
-    	      // Empty
+            $ = new MongoDBDatabaseGetPropertiesResponseOptions();
         }
 
         public Builder(MongoDBDatabaseGetPropertiesResponseOptions defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.autoscaleSettings = defaults.autoscaleSettings;
-    	      this.throughput = defaults.throughput;
+            $ = new MongoDBDatabaseGetPropertiesResponseOptions(Objects.requireNonNull(defaults));
         }
 
         public Builder autoscaleSettings(@Nullable AutoscaleSettingsResponse autoscaleSettings) {
-            this.autoscaleSettings = autoscaleSettings;
+            $.autoscaleSettings = autoscaleSettings;
             return this;
         }
+
         public Builder throughput(@Nullable Integer throughput) {
-            this.throughput = throughput;
+            $.throughput = throughput;
             return this;
-        }        public MongoDBDatabaseGetPropertiesResponseOptions build() {
-            return new MongoDBDatabaseGetPropertiesResponseOptions(autoscaleSettings, throughput);
+        }
+
+        public MongoDBDatabaseGetPropertiesResponseOptions build() {
+            return $;
         }
     }
+
 }

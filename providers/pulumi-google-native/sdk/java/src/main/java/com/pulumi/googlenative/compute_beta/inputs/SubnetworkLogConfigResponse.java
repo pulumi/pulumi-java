@@ -24,7 +24,7 @@ public final class SubnetworkLogConfigResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="aggregationInterval", required=true)
-      private final String aggregationInterval;
+    private String aggregationInterval;
 
     public String aggregationInterval() {
         return this.aggregationInterval;
@@ -35,7 +35,7 @@ public final class SubnetworkLogConfigResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="enable", required=true)
-      private final Boolean enable;
+    private Boolean enable;
 
     public Boolean enable() {
         return this.enable;
@@ -46,7 +46,7 @@ public final class SubnetworkLogConfigResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="filterExpr", required=true)
-      private final String filterExpr;
+    private String filterExpr;
 
     public String filterExpr() {
         return this.filterExpr;
@@ -57,7 +57,7 @@ public final class SubnetworkLogConfigResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="flowSampling", required=true)
-      private final Double flowSampling;
+    private Double flowSampling;
 
     public Double flowSampling() {
         return this.flowSampling;
@@ -68,7 +68,7 @@ public final class SubnetworkLogConfigResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="metadata", required=true)
-      private final String metadata;
+    private String metadata;
 
     public String metadata() {
         return this.metadata;
@@ -79,94 +79,84 @@ public final class SubnetworkLogConfigResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="metadataFields", required=true)
-      private final List<String> metadataFields;
+    private List<String> metadataFields;
 
     public List<String> metadataFields() {
         return this.metadataFields;
     }
 
-    public SubnetworkLogConfigResponse(
-        String aggregationInterval,
-        Boolean enable,
-        String filterExpr,
-        Double flowSampling,
-        String metadata,
-        List<String> metadataFields) {
-        this.aggregationInterval = Objects.requireNonNull(aggregationInterval, "expected parameter 'aggregationInterval' to be non-null");
-        this.enable = Objects.requireNonNull(enable, "expected parameter 'enable' to be non-null");
-        this.filterExpr = Objects.requireNonNull(filterExpr, "expected parameter 'filterExpr' to be non-null");
-        this.flowSampling = Objects.requireNonNull(flowSampling, "expected parameter 'flowSampling' to be non-null");
-        this.metadata = Objects.requireNonNull(metadata, "expected parameter 'metadata' to be non-null");
-        this.metadataFields = Objects.requireNonNull(metadataFields, "expected parameter 'metadataFields' to be non-null");
-    }
+    private SubnetworkLogConfigResponse() {}
 
-    private SubnetworkLogConfigResponse() {
-        this.aggregationInterval = null;
-        this.enable = null;
-        this.filterExpr = null;
-        this.flowSampling = null;
-        this.metadata = null;
-        this.metadataFields = List.of();
+    private SubnetworkLogConfigResponse(SubnetworkLogConfigResponse $) {
+        this.aggregationInterval = $.aggregationInterval;
+        this.enable = $.enable;
+        this.filterExpr = $.filterExpr;
+        this.flowSampling = $.flowSampling;
+        this.metadata = $.metadata;
+        this.metadataFields = $.metadataFields;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SubnetworkLogConfigResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String aggregationInterval;
-        private Boolean enable;
-        private String filterExpr;
-        private Double flowSampling;
-        private String metadata;
-        private List<String> metadataFields;
+        private SubnetworkLogConfigResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new SubnetworkLogConfigResponse();
         }
 
         public Builder(SubnetworkLogConfigResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.aggregationInterval = defaults.aggregationInterval;
-    	      this.enable = defaults.enable;
-    	      this.filterExpr = defaults.filterExpr;
-    	      this.flowSampling = defaults.flowSampling;
-    	      this.metadata = defaults.metadata;
-    	      this.metadataFields = defaults.metadataFields;
+            $ = new SubnetworkLogConfigResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder aggregationInterval(String aggregationInterval) {
-            this.aggregationInterval = Objects.requireNonNull(aggregationInterval);
+            $.aggregationInterval = aggregationInterval;
             return this;
         }
+
         public Builder enable(Boolean enable) {
-            this.enable = Objects.requireNonNull(enable);
+            $.enable = enable;
             return this;
         }
+
         public Builder filterExpr(String filterExpr) {
-            this.filterExpr = Objects.requireNonNull(filterExpr);
+            $.filterExpr = filterExpr;
             return this;
         }
+
         public Builder flowSampling(Double flowSampling) {
-            this.flowSampling = Objects.requireNonNull(flowSampling);
+            $.flowSampling = flowSampling;
             return this;
         }
+
         public Builder metadata(String metadata) {
-            this.metadata = Objects.requireNonNull(metadata);
+            $.metadata = metadata;
             return this;
         }
+
         public Builder metadataFields(List<String> metadataFields) {
-            this.metadataFields = Objects.requireNonNull(metadataFields);
+            $.metadataFields = metadataFields;
             return this;
         }
+
         public Builder metadataFields(String... metadataFields) {
             return metadataFields(List.of(metadataFields));
-        }        public SubnetworkLogConfigResponse build() {
-            return new SubnetworkLogConfigResponse(aggregationInterval, enable, filterExpr, flowSampling, metadata, metadataFields);
+        }
+
+        public SubnetworkLogConfigResponse build() {
+            $.aggregationInterval = Objects.requireNonNull($.aggregationInterval, "expected parameter 'aggregationInterval' to be non-null");
+            $.enable = Objects.requireNonNull($.enable, "expected parameter 'enable' to be non-null");
+            $.filterExpr = Objects.requireNonNull($.filterExpr, "expected parameter 'filterExpr' to be non-null");
+            $.flowSampling = Objects.requireNonNull($.flowSampling, "expected parameter 'flowSampling' to be non-null");
+            $.metadata = Objects.requireNonNull($.metadata, "expected parameter 'metadata' to be non-null");
+            $.metadataFields = Objects.requireNonNull($.metadataFields, "expected parameter 'metadataFields' to be non-null");
+            return $;
         }
     }
+
 }

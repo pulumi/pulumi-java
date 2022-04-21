@@ -17,78 +17,70 @@ public final class ConfigAntennaUplinkConfig extends com.pulumi.resources.Invoke
     public static final ConfigAntennaUplinkConfig Empty = new ConfigAntennaUplinkConfig();
 
     @Import(name="spectrumConfig")
-      private final @Nullable ConfigUplinkSpectrumConfig spectrumConfig;
+    private @Nullable ConfigUplinkSpectrumConfig spectrumConfig;
 
     public Optional<ConfigUplinkSpectrumConfig> spectrumConfig() {
-        return this.spectrumConfig == null ? Optional.empty() : Optional.ofNullable(this.spectrumConfig);
+        return Optional.ofNullable(this.spectrumConfig);
     }
 
     @Import(name="targetEirp")
-      private final @Nullable ConfigEirp targetEirp;
+    private @Nullable ConfigEirp targetEirp;
 
     public Optional<ConfigEirp> targetEirp() {
-        return this.targetEirp == null ? Optional.empty() : Optional.ofNullable(this.targetEirp);
+        return Optional.ofNullable(this.targetEirp);
     }
 
     @Import(name="transmitDisabled")
-      private final @Nullable Boolean transmitDisabled;
+    private @Nullable Boolean transmitDisabled;
 
     public Optional<Boolean> transmitDisabled() {
-        return this.transmitDisabled == null ? Optional.empty() : Optional.ofNullable(this.transmitDisabled);
+        return Optional.ofNullable(this.transmitDisabled);
     }
 
-    public ConfigAntennaUplinkConfig(
-        @Nullable ConfigUplinkSpectrumConfig spectrumConfig,
-        @Nullable ConfigEirp targetEirp,
-        @Nullable Boolean transmitDisabled) {
-        this.spectrumConfig = spectrumConfig;
-        this.targetEirp = targetEirp;
-        this.transmitDisabled = transmitDisabled;
-    }
+    private ConfigAntennaUplinkConfig() {}
 
-    private ConfigAntennaUplinkConfig() {
-        this.spectrumConfig = null;
-        this.targetEirp = null;
-        this.transmitDisabled = null;
+    private ConfigAntennaUplinkConfig(ConfigAntennaUplinkConfig $) {
+        this.spectrumConfig = $.spectrumConfig;
+        this.targetEirp = $.targetEirp;
+        this.transmitDisabled = $.transmitDisabled;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ConfigAntennaUplinkConfig defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable ConfigUplinkSpectrumConfig spectrumConfig;
-        private @Nullable ConfigEirp targetEirp;
-        private @Nullable Boolean transmitDisabled;
+        private ConfigAntennaUplinkConfig $;
 
         public Builder() {
-    	      // Empty
+            $ = new ConfigAntennaUplinkConfig();
         }
 
         public Builder(ConfigAntennaUplinkConfig defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.spectrumConfig = defaults.spectrumConfig;
-    	      this.targetEirp = defaults.targetEirp;
-    	      this.transmitDisabled = defaults.transmitDisabled;
+            $ = new ConfigAntennaUplinkConfig(Objects.requireNonNull(defaults));
         }
 
         public Builder spectrumConfig(@Nullable ConfigUplinkSpectrumConfig spectrumConfig) {
-            this.spectrumConfig = spectrumConfig;
+            $.spectrumConfig = spectrumConfig;
             return this;
         }
+
         public Builder targetEirp(@Nullable ConfigEirp targetEirp) {
-            this.targetEirp = targetEirp;
+            $.targetEirp = targetEirp;
             return this;
         }
+
         public Builder transmitDisabled(@Nullable Boolean transmitDisabled) {
-            this.transmitDisabled = transmitDisabled;
+            $.transmitDisabled = transmitDisabled;
             return this;
-        }        public ConfigAntennaUplinkConfig build() {
-            return new ConfigAntennaUplinkConfig(spectrumConfig, targetEirp, transmitDisabled);
+        }
+
+        public ConfigAntennaUplinkConfig build() {
+            return $;
         }
     }
+
 }

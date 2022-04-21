@@ -5,10 +5,10 @@ package com.pulumi.googlenative.dialogflow_v2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,7 +25,7 @@ public final class GoogleCloudDialogflowV2IntentMessageSelectItemInfoArgs extend
      * 
      */
     @Import(name="key", required=true)
-      private final Output<String> key;
+    private Output<String> key;
 
     public Output<String> key() {
         return this.key;
@@ -36,66 +36,63 @@ public final class GoogleCloudDialogflowV2IntentMessageSelectItemInfoArgs extend
      * 
      */
     @Import(name="synonyms")
-      private final @Nullable Output<List<String>> synonyms;
+    private @Nullable Output<List<String>> synonyms;
 
-    public Output<List<String>> synonyms() {
-        return this.synonyms == null ? Codegen.empty() : this.synonyms;
+    public Optional<Output<List<String>>> synonyms() {
+        return Optional.ofNullable(this.synonyms);
     }
 
-    public GoogleCloudDialogflowV2IntentMessageSelectItemInfoArgs(
-        Output<String> key,
-        @Nullable Output<List<String>> synonyms) {
-        this.key = Objects.requireNonNull(key, "expected parameter 'key' to be non-null");
-        this.synonyms = synonyms;
-    }
+    private GoogleCloudDialogflowV2IntentMessageSelectItemInfoArgs() {}
 
-    private GoogleCloudDialogflowV2IntentMessageSelectItemInfoArgs() {
-        this.key = Codegen.empty();
-        this.synonyms = Codegen.empty();
+    private GoogleCloudDialogflowV2IntentMessageSelectItemInfoArgs(GoogleCloudDialogflowV2IntentMessageSelectItemInfoArgs $) {
+        this.key = $.key;
+        this.synonyms = $.synonyms;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudDialogflowV2IntentMessageSelectItemInfoArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> key;
-        private @Nullable Output<List<String>> synonyms;
+        private GoogleCloudDialogflowV2IntentMessageSelectItemInfoArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudDialogflowV2IntentMessageSelectItemInfoArgs();
         }
 
         public Builder(GoogleCloudDialogflowV2IntentMessageSelectItemInfoArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.key = defaults.key;
-    	      this.synonyms = defaults.synonyms;
+            $ = new GoogleCloudDialogflowV2IntentMessageSelectItemInfoArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder key(Output<String> key) {
-            this.key = Objects.requireNonNull(key);
+            $.key = key;
             return this;
         }
+
         public Builder key(String key) {
-            this.key = Output.of(Objects.requireNonNull(key));
-            return this;
+            return key(Output.of(key));
         }
+
         public Builder synonyms(@Nullable Output<List<String>> synonyms) {
-            this.synonyms = synonyms;
+            $.synonyms = synonyms;
             return this;
         }
-        public Builder synonyms(@Nullable List<String> synonyms) {
-            this.synonyms = Codegen.ofNullable(synonyms);
-            return this;
+
+        public Builder synonyms(List<String> synonyms) {
+            return synonyms(Output.of(synonyms));
         }
+
         public Builder synonyms(String... synonyms) {
             return synonyms(List.of(synonyms));
-        }        public GoogleCloudDialogflowV2IntentMessageSelectItemInfoArgs build() {
-            return new GoogleCloudDialogflowV2IntentMessageSelectItemInfoArgs(key, synonyms);
+        }
+
+        public GoogleCloudDialogflowV2IntentMessageSelectItemInfoArgs build() {
+            $.key = Objects.requireNonNull($.key, "expected parameter 'key' to be non-null");
+            return $;
         }
     }
+
 }

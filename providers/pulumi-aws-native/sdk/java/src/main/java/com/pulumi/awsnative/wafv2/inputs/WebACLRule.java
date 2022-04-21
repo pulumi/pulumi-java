@@ -27,35 +27,35 @@ public final class WebACLRule extends com.pulumi.resources.InvokeArgs {
     public static final WebACLRule Empty = new WebACLRule();
 
     @Import(name="action")
-      private final @Nullable WebACLRuleAction action;
+    private @Nullable WebACLRuleAction action;
 
     public Optional<WebACLRuleAction> action() {
-        return this.action == null ? Optional.empty() : Optional.ofNullable(this.action);
+        return Optional.ofNullable(this.action);
     }
 
     @Import(name="captchaConfig")
-      private final @Nullable WebACLCaptchaConfig captchaConfig;
+    private @Nullable WebACLCaptchaConfig captchaConfig;
 
     public Optional<WebACLCaptchaConfig> captchaConfig() {
-        return this.captchaConfig == null ? Optional.empty() : Optional.ofNullable(this.captchaConfig);
+        return Optional.ofNullable(this.captchaConfig);
     }
 
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
     }
 
     @Import(name="overrideAction")
-      private final @Nullable WebACLOverrideAction overrideAction;
+    private @Nullable WebACLOverrideAction overrideAction;
 
     public Optional<WebACLOverrideAction> overrideAction() {
-        return this.overrideAction == null ? Optional.empty() : Optional.ofNullable(this.overrideAction);
+        return Optional.ofNullable(this.overrideAction);
     }
 
     @Import(name="priority", required=true)
-      private final Integer priority;
+    private Integer priority;
 
     public Integer priority() {
         return this.priority;
@@ -66,126 +66,108 @@ public final class WebACLRule extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="ruleLabels")
-      private final @Nullable List<WebACLLabel> ruleLabels;
+    private @Nullable List<WebACLLabel> ruleLabels;
 
-    public List<WebACLLabel> ruleLabels() {
-        return this.ruleLabels == null ? List.of() : this.ruleLabels;
+    public Optional<List<WebACLLabel>> ruleLabels() {
+        return Optional.ofNullable(this.ruleLabels);
     }
 
     @Import(name="statement", required=true)
-      private final WebACLStatement statement;
+    private WebACLStatement statement;
 
     public WebACLStatement statement() {
         return this.statement;
     }
 
     @Import(name="visibilityConfig", required=true)
-      private final WebACLVisibilityConfig visibilityConfig;
+    private WebACLVisibilityConfig visibilityConfig;
 
     public WebACLVisibilityConfig visibilityConfig() {
         return this.visibilityConfig;
     }
 
-    public WebACLRule(
-        @Nullable WebACLRuleAction action,
-        @Nullable WebACLCaptchaConfig captchaConfig,
-        String name,
-        @Nullable WebACLOverrideAction overrideAction,
-        Integer priority,
-        @Nullable List<WebACLLabel> ruleLabels,
-        WebACLStatement statement,
-        WebACLVisibilityConfig visibilityConfig) {
-        this.action = action;
-        this.captchaConfig = captchaConfig;
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.overrideAction = overrideAction;
-        this.priority = Objects.requireNonNull(priority, "expected parameter 'priority' to be non-null");
-        this.ruleLabels = ruleLabels;
-        this.statement = Objects.requireNonNull(statement, "expected parameter 'statement' to be non-null");
-        this.visibilityConfig = Objects.requireNonNull(visibilityConfig, "expected parameter 'visibilityConfig' to be non-null");
-    }
+    private WebACLRule() {}
 
-    private WebACLRule() {
-        this.action = null;
-        this.captchaConfig = null;
-        this.name = null;
-        this.overrideAction = null;
-        this.priority = null;
-        this.ruleLabels = List.of();
-        this.statement = null;
-        this.visibilityConfig = null;
+    private WebACLRule(WebACLRule $) {
+        this.action = $.action;
+        this.captchaConfig = $.captchaConfig;
+        this.name = $.name;
+        this.overrideAction = $.overrideAction;
+        this.priority = $.priority;
+        this.ruleLabels = $.ruleLabels;
+        this.statement = $.statement;
+        this.visibilityConfig = $.visibilityConfig;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WebACLRule defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable WebACLRuleAction action;
-        private @Nullable WebACLCaptchaConfig captchaConfig;
-        private String name;
-        private @Nullable WebACLOverrideAction overrideAction;
-        private Integer priority;
-        private @Nullable List<WebACLLabel> ruleLabels;
-        private WebACLStatement statement;
-        private WebACLVisibilityConfig visibilityConfig;
+        private WebACLRule $;
 
         public Builder() {
-    	      // Empty
+            $ = new WebACLRule();
         }
 
         public Builder(WebACLRule defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.action = defaults.action;
-    	      this.captchaConfig = defaults.captchaConfig;
-    	      this.name = defaults.name;
-    	      this.overrideAction = defaults.overrideAction;
-    	      this.priority = defaults.priority;
-    	      this.ruleLabels = defaults.ruleLabels;
-    	      this.statement = defaults.statement;
-    	      this.visibilityConfig = defaults.visibilityConfig;
+            $ = new WebACLRule(Objects.requireNonNull(defaults));
         }
 
         public Builder action(@Nullable WebACLRuleAction action) {
-            this.action = action;
+            $.action = action;
             return this;
         }
+
         public Builder captchaConfig(@Nullable WebACLCaptchaConfig captchaConfig) {
-            this.captchaConfig = captchaConfig;
+            $.captchaConfig = captchaConfig;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder overrideAction(@Nullable WebACLOverrideAction overrideAction) {
-            this.overrideAction = overrideAction;
+            $.overrideAction = overrideAction;
             return this;
         }
+
         public Builder priority(Integer priority) {
-            this.priority = Objects.requireNonNull(priority);
+            $.priority = priority;
             return this;
         }
+
         public Builder ruleLabels(@Nullable List<WebACLLabel> ruleLabels) {
-            this.ruleLabels = ruleLabels;
+            $.ruleLabels = ruleLabels;
             return this;
         }
+
         public Builder ruleLabels(WebACLLabel... ruleLabels) {
             return ruleLabels(List.of(ruleLabels));
         }
+
         public Builder statement(WebACLStatement statement) {
-            this.statement = Objects.requireNonNull(statement);
+            $.statement = statement;
             return this;
         }
+
         public Builder visibilityConfig(WebACLVisibilityConfig visibilityConfig) {
-            this.visibilityConfig = Objects.requireNonNull(visibilityConfig);
+            $.visibilityConfig = visibilityConfig;
             return this;
-        }        public WebACLRule build() {
-            return new WebACLRule(action, captchaConfig, name, overrideAction, priority, ruleLabels, statement, visibilityConfig);
+        }
+
+        public WebACLRule build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.priority = Objects.requireNonNull($.priority, "expected parameter 'priority' to be non-null");
+            $.statement = Objects.requireNonNull($.statement, "expected parameter 'statement' to be non-null");
+            $.visibilityConfig = Objects.requireNonNull($.visibilityConfig, "expected parameter 'visibilityConfig' to be non-null");
+            return $;
         }
     }
+
 }

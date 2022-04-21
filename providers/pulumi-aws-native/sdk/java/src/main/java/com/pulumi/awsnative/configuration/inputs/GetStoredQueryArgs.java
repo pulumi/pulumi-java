@@ -13,45 +13,45 @@ public final class GetStoredQueryArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetStoredQueryArgs Empty = new GetStoredQueryArgs();
 
     @Import(name="queryName", required=true)
-      private final String queryName;
+    private String queryName;
 
     public String queryName() {
         return this.queryName;
     }
 
-    public GetStoredQueryArgs(String queryName) {
-        this.queryName = Objects.requireNonNull(queryName, "expected parameter 'queryName' to be non-null");
-    }
+    private GetStoredQueryArgs() {}
 
-    private GetStoredQueryArgs() {
-        this.queryName = null;
+    private GetStoredQueryArgs(GetStoredQueryArgs $) {
+        this.queryName = $.queryName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetStoredQueryArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String queryName;
+        private GetStoredQueryArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetStoredQueryArgs();
         }
 
         public Builder(GetStoredQueryArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.queryName = defaults.queryName;
+            $ = new GetStoredQueryArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder queryName(String queryName) {
-            this.queryName = Objects.requireNonNull(queryName);
+            $.queryName = queryName;
             return this;
-        }        public GetStoredQueryArgs build() {
-            return new GetStoredQueryArgs(queryName);
+        }
+
+        public GetStoredQueryArgs build() {
+            $.queryName = Objects.requireNonNull($.queryName, "expected parameter 'queryName' to be non-null");
+            return $;
         }
     }
+
 }

@@ -13,45 +13,45 @@ public final class GetKeyGroupArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetKeyGroupArgs Empty = new GetKeyGroupArgs();
 
     @Import(name="id", required=true)
-      private final String id;
+    private String id;
 
     public String id() {
         return this.id;
     }
 
-    public GetKeyGroupArgs(String id) {
-        this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
-    }
+    private GetKeyGroupArgs() {}
 
-    private GetKeyGroupArgs() {
-        this.id = null;
+    private GetKeyGroupArgs(GetKeyGroupArgs $) {
+        this.id = $.id;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetKeyGroupArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String id;
+        private GetKeyGroupArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetKeyGroupArgs();
         }
 
         public Builder(GetKeyGroupArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.id = defaults.id;
+            $ = new GetKeyGroupArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder id(String id) {
-            this.id = Objects.requireNonNull(id);
+            $.id = id;
             return this;
-        }        public GetKeyGroupArgs build() {
-            return new GetKeyGroupArgs(id);
+        }
+
+        public GetKeyGroupArgs build() {
+            $.id = Objects.requireNonNull($.id, "expected parameter 'id' to be non-null");
+            return $;
         }
     }
+
 }

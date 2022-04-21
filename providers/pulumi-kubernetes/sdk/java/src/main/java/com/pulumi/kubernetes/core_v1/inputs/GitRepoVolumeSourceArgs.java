@@ -5,9 +5,9 @@ package com.pulumi.kubernetes.core_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class GitRepoVolumeSourceArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="directory")
-      private final @Nullable Output<String> directory;
+    private @Nullable Output<String> directory;
 
-    public Output<String> directory() {
-        return this.directory == null ? Codegen.empty() : this.directory;
+    public Optional<Output<String>> directory() {
+        return Optional.ofNullable(this.directory);
     }
 
     /**
@@ -37,7 +37,7 @@ public final class GitRepoVolumeSourceArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="repository", required=true)
-      private final Output<String> repository;
+    private Output<String> repository;
 
     public Output<String> repository() {
         return this.repository;
@@ -48,76 +48,69 @@ public final class GitRepoVolumeSourceArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="revision")
-      private final @Nullable Output<String> revision;
+    private @Nullable Output<String> revision;
 
-    public Output<String> revision() {
-        return this.revision == null ? Codegen.empty() : this.revision;
+    public Optional<Output<String>> revision() {
+        return Optional.ofNullable(this.revision);
     }
 
-    public GitRepoVolumeSourceArgs(
-        @Nullable Output<String> directory,
-        Output<String> repository,
-        @Nullable Output<String> revision) {
-        this.directory = directory;
-        this.repository = Objects.requireNonNull(repository, "expected parameter 'repository' to be non-null");
-        this.revision = revision;
-    }
+    private GitRepoVolumeSourceArgs() {}
 
-    private GitRepoVolumeSourceArgs() {
-        this.directory = Codegen.empty();
-        this.repository = Codegen.empty();
-        this.revision = Codegen.empty();
+    private GitRepoVolumeSourceArgs(GitRepoVolumeSourceArgs $) {
+        this.directory = $.directory;
+        this.repository = $.repository;
+        this.revision = $.revision;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GitRepoVolumeSourceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> directory;
-        private Output<String> repository;
-        private @Nullable Output<String> revision;
+        private GitRepoVolumeSourceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GitRepoVolumeSourceArgs();
         }
 
         public Builder(GitRepoVolumeSourceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.directory = defaults.directory;
-    	      this.repository = defaults.repository;
-    	      this.revision = defaults.revision;
+            $ = new GitRepoVolumeSourceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder directory(@Nullable Output<String> directory) {
-            this.directory = directory;
+            $.directory = directory;
             return this;
         }
-        public Builder directory(@Nullable String directory) {
-            this.directory = Codegen.ofNullable(directory);
-            return this;
+
+        public Builder directory(String directory) {
+            return directory(Output.of(directory));
         }
+
         public Builder repository(Output<String> repository) {
-            this.repository = Objects.requireNonNull(repository);
+            $.repository = repository;
             return this;
         }
+
         public Builder repository(String repository) {
-            this.repository = Output.of(Objects.requireNonNull(repository));
-            return this;
+            return repository(Output.of(repository));
         }
+
         public Builder revision(@Nullable Output<String> revision) {
-            this.revision = revision;
+            $.revision = revision;
             return this;
         }
-        public Builder revision(@Nullable String revision) {
-            this.revision = Codegen.ofNullable(revision);
-            return this;
-        }        public GitRepoVolumeSourceArgs build() {
-            return new GitRepoVolumeSourceArgs(directory, repository, revision);
+
+        public Builder revision(String revision) {
+            return revision(Output.of(revision));
+        }
+
+        public GitRepoVolumeSourceArgs build() {
+            $.repository = Objects.requireNonNull($.repository, "expected parameter 'repository' to be non-null");
+            return $;
         }
     }
+
 }

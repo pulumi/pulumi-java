@@ -24,10 +24,10 @@ public final class DeploymentScaleSettingsResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="capacity")
-      private final @Nullable Integer capacity;
+    private @Nullable Integer capacity;
 
     public Optional<Integer> capacity() {
-        return this.capacity == null ? Optional.empty() : Optional.ofNullable(this.capacity);
+        return Optional.ofNullable(this.capacity);
     }
 
     /**
@@ -35,55 +35,50 @@ public final class DeploymentScaleSettingsResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="scaleType")
-      private final @Nullable String scaleType;
+    private @Nullable String scaleType;
 
     public Optional<String> scaleType() {
-        return this.scaleType == null ? Optional.empty() : Optional.ofNullable(this.scaleType);
+        return Optional.ofNullable(this.scaleType);
     }
 
-    public DeploymentScaleSettingsResponse(
-        @Nullable Integer capacity,
-        @Nullable String scaleType) {
-        this.capacity = capacity;
-        this.scaleType = scaleType;
-    }
+    private DeploymentScaleSettingsResponse() {}
 
-    private DeploymentScaleSettingsResponse() {
-        this.capacity = null;
-        this.scaleType = null;
+    private DeploymentScaleSettingsResponse(DeploymentScaleSettingsResponse $) {
+        this.capacity = $.capacity;
+        this.scaleType = $.scaleType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DeploymentScaleSettingsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Integer capacity;
-        private @Nullable String scaleType;
+        private DeploymentScaleSettingsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new DeploymentScaleSettingsResponse();
         }
 
         public Builder(DeploymentScaleSettingsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.capacity = defaults.capacity;
-    	      this.scaleType = defaults.scaleType;
+            $ = new DeploymentScaleSettingsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder capacity(@Nullable Integer capacity) {
-            this.capacity = capacity;
+            $.capacity = capacity;
             return this;
         }
+
         public Builder scaleType(@Nullable String scaleType) {
-            this.scaleType = scaleType;
+            $.scaleType = scaleType;
             return this;
-        }        public DeploymentScaleSettingsResponse build() {
-            return new DeploymentScaleSettingsResponse(capacity, scaleType);
+        }
+
+        public DeploymentScaleSettingsResponse build() {
+            return $;
         }
     }
+
 }

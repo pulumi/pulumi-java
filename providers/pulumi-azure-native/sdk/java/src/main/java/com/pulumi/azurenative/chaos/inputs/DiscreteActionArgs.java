@@ -25,7 +25,7 @@ public final class DiscreteActionArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="name", required=true)
-      private final Output<String> name;
+    private Output<String> name;
 
     public Output<String> name() {
         return this.name;
@@ -36,7 +36,7 @@ public final class DiscreteActionArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="parameters", required=true)
-      private final Output<List<KeyValuePairArgs>> parameters;
+    private Output<List<KeyValuePairArgs>> parameters;
 
     public Output<List<KeyValuePairArgs>> parameters() {
         return this.parameters;
@@ -47,7 +47,7 @@ public final class DiscreteActionArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="selectorId", required=true)
-      private final Output<String> selectorId;
+    private Output<String> selectorId;
 
     public Output<String> selectorId() {
         return this.selectorId;
@@ -59,92 +59,86 @@ public final class DiscreteActionArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="type", required=true)
-      private final Output<String> type;
+    private Output<String> type;
 
     public Output<String> type() {
         return this.type;
     }
 
-    public DiscreteActionArgs(
-        Output<String> name,
-        Output<List<KeyValuePairArgs>> parameters,
-        Output<String> selectorId,
-        Output<String> type) {
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.parameters = Objects.requireNonNull(parameters, "expected parameter 'parameters' to be non-null");
-        this.selectorId = Objects.requireNonNull(selectorId, "expected parameter 'selectorId' to be non-null");
-        this.type = Codegen.stringProp("type").output().arg(type).require();
-    }
+    private DiscreteActionArgs() {}
 
-    private DiscreteActionArgs() {
-        this.name = Codegen.empty();
-        this.parameters = Codegen.empty();
-        this.selectorId = Codegen.empty();
-        this.type = Codegen.empty();
+    private DiscreteActionArgs(DiscreteActionArgs $) {
+        this.name = $.name;
+        this.parameters = $.parameters;
+        this.selectorId = $.selectorId;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DiscreteActionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> name;
-        private Output<List<KeyValuePairArgs>> parameters;
-        private Output<String> selectorId;
-        private Output<String> type;
+        private DiscreteActionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DiscreteActionArgs();
         }
 
         public Builder(DiscreteActionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.parameters = defaults.parameters;
-    	      this.selectorId = defaults.selectorId;
-    	      this.type = defaults.type;
+            $ = new DiscreteActionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder name(Output<String> name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Output.of(Objects.requireNonNull(name));
-            return this;
+            return name(Output.of(name));
         }
+
         public Builder parameters(Output<List<KeyValuePairArgs>> parameters) {
-            this.parameters = Objects.requireNonNull(parameters);
+            $.parameters = parameters;
             return this;
         }
+
         public Builder parameters(List<KeyValuePairArgs> parameters) {
-            this.parameters = Output.of(Objects.requireNonNull(parameters));
-            return this;
+            return parameters(Output.of(parameters));
         }
+
         public Builder parameters(KeyValuePairArgs... parameters) {
             return parameters(List.of(parameters));
         }
+
         public Builder selectorId(Output<String> selectorId) {
-            this.selectorId = Objects.requireNonNull(selectorId);
+            $.selectorId = selectorId;
             return this;
         }
+
         public Builder selectorId(String selectorId) {
-            this.selectorId = Output.of(Objects.requireNonNull(selectorId));
-            return this;
+            return selectorId(Output.of(selectorId));
         }
+
         public Builder type(Output<String> type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Output.of(Objects.requireNonNull(type));
-            return this;
-        }        public DiscreteActionArgs build() {
-            return new DiscreteActionArgs(name, parameters, selectorId, type);
+            return type(Output.of(type));
+        }
+
+        public DiscreteActionArgs build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.parameters = Objects.requireNonNull($.parameters, "expected parameter 'parameters' to be non-null");
+            $.selectorId = Objects.requireNonNull($.selectorId, "expected parameter 'selectorId' to be non-null");
+            $.type = Codegen.stringProp("type").output().arg($.type).require();
+            return $;
         }
     }
+
 }

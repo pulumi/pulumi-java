@@ -5,11 +5,11 @@ package com.pulumi.googlenative.datapipelines_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.datapipelines_v1.inputs.GoogleCloudDatapipelinesV1LaunchTemplateParametersArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class GoogleCloudDatapipelinesV1LaunchTemplateRequestArgs extends c
      * 
      */
     @Import(name="gcsPath")
-      private final @Nullable Output<String> gcsPath;
+    private @Nullable Output<String> gcsPath;
 
-    public Output<String> gcsPath() {
-        return this.gcsPath == null ? Codegen.empty() : this.gcsPath;
+    public Optional<Output<String>> gcsPath() {
+        return Optional.ofNullable(this.gcsPath);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class GoogleCloudDatapipelinesV1LaunchTemplateRequestArgs extends c
      * 
      */
     @Import(name="launchParameters")
-      private final @Nullable Output<GoogleCloudDatapipelinesV1LaunchTemplateParametersArgs> launchParameters;
+    private @Nullable Output<GoogleCloudDatapipelinesV1LaunchTemplateParametersArgs> launchParameters;
 
-    public Output<GoogleCloudDatapipelinesV1LaunchTemplateParametersArgs> launchParameters() {
-        return this.launchParameters == null ? Codegen.empty() : this.launchParameters;
+    public Optional<Output<GoogleCloudDatapipelinesV1LaunchTemplateParametersArgs>> launchParameters() {
+        return Optional.ofNullable(this.launchParameters);
     }
 
     /**
@@ -48,10 +48,10 @@ public final class GoogleCloudDatapipelinesV1LaunchTemplateRequestArgs extends c
      * 
      */
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -59,7 +59,7 @@ public final class GoogleCloudDatapipelinesV1LaunchTemplateRequestArgs extends c
      * 
      */
     @Import(name="project", required=true)
-      private final Output<String> project;
+    private Output<String> project;
 
     public Output<String> project() {
         return this.project;
@@ -70,102 +70,89 @@ public final class GoogleCloudDatapipelinesV1LaunchTemplateRequestArgs extends c
      * 
      */
     @Import(name="validateOnly")
-      private final @Nullable Output<Boolean> validateOnly;
+    private @Nullable Output<Boolean> validateOnly;
 
-    public Output<Boolean> validateOnly() {
-        return this.validateOnly == null ? Codegen.empty() : this.validateOnly;
+    public Optional<Output<Boolean>> validateOnly() {
+        return Optional.ofNullable(this.validateOnly);
     }
 
-    public GoogleCloudDatapipelinesV1LaunchTemplateRequestArgs(
-        @Nullable Output<String> gcsPath,
-        @Nullable Output<GoogleCloudDatapipelinesV1LaunchTemplateParametersArgs> launchParameters,
-        @Nullable Output<String> location,
-        Output<String> project,
-        @Nullable Output<Boolean> validateOnly) {
-        this.gcsPath = gcsPath;
-        this.launchParameters = launchParameters;
-        this.location = location;
-        this.project = Objects.requireNonNull(project, "expected parameter 'project' to be non-null");
-        this.validateOnly = validateOnly;
-    }
+    private GoogleCloudDatapipelinesV1LaunchTemplateRequestArgs() {}
 
-    private GoogleCloudDatapipelinesV1LaunchTemplateRequestArgs() {
-        this.gcsPath = Codegen.empty();
-        this.launchParameters = Codegen.empty();
-        this.location = Codegen.empty();
-        this.project = Codegen.empty();
-        this.validateOnly = Codegen.empty();
+    private GoogleCloudDatapipelinesV1LaunchTemplateRequestArgs(GoogleCloudDatapipelinesV1LaunchTemplateRequestArgs $) {
+        this.gcsPath = $.gcsPath;
+        this.launchParameters = $.launchParameters;
+        this.location = $.location;
+        this.project = $.project;
+        this.validateOnly = $.validateOnly;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudDatapipelinesV1LaunchTemplateRequestArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> gcsPath;
-        private @Nullable Output<GoogleCloudDatapipelinesV1LaunchTemplateParametersArgs> launchParameters;
-        private @Nullable Output<String> location;
-        private Output<String> project;
-        private @Nullable Output<Boolean> validateOnly;
+        private GoogleCloudDatapipelinesV1LaunchTemplateRequestArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudDatapipelinesV1LaunchTemplateRequestArgs();
         }
 
         public Builder(GoogleCloudDatapipelinesV1LaunchTemplateRequestArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.gcsPath = defaults.gcsPath;
-    	      this.launchParameters = defaults.launchParameters;
-    	      this.location = defaults.location;
-    	      this.project = defaults.project;
-    	      this.validateOnly = defaults.validateOnly;
+            $ = new GoogleCloudDatapipelinesV1LaunchTemplateRequestArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder gcsPath(@Nullable Output<String> gcsPath) {
-            this.gcsPath = gcsPath;
+            $.gcsPath = gcsPath;
             return this;
         }
-        public Builder gcsPath(@Nullable String gcsPath) {
-            this.gcsPath = Codegen.ofNullable(gcsPath);
-            return this;
+
+        public Builder gcsPath(String gcsPath) {
+            return gcsPath(Output.of(gcsPath));
         }
+
         public Builder launchParameters(@Nullable Output<GoogleCloudDatapipelinesV1LaunchTemplateParametersArgs> launchParameters) {
-            this.launchParameters = launchParameters;
+            $.launchParameters = launchParameters;
             return this;
         }
-        public Builder launchParameters(@Nullable GoogleCloudDatapipelinesV1LaunchTemplateParametersArgs launchParameters) {
-            this.launchParameters = Codegen.ofNullable(launchParameters);
-            return this;
+
+        public Builder launchParameters(GoogleCloudDatapipelinesV1LaunchTemplateParametersArgs launchParameters) {
+            return launchParameters(Output.of(launchParameters));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder project(Output<String> project) {
-            this.project = Objects.requireNonNull(project);
+            $.project = project;
             return this;
         }
+
         public Builder project(String project) {
-            this.project = Output.of(Objects.requireNonNull(project));
-            return this;
+            return project(Output.of(project));
         }
+
         public Builder validateOnly(@Nullable Output<Boolean> validateOnly) {
-            this.validateOnly = validateOnly;
+            $.validateOnly = validateOnly;
             return this;
         }
-        public Builder validateOnly(@Nullable Boolean validateOnly) {
-            this.validateOnly = Codegen.ofNullable(validateOnly);
-            return this;
-        }        public GoogleCloudDatapipelinesV1LaunchTemplateRequestArgs build() {
-            return new GoogleCloudDatapipelinesV1LaunchTemplateRequestArgs(gcsPath, launchParameters, location, project, validateOnly);
+
+        public Builder validateOnly(Boolean validateOnly) {
+            return validateOnly(Output.of(validateOnly));
+        }
+
+        public GoogleCloudDatapipelinesV1LaunchTemplateRequestArgs build() {
+            $.project = Objects.requireNonNull($.project, "expected parameter 'project' to be non-null");
+            return $;
         }
     }
+
 }

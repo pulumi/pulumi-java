@@ -33,10 +33,10 @@ public final class A2AReplicationDetailsResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="agentVersion")
-      private final @Nullable String agentVersion;
+    private @Nullable String agentVersion;
 
     public Optional<String> agentVersion() {
-        return this.agentVersion == null ? Optional.empty() : Optional.ofNullable(this.agentVersion);
+        return Optional.ofNullable(this.agentVersion);
     }
 
     /**
@@ -44,10 +44,10 @@ public final class A2AReplicationDetailsResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="fabricObjectId")
-      private final @Nullable String fabricObjectId;
+    private @Nullable String fabricObjectId;
 
     public Optional<String> fabricObjectId() {
-        return this.fabricObjectId == null ? Optional.empty() : Optional.ofNullable(this.fabricObjectId);
+        return Optional.ofNullable(this.fabricObjectId);
     }
 
     /**
@@ -55,7 +55,7 @@ public final class A2AReplicationDetailsResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="initialPrimaryFabricLocation", required=true)
-      private final String initialPrimaryFabricLocation;
+    private String initialPrimaryFabricLocation;
 
     public String initialPrimaryFabricLocation() {
         return this.initialPrimaryFabricLocation;
@@ -66,7 +66,7 @@ public final class A2AReplicationDetailsResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="initialPrimaryZone", required=true)
-      private final String initialPrimaryZone;
+    private String initialPrimaryZone;
 
     public String initialPrimaryZone() {
         return this.initialPrimaryZone;
@@ -77,7 +77,7 @@ public final class A2AReplicationDetailsResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="initialRecoveryFabricLocation", required=true)
-      private final String initialRecoveryFabricLocation;
+    private String initialRecoveryFabricLocation;
 
     public String initialRecoveryFabricLocation() {
         return this.initialRecoveryFabricLocation;
@@ -88,7 +88,7 @@ public final class A2AReplicationDetailsResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="initialRecoveryZone", required=true)
-      private final String initialRecoveryZone;
+    private String initialRecoveryZone;
 
     public String initialRecoveryZone() {
         return this.initialRecoveryZone;
@@ -100,7 +100,7 @@ public final class A2AReplicationDetailsResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="instanceType", required=true)
-      private final String instanceType;
+    private String instanceType;
 
     public String instanceType() {
         return this.instanceType;
@@ -111,10 +111,10 @@ public final class A2AReplicationDetailsResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="isReplicationAgentUpdateRequired")
-      private final @Nullable Boolean isReplicationAgentUpdateRequired;
+    private @Nullable Boolean isReplicationAgentUpdateRequired;
 
     public Optional<Boolean> isReplicationAgentUpdateRequired() {
-        return this.isReplicationAgentUpdateRequired == null ? Optional.empty() : Optional.ofNullable(this.isReplicationAgentUpdateRequired);
+        return Optional.ofNullable(this.isReplicationAgentUpdateRequired);
     }
 
     /**
@@ -122,10 +122,10 @@ public final class A2AReplicationDetailsResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="lastHeartbeat")
-      private final @Nullable String lastHeartbeat;
+    private @Nullable String lastHeartbeat;
 
     public Optional<String> lastHeartbeat() {
-        return this.lastHeartbeat == null ? Optional.empty() : Optional.ofNullable(this.lastHeartbeat);
+        return Optional.ofNullable(this.lastHeartbeat);
     }
 
     /**
@@ -133,10 +133,10 @@ public final class A2AReplicationDetailsResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="lastRpoCalculatedTime")
-      private final @Nullable String lastRpoCalculatedTime;
+    private @Nullable String lastRpoCalculatedTime;
 
     public Optional<String> lastRpoCalculatedTime() {
-        return this.lastRpoCalculatedTime == null ? Optional.empty() : Optional.ofNullable(this.lastRpoCalculatedTime);
+        return Optional.ofNullable(this.lastRpoCalculatedTime);
     }
 
     /**
@@ -144,10 +144,10 @@ public final class A2AReplicationDetailsResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="lifecycleId")
-      private final @Nullable String lifecycleId;
+    private @Nullable String lifecycleId;
 
     public Optional<String> lifecycleId() {
-        return this.lifecycleId == null ? Optional.empty() : Optional.ofNullable(this.lifecycleId);
+        return Optional.ofNullable(this.lifecycleId);
     }
 
     /**
@@ -155,10 +155,10 @@ public final class A2AReplicationDetailsResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="managementId")
-      private final @Nullable String managementId;
+    private @Nullable String managementId;
 
     public Optional<String> managementId() {
-        return this.managementId == null ? Optional.empty() : Optional.ofNullable(this.managementId);
+        return Optional.ofNullable(this.managementId);
     }
 
     /**
@@ -166,10 +166,10 @@ public final class A2AReplicationDetailsResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="monitoringJobType")
-      private final @Nullable String monitoringJobType;
+    private @Nullable String monitoringJobType;
 
     public Optional<String> monitoringJobType() {
-        return this.monitoringJobType == null ? Optional.empty() : Optional.ofNullable(this.monitoringJobType);
+        return Optional.ofNullable(this.monitoringJobType);
     }
 
     /**
@@ -177,10 +177,10 @@ public final class A2AReplicationDetailsResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="monitoringPercentageCompletion")
-      private final @Nullable Integer monitoringPercentageCompletion;
+    private @Nullable Integer monitoringPercentageCompletion;
 
     public Optional<Integer> monitoringPercentageCompletion() {
-        return this.monitoringPercentageCompletion == null ? Optional.empty() : Optional.ofNullable(this.monitoringPercentageCompletion);
+        return Optional.ofNullable(this.monitoringPercentageCompletion);
     }
 
     /**
@@ -188,10 +188,10 @@ public final class A2AReplicationDetailsResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="multiVmGroupCreateOption")
-      private final @Nullable String multiVmGroupCreateOption;
+    private @Nullable String multiVmGroupCreateOption;
 
     public Optional<String> multiVmGroupCreateOption() {
-        return this.multiVmGroupCreateOption == null ? Optional.empty() : Optional.ofNullable(this.multiVmGroupCreateOption);
+        return Optional.ofNullable(this.multiVmGroupCreateOption);
     }
 
     /**
@@ -199,10 +199,10 @@ public final class A2AReplicationDetailsResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="multiVmGroupId")
-      private final @Nullable String multiVmGroupId;
+    private @Nullable String multiVmGroupId;
 
     public Optional<String> multiVmGroupId() {
-        return this.multiVmGroupId == null ? Optional.empty() : Optional.ofNullable(this.multiVmGroupId);
+        return Optional.ofNullable(this.multiVmGroupId);
     }
 
     /**
@@ -210,10 +210,10 @@ public final class A2AReplicationDetailsResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="multiVmGroupName")
-      private final @Nullable String multiVmGroupName;
+    private @Nullable String multiVmGroupName;
 
     public Optional<String> multiVmGroupName() {
-        return this.multiVmGroupName == null ? Optional.empty() : Optional.ofNullable(this.multiVmGroupName);
+        return Optional.ofNullable(this.multiVmGroupName);
     }
 
     /**
@@ -221,10 +221,10 @@ public final class A2AReplicationDetailsResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="osType")
-      private final @Nullable String osType;
+    private @Nullable String osType;
 
     public Optional<String> osType() {
-        return this.osType == null ? Optional.empty() : Optional.ofNullable(this.osType);
+        return Optional.ofNullable(this.osType);
     }
 
     /**
@@ -232,10 +232,10 @@ public final class A2AReplicationDetailsResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="primaryFabricLocation")
-      private final @Nullable String primaryFabricLocation;
+    private @Nullable String primaryFabricLocation;
 
     public Optional<String> primaryFabricLocation() {
-        return this.primaryFabricLocation == null ? Optional.empty() : Optional.ofNullable(this.primaryFabricLocation);
+        return Optional.ofNullable(this.primaryFabricLocation);
     }
 
     /**
@@ -243,10 +243,10 @@ public final class A2AReplicationDetailsResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="protectedDisks")
-      private final @Nullable List<A2AProtectedDiskDetailsResponse> protectedDisks;
+    private @Nullable List<A2AProtectedDiskDetailsResponse> protectedDisks;
 
-    public List<A2AProtectedDiskDetailsResponse> protectedDisks() {
-        return this.protectedDisks == null ? List.of() : this.protectedDisks;
+    public Optional<List<A2AProtectedDiskDetailsResponse>> protectedDisks() {
+        return Optional.ofNullable(this.protectedDisks);
     }
 
     /**
@@ -254,10 +254,10 @@ public final class A2AReplicationDetailsResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="protectedManagedDisks")
-      private final @Nullable List<A2AProtectedManagedDiskDetailsResponse> protectedManagedDisks;
+    private @Nullable List<A2AProtectedManagedDiskDetailsResponse> protectedManagedDisks;
 
-    public List<A2AProtectedManagedDiskDetailsResponse> protectedManagedDisks() {
-        return this.protectedManagedDisks == null ? List.of() : this.protectedManagedDisks;
+    public Optional<List<A2AProtectedManagedDiskDetailsResponse>> protectedManagedDisks() {
+        return Optional.ofNullable(this.protectedManagedDisks);
     }
 
     /**
@@ -265,10 +265,10 @@ public final class A2AReplicationDetailsResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="recoveryAvailabilitySet")
-      private final @Nullable String recoveryAvailabilitySet;
+    private @Nullable String recoveryAvailabilitySet;
 
     public Optional<String> recoveryAvailabilitySet() {
-        return this.recoveryAvailabilitySet == null ? Optional.empty() : Optional.ofNullable(this.recoveryAvailabilitySet);
+        return Optional.ofNullable(this.recoveryAvailabilitySet);
     }
 
     /**
@@ -276,10 +276,10 @@ public final class A2AReplicationDetailsResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="recoveryAvailabilityZone")
-      private final @Nullable String recoveryAvailabilityZone;
+    private @Nullable String recoveryAvailabilityZone;
 
     public Optional<String> recoveryAvailabilityZone() {
-        return this.recoveryAvailabilityZone == null ? Optional.empty() : Optional.ofNullable(this.recoveryAvailabilityZone);
+        return Optional.ofNullable(this.recoveryAvailabilityZone);
     }
 
     /**
@@ -287,10 +287,10 @@ public final class A2AReplicationDetailsResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="recoveryAzureResourceGroupId")
-      private final @Nullable String recoveryAzureResourceGroupId;
+    private @Nullable String recoveryAzureResourceGroupId;
 
     public Optional<String> recoveryAzureResourceGroupId() {
-        return this.recoveryAzureResourceGroupId == null ? Optional.empty() : Optional.ofNullable(this.recoveryAzureResourceGroupId);
+        return Optional.ofNullable(this.recoveryAzureResourceGroupId);
     }
 
     /**
@@ -298,10 +298,10 @@ public final class A2AReplicationDetailsResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="recoveryAzureVMName")
-      private final @Nullable String recoveryAzureVMName;
+    private @Nullable String recoveryAzureVMName;
 
     public Optional<String> recoveryAzureVMName() {
-        return this.recoveryAzureVMName == null ? Optional.empty() : Optional.ofNullable(this.recoveryAzureVMName);
+        return Optional.ofNullable(this.recoveryAzureVMName);
     }
 
     /**
@@ -309,10 +309,10 @@ public final class A2AReplicationDetailsResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="recoveryAzureVMSize")
-      private final @Nullable String recoveryAzureVMSize;
+    private @Nullable String recoveryAzureVMSize;
 
     public Optional<String> recoveryAzureVMSize() {
-        return this.recoveryAzureVMSize == null ? Optional.empty() : Optional.ofNullable(this.recoveryAzureVMSize);
+        return Optional.ofNullable(this.recoveryAzureVMSize);
     }
 
     /**
@@ -320,10 +320,10 @@ public final class A2AReplicationDetailsResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="recoveryBootDiagStorageAccountId")
-      private final @Nullable String recoveryBootDiagStorageAccountId;
+    private @Nullable String recoveryBootDiagStorageAccountId;
 
     public Optional<String> recoveryBootDiagStorageAccountId() {
-        return this.recoveryBootDiagStorageAccountId == null ? Optional.empty() : Optional.ofNullable(this.recoveryBootDiagStorageAccountId);
+        return Optional.ofNullable(this.recoveryBootDiagStorageAccountId);
     }
 
     /**
@@ -331,10 +331,10 @@ public final class A2AReplicationDetailsResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="recoveryCloudService")
-      private final @Nullable String recoveryCloudService;
+    private @Nullable String recoveryCloudService;
 
     public Optional<String> recoveryCloudService() {
-        return this.recoveryCloudService == null ? Optional.empty() : Optional.ofNullable(this.recoveryCloudService);
+        return Optional.ofNullable(this.recoveryCloudService);
     }
 
     /**
@@ -342,10 +342,10 @@ public final class A2AReplicationDetailsResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="recoveryFabricLocation")
-      private final @Nullable String recoveryFabricLocation;
+    private @Nullable String recoveryFabricLocation;
 
     public Optional<String> recoveryFabricLocation() {
-        return this.recoveryFabricLocation == null ? Optional.empty() : Optional.ofNullable(this.recoveryFabricLocation);
+        return Optional.ofNullable(this.recoveryFabricLocation);
     }
 
     /**
@@ -353,10 +353,10 @@ public final class A2AReplicationDetailsResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="recoveryFabricObjectId")
-      private final @Nullable String recoveryFabricObjectId;
+    private @Nullable String recoveryFabricObjectId;
 
     public Optional<String> recoveryFabricObjectId() {
-        return this.recoveryFabricObjectId == null ? Optional.empty() : Optional.ofNullable(this.recoveryFabricObjectId);
+        return Optional.ofNullable(this.recoveryFabricObjectId);
     }
 
     /**
@@ -364,10 +364,10 @@ public final class A2AReplicationDetailsResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="recoveryProximityPlacementGroupId")
-      private final @Nullable String recoveryProximityPlacementGroupId;
+    private @Nullable String recoveryProximityPlacementGroupId;
 
     public Optional<String> recoveryProximityPlacementGroupId() {
-        return this.recoveryProximityPlacementGroupId == null ? Optional.empty() : Optional.ofNullable(this.recoveryProximityPlacementGroupId);
+        return Optional.ofNullable(this.recoveryProximityPlacementGroupId);
     }
 
     /**
@@ -375,10 +375,10 @@ public final class A2AReplicationDetailsResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="rpoInSeconds")
-      private final @Nullable Double rpoInSeconds;
+    private @Nullable Double rpoInSeconds;
 
     public Optional<Double> rpoInSeconds() {
-        return this.rpoInSeconds == null ? Optional.empty() : Optional.ofNullable(this.rpoInSeconds);
+        return Optional.ofNullable(this.rpoInSeconds);
     }
 
     /**
@@ -386,10 +386,10 @@ public final class A2AReplicationDetailsResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="selectedRecoveryAzureNetworkId")
-      private final @Nullable String selectedRecoveryAzureNetworkId;
+    private @Nullable String selectedRecoveryAzureNetworkId;
 
     public Optional<String> selectedRecoveryAzureNetworkId() {
-        return this.selectedRecoveryAzureNetworkId == null ? Optional.empty() : Optional.ofNullable(this.selectedRecoveryAzureNetworkId);
+        return Optional.ofNullable(this.selectedRecoveryAzureNetworkId);
     }
 
     /**
@@ -397,10 +397,10 @@ public final class A2AReplicationDetailsResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="selectedTfoAzureNetworkId")
-      private final @Nullable String selectedTfoAzureNetworkId;
+    private @Nullable String selectedTfoAzureNetworkId;
 
     public Optional<String> selectedTfoAzureNetworkId() {
-        return this.selectedTfoAzureNetworkId == null ? Optional.empty() : Optional.ofNullable(this.selectedTfoAzureNetworkId);
+        return Optional.ofNullable(this.selectedTfoAzureNetworkId);
     }
 
     /**
@@ -408,10 +408,10 @@ public final class A2AReplicationDetailsResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="testFailoverRecoveryFabricObjectId")
-      private final @Nullable String testFailoverRecoveryFabricObjectId;
+    private @Nullable String testFailoverRecoveryFabricObjectId;
 
     public Optional<String> testFailoverRecoveryFabricObjectId() {
-        return this.testFailoverRecoveryFabricObjectId == null ? Optional.empty() : Optional.ofNullable(this.testFailoverRecoveryFabricObjectId);
+        return Optional.ofNullable(this.testFailoverRecoveryFabricObjectId);
     }
 
     /**
@@ -419,10 +419,10 @@ public final class A2AReplicationDetailsResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="tfoAzureVMName")
-      private final @Nullable String tfoAzureVMName;
+    private @Nullable String tfoAzureVMName;
 
     public Optional<String> tfoAzureVMName() {
-        return this.tfoAzureVMName == null ? Optional.empty() : Optional.ofNullable(this.tfoAzureVMName);
+        return Optional.ofNullable(this.tfoAzureVMName);
     }
 
     /**
@@ -430,10 +430,10 @@ public final class A2AReplicationDetailsResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="unprotectedDisks")
-      private final @Nullable List<A2AUnprotectedDiskDetailsResponse> unprotectedDisks;
+    private @Nullable List<A2AUnprotectedDiskDetailsResponse> unprotectedDisks;
 
-    public List<A2AUnprotectedDiskDetailsResponse> unprotectedDisks() {
-        return this.unprotectedDisks == null ? List.of() : this.unprotectedDisks;
+    public Optional<List<A2AUnprotectedDiskDetailsResponse>> unprotectedDisks() {
+        return Optional.ofNullable(this.unprotectedDisks);
     }
 
     /**
@@ -441,7 +441,7 @@ public final class A2AReplicationDetailsResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="vmEncryptionType", required=true)
-      private final String vmEncryptionType;
+    private String vmEncryptionType;
 
     public String vmEncryptionType() {
         return this.vmEncryptionType;
@@ -452,10 +452,10 @@ public final class A2AReplicationDetailsResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="vmNics")
-      private final @Nullable List<VMNicDetailsResponse> vmNics;
+    private @Nullable List<VMNicDetailsResponse> vmNics;
 
-    public List<VMNicDetailsResponse> vmNics() {
-        return this.vmNics == null ? List.of() : this.vmNics;
+    public Optional<List<VMNicDetailsResponse>> vmNics() {
+        return Optional.ofNullable(this.vmNics);
     }
 
     /**
@@ -463,10 +463,10 @@ public final class A2AReplicationDetailsResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="vmProtectionState")
-      private final @Nullable String vmProtectionState;
+    private @Nullable String vmProtectionState;
 
     public Optional<String> vmProtectionState() {
-        return this.vmProtectionState == null ? Optional.empty() : Optional.ofNullable(this.vmProtectionState);
+        return Optional.ofNullable(this.vmProtectionState);
     }
 
     /**
@@ -474,10 +474,10 @@ public final class A2AReplicationDetailsResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="vmProtectionStateDescription")
-      private final @Nullable String vmProtectionStateDescription;
+    private @Nullable String vmProtectionStateDescription;
 
     public Optional<String> vmProtectionStateDescription() {
-        return this.vmProtectionStateDescription == null ? Optional.empty() : Optional.ofNullable(this.vmProtectionStateDescription);
+        return Optional.ofNullable(this.vmProtectionStateDescription);
     }
 
     /**
@@ -485,427 +485,312 @@ public final class A2AReplicationDetailsResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="vmSyncedConfigDetails")
-      private final @Nullable AzureToAzureVmSyncedConfigDetailsResponse vmSyncedConfigDetails;
+    private @Nullable AzureToAzureVmSyncedConfigDetailsResponse vmSyncedConfigDetails;
 
     public Optional<AzureToAzureVmSyncedConfigDetailsResponse> vmSyncedConfigDetails() {
-        return this.vmSyncedConfigDetails == null ? Optional.empty() : Optional.ofNullable(this.vmSyncedConfigDetails);
+        return Optional.ofNullable(this.vmSyncedConfigDetails);
     }
 
-    public A2AReplicationDetailsResponse(
-        @Nullable String agentVersion,
-        @Nullable String fabricObjectId,
-        String initialPrimaryFabricLocation,
-        String initialPrimaryZone,
-        String initialRecoveryFabricLocation,
-        String initialRecoveryZone,
-        String instanceType,
-        @Nullable Boolean isReplicationAgentUpdateRequired,
-        @Nullable String lastHeartbeat,
-        @Nullable String lastRpoCalculatedTime,
-        @Nullable String lifecycleId,
-        @Nullable String managementId,
-        @Nullable String monitoringJobType,
-        @Nullable Integer monitoringPercentageCompletion,
-        @Nullable String multiVmGroupCreateOption,
-        @Nullable String multiVmGroupId,
-        @Nullable String multiVmGroupName,
-        @Nullable String osType,
-        @Nullable String primaryFabricLocation,
-        @Nullable List<A2AProtectedDiskDetailsResponse> protectedDisks,
-        @Nullable List<A2AProtectedManagedDiskDetailsResponse> protectedManagedDisks,
-        @Nullable String recoveryAvailabilitySet,
-        @Nullable String recoveryAvailabilityZone,
-        @Nullable String recoveryAzureResourceGroupId,
-        @Nullable String recoveryAzureVMName,
-        @Nullable String recoveryAzureVMSize,
-        @Nullable String recoveryBootDiagStorageAccountId,
-        @Nullable String recoveryCloudService,
-        @Nullable String recoveryFabricLocation,
-        @Nullable String recoveryFabricObjectId,
-        @Nullable String recoveryProximityPlacementGroupId,
-        @Nullable Double rpoInSeconds,
-        @Nullable String selectedRecoveryAzureNetworkId,
-        @Nullable String selectedTfoAzureNetworkId,
-        @Nullable String testFailoverRecoveryFabricObjectId,
-        @Nullable String tfoAzureVMName,
-        @Nullable List<A2AUnprotectedDiskDetailsResponse> unprotectedDisks,
-        String vmEncryptionType,
-        @Nullable List<VMNicDetailsResponse> vmNics,
-        @Nullable String vmProtectionState,
-        @Nullable String vmProtectionStateDescription,
-        @Nullable AzureToAzureVmSyncedConfigDetailsResponse vmSyncedConfigDetails) {
-        this.agentVersion = agentVersion;
-        this.fabricObjectId = fabricObjectId;
-        this.initialPrimaryFabricLocation = Objects.requireNonNull(initialPrimaryFabricLocation, "expected parameter 'initialPrimaryFabricLocation' to be non-null");
-        this.initialPrimaryZone = Objects.requireNonNull(initialPrimaryZone, "expected parameter 'initialPrimaryZone' to be non-null");
-        this.initialRecoveryFabricLocation = Objects.requireNonNull(initialRecoveryFabricLocation, "expected parameter 'initialRecoveryFabricLocation' to be non-null");
-        this.initialRecoveryZone = Objects.requireNonNull(initialRecoveryZone, "expected parameter 'initialRecoveryZone' to be non-null");
-        this.instanceType = Codegen.stringProp("instanceType").arg(instanceType).require();
-        this.isReplicationAgentUpdateRequired = isReplicationAgentUpdateRequired;
-        this.lastHeartbeat = lastHeartbeat;
-        this.lastRpoCalculatedTime = lastRpoCalculatedTime;
-        this.lifecycleId = lifecycleId;
-        this.managementId = managementId;
-        this.monitoringJobType = monitoringJobType;
-        this.monitoringPercentageCompletion = monitoringPercentageCompletion;
-        this.multiVmGroupCreateOption = multiVmGroupCreateOption;
-        this.multiVmGroupId = multiVmGroupId;
-        this.multiVmGroupName = multiVmGroupName;
-        this.osType = osType;
-        this.primaryFabricLocation = primaryFabricLocation;
-        this.protectedDisks = protectedDisks;
-        this.protectedManagedDisks = protectedManagedDisks;
-        this.recoveryAvailabilitySet = recoveryAvailabilitySet;
-        this.recoveryAvailabilityZone = recoveryAvailabilityZone;
-        this.recoveryAzureResourceGroupId = recoveryAzureResourceGroupId;
-        this.recoveryAzureVMName = recoveryAzureVMName;
-        this.recoveryAzureVMSize = recoveryAzureVMSize;
-        this.recoveryBootDiagStorageAccountId = recoveryBootDiagStorageAccountId;
-        this.recoveryCloudService = recoveryCloudService;
-        this.recoveryFabricLocation = recoveryFabricLocation;
-        this.recoveryFabricObjectId = recoveryFabricObjectId;
-        this.recoveryProximityPlacementGroupId = recoveryProximityPlacementGroupId;
-        this.rpoInSeconds = rpoInSeconds;
-        this.selectedRecoveryAzureNetworkId = selectedRecoveryAzureNetworkId;
-        this.selectedTfoAzureNetworkId = selectedTfoAzureNetworkId;
-        this.testFailoverRecoveryFabricObjectId = testFailoverRecoveryFabricObjectId;
-        this.tfoAzureVMName = tfoAzureVMName;
-        this.unprotectedDisks = unprotectedDisks;
-        this.vmEncryptionType = Objects.requireNonNull(vmEncryptionType, "expected parameter 'vmEncryptionType' to be non-null");
-        this.vmNics = vmNics;
-        this.vmProtectionState = vmProtectionState;
-        this.vmProtectionStateDescription = vmProtectionStateDescription;
-        this.vmSyncedConfigDetails = vmSyncedConfigDetails;
-    }
+    private A2AReplicationDetailsResponse() {}
 
-    private A2AReplicationDetailsResponse() {
-        this.agentVersion = null;
-        this.fabricObjectId = null;
-        this.initialPrimaryFabricLocation = null;
-        this.initialPrimaryZone = null;
-        this.initialRecoveryFabricLocation = null;
-        this.initialRecoveryZone = null;
-        this.instanceType = null;
-        this.isReplicationAgentUpdateRequired = null;
-        this.lastHeartbeat = null;
-        this.lastRpoCalculatedTime = null;
-        this.lifecycleId = null;
-        this.managementId = null;
-        this.monitoringJobType = null;
-        this.monitoringPercentageCompletion = null;
-        this.multiVmGroupCreateOption = null;
-        this.multiVmGroupId = null;
-        this.multiVmGroupName = null;
-        this.osType = null;
-        this.primaryFabricLocation = null;
-        this.protectedDisks = List.of();
-        this.protectedManagedDisks = List.of();
-        this.recoveryAvailabilitySet = null;
-        this.recoveryAvailabilityZone = null;
-        this.recoveryAzureResourceGroupId = null;
-        this.recoveryAzureVMName = null;
-        this.recoveryAzureVMSize = null;
-        this.recoveryBootDiagStorageAccountId = null;
-        this.recoveryCloudService = null;
-        this.recoveryFabricLocation = null;
-        this.recoveryFabricObjectId = null;
-        this.recoveryProximityPlacementGroupId = null;
-        this.rpoInSeconds = null;
-        this.selectedRecoveryAzureNetworkId = null;
-        this.selectedTfoAzureNetworkId = null;
-        this.testFailoverRecoveryFabricObjectId = null;
-        this.tfoAzureVMName = null;
-        this.unprotectedDisks = List.of();
-        this.vmEncryptionType = null;
-        this.vmNics = List.of();
-        this.vmProtectionState = null;
-        this.vmProtectionStateDescription = null;
-        this.vmSyncedConfigDetails = null;
+    private A2AReplicationDetailsResponse(A2AReplicationDetailsResponse $) {
+        this.agentVersion = $.agentVersion;
+        this.fabricObjectId = $.fabricObjectId;
+        this.initialPrimaryFabricLocation = $.initialPrimaryFabricLocation;
+        this.initialPrimaryZone = $.initialPrimaryZone;
+        this.initialRecoveryFabricLocation = $.initialRecoveryFabricLocation;
+        this.initialRecoveryZone = $.initialRecoveryZone;
+        this.instanceType = $.instanceType;
+        this.isReplicationAgentUpdateRequired = $.isReplicationAgentUpdateRequired;
+        this.lastHeartbeat = $.lastHeartbeat;
+        this.lastRpoCalculatedTime = $.lastRpoCalculatedTime;
+        this.lifecycleId = $.lifecycleId;
+        this.managementId = $.managementId;
+        this.monitoringJobType = $.monitoringJobType;
+        this.monitoringPercentageCompletion = $.monitoringPercentageCompletion;
+        this.multiVmGroupCreateOption = $.multiVmGroupCreateOption;
+        this.multiVmGroupId = $.multiVmGroupId;
+        this.multiVmGroupName = $.multiVmGroupName;
+        this.osType = $.osType;
+        this.primaryFabricLocation = $.primaryFabricLocation;
+        this.protectedDisks = $.protectedDisks;
+        this.protectedManagedDisks = $.protectedManagedDisks;
+        this.recoveryAvailabilitySet = $.recoveryAvailabilitySet;
+        this.recoveryAvailabilityZone = $.recoveryAvailabilityZone;
+        this.recoveryAzureResourceGroupId = $.recoveryAzureResourceGroupId;
+        this.recoveryAzureVMName = $.recoveryAzureVMName;
+        this.recoveryAzureVMSize = $.recoveryAzureVMSize;
+        this.recoveryBootDiagStorageAccountId = $.recoveryBootDiagStorageAccountId;
+        this.recoveryCloudService = $.recoveryCloudService;
+        this.recoveryFabricLocation = $.recoveryFabricLocation;
+        this.recoveryFabricObjectId = $.recoveryFabricObjectId;
+        this.recoveryProximityPlacementGroupId = $.recoveryProximityPlacementGroupId;
+        this.rpoInSeconds = $.rpoInSeconds;
+        this.selectedRecoveryAzureNetworkId = $.selectedRecoveryAzureNetworkId;
+        this.selectedTfoAzureNetworkId = $.selectedTfoAzureNetworkId;
+        this.testFailoverRecoveryFabricObjectId = $.testFailoverRecoveryFabricObjectId;
+        this.tfoAzureVMName = $.tfoAzureVMName;
+        this.unprotectedDisks = $.unprotectedDisks;
+        this.vmEncryptionType = $.vmEncryptionType;
+        this.vmNics = $.vmNics;
+        this.vmProtectionState = $.vmProtectionState;
+        this.vmProtectionStateDescription = $.vmProtectionStateDescription;
+        this.vmSyncedConfigDetails = $.vmSyncedConfigDetails;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(A2AReplicationDetailsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String agentVersion;
-        private @Nullable String fabricObjectId;
-        private String initialPrimaryFabricLocation;
-        private String initialPrimaryZone;
-        private String initialRecoveryFabricLocation;
-        private String initialRecoveryZone;
-        private String instanceType;
-        private @Nullable Boolean isReplicationAgentUpdateRequired;
-        private @Nullable String lastHeartbeat;
-        private @Nullable String lastRpoCalculatedTime;
-        private @Nullable String lifecycleId;
-        private @Nullable String managementId;
-        private @Nullable String monitoringJobType;
-        private @Nullable Integer monitoringPercentageCompletion;
-        private @Nullable String multiVmGroupCreateOption;
-        private @Nullable String multiVmGroupId;
-        private @Nullable String multiVmGroupName;
-        private @Nullable String osType;
-        private @Nullable String primaryFabricLocation;
-        private @Nullable List<A2AProtectedDiskDetailsResponse> protectedDisks;
-        private @Nullable List<A2AProtectedManagedDiskDetailsResponse> protectedManagedDisks;
-        private @Nullable String recoveryAvailabilitySet;
-        private @Nullable String recoveryAvailabilityZone;
-        private @Nullable String recoveryAzureResourceGroupId;
-        private @Nullable String recoveryAzureVMName;
-        private @Nullable String recoveryAzureVMSize;
-        private @Nullable String recoveryBootDiagStorageAccountId;
-        private @Nullable String recoveryCloudService;
-        private @Nullable String recoveryFabricLocation;
-        private @Nullable String recoveryFabricObjectId;
-        private @Nullable String recoveryProximityPlacementGroupId;
-        private @Nullable Double rpoInSeconds;
-        private @Nullable String selectedRecoveryAzureNetworkId;
-        private @Nullable String selectedTfoAzureNetworkId;
-        private @Nullable String testFailoverRecoveryFabricObjectId;
-        private @Nullable String tfoAzureVMName;
-        private @Nullable List<A2AUnprotectedDiskDetailsResponse> unprotectedDisks;
-        private String vmEncryptionType;
-        private @Nullable List<VMNicDetailsResponse> vmNics;
-        private @Nullable String vmProtectionState;
-        private @Nullable String vmProtectionStateDescription;
-        private @Nullable AzureToAzureVmSyncedConfigDetailsResponse vmSyncedConfigDetails;
+        private A2AReplicationDetailsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new A2AReplicationDetailsResponse();
         }
 
         public Builder(A2AReplicationDetailsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.agentVersion = defaults.agentVersion;
-    	      this.fabricObjectId = defaults.fabricObjectId;
-    	      this.initialPrimaryFabricLocation = defaults.initialPrimaryFabricLocation;
-    	      this.initialPrimaryZone = defaults.initialPrimaryZone;
-    	      this.initialRecoveryFabricLocation = defaults.initialRecoveryFabricLocation;
-    	      this.initialRecoveryZone = defaults.initialRecoveryZone;
-    	      this.instanceType = defaults.instanceType;
-    	      this.isReplicationAgentUpdateRequired = defaults.isReplicationAgentUpdateRequired;
-    	      this.lastHeartbeat = defaults.lastHeartbeat;
-    	      this.lastRpoCalculatedTime = defaults.lastRpoCalculatedTime;
-    	      this.lifecycleId = defaults.lifecycleId;
-    	      this.managementId = defaults.managementId;
-    	      this.monitoringJobType = defaults.monitoringJobType;
-    	      this.monitoringPercentageCompletion = defaults.monitoringPercentageCompletion;
-    	      this.multiVmGroupCreateOption = defaults.multiVmGroupCreateOption;
-    	      this.multiVmGroupId = defaults.multiVmGroupId;
-    	      this.multiVmGroupName = defaults.multiVmGroupName;
-    	      this.osType = defaults.osType;
-    	      this.primaryFabricLocation = defaults.primaryFabricLocation;
-    	      this.protectedDisks = defaults.protectedDisks;
-    	      this.protectedManagedDisks = defaults.protectedManagedDisks;
-    	      this.recoveryAvailabilitySet = defaults.recoveryAvailabilitySet;
-    	      this.recoveryAvailabilityZone = defaults.recoveryAvailabilityZone;
-    	      this.recoveryAzureResourceGroupId = defaults.recoveryAzureResourceGroupId;
-    	      this.recoveryAzureVMName = defaults.recoveryAzureVMName;
-    	      this.recoveryAzureVMSize = defaults.recoveryAzureVMSize;
-    	      this.recoveryBootDiagStorageAccountId = defaults.recoveryBootDiagStorageAccountId;
-    	      this.recoveryCloudService = defaults.recoveryCloudService;
-    	      this.recoveryFabricLocation = defaults.recoveryFabricLocation;
-    	      this.recoveryFabricObjectId = defaults.recoveryFabricObjectId;
-    	      this.recoveryProximityPlacementGroupId = defaults.recoveryProximityPlacementGroupId;
-    	      this.rpoInSeconds = defaults.rpoInSeconds;
-    	      this.selectedRecoveryAzureNetworkId = defaults.selectedRecoveryAzureNetworkId;
-    	      this.selectedTfoAzureNetworkId = defaults.selectedTfoAzureNetworkId;
-    	      this.testFailoverRecoveryFabricObjectId = defaults.testFailoverRecoveryFabricObjectId;
-    	      this.tfoAzureVMName = defaults.tfoAzureVMName;
-    	      this.unprotectedDisks = defaults.unprotectedDisks;
-    	      this.vmEncryptionType = defaults.vmEncryptionType;
-    	      this.vmNics = defaults.vmNics;
-    	      this.vmProtectionState = defaults.vmProtectionState;
-    	      this.vmProtectionStateDescription = defaults.vmProtectionStateDescription;
-    	      this.vmSyncedConfigDetails = defaults.vmSyncedConfigDetails;
+            $ = new A2AReplicationDetailsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder agentVersion(@Nullable String agentVersion) {
-            this.agentVersion = agentVersion;
+            $.agentVersion = agentVersion;
             return this;
         }
+
         public Builder fabricObjectId(@Nullable String fabricObjectId) {
-            this.fabricObjectId = fabricObjectId;
+            $.fabricObjectId = fabricObjectId;
             return this;
         }
+
         public Builder initialPrimaryFabricLocation(String initialPrimaryFabricLocation) {
-            this.initialPrimaryFabricLocation = Objects.requireNonNull(initialPrimaryFabricLocation);
+            $.initialPrimaryFabricLocation = initialPrimaryFabricLocation;
             return this;
         }
+
         public Builder initialPrimaryZone(String initialPrimaryZone) {
-            this.initialPrimaryZone = Objects.requireNonNull(initialPrimaryZone);
+            $.initialPrimaryZone = initialPrimaryZone;
             return this;
         }
+
         public Builder initialRecoveryFabricLocation(String initialRecoveryFabricLocation) {
-            this.initialRecoveryFabricLocation = Objects.requireNonNull(initialRecoveryFabricLocation);
+            $.initialRecoveryFabricLocation = initialRecoveryFabricLocation;
             return this;
         }
+
         public Builder initialRecoveryZone(String initialRecoveryZone) {
-            this.initialRecoveryZone = Objects.requireNonNull(initialRecoveryZone);
+            $.initialRecoveryZone = initialRecoveryZone;
             return this;
         }
+
         public Builder instanceType(String instanceType) {
-            this.instanceType = Objects.requireNonNull(instanceType);
+            $.instanceType = instanceType;
             return this;
         }
+
         public Builder isReplicationAgentUpdateRequired(@Nullable Boolean isReplicationAgentUpdateRequired) {
-            this.isReplicationAgentUpdateRequired = isReplicationAgentUpdateRequired;
+            $.isReplicationAgentUpdateRequired = isReplicationAgentUpdateRequired;
             return this;
         }
+
         public Builder lastHeartbeat(@Nullable String lastHeartbeat) {
-            this.lastHeartbeat = lastHeartbeat;
+            $.lastHeartbeat = lastHeartbeat;
             return this;
         }
+
         public Builder lastRpoCalculatedTime(@Nullable String lastRpoCalculatedTime) {
-            this.lastRpoCalculatedTime = lastRpoCalculatedTime;
+            $.lastRpoCalculatedTime = lastRpoCalculatedTime;
             return this;
         }
+
         public Builder lifecycleId(@Nullable String lifecycleId) {
-            this.lifecycleId = lifecycleId;
+            $.lifecycleId = lifecycleId;
             return this;
         }
+
         public Builder managementId(@Nullable String managementId) {
-            this.managementId = managementId;
+            $.managementId = managementId;
             return this;
         }
+
         public Builder monitoringJobType(@Nullable String monitoringJobType) {
-            this.monitoringJobType = monitoringJobType;
+            $.monitoringJobType = monitoringJobType;
             return this;
         }
+
         public Builder monitoringPercentageCompletion(@Nullable Integer monitoringPercentageCompletion) {
-            this.monitoringPercentageCompletion = monitoringPercentageCompletion;
+            $.monitoringPercentageCompletion = monitoringPercentageCompletion;
             return this;
         }
+
         public Builder multiVmGroupCreateOption(@Nullable String multiVmGroupCreateOption) {
-            this.multiVmGroupCreateOption = multiVmGroupCreateOption;
+            $.multiVmGroupCreateOption = multiVmGroupCreateOption;
             return this;
         }
+
         public Builder multiVmGroupId(@Nullable String multiVmGroupId) {
-            this.multiVmGroupId = multiVmGroupId;
+            $.multiVmGroupId = multiVmGroupId;
             return this;
         }
+
         public Builder multiVmGroupName(@Nullable String multiVmGroupName) {
-            this.multiVmGroupName = multiVmGroupName;
+            $.multiVmGroupName = multiVmGroupName;
             return this;
         }
+
         public Builder osType(@Nullable String osType) {
-            this.osType = osType;
+            $.osType = osType;
             return this;
         }
+
         public Builder primaryFabricLocation(@Nullable String primaryFabricLocation) {
-            this.primaryFabricLocation = primaryFabricLocation;
+            $.primaryFabricLocation = primaryFabricLocation;
             return this;
         }
+
         public Builder protectedDisks(@Nullable List<A2AProtectedDiskDetailsResponse> protectedDisks) {
-            this.protectedDisks = protectedDisks;
+            $.protectedDisks = protectedDisks;
             return this;
         }
+
         public Builder protectedDisks(A2AProtectedDiskDetailsResponse... protectedDisks) {
             return protectedDisks(List.of(protectedDisks));
         }
+
         public Builder protectedManagedDisks(@Nullable List<A2AProtectedManagedDiskDetailsResponse> protectedManagedDisks) {
-            this.protectedManagedDisks = protectedManagedDisks;
+            $.protectedManagedDisks = protectedManagedDisks;
             return this;
         }
+
         public Builder protectedManagedDisks(A2AProtectedManagedDiskDetailsResponse... protectedManagedDisks) {
             return protectedManagedDisks(List.of(protectedManagedDisks));
         }
+
         public Builder recoveryAvailabilitySet(@Nullable String recoveryAvailabilitySet) {
-            this.recoveryAvailabilitySet = recoveryAvailabilitySet;
+            $.recoveryAvailabilitySet = recoveryAvailabilitySet;
             return this;
         }
+
         public Builder recoveryAvailabilityZone(@Nullable String recoveryAvailabilityZone) {
-            this.recoveryAvailabilityZone = recoveryAvailabilityZone;
+            $.recoveryAvailabilityZone = recoveryAvailabilityZone;
             return this;
         }
+
         public Builder recoveryAzureResourceGroupId(@Nullable String recoveryAzureResourceGroupId) {
-            this.recoveryAzureResourceGroupId = recoveryAzureResourceGroupId;
+            $.recoveryAzureResourceGroupId = recoveryAzureResourceGroupId;
             return this;
         }
+
         public Builder recoveryAzureVMName(@Nullable String recoveryAzureVMName) {
-            this.recoveryAzureVMName = recoveryAzureVMName;
+            $.recoveryAzureVMName = recoveryAzureVMName;
             return this;
         }
+
         public Builder recoveryAzureVMSize(@Nullable String recoveryAzureVMSize) {
-            this.recoveryAzureVMSize = recoveryAzureVMSize;
+            $.recoveryAzureVMSize = recoveryAzureVMSize;
             return this;
         }
+
         public Builder recoveryBootDiagStorageAccountId(@Nullable String recoveryBootDiagStorageAccountId) {
-            this.recoveryBootDiagStorageAccountId = recoveryBootDiagStorageAccountId;
+            $.recoveryBootDiagStorageAccountId = recoveryBootDiagStorageAccountId;
             return this;
         }
+
         public Builder recoveryCloudService(@Nullable String recoveryCloudService) {
-            this.recoveryCloudService = recoveryCloudService;
+            $.recoveryCloudService = recoveryCloudService;
             return this;
         }
+
         public Builder recoveryFabricLocation(@Nullable String recoveryFabricLocation) {
-            this.recoveryFabricLocation = recoveryFabricLocation;
+            $.recoveryFabricLocation = recoveryFabricLocation;
             return this;
         }
+
         public Builder recoveryFabricObjectId(@Nullable String recoveryFabricObjectId) {
-            this.recoveryFabricObjectId = recoveryFabricObjectId;
+            $.recoveryFabricObjectId = recoveryFabricObjectId;
             return this;
         }
+
         public Builder recoveryProximityPlacementGroupId(@Nullable String recoveryProximityPlacementGroupId) {
-            this.recoveryProximityPlacementGroupId = recoveryProximityPlacementGroupId;
+            $.recoveryProximityPlacementGroupId = recoveryProximityPlacementGroupId;
             return this;
         }
+
         public Builder rpoInSeconds(@Nullable Double rpoInSeconds) {
-            this.rpoInSeconds = rpoInSeconds;
+            $.rpoInSeconds = rpoInSeconds;
             return this;
         }
+
         public Builder selectedRecoveryAzureNetworkId(@Nullable String selectedRecoveryAzureNetworkId) {
-            this.selectedRecoveryAzureNetworkId = selectedRecoveryAzureNetworkId;
+            $.selectedRecoveryAzureNetworkId = selectedRecoveryAzureNetworkId;
             return this;
         }
+
         public Builder selectedTfoAzureNetworkId(@Nullable String selectedTfoAzureNetworkId) {
-            this.selectedTfoAzureNetworkId = selectedTfoAzureNetworkId;
+            $.selectedTfoAzureNetworkId = selectedTfoAzureNetworkId;
             return this;
         }
+
         public Builder testFailoverRecoveryFabricObjectId(@Nullable String testFailoverRecoveryFabricObjectId) {
-            this.testFailoverRecoveryFabricObjectId = testFailoverRecoveryFabricObjectId;
+            $.testFailoverRecoveryFabricObjectId = testFailoverRecoveryFabricObjectId;
             return this;
         }
+
         public Builder tfoAzureVMName(@Nullable String tfoAzureVMName) {
-            this.tfoAzureVMName = tfoAzureVMName;
+            $.tfoAzureVMName = tfoAzureVMName;
             return this;
         }
+
         public Builder unprotectedDisks(@Nullable List<A2AUnprotectedDiskDetailsResponse> unprotectedDisks) {
-            this.unprotectedDisks = unprotectedDisks;
+            $.unprotectedDisks = unprotectedDisks;
             return this;
         }
+
         public Builder unprotectedDisks(A2AUnprotectedDiskDetailsResponse... unprotectedDisks) {
             return unprotectedDisks(List.of(unprotectedDisks));
         }
+
         public Builder vmEncryptionType(String vmEncryptionType) {
-            this.vmEncryptionType = Objects.requireNonNull(vmEncryptionType);
+            $.vmEncryptionType = vmEncryptionType;
             return this;
         }
+
         public Builder vmNics(@Nullable List<VMNicDetailsResponse> vmNics) {
-            this.vmNics = vmNics;
+            $.vmNics = vmNics;
             return this;
         }
+
         public Builder vmNics(VMNicDetailsResponse... vmNics) {
             return vmNics(List.of(vmNics));
         }
+
         public Builder vmProtectionState(@Nullable String vmProtectionState) {
-            this.vmProtectionState = vmProtectionState;
+            $.vmProtectionState = vmProtectionState;
             return this;
         }
+
         public Builder vmProtectionStateDescription(@Nullable String vmProtectionStateDescription) {
-            this.vmProtectionStateDescription = vmProtectionStateDescription;
+            $.vmProtectionStateDescription = vmProtectionStateDescription;
             return this;
         }
+
         public Builder vmSyncedConfigDetails(@Nullable AzureToAzureVmSyncedConfigDetailsResponse vmSyncedConfigDetails) {
-            this.vmSyncedConfigDetails = vmSyncedConfigDetails;
+            $.vmSyncedConfigDetails = vmSyncedConfigDetails;
             return this;
-        }        public A2AReplicationDetailsResponse build() {
-            return new A2AReplicationDetailsResponse(agentVersion, fabricObjectId, initialPrimaryFabricLocation, initialPrimaryZone, initialRecoveryFabricLocation, initialRecoveryZone, instanceType, isReplicationAgentUpdateRequired, lastHeartbeat, lastRpoCalculatedTime, lifecycleId, managementId, monitoringJobType, monitoringPercentageCompletion, multiVmGroupCreateOption, multiVmGroupId, multiVmGroupName, osType, primaryFabricLocation, protectedDisks, protectedManagedDisks, recoveryAvailabilitySet, recoveryAvailabilityZone, recoveryAzureResourceGroupId, recoveryAzureVMName, recoveryAzureVMSize, recoveryBootDiagStorageAccountId, recoveryCloudService, recoveryFabricLocation, recoveryFabricObjectId, recoveryProximityPlacementGroupId, rpoInSeconds, selectedRecoveryAzureNetworkId, selectedTfoAzureNetworkId, testFailoverRecoveryFabricObjectId, tfoAzureVMName, unprotectedDisks, vmEncryptionType, vmNics, vmProtectionState, vmProtectionStateDescription, vmSyncedConfigDetails);
+        }
+
+        public A2AReplicationDetailsResponse build() {
+            $.initialPrimaryFabricLocation = Objects.requireNonNull($.initialPrimaryFabricLocation, "expected parameter 'initialPrimaryFabricLocation' to be non-null");
+            $.initialPrimaryZone = Objects.requireNonNull($.initialPrimaryZone, "expected parameter 'initialPrimaryZone' to be non-null");
+            $.initialRecoveryFabricLocation = Objects.requireNonNull($.initialRecoveryFabricLocation, "expected parameter 'initialRecoveryFabricLocation' to be non-null");
+            $.initialRecoveryZone = Objects.requireNonNull($.initialRecoveryZone, "expected parameter 'initialRecoveryZone' to be non-null");
+            $.instanceType = Codegen.stringProp("instanceType").arg($.instanceType).require();
+            $.vmEncryptionType = Objects.requireNonNull($.vmEncryptionType, "expected parameter 'vmEncryptionType' to be non-null");
+            return $;
         }
     }
+
 }

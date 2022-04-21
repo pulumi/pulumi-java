@@ -17,7 +17,7 @@ public final class ListPrivateCloudAdminCredentialsArgs extends com.pulumi.resou
      * 
      */
     @Import(name="privateCloudName", required=true)
-      private final String privateCloudName;
+    private String privateCloudName;
 
     public String privateCloudName() {
         return this.privateCloudName;
@@ -28,55 +28,52 @@ public final class ListPrivateCloudAdminCredentialsArgs extends com.pulumi.resou
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public ListPrivateCloudAdminCredentialsArgs(
-        String privateCloudName,
-        String resourceGroupName) {
-        this.privateCloudName = Objects.requireNonNull(privateCloudName, "expected parameter 'privateCloudName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private ListPrivateCloudAdminCredentialsArgs() {}
 
-    private ListPrivateCloudAdminCredentialsArgs() {
-        this.privateCloudName = null;
-        this.resourceGroupName = null;
+    private ListPrivateCloudAdminCredentialsArgs(ListPrivateCloudAdminCredentialsArgs $) {
+        this.privateCloudName = $.privateCloudName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ListPrivateCloudAdminCredentialsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String privateCloudName;
-        private String resourceGroupName;
+        private ListPrivateCloudAdminCredentialsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ListPrivateCloudAdminCredentialsArgs();
         }
 
         public Builder(ListPrivateCloudAdminCredentialsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.privateCloudName = defaults.privateCloudName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new ListPrivateCloudAdminCredentialsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder privateCloudName(String privateCloudName) {
-            this.privateCloudName = Objects.requireNonNull(privateCloudName);
+            $.privateCloudName = privateCloudName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public ListPrivateCloudAdminCredentialsArgs build() {
-            return new ListPrivateCloudAdminCredentialsArgs(privateCloudName, resourceGroupName);
+        }
+
+        public ListPrivateCloudAdminCredentialsArgs build() {
+            $.privateCloudName = Objects.requireNonNull($.privateCloudName, "expected parameter 'privateCloudName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

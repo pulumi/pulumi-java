@@ -5,7 +5,6 @@ package com.pulumi.aws.lambda.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -20,49 +19,49 @@ public final class EventSourceMappingSelfManagedEventSourceArgs extends com.pulu
      * 
      */
     @Import(name="endpoints", required=true)
-      private final Output<Map<String,String>> endpoints;
+    private Output<Map<String,String>> endpoints;
 
     public Output<Map<String,String>> endpoints() {
         return this.endpoints;
     }
 
-    public EventSourceMappingSelfManagedEventSourceArgs(Output<Map<String,String>> endpoints) {
-        this.endpoints = Objects.requireNonNull(endpoints, "expected parameter 'endpoints' to be non-null");
-    }
+    private EventSourceMappingSelfManagedEventSourceArgs() {}
 
-    private EventSourceMappingSelfManagedEventSourceArgs() {
-        this.endpoints = Codegen.empty();
+    private EventSourceMappingSelfManagedEventSourceArgs(EventSourceMappingSelfManagedEventSourceArgs $) {
+        this.endpoints = $.endpoints;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EventSourceMappingSelfManagedEventSourceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Map<String,String>> endpoints;
+        private EventSourceMappingSelfManagedEventSourceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new EventSourceMappingSelfManagedEventSourceArgs();
         }
 
         public Builder(EventSourceMappingSelfManagedEventSourceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.endpoints = defaults.endpoints;
+            $ = new EventSourceMappingSelfManagedEventSourceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder endpoints(Output<Map<String,String>> endpoints) {
-            this.endpoints = Objects.requireNonNull(endpoints);
+            $.endpoints = endpoints;
             return this;
         }
+
         public Builder endpoints(Map<String,String> endpoints) {
-            this.endpoints = Output.of(Objects.requireNonNull(endpoints));
-            return this;
-        }        public EventSourceMappingSelfManagedEventSourceArgs build() {
-            return new EventSourceMappingSelfManagedEventSourceArgs(endpoints);
+            return endpoints(Output.of(endpoints));
+        }
+
+        public EventSourceMappingSelfManagedEventSourceArgs build() {
+            $.endpoints = Objects.requireNonNull($.endpoints, "expected parameter 'endpoints' to be non-null");
+            return $;
         }
     }
+
 }

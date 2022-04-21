@@ -23,10 +23,10 @@ public final class DefenderForServersAwsOfferingResponseServicePrincipalSecretMe
      * 
      */
     @Import(name="expiryDate")
-      private final @Nullable String expiryDate;
+    private @Nullable String expiryDate;
 
     public Optional<String> expiryDate() {
-        return this.expiryDate == null ? Optional.empty() : Optional.ofNullable(this.expiryDate);
+        return Optional.ofNullable(this.expiryDate);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class DefenderForServersAwsOfferingResponseServicePrincipalSecretMe
      * 
      */
     @Import(name="parameterNameInStore")
-      private final @Nullable String parameterNameInStore;
+    private @Nullable String parameterNameInStore;
 
     public Optional<String> parameterNameInStore() {
-        return this.parameterNameInStore == null ? Optional.empty() : Optional.ofNullable(this.parameterNameInStore);
+        return Optional.ofNullable(this.parameterNameInStore);
     }
 
     /**
@@ -45,64 +45,56 @@ public final class DefenderForServersAwsOfferingResponseServicePrincipalSecretMe
      * 
      */
     @Import(name="parameterStoreRegion")
-      private final @Nullable String parameterStoreRegion;
+    private @Nullable String parameterStoreRegion;
 
     public Optional<String> parameterStoreRegion() {
-        return this.parameterStoreRegion == null ? Optional.empty() : Optional.ofNullable(this.parameterStoreRegion);
+        return Optional.ofNullable(this.parameterStoreRegion);
     }
 
-    public DefenderForServersAwsOfferingResponseServicePrincipalSecretMetadata(
-        @Nullable String expiryDate,
-        @Nullable String parameterNameInStore,
-        @Nullable String parameterStoreRegion) {
-        this.expiryDate = expiryDate;
-        this.parameterNameInStore = parameterNameInStore;
-        this.parameterStoreRegion = parameterStoreRegion;
-    }
+    private DefenderForServersAwsOfferingResponseServicePrincipalSecretMetadata() {}
 
-    private DefenderForServersAwsOfferingResponseServicePrincipalSecretMetadata() {
-        this.expiryDate = null;
-        this.parameterNameInStore = null;
-        this.parameterStoreRegion = null;
+    private DefenderForServersAwsOfferingResponseServicePrincipalSecretMetadata(DefenderForServersAwsOfferingResponseServicePrincipalSecretMetadata $) {
+        this.expiryDate = $.expiryDate;
+        this.parameterNameInStore = $.parameterNameInStore;
+        this.parameterStoreRegion = $.parameterStoreRegion;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DefenderForServersAwsOfferingResponseServicePrincipalSecretMetadata defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String expiryDate;
-        private @Nullable String parameterNameInStore;
-        private @Nullable String parameterStoreRegion;
+        private DefenderForServersAwsOfferingResponseServicePrincipalSecretMetadata $;
 
         public Builder() {
-    	      // Empty
+            $ = new DefenderForServersAwsOfferingResponseServicePrincipalSecretMetadata();
         }
 
         public Builder(DefenderForServersAwsOfferingResponseServicePrincipalSecretMetadata defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.expiryDate = defaults.expiryDate;
-    	      this.parameterNameInStore = defaults.parameterNameInStore;
-    	      this.parameterStoreRegion = defaults.parameterStoreRegion;
+            $ = new DefenderForServersAwsOfferingResponseServicePrincipalSecretMetadata(Objects.requireNonNull(defaults));
         }
 
         public Builder expiryDate(@Nullable String expiryDate) {
-            this.expiryDate = expiryDate;
+            $.expiryDate = expiryDate;
             return this;
         }
+
         public Builder parameterNameInStore(@Nullable String parameterNameInStore) {
-            this.parameterNameInStore = parameterNameInStore;
+            $.parameterNameInStore = parameterNameInStore;
             return this;
         }
+
         public Builder parameterStoreRegion(@Nullable String parameterStoreRegion) {
-            this.parameterStoreRegion = parameterStoreRegion;
+            $.parameterStoreRegion = parameterStoreRegion;
             return this;
-        }        public DefenderForServersAwsOfferingResponseServicePrincipalSecretMetadata build() {
-            return new DefenderForServersAwsOfferingResponseServicePrincipalSecretMetadata(expiryDate, parameterNameInStore, parameterStoreRegion);
+        }
+
+        public DefenderForServersAwsOfferingResponseServicePrincipalSecretMetadata build() {
+            return $;
         }
     }
+
 }

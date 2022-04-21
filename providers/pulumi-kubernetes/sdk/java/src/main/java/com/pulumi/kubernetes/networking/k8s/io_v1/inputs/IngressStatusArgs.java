@@ -5,9 +5,9 @@ package com.pulumi.kubernetes.networking.k8s.io_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.kubernetes.core_v1.inputs.LoadBalancerStatusArgs;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class IngressStatusArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="loadBalancer")
-      private final @Nullable Output<LoadBalancerStatusArgs> loadBalancer;
+    private @Nullable Output<LoadBalancerStatusArgs> loadBalancer;
 
-    public Output<LoadBalancerStatusArgs> loadBalancer() {
-        return this.loadBalancer == null ? Codegen.empty() : this.loadBalancer;
+    public Optional<Output<LoadBalancerStatusArgs>> loadBalancer() {
+        return Optional.ofNullable(this.loadBalancer);
     }
 
-    public IngressStatusArgs(@Nullable Output<LoadBalancerStatusArgs> loadBalancer) {
-        this.loadBalancer = loadBalancer;
-    }
+    private IngressStatusArgs() {}
 
-    private IngressStatusArgs() {
-        this.loadBalancer = Codegen.empty();
+    private IngressStatusArgs(IngressStatusArgs $) {
+        this.loadBalancer = $.loadBalancer;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(IngressStatusArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<LoadBalancerStatusArgs> loadBalancer;
+        private IngressStatusArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new IngressStatusArgs();
         }
 
         public Builder(IngressStatusArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.loadBalancer = defaults.loadBalancer;
+            $ = new IngressStatusArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder loadBalancer(@Nullable Output<LoadBalancerStatusArgs> loadBalancer) {
-            this.loadBalancer = loadBalancer;
+            $.loadBalancer = loadBalancer;
             return this;
         }
-        public Builder loadBalancer(@Nullable LoadBalancerStatusArgs loadBalancer) {
-            this.loadBalancer = Codegen.ofNullable(loadBalancer);
-            return this;
-        }        public IngressStatusArgs build() {
-            return new IngressStatusArgs(loadBalancer);
+
+        public Builder loadBalancer(LoadBalancerStatusArgs loadBalancer) {
+            return loadBalancer(Output.of(loadBalancer));
+        }
+
+        public IngressStatusArgs build() {
+            return $;
         }
     }
+
 }

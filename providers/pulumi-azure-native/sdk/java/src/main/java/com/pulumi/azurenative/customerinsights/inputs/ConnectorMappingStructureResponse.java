@@ -24,7 +24,7 @@ public final class ConnectorMappingStructureResponse extends com.pulumi.resource
      * 
      */
     @Import(name="columnName", required=true)
-      private final String columnName;
+    private String columnName;
 
     public String columnName() {
         return this.columnName;
@@ -35,10 +35,10 @@ public final class ConnectorMappingStructureResponse extends com.pulumi.resource
      * 
      */
     @Import(name="customFormatSpecifier")
-      private final @Nullable String customFormatSpecifier;
+    private @Nullable String customFormatSpecifier;
 
     public Optional<String> customFormatSpecifier() {
-        return this.customFormatSpecifier == null ? Optional.empty() : Optional.ofNullable(this.customFormatSpecifier);
+        return Optional.ofNullable(this.customFormatSpecifier);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class ConnectorMappingStructureResponse extends com.pulumi.resource
      * 
      */
     @Import(name="isEncrypted")
-      private final @Nullable Boolean isEncrypted;
+    private @Nullable Boolean isEncrypted;
 
     public Optional<Boolean> isEncrypted() {
-        return this.isEncrypted == null ? Optional.empty() : Optional.ofNullable(this.isEncrypted);
+        return Optional.ofNullable(this.isEncrypted);
     }
 
     /**
@@ -57,73 +57,64 @@ public final class ConnectorMappingStructureResponse extends com.pulumi.resource
      * 
      */
     @Import(name="propertyName", required=true)
-      private final String propertyName;
+    private String propertyName;
 
     public String propertyName() {
         return this.propertyName;
     }
 
-    public ConnectorMappingStructureResponse(
-        String columnName,
-        @Nullable String customFormatSpecifier,
-        @Nullable Boolean isEncrypted,
-        String propertyName) {
-        this.columnName = Objects.requireNonNull(columnName, "expected parameter 'columnName' to be non-null");
-        this.customFormatSpecifier = customFormatSpecifier;
-        this.isEncrypted = isEncrypted;
-        this.propertyName = Objects.requireNonNull(propertyName, "expected parameter 'propertyName' to be non-null");
-    }
+    private ConnectorMappingStructureResponse() {}
 
-    private ConnectorMappingStructureResponse() {
-        this.columnName = null;
-        this.customFormatSpecifier = null;
-        this.isEncrypted = null;
-        this.propertyName = null;
+    private ConnectorMappingStructureResponse(ConnectorMappingStructureResponse $) {
+        this.columnName = $.columnName;
+        this.customFormatSpecifier = $.customFormatSpecifier;
+        this.isEncrypted = $.isEncrypted;
+        this.propertyName = $.propertyName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ConnectorMappingStructureResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String columnName;
-        private @Nullable String customFormatSpecifier;
-        private @Nullable Boolean isEncrypted;
-        private String propertyName;
+        private ConnectorMappingStructureResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ConnectorMappingStructureResponse();
         }
 
         public Builder(ConnectorMappingStructureResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.columnName = defaults.columnName;
-    	      this.customFormatSpecifier = defaults.customFormatSpecifier;
-    	      this.isEncrypted = defaults.isEncrypted;
-    	      this.propertyName = defaults.propertyName;
+            $ = new ConnectorMappingStructureResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder columnName(String columnName) {
-            this.columnName = Objects.requireNonNull(columnName);
+            $.columnName = columnName;
             return this;
         }
+
         public Builder customFormatSpecifier(@Nullable String customFormatSpecifier) {
-            this.customFormatSpecifier = customFormatSpecifier;
+            $.customFormatSpecifier = customFormatSpecifier;
             return this;
         }
+
         public Builder isEncrypted(@Nullable Boolean isEncrypted) {
-            this.isEncrypted = isEncrypted;
+            $.isEncrypted = isEncrypted;
             return this;
         }
+
         public Builder propertyName(String propertyName) {
-            this.propertyName = Objects.requireNonNull(propertyName);
+            $.propertyName = propertyName;
             return this;
-        }        public ConnectorMappingStructureResponse build() {
-            return new ConnectorMappingStructureResponse(columnName, customFormatSpecifier, isEncrypted, propertyName);
+        }
+
+        public ConnectorMappingStructureResponse build() {
+            $.columnName = Objects.requireNonNull($.columnName, "expected parameter 'columnName' to be non-null");
+            $.propertyName = Objects.requireNonNull($.propertyName, "expected parameter 'propertyName' to be non-null");
+            return $;
         }
     }
+
 }

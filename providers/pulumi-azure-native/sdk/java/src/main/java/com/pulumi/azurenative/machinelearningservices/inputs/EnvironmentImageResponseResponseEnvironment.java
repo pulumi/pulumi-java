@@ -28,10 +28,10 @@ public final class EnvironmentImageResponseResponseEnvironment extends com.pulum
      * 
      */
     @Import(name="docker")
-      private final @Nullable ModelEnvironmentDefinitionResponseResponseDocker docker;
+    private @Nullable ModelEnvironmentDefinitionResponseResponseDocker docker;
 
     public Optional<ModelEnvironmentDefinitionResponseResponseDocker> docker() {
-        return this.docker == null ? Optional.empty() : Optional.ofNullable(this.docker);
+        return Optional.ofNullable(this.docker);
     }
 
     /**
@@ -39,10 +39,10 @@ public final class EnvironmentImageResponseResponseEnvironment extends com.pulum
      * 
      */
     @Import(name="environmentVariables")
-      private final @Nullable Map<String,String> environmentVariables;
+    private @Nullable Map<String,String> environmentVariables;
 
-    public Map<String,String> environmentVariables() {
-        return this.environmentVariables == null ? Map.of() : this.environmentVariables;
+    public Optional<Map<String,String>> environmentVariables() {
+        return Optional.ofNullable(this.environmentVariables);
     }
 
     /**
@@ -50,10 +50,10 @@ public final class EnvironmentImageResponseResponseEnvironment extends com.pulum
      * 
      */
     @Import(name="inferencingStackVersion")
-      private final @Nullable String inferencingStackVersion;
+    private @Nullable String inferencingStackVersion;
 
     public Optional<String> inferencingStackVersion() {
-        return this.inferencingStackVersion == null ? Optional.empty() : Optional.ofNullable(this.inferencingStackVersion);
+        return Optional.ofNullable(this.inferencingStackVersion);
     }
 
     /**
@@ -61,10 +61,10 @@ public final class EnvironmentImageResponseResponseEnvironment extends com.pulum
      * 
      */
     @Import(name="name")
-      private final @Nullable String name;
+    private @Nullable String name;
 
     public Optional<String> name() {
-        return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -72,10 +72,10 @@ public final class EnvironmentImageResponseResponseEnvironment extends com.pulum
      * 
      */
     @Import(name="python")
-      private final @Nullable ModelEnvironmentDefinitionResponseResponsePython python;
+    private @Nullable ModelEnvironmentDefinitionResponseResponsePython python;
 
     public Optional<ModelEnvironmentDefinitionResponseResponsePython> python() {
-        return this.python == null ? Optional.empty() : Optional.ofNullable(this.python);
+        return Optional.ofNullable(this.python);
     }
 
     /**
@@ -83,10 +83,10 @@ public final class EnvironmentImageResponseResponseEnvironment extends com.pulum
      * 
      */
     @Import(name="r")
-      private final @Nullable ModelEnvironmentDefinitionResponseResponseR r;
+    private @Nullable ModelEnvironmentDefinitionResponseResponseR r;
 
     public Optional<ModelEnvironmentDefinitionResponseResponseR> r() {
-        return this.r == null ? Optional.empty() : Optional.ofNullable(this.r);
+        return Optional.ofNullable(this.r);
     }
 
     /**
@@ -94,10 +94,10 @@ public final class EnvironmentImageResponseResponseEnvironment extends com.pulum
      * 
      */
     @Import(name="spark")
-      private final @Nullable ModelEnvironmentDefinitionResponseResponseSpark spark;
+    private @Nullable ModelEnvironmentDefinitionResponseResponseSpark spark;
 
     public Optional<ModelEnvironmentDefinitionResponseResponseSpark> spark() {
-        return this.spark == null ? Optional.empty() : Optional.ofNullable(this.spark);
+        return Optional.ofNullable(this.spark);
     }
 
     /**
@@ -105,109 +105,86 @@ public final class EnvironmentImageResponseResponseEnvironment extends com.pulum
      * 
      */
     @Import(name="version")
-      private final @Nullable String version;
+    private @Nullable String version;
 
     public Optional<String> version() {
-        return this.version == null ? Optional.empty() : Optional.ofNullable(this.version);
+        return Optional.ofNullable(this.version);
     }
 
-    public EnvironmentImageResponseResponseEnvironment(
-        @Nullable ModelEnvironmentDefinitionResponseResponseDocker docker,
-        @Nullable Map<String,String> environmentVariables,
-        @Nullable String inferencingStackVersion,
-        @Nullable String name,
-        @Nullable ModelEnvironmentDefinitionResponseResponsePython python,
-        @Nullable ModelEnvironmentDefinitionResponseResponseR r,
-        @Nullable ModelEnvironmentDefinitionResponseResponseSpark spark,
-        @Nullable String version) {
-        this.docker = docker;
-        this.environmentVariables = environmentVariables;
-        this.inferencingStackVersion = inferencingStackVersion;
-        this.name = name;
-        this.python = python;
-        this.r = r;
-        this.spark = spark;
-        this.version = version;
-    }
+    private EnvironmentImageResponseResponseEnvironment() {}
 
-    private EnvironmentImageResponseResponseEnvironment() {
-        this.docker = null;
-        this.environmentVariables = Map.of();
-        this.inferencingStackVersion = null;
-        this.name = null;
-        this.python = null;
-        this.r = null;
-        this.spark = null;
-        this.version = null;
+    private EnvironmentImageResponseResponseEnvironment(EnvironmentImageResponseResponseEnvironment $) {
+        this.docker = $.docker;
+        this.environmentVariables = $.environmentVariables;
+        this.inferencingStackVersion = $.inferencingStackVersion;
+        this.name = $.name;
+        this.python = $.python;
+        this.r = $.r;
+        this.spark = $.spark;
+        this.version = $.version;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EnvironmentImageResponseResponseEnvironment defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable ModelEnvironmentDefinitionResponseResponseDocker docker;
-        private @Nullable Map<String,String> environmentVariables;
-        private @Nullable String inferencingStackVersion;
-        private @Nullable String name;
-        private @Nullable ModelEnvironmentDefinitionResponseResponsePython python;
-        private @Nullable ModelEnvironmentDefinitionResponseResponseR r;
-        private @Nullable ModelEnvironmentDefinitionResponseResponseSpark spark;
-        private @Nullable String version;
+        private EnvironmentImageResponseResponseEnvironment $;
 
         public Builder() {
-    	      // Empty
+            $ = new EnvironmentImageResponseResponseEnvironment();
         }
 
         public Builder(EnvironmentImageResponseResponseEnvironment defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.docker = defaults.docker;
-    	      this.environmentVariables = defaults.environmentVariables;
-    	      this.inferencingStackVersion = defaults.inferencingStackVersion;
-    	      this.name = defaults.name;
-    	      this.python = defaults.python;
-    	      this.r = defaults.r;
-    	      this.spark = defaults.spark;
-    	      this.version = defaults.version;
+            $ = new EnvironmentImageResponseResponseEnvironment(Objects.requireNonNull(defaults));
         }
 
         public Builder docker(@Nullable ModelEnvironmentDefinitionResponseResponseDocker docker) {
-            this.docker = docker;
+            $.docker = docker;
             return this;
         }
+
         public Builder environmentVariables(@Nullable Map<String,String> environmentVariables) {
-            this.environmentVariables = environmentVariables;
+            $.environmentVariables = environmentVariables;
             return this;
         }
+
         public Builder inferencingStackVersion(@Nullable String inferencingStackVersion) {
-            this.inferencingStackVersion = inferencingStackVersion;
+            $.inferencingStackVersion = inferencingStackVersion;
             return this;
         }
+
         public Builder name(@Nullable String name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
+
         public Builder python(@Nullable ModelEnvironmentDefinitionResponseResponsePython python) {
-            this.python = python;
+            $.python = python;
             return this;
         }
+
         public Builder r(@Nullable ModelEnvironmentDefinitionResponseResponseR r) {
-            this.r = r;
+            $.r = r;
             return this;
         }
+
         public Builder spark(@Nullable ModelEnvironmentDefinitionResponseResponseSpark spark) {
-            this.spark = spark;
+            $.spark = spark;
             return this;
         }
+
         public Builder version(@Nullable String version) {
-            this.version = version;
+            $.version = version;
             return this;
-        }        public EnvironmentImageResponseResponseEnvironment build() {
-            return new EnvironmentImageResponseResponseEnvironment(docker, environmentVariables, inferencingStackVersion, name, python, r, spark, version);
+        }
+
+        public EnvironmentImageResponseResponseEnvironment build() {
+            return $;
         }
     }
+
 }

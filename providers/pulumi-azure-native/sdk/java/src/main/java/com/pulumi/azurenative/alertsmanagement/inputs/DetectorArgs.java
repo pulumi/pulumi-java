@@ -5,12 +5,12 @@ package com.pulumi.azurenative.alertsmanagement.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +27,10 @@ public final class DetectorArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -38,7 +38,7 @@ public final class DetectorArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="id", required=true)
-      private final Output<String> id;
+    private Output<String> id;
 
     public Output<String> id() {
         return this.id;
@@ -49,10 +49,10 @@ public final class DetectorArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="imagePaths")
-      private final @Nullable Output<List<String>> imagePaths;
+    private @Nullable Output<List<String>> imagePaths;
 
-    public Output<List<String>> imagePaths() {
-        return this.imagePaths == null ? Codegen.empty() : this.imagePaths;
+    public Optional<Output<List<String>>> imagePaths() {
+        return Optional.ofNullable(this.imagePaths);
     }
 
     /**
@@ -60,10 +60,10 @@ public final class DetectorArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -71,10 +71,10 @@ public final class DetectorArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="parameters")
-      private final @Nullable Output<Map<String,Object>> parameters;
+    private @Nullable Output<Map<String,Object>> parameters;
 
-    public Output<Map<String,Object>> parameters() {
-        return this.parameters == null ? Codegen.empty() : this.parameters;
+    public Optional<Output<Map<String,Object>>> parameters() {
+        return Optional.ofNullable(this.parameters);
     }
 
     /**
@@ -82,121 +82,107 @@ public final class DetectorArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="supportedResourceTypes")
-      private final @Nullable Output<List<String>> supportedResourceTypes;
+    private @Nullable Output<List<String>> supportedResourceTypes;
 
-    public Output<List<String>> supportedResourceTypes() {
-        return this.supportedResourceTypes == null ? Codegen.empty() : this.supportedResourceTypes;
+    public Optional<Output<List<String>>> supportedResourceTypes() {
+        return Optional.ofNullable(this.supportedResourceTypes);
     }
 
-    public DetectorArgs(
-        @Nullable Output<String> description,
-        Output<String> id,
-        @Nullable Output<List<String>> imagePaths,
-        @Nullable Output<String> name,
-        @Nullable Output<Map<String,Object>> parameters,
-        @Nullable Output<List<String>> supportedResourceTypes) {
-        this.description = description;
-        this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
-        this.imagePaths = imagePaths;
-        this.name = name;
-        this.parameters = parameters;
-        this.supportedResourceTypes = supportedResourceTypes;
-    }
+    private DetectorArgs() {}
 
-    private DetectorArgs() {
-        this.description = Codegen.empty();
-        this.id = Codegen.empty();
-        this.imagePaths = Codegen.empty();
-        this.name = Codegen.empty();
-        this.parameters = Codegen.empty();
-        this.supportedResourceTypes = Codegen.empty();
+    private DetectorArgs(DetectorArgs $) {
+        this.description = $.description;
+        this.id = $.id;
+        this.imagePaths = $.imagePaths;
+        this.name = $.name;
+        this.parameters = $.parameters;
+        this.supportedResourceTypes = $.supportedResourceTypes;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DetectorArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> description;
-        private Output<String> id;
-        private @Nullable Output<List<String>> imagePaths;
-        private @Nullable Output<String> name;
-        private @Nullable Output<Map<String,Object>> parameters;
-        private @Nullable Output<List<String>> supportedResourceTypes;
+        private DetectorArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DetectorArgs();
         }
 
         public Builder(DetectorArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.description = defaults.description;
-    	      this.id = defaults.id;
-    	      this.imagePaths = defaults.imagePaths;
-    	      this.name = defaults.name;
-    	      this.parameters = defaults.parameters;
-    	      this.supportedResourceTypes = defaults.supportedResourceTypes;
+            $ = new DetectorArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder id(Output<String> id) {
-            this.id = Objects.requireNonNull(id);
+            $.id = id;
             return this;
         }
+
         public Builder id(String id) {
-            this.id = Output.of(Objects.requireNonNull(id));
-            return this;
+            return id(Output.of(id));
         }
+
         public Builder imagePaths(@Nullable Output<List<String>> imagePaths) {
-            this.imagePaths = imagePaths;
+            $.imagePaths = imagePaths;
             return this;
         }
-        public Builder imagePaths(@Nullable List<String> imagePaths) {
-            this.imagePaths = Codegen.ofNullable(imagePaths);
-            return this;
+
+        public Builder imagePaths(List<String> imagePaths) {
+            return imagePaths(Output.of(imagePaths));
         }
+
         public Builder imagePaths(String... imagePaths) {
             return imagePaths(List.of(imagePaths));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder parameters(@Nullable Output<Map<String,Object>> parameters) {
-            this.parameters = parameters;
+            $.parameters = parameters;
             return this;
         }
-        public Builder parameters(@Nullable Map<String,Object> parameters) {
-            this.parameters = Codegen.ofNullable(parameters);
-            return this;
+
+        public Builder parameters(Map<String,Object> parameters) {
+            return parameters(Output.of(parameters));
         }
+
         public Builder supportedResourceTypes(@Nullable Output<List<String>> supportedResourceTypes) {
-            this.supportedResourceTypes = supportedResourceTypes;
+            $.supportedResourceTypes = supportedResourceTypes;
             return this;
         }
-        public Builder supportedResourceTypes(@Nullable List<String> supportedResourceTypes) {
-            this.supportedResourceTypes = Codegen.ofNullable(supportedResourceTypes);
-            return this;
+
+        public Builder supportedResourceTypes(List<String> supportedResourceTypes) {
+            return supportedResourceTypes(Output.of(supportedResourceTypes));
         }
+
         public Builder supportedResourceTypes(String... supportedResourceTypes) {
             return supportedResourceTypes(List.of(supportedResourceTypes));
-        }        public DetectorArgs build() {
-            return new DetectorArgs(description, id, imagePaths, name, parameters, supportedResourceTypes);
+        }
+
+        public DetectorArgs build() {
+            $.id = Objects.requireNonNull($.id, "expected parameter 'id' to be non-null");
+            return $;
         }
     }
+
 }

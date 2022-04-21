@@ -24,10 +24,10 @@ public final class ConnectionProfileResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="clientRdpAccess")
-      private final @Nullable String clientRdpAccess;
+    private @Nullable String clientRdpAccess;
 
     public Optional<String> clientRdpAccess() {
-        return this.clientRdpAccess == null ? Optional.empty() : Optional.ofNullable(this.clientRdpAccess);
+        return Optional.ofNullable(this.clientRdpAccess);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class ConnectionProfileResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="clientSshAccess")
-      private final @Nullable String clientSshAccess;
+    private @Nullable String clientSshAccess;
 
     public Optional<String> clientSshAccess() {
-        return this.clientSshAccess == null ? Optional.empty() : Optional.ofNullable(this.clientSshAccess);
+        return Optional.ofNullable(this.clientSshAccess);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class ConnectionProfileResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="webRdpAccess")
-      private final @Nullable String webRdpAccess;
+    private @Nullable String webRdpAccess;
 
     public Optional<String> webRdpAccess() {
-        return this.webRdpAccess == null ? Optional.empty() : Optional.ofNullable(this.webRdpAccess);
+        return Optional.ofNullable(this.webRdpAccess);
     }
 
     /**
@@ -57,73 +57,66 @@ public final class ConnectionProfileResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="webSshAccess")
-      private final @Nullable String webSshAccess;
+    private @Nullable String webSshAccess;
 
     public Optional<String> webSshAccess() {
-        return this.webSshAccess == null ? Optional.empty() : Optional.ofNullable(this.webSshAccess);
+        return Optional.ofNullable(this.webSshAccess);
     }
 
-    public ConnectionProfileResponse(
-        @Nullable String clientRdpAccess,
-        @Nullable String clientSshAccess,
-        @Nullable String webRdpAccess,
-        @Nullable String webSshAccess) {
-        this.clientRdpAccess = Codegen.stringProp("clientRdpAccess").arg(clientRdpAccess).def("None").getNullable();
-        this.clientSshAccess = Codegen.stringProp("clientSshAccess").arg(clientSshAccess).def("None").getNullable();
-        this.webRdpAccess = Codegen.stringProp("webRdpAccess").arg(webRdpAccess).def("None").getNullable();
-        this.webSshAccess = Codegen.stringProp("webSshAccess").arg(webSshAccess).def("None").getNullable();
-    }
+    private ConnectionProfileResponse() {}
 
-    private ConnectionProfileResponse() {
-        this.clientRdpAccess = null;
-        this.clientSshAccess = null;
-        this.webRdpAccess = null;
-        this.webSshAccess = null;
+    private ConnectionProfileResponse(ConnectionProfileResponse $) {
+        this.clientRdpAccess = $.clientRdpAccess;
+        this.clientSshAccess = $.clientSshAccess;
+        this.webRdpAccess = $.webRdpAccess;
+        this.webSshAccess = $.webSshAccess;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ConnectionProfileResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String clientRdpAccess;
-        private @Nullable String clientSshAccess;
-        private @Nullable String webRdpAccess;
-        private @Nullable String webSshAccess;
+        private ConnectionProfileResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ConnectionProfileResponse();
         }
 
         public Builder(ConnectionProfileResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.clientRdpAccess = defaults.clientRdpAccess;
-    	      this.clientSshAccess = defaults.clientSshAccess;
-    	      this.webRdpAccess = defaults.webRdpAccess;
-    	      this.webSshAccess = defaults.webSshAccess;
+            $ = new ConnectionProfileResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder clientRdpAccess(@Nullable String clientRdpAccess) {
-            this.clientRdpAccess = clientRdpAccess;
+            $.clientRdpAccess = clientRdpAccess;
             return this;
         }
+
         public Builder clientSshAccess(@Nullable String clientSshAccess) {
-            this.clientSshAccess = clientSshAccess;
+            $.clientSshAccess = clientSshAccess;
             return this;
         }
+
         public Builder webRdpAccess(@Nullable String webRdpAccess) {
-            this.webRdpAccess = webRdpAccess;
+            $.webRdpAccess = webRdpAccess;
             return this;
         }
+
         public Builder webSshAccess(@Nullable String webSshAccess) {
-            this.webSshAccess = webSshAccess;
+            $.webSshAccess = webSshAccess;
             return this;
-        }        public ConnectionProfileResponse build() {
-            return new ConnectionProfileResponse(clientRdpAccess, clientSshAccess, webRdpAccess, webSshAccess);
+        }
+
+        public ConnectionProfileResponse build() {
+            $.clientRdpAccess = Codegen.stringProp("clientRdpAccess").arg($.clientRdpAccess).def("None").getNullable();
+            $.clientSshAccess = Codegen.stringProp("clientSshAccess").arg($.clientSshAccess).def("None").getNullable();
+            $.webRdpAccess = Codegen.stringProp("webRdpAccess").arg($.webRdpAccess).def("None").getNullable();
+            $.webSshAccess = Codegen.stringProp("webSshAccess").arg($.webSshAccess).def("None").getNullable();
+            return $;
         }
     }
+
 }

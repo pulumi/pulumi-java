@@ -20,10 +20,10 @@ public final class DatasetDataCatalogInputDefinition extends com.pulumi.resource
      * 
      */
     @Import(name="catalogId")
-      private final @Nullable String catalogId;
+    private @Nullable String catalogId;
 
     public Optional<String> catalogId() {
-        return this.catalogId == null ? Optional.empty() : Optional.ofNullable(this.catalogId);
+        return Optional.ofNullable(this.catalogId);
     }
 
     /**
@@ -31,10 +31,10 @@ public final class DatasetDataCatalogInputDefinition extends com.pulumi.resource
      * 
      */
     @Import(name="databaseName")
-      private final @Nullable String databaseName;
+    private @Nullable String databaseName;
 
     public Optional<String> databaseName() {
-        return this.databaseName == null ? Optional.empty() : Optional.ofNullable(this.databaseName);
+        return Optional.ofNullable(this.databaseName);
     }
 
     /**
@@ -42,80 +42,69 @@ public final class DatasetDataCatalogInputDefinition extends com.pulumi.resource
      * 
      */
     @Import(name="tableName")
-      private final @Nullable String tableName;
+    private @Nullable String tableName;
 
     public Optional<String> tableName() {
-        return this.tableName == null ? Optional.empty() : Optional.ofNullable(this.tableName);
+        return Optional.ofNullable(this.tableName);
     }
 
     @Import(name="tempDirectory")
-      private final @Nullable DatasetS3Location tempDirectory;
+    private @Nullable DatasetS3Location tempDirectory;
 
     public Optional<DatasetS3Location> tempDirectory() {
-        return this.tempDirectory == null ? Optional.empty() : Optional.ofNullable(this.tempDirectory);
+        return Optional.ofNullable(this.tempDirectory);
     }
 
-    public DatasetDataCatalogInputDefinition(
-        @Nullable String catalogId,
-        @Nullable String databaseName,
-        @Nullable String tableName,
-        @Nullable DatasetS3Location tempDirectory) {
-        this.catalogId = catalogId;
-        this.databaseName = databaseName;
-        this.tableName = tableName;
-        this.tempDirectory = tempDirectory;
-    }
+    private DatasetDataCatalogInputDefinition() {}
 
-    private DatasetDataCatalogInputDefinition() {
-        this.catalogId = null;
-        this.databaseName = null;
-        this.tableName = null;
-        this.tempDirectory = null;
+    private DatasetDataCatalogInputDefinition(DatasetDataCatalogInputDefinition $) {
+        this.catalogId = $.catalogId;
+        this.databaseName = $.databaseName;
+        this.tableName = $.tableName;
+        this.tempDirectory = $.tempDirectory;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DatasetDataCatalogInputDefinition defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String catalogId;
-        private @Nullable String databaseName;
-        private @Nullable String tableName;
-        private @Nullable DatasetS3Location tempDirectory;
+        private DatasetDataCatalogInputDefinition $;
 
         public Builder() {
-    	      // Empty
+            $ = new DatasetDataCatalogInputDefinition();
         }
 
         public Builder(DatasetDataCatalogInputDefinition defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.catalogId = defaults.catalogId;
-    	      this.databaseName = defaults.databaseName;
-    	      this.tableName = defaults.tableName;
-    	      this.tempDirectory = defaults.tempDirectory;
+            $ = new DatasetDataCatalogInputDefinition(Objects.requireNonNull(defaults));
         }
 
         public Builder catalogId(@Nullable String catalogId) {
-            this.catalogId = catalogId;
+            $.catalogId = catalogId;
             return this;
         }
+
         public Builder databaseName(@Nullable String databaseName) {
-            this.databaseName = databaseName;
+            $.databaseName = databaseName;
             return this;
         }
+
         public Builder tableName(@Nullable String tableName) {
-            this.tableName = tableName;
+            $.tableName = tableName;
             return this;
         }
+
         public Builder tempDirectory(@Nullable DatasetS3Location tempDirectory) {
-            this.tempDirectory = tempDirectory;
+            $.tempDirectory = tempDirectory;
             return this;
-        }        public DatasetDataCatalogInputDefinition build() {
-            return new DatasetDataCatalogInputDefinition(catalogId, databaseName, tableName, tempDirectory);
+        }
+
+        public DatasetDataCatalogInputDefinition build() {
+            return $;
         }
     }
+
 }

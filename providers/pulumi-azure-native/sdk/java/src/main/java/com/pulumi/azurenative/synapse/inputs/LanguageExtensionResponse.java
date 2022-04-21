@@ -23,45 +23,44 @@ public final class LanguageExtensionResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="languageExtensionName")
-      private final @Nullable String languageExtensionName;
+    private @Nullable String languageExtensionName;
 
     public Optional<String> languageExtensionName() {
-        return this.languageExtensionName == null ? Optional.empty() : Optional.ofNullable(this.languageExtensionName);
+        return Optional.ofNullable(this.languageExtensionName);
     }
 
-    public LanguageExtensionResponse(@Nullable String languageExtensionName) {
-        this.languageExtensionName = languageExtensionName;
-    }
+    private LanguageExtensionResponse() {}
 
-    private LanguageExtensionResponse() {
-        this.languageExtensionName = null;
+    private LanguageExtensionResponse(LanguageExtensionResponse $) {
+        this.languageExtensionName = $.languageExtensionName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LanguageExtensionResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String languageExtensionName;
+        private LanguageExtensionResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new LanguageExtensionResponse();
         }
 
         public Builder(LanguageExtensionResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.languageExtensionName = defaults.languageExtensionName;
+            $ = new LanguageExtensionResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder languageExtensionName(@Nullable String languageExtensionName) {
-            this.languageExtensionName = languageExtensionName;
+            $.languageExtensionName = languageExtensionName;
             return this;
-        }        public LanguageExtensionResponse build() {
-            return new LanguageExtensionResponse(languageExtensionName);
+        }
+
+        public LanguageExtensionResponse build() {
+            return $;
         }
     }
+
 }

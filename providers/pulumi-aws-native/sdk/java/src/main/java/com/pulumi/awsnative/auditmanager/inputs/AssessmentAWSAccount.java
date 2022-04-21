@@ -19,78 +19,70 @@ public final class AssessmentAWSAccount extends com.pulumi.resources.InvokeArgs 
     public static final AssessmentAWSAccount Empty = new AssessmentAWSAccount();
 
     @Import(name="emailAddress")
-      private final @Nullable String emailAddress;
+    private @Nullable String emailAddress;
 
     public Optional<String> emailAddress() {
-        return this.emailAddress == null ? Optional.empty() : Optional.ofNullable(this.emailAddress);
+        return Optional.ofNullable(this.emailAddress);
     }
 
     @Import(name="id")
-      private final @Nullable String id;
+    private @Nullable String id;
 
     public Optional<String> id() {
-        return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
+        return Optional.ofNullable(this.id);
     }
 
     @Import(name="name")
-      private final @Nullable String name;
+    private @Nullable String name;
 
     public Optional<String> name() {
-        return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
+        return Optional.ofNullable(this.name);
     }
 
-    public AssessmentAWSAccount(
-        @Nullable String emailAddress,
-        @Nullable String id,
-        @Nullable String name) {
-        this.emailAddress = emailAddress;
-        this.id = id;
-        this.name = name;
-    }
+    private AssessmentAWSAccount() {}
 
-    private AssessmentAWSAccount() {
-        this.emailAddress = null;
-        this.id = null;
-        this.name = null;
+    private AssessmentAWSAccount(AssessmentAWSAccount $) {
+        this.emailAddress = $.emailAddress;
+        this.id = $.id;
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AssessmentAWSAccount defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String emailAddress;
-        private @Nullable String id;
-        private @Nullable String name;
+        private AssessmentAWSAccount $;
 
         public Builder() {
-    	      // Empty
+            $ = new AssessmentAWSAccount();
         }
 
         public Builder(AssessmentAWSAccount defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.emailAddress = defaults.emailAddress;
-    	      this.id = defaults.id;
-    	      this.name = defaults.name;
+            $ = new AssessmentAWSAccount(Objects.requireNonNull(defaults));
         }
 
         public Builder emailAddress(@Nullable String emailAddress) {
-            this.emailAddress = emailAddress;
+            $.emailAddress = emailAddress;
             return this;
         }
+
         public Builder id(@Nullable String id) {
-            this.id = id;
+            $.id = id;
             return this;
         }
+
         public Builder name(@Nullable String name) {
-            this.name = name;
+            $.name = name;
             return this;
-        }        public AssessmentAWSAccount build() {
-            return new AssessmentAWSAccount(emailAddress, id, name);
+        }
+
+        public AssessmentAWSAccount build() {
+            return $;
         }
     }
+
 }

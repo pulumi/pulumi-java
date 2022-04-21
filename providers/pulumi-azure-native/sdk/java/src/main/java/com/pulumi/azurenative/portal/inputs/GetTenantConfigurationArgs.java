@@ -17,45 +17,45 @@ public final class GetTenantConfigurationArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="configurationName", required=true)
-      private final String configurationName;
+    private String configurationName;
 
     public String configurationName() {
         return this.configurationName;
     }
 
-    public GetTenantConfigurationArgs(String configurationName) {
-        this.configurationName = Objects.requireNonNull(configurationName, "expected parameter 'configurationName' to be non-null");
-    }
+    private GetTenantConfigurationArgs() {}
 
-    private GetTenantConfigurationArgs() {
-        this.configurationName = null;
+    private GetTenantConfigurationArgs(GetTenantConfigurationArgs $) {
+        this.configurationName = $.configurationName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetTenantConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String configurationName;
+        private GetTenantConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetTenantConfigurationArgs();
         }
 
         public Builder(GetTenantConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.configurationName = defaults.configurationName;
+            $ = new GetTenantConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder configurationName(String configurationName) {
-            this.configurationName = Objects.requireNonNull(configurationName);
+            $.configurationName = configurationName;
             return this;
-        }        public GetTenantConfigurationArgs build() {
-            return new GetTenantConfigurationArgs(configurationName);
+        }
+
+        public GetTenantConfigurationArgs build() {
+            $.configurationName = Objects.requireNonNull($.configurationName, "expected parameter 'configurationName' to be non-null");
+            return $;
         }
     }
+
 }

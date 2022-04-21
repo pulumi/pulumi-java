@@ -5,9 +5,9 @@ package com.pulumi.aws.sagemaker.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class FeatureGroupFeatureDefinitionArgs extends com.pulumi.resource
      * 
      */
     @Import(name="featureName")
-      private final @Nullable Output<String> featureName;
+    private @Nullable Output<String> featureName;
 
-    public Output<String> featureName() {
-        return this.featureName == null ? Codegen.empty() : this.featureName;
+    public Optional<Output<String>> featureName() {
+        return Optional.ofNullable(this.featureName);
     }
 
     /**
@@ -31,63 +31,58 @@ public final class FeatureGroupFeatureDefinitionArgs extends com.pulumi.resource
      * 
      */
     @Import(name="featureType")
-      private final @Nullable Output<String> featureType;
+    private @Nullable Output<String> featureType;
 
-    public Output<String> featureType() {
-        return this.featureType == null ? Codegen.empty() : this.featureType;
+    public Optional<Output<String>> featureType() {
+        return Optional.ofNullable(this.featureType);
     }
 
-    public FeatureGroupFeatureDefinitionArgs(
-        @Nullable Output<String> featureName,
-        @Nullable Output<String> featureType) {
-        this.featureName = featureName;
-        this.featureType = featureType;
-    }
+    private FeatureGroupFeatureDefinitionArgs() {}
 
-    private FeatureGroupFeatureDefinitionArgs() {
-        this.featureName = Codegen.empty();
-        this.featureType = Codegen.empty();
+    private FeatureGroupFeatureDefinitionArgs(FeatureGroupFeatureDefinitionArgs $) {
+        this.featureName = $.featureName;
+        this.featureType = $.featureType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FeatureGroupFeatureDefinitionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> featureName;
-        private @Nullable Output<String> featureType;
+        private FeatureGroupFeatureDefinitionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new FeatureGroupFeatureDefinitionArgs();
         }
 
         public Builder(FeatureGroupFeatureDefinitionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.featureName = defaults.featureName;
-    	      this.featureType = defaults.featureType;
+            $ = new FeatureGroupFeatureDefinitionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder featureName(@Nullable Output<String> featureName) {
-            this.featureName = featureName;
+            $.featureName = featureName;
             return this;
         }
-        public Builder featureName(@Nullable String featureName) {
-            this.featureName = Codegen.ofNullable(featureName);
-            return this;
+
+        public Builder featureName(String featureName) {
+            return featureName(Output.of(featureName));
         }
+
         public Builder featureType(@Nullable Output<String> featureType) {
-            this.featureType = featureType;
+            $.featureType = featureType;
             return this;
         }
-        public Builder featureType(@Nullable String featureType) {
-            this.featureType = Codegen.ofNullable(featureType);
-            return this;
-        }        public FeatureGroupFeatureDefinitionArgs build() {
-            return new FeatureGroupFeatureDefinitionArgs(featureName, featureType);
+
+        public Builder featureType(String featureType) {
+            return featureType(Output.of(featureType));
+        }
+
+        public FeatureGroupFeatureDefinitionArgs build() {
+            return $;
         }
     }
+
 }

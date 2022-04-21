@@ -20,7 +20,7 @@ public final class GetResourceTagsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceId", required=true)
-      private final String resourceId;
+    private String resourceId;
 
     public String resourceId() {
         return this.resourceId;
@@ -31,55 +31,51 @@ public final class GetResourceTagsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Map<String,String> tags;
+    private @Nullable Map<String,String> tags;
 
-    public Map<String,String> tags() {
-        return this.tags == null ? Map.of() : this.tags;
+    public Optional<Map<String,String>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public GetResourceTagsArgs(
-        String resourceId,
-        @Nullable Map<String,String> tags) {
-        this.resourceId = Objects.requireNonNull(resourceId, "expected parameter 'resourceId' to be non-null");
-        this.tags = tags;
-    }
+    private GetResourceTagsArgs() {}
 
-    private GetResourceTagsArgs() {
-        this.resourceId = null;
-        this.tags = Map.of();
+    private GetResourceTagsArgs(GetResourceTagsArgs $) {
+        this.resourceId = $.resourceId;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetResourceTagsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String resourceId;
-        private @Nullable Map<String,String> tags;
+        private GetResourceTagsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetResourceTagsArgs();
         }
 
         public Builder(GetResourceTagsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.resourceId = defaults.resourceId;
-    	      this.tags = defaults.tags;
+            $ = new GetResourceTagsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder resourceId(String resourceId) {
-            this.resourceId = Objects.requireNonNull(resourceId);
+            $.resourceId = resourceId;
             return this;
         }
+
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
-        }        public GetResourceTagsArgs build() {
-            return new GetResourceTagsArgs(resourceId, tags);
+        }
+
+        public GetResourceTagsArgs build() {
+            $.resourceId = Objects.requireNonNull($.resourceId, "expected parameter 'resourceId' to be non-null");
+            return $;
         }
     }
+
 }

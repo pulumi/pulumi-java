@@ -5,10 +5,10 @@ package com.pulumi.azurenative.botservice.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,7 +25,7 @@ public final class SmsChannelPropertiesArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="accountSID", required=true)
-      private final Output<String> accountSID;
+    private Output<String> accountSID;
 
     public Output<String> accountSID() {
         return this.accountSID;
@@ -36,10 +36,10 @@ public final class SmsChannelPropertiesArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="authToken")
-      private final @Nullable Output<String> authToken;
+    private @Nullable Output<String> authToken;
 
-    public Output<String> authToken() {
-        return this.authToken == null ? Codegen.empty() : this.authToken;
+    public Optional<Output<String>> authToken() {
+        return Optional.ofNullable(this.authToken);
     }
 
     /**
@@ -47,7 +47,7 @@ public final class SmsChannelPropertiesArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="isEnabled", required=true)
-      private final Output<Boolean> isEnabled;
+    private Output<Boolean> isEnabled;
 
     public Output<Boolean> isEnabled() {
         return this.isEnabled;
@@ -58,10 +58,10 @@ public final class SmsChannelPropertiesArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="isValidated")
-      private final @Nullable Output<Boolean> isValidated;
+    private @Nullable Output<Boolean> isValidated;
 
-    public Output<Boolean> isValidated() {
-        return this.isValidated == null ? Codegen.empty() : this.isValidated;
+    public Optional<Output<Boolean>> isValidated() {
+        return Optional.ofNullable(this.isValidated);
     }
 
     /**
@@ -69,102 +69,91 @@ public final class SmsChannelPropertiesArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="phone", required=true)
-      private final Output<String> phone;
+    private Output<String> phone;
 
     public Output<String> phone() {
         return this.phone;
     }
 
-    public SmsChannelPropertiesArgs(
-        Output<String> accountSID,
-        @Nullable Output<String> authToken,
-        Output<Boolean> isEnabled,
-        @Nullable Output<Boolean> isValidated,
-        Output<String> phone) {
-        this.accountSID = Objects.requireNonNull(accountSID, "expected parameter 'accountSID' to be non-null");
-        this.authToken = authToken;
-        this.isEnabled = Objects.requireNonNull(isEnabled, "expected parameter 'isEnabled' to be non-null");
-        this.isValidated = isValidated;
-        this.phone = Objects.requireNonNull(phone, "expected parameter 'phone' to be non-null");
-    }
+    private SmsChannelPropertiesArgs() {}
 
-    private SmsChannelPropertiesArgs() {
-        this.accountSID = Codegen.empty();
-        this.authToken = Codegen.empty();
-        this.isEnabled = Codegen.empty();
-        this.isValidated = Codegen.empty();
-        this.phone = Codegen.empty();
+    private SmsChannelPropertiesArgs(SmsChannelPropertiesArgs $) {
+        this.accountSID = $.accountSID;
+        this.authToken = $.authToken;
+        this.isEnabled = $.isEnabled;
+        this.isValidated = $.isValidated;
+        this.phone = $.phone;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SmsChannelPropertiesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> accountSID;
-        private @Nullable Output<String> authToken;
-        private Output<Boolean> isEnabled;
-        private @Nullable Output<Boolean> isValidated;
-        private Output<String> phone;
+        private SmsChannelPropertiesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SmsChannelPropertiesArgs();
         }
 
         public Builder(SmsChannelPropertiesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accountSID = defaults.accountSID;
-    	      this.authToken = defaults.authToken;
-    	      this.isEnabled = defaults.isEnabled;
-    	      this.isValidated = defaults.isValidated;
-    	      this.phone = defaults.phone;
+            $ = new SmsChannelPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder accountSID(Output<String> accountSID) {
-            this.accountSID = Objects.requireNonNull(accountSID);
+            $.accountSID = accountSID;
             return this;
         }
+
         public Builder accountSID(String accountSID) {
-            this.accountSID = Output.of(Objects.requireNonNull(accountSID));
-            return this;
+            return accountSID(Output.of(accountSID));
         }
+
         public Builder authToken(@Nullable Output<String> authToken) {
-            this.authToken = authToken;
+            $.authToken = authToken;
             return this;
         }
-        public Builder authToken(@Nullable String authToken) {
-            this.authToken = Codegen.ofNullable(authToken);
-            return this;
+
+        public Builder authToken(String authToken) {
+            return authToken(Output.of(authToken));
         }
+
         public Builder isEnabled(Output<Boolean> isEnabled) {
-            this.isEnabled = Objects.requireNonNull(isEnabled);
+            $.isEnabled = isEnabled;
             return this;
         }
+
         public Builder isEnabled(Boolean isEnabled) {
-            this.isEnabled = Output.of(Objects.requireNonNull(isEnabled));
-            return this;
+            return isEnabled(Output.of(isEnabled));
         }
+
         public Builder isValidated(@Nullable Output<Boolean> isValidated) {
-            this.isValidated = isValidated;
+            $.isValidated = isValidated;
             return this;
         }
-        public Builder isValidated(@Nullable Boolean isValidated) {
-            this.isValidated = Codegen.ofNullable(isValidated);
-            return this;
+
+        public Builder isValidated(Boolean isValidated) {
+            return isValidated(Output.of(isValidated));
         }
+
         public Builder phone(Output<String> phone) {
-            this.phone = Objects.requireNonNull(phone);
+            $.phone = phone;
             return this;
         }
+
         public Builder phone(String phone) {
-            this.phone = Output.of(Objects.requireNonNull(phone));
-            return this;
-        }        public SmsChannelPropertiesArgs build() {
-            return new SmsChannelPropertiesArgs(accountSID, authToken, isEnabled, isValidated, phone);
+            return phone(Output.of(phone));
+        }
+
+        public SmsChannelPropertiesArgs build() {
+            $.accountSID = Objects.requireNonNull($.accountSID, "expected parameter 'accountSID' to be non-null");
+            $.isEnabled = Objects.requireNonNull($.isEnabled, "expected parameter 'isEnabled' to be non-null");
+            $.phone = Objects.requireNonNull($.phone, "expected parameter 'phone' to be non-null");
+            return $;
         }
     }
+
 }

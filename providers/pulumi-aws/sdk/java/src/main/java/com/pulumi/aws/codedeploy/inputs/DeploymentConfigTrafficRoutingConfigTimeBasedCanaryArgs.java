@@ -5,9 +5,9 @@ package com.pulumi.aws.codedeploy.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class DeploymentConfigTrafficRoutingConfigTimeBasedCanaryArgs exten
      * 
      */
     @Import(name="interval")
-      private final @Nullable Output<Integer> interval;
+    private @Nullable Output<Integer> interval;
 
-    public Output<Integer> interval() {
-        return this.interval == null ? Codegen.empty() : this.interval;
+    public Optional<Output<Integer>> interval() {
+        return Optional.ofNullable(this.interval);
     }
 
     /**
@@ -31,63 +31,58 @@ public final class DeploymentConfigTrafficRoutingConfigTimeBasedCanaryArgs exten
      * 
      */
     @Import(name="percentage")
-      private final @Nullable Output<Integer> percentage;
+    private @Nullable Output<Integer> percentage;
 
-    public Output<Integer> percentage() {
-        return this.percentage == null ? Codegen.empty() : this.percentage;
+    public Optional<Output<Integer>> percentage() {
+        return Optional.ofNullable(this.percentage);
     }
 
-    public DeploymentConfigTrafficRoutingConfigTimeBasedCanaryArgs(
-        @Nullable Output<Integer> interval,
-        @Nullable Output<Integer> percentage) {
-        this.interval = interval;
-        this.percentage = percentage;
-    }
+    private DeploymentConfigTrafficRoutingConfigTimeBasedCanaryArgs() {}
 
-    private DeploymentConfigTrafficRoutingConfigTimeBasedCanaryArgs() {
-        this.interval = Codegen.empty();
-        this.percentage = Codegen.empty();
+    private DeploymentConfigTrafficRoutingConfigTimeBasedCanaryArgs(DeploymentConfigTrafficRoutingConfigTimeBasedCanaryArgs $) {
+        this.interval = $.interval;
+        this.percentage = $.percentage;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DeploymentConfigTrafficRoutingConfigTimeBasedCanaryArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> interval;
-        private @Nullable Output<Integer> percentage;
+        private DeploymentConfigTrafficRoutingConfigTimeBasedCanaryArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DeploymentConfigTrafficRoutingConfigTimeBasedCanaryArgs();
         }
 
         public Builder(DeploymentConfigTrafficRoutingConfigTimeBasedCanaryArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.interval = defaults.interval;
-    	      this.percentage = defaults.percentage;
+            $ = new DeploymentConfigTrafficRoutingConfigTimeBasedCanaryArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder interval(@Nullable Output<Integer> interval) {
-            this.interval = interval;
+            $.interval = interval;
             return this;
         }
-        public Builder interval(@Nullable Integer interval) {
-            this.interval = Codegen.ofNullable(interval);
-            return this;
+
+        public Builder interval(Integer interval) {
+            return interval(Output.of(interval));
         }
+
         public Builder percentage(@Nullable Output<Integer> percentage) {
-            this.percentage = percentage;
+            $.percentage = percentage;
             return this;
         }
-        public Builder percentage(@Nullable Integer percentage) {
-            this.percentage = Codegen.ofNullable(percentage);
-            return this;
-        }        public DeploymentConfigTrafficRoutingConfigTimeBasedCanaryArgs build() {
-            return new DeploymentConfigTrafficRoutingConfigTimeBasedCanaryArgs(interval, percentage);
+
+        public Builder percentage(Integer percentage) {
+            return percentage(Output.of(percentage));
+        }
+
+        public DeploymentConfigTrafficRoutingConfigTimeBasedCanaryArgs build() {
+            return $;
         }
     }
+
 }

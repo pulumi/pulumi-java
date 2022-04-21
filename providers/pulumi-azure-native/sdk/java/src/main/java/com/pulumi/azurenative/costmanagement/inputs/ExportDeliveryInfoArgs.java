@@ -6,7 +6,6 @@ package com.pulumi.azurenative.costmanagement.inputs;
 import com.pulumi.azurenative.costmanagement.inputs.ExportDeliveryDestinationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
 
 
@@ -23,49 +22,49 @@ public final class ExportDeliveryInfoArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="destination", required=true)
-      private final Output<ExportDeliveryDestinationArgs> destination;
+    private Output<ExportDeliveryDestinationArgs> destination;
 
     public Output<ExportDeliveryDestinationArgs> destination() {
         return this.destination;
     }
 
-    public ExportDeliveryInfoArgs(Output<ExportDeliveryDestinationArgs> destination) {
-        this.destination = Objects.requireNonNull(destination, "expected parameter 'destination' to be non-null");
-    }
+    private ExportDeliveryInfoArgs() {}
 
-    private ExportDeliveryInfoArgs() {
-        this.destination = Codegen.empty();
+    private ExportDeliveryInfoArgs(ExportDeliveryInfoArgs $) {
+        this.destination = $.destination;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ExportDeliveryInfoArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<ExportDeliveryDestinationArgs> destination;
+        private ExportDeliveryInfoArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ExportDeliveryInfoArgs();
         }
 
         public Builder(ExportDeliveryInfoArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.destination = defaults.destination;
+            $ = new ExportDeliveryInfoArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder destination(Output<ExportDeliveryDestinationArgs> destination) {
-            this.destination = Objects.requireNonNull(destination);
+            $.destination = destination;
             return this;
         }
+
         public Builder destination(ExportDeliveryDestinationArgs destination) {
-            this.destination = Output.of(Objects.requireNonNull(destination));
-            return this;
-        }        public ExportDeliveryInfoArgs build() {
-            return new ExportDeliveryInfoArgs(destination);
+            return destination(Output.of(destination));
+        }
+
+        public ExportDeliveryInfoArgs build() {
+            $.destination = Objects.requireNonNull($.destination, "expected parameter 'destination' to be non-null");
+            return $;
         }
     }
+
 }

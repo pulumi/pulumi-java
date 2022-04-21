@@ -5,10 +5,10 @@ package com.pulumi.googlenative.assuredworkloads_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.assuredworkloads_v1.enums.GoogleCloudAssuredworkloadsV1WorkloadResourceSettingsResourceType;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class GoogleCloudAssuredworkloadsV1WorkloadResourceSettingsArgs ext
      * 
      */
     @Import(name="displayName")
-      private final @Nullable Output<String> displayName;
+    private @Nullable Output<String> displayName;
 
-    public Output<String> displayName() {
-        return this.displayName == null ? Codegen.empty() : this.displayName;
+    public Optional<Output<String>> displayName() {
+        return Optional.ofNullable(this.displayName);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class GoogleCloudAssuredworkloadsV1WorkloadResourceSettingsArgs ext
      * 
      */
     @Import(name="resourceId")
-      private final @Nullable Output<String> resourceId;
+    private @Nullable Output<String> resourceId;
 
-    public Output<String> resourceId() {
-        return this.resourceId == null ? Codegen.empty() : this.resourceId;
+    public Optional<Output<String>> resourceId() {
+        return Optional.ofNullable(this.resourceId);
     }
 
     /**
@@ -47,76 +47,68 @@ public final class GoogleCloudAssuredworkloadsV1WorkloadResourceSettingsArgs ext
      * 
      */
     @Import(name="resourceType")
-      private final @Nullable Output<GoogleCloudAssuredworkloadsV1WorkloadResourceSettingsResourceType> resourceType;
+    private @Nullable Output<GoogleCloudAssuredworkloadsV1WorkloadResourceSettingsResourceType> resourceType;
 
-    public Output<GoogleCloudAssuredworkloadsV1WorkloadResourceSettingsResourceType> resourceType() {
-        return this.resourceType == null ? Codegen.empty() : this.resourceType;
+    public Optional<Output<GoogleCloudAssuredworkloadsV1WorkloadResourceSettingsResourceType>> resourceType() {
+        return Optional.ofNullable(this.resourceType);
     }
 
-    public GoogleCloudAssuredworkloadsV1WorkloadResourceSettingsArgs(
-        @Nullable Output<String> displayName,
-        @Nullable Output<String> resourceId,
-        @Nullable Output<GoogleCloudAssuredworkloadsV1WorkloadResourceSettingsResourceType> resourceType) {
-        this.displayName = displayName;
-        this.resourceId = resourceId;
-        this.resourceType = resourceType;
-    }
+    private GoogleCloudAssuredworkloadsV1WorkloadResourceSettingsArgs() {}
 
-    private GoogleCloudAssuredworkloadsV1WorkloadResourceSettingsArgs() {
-        this.displayName = Codegen.empty();
-        this.resourceId = Codegen.empty();
-        this.resourceType = Codegen.empty();
+    private GoogleCloudAssuredworkloadsV1WorkloadResourceSettingsArgs(GoogleCloudAssuredworkloadsV1WorkloadResourceSettingsArgs $) {
+        this.displayName = $.displayName;
+        this.resourceId = $.resourceId;
+        this.resourceType = $.resourceType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudAssuredworkloadsV1WorkloadResourceSettingsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> displayName;
-        private @Nullable Output<String> resourceId;
-        private @Nullable Output<GoogleCloudAssuredworkloadsV1WorkloadResourceSettingsResourceType> resourceType;
+        private GoogleCloudAssuredworkloadsV1WorkloadResourceSettingsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudAssuredworkloadsV1WorkloadResourceSettingsArgs();
         }
 
         public Builder(GoogleCloudAssuredworkloadsV1WorkloadResourceSettingsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.displayName = defaults.displayName;
-    	      this.resourceId = defaults.resourceId;
-    	      this.resourceType = defaults.resourceType;
+            $ = new GoogleCloudAssuredworkloadsV1WorkloadResourceSettingsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder displayName(@Nullable Output<String> displayName) {
-            this.displayName = displayName;
+            $.displayName = displayName;
             return this;
         }
-        public Builder displayName(@Nullable String displayName) {
-            this.displayName = Codegen.ofNullable(displayName);
-            return this;
+
+        public Builder displayName(String displayName) {
+            return displayName(Output.of(displayName));
         }
+
         public Builder resourceId(@Nullable Output<String> resourceId) {
-            this.resourceId = resourceId;
+            $.resourceId = resourceId;
             return this;
         }
-        public Builder resourceId(@Nullable String resourceId) {
-            this.resourceId = Codegen.ofNullable(resourceId);
-            return this;
+
+        public Builder resourceId(String resourceId) {
+            return resourceId(Output.of(resourceId));
         }
+
         public Builder resourceType(@Nullable Output<GoogleCloudAssuredworkloadsV1WorkloadResourceSettingsResourceType> resourceType) {
-            this.resourceType = resourceType;
+            $.resourceType = resourceType;
             return this;
         }
-        public Builder resourceType(@Nullable GoogleCloudAssuredworkloadsV1WorkloadResourceSettingsResourceType resourceType) {
-            this.resourceType = Codegen.ofNullable(resourceType);
-            return this;
-        }        public GoogleCloudAssuredworkloadsV1WorkloadResourceSettingsArgs build() {
-            return new GoogleCloudAssuredworkloadsV1WorkloadResourceSettingsArgs(displayName, resourceId, resourceType);
+
+        public Builder resourceType(GoogleCloudAssuredworkloadsV1WorkloadResourceSettingsResourceType resourceType) {
+            return resourceType(Output.of(resourceType));
+        }
+
+        public GoogleCloudAssuredworkloadsV1WorkloadResourceSettingsArgs build() {
+            return $;
         }
     }
+
 }

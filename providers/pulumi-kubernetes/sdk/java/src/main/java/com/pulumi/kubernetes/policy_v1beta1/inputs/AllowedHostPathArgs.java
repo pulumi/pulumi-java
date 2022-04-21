@@ -5,10 +5,10 @@ package com.pulumi.kubernetes.policy_v1beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +27,10 @@ public final class AllowedHostPathArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="pathPrefix")
-      private final @Nullable Output<String> pathPrefix;
+    private @Nullable Output<String> pathPrefix;
 
-    public Output<String> pathPrefix() {
-        return this.pathPrefix == null ? Codegen.empty() : this.pathPrefix;
+    public Optional<Output<String>> pathPrefix() {
+        return Optional.ofNullable(this.pathPrefix);
     }
 
     /**
@@ -38,63 +38,58 @@ public final class AllowedHostPathArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="readOnly")
-      private final @Nullable Output<Boolean> readOnly;
+    private @Nullable Output<Boolean> readOnly;
 
-    public Output<Boolean> readOnly() {
-        return this.readOnly == null ? Codegen.empty() : this.readOnly;
+    public Optional<Output<Boolean>> readOnly() {
+        return Optional.ofNullable(this.readOnly);
     }
 
-    public AllowedHostPathArgs(
-        @Nullable Output<String> pathPrefix,
-        @Nullable Output<Boolean> readOnly) {
-        this.pathPrefix = pathPrefix;
-        this.readOnly = readOnly;
-    }
+    private AllowedHostPathArgs() {}
 
-    private AllowedHostPathArgs() {
-        this.pathPrefix = Codegen.empty();
-        this.readOnly = Codegen.empty();
+    private AllowedHostPathArgs(AllowedHostPathArgs $) {
+        this.pathPrefix = $.pathPrefix;
+        this.readOnly = $.readOnly;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AllowedHostPathArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> pathPrefix;
-        private @Nullable Output<Boolean> readOnly;
+        private AllowedHostPathArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AllowedHostPathArgs();
         }
 
         public Builder(AllowedHostPathArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.pathPrefix = defaults.pathPrefix;
-    	      this.readOnly = defaults.readOnly;
+            $ = new AllowedHostPathArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder pathPrefix(@Nullable Output<String> pathPrefix) {
-            this.pathPrefix = pathPrefix;
+            $.pathPrefix = pathPrefix;
             return this;
         }
-        public Builder pathPrefix(@Nullable String pathPrefix) {
-            this.pathPrefix = Codegen.ofNullable(pathPrefix);
-            return this;
+
+        public Builder pathPrefix(String pathPrefix) {
+            return pathPrefix(Output.of(pathPrefix));
         }
+
         public Builder readOnly(@Nullable Output<Boolean> readOnly) {
-            this.readOnly = readOnly;
+            $.readOnly = readOnly;
             return this;
         }
-        public Builder readOnly(@Nullable Boolean readOnly) {
-            this.readOnly = Codegen.ofNullable(readOnly);
-            return this;
-        }        public AllowedHostPathArgs build() {
-            return new AllowedHostPathArgs(pathPrefix, readOnly);
+
+        public Builder readOnly(Boolean readOnly) {
+            return readOnly(Output.of(readOnly));
+        }
+
+        public AllowedHostPathArgs build() {
+            return $;
         }
     }
+
 }

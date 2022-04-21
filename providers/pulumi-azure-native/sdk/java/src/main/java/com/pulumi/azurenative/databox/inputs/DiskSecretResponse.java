@@ -21,7 +21,7 @@ public final class DiskSecretResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="bitLockerKey", required=true)
-      private final String bitLockerKey;
+    private String bitLockerKey;
 
     public String bitLockerKey() {
         return this.bitLockerKey;
@@ -32,55 +32,52 @@ public final class DiskSecretResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="diskSerialNumber", required=true)
-      private final String diskSerialNumber;
+    private String diskSerialNumber;
 
     public String diskSerialNumber() {
         return this.diskSerialNumber;
     }
 
-    public DiskSecretResponse(
-        String bitLockerKey,
-        String diskSerialNumber) {
-        this.bitLockerKey = Objects.requireNonNull(bitLockerKey, "expected parameter 'bitLockerKey' to be non-null");
-        this.diskSerialNumber = Objects.requireNonNull(diskSerialNumber, "expected parameter 'diskSerialNumber' to be non-null");
-    }
+    private DiskSecretResponse() {}
 
-    private DiskSecretResponse() {
-        this.bitLockerKey = null;
-        this.diskSerialNumber = null;
+    private DiskSecretResponse(DiskSecretResponse $) {
+        this.bitLockerKey = $.bitLockerKey;
+        this.diskSerialNumber = $.diskSerialNumber;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DiskSecretResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String bitLockerKey;
-        private String diskSerialNumber;
+        private DiskSecretResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new DiskSecretResponse();
         }
 
         public Builder(DiskSecretResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.bitLockerKey = defaults.bitLockerKey;
-    	      this.diskSerialNumber = defaults.diskSerialNumber;
+            $ = new DiskSecretResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder bitLockerKey(String bitLockerKey) {
-            this.bitLockerKey = Objects.requireNonNull(bitLockerKey);
+            $.bitLockerKey = bitLockerKey;
             return this;
         }
+
         public Builder diskSerialNumber(String diskSerialNumber) {
-            this.diskSerialNumber = Objects.requireNonNull(diskSerialNumber);
+            $.diskSerialNumber = diskSerialNumber;
             return this;
-        }        public DiskSecretResponse build() {
-            return new DiskSecretResponse(bitLockerKey, diskSerialNumber);
+        }
+
+        public DiskSecretResponse build() {
+            $.bitLockerKey = Objects.requireNonNull($.bitLockerKey, "expected parameter 'bitLockerKey' to be non-null");
+            $.diskSerialNumber = Objects.requireNonNull($.diskSerialNumber, "expected parameter 'diskSerialNumber' to be non-null");
+            return $;
         }
     }
+
 }

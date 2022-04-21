@@ -5,11 +5,11 @@ package com.pulumi.gcp.appengine.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.appengine.inputs.ApplicationUrlDispatchRulesDispatchRuleGetArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,10 @@ public final class ApplicationUrlDispatchRulesState extends com.pulumi.resources
      * 
      */
     @Import(name="dispatchRules")
-      private final @Nullable Output<List<ApplicationUrlDispatchRulesDispatchRuleGetArgs>> dispatchRules;
+    private @Nullable Output<List<ApplicationUrlDispatchRulesDispatchRuleGetArgs>> dispatchRules;
 
-    public Output<List<ApplicationUrlDispatchRulesDispatchRuleGetArgs>> dispatchRules() {
-        return this.dispatchRules == null ? Codegen.empty() : this.dispatchRules;
+    public Optional<Output<List<ApplicationUrlDispatchRulesDispatchRuleGetArgs>>> dispatchRules() {
+        return Optional.ofNullable(this.dispatchRules);
     }
 
     /**
@@ -35,66 +35,62 @@ public final class ApplicationUrlDispatchRulesState extends com.pulumi.resources
      * 
      */
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
-    public ApplicationUrlDispatchRulesState(
-        @Nullable Output<List<ApplicationUrlDispatchRulesDispatchRuleGetArgs>> dispatchRules,
-        @Nullable Output<String> project) {
-        this.dispatchRules = dispatchRules;
-        this.project = project;
-    }
+    private ApplicationUrlDispatchRulesState() {}
 
-    private ApplicationUrlDispatchRulesState() {
-        this.dispatchRules = Codegen.empty();
-        this.project = Codegen.empty();
+    private ApplicationUrlDispatchRulesState(ApplicationUrlDispatchRulesState $) {
+        this.dispatchRules = $.dispatchRules;
+        this.project = $.project;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ApplicationUrlDispatchRulesState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<ApplicationUrlDispatchRulesDispatchRuleGetArgs>> dispatchRules;
-        private @Nullable Output<String> project;
+        private ApplicationUrlDispatchRulesState $;
 
         public Builder() {
-    	      // Empty
+            $ = new ApplicationUrlDispatchRulesState();
         }
 
         public Builder(ApplicationUrlDispatchRulesState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dispatchRules = defaults.dispatchRules;
-    	      this.project = defaults.project;
+            $ = new ApplicationUrlDispatchRulesState(Objects.requireNonNull(defaults));
         }
 
         public Builder dispatchRules(@Nullable Output<List<ApplicationUrlDispatchRulesDispatchRuleGetArgs>> dispatchRules) {
-            this.dispatchRules = dispatchRules;
+            $.dispatchRules = dispatchRules;
             return this;
         }
-        public Builder dispatchRules(@Nullable List<ApplicationUrlDispatchRulesDispatchRuleGetArgs> dispatchRules) {
-            this.dispatchRules = Codegen.ofNullable(dispatchRules);
-            return this;
+
+        public Builder dispatchRules(List<ApplicationUrlDispatchRulesDispatchRuleGetArgs> dispatchRules) {
+            return dispatchRules(Output.of(dispatchRules));
         }
+
         public Builder dispatchRules(ApplicationUrlDispatchRulesDispatchRuleGetArgs... dispatchRules) {
             return dispatchRules(List.of(dispatchRules));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
-        }        public ApplicationUrlDispatchRulesState build() {
-            return new ApplicationUrlDispatchRulesState(dispatchRules, project);
+
+        public Builder project(String project) {
+            return project(Output.of(project));
+        }
+
+        public ApplicationUrlDispatchRulesState build() {
+            return $;
         }
     }
+
 }

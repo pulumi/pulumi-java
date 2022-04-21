@@ -17,7 +17,7 @@ public final class GetServerSecurityAlertPolicyArgs extends com.pulumi.resources
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -28,7 +28,7 @@ public final class GetServerSecurityAlertPolicyArgs extends com.pulumi.resources
      * 
      */
     @Import(name="securityAlertPolicyName", required=true)
-      private final String securityAlertPolicyName;
+    private String securityAlertPolicyName;
 
     public String securityAlertPolicyName() {
         return this.securityAlertPolicyName;
@@ -39,64 +39,59 @@ public final class GetServerSecurityAlertPolicyArgs extends com.pulumi.resources
      * 
      */
     @Import(name="serverName", required=true)
-      private final String serverName;
+    private String serverName;
 
     public String serverName() {
         return this.serverName;
     }
 
-    public GetServerSecurityAlertPolicyArgs(
-        String resourceGroupName,
-        String securityAlertPolicyName,
-        String serverName) {
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.securityAlertPolicyName = Objects.requireNonNull(securityAlertPolicyName, "expected parameter 'securityAlertPolicyName' to be non-null");
-        this.serverName = Objects.requireNonNull(serverName, "expected parameter 'serverName' to be non-null");
-    }
+    private GetServerSecurityAlertPolicyArgs() {}
 
-    private GetServerSecurityAlertPolicyArgs() {
-        this.resourceGroupName = null;
-        this.securityAlertPolicyName = null;
-        this.serverName = null;
+    private GetServerSecurityAlertPolicyArgs(GetServerSecurityAlertPolicyArgs $) {
+        this.resourceGroupName = $.resourceGroupName;
+        this.securityAlertPolicyName = $.securityAlertPolicyName;
+        this.serverName = $.serverName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetServerSecurityAlertPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String resourceGroupName;
-        private String securityAlertPolicyName;
-        private String serverName;
+        private GetServerSecurityAlertPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetServerSecurityAlertPolicyArgs();
         }
 
         public Builder(GetServerSecurityAlertPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.securityAlertPolicyName = defaults.securityAlertPolicyName;
-    	      this.serverName = defaults.serverName;
+            $ = new GetServerSecurityAlertPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder securityAlertPolicyName(String securityAlertPolicyName) {
-            this.securityAlertPolicyName = Objects.requireNonNull(securityAlertPolicyName);
+            $.securityAlertPolicyName = securityAlertPolicyName;
             return this;
         }
+
         public Builder serverName(String serverName) {
-            this.serverName = Objects.requireNonNull(serverName);
+            $.serverName = serverName;
             return this;
-        }        public GetServerSecurityAlertPolicyArgs build() {
-            return new GetServerSecurityAlertPolicyArgs(resourceGroupName, securityAlertPolicyName, serverName);
+        }
+
+        public GetServerSecurityAlertPolicyArgs build() {
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.securityAlertPolicyName = Objects.requireNonNull($.securityAlertPolicyName, "expected parameter 'securityAlertPolicyName' to be non-null");
+            $.serverName = Objects.requireNonNull($.serverName, "expected parameter 'serverName' to be non-null");
+            return $;
         }
     }
+
 }

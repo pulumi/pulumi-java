@@ -15,45 +15,44 @@ public final class FirewallPolicyActionDefinition extends com.pulumi.resources.I
     public static final FirewallPolicyActionDefinition Empty = new FirewallPolicyActionDefinition();
 
     @Import(name="publishMetricAction")
-      private final @Nullable FirewallPolicyPublishMetricAction publishMetricAction;
+    private @Nullable FirewallPolicyPublishMetricAction publishMetricAction;
 
     public Optional<FirewallPolicyPublishMetricAction> publishMetricAction() {
-        return this.publishMetricAction == null ? Optional.empty() : Optional.ofNullable(this.publishMetricAction);
+        return Optional.ofNullable(this.publishMetricAction);
     }
 
-    public FirewallPolicyActionDefinition(@Nullable FirewallPolicyPublishMetricAction publishMetricAction) {
-        this.publishMetricAction = publishMetricAction;
-    }
+    private FirewallPolicyActionDefinition() {}
 
-    private FirewallPolicyActionDefinition() {
-        this.publishMetricAction = null;
+    private FirewallPolicyActionDefinition(FirewallPolicyActionDefinition $) {
+        this.publishMetricAction = $.publishMetricAction;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FirewallPolicyActionDefinition defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable FirewallPolicyPublishMetricAction publishMetricAction;
+        private FirewallPolicyActionDefinition $;
 
         public Builder() {
-    	      // Empty
+            $ = new FirewallPolicyActionDefinition();
         }
 
         public Builder(FirewallPolicyActionDefinition defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.publishMetricAction = defaults.publishMetricAction;
+            $ = new FirewallPolicyActionDefinition(Objects.requireNonNull(defaults));
         }
 
         public Builder publishMetricAction(@Nullable FirewallPolicyPublishMetricAction publishMetricAction) {
-            this.publishMetricAction = publishMetricAction;
+            $.publishMetricAction = publishMetricAction;
             return this;
-        }        public FirewallPolicyActionDefinition build() {
-            return new FirewallPolicyActionDefinition(publishMetricAction);
+        }
+
+        public FirewallPolicyActionDefinition build() {
+            return $;
         }
     }
+
 }

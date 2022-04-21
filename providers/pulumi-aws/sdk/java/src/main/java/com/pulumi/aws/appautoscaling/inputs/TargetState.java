@@ -5,10 +5,10 @@ package com.pulumi.aws.appautoscaling.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class TargetState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="maxCapacity")
-      private final @Nullable Output<Integer> maxCapacity;
+    private @Nullable Output<Integer> maxCapacity;
 
-    public Output<Integer> maxCapacity() {
-        return this.maxCapacity == null ? Codegen.empty() : this.maxCapacity;
+    public Optional<Output<Integer>> maxCapacity() {
+        return Optional.ofNullable(this.maxCapacity);
     }
 
     /**
@@ -32,10 +32,10 @@ public final class TargetState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="minCapacity")
-      private final @Nullable Output<Integer> minCapacity;
+    private @Nullable Output<Integer> minCapacity;
 
-    public Output<Integer> minCapacity() {
-        return this.minCapacity == null ? Codegen.empty() : this.minCapacity;
+    public Optional<Output<Integer>> minCapacity() {
+        return Optional.ofNullable(this.minCapacity);
     }
 
     /**
@@ -43,10 +43,10 @@ public final class TargetState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceId")
-      private final @Nullable Output<String> resourceId;
+    private @Nullable Output<String> resourceId;
 
-    public Output<String> resourceId() {
-        return this.resourceId == null ? Codegen.empty() : this.resourceId;
+    public Optional<Output<String>> resourceId() {
+        return Optional.ofNullable(this.resourceId);
     }
 
     /**
@@ -54,10 +54,10 @@ public final class TargetState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="roleArn")
-      private final @Nullable Output<String> roleArn;
+    private @Nullable Output<String> roleArn;
 
-    public Output<String> roleArn() {
-        return this.roleArn == null ? Codegen.empty() : this.roleArn;
+    public Optional<Output<String>> roleArn() {
+        return Optional.ofNullable(this.roleArn);
     }
 
     /**
@@ -65,10 +65,10 @@ public final class TargetState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="scalableDimension")
-      private final @Nullable Output<String> scalableDimension;
+    private @Nullable Output<String> scalableDimension;
 
-    public Output<String> scalableDimension() {
-        return this.scalableDimension == null ? Codegen.empty() : this.scalableDimension;
+    public Optional<Output<String>> scalableDimension() {
+        return Optional.ofNullable(this.scalableDimension);
     }
 
     /**
@@ -76,115 +76,98 @@ public final class TargetState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="serviceNamespace")
-      private final @Nullable Output<String> serviceNamespace;
+    private @Nullable Output<String> serviceNamespace;
 
-    public Output<String> serviceNamespace() {
-        return this.serviceNamespace == null ? Codegen.empty() : this.serviceNamespace;
+    public Optional<Output<String>> serviceNamespace() {
+        return Optional.ofNullable(this.serviceNamespace);
     }
 
-    public TargetState(
-        @Nullable Output<Integer> maxCapacity,
-        @Nullable Output<Integer> minCapacity,
-        @Nullable Output<String> resourceId,
-        @Nullable Output<String> roleArn,
-        @Nullable Output<String> scalableDimension,
-        @Nullable Output<String> serviceNamespace) {
-        this.maxCapacity = maxCapacity;
-        this.minCapacity = minCapacity;
-        this.resourceId = resourceId;
-        this.roleArn = roleArn;
-        this.scalableDimension = scalableDimension;
-        this.serviceNamespace = serviceNamespace;
-    }
+    private TargetState() {}
 
-    private TargetState() {
-        this.maxCapacity = Codegen.empty();
-        this.minCapacity = Codegen.empty();
-        this.resourceId = Codegen.empty();
-        this.roleArn = Codegen.empty();
-        this.scalableDimension = Codegen.empty();
-        this.serviceNamespace = Codegen.empty();
+    private TargetState(TargetState $) {
+        this.maxCapacity = $.maxCapacity;
+        this.minCapacity = $.minCapacity;
+        this.resourceId = $.resourceId;
+        this.roleArn = $.roleArn;
+        this.scalableDimension = $.scalableDimension;
+        this.serviceNamespace = $.serviceNamespace;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TargetState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> maxCapacity;
-        private @Nullable Output<Integer> minCapacity;
-        private @Nullable Output<String> resourceId;
-        private @Nullable Output<String> roleArn;
-        private @Nullable Output<String> scalableDimension;
-        private @Nullable Output<String> serviceNamespace;
+        private TargetState $;
 
         public Builder() {
-    	      // Empty
+            $ = new TargetState();
         }
 
         public Builder(TargetState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.maxCapacity = defaults.maxCapacity;
-    	      this.minCapacity = defaults.minCapacity;
-    	      this.resourceId = defaults.resourceId;
-    	      this.roleArn = defaults.roleArn;
-    	      this.scalableDimension = defaults.scalableDimension;
-    	      this.serviceNamespace = defaults.serviceNamespace;
+            $ = new TargetState(Objects.requireNonNull(defaults));
         }
 
         public Builder maxCapacity(@Nullable Output<Integer> maxCapacity) {
-            this.maxCapacity = maxCapacity;
+            $.maxCapacity = maxCapacity;
             return this;
         }
-        public Builder maxCapacity(@Nullable Integer maxCapacity) {
-            this.maxCapacity = Codegen.ofNullable(maxCapacity);
-            return this;
+
+        public Builder maxCapacity(Integer maxCapacity) {
+            return maxCapacity(Output.of(maxCapacity));
         }
+
         public Builder minCapacity(@Nullable Output<Integer> minCapacity) {
-            this.minCapacity = minCapacity;
+            $.minCapacity = minCapacity;
             return this;
         }
-        public Builder minCapacity(@Nullable Integer minCapacity) {
-            this.minCapacity = Codegen.ofNullable(minCapacity);
-            return this;
+
+        public Builder minCapacity(Integer minCapacity) {
+            return minCapacity(Output.of(minCapacity));
         }
+
         public Builder resourceId(@Nullable Output<String> resourceId) {
-            this.resourceId = resourceId;
+            $.resourceId = resourceId;
             return this;
         }
-        public Builder resourceId(@Nullable String resourceId) {
-            this.resourceId = Codegen.ofNullable(resourceId);
-            return this;
+
+        public Builder resourceId(String resourceId) {
+            return resourceId(Output.of(resourceId));
         }
+
         public Builder roleArn(@Nullable Output<String> roleArn) {
-            this.roleArn = roleArn;
+            $.roleArn = roleArn;
             return this;
         }
-        public Builder roleArn(@Nullable String roleArn) {
-            this.roleArn = Codegen.ofNullable(roleArn);
-            return this;
+
+        public Builder roleArn(String roleArn) {
+            return roleArn(Output.of(roleArn));
         }
+
         public Builder scalableDimension(@Nullable Output<String> scalableDimension) {
-            this.scalableDimension = scalableDimension;
+            $.scalableDimension = scalableDimension;
             return this;
         }
-        public Builder scalableDimension(@Nullable String scalableDimension) {
-            this.scalableDimension = Codegen.ofNullable(scalableDimension);
-            return this;
+
+        public Builder scalableDimension(String scalableDimension) {
+            return scalableDimension(Output.of(scalableDimension));
         }
+
         public Builder serviceNamespace(@Nullable Output<String> serviceNamespace) {
-            this.serviceNamespace = serviceNamespace;
+            $.serviceNamespace = serviceNamespace;
             return this;
         }
-        public Builder serviceNamespace(@Nullable String serviceNamespace) {
-            this.serviceNamespace = Codegen.ofNullable(serviceNamespace);
-            return this;
-        }        public TargetState build() {
-            return new TargetState(maxCapacity, minCapacity, resourceId, roleArn, scalableDimension, serviceNamespace);
+
+        public Builder serviceNamespace(String serviceNamespace) {
+            return serviceNamespace(Output.of(serviceNamespace));
+        }
+
+        public TargetState build() {
+            return $;
         }
     }
+
 }

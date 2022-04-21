@@ -5,10 +5,10 @@ package com.pulumi.googlenative.container_v1beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,49 +25,48 @@ public final class LinuxNodeConfigArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="sysctls")
-      private final @Nullable Output<Map<String,String>> sysctls;
+    private @Nullable Output<Map<String,String>> sysctls;
 
-    public Output<Map<String,String>> sysctls() {
-        return this.sysctls == null ? Codegen.empty() : this.sysctls;
+    public Optional<Output<Map<String,String>>> sysctls() {
+        return Optional.ofNullable(this.sysctls);
     }
 
-    public LinuxNodeConfigArgs(@Nullable Output<Map<String,String>> sysctls) {
-        this.sysctls = sysctls;
-    }
+    private LinuxNodeConfigArgs() {}
 
-    private LinuxNodeConfigArgs() {
-        this.sysctls = Codegen.empty();
+    private LinuxNodeConfigArgs(LinuxNodeConfigArgs $) {
+        this.sysctls = $.sysctls;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LinuxNodeConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Map<String,String>> sysctls;
+        private LinuxNodeConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new LinuxNodeConfigArgs();
         }
 
         public Builder(LinuxNodeConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.sysctls = defaults.sysctls;
+            $ = new LinuxNodeConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder sysctls(@Nullable Output<Map<String,String>> sysctls) {
-            this.sysctls = sysctls;
+            $.sysctls = sysctls;
             return this;
         }
-        public Builder sysctls(@Nullable Map<String,String> sysctls) {
-            this.sysctls = Codegen.ofNullable(sysctls);
-            return this;
-        }        public LinuxNodeConfigArgs build() {
-            return new LinuxNodeConfigArgs(sysctls);
+
+        public Builder sysctls(Map<String,String> sysctls) {
+            return sysctls(Output.of(sysctls));
+        }
+
+        public LinuxNodeConfigArgs build() {
+            return $;
         }
     }
+
 }

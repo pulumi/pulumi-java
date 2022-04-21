@@ -6,10 +6,10 @@ package com.pulumi.azurenative.appplatform.inputs;
 import com.pulumi.azurenative.appplatform.inputs.BuildpackPropertiesArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class BuildpacksGroupPropertiesArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="buildpacks")
-      private final @Nullable Output<List<BuildpackPropertiesArgs>> buildpacks;
+    private @Nullable Output<List<BuildpackPropertiesArgs>> buildpacks;
 
-    public Output<List<BuildpackPropertiesArgs>> buildpacks() {
-        return this.buildpacks == null ? Codegen.empty() : this.buildpacks;
+    public Optional<Output<List<BuildpackPropertiesArgs>>> buildpacks() {
+        return Optional.ofNullable(this.buildpacks);
     }
 
     /**
@@ -37,66 +37,62 @@ public final class BuildpacksGroupPropertiesArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
-    public BuildpacksGroupPropertiesArgs(
-        @Nullable Output<List<BuildpackPropertiesArgs>> buildpacks,
-        @Nullable Output<String> name) {
-        this.buildpacks = buildpacks;
-        this.name = name;
-    }
+    private BuildpacksGroupPropertiesArgs() {}
 
-    private BuildpacksGroupPropertiesArgs() {
-        this.buildpacks = Codegen.empty();
-        this.name = Codegen.empty();
+    private BuildpacksGroupPropertiesArgs(BuildpacksGroupPropertiesArgs $) {
+        this.buildpacks = $.buildpacks;
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BuildpacksGroupPropertiesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<BuildpackPropertiesArgs>> buildpacks;
-        private @Nullable Output<String> name;
+        private BuildpacksGroupPropertiesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new BuildpacksGroupPropertiesArgs();
         }
 
         public Builder(BuildpacksGroupPropertiesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.buildpacks = defaults.buildpacks;
-    	      this.name = defaults.name;
+            $ = new BuildpacksGroupPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder buildpacks(@Nullable Output<List<BuildpackPropertiesArgs>> buildpacks) {
-            this.buildpacks = buildpacks;
+            $.buildpacks = buildpacks;
             return this;
         }
-        public Builder buildpacks(@Nullable List<BuildpackPropertiesArgs> buildpacks) {
-            this.buildpacks = Codegen.ofNullable(buildpacks);
-            return this;
+
+        public Builder buildpacks(List<BuildpackPropertiesArgs> buildpacks) {
+            return buildpacks(Output.of(buildpacks));
         }
+
         public Builder buildpacks(BuildpackPropertiesArgs... buildpacks) {
             return buildpacks(List.of(buildpacks));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
-        }        public BuildpacksGroupPropertiesArgs build() {
-            return new BuildpacksGroupPropertiesArgs(buildpacks, name);
+
+        public Builder name(String name) {
+            return name(Output.of(name));
+        }
+
+        public BuildpacksGroupPropertiesArgs build() {
+            return $;
         }
     }
+
 }

@@ -5,9 +5,9 @@ package com.pulumi.azurenative.managednetwork;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class ScopeAssignmentArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="assignedManagedNetwork")
-      private final @Nullable Output<String> assignedManagedNetwork;
+    private @Nullable Output<String> assignedManagedNetwork;
 
-    public Output<String> assignedManagedNetwork() {
-        return this.assignedManagedNetwork == null ? Codegen.empty() : this.assignedManagedNetwork;
+    public Optional<Output<String>> assignedManagedNetwork() {
+        return Optional.ofNullable(this.assignedManagedNetwork);
     }
 
     /**
@@ -31,10 +31,10 @@ public final class ScopeAssignmentArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -42,7 +42,7 @@ public final class ScopeAssignmentArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="scope", required=true)
-      private final Output<String> scope;
+    private Output<String> scope;
 
     public Output<String> scope() {
         return this.scope;
@@ -53,89 +53,79 @@ public final class ScopeAssignmentArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="scopeAssignmentName")
-      private final @Nullable Output<String> scopeAssignmentName;
+    private @Nullable Output<String> scopeAssignmentName;
 
-    public Output<String> scopeAssignmentName() {
-        return this.scopeAssignmentName == null ? Codegen.empty() : this.scopeAssignmentName;
+    public Optional<Output<String>> scopeAssignmentName() {
+        return Optional.ofNullable(this.scopeAssignmentName);
     }
 
-    public ScopeAssignmentArgs(
-        @Nullable Output<String> assignedManagedNetwork,
-        @Nullable Output<String> location,
-        Output<String> scope,
-        @Nullable Output<String> scopeAssignmentName) {
-        this.assignedManagedNetwork = assignedManagedNetwork;
-        this.location = location;
-        this.scope = Objects.requireNonNull(scope, "expected parameter 'scope' to be non-null");
-        this.scopeAssignmentName = scopeAssignmentName;
-    }
+    private ScopeAssignmentArgs() {}
 
-    private ScopeAssignmentArgs() {
-        this.assignedManagedNetwork = Codegen.empty();
-        this.location = Codegen.empty();
-        this.scope = Codegen.empty();
-        this.scopeAssignmentName = Codegen.empty();
+    private ScopeAssignmentArgs(ScopeAssignmentArgs $) {
+        this.assignedManagedNetwork = $.assignedManagedNetwork;
+        this.location = $.location;
+        this.scope = $.scope;
+        this.scopeAssignmentName = $.scopeAssignmentName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ScopeAssignmentArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> assignedManagedNetwork;
-        private @Nullable Output<String> location;
-        private Output<String> scope;
-        private @Nullable Output<String> scopeAssignmentName;
+        private ScopeAssignmentArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ScopeAssignmentArgs();
         }
 
         public Builder(ScopeAssignmentArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.assignedManagedNetwork = defaults.assignedManagedNetwork;
-    	      this.location = defaults.location;
-    	      this.scope = defaults.scope;
-    	      this.scopeAssignmentName = defaults.scopeAssignmentName;
+            $ = new ScopeAssignmentArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder assignedManagedNetwork(@Nullable Output<String> assignedManagedNetwork) {
-            this.assignedManagedNetwork = assignedManagedNetwork;
+            $.assignedManagedNetwork = assignedManagedNetwork;
             return this;
         }
-        public Builder assignedManagedNetwork(@Nullable String assignedManagedNetwork) {
-            this.assignedManagedNetwork = Codegen.ofNullable(assignedManagedNetwork);
-            return this;
+
+        public Builder assignedManagedNetwork(String assignedManagedNetwork) {
+            return assignedManagedNetwork(Output.of(assignedManagedNetwork));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder scope(Output<String> scope) {
-            this.scope = Objects.requireNonNull(scope);
+            $.scope = scope;
             return this;
         }
+
         public Builder scope(String scope) {
-            this.scope = Output.of(Objects.requireNonNull(scope));
-            return this;
+            return scope(Output.of(scope));
         }
+
         public Builder scopeAssignmentName(@Nullable Output<String> scopeAssignmentName) {
-            this.scopeAssignmentName = scopeAssignmentName;
+            $.scopeAssignmentName = scopeAssignmentName;
             return this;
         }
-        public Builder scopeAssignmentName(@Nullable String scopeAssignmentName) {
-            this.scopeAssignmentName = Codegen.ofNullable(scopeAssignmentName);
-            return this;
-        }        public ScopeAssignmentArgs build() {
-            return new ScopeAssignmentArgs(assignedManagedNetwork, location, scope, scopeAssignmentName);
+
+        public Builder scopeAssignmentName(String scopeAssignmentName) {
+            return scopeAssignmentName(Output.of(scopeAssignmentName));
+        }
+
+        public ScopeAssignmentArgs build() {
+            $.scope = Objects.requireNonNull($.scope, "expected parameter 'scope' to be non-null");
+            return $;
         }
     }
+
 }

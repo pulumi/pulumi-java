@@ -24,10 +24,10 @@ public final class FirewallPolicyLogAnalyticsWorkspaceResponse extends com.pulum
      * 
      */
     @Import(name="region")
-      private final @Nullable String region;
+    private @Nullable String region;
 
     public Optional<String> region() {
-        return this.region == null ? Optional.empty() : Optional.ofNullable(this.region);
+        return Optional.ofNullable(this.region);
     }
 
     /**
@@ -35,55 +35,50 @@ public final class FirewallPolicyLogAnalyticsWorkspaceResponse extends com.pulum
      * 
      */
     @Import(name="workspaceId")
-      private final @Nullable SubResourceResponse workspaceId;
+    private @Nullable SubResourceResponse workspaceId;
 
     public Optional<SubResourceResponse> workspaceId() {
-        return this.workspaceId == null ? Optional.empty() : Optional.ofNullable(this.workspaceId);
+        return Optional.ofNullable(this.workspaceId);
     }
 
-    public FirewallPolicyLogAnalyticsWorkspaceResponse(
-        @Nullable String region,
-        @Nullable SubResourceResponse workspaceId) {
-        this.region = region;
-        this.workspaceId = workspaceId;
-    }
+    private FirewallPolicyLogAnalyticsWorkspaceResponse() {}
 
-    private FirewallPolicyLogAnalyticsWorkspaceResponse() {
-        this.region = null;
-        this.workspaceId = null;
+    private FirewallPolicyLogAnalyticsWorkspaceResponse(FirewallPolicyLogAnalyticsWorkspaceResponse $) {
+        this.region = $.region;
+        this.workspaceId = $.workspaceId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FirewallPolicyLogAnalyticsWorkspaceResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String region;
-        private @Nullable SubResourceResponse workspaceId;
+        private FirewallPolicyLogAnalyticsWorkspaceResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new FirewallPolicyLogAnalyticsWorkspaceResponse();
         }
 
         public Builder(FirewallPolicyLogAnalyticsWorkspaceResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.region = defaults.region;
-    	      this.workspaceId = defaults.workspaceId;
+            $ = new FirewallPolicyLogAnalyticsWorkspaceResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder region(@Nullable String region) {
-            this.region = region;
+            $.region = region;
             return this;
         }
+
         public Builder workspaceId(@Nullable SubResourceResponse workspaceId) {
-            this.workspaceId = workspaceId;
+            $.workspaceId = workspaceId;
             return this;
-        }        public FirewallPolicyLogAnalyticsWorkspaceResponse build() {
-            return new FirewallPolicyLogAnalyticsWorkspaceResponse(region, workspaceId);
+        }
+
+        public FirewallPolicyLogAnalyticsWorkspaceResponse build() {
+            return $;
         }
     }
+
 }

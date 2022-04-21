@@ -17,6 +17,7 @@ import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -29,10 +30,10 @@ public final class RedisArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="enableNonSslPort")
-      private final @Nullable Output<Boolean> enableNonSslPort;
+    private @Nullable Output<Boolean> enableNonSslPort;
 
-    public Output<Boolean> enableNonSslPort() {
-        return this.enableNonSslPort == null ? Codegen.empty() : this.enableNonSslPort;
+    public Optional<Output<Boolean>> enableNonSslPort() {
+        return Optional.ofNullable(this.enableNonSslPort);
     }
 
     /**
@@ -40,10 +41,10 @@ public final class RedisArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -51,10 +52,10 @@ public final class RedisArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="minimumTlsVersion")
-      private final @Nullable Output<Either<String,TlsVersion>> minimumTlsVersion;
+    private @Nullable Output<Either<String,TlsVersion>> minimumTlsVersion;
 
-    public Output<Either<String,TlsVersion>> minimumTlsVersion() {
-        return this.minimumTlsVersion == null ? Codegen.empty() : this.minimumTlsVersion;
+    public Optional<Output<Either<String,TlsVersion>>> minimumTlsVersion() {
+        return Optional.ofNullable(this.minimumTlsVersion);
     }
 
     /**
@@ -62,10 +63,10 @@ public final class RedisArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -73,10 +74,10 @@ public final class RedisArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="publicNetworkAccess")
-      private final @Nullable Output<Either<String,PublicNetworkAccess>> publicNetworkAccess;
+    private @Nullable Output<Either<String,PublicNetworkAccess>> publicNetworkAccess;
 
-    public Output<Either<String,PublicNetworkAccess>> publicNetworkAccess() {
-        return this.publicNetworkAccess == null ? Codegen.empty() : this.publicNetworkAccess;
+    public Optional<Output<Either<String,PublicNetworkAccess>>> publicNetworkAccess() {
+        return Optional.ofNullable(this.publicNetworkAccess);
     }
 
     /**
@@ -84,10 +85,10 @@ public final class RedisArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="redisConfiguration")
-      private final @Nullable Output<RedisCommonPropertiesRedisConfigurationArgs> redisConfiguration;
+    private @Nullable Output<RedisCommonPropertiesRedisConfigurationArgs> redisConfiguration;
 
-    public Output<RedisCommonPropertiesRedisConfigurationArgs> redisConfiguration() {
-        return this.redisConfiguration == null ? Codegen.empty() : this.redisConfiguration;
+    public Optional<Output<RedisCommonPropertiesRedisConfigurationArgs>> redisConfiguration() {
+        return Optional.ofNullable(this.redisConfiguration);
     }
 
     /**
@@ -95,10 +96,10 @@ public final class RedisArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="replicasPerMaster")
-      private final @Nullable Output<Integer> replicasPerMaster;
+    private @Nullable Output<Integer> replicasPerMaster;
 
-    public Output<Integer> replicasPerMaster() {
-        return this.replicasPerMaster == null ? Codegen.empty() : this.replicasPerMaster;
+    public Optional<Output<Integer>> replicasPerMaster() {
+        return Optional.ofNullable(this.replicasPerMaster);
     }
 
     /**
@@ -106,7 +107,7 @@ public final class RedisArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -117,10 +118,10 @@ public final class RedisArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="shardCount")
-      private final @Nullable Output<Integer> shardCount;
+    private @Nullable Output<Integer> shardCount;
 
-    public Output<Integer> shardCount() {
-        return this.shardCount == null ? Codegen.empty() : this.shardCount;
+    public Optional<Output<Integer>> shardCount() {
+        return Optional.ofNullable(this.shardCount);
     }
 
     /**
@@ -128,7 +129,7 @@ public final class RedisArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="sku", required=true)
-      private final Output<SkuArgs> sku;
+    private Output<SkuArgs> sku;
 
     public Output<SkuArgs> sku() {
         return this.sku;
@@ -139,10 +140,10 @@ public final class RedisArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="staticIP")
-      private final @Nullable Output<String> staticIP;
+    private @Nullable Output<String> staticIP;
 
-    public Output<String> staticIP() {
-        return this.staticIP == null ? Codegen.empty() : this.staticIP;
+    public Optional<Output<String>> staticIP() {
+        return Optional.ofNullable(this.staticIP);
     }
 
     /**
@@ -150,10 +151,10 @@ public final class RedisArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="subnetId")
-      private final @Nullable Output<String> subnetId;
+    private @Nullable Output<String> subnetId;
 
-    public Output<String> subnetId() {
-        return this.subnetId == null ? Codegen.empty() : this.subnetId;
+    public Optional<Output<String>> subnetId() {
+        return Optional.ofNullable(this.subnetId);
     }
 
     /**
@@ -161,10 +162,10 @@ public final class RedisArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -172,10 +173,10 @@ public final class RedisArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tenantSettings")
-      private final @Nullable Output<Map<String,String>> tenantSettings;
+    private @Nullable Output<Map<String,String>> tenantSettings;
 
-    public Output<Map<String,String>> tenantSettings() {
-        return this.tenantSettings == null ? Codegen.empty() : this.tenantSettings;
+    public Optional<Output<Map<String,String>>> tenantSettings() {
+        return Optional.ofNullable(this.tenantSettings);
     }
 
     /**
@@ -183,235 +184,196 @@ public final class RedisArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="zones")
-      private final @Nullable Output<List<String>> zones;
+    private @Nullable Output<List<String>> zones;
 
-    public Output<List<String>> zones() {
-        return this.zones == null ? Codegen.empty() : this.zones;
+    public Optional<Output<List<String>>> zones() {
+        return Optional.ofNullable(this.zones);
     }
 
-    public RedisArgs(
-        @Nullable Output<Boolean> enableNonSslPort,
-        @Nullable Output<String> location,
-        @Nullable Output<Either<String,TlsVersion>> minimumTlsVersion,
-        @Nullable Output<String> name,
-        @Nullable Output<Either<String,PublicNetworkAccess>> publicNetworkAccess,
-        @Nullable Output<RedisCommonPropertiesRedisConfigurationArgs> redisConfiguration,
-        @Nullable Output<Integer> replicasPerMaster,
-        Output<String> resourceGroupName,
-        @Nullable Output<Integer> shardCount,
-        Output<SkuArgs> sku,
-        @Nullable Output<String> staticIP,
-        @Nullable Output<String> subnetId,
-        @Nullable Output<Map<String,String>> tags,
-        @Nullable Output<Map<String,String>> tenantSettings,
-        @Nullable Output<List<String>> zones) {
-        this.enableNonSslPort = Codegen.booleanProp("enableNonSslPort").output().arg(enableNonSslPort).def(false).getNullable();
-        this.location = location;
-        this.minimumTlsVersion = minimumTlsVersion;
-        this.name = name;
-        this.publicNetworkAccess = Codegen.stringProp("publicNetworkAccess").left(PublicNetworkAccess.class).output().arg(publicNetworkAccess).def("Enabled").getNullable();
-        this.redisConfiguration = redisConfiguration;
-        this.replicasPerMaster = replicasPerMaster;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.shardCount = shardCount;
-        this.sku = Objects.requireNonNull(sku, "expected parameter 'sku' to be non-null");
-        this.staticIP = staticIP;
-        this.subnetId = subnetId;
-        this.tags = tags;
-        this.tenantSettings = tenantSettings;
-        this.zones = zones;
-    }
+    private RedisArgs() {}
 
-    private RedisArgs() {
-        this.enableNonSslPort = Codegen.empty();
-        this.location = Codegen.empty();
-        this.minimumTlsVersion = Codegen.empty();
-        this.name = Codegen.empty();
-        this.publicNetworkAccess = Codegen.empty();
-        this.redisConfiguration = Codegen.empty();
-        this.replicasPerMaster = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.shardCount = Codegen.empty();
-        this.sku = Codegen.empty();
-        this.staticIP = Codegen.empty();
-        this.subnetId = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.tenantSettings = Codegen.empty();
-        this.zones = Codegen.empty();
+    private RedisArgs(RedisArgs $) {
+        this.enableNonSslPort = $.enableNonSslPort;
+        this.location = $.location;
+        this.minimumTlsVersion = $.minimumTlsVersion;
+        this.name = $.name;
+        this.publicNetworkAccess = $.publicNetworkAccess;
+        this.redisConfiguration = $.redisConfiguration;
+        this.replicasPerMaster = $.replicasPerMaster;
+        this.resourceGroupName = $.resourceGroupName;
+        this.shardCount = $.shardCount;
+        this.sku = $.sku;
+        this.staticIP = $.staticIP;
+        this.subnetId = $.subnetId;
+        this.tags = $.tags;
+        this.tenantSettings = $.tenantSettings;
+        this.zones = $.zones;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RedisArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> enableNonSslPort;
-        private @Nullable Output<String> location;
-        private @Nullable Output<Either<String,TlsVersion>> minimumTlsVersion;
-        private @Nullable Output<String> name;
-        private @Nullable Output<Either<String,PublicNetworkAccess>> publicNetworkAccess;
-        private @Nullable Output<RedisCommonPropertiesRedisConfigurationArgs> redisConfiguration;
-        private @Nullable Output<Integer> replicasPerMaster;
-        private Output<String> resourceGroupName;
-        private @Nullable Output<Integer> shardCount;
-        private Output<SkuArgs> sku;
-        private @Nullable Output<String> staticIP;
-        private @Nullable Output<String> subnetId;
-        private @Nullable Output<Map<String,String>> tags;
-        private @Nullable Output<Map<String,String>> tenantSettings;
-        private @Nullable Output<List<String>> zones;
+        private RedisArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RedisArgs();
         }
 
         public Builder(RedisArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.enableNonSslPort = defaults.enableNonSslPort;
-    	      this.location = defaults.location;
-    	      this.minimumTlsVersion = defaults.minimumTlsVersion;
-    	      this.name = defaults.name;
-    	      this.publicNetworkAccess = defaults.publicNetworkAccess;
-    	      this.redisConfiguration = defaults.redisConfiguration;
-    	      this.replicasPerMaster = defaults.replicasPerMaster;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.shardCount = defaults.shardCount;
-    	      this.sku = defaults.sku;
-    	      this.staticIP = defaults.staticIP;
-    	      this.subnetId = defaults.subnetId;
-    	      this.tags = defaults.tags;
-    	      this.tenantSettings = defaults.tenantSettings;
-    	      this.zones = defaults.zones;
+            $ = new RedisArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder enableNonSslPort(@Nullable Output<Boolean> enableNonSslPort) {
-            this.enableNonSslPort = enableNonSslPort;
+            $.enableNonSslPort = enableNonSslPort;
             return this;
         }
-        public Builder enableNonSslPort(@Nullable Boolean enableNonSslPort) {
-            this.enableNonSslPort = Codegen.ofNullable(enableNonSslPort);
-            return this;
+
+        public Builder enableNonSslPort(Boolean enableNonSslPort) {
+            return enableNonSslPort(Output.of(enableNonSslPort));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder minimumTlsVersion(@Nullable Output<Either<String,TlsVersion>> minimumTlsVersion) {
-            this.minimumTlsVersion = minimumTlsVersion;
+            $.minimumTlsVersion = minimumTlsVersion;
             return this;
         }
-        public Builder minimumTlsVersion(@Nullable Either<String,TlsVersion> minimumTlsVersion) {
-            this.minimumTlsVersion = Codegen.ofNullable(minimumTlsVersion);
-            return this;
+
+        public Builder minimumTlsVersion(Either<String,TlsVersion> minimumTlsVersion) {
+            return minimumTlsVersion(Output.of(minimumTlsVersion));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder publicNetworkAccess(@Nullable Output<Either<String,PublicNetworkAccess>> publicNetworkAccess) {
-            this.publicNetworkAccess = publicNetworkAccess;
+            $.publicNetworkAccess = publicNetworkAccess;
             return this;
         }
-        public Builder publicNetworkAccess(@Nullable Either<String,PublicNetworkAccess> publicNetworkAccess) {
-            this.publicNetworkAccess = Codegen.ofNullable(publicNetworkAccess);
-            return this;
+
+        public Builder publicNetworkAccess(Either<String,PublicNetworkAccess> publicNetworkAccess) {
+            return publicNetworkAccess(Output.of(publicNetworkAccess));
         }
+
         public Builder redisConfiguration(@Nullable Output<RedisCommonPropertiesRedisConfigurationArgs> redisConfiguration) {
-            this.redisConfiguration = redisConfiguration;
+            $.redisConfiguration = redisConfiguration;
             return this;
         }
-        public Builder redisConfiguration(@Nullable RedisCommonPropertiesRedisConfigurationArgs redisConfiguration) {
-            this.redisConfiguration = Codegen.ofNullable(redisConfiguration);
-            return this;
+
+        public Builder redisConfiguration(RedisCommonPropertiesRedisConfigurationArgs redisConfiguration) {
+            return redisConfiguration(Output.of(redisConfiguration));
         }
+
         public Builder replicasPerMaster(@Nullable Output<Integer> replicasPerMaster) {
-            this.replicasPerMaster = replicasPerMaster;
+            $.replicasPerMaster = replicasPerMaster;
             return this;
         }
-        public Builder replicasPerMaster(@Nullable Integer replicasPerMaster) {
-            this.replicasPerMaster = Codegen.ofNullable(replicasPerMaster);
-            return this;
+
+        public Builder replicasPerMaster(Integer replicasPerMaster) {
+            return replicasPerMaster(Output.of(replicasPerMaster));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder shardCount(@Nullable Output<Integer> shardCount) {
-            this.shardCount = shardCount;
+            $.shardCount = shardCount;
             return this;
         }
-        public Builder shardCount(@Nullable Integer shardCount) {
-            this.shardCount = Codegen.ofNullable(shardCount);
-            return this;
+
+        public Builder shardCount(Integer shardCount) {
+            return shardCount(Output.of(shardCount));
         }
+
         public Builder sku(Output<SkuArgs> sku) {
-            this.sku = Objects.requireNonNull(sku);
+            $.sku = sku;
             return this;
         }
+
         public Builder sku(SkuArgs sku) {
-            this.sku = Output.of(Objects.requireNonNull(sku));
-            return this;
+            return sku(Output.of(sku));
         }
+
         public Builder staticIP(@Nullable Output<String> staticIP) {
-            this.staticIP = staticIP;
+            $.staticIP = staticIP;
             return this;
         }
-        public Builder staticIP(@Nullable String staticIP) {
-            this.staticIP = Codegen.ofNullable(staticIP);
-            return this;
+
+        public Builder staticIP(String staticIP) {
+            return staticIP(Output.of(staticIP));
         }
+
         public Builder subnetId(@Nullable Output<String> subnetId) {
-            this.subnetId = subnetId;
+            $.subnetId = subnetId;
             return this;
         }
-        public Builder subnetId(@Nullable String subnetId) {
-            this.subnetId = Codegen.ofNullable(subnetId);
-            return this;
+
+        public Builder subnetId(String subnetId) {
+            return subnetId(Output.of(subnetId));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tenantSettings(@Nullable Output<Map<String,String>> tenantSettings) {
-            this.tenantSettings = tenantSettings;
+            $.tenantSettings = tenantSettings;
             return this;
         }
-        public Builder tenantSettings(@Nullable Map<String,String> tenantSettings) {
-            this.tenantSettings = Codegen.ofNullable(tenantSettings);
-            return this;
+
+        public Builder tenantSettings(Map<String,String> tenantSettings) {
+            return tenantSettings(Output.of(tenantSettings));
         }
+
         public Builder zones(@Nullable Output<List<String>> zones) {
-            this.zones = zones;
+            $.zones = zones;
             return this;
         }
-        public Builder zones(@Nullable List<String> zones) {
-            this.zones = Codegen.ofNullable(zones);
-            return this;
+
+        public Builder zones(List<String> zones) {
+            return zones(Output.of(zones));
         }
+
         public Builder zones(String... zones) {
             return zones(List.of(zones));
-        }        public RedisArgs build() {
-            return new RedisArgs(enableNonSslPort, location, minimumTlsVersion, name, publicNetworkAccess, redisConfiguration, replicasPerMaster, resourceGroupName, shardCount, sku, staticIP, subnetId, tags, tenantSettings, zones);
+        }
+
+        public RedisArgs build() {
+            $.enableNonSslPort = Codegen.booleanProp("enableNonSslPort").output().arg($.enableNonSslPort).def(false).getNullable();
+            $.publicNetworkAccess = Codegen.stringProp("publicNetworkAccess").left(PublicNetworkAccess.class).output().arg($.publicNetworkAccess).def("Enabled").getNullable();
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.sku = Objects.requireNonNull($.sku, "expected parameter 'sku' to be non-null");
+            return $;
         }
     }
+
 }

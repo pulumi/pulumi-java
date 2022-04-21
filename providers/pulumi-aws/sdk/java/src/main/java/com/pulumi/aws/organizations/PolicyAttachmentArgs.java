@@ -5,7 +5,6 @@ package com.pulumi.aws.organizations;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,7 +18,7 @@ public final class PolicyAttachmentArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="policyId", required=true)
-      private final Output<String> policyId;
+    private Output<String> policyId;
 
     public Output<String> policyId() {
         return this.policyId;
@@ -30,63 +29,60 @@ public final class PolicyAttachmentArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="targetId", required=true)
-      private final Output<String> targetId;
+    private Output<String> targetId;
 
     public Output<String> targetId() {
         return this.targetId;
     }
 
-    public PolicyAttachmentArgs(
-        Output<String> policyId,
-        Output<String> targetId) {
-        this.policyId = Objects.requireNonNull(policyId, "expected parameter 'policyId' to be non-null");
-        this.targetId = Objects.requireNonNull(targetId, "expected parameter 'targetId' to be non-null");
-    }
+    private PolicyAttachmentArgs() {}
 
-    private PolicyAttachmentArgs() {
-        this.policyId = Codegen.empty();
-        this.targetId = Codegen.empty();
+    private PolicyAttachmentArgs(PolicyAttachmentArgs $) {
+        this.policyId = $.policyId;
+        this.targetId = $.targetId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PolicyAttachmentArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> policyId;
-        private Output<String> targetId;
+        private PolicyAttachmentArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PolicyAttachmentArgs();
         }
 
         public Builder(PolicyAttachmentArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.policyId = defaults.policyId;
-    	      this.targetId = defaults.targetId;
+            $ = new PolicyAttachmentArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder policyId(Output<String> policyId) {
-            this.policyId = Objects.requireNonNull(policyId);
+            $.policyId = policyId;
             return this;
         }
+
         public Builder policyId(String policyId) {
-            this.policyId = Output.of(Objects.requireNonNull(policyId));
-            return this;
+            return policyId(Output.of(policyId));
         }
+
         public Builder targetId(Output<String> targetId) {
-            this.targetId = Objects.requireNonNull(targetId);
+            $.targetId = targetId;
             return this;
         }
+
         public Builder targetId(String targetId) {
-            this.targetId = Output.of(Objects.requireNonNull(targetId));
-            return this;
-        }        public PolicyAttachmentArgs build() {
-            return new PolicyAttachmentArgs(policyId, targetId);
+            return targetId(Output.of(targetId));
+        }
+
+        public PolicyAttachmentArgs build() {
+            $.policyId = Objects.requireNonNull($.policyId, "expected parameter 'policyId' to be non-null");
+            $.targetId = Objects.requireNonNull($.targetId, "expected parameter 'targetId' to be non-null");
+            return $;
         }
     }
+
 }

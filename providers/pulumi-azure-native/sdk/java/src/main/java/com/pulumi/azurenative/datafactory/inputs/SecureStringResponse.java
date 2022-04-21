@@ -23,7 +23,7 @@ public final class SecureStringResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
@@ -34,55 +34,52 @@ public final class SecureStringResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="value", required=true)
-      private final String value;
+    private String value;
 
     public String value() {
         return this.value;
     }
 
-    public SecureStringResponse(
-        String type,
-        String value) {
-        this.type = Codegen.stringProp("type").arg(type).require();
-        this.value = Objects.requireNonNull(value, "expected parameter 'value' to be non-null");
-    }
+    private SecureStringResponse() {}
 
-    private SecureStringResponse() {
-        this.type = null;
-        this.value = null;
+    private SecureStringResponse(SecureStringResponse $) {
+        this.type = $.type;
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SecureStringResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String type;
-        private String value;
+        private SecureStringResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new SecureStringResponse();
         }
 
         public Builder(SecureStringResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.type = defaults.type;
-    	      this.value = defaults.value;
+            $ = new SecureStringResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder value(String value) {
-            this.value = Objects.requireNonNull(value);
+            $.value = value;
             return this;
-        }        public SecureStringResponse build() {
-            return new SecureStringResponse(type, value);
+        }
+
+        public SecureStringResponse build() {
+            $.type = Codegen.stringProp("type").arg($.type).require();
+            $.value = Objects.requireNonNull($.value, "expected parameter 'value' to be non-null");
+            return $;
         }
     }
+
 }

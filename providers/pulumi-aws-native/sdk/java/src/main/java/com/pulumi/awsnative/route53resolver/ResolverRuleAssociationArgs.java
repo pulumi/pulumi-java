@@ -5,9 +5,9 @@ package com.pulumi.awsnative.route53resolver;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class ResolverRuleAssociationArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -31,7 +31,7 @@ public final class ResolverRuleAssociationArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="resolverRuleId", required=true)
-      private final Output<String> resolverRuleId;
+    private Output<String> resolverRuleId;
 
     public Output<String> resolverRuleId() {
         return this.resolverRuleId;
@@ -42,76 +42,70 @@ public final class ResolverRuleAssociationArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="vPCId", required=true)
-      private final Output<String> vPCId;
+    private Output<String> vPCId;
 
     public Output<String> vPCId() {
         return this.vPCId;
     }
 
-    public ResolverRuleAssociationArgs(
-        @Nullable Output<String> name,
-        Output<String> resolverRuleId,
-        Output<String> vPCId) {
-        this.name = name;
-        this.resolverRuleId = Objects.requireNonNull(resolverRuleId, "expected parameter 'resolverRuleId' to be non-null");
-        this.vPCId = Objects.requireNonNull(vPCId, "expected parameter 'vPCId' to be non-null");
-    }
+    private ResolverRuleAssociationArgs() {}
 
-    private ResolverRuleAssociationArgs() {
-        this.name = Codegen.empty();
-        this.resolverRuleId = Codegen.empty();
-        this.vPCId = Codegen.empty();
+    private ResolverRuleAssociationArgs(ResolverRuleAssociationArgs $) {
+        this.name = $.name;
+        this.resolverRuleId = $.resolverRuleId;
+        this.vPCId = $.vPCId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ResolverRuleAssociationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> name;
-        private Output<String> resolverRuleId;
-        private Output<String> vPCId;
+        private ResolverRuleAssociationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ResolverRuleAssociationArgs();
         }
 
         public Builder(ResolverRuleAssociationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.resolverRuleId = defaults.resolverRuleId;
-    	      this.vPCId = defaults.vPCId;
+            $ = new ResolverRuleAssociationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder resolverRuleId(Output<String> resolverRuleId) {
-            this.resolverRuleId = Objects.requireNonNull(resolverRuleId);
+            $.resolverRuleId = resolverRuleId;
             return this;
         }
+
         public Builder resolverRuleId(String resolverRuleId) {
-            this.resolverRuleId = Output.of(Objects.requireNonNull(resolverRuleId));
-            return this;
+            return resolverRuleId(Output.of(resolverRuleId));
         }
+
         public Builder vPCId(Output<String> vPCId) {
-            this.vPCId = Objects.requireNonNull(vPCId);
+            $.vPCId = vPCId;
             return this;
         }
+
         public Builder vPCId(String vPCId) {
-            this.vPCId = Output.of(Objects.requireNonNull(vPCId));
-            return this;
-        }        public ResolverRuleAssociationArgs build() {
-            return new ResolverRuleAssociationArgs(name, resolverRuleId, vPCId);
+            return vPCId(Output.of(vPCId));
+        }
+
+        public ResolverRuleAssociationArgs build() {
+            $.resolverRuleId = Objects.requireNonNull($.resolverRuleId, "expected parameter 'resolverRuleId' to be non-null");
+            $.vPCId = Objects.requireNonNull($.vPCId, "expected parameter 'vPCId' to be non-null");
+            return $;
         }
     }
+
 }

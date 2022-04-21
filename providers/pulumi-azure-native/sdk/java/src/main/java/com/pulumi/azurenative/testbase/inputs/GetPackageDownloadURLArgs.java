@@ -17,7 +17,7 @@ public final class GetPackageDownloadURLArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="packageName", required=true)
-      private final String packageName;
+    private String packageName;
 
     public String packageName() {
         return this.packageName;
@@ -28,7 +28,7 @@ public final class GetPackageDownloadURLArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -39,64 +39,59 @@ public final class GetPackageDownloadURLArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="testBaseAccountName", required=true)
-      private final String testBaseAccountName;
+    private String testBaseAccountName;
 
     public String testBaseAccountName() {
         return this.testBaseAccountName;
     }
 
-    public GetPackageDownloadURLArgs(
-        String packageName,
-        String resourceGroupName,
-        String testBaseAccountName) {
-        this.packageName = Objects.requireNonNull(packageName, "expected parameter 'packageName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.testBaseAccountName = Objects.requireNonNull(testBaseAccountName, "expected parameter 'testBaseAccountName' to be non-null");
-    }
+    private GetPackageDownloadURLArgs() {}
 
-    private GetPackageDownloadURLArgs() {
-        this.packageName = null;
-        this.resourceGroupName = null;
-        this.testBaseAccountName = null;
+    private GetPackageDownloadURLArgs(GetPackageDownloadURLArgs $) {
+        this.packageName = $.packageName;
+        this.resourceGroupName = $.resourceGroupName;
+        this.testBaseAccountName = $.testBaseAccountName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetPackageDownloadURLArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String packageName;
-        private String resourceGroupName;
-        private String testBaseAccountName;
+        private GetPackageDownloadURLArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetPackageDownloadURLArgs();
         }
 
         public Builder(GetPackageDownloadURLArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.packageName = defaults.packageName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.testBaseAccountName = defaults.testBaseAccountName;
+            $ = new GetPackageDownloadURLArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder packageName(String packageName) {
-            this.packageName = Objects.requireNonNull(packageName);
+            $.packageName = packageName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder testBaseAccountName(String testBaseAccountName) {
-            this.testBaseAccountName = Objects.requireNonNull(testBaseAccountName);
+            $.testBaseAccountName = testBaseAccountName;
             return this;
-        }        public GetPackageDownloadURLArgs build() {
-            return new GetPackageDownloadURLArgs(packageName, resourceGroupName, testBaseAccountName);
+        }
+
+        public GetPackageDownloadURLArgs build() {
+            $.packageName = Objects.requireNonNull($.packageName, "expected parameter 'packageName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.testBaseAccountName = Objects.requireNonNull($.testBaseAccountName, "expected parameter 'testBaseAccountName' to be non-null");
+            return $;
         }
     }
+
 }

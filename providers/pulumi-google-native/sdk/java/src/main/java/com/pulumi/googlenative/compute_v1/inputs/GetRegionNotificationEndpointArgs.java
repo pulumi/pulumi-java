@@ -15,78 +15,72 @@ public final class GetRegionNotificationEndpointArgs extends com.pulumi.resource
     public static final GetRegionNotificationEndpointArgs Empty = new GetRegionNotificationEndpointArgs();
 
     @Import(name="notificationEndpoint", required=true)
-      private final String notificationEndpoint;
+    private String notificationEndpoint;
 
     public String notificationEndpoint() {
         return this.notificationEndpoint;
     }
 
     @Import(name="project")
-      private final @Nullable String project;
+    private @Nullable String project;
 
     public Optional<String> project() {
-        return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
+        return Optional.ofNullable(this.project);
     }
 
     @Import(name="region", required=true)
-      private final String region;
+    private String region;
 
     public String region() {
         return this.region;
     }
 
-    public GetRegionNotificationEndpointArgs(
-        String notificationEndpoint,
-        @Nullable String project,
-        String region) {
-        this.notificationEndpoint = Objects.requireNonNull(notificationEndpoint, "expected parameter 'notificationEndpoint' to be non-null");
-        this.project = project;
-        this.region = Objects.requireNonNull(region, "expected parameter 'region' to be non-null");
-    }
+    private GetRegionNotificationEndpointArgs() {}
 
-    private GetRegionNotificationEndpointArgs() {
-        this.notificationEndpoint = null;
-        this.project = null;
-        this.region = null;
+    private GetRegionNotificationEndpointArgs(GetRegionNotificationEndpointArgs $) {
+        this.notificationEndpoint = $.notificationEndpoint;
+        this.project = $.project;
+        this.region = $.region;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetRegionNotificationEndpointArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String notificationEndpoint;
-        private @Nullable String project;
-        private String region;
+        private GetRegionNotificationEndpointArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetRegionNotificationEndpointArgs();
         }
 
         public Builder(GetRegionNotificationEndpointArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.notificationEndpoint = defaults.notificationEndpoint;
-    	      this.project = defaults.project;
-    	      this.region = defaults.region;
+            $ = new GetRegionNotificationEndpointArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder notificationEndpoint(String notificationEndpoint) {
-            this.notificationEndpoint = Objects.requireNonNull(notificationEndpoint);
+            $.notificationEndpoint = notificationEndpoint;
             return this;
         }
+
         public Builder project(@Nullable String project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
+
         public Builder region(String region) {
-            this.region = Objects.requireNonNull(region);
+            $.region = region;
             return this;
-        }        public GetRegionNotificationEndpointArgs build() {
-            return new GetRegionNotificationEndpointArgs(notificationEndpoint, project, region);
+        }
+
+        public GetRegionNotificationEndpointArgs build() {
+            $.notificationEndpoint = Objects.requireNonNull($.notificationEndpoint, "expected parameter 'notificationEndpoint' to be non-null");
+            $.region = Objects.requireNonNull($.region, "expected parameter 'region' to be non-null");
+            return $;
         }
     }
+
 }

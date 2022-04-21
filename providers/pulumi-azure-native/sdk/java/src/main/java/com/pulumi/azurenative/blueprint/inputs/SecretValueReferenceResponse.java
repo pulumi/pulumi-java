@@ -24,7 +24,7 @@ public final class SecretValueReferenceResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="keyVault", required=true)
-      private final KeyVaultReferenceResponse keyVault;
+    private KeyVaultReferenceResponse keyVault;
 
     public KeyVaultReferenceResponse keyVault() {
         return this.keyVault;
@@ -35,7 +35,7 @@ public final class SecretValueReferenceResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="secretName", required=true)
-      private final String secretName;
+    private String secretName;
 
     public String secretName() {
         return this.secretName;
@@ -46,64 +46,58 @@ public final class SecretValueReferenceResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="secretVersion")
-      private final @Nullable String secretVersion;
+    private @Nullable String secretVersion;
 
     public Optional<String> secretVersion() {
-        return this.secretVersion == null ? Optional.empty() : Optional.ofNullable(this.secretVersion);
+        return Optional.ofNullable(this.secretVersion);
     }
 
-    public SecretValueReferenceResponse(
-        KeyVaultReferenceResponse keyVault,
-        String secretName,
-        @Nullable String secretVersion) {
-        this.keyVault = Objects.requireNonNull(keyVault, "expected parameter 'keyVault' to be non-null");
-        this.secretName = Objects.requireNonNull(secretName, "expected parameter 'secretName' to be non-null");
-        this.secretVersion = secretVersion;
-    }
+    private SecretValueReferenceResponse() {}
 
-    private SecretValueReferenceResponse() {
-        this.keyVault = null;
-        this.secretName = null;
-        this.secretVersion = null;
+    private SecretValueReferenceResponse(SecretValueReferenceResponse $) {
+        this.keyVault = $.keyVault;
+        this.secretName = $.secretName;
+        this.secretVersion = $.secretVersion;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SecretValueReferenceResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private KeyVaultReferenceResponse keyVault;
-        private String secretName;
-        private @Nullable String secretVersion;
+        private SecretValueReferenceResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new SecretValueReferenceResponse();
         }
 
         public Builder(SecretValueReferenceResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.keyVault = defaults.keyVault;
-    	      this.secretName = defaults.secretName;
-    	      this.secretVersion = defaults.secretVersion;
+            $ = new SecretValueReferenceResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder keyVault(KeyVaultReferenceResponse keyVault) {
-            this.keyVault = Objects.requireNonNull(keyVault);
+            $.keyVault = keyVault;
             return this;
         }
+
         public Builder secretName(String secretName) {
-            this.secretName = Objects.requireNonNull(secretName);
+            $.secretName = secretName;
             return this;
         }
+
         public Builder secretVersion(@Nullable String secretVersion) {
-            this.secretVersion = secretVersion;
+            $.secretVersion = secretVersion;
             return this;
-        }        public SecretValueReferenceResponse build() {
-            return new SecretValueReferenceResponse(keyVault, secretName, secretVersion);
+        }
+
+        public SecretValueReferenceResponse build() {
+            $.keyVault = Objects.requireNonNull($.keyVault, "expected parameter 'keyVault' to be non-null");
+            $.secretName = Objects.requireNonNull($.secretName, "expected parameter 'secretName' to be non-null");
+            return $;
         }
     }
+
 }

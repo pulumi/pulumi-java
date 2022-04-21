@@ -23,10 +23,10 @@ public final class IconUrisResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="hero")
-      private final @Nullable String hero;
+    private @Nullable String hero;
 
     public Optional<String> hero() {
-        return this.hero == null ? Optional.empty() : Optional.ofNullable(this.hero);
+        return Optional.ofNullable(this.hero);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class IconUrisResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="large")
-      private final @Nullable String large;
+    private @Nullable String large;
 
     public Optional<String> large() {
-        return this.large == null ? Optional.empty() : Optional.ofNullable(this.large);
+        return Optional.ofNullable(this.large);
     }
 
     /**
@@ -45,10 +45,10 @@ public final class IconUrisResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="medium")
-      private final @Nullable String medium;
+    private @Nullable String medium;
 
     public Optional<String> medium() {
-        return this.medium == null ? Optional.empty() : Optional.ofNullable(this.medium);
+        return Optional.ofNullable(this.medium);
     }
 
     /**
@@ -56,10 +56,10 @@ public final class IconUrisResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="small")
-      private final @Nullable String small;
+    private @Nullable String small;
 
     public Optional<String> small() {
-        return this.small == null ? Optional.empty() : Optional.ofNullable(this.small);
+        return Optional.ofNullable(this.small);
     }
 
     /**
@@ -67,82 +67,68 @@ public final class IconUrisResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="wide")
-      private final @Nullable String wide;
+    private @Nullable String wide;
 
     public Optional<String> wide() {
-        return this.wide == null ? Optional.empty() : Optional.ofNullable(this.wide);
+        return Optional.ofNullable(this.wide);
     }
 
-    public IconUrisResponse(
-        @Nullable String hero,
-        @Nullable String large,
-        @Nullable String medium,
-        @Nullable String small,
-        @Nullable String wide) {
-        this.hero = hero;
-        this.large = large;
-        this.medium = medium;
-        this.small = small;
-        this.wide = wide;
-    }
+    private IconUrisResponse() {}
 
-    private IconUrisResponse() {
-        this.hero = null;
-        this.large = null;
-        this.medium = null;
-        this.small = null;
-        this.wide = null;
+    private IconUrisResponse(IconUrisResponse $) {
+        this.hero = $.hero;
+        this.large = $.large;
+        this.medium = $.medium;
+        this.small = $.small;
+        this.wide = $.wide;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(IconUrisResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String hero;
-        private @Nullable String large;
-        private @Nullable String medium;
-        private @Nullable String small;
-        private @Nullable String wide;
+        private IconUrisResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new IconUrisResponse();
         }
 
         public Builder(IconUrisResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.hero = defaults.hero;
-    	      this.large = defaults.large;
-    	      this.medium = defaults.medium;
-    	      this.small = defaults.small;
-    	      this.wide = defaults.wide;
+            $ = new IconUrisResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder hero(@Nullable String hero) {
-            this.hero = hero;
+            $.hero = hero;
             return this;
         }
+
         public Builder large(@Nullable String large) {
-            this.large = large;
+            $.large = large;
             return this;
         }
+
         public Builder medium(@Nullable String medium) {
-            this.medium = medium;
+            $.medium = medium;
             return this;
         }
+
         public Builder small(@Nullable String small) {
-            this.small = small;
+            $.small = small;
             return this;
         }
+
         public Builder wide(@Nullable String wide) {
-            this.wide = wide;
+            $.wide = wide;
             return this;
-        }        public IconUrisResponse build() {
-            return new IconUrisResponse(hero, large, medium, small, wide);
+        }
+
+        public IconUrisResponse build() {
+            return $;
         }
     }
+
 }

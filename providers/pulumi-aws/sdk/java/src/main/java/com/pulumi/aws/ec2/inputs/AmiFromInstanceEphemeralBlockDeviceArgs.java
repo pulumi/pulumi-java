@@ -5,9 +5,9 @@ package com.pulumi.aws.ec2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class AmiFromInstanceEphemeralBlockDeviceArgs extends com.pulumi.re
      * 
      */
     @Import(name="deviceName")
-      private final @Nullable Output<String> deviceName;
+    private @Nullable Output<String> deviceName;
 
-    public Output<String> deviceName() {
-        return this.deviceName == null ? Codegen.empty() : this.deviceName;
+    public Optional<Output<String>> deviceName() {
+        return Optional.ofNullable(this.deviceName);
     }
 
     /**
@@ -32,63 +32,58 @@ public final class AmiFromInstanceEphemeralBlockDeviceArgs extends com.pulumi.re
      * 
      */
     @Import(name="virtualName")
-      private final @Nullable Output<String> virtualName;
+    private @Nullable Output<String> virtualName;
 
-    public Output<String> virtualName() {
-        return this.virtualName == null ? Codegen.empty() : this.virtualName;
+    public Optional<Output<String>> virtualName() {
+        return Optional.ofNullable(this.virtualName);
     }
 
-    public AmiFromInstanceEphemeralBlockDeviceArgs(
-        @Nullable Output<String> deviceName,
-        @Nullable Output<String> virtualName) {
-        this.deviceName = deviceName;
-        this.virtualName = virtualName;
-    }
+    private AmiFromInstanceEphemeralBlockDeviceArgs() {}
 
-    private AmiFromInstanceEphemeralBlockDeviceArgs() {
-        this.deviceName = Codegen.empty();
-        this.virtualName = Codegen.empty();
+    private AmiFromInstanceEphemeralBlockDeviceArgs(AmiFromInstanceEphemeralBlockDeviceArgs $) {
+        this.deviceName = $.deviceName;
+        this.virtualName = $.virtualName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AmiFromInstanceEphemeralBlockDeviceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> deviceName;
-        private @Nullable Output<String> virtualName;
+        private AmiFromInstanceEphemeralBlockDeviceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AmiFromInstanceEphemeralBlockDeviceArgs();
         }
 
         public Builder(AmiFromInstanceEphemeralBlockDeviceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.deviceName = defaults.deviceName;
-    	      this.virtualName = defaults.virtualName;
+            $ = new AmiFromInstanceEphemeralBlockDeviceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder deviceName(@Nullable Output<String> deviceName) {
-            this.deviceName = deviceName;
+            $.deviceName = deviceName;
             return this;
         }
-        public Builder deviceName(@Nullable String deviceName) {
-            this.deviceName = Codegen.ofNullable(deviceName);
-            return this;
+
+        public Builder deviceName(String deviceName) {
+            return deviceName(Output.of(deviceName));
         }
+
         public Builder virtualName(@Nullable Output<String> virtualName) {
-            this.virtualName = virtualName;
+            $.virtualName = virtualName;
             return this;
         }
-        public Builder virtualName(@Nullable String virtualName) {
-            this.virtualName = Codegen.ofNullable(virtualName);
-            return this;
-        }        public AmiFromInstanceEphemeralBlockDeviceArgs build() {
-            return new AmiFromInstanceEphemeralBlockDeviceArgs(deviceName, virtualName);
+
+        public Builder virtualName(String virtualName) {
+            return virtualName(Output.of(virtualName));
+        }
+
+        public AmiFromInstanceEphemeralBlockDeviceArgs build() {
+            return $;
         }
     }
+
 }

@@ -5,11 +5,11 @@ package com.pulumi.eks.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class VpcCniOptionsArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="cniConfigureRpfilter")
-      private final @Nullable Output<Boolean> cniConfigureRpfilter;
+    private @Nullable Output<Boolean> cniConfigureRpfilter;
 
-    public Output<Boolean> cniConfigureRpfilter() {
-        return this.cniConfigureRpfilter == null ? Codegen.empty() : this.cniConfigureRpfilter;
+    public Optional<Output<Boolean>> cniConfigureRpfilter() {
+        return Optional.ofNullable(this.cniConfigureRpfilter);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class VpcCniOptionsArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="cniCustomNetworkCfg")
-      private final @Nullable Output<Boolean> cniCustomNetworkCfg;
+    private @Nullable Output<Boolean> cniCustomNetworkCfg;
 
-    public Output<Boolean> cniCustomNetworkCfg() {
-        return this.cniCustomNetworkCfg == null ? Codegen.empty() : this.cniCustomNetworkCfg;
+    public Optional<Output<Boolean>> cniCustomNetworkCfg() {
+        return Optional.ofNullable(this.cniCustomNetworkCfg);
     }
 
     /**
@@ -48,10 +48,10 @@ public final class VpcCniOptionsArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="cniExternalSnat")
-      private final @Nullable Output<Boolean> cniExternalSnat;
+    private @Nullable Output<Boolean> cniExternalSnat;
 
-    public Output<Boolean> cniExternalSnat() {
-        return this.cniExternalSnat == null ? Codegen.empty() : this.cniExternalSnat;
+    public Optional<Output<Boolean>> cniExternalSnat() {
+        return Optional.ofNullable(this.cniExternalSnat);
     }
 
     /**
@@ -61,10 +61,10 @@ public final class VpcCniOptionsArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="customNetworkConfig")
-      private final @Nullable Output<Boolean> customNetworkConfig;
+    private @Nullable Output<Boolean> customNetworkConfig;
 
-    public Output<Boolean> customNetworkConfig() {
-        return this.customNetworkConfig == null ? Codegen.empty() : this.customNetworkConfig;
+    public Optional<Output<Boolean>> customNetworkConfig() {
+        return Optional.ofNullable(this.customNetworkConfig);
     }
 
     /**
@@ -72,10 +72,10 @@ public final class VpcCniOptionsArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="disableTcpEarlyDemux")
-      private final @Nullable Output<Boolean> disableTcpEarlyDemux;
+    private @Nullable Output<Boolean> disableTcpEarlyDemux;
 
-    public Output<Boolean> disableTcpEarlyDemux() {
-        return this.disableTcpEarlyDemux == null ? Codegen.empty() : this.disableTcpEarlyDemux;
+    public Optional<Output<Boolean>> disableTcpEarlyDemux() {
+        return Optional.ofNullable(this.disableTcpEarlyDemux);
     }
 
     /**
@@ -83,10 +83,10 @@ public final class VpcCniOptionsArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="enablePodEni")
-      private final @Nullable Output<Boolean> enablePodEni;
+    private @Nullable Output<Boolean> enablePodEni;
 
-    public Output<Boolean> enablePodEni() {
-        return this.enablePodEni == null ? Codegen.empty() : this.enablePodEni;
+    public Optional<Output<Boolean>> enablePodEni() {
+        return Optional.ofNullable(this.enablePodEni);
     }
 
     /**
@@ -94,10 +94,10 @@ public final class VpcCniOptionsArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="enablePrefixDelegation")
-      private final @Nullable Output<Boolean> enablePrefixDelegation;
+    private @Nullable Output<Boolean> enablePrefixDelegation;
 
-    public Output<Boolean> enablePrefixDelegation() {
-        return this.enablePrefixDelegation == null ? Codegen.empty() : this.enablePrefixDelegation;
+    public Optional<Output<Boolean>> enablePrefixDelegation() {
+        return Optional.ofNullable(this.enablePrefixDelegation);
     }
 
     /**
@@ -108,10 +108,10 @@ public final class VpcCniOptionsArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="eniConfigLabelDef")
-      private final @Nullable Output<String> eniConfigLabelDef;
+    private @Nullable Output<String> eniConfigLabelDef;
 
-    public Output<String> eniConfigLabelDef() {
-        return this.eniConfigLabelDef == null ? Codegen.empty() : this.eniConfigLabelDef;
+    public Optional<Output<String>> eniConfigLabelDef() {
+        return Optional.ofNullable(this.eniConfigLabelDef);
     }
 
     /**
@@ -121,10 +121,10 @@ public final class VpcCniOptionsArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="eniMtu")
-      private final @Nullable Output<Integer> eniMtu;
+    private @Nullable Output<Integer> eniMtu;
 
-    public Output<Integer> eniMtu() {
-        return this.eniMtu == null ? Codegen.empty() : this.eniMtu;
+    public Optional<Output<Integer>> eniMtu() {
+        return Optional.ofNullable(this.eniMtu);
     }
 
     /**
@@ -134,10 +134,10 @@ public final class VpcCniOptionsArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="externalSnat")
-      private final @Nullable Output<Boolean> externalSnat;
+    private @Nullable Output<Boolean> externalSnat;
 
-    public Output<Boolean> externalSnat() {
-        return this.externalSnat == null ? Codegen.empty() : this.externalSnat;
+    public Optional<Output<Boolean>> externalSnat() {
+        return Optional.ofNullable(this.externalSnat);
     }
 
     /**
@@ -147,10 +147,10 @@ public final class VpcCniOptionsArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="image")
-      private final @Nullable Output<String> image;
+    private @Nullable Output<String> image;
 
-    public Output<String> image() {
-        return this.image == null ? Codegen.empty() : this.image;
+    public Optional<Output<String>> image() {
+        return Optional.ofNullable(this.image);
     }
 
     /**
@@ -160,10 +160,10 @@ public final class VpcCniOptionsArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="initImage")
-      private final @Nullable Output<String> initImage;
+    private @Nullable Output<String> initImage;
 
-    public Output<String> initImage() {
-        return this.initImage == null ? Codegen.empty() : this.initImage;
+    public Optional<Output<String>> initImage() {
+        return Optional.ofNullable(this.initImage);
     }
 
     /**
@@ -173,10 +173,10 @@ public final class VpcCniOptionsArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="logFile")
-      private final @Nullable Output<String> logFile;
+    private @Nullable Output<String> logFile;
 
-    public Output<String> logFile() {
-        return this.logFile == null ? Codegen.empty() : this.logFile;
+    public Optional<Output<String>> logFile() {
+        return Optional.ofNullable(this.logFile);
     }
 
     /**
@@ -187,10 +187,10 @@ public final class VpcCniOptionsArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="logLevel")
-      private final @Nullable Output<String> logLevel;
+    private @Nullable Output<String> logLevel;
 
-    public Output<String> logLevel() {
-        return this.logLevel == null ? Codegen.empty() : this.logLevel;
+    public Optional<Output<String>> logLevel() {
+        return Optional.ofNullable(this.logLevel);
     }
 
     /**
@@ -200,10 +200,10 @@ public final class VpcCniOptionsArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="nodePortSupport")
-      private final @Nullable Output<Boolean> nodePortSupport;
+    private @Nullable Output<Boolean> nodePortSupport;
 
-    public Output<Boolean> nodePortSupport() {
-        return this.nodePortSupport == null ? Codegen.empty() : this.nodePortSupport;
+    public Optional<Output<Boolean>> nodePortSupport() {
+        return Optional.ofNullable(this.nodePortSupport);
     }
 
     /**
@@ -211,10 +211,10 @@ public final class VpcCniOptionsArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="securityContextPrivileged")
-      private final @Nullable Output<Boolean> securityContextPrivileged;
+    private @Nullable Output<Boolean> securityContextPrivileged;
 
-    public Output<Boolean> securityContextPrivileged() {
-        return this.securityContextPrivileged == null ? Codegen.empty() : this.securityContextPrivileged;
+    public Optional<Output<Boolean>> securityContextPrivileged() {
+        return Optional.ofNullable(this.securityContextPrivileged);
     }
 
     /**
@@ -226,10 +226,10 @@ public final class VpcCniOptionsArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="vethPrefix")
-      private final @Nullable Output<String> vethPrefix;
+    private @Nullable Output<String> vethPrefix;
 
-    public Output<String> vethPrefix() {
-        return this.vethPrefix == null ? Codegen.empty() : this.vethPrefix;
+    public Optional<Output<String>> vethPrefix() {
+        return Optional.ofNullable(this.vethPrefix);
     }
 
     /**
@@ -239,10 +239,10 @@ public final class VpcCniOptionsArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="warmEniTarget")
-      private final @Nullable Output<Integer> warmEniTarget;
+    private @Nullable Output<Integer> warmEniTarget;
 
-    public Output<Integer> warmEniTarget() {
-        return this.warmEniTarget == null ? Codegen.empty() : this.warmEniTarget;
+    public Optional<Output<Integer>> warmEniTarget() {
+        return Optional.ofNullable(this.warmEniTarget);
     }
 
     /**
@@ -250,10 +250,10 @@ public final class VpcCniOptionsArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="warmIpTarget")
-      private final @Nullable Output<Integer> warmIpTarget;
+    private @Nullable Output<Integer> warmIpTarget;
 
-    public Output<Integer> warmIpTarget() {
-        return this.warmIpTarget == null ? Codegen.empty() : this.warmIpTarget;
+    public Optional<Output<Integer>> warmIpTarget() {
+        return Optional.ofNullable(this.warmIpTarget);
     }
 
     /**
@@ -261,297 +261,238 @@ public final class VpcCniOptionsArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="warmPrefixTarget")
-      private final @Nullable Output<Integer> warmPrefixTarget;
+    private @Nullable Output<Integer> warmPrefixTarget;
 
-    public Output<Integer> warmPrefixTarget() {
-        return this.warmPrefixTarget == null ? Codegen.empty() : this.warmPrefixTarget;
+    public Optional<Output<Integer>> warmPrefixTarget() {
+        return Optional.ofNullable(this.warmPrefixTarget);
     }
 
-    public VpcCniOptionsArgs(
-        @Nullable Output<Boolean> cniConfigureRpfilter,
-        @Nullable Output<Boolean> cniCustomNetworkCfg,
-        @Nullable Output<Boolean> cniExternalSnat,
-        @Nullable Output<Boolean> customNetworkConfig,
-        @Nullable Output<Boolean> disableTcpEarlyDemux,
-        @Nullable Output<Boolean> enablePodEni,
-        @Nullable Output<Boolean> enablePrefixDelegation,
-        @Nullable Output<String> eniConfigLabelDef,
-        @Nullable Output<Integer> eniMtu,
-        @Nullable Output<Boolean> externalSnat,
-        @Nullable Output<String> image,
-        @Nullable Output<String> initImage,
-        @Nullable Output<String> logFile,
-        @Nullable Output<String> logLevel,
-        @Nullable Output<Boolean> nodePortSupport,
-        @Nullable Output<Boolean> securityContextPrivileged,
-        @Nullable Output<String> vethPrefix,
-        @Nullable Output<Integer> warmEniTarget,
-        @Nullable Output<Integer> warmIpTarget,
-        @Nullable Output<Integer> warmPrefixTarget) {
-        this.cniConfigureRpfilter = cniConfigureRpfilter;
-        this.cniCustomNetworkCfg = cniCustomNetworkCfg;
-        this.cniExternalSnat = cniExternalSnat;
-        this.customNetworkConfig = customNetworkConfig;
-        this.disableTcpEarlyDemux = disableTcpEarlyDemux;
-        this.enablePodEni = enablePodEni;
-        this.enablePrefixDelegation = enablePrefixDelegation;
-        this.eniConfigLabelDef = eniConfigLabelDef;
-        this.eniMtu = eniMtu;
-        this.externalSnat = externalSnat;
-        this.image = image;
-        this.initImage = initImage;
-        this.logFile = logFile;
-        this.logLevel = logLevel;
-        this.nodePortSupport = nodePortSupport;
-        this.securityContextPrivileged = securityContextPrivileged;
-        this.vethPrefix = vethPrefix;
-        this.warmEniTarget = warmEniTarget;
-        this.warmIpTarget = warmIpTarget;
-        this.warmPrefixTarget = warmPrefixTarget;
-    }
+    private VpcCniOptionsArgs() {}
 
-    private VpcCniOptionsArgs() {
-        this.cniConfigureRpfilter = Codegen.empty();
-        this.cniCustomNetworkCfg = Codegen.empty();
-        this.cniExternalSnat = Codegen.empty();
-        this.customNetworkConfig = Codegen.empty();
-        this.disableTcpEarlyDemux = Codegen.empty();
-        this.enablePodEni = Codegen.empty();
-        this.enablePrefixDelegation = Codegen.empty();
-        this.eniConfigLabelDef = Codegen.empty();
-        this.eniMtu = Codegen.empty();
-        this.externalSnat = Codegen.empty();
-        this.image = Codegen.empty();
-        this.initImage = Codegen.empty();
-        this.logFile = Codegen.empty();
-        this.logLevel = Codegen.empty();
-        this.nodePortSupport = Codegen.empty();
-        this.securityContextPrivileged = Codegen.empty();
-        this.vethPrefix = Codegen.empty();
-        this.warmEniTarget = Codegen.empty();
-        this.warmIpTarget = Codegen.empty();
-        this.warmPrefixTarget = Codegen.empty();
+    private VpcCniOptionsArgs(VpcCniOptionsArgs $) {
+        this.cniConfigureRpfilter = $.cniConfigureRpfilter;
+        this.cniCustomNetworkCfg = $.cniCustomNetworkCfg;
+        this.cniExternalSnat = $.cniExternalSnat;
+        this.customNetworkConfig = $.customNetworkConfig;
+        this.disableTcpEarlyDemux = $.disableTcpEarlyDemux;
+        this.enablePodEni = $.enablePodEni;
+        this.enablePrefixDelegation = $.enablePrefixDelegation;
+        this.eniConfigLabelDef = $.eniConfigLabelDef;
+        this.eniMtu = $.eniMtu;
+        this.externalSnat = $.externalSnat;
+        this.image = $.image;
+        this.initImage = $.initImage;
+        this.logFile = $.logFile;
+        this.logLevel = $.logLevel;
+        this.nodePortSupport = $.nodePortSupport;
+        this.securityContextPrivileged = $.securityContextPrivileged;
+        this.vethPrefix = $.vethPrefix;
+        this.warmEniTarget = $.warmEniTarget;
+        this.warmIpTarget = $.warmIpTarget;
+        this.warmPrefixTarget = $.warmPrefixTarget;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VpcCniOptionsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> cniConfigureRpfilter;
-        private @Nullable Output<Boolean> cniCustomNetworkCfg;
-        private @Nullable Output<Boolean> cniExternalSnat;
-        private @Nullable Output<Boolean> customNetworkConfig;
-        private @Nullable Output<Boolean> disableTcpEarlyDemux;
-        private @Nullable Output<Boolean> enablePodEni;
-        private @Nullable Output<Boolean> enablePrefixDelegation;
-        private @Nullable Output<String> eniConfigLabelDef;
-        private @Nullable Output<Integer> eniMtu;
-        private @Nullable Output<Boolean> externalSnat;
-        private @Nullable Output<String> image;
-        private @Nullable Output<String> initImage;
-        private @Nullable Output<String> logFile;
-        private @Nullable Output<String> logLevel;
-        private @Nullable Output<Boolean> nodePortSupport;
-        private @Nullable Output<Boolean> securityContextPrivileged;
-        private @Nullable Output<String> vethPrefix;
-        private @Nullable Output<Integer> warmEniTarget;
-        private @Nullable Output<Integer> warmIpTarget;
-        private @Nullable Output<Integer> warmPrefixTarget;
+        private VpcCniOptionsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new VpcCniOptionsArgs();
         }
 
         public Builder(VpcCniOptionsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cniConfigureRpfilter = defaults.cniConfigureRpfilter;
-    	      this.cniCustomNetworkCfg = defaults.cniCustomNetworkCfg;
-    	      this.cniExternalSnat = defaults.cniExternalSnat;
-    	      this.customNetworkConfig = defaults.customNetworkConfig;
-    	      this.disableTcpEarlyDemux = defaults.disableTcpEarlyDemux;
-    	      this.enablePodEni = defaults.enablePodEni;
-    	      this.enablePrefixDelegation = defaults.enablePrefixDelegation;
-    	      this.eniConfigLabelDef = defaults.eniConfigLabelDef;
-    	      this.eniMtu = defaults.eniMtu;
-    	      this.externalSnat = defaults.externalSnat;
-    	      this.image = defaults.image;
-    	      this.initImage = defaults.initImage;
-    	      this.logFile = defaults.logFile;
-    	      this.logLevel = defaults.logLevel;
-    	      this.nodePortSupport = defaults.nodePortSupport;
-    	      this.securityContextPrivileged = defaults.securityContextPrivileged;
-    	      this.vethPrefix = defaults.vethPrefix;
-    	      this.warmEniTarget = defaults.warmEniTarget;
-    	      this.warmIpTarget = defaults.warmIpTarget;
-    	      this.warmPrefixTarget = defaults.warmPrefixTarget;
+            $ = new VpcCniOptionsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder cniConfigureRpfilter(@Nullable Output<Boolean> cniConfigureRpfilter) {
-            this.cniConfigureRpfilter = cniConfigureRpfilter;
+            $.cniConfigureRpfilter = cniConfigureRpfilter;
             return this;
         }
-        public Builder cniConfigureRpfilter(@Nullable Boolean cniConfigureRpfilter) {
-            this.cniConfigureRpfilter = Codegen.ofNullable(cniConfigureRpfilter);
-            return this;
+
+        public Builder cniConfigureRpfilter(Boolean cniConfigureRpfilter) {
+            return cniConfigureRpfilter(Output.of(cniConfigureRpfilter));
         }
+
         public Builder cniCustomNetworkCfg(@Nullable Output<Boolean> cniCustomNetworkCfg) {
-            this.cniCustomNetworkCfg = cniCustomNetworkCfg;
+            $.cniCustomNetworkCfg = cniCustomNetworkCfg;
             return this;
         }
-        public Builder cniCustomNetworkCfg(@Nullable Boolean cniCustomNetworkCfg) {
-            this.cniCustomNetworkCfg = Codegen.ofNullable(cniCustomNetworkCfg);
-            return this;
+
+        public Builder cniCustomNetworkCfg(Boolean cniCustomNetworkCfg) {
+            return cniCustomNetworkCfg(Output.of(cniCustomNetworkCfg));
         }
+
         public Builder cniExternalSnat(@Nullable Output<Boolean> cniExternalSnat) {
-            this.cniExternalSnat = cniExternalSnat;
+            $.cniExternalSnat = cniExternalSnat;
             return this;
         }
-        public Builder cniExternalSnat(@Nullable Boolean cniExternalSnat) {
-            this.cniExternalSnat = Codegen.ofNullable(cniExternalSnat);
-            return this;
+
+        public Builder cniExternalSnat(Boolean cniExternalSnat) {
+            return cniExternalSnat(Output.of(cniExternalSnat));
         }
+
         public Builder customNetworkConfig(@Nullable Output<Boolean> customNetworkConfig) {
-            this.customNetworkConfig = customNetworkConfig;
+            $.customNetworkConfig = customNetworkConfig;
             return this;
         }
-        public Builder customNetworkConfig(@Nullable Boolean customNetworkConfig) {
-            this.customNetworkConfig = Codegen.ofNullable(customNetworkConfig);
-            return this;
+
+        public Builder customNetworkConfig(Boolean customNetworkConfig) {
+            return customNetworkConfig(Output.of(customNetworkConfig));
         }
+
         public Builder disableTcpEarlyDemux(@Nullable Output<Boolean> disableTcpEarlyDemux) {
-            this.disableTcpEarlyDemux = disableTcpEarlyDemux;
+            $.disableTcpEarlyDemux = disableTcpEarlyDemux;
             return this;
         }
-        public Builder disableTcpEarlyDemux(@Nullable Boolean disableTcpEarlyDemux) {
-            this.disableTcpEarlyDemux = Codegen.ofNullable(disableTcpEarlyDemux);
-            return this;
+
+        public Builder disableTcpEarlyDemux(Boolean disableTcpEarlyDemux) {
+            return disableTcpEarlyDemux(Output.of(disableTcpEarlyDemux));
         }
+
         public Builder enablePodEni(@Nullable Output<Boolean> enablePodEni) {
-            this.enablePodEni = enablePodEni;
+            $.enablePodEni = enablePodEni;
             return this;
         }
-        public Builder enablePodEni(@Nullable Boolean enablePodEni) {
-            this.enablePodEni = Codegen.ofNullable(enablePodEni);
-            return this;
+
+        public Builder enablePodEni(Boolean enablePodEni) {
+            return enablePodEni(Output.of(enablePodEni));
         }
+
         public Builder enablePrefixDelegation(@Nullable Output<Boolean> enablePrefixDelegation) {
-            this.enablePrefixDelegation = enablePrefixDelegation;
+            $.enablePrefixDelegation = enablePrefixDelegation;
             return this;
         }
-        public Builder enablePrefixDelegation(@Nullable Boolean enablePrefixDelegation) {
-            this.enablePrefixDelegation = Codegen.ofNullable(enablePrefixDelegation);
-            return this;
+
+        public Builder enablePrefixDelegation(Boolean enablePrefixDelegation) {
+            return enablePrefixDelegation(Output.of(enablePrefixDelegation));
         }
+
         public Builder eniConfigLabelDef(@Nullable Output<String> eniConfigLabelDef) {
-            this.eniConfigLabelDef = eniConfigLabelDef;
+            $.eniConfigLabelDef = eniConfigLabelDef;
             return this;
         }
-        public Builder eniConfigLabelDef(@Nullable String eniConfigLabelDef) {
-            this.eniConfigLabelDef = Codegen.ofNullable(eniConfigLabelDef);
-            return this;
+
+        public Builder eniConfigLabelDef(String eniConfigLabelDef) {
+            return eniConfigLabelDef(Output.of(eniConfigLabelDef));
         }
+
         public Builder eniMtu(@Nullable Output<Integer> eniMtu) {
-            this.eniMtu = eniMtu;
+            $.eniMtu = eniMtu;
             return this;
         }
-        public Builder eniMtu(@Nullable Integer eniMtu) {
-            this.eniMtu = Codegen.ofNullable(eniMtu);
-            return this;
+
+        public Builder eniMtu(Integer eniMtu) {
+            return eniMtu(Output.of(eniMtu));
         }
+
         public Builder externalSnat(@Nullable Output<Boolean> externalSnat) {
-            this.externalSnat = externalSnat;
+            $.externalSnat = externalSnat;
             return this;
         }
-        public Builder externalSnat(@Nullable Boolean externalSnat) {
-            this.externalSnat = Codegen.ofNullable(externalSnat);
-            return this;
+
+        public Builder externalSnat(Boolean externalSnat) {
+            return externalSnat(Output.of(externalSnat));
         }
+
         public Builder image(@Nullable Output<String> image) {
-            this.image = image;
+            $.image = image;
             return this;
         }
-        public Builder image(@Nullable String image) {
-            this.image = Codegen.ofNullable(image);
-            return this;
+
+        public Builder image(String image) {
+            return image(Output.of(image));
         }
+
         public Builder initImage(@Nullable Output<String> initImage) {
-            this.initImage = initImage;
+            $.initImage = initImage;
             return this;
         }
-        public Builder initImage(@Nullable String initImage) {
-            this.initImage = Codegen.ofNullable(initImage);
-            return this;
+
+        public Builder initImage(String initImage) {
+            return initImage(Output.of(initImage));
         }
+
         public Builder logFile(@Nullable Output<String> logFile) {
-            this.logFile = logFile;
+            $.logFile = logFile;
             return this;
         }
-        public Builder logFile(@Nullable String logFile) {
-            this.logFile = Codegen.ofNullable(logFile);
-            return this;
+
+        public Builder logFile(String logFile) {
+            return logFile(Output.of(logFile));
         }
+
         public Builder logLevel(@Nullable Output<String> logLevel) {
-            this.logLevel = logLevel;
+            $.logLevel = logLevel;
             return this;
         }
-        public Builder logLevel(@Nullable String logLevel) {
-            this.logLevel = Codegen.ofNullable(logLevel);
-            return this;
+
+        public Builder logLevel(String logLevel) {
+            return logLevel(Output.of(logLevel));
         }
+
         public Builder nodePortSupport(@Nullable Output<Boolean> nodePortSupport) {
-            this.nodePortSupport = nodePortSupport;
+            $.nodePortSupport = nodePortSupport;
             return this;
         }
-        public Builder nodePortSupport(@Nullable Boolean nodePortSupport) {
-            this.nodePortSupport = Codegen.ofNullable(nodePortSupport);
-            return this;
+
+        public Builder nodePortSupport(Boolean nodePortSupport) {
+            return nodePortSupport(Output.of(nodePortSupport));
         }
+
         public Builder securityContextPrivileged(@Nullable Output<Boolean> securityContextPrivileged) {
-            this.securityContextPrivileged = securityContextPrivileged;
+            $.securityContextPrivileged = securityContextPrivileged;
             return this;
         }
-        public Builder securityContextPrivileged(@Nullable Boolean securityContextPrivileged) {
-            this.securityContextPrivileged = Codegen.ofNullable(securityContextPrivileged);
-            return this;
+
+        public Builder securityContextPrivileged(Boolean securityContextPrivileged) {
+            return securityContextPrivileged(Output.of(securityContextPrivileged));
         }
+
         public Builder vethPrefix(@Nullable Output<String> vethPrefix) {
-            this.vethPrefix = vethPrefix;
+            $.vethPrefix = vethPrefix;
             return this;
         }
-        public Builder vethPrefix(@Nullable String vethPrefix) {
-            this.vethPrefix = Codegen.ofNullable(vethPrefix);
-            return this;
+
+        public Builder vethPrefix(String vethPrefix) {
+            return vethPrefix(Output.of(vethPrefix));
         }
+
         public Builder warmEniTarget(@Nullable Output<Integer> warmEniTarget) {
-            this.warmEniTarget = warmEniTarget;
+            $.warmEniTarget = warmEniTarget;
             return this;
         }
-        public Builder warmEniTarget(@Nullable Integer warmEniTarget) {
-            this.warmEniTarget = Codegen.ofNullable(warmEniTarget);
-            return this;
+
+        public Builder warmEniTarget(Integer warmEniTarget) {
+            return warmEniTarget(Output.of(warmEniTarget));
         }
+
         public Builder warmIpTarget(@Nullable Output<Integer> warmIpTarget) {
-            this.warmIpTarget = warmIpTarget;
+            $.warmIpTarget = warmIpTarget;
             return this;
         }
-        public Builder warmIpTarget(@Nullable Integer warmIpTarget) {
-            this.warmIpTarget = Codegen.ofNullable(warmIpTarget);
-            return this;
+
+        public Builder warmIpTarget(Integer warmIpTarget) {
+            return warmIpTarget(Output.of(warmIpTarget));
         }
+
         public Builder warmPrefixTarget(@Nullable Output<Integer> warmPrefixTarget) {
-            this.warmPrefixTarget = warmPrefixTarget;
+            $.warmPrefixTarget = warmPrefixTarget;
             return this;
         }
-        public Builder warmPrefixTarget(@Nullable Integer warmPrefixTarget) {
-            this.warmPrefixTarget = Codegen.ofNullable(warmPrefixTarget);
-            return this;
-        }        public VpcCniOptionsArgs build() {
-            return new VpcCniOptionsArgs(cniConfigureRpfilter, cniCustomNetworkCfg, cniExternalSnat, customNetworkConfig, disableTcpEarlyDemux, enablePodEni, enablePrefixDelegation, eniConfigLabelDef, eniMtu, externalSnat, image, initImage, logFile, logLevel, nodePortSupport, securityContextPrivileged, vethPrefix, warmEniTarget, warmIpTarget, warmPrefixTarget);
+
+        public Builder warmPrefixTarget(Integer warmPrefixTarget) {
+            return warmPrefixTarget(Output.of(warmPrefixTarget));
+        }
+
+        public VpcCniOptionsArgs build() {
+            return $;
         }
     }
+
 }

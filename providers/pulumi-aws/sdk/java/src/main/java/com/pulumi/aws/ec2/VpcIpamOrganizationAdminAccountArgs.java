@@ -5,7 +5,6 @@ package com.pulumi.aws.ec2;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -15,49 +14,49 @@ public final class VpcIpamOrganizationAdminAccountArgs extends com.pulumi.resour
     public static final VpcIpamOrganizationAdminAccountArgs Empty = new VpcIpamOrganizationAdminAccountArgs();
 
     @Import(name="delegatedAdminAccountId", required=true)
-      private final Output<String> delegatedAdminAccountId;
+    private Output<String> delegatedAdminAccountId;
 
     public Output<String> delegatedAdminAccountId() {
         return this.delegatedAdminAccountId;
     }
 
-    public VpcIpamOrganizationAdminAccountArgs(Output<String> delegatedAdminAccountId) {
-        this.delegatedAdminAccountId = Objects.requireNonNull(delegatedAdminAccountId, "expected parameter 'delegatedAdminAccountId' to be non-null");
-    }
+    private VpcIpamOrganizationAdminAccountArgs() {}
 
-    private VpcIpamOrganizationAdminAccountArgs() {
-        this.delegatedAdminAccountId = Codegen.empty();
+    private VpcIpamOrganizationAdminAccountArgs(VpcIpamOrganizationAdminAccountArgs $) {
+        this.delegatedAdminAccountId = $.delegatedAdminAccountId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VpcIpamOrganizationAdminAccountArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> delegatedAdminAccountId;
+        private VpcIpamOrganizationAdminAccountArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new VpcIpamOrganizationAdminAccountArgs();
         }
 
         public Builder(VpcIpamOrganizationAdminAccountArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.delegatedAdminAccountId = defaults.delegatedAdminAccountId;
+            $ = new VpcIpamOrganizationAdminAccountArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder delegatedAdminAccountId(Output<String> delegatedAdminAccountId) {
-            this.delegatedAdminAccountId = Objects.requireNonNull(delegatedAdminAccountId);
+            $.delegatedAdminAccountId = delegatedAdminAccountId;
             return this;
         }
+
         public Builder delegatedAdminAccountId(String delegatedAdminAccountId) {
-            this.delegatedAdminAccountId = Output.of(Objects.requireNonNull(delegatedAdminAccountId));
-            return this;
-        }        public VpcIpamOrganizationAdminAccountArgs build() {
-            return new VpcIpamOrganizationAdminAccountArgs(delegatedAdminAccountId);
+            return delegatedAdminAccountId(Output.of(delegatedAdminAccountId));
+        }
+
+        public VpcIpamOrganizationAdminAccountArgs build() {
+            $.delegatedAdminAccountId = Objects.requireNonNull($.delegatedAdminAccountId, "expected parameter 'delegatedAdminAccountId' to be non-null");
+            return $;
         }
     }
+
 }

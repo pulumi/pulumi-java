@@ -6,9 +6,9 @@ package com.pulumi.azurenative.providerhub;
 import com.pulumi.azurenative.providerhub.inputs.ResourceTypeRegistrationPropertiesArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -17,10 +17,10 @@ public final class ResourceTypeRegistrationArgs extends com.pulumi.resources.Res
     public static final ResourceTypeRegistrationArgs Empty = new ResourceTypeRegistrationArgs();
 
     @Import(name="properties")
-      private final @Nullable Output<ResourceTypeRegistrationPropertiesArgs> properties;
+    private @Nullable Output<ResourceTypeRegistrationPropertiesArgs> properties;
 
-    public Output<ResourceTypeRegistrationPropertiesArgs> properties() {
-        return this.properties == null ? Codegen.empty() : this.properties;
+    public Optional<Output<ResourceTypeRegistrationPropertiesArgs>> properties() {
+        return Optional.ofNullable(this.properties);
     }
 
     /**
@@ -28,7 +28,7 @@ public final class ResourceTypeRegistrationArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="providerNamespace", required=true)
-      private final Output<String> providerNamespace;
+    private Output<String> providerNamespace;
 
     public Output<String> providerNamespace() {
         return this.providerNamespace;
@@ -39,76 +39,69 @@ public final class ResourceTypeRegistrationArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="resourceType")
-      private final @Nullable Output<String> resourceType;
+    private @Nullable Output<String> resourceType;
 
-    public Output<String> resourceType() {
-        return this.resourceType == null ? Codegen.empty() : this.resourceType;
+    public Optional<Output<String>> resourceType() {
+        return Optional.ofNullable(this.resourceType);
     }
 
-    public ResourceTypeRegistrationArgs(
-        @Nullable Output<ResourceTypeRegistrationPropertiesArgs> properties,
-        Output<String> providerNamespace,
-        @Nullable Output<String> resourceType) {
-        this.properties = properties;
-        this.providerNamespace = Objects.requireNonNull(providerNamespace, "expected parameter 'providerNamespace' to be non-null");
-        this.resourceType = resourceType;
-    }
+    private ResourceTypeRegistrationArgs() {}
 
-    private ResourceTypeRegistrationArgs() {
-        this.properties = Codegen.empty();
-        this.providerNamespace = Codegen.empty();
-        this.resourceType = Codegen.empty();
+    private ResourceTypeRegistrationArgs(ResourceTypeRegistrationArgs $) {
+        this.properties = $.properties;
+        this.providerNamespace = $.providerNamespace;
+        this.resourceType = $.resourceType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ResourceTypeRegistrationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<ResourceTypeRegistrationPropertiesArgs> properties;
-        private Output<String> providerNamespace;
-        private @Nullable Output<String> resourceType;
+        private ResourceTypeRegistrationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ResourceTypeRegistrationArgs();
         }
 
         public Builder(ResourceTypeRegistrationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.properties = defaults.properties;
-    	      this.providerNamespace = defaults.providerNamespace;
-    	      this.resourceType = defaults.resourceType;
+            $ = new ResourceTypeRegistrationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder properties(@Nullable Output<ResourceTypeRegistrationPropertiesArgs> properties) {
-            this.properties = properties;
+            $.properties = properties;
             return this;
         }
-        public Builder properties(@Nullable ResourceTypeRegistrationPropertiesArgs properties) {
-            this.properties = Codegen.ofNullable(properties);
-            return this;
+
+        public Builder properties(ResourceTypeRegistrationPropertiesArgs properties) {
+            return properties(Output.of(properties));
         }
+
         public Builder providerNamespace(Output<String> providerNamespace) {
-            this.providerNamespace = Objects.requireNonNull(providerNamespace);
+            $.providerNamespace = providerNamespace;
             return this;
         }
+
         public Builder providerNamespace(String providerNamespace) {
-            this.providerNamespace = Output.of(Objects.requireNonNull(providerNamespace));
-            return this;
+            return providerNamespace(Output.of(providerNamespace));
         }
+
         public Builder resourceType(@Nullable Output<String> resourceType) {
-            this.resourceType = resourceType;
+            $.resourceType = resourceType;
             return this;
         }
-        public Builder resourceType(@Nullable String resourceType) {
-            this.resourceType = Codegen.ofNullable(resourceType);
-            return this;
-        }        public ResourceTypeRegistrationArgs build() {
-            return new ResourceTypeRegistrationArgs(properties, providerNamespace, resourceType);
+
+        public Builder resourceType(String resourceType) {
+            return resourceType(Output.of(resourceType));
+        }
+
+        public ResourceTypeRegistrationArgs build() {
+            $.providerNamespace = Objects.requireNonNull($.providerNamespace, "expected parameter 'providerNamespace' to be non-null");
+            return $;
         }
     }
+
 }

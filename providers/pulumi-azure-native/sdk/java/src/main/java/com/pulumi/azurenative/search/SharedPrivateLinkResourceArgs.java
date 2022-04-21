@@ -6,9 +6,9 @@ package com.pulumi.azurenative.search;
 import com.pulumi.azurenative.search.inputs.SharedPrivateLinkResourcePropertiesArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class SharedPrivateLinkResourceArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="properties")
-      private final @Nullable Output<SharedPrivateLinkResourcePropertiesArgs> properties;
+    private @Nullable Output<SharedPrivateLinkResourcePropertiesArgs> properties;
 
-    public Output<SharedPrivateLinkResourcePropertiesArgs> properties() {
-        return this.properties == null ? Codegen.empty() : this.properties;
+    public Optional<Output<SharedPrivateLinkResourcePropertiesArgs>> properties() {
+        return Optional.ofNullable(this.properties);
     }
 
     /**
@@ -32,7 +32,7 @@ public final class SharedPrivateLinkResourceArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -43,7 +43,7 @@ public final class SharedPrivateLinkResourceArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="searchServiceName", required=true)
-      private final Output<String> searchServiceName;
+    private Output<String> searchServiceName;
 
     public Output<String> searchServiceName() {
         return this.searchServiceName;
@@ -54,89 +54,80 @@ public final class SharedPrivateLinkResourceArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="sharedPrivateLinkResourceName")
-      private final @Nullable Output<String> sharedPrivateLinkResourceName;
+    private @Nullable Output<String> sharedPrivateLinkResourceName;
 
-    public Output<String> sharedPrivateLinkResourceName() {
-        return this.sharedPrivateLinkResourceName == null ? Codegen.empty() : this.sharedPrivateLinkResourceName;
+    public Optional<Output<String>> sharedPrivateLinkResourceName() {
+        return Optional.ofNullable(this.sharedPrivateLinkResourceName);
     }
 
-    public SharedPrivateLinkResourceArgs(
-        @Nullable Output<SharedPrivateLinkResourcePropertiesArgs> properties,
-        Output<String> resourceGroupName,
-        Output<String> searchServiceName,
-        @Nullable Output<String> sharedPrivateLinkResourceName) {
-        this.properties = properties;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.searchServiceName = Objects.requireNonNull(searchServiceName, "expected parameter 'searchServiceName' to be non-null");
-        this.sharedPrivateLinkResourceName = sharedPrivateLinkResourceName;
-    }
+    private SharedPrivateLinkResourceArgs() {}
 
-    private SharedPrivateLinkResourceArgs() {
-        this.properties = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.searchServiceName = Codegen.empty();
-        this.sharedPrivateLinkResourceName = Codegen.empty();
+    private SharedPrivateLinkResourceArgs(SharedPrivateLinkResourceArgs $) {
+        this.properties = $.properties;
+        this.resourceGroupName = $.resourceGroupName;
+        this.searchServiceName = $.searchServiceName;
+        this.sharedPrivateLinkResourceName = $.sharedPrivateLinkResourceName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SharedPrivateLinkResourceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<SharedPrivateLinkResourcePropertiesArgs> properties;
-        private Output<String> resourceGroupName;
-        private Output<String> searchServiceName;
-        private @Nullable Output<String> sharedPrivateLinkResourceName;
+        private SharedPrivateLinkResourceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SharedPrivateLinkResourceArgs();
         }
 
         public Builder(SharedPrivateLinkResourceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.properties = defaults.properties;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.searchServiceName = defaults.searchServiceName;
-    	      this.sharedPrivateLinkResourceName = defaults.sharedPrivateLinkResourceName;
+            $ = new SharedPrivateLinkResourceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder properties(@Nullable Output<SharedPrivateLinkResourcePropertiesArgs> properties) {
-            this.properties = properties;
+            $.properties = properties;
             return this;
         }
-        public Builder properties(@Nullable SharedPrivateLinkResourcePropertiesArgs properties) {
-            this.properties = Codegen.ofNullable(properties);
-            return this;
+
+        public Builder properties(SharedPrivateLinkResourcePropertiesArgs properties) {
+            return properties(Output.of(properties));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder searchServiceName(Output<String> searchServiceName) {
-            this.searchServiceName = Objects.requireNonNull(searchServiceName);
+            $.searchServiceName = searchServiceName;
             return this;
         }
+
         public Builder searchServiceName(String searchServiceName) {
-            this.searchServiceName = Output.of(Objects.requireNonNull(searchServiceName));
-            return this;
+            return searchServiceName(Output.of(searchServiceName));
         }
+
         public Builder sharedPrivateLinkResourceName(@Nullable Output<String> sharedPrivateLinkResourceName) {
-            this.sharedPrivateLinkResourceName = sharedPrivateLinkResourceName;
+            $.sharedPrivateLinkResourceName = sharedPrivateLinkResourceName;
             return this;
         }
-        public Builder sharedPrivateLinkResourceName(@Nullable String sharedPrivateLinkResourceName) {
-            this.sharedPrivateLinkResourceName = Codegen.ofNullable(sharedPrivateLinkResourceName);
-            return this;
-        }        public SharedPrivateLinkResourceArgs build() {
-            return new SharedPrivateLinkResourceArgs(properties, resourceGroupName, searchServiceName, sharedPrivateLinkResourceName);
+
+        public Builder sharedPrivateLinkResourceName(String sharedPrivateLinkResourceName) {
+            return sharedPrivateLinkResourceName(Output.of(sharedPrivateLinkResourceName));
+        }
+
+        public SharedPrivateLinkResourceArgs build() {
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.searchServiceName = Objects.requireNonNull($.searchServiceName, "expected parameter 'searchServiceName' to be non-null");
+            return $;
         }
     }
+
 }

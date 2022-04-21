@@ -5,9 +5,9 @@ package com.pulumi.googlenative.gameservices_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class GkeClusterReferenceArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="cluster")
-      private final @Nullable Output<String> cluster;
+    private @Nullable Output<String> cluster;
 
-    public Output<String> cluster() {
-        return this.cluster == null ? Codegen.empty() : this.cluster;
+    public Optional<Output<String>> cluster() {
+        return Optional.ofNullable(this.cluster);
     }
 
-    public GkeClusterReferenceArgs(@Nullable Output<String> cluster) {
-        this.cluster = cluster;
-    }
+    private GkeClusterReferenceArgs() {}
 
-    private GkeClusterReferenceArgs() {
-        this.cluster = Codegen.empty();
+    private GkeClusterReferenceArgs(GkeClusterReferenceArgs $) {
+        this.cluster = $.cluster;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GkeClusterReferenceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> cluster;
+        private GkeClusterReferenceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GkeClusterReferenceArgs();
         }
 
         public Builder(GkeClusterReferenceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cluster = defaults.cluster;
+            $ = new GkeClusterReferenceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder cluster(@Nullable Output<String> cluster) {
-            this.cluster = cluster;
+            $.cluster = cluster;
             return this;
         }
-        public Builder cluster(@Nullable String cluster) {
-            this.cluster = Codegen.ofNullable(cluster);
-            return this;
-        }        public GkeClusterReferenceArgs build() {
-            return new GkeClusterReferenceArgs(cluster);
+
+        public Builder cluster(String cluster) {
+            return cluster(Output.of(cluster));
+        }
+
+        public GkeClusterReferenceArgs build() {
+            return $;
         }
     }
+
 }

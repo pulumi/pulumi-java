@@ -10,10 +10,10 @@ import com.pulumi.awsnative.iotanalytics.inputs.DatastoreStorageArgs;
 import com.pulumi.awsnative.iotanalytics.inputs.DatastoreTagArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,153 +22,137 @@ public final class DatastoreArgs extends com.pulumi.resources.ResourceArgs {
     public static final DatastoreArgs Empty = new DatastoreArgs();
 
     @Import(name="datastoreName")
-      private final @Nullable Output<String> datastoreName;
+    private @Nullable Output<String> datastoreName;
 
-    public Output<String> datastoreName() {
-        return this.datastoreName == null ? Codegen.empty() : this.datastoreName;
+    public Optional<Output<String>> datastoreName() {
+        return Optional.ofNullable(this.datastoreName);
     }
 
     @Import(name="datastorePartitions")
-      private final @Nullable Output<DatastorePartitionsArgs> datastorePartitions;
+    private @Nullable Output<DatastorePartitionsArgs> datastorePartitions;
 
-    public Output<DatastorePartitionsArgs> datastorePartitions() {
-        return this.datastorePartitions == null ? Codegen.empty() : this.datastorePartitions;
+    public Optional<Output<DatastorePartitionsArgs>> datastorePartitions() {
+        return Optional.ofNullable(this.datastorePartitions);
     }
 
     @Import(name="datastoreStorage")
-      private final @Nullable Output<DatastoreStorageArgs> datastoreStorage;
+    private @Nullable Output<DatastoreStorageArgs> datastoreStorage;
 
-    public Output<DatastoreStorageArgs> datastoreStorage() {
-        return this.datastoreStorage == null ? Codegen.empty() : this.datastoreStorage;
+    public Optional<Output<DatastoreStorageArgs>> datastoreStorage() {
+        return Optional.ofNullable(this.datastoreStorage);
     }
 
     @Import(name="fileFormatConfiguration")
-      private final @Nullable Output<DatastoreFileFormatConfigurationArgs> fileFormatConfiguration;
+    private @Nullable Output<DatastoreFileFormatConfigurationArgs> fileFormatConfiguration;
 
-    public Output<DatastoreFileFormatConfigurationArgs> fileFormatConfiguration() {
-        return this.fileFormatConfiguration == null ? Codegen.empty() : this.fileFormatConfiguration;
+    public Optional<Output<DatastoreFileFormatConfigurationArgs>> fileFormatConfiguration() {
+        return Optional.ofNullable(this.fileFormatConfiguration);
     }
 
     @Import(name="retentionPeriod")
-      private final @Nullable Output<DatastoreRetentionPeriodArgs> retentionPeriod;
+    private @Nullable Output<DatastoreRetentionPeriodArgs> retentionPeriod;
 
-    public Output<DatastoreRetentionPeriodArgs> retentionPeriod() {
-        return this.retentionPeriod == null ? Codegen.empty() : this.retentionPeriod;
+    public Optional<Output<DatastoreRetentionPeriodArgs>> retentionPeriod() {
+        return Optional.ofNullable(this.retentionPeriod);
     }
 
     @Import(name="tags")
-      private final @Nullable Output<List<DatastoreTagArgs>> tags;
+    private @Nullable Output<List<DatastoreTagArgs>> tags;
 
-    public Output<List<DatastoreTagArgs>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<List<DatastoreTagArgs>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public DatastoreArgs(
-        @Nullable Output<String> datastoreName,
-        @Nullable Output<DatastorePartitionsArgs> datastorePartitions,
-        @Nullable Output<DatastoreStorageArgs> datastoreStorage,
-        @Nullable Output<DatastoreFileFormatConfigurationArgs> fileFormatConfiguration,
-        @Nullable Output<DatastoreRetentionPeriodArgs> retentionPeriod,
-        @Nullable Output<List<DatastoreTagArgs>> tags) {
-        this.datastoreName = datastoreName;
-        this.datastorePartitions = datastorePartitions;
-        this.datastoreStorage = datastoreStorage;
-        this.fileFormatConfiguration = fileFormatConfiguration;
-        this.retentionPeriod = retentionPeriod;
-        this.tags = tags;
-    }
+    private DatastoreArgs() {}
 
-    private DatastoreArgs() {
-        this.datastoreName = Codegen.empty();
-        this.datastorePartitions = Codegen.empty();
-        this.datastoreStorage = Codegen.empty();
-        this.fileFormatConfiguration = Codegen.empty();
-        this.retentionPeriod = Codegen.empty();
-        this.tags = Codegen.empty();
+    private DatastoreArgs(DatastoreArgs $) {
+        this.datastoreName = $.datastoreName;
+        this.datastorePartitions = $.datastorePartitions;
+        this.datastoreStorage = $.datastoreStorage;
+        this.fileFormatConfiguration = $.fileFormatConfiguration;
+        this.retentionPeriod = $.retentionPeriod;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DatastoreArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> datastoreName;
-        private @Nullable Output<DatastorePartitionsArgs> datastorePartitions;
-        private @Nullable Output<DatastoreStorageArgs> datastoreStorage;
-        private @Nullable Output<DatastoreFileFormatConfigurationArgs> fileFormatConfiguration;
-        private @Nullable Output<DatastoreRetentionPeriodArgs> retentionPeriod;
-        private @Nullable Output<List<DatastoreTagArgs>> tags;
+        private DatastoreArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DatastoreArgs();
         }
 
         public Builder(DatastoreArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.datastoreName = defaults.datastoreName;
-    	      this.datastorePartitions = defaults.datastorePartitions;
-    	      this.datastoreStorage = defaults.datastoreStorage;
-    	      this.fileFormatConfiguration = defaults.fileFormatConfiguration;
-    	      this.retentionPeriod = defaults.retentionPeriod;
-    	      this.tags = defaults.tags;
+            $ = new DatastoreArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder datastoreName(@Nullable Output<String> datastoreName) {
-            this.datastoreName = datastoreName;
+            $.datastoreName = datastoreName;
             return this;
         }
-        public Builder datastoreName(@Nullable String datastoreName) {
-            this.datastoreName = Codegen.ofNullable(datastoreName);
-            return this;
+
+        public Builder datastoreName(String datastoreName) {
+            return datastoreName(Output.of(datastoreName));
         }
+
         public Builder datastorePartitions(@Nullable Output<DatastorePartitionsArgs> datastorePartitions) {
-            this.datastorePartitions = datastorePartitions;
+            $.datastorePartitions = datastorePartitions;
             return this;
         }
-        public Builder datastorePartitions(@Nullable DatastorePartitionsArgs datastorePartitions) {
-            this.datastorePartitions = Codegen.ofNullable(datastorePartitions);
-            return this;
+
+        public Builder datastorePartitions(DatastorePartitionsArgs datastorePartitions) {
+            return datastorePartitions(Output.of(datastorePartitions));
         }
+
         public Builder datastoreStorage(@Nullable Output<DatastoreStorageArgs> datastoreStorage) {
-            this.datastoreStorage = datastoreStorage;
+            $.datastoreStorage = datastoreStorage;
             return this;
         }
-        public Builder datastoreStorage(@Nullable DatastoreStorageArgs datastoreStorage) {
-            this.datastoreStorage = Codegen.ofNullable(datastoreStorage);
-            return this;
+
+        public Builder datastoreStorage(DatastoreStorageArgs datastoreStorage) {
+            return datastoreStorage(Output.of(datastoreStorage));
         }
+
         public Builder fileFormatConfiguration(@Nullable Output<DatastoreFileFormatConfigurationArgs> fileFormatConfiguration) {
-            this.fileFormatConfiguration = fileFormatConfiguration;
+            $.fileFormatConfiguration = fileFormatConfiguration;
             return this;
         }
-        public Builder fileFormatConfiguration(@Nullable DatastoreFileFormatConfigurationArgs fileFormatConfiguration) {
-            this.fileFormatConfiguration = Codegen.ofNullable(fileFormatConfiguration);
-            return this;
+
+        public Builder fileFormatConfiguration(DatastoreFileFormatConfigurationArgs fileFormatConfiguration) {
+            return fileFormatConfiguration(Output.of(fileFormatConfiguration));
         }
+
         public Builder retentionPeriod(@Nullable Output<DatastoreRetentionPeriodArgs> retentionPeriod) {
-            this.retentionPeriod = retentionPeriod;
+            $.retentionPeriod = retentionPeriod;
             return this;
         }
-        public Builder retentionPeriod(@Nullable DatastoreRetentionPeriodArgs retentionPeriod) {
-            this.retentionPeriod = Codegen.ofNullable(retentionPeriod);
-            return this;
+
+        public Builder retentionPeriod(DatastoreRetentionPeriodArgs retentionPeriod) {
+            return retentionPeriod(Output.of(retentionPeriod));
         }
+
         public Builder tags(@Nullable Output<List<DatastoreTagArgs>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable List<DatastoreTagArgs> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(List<DatastoreTagArgs> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tags(DatastoreTagArgs... tags) {
             return tags(List.of(tags));
-        }        public DatastoreArgs build() {
-            return new DatastoreArgs(datastoreName, datastorePartitions, datastoreStorage, fileFormatConfiguration, retentionPeriod, tags);
+        }
+
+        public DatastoreArgs build() {
+            return $;
         }
     }
+
 }

@@ -6,9 +6,9 @@ package com.pulumi.azurenative.containerservice.inputs;
 import com.pulumi.azurenative.containerservice.inputs.OpenShiftManagedClusterIdentityProviderArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,52 +25,52 @@ public final class OpenShiftManagedClusterAuthProfileArgs extends com.pulumi.res
      * 
      */
     @Import(name="identityProviders")
-      private final @Nullable Output<List<OpenShiftManagedClusterIdentityProviderArgs>> identityProviders;
+    private @Nullable Output<List<OpenShiftManagedClusterIdentityProviderArgs>> identityProviders;
 
-    public Output<List<OpenShiftManagedClusterIdentityProviderArgs>> identityProviders() {
-        return this.identityProviders == null ? Codegen.empty() : this.identityProviders;
+    public Optional<Output<List<OpenShiftManagedClusterIdentityProviderArgs>>> identityProviders() {
+        return Optional.ofNullable(this.identityProviders);
     }
 
-    public OpenShiftManagedClusterAuthProfileArgs(@Nullable Output<List<OpenShiftManagedClusterIdentityProviderArgs>> identityProviders) {
-        this.identityProviders = identityProviders;
-    }
+    private OpenShiftManagedClusterAuthProfileArgs() {}
 
-    private OpenShiftManagedClusterAuthProfileArgs() {
-        this.identityProviders = Codegen.empty();
+    private OpenShiftManagedClusterAuthProfileArgs(OpenShiftManagedClusterAuthProfileArgs $) {
+        this.identityProviders = $.identityProviders;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(OpenShiftManagedClusterAuthProfileArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<OpenShiftManagedClusterIdentityProviderArgs>> identityProviders;
+        private OpenShiftManagedClusterAuthProfileArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new OpenShiftManagedClusterAuthProfileArgs();
         }
 
         public Builder(OpenShiftManagedClusterAuthProfileArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.identityProviders = defaults.identityProviders;
+            $ = new OpenShiftManagedClusterAuthProfileArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder identityProviders(@Nullable Output<List<OpenShiftManagedClusterIdentityProviderArgs>> identityProviders) {
-            this.identityProviders = identityProviders;
+            $.identityProviders = identityProviders;
             return this;
         }
-        public Builder identityProviders(@Nullable List<OpenShiftManagedClusterIdentityProviderArgs> identityProviders) {
-            this.identityProviders = Codegen.ofNullable(identityProviders);
-            return this;
+
+        public Builder identityProviders(List<OpenShiftManagedClusterIdentityProviderArgs> identityProviders) {
+            return identityProviders(Output.of(identityProviders));
         }
+
         public Builder identityProviders(OpenShiftManagedClusterIdentityProviderArgs... identityProviders) {
             return identityProviders(List.of(identityProviders));
-        }        public OpenShiftManagedClusterAuthProfileArgs build() {
-            return new OpenShiftManagedClusterAuthProfileArgs(identityProviders);
+        }
+
+        public OpenShiftManagedClusterAuthProfileArgs build() {
+            return $;
         }
     }
+
 }

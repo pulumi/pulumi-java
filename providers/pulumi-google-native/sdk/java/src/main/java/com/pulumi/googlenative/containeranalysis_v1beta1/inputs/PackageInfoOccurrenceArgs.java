@@ -5,10 +5,10 @@ package com.pulumi.googlenative.containeranalysis_v1beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.containeranalysis_v1beta1.inputs.LicenseArgs;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class PackageInfoOccurrenceArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="comment")
-      private final @Nullable Output<String> comment;
+    private @Nullable Output<String> comment;
 
-    public Output<String> comment() {
-        return this.comment == null ? Codegen.empty() : this.comment;
+    public Optional<Output<String>> comment() {
+        return Optional.ofNullable(this.comment);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class PackageInfoOccurrenceArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="filename")
-      private final @Nullable Output<String> filename;
+    private @Nullable Output<String> filename;
 
-    public Output<String> filename() {
-        return this.filename == null ? Codegen.empty() : this.filename;
+    public Optional<Output<String>> filename() {
+        return Optional.ofNullable(this.filename);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class PackageInfoOccurrenceArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="id")
-      private final @Nullable Output<String> id;
+    private @Nullable Output<String> id;
 
-    public Output<String> id() {
-        return this.id == null ? Codegen.empty() : this.id;
+    public Optional<Output<String>> id() {
+        return Optional.ofNullable(this.id);
     }
 
     /**
@@ -58,10 +58,10 @@ public final class PackageInfoOccurrenceArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="licenseConcluded")
-      private final @Nullable Output<LicenseArgs> licenseConcluded;
+    private @Nullable Output<LicenseArgs> licenseConcluded;
 
-    public Output<LicenseArgs> licenseConcluded() {
-        return this.licenseConcluded == null ? Codegen.empty() : this.licenseConcluded;
+    public Optional<Output<LicenseArgs>> licenseConcluded() {
+        return Optional.ofNullable(this.licenseConcluded);
     }
 
     /**
@@ -69,102 +69,88 @@ public final class PackageInfoOccurrenceArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="sourceInfo")
-      private final @Nullable Output<String> sourceInfo;
+    private @Nullable Output<String> sourceInfo;
 
-    public Output<String> sourceInfo() {
-        return this.sourceInfo == null ? Codegen.empty() : this.sourceInfo;
+    public Optional<Output<String>> sourceInfo() {
+        return Optional.ofNullable(this.sourceInfo);
     }
 
-    public PackageInfoOccurrenceArgs(
-        @Nullable Output<String> comment,
-        @Nullable Output<String> filename,
-        @Nullable Output<String> id,
-        @Nullable Output<LicenseArgs> licenseConcluded,
-        @Nullable Output<String> sourceInfo) {
-        this.comment = comment;
-        this.filename = filename;
-        this.id = id;
-        this.licenseConcluded = licenseConcluded;
-        this.sourceInfo = sourceInfo;
-    }
+    private PackageInfoOccurrenceArgs() {}
 
-    private PackageInfoOccurrenceArgs() {
-        this.comment = Codegen.empty();
-        this.filename = Codegen.empty();
-        this.id = Codegen.empty();
-        this.licenseConcluded = Codegen.empty();
-        this.sourceInfo = Codegen.empty();
+    private PackageInfoOccurrenceArgs(PackageInfoOccurrenceArgs $) {
+        this.comment = $.comment;
+        this.filename = $.filename;
+        this.id = $.id;
+        this.licenseConcluded = $.licenseConcluded;
+        this.sourceInfo = $.sourceInfo;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PackageInfoOccurrenceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> comment;
-        private @Nullable Output<String> filename;
-        private @Nullable Output<String> id;
-        private @Nullable Output<LicenseArgs> licenseConcluded;
-        private @Nullable Output<String> sourceInfo;
+        private PackageInfoOccurrenceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PackageInfoOccurrenceArgs();
         }
 
         public Builder(PackageInfoOccurrenceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.comment = defaults.comment;
-    	      this.filename = defaults.filename;
-    	      this.id = defaults.id;
-    	      this.licenseConcluded = defaults.licenseConcluded;
-    	      this.sourceInfo = defaults.sourceInfo;
+            $ = new PackageInfoOccurrenceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder comment(@Nullable Output<String> comment) {
-            this.comment = comment;
+            $.comment = comment;
             return this;
         }
-        public Builder comment(@Nullable String comment) {
-            this.comment = Codegen.ofNullable(comment);
-            return this;
+
+        public Builder comment(String comment) {
+            return comment(Output.of(comment));
         }
+
         public Builder filename(@Nullable Output<String> filename) {
-            this.filename = filename;
+            $.filename = filename;
             return this;
         }
-        public Builder filename(@Nullable String filename) {
-            this.filename = Codegen.ofNullable(filename);
-            return this;
+
+        public Builder filename(String filename) {
+            return filename(Output.of(filename));
         }
+
         public Builder id(@Nullable Output<String> id) {
-            this.id = id;
+            $.id = id;
             return this;
         }
-        public Builder id(@Nullable String id) {
-            this.id = Codegen.ofNullable(id);
-            return this;
+
+        public Builder id(String id) {
+            return id(Output.of(id));
         }
+
         public Builder licenseConcluded(@Nullable Output<LicenseArgs> licenseConcluded) {
-            this.licenseConcluded = licenseConcluded;
+            $.licenseConcluded = licenseConcluded;
             return this;
         }
-        public Builder licenseConcluded(@Nullable LicenseArgs licenseConcluded) {
-            this.licenseConcluded = Codegen.ofNullable(licenseConcluded);
-            return this;
+
+        public Builder licenseConcluded(LicenseArgs licenseConcluded) {
+            return licenseConcluded(Output.of(licenseConcluded));
         }
+
         public Builder sourceInfo(@Nullable Output<String> sourceInfo) {
-            this.sourceInfo = sourceInfo;
+            $.sourceInfo = sourceInfo;
             return this;
         }
-        public Builder sourceInfo(@Nullable String sourceInfo) {
-            this.sourceInfo = Codegen.ofNullable(sourceInfo);
-            return this;
-        }        public PackageInfoOccurrenceArgs build() {
-            return new PackageInfoOccurrenceArgs(comment, filename, id, licenseConcluded, sourceInfo);
+
+        public Builder sourceInfo(String sourceInfo) {
+            return sourceInfo(Output.of(sourceInfo));
+        }
+
+        public PackageInfoOccurrenceArgs build() {
+            return $;
         }
     }
+
 }

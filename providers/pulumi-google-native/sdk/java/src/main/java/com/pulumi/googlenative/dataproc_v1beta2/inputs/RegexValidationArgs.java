@@ -5,7 +5,6 @@ package com.pulumi.googlenative.dataproc_v1beta2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,52 +23,53 @@ public final class RegexValidationArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="regexes", required=true)
-      private final Output<List<String>> regexes;
+    private Output<List<String>> regexes;
 
     public Output<List<String>> regexes() {
         return this.regexes;
     }
 
-    public RegexValidationArgs(Output<List<String>> regexes) {
-        this.regexes = Objects.requireNonNull(regexes, "expected parameter 'regexes' to be non-null");
-    }
+    private RegexValidationArgs() {}
 
-    private RegexValidationArgs() {
-        this.regexes = Codegen.empty();
+    private RegexValidationArgs(RegexValidationArgs $) {
+        this.regexes = $.regexes;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RegexValidationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<List<String>> regexes;
+        private RegexValidationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RegexValidationArgs();
         }
 
         public Builder(RegexValidationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.regexes = defaults.regexes;
+            $ = new RegexValidationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder regexes(Output<List<String>> regexes) {
-            this.regexes = Objects.requireNonNull(regexes);
+            $.regexes = regexes;
             return this;
         }
+
         public Builder regexes(List<String> regexes) {
-            this.regexes = Output.of(Objects.requireNonNull(regexes));
-            return this;
+            return regexes(Output.of(regexes));
         }
+
         public Builder regexes(String... regexes) {
             return regexes(List.of(regexes));
-        }        public RegexValidationArgs build() {
-            return new RegexValidationArgs(regexes);
+        }
+
+        public RegexValidationArgs build() {
+            $.regexes = Objects.requireNonNull($.regexes, "expected parameter 'regexes' to be non-null");
+            return $;
         }
     }
+
 }

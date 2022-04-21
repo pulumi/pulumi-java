@@ -5,10 +5,10 @@ package com.pulumi.gcp.monitoring.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -34,10 +34,10 @@ public final class AlertPolicyConditionConditionThresholdDenominatorAggregationG
      * 
      */
     @Import(name="alignmentPeriod")
-      private final @Nullable Output<String> alignmentPeriod;
+    private @Nullable Output<String> alignmentPeriod;
 
-    public Output<String> alignmentPeriod() {
-        return this.alignmentPeriod == null ? Codegen.empty() : this.alignmentPeriod;
+    public Optional<Output<String>> alignmentPeriod() {
+        return Optional.ofNullable(this.alignmentPeriod);
     }
 
     /**
@@ -62,10 +62,10 @@ public final class AlertPolicyConditionConditionThresholdDenominatorAggregationG
      * 
      */
     @Import(name="crossSeriesReducer")
-      private final @Nullable Output<String> crossSeriesReducer;
+    private @Nullable Output<String> crossSeriesReducer;
 
-    public Output<String> crossSeriesReducer() {
-        return this.crossSeriesReducer == null ? Codegen.empty() : this.crossSeriesReducer;
+    public Optional<Output<String>> crossSeriesReducer() {
+        return Optional.ofNullable(this.crossSeriesReducer);
     }
 
     /**
@@ -97,10 +97,10 @@ public final class AlertPolicyConditionConditionThresholdDenominatorAggregationG
      * 
      */
     @Import(name="groupByFields")
-      private final @Nullable Output<List<String>> groupByFields;
+    private @Nullable Output<List<String>> groupByFields;
 
-    public Output<List<String>> groupByFields() {
-        return this.groupByFields == null ? Codegen.empty() : this.groupByFields;
+    public Optional<Output<List<String>>> groupByFields() {
+        return Optional.ofNullable(this.groupByFields);
     }
 
     /**
@@ -125,92 +125,82 @@ public final class AlertPolicyConditionConditionThresholdDenominatorAggregationG
      * 
      */
     @Import(name="perSeriesAligner")
-      private final @Nullable Output<String> perSeriesAligner;
+    private @Nullable Output<String> perSeriesAligner;
 
-    public Output<String> perSeriesAligner() {
-        return this.perSeriesAligner == null ? Codegen.empty() : this.perSeriesAligner;
+    public Optional<Output<String>> perSeriesAligner() {
+        return Optional.ofNullable(this.perSeriesAligner);
     }
 
-    public AlertPolicyConditionConditionThresholdDenominatorAggregationGetArgs(
-        @Nullable Output<String> alignmentPeriod,
-        @Nullable Output<String> crossSeriesReducer,
-        @Nullable Output<List<String>> groupByFields,
-        @Nullable Output<String> perSeriesAligner) {
-        this.alignmentPeriod = alignmentPeriod;
-        this.crossSeriesReducer = crossSeriesReducer;
-        this.groupByFields = groupByFields;
-        this.perSeriesAligner = perSeriesAligner;
-    }
+    private AlertPolicyConditionConditionThresholdDenominatorAggregationGetArgs() {}
 
-    private AlertPolicyConditionConditionThresholdDenominatorAggregationGetArgs() {
-        this.alignmentPeriod = Codegen.empty();
-        this.crossSeriesReducer = Codegen.empty();
-        this.groupByFields = Codegen.empty();
-        this.perSeriesAligner = Codegen.empty();
+    private AlertPolicyConditionConditionThresholdDenominatorAggregationGetArgs(AlertPolicyConditionConditionThresholdDenominatorAggregationGetArgs $) {
+        this.alignmentPeriod = $.alignmentPeriod;
+        this.crossSeriesReducer = $.crossSeriesReducer;
+        this.groupByFields = $.groupByFields;
+        this.perSeriesAligner = $.perSeriesAligner;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AlertPolicyConditionConditionThresholdDenominatorAggregationGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> alignmentPeriod;
-        private @Nullable Output<String> crossSeriesReducer;
-        private @Nullable Output<List<String>> groupByFields;
-        private @Nullable Output<String> perSeriesAligner;
+        private AlertPolicyConditionConditionThresholdDenominatorAggregationGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AlertPolicyConditionConditionThresholdDenominatorAggregationGetArgs();
         }
 
         public Builder(AlertPolicyConditionConditionThresholdDenominatorAggregationGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.alignmentPeriod = defaults.alignmentPeriod;
-    	      this.crossSeriesReducer = defaults.crossSeriesReducer;
-    	      this.groupByFields = defaults.groupByFields;
-    	      this.perSeriesAligner = defaults.perSeriesAligner;
+            $ = new AlertPolicyConditionConditionThresholdDenominatorAggregationGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder alignmentPeriod(@Nullable Output<String> alignmentPeriod) {
-            this.alignmentPeriod = alignmentPeriod;
+            $.alignmentPeriod = alignmentPeriod;
             return this;
         }
-        public Builder alignmentPeriod(@Nullable String alignmentPeriod) {
-            this.alignmentPeriod = Codegen.ofNullable(alignmentPeriod);
-            return this;
+
+        public Builder alignmentPeriod(String alignmentPeriod) {
+            return alignmentPeriod(Output.of(alignmentPeriod));
         }
+
         public Builder crossSeriesReducer(@Nullable Output<String> crossSeriesReducer) {
-            this.crossSeriesReducer = crossSeriesReducer;
+            $.crossSeriesReducer = crossSeriesReducer;
             return this;
         }
-        public Builder crossSeriesReducer(@Nullable String crossSeriesReducer) {
-            this.crossSeriesReducer = Codegen.ofNullable(crossSeriesReducer);
-            return this;
+
+        public Builder crossSeriesReducer(String crossSeriesReducer) {
+            return crossSeriesReducer(Output.of(crossSeriesReducer));
         }
+
         public Builder groupByFields(@Nullable Output<List<String>> groupByFields) {
-            this.groupByFields = groupByFields;
+            $.groupByFields = groupByFields;
             return this;
         }
-        public Builder groupByFields(@Nullable List<String> groupByFields) {
-            this.groupByFields = Codegen.ofNullable(groupByFields);
-            return this;
+
+        public Builder groupByFields(List<String> groupByFields) {
+            return groupByFields(Output.of(groupByFields));
         }
+
         public Builder groupByFields(String... groupByFields) {
             return groupByFields(List.of(groupByFields));
         }
+
         public Builder perSeriesAligner(@Nullable Output<String> perSeriesAligner) {
-            this.perSeriesAligner = perSeriesAligner;
+            $.perSeriesAligner = perSeriesAligner;
             return this;
         }
-        public Builder perSeriesAligner(@Nullable String perSeriesAligner) {
-            this.perSeriesAligner = Codegen.ofNullable(perSeriesAligner);
-            return this;
-        }        public AlertPolicyConditionConditionThresholdDenominatorAggregationGetArgs build() {
-            return new AlertPolicyConditionConditionThresholdDenominatorAggregationGetArgs(alignmentPeriod, crossSeriesReducer, groupByFields, perSeriesAligner);
+
+        public Builder perSeriesAligner(String perSeriesAligner) {
+            return perSeriesAligner(Output.of(perSeriesAligner));
+        }
+
+        public AlertPolicyConditionConditionThresholdDenominatorAggregationGetArgs build() {
+            return $;
         }
     }
+
 }

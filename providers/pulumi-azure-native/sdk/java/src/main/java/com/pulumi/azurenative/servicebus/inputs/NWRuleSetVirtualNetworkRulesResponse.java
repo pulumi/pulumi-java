@@ -24,10 +24,10 @@ public final class NWRuleSetVirtualNetworkRulesResponse extends com.pulumi.resou
      * 
      */
     @Import(name="ignoreMissingVnetServiceEndpoint")
-      private final @Nullable Boolean ignoreMissingVnetServiceEndpoint;
+    private @Nullable Boolean ignoreMissingVnetServiceEndpoint;
 
     public Optional<Boolean> ignoreMissingVnetServiceEndpoint() {
-        return this.ignoreMissingVnetServiceEndpoint == null ? Optional.empty() : Optional.ofNullable(this.ignoreMissingVnetServiceEndpoint);
+        return Optional.ofNullable(this.ignoreMissingVnetServiceEndpoint);
     }
 
     /**
@@ -35,55 +35,50 @@ public final class NWRuleSetVirtualNetworkRulesResponse extends com.pulumi.resou
      * 
      */
     @Import(name="subnet")
-      private final @Nullable SubnetResponse subnet;
+    private @Nullable SubnetResponse subnet;
 
     public Optional<SubnetResponse> subnet() {
-        return this.subnet == null ? Optional.empty() : Optional.ofNullable(this.subnet);
+        return Optional.ofNullable(this.subnet);
     }
 
-    public NWRuleSetVirtualNetworkRulesResponse(
-        @Nullable Boolean ignoreMissingVnetServiceEndpoint,
-        @Nullable SubnetResponse subnet) {
-        this.ignoreMissingVnetServiceEndpoint = ignoreMissingVnetServiceEndpoint;
-        this.subnet = subnet;
-    }
+    private NWRuleSetVirtualNetworkRulesResponse() {}
 
-    private NWRuleSetVirtualNetworkRulesResponse() {
-        this.ignoreMissingVnetServiceEndpoint = null;
-        this.subnet = null;
+    private NWRuleSetVirtualNetworkRulesResponse(NWRuleSetVirtualNetworkRulesResponse $) {
+        this.ignoreMissingVnetServiceEndpoint = $.ignoreMissingVnetServiceEndpoint;
+        this.subnet = $.subnet;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NWRuleSetVirtualNetworkRulesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Boolean ignoreMissingVnetServiceEndpoint;
-        private @Nullable SubnetResponse subnet;
+        private NWRuleSetVirtualNetworkRulesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new NWRuleSetVirtualNetworkRulesResponse();
         }
 
         public Builder(NWRuleSetVirtualNetworkRulesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.ignoreMissingVnetServiceEndpoint = defaults.ignoreMissingVnetServiceEndpoint;
-    	      this.subnet = defaults.subnet;
+            $ = new NWRuleSetVirtualNetworkRulesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder ignoreMissingVnetServiceEndpoint(@Nullable Boolean ignoreMissingVnetServiceEndpoint) {
-            this.ignoreMissingVnetServiceEndpoint = ignoreMissingVnetServiceEndpoint;
+            $.ignoreMissingVnetServiceEndpoint = ignoreMissingVnetServiceEndpoint;
             return this;
         }
+
         public Builder subnet(@Nullable SubnetResponse subnet) {
-            this.subnet = subnet;
+            $.subnet = subnet;
             return this;
-        }        public NWRuleSetVirtualNetworkRulesResponse build() {
-            return new NWRuleSetVirtualNetworkRulesResponse(ignoreMissingVnetServiceEndpoint, subnet);
+        }
+
+        public NWRuleSetVirtualNetworkRulesResponse build() {
+            return $;
         }
     }
+
 }

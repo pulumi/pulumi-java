@@ -17,7 +17,7 @@ public final class GetSyncMemberArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="databaseName", required=true)
-      private final String databaseName;
+    private String databaseName;
 
     public String databaseName() {
         return this.databaseName;
@@ -28,7 +28,7 @@ public final class GetSyncMemberArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -39,7 +39,7 @@ public final class GetSyncMemberArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="serverName", required=true)
-      private final String serverName;
+    private String serverName;
 
     public String serverName() {
         return this.serverName;
@@ -50,7 +50,7 @@ public final class GetSyncMemberArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="syncGroupName", required=true)
-      private final String syncGroupName;
+    private String syncGroupName;
 
     public String syncGroupName() {
         return this.syncGroupName;
@@ -61,82 +61,73 @@ public final class GetSyncMemberArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="syncMemberName", required=true)
-      private final String syncMemberName;
+    private String syncMemberName;
 
     public String syncMemberName() {
         return this.syncMemberName;
     }
 
-    public GetSyncMemberArgs(
-        String databaseName,
-        String resourceGroupName,
-        String serverName,
-        String syncGroupName,
-        String syncMemberName) {
-        this.databaseName = Objects.requireNonNull(databaseName, "expected parameter 'databaseName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.serverName = Objects.requireNonNull(serverName, "expected parameter 'serverName' to be non-null");
-        this.syncGroupName = Objects.requireNonNull(syncGroupName, "expected parameter 'syncGroupName' to be non-null");
-        this.syncMemberName = Objects.requireNonNull(syncMemberName, "expected parameter 'syncMemberName' to be non-null");
-    }
+    private GetSyncMemberArgs() {}
 
-    private GetSyncMemberArgs() {
-        this.databaseName = null;
-        this.resourceGroupName = null;
-        this.serverName = null;
-        this.syncGroupName = null;
-        this.syncMemberName = null;
+    private GetSyncMemberArgs(GetSyncMemberArgs $) {
+        this.databaseName = $.databaseName;
+        this.resourceGroupName = $.resourceGroupName;
+        this.serverName = $.serverName;
+        this.syncGroupName = $.syncGroupName;
+        this.syncMemberName = $.syncMemberName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetSyncMemberArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String databaseName;
-        private String resourceGroupName;
-        private String serverName;
-        private String syncGroupName;
-        private String syncMemberName;
+        private GetSyncMemberArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetSyncMemberArgs();
         }
 
         public Builder(GetSyncMemberArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.databaseName = defaults.databaseName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.serverName = defaults.serverName;
-    	      this.syncGroupName = defaults.syncGroupName;
-    	      this.syncMemberName = defaults.syncMemberName;
+            $ = new GetSyncMemberArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder databaseName(String databaseName) {
-            this.databaseName = Objects.requireNonNull(databaseName);
+            $.databaseName = databaseName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder serverName(String serverName) {
-            this.serverName = Objects.requireNonNull(serverName);
+            $.serverName = serverName;
             return this;
         }
+
         public Builder syncGroupName(String syncGroupName) {
-            this.syncGroupName = Objects.requireNonNull(syncGroupName);
+            $.syncGroupName = syncGroupName;
             return this;
         }
+
         public Builder syncMemberName(String syncMemberName) {
-            this.syncMemberName = Objects.requireNonNull(syncMemberName);
+            $.syncMemberName = syncMemberName;
             return this;
-        }        public GetSyncMemberArgs build() {
-            return new GetSyncMemberArgs(databaseName, resourceGroupName, serverName, syncGroupName, syncMemberName);
+        }
+
+        public GetSyncMemberArgs build() {
+            $.databaseName = Objects.requireNonNull($.databaseName, "expected parameter 'databaseName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.serverName = Objects.requireNonNull($.serverName, "expected parameter 'serverName' to be non-null");
+            $.syncGroupName = Objects.requireNonNull($.syncGroupName, "expected parameter 'syncGroupName' to be non-null");
+            $.syncMemberName = Objects.requireNonNull($.syncMemberName, "expected parameter 'syncMemberName' to be non-null");
+            return $;
         }
     }
+
 }

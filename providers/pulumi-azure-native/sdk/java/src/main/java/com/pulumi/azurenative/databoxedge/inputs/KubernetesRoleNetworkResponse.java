@@ -22,7 +22,7 @@ public final class KubernetesRoleNetworkResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="cniConfig", required=true)
-      private final CniConfigResponse cniConfig;
+    private CniConfigResponse cniConfig;
 
     public CniConfigResponse cniConfig() {
         return this.cniConfig;
@@ -33,55 +33,52 @@ public final class KubernetesRoleNetworkResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="loadBalancerConfig", required=true)
-      private final LoadBalancerConfigResponse loadBalancerConfig;
+    private LoadBalancerConfigResponse loadBalancerConfig;
 
     public LoadBalancerConfigResponse loadBalancerConfig() {
         return this.loadBalancerConfig;
     }
 
-    public KubernetesRoleNetworkResponse(
-        CniConfigResponse cniConfig,
-        LoadBalancerConfigResponse loadBalancerConfig) {
-        this.cniConfig = Objects.requireNonNull(cniConfig, "expected parameter 'cniConfig' to be non-null");
-        this.loadBalancerConfig = Objects.requireNonNull(loadBalancerConfig, "expected parameter 'loadBalancerConfig' to be non-null");
-    }
+    private KubernetesRoleNetworkResponse() {}
 
-    private KubernetesRoleNetworkResponse() {
-        this.cniConfig = null;
-        this.loadBalancerConfig = null;
+    private KubernetesRoleNetworkResponse(KubernetesRoleNetworkResponse $) {
+        this.cniConfig = $.cniConfig;
+        this.loadBalancerConfig = $.loadBalancerConfig;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(KubernetesRoleNetworkResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private CniConfigResponse cniConfig;
-        private LoadBalancerConfigResponse loadBalancerConfig;
+        private KubernetesRoleNetworkResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new KubernetesRoleNetworkResponse();
         }
 
         public Builder(KubernetesRoleNetworkResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cniConfig = defaults.cniConfig;
-    	      this.loadBalancerConfig = defaults.loadBalancerConfig;
+            $ = new KubernetesRoleNetworkResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder cniConfig(CniConfigResponse cniConfig) {
-            this.cniConfig = Objects.requireNonNull(cniConfig);
+            $.cniConfig = cniConfig;
             return this;
         }
+
         public Builder loadBalancerConfig(LoadBalancerConfigResponse loadBalancerConfig) {
-            this.loadBalancerConfig = Objects.requireNonNull(loadBalancerConfig);
+            $.loadBalancerConfig = loadBalancerConfig;
             return this;
-        }        public KubernetesRoleNetworkResponse build() {
-            return new KubernetesRoleNetworkResponse(cniConfig, loadBalancerConfig);
+        }
+
+        public KubernetesRoleNetworkResponse build() {
+            $.cniConfig = Objects.requireNonNull($.cniConfig, "expected parameter 'cniConfig' to be non-null");
+            $.loadBalancerConfig = Objects.requireNonNull($.loadBalancerConfig, "expected parameter 'loadBalancerConfig' to be non-null");
+            return $;
         }
     }
+
 }

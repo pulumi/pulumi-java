@@ -23,7 +23,7 @@ public final class CopyProgressResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="accountId", required=true)
-      private final String accountId;
+    private String accountId;
 
     public String accountId() {
         return this.accountId;
@@ -34,7 +34,7 @@ public final class CopyProgressResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="bytesProcessed", required=true)
-      private final Double bytesProcessed;
+    private Double bytesProcessed;
 
     public Double bytesProcessed() {
         return this.bytesProcessed;
@@ -45,7 +45,7 @@ public final class CopyProgressResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="dataAccountType", required=true)
-      private final String dataAccountType;
+    private String dataAccountType;
 
     public String dataAccountType() {
         return this.dataAccountType;
@@ -56,7 +56,7 @@ public final class CopyProgressResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="directoriesErroredOut", required=true)
-      private final Double directoriesErroredOut;
+    private Double directoriesErroredOut;
 
     public Double directoriesErroredOut() {
         return this.directoriesErroredOut;
@@ -67,7 +67,7 @@ public final class CopyProgressResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="filesErroredOut", required=true)
-      private final Double filesErroredOut;
+    private Double filesErroredOut;
 
     public Double filesErroredOut() {
         return this.filesErroredOut;
@@ -78,7 +78,7 @@ public final class CopyProgressResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="filesProcessed", required=true)
-      private final Double filesProcessed;
+    private Double filesProcessed;
 
     public Double filesProcessed() {
         return this.filesProcessed;
@@ -89,7 +89,7 @@ public final class CopyProgressResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="invalidDirectoriesProcessed", required=true)
-      private final Double invalidDirectoriesProcessed;
+    private Double invalidDirectoriesProcessed;
 
     public Double invalidDirectoriesProcessed() {
         return this.invalidDirectoriesProcessed;
@@ -100,7 +100,7 @@ public final class CopyProgressResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="invalidFileBytesUploaded", required=true)
-      private final Double invalidFileBytesUploaded;
+    private Double invalidFileBytesUploaded;
 
     public Double invalidFileBytesUploaded() {
         return this.invalidFileBytesUploaded;
@@ -111,7 +111,7 @@ public final class CopyProgressResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="invalidFilesProcessed", required=true)
-      private final Double invalidFilesProcessed;
+    private Double invalidFilesProcessed;
 
     public Double invalidFilesProcessed() {
         return this.invalidFilesProcessed;
@@ -123,7 +123,7 @@ public final class CopyProgressResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="isEnumerationInProgress", required=true)
-      private final Boolean isEnumerationInProgress;
+    private Boolean isEnumerationInProgress;
 
     public Boolean isEnumerationInProgress() {
         return this.isEnumerationInProgress;
@@ -134,7 +134,7 @@ public final class CopyProgressResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="renamedContainerCount", required=true)
-      private final Double renamedContainerCount;
+    private Double renamedContainerCount;
 
     public Double renamedContainerCount() {
         return this.renamedContainerCount;
@@ -145,7 +145,7 @@ public final class CopyProgressResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="storageAccountName", required=true)
-      private final String storageAccountName;
+    private String storageAccountName;
 
     public String storageAccountName() {
         return this.storageAccountName;
@@ -156,7 +156,7 @@ public final class CopyProgressResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="totalBytesToProcess", required=true)
-      private final Double totalBytesToProcess;
+    private Double totalBytesToProcess;
 
     public Double totalBytesToProcess() {
         return this.totalBytesToProcess;
@@ -167,7 +167,7 @@ public final class CopyProgressResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="totalFilesToProcess", required=true)
-      private final Double totalFilesToProcess;
+    private Double totalFilesToProcess;
 
     public Double totalFilesToProcess() {
         return this.totalFilesToProcess;
@@ -178,172 +178,143 @@ public final class CopyProgressResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="transferType", required=true)
-      private final String transferType;
+    private String transferType;
 
     public String transferType() {
         return this.transferType;
     }
 
-    public CopyProgressResponse(
-        String accountId,
-        Double bytesProcessed,
-        String dataAccountType,
-        Double directoriesErroredOut,
-        Double filesErroredOut,
-        Double filesProcessed,
-        Double invalidDirectoriesProcessed,
-        Double invalidFileBytesUploaded,
-        Double invalidFilesProcessed,
-        Boolean isEnumerationInProgress,
-        Double renamedContainerCount,
-        String storageAccountName,
-        Double totalBytesToProcess,
-        Double totalFilesToProcess,
-        String transferType) {
-        this.accountId = Objects.requireNonNull(accountId, "expected parameter 'accountId' to be non-null");
-        this.bytesProcessed = Objects.requireNonNull(bytesProcessed, "expected parameter 'bytesProcessed' to be non-null");
-        this.dataAccountType = Objects.requireNonNull(dataAccountType, "expected parameter 'dataAccountType' to be non-null");
-        this.directoriesErroredOut = Objects.requireNonNull(directoriesErroredOut, "expected parameter 'directoriesErroredOut' to be non-null");
-        this.filesErroredOut = Objects.requireNonNull(filesErroredOut, "expected parameter 'filesErroredOut' to be non-null");
-        this.filesProcessed = Objects.requireNonNull(filesProcessed, "expected parameter 'filesProcessed' to be non-null");
-        this.invalidDirectoriesProcessed = Objects.requireNonNull(invalidDirectoriesProcessed, "expected parameter 'invalidDirectoriesProcessed' to be non-null");
-        this.invalidFileBytesUploaded = Objects.requireNonNull(invalidFileBytesUploaded, "expected parameter 'invalidFileBytesUploaded' to be non-null");
-        this.invalidFilesProcessed = Objects.requireNonNull(invalidFilesProcessed, "expected parameter 'invalidFilesProcessed' to be non-null");
-        this.isEnumerationInProgress = Objects.requireNonNull(isEnumerationInProgress, "expected parameter 'isEnumerationInProgress' to be non-null");
-        this.renamedContainerCount = Objects.requireNonNull(renamedContainerCount, "expected parameter 'renamedContainerCount' to be non-null");
-        this.storageAccountName = Objects.requireNonNull(storageAccountName, "expected parameter 'storageAccountName' to be non-null");
-        this.totalBytesToProcess = Objects.requireNonNull(totalBytesToProcess, "expected parameter 'totalBytesToProcess' to be non-null");
-        this.totalFilesToProcess = Objects.requireNonNull(totalFilesToProcess, "expected parameter 'totalFilesToProcess' to be non-null");
-        this.transferType = Objects.requireNonNull(transferType, "expected parameter 'transferType' to be non-null");
-    }
+    private CopyProgressResponse() {}
 
-    private CopyProgressResponse() {
-        this.accountId = null;
-        this.bytesProcessed = null;
-        this.dataAccountType = null;
-        this.directoriesErroredOut = null;
-        this.filesErroredOut = null;
-        this.filesProcessed = null;
-        this.invalidDirectoriesProcessed = null;
-        this.invalidFileBytesUploaded = null;
-        this.invalidFilesProcessed = null;
-        this.isEnumerationInProgress = null;
-        this.renamedContainerCount = null;
-        this.storageAccountName = null;
-        this.totalBytesToProcess = null;
-        this.totalFilesToProcess = null;
-        this.transferType = null;
+    private CopyProgressResponse(CopyProgressResponse $) {
+        this.accountId = $.accountId;
+        this.bytesProcessed = $.bytesProcessed;
+        this.dataAccountType = $.dataAccountType;
+        this.directoriesErroredOut = $.directoriesErroredOut;
+        this.filesErroredOut = $.filesErroredOut;
+        this.filesProcessed = $.filesProcessed;
+        this.invalidDirectoriesProcessed = $.invalidDirectoriesProcessed;
+        this.invalidFileBytesUploaded = $.invalidFileBytesUploaded;
+        this.invalidFilesProcessed = $.invalidFilesProcessed;
+        this.isEnumerationInProgress = $.isEnumerationInProgress;
+        this.renamedContainerCount = $.renamedContainerCount;
+        this.storageAccountName = $.storageAccountName;
+        this.totalBytesToProcess = $.totalBytesToProcess;
+        this.totalFilesToProcess = $.totalFilesToProcess;
+        this.transferType = $.transferType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CopyProgressResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String accountId;
-        private Double bytesProcessed;
-        private String dataAccountType;
-        private Double directoriesErroredOut;
-        private Double filesErroredOut;
-        private Double filesProcessed;
-        private Double invalidDirectoriesProcessed;
-        private Double invalidFileBytesUploaded;
-        private Double invalidFilesProcessed;
-        private Boolean isEnumerationInProgress;
-        private Double renamedContainerCount;
-        private String storageAccountName;
-        private Double totalBytesToProcess;
-        private Double totalFilesToProcess;
-        private String transferType;
+        private CopyProgressResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new CopyProgressResponse();
         }
 
         public Builder(CopyProgressResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accountId = defaults.accountId;
-    	      this.bytesProcessed = defaults.bytesProcessed;
-    	      this.dataAccountType = defaults.dataAccountType;
-    	      this.directoriesErroredOut = defaults.directoriesErroredOut;
-    	      this.filesErroredOut = defaults.filesErroredOut;
-    	      this.filesProcessed = defaults.filesProcessed;
-    	      this.invalidDirectoriesProcessed = defaults.invalidDirectoriesProcessed;
-    	      this.invalidFileBytesUploaded = defaults.invalidFileBytesUploaded;
-    	      this.invalidFilesProcessed = defaults.invalidFilesProcessed;
-    	      this.isEnumerationInProgress = defaults.isEnumerationInProgress;
-    	      this.renamedContainerCount = defaults.renamedContainerCount;
-    	      this.storageAccountName = defaults.storageAccountName;
-    	      this.totalBytesToProcess = defaults.totalBytesToProcess;
-    	      this.totalFilesToProcess = defaults.totalFilesToProcess;
-    	      this.transferType = defaults.transferType;
+            $ = new CopyProgressResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder accountId(String accountId) {
-            this.accountId = Objects.requireNonNull(accountId);
+            $.accountId = accountId;
             return this;
         }
+
         public Builder bytesProcessed(Double bytesProcessed) {
-            this.bytesProcessed = Objects.requireNonNull(bytesProcessed);
+            $.bytesProcessed = bytesProcessed;
             return this;
         }
+
         public Builder dataAccountType(String dataAccountType) {
-            this.dataAccountType = Objects.requireNonNull(dataAccountType);
+            $.dataAccountType = dataAccountType;
             return this;
         }
+
         public Builder directoriesErroredOut(Double directoriesErroredOut) {
-            this.directoriesErroredOut = Objects.requireNonNull(directoriesErroredOut);
+            $.directoriesErroredOut = directoriesErroredOut;
             return this;
         }
+
         public Builder filesErroredOut(Double filesErroredOut) {
-            this.filesErroredOut = Objects.requireNonNull(filesErroredOut);
+            $.filesErroredOut = filesErroredOut;
             return this;
         }
+
         public Builder filesProcessed(Double filesProcessed) {
-            this.filesProcessed = Objects.requireNonNull(filesProcessed);
+            $.filesProcessed = filesProcessed;
             return this;
         }
+
         public Builder invalidDirectoriesProcessed(Double invalidDirectoriesProcessed) {
-            this.invalidDirectoriesProcessed = Objects.requireNonNull(invalidDirectoriesProcessed);
+            $.invalidDirectoriesProcessed = invalidDirectoriesProcessed;
             return this;
         }
+
         public Builder invalidFileBytesUploaded(Double invalidFileBytesUploaded) {
-            this.invalidFileBytesUploaded = Objects.requireNonNull(invalidFileBytesUploaded);
+            $.invalidFileBytesUploaded = invalidFileBytesUploaded;
             return this;
         }
+
         public Builder invalidFilesProcessed(Double invalidFilesProcessed) {
-            this.invalidFilesProcessed = Objects.requireNonNull(invalidFilesProcessed);
+            $.invalidFilesProcessed = invalidFilesProcessed;
             return this;
         }
+
         public Builder isEnumerationInProgress(Boolean isEnumerationInProgress) {
-            this.isEnumerationInProgress = Objects.requireNonNull(isEnumerationInProgress);
+            $.isEnumerationInProgress = isEnumerationInProgress;
             return this;
         }
+
         public Builder renamedContainerCount(Double renamedContainerCount) {
-            this.renamedContainerCount = Objects.requireNonNull(renamedContainerCount);
+            $.renamedContainerCount = renamedContainerCount;
             return this;
         }
+
         public Builder storageAccountName(String storageAccountName) {
-            this.storageAccountName = Objects.requireNonNull(storageAccountName);
+            $.storageAccountName = storageAccountName;
             return this;
         }
+
         public Builder totalBytesToProcess(Double totalBytesToProcess) {
-            this.totalBytesToProcess = Objects.requireNonNull(totalBytesToProcess);
+            $.totalBytesToProcess = totalBytesToProcess;
             return this;
         }
+
         public Builder totalFilesToProcess(Double totalFilesToProcess) {
-            this.totalFilesToProcess = Objects.requireNonNull(totalFilesToProcess);
+            $.totalFilesToProcess = totalFilesToProcess;
             return this;
         }
+
         public Builder transferType(String transferType) {
-            this.transferType = Objects.requireNonNull(transferType);
+            $.transferType = transferType;
             return this;
-        }        public CopyProgressResponse build() {
-            return new CopyProgressResponse(accountId, bytesProcessed, dataAccountType, directoriesErroredOut, filesErroredOut, filesProcessed, invalidDirectoriesProcessed, invalidFileBytesUploaded, invalidFilesProcessed, isEnumerationInProgress, renamedContainerCount, storageAccountName, totalBytesToProcess, totalFilesToProcess, transferType);
+        }
+
+        public CopyProgressResponse build() {
+            $.accountId = Objects.requireNonNull($.accountId, "expected parameter 'accountId' to be non-null");
+            $.bytesProcessed = Objects.requireNonNull($.bytesProcessed, "expected parameter 'bytesProcessed' to be non-null");
+            $.dataAccountType = Objects.requireNonNull($.dataAccountType, "expected parameter 'dataAccountType' to be non-null");
+            $.directoriesErroredOut = Objects.requireNonNull($.directoriesErroredOut, "expected parameter 'directoriesErroredOut' to be non-null");
+            $.filesErroredOut = Objects.requireNonNull($.filesErroredOut, "expected parameter 'filesErroredOut' to be non-null");
+            $.filesProcessed = Objects.requireNonNull($.filesProcessed, "expected parameter 'filesProcessed' to be non-null");
+            $.invalidDirectoriesProcessed = Objects.requireNonNull($.invalidDirectoriesProcessed, "expected parameter 'invalidDirectoriesProcessed' to be non-null");
+            $.invalidFileBytesUploaded = Objects.requireNonNull($.invalidFileBytesUploaded, "expected parameter 'invalidFileBytesUploaded' to be non-null");
+            $.invalidFilesProcessed = Objects.requireNonNull($.invalidFilesProcessed, "expected parameter 'invalidFilesProcessed' to be non-null");
+            $.isEnumerationInProgress = Objects.requireNonNull($.isEnumerationInProgress, "expected parameter 'isEnumerationInProgress' to be non-null");
+            $.renamedContainerCount = Objects.requireNonNull($.renamedContainerCount, "expected parameter 'renamedContainerCount' to be non-null");
+            $.storageAccountName = Objects.requireNonNull($.storageAccountName, "expected parameter 'storageAccountName' to be non-null");
+            $.totalBytesToProcess = Objects.requireNonNull($.totalBytesToProcess, "expected parameter 'totalBytesToProcess' to be non-null");
+            $.totalFilesToProcess = Objects.requireNonNull($.totalFilesToProcess, "expected parameter 'totalFilesToProcess' to be non-null");
+            $.transferType = Objects.requireNonNull($.transferType, "expected parameter 'transferType' to be non-null");
+            return $;
         }
     }
+
 }

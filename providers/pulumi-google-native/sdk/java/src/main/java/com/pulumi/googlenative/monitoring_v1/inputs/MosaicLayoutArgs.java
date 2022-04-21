@@ -5,11 +5,11 @@ package com.pulumi.googlenative.monitoring_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.monitoring_v1.inputs.TileArgs;
 import java.lang.Integer;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class MosaicLayoutArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="columns")
-      private final @Nullable Output<Integer> columns;
+    private @Nullable Output<Integer> columns;
 
-    public Output<Integer> columns() {
-        return this.columns == null ? Codegen.empty() : this.columns;
+    public Optional<Output<Integer>> columns() {
+        return Optional.ofNullable(this.columns);
     }
 
     /**
@@ -37,66 +37,62 @@ public final class MosaicLayoutArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tiles")
-      private final @Nullable Output<List<TileArgs>> tiles;
+    private @Nullable Output<List<TileArgs>> tiles;
 
-    public Output<List<TileArgs>> tiles() {
-        return this.tiles == null ? Codegen.empty() : this.tiles;
+    public Optional<Output<List<TileArgs>>> tiles() {
+        return Optional.ofNullable(this.tiles);
     }
 
-    public MosaicLayoutArgs(
-        @Nullable Output<Integer> columns,
-        @Nullable Output<List<TileArgs>> tiles) {
-        this.columns = columns;
-        this.tiles = tiles;
-    }
+    private MosaicLayoutArgs() {}
 
-    private MosaicLayoutArgs() {
-        this.columns = Codegen.empty();
-        this.tiles = Codegen.empty();
+    private MosaicLayoutArgs(MosaicLayoutArgs $) {
+        this.columns = $.columns;
+        this.tiles = $.tiles;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MosaicLayoutArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> columns;
-        private @Nullable Output<List<TileArgs>> tiles;
+        private MosaicLayoutArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new MosaicLayoutArgs();
         }
 
         public Builder(MosaicLayoutArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.columns = defaults.columns;
-    	      this.tiles = defaults.tiles;
+            $ = new MosaicLayoutArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder columns(@Nullable Output<Integer> columns) {
-            this.columns = columns;
+            $.columns = columns;
             return this;
         }
-        public Builder columns(@Nullable Integer columns) {
-            this.columns = Codegen.ofNullable(columns);
-            return this;
+
+        public Builder columns(Integer columns) {
+            return columns(Output.of(columns));
         }
+
         public Builder tiles(@Nullable Output<List<TileArgs>> tiles) {
-            this.tiles = tiles;
+            $.tiles = tiles;
             return this;
         }
-        public Builder tiles(@Nullable List<TileArgs> tiles) {
-            this.tiles = Codegen.ofNullable(tiles);
-            return this;
+
+        public Builder tiles(List<TileArgs> tiles) {
+            return tiles(Output.of(tiles));
         }
+
         public Builder tiles(TileArgs... tiles) {
             return tiles(List.of(tiles));
-        }        public MosaicLayoutArgs build() {
-            return new MosaicLayoutArgs(columns, tiles);
+        }
+
+        public MosaicLayoutArgs build() {
+            return $;
         }
     }
+
 }

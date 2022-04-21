@@ -17,7 +17,7 @@ public final class ImportFileResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="content", required=true)
-      private final String content;
+    private String content;
 
     public String content() {
         return this.content;
@@ -28,55 +28,52 @@ public final class ImportFileResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
     }
 
-    public ImportFileResponse(
-        String content,
-        String name) {
-        this.content = Objects.requireNonNull(content, "expected parameter 'content' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-    }
+    private ImportFileResponse() {}
 
-    private ImportFileResponse() {
-        this.content = null;
-        this.name = null;
+    private ImportFileResponse(ImportFileResponse $) {
+        this.content = $.content;
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ImportFileResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String content;
-        private String name;
+        private ImportFileResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ImportFileResponse();
         }
 
         public Builder(ImportFileResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.content = defaults.content;
-    	      this.name = defaults.name;
+            $ = new ImportFileResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder content(String content) {
-            this.content = Objects.requireNonNull(content);
+            $.content = content;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
-        }        public ImportFileResponse build() {
-            return new ImportFileResponse(content, name);
+        }
+
+        public ImportFileResponse build() {
+            $.content = Objects.requireNonNull($.content, "expected parameter 'content' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            return $;
         }
     }
+
 }

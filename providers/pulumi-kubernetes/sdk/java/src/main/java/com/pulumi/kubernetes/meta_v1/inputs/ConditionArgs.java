@@ -5,10 +5,10 @@ package com.pulumi.kubernetes.meta_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,7 +25,7 @@ public final class ConditionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="lastTransitionTime", required=true)
-      private final Output<String> lastTransitionTime;
+    private Output<String> lastTransitionTime;
 
     public Output<String> lastTransitionTime() {
         return this.lastTransitionTime;
@@ -36,7 +36,7 @@ public final class ConditionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="message", required=true)
-      private final Output<String> message;
+    private Output<String> message;
 
     public Output<String> message() {
         return this.message;
@@ -47,10 +47,10 @@ public final class ConditionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="observedGeneration")
-      private final @Nullable Output<Integer> observedGeneration;
+    private @Nullable Output<Integer> observedGeneration;
 
-    public Output<Integer> observedGeneration() {
-        return this.observedGeneration == null ? Codegen.empty() : this.observedGeneration;
+    public Optional<Output<Integer>> observedGeneration() {
+        return Optional.ofNullable(this.observedGeneration);
     }
 
     /**
@@ -58,7 +58,7 @@ public final class ConditionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="reason", required=true)
-      private final Output<String> reason;
+    private Output<String> reason;
 
     public Output<String> reason() {
         return this.reason;
@@ -69,7 +69,7 @@ public final class ConditionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="status", required=true)
-      private final Output<String> status;
+    private Output<String> status;
 
     public Output<String> status() {
         return this.status;
@@ -80,115 +80,103 @@ public final class ConditionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="type", required=true)
-      private final Output<String> type;
+    private Output<String> type;
 
     public Output<String> type() {
         return this.type;
     }
 
-    public ConditionArgs(
-        Output<String> lastTransitionTime,
-        Output<String> message,
-        @Nullable Output<Integer> observedGeneration,
-        Output<String> reason,
-        Output<String> status,
-        Output<String> type) {
-        this.lastTransitionTime = Objects.requireNonNull(lastTransitionTime, "expected parameter 'lastTransitionTime' to be non-null");
-        this.message = Objects.requireNonNull(message, "expected parameter 'message' to be non-null");
-        this.observedGeneration = observedGeneration;
-        this.reason = Objects.requireNonNull(reason, "expected parameter 'reason' to be non-null");
-        this.status = Objects.requireNonNull(status, "expected parameter 'status' to be non-null");
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private ConditionArgs() {}
 
-    private ConditionArgs() {
-        this.lastTransitionTime = Codegen.empty();
-        this.message = Codegen.empty();
-        this.observedGeneration = Codegen.empty();
-        this.reason = Codegen.empty();
-        this.status = Codegen.empty();
-        this.type = Codegen.empty();
+    private ConditionArgs(ConditionArgs $) {
+        this.lastTransitionTime = $.lastTransitionTime;
+        this.message = $.message;
+        this.observedGeneration = $.observedGeneration;
+        this.reason = $.reason;
+        this.status = $.status;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ConditionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> lastTransitionTime;
-        private Output<String> message;
-        private @Nullable Output<Integer> observedGeneration;
-        private Output<String> reason;
-        private Output<String> status;
-        private Output<String> type;
+        private ConditionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ConditionArgs();
         }
 
         public Builder(ConditionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.lastTransitionTime = defaults.lastTransitionTime;
-    	      this.message = defaults.message;
-    	      this.observedGeneration = defaults.observedGeneration;
-    	      this.reason = defaults.reason;
-    	      this.status = defaults.status;
-    	      this.type = defaults.type;
+            $ = new ConditionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder lastTransitionTime(Output<String> lastTransitionTime) {
-            this.lastTransitionTime = Objects.requireNonNull(lastTransitionTime);
+            $.lastTransitionTime = lastTransitionTime;
             return this;
         }
+
         public Builder lastTransitionTime(String lastTransitionTime) {
-            this.lastTransitionTime = Output.of(Objects.requireNonNull(lastTransitionTime));
-            return this;
+            return lastTransitionTime(Output.of(lastTransitionTime));
         }
+
         public Builder message(Output<String> message) {
-            this.message = Objects.requireNonNull(message);
+            $.message = message;
             return this;
         }
+
         public Builder message(String message) {
-            this.message = Output.of(Objects.requireNonNull(message));
-            return this;
+            return message(Output.of(message));
         }
+
         public Builder observedGeneration(@Nullable Output<Integer> observedGeneration) {
-            this.observedGeneration = observedGeneration;
+            $.observedGeneration = observedGeneration;
             return this;
         }
-        public Builder observedGeneration(@Nullable Integer observedGeneration) {
-            this.observedGeneration = Codegen.ofNullable(observedGeneration);
-            return this;
+
+        public Builder observedGeneration(Integer observedGeneration) {
+            return observedGeneration(Output.of(observedGeneration));
         }
+
         public Builder reason(Output<String> reason) {
-            this.reason = Objects.requireNonNull(reason);
+            $.reason = reason;
             return this;
         }
+
         public Builder reason(String reason) {
-            this.reason = Output.of(Objects.requireNonNull(reason));
-            return this;
+            return reason(Output.of(reason));
         }
+
         public Builder status(Output<String> status) {
-            this.status = Objects.requireNonNull(status);
+            $.status = status;
             return this;
         }
+
         public Builder status(String status) {
-            this.status = Output.of(Objects.requireNonNull(status));
-            return this;
+            return status(Output.of(status));
         }
+
         public Builder type(Output<String> type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Output.of(Objects.requireNonNull(type));
-            return this;
-        }        public ConditionArgs build() {
-            return new ConditionArgs(lastTransitionTime, message, observedGeneration, reason, status, type);
+            return type(Output.of(type));
+        }
+
+        public ConditionArgs build() {
+            $.lastTransitionTime = Objects.requireNonNull($.lastTransitionTime, "expected parameter 'lastTransitionTime' to be non-null");
+            $.message = Objects.requireNonNull($.message, "expected parameter 'message' to be non-null");
+            $.reason = Objects.requireNonNull($.reason, "expected parameter 'reason' to be non-null");
+            $.status = Objects.requireNonNull($.status, "expected parameter 'status' to be non-null");
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

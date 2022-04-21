@@ -5,10 +5,10 @@ package com.pulumi.googlenative.compute_beta.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.compute_beta.inputs.DiskInstantiationConfigArgs;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,52 +25,52 @@ public final class SourceInstanceParamsArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="diskConfigs")
-      private final @Nullable Output<List<DiskInstantiationConfigArgs>> diskConfigs;
+    private @Nullable Output<List<DiskInstantiationConfigArgs>> diskConfigs;
 
-    public Output<List<DiskInstantiationConfigArgs>> diskConfigs() {
-        return this.diskConfigs == null ? Codegen.empty() : this.diskConfigs;
+    public Optional<Output<List<DiskInstantiationConfigArgs>>> diskConfigs() {
+        return Optional.ofNullable(this.diskConfigs);
     }
 
-    public SourceInstanceParamsArgs(@Nullable Output<List<DiskInstantiationConfigArgs>> diskConfigs) {
-        this.diskConfigs = diskConfigs;
-    }
+    private SourceInstanceParamsArgs() {}
 
-    private SourceInstanceParamsArgs() {
-        this.diskConfigs = Codegen.empty();
+    private SourceInstanceParamsArgs(SourceInstanceParamsArgs $) {
+        this.diskConfigs = $.diskConfigs;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SourceInstanceParamsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<DiskInstantiationConfigArgs>> diskConfigs;
+        private SourceInstanceParamsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SourceInstanceParamsArgs();
         }
 
         public Builder(SourceInstanceParamsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.diskConfigs = defaults.diskConfigs;
+            $ = new SourceInstanceParamsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder diskConfigs(@Nullable Output<List<DiskInstantiationConfigArgs>> diskConfigs) {
-            this.diskConfigs = diskConfigs;
+            $.diskConfigs = diskConfigs;
             return this;
         }
-        public Builder diskConfigs(@Nullable List<DiskInstantiationConfigArgs> diskConfigs) {
-            this.diskConfigs = Codegen.ofNullable(diskConfigs);
-            return this;
+
+        public Builder diskConfigs(List<DiskInstantiationConfigArgs> diskConfigs) {
+            return diskConfigs(Output.of(diskConfigs));
         }
+
         public Builder diskConfigs(DiskInstantiationConfigArgs... diskConfigs) {
             return diskConfigs(List.of(diskConfigs));
-        }        public SourceInstanceParamsArgs build() {
-            return new SourceInstanceParamsArgs(diskConfigs);
+        }
+
+        public SourceInstanceParamsArgs build() {
+            return $;
         }
     }
+
 }

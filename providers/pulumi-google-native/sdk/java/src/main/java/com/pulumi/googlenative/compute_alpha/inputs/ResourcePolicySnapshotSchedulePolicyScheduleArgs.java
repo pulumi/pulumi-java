@@ -5,11 +5,11 @@ package com.pulumi.googlenative.compute_alpha.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.compute_alpha.inputs.ResourcePolicyDailyCycleArgs;
 import com.pulumi.googlenative.compute_alpha.inputs.ResourcePolicyHourlyCycleArgs;
 import com.pulumi.googlenative.compute_alpha.inputs.ResourcePolicyWeeklyCycleArgs;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,90 +22,82 @@ public final class ResourcePolicySnapshotSchedulePolicyScheduleArgs extends com.
     public static final ResourcePolicySnapshotSchedulePolicyScheduleArgs Empty = new ResourcePolicySnapshotSchedulePolicyScheduleArgs();
 
     @Import(name="dailySchedule")
-      private final @Nullable Output<ResourcePolicyDailyCycleArgs> dailySchedule;
+    private @Nullable Output<ResourcePolicyDailyCycleArgs> dailySchedule;
 
-    public Output<ResourcePolicyDailyCycleArgs> dailySchedule() {
-        return this.dailySchedule == null ? Codegen.empty() : this.dailySchedule;
+    public Optional<Output<ResourcePolicyDailyCycleArgs>> dailySchedule() {
+        return Optional.ofNullable(this.dailySchedule);
     }
 
     @Import(name="hourlySchedule")
-      private final @Nullable Output<ResourcePolicyHourlyCycleArgs> hourlySchedule;
+    private @Nullable Output<ResourcePolicyHourlyCycleArgs> hourlySchedule;
 
-    public Output<ResourcePolicyHourlyCycleArgs> hourlySchedule() {
-        return this.hourlySchedule == null ? Codegen.empty() : this.hourlySchedule;
+    public Optional<Output<ResourcePolicyHourlyCycleArgs>> hourlySchedule() {
+        return Optional.ofNullable(this.hourlySchedule);
     }
 
     @Import(name="weeklySchedule")
-      private final @Nullable Output<ResourcePolicyWeeklyCycleArgs> weeklySchedule;
+    private @Nullable Output<ResourcePolicyWeeklyCycleArgs> weeklySchedule;
 
-    public Output<ResourcePolicyWeeklyCycleArgs> weeklySchedule() {
-        return this.weeklySchedule == null ? Codegen.empty() : this.weeklySchedule;
+    public Optional<Output<ResourcePolicyWeeklyCycleArgs>> weeklySchedule() {
+        return Optional.ofNullable(this.weeklySchedule);
     }
 
-    public ResourcePolicySnapshotSchedulePolicyScheduleArgs(
-        @Nullable Output<ResourcePolicyDailyCycleArgs> dailySchedule,
-        @Nullable Output<ResourcePolicyHourlyCycleArgs> hourlySchedule,
-        @Nullable Output<ResourcePolicyWeeklyCycleArgs> weeklySchedule) {
-        this.dailySchedule = dailySchedule;
-        this.hourlySchedule = hourlySchedule;
-        this.weeklySchedule = weeklySchedule;
-    }
+    private ResourcePolicySnapshotSchedulePolicyScheduleArgs() {}
 
-    private ResourcePolicySnapshotSchedulePolicyScheduleArgs() {
-        this.dailySchedule = Codegen.empty();
-        this.hourlySchedule = Codegen.empty();
-        this.weeklySchedule = Codegen.empty();
+    private ResourcePolicySnapshotSchedulePolicyScheduleArgs(ResourcePolicySnapshotSchedulePolicyScheduleArgs $) {
+        this.dailySchedule = $.dailySchedule;
+        this.hourlySchedule = $.hourlySchedule;
+        this.weeklySchedule = $.weeklySchedule;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ResourcePolicySnapshotSchedulePolicyScheduleArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<ResourcePolicyDailyCycleArgs> dailySchedule;
-        private @Nullable Output<ResourcePolicyHourlyCycleArgs> hourlySchedule;
-        private @Nullable Output<ResourcePolicyWeeklyCycleArgs> weeklySchedule;
+        private ResourcePolicySnapshotSchedulePolicyScheduleArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ResourcePolicySnapshotSchedulePolicyScheduleArgs();
         }
 
         public Builder(ResourcePolicySnapshotSchedulePolicyScheduleArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dailySchedule = defaults.dailySchedule;
-    	      this.hourlySchedule = defaults.hourlySchedule;
-    	      this.weeklySchedule = defaults.weeklySchedule;
+            $ = new ResourcePolicySnapshotSchedulePolicyScheduleArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder dailySchedule(@Nullable Output<ResourcePolicyDailyCycleArgs> dailySchedule) {
-            this.dailySchedule = dailySchedule;
+            $.dailySchedule = dailySchedule;
             return this;
         }
-        public Builder dailySchedule(@Nullable ResourcePolicyDailyCycleArgs dailySchedule) {
-            this.dailySchedule = Codegen.ofNullable(dailySchedule);
-            return this;
+
+        public Builder dailySchedule(ResourcePolicyDailyCycleArgs dailySchedule) {
+            return dailySchedule(Output.of(dailySchedule));
         }
+
         public Builder hourlySchedule(@Nullable Output<ResourcePolicyHourlyCycleArgs> hourlySchedule) {
-            this.hourlySchedule = hourlySchedule;
+            $.hourlySchedule = hourlySchedule;
             return this;
         }
-        public Builder hourlySchedule(@Nullable ResourcePolicyHourlyCycleArgs hourlySchedule) {
-            this.hourlySchedule = Codegen.ofNullable(hourlySchedule);
-            return this;
+
+        public Builder hourlySchedule(ResourcePolicyHourlyCycleArgs hourlySchedule) {
+            return hourlySchedule(Output.of(hourlySchedule));
         }
+
         public Builder weeklySchedule(@Nullable Output<ResourcePolicyWeeklyCycleArgs> weeklySchedule) {
-            this.weeklySchedule = weeklySchedule;
+            $.weeklySchedule = weeklySchedule;
             return this;
         }
-        public Builder weeklySchedule(@Nullable ResourcePolicyWeeklyCycleArgs weeklySchedule) {
-            this.weeklySchedule = Codegen.ofNullable(weeklySchedule);
-            return this;
-        }        public ResourcePolicySnapshotSchedulePolicyScheduleArgs build() {
-            return new ResourcePolicySnapshotSchedulePolicyScheduleArgs(dailySchedule, hourlySchedule, weeklySchedule);
+
+        public Builder weeklySchedule(ResourcePolicyWeeklyCycleArgs weeklySchedule) {
+            return weeklySchedule(Output.of(weeklySchedule));
+        }
+
+        public ResourcePolicySnapshotSchedulePolicyScheduleArgs build() {
+            return $;
         }
     }
+
 }

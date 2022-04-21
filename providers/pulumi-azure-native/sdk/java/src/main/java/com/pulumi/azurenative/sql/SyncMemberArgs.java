@@ -8,10 +8,10 @@ import com.pulumi.azurenative.sql.enums.SyncMemberDbType;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,7 +24,7 @@ public final class SyncMemberArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="databaseName", required=true)
-      private final Output<String> databaseName;
+    private Output<String> databaseName;
 
     public Output<String> databaseName() {
         return this.databaseName;
@@ -35,10 +35,10 @@ public final class SyncMemberArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="databaseType")
-      private final @Nullable Output<Either<String,SyncMemberDbType>> databaseType;
+    private @Nullable Output<Either<String,SyncMemberDbType>> databaseType;
 
-    public Output<Either<String,SyncMemberDbType>> databaseType() {
-        return this.databaseType == null ? Codegen.empty() : this.databaseType;
+    public Optional<Output<Either<String,SyncMemberDbType>>> databaseType() {
+        return Optional.ofNullable(this.databaseType);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class SyncMemberArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="password")
-      private final @Nullable Output<String> password;
+    private @Nullable Output<String> password;
 
-    public Output<String> password() {
-        return this.password == null ? Codegen.empty() : this.password;
+    public Optional<Output<String>> password() {
+        return Optional.ofNullable(this.password);
     }
 
     /**
@@ -57,7 +57,7 @@ public final class SyncMemberArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -68,7 +68,7 @@ public final class SyncMemberArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="serverName", required=true)
-      private final Output<String> serverName;
+    private Output<String> serverName;
 
     public Output<String> serverName() {
         return this.serverName;
@@ -79,10 +79,10 @@ public final class SyncMemberArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="sqlServerDatabaseId")
-      private final @Nullable Output<String> sqlServerDatabaseId;
+    private @Nullable Output<String> sqlServerDatabaseId;
 
-    public Output<String> sqlServerDatabaseId() {
-        return this.sqlServerDatabaseId == null ? Codegen.empty() : this.sqlServerDatabaseId;
+    public Optional<Output<String>> sqlServerDatabaseId() {
+        return Optional.ofNullable(this.sqlServerDatabaseId);
     }
 
     /**
@@ -90,10 +90,10 @@ public final class SyncMemberArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="syncAgentId")
-      private final @Nullable Output<String> syncAgentId;
+    private @Nullable Output<String> syncAgentId;
 
-    public Output<String> syncAgentId() {
-        return this.syncAgentId == null ? Codegen.empty() : this.syncAgentId;
+    public Optional<Output<String>> syncAgentId() {
+        return Optional.ofNullable(this.syncAgentId);
     }
 
     /**
@@ -101,10 +101,10 @@ public final class SyncMemberArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="syncDirection")
-      private final @Nullable Output<Either<String,SyncDirection>> syncDirection;
+    private @Nullable Output<Either<String,SyncDirection>> syncDirection;
 
-    public Output<Either<String,SyncDirection>> syncDirection() {
-        return this.syncDirection == null ? Codegen.empty() : this.syncDirection;
+    public Optional<Output<Either<String,SyncDirection>>> syncDirection() {
+        return Optional.ofNullable(this.syncDirection);
     }
 
     /**
@@ -112,7 +112,7 @@ public final class SyncMemberArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="syncGroupName", required=true)
-      private final Output<String> syncGroupName;
+    private Output<String> syncGroupName;
 
     public Output<String> syncGroupName() {
         return this.syncGroupName;
@@ -123,10 +123,10 @@ public final class SyncMemberArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="syncMemberAzureDatabaseResourceId")
-      private final @Nullable Output<String> syncMemberAzureDatabaseResourceId;
+    private @Nullable Output<String> syncMemberAzureDatabaseResourceId;
 
-    public Output<String> syncMemberAzureDatabaseResourceId() {
-        return this.syncMemberAzureDatabaseResourceId == null ? Codegen.empty() : this.syncMemberAzureDatabaseResourceId;
+    public Optional<Output<String>> syncMemberAzureDatabaseResourceId() {
+        return Optional.ofNullable(this.syncMemberAzureDatabaseResourceId);
     }
 
     /**
@@ -134,10 +134,10 @@ public final class SyncMemberArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="syncMemberName")
-      private final @Nullable Output<String> syncMemberName;
+    private @Nullable Output<String> syncMemberName;
 
-    public Output<String> syncMemberName() {
-        return this.syncMemberName == null ? Codegen.empty() : this.syncMemberName;
+    public Optional<Output<String>> syncMemberName() {
+        return Optional.ofNullable(this.syncMemberName);
     }
 
     /**
@@ -145,10 +145,10 @@ public final class SyncMemberArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="usePrivateLinkConnection")
-      private final @Nullable Output<Boolean> usePrivateLinkConnection;
+    private @Nullable Output<Boolean> usePrivateLinkConnection;
 
-    public Output<Boolean> usePrivateLinkConnection() {
-        return this.usePrivateLinkConnection == null ? Codegen.empty() : this.usePrivateLinkConnection;
+    public Optional<Output<Boolean>> usePrivateLinkConnection() {
+        return Optional.ofNullable(this.usePrivateLinkConnection);
     }
 
     /**
@@ -156,206 +156,172 @@ public final class SyncMemberArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="userName")
-      private final @Nullable Output<String> userName;
+    private @Nullable Output<String> userName;
 
-    public Output<String> userName() {
-        return this.userName == null ? Codegen.empty() : this.userName;
+    public Optional<Output<String>> userName() {
+        return Optional.ofNullable(this.userName);
     }
 
-    public SyncMemberArgs(
-        Output<String> databaseName,
-        @Nullable Output<Either<String,SyncMemberDbType>> databaseType,
-        @Nullable Output<String> password,
-        Output<String> resourceGroupName,
-        Output<String> serverName,
-        @Nullable Output<String> sqlServerDatabaseId,
-        @Nullable Output<String> syncAgentId,
-        @Nullable Output<Either<String,SyncDirection>> syncDirection,
-        Output<String> syncGroupName,
-        @Nullable Output<String> syncMemberAzureDatabaseResourceId,
-        @Nullable Output<String> syncMemberName,
-        @Nullable Output<Boolean> usePrivateLinkConnection,
-        @Nullable Output<String> userName) {
-        this.databaseName = Objects.requireNonNull(databaseName, "expected parameter 'databaseName' to be non-null");
-        this.databaseType = databaseType;
-        this.password = password;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.serverName = Objects.requireNonNull(serverName, "expected parameter 'serverName' to be non-null");
-        this.sqlServerDatabaseId = sqlServerDatabaseId;
-        this.syncAgentId = syncAgentId;
-        this.syncDirection = syncDirection;
-        this.syncGroupName = Objects.requireNonNull(syncGroupName, "expected parameter 'syncGroupName' to be non-null");
-        this.syncMemberAzureDatabaseResourceId = syncMemberAzureDatabaseResourceId;
-        this.syncMemberName = syncMemberName;
-        this.usePrivateLinkConnection = usePrivateLinkConnection;
-        this.userName = userName;
-    }
+    private SyncMemberArgs() {}
 
-    private SyncMemberArgs() {
-        this.databaseName = Codegen.empty();
-        this.databaseType = Codegen.empty();
-        this.password = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.serverName = Codegen.empty();
-        this.sqlServerDatabaseId = Codegen.empty();
-        this.syncAgentId = Codegen.empty();
-        this.syncDirection = Codegen.empty();
-        this.syncGroupName = Codegen.empty();
-        this.syncMemberAzureDatabaseResourceId = Codegen.empty();
-        this.syncMemberName = Codegen.empty();
-        this.usePrivateLinkConnection = Codegen.empty();
-        this.userName = Codegen.empty();
+    private SyncMemberArgs(SyncMemberArgs $) {
+        this.databaseName = $.databaseName;
+        this.databaseType = $.databaseType;
+        this.password = $.password;
+        this.resourceGroupName = $.resourceGroupName;
+        this.serverName = $.serverName;
+        this.sqlServerDatabaseId = $.sqlServerDatabaseId;
+        this.syncAgentId = $.syncAgentId;
+        this.syncDirection = $.syncDirection;
+        this.syncGroupName = $.syncGroupName;
+        this.syncMemberAzureDatabaseResourceId = $.syncMemberAzureDatabaseResourceId;
+        this.syncMemberName = $.syncMemberName;
+        this.usePrivateLinkConnection = $.usePrivateLinkConnection;
+        this.userName = $.userName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SyncMemberArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> databaseName;
-        private @Nullable Output<Either<String,SyncMemberDbType>> databaseType;
-        private @Nullable Output<String> password;
-        private Output<String> resourceGroupName;
-        private Output<String> serverName;
-        private @Nullable Output<String> sqlServerDatabaseId;
-        private @Nullable Output<String> syncAgentId;
-        private @Nullable Output<Either<String,SyncDirection>> syncDirection;
-        private Output<String> syncGroupName;
-        private @Nullable Output<String> syncMemberAzureDatabaseResourceId;
-        private @Nullable Output<String> syncMemberName;
-        private @Nullable Output<Boolean> usePrivateLinkConnection;
-        private @Nullable Output<String> userName;
+        private SyncMemberArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SyncMemberArgs();
         }
 
         public Builder(SyncMemberArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.databaseName = defaults.databaseName;
-    	      this.databaseType = defaults.databaseType;
-    	      this.password = defaults.password;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.serverName = defaults.serverName;
-    	      this.sqlServerDatabaseId = defaults.sqlServerDatabaseId;
-    	      this.syncAgentId = defaults.syncAgentId;
-    	      this.syncDirection = defaults.syncDirection;
-    	      this.syncGroupName = defaults.syncGroupName;
-    	      this.syncMemberAzureDatabaseResourceId = defaults.syncMemberAzureDatabaseResourceId;
-    	      this.syncMemberName = defaults.syncMemberName;
-    	      this.usePrivateLinkConnection = defaults.usePrivateLinkConnection;
-    	      this.userName = defaults.userName;
+            $ = new SyncMemberArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder databaseName(Output<String> databaseName) {
-            this.databaseName = Objects.requireNonNull(databaseName);
+            $.databaseName = databaseName;
             return this;
         }
+
         public Builder databaseName(String databaseName) {
-            this.databaseName = Output.of(Objects.requireNonNull(databaseName));
-            return this;
+            return databaseName(Output.of(databaseName));
         }
+
         public Builder databaseType(@Nullable Output<Either<String,SyncMemberDbType>> databaseType) {
-            this.databaseType = databaseType;
+            $.databaseType = databaseType;
             return this;
         }
-        public Builder databaseType(@Nullable Either<String,SyncMemberDbType> databaseType) {
-            this.databaseType = Codegen.ofNullable(databaseType);
-            return this;
+
+        public Builder databaseType(Either<String,SyncMemberDbType> databaseType) {
+            return databaseType(Output.of(databaseType));
         }
+
         public Builder password(@Nullable Output<String> password) {
-            this.password = password;
+            $.password = password;
             return this;
         }
-        public Builder password(@Nullable String password) {
-            this.password = Codegen.ofNullable(password);
-            return this;
+
+        public Builder password(String password) {
+            return password(Output.of(password));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder serverName(Output<String> serverName) {
-            this.serverName = Objects.requireNonNull(serverName);
+            $.serverName = serverName;
             return this;
         }
+
         public Builder serverName(String serverName) {
-            this.serverName = Output.of(Objects.requireNonNull(serverName));
-            return this;
+            return serverName(Output.of(serverName));
         }
+
         public Builder sqlServerDatabaseId(@Nullable Output<String> sqlServerDatabaseId) {
-            this.sqlServerDatabaseId = sqlServerDatabaseId;
+            $.sqlServerDatabaseId = sqlServerDatabaseId;
             return this;
         }
-        public Builder sqlServerDatabaseId(@Nullable String sqlServerDatabaseId) {
-            this.sqlServerDatabaseId = Codegen.ofNullable(sqlServerDatabaseId);
-            return this;
+
+        public Builder sqlServerDatabaseId(String sqlServerDatabaseId) {
+            return sqlServerDatabaseId(Output.of(sqlServerDatabaseId));
         }
+
         public Builder syncAgentId(@Nullable Output<String> syncAgentId) {
-            this.syncAgentId = syncAgentId;
+            $.syncAgentId = syncAgentId;
             return this;
         }
-        public Builder syncAgentId(@Nullable String syncAgentId) {
-            this.syncAgentId = Codegen.ofNullable(syncAgentId);
-            return this;
+
+        public Builder syncAgentId(String syncAgentId) {
+            return syncAgentId(Output.of(syncAgentId));
         }
+
         public Builder syncDirection(@Nullable Output<Either<String,SyncDirection>> syncDirection) {
-            this.syncDirection = syncDirection;
+            $.syncDirection = syncDirection;
             return this;
         }
-        public Builder syncDirection(@Nullable Either<String,SyncDirection> syncDirection) {
-            this.syncDirection = Codegen.ofNullable(syncDirection);
-            return this;
+
+        public Builder syncDirection(Either<String,SyncDirection> syncDirection) {
+            return syncDirection(Output.of(syncDirection));
         }
+
         public Builder syncGroupName(Output<String> syncGroupName) {
-            this.syncGroupName = Objects.requireNonNull(syncGroupName);
+            $.syncGroupName = syncGroupName;
             return this;
         }
+
         public Builder syncGroupName(String syncGroupName) {
-            this.syncGroupName = Output.of(Objects.requireNonNull(syncGroupName));
-            return this;
+            return syncGroupName(Output.of(syncGroupName));
         }
+
         public Builder syncMemberAzureDatabaseResourceId(@Nullable Output<String> syncMemberAzureDatabaseResourceId) {
-            this.syncMemberAzureDatabaseResourceId = syncMemberAzureDatabaseResourceId;
+            $.syncMemberAzureDatabaseResourceId = syncMemberAzureDatabaseResourceId;
             return this;
         }
-        public Builder syncMemberAzureDatabaseResourceId(@Nullable String syncMemberAzureDatabaseResourceId) {
-            this.syncMemberAzureDatabaseResourceId = Codegen.ofNullable(syncMemberAzureDatabaseResourceId);
-            return this;
+
+        public Builder syncMemberAzureDatabaseResourceId(String syncMemberAzureDatabaseResourceId) {
+            return syncMemberAzureDatabaseResourceId(Output.of(syncMemberAzureDatabaseResourceId));
         }
+
         public Builder syncMemberName(@Nullable Output<String> syncMemberName) {
-            this.syncMemberName = syncMemberName;
+            $.syncMemberName = syncMemberName;
             return this;
         }
-        public Builder syncMemberName(@Nullable String syncMemberName) {
-            this.syncMemberName = Codegen.ofNullable(syncMemberName);
-            return this;
+
+        public Builder syncMemberName(String syncMemberName) {
+            return syncMemberName(Output.of(syncMemberName));
         }
+
         public Builder usePrivateLinkConnection(@Nullable Output<Boolean> usePrivateLinkConnection) {
-            this.usePrivateLinkConnection = usePrivateLinkConnection;
+            $.usePrivateLinkConnection = usePrivateLinkConnection;
             return this;
         }
-        public Builder usePrivateLinkConnection(@Nullable Boolean usePrivateLinkConnection) {
-            this.usePrivateLinkConnection = Codegen.ofNullable(usePrivateLinkConnection);
-            return this;
+
+        public Builder usePrivateLinkConnection(Boolean usePrivateLinkConnection) {
+            return usePrivateLinkConnection(Output.of(usePrivateLinkConnection));
         }
+
         public Builder userName(@Nullable Output<String> userName) {
-            this.userName = userName;
+            $.userName = userName;
             return this;
         }
-        public Builder userName(@Nullable String userName) {
-            this.userName = Codegen.ofNullable(userName);
-            return this;
-        }        public SyncMemberArgs build() {
-            return new SyncMemberArgs(databaseName, databaseType, password, resourceGroupName, serverName, sqlServerDatabaseId, syncAgentId, syncDirection, syncGroupName, syncMemberAzureDatabaseResourceId, syncMemberName, usePrivateLinkConnection, userName);
+
+        public Builder userName(String userName) {
+            return userName(Output.of(userName));
+        }
+
+        public SyncMemberArgs build() {
+            $.databaseName = Objects.requireNonNull($.databaseName, "expected parameter 'databaseName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.serverName = Objects.requireNonNull($.serverName, "expected parameter 'serverName' to be non-null");
+            $.syncGroupName = Objects.requireNonNull($.syncGroupName, "expected parameter 'syncGroupName' to be non-null");
+            return $;
         }
     }
+
 }

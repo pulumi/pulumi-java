@@ -5,7 +5,6 @@ package com.pulumi.aws.fsx.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -15,70 +14,67 @@ public final class OpenZfsVolumeOriginSnapshotGetArgs extends com.pulumi.resourc
     public static final OpenZfsVolumeOriginSnapshotGetArgs Empty = new OpenZfsVolumeOriginSnapshotGetArgs();
 
     @Import(name="copyStrategy", required=true)
-      private final Output<String> copyStrategy;
+    private Output<String> copyStrategy;
 
     public Output<String> copyStrategy() {
         return this.copyStrategy;
     }
 
     @Import(name="snapshotArn", required=true)
-      private final Output<String> snapshotArn;
+    private Output<String> snapshotArn;
 
     public Output<String> snapshotArn() {
         return this.snapshotArn;
     }
 
-    public OpenZfsVolumeOriginSnapshotGetArgs(
-        Output<String> copyStrategy,
-        Output<String> snapshotArn) {
-        this.copyStrategy = Objects.requireNonNull(copyStrategy, "expected parameter 'copyStrategy' to be non-null");
-        this.snapshotArn = Objects.requireNonNull(snapshotArn, "expected parameter 'snapshotArn' to be non-null");
-    }
+    private OpenZfsVolumeOriginSnapshotGetArgs() {}
 
-    private OpenZfsVolumeOriginSnapshotGetArgs() {
-        this.copyStrategy = Codegen.empty();
-        this.snapshotArn = Codegen.empty();
+    private OpenZfsVolumeOriginSnapshotGetArgs(OpenZfsVolumeOriginSnapshotGetArgs $) {
+        this.copyStrategy = $.copyStrategy;
+        this.snapshotArn = $.snapshotArn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(OpenZfsVolumeOriginSnapshotGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> copyStrategy;
-        private Output<String> snapshotArn;
+        private OpenZfsVolumeOriginSnapshotGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new OpenZfsVolumeOriginSnapshotGetArgs();
         }
 
         public Builder(OpenZfsVolumeOriginSnapshotGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.copyStrategy = defaults.copyStrategy;
-    	      this.snapshotArn = defaults.snapshotArn;
+            $ = new OpenZfsVolumeOriginSnapshotGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder copyStrategy(Output<String> copyStrategy) {
-            this.copyStrategy = Objects.requireNonNull(copyStrategy);
+            $.copyStrategy = copyStrategy;
             return this;
         }
+
         public Builder copyStrategy(String copyStrategy) {
-            this.copyStrategy = Output.of(Objects.requireNonNull(copyStrategy));
-            return this;
+            return copyStrategy(Output.of(copyStrategy));
         }
+
         public Builder snapshotArn(Output<String> snapshotArn) {
-            this.snapshotArn = Objects.requireNonNull(snapshotArn);
+            $.snapshotArn = snapshotArn;
             return this;
         }
+
         public Builder snapshotArn(String snapshotArn) {
-            this.snapshotArn = Output.of(Objects.requireNonNull(snapshotArn));
-            return this;
-        }        public OpenZfsVolumeOriginSnapshotGetArgs build() {
-            return new OpenZfsVolumeOriginSnapshotGetArgs(copyStrategy, snapshotArn);
+            return snapshotArn(Output.of(snapshotArn));
+        }
+
+        public OpenZfsVolumeOriginSnapshotGetArgs build() {
+            $.copyStrategy = Objects.requireNonNull($.copyStrategy, "expected parameter 'copyStrategy' to be non-null");
+            $.snapshotArn = Objects.requireNonNull($.snapshotArn, "expected parameter 'snapshotArn' to be non-null");
+            return $;
         }
     }
+
 }

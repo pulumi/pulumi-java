@@ -20,10 +20,10 @@ public final class GetAccountAccessTokenArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="delegates")
-      private final @Nullable List<String> delegates;
+    private @Nullable List<String> delegates;
 
-    public List<String> delegates() {
-        return this.delegates == null ? List.of() : this.delegates;
+    public Optional<List<String>> delegates() {
+        return Optional.ofNullable(this.delegates);
     }
 
     /**
@@ -31,10 +31,10 @@ public final class GetAccountAccessTokenArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="lifetime")
-      private final @Nullable String lifetime;
+    private @Nullable String lifetime;
 
     public Optional<String> lifetime() {
-        return this.lifetime == null ? Optional.empty() : Optional.ofNullable(this.lifetime);
+        return Optional.ofNullable(this.lifetime);
     }
 
     /**
@@ -42,7 +42,7 @@ public final class GetAccountAccessTokenArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="scopes", required=true)
-      private final List<String> scopes;
+    private List<String> scopes;
 
     public List<String> scopes() {
         return this.scopes;
@@ -53,79 +53,72 @@ public final class GetAccountAccessTokenArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="targetServiceAccount", required=true)
-      private final String targetServiceAccount;
+    private String targetServiceAccount;
 
     public String targetServiceAccount() {
         return this.targetServiceAccount;
     }
 
-    public GetAccountAccessTokenArgs(
-        @Nullable List<String> delegates,
-        @Nullable String lifetime,
-        List<String> scopes,
-        String targetServiceAccount) {
-        this.delegates = delegates;
-        this.lifetime = lifetime;
-        this.scopes = Objects.requireNonNull(scopes, "expected parameter 'scopes' to be non-null");
-        this.targetServiceAccount = Objects.requireNonNull(targetServiceAccount, "expected parameter 'targetServiceAccount' to be non-null");
-    }
+    private GetAccountAccessTokenArgs() {}
 
-    private GetAccountAccessTokenArgs() {
-        this.delegates = List.of();
-        this.lifetime = null;
-        this.scopes = List.of();
-        this.targetServiceAccount = null;
+    private GetAccountAccessTokenArgs(GetAccountAccessTokenArgs $) {
+        this.delegates = $.delegates;
+        this.lifetime = $.lifetime;
+        this.scopes = $.scopes;
+        this.targetServiceAccount = $.targetServiceAccount;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetAccountAccessTokenArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<String> delegates;
-        private @Nullable String lifetime;
-        private List<String> scopes;
-        private String targetServiceAccount;
+        private GetAccountAccessTokenArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetAccountAccessTokenArgs();
         }
 
         public Builder(GetAccountAccessTokenArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.delegates = defaults.delegates;
-    	      this.lifetime = defaults.lifetime;
-    	      this.scopes = defaults.scopes;
-    	      this.targetServiceAccount = defaults.targetServiceAccount;
+            $ = new GetAccountAccessTokenArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder delegates(@Nullable List<String> delegates) {
-            this.delegates = delegates;
+            $.delegates = delegates;
             return this;
         }
+
         public Builder delegates(String... delegates) {
             return delegates(List.of(delegates));
         }
+
         public Builder lifetime(@Nullable String lifetime) {
-            this.lifetime = lifetime;
+            $.lifetime = lifetime;
             return this;
         }
+
         public Builder scopes(List<String> scopes) {
-            this.scopes = Objects.requireNonNull(scopes);
+            $.scopes = scopes;
             return this;
         }
+
         public Builder scopes(String... scopes) {
             return scopes(List.of(scopes));
         }
+
         public Builder targetServiceAccount(String targetServiceAccount) {
-            this.targetServiceAccount = Objects.requireNonNull(targetServiceAccount);
+            $.targetServiceAccount = targetServiceAccount;
             return this;
-        }        public GetAccountAccessTokenArgs build() {
-            return new GetAccountAccessTokenArgs(delegates, lifetime, scopes, targetServiceAccount);
+        }
+
+        public GetAccountAccessTokenArgs build() {
+            $.scopes = Objects.requireNonNull($.scopes, "expected parameter 'scopes' to be non-null");
+            $.targetServiceAccount = Objects.requireNonNull($.targetServiceAccount, "expected parameter 'targetServiceAccount' to be non-null");
+            return $;
         }
     }
+
 }

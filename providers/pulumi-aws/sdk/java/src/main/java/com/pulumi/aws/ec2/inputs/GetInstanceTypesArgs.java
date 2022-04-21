@@ -20,48 +20,48 @@ public final class GetInstanceTypesArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="filters")
-      private final @Nullable List<GetInstanceTypesFilter> filters;
+    private @Nullable List<GetInstanceTypesFilter> filters;
 
-    public List<GetInstanceTypesFilter> filters() {
-        return this.filters == null ? List.of() : this.filters;
+    public Optional<List<GetInstanceTypesFilter>> filters() {
+        return Optional.ofNullable(this.filters);
     }
 
-    public GetInstanceTypesArgs(@Nullable List<GetInstanceTypesFilter> filters) {
-        this.filters = filters;
-    }
+    private GetInstanceTypesArgs() {}
 
-    private GetInstanceTypesArgs() {
-        this.filters = List.of();
+    private GetInstanceTypesArgs(GetInstanceTypesArgs $) {
+        this.filters = $.filters;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetInstanceTypesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<GetInstanceTypesFilter> filters;
+        private GetInstanceTypesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetInstanceTypesArgs();
         }
 
         public Builder(GetInstanceTypesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.filters = defaults.filters;
+            $ = new GetInstanceTypesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder filters(@Nullable List<GetInstanceTypesFilter> filters) {
-            this.filters = filters;
+            $.filters = filters;
             return this;
         }
+
         public Builder filters(GetInstanceTypesFilter... filters) {
             return filters(List.of(filters));
-        }        public GetInstanceTypesArgs build() {
-            return new GetInstanceTypesArgs(filters);
+        }
+
+        public GetInstanceTypesArgs build() {
+            return $;
         }
     }
+
 }

@@ -9,12 +9,12 @@ import com.pulumi.awsnative.ec2.inputs.CapacityReservationFleetInstanceTypeSpeci
 import com.pulumi.awsnative.ec2.inputs.CapacityReservationFleetTagSpecificationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,216 +23,192 @@ public final class CapacityReservationFleetArgs extends com.pulumi.resources.Res
     public static final CapacityReservationFleetArgs Empty = new CapacityReservationFleetArgs();
 
     @Import(name="allocationStrategy")
-      private final @Nullable Output<String> allocationStrategy;
+    private @Nullable Output<String> allocationStrategy;
 
-    public Output<String> allocationStrategy() {
-        return this.allocationStrategy == null ? Codegen.empty() : this.allocationStrategy;
+    public Optional<Output<String>> allocationStrategy() {
+        return Optional.ofNullable(this.allocationStrategy);
     }
 
     @Import(name="endDate")
-      private final @Nullable Output<String> endDate;
+    private @Nullable Output<String> endDate;
 
-    public Output<String> endDate() {
-        return this.endDate == null ? Codegen.empty() : this.endDate;
+    public Optional<Output<String>> endDate() {
+        return Optional.ofNullable(this.endDate);
     }
 
     @Import(name="instanceMatchCriteria")
-      private final @Nullable Output<CapacityReservationFleetInstanceMatchCriteria> instanceMatchCriteria;
+    private @Nullable Output<CapacityReservationFleetInstanceMatchCriteria> instanceMatchCriteria;
 
-    public Output<CapacityReservationFleetInstanceMatchCriteria> instanceMatchCriteria() {
-        return this.instanceMatchCriteria == null ? Codegen.empty() : this.instanceMatchCriteria;
+    public Optional<Output<CapacityReservationFleetInstanceMatchCriteria>> instanceMatchCriteria() {
+        return Optional.ofNullable(this.instanceMatchCriteria);
     }
 
     @Import(name="instanceTypeSpecifications")
-      private final @Nullable Output<List<CapacityReservationFleetInstanceTypeSpecificationArgs>> instanceTypeSpecifications;
+    private @Nullable Output<List<CapacityReservationFleetInstanceTypeSpecificationArgs>> instanceTypeSpecifications;
 
-    public Output<List<CapacityReservationFleetInstanceTypeSpecificationArgs>> instanceTypeSpecifications() {
-        return this.instanceTypeSpecifications == null ? Codegen.empty() : this.instanceTypeSpecifications;
+    public Optional<Output<List<CapacityReservationFleetInstanceTypeSpecificationArgs>>> instanceTypeSpecifications() {
+        return Optional.ofNullable(this.instanceTypeSpecifications);
     }
 
     @Import(name="noRemoveEndDate")
-      private final @Nullable Output<Boolean> noRemoveEndDate;
+    private @Nullable Output<Boolean> noRemoveEndDate;
 
-    public Output<Boolean> noRemoveEndDate() {
-        return this.noRemoveEndDate == null ? Codegen.empty() : this.noRemoveEndDate;
+    public Optional<Output<Boolean>> noRemoveEndDate() {
+        return Optional.ofNullable(this.noRemoveEndDate);
     }
 
     @Import(name="removeEndDate")
-      private final @Nullable Output<Boolean> removeEndDate;
+    private @Nullable Output<Boolean> removeEndDate;
 
-    public Output<Boolean> removeEndDate() {
-        return this.removeEndDate == null ? Codegen.empty() : this.removeEndDate;
+    public Optional<Output<Boolean>> removeEndDate() {
+        return Optional.ofNullable(this.removeEndDate);
     }
 
     @Import(name="tagSpecifications")
-      private final @Nullable Output<List<CapacityReservationFleetTagSpecificationArgs>> tagSpecifications;
+    private @Nullable Output<List<CapacityReservationFleetTagSpecificationArgs>> tagSpecifications;
 
-    public Output<List<CapacityReservationFleetTagSpecificationArgs>> tagSpecifications() {
-        return this.tagSpecifications == null ? Codegen.empty() : this.tagSpecifications;
+    public Optional<Output<List<CapacityReservationFleetTagSpecificationArgs>>> tagSpecifications() {
+        return Optional.ofNullable(this.tagSpecifications);
     }
 
     @Import(name="tenancy")
-      private final @Nullable Output<CapacityReservationFleetTenancy> tenancy;
+    private @Nullable Output<CapacityReservationFleetTenancy> tenancy;
 
-    public Output<CapacityReservationFleetTenancy> tenancy() {
-        return this.tenancy == null ? Codegen.empty() : this.tenancy;
+    public Optional<Output<CapacityReservationFleetTenancy>> tenancy() {
+        return Optional.ofNullable(this.tenancy);
     }
 
     @Import(name="totalTargetCapacity")
-      private final @Nullable Output<Integer> totalTargetCapacity;
+    private @Nullable Output<Integer> totalTargetCapacity;
 
-    public Output<Integer> totalTargetCapacity() {
-        return this.totalTargetCapacity == null ? Codegen.empty() : this.totalTargetCapacity;
+    public Optional<Output<Integer>> totalTargetCapacity() {
+        return Optional.ofNullable(this.totalTargetCapacity);
     }
 
-    public CapacityReservationFleetArgs(
-        @Nullable Output<String> allocationStrategy,
-        @Nullable Output<String> endDate,
-        @Nullable Output<CapacityReservationFleetInstanceMatchCriteria> instanceMatchCriteria,
-        @Nullable Output<List<CapacityReservationFleetInstanceTypeSpecificationArgs>> instanceTypeSpecifications,
-        @Nullable Output<Boolean> noRemoveEndDate,
-        @Nullable Output<Boolean> removeEndDate,
-        @Nullable Output<List<CapacityReservationFleetTagSpecificationArgs>> tagSpecifications,
-        @Nullable Output<CapacityReservationFleetTenancy> tenancy,
-        @Nullable Output<Integer> totalTargetCapacity) {
-        this.allocationStrategy = allocationStrategy;
-        this.endDate = endDate;
-        this.instanceMatchCriteria = instanceMatchCriteria;
-        this.instanceTypeSpecifications = instanceTypeSpecifications;
-        this.noRemoveEndDate = noRemoveEndDate;
-        this.removeEndDate = removeEndDate;
-        this.tagSpecifications = tagSpecifications;
-        this.tenancy = tenancy;
-        this.totalTargetCapacity = totalTargetCapacity;
-    }
+    private CapacityReservationFleetArgs() {}
 
-    private CapacityReservationFleetArgs() {
-        this.allocationStrategy = Codegen.empty();
-        this.endDate = Codegen.empty();
-        this.instanceMatchCriteria = Codegen.empty();
-        this.instanceTypeSpecifications = Codegen.empty();
-        this.noRemoveEndDate = Codegen.empty();
-        this.removeEndDate = Codegen.empty();
-        this.tagSpecifications = Codegen.empty();
-        this.tenancy = Codegen.empty();
-        this.totalTargetCapacity = Codegen.empty();
+    private CapacityReservationFleetArgs(CapacityReservationFleetArgs $) {
+        this.allocationStrategy = $.allocationStrategy;
+        this.endDate = $.endDate;
+        this.instanceMatchCriteria = $.instanceMatchCriteria;
+        this.instanceTypeSpecifications = $.instanceTypeSpecifications;
+        this.noRemoveEndDate = $.noRemoveEndDate;
+        this.removeEndDate = $.removeEndDate;
+        this.tagSpecifications = $.tagSpecifications;
+        this.tenancy = $.tenancy;
+        this.totalTargetCapacity = $.totalTargetCapacity;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CapacityReservationFleetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> allocationStrategy;
-        private @Nullable Output<String> endDate;
-        private @Nullable Output<CapacityReservationFleetInstanceMatchCriteria> instanceMatchCriteria;
-        private @Nullable Output<List<CapacityReservationFleetInstanceTypeSpecificationArgs>> instanceTypeSpecifications;
-        private @Nullable Output<Boolean> noRemoveEndDate;
-        private @Nullable Output<Boolean> removeEndDate;
-        private @Nullable Output<List<CapacityReservationFleetTagSpecificationArgs>> tagSpecifications;
-        private @Nullable Output<CapacityReservationFleetTenancy> tenancy;
-        private @Nullable Output<Integer> totalTargetCapacity;
+        private CapacityReservationFleetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CapacityReservationFleetArgs();
         }
 
         public Builder(CapacityReservationFleetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.allocationStrategy = defaults.allocationStrategy;
-    	      this.endDate = defaults.endDate;
-    	      this.instanceMatchCriteria = defaults.instanceMatchCriteria;
-    	      this.instanceTypeSpecifications = defaults.instanceTypeSpecifications;
-    	      this.noRemoveEndDate = defaults.noRemoveEndDate;
-    	      this.removeEndDate = defaults.removeEndDate;
-    	      this.tagSpecifications = defaults.tagSpecifications;
-    	      this.tenancy = defaults.tenancy;
-    	      this.totalTargetCapacity = defaults.totalTargetCapacity;
+            $ = new CapacityReservationFleetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder allocationStrategy(@Nullable Output<String> allocationStrategy) {
-            this.allocationStrategy = allocationStrategy;
+            $.allocationStrategy = allocationStrategy;
             return this;
         }
-        public Builder allocationStrategy(@Nullable String allocationStrategy) {
-            this.allocationStrategy = Codegen.ofNullable(allocationStrategy);
-            return this;
+
+        public Builder allocationStrategy(String allocationStrategy) {
+            return allocationStrategy(Output.of(allocationStrategy));
         }
+
         public Builder endDate(@Nullable Output<String> endDate) {
-            this.endDate = endDate;
+            $.endDate = endDate;
             return this;
         }
-        public Builder endDate(@Nullable String endDate) {
-            this.endDate = Codegen.ofNullable(endDate);
-            return this;
+
+        public Builder endDate(String endDate) {
+            return endDate(Output.of(endDate));
         }
+
         public Builder instanceMatchCriteria(@Nullable Output<CapacityReservationFleetInstanceMatchCriteria> instanceMatchCriteria) {
-            this.instanceMatchCriteria = instanceMatchCriteria;
+            $.instanceMatchCriteria = instanceMatchCriteria;
             return this;
         }
-        public Builder instanceMatchCriteria(@Nullable CapacityReservationFleetInstanceMatchCriteria instanceMatchCriteria) {
-            this.instanceMatchCriteria = Codegen.ofNullable(instanceMatchCriteria);
-            return this;
+
+        public Builder instanceMatchCriteria(CapacityReservationFleetInstanceMatchCriteria instanceMatchCriteria) {
+            return instanceMatchCriteria(Output.of(instanceMatchCriteria));
         }
+
         public Builder instanceTypeSpecifications(@Nullable Output<List<CapacityReservationFleetInstanceTypeSpecificationArgs>> instanceTypeSpecifications) {
-            this.instanceTypeSpecifications = instanceTypeSpecifications;
+            $.instanceTypeSpecifications = instanceTypeSpecifications;
             return this;
         }
-        public Builder instanceTypeSpecifications(@Nullable List<CapacityReservationFleetInstanceTypeSpecificationArgs> instanceTypeSpecifications) {
-            this.instanceTypeSpecifications = Codegen.ofNullable(instanceTypeSpecifications);
-            return this;
+
+        public Builder instanceTypeSpecifications(List<CapacityReservationFleetInstanceTypeSpecificationArgs> instanceTypeSpecifications) {
+            return instanceTypeSpecifications(Output.of(instanceTypeSpecifications));
         }
+
         public Builder instanceTypeSpecifications(CapacityReservationFleetInstanceTypeSpecificationArgs... instanceTypeSpecifications) {
             return instanceTypeSpecifications(List.of(instanceTypeSpecifications));
         }
+
         public Builder noRemoveEndDate(@Nullable Output<Boolean> noRemoveEndDate) {
-            this.noRemoveEndDate = noRemoveEndDate;
+            $.noRemoveEndDate = noRemoveEndDate;
             return this;
         }
-        public Builder noRemoveEndDate(@Nullable Boolean noRemoveEndDate) {
-            this.noRemoveEndDate = Codegen.ofNullable(noRemoveEndDate);
-            return this;
+
+        public Builder noRemoveEndDate(Boolean noRemoveEndDate) {
+            return noRemoveEndDate(Output.of(noRemoveEndDate));
         }
+
         public Builder removeEndDate(@Nullable Output<Boolean> removeEndDate) {
-            this.removeEndDate = removeEndDate;
+            $.removeEndDate = removeEndDate;
             return this;
         }
-        public Builder removeEndDate(@Nullable Boolean removeEndDate) {
-            this.removeEndDate = Codegen.ofNullable(removeEndDate);
-            return this;
+
+        public Builder removeEndDate(Boolean removeEndDate) {
+            return removeEndDate(Output.of(removeEndDate));
         }
+
         public Builder tagSpecifications(@Nullable Output<List<CapacityReservationFleetTagSpecificationArgs>> tagSpecifications) {
-            this.tagSpecifications = tagSpecifications;
+            $.tagSpecifications = tagSpecifications;
             return this;
         }
-        public Builder tagSpecifications(@Nullable List<CapacityReservationFleetTagSpecificationArgs> tagSpecifications) {
-            this.tagSpecifications = Codegen.ofNullable(tagSpecifications);
-            return this;
+
+        public Builder tagSpecifications(List<CapacityReservationFleetTagSpecificationArgs> tagSpecifications) {
+            return tagSpecifications(Output.of(tagSpecifications));
         }
+
         public Builder tagSpecifications(CapacityReservationFleetTagSpecificationArgs... tagSpecifications) {
             return tagSpecifications(List.of(tagSpecifications));
         }
+
         public Builder tenancy(@Nullable Output<CapacityReservationFleetTenancy> tenancy) {
-            this.tenancy = tenancy;
+            $.tenancy = tenancy;
             return this;
         }
-        public Builder tenancy(@Nullable CapacityReservationFleetTenancy tenancy) {
-            this.tenancy = Codegen.ofNullable(tenancy);
-            return this;
+
+        public Builder tenancy(CapacityReservationFleetTenancy tenancy) {
+            return tenancy(Output.of(tenancy));
         }
+
         public Builder totalTargetCapacity(@Nullable Output<Integer> totalTargetCapacity) {
-            this.totalTargetCapacity = totalTargetCapacity;
+            $.totalTargetCapacity = totalTargetCapacity;
             return this;
         }
-        public Builder totalTargetCapacity(@Nullable Integer totalTargetCapacity) {
-            this.totalTargetCapacity = Codegen.ofNullable(totalTargetCapacity);
-            return this;
-        }        public CapacityReservationFleetArgs build() {
-            return new CapacityReservationFleetArgs(allocationStrategy, endDate, instanceMatchCriteria, instanceTypeSpecifications, noRemoveEndDate, removeEndDate, tagSpecifications, tenancy, totalTargetCapacity);
+
+        public Builder totalTargetCapacity(Integer totalTargetCapacity) {
+            return totalTargetCapacity(Output.of(totalTargetCapacity));
+        }
+
+        public CapacityReservationFleetArgs build() {
+            return $;
         }
     }
+
 }

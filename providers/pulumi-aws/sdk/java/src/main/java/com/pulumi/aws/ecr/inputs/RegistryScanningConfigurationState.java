@@ -6,10 +6,10 @@ package com.pulumi.aws.ecr.inputs;
 import com.pulumi.aws.ecr.inputs.RegistryScanningConfigurationRuleGetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class RegistryScanningConfigurationState extends com.pulumi.resourc
      * 
      */
     @Import(name="registryId")
-      private final @Nullable Output<String> registryId;
+    private @Nullable Output<String> registryId;
 
-    public Output<String> registryId() {
-        return this.registryId == null ? Codegen.empty() : this.registryId;
+    public Optional<Output<String>> registryId() {
+        return Optional.ofNullable(this.registryId);
     }
 
     /**
@@ -33,10 +33,10 @@ public final class RegistryScanningConfigurationState extends com.pulumi.resourc
      * 
      */
     @Import(name="rules")
-      private final @Nullable Output<List<RegistryScanningConfigurationRuleGetArgs>> rules;
+    private @Nullable Output<List<RegistryScanningConfigurationRuleGetArgs>> rules;
 
-    public Output<List<RegistryScanningConfigurationRuleGetArgs>> rules() {
-        return this.rules == null ? Codegen.empty() : this.rules;
+    public Optional<Output<List<RegistryScanningConfigurationRuleGetArgs>>> rules() {
+        return Optional.ofNullable(this.rules);
     }
 
     /**
@@ -44,79 +44,72 @@ public final class RegistryScanningConfigurationState extends com.pulumi.resourc
      * 
      */
     @Import(name="scanType")
-      private final @Nullable Output<String> scanType;
+    private @Nullable Output<String> scanType;
 
-    public Output<String> scanType() {
-        return this.scanType == null ? Codegen.empty() : this.scanType;
+    public Optional<Output<String>> scanType() {
+        return Optional.ofNullable(this.scanType);
     }
 
-    public RegistryScanningConfigurationState(
-        @Nullable Output<String> registryId,
-        @Nullable Output<List<RegistryScanningConfigurationRuleGetArgs>> rules,
-        @Nullable Output<String> scanType) {
-        this.registryId = registryId;
-        this.rules = rules;
-        this.scanType = scanType;
-    }
+    private RegistryScanningConfigurationState() {}
 
-    private RegistryScanningConfigurationState() {
-        this.registryId = Codegen.empty();
-        this.rules = Codegen.empty();
-        this.scanType = Codegen.empty();
+    private RegistryScanningConfigurationState(RegistryScanningConfigurationState $) {
+        this.registryId = $.registryId;
+        this.rules = $.rules;
+        this.scanType = $.scanType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RegistryScanningConfigurationState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> registryId;
-        private @Nullable Output<List<RegistryScanningConfigurationRuleGetArgs>> rules;
-        private @Nullable Output<String> scanType;
+        private RegistryScanningConfigurationState $;
 
         public Builder() {
-    	      // Empty
+            $ = new RegistryScanningConfigurationState();
         }
 
         public Builder(RegistryScanningConfigurationState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.registryId = defaults.registryId;
-    	      this.rules = defaults.rules;
-    	      this.scanType = defaults.scanType;
+            $ = new RegistryScanningConfigurationState(Objects.requireNonNull(defaults));
         }
 
         public Builder registryId(@Nullable Output<String> registryId) {
-            this.registryId = registryId;
+            $.registryId = registryId;
             return this;
         }
-        public Builder registryId(@Nullable String registryId) {
-            this.registryId = Codegen.ofNullable(registryId);
-            return this;
+
+        public Builder registryId(String registryId) {
+            return registryId(Output.of(registryId));
         }
+
         public Builder rules(@Nullable Output<List<RegistryScanningConfigurationRuleGetArgs>> rules) {
-            this.rules = rules;
+            $.rules = rules;
             return this;
         }
-        public Builder rules(@Nullable List<RegistryScanningConfigurationRuleGetArgs> rules) {
-            this.rules = Codegen.ofNullable(rules);
-            return this;
+
+        public Builder rules(List<RegistryScanningConfigurationRuleGetArgs> rules) {
+            return rules(Output.of(rules));
         }
+
         public Builder rules(RegistryScanningConfigurationRuleGetArgs... rules) {
             return rules(List.of(rules));
         }
+
         public Builder scanType(@Nullable Output<String> scanType) {
-            this.scanType = scanType;
+            $.scanType = scanType;
             return this;
         }
-        public Builder scanType(@Nullable String scanType) {
-            this.scanType = Codegen.ofNullable(scanType);
-            return this;
-        }        public RegistryScanningConfigurationState build() {
-            return new RegistryScanningConfigurationState(registryId, rules, scanType);
+
+        public Builder scanType(String scanType) {
+            return scanType(Output.of(scanType));
+        }
+
+        public RegistryScanningConfigurationState build() {
+            return $;
         }
     }
+
 }

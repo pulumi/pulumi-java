@@ -24,10 +24,10 @@ public final class CustomImagePropertiesCustomResponse extends com.pulumi.resour
      * 
      */
     @Import(name="imageName")
-      private final @Nullable String imageName;
+    private @Nullable String imageName;
 
     public Optional<String> imageName() {
-        return this.imageName == null ? Optional.empty() : Optional.ofNullable(this.imageName);
+        return Optional.ofNullable(this.imageName);
     }
 
     /**
@@ -35,7 +35,7 @@ public final class CustomImagePropertiesCustomResponse extends com.pulumi.resour
      * 
      */
     @Import(name="osType", required=true)
-      private final String osType;
+    private String osType;
 
     public String osType() {
         return this.osType;
@@ -46,64 +46,57 @@ public final class CustomImagePropertiesCustomResponse extends com.pulumi.resour
      * 
      */
     @Import(name="sysPrep")
-      private final @Nullable Boolean sysPrep;
+    private @Nullable Boolean sysPrep;
 
     public Optional<Boolean> sysPrep() {
-        return this.sysPrep == null ? Optional.empty() : Optional.ofNullable(this.sysPrep);
+        return Optional.ofNullable(this.sysPrep);
     }
 
-    public CustomImagePropertiesCustomResponse(
-        @Nullable String imageName,
-        String osType,
-        @Nullable Boolean sysPrep) {
-        this.imageName = imageName;
-        this.osType = Objects.requireNonNull(osType, "expected parameter 'osType' to be non-null");
-        this.sysPrep = sysPrep;
-    }
+    private CustomImagePropertiesCustomResponse() {}
 
-    private CustomImagePropertiesCustomResponse() {
-        this.imageName = null;
-        this.osType = null;
-        this.sysPrep = null;
+    private CustomImagePropertiesCustomResponse(CustomImagePropertiesCustomResponse $) {
+        this.imageName = $.imageName;
+        this.osType = $.osType;
+        this.sysPrep = $.sysPrep;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CustomImagePropertiesCustomResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String imageName;
-        private String osType;
-        private @Nullable Boolean sysPrep;
+        private CustomImagePropertiesCustomResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new CustomImagePropertiesCustomResponse();
         }
 
         public Builder(CustomImagePropertiesCustomResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.imageName = defaults.imageName;
-    	      this.osType = defaults.osType;
-    	      this.sysPrep = defaults.sysPrep;
+            $ = new CustomImagePropertiesCustomResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder imageName(@Nullable String imageName) {
-            this.imageName = imageName;
+            $.imageName = imageName;
             return this;
         }
+
         public Builder osType(String osType) {
-            this.osType = Objects.requireNonNull(osType);
+            $.osType = osType;
             return this;
         }
+
         public Builder sysPrep(@Nullable Boolean sysPrep) {
-            this.sysPrep = sysPrep;
+            $.sysPrep = sysPrep;
             return this;
-        }        public CustomImagePropertiesCustomResponse build() {
-            return new CustomImagePropertiesCustomResponse(imageName, osType, sysPrep);
+        }
+
+        public CustomImagePropertiesCustomResponse build() {
+            $.osType = Objects.requireNonNull($.osType, "expected parameter 'osType' to be non-null");
+            return $;
         }
     }
+
 }

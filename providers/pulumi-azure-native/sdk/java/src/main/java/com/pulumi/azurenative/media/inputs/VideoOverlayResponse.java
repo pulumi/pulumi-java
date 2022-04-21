@@ -26,10 +26,10 @@ public final class VideoOverlayResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="audioGainLevel")
-      private final @Nullable Double audioGainLevel;
+    private @Nullable Double audioGainLevel;
 
     public Optional<Double> audioGainLevel() {
-        return this.audioGainLevel == null ? Optional.empty() : Optional.ofNullable(this.audioGainLevel);
+        return Optional.ofNullable(this.audioGainLevel);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class VideoOverlayResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="cropRectangle")
-      private final @Nullable RectangleResponse cropRectangle;
+    private @Nullable RectangleResponse cropRectangle;
 
     public Optional<RectangleResponse> cropRectangle() {
-        return this.cropRectangle == null ? Optional.empty() : Optional.ofNullable(this.cropRectangle);
+        return Optional.ofNullable(this.cropRectangle);
     }
 
     /**
@@ -48,10 +48,10 @@ public final class VideoOverlayResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="end")
-      private final @Nullable String end;
+    private @Nullable String end;
 
     public Optional<String> end() {
-        return this.end == null ? Optional.empty() : Optional.ofNullable(this.end);
+        return Optional.ofNullable(this.end);
     }
 
     /**
@@ -59,10 +59,10 @@ public final class VideoOverlayResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="fadeInDuration")
-      private final @Nullable String fadeInDuration;
+    private @Nullable String fadeInDuration;
 
     public Optional<String> fadeInDuration() {
-        return this.fadeInDuration == null ? Optional.empty() : Optional.ofNullable(this.fadeInDuration);
+        return Optional.ofNullable(this.fadeInDuration);
     }
 
     /**
@@ -70,10 +70,10 @@ public final class VideoOverlayResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="fadeOutDuration")
-      private final @Nullable String fadeOutDuration;
+    private @Nullable String fadeOutDuration;
 
     public Optional<String> fadeOutDuration() {
-        return this.fadeOutDuration == null ? Optional.empty() : Optional.ofNullable(this.fadeOutDuration);
+        return Optional.ofNullable(this.fadeOutDuration);
     }
 
     /**
@@ -81,7 +81,7 @@ public final class VideoOverlayResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="inputLabel", required=true)
-      private final String inputLabel;
+    private String inputLabel;
 
     public String inputLabel() {
         return this.inputLabel;
@@ -93,7 +93,7 @@ public final class VideoOverlayResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="odataType", required=true)
-      private final String odataType;
+    private String odataType;
 
     public String odataType() {
         return this.odataType;
@@ -104,10 +104,10 @@ public final class VideoOverlayResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="opacity")
-      private final @Nullable Double opacity;
+    private @Nullable Double opacity;
 
     public Optional<Double> opacity() {
-        return this.opacity == null ? Optional.empty() : Optional.ofNullable(this.opacity);
+        return Optional.ofNullable(this.opacity);
     }
 
     /**
@@ -115,10 +115,10 @@ public final class VideoOverlayResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="position")
-      private final @Nullable RectangleResponse position;
+    private @Nullable RectangleResponse position;
 
     public Optional<RectangleResponse> position() {
-        return this.position == null ? Optional.empty() : Optional.ofNullable(this.position);
+        return Optional.ofNullable(this.position);
     }
 
     /**
@@ -126,127 +126,100 @@ public final class VideoOverlayResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="start")
-      private final @Nullable String start;
+    private @Nullable String start;
 
     public Optional<String> start() {
-        return this.start == null ? Optional.empty() : Optional.ofNullable(this.start);
+        return Optional.ofNullable(this.start);
     }
 
-    public VideoOverlayResponse(
-        @Nullable Double audioGainLevel,
-        @Nullable RectangleResponse cropRectangle,
-        @Nullable String end,
-        @Nullable String fadeInDuration,
-        @Nullable String fadeOutDuration,
-        String inputLabel,
-        String odataType,
-        @Nullable Double opacity,
-        @Nullable RectangleResponse position,
-        @Nullable String start) {
-        this.audioGainLevel = audioGainLevel;
-        this.cropRectangle = cropRectangle;
-        this.end = end;
-        this.fadeInDuration = fadeInDuration;
-        this.fadeOutDuration = fadeOutDuration;
-        this.inputLabel = Objects.requireNonNull(inputLabel, "expected parameter 'inputLabel' to be non-null");
-        this.odataType = Codegen.stringProp("odataType").arg(odataType).require();
-        this.opacity = opacity;
-        this.position = position;
-        this.start = start;
-    }
+    private VideoOverlayResponse() {}
 
-    private VideoOverlayResponse() {
-        this.audioGainLevel = null;
-        this.cropRectangle = null;
-        this.end = null;
-        this.fadeInDuration = null;
-        this.fadeOutDuration = null;
-        this.inputLabel = null;
-        this.odataType = null;
-        this.opacity = null;
-        this.position = null;
-        this.start = null;
+    private VideoOverlayResponse(VideoOverlayResponse $) {
+        this.audioGainLevel = $.audioGainLevel;
+        this.cropRectangle = $.cropRectangle;
+        this.end = $.end;
+        this.fadeInDuration = $.fadeInDuration;
+        this.fadeOutDuration = $.fadeOutDuration;
+        this.inputLabel = $.inputLabel;
+        this.odataType = $.odataType;
+        this.opacity = $.opacity;
+        this.position = $.position;
+        this.start = $.start;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VideoOverlayResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Double audioGainLevel;
-        private @Nullable RectangleResponse cropRectangle;
-        private @Nullable String end;
-        private @Nullable String fadeInDuration;
-        private @Nullable String fadeOutDuration;
-        private String inputLabel;
-        private String odataType;
-        private @Nullable Double opacity;
-        private @Nullable RectangleResponse position;
-        private @Nullable String start;
+        private VideoOverlayResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new VideoOverlayResponse();
         }
 
         public Builder(VideoOverlayResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.audioGainLevel = defaults.audioGainLevel;
-    	      this.cropRectangle = defaults.cropRectangle;
-    	      this.end = defaults.end;
-    	      this.fadeInDuration = defaults.fadeInDuration;
-    	      this.fadeOutDuration = defaults.fadeOutDuration;
-    	      this.inputLabel = defaults.inputLabel;
-    	      this.odataType = defaults.odataType;
-    	      this.opacity = defaults.opacity;
-    	      this.position = defaults.position;
-    	      this.start = defaults.start;
+            $ = new VideoOverlayResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder audioGainLevel(@Nullable Double audioGainLevel) {
-            this.audioGainLevel = audioGainLevel;
+            $.audioGainLevel = audioGainLevel;
             return this;
         }
+
         public Builder cropRectangle(@Nullable RectangleResponse cropRectangle) {
-            this.cropRectangle = cropRectangle;
+            $.cropRectangle = cropRectangle;
             return this;
         }
+
         public Builder end(@Nullable String end) {
-            this.end = end;
+            $.end = end;
             return this;
         }
+
         public Builder fadeInDuration(@Nullable String fadeInDuration) {
-            this.fadeInDuration = fadeInDuration;
+            $.fadeInDuration = fadeInDuration;
             return this;
         }
+
         public Builder fadeOutDuration(@Nullable String fadeOutDuration) {
-            this.fadeOutDuration = fadeOutDuration;
+            $.fadeOutDuration = fadeOutDuration;
             return this;
         }
+
         public Builder inputLabel(String inputLabel) {
-            this.inputLabel = Objects.requireNonNull(inputLabel);
+            $.inputLabel = inputLabel;
             return this;
         }
+
         public Builder odataType(String odataType) {
-            this.odataType = Objects.requireNonNull(odataType);
+            $.odataType = odataType;
             return this;
         }
+
         public Builder opacity(@Nullable Double opacity) {
-            this.opacity = opacity;
+            $.opacity = opacity;
             return this;
         }
+
         public Builder position(@Nullable RectangleResponse position) {
-            this.position = position;
+            $.position = position;
             return this;
         }
+
         public Builder start(@Nullable String start) {
-            this.start = start;
+            $.start = start;
             return this;
-        }        public VideoOverlayResponse build() {
-            return new VideoOverlayResponse(audioGainLevel, cropRectangle, end, fadeInDuration, fadeOutDuration, inputLabel, odataType, opacity, position, start);
+        }
+
+        public VideoOverlayResponse build() {
+            $.inputLabel = Objects.requireNonNull($.inputLabel, "expected parameter 'inputLabel' to be non-null");
+            $.odataType = Codegen.stringProp("odataType").arg($.odataType).require();
+            return $;
         }
     }
+
 }

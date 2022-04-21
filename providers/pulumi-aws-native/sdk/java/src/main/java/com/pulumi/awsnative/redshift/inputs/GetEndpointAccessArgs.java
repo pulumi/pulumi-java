@@ -17,45 +17,45 @@ public final class GetEndpointAccessArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="endpointName", required=true)
-      private final String endpointName;
+    private String endpointName;
 
     public String endpointName() {
         return this.endpointName;
     }
 
-    public GetEndpointAccessArgs(String endpointName) {
-        this.endpointName = Objects.requireNonNull(endpointName, "expected parameter 'endpointName' to be non-null");
-    }
+    private GetEndpointAccessArgs() {}
 
-    private GetEndpointAccessArgs() {
-        this.endpointName = null;
+    private GetEndpointAccessArgs(GetEndpointAccessArgs $) {
+        this.endpointName = $.endpointName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetEndpointAccessArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String endpointName;
+        private GetEndpointAccessArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetEndpointAccessArgs();
         }
 
         public Builder(GetEndpointAccessArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.endpointName = defaults.endpointName;
+            $ = new GetEndpointAccessArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder endpointName(String endpointName) {
-            this.endpointName = Objects.requireNonNull(endpointName);
+            $.endpointName = endpointName;
             return this;
-        }        public GetEndpointAccessArgs build() {
-            return new GetEndpointAccessArgs(endpointName);
+        }
+
+        public GetEndpointAccessArgs build() {
+            $.endpointName = Objects.requireNonNull($.endpointName, "expected parameter 'endpointName' to be non-null");
+            return $;
         }
     }
+
 }

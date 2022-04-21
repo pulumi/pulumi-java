@@ -5,12 +5,12 @@ package com.pulumi.random.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,10 @@ public final class RandomIdState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="b64Std")
-      private final @Nullable Output<String> b64Std;
+    private @Nullable Output<String> b64Std;
 
-    public Output<String> b64Std() {
-        return this.b64Std == null ? Codegen.empty() : this.b64Std;
+    public Optional<Output<String>> b64Std() {
+        return Optional.ofNullable(this.b64Std);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class RandomIdState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="b64Url")
-      private final @Nullable Output<String> b64Url;
+    private @Nullable Output<String> b64Url;
 
-    public Output<String> b64Url() {
-        return this.b64Url == null ? Codegen.empty() : this.b64Url;
+    public Optional<Output<String>> b64Url() {
+        return Optional.ofNullable(this.b64Url);
     }
 
     /**
@@ -45,10 +45,10 @@ public final class RandomIdState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="byteLength")
-      private final @Nullable Output<Integer> byteLength;
+    private @Nullable Output<Integer> byteLength;
 
-    public Output<Integer> byteLength() {
-        return this.byteLength == null ? Codegen.empty() : this.byteLength;
+    public Optional<Output<Integer>> byteLength() {
+        return Optional.ofNullable(this.byteLength);
     }
 
     /**
@@ -56,10 +56,10 @@ public final class RandomIdState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="dec")
-      private final @Nullable Output<String> dec;
+    private @Nullable Output<String> dec;
 
-    public Output<String> dec() {
-        return this.dec == null ? Codegen.empty() : this.dec;
+    public Optional<Output<String>> dec() {
+        return Optional.ofNullable(this.dec);
     }
 
     /**
@@ -67,10 +67,10 @@ public final class RandomIdState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="hex")
-      private final @Nullable Output<String> hex;
+    private @Nullable Output<String> hex;
 
-    public Output<String> hex() {
-        return this.hex == null ? Codegen.empty() : this.hex;
+    public Optional<Output<String>> hex() {
+        return Optional.ofNullable(this.hex);
     }
 
     /**
@@ -78,10 +78,10 @@ public final class RandomIdState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="keepers")
-      private final @Nullable Output<Map<String,Object>> keepers;
+    private @Nullable Output<Map<String,Object>> keepers;
 
-    public Output<Map<String,Object>> keepers() {
-        return this.keepers == null ? Codegen.empty() : this.keepers;
+    public Optional<Output<Map<String,Object>>> keepers() {
+        return Optional.ofNullable(this.keepers);
     }
 
     /**
@@ -89,128 +89,108 @@ public final class RandomIdState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="prefix")
-      private final @Nullable Output<String> prefix;
+    private @Nullable Output<String> prefix;
 
-    public Output<String> prefix() {
-        return this.prefix == null ? Codegen.empty() : this.prefix;
+    public Optional<Output<String>> prefix() {
+        return Optional.ofNullable(this.prefix);
     }
 
-    public RandomIdState(
-        @Nullable Output<String> b64Std,
-        @Nullable Output<String> b64Url,
-        @Nullable Output<Integer> byteLength,
-        @Nullable Output<String> dec,
-        @Nullable Output<String> hex,
-        @Nullable Output<Map<String,Object>> keepers,
-        @Nullable Output<String> prefix) {
-        this.b64Std = b64Std;
-        this.b64Url = b64Url;
-        this.byteLength = byteLength;
-        this.dec = dec;
-        this.hex = hex;
-        this.keepers = keepers;
-        this.prefix = prefix;
-    }
+    private RandomIdState() {}
 
-    private RandomIdState() {
-        this.b64Std = Codegen.empty();
-        this.b64Url = Codegen.empty();
-        this.byteLength = Codegen.empty();
-        this.dec = Codegen.empty();
-        this.hex = Codegen.empty();
-        this.keepers = Codegen.empty();
-        this.prefix = Codegen.empty();
+    private RandomIdState(RandomIdState $) {
+        this.b64Std = $.b64Std;
+        this.b64Url = $.b64Url;
+        this.byteLength = $.byteLength;
+        this.dec = $.dec;
+        this.hex = $.hex;
+        this.keepers = $.keepers;
+        this.prefix = $.prefix;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RandomIdState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> b64Std;
-        private @Nullable Output<String> b64Url;
-        private @Nullable Output<Integer> byteLength;
-        private @Nullable Output<String> dec;
-        private @Nullable Output<String> hex;
-        private @Nullable Output<Map<String,Object>> keepers;
-        private @Nullable Output<String> prefix;
+        private RandomIdState $;
 
         public Builder() {
-    	      // Empty
+            $ = new RandomIdState();
         }
 
         public Builder(RandomIdState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.b64Std = defaults.b64Std;
-    	      this.b64Url = defaults.b64Url;
-    	      this.byteLength = defaults.byteLength;
-    	      this.dec = defaults.dec;
-    	      this.hex = defaults.hex;
-    	      this.keepers = defaults.keepers;
-    	      this.prefix = defaults.prefix;
+            $ = new RandomIdState(Objects.requireNonNull(defaults));
         }
 
         public Builder b64Std(@Nullable Output<String> b64Std) {
-            this.b64Std = b64Std;
+            $.b64Std = b64Std;
             return this;
         }
-        public Builder b64Std(@Nullable String b64Std) {
-            this.b64Std = Codegen.ofNullable(b64Std);
-            return this;
+
+        public Builder b64Std(String b64Std) {
+            return b64Std(Output.of(b64Std));
         }
+
         public Builder b64Url(@Nullable Output<String> b64Url) {
-            this.b64Url = b64Url;
+            $.b64Url = b64Url;
             return this;
         }
-        public Builder b64Url(@Nullable String b64Url) {
-            this.b64Url = Codegen.ofNullable(b64Url);
-            return this;
+
+        public Builder b64Url(String b64Url) {
+            return b64Url(Output.of(b64Url));
         }
+
         public Builder byteLength(@Nullable Output<Integer> byteLength) {
-            this.byteLength = byteLength;
+            $.byteLength = byteLength;
             return this;
         }
-        public Builder byteLength(@Nullable Integer byteLength) {
-            this.byteLength = Codegen.ofNullable(byteLength);
-            return this;
+
+        public Builder byteLength(Integer byteLength) {
+            return byteLength(Output.of(byteLength));
         }
+
         public Builder dec(@Nullable Output<String> dec) {
-            this.dec = dec;
+            $.dec = dec;
             return this;
         }
-        public Builder dec(@Nullable String dec) {
-            this.dec = Codegen.ofNullable(dec);
-            return this;
+
+        public Builder dec(String dec) {
+            return dec(Output.of(dec));
         }
+
         public Builder hex(@Nullable Output<String> hex) {
-            this.hex = hex;
+            $.hex = hex;
             return this;
         }
-        public Builder hex(@Nullable String hex) {
-            this.hex = Codegen.ofNullable(hex);
-            return this;
+
+        public Builder hex(String hex) {
+            return hex(Output.of(hex));
         }
+
         public Builder keepers(@Nullable Output<Map<String,Object>> keepers) {
-            this.keepers = keepers;
+            $.keepers = keepers;
             return this;
         }
-        public Builder keepers(@Nullable Map<String,Object> keepers) {
-            this.keepers = Codegen.ofNullable(keepers);
-            return this;
+
+        public Builder keepers(Map<String,Object> keepers) {
+            return keepers(Output.of(keepers));
         }
+
         public Builder prefix(@Nullable Output<String> prefix) {
-            this.prefix = prefix;
+            $.prefix = prefix;
             return this;
         }
-        public Builder prefix(@Nullable String prefix) {
-            this.prefix = Codegen.ofNullable(prefix);
-            return this;
-        }        public RandomIdState build() {
-            return new RandomIdState(b64Std, b64Url, byteLength, dec, hex, keepers, prefix);
+
+        public Builder prefix(String prefix) {
+            return prefix(Output.of(prefix));
+        }
+
+        public RandomIdState build() {
+            return $;
         }
     }
+
 }

@@ -23,45 +23,44 @@ public final class DescendantParentGroupInfoResponse extends com.pulumi.resource
      * 
      */
     @Import(name="id")
-      private final @Nullable String id;
+    private @Nullable String id;
 
     public Optional<String> id() {
-        return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
+        return Optional.ofNullable(this.id);
     }
 
-    public DescendantParentGroupInfoResponse(@Nullable String id) {
-        this.id = id;
-    }
+    private DescendantParentGroupInfoResponse() {}
 
-    private DescendantParentGroupInfoResponse() {
-        this.id = null;
+    private DescendantParentGroupInfoResponse(DescendantParentGroupInfoResponse $) {
+        this.id = $.id;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DescendantParentGroupInfoResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String id;
+        private DescendantParentGroupInfoResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new DescendantParentGroupInfoResponse();
         }
 
         public Builder(DescendantParentGroupInfoResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.id = defaults.id;
+            $ = new DescendantParentGroupInfoResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder id(@Nullable String id) {
-            this.id = id;
+            $.id = id;
             return this;
-        }        public DescendantParentGroupInfoResponse build() {
-            return new DescendantParentGroupInfoResponse(id);
+        }
+
+        public DescendantParentGroupInfoResponse build() {
+            return $;
         }
     }
+
 }

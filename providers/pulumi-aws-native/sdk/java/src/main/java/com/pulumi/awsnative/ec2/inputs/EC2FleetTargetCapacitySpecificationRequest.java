@@ -17,110 +17,97 @@ public final class EC2FleetTargetCapacitySpecificationRequest extends com.pulumi
     public static final EC2FleetTargetCapacitySpecificationRequest Empty = new EC2FleetTargetCapacitySpecificationRequest();
 
     @Import(name="defaultTargetCapacityType")
-      private final @Nullable EC2FleetTargetCapacitySpecificationRequestDefaultTargetCapacityType defaultTargetCapacityType;
+    private @Nullable EC2FleetTargetCapacitySpecificationRequestDefaultTargetCapacityType defaultTargetCapacityType;
 
     public Optional<EC2FleetTargetCapacitySpecificationRequestDefaultTargetCapacityType> defaultTargetCapacityType() {
-        return this.defaultTargetCapacityType == null ? Optional.empty() : Optional.ofNullable(this.defaultTargetCapacityType);
+        return Optional.ofNullable(this.defaultTargetCapacityType);
     }
 
     @Import(name="onDemandTargetCapacity")
-      private final @Nullable Integer onDemandTargetCapacity;
+    private @Nullable Integer onDemandTargetCapacity;
 
     public Optional<Integer> onDemandTargetCapacity() {
-        return this.onDemandTargetCapacity == null ? Optional.empty() : Optional.ofNullable(this.onDemandTargetCapacity);
+        return Optional.ofNullable(this.onDemandTargetCapacity);
     }
 
     @Import(name="spotTargetCapacity")
-      private final @Nullable Integer spotTargetCapacity;
+    private @Nullable Integer spotTargetCapacity;
 
     public Optional<Integer> spotTargetCapacity() {
-        return this.spotTargetCapacity == null ? Optional.empty() : Optional.ofNullable(this.spotTargetCapacity);
+        return Optional.ofNullable(this.spotTargetCapacity);
     }
 
     @Import(name="targetCapacityUnitType")
-      private final @Nullable EC2FleetTargetCapacitySpecificationRequestTargetCapacityUnitType targetCapacityUnitType;
+    private @Nullable EC2FleetTargetCapacitySpecificationRequestTargetCapacityUnitType targetCapacityUnitType;
 
     public Optional<EC2FleetTargetCapacitySpecificationRequestTargetCapacityUnitType> targetCapacityUnitType() {
-        return this.targetCapacityUnitType == null ? Optional.empty() : Optional.ofNullable(this.targetCapacityUnitType);
+        return Optional.ofNullable(this.targetCapacityUnitType);
     }
 
     @Import(name="totalTargetCapacity", required=true)
-      private final Integer totalTargetCapacity;
+    private Integer totalTargetCapacity;
 
     public Integer totalTargetCapacity() {
         return this.totalTargetCapacity;
     }
 
-    public EC2FleetTargetCapacitySpecificationRequest(
-        @Nullable EC2FleetTargetCapacitySpecificationRequestDefaultTargetCapacityType defaultTargetCapacityType,
-        @Nullable Integer onDemandTargetCapacity,
-        @Nullable Integer spotTargetCapacity,
-        @Nullable EC2FleetTargetCapacitySpecificationRequestTargetCapacityUnitType targetCapacityUnitType,
-        Integer totalTargetCapacity) {
-        this.defaultTargetCapacityType = defaultTargetCapacityType;
-        this.onDemandTargetCapacity = onDemandTargetCapacity;
-        this.spotTargetCapacity = spotTargetCapacity;
-        this.targetCapacityUnitType = targetCapacityUnitType;
-        this.totalTargetCapacity = Objects.requireNonNull(totalTargetCapacity, "expected parameter 'totalTargetCapacity' to be non-null");
-    }
+    private EC2FleetTargetCapacitySpecificationRequest() {}
 
-    private EC2FleetTargetCapacitySpecificationRequest() {
-        this.defaultTargetCapacityType = null;
-        this.onDemandTargetCapacity = null;
-        this.spotTargetCapacity = null;
-        this.targetCapacityUnitType = null;
-        this.totalTargetCapacity = null;
+    private EC2FleetTargetCapacitySpecificationRequest(EC2FleetTargetCapacitySpecificationRequest $) {
+        this.defaultTargetCapacityType = $.defaultTargetCapacityType;
+        this.onDemandTargetCapacity = $.onDemandTargetCapacity;
+        this.spotTargetCapacity = $.spotTargetCapacity;
+        this.targetCapacityUnitType = $.targetCapacityUnitType;
+        this.totalTargetCapacity = $.totalTargetCapacity;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EC2FleetTargetCapacitySpecificationRequest defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable EC2FleetTargetCapacitySpecificationRequestDefaultTargetCapacityType defaultTargetCapacityType;
-        private @Nullable Integer onDemandTargetCapacity;
-        private @Nullable Integer spotTargetCapacity;
-        private @Nullable EC2FleetTargetCapacitySpecificationRequestTargetCapacityUnitType targetCapacityUnitType;
-        private Integer totalTargetCapacity;
+        private EC2FleetTargetCapacitySpecificationRequest $;
 
         public Builder() {
-    	      // Empty
+            $ = new EC2FleetTargetCapacitySpecificationRequest();
         }
 
         public Builder(EC2FleetTargetCapacitySpecificationRequest defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.defaultTargetCapacityType = defaults.defaultTargetCapacityType;
-    	      this.onDemandTargetCapacity = defaults.onDemandTargetCapacity;
-    	      this.spotTargetCapacity = defaults.spotTargetCapacity;
-    	      this.targetCapacityUnitType = defaults.targetCapacityUnitType;
-    	      this.totalTargetCapacity = defaults.totalTargetCapacity;
+            $ = new EC2FleetTargetCapacitySpecificationRequest(Objects.requireNonNull(defaults));
         }
 
         public Builder defaultTargetCapacityType(@Nullable EC2FleetTargetCapacitySpecificationRequestDefaultTargetCapacityType defaultTargetCapacityType) {
-            this.defaultTargetCapacityType = defaultTargetCapacityType;
+            $.defaultTargetCapacityType = defaultTargetCapacityType;
             return this;
         }
+
         public Builder onDemandTargetCapacity(@Nullable Integer onDemandTargetCapacity) {
-            this.onDemandTargetCapacity = onDemandTargetCapacity;
+            $.onDemandTargetCapacity = onDemandTargetCapacity;
             return this;
         }
+
         public Builder spotTargetCapacity(@Nullable Integer spotTargetCapacity) {
-            this.spotTargetCapacity = spotTargetCapacity;
+            $.spotTargetCapacity = spotTargetCapacity;
             return this;
         }
+
         public Builder targetCapacityUnitType(@Nullable EC2FleetTargetCapacitySpecificationRequestTargetCapacityUnitType targetCapacityUnitType) {
-            this.targetCapacityUnitType = targetCapacityUnitType;
+            $.targetCapacityUnitType = targetCapacityUnitType;
             return this;
         }
+
         public Builder totalTargetCapacity(Integer totalTargetCapacity) {
-            this.totalTargetCapacity = Objects.requireNonNull(totalTargetCapacity);
+            $.totalTargetCapacity = totalTargetCapacity;
             return this;
-        }        public EC2FleetTargetCapacitySpecificationRequest build() {
-            return new EC2FleetTargetCapacitySpecificationRequest(defaultTargetCapacityType, onDemandTargetCapacity, spotTargetCapacity, targetCapacityUnitType, totalTargetCapacity);
+        }
+
+        public EC2FleetTargetCapacitySpecificationRequest build() {
+            $.totalTargetCapacity = Objects.requireNonNull($.totalTargetCapacity, "expected parameter 'totalTargetCapacity' to be non-null");
+            return $;
         }
     }
+
 }

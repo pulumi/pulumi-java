@@ -5,10 +5,10 @@ package com.pulumi.aws.cloudwatch.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class EventApiDestinationState extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="arn")
-      private final @Nullable Output<String> arn;
+    private @Nullable Output<String> arn;
 
-    public Output<String> arn() {
-        return this.arn == null ? Codegen.empty() : this.arn;
+    public Optional<Output<String>> arn() {
+        return Optional.ofNullable(this.arn);
     }
 
     /**
@@ -32,10 +32,10 @@ public final class EventApiDestinationState extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="connectionArn")
-      private final @Nullable Output<String> connectionArn;
+    private @Nullable Output<String> connectionArn;
 
-    public Output<String> connectionArn() {
-        return this.connectionArn == null ? Codegen.empty() : this.connectionArn;
+    public Optional<Output<String>> connectionArn() {
+        return Optional.ofNullable(this.connectionArn);
     }
 
     /**
@@ -43,10 +43,10 @@ public final class EventApiDestinationState extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -54,10 +54,10 @@ public final class EventApiDestinationState extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="httpMethod")
-      private final @Nullable Output<String> httpMethod;
+    private @Nullable Output<String> httpMethod;
 
-    public Output<String> httpMethod() {
-        return this.httpMethod == null ? Codegen.empty() : this.httpMethod;
+    public Optional<Output<String>> httpMethod() {
+        return Optional.ofNullable(this.httpMethod);
     }
 
     /**
@@ -65,10 +65,10 @@ public final class EventApiDestinationState extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="invocationEndpoint")
-      private final @Nullable Output<String> invocationEndpoint;
+    private @Nullable Output<String> invocationEndpoint;
 
-    public Output<String> invocationEndpoint() {
-        return this.invocationEndpoint == null ? Codegen.empty() : this.invocationEndpoint;
+    public Optional<Output<String>> invocationEndpoint() {
+        return Optional.ofNullable(this.invocationEndpoint);
     }
 
     /**
@@ -76,10 +76,10 @@ public final class EventApiDestinationState extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="invocationRateLimitPerSecond")
-      private final @Nullable Output<Integer> invocationRateLimitPerSecond;
+    private @Nullable Output<Integer> invocationRateLimitPerSecond;
 
-    public Output<Integer> invocationRateLimitPerSecond() {
-        return this.invocationRateLimitPerSecond == null ? Codegen.empty() : this.invocationRateLimitPerSecond;
+    public Optional<Output<Integer>> invocationRateLimitPerSecond() {
+        return Optional.ofNullable(this.invocationRateLimitPerSecond);
     }
 
     /**
@@ -87,128 +87,108 @@ public final class EventApiDestinationState extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
-    public EventApiDestinationState(
-        @Nullable Output<String> arn,
-        @Nullable Output<String> connectionArn,
-        @Nullable Output<String> description,
-        @Nullable Output<String> httpMethod,
-        @Nullable Output<String> invocationEndpoint,
-        @Nullable Output<Integer> invocationRateLimitPerSecond,
-        @Nullable Output<String> name) {
-        this.arn = arn;
-        this.connectionArn = connectionArn;
-        this.description = description;
-        this.httpMethod = httpMethod;
-        this.invocationEndpoint = invocationEndpoint;
-        this.invocationRateLimitPerSecond = invocationRateLimitPerSecond;
-        this.name = name;
-    }
+    private EventApiDestinationState() {}
 
-    private EventApiDestinationState() {
-        this.arn = Codegen.empty();
-        this.connectionArn = Codegen.empty();
-        this.description = Codegen.empty();
-        this.httpMethod = Codegen.empty();
-        this.invocationEndpoint = Codegen.empty();
-        this.invocationRateLimitPerSecond = Codegen.empty();
-        this.name = Codegen.empty();
+    private EventApiDestinationState(EventApiDestinationState $) {
+        this.arn = $.arn;
+        this.connectionArn = $.connectionArn;
+        this.description = $.description;
+        this.httpMethod = $.httpMethod;
+        this.invocationEndpoint = $.invocationEndpoint;
+        this.invocationRateLimitPerSecond = $.invocationRateLimitPerSecond;
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EventApiDestinationState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> arn;
-        private @Nullable Output<String> connectionArn;
-        private @Nullable Output<String> description;
-        private @Nullable Output<String> httpMethod;
-        private @Nullable Output<String> invocationEndpoint;
-        private @Nullable Output<Integer> invocationRateLimitPerSecond;
-        private @Nullable Output<String> name;
+        private EventApiDestinationState $;
 
         public Builder() {
-    	      // Empty
+            $ = new EventApiDestinationState();
         }
 
         public Builder(EventApiDestinationState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.arn = defaults.arn;
-    	      this.connectionArn = defaults.connectionArn;
-    	      this.description = defaults.description;
-    	      this.httpMethod = defaults.httpMethod;
-    	      this.invocationEndpoint = defaults.invocationEndpoint;
-    	      this.invocationRateLimitPerSecond = defaults.invocationRateLimitPerSecond;
-    	      this.name = defaults.name;
+            $ = new EventApiDestinationState(Objects.requireNonNull(defaults));
         }
 
         public Builder arn(@Nullable Output<String> arn) {
-            this.arn = arn;
+            $.arn = arn;
             return this;
         }
-        public Builder arn(@Nullable String arn) {
-            this.arn = Codegen.ofNullable(arn);
-            return this;
+
+        public Builder arn(String arn) {
+            return arn(Output.of(arn));
         }
+
         public Builder connectionArn(@Nullable Output<String> connectionArn) {
-            this.connectionArn = connectionArn;
+            $.connectionArn = connectionArn;
             return this;
         }
-        public Builder connectionArn(@Nullable String connectionArn) {
-            this.connectionArn = Codegen.ofNullable(connectionArn);
-            return this;
+
+        public Builder connectionArn(String connectionArn) {
+            return connectionArn(Output.of(connectionArn));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder httpMethod(@Nullable Output<String> httpMethod) {
-            this.httpMethod = httpMethod;
+            $.httpMethod = httpMethod;
             return this;
         }
-        public Builder httpMethod(@Nullable String httpMethod) {
-            this.httpMethod = Codegen.ofNullable(httpMethod);
-            return this;
+
+        public Builder httpMethod(String httpMethod) {
+            return httpMethod(Output.of(httpMethod));
         }
+
         public Builder invocationEndpoint(@Nullable Output<String> invocationEndpoint) {
-            this.invocationEndpoint = invocationEndpoint;
+            $.invocationEndpoint = invocationEndpoint;
             return this;
         }
-        public Builder invocationEndpoint(@Nullable String invocationEndpoint) {
-            this.invocationEndpoint = Codegen.ofNullable(invocationEndpoint);
-            return this;
+
+        public Builder invocationEndpoint(String invocationEndpoint) {
+            return invocationEndpoint(Output.of(invocationEndpoint));
         }
+
         public Builder invocationRateLimitPerSecond(@Nullable Output<Integer> invocationRateLimitPerSecond) {
-            this.invocationRateLimitPerSecond = invocationRateLimitPerSecond;
+            $.invocationRateLimitPerSecond = invocationRateLimitPerSecond;
             return this;
         }
-        public Builder invocationRateLimitPerSecond(@Nullable Integer invocationRateLimitPerSecond) {
-            this.invocationRateLimitPerSecond = Codegen.ofNullable(invocationRateLimitPerSecond);
-            return this;
+
+        public Builder invocationRateLimitPerSecond(Integer invocationRateLimitPerSecond) {
+            return invocationRateLimitPerSecond(Output.of(invocationRateLimitPerSecond));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
-        }        public EventApiDestinationState build() {
-            return new EventApiDestinationState(arn, connectionArn, description, httpMethod, invocationEndpoint, invocationRateLimitPerSecond, name);
+
+        public Builder name(String name) {
+            return name(Output.of(name));
+        }
+
+        public EventApiDestinationState build() {
+            return $;
         }
     }
+
 }

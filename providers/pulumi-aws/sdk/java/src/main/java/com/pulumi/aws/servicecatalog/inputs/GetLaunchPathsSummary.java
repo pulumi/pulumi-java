@@ -20,7 +20,7 @@ public final class GetLaunchPathsSummary extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="constraintSummaries", required=true)
-      private final List<GetLaunchPathsSummaryConstraintSummary> constraintSummaries;
+    private List<GetLaunchPathsSummaryConstraintSummary> constraintSummaries;
 
     public List<GetLaunchPathsSummaryConstraintSummary> constraintSummaries() {
         return this.constraintSummaries;
@@ -31,7 +31,7 @@ public final class GetLaunchPathsSummary extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -42,7 +42,7 @@ public final class GetLaunchPathsSummary extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="pathId", required=true)
-      private final String pathId;
+    private String pathId;
 
     public String pathId() {
         return this.pathId;
@@ -53,76 +53,70 @@ public final class GetLaunchPathsSummary extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="tags", required=true)
-      private final Map<String,String> tags;
+    private Map<String,String> tags;
 
     public Map<String,String> tags() {
         return this.tags;
     }
 
-    public GetLaunchPathsSummary(
-        List<GetLaunchPathsSummaryConstraintSummary> constraintSummaries,
-        String name,
-        String pathId,
-        Map<String,String> tags) {
-        this.constraintSummaries = Objects.requireNonNull(constraintSummaries, "expected parameter 'constraintSummaries' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.pathId = Objects.requireNonNull(pathId, "expected parameter 'pathId' to be non-null");
-        this.tags = Objects.requireNonNull(tags, "expected parameter 'tags' to be non-null");
-    }
+    private GetLaunchPathsSummary() {}
 
-    private GetLaunchPathsSummary() {
-        this.constraintSummaries = List.of();
-        this.name = null;
-        this.pathId = null;
-        this.tags = Map.of();
+    private GetLaunchPathsSummary(GetLaunchPathsSummary $) {
+        this.constraintSummaries = $.constraintSummaries;
+        this.name = $.name;
+        this.pathId = $.pathId;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetLaunchPathsSummary defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<GetLaunchPathsSummaryConstraintSummary> constraintSummaries;
-        private String name;
-        private String pathId;
-        private Map<String,String> tags;
+        private GetLaunchPathsSummary $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetLaunchPathsSummary();
         }
 
         public Builder(GetLaunchPathsSummary defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.constraintSummaries = defaults.constraintSummaries;
-    	      this.name = defaults.name;
-    	      this.pathId = defaults.pathId;
-    	      this.tags = defaults.tags;
+            $ = new GetLaunchPathsSummary(Objects.requireNonNull(defaults));
         }
 
         public Builder constraintSummaries(List<GetLaunchPathsSummaryConstraintSummary> constraintSummaries) {
-            this.constraintSummaries = Objects.requireNonNull(constraintSummaries);
+            $.constraintSummaries = constraintSummaries;
             return this;
         }
+
         public Builder constraintSummaries(GetLaunchPathsSummaryConstraintSummary... constraintSummaries) {
             return constraintSummaries(List.of(constraintSummaries));
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder pathId(String pathId) {
-            this.pathId = Objects.requireNonNull(pathId);
+            $.pathId = pathId;
             return this;
         }
+
         public Builder tags(Map<String,String> tags) {
-            this.tags = Objects.requireNonNull(tags);
+            $.tags = tags;
             return this;
-        }        public GetLaunchPathsSummary build() {
-            return new GetLaunchPathsSummary(constraintSummaries, name, pathId, tags);
+        }
+
+        public GetLaunchPathsSummary build() {
+            $.constraintSummaries = Objects.requireNonNull($.constraintSummaries, "expected parameter 'constraintSummaries' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.pathId = Objects.requireNonNull($.pathId, "expected parameter 'pathId' to be non-null");
+            $.tags = Objects.requireNonNull($.tags, "expected parameter 'tags' to be non-null");
+            return $;
         }
     }
+
 }

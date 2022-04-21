@@ -24,48 +24,48 @@ public final class ActionListResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="actionGroups")
-      private final @Nullable List<ActionGroupResponse> actionGroups;
+    private @Nullable List<ActionGroupResponse> actionGroups;
 
-    public List<ActionGroupResponse> actionGroups() {
-        return this.actionGroups == null ? List.of() : this.actionGroups;
+    public Optional<List<ActionGroupResponse>> actionGroups() {
+        return Optional.ofNullable(this.actionGroups);
     }
 
-    public ActionListResponse(@Nullable List<ActionGroupResponse> actionGroups) {
-        this.actionGroups = actionGroups;
-    }
+    private ActionListResponse() {}
 
-    private ActionListResponse() {
-        this.actionGroups = List.of();
+    private ActionListResponse(ActionListResponse $) {
+        this.actionGroups = $.actionGroups;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ActionListResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<ActionGroupResponse> actionGroups;
+        private ActionListResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ActionListResponse();
         }
 
         public Builder(ActionListResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.actionGroups = defaults.actionGroups;
+            $ = new ActionListResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder actionGroups(@Nullable List<ActionGroupResponse> actionGroups) {
-            this.actionGroups = actionGroups;
+            $.actionGroups = actionGroups;
             return this;
         }
+
         public Builder actionGroups(ActionGroupResponse... actionGroups) {
             return actionGroups(List.of(actionGroups));
-        }        public ActionListResponse build() {
-            return new ActionListResponse(actionGroups);
+        }
+
+        public ActionListResponse build() {
+            return $;
         }
     }
+
 }

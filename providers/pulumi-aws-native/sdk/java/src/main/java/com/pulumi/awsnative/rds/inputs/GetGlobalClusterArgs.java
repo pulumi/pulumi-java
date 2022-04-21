@@ -17,45 +17,45 @@ public final class GetGlobalClusterArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="globalClusterIdentifier", required=true)
-      private final String globalClusterIdentifier;
+    private String globalClusterIdentifier;
 
     public String globalClusterIdentifier() {
         return this.globalClusterIdentifier;
     }
 
-    public GetGlobalClusterArgs(String globalClusterIdentifier) {
-        this.globalClusterIdentifier = Objects.requireNonNull(globalClusterIdentifier, "expected parameter 'globalClusterIdentifier' to be non-null");
-    }
+    private GetGlobalClusterArgs() {}
 
-    private GetGlobalClusterArgs() {
-        this.globalClusterIdentifier = null;
+    private GetGlobalClusterArgs(GetGlobalClusterArgs $) {
+        this.globalClusterIdentifier = $.globalClusterIdentifier;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetGlobalClusterArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String globalClusterIdentifier;
+        private GetGlobalClusterArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetGlobalClusterArgs();
         }
 
         public Builder(GetGlobalClusterArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.globalClusterIdentifier = defaults.globalClusterIdentifier;
+            $ = new GetGlobalClusterArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder globalClusterIdentifier(String globalClusterIdentifier) {
-            this.globalClusterIdentifier = Objects.requireNonNull(globalClusterIdentifier);
+            $.globalClusterIdentifier = globalClusterIdentifier;
             return this;
-        }        public GetGlobalClusterArgs build() {
-            return new GetGlobalClusterArgs(globalClusterIdentifier);
+        }
+
+        public GetGlobalClusterArgs build() {
+            $.globalClusterIdentifier = Objects.requireNonNull($.globalClusterIdentifier, "expected parameter 'globalClusterIdentifier' to be non-null");
+            return $;
         }
     }
+
 }

@@ -7,11 +7,11 @@ import com.pulumi.awsnative.iot.inputs.TopicRuleTimestreamDimensionArgs;
 import com.pulumi.awsnative.iot.inputs.TopicRuleTimestreamTimestampArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,153 +20,141 @@ public final class TopicRuleTimestreamActionArgs extends com.pulumi.resources.Re
     public static final TopicRuleTimestreamActionArgs Empty = new TopicRuleTimestreamActionArgs();
 
     @Import(name="batchMode")
-      private final @Nullable Output<Boolean> batchMode;
+    private @Nullable Output<Boolean> batchMode;
 
-    public Output<Boolean> batchMode() {
-        return this.batchMode == null ? Codegen.empty() : this.batchMode;
+    public Optional<Output<Boolean>> batchMode() {
+        return Optional.ofNullable(this.batchMode);
     }
 
     @Import(name="databaseName", required=true)
-      private final Output<String> databaseName;
+    private Output<String> databaseName;
 
     public Output<String> databaseName() {
         return this.databaseName;
     }
 
     @Import(name="dimensions", required=true)
-      private final Output<List<TopicRuleTimestreamDimensionArgs>> dimensions;
+    private Output<List<TopicRuleTimestreamDimensionArgs>> dimensions;
 
     public Output<List<TopicRuleTimestreamDimensionArgs>> dimensions() {
         return this.dimensions;
     }
 
     @Import(name="roleArn", required=true)
-      private final Output<String> roleArn;
+    private Output<String> roleArn;
 
     public Output<String> roleArn() {
         return this.roleArn;
     }
 
     @Import(name="tableName", required=true)
-      private final Output<String> tableName;
+    private Output<String> tableName;
 
     public Output<String> tableName() {
         return this.tableName;
     }
 
     @Import(name="timestamp")
-      private final @Nullable Output<TopicRuleTimestreamTimestampArgs> timestamp;
+    private @Nullable Output<TopicRuleTimestreamTimestampArgs> timestamp;
 
-    public Output<TopicRuleTimestreamTimestampArgs> timestamp() {
-        return this.timestamp == null ? Codegen.empty() : this.timestamp;
+    public Optional<Output<TopicRuleTimestreamTimestampArgs>> timestamp() {
+        return Optional.ofNullable(this.timestamp);
     }
 
-    public TopicRuleTimestreamActionArgs(
-        @Nullable Output<Boolean> batchMode,
-        Output<String> databaseName,
-        Output<List<TopicRuleTimestreamDimensionArgs>> dimensions,
-        Output<String> roleArn,
-        Output<String> tableName,
-        @Nullable Output<TopicRuleTimestreamTimestampArgs> timestamp) {
-        this.batchMode = batchMode;
-        this.databaseName = Objects.requireNonNull(databaseName, "expected parameter 'databaseName' to be non-null");
-        this.dimensions = Objects.requireNonNull(dimensions, "expected parameter 'dimensions' to be non-null");
-        this.roleArn = Objects.requireNonNull(roleArn, "expected parameter 'roleArn' to be non-null");
-        this.tableName = Objects.requireNonNull(tableName, "expected parameter 'tableName' to be non-null");
-        this.timestamp = timestamp;
-    }
+    private TopicRuleTimestreamActionArgs() {}
 
-    private TopicRuleTimestreamActionArgs() {
-        this.batchMode = Codegen.empty();
-        this.databaseName = Codegen.empty();
-        this.dimensions = Codegen.empty();
-        this.roleArn = Codegen.empty();
-        this.tableName = Codegen.empty();
-        this.timestamp = Codegen.empty();
+    private TopicRuleTimestreamActionArgs(TopicRuleTimestreamActionArgs $) {
+        this.batchMode = $.batchMode;
+        this.databaseName = $.databaseName;
+        this.dimensions = $.dimensions;
+        this.roleArn = $.roleArn;
+        this.tableName = $.tableName;
+        this.timestamp = $.timestamp;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TopicRuleTimestreamActionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> batchMode;
-        private Output<String> databaseName;
-        private Output<List<TopicRuleTimestreamDimensionArgs>> dimensions;
-        private Output<String> roleArn;
-        private Output<String> tableName;
-        private @Nullable Output<TopicRuleTimestreamTimestampArgs> timestamp;
+        private TopicRuleTimestreamActionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TopicRuleTimestreamActionArgs();
         }
 
         public Builder(TopicRuleTimestreamActionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.batchMode = defaults.batchMode;
-    	      this.databaseName = defaults.databaseName;
-    	      this.dimensions = defaults.dimensions;
-    	      this.roleArn = defaults.roleArn;
-    	      this.tableName = defaults.tableName;
-    	      this.timestamp = defaults.timestamp;
+            $ = new TopicRuleTimestreamActionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder batchMode(@Nullable Output<Boolean> batchMode) {
-            this.batchMode = batchMode;
+            $.batchMode = batchMode;
             return this;
         }
-        public Builder batchMode(@Nullable Boolean batchMode) {
-            this.batchMode = Codegen.ofNullable(batchMode);
-            return this;
+
+        public Builder batchMode(Boolean batchMode) {
+            return batchMode(Output.of(batchMode));
         }
+
         public Builder databaseName(Output<String> databaseName) {
-            this.databaseName = Objects.requireNonNull(databaseName);
+            $.databaseName = databaseName;
             return this;
         }
+
         public Builder databaseName(String databaseName) {
-            this.databaseName = Output.of(Objects.requireNonNull(databaseName));
-            return this;
+            return databaseName(Output.of(databaseName));
         }
+
         public Builder dimensions(Output<List<TopicRuleTimestreamDimensionArgs>> dimensions) {
-            this.dimensions = Objects.requireNonNull(dimensions);
+            $.dimensions = dimensions;
             return this;
         }
+
         public Builder dimensions(List<TopicRuleTimestreamDimensionArgs> dimensions) {
-            this.dimensions = Output.of(Objects.requireNonNull(dimensions));
-            return this;
+            return dimensions(Output.of(dimensions));
         }
+
         public Builder dimensions(TopicRuleTimestreamDimensionArgs... dimensions) {
             return dimensions(List.of(dimensions));
         }
+
         public Builder roleArn(Output<String> roleArn) {
-            this.roleArn = Objects.requireNonNull(roleArn);
+            $.roleArn = roleArn;
             return this;
         }
+
         public Builder roleArn(String roleArn) {
-            this.roleArn = Output.of(Objects.requireNonNull(roleArn));
-            return this;
+            return roleArn(Output.of(roleArn));
         }
+
         public Builder tableName(Output<String> tableName) {
-            this.tableName = Objects.requireNonNull(tableName);
+            $.tableName = tableName;
             return this;
         }
+
         public Builder tableName(String tableName) {
-            this.tableName = Output.of(Objects.requireNonNull(tableName));
-            return this;
+            return tableName(Output.of(tableName));
         }
+
         public Builder timestamp(@Nullable Output<TopicRuleTimestreamTimestampArgs> timestamp) {
-            this.timestamp = timestamp;
+            $.timestamp = timestamp;
             return this;
         }
-        public Builder timestamp(@Nullable TopicRuleTimestreamTimestampArgs timestamp) {
-            this.timestamp = Codegen.ofNullable(timestamp);
-            return this;
-        }        public TopicRuleTimestreamActionArgs build() {
-            return new TopicRuleTimestreamActionArgs(batchMode, databaseName, dimensions, roleArn, tableName, timestamp);
+
+        public Builder timestamp(TopicRuleTimestreamTimestampArgs timestamp) {
+            return timestamp(Output.of(timestamp));
+        }
+
+        public TopicRuleTimestreamActionArgs build() {
+            $.databaseName = Objects.requireNonNull($.databaseName, "expected parameter 'databaseName' to be non-null");
+            $.dimensions = Objects.requireNonNull($.dimensions, "expected parameter 'dimensions' to be non-null");
+            $.roleArn = Objects.requireNonNull($.roleArn, "expected parameter 'roleArn' to be non-null");
+            $.tableName = Objects.requireNonNull($.tableName, "expected parameter 'tableName' to be non-null");
+            return $;
         }
     }
+
 }

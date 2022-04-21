@@ -3,35 +3,26 @@
 
 package com.pulumi.awsnative.iotanalytics.inputs;
 
-import java.util.Objects;
+
 
 
 public final class ChannelServiceManagedS3Args extends com.pulumi.resources.ResourceArgs {
 
     public static final ChannelServiceManagedS3Args Empty = new ChannelServiceManagedS3Args();
 
-    public ChannelServiceManagedS3Args() {
-    }
-
     public static Builder builder() {
         return new Builder();
     }
 
-    public static Builder builder(ChannelServiceManagedS3Args defaults) {
-        return new Builder(defaults);
-    }
-
     public static final class Builder {
+        private ChannelServiceManagedS3Args $;
 
         public Builder() {
-    	      // Empty
-        }
-
-        public Builder(ChannelServiceManagedS3Args defaults) {
-    	      Objects.requireNonNull(defaults);
+            $ = new ChannelServiceManagedS3Args();
         }
         public ChannelServiceManagedS3Args build() {
-            return new ChannelServiceManagedS3Args();
+            return $;
         }
     }
+
 }

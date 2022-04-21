@@ -21,7 +21,7 @@ public final class FixedOrPercentResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="calculated", required=true)
-      private final Integer calculated;
+    private Integer calculated;
 
     public Integer calculated() {
         return this.calculated;
@@ -32,7 +32,7 @@ public final class FixedOrPercentResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="fixed", required=true)
-      private final Integer fixed;
+    private Integer fixed;
 
     public Integer fixed() {
         return this.fixed;
@@ -43,64 +43,59 @@ public final class FixedOrPercentResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="percent", required=true)
-      private final Integer percent;
+    private Integer percent;
 
     public Integer percent() {
         return this.percent;
     }
 
-    public FixedOrPercentResponse(
-        Integer calculated,
-        Integer fixed,
-        Integer percent) {
-        this.calculated = Objects.requireNonNull(calculated, "expected parameter 'calculated' to be non-null");
-        this.fixed = Objects.requireNonNull(fixed, "expected parameter 'fixed' to be non-null");
-        this.percent = Objects.requireNonNull(percent, "expected parameter 'percent' to be non-null");
-    }
+    private FixedOrPercentResponse() {}
 
-    private FixedOrPercentResponse() {
-        this.calculated = null;
-        this.fixed = null;
-        this.percent = null;
+    private FixedOrPercentResponse(FixedOrPercentResponse $) {
+        this.calculated = $.calculated;
+        this.fixed = $.fixed;
+        this.percent = $.percent;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FixedOrPercentResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Integer calculated;
-        private Integer fixed;
-        private Integer percent;
+        private FixedOrPercentResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new FixedOrPercentResponse();
         }
 
         public Builder(FixedOrPercentResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.calculated = defaults.calculated;
-    	      this.fixed = defaults.fixed;
-    	      this.percent = defaults.percent;
+            $ = new FixedOrPercentResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder calculated(Integer calculated) {
-            this.calculated = Objects.requireNonNull(calculated);
+            $.calculated = calculated;
             return this;
         }
+
         public Builder fixed(Integer fixed) {
-            this.fixed = Objects.requireNonNull(fixed);
+            $.fixed = fixed;
             return this;
         }
+
         public Builder percent(Integer percent) {
-            this.percent = Objects.requireNonNull(percent);
+            $.percent = percent;
             return this;
-        }        public FixedOrPercentResponse build() {
-            return new FixedOrPercentResponse(calculated, fixed, percent);
+        }
+
+        public FixedOrPercentResponse build() {
+            $.calculated = Objects.requireNonNull($.calculated, "expected parameter 'calculated' to be non-null");
+            $.fixed = Objects.requireNonNull($.fixed, "expected parameter 'fixed' to be non-null");
+            $.percent = Objects.requireNonNull($.percent, "expected parameter 'percent' to be non-null");
+            return $;
         }
     }
+
 }

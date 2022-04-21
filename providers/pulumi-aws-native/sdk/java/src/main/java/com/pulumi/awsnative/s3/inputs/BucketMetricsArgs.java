@@ -7,8 +7,8 @@ import com.pulumi.awsnative.s3.enums.BucketMetricsStatus;
 import com.pulumi.awsnative.s3.inputs.BucketReplicationTimeValueArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -17,70 +17,66 @@ public final class BucketMetricsArgs extends com.pulumi.resources.ResourceArgs {
     public static final BucketMetricsArgs Empty = new BucketMetricsArgs();
 
     @Import(name="eventThreshold")
-      private final @Nullable Output<BucketReplicationTimeValueArgs> eventThreshold;
+    private @Nullable Output<BucketReplicationTimeValueArgs> eventThreshold;
 
-    public Output<BucketReplicationTimeValueArgs> eventThreshold() {
-        return this.eventThreshold == null ? Codegen.empty() : this.eventThreshold;
+    public Optional<Output<BucketReplicationTimeValueArgs>> eventThreshold() {
+        return Optional.ofNullable(this.eventThreshold);
     }
 
     @Import(name="status", required=true)
-      private final Output<BucketMetricsStatus> status;
+    private Output<BucketMetricsStatus> status;
 
     public Output<BucketMetricsStatus> status() {
         return this.status;
     }
 
-    public BucketMetricsArgs(
-        @Nullable Output<BucketReplicationTimeValueArgs> eventThreshold,
-        Output<BucketMetricsStatus> status) {
-        this.eventThreshold = eventThreshold;
-        this.status = Objects.requireNonNull(status, "expected parameter 'status' to be non-null");
-    }
+    private BucketMetricsArgs() {}
 
-    private BucketMetricsArgs() {
-        this.eventThreshold = Codegen.empty();
-        this.status = Codegen.empty();
+    private BucketMetricsArgs(BucketMetricsArgs $) {
+        this.eventThreshold = $.eventThreshold;
+        this.status = $.status;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BucketMetricsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<BucketReplicationTimeValueArgs> eventThreshold;
-        private Output<BucketMetricsStatus> status;
+        private BucketMetricsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new BucketMetricsArgs();
         }
 
         public Builder(BucketMetricsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.eventThreshold = defaults.eventThreshold;
-    	      this.status = defaults.status;
+            $ = new BucketMetricsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder eventThreshold(@Nullable Output<BucketReplicationTimeValueArgs> eventThreshold) {
-            this.eventThreshold = eventThreshold;
+            $.eventThreshold = eventThreshold;
             return this;
         }
-        public Builder eventThreshold(@Nullable BucketReplicationTimeValueArgs eventThreshold) {
-            this.eventThreshold = Codegen.ofNullable(eventThreshold);
-            return this;
+
+        public Builder eventThreshold(BucketReplicationTimeValueArgs eventThreshold) {
+            return eventThreshold(Output.of(eventThreshold));
         }
+
         public Builder status(Output<BucketMetricsStatus> status) {
-            this.status = Objects.requireNonNull(status);
+            $.status = status;
             return this;
         }
+
         public Builder status(BucketMetricsStatus status) {
-            this.status = Output.of(Objects.requireNonNull(status));
-            return this;
-        }        public BucketMetricsArgs build() {
-            return new BucketMetricsArgs(eventThreshold, status);
+            return status(Output.of(status));
+        }
+
+        public BucketMetricsArgs build() {
+            $.status = Objects.requireNonNull($.status, "expected parameter 'status' to be non-null");
+            return $;
         }
     }
+
 }

@@ -15,78 +15,72 @@ public final class GetSecuritySettingArgs extends com.pulumi.resources.InvokeArg
     public static final GetSecuritySettingArgs Empty = new GetSecuritySettingArgs();
 
     @Import(name="location", required=true)
-      private final String location;
+    private String location;
 
     public String location() {
         return this.location;
     }
 
     @Import(name="project")
-      private final @Nullable String project;
+    private @Nullable String project;
 
     public Optional<String> project() {
-        return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
+        return Optional.ofNullable(this.project);
     }
 
     @Import(name="securitySettingId", required=true)
-      private final String securitySettingId;
+    private String securitySettingId;
 
     public String securitySettingId() {
         return this.securitySettingId;
     }
 
-    public GetSecuritySettingArgs(
-        String location,
-        @Nullable String project,
-        String securitySettingId) {
-        this.location = Objects.requireNonNull(location, "expected parameter 'location' to be non-null");
-        this.project = project;
-        this.securitySettingId = Objects.requireNonNull(securitySettingId, "expected parameter 'securitySettingId' to be non-null");
-    }
+    private GetSecuritySettingArgs() {}
 
-    private GetSecuritySettingArgs() {
-        this.location = null;
-        this.project = null;
-        this.securitySettingId = null;
+    private GetSecuritySettingArgs(GetSecuritySettingArgs $) {
+        this.location = $.location;
+        this.project = $.project;
+        this.securitySettingId = $.securitySettingId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetSecuritySettingArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String location;
-        private @Nullable String project;
-        private String securitySettingId;
+        private GetSecuritySettingArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetSecuritySettingArgs();
         }
 
         public Builder(GetSecuritySettingArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.location = defaults.location;
-    	      this.project = defaults.project;
-    	      this.securitySettingId = defaults.securitySettingId;
+            $ = new GetSecuritySettingArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder location(String location) {
-            this.location = Objects.requireNonNull(location);
+            $.location = location;
             return this;
         }
+
         public Builder project(@Nullable String project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
+
         public Builder securitySettingId(String securitySettingId) {
-            this.securitySettingId = Objects.requireNonNull(securitySettingId);
+            $.securitySettingId = securitySettingId;
             return this;
-        }        public GetSecuritySettingArgs build() {
-            return new GetSecuritySettingArgs(location, project, securitySettingId);
+        }
+
+        public GetSecuritySettingArgs build() {
+            $.location = Objects.requireNonNull($.location, "expected parameter 'location' to be non-null");
+            $.securitySettingId = Objects.requireNonNull($.securitySettingId, "expected parameter 'securitySettingId' to be non-null");
+            return $;
         }
     }
+
 }

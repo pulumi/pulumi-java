@@ -22,7 +22,7 @@ public final class OutlierDetectionResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="baseEjectionTime", required=true)
-      private final DurationResponse baseEjectionTime;
+    private DurationResponse baseEjectionTime;
 
     public DurationResponse baseEjectionTime() {
         return this.baseEjectionTime;
@@ -33,7 +33,7 @@ public final class OutlierDetectionResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="consecutiveErrors", required=true)
-      private final Integer consecutiveErrors;
+    private Integer consecutiveErrors;
 
     public Integer consecutiveErrors() {
         return this.consecutiveErrors;
@@ -44,7 +44,7 @@ public final class OutlierDetectionResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="consecutiveGatewayFailure", required=true)
-      private final Integer consecutiveGatewayFailure;
+    private Integer consecutiveGatewayFailure;
 
     public Integer consecutiveGatewayFailure() {
         return this.consecutiveGatewayFailure;
@@ -55,7 +55,7 @@ public final class OutlierDetectionResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="enforcingConsecutiveErrors", required=true)
-      private final Integer enforcingConsecutiveErrors;
+    private Integer enforcingConsecutiveErrors;
 
     public Integer enforcingConsecutiveErrors() {
         return this.enforcingConsecutiveErrors;
@@ -66,7 +66,7 @@ public final class OutlierDetectionResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="enforcingConsecutiveGatewayFailure", required=true)
-      private final Integer enforcingConsecutiveGatewayFailure;
+    private Integer enforcingConsecutiveGatewayFailure;
 
     public Integer enforcingConsecutiveGatewayFailure() {
         return this.enforcingConsecutiveGatewayFailure;
@@ -77,7 +77,7 @@ public final class OutlierDetectionResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="enforcingSuccessRate", required=true)
-      private final Integer enforcingSuccessRate;
+    private Integer enforcingSuccessRate;
 
     public Integer enforcingSuccessRate() {
         return this.enforcingSuccessRate;
@@ -88,7 +88,7 @@ public final class OutlierDetectionResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="interval", required=true)
-      private final DurationResponse interval;
+    private DurationResponse interval;
 
     public DurationResponse interval() {
         return this.interval;
@@ -99,7 +99,7 @@ public final class OutlierDetectionResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="maxEjectionPercent", required=true)
-      private final Integer maxEjectionPercent;
+    private Integer maxEjectionPercent;
 
     public Integer maxEjectionPercent() {
         return this.maxEjectionPercent;
@@ -110,7 +110,7 @@ public final class OutlierDetectionResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="successRateMinimumHosts", required=true)
-      private final Integer successRateMinimumHosts;
+    private Integer successRateMinimumHosts;
 
     public Integer successRateMinimumHosts() {
         return this.successRateMinimumHosts;
@@ -121,7 +121,7 @@ public final class OutlierDetectionResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="successRateRequestVolume", required=true)
-      private final Integer successRateRequestVolume;
+    private Integer successRateRequestVolume;
 
     public Integer successRateRequestVolume() {
         return this.successRateRequestVolume;
@@ -132,136 +132,115 @@ public final class OutlierDetectionResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="successRateStdevFactor", required=true)
-      private final Integer successRateStdevFactor;
+    private Integer successRateStdevFactor;
 
     public Integer successRateStdevFactor() {
         return this.successRateStdevFactor;
     }
 
-    public OutlierDetectionResponse(
-        DurationResponse baseEjectionTime,
-        Integer consecutiveErrors,
-        Integer consecutiveGatewayFailure,
-        Integer enforcingConsecutiveErrors,
-        Integer enforcingConsecutiveGatewayFailure,
-        Integer enforcingSuccessRate,
-        DurationResponse interval,
-        Integer maxEjectionPercent,
-        Integer successRateMinimumHosts,
-        Integer successRateRequestVolume,
-        Integer successRateStdevFactor) {
-        this.baseEjectionTime = Objects.requireNonNull(baseEjectionTime, "expected parameter 'baseEjectionTime' to be non-null");
-        this.consecutiveErrors = Objects.requireNonNull(consecutiveErrors, "expected parameter 'consecutiveErrors' to be non-null");
-        this.consecutiveGatewayFailure = Objects.requireNonNull(consecutiveGatewayFailure, "expected parameter 'consecutiveGatewayFailure' to be non-null");
-        this.enforcingConsecutiveErrors = Objects.requireNonNull(enforcingConsecutiveErrors, "expected parameter 'enforcingConsecutiveErrors' to be non-null");
-        this.enforcingConsecutiveGatewayFailure = Objects.requireNonNull(enforcingConsecutiveGatewayFailure, "expected parameter 'enforcingConsecutiveGatewayFailure' to be non-null");
-        this.enforcingSuccessRate = Objects.requireNonNull(enforcingSuccessRate, "expected parameter 'enforcingSuccessRate' to be non-null");
-        this.interval = Objects.requireNonNull(interval, "expected parameter 'interval' to be non-null");
-        this.maxEjectionPercent = Objects.requireNonNull(maxEjectionPercent, "expected parameter 'maxEjectionPercent' to be non-null");
-        this.successRateMinimumHosts = Objects.requireNonNull(successRateMinimumHosts, "expected parameter 'successRateMinimumHosts' to be non-null");
-        this.successRateRequestVolume = Objects.requireNonNull(successRateRequestVolume, "expected parameter 'successRateRequestVolume' to be non-null");
-        this.successRateStdevFactor = Objects.requireNonNull(successRateStdevFactor, "expected parameter 'successRateStdevFactor' to be non-null");
-    }
+    private OutlierDetectionResponse() {}
 
-    private OutlierDetectionResponse() {
-        this.baseEjectionTime = null;
-        this.consecutiveErrors = null;
-        this.consecutiveGatewayFailure = null;
-        this.enforcingConsecutiveErrors = null;
-        this.enforcingConsecutiveGatewayFailure = null;
-        this.enforcingSuccessRate = null;
-        this.interval = null;
-        this.maxEjectionPercent = null;
-        this.successRateMinimumHosts = null;
-        this.successRateRequestVolume = null;
-        this.successRateStdevFactor = null;
+    private OutlierDetectionResponse(OutlierDetectionResponse $) {
+        this.baseEjectionTime = $.baseEjectionTime;
+        this.consecutiveErrors = $.consecutiveErrors;
+        this.consecutiveGatewayFailure = $.consecutiveGatewayFailure;
+        this.enforcingConsecutiveErrors = $.enforcingConsecutiveErrors;
+        this.enforcingConsecutiveGatewayFailure = $.enforcingConsecutiveGatewayFailure;
+        this.enforcingSuccessRate = $.enforcingSuccessRate;
+        this.interval = $.interval;
+        this.maxEjectionPercent = $.maxEjectionPercent;
+        this.successRateMinimumHosts = $.successRateMinimumHosts;
+        this.successRateRequestVolume = $.successRateRequestVolume;
+        this.successRateStdevFactor = $.successRateStdevFactor;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(OutlierDetectionResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private DurationResponse baseEjectionTime;
-        private Integer consecutiveErrors;
-        private Integer consecutiveGatewayFailure;
-        private Integer enforcingConsecutiveErrors;
-        private Integer enforcingConsecutiveGatewayFailure;
-        private Integer enforcingSuccessRate;
-        private DurationResponse interval;
-        private Integer maxEjectionPercent;
-        private Integer successRateMinimumHosts;
-        private Integer successRateRequestVolume;
-        private Integer successRateStdevFactor;
+        private OutlierDetectionResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new OutlierDetectionResponse();
         }
 
         public Builder(OutlierDetectionResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.baseEjectionTime = defaults.baseEjectionTime;
-    	      this.consecutiveErrors = defaults.consecutiveErrors;
-    	      this.consecutiveGatewayFailure = defaults.consecutiveGatewayFailure;
-    	      this.enforcingConsecutiveErrors = defaults.enforcingConsecutiveErrors;
-    	      this.enforcingConsecutiveGatewayFailure = defaults.enforcingConsecutiveGatewayFailure;
-    	      this.enforcingSuccessRate = defaults.enforcingSuccessRate;
-    	      this.interval = defaults.interval;
-    	      this.maxEjectionPercent = defaults.maxEjectionPercent;
-    	      this.successRateMinimumHosts = defaults.successRateMinimumHosts;
-    	      this.successRateRequestVolume = defaults.successRateRequestVolume;
-    	      this.successRateStdevFactor = defaults.successRateStdevFactor;
+            $ = new OutlierDetectionResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder baseEjectionTime(DurationResponse baseEjectionTime) {
-            this.baseEjectionTime = Objects.requireNonNull(baseEjectionTime);
+            $.baseEjectionTime = baseEjectionTime;
             return this;
         }
+
         public Builder consecutiveErrors(Integer consecutiveErrors) {
-            this.consecutiveErrors = Objects.requireNonNull(consecutiveErrors);
+            $.consecutiveErrors = consecutiveErrors;
             return this;
         }
+
         public Builder consecutiveGatewayFailure(Integer consecutiveGatewayFailure) {
-            this.consecutiveGatewayFailure = Objects.requireNonNull(consecutiveGatewayFailure);
+            $.consecutiveGatewayFailure = consecutiveGatewayFailure;
             return this;
         }
+
         public Builder enforcingConsecutiveErrors(Integer enforcingConsecutiveErrors) {
-            this.enforcingConsecutiveErrors = Objects.requireNonNull(enforcingConsecutiveErrors);
+            $.enforcingConsecutiveErrors = enforcingConsecutiveErrors;
             return this;
         }
+
         public Builder enforcingConsecutiveGatewayFailure(Integer enforcingConsecutiveGatewayFailure) {
-            this.enforcingConsecutiveGatewayFailure = Objects.requireNonNull(enforcingConsecutiveGatewayFailure);
+            $.enforcingConsecutiveGatewayFailure = enforcingConsecutiveGatewayFailure;
             return this;
         }
+
         public Builder enforcingSuccessRate(Integer enforcingSuccessRate) {
-            this.enforcingSuccessRate = Objects.requireNonNull(enforcingSuccessRate);
+            $.enforcingSuccessRate = enforcingSuccessRate;
             return this;
         }
+
         public Builder interval(DurationResponse interval) {
-            this.interval = Objects.requireNonNull(interval);
+            $.interval = interval;
             return this;
         }
+
         public Builder maxEjectionPercent(Integer maxEjectionPercent) {
-            this.maxEjectionPercent = Objects.requireNonNull(maxEjectionPercent);
+            $.maxEjectionPercent = maxEjectionPercent;
             return this;
         }
+
         public Builder successRateMinimumHosts(Integer successRateMinimumHosts) {
-            this.successRateMinimumHosts = Objects.requireNonNull(successRateMinimumHosts);
+            $.successRateMinimumHosts = successRateMinimumHosts;
             return this;
         }
+
         public Builder successRateRequestVolume(Integer successRateRequestVolume) {
-            this.successRateRequestVolume = Objects.requireNonNull(successRateRequestVolume);
+            $.successRateRequestVolume = successRateRequestVolume;
             return this;
         }
+
         public Builder successRateStdevFactor(Integer successRateStdevFactor) {
-            this.successRateStdevFactor = Objects.requireNonNull(successRateStdevFactor);
+            $.successRateStdevFactor = successRateStdevFactor;
             return this;
-        }        public OutlierDetectionResponse build() {
-            return new OutlierDetectionResponse(baseEjectionTime, consecutiveErrors, consecutiveGatewayFailure, enforcingConsecutiveErrors, enforcingConsecutiveGatewayFailure, enforcingSuccessRate, interval, maxEjectionPercent, successRateMinimumHosts, successRateRequestVolume, successRateStdevFactor);
+        }
+
+        public OutlierDetectionResponse build() {
+            $.baseEjectionTime = Objects.requireNonNull($.baseEjectionTime, "expected parameter 'baseEjectionTime' to be non-null");
+            $.consecutiveErrors = Objects.requireNonNull($.consecutiveErrors, "expected parameter 'consecutiveErrors' to be non-null");
+            $.consecutiveGatewayFailure = Objects.requireNonNull($.consecutiveGatewayFailure, "expected parameter 'consecutiveGatewayFailure' to be non-null");
+            $.enforcingConsecutiveErrors = Objects.requireNonNull($.enforcingConsecutiveErrors, "expected parameter 'enforcingConsecutiveErrors' to be non-null");
+            $.enforcingConsecutiveGatewayFailure = Objects.requireNonNull($.enforcingConsecutiveGatewayFailure, "expected parameter 'enforcingConsecutiveGatewayFailure' to be non-null");
+            $.enforcingSuccessRate = Objects.requireNonNull($.enforcingSuccessRate, "expected parameter 'enforcingSuccessRate' to be non-null");
+            $.interval = Objects.requireNonNull($.interval, "expected parameter 'interval' to be non-null");
+            $.maxEjectionPercent = Objects.requireNonNull($.maxEjectionPercent, "expected parameter 'maxEjectionPercent' to be non-null");
+            $.successRateMinimumHosts = Objects.requireNonNull($.successRateMinimumHosts, "expected parameter 'successRateMinimumHosts' to be non-null");
+            $.successRateRequestVolume = Objects.requireNonNull($.successRateRequestVolume, "expected parameter 'successRateRequestVolume' to be non-null");
+            $.successRateStdevFactor = Objects.requireNonNull($.successRateStdevFactor, "expected parameter 'successRateStdevFactor' to be non-null");
+            return $;
         }
     }
+
 }

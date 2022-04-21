@@ -5,12 +5,12 @@ package com.pulumi.googlenative.compute_beta;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.compute_beta.enums.SslPolicyMinTlsVersion;
 import com.pulumi.googlenative.compute_beta.enums.SslPolicyProfile;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,10 @@ public final class SslPolicyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="customFeatures")
-      private final @Nullable Output<List<String>> customFeatures;
+    private @Nullable Output<List<String>> customFeatures;
 
-    public Output<List<String>> customFeatures() {
-        return this.customFeatures == null ? Codegen.empty() : this.customFeatures;
+    public Optional<Output<List<String>>> customFeatures() {
+        return Optional.ofNullable(this.customFeatures);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class SslPolicyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -45,10 +45,10 @@ public final class SslPolicyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="minTlsVersion")
-      private final @Nullable Output<SslPolicyMinTlsVersion> minTlsVersion;
+    private @Nullable Output<SslPolicyMinTlsVersion> minTlsVersion;
 
-    public Output<SslPolicyMinTlsVersion> minTlsVersion() {
-        return this.minTlsVersion == null ? Codegen.empty() : this.minTlsVersion;
+    public Optional<Output<SslPolicyMinTlsVersion>> minTlsVersion() {
+        return Optional.ofNullable(this.minTlsVersion);
     }
 
     /**
@@ -56,10 +56,10 @@ public final class SslPolicyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -67,145 +67,126 @@ public final class SslPolicyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="profile")
-      private final @Nullable Output<SslPolicyProfile> profile;
+    private @Nullable Output<SslPolicyProfile> profile;
 
-    public Output<SslPolicyProfile> profile() {
-        return this.profile == null ? Codegen.empty() : this.profile;
+    public Optional<Output<SslPolicyProfile>> profile() {
+        return Optional.ofNullable(this.profile);
     }
 
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     @Import(name="requestId")
-      private final @Nullable Output<String> requestId;
+    private @Nullable Output<String> requestId;
 
-    public Output<String> requestId() {
-        return this.requestId == null ? Codegen.empty() : this.requestId;
+    public Optional<Output<String>> requestId() {
+        return Optional.ofNullable(this.requestId);
     }
 
-    public SslPolicyArgs(
-        @Nullable Output<List<String>> customFeatures,
-        @Nullable Output<String> description,
-        @Nullable Output<SslPolicyMinTlsVersion> minTlsVersion,
-        @Nullable Output<String> name,
-        @Nullable Output<SslPolicyProfile> profile,
-        @Nullable Output<String> project,
-        @Nullable Output<String> requestId) {
-        this.customFeatures = customFeatures;
-        this.description = description;
-        this.minTlsVersion = minTlsVersion;
-        this.name = name;
-        this.profile = profile;
-        this.project = project;
-        this.requestId = requestId;
-    }
+    private SslPolicyArgs() {}
 
-    private SslPolicyArgs() {
-        this.customFeatures = Codegen.empty();
-        this.description = Codegen.empty();
-        this.minTlsVersion = Codegen.empty();
-        this.name = Codegen.empty();
-        this.profile = Codegen.empty();
-        this.project = Codegen.empty();
-        this.requestId = Codegen.empty();
+    private SslPolicyArgs(SslPolicyArgs $) {
+        this.customFeatures = $.customFeatures;
+        this.description = $.description;
+        this.minTlsVersion = $.minTlsVersion;
+        this.name = $.name;
+        this.profile = $.profile;
+        this.project = $.project;
+        this.requestId = $.requestId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SslPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> customFeatures;
-        private @Nullable Output<String> description;
-        private @Nullable Output<SslPolicyMinTlsVersion> minTlsVersion;
-        private @Nullable Output<String> name;
-        private @Nullable Output<SslPolicyProfile> profile;
-        private @Nullable Output<String> project;
-        private @Nullable Output<String> requestId;
+        private SslPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SslPolicyArgs();
         }
 
         public Builder(SslPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.customFeatures = defaults.customFeatures;
-    	      this.description = defaults.description;
-    	      this.minTlsVersion = defaults.minTlsVersion;
-    	      this.name = defaults.name;
-    	      this.profile = defaults.profile;
-    	      this.project = defaults.project;
-    	      this.requestId = defaults.requestId;
+            $ = new SslPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder customFeatures(@Nullable Output<List<String>> customFeatures) {
-            this.customFeatures = customFeatures;
+            $.customFeatures = customFeatures;
             return this;
         }
-        public Builder customFeatures(@Nullable List<String> customFeatures) {
-            this.customFeatures = Codegen.ofNullable(customFeatures);
-            return this;
+
+        public Builder customFeatures(List<String> customFeatures) {
+            return customFeatures(Output.of(customFeatures));
         }
+
         public Builder customFeatures(String... customFeatures) {
             return customFeatures(List.of(customFeatures));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder minTlsVersion(@Nullable Output<SslPolicyMinTlsVersion> minTlsVersion) {
-            this.minTlsVersion = minTlsVersion;
+            $.minTlsVersion = minTlsVersion;
             return this;
         }
-        public Builder minTlsVersion(@Nullable SslPolicyMinTlsVersion minTlsVersion) {
-            this.minTlsVersion = Codegen.ofNullable(minTlsVersion);
-            return this;
+
+        public Builder minTlsVersion(SslPolicyMinTlsVersion minTlsVersion) {
+            return minTlsVersion(Output.of(minTlsVersion));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder profile(@Nullable Output<SslPolicyProfile> profile) {
-            this.profile = profile;
+            $.profile = profile;
             return this;
         }
-        public Builder profile(@Nullable SslPolicyProfile profile) {
-            this.profile = Codegen.ofNullable(profile);
-            return this;
+
+        public Builder profile(SslPolicyProfile profile) {
+            return profile(Output.of(profile));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder requestId(@Nullable Output<String> requestId) {
-            this.requestId = requestId;
+            $.requestId = requestId;
             return this;
         }
-        public Builder requestId(@Nullable String requestId) {
-            this.requestId = Codegen.ofNullable(requestId);
-            return this;
-        }        public SslPolicyArgs build() {
-            return new SslPolicyArgs(customFeatures, description, minTlsVersion, name, profile, project, requestId);
+
+        public Builder requestId(String requestId) {
+            return requestId(Output.of(requestId));
+        }
+
+        public SslPolicyArgs build() {
+            return $;
         }
     }
+
 }

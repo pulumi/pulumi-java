@@ -5,10 +5,10 @@ package com.pulumi.googlenative.compute_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.compute_v1.enums.DeprecationStatusState;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class DeprecationStatusArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="deleted")
-      private final @Nullable Output<String> deleted;
+    private @Nullable Output<String> deleted;
 
-    public Output<String> deleted() {
-        return this.deleted == null ? Codegen.empty() : this.deleted;
+    public Optional<Output<String>> deleted() {
+        return Optional.ofNullable(this.deleted);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class DeprecationStatusArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="deprecated")
-      private final @Nullable Output<String> deprecated;
+    private @Nullable Output<String> deprecated;
 
-    public Output<String> deprecated() {
-        return this.deprecated == null ? Codegen.empty() : this.deprecated;
+    public Optional<Output<String>> deprecated() {
+        return Optional.ofNullable(this.deprecated);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class DeprecationStatusArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="obsolete")
-      private final @Nullable Output<String> obsolete;
+    private @Nullable Output<String> obsolete;
 
-    public Output<String> obsolete() {
-        return this.obsolete == null ? Codegen.empty() : this.obsolete;
+    public Optional<Output<String>> obsolete() {
+        return Optional.ofNullable(this.obsolete);
     }
 
     /**
@@ -58,10 +58,10 @@ public final class DeprecationStatusArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="replacement")
-      private final @Nullable Output<String> replacement;
+    private @Nullable Output<String> replacement;
 
-    public Output<String> replacement() {
-        return this.replacement == null ? Codegen.empty() : this.replacement;
+    public Optional<Output<String>> replacement() {
+        return Optional.ofNullable(this.replacement);
     }
 
     /**
@@ -69,102 +69,88 @@ public final class DeprecationStatusArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="state")
-      private final @Nullable Output<DeprecationStatusState> state;
+    private @Nullable Output<DeprecationStatusState> state;
 
-    public Output<DeprecationStatusState> state() {
-        return this.state == null ? Codegen.empty() : this.state;
+    public Optional<Output<DeprecationStatusState>> state() {
+        return Optional.ofNullable(this.state);
     }
 
-    public DeprecationStatusArgs(
-        @Nullable Output<String> deleted,
-        @Nullable Output<String> deprecated,
-        @Nullable Output<String> obsolete,
-        @Nullable Output<String> replacement,
-        @Nullable Output<DeprecationStatusState> state) {
-        this.deleted = deleted;
-        this.deprecated = deprecated;
-        this.obsolete = obsolete;
-        this.replacement = replacement;
-        this.state = state;
-    }
+    private DeprecationStatusArgs() {}
 
-    private DeprecationStatusArgs() {
-        this.deleted = Codegen.empty();
-        this.deprecated = Codegen.empty();
-        this.obsolete = Codegen.empty();
-        this.replacement = Codegen.empty();
-        this.state = Codegen.empty();
+    private DeprecationStatusArgs(DeprecationStatusArgs $) {
+        this.deleted = $.deleted;
+        this.deprecated = $.deprecated;
+        this.obsolete = $.obsolete;
+        this.replacement = $.replacement;
+        this.state = $.state;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DeprecationStatusArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> deleted;
-        private @Nullable Output<String> deprecated;
-        private @Nullable Output<String> obsolete;
-        private @Nullable Output<String> replacement;
-        private @Nullable Output<DeprecationStatusState> state;
+        private DeprecationStatusArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DeprecationStatusArgs();
         }
 
         public Builder(DeprecationStatusArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.deleted = defaults.deleted;
-    	      this.deprecated = defaults.deprecated;
-    	      this.obsolete = defaults.obsolete;
-    	      this.replacement = defaults.replacement;
-    	      this.state = defaults.state;
+            $ = new DeprecationStatusArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder deleted(@Nullable Output<String> deleted) {
-            this.deleted = deleted;
+            $.deleted = deleted;
             return this;
         }
-        public Builder deleted(@Nullable String deleted) {
-            this.deleted = Codegen.ofNullable(deleted);
-            return this;
+
+        public Builder deleted(String deleted) {
+            return deleted(Output.of(deleted));
         }
+
         public Builder deprecated(@Nullable Output<String> deprecated) {
-            this.deprecated = deprecated;
+            $.deprecated = deprecated;
             return this;
         }
-        public Builder deprecated(@Nullable String deprecated) {
-            this.deprecated = Codegen.ofNullable(deprecated);
-            return this;
+
+        public Builder deprecated(String deprecated) {
+            return deprecated(Output.of(deprecated));
         }
+
         public Builder obsolete(@Nullable Output<String> obsolete) {
-            this.obsolete = obsolete;
+            $.obsolete = obsolete;
             return this;
         }
-        public Builder obsolete(@Nullable String obsolete) {
-            this.obsolete = Codegen.ofNullable(obsolete);
-            return this;
+
+        public Builder obsolete(String obsolete) {
+            return obsolete(Output.of(obsolete));
         }
+
         public Builder replacement(@Nullable Output<String> replacement) {
-            this.replacement = replacement;
+            $.replacement = replacement;
             return this;
         }
-        public Builder replacement(@Nullable String replacement) {
-            this.replacement = Codegen.ofNullable(replacement);
-            return this;
+
+        public Builder replacement(String replacement) {
+            return replacement(Output.of(replacement));
         }
+
         public Builder state(@Nullable Output<DeprecationStatusState> state) {
-            this.state = state;
+            $.state = state;
             return this;
         }
-        public Builder state(@Nullable DeprecationStatusState state) {
-            this.state = Codegen.ofNullable(state);
-            return this;
-        }        public DeprecationStatusArgs build() {
-            return new DeprecationStatusArgs(deleted, deprecated, obsolete, replacement, state);
+
+        public Builder state(DeprecationStatusState state) {
+            return state(Output.of(state));
+        }
+
+        public DeprecationStatusArgs build() {
+            return $;
         }
     }
+
 }

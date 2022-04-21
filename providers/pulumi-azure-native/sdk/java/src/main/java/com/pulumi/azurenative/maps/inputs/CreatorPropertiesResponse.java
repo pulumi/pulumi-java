@@ -23,45 +23,44 @@ public final class CreatorPropertiesResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="provisioningState")
-      private final @Nullable String provisioningState;
+    private @Nullable String provisioningState;
 
     public Optional<String> provisioningState() {
-        return this.provisioningState == null ? Optional.empty() : Optional.ofNullable(this.provisioningState);
+        return Optional.ofNullable(this.provisioningState);
     }
 
-    public CreatorPropertiesResponse(@Nullable String provisioningState) {
-        this.provisioningState = provisioningState;
-    }
+    private CreatorPropertiesResponse() {}
 
-    private CreatorPropertiesResponse() {
-        this.provisioningState = null;
+    private CreatorPropertiesResponse(CreatorPropertiesResponse $) {
+        this.provisioningState = $.provisioningState;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CreatorPropertiesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String provisioningState;
+        private CreatorPropertiesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new CreatorPropertiesResponse();
         }
 
         public Builder(CreatorPropertiesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.provisioningState = defaults.provisioningState;
+            $ = new CreatorPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder provisioningState(@Nullable String provisioningState) {
-            this.provisioningState = provisioningState;
+            $.provisioningState = provisioningState;
             return this;
-        }        public CreatorPropertiesResponse build() {
-            return new CreatorPropertiesResponse(provisioningState);
+        }
+
+        public CreatorPropertiesResponse build() {
+            return $;
         }
     }
+
 }

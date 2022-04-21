@@ -23,7 +23,7 @@ public final class VMwareV2FabricSpecificDetailsResponse extends com.pulumi.reso
      * 
      */
     @Import(name="instanceType", required=true)
-      private final String instanceType;
+    private String instanceType;
 
     public String instanceType() {
         return this.instanceType;
@@ -34,7 +34,7 @@ public final class VMwareV2FabricSpecificDetailsResponse extends com.pulumi.reso
      * 
      */
     @Import(name="migrationSolutionId", required=true)
-      private final String migrationSolutionId;
+    private String migrationSolutionId;
 
     public String migrationSolutionId() {
         return this.migrationSolutionId;
@@ -45,7 +45,7 @@ public final class VMwareV2FabricSpecificDetailsResponse extends com.pulumi.reso
      * 
      */
     @Import(name="serviceEndpoint", required=true)
-      private final String serviceEndpoint;
+    private String serviceEndpoint;
 
     public String serviceEndpoint() {
         return this.serviceEndpoint;
@@ -56,7 +56,7 @@ public final class VMwareV2FabricSpecificDetailsResponse extends com.pulumi.reso
      * 
      */
     @Import(name="serviceResourceId", required=true)
-      private final String serviceResourceId;
+    private String serviceResourceId;
 
     public String serviceResourceId() {
         return this.serviceResourceId;
@@ -67,82 +67,73 @@ public final class VMwareV2FabricSpecificDetailsResponse extends com.pulumi.reso
      * 
      */
     @Import(name="vmwareSiteId", required=true)
-      private final String vmwareSiteId;
+    private String vmwareSiteId;
 
     public String vmwareSiteId() {
         return this.vmwareSiteId;
     }
 
-    public VMwareV2FabricSpecificDetailsResponse(
-        String instanceType,
-        String migrationSolutionId,
-        String serviceEndpoint,
-        String serviceResourceId,
-        String vmwareSiteId) {
-        this.instanceType = Codegen.stringProp("instanceType").arg(instanceType).require();
-        this.migrationSolutionId = Objects.requireNonNull(migrationSolutionId, "expected parameter 'migrationSolutionId' to be non-null");
-        this.serviceEndpoint = Objects.requireNonNull(serviceEndpoint, "expected parameter 'serviceEndpoint' to be non-null");
-        this.serviceResourceId = Objects.requireNonNull(serviceResourceId, "expected parameter 'serviceResourceId' to be non-null");
-        this.vmwareSiteId = Objects.requireNonNull(vmwareSiteId, "expected parameter 'vmwareSiteId' to be non-null");
-    }
+    private VMwareV2FabricSpecificDetailsResponse() {}
 
-    private VMwareV2FabricSpecificDetailsResponse() {
-        this.instanceType = null;
-        this.migrationSolutionId = null;
-        this.serviceEndpoint = null;
-        this.serviceResourceId = null;
-        this.vmwareSiteId = null;
+    private VMwareV2FabricSpecificDetailsResponse(VMwareV2FabricSpecificDetailsResponse $) {
+        this.instanceType = $.instanceType;
+        this.migrationSolutionId = $.migrationSolutionId;
+        this.serviceEndpoint = $.serviceEndpoint;
+        this.serviceResourceId = $.serviceResourceId;
+        this.vmwareSiteId = $.vmwareSiteId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VMwareV2FabricSpecificDetailsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String instanceType;
-        private String migrationSolutionId;
-        private String serviceEndpoint;
-        private String serviceResourceId;
-        private String vmwareSiteId;
+        private VMwareV2FabricSpecificDetailsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new VMwareV2FabricSpecificDetailsResponse();
         }
 
         public Builder(VMwareV2FabricSpecificDetailsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.instanceType = defaults.instanceType;
-    	      this.migrationSolutionId = defaults.migrationSolutionId;
-    	      this.serviceEndpoint = defaults.serviceEndpoint;
-    	      this.serviceResourceId = defaults.serviceResourceId;
-    	      this.vmwareSiteId = defaults.vmwareSiteId;
+            $ = new VMwareV2FabricSpecificDetailsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder instanceType(String instanceType) {
-            this.instanceType = Objects.requireNonNull(instanceType);
+            $.instanceType = instanceType;
             return this;
         }
+
         public Builder migrationSolutionId(String migrationSolutionId) {
-            this.migrationSolutionId = Objects.requireNonNull(migrationSolutionId);
+            $.migrationSolutionId = migrationSolutionId;
             return this;
         }
+
         public Builder serviceEndpoint(String serviceEndpoint) {
-            this.serviceEndpoint = Objects.requireNonNull(serviceEndpoint);
+            $.serviceEndpoint = serviceEndpoint;
             return this;
         }
+
         public Builder serviceResourceId(String serviceResourceId) {
-            this.serviceResourceId = Objects.requireNonNull(serviceResourceId);
+            $.serviceResourceId = serviceResourceId;
             return this;
         }
+
         public Builder vmwareSiteId(String vmwareSiteId) {
-            this.vmwareSiteId = Objects.requireNonNull(vmwareSiteId);
+            $.vmwareSiteId = vmwareSiteId;
             return this;
-        }        public VMwareV2FabricSpecificDetailsResponse build() {
-            return new VMwareV2FabricSpecificDetailsResponse(instanceType, migrationSolutionId, serviceEndpoint, serviceResourceId, vmwareSiteId);
+        }
+
+        public VMwareV2FabricSpecificDetailsResponse build() {
+            $.instanceType = Codegen.stringProp("instanceType").arg($.instanceType).require();
+            $.migrationSolutionId = Objects.requireNonNull($.migrationSolutionId, "expected parameter 'migrationSolutionId' to be non-null");
+            $.serviceEndpoint = Objects.requireNonNull($.serviceEndpoint, "expected parameter 'serviceEndpoint' to be non-null");
+            $.serviceResourceId = Objects.requireNonNull($.serviceResourceId, "expected parameter 'serviceResourceId' to be non-null");
+            $.vmwareSiteId = Objects.requireNonNull($.vmwareSiteId, "expected parameter 'vmwareSiteId' to be non-null");
+            return $;
         }
     }
+
 }

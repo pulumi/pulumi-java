@@ -5,11 +5,11 @@ package com.pulumi.gcp.datacatalog.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.datacatalog.inputs.TagFieldGetArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class TagState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="column")
-      private final @Nullable Output<String> column;
+    private @Nullable Output<String> column;
 
-    public Output<String> column() {
-        return this.column == null ? Codegen.empty() : this.column;
+    public Optional<Output<String>> column() {
+        return Optional.ofNullable(this.column);
     }
 
     /**
@@ -38,10 +38,10 @@ public final class TagState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="fields")
-      private final @Nullable Output<List<TagFieldGetArgs>> fields;
+    private @Nullable Output<List<TagFieldGetArgs>> fields;
 
-    public Output<List<TagFieldGetArgs>> fields() {
-        return this.fields == null ? Codegen.empty() : this.fields;
+    public Optional<Output<List<TagFieldGetArgs>>> fields() {
+        return Optional.ofNullable(this.fields);
     }
 
     /**
@@ -52,10 +52,10 @@ public final class TagState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -64,10 +64,10 @@ public final class TagState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="parent")
-      private final @Nullable Output<String> parent;
+    private @Nullable Output<String> parent;
 
-    public Output<String> parent() {
-        return this.parent == null ? Codegen.empty() : this.parent;
+    public Optional<Output<String>> parent() {
+        return Optional.ofNullable(this.parent);
     }
 
     /**
@@ -77,10 +77,10 @@ public final class TagState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="template")
-      private final @Nullable Output<String> template;
+    private @Nullable Output<String> template;
 
-    public Output<String> template() {
-        return this.template == null ? Codegen.empty() : this.template;
+    public Optional<Output<String>> template() {
+        return Optional.ofNullable(this.template);
     }
 
     /**
@@ -88,118 +88,102 @@ public final class TagState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="templateDisplayname")
-      private final @Nullable Output<String> templateDisplayname;
+    private @Nullable Output<String> templateDisplayname;
 
-    public Output<String> templateDisplayname() {
-        return this.templateDisplayname == null ? Codegen.empty() : this.templateDisplayname;
+    public Optional<Output<String>> templateDisplayname() {
+        return Optional.ofNullable(this.templateDisplayname);
     }
 
-    public TagState(
-        @Nullable Output<String> column,
-        @Nullable Output<List<TagFieldGetArgs>> fields,
-        @Nullable Output<String> name,
-        @Nullable Output<String> parent,
-        @Nullable Output<String> template,
-        @Nullable Output<String> templateDisplayname) {
-        this.column = column;
-        this.fields = fields;
-        this.name = name;
-        this.parent = parent;
-        this.template = template;
-        this.templateDisplayname = templateDisplayname;
-    }
+    private TagState() {}
 
-    private TagState() {
-        this.column = Codegen.empty();
-        this.fields = Codegen.empty();
-        this.name = Codegen.empty();
-        this.parent = Codegen.empty();
-        this.template = Codegen.empty();
-        this.templateDisplayname = Codegen.empty();
+    private TagState(TagState $) {
+        this.column = $.column;
+        this.fields = $.fields;
+        this.name = $.name;
+        this.parent = $.parent;
+        this.template = $.template;
+        this.templateDisplayname = $.templateDisplayname;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TagState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> column;
-        private @Nullable Output<List<TagFieldGetArgs>> fields;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> parent;
-        private @Nullable Output<String> template;
-        private @Nullable Output<String> templateDisplayname;
+        private TagState $;
 
         public Builder() {
-    	      // Empty
+            $ = new TagState();
         }
 
         public Builder(TagState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.column = defaults.column;
-    	      this.fields = defaults.fields;
-    	      this.name = defaults.name;
-    	      this.parent = defaults.parent;
-    	      this.template = defaults.template;
-    	      this.templateDisplayname = defaults.templateDisplayname;
+            $ = new TagState(Objects.requireNonNull(defaults));
         }
 
         public Builder column(@Nullable Output<String> column) {
-            this.column = column;
+            $.column = column;
             return this;
         }
-        public Builder column(@Nullable String column) {
-            this.column = Codegen.ofNullable(column);
-            return this;
+
+        public Builder column(String column) {
+            return column(Output.of(column));
         }
+
         public Builder fields(@Nullable Output<List<TagFieldGetArgs>> fields) {
-            this.fields = fields;
+            $.fields = fields;
             return this;
         }
-        public Builder fields(@Nullable List<TagFieldGetArgs> fields) {
-            this.fields = Codegen.ofNullable(fields);
-            return this;
+
+        public Builder fields(List<TagFieldGetArgs> fields) {
+            return fields(Output.of(fields));
         }
+
         public Builder fields(TagFieldGetArgs... fields) {
             return fields(List.of(fields));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder parent(@Nullable Output<String> parent) {
-            this.parent = parent;
+            $.parent = parent;
             return this;
         }
-        public Builder parent(@Nullable String parent) {
-            this.parent = Codegen.ofNullable(parent);
-            return this;
+
+        public Builder parent(String parent) {
+            return parent(Output.of(parent));
         }
+
         public Builder template(@Nullable Output<String> template) {
-            this.template = template;
+            $.template = template;
             return this;
         }
-        public Builder template(@Nullable String template) {
-            this.template = Codegen.ofNullable(template);
-            return this;
+
+        public Builder template(String template) {
+            return template(Output.of(template));
         }
+
         public Builder templateDisplayname(@Nullable Output<String> templateDisplayname) {
-            this.templateDisplayname = templateDisplayname;
+            $.templateDisplayname = templateDisplayname;
             return this;
         }
-        public Builder templateDisplayname(@Nullable String templateDisplayname) {
-            this.templateDisplayname = Codegen.ofNullable(templateDisplayname);
-            return this;
-        }        public TagState build() {
-            return new TagState(column, fields, name, parent, template, templateDisplayname);
+
+        public Builder templateDisplayname(String templateDisplayname) {
+            return templateDisplayname(Output.of(templateDisplayname));
+        }
+
+        public TagState build() {
+            return $;
         }
     }
+
 }

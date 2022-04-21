@@ -22,7 +22,7 @@ public final class AutoscalingPolicyScaleDownControlResponse extends com.pulumi.
      * 
      */
     @Import(name="maxScaledDownReplicas", required=true)
-      private final FixedOrPercentResponse maxScaledDownReplicas;
+    private FixedOrPercentResponse maxScaledDownReplicas;
 
     public FixedOrPercentResponse maxScaledDownReplicas() {
         return this.maxScaledDownReplicas;
@@ -33,55 +33,52 @@ public final class AutoscalingPolicyScaleDownControlResponse extends com.pulumi.
      * 
      */
     @Import(name="timeWindowSec", required=true)
-      private final Integer timeWindowSec;
+    private Integer timeWindowSec;
 
     public Integer timeWindowSec() {
         return this.timeWindowSec;
     }
 
-    public AutoscalingPolicyScaleDownControlResponse(
-        FixedOrPercentResponse maxScaledDownReplicas,
-        Integer timeWindowSec) {
-        this.maxScaledDownReplicas = Objects.requireNonNull(maxScaledDownReplicas, "expected parameter 'maxScaledDownReplicas' to be non-null");
-        this.timeWindowSec = Objects.requireNonNull(timeWindowSec, "expected parameter 'timeWindowSec' to be non-null");
-    }
+    private AutoscalingPolicyScaleDownControlResponse() {}
 
-    private AutoscalingPolicyScaleDownControlResponse() {
-        this.maxScaledDownReplicas = null;
-        this.timeWindowSec = null;
+    private AutoscalingPolicyScaleDownControlResponse(AutoscalingPolicyScaleDownControlResponse $) {
+        this.maxScaledDownReplicas = $.maxScaledDownReplicas;
+        this.timeWindowSec = $.timeWindowSec;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AutoscalingPolicyScaleDownControlResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private FixedOrPercentResponse maxScaledDownReplicas;
-        private Integer timeWindowSec;
+        private AutoscalingPolicyScaleDownControlResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AutoscalingPolicyScaleDownControlResponse();
         }
 
         public Builder(AutoscalingPolicyScaleDownControlResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.maxScaledDownReplicas = defaults.maxScaledDownReplicas;
-    	      this.timeWindowSec = defaults.timeWindowSec;
+            $ = new AutoscalingPolicyScaleDownControlResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder maxScaledDownReplicas(FixedOrPercentResponse maxScaledDownReplicas) {
-            this.maxScaledDownReplicas = Objects.requireNonNull(maxScaledDownReplicas);
+            $.maxScaledDownReplicas = maxScaledDownReplicas;
             return this;
         }
+
         public Builder timeWindowSec(Integer timeWindowSec) {
-            this.timeWindowSec = Objects.requireNonNull(timeWindowSec);
+            $.timeWindowSec = timeWindowSec;
             return this;
-        }        public AutoscalingPolicyScaleDownControlResponse build() {
-            return new AutoscalingPolicyScaleDownControlResponse(maxScaledDownReplicas, timeWindowSec);
+        }
+
+        public AutoscalingPolicyScaleDownControlResponse build() {
+            $.maxScaledDownReplicas = Objects.requireNonNull($.maxScaledDownReplicas, "expected parameter 'maxScaledDownReplicas' to be non-null");
+            $.timeWindowSec = Objects.requireNonNull($.timeWindowSec, "expected parameter 'timeWindowSec' to be non-null");
+            return $;
         }
     }
+
 }

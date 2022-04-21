@@ -5,10 +5,10 @@ package com.pulumi.aws.accessanalyzer;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,7 +21,7 @@ public final class AnalyzerArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="analyzerName", required=true)
-      private final Output<String> analyzerName;
+    private Output<String> analyzerName;
 
     public Output<String> analyzerName() {
         return this.analyzerName;
@@ -32,10 +32,10 @@ public final class AnalyzerArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -43,76 +43,69 @@ public final class AnalyzerArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="type")
-      private final @Nullable Output<String> type;
+    private @Nullable Output<String> type;
 
-    public Output<String> type() {
-        return this.type == null ? Codegen.empty() : this.type;
+    public Optional<Output<String>> type() {
+        return Optional.ofNullable(this.type);
     }
 
-    public AnalyzerArgs(
-        Output<String> analyzerName,
-        @Nullable Output<Map<String,String>> tags,
-        @Nullable Output<String> type) {
-        this.analyzerName = Objects.requireNonNull(analyzerName, "expected parameter 'analyzerName' to be non-null");
-        this.tags = tags;
-        this.type = type;
-    }
+    private AnalyzerArgs() {}
 
-    private AnalyzerArgs() {
-        this.analyzerName = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.type = Codegen.empty();
+    private AnalyzerArgs(AnalyzerArgs $) {
+        this.analyzerName = $.analyzerName;
+        this.tags = $.tags;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AnalyzerArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> analyzerName;
-        private @Nullable Output<Map<String,String>> tags;
-        private @Nullable Output<String> type;
+        private AnalyzerArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AnalyzerArgs();
         }
 
         public Builder(AnalyzerArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.analyzerName = defaults.analyzerName;
-    	      this.tags = defaults.tags;
-    	      this.type = defaults.type;
+            $ = new AnalyzerArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder analyzerName(Output<String> analyzerName) {
-            this.analyzerName = Objects.requireNonNull(analyzerName);
+            $.analyzerName = analyzerName;
             return this;
         }
+
         public Builder analyzerName(String analyzerName) {
-            this.analyzerName = Output.of(Objects.requireNonNull(analyzerName));
-            return this;
+            return analyzerName(Output.of(analyzerName));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder type(@Nullable Output<String> type) {
-            this.type = type;
+            $.type = type;
             return this;
         }
-        public Builder type(@Nullable String type) {
-            this.type = Codegen.ofNullable(type);
-            return this;
-        }        public AnalyzerArgs build() {
-            return new AnalyzerArgs(analyzerName, tags, type);
+
+        public Builder type(String type) {
+            return type(Output.of(type));
+        }
+
+        public AnalyzerArgs build() {
+            $.analyzerName = Objects.requireNonNull($.analyzerName, "expected parameter 'analyzerName' to be non-null");
+            return $;
         }
     }
+
 }

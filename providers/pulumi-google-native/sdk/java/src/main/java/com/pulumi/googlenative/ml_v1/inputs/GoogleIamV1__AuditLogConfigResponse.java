@@ -22,7 +22,7 @@ public final class GoogleIamV1__AuditLogConfigResponse extends com.pulumi.resour
      * 
      */
     @Import(name="exemptedMembers", required=true)
-      private final List<String> exemptedMembers;
+    private List<String> exemptedMembers;
 
     public List<String> exemptedMembers() {
         return this.exemptedMembers;
@@ -33,58 +33,56 @@ public final class GoogleIamV1__AuditLogConfigResponse extends com.pulumi.resour
      * 
      */
     @Import(name="logType", required=true)
-      private final String logType;
+    private String logType;
 
     public String logType() {
         return this.logType;
     }
 
-    public GoogleIamV1__AuditLogConfigResponse(
-        List<String> exemptedMembers,
-        String logType) {
-        this.exemptedMembers = Objects.requireNonNull(exemptedMembers, "expected parameter 'exemptedMembers' to be non-null");
-        this.logType = Objects.requireNonNull(logType, "expected parameter 'logType' to be non-null");
-    }
+    private GoogleIamV1__AuditLogConfigResponse() {}
 
-    private GoogleIamV1__AuditLogConfigResponse() {
-        this.exemptedMembers = List.of();
-        this.logType = null;
+    private GoogleIamV1__AuditLogConfigResponse(GoogleIamV1__AuditLogConfigResponse $) {
+        this.exemptedMembers = $.exemptedMembers;
+        this.logType = $.logType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleIamV1__AuditLogConfigResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<String> exemptedMembers;
-        private String logType;
+        private GoogleIamV1__AuditLogConfigResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleIamV1__AuditLogConfigResponse();
         }
 
         public Builder(GoogleIamV1__AuditLogConfigResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.exemptedMembers = defaults.exemptedMembers;
-    	      this.logType = defaults.logType;
+            $ = new GoogleIamV1__AuditLogConfigResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder exemptedMembers(List<String> exemptedMembers) {
-            this.exemptedMembers = Objects.requireNonNull(exemptedMembers);
+            $.exemptedMembers = exemptedMembers;
             return this;
         }
+
         public Builder exemptedMembers(String... exemptedMembers) {
             return exemptedMembers(List.of(exemptedMembers));
         }
+
         public Builder logType(String logType) {
-            this.logType = Objects.requireNonNull(logType);
+            $.logType = logType;
             return this;
-        }        public GoogleIamV1__AuditLogConfigResponse build() {
-            return new GoogleIamV1__AuditLogConfigResponse(exemptedMembers, logType);
+        }
+
+        public GoogleIamV1__AuditLogConfigResponse build() {
+            $.exemptedMembers = Objects.requireNonNull($.exemptedMembers, "expected parameter 'exemptedMembers' to be non-null");
+            $.logType = Objects.requireNonNull($.logType, "expected parameter 'logType' to be non-null");
+            return $;
         }
     }
+
 }

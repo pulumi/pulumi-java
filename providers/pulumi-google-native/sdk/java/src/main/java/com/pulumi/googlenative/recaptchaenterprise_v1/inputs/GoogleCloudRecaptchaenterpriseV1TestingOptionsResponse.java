@@ -22,7 +22,7 @@ public final class GoogleCloudRecaptchaenterpriseV1TestingOptionsResponse extend
      * 
      */
     @Import(name="testingChallenge", required=true)
-      private final String testingChallenge;
+    private String testingChallenge;
 
     public String testingChallenge() {
         return this.testingChallenge;
@@ -33,55 +33,52 @@ public final class GoogleCloudRecaptchaenterpriseV1TestingOptionsResponse extend
      * 
      */
     @Import(name="testingScore", required=true)
-      private final Double testingScore;
+    private Double testingScore;
 
     public Double testingScore() {
         return this.testingScore;
     }
 
-    public GoogleCloudRecaptchaenterpriseV1TestingOptionsResponse(
-        String testingChallenge,
-        Double testingScore) {
-        this.testingChallenge = Objects.requireNonNull(testingChallenge, "expected parameter 'testingChallenge' to be non-null");
-        this.testingScore = Objects.requireNonNull(testingScore, "expected parameter 'testingScore' to be non-null");
-    }
+    private GoogleCloudRecaptchaenterpriseV1TestingOptionsResponse() {}
 
-    private GoogleCloudRecaptchaenterpriseV1TestingOptionsResponse() {
-        this.testingChallenge = null;
-        this.testingScore = null;
+    private GoogleCloudRecaptchaenterpriseV1TestingOptionsResponse(GoogleCloudRecaptchaenterpriseV1TestingOptionsResponse $) {
+        this.testingChallenge = $.testingChallenge;
+        this.testingScore = $.testingScore;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudRecaptchaenterpriseV1TestingOptionsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String testingChallenge;
-        private Double testingScore;
+        private GoogleCloudRecaptchaenterpriseV1TestingOptionsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudRecaptchaenterpriseV1TestingOptionsResponse();
         }
 
         public Builder(GoogleCloudRecaptchaenterpriseV1TestingOptionsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.testingChallenge = defaults.testingChallenge;
-    	      this.testingScore = defaults.testingScore;
+            $ = new GoogleCloudRecaptchaenterpriseV1TestingOptionsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder testingChallenge(String testingChallenge) {
-            this.testingChallenge = Objects.requireNonNull(testingChallenge);
+            $.testingChallenge = testingChallenge;
             return this;
         }
+
         public Builder testingScore(Double testingScore) {
-            this.testingScore = Objects.requireNonNull(testingScore);
+            $.testingScore = testingScore;
             return this;
-        }        public GoogleCloudRecaptchaenterpriseV1TestingOptionsResponse build() {
-            return new GoogleCloudRecaptchaenterpriseV1TestingOptionsResponse(testingChallenge, testingScore);
+        }
+
+        public GoogleCloudRecaptchaenterpriseV1TestingOptionsResponse build() {
+            $.testingChallenge = Objects.requireNonNull($.testingChallenge, "expected parameter 'testingChallenge' to be non-null");
+            $.testingScore = Objects.requireNonNull($.testingScore, "expected parameter 'testingScore' to be non-null");
+            return $;
         }
     }
+
 }

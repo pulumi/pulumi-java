@@ -20,62 +20,58 @@ public final class WorkGroupEncryptionConfiguration extends com.pulumi.resources
     public static final WorkGroupEncryptionConfiguration Empty = new WorkGroupEncryptionConfiguration();
 
     @Import(name="encryptionOption", required=true)
-      private final WorkGroupEncryptionOption encryptionOption;
+    private WorkGroupEncryptionOption encryptionOption;
 
     public WorkGroupEncryptionOption encryptionOption() {
         return this.encryptionOption;
     }
 
     @Import(name="kmsKey")
-      private final @Nullable String kmsKey;
+    private @Nullable String kmsKey;
 
     public Optional<String> kmsKey() {
-        return this.kmsKey == null ? Optional.empty() : Optional.ofNullable(this.kmsKey);
+        return Optional.ofNullable(this.kmsKey);
     }
 
-    public WorkGroupEncryptionConfiguration(
-        WorkGroupEncryptionOption encryptionOption,
-        @Nullable String kmsKey) {
-        this.encryptionOption = Objects.requireNonNull(encryptionOption, "expected parameter 'encryptionOption' to be non-null");
-        this.kmsKey = kmsKey;
-    }
+    private WorkGroupEncryptionConfiguration() {}
 
-    private WorkGroupEncryptionConfiguration() {
-        this.encryptionOption = null;
-        this.kmsKey = null;
+    private WorkGroupEncryptionConfiguration(WorkGroupEncryptionConfiguration $) {
+        this.encryptionOption = $.encryptionOption;
+        this.kmsKey = $.kmsKey;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WorkGroupEncryptionConfiguration defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private WorkGroupEncryptionOption encryptionOption;
-        private @Nullable String kmsKey;
+        private WorkGroupEncryptionConfiguration $;
 
         public Builder() {
-    	      // Empty
+            $ = new WorkGroupEncryptionConfiguration();
         }
 
         public Builder(WorkGroupEncryptionConfiguration defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.encryptionOption = defaults.encryptionOption;
-    	      this.kmsKey = defaults.kmsKey;
+            $ = new WorkGroupEncryptionConfiguration(Objects.requireNonNull(defaults));
         }
 
         public Builder encryptionOption(WorkGroupEncryptionOption encryptionOption) {
-            this.encryptionOption = Objects.requireNonNull(encryptionOption);
+            $.encryptionOption = encryptionOption;
             return this;
         }
+
         public Builder kmsKey(@Nullable String kmsKey) {
-            this.kmsKey = kmsKey;
+            $.kmsKey = kmsKey;
             return this;
-        }        public WorkGroupEncryptionConfiguration build() {
-            return new WorkGroupEncryptionConfiguration(encryptionOption, kmsKey);
+        }
+
+        public WorkGroupEncryptionConfiguration build() {
+            $.encryptionOption = Objects.requireNonNull($.encryptionOption, "expected parameter 'encryptionOption' to be non-null");
+            return $;
         }
     }
+
 }

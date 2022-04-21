@@ -30,10 +30,10 @@ public final class ContainerResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="command")
-      private final @Nullable List<String> command;
+    private @Nullable List<String> command;
 
-    public List<String> command() {
-        return this.command == null ? List.of() : this.command;
+    public Optional<List<String>> command() {
+        return Optional.ofNullable(this.command);
     }
 
     /**
@@ -41,10 +41,10 @@ public final class ContainerResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="environmentVariables")
-      private final @Nullable List<EnvironmentVariableResponse> environmentVariables;
+    private @Nullable List<EnvironmentVariableResponse> environmentVariables;
 
-    public List<EnvironmentVariableResponse> environmentVariables() {
-        return this.environmentVariables == null ? List.of() : this.environmentVariables;
+    public Optional<List<EnvironmentVariableResponse>> environmentVariables() {
+        return Optional.ofNullable(this.environmentVariables);
     }
 
     /**
@@ -52,7 +52,7 @@ public final class ContainerResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="image", required=true)
-      private final String image;
+    private String image;
 
     public String image() {
         return this.image;
@@ -63,7 +63,7 @@ public final class ContainerResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="instanceView", required=true)
-      private final ContainerPropertiesResponseInstanceView instanceView;
+    private ContainerPropertiesResponseInstanceView instanceView;
 
     public ContainerPropertiesResponseInstanceView instanceView() {
         return this.instanceView;
@@ -74,10 +74,10 @@ public final class ContainerResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="livenessProbe")
-      private final @Nullable ContainerProbeResponse livenessProbe;
+    private @Nullable ContainerProbeResponse livenessProbe;
 
     public Optional<ContainerProbeResponse> livenessProbe() {
-        return this.livenessProbe == null ? Optional.empty() : Optional.ofNullable(this.livenessProbe);
+        return Optional.ofNullable(this.livenessProbe);
     }
 
     /**
@@ -85,7 +85,7 @@ public final class ContainerResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -96,10 +96,10 @@ public final class ContainerResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="ports")
-      private final @Nullable List<ContainerPortResponse> ports;
+    private @Nullable List<ContainerPortResponse> ports;
 
-    public List<ContainerPortResponse> ports() {
-        return this.ports == null ? List.of() : this.ports;
+    public Optional<List<ContainerPortResponse>> ports() {
+        return Optional.ofNullable(this.ports);
     }
 
     /**
@@ -107,10 +107,10 @@ public final class ContainerResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="readinessProbe")
-      private final @Nullable ContainerProbeResponse readinessProbe;
+    private @Nullable ContainerProbeResponse readinessProbe;
 
     public Optional<ContainerProbeResponse> readinessProbe() {
-        return this.readinessProbe == null ? Optional.empty() : Optional.ofNullable(this.readinessProbe);
+        return Optional.ofNullable(this.readinessProbe);
     }
 
     /**
@@ -118,7 +118,7 @@ public final class ContainerResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resources", required=true)
-      private final ResourceRequirementsResponse resources;
+    private ResourceRequirementsResponse resources;
 
     public ResourceRequirementsResponse resources() {
         return this.resources;
@@ -129,139 +129,118 @@ public final class ContainerResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="volumeMounts")
-      private final @Nullable List<VolumeMountResponse> volumeMounts;
+    private @Nullable List<VolumeMountResponse> volumeMounts;
 
-    public List<VolumeMountResponse> volumeMounts() {
-        return this.volumeMounts == null ? List.of() : this.volumeMounts;
+    public Optional<List<VolumeMountResponse>> volumeMounts() {
+        return Optional.ofNullable(this.volumeMounts);
     }
 
-    public ContainerResponse(
-        @Nullable List<String> command,
-        @Nullable List<EnvironmentVariableResponse> environmentVariables,
-        String image,
-        ContainerPropertiesResponseInstanceView instanceView,
-        @Nullable ContainerProbeResponse livenessProbe,
-        String name,
-        @Nullable List<ContainerPortResponse> ports,
-        @Nullable ContainerProbeResponse readinessProbe,
-        ResourceRequirementsResponse resources,
-        @Nullable List<VolumeMountResponse> volumeMounts) {
-        this.command = command;
-        this.environmentVariables = environmentVariables;
-        this.image = Objects.requireNonNull(image, "expected parameter 'image' to be non-null");
-        this.instanceView = Objects.requireNonNull(instanceView, "expected parameter 'instanceView' to be non-null");
-        this.livenessProbe = livenessProbe;
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.ports = ports;
-        this.readinessProbe = readinessProbe;
-        this.resources = Objects.requireNonNull(resources, "expected parameter 'resources' to be non-null");
-        this.volumeMounts = volumeMounts;
-    }
+    private ContainerResponse() {}
 
-    private ContainerResponse() {
-        this.command = List.of();
-        this.environmentVariables = List.of();
-        this.image = null;
-        this.instanceView = null;
-        this.livenessProbe = null;
-        this.name = null;
-        this.ports = List.of();
-        this.readinessProbe = null;
-        this.resources = null;
-        this.volumeMounts = List.of();
+    private ContainerResponse(ContainerResponse $) {
+        this.command = $.command;
+        this.environmentVariables = $.environmentVariables;
+        this.image = $.image;
+        this.instanceView = $.instanceView;
+        this.livenessProbe = $.livenessProbe;
+        this.name = $.name;
+        this.ports = $.ports;
+        this.readinessProbe = $.readinessProbe;
+        this.resources = $.resources;
+        this.volumeMounts = $.volumeMounts;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ContainerResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<String> command;
-        private @Nullable List<EnvironmentVariableResponse> environmentVariables;
-        private String image;
-        private ContainerPropertiesResponseInstanceView instanceView;
-        private @Nullable ContainerProbeResponse livenessProbe;
-        private String name;
-        private @Nullable List<ContainerPortResponse> ports;
-        private @Nullable ContainerProbeResponse readinessProbe;
-        private ResourceRequirementsResponse resources;
-        private @Nullable List<VolumeMountResponse> volumeMounts;
+        private ContainerResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ContainerResponse();
         }
 
         public Builder(ContainerResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.command = defaults.command;
-    	      this.environmentVariables = defaults.environmentVariables;
-    	      this.image = defaults.image;
-    	      this.instanceView = defaults.instanceView;
-    	      this.livenessProbe = defaults.livenessProbe;
-    	      this.name = defaults.name;
-    	      this.ports = defaults.ports;
-    	      this.readinessProbe = defaults.readinessProbe;
-    	      this.resources = defaults.resources;
-    	      this.volumeMounts = defaults.volumeMounts;
+            $ = new ContainerResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder command(@Nullable List<String> command) {
-            this.command = command;
+            $.command = command;
             return this;
         }
+
         public Builder command(String... command) {
             return command(List.of(command));
         }
+
         public Builder environmentVariables(@Nullable List<EnvironmentVariableResponse> environmentVariables) {
-            this.environmentVariables = environmentVariables;
+            $.environmentVariables = environmentVariables;
             return this;
         }
+
         public Builder environmentVariables(EnvironmentVariableResponse... environmentVariables) {
             return environmentVariables(List.of(environmentVariables));
         }
+
         public Builder image(String image) {
-            this.image = Objects.requireNonNull(image);
+            $.image = image;
             return this;
         }
+
         public Builder instanceView(ContainerPropertiesResponseInstanceView instanceView) {
-            this.instanceView = Objects.requireNonNull(instanceView);
+            $.instanceView = instanceView;
             return this;
         }
+
         public Builder livenessProbe(@Nullable ContainerProbeResponse livenessProbe) {
-            this.livenessProbe = livenessProbe;
+            $.livenessProbe = livenessProbe;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder ports(@Nullable List<ContainerPortResponse> ports) {
-            this.ports = ports;
+            $.ports = ports;
             return this;
         }
+
         public Builder ports(ContainerPortResponse... ports) {
             return ports(List.of(ports));
         }
+
         public Builder readinessProbe(@Nullable ContainerProbeResponse readinessProbe) {
-            this.readinessProbe = readinessProbe;
+            $.readinessProbe = readinessProbe;
             return this;
         }
+
         public Builder resources(ResourceRequirementsResponse resources) {
-            this.resources = Objects.requireNonNull(resources);
+            $.resources = resources;
             return this;
         }
+
         public Builder volumeMounts(@Nullable List<VolumeMountResponse> volumeMounts) {
-            this.volumeMounts = volumeMounts;
+            $.volumeMounts = volumeMounts;
             return this;
         }
+
         public Builder volumeMounts(VolumeMountResponse... volumeMounts) {
             return volumeMounts(List.of(volumeMounts));
-        }        public ContainerResponse build() {
-            return new ContainerResponse(command, environmentVariables, image, instanceView, livenessProbe, name, ports, readinessProbe, resources, volumeMounts);
+        }
+
+        public ContainerResponse build() {
+            $.image = Objects.requireNonNull($.image, "expected parameter 'image' to be non-null");
+            $.instanceView = Objects.requireNonNull($.instanceView, "expected parameter 'instanceView' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.resources = Objects.requireNonNull($.resources, "expected parameter 'resources' to be non-null");
+            return $;
         }
     }
+
 }

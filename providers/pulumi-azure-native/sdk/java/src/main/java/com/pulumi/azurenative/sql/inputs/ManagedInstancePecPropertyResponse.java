@@ -22,7 +22,7 @@ public final class ManagedInstancePecPropertyResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="id", required=true)
-      private final String id;
+    private String id;
 
     public String id() {
         return this.id;
@@ -33,55 +33,52 @@ public final class ManagedInstancePecPropertyResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="properties", required=true)
-      private final ManagedInstancePrivateEndpointConnectionPropertiesResponse properties;
+    private ManagedInstancePrivateEndpointConnectionPropertiesResponse properties;
 
     public ManagedInstancePrivateEndpointConnectionPropertiesResponse properties() {
         return this.properties;
     }
 
-    public ManagedInstancePecPropertyResponse(
-        String id,
-        ManagedInstancePrivateEndpointConnectionPropertiesResponse properties) {
-        this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
-        this.properties = Objects.requireNonNull(properties, "expected parameter 'properties' to be non-null");
-    }
+    private ManagedInstancePecPropertyResponse() {}
 
-    private ManagedInstancePecPropertyResponse() {
-        this.id = null;
-        this.properties = null;
+    private ManagedInstancePecPropertyResponse(ManagedInstancePecPropertyResponse $) {
+        this.id = $.id;
+        this.properties = $.properties;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ManagedInstancePecPropertyResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String id;
-        private ManagedInstancePrivateEndpointConnectionPropertiesResponse properties;
+        private ManagedInstancePecPropertyResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ManagedInstancePecPropertyResponse();
         }
 
         public Builder(ManagedInstancePecPropertyResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.id = defaults.id;
-    	      this.properties = defaults.properties;
+            $ = new ManagedInstancePecPropertyResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder id(String id) {
-            this.id = Objects.requireNonNull(id);
+            $.id = id;
             return this;
         }
+
         public Builder properties(ManagedInstancePrivateEndpointConnectionPropertiesResponse properties) {
-            this.properties = Objects.requireNonNull(properties);
+            $.properties = properties;
             return this;
-        }        public ManagedInstancePecPropertyResponse build() {
-            return new ManagedInstancePecPropertyResponse(id, properties);
+        }
+
+        public ManagedInstancePecPropertyResponse build() {
+            $.id = Objects.requireNonNull($.id, "expected parameter 'id' to be non-null");
+            $.properties = Objects.requireNonNull($.properties, "expected parameter 'properties' to be non-null");
+            return $;
         }
     }
+
 }

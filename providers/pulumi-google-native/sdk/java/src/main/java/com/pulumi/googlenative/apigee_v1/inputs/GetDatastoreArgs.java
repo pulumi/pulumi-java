@@ -13,62 +13,59 @@ public final class GetDatastoreArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetDatastoreArgs Empty = new GetDatastoreArgs();
 
     @Import(name="datastoreId", required=true)
-      private final String datastoreId;
+    private String datastoreId;
 
     public String datastoreId() {
         return this.datastoreId;
     }
 
     @Import(name="organizationId", required=true)
-      private final String organizationId;
+    private String organizationId;
 
     public String organizationId() {
         return this.organizationId;
     }
 
-    public GetDatastoreArgs(
-        String datastoreId,
-        String organizationId) {
-        this.datastoreId = Objects.requireNonNull(datastoreId, "expected parameter 'datastoreId' to be non-null");
-        this.organizationId = Objects.requireNonNull(organizationId, "expected parameter 'organizationId' to be non-null");
-    }
+    private GetDatastoreArgs() {}
 
-    private GetDatastoreArgs() {
-        this.datastoreId = null;
-        this.organizationId = null;
+    private GetDatastoreArgs(GetDatastoreArgs $) {
+        this.datastoreId = $.datastoreId;
+        this.organizationId = $.organizationId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetDatastoreArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String datastoreId;
-        private String organizationId;
+        private GetDatastoreArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetDatastoreArgs();
         }
 
         public Builder(GetDatastoreArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.datastoreId = defaults.datastoreId;
-    	      this.organizationId = defaults.organizationId;
+            $ = new GetDatastoreArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder datastoreId(String datastoreId) {
-            this.datastoreId = Objects.requireNonNull(datastoreId);
+            $.datastoreId = datastoreId;
             return this;
         }
+
         public Builder organizationId(String organizationId) {
-            this.organizationId = Objects.requireNonNull(organizationId);
+            $.organizationId = organizationId;
             return this;
-        }        public GetDatastoreArgs build() {
-            return new GetDatastoreArgs(datastoreId, organizationId);
+        }
+
+        public GetDatastoreArgs build() {
+            $.datastoreId = Objects.requireNonNull($.datastoreId, "expected parameter 'datastoreId' to be non-null");
+            $.organizationId = Objects.requireNonNull($.organizationId, "expected parameter 'organizationId' to be non-null");
+            return $;
         }
     }
+
 }

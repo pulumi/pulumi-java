@@ -25,10 +25,10 @@ public final class DataVersionResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="datasetType")
-      private final @Nullable String datasetType;
+    private @Nullable String datasetType;
 
     public Optional<String> datasetType() {
-        return this.datasetType == null ? Optional.empty() : Optional.ofNullable(this.datasetType);
+        return Optional.ofNullable(this.datasetType);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class DataVersionResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="datastoreId")
-      private final @Nullable String datastoreId;
+    private @Nullable String datastoreId;
 
     public Optional<String> datastoreId() {
-        return this.datastoreId == null ? Optional.empty() : Optional.ofNullable(this.datastoreId);
+        return Optional.ofNullable(this.datastoreId);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class DataVersionResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable String description;
+    private @Nullable String description;
 
     public Optional<String> description() {
-        return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -58,10 +58,10 @@ public final class DataVersionResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="isAnonymous")
-      private final @Nullable Boolean isAnonymous;
+    private @Nullable Boolean isAnonymous;
 
     public Optional<Boolean> isAnonymous() {
-        return this.isAnonymous == null ? Optional.empty() : Optional.ofNullable(this.isAnonymous);
+        return Optional.ofNullable(this.isAnonymous);
     }
 
     /**
@@ -69,7 +69,7 @@ public final class DataVersionResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="path", required=true)
-      private final String path;
+    private String path;
 
     public String path() {
         return this.path;
@@ -80,10 +80,10 @@ public final class DataVersionResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="properties")
-      private final @Nullable Map<String,String> properties;
+    private @Nullable Map<String,String> properties;
 
-    public Map<String,String> properties() {
-        return this.properties == null ? Map.of() : this.properties;
+    public Optional<Map<String,String>> properties() {
+        return Optional.ofNullable(this.properties);
     }
 
     /**
@@ -91,100 +91,81 @@ public final class DataVersionResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Map<String,String> tags;
+    private @Nullable Map<String,String> tags;
 
-    public Map<String,String> tags() {
-        return this.tags == null ? Map.of() : this.tags;
+    public Optional<Map<String,String>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public DataVersionResponse(
-        @Nullable String datasetType,
-        @Nullable String datastoreId,
-        @Nullable String description,
-        @Nullable Boolean isAnonymous,
-        String path,
-        @Nullable Map<String,String> properties,
-        @Nullable Map<String,String> tags) {
-        this.datasetType = datasetType;
-        this.datastoreId = datastoreId;
-        this.description = description;
-        this.isAnonymous = isAnonymous;
-        this.path = Objects.requireNonNull(path, "expected parameter 'path' to be non-null");
-        this.properties = properties;
-        this.tags = tags;
-    }
+    private DataVersionResponse() {}
 
-    private DataVersionResponse() {
-        this.datasetType = null;
-        this.datastoreId = null;
-        this.description = null;
-        this.isAnonymous = null;
-        this.path = null;
-        this.properties = Map.of();
-        this.tags = Map.of();
+    private DataVersionResponse(DataVersionResponse $) {
+        this.datasetType = $.datasetType;
+        this.datastoreId = $.datastoreId;
+        this.description = $.description;
+        this.isAnonymous = $.isAnonymous;
+        this.path = $.path;
+        this.properties = $.properties;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DataVersionResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String datasetType;
-        private @Nullable String datastoreId;
-        private @Nullable String description;
-        private @Nullable Boolean isAnonymous;
-        private String path;
-        private @Nullable Map<String,String> properties;
-        private @Nullable Map<String,String> tags;
+        private DataVersionResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new DataVersionResponse();
         }
 
         public Builder(DataVersionResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.datasetType = defaults.datasetType;
-    	      this.datastoreId = defaults.datastoreId;
-    	      this.description = defaults.description;
-    	      this.isAnonymous = defaults.isAnonymous;
-    	      this.path = defaults.path;
-    	      this.properties = defaults.properties;
-    	      this.tags = defaults.tags;
+            $ = new DataVersionResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder datasetType(@Nullable String datasetType) {
-            this.datasetType = datasetType;
+            $.datasetType = datasetType;
             return this;
         }
+
         public Builder datastoreId(@Nullable String datastoreId) {
-            this.datastoreId = datastoreId;
+            $.datastoreId = datastoreId;
             return this;
         }
+
         public Builder description(@Nullable String description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
+
         public Builder isAnonymous(@Nullable Boolean isAnonymous) {
-            this.isAnonymous = isAnonymous;
+            $.isAnonymous = isAnonymous;
             return this;
         }
+
         public Builder path(String path) {
-            this.path = Objects.requireNonNull(path);
+            $.path = path;
             return this;
         }
+
         public Builder properties(@Nullable Map<String,String> properties) {
-            this.properties = properties;
+            $.properties = properties;
             return this;
         }
+
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
-        }        public DataVersionResponse build() {
-            return new DataVersionResponse(datasetType, datastoreId, description, isAnonymous, path, properties, tags);
+        }
+
+        public DataVersionResponse build() {
+            $.path = Objects.requireNonNull($.path, "expected parameter 'path' to be non-null");
+            return $;
         }
     }
+
 }

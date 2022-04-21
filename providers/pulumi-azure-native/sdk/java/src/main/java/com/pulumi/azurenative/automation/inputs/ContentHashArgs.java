@@ -5,7 +5,6 @@ package com.pulumi.azurenative.automation.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,7 +22,7 @@ public final class ContentHashArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="algorithm", required=true)
-      private final Output<String> algorithm;
+    private Output<String> algorithm;
 
     public Output<String> algorithm() {
         return this.algorithm;
@@ -34,63 +33,60 @@ public final class ContentHashArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="value", required=true)
-      private final Output<String> value;
+    private Output<String> value;
 
     public Output<String> value() {
         return this.value;
     }
 
-    public ContentHashArgs(
-        Output<String> algorithm,
-        Output<String> value) {
-        this.algorithm = Objects.requireNonNull(algorithm, "expected parameter 'algorithm' to be non-null");
-        this.value = Objects.requireNonNull(value, "expected parameter 'value' to be non-null");
-    }
+    private ContentHashArgs() {}
 
-    private ContentHashArgs() {
-        this.algorithm = Codegen.empty();
-        this.value = Codegen.empty();
+    private ContentHashArgs(ContentHashArgs $) {
+        this.algorithm = $.algorithm;
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ContentHashArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> algorithm;
-        private Output<String> value;
+        private ContentHashArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ContentHashArgs();
         }
 
         public Builder(ContentHashArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.algorithm = defaults.algorithm;
-    	      this.value = defaults.value;
+            $ = new ContentHashArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder algorithm(Output<String> algorithm) {
-            this.algorithm = Objects.requireNonNull(algorithm);
+            $.algorithm = algorithm;
             return this;
         }
+
         public Builder algorithm(String algorithm) {
-            this.algorithm = Output.of(Objects.requireNonNull(algorithm));
-            return this;
+            return algorithm(Output.of(algorithm));
         }
+
         public Builder value(Output<String> value) {
-            this.value = Objects.requireNonNull(value);
+            $.value = value;
             return this;
         }
+
         public Builder value(String value) {
-            this.value = Output.of(Objects.requireNonNull(value));
-            return this;
-        }        public ContentHashArgs build() {
-            return new ContentHashArgs(algorithm, value);
+            return value(Output.of(value));
+        }
+
+        public ContentHashArgs build() {
+            $.algorithm = Objects.requireNonNull($.algorithm, "expected parameter 'algorithm' to be non-null");
+            $.value = Objects.requireNonNull($.value, "expected parameter 'value' to be non-null");
+            return $;
         }
     }
+
 }

@@ -28,7 +28,7 @@ public final class TlsEndpointResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="credentials", required=true)
-      private final UsernamePasswordCredentialsResponse credentials;
+    private UsernamePasswordCredentialsResponse credentials;
 
     public UsernamePasswordCredentialsResponse credentials() {
         return this.credentials;
@@ -39,10 +39,10 @@ public final class TlsEndpointResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="trustedCertificates")
-      private final @Nullable PemCertificateListResponse trustedCertificates;
+    private @Nullable PemCertificateListResponse trustedCertificates;
 
     public Optional<PemCertificateListResponse> trustedCertificates() {
-        return this.trustedCertificates == null ? Optional.empty() : Optional.ofNullable(this.trustedCertificates);
+        return Optional.ofNullable(this.trustedCertificates);
     }
 
     /**
@@ -50,10 +50,10 @@ public final class TlsEndpointResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="tunnel")
-      private final @Nullable SecureIotDeviceRemoteTunnelResponse tunnel;
+    private @Nullable SecureIotDeviceRemoteTunnelResponse tunnel;
 
     public Optional<SecureIotDeviceRemoteTunnelResponse> tunnel() {
-        return this.tunnel == null ? Optional.empty() : Optional.ofNullable(this.tunnel);
+        return Optional.ofNullable(this.tunnel);
     }
 
     /**
@@ -62,7 +62,7 @@ public final class TlsEndpointResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
@@ -73,7 +73,7 @@ public final class TlsEndpointResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="url", required=true)
-      private final String url;
+    private String url;
 
     public String url() {
         return this.url;
@@ -84,91 +84,77 @@ public final class TlsEndpointResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="validationOptions")
-      private final @Nullable TlsValidationOptionsResponse validationOptions;
+    private @Nullable TlsValidationOptionsResponse validationOptions;
 
     public Optional<TlsValidationOptionsResponse> validationOptions() {
-        return this.validationOptions == null ? Optional.empty() : Optional.ofNullable(this.validationOptions);
+        return Optional.ofNullable(this.validationOptions);
     }
 
-    public TlsEndpointResponse(
-        UsernamePasswordCredentialsResponse credentials,
-        @Nullable PemCertificateListResponse trustedCertificates,
-        @Nullable SecureIotDeviceRemoteTunnelResponse tunnel,
-        String type,
-        String url,
-        @Nullable TlsValidationOptionsResponse validationOptions) {
-        this.credentials = Objects.requireNonNull(credentials, "expected parameter 'credentials' to be non-null");
-        this.trustedCertificates = trustedCertificates;
-        this.tunnel = tunnel;
-        this.type = Codegen.stringProp("type").arg(type).require();
-        this.url = Objects.requireNonNull(url, "expected parameter 'url' to be non-null");
-        this.validationOptions = validationOptions;
-    }
+    private TlsEndpointResponse() {}
 
-    private TlsEndpointResponse() {
-        this.credentials = null;
-        this.trustedCertificates = null;
-        this.tunnel = null;
-        this.type = null;
-        this.url = null;
-        this.validationOptions = null;
+    private TlsEndpointResponse(TlsEndpointResponse $) {
+        this.credentials = $.credentials;
+        this.trustedCertificates = $.trustedCertificates;
+        this.tunnel = $.tunnel;
+        this.type = $.type;
+        this.url = $.url;
+        this.validationOptions = $.validationOptions;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TlsEndpointResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private UsernamePasswordCredentialsResponse credentials;
-        private @Nullable PemCertificateListResponse trustedCertificates;
-        private @Nullable SecureIotDeviceRemoteTunnelResponse tunnel;
-        private String type;
-        private String url;
-        private @Nullable TlsValidationOptionsResponse validationOptions;
+        private TlsEndpointResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new TlsEndpointResponse();
         }
 
         public Builder(TlsEndpointResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.credentials = defaults.credentials;
-    	      this.trustedCertificates = defaults.trustedCertificates;
-    	      this.tunnel = defaults.tunnel;
-    	      this.type = defaults.type;
-    	      this.url = defaults.url;
-    	      this.validationOptions = defaults.validationOptions;
+            $ = new TlsEndpointResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder credentials(UsernamePasswordCredentialsResponse credentials) {
-            this.credentials = Objects.requireNonNull(credentials);
+            $.credentials = credentials;
             return this;
         }
+
         public Builder trustedCertificates(@Nullable PemCertificateListResponse trustedCertificates) {
-            this.trustedCertificates = trustedCertificates;
+            $.trustedCertificates = trustedCertificates;
             return this;
         }
+
         public Builder tunnel(@Nullable SecureIotDeviceRemoteTunnelResponse tunnel) {
-            this.tunnel = tunnel;
+            $.tunnel = tunnel;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder url(String url) {
-            this.url = Objects.requireNonNull(url);
+            $.url = url;
             return this;
         }
+
         public Builder validationOptions(@Nullable TlsValidationOptionsResponse validationOptions) {
-            this.validationOptions = validationOptions;
+            $.validationOptions = validationOptions;
             return this;
-        }        public TlsEndpointResponse build() {
-            return new TlsEndpointResponse(credentials, trustedCertificates, tunnel, type, url, validationOptions);
+        }
+
+        public TlsEndpointResponse build() {
+            $.credentials = Objects.requireNonNull($.credentials, "expected parameter 'credentials' to be non-null");
+            $.type = Codegen.stringProp("type").arg($.type).require();
+            $.url = Objects.requireNonNull($.url, "expected parameter 'url' to be non-null");
+            return $;
         }
     }
+
 }

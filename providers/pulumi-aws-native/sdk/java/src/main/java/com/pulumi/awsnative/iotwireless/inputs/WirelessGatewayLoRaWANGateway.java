@@ -13,62 +13,59 @@ public final class WirelessGatewayLoRaWANGateway extends com.pulumi.resources.In
     public static final WirelessGatewayLoRaWANGateway Empty = new WirelessGatewayLoRaWANGateway();
 
     @Import(name="gatewayEui", required=true)
-      private final String gatewayEui;
+    private String gatewayEui;
 
     public String gatewayEui() {
         return this.gatewayEui;
     }
 
     @Import(name="rfRegion", required=true)
-      private final String rfRegion;
+    private String rfRegion;
 
     public String rfRegion() {
         return this.rfRegion;
     }
 
-    public WirelessGatewayLoRaWANGateway(
-        String gatewayEui,
-        String rfRegion) {
-        this.gatewayEui = Objects.requireNonNull(gatewayEui, "expected parameter 'gatewayEui' to be non-null");
-        this.rfRegion = Objects.requireNonNull(rfRegion, "expected parameter 'rfRegion' to be non-null");
-    }
+    private WirelessGatewayLoRaWANGateway() {}
 
-    private WirelessGatewayLoRaWANGateway() {
-        this.gatewayEui = null;
-        this.rfRegion = null;
+    private WirelessGatewayLoRaWANGateway(WirelessGatewayLoRaWANGateway $) {
+        this.gatewayEui = $.gatewayEui;
+        this.rfRegion = $.rfRegion;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WirelessGatewayLoRaWANGateway defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String gatewayEui;
-        private String rfRegion;
+        private WirelessGatewayLoRaWANGateway $;
 
         public Builder() {
-    	      // Empty
+            $ = new WirelessGatewayLoRaWANGateway();
         }
 
         public Builder(WirelessGatewayLoRaWANGateway defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.gatewayEui = defaults.gatewayEui;
-    	      this.rfRegion = defaults.rfRegion;
+            $ = new WirelessGatewayLoRaWANGateway(Objects.requireNonNull(defaults));
         }
 
         public Builder gatewayEui(String gatewayEui) {
-            this.gatewayEui = Objects.requireNonNull(gatewayEui);
+            $.gatewayEui = gatewayEui;
             return this;
         }
+
         public Builder rfRegion(String rfRegion) {
-            this.rfRegion = Objects.requireNonNull(rfRegion);
+            $.rfRegion = rfRegion;
             return this;
-        }        public WirelessGatewayLoRaWANGateway build() {
-            return new WirelessGatewayLoRaWANGateway(gatewayEui, rfRegion);
+        }
+
+        public WirelessGatewayLoRaWANGateway build() {
+            $.gatewayEui = Objects.requireNonNull($.gatewayEui, "expected parameter 'gatewayEui' to be non-null");
+            $.rfRegion = Objects.requireNonNull($.rfRegion, "expected parameter 'rfRegion' to be non-null");
+            return $;
         }
     }
+
 }

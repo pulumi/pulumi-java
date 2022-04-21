@@ -6,10 +6,10 @@ package com.pulumi.azurenative.media;
 import com.pulumi.azurenative.media.inputs.HlsArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,7 +22,7 @@ public final class LiveOutputArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="accountName", required=true)
-      private final Output<String> accountName;
+    private Output<String> accountName;
 
     public Output<String> accountName() {
         return this.accountName;
@@ -33,7 +33,7 @@ public final class LiveOutputArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="archiveWindowLength", required=true)
-      private final Output<String> archiveWindowLength;
+    private Output<String> archiveWindowLength;
 
     public Output<String> archiveWindowLength() {
         return this.archiveWindowLength;
@@ -44,7 +44,7 @@ public final class LiveOutputArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="assetName", required=true)
-      private final Output<String> assetName;
+    private Output<String> assetName;
 
     public Output<String> assetName() {
         return this.assetName;
@@ -55,10 +55,10 @@ public final class LiveOutputArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -66,10 +66,10 @@ public final class LiveOutputArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="hls")
-      private final @Nullable Output<HlsArgs> hls;
+    private @Nullable Output<HlsArgs> hls;
 
-    public Output<HlsArgs> hls() {
-        return this.hls == null ? Codegen.empty() : this.hls;
+    public Optional<Output<HlsArgs>> hls() {
+        return Optional.ofNullable(this.hls);
     }
 
     /**
@@ -77,7 +77,7 @@ public final class LiveOutputArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="liveEventName", required=true)
-      private final Output<String> liveEventName;
+    private Output<String> liveEventName;
 
     public Output<String> liveEventName() {
         return this.liveEventName;
@@ -88,10 +88,10 @@ public final class LiveOutputArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="liveOutputName")
-      private final @Nullable Output<String> liveOutputName;
+    private @Nullable Output<String> liveOutputName;
 
-    public Output<String> liveOutputName() {
-        return this.liveOutputName == null ? Codegen.empty() : this.liveOutputName;
+    public Optional<Output<String>> liveOutputName() {
+        return Optional.ofNullable(this.liveOutputName);
     }
 
     /**
@@ -99,10 +99,10 @@ public final class LiveOutputArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="manifestName")
-      private final @Nullable Output<String> manifestName;
+    private @Nullable Output<String> manifestName;
 
-    public Output<String> manifestName() {
-        return this.manifestName == null ? Codegen.empty() : this.manifestName;
+    public Optional<Output<String>> manifestName() {
+        return Optional.ofNullable(this.manifestName);
     }
 
     /**
@@ -110,10 +110,10 @@ public final class LiveOutputArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="outputSnapTime")
-      private final @Nullable Output<Double> outputSnapTime;
+    private @Nullable Output<Double> outputSnapTime;
 
-    public Output<Double> outputSnapTime() {
-        return this.outputSnapTime == null ? Codegen.empty() : this.outputSnapTime;
+    public Optional<Output<Double>> outputSnapTime() {
+        return Optional.ofNullable(this.outputSnapTime);
     }
 
     /**
@@ -121,167 +121,143 @@ public final class LiveOutputArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public LiveOutputArgs(
-        Output<String> accountName,
-        Output<String> archiveWindowLength,
-        Output<String> assetName,
-        @Nullable Output<String> description,
-        @Nullable Output<HlsArgs> hls,
-        Output<String> liveEventName,
-        @Nullable Output<String> liveOutputName,
-        @Nullable Output<String> manifestName,
-        @Nullable Output<Double> outputSnapTime,
-        Output<String> resourceGroupName) {
-        this.accountName = Objects.requireNonNull(accountName, "expected parameter 'accountName' to be non-null");
-        this.archiveWindowLength = Objects.requireNonNull(archiveWindowLength, "expected parameter 'archiveWindowLength' to be non-null");
-        this.assetName = Objects.requireNonNull(assetName, "expected parameter 'assetName' to be non-null");
-        this.description = description;
-        this.hls = hls;
-        this.liveEventName = Objects.requireNonNull(liveEventName, "expected parameter 'liveEventName' to be non-null");
-        this.liveOutputName = liveOutputName;
-        this.manifestName = manifestName;
-        this.outputSnapTime = outputSnapTime;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private LiveOutputArgs() {}
 
-    private LiveOutputArgs() {
-        this.accountName = Codegen.empty();
-        this.archiveWindowLength = Codegen.empty();
-        this.assetName = Codegen.empty();
-        this.description = Codegen.empty();
-        this.hls = Codegen.empty();
-        this.liveEventName = Codegen.empty();
-        this.liveOutputName = Codegen.empty();
-        this.manifestName = Codegen.empty();
-        this.outputSnapTime = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
+    private LiveOutputArgs(LiveOutputArgs $) {
+        this.accountName = $.accountName;
+        this.archiveWindowLength = $.archiveWindowLength;
+        this.assetName = $.assetName;
+        this.description = $.description;
+        this.hls = $.hls;
+        this.liveEventName = $.liveEventName;
+        this.liveOutputName = $.liveOutputName;
+        this.manifestName = $.manifestName;
+        this.outputSnapTime = $.outputSnapTime;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LiveOutputArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> accountName;
-        private Output<String> archiveWindowLength;
-        private Output<String> assetName;
-        private @Nullable Output<String> description;
-        private @Nullable Output<HlsArgs> hls;
-        private Output<String> liveEventName;
-        private @Nullable Output<String> liveOutputName;
-        private @Nullable Output<String> manifestName;
-        private @Nullable Output<Double> outputSnapTime;
-        private Output<String> resourceGroupName;
+        private LiveOutputArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new LiveOutputArgs();
         }
 
         public Builder(LiveOutputArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accountName = defaults.accountName;
-    	      this.archiveWindowLength = defaults.archiveWindowLength;
-    	      this.assetName = defaults.assetName;
-    	      this.description = defaults.description;
-    	      this.hls = defaults.hls;
-    	      this.liveEventName = defaults.liveEventName;
-    	      this.liveOutputName = defaults.liveOutputName;
-    	      this.manifestName = defaults.manifestName;
-    	      this.outputSnapTime = defaults.outputSnapTime;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new LiveOutputArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder accountName(Output<String> accountName) {
-            this.accountName = Objects.requireNonNull(accountName);
+            $.accountName = accountName;
             return this;
         }
+
         public Builder accountName(String accountName) {
-            this.accountName = Output.of(Objects.requireNonNull(accountName));
-            return this;
+            return accountName(Output.of(accountName));
         }
+
         public Builder archiveWindowLength(Output<String> archiveWindowLength) {
-            this.archiveWindowLength = Objects.requireNonNull(archiveWindowLength);
+            $.archiveWindowLength = archiveWindowLength;
             return this;
         }
+
         public Builder archiveWindowLength(String archiveWindowLength) {
-            this.archiveWindowLength = Output.of(Objects.requireNonNull(archiveWindowLength));
-            return this;
+            return archiveWindowLength(Output.of(archiveWindowLength));
         }
+
         public Builder assetName(Output<String> assetName) {
-            this.assetName = Objects.requireNonNull(assetName);
+            $.assetName = assetName;
             return this;
         }
+
         public Builder assetName(String assetName) {
-            this.assetName = Output.of(Objects.requireNonNull(assetName));
-            return this;
+            return assetName(Output.of(assetName));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder hls(@Nullable Output<HlsArgs> hls) {
-            this.hls = hls;
+            $.hls = hls;
             return this;
         }
-        public Builder hls(@Nullable HlsArgs hls) {
-            this.hls = Codegen.ofNullable(hls);
-            return this;
+
+        public Builder hls(HlsArgs hls) {
+            return hls(Output.of(hls));
         }
+
         public Builder liveEventName(Output<String> liveEventName) {
-            this.liveEventName = Objects.requireNonNull(liveEventName);
+            $.liveEventName = liveEventName;
             return this;
         }
+
         public Builder liveEventName(String liveEventName) {
-            this.liveEventName = Output.of(Objects.requireNonNull(liveEventName));
-            return this;
+            return liveEventName(Output.of(liveEventName));
         }
+
         public Builder liveOutputName(@Nullable Output<String> liveOutputName) {
-            this.liveOutputName = liveOutputName;
+            $.liveOutputName = liveOutputName;
             return this;
         }
-        public Builder liveOutputName(@Nullable String liveOutputName) {
-            this.liveOutputName = Codegen.ofNullable(liveOutputName);
-            return this;
+
+        public Builder liveOutputName(String liveOutputName) {
+            return liveOutputName(Output.of(liveOutputName));
         }
+
         public Builder manifestName(@Nullable Output<String> manifestName) {
-            this.manifestName = manifestName;
+            $.manifestName = manifestName;
             return this;
         }
-        public Builder manifestName(@Nullable String manifestName) {
-            this.manifestName = Codegen.ofNullable(manifestName);
-            return this;
+
+        public Builder manifestName(String manifestName) {
+            return manifestName(Output.of(manifestName));
         }
+
         public Builder outputSnapTime(@Nullable Output<Double> outputSnapTime) {
-            this.outputSnapTime = outputSnapTime;
+            $.outputSnapTime = outputSnapTime;
             return this;
         }
-        public Builder outputSnapTime(@Nullable Double outputSnapTime) {
-            this.outputSnapTime = Codegen.ofNullable(outputSnapTime);
-            return this;
+
+        public Builder outputSnapTime(Double outputSnapTime) {
+            return outputSnapTime(Output.of(outputSnapTime));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
-        }        public LiveOutputArgs build() {
-            return new LiveOutputArgs(accountName, archiveWindowLength, assetName, description, hls, liveEventName, liveOutputName, manifestName, outputSnapTime, resourceGroupName);
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        public LiveOutputArgs build() {
+            $.accountName = Objects.requireNonNull($.accountName, "expected parameter 'accountName' to be non-null");
+            $.archiveWindowLength = Objects.requireNonNull($.archiveWindowLength, "expected parameter 'archiveWindowLength' to be non-null");
+            $.assetName = Objects.requireNonNull($.assetName, "expected parameter 'assetName' to be non-null");
+            $.liveEventName = Objects.requireNonNull($.liveEventName, "expected parameter 'liveEventName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

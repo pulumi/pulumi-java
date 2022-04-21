@@ -9,10 +9,10 @@ import com.pulumi.awsnative.evidently.inputs.FeatureTagArgs;
 import com.pulumi.awsnative.evidently.inputs.FeatureVariationObjectArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,42 +21,42 @@ public final class FeatureArgs extends com.pulumi.resources.ResourceArgs {
     public static final FeatureArgs Empty = new FeatureArgs();
 
     @Import(name="defaultVariation")
-      private final @Nullable Output<String> defaultVariation;
+    private @Nullable Output<String> defaultVariation;
 
-    public Output<String> defaultVariation() {
-        return this.defaultVariation == null ? Codegen.empty() : this.defaultVariation;
+    public Optional<Output<String>> defaultVariation() {
+        return Optional.ofNullable(this.defaultVariation);
     }
 
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     @Import(name="entityOverrides")
-      private final @Nullable Output<List<FeatureEntityOverrideArgs>> entityOverrides;
+    private @Nullable Output<List<FeatureEntityOverrideArgs>> entityOverrides;
 
-    public Output<List<FeatureEntityOverrideArgs>> entityOverrides() {
-        return this.entityOverrides == null ? Codegen.empty() : this.entityOverrides;
+    public Optional<Output<List<FeatureEntityOverrideArgs>>> entityOverrides() {
+        return Optional.ofNullable(this.entityOverrides);
     }
 
     @Import(name="evaluationStrategy")
-      private final @Nullable Output<FeatureEvaluationStrategy> evaluationStrategy;
+    private @Nullable Output<FeatureEvaluationStrategy> evaluationStrategy;
 
-    public Output<FeatureEvaluationStrategy> evaluationStrategy() {
-        return this.evaluationStrategy == null ? Codegen.empty() : this.evaluationStrategy;
+    public Optional<Output<FeatureEvaluationStrategy>> evaluationStrategy() {
+        return Optional.ofNullable(this.evaluationStrategy);
     }
 
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     @Import(name="project", required=true)
-      private final Output<String> project;
+    private Output<String> project;
 
     public Output<String> project() {
         return this.project;
@@ -67,157 +67,139 @@ public final class FeatureArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<List<FeatureTagArgs>> tags;
+    private @Nullable Output<List<FeatureTagArgs>> tags;
 
-    public Output<List<FeatureTagArgs>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<List<FeatureTagArgs>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     @Import(name="variations", required=true)
-      private final Output<List<FeatureVariationObjectArgs>> variations;
+    private Output<List<FeatureVariationObjectArgs>> variations;
 
     public Output<List<FeatureVariationObjectArgs>> variations() {
         return this.variations;
     }
 
-    public FeatureArgs(
-        @Nullable Output<String> defaultVariation,
-        @Nullable Output<String> description,
-        @Nullable Output<List<FeatureEntityOverrideArgs>> entityOverrides,
-        @Nullable Output<FeatureEvaluationStrategy> evaluationStrategy,
-        @Nullable Output<String> name,
-        Output<String> project,
-        @Nullable Output<List<FeatureTagArgs>> tags,
-        Output<List<FeatureVariationObjectArgs>> variations) {
-        this.defaultVariation = defaultVariation;
-        this.description = description;
-        this.entityOverrides = entityOverrides;
-        this.evaluationStrategy = evaluationStrategy;
-        this.name = name;
-        this.project = Objects.requireNonNull(project, "expected parameter 'project' to be non-null");
-        this.tags = tags;
-        this.variations = Objects.requireNonNull(variations, "expected parameter 'variations' to be non-null");
-    }
+    private FeatureArgs() {}
 
-    private FeatureArgs() {
-        this.defaultVariation = Codegen.empty();
-        this.description = Codegen.empty();
-        this.entityOverrides = Codegen.empty();
-        this.evaluationStrategy = Codegen.empty();
-        this.name = Codegen.empty();
-        this.project = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.variations = Codegen.empty();
+    private FeatureArgs(FeatureArgs $) {
+        this.defaultVariation = $.defaultVariation;
+        this.description = $.description;
+        this.entityOverrides = $.entityOverrides;
+        this.evaluationStrategy = $.evaluationStrategy;
+        this.name = $.name;
+        this.project = $.project;
+        this.tags = $.tags;
+        this.variations = $.variations;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FeatureArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> defaultVariation;
-        private @Nullable Output<String> description;
-        private @Nullable Output<List<FeatureEntityOverrideArgs>> entityOverrides;
-        private @Nullable Output<FeatureEvaluationStrategy> evaluationStrategy;
-        private @Nullable Output<String> name;
-        private Output<String> project;
-        private @Nullable Output<List<FeatureTagArgs>> tags;
-        private Output<List<FeatureVariationObjectArgs>> variations;
+        private FeatureArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new FeatureArgs();
         }
 
         public Builder(FeatureArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.defaultVariation = defaults.defaultVariation;
-    	      this.description = defaults.description;
-    	      this.entityOverrides = defaults.entityOverrides;
-    	      this.evaluationStrategy = defaults.evaluationStrategy;
-    	      this.name = defaults.name;
-    	      this.project = defaults.project;
-    	      this.tags = defaults.tags;
-    	      this.variations = defaults.variations;
+            $ = new FeatureArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder defaultVariation(@Nullable Output<String> defaultVariation) {
-            this.defaultVariation = defaultVariation;
+            $.defaultVariation = defaultVariation;
             return this;
         }
-        public Builder defaultVariation(@Nullable String defaultVariation) {
-            this.defaultVariation = Codegen.ofNullable(defaultVariation);
-            return this;
+
+        public Builder defaultVariation(String defaultVariation) {
+            return defaultVariation(Output.of(defaultVariation));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder entityOverrides(@Nullable Output<List<FeatureEntityOverrideArgs>> entityOverrides) {
-            this.entityOverrides = entityOverrides;
+            $.entityOverrides = entityOverrides;
             return this;
         }
-        public Builder entityOverrides(@Nullable List<FeatureEntityOverrideArgs> entityOverrides) {
-            this.entityOverrides = Codegen.ofNullable(entityOverrides);
-            return this;
+
+        public Builder entityOverrides(List<FeatureEntityOverrideArgs> entityOverrides) {
+            return entityOverrides(Output.of(entityOverrides));
         }
+
         public Builder entityOverrides(FeatureEntityOverrideArgs... entityOverrides) {
             return entityOverrides(List.of(entityOverrides));
         }
+
         public Builder evaluationStrategy(@Nullable Output<FeatureEvaluationStrategy> evaluationStrategy) {
-            this.evaluationStrategy = evaluationStrategy;
+            $.evaluationStrategy = evaluationStrategy;
             return this;
         }
-        public Builder evaluationStrategy(@Nullable FeatureEvaluationStrategy evaluationStrategy) {
-            this.evaluationStrategy = Codegen.ofNullable(evaluationStrategy);
-            return this;
+
+        public Builder evaluationStrategy(FeatureEvaluationStrategy evaluationStrategy) {
+            return evaluationStrategy(Output.of(evaluationStrategy));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder project(Output<String> project) {
-            this.project = Objects.requireNonNull(project);
+            $.project = project;
             return this;
         }
+
         public Builder project(String project) {
-            this.project = Output.of(Objects.requireNonNull(project));
-            return this;
+            return project(Output.of(project));
         }
+
         public Builder tags(@Nullable Output<List<FeatureTagArgs>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable List<FeatureTagArgs> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(List<FeatureTagArgs> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tags(FeatureTagArgs... tags) {
             return tags(List.of(tags));
         }
+
         public Builder variations(Output<List<FeatureVariationObjectArgs>> variations) {
-            this.variations = Objects.requireNonNull(variations);
+            $.variations = variations;
             return this;
         }
+
         public Builder variations(List<FeatureVariationObjectArgs> variations) {
-            this.variations = Output.of(Objects.requireNonNull(variations));
-            return this;
+            return variations(Output.of(variations));
         }
+
         public Builder variations(FeatureVariationObjectArgs... variations) {
             return variations(List.of(variations));
-        }        public FeatureArgs build() {
-            return new FeatureArgs(defaultVariation, description, entityOverrides, evaluationStrategy, name, project, tags, variations);
+        }
+
+        public FeatureArgs build() {
+            $.project = Objects.requireNonNull($.project, "expected parameter 'project' to be non-null");
+            $.variations = Objects.requireNonNull($.variations, "expected parameter 'variations' to be non-null");
+            return $;
         }
     }
+
 }

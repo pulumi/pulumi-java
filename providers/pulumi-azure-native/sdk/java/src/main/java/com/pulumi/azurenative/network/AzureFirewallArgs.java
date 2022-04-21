@@ -14,11 +14,11 @@ import com.pulumi.azurenative.network.inputs.SubResourceArgs;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -31,10 +31,10 @@ public final class AzureFirewallArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="additionalProperties")
-      private final @Nullable Output<Map<String,String>> additionalProperties;
+    private @Nullable Output<Map<String,String>> additionalProperties;
 
-    public Output<Map<String,String>> additionalProperties() {
-        return this.additionalProperties == null ? Codegen.empty() : this.additionalProperties;
+    public Optional<Output<Map<String,String>>> additionalProperties() {
+        return Optional.ofNullable(this.additionalProperties);
     }
 
     /**
@@ -42,10 +42,10 @@ public final class AzureFirewallArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="applicationRuleCollections")
-      private final @Nullable Output<List<AzureFirewallApplicationRuleCollectionArgs>> applicationRuleCollections;
+    private @Nullable Output<List<AzureFirewallApplicationRuleCollectionArgs>> applicationRuleCollections;
 
-    public Output<List<AzureFirewallApplicationRuleCollectionArgs>> applicationRuleCollections() {
-        return this.applicationRuleCollections == null ? Codegen.empty() : this.applicationRuleCollections;
+    public Optional<Output<List<AzureFirewallApplicationRuleCollectionArgs>>> applicationRuleCollections() {
+        return Optional.ofNullable(this.applicationRuleCollections);
     }
 
     /**
@@ -53,10 +53,10 @@ public final class AzureFirewallArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="azureFirewallName")
-      private final @Nullable Output<String> azureFirewallName;
+    private @Nullable Output<String> azureFirewallName;
 
-    public Output<String> azureFirewallName() {
-        return this.azureFirewallName == null ? Codegen.empty() : this.azureFirewallName;
+    public Optional<Output<String>> azureFirewallName() {
+        return Optional.ofNullable(this.azureFirewallName);
     }
 
     /**
@@ -64,10 +64,10 @@ public final class AzureFirewallArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="firewallPolicy")
-      private final @Nullable Output<SubResourceArgs> firewallPolicy;
+    private @Nullable Output<SubResourceArgs> firewallPolicy;
 
-    public Output<SubResourceArgs> firewallPolicy() {
-        return this.firewallPolicy == null ? Codegen.empty() : this.firewallPolicy;
+    public Optional<Output<SubResourceArgs>> firewallPolicy() {
+        return Optional.ofNullable(this.firewallPolicy);
     }
 
     /**
@@ -75,10 +75,10 @@ public final class AzureFirewallArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="hubIPAddresses")
-      private final @Nullable Output<HubIPAddressesArgs> hubIPAddresses;
+    private @Nullable Output<HubIPAddressesArgs> hubIPAddresses;
 
-    public Output<HubIPAddressesArgs> hubIPAddresses() {
-        return this.hubIPAddresses == null ? Codegen.empty() : this.hubIPAddresses;
+    public Optional<Output<HubIPAddressesArgs>> hubIPAddresses() {
+        return Optional.ofNullable(this.hubIPAddresses);
     }
 
     /**
@@ -86,10 +86,10 @@ public final class AzureFirewallArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="id")
-      private final @Nullable Output<String> id;
+    private @Nullable Output<String> id;
 
-    public Output<String> id() {
-        return this.id == null ? Codegen.empty() : this.id;
+    public Optional<Output<String>> id() {
+        return Optional.ofNullable(this.id);
     }
 
     /**
@@ -97,10 +97,10 @@ public final class AzureFirewallArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="ipConfigurations")
-      private final @Nullable Output<List<AzureFirewallIPConfigurationArgs>> ipConfigurations;
+    private @Nullable Output<List<AzureFirewallIPConfigurationArgs>> ipConfigurations;
 
-    public Output<List<AzureFirewallIPConfigurationArgs>> ipConfigurations() {
-        return this.ipConfigurations == null ? Codegen.empty() : this.ipConfigurations;
+    public Optional<Output<List<AzureFirewallIPConfigurationArgs>>> ipConfigurations() {
+        return Optional.ofNullable(this.ipConfigurations);
     }
 
     /**
@@ -108,10 +108,10 @@ public final class AzureFirewallArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -119,10 +119,10 @@ public final class AzureFirewallArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="managementIpConfiguration")
-      private final @Nullable Output<AzureFirewallIPConfigurationArgs> managementIpConfiguration;
+    private @Nullable Output<AzureFirewallIPConfigurationArgs> managementIpConfiguration;
 
-    public Output<AzureFirewallIPConfigurationArgs> managementIpConfiguration() {
-        return this.managementIpConfiguration == null ? Codegen.empty() : this.managementIpConfiguration;
+    public Optional<Output<AzureFirewallIPConfigurationArgs>> managementIpConfiguration() {
+        return Optional.ofNullable(this.managementIpConfiguration);
     }
 
     /**
@@ -130,10 +130,10 @@ public final class AzureFirewallArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="natRuleCollections")
-      private final @Nullable Output<List<AzureFirewallNatRuleCollectionArgs>> natRuleCollections;
+    private @Nullable Output<List<AzureFirewallNatRuleCollectionArgs>> natRuleCollections;
 
-    public Output<List<AzureFirewallNatRuleCollectionArgs>> natRuleCollections() {
-        return this.natRuleCollections == null ? Codegen.empty() : this.natRuleCollections;
+    public Optional<Output<List<AzureFirewallNatRuleCollectionArgs>>> natRuleCollections() {
+        return Optional.ofNullable(this.natRuleCollections);
     }
 
     /**
@@ -141,10 +141,10 @@ public final class AzureFirewallArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="networkRuleCollections")
-      private final @Nullable Output<List<AzureFirewallNetworkRuleCollectionArgs>> networkRuleCollections;
+    private @Nullable Output<List<AzureFirewallNetworkRuleCollectionArgs>> networkRuleCollections;
 
-    public Output<List<AzureFirewallNetworkRuleCollectionArgs>> networkRuleCollections() {
-        return this.networkRuleCollections == null ? Codegen.empty() : this.networkRuleCollections;
+    public Optional<Output<List<AzureFirewallNetworkRuleCollectionArgs>>> networkRuleCollections() {
+        return Optional.ofNullable(this.networkRuleCollections);
     }
 
     /**
@@ -152,7 +152,7 @@ public final class AzureFirewallArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -163,10 +163,10 @@ public final class AzureFirewallArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="sku")
-      private final @Nullable Output<AzureFirewallSkuArgs> sku;
+    private @Nullable Output<AzureFirewallSkuArgs> sku;
 
-    public Output<AzureFirewallSkuArgs> sku() {
-        return this.sku == null ? Codegen.empty() : this.sku;
+    public Optional<Output<AzureFirewallSkuArgs>> sku() {
+        return Optional.ofNullable(this.sku);
     }
 
     /**
@@ -174,10 +174,10 @@ public final class AzureFirewallArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -185,10 +185,10 @@ public final class AzureFirewallArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="threatIntelMode")
-      private final @Nullable Output<Either<String,AzureFirewallThreatIntelMode>> threatIntelMode;
+    private @Nullable Output<Either<String,AzureFirewallThreatIntelMode>> threatIntelMode;
 
-    public Output<Either<String,AzureFirewallThreatIntelMode>> threatIntelMode() {
-        return this.threatIntelMode == null ? Codegen.empty() : this.threatIntelMode;
+    public Optional<Output<Either<String,AzureFirewallThreatIntelMode>>> threatIntelMode() {
+        return Optional.ofNullable(this.threatIntelMode);
     }
 
     /**
@@ -196,10 +196,10 @@ public final class AzureFirewallArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="virtualHub")
-      private final @Nullable Output<SubResourceArgs> virtualHub;
+    private @Nullable Output<SubResourceArgs> virtualHub;
 
-    public Output<SubResourceArgs> virtualHub() {
-        return this.virtualHub == null ? Codegen.empty() : this.virtualHub;
+    public Optional<Output<SubResourceArgs>> virtualHub() {
+        return Optional.ofNullable(this.virtualHub);
     }
 
     /**
@@ -207,273 +207,229 @@ public final class AzureFirewallArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="zones")
-      private final @Nullable Output<List<String>> zones;
+    private @Nullable Output<List<String>> zones;
 
-    public Output<List<String>> zones() {
-        return this.zones == null ? Codegen.empty() : this.zones;
+    public Optional<Output<List<String>>> zones() {
+        return Optional.ofNullable(this.zones);
     }
 
-    public AzureFirewallArgs(
-        @Nullable Output<Map<String,String>> additionalProperties,
-        @Nullable Output<List<AzureFirewallApplicationRuleCollectionArgs>> applicationRuleCollections,
-        @Nullable Output<String> azureFirewallName,
-        @Nullable Output<SubResourceArgs> firewallPolicy,
-        @Nullable Output<HubIPAddressesArgs> hubIPAddresses,
-        @Nullable Output<String> id,
-        @Nullable Output<List<AzureFirewallIPConfigurationArgs>> ipConfigurations,
-        @Nullable Output<String> location,
-        @Nullable Output<AzureFirewallIPConfigurationArgs> managementIpConfiguration,
-        @Nullable Output<List<AzureFirewallNatRuleCollectionArgs>> natRuleCollections,
-        @Nullable Output<List<AzureFirewallNetworkRuleCollectionArgs>> networkRuleCollections,
-        Output<String> resourceGroupName,
-        @Nullable Output<AzureFirewallSkuArgs> sku,
-        @Nullable Output<Map<String,String>> tags,
-        @Nullable Output<Either<String,AzureFirewallThreatIntelMode>> threatIntelMode,
-        @Nullable Output<SubResourceArgs> virtualHub,
-        @Nullable Output<List<String>> zones) {
-        this.additionalProperties = additionalProperties;
-        this.applicationRuleCollections = applicationRuleCollections;
-        this.azureFirewallName = azureFirewallName;
-        this.firewallPolicy = firewallPolicy;
-        this.hubIPAddresses = hubIPAddresses;
-        this.id = id;
-        this.ipConfigurations = ipConfigurations;
-        this.location = location;
-        this.managementIpConfiguration = managementIpConfiguration;
-        this.natRuleCollections = natRuleCollections;
-        this.networkRuleCollections = networkRuleCollections;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.sku = sku;
-        this.tags = tags;
-        this.threatIntelMode = threatIntelMode;
-        this.virtualHub = virtualHub;
-        this.zones = zones;
-    }
+    private AzureFirewallArgs() {}
 
-    private AzureFirewallArgs() {
-        this.additionalProperties = Codegen.empty();
-        this.applicationRuleCollections = Codegen.empty();
-        this.azureFirewallName = Codegen.empty();
-        this.firewallPolicy = Codegen.empty();
-        this.hubIPAddresses = Codegen.empty();
-        this.id = Codegen.empty();
-        this.ipConfigurations = Codegen.empty();
-        this.location = Codegen.empty();
-        this.managementIpConfiguration = Codegen.empty();
-        this.natRuleCollections = Codegen.empty();
-        this.networkRuleCollections = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.sku = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.threatIntelMode = Codegen.empty();
-        this.virtualHub = Codegen.empty();
-        this.zones = Codegen.empty();
+    private AzureFirewallArgs(AzureFirewallArgs $) {
+        this.additionalProperties = $.additionalProperties;
+        this.applicationRuleCollections = $.applicationRuleCollections;
+        this.azureFirewallName = $.azureFirewallName;
+        this.firewallPolicy = $.firewallPolicy;
+        this.hubIPAddresses = $.hubIPAddresses;
+        this.id = $.id;
+        this.ipConfigurations = $.ipConfigurations;
+        this.location = $.location;
+        this.managementIpConfiguration = $.managementIpConfiguration;
+        this.natRuleCollections = $.natRuleCollections;
+        this.networkRuleCollections = $.networkRuleCollections;
+        this.resourceGroupName = $.resourceGroupName;
+        this.sku = $.sku;
+        this.tags = $.tags;
+        this.threatIntelMode = $.threatIntelMode;
+        this.virtualHub = $.virtualHub;
+        this.zones = $.zones;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AzureFirewallArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Map<String,String>> additionalProperties;
-        private @Nullable Output<List<AzureFirewallApplicationRuleCollectionArgs>> applicationRuleCollections;
-        private @Nullable Output<String> azureFirewallName;
-        private @Nullable Output<SubResourceArgs> firewallPolicy;
-        private @Nullable Output<HubIPAddressesArgs> hubIPAddresses;
-        private @Nullable Output<String> id;
-        private @Nullable Output<List<AzureFirewallIPConfigurationArgs>> ipConfigurations;
-        private @Nullable Output<String> location;
-        private @Nullable Output<AzureFirewallIPConfigurationArgs> managementIpConfiguration;
-        private @Nullable Output<List<AzureFirewallNatRuleCollectionArgs>> natRuleCollections;
-        private @Nullable Output<List<AzureFirewallNetworkRuleCollectionArgs>> networkRuleCollections;
-        private Output<String> resourceGroupName;
-        private @Nullable Output<AzureFirewallSkuArgs> sku;
-        private @Nullable Output<Map<String,String>> tags;
-        private @Nullable Output<Either<String,AzureFirewallThreatIntelMode>> threatIntelMode;
-        private @Nullable Output<SubResourceArgs> virtualHub;
-        private @Nullable Output<List<String>> zones;
+        private AzureFirewallArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AzureFirewallArgs();
         }
 
         public Builder(AzureFirewallArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.additionalProperties = defaults.additionalProperties;
-    	      this.applicationRuleCollections = defaults.applicationRuleCollections;
-    	      this.azureFirewallName = defaults.azureFirewallName;
-    	      this.firewallPolicy = defaults.firewallPolicy;
-    	      this.hubIPAddresses = defaults.hubIPAddresses;
-    	      this.id = defaults.id;
-    	      this.ipConfigurations = defaults.ipConfigurations;
-    	      this.location = defaults.location;
-    	      this.managementIpConfiguration = defaults.managementIpConfiguration;
-    	      this.natRuleCollections = defaults.natRuleCollections;
-    	      this.networkRuleCollections = defaults.networkRuleCollections;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.sku = defaults.sku;
-    	      this.tags = defaults.tags;
-    	      this.threatIntelMode = defaults.threatIntelMode;
-    	      this.virtualHub = defaults.virtualHub;
-    	      this.zones = defaults.zones;
+            $ = new AzureFirewallArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder additionalProperties(@Nullable Output<Map<String,String>> additionalProperties) {
-            this.additionalProperties = additionalProperties;
+            $.additionalProperties = additionalProperties;
             return this;
         }
-        public Builder additionalProperties(@Nullable Map<String,String> additionalProperties) {
-            this.additionalProperties = Codegen.ofNullable(additionalProperties);
-            return this;
+
+        public Builder additionalProperties(Map<String,String> additionalProperties) {
+            return additionalProperties(Output.of(additionalProperties));
         }
+
         public Builder applicationRuleCollections(@Nullable Output<List<AzureFirewallApplicationRuleCollectionArgs>> applicationRuleCollections) {
-            this.applicationRuleCollections = applicationRuleCollections;
+            $.applicationRuleCollections = applicationRuleCollections;
             return this;
         }
-        public Builder applicationRuleCollections(@Nullable List<AzureFirewallApplicationRuleCollectionArgs> applicationRuleCollections) {
-            this.applicationRuleCollections = Codegen.ofNullable(applicationRuleCollections);
-            return this;
+
+        public Builder applicationRuleCollections(List<AzureFirewallApplicationRuleCollectionArgs> applicationRuleCollections) {
+            return applicationRuleCollections(Output.of(applicationRuleCollections));
         }
+
         public Builder applicationRuleCollections(AzureFirewallApplicationRuleCollectionArgs... applicationRuleCollections) {
             return applicationRuleCollections(List.of(applicationRuleCollections));
         }
+
         public Builder azureFirewallName(@Nullable Output<String> azureFirewallName) {
-            this.azureFirewallName = azureFirewallName;
+            $.azureFirewallName = azureFirewallName;
             return this;
         }
-        public Builder azureFirewallName(@Nullable String azureFirewallName) {
-            this.azureFirewallName = Codegen.ofNullable(azureFirewallName);
-            return this;
+
+        public Builder azureFirewallName(String azureFirewallName) {
+            return azureFirewallName(Output.of(azureFirewallName));
         }
+
         public Builder firewallPolicy(@Nullable Output<SubResourceArgs> firewallPolicy) {
-            this.firewallPolicy = firewallPolicy;
+            $.firewallPolicy = firewallPolicy;
             return this;
         }
-        public Builder firewallPolicy(@Nullable SubResourceArgs firewallPolicy) {
-            this.firewallPolicy = Codegen.ofNullable(firewallPolicy);
-            return this;
+
+        public Builder firewallPolicy(SubResourceArgs firewallPolicy) {
+            return firewallPolicy(Output.of(firewallPolicy));
         }
+
         public Builder hubIPAddresses(@Nullable Output<HubIPAddressesArgs> hubIPAddresses) {
-            this.hubIPAddresses = hubIPAddresses;
+            $.hubIPAddresses = hubIPAddresses;
             return this;
         }
-        public Builder hubIPAddresses(@Nullable HubIPAddressesArgs hubIPAddresses) {
-            this.hubIPAddresses = Codegen.ofNullable(hubIPAddresses);
-            return this;
+
+        public Builder hubIPAddresses(HubIPAddressesArgs hubIPAddresses) {
+            return hubIPAddresses(Output.of(hubIPAddresses));
         }
+
         public Builder id(@Nullable Output<String> id) {
-            this.id = id;
+            $.id = id;
             return this;
         }
-        public Builder id(@Nullable String id) {
-            this.id = Codegen.ofNullable(id);
-            return this;
+
+        public Builder id(String id) {
+            return id(Output.of(id));
         }
+
         public Builder ipConfigurations(@Nullable Output<List<AzureFirewallIPConfigurationArgs>> ipConfigurations) {
-            this.ipConfigurations = ipConfigurations;
+            $.ipConfigurations = ipConfigurations;
             return this;
         }
-        public Builder ipConfigurations(@Nullable List<AzureFirewallIPConfigurationArgs> ipConfigurations) {
-            this.ipConfigurations = Codegen.ofNullable(ipConfigurations);
-            return this;
+
+        public Builder ipConfigurations(List<AzureFirewallIPConfigurationArgs> ipConfigurations) {
+            return ipConfigurations(Output.of(ipConfigurations));
         }
+
         public Builder ipConfigurations(AzureFirewallIPConfigurationArgs... ipConfigurations) {
             return ipConfigurations(List.of(ipConfigurations));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder managementIpConfiguration(@Nullable Output<AzureFirewallIPConfigurationArgs> managementIpConfiguration) {
-            this.managementIpConfiguration = managementIpConfiguration;
+            $.managementIpConfiguration = managementIpConfiguration;
             return this;
         }
-        public Builder managementIpConfiguration(@Nullable AzureFirewallIPConfigurationArgs managementIpConfiguration) {
-            this.managementIpConfiguration = Codegen.ofNullable(managementIpConfiguration);
-            return this;
+
+        public Builder managementIpConfiguration(AzureFirewallIPConfigurationArgs managementIpConfiguration) {
+            return managementIpConfiguration(Output.of(managementIpConfiguration));
         }
+
         public Builder natRuleCollections(@Nullable Output<List<AzureFirewallNatRuleCollectionArgs>> natRuleCollections) {
-            this.natRuleCollections = natRuleCollections;
+            $.natRuleCollections = natRuleCollections;
             return this;
         }
-        public Builder natRuleCollections(@Nullable List<AzureFirewallNatRuleCollectionArgs> natRuleCollections) {
-            this.natRuleCollections = Codegen.ofNullable(natRuleCollections);
-            return this;
+
+        public Builder natRuleCollections(List<AzureFirewallNatRuleCollectionArgs> natRuleCollections) {
+            return natRuleCollections(Output.of(natRuleCollections));
         }
+
         public Builder natRuleCollections(AzureFirewallNatRuleCollectionArgs... natRuleCollections) {
             return natRuleCollections(List.of(natRuleCollections));
         }
+
         public Builder networkRuleCollections(@Nullable Output<List<AzureFirewallNetworkRuleCollectionArgs>> networkRuleCollections) {
-            this.networkRuleCollections = networkRuleCollections;
+            $.networkRuleCollections = networkRuleCollections;
             return this;
         }
-        public Builder networkRuleCollections(@Nullable List<AzureFirewallNetworkRuleCollectionArgs> networkRuleCollections) {
-            this.networkRuleCollections = Codegen.ofNullable(networkRuleCollections);
-            return this;
+
+        public Builder networkRuleCollections(List<AzureFirewallNetworkRuleCollectionArgs> networkRuleCollections) {
+            return networkRuleCollections(Output.of(networkRuleCollections));
         }
+
         public Builder networkRuleCollections(AzureFirewallNetworkRuleCollectionArgs... networkRuleCollections) {
             return networkRuleCollections(List.of(networkRuleCollections));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder sku(@Nullable Output<AzureFirewallSkuArgs> sku) {
-            this.sku = sku;
+            $.sku = sku;
             return this;
         }
-        public Builder sku(@Nullable AzureFirewallSkuArgs sku) {
-            this.sku = Codegen.ofNullable(sku);
-            return this;
+
+        public Builder sku(AzureFirewallSkuArgs sku) {
+            return sku(Output.of(sku));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder threatIntelMode(@Nullable Output<Either<String,AzureFirewallThreatIntelMode>> threatIntelMode) {
-            this.threatIntelMode = threatIntelMode;
+            $.threatIntelMode = threatIntelMode;
             return this;
         }
-        public Builder threatIntelMode(@Nullable Either<String,AzureFirewallThreatIntelMode> threatIntelMode) {
-            this.threatIntelMode = Codegen.ofNullable(threatIntelMode);
-            return this;
+
+        public Builder threatIntelMode(Either<String,AzureFirewallThreatIntelMode> threatIntelMode) {
+            return threatIntelMode(Output.of(threatIntelMode));
         }
+
         public Builder virtualHub(@Nullable Output<SubResourceArgs> virtualHub) {
-            this.virtualHub = virtualHub;
+            $.virtualHub = virtualHub;
             return this;
         }
-        public Builder virtualHub(@Nullable SubResourceArgs virtualHub) {
-            this.virtualHub = Codegen.ofNullable(virtualHub);
-            return this;
+
+        public Builder virtualHub(SubResourceArgs virtualHub) {
+            return virtualHub(Output.of(virtualHub));
         }
+
         public Builder zones(@Nullable Output<List<String>> zones) {
-            this.zones = zones;
+            $.zones = zones;
             return this;
         }
-        public Builder zones(@Nullable List<String> zones) {
-            this.zones = Codegen.ofNullable(zones);
-            return this;
+
+        public Builder zones(List<String> zones) {
+            return zones(Output.of(zones));
         }
+
         public Builder zones(String... zones) {
             return zones(List.of(zones));
-        }        public AzureFirewallArgs build() {
-            return new AzureFirewallArgs(additionalProperties, applicationRuleCollections, azureFirewallName, firewallPolicy, hubIPAddresses, id, ipConfigurations, location, managementIpConfiguration, natRuleCollections, networkRuleCollections, resourceGroupName, sku, tags, threatIntelMode, virtualHub, zones);
+        }
+
+        public AzureFirewallArgs build() {
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

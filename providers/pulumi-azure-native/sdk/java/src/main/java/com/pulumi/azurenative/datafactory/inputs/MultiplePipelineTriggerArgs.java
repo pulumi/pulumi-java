@@ -11,6 +11,7 @@ import java.lang.Object;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +28,10 @@ public final class MultiplePipelineTriggerArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="annotations")
-      private final @Nullable Output<List<Object>> annotations;
+    private @Nullable Output<List<Object>> annotations;
 
-    public Output<List<Object>> annotations() {
-        return this.annotations == null ? Codegen.empty() : this.annotations;
+    public Optional<Output<List<Object>>> annotations() {
+        return Optional.ofNullable(this.annotations);
     }
 
     /**
@@ -38,10 +39,10 @@ public final class MultiplePipelineTriggerArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -49,10 +50,10 @@ public final class MultiplePipelineTriggerArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="pipelines")
-      private final @Nullable Output<List<TriggerPipelineReferenceArgs>> pipelines;
+    private @Nullable Output<List<TriggerPipelineReferenceArgs>> pipelines;
 
-    public Output<List<TriggerPipelineReferenceArgs>> pipelines() {
-        return this.pipelines == null ? Codegen.empty() : this.pipelines;
+    public Optional<Output<List<TriggerPipelineReferenceArgs>>> pipelines() {
+        return Optional.ofNullable(this.pipelines);
     }
 
     /**
@@ -61,95 +62,87 @@ public final class MultiplePipelineTriggerArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="type", required=true)
-      private final Output<String> type;
+    private Output<String> type;
 
     public Output<String> type() {
         return this.type;
     }
 
-    public MultiplePipelineTriggerArgs(
-        @Nullable Output<List<Object>> annotations,
-        @Nullable Output<String> description,
-        @Nullable Output<List<TriggerPipelineReferenceArgs>> pipelines,
-        Output<String> type) {
-        this.annotations = annotations;
-        this.description = description;
-        this.pipelines = pipelines;
-        this.type = Codegen.stringProp("type").output().arg(type).require();
-    }
+    private MultiplePipelineTriggerArgs() {}
 
-    private MultiplePipelineTriggerArgs() {
-        this.annotations = Codegen.empty();
-        this.description = Codegen.empty();
-        this.pipelines = Codegen.empty();
-        this.type = Codegen.empty();
+    private MultiplePipelineTriggerArgs(MultiplePipelineTriggerArgs $) {
+        this.annotations = $.annotations;
+        this.description = $.description;
+        this.pipelines = $.pipelines;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MultiplePipelineTriggerArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<Object>> annotations;
-        private @Nullable Output<String> description;
-        private @Nullable Output<List<TriggerPipelineReferenceArgs>> pipelines;
-        private Output<String> type;
+        private MultiplePipelineTriggerArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new MultiplePipelineTriggerArgs();
         }
 
         public Builder(MultiplePipelineTriggerArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.annotations = defaults.annotations;
-    	      this.description = defaults.description;
-    	      this.pipelines = defaults.pipelines;
-    	      this.type = defaults.type;
+            $ = new MultiplePipelineTriggerArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder annotations(@Nullable Output<List<Object>> annotations) {
-            this.annotations = annotations;
+            $.annotations = annotations;
             return this;
         }
-        public Builder annotations(@Nullable List<Object> annotations) {
-            this.annotations = Codegen.ofNullable(annotations);
-            return this;
+
+        public Builder annotations(List<Object> annotations) {
+            return annotations(Output.of(annotations));
         }
+
         public Builder annotations(Object... annotations) {
             return annotations(List.of(annotations));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder pipelines(@Nullable Output<List<TriggerPipelineReferenceArgs>> pipelines) {
-            this.pipelines = pipelines;
+            $.pipelines = pipelines;
             return this;
         }
-        public Builder pipelines(@Nullable List<TriggerPipelineReferenceArgs> pipelines) {
-            this.pipelines = Codegen.ofNullable(pipelines);
-            return this;
+
+        public Builder pipelines(List<TriggerPipelineReferenceArgs> pipelines) {
+            return pipelines(Output.of(pipelines));
         }
+
         public Builder pipelines(TriggerPipelineReferenceArgs... pipelines) {
             return pipelines(List.of(pipelines));
         }
+
         public Builder type(Output<String> type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Output.of(Objects.requireNonNull(type));
-            return this;
-        }        public MultiplePipelineTriggerArgs build() {
-            return new MultiplePipelineTriggerArgs(annotations, description, pipelines, type);
+            return type(Output.of(type));
+        }
+
+        public MultiplePipelineTriggerArgs build() {
+            $.type = Codegen.stringProp("type").output().arg($.type).require();
+            return $;
         }
     }
+
 }

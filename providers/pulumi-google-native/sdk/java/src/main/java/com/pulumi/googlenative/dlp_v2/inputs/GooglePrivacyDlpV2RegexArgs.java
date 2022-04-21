@@ -5,11 +5,11 @@ package com.pulumi.googlenative.dlp_v2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class GooglePrivacyDlpV2RegexArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="groupIndexes")
-      private final @Nullable Output<List<Integer>> groupIndexes;
+    private @Nullable Output<List<Integer>> groupIndexes;
 
-    public Output<List<Integer>> groupIndexes() {
-        return this.groupIndexes == null ? Codegen.empty() : this.groupIndexes;
+    public Optional<Output<List<Integer>>> groupIndexes() {
+        return Optional.ofNullable(this.groupIndexes);
     }
 
     /**
@@ -37,66 +37,62 @@ public final class GooglePrivacyDlpV2RegexArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="pattern")
-      private final @Nullable Output<String> pattern;
+    private @Nullable Output<String> pattern;
 
-    public Output<String> pattern() {
-        return this.pattern == null ? Codegen.empty() : this.pattern;
+    public Optional<Output<String>> pattern() {
+        return Optional.ofNullable(this.pattern);
     }
 
-    public GooglePrivacyDlpV2RegexArgs(
-        @Nullable Output<List<Integer>> groupIndexes,
-        @Nullable Output<String> pattern) {
-        this.groupIndexes = groupIndexes;
-        this.pattern = pattern;
-    }
+    private GooglePrivacyDlpV2RegexArgs() {}
 
-    private GooglePrivacyDlpV2RegexArgs() {
-        this.groupIndexes = Codegen.empty();
-        this.pattern = Codegen.empty();
+    private GooglePrivacyDlpV2RegexArgs(GooglePrivacyDlpV2RegexArgs $) {
+        this.groupIndexes = $.groupIndexes;
+        this.pattern = $.pattern;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GooglePrivacyDlpV2RegexArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<Integer>> groupIndexes;
-        private @Nullable Output<String> pattern;
+        private GooglePrivacyDlpV2RegexArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GooglePrivacyDlpV2RegexArgs();
         }
 
         public Builder(GooglePrivacyDlpV2RegexArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.groupIndexes = defaults.groupIndexes;
-    	      this.pattern = defaults.pattern;
+            $ = new GooglePrivacyDlpV2RegexArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder groupIndexes(@Nullable Output<List<Integer>> groupIndexes) {
-            this.groupIndexes = groupIndexes;
+            $.groupIndexes = groupIndexes;
             return this;
         }
-        public Builder groupIndexes(@Nullable List<Integer> groupIndexes) {
-            this.groupIndexes = Codegen.ofNullable(groupIndexes);
-            return this;
+
+        public Builder groupIndexes(List<Integer> groupIndexes) {
+            return groupIndexes(Output.of(groupIndexes));
         }
+
         public Builder groupIndexes(Integer... groupIndexes) {
             return groupIndexes(List.of(groupIndexes));
         }
+
         public Builder pattern(@Nullable Output<String> pattern) {
-            this.pattern = pattern;
+            $.pattern = pattern;
             return this;
         }
-        public Builder pattern(@Nullable String pattern) {
-            this.pattern = Codegen.ofNullable(pattern);
-            return this;
-        }        public GooglePrivacyDlpV2RegexArgs build() {
-            return new GooglePrivacyDlpV2RegexArgs(groupIndexes, pattern);
+
+        public Builder pattern(String pattern) {
+            return pattern(Output.of(pattern));
+        }
+
+        public GooglePrivacyDlpV2RegexArgs build() {
+            return $;
         }
     }
+
 }

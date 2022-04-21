@@ -23,7 +23,7 @@ public final class ContentKeyPolicyX509CertificateTokenKeyResponse extends com.p
      * 
      */
     @Import(name="odataType", required=true)
-      private final String odataType;
+    private String odataType;
 
     public String odataType() {
         return this.odataType;
@@ -34,55 +34,52 @@ public final class ContentKeyPolicyX509CertificateTokenKeyResponse extends com.p
      * 
      */
     @Import(name="rawBody", required=true)
-      private final String rawBody;
+    private String rawBody;
 
     public String rawBody() {
         return this.rawBody;
     }
 
-    public ContentKeyPolicyX509CertificateTokenKeyResponse(
-        String odataType,
-        String rawBody) {
-        this.odataType = Codegen.stringProp("odataType").arg(odataType).require();
-        this.rawBody = Objects.requireNonNull(rawBody, "expected parameter 'rawBody' to be non-null");
-    }
+    private ContentKeyPolicyX509CertificateTokenKeyResponse() {}
 
-    private ContentKeyPolicyX509CertificateTokenKeyResponse() {
-        this.odataType = null;
-        this.rawBody = null;
+    private ContentKeyPolicyX509CertificateTokenKeyResponse(ContentKeyPolicyX509CertificateTokenKeyResponse $) {
+        this.odataType = $.odataType;
+        this.rawBody = $.rawBody;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ContentKeyPolicyX509CertificateTokenKeyResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String odataType;
-        private String rawBody;
+        private ContentKeyPolicyX509CertificateTokenKeyResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ContentKeyPolicyX509CertificateTokenKeyResponse();
         }
 
         public Builder(ContentKeyPolicyX509CertificateTokenKeyResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.odataType = defaults.odataType;
-    	      this.rawBody = defaults.rawBody;
+            $ = new ContentKeyPolicyX509CertificateTokenKeyResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder odataType(String odataType) {
-            this.odataType = Objects.requireNonNull(odataType);
+            $.odataType = odataType;
             return this;
         }
+
         public Builder rawBody(String rawBody) {
-            this.rawBody = Objects.requireNonNull(rawBody);
+            $.rawBody = rawBody;
             return this;
-        }        public ContentKeyPolicyX509CertificateTokenKeyResponse build() {
-            return new ContentKeyPolicyX509CertificateTokenKeyResponse(odataType, rawBody);
+        }
+
+        public ContentKeyPolicyX509CertificateTokenKeyResponse build() {
+            $.odataType = Codegen.stringProp("odataType").arg($.odataType).require();
+            $.rawBody = Objects.requireNonNull($.rawBody, "expected parameter 'rawBody' to be non-null");
+            return $;
         }
     }
+
 }

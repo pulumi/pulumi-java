@@ -5,10 +5,10 @@ package com.pulumi.azurenative.network.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class ConnectionMonitorDestinationArgs extends com.pulumi.resources
      * 
      */
     @Import(name="address")
-      private final @Nullable Output<String> address;
+    private @Nullable Output<String> address;
 
-    public Output<String> address() {
-        return this.address == null ? Codegen.empty() : this.address;
+    public Optional<Output<String>> address() {
+        return Optional.ofNullable(this.address);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class ConnectionMonitorDestinationArgs extends com.pulumi.resources
      * 
      */
     @Import(name="port")
-      private final @Nullable Output<Integer> port;
+    private @Nullable Output<Integer> port;
 
-    public Output<Integer> port() {
-        return this.port == null ? Codegen.empty() : this.port;
+    public Optional<Output<Integer>> port() {
+        return Optional.ofNullable(this.port);
     }
 
     /**
@@ -47,76 +47,68 @@ public final class ConnectionMonitorDestinationArgs extends com.pulumi.resources
      * 
      */
     @Import(name="resourceId")
-      private final @Nullable Output<String> resourceId;
+    private @Nullable Output<String> resourceId;
 
-    public Output<String> resourceId() {
-        return this.resourceId == null ? Codegen.empty() : this.resourceId;
+    public Optional<Output<String>> resourceId() {
+        return Optional.ofNullable(this.resourceId);
     }
 
-    public ConnectionMonitorDestinationArgs(
-        @Nullable Output<String> address,
-        @Nullable Output<Integer> port,
-        @Nullable Output<String> resourceId) {
-        this.address = address;
-        this.port = port;
-        this.resourceId = resourceId;
-    }
+    private ConnectionMonitorDestinationArgs() {}
 
-    private ConnectionMonitorDestinationArgs() {
-        this.address = Codegen.empty();
-        this.port = Codegen.empty();
-        this.resourceId = Codegen.empty();
+    private ConnectionMonitorDestinationArgs(ConnectionMonitorDestinationArgs $) {
+        this.address = $.address;
+        this.port = $.port;
+        this.resourceId = $.resourceId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ConnectionMonitorDestinationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> address;
-        private @Nullable Output<Integer> port;
-        private @Nullable Output<String> resourceId;
+        private ConnectionMonitorDestinationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ConnectionMonitorDestinationArgs();
         }
 
         public Builder(ConnectionMonitorDestinationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.address = defaults.address;
-    	      this.port = defaults.port;
-    	      this.resourceId = defaults.resourceId;
+            $ = new ConnectionMonitorDestinationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder address(@Nullable Output<String> address) {
-            this.address = address;
+            $.address = address;
             return this;
         }
-        public Builder address(@Nullable String address) {
-            this.address = Codegen.ofNullable(address);
-            return this;
+
+        public Builder address(String address) {
+            return address(Output.of(address));
         }
+
         public Builder port(@Nullable Output<Integer> port) {
-            this.port = port;
+            $.port = port;
             return this;
         }
-        public Builder port(@Nullable Integer port) {
-            this.port = Codegen.ofNullable(port);
-            return this;
+
+        public Builder port(Integer port) {
+            return port(Output.of(port));
         }
+
         public Builder resourceId(@Nullable Output<String> resourceId) {
-            this.resourceId = resourceId;
+            $.resourceId = resourceId;
             return this;
         }
-        public Builder resourceId(@Nullable String resourceId) {
-            this.resourceId = Codegen.ofNullable(resourceId);
-            return this;
-        }        public ConnectionMonitorDestinationArgs build() {
-            return new ConnectionMonitorDestinationArgs(address, port, resourceId);
+
+        public Builder resourceId(String resourceId) {
+            return resourceId(Output.of(resourceId));
+        }
+
+        public ConnectionMonitorDestinationArgs build() {
+            return $;
         }
     }
+
 }

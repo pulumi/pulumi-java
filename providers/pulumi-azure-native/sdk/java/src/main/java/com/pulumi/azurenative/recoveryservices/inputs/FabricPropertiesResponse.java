@@ -33,10 +33,10 @@ public final class FabricPropertiesResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="bcdrState")
-      private final @Nullable String bcdrState;
+    private @Nullable String bcdrState;
 
     public Optional<String> bcdrState() {
-        return this.bcdrState == null ? Optional.empty() : Optional.ofNullable(this.bcdrState);
+        return Optional.ofNullable(this.bcdrState);
     }
 
     /**
@@ -44,10 +44,10 @@ public final class FabricPropertiesResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="customDetails")
-      private final @Nullable Object customDetails;
+    private @Nullable Object customDetails;
 
-    public Object customDetails() {
-        return this.customDetails == null ? null : this.customDetails;
+    public Optional<Object> customDetails() {
+        return Optional.ofNullable(this.customDetails);
     }
 
     /**
@@ -55,10 +55,10 @@ public final class FabricPropertiesResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="encryptionDetails")
-      private final @Nullable EncryptionDetailsResponse encryptionDetails;
+    private @Nullable EncryptionDetailsResponse encryptionDetails;
 
     public Optional<EncryptionDetailsResponse> encryptionDetails() {
-        return this.encryptionDetails == null ? Optional.empty() : Optional.ofNullable(this.encryptionDetails);
+        return Optional.ofNullable(this.encryptionDetails);
     }
 
     /**
@@ -66,10 +66,10 @@ public final class FabricPropertiesResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="friendlyName")
-      private final @Nullable String friendlyName;
+    private @Nullable String friendlyName;
 
     public Optional<String> friendlyName() {
-        return this.friendlyName == null ? Optional.empty() : Optional.ofNullable(this.friendlyName);
+        return Optional.ofNullable(this.friendlyName);
     }
 
     /**
@@ -77,10 +77,10 @@ public final class FabricPropertiesResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="health")
-      private final @Nullable String health;
+    private @Nullable String health;
 
     public Optional<String> health() {
-        return this.health == null ? Optional.empty() : Optional.ofNullable(this.health);
+        return Optional.ofNullable(this.health);
     }
 
     /**
@@ -88,10 +88,10 @@ public final class FabricPropertiesResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="healthErrorDetails")
-      private final @Nullable List<HealthErrorResponse> healthErrorDetails;
+    private @Nullable List<HealthErrorResponse> healthErrorDetails;
 
-    public List<HealthErrorResponse> healthErrorDetails() {
-        return this.healthErrorDetails == null ? List.of() : this.healthErrorDetails;
+    public Optional<List<HealthErrorResponse>> healthErrorDetails() {
+        return Optional.ofNullable(this.healthErrorDetails);
     }
 
     /**
@@ -99,10 +99,10 @@ public final class FabricPropertiesResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="internalIdentifier")
-      private final @Nullable String internalIdentifier;
+    private @Nullable String internalIdentifier;
 
     public Optional<String> internalIdentifier() {
-        return this.internalIdentifier == null ? Optional.empty() : Optional.ofNullable(this.internalIdentifier);
+        return Optional.ofNullable(this.internalIdentifier);
     }
 
     /**
@@ -110,112 +110,90 @@ public final class FabricPropertiesResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="rolloverEncryptionDetails")
-      private final @Nullable EncryptionDetailsResponse rolloverEncryptionDetails;
+    private @Nullable EncryptionDetailsResponse rolloverEncryptionDetails;
 
     public Optional<EncryptionDetailsResponse> rolloverEncryptionDetails() {
-        return this.rolloverEncryptionDetails == null ? Optional.empty() : Optional.ofNullable(this.rolloverEncryptionDetails);
+        return Optional.ofNullable(this.rolloverEncryptionDetails);
     }
 
-    public FabricPropertiesResponse(
-        @Nullable String bcdrState,
-        @Nullable Object customDetails,
-        @Nullable EncryptionDetailsResponse encryptionDetails,
-        @Nullable String friendlyName,
-        @Nullable String health,
-        @Nullable List<HealthErrorResponse> healthErrorDetails,
-        @Nullable String internalIdentifier,
-        @Nullable EncryptionDetailsResponse rolloverEncryptionDetails) {
-        this.bcdrState = bcdrState;
-        this.customDetails = customDetails;
-        this.encryptionDetails = encryptionDetails;
-        this.friendlyName = friendlyName;
-        this.health = health;
-        this.healthErrorDetails = healthErrorDetails;
-        this.internalIdentifier = internalIdentifier;
-        this.rolloverEncryptionDetails = rolloverEncryptionDetails;
-    }
+    private FabricPropertiesResponse() {}
 
-    private FabricPropertiesResponse() {
-        this.bcdrState = null;
-        this.customDetails = null;
-        this.encryptionDetails = null;
-        this.friendlyName = null;
-        this.health = null;
-        this.healthErrorDetails = List.of();
-        this.internalIdentifier = null;
-        this.rolloverEncryptionDetails = null;
+    private FabricPropertiesResponse(FabricPropertiesResponse $) {
+        this.bcdrState = $.bcdrState;
+        this.customDetails = $.customDetails;
+        this.encryptionDetails = $.encryptionDetails;
+        this.friendlyName = $.friendlyName;
+        this.health = $.health;
+        this.healthErrorDetails = $.healthErrorDetails;
+        this.internalIdentifier = $.internalIdentifier;
+        this.rolloverEncryptionDetails = $.rolloverEncryptionDetails;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FabricPropertiesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String bcdrState;
-        private @Nullable Object customDetails;
-        private @Nullable EncryptionDetailsResponse encryptionDetails;
-        private @Nullable String friendlyName;
-        private @Nullable String health;
-        private @Nullable List<HealthErrorResponse> healthErrorDetails;
-        private @Nullable String internalIdentifier;
-        private @Nullable EncryptionDetailsResponse rolloverEncryptionDetails;
+        private FabricPropertiesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new FabricPropertiesResponse();
         }
 
         public Builder(FabricPropertiesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.bcdrState = defaults.bcdrState;
-    	      this.customDetails = defaults.customDetails;
-    	      this.encryptionDetails = defaults.encryptionDetails;
-    	      this.friendlyName = defaults.friendlyName;
-    	      this.health = defaults.health;
-    	      this.healthErrorDetails = defaults.healthErrorDetails;
-    	      this.internalIdentifier = defaults.internalIdentifier;
-    	      this.rolloverEncryptionDetails = defaults.rolloverEncryptionDetails;
+            $ = new FabricPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder bcdrState(@Nullable String bcdrState) {
-            this.bcdrState = bcdrState;
+            $.bcdrState = bcdrState;
             return this;
         }
+
         public Builder customDetails(@Nullable Object customDetails) {
-            this.customDetails = customDetails;
+            $.customDetails = customDetails;
             return this;
         }
+
         public Builder encryptionDetails(@Nullable EncryptionDetailsResponse encryptionDetails) {
-            this.encryptionDetails = encryptionDetails;
+            $.encryptionDetails = encryptionDetails;
             return this;
         }
+
         public Builder friendlyName(@Nullable String friendlyName) {
-            this.friendlyName = friendlyName;
+            $.friendlyName = friendlyName;
             return this;
         }
+
         public Builder health(@Nullable String health) {
-            this.health = health;
+            $.health = health;
             return this;
         }
+
         public Builder healthErrorDetails(@Nullable List<HealthErrorResponse> healthErrorDetails) {
-            this.healthErrorDetails = healthErrorDetails;
+            $.healthErrorDetails = healthErrorDetails;
             return this;
         }
+
         public Builder healthErrorDetails(HealthErrorResponse... healthErrorDetails) {
             return healthErrorDetails(List.of(healthErrorDetails));
         }
+
         public Builder internalIdentifier(@Nullable String internalIdentifier) {
-            this.internalIdentifier = internalIdentifier;
+            $.internalIdentifier = internalIdentifier;
             return this;
         }
+
         public Builder rolloverEncryptionDetails(@Nullable EncryptionDetailsResponse rolloverEncryptionDetails) {
-            this.rolloverEncryptionDetails = rolloverEncryptionDetails;
+            $.rolloverEncryptionDetails = rolloverEncryptionDetails;
             return this;
-        }        public FabricPropertiesResponse build() {
-            return new FabricPropertiesResponse(bcdrState, customDetails, encryptionDetails, friendlyName, health, healthErrorDetails, internalIdentifier, rolloverEncryptionDetails);
+        }
+
+        public FabricPropertiesResponse build() {
+            return $;
         }
     }
+
 }

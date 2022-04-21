@@ -5,7 +5,6 @@ package com.pulumi.gcp.compute.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.Objects;
 
@@ -15,49 +14,49 @@ public final class InstanceFromMachineImageConfidentialInstanceConfigGetArgs ext
     public static final InstanceFromMachineImageConfidentialInstanceConfigGetArgs Empty = new InstanceFromMachineImageConfidentialInstanceConfigGetArgs();
 
     @Import(name="enableConfidentialCompute", required=true)
-      private final Output<Boolean> enableConfidentialCompute;
+    private Output<Boolean> enableConfidentialCompute;
 
     public Output<Boolean> enableConfidentialCompute() {
         return this.enableConfidentialCompute;
     }
 
-    public InstanceFromMachineImageConfidentialInstanceConfigGetArgs(Output<Boolean> enableConfidentialCompute) {
-        this.enableConfidentialCompute = Objects.requireNonNull(enableConfidentialCompute, "expected parameter 'enableConfidentialCompute' to be non-null");
-    }
+    private InstanceFromMachineImageConfidentialInstanceConfigGetArgs() {}
 
-    private InstanceFromMachineImageConfidentialInstanceConfigGetArgs() {
-        this.enableConfidentialCompute = Codegen.empty();
+    private InstanceFromMachineImageConfidentialInstanceConfigGetArgs(InstanceFromMachineImageConfidentialInstanceConfigGetArgs $) {
+        this.enableConfidentialCompute = $.enableConfidentialCompute;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(InstanceFromMachineImageConfidentialInstanceConfigGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Boolean> enableConfidentialCompute;
+        private InstanceFromMachineImageConfidentialInstanceConfigGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new InstanceFromMachineImageConfidentialInstanceConfigGetArgs();
         }
 
         public Builder(InstanceFromMachineImageConfidentialInstanceConfigGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.enableConfidentialCompute = defaults.enableConfidentialCompute;
+            $ = new InstanceFromMachineImageConfidentialInstanceConfigGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder enableConfidentialCompute(Output<Boolean> enableConfidentialCompute) {
-            this.enableConfidentialCompute = Objects.requireNonNull(enableConfidentialCompute);
+            $.enableConfidentialCompute = enableConfidentialCompute;
             return this;
         }
+
         public Builder enableConfidentialCompute(Boolean enableConfidentialCompute) {
-            this.enableConfidentialCompute = Output.of(Objects.requireNonNull(enableConfidentialCompute));
-            return this;
-        }        public InstanceFromMachineImageConfidentialInstanceConfigGetArgs build() {
-            return new InstanceFromMachineImageConfidentialInstanceConfigGetArgs(enableConfidentialCompute);
+            return enableConfidentialCompute(Output.of(enableConfidentialCompute));
+        }
+
+        public InstanceFromMachineImageConfidentialInstanceConfigGetArgs build() {
+            $.enableConfidentialCompute = Objects.requireNonNull($.enableConfidentialCompute, "expected parameter 'enableConfidentialCompute' to be non-null");
+            return $;
         }
     }
+
 }

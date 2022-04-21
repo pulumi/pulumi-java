@@ -12,10 +12,10 @@ import com.pulumi.azurenative.batch.inputs.VMExtensionArgs;
 import com.pulumi.azurenative.batch.inputs.WindowsConfigurationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -28,10 +28,10 @@ public final class VirtualMachineConfigurationArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="containerConfiguration")
-      private final @Nullable Output<ContainerConfigurationArgs> containerConfiguration;
+    private @Nullable Output<ContainerConfigurationArgs> containerConfiguration;
 
-    public Output<ContainerConfigurationArgs> containerConfiguration() {
-        return this.containerConfiguration == null ? Codegen.empty() : this.containerConfiguration;
+    public Optional<Output<ContainerConfigurationArgs>> containerConfiguration() {
+        return Optional.ofNullable(this.containerConfiguration);
     }
 
     /**
@@ -39,10 +39,10 @@ public final class VirtualMachineConfigurationArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="dataDisks")
-      private final @Nullable Output<List<DataDiskArgs>> dataDisks;
+    private @Nullable Output<List<DataDiskArgs>> dataDisks;
 
-    public Output<List<DataDiskArgs>> dataDisks() {
-        return this.dataDisks == null ? Codegen.empty() : this.dataDisks;
+    public Optional<Output<List<DataDiskArgs>>> dataDisks() {
+        return Optional.ofNullable(this.dataDisks);
     }
 
     /**
@@ -50,10 +50,10 @@ public final class VirtualMachineConfigurationArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="diskEncryptionConfiguration")
-      private final @Nullable Output<DiskEncryptionConfigurationArgs> diskEncryptionConfiguration;
+    private @Nullable Output<DiskEncryptionConfigurationArgs> diskEncryptionConfiguration;
 
-    public Output<DiskEncryptionConfigurationArgs> diskEncryptionConfiguration() {
-        return this.diskEncryptionConfiguration == null ? Codegen.empty() : this.diskEncryptionConfiguration;
+    public Optional<Output<DiskEncryptionConfigurationArgs>> diskEncryptionConfiguration() {
+        return Optional.ofNullable(this.diskEncryptionConfiguration);
     }
 
     /**
@@ -61,14 +61,14 @@ public final class VirtualMachineConfigurationArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="extensions")
-      private final @Nullable Output<List<VMExtensionArgs>> extensions;
+    private @Nullable Output<List<VMExtensionArgs>> extensions;
 
-    public Output<List<VMExtensionArgs>> extensions() {
-        return this.extensions == null ? Codegen.empty() : this.extensions;
+    public Optional<Output<List<VMExtensionArgs>>> extensions() {
+        return Optional.ofNullable(this.extensions);
     }
 
     @Import(name="imageReference", required=true)
-      private final Output<ImageReferenceArgs> imageReference;
+    private Output<ImageReferenceArgs> imageReference;
 
     public Output<ImageReferenceArgs> imageReference() {
         return this.imageReference;
@@ -82,10 +82,10 @@ public final class VirtualMachineConfigurationArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="licenseType")
-      private final @Nullable Output<String> licenseType;
+    private @Nullable Output<String> licenseType;
 
-    public Output<String> licenseType() {
-        return this.licenseType == null ? Codegen.empty() : this.licenseType;
+    public Optional<Output<String>> licenseType() {
+        return Optional.ofNullable(this.licenseType);
     }
 
     /**
@@ -93,7 +93,7 @@ public final class VirtualMachineConfigurationArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="nodeAgentSkuId", required=true)
-      private final Output<String> nodeAgentSkuId;
+    private Output<String> nodeAgentSkuId;
 
     public Output<String> nodeAgentSkuId() {
         return this.nodeAgentSkuId;
@@ -104,10 +104,10 @@ public final class VirtualMachineConfigurationArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="nodePlacementConfiguration")
-      private final @Nullable Output<NodePlacementConfigurationArgs> nodePlacementConfiguration;
+    private @Nullable Output<NodePlacementConfigurationArgs> nodePlacementConfiguration;
 
-    public Output<NodePlacementConfigurationArgs> nodePlacementConfiguration() {
-        return this.nodePlacementConfiguration == null ? Codegen.empty() : this.nodePlacementConfiguration;
+    public Optional<Output<NodePlacementConfigurationArgs>> nodePlacementConfiguration() {
+        return Optional.ofNullable(this.nodePlacementConfiguration);
     }
 
     /**
@@ -115,160 +115,138 @@ public final class VirtualMachineConfigurationArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="windowsConfiguration")
-      private final @Nullable Output<WindowsConfigurationArgs> windowsConfiguration;
+    private @Nullable Output<WindowsConfigurationArgs> windowsConfiguration;
 
-    public Output<WindowsConfigurationArgs> windowsConfiguration() {
-        return this.windowsConfiguration == null ? Codegen.empty() : this.windowsConfiguration;
+    public Optional<Output<WindowsConfigurationArgs>> windowsConfiguration() {
+        return Optional.ofNullable(this.windowsConfiguration);
     }
 
-    public VirtualMachineConfigurationArgs(
-        @Nullable Output<ContainerConfigurationArgs> containerConfiguration,
-        @Nullable Output<List<DataDiskArgs>> dataDisks,
-        @Nullable Output<DiskEncryptionConfigurationArgs> diskEncryptionConfiguration,
-        @Nullable Output<List<VMExtensionArgs>> extensions,
-        Output<ImageReferenceArgs> imageReference,
-        @Nullable Output<String> licenseType,
-        Output<String> nodeAgentSkuId,
-        @Nullable Output<NodePlacementConfigurationArgs> nodePlacementConfiguration,
-        @Nullable Output<WindowsConfigurationArgs> windowsConfiguration) {
-        this.containerConfiguration = containerConfiguration;
-        this.dataDisks = dataDisks;
-        this.diskEncryptionConfiguration = diskEncryptionConfiguration;
-        this.extensions = extensions;
-        this.imageReference = Objects.requireNonNull(imageReference, "expected parameter 'imageReference' to be non-null");
-        this.licenseType = licenseType;
-        this.nodeAgentSkuId = Objects.requireNonNull(nodeAgentSkuId, "expected parameter 'nodeAgentSkuId' to be non-null");
-        this.nodePlacementConfiguration = nodePlacementConfiguration;
-        this.windowsConfiguration = windowsConfiguration;
-    }
+    private VirtualMachineConfigurationArgs() {}
 
-    private VirtualMachineConfigurationArgs() {
-        this.containerConfiguration = Codegen.empty();
-        this.dataDisks = Codegen.empty();
-        this.diskEncryptionConfiguration = Codegen.empty();
-        this.extensions = Codegen.empty();
-        this.imageReference = Codegen.empty();
-        this.licenseType = Codegen.empty();
-        this.nodeAgentSkuId = Codegen.empty();
-        this.nodePlacementConfiguration = Codegen.empty();
-        this.windowsConfiguration = Codegen.empty();
+    private VirtualMachineConfigurationArgs(VirtualMachineConfigurationArgs $) {
+        this.containerConfiguration = $.containerConfiguration;
+        this.dataDisks = $.dataDisks;
+        this.diskEncryptionConfiguration = $.diskEncryptionConfiguration;
+        this.extensions = $.extensions;
+        this.imageReference = $.imageReference;
+        this.licenseType = $.licenseType;
+        this.nodeAgentSkuId = $.nodeAgentSkuId;
+        this.nodePlacementConfiguration = $.nodePlacementConfiguration;
+        this.windowsConfiguration = $.windowsConfiguration;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VirtualMachineConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<ContainerConfigurationArgs> containerConfiguration;
-        private @Nullable Output<List<DataDiskArgs>> dataDisks;
-        private @Nullable Output<DiskEncryptionConfigurationArgs> diskEncryptionConfiguration;
-        private @Nullable Output<List<VMExtensionArgs>> extensions;
-        private Output<ImageReferenceArgs> imageReference;
-        private @Nullable Output<String> licenseType;
-        private Output<String> nodeAgentSkuId;
-        private @Nullable Output<NodePlacementConfigurationArgs> nodePlacementConfiguration;
-        private @Nullable Output<WindowsConfigurationArgs> windowsConfiguration;
+        private VirtualMachineConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new VirtualMachineConfigurationArgs();
         }
 
         public Builder(VirtualMachineConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.containerConfiguration = defaults.containerConfiguration;
-    	      this.dataDisks = defaults.dataDisks;
-    	      this.diskEncryptionConfiguration = defaults.diskEncryptionConfiguration;
-    	      this.extensions = defaults.extensions;
-    	      this.imageReference = defaults.imageReference;
-    	      this.licenseType = defaults.licenseType;
-    	      this.nodeAgentSkuId = defaults.nodeAgentSkuId;
-    	      this.nodePlacementConfiguration = defaults.nodePlacementConfiguration;
-    	      this.windowsConfiguration = defaults.windowsConfiguration;
+            $ = new VirtualMachineConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder containerConfiguration(@Nullable Output<ContainerConfigurationArgs> containerConfiguration) {
-            this.containerConfiguration = containerConfiguration;
+            $.containerConfiguration = containerConfiguration;
             return this;
         }
-        public Builder containerConfiguration(@Nullable ContainerConfigurationArgs containerConfiguration) {
-            this.containerConfiguration = Codegen.ofNullable(containerConfiguration);
-            return this;
+
+        public Builder containerConfiguration(ContainerConfigurationArgs containerConfiguration) {
+            return containerConfiguration(Output.of(containerConfiguration));
         }
+
         public Builder dataDisks(@Nullable Output<List<DataDiskArgs>> dataDisks) {
-            this.dataDisks = dataDisks;
+            $.dataDisks = dataDisks;
             return this;
         }
-        public Builder dataDisks(@Nullable List<DataDiskArgs> dataDisks) {
-            this.dataDisks = Codegen.ofNullable(dataDisks);
-            return this;
+
+        public Builder dataDisks(List<DataDiskArgs> dataDisks) {
+            return dataDisks(Output.of(dataDisks));
         }
+
         public Builder dataDisks(DataDiskArgs... dataDisks) {
             return dataDisks(List.of(dataDisks));
         }
+
         public Builder diskEncryptionConfiguration(@Nullable Output<DiskEncryptionConfigurationArgs> diskEncryptionConfiguration) {
-            this.diskEncryptionConfiguration = diskEncryptionConfiguration;
+            $.diskEncryptionConfiguration = diskEncryptionConfiguration;
             return this;
         }
-        public Builder diskEncryptionConfiguration(@Nullable DiskEncryptionConfigurationArgs diskEncryptionConfiguration) {
-            this.diskEncryptionConfiguration = Codegen.ofNullable(diskEncryptionConfiguration);
-            return this;
+
+        public Builder diskEncryptionConfiguration(DiskEncryptionConfigurationArgs diskEncryptionConfiguration) {
+            return diskEncryptionConfiguration(Output.of(diskEncryptionConfiguration));
         }
+
         public Builder extensions(@Nullable Output<List<VMExtensionArgs>> extensions) {
-            this.extensions = extensions;
+            $.extensions = extensions;
             return this;
         }
-        public Builder extensions(@Nullable List<VMExtensionArgs> extensions) {
-            this.extensions = Codegen.ofNullable(extensions);
-            return this;
+
+        public Builder extensions(List<VMExtensionArgs> extensions) {
+            return extensions(Output.of(extensions));
         }
+
         public Builder extensions(VMExtensionArgs... extensions) {
             return extensions(List.of(extensions));
         }
+
         public Builder imageReference(Output<ImageReferenceArgs> imageReference) {
-            this.imageReference = Objects.requireNonNull(imageReference);
+            $.imageReference = imageReference;
             return this;
         }
+
         public Builder imageReference(ImageReferenceArgs imageReference) {
-            this.imageReference = Output.of(Objects.requireNonNull(imageReference));
-            return this;
+            return imageReference(Output.of(imageReference));
         }
+
         public Builder licenseType(@Nullable Output<String> licenseType) {
-            this.licenseType = licenseType;
+            $.licenseType = licenseType;
             return this;
         }
-        public Builder licenseType(@Nullable String licenseType) {
-            this.licenseType = Codegen.ofNullable(licenseType);
-            return this;
+
+        public Builder licenseType(String licenseType) {
+            return licenseType(Output.of(licenseType));
         }
+
         public Builder nodeAgentSkuId(Output<String> nodeAgentSkuId) {
-            this.nodeAgentSkuId = Objects.requireNonNull(nodeAgentSkuId);
+            $.nodeAgentSkuId = nodeAgentSkuId;
             return this;
         }
+
         public Builder nodeAgentSkuId(String nodeAgentSkuId) {
-            this.nodeAgentSkuId = Output.of(Objects.requireNonNull(nodeAgentSkuId));
-            return this;
+            return nodeAgentSkuId(Output.of(nodeAgentSkuId));
         }
+
         public Builder nodePlacementConfiguration(@Nullable Output<NodePlacementConfigurationArgs> nodePlacementConfiguration) {
-            this.nodePlacementConfiguration = nodePlacementConfiguration;
+            $.nodePlacementConfiguration = nodePlacementConfiguration;
             return this;
         }
-        public Builder nodePlacementConfiguration(@Nullable NodePlacementConfigurationArgs nodePlacementConfiguration) {
-            this.nodePlacementConfiguration = Codegen.ofNullable(nodePlacementConfiguration);
-            return this;
+
+        public Builder nodePlacementConfiguration(NodePlacementConfigurationArgs nodePlacementConfiguration) {
+            return nodePlacementConfiguration(Output.of(nodePlacementConfiguration));
         }
+
         public Builder windowsConfiguration(@Nullable Output<WindowsConfigurationArgs> windowsConfiguration) {
-            this.windowsConfiguration = windowsConfiguration;
+            $.windowsConfiguration = windowsConfiguration;
             return this;
         }
-        public Builder windowsConfiguration(@Nullable WindowsConfigurationArgs windowsConfiguration) {
-            this.windowsConfiguration = Codegen.ofNullable(windowsConfiguration);
-            return this;
-        }        public VirtualMachineConfigurationArgs build() {
-            return new VirtualMachineConfigurationArgs(containerConfiguration, dataDisks, diskEncryptionConfiguration, extensions, imageReference, licenseType, nodeAgentSkuId, nodePlacementConfiguration, windowsConfiguration);
+
+        public Builder windowsConfiguration(WindowsConfigurationArgs windowsConfiguration) {
+            return windowsConfiguration(Output.of(windowsConfiguration));
+        }
+
+        public VirtualMachineConfigurationArgs build() {
+            $.imageReference = Objects.requireNonNull($.imageReference, "expected parameter 'imageReference' to be non-null");
+            $.nodeAgentSkuId = Objects.requireNonNull($.nodeAgentSkuId, "expected parameter 'nodeAgentSkuId' to be non-null");
+            return $;
         }
     }
+
 }

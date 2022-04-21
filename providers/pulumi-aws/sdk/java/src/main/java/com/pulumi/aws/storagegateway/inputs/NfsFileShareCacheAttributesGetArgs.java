@@ -5,9 +5,9 @@ package com.pulumi.aws.storagegateway.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,49 +22,48 @@ public final class NfsFileShareCacheAttributesGetArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="cacheStaleTimeoutInSeconds")
-      private final @Nullable Output<Integer> cacheStaleTimeoutInSeconds;
+    private @Nullable Output<Integer> cacheStaleTimeoutInSeconds;
 
-    public Output<Integer> cacheStaleTimeoutInSeconds() {
-        return this.cacheStaleTimeoutInSeconds == null ? Codegen.empty() : this.cacheStaleTimeoutInSeconds;
+    public Optional<Output<Integer>> cacheStaleTimeoutInSeconds() {
+        return Optional.ofNullable(this.cacheStaleTimeoutInSeconds);
     }
 
-    public NfsFileShareCacheAttributesGetArgs(@Nullable Output<Integer> cacheStaleTimeoutInSeconds) {
-        this.cacheStaleTimeoutInSeconds = cacheStaleTimeoutInSeconds;
-    }
+    private NfsFileShareCacheAttributesGetArgs() {}
 
-    private NfsFileShareCacheAttributesGetArgs() {
-        this.cacheStaleTimeoutInSeconds = Codegen.empty();
+    private NfsFileShareCacheAttributesGetArgs(NfsFileShareCacheAttributesGetArgs $) {
+        this.cacheStaleTimeoutInSeconds = $.cacheStaleTimeoutInSeconds;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NfsFileShareCacheAttributesGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> cacheStaleTimeoutInSeconds;
+        private NfsFileShareCacheAttributesGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new NfsFileShareCacheAttributesGetArgs();
         }
 
         public Builder(NfsFileShareCacheAttributesGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cacheStaleTimeoutInSeconds = defaults.cacheStaleTimeoutInSeconds;
+            $ = new NfsFileShareCacheAttributesGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder cacheStaleTimeoutInSeconds(@Nullable Output<Integer> cacheStaleTimeoutInSeconds) {
-            this.cacheStaleTimeoutInSeconds = cacheStaleTimeoutInSeconds;
+            $.cacheStaleTimeoutInSeconds = cacheStaleTimeoutInSeconds;
             return this;
         }
-        public Builder cacheStaleTimeoutInSeconds(@Nullable Integer cacheStaleTimeoutInSeconds) {
-            this.cacheStaleTimeoutInSeconds = Codegen.ofNullable(cacheStaleTimeoutInSeconds);
-            return this;
-        }        public NfsFileShareCacheAttributesGetArgs build() {
-            return new NfsFileShareCacheAttributesGetArgs(cacheStaleTimeoutInSeconds);
+
+        public Builder cacheStaleTimeoutInSeconds(Integer cacheStaleTimeoutInSeconds) {
+            return cacheStaleTimeoutInSeconds(Output.of(cacheStaleTimeoutInSeconds));
+        }
+
+        public NfsFileShareCacheAttributesGetArgs build() {
+            return $;
         }
     }
+
 }

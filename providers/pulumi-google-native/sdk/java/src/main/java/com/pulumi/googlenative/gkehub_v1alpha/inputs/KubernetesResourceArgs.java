@@ -5,10 +5,10 @@ package com.pulumi.googlenative.gkehub_v1alpha.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.gkehub_v1alpha.inputs.ResourceOptionsArgs;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class KubernetesResourceArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="membershipCrManifest")
-      private final @Nullable Output<String> membershipCrManifest;
+    private @Nullable Output<String> membershipCrManifest;
 
-    public Output<String> membershipCrManifest() {
-        return this.membershipCrManifest == null ? Codegen.empty() : this.membershipCrManifest;
+    public Optional<Output<String>> membershipCrManifest() {
+        return Optional.ofNullable(this.membershipCrManifest);
     }
 
     /**
@@ -36,63 +36,58 @@ public final class KubernetesResourceArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="resourceOptions")
-      private final @Nullable Output<ResourceOptionsArgs> resourceOptions;
+    private @Nullable Output<ResourceOptionsArgs> resourceOptions;
 
-    public Output<ResourceOptionsArgs> resourceOptions() {
-        return this.resourceOptions == null ? Codegen.empty() : this.resourceOptions;
+    public Optional<Output<ResourceOptionsArgs>> resourceOptions() {
+        return Optional.ofNullable(this.resourceOptions);
     }
 
-    public KubernetesResourceArgs(
-        @Nullable Output<String> membershipCrManifest,
-        @Nullable Output<ResourceOptionsArgs> resourceOptions) {
-        this.membershipCrManifest = membershipCrManifest;
-        this.resourceOptions = resourceOptions;
-    }
+    private KubernetesResourceArgs() {}
 
-    private KubernetesResourceArgs() {
-        this.membershipCrManifest = Codegen.empty();
-        this.resourceOptions = Codegen.empty();
+    private KubernetesResourceArgs(KubernetesResourceArgs $) {
+        this.membershipCrManifest = $.membershipCrManifest;
+        this.resourceOptions = $.resourceOptions;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(KubernetesResourceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> membershipCrManifest;
-        private @Nullable Output<ResourceOptionsArgs> resourceOptions;
+        private KubernetesResourceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new KubernetesResourceArgs();
         }
 
         public Builder(KubernetesResourceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.membershipCrManifest = defaults.membershipCrManifest;
-    	      this.resourceOptions = defaults.resourceOptions;
+            $ = new KubernetesResourceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder membershipCrManifest(@Nullable Output<String> membershipCrManifest) {
-            this.membershipCrManifest = membershipCrManifest;
+            $.membershipCrManifest = membershipCrManifest;
             return this;
         }
-        public Builder membershipCrManifest(@Nullable String membershipCrManifest) {
-            this.membershipCrManifest = Codegen.ofNullable(membershipCrManifest);
-            return this;
+
+        public Builder membershipCrManifest(String membershipCrManifest) {
+            return membershipCrManifest(Output.of(membershipCrManifest));
         }
+
         public Builder resourceOptions(@Nullable Output<ResourceOptionsArgs> resourceOptions) {
-            this.resourceOptions = resourceOptions;
+            $.resourceOptions = resourceOptions;
             return this;
         }
-        public Builder resourceOptions(@Nullable ResourceOptionsArgs resourceOptions) {
-            this.resourceOptions = Codegen.ofNullable(resourceOptions);
-            return this;
-        }        public KubernetesResourceArgs build() {
-            return new KubernetesResourceArgs(membershipCrManifest, resourceOptions);
+
+        public Builder resourceOptions(ResourceOptionsArgs resourceOptions) {
+            return resourceOptions(Output.of(resourceOptions));
+        }
+
+        public KubernetesResourceArgs build() {
+            return $;
         }
     }
+
 }

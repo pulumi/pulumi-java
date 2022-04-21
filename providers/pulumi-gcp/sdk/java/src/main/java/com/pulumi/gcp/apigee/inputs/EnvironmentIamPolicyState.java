@@ -5,9 +5,9 @@ package com.pulumi.gcp.apigee.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class EnvironmentIamPolicyState extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="envId")
-      private final @Nullable Output<String> envId;
+    private @Nullable Output<String> envId;
 
-    public Output<String> envId() {
-        return this.envId == null ? Codegen.empty() : this.envId;
+    public Optional<Output<String>> envId() {
+        return Optional.ofNullable(this.envId);
     }
 
     /**
@@ -31,17 +31,17 @@ public final class EnvironmentIamPolicyState extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="etag")
-      private final @Nullable Output<String> etag;
+    private @Nullable Output<String> etag;
 
-    public Output<String> etag() {
-        return this.etag == null ? Codegen.empty() : this.etag;
+    public Optional<Output<String>> etag() {
+        return Optional.ofNullable(this.etag);
     }
 
     @Import(name="orgId")
-      private final @Nullable Output<String> orgId;
+    private @Nullable Output<String> orgId;
 
-    public Output<String> orgId() {
-        return this.orgId == null ? Codegen.empty() : this.orgId;
+    public Optional<Output<String>> orgId() {
+        return Optional.ofNullable(this.orgId);
     }
 
     /**
@@ -50,89 +50,78 @@ public final class EnvironmentIamPolicyState extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="policyData")
-      private final @Nullable Output<String> policyData;
+    private @Nullable Output<String> policyData;
 
-    public Output<String> policyData() {
-        return this.policyData == null ? Codegen.empty() : this.policyData;
+    public Optional<Output<String>> policyData() {
+        return Optional.ofNullable(this.policyData);
     }
 
-    public EnvironmentIamPolicyState(
-        @Nullable Output<String> envId,
-        @Nullable Output<String> etag,
-        @Nullable Output<String> orgId,
-        @Nullable Output<String> policyData) {
-        this.envId = envId;
-        this.etag = etag;
-        this.orgId = orgId;
-        this.policyData = policyData;
-    }
+    private EnvironmentIamPolicyState() {}
 
-    private EnvironmentIamPolicyState() {
-        this.envId = Codegen.empty();
-        this.etag = Codegen.empty();
-        this.orgId = Codegen.empty();
-        this.policyData = Codegen.empty();
+    private EnvironmentIamPolicyState(EnvironmentIamPolicyState $) {
+        this.envId = $.envId;
+        this.etag = $.etag;
+        this.orgId = $.orgId;
+        this.policyData = $.policyData;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EnvironmentIamPolicyState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> envId;
-        private @Nullable Output<String> etag;
-        private @Nullable Output<String> orgId;
-        private @Nullable Output<String> policyData;
+        private EnvironmentIamPolicyState $;
 
         public Builder() {
-    	      // Empty
+            $ = new EnvironmentIamPolicyState();
         }
 
         public Builder(EnvironmentIamPolicyState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.envId = defaults.envId;
-    	      this.etag = defaults.etag;
-    	      this.orgId = defaults.orgId;
-    	      this.policyData = defaults.policyData;
+            $ = new EnvironmentIamPolicyState(Objects.requireNonNull(defaults));
         }
 
         public Builder envId(@Nullable Output<String> envId) {
-            this.envId = envId;
+            $.envId = envId;
             return this;
         }
-        public Builder envId(@Nullable String envId) {
-            this.envId = Codegen.ofNullable(envId);
-            return this;
+
+        public Builder envId(String envId) {
+            return envId(Output.of(envId));
         }
+
         public Builder etag(@Nullable Output<String> etag) {
-            this.etag = etag;
+            $.etag = etag;
             return this;
         }
-        public Builder etag(@Nullable String etag) {
-            this.etag = Codegen.ofNullable(etag);
-            return this;
+
+        public Builder etag(String etag) {
+            return etag(Output.of(etag));
         }
+
         public Builder orgId(@Nullable Output<String> orgId) {
-            this.orgId = orgId;
+            $.orgId = orgId;
             return this;
         }
-        public Builder orgId(@Nullable String orgId) {
-            this.orgId = Codegen.ofNullable(orgId);
-            return this;
+
+        public Builder orgId(String orgId) {
+            return orgId(Output.of(orgId));
         }
+
         public Builder policyData(@Nullable Output<String> policyData) {
-            this.policyData = policyData;
+            $.policyData = policyData;
             return this;
         }
-        public Builder policyData(@Nullable String policyData) {
-            this.policyData = Codegen.ofNullable(policyData);
-            return this;
-        }        public EnvironmentIamPolicyState build() {
-            return new EnvironmentIamPolicyState(envId, etag, orgId, policyData);
+
+        public Builder policyData(String policyData) {
+            return policyData(Output.of(policyData));
+        }
+
+        public EnvironmentIamPolicyState build() {
+            return $;
         }
     }
+
 }

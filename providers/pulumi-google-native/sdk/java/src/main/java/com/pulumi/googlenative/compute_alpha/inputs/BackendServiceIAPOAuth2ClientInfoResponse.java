@@ -17,7 +17,7 @@ public final class BackendServiceIAPOAuth2ClientInfoResponse extends com.pulumi.
      * 
      */
     @Import(name="applicationName", required=true)
-      private final String applicationName;
+    private String applicationName;
 
     public String applicationName() {
         return this.applicationName;
@@ -28,7 +28,7 @@ public final class BackendServiceIAPOAuth2ClientInfoResponse extends com.pulumi.
      * 
      */
     @Import(name="clientName", required=true)
-      private final String clientName;
+    private String clientName;
 
     public String clientName() {
         return this.clientName;
@@ -39,64 +39,59 @@ public final class BackendServiceIAPOAuth2ClientInfoResponse extends com.pulumi.
      * 
      */
     @Import(name="developerEmailAddress", required=true)
-      private final String developerEmailAddress;
+    private String developerEmailAddress;
 
     public String developerEmailAddress() {
         return this.developerEmailAddress;
     }
 
-    public BackendServiceIAPOAuth2ClientInfoResponse(
-        String applicationName,
-        String clientName,
-        String developerEmailAddress) {
-        this.applicationName = Objects.requireNonNull(applicationName, "expected parameter 'applicationName' to be non-null");
-        this.clientName = Objects.requireNonNull(clientName, "expected parameter 'clientName' to be non-null");
-        this.developerEmailAddress = Objects.requireNonNull(developerEmailAddress, "expected parameter 'developerEmailAddress' to be non-null");
-    }
+    private BackendServiceIAPOAuth2ClientInfoResponse() {}
 
-    private BackendServiceIAPOAuth2ClientInfoResponse() {
-        this.applicationName = null;
-        this.clientName = null;
-        this.developerEmailAddress = null;
+    private BackendServiceIAPOAuth2ClientInfoResponse(BackendServiceIAPOAuth2ClientInfoResponse $) {
+        this.applicationName = $.applicationName;
+        this.clientName = $.clientName;
+        this.developerEmailAddress = $.developerEmailAddress;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BackendServiceIAPOAuth2ClientInfoResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String applicationName;
-        private String clientName;
-        private String developerEmailAddress;
+        private BackendServiceIAPOAuth2ClientInfoResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new BackendServiceIAPOAuth2ClientInfoResponse();
         }
 
         public Builder(BackendServiceIAPOAuth2ClientInfoResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.applicationName = defaults.applicationName;
-    	      this.clientName = defaults.clientName;
-    	      this.developerEmailAddress = defaults.developerEmailAddress;
+            $ = new BackendServiceIAPOAuth2ClientInfoResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder applicationName(String applicationName) {
-            this.applicationName = Objects.requireNonNull(applicationName);
+            $.applicationName = applicationName;
             return this;
         }
+
         public Builder clientName(String clientName) {
-            this.clientName = Objects.requireNonNull(clientName);
+            $.clientName = clientName;
             return this;
         }
+
         public Builder developerEmailAddress(String developerEmailAddress) {
-            this.developerEmailAddress = Objects.requireNonNull(developerEmailAddress);
+            $.developerEmailAddress = developerEmailAddress;
             return this;
-        }        public BackendServiceIAPOAuth2ClientInfoResponse build() {
-            return new BackendServiceIAPOAuth2ClientInfoResponse(applicationName, clientName, developerEmailAddress);
+        }
+
+        public BackendServiceIAPOAuth2ClientInfoResponse build() {
+            $.applicationName = Objects.requireNonNull($.applicationName, "expected parameter 'applicationName' to be non-null");
+            $.clientName = Objects.requireNonNull($.clientName, "expected parameter 'clientName' to be non-null");
+            $.developerEmailAddress = Objects.requireNonNull($.developerEmailAddress, "expected parameter 'developerEmailAddress' to be non-null");
+            return $;
         }
     }
+
 }

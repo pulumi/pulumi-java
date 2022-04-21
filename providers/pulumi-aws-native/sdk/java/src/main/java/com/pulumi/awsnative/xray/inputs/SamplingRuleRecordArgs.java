@@ -6,9 +6,9 @@ package com.pulumi.awsnative.xray.inputs;
 import com.pulumi.awsnative.xray.inputs.SamplingRuleArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class SamplingRuleRecordArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="createdAt")
-      private final @Nullable Output<String> createdAt;
+    private @Nullable Output<String> createdAt;
 
-    public Output<String> createdAt() {
-        return this.createdAt == null ? Codegen.empty() : this.createdAt;
+    public Optional<Output<String>> createdAt() {
+        return Optional.ofNullable(this.createdAt);
     }
 
     /**
@@ -32,83 +32,75 @@ public final class SamplingRuleRecordArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="modifiedAt")
-      private final @Nullable Output<String> modifiedAt;
+    private @Nullable Output<String> modifiedAt;
 
-    public Output<String> modifiedAt() {
-        return this.modifiedAt == null ? Codegen.empty() : this.modifiedAt;
+    public Optional<Output<String>> modifiedAt() {
+        return Optional.ofNullable(this.modifiedAt);
     }
 
     @Import(name="samplingRule")
-      private final @Nullable Output<SamplingRuleArgs> samplingRule;
+    private @Nullable Output<SamplingRuleArgs> samplingRule;
 
-    public Output<SamplingRuleArgs> samplingRule() {
-        return this.samplingRule == null ? Codegen.empty() : this.samplingRule;
+    public Optional<Output<SamplingRuleArgs>> samplingRule() {
+        return Optional.ofNullable(this.samplingRule);
     }
 
-    public SamplingRuleRecordArgs(
-        @Nullable Output<String> createdAt,
-        @Nullable Output<String> modifiedAt,
-        @Nullable Output<SamplingRuleArgs> samplingRule) {
-        this.createdAt = createdAt;
-        this.modifiedAt = modifiedAt;
-        this.samplingRule = samplingRule;
-    }
+    private SamplingRuleRecordArgs() {}
 
-    private SamplingRuleRecordArgs() {
-        this.createdAt = Codegen.empty();
-        this.modifiedAt = Codegen.empty();
-        this.samplingRule = Codegen.empty();
+    private SamplingRuleRecordArgs(SamplingRuleRecordArgs $) {
+        this.createdAt = $.createdAt;
+        this.modifiedAt = $.modifiedAt;
+        this.samplingRule = $.samplingRule;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SamplingRuleRecordArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> createdAt;
-        private @Nullable Output<String> modifiedAt;
-        private @Nullable Output<SamplingRuleArgs> samplingRule;
+        private SamplingRuleRecordArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SamplingRuleRecordArgs();
         }
 
         public Builder(SamplingRuleRecordArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.createdAt = defaults.createdAt;
-    	      this.modifiedAt = defaults.modifiedAt;
-    	      this.samplingRule = defaults.samplingRule;
+            $ = new SamplingRuleRecordArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder createdAt(@Nullable Output<String> createdAt) {
-            this.createdAt = createdAt;
+            $.createdAt = createdAt;
             return this;
         }
-        public Builder createdAt(@Nullable String createdAt) {
-            this.createdAt = Codegen.ofNullable(createdAt);
-            return this;
+
+        public Builder createdAt(String createdAt) {
+            return createdAt(Output.of(createdAt));
         }
+
         public Builder modifiedAt(@Nullable Output<String> modifiedAt) {
-            this.modifiedAt = modifiedAt;
+            $.modifiedAt = modifiedAt;
             return this;
         }
-        public Builder modifiedAt(@Nullable String modifiedAt) {
-            this.modifiedAt = Codegen.ofNullable(modifiedAt);
-            return this;
+
+        public Builder modifiedAt(String modifiedAt) {
+            return modifiedAt(Output.of(modifiedAt));
         }
+
         public Builder samplingRule(@Nullable Output<SamplingRuleArgs> samplingRule) {
-            this.samplingRule = samplingRule;
+            $.samplingRule = samplingRule;
             return this;
         }
-        public Builder samplingRule(@Nullable SamplingRuleArgs samplingRule) {
-            this.samplingRule = Codegen.ofNullable(samplingRule);
-            return this;
-        }        public SamplingRuleRecordArgs build() {
-            return new SamplingRuleRecordArgs(createdAt, modifiedAt, samplingRule);
+
+        public Builder samplingRule(SamplingRuleArgs samplingRule) {
+            return samplingRule(Output.of(samplingRule));
+        }
+
+        public SamplingRuleRecordArgs build() {
+            return $;
         }
     }
+
 }

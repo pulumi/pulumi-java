@@ -5,11 +5,11 @@ package com.pulumi.googlenative.monitoring_v3.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.monitoring_v3.inputs.BasicSliArgs;
 import com.pulumi.googlenative.monitoring_v3.inputs.RequestBasedSliArgs;
 import java.lang.Double;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class PerformanceThresholdArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="basicSliPerformance")
-      private final @Nullable Output<BasicSliArgs> basicSliPerformance;
+    private @Nullable Output<BasicSliArgs> basicSliPerformance;
 
-    public Output<BasicSliArgs> basicSliPerformance() {
-        return this.basicSliPerformance == null ? Codegen.empty() : this.basicSliPerformance;
+    public Optional<Output<BasicSliArgs>> basicSliPerformance() {
+        return Optional.ofNullable(this.basicSliPerformance);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class PerformanceThresholdArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="performance")
-      private final @Nullable Output<RequestBasedSliArgs> performance;
+    private @Nullable Output<RequestBasedSliArgs> performance;
 
-    public Output<RequestBasedSliArgs> performance() {
-        return this.performance == null ? Codegen.empty() : this.performance;
+    public Optional<Output<RequestBasedSliArgs>> performance() {
+        return Optional.ofNullable(this.performance);
     }
 
     /**
@@ -48,76 +48,68 @@ public final class PerformanceThresholdArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="threshold")
-      private final @Nullable Output<Double> threshold;
+    private @Nullable Output<Double> threshold;
 
-    public Output<Double> threshold() {
-        return this.threshold == null ? Codegen.empty() : this.threshold;
+    public Optional<Output<Double>> threshold() {
+        return Optional.ofNullable(this.threshold);
     }
 
-    public PerformanceThresholdArgs(
-        @Nullable Output<BasicSliArgs> basicSliPerformance,
-        @Nullable Output<RequestBasedSliArgs> performance,
-        @Nullable Output<Double> threshold) {
-        this.basicSliPerformance = basicSliPerformance;
-        this.performance = performance;
-        this.threshold = threshold;
-    }
+    private PerformanceThresholdArgs() {}
 
-    private PerformanceThresholdArgs() {
-        this.basicSliPerformance = Codegen.empty();
-        this.performance = Codegen.empty();
-        this.threshold = Codegen.empty();
+    private PerformanceThresholdArgs(PerformanceThresholdArgs $) {
+        this.basicSliPerformance = $.basicSliPerformance;
+        this.performance = $.performance;
+        this.threshold = $.threshold;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PerformanceThresholdArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<BasicSliArgs> basicSliPerformance;
-        private @Nullable Output<RequestBasedSliArgs> performance;
-        private @Nullable Output<Double> threshold;
+        private PerformanceThresholdArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PerformanceThresholdArgs();
         }
 
         public Builder(PerformanceThresholdArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.basicSliPerformance = defaults.basicSliPerformance;
-    	      this.performance = defaults.performance;
-    	      this.threshold = defaults.threshold;
+            $ = new PerformanceThresholdArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder basicSliPerformance(@Nullable Output<BasicSliArgs> basicSliPerformance) {
-            this.basicSliPerformance = basicSliPerformance;
+            $.basicSliPerformance = basicSliPerformance;
             return this;
         }
-        public Builder basicSliPerformance(@Nullable BasicSliArgs basicSliPerformance) {
-            this.basicSliPerformance = Codegen.ofNullable(basicSliPerformance);
-            return this;
+
+        public Builder basicSliPerformance(BasicSliArgs basicSliPerformance) {
+            return basicSliPerformance(Output.of(basicSliPerformance));
         }
+
         public Builder performance(@Nullable Output<RequestBasedSliArgs> performance) {
-            this.performance = performance;
+            $.performance = performance;
             return this;
         }
-        public Builder performance(@Nullable RequestBasedSliArgs performance) {
-            this.performance = Codegen.ofNullable(performance);
-            return this;
+
+        public Builder performance(RequestBasedSliArgs performance) {
+            return performance(Output.of(performance));
         }
+
         public Builder threshold(@Nullable Output<Double> threshold) {
-            this.threshold = threshold;
+            $.threshold = threshold;
             return this;
         }
-        public Builder threshold(@Nullable Double threshold) {
-            this.threshold = Codegen.ofNullable(threshold);
-            return this;
-        }        public PerformanceThresholdArgs build() {
-            return new PerformanceThresholdArgs(basicSliPerformance, performance, threshold);
+
+        public Builder threshold(Double threshold) {
+            return threshold(Output.of(threshold));
+        }
+
+        public PerformanceThresholdArgs build() {
+            return $;
         }
     }
+
 }

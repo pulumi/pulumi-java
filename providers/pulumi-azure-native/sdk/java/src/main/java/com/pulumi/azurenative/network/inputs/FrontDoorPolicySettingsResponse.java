@@ -24,10 +24,10 @@ public final class FrontDoorPolicySettingsResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="customBlockResponseBody")
-      private final @Nullable String customBlockResponseBody;
+    private @Nullable String customBlockResponseBody;
 
     public Optional<String> customBlockResponseBody() {
-        return this.customBlockResponseBody == null ? Optional.empty() : Optional.ofNullable(this.customBlockResponseBody);
+        return Optional.ofNullable(this.customBlockResponseBody);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class FrontDoorPolicySettingsResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="customBlockResponseStatusCode")
-      private final @Nullable Integer customBlockResponseStatusCode;
+    private @Nullable Integer customBlockResponseStatusCode;
 
     public Optional<Integer> customBlockResponseStatusCode() {
-        return this.customBlockResponseStatusCode == null ? Optional.empty() : Optional.ofNullable(this.customBlockResponseStatusCode);
+        return Optional.ofNullable(this.customBlockResponseStatusCode);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class FrontDoorPolicySettingsResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="enabledState")
-      private final @Nullable String enabledState;
+    private @Nullable String enabledState;
 
     public Optional<String> enabledState() {
-        return this.enabledState == null ? Optional.empty() : Optional.ofNullable(this.enabledState);
+        return Optional.ofNullable(this.enabledState);
     }
 
     /**
@@ -57,10 +57,10 @@ public final class FrontDoorPolicySettingsResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="mode")
-      private final @Nullable String mode;
+    private @Nullable String mode;
 
     public Optional<String> mode() {
-        return this.mode == null ? Optional.empty() : Optional.ofNullable(this.mode);
+        return Optional.ofNullable(this.mode);
     }
 
     /**
@@ -68,10 +68,10 @@ public final class FrontDoorPolicySettingsResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="redirectUrl")
-      private final @Nullable String redirectUrl;
+    private @Nullable String redirectUrl;
 
     public Optional<String> redirectUrl() {
-        return this.redirectUrl == null ? Optional.empty() : Optional.ofNullable(this.redirectUrl);
+        return Optional.ofNullable(this.redirectUrl);
     }
 
     /**
@@ -79,91 +79,74 @@ public final class FrontDoorPolicySettingsResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="requestBodyCheck")
-      private final @Nullable String requestBodyCheck;
+    private @Nullable String requestBodyCheck;
 
     public Optional<String> requestBodyCheck() {
-        return this.requestBodyCheck == null ? Optional.empty() : Optional.ofNullable(this.requestBodyCheck);
+        return Optional.ofNullable(this.requestBodyCheck);
     }
 
-    public FrontDoorPolicySettingsResponse(
-        @Nullable String customBlockResponseBody,
-        @Nullable Integer customBlockResponseStatusCode,
-        @Nullable String enabledState,
-        @Nullable String mode,
-        @Nullable String redirectUrl,
-        @Nullable String requestBodyCheck) {
-        this.customBlockResponseBody = customBlockResponseBody;
-        this.customBlockResponseStatusCode = customBlockResponseStatusCode;
-        this.enabledState = enabledState;
-        this.mode = mode;
-        this.redirectUrl = redirectUrl;
-        this.requestBodyCheck = requestBodyCheck;
-    }
+    private FrontDoorPolicySettingsResponse() {}
 
-    private FrontDoorPolicySettingsResponse() {
-        this.customBlockResponseBody = null;
-        this.customBlockResponseStatusCode = null;
-        this.enabledState = null;
-        this.mode = null;
-        this.redirectUrl = null;
-        this.requestBodyCheck = null;
+    private FrontDoorPolicySettingsResponse(FrontDoorPolicySettingsResponse $) {
+        this.customBlockResponseBody = $.customBlockResponseBody;
+        this.customBlockResponseStatusCode = $.customBlockResponseStatusCode;
+        this.enabledState = $.enabledState;
+        this.mode = $.mode;
+        this.redirectUrl = $.redirectUrl;
+        this.requestBodyCheck = $.requestBodyCheck;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FrontDoorPolicySettingsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String customBlockResponseBody;
-        private @Nullable Integer customBlockResponseStatusCode;
-        private @Nullable String enabledState;
-        private @Nullable String mode;
-        private @Nullable String redirectUrl;
-        private @Nullable String requestBodyCheck;
+        private FrontDoorPolicySettingsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new FrontDoorPolicySettingsResponse();
         }
 
         public Builder(FrontDoorPolicySettingsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.customBlockResponseBody = defaults.customBlockResponseBody;
-    	      this.customBlockResponseStatusCode = defaults.customBlockResponseStatusCode;
-    	      this.enabledState = defaults.enabledState;
-    	      this.mode = defaults.mode;
-    	      this.redirectUrl = defaults.redirectUrl;
-    	      this.requestBodyCheck = defaults.requestBodyCheck;
+            $ = new FrontDoorPolicySettingsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder customBlockResponseBody(@Nullable String customBlockResponseBody) {
-            this.customBlockResponseBody = customBlockResponseBody;
+            $.customBlockResponseBody = customBlockResponseBody;
             return this;
         }
+
         public Builder customBlockResponseStatusCode(@Nullable Integer customBlockResponseStatusCode) {
-            this.customBlockResponseStatusCode = customBlockResponseStatusCode;
+            $.customBlockResponseStatusCode = customBlockResponseStatusCode;
             return this;
         }
+
         public Builder enabledState(@Nullable String enabledState) {
-            this.enabledState = enabledState;
+            $.enabledState = enabledState;
             return this;
         }
+
         public Builder mode(@Nullable String mode) {
-            this.mode = mode;
+            $.mode = mode;
             return this;
         }
+
         public Builder redirectUrl(@Nullable String redirectUrl) {
-            this.redirectUrl = redirectUrl;
+            $.redirectUrl = redirectUrl;
             return this;
         }
+
         public Builder requestBodyCheck(@Nullable String requestBodyCheck) {
-            this.requestBodyCheck = requestBodyCheck;
+            $.requestBodyCheck = requestBodyCheck;
             return this;
-        }        public FrontDoorPolicySettingsResponse build() {
-            return new FrontDoorPolicySettingsResponse(customBlockResponseBody, customBlockResponseStatusCode, enabledState, mode, redirectUrl, requestBodyCheck);
+        }
+
+        public FrontDoorPolicySettingsResponse build() {
+            return $;
         }
     }
+
 }

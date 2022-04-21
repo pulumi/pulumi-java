@@ -11,6 +11,7 @@ import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +28,10 @@ public final class NetworkInterfaceResourceSettingsArgs extends com.pulumi.resou
      * 
      */
     @Import(name="enableAcceleratedNetworking")
-      private final @Nullable Output<Boolean> enableAcceleratedNetworking;
+    private @Nullable Output<Boolean> enableAcceleratedNetworking;
 
-    public Output<Boolean> enableAcceleratedNetworking() {
-        return this.enableAcceleratedNetworking == null ? Codegen.empty() : this.enableAcceleratedNetworking;
+    public Optional<Output<Boolean>> enableAcceleratedNetworking() {
+        return Optional.ofNullable(this.enableAcceleratedNetworking);
     }
 
     /**
@@ -38,10 +39,10 @@ public final class NetworkInterfaceResourceSettingsArgs extends com.pulumi.resou
      * 
      */
     @Import(name="ipConfigurations")
-      private final @Nullable Output<List<NicIpConfigurationResourceSettingsArgs>> ipConfigurations;
+    private @Nullable Output<List<NicIpConfigurationResourceSettingsArgs>> ipConfigurations;
 
-    public Output<List<NicIpConfigurationResourceSettingsArgs>> ipConfigurations() {
-        return this.ipConfigurations == null ? Codegen.empty() : this.ipConfigurations;
+    public Optional<Output<List<NicIpConfigurationResourceSettingsArgs>>> ipConfigurations() {
+        return Optional.ofNullable(this.ipConfigurations);
     }
 
     /**
@@ -50,7 +51,7 @@ public final class NetworkInterfaceResourceSettingsArgs extends com.pulumi.resou
      * 
      */
     @Import(name="resourceType", required=true)
-      private final Output<String> resourceType;
+    private Output<String> resourceType;
 
     public Output<String> resourceType() {
         return this.resourceType;
@@ -61,92 +62,84 @@ public final class NetworkInterfaceResourceSettingsArgs extends com.pulumi.resou
      * 
      */
     @Import(name="targetResourceName", required=true)
-      private final Output<String> targetResourceName;
+    private Output<String> targetResourceName;
 
     public Output<String> targetResourceName() {
         return this.targetResourceName;
     }
 
-    public NetworkInterfaceResourceSettingsArgs(
-        @Nullable Output<Boolean> enableAcceleratedNetworking,
-        @Nullable Output<List<NicIpConfigurationResourceSettingsArgs>> ipConfigurations,
-        Output<String> resourceType,
-        Output<String> targetResourceName) {
-        this.enableAcceleratedNetworking = enableAcceleratedNetworking;
-        this.ipConfigurations = ipConfigurations;
-        this.resourceType = Codegen.stringProp("resourceType").output().arg(resourceType).require();
-        this.targetResourceName = Objects.requireNonNull(targetResourceName, "expected parameter 'targetResourceName' to be non-null");
-    }
+    private NetworkInterfaceResourceSettingsArgs() {}
 
-    private NetworkInterfaceResourceSettingsArgs() {
-        this.enableAcceleratedNetworking = Codegen.empty();
-        this.ipConfigurations = Codegen.empty();
-        this.resourceType = Codegen.empty();
-        this.targetResourceName = Codegen.empty();
+    private NetworkInterfaceResourceSettingsArgs(NetworkInterfaceResourceSettingsArgs $) {
+        this.enableAcceleratedNetworking = $.enableAcceleratedNetworking;
+        this.ipConfigurations = $.ipConfigurations;
+        this.resourceType = $.resourceType;
+        this.targetResourceName = $.targetResourceName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NetworkInterfaceResourceSettingsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> enableAcceleratedNetworking;
-        private @Nullable Output<List<NicIpConfigurationResourceSettingsArgs>> ipConfigurations;
-        private Output<String> resourceType;
-        private Output<String> targetResourceName;
+        private NetworkInterfaceResourceSettingsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new NetworkInterfaceResourceSettingsArgs();
         }
 
         public Builder(NetworkInterfaceResourceSettingsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.enableAcceleratedNetworking = defaults.enableAcceleratedNetworking;
-    	      this.ipConfigurations = defaults.ipConfigurations;
-    	      this.resourceType = defaults.resourceType;
-    	      this.targetResourceName = defaults.targetResourceName;
+            $ = new NetworkInterfaceResourceSettingsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder enableAcceleratedNetworking(@Nullable Output<Boolean> enableAcceleratedNetworking) {
-            this.enableAcceleratedNetworking = enableAcceleratedNetworking;
+            $.enableAcceleratedNetworking = enableAcceleratedNetworking;
             return this;
         }
-        public Builder enableAcceleratedNetworking(@Nullable Boolean enableAcceleratedNetworking) {
-            this.enableAcceleratedNetworking = Codegen.ofNullable(enableAcceleratedNetworking);
-            return this;
+
+        public Builder enableAcceleratedNetworking(Boolean enableAcceleratedNetworking) {
+            return enableAcceleratedNetworking(Output.of(enableAcceleratedNetworking));
         }
+
         public Builder ipConfigurations(@Nullable Output<List<NicIpConfigurationResourceSettingsArgs>> ipConfigurations) {
-            this.ipConfigurations = ipConfigurations;
+            $.ipConfigurations = ipConfigurations;
             return this;
         }
-        public Builder ipConfigurations(@Nullable List<NicIpConfigurationResourceSettingsArgs> ipConfigurations) {
-            this.ipConfigurations = Codegen.ofNullable(ipConfigurations);
-            return this;
+
+        public Builder ipConfigurations(List<NicIpConfigurationResourceSettingsArgs> ipConfigurations) {
+            return ipConfigurations(Output.of(ipConfigurations));
         }
+
         public Builder ipConfigurations(NicIpConfigurationResourceSettingsArgs... ipConfigurations) {
             return ipConfigurations(List.of(ipConfigurations));
         }
+
         public Builder resourceType(Output<String> resourceType) {
-            this.resourceType = Objects.requireNonNull(resourceType);
+            $.resourceType = resourceType;
             return this;
         }
+
         public Builder resourceType(String resourceType) {
-            this.resourceType = Output.of(Objects.requireNonNull(resourceType));
-            return this;
+            return resourceType(Output.of(resourceType));
         }
+
         public Builder targetResourceName(Output<String> targetResourceName) {
-            this.targetResourceName = Objects.requireNonNull(targetResourceName);
+            $.targetResourceName = targetResourceName;
             return this;
         }
+
         public Builder targetResourceName(String targetResourceName) {
-            this.targetResourceName = Output.of(Objects.requireNonNull(targetResourceName));
-            return this;
-        }        public NetworkInterfaceResourceSettingsArgs build() {
-            return new NetworkInterfaceResourceSettingsArgs(enableAcceleratedNetworking, ipConfigurations, resourceType, targetResourceName);
+            return targetResourceName(Output.of(targetResourceName));
+        }
+
+        public NetworkInterfaceResourceSettingsArgs build() {
+            $.resourceType = Codegen.stringProp("resourceType").output().arg($.resourceType).require();
+            $.targetResourceName = Objects.requireNonNull($.targetResourceName, "expected parameter 'targetResourceName' to be non-null");
+            return $;
         }
     }
+
 }

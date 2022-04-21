@@ -22,7 +22,7 @@ public final class GooglePrivacyDlpV2CloudStorageRegexFileSetResponse extends co
      * 
      */
     @Import(name="bucketName", required=true)
-      private final String bucketName;
+    private String bucketName;
 
     public String bucketName() {
         return this.bucketName;
@@ -33,7 +33,7 @@ public final class GooglePrivacyDlpV2CloudStorageRegexFileSetResponse extends co
      * 
      */
     @Import(name="excludeRegex", required=true)
-      private final List<String> excludeRegex;
+    private List<String> excludeRegex;
 
     public List<String> excludeRegex() {
         return this.excludeRegex;
@@ -44,70 +44,67 @@ public final class GooglePrivacyDlpV2CloudStorageRegexFileSetResponse extends co
      * 
      */
     @Import(name="includeRegex", required=true)
-      private final List<String> includeRegex;
+    private List<String> includeRegex;
 
     public List<String> includeRegex() {
         return this.includeRegex;
     }
 
-    public GooglePrivacyDlpV2CloudStorageRegexFileSetResponse(
-        String bucketName,
-        List<String> excludeRegex,
-        List<String> includeRegex) {
-        this.bucketName = Objects.requireNonNull(bucketName, "expected parameter 'bucketName' to be non-null");
-        this.excludeRegex = Objects.requireNonNull(excludeRegex, "expected parameter 'excludeRegex' to be non-null");
-        this.includeRegex = Objects.requireNonNull(includeRegex, "expected parameter 'includeRegex' to be non-null");
-    }
+    private GooglePrivacyDlpV2CloudStorageRegexFileSetResponse() {}
 
-    private GooglePrivacyDlpV2CloudStorageRegexFileSetResponse() {
-        this.bucketName = null;
-        this.excludeRegex = List.of();
-        this.includeRegex = List.of();
+    private GooglePrivacyDlpV2CloudStorageRegexFileSetResponse(GooglePrivacyDlpV2CloudStorageRegexFileSetResponse $) {
+        this.bucketName = $.bucketName;
+        this.excludeRegex = $.excludeRegex;
+        this.includeRegex = $.includeRegex;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GooglePrivacyDlpV2CloudStorageRegexFileSetResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String bucketName;
-        private List<String> excludeRegex;
-        private List<String> includeRegex;
+        private GooglePrivacyDlpV2CloudStorageRegexFileSetResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GooglePrivacyDlpV2CloudStorageRegexFileSetResponse();
         }
 
         public Builder(GooglePrivacyDlpV2CloudStorageRegexFileSetResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.bucketName = defaults.bucketName;
-    	      this.excludeRegex = defaults.excludeRegex;
-    	      this.includeRegex = defaults.includeRegex;
+            $ = new GooglePrivacyDlpV2CloudStorageRegexFileSetResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder bucketName(String bucketName) {
-            this.bucketName = Objects.requireNonNull(bucketName);
+            $.bucketName = bucketName;
             return this;
         }
+
         public Builder excludeRegex(List<String> excludeRegex) {
-            this.excludeRegex = Objects.requireNonNull(excludeRegex);
+            $.excludeRegex = excludeRegex;
             return this;
         }
+
         public Builder excludeRegex(String... excludeRegex) {
             return excludeRegex(List.of(excludeRegex));
         }
+
         public Builder includeRegex(List<String> includeRegex) {
-            this.includeRegex = Objects.requireNonNull(includeRegex);
+            $.includeRegex = includeRegex;
             return this;
         }
+
         public Builder includeRegex(String... includeRegex) {
             return includeRegex(List.of(includeRegex));
-        }        public GooglePrivacyDlpV2CloudStorageRegexFileSetResponse build() {
-            return new GooglePrivacyDlpV2CloudStorageRegexFileSetResponse(bucketName, excludeRegex, includeRegex);
+        }
+
+        public GooglePrivacyDlpV2CloudStorageRegexFileSetResponse build() {
+            $.bucketName = Objects.requireNonNull($.bucketName, "expected parameter 'bucketName' to be non-null");
+            $.excludeRegex = Objects.requireNonNull($.excludeRegex, "expected parameter 'excludeRegex' to be non-null");
+            $.includeRegex = Objects.requireNonNull($.includeRegex, "expected parameter 'includeRegex' to be non-null");
+            return $;
         }
     }
+
 }

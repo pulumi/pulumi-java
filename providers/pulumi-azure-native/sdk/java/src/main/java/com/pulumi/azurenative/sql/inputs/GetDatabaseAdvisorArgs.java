@@ -17,7 +17,7 @@ public final class GetDatabaseAdvisorArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="advisorName", required=true)
-      private final String advisorName;
+    private String advisorName;
 
     public String advisorName() {
         return this.advisorName;
@@ -28,7 +28,7 @@ public final class GetDatabaseAdvisorArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="databaseName", required=true)
-      private final String databaseName;
+    private String databaseName;
 
     public String databaseName() {
         return this.databaseName;
@@ -39,7 +39,7 @@ public final class GetDatabaseAdvisorArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -50,73 +50,66 @@ public final class GetDatabaseAdvisorArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="serverName", required=true)
-      private final String serverName;
+    private String serverName;
 
     public String serverName() {
         return this.serverName;
     }
 
-    public GetDatabaseAdvisorArgs(
-        String advisorName,
-        String databaseName,
-        String resourceGroupName,
-        String serverName) {
-        this.advisorName = Objects.requireNonNull(advisorName, "expected parameter 'advisorName' to be non-null");
-        this.databaseName = Objects.requireNonNull(databaseName, "expected parameter 'databaseName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.serverName = Objects.requireNonNull(serverName, "expected parameter 'serverName' to be non-null");
-    }
+    private GetDatabaseAdvisorArgs() {}
 
-    private GetDatabaseAdvisorArgs() {
-        this.advisorName = null;
-        this.databaseName = null;
-        this.resourceGroupName = null;
-        this.serverName = null;
+    private GetDatabaseAdvisorArgs(GetDatabaseAdvisorArgs $) {
+        this.advisorName = $.advisorName;
+        this.databaseName = $.databaseName;
+        this.resourceGroupName = $.resourceGroupName;
+        this.serverName = $.serverName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetDatabaseAdvisorArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String advisorName;
-        private String databaseName;
-        private String resourceGroupName;
-        private String serverName;
+        private GetDatabaseAdvisorArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetDatabaseAdvisorArgs();
         }
 
         public Builder(GetDatabaseAdvisorArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.advisorName = defaults.advisorName;
-    	      this.databaseName = defaults.databaseName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.serverName = defaults.serverName;
+            $ = new GetDatabaseAdvisorArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder advisorName(String advisorName) {
-            this.advisorName = Objects.requireNonNull(advisorName);
+            $.advisorName = advisorName;
             return this;
         }
+
         public Builder databaseName(String databaseName) {
-            this.databaseName = Objects.requireNonNull(databaseName);
+            $.databaseName = databaseName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder serverName(String serverName) {
-            this.serverName = Objects.requireNonNull(serverName);
+            $.serverName = serverName;
             return this;
-        }        public GetDatabaseAdvisorArgs build() {
-            return new GetDatabaseAdvisorArgs(advisorName, databaseName, resourceGroupName, serverName);
+        }
+
+        public GetDatabaseAdvisorArgs build() {
+            $.advisorName = Objects.requireNonNull($.advisorName, "expected parameter 'advisorName' to be non-null");
+            $.databaseName = Objects.requireNonNull($.databaseName, "expected parameter 'databaseName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.serverName = Objects.requireNonNull($.serverName, "expected parameter 'serverName' to be non-null");
+            return $;
         }
     }
+
 }

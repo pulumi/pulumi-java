@@ -5,11 +5,11 @@ package com.pulumi.gcp.bigquery.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.bigquery.inputs.ConnectionCloudSqlGetArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,10 @@ public final class ConnectionState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="cloudSql")
-      private final @Nullable Output<ConnectionCloudSqlGetArgs> cloudSql;
+    private @Nullable Output<ConnectionCloudSqlGetArgs> cloudSql;
 
-    public Output<ConnectionCloudSqlGetArgs> cloudSql() {
-        return this.cloudSql == null ? Codegen.empty() : this.cloudSql;
+    public Optional<Output<ConnectionCloudSqlGetArgs>> cloudSql() {
+        return Optional.ofNullable(this.cloudSql);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class ConnectionState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="connectionId")
-      private final @Nullable Output<String> connectionId;
+    private @Nullable Output<String> connectionId;
 
-    public Output<String> connectionId() {
-        return this.connectionId == null ? Codegen.empty() : this.connectionId;
+    public Optional<Output<String>> connectionId() {
+        return Optional.ofNullable(this.connectionId);
     }
 
     /**
@@ -45,10 +45,10 @@ public final class ConnectionState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -56,10 +56,10 @@ public final class ConnectionState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="friendlyName")
-      private final @Nullable Output<String> friendlyName;
+    private @Nullable Output<String> friendlyName;
 
-    public Output<String> friendlyName() {
-        return this.friendlyName == null ? Codegen.empty() : this.friendlyName;
+    public Optional<Output<String>> friendlyName() {
+        return Optional.ofNullable(this.friendlyName);
     }
 
     /**
@@ -67,10 +67,10 @@ public final class ConnectionState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="hasCredential")
-      private final @Nullable Output<Boolean> hasCredential;
+    private @Nullable Output<Boolean> hasCredential;
 
-    public Output<Boolean> hasCredential() {
-        return this.hasCredential == null ? Codegen.empty() : this.hasCredential;
+    public Optional<Output<Boolean>> hasCredential() {
+        return Optional.ofNullable(this.hasCredential);
     }
 
     /**
@@ -81,10 +81,10 @@ public final class ConnectionState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -93,10 +93,10 @@ public final class ConnectionState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -105,141 +105,118 @@ public final class ConnectionState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
-    public ConnectionState(
-        @Nullable Output<ConnectionCloudSqlGetArgs> cloudSql,
-        @Nullable Output<String> connectionId,
-        @Nullable Output<String> description,
-        @Nullable Output<String> friendlyName,
-        @Nullable Output<Boolean> hasCredential,
-        @Nullable Output<String> location,
-        @Nullable Output<String> name,
-        @Nullable Output<String> project) {
-        this.cloudSql = cloudSql;
-        this.connectionId = connectionId;
-        this.description = description;
-        this.friendlyName = friendlyName;
-        this.hasCredential = hasCredential;
-        this.location = location;
-        this.name = name;
-        this.project = project;
-    }
+    private ConnectionState() {}
 
-    private ConnectionState() {
-        this.cloudSql = Codegen.empty();
-        this.connectionId = Codegen.empty();
-        this.description = Codegen.empty();
-        this.friendlyName = Codegen.empty();
-        this.hasCredential = Codegen.empty();
-        this.location = Codegen.empty();
-        this.name = Codegen.empty();
-        this.project = Codegen.empty();
+    private ConnectionState(ConnectionState $) {
+        this.cloudSql = $.cloudSql;
+        this.connectionId = $.connectionId;
+        this.description = $.description;
+        this.friendlyName = $.friendlyName;
+        this.hasCredential = $.hasCredential;
+        this.location = $.location;
+        this.name = $.name;
+        this.project = $.project;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ConnectionState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<ConnectionCloudSqlGetArgs> cloudSql;
-        private @Nullable Output<String> connectionId;
-        private @Nullable Output<String> description;
-        private @Nullable Output<String> friendlyName;
-        private @Nullable Output<Boolean> hasCredential;
-        private @Nullable Output<String> location;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> project;
+        private ConnectionState $;
 
         public Builder() {
-    	      // Empty
+            $ = new ConnectionState();
         }
 
         public Builder(ConnectionState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cloudSql = defaults.cloudSql;
-    	      this.connectionId = defaults.connectionId;
-    	      this.description = defaults.description;
-    	      this.friendlyName = defaults.friendlyName;
-    	      this.hasCredential = defaults.hasCredential;
-    	      this.location = defaults.location;
-    	      this.name = defaults.name;
-    	      this.project = defaults.project;
+            $ = new ConnectionState(Objects.requireNonNull(defaults));
         }
 
         public Builder cloudSql(@Nullable Output<ConnectionCloudSqlGetArgs> cloudSql) {
-            this.cloudSql = cloudSql;
+            $.cloudSql = cloudSql;
             return this;
         }
-        public Builder cloudSql(@Nullable ConnectionCloudSqlGetArgs cloudSql) {
-            this.cloudSql = Codegen.ofNullable(cloudSql);
-            return this;
+
+        public Builder cloudSql(ConnectionCloudSqlGetArgs cloudSql) {
+            return cloudSql(Output.of(cloudSql));
         }
+
         public Builder connectionId(@Nullable Output<String> connectionId) {
-            this.connectionId = connectionId;
+            $.connectionId = connectionId;
             return this;
         }
-        public Builder connectionId(@Nullable String connectionId) {
-            this.connectionId = Codegen.ofNullable(connectionId);
-            return this;
+
+        public Builder connectionId(String connectionId) {
+            return connectionId(Output.of(connectionId));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder friendlyName(@Nullable Output<String> friendlyName) {
-            this.friendlyName = friendlyName;
+            $.friendlyName = friendlyName;
             return this;
         }
-        public Builder friendlyName(@Nullable String friendlyName) {
-            this.friendlyName = Codegen.ofNullable(friendlyName);
-            return this;
+
+        public Builder friendlyName(String friendlyName) {
+            return friendlyName(Output.of(friendlyName));
         }
+
         public Builder hasCredential(@Nullable Output<Boolean> hasCredential) {
-            this.hasCredential = hasCredential;
+            $.hasCredential = hasCredential;
             return this;
         }
-        public Builder hasCredential(@Nullable Boolean hasCredential) {
-            this.hasCredential = Codegen.ofNullable(hasCredential);
-            return this;
+
+        public Builder hasCredential(Boolean hasCredential) {
+            return hasCredential(Output.of(hasCredential));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
-        }        public ConnectionState build() {
-            return new ConnectionState(cloudSql, connectionId, description, friendlyName, hasCredential, location, name, project);
+
+        public Builder project(String project) {
+            return project(Output.of(project));
+        }
+
+        public ConnectionState build() {
+            return $;
         }
     }
+
 }

@@ -25,7 +25,7 @@ public final class AutomationActionWorkspaceResponse extends com.pulumi.resource
      * 
      */
     @Import(name="actionType", required=true)
-      private final String actionType;
+    private String actionType;
 
     public String actionType() {
         return this.actionType;
@@ -36,55 +36,51 @@ public final class AutomationActionWorkspaceResponse extends com.pulumi.resource
      * 
      */
     @Import(name="workspaceResourceId")
-      private final @Nullable String workspaceResourceId;
+    private @Nullable String workspaceResourceId;
 
     public Optional<String> workspaceResourceId() {
-        return this.workspaceResourceId == null ? Optional.empty() : Optional.ofNullable(this.workspaceResourceId);
+        return Optional.ofNullable(this.workspaceResourceId);
     }
 
-    public AutomationActionWorkspaceResponse(
-        String actionType,
-        @Nullable String workspaceResourceId) {
-        this.actionType = Codegen.stringProp("actionType").arg(actionType).require();
-        this.workspaceResourceId = workspaceResourceId;
-    }
+    private AutomationActionWorkspaceResponse() {}
 
-    private AutomationActionWorkspaceResponse() {
-        this.actionType = null;
-        this.workspaceResourceId = null;
+    private AutomationActionWorkspaceResponse(AutomationActionWorkspaceResponse $) {
+        this.actionType = $.actionType;
+        this.workspaceResourceId = $.workspaceResourceId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AutomationActionWorkspaceResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String actionType;
-        private @Nullable String workspaceResourceId;
+        private AutomationActionWorkspaceResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AutomationActionWorkspaceResponse();
         }
 
         public Builder(AutomationActionWorkspaceResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.actionType = defaults.actionType;
-    	      this.workspaceResourceId = defaults.workspaceResourceId;
+            $ = new AutomationActionWorkspaceResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder actionType(String actionType) {
-            this.actionType = Objects.requireNonNull(actionType);
+            $.actionType = actionType;
             return this;
         }
+
         public Builder workspaceResourceId(@Nullable String workspaceResourceId) {
-            this.workspaceResourceId = workspaceResourceId;
+            $.workspaceResourceId = workspaceResourceId;
             return this;
-        }        public AutomationActionWorkspaceResponse build() {
-            return new AutomationActionWorkspaceResponse(actionType, workspaceResourceId);
+        }
+
+        public AutomationActionWorkspaceResponse build() {
+            $.actionType = Codegen.stringProp("actionType").arg($.actionType).require();
+            return $;
         }
     }
+
 }

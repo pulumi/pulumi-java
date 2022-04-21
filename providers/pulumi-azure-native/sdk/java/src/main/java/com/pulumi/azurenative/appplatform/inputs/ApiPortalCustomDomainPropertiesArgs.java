@@ -5,9 +5,9 @@ package com.pulumi.azurenative.appplatform.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class ApiPortalCustomDomainPropertiesArgs extends com.pulumi.resour
      * 
      */
     @Import(name="thumbprint")
-      private final @Nullable Output<String> thumbprint;
+    private @Nullable Output<String> thumbprint;
 
-    public Output<String> thumbprint() {
-        return this.thumbprint == null ? Codegen.empty() : this.thumbprint;
+    public Optional<Output<String>> thumbprint() {
+        return Optional.ofNullable(this.thumbprint);
     }
 
-    public ApiPortalCustomDomainPropertiesArgs(@Nullable Output<String> thumbprint) {
-        this.thumbprint = thumbprint;
-    }
+    private ApiPortalCustomDomainPropertiesArgs() {}
 
-    private ApiPortalCustomDomainPropertiesArgs() {
-        this.thumbprint = Codegen.empty();
+    private ApiPortalCustomDomainPropertiesArgs(ApiPortalCustomDomainPropertiesArgs $) {
+        this.thumbprint = $.thumbprint;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ApiPortalCustomDomainPropertiesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> thumbprint;
+        private ApiPortalCustomDomainPropertiesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ApiPortalCustomDomainPropertiesArgs();
         }
 
         public Builder(ApiPortalCustomDomainPropertiesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.thumbprint = defaults.thumbprint;
+            $ = new ApiPortalCustomDomainPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder thumbprint(@Nullable Output<String> thumbprint) {
-            this.thumbprint = thumbprint;
+            $.thumbprint = thumbprint;
             return this;
         }
-        public Builder thumbprint(@Nullable String thumbprint) {
-            this.thumbprint = Codegen.ofNullable(thumbprint);
-            return this;
-        }        public ApiPortalCustomDomainPropertiesArgs build() {
-            return new ApiPortalCustomDomainPropertiesArgs(thumbprint);
+
+        public Builder thumbprint(String thumbprint) {
+            return thumbprint(Output.of(thumbprint));
+        }
+
+        public ApiPortalCustomDomainPropertiesArgs build() {
+            return $;
         }
     }
+
 }

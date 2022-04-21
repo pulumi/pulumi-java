@@ -5,9 +5,9 @@ package com.pulumi.aws.codecommit.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class ApprovalRuleTemplateState extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="approvalRuleTemplateId")
-      private final @Nullable Output<String> approvalRuleTemplateId;
+    private @Nullable Output<String> approvalRuleTemplateId;
 
-    public Output<String> approvalRuleTemplateId() {
-        return this.approvalRuleTemplateId == null ? Codegen.empty() : this.approvalRuleTemplateId;
+    public Optional<Output<String>> approvalRuleTemplateId() {
+        return Optional.ofNullable(this.approvalRuleTemplateId);
     }
 
     /**
@@ -31,10 +31,10 @@ public final class ApprovalRuleTemplateState extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="content")
-      private final @Nullable Output<String> content;
+    private @Nullable Output<String> content;
 
-    public Output<String> content() {
-        return this.content == null ? Codegen.empty() : this.content;
+    public Optional<Output<String>> content() {
+        return Optional.ofNullable(this.content);
     }
 
     /**
@@ -42,10 +42,10 @@ public final class ApprovalRuleTemplateState extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="creationDate")
-      private final @Nullable Output<String> creationDate;
+    private @Nullable Output<String> creationDate;
 
-    public Output<String> creationDate() {
-        return this.creationDate == null ? Codegen.empty() : this.creationDate;
+    public Optional<Output<String>> creationDate() {
+        return Optional.ofNullable(this.creationDate);
     }
 
     /**
@@ -53,10 +53,10 @@ public final class ApprovalRuleTemplateState extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -64,10 +64,10 @@ public final class ApprovalRuleTemplateState extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="lastModifiedDate")
-      private final @Nullable Output<String> lastModifiedDate;
+    private @Nullable Output<String> lastModifiedDate;
 
-    public Output<String> lastModifiedDate() {
-        return this.lastModifiedDate == null ? Codegen.empty() : this.lastModifiedDate;
+    public Optional<Output<String>> lastModifiedDate() {
+        return Optional.ofNullable(this.lastModifiedDate);
     }
 
     /**
@@ -75,10 +75,10 @@ public final class ApprovalRuleTemplateState extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="lastModifiedUser")
-      private final @Nullable Output<String> lastModifiedUser;
+    private @Nullable Output<String> lastModifiedUser;
 
-    public Output<String> lastModifiedUser() {
-        return this.lastModifiedUser == null ? Codegen.empty() : this.lastModifiedUser;
+    public Optional<Output<String>> lastModifiedUser() {
+        return Optional.ofNullable(this.lastModifiedUser);
     }
 
     /**
@@ -86,10 +86,10 @@ public final class ApprovalRuleTemplateState extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -97,141 +97,118 @@ public final class ApprovalRuleTemplateState extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="ruleContentSha256")
-      private final @Nullable Output<String> ruleContentSha256;
+    private @Nullable Output<String> ruleContentSha256;
 
-    public Output<String> ruleContentSha256() {
-        return this.ruleContentSha256 == null ? Codegen.empty() : this.ruleContentSha256;
+    public Optional<Output<String>> ruleContentSha256() {
+        return Optional.ofNullable(this.ruleContentSha256);
     }
 
-    public ApprovalRuleTemplateState(
-        @Nullable Output<String> approvalRuleTemplateId,
-        @Nullable Output<String> content,
-        @Nullable Output<String> creationDate,
-        @Nullable Output<String> description,
-        @Nullable Output<String> lastModifiedDate,
-        @Nullable Output<String> lastModifiedUser,
-        @Nullable Output<String> name,
-        @Nullable Output<String> ruleContentSha256) {
-        this.approvalRuleTemplateId = approvalRuleTemplateId;
-        this.content = content;
-        this.creationDate = creationDate;
-        this.description = description;
-        this.lastModifiedDate = lastModifiedDate;
-        this.lastModifiedUser = lastModifiedUser;
-        this.name = name;
-        this.ruleContentSha256 = ruleContentSha256;
-    }
+    private ApprovalRuleTemplateState() {}
 
-    private ApprovalRuleTemplateState() {
-        this.approvalRuleTemplateId = Codegen.empty();
-        this.content = Codegen.empty();
-        this.creationDate = Codegen.empty();
-        this.description = Codegen.empty();
-        this.lastModifiedDate = Codegen.empty();
-        this.lastModifiedUser = Codegen.empty();
-        this.name = Codegen.empty();
-        this.ruleContentSha256 = Codegen.empty();
+    private ApprovalRuleTemplateState(ApprovalRuleTemplateState $) {
+        this.approvalRuleTemplateId = $.approvalRuleTemplateId;
+        this.content = $.content;
+        this.creationDate = $.creationDate;
+        this.description = $.description;
+        this.lastModifiedDate = $.lastModifiedDate;
+        this.lastModifiedUser = $.lastModifiedUser;
+        this.name = $.name;
+        this.ruleContentSha256 = $.ruleContentSha256;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ApprovalRuleTemplateState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> approvalRuleTemplateId;
-        private @Nullable Output<String> content;
-        private @Nullable Output<String> creationDate;
-        private @Nullable Output<String> description;
-        private @Nullable Output<String> lastModifiedDate;
-        private @Nullable Output<String> lastModifiedUser;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> ruleContentSha256;
+        private ApprovalRuleTemplateState $;
 
         public Builder() {
-    	      // Empty
+            $ = new ApprovalRuleTemplateState();
         }
 
         public Builder(ApprovalRuleTemplateState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.approvalRuleTemplateId = defaults.approvalRuleTemplateId;
-    	      this.content = defaults.content;
-    	      this.creationDate = defaults.creationDate;
-    	      this.description = defaults.description;
-    	      this.lastModifiedDate = defaults.lastModifiedDate;
-    	      this.lastModifiedUser = defaults.lastModifiedUser;
-    	      this.name = defaults.name;
-    	      this.ruleContentSha256 = defaults.ruleContentSha256;
+            $ = new ApprovalRuleTemplateState(Objects.requireNonNull(defaults));
         }
 
         public Builder approvalRuleTemplateId(@Nullable Output<String> approvalRuleTemplateId) {
-            this.approvalRuleTemplateId = approvalRuleTemplateId;
+            $.approvalRuleTemplateId = approvalRuleTemplateId;
             return this;
         }
-        public Builder approvalRuleTemplateId(@Nullable String approvalRuleTemplateId) {
-            this.approvalRuleTemplateId = Codegen.ofNullable(approvalRuleTemplateId);
-            return this;
+
+        public Builder approvalRuleTemplateId(String approvalRuleTemplateId) {
+            return approvalRuleTemplateId(Output.of(approvalRuleTemplateId));
         }
+
         public Builder content(@Nullable Output<String> content) {
-            this.content = content;
+            $.content = content;
             return this;
         }
-        public Builder content(@Nullable String content) {
-            this.content = Codegen.ofNullable(content);
-            return this;
+
+        public Builder content(String content) {
+            return content(Output.of(content));
         }
+
         public Builder creationDate(@Nullable Output<String> creationDate) {
-            this.creationDate = creationDate;
+            $.creationDate = creationDate;
             return this;
         }
-        public Builder creationDate(@Nullable String creationDate) {
-            this.creationDate = Codegen.ofNullable(creationDate);
-            return this;
+
+        public Builder creationDate(String creationDate) {
+            return creationDate(Output.of(creationDate));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder lastModifiedDate(@Nullable Output<String> lastModifiedDate) {
-            this.lastModifiedDate = lastModifiedDate;
+            $.lastModifiedDate = lastModifiedDate;
             return this;
         }
-        public Builder lastModifiedDate(@Nullable String lastModifiedDate) {
-            this.lastModifiedDate = Codegen.ofNullable(lastModifiedDate);
-            return this;
+
+        public Builder lastModifiedDate(String lastModifiedDate) {
+            return lastModifiedDate(Output.of(lastModifiedDate));
         }
+
         public Builder lastModifiedUser(@Nullable Output<String> lastModifiedUser) {
-            this.lastModifiedUser = lastModifiedUser;
+            $.lastModifiedUser = lastModifiedUser;
             return this;
         }
-        public Builder lastModifiedUser(@Nullable String lastModifiedUser) {
-            this.lastModifiedUser = Codegen.ofNullable(lastModifiedUser);
-            return this;
+
+        public Builder lastModifiedUser(String lastModifiedUser) {
+            return lastModifiedUser(Output.of(lastModifiedUser));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder ruleContentSha256(@Nullable Output<String> ruleContentSha256) {
-            this.ruleContentSha256 = ruleContentSha256;
+            $.ruleContentSha256 = ruleContentSha256;
             return this;
         }
-        public Builder ruleContentSha256(@Nullable String ruleContentSha256) {
-            this.ruleContentSha256 = Codegen.ofNullable(ruleContentSha256);
-            return this;
-        }        public ApprovalRuleTemplateState build() {
-            return new ApprovalRuleTemplateState(approvalRuleTemplateId, content, creationDate, description, lastModifiedDate, lastModifiedUser, name, ruleContentSha256);
+
+        public Builder ruleContentSha256(String ruleContentSha256) {
+            return ruleContentSha256(Output.of(ruleContentSha256));
+        }
+
+        public ApprovalRuleTemplateState build() {
+            return $;
         }
     }
+
 }

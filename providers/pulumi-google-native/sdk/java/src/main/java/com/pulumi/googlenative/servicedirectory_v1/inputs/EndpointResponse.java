@@ -23,7 +23,7 @@ public final class EndpointResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="address", required=true)
-      private final String address;
+    private String address;
 
     public String address() {
         return this.address;
@@ -34,7 +34,7 @@ public final class EndpointResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="annotations", required=true)
-      private final Map<String,String> annotations;
+    private Map<String,String> annotations;
 
     public Map<String,String> annotations() {
         return this.annotations;
@@ -45,7 +45,7 @@ public final class EndpointResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -56,7 +56,7 @@ public final class EndpointResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="network", required=true)
-      private final String network;
+    private String network;
 
     public String network() {
         return this.network;
@@ -67,82 +67,73 @@ public final class EndpointResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="port", required=true)
-      private final Integer port;
+    private Integer port;
 
     public Integer port() {
         return this.port;
     }
 
-    public EndpointResponse(
-        String address,
-        Map<String,String> annotations,
-        String name,
-        String network,
-        Integer port) {
-        this.address = Objects.requireNonNull(address, "expected parameter 'address' to be non-null");
-        this.annotations = Objects.requireNonNull(annotations, "expected parameter 'annotations' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.network = Objects.requireNonNull(network, "expected parameter 'network' to be non-null");
-        this.port = Objects.requireNonNull(port, "expected parameter 'port' to be non-null");
-    }
+    private EndpointResponse() {}
 
-    private EndpointResponse() {
-        this.address = null;
-        this.annotations = Map.of();
-        this.name = null;
-        this.network = null;
-        this.port = null;
+    private EndpointResponse(EndpointResponse $) {
+        this.address = $.address;
+        this.annotations = $.annotations;
+        this.name = $.name;
+        this.network = $.network;
+        this.port = $.port;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EndpointResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String address;
-        private Map<String,String> annotations;
-        private String name;
-        private String network;
-        private Integer port;
+        private EndpointResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new EndpointResponse();
         }
 
         public Builder(EndpointResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.address = defaults.address;
-    	      this.annotations = defaults.annotations;
-    	      this.name = defaults.name;
-    	      this.network = defaults.network;
-    	      this.port = defaults.port;
+            $ = new EndpointResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder address(String address) {
-            this.address = Objects.requireNonNull(address);
+            $.address = address;
             return this;
         }
+
         public Builder annotations(Map<String,String> annotations) {
-            this.annotations = Objects.requireNonNull(annotations);
+            $.annotations = annotations;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder network(String network) {
-            this.network = Objects.requireNonNull(network);
+            $.network = network;
             return this;
         }
+
         public Builder port(Integer port) {
-            this.port = Objects.requireNonNull(port);
+            $.port = port;
             return this;
-        }        public EndpointResponse build() {
-            return new EndpointResponse(address, annotations, name, network, port);
+        }
+
+        public EndpointResponse build() {
+            $.address = Objects.requireNonNull($.address, "expected parameter 'address' to be non-null");
+            $.annotations = Objects.requireNonNull($.annotations, "expected parameter 'annotations' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.network = Objects.requireNonNull($.network, "expected parameter 'network' to be non-null");
+            $.port = Objects.requireNonNull($.port, "expected parameter 'port' to be non-null");
+            return $;
         }
     }
+
 }

@@ -13,6 +13,7 @@ import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +26,10 @@ public final class MicrosoftSecurityIncidentCreationAlertRuleArgs extends com.pu
      * 
      */
     @Import(name="alertRuleTemplateName")
-      private final @Nullable Output<String> alertRuleTemplateName;
+    private @Nullable Output<String> alertRuleTemplateName;
 
-    public Output<String> alertRuleTemplateName() {
-        return this.alertRuleTemplateName == null ? Codegen.empty() : this.alertRuleTemplateName;
+    public Optional<Output<String>> alertRuleTemplateName() {
+        return Optional.ofNullable(this.alertRuleTemplateName);
     }
 
     /**
@@ -36,10 +37,10 @@ public final class MicrosoftSecurityIncidentCreationAlertRuleArgs extends com.pu
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -47,7 +48,7 @@ public final class MicrosoftSecurityIncidentCreationAlertRuleArgs extends com.pu
      * 
      */
     @Import(name="displayName", required=true)
-      private final Output<String> displayName;
+    private Output<String> displayName;
 
     public Output<String> displayName() {
         return this.displayName;
@@ -58,10 +59,10 @@ public final class MicrosoftSecurityIncidentCreationAlertRuleArgs extends com.pu
      * 
      */
     @Import(name="displayNamesExcludeFilter")
-      private final @Nullable Output<List<String>> displayNamesExcludeFilter;
+    private @Nullable Output<List<String>> displayNamesExcludeFilter;
 
-    public Output<List<String>> displayNamesExcludeFilter() {
-        return this.displayNamesExcludeFilter == null ? Codegen.empty() : this.displayNamesExcludeFilter;
+    public Optional<Output<List<String>>> displayNamesExcludeFilter() {
+        return Optional.ofNullable(this.displayNamesExcludeFilter);
     }
 
     /**
@@ -69,10 +70,10 @@ public final class MicrosoftSecurityIncidentCreationAlertRuleArgs extends com.pu
      * 
      */
     @Import(name="displayNamesFilter")
-      private final @Nullable Output<List<String>> displayNamesFilter;
+    private @Nullable Output<List<String>> displayNamesFilter;
 
-    public Output<List<String>> displayNamesFilter() {
-        return this.displayNamesFilter == null ? Codegen.empty() : this.displayNamesFilter;
+    public Optional<Output<List<String>>> displayNamesFilter() {
+        return Optional.ofNullable(this.displayNamesFilter);
     }
 
     /**
@@ -80,7 +81,7 @@ public final class MicrosoftSecurityIncidentCreationAlertRuleArgs extends com.pu
      * 
      */
     @Import(name="enabled", required=true)
-      private final Output<Boolean> enabled;
+    private Output<Boolean> enabled;
 
     public Output<Boolean> enabled() {
         return this.enabled;
@@ -92,7 +93,7 @@ public final class MicrosoftSecurityIncidentCreationAlertRuleArgs extends com.pu
      * 
      */
     @Import(name="kind", required=true)
-      private final Output<String> kind;
+    private Output<String> kind;
 
     public Output<String> kind() {
         return this.kind;
@@ -103,7 +104,7 @@ public final class MicrosoftSecurityIncidentCreationAlertRuleArgs extends com.pu
      * 
      */
     @Import(name="productFilter", required=true)
-      private final Output<Either<String,MicrosoftSecurityProductName>> productFilter;
+    private Output<Either<String,MicrosoftSecurityProductName>> productFilter;
 
     public Output<Either<String,MicrosoftSecurityProductName>> productFilter() {
         return this.productFilter;
@@ -114,7 +115,7 @@ public final class MicrosoftSecurityIncidentCreationAlertRuleArgs extends com.pu
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -125,10 +126,10 @@ public final class MicrosoftSecurityIncidentCreationAlertRuleArgs extends com.pu
      * 
      */
     @Import(name="ruleId")
-      private final @Nullable Output<String> ruleId;
+    private @Nullable Output<String> ruleId;
 
-    public Output<String> ruleId() {
-        return this.ruleId == null ? Codegen.empty() : this.ruleId;
+    public Optional<Output<String>> ruleId() {
+        return Optional.ofNullable(this.ruleId);
     }
 
     /**
@@ -136,10 +137,10 @@ public final class MicrosoftSecurityIncidentCreationAlertRuleArgs extends com.pu
      * 
      */
     @Import(name="severitiesFilter")
-      private final @Nullable Output<List<Either<String,AlertSeverity>>> severitiesFilter;
+    private @Nullable Output<List<Either<String,AlertSeverity>>> severitiesFilter;
 
-    public Output<List<Either<String,AlertSeverity>>> severitiesFilter() {
-        return this.severitiesFilter == null ? Codegen.empty() : this.severitiesFilter;
+    public Optional<Output<List<Either<String,AlertSeverity>>>> severitiesFilter() {
+        return Optional.ofNullable(this.severitiesFilter);
     }
 
     /**
@@ -147,202 +148,176 @@ public final class MicrosoftSecurityIncidentCreationAlertRuleArgs extends com.pu
      * 
      */
     @Import(name="workspaceName", required=true)
-      private final Output<String> workspaceName;
+    private Output<String> workspaceName;
 
     public Output<String> workspaceName() {
         return this.workspaceName;
     }
 
-    public MicrosoftSecurityIncidentCreationAlertRuleArgs(
-        @Nullable Output<String> alertRuleTemplateName,
-        @Nullable Output<String> description,
-        Output<String> displayName,
-        @Nullable Output<List<String>> displayNamesExcludeFilter,
-        @Nullable Output<List<String>> displayNamesFilter,
-        Output<Boolean> enabled,
-        Output<String> kind,
-        Output<Either<String,MicrosoftSecurityProductName>> productFilter,
-        Output<String> resourceGroupName,
-        @Nullable Output<String> ruleId,
-        @Nullable Output<List<Either<String,AlertSeverity>>> severitiesFilter,
-        Output<String> workspaceName) {
-        this.alertRuleTemplateName = alertRuleTemplateName;
-        this.description = description;
-        this.displayName = Objects.requireNonNull(displayName, "expected parameter 'displayName' to be non-null");
-        this.displayNamesExcludeFilter = displayNamesExcludeFilter;
-        this.displayNamesFilter = displayNamesFilter;
-        this.enabled = Objects.requireNonNull(enabled, "expected parameter 'enabled' to be non-null");
-        this.kind = Codegen.stringProp("kind").output().arg(kind).require();
-        this.productFilter = Objects.requireNonNull(productFilter, "expected parameter 'productFilter' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.ruleId = ruleId;
-        this.severitiesFilter = severitiesFilter;
-        this.workspaceName = Objects.requireNonNull(workspaceName, "expected parameter 'workspaceName' to be non-null");
-    }
+    private MicrosoftSecurityIncidentCreationAlertRuleArgs() {}
 
-    private MicrosoftSecurityIncidentCreationAlertRuleArgs() {
-        this.alertRuleTemplateName = Codegen.empty();
-        this.description = Codegen.empty();
-        this.displayName = Codegen.empty();
-        this.displayNamesExcludeFilter = Codegen.empty();
-        this.displayNamesFilter = Codegen.empty();
-        this.enabled = Codegen.empty();
-        this.kind = Codegen.empty();
-        this.productFilter = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.ruleId = Codegen.empty();
-        this.severitiesFilter = Codegen.empty();
-        this.workspaceName = Codegen.empty();
+    private MicrosoftSecurityIncidentCreationAlertRuleArgs(MicrosoftSecurityIncidentCreationAlertRuleArgs $) {
+        this.alertRuleTemplateName = $.alertRuleTemplateName;
+        this.description = $.description;
+        this.displayName = $.displayName;
+        this.displayNamesExcludeFilter = $.displayNamesExcludeFilter;
+        this.displayNamesFilter = $.displayNamesFilter;
+        this.enabled = $.enabled;
+        this.kind = $.kind;
+        this.productFilter = $.productFilter;
+        this.resourceGroupName = $.resourceGroupName;
+        this.ruleId = $.ruleId;
+        this.severitiesFilter = $.severitiesFilter;
+        this.workspaceName = $.workspaceName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MicrosoftSecurityIncidentCreationAlertRuleArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> alertRuleTemplateName;
-        private @Nullable Output<String> description;
-        private Output<String> displayName;
-        private @Nullable Output<List<String>> displayNamesExcludeFilter;
-        private @Nullable Output<List<String>> displayNamesFilter;
-        private Output<Boolean> enabled;
-        private Output<String> kind;
-        private Output<Either<String,MicrosoftSecurityProductName>> productFilter;
-        private Output<String> resourceGroupName;
-        private @Nullable Output<String> ruleId;
-        private @Nullable Output<List<Either<String,AlertSeverity>>> severitiesFilter;
-        private Output<String> workspaceName;
+        private MicrosoftSecurityIncidentCreationAlertRuleArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new MicrosoftSecurityIncidentCreationAlertRuleArgs();
         }
 
         public Builder(MicrosoftSecurityIncidentCreationAlertRuleArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.alertRuleTemplateName = defaults.alertRuleTemplateName;
-    	      this.description = defaults.description;
-    	      this.displayName = defaults.displayName;
-    	      this.displayNamesExcludeFilter = defaults.displayNamesExcludeFilter;
-    	      this.displayNamesFilter = defaults.displayNamesFilter;
-    	      this.enabled = defaults.enabled;
-    	      this.kind = defaults.kind;
-    	      this.productFilter = defaults.productFilter;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.ruleId = defaults.ruleId;
-    	      this.severitiesFilter = defaults.severitiesFilter;
-    	      this.workspaceName = defaults.workspaceName;
+            $ = new MicrosoftSecurityIncidentCreationAlertRuleArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder alertRuleTemplateName(@Nullable Output<String> alertRuleTemplateName) {
-            this.alertRuleTemplateName = alertRuleTemplateName;
+            $.alertRuleTemplateName = alertRuleTemplateName;
             return this;
         }
-        public Builder alertRuleTemplateName(@Nullable String alertRuleTemplateName) {
-            this.alertRuleTemplateName = Codegen.ofNullable(alertRuleTemplateName);
-            return this;
+
+        public Builder alertRuleTemplateName(String alertRuleTemplateName) {
+            return alertRuleTemplateName(Output.of(alertRuleTemplateName));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder displayName(Output<String> displayName) {
-            this.displayName = Objects.requireNonNull(displayName);
+            $.displayName = displayName;
             return this;
         }
+
         public Builder displayName(String displayName) {
-            this.displayName = Output.of(Objects.requireNonNull(displayName));
-            return this;
+            return displayName(Output.of(displayName));
         }
+
         public Builder displayNamesExcludeFilter(@Nullable Output<List<String>> displayNamesExcludeFilter) {
-            this.displayNamesExcludeFilter = displayNamesExcludeFilter;
+            $.displayNamesExcludeFilter = displayNamesExcludeFilter;
             return this;
         }
-        public Builder displayNamesExcludeFilter(@Nullable List<String> displayNamesExcludeFilter) {
-            this.displayNamesExcludeFilter = Codegen.ofNullable(displayNamesExcludeFilter);
-            return this;
+
+        public Builder displayNamesExcludeFilter(List<String> displayNamesExcludeFilter) {
+            return displayNamesExcludeFilter(Output.of(displayNamesExcludeFilter));
         }
+
         public Builder displayNamesExcludeFilter(String... displayNamesExcludeFilter) {
             return displayNamesExcludeFilter(List.of(displayNamesExcludeFilter));
         }
+
         public Builder displayNamesFilter(@Nullable Output<List<String>> displayNamesFilter) {
-            this.displayNamesFilter = displayNamesFilter;
+            $.displayNamesFilter = displayNamesFilter;
             return this;
         }
-        public Builder displayNamesFilter(@Nullable List<String> displayNamesFilter) {
-            this.displayNamesFilter = Codegen.ofNullable(displayNamesFilter);
-            return this;
+
+        public Builder displayNamesFilter(List<String> displayNamesFilter) {
+            return displayNamesFilter(Output.of(displayNamesFilter));
         }
+
         public Builder displayNamesFilter(String... displayNamesFilter) {
             return displayNamesFilter(List.of(displayNamesFilter));
         }
+
         public Builder enabled(Output<Boolean> enabled) {
-            this.enabled = Objects.requireNonNull(enabled);
+            $.enabled = enabled;
             return this;
         }
+
         public Builder enabled(Boolean enabled) {
-            this.enabled = Output.of(Objects.requireNonNull(enabled));
-            return this;
+            return enabled(Output.of(enabled));
         }
+
         public Builder kind(Output<String> kind) {
-            this.kind = Objects.requireNonNull(kind);
+            $.kind = kind;
             return this;
         }
+
         public Builder kind(String kind) {
-            this.kind = Output.of(Objects.requireNonNull(kind));
-            return this;
+            return kind(Output.of(kind));
         }
+
         public Builder productFilter(Output<Either<String,MicrosoftSecurityProductName>> productFilter) {
-            this.productFilter = Objects.requireNonNull(productFilter);
+            $.productFilter = productFilter;
             return this;
         }
+
         public Builder productFilter(Either<String,MicrosoftSecurityProductName> productFilter) {
-            this.productFilter = Output.of(Objects.requireNonNull(productFilter));
-            return this;
+            return productFilter(Output.of(productFilter));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder ruleId(@Nullable Output<String> ruleId) {
-            this.ruleId = ruleId;
+            $.ruleId = ruleId;
             return this;
         }
-        public Builder ruleId(@Nullable String ruleId) {
-            this.ruleId = Codegen.ofNullable(ruleId);
-            return this;
+
+        public Builder ruleId(String ruleId) {
+            return ruleId(Output.of(ruleId));
         }
+
         public Builder severitiesFilter(@Nullable Output<List<Either<String,AlertSeverity>>> severitiesFilter) {
-            this.severitiesFilter = severitiesFilter;
+            $.severitiesFilter = severitiesFilter;
             return this;
         }
-        public Builder severitiesFilter(@Nullable List<Either<String,AlertSeverity>> severitiesFilter) {
-            this.severitiesFilter = Codegen.ofNullable(severitiesFilter);
-            return this;
+
+        public Builder severitiesFilter(List<Either<String,AlertSeverity>> severitiesFilter) {
+            return severitiesFilter(Output.of(severitiesFilter));
         }
+
         public Builder severitiesFilter(Either<String,AlertSeverity>... severitiesFilter) {
             return severitiesFilter(List.of(severitiesFilter));
         }
+
         public Builder workspaceName(Output<String> workspaceName) {
-            this.workspaceName = Objects.requireNonNull(workspaceName);
+            $.workspaceName = workspaceName;
             return this;
         }
+
         public Builder workspaceName(String workspaceName) {
-            this.workspaceName = Output.of(Objects.requireNonNull(workspaceName));
-            return this;
-        }        public MicrosoftSecurityIncidentCreationAlertRuleArgs build() {
-            return new MicrosoftSecurityIncidentCreationAlertRuleArgs(alertRuleTemplateName, description, displayName, displayNamesExcludeFilter, displayNamesFilter, enabled, kind, productFilter, resourceGroupName, ruleId, severitiesFilter, workspaceName);
+            return workspaceName(Output.of(workspaceName));
+        }
+
+        public MicrosoftSecurityIncidentCreationAlertRuleArgs build() {
+            $.displayName = Objects.requireNonNull($.displayName, "expected parameter 'displayName' to be non-null");
+            $.enabled = Objects.requireNonNull($.enabled, "expected parameter 'enabled' to be non-null");
+            $.kind = Codegen.stringProp("kind").output().arg($.kind).require();
+            $.productFilter = Objects.requireNonNull($.productFilter, "expected parameter 'productFilter' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.workspaceName = Objects.requireNonNull($.workspaceName, "expected parameter 'workspaceName' to be non-null");
+            return $;
         }
     }
+
 }

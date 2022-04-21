@@ -5,10 +5,10 @@ package com.pulumi.aws.sagemaker.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,7 +21,7 @@ public final class UserProfileUserSettingsKernelGatewayAppSettingsCustomImageGet
      * 
      */
     @Import(name="appImageConfigName", required=true)
-      private final Output<String> appImageConfigName;
+    private Output<String> appImageConfigName;
 
     public Output<String> appImageConfigName() {
         return this.appImageConfigName;
@@ -32,7 +32,7 @@ public final class UserProfileUserSettingsKernelGatewayAppSettingsCustomImageGet
      * 
      */
     @Import(name="imageName", required=true)
-      private final Output<String> imageName;
+    private Output<String> imageName;
 
     public Output<String> imageName() {
         return this.imageName;
@@ -43,76 +43,70 @@ public final class UserProfileUserSettingsKernelGatewayAppSettingsCustomImageGet
      * 
      */
     @Import(name="imageVersionNumber")
-      private final @Nullable Output<Integer> imageVersionNumber;
+    private @Nullable Output<Integer> imageVersionNumber;
 
-    public Output<Integer> imageVersionNumber() {
-        return this.imageVersionNumber == null ? Codegen.empty() : this.imageVersionNumber;
+    public Optional<Output<Integer>> imageVersionNumber() {
+        return Optional.ofNullable(this.imageVersionNumber);
     }
 
-    public UserProfileUserSettingsKernelGatewayAppSettingsCustomImageGetArgs(
-        Output<String> appImageConfigName,
-        Output<String> imageName,
-        @Nullable Output<Integer> imageVersionNumber) {
-        this.appImageConfigName = Objects.requireNonNull(appImageConfigName, "expected parameter 'appImageConfigName' to be non-null");
-        this.imageName = Objects.requireNonNull(imageName, "expected parameter 'imageName' to be non-null");
-        this.imageVersionNumber = imageVersionNumber;
-    }
+    private UserProfileUserSettingsKernelGatewayAppSettingsCustomImageGetArgs() {}
 
-    private UserProfileUserSettingsKernelGatewayAppSettingsCustomImageGetArgs() {
-        this.appImageConfigName = Codegen.empty();
-        this.imageName = Codegen.empty();
-        this.imageVersionNumber = Codegen.empty();
+    private UserProfileUserSettingsKernelGatewayAppSettingsCustomImageGetArgs(UserProfileUserSettingsKernelGatewayAppSettingsCustomImageGetArgs $) {
+        this.appImageConfigName = $.appImageConfigName;
+        this.imageName = $.imageName;
+        this.imageVersionNumber = $.imageVersionNumber;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(UserProfileUserSettingsKernelGatewayAppSettingsCustomImageGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> appImageConfigName;
-        private Output<String> imageName;
-        private @Nullable Output<Integer> imageVersionNumber;
+        private UserProfileUserSettingsKernelGatewayAppSettingsCustomImageGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new UserProfileUserSettingsKernelGatewayAppSettingsCustomImageGetArgs();
         }
 
         public Builder(UserProfileUserSettingsKernelGatewayAppSettingsCustomImageGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.appImageConfigName = defaults.appImageConfigName;
-    	      this.imageName = defaults.imageName;
-    	      this.imageVersionNumber = defaults.imageVersionNumber;
+            $ = new UserProfileUserSettingsKernelGatewayAppSettingsCustomImageGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder appImageConfigName(Output<String> appImageConfigName) {
-            this.appImageConfigName = Objects.requireNonNull(appImageConfigName);
+            $.appImageConfigName = appImageConfigName;
             return this;
         }
+
         public Builder appImageConfigName(String appImageConfigName) {
-            this.appImageConfigName = Output.of(Objects.requireNonNull(appImageConfigName));
-            return this;
+            return appImageConfigName(Output.of(appImageConfigName));
         }
+
         public Builder imageName(Output<String> imageName) {
-            this.imageName = Objects.requireNonNull(imageName);
+            $.imageName = imageName;
             return this;
         }
+
         public Builder imageName(String imageName) {
-            this.imageName = Output.of(Objects.requireNonNull(imageName));
-            return this;
+            return imageName(Output.of(imageName));
         }
+
         public Builder imageVersionNumber(@Nullable Output<Integer> imageVersionNumber) {
-            this.imageVersionNumber = imageVersionNumber;
+            $.imageVersionNumber = imageVersionNumber;
             return this;
         }
-        public Builder imageVersionNumber(@Nullable Integer imageVersionNumber) {
-            this.imageVersionNumber = Codegen.ofNullable(imageVersionNumber);
-            return this;
-        }        public UserProfileUserSettingsKernelGatewayAppSettingsCustomImageGetArgs build() {
-            return new UserProfileUserSettingsKernelGatewayAppSettingsCustomImageGetArgs(appImageConfigName, imageName, imageVersionNumber);
+
+        public Builder imageVersionNumber(Integer imageVersionNumber) {
+            return imageVersionNumber(Output.of(imageVersionNumber));
+        }
+
+        public UserProfileUserSettingsKernelGatewayAppSettingsCustomImageGetArgs build() {
+            $.appImageConfigName = Objects.requireNonNull($.appImageConfigName, "expected parameter 'appImageConfigName' to be non-null");
+            $.imageName = Objects.requireNonNull($.imageName, "expected parameter 'imageName' to be non-null");
+            return $;
         }
     }
+
 }

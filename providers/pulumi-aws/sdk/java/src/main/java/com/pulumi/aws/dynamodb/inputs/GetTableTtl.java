@@ -14,62 +14,59 @@ public final class GetTableTtl extends com.pulumi.resources.InvokeArgs {
     public static final GetTableTtl Empty = new GetTableTtl();
 
     @Import(name="attributeName", required=true)
-      private final String attributeName;
+    private String attributeName;
 
     public String attributeName() {
         return this.attributeName;
     }
 
     @Import(name="enabled", required=true)
-      private final Boolean enabled;
+    private Boolean enabled;
 
     public Boolean enabled() {
         return this.enabled;
     }
 
-    public GetTableTtl(
-        String attributeName,
-        Boolean enabled) {
-        this.attributeName = Objects.requireNonNull(attributeName, "expected parameter 'attributeName' to be non-null");
-        this.enabled = Objects.requireNonNull(enabled, "expected parameter 'enabled' to be non-null");
-    }
+    private GetTableTtl() {}
 
-    private GetTableTtl() {
-        this.attributeName = null;
-        this.enabled = null;
+    private GetTableTtl(GetTableTtl $) {
+        this.attributeName = $.attributeName;
+        this.enabled = $.enabled;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetTableTtl defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String attributeName;
-        private Boolean enabled;
+        private GetTableTtl $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetTableTtl();
         }
 
         public Builder(GetTableTtl defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.attributeName = defaults.attributeName;
-    	      this.enabled = defaults.enabled;
+            $ = new GetTableTtl(Objects.requireNonNull(defaults));
         }
 
         public Builder attributeName(String attributeName) {
-            this.attributeName = Objects.requireNonNull(attributeName);
+            $.attributeName = attributeName;
             return this;
         }
+
         public Builder enabled(Boolean enabled) {
-            this.enabled = Objects.requireNonNull(enabled);
+            $.enabled = enabled;
             return this;
-        }        public GetTableTtl build() {
-            return new GetTableTtl(attributeName, enabled);
+        }
+
+        public GetTableTtl build() {
+            $.attributeName = Objects.requireNonNull($.attributeName, "expected parameter 'attributeName' to be non-null");
+            $.enabled = Objects.requireNonNull($.enabled, "expected parameter 'enabled' to be non-null");
+            return $;
         }
     }
+
 }

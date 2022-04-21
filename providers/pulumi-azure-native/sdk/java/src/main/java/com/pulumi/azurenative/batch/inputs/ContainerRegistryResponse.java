@@ -15,7 +15,7 @@ public final class ContainerRegistryResponse extends com.pulumi.resources.Invoke
     public static final ContainerRegistryResponse Empty = new ContainerRegistryResponse();
 
     @Import(name="password", required=true)
-      private final String password;
+    private String password;
 
     public String password() {
         return this.password;
@@ -26,71 +26,65 @@ public final class ContainerRegistryResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="registryServer")
-      private final @Nullable String registryServer;
+    private @Nullable String registryServer;
 
     public Optional<String> registryServer() {
-        return this.registryServer == null ? Optional.empty() : Optional.ofNullable(this.registryServer);
+        return Optional.ofNullable(this.registryServer);
     }
 
     @Import(name="userName", required=true)
-      private final String userName;
+    private String userName;
 
     public String userName() {
         return this.userName;
     }
 
-    public ContainerRegistryResponse(
-        String password,
-        @Nullable String registryServer,
-        String userName) {
-        this.password = Objects.requireNonNull(password, "expected parameter 'password' to be non-null");
-        this.registryServer = registryServer;
-        this.userName = Objects.requireNonNull(userName, "expected parameter 'userName' to be non-null");
-    }
+    private ContainerRegistryResponse() {}
 
-    private ContainerRegistryResponse() {
-        this.password = null;
-        this.registryServer = null;
-        this.userName = null;
+    private ContainerRegistryResponse(ContainerRegistryResponse $) {
+        this.password = $.password;
+        this.registryServer = $.registryServer;
+        this.userName = $.userName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ContainerRegistryResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String password;
-        private @Nullable String registryServer;
-        private String userName;
+        private ContainerRegistryResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ContainerRegistryResponse();
         }
 
         public Builder(ContainerRegistryResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.password = defaults.password;
-    	      this.registryServer = defaults.registryServer;
-    	      this.userName = defaults.userName;
+            $ = new ContainerRegistryResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder password(String password) {
-            this.password = Objects.requireNonNull(password);
+            $.password = password;
             return this;
         }
+
         public Builder registryServer(@Nullable String registryServer) {
-            this.registryServer = registryServer;
+            $.registryServer = registryServer;
             return this;
         }
+
         public Builder userName(String userName) {
-            this.userName = Objects.requireNonNull(userName);
+            $.userName = userName;
             return this;
-        }        public ContainerRegistryResponse build() {
-            return new ContainerRegistryResponse(password, registryServer, userName);
+        }
+
+        public ContainerRegistryResponse build() {
+            $.password = Objects.requireNonNull($.password, "expected parameter 'password' to be non-null");
+            $.userName = Objects.requireNonNull($.userName, "expected parameter 'userName' to be non-null");
+            return $;
         }
     }
+
 }

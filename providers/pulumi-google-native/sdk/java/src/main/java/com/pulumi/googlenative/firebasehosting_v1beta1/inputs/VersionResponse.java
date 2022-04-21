@@ -24,7 +24,7 @@ public final class VersionResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="config", required=true)
-      private final ServingConfigResponse config;
+    private ServingConfigResponse config;
 
     public ServingConfigResponse config() {
         return this.config;
@@ -35,7 +35,7 @@ public final class VersionResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="createTime", required=true)
-      private final String createTime;
+    private String createTime;
 
     public String createTime() {
         return this.createTime;
@@ -46,7 +46,7 @@ public final class VersionResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="createUser", required=true)
-      private final ActingUserResponse createUser;
+    private ActingUserResponse createUser;
 
     public ActingUserResponse createUser() {
         return this.createUser;
@@ -57,7 +57,7 @@ public final class VersionResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="deleteTime", required=true)
-      private final String deleteTime;
+    private String deleteTime;
 
     public String deleteTime() {
         return this.deleteTime;
@@ -68,7 +68,7 @@ public final class VersionResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="deleteUser", required=true)
-      private final ActingUserResponse deleteUser;
+    private ActingUserResponse deleteUser;
 
     public ActingUserResponse deleteUser() {
         return this.deleteUser;
@@ -79,7 +79,7 @@ public final class VersionResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="fileCount", required=true)
-      private final String fileCount;
+    private String fileCount;
 
     public String fileCount() {
         return this.fileCount;
@@ -90,7 +90,7 @@ public final class VersionResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="finalizeTime", required=true)
-      private final String finalizeTime;
+    private String finalizeTime;
 
     public String finalizeTime() {
         return this.finalizeTime;
@@ -101,7 +101,7 @@ public final class VersionResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="finalizeUser", required=true)
-      private final ActingUserResponse finalizeUser;
+    private ActingUserResponse finalizeUser;
 
     public ActingUserResponse finalizeUser() {
         return this.finalizeUser;
@@ -112,7 +112,7 @@ public final class VersionResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="labels", required=true)
-      private final Map<String,String> labels;
+    private Map<String,String> labels;
 
     public Map<String,String> labels() {
         return this.labels;
@@ -123,7 +123,7 @@ public final class VersionResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -134,7 +134,7 @@ public final class VersionResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="status", required=true)
-      private final String status;
+    private String status;
 
     public String status() {
         return this.status;
@@ -145,145 +145,122 @@ public final class VersionResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="versionBytes", required=true)
-      private final String versionBytes;
+    private String versionBytes;
 
     public String versionBytes() {
         return this.versionBytes;
     }
 
-    public VersionResponse(
-        ServingConfigResponse config,
-        String createTime,
-        ActingUserResponse createUser,
-        String deleteTime,
-        ActingUserResponse deleteUser,
-        String fileCount,
-        String finalizeTime,
-        ActingUserResponse finalizeUser,
-        Map<String,String> labels,
-        String name,
-        String status,
-        String versionBytes) {
-        this.config = Objects.requireNonNull(config, "expected parameter 'config' to be non-null");
-        this.createTime = Objects.requireNonNull(createTime, "expected parameter 'createTime' to be non-null");
-        this.createUser = Objects.requireNonNull(createUser, "expected parameter 'createUser' to be non-null");
-        this.deleteTime = Objects.requireNonNull(deleteTime, "expected parameter 'deleteTime' to be non-null");
-        this.deleteUser = Objects.requireNonNull(deleteUser, "expected parameter 'deleteUser' to be non-null");
-        this.fileCount = Objects.requireNonNull(fileCount, "expected parameter 'fileCount' to be non-null");
-        this.finalizeTime = Objects.requireNonNull(finalizeTime, "expected parameter 'finalizeTime' to be non-null");
-        this.finalizeUser = Objects.requireNonNull(finalizeUser, "expected parameter 'finalizeUser' to be non-null");
-        this.labels = Objects.requireNonNull(labels, "expected parameter 'labels' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.status = Objects.requireNonNull(status, "expected parameter 'status' to be non-null");
-        this.versionBytes = Objects.requireNonNull(versionBytes, "expected parameter 'versionBytes' to be non-null");
-    }
+    private VersionResponse() {}
 
-    private VersionResponse() {
-        this.config = null;
-        this.createTime = null;
-        this.createUser = null;
-        this.deleteTime = null;
-        this.deleteUser = null;
-        this.fileCount = null;
-        this.finalizeTime = null;
-        this.finalizeUser = null;
-        this.labels = Map.of();
-        this.name = null;
-        this.status = null;
-        this.versionBytes = null;
+    private VersionResponse(VersionResponse $) {
+        this.config = $.config;
+        this.createTime = $.createTime;
+        this.createUser = $.createUser;
+        this.deleteTime = $.deleteTime;
+        this.deleteUser = $.deleteUser;
+        this.fileCount = $.fileCount;
+        this.finalizeTime = $.finalizeTime;
+        this.finalizeUser = $.finalizeUser;
+        this.labels = $.labels;
+        this.name = $.name;
+        this.status = $.status;
+        this.versionBytes = $.versionBytes;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VersionResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private ServingConfigResponse config;
-        private String createTime;
-        private ActingUserResponse createUser;
-        private String deleteTime;
-        private ActingUserResponse deleteUser;
-        private String fileCount;
-        private String finalizeTime;
-        private ActingUserResponse finalizeUser;
-        private Map<String,String> labels;
-        private String name;
-        private String status;
-        private String versionBytes;
+        private VersionResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new VersionResponse();
         }
 
         public Builder(VersionResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.config = defaults.config;
-    	      this.createTime = defaults.createTime;
-    	      this.createUser = defaults.createUser;
-    	      this.deleteTime = defaults.deleteTime;
-    	      this.deleteUser = defaults.deleteUser;
-    	      this.fileCount = defaults.fileCount;
-    	      this.finalizeTime = defaults.finalizeTime;
-    	      this.finalizeUser = defaults.finalizeUser;
-    	      this.labels = defaults.labels;
-    	      this.name = defaults.name;
-    	      this.status = defaults.status;
-    	      this.versionBytes = defaults.versionBytes;
+            $ = new VersionResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder config(ServingConfigResponse config) {
-            this.config = Objects.requireNonNull(config);
+            $.config = config;
             return this;
         }
+
         public Builder createTime(String createTime) {
-            this.createTime = Objects.requireNonNull(createTime);
+            $.createTime = createTime;
             return this;
         }
+
         public Builder createUser(ActingUserResponse createUser) {
-            this.createUser = Objects.requireNonNull(createUser);
+            $.createUser = createUser;
             return this;
         }
+
         public Builder deleteTime(String deleteTime) {
-            this.deleteTime = Objects.requireNonNull(deleteTime);
+            $.deleteTime = deleteTime;
             return this;
         }
+
         public Builder deleteUser(ActingUserResponse deleteUser) {
-            this.deleteUser = Objects.requireNonNull(deleteUser);
+            $.deleteUser = deleteUser;
             return this;
         }
+
         public Builder fileCount(String fileCount) {
-            this.fileCount = Objects.requireNonNull(fileCount);
+            $.fileCount = fileCount;
             return this;
         }
+
         public Builder finalizeTime(String finalizeTime) {
-            this.finalizeTime = Objects.requireNonNull(finalizeTime);
+            $.finalizeTime = finalizeTime;
             return this;
         }
+
         public Builder finalizeUser(ActingUserResponse finalizeUser) {
-            this.finalizeUser = Objects.requireNonNull(finalizeUser);
+            $.finalizeUser = finalizeUser;
             return this;
         }
+
         public Builder labels(Map<String,String> labels) {
-            this.labels = Objects.requireNonNull(labels);
+            $.labels = labels;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder status(String status) {
-            this.status = Objects.requireNonNull(status);
+            $.status = status;
             return this;
         }
+
         public Builder versionBytes(String versionBytes) {
-            this.versionBytes = Objects.requireNonNull(versionBytes);
+            $.versionBytes = versionBytes;
             return this;
-        }        public VersionResponse build() {
-            return new VersionResponse(config, createTime, createUser, deleteTime, deleteUser, fileCount, finalizeTime, finalizeUser, labels, name, status, versionBytes);
+        }
+
+        public VersionResponse build() {
+            $.config = Objects.requireNonNull($.config, "expected parameter 'config' to be non-null");
+            $.createTime = Objects.requireNonNull($.createTime, "expected parameter 'createTime' to be non-null");
+            $.createUser = Objects.requireNonNull($.createUser, "expected parameter 'createUser' to be non-null");
+            $.deleteTime = Objects.requireNonNull($.deleteTime, "expected parameter 'deleteTime' to be non-null");
+            $.deleteUser = Objects.requireNonNull($.deleteUser, "expected parameter 'deleteUser' to be non-null");
+            $.fileCount = Objects.requireNonNull($.fileCount, "expected parameter 'fileCount' to be non-null");
+            $.finalizeTime = Objects.requireNonNull($.finalizeTime, "expected parameter 'finalizeTime' to be non-null");
+            $.finalizeUser = Objects.requireNonNull($.finalizeUser, "expected parameter 'finalizeUser' to be non-null");
+            $.labels = Objects.requireNonNull($.labels, "expected parameter 'labels' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.status = Objects.requireNonNull($.status, "expected parameter 'status' to be non-null");
+            $.versionBytes = Objects.requireNonNull($.versionBytes, "expected parameter 'versionBytes' to be non-null");
+            return $;
         }
     }
+
 }

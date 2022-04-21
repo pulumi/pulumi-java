@@ -23,45 +23,44 @@ public final class ApiVersionConstraintResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="minApiVersion")
-      private final @Nullable String minApiVersion;
+    private @Nullable String minApiVersion;
 
     public Optional<String> minApiVersion() {
-        return this.minApiVersion == null ? Optional.empty() : Optional.ofNullable(this.minApiVersion);
+        return Optional.ofNullable(this.minApiVersion);
     }
 
-    public ApiVersionConstraintResponse(@Nullable String minApiVersion) {
-        this.minApiVersion = minApiVersion;
-    }
+    private ApiVersionConstraintResponse() {}
 
-    private ApiVersionConstraintResponse() {
-        this.minApiVersion = null;
+    private ApiVersionConstraintResponse(ApiVersionConstraintResponse $) {
+        this.minApiVersion = $.minApiVersion;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ApiVersionConstraintResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String minApiVersion;
+        private ApiVersionConstraintResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ApiVersionConstraintResponse();
         }
 
         public Builder(ApiVersionConstraintResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.minApiVersion = defaults.minApiVersion;
+            $ = new ApiVersionConstraintResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder minApiVersion(@Nullable String minApiVersion) {
-            this.minApiVersion = minApiVersion;
+            $.minApiVersion = minApiVersion;
             return this;
-        }        public ApiVersionConstraintResponse build() {
-            return new ApiVersionConstraintResponse(minApiVersion);
+        }
+
+        public ApiVersionConstraintResponse build() {
+            return $;
         }
     }
+
 }

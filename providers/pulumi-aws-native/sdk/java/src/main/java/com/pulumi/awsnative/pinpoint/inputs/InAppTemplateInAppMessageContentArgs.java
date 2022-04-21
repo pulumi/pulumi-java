@@ -8,9 +8,9 @@ import com.pulumi.awsnative.pinpoint.inputs.InAppTemplateButtonConfigArgs;
 import com.pulumi.awsnative.pinpoint.inputs.InAppTemplateHeaderConfigArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -19,150 +19,133 @@ public final class InAppTemplateInAppMessageContentArgs extends com.pulumi.resou
     public static final InAppTemplateInAppMessageContentArgs Empty = new InAppTemplateInAppMessageContentArgs();
 
     @Import(name="backgroundColor")
-      private final @Nullable Output<String> backgroundColor;
+    private @Nullable Output<String> backgroundColor;
 
-    public Output<String> backgroundColor() {
-        return this.backgroundColor == null ? Codegen.empty() : this.backgroundColor;
+    public Optional<Output<String>> backgroundColor() {
+        return Optional.ofNullable(this.backgroundColor);
     }
 
     @Import(name="bodyConfig")
-      private final @Nullable Output<InAppTemplateBodyConfigArgs> bodyConfig;
+    private @Nullable Output<InAppTemplateBodyConfigArgs> bodyConfig;
 
-    public Output<InAppTemplateBodyConfigArgs> bodyConfig() {
-        return this.bodyConfig == null ? Codegen.empty() : this.bodyConfig;
+    public Optional<Output<InAppTemplateBodyConfigArgs>> bodyConfig() {
+        return Optional.ofNullable(this.bodyConfig);
     }
 
     @Import(name="headerConfig")
-      private final @Nullable Output<InAppTemplateHeaderConfigArgs> headerConfig;
+    private @Nullable Output<InAppTemplateHeaderConfigArgs> headerConfig;
 
-    public Output<InAppTemplateHeaderConfigArgs> headerConfig() {
-        return this.headerConfig == null ? Codegen.empty() : this.headerConfig;
+    public Optional<Output<InAppTemplateHeaderConfigArgs>> headerConfig() {
+        return Optional.ofNullable(this.headerConfig);
     }
 
     @Import(name="imageUrl")
-      private final @Nullable Output<String> imageUrl;
+    private @Nullable Output<String> imageUrl;
 
-    public Output<String> imageUrl() {
-        return this.imageUrl == null ? Codegen.empty() : this.imageUrl;
+    public Optional<Output<String>> imageUrl() {
+        return Optional.ofNullable(this.imageUrl);
     }
 
     @Import(name="primaryBtn")
-      private final @Nullable Output<InAppTemplateButtonConfigArgs> primaryBtn;
+    private @Nullable Output<InAppTemplateButtonConfigArgs> primaryBtn;
 
-    public Output<InAppTemplateButtonConfigArgs> primaryBtn() {
-        return this.primaryBtn == null ? Codegen.empty() : this.primaryBtn;
+    public Optional<Output<InAppTemplateButtonConfigArgs>> primaryBtn() {
+        return Optional.ofNullable(this.primaryBtn);
     }
 
     @Import(name="secondaryBtn")
-      private final @Nullable Output<InAppTemplateButtonConfigArgs> secondaryBtn;
+    private @Nullable Output<InAppTemplateButtonConfigArgs> secondaryBtn;
 
-    public Output<InAppTemplateButtonConfigArgs> secondaryBtn() {
-        return this.secondaryBtn == null ? Codegen.empty() : this.secondaryBtn;
+    public Optional<Output<InAppTemplateButtonConfigArgs>> secondaryBtn() {
+        return Optional.ofNullable(this.secondaryBtn);
     }
 
-    public InAppTemplateInAppMessageContentArgs(
-        @Nullable Output<String> backgroundColor,
-        @Nullable Output<InAppTemplateBodyConfigArgs> bodyConfig,
-        @Nullable Output<InAppTemplateHeaderConfigArgs> headerConfig,
-        @Nullable Output<String> imageUrl,
-        @Nullable Output<InAppTemplateButtonConfigArgs> primaryBtn,
-        @Nullable Output<InAppTemplateButtonConfigArgs> secondaryBtn) {
-        this.backgroundColor = backgroundColor;
-        this.bodyConfig = bodyConfig;
-        this.headerConfig = headerConfig;
-        this.imageUrl = imageUrl;
-        this.primaryBtn = primaryBtn;
-        this.secondaryBtn = secondaryBtn;
-    }
+    private InAppTemplateInAppMessageContentArgs() {}
 
-    private InAppTemplateInAppMessageContentArgs() {
-        this.backgroundColor = Codegen.empty();
-        this.bodyConfig = Codegen.empty();
-        this.headerConfig = Codegen.empty();
-        this.imageUrl = Codegen.empty();
-        this.primaryBtn = Codegen.empty();
-        this.secondaryBtn = Codegen.empty();
+    private InAppTemplateInAppMessageContentArgs(InAppTemplateInAppMessageContentArgs $) {
+        this.backgroundColor = $.backgroundColor;
+        this.bodyConfig = $.bodyConfig;
+        this.headerConfig = $.headerConfig;
+        this.imageUrl = $.imageUrl;
+        this.primaryBtn = $.primaryBtn;
+        this.secondaryBtn = $.secondaryBtn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(InAppTemplateInAppMessageContentArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> backgroundColor;
-        private @Nullable Output<InAppTemplateBodyConfigArgs> bodyConfig;
-        private @Nullable Output<InAppTemplateHeaderConfigArgs> headerConfig;
-        private @Nullable Output<String> imageUrl;
-        private @Nullable Output<InAppTemplateButtonConfigArgs> primaryBtn;
-        private @Nullable Output<InAppTemplateButtonConfigArgs> secondaryBtn;
+        private InAppTemplateInAppMessageContentArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new InAppTemplateInAppMessageContentArgs();
         }
 
         public Builder(InAppTemplateInAppMessageContentArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.backgroundColor = defaults.backgroundColor;
-    	      this.bodyConfig = defaults.bodyConfig;
-    	      this.headerConfig = defaults.headerConfig;
-    	      this.imageUrl = defaults.imageUrl;
-    	      this.primaryBtn = defaults.primaryBtn;
-    	      this.secondaryBtn = defaults.secondaryBtn;
+            $ = new InAppTemplateInAppMessageContentArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder backgroundColor(@Nullable Output<String> backgroundColor) {
-            this.backgroundColor = backgroundColor;
+            $.backgroundColor = backgroundColor;
             return this;
         }
-        public Builder backgroundColor(@Nullable String backgroundColor) {
-            this.backgroundColor = Codegen.ofNullable(backgroundColor);
-            return this;
+
+        public Builder backgroundColor(String backgroundColor) {
+            return backgroundColor(Output.of(backgroundColor));
         }
+
         public Builder bodyConfig(@Nullable Output<InAppTemplateBodyConfigArgs> bodyConfig) {
-            this.bodyConfig = bodyConfig;
+            $.bodyConfig = bodyConfig;
             return this;
         }
-        public Builder bodyConfig(@Nullable InAppTemplateBodyConfigArgs bodyConfig) {
-            this.bodyConfig = Codegen.ofNullable(bodyConfig);
-            return this;
+
+        public Builder bodyConfig(InAppTemplateBodyConfigArgs bodyConfig) {
+            return bodyConfig(Output.of(bodyConfig));
         }
+
         public Builder headerConfig(@Nullable Output<InAppTemplateHeaderConfigArgs> headerConfig) {
-            this.headerConfig = headerConfig;
+            $.headerConfig = headerConfig;
             return this;
         }
-        public Builder headerConfig(@Nullable InAppTemplateHeaderConfigArgs headerConfig) {
-            this.headerConfig = Codegen.ofNullable(headerConfig);
-            return this;
+
+        public Builder headerConfig(InAppTemplateHeaderConfigArgs headerConfig) {
+            return headerConfig(Output.of(headerConfig));
         }
+
         public Builder imageUrl(@Nullable Output<String> imageUrl) {
-            this.imageUrl = imageUrl;
+            $.imageUrl = imageUrl;
             return this;
         }
-        public Builder imageUrl(@Nullable String imageUrl) {
-            this.imageUrl = Codegen.ofNullable(imageUrl);
-            return this;
+
+        public Builder imageUrl(String imageUrl) {
+            return imageUrl(Output.of(imageUrl));
         }
+
         public Builder primaryBtn(@Nullable Output<InAppTemplateButtonConfigArgs> primaryBtn) {
-            this.primaryBtn = primaryBtn;
+            $.primaryBtn = primaryBtn;
             return this;
         }
-        public Builder primaryBtn(@Nullable InAppTemplateButtonConfigArgs primaryBtn) {
-            this.primaryBtn = Codegen.ofNullable(primaryBtn);
-            return this;
+
+        public Builder primaryBtn(InAppTemplateButtonConfigArgs primaryBtn) {
+            return primaryBtn(Output.of(primaryBtn));
         }
+
         public Builder secondaryBtn(@Nullable Output<InAppTemplateButtonConfigArgs> secondaryBtn) {
-            this.secondaryBtn = secondaryBtn;
+            $.secondaryBtn = secondaryBtn;
             return this;
         }
-        public Builder secondaryBtn(@Nullable InAppTemplateButtonConfigArgs secondaryBtn) {
-            this.secondaryBtn = Codegen.ofNullable(secondaryBtn);
-            return this;
-        }        public InAppTemplateInAppMessageContentArgs build() {
-            return new InAppTemplateInAppMessageContentArgs(backgroundColor, bodyConfig, headerConfig, imageUrl, primaryBtn, secondaryBtn);
+
+        public Builder secondaryBtn(InAppTemplateButtonConfigArgs secondaryBtn) {
+            return secondaryBtn(Output.of(secondaryBtn));
+        }
+
+        public InAppTemplateInAppMessageContentArgs build() {
+            return $;
         }
     }
+
 }

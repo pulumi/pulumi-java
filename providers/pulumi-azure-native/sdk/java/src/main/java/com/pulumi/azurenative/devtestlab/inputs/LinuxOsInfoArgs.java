@@ -7,9 +7,9 @@ import com.pulumi.azurenative.devtestlab.enums.LinuxOsState;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,49 +26,48 @@ public final class LinuxOsInfoArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="linuxOsState")
-      private final @Nullable Output<Either<String,LinuxOsState>> linuxOsState;
+    private @Nullable Output<Either<String,LinuxOsState>> linuxOsState;
 
-    public Output<Either<String,LinuxOsState>> linuxOsState() {
-        return this.linuxOsState == null ? Codegen.empty() : this.linuxOsState;
+    public Optional<Output<Either<String,LinuxOsState>>> linuxOsState() {
+        return Optional.ofNullable(this.linuxOsState);
     }
 
-    public LinuxOsInfoArgs(@Nullable Output<Either<String,LinuxOsState>> linuxOsState) {
-        this.linuxOsState = linuxOsState;
-    }
+    private LinuxOsInfoArgs() {}
 
-    private LinuxOsInfoArgs() {
-        this.linuxOsState = Codegen.empty();
+    private LinuxOsInfoArgs(LinuxOsInfoArgs $) {
+        this.linuxOsState = $.linuxOsState;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LinuxOsInfoArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Either<String,LinuxOsState>> linuxOsState;
+        private LinuxOsInfoArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new LinuxOsInfoArgs();
         }
 
         public Builder(LinuxOsInfoArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.linuxOsState = defaults.linuxOsState;
+            $ = new LinuxOsInfoArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder linuxOsState(@Nullable Output<Either<String,LinuxOsState>> linuxOsState) {
-            this.linuxOsState = linuxOsState;
+            $.linuxOsState = linuxOsState;
             return this;
         }
-        public Builder linuxOsState(@Nullable Either<String,LinuxOsState> linuxOsState) {
-            this.linuxOsState = Codegen.ofNullable(linuxOsState);
-            return this;
-        }        public LinuxOsInfoArgs build() {
-            return new LinuxOsInfoArgs(linuxOsState);
+
+        public Builder linuxOsState(Either<String,LinuxOsState> linuxOsState) {
+            return linuxOsState(Output.of(linuxOsState));
+        }
+
+        public LinuxOsInfoArgs build() {
+            return $;
         }
     }
+
 }

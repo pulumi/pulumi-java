@@ -8,7 +8,6 @@ import com.pulumi.azurenative.media.enums.FilterTrackPropertyType;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -26,7 +25,7 @@ public final class FilterTrackPropertyConditionArgs extends com.pulumi.resources
      * 
      */
     @Import(name="operation", required=true)
-      private final Output<Either<String,FilterTrackPropertyCompareOperation>> operation;
+    private Output<Either<String,FilterTrackPropertyCompareOperation>> operation;
 
     public Output<Either<String,FilterTrackPropertyCompareOperation>> operation() {
         return this.operation;
@@ -37,7 +36,7 @@ public final class FilterTrackPropertyConditionArgs extends com.pulumi.resources
      * 
      */
     @Import(name="property", required=true)
-      private final Output<Either<String,FilterTrackPropertyType>> property;
+    private Output<Either<String,FilterTrackPropertyType>> property;
 
     public Output<Either<String,FilterTrackPropertyType>> property() {
         return this.property;
@@ -48,76 +47,71 @@ public final class FilterTrackPropertyConditionArgs extends com.pulumi.resources
      * 
      */
     @Import(name="value", required=true)
-      private final Output<String> value;
+    private Output<String> value;
 
     public Output<String> value() {
         return this.value;
     }
 
-    public FilterTrackPropertyConditionArgs(
-        Output<Either<String,FilterTrackPropertyCompareOperation>> operation,
-        Output<Either<String,FilterTrackPropertyType>> property,
-        Output<String> value) {
-        this.operation = Objects.requireNonNull(operation, "expected parameter 'operation' to be non-null");
-        this.property = Objects.requireNonNull(property, "expected parameter 'property' to be non-null");
-        this.value = Objects.requireNonNull(value, "expected parameter 'value' to be non-null");
-    }
+    private FilterTrackPropertyConditionArgs() {}
 
-    private FilterTrackPropertyConditionArgs() {
-        this.operation = Codegen.empty();
-        this.property = Codegen.empty();
-        this.value = Codegen.empty();
+    private FilterTrackPropertyConditionArgs(FilterTrackPropertyConditionArgs $) {
+        this.operation = $.operation;
+        this.property = $.property;
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FilterTrackPropertyConditionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Either<String,FilterTrackPropertyCompareOperation>> operation;
-        private Output<Either<String,FilterTrackPropertyType>> property;
-        private Output<String> value;
+        private FilterTrackPropertyConditionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new FilterTrackPropertyConditionArgs();
         }
 
         public Builder(FilterTrackPropertyConditionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.operation = defaults.operation;
-    	      this.property = defaults.property;
-    	      this.value = defaults.value;
+            $ = new FilterTrackPropertyConditionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder operation(Output<Either<String,FilterTrackPropertyCompareOperation>> operation) {
-            this.operation = Objects.requireNonNull(operation);
+            $.operation = operation;
             return this;
         }
+
         public Builder operation(Either<String,FilterTrackPropertyCompareOperation> operation) {
-            this.operation = Output.of(Objects.requireNonNull(operation));
-            return this;
+            return operation(Output.of(operation));
         }
+
         public Builder property(Output<Either<String,FilterTrackPropertyType>> property) {
-            this.property = Objects.requireNonNull(property);
+            $.property = property;
             return this;
         }
+
         public Builder property(Either<String,FilterTrackPropertyType> property) {
-            this.property = Output.of(Objects.requireNonNull(property));
-            return this;
+            return property(Output.of(property));
         }
+
         public Builder value(Output<String> value) {
-            this.value = Objects.requireNonNull(value);
+            $.value = value;
             return this;
         }
+
         public Builder value(String value) {
-            this.value = Output.of(Objects.requireNonNull(value));
-            return this;
-        }        public FilterTrackPropertyConditionArgs build() {
-            return new FilterTrackPropertyConditionArgs(operation, property, value);
+            return value(Output.of(value));
+        }
+
+        public FilterTrackPropertyConditionArgs build() {
+            $.operation = Objects.requireNonNull($.operation, "expected parameter 'operation' to be non-null");
+            $.property = Objects.requireNonNull($.property, "expected parameter 'property' to be non-null");
+            $.value = Objects.requireNonNull($.value, "expected parameter 'value' to be non-null");
+            return $;
         }
     }
+
 }

@@ -23,7 +23,7 @@ public final class RuleResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="destinations", required=true)
-      private final List<DestinationResponse> destinations;
+    private List<DestinationResponse> destinations;
 
     public List<DestinationResponse> destinations() {
         return this.destinations;
@@ -34,61 +34,60 @@ public final class RuleResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="sources", required=true)
-      private final List<SourceResponse> sources;
+    private List<SourceResponse> sources;
 
     public List<SourceResponse> sources() {
         return this.sources;
     }
 
-    public RuleResponse(
-        List<DestinationResponse> destinations,
-        List<SourceResponse> sources) {
-        this.destinations = Objects.requireNonNull(destinations, "expected parameter 'destinations' to be non-null");
-        this.sources = Objects.requireNonNull(sources, "expected parameter 'sources' to be non-null");
-    }
+    private RuleResponse() {}
 
-    private RuleResponse() {
-        this.destinations = List.of();
-        this.sources = List.of();
+    private RuleResponse(RuleResponse $) {
+        this.destinations = $.destinations;
+        this.sources = $.sources;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RuleResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<DestinationResponse> destinations;
-        private List<SourceResponse> sources;
+        private RuleResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new RuleResponse();
         }
 
         public Builder(RuleResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.destinations = defaults.destinations;
-    	      this.sources = defaults.sources;
+            $ = new RuleResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder destinations(List<DestinationResponse> destinations) {
-            this.destinations = Objects.requireNonNull(destinations);
+            $.destinations = destinations;
             return this;
         }
+
         public Builder destinations(DestinationResponse... destinations) {
             return destinations(List.of(destinations));
         }
+
         public Builder sources(List<SourceResponse> sources) {
-            this.sources = Objects.requireNonNull(sources);
+            $.sources = sources;
             return this;
         }
+
         public Builder sources(SourceResponse... sources) {
             return sources(List.of(sources));
-        }        public RuleResponse build() {
-            return new RuleResponse(destinations, sources);
+        }
+
+        public RuleResponse build() {
+            $.destinations = Objects.requireNonNull($.destinations, "expected parameter 'destinations' to be non-null");
+            $.sources = Objects.requireNonNull($.sources, "expected parameter 'sources' to be non-null");
+            return $;
         }
     }
+
 }

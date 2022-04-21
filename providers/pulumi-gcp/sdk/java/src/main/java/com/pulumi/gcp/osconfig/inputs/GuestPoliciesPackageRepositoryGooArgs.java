@@ -5,7 +5,6 @@ package com.pulumi.gcp.osconfig.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -22,7 +21,7 @@ public final class GuestPoliciesPackageRepositoryGooArgs extends com.pulumi.reso
      * 
      */
     @Import(name="name", required=true)
-      private final Output<String> name;
+    private Output<String> name;
 
     public Output<String> name() {
         return this.name;
@@ -33,63 +32,60 @@ public final class GuestPoliciesPackageRepositoryGooArgs extends com.pulumi.reso
      * 
      */
     @Import(name="url", required=true)
-      private final Output<String> url;
+    private Output<String> url;
 
     public Output<String> url() {
         return this.url;
     }
 
-    public GuestPoliciesPackageRepositoryGooArgs(
-        Output<String> name,
-        Output<String> url) {
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.url = Objects.requireNonNull(url, "expected parameter 'url' to be non-null");
-    }
+    private GuestPoliciesPackageRepositoryGooArgs() {}
 
-    private GuestPoliciesPackageRepositoryGooArgs() {
-        this.name = Codegen.empty();
-        this.url = Codegen.empty();
+    private GuestPoliciesPackageRepositoryGooArgs(GuestPoliciesPackageRepositoryGooArgs $) {
+        this.name = $.name;
+        this.url = $.url;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GuestPoliciesPackageRepositoryGooArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> name;
-        private Output<String> url;
+        private GuestPoliciesPackageRepositoryGooArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GuestPoliciesPackageRepositoryGooArgs();
         }
 
         public Builder(GuestPoliciesPackageRepositoryGooArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.url = defaults.url;
+            $ = new GuestPoliciesPackageRepositoryGooArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder name(Output<String> name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Output.of(Objects.requireNonNull(name));
-            return this;
+            return name(Output.of(name));
         }
+
         public Builder url(Output<String> url) {
-            this.url = Objects.requireNonNull(url);
+            $.url = url;
             return this;
         }
+
         public Builder url(String url) {
-            this.url = Output.of(Objects.requireNonNull(url));
-            return this;
-        }        public GuestPoliciesPackageRepositoryGooArgs build() {
-            return new GuestPoliciesPackageRepositoryGooArgs(name, url);
+            return url(Output.of(url));
+        }
+
+        public GuestPoliciesPackageRepositoryGooArgs build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.url = Objects.requireNonNull($.url, "expected parameter 'url' to be non-null");
+            return $;
         }
     }
+
 }

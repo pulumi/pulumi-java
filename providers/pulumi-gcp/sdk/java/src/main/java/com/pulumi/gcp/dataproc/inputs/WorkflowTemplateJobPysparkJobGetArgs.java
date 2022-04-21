@@ -5,12 +5,12 @@ package com.pulumi.gcp.dataproc.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.dataproc.inputs.WorkflowTemplateJobPysparkJobLoggingConfigGetArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,10 @@ public final class WorkflowTemplateJobPysparkJobGetArgs extends com.pulumi.resou
      * 
      */
     @Import(name="archiveUris")
-      private final @Nullable Output<List<String>> archiveUris;
+    private @Nullable Output<List<String>> archiveUris;
 
-    public Output<List<String>> archiveUris() {
-        return this.archiveUris == null ? Codegen.empty() : this.archiveUris;
+    public Optional<Output<List<String>>> archiveUris() {
+        return Optional.ofNullable(this.archiveUris);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class WorkflowTemplateJobPysparkJobGetArgs extends com.pulumi.resou
      * 
      */
     @Import(name="args")
-      private final @Nullable Output<List<String>> args;
+    private @Nullable Output<List<String>> args;
 
-    public Output<List<String>> args() {
-        return this.args == null ? Codegen.empty() : this.args;
+    public Optional<Output<List<String>>> args() {
+        return Optional.ofNullable(this.args);
     }
 
     /**
@@ -45,10 +45,10 @@ public final class WorkflowTemplateJobPysparkJobGetArgs extends com.pulumi.resou
      * 
      */
     @Import(name="fileUris")
-      private final @Nullable Output<List<String>> fileUris;
+    private @Nullable Output<List<String>> fileUris;
 
-    public Output<List<String>> fileUris() {
-        return this.fileUris == null ? Codegen.empty() : this.fileUris;
+    public Optional<Output<List<String>>> fileUris() {
+        return Optional.ofNullable(this.fileUris);
     }
 
     /**
@@ -56,10 +56,10 @@ public final class WorkflowTemplateJobPysparkJobGetArgs extends com.pulumi.resou
      * 
      */
     @Import(name="jarFileUris")
-      private final @Nullable Output<List<String>> jarFileUris;
+    private @Nullable Output<List<String>> jarFileUris;
 
-    public Output<List<String>> jarFileUris() {
-        return this.jarFileUris == null ? Codegen.empty() : this.jarFileUris;
+    public Optional<Output<List<String>>> jarFileUris() {
+        return Optional.ofNullable(this.jarFileUris);
     }
 
     /**
@@ -67,10 +67,10 @@ public final class WorkflowTemplateJobPysparkJobGetArgs extends com.pulumi.resou
      * 
      */
     @Import(name="loggingConfig")
-      private final @Nullable Output<WorkflowTemplateJobPysparkJobLoggingConfigGetArgs> loggingConfig;
+    private @Nullable Output<WorkflowTemplateJobPysparkJobLoggingConfigGetArgs> loggingConfig;
 
-    public Output<WorkflowTemplateJobPysparkJobLoggingConfigGetArgs> loggingConfig() {
-        return this.loggingConfig == null ? Codegen.empty() : this.loggingConfig;
+    public Optional<Output<WorkflowTemplateJobPysparkJobLoggingConfigGetArgs>> loggingConfig() {
+        return Optional.ofNullable(this.loggingConfig);
     }
 
     /**
@@ -78,7 +78,7 @@ public final class WorkflowTemplateJobPysparkJobGetArgs extends com.pulumi.resou
      * 
      */
     @Import(name="mainPythonFileUri", required=true)
-      private final Output<String> mainPythonFileUri;
+    private Output<String> mainPythonFileUri;
 
     public Output<String> mainPythonFileUri() {
         return this.mainPythonFileUri;
@@ -89,10 +89,10 @@ public final class WorkflowTemplateJobPysparkJobGetArgs extends com.pulumi.resou
      * 
      */
     @Import(name="properties")
-      private final @Nullable Output<Map<String,String>> properties;
+    private @Nullable Output<Map<String,String>> properties;
 
-    public Output<Map<String,String>> properties() {
-        return this.properties == null ? Codegen.empty() : this.properties;
+    public Optional<Output<Map<String,String>>> properties() {
+        return Optional.ofNullable(this.properties);
     }
 
     /**
@@ -100,156 +100,139 @@ public final class WorkflowTemplateJobPysparkJobGetArgs extends com.pulumi.resou
      * 
      */
     @Import(name="pythonFileUris")
-      private final @Nullable Output<List<String>> pythonFileUris;
+    private @Nullable Output<List<String>> pythonFileUris;
 
-    public Output<List<String>> pythonFileUris() {
-        return this.pythonFileUris == null ? Codegen.empty() : this.pythonFileUris;
+    public Optional<Output<List<String>>> pythonFileUris() {
+        return Optional.ofNullable(this.pythonFileUris);
     }
 
-    public WorkflowTemplateJobPysparkJobGetArgs(
-        @Nullable Output<List<String>> archiveUris,
-        @Nullable Output<List<String>> args,
-        @Nullable Output<List<String>> fileUris,
-        @Nullable Output<List<String>> jarFileUris,
-        @Nullable Output<WorkflowTemplateJobPysparkJobLoggingConfigGetArgs> loggingConfig,
-        Output<String> mainPythonFileUri,
-        @Nullable Output<Map<String,String>> properties,
-        @Nullable Output<List<String>> pythonFileUris) {
-        this.archiveUris = archiveUris;
-        this.args = args;
-        this.fileUris = fileUris;
-        this.jarFileUris = jarFileUris;
-        this.loggingConfig = loggingConfig;
-        this.mainPythonFileUri = Objects.requireNonNull(mainPythonFileUri, "expected parameter 'mainPythonFileUri' to be non-null");
-        this.properties = properties;
-        this.pythonFileUris = pythonFileUris;
-    }
+    private WorkflowTemplateJobPysparkJobGetArgs() {}
 
-    private WorkflowTemplateJobPysparkJobGetArgs() {
-        this.archiveUris = Codegen.empty();
-        this.args = Codegen.empty();
-        this.fileUris = Codegen.empty();
-        this.jarFileUris = Codegen.empty();
-        this.loggingConfig = Codegen.empty();
-        this.mainPythonFileUri = Codegen.empty();
-        this.properties = Codegen.empty();
-        this.pythonFileUris = Codegen.empty();
+    private WorkflowTemplateJobPysparkJobGetArgs(WorkflowTemplateJobPysparkJobGetArgs $) {
+        this.archiveUris = $.archiveUris;
+        this.args = $.args;
+        this.fileUris = $.fileUris;
+        this.jarFileUris = $.jarFileUris;
+        this.loggingConfig = $.loggingConfig;
+        this.mainPythonFileUri = $.mainPythonFileUri;
+        this.properties = $.properties;
+        this.pythonFileUris = $.pythonFileUris;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WorkflowTemplateJobPysparkJobGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> archiveUris;
-        private @Nullable Output<List<String>> args;
-        private @Nullable Output<List<String>> fileUris;
-        private @Nullable Output<List<String>> jarFileUris;
-        private @Nullable Output<WorkflowTemplateJobPysparkJobLoggingConfigGetArgs> loggingConfig;
-        private Output<String> mainPythonFileUri;
-        private @Nullable Output<Map<String,String>> properties;
-        private @Nullable Output<List<String>> pythonFileUris;
+        private WorkflowTemplateJobPysparkJobGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new WorkflowTemplateJobPysparkJobGetArgs();
         }
 
         public Builder(WorkflowTemplateJobPysparkJobGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.archiveUris = defaults.archiveUris;
-    	      this.args = defaults.args;
-    	      this.fileUris = defaults.fileUris;
-    	      this.jarFileUris = defaults.jarFileUris;
-    	      this.loggingConfig = defaults.loggingConfig;
-    	      this.mainPythonFileUri = defaults.mainPythonFileUri;
-    	      this.properties = defaults.properties;
-    	      this.pythonFileUris = defaults.pythonFileUris;
+            $ = new WorkflowTemplateJobPysparkJobGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder archiveUris(@Nullable Output<List<String>> archiveUris) {
-            this.archiveUris = archiveUris;
+            $.archiveUris = archiveUris;
             return this;
         }
-        public Builder archiveUris(@Nullable List<String> archiveUris) {
-            this.archiveUris = Codegen.ofNullable(archiveUris);
-            return this;
+
+        public Builder archiveUris(List<String> archiveUris) {
+            return archiveUris(Output.of(archiveUris));
         }
+
         public Builder archiveUris(String... archiveUris) {
             return archiveUris(List.of(archiveUris));
         }
+
         public Builder args(@Nullable Output<List<String>> args) {
-            this.args = args;
+            $.args = args;
             return this;
         }
-        public Builder args(@Nullable List<String> args) {
-            this.args = Codegen.ofNullable(args);
-            return this;
+
+        public Builder args(List<String> args) {
+            return args(Output.of(args));
         }
+
         public Builder args(String... args) {
             return args(List.of(args));
         }
+
         public Builder fileUris(@Nullable Output<List<String>> fileUris) {
-            this.fileUris = fileUris;
+            $.fileUris = fileUris;
             return this;
         }
-        public Builder fileUris(@Nullable List<String> fileUris) {
-            this.fileUris = Codegen.ofNullable(fileUris);
-            return this;
+
+        public Builder fileUris(List<String> fileUris) {
+            return fileUris(Output.of(fileUris));
         }
+
         public Builder fileUris(String... fileUris) {
             return fileUris(List.of(fileUris));
         }
+
         public Builder jarFileUris(@Nullable Output<List<String>> jarFileUris) {
-            this.jarFileUris = jarFileUris;
+            $.jarFileUris = jarFileUris;
             return this;
         }
-        public Builder jarFileUris(@Nullable List<String> jarFileUris) {
-            this.jarFileUris = Codegen.ofNullable(jarFileUris);
-            return this;
+
+        public Builder jarFileUris(List<String> jarFileUris) {
+            return jarFileUris(Output.of(jarFileUris));
         }
+
         public Builder jarFileUris(String... jarFileUris) {
             return jarFileUris(List.of(jarFileUris));
         }
+
         public Builder loggingConfig(@Nullable Output<WorkflowTemplateJobPysparkJobLoggingConfigGetArgs> loggingConfig) {
-            this.loggingConfig = loggingConfig;
+            $.loggingConfig = loggingConfig;
             return this;
         }
-        public Builder loggingConfig(@Nullable WorkflowTemplateJobPysparkJobLoggingConfigGetArgs loggingConfig) {
-            this.loggingConfig = Codegen.ofNullable(loggingConfig);
-            return this;
+
+        public Builder loggingConfig(WorkflowTemplateJobPysparkJobLoggingConfigGetArgs loggingConfig) {
+            return loggingConfig(Output.of(loggingConfig));
         }
+
         public Builder mainPythonFileUri(Output<String> mainPythonFileUri) {
-            this.mainPythonFileUri = Objects.requireNonNull(mainPythonFileUri);
+            $.mainPythonFileUri = mainPythonFileUri;
             return this;
         }
+
         public Builder mainPythonFileUri(String mainPythonFileUri) {
-            this.mainPythonFileUri = Output.of(Objects.requireNonNull(mainPythonFileUri));
-            return this;
+            return mainPythonFileUri(Output.of(mainPythonFileUri));
         }
+
         public Builder properties(@Nullable Output<Map<String,String>> properties) {
-            this.properties = properties;
+            $.properties = properties;
             return this;
         }
-        public Builder properties(@Nullable Map<String,String> properties) {
-            this.properties = Codegen.ofNullable(properties);
-            return this;
+
+        public Builder properties(Map<String,String> properties) {
+            return properties(Output.of(properties));
         }
+
         public Builder pythonFileUris(@Nullable Output<List<String>> pythonFileUris) {
-            this.pythonFileUris = pythonFileUris;
+            $.pythonFileUris = pythonFileUris;
             return this;
         }
-        public Builder pythonFileUris(@Nullable List<String> pythonFileUris) {
-            this.pythonFileUris = Codegen.ofNullable(pythonFileUris);
-            return this;
+
+        public Builder pythonFileUris(List<String> pythonFileUris) {
+            return pythonFileUris(Output.of(pythonFileUris));
         }
+
         public Builder pythonFileUris(String... pythonFileUris) {
             return pythonFileUris(List.of(pythonFileUris));
-        }        public WorkflowTemplateJobPysparkJobGetArgs build() {
-            return new WorkflowTemplateJobPysparkJobGetArgs(archiveUris, args, fileUris, jarFileUris, loggingConfig, mainPythonFileUri, properties, pythonFileUris);
+        }
+
+        public WorkflowTemplateJobPysparkJobGetArgs build() {
+            $.mainPythonFileUri = Objects.requireNonNull($.mainPythonFileUri, "expected parameter 'mainPythonFileUri' to be non-null");
+            return $;
         }
     }
+
 }

@@ -25,7 +25,7 @@ public final class ScaleSettingsResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="maxNodeCount", required=true)
-      private final Integer maxNodeCount;
+    private Integer maxNodeCount;
 
     public Integer maxNodeCount() {
         return this.maxNodeCount;
@@ -36,10 +36,10 @@ public final class ScaleSettingsResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="minNodeCount")
-      private final @Nullable Integer minNodeCount;
+    private @Nullable Integer minNodeCount;
 
     public Optional<Integer> minNodeCount() {
-        return this.minNodeCount == null ? Optional.empty() : Optional.ofNullable(this.minNodeCount);
+        return Optional.ofNullable(this.minNodeCount);
     }
 
     /**
@@ -47,64 +47,58 @@ public final class ScaleSettingsResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="nodeIdleTimeBeforeScaleDown")
-      private final @Nullable String nodeIdleTimeBeforeScaleDown;
+    private @Nullable String nodeIdleTimeBeforeScaleDown;
 
     public Optional<String> nodeIdleTimeBeforeScaleDown() {
-        return this.nodeIdleTimeBeforeScaleDown == null ? Optional.empty() : Optional.ofNullable(this.nodeIdleTimeBeforeScaleDown);
+        return Optional.ofNullable(this.nodeIdleTimeBeforeScaleDown);
     }
 
-    public ScaleSettingsResponse(
-        Integer maxNodeCount,
-        @Nullable Integer minNodeCount,
-        @Nullable String nodeIdleTimeBeforeScaleDown) {
-        this.maxNodeCount = Objects.requireNonNull(maxNodeCount, "expected parameter 'maxNodeCount' to be non-null");
-        this.minNodeCount = Codegen.integerProp("minNodeCount").arg(minNodeCount).def(0).getNullable();
-        this.nodeIdleTimeBeforeScaleDown = nodeIdleTimeBeforeScaleDown;
-    }
+    private ScaleSettingsResponse() {}
 
-    private ScaleSettingsResponse() {
-        this.maxNodeCount = null;
-        this.minNodeCount = null;
-        this.nodeIdleTimeBeforeScaleDown = null;
+    private ScaleSettingsResponse(ScaleSettingsResponse $) {
+        this.maxNodeCount = $.maxNodeCount;
+        this.minNodeCount = $.minNodeCount;
+        this.nodeIdleTimeBeforeScaleDown = $.nodeIdleTimeBeforeScaleDown;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ScaleSettingsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Integer maxNodeCount;
-        private @Nullable Integer minNodeCount;
-        private @Nullable String nodeIdleTimeBeforeScaleDown;
+        private ScaleSettingsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ScaleSettingsResponse();
         }
 
         public Builder(ScaleSettingsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.maxNodeCount = defaults.maxNodeCount;
-    	      this.minNodeCount = defaults.minNodeCount;
-    	      this.nodeIdleTimeBeforeScaleDown = defaults.nodeIdleTimeBeforeScaleDown;
+            $ = new ScaleSettingsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder maxNodeCount(Integer maxNodeCount) {
-            this.maxNodeCount = Objects.requireNonNull(maxNodeCount);
+            $.maxNodeCount = maxNodeCount;
             return this;
         }
+
         public Builder minNodeCount(@Nullable Integer minNodeCount) {
-            this.minNodeCount = minNodeCount;
+            $.minNodeCount = minNodeCount;
             return this;
         }
+
         public Builder nodeIdleTimeBeforeScaleDown(@Nullable String nodeIdleTimeBeforeScaleDown) {
-            this.nodeIdleTimeBeforeScaleDown = nodeIdleTimeBeforeScaleDown;
+            $.nodeIdleTimeBeforeScaleDown = nodeIdleTimeBeforeScaleDown;
             return this;
-        }        public ScaleSettingsResponse build() {
-            return new ScaleSettingsResponse(maxNodeCount, minNodeCount, nodeIdleTimeBeforeScaleDown);
+        }
+
+        public ScaleSettingsResponse build() {
+            $.maxNodeCount = Objects.requireNonNull($.maxNodeCount, "expected parameter 'maxNodeCount' to be non-null");
+            $.minNodeCount = Codegen.integerProp("minNodeCount").arg($.minNodeCount).def(0).getNullable();
+            return $;
         }
     }
+
 }

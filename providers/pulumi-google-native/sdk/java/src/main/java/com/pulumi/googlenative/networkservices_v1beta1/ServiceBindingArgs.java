@@ -5,10 +5,10 @@ package com.pulumi.googlenative.networkservices_v1beta1;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class ServiceBindingArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -32,10 +32,10 @@ public final class ServiceBindingArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="endpointFilter")
-      private final @Nullable Output<String> endpointFilter;
+    private @Nullable Output<String> endpointFilter;
 
-    public Output<String> endpointFilter() {
-        return this.endpointFilter == null ? Codegen.empty() : this.endpointFilter;
+    public Optional<Output<String>> endpointFilter() {
+        return Optional.ofNullable(this.endpointFilter);
     }
 
     /**
@@ -43,17 +43,17 @@ public final class ServiceBindingArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="labels")
-      private final @Nullable Output<Map<String,String>> labels;
+    private @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> labels() {
-        return this.labels == null ? Codegen.empty() : this.labels;
+    public Optional<Output<Map<String,String>>> labels() {
+        return Optional.ofNullable(this.labels);
     }
 
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -61,17 +61,17 @@ public final class ServiceBindingArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -79,148 +79,127 @@ public final class ServiceBindingArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="service", required=true)
-      private final Output<String> service;
+    private Output<String> service;
 
     public Output<String> service() {
         return this.service;
     }
 
     @Import(name="serviceBindingId", required=true)
-      private final Output<String> serviceBindingId;
+    private Output<String> serviceBindingId;
 
     public Output<String> serviceBindingId() {
         return this.serviceBindingId;
     }
 
-    public ServiceBindingArgs(
-        @Nullable Output<String> description,
-        @Nullable Output<String> endpointFilter,
-        @Nullable Output<Map<String,String>> labels,
-        @Nullable Output<String> location,
-        @Nullable Output<String> name,
-        @Nullable Output<String> project,
-        Output<String> service,
-        Output<String> serviceBindingId) {
-        this.description = description;
-        this.endpointFilter = endpointFilter;
-        this.labels = labels;
-        this.location = location;
-        this.name = name;
-        this.project = project;
-        this.service = Objects.requireNonNull(service, "expected parameter 'service' to be non-null");
-        this.serviceBindingId = Objects.requireNonNull(serviceBindingId, "expected parameter 'serviceBindingId' to be non-null");
-    }
+    private ServiceBindingArgs() {}
 
-    private ServiceBindingArgs() {
-        this.description = Codegen.empty();
-        this.endpointFilter = Codegen.empty();
-        this.labels = Codegen.empty();
-        this.location = Codegen.empty();
-        this.name = Codegen.empty();
-        this.project = Codegen.empty();
-        this.service = Codegen.empty();
-        this.serviceBindingId = Codegen.empty();
+    private ServiceBindingArgs(ServiceBindingArgs $) {
+        this.description = $.description;
+        this.endpointFilter = $.endpointFilter;
+        this.labels = $.labels;
+        this.location = $.location;
+        this.name = $.name;
+        this.project = $.project;
+        this.service = $.service;
+        this.serviceBindingId = $.serviceBindingId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ServiceBindingArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> description;
-        private @Nullable Output<String> endpointFilter;
-        private @Nullable Output<Map<String,String>> labels;
-        private @Nullable Output<String> location;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> project;
-        private Output<String> service;
-        private Output<String> serviceBindingId;
+        private ServiceBindingArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ServiceBindingArgs();
         }
 
         public Builder(ServiceBindingArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.description = defaults.description;
-    	      this.endpointFilter = defaults.endpointFilter;
-    	      this.labels = defaults.labels;
-    	      this.location = defaults.location;
-    	      this.name = defaults.name;
-    	      this.project = defaults.project;
-    	      this.service = defaults.service;
-    	      this.serviceBindingId = defaults.serviceBindingId;
+            $ = new ServiceBindingArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder endpointFilter(@Nullable Output<String> endpointFilter) {
-            this.endpointFilter = endpointFilter;
+            $.endpointFilter = endpointFilter;
             return this;
         }
-        public Builder endpointFilter(@Nullable String endpointFilter) {
-            this.endpointFilter = Codegen.ofNullable(endpointFilter);
-            return this;
+
+        public Builder endpointFilter(String endpointFilter) {
+            return endpointFilter(Output.of(endpointFilter));
         }
+
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
-            this.labels = labels;
+            $.labels = labels;
             return this;
         }
-        public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Codegen.ofNullable(labels);
-            return this;
+
+        public Builder labels(Map<String,String> labels) {
+            return labels(Output.of(labels));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder service(Output<String> service) {
-            this.service = Objects.requireNonNull(service);
+            $.service = service;
             return this;
         }
+
         public Builder service(String service) {
-            this.service = Output.of(Objects.requireNonNull(service));
-            return this;
+            return service(Output.of(service));
         }
+
         public Builder serviceBindingId(Output<String> serviceBindingId) {
-            this.serviceBindingId = Objects.requireNonNull(serviceBindingId);
+            $.serviceBindingId = serviceBindingId;
             return this;
         }
+
         public Builder serviceBindingId(String serviceBindingId) {
-            this.serviceBindingId = Output.of(Objects.requireNonNull(serviceBindingId));
-            return this;
-        }        public ServiceBindingArgs build() {
-            return new ServiceBindingArgs(description, endpointFilter, labels, location, name, project, service, serviceBindingId);
+            return serviceBindingId(Output.of(serviceBindingId));
+        }
+
+        public ServiceBindingArgs build() {
+            $.service = Objects.requireNonNull($.service, "expected parameter 'service' to be non-null");
+            $.serviceBindingId = Objects.requireNonNull($.serviceBindingId, "expected parameter 'serviceBindingId' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,9 +5,9 @@ package com.pulumi.googlenative.sqladmin_v1beta4.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class SslCertArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="cert")
-      private final @Nullable Output<String> cert;
+    private @Nullable Output<String> cert;
 
-    public Output<String> cert() {
-        return this.cert == null ? Codegen.empty() : this.cert;
+    public Optional<Output<String>> cert() {
+        return Optional.ofNullable(this.cert);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class SslCertArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="certSerialNumber")
-      private final @Nullable Output<String> certSerialNumber;
+    private @Nullable Output<String> certSerialNumber;
 
-    public Output<String> certSerialNumber() {
-        return this.certSerialNumber == null ? Codegen.empty() : this.certSerialNumber;
+    public Optional<Output<String>> certSerialNumber() {
+        return Optional.ofNullable(this.certSerialNumber);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class SslCertArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="commonName")
-      private final @Nullable Output<String> commonName;
+    private @Nullable Output<String> commonName;
 
-    public Output<String> commonName() {
-        return this.commonName == null ? Codegen.empty() : this.commonName;
+    public Optional<Output<String>> commonName() {
+        return Optional.ofNullable(this.commonName);
     }
 
     /**
@@ -57,10 +57,10 @@ public final class SslCertArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="createTime")
-      private final @Nullable Output<String> createTime;
+    private @Nullable Output<String> createTime;
 
-    public Output<String> createTime() {
-        return this.createTime == null ? Codegen.empty() : this.createTime;
+    public Optional<Output<String>> createTime() {
+        return Optional.ofNullable(this.createTime);
     }
 
     /**
@@ -68,10 +68,10 @@ public final class SslCertArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="expirationTime")
-      private final @Nullable Output<String> expirationTime;
+    private @Nullable Output<String> expirationTime;
 
-    public Output<String> expirationTime() {
-        return this.expirationTime == null ? Codegen.empty() : this.expirationTime;
+    public Optional<Output<String>> expirationTime() {
+        return Optional.ofNullable(this.expirationTime);
     }
 
     /**
@@ -79,10 +79,10 @@ public final class SslCertArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="instance")
-      private final @Nullable Output<String> instance;
+    private @Nullable Output<String> instance;
 
-    public Output<String> instance() {
-        return this.instance == null ? Codegen.empty() : this.instance;
+    public Optional<Output<String>> instance() {
+        return Optional.ofNullable(this.instance);
     }
 
     /**
@@ -90,10 +90,10 @@ public final class SslCertArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="kind")
-      private final @Nullable Output<String> kind;
+    private @Nullable Output<String> kind;
 
-    public Output<String> kind() {
-        return this.kind == null ? Codegen.empty() : this.kind;
+    public Optional<Output<String>> kind() {
+        return Optional.ofNullable(this.kind);
     }
 
     /**
@@ -101,10 +101,10 @@ public final class SslCertArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="selfLink")
-      private final @Nullable Output<String> selfLink;
+    private @Nullable Output<String> selfLink;
 
-    public Output<String> selfLink() {
-        return this.selfLink == null ? Codegen.empty() : this.selfLink;
+    public Optional<Output<String>> selfLink() {
+        return Optional.ofNullable(this.selfLink);
     }
 
     /**
@@ -112,154 +112,128 @@ public final class SslCertArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="sha1Fingerprint")
-      private final @Nullable Output<String> sha1Fingerprint;
+    private @Nullable Output<String> sha1Fingerprint;
 
-    public Output<String> sha1Fingerprint() {
-        return this.sha1Fingerprint == null ? Codegen.empty() : this.sha1Fingerprint;
+    public Optional<Output<String>> sha1Fingerprint() {
+        return Optional.ofNullable(this.sha1Fingerprint);
     }
 
-    public SslCertArgs(
-        @Nullable Output<String> cert,
-        @Nullable Output<String> certSerialNumber,
-        @Nullable Output<String> commonName,
-        @Nullable Output<String> createTime,
-        @Nullable Output<String> expirationTime,
-        @Nullable Output<String> instance,
-        @Nullable Output<String> kind,
-        @Nullable Output<String> selfLink,
-        @Nullable Output<String> sha1Fingerprint) {
-        this.cert = cert;
-        this.certSerialNumber = certSerialNumber;
-        this.commonName = commonName;
-        this.createTime = createTime;
-        this.expirationTime = expirationTime;
-        this.instance = instance;
-        this.kind = kind;
-        this.selfLink = selfLink;
-        this.sha1Fingerprint = sha1Fingerprint;
-    }
+    private SslCertArgs() {}
 
-    private SslCertArgs() {
-        this.cert = Codegen.empty();
-        this.certSerialNumber = Codegen.empty();
-        this.commonName = Codegen.empty();
-        this.createTime = Codegen.empty();
-        this.expirationTime = Codegen.empty();
-        this.instance = Codegen.empty();
-        this.kind = Codegen.empty();
-        this.selfLink = Codegen.empty();
-        this.sha1Fingerprint = Codegen.empty();
+    private SslCertArgs(SslCertArgs $) {
+        this.cert = $.cert;
+        this.certSerialNumber = $.certSerialNumber;
+        this.commonName = $.commonName;
+        this.createTime = $.createTime;
+        this.expirationTime = $.expirationTime;
+        this.instance = $.instance;
+        this.kind = $.kind;
+        this.selfLink = $.selfLink;
+        this.sha1Fingerprint = $.sha1Fingerprint;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SslCertArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> cert;
-        private @Nullable Output<String> certSerialNumber;
-        private @Nullable Output<String> commonName;
-        private @Nullable Output<String> createTime;
-        private @Nullable Output<String> expirationTime;
-        private @Nullable Output<String> instance;
-        private @Nullable Output<String> kind;
-        private @Nullable Output<String> selfLink;
-        private @Nullable Output<String> sha1Fingerprint;
+        private SslCertArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SslCertArgs();
         }
 
         public Builder(SslCertArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cert = defaults.cert;
-    	      this.certSerialNumber = defaults.certSerialNumber;
-    	      this.commonName = defaults.commonName;
-    	      this.createTime = defaults.createTime;
-    	      this.expirationTime = defaults.expirationTime;
-    	      this.instance = defaults.instance;
-    	      this.kind = defaults.kind;
-    	      this.selfLink = defaults.selfLink;
-    	      this.sha1Fingerprint = defaults.sha1Fingerprint;
+            $ = new SslCertArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder cert(@Nullable Output<String> cert) {
-            this.cert = cert;
+            $.cert = cert;
             return this;
         }
-        public Builder cert(@Nullable String cert) {
-            this.cert = Codegen.ofNullable(cert);
-            return this;
+
+        public Builder cert(String cert) {
+            return cert(Output.of(cert));
         }
+
         public Builder certSerialNumber(@Nullable Output<String> certSerialNumber) {
-            this.certSerialNumber = certSerialNumber;
+            $.certSerialNumber = certSerialNumber;
             return this;
         }
-        public Builder certSerialNumber(@Nullable String certSerialNumber) {
-            this.certSerialNumber = Codegen.ofNullable(certSerialNumber);
-            return this;
+
+        public Builder certSerialNumber(String certSerialNumber) {
+            return certSerialNumber(Output.of(certSerialNumber));
         }
+
         public Builder commonName(@Nullable Output<String> commonName) {
-            this.commonName = commonName;
+            $.commonName = commonName;
             return this;
         }
-        public Builder commonName(@Nullable String commonName) {
-            this.commonName = Codegen.ofNullable(commonName);
-            return this;
+
+        public Builder commonName(String commonName) {
+            return commonName(Output.of(commonName));
         }
+
         public Builder createTime(@Nullable Output<String> createTime) {
-            this.createTime = createTime;
+            $.createTime = createTime;
             return this;
         }
-        public Builder createTime(@Nullable String createTime) {
-            this.createTime = Codegen.ofNullable(createTime);
-            return this;
+
+        public Builder createTime(String createTime) {
+            return createTime(Output.of(createTime));
         }
+
         public Builder expirationTime(@Nullable Output<String> expirationTime) {
-            this.expirationTime = expirationTime;
+            $.expirationTime = expirationTime;
             return this;
         }
-        public Builder expirationTime(@Nullable String expirationTime) {
-            this.expirationTime = Codegen.ofNullable(expirationTime);
-            return this;
+
+        public Builder expirationTime(String expirationTime) {
+            return expirationTime(Output.of(expirationTime));
         }
+
         public Builder instance(@Nullable Output<String> instance) {
-            this.instance = instance;
+            $.instance = instance;
             return this;
         }
-        public Builder instance(@Nullable String instance) {
-            this.instance = Codegen.ofNullable(instance);
-            return this;
+
+        public Builder instance(String instance) {
+            return instance(Output.of(instance));
         }
+
         public Builder kind(@Nullable Output<String> kind) {
-            this.kind = kind;
+            $.kind = kind;
             return this;
         }
-        public Builder kind(@Nullable String kind) {
-            this.kind = Codegen.ofNullable(kind);
-            return this;
+
+        public Builder kind(String kind) {
+            return kind(Output.of(kind));
         }
+
         public Builder selfLink(@Nullable Output<String> selfLink) {
-            this.selfLink = selfLink;
+            $.selfLink = selfLink;
             return this;
         }
-        public Builder selfLink(@Nullable String selfLink) {
-            this.selfLink = Codegen.ofNullable(selfLink);
-            return this;
+
+        public Builder selfLink(String selfLink) {
+            return selfLink(Output.of(selfLink));
         }
+
         public Builder sha1Fingerprint(@Nullable Output<String> sha1Fingerprint) {
-            this.sha1Fingerprint = sha1Fingerprint;
+            $.sha1Fingerprint = sha1Fingerprint;
             return this;
         }
-        public Builder sha1Fingerprint(@Nullable String sha1Fingerprint) {
-            this.sha1Fingerprint = Codegen.ofNullable(sha1Fingerprint);
-            return this;
-        }        public SslCertArgs build() {
-            return new SslCertArgs(cert, certSerialNumber, commonName, createTime, expirationTime, instance, kind, selfLink, sha1Fingerprint);
+
+        public Builder sha1Fingerprint(String sha1Fingerprint) {
+            return sha1Fingerprint(Output.of(sha1Fingerprint));
+        }
+
+        public SslCertArgs build() {
+            return $;
         }
     }
+
 }

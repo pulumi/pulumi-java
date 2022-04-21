@@ -21,45 +21,45 @@ public final class GoogleCloudDialogflowCxV3beta1TextInputResponse extends com.p
      * 
      */
     @Import(name="text", required=true)
-      private final String text;
+    private String text;
 
     public String text() {
         return this.text;
     }
 
-    public GoogleCloudDialogflowCxV3beta1TextInputResponse(String text) {
-        this.text = Objects.requireNonNull(text, "expected parameter 'text' to be non-null");
-    }
+    private GoogleCloudDialogflowCxV3beta1TextInputResponse() {}
 
-    private GoogleCloudDialogflowCxV3beta1TextInputResponse() {
-        this.text = null;
+    private GoogleCloudDialogflowCxV3beta1TextInputResponse(GoogleCloudDialogflowCxV3beta1TextInputResponse $) {
+        this.text = $.text;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudDialogflowCxV3beta1TextInputResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String text;
+        private GoogleCloudDialogflowCxV3beta1TextInputResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudDialogflowCxV3beta1TextInputResponse();
         }
 
         public Builder(GoogleCloudDialogflowCxV3beta1TextInputResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.text = defaults.text;
+            $ = new GoogleCloudDialogflowCxV3beta1TextInputResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder text(String text) {
-            this.text = Objects.requireNonNull(text);
+            $.text = text;
             return this;
-        }        public GoogleCloudDialogflowCxV3beta1TextInputResponse build() {
-            return new GoogleCloudDialogflowCxV3beta1TextInputResponse(text);
+        }
+
+        public GoogleCloudDialogflowCxV3beta1TextInputResponse build() {
+            $.text = Objects.requireNonNull($.text, "expected parameter 'text' to be non-null");
+            return $;
         }
     }
+
 }

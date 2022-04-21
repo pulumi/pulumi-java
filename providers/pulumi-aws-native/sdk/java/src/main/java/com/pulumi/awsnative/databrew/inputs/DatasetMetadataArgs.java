@@ -5,9 +5,9 @@ package com.pulumi.awsnative.databrew.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,49 +20,48 @@ public final class DatasetMetadataArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="sourceArn")
-      private final @Nullable Output<String> sourceArn;
+    private @Nullable Output<String> sourceArn;
 
-    public Output<String> sourceArn() {
-        return this.sourceArn == null ? Codegen.empty() : this.sourceArn;
+    public Optional<Output<String>> sourceArn() {
+        return Optional.ofNullable(this.sourceArn);
     }
 
-    public DatasetMetadataArgs(@Nullable Output<String> sourceArn) {
-        this.sourceArn = sourceArn;
-    }
+    private DatasetMetadataArgs() {}
 
-    private DatasetMetadataArgs() {
-        this.sourceArn = Codegen.empty();
+    private DatasetMetadataArgs(DatasetMetadataArgs $) {
+        this.sourceArn = $.sourceArn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DatasetMetadataArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> sourceArn;
+        private DatasetMetadataArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DatasetMetadataArgs();
         }
 
         public Builder(DatasetMetadataArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.sourceArn = defaults.sourceArn;
+            $ = new DatasetMetadataArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder sourceArn(@Nullable Output<String> sourceArn) {
-            this.sourceArn = sourceArn;
+            $.sourceArn = sourceArn;
             return this;
         }
-        public Builder sourceArn(@Nullable String sourceArn) {
-            this.sourceArn = Codegen.ofNullable(sourceArn);
-            return this;
-        }        public DatasetMetadataArgs build() {
-            return new DatasetMetadataArgs(sourceArn);
+
+        public Builder sourceArn(String sourceArn) {
+            return sourceArn(Output.of(sourceArn));
+        }
+
+        public DatasetMetadataArgs build() {
+            return $;
         }
     }
+
 }

@@ -23,7 +23,7 @@ public final class GoogleCloudDialogflowCxV3beta1IntentTrainingPhraseResponse ex
      * 
      */
     @Import(name="parts", required=true)
-      private final List<GoogleCloudDialogflowCxV3beta1IntentTrainingPhrasePartResponse> parts;
+    private List<GoogleCloudDialogflowCxV3beta1IntentTrainingPhrasePartResponse> parts;
 
     public List<GoogleCloudDialogflowCxV3beta1IntentTrainingPhrasePartResponse> parts() {
         return this.parts;
@@ -34,58 +34,56 @@ public final class GoogleCloudDialogflowCxV3beta1IntentTrainingPhraseResponse ex
      * 
      */
     @Import(name="repeatCount", required=true)
-      private final Integer repeatCount;
+    private Integer repeatCount;
 
     public Integer repeatCount() {
         return this.repeatCount;
     }
 
-    public GoogleCloudDialogflowCxV3beta1IntentTrainingPhraseResponse(
-        List<GoogleCloudDialogflowCxV3beta1IntentTrainingPhrasePartResponse> parts,
-        Integer repeatCount) {
-        this.parts = Objects.requireNonNull(parts, "expected parameter 'parts' to be non-null");
-        this.repeatCount = Objects.requireNonNull(repeatCount, "expected parameter 'repeatCount' to be non-null");
-    }
+    private GoogleCloudDialogflowCxV3beta1IntentTrainingPhraseResponse() {}
 
-    private GoogleCloudDialogflowCxV3beta1IntentTrainingPhraseResponse() {
-        this.parts = List.of();
-        this.repeatCount = null;
+    private GoogleCloudDialogflowCxV3beta1IntentTrainingPhraseResponse(GoogleCloudDialogflowCxV3beta1IntentTrainingPhraseResponse $) {
+        this.parts = $.parts;
+        this.repeatCount = $.repeatCount;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudDialogflowCxV3beta1IntentTrainingPhraseResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<GoogleCloudDialogflowCxV3beta1IntentTrainingPhrasePartResponse> parts;
-        private Integer repeatCount;
+        private GoogleCloudDialogflowCxV3beta1IntentTrainingPhraseResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudDialogflowCxV3beta1IntentTrainingPhraseResponse();
         }
 
         public Builder(GoogleCloudDialogflowCxV3beta1IntentTrainingPhraseResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.parts = defaults.parts;
-    	      this.repeatCount = defaults.repeatCount;
+            $ = new GoogleCloudDialogflowCxV3beta1IntentTrainingPhraseResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder parts(List<GoogleCloudDialogflowCxV3beta1IntentTrainingPhrasePartResponse> parts) {
-            this.parts = Objects.requireNonNull(parts);
+            $.parts = parts;
             return this;
         }
+
         public Builder parts(GoogleCloudDialogflowCxV3beta1IntentTrainingPhrasePartResponse... parts) {
             return parts(List.of(parts));
         }
+
         public Builder repeatCount(Integer repeatCount) {
-            this.repeatCount = Objects.requireNonNull(repeatCount);
+            $.repeatCount = repeatCount;
             return this;
-        }        public GoogleCloudDialogflowCxV3beta1IntentTrainingPhraseResponse build() {
-            return new GoogleCloudDialogflowCxV3beta1IntentTrainingPhraseResponse(parts, repeatCount);
+        }
+
+        public GoogleCloudDialogflowCxV3beta1IntentTrainingPhraseResponse build() {
+            $.parts = Objects.requireNonNull($.parts, "expected parameter 'parts' to be non-null");
+            $.repeatCount = Objects.requireNonNull($.repeatCount, "expected parameter 'repeatCount' to be non-null");
+            return $;
         }
     }
+
 }

@@ -7,9 +7,9 @@ import com.pulumi.azurenative.healthcareapis.enums.ManagedServiceIdentityType;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,49 +26,48 @@ public final class ServiceManagedIdentityIdentityArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="type")
-      private final @Nullable Output<Either<String,ManagedServiceIdentityType>> type;
+    private @Nullable Output<Either<String,ManagedServiceIdentityType>> type;
 
-    public Output<Either<String,ManagedServiceIdentityType>> type() {
-        return this.type == null ? Codegen.empty() : this.type;
+    public Optional<Output<Either<String,ManagedServiceIdentityType>>> type() {
+        return Optional.ofNullable(this.type);
     }
 
-    public ServiceManagedIdentityIdentityArgs(@Nullable Output<Either<String,ManagedServiceIdentityType>> type) {
-        this.type = type;
-    }
+    private ServiceManagedIdentityIdentityArgs() {}
 
-    private ServiceManagedIdentityIdentityArgs() {
-        this.type = Codegen.empty();
+    private ServiceManagedIdentityIdentityArgs(ServiceManagedIdentityIdentityArgs $) {
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ServiceManagedIdentityIdentityArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Either<String,ManagedServiceIdentityType>> type;
+        private ServiceManagedIdentityIdentityArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ServiceManagedIdentityIdentityArgs();
         }
 
         public Builder(ServiceManagedIdentityIdentityArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.type = defaults.type;
+            $ = new ServiceManagedIdentityIdentityArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder type(@Nullable Output<Either<String,ManagedServiceIdentityType>> type) {
-            this.type = type;
+            $.type = type;
             return this;
         }
-        public Builder type(@Nullable Either<String,ManagedServiceIdentityType> type) {
-            this.type = Codegen.ofNullable(type);
-            return this;
-        }        public ServiceManagedIdentityIdentityArgs build() {
-            return new ServiceManagedIdentityIdentityArgs(type);
+
+        public Builder type(Either<String,ManagedServiceIdentityType> type) {
+            return type(Output.of(type));
+        }
+
+        public ServiceManagedIdentityIdentityArgs build() {
+            return $;
         }
     }
+
 }

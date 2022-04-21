@@ -6,10 +6,10 @@ package com.pulumi.aws.cognito;
 import com.pulumi.aws.cognito.inputs.ResourceServerScopeArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,7 +22,7 @@ public final class ResourceServerArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="identifier", required=true)
-      private final Output<String> identifier;
+    private Output<String> identifier;
 
     public Output<String> identifier() {
         return this.identifier;
@@ -33,10 +33,10 @@ public final class ResourceServerArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -44,99 +44,91 @@ public final class ResourceServerArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="scopes")
-      private final @Nullable Output<List<ResourceServerScopeArgs>> scopes;
+    private @Nullable Output<List<ResourceServerScopeArgs>> scopes;
 
-    public Output<List<ResourceServerScopeArgs>> scopes() {
-        return this.scopes == null ? Codegen.empty() : this.scopes;
+    public Optional<Output<List<ResourceServerScopeArgs>>> scopes() {
+        return Optional.ofNullable(this.scopes);
     }
 
     @Import(name="userPoolId", required=true)
-      private final Output<String> userPoolId;
+    private Output<String> userPoolId;
 
     public Output<String> userPoolId() {
         return this.userPoolId;
     }
 
-    public ResourceServerArgs(
-        Output<String> identifier,
-        @Nullable Output<String> name,
-        @Nullable Output<List<ResourceServerScopeArgs>> scopes,
-        Output<String> userPoolId) {
-        this.identifier = Objects.requireNonNull(identifier, "expected parameter 'identifier' to be non-null");
-        this.name = name;
-        this.scopes = scopes;
-        this.userPoolId = Objects.requireNonNull(userPoolId, "expected parameter 'userPoolId' to be non-null");
-    }
+    private ResourceServerArgs() {}
 
-    private ResourceServerArgs() {
-        this.identifier = Codegen.empty();
-        this.name = Codegen.empty();
-        this.scopes = Codegen.empty();
-        this.userPoolId = Codegen.empty();
+    private ResourceServerArgs(ResourceServerArgs $) {
+        this.identifier = $.identifier;
+        this.name = $.name;
+        this.scopes = $.scopes;
+        this.userPoolId = $.userPoolId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ResourceServerArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> identifier;
-        private @Nullable Output<String> name;
-        private @Nullable Output<List<ResourceServerScopeArgs>> scopes;
-        private Output<String> userPoolId;
+        private ResourceServerArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ResourceServerArgs();
         }
 
         public Builder(ResourceServerArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.identifier = defaults.identifier;
-    	      this.name = defaults.name;
-    	      this.scopes = defaults.scopes;
-    	      this.userPoolId = defaults.userPoolId;
+            $ = new ResourceServerArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder identifier(Output<String> identifier) {
-            this.identifier = Objects.requireNonNull(identifier);
+            $.identifier = identifier;
             return this;
         }
+
         public Builder identifier(String identifier) {
-            this.identifier = Output.of(Objects.requireNonNull(identifier));
-            return this;
+            return identifier(Output.of(identifier));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder scopes(@Nullable Output<List<ResourceServerScopeArgs>> scopes) {
-            this.scopes = scopes;
+            $.scopes = scopes;
             return this;
         }
-        public Builder scopes(@Nullable List<ResourceServerScopeArgs> scopes) {
-            this.scopes = Codegen.ofNullable(scopes);
-            return this;
+
+        public Builder scopes(List<ResourceServerScopeArgs> scopes) {
+            return scopes(Output.of(scopes));
         }
+
         public Builder scopes(ResourceServerScopeArgs... scopes) {
             return scopes(List.of(scopes));
         }
+
         public Builder userPoolId(Output<String> userPoolId) {
-            this.userPoolId = Objects.requireNonNull(userPoolId);
+            $.userPoolId = userPoolId;
             return this;
         }
+
         public Builder userPoolId(String userPoolId) {
-            this.userPoolId = Output.of(Objects.requireNonNull(userPoolId));
-            return this;
-        }        public ResourceServerArgs build() {
-            return new ResourceServerArgs(identifier, name, scopes, userPoolId);
+            return userPoolId(Output.of(userPoolId));
+        }
+
+        public ResourceServerArgs build() {
+            $.identifier = Objects.requireNonNull($.identifier, "expected parameter 'identifier' to be non-null");
+            $.userPoolId = Objects.requireNonNull($.userPoolId, "expected parameter 'userPoolId' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,10 +5,10 @@ package com.pulumi.gcp.dataproc.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,7 +22,7 @@ public final class ClusterClusterConfigInitializationActionGetArgs extends com.p
      * 
      */
     @Import(name="script", required=true)
-      private final Output<String> script;
+    private Output<String> script;
 
     public Output<String> script() {
         return this.script;
@@ -35,63 +35,59 @@ public final class ClusterClusterConfigInitializationActionGetArgs extends com.p
      * 
      */
     @Import(name="timeoutSec")
-      private final @Nullable Output<Integer> timeoutSec;
+    private @Nullable Output<Integer> timeoutSec;
 
-    public Output<Integer> timeoutSec() {
-        return this.timeoutSec == null ? Codegen.empty() : this.timeoutSec;
+    public Optional<Output<Integer>> timeoutSec() {
+        return Optional.ofNullable(this.timeoutSec);
     }
 
-    public ClusterClusterConfigInitializationActionGetArgs(
-        Output<String> script,
-        @Nullable Output<Integer> timeoutSec) {
-        this.script = Objects.requireNonNull(script, "expected parameter 'script' to be non-null");
-        this.timeoutSec = timeoutSec;
-    }
+    private ClusterClusterConfigInitializationActionGetArgs() {}
 
-    private ClusterClusterConfigInitializationActionGetArgs() {
-        this.script = Codegen.empty();
-        this.timeoutSec = Codegen.empty();
+    private ClusterClusterConfigInitializationActionGetArgs(ClusterClusterConfigInitializationActionGetArgs $) {
+        this.script = $.script;
+        this.timeoutSec = $.timeoutSec;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ClusterClusterConfigInitializationActionGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> script;
-        private @Nullable Output<Integer> timeoutSec;
+        private ClusterClusterConfigInitializationActionGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ClusterClusterConfigInitializationActionGetArgs();
         }
 
         public Builder(ClusterClusterConfigInitializationActionGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.script = defaults.script;
-    	      this.timeoutSec = defaults.timeoutSec;
+            $ = new ClusterClusterConfigInitializationActionGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder script(Output<String> script) {
-            this.script = Objects.requireNonNull(script);
+            $.script = script;
             return this;
         }
+
         public Builder script(String script) {
-            this.script = Output.of(Objects.requireNonNull(script));
-            return this;
+            return script(Output.of(script));
         }
+
         public Builder timeoutSec(@Nullable Output<Integer> timeoutSec) {
-            this.timeoutSec = timeoutSec;
+            $.timeoutSec = timeoutSec;
             return this;
         }
-        public Builder timeoutSec(@Nullable Integer timeoutSec) {
-            this.timeoutSec = Codegen.ofNullable(timeoutSec);
-            return this;
-        }        public ClusterClusterConfigInitializationActionGetArgs build() {
-            return new ClusterClusterConfigInitializationActionGetArgs(script, timeoutSec);
+
+        public Builder timeoutSec(Integer timeoutSec) {
+            return timeoutSec(Output.of(timeoutSec));
+        }
+
+        public ClusterClusterConfigInitializationActionGetArgs build() {
+            $.script = Objects.requireNonNull($.script, "expected parameter 'script' to be non-null");
+            return $;
         }
     }
+
 }

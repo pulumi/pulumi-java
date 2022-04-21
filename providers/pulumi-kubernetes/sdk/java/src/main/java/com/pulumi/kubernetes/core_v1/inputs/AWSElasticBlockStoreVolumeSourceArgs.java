@@ -5,11 +5,11 @@ package com.pulumi.kubernetes.core_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -28,10 +28,10 @@ public final class AWSElasticBlockStoreVolumeSourceArgs extends com.pulumi.resou
      * 
      */
     @Import(name="fsType")
-      private final @Nullable Output<String> fsType;
+    private @Nullable Output<String> fsType;
 
-    public Output<String> fsType() {
-        return this.fsType == null ? Codegen.empty() : this.fsType;
+    public Optional<Output<String>> fsType() {
+        return Optional.ofNullable(this.fsType);
     }
 
     /**
@@ -39,10 +39,10 @@ public final class AWSElasticBlockStoreVolumeSourceArgs extends com.pulumi.resou
      * 
      */
     @Import(name="partition")
-      private final @Nullable Output<Integer> partition;
+    private @Nullable Output<Integer> partition;
 
-    public Output<Integer> partition() {
-        return this.partition == null ? Codegen.empty() : this.partition;
+    public Optional<Output<Integer>> partition() {
+        return Optional.ofNullable(this.partition);
     }
 
     /**
@@ -50,10 +50,10 @@ public final class AWSElasticBlockStoreVolumeSourceArgs extends com.pulumi.resou
      * 
      */
     @Import(name="readOnly")
-      private final @Nullable Output<Boolean> readOnly;
+    private @Nullable Output<Boolean> readOnly;
 
-    public Output<Boolean> readOnly() {
-        return this.readOnly == null ? Codegen.empty() : this.readOnly;
+    public Optional<Output<Boolean>> readOnly() {
+        return Optional.ofNullable(this.readOnly);
     }
 
     /**
@@ -61,89 +61,79 @@ public final class AWSElasticBlockStoreVolumeSourceArgs extends com.pulumi.resou
      * 
      */
     @Import(name="volumeID", required=true)
-      private final Output<String> volumeID;
+    private Output<String> volumeID;
 
     public Output<String> volumeID() {
         return this.volumeID;
     }
 
-    public AWSElasticBlockStoreVolumeSourceArgs(
-        @Nullable Output<String> fsType,
-        @Nullable Output<Integer> partition,
-        @Nullable Output<Boolean> readOnly,
-        Output<String> volumeID) {
-        this.fsType = fsType;
-        this.partition = partition;
-        this.readOnly = readOnly;
-        this.volumeID = Objects.requireNonNull(volumeID, "expected parameter 'volumeID' to be non-null");
-    }
+    private AWSElasticBlockStoreVolumeSourceArgs() {}
 
-    private AWSElasticBlockStoreVolumeSourceArgs() {
-        this.fsType = Codegen.empty();
-        this.partition = Codegen.empty();
-        this.readOnly = Codegen.empty();
-        this.volumeID = Codegen.empty();
+    private AWSElasticBlockStoreVolumeSourceArgs(AWSElasticBlockStoreVolumeSourceArgs $) {
+        this.fsType = $.fsType;
+        this.partition = $.partition;
+        this.readOnly = $.readOnly;
+        this.volumeID = $.volumeID;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AWSElasticBlockStoreVolumeSourceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> fsType;
-        private @Nullable Output<Integer> partition;
-        private @Nullable Output<Boolean> readOnly;
-        private Output<String> volumeID;
+        private AWSElasticBlockStoreVolumeSourceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AWSElasticBlockStoreVolumeSourceArgs();
         }
 
         public Builder(AWSElasticBlockStoreVolumeSourceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.fsType = defaults.fsType;
-    	      this.partition = defaults.partition;
-    	      this.readOnly = defaults.readOnly;
-    	      this.volumeID = defaults.volumeID;
+            $ = new AWSElasticBlockStoreVolumeSourceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder fsType(@Nullable Output<String> fsType) {
-            this.fsType = fsType;
+            $.fsType = fsType;
             return this;
         }
-        public Builder fsType(@Nullable String fsType) {
-            this.fsType = Codegen.ofNullable(fsType);
-            return this;
+
+        public Builder fsType(String fsType) {
+            return fsType(Output.of(fsType));
         }
+
         public Builder partition(@Nullable Output<Integer> partition) {
-            this.partition = partition;
+            $.partition = partition;
             return this;
         }
-        public Builder partition(@Nullable Integer partition) {
-            this.partition = Codegen.ofNullable(partition);
-            return this;
+
+        public Builder partition(Integer partition) {
+            return partition(Output.of(partition));
         }
+
         public Builder readOnly(@Nullable Output<Boolean> readOnly) {
-            this.readOnly = readOnly;
+            $.readOnly = readOnly;
             return this;
         }
-        public Builder readOnly(@Nullable Boolean readOnly) {
-            this.readOnly = Codegen.ofNullable(readOnly);
-            return this;
+
+        public Builder readOnly(Boolean readOnly) {
+            return readOnly(Output.of(readOnly));
         }
+
         public Builder volumeID(Output<String> volumeID) {
-            this.volumeID = Objects.requireNonNull(volumeID);
+            $.volumeID = volumeID;
             return this;
         }
+
         public Builder volumeID(String volumeID) {
-            this.volumeID = Output.of(Objects.requireNonNull(volumeID));
-            return this;
-        }        public AWSElasticBlockStoreVolumeSourceArgs build() {
-            return new AWSElasticBlockStoreVolumeSourceArgs(fsType, partition, readOnly, volumeID);
+            return volumeID(Output.of(volumeID));
+        }
+
+        public AWSElasticBlockStoreVolumeSourceArgs build() {
+            $.volumeID = Objects.requireNonNull($.volumeID, "expected parameter 'volumeID' to be non-null");
+            return $;
         }
     }
+
 }

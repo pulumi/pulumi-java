@@ -5,11 +5,11 @@ package com.pulumi.googlenative.firebasedatabase_v1beta;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.firebasedatabase_v1beta.enums.InstanceState;
 import com.pulumi.googlenative.firebasedatabase_v1beta.enums.InstanceType;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -18,10 +18,10 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
     public static final InstanceArgs Empty = new InstanceArgs();
 
     @Import(name="databaseId")
-      private final @Nullable Output<String> databaseId;
+    private @Nullable Output<String> databaseId;
 
-    public Output<String> databaseId() {
-        return this.databaseId == null ? Codegen.empty() : this.databaseId;
+    public Optional<Output<String>> databaseId() {
+        return Optional.ofNullable(this.databaseId);
     }
 
     /**
@@ -29,17 +29,17 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="databaseUrl")
-      private final @Nullable Output<String> databaseUrl;
+    private @Nullable Output<String> databaseUrl;
 
-    public Output<String> databaseUrl() {
-        return this.databaseUrl == null ? Codegen.empty() : this.databaseUrl;
+    public Optional<Output<String>> databaseUrl() {
+        return Optional.ofNullable(this.databaseUrl);
     }
 
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -58,10 +58,10 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -69,10 +69,10 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="state")
-      private final @Nullable Output<InstanceState> state;
+    private @Nullable Output<InstanceState> state;
 
-    public Output<InstanceState> state() {
-        return this.state == null ? Codegen.empty() : this.state;
+    public Optional<Output<InstanceState>> state() {
+        return Optional.ofNullable(this.state);
     }
 
     /**
@@ -80,148 +80,125 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="type")
-      private final @Nullable Output<InstanceType> type;
+    private @Nullable Output<InstanceType> type;
 
-    public Output<InstanceType> type() {
-        return this.type == null ? Codegen.empty() : this.type;
+    public Optional<Output<InstanceType>> type() {
+        return Optional.ofNullable(this.type);
     }
 
     @Import(name="validateOnly")
-      private final @Nullable Output<String> validateOnly;
+    private @Nullable Output<String> validateOnly;
 
-    public Output<String> validateOnly() {
-        return this.validateOnly == null ? Codegen.empty() : this.validateOnly;
+    public Optional<Output<String>> validateOnly() {
+        return Optional.ofNullable(this.validateOnly);
     }
 
-    public InstanceArgs(
-        @Nullable Output<String> databaseId,
-        @Nullable Output<String> databaseUrl,
-        @Nullable Output<String> location,
-        @Nullable Output<String> name,
-        @Nullable Output<String> project,
-        @Nullable Output<InstanceState> state,
-        @Nullable Output<InstanceType> type,
-        @Nullable Output<String> validateOnly) {
-        this.databaseId = databaseId;
-        this.databaseUrl = databaseUrl;
-        this.location = location;
-        this.name = name;
-        this.project = project;
-        this.state = state;
-        this.type = type;
-        this.validateOnly = validateOnly;
-    }
+    private InstanceArgs() {}
 
-    private InstanceArgs() {
-        this.databaseId = Codegen.empty();
-        this.databaseUrl = Codegen.empty();
-        this.location = Codegen.empty();
-        this.name = Codegen.empty();
-        this.project = Codegen.empty();
-        this.state = Codegen.empty();
-        this.type = Codegen.empty();
-        this.validateOnly = Codegen.empty();
+    private InstanceArgs(InstanceArgs $) {
+        this.databaseId = $.databaseId;
+        this.databaseUrl = $.databaseUrl;
+        this.location = $.location;
+        this.name = $.name;
+        this.project = $.project;
+        this.state = $.state;
+        this.type = $.type;
+        this.validateOnly = $.validateOnly;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(InstanceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> databaseId;
-        private @Nullable Output<String> databaseUrl;
-        private @Nullable Output<String> location;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> project;
-        private @Nullable Output<InstanceState> state;
-        private @Nullable Output<InstanceType> type;
-        private @Nullable Output<String> validateOnly;
+        private InstanceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new InstanceArgs();
         }
 
         public Builder(InstanceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.databaseId = defaults.databaseId;
-    	      this.databaseUrl = defaults.databaseUrl;
-    	      this.location = defaults.location;
-    	      this.name = defaults.name;
-    	      this.project = defaults.project;
-    	      this.state = defaults.state;
-    	      this.type = defaults.type;
-    	      this.validateOnly = defaults.validateOnly;
+            $ = new InstanceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder databaseId(@Nullable Output<String> databaseId) {
-            this.databaseId = databaseId;
+            $.databaseId = databaseId;
             return this;
         }
-        public Builder databaseId(@Nullable String databaseId) {
-            this.databaseId = Codegen.ofNullable(databaseId);
-            return this;
+
+        public Builder databaseId(String databaseId) {
+            return databaseId(Output.of(databaseId));
         }
+
         public Builder databaseUrl(@Nullable Output<String> databaseUrl) {
-            this.databaseUrl = databaseUrl;
+            $.databaseUrl = databaseUrl;
             return this;
         }
-        public Builder databaseUrl(@Nullable String databaseUrl) {
-            this.databaseUrl = Codegen.ofNullable(databaseUrl);
-            return this;
+
+        public Builder databaseUrl(String databaseUrl) {
+            return databaseUrl(Output.of(databaseUrl));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder state(@Nullable Output<InstanceState> state) {
-            this.state = state;
+            $.state = state;
             return this;
         }
-        public Builder state(@Nullable InstanceState state) {
-            this.state = Codegen.ofNullable(state);
-            return this;
+
+        public Builder state(InstanceState state) {
+            return state(Output.of(state));
         }
+
         public Builder type(@Nullable Output<InstanceType> type) {
-            this.type = type;
+            $.type = type;
             return this;
         }
-        public Builder type(@Nullable InstanceType type) {
-            this.type = Codegen.ofNullable(type);
-            return this;
+
+        public Builder type(InstanceType type) {
+            return type(Output.of(type));
         }
+
         public Builder validateOnly(@Nullable Output<String> validateOnly) {
-            this.validateOnly = validateOnly;
+            $.validateOnly = validateOnly;
             return this;
         }
-        public Builder validateOnly(@Nullable String validateOnly) {
-            this.validateOnly = Codegen.ofNullable(validateOnly);
-            return this;
-        }        public InstanceArgs build() {
-            return new InstanceArgs(databaseId, databaseUrl, location, name, project, state, type, validateOnly);
+
+        public Builder validateOnly(String validateOnly) {
+            return validateOnly(Output.of(validateOnly));
+        }
+
+        public InstanceArgs build() {
+            return $;
         }
     }
+
 }

@@ -5,10 +5,10 @@ package com.pulumi.awsnative.iotanalytics.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -17,110 +17,102 @@ public final class PipelineLambdaArgs extends com.pulumi.resources.ResourceArgs 
     public static final PipelineLambdaArgs Empty = new PipelineLambdaArgs();
 
     @Import(name="batchSize", required=true)
-      private final Output<Integer> batchSize;
+    private Output<Integer> batchSize;
 
     public Output<Integer> batchSize() {
         return this.batchSize;
     }
 
     @Import(name="lambdaName", required=true)
-      private final Output<String> lambdaName;
+    private Output<String> lambdaName;
 
     public Output<String> lambdaName() {
         return this.lambdaName;
     }
 
     @Import(name="name", required=true)
-      private final Output<String> name;
+    private Output<String> name;
 
     public Output<String> name() {
         return this.name;
     }
 
     @Import(name="next")
-      private final @Nullable Output<String> next;
+    private @Nullable Output<String> next;
 
-    public Output<String> next() {
-        return this.next == null ? Codegen.empty() : this.next;
+    public Optional<Output<String>> next() {
+        return Optional.ofNullable(this.next);
     }
 
-    public PipelineLambdaArgs(
-        Output<Integer> batchSize,
-        Output<String> lambdaName,
-        Output<String> name,
-        @Nullable Output<String> next) {
-        this.batchSize = Objects.requireNonNull(batchSize, "expected parameter 'batchSize' to be non-null");
-        this.lambdaName = Objects.requireNonNull(lambdaName, "expected parameter 'lambdaName' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.next = next;
-    }
+    private PipelineLambdaArgs() {}
 
-    private PipelineLambdaArgs() {
-        this.batchSize = Codegen.empty();
-        this.lambdaName = Codegen.empty();
-        this.name = Codegen.empty();
-        this.next = Codegen.empty();
+    private PipelineLambdaArgs(PipelineLambdaArgs $) {
+        this.batchSize = $.batchSize;
+        this.lambdaName = $.lambdaName;
+        this.name = $.name;
+        this.next = $.next;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PipelineLambdaArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Integer> batchSize;
-        private Output<String> lambdaName;
-        private Output<String> name;
-        private @Nullable Output<String> next;
+        private PipelineLambdaArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PipelineLambdaArgs();
         }
 
         public Builder(PipelineLambdaArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.batchSize = defaults.batchSize;
-    	      this.lambdaName = defaults.lambdaName;
-    	      this.name = defaults.name;
-    	      this.next = defaults.next;
+            $ = new PipelineLambdaArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder batchSize(Output<Integer> batchSize) {
-            this.batchSize = Objects.requireNonNull(batchSize);
+            $.batchSize = batchSize;
             return this;
         }
+
         public Builder batchSize(Integer batchSize) {
-            this.batchSize = Output.of(Objects.requireNonNull(batchSize));
-            return this;
+            return batchSize(Output.of(batchSize));
         }
+
         public Builder lambdaName(Output<String> lambdaName) {
-            this.lambdaName = Objects.requireNonNull(lambdaName);
+            $.lambdaName = lambdaName;
             return this;
         }
+
         public Builder lambdaName(String lambdaName) {
-            this.lambdaName = Output.of(Objects.requireNonNull(lambdaName));
-            return this;
+            return lambdaName(Output.of(lambdaName));
         }
+
         public Builder name(Output<String> name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Output.of(Objects.requireNonNull(name));
-            return this;
+            return name(Output.of(name));
         }
+
         public Builder next(@Nullable Output<String> next) {
-            this.next = next;
+            $.next = next;
             return this;
         }
-        public Builder next(@Nullable String next) {
-            this.next = Codegen.ofNullable(next);
-            return this;
-        }        public PipelineLambdaArgs build() {
-            return new PipelineLambdaArgs(batchSize, lambdaName, name, next);
+
+        public Builder next(String next) {
+            return next(Output.of(next));
+        }
+
+        public PipelineLambdaArgs build() {
+            $.batchSize = Objects.requireNonNull($.batchSize, "expected parameter 'batchSize' to be non-null");
+            $.lambdaName = Objects.requireNonNull($.lambdaName, "expected parameter 'lambdaName' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            return $;
         }
     }
+
 }

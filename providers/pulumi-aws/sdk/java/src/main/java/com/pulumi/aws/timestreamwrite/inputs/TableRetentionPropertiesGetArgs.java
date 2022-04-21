@@ -5,7 +5,6 @@ package com.pulumi.aws.timestreamwrite.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -19,7 +18,7 @@ public final class TableRetentionPropertiesGetArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="magneticStoreRetentionPeriodInDays", required=true)
-      private final Output<Integer> magneticStoreRetentionPeriodInDays;
+    private Output<Integer> magneticStoreRetentionPeriodInDays;
 
     public Output<Integer> magneticStoreRetentionPeriodInDays() {
         return this.magneticStoreRetentionPeriodInDays;
@@ -30,63 +29,60 @@ public final class TableRetentionPropertiesGetArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="memoryStoreRetentionPeriodInHours", required=true)
-      private final Output<Integer> memoryStoreRetentionPeriodInHours;
+    private Output<Integer> memoryStoreRetentionPeriodInHours;
 
     public Output<Integer> memoryStoreRetentionPeriodInHours() {
         return this.memoryStoreRetentionPeriodInHours;
     }
 
-    public TableRetentionPropertiesGetArgs(
-        Output<Integer> magneticStoreRetentionPeriodInDays,
-        Output<Integer> memoryStoreRetentionPeriodInHours) {
-        this.magneticStoreRetentionPeriodInDays = Objects.requireNonNull(magneticStoreRetentionPeriodInDays, "expected parameter 'magneticStoreRetentionPeriodInDays' to be non-null");
-        this.memoryStoreRetentionPeriodInHours = Objects.requireNonNull(memoryStoreRetentionPeriodInHours, "expected parameter 'memoryStoreRetentionPeriodInHours' to be non-null");
-    }
+    private TableRetentionPropertiesGetArgs() {}
 
-    private TableRetentionPropertiesGetArgs() {
-        this.magneticStoreRetentionPeriodInDays = Codegen.empty();
-        this.memoryStoreRetentionPeriodInHours = Codegen.empty();
+    private TableRetentionPropertiesGetArgs(TableRetentionPropertiesGetArgs $) {
+        this.magneticStoreRetentionPeriodInDays = $.magneticStoreRetentionPeriodInDays;
+        this.memoryStoreRetentionPeriodInHours = $.memoryStoreRetentionPeriodInHours;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TableRetentionPropertiesGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Integer> magneticStoreRetentionPeriodInDays;
-        private Output<Integer> memoryStoreRetentionPeriodInHours;
+        private TableRetentionPropertiesGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TableRetentionPropertiesGetArgs();
         }
 
         public Builder(TableRetentionPropertiesGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.magneticStoreRetentionPeriodInDays = defaults.magneticStoreRetentionPeriodInDays;
-    	      this.memoryStoreRetentionPeriodInHours = defaults.memoryStoreRetentionPeriodInHours;
+            $ = new TableRetentionPropertiesGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder magneticStoreRetentionPeriodInDays(Output<Integer> magneticStoreRetentionPeriodInDays) {
-            this.magneticStoreRetentionPeriodInDays = Objects.requireNonNull(magneticStoreRetentionPeriodInDays);
+            $.magneticStoreRetentionPeriodInDays = magneticStoreRetentionPeriodInDays;
             return this;
         }
+
         public Builder magneticStoreRetentionPeriodInDays(Integer magneticStoreRetentionPeriodInDays) {
-            this.magneticStoreRetentionPeriodInDays = Output.of(Objects.requireNonNull(magneticStoreRetentionPeriodInDays));
-            return this;
+            return magneticStoreRetentionPeriodInDays(Output.of(magneticStoreRetentionPeriodInDays));
         }
+
         public Builder memoryStoreRetentionPeriodInHours(Output<Integer> memoryStoreRetentionPeriodInHours) {
-            this.memoryStoreRetentionPeriodInHours = Objects.requireNonNull(memoryStoreRetentionPeriodInHours);
+            $.memoryStoreRetentionPeriodInHours = memoryStoreRetentionPeriodInHours;
             return this;
         }
+
         public Builder memoryStoreRetentionPeriodInHours(Integer memoryStoreRetentionPeriodInHours) {
-            this.memoryStoreRetentionPeriodInHours = Output.of(Objects.requireNonNull(memoryStoreRetentionPeriodInHours));
-            return this;
-        }        public TableRetentionPropertiesGetArgs build() {
-            return new TableRetentionPropertiesGetArgs(magneticStoreRetentionPeriodInDays, memoryStoreRetentionPeriodInHours);
+            return memoryStoreRetentionPeriodInHours(Output.of(memoryStoreRetentionPeriodInHours));
+        }
+
+        public TableRetentionPropertiesGetArgs build() {
+            $.magneticStoreRetentionPeriodInDays = Objects.requireNonNull($.magneticStoreRetentionPeriodInDays, "expected parameter 'magneticStoreRetentionPeriodInDays' to be non-null");
+            $.memoryStoreRetentionPeriodInHours = Objects.requireNonNull($.memoryStoreRetentionPeriodInHours, "expected parameter 'memoryStoreRetentionPeriodInHours' to be non-null");
+            return $;
         }
     }
+
 }

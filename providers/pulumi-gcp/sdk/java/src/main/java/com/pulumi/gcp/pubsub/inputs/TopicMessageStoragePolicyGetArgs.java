@@ -5,7 +5,6 @@ package com.pulumi.gcp.pubsub.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -25,52 +24,53 @@ public final class TopicMessageStoragePolicyGetArgs extends com.pulumi.resources
      * 
      */
     @Import(name="allowedPersistenceRegions", required=true)
-      private final Output<List<String>> allowedPersistenceRegions;
+    private Output<List<String>> allowedPersistenceRegions;
 
     public Output<List<String>> allowedPersistenceRegions() {
         return this.allowedPersistenceRegions;
     }
 
-    public TopicMessageStoragePolicyGetArgs(Output<List<String>> allowedPersistenceRegions) {
-        this.allowedPersistenceRegions = Objects.requireNonNull(allowedPersistenceRegions, "expected parameter 'allowedPersistenceRegions' to be non-null");
-    }
+    private TopicMessageStoragePolicyGetArgs() {}
 
-    private TopicMessageStoragePolicyGetArgs() {
-        this.allowedPersistenceRegions = Codegen.empty();
+    private TopicMessageStoragePolicyGetArgs(TopicMessageStoragePolicyGetArgs $) {
+        this.allowedPersistenceRegions = $.allowedPersistenceRegions;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TopicMessageStoragePolicyGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<List<String>> allowedPersistenceRegions;
+        private TopicMessageStoragePolicyGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TopicMessageStoragePolicyGetArgs();
         }
 
         public Builder(TopicMessageStoragePolicyGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.allowedPersistenceRegions = defaults.allowedPersistenceRegions;
+            $ = new TopicMessageStoragePolicyGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder allowedPersistenceRegions(Output<List<String>> allowedPersistenceRegions) {
-            this.allowedPersistenceRegions = Objects.requireNonNull(allowedPersistenceRegions);
+            $.allowedPersistenceRegions = allowedPersistenceRegions;
             return this;
         }
+
         public Builder allowedPersistenceRegions(List<String> allowedPersistenceRegions) {
-            this.allowedPersistenceRegions = Output.of(Objects.requireNonNull(allowedPersistenceRegions));
-            return this;
+            return allowedPersistenceRegions(Output.of(allowedPersistenceRegions));
         }
+
         public Builder allowedPersistenceRegions(String... allowedPersistenceRegions) {
             return allowedPersistenceRegions(List.of(allowedPersistenceRegions));
-        }        public TopicMessageStoragePolicyGetArgs build() {
-            return new TopicMessageStoragePolicyGetArgs(allowedPersistenceRegions);
+        }
+
+        public TopicMessageStoragePolicyGetArgs build() {
+            $.allowedPersistenceRegions = Objects.requireNonNull($.allowedPersistenceRegions, "expected parameter 'allowedPersistenceRegions' to be non-null");
+            return $;
         }
     }
+
 }

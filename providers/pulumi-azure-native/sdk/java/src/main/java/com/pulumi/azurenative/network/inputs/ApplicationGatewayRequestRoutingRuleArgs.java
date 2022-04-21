@@ -8,10 +8,10 @@ import com.pulumi.azurenative.network.inputs.SubResourceArgs;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -28,10 +28,10 @@ public final class ApplicationGatewayRequestRoutingRuleArgs extends com.pulumi.r
      * 
      */
     @Import(name="backendAddressPool")
-      private final @Nullable Output<SubResourceArgs> backendAddressPool;
+    private @Nullable Output<SubResourceArgs> backendAddressPool;
 
-    public Output<SubResourceArgs> backendAddressPool() {
-        return this.backendAddressPool == null ? Codegen.empty() : this.backendAddressPool;
+    public Optional<Output<SubResourceArgs>> backendAddressPool() {
+        return Optional.ofNullable(this.backendAddressPool);
     }
 
     /**
@@ -39,10 +39,10 @@ public final class ApplicationGatewayRequestRoutingRuleArgs extends com.pulumi.r
      * 
      */
     @Import(name="backendHttpSettings")
-      private final @Nullable Output<SubResourceArgs> backendHttpSettings;
+    private @Nullable Output<SubResourceArgs> backendHttpSettings;
 
-    public Output<SubResourceArgs> backendHttpSettings() {
-        return this.backendHttpSettings == null ? Codegen.empty() : this.backendHttpSettings;
+    public Optional<Output<SubResourceArgs>> backendHttpSettings() {
+        return Optional.ofNullable(this.backendHttpSettings);
     }
 
     /**
@@ -50,10 +50,10 @@ public final class ApplicationGatewayRequestRoutingRuleArgs extends com.pulumi.r
      * 
      */
     @Import(name="httpListener")
-      private final @Nullable Output<SubResourceArgs> httpListener;
+    private @Nullable Output<SubResourceArgs> httpListener;
 
-    public Output<SubResourceArgs> httpListener() {
-        return this.httpListener == null ? Codegen.empty() : this.httpListener;
+    public Optional<Output<SubResourceArgs>> httpListener() {
+        return Optional.ofNullable(this.httpListener);
     }
 
     /**
@@ -61,10 +61,10 @@ public final class ApplicationGatewayRequestRoutingRuleArgs extends com.pulumi.r
      * 
      */
     @Import(name="id")
-      private final @Nullable Output<String> id;
+    private @Nullable Output<String> id;
 
-    public Output<String> id() {
-        return this.id == null ? Codegen.empty() : this.id;
+    public Optional<Output<String>> id() {
+        return Optional.ofNullable(this.id);
     }
 
     /**
@@ -72,10 +72,10 @@ public final class ApplicationGatewayRequestRoutingRuleArgs extends com.pulumi.r
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -83,10 +83,10 @@ public final class ApplicationGatewayRequestRoutingRuleArgs extends com.pulumi.r
      * 
      */
     @Import(name="priority")
-      private final @Nullable Output<Integer> priority;
+    private @Nullable Output<Integer> priority;
 
-    public Output<Integer> priority() {
-        return this.priority == null ? Codegen.empty() : this.priority;
+    public Optional<Output<Integer>> priority() {
+        return Optional.ofNullable(this.priority);
     }
 
     /**
@@ -94,10 +94,10 @@ public final class ApplicationGatewayRequestRoutingRuleArgs extends com.pulumi.r
      * 
      */
     @Import(name="redirectConfiguration")
-      private final @Nullable Output<SubResourceArgs> redirectConfiguration;
+    private @Nullable Output<SubResourceArgs> redirectConfiguration;
 
-    public Output<SubResourceArgs> redirectConfiguration() {
-        return this.redirectConfiguration == null ? Codegen.empty() : this.redirectConfiguration;
+    public Optional<Output<SubResourceArgs>> redirectConfiguration() {
+        return Optional.ofNullable(this.redirectConfiguration);
     }
 
     /**
@@ -105,10 +105,10 @@ public final class ApplicationGatewayRequestRoutingRuleArgs extends com.pulumi.r
      * 
      */
     @Import(name="rewriteRuleSet")
-      private final @Nullable Output<SubResourceArgs> rewriteRuleSet;
+    private @Nullable Output<SubResourceArgs> rewriteRuleSet;
 
-    public Output<SubResourceArgs> rewriteRuleSet() {
-        return this.rewriteRuleSet == null ? Codegen.empty() : this.rewriteRuleSet;
+    public Optional<Output<SubResourceArgs>> rewriteRuleSet() {
+        return Optional.ofNullable(this.rewriteRuleSet);
     }
 
     /**
@@ -116,10 +116,10 @@ public final class ApplicationGatewayRequestRoutingRuleArgs extends com.pulumi.r
      * 
      */
     @Import(name="ruleType")
-      private final @Nullable Output<Either<String,ApplicationGatewayRequestRoutingRuleType>> ruleType;
+    private @Nullable Output<Either<String,ApplicationGatewayRequestRoutingRuleType>> ruleType;
 
-    public Output<Either<String,ApplicationGatewayRequestRoutingRuleType>> ruleType() {
-        return this.ruleType == null ? Codegen.empty() : this.ruleType;
+    public Optional<Output<Either<String,ApplicationGatewayRequestRoutingRuleType>>> ruleType() {
+        return Optional.ofNullable(this.ruleType);
     }
 
     /**
@@ -127,167 +127,138 @@ public final class ApplicationGatewayRequestRoutingRuleArgs extends com.pulumi.r
      * 
      */
     @Import(name="urlPathMap")
-      private final @Nullable Output<SubResourceArgs> urlPathMap;
+    private @Nullable Output<SubResourceArgs> urlPathMap;
 
-    public Output<SubResourceArgs> urlPathMap() {
-        return this.urlPathMap == null ? Codegen.empty() : this.urlPathMap;
+    public Optional<Output<SubResourceArgs>> urlPathMap() {
+        return Optional.ofNullable(this.urlPathMap);
     }
 
-    public ApplicationGatewayRequestRoutingRuleArgs(
-        @Nullable Output<SubResourceArgs> backendAddressPool,
-        @Nullable Output<SubResourceArgs> backendHttpSettings,
-        @Nullable Output<SubResourceArgs> httpListener,
-        @Nullable Output<String> id,
-        @Nullable Output<String> name,
-        @Nullable Output<Integer> priority,
-        @Nullable Output<SubResourceArgs> redirectConfiguration,
-        @Nullable Output<SubResourceArgs> rewriteRuleSet,
-        @Nullable Output<Either<String,ApplicationGatewayRequestRoutingRuleType>> ruleType,
-        @Nullable Output<SubResourceArgs> urlPathMap) {
-        this.backendAddressPool = backendAddressPool;
-        this.backendHttpSettings = backendHttpSettings;
-        this.httpListener = httpListener;
-        this.id = id;
-        this.name = name;
-        this.priority = priority;
-        this.redirectConfiguration = redirectConfiguration;
-        this.rewriteRuleSet = rewriteRuleSet;
-        this.ruleType = ruleType;
-        this.urlPathMap = urlPathMap;
-    }
+    private ApplicationGatewayRequestRoutingRuleArgs() {}
 
-    private ApplicationGatewayRequestRoutingRuleArgs() {
-        this.backendAddressPool = Codegen.empty();
-        this.backendHttpSettings = Codegen.empty();
-        this.httpListener = Codegen.empty();
-        this.id = Codegen.empty();
-        this.name = Codegen.empty();
-        this.priority = Codegen.empty();
-        this.redirectConfiguration = Codegen.empty();
-        this.rewriteRuleSet = Codegen.empty();
-        this.ruleType = Codegen.empty();
-        this.urlPathMap = Codegen.empty();
+    private ApplicationGatewayRequestRoutingRuleArgs(ApplicationGatewayRequestRoutingRuleArgs $) {
+        this.backendAddressPool = $.backendAddressPool;
+        this.backendHttpSettings = $.backendHttpSettings;
+        this.httpListener = $.httpListener;
+        this.id = $.id;
+        this.name = $.name;
+        this.priority = $.priority;
+        this.redirectConfiguration = $.redirectConfiguration;
+        this.rewriteRuleSet = $.rewriteRuleSet;
+        this.ruleType = $.ruleType;
+        this.urlPathMap = $.urlPathMap;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ApplicationGatewayRequestRoutingRuleArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<SubResourceArgs> backendAddressPool;
-        private @Nullable Output<SubResourceArgs> backendHttpSettings;
-        private @Nullable Output<SubResourceArgs> httpListener;
-        private @Nullable Output<String> id;
-        private @Nullable Output<String> name;
-        private @Nullable Output<Integer> priority;
-        private @Nullable Output<SubResourceArgs> redirectConfiguration;
-        private @Nullable Output<SubResourceArgs> rewriteRuleSet;
-        private @Nullable Output<Either<String,ApplicationGatewayRequestRoutingRuleType>> ruleType;
-        private @Nullable Output<SubResourceArgs> urlPathMap;
+        private ApplicationGatewayRequestRoutingRuleArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ApplicationGatewayRequestRoutingRuleArgs();
         }
 
         public Builder(ApplicationGatewayRequestRoutingRuleArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.backendAddressPool = defaults.backendAddressPool;
-    	      this.backendHttpSettings = defaults.backendHttpSettings;
-    	      this.httpListener = defaults.httpListener;
-    	      this.id = defaults.id;
-    	      this.name = defaults.name;
-    	      this.priority = defaults.priority;
-    	      this.redirectConfiguration = defaults.redirectConfiguration;
-    	      this.rewriteRuleSet = defaults.rewriteRuleSet;
-    	      this.ruleType = defaults.ruleType;
-    	      this.urlPathMap = defaults.urlPathMap;
+            $ = new ApplicationGatewayRequestRoutingRuleArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder backendAddressPool(@Nullable Output<SubResourceArgs> backendAddressPool) {
-            this.backendAddressPool = backendAddressPool;
+            $.backendAddressPool = backendAddressPool;
             return this;
         }
-        public Builder backendAddressPool(@Nullable SubResourceArgs backendAddressPool) {
-            this.backendAddressPool = Codegen.ofNullable(backendAddressPool);
-            return this;
+
+        public Builder backendAddressPool(SubResourceArgs backendAddressPool) {
+            return backendAddressPool(Output.of(backendAddressPool));
         }
+
         public Builder backendHttpSettings(@Nullable Output<SubResourceArgs> backendHttpSettings) {
-            this.backendHttpSettings = backendHttpSettings;
+            $.backendHttpSettings = backendHttpSettings;
             return this;
         }
-        public Builder backendHttpSettings(@Nullable SubResourceArgs backendHttpSettings) {
-            this.backendHttpSettings = Codegen.ofNullable(backendHttpSettings);
-            return this;
+
+        public Builder backendHttpSettings(SubResourceArgs backendHttpSettings) {
+            return backendHttpSettings(Output.of(backendHttpSettings));
         }
+
         public Builder httpListener(@Nullable Output<SubResourceArgs> httpListener) {
-            this.httpListener = httpListener;
+            $.httpListener = httpListener;
             return this;
         }
-        public Builder httpListener(@Nullable SubResourceArgs httpListener) {
-            this.httpListener = Codegen.ofNullable(httpListener);
-            return this;
+
+        public Builder httpListener(SubResourceArgs httpListener) {
+            return httpListener(Output.of(httpListener));
         }
+
         public Builder id(@Nullable Output<String> id) {
-            this.id = id;
+            $.id = id;
             return this;
         }
-        public Builder id(@Nullable String id) {
-            this.id = Codegen.ofNullable(id);
-            return this;
+
+        public Builder id(String id) {
+            return id(Output.of(id));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder priority(@Nullable Output<Integer> priority) {
-            this.priority = priority;
+            $.priority = priority;
             return this;
         }
-        public Builder priority(@Nullable Integer priority) {
-            this.priority = Codegen.ofNullable(priority);
-            return this;
+
+        public Builder priority(Integer priority) {
+            return priority(Output.of(priority));
         }
+
         public Builder redirectConfiguration(@Nullable Output<SubResourceArgs> redirectConfiguration) {
-            this.redirectConfiguration = redirectConfiguration;
+            $.redirectConfiguration = redirectConfiguration;
             return this;
         }
-        public Builder redirectConfiguration(@Nullable SubResourceArgs redirectConfiguration) {
-            this.redirectConfiguration = Codegen.ofNullable(redirectConfiguration);
-            return this;
+
+        public Builder redirectConfiguration(SubResourceArgs redirectConfiguration) {
+            return redirectConfiguration(Output.of(redirectConfiguration));
         }
+
         public Builder rewriteRuleSet(@Nullable Output<SubResourceArgs> rewriteRuleSet) {
-            this.rewriteRuleSet = rewriteRuleSet;
+            $.rewriteRuleSet = rewriteRuleSet;
             return this;
         }
-        public Builder rewriteRuleSet(@Nullable SubResourceArgs rewriteRuleSet) {
-            this.rewriteRuleSet = Codegen.ofNullable(rewriteRuleSet);
-            return this;
+
+        public Builder rewriteRuleSet(SubResourceArgs rewriteRuleSet) {
+            return rewriteRuleSet(Output.of(rewriteRuleSet));
         }
+
         public Builder ruleType(@Nullable Output<Either<String,ApplicationGatewayRequestRoutingRuleType>> ruleType) {
-            this.ruleType = ruleType;
+            $.ruleType = ruleType;
             return this;
         }
-        public Builder ruleType(@Nullable Either<String,ApplicationGatewayRequestRoutingRuleType> ruleType) {
-            this.ruleType = Codegen.ofNullable(ruleType);
-            return this;
+
+        public Builder ruleType(Either<String,ApplicationGatewayRequestRoutingRuleType> ruleType) {
+            return ruleType(Output.of(ruleType));
         }
+
         public Builder urlPathMap(@Nullable Output<SubResourceArgs> urlPathMap) {
-            this.urlPathMap = urlPathMap;
+            $.urlPathMap = urlPathMap;
             return this;
         }
-        public Builder urlPathMap(@Nullable SubResourceArgs urlPathMap) {
-            this.urlPathMap = Codegen.ofNullable(urlPathMap);
-            return this;
-        }        public ApplicationGatewayRequestRoutingRuleArgs build() {
-            return new ApplicationGatewayRequestRoutingRuleArgs(backendAddressPool, backendHttpSettings, httpListener, id, name, priority, redirectConfiguration, rewriteRuleSet, ruleType, urlPathMap);
+
+        public Builder urlPathMap(SubResourceArgs urlPathMap) {
+            return urlPathMap(Output.of(urlPathMap));
+        }
+
+        public ApplicationGatewayRequestRoutingRuleArgs build() {
+            return $;
         }
     }
+
 }

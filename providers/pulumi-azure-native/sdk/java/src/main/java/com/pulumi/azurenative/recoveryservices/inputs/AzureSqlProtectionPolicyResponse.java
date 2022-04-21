@@ -29,7 +29,7 @@ public final class AzureSqlProtectionPolicyResponse extends com.pulumi.resources
      * 
      */
     @Import(name="backupManagementType", required=true)
-      private final String backupManagementType;
+    private String backupManagementType;
 
     public String backupManagementType() {
         return this.backupManagementType;
@@ -40,10 +40,10 @@ public final class AzureSqlProtectionPolicyResponse extends com.pulumi.resources
      * 
      */
     @Import(name="protectedItemsCount")
-      private final @Nullable Integer protectedItemsCount;
+    private @Nullable Integer protectedItemsCount;
 
     public Optional<Integer> protectedItemsCount() {
-        return this.protectedItemsCount == null ? Optional.empty() : Optional.ofNullable(this.protectedItemsCount);
+        return Optional.ofNullable(this.protectedItemsCount);
     }
 
     /**
@@ -51,64 +51,57 @@ public final class AzureSqlProtectionPolicyResponse extends com.pulumi.resources
      * 
      */
     @Import(name="retentionPolicy")
-      private final @Nullable Either<LongTermRetentionPolicyResponse,SimpleRetentionPolicyResponse> retentionPolicy;
+    private @Nullable Either<LongTermRetentionPolicyResponse,SimpleRetentionPolicyResponse> retentionPolicy;
 
-    public Either<LongTermRetentionPolicyResponse,SimpleRetentionPolicyResponse> retentionPolicy() {
-        return this.retentionPolicy == null ? null : this.retentionPolicy;
+    public Optional<Either<LongTermRetentionPolicyResponse,SimpleRetentionPolicyResponse>> retentionPolicy() {
+        return Optional.ofNullable(this.retentionPolicy);
     }
 
-    public AzureSqlProtectionPolicyResponse(
-        String backupManagementType,
-        @Nullable Integer protectedItemsCount,
-        @Nullable Either<LongTermRetentionPolicyResponse,SimpleRetentionPolicyResponse> retentionPolicy) {
-        this.backupManagementType = Codegen.stringProp("backupManagementType").arg(backupManagementType).require();
-        this.protectedItemsCount = protectedItemsCount;
-        this.retentionPolicy = retentionPolicy;
-    }
+    private AzureSqlProtectionPolicyResponse() {}
 
-    private AzureSqlProtectionPolicyResponse() {
-        this.backupManagementType = null;
-        this.protectedItemsCount = null;
-        this.retentionPolicy = null;
+    private AzureSqlProtectionPolicyResponse(AzureSqlProtectionPolicyResponse $) {
+        this.backupManagementType = $.backupManagementType;
+        this.protectedItemsCount = $.protectedItemsCount;
+        this.retentionPolicy = $.retentionPolicy;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AzureSqlProtectionPolicyResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String backupManagementType;
-        private @Nullable Integer protectedItemsCount;
-        private @Nullable Either<LongTermRetentionPolicyResponse,SimpleRetentionPolicyResponse> retentionPolicy;
+        private AzureSqlProtectionPolicyResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AzureSqlProtectionPolicyResponse();
         }
 
         public Builder(AzureSqlProtectionPolicyResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.backupManagementType = defaults.backupManagementType;
-    	      this.protectedItemsCount = defaults.protectedItemsCount;
-    	      this.retentionPolicy = defaults.retentionPolicy;
+            $ = new AzureSqlProtectionPolicyResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder backupManagementType(String backupManagementType) {
-            this.backupManagementType = Objects.requireNonNull(backupManagementType);
+            $.backupManagementType = backupManagementType;
             return this;
         }
+
         public Builder protectedItemsCount(@Nullable Integer protectedItemsCount) {
-            this.protectedItemsCount = protectedItemsCount;
+            $.protectedItemsCount = protectedItemsCount;
             return this;
         }
+
         public Builder retentionPolicy(@Nullable Either<LongTermRetentionPolicyResponse,SimpleRetentionPolicyResponse> retentionPolicy) {
-            this.retentionPolicy = retentionPolicy;
+            $.retentionPolicy = retentionPolicy;
             return this;
-        }        public AzureSqlProtectionPolicyResponse build() {
-            return new AzureSqlProtectionPolicyResponse(backupManagementType, protectedItemsCount, retentionPolicy);
+        }
+
+        public AzureSqlProtectionPolicyResponse build() {
+            $.backupManagementType = Codegen.stringProp("backupManagementType").arg($.backupManagementType).require();
+            return $;
         }
     }
+
 }

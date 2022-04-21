@@ -6,11 +6,11 @@ package com.pulumi.azurenative.network;
 import com.pulumi.azurenative.network.inputs.ContainerNetworkInterfaceConfigurationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,10 @@ public final class NetworkProfileArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="containerNetworkInterfaceConfigurations")
-      private final @Nullable Output<List<ContainerNetworkInterfaceConfigurationArgs>> containerNetworkInterfaceConfigurations;
+    private @Nullable Output<List<ContainerNetworkInterfaceConfigurationArgs>> containerNetworkInterfaceConfigurations;
 
-    public Output<List<ContainerNetworkInterfaceConfigurationArgs>> containerNetworkInterfaceConfigurations() {
-        return this.containerNetworkInterfaceConfigurations == null ? Codegen.empty() : this.containerNetworkInterfaceConfigurations;
+    public Optional<Output<List<ContainerNetworkInterfaceConfigurationArgs>>> containerNetworkInterfaceConfigurations() {
+        return Optional.ofNullable(this.containerNetworkInterfaceConfigurations);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class NetworkProfileArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="id")
-      private final @Nullable Output<String> id;
+    private @Nullable Output<String> id;
 
-    public Output<String> id() {
-        return this.id == null ? Codegen.empty() : this.id;
+    public Optional<Output<String>> id() {
+        return Optional.ofNullable(this.id);
     }
 
     /**
@@ -45,10 +45,10 @@ public final class NetworkProfileArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -56,10 +56,10 @@ public final class NetworkProfileArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="networkProfileName")
-      private final @Nullable Output<String> networkProfileName;
+    private @Nullable Output<String> networkProfileName;
 
-    public Output<String> networkProfileName() {
-        return this.networkProfileName == null ? Codegen.empty() : this.networkProfileName;
+    public Optional<Output<String>> networkProfileName() {
+        return Optional.ofNullable(this.networkProfileName);
     }
 
     /**
@@ -67,7 +67,7 @@ public final class NetworkProfileArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -78,118 +78,103 @@ public final class NetworkProfileArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public NetworkProfileArgs(
-        @Nullable Output<List<ContainerNetworkInterfaceConfigurationArgs>> containerNetworkInterfaceConfigurations,
-        @Nullable Output<String> id,
-        @Nullable Output<String> location,
-        @Nullable Output<String> networkProfileName,
-        Output<String> resourceGroupName,
-        @Nullable Output<Map<String,String>> tags) {
-        this.containerNetworkInterfaceConfigurations = containerNetworkInterfaceConfigurations;
-        this.id = id;
-        this.location = location;
-        this.networkProfileName = networkProfileName;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.tags = tags;
-    }
+    private NetworkProfileArgs() {}
 
-    private NetworkProfileArgs() {
-        this.containerNetworkInterfaceConfigurations = Codegen.empty();
-        this.id = Codegen.empty();
-        this.location = Codegen.empty();
-        this.networkProfileName = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.tags = Codegen.empty();
+    private NetworkProfileArgs(NetworkProfileArgs $) {
+        this.containerNetworkInterfaceConfigurations = $.containerNetworkInterfaceConfigurations;
+        this.id = $.id;
+        this.location = $.location;
+        this.networkProfileName = $.networkProfileName;
+        this.resourceGroupName = $.resourceGroupName;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NetworkProfileArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<ContainerNetworkInterfaceConfigurationArgs>> containerNetworkInterfaceConfigurations;
-        private @Nullable Output<String> id;
-        private @Nullable Output<String> location;
-        private @Nullable Output<String> networkProfileName;
-        private Output<String> resourceGroupName;
-        private @Nullable Output<Map<String,String>> tags;
+        private NetworkProfileArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new NetworkProfileArgs();
         }
 
         public Builder(NetworkProfileArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.containerNetworkInterfaceConfigurations = defaults.containerNetworkInterfaceConfigurations;
-    	      this.id = defaults.id;
-    	      this.location = defaults.location;
-    	      this.networkProfileName = defaults.networkProfileName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.tags = defaults.tags;
+            $ = new NetworkProfileArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder containerNetworkInterfaceConfigurations(@Nullable Output<List<ContainerNetworkInterfaceConfigurationArgs>> containerNetworkInterfaceConfigurations) {
-            this.containerNetworkInterfaceConfigurations = containerNetworkInterfaceConfigurations;
+            $.containerNetworkInterfaceConfigurations = containerNetworkInterfaceConfigurations;
             return this;
         }
-        public Builder containerNetworkInterfaceConfigurations(@Nullable List<ContainerNetworkInterfaceConfigurationArgs> containerNetworkInterfaceConfigurations) {
-            this.containerNetworkInterfaceConfigurations = Codegen.ofNullable(containerNetworkInterfaceConfigurations);
-            return this;
+
+        public Builder containerNetworkInterfaceConfigurations(List<ContainerNetworkInterfaceConfigurationArgs> containerNetworkInterfaceConfigurations) {
+            return containerNetworkInterfaceConfigurations(Output.of(containerNetworkInterfaceConfigurations));
         }
+
         public Builder containerNetworkInterfaceConfigurations(ContainerNetworkInterfaceConfigurationArgs... containerNetworkInterfaceConfigurations) {
             return containerNetworkInterfaceConfigurations(List.of(containerNetworkInterfaceConfigurations));
         }
+
         public Builder id(@Nullable Output<String> id) {
-            this.id = id;
+            $.id = id;
             return this;
         }
-        public Builder id(@Nullable String id) {
-            this.id = Codegen.ofNullable(id);
-            return this;
+
+        public Builder id(String id) {
+            return id(Output.of(id));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder networkProfileName(@Nullable Output<String> networkProfileName) {
-            this.networkProfileName = networkProfileName;
+            $.networkProfileName = networkProfileName;
             return this;
         }
-        public Builder networkProfileName(@Nullable String networkProfileName) {
-            this.networkProfileName = Codegen.ofNullable(networkProfileName);
-            return this;
+
+        public Builder networkProfileName(String networkProfileName) {
+            return networkProfileName(Output.of(networkProfileName));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
-        }        public NetworkProfileArgs build() {
-            return new NetworkProfileArgs(containerNetworkInterfaceConfigurations, id, location, networkProfileName, resourceGroupName, tags);
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
+        }
+
+        public NetworkProfileArgs build() {
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,7 +5,6 @@ package com.pulumi.gcp.apigateway.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.apigateway.inputs.ApiConfigOpenapiDocumentDocumentGetArgs;
 import java.util.Objects;
 
@@ -20,49 +19,49 @@ public final class ApiConfigOpenapiDocumentGetArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="document", required=true)
-      private final Output<ApiConfigOpenapiDocumentDocumentGetArgs> document;
+    private Output<ApiConfigOpenapiDocumentDocumentGetArgs> document;
 
     public Output<ApiConfigOpenapiDocumentDocumentGetArgs> document() {
         return this.document;
     }
 
-    public ApiConfigOpenapiDocumentGetArgs(Output<ApiConfigOpenapiDocumentDocumentGetArgs> document) {
-        this.document = Objects.requireNonNull(document, "expected parameter 'document' to be non-null");
-    }
+    private ApiConfigOpenapiDocumentGetArgs() {}
 
-    private ApiConfigOpenapiDocumentGetArgs() {
-        this.document = Codegen.empty();
+    private ApiConfigOpenapiDocumentGetArgs(ApiConfigOpenapiDocumentGetArgs $) {
+        this.document = $.document;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ApiConfigOpenapiDocumentGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<ApiConfigOpenapiDocumentDocumentGetArgs> document;
+        private ApiConfigOpenapiDocumentGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ApiConfigOpenapiDocumentGetArgs();
         }
 
         public Builder(ApiConfigOpenapiDocumentGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.document = defaults.document;
+            $ = new ApiConfigOpenapiDocumentGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder document(Output<ApiConfigOpenapiDocumentDocumentGetArgs> document) {
-            this.document = Objects.requireNonNull(document);
+            $.document = document;
             return this;
         }
+
         public Builder document(ApiConfigOpenapiDocumentDocumentGetArgs document) {
-            this.document = Output.of(Objects.requireNonNull(document));
-            return this;
-        }        public ApiConfigOpenapiDocumentGetArgs build() {
-            return new ApiConfigOpenapiDocumentGetArgs(document);
+            return document(Output.of(document));
+        }
+
+        public ApiConfigOpenapiDocumentGetArgs build() {
+            $.document = Objects.requireNonNull($.document, "expected parameter 'document' to be non-null");
+            return $;
         }
     }
+
 }

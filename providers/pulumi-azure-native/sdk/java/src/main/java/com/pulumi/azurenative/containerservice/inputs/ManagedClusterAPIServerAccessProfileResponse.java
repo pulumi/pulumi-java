@@ -25,10 +25,10 @@ public final class ManagedClusterAPIServerAccessProfileResponse extends com.pulu
      * 
      */
     @Import(name="authorizedIPRanges")
-      private final @Nullable List<String> authorizedIPRanges;
+    private @Nullable List<String> authorizedIPRanges;
 
-    public List<String> authorizedIPRanges() {
-        return this.authorizedIPRanges == null ? List.of() : this.authorizedIPRanges;
+    public Optional<List<String>> authorizedIPRanges() {
+        return Optional.ofNullable(this.authorizedIPRanges);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class ManagedClusterAPIServerAccessProfileResponse extends com.pulu
      * 
      */
     @Import(name="enablePrivateCluster")
-      private final @Nullable Boolean enablePrivateCluster;
+    private @Nullable Boolean enablePrivateCluster;
 
     public Optional<Boolean> enablePrivateCluster() {
-        return this.enablePrivateCluster == null ? Optional.empty() : Optional.ofNullable(this.enablePrivateCluster);
+        return Optional.ofNullable(this.enablePrivateCluster);
     }
 
     /**
@@ -47,67 +47,60 @@ public final class ManagedClusterAPIServerAccessProfileResponse extends com.pulu
      * 
      */
     @Import(name="privateDNSZone")
-      private final @Nullable String privateDNSZone;
+    private @Nullable String privateDNSZone;
 
     public Optional<String> privateDNSZone() {
-        return this.privateDNSZone == null ? Optional.empty() : Optional.ofNullable(this.privateDNSZone);
+        return Optional.ofNullable(this.privateDNSZone);
     }
 
-    public ManagedClusterAPIServerAccessProfileResponse(
-        @Nullable List<String> authorizedIPRanges,
-        @Nullable Boolean enablePrivateCluster,
-        @Nullable String privateDNSZone) {
-        this.authorizedIPRanges = authorizedIPRanges;
-        this.enablePrivateCluster = enablePrivateCluster;
-        this.privateDNSZone = privateDNSZone;
-    }
+    private ManagedClusterAPIServerAccessProfileResponse() {}
 
-    private ManagedClusterAPIServerAccessProfileResponse() {
-        this.authorizedIPRanges = List.of();
-        this.enablePrivateCluster = null;
-        this.privateDNSZone = null;
+    private ManagedClusterAPIServerAccessProfileResponse(ManagedClusterAPIServerAccessProfileResponse $) {
+        this.authorizedIPRanges = $.authorizedIPRanges;
+        this.enablePrivateCluster = $.enablePrivateCluster;
+        this.privateDNSZone = $.privateDNSZone;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ManagedClusterAPIServerAccessProfileResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<String> authorizedIPRanges;
-        private @Nullable Boolean enablePrivateCluster;
-        private @Nullable String privateDNSZone;
+        private ManagedClusterAPIServerAccessProfileResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ManagedClusterAPIServerAccessProfileResponse();
         }
 
         public Builder(ManagedClusterAPIServerAccessProfileResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.authorizedIPRanges = defaults.authorizedIPRanges;
-    	      this.enablePrivateCluster = defaults.enablePrivateCluster;
-    	      this.privateDNSZone = defaults.privateDNSZone;
+            $ = new ManagedClusterAPIServerAccessProfileResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder authorizedIPRanges(@Nullable List<String> authorizedIPRanges) {
-            this.authorizedIPRanges = authorizedIPRanges;
+            $.authorizedIPRanges = authorizedIPRanges;
             return this;
         }
+
         public Builder authorizedIPRanges(String... authorizedIPRanges) {
             return authorizedIPRanges(List.of(authorizedIPRanges));
         }
+
         public Builder enablePrivateCluster(@Nullable Boolean enablePrivateCluster) {
-            this.enablePrivateCluster = enablePrivateCluster;
+            $.enablePrivateCluster = enablePrivateCluster;
             return this;
         }
+
         public Builder privateDNSZone(@Nullable String privateDNSZone) {
-            this.privateDNSZone = privateDNSZone;
+            $.privateDNSZone = privateDNSZone;
             return this;
-        }        public ManagedClusterAPIServerAccessProfileResponse build() {
-            return new ManagedClusterAPIServerAccessProfileResponse(authorizedIPRanges, enablePrivateCluster, privateDNSZone);
+        }
+
+        public ManagedClusterAPIServerAccessProfileResponse build() {
+            return $;
         }
     }
+
 }

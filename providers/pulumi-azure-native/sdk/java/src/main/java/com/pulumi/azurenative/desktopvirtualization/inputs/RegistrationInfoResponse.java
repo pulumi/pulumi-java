@@ -23,10 +23,10 @@ public final class RegistrationInfoResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="expirationTime")
-      private final @Nullable String expirationTime;
+    private @Nullable String expirationTime;
 
     public Optional<String> expirationTime() {
-        return this.expirationTime == null ? Optional.empty() : Optional.ofNullable(this.expirationTime);
+        return Optional.ofNullable(this.expirationTime);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class RegistrationInfoResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="registrationTokenOperation")
-      private final @Nullable String registrationTokenOperation;
+    private @Nullable String registrationTokenOperation;
 
     public Optional<String> registrationTokenOperation() {
-        return this.registrationTokenOperation == null ? Optional.empty() : Optional.ofNullable(this.registrationTokenOperation);
+        return Optional.ofNullable(this.registrationTokenOperation);
     }
 
     /**
@@ -45,64 +45,56 @@ public final class RegistrationInfoResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="token")
-      private final @Nullable String token;
+    private @Nullable String token;
 
     public Optional<String> token() {
-        return this.token == null ? Optional.empty() : Optional.ofNullable(this.token);
+        return Optional.ofNullable(this.token);
     }
 
-    public RegistrationInfoResponse(
-        @Nullable String expirationTime,
-        @Nullable String registrationTokenOperation,
-        @Nullable String token) {
-        this.expirationTime = expirationTime;
-        this.registrationTokenOperation = registrationTokenOperation;
-        this.token = token;
-    }
+    private RegistrationInfoResponse() {}
 
-    private RegistrationInfoResponse() {
-        this.expirationTime = null;
-        this.registrationTokenOperation = null;
-        this.token = null;
+    private RegistrationInfoResponse(RegistrationInfoResponse $) {
+        this.expirationTime = $.expirationTime;
+        this.registrationTokenOperation = $.registrationTokenOperation;
+        this.token = $.token;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RegistrationInfoResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String expirationTime;
-        private @Nullable String registrationTokenOperation;
-        private @Nullable String token;
+        private RegistrationInfoResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new RegistrationInfoResponse();
         }
 
         public Builder(RegistrationInfoResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.expirationTime = defaults.expirationTime;
-    	      this.registrationTokenOperation = defaults.registrationTokenOperation;
-    	      this.token = defaults.token;
+            $ = new RegistrationInfoResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder expirationTime(@Nullable String expirationTime) {
-            this.expirationTime = expirationTime;
+            $.expirationTime = expirationTime;
             return this;
         }
+
         public Builder registrationTokenOperation(@Nullable String registrationTokenOperation) {
-            this.registrationTokenOperation = registrationTokenOperation;
+            $.registrationTokenOperation = registrationTokenOperation;
             return this;
         }
+
         public Builder token(@Nullable String token) {
-            this.token = token;
+            $.token = token;
             return this;
-        }        public RegistrationInfoResponse build() {
-            return new RegistrationInfoResponse(expirationTime, registrationTokenOperation, token);
+        }
+
+        public RegistrationInfoResponse build() {
+            return $;
         }
     }
+
 }

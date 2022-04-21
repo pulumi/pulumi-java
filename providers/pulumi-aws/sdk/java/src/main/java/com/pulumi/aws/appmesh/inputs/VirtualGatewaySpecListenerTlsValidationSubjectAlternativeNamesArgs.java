@@ -6,7 +6,6 @@ package com.pulumi.aws.appmesh.inputs;
 import com.pulumi.aws.appmesh.inputs.VirtualGatewaySpecListenerTlsValidationSubjectAlternativeNamesMatchArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
 
 
@@ -19,49 +18,49 @@ public final class VirtualGatewaySpecListenerTlsValidationSubjectAlternativeName
      * 
      */
     @Import(name="match", required=true)
-      private final Output<VirtualGatewaySpecListenerTlsValidationSubjectAlternativeNamesMatchArgs> match;
+    private Output<VirtualGatewaySpecListenerTlsValidationSubjectAlternativeNamesMatchArgs> match;
 
     public Output<VirtualGatewaySpecListenerTlsValidationSubjectAlternativeNamesMatchArgs> match() {
         return this.match;
     }
 
-    public VirtualGatewaySpecListenerTlsValidationSubjectAlternativeNamesArgs(Output<VirtualGatewaySpecListenerTlsValidationSubjectAlternativeNamesMatchArgs> match) {
-        this.match = Objects.requireNonNull(match, "expected parameter 'match' to be non-null");
-    }
+    private VirtualGatewaySpecListenerTlsValidationSubjectAlternativeNamesArgs() {}
 
-    private VirtualGatewaySpecListenerTlsValidationSubjectAlternativeNamesArgs() {
-        this.match = Codegen.empty();
+    private VirtualGatewaySpecListenerTlsValidationSubjectAlternativeNamesArgs(VirtualGatewaySpecListenerTlsValidationSubjectAlternativeNamesArgs $) {
+        this.match = $.match;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VirtualGatewaySpecListenerTlsValidationSubjectAlternativeNamesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<VirtualGatewaySpecListenerTlsValidationSubjectAlternativeNamesMatchArgs> match;
+        private VirtualGatewaySpecListenerTlsValidationSubjectAlternativeNamesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new VirtualGatewaySpecListenerTlsValidationSubjectAlternativeNamesArgs();
         }
 
         public Builder(VirtualGatewaySpecListenerTlsValidationSubjectAlternativeNamesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.match = defaults.match;
+            $ = new VirtualGatewaySpecListenerTlsValidationSubjectAlternativeNamesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder match(Output<VirtualGatewaySpecListenerTlsValidationSubjectAlternativeNamesMatchArgs> match) {
-            this.match = Objects.requireNonNull(match);
+            $.match = match;
             return this;
         }
+
         public Builder match(VirtualGatewaySpecListenerTlsValidationSubjectAlternativeNamesMatchArgs match) {
-            this.match = Output.of(Objects.requireNonNull(match));
-            return this;
-        }        public VirtualGatewaySpecListenerTlsValidationSubjectAlternativeNamesArgs build() {
-            return new VirtualGatewaySpecListenerTlsValidationSubjectAlternativeNamesArgs(match);
+            return match(Output.of(match));
+        }
+
+        public VirtualGatewaySpecListenerTlsValidationSubjectAlternativeNamesArgs build() {
+            $.match = Objects.requireNonNull($.match, "expected parameter 'match' to be non-null");
+            return $;
         }
     }
+
 }

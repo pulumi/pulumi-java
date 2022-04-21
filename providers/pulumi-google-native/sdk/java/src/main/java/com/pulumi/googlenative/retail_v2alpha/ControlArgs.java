@@ -5,13 +5,13 @@ package com.pulumi.googlenative.retail_v2alpha;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.retail_v2alpha.enums.ControlSolutionTypesItem;
 import com.pulumi.googlenative.retail_v2alpha.inputs.GoogleCloudRetailV2alphaRuleArgs;
 import com.pulumi.googlenative.retail_v2alpha.inputs.GoogleCloudRetailV2alphaSearchRequestFacetSpecArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,14 +20,14 @@ public final class ControlArgs extends com.pulumi.resources.ResourceArgs {
     public static final ControlArgs Empty = new ControlArgs();
 
     @Import(name="catalogId", required=true)
-      private final Output<String> catalogId;
+    private Output<String> catalogId;
 
     public Output<String> catalogId() {
         return this.catalogId;
     }
 
     @Import(name="controlId", required=true)
-      private final Output<String> controlId;
+    private Output<String> controlId;
 
     public Output<String> controlId() {
         return this.controlId;
@@ -38,7 +38,7 @@ public final class ControlArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="displayName", required=true)
-      private final Output<String> displayName;
+    private Output<String> displayName;
 
     public Output<String> displayName() {
         return this.displayName;
@@ -49,17 +49,17 @@ public final class ControlArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="facetSpec")
-      private final @Nullable Output<GoogleCloudRetailV2alphaSearchRequestFacetSpecArgs> facetSpec;
+    private @Nullable Output<GoogleCloudRetailV2alphaSearchRequestFacetSpecArgs> facetSpec;
 
-    public Output<GoogleCloudRetailV2alphaSearchRequestFacetSpecArgs> facetSpec() {
-        return this.facetSpec == null ? Codegen.empty() : this.facetSpec;
+    public Optional<Output<GoogleCloudRetailV2alphaSearchRequestFacetSpecArgs>> facetSpec() {
+        return Optional.ofNullable(this.facetSpec);
     }
 
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -67,17 +67,17 @@ public final class ControlArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -85,10 +85,10 @@ public final class ControlArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="rule")
-      private final @Nullable Output<GoogleCloudRetailV2alphaRuleArgs> rule;
+    private @Nullable Output<GoogleCloudRetailV2alphaRuleArgs> rule;
 
-    public Output<GoogleCloudRetailV2alphaRuleArgs> rule() {
-        return this.rule == null ? Codegen.empty() : this.rule;
+    public Optional<Output<GoogleCloudRetailV2alphaRuleArgs>> rule() {
+        return Optional.ofNullable(this.rule);
     }
 
     /**
@@ -96,157 +96,136 @@ public final class ControlArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="solutionTypes", required=true)
-      private final Output<List<ControlSolutionTypesItem>> solutionTypes;
+    private Output<List<ControlSolutionTypesItem>> solutionTypes;
 
     public Output<List<ControlSolutionTypesItem>> solutionTypes() {
         return this.solutionTypes;
     }
 
-    public ControlArgs(
-        Output<String> catalogId,
-        Output<String> controlId,
-        Output<String> displayName,
-        @Nullable Output<GoogleCloudRetailV2alphaSearchRequestFacetSpecArgs> facetSpec,
-        @Nullable Output<String> location,
-        @Nullable Output<String> name,
-        @Nullable Output<String> project,
-        @Nullable Output<GoogleCloudRetailV2alphaRuleArgs> rule,
-        Output<List<ControlSolutionTypesItem>> solutionTypes) {
-        this.catalogId = Objects.requireNonNull(catalogId, "expected parameter 'catalogId' to be non-null");
-        this.controlId = Objects.requireNonNull(controlId, "expected parameter 'controlId' to be non-null");
-        this.displayName = Objects.requireNonNull(displayName, "expected parameter 'displayName' to be non-null");
-        this.facetSpec = facetSpec;
-        this.location = location;
-        this.name = name;
-        this.project = project;
-        this.rule = rule;
-        this.solutionTypes = Objects.requireNonNull(solutionTypes, "expected parameter 'solutionTypes' to be non-null");
-    }
+    private ControlArgs() {}
 
-    private ControlArgs() {
-        this.catalogId = Codegen.empty();
-        this.controlId = Codegen.empty();
-        this.displayName = Codegen.empty();
-        this.facetSpec = Codegen.empty();
-        this.location = Codegen.empty();
-        this.name = Codegen.empty();
-        this.project = Codegen.empty();
-        this.rule = Codegen.empty();
-        this.solutionTypes = Codegen.empty();
+    private ControlArgs(ControlArgs $) {
+        this.catalogId = $.catalogId;
+        this.controlId = $.controlId;
+        this.displayName = $.displayName;
+        this.facetSpec = $.facetSpec;
+        this.location = $.location;
+        this.name = $.name;
+        this.project = $.project;
+        this.rule = $.rule;
+        this.solutionTypes = $.solutionTypes;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ControlArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> catalogId;
-        private Output<String> controlId;
-        private Output<String> displayName;
-        private @Nullable Output<GoogleCloudRetailV2alphaSearchRequestFacetSpecArgs> facetSpec;
-        private @Nullable Output<String> location;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> project;
-        private @Nullable Output<GoogleCloudRetailV2alphaRuleArgs> rule;
-        private Output<List<ControlSolutionTypesItem>> solutionTypes;
+        private ControlArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ControlArgs();
         }
 
         public Builder(ControlArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.catalogId = defaults.catalogId;
-    	      this.controlId = defaults.controlId;
-    	      this.displayName = defaults.displayName;
-    	      this.facetSpec = defaults.facetSpec;
-    	      this.location = defaults.location;
-    	      this.name = defaults.name;
-    	      this.project = defaults.project;
-    	      this.rule = defaults.rule;
-    	      this.solutionTypes = defaults.solutionTypes;
+            $ = new ControlArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder catalogId(Output<String> catalogId) {
-            this.catalogId = Objects.requireNonNull(catalogId);
+            $.catalogId = catalogId;
             return this;
         }
+
         public Builder catalogId(String catalogId) {
-            this.catalogId = Output.of(Objects.requireNonNull(catalogId));
-            return this;
+            return catalogId(Output.of(catalogId));
         }
+
         public Builder controlId(Output<String> controlId) {
-            this.controlId = Objects.requireNonNull(controlId);
+            $.controlId = controlId;
             return this;
         }
+
         public Builder controlId(String controlId) {
-            this.controlId = Output.of(Objects.requireNonNull(controlId));
-            return this;
+            return controlId(Output.of(controlId));
         }
+
         public Builder displayName(Output<String> displayName) {
-            this.displayName = Objects.requireNonNull(displayName);
+            $.displayName = displayName;
             return this;
         }
+
         public Builder displayName(String displayName) {
-            this.displayName = Output.of(Objects.requireNonNull(displayName));
-            return this;
+            return displayName(Output.of(displayName));
         }
+
         public Builder facetSpec(@Nullable Output<GoogleCloudRetailV2alphaSearchRequestFacetSpecArgs> facetSpec) {
-            this.facetSpec = facetSpec;
+            $.facetSpec = facetSpec;
             return this;
         }
-        public Builder facetSpec(@Nullable GoogleCloudRetailV2alphaSearchRequestFacetSpecArgs facetSpec) {
-            this.facetSpec = Codegen.ofNullable(facetSpec);
-            return this;
+
+        public Builder facetSpec(GoogleCloudRetailV2alphaSearchRequestFacetSpecArgs facetSpec) {
+            return facetSpec(Output.of(facetSpec));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder rule(@Nullable Output<GoogleCloudRetailV2alphaRuleArgs> rule) {
-            this.rule = rule;
+            $.rule = rule;
             return this;
         }
-        public Builder rule(@Nullable GoogleCloudRetailV2alphaRuleArgs rule) {
-            this.rule = Codegen.ofNullable(rule);
-            return this;
+
+        public Builder rule(GoogleCloudRetailV2alphaRuleArgs rule) {
+            return rule(Output.of(rule));
         }
+
         public Builder solutionTypes(Output<List<ControlSolutionTypesItem>> solutionTypes) {
-            this.solutionTypes = Objects.requireNonNull(solutionTypes);
+            $.solutionTypes = solutionTypes;
             return this;
         }
+
         public Builder solutionTypes(List<ControlSolutionTypesItem> solutionTypes) {
-            this.solutionTypes = Output.of(Objects.requireNonNull(solutionTypes));
-            return this;
+            return solutionTypes(Output.of(solutionTypes));
         }
+
         public Builder solutionTypes(ControlSolutionTypesItem... solutionTypes) {
             return solutionTypes(List.of(solutionTypes));
-        }        public ControlArgs build() {
-            return new ControlArgs(catalogId, controlId, displayName, facetSpec, location, name, project, rule, solutionTypes);
+        }
+
+        public ControlArgs build() {
+            $.catalogId = Objects.requireNonNull($.catalogId, "expected parameter 'catalogId' to be non-null");
+            $.controlId = Objects.requireNonNull($.controlId, "expected parameter 'controlId' to be non-null");
+            $.displayName = Objects.requireNonNull($.displayName, "expected parameter 'displayName' to be non-null");
+            $.solutionTypes = Objects.requireNonNull($.solutionTypes, "expected parameter 'solutionTypes' to be non-null");
+            return $;
         }
     }
+
 }

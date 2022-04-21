@@ -5,11 +5,11 @@ package com.pulumi.googlenative.privateca_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.privateca_v1.inputs.ObjectIdArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class X509ExtensionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="critical")
-      private final @Nullable Output<Boolean> critical;
+    private @Nullable Output<Boolean> critical;
 
-    public Output<Boolean> critical() {
-        return this.critical == null ? Codegen.empty() : this.critical;
+    public Optional<Output<Boolean>> critical() {
+        return Optional.ofNullable(this.critical);
     }
 
     /**
@@ -37,7 +37,7 @@ public final class X509ExtensionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="objectId", required=true)
-      private final Output<ObjectIdArgs> objectId;
+    private Output<ObjectIdArgs> objectId;
 
     public Output<ObjectIdArgs> objectId() {
         return this.objectId;
@@ -48,76 +48,70 @@ public final class X509ExtensionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="value", required=true)
-      private final Output<String> value;
+    private Output<String> value;
 
     public Output<String> value() {
         return this.value;
     }
 
-    public X509ExtensionArgs(
-        @Nullable Output<Boolean> critical,
-        Output<ObjectIdArgs> objectId,
-        Output<String> value) {
-        this.critical = critical;
-        this.objectId = Objects.requireNonNull(objectId, "expected parameter 'objectId' to be non-null");
-        this.value = Objects.requireNonNull(value, "expected parameter 'value' to be non-null");
-    }
+    private X509ExtensionArgs() {}
 
-    private X509ExtensionArgs() {
-        this.critical = Codegen.empty();
-        this.objectId = Codegen.empty();
-        this.value = Codegen.empty();
+    private X509ExtensionArgs(X509ExtensionArgs $) {
+        this.critical = $.critical;
+        this.objectId = $.objectId;
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(X509ExtensionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> critical;
-        private Output<ObjectIdArgs> objectId;
-        private Output<String> value;
+        private X509ExtensionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new X509ExtensionArgs();
         }
 
         public Builder(X509ExtensionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.critical = defaults.critical;
-    	      this.objectId = defaults.objectId;
-    	      this.value = defaults.value;
+            $ = new X509ExtensionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder critical(@Nullable Output<Boolean> critical) {
-            this.critical = critical;
+            $.critical = critical;
             return this;
         }
-        public Builder critical(@Nullable Boolean critical) {
-            this.critical = Codegen.ofNullable(critical);
-            return this;
+
+        public Builder critical(Boolean critical) {
+            return critical(Output.of(critical));
         }
+
         public Builder objectId(Output<ObjectIdArgs> objectId) {
-            this.objectId = Objects.requireNonNull(objectId);
+            $.objectId = objectId;
             return this;
         }
+
         public Builder objectId(ObjectIdArgs objectId) {
-            this.objectId = Output.of(Objects.requireNonNull(objectId));
-            return this;
+            return objectId(Output.of(objectId));
         }
+
         public Builder value(Output<String> value) {
-            this.value = Objects.requireNonNull(value);
+            $.value = value;
             return this;
         }
+
         public Builder value(String value) {
-            this.value = Output.of(Objects.requireNonNull(value));
-            return this;
-        }        public X509ExtensionArgs build() {
-            return new X509ExtensionArgs(critical, objectId, value);
+            return value(Output.of(value));
+        }
+
+        public X509ExtensionArgs build() {
+            $.objectId = Objects.requireNonNull($.objectId, "expected parameter 'objectId' to be non-null");
+            $.value = Objects.requireNonNull($.value, "expected parameter 'value' to be non-null");
+            return $;
         }
     }
+
 }

@@ -17,7 +17,7 @@ public final class GetStorageInsightConfigArgs extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -28,7 +28,7 @@ public final class GetStorageInsightConfigArgs extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="storageInsightName", required=true)
-      private final String storageInsightName;
+    private String storageInsightName;
 
     public String storageInsightName() {
         return this.storageInsightName;
@@ -39,64 +39,59 @@ public final class GetStorageInsightConfigArgs extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="workspaceName", required=true)
-      private final String workspaceName;
+    private String workspaceName;
 
     public String workspaceName() {
         return this.workspaceName;
     }
 
-    public GetStorageInsightConfigArgs(
-        String resourceGroupName,
-        String storageInsightName,
-        String workspaceName) {
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.storageInsightName = Objects.requireNonNull(storageInsightName, "expected parameter 'storageInsightName' to be non-null");
-        this.workspaceName = Objects.requireNonNull(workspaceName, "expected parameter 'workspaceName' to be non-null");
-    }
+    private GetStorageInsightConfigArgs() {}
 
-    private GetStorageInsightConfigArgs() {
-        this.resourceGroupName = null;
-        this.storageInsightName = null;
-        this.workspaceName = null;
+    private GetStorageInsightConfigArgs(GetStorageInsightConfigArgs $) {
+        this.resourceGroupName = $.resourceGroupName;
+        this.storageInsightName = $.storageInsightName;
+        this.workspaceName = $.workspaceName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetStorageInsightConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String resourceGroupName;
-        private String storageInsightName;
-        private String workspaceName;
+        private GetStorageInsightConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetStorageInsightConfigArgs();
         }
 
         public Builder(GetStorageInsightConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.storageInsightName = defaults.storageInsightName;
-    	      this.workspaceName = defaults.workspaceName;
+            $ = new GetStorageInsightConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder storageInsightName(String storageInsightName) {
-            this.storageInsightName = Objects.requireNonNull(storageInsightName);
+            $.storageInsightName = storageInsightName;
             return this;
         }
+
         public Builder workspaceName(String workspaceName) {
-            this.workspaceName = Objects.requireNonNull(workspaceName);
+            $.workspaceName = workspaceName;
             return this;
-        }        public GetStorageInsightConfigArgs build() {
-            return new GetStorageInsightConfigArgs(resourceGroupName, storageInsightName, workspaceName);
+        }
+
+        public GetStorageInsightConfigArgs build() {
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.storageInsightName = Objects.requireNonNull($.storageInsightName, "expected parameter 'storageInsightName' to be non-null");
+            $.workspaceName = Objects.requireNonNull($.workspaceName, "expected parameter 'workspaceName' to be non-null");
+            return $;
         }
     }
+
 }

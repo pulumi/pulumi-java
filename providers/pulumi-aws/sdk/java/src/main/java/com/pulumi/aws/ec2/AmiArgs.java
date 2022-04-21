@@ -7,12 +7,12 @@ import com.pulumi.aws.ec2.inputs.AmiEbsBlockDeviceArgs;
 import com.pulumi.aws.ec2.inputs.AmiEphemeralBlockDeviceArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class AmiArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="architecture")
-      private final @Nullable Output<String> architecture;
+    private @Nullable Output<String> architecture;
 
-    public Output<String> architecture() {
-        return this.architecture == null ? Codegen.empty() : this.architecture;
+    public Optional<Output<String>> architecture() {
+        return Optional.ofNullable(this.architecture);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class AmiArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -48,10 +48,10 @@ public final class AmiArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="ebsBlockDevices")
-      private final @Nullable Output<List<AmiEbsBlockDeviceArgs>> ebsBlockDevices;
+    private @Nullable Output<List<AmiEbsBlockDeviceArgs>> ebsBlockDevices;
 
-    public Output<List<AmiEbsBlockDeviceArgs>> ebsBlockDevices() {
-        return this.ebsBlockDevices == null ? Codegen.empty() : this.ebsBlockDevices;
+    public Optional<Output<List<AmiEbsBlockDeviceArgs>>> ebsBlockDevices() {
+        return Optional.ofNullable(this.ebsBlockDevices);
     }
 
     /**
@@ -59,10 +59,10 @@ public final class AmiArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="enaSupport")
-      private final @Nullable Output<Boolean> enaSupport;
+    private @Nullable Output<Boolean> enaSupport;
 
-    public Output<Boolean> enaSupport() {
-        return this.enaSupport == null ? Codegen.empty() : this.enaSupport;
+    public Optional<Output<Boolean>> enaSupport() {
+        return Optional.ofNullable(this.enaSupport);
     }
 
     /**
@@ -71,10 +71,10 @@ public final class AmiArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="ephemeralBlockDevices")
-      private final @Nullable Output<List<AmiEphemeralBlockDeviceArgs>> ephemeralBlockDevices;
+    private @Nullable Output<List<AmiEphemeralBlockDeviceArgs>> ephemeralBlockDevices;
 
-    public Output<List<AmiEphemeralBlockDeviceArgs>> ephemeralBlockDevices() {
-        return this.ephemeralBlockDevices == null ? Codegen.empty() : this.ephemeralBlockDevices;
+    public Optional<Output<List<AmiEphemeralBlockDeviceArgs>>> ephemeralBlockDevices() {
+        return Optional.ofNullable(this.ephemeralBlockDevices);
     }
 
     /**
@@ -83,10 +83,10 @@ public final class AmiArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="imageLocation")
-      private final @Nullable Output<String> imageLocation;
+    private @Nullable Output<String> imageLocation;
 
-    public Output<String> imageLocation() {
-        return this.imageLocation == null ? Codegen.empty() : this.imageLocation;
+    public Optional<Output<String>> imageLocation() {
+        return Optional.ofNullable(this.imageLocation);
     }
 
     /**
@@ -95,10 +95,10 @@ public final class AmiArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="kernelId")
-      private final @Nullable Output<String> kernelId;
+    private @Nullable Output<String> kernelId;
 
-    public Output<String> kernelId() {
-        return this.kernelId == null ? Codegen.empty() : this.kernelId;
+    public Optional<Output<String>> kernelId() {
+        return Optional.ofNullable(this.kernelId);
     }
 
     /**
@@ -106,10 +106,10 @@ public final class AmiArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -118,10 +118,10 @@ public final class AmiArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="ramdiskId")
-      private final @Nullable Output<String> ramdiskId;
+    private @Nullable Output<String> ramdiskId;
 
-    public Output<String> ramdiskId() {
-        return this.ramdiskId == null ? Codegen.empty() : this.ramdiskId;
+    public Optional<Output<String>> ramdiskId() {
+        return Optional.ofNullable(this.ramdiskId);
     }
 
     /**
@@ -129,10 +129,10 @@ public final class AmiArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="rootDeviceName")
-      private final @Nullable Output<String> rootDeviceName;
+    private @Nullable Output<String> rootDeviceName;
 
-    public Output<String> rootDeviceName() {
-        return this.rootDeviceName == null ? Codegen.empty() : this.rootDeviceName;
+    public Optional<Output<String>> rootDeviceName() {
+        return Optional.ofNullable(this.rootDeviceName);
     }
 
     /**
@@ -141,10 +141,10 @@ public final class AmiArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="sriovNetSupport")
-      private final @Nullable Output<String> sriovNetSupport;
+    private @Nullable Output<String> sriovNetSupport;
 
-    public Output<String> sriovNetSupport() {
-        return this.sriovNetSupport == null ? Codegen.empty() : this.sriovNetSupport;
+    public Optional<Output<String>> sriovNetSupport() {
+        return Optional.ofNullable(this.sriovNetSupport);
     }
 
     /**
@@ -152,10 +152,10 @@ public final class AmiArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -165,212 +165,176 @@ public final class AmiArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="virtualizationType")
-      private final @Nullable Output<String> virtualizationType;
+    private @Nullable Output<String> virtualizationType;
 
-    public Output<String> virtualizationType() {
-        return this.virtualizationType == null ? Codegen.empty() : this.virtualizationType;
+    public Optional<Output<String>> virtualizationType() {
+        return Optional.ofNullable(this.virtualizationType);
     }
 
-    public AmiArgs(
-        @Nullable Output<String> architecture,
-        @Nullable Output<String> description,
-        @Nullable Output<List<AmiEbsBlockDeviceArgs>> ebsBlockDevices,
-        @Nullable Output<Boolean> enaSupport,
-        @Nullable Output<List<AmiEphemeralBlockDeviceArgs>> ephemeralBlockDevices,
-        @Nullable Output<String> imageLocation,
-        @Nullable Output<String> kernelId,
-        @Nullable Output<String> name,
-        @Nullable Output<String> ramdiskId,
-        @Nullable Output<String> rootDeviceName,
-        @Nullable Output<String> sriovNetSupport,
-        @Nullable Output<Map<String,String>> tags,
-        @Nullable Output<String> virtualizationType) {
-        this.architecture = architecture;
-        this.description = description;
-        this.ebsBlockDevices = ebsBlockDevices;
-        this.enaSupport = enaSupport;
-        this.ephemeralBlockDevices = ephemeralBlockDevices;
-        this.imageLocation = imageLocation;
-        this.kernelId = kernelId;
-        this.name = name;
-        this.ramdiskId = ramdiskId;
-        this.rootDeviceName = rootDeviceName;
-        this.sriovNetSupport = sriovNetSupport;
-        this.tags = tags;
-        this.virtualizationType = virtualizationType;
-    }
+    private AmiArgs() {}
 
-    private AmiArgs() {
-        this.architecture = Codegen.empty();
-        this.description = Codegen.empty();
-        this.ebsBlockDevices = Codegen.empty();
-        this.enaSupport = Codegen.empty();
-        this.ephemeralBlockDevices = Codegen.empty();
-        this.imageLocation = Codegen.empty();
-        this.kernelId = Codegen.empty();
-        this.name = Codegen.empty();
-        this.ramdiskId = Codegen.empty();
-        this.rootDeviceName = Codegen.empty();
-        this.sriovNetSupport = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.virtualizationType = Codegen.empty();
+    private AmiArgs(AmiArgs $) {
+        this.architecture = $.architecture;
+        this.description = $.description;
+        this.ebsBlockDevices = $.ebsBlockDevices;
+        this.enaSupport = $.enaSupport;
+        this.ephemeralBlockDevices = $.ephemeralBlockDevices;
+        this.imageLocation = $.imageLocation;
+        this.kernelId = $.kernelId;
+        this.name = $.name;
+        this.ramdiskId = $.ramdiskId;
+        this.rootDeviceName = $.rootDeviceName;
+        this.sriovNetSupport = $.sriovNetSupport;
+        this.tags = $.tags;
+        this.virtualizationType = $.virtualizationType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AmiArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> architecture;
-        private @Nullable Output<String> description;
-        private @Nullable Output<List<AmiEbsBlockDeviceArgs>> ebsBlockDevices;
-        private @Nullable Output<Boolean> enaSupport;
-        private @Nullable Output<List<AmiEphemeralBlockDeviceArgs>> ephemeralBlockDevices;
-        private @Nullable Output<String> imageLocation;
-        private @Nullable Output<String> kernelId;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> ramdiskId;
-        private @Nullable Output<String> rootDeviceName;
-        private @Nullable Output<String> sriovNetSupport;
-        private @Nullable Output<Map<String,String>> tags;
-        private @Nullable Output<String> virtualizationType;
+        private AmiArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AmiArgs();
         }
 
         public Builder(AmiArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.architecture = defaults.architecture;
-    	      this.description = defaults.description;
-    	      this.ebsBlockDevices = defaults.ebsBlockDevices;
-    	      this.enaSupport = defaults.enaSupport;
-    	      this.ephemeralBlockDevices = defaults.ephemeralBlockDevices;
-    	      this.imageLocation = defaults.imageLocation;
-    	      this.kernelId = defaults.kernelId;
-    	      this.name = defaults.name;
-    	      this.ramdiskId = defaults.ramdiskId;
-    	      this.rootDeviceName = defaults.rootDeviceName;
-    	      this.sriovNetSupport = defaults.sriovNetSupport;
-    	      this.tags = defaults.tags;
-    	      this.virtualizationType = defaults.virtualizationType;
+            $ = new AmiArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder architecture(@Nullable Output<String> architecture) {
-            this.architecture = architecture;
+            $.architecture = architecture;
             return this;
         }
-        public Builder architecture(@Nullable String architecture) {
-            this.architecture = Codegen.ofNullable(architecture);
-            return this;
+
+        public Builder architecture(String architecture) {
+            return architecture(Output.of(architecture));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder ebsBlockDevices(@Nullable Output<List<AmiEbsBlockDeviceArgs>> ebsBlockDevices) {
-            this.ebsBlockDevices = ebsBlockDevices;
+            $.ebsBlockDevices = ebsBlockDevices;
             return this;
         }
-        public Builder ebsBlockDevices(@Nullable List<AmiEbsBlockDeviceArgs> ebsBlockDevices) {
-            this.ebsBlockDevices = Codegen.ofNullable(ebsBlockDevices);
-            return this;
+
+        public Builder ebsBlockDevices(List<AmiEbsBlockDeviceArgs> ebsBlockDevices) {
+            return ebsBlockDevices(Output.of(ebsBlockDevices));
         }
+
         public Builder ebsBlockDevices(AmiEbsBlockDeviceArgs... ebsBlockDevices) {
             return ebsBlockDevices(List.of(ebsBlockDevices));
         }
+
         public Builder enaSupport(@Nullable Output<Boolean> enaSupport) {
-            this.enaSupport = enaSupport;
+            $.enaSupport = enaSupport;
             return this;
         }
-        public Builder enaSupport(@Nullable Boolean enaSupport) {
-            this.enaSupport = Codegen.ofNullable(enaSupport);
-            return this;
+
+        public Builder enaSupport(Boolean enaSupport) {
+            return enaSupport(Output.of(enaSupport));
         }
+
         public Builder ephemeralBlockDevices(@Nullable Output<List<AmiEphemeralBlockDeviceArgs>> ephemeralBlockDevices) {
-            this.ephemeralBlockDevices = ephemeralBlockDevices;
+            $.ephemeralBlockDevices = ephemeralBlockDevices;
             return this;
         }
-        public Builder ephemeralBlockDevices(@Nullable List<AmiEphemeralBlockDeviceArgs> ephemeralBlockDevices) {
-            this.ephemeralBlockDevices = Codegen.ofNullable(ephemeralBlockDevices);
-            return this;
+
+        public Builder ephemeralBlockDevices(List<AmiEphemeralBlockDeviceArgs> ephemeralBlockDevices) {
+            return ephemeralBlockDevices(Output.of(ephemeralBlockDevices));
         }
+
         public Builder ephemeralBlockDevices(AmiEphemeralBlockDeviceArgs... ephemeralBlockDevices) {
             return ephemeralBlockDevices(List.of(ephemeralBlockDevices));
         }
+
         public Builder imageLocation(@Nullable Output<String> imageLocation) {
-            this.imageLocation = imageLocation;
+            $.imageLocation = imageLocation;
             return this;
         }
-        public Builder imageLocation(@Nullable String imageLocation) {
-            this.imageLocation = Codegen.ofNullable(imageLocation);
-            return this;
+
+        public Builder imageLocation(String imageLocation) {
+            return imageLocation(Output.of(imageLocation));
         }
+
         public Builder kernelId(@Nullable Output<String> kernelId) {
-            this.kernelId = kernelId;
+            $.kernelId = kernelId;
             return this;
         }
-        public Builder kernelId(@Nullable String kernelId) {
-            this.kernelId = Codegen.ofNullable(kernelId);
-            return this;
+
+        public Builder kernelId(String kernelId) {
+            return kernelId(Output.of(kernelId));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder ramdiskId(@Nullable Output<String> ramdiskId) {
-            this.ramdiskId = ramdiskId;
+            $.ramdiskId = ramdiskId;
             return this;
         }
-        public Builder ramdiskId(@Nullable String ramdiskId) {
-            this.ramdiskId = Codegen.ofNullable(ramdiskId);
-            return this;
+
+        public Builder ramdiskId(String ramdiskId) {
+            return ramdiskId(Output.of(ramdiskId));
         }
+
         public Builder rootDeviceName(@Nullable Output<String> rootDeviceName) {
-            this.rootDeviceName = rootDeviceName;
+            $.rootDeviceName = rootDeviceName;
             return this;
         }
-        public Builder rootDeviceName(@Nullable String rootDeviceName) {
-            this.rootDeviceName = Codegen.ofNullable(rootDeviceName);
-            return this;
+
+        public Builder rootDeviceName(String rootDeviceName) {
+            return rootDeviceName(Output.of(rootDeviceName));
         }
+
         public Builder sriovNetSupport(@Nullable Output<String> sriovNetSupport) {
-            this.sriovNetSupport = sriovNetSupport;
+            $.sriovNetSupport = sriovNetSupport;
             return this;
         }
-        public Builder sriovNetSupport(@Nullable String sriovNetSupport) {
-            this.sriovNetSupport = Codegen.ofNullable(sriovNetSupport);
-            return this;
+
+        public Builder sriovNetSupport(String sriovNetSupport) {
+            return sriovNetSupport(Output.of(sriovNetSupport));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder virtualizationType(@Nullable Output<String> virtualizationType) {
-            this.virtualizationType = virtualizationType;
+            $.virtualizationType = virtualizationType;
             return this;
         }
-        public Builder virtualizationType(@Nullable String virtualizationType) {
-            this.virtualizationType = Codegen.ofNullable(virtualizationType);
-            return this;
-        }        public AmiArgs build() {
-            return new AmiArgs(architecture, description, ebsBlockDevices, enaSupport, ephemeralBlockDevices, imageLocation, kernelId, name, ramdiskId, rootDeviceName, sriovNetSupport, tags, virtualizationType);
+
+        public Builder virtualizationType(String virtualizationType) {
+            return virtualizationType(Output.of(virtualizationType));
+        }
+
+        public AmiArgs build() {
+            return $;
         }
     }
+
 }

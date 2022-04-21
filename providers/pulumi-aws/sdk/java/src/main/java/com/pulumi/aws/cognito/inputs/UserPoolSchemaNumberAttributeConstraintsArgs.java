@@ -5,9 +5,9 @@ package com.pulumi.aws.cognito.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class UserPoolSchemaNumberAttributeConstraintsArgs extends com.pulu
      * 
      */
     @Import(name="maxValue")
-      private final @Nullable Output<String> maxValue;
+    private @Nullable Output<String> maxValue;
 
-    public Output<String> maxValue() {
-        return this.maxValue == null ? Codegen.empty() : this.maxValue;
+    public Optional<Output<String>> maxValue() {
+        return Optional.ofNullable(this.maxValue);
     }
 
     /**
@@ -31,63 +31,58 @@ public final class UserPoolSchemaNumberAttributeConstraintsArgs extends com.pulu
      * 
      */
     @Import(name="minValue")
-      private final @Nullable Output<String> minValue;
+    private @Nullable Output<String> minValue;
 
-    public Output<String> minValue() {
-        return this.minValue == null ? Codegen.empty() : this.minValue;
+    public Optional<Output<String>> minValue() {
+        return Optional.ofNullable(this.minValue);
     }
 
-    public UserPoolSchemaNumberAttributeConstraintsArgs(
-        @Nullable Output<String> maxValue,
-        @Nullable Output<String> minValue) {
-        this.maxValue = maxValue;
-        this.minValue = minValue;
-    }
+    private UserPoolSchemaNumberAttributeConstraintsArgs() {}
 
-    private UserPoolSchemaNumberAttributeConstraintsArgs() {
-        this.maxValue = Codegen.empty();
-        this.minValue = Codegen.empty();
+    private UserPoolSchemaNumberAttributeConstraintsArgs(UserPoolSchemaNumberAttributeConstraintsArgs $) {
+        this.maxValue = $.maxValue;
+        this.minValue = $.minValue;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(UserPoolSchemaNumberAttributeConstraintsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> maxValue;
-        private @Nullable Output<String> minValue;
+        private UserPoolSchemaNumberAttributeConstraintsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new UserPoolSchemaNumberAttributeConstraintsArgs();
         }
 
         public Builder(UserPoolSchemaNumberAttributeConstraintsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.maxValue = defaults.maxValue;
-    	      this.minValue = defaults.minValue;
+            $ = new UserPoolSchemaNumberAttributeConstraintsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder maxValue(@Nullable Output<String> maxValue) {
-            this.maxValue = maxValue;
+            $.maxValue = maxValue;
             return this;
         }
-        public Builder maxValue(@Nullable String maxValue) {
-            this.maxValue = Codegen.ofNullable(maxValue);
-            return this;
+
+        public Builder maxValue(String maxValue) {
+            return maxValue(Output.of(maxValue));
         }
+
         public Builder minValue(@Nullable Output<String> minValue) {
-            this.minValue = minValue;
+            $.minValue = minValue;
             return this;
         }
-        public Builder minValue(@Nullable String minValue) {
-            this.minValue = Codegen.ofNullable(minValue);
-            return this;
-        }        public UserPoolSchemaNumberAttributeConstraintsArgs build() {
-            return new UserPoolSchemaNumberAttributeConstraintsArgs(maxValue, minValue);
+
+        public Builder minValue(String minValue) {
+            return minValue(Output.of(minValue));
+        }
+
+        public UserPoolSchemaNumberAttributeConstraintsArgs build() {
+            return $;
         }
     }
+
 }

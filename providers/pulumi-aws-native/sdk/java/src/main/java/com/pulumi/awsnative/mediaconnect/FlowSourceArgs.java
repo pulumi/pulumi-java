@@ -7,10 +7,10 @@ import com.pulumi.awsnative.mediaconnect.enums.FlowSourceProtocol;
 import com.pulumi.awsnative.mediaconnect.inputs.FlowSourceEncryptionArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,10 @@ public final class FlowSourceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="decryption")
-      private final @Nullable Output<FlowSourceEncryptionArgs> decryption;
+    private @Nullable Output<FlowSourceEncryptionArgs> decryption;
 
-    public Output<FlowSourceEncryptionArgs> decryption() {
-        return this.decryption == null ? Codegen.empty() : this.decryption;
+    public Optional<Output<FlowSourceEncryptionArgs>> decryption() {
+        return Optional.ofNullable(this.decryption);
     }
 
     /**
@@ -34,7 +34,7 @@ public final class FlowSourceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description", required=true)
-      private final Output<String> description;
+    private Output<String> description;
 
     public Output<String> description() {
         return this.description;
@@ -45,10 +45,10 @@ public final class FlowSourceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="entitlementArn")
-      private final @Nullable Output<String> entitlementArn;
+    private @Nullable Output<String> entitlementArn;
 
-    public Output<String> entitlementArn() {
-        return this.entitlementArn == null ? Codegen.empty() : this.entitlementArn;
+    public Optional<Output<String>> entitlementArn() {
+        return Optional.ofNullable(this.entitlementArn);
     }
 
     /**
@@ -56,10 +56,10 @@ public final class FlowSourceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="flowArn")
-      private final @Nullable Output<String> flowArn;
+    private @Nullable Output<String> flowArn;
 
-    public Output<String> flowArn() {
-        return this.flowArn == null ? Codegen.empty() : this.flowArn;
+    public Optional<Output<String>> flowArn() {
+        return Optional.ofNullable(this.flowArn);
     }
 
     /**
@@ -67,10 +67,10 @@ public final class FlowSourceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="ingestPort")
-      private final @Nullable Output<Integer> ingestPort;
+    private @Nullable Output<Integer> ingestPort;
 
-    public Output<Integer> ingestPort() {
-        return this.ingestPort == null ? Codegen.empty() : this.ingestPort;
+    public Optional<Output<Integer>> ingestPort() {
+        return Optional.ofNullable(this.ingestPort);
     }
 
     /**
@@ -78,10 +78,10 @@ public final class FlowSourceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="maxBitrate")
-      private final @Nullable Output<Integer> maxBitrate;
+    private @Nullable Output<Integer> maxBitrate;
 
-    public Output<Integer> maxBitrate() {
-        return this.maxBitrate == null ? Codegen.empty() : this.maxBitrate;
+    public Optional<Output<Integer>> maxBitrate() {
+        return Optional.ofNullable(this.maxBitrate);
     }
 
     /**
@@ -89,10 +89,10 @@ public final class FlowSourceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="maxLatency")
-      private final @Nullable Output<Integer> maxLatency;
+    private @Nullable Output<Integer> maxLatency;
 
-    public Output<Integer> maxLatency() {
-        return this.maxLatency == null ? Codegen.empty() : this.maxLatency;
+    public Optional<Output<Integer>> maxLatency() {
+        return Optional.ofNullable(this.maxLatency);
     }
 
     /**
@@ -100,10 +100,10 @@ public final class FlowSourceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -111,10 +111,10 @@ public final class FlowSourceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="protocol")
-      private final @Nullable Output<FlowSourceProtocol> protocol;
+    private @Nullable Output<FlowSourceProtocol> protocol;
 
-    public Output<FlowSourceProtocol> protocol() {
-        return this.protocol == null ? Codegen.empty() : this.protocol;
+    public Optional<Output<FlowSourceProtocol>> protocol() {
+        return Optional.ofNullable(this.protocol);
     }
 
     /**
@@ -122,10 +122,10 @@ public final class FlowSourceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="streamId")
-      private final @Nullable Output<String> streamId;
+    private @Nullable Output<String> streamId;
 
-    public Output<String> streamId() {
-        return this.streamId == null ? Codegen.empty() : this.streamId;
+    public Optional<Output<String>> streamId() {
+        return Optional.ofNullable(this.streamId);
     }
 
     /**
@@ -133,10 +133,10 @@ public final class FlowSourceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="vpcInterfaceName")
-      private final @Nullable Output<String> vpcInterfaceName;
+    private @Nullable Output<String> vpcInterfaceName;
 
-    public Output<String> vpcInterfaceName() {
-        return this.vpcInterfaceName == null ? Codegen.empty() : this.vpcInterfaceName;
+    public Optional<Output<String>> vpcInterfaceName() {
+        return Optional.ofNullable(this.vpcInterfaceName);
     }
 
     /**
@@ -144,193 +144,159 @@ public final class FlowSourceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="whitelistCidr")
-      private final @Nullable Output<String> whitelistCidr;
+    private @Nullable Output<String> whitelistCidr;
 
-    public Output<String> whitelistCidr() {
-        return this.whitelistCidr == null ? Codegen.empty() : this.whitelistCidr;
+    public Optional<Output<String>> whitelistCidr() {
+        return Optional.ofNullable(this.whitelistCidr);
     }
 
-    public FlowSourceArgs(
-        @Nullable Output<FlowSourceEncryptionArgs> decryption,
-        Output<String> description,
-        @Nullable Output<String> entitlementArn,
-        @Nullable Output<String> flowArn,
-        @Nullable Output<Integer> ingestPort,
-        @Nullable Output<Integer> maxBitrate,
-        @Nullable Output<Integer> maxLatency,
-        @Nullable Output<String> name,
-        @Nullable Output<FlowSourceProtocol> protocol,
-        @Nullable Output<String> streamId,
-        @Nullable Output<String> vpcInterfaceName,
-        @Nullable Output<String> whitelistCidr) {
-        this.decryption = decryption;
-        this.description = Objects.requireNonNull(description, "expected parameter 'description' to be non-null");
-        this.entitlementArn = entitlementArn;
-        this.flowArn = flowArn;
-        this.ingestPort = ingestPort;
-        this.maxBitrate = maxBitrate;
-        this.maxLatency = maxLatency;
-        this.name = name;
-        this.protocol = protocol;
-        this.streamId = streamId;
-        this.vpcInterfaceName = vpcInterfaceName;
-        this.whitelistCidr = whitelistCidr;
-    }
+    private FlowSourceArgs() {}
 
-    private FlowSourceArgs() {
-        this.decryption = Codegen.empty();
-        this.description = Codegen.empty();
-        this.entitlementArn = Codegen.empty();
-        this.flowArn = Codegen.empty();
-        this.ingestPort = Codegen.empty();
-        this.maxBitrate = Codegen.empty();
-        this.maxLatency = Codegen.empty();
-        this.name = Codegen.empty();
-        this.protocol = Codegen.empty();
-        this.streamId = Codegen.empty();
-        this.vpcInterfaceName = Codegen.empty();
-        this.whitelistCidr = Codegen.empty();
+    private FlowSourceArgs(FlowSourceArgs $) {
+        this.decryption = $.decryption;
+        this.description = $.description;
+        this.entitlementArn = $.entitlementArn;
+        this.flowArn = $.flowArn;
+        this.ingestPort = $.ingestPort;
+        this.maxBitrate = $.maxBitrate;
+        this.maxLatency = $.maxLatency;
+        this.name = $.name;
+        this.protocol = $.protocol;
+        this.streamId = $.streamId;
+        this.vpcInterfaceName = $.vpcInterfaceName;
+        this.whitelistCidr = $.whitelistCidr;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FlowSourceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<FlowSourceEncryptionArgs> decryption;
-        private Output<String> description;
-        private @Nullable Output<String> entitlementArn;
-        private @Nullable Output<String> flowArn;
-        private @Nullable Output<Integer> ingestPort;
-        private @Nullable Output<Integer> maxBitrate;
-        private @Nullable Output<Integer> maxLatency;
-        private @Nullable Output<String> name;
-        private @Nullable Output<FlowSourceProtocol> protocol;
-        private @Nullable Output<String> streamId;
-        private @Nullable Output<String> vpcInterfaceName;
-        private @Nullable Output<String> whitelistCidr;
+        private FlowSourceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new FlowSourceArgs();
         }
 
         public Builder(FlowSourceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.decryption = defaults.decryption;
-    	      this.description = defaults.description;
-    	      this.entitlementArn = defaults.entitlementArn;
-    	      this.flowArn = defaults.flowArn;
-    	      this.ingestPort = defaults.ingestPort;
-    	      this.maxBitrate = defaults.maxBitrate;
-    	      this.maxLatency = defaults.maxLatency;
-    	      this.name = defaults.name;
-    	      this.protocol = defaults.protocol;
-    	      this.streamId = defaults.streamId;
-    	      this.vpcInterfaceName = defaults.vpcInterfaceName;
-    	      this.whitelistCidr = defaults.whitelistCidr;
+            $ = new FlowSourceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder decryption(@Nullable Output<FlowSourceEncryptionArgs> decryption) {
-            this.decryption = decryption;
+            $.decryption = decryption;
             return this;
         }
-        public Builder decryption(@Nullable FlowSourceEncryptionArgs decryption) {
-            this.decryption = Codegen.ofNullable(decryption);
-            return this;
+
+        public Builder decryption(FlowSourceEncryptionArgs decryption) {
+            return decryption(Output.of(decryption));
         }
+
         public Builder description(Output<String> description) {
-            this.description = Objects.requireNonNull(description);
+            $.description = description;
             return this;
         }
+
         public Builder description(String description) {
-            this.description = Output.of(Objects.requireNonNull(description));
-            return this;
+            return description(Output.of(description));
         }
+
         public Builder entitlementArn(@Nullable Output<String> entitlementArn) {
-            this.entitlementArn = entitlementArn;
+            $.entitlementArn = entitlementArn;
             return this;
         }
-        public Builder entitlementArn(@Nullable String entitlementArn) {
-            this.entitlementArn = Codegen.ofNullable(entitlementArn);
-            return this;
+
+        public Builder entitlementArn(String entitlementArn) {
+            return entitlementArn(Output.of(entitlementArn));
         }
+
         public Builder flowArn(@Nullable Output<String> flowArn) {
-            this.flowArn = flowArn;
+            $.flowArn = flowArn;
             return this;
         }
-        public Builder flowArn(@Nullable String flowArn) {
-            this.flowArn = Codegen.ofNullable(flowArn);
-            return this;
+
+        public Builder flowArn(String flowArn) {
+            return flowArn(Output.of(flowArn));
         }
+
         public Builder ingestPort(@Nullable Output<Integer> ingestPort) {
-            this.ingestPort = ingestPort;
+            $.ingestPort = ingestPort;
             return this;
         }
-        public Builder ingestPort(@Nullable Integer ingestPort) {
-            this.ingestPort = Codegen.ofNullable(ingestPort);
-            return this;
+
+        public Builder ingestPort(Integer ingestPort) {
+            return ingestPort(Output.of(ingestPort));
         }
+
         public Builder maxBitrate(@Nullable Output<Integer> maxBitrate) {
-            this.maxBitrate = maxBitrate;
+            $.maxBitrate = maxBitrate;
             return this;
         }
-        public Builder maxBitrate(@Nullable Integer maxBitrate) {
-            this.maxBitrate = Codegen.ofNullable(maxBitrate);
-            return this;
+
+        public Builder maxBitrate(Integer maxBitrate) {
+            return maxBitrate(Output.of(maxBitrate));
         }
+
         public Builder maxLatency(@Nullable Output<Integer> maxLatency) {
-            this.maxLatency = maxLatency;
+            $.maxLatency = maxLatency;
             return this;
         }
-        public Builder maxLatency(@Nullable Integer maxLatency) {
-            this.maxLatency = Codegen.ofNullable(maxLatency);
-            return this;
+
+        public Builder maxLatency(Integer maxLatency) {
+            return maxLatency(Output.of(maxLatency));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder protocol(@Nullable Output<FlowSourceProtocol> protocol) {
-            this.protocol = protocol;
+            $.protocol = protocol;
             return this;
         }
-        public Builder protocol(@Nullable FlowSourceProtocol protocol) {
-            this.protocol = Codegen.ofNullable(protocol);
-            return this;
+
+        public Builder protocol(FlowSourceProtocol protocol) {
+            return protocol(Output.of(protocol));
         }
+
         public Builder streamId(@Nullable Output<String> streamId) {
-            this.streamId = streamId;
+            $.streamId = streamId;
             return this;
         }
-        public Builder streamId(@Nullable String streamId) {
-            this.streamId = Codegen.ofNullable(streamId);
-            return this;
+
+        public Builder streamId(String streamId) {
+            return streamId(Output.of(streamId));
         }
+
         public Builder vpcInterfaceName(@Nullable Output<String> vpcInterfaceName) {
-            this.vpcInterfaceName = vpcInterfaceName;
+            $.vpcInterfaceName = vpcInterfaceName;
             return this;
         }
-        public Builder vpcInterfaceName(@Nullable String vpcInterfaceName) {
-            this.vpcInterfaceName = Codegen.ofNullable(vpcInterfaceName);
-            return this;
+
+        public Builder vpcInterfaceName(String vpcInterfaceName) {
+            return vpcInterfaceName(Output.of(vpcInterfaceName));
         }
+
         public Builder whitelistCidr(@Nullable Output<String> whitelistCidr) {
-            this.whitelistCidr = whitelistCidr;
+            $.whitelistCidr = whitelistCidr;
             return this;
         }
-        public Builder whitelistCidr(@Nullable String whitelistCidr) {
-            this.whitelistCidr = Codegen.ofNullable(whitelistCidr);
-            return this;
-        }        public FlowSourceArgs build() {
-            return new FlowSourceArgs(decryption, description, entitlementArn, flowArn, ingestPort, maxBitrate, maxLatency, name, protocol, streamId, vpcInterfaceName, whitelistCidr);
+
+        public Builder whitelistCidr(String whitelistCidr) {
+            return whitelistCidr(Output.of(whitelistCidr));
+        }
+
+        public FlowSourceArgs build() {
+            $.description = Objects.requireNonNull($.description, "expected parameter 'description' to be non-null");
+            return $;
         }
     }
+
 }

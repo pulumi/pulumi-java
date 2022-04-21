@@ -13,45 +13,45 @@ public final class GetGlobalTableArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetGlobalTableArgs Empty = new GetGlobalTableArgs();
 
     @Import(name="tableName", required=true)
-      private final String tableName;
+    private String tableName;
 
     public String tableName() {
         return this.tableName;
     }
 
-    public GetGlobalTableArgs(String tableName) {
-        this.tableName = Objects.requireNonNull(tableName, "expected parameter 'tableName' to be non-null");
-    }
+    private GetGlobalTableArgs() {}
 
-    private GetGlobalTableArgs() {
-        this.tableName = null;
+    private GetGlobalTableArgs(GetGlobalTableArgs $) {
+        this.tableName = $.tableName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetGlobalTableArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String tableName;
+        private GetGlobalTableArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetGlobalTableArgs();
         }
 
         public Builder(GetGlobalTableArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.tableName = defaults.tableName;
+            $ = new GetGlobalTableArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder tableName(String tableName) {
-            this.tableName = Objects.requireNonNull(tableName);
+            $.tableName = tableName;
             return this;
-        }        public GetGlobalTableArgs build() {
-            return new GetGlobalTableArgs(tableName);
+        }
+
+        public GetGlobalTableArgs build() {
+            $.tableName = Objects.requireNonNull($.tableName, "expected parameter 'tableName' to be non-null");
+            return $;
         }
     }
+
 }

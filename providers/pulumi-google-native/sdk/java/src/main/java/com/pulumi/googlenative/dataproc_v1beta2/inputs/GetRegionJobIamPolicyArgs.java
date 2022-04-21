@@ -15,94 +15,85 @@ public final class GetRegionJobIamPolicyArgs extends com.pulumi.resources.Invoke
     public static final GetRegionJobIamPolicyArgs Empty = new GetRegionJobIamPolicyArgs();
 
     @Import(name="jobId", required=true)
-      private final String jobId;
+    private String jobId;
 
     public String jobId() {
         return this.jobId;
     }
 
     @Import(name="optionsRequestedPolicyVersion")
-      private final @Nullable String optionsRequestedPolicyVersion;
+    private @Nullable String optionsRequestedPolicyVersion;
 
     public Optional<String> optionsRequestedPolicyVersion() {
-        return this.optionsRequestedPolicyVersion == null ? Optional.empty() : Optional.ofNullable(this.optionsRequestedPolicyVersion);
+        return Optional.ofNullable(this.optionsRequestedPolicyVersion);
     }
 
     @Import(name="project")
-      private final @Nullable String project;
+    private @Nullable String project;
 
     public Optional<String> project() {
-        return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
+        return Optional.ofNullable(this.project);
     }
 
     @Import(name="regionId", required=true)
-      private final String regionId;
+    private String regionId;
 
     public String regionId() {
         return this.regionId;
     }
 
-    public GetRegionJobIamPolicyArgs(
-        String jobId,
-        @Nullable String optionsRequestedPolicyVersion,
-        @Nullable String project,
-        String regionId) {
-        this.jobId = Objects.requireNonNull(jobId, "expected parameter 'jobId' to be non-null");
-        this.optionsRequestedPolicyVersion = optionsRequestedPolicyVersion;
-        this.project = project;
-        this.regionId = Objects.requireNonNull(regionId, "expected parameter 'regionId' to be non-null");
-    }
+    private GetRegionJobIamPolicyArgs() {}
 
-    private GetRegionJobIamPolicyArgs() {
-        this.jobId = null;
-        this.optionsRequestedPolicyVersion = null;
-        this.project = null;
-        this.regionId = null;
+    private GetRegionJobIamPolicyArgs(GetRegionJobIamPolicyArgs $) {
+        this.jobId = $.jobId;
+        this.optionsRequestedPolicyVersion = $.optionsRequestedPolicyVersion;
+        this.project = $.project;
+        this.regionId = $.regionId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetRegionJobIamPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String jobId;
-        private @Nullable String optionsRequestedPolicyVersion;
-        private @Nullable String project;
-        private String regionId;
+        private GetRegionJobIamPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetRegionJobIamPolicyArgs();
         }
 
         public Builder(GetRegionJobIamPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.jobId = defaults.jobId;
-    	      this.optionsRequestedPolicyVersion = defaults.optionsRequestedPolicyVersion;
-    	      this.project = defaults.project;
-    	      this.regionId = defaults.regionId;
+            $ = new GetRegionJobIamPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder jobId(String jobId) {
-            this.jobId = Objects.requireNonNull(jobId);
+            $.jobId = jobId;
             return this;
         }
+
         public Builder optionsRequestedPolicyVersion(@Nullable String optionsRequestedPolicyVersion) {
-            this.optionsRequestedPolicyVersion = optionsRequestedPolicyVersion;
+            $.optionsRequestedPolicyVersion = optionsRequestedPolicyVersion;
             return this;
         }
+
         public Builder project(@Nullable String project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
+
         public Builder regionId(String regionId) {
-            this.regionId = Objects.requireNonNull(regionId);
+            $.regionId = regionId;
             return this;
-        }        public GetRegionJobIamPolicyArgs build() {
-            return new GetRegionJobIamPolicyArgs(jobId, optionsRequestedPolicyVersion, project, regionId);
+        }
+
+        public GetRegionJobIamPolicyArgs build() {
+            $.jobId = Objects.requireNonNull($.jobId, "expected parameter 'jobId' to be non-null");
+            $.regionId = Objects.requireNonNull($.regionId, "expected parameter 'regionId' to be non-null");
+            return $;
         }
     }
+
 }

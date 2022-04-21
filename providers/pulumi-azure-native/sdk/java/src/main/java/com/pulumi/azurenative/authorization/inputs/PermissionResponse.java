@@ -24,10 +24,10 @@ public final class PermissionResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="actions")
-      private final @Nullable List<String> actions;
+    private @Nullable List<String> actions;
 
-    public List<String> actions() {
-        return this.actions == null ? List.of() : this.actions;
+    public Optional<List<String>> actions() {
+        return Optional.ofNullable(this.actions);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class PermissionResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="dataActions")
-      private final @Nullable List<String> dataActions;
+    private @Nullable List<String> dataActions;
 
-    public List<String> dataActions() {
-        return this.dataActions == null ? List.of() : this.dataActions;
+    public Optional<List<String>> dataActions() {
+        return Optional.ofNullable(this.dataActions);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class PermissionResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="notActions")
-      private final @Nullable List<String> notActions;
+    private @Nullable List<String> notActions;
 
-    public List<String> notActions() {
-        return this.notActions == null ? List.of() : this.notActions;
+    public Optional<List<String>> notActions() {
+        return Optional.ofNullable(this.notActions);
     }
 
     /**
@@ -57,85 +57,78 @@ public final class PermissionResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="notDataActions")
-      private final @Nullable List<String> notDataActions;
+    private @Nullable List<String> notDataActions;
 
-    public List<String> notDataActions() {
-        return this.notDataActions == null ? List.of() : this.notDataActions;
+    public Optional<List<String>> notDataActions() {
+        return Optional.ofNullable(this.notDataActions);
     }
 
-    public PermissionResponse(
-        @Nullable List<String> actions,
-        @Nullable List<String> dataActions,
-        @Nullable List<String> notActions,
-        @Nullable List<String> notDataActions) {
-        this.actions = actions;
-        this.dataActions = dataActions;
-        this.notActions = notActions;
-        this.notDataActions = notDataActions;
-    }
+    private PermissionResponse() {}
 
-    private PermissionResponse() {
-        this.actions = List.of();
-        this.dataActions = List.of();
-        this.notActions = List.of();
-        this.notDataActions = List.of();
+    private PermissionResponse(PermissionResponse $) {
+        this.actions = $.actions;
+        this.dataActions = $.dataActions;
+        this.notActions = $.notActions;
+        this.notDataActions = $.notDataActions;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PermissionResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<String> actions;
-        private @Nullable List<String> dataActions;
-        private @Nullable List<String> notActions;
-        private @Nullable List<String> notDataActions;
+        private PermissionResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new PermissionResponse();
         }
 
         public Builder(PermissionResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.actions = defaults.actions;
-    	      this.dataActions = defaults.dataActions;
-    	      this.notActions = defaults.notActions;
-    	      this.notDataActions = defaults.notDataActions;
+            $ = new PermissionResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder actions(@Nullable List<String> actions) {
-            this.actions = actions;
+            $.actions = actions;
             return this;
         }
+
         public Builder actions(String... actions) {
             return actions(List.of(actions));
         }
+
         public Builder dataActions(@Nullable List<String> dataActions) {
-            this.dataActions = dataActions;
+            $.dataActions = dataActions;
             return this;
         }
+
         public Builder dataActions(String... dataActions) {
             return dataActions(List.of(dataActions));
         }
+
         public Builder notActions(@Nullable List<String> notActions) {
-            this.notActions = notActions;
+            $.notActions = notActions;
             return this;
         }
+
         public Builder notActions(String... notActions) {
             return notActions(List.of(notActions));
         }
+
         public Builder notDataActions(@Nullable List<String> notDataActions) {
-            this.notDataActions = notDataActions;
+            $.notDataActions = notDataActions;
             return this;
         }
+
         public Builder notDataActions(String... notDataActions) {
             return notDataActions(List.of(notDataActions));
-        }        public PermissionResponse build() {
-            return new PermissionResponse(actions, dataActions, notActions, notDataActions);
+        }
+
+        public PermissionResponse build() {
+            return $;
         }
     }
+
 }

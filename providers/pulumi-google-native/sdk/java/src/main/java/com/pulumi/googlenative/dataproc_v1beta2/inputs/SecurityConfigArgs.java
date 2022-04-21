@@ -5,9 +5,9 @@ package com.pulumi.googlenative.dataproc_v1beta2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.dataproc_v1beta2.inputs.KerberosConfigArgs;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class SecurityConfigArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="kerberosConfig")
-      private final @Nullable Output<KerberosConfigArgs> kerberosConfig;
+    private @Nullable Output<KerberosConfigArgs> kerberosConfig;
 
-    public Output<KerberosConfigArgs> kerberosConfig() {
-        return this.kerberosConfig == null ? Codegen.empty() : this.kerberosConfig;
+    public Optional<Output<KerberosConfigArgs>> kerberosConfig() {
+        return Optional.ofNullable(this.kerberosConfig);
     }
 
-    public SecurityConfigArgs(@Nullable Output<KerberosConfigArgs> kerberosConfig) {
-        this.kerberosConfig = kerberosConfig;
-    }
+    private SecurityConfigArgs() {}
 
-    private SecurityConfigArgs() {
-        this.kerberosConfig = Codegen.empty();
+    private SecurityConfigArgs(SecurityConfigArgs $) {
+        this.kerberosConfig = $.kerberosConfig;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SecurityConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<KerberosConfigArgs> kerberosConfig;
+        private SecurityConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SecurityConfigArgs();
         }
 
         public Builder(SecurityConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.kerberosConfig = defaults.kerberosConfig;
+            $ = new SecurityConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder kerberosConfig(@Nullable Output<KerberosConfigArgs> kerberosConfig) {
-            this.kerberosConfig = kerberosConfig;
+            $.kerberosConfig = kerberosConfig;
             return this;
         }
-        public Builder kerberosConfig(@Nullable KerberosConfigArgs kerberosConfig) {
-            this.kerberosConfig = Codegen.ofNullable(kerberosConfig);
-            return this;
-        }        public SecurityConfigArgs build() {
-            return new SecurityConfigArgs(kerberosConfig);
+
+        public Builder kerberosConfig(KerberosConfigArgs kerberosConfig) {
+            return kerberosConfig(Output.of(kerberosConfig));
+        }
+
+        public SecurityConfigArgs build() {
+            return $;
         }
     }
+
 }

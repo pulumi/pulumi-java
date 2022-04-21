@@ -5,10 +5,10 @@ package com.pulumi.aws.cloudwatch;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class EventArchiveArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -32,10 +32,10 @@ public final class EventArchiveArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="eventPattern")
-      private final @Nullable Output<String> eventPattern;
+    private @Nullable Output<String> eventPattern;
 
-    public Output<String> eventPattern() {
-        return this.eventPattern == null ? Codegen.empty() : this.eventPattern;
+    public Optional<Output<String>> eventPattern() {
+        return Optional.ofNullable(this.eventPattern);
     }
 
     /**
@@ -43,7 +43,7 @@ public final class EventArchiveArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="eventSourceArn", required=true)
-      private final Output<String> eventSourceArn;
+    private Output<String> eventSourceArn;
 
     public Output<String> eventSourceArn() {
         return this.eventSourceArn;
@@ -54,10 +54,10 @@ public final class EventArchiveArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -65,102 +65,89 @@ public final class EventArchiveArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="retentionDays")
-      private final @Nullable Output<Integer> retentionDays;
+    private @Nullable Output<Integer> retentionDays;
 
-    public Output<Integer> retentionDays() {
-        return this.retentionDays == null ? Codegen.empty() : this.retentionDays;
+    public Optional<Output<Integer>> retentionDays() {
+        return Optional.ofNullable(this.retentionDays);
     }
 
-    public EventArchiveArgs(
-        @Nullable Output<String> description,
-        @Nullable Output<String> eventPattern,
-        Output<String> eventSourceArn,
-        @Nullable Output<String> name,
-        @Nullable Output<Integer> retentionDays) {
-        this.description = description;
-        this.eventPattern = eventPattern;
-        this.eventSourceArn = Objects.requireNonNull(eventSourceArn, "expected parameter 'eventSourceArn' to be non-null");
-        this.name = name;
-        this.retentionDays = retentionDays;
-    }
+    private EventArchiveArgs() {}
 
-    private EventArchiveArgs() {
-        this.description = Codegen.empty();
-        this.eventPattern = Codegen.empty();
-        this.eventSourceArn = Codegen.empty();
-        this.name = Codegen.empty();
-        this.retentionDays = Codegen.empty();
+    private EventArchiveArgs(EventArchiveArgs $) {
+        this.description = $.description;
+        this.eventPattern = $.eventPattern;
+        this.eventSourceArn = $.eventSourceArn;
+        this.name = $.name;
+        this.retentionDays = $.retentionDays;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EventArchiveArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> description;
-        private @Nullable Output<String> eventPattern;
-        private Output<String> eventSourceArn;
-        private @Nullable Output<String> name;
-        private @Nullable Output<Integer> retentionDays;
+        private EventArchiveArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new EventArchiveArgs();
         }
 
         public Builder(EventArchiveArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.description = defaults.description;
-    	      this.eventPattern = defaults.eventPattern;
-    	      this.eventSourceArn = defaults.eventSourceArn;
-    	      this.name = defaults.name;
-    	      this.retentionDays = defaults.retentionDays;
+            $ = new EventArchiveArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder eventPattern(@Nullable Output<String> eventPattern) {
-            this.eventPattern = eventPattern;
+            $.eventPattern = eventPattern;
             return this;
         }
-        public Builder eventPattern(@Nullable String eventPattern) {
-            this.eventPattern = Codegen.ofNullable(eventPattern);
-            return this;
+
+        public Builder eventPattern(String eventPattern) {
+            return eventPattern(Output.of(eventPattern));
         }
+
         public Builder eventSourceArn(Output<String> eventSourceArn) {
-            this.eventSourceArn = Objects.requireNonNull(eventSourceArn);
+            $.eventSourceArn = eventSourceArn;
             return this;
         }
+
         public Builder eventSourceArn(String eventSourceArn) {
-            this.eventSourceArn = Output.of(Objects.requireNonNull(eventSourceArn));
-            return this;
+            return eventSourceArn(Output.of(eventSourceArn));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder retentionDays(@Nullable Output<Integer> retentionDays) {
-            this.retentionDays = retentionDays;
+            $.retentionDays = retentionDays;
             return this;
         }
-        public Builder retentionDays(@Nullable Integer retentionDays) {
-            this.retentionDays = Codegen.ofNullable(retentionDays);
-            return this;
-        }        public EventArchiveArgs build() {
-            return new EventArchiveArgs(description, eventPattern, eventSourceArn, name, retentionDays);
+
+        public Builder retentionDays(Integer retentionDays) {
+            return retentionDays(Output.of(retentionDays));
+        }
+
+        public EventArchiveArgs build() {
+            $.eventSourceArn = Objects.requireNonNull($.eventSourceArn, "expected parameter 'eventSourceArn' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,10 +5,10 @@ package com.pulumi.googlenative.notebooks_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class VertexAIParametersArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="env")
-      private final @Nullable Output<Map<String,String>> env;
+    private @Nullable Output<Map<String,String>> env;
 
-    public Output<Map<String,String>> env() {
-        return this.env == null ? Codegen.empty() : this.env;
+    public Optional<Output<Map<String,String>>> env() {
+        return Optional.ofNullable(this.env);
     }
 
     /**
@@ -36,63 +36,58 @@ public final class VertexAIParametersArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="network")
-      private final @Nullable Output<String> network;
+    private @Nullable Output<String> network;
 
-    public Output<String> network() {
-        return this.network == null ? Codegen.empty() : this.network;
+    public Optional<Output<String>> network() {
+        return Optional.ofNullable(this.network);
     }
 
-    public VertexAIParametersArgs(
-        @Nullable Output<Map<String,String>> env,
-        @Nullable Output<String> network) {
-        this.env = env;
-        this.network = network;
-    }
+    private VertexAIParametersArgs() {}
 
-    private VertexAIParametersArgs() {
-        this.env = Codegen.empty();
-        this.network = Codegen.empty();
+    private VertexAIParametersArgs(VertexAIParametersArgs $) {
+        this.env = $.env;
+        this.network = $.network;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VertexAIParametersArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Map<String,String>> env;
-        private @Nullable Output<String> network;
+        private VertexAIParametersArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new VertexAIParametersArgs();
         }
 
         public Builder(VertexAIParametersArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.env = defaults.env;
-    	      this.network = defaults.network;
+            $ = new VertexAIParametersArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder env(@Nullable Output<Map<String,String>> env) {
-            this.env = env;
+            $.env = env;
             return this;
         }
-        public Builder env(@Nullable Map<String,String> env) {
-            this.env = Codegen.ofNullable(env);
-            return this;
+
+        public Builder env(Map<String,String> env) {
+            return env(Output.of(env));
         }
+
         public Builder network(@Nullable Output<String> network) {
-            this.network = network;
+            $.network = network;
             return this;
         }
-        public Builder network(@Nullable String network) {
-            this.network = Codegen.ofNullable(network);
-            return this;
-        }        public VertexAIParametersArgs build() {
-            return new VertexAIParametersArgs(env, network);
+
+        public Builder network(String network) {
+            return network(Output.of(network));
+        }
+
+        public VertexAIParametersArgs build() {
+            return $;
         }
     }
+
 }

@@ -21,7 +21,7 @@ public final class LayerResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="arguments", required=true)
-      private final String arguments;
+    private String arguments;
 
     public String arguments() {
         return this.arguments;
@@ -32,55 +32,52 @@ public final class LayerResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="directive", required=true)
-      private final String directive;
+    private String directive;
 
     public String directive() {
         return this.directive;
     }
 
-    public LayerResponse(
-        String arguments,
-        String directive) {
-        this.arguments = Objects.requireNonNull(arguments, "expected parameter 'arguments' to be non-null");
-        this.directive = Objects.requireNonNull(directive, "expected parameter 'directive' to be non-null");
-    }
+    private LayerResponse() {}
 
-    private LayerResponse() {
-        this.arguments = null;
-        this.directive = null;
+    private LayerResponse(LayerResponse $) {
+        this.arguments = $.arguments;
+        this.directive = $.directive;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LayerResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String arguments;
-        private String directive;
+        private LayerResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new LayerResponse();
         }
 
         public Builder(LayerResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.arguments = defaults.arguments;
-    	      this.directive = defaults.directive;
+            $ = new LayerResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder arguments(String arguments) {
-            this.arguments = Objects.requireNonNull(arguments);
+            $.arguments = arguments;
             return this;
         }
+
         public Builder directive(String directive) {
-            this.directive = Objects.requireNonNull(directive);
+            $.directive = directive;
             return this;
-        }        public LayerResponse build() {
-            return new LayerResponse(arguments, directive);
+        }
+
+        public LayerResponse build() {
+            $.arguments = Objects.requireNonNull($.arguments, "expected parameter 'arguments' to be non-null");
+            $.directive = Objects.requireNonNull($.directive, "expected parameter 'directive' to be non-null");
+            return $;
         }
     }
+
 }

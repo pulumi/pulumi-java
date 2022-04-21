@@ -13,45 +13,45 @@ public final class GetSubnetArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetSubnetArgs Empty = new GetSubnetArgs();
 
     @Import(name="subnetId", required=true)
-      private final String subnetId;
+    private String subnetId;
 
     public String subnetId() {
         return this.subnetId;
     }
 
-    public GetSubnetArgs(String subnetId) {
-        this.subnetId = Objects.requireNonNull(subnetId, "expected parameter 'subnetId' to be non-null");
-    }
+    private GetSubnetArgs() {}
 
-    private GetSubnetArgs() {
-        this.subnetId = null;
+    private GetSubnetArgs(GetSubnetArgs $) {
+        this.subnetId = $.subnetId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetSubnetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String subnetId;
+        private GetSubnetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetSubnetArgs();
         }
 
         public Builder(GetSubnetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.subnetId = defaults.subnetId;
+            $ = new GetSubnetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder subnetId(String subnetId) {
-            this.subnetId = Objects.requireNonNull(subnetId);
+            $.subnetId = subnetId;
             return this;
-        }        public GetSubnetArgs build() {
-            return new GetSubnetArgs(subnetId);
+        }
+
+        public GetSubnetArgs build() {
+            $.subnetId = Objects.requireNonNull($.subnetId, "expected parameter 'subnetId' to be non-null");
+            return $;
         }
     }
+
 }

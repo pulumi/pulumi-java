@@ -22,7 +22,7 @@ public final class GoogleCloudDialogflowCxV3ResponseMessagePlayAudioResponse ext
      * 
      */
     @Import(name="allowPlaybackInterruption", required=true)
-      private final Boolean allowPlaybackInterruption;
+    private Boolean allowPlaybackInterruption;
 
     public Boolean allowPlaybackInterruption() {
         return this.allowPlaybackInterruption;
@@ -33,55 +33,52 @@ public final class GoogleCloudDialogflowCxV3ResponseMessagePlayAudioResponse ext
      * 
      */
     @Import(name="audioUri", required=true)
-      private final String audioUri;
+    private String audioUri;
 
     public String audioUri() {
         return this.audioUri;
     }
 
-    public GoogleCloudDialogflowCxV3ResponseMessagePlayAudioResponse(
-        Boolean allowPlaybackInterruption,
-        String audioUri) {
-        this.allowPlaybackInterruption = Objects.requireNonNull(allowPlaybackInterruption, "expected parameter 'allowPlaybackInterruption' to be non-null");
-        this.audioUri = Objects.requireNonNull(audioUri, "expected parameter 'audioUri' to be non-null");
-    }
+    private GoogleCloudDialogflowCxV3ResponseMessagePlayAudioResponse() {}
 
-    private GoogleCloudDialogflowCxV3ResponseMessagePlayAudioResponse() {
-        this.allowPlaybackInterruption = null;
-        this.audioUri = null;
+    private GoogleCloudDialogflowCxV3ResponseMessagePlayAudioResponse(GoogleCloudDialogflowCxV3ResponseMessagePlayAudioResponse $) {
+        this.allowPlaybackInterruption = $.allowPlaybackInterruption;
+        this.audioUri = $.audioUri;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudDialogflowCxV3ResponseMessagePlayAudioResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Boolean allowPlaybackInterruption;
-        private String audioUri;
+        private GoogleCloudDialogflowCxV3ResponseMessagePlayAudioResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudDialogflowCxV3ResponseMessagePlayAudioResponse();
         }
 
         public Builder(GoogleCloudDialogflowCxV3ResponseMessagePlayAudioResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.allowPlaybackInterruption = defaults.allowPlaybackInterruption;
-    	      this.audioUri = defaults.audioUri;
+            $ = new GoogleCloudDialogflowCxV3ResponseMessagePlayAudioResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder allowPlaybackInterruption(Boolean allowPlaybackInterruption) {
-            this.allowPlaybackInterruption = Objects.requireNonNull(allowPlaybackInterruption);
+            $.allowPlaybackInterruption = allowPlaybackInterruption;
             return this;
         }
+
         public Builder audioUri(String audioUri) {
-            this.audioUri = Objects.requireNonNull(audioUri);
+            $.audioUri = audioUri;
             return this;
-        }        public GoogleCloudDialogflowCxV3ResponseMessagePlayAudioResponse build() {
-            return new GoogleCloudDialogflowCxV3ResponseMessagePlayAudioResponse(allowPlaybackInterruption, audioUri);
+        }
+
+        public GoogleCloudDialogflowCxV3ResponseMessagePlayAudioResponse build() {
+            $.allowPlaybackInterruption = Objects.requireNonNull($.allowPlaybackInterruption, "expected parameter 'allowPlaybackInterruption' to be non-null");
+            $.audioUri = Objects.requireNonNull($.audioUri, "expected parameter 'audioUri' to be non-null");
+            return $;
         }
     }
+
 }

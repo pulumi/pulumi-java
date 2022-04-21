@@ -22,7 +22,7 @@ public final class ManifestResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="fileName", required=true)
-      private final String fileName;
+    private String fileName;
 
     public String fileName() {
         return this.fileName;
@@ -33,7 +33,7 @@ public final class ManifestResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="muxStreams", required=true)
-      private final List<String> muxStreams;
+    private List<String> muxStreams;
 
     public List<String> muxStreams() {
         return this.muxStreams;
@@ -44,67 +44,63 @@ public final class ManifestResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
     }
 
-    public ManifestResponse(
-        String fileName,
-        List<String> muxStreams,
-        String type) {
-        this.fileName = Objects.requireNonNull(fileName, "expected parameter 'fileName' to be non-null");
-        this.muxStreams = Objects.requireNonNull(muxStreams, "expected parameter 'muxStreams' to be non-null");
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private ManifestResponse() {}
 
-    private ManifestResponse() {
-        this.fileName = null;
-        this.muxStreams = List.of();
-        this.type = null;
+    private ManifestResponse(ManifestResponse $) {
+        this.fileName = $.fileName;
+        this.muxStreams = $.muxStreams;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ManifestResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String fileName;
-        private List<String> muxStreams;
-        private String type;
+        private ManifestResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ManifestResponse();
         }
 
         public Builder(ManifestResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.fileName = defaults.fileName;
-    	      this.muxStreams = defaults.muxStreams;
-    	      this.type = defaults.type;
+            $ = new ManifestResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder fileName(String fileName) {
-            this.fileName = Objects.requireNonNull(fileName);
+            $.fileName = fileName;
             return this;
         }
+
         public Builder muxStreams(List<String> muxStreams) {
-            this.muxStreams = Objects.requireNonNull(muxStreams);
+            $.muxStreams = muxStreams;
             return this;
         }
+
         public Builder muxStreams(String... muxStreams) {
             return muxStreams(List.of(muxStreams));
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
-        }        public ManifestResponse build() {
-            return new ManifestResponse(fileName, muxStreams, type);
+        }
+
+        public ManifestResponse build() {
+            $.fileName = Objects.requireNonNull($.fileName, "expected parameter 'fileName' to be non-null");
+            $.muxStreams = Objects.requireNonNull($.muxStreams, "expected parameter 'muxStreams' to be non-null");
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

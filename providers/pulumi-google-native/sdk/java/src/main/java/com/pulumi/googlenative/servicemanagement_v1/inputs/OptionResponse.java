@@ -22,7 +22,7 @@ public final class OptionResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -33,55 +33,52 @@ public final class OptionResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="value", required=true)
-      private final Map<String,String> value;
+    private Map<String,String> value;
 
     public Map<String,String> value() {
         return this.value;
     }
 
-    public OptionResponse(
-        String name,
-        Map<String,String> value) {
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.value = Objects.requireNonNull(value, "expected parameter 'value' to be non-null");
-    }
+    private OptionResponse() {}
 
-    private OptionResponse() {
-        this.name = null;
-        this.value = Map.of();
+    private OptionResponse(OptionResponse $) {
+        this.name = $.name;
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(OptionResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String name;
-        private Map<String,String> value;
+        private OptionResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new OptionResponse();
         }
 
         public Builder(OptionResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.value = defaults.value;
+            $ = new OptionResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder value(Map<String,String> value) {
-            this.value = Objects.requireNonNull(value);
+            $.value = value;
             return this;
-        }        public OptionResponse build() {
-            return new OptionResponse(name, value);
+        }
+
+        public OptionResponse build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.value = Objects.requireNonNull($.value, "expected parameter 'value' to be non-null");
+            return $;
         }
     }
+
 }

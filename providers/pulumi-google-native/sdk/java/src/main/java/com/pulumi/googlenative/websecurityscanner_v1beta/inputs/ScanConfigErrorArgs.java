@@ -5,10 +5,10 @@ package com.pulumi.googlenative.websecurityscanner_v1beta.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.websecurityscanner_v1beta.enums.ScanConfigErrorCode;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class ScanConfigErrorArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="code")
-      private final @Nullable Output<ScanConfigErrorCode> code;
+    private @Nullable Output<ScanConfigErrorCode> code;
 
-    public Output<ScanConfigErrorCode> code() {
-        return this.code == null ? Codegen.empty() : this.code;
+    public Optional<Output<ScanConfigErrorCode>> code() {
+        return Optional.ofNullable(this.code);
     }
 
     /**
@@ -36,63 +36,58 @@ public final class ScanConfigErrorArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="fieldName")
-      private final @Nullable Output<String> fieldName;
+    private @Nullable Output<String> fieldName;
 
-    public Output<String> fieldName() {
-        return this.fieldName == null ? Codegen.empty() : this.fieldName;
+    public Optional<Output<String>> fieldName() {
+        return Optional.ofNullable(this.fieldName);
     }
 
-    public ScanConfigErrorArgs(
-        @Nullable Output<ScanConfigErrorCode> code,
-        @Nullable Output<String> fieldName) {
-        this.code = code;
-        this.fieldName = fieldName;
-    }
+    private ScanConfigErrorArgs() {}
 
-    private ScanConfigErrorArgs() {
-        this.code = Codegen.empty();
-        this.fieldName = Codegen.empty();
+    private ScanConfigErrorArgs(ScanConfigErrorArgs $) {
+        this.code = $.code;
+        this.fieldName = $.fieldName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ScanConfigErrorArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<ScanConfigErrorCode> code;
-        private @Nullable Output<String> fieldName;
+        private ScanConfigErrorArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ScanConfigErrorArgs();
         }
 
         public Builder(ScanConfigErrorArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.code = defaults.code;
-    	      this.fieldName = defaults.fieldName;
+            $ = new ScanConfigErrorArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder code(@Nullable Output<ScanConfigErrorCode> code) {
-            this.code = code;
+            $.code = code;
             return this;
         }
-        public Builder code(@Nullable ScanConfigErrorCode code) {
-            this.code = Codegen.ofNullable(code);
-            return this;
+
+        public Builder code(ScanConfigErrorCode code) {
+            return code(Output.of(code));
         }
+
         public Builder fieldName(@Nullable Output<String> fieldName) {
-            this.fieldName = fieldName;
+            $.fieldName = fieldName;
             return this;
         }
-        public Builder fieldName(@Nullable String fieldName) {
-            this.fieldName = Codegen.ofNullable(fieldName);
-            return this;
-        }        public ScanConfigErrorArgs build() {
-            return new ScanConfigErrorArgs(code, fieldName);
+
+        public Builder fieldName(String fieldName) {
+            return fieldName(Output.of(fieldName));
+        }
+
+        public ScanConfigErrorArgs build() {
+            return $;
         }
     }
+
 }

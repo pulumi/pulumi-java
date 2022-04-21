@@ -24,10 +24,10 @@ public final class RestResponseResponseRegex extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="matchQuantifier")
-      private final @Nullable String matchQuantifier;
+    private @Nullable String matchQuantifier;
 
     public Optional<String> matchQuantifier() {
-        return this.matchQuantifier == null ? Optional.empty() : Optional.ofNullable(this.matchQuantifier);
+        return Optional.ofNullable(this.matchQuantifier);
     }
 
     /**
@@ -35,58 +35,54 @@ public final class RestResponseResponseRegex extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="matches")
-      private final @Nullable List<String> matches;
+    private @Nullable List<String> matches;
 
-    public List<String> matches() {
-        return this.matches == null ? List.of() : this.matches;
+    public Optional<List<String>> matches() {
+        return Optional.ofNullable(this.matches);
     }
 
-    public RestResponseResponseRegex(
-        @Nullable String matchQuantifier,
-        @Nullable List<String> matches) {
-        this.matchQuantifier = matchQuantifier;
-        this.matches = matches;
-    }
+    private RestResponseResponseRegex() {}
 
-    private RestResponseResponseRegex() {
-        this.matchQuantifier = null;
-        this.matches = List.of();
+    private RestResponseResponseRegex(RestResponseResponseRegex $) {
+        this.matchQuantifier = $.matchQuantifier;
+        this.matches = $.matches;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RestResponseResponseRegex defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String matchQuantifier;
-        private @Nullable List<String> matches;
+        private RestResponseResponseRegex $;
 
         public Builder() {
-    	      // Empty
+            $ = new RestResponseResponseRegex();
         }
 
         public Builder(RestResponseResponseRegex defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.matchQuantifier = defaults.matchQuantifier;
-    	      this.matches = defaults.matches;
+            $ = new RestResponseResponseRegex(Objects.requireNonNull(defaults));
         }
 
         public Builder matchQuantifier(@Nullable String matchQuantifier) {
-            this.matchQuantifier = matchQuantifier;
+            $.matchQuantifier = matchQuantifier;
             return this;
         }
+
         public Builder matches(@Nullable List<String> matches) {
-            this.matches = matches;
+            $.matches = matches;
             return this;
         }
+
         public Builder matches(String... matches) {
             return matches(List.of(matches));
-        }        public RestResponseResponseRegex build() {
-            return new RestResponseResponseRegex(matchQuantifier, matches);
+        }
+
+        public RestResponseResponseRegex build() {
+            return $;
         }
     }
+
 }

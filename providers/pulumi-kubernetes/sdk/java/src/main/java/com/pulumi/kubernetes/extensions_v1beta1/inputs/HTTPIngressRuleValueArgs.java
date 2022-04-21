@@ -5,7 +5,6 @@ package com.pulumi.kubernetes.extensions_v1beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.kubernetes.extensions_v1beta1.inputs.HTTPIngressPathArgs;
 import java.util.List;
 import java.util.Objects;
@@ -24,52 +23,53 @@ public final class HTTPIngressRuleValueArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="paths", required=true)
-      private final Output<List<HTTPIngressPathArgs>> paths;
+    private Output<List<HTTPIngressPathArgs>> paths;
 
     public Output<List<HTTPIngressPathArgs>> paths() {
         return this.paths;
     }
 
-    public HTTPIngressRuleValueArgs(Output<List<HTTPIngressPathArgs>> paths) {
-        this.paths = Objects.requireNonNull(paths, "expected parameter 'paths' to be non-null");
-    }
+    private HTTPIngressRuleValueArgs() {}
 
-    private HTTPIngressRuleValueArgs() {
-        this.paths = Codegen.empty();
+    private HTTPIngressRuleValueArgs(HTTPIngressRuleValueArgs $) {
+        this.paths = $.paths;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(HTTPIngressRuleValueArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<List<HTTPIngressPathArgs>> paths;
+        private HTTPIngressRuleValueArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new HTTPIngressRuleValueArgs();
         }
 
         public Builder(HTTPIngressRuleValueArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.paths = defaults.paths;
+            $ = new HTTPIngressRuleValueArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder paths(Output<List<HTTPIngressPathArgs>> paths) {
-            this.paths = Objects.requireNonNull(paths);
+            $.paths = paths;
             return this;
         }
+
         public Builder paths(List<HTTPIngressPathArgs> paths) {
-            this.paths = Output.of(Objects.requireNonNull(paths));
-            return this;
+            return paths(Output.of(paths));
         }
+
         public Builder paths(HTTPIngressPathArgs... paths) {
             return paths(List.of(paths));
-        }        public HTTPIngressRuleValueArgs build() {
-            return new HTTPIngressRuleValueArgs(paths);
+        }
+
+        public HTTPIngressRuleValueArgs build() {
+            $.paths = Objects.requireNonNull($.paths, "expected parameter 'paths' to be non-null");
+            return $;
         }
     }
+
 }

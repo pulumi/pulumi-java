@@ -21,7 +21,7 @@ public final class BucketObjectOwnerResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="entity", required=true)
-      private final String entity;
+    private String entity;
 
     public String entity() {
         return this.entity;
@@ -32,55 +32,52 @@ public final class BucketObjectOwnerResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="entityId", required=true)
-      private final String entityId;
+    private String entityId;
 
     public String entityId() {
         return this.entityId;
     }
 
-    public BucketObjectOwnerResponse(
-        String entity,
-        String entityId) {
-        this.entity = Objects.requireNonNull(entity, "expected parameter 'entity' to be non-null");
-        this.entityId = Objects.requireNonNull(entityId, "expected parameter 'entityId' to be non-null");
-    }
+    private BucketObjectOwnerResponse() {}
 
-    private BucketObjectOwnerResponse() {
-        this.entity = null;
-        this.entityId = null;
+    private BucketObjectOwnerResponse(BucketObjectOwnerResponse $) {
+        this.entity = $.entity;
+        this.entityId = $.entityId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BucketObjectOwnerResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String entity;
-        private String entityId;
+        private BucketObjectOwnerResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new BucketObjectOwnerResponse();
         }
 
         public Builder(BucketObjectOwnerResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.entity = defaults.entity;
-    	      this.entityId = defaults.entityId;
+            $ = new BucketObjectOwnerResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder entity(String entity) {
-            this.entity = Objects.requireNonNull(entity);
+            $.entity = entity;
             return this;
         }
+
         public Builder entityId(String entityId) {
-            this.entityId = Objects.requireNonNull(entityId);
+            $.entityId = entityId;
             return this;
-        }        public BucketObjectOwnerResponse build() {
-            return new BucketObjectOwnerResponse(entity, entityId);
+        }
+
+        public BucketObjectOwnerResponse build() {
+            $.entity = Objects.requireNonNull($.entity, "expected parameter 'entity' to be non-null");
+            $.entityId = Objects.requireNonNull($.entityId, "expected parameter 'entityId' to be non-null");
+            return $;
         }
     }
+
 }

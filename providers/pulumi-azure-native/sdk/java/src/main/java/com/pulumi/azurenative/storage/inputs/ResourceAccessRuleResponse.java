@@ -23,10 +23,10 @@ public final class ResourceAccessRuleResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="resourceId")
-      private final @Nullable String resourceId;
+    private @Nullable String resourceId;
 
     public Optional<String> resourceId() {
-        return this.resourceId == null ? Optional.empty() : Optional.ofNullable(this.resourceId);
+        return Optional.ofNullable(this.resourceId);
     }
 
     /**
@@ -34,55 +34,50 @@ public final class ResourceAccessRuleResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="tenantId")
-      private final @Nullable String tenantId;
+    private @Nullable String tenantId;
 
     public Optional<String> tenantId() {
-        return this.tenantId == null ? Optional.empty() : Optional.ofNullable(this.tenantId);
+        return Optional.ofNullable(this.tenantId);
     }
 
-    public ResourceAccessRuleResponse(
-        @Nullable String resourceId,
-        @Nullable String tenantId) {
-        this.resourceId = resourceId;
-        this.tenantId = tenantId;
-    }
+    private ResourceAccessRuleResponse() {}
 
-    private ResourceAccessRuleResponse() {
-        this.resourceId = null;
-        this.tenantId = null;
+    private ResourceAccessRuleResponse(ResourceAccessRuleResponse $) {
+        this.resourceId = $.resourceId;
+        this.tenantId = $.tenantId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ResourceAccessRuleResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String resourceId;
-        private @Nullable String tenantId;
+        private ResourceAccessRuleResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ResourceAccessRuleResponse();
         }
 
         public Builder(ResourceAccessRuleResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.resourceId = defaults.resourceId;
-    	      this.tenantId = defaults.tenantId;
+            $ = new ResourceAccessRuleResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder resourceId(@Nullable String resourceId) {
-            this.resourceId = resourceId;
+            $.resourceId = resourceId;
             return this;
         }
+
         public Builder tenantId(@Nullable String tenantId) {
-            this.tenantId = tenantId;
+            $.tenantId = tenantId;
             return this;
-        }        public ResourceAccessRuleResponse build() {
-            return new ResourceAccessRuleResponse(resourceId, tenantId);
+        }
+
+        public ResourceAccessRuleResponse build() {
+            return $;
         }
     }
+
 }

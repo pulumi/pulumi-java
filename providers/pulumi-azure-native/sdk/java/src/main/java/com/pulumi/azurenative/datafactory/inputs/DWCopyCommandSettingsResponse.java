@@ -26,10 +26,10 @@ public final class DWCopyCommandSettingsResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="additionalOptions")
-      private final @Nullable Map<String,String> additionalOptions;
+    private @Nullable Map<String,String> additionalOptions;
 
-    public Map<String,String> additionalOptions() {
-        return this.additionalOptions == null ? Map.of() : this.additionalOptions;
+    public Optional<Map<String,String>> additionalOptions() {
+        return Optional.ofNullable(this.additionalOptions);
     }
 
     /**
@@ -37,58 +37,54 @@ public final class DWCopyCommandSettingsResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="defaultValues")
-      private final @Nullable List<DWCopyCommandDefaultValueResponse> defaultValues;
+    private @Nullable List<DWCopyCommandDefaultValueResponse> defaultValues;
 
-    public List<DWCopyCommandDefaultValueResponse> defaultValues() {
-        return this.defaultValues == null ? List.of() : this.defaultValues;
+    public Optional<List<DWCopyCommandDefaultValueResponse>> defaultValues() {
+        return Optional.ofNullable(this.defaultValues);
     }
 
-    public DWCopyCommandSettingsResponse(
-        @Nullable Map<String,String> additionalOptions,
-        @Nullable List<DWCopyCommandDefaultValueResponse> defaultValues) {
-        this.additionalOptions = additionalOptions;
-        this.defaultValues = defaultValues;
-    }
+    private DWCopyCommandSettingsResponse() {}
 
-    private DWCopyCommandSettingsResponse() {
-        this.additionalOptions = Map.of();
-        this.defaultValues = List.of();
+    private DWCopyCommandSettingsResponse(DWCopyCommandSettingsResponse $) {
+        this.additionalOptions = $.additionalOptions;
+        this.defaultValues = $.defaultValues;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DWCopyCommandSettingsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Map<String,String> additionalOptions;
-        private @Nullable List<DWCopyCommandDefaultValueResponse> defaultValues;
+        private DWCopyCommandSettingsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new DWCopyCommandSettingsResponse();
         }
 
         public Builder(DWCopyCommandSettingsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.additionalOptions = defaults.additionalOptions;
-    	      this.defaultValues = defaults.defaultValues;
+            $ = new DWCopyCommandSettingsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder additionalOptions(@Nullable Map<String,String> additionalOptions) {
-            this.additionalOptions = additionalOptions;
+            $.additionalOptions = additionalOptions;
             return this;
         }
+
         public Builder defaultValues(@Nullable List<DWCopyCommandDefaultValueResponse> defaultValues) {
-            this.defaultValues = defaultValues;
+            $.defaultValues = defaultValues;
             return this;
         }
+
         public Builder defaultValues(DWCopyCommandDefaultValueResponse... defaultValues) {
             return defaultValues(List.of(defaultValues));
-        }        public DWCopyCommandSettingsResponse build() {
-            return new DWCopyCommandSettingsResponse(additionalOptions, defaultValues);
+        }
+
+        public DWCopyCommandSettingsResponse build() {
+            return $;
         }
     }
+
 }

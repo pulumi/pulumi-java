@@ -5,7 +5,6 @@ package com.pulumi.azurenative.datamigration.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,49 +22,49 @@ public final class DatabaseInfoArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="sourceDatabaseName", required=true)
-      private final Output<String> sourceDatabaseName;
+    private Output<String> sourceDatabaseName;
 
     public Output<String> sourceDatabaseName() {
         return this.sourceDatabaseName;
     }
 
-    public DatabaseInfoArgs(Output<String> sourceDatabaseName) {
-        this.sourceDatabaseName = Objects.requireNonNull(sourceDatabaseName, "expected parameter 'sourceDatabaseName' to be non-null");
-    }
+    private DatabaseInfoArgs() {}
 
-    private DatabaseInfoArgs() {
-        this.sourceDatabaseName = Codegen.empty();
+    private DatabaseInfoArgs(DatabaseInfoArgs $) {
+        this.sourceDatabaseName = $.sourceDatabaseName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DatabaseInfoArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> sourceDatabaseName;
+        private DatabaseInfoArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DatabaseInfoArgs();
         }
 
         public Builder(DatabaseInfoArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.sourceDatabaseName = defaults.sourceDatabaseName;
+            $ = new DatabaseInfoArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder sourceDatabaseName(Output<String> sourceDatabaseName) {
-            this.sourceDatabaseName = Objects.requireNonNull(sourceDatabaseName);
+            $.sourceDatabaseName = sourceDatabaseName;
             return this;
         }
+
         public Builder sourceDatabaseName(String sourceDatabaseName) {
-            this.sourceDatabaseName = Output.of(Objects.requireNonNull(sourceDatabaseName));
-            return this;
-        }        public DatabaseInfoArgs build() {
-            return new DatabaseInfoArgs(sourceDatabaseName);
+            return sourceDatabaseName(Output.of(sourceDatabaseName));
+        }
+
+        public DatabaseInfoArgs build() {
+            $.sourceDatabaseName = Objects.requireNonNull($.sourceDatabaseName, "expected parameter 'sourceDatabaseName' to be non-null");
+            return $;
         }
     }
+
 }

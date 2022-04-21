@@ -6,10 +6,10 @@ package com.pulumi.kubernetes.core_v1.inputs;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class TCPSocketActionArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="host")
-      private final @Nullable Output<String> host;
+    private @Nullable Output<String> host;
 
-    public Output<String> host() {
-        return this.host == null ? Codegen.empty() : this.host;
+    public Optional<Output<String>> host() {
+        return Optional.ofNullable(this.host);
     }
 
     /**
@@ -37,63 +37,59 @@ public final class TCPSocketActionArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="port", required=true)
-      private final Output<Either<Integer,String>> port;
+    private Output<Either<Integer,String>> port;
 
     public Output<Either<Integer,String>> port() {
         return this.port;
     }
 
-    public TCPSocketActionArgs(
-        @Nullable Output<String> host,
-        Output<Either<Integer,String>> port) {
-        this.host = host;
-        this.port = Objects.requireNonNull(port, "expected parameter 'port' to be non-null");
-    }
+    private TCPSocketActionArgs() {}
 
-    private TCPSocketActionArgs() {
-        this.host = Codegen.empty();
-        this.port = Codegen.empty();
+    private TCPSocketActionArgs(TCPSocketActionArgs $) {
+        this.host = $.host;
+        this.port = $.port;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TCPSocketActionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> host;
-        private Output<Either<Integer,String>> port;
+        private TCPSocketActionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TCPSocketActionArgs();
         }
 
         public Builder(TCPSocketActionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.host = defaults.host;
-    	      this.port = defaults.port;
+            $ = new TCPSocketActionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder host(@Nullable Output<String> host) {
-            this.host = host;
+            $.host = host;
             return this;
         }
-        public Builder host(@Nullable String host) {
-            this.host = Codegen.ofNullable(host);
-            return this;
+
+        public Builder host(String host) {
+            return host(Output.of(host));
         }
+
         public Builder port(Output<Either<Integer,String>> port) {
-            this.port = Objects.requireNonNull(port);
+            $.port = port;
             return this;
         }
+
         public Builder port(Either<Integer,String> port) {
-            this.port = Output.of(Objects.requireNonNull(port));
-            return this;
-        }        public TCPSocketActionArgs build() {
-            return new TCPSocketActionArgs(host, port);
+            return port(Output.of(port));
+        }
+
+        public TCPSocketActionArgs build() {
+            $.port = Objects.requireNonNull($.port, "expected parameter 'port' to be non-null");
+            return $;
         }
     }
+
 }

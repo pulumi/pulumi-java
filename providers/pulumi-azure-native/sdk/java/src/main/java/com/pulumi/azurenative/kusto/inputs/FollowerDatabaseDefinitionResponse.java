@@ -21,7 +21,7 @@ public final class FollowerDatabaseDefinitionResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="attachedDatabaseConfigurationName", required=true)
-      private final String attachedDatabaseConfigurationName;
+    private String attachedDatabaseConfigurationName;
 
     public String attachedDatabaseConfigurationName() {
         return this.attachedDatabaseConfigurationName;
@@ -32,7 +32,7 @@ public final class FollowerDatabaseDefinitionResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="clusterResourceId", required=true)
-      private final String clusterResourceId;
+    private String clusterResourceId;
 
     public String clusterResourceId() {
         return this.clusterResourceId;
@@ -43,64 +43,59 @@ public final class FollowerDatabaseDefinitionResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="databaseName", required=true)
-      private final String databaseName;
+    private String databaseName;
 
     public String databaseName() {
         return this.databaseName;
     }
 
-    public FollowerDatabaseDefinitionResponse(
-        String attachedDatabaseConfigurationName,
-        String clusterResourceId,
-        String databaseName) {
-        this.attachedDatabaseConfigurationName = Objects.requireNonNull(attachedDatabaseConfigurationName, "expected parameter 'attachedDatabaseConfigurationName' to be non-null");
-        this.clusterResourceId = Objects.requireNonNull(clusterResourceId, "expected parameter 'clusterResourceId' to be non-null");
-        this.databaseName = Objects.requireNonNull(databaseName, "expected parameter 'databaseName' to be non-null");
-    }
+    private FollowerDatabaseDefinitionResponse() {}
 
-    private FollowerDatabaseDefinitionResponse() {
-        this.attachedDatabaseConfigurationName = null;
-        this.clusterResourceId = null;
-        this.databaseName = null;
+    private FollowerDatabaseDefinitionResponse(FollowerDatabaseDefinitionResponse $) {
+        this.attachedDatabaseConfigurationName = $.attachedDatabaseConfigurationName;
+        this.clusterResourceId = $.clusterResourceId;
+        this.databaseName = $.databaseName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FollowerDatabaseDefinitionResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String attachedDatabaseConfigurationName;
-        private String clusterResourceId;
-        private String databaseName;
+        private FollowerDatabaseDefinitionResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new FollowerDatabaseDefinitionResponse();
         }
 
         public Builder(FollowerDatabaseDefinitionResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.attachedDatabaseConfigurationName = defaults.attachedDatabaseConfigurationName;
-    	      this.clusterResourceId = defaults.clusterResourceId;
-    	      this.databaseName = defaults.databaseName;
+            $ = new FollowerDatabaseDefinitionResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder attachedDatabaseConfigurationName(String attachedDatabaseConfigurationName) {
-            this.attachedDatabaseConfigurationName = Objects.requireNonNull(attachedDatabaseConfigurationName);
+            $.attachedDatabaseConfigurationName = attachedDatabaseConfigurationName;
             return this;
         }
+
         public Builder clusterResourceId(String clusterResourceId) {
-            this.clusterResourceId = Objects.requireNonNull(clusterResourceId);
+            $.clusterResourceId = clusterResourceId;
             return this;
         }
+
         public Builder databaseName(String databaseName) {
-            this.databaseName = Objects.requireNonNull(databaseName);
+            $.databaseName = databaseName;
             return this;
-        }        public FollowerDatabaseDefinitionResponse build() {
-            return new FollowerDatabaseDefinitionResponse(attachedDatabaseConfigurationName, clusterResourceId, databaseName);
+        }
+
+        public FollowerDatabaseDefinitionResponse build() {
+            $.attachedDatabaseConfigurationName = Objects.requireNonNull($.attachedDatabaseConfigurationName, "expected parameter 'attachedDatabaseConfigurationName' to be non-null");
+            $.clusterResourceId = Objects.requireNonNull($.clusterResourceId, "expected parameter 'clusterResourceId' to be non-null");
+            $.databaseName = Objects.requireNonNull($.databaseName, "expected parameter 'databaseName' to be non-null");
+            return $;
         }
     }
+
 }

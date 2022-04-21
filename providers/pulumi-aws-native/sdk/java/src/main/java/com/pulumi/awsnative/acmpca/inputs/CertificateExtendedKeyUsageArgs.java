@@ -5,9 +5,9 @@ package com.pulumi.awsnative.acmpca.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,70 +20,65 @@ public final class CertificateExtendedKeyUsageArgs extends com.pulumi.resources.
     public static final CertificateExtendedKeyUsageArgs Empty = new CertificateExtendedKeyUsageArgs();
 
     @Import(name="extendedKeyUsageObjectIdentifier")
-      private final @Nullable Output<String> extendedKeyUsageObjectIdentifier;
+    private @Nullable Output<String> extendedKeyUsageObjectIdentifier;
 
-    public Output<String> extendedKeyUsageObjectIdentifier() {
-        return this.extendedKeyUsageObjectIdentifier == null ? Codegen.empty() : this.extendedKeyUsageObjectIdentifier;
+    public Optional<Output<String>> extendedKeyUsageObjectIdentifier() {
+        return Optional.ofNullable(this.extendedKeyUsageObjectIdentifier);
     }
 
     @Import(name="extendedKeyUsageType")
-      private final @Nullable Output<String> extendedKeyUsageType;
+    private @Nullable Output<String> extendedKeyUsageType;
 
-    public Output<String> extendedKeyUsageType() {
-        return this.extendedKeyUsageType == null ? Codegen.empty() : this.extendedKeyUsageType;
+    public Optional<Output<String>> extendedKeyUsageType() {
+        return Optional.ofNullable(this.extendedKeyUsageType);
     }
 
-    public CertificateExtendedKeyUsageArgs(
-        @Nullable Output<String> extendedKeyUsageObjectIdentifier,
-        @Nullable Output<String> extendedKeyUsageType) {
-        this.extendedKeyUsageObjectIdentifier = extendedKeyUsageObjectIdentifier;
-        this.extendedKeyUsageType = extendedKeyUsageType;
-    }
+    private CertificateExtendedKeyUsageArgs() {}
 
-    private CertificateExtendedKeyUsageArgs() {
-        this.extendedKeyUsageObjectIdentifier = Codegen.empty();
-        this.extendedKeyUsageType = Codegen.empty();
+    private CertificateExtendedKeyUsageArgs(CertificateExtendedKeyUsageArgs $) {
+        this.extendedKeyUsageObjectIdentifier = $.extendedKeyUsageObjectIdentifier;
+        this.extendedKeyUsageType = $.extendedKeyUsageType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CertificateExtendedKeyUsageArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> extendedKeyUsageObjectIdentifier;
-        private @Nullable Output<String> extendedKeyUsageType;
+        private CertificateExtendedKeyUsageArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CertificateExtendedKeyUsageArgs();
         }
 
         public Builder(CertificateExtendedKeyUsageArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.extendedKeyUsageObjectIdentifier = defaults.extendedKeyUsageObjectIdentifier;
-    	      this.extendedKeyUsageType = defaults.extendedKeyUsageType;
+            $ = new CertificateExtendedKeyUsageArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder extendedKeyUsageObjectIdentifier(@Nullable Output<String> extendedKeyUsageObjectIdentifier) {
-            this.extendedKeyUsageObjectIdentifier = extendedKeyUsageObjectIdentifier;
+            $.extendedKeyUsageObjectIdentifier = extendedKeyUsageObjectIdentifier;
             return this;
         }
-        public Builder extendedKeyUsageObjectIdentifier(@Nullable String extendedKeyUsageObjectIdentifier) {
-            this.extendedKeyUsageObjectIdentifier = Codegen.ofNullable(extendedKeyUsageObjectIdentifier);
-            return this;
+
+        public Builder extendedKeyUsageObjectIdentifier(String extendedKeyUsageObjectIdentifier) {
+            return extendedKeyUsageObjectIdentifier(Output.of(extendedKeyUsageObjectIdentifier));
         }
+
         public Builder extendedKeyUsageType(@Nullable Output<String> extendedKeyUsageType) {
-            this.extendedKeyUsageType = extendedKeyUsageType;
+            $.extendedKeyUsageType = extendedKeyUsageType;
             return this;
         }
-        public Builder extendedKeyUsageType(@Nullable String extendedKeyUsageType) {
-            this.extendedKeyUsageType = Codegen.ofNullable(extendedKeyUsageType);
-            return this;
-        }        public CertificateExtendedKeyUsageArgs build() {
-            return new CertificateExtendedKeyUsageArgs(extendedKeyUsageObjectIdentifier, extendedKeyUsageType);
+
+        public Builder extendedKeyUsageType(String extendedKeyUsageType) {
+            return extendedKeyUsageType(Output.of(extendedKeyUsageType));
+        }
+
+        public CertificateExtendedKeyUsageArgs build() {
+            return $;
         }
     }
+
 }

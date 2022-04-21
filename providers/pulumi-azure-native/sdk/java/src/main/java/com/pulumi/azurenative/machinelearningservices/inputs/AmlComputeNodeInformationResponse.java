@@ -22,7 +22,7 @@ public final class AmlComputeNodeInformationResponse extends com.pulumi.resource
      * 
      */
     @Import(name="nodeId", required=true)
-      private final String nodeId;
+    private String nodeId;
 
     public String nodeId() {
         return this.nodeId;
@@ -33,7 +33,7 @@ public final class AmlComputeNodeInformationResponse extends com.pulumi.resource
      * 
      */
     @Import(name="nodeState", required=true)
-      private final String nodeState;
+    private String nodeState;
 
     public String nodeState() {
         return this.nodeState;
@@ -44,7 +44,7 @@ public final class AmlComputeNodeInformationResponse extends com.pulumi.resource
      * 
      */
     @Import(name="port", required=true)
-      private final Double port;
+    private Double port;
 
     public Double port() {
         return this.port;
@@ -55,7 +55,7 @@ public final class AmlComputeNodeInformationResponse extends com.pulumi.resource
      * 
      */
     @Import(name="privateIpAddress", required=true)
-      private final String privateIpAddress;
+    private String privateIpAddress;
 
     public String privateIpAddress() {
         return this.privateIpAddress;
@@ -66,7 +66,7 @@ public final class AmlComputeNodeInformationResponse extends com.pulumi.resource
      * 
      */
     @Import(name="publicIpAddress", required=true)
-      private final String publicIpAddress;
+    private String publicIpAddress;
 
     public String publicIpAddress() {
         return this.publicIpAddress;
@@ -77,91 +77,80 @@ public final class AmlComputeNodeInformationResponse extends com.pulumi.resource
      * 
      */
     @Import(name="runId", required=true)
-      private final String runId;
+    private String runId;
 
     public String runId() {
         return this.runId;
     }
 
-    public AmlComputeNodeInformationResponse(
-        String nodeId,
-        String nodeState,
-        Double port,
-        String privateIpAddress,
-        String publicIpAddress,
-        String runId) {
-        this.nodeId = Objects.requireNonNull(nodeId, "expected parameter 'nodeId' to be non-null");
-        this.nodeState = Objects.requireNonNull(nodeState, "expected parameter 'nodeState' to be non-null");
-        this.port = Objects.requireNonNull(port, "expected parameter 'port' to be non-null");
-        this.privateIpAddress = Objects.requireNonNull(privateIpAddress, "expected parameter 'privateIpAddress' to be non-null");
-        this.publicIpAddress = Objects.requireNonNull(publicIpAddress, "expected parameter 'publicIpAddress' to be non-null");
-        this.runId = Objects.requireNonNull(runId, "expected parameter 'runId' to be non-null");
-    }
+    private AmlComputeNodeInformationResponse() {}
 
-    private AmlComputeNodeInformationResponse() {
-        this.nodeId = null;
-        this.nodeState = null;
-        this.port = null;
-        this.privateIpAddress = null;
-        this.publicIpAddress = null;
-        this.runId = null;
+    private AmlComputeNodeInformationResponse(AmlComputeNodeInformationResponse $) {
+        this.nodeId = $.nodeId;
+        this.nodeState = $.nodeState;
+        this.port = $.port;
+        this.privateIpAddress = $.privateIpAddress;
+        this.publicIpAddress = $.publicIpAddress;
+        this.runId = $.runId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AmlComputeNodeInformationResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String nodeId;
-        private String nodeState;
-        private Double port;
-        private String privateIpAddress;
-        private String publicIpAddress;
-        private String runId;
+        private AmlComputeNodeInformationResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AmlComputeNodeInformationResponse();
         }
 
         public Builder(AmlComputeNodeInformationResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.nodeId = defaults.nodeId;
-    	      this.nodeState = defaults.nodeState;
-    	      this.port = defaults.port;
-    	      this.privateIpAddress = defaults.privateIpAddress;
-    	      this.publicIpAddress = defaults.publicIpAddress;
-    	      this.runId = defaults.runId;
+            $ = new AmlComputeNodeInformationResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder nodeId(String nodeId) {
-            this.nodeId = Objects.requireNonNull(nodeId);
+            $.nodeId = nodeId;
             return this;
         }
+
         public Builder nodeState(String nodeState) {
-            this.nodeState = Objects.requireNonNull(nodeState);
+            $.nodeState = nodeState;
             return this;
         }
+
         public Builder port(Double port) {
-            this.port = Objects.requireNonNull(port);
+            $.port = port;
             return this;
         }
+
         public Builder privateIpAddress(String privateIpAddress) {
-            this.privateIpAddress = Objects.requireNonNull(privateIpAddress);
+            $.privateIpAddress = privateIpAddress;
             return this;
         }
+
         public Builder publicIpAddress(String publicIpAddress) {
-            this.publicIpAddress = Objects.requireNonNull(publicIpAddress);
+            $.publicIpAddress = publicIpAddress;
             return this;
         }
+
         public Builder runId(String runId) {
-            this.runId = Objects.requireNonNull(runId);
+            $.runId = runId;
             return this;
-        }        public AmlComputeNodeInformationResponse build() {
-            return new AmlComputeNodeInformationResponse(nodeId, nodeState, port, privateIpAddress, publicIpAddress, runId);
+        }
+
+        public AmlComputeNodeInformationResponse build() {
+            $.nodeId = Objects.requireNonNull($.nodeId, "expected parameter 'nodeId' to be non-null");
+            $.nodeState = Objects.requireNonNull($.nodeState, "expected parameter 'nodeState' to be non-null");
+            $.port = Objects.requireNonNull($.port, "expected parameter 'port' to be non-null");
+            $.privateIpAddress = Objects.requireNonNull($.privateIpAddress, "expected parameter 'privateIpAddress' to be non-null");
+            $.publicIpAddress = Objects.requireNonNull($.publicIpAddress, "expected parameter 'publicIpAddress' to be non-null");
+            $.runId = Objects.requireNonNull($.runId, "expected parameter 'runId' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,9 +5,9 @@ package com.pulumi.gcp.container.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class ClusterIpAllocationPolicyGetArgs extends com.pulumi.resources
      * 
      */
     @Import(name="clusterIpv4CidrBlock")
-      private final @Nullable Output<String> clusterIpv4CidrBlock;
+    private @Nullable Output<String> clusterIpv4CidrBlock;
 
-    public Output<String> clusterIpv4CidrBlock() {
-        return this.clusterIpv4CidrBlock == null ? Codegen.empty() : this.clusterIpv4CidrBlock;
+    public Optional<Output<String>> clusterIpv4CidrBlock() {
+        return Optional.ofNullable(this.clusterIpv4CidrBlock);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class ClusterIpAllocationPolicyGetArgs extends com.pulumi.resources
      * 
      */
     @Import(name="clusterSecondaryRangeName")
-      private final @Nullable Output<String> clusterSecondaryRangeName;
+    private @Nullable Output<String> clusterSecondaryRangeName;
 
-    public Output<String> clusterSecondaryRangeName() {
-        return this.clusterSecondaryRangeName == null ? Codegen.empty() : this.clusterSecondaryRangeName;
+    public Optional<Output<String>> clusterSecondaryRangeName() {
+        return Optional.ofNullable(this.clusterSecondaryRangeName);
     }
 
     /**
@@ -52,10 +52,10 @@ public final class ClusterIpAllocationPolicyGetArgs extends com.pulumi.resources
      * 
      */
     @Import(name="servicesIpv4CidrBlock")
-      private final @Nullable Output<String> servicesIpv4CidrBlock;
+    private @Nullable Output<String> servicesIpv4CidrBlock;
 
-    public Output<String> servicesIpv4CidrBlock() {
-        return this.servicesIpv4CidrBlock == null ? Codegen.empty() : this.servicesIpv4CidrBlock;
+    public Optional<Output<String>> servicesIpv4CidrBlock() {
+        return Optional.ofNullable(this.servicesIpv4CidrBlock);
     }
 
     /**
@@ -66,89 +66,78 @@ public final class ClusterIpAllocationPolicyGetArgs extends com.pulumi.resources
      * 
      */
     @Import(name="servicesSecondaryRangeName")
-      private final @Nullable Output<String> servicesSecondaryRangeName;
+    private @Nullable Output<String> servicesSecondaryRangeName;
 
-    public Output<String> servicesSecondaryRangeName() {
-        return this.servicesSecondaryRangeName == null ? Codegen.empty() : this.servicesSecondaryRangeName;
+    public Optional<Output<String>> servicesSecondaryRangeName() {
+        return Optional.ofNullable(this.servicesSecondaryRangeName);
     }
 
-    public ClusterIpAllocationPolicyGetArgs(
-        @Nullable Output<String> clusterIpv4CidrBlock,
-        @Nullable Output<String> clusterSecondaryRangeName,
-        @Nullable Output<String> servicesIpv4CidrBlock,
-        @Nullable Output<String> servicesSecondaryRangeName) {
-        this.clusterIpv4CidrBlock = clusterIpv4CidrBlock;
-        this.clusterSecondaryRangeName = clusterSecondaryRangeName;
-        this.servicesIpv4CidrBlock = servicesIpv4CidrBlock;
-        this.servicesSecondaryRangeName = servicesSecondaryRangeName;
-    }
+    private ClusterIpAllocationPolicyGetArgs() {}
 
-    private ClusterIpAllocationPolicyGetArgs() {
-        this.clusterIpv4CidrBlock = Codegen.empty();
-        this.clusterSecondaryRangeName = Codegen.empty();
-        this.servicesIpv4CidrBlock = Codegen.empty();
-        this.servicesSecondaryRangeName = Codegen.empty();
+    private ClusterIpAllocationPolicyGetArgs(ClusterIpAllocationPolicyGetArgs $) {
+        this.clusterIpv4CidrBlock = $.clusterIpv4CidrBlock;
+        this.clusterSecondaryRangeName = $.clusterSecondaryRangeName;
+        this.servicesIpv4CidrBlock = $.servicesIpv4CidrBlock;
+        this.servicesSecondaryRangeName = $.servicesSecondaryRangeName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ClusterIpAllocationPolicyGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> clusterIpv4CidrBlock;
-        private @Nullable Output<String> clusterSecondaryRangeName;
-        private @Nullable Output<String> servicesIpv4CidrBlock;
-        private @Nullable Output<String> servicesSecondaryRangeName;
+        private ClusterIpAllocationPolicyGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ClusterIpAllocationPolicyGetArgs();
         }
 
         public Builder(ClusterIpAllocationPolicyGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.clusterIpv4CidrBlock = defaults.clusterIpv4CidrBlock;
-    	      this.clusterSecondaryRangeName = defaults.clusterSecondaryRangeName;
-    	      this.servicesIpv4CidrBlock = defaults.servicesIpv4CidrBlock;
-    	      this.servicesSecondaryRangeName = defaults.servicesSecondaryRangeName;
+            $ = new ClusterIpAllocationPolicyGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder clusterIpv4CidrBlock(@Nullable Output<String> clusterIpv4CidrBlock) {
-            this.clusterIpv4CidrBlock = clusterIpv4CidrBlock;
+            $.clusterIpv4CidrBlock = clusterIpv4CidrBlock;
             return this;
         }
-        public Builder clusterIpv4CidrBlock(@Nullable String clusterIpv4CidrBlock) {
-            this.clusterIpv4CidrBlock = Codegen.ofNullable(clusterIpv4CidrBlock);
-            return this;
+
+        public Builder clusterIpv4CidrBlock(String clusterIpv4CidrBlock) {
+            return clusterIpv4CidrBlock(Output.of(clusterIpv4CidrBlock));
         }
+
         public Builder clusterSecondaryRangeName(@Nullable Output<String> clusterSecondaryRangeName) {
-            this.clusterSecondaryRangeName = clusterSecondaryRangeName;
+            $.clusterSecondaryRangeName = clusterSecondaryRangeName;
             return this;
         }
-        public Builder clusterSecondaryRangeName(@Nullable String clusterSecondaryRangeName) {
-            this.clusterSecondaryRangeName = Codegen.ofNullable(clusterSecondaryRangeName);
-            return this;
+
+        public Builder clusterSecondaryRangeName(String clusterSecondaryRangeName) {
+            return clusterSecondaryRangeName(Output.of(clusterSecondaryRangeName));
         }
+
         public Builder servicesIpv4CidrBlock(@Nullable Output<String> servicesIpv4CidrBlock) {
-            this.servicesIpv4CidrBlock = servicesIpv4CidrBlock;
+            $.servicesIpv4CidrBlock = servicesIpv4CidrBlock;
             return this;
         }
-        public Builder servicesIpv4CidrBlock(@Nullable String servicesIpv4CidrBlock) {
-            this.servicesIpv4CidrBlock = Codegen.ofNullable(servicesIpv4CidrBlock);
-            return this;
+
+        public Builder servicesIpv4CidrBlock(String servicesIpv4CidrBlock) {
+            return servicesIpv4CidrBlock(Output.of(servicesIpv4CidrBlock));
         }
+
         public Builder servicesSecondaryRangeName(@Nullable Output<String> servicesSecondaryRangeName) {
-            this.servicesSecondaryRangeName = servicesSecondaryRangeName;
+            $.servicesSecondaryRangeName = servicesSecondaryRangeName;
             return this;
         }
-        public Builder servicesSecondaryRangeName(@Nullable String servicesSecondaryRangeName) {
-            this.servicesSecondaryRangeName = Codegen.ofNullable(servicesSecondaryRangeName);
-            return this;
-        }        public ClusterIpAllocationPolicyGetArgs build() {
-            return new ClusterIpAllocationPolicyGetArgs(clusterIpv4CidrBlock, clusterSecondaryRangeName, servicesIpv4CidrBlock, servicesSecondaryRangeName);
+
+        public Builder servicesSecondaryRangeName(String servicesSecondaryRangeName) {
+            return servicesSecondaryRangeName(Output.of(servicesSecondaryRangeName));
+        }
+
+        public ClusterIpAllocationPolicyGetArgs build() {
+            return $;
         }
     }
+
 }

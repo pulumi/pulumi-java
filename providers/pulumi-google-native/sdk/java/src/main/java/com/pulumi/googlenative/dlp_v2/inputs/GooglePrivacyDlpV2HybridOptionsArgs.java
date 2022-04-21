@@ -5,12 +5,12 @@ package com.pulumi.googlenative.dlp_v2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2TableOptionsArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +27,10 @@ public final class GooglePrivacyDlpV2HybridOptionsArgs extends com.pulumi.resour
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -38,10 +38,10 @@ public final class GooglePrivacyDlpV2HybridOptionsArgs extends com.pulumi.resour
      * 
      */
     @Import(name="labels")
-      private final @Nullable Output<Map<String,String>> labels;
+    private @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> labels() {
-        return this.labels == null ? Codegen.empty() : this.labels;
+    public Optional<Output<Map<String,String>>> labels() {
+        return Optional.ofNullable(this.labels);
     }
 
     /**
@@ -49,10 +49,10 @@ public final class GooglePrivacyDlpV2HybridOptionsArgs extends com.pulumi.resour
      * 
      */
     @Import(name="requiredFindingLabelKeys")
-      private final @Nullable Output<List<String>> requiredFindingLabelKeys;
+    private @Nullable Output<List<String>> requiredFindingLabelKeys;
 
-    public Output<List<String>> requiredFindingLabelKeys() {
-        return this.requiredFindingLabelKeys == null ? Codegen.empty() : this.requiredFindingLabelKeys;
+    public Optional<Output<List<String>>> requiredFindingLabelKeys() {
+        return Optional.ofNullable(this.requiredFindingLabelKeys);
     }
 
     /**
@@ -60,92 +60,82 @@ public final class GooglePrivacyDlpV2HybridOptionsArgs extends com.pulumi.resour
      * 
      */
     @Import(name="tableOptions")
-      private final @Nullable Output<GooglePrivacyDlpV2TableOptionsArgs> tableOptions;
+    private @Nullable Output<GooglePrivacyDlpV2TableOptionsArgs> tableOptions;
 
-    public Output<GooglePrivacyDlpV2TableOptionsArgs> tableOptions() {
-        return this.tableOptions == null ? Codegen.empty() : this.tableOptions;
+    public Optional<Output<GooglePrivacyDlpV2TableOptionsArgs>> tableOptions() {
+        return Optional.ofNullable(this.tableOptions);
     }
 
-    public GooglePrivacyDlpV2HybridOptionsArgs(
-        @Nullable Output<String> description,
-        @Nullable Output<Map<String,String>> labels,
-        @Nullable Output<List<String>> requiredFindingLabelKeys,
-        @Nullable Output<GooglePrivacyDlpV2TableOptionsArgs> tableOptions) {
-        this.description = description;
-        this.labels = labels;
-        this.requiredFindingLabelKeys = requiredFindingLabelKeys;
-        this.tableOptions = tableOptions;
-    }
+    private GooglePrivacyDlpV2HybridOptionsArgs() {}
 
-    private GooglePrivacyDlpV2HybridOptionsArgs() {
-        this.description = Codegen.empty();
-        this.labels = Codegen.empty();
-        this.requiredFindingLabelKeys = Codegen.empty();
-        this.tableOptions = Codegen.empty();
+    private GooglePrivacyDlpV2HybridOptionsArgs(GooglePrivacyDlpV2HybridOptionsArgs $) {
+        this.description = $.description;
+        this.labels = $.labels;
+        this.requiredFindingLabelKeys = $.requiredFindingLabelKeys;
+        this.tableOptions = $.tableOptions;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GooglePrivacyDlpV2HybridOptionsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> description;
-        private @Nullable Output<Map<String,String>> labels;
-        private @Nullable Output<List<String>> requiredFindingLabelKeys;
-        private @Nullable Output<GooglePrivacyDlpV2TableOptionsArgs> tableOptions;
+        private GooglePrivacyDlpV2HybridOptionsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GooglePrivacyDlpV2HybridOptionsArgs();
         }
 
         public Builder(GooglePrivacyDlpV2HybridOptionsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.description = defaults.description;
-    	      this.labels = defaults.labels;
-    	      this.requiredFindingLabelKeys = defaults.requiredFindingLabelKeys;
-    	      this.tableOptions = defaults.tableOptions;
+            $ = new GooglePrivacyDlpV2HybridOptionsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
-            this.labels = labels;
+            $.labels = labels;
             return this;
         }
-        public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Codegen.ofNullable(labels);
-            return this;
+
+        public Builder labels(Map<String,String> labels) {
+            return labels(Output.of(labels));
         }
+
         public Builder requiredFindingLabelKeys(@Nullable Output<List<String>> requiredFindingLabelKeys) {
-            this.requiredFindingLabelKeys = requiredFindingLabelKeys;
+            $.requiredFindingLabelKeys = requiredFindingLabelKeys;
             return this;
         }
-        public Builder requiredFindingLabelKeys(@Nullable List<String> requiredFindingLabelKeys) {
-            this.requiredFindingLabelKeys = Codegen.ofNullable(requiredFindingLabelKeys);
-            return this;
+
+        public Builder requiredFindingLabelKeys(List<String> requiredFindingLabelKeys) {
+            return requiredFindingLabelKeys(Output.of(requiredFindingLabelKeys));
         }
+
         public Builder requiredFindingLabelKeys(String... requiredFindingLabelKeys) {
             return requiredFindingLabelKeys(List.of(requiredFindingLabelKeys));
         }
+
         public Builder tableOptions(@Nullable Output<GooglePrivacyDlpV2TableOptionsArgs> tableOptions) {
-            this.tableOptions = tableOptions;
+            $.tableOptions = tableOptions;
             return this;
         }
-        public Builder tableOptions(@Nullable GooglePrivacyDlpV2TableOptionsArgs tableOptions) {
-            this.tableOptions = Codegen.ofNullable(tableOptions);
-            return this;
-        }        public GooglePrivacyDlpV2HybridOptionsArgs build() {
-            return new GooglePrivacyDlpV2HybridOptionsArgs(description, labels, requiredFindingLabelKeys, tableOptions);
+
+        public Builder tableOptions(GooglePrivacyDlpV2TableOptionsArgs tableOptions) {
+            return tableOptions(Output.of(tableOptions));
+        }
+
+        public GooglePrivacyDlpV2HybridOptionsArgs build() {
+            return $;
         }
     }
+
 }

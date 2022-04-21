@@ -7,9 +7,9 @@ import com.pulumi.azurenative.marketplace.enums.Accessibility;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,49 +22,48 @@ public final class PlanArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="accessibility")
-      private final @Nullable Output<Either<String,Accessibility>> accessibility;
+    private @Nullable Output<Either<String,Accessibility>> accessibility;
 
-    public Output<Either<String,Accessibility>> accessibility() {
-        return this.accessibility == null ? Codegen.empty() : this.accessibility;
+    public Optional<Output<Either<String,Accessibility>>> accessibility() {
+        return Optional.ofNullable(this.accessibility);
     }
 
-    public PlanArgs(@Nullable Output<Either<String,Accessibility>> accessibility) {
-        this.accessibility = accessibility;
-    }
+    private PlanArgs() {}
 
-    private PlanArgs() {
-        this.accessibility = Codegen.empty();
+    private PlanArgs(PlanArgs $) {
+        this.accessibility = $.accessibility;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PlanArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Either<String,Accessibility>> accessibility;
+        private PlanArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PlanArgs();
         }
 
         public Builder(PlanArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accessibility = defaults.accessibility;
+            $ = new PlanArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder accessibility(@Nullable Output<Either<String,Accessibility>> accessibility) {
-            this.accessibility = accessibility;
+            $.accessibility = accessibility;
             return this;
         }
-        public Builder accessibility(@Nullable Either<String,Accessibility> accessibility) {
-            this.accessibility = Codegen.ofNullable(accessibility);
-            return this;
-        }        public PlanArgs build() {
-            return new PlanArgs(accessibility);
+
+        public Builder accessibility(Either<String,Accessibility> accessibility) {
+            return accessibility(Output.of(accessibility));
+        }
+
+        public PlanArgs build() {
+            return $;
         }
     }
+
 }

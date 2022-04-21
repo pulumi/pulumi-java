@@ -17,45 +17,45 @@ public final class GetPeerAsnArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="peerAsnName", required=true)
-      private final String peerAsnName;
+    private String peerAsnName;
 
     public String peerAsnName() {
         return this.peerAsnName;
     }
 
-    public GetPeerAsnArgs(String peerAsnName) {
-        this.peerAsnName = Objects.requireNonNull(peerAsnName, "expected parameter 'peerAsnName' to be non-null");
-    }
+    private GetPeerAsnArgs() {}
 
-    private GetPeerAsnArgs() {
-        this.peerAsnName = null;
+    private GetPeerAsnArgs(GetPeerAsnArgs $) {
+        this.peerAsnName = $.peerAsnName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetPeerAsnArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String peerAsnName;
+        private GetPeerAsnArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetPeerAsnArgs();
         }
 
         public Builder(GetPeerAsnArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.peerAsnName = defaults.peerAsnName;
+            $ = new GetPeerAsnArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder peerAsnName(String peerAsnName) {
-            this.peerAsnName = Objects.requireNonNull(peerAsnName);
+            $.peerAsnName = peerAsnName;
             return this;
-        }        public GetPeerAsnArgs build() {
-            return new GetPeerAsnArgs(peerAsnName);
+        }
+
+        public GetPeerAsnArgs build() {
+            $.peerAsnName = Objects.requireNonNull($.peerAsnName, "expected parameter 'peerAsnName' to be non-null");
+            return $;
         }
     }
+
 }

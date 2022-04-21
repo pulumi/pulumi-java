@@ -13,62 +13,59 @@ public final class LightHouseAuthorizationResponse extends com.pulumi.resources.
     public static final LightHouseAuthorizationResponse Empty = new LightHouseAuthorizationResponse();
 
     @Import(name="principalId", required=true)
-      private final String principalId;
+    private String principalId;
 
     public String principalId() {
         return this.principalId;
     }
 
     @Import(name="roleDefinitionId", required=true)
-      private final String roleDefinitionId;
+    private String roleDefinitionId;
 
     public String roleDefinitionId() {
         return this.roleDefinitionId;
     }
 
-    public LightHouseAuthorizationResponse(
-        String principalId,
-        String roleDefinitionId) {
-        this.principalId = Objects.requireNonNull(principalId, "expected parameter 'principalId' to be non-null");
-        this.roleDefinitionId = Objects.requireNonNull(roleDefinitionId, "expected parameter 'roleDefinitionId' to be non-null");
-    }
+    private LightHouseAuthorizationResponse() {}
 
-    private LightHouseAuthorizationResponse() {
-        this.principalId = null;
-        this.roleDefinitionId = null;
+    private LightHouseAuthorizationResponse(LightHouseAuthorizationResponse $) {
+        this.principalId = $.principalId;
+        this.roleDefinitionId = $.roleDefinitionId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LightHouseAuthorizationResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String principalId;
-        private String roleDefinitionId;
+        private LightHouseAuthorizationResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new LightHouseAuthorizationResponse();
         }
 
         public Builder(LightHouseAuthorizationResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.principalId = defaults.principalId;
-    	      this.roleDefinitionId = defaults.roleDefinitionId;
+            $ = new LightHouseAuthorizationResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder principalId(String principalId) {
-            this.principalId = Objects.requireNonNull(principalId);
+            $.principalId = principalId;
             return this;
         }
+
         public Builder roleDefinitionId(String roleDefinitionId) {
-            this.roleDefinitionId = Objects.requireNonNull(roleDefinitionId);
+            $.roleDefinitionId = roleDefinitionId;
             return this;
-        }        public LightHouseAuthorizationResponse build() {
-            return new LightHouseAuthorizationResponse(principalId, roleDefinitionId);
+        }
+
+        public LightHouseAuthorizationResponse build() {
+            $.principalId = Objects.requireNonNull($.principalId, "expected parameter 'principalId' to be non-null");
+            $.roleDefinitionId = Objects.requireNonNull($.roleDefinitionId, "expected parameter 'roleDefinitionId' to be non-null");
+            return $;
         }
     }
+
 }

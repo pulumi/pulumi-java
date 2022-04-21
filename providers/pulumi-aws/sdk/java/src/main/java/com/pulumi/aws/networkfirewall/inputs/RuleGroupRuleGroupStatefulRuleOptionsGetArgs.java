@@ -5,7 +5,6 @@ package com.pulumi.aws.networkfirewall.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,49 +18,49 @@ public final class RuleGroupRuleGroupStatefulRuleOptionsGetArgs extends com.pulu
      * 
      */
     @Import(name="ruleOrder", required=true)
-      private final Output<String> ruleOrder;
+    private Output<String> ruleOrder;
 
     public Output<String> ruleOrder() {
         return this.ruleOrder;
     }
 
-    public RuleGroupRuleGroupStatefulRuleOptionsGetArgs(Output<String> ruleOrder) {
-        this.ruleOrder = Objects.requireNonNull(ruleOrder, "expected parameter 'ruleOrder' to be non-null");
-    }
+    private RuleGroupRuleGroupStatefulRuleOptionsGetArgs() {}
 
-    private RuleGroupRuleGroupStatefulRuleOptionsGetArgs() {
-        this.ruleOrder = Codegen.empty();
+    private RuleGroupRuleGroupStatefulRuleOptionsGetArgs(RuleGroupRuleGroupStatefulRuleOptionsGetArgs $) {
+        this.ruleOrder = $.ruleOrder;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RuleGroupRuleGroupStatefulRuleOptionsGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> ruleOrder;
+        private RuleGroupRuleGroupStatefulRuleOptionsGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RuleGroupRuleGroupStatefulRuleOptionsGetArgs();
         }
 
         public Builder(RuleGroupRuleGroupStatefulRuleOptionsGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.ruleOrder = defaults.ruleOrder;
+            $ = new RuleGroupRuleGroupStatefulRuleOptionsGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder ruleOrder(Output<String> ruleOrder) {
-            this.ruleOrder = Objects.requireNonNull(ruleOrder);
+            $.ruleOrder = ruleOrder;
             return this;
         }
+
         public Builder ruleOrder(String ruleOrder) {
-            this.ruleOrder = Output.of(Objects.requireNonNull(ruleOrder));
-            return this;
-        }        public RuleGroupRuleGroupStatefulRuleOptionsGetArgs build() {
-            return new RuleGroupRuleGroupStatefulRuleOptionsGetArgs(ruleOrder);
+            return ruleOrder(Output.of(ruleOrder));
+        }
+
+        public RuleGroupRuleGroupStatefulRuleOptionsGetArgs build() {
+            $.ruleOrder = Objects.requireNonNull($.ruleOrder, "expected parameter 'ruleOrder' to be non-null");
+            return $;
         }
     }
+
 }

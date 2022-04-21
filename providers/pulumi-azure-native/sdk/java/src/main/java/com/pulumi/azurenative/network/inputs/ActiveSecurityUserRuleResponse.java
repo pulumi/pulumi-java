@@ -28,10 +28,10 @@ public final class ActiveSecurityUserRuleResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="commitTime")
-      private final @Nullable String commitTime;
+    private @Nullable String commitTime;
 
     public Optional<String> commitTime() {
-        return this.commitTime == null ? Optional.empty() : Optional.ofNullable(this.commitTime);
+        return Optional.ofNullable(this.commitTime);
     }
 
     /**
@@ -39,10 +39,10 @@ public final class ActiveSecurityUserRuleResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="configurationDescription")
-      private final @Nullable String configurationDescription;
+    private @Nullable String configurationDescription;
 
     public Optional<String> configurationDescription() {
-        return this.configurationDescription == null ? Optional.empty() : Optional.ofNullable(this.configurationDescription);
+        return Optional.ofNullable(this.configurationDescription);
     }
 
     /**
@@ -50,10 +50,10 @@ public final class ActiveSecurityUserRuleResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="configurationDisplayName")
-      private final @Nullable String configurationDisplayName;
+    private @Nullable String configurationDisplayName;
 
     public Optional<String> configurationDisplayName() {
-        return this.configurationDisplayName == null ? Optional.empty() : Optional.ofNullable(this.configurationDisplayName);
+        return Optional.ofNullable(this.configurationDisplayName);
     }
 
     /**
@@ -61,10 +61,10 @@ public final class ActiveSecurityUserRuleResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="description")
-      private final @Nullable String description;
+    private @Nullable String description;
 
     public Optional<String> description() {
-        return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -72,10 +72,10 @@ public final class ActiveSecurityUserRuleResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="destinationPortRanges")
-      private final @Nullable List<String> destinationPortRanges;
+    private @Nullable List<String> destinationPortRanges;
 
-    public List<String> destinationPortRanges() {
-        return this.destinationPortRanges == null ? List.of() : this.destinationPortRanges;
+    public Optional<List<String>> destinationPortRanges() {
+        return Optional.ofNullable(this.destinationPortRanges);
     }
 
     /**
@@ -83,10 +83,10 @@ public final class ActiveSecurityUserRuleResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="destinations")
-      private final @Nullable List<AddressPrefixItemResponse> destinations;
+    private @Nullable List<AddressPrefixItemResponse> destinations;
 
-    public List<AddressPrefixItemResponse> destinations() {
-        return this.destinations == null ? List.of() : this.destinations;
+    public Optional<List<AddressPrefixItemResponse>> destinations() {
+        return Optional.ofNullable(this.destinations);
     }
 
     /**
@@ -94,7 +94,7 @@ public final class ActiveSecurityUserRuleResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="direction", required=true)
-      private final String direction;
+    private String direction;
 
     public String direction() {
         return this.direction;
@@ -105,10 +105,10 @@ public final class ActiveSecurityUserRuleResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="displayName")
-      private final @Nullable String displayName;
+    private @Nullable String displayName;
 
     public Optional<String> displayName() {
-        return this.displayName == null ? Optional.empty() : Optional.ofNullable(this.displayName);
+        return Optional.ofNullable(this.displayName);
     }
 
     /**
@@ -116,10 +116,10 @@ public final class ActiveSecurityUserRuleResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="id")
-      private final @Nullable String id;
+    private @Nullable String id;
 
     public Optional<String> id() {
-        return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
+        return Optional.ofNullable(this.id);
     }
 
     /**
@@ -128,7 +128,7 @@ public final class ActiveSecurityUserRuleResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="kind", required=true)
-      private final String kind;
+    private String kind;
 
     public String kind() {
         return this.kind;
@@ -139,7 +139,7 @@ public final class ActiveSecurityUserRuleResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="protocol", required=true)
-      private final String protocol;
+    private String protocol;
 
     public String protocol() {
         return this.protocol;
@@ -150,7 +150,7 @@ public final class ActiveSecurityUserRuleResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="provisioningState", required=true)
-      private final String provisioningState;
+    private String provisioningState;
 
     public String provisioningState() {
         return this.provisioningState;
@@ -161,10 +161,10 @@ public final class ActiveSecurityUserRuleResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="region")
-      private final @Nullable String region;
+    private @Nullable String region;
 
     public Optional<String> region() {
-        return this.region == null ? Optional.empty() : Optional.ofNullable(this.region);
+        return Optional.ofNullable(this.region);
     }
 
     /**
@@ -172,10 +172,10 @@ public final class ActiveSecurityUserRuleResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="ruleCollectionAppliesToGroups")
-      private final @Nullable List<NetworkManagerSecurityGroupItemResponse> ruleCollectionAppliesToGroups;
+    private @Nullable List<NetworkManagerSecurityGroupItemResponse> ruleCollectionAppliesToGroups;
 
-    public List<NetworkManagerSecurityGroupItemResponse> ruleCollectionAppliesToGroups() {
-        return this.ruleCollectionAppliesToGroups == null ? List.of() : this.ruleCollectionAppliesToGroups;
+    public Optional<List<NetworkManagerSecurityGroupItemResponse>> ruleCollectionAppliesToGroups() {
+        return Optional.ofNullable(this.ruleCollectionAppliesToGroups);
     }
 
     /**
@@ -183,10 +183,10 @@ public final class ActiveSecurityUserRuleResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="ruleCollectionDescription")
-      private final @Nullable String ruleCollectionDescription;
+    private @Nullable String ruleCollectionDescription;
 
     public Optional<String> ruleCollectionDescription() {
-        return this.ruleCollectionDescription == null ? Optional.empty() : Optional.ofNullable(this.ruleCollectionDescription);
+        return Optional.ofNullable(this.ruleCollectionDescription);
     }
 
     /**
@@ -194,10 +194,10 @@ public final class ActiveSecurityUserRuleResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="ruleCollectionDisplayName")
-      private final @Nullable String ruleCollectionDisplayName;
+    private @Nullable String ruleCollectionDisplayName;
 
     public Optional<String> ruleCollectionDisplayName() {
-        return this.ruleCollectionDisplayName == null ? Optional.empty() : Optional.ofNullable(this.ruleCollectionDisplayName);
+        return Optional.ofNullable(this.ruleCollectionDisplayName);
     }
 
     /**
@@ -205,10 +205,10 @@ public final class ActiveSecurityUserRuleResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="ruleGroups")
-      private final @Nullable List<ConfigurationGroupResponse> ruleGroups;
+    private @Nullable List<ConfigurationGroupResponse> ruleGroups;
 
-    public List<ConfigurationGroupResponse> ruleGroups() {
-        return this.ruleGroups == null ? List.of() : this.ruleGroups;
+    public Optional<List<ConfigurationGroupResponse>> ruleGroups() {
+        return Optional.ofNullable(this.ruleGroups);
     }
 
     /**
@@ -216,10 +216,10 @@ public final class ActiveSecurityUserRuleResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="sourcePortRanges")
-      private final @Nullable List<String> sourcePortRanges;
+    private @Nullable List<String> sourcePortRanges;
 
-    public List<String> sourcePortRanges() {
-        return this.sourcePortRanges == null ? List.of() : this.sourcePortRanges;
+    public Optional<List<String>> sourcePortRanges() {
+        return Optional.ofNullable(this.sourcePortRanges);
     }
 
     /**
@@ -227,226 +227,180 @@ public final class ActiveSecurityUserRuleResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="sources")
-      private final @Nullable List<AddressPrefixItemResponse> sources;
+    private @Nullable List<AddressPrefixItemResponse> sources;
 
-    public List<AddressPrefixItemResponse> sources() {
-        return this.sources == null ? List.of() : this.sources;
+    public Optional<List<AddressPrefixItemResponse>> sources() {
+        return Optional.ofNullable(this.sources);
     }
 
-    public ActiveSecurityUserRuleResponse(
-        @Nullable String commitTime,
-        @Nullable String configurationDescription,
-        @Nullable String configurationDisplayName,
-        @Nullable String description,
-        @Nullable List<String> destinationPortRanges,
-        @Nullable List<AddressPrefixItemResponse> destinations,
-        String direction,
-        @Nullable String displayName,
-        @Nullable String id,
-        String kind,
-        String protocol,
-        String provisioningState,
-        @Nullable String region,
-        @Nullable List<NetworkManagerSecurityGroupItemResponse> ruleCollectionAppliesToGroups,
-        @Nullable String ruleCollectionDescription,
-        @Nullable String ruleCollectionDisplayName,
-        @Nullable List<ConfigurationGroupResponse> ruleGroups,
-        @Nullable List<String> sourcePortRanges,
-        @Nullable List<AddressPrefixItemResponse> sources) {
-        this.commitTime = commitTime;
-        this.configurationDescription = configurationDescription;
-        this.configurationDisplayName = configurationDisplayName;
-        this.description = description;
-        this.destinationPortRanges = destinationPortRanges;
-        this.destinations = destinations;
-        this.direction = Objects.requireNonNull(direction, "expected parameter 'direction' to be non-null");
-        this.displayName = displayName;
-        this.id = id;
-        this.kind = Codegen.stringProp("kind").arg(kind).require();
-        this.protocol = Objects.requireNonNull(protocol, "expected parameter 'protocol' to be non-null");
-        this.provisioningState = Objects.requireNonNull(provisioningState, "expected parameter 'provisioningState' to be non-null");
-        this.region = region;
-        this.ruleCollectionAppliesToGroups = ruleCollectionAppliesToGroups;
-        this.ruleCollectionDescription = ruleCollectionDescription;
-        this.ruleCollectionDisplayName = ruleCollectionDisplayName;
-        this.ruleGroups = ruleGroups;
-        this.sourcePortRanges = sourcePortRanges;
-        this.sources = sources;
-    }
+    private ActiveSecurityUserRuleResponse() {}
 
-    private ActiveSecurityUserRuleResponse() {
-        this.commitTime = null;
-        this.configurationDescription = null;
-        this.configurationDisplayName = null;
-        this.description = null;
-        this.destinationPortRanges = List.of();
-        this.destinations = List.of();
-        this.direction = null;
-        this.displayName = null;
-        this.id = null;
-        this.kind = null;
-        this.protocol = null;
-        this.provisioningState = null;
-        this.region = null;
-        this.ruleCollectionAppliesToGroups = List.of();
-        this.ruleCollectionDescription = null;
-        this.ruleCollectionDisplayName = null;
-        this.ruleGroups = List.of();
-        this.sourcePortRanges = List.of();
-        this.sources = List.of();
+    private ActiveSecurityUserRuleResponse(ActiveSecurityUserRuleResponse $) {
+        this.commitTime = $.commitTime;
+        this.configurationDescription = $.configurationDescription;
+        this.configurationDisplayName = $.configurationDisplayName;
+        this.description = $.description;
+        this.destinationPortRanges = $.destinationPortRanges;
+        this.destinations = $.destinations;
+        this.direction = $.direction;
+        this.displayName = $.displayName;
+        this.id = $.id;
+        this.kind = $.kind;
+        this.protocol = $.protocol;
+        this.provisioningState = $.provisioningState;
+        this.region = $.region;
+        this.ruleCollectionAppliesToGroups = $.ruleCollectionAppliesToGroups;
+        this.ruleCollectionDescription = $.ruleCollectionDescription;
+        this.ruleCollectionDisplayName = $.ruleCollectionDisplayName;
+        this.ruleGroups = $.ruleGroups;
+        this.sourcePortRanges = $.sourcePortRanges;
+        this.sources = $.sources;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ActiveSecurityUserRuleResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String commitTime;
-        private @Nullable String configurationDescription;
-        private @Nullable String configurationDisplayName;
-        private @Nullable String description;
-        private @Nullable List<String> destinationPortRanges;
-        private @Nullable List<AddressPrefixItemResponse> destinations;
-        private String direction;
-        private @Nullable String displayName;
-        private @Nullable String id;
-        private String kind;
-        private String protocol;
-        private String provisioningState;
-        private @Nullable String region;
-        private @Nullable List<NetworkManagerSecurityGroupItemResponse> ruleCollectionAppliesToGroups;
-        private @Nullable String ruleCollectionDescription;
-        private @Nullable String ruleCollectionDisplayName;
-        private @Nullable List<ConfigurationGroupResponse> ruleGroups;
-        private @Nullable List<String> sourcePortRanges;
-        private @Nullable List<AddressPrefixItemResponse> sources;
+        private ActiveSecurityUserRuleResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ActiveSecurityUserRuleResponse();
         }
 
         public Builder(ActiveSecurityUserRuleResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.commitTime = defaults.commitTime;
-    	      this.configurationDescription = defaults.configurationDescription;
-    	      this.configurationDisplayName = defaults.configurationDisplayName;
-    	      this.description = defaults.description;
-    	      this.destinationPortRanges = defaults.destinationPortRanges;
-    	      this.destinations = defaults.destinations;
-    	      this.direction = defaults.direction;
-    	      this.displayName = defaults.displayName;
-    	      this.id = defaults.id;
-    	      this.kind = defaults.kind;
-    	      this.protocol = defaults.protocol;
-    	      this.provisioningState = defaults.provisioningState;
-    	      this.region = defaults.region;
-    	      this.ruleCollectionAppliesToGroups = defaults.ruleCollectionAppliesToGroups;
-    	      this.ruleCollectionDescription = defaults.ruleCollectionDescription;
-    	      this.ruleCollectionDisplayName = defaults.ruleCollectionDisplayName;
-    	      this.ruleGroups = defaults.ruleGroups;
-    	      this.sourcePortRanges = defaults.sourcePortRanges;
-    	      this.sources = defaults.sources;
+            $ = new ActiveSecurityUserRuleResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder commitTime(@Nullable String commitTime) {
-            this.commitTime = commitTime;
+            $.commitTime = commitTime;
             return this;
         }
+
         public Builder configurationDescription(@Nullable String configurationDescription) {
-            this.configurationDescription = configurationDescription;
+            $.configurationDescription = configurationDescription;
             return this;
         }
+
         public Builder configurationDisplayName(@Nullable String configurationDisplayName) {
-            this.configurationDisplayName = configurationDisplayName;
+            $.configurationDisplayName = configurationDisplayName;
             return this;
         }
+
         public Builder description(@Nullable String description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
+
         public Builder destinationPortRanges(@Nullable List<String> destinationPortRanges) {
-            this.destinationPortRanges = destinationPortRanges;
+            $.destinationPortRanges = destinationPortRanges;
             return this;
         }
+
         public Builder destinationPortRanges(String... destinationPortRanges) {
             return destinationPortRanges(List.of(destinationPortRanges));
         }
+
         public Builder destinations(@Nullable List<AddressPrefixItemResponse> destinations) {
-            this.destinations = destinations;
+            $.destinations = destinations;
             return this;
         }
+
         public Builder destinations(AddressPrefixItemResponse... destinations) {
             return destinations(List.of(destinations));
         }
+
         public Builder direction(String direction) {
-            this.direction = Objects.requireNonNull(direction);
+            $.direction = direction;
             return this;
         }
+
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = displayName;
+            $.displayName = displayName;
             return this;
         }
+
         public Builder id(@Nullable String id) {
-            this.id = id;
+            $.id = id;
             return this;
         }
+
         public Builder kind(String kind) {
-            this.kind = Objects.requireNonNull(kind);
+            $.kind = kind;
             return this;
         }
+
         public Builder protocol(String protocol) {
-            this.protocol = Objects.requireNonNull(protocol);
+            $.protocol = protocol;
             return this;
         }
+
         public Builder provisioningState(String provisioningState) {
-            this.provisioningState = Objects.requireNonNull(provisioningState);
+            $.provisioningState = provisioningState;
             return this;
         }
+
         public Builder region(@Nullable String region) {
-            this.region = region;
+            $.region = region;
             return this;
         }
+
         public Builder ruleCollectionAppliesToGroups(@Nullable List<NetworkManagerSecurityGroupItemResponse> ruleCollectionAppliesToGroups) {
-            this.ruleCollectionAppliesToGroups = ruleCollectionAppliesToGroups;
+            $.ruleCollectionAppliesToGroups = ruleCollectionAppliesToGroups;
             return this;
         }
+
         public Builder ruleCollectionAppliesToGroups(NetworkManagerSecurityGroupItemResponse... ruleCollectionAppliesToGroups) {
             return ruleCollectionAppliesToGroups(List.of(ruleCollectionAppliesToGroups));
         }
+
         public Builder ruleCollectionDescription(@Nullable String ruleCollectionDescription) {
-            this.ruleCollectionDescription = ruleCollectionDescription;
+            $.ruleCollectionDescription = ruleCollectionDescription;
             return this;
         }
+
         public Builder ruleCollectionDisplayName(@Nullable String ruleCollectionDisplayName) {
-            this.ruleCollectionDisplayName = ruleCollectionDisplayName;
+            $.ruleCollectionDisplayName = ruleCollectionDisplayName;
             return this;
         }
+
         public Builder ruleGroups(@Nullable List<ConfigurationGroupResponse> ruleGroups) {
-            this.ruleGroups = ruleGroups;
+            $.ruleGroups = ruleGroups;
             return this;
         }
+
         public Builder ruleGroups(ConfigurationGroupResponse... ruleGroups) {
             return ruleGroups(List.of(ruleGroups));
         }
+
         public Builder sourcePortRanges(@Nullable List<String> sourcePortRanges) {
-            this.sourcePortRanges = sourcePortRanges;
+            $.sourcePortRanges = sourcePortRanges;
             return this;
         }
+
         public Builder sourcePortRanges(String... sourcePortRanges) {
             return sourcePortRanges(List.of(sourcePortRanges));
         }
+
         public Builder sources(@Nullable List<AddressPrefixItemResponse> sources) {
-            this.sources = sources;
+            $.sources = sources;
             return this;
         }
+
         public Builder sources(AddressPrefixItemResponse... sources) {
             return sources(List.of(sources));
-        }        public ActiveSecurityUserRuleResponse build() {
-            return new ActiveSecurityUserRuleResponse(commitTime, configurationDescription, configurationDisplayName, description, destinationPortRanges, destinations, direction, displayName, id, kind, protocol, provisioningState, region, ruleCollectionAppliesToGroups, ruleCollectionDescription, ruleCollectionDisplayName, ruleGroups, sourcePortRanges, sources);
+        }
+
+        public ActiveSecurityUserRuleResponse build() {
+            $.direction = Objects.requireNonNull($.direction, "expected parameter 'direction' to be non-null");
+            $.kind = Codegen.stringProp("kind").arg($.kind).require();
+            $.protocol = Objects.requireNonNull($.protocol, "expected parameter 'protocol' to be non-null");
+            $.provisioningState = Objects.requireNonNull($.provisioningState, "expected parameter 'provisioningState' to be non-null");
+            return $;
         }
     }
+
 }

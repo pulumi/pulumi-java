@@ -21,10 +21,10 @@ public final class GetOrderableDbInstanceArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="availabilityZoneGroup")
-      private final @Nullable String availabilityZoneGroup;
+    private @Nullable String availabilityZoneGroup;
 
     public Optional<String> availabilityZoneGroup() {
-        return this.availabilityZoneGroup == null ? Optional.empty() : Optional.ofNullable(this.availabilityZoneGroup);
+        return Optional.ofNullable(this.availabilityZoneGroup);
     }
 
     /**
@@ -32,7 +32,7 @@ public final class GetOrderableDbInstanceArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="engine", required=true)
-      private final String engine;
+    private String engine;
 
     public String engine() {
         return this.engine;
@@ -43,10 +43,10 @@ public final class GetOrderableDbInstanceArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="engineVersion")
-      private final @Nullable String engineVersion;
+    private @Nullable String engineVersion;
 
     public Optional<String> engineVersion() {
-        return this.engineVersion == null ? Optional.empty() : Optional.ofNullable(this.engineVersion);
+        return Optional.ofNullable(this.engineVersion);
     }
 
     /**
@@ -54,10 +54,10 @@ public final class GetOrderableDbInstanceArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="instanceClass")
-      private final @Nullable String instanceClass;
+    private @Nullable String instanceClass;
 
     public Optional<String> instanceClass() {
-        return this.instanceClass == null ? Optional.empty() : Optional.ofNullable(this.instanceClass);
+        return Optional.ofNullable(this.instanceClass);
     }
 
     /**
@@ -65,10 +65,10 @@ public final class GetOrderableDbInstanceArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="licenseModel")
-      private final @Nullable String licenseModel;
+    private @Nullable String licenseModel;
 
     public Optional<String> licenseModel() {
-        return this.licenseModel == null ? Optional.empty() : Optional.ofNullable(this.licenseModel);
+        return Optional.ofNullable(this.licenseModel);
     }
 
     /**
@@ -76,10 +76,10 @@ public final class GetOrderableDbInstanceArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="preferredEngineVersions")
-      private final @Nullable List<String> preferredEngineVersions;
+    private @Nullable List<String> preferredEngineVersions;
 
-    public List<String> preferredEngineVersions() {
-        return this.preferredEngineVersions == null ? List.of() : this.preferredEngineVersions;
+    public Optional<List<String>> preferredEngineVersions() {
+        return Optional.ofNullable(this.preferredEngineVersions);
     }
 
     /**
@@ -87,10 +87,10 @@ public final class GetOrderableDbInstanceArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="preferredInstanceClasses")
-      private final @Nullable List<String> preferredInstanceClasses;
+    private @Nullable List<String> preferredInstanceClasses;
 
-    public List<String> preferredInstanceClasses() {
-        return this.preferredInstanceClasses == null ? List.of() : this.preferredInstanceClasses;
+    public Optional<List<String>> preferredInstanceClasses() {
+        return Optional.ofNullable(this.preferredInstanceClasses);
     }
 
     /**
@@ -98,10 +98,10 @@ public final class GetOrderableDbInstanceArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="storageType")
-      private final @Nullable String storageType;
+    private @Nullable String storageType;
 
     public Optional<String> storageType() {
-        return this.storageType == null ? Optional.empty() : Optional.ofNullable(this.storageType);
+        return Optional.ofNullable(this.storageType);
     }
 
     /**
@@ -109,10 +109,10 @@ public final class GetOrderableDbInstanceArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="supportsEnhancedMonitoring")
-      private final @Nullable Boolean supportsEnhancedMonitoring;
+    private @Nullable Boolean supportsEnhancedMonitoring;
 
     public Optional<Boolean> supportsEnhancedMonitoring() {
-        return this.supportsEnhancedMonitoring == null ? Optional.empty() : Optional.ofNullable(this.supportsEnhancedMonitoring);
+        return Optional.ofNullable(this.supportsEnhancedMonitoring);
     }
 
     /**
@@ -120,10 +120,10 @@ public final class GetOrderableDbInstanceArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="supportsGlobalDatabases")
-      private final @Nullable Boolean supportsGlobalDatabases;
+    private @Nullable Boolean supportsGlobalDatabases;
 
     public Optional<Boolean> supportsGlobalDatabases() {
-        return this.supportsGlobalDatabases == null ? Optional.empty() : Optional.ofNullable(this.supportsGlobalDatabases);
+        return Optional.ofNullable(this.supportsGlobalDatabases);
     }
 
     /**
@@ -131,10 +131,10 @@ public final class GetOrderableDbInstanceArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="supportsIamDatabaseAuthentication")
-      private final @Nullable Boolean supportsIamDatabaseAuthentication;
+    private @Nullable Boolean supportsIamDatabaseAuthentication;
 
     public Optional<Boolean> supportsIamDatabaseAuthentication() {
-        return this.supportsIamDatabaseAuthentication == null ? Optional.empty() : Optional.ofNullable(this.supportsIamDatabaseAuthentication);
+        return Optional.ofNullable(this.supportsIamDatabaseAuthentication);
     }
 
     /**
@@ -142,10 +142,10 @@ public final class GetOrderableDbInstanceArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="supportsIops")
-      private final @Nullable Boolean supportsIops;
+    private @Nullable Boolean supportsIops;
 
     public Optional<Boolean> supportsIops() {
-        return this.supportsIops == null ? Optional.empty() : Optional.ofNullable(this.supportsIops);
+        return Optional.ofNullable(this.supportsIops);
     }
 
     /**
@@ -153,10 +153,10 @@ public final class GetOrderableDbInstanceArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="supportsKerberosAuthentication")
-      private final @Nullable Boolean supportsKerberosAuthentication;
+    private @Nullable Boolean supportsKerberosAuthentication;
 
     public Optional<Boolean> supportsKerberosAuthentication() {
-        return this.supportsKerberosAuthentication == null ? Optional.empty() : Optional.ofNullable(this.supportsKerberosAuthentication);
+        return Optional.ofNullable(this.supportsKerberosAuthentication);
     }
 
     /**
@@ -164,10 +164,10 @@ public final class GetOrderableDbInstanceArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="supportsPerformanceInsights")
-      private final @Nullable Boolean supportsPerformanceInsights;
+    private @Nullable Boolean supportsPerformanceInsights;
 
     public Optional<Boolean> supportsPerformanceInsights() {
-        return this.supportsPerformanceInsights == null ? Optional.empty() : Optional.ofNullable(this.supportsPerformanceInsights);
+        return Optional.ofNullable(this.supportsPerformanceInsights);
     }
 
     /**
@@ -175,10 +175,10 @@ public final class GetOrderableDbInstanceArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="supportsStorageAutoscaling")
-      private final @Nullable Boolean supportsStorageAutoscaling;
+    private @Nullable Boolean supportsStorageAutoscaling;
 
     public Optional<Boolean> supportsStorageAutoscaling() {
-        return this.supportsStorageAutoscaling == null ? Optional.empty() : Optional.ofNullable(this.supportsStorageAutoscaling);
+        return Optional.ofNullable(this.supportsStorageAutoscaling);
     }
 
     /**
@@ -186,10 +186,10 @@ public final class GetOrderableDbInstanceArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="supportsStorageEncryption")
-      private final @Nullable Boolean supportsStorageEncryption;
+    private @Nullable Boolean supportsStorageEncryption;
 
     public Optional<Boolean> supportsStorageEncryption() {
-        return this.supportsStorageEncryption == null ? Optional.empty() : Optional.ofNullable(this.supportsStorageEncryption);
+        return Optional.ofNullable(this.supportsStorageEncryption);
     }
 
     /**
@@ -197,196 +197,149 @@ public final class GetOrderableDbInstanceArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="vpc")
-      private final @Nullable Boolean vpc;
+    private @Nullable Boolean vpc;
 
     public Optional<Boolean> vpc() {
-        return this.vpc == null ? Optional.empty() : Optional.ofNullable(this.vpc);
+        return Optional.ofNullable(this.vpc);
     }
 
-    public GetOrderableDbInstanceArgs(
-        @Nullable String availabilityZoneGroup,
-        String engine,
-        @Nullable String engineVersion,
-        @Nullable String instanceClass,
-        @Nullable String licenseModel,
-        @Nullable List<String> preferredEngineVersions,
-        @Nullable List<String> preferredInstanceClasses,
-        @Nullable String storageType,
-        @Nullable Boolean supportsEnhancedMonitoring,
-        @Nullable Boolean supportsGlobalDatabases,
-        @Nullable Boolean supportsIamDatabaseAuthentication,
-        @Nullable Boolean supportsIops,
-        @Nullable Boolean supportsKerberosAuthentication,
-        @Nullable Boolean supportsPerformanceInsights,
-        @Nullable Boolean supportsStorageAutoscaling,
-        @Nullable Boolean supportsStorageEncryption,
-        @Nullable Boolean vpc) {
-        this.availabilityZoneGroup = availabilityZoneGroup;
-        this.engine = Objects.requireNonNull(engine, "expected parameter 'engine' to be non-null");
-        this.engineVersion = engineVersion;
-        this.instanceClass = instanceClass;
-        this.licenseModel = licenseModel;
-        this.preferredEngineVersions = preferredEngineVersions;
-        this.preferredInstanceClasses = preferredInstanceClasses;
-        this.storageType = storageType;
-        this.supportsEnhancedMonitoring = supportsEnhancedMonitoring;
-        this.supportsGlobalDatabases = supportsGlobalDatabases;
-        this.supportsIamDatabaseAuthentication = supportsIamDatabaseAuthentication;
-        this.supportsIops = supportsIops;
-        this.supportsKerberosAuthentication = supportsKerberosAuthentication;
-        this.supportsPerformanceInsights = supportsPerformanceInsights;
-        this.supportsStorageAutoscaling = supportsStorageAutoscaling;
-        this.supportsStorageEncryption = supportsStorageEncryption;
-        this.vpc = vpc;
-    }
+    private GetOrderableDbInstanceArgs() {}
 
-    private GetOrderableDbInstanceArgs() {
-        this.availabilityZoneGroup = null;
-        this.engine = null;
-        this.engineVersion = null;
-        this.instanceClass = null;
-        this.licenseModel = null;
-        this.preferredEngineVersions = List.of();
-        this.preferredInstanceClasses = List.of();
-        this.storageType = null;
-        this.supportsEnhancedMonitoring = null;
-        this.supportsGlobalDatabases = null;
-        this.supportsIamDatabaseAuthentication = null;
-        this.supportsIops = null;
-        this.supportsKerberosAuthentication = null;
-        this.supportsPerformanceInsights = null;
-        this.supportsStorageAutoscaling = null;
-        this.supportsStorageEncryption = null;
-        this.vpc = null;
+    private GetOrderableDbInstanceArgs(GetOrderableDbInstanceArgs $) {
+        this.availabilityZoneGroup = $.availabilityZoneGroup;
+        this.engine = $.engine;
+        this.engineVersion = $.engineVersion;
+        this.instanceClass = $.instanceClass;
+        this.licenseModel = $.licenseModel;
+        this.preferredEngineVersions = $.preferredEngineVersions;
+        this.preferredInstanceClasses = $.preferredInstanceClasses;
+        this.storageType = $.storageType;
+        this.supportsEnhancedMonitoring = $.supportsEnhancedMonitoring;
+        this.supportsGlobalDatabases = $.supportsGlobalDatabases;
+        this.supportsIamDatabaseAuthentication = $.supportsIamDatabaseAuthentication;
+        this.supportsIops = $.supportsIops;
+        this.supportsKerberosAuthentication = $.supportsKerberosAuthentication;
+        this.supportsPerformanceInsights = $.supportsPerformanceInsights;
+        this.supportsStorageAutoscaling = $.supportsStorageAutoscaling;
+        this.supportsStorageEncryption = $.supportsStorageEncryption;
+        this.vpc = $.vpc;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetOrderableDbInstanceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String availabilityZoneGroup;
-        private String engine;
-        private @Nullable String engineVersion;
-        private @Nullable String instanceClass;
-        private @Nullable String licenseModel;
-        private @Nullable List<String> preferredEngineVersions;
-        private @Nullable List<String> preferredInstanceClasses;
-        private @Nullable String storageType;
-        private @Nullable Boolean supportsEnhancedMonitoring;
-        private @Nullable Boolean supportsGlobalDatabases;
-        private @Nullable Boolean supportsIamDatabaseAuthentication;
-        private @Nullable Boolean supportsIops;
-        private @Nullable Boolean supportsKerberosAuthentication;
-        private @Nullable Boolean supportsPerformanceInsights;
-        private @Nullable Boolean supportsStorageAutoscaling;
-        private @Nullable Boolean supportsStorageEncryption;
-        private @Nullable Boolean vpc;
+        private GetOrderableDbInstanceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetOrderableDbInstanceArgs();
         }
 
         public Builder(GetOrderableDbInstanceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.availabilityZoneGroup = defaults.availabilityZoneGroup;
-    	      this.engine = defaults.engine;
-    	      this.engineVersion = defaults.engineVersion;
-    	      this.instanceClass = defaults.instanceClass;
-    	      this.licenseModel = defaults.licenseModel;
-    	      this.preferredEngineVersions = defaults.preferredEngineVersions;
-    	      this.preferredInstanceClasses = defaults.preferredInstanceClasses;
-    	      this.storageType = defaults.storageType;
-    	      this.supportsEnhancedMonitoring = defaults.supportsEnhancedMonitoring;
-    	      this.supportsGlobalDatabases = defaults.supportsGlobalDatabases;
-    	      this.supportsIamDatabaseAuthentication = defaults.supportsIamDatabaseAuthentication;
-    	      this.supportsIops = defaults.supportsIops;
-    	      this.supportsKerberosAuthentication = defaults.supportsKerberosAuthentication;
-    	      this.supportsPerformanceInsights = defaults.supportsPerformanceInsights;
-    	      this.supportsStorageAutoscaling = defaults.supportsStorageAutoscaling;
-    	      this.supportsStorageEncryption = defaults.supportsStorageEncryption;
-    	      this.vpc = defaults.vpc;
+            $ = new GetOrderableDbInstanceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder availabilityZoneGroup(@Nullable String availabilityZoneGroup) {
-            this.availabilityZoneGroup = availabilityZoneGroup;
+            $.availabilityZoneGroup = availabilityZoneGroup;
             return this;
         }
+
         public Builder engine(String engine) {
-            this.engine = Objects.requireNonNull(engine);
+            $.engine = engine;
             return this;
         }
+
         public Builder engineVersion(@Nullable String engineVersion) {
-            this.engineVersion = engineVersion;
+            $.engineVersion = engineVersion;
             return this;
         }
+
         public Builder instanceClass(@Nullable String instanceClass) {
-            this.instanceClass = instanceClass;
+            $.instanceClass = instanceClass;
             return this;
         }
+
         public Builder licenseModel(@Nullable String licenseModel) {
-            this.licenseModel = licenseModel;
+            $.licenseModel = licenseModel;
             return this;
         }
+
         public Builder preferredEngineVersions(@Nullable List<String> preferredEngineVersions) {
-            this.preferredEngineVersions = preferredEngineVersions;
+            $.preferredEngineVersions = preferredEngineVersions;
             return this;
         }
+
         public Builder preferredEngineVersions(String... preferredEngineVersions) {
             return preferredEngineVersions(List.of(preferredEngineVersions));
         }
+
         public Builder preferredInstanceClasses(@Nullable List<String> preferredInstanceClasses) {
-            this.preferredInstanceClasses = preferredInstanceClasses;
+            $.preferredInstanceClasses = preferredInstanceClasses;
             return this;
         }
+
         public Builder preferredInstanceClasses(String... preferredInstanceClasses) {
             return preferredInstanceClasses(List.of(preferredInstanceClasses));
         }
+
         public Builder storageType(@Nullable String storageType) {
-            this.storageType = storageType;
+            $.storageType = storageType;
             return this;
         }
+
         public Builder supportsEnhancedMonitoring(@Nullable Boolean supportsEnhancedMonitoring) {
-            this.supportsEnhancedMonitoring = supportsEnhancedMonitoring;
+            $.supportsEnhancedMonitoring = supportsEnhancedMonitoring;
             return this;
         }
+
         public Builder supportsGlobalDatabases(@Nullable Boolean supportsGlobalDatabases) {
-            this.supportsGlobalDatabases = supportsGlobalDatabases;
+            $.supportsGlobalDatabases = supportsGlobalDatabases;
             return this;
         }
+
         public Builder supportsIamDatabaseAuthentication(@Nullable Boolean supportsIamDatabaseAuthentication) {
-            this.supportsIamDatabaseAuthentication = supportsIamDatabaseAuthentication;
+            $.supportsIamDatabaseAuthentication = supportsIamDatabaseAuthentication;
             return this;
         }
+
         public Builder supportsIops(@Nullable Boolean supportsIops) {
-            this.supportsIops = supportsIops;
+            $.supportsIops = supportsIops;
             return this;
         }
+
         public Builder supportsKerberosAuthentication(@Nullable Boolean supportsKerberosAuthentication) {
-            this.supportsKerberosAuthentication = supportsKerberosAuthentication;
+            $.supportsKerberosAuthentication = supportsKerberosAuthentication;
             return this;
         }
+
         public Builder supportsPerformanceInsights(@Nullable Boolean supportsPerformanceInsights) {
-            this.supportsPerformanceInsights = supportsPerformanceInsights;
+            $.supportsPerformanceInsights = supportsPerformanceInsights;
             return this;
         }
+
         public Builder supportsStorageAutoscaling(@Nullable Boolean supportsStorageAutoscaling) {
-            this.supportsStorageAutoscaling = supportsStorageAutoscaling;
+            $.supportsStorageAutoscaling = supportsStorageAutoscaling;
             return this;
         }
+
         public Builder supportsStorageEncryption(@Nullable Boolean supportsStorageEncryption) {
-            this.supportsStorageEncryption = supportsStorageEncryption;
+            $.supportsStorageEncryption = supportsStorageEncryption;
             return this;
         }
+
         public Builder vpc(@Nullable Boolean vpc) {
-            this.vpc = vpc;
+            $.vpc = vpc;
             return this;
-        }        public GetOrderableDbInstanceArgs build() {
-            return new GetOrderableDbInstanceArgs(availabilityZoneGroup, engine, engineVersion, instanceClass, licenseModel, preferredEngineVersions, preferredInstanceClasses, storageType, supportsEnhancedMonitoring, supportsGlobalDatabases, supportsIamDatabaseAuthentication, supportsIops, supportsKerberosAuthentication, supportsPerformanceInsights, supportsStorageAutoscaling, supportsStorageEncryption, vpc);
+        }
+
+        public GetOrderableDbInstanceArgs build() {
+            $.engine = Objects.requireNonNull($.engine, "expected parameter 'engine' to be non-null");
+            return $;
         }
     }
+
 }

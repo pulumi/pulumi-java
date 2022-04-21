@@ -14,78 +14,73 @@ public final class GetAcceleratorAttribute extends com.pulumi.resources.InvokeAr
     public static final GetAcceleratorAttribute Empty = new GetAcceleratorAttribute();
 
     @Import(name="flowLogsEnabled", required=true)
-      private final Boolean flowLogsEnabled;
+    private Boolean flowLogsEnabled;
 
     public Boolean flowLogsEnabled() {
         return this.flowLogsEnabled;
     }
 
     @Import(name="flowLogsS3Bucket", required=true)
-      private final String flowLogsS3Bucket;
+    private String flowLogsS3Bucket;
 
     public String flowLogsS3Bucket() {
         return this.flowLogsS3Bucket;
     }
 
     @Import(name="flowLogsS3Prefix", required=true)
-      private final String flowLogsS3Prefix;
+    private String flowLogsS3Prefix;
 
     public String flowLogsS3Prefix() {
         return this.flowLogsS3Prefix;
     }
 
-    public GetAcceleratorAttribute(
-        Boolean flowLogsEnabled,
-        String flowLogsS3Bucket,
-        String flowLogsS3Prefix) {
-        this.flowLogsEnabled = Objects.requireNonNull(flowLogsEnabled, "expected parameter 'flowLogsEnabled' to be non-null");
-        this.flowLogsS3Bucket = Objects.requireNonNull(flowLogsS3Bucket, "expected parameter 'flowLogsS3Bucket' to be non-null");
-        this.flowLogsS3Prefix = Objects.requireNonNull(flowLogsS3Prefix, "expected parameter 'flowLogsS3Prefix' to be non-null");
-    }
+    private GetAcceleratorAttribute() {}
 
-    private GetAcceleratorAttribute() {
-        this.flowLogsEnabled = null;
-        this.flowLogsS3Bucket = null;
-        this.flowLogsS3Prefix = null;
+    private GetAcceleratorAttribute(GetAcceleratorAttribute $) {
+        this.flowLogsEnabled = $.flowLogsEnabled;
+        this.flowLogsS3Bucket = $.flowLogsS3Bucket;
+        this.flowLogsS3Prefix = $.flowLogsS3Prefix;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetAcceleratorAttribute defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Boolean flowLogsEnabled;
-        private String flowLogsS3Bucket;
-        private String flowLogsS3Prefix;
+        private GetAcceleratorAttribute $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetAcceleratorAttribute();
         }
 
         public Builder(GetAcceleratorAttribute defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.flowLogsEnabled = defaults.flowLogsEnabled;
-    	      this.flowLogsS3Bucket = defaults.flowLogsS3Bucket;
-    	      this.flowLogsS3Prefix = defaults.flowLogsS3Prefix;
+            $ = new GetAcceleratorAttribute(Objects.requireNonNull(defaults));
         }
 
         public Builder flowLogsEnabled(Boolean flowLogsEnabled) {
-            this.flowLogsEnabled = Objects.requireNonNull(flowLogsEnabled);
+            $.flowLogsEnabled = flowLogsEnabled;
             return this;
         }
+
         public Builder flowLogsS3Bucket(String flowLogsS3Bucket) {
-            this.flowLogsS3Bucket = Objects.requireNonNull(flowLogsS3Bucket);
+            $.flowLogsS3Bucket = flowLogsS3Bucket;
             return this;
         }
+
         public Builder flowLogsS3Prefix(String flowLogsS3Prefix) {
-            this.flowLogsS3Prefix = Objects.requireNonNull(flowLogsS3Prefix);
+            $.flowLogsS3Prefix = flowLogsS3Prefix;
             return this;
-        }        public GetAcceleratorAttribute build() {
-            return new GetAcceleratorAttribute(flowLogsEnabled, flowLogsS3Bucket, flowLogsS3Prefix);
+        }
+
+        public GetAcceleratorAttribute build() {
+            $.flowLogsEnabled = Objects.requireNonNull($.flowLogsEnabled, "expected parameter 'flowLogsEnabled' to be non-null");
+            $.flowLogsS3Bucket = Objects.requireNonNull($.flowLogsS3Bucket, "expected parameter 'flowLogsS3Bucket' to be non-null");
+            $.flowLogsS3Prefix = Objects.requireNonNull($.flowLogsS3Prefix, "expected parameter 'flowLogsS3Prefix' to be non-null");
+            return $;
         }
     }
+
 }

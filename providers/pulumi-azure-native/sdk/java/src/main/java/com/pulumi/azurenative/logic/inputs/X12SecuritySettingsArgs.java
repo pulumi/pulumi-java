@@ -5,9 +5,9 @@ package com.pulumi.azurenative.logic.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,7 +24,7 @@ public final class X12SecuritySettingsArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="authorizationQualifier", required=true)
-      private final Output<String> authorizationQualifier;
+    private Output<String> authorizationQualifier;
 
     public Output<String> authorizationQualifier() {
         return this.authorizationQualifier;
@@ -35,10 +35,10 @@ public final class X12SecuritySettingsArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="authorizationValue")
-      private final @Nullable Output<String> authorizationValue;
+    private @Nullable Output<String> authorizationValue;
 
-    public Output<String> authorizationValue() {
-        return this.authorizationValue == null ? Codegen.empty() : this.authorizationValue;
+    public Optional<Output<String>> authorizationValue() {
+        return Optional.ofNullable(this.authorizationValue);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class X12SecuritySettingsArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="passwordValue")
-      private final @Nullable Output<String> passwordValue;
+    private @Nullable Output<String> passwordValue;
 
-    public Output<String> passwordValue() {
-        return this.passwordValue == null ? Codegen.empty() : this.passwordValue;
+    public Optional<Output<String>> passwordValue() {
+        return Optional.ofNullable(this.passwordValue);
     }
 
     /**
@@ -57,89 +57,80 @@ public final class X12SecuritySettingsArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="securityQualifier", required=true)
-      private final Output<String> securityQualifier;
+    private Output<String> securityQualifier;
 
     public Output<String> securityQualifier() {
         return this.securityQualifier;
     }
 
-    public X12SecuritySettingsArgs(
-        Output<String> authorizationQualifier,
-        @Nullable Output<String> authorizationValue,
-        @Nullable Output<String> passwordValue,
-        Output<String> securityQualifier) {
-        this.authorizationQualifier = Objects.requireNonNull(authorizationQualifier, "expected parameter 'authorizationQualifier' to be non-null");
-        this.authorizationValue = authorizationValue;
-        this.passwordValue = passwordValue;
-        this.securityQualifier = Objects.requireNonNull(securityQualifier, "expected parameter 'securityQualifier' to be non-null");
-    }
+    private X12SecuritySettingsArgs() {}
 
-    private X12SecuritySettingsArgs() {
-        this.authorizationQualifier = Codegen.empty();
-        this.authorizationValue = Codegen.empty();
-        this.passwordValue = Codegen.empty();
-        this.securityQualifier = Codegen.empty();
+    private X12SecuritySettingsArgs(X12SecuritySettingsArgs $) {
+        this.authorizationQualifier = $.authorizationQualifier;
+        this.authorizationValue = $.authorizationValue;
+        this.passwordValue = $.passwordValue;
+        this.securityQualifier = $.securityQualifier;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(X12SecuritySettingsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> authorizationQualifier;
-        private @Nullable Output<String> authorizationValue;
-        private @Nullable Output<String> passwordValue;
-        private Output<String> securityQualifier;
+        private X12SecuritySettingsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new X12SecuritySettingsArgs();
         }
 
         public Builder(X12SecuritySettingsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.authorizationQualifier = defaults.authorizationQualifier;
-    	      this.authorizationValue = defaults.authorizationValue;
-    	      this.passwordValue = defaults.passwordValue;
-    	      this.securityQualifier = defaults.securityQualifier;
+            $ = new X12SecuritySettingsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder authorizationQualifier(Output<String> authorizationQualifier) {
-            this.authorizationQualifier = Objects.requireNonNull(authorizationQualifier);
+            $.authorizationQualifier = authorizationQualifier;
             return this;
         }
+
         public Builder authorizationQualifier(String authorizationQualifier) {
-            this.authorizationQualifier = Output.of(Objects.requireNonNull(authorizationQualifier));
-            return this;
+            return authorizationQualifier(Output.of(authorizationQualifier));
         }
+
         public Builder authorizationValue(@Nullable Output<String> authorizationValue) {
-            this.authorizationValue = authorizationValue;
+            $.authorizationValue = authorizationValue;
             return this;
         }
-        public Builder authorizationValue(@Nullable String authorizationValue) {
-            this.authorizationValue = Codegen.ofNullable(authorizationValue);
-            return this;
+
+        public Builder authorizationValue(String authorizationValue) {
+            return authorizationValue(Output.of(authorizationValue));
         }
+
         public Builder passwordValue(@Nullable Output<String> passwordValue) {
-            this.passwordValue = passwordValue;
+            $.passwordValue = passwordValue;
             return this;
         }
-        public Builder passwordValue(@Nullable String passwordValue) {
-            this.passwordValue = Codegen.ofNullable(passwordValue);
-            return this;
+
+        public Builder passwordValue(String passwordValue) {
+            return passwordValue(Output.of(passwordValue));
         }
+
         public Builder securityQualifier(Output<String> securityQualifier) {
-            this.securityQualifier = Objects.requireNonNull(securityQualifier);
+            $.securityQualifier = securityQualifier;
             return this;
         }
+
         public Builder securityQualifier(String securityQualifier) {
-            this.securityQualifier = Output.of(Objects.requireNonNull(securityQualifier));
-            return this;
-        }        public X12SecuritySettingsArgs build() {
-            return new X12SecuritySettingsArgs(authorizationQualifier, authorizationValue, passwordValue, securityQualifier);
+            return securityQualifier(Output.of(securityQualifier));
+        }
+
+        public X12SecuritySettingsArgs build() {
+            $.authorizationQualifier = Objects.requireNonNull($.authorizationQualifier, "expected parameter 'authorizationQualifier' to be non-null");
+            $.securityQualifier = Objects.requireNonNull($.securityQualifier, "expected parameter 'securityQualifier' to be non-null");
+            return $;
         }
     }
+
 }

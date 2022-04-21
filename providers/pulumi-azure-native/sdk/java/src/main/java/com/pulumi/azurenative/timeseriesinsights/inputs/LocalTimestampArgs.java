@@ -8,9 +8,9 @@ import com.pulumi.azurenative.timeseriesinsights.inputs.LocalTimestampTimeZoneOf
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +27,10 @@ public final class LocalTimestampArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="format")
-      private final @Nullable Output<Either<String,LocalTimestampFormat>> format;
+    private @Nullable Output<Either<String,LocalTimestampFormat>> format;
 
-    public Output<Either<String,LocalTimestampFormat>> format() {
-        return this.format == null ? Codegen.empty() : this.format;
+    public Optional<Output<Either<String,LocalTimestampFormat>>> format() {
+        return Optional.ofNullable(this.format);
     }
 
     /**
@@ -38,63 +38,58 @@ public final class LocalTimestampArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="timeZoneOffset")
-      private final @Nullable Output<LocalTimestampTimeZoneOffsetArgs> timeZoneOffset;
+    private @Nullable Output<LocalTimestampTimeZoneOffsetArgs> timeZoneOffset;
 
-    public Output<LocalTimestampTimeZoneOffsetArgs> timeZoneOffset() {
-        return this.timeZoneOffset == null ? Codegen.empty() : this.timeZoneOffset;
+    public Optional<Output<LocalTimestampTimeZoneOffsetArgs>> timeZoneOffset() {
+        return Optional.ofNullable(this.timeZoneOffset);
     }
 
-    public LocalTimestampArgs(
-        @Nullable Output<Either<String,LocalTimestampFormat>> format,
-        @Nullable Output<LocalTimestampTimeZoneOffsetArgs> timeZoneOffset) {
-        this.format = format;
-        this.timeZoneOffset = timeZoneOffset;
-    }
+    private LocalTimestampArgs() {}
 
-    private LocalTimestampArgs() {
-        this.format = Codegen.empty();
-        this.timeZoneOffset = Codegen.empty();
+    private LocalTimestampArgs(LocalTimestampArgs $) {
+        this.format = $.format;
+        this.timeZoneOffset = $.timeZoneOffset;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LocalTimestampArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Either<String,LocalTimestampFormat>> format;
-        private @Nullable Output<LocalTimestampTimeZoneOffsetArgs> timeZoneOffset;
+        private LocalTimestampArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new LocalTimestampArgs();
         }
 
         public Builder(LocalTimestampArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.format = defaults.format;
-    	      this.timeZoneOffset = defaults.timeZoneOffset;
+            $ = new LocalTimestampArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder format(@Nullable Output<Either<String,LocalTimestampFormat>> format) {
-            this.format = format;
+            $.format = format;
             return this;
         }
-        public Builder format(@Nullable Either<String,LocalTimestampFormat> format) {
-            this.format = Codegen.ofNullable(format);
-            return this;
+
+        public Builder format(Either<String,LocalTimestampFormat> format) {
+            return format(Output.of(format));
         }
+
         public Builder timeZoneOffset(@Nullable Output<LocalTimestampTimeZoneOffsetArgs> timeZoneOffset) {
-            this.timeZoneOffset = timeZoneOffset;
+            $.timeZoneOffset = timeZoneOffset;
             return this;
         }
-        public Builder timeZoneOffset(@Nullable LocalTimestampTimeZoneOffsetArgs timeZoneOffset) {
-            this.timeZoneOffset = Codegen.ofNullable(timeZoneOffset);
-            return this;
-        }        public LocalTimestampArgs build() {
-            return new LocalTimestampArgs(format, timeZoneOffset);
+
+        public Builder timeZoneOffset(LocalTimestampTimeZoneOffsetArgs timeZoneOffset) {
+            return timeZoneOffset(Output.of(timeZoneOffset));
+        }
+
+        public LocalTimestampArgs build() {
+            return $;
         }
     }
+
 }

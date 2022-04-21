@@ -22,7 +22,7 @@ public final class ApplicationInfoResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="emails", required=true)
-      private final List<String> emails;
+    private List<String> emails;
 
     public List<String> emails() {
         return this.emails;
@@ -33,7 +33,7 @@ public final class ApplicationInfoResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="instruction", required=true)
-      private final String instruction;
+    private String instruction;
 
     public String instruction() {
         return this.instruction;
@@ -44,70 +44,67 @@ public final class ApplicationInfoResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="uris", required=true)
-      private final List<String> uris;
+    private List<String> uris;
 
     public List<String> uris() {
         return this.uris;
     }
 
-    public ApplicationInfoResponse(
-        List<String> emails,
-        String instruction,
-        List<String> uris) {
-        this.emails = Objects.requireNonNull(emails, "expected parameter 'emails' to be non-null");
-        this.instruction = Objects.requireNonNull(instruction, "expected parameter 'instruction' to be non-null");
-        this.uris = Objects.requireNonNull(uris, "expected parameter 'uris' to be non-null");
-    }
+    private ApplicationInfoResponse() {}
 
-    private ApplicationInfoResponse() {
-        this.emails = List.of();
-        this.instruction = null;
-        this.uris = List.of();
+    private ApplicationInfoResponse(ApplicationInfoResponse $) {
+        this.emails = $.emails;
+        this.instruction = $.instruction;
+        this.uris = $.uris;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ApplicationInfoResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<String> emails;
-        private String instruction;
-        private List<String> uris;
+        private ApplicationInfoResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ApplicationInfoResponse();
         }
 
         public Builder(ApplicationInfoResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.emails = defaults.emails;
-    	      this.instruction = defaults.instruction;
-    	      this.uris = defaults.uris;
+            $ = new ApplicationInfoResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder emails(List<String> emails) {
-            this.emails = Objects.requireNonNull(emails);
+            $.emails = emails;
             return this;
         }
+
         public Builder emails(String... emails) {
             return emails(List.of(emails));
         }
+
         public Builder instruction(String instruction) {
-            this.instruction = Objects.requireNonNull(instruction);
+            $.instruction = instruction;
             return this;
         }
+
         public Builder uris(List<String> uris) {
-            this.uris = Objects.requireNonNull(uris);
+            $.uris = uris;
             return this;
         }
+
         public Builder uris(String... uris) {
             return uris(List.of(uris));
-        }        public ApplicationInfoResponse build() {
-            return new ApplicationInfoResponse(emails, instruction, uris);
+        }
+
+        public ApplicationInfoResponse build() {
+            $.emails = Objects.requireNonNull($.emails, "expected parameter 'emails' to be non-null");
+            $.instruction = Objects.requireNonNull($.instruction, "expected parameter 'instruction' to be non-null");
+            $.uris = Objects.requireNonNull($.uris, "expected parameter 'uris' to be non-null");
+            return $;
         }
     }
+
 }

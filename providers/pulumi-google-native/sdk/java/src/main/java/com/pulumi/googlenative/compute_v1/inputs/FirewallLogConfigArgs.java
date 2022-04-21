@@ -5,10 +5,10 @@ package com.pulumi.googlenative.compute_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.compute_v1.enums.FirewallLogConfigMetadata;
 import java.lang.Boolean;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class FirewallLogConfigArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="enable")
-      private final @Nullable Output<Boolean> enable;
+    private @Nullable Output<Boolean> enable;
 
-    public Output<Boolean> enable() {
-        return this.enable == null ? Codegen.empty() : this.enable;
+    public Optional<Output<Boolean>> enable() {
+        return Optional.ofNullable(this.enable);
     }
 
     /**
@@ -36,63 +36,58 @@ public final class FirewallLogConfigArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="metadata")
-      private final @Nullable Output<FirewallLogConfigMetadata> metadata;
+    private @Nullable Output<FirewallLogConfigMetadata> metadata;
 
-    public Output<FirewallLogConfigMetadata> metadata() {
-        return this.metadata == null ? Codegen.empty() : this.metadata;
+    public Optional<Output<FirewallLogConfigMetadata>> metadata() {
+        return Optional.ofNullable(this.metadata);
     }
 
-    public FirewallLogConfigArgs(
-        @Nullable Output<Boolean> enable,
-        @Nullable Output<FirewallLogConfigMetadata> metadata) {
-        this.enable = enable;
-        this.metadata = metadata;
-    }
+    private FirewallLogConfigArgs() {}
 
-    private FirewallLogConfigArgs() {
-        this.enable = Codegen.empty();
-        this.metadata = Codegen.empty();
+    private FirewallLogConfigArgs(FirewallLogConfigArgs $) {
+        this.enable = $.enable;
+        this.metadata = $.metadata;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FirewallLogConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> enable;
-        private @Nullable Output<FirewallLogConfigMetadata> metadata;
+        private FirewallLogConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new FirewallLogConfigArgs();
         }
 
         public Builder(FirewallLogConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.enable = defaults.enable;
-    	      this.metadata = defaults.metadata;
+            $ = new FirewallLogConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder enable(@Nullable Output<Boolean> enable) {
-            this.enable = enable;
+            $.enable = enable;
             return this;
         }
-        public Builder enable(@Nullable Boolean enable) {
-            this.enable = Codegen.ofNullable(enable);
-            return this;
+
+        public Builder enable(Boolean enable) {
+            return enable(Output.of(enable));
         }
+
         public Builder metadata(@Nullable Output<FirewallLogConfigMetadata> metadata) {
-            this.metadata = metadata;
+            $.metadata = metadata;
             return this;
         }
-        public Builder metadata(@Nullable FirewallLogConfigMetadata metadata) {
-            this.metadata = Codegen.ofNullable(metadata);
-            return this;
-        }        public FirewallLogConfigArgs build() {
-            return new FirewallLogConfigArgs(enable, metadata);
+
+        public Builder metadata(FirewallLogConfigMetadata metadata) {
+            return metadata(Output.of(metadata));
+        }
+
+        public FirewallLogConfigArgs build() {
+            return $;
         }
     }
+
 }

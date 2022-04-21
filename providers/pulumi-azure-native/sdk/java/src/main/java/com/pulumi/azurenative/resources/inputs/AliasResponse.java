@@ -27,7 +27,7 @@ public final class AliasResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="defaultMetadata", required=true)
-      private final AliasPathMetadataResponse defaultMetadata;
+    private AliasPathMetadataResponse defaultMetadata;
 
     public AliasPathMetadataResponse defaultMetadata() {
         return this.defaultMetadata;
@@ -38,10 +38,10 @@ public final class AliasResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="defaultPath")
-      private final @Nullable String defaultPath;
+    private @Nullable String defaultPath;
 
     public Optional<String> defaultPath() {
-        return this.defaultPath == null ? Optional.empty() : Optional.ofNullable(this.defaultPath);
+        return Optional.ofNullable(this.defaultPath);
     }
 
     /**
@@ -49,10 +49,10 @@ public final class AliasResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="defaultPattern")
-      private final @Nullable AliasPatternResponse defaultPattern;
+    private @Nullable AliasPatternResponse defaultPattern;
 
     public Optional<AliasPatternResponse> defaultPattern() {
-        return this.defaultPattern == null ? Optional.empty() : Optional.ofNullable(this.defaultPattern);
+        return Optional.ofNullable(this.defaultPattern);
     }
 
     /**
@@ -60,10 +60,10 @@ public final class AliasResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable String name;
+    private @Nullable String name;
 
     public Optional<String> name() {
-        return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -71,10 +71,10 @@ public final class AliasResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="paths")
-      private final @Nullable List<AliasPathResponse> paths;
+    private @Nullable List<AliasPathResponse> paths;
 
-    public List<AliasPathResponse> paths() {
-        return this.paths == null ? List.of() : this.paths;
+    public Optional<List<AliasPathResponse>> paths() {
+        return Optional.ofNullable(this.paths);
     }
 
     /**
@@ -82,94 +82,79 @@ public final class AliasResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="type")
-      private final @Nullable String type;
+    private @Nullable String type;
 
     public Optional<String> type() {
-        return this.type == null ? Optional.empty() : Optional.ofNullable(this.type);
+        return Optional.ofNullable(this.type);
     }
 
-    public AliasResponse(
-        AliasPathMetadataResponse defaultMetadata,
-        @Nullable String defaultPath,
-        @Nullable AliasPatternResponse defaultPattern,
-        @Nullable String name,
-        @Nullable List<AliasPathResponse> paths,
-        @Nullable String type) {
-        this.defaultMetadata = Objects.requireNonNull(defaultMetadata, "expected parameter 'defaultMetadata' to be non-null");
-        this.defaultPath = defaultPath;
-        this.defaultPattern = defaultPattern;
-        this.name = name;
-        this.paths = paths;
-        this.type = type;
-    }
+    private AliasResponse() {}
 
-    private AliasResponse() {
-        this.defaultMetadata = null;
-        this.defaultPath = null;
-        this.defaultPattern = null;
-        this.name = null;
-        this.paths = List.of();
-        this.type = null;
+    private AliasResponse(AliasResponse $) {
+        this.defaultMetadata = $.defaultMetadata;
+        this.defaultPath = $.defaultPath;
+        this.defaultPattern = $.defaultPattern;
+        this.name = $.name;
+        this.paths = $.paths;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AliasResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private AliasPathMetadataResponse defaultMetadata;
-        private @Nullable String defaultPath;
-        private @Nullable AliasPatternResponse defaultPattern;
-        private @Nullable String name;
-        private @Nullable List<AliasPathResponse> paths;
-        private @Nullable String type;
+        private AliasResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AliasResponse();
         }
 
         public Builder(AliasResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.defaultMetadata = defaults.defaultMetadata;
-    	      this.defaultPath = defaults.defaultPath;
-    	      this.defaultPattern = defaults.defaultPattern;
-    	      this.name = defaults.name;
-    	      this.paths = defaults.paths;
-    	      this.type = defaults.type;
+            $ = new AliasResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder defaultMetadata(AliasPathMetadataResponse defaultMetadata) {
-            this.defaultMetadata = Objects.requireNonNull(defaultMetadata);
+            $.defaultMetadata = defaultMetadata;
             return this;
         }
+
         public Builder defaultPath(@Nullable String defaultPath) {
-            this.defaultPath = defaultPath;
+            $.defaultPath = defaultPath;
             return this;
         }
+
         public Builder defaultPattern(@Nullable AliasPatternResponse defaultPattern) {
-            this.defaultPattern = defaultPattern;
+            $.defaultPattern = defaultPattern;
             return this;
         }
+
         public Builder name(@Nullable String name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
+
         public Builder paths(@Nullable List<AliasPathResponse> paths) {
-            this.paths = paths;
+            $.paths = paths;
             return this;
         }
+
         public Builder paths(AliasPathResponse... paths) {
             return paths(List.of(paths));
         }
+
         public Builder type(@Nullable String type) {
-            this.type = type;
+            $.type = type;
             return this;
-        }        public AliasResponse build() {
-            return new AliasResponse(defaultMetadata, defaultPath, defaultPattern, name, paths, type);
+        }
+
+        public AliasResponse build() {
+            $.defaultMetadata = Objects.requireNonNull($.defaultMetadata, "expected parameter 'defaultMetadata' to be non-null");
+            return $;
         }
     }
+
 }

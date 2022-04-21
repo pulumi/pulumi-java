@@ -17,126 +17,109 @@ public final class SpotFleetLaunchTemplateOverrides extends com.pulumi.resources
     public static final SpotFleetLaunchTemplateOverrides Empty = new SpotFleetLaunchTemplateOverrides();
 
     @Import(name="availabilityZone")
-      private final @Nullable String availabilityZone;
+    private @Nullable String availabilityZone;
 
     public Optional<String> availabilityZone() {
-        return this.availabilityZone == null ? Optional.empty() : Optional.ofNullable(this.availabilityZone);
+        return Optional.ofNullable(this.availabilityZone);
     }
 
     @Import(name="instanceRequirements")
-      private final @Nullable SpotFleetInstanceRequirementsRequest instanceRequirements;
+    private @Nullable SpotFleetInstanceRequirementsRequest instanceRequirements;
 
     public Optional<SpotFleetInstanceRequirementsRequest> instanceRequirements() {
-        return this.instanceRequirements == null ? Optional.empty() : Optional.ofNullable(this.instanceRequirements);
+        return Optional.ofNullable(this.instanceRequirements);
     }
 
     @Import(name="instanceType")
-      private final @Nullable String instanceType;
+    private @Nullable String instanceType;
 
     public Optional<String> instanceType() {
-        return this.instanceType == null ? Optional.empty() : Optional.ofNullable(this.instanceType);
+        return Optional.ofNullable(this.instanceType);
     }
 
     @Import(name="spotPrice")
-      private final @Nullable String spotPrice;
+    private @Nullable String spotPrice;
 
     public Optional<String> spotPrice() {
-        return this.spotPrice == null ? Optional.empty() : Optional.ofNullable(this.spotPrice);
+        return Optional.ofNullable(this.spotPrice);
     }
 
     @Import(name="subnetId")
-      private final @Nullable String subnetId;
+    private @Nullable String subnetId;
 
     public Optional<String> subnetId() {
-        return this.subnetId == null ? Optional.empty() : Optional.ofNullable(this.subnetId);
+        return Optional.ofNullable(this.subnetId);
     }
 
     @Import(name="weightedCapacity")
-      private final @Nullable Double weightedCapacity;
+    private @Nullable Double weightedCapacity;
 
     public Optional<Double> weightedCapacity() {
-        return this.weightedCapacity == null ? Optional.empty() : Optional.ofNullable(this.weightedCapacity);
+        return Optional.ofNullable(this.weightedCapacity);
     }
 
-    public SpotFleetLaunchTemplateOverrides(
-        @Nullable String availabilityZone,
-        @Nullable SpotFleetInstanceRequirementsRequest instanceRequirements,
-        @Nullable String instanceType,
-        @Nullable String spotPrice,
-        @Nullable String subnetId,
-        @Nullable Double weightedCapacity) {
-        this.availabilityZone = availabilityZone;
-        this.instanceRequirements = instanceRequirements;
-        this.instanceType = instanceType;
-        this.spotPrice = spotPrice;
-        this.subnetId = subnetId;
-        this.weightedCapacity = weightedCapacity;
-    }
+    private SpotFleetLaunchTemplateOverrides() {}
 
-    private SpotFleetLaunchTemplateOverrides() {
-        this.availabilityZone = null;
-        this.instanceRequirements = null;
-        this.instanceType = null;
-        this.spotPrice = null;
-        this.subnetId = null;
-        this.weightedCapacity = null;
+    private SpotFleetLaunchTemplateOverrides(SpotFleetLaunchTemplateOverrides $) {
+        this.availabilityZone = $.availabilityZone;
+        this.instanceRequirements = $.instanceRequirements;
+        this.instanceType = $.instanceType;
+        this.spotPrice = $.spotPrice;
+        this.subnetId = $.subnetId;
+        this.weightedCapacity = $.weightedCapacity;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SpotFleetLaunchTemplateOverrides defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String availabilityZone;
-        private @Nullable SpotFleetInstanceRequirementsRequest instanceRequirements;
-        private @Nullable String instanceType;
-        private @Nullable String spotPrice;
-        private @Nullable String subnetId;
-        private @Nullable Double weightedCapacity;
+        private SpotFleetLaunchTemplateOverrides $;
 
         public Builder() {
-    	      // Empty
+            $ = new SpotFleetLaunchTemplateOverrides();
         }
 
         public Builder(SpotFleetLaunchTemplateOverrides defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.availabilityZone = defaults.availabilityZone;
-    	      this.instanceRequirements = defaults.instanceRequirements;
-    	      this.instanceType = defaults.instanceType;
-    	      this.spotPrice = defaults.spotPrice;
-    	      this.subnetId = defaults.subnetId;
-    	      this.weightedCapacity = defaults.weightedCapacity;
+            $ = new SpotFleetLaunchTemplateOverrides(Objects.requireNonNull(defaults));
         }
 
         public Builder availabilityZone(@Nullable String availabilityZone) {
-            this.availabilityZone = availabilityZone;
+            $.availabilityZone = availabilityZone;
             return this;
         }
+
         public Builder instanceRequirements(@Nullable SpotFleetInstanceRequirementsRequest instanceRequirements) {
-            this.instanceRequirements = instanceRequirements;
+            $.instanceRequirements = instanceRequirements;
             return this;
         }
+
         public Builder instanceType(@Nullable String instanceType) {
-            this.instanceType = instanceType;
+            $.instanceType = instanceType;
             return this;
         }
+
         public Builder spotPrice(@Nullable String spotPrice) {
-            this.spotPrice = spotPrice;
+            $.spotPrice = spotPrice;
             return this;
         }
+
         public Builder subnetId(@Nullable String subnetId) {
-            this.subnetId = subnetId;
+            $.subnetId = subnetId;
             return this;
         }
+
         public Builder weightedCapacity(@Nullable Double weightedCapacity) {
-            this.weightedCapacity = weightedCapacity;
+            $.weightedCapacity = weightedCapacity;
             return this;
-        }        public SpotFleetLaunchTemplateOverrides build() {
-            return new SpotFleetLaunchTemplateOverrides(availabilityZone, instanceRequirements, instanceType, spotPrice, subnetId, weightedCapacity);
+        }
+
+        public SpotFleetLaunchTemplateOverrides build() {
+            return $;
         }
     }
+
 }

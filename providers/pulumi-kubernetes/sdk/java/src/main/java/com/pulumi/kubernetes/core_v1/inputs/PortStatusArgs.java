@@ -5,10 +5,10 @@ package com.pulumi.kubernetes.core_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class PortStatusArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="error")
-      private final @Nullable Output<String> error;
+    private @Nullable Output<String> error;
 
-    public Output<String> error() {
-        return this.error == null ? Codegen.empty() : this.error;
+    public Optional<Output<String>> error() {
+        return Optional.ofNullable(this.error);
     }
 
     /**
@@ -35,7 +35,7 @@ public final class PortStatusArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="port", required=true)
-      private final Output<Integer> port;
+    private Output<Integer> port;
 
     public Output<Integer> port() {
         return this.port;
@@ -51,76 +51,70 @@ public final class PortStatusArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="protocol", required=true)
-      private final Output<String> protocol;
+    private Output<String> protocol;
 
     public Output<String> protocol() {
         return this.protocol;
     }
 
-    public PortStatusArgs(
-        @Nullable Output<String> error,
-        Output<Integer> port,
-        Output<String> protocol) {
-        this.error = error;
-        this.port = Objects.requireNonNull(port, "expected parameter 'port' to be non-null");
-        this.protocol = Objects.requireNonNull(protocol, "expected parameter 'protocol' to be non-null");
-    }
+    private PortStatusArgs() {}
 
-    private PortStatusArgs() {
-        this.error = Codegen.empty();
-        this.port = Codegen.empty();
-        this.protocol = Codegen.empty();
+    private PortStatusArgs(PortStatusArgs $) {
+        this.error = $.error;
+        this.port = $.port;
+        this.protocol = $.protocol;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PortStatusArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> error;
-        private Output<Integer> port;
-        private Output<String> protocol;
+        private PortStatusArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PortStatusArgs();
         }
 
         public Builder(PortStatusArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.error = defaults.error;
-    	      this.port = defaults.port;
-    	      this.protocol = defaults.protocol;
+            $ = new PortStatusArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder error(@Nullable Output<String> error) {
-            this.error = error;
+            $.error = error;
             return this;
         }
-        public Builder error(@Nullable String error) {
-            this.error = Codegen.ofNullable(error);
-            return this;
+
+        public Builder error(String error) {
+            return error(Output.of(error));
         }
+
         public Builder port(Output<Integer> port) {
-            this.port = Objects.requireNonNull(port);
+            $.port = port;
             return this;
         }
+
         public Builder port(Integer port) {
-            this.port = Output.of(Objects.requireNonNull(port));
-            return this;
+            return port(Output.of(port));
         }
+
         public Builder protocol(Output<String> protocol) {
-            this.protocol = Objects.requireNonNull(protocol);
+            $.protocol = protocol;
             return this;
         }
+
         public Builder protocol(String protocol) {
-            this.protocol = Output.of(Objects.requireNonNull(protocol));
-            return this;
-        }        public PortStatusArgs build() {
-            return new PortStatusArgs(error, port, protocol);
+            return protocol(Output.of(protocol));
+        }
+
+        public PortStatusArgs build() {
+            $.port = Objects.requireNonNull($.port, "expected parameter 'port' to be non-null");
+            $.protocol = Objects.requireNonNull($.protocol, "expected parameter 'protocol' to be non-null");
+            return $;
         }
     }
+
 }

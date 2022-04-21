@@ -17,7 +17,7 @@ public final class GetAttestationAtResourceGroupArgs extends com.pulumi.resource
      * 
      */
     @Import(name="attestationName", required=true)
-      private final String attestationName;
+    private String attestationName;
 
     public String attestationName() {
         return this.attestationName;
@@ -28,55 +28,52 @@ public final class GetAttestationAtResourceGroupArgs extends com.pulumi.resource
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public GetAttestationAtResourceGroupArgs(
-        String attestationName,
-        String resourceGroupName) {
-        this.attestationName = Objects.requireNonNull(attestationName, "expected parameter 'attestationName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private GetAttestationAtResourceGroupArgs() {}
 
-    private GetAttestationAtResourceGroupArgs() {
-        this.attestationName = null;
-        this.resourceGroupName = null;
+    private GetAttestationAtResourceGroupArgs(GetAttestationAtResourceGroupArgs $) {
+        this.attestationName = $.attestationName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetAttestationAtResourceGroupArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String attestationName;
-        private String resourceGroupName;
+        private GetAttestationAtResourceGroupArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetAttestationAtResourceGroupArgs();
         }
 
         public Builder(GetAttestationAtResourceGroupArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.attestationName = defaults.attestationName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new GetAttestationAtResourceGroupArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder attestationName(String attestationName) {
-            this.attestationName = Objects.requireNonNull(attestationName);
+            $.attestationName = attestationName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public GetAttestationAtResourceGroupArgs build() {
-            return new GetAttestationAtResourceGroupArgs(attestationName, resourceGroupName);
+        }
+
+        public GetAttestationAtResourceGroupArgs build() {
+            $.attestationName = Objects.requireNonNull($.attestationName, "expected parameter 'attestationName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

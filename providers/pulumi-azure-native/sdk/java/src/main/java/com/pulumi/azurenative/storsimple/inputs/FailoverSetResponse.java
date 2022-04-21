@@ -25,10 +25,10 @@ public final class FailoverSetResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="eligibilityResult")
-      private final @Nullable FailoverSetEligibilityResultResponse eligibilityResult;
+    private @Nullable FailoverSetEligibilityResultResponse eligibilityResult;
 
     public Optional<FailoverSetEligibilityResultResponse> eligibilityResult() {
-        return this.eligibilityResult == null ? Optional.empty() : Optional.ofNullable(this.eligibilityResult);
+        return Optional.ofNullable(this.eligibilityResult);
     }
 
     /**
@@ -36,58 +36,54 @@ public final class FailoverSetResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="volumeContainers")
-      private final @Nullable List<VolumeContainerFailoverMetadataResponse> volumeContainers;
+    private @Nullable List<VolumeContainerFailoverMetadataResponse> volumeContainers;
 
-    public List<VolumeContainerFailoverMetadataResponse> volumeContainers() {
-        return this.volumeContainers == null ? List.of() : this.volumeContainers;
+    public Optional<List<VolumeContainerFailoverMetadataResponse>> volumeContainers() {
+        return Optional.ofNullable(this.volumeContainers);
     }
 
-    public FailoverSetResponse(
-        @Nullable FailoverSetEligibilityResultResponse eligibilityResult,
-        @Nullable List<VolumeContainerFailoverMetadataResponse> volumeContainers) {
-        this.eligibilityResult = eligibilityResult;
-        this.volumeContainers = volumeContainers;
-    }
+    private FailoverSetResponse() {}
 
-    private FailoverSetResponse() {
-        this.eligibilityResult = null;
-        this.volumeContainers = List.of();
+    private FailoverSetResponse(FailoverSetResponse $) {
+        this.eligibilityResult = $.eligibilityResult;
+        this.volumeContainers = $.volumeContainers;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FailoverSetResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable FailoverSetEligibilityResultResponse eligibilityResult;
-        private @Nullable List<VolumeContainerFailoverMetadataResponse> volumeContainers;
+        private FailoverSetResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new FailoverSetResponse();
         }
 
         public Builder(FailoverSetResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.eligibilityResult = defaults.eligibilityResult;
-    	      this.volumeContainers = defaults.volumeContainers;
+            $ = new FailoverSetResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder eligibilityResult(@Nullable FailoverSetEligibilityResultResponse eligibilityResult) {
-            this.eligibilityResult = eligibilityResult;
+            $.eligibilityResult = eligibilityResult;
             return this;
         }
+
         public Builder volumeContainers(@Nullable List<VolumeContainerFailoverMetadataResponse> volumeContainers) {
-            this.volumeContainers = volumeContainers;
+            $.volumeContainers = volumeContainers;
             return this;
         }
+
         public Builder volumeContainers(VolumeContainerFailoverMetadataResponse... volumeContainers) {
             return volumeContainers(List.of(volumeContainers));
-        }        public FailoverSetResponse build() {
-            return new FailoverSetResponse(eligibilityResult, volumeContainers);
+        }
+
+        public FailoverSetResponse build() {
+            return $;
         }
     }
+
 }

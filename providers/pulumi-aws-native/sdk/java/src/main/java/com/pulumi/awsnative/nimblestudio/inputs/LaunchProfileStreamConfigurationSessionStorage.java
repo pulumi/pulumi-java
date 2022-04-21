@@ -26,65 +26,61 @@ public final class LaunchProfileStreamConfigurationSessionStorage extends com.pu
      * 
      */
     @Import(name="mode")
-      private final @Nullable List<LaunchProfileStreamingSessionStorageMode> mode;
+    private @Nullable List<LaunchProfileStreamingSessionStorageMode> mode;
 
-    public List<LaunchProfileStreamingSessionStorageMode> mode() {
-        return this.mode == null ? List.of() : this.mode;
+    public Optional<List<LaunchProfileStreamingSessionStorageMode>> mode() {
+        return Optional.ofNullable(this.mode);
     }
 
     @Import(name="root")
-      private final @Nullable LaunchProfileStreamingSessionStorageRoot root;
+    private @Nullable LaunchProfileStreamingSessionStorageRoot root;
 
     public Optional<LaunchProfileStreamingSessionStorageRoot> root() {
-        return this.root == null ? Optional.empty() : Optional.ofNullable(this.root);
+        return Optional.ofNullable(this.root);
     }
 
-    public LaunchProfileStreamConfigurationSessionStorage(
-        @Nullable List<LaunchProfileStreamingSessionStorageMode> mode,
-        @Nullable LaunchProfileStreamingSessionStorageRoot root) {
-        this.mode = mode;
-        this.root = root;
-    }
+    private LaunchProfileStreamConfigurationSessionStorage() {}
 
-    private LaunchProfileStreamConfigurationSessionStorage() {
-        this.mode = List.of();
-        this.root = null;
+    private LaunchProfileStreamConfigurationSessionStorage(LaunchProfileStreamConfigurationSessionStorage $) {
+        this.mode = $.mode;
+        this.root = $.root;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LaunchProfileStreamConfigurationSessionStorage defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<LaunchProfileStreamingSessionStorageMode> mode;
-        private @Nullable LaunchProfileStreamingSessionStorageRoot root;
+        private LaunchProfileStreamConfigurationSessionStorage $;
 
         public Builder() {
-    	      // Empty
+            $ = new LaunchProfileStreamConfigurationSessionStorage();
         }
 
         public Builder(LaunchProfileStreamConfigurationSessionStorage defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.mode = defaults.mode;
-    	      this.root = defaults.root;
+            $ = new LaunchProfileStreamConfigurationSessionStorage(Objects.requireNonNull(defaults));
         }
 
         public Builder mode(@Nullable List<LaunchProfileStreamingSessionStorageMode> mode) {
-            this.mode = mode;
+            $.mode = mode;
             return this;
         }
+
         public Builder mode(LaunchProfileStreamingSessionStorageMode... mode) {
             return mode(List.of(mode));
         }
+
         public Builder root(@Nullable LaunchProfileStreamingSessionStorageRoot root) {
-            this.root = root;
+            $.root = root;
             return this;
-        }        public LaunchProfileStreamConfigurationSessionStorage build() {
-            return new LaunchProfileStreamConfigurationSessionStorage(mode, root);
+        }
+
+        public LaunchProfileStreamConfigurationSessionStorage build() {
+            return $;
         }
     }
+
 }

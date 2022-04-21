@@ -5,7 +5,6 @@ package com.pulumi.gcp.tpu.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.Objects;
 
@@ -19,49 +18,49 @@ public final class NodeSchedulingConfigArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="preemptible", required=true)
-      private final Output<Boolean> preemptible;
+    private Output<Boolean> preemptible;
 
     public Output<Boolean> preemptible() {
         return this.preemptible;
     }
 
-    public NodeSchedulingConfigArgs(Output<Boolean> preemptible) {
-        this.preemptible = Objects.requireNonNull(preemptible, "expected parameter 'preemptible' to be non-null");
-    }
+    private NodeSchedulingConfigArgs() {}
 
-    private NodeSchedulingConfigArgs() {
-        this.preemptible = Codegen.empty();
+    private NodeSchedulingConfigArgs(NodeSchedulingConfigArgs $) {
+        this.preemptible = $.preemptible;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NodeSchedulingConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Boolean> preemptible;
+        private NodeSchedulingConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new NodeSchedulingConfigArgs();
         }
 
         public Builder(NodeSchedulingConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.preemptible = defaults.preemptible;
+            $ = new NodeSchedulingConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder preemptible(Output<Boolean> preemptible) {
-            this.preemptible = Objects.requireNonNull(preemptible);
+            $.preemptible = preemptible;
             return this;
         }
+
         public Builder preemptible(Boolean preemptible) {
-            this.preemptible = Output.of(Objects.requireNonNull(preemptible));
-            return this;
-        }        public NodeSchedulingConfigArgs build() {
-            return new NodeSchedulingConfigArgs(preemptible);
+            return preemptible(Output.of(preemptible));
+        }
+
+        public NodeSchedulingConfigArgs build() {
+            $.preemptible = Objects.requireNonNull($.preemptible, "expected parameter 'preemptible' to be non-null");
+            return $;
         }
     }
+
 }

@@ -17,45 +17,45 @@ public final class DataPrivacyProperties extends com.pulumi.resources.InvokeArgs
     public static final DataPrivacyProperties Empty = new DataPrivacyProperties();
 
     @Import(name="childDirected", required=true)
-      private final Boolean childDirected;
+    private Boolean childDirected;
 
     public Boolean childDirected() {
         return this.childDirected;
     }
 
-    public DataPrivacyProperties(Boolean childDirected) {
-        this.childDirected = Objects.requireNonNull(childDirected, "expected parameter 'childDirected' to be non-null");
-    }
+    private DataPrivacyProperties() {}
 
-    private DataPrivacyProperties() {
-        this.childDirected = null;
+    private DataPrivacyProperties(DataPrivacyProperties $) {
+        this.childDirected = $.childDirected;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DataPrivacyProperties defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Boolean childDirected;
+        private DataPrivacyProperties $;
 
         public Builder() {
-    	      // Empty
+            $ = new DataPrivacyProperties();
         }
 
         public Builder(DataPrivacyProperties defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.childDirected = defaults.childDirected;
+            $ = new DataPrivacyProperties(Objects.requireNonNull(defaults));
         }
 
         public Builder childDirected(Boolean childDirected) {
-            this.childDirected = Objects.requireNonNull(childDirected);
+            $.childDirected = childDirected;
             return this;
-        }        public DataPrivacyProperties build() {
-            return new DataPrivacyProperties(childDirected);
+        }
+
+        public DataPrivacyProperties build() {
+            $.childDirected = Objects.requireNonNull($.childDirected, "expected parameter 'childDirected' to be non-null");
+            return $;
         }
     }
+
 }

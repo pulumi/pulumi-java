@@ -5,10 +5,10 @@ package com.pulumi.awsnative.lightsail.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class ContainerPublicDomainNameArgs extends com.pulumi.resources.Re
     public static final ContainerPublicDomainNameArgs Empty = new ContainerPublicDomainNameArgs();
 
     @Import(name="certificateName")
-      private final @Nullable Output<String> certificateName;
+    private @Nullable Output<String> certificateName;
 
-    public Output<String> certificateName() {
-        return this.certificateName == null ? Codegen.empty() : this.certificateName;
+    public Optional<Output<String>> certificateName() {
+        return Optional.ofNullable(this.certificateName);
     }
 
     /**
@@ -32,66 +32,62 @@ public final class ContainerPublicDomainNameArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="domainNames")
-      private final @Nullable Output<List<String>> domainNames;
+    private @Nullable Output<List<String>> domainNames;
 
-    public Output<List<String>> domainNames() {
-        return this.domainNames == null ? Codegen.empty() : this.domainNames;
+    public Optional<Output<List<String>>> domainNames() {
+        return Optional.ofNullable(this.domainNames);
     }
 
-    public ContainerPublicDomainNameArgs(
-        @Nullable Output<String> certificateName,
-        @Nullable Output<List<String>> domainNames) {
-        this.certificateName = certificateName;
-        this.domainNames = domainNames;
-    }
+    private ContainerPublicDomainNameArgs() {}
 
-    private ContainerPublicDomainNameArgs() {
-        this.certificateName = Codegen.empty();
-        this.domainNames = Codegen.empty();
+    private ContainerPublicDomainNameArgs(ContainerPublicDomainNameArgs $) {
+        this.certificateName = $.certificateName;
+        this.domainNames = $.domainNames;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ContainerPublicDomainNameArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> certificateName;
-        private @Nullable Output<List<String>> domainNames;
+        private ContainerPublicDomainNameArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ContainerPublicDomainNameArgs();
         }
 
         public Builder(ContainerPublicDomainNameArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.certificateName = defaults.certificateName;
-    	      this.domainNames = defaults.domainNames;
+            $ = new ContainerPublicDomainNameArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder certificateName(@Nullable Output<String> certificateName) {
-            this.certificateName = certificateName;
+            $.certificateName = certificateName;
             return this;
         }
-        public Builder certificateName(@Nullable String certificateName) {
-            this.certificateName = Codegen.ofNullable(certificateName);
-            return this;
+
+        public Builder certificateName(String certificateName) {
+            return certificateName(Output.of(certificateName));
         }
+
         public Builder domainNames(@Nullable Output<List<String>> domainNames) {
-            this.domainNames = domainNames;
+            $.domainNames = domainNames;
             return this;
         }
-        public Builder domainNames(@Nullable List<String> domainNames) {
-            this.domainNames = Codegen.ofNullable(domainNames);
-            return this;
+
+        public Builder domainNames(List<String> domainNames) {
+            return domainNames(Output.of(domainNames));
         }
+
         public Builder domainNames(String... domainNames) {
             return domainNames(List.of(domainNames));
-        }        public ContainerPublicDomainNameArgs build() {
-            return new ContainerPublicDomainNameArgs(certificateName, domainNames);
+        }
+
+        public ContainerPublicDomainNameArgs build() {
+            return $;
         }
     }
+
 }

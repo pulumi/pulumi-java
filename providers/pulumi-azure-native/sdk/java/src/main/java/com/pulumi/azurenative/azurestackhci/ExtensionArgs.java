@@ -7,11 +7,11 @@ import com.pulumi.azurenative.azurestackhci.enums.CreatedByType;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,7 +24,7 @@ public final class ExtensionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="arcSettingName", required=true)
-      private final Output<String> arcSettingName;
+    private Output<String> arcSettingName;
 
     public Output<String> arcSettingName() {
         return this.arcSettingName;
@@ -35,10 +35,10 @@ public final class ExtensionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="autoUpgradeMinorVersion")
-      private final @Nullable Output<Boolean> autoUpgradeMinorVersion;
+    private @Nullable Output<Boolean> autoUpgradeMinorVersion;
 
-    public Output<Boolean> autoUpgradeMinorVersion() {
-        return this.autoUpgradeMinorVersion == null ? Codegen.empty() : this.autoUpgradeMinorVersion;
+    public Optional<Output<Boolean>> autoUpgradeMinorVersion() {
+        return Optional.ofNullable(this.autoUpgradeMinorVersion);
     }
 
     /**
@@ -46,7 +46,7 @@ public final class ExtensionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="clusterName", required=true)
-      private final Output<String> clusterName;
+    private Output<String> clusterName;
 
     public Output<String> clusterName() {
         return this.clusterName;
@@ -57,10 +57,10 @@ public final class ExtensionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="createdAt")
-      private final @Nullable Output<String> createdAt;
+    private @Nullable Output<String> createdAt;
 
-    public Output<String> createdAt() {
-        return this.createdAt == null ? Codegen.empty() : this.createdAt;
+    public Optional<Output<String>> createdAt() {
+        return Optional.ofNullable(this.createdAt);
     }
 
     /**
@@ -68,10 +68,10 @@ public final class ExtensionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="createdBy")
-      private final @Nullable Output<String> createdBy;
+    private @Nullable Output<String> createdBy;
 
-    public Output<String> createdBy() {
-        return this.createdBy == null ? Codegen.empty() : this.createdBy;
+    public Optional<Output<String>> createdBy() {
+        return Optional.ofNullable(this.createdBy);
     }
 
     /**
@@ -79,10 +79,10 @@ public final class ExtensionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="createdByType")
-      private final @Nullable Output<Either<String,CreatedByType>> createdByType;
+    private @Nullable Output<Either<String,CreatedByType>> createdByType;
 
-    public Output<Either<String,CreatedByType>> createdByType() {
-        return this.createdByType == null ? Codegen.empty() : this.createdByType;
+    public Optional<Output<Either<String,CreatedByType>>> createdByType() {
+        return Optional.ofNullable(this.createdByType);
     }
 
     /**
@@ -90,10 +90,10 @@ public final class ExtensionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="extensionName")
-      private final @Nullable Output<String> extensionName;
+    private @Nullable Output<String> extensionName;
 
-    public Output<String> extensionName() {
-        return this.extensionName == null ? Codegen.empty() : this.extensionName;
+    public Optional<Output<String>> extensionName() {
+        return Optional.ofNullable(this.extensionName);
     }
 
     /**
@@ -101,10 +101,10 @@ public final class ExtensionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="forceUpdateTag")
-      private final @Nullable Output<String> forceUpdateTag;
+    private @Nullable Output<String> forceUpdateTag;
 
-    public Output<String> forceUpdateTag() {
-        return this.forceUpdateTag == null ? Codegen.empty() : this.forceUpdateTag;
+    public Optional<Output<String>> forceUpdateTag() {
+        return Optional.ofNullable(this.forceUpdateTag);
     }
 
     /**
@@ -112,10 +112,10 @@ public final class ExtensionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="lastModifiedAt")
-      private final @Nullable Output<String> lastModifiedAt;
+    private @Nullable Output<String> lastModifiedAt;
 
-    public Output<String> lastModifiedAt() {
-        return this.lastModifiedAt == null ? Codegen.empty() : this.lastModifiedAt;
+    public Optional<Output<String>> lastModifiedAt() {
+        return Optional.ofNullable(this.lastModifiedAt);
     }
 
     /**
@@ -123,10 +123,10 @@ public final class ExtensionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="lastModifiedBy")
-      private final @Nullable Output<String> lastModifiedBy;
+    private @Nullable Output<String> lastModifiedBy;
 
-    public Output<String> lastModifiedBy() {
-        return this.lastModifiedBy == null ? Codegen.empty() : this.lastModifiedBy;
+    public Optional<Output<String>> lastModifiedBy() {
+        return Optional.ofNullable(this.lastModifiedBy);
     }
 
     /**
@@ -134,10 +134,10 @@ public final class ExtensionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="lastModifiedByType")
-      private final @Nullable Output<Either<String,CreatedByType>> lastModifiedByType;
+    private @Nullable Output<Either<String,CreatedByType>> lastModifiedByType;
 
-    public Output<Either<String,CreatedByType>> lastModifiedByType() {
-        return this.lastModifiedByType == null ? Codegen.empty() : this.lastModifiedByType;
+    public Optional<Output<Either<String,CreatedByType>>> lastModifiedByType() {
+        return Optional.ofNullable(this.lastModifiedByType);
     }
 
     /**
@@ -145,10 +145,10 @@ public final class ExtensionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="protectedSettings")
-      private final @Nullable Output<Object> protectedSettings;
+    private @Nullable Output<Object> protectedSettings;
 
-    public Output<Object> protectedSettings() {
-        return this.protectedSettings == null ? Codegen.empty() : this.protectedSettings;
+    public Optional<Output<Object>> protectedSettings() {
+        return Optional.ofNullable(this.protectedSettings);
     }
 
     /**
@@ -156,10 +156,10 @@ public final class ExtensionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="publisher")
-      private final @Nullable Output<String> publisher;
+    private @Nullable Output<String> publisher;
 
-    public Output<String> publisher() {
-        return this.publisher == null ? Codegen.empty() : this.publisher;
+    public Optional<Output<String>> publisher() {
+        return Optional.ofNullable(this.publisher);
     }
 
     /**
@@ -167,7 +167,7 @@ public final class ExtensionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -178,10 +178,10 @@ public final class ExtensionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="settings")
-      private final @Nullable Output<Object> settings;
+    private @Nullable Output<Object> settings;
 
-    public Output<Object> settings() {
-        return this.settings == null ? Codegen.empty() : this.settings;
+    public Optional<Output<Object>> settings() {
+        return Optional.ofNullable(this.settings);
     }
 
     /**
@@ -189,10 +189,10 @@ public final class ExtensionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="type")
-      private final @Nullable Output<String> type;
+    private @Nullable Output<String> type;
 
-    public Output<String> type() {
-        return this.type == null ? Codegen.empty() : this.type;
+    public Optional<Output<String>> type() {
+        return Optional.ofNullable(this.type);
     }
 
     /**
@@ -200,258 +200,211 @@ public final class ExtensionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="typeHandlerVersion")
-      private final @Nullable Output<String> typeHandlerVersion;
+    private @Nullable Output<String> typeHandlerVersion;
 
-    public Output<String> typeHandlerVersion() {
-        return this.typeHandlerVersion == null ? Codegen.empty() : this.typeHandlerVersion;
+    public Optional<Output<String>> typeHandlerVersion() {
+        return Optional.ofNullable(this.typeHandlerVersion);
     }
 
-    public ExtensionArgs(
-        Output<String> arcSettingName,
-        @Nullable Output<Boolean> autoUpgradeMinorVersion,
-        Output<String> clusterName,
-        @Nullable Output<String> createdAt,
-        @Nullable Output<String> createdBy,
-        @Nullable Output<Either<String,CreatedByType>> createdByType,
-        @Nullable Output<String> extensionName,
-        @Nullable Output<String> forceUpdateTag,
-        @Nullable Output<String> lastModifiedAt,
-        @Nullable Output<String> lastModifiedBy,
-        @Nullable Output<Either<String,CreatedByType>> lastModifiedByType,
-        @Nullable Output<Object> protectedSettings,
-        @Nullable Output<String> publisher,
-        Output<String> resourceGroupName,
-        @Nullable Output<Object> settings,
-        @Nullable Output<String> type,
-        @Nullable Output<String> typeHandlerVersion) {
-        this.arcSettingName = Objects.requireNonNull(arcSettingName, "expected parameter 'arcSettingName' to be non-null");
-        this.autoUpgradeMinorVersion = autoUpgradeMinorVersion;
-        this.clusterName = Objects.requireNonNull(clusterName, "expected parameter 'clusterName' to be non-null");
-        this.createdAt = createdAt;
-        this.createdBy = createdBy;
-        this.createdByType = createdByType;
-        this.extensionName = extensionName;
-        this.forceUpdateTag = forceUpdateTag;
-        this.lastModifiedAt = lastModifiedAt;
-        this.lastModifiedBy = lastModifiedBy;
-        this.lastModifiedByType = lastModifiedByType;
-        this.protectedSettings = protectedSettings;
-        this.publisher = publisher;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.settings = settings;
-        this.type = type;
-        this.typeHandlerVersion = typeHandlerVersion;
-    }
+    private ExtensionArgs() {}
 
-    private ExtensionArgs() {
-        this.arcSettingName = Codegen.empty();
-        this.autoUpgradeMinorVersion = Codegen.empty();
-        this.clusterName = Codegen.empty();
-        this.createdAt = Codegen.empty();
-        this.createdBy = Codegen.empty();
-        this.createdByType = Codegen.empty();
-        this.extensionName = Codegen.empty();
-        this.forceUpdateTag = Codegen.empty();
-        this.lastModifiedAt = Codegen.empty();
-        this.lastModifiedBy = Codegen.empty();
-        this.lastModifiedByType = Codegen.empty();
-        this.protectedSettings = Codegen.empty();
-        this.publisher = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.settings = Codegen.empty();
-        this.type = Codegen.empty();
-        this.typeHandlerVersion = Codegen.empty();
+    private ExtensionArgs(ExtensionArgs $) {
+        this.arcSettingName = $.arcSettingName;
+        this.autoUpgradeMinorVersion = $.autoUpgradeMinorVersion;
+        this.clusterName = $.clusterName;
+        this.createdAt = $.createdAt;
+        this.createdBy = $.createdBy;
+        this.createdByType = $.createdByType;
+        this.extensionName = $.extensionName;
+        this.forceUpdateTag = $.forceUpdateTag;
+        this.lastModifiedAt = $.lastModifiedAt;
+        this.lastModifiedBy = $.lastModifiedBy;
+        this.lastModifiedByType = $.lastModifiedByType;
+        this.protectedSettings = $.protectedSettings;
+        this.publisher = $.publisher;
+        this.resourceGroupName = $.resourceGroupName;
+        this.settings = $.settings;
+        this.type = $.type;
+        this.typeHandlerVersion = $.typeHandlerVersion;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ExtensionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> arcSettingName;
-        private @Nullable Output<Boolean> autoUpgradeMinorVersion;
-        private Output<String> clusterName;
-        private @Nullable Output<String> createdAt;
-        private @Nullable Output<String> createdBy;
-        private @Nullable Output<Either<String,CreatedByType>> createdByType;
-        private @Nullable Output<String> extensionName;
-        private @Nullable Output<String> forceUpdateTag;
-        private @Nullable Output<String> lastModifiedAt;
-        private @Nullable Output<String> lastModifiedBy;
-        private @Nullable Output<Either<String,CreatedByType>> lastModifiedByType;
-        private @Nullable Output<Object> protectedSettings;
-        private @Nullable Output<String> publisher;
-        private Output<String> resourceGroupName;
-        private @Nullable Output<Object> settings;
-        private @Nullable Output<String> type;
-        private @Nullable Output<String> typeHandlerVersion;
+        private ExtensionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ExtensionArgs();
         }
 
         public Builder(ExtensionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.arcSettingName = defaults.arcSettingName;
-    	      this.autoUpgradeMinorVersion = defaults.autoUpgradeMinorVersion;
-    	      this.clusterName = defaults.clusterName;
-    	      this.createdAt = defaults.createdAt;
-    	      this.createdBy = defaults.createdBy;
-    	      this.createdByType = defaults.createdByType;
-    	      this.extensionName = defaults.extensionName;
-    	      this.forceUpdateTag = defaults.forceUpdateTag;
-    	      this.lastModifiedAt = defaults.lastModifiedAt;
-    	      this.lastModifiedBy = defaults.lastModifiedBy;
-    	      this.lastModifiedByType = defaults.lastModifiedByType;
-    	      this.protectedSettings = defaults.protectedSettings;
-    	      this.publisher = defaults.publisher;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.settings = defaults.settings;
-    	      this.type = defaults.type;
-    	      this.typeHandlerVersion = defaults.typeHandlerVersion;
+            $ = new ExtensionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder arcSettingName(Output<String> arcSettingName) {
-            this.arcSettingName = Objects.requireNonNull(arcSettingName);
+            $.arcSettingName = arcSettingName;
             return this;
         }
+
         public Builder arcSettingName(String arcSettingName) {
-            this.arcSettingName = Output.of(Objects.requireNonNull(arcSettingName));
-            return this;
+            return arcSettingName(Output.of(arcSettingName));
         }
+
         public Builder autoUpgradeMinorVersion(@Nullable Output<Boolean> autoUpgradeMinorVersion) {
-            this.autoUpgradeMinorVersion = autoUpgradeMinorVersion;
+            $.autoUpgradeMinorVersion = autoUpgradeMinorVersion;
             return this;
         }
-        public Builder autoUpgradeMinorVersion(@Nullable Boolean autoUpgradeMinorVersion) {
-            this.autoUpgradeMinorVersion = Codegen.ofNullable(autoUpgradeMinorVersion);
-            return this;
+
+        public Builder autoUpgradeMinorVersion(Boolean autoUpgradeMinorVersion) {
+            return autoUpgradeMinorVersion(Output.of(autoUpgradeMinorVersion));
         }
+
         public Builder clusterName(Output<String> clusterName) {
-            this.clusterName = Objects.requireNonNull(clusterName);
+            $.clusterName = clusterName;
             return this;
         }
+
         public Builder clusterName(String clusterName) {
-            this.clusterName = Output.of(Objects.requireNonNull(clusterName));
-            return this;
+            return clusterName(Output.of(clusterName));
         }
+
         public Builder createdAt(@Nullable Output<String> createdAt) {
-            this.createdAt = createdAt;
+            $.createdAt = createdAt;
             return this;
         }
-        public Builder createdAt(@Nullable String createdAt) {
-            this.createdAt = Codegen.ofNullable(createdAt);
-            return this;
+
+        public Builder createdAt(String createdAt) {
+            return createdAt(Output.of(createdAt));
         }
+
         public Builder createdBy(@Nullable Output<String> createdBy) {
-            this.createdBy = createdBy;
+            $.createdBy = createdBy;
             return this;
         }
-        public Builder createdBy(@Nullable String createdBy) {
-            this.createdBy = Codegen.ofNullable(createdBy);
-            return this;
+
+        public Builder createdBy(String createdBy) {
+            return createdBy(Output.of(createdBy));
         }
+
         public Builder createdByType(@Nullable Output<Either<String,CreatedByType>> createdByType) {
-            this.createdByType = createdByType;
+            $.createdByType = createdByType;
             return this;
         }
-        public Builder createdByType(@Nullable Either<String,CreatedByType> createdByType) {
-            this.createdByType = Codegen.ofNullable(createdByType);
-            return this;
+
+        public Builder createdByType(Either<String,CreatedByType> createdByType) {
+            return createdByType(Output.of(createdByType));
         }
+
         public Builder extensionName(@Nullable Output<String> extensionName) {
-            this.extensionName = extensionName;
+            $.extensionName = extensionName;
             return this;
         }
-        public Builder extensionName(@Nullable String extensionName) {
-            this.extensionName = Codegen.ofNullable(extensionName);
-            return this;
+
+        public Builder extensionName(String extensionName) {
+            return extensionName(Output.of(extensionName));
         }
+
         public Builder forceUpdateTag(@Nullable Output<String> forceUpdateTag) {
-            this.forceUpdateTag = forceUpdateTag;
+            $.forceUpdateTag = forceUpdateTag;
             return this;
         }
-        public Builder forceUpdateTag(@Nullable String forceUpdateTag) {
-            this.forceUpdateTag = Codegen.ofNullable(forceUpdateTag);
-            return this;
+
+        public Builder forceUpdateTag(String forceUpdateTag) {
+            return forceUpdateTag(Output.of(forceUpdateTag));
         }
+
         public Builder lastModifiedAt(@Nullable Output<String> lastModifiedAt) {
-            this.lastModifiedAt = lastModifiedAt;
+            $.lastModifiedAt = lastModifiedAt;
             return this;
         }
-        public Builder lastModifiedAt(@Nullable String lastModifiedAt) {
-            this.lastModifiedAt = Codegen.ofNullable(lastModifiedAt);
-            return this;
+
+        public Builder lastModifiedAt(String lastModifiedAt) {
+            return lastModifiedAt(Output.of(lastModifiedAt));
         }
+
         public Builder lastModifiedBy(@Nullable Output<String> lastModifiedBy) {
-            this.lastModifiedBy = lastModifiedBy;
+            $.lastModifiedBy = lastModifiedBy;
             return this;
         }
-        public Builder lastModifiedBy(@Nullable String lastModifiedBy) {
-            this.lastModifiedBy = Codegen.ofNullable(lastModifiedBy);
-            return this;
+
+        public Builder lastModifiedBy(String lastModifiedBy) {
+            return lastModifiedBy(Output.of(lastModifiedBy));
         }
+
         public Builder lastModifiedByType(@Nullable Output<Either<String,CreatedByType>> lastModifiedByType) {
-            this.lastModifiedByType = lastModifiedByType;
+            $.lastModifiedByType = lastModifiedByType;
             return this;
         }
-        public Builder lastModifiedByType(@Nullable Either<String,CreatedByType> lastModifiedByType) {
-            this.lastModifiedByType = Codegen.ofNullable(lastModifiedByType);
-            return this;
+
+        public Builder lastModifiedByType(Either<String,CreatedByType> lastModifiedByType) {
+            return lastModifiedByType(Output.of(lastModifiedByType));
         }
+
         public Builder protectedSettings(@Nullable Output<Object> protectedSettings) {
-            this.protectedSettings = protectedSettings;
+            $.protectedSettings = protectedSettings;
             return this;
         }
-        public Builder protectedSettings(@Nullable Object protectedSettings) {
-            this.protectedSettings = Codegen.ofNullable(protectedSettings);
-            return this;
+
+        public Builder protectedSettings(Object protectedSettings) {
+            return protectedSettings(Output.of(protectedSettings));
         }
+
         public Builder publisher(@Nullable Output<String> publisher) {
-            this.publisher = publisher;
+            $.publisher = publisher;
             return this;
         }
-        public Builder publisher(@Nullable String publisher) {
-            this.publisher = Codegen.ofNullable(publisher);
-            return this;
+
+        public Builder publisher(String publisher) {
+            return publisher(Output.of(publisher));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder settings(@Nullable Output<Object> settings) {
-            this.settings = settings;
+            $.settings = settings;
             return this;
         }
-        public Builder settings(@Nullable Object settings) {
-            this.settings = Codegen.ofNullable(settings);
-            return this;
+
+        public Builder settings(Object settings) {
+            return settings(Output.of(settings));
         }
+
         public Builder type(@Nullable Output<String> type) {
-            this.type = type;
+            $.type = type;
             return this;
         }
-        public Builder type(@Nullable String type) {
-            this.type = Codegen.ofNullable(type);
-            return this;
+
+        public Builder type(String type) {
+            return type(Output.of(type));
         }
+
         public Builder typeHandlerVersion(@Nullable Output<String> typeHandlerVersion) {
-            this.typeHandlerVersion = typeHandlerVersion;
+            $.typeHandlerVersion = typeHandlerVersion;
             return this;
         }
-        public Builder typeHandlerVersion(@Nullable String typeHandlerVersion) {
-            this.typeHandlerVersion = Codegen.ofNullable(typeHandlerVersion);
-            return this;
-        }        public ExtensionArgs build() {
-            return new ExtensionArgs(arcSettingName, autoUpgradeMinorVersion, clusterName, createdAt, createdBy, createdByType, extensionName, forceUpdateTag, lastModifiedAt, lastModifiedBy, lastModifiedByType, protectedSettings, publisher, resourceGroupName, settings, type, typeHandlerVersion);
+
+        public Builder typeHandlerVersion(String typeHandlerVersion) {
+            return typeHandlerVersion(Output.of(typeHandlerVersion));
+        }
+
+        public ExtensionArgs build() {
+            $.arcSettingName = Objects.requireNonNull($.arcSettingName, "expected parameter 'arcSettingName' to be non-null");
+            $.clusterName = Objects.requireNonNull($.clusterName, "expected parameter 'clusterName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

@@ -17,45 +17,45 @@ public final class GetLocationObjectStorageArgs extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="locationArn", required=true)
-      private final String locationArn;
+    private String locationArn;
 
     public String locationArn() {
         return this.locationArn;
     }
 
-    public GetLocationObjectStorageArgs(String locationArn) {
-        this.locationArn = Objects.requireNonNull(locationArn, "expected parameter 'locationArn' to be non-null");
-    }
+    private GetLocationObjectStorageArgs() {}
 
-    private GetLocationObjectStorageArgs() {
-        this.locationArn = null;
+    private GetLocationObjectStorageArgs(GetLocationObjectStorageArgs $) {
+        this.locationArn = $.locationArn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetLocationObjectStorageArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String locationArn;
+        private GetLocationObjectStorageArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetLocationObjectStorageArgs();
         }
 
         public Builder(GetLocationObjectStorageArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.locationArn = defaults.locationArn;
+            $ = new GetLocationObjectStorageArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder locationArn(String locationArn) {
-            this.locationArn = Objects.requireNonNull(locationArn);
+            $.locationArn = locationArn;
             return this;
-        }        public GetLocationObjectStorageArgs build() {
-            return new GetLocationObjectStorageArgs(locationArn);
+        }
+
+        public GetLocationObjectStorageArgs build() {
+            $.locationArn = Objects.requireNonNull($.locationArn, "expected parameter 'locationArn' to be non-null");
+            return $;
         }
     }
+
 }

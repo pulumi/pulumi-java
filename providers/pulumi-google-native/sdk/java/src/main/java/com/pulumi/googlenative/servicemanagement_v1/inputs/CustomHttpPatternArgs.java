@@ -5,9 +5,9 @@ package com.pulumi.googlenative.servicemanagement_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class CustomHttpPatternArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="kind")
-      private final @Nullable Output<String> kind;
+    private @Nullable Output<String> kind;
 
-    public Output<String> kind() {
-        return this.kind == null ? Codegen.empty() : this.kind;
+    public Optional<Output<String>> kind() {
+        return Optional.ofNullable(this.kind);
     }
 
     /**
@@ -35,63 +35,58 @@ public final class CustomHttpPatternArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="path")
-      private final @Nullable Output<String> path;
+    private @Nullable Output<String> path;
 
-    public Output<String> path() {
-        return this.path == null ? Codegen.empty() : this.path;
+    public Optional<Output<String>> path() {
+        return Optional.ofNullable(this.path);
     }
 
-    public CustomHttpPatternArgs(
-        @Nullable Output<String> kind,
-        @Nullable Output<String> path) {
-        this.kind = kind;
-        this.path = path;
-    }
+    private CustomHttpPatternArgs() {}
 
-    private CustomHttpPatternArgs() {
-        this.kind = Codegen.empty();
-        this.path = Codegen.empty();
+    private CustomHttpPatternArgs(CustomHttpPatternArgs $) {
+        this.kind = $.kind;
+        this.path = $.path;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CustomHttpPatternArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> kind;
-        private @Nullable Output<String> path;
+        private CustomHttpPatternArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CustomHttpPatternArgs();
         }
 
         public Builder(CustomHttpPatternArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.kind = defaults.kind;
-    	      this.path = defaults.path;
+            $ = new CustomHttpPatternArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder kind(@Nullable Output<String> kind) {
-            this.kind = kind;
+            $.kind = kind;
             return this;
         }
-        public Builder kind(@Nullable String kind) {
-            this.kind = Codegen.ofNullable(kind);
-            return this;
+
+        public Builder kind(String kind) {
+            return kind(Output.of(kind));
         }
+
         public Builder path(@Nullable Output<String> path) {
-            this.path = path;
+            $.path = path;
             return this;
         }
-        public Builder path(@Nullable String path) {
-            this.path = Codegen.ofNullable(path);
-            return this;
-        }        public CustomHttpPatternArgs build() {
-            return new CustomHttpPatternArgs(kind, path);
+
+        public Builder path(String path) {
+            return path(Output.of(path));
+        }
+
+        public CustomHttpPatternArgs build() {
+            return $;
         }
     }
+
 }

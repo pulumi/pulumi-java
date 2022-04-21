@@ -25,10 +25,10 @@ public final class PolicySettingsResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="fileUploadLimitInMb")
-      private final @Nullable Integer fileUploadLimitInMb;
+    private @Nullable Integer fileUploadLimitInMb;
 
     public Optional<Integer> fileUploadLimitInMb() {
-        return this.fileUploadLimitInMb == null ? Optional.empty() : Optional.ofNullable(this.fileUploadLimitInMb);
+        return Optional.ofNullable(this.fileUploadLimitInMb);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class PolicySettingsResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="maxRequestBodySizeInKb")
-      private final @Nullable Integer maxRequestBodySizeInKb;
+    private @Nullable Integer maxRequestBodySizeInKb;
 
     public Optional<Integer> maxRequestBodySizeInKb() {
-        return this.maxRequestBodySizeInKb == null ? Optional.empty() : Optional.ofNullable(this.maxRequestBodySizeInKb);
+        return Optional.ofNullable(this.maxRequestBodySizeInKb);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class PolicySettingsResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="mode")
-      private final @Nullable String mode;
+    private @Nullable String mode;
 
     public Optional<String> mode() {
-        return this.mode == null ? Optional.empty() : Optional.ofNullable(this.mode);
+        return Optional.ofNullable(this.mode);
     }
 
     /**
@@ -58,10 +58,10 @@ public final class PolicySettingsResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="requestBodyCheck")
-      private final @Nullable Boolean requestBodyCheck;
+    private @Nullable Boolean requestBodyCheck;
 
     public Optional<Boolean> requestBodyCheck() {
-        return this.requestBodyCheck == null ? Optional.empty() : Optional.ofNullable(this.requestBodyCheck);
+        return Optional.ofNullable(this.requestBodyCheck);
     }
 
     /**
@@ -69,82 +69,68 @@ public final class PolicySettingsResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="state")
-      private final @Nullable String state;
+    private @Nullable String state;
 
     public Optional<String> state() {
-        return this.state == null ? Optional.empty() : Optional.ofNullable(this.state);
+        return Optional.ofNullable(this.state);
     }
 
-    public PolicySettingsResponse(
-        @Nullable Integer fileUploadLimitInMb,
-        @Nullable Integer maxRequestBodySizeInKb,
-        @Nullable String mode,
-        @Nullable Boolean requestBodyCheck,
-        @Nullable String state) {
-        this.fileUploadLimitInMb = fileUploadLimitInMb;
-        this.maxRequestBodySizeInKb = maxRequestBodySizeInKb;
-        this.mode = mode;
-        this.requestBodyCheck = requestBodyCheck;
-        this.state = state;
-    }
+    private PolicySettingsResponse() {}
 
-    private PolicySettingsResponse() {
-        this.fileUploadLimitInMb = null;
-        this.maxRequestBodySizeInKb = null;
-        this.mode = null;
-        this.requestBodyCheck = null;
-        this.state = null;
+    private PolicySettingsResponse(PolicySettingsResponse $) {
+        this.fileUploadLimitInMb = $.fileUploadLimitInMb;
+        this.maxRequestBodySizeInKb = $.maxRequestBodySizeInKb;
+        this.mode = $.mode;
+        this.requestBodyCheck = $.requestBodyCheck;
+        this.state = $.state;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PolicySettingsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Integer fileUploadLimitInMb;
-        private @Nullable Integer maxRequestBodySizeInKb;
-        private @Nullable String mode;
-        private @Nullable Boolean requestBodyCheck;
-        private @Nullable String state;
+        private PolicySettingsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new PolicySettingsResponse();
         }
 
         public Builder(PolicySettingsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.fileUploadLimitInMb = defaults.fileUploadLimitInMb;
-    	      this.maxRequestBodySizeInKb = defaults.maxRequestBodySizeInKb;
-    	      this.mode = defaults.mode;
-    	      this.requestBodyCheck = defaults.requestBodyCheck;
-    	      this.state = defaults.state;
+            $ = new PolicySettingsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder fileUploadLimitInMb(@Nullable Integer fileUploadLimitInMb) {
-            this.fileUploadLimitInMb = fileUploadLimitInMb;
+            $.fileUploadLimitInMb = fileUploadLimitInMb;
             return this;
         }
+
         public Builder maxRequestBodySizeInKb(@Nullable Integer maxRequestBodySizeInKb) {
-            this.maxRequestBodySizeInKb = maxRequestBodySizeInKb;
+            $.maxRequestBodySizeInKb = maxRequestBodySizeInKb;
             return this;
         }
+
         public Builder mode(@Nullable String mode) {
-            this.mode = mode;
+            $.mode = mode;
             return this;
         }
+
         public Builder requestBodyCheck(@Nullable Boolean requestBodyCheck) {
-            this.requestBodyCheck = requestBodyCheck;
+            $.requestBodyCheck = requestBodyCheck;
             return this;
         }
+
         public Builder state(@Nullable String state) {
-            this.state = state;
+            $.state = state;
             return this;
-        }        public PolicySettingsResponse build() {
-            return new PolicySettingsResponse(fileUploadLimitInMb, maxRequestBodySizeInKb, mode, requestBodyCheck, state);
+        }
+
+        public PolicySettingsResponse build() {
+            return $;
         }
     }
+
 }

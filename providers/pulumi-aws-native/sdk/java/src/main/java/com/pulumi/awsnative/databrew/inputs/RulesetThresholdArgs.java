@@ -7,9 +7,9 @@ import com.pulumi.awsnative.databrew.enums.RulesetThresholdType;
 import com.pulumi.awsnative.databrew.enums.RulesetThresholdUnit;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -18,90 +18,83 @@ public final class RulesetThresholdArgs extends com.pulumi.resources.ResourceArg
     public static final RulesetThresholdArgs Empty = new RulesetThresholdArgs();
 
     @Import(name="type")
-      private final @Nullable Output<RulesetThresholdType> type;
+    private @Nullable Output<RulesetThresholdType> type;
 
-    public Output<RulesetThresholdType> type() {
-        return this.type == null ? Codegen.empty() : this.type;
+    public Optional<Output<RulesetThresholdType>> type() {
+        return Optional.ofNullable(this.type);
     }
 
     @Import(name="unit")
-      private final @Nullable Output<RulesetThresholdUnit> unit;
+    private @Nullable Output<RulesetThresholdUnit> unit;
 
-    public Output<RulesetThresholdUnit> unit() {
-        return this.unit == null ? Codegen.empty() : this.unit;
+    public Optional<Output<RulesetThresholdUnit>> unit() {
+        return Optional.ofNullable(this.unit);
     }
 
     @Import(name="value", required=true)
-      private final Output<Double> value;
+    private Output<Double> value;
 
     public Output<Double> value() {
         return this.value;
     }
 
-    public RulesetThresholdArgs(
-        @Nullable Output<RulesetThresholdType> type,
-        @Nullable Output<RulesetThresholdUnit> unit,
-        Output<Double> value) {
-        this.type = type;
-        this.unit = unit;
-        this.value = Objects.requireNonNull(value, "expected parameter 'value' to be non-null");
-    }
+    private RulesetThresholdArgs() {}
 
-    private RulesetThresholdArgs() {
-        this.type = Codegen.empty();
-        this.unit = Codegen.empty();
-        this.value = Codegen.empty();
+    private RulesetThresholdArgs(RulesetThresholdArgs $) {
+        this.type = $.type;
+        this.unit = $.unit;
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RulesetThresholdArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<RulesetThresholdType> type;
-        private @Nullable Output<RulesetThresholdUnit> unit;
-        private Output<Double> value;
+        private RulesetThresholdArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RulesetThresholdArgs();
         }
 
         public Builder(RulesetThresholdArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.type = defaults.type;
-    	      this.unit = defaults.unit;
-    	      this.value = defaults.value;
+            $ = new RulesetThresholdArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder type(@Nullable Output<RulesetThresholdType> type) {
-            this.type = type;
+            $.type = type;
             return this;
         }
-        public Builder type(@Nullable RulesetThresholdType type) {
-            this.type = Codegen.ofNullable(type);
-            return this;
+
+        public Builder type(RulesetThresholdType type) {
+            return type(Output.of(type));
         }
+
         public Builder unit(@Nullable Output<RulesetThresholdUnit> unit) {
-            this.unit = unit;
+            $.unit = unit;
             return this;
         }
-        public Builder unit(@Nullable RulesetThresholdUnit unit) {
-            this.unit = Codegen.ofNullable(unit);
-            return this;
+
+        public Builder unit(RulesetThresholdUnit unit) {
+            return unit(Output.of(unit));
         }
+
         public Builder value(Output<Double> value) {
-            this.value = Objects.requireNonNull(value);
+            $.value = value;
             return this;
         }
+
         public Builder value(Double value) {
-            this.value = Output.of(Objects.requireNonNull(value));
-            return this;
-        }        public RulesetThresholdArgs build() {
-            return new RulesetThresholdArgs(type, unit, value);
+            return value(Output.of(value));
+        }
+
+        public RulesetThresholdArgs build() {
+            $.value = Objects.requireNonNull($.value, "expected parameter 'value' to be non-null");
+            return $;
         }
     }
+
 }

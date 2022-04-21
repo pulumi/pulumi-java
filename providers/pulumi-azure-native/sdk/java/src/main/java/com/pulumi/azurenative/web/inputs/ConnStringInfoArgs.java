@@ -6,9 +6,9 @@ package com.pulumi.azurenative.web.inputs;
 import com.pulumi.azurenative.web.enums.ConnectionStringType;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class ConnStringInfoArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="connectionString")
-      private final @Nullable Output<String> connectionString;
+    private @Nullable Output<String> connectionString;
 
-    public Output<String> connectionString() {
-        return this.connectionString == null ? Codegen.empty() : this.connectionString;
+    public Optional<Output<String>> connectionString() {
+        return Optional.ofNullable(this.connectionString);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class ConnStringInfoArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -47,76 +47,68 @@ public final class ConnStringInfoArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="type")
-      private final @Nullable Output<ConnectionStringType> type;
+    private @Nullable Output<ConnectionStringType> type;
 
-    public Output<ConnectionStringType> type() {
-        return this.type == null ? Codegen.empty() : this.type;
+    public Optional<Output<ConnectionStringType>> type() {
+        return Optional.ofNullable(this.type);
     }
 
-    public ConnStringInfoArgs(
-        @Nullable Output<String> connectionString,
-        @Nullable Output<String> name,
-        @Nullable Output<ConnectionStringType> type) {
-        this.connectionString = connectionString;
-        this.name = name;
-        this.type = type;
-    }
+    private ConnStringInfoArgs() {}
 
-    private ConnStringInfoArgs() {
-        this.connectionString = Codegen.empty();
-        this.name = Codegen.empty();
-        this.type = Codegen.empty();
+    private ConnStringInfoArgs(ConnStringInfoArgs $) {
+        this.connectionString = $.connectionString;
+        this.name = $.name;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ConnStringInfoArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> connectionString;
-        private @Nullable Output<String> name;
-        private @Nullable Output<ConnectionStringType> type;
+        private ConnStringInfoArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ConnStringInfoArgs();
         }
 
         public Builder(ConnStringInfoArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.connectionString = defaults.connectionString;
-    	      this.name = defaults.name;
-    	      this.type = defaults.type;
+            $ = new ConnStringInfoArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder connectionString(@Nullable Output<String> connectionString) {
-            this.connectionString = connectionString;
+            $.connectionString = connectionString;
             return this;
         }
-        public Builder connectionString(@Nullable String connectionString) {
-            this.connectionString = Codegen.ofNullable(connectionString);
-            return this;
+
+        public Builder connectionString(String connectionString) {
+            return connectionString(Output.of(connectionString));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder type(@Nullable Output<ConnectionStringType> type) {
-            this.type = type;
+            $.type = type;
             return this;
         }
-        public Builder type(@Nullable ConnectionStringType type) {
-            this.type = Codegen.ofNullable(type);
-            return this;
-        }        public ConnStringInfoArgs build() {
-            return new ConnStringInfoArgs(connectionString, name, type);
+
+        public Builder type(ConnectionStringType type) {
+            return type(Output.of(type));
+        }
+
+        public ConnStringInfoArgs build() {
+            return $;
         }
     }
+
 }

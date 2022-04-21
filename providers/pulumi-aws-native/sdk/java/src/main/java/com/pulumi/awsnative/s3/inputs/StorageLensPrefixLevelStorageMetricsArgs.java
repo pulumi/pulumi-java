@@ -6,9 +6,9 @@ package com.pulumi.awsnative.s3.inputs;
 import com.pulumi.awsnative.s3.inputs.StorageLensSelectionCriteriaArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,70 +21,65 @@ public final class StorageLensPrefixLevelStorageMetricsArgs extends com.pulumi.r
      * 
      */
     @Import(name="isEnabled")
-      private final @Nullable Output<Boolean> isEnabled;
+    private @Nullable Output<Boolean> isEnabled;
 
-    public Output<Boolean> isEnabled() {
-        return this.isEnabled == null ? Codegen.empty() : this.isEnabled;
+    public Optional<Output<Boolean>> isEnabled() {
+        return Optional.ofNullable(this.isEnabled);
     }
 
     @Import(name="selectionCriteria")
-      private final @Nullable Output<StorageLensSelectionCriteriaArgs> selectionCriteria;
+    private @Nullable Output<StorageLensSelectionCriteriaArgs> selectionCriteria;
 
-    public Output<StorageLensSelectionCriteriaArgs> selectionCriteria() {
-        return this.selectionCriteria == null ? Codegen.empty() : this.selectionCriteria;
+    public Optional<Output<StorageLensSelectionCriteriaArgs>> selectionCriteria() {
+        return Optional.ofNullable(this.selectionCriteria);
     }
 
-    public StorageLensPrefixLevelStorageMetricsArgs(
-        @Nullable Output<Boolean> isEnabled,
-        @Nullable Output<StorageLensSelectionCriteriaArgs> selectionCriteria) {
-        this.isEnabled = isEnabled;
-        this.selectionCriteria = selectionCriteria;
-    }
+    private StorageLensPrefixLevelStorageMetricsArgs() {}
 
-    private StorageLensPrefixLevelStorageMetricsArgs() {
-        this.isEnabled = Codegen.empty();
-        this.selectionCriteria = Codegen.empty();
+    private StorageLensPrefixLevelStorageMetricsArgs(StorageLensPrefixLevelStorageMetricsArgs $) {
+        this.isEnabled = $.isEnabled;
+        this.selectionCriteria = $.selectionCriteria;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(StorageLensPrefixLevelStorageMetricsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> isEnabled;
-        private @Nullable Output<StorageLensSelectionCriteriaArgs> selectionCriteria;
+        private StorageLensPrefixLevelStorageMetricsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new StorageLensPrefixLevelStorageMetricsArgs();
         }
 
         public Builder(StorageLensPrefixLevelStorageMetricsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.isEnabled = defaults.isEnabled;
-    	      this.selectionCriteria = defaults.selectionCriteria;
+            $ = new StorageLensPrefixLevelStorageMetricsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder isEnabled(@Nullable Output<Boolean> isEnabled) {
-            this.isEnabled = isEnabled;
+            $.isEnabled = isEnabled;
             return this;
         }
-        public Builder isEnabled(@Nullable Boolean isEnabled) {
-            this.isEnabled = Codegen.ofNullable(isEnabled);
-            return this;
+
+        public Builder isEnabled(Boolean isEnabled) {
+            return isEnabled(Output.of(isEnabled));
         }
+
         public Builder selectionCriteria(@Nullable Output<StorageLensSelectionCriteriaArgs> selectionCriteria) {
-            this.selectionCriteria = selectionCriteria;
+            $.selectionCriteria = selectionCriteria;
             return this;
         }
-        public Builder selectionCriteria(@Nullable StorageLensSelectionCriteriaArgs selectionCriteria) {
-            this.selectionCriteria = Codegen.ofNullable(selectionCriteria);
-            return this;
-        }        public StorageLensPrefixLevelStorageMetricsArgs build() {
-            return new StorageLensPrefixLevelStorageMetricsArgs(isEnabled, selectionCriteria);
+
+        public Builder selectionCriteria(StorageLensSelectionCriteriaArgs selectionCriteria) {
+            return selectionCriteria(Output.of(selectionCriteria));
+        }
+
+        public StorageLensPrefixLevelStorageMetricsArgs build() {
+            return $;
         }
     }
+
 }

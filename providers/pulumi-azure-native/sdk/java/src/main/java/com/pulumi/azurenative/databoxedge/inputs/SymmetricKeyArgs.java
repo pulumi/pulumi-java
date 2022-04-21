@@ -6,8 +6,8 @@ package com.pulumi.azurenative.databoxedge.inputs;
 import com.pulumi.azurenative.databoxedge.inputs.AsymmetricEncryptedSecretArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class SymmetricKeyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="connectionString")
-      private final @Nullable Output<AsymmetricEncryptedSecretArgs> connectionString;
+    private @Nullable Output<AsymmetricEncryptedSecretArgs> connectionString;
 
-    public Output<AsymmetricEncryptedSecretArgs> connectionString() {
-        return this.connectionString == null ? Codegen.empty() : this.connectionString;
+    public Optional<Output<AsymmetricEncryptedSecretArgs>> connectionString() {
+        return Optional.ofNullable(this.connectionString);
     }
 
-    public SymmetricKeyArgs(@Nullable Output<AsymmetricEncryptedSecretArgs> connectionString) {
-        this.connectionString = connectionString;
-    }
+    private SymmetricKeyArgs() {}
 
-    private SymmetricKeyArgs() {
-        this.connectionString = Codegen.empty();
+    private SymmetricKeyArgs(SymmetricKeyArgs $) {
+        this.connectionString = $.connectionString;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SymmetricKeyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<AsymmetricEncryptedSecretArgs> connectionString;
+        private SymmetricKeyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SymmetricKeyArgs();
         }
 
         public Builder(SymmetricKeyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.connectionString = defaults.connectionString;
+            $ = new SymmetricKeyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder connectionString(@Nullable Output<AsymmetricEncryptedSecretArgs> connectionString) {
-            this.connectionString = connectionString;
+            $.connectionString = connectionString;
             return this;
         }
-        public Builder connectionString(@Nullable AsymmetricEncryptedSecretArgs connectionString) {
-            this.connectionString = Codegen.ofNullable(connectionString);
-            return this;
-        }        public SymmetricKeyArgs build() {
-            return new SymmetricKeyArgs(connectionString);
+
+        public Builder connectionString(AsymmetricEncryptedSecretArgs connectionString) {
+            return connectionString(Output.of(connectionString));
+        }
+
+        public SymmetricKeyArgs build() {
+            return $;
         }
     }
+
 }

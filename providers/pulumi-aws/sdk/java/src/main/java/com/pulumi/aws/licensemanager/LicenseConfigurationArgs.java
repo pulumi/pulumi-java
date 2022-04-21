@@ -5,13 +5,13 @@ package com.pulumi.aws.licensemanager;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class LicenseConfigurationArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class LicenseConfigurationArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="licenseCount")
-      private final @Nullable Output<Integer> licenseCount;
+    private @Nullable Output<Integer> licenseCount;
 
-    public Output<Integer> licenseCount() {
-        return this.licenseCount == null ? Codegen.empty() : this.licenseCount;
+    public Optional<Output<Integer>> licenseCount() {
+        return Optional.ofNullable(this.licenseCount);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class LicenseConfigurationArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="licenseCountHardLimit")
-      private final @Nullable Output<Boolean> licenseCountHardLimit;
+    private @Nullable Output<Boolean> licenseCountHardLimit;
 
-    public Output<Boolean> licenseCountHardLimit() {
-        return this.licenseCountHardLimit == null ? Codegen.empty() : this.licenseCountHardLimit;
+    public Optional<Output<Boolean>> licenseCountHardLimit() {
+        return Optional.ofNullable(this.licenseCountHardLimit);
     }
 
     /**
@@ -57,7 +57,7 @@ public final class LicenseConfigurationArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="licenseCountingType", required=true)
-      private final Output<String> licenseCountingType;
+    private Output<String> licenseCountingType;
 
     public Output<String> licenseCountingType() {
         return this.licenseCountingType;
@@ -68,10 +68,10 @@ public final class LicenseConfigurationArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="licenseRules")
-      private final @Nullable Output<List<String>> licenseRules;
+    private @Nullable Output<List<String>> licenseRules;
 
-    public Output<List<String>> licenseRules() {
-        return this.licenseRules == null ? Codegen.empty() : this.licenseRules;
+    public Optional<Output<List<String>>> licenseRules() {
+        return Optional.ofNullable(this.licenseRules);
     }
 
     /**
@@ -79,10 +79,10 @@ public final class LicenseConfigurationArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -90,131 +90,113 @@ public final class LicenseConfigurationArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public LicenseConfigurationArgs(
-        @Nullable Output<String> description,
-        @Nullable Output<Integer> licenseCount,
-        @Nullable Output<Boolean> licenseCountHardLimit,
-        Output<String> licenseCountingType,
-        @Nullable Output<List<String>> licenseRules,
-        @Nullable Output<String> name,
-        @Nullable Output<Map<String,String>> tags) {
-        this.description = description;
-        this.licenseCount = licenseCount;
-        this.licenseCountHardLimit = licenseCountHardLimit;
-        this.licenseCountingType = Objects.requireNonNull(licenseCountingType, "expected parameter 'licenseCountingType' to be non-null");
-        this.licenseRules = licenseRules;
-        this.name = name;
-        this.tags = tags;
-    }
+    private LicenseConfigurationArgs() {}
 
-    private LicenseConfigurationArgs() {
-        this.description = Codegen.empty();
-        this.licenseCount = Codegen.empty();
-        this.licenseCountHardLimit = Codegen.empty();
-        this.licenseCountingType = Codegen.empty();
-        this.licenseRules = Codegen.empty();
-        this.name = Codegen.empty();
-        this.tags = Codegen.empty();
+    private LicenseConfigurationArgs(LicenseConfigurationArgs $) {
+        this.description = $.description;
+        this.licenseCount = $.licenseCount;
+        this.licenseCountHardLimit = $.licenseCountHardLimit;
+        this.licenseCountingType = $.licenseCountingType;
+        this.licenseRules = $.licenseRules;
+        this.name = $.name;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LicenseConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> description;
-        private @Nullable Output<Integer> licenseCount;
-        private @Nullable Output<Boolean> licenseCountHardLimit;
-        private Output<String> licenseCountingType;
-        private @Nullable Output<List<String>> licenseRules;
-        private @Nullable Output<String> name;
-        private @Nullable Output<Map<String,String>> tags;
+        private LicenseConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new LicenseConfigurationArgs();
         }
 
         public Builder(LicenseConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.description = defaults.description;
-    	      this.licenseCount = defaults.licenseCount;
-    	      this.licenseCountHardLimit = defaults.licenseCountHardLimit;
-    	      this.licenseCountingType = defaults.licenseCountingType;
-    	      this.licenseRules = defaults.licenseRules;
-    	      this.name = defaults.name;
-    	      this.tags = defaults.tags;
+            $ = new LicenseConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder licenseCount(@Nullable Output<Integer> licenseCount) {
-            this.licenseCount = licenseCount;
+            $.licenseCount = licenseCount;
             return this;
         }
-        public Builder licenseCount(@Nullable Integer licenseCount) {
-            this.licenseCount = Codegen.ofNullable(licenseCount);
-            return this;
+
+        public Builder licenseCount(Integer licenseCount) {
+            return licenseCount(Output.of(licenseCount));
         }
+
         public Builder licenseCountHardLimit(@Nullable Output<Boolean> licenseCountHardLimit) {
-            this.licenseCountHardLimit = licenseCountHardLimit;
+            $.licenseCountHardLimit = licenseCountHardLimit;
             return this;
         }
-        public Builder licenseCountHardLimit(@Nullable Boolean licenseCountHardLimit) {
-            this.licenseCountHardLimit = Codegen.ofNullable(licenseCountHardLimit);
-            return this;
+
+        public Builder licenseCountHardLimit(Boolean licenseCountHardLimit) {
+            return licenseCountHardLimit(Output.of(licenseCountHardLimit));
         }
+
         public Builder licenseCountingType(Output<String> licenseCountingType) {
-            this.licenseCountingType = Objects.requireNonNull(licenseCountingType);
+            $.licenseCountingType = licenseCountingType;
             return this;
         }
+
         public Builder licenseCountingType(String licenseCountingType) {
-            this.licenseCountingType = Output.of(Objects.requireNonNull(licenseCountingType));
-            return this;
+            return licenseCountingType(Output.of(licenseCountingType));
         }
+
         public Builder licenseRules(@Nullable Output<List<String>> licenseRules) {
-            this.licenseRules = licenseRules;
+            $.licenseRules = licenseRules;
             return this;
         }
-        public Builder licenseRules(@Nullable List<String> licenseRules) {
-            this.licenseRules = Codegen.ofNullable(licenseRules);
-            return this;
+
+        public Builder licenseRules(List<String> licenseRules) {
+            return licenseRules(Output.of(licenseRules));
         }
+
         public Builder licenseRules(String... licenseRules) {
             return licenseRules(List.of(licenseRules));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
-        }        public LicenseConfigurationArgs build() {
-            return new LicenseConfigurationArgs(description, licenseCount, licenseCountHardLimit, licenseCountingType, licenseRules, name, tags);
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
+        }
+
+        public LicenseConfigurationArgs build() {
+            $.licenseCountingType = Objects.requireNonNull($.licenseCountingType, "expected parameter 'licenseCountingType' to be non-null");
+            return $;
         }
     }
+
 }

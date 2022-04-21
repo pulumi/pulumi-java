@@ -5,9 +5,9 @@ package com.pulumi.azurenative.datamigration.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class MigrationValidationOptionsArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="enableDataIntegrityValidation")
-      private final @Nullable Output<Boolean> enableDataIntegrityValidation;
+    private @Nullable Output<Boolean> enableDataIntegrityValidation;
 
-    public Output<Boolean> enableDataIntegrityValidation() {
-        return this.enableDataIntegrityValidation == null ? Codegen.empty() : this.enableDataIntegrityValidation;
+    public Optional<Output<Boolean>> enableDataIntegrityValidation() {
+        return Optional.ofNullable(this.enableDataIntegrityValidation);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class MigrationValidationOptionsArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="enableQueryAnalysisValidation")
-      private final @Nullable Output<Boolean> enableQueryAnalysisValidation;
+    private @Nullable Output<Boolean> enableQueryAnalysisValidation;
 
-    public Output<Boolean> enableQueryAnalysisValidation() {
-        return this.enableQueryAnalysisValidation == null ? Codegen.empty() : this.enableQueryAnalysisValidation;
+    public Optional<Output<Boolean>> enableQueryAnalysisValidation() {
+        return Optional.ofNullable(this.enableQueryAnalysisValidation);
     }
 
     /**
@@ -46,76 +46,68 @@ public final class MigrationValidationOptionsArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="enableSchemaValidation")
-      private final @Nullable Output<Boolean> enableSchemaValidation;
+    private @Nullable Output<Boolean> enableSchemaValidation;
 
-    public Output<Boolean> enableSchemaValidation() {
-        return this.enableSchemaValidation == null ? Codegen.empty() : this.enableSchemaValidation;
+    public Optional<Output<Boolean>> enableSchemaValidation() {
+        return Optional.ofNullable(this.enableSchemaValidation);
     }
 
-    public MigrationValidationOptionsArgs(
-        @Nullable Output<Boolean> enableDataIntegrityValidation,
-        @Nullable Output<Boolean> enableQueryAnalysisValidation,
-        @Nullable Output<Boolean> enableSchemaValidation) {
-        this.enableDataIntegrityValidation = enableDataIntegrityValidation;
-        this.enableQueryAnalysisValidation = enableQueryAnalysisValidation;
-        this.enableSchemaValidation = enableSchemaValidation;
-    }
+    private MigrationValidationOptionsArgs() {}
 
-    private MigrationValidationOptionsArgs() {
-        this.enableDataIntegrityValidation = Codegen.empty();
-        this.enableQueryAnalysisValidation = Codegen.empty();
-        this.enableSchemaValidation = Codegen.empty();
+    private MigrationValidationOptionsArgs(MigrationValidationOptionsArgs $) {
+        this.enableDataIntegrityValidation = $.enableDataIntegrityValidation;
+        this.enableQueryAnalysisValidation = $.enableQueryAnalysisValidation;
+        this.enableSchemaValidation = $.enableSchemaValidation;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MigrationValidationOptionsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> enableDataIntegrityValidation;
-        private @Nullable Output<Boolean> enableQueryAnalysisValidation;
-        private @Nullable Output<Boolean> enableSchemaValidation;
+        private MigrationValidationOptionsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new MigrationValidationOptionsArgs();
         }
 
         public Builder(MigrationValidationOptionsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.enableDataIntegrityValidation = defaults.enableDataIntegrityValidation;
-    	      this.enableQueryAnalysisValidation = defaults.enableQueryAnalysisValidation;
-    	      this.enableSchemaValidation = defaults.enableSchemaValidation;
+            $ = new MigrationValidationOptionsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder enableDataIntegrityValidation(@Nullable Output<Boolean> enableDataIntegrityValidation) {
-            this.enableDataIntegrityValidation = enableDataIntegrityValidation;
+            $.enableDataIntegrityValidation = enableDataIntegrityValidation;
             return this;
         }
-        public Builder enableDataIntegrityValidation(@Nullable Boolean enableDataIntegrityValidation) {
-            this.enableDataIntegrityValidation = Codegen.ofNullable(enableDataIntegrityValidation);
-            return this;
+
+        public Builder enableDataIntegrityValidation(Boolean enableDataIntegrityValidation) {
+            return enableDataIntegrityValidation(Output.of(enableDataIntegrityValidation));
         }
+
         public Builder enableQueryAnalysisValidation(@Nullable Output<Boolean> enableQueryAnalysisValidation) {
-            this.enableQueryAnalysisValidation = enableQueryAnalysisValidation;
+            $.enableQueryAnalysisValidation = enableQueryAnalysisValidation;
             return this;
         }
-        public Builder enableQueryAnalysisValidation(@Nullable Boolean enableQueryAnalysisValidation) {
-            this.enableQueryAnalysisValidation = Codegen.ofNullable(enableQueryAnalysisValidation);
-            return this;
+
+        public Builder enableQueryAnalysisValidation(Boolean enableQueryAnalysisValidation) {
+            return enableQueryAnalysisValidation(Output.of(enableQueryAnalysisValidation));
         }
+
         public Builder enableSchemaValidation(@Nullable Output<Boolean> enableSchemaValidation) {
-            this.enableSchemaValidation = enableSchemaValidation;
+            $.enableSchemaValidation = enableSchemaValidation;
             return this;
         }
-        public Builder enableSchemaValidation(@Nullable Boolean enableSchemaValidation) {
-            this.enableSchemaValidation = Codegen.ofNullable(enableSchemaValidation);
-            return this;
-        }        public MigrationValidationOptionsArgs build() {
-            return new MigrationValidationOptionsArgs(enableDataIntegrityValidation, enableQueryAnalysisValidation, enableSchemaValidation);
+
+        public Builder enableSchemaValidation(Boolean enableSchemaValidation) {
+            return enableSchemaValidation(Output.of(enableSchemaValidation));
+        }
+
+        public MigrationValidationOptionsArgs build() {
+            return $;
         }
     }
+
 }

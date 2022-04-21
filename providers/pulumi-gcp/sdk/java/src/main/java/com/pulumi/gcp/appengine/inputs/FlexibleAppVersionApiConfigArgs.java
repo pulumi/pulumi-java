@@ -5,9 +5,9 @@ package com.pulumi.gcp.appengine.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class FlexibleAppVersionApiConfigArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="authFailAction")
-      private final @Nullable Output<String> authFailAction;
+    private @Nullable Output<String> authFailAction;
 
-    public Output<String> authFailAction() {
-        return this.authFailAction == null ? Codegen.empty() : this.authFailAction;
+    public Optional<Output<String>> authFailAction() {
+        return Optional.ofNullable(this.authFailAction);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class FlexibleAppVersionApiConfigArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="login")
-      private final @Nullable Output<String> login;
+    private @Nullable Output<String> login;
 
-    public Output<String> login() {
-        return this.login == null ? Codegen.empty() : this.login;
+    public Optional<Output<String>> login() {
+        return Optional.ofNullable(this.login);
     }
 
     /**
@@ -46,7 +46,7 @@ public final class FlexibleAppVersionApiConfigArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="script", required=true)
-      private final Output<String> script;
+    private Output<String> script;
 
     public Output<String> script() {
         return this.script;
@@ -58,10 +58,10 @@ public final class FlexibleAppVersionApiConfigArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="securityLevel")
-      private final @Nullable Output<String> securityLevel;
+    private @Nullable Output<String> securityLevel;
 
-    public Output<String> securityLevel() {
-        return this.securityLevel == null ? Codegen.empty() : this.securityLevel;
+    public Optional<Output<String>> securityLevel() {
+        return Optional.ofNullable(this.securityLevel);
     }
 
     /**
@@ -69,102 +69,89 @@ public final class FlexibleAppVersionApiConfigArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="url")
-      private final @Nullable Output<String> url;
+    private @Nullable Output<String> url;
 
-    public Output<String> url() {
-        return this.url == null ? Codegen.empty() : this.url;
+    public Optional<Output<String>> url() {
+        return Optional.ofNullable(this.url);
     }
 
-    public FlexibleAppVersionApiConfigArgs(
-        @Nullable Output<String> authFailAction,
-        @Nullable Output<String> login,
-        Output<String> script,
-        @Nullable Output<String> securityLevel,
-        @Nullable Output<String> url) {
-        this.authFailAction = authFailAction;
-        this.login = login;
-        this.script = Objects.requireNonNull(script, "expected parameter 'script' to be non-null");
-        this.securityLevel = securityLevel;
-        this.url = url;
-    }
+    private FlexibleAppVersionApiConfigArgs() {}
 
-    private FlexibleAppVersionApiConfigArgs() {
-        this.authFailAction = Codegen.empty();
-        this.login = Codegen.empty();
-        this.script = Codegen.empty();
-        this.securityLevel = Codegen.empty();
-        this.url = Codegen.empty();
+    private FlexibleAppVersionApiConfigArgs(FlexibleAppVersionApiConfigArgs $) {
+        this.authFailAction = $.authFailAction;
+        this.login = $.login;
+        this.script = $.script;
+        this.securityLevel = $.securityLevel;
+        this.url = $.url;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FlexibleAppVersionApiConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> authFailAction;
-        private @Nullable Output<String> login;
-        private Output<String> script;
-        private @Nullable Output<String> securityLevel;
-        private @Nullable Output<String> url;
+        private FlexibleAppVersionApiConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new FlexibleAppVersionApiConfigArgs();
         }
 
         public Builder(FlexibleAppVersionApiConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.authFailAction = defaults.authFailAction;
-    	      this.login = defaults.login;
-    	      this.script = defaults.script;
-    	      this.securityLevel = defaults.securityLevel;
-    	      this.url = defaults.url;
+            $ = new FlexibleAppVersionApiConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder authFailAction(@Nullable Output<String> authFailAction) {
-            this.authFailAction = authFailAction;
+            $.authFailAction = authFailAction;
             return this;
         }
-        public Builder authFailAction(@Nullable String authFailAction) {
-            this.authFailAction = Codegen.ofNullable(authFailAction);
-            return this;
+
+        public Builder authFailAction(String authFailAction) {
+            return authFailAction(Output.of(authFailAction));
         }
+
         public Builder login(@Nullable Output<String> login) {
-            this.login = login;
+            $.login = login;
             return this;
         }
-        public Builder login(@Nullable String login) {
-            this.login = Codegen.ofNullable(login);
-            return this;
+
+        public Builder login(String login) {
+            return login(Output.of(login));
         }
+
         public Builder script(Output<String> script) {
-            this.script = Objects.requireNonNull(script);
+            $.script = script;
             return this;
         }
+
         public Builder script(String script) {
-            this.script = Output.of(Objects.requireNonNull(script));
-            return this;
+            return script(Output.of(script));
         }
+
         public Builder securityLevel(@Nullable Output<String> securityLevel) {
-            this.securityLevel = securityLevel;
+            $.securityLevel = securityLevel;
             return this;
         }
-        public Builder securityLevel(@Nullable String securityLevel) {
-            this.securityLevel = Codegen.ofNullable(securityLevel);
-            return this;
+
+        public Builder securityLevel(String securityLevel) {
+            return securityLevel(Output.of(securityLevel));
         }
+
         public Builder url(@Nullable Output<String> url) {
-            this.url = url;
+            $.url = url;
             return this;
         }
-        public Builder url(@Nullable String url) {
-            this.url = Codegen.ofNullable(url);
-            return this;
-        }        public FlexibleAppVersionApiConfigArgs build() {
-            return new FlexibleAppVersionApiConfigArgs(authFailAction, login, script, securityLevel, url);
+
+        public Builder url(String url) {
+            return url(Output.of(url));
+        }
+
+        public FlexibleAppVersionApiConfigArgs build() {
+            $.script = Objects.requireNonNull($.script, "expected parameter 'script' to be non-null");
+            return $;
         }
     }
+
 }

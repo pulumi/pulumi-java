@@ -23,45 +23,44 @@ public final class EventSourceMappingDestinationConfig extends com.pulumi.resour
      * 
      */
     @Import(name="onFailure")
-      private final @Nullable EventSourceMappingOnFailure onFailure;
+    private @Nullable EventSourceMappingOnFailure onFailure;
 
     public Optional<EventSourceMappingOnFailure> onFailure() {
-        return this.onFailure == null ? Optional.empty() : Optional.ofNullable(this.onFailure);
+        return Optional.ofNullable(this.onFailure);
     }
 
-    public EventSourceMappingDestinationConfig(@Nullable EventSourceMappingOnFailure onFailure) {
-        this.onFailure = onFailure;
-    }
+    private EventSourceMappingDestinationConfig() {}
 
-    private EventSourceMappingDestinationConfig() {
-        this.onFailure = null;
+    private EventSourceMappingDestinationConfig(EventSourceMappingDestinationConfig $) {
+        this.onFailure = $.onFailure;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EventSourceMappingDestinationConfig defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable EventSourceMappingOnFailure onFailure;
+        private EventSourceMappingDestinationConfig $;
 
         public Builder() {
-    	      // Empty
+            $ = new EventSourceMappingDestinationConfig();
         }
 
         public Builder(EventSourceMappingDestinationConfig defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.onFailure = defaults.onFailure;
+            $ = new EventSourceMappingDestinationConfig(Objects.requireNonNull(defaults));
         }
 
         public Builder onFailure(@Nullable EventSourceMappingOnFailure onFailure) {
-            this.onFailure = onFailure;
+            $.onFailure = onFailure;
             return this;
-        }        public EventSourceMappingDestinationConfig build() {
-            return new EventSourceMappingDestinationConfig(onFailure);
+        }
+
+        public EventSourceMappingDestinationConfig build() {
+            return $;
         }
     }
+
 }

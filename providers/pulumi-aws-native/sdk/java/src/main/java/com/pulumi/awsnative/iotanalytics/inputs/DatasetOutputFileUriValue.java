@@ -13,45 +13,45 @@ public final class DatasetOutputFileUriValue extends com.pulumi.resources.Invoke
     public static final DatasetOutputFileUriValue Empty = new DatasetOutputFileUriValue();
 
     @Import(name="fileName", required=true)
-      private final String fileName;
+    private String fileName;
 
     public String fileName() {
         return this.fileName;
     }
 
-    public DatasetOutputFileUriValue(String fileName) {
-        this.fileName = Objects.requireNonNull(fileName, "expected parameter 'fileName' to be non-null");
-    }
+    private DatasetOutputFileUriValue() {}
 
-    private DatasetOutputFileUriValue() {
-        this.fileName = null;
+    private DatasetOutputFileUriValue(DatasetOutputFileUriValue $) {
+        this.fileName = $.fileName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DatasetOutputFileUriValue defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String fileName;
+        private DatasetOutputFileUriValue $;
 
         public Builder() {
-    	      // Empty
+            $ = new DatasetOutputFileUriValue();
         }
 
         public Builder(DatasetOutputFileUriValue defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.fileName = defaults.fileName;
+            $ = new DatasetOutputFileUriValue(Objects.requireNonNull(defaults));
         }
 
         public Builder fileName(String fileName) {
-            this.fileName = Objects.requireNonNull(fileName);
+            $.fileName = fileName;
             return this;
-        }        public DatasetOutputFileUriValue build() {
-            return new DatasetOutputFileUriValue(fileName);
+        }
+
+        public DatasetOutputFileUriValue build() {
+            $.fileName = Objects.requireNonNull($.fileName, "expected parameter 'fileName' to be non-null");
+            return $;
         }
     }
+
 }

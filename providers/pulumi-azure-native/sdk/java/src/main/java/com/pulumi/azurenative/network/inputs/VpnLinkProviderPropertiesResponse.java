@@ -24,10 +24,10 @@ public final class VpnLinkProviderPropertiesResponse extends com.pulumi.resource
      * 
      */
     @Import(name="linkProviderName")
-      private final @Nullable String linkProviderName;
+    private @Nullable String linkProviderName;
 
     public Optional<String> linkProviderName() {
-        return this.linkProviderName == null ? Optional.empty() : Optional.ofNullable(this.linkProviderName);
+        return Optional.ofNullable(this.linkProviderName);
     }
 
     /**
@@ -35,55 +35,50 @@ public final class VpnLinkProviderPropertiesResponse extends com.pulumi.resource
      * 
      */
     @Import(name="linkSpeedInMbps")
-      private final @Nullable Integer linkSpeedInMbps;
+    private @Nullable Integer linkSpeedInMbps;
 
     public Optional<Integer> linkSpeedInMbps() {
-        return this.linkSpeedInMbps == null ? Optional.empty() : Optional.ofNullable(this.linkSpeedInMbps);
+        return Optional.ofNullable(this.linkSpeedInMbps);
     }
 
-    public VpnLinkProviderPropertiesResponse(
-        @Nullable String linkProviderName,
-        @Nullable Integer linkSpeedInMbps) {
-        this.linkProviderName = linkProviderName;
-        this.linkSpeedInMbps = linkSpeedInMbps;
-    }
+    private VpnLinkProviderPropertiesResponse() {}
 
-    private VpnLinkProviderPropertiesResponse() {
-        this.linkProviderName = null;
-        this.linkSpeedInMbps = null;
+    private VpnLinkProviderPropertiesResponse(VpnLinkProviderPropertiesResponse $) {
+        this.linkProviderName = $.linkProviderName;
+        this.linkSpeedInMbps = $.linkSpeedInMbps;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VpnLinkProviderPropertiesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String linkProviderName;
-        private @Nullable Integer linkSpeedInMbps;
+        private VpnLinkProviderPropertiesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new VpnLinkProviderPropertiesResponse();
         }
 
         public Builder(VpnLinkProviderPropertiesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.linkProviderName = defaults.linkProviderName;
-    	      this.linkSpeedInMbps = defaults.linkSpeedInMbps;
+            $ = new VpnLinkProviderPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder linkProviderName(@Nullable String linkProviderName) {
-            this.linkProviderName = linkProviderName;
+            $.linkProviderName = linkProviderName;
             return this;
         }
+
         public Builder linkSpeedInMbps(@Nullable Integer linkSpeedInMbps) {
-            this.linkSpeedInMbps = linkSpeedInMbps;
+            $.linkSpeedInMbps = linkSpeedInMbps;
             return this;
-        }        public VpnLinkProviderPropertiesResponse build() {
-            return new VpnLinkProviderPropertiesResponse(linkProviderName, linkSpeedInMbps);
+        }
+
+        public VpnLinkProviderPropertiesResponse build() {
+            return $;
         }
     }
+
 }

@@ -5,10 +5,10 @@ package com.pulumi.gcp.compute.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,7 +25,7 @@ public final class OrganizationSecurityPolicyRuleMatchConfigLayer4ConfigGetArgs 
      * 
      */
     @Import(name="ipProtocol", required=true)
-      private final Output<String> ipProtocol;
+    private Output<String> ipProtocol;
 
     public Output<String> ipProtocol() {
         return this.ipProtocol;
@@ -41,66 +41,63 @@ public final class OrganizationSecurityPolicyRuleMatchConfigLayer4ConfigGetArgs 
      * 
      */
     @Import(name="ports")
-      private final @Nullable Output<List<String>> ports;
+    private @Nullable Output<List<String>> ports;
 
-    public Output<List<String>> ports() {
-        return this.ports == null ? Codegen.empty() : this.ports;
+    public Optional<Output<List<String>>> ports() {
+        return Optional.ofNullable(this.ports);
     }
 
-    public OrganizationSecurityPolicyRuleMatchConfigLayer4ConfigGetArgs(
-        Output<String> ipProtocol,
-        @Nullable Output<List<String>> ports) {
-        this.ipProtocol = Objects.requireNonNull(ipProtocol, "expected parameter 'ipProtocol' to be non-null");
-        this.ports = ports;
-    }
+    private OrganizationSecurityPolicyRuleMatchConfigLayer4ConfigGetArgs() {}
 
-    private OrganizationSecurityPolicyRuleMatchConfigLayer4ConfigGetArgs() {
-        this.ipProtocol = Codegen.empty();
-        this.ports = Codegen.empty();
+    private OrganizationSecurityPolicyRuleMatchConfigLayer4ConfigGetArgs(OrganizationSecurityPolicyRuleMatchConfigLayer4ConfigGetArgs $) {
+        this.ipProtocol = $.ipProtocol;
+        this.ports = $.ports;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(OrganizationSecurityPolicyRuleMatchConfigLayer4ConfigGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> ipProtocol;
-        private @Nullable Output<List<String>> ports;
+        private OrganizationSecurityPolicyRuleMatchConfigLayer4ConfigGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new OrganizationSecurityPolicyRuleMatchConfigLayer4ConfigGetArgs();
         }
 
         public Builder(OrganizationSecurityPolicyRuleMatchConfigLayer4ConfigGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.ipProtocol = defaults.ipProtocol;
-    	      this.ports = defaults.ports;
+            $ = new OrganizationSecurityPolicyRuleMatchConfigLayer4ConfigGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder ipProtocol(Output<String> ipProtocol) {
-            this.ipProtocol = Objects.requireNonNull(ipProtocol);
+            $.ipProtocol = ipProtocol;
             return this;
         }
+
         public Builder ipProtocol(String ipProtocol) {
-            this.ipProtocol = Output.of(Objects.requireNonNull(ipProtocol));
-            return this;
+            return ipProtocol(Output.of(ipProtocol));
         }
+
         public Builder ports(@Nullable Output<List<String>> ports) {
-            this.ports = ports;
+            $.ports = ports;
             return this;
         }
-        public Builder ports(@Nullable List<String> ports) {
-            this.ports = Codegen.ofNullable(ports);
-            return this;
+
+        public Builder ports(List<String> ports) {
+            return ports(Output.of(ports));
         }
+
         public Builder ports(String... ports) {
             return ports(List.of(ports));
-        }        public OrganizationSecurityPolicyRuleMatchConfigLayer4ConfigGetArgs build() {
-            return new OrganizationSecurityPolicyRuleMatchConfigLayer4ConfigGetArgs(ipProtocol, ports);
+        }
+
+        public OrganizationSecurityPolicyRuleMatchConfigLayer4ConfigGetArgs build() {
+            $.ipProtocol = Objects.requireNonNull($.ipProtocol, "expected parameter 'ipProtocol' to be non-null");
+            return $;
         }
     }
+
 }

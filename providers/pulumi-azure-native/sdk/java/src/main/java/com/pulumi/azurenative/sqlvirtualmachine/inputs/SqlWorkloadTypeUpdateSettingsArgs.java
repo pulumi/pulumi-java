@@ -7,9 +7,9 @@ import com.pulumi.azurenative.sqlvirtualmachine.enums.SqlWorkloadType;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,49 +26,48 @@ public final class SqlWorkloadTypeUpdateSettingsArgs extends com.pulumi.resource
      * 
      */
     @Import(name="sqlWorkloadType")
-      private final @Nullable Output<Either<String,SqlWorkloadType>> sqlWorkloadType;
+    private @Nullable Output<Either<String,SqlWorkloadType>> sqlWorkloadType;
 
-    public Output<Either<String,SqlWorkloadType>> sqlWorkloadType() {
-        return this.sqlWorkloadType == null ? Codegen.empty() : this.sqlWorkloadType;
+    public Optional<Output<Either<String,SqlWorkloadType>>> sqlWorkloadType() {
+        return Optional.ofNullable(this.sqlWorkloadType);
     }
 
-    public SqlWorkloadTypeUpdateSettingsArgs(@Nullable Output<Either<String,SqlWorkloadType>> sqlWorkloadType) {
-        this.sqlWorkloadType = sqlWorkloadType;
-    }
+    private SqlWorkloadTypeUpdateSettingsArgs() {}
 
-    private SqlWorkloadTypeUpdateSettingsArgs() {
-        this.sqlWorkloadType = Codegen.empty();
+    private SqlWorkloadTypeUpdateSettingsArgs(SqlWorkloadTypeUpdateSettingsArgs $) {
+        this.sqlWorkloadType = $.sqlWorkloadType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SqlWorkloadTypeUpdateSettingsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Either<String,SqlWorkloadType>> sqlWorkloadType;
+        private SqlWorkloadTypeUpdateSettingsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SqlWorkloadTypeUpdateSettingsArgs();
         }
 
         public Builder(SqlWorkloadTypeUpdateSettingsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.sqlWorkloadType = defaults.sqlWorkloadType;
+            $ = new SqlWorkloadTypeUpdateSettingsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder sqlWorkloadType(@Nullable Output<Either<String,SqlWorkloadType>> sqlWorkloadType) {
-            this.sqlWorkloadType = sqlWorkloadType;
+            $.sqlWorkloadType = sqlWorkloadType;
             return this;
         }
-        public Builder sqlWorkloadType(@Nullable Either<String,SqlWorkloadType> sqlWorkloadType) {
-            this.sqlWorkloadType = Codegen.ofNullable(sqlWorkloadType);
-            return this;
-        }        public SqlWorkloadTypeUpdateSettingsArgs build() {
-            return new SqlWorkloadTypeUpdateSettingsArgs(sqlWorkloadType);
+
+        public Builder sqlWorkloadType(Either<String,SqlWorkloadType> sqlWorkloadType) {
+            return sqlWorkloadType(Output.of(sqlWorkloadType));
+        }
+
+        public SqlWorkloadTypeUpdateSettingsArgs build() {
+            return $;
         }
     }
+
 }

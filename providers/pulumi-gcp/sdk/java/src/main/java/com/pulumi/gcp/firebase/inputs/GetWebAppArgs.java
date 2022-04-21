@@ -17,45 +17,45 @@ public final class GetWebAppArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="appId", required=true)
-      private final String appId;
+    private String appId;
 
     public String appId() {
         return this.appId;
     }
 
-    public GetWebAppArgs(String appId) {
-        this.appId = Objects.requireNonNull(appId, "expected parameter 'appId' to be non-null");
-    }
+    private GetWebAppArgs() {}
 
-    private GetWebAppArgs() {
-        this.appId = null;
+    private GetWebAppArgs(GetWebAppArgs $) {
+        this.appId = $.appId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetWebAppArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String appId;
+        private GetWebAppArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetWebAppArgs();
         }
 
         public Builder(GetWebAppArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.appId = defaults.appId;
+            $ = new GetWebAppArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder appId(String appId) {
-            this.appId = Objects.requireNonNull(appId);
+            $.appId = appId;
             return this;
-        }        public GetWebAppArgs build() {
-            return new GetWebAppArgs(appId);
+        }
+
+        public GetWebAppArgs build() {
+            $.appId = Objects.requireNonNull($.appId, "expected parameter 'appId' to be non-null");
+            return $;
         }
     }
+
 }

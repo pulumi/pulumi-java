@@ -6,8 +6,8 @@ package com.pulumi.awsnative.devopsguru.inputs;
 import com.pulumi.awsnative.devopsguru.inputs.NotificationChannelSnsChannelConfigArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,49 +20,48 @@ public final class NotificationChannelConfigArgs extends com.pulumi.resources.Re
     public static final NotificationChannelConfigArgs Empty = new NotificationChannelConfigArgs();
 
     @Import(name="sns")
-      private final @Nullable Output<NotificationChannelSnsChannelConfigArgs> sns;
+    private @Nullable Output<NotificationChannelSnsChannelConfigArgs> sns;
 
-    public Output<NotificationChannelSnsChannelConfigArgs> sns() {
-        return this.sns == null ? Codegen.empty() : this.sns;
+    public Optional<Output<NotificationChannelSnsChannelConfigArgs>> sns() {
+        return Optional.ofNullable(this.sns);
     }
 
-    public NotificationChannelConfigArgs(@Nullable Output<NotificationChannelSnsChannelConfigArgs> sns) {
-        this.sns = sns;
-    }
+    private NotificationChannelConfigArgs() {}
 
-    private NotificationChannelConfigArgs() {
-        this.sns = Codegen.empty();
+    private NotificationChannelConfigArgs(NotificationChannelConfigArgs $) {
+        this.sns = $.sns;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NotificationChannelConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<NotificationChannelSnsChannelConfigArgs> sns;
+        private NotificationChannelConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new NotificationChannelConfigArgs();
         }
 
         public Builder(NotificationChannelConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.sns = defaults.sns;
+            $ = new NotificationChannelConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder sns(@Nullable Output<NotificationChannelSnsChannelConfigArgs> sns) {
-            this.sns = sns;
+            $.sns = sns;
             return this;
         }
-        public Builder sns(@Nullable NotificationChannelSnsChannelConfigArgs sns) {
-            this.sns = Codegen.ofNullable(sns);
-            return this;
-        }        public NotificationChannelConfigArgs build() {
-            return new NotificationChannelConfigArgs(sns);
+
+        public Builder sns(NotificationChannelSnsChannelConfigArgs sns) {
+            return sns(Output.of(sns));
+        }
+
+        public NotificationChannelConfigArgs build() {
+            return $;
         }
     }
+
 }

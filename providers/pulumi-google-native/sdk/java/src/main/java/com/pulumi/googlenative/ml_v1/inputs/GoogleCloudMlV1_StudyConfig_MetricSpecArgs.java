@@ -5,7 +5,6 @@ package com.pulumi.googlenative.ml_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.ml_v1.enums.GoogleCloudMlV1_StudyConfig_MetricSpecGoal;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +23,7 @@ public final class GoogleCloudMlV1_StudyConfig_MetricSpecArgs extends com.pulumi
      * 
      */
     @Import(name="goal", required=true)
-      private final Output<GoogleCloudMlV1_StudyConfig_MetricSpecGoal> goal;
+    private Output<GoogleCloudMlV1_StudyConfig_MetricSpecGoal> goal;
 
     public Output<GoogleCloudMlV1_StudyConfig_MetricSpecGoal> goal() {
         return this.goal;
@@ -35,63 +34,60 @@ public final class GoogleCloudMlV1_StudyConfig_MetricSpecArgs extends com.pulumi
      * 
      */
     @Import(name="metric", required=true)
-      private final Output<String> metric;
+    private Output<String> metric;
 
     public Output<String> metric() {
         return this.metric;
     }
 
-    public GoogleCloudMlV1_StudyConfig_MetricSpecArgs(
-        Output<GoogleCloudMlV1_StudyConfig_MetricSpecGoal> goal,
-        Output<String> metric) {
-        this.goal = Objects.requireNonNull(goal, "expected parameter 'goal' to be non-null");
-        this.metric = Objects.requireNonNull(metric, "expected parameter 'metric' to be non-null");
-    }
+    private GoogleCloudMlV1_StudyConfig_MetricSpecArgs() {}
 
-    private GoogleCloudMlV1_StudyConfig_MetricSpecArgs() {
-        this.goal = Codegen.empty();
-        this.metric = Codegen.empty();
+    private GoogleCloudMlV1_StudyConfig_MetricSpecArgs(GoogleCloudMlV1_StudyConfig_MetricSpecArgs $) {
+        this.goal = $.goal;
+        this.metric = $.metric;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudMlV1_StudyConfig_MetricSpecArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<GoogleCloudMlV1_StudyConfig_MetricSpecGoal> goal;
-        private Output<String> metric;
+        private GoogleCloudMlV1_StudyConfig_MetricSpecArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudMlV1_StudyConfig_MetricSpecArgs();
         }
 
         public Builder(GoogleCloudMlV1_StudyConfig_MetricSpecArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.goal = defaults.goal;
-    	      this.metric = defaults.metric;
+            $ = new GoogleCloudMlV1_StudyConfig_MetricSpecArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder goal(Output<GoogleCloudMlV1_StudyConfig_MetricSpecGoal> goal) {
-            this.goal = Objects.requireNonNull(goal);
+            $.goal = goal;
             return this;
         }
+
         public Builder goal(GoogleCloudMlV1_StudyConfig_MetricSpecGoal goal) {
-            this.goal = Output.of(Objects.requireNonNull(goal));
-            return this;
+            return goal(Output.of(goal));
         }
+
         public Builder metric(Output<String> metric) {
-            this.metric = Objects.requireNonNull(metric);
+            $.metric = metric;
             return this;
         }
+
         public Builder metric(String metric) {
-            this.metric = Output.of(Objects.requireNonNull(metric));
-            return this;
-        }        public GoogleCloudMlV1_StudyConfig_MetricSpecArgs build() {
-            return new GoogleCloudMlV1_StudyConfig_MetricSpecArgs(goal, metric);
+            return metric(Output.of(metric));
+        }
+
+        public GoogleCloudMlV1_StudyConfig_MetricSpecArgs build() {
+            $.goal = Objects.requireNonNull($.goal, "expected parameter 'goal' to be non-null");
+            $.metric = Objects.requireNonNull($.metric, "expected parameter 'metric' to be non-null");
+            return $;
         }
     }
+
 }

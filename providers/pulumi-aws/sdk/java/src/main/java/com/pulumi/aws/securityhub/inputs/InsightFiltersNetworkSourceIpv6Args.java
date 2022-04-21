@@ -5,7 +5,6 @@ package com.pulumi.aws.securityhub.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,49 +18,49 @@ public final class InsightFiltersNetworkSourceIpv6Args extends com.pulumi.resour
      * 
      */
     @Import(name="cidr", required=true)
-      private final Output<String> cidr;
+    private Output<String> cidr;
 
     public Output<String> cidr() {
         return this.cidr;
     }
 
-    public InsightFiltersNetworkSourceIpv6Args(Output<String> cidr) {
-        this.cidr = Objects.requireNonNull(cidr, "expected parameter 'cidr' to be non-null");
-    }
+    private InsightFiltersNetworkSourceIpv6Args() {}
 
-    private InsightFiltersNetworkSourceIpv6Args() {
-        this.cidr = Codegen.empty();
+    private InsightFiltersNetworkSourceIpv6Args(InsightFiltersNetworkSourceIpv6Args $) {
+        this.cidr = $.cidr;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(InsightFiltersNetworkSourceIpv6Args defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> cidr;
+        private InsightFiltersNetworkSourceIpv6Args $;
 
         public Builder() {
-    	      // Empty
+            $ = new InsightFiltersNetworkSourceIpv6Args();
         }
 
         public Builder(InsightFiltersNetworkSourceIpv6Args defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cidr = defaults.cidr;
+            $ = new InsightFiltersNetworkSourceIpv6Args(Objects.requireNonNull(defaults));
         }
 
         public Builder cidr(Output<String> cidr) {
-            this.cidr = Objects.requireNonNull(cidr);
+            $.cidr = cidr;
             return this;
         }
+
         public Builder cidr(String cidr) {
-            this.cidr = Output.of(Objects.requireNonNull(cidr));
-            return this;
-        }        public InsightFiltersNetworkSourceIpv6Args build() {
-            return new InsightFiltersNetworkSourceIpv6Args(cidr);
+            return cidr(Output.of(cidr));
+        }
+
+        public InsightFiltersNetworkSourceIpv6Args build() {
+            $.cidr = Objects.requireNonNull($.cidr, "expected parameter 'cidr' to be non-null");
+            return $;
         }
     }
+
 }

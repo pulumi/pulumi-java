@@ -14,62 +14,59 @@ public final class WebACLLabelMatchStatement extends com.pulumi.resources.Invoke
     public static final WebACLLabelMatchStatement Empty = new WebACLLabelMatchStatement();
 
     @Import(name="key", required=true)
-      private final String key;
+    private String key;
 
     public String key() {
         return this.key;
     }
 
     @Import(name="scope", required=true)
-      private final WebACLLabelMatchScope scope;
+    private WebACLLabelMatchScope scope;
 
     public WebACLLabelMatchScope scope() {
         return this.scope;
     }
 
-    public WebACLLabelMatchStatement(
-        String key,
-        WebACLLabelMatchScope scope) {
-        this.key = Objects.requireNonNull(key, "expected parameter 'key' to be non-null");
-        this.scope = Objects.requireNonNull(scope, "expected parameter 'scope' to be non-null");
-    }
+    private WebACLLabelMatchStatement() {}
 
-    private WebACLLabelMatchStatement() {
-        this.key = null;
-        this.scope = null;
+    private WebACLLabelMatchStatement(WebACLLabelMatchStatement $) {
+        this.key = $.key;
+        this.scope = $.scope;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WebACLLabelMatchStatement defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String key;
-        private WebACLLabelMatchScope scope;
+        private WebACLLabelMatchStatement $;
 
         public Builder() {
-    	      // Empty
+            $ = new WebACLLabelMatchStatement();
         }
 
         public Builder(WebACLLabelMatchStatement defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.key = defaults.key;
-    	      this.scope = defaults.scope;
+            $ = new WebACLLabelMatchStatement(Objects.requireNonNull(defaults));
         }
 
         public Builder key(String key) {
-            this.key = Objects.requireNonNull(key);
+            $.key = key;
             return this;
         }
+
         public Builder scope(WebACLLabelMatchScope scope) {
-            this.scope = Objects.requireNonNull(scope);
+            $.scope = scope;
             return this;
-        }        public WebACLLabelMatchStatement build() {
-            return new WebACLLabelMatchStatement(key, scope);
+        }
+
+        public WebACLLabelMatchStatement build() {
+            $.key = Objects.requireNonNull($.key, "expected parameter 'key' to be non-null");
+            $.scope = Objects.requireNonNull($.scope, "expected parameter 'scope' to be non-null");
+            return $;
         }
     }
+
 }

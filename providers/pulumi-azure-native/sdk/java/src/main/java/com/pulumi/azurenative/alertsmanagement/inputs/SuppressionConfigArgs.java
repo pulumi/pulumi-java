@@ -8,9 +8,9 @@ import com.pulumi.azurenative.alertsmanagement.inputs.SuppressionScheduleArgs;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,7 +27,7 @@ public final class SuppressionConfigArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="recurrenceType", required=true)
-      private final Output<Either<String,SuppressionType>> recurrenceType;
+    private Output<Either<String,SuppressionType>> recurrenceType;
 
     public Output<Either<String,SuppressionType>> recurrenceType() {
         return this.recurrenceType;
@@ -38,63 +38,59 @@ public final class SuppressionConfigArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="schedule")
-      private final @Nullable Output<SuppressionScheduleArgs> schedule;
+    private @Nullable Output<SuppressionScheduleArgs> schedule;
 
-    public Output<SuppressionScheduleArgs> schedule() {
-        return this.schedule == null ? Codegen.empty() : this.schedule;
+    public Optional<Output<SuppressionScheduleArgs>> schedule() {
+        return Optional.ofNullable(this.schedule);
     }
 
-    public SuppressionConfigArgs(
-        Output<Either<String,SuppressionType>> recurrenceType,
-        @Nullable Output<SuppressionScheduleArgs> schedule) {
-        this.recurrenceType = Objects.requireNonNull(recurrenceType, "expected parameter 'recurrenceType' to be non-null");
-        this.schedule = schedule;
-    }
+    private SuppressionConfigArgs() {}
 
-    private SuppressionConfigArgs() {
-        this.recurrenceType = Codegen.empty();
-        this.schedule = Codegen.empty();
+    private SuppressionConfigArgs(SuppressionConfigArgs $) {
+        this.recurrenceType = $.recurrenceType;
+        this.schedule = $.schedule;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SuppressionConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Either<String,SuppressionType>> recurrenceType;
-        private @Nullable Output<SuppressionScheduleArgs> schedule;
+        private SuppressionConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SuppressionConfigArgs();
         }
 
         public Builder(SuppressionConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.recurrenceType = defaults.recurrenceType;
-    	      this.schedule = defaults.schedule;
+            $ = new SuppressionConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder recurrenceType(Output<Either<String,SuppressionType>> recurrenceType) {
-            this.recurrenceType = Objects.requireNonNull(recurrenceType);
+            $.recurrenceType = recurrenceType;
             return this;
         }
+
         public Builder recurrenceType(Either<String,SuppressionType> recurrenceType) {
-            this.recurrenceType = Output.of(Objects.requireNonNull(recurrenceType));
-            return this;
+            return recurrenceType(Output.of(recurrenceType));
         }
+
         public Builder schedule(@Nullable Output<SuppressionScheduleArgs> schedule) {
-            this.schedule = schedule;
+            $.schedule = schedule;
             return this;
         }
-        public Builder schedule(@Nullable SuppressionScheduleArgs schedule) {
-            this.schedule = Codegen.ofNullable(schedule);
-            return this;
-        }        public SuppressionConfigArgs build() {
-            return new SuppressionConfigArgs(recurrenceType, schedule);
+
+        public Builder schedule(SuppressionScheduleArgs schedule) {
+            return schedule(Output.of(schedule));
+        }
+
+        public SuppressionConfigArgs build() {
+            $.recurrenceType = Objects.requireNonNull($.recurrenceType, "expected parameter 'recurrenceType' to be non-null");
+            return $;
         }
     }
+
 }

@@ -23,10 +23,10 @@ public final class FirewallRuleResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="endIpAddress")
-      private final @Nullable String endIpAddress;
+    private @Nullable String endIpAddress;
 
     public Optional<String> endIpAddress() {
-        return this.endIpAddress == null ? Optional.empty() : Optional.ofNullable(this.endIpAddress);
+        return Optional.ofNullable(this.endIpAddress);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class FirewallRuleResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="ruleName")
-      private final @Nullable String ruleName;
+    private @Nullable String ruleName;
 
     public Optional<String> ruleName() {
-        return this.ruleName == null ? Optional.empty() : Optional.ofNullable(this.ruleName);
+        return Optional.ofNullable(this.ruleName);
     }
 
     /**
@@ -45,64 +45,56 @@ public final class FirewallRuleResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="startIpAddress")
-      private final @Nullable String startIpAddress;
+    private @Nullable String startIpAddress;
 
     public Optional<String> startIpAddress() {
-        return this.startIpAddress == null ? Optional.empty() : Optional.ofNullable(this.startIpAddress);
+        return Optional.ofNullable(this.startIpAddress);
     }
 
-    public FirewallRuleResponse(
-        @Nullable String endIpAddress,
-        @Nullable String ruleName,
-        @Nullable String startIpAddress) {
-        this.endIpAddress = endIpAddress;
-        this.ruleName = ruleName;
-        this.startIpAddress = startIpAddress;
-    }
+    private FirewallRuleResponse() {}
 
-    private FirewallRuleResponse() {
-        this.endIpAddress = null;
-        this.ruleName = null;
-        this.startIpAddress = null;
+    private FirewallRuleResponse(FirewallRuleResponse $) {
+        this.endIpAddress = $.endIpAddress;
+        this.ruleName = $.ruleName;
+        this.startIpAddress = $.startIpAddress;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FirewallRuleResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String endIpAddress;
-        private @Nullable String ruleName;
-        private @Nullable String startIpAddress;
+        private FirewallRuleResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new FirewallRuleResponse();
         }
 
         public Builder(FirewallRuleResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.endIpAddress = defaults.endIpAddress;
-    	      this.ruleName = defaults.ruleName;
-    	      this.startIpAddress = defaults.startIpAddress;
+            $ = new FirewallRuleResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder endIpAddress(@Nullable String endIpAddress) {
-            this.endIpAddress = endIpAddress;
+            $.endIpAddress = endIpAddress;
             return this;
         }
+
         public Builder ruleName(@Nullable String ruleName) {
-            this.ruleName = ruleName;
+            $.ruleName = ruleName;
             return this;
         }
+
         public Builder startIpAddress(@Nullable String startIpAddress) {
-            this.startIpAddress = startIpAddress;
+            $.startIpAddress = startIpAddress;
             return this;
-        }        public FirewallRuleResponse build() {
-            return new FirewallRuleResponse(endIpAddress, ruleName, startIpAddress);
+        }
+
+        public FirewallRuleResponse build() {
+            return $;
         }
     }
+
 }

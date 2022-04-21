@@ -5,10 +5,10 @@ package com.pulumi.aws.ebs.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class SnapshotImportClientDataGetArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="comment")
-      private final @Nullable Output<String> comment;
+    private @Nullable Output<String> comment;
 
-    public Output<String> comment() {
-        return this.comment == null ? Codegen.empty() : this.comment;
+    public Optional<Output<String>> comment() {
+        return Optional.ofNullable(this.comment);
     }
 
     /**
@@ -32,10 +32,10 @@ public final class SnapshotImportClientDataGetArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="uploadEnd")
-      private final @Nullable Output<String> uploadEnd;
+    private @Nullable Output<String> uploadEnd;
 
-    public Output<String> uploadEnd() {
-        return this.uploadEnd == null ? Codegen.empty() : this.uploadEnd;
+    public Optional<Output<String>> uploadEnd() {
+        return Optional.ofNullable(this.uploadEnd);
     }
 
     /**
@@ -43,10 +43,10 @@ public final class SnapshotImportClientDataGetArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="uploadSize")
-      private final @Nullable Output<Double> uploadSize;
+    private @Nullable Output<Double> uploadSize;
 
-    public Output<Double> uploadSize() {
-        return this.uploadSize == null ? Codegen.empty() : this.uploadSize;
+    public Optional<Output<Double>> uploadSize() {
+        return Optional.ofNullable(this.uploadSize);
     }
 
     /**
@@ -54,89 +54,78 @@ public final class SnapshotImportClientDataGetArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="uploadStart")
-      private final @Nullable Output<String> uploadStart;
+    private @Nullable Output<String> uploadStart;
 
-    public Output<String> uploadStart() {
-        return this.uploadStart == null ? Codegen.empty() : this.uploadStart;
+    public Optional<Output<String>> uploadStart() {
+        return Optional.ofNullable(this.uploadStart);
     }
 
-    public SnapshotImportClientDataGetArgs(
-        @Nullable Output<String> comment,
-        @Nullable Output<String> uploadEnd,
-        @Nullable Output<Double> uploadSize,
-        @Nullable Output<String> uploadStart) {
-        this.comment = comment;
-        this.uploadEnd = uploadEnd;
-        this.uploadSize = uploadSize;
-        this.uploadStart = uploadStart;
-    }
+    private SnapshotImportClientDataGetArgs() {}
 
-    private SnapshotImportClientDataGetArgs() {
-        this.comment = Codegen.empty();
-        this.uploadEnd = Codegen.empty();
-        this.uploadSize = Codegen.empty();
-        this.uploadStart = Codegen.empty();
+    private SnapshotImportClientDataGetArgs(SnapshotImportClientDataGetArgs $) {
+        this.comment = $.comment;
+        this.uploadEnd = $.uploadEnd;
+        this.uploadSize = $.uploadSize;
+        this.uploadStart = $.uploadStart;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SnapshotImportClientDataGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> comment;
-        private @Nullable Output<String> uploadEnd;
-        private @Nullable Output<Double> uploadSize;
-        private @Nullable Output<String> uploadStart;
+        private SnapshotImportClientDataGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SnapshotImportClientDataGetArgs();
         }
 
         public Builder(SnapshotImportClientDataGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.comment = defaults.comment;
-    	      this.uploadEnd = defaults.uploadEnd;
-    	      this.uploadSize = defaults.uploadSize;
-    	      this.uploadStart = defaults.uploadStart;
+            $ = new SnapshotImportClientDataGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder comment(@Nullable Output<String> comment) {
-            this.comment = comment;
+            $.comment = comment;
             return this;
         }
-        public Builder comment(@Nullable String comment) {
-            this.comment = Codegen.ofNullable(comment);
-            return this;
+
+        public Builder comment(String comment) {
+            return comment(Output.of(comment));
         }
+
         public Builder uploadEnd(@Nullable Output<String> uploadEnd) {
-            this.uploadEnd = uploadEnd;
+            $.uploadEnd = uploadEnd;
             return this;
         }
-        public Builder uploadEnd(@Nullable String uploadEnd) {
-            this.uploadEnd = Codegen.ofNullable(uploadEnd);
-            return this;
+
+        public Builder uploadEnd(String uploadEnd) {
+            return uploadEnd(Output.of(uploadEnd));
         }
+
         public Builder uploadSize(@Nullable Output<Double> uploadSize) {
-            this.uploadSize = uploadSize;
+            $.uploadSize = uploadSize;
             return this;
         }
-        public Builder uploadSize(@Nullable Double uploadSize) {
-            this.uploadSize = Codegen.ofNullable(uploadSize);
-            return this;
+
+        public Builder uploadSize(Double uploadSize) {
+            return uploadSize(Output.of(uploadSize));
         }
+
         public Builder uploadStart(@Nullable Output<String> uploadStart) {
-            this.uploadStart = uploadStart;
+            $.uploadStart = uploadStart;
             return this;
         }
-        public Builder uploadStart(@Nullable String uploadStart) {
-            this.uploadStart = Codegen.ofNullable(uploadStart);
-            return this;
-        }        public SnapshotImportClientDataGetArgs build() {
-            return new SnapshotImportClientDataGetArgs(comment, uploadEnd, uploadSize, uploadStart);
+
+        public Builder uploadStart(String uploadStart) {
+            return uploadStart(Output.of(uploadStart));
+        }
+
+        public SnapshotImportClientDataGetArgs build() {
+            return $;
         }
     }
+
 }

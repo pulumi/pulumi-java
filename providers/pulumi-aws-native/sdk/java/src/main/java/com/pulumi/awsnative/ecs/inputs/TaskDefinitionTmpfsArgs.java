@@ -5,11 +5,11 @@ package com.pulumi.awsnative.ecs.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -18,93 +18,87 @@ public final class TaskDefinitionTmpfsArgs extends com.pulumi.resources.Resource
     public static final TaskDefinitionTmpfsArgs Empty = new TaskDefinitionTmpfsArgs();
 
     @Import(name="containerPath")
-      private final @Nullable Output<String> containerPath;
+    private @Nullable Output<String> containerPath;
 
-    public Output<String> containerPath() {
-        return this.containerPath == null ? Codegen.empty() : this.containerPath;
+    public Optional<Output<String>> containerPath() {
+        return Optional.ofNullable(this.containerPath);
     }
 
     @Import(name="mountOptions")
-      private final @Nullable Output<List<String>> mountOptions;
+    private @Nullable Output<List<String>> mountOptions;
 
-    public Output<List<String>> mountOptions() {
-        return this.mountOptions == null ? Codegen.empty() : this.mountOptions;
+    public Optional<Output<List<String>>> mountOptions() {
+        return Optional.ofNullable(this.mountOptions);
     }
 
     @Import(name="size", required=true)
-      private final Output<Integer> size;
+    private Output<Integer> size;
 
     public Output<Integer> size() {
         return this.size;
     }
 
-    public TaskDefinitionTmpfsArgs(
-        @Nullable Output<String> containerPath,
-        @Nullable Output<List<String>> mountOptions,
-        Output<Integer> size) {
-        this.containerPath = containerPath;
-        this.mountOptions = mountOptions;
-        this.size = Objects.requireNonNull(size, "expected parameter 'size' to be non-null");
-    }
+    private TaskDefinitionTmpfsArgs() {}
 
-    private TaskDefinitionTmpfsArgs() {
-        this.containerPath = Codegen.empty();
-        this.mountOptions = Codegen.empty();
-        this.size = Codegen.empty();
+    private TaskDefinitionTmpfsArgs(TaskDefinitionTmpfsArgs $) {
+        this.containerPath = $.containerPath;
+        this.mountOptions = $.mountOptions;
+        this.size = $.size;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TaskDefinitionTmpfsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> containerPath;
-        private @Nullable Output<List<String>> mountOptions;
-        private Output<Integer> size;
+        private TaskDefinitionTmpfsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TaskDefinitionTmpfsArgs();
         }
 
         public Builder(TaskDefinitionTmpfsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.containerPath = defaults.containerPath;
-    	      this.mountOptions = defaults.mountOptions;
-    	      this.size = defaults.size;
+            $ = new TaskDefinitionTmpfsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder containerPath(@Nullable Output<String> containerPath) {
-            this.containerPath = containerPath;
+            $.containerPath = containerPath;
             return this;
         }
-        public Builder containerPath(@Nullable String containerPath) {
-            this.containerPath = Codegen.ofNullable(containerPath);
-            return this;
+
+        public Builder containerPath(String containerPath) {
+            return containerPath(Output.of(containerPath));
         }
+
         public Builder mountOptions(@Nullable Output<List<String>> mountOptions) {
-            this.mountOptions = mountOptions;
+            $.mountOptions = mountOptions;
             return this;
         }
-        public Builder mountOptions(@Nullable List<String> mountOptions) {
-            this.mountOptions = Codegen.ofNullable(mountOptions);
-            return this;
+
+        public Builder mountOptions(List<String> mountOptions) {
+            return mountOptions(Output.of(mountOptions));
         }
+
         public Builder mountOptions(String... mountOptions) {
             return mountOptions(List.of(mountOptions));
         }
+
         public Builder size(Output<Integer> size) {
-            this.size = Objects.requireNonNull(size);
+            $.size = size;
             return this;
         }
+
         public Builder size(Integer size) {
-            this.size = Output.of(Objects.requireNonNull(size));
-            return this;
-        }        public TaskDefinitionTmpfsArgs build() {
-            return new TaskDefinitionTmpfsArgs(containerPath, mountOptions, size);
+            return size(Output.of(size));
+        }
+
+        public TaskDefinitionTmpfsArgs build() {
+            $.size = Objects.requireNonNull($.size, "expected parameter 'size' to be non-null");
+            return $;
         }
     }
+
 }

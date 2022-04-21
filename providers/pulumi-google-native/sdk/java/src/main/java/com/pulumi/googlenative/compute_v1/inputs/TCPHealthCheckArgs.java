@@ -5,12 +5,12 @@ package com.pulumi.googlenative.compute_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.compute_v1.enums.TCPHealthCheckPortSpecification;
 import com.pulumi.googlenative.compute_v1.enums.TCPHealthCheckProxyHeader;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,10 @@ public final class TCPHealthCheckArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="port")
-      private final @Nullable Output<Integer> port;
+    private @Nullable Output<Integer> port;
 
-    public Output<Integer> port() {
-        return this.port == null ? Codegen.empty() : this.port;
+    public Optional<Output<Integer>> port() {
+        return Optional.ofNullable(this.port);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class TCPHealthCheckArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="portName")
-      private final @Nullable Output<String> portName;
+    private @Nullable Output<String> portName;
 
-    public Output<String> portName() {
-        return this.portName == null ? Codegen.empty() : this.portName;
+    public Optional<Output<String>> portName() {
+        return Optional.ofNullable(this.portName);
     }
 
     /**
@@ -45,10 +45,10 @@ public final class TCPHealthCheckArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="portSpecification")
-      private final @Nullable Output<TCPHealthCheckPortSpecification> portSpecification;
+    private @Nullable Output<TCPHealthCheckPortSpecification> portSpecification;
 
-    public Output<TCPHealthCheckPortSpecification> portSpecification() {
-        return this.portSpecification == null ? Codegen.empty() : this.portSpecification;
+    public Optional<Output<TCPHealthCheckPortSpecification>> portSpecification() {
+        return Optional.ofNullable(this.portSpecification);
     }
 
     /**
@@ -56,10 +56,10 @@ public final class TCPHealthCheckArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="proxyHeader")
-      private final @Nullable Output<TCPHealthCheckProxyHeader> proxyHeader;
+    private @Nullable Output<TCPHealthCheckProxyHeader> proxyHeader;
 
-    public Output<TCPHealthCheckProxyHeader> proxyHeader() {
-        return this.proxyHeader == null ? Codegen.empty() : this.proxyHeader;
+    public Optional<Output<TCPHealthCheckProxyHeader>> proxyHeader() {
+        return Optional.ofNullable(this.proxyHeader);
     }
 
     /**
@@ -67,10 +67,10 @@ public final class TCPHealthCheckArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="request")
-      private final @Nullable Output<String> request;
+    private @Nullable Output<String> request;
 
-    public Output<String> request() {
-        return this.request == null ? Codegen.empty() : this.request;
+    public Optional<Output<String>> request() {
+        return Optional.ofNullable(this.request);
     }
 
     /**
@@ -78,115 +78,98 @@ public final class TCPHealthCheckArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="response")
-      private final @Nullable Output<String> response;
+    private @Nullable Output<String> response;
 
-    public Output<String> response() {
-        return this.response == null ? Codegen.empty() : this.response;
+    public Optional<Output<String>> response() {
+        return Optional.ofNullable(this.response);
     }
 
-    public TCPHealthCheckArgs(
-        @Nullable Output<Integer> port,
-        @Nullable Output<String> portName,
-        @Nullable Output<TCPHealthCheckPortSpecification> portSpecification,
-        @Nullable Output<TCPHealthCheckProxyHeader> proxyHeader,
-        @Nullable Output<String> request,
-        @Nullable Output<String> response) {
-        this.port = port;
-        this.portName = portName;
-        this.portSpecification = portSpecification;
-        this.proxyHeader = proxyHeader;
-        this.request = request;
-        this.response = response;
-    }
+    private TCPHealthCheckArgs() {}
 
-    private TCPHealthCheckArgs() {
-        this.port = Codegen.empty();
-        this.portName = Codegen.empty();
-        this.portSpecification = Codegen.empty();
-        this.proxyHeader = Codegen.empty();
-        this.request = Codegen.empty();
-        this.response = Codegen.empty();
+    private TCPHealthCheckArgs(TCPHealthCheckArgs $) {
+        this.port = $.port;
+        this.portName = $.portName;
+        this.portSpecification = $.portSpecification;
+        this.proxyHeader = $.proxyHeader;
+        this.request = $.request;
+        this.response = $.response;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TCPHealthCheckArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> port;
-        private @Nullable Output<String> portName;
-        private @Nullable Output<TCPHealthCheckPortSpecification> portSpecification;
-        private @Nullable Output<TCPHealthCheckProxyHeader> proxyHeader;
-        private @Nullable Output<String> request;
-        private @Nullable Output<String> response;
+        private TCPHealthCheckArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TCPHealthCheckArgs();
         }
 
         public Builder(TCPHealthCheckArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.port = defaults.port;
-    	      this.portName = defaults.portName;
-    	      this.portSpecification = defaults.portSpecification;
-    	      this.proxyHeader = defaults.proxyHeader;
-    	      this.request = defaults.request;
-    	      this.response = defaults.response;
+            $ = new TCPHealthCheckArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder port(@Nullable Output<Integer> port) {
-            this.port = port;
+            $.port = port;
             return this;
         }
-        public Builder port(@Nullable Integer port) {
-            this.port = Codegen.ofNullable(port);
-            return this;
+
+        public Builder port(Integer port) {
+            return port(Output.of(port));
         }
+
         public Builder portName(@Nullable Output<String> portName) {
-            this.portName = portName;
+            $.portName = portName;
             return this;
         }
-        public Builder portName(@Nullable String portName) {
-            this.portName = Codegen.ofNullable(portName);
-            return this;
+
+        public Builder portName(String portName) {
+            return portName(Output.of(portName));
         }
+
         public Builder portSpecification(@Nullable Output<TCPHealthCheckPortSpecification> portSpecification) {
-            this.portSpecification = portSpecification;
+            $.portSpecification = portSpecification;
             return this;
         }
-        public Builder portSpecification(@Nullable TCPHealthCheckPortSpecification portSpecification) {
-            this.portSpecification = Codegen.ofNullable(portSpecification);
-            return this;
+
+        public Builder portSpecification(TCPHealthCheckPortSpecification portSpecification) {
+            return portSpecification(Output.of(portSpecification));
         }
+
         public Builder proxyHeader(@Nullable Output<TCPHealthCheckProxyHeader> proxyHeader) {
-            this.proxyHeader = proxyHeader;
+            $.proxyHeader = proxyHeader;
             return this;
         }
-        public Builder proxyHeader(@Nullable TCPHealthCheckProxyHeader proxyHeader) {
-            this.proxyHeader = Codegen.ofNullable(proxyHeader);
-            return this;
+
+        public Builder proxyHeader(TCPHealthCheckProxyHeader proxyHeader) {
+            return proxyHeader(Output.of(proxyHeader));
         }
+
         public Builder request(@Nullable Output<String> request) {
-            this.request = request;
+            $.request = request;
             return this;
         }
-        public Builder request(@Nullable String request) {
-            this.request = Codegen.ofNullable(request);
-            return this;
+
+        public Builder request(String request) {
+            return request(Output.of(request));
         }
+
         public Builder response(@Nullable Output<String> response) {
-            this.response = response;
+            $.response = response;
             return this;
         }
-        public Builder response(@Nullable String response) {
-            this.response = Codegen.ofNullable(response);
-            return this;
-        }        public TCPHealthCheckArgs build() {
-            return new TCPHealthCheckArgs(port, portName, portSpecification, proxyHeader, request, response);
+
+        public Builder response(String response) {
+            return response(Output.of(response));
+        }
+
+        public TCPHealthCheckArgs build() {
+            return $;
         }
     }
+
 }

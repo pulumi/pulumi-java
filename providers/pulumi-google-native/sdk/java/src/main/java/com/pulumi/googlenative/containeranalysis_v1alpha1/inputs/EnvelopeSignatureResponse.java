@@ -21,7 +21,7 @@ public final class EnvelopeSignatureResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="keyid", required=true)
-      private final String keyid;
+    private String keyid;
 
     public String keyid() {
         return this.keyid;
@@ -32,55 +32,52 @@ public final class EnvelopeSignatureResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="sig", required=true)
-      private final String sig;
+    private String sig;
 
     public String sig() {
         return this.sig;
     }
 
-    public EnvelopeSignatureResponse(
-        String keyid,
-        String sig) {
-        this.keyid = Objects.requireNonNull(keyid, "expected parameter 'keyid' to be non-null");
-        this.sig = Objects.requireNonNull(sig, "expected parameter 'sig' to be non-null");
-    }
+    private EnvelopeSignatureResponse() {}
 
-    private EnvelopeSignatureResponse() {
-        this.keyid = null;
-        this.sig = null;
+    private EnvelopeSignatureResponse(EnvelopeSignatureResponse $) {
+        this.keyid = $.keyid;
+        this.sig = $.sig;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EnvelopeSignatureResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String keyid;
-        private String sig;
+        private EnvelopeSignatureResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new EnvelopeSignatureResponse();
         }
 
         public Builder(EnvelopeSignatureResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.keyid = defaults.keyid;
-    	      this.sig = defaults.sig;
+            $ = new EnvelopeSignatureResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder keyid(String keyid) {
-            this.keyid = Objects.requireNonNull(keyid);
+            $.keyid = keyid;
             return this;
         }
+
         public Builder sig(String sig) {
-            this.sig = Objects.requireNonNull(sig);
+            $.sig = sig;
             return this;
-        }        public EnvelopeSignatureResponse build() {
-            return new EnvelopeSignatureResponse(keyid, sig);
+        }
+
+        public EnvelopeSignatureResponse build() {
+            $.keyid = Objects.requireNonNull($.keyid, "expected parameter 'keyid' to be non-null");
+            $.sig = Objects.requireNonNull($.sig, "expected parameter 'sig' to be non-null");
+            return $;
         }
     }
+
 }

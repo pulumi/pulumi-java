@@ -17,62 +17,59 @@ public final class ListenerPortRange extends com.pulumi.resources.InvokeArgs {
     public static final ListenerPortRange Empty = new ListenerPortRange();
 
     @Import(name="fromPort", required=true)
-      private final Integer fromPort;
+    private Integer fromPort;
 
     public Integer fromPort() {
         return this.fromPort;
     }
 
     @Import(name="toPort", required=true)
-      private final Integer toPort;
+    private Integer toPort;
 
     public Integer toPort() {
         return this.toPort;
     }
 
-    public ListenerPortRange(
-        Integer fromPort,
-        Integer toPort) {
-        this.fromPort = Objects.requireNonNull(fromPort, "expected parameter 'fromPort' to be non-null");
-        this.toPort = Objects.requireNonNull(toPort, "expected parameter 'toPort' to be non-null");
-    }
+    private ListenerPortRange() {}
 
-    private ListenerPortRange() {
-        this.fromPort = null;
-        this.toPort = null;
+    private ListenerPortRange(ListenerPortRange $) {
+        this.fromPort = $.fromPort;
+        this.toPort = $.toPort;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ListenerPortRange defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Integer fromPort;
-        private Integer toPort;
+        private ListenerPortRange $;
 
         public Builder() {
-    	      // Empty
+            $ = new ListenerPortRange();
         }
 
         public Builder(ListenerPortRange defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.fromPort = defaults.fromPort;
-    	      this.toPort = defaults.toPort;
+            $ = new ListenerPortRange(Objects.requireNonNull(defaults));
         }
 
         public Builder fromPort(Integer fromPort) {
-            this.fromPort = Objects.requireNonNull(fromPort);
+            $.fromPort = fromPort;
             return this;
         }
+
         public Builder toPort(Integer toPort) {
-            this.toPort = Objects.requireNonNull(toPort);
+            $.toPort = toPort;
             return this;
-        }        public ListenerPortRange build() {
-            return new ListenerPortRange(fromPort, toPort);
+        }
+
+        public ListenerPortRange build() {
+            $.fromPort = Objects.requireNonNull($.fromPort, "expected parameter 'fromPort' to be non-null");
+            $.toPort = Objects.requireNonNull($.toPort, "expected parameter 'toPort' to be non-null");
+            return $;
         }
     }
+
 }

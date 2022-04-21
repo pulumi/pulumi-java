@@ -6,7 +6,6 @@ package com.pulumi.aws.appstream;
 import com.pulumi.aws.appstream.inputs.DirectoryConfigServiceAccountCredentialsArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +20,7 @@ public final class DirectoryConfigArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="directoryName", required=true)
-      private final Output<String> directoryName;
+    private Output<String> directoryName;
 
     public Output<String> directoryName() {
         return this.directoryName;
@@ -32,7 +31,7 @@ public final class DirectoryConfigArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="organizationalUnitDistinguishedNames", required=true)
-      private final Output<List<String>> organizationalUnitDistinguishedNames;
+    private Output<List<String>> organizationalUnitDistinguishedNames;
 
     public Output<List<String>> organizationalUnitDistinguishedNames() {
         return this.organizationalUnitDistinguishedNames;
@@ -43,79 +42,75 @@ public final class DirectoryConfigArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="serviceAccountCredentials", required=true)
-      private final Output<DirectoryConfigServiceAccountCredentialsArgs> serviceAccountCredentials;
+    private Output<DirectoryConfigServiceAccountCredentialsArgs> serviceAccountCredentials;
 
     public Output<DirectoryConfigServiceAccountCredentialsArgs> serviceAccountCredentials() {
         return this.serviceAccountCredentials;
     }
 
-    public DirectoryConfigArgs(
-        Output<String> directoryName,
-        Output<List<String>> organizationalUnitDistinguishedNames,
-        Output<DirectoryConfigServiceAccountCredentialsArgs> serviceAccountCredentials) {
-        this.directoryName = Objects.requireNonNull(directoryName, "expected parameter 'directoryName' to be non-null");
-        this.organizationalUnitDistinguishedNames = Objects.requireNonNull(organizationalUnitDistinguishedNames, "expected parameter 'organizationalUnitDistinguishedNames' to be non-null");
-        this.serviceAccountCredentials = Objects.requireNonNull(serviceAccountCredentials, "expected parameter 'serviceAccountCredentials' to be non-null");
-    }
+    private DirectoryConfigArgs() {}
 
-    private DirectoryConfigArgs() {
-        this.directoryName = Codegen.empty();
-        this.organizationalUnitDistinguishedNames = Codegen.empty();
-        this.serviceAccountCredentials = Codegen.empty();
+    private DirectoryConfigArgs(DirectoryConfigArgs $) {
+        this.directoryName = $.directoryName;
+        this.organizationalUnitDistinguishedNames = $.organizationalUnitDistinguishedNames;
+        this.serviceAccountCredentials = $.serviceAccountCredentials;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DirectoryConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> directoryName;
-        private Output<List<String>> organizationalUnitDistinguishedNames;
-        private Output<DirectoryConfigServiceAccountCredentialsArgs> serviceAccountCredentials;
+        private DirectoryConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DirectoryConfigArgs();
         }
 
         public Builder(DirectoryConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.directoryName = defaults.directoryName;
-    	      this.organizationalUnitDistinguishedNames = defaults.organizationalUnitDistinguishedNames;
-    	      this.serviceAccountCredentials = defaults.serviceAccountCredentials;
+            $ = new DirectoryConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder directoryName(Output<String> directoryName) {
-            this.directoryName = Objects.requireNonNull(directoryName);
+            $.directoryName = directoryName;
             return this;
         }
+
         public Builder directoryName(String directoryName) {
-            this.directoryName = Output.of(Objects.requireNonNull(directoryName));
-            return this;
+            return directoryName(Output.of(directoryName));
         }
+
         public Builder organizationalUnitDistinguishedNames(Output<List<String>> organizationalUnitDistinguishedNames) {
-            this.organizationalUnitDistinguishedNames = Objects.requireNonNull(organizationalUnitDistinguishedNames);
+            $.organizationalUnitDistinguishedNames = organizationalUnitDistinguishedNames;
             return this;
         }
+
         public Builder organizationalUnitDistinguishedNames(List<String> organizationalUnitDistinguishedNames) {
-            this.organizationalUnitDistinguishedNames = Output.of(Objects.requireNonNull(organizationalUnitDistinguishedNames));
-            return this;
+            return organizationalUnitDistinguishedNames(Output.of(organizationalUnitDistinguishedNames));
         }
+
         public Builder organizationalUnitDistinguishedNames(String... organizationalUnitDistinguishedNames) {
             return organizationalUnitDistinguishedNames(List.of(organizationalUnitDistinguishedNames));
         }
+
         public Builder serviceAccountCredentials(Output<DirectoryConfigServiceAccountCredentialsArgs> serviceAccountCredentials) {
-            this.serviceAccountCredentials = Objects.requireNonNull(serviceAccountCredentials);
+            $.serviceAccountCredentials = serviceAccountCredentials;
             return this;
         }
+
         public Builder serviceAccountCredentials(DirectoryConfigServiceAccountCredentialsArgs serviceAccountCredentials) {
-            this.serviceAccountCredentials = Output.of(Objects.requireNonNull(serviceAccountCredentials));
-            return this;
-        }        public DirectoryConfigArgs build() {
-            return new DirectoryConfigArgs(directoryName, organizationalUnitDistinguishedNames, serviceAccountCredentials);
+            return serviceAccountCredentials(Output.of(serviceAccountCredentials));
+        }
+
+        public DirectoryConfigArgs build() {
+            $.directoryName = Objects.requireNonNull($.directoryName, "expected parameter 'directoryName' to be non-null");
+            $.organizationalUnitDistinguishedNames = Objects.requireNonNull($.organizationalUnitDistinguishedNames, "expected parameter 'organizationalUnitDistinguishedNames' to be non-null");
+            $.serviceAccountCredentials = Objects.requireNonNull($.serviceAccountCredentials, "expected parameter 'serviceAccountCredentials' to be non-null");
+            return $;
         }
     }
+
 }

@@ -23,10 +23,10 @@ public final class OverrideTaskStepPropertiesResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="arguments")
-      private final @Nullable List<ArgumentResponse> arguments;
+    private @Nullable List<ArgumentResponse> arguments;
 
-    public List<ArgumentResponse> arguments() {
-        return this.arguments == null ? List.of() : this.arguments;
+    public Optional<List<ArgumentResponse>> arguments() {
+        return Optional.ofNullable(this.arguments);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class OverrideTaskStepPropertiesResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="contextPath")
-      private final @Nullable String contextPath;
+    private @Nullable String contextPath;
 
     public Optional<String> contextPath() {
-        return this.contextPath == null ? Optional.empty() : Optional.ofNullable(this.contextPath);
+        return Optional.ofNullable(this.contextPath);
     }
 
     /**
@@ -45,10 +45,10 @@ public final class OverrideTaskStepPropertiesResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="file")
-      private final @Nullable String file;
+    private @Nullable String file;
 
     public Optional<String> file() {
-        return this.file == null ? Optional.empty() : Optional.ofNullable(this.file);
+        return Optional.ofNullable(this.file);
     }
 
     /**
@@ -56,10 +56,10 @@ public final class OverrideTaskStepPropertiesResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="target")
-      private final @Nullable String target;
+    private @Nullable String target;
 
     public Optional<String> target() {
-        return this.target == null ? Optional.empty() : Optional.ofNullable(this.target);
+        return Optional.ofNullable(this.target);
     }
 
     /**
@@ -67,10 +67,10 @@ public final class OverrideTaskStepPropertiesResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="updateTriggerToken")
-      private final @Nullable String updateTriggerToken;
+    private @Nullable String updateTriggerToken;
 
     public Optional<String> updateTriggerToken() {
-        return this.updateTriggerToken == null ? Optional.empty() : Optional.ofNullable(this.updateTriggerToken);
+        return Optional.ofNullable(this.updateTriggerToken);
     }
 
     /**
@@ -78,97 +78,82 @@ public final class OverrideTaskStepPropertiesResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="values")
-      private final @Nullable List<SetValueResponse> values;
+    private @Nullable List<SetValueResponse> values;
 
-    public List<SetValueResponse> values() {
-        return this.values == null ? List.of() : this.values;
+    public Optional<List<SetValueResponse>> values() {
+        return Optional.ofNullable(this.values);
     }
 
-    public OverrideTaskStepPropertiesResponse(
-        @Nullable List<ArgumentResponse> arguments,
-        @Nullable String contextPath,
-        @Nullable String file,
-        @Nullable String target,
-        @Nullable String updateTriggerToken,
-        @Nullable List<SetValueResponse> values) {
-        this.arguments = arguments;
-        this.contextPath = contextPath;
-        this.file = file;
-        this.target = target;
-        this.updateTriggerToken = updateTriggerToken;
-        this.values = values;
-    }
+    private OverrideTaskStepPropertiesResponse() {}
 
-    private OverrideTaskStepPropertiesResponse() {
-        this.arguments = List.of();
-        this.contextPath = null;
-        this.file = null;
-        this.target = null;
-        this.updateTriggerToken = null;
-        this.values = List.of();
+    private OverrideTaskStepPropertiesResponse(OverrideTaskStepPropertiesResponse $) {
+        this.arguments = $.arguments;
+        this.contextPath = $.contextPath;
+        this.file = $.file;
+        this.target = $.target;
+        this.updateTriggerToken = $.updateTriggerToken;
+        this.values = $.values;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(OverrideTaskStepPropertiesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<ArgumentResponse> arguments;
-        private @Nullable String contextPath;
-        private @Nullable String file;
-        private @Nullable String target;
-        private @Nullable String updateTriggerToken;
-        private @Nullable List<SetValueResponse> values;
+        private OverrideTaskStepPropertiesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new OverrideTaskStepPropertiesResponse();
         }
 
         public Builder(OverrideTaskStepPropertiesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.arguments = defaults.arguments;
-    	      this.contextPath = defaults.contextPath;
-    	      this.file = defaults.file;
-    	      this.target = defaults.target;
-    	      this.updateTriggerToken = defaults.updateTriggerToken;
-    	      this.values = defaults.values;
+            $ = new OverrideTaskStepPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder arguments(@Nullable List<ArgumentResponse> arguments) {
-            this.arguments = arguments;
+            $.arguments = arguments;
             return this;
         }
+
         public Builder arguments(ArgumentResponse... arguments) {
             return arguments(List.of(arguments));
         }
+
         public Builder contextPath(@Nullable String contextPath) {
-            this.contextPath = contextPath;
+            $.contextPath = contextPath;
             return this;
         }
+
         public Builder file(@Nullable String file) {
-            this.file = file;
+            $.file = file;
             return this;
         }
+
         public Builder target(@Nullable String target) {
-            this.target = target;
+            $.target = target;
             return this;
         }
+
         public Builder updateTriggerToken(@Nullable String updateTriggerToken) {
-            this.updateTriggerToken = updateTriggerToken;
+            $.updateTriggerToken = updateTriggerToken;
             return this;
         }
+
         public Builder values(@Nullable List<SetValueResponse> values) {
-            this.values = values;
+            $.values = values;
             return this;
         }
+
         public Builder values(SetValueResponse... values) {
             return values(List.of(values));
-        }        public OverrideTaskStepPropertiesResponse build() {
-            return new OverrideTaskStepPropertiesResponse(arguments, contextPath, file, target, updateTriggerToken, values);
+        }
+
+        public OverrideTaskStepPropertiesResponse build() {
+            return $;
         }
     }
+
 }

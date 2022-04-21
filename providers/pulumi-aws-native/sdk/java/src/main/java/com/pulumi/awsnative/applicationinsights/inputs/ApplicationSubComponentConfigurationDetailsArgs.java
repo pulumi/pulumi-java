@@ -8,9 +8,9 @@ import com.pulumi.awsnative.applicationinsights.inputs.ApplicationLogArgs;
 import com.pulumi.awsnative.applicationinsights.inputs.ApplicationWindowsEventArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +27,10 @@ public final class ApplicationSubComponentConfigurationDetailsArgs extends com.p
      * 
      */
     @Import(name="alarmMetrics")
-      private final @Nullable Output<List<ApplicationAlarmMetricArgs>> alarmMetrics;
+    private @Nullable Output<List<ApplicationAlarmMetricArgs>> alarmMetrics;
 
-    public Output<List<ApplicationAlarmMetricArgs>> alarmMetrics() {
-        return this.alarmMetrics == null ? Codegen.empty() : this.alarmMetrics;
+    public Optional<Output<List<ApplicationAlarmMetricArgs>>> alarmMetrics() {
+        return Optional.ofNullable(this.alarmMetrics);
     }
 
     /**
@@ -38,10 +38,10 @@ public final class ApplicationSubComponentConfigurationDetailsArgs extends com.p
      * 
      */
     @Import(name="logs")
-      private final @Nullable Output<List<ApplicationLogArgs>> logs;
+    private @Nullable Output<List<ApplicationLogArgs>> logs;
 
-    public Output<List<ApplicationLogArgs>> logs() {
-        return this.logs == null ? Codegen.empty() : this.logs;
+    public Optional<Output<List<ApplicationLogArgs>>> logs() {
+        return Optional.ofNullable(this.logs);
     }
 
     /**
@@ -49,85 +49,80 @@ public final class ApplicationSubComponentConfigurationDetailsArgs extends com.p
      * 
      */
     @Import(name="windowsEvents")
-      private final @Nullable Output<List<ApplicationWindowsEventArgs>> windowsEvents;
+    private @Nullable Output<List<ApplicationWindowsEventArgs>> windowsEvents;
 
-    public Output<List<ApplicationWindowsEventArgs>> windowsEvents() {
-        return this.windowsEvents == null ? Codegen.empty() : this.windowsEvents;
+    public Optional<Output<List<ApplicationWindowsEventArgs>>> windowsEvents() {
+        return Optional.ofNullable(this.windowsEvents);
     }
 
-    public ApplicationSubComponentConfigurationDetailsArgs(
-        @Nullable Output<List<ApplicationAlarmMetricArgs>> alarmMetrics,
-        @Nullable Output<List<ApplicationLogArgs>> logs,
-        @Nullable Output<List<ApplicationWindowsEventArgs>> windowsEvents) {
-        this.alarmMetrics = alarmMetrics;
-        this.logs = logs;
-        this.windowsEvents = windowsEvents;
-    }
+    private ApplicationSubComponentConfigurationDetailsArgs() {}
 
-    private ApplicationSubComponentConfigurationDetailsArgs() {
-        this.alarmMetrics = Codegen.empty();
-        this.logs = Codegen.empty();
-        this.windowsEvents = Codegen.empty();
+    private ApplicationSubComponentConfigurationDetailsArgs(ApplicationSubComponentConfigurationDetailsArgs $) {
+        this.alarmMetrics = $.alarmMetrics;
+        this.logs = $.logs;
+        this.windowsEvents = $.windowsEvents;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ApplicationSubComponentConfigurationDetailsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<ApplicationAlarmMetricArgs>> alarmMetrics;
-        private @Nullable Output<List<ApplicationLogArgs>> logs;
-        private @Nullable Output<List<ApplicationWindowsEventArgs>> windowsEvents;
+        private ApplicationSubComponentConfigurationDetailsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ApplicationSubComponentConfigurationDetailsArgs();
         }
 
         public Builder(ApplicationSubComponentConfigurationDetailsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.alarmMetrics = defaults.alarmMetrics;
-    	      this.logs = defaults.logs;
-    	      this.windowsEvents = defaults.windowsEvents;
+            $ = new ApplicationSubComponentConfigurationDetailsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder alarmMetrics(@Nullable Output<List<ApplicationAlarmMetricArgs>> alarmMetrics) {
-            this.alarmMetrics = alarmMetrics;
+            $.alarmMetrics = alarmMetrics;
             return this;
         }
-        public Builder alarmMetrics(@Nullable List<ApplicationAlarmMetricArgs> alarmMetrics) {
-            this.alarmMetrics = Codegen.ofNullable(alarmMetrics);
-            return this;
+
+        public Builder alarmMetrics(List<ApplicationAlarmMetricArgs> alarmMetrics) {
+            return alarmMetrics(Output.of(alarmMetrics));
         }
+
         public Builder alarmMetrics(ApplicationAlarmMetricArgs... alarmMetrics) {
             return alarmMetrics(List.of(alarmMetrics));
         }
+
         public Builder logs(@Nullable Output<List<ApplicationLogArgs>> logs) {
-            this.logs = logs;
+            $.logs = logs;
             return this;
         }
-        public Builder logs(@Nullable List<ApplicationLogArgs> logs) {
-            this.logs = Codegen.ofNullable(logs);
-            return this;
+
+        public Builder logs(List<ApplicationLogArgs> logs) {
+            return logs(Output.of(logs));
         }
+
         public Builder logs(ApplicationLogArgs... logs) {
             return logs(List.of(logs));
         }
+
         public Builder windowsEvents(@Nullable Output<List<ApplicationWindowsEventArgs>> windowsEvents) {
-            this.windowsEvents = windowsEvents;
+            $.windowsEvents = windowsEvents;
             return this;
         }
-        public Builder windowsEvents(@Nullable List<ApplicationWindowsEventArgs> windowsEvents) {
-            this.windowsEvents = Codegen.ofNullable(windowsEvents);
-            return this;
+
+        public Builder windowsEvents(List<ApplicationWindowsEventArgs> windowsEvents) {
+            return windowsEvents(Output.of(windowsEvents));
         }
+
         public Builder windowsEvents(ApplicationWindowsEventArgs... windowsEvents) {
             return windowsEvents(List.of(windowsEvents));
-        }        public ApplicationSubComponentConfigurationDetailsArgs build() {
-            return new ApplicationSubComponentConfigurationDetailsArgs(alarmMetrics, logs, windowsEvents);
+        }
+
+        public ApplicationSubComponentConfigurationDetailsArgs build() {
+            return $;
         }
     }
+
 }

@@ -5,10 +5,10 @@ package com.pulumi.googlenative.dialogflow_v2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.dialogflow_v2.inputs.GoogleCloudDialogflowV2IntentMessageImageArgs;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,7 +25,7 @@ public final class GoogleCloudDialogflowV2IntentMessageMediaContentResponseMedia
      * 
      */
     @Import(name="contentUrl", required=true)
-      private final Output<String> contentUrl;
+    private Output<String> contentUrl;
 
     public Output<String> contentUrl() {
         return this.contentUrl;
@@ -36,10 +36,10 @@ public final class GoogleCloudDialogflowV2IntentMessageMediaContentResponseMedia
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class GoogleCloudDialogflowV2IntentMessageMediaContentResponseMedia
      * 
      */
     @Import(name="icon")
-      private final @Nullable Output<GoogleCloudDialogflowV2IntentMessageImageArgs> icon;
+    private @Nullable Output<GoogleCloudDialogflowV2IntentMessageImageArgs> icon;
 
-    public Output<GoogleCloudDialogflowV2IntentMessageImageArgs> icon() {
-        return this.icon == null ? Codegen.empty() : this.icon;
+    public Optional<Output<GoogleCloudDialogflowV2IntentMessageImageArgs>> icon() {
+        return Optional.ofNullable(this.icon);
     }
 
     /**
@@ -58,10 +58,10 @@ public final class GoogleCloudDialogflowV2IntentMessageMediaContentResponseMedia
      * 
      */
     @Import(name="largeImage")
-      private final @Nullable Output<GoogleCloudDialogflowV2IntentMessageImageArgs> largeImage;
+    private @Nullable Output<GoogleCloudDialogflowV2IntentMessageImageArgs> largeImage;
 
-    public Output<GoogleCloudDialogflowV2IntentMessageImageArgs> largeImage() {
-        return this.largeImage == null ? Codegen.empty() : this.largeImage;
+    public Optional<Output<GoogleCloudDialogflowV2IntentMessageImageArgs>> largeImage() {
+        return Optional.ofNullable(this.largeImage);
     }
 
     /**
@@ -69,102 +69,90 @@ public final class GoogleCloudDialogflowV2IntentMessageMediaContentResponseMedia
      * 
      */
     @Import(name="name", required=true)
-      private final Output<String> name;
+    private Output<String> name;
 
     public Output<String> name() {
         return this.name;
     }
 
-    public GoogleCloudDialogflowV2IntentMessageMediaContentResponseMediaObjectArgs(
-        Output<String> contentUrl,
-        @Nullable Output<String> description,
-        @Nullable Output<GoogleCloudDialogflowV2IntentMessageImageArgs> icon,
-        @Nullable Output<GoogleCloudDialogflowV2IntentMessageImageArgs> largeImage,
-        Output<String> name) {
-        this.contentUrl = Objects.requireNonNull(contentUrl, "expected parameter 'contentUrl' to be non-null");
-        this.description = description;
-        this.icon = icon;
-        this.largeImage = largeImage;
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-    }
+    private GoogleCloudDialogflowV2IntentMessageMediaContentResponseMediaObjectArgs() {}
 
-    private GoogleCloudDialogflowV2IntentMessageMediaContentResponseMediaObjectArgs() {
-        this.contentUrl = Codegen.empty();
-        this.description = Codegen.empty();
-        this.icon = Codegen.empty();
-        this.largeImage = Codegen.empty();
-        this.name = Codegen.empty();
+    private GoogleCloudDialogflowV2IntentMessageMediaContentResponseMediaObjectArgs(GoogleCloudDialogflowV2IntentMessageMediaContentResponseMediaObjectArgs $) {
+        this.contentUrl = $.contentUrl;
+        this.description = $.description;
+        this.icon = $.icon;
+        this.largeImage = $.largeImage;
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudDialogflowV2IntentMessageMediaContentResponseMediaObjectArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> contentUrl;
-        private @Nullable Output<String> description;
-        private @Nullable Output<GoogleCloudDialogflowV2IntentMessageImageArgs> icon;
-        private @Nullable Output<GoogleCloudDialogflowV2IntentMessageImageArgs> largeImage;
-        private Output<String> name;
+        private GoogleCloudDialogflowV2IntentMessageMediaContentResponseMediaObjectArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudDialogflowV2IntentMessageMediaContentResponseMediaObjectArgs();
         }
 
         public Builder(GoogleCloudDialogflowV2IntentMessageMediaContentResponseMediaObjectArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.contentUrl = defaults.contentUrl;
-    	      this.description = defaults.description;
-    	      this.icon = defaults.icon;
-    	      this.largeImage = defaults.largeImage;
-    	      this.name = defaults.name;
+            $ = new GoogleCloudDialogflowV2IntentMessageMediaContentResponseMediaObjectArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder contentUrl(Output<String> contentUrl) {
-            this.contentUrl = Objects.requireNonNull(contentUrl);
+            $.contentUrl = contentUrl;
             return this;
         }
+
         public Builder contentUrl(String contentUrl) {
-            this.contentUrl = Output.of(Objects.requireNonNull(contentUrl));
-            return this;
+            return contentUrl(Output.of(contentUrl));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder icon(@Nullable Output<GoogleCloudDialogflowV2IntentMessageImageArgs> icon) {
-            this.icon = icon;
+            $.icon = icon;
             return this;
         }
-        public Builder icon(@Nullable GoogleCloudDialogflowV2IntentMessageImageArgs icon) {
-            this.icon = Codegen.ofNullable(icon);
-            return this;
+
+        public Builder icon(GoogleCloudDialogflowV2IntentMessageImageArgs icon) {
+            return icon(Output.of(icon));
         }
+
         public Builder largeImage(@Nullable Output<GoogleCloudDialogflowV2IntentMessageImageArgs> largeImage) {
-            this.largeImage = largeImage;
+            $.largeImage = largeImage;
             return this;
         }
-        public Builder largeImage(@Nullable GoogleCloudDialogflowV2IntentMessageImageArgs largeImage) {
-            this.largeImage = Codegen.ofNullable(largeImage);
-            return this;
+
+        public Builder largeImage(GoogleCloudDialogflowV2IntentMessageImageArgs largeImage) {
+            return largeImage(Output.of(largeImage));
         }
+
         public Builder name(Output<String> name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Output.of(Objects.requireNonNull(name));
-            return this;
-        }        public GoogleCloudDialogflowV2IntentMessageMediaContentResponseMediaObjectArgs build() {
-            return new GoogleCloudDialogflowV2IntentMessageMediaContentResponseMediaObjectArgs(contentUrl, description, icon, largeImage, name);
+            return name(Output.of(name));
+        }
+
+        public GoogleCloudDialogflowV2IntentMessageMediaContentResponseMediaObjectArgs build() {
+            $.contentUrl = Objects.requireNonNull($.contentUrl, "expected parameter 'contentUrl' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            return $;
         }
     }
+
 }

@@ -24,48 +24,48 @@ public final class PolicyParametersResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="dataStoreParametersList")
-      private final @Nullable List<AzureOperationalStoreParametersResponse> dataStoreParametersList;
+    private @Nullable List<AzureOperationalStoreParametersResponse> dataStoreParametersList;
 
-    public List<AzureOperationalStoreParametersResponse> dataStoreParametersList() {
-        return this.dataStoreParametersList == null ? List.of() : this.dataStoreParametersList;
+    public Optional<List<AzureOperationalStoreParametersResponse>> dataStoreParametersList() {
+        return Optional.ofNullable(this.dataStoreParametersList);
     }
 
-    public PolicyParametersResponse(@Nullable List<AzureOperationalStoreParametersResponse> dataStoreParametersList) {
-        this.dataStoreParametersList = dataStoreParametersList;
-    }
+    private PolicyParametersResponse() {}
 
-    private PolicyParametersResponse() {
-        this.dataStoreParametersList = List.of();
+    private PolicyParametersResponse(PolicyParametersResponse $) {
+        this.dataStoreParametersList = $.dataStoreParametersList;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PolicyParametersResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<AzureOperationalStoreParametersResponse> dataStoreParametersList;
+        private PolicyParametersResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new PolicyParametersResponse();
         }
 
         public Builder(PolicyParametersResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dataStoreParametersList = defaults.dataStoreParametersList;
+            $ = new PolicyParametersResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder dataStoreParametersList(@Nullable List<AzureOperationalStoreParametersResponse> dataStoreParametersList) {
-            this.dataStoreParametersList = dataStoreParametersList;
+            $.dataStoreParametersList = dataStoreParametersList;
             return this;
         }
+
         public Builder dataStoreParametersList(AzureOperationalStoreParametersResponse... dataStoreParametersList) {
             return dataStoreParametersList(List.of(dataStoreParametersList));
-        }        public PolicyParametersResponse build() {
-            return new PolicyParametersResponse(dataStoreParametersList);
+        }
+
+        public PolicyParametersResponse build() {
+            return $;
         }
     }
+
 }

@@ -5,9 +5,9 @@ package com.pulumi.googlenative.compute_beta.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class HealthCheckLogConfigArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="enable")
-      private final @Nullable Output<Boolean> enable;
+    private @Nullable Output<Boolean> enable;
 
-    public Output<Boolean> enable() {
-        return this.enable == null ? Codegen.empty() : this.enable;
+    public Optional<Output<Boolean>> enable() {
+        return Optional.ofNullable(this.enable);
     }
 
-    public HealthCheckLogConfigArgs(@Nullable Output<Boolean> enable) {
-        this.enable = enable;
-    }
+    private HealthCheckLogConfigArgs() {}
 
-    private HealthCheckLogConfigArgs() {
-        this.enable = Codegen.empty();
+    private HealthCheckLogConfigArgs(HealthCheckLogConfigArgs $) {
+        this.enable = $.enable;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(HealthCheckLogConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> enable;
+        private HealthCheckLogConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new HealthCheckLogConfigArgs();
         }
 
         public Builder(HealthCheckLogConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.enable = defaults.enable;
+            $ = new HealthCheckLogConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder enable(@Nullable Output<Boolean> enable) {
-            this.enable = enable;
+            $.enable = enable;
             return this;
         }
-        public Builder enable(@Nullable Boolean enable) {
-            this.enable = Codegen.ofNullable(enable);
-            return this;
-        }        public HealthCheckLogConfigArgs build() {
-            return new HealthCheckLogConfigArgs(enable);
+
+        public Builder enable(Boolean enable) {
+            return enable(Output.of(enable));
+        }
+
+        public HealthCheckLogConfigArgs build() {
+            return $;
         }
     }
+
 }

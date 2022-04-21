@@ -5,10 +5,10 @@ package com.pulumi.aws.msk.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class ClusterEncryptionInfoEncryptionInTransitArgs extends com.pulu
      * 
      */
     @Import(name="clientBroker")
-      private final @Nullable Output<String> clientBroker;
+    private @Nullable Output<String> clientBroker;
 
-    public Output<String> clientBroker() {
-        return this.clientBroker == null ? Codegen.empty() : this.clientBroker;
+    public Optional<Output<String>> clientBroker() {
+        return Optional.ofNullable(this.clientBroker);
     }
 
     /**
@@ -32,63 +32,58 @@ public final class ClusterEncryptionInfoEncryptionInTransitArgs extends com.pulu
      * 
      */
     @Import(name="inCluster")
-      private final @Nullable Output<Boolean> inCluster;
+    private @Nullable Output<Boolean> inCluster;
 
-    public Output<Boolean> inCluster() {
-        return this.inCluster == null ? Codegen.empty() : this.inCluster;
+    public Optional<Output<Boolean>> inCluster() {
+        return Optional.ofNullable(this.inCluster);
     }
 
-    public ClusterEncryptionInfoEncryptionInTransitArgs(
-        @Nullable Output<String> clientBroker,
-        @Nullable Output<Boolean> inCluster) {
-        this.clientBroker = clientBroker;
-        this.inCluster = inCluster;
-    }
+    private ClusterEncryptionInfoEncryptionInTransitArgs() {}
 
-    private ClusterEncryptionInfoEncryptionInTransitArgs() {
-        this.clientBroker = Codegen.empty();
-        this.inCluster = Codegen.empty();
+    private ClusterEncryptionInfoEncryptionInTransitArgs(ClusterEncryptionInfoEncryptionInTransitArgs $) {
+        this.clientBroker = $.clientBroker;
+        this.inCluster = $.inCluster;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ClusterEncryptionInfoEncryptionInTransitArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> clientBroker;
-        private @Nullable Output<Boolean> inCluster;
+        private ClusterEncryptionInfoEncryptionInTransitArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ClusterEncryptionInfoEncryptionInTransitArgs();
         }
 
         public Builder(ClusterEncryptionInfoEncryptionInTransitArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.clientBroker = defaults.clientBroker;
-    	      this.inCluster = defaults.inCluster;
+            $ = new ClusterEncryptionInfoEncryptionInTransitArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder clientBroker(@Nullable Output<String> clientBroker) {
-            this.clientBroker = clientBroker;
+            $.clientBroker = clientBroker;
             return this;
         }
-        public Builder clientBroker(@Nullable String clientBroker) {
-            this.clientBroker = Codegen.ofNullable(clientBroker);
-            return this;
+
+        public Builder clientBroker(String clientBroker) {
+            return clientBroker(Output.of(clientBroker));
         }
+
         public Builder inCluster(@Nullable Output<Boolean> inCluster) {
-            this.inCluster = inCluster;
+            $.inCluster = inCluster;
             return this;
         }
-        public Builder inCluster(@Nullable Boolean inCluster) {
-            this.inCluster = Codegen.ofNullable(inCluster);
-            return this;
-        }        public ClusterEncryptionInfoEncryptionInTransitArgs build() {
-            return new ClusterEncryptionInfoEncryptionInTransitArgs(clientBroker, inCluster);
+
+        public Builder inCluster(Boolean inCluster) {
+            return inCluster(Output.of(inCluster));
+        }
+
+        public ClusterEncryptionInfoEncryptionInTransitArgs build() {
+            return $;
         }
     }
+
 }

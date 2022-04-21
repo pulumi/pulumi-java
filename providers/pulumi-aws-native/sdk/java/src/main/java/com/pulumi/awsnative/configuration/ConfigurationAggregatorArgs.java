@@ -8,10 +8,10 @@ import com.pulumi.awsnative.configuration.inputs.ConfigurationAggregatorOrganiza
 import com.pulumi.awsnative.configuration.inputs.ConfigurationAggregatorTagArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class ConfigurationAggregatorArgs extends com.pulumi.resources.Reso
     public static final ConfigurationAggregatorArgs Empty = new ConfigurationAggregatorArgs();
 
     @Import(name="accountAggregationSources")
-      private final @Nullable Output<List<ConfigurationAggregatorAccountAggregationSourceArgs>> accountAggregationSources;
+    private @Nullable Output<List<ConfigurationAggregatorAccountAggregationSourceArgs>> accountAggregationSources;
 
-    public Output<List<ConfigurationAggregatorAccountAggregationSourceArgs>> accountAggregationSources() {
-        return this.accountAggregationSources == null ? Codegen.empty() : this.accountAggregationSources;
+    public Optional<Output<List<ConfigurationAggregatorAccountAggregationSourceArgs>>> accountAggregationSources() {
+        return Optional.ofNullable(this.accountAggregationSources);
     }
 
     /**
@@ -31,17 +31,17 @@ public final class ConfigurationAggregatorArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="configurationAggregatorName")
-      private final @Nullable Output<String> configurationAggregatorName;
+    private @Nullable Output<String> configurationAggregatorName;
 
-    public Output<String> configurationAggregatorName() {
-        return this.configurationAggregatorName == null ? Codegen.empty() : this.configurationAggregatorName;
+    public Optional<Output<String>> configurationAggregatorName() {
+        return Optional.ofNullable(this.configurationAggregatorName);
     }
 
     @Import(name="organizationAggregationSource")
-      private final @Nullable Output<ConfigurationAggregatorOrganizationAggregationSourceArgs> organizationAggregationSource;
+    private @Nullable Output<ConfigurationAggregatorOrganizationAggregationSourceArgs> organizationAggregationSource;
 
-    public Output<ConfigurationAggregatorOrganizationAggregationSourceArgs> organizationAggregationSource() {
-        return this.organizationAggregationSource == null ? Codegen.empty() : this.organizationAggregationSource;
+    public Optional<Output<ConfigurationAggregatorOrganizationAggregationSourceArgs>> organizationAggregationSource() {
+        return Optional.ofNullable(this.organizationAggregationSource);
     }
 
     /**
@@ -49,95 +49,86 @@ public final class ConfigurationAggregatorArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<List<ConfigurationAggregatorTagArgs>> tags;
+    private @Nullable Output<List<ConfigurationAggregatorTagArgs>> tags;
 
-    public Output<List<ConfigurationAggregatorTagArgs>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<List<ConfigurationAggregatorTagArgs>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public ConfigurationAggregatorArgs(
-        @Nullable Output<List<ConfigurationAggregatorAccountAggregationSourceArgs>> accountAggregationSources,
-        @Nullable Output<String> configurationAggregatorName,
-        @Nullable Output<ConfigurationAggregatorOrganizationAggregationSourceArgs> organizationAggregationSource,
-        @Nullable Output<List<ConfigurationAggregatorTagArgs>> tags) {
-        this.accountAggregationSources = accountAggregationSources;
-        this.configurationAggregatorName = configurationAggregatorName;
-        this.organizationAggregationSource = organizationAggregationSource;
-        this.tags = tags;
-    }
+    private ConfigurationAggregatorArgs() {}
 
-    private ConfigurationAggregatorArgs() {
-        this.accountAggregationSources = Codegen.empty();
-        this.configurationAggregatorName = Codegen.empty();
-        this.organizationAggregationSource = Codegen.empty();
-        this.tags = Codegen.empty();
+    private ConfigurationAggregatorArgs(ConfigurationAggregatorArgs $) {
+        this.accountAggregationSources = $.accountAggregationSources;
+        this.configurationAggregatorName = $.configurationAggregatorName;
+        this.organizationAggregationSource = $.organizationAggregationSource;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ConfigurationAggregatorArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<ConfigurationAggregatorAccountAggregationSourceArgs>> accountAggregationSources;
-        private @Nullable Output<String> configurationAggregatorName;
-        private @Nullable Output<ConfigurationAggregatorOrganizationAggregationSourceArgs> organizationAggregationSource;
-        private @Nullable Output<List<ConfigurationAggregatorTagArgs>> tags;
+        private ConfigurationAggregatorArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ConfigurationAggregatorArgs();
         }
 
         public Builder(ConfigurationAggregatorArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accountAggregationSources = defaults.accountAggregationSources;
-    	      this.configurationAggregatorName = defaults.configurationAggregatorName;
-    	      this.organizationAggregationSource = defaults.organizationAggregationSource;
-    	      this.tags = defaults.tags;
+            $ = new ConfigurationAggregatorArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder accountAggregationSources(@Nullable Output<List<ConfigurationAggregatorAccountAggregationSourceArgs>> accountAggregationSources) {
-            this.accountAggregationSources = accountAggregationSources;
+            $.accountAggregationSources = accountAggregationSources;
             return this;
         }
-        public Builder accountAggregationSources(@Nullable List<ConfigurationAggregatorAccountAggregationSourceArgs> accountAggregationSources) {
-            this.accountAggregationSources = Codegen.ofNullable(accountAggregationSources);
-            return this;
+
+        public Builder accountAggregationSources(List<ConfigurationAggregatorAccountAggregationSourceArgs> accountAggregationSources) {
+            return accountAggregationSources(Output.of(accountAggregationSources));
         }
+
         public Builder accountAggregationSources(ConfigurationAggregatorAccountAggregationSourceArgs... accountAggregationSources) {
             return accountAggregationSources(List.of(accountAggregationSources));
         }
+
         public Builder configurationAggregatorName(@Nullable Output<String> configurationAggregatorName) {
-            this.configurationAggregatorName = configurationAggregatorName;
+            $.configurationAggregatorName = configurationAggregatorName;
             return this;
         }
-        public Builder configurationAggregatorName(@Nullable String configurationAggregatorName) {
-            this.configurationAggregatorName = Codegen.ofNullable(configurationAggregatorName);
-            return this;
+
+        public Builder configurationAggregatorName(String configurationAggregatorName) {
+            return configurationAggregatorName(Output.of(configurationAggregatorName));
         }
+
         public Builder organizationAggregationSource(@Nullable Output<ConfigurationAggregatorOrganizationAggregationSourceArgs> organizationAggregationSource) {
-            this.organizationAggregationSource = organizationAggregationSource;
+            $.organizationAggregationSource = organizationAggregationSource;
             return this;
         }
-        public Builder organizationAggregationSource(@Nullable ConfigurationAggregatorOrganizationAggregationSourceArgs organizationAggregationSource) {
-            this.organizationAggregationSource = Codegen.ofNullable(organizationAggregationSource);
-            return this;
+
+        public Builder organizationAggregationSource(ConfigurationAggregatorOrganizationAggregationSourceArgs organizationAggregationSource) {
+            return organizationAggregationSource(Output.of(organizationAggregationSource));
         }
+
         public Builder tags(@Nullable Output<List<ConfigurationAggregatorTagArgs>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable List<ConfigurationAggregatorTagArgs> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(List<ConfigurationAggregatorTagArgs> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tags(ConfigurationAggregatorTagArgs... tags) {
             return tags(List.of(tags));
-        }        public ConfigurationAggregatorArgs build() {
-            return new ConfigurationAggregatorArgs(accountAggregationSources, configurationAggregatorName, organizationAggregationSource, tags);
+        }
+
+        public ConfigurationAggregatorArgs build() {
+            return $;
         }
     }
+
 }

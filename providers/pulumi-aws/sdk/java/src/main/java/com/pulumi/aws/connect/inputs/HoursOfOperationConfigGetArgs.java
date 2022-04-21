@@ -7,7 +7,6 @@ import com.pulumi.aws.connect.inputs.HoursOfOperationConfigEndTimeGetArgs;
 import com.pulumi.aws.connect.inputs.HoursOfOperationConfigStartTimeGetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +20,7 @@ public final class HoursOfOperationConfigGetArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="day", required=true)
-      private final Output<String> day;
+    private Output<String> day;
 
     public Output<String> day() {
         return this.day;
@@ -32,7 +31,7 @@ public final class HoursOfOperationConfigGetArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="endTime", required=true)
-      private final Output<HoursOfOperationConfigEndTimeGetArgs> endTime;
+    private Output<HoursOfOperationConfigEndTimeGetArgs> endTime;
 
     public Output<HoursOfOperationConfigEndTimeGetArgs> endTime() {
         return this.endTime;
@@ -43,76 +42,71 @@ public final class HoursOfOperationConfigGetArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="startTime", required=true)
-      private final Output<HoursOfOperationConfigStartTimeGetArgs> startTime;
+    private Output<HoursOfOperationConfigStartTimeGetArgs> startTime;
 
     public Output<HoursOfOperationConfigStartTimeGetArgs> startTime() {
         return this.startTime;
     }
 
-    public HoursOfOperationConfigGetArgs(
-        Output<String> day,
-        Output<HoursOfOperationConfigEndTimeGetArgs> endTime,
-        Output<HoursOfOperationConfigStartTimeGetArgs> startTime) {
-        this.day = Objects.requireNonNull(day, "expected parameter 'day' to be non-null");
-        this.endTime = Objects.requireNonNull(endTime, "expected parameter 'endTime' to be non-null");
-        this.startTime = Objects.requireNonNull(startTime, "expected parameter 'startTime' to be non-null");
-    }
+    private HoursOfOperationConfigGetArgs() {}
 
-    private HoursOfOperationConfigGetArgs() {
-        this.day = Codegen.empty();
-        this.endTime = Codegen.empty();
-        this.startTime = Codegen.empty();
+    private HoursOfOperationConfigGetArgs(HoursOfOperationConfigGetArgs $) {
+        this.day = $.day;
+        this.endTime = $.endTime;
+        this.startTime = $.startTime;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(HoursOfOperationConfigGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> day;
-        private Output<HoursOfOperationConfigEndTimeGetArgs> endTime;
-        private Output<HoursOfOperationConfigStartTimeGetArgs> startTime;
+        private HoursOfOperationConfigGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new HoursOfOperationConfigGetArgs();
         }
 
         public Builder(HoursOfOperationConfigGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.day = defaults.day;
-    	      this.endTime = defaults.endTime;
-    	      this.startTime = defaults.startTime;
+            $ = new HoursOfOperationConfigGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder day(Output<String> day) {
-            this.day = Objects.requireNonNull(day);
+            $.day = day;
             return this;
         }
+
         public Builder day(String day) {
-            this.day = Output.of(Objects.requireNonNull(day));
-            return this;
+            return day(Output.of(day));
         }
+
         public Builder endTime(Output<HoursOfOperationConfigEndTimeGetArgs> endTime) {
-            this.endTime = Objects.requireNonNull(endTime);
+            $.endTime = endTime;
             return this;
         }
+
         public Builder endTime(HoursOfOperationConfigEndTimeGetArgs endTime) {
-            this.endTime = Output.of(Objects.requireNonNull(endTime));
-            return this;
+            return endTime(Output.of(endTime));
         }
+
         public Builder startTime(Output<HoursOfOperationConfigStartTimeGetArgs> startTime) {
-            this.startTime = Objects.requireNonNull(startTime);
+            $.startTime = startTime;
             return this;
         }
+
         public Builder startTime(HoursOfOperationConfigStartTimeGetArgs startTime) {
-            this.startTime = Output.of(Objects.requireNonNull(startTime));
-            return this;
-        }        public HoursOfOperationConfigGetArgs build() {
-            return new HoursOfOperationConfigGetArgs(day, endTime, startTime);
+            return startTime(Output.of(startTime));
+        }
+
+        public HoursOfOperationConfigGetArgs build() {
+            $.day = Objects.requireNonNull($.day, "expected parameter 'day' to be non-null");
+            $.endTime = Objects.requireNonNull($.endTime, "expected parameter 'endTime' to be non-null");
+            $.startTime = Objects.requireNonNull($.startTime, "expected parameter 'startTime' to be non-null");
+            return $;
         }
     }
+
 }

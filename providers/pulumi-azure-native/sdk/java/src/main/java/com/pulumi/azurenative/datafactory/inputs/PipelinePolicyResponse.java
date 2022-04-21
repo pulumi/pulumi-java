@@ -23,45 +23,44 @@ public final class PipelinePolicyResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="elapsedTimeMetric")
-      private final @Nullable PipelineElapsedTimeMetricPolicyResponse elapsedTimeMetric;
+    private @Nullable PipelineElapsedTimeMetricPolicyResponse elapsedTimeMetric;
 
     public Optional<PipelineElapsedTimeMetricPolicyResponse> elapsedTimeMetric() {
-        return this.elapsedTimeMetric == null ? Optional.empty() : Optional.ofNullable(this.elapsedTimeMetric);
+        return Optional.ofNullable(this.elapsedTimeMetric);
     }
 
-    public PipelinePolicyResponse(@Nullable PipelineElapsedTimeMetricPolicyResponse elapsedTimeMetric) {
-        this.elapsedTimeMetric = elapsedTimeMetric;
-    }
+    private PipelinePolicyResponse() {}
 
-    private PipelinePolicyResponse() {
-        this.elapsedTimeMetric = null;
+    private PipelinePolicyResponse(PipelinePolicyResponse $) {
+        this.elapsedTimeMetric = $.elapsedTimeMetric;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PipelinePolicyResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable PipelineElapsedTimeMetricPolicyResponse elapsedTimeMetric;
+        private PipelinePolicyResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new PipelinePolicyResponse();
         }
 
         public Builder(PipelinePolicyResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.elapsedTimeMetric = defaults.elapsedTimeMetric;
+            $ = new PipelinePolicyResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder elapsedTimeMetric(@Nullable PipelineElapsedTimeMetricPolicyResponse elapsedTimeMetric) {
-            this.elapsedTimeMetric = elapsedTimeMetric;
+            $.elapsedTimeMetric = elapsedTimeMetric;
             return this;
-        }        public PipelinePolicyResponse build() {
-            return new PipelinePolicyResponse(elapsedTimeMetric);
+        }
+
+        public PipelinePolicyResponse build() {
+            return $;
         }
     }
+
 }

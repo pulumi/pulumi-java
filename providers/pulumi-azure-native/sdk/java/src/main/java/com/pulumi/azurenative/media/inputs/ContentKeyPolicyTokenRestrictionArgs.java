@@ -16,6 +16,7 @@ import java.lang.Object;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -32,10 +33,10 @@ public final class ContentKeyPolicyTokenRestrictionArgs extends com.pulumi.resou
      * 
      */
     @Import(name="alternateVerificationKeys")
-      private final @Nullable Output<List<Object>> alternateVerificationKeys;
+    private @Nullable Output<List<Object>> alternateVerificationKeys;
 
-    public Output<List<Object>> alternateVerificationKeys() {
-        return this.alternateVerificationKeys == null ? Codegen.empty() : this.alternateVerificationKeys;
+    public Optional<Output<List<Object>>> alternateVerificationKeys() {
+        return Optional.ofNullable(this.alternateVerificationKeys);
     }
 
     /**
@@ -43,7 +44,7 @@ public final class ContentKeyPolicyTokenRestrictionArgs extends com.pulumi.resou
      * 
      */
     @Import(name="audience", required=true)
-      private final Output<String> audience;
+    private Output<String> audience;
 
     public Output<String> audience() {
         return this.audience;
@@ -54,7 +55,7 @@ public final class ContentKeyPolicyTokenRestrictionArgs extends com.pulumi.resou
      * 
      */
     @Import(name="issuer", required=true)
-      private final Output<String> issuer;
+    private Output<String> issuer;
 
     public Output<String> issuer() {
         return this.issuer;
@@ -66,7 +67,7 @@ public final class ContentKeyPolicyTokenRestrictionArgs extends com.pulumi.resou
      * 
      */
     @Import(name="odataType", required=true)
-      private final Output<String> odataType;
+    private Output<String> odataType;
 
     public Output<String> odataType() {
         return this.odataType;
@@ -77,10 +78,10 @@ public final class ContentKeyPolicyTokenRestrictionArgs extends com.pulumi.resou
      * 
      */
     @Import(name="openIdConnectDiscoveryDocument")
-      private final @Nullable Output<String> openIdConnectDiscoveryDocument;
+    private @Nullable Output<String> openIdConnectDiscoveryDocument;
 
-    public Output<String> openIdConnectDiscoveryDocument() {
-        return this.openIdConnectDiscoveryDocument == null ? Codegen.empty() : this.openIdConnectDiscoveryDocument;
+    public Optional<Output<String>> openIdConnectDiscoveryDocument() {
+        return Optional.ofNullable(this.openIdConnectDiscoveryDocument);
     }
 
     /**
@@ -88,7 +89,7 @@ public final class ContentKeyPolicyTokenRestrictionArgs extends com.pulumi.resou
      * 
      */
     @Import(name="primaryVerificationKey", required=true)
-      private final Output<Object> primaryVerificationKey;
+    private Output<Object> primaryVerificationKey;
 
     public Output<Object> primaryVerificationKey() {
         return this.primaryVerificationKey;
@@ -99,10 +100,10 @@ public final class ContentKeyPolicyTokenRestrictionArgs extends com.pulumi.resou
      * 
      */
     @Import(name="requiredClaims")
-      private final @Nullable Output<List<ContentKeyPolicyTokenClaimArgs>> requiredClaims;
+    private @Nullable Output<List<ContentKeyPolicyTokenClaimArgs>> requiredClaims;
 
-    public Output<List<ContentKeyPolicyTokenClaimArgs>> requiredClaims() {
-        return this.requiredClaims == null ? Codegen.empty() : this.requiredClaims;
+    public Optional<Output<List<ContentKeyPolicyTokenClaimArgs>>> requiredClaims() {
+        return Optional.ofNullable(this.requiredClaims);
     }
 
     /**
@@ -110,147 +111,131 @@ public final class ContentKeyPolicyTokenRestrictionArgs extends com.pulumi.resou
      * 
      */
     @Import(name="restrictionTokenType", required=true)
-      private final Output<Either<String,ContentKeyPolicyRestrictionTokenType>> restrictionTokenType;
+    private Output<Either<String,ContentKeyPolicyRestrictionTokenType>> restrictionTokenType;
 
     public Output<Either<String,ContentKeyPolicyRestrictionTokenType>> restrictionTokenType() {
         return this.restrictionTokenType;
     }
 
-    public ContentKeyPolicyTokenRestrictionArgs(
-        @Nullable Output<List<Object>> alternateVerificationKeys,
-        Output<String> audience,
-        Output<String> issuer,
-        Output<String> odataType,
-        @Nullable Output<String> openIdConnectDiscoveryDocument,
-        Output<Object> primaryVerificationKey,
-        @Nullable Output<List<ContentKeyPolicyTokenClaimArgs>> requiredClaims,
-        Output<Either<String,ContentKeyPolicyRestrictionTokenType>> restrictionTokenType) {
-        this.alternateVerificationKeys = alternateVerificationKeys;
-        this.audience = Objects.requireNonNull(audience, "expected parameter 'audience' to be non-null");
-        this.issuer = Objects.requireNonNull(issuer, "expected parameter 'issuer' to be non-null");
-        this.odataType = Codegen.stringProp("odataType").output().arg(odataType).require();
-        this.openIdConnectDiscoveryDocument = openIdConnectDiscoveryDocument;
-        this.primaryVerificationKey = Objects.requireNonNull(primaryVerificationKey, "expected parameter 'primaryVerificationKey' to be non-null");
-        this.requiredClaims = requiredClaims;
-        this.restrictionTokenType = Objects.requireNonNull(restrictionTokenType, "expected parameter 'restrictionTokenType' to be non-null");
-    }
+    private ContentKeyPolicyTokenRestrictionArgs() {}
 
-    private ContentKeyPolicyTokenRestrictionArgs() {
-        this.alternateVerificationKeys = Codegen.empty();
-        this.audience = Codegen.empty();
-        this.issuer = Codegen.empty();
-        this.odataType = Codegen.empty();
-        this.openIdConnectDiscoveryDocument = Codegen.empty();
-        this.primaryVerificationKey = Codegen.empty();
-        this.requiredClaims = Codegen.empty();
-        this.restrictionTokenType = Codegen.empty();
+    private ContentKeyPolicyTokenRestrictionArgs(ContentKeyPolicyTokenRestrictionArgs $) {
+        this.alternateVerificationKeys = $.alternateVerificationKeys;
+        this.audience = $.audience;
+        this.issuer = $.issuer;
+        this.odataType = $.odataType;
+        this.openIdConnectDiscoveryDocument = $.openIdConnectDiscoveryDocument;
+        this.primaryVerificationKey = $.primaryVerificationKey;
+        this.requiredClaims = $.requiredClaims;
+        this.restrictionTokenType = $.restrictionTokenType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ContentKeyPolicyTokenRestrictionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<Object>> alternateVerificationKeys;
-        private Output<String> audience;
-        private Output<String> issuer;
-        private Output<String> odataType;
-        private @Nullable Output<String> openIdConnectDiscoveryDocument;
-        private Output<Object> primaryVerificationKey;
-        private @Nullable Output<List<ContentKeyPolicyTokenClaimArgs>> requiredClaims;
-        private Output<Either<String,ContentKeyPolicyRestrictionTokenType>> restrictionTokenType;
+        private ContentKeyPolicyTokenRestrictionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ContentKeyPolicyTokenRestrictionArgs();
         }
 
         public Builder(ContentKeyPolicyTokenRestrictionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.alternateVerificationKeys = defaults.alternateVerificationKeys;
-    	      this.audience = defaults.audience;
-    	      this.issuer = defaults.issuer;
-    	      this.odataType = defaults.odataType;
-    	      this.openIdConnectDiscoveryDocument = defaults.openIdConnectDiscoveryDocument;
-    	      this.primaryVerificationKey = defaults.primaryVerificationKey;
-    	      this.requiredClaims = defaults.requiredClaims;
-    	      this.restrictionTokenType = defaults.restrictionTokenType;
+            $ = new ContentKeyPolicyTokenRestrictionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder alternateVerificationKeys(@Nullable Output<List<Object>> alternateVerificationKeys) {
-            this.alternateVerificationKeys = alternateVerificationKeys;
+            $.alternateVerificationKeys = alternateVerificationKeys;
             return this;
         }
-        public Builder alternateVerificationKeys(@Nullable List<Object> alternateVerificationKeys) {
-            this.alternateVerificationKeys = Codegen.ofNullable(alternateVerificationKeys);
-            return this;
+
+        public Builder alternateVerificationKeys(List<Object> alternateVerificationKeys) {
+            return alternateVerificationKeys(Output.of(alternateVerificationKeys));
         }
+
         public Builder alternateVerificationKeys(Object... alternateVerificationKeys) {
             return alternateVerificationKeys(List.of(alternateVerificationKeys));
         }
+
         public Builder audience(Output<String> audience) {
-            this.audience = Objects.requireNonNull(audience);
+            $.audience = audience;
             return this;
         }
+
         public Builder audience(String audience) {
-            this.audience = Output.of(Objects.requireNonNull(audience));
-            return this;
+            return audience(Output.of(audience));
         }
+
         public Builder issuer(Output<String> issuer) {
-            this.issuer = Objects.requireNonNull(issuer);
+            $.issuer = issuer;
             return this;
         }
+
         public Builder issuer(String issuer) {
-            this.issuer = Output.of(Objects.requireNonNull(issuer));
-            return this;
+            return issuer(Output.of(issuer));
         }
+
         public Builder odataType(Output<String> odataType) {
-            this.odataType = Objects.requireNonNull(odataType);
+            $.odataType = odataType;
             return this;
         }
+
         public Builder odataType(String odataType) {
-            this.odataType = Output.of(Objects.requireNonNull(odataType));
-            return this;
+            return odataType(Output.of(odataType));
         }
+
         public Builder openIdConnectDiscoveryDocument(@Nullable Output<String> openIdConnectDiscoveryDocument) {
-            this.openIdConnectDiscoveryDocument = openIdConnectDiscoveryDocument;
+            $.openIdConnectDiscoveryDocument = openIdConnectDiscoveryDocument;
             return this;
         }
-        public Builder openIdConnectDiscoveryDocument(@Nullable String openIdConnectDiscoveryDocument) {
-            this.openIdConnectDiscoveryDocument = Codegen.ofNullable(openIdConnectDiscoveryDocument);
-            return this;
+
+        public Builder openIdConnectDiscoveryDocument(String openIdConnectDiscoveryDocument) {
+            return openIdConnectDiscoveryDocument(Output.of(openIdConnectDiscoveryDocument));
         }
+
         public Builder primaryVerificationKey(Output<Object> primaryVerificationKey) {
-            this.primaryVerificationKey = Objects.requireNonNull(primaryVerificationKey);
+            $.primaryVerificationKey = primaryVerificationKey;
             return this;
         }
+
         public Builder primaryVerificationKey(Object primaryVerificationKey) {
-            this.primaryVerificationKey = Output.of(Objects.requireNonNull(primaryVerificationKey));
-            return this;
+            return primaryVerificationKey(Output.of(primaryVerificationKey));
         }
+
         public Builder requiredClaims(@Nullable Output<List<ContentKeyPolicyTokenClaimArgs>> requiredClaims) {
-            this.requiredClaims = requiredClaims;
+            $.requiredClaims = requiredClaims;
             return this;
         }
-        public Builder requiredClaims(@Nullable List<ContentKeyPolicyTokenClaimArgs> requiredClaims) {
-            this.requiredClaims = Codegen.ofNullable(requiredClaims);
-            return this;
+
+        public Builder requiredClaims(List<ContentKeyPolicyTokenClaimArgs> requiredClaims) {
+            return requiredClaims(Output.of(requiredClaims));
         }
+
         public Builder requiredClaims(ContentKeyPolicyTokenClaimArgs... requiredClaims) {
             return requiredClaims(List.of(requiredClaims));
         }
+
         public Builder restrictionTokenType(Output<Either<String,ContentKeyPolicyRestrictionTokenType>> restrictionTokenType) {
-            this.restrictionTokenType = Objects.requireNonNull(restrictionTokenType);
+            $.restrictionTokenType = restrictionTokenType;
             return this;
         }
+
         public Builder restrictionTokenType(Either<String,ContentKeyPolicyRestrictionTokenType> restrictionTokenType) {
-            this.restrictionTokenType = Output.of(Objects.requireNonNull(restrictionTokenType));
-            return this;
-        }        public ContentKeyPolicyTokenRestrictionArgs build() {
-            return new ContentKeyPolicyTokenRestrictionArgs(alternateVerificationKeys, audience, issuer, odataType, openIdConnectDiscoveryDocument, primaryVerificationKey, requiredClaims, restrictionTokenType);
+            return restrictionTokenType(Output.of(restrictionTokenType));
+        }
+
+        public ContentKeyPolicyTokenRestrictionArgs build() {
+            $.audience = Objects.requireNonNull($.audience, "expected parameter 'audience' to be non-null");
+            $.issuer = Objects.requireNonNull($.issuer, "expected parameter 'issuer' to be non-null");
+            $.odataType = Codegen.stringProp("odataType").output().arg($.odataType).require();
+            $.primaryVerificationKey = Objects.requireNonNull($.primaryVerificationKey, "expected parameter 'primaryVerificationKey' to be non-null");
+            $.restrictionTokenType = Objects.requireNonNull($.restrictionTokenType, "expected parameter 'restrictionTokenType' to be non-null");
+            return $;
         }
     }
+
 }

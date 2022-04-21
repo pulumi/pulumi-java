@@ -17,45 +17,45 @@ public final class GameServerGroupTargetTrackingConfiguration extends com.pulumi
     public static final GameServerGroupTargetTrackingConfiguration Empty = new GameServerGroupTargetTrackingConfiguration();
 
     @Import(name="targetValue", required=true)
-      private final Double targetValue;
+    private Double targetValue;
 
     public Double targetValue() {
         return this.targetValue;
     }
 
-    public GameServerGroupTargetTrackingConfiguration(Double targetValue) {
-        this.targetValue = Objects.requireNonNull(targetValue, "expected parameter 'targetValue' to be non-null");
-    }
+    private GameServerGroupTargetTrackingConfiguration() {}
 
-    private GameServerGroupTargetTrackingConfiguration() {
-        this.targetValue = null;
+    private GameServerGroupTargetTrackingConfiguration(GameServerGroupTargetTrackingConfiguration $) {
+        this.targetValue = $.targetValue;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GameServerGroupTargetTrackingConfiguration defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Double targetValue;
+        private GameServerGroupTargetTrackingConfiguration $;
 
         public Builder() {
-    	      // Empty
+            $ = new GameServerGroupTargetTrackingConfiguration();
         }
 
         public Builder(GameServerGroupTargetTrackingConfiguration defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.targetValue = defaults.targetValue;
+            $ = new GameServerGroupTargetTrackingConfiguration(Objects.requireNonNull(defaults));
         }
 
         public Builder targetValue(Double targetValue) {
-            this.targetValue = Objects.requireNonNull(targetValue);
+            $.targetValue = targetValue;
             return this;
-        }        public GameServerGroupTargetTrackingConfiguration build() {
-            return new GameServerGroupTargetTrackingConfiguration(targetValue);
+        }
+
+        public GameServerGroupTargetTrackingConfiguration build() {
+            $.targetValue = Objects.requireNonNull($.targetValue, "expected parameter 'targetValue' to be non-null");
+            return $;
         }
     }
+
 }

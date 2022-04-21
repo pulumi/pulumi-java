@@ -9,8 +9,8 @@ import com.pulumi.awsnative.iotsitewise.inputs.AssetModelMetricArgs;
 import com.pulumi.awsnative.iotsitewise.inputs.AssetModelTransformArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,110 +23,100 @@ public final class AssetModelPropertyTypeArgs extends com.pulumi.resources.Resou
     public static final AssetModelPropertyTypeArgs Empty = new AssetModelPropertyTypeArgs();
 
     @Import(name="attribute")
-      private final @Nullable Output<AssetModelAttributeArgs> attribute;
+    private @Nullable Output<AssetModelAttributeArgs> attribute;
 
-    public Output<AssetModelAttributeArgs> attribute() {
-        return this.attribute == null ? Codegen.empty() : this.attribute;
+    public Optional<Output<AssetModelAttributeArgs>> attribute() {
+        return Optional.ofNullable(this.attribute);
     }
 
     @Import(name="metric")
-      private final @Nullable Output<AssetModelMetricArgs> metric;
+    private @Nullable Output<AssetModelMetricArgs> metric;
 
-    public Output<AssetModelMetricArgs> metric() {
-        return this.metric == null ? Codegen.empty() : this.metric;
+    public Optional<Output<AssetModelMetricArgs>> metric() {
+        return Optional.ofNullable(this.metric);
     }
 
     @Import(name="transform")
-      private final @Nullable Output<AssetModelTransformArgs> transform;
+    private @Nullable Output<AssetModelTransformArgs> transform;
 
-    public Output<AssetModelTransformArgs> transform() {
-        return this.transform == null ? Codegen.empty() : this.transform;
+    public Optional<Output<AssetModelTransformArgs>> transform() {
+        return Optional.ofNullable(this.transform);
     }
 
     @Import(name="typeName", required=true)
-      private final Output<AssetModelTypeName> typeName;
+    private Output<AssetModelTypeName> typeName;
 
     public Output<AssetModelTypeName> typeName() {
         return this.typeName;
     }
 
-    public AssetModelPropertyTypeArgs(
-        @Nullable Output<AssetModelAttributeArgs> attribute,
-        @Nullable Output<AssetModelMetricArgs> metric,
-        @Nullable Output<AssetModelTransformArgs> transform,
-        Output<AssetModelTypeName> typeName) {
-        this.attribute = attribute;
-        this.metric = metric;
-        this.transform = transform;
-        this.typeName = Objects.requireNonNull(typeName, "expected parameter 'typeName' to be non-null");
-    }
+    private AssetModelPropertyTypeArgs() {}
 
-    private AssetModelPropertyTypeArgs() {
-        this.attribute = Codegen.empty();
-        this.metric = Codegen.empty();
-        this.transform = Codegen.empty();
-        this.typeName = Codegen.empty();
+    private AssetModelPropertyTypeArgs(AssetModelPropertyTypeArgs $) {
+        this.attribute = $.attribute;
+        this.metric = $.metric;
+        this.transform = $.transform;
+        this.typeName = $.typeName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AssetModelPropertyTypeArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<AssetModelAttributeArgs> attribute;
-        private @Nullable Output<AssetModelMetricArgs> metric;
-        private @Nullable Output<AssetModelTransformArgs> transform;
-        private Output<AssetModelTypeName> typeName;
+        private AssetModelPropertyTypeArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AssetModelPropertyTypeArgs();
         }
 
         public Builder(AssetModelPropertyTypeArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.attribute = defaults.attribute;
-    	      this.metric = defaults.metric;
-    	      this.transform = defaults.transform;
-    	      this.typeName = defaults.typeName;
+            $ = new AssetModelPropertyTypeArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder attribute(@Nullable Output<AssetModelAttributeArgs> attribute) {
-            this.attribute = attribute;
+            $.attribute = attribute;
             return this;
         }
-        public Builder attribute(@Nullable AssetModelAttributeArgs attribute) {
-            this.attribute = Codegen.ofNullable(attribute);
-            return this;
+
+        public Builder attribute(AssetModelAttributeArgs attribute) {
+            return attribute(Output.of(attribute));
         }
+
         public Builder metric(@Nullable Output<AssetModelMetricArgs> metric) {
-            this.metric = metric;
+            $.metric = metric;
             return this;
         }
-        public Builder metric(@Nullable AssetModelMetricArgs metric) {
-            this.metric = Codegen.ofNullable(metric);
-            return this;
+
+        public Builder metric(AssetModelMetricArgs metric) {
+            return metric(Output.of(metric));
         }
+
         public Builder transform(@Nullable Output<AssetModelTransformArgs> transform) {
-            this.transform = transform;
+            $.transform = transform;
             return this;
         }
-        public Builder transform(@Nullable AssetModelTransformArgs transform) {
-            this.transform = Codegen.ofNullable(transform);
-            return this;
+
+        public Builder transform(AssetModelTransformArgs transform) {
+            return transform(Output.of(transform));
         }
+
         public Builder typeName(Output<AssetModelTypeName> typeName) {
-            this.typeName = Objects.requireNonNull(typeName);
+            $.typeName = typeName;
             return this;
         }
+
         public Builder typeName(AssetModelTypeName typeName) {
-            this.typeName = Output.of(Objects.requireNonNull(typeName));
-            return this;
-        }        public AssetModelPropertyTypeArgs build() {
-            return new AssetModelPropertyTypeArgs(attribute, metric, transform, typeName);
+            return typeName(Output.of(typeName));
+        }
+
+        public AssetModelPropertyTypeArgs build() {
+            $.typeName = Objects.requireNonNull($.typeName, "expected parameter 'typeName' to be non-null");
+            return $;
         }
     }
+
 }

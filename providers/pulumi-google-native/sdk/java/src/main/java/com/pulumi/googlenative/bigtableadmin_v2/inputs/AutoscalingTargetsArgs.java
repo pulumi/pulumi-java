@@ -5,9 +5,9 @@ package com.pulumi.googlenative.bigtableadmin_v2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class AutoscalingTargetsArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="cpuUtilizationPercent")
-      private final @Nullable Output<Integer> cpuUtilizationPercent;
+    private @Nullable Output<Integer> cpuUtilizationPercent;
 
-    public Output<Integer> cpuUtilizationPercent() {
-        return this.cpuUtilizationPercent == null ? Codegen.empty() : this.cpuUtilizationPercent;
+    public Optional<Output<Integer>> cpuUtilizationPercent() {
+        return Optional.ofNullable(this.cpuUtilizationPercent);
     }
 
-    public AutoscalingTargetsArgs(@Nullable Output<Integer> cpuUtilizationPercent) {
-        this.cpuUtilizationPercent = cpuUtilizationPercent;
-    }
+    private AutoscalingTargetsArgs() {}
 
-    private AutoscalingTargetsArgs() {
-        this.cpuUtilizationPercent = Codegen.empty();
+    private AutoscalingTargetsArgs(AutoscalingTargetsArgs $) {
+        this.cpuUtilizationPercent = $.cpuUtilizationPercent;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AutoscalingTargetsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> cpuUtilizationPercent;
+        private AutoscalingTargetsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AutoscalingTargetsArgs();
         }
 
         public Builder(AutoscalingTargetsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cpuUtilizationPercent = defaults.cpuUtilizationPercent;
+            $ = new AutoscalingTargetsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder cpuUtilizationPercent(@Nullable Output<Integer> cpuUtilizationPercent) {
-            this.cpuUtilizationPercent = cpuUtilizationPercent;
+            $.cpuUtilizationPercent = cpuUtilizationPercent;
             return this;
         }
-        public Builder cpuUtilizationPercent(@Nullable Integer cpuUtilizationPercent) {
-            this.cpuUtilizationPercent = Codegen.ofNullable(cpuUtilizationPercent);
-            return this;
-        }        public AutoscalingTargetsArgs build() {
-            return new AutoscalingTargetsArgs(cpuUtilizationPercent);
+
+        public Builder cpuUtilizationPercent(Integer cpuUtilizationPercent) {
+            return cpuUtilizationPercent(Output.of(cpuUtilizationPercent));
+        }
+
+        public AutoscalingTargetsArgs build() {
+            return $;
         }
     }
+
 }

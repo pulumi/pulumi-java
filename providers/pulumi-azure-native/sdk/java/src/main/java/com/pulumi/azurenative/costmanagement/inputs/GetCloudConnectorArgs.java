@@ -19,7 +19,7 @@ public final class GetCloudConnectorArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="connectorName", required=true)
-      private final String connectorName;
+    private String connectorName;
 
     public String connectorName() {
         return this.connectorName;
@@ -30,55 +30,51 @@ public final class GetCloudConnectorArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="expand")
-      private final @Nullable String expand;
+    private @Nullable String expand;
 
     public Optional<String> expand() {
-        return this.expand == null ? Optional.empty() : Optional.ofNullable(this.expand);
+        return Optional.ofNullable(this.expand);
     }
 
-    public GetCloudConnectorArgs(
-        String connectorName,
-        @Nullable String expand) {
-        this.connectorName = Objects.requireNonNull(connectorName, "expected parameter 'connectorName' to be non-null");
-        this.expand = expand;
-    }
+    private GetCloudConnectorArgs() {}
 
-    private GetCloudConnectorArgs() {
-        this.connectorName = null;
-        this.expand = null;
+    private GetCloudConnectorArgs(GetCloudConnectorArgs $) {
+        this.connectorName = $.connectorName;
+        this.expand = $.expand;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetCloudConnectorArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String connectorName;
-        private @Nullable String expand;
+        private GetCloudConnectorArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetCloudConnectorArgs();
         }
 
         public Builder(GetCloudConnectorArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.connectorName = defaults.connectorName;
-    	      this.expand = defaults.expand;
+            $ = new GetCloudConnectorArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder connectorName(String connectorName) {
-            this.connectorName = Objects.requireNonNull(connectorName);
+            $.connectorName = connectorName;
             return this;
         }
+
         public Builder expand(@Nullable String expand) {
-            this.expand = expand;
+            $.expand = expand;
             return this;
-        }        public GetCloudConnectorArgs build() {
-            return new GetCloudConnectorArgs(connectorName, expand);
+        }
+
+        public GetCloudConnectorArgs build() {
+            $.connectorName = Objects.requireNonNull($.connectorName, "expected parameter 'connectorName' to be non-null");
+            return $;
         }
     }
+
 }

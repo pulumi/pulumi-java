@@ -17,7 +17,7 @@ public final class GetQueueServicePropertiesArgs extends com.pulumi.resources.In
      * 
      */
     @Import(name="accountName", required=true)
-      private final String accountName;
+    private String accountName;
 
     public String accountName() {
         return this.accountName;
@@ -28,7 +28,7 @@ public final class GetQueueServicePropertiesArgs extends com.pulumi.resources.In
      * 
      */
     @Import(name="queueServiceName", required=true)
-      private final String queueServiceName;
+    private String queueServiceName;
 
     public String queueServiceName() {
         return this.queueServiceName;
@@ -39,64 +39,59 @@ public final class GetQueueServicePropertiesArgs extends com.pulumi.resources.In
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public GetQueueServicePropertiesArgs(
-        String accountName,
-        String queueServiceName,
-        String resourceGroupName) {
-        this.accountName = Objects.requireNonNull(accountName, "expected parameter 'accountName' to be non-null");
-        this.queueServiceName = Objects.requireNonNull(queueServiceName, "expected parameter 'queueServiceName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private GetQueueServicePropertiesArgs() {}
 
-    private GetQueueServicePropertiesArgs() {
-        this.accountName = null;
-        this.queueServiceName = null;
-        this.resourceGroupName = null;
+    private GetQueueServicePropertiesArgs(GetQueueServicePropertiesArgs $) {
+        this.accountName = $.accountName;
+        this.queueServiceName = $.queueServiceName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetQueueServicePropertiesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String accountName;
-        private String queueServiceName;
-        private String resourceGroupName;
+        private GetQueueServicePropertiesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetQueueServicePropertiesArgs();
         }
 
         public Builder(GetQueueServicePropertiesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accountName = defaults.accountName;
-    	      this.queueServiceName = defaults.queueServiceName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new GetQueueServicePropertiesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder accountName(String accountName) {
-            this.accountName = Objects.requireNonNull(accountName);
+            $.accountName = accountName;
             return this;
         }
+
         public Builder queueServiceName(String queueServiceName) {
-            this.queueServiceName = Objects.requireNonNull(queueServiceName);
+            $.queueServiceName = queueServiceName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public GetQueueServicePropertiesArgs build() {
-            return new GetQueueServicePropertiesArgs(accountName, queueServiceName, resourceGroupName);
+        }
+
+        public GetQueueServicePropertiesArgs build() {
+            $.accountName = Objects.requireNonNull($.accountName, "expected parameter 'accountName' to be non-null");
+            $.queueServiceName = Objects.requireNonNull($.queueServiceName, "expected parameter 'queueServiceName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

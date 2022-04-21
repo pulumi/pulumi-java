@@ -21,10 +21,10 @@ public final class ContainerConfigurationResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="containerImageNames")
-      private final @Nullable List<String> containerImageNames;
+    private @Nullable List<String> containerImageNames;
 
-    public List<String> containerImageNames() {
-        return this.containerImageNames == null ? List.of() : this.containerImageNames;
+    public Optional<List<String>> containerImageNames() {
+        return Optional.ofNullable(this.containerImageNames);
     }
 
     /**
@@ -32,77 +32,72 @@ public final class ContainerConfigurationResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="containerRegistries")
-      private final @Nullable List<ContainerRegistryResponse> containerRegistries;
+    private @Nullable List<ContainerRegistryResponse> containerRegistries;
 
-    public List<ContainerRegistryResponse> containerRegistries() {
-        return this.containerRegistries == null ? List.of() : this.containerRegistries;
+    public Optional<List<ContainerRegistryResponse>> containerRegistries() {
+        return Optional.ofNullable(this.containerRegistries);
     }
 
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
     }
 
-    public ContainerConfigurationResponse(
-        @Nullable List<String> containerImageNames,
-        @Nullable List<ContainerRegistryResponse> containerRegistries,
-        String type) {
-        this.containerImageNames = containerImageNames;
-        this.containerRegistries = containerRegistries;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private ContainerConfigurationResponse() {}
 
-    private ContainerConfigurationResponse() {
-        this.containerImageNames = List.of();
-        this.containerRegistries = List.of();
-        this.type = null;
+    private ContainerConfigurationResponse(ContainerConfigurationResponse $) {
+        this.containerImageNames = $.containerImageNames;
+        this.containerRegistries = $.containerRegistries;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ContainerConfigurationResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<String> containerImageNames;
-        private @Nullable List<ContainerRegistryResponse> containerRegistries;
-        private String type;
+        private ContainerConfigurationResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ContainerConfigurationResponse();
         }
 
         public Builder(ContainerConfigurationResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.containerImageNames = defaults.containerImageNames;
-    	      this.containerRegistries = defaults.containerRegistries;
-    	      this.type = defaults.type;
+            $ = new ContainerConfigurationResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder containerImageNames(@Nullable List<String> containerImageNames) {
-            this.containerImageNames = containerImageNames;
+            $.containerImageNames = containerImageNames;
             return this;
         }
+
         public Builder containerImageNames(String... containerImageNames) {
             return containerImageNames(List.of(containerImageNames));
         }
+
         public Builder containerRegistries(@Nullable List<ContainerRegistryResponse> containerRegistries) {
-            this.containerRegistries = containerRegistries;
+            $.containerRegistries = containerRegistries;
             return this;
         }
+
         public Builder containerRegistries(ContainerRegistryResponse... containerRegistries) {
             return containerRegistries(List.of(containerRegistries));
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
-        }        public ContainerConfigurationResponse build() {
-            return new ContainerConfigurationResponse(containerImageNames, containerRegistries, type);
+        }
+
+        public ContainerConfigurationResponse build() {
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

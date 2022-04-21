@@ -7,11 +7,11 @@ import com.pulumi.aws.autoscalingplans.inputs.ScalingPlanApplicationSourceGetArg
 import com.pulumi.aws.autoscalingplans.inputs.ScalingPlanScalingInstructionGetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class ScalingPlanState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="applicationSource")
-      private final @Nullable Output<ScalingPlanApplicationSourceGetArgs> applicationSource;
+    private @Nullable Output<ScalingPlanApplicationSourceGetArgs> applicationSource;
 
-    public Output<ScalingPlanApplicationSourceGetArgs> applicationSource() {
-        return this.applicationSource == null ? Codegen.empty() : this.applicationSource;
+    public Optional<Output<ScalingPlanApplicationSourceGetArgs>> applicationSource() {
+        return Optional.ofNullable(this.applicationSource);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class ScalingPlanState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class ScalingPlanState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="scalingInstructions")
-      private final @Nullable Output<List<ScalingPlanScalingInstructionGetArgs>> scalingInstructions;
+    private @Nullable Output<List<ScalingPlanScalingInstructionGetArgs>> scalingInstructions;
 
-    public Output<List<ScalingPlanScalingInstructionGetArgs>> scalingInstructions() {
-        return this.scalingInstructions == null ? Codegen.empty() : this.scalingInstructions;
+    public Optional<Output<List<ScalingPlanScalingInstructionGetArgs>>> scalingInstructions() {
+        return Optional.ofNullable(this.scalingInstructions);
     }
 
     /**
@@ -57,92 +57,82 @@ public final class ScalingPlanState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="scalingPlanVersion")
-      private final @Nullable Output<Integer> scalingPlanVersion;
+    private @Nullable Output<Integer> scalingPlanVersion;
 
-    public Output<Integer> scalingPlanVersion() {
-        return this.scalingPlanVersion == null ? Codegen.empty() : this.scalingPlanVersion;
+    public Optional<Output<Integer>> scalingPlanVersion() {
+        return Optional.ofNullable(this.scalingPlanVersion);
     }
 
-    public ScalingPlanState(
-        @Nullable Output<ScalingPlanApplicationSourceGetArgs> applicationSource,
-        @Nullable Output<String> name,
-        @Nullable Output<List<ScalingPlanScalingInstructionGetArgs>> scalingInstructions,
-        @Nullable Output<Integer> scalingPlanVersion) {
-        this.applicationSource = applicationSource;
-        this.name = name;
-        this.scalingInstructions = scalingInstructions;
-        this.scalingPlanVersion = scalingPlanVersion;
-    }
+    private ScalingPlanState() {}
 
-    private ScalingPlanState() {
-        this.applicationSource = Codegen.empty();
-        this.name = Codegen.empty();
-        this.scalingInstructions = Codegen.empty();
-        this.scalingPlanVersion = Codegen.empty();
+    private ScalingPlanState(ScalingPlanState $) {
+        this.applicationSource = $.applicationSource;
+        this.name = $.name;
+        this.scalingInstructions = $.scalingInstructions;
+        this.scalingPlanVersion = $.scalingPlanVersion;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ScalingPlanState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<ScalingPlanApplicationSourceGetArgs> applicationSource;
-        private @Nullable Output<String> name;
-        private @Nullable Output<List<ScalingPlanScalingInstructionGetArgs>> scalingInstructions;
-        private @Nullable Output<Integer> scalingPlanVersion;
+        private ScalingPlanState $;
 
         public Builder() {
-    	      // Empty
+            $ = new ScalingPlanState();
         }
 
         public Builder(ScalingPlanState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.applicationSource = defaults.applicationSource;
-    	      this.name = defaults.name;
-    	      this.scalingInstructions = defaults.scalingInstructions;
-    	      this.scalingPlanVersion = defaults.scalingPlanVersion;
+            $ = new ScalingPlanState(Objects.requireNonNull(defaults));
         }
 
         public Builder applicationSource(@Nullable Output<ScalingPlanApplicationSourceGetArgs> applicationSource) {
-            this.applicationSource = applicationSource;
+            $.applicationSource = applicationSource;
             return this;
         }
-        public Builder applicationSource(@Nullable ScalingPlanApplicationSourceGetArgs applicationSource) {
-            this.applicationSource = Codegen.ofNullable(applicationSource);
-            return this;
+
+        public Builder applicationSource(ScalingPlanApplicationSourceGetArgs applicationSource) {
+            return applicationSource(Output.of(applicationSource));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder scalingInstructions(@Nullable Output<List<ScalingPlanScalingInstructionGetArgs>> scalingInstructions) {
-            this.scalingInstructions = scalingInstructions;
+            $.scalingInstructions = scalingInstructions;
             return this;
         }
-        public Builder scalingInstructions(@Nullable List<ScalingPlanScalingInstructionGetArgs> scalingInstructions) {
-            this.scalingInstructions = Codegen.ofNullable(scalingInstructions);
-            return this;
+
+        public Builder scalingInstructions(List<ScalingPlanScalingInstructionGetArgs> scalingInstructions) {
+            return scalingInstructions(Output.of(scalingInstructions));
         }
+
         public Builder scalingInstructions(ScalingPlanScalingInstructionGetArgs... scalingInstructions) {
             return scalingInstructions(List.of(scalingInstructions));
         }
+
         public Builder scalingPlanVersion(@Nullable Output<Integer> scalingPlanVersion) {
-            this.scalingPlanVersion = scalingPlanVersion;
+            $.scalingPlanVersion = scalingPlanVersion;
             return this;
         }
-        public Builder scalingPlanVersion(@Nullable Integer scalingPlanVersion) {
-            this.scalingPlanVersion = Codegen.ofNullable(scalingPlanVersion);
-            return this;
-        }        public ScalingPlanState build() {
-            return new ScalingPlanState(applicationSource, name, scalingInstructions, scalingPlanVersion);
+
+        public Builder scalingPlanVersion(Integer scalingPlanVersion) {
+            return scalingPlanVersion(Output.of(scalingPlanVersion));
+        }
+
+        public ScalingPlanState build() {
+            return $;
         }
     }
+
 }

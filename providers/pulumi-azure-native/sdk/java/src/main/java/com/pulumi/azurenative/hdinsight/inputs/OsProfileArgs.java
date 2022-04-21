@@ -6,8 +6,8 @@ package com.pulumi.azurenative.hdinsight.inputs;
 import com.pulumi.azurenative.hdinsight.inputs.LinuxOperatingSystemProfileArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class OsProfileArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="linuxOperatingSystemProfile")
-      private final @Nullable Output<LinuxOperatingSystemProfileArgs> linuxOperatingSystemProfile;
+    private @Nullable Output<LinuxOperatingSystemProfileArgs> linuxOperatingSystemProfile;
 
-    public Output<LinuxOperatingSystemProfileArgs> linuxOperatingSystemProfile() {
-        return this.linuxOperatingSystemProfile == null ? Codegen.empty() : this.linuxOperatingSystemProfile;
+    public Optional<Output<LinuxOperatingSystemProfileArgs>> linuxOperatingSystemProfile() {
+        return Optional.ofNullable(this.linuxOperatingSystemProfile);
     }
 
-    public OsProfileArgs(@Nullable Output<LinuxOperatingSystemProfileArgs> linuxOperatingSystemProfile) {
-        this.linuxOperatingSystemProfile = linuxOperatingSystemProfile;
-    }
+    private OsProfileArgs() {}
 
-    private OsProfileArgs() {
-        this.linuxOperatingSystemProfile = Codegen.empty();
+    private OsProfileArgs(OsProfileArgs $) {
+        this.linuxOperatingSystemProfile = $.linuxOperatingSystemProfile;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(OsProfileArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<LinuxOperatingSystemProfileArgs> linuxOperatingSystemProfile;
+        private OsProfileArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new OsProfileArgs();
         }
 
         public Builder(OsProfileArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.linuxOperatingSystemProfile = defaults.linuxOperatingSystemProfile;
+            $ = new OsProfileArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder linuxOperatingSystemProfile(@Nullable Output<LinuxOperatingSystemProfileArgs> linuxOperatingSystemProfile) {
-            this.linuxOperatingSystemProfile = linuxOperatingSystemProfile;
+            $.linuxOperatingSystemProfile = linuxOperatingSystemProfile;
             return this;
         }
-        public Builder linuxOperatingSystemProfile(@Nullable LinuxOperatingSystemProfileArgs linuxOperatingSystemProfile) {
-            this.linuxOperatingSystemProfile = Codegen.ofNullable(linuxOperatingSystemProfile);
-            return this;
-        }        public OsProfileArgs build() {
-            return new OsProfileArgs(linuxOperatingSystemProfile);
+
+        public Builder linuxOperatingSystemProfile(LinuxOperatingSystemProfileArgs linuxOperatingSystemProfile) {
+            return linuxOperatingSystemProfile(Output.of(linuxOperatingSystemProfile));
+        }
+
+        public OsProfileArgs build() {
+            return $;
         }
     }
+
 }

@@ -5,9 +5,9 @@ package com.pulumi.aws.storagegateway.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class UploadBufferState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="diskId")
-      private final @Nullable Output<String> diskId;
+    private @Nullable Output<String> diskId;
 
-    public Output<String> diskId() {
-        return this.diskId == null ? Codegen.empty() : this.diskId;
+    public Optional<Output<String>> diskId() {
+        return Optional.ofNullable(this.diskId);
     }
 
     /**
@@ -31,10 +31,10 @@ public final class UploadBufferState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="diskPath")
-      private final @Nullable Output<String> diskPath;
+    private @Nullable Output<String> diskPath;
 
-    public Output<String> diskPath() {
-        return this.diskPath == null ? Codegen.empty() : this.diskPath;
+    public Optional<Output<String>> diskPath() {
+        return Optional.ofNullable(this.diskPath);
     }
 
     /**
@@ -42,76 +42,68 @@ public final class UploadBufferState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="gatewayArn")
-      private final @Nullable Output<String> gatewayArn;
+    private @Nullable Output<String> gatewayArn;
 
-    public Output<String> gatewayArn() {
-        return this.gatewayArn == null ? Codegen.empty() : this.gatewayArn;
+    public Optional<Output<String>> gatewayArn() {
+        return Optional.ofNullable(this.gatewayArn);
     }
 
-    public UploadBufferState(
-        @Nullable Output<String> diskId,
-        @Nullable Output<String> diskPath,
-        @Nullable Output<String> gatewayArn) {
-        this.diskId = diskId;
-        this.diskPath = diskPath;
-        this.gatewayArn = gatewayArn;
-    }
+    private UploadBufferState() {}
 
-    private UploadBufferState() {
-        this.diskId = Codegen.empty();
-        this.diskPath = Codegen.empty();
-        this.gatewayArn = Codegen.empty();
+    private UploadBufferState(UploadBufferState $) {
+        this.diskId = $.diskId;
+        this.diskPath = $.diskPath;
+        this.gatewayArn = $.gatewayArn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(UploadBufferState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> diskId;
-        private @Nullable Output<String> diskPath;
-        private @Nullable Output<String> gatewayArn;
+        private UploadBufferState $;
 
         public Builder() {
-    	      // Empty
+            $ = new UploadBufferState();
         }
 
         public Builder(UploadBufferState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.diskId = defaults.diskId;
-    	      this.diskPath = defaults.diskPath;
-    	      this.gatewayArn = defaults.gatewayArn;
+            $ = new UploadBufferState(Objects.requireNonNull(defaults));
         }
 
         public Builder diskId(@Nullable Output<String> diskId) {
-            this.diskId = diskId;
+            $.diskId = diskId;
             return this;
         }
-        public Builder diskId(@Nullable String diskId) {
-            this.diskId = Codegen.ofNullable(diskId);
-            return this;
+
+        public Builder diskId(String diskId) {
+            return diskId(Output.of(diskId));
         }
+
         public Builder diskPath(@Nullable Output<String> diskPath) {
-            this.diskPath = diskPath;
+            $.diskPath = diskPath;
             return this;
         }
-        public Builder diskPath(@Nullable String diskPath) {
-            this.diskPath = Codegen.ofNullable(diskPath);
-            return this;
+
+        public Builder diskPath(String diskPath) {
+            return diskPath(Output.of(diskPath));
         }
+
         public Builder gatewayArn(@Nullable Output<String> gatewayArn) {
-            this.gatewayArn = gatewayArn;
+            $.gatewayArn = gatewayArn;
             return this;
         }
-        public Builder gatewayArn(@Nullable String gatewayArn) {
-            this.gatewayArn = Codegen.ofNullable(gatewayArn);
-            return this;
-        }        public UploadBufferState build() {
-            return new UploadBufferState(diskId, diskPath, gatewayArn);
+
+        public Builder gatewayArn(String gatewayArn) {
+            return gatewayArn(Output.of(gatewayArn));
+        }
+
+        public UploadBufferState build() {
+            return $;
         }
     }
+
 }

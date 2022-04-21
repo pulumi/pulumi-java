@@ -17,7 +17,7 @@ public final class GetExtensionArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="extensionId", required=true)
-      private final String extensionId;
+    private String extensionId;
 
     public String extensionId() {
         return this.extensionId;
@@ -28,7 +28,7 @@ public final class GetExtensionArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="farmBeatsResourceName", required=true)
-      private final String farmBeatsResourceName;
+    private String farmBeatsResourceName;
 
     public String farmBeatsResourceName() {
         return this.farmBeatsResourceName;
@@ -39,64 +39,59 @@ public final class GetExtensionArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public GetExtensionArgs(
-        String extensionId,
-        String farmBeatsResourceName,
-        String resourceGroupName) {
-        this.extensionId = Objects.requireNonNull(extensionId, "expected parameter 'extensionId' to be non-null");
-        this.farmBeatsResourceName = Objects.requireNonNull(farmBeatsResourceName, "expected parameter 'farmBeatsResourceName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private GetExtensionArgs() {}
 
-    private GetExtensionArgs() {
-        this.extensionId = null;
-        this.farmBeatsResourceName = null;
-        this.resourceGroupName = null;
+    private GetExtensionArgs(GetExtensionArgs $) {
+        this.extensionId = $.extensionId;
+        this.farmBeatsResourceName = $.farmBeatsResourceName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetExtensionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String extensionId;
-        private String farmBeatsResourceName;
-        private String resourceGroupName;
+        private GetExtensionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetExtensionArgs();
         }
 
         public Builder(GetExtensionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.extensionId = defaults.extensionId;
-    	      this.farmBeatsResourceName = defaults.farmBeatsResourceName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new GetExtensionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder extensionId(String extensionId) {
-            this.extensionId = Objects.requireNonNull(extensionId);
+            $.extensionId = extensionId;
             return this;
         }
+
         public Builder farmBeatsResourceName(String farmBeatsResourceName) {
-            this.farmBeatsResourceName = Objects.requireNonNull(farmBeatsResourceName);
+            $.farmBeatsResourceName = farmBeatsResourceName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public GetExtensionArgs build() {
-            return new GetExtensionArgs(extensionId, farmBeatsResourceName, resourceGroupName);
+        }
+
+        public GetExtensionArgs build() {
+            $.extensionId = Objects.requireNonNull($.extensionId, "expected parameter 'extensionId' to be non-null");
+            $.farmBeatsResourceName = Objects.requireNonNull($.farmBeatsResourceName, "expected parameter 'farmBeatsResourceName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

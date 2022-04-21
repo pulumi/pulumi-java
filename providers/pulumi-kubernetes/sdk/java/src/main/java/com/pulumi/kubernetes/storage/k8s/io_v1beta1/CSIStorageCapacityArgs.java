@@ -10,6 +10,7 @@ import com.pulumi.kubernetes.meta_v1.inputs.LabelSelectorArgs;
 import com.pulumi.kubernetes.meta_v1.inputs.ObjectMetaArgs;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +23,10 @@ public final class CSIStorageCapacityArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="apiVersion")
-      private final @Nullable Output<String> apiVersion;
+    private @Nullable Output<String> apiVersion;
 
-    public Output<String> apiVersion() {
-        return this.apiVersion == null ? Codegen.empty() : this.apiVersion;
+    public Optional<Output<String>> apiVersion() {
+        return Optional.ofNullable(this.apiVersion);
     }
 
     /**
@@ -35,10 +36,10 @@ public final class CSIStorageCapacityArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="capacity")
-      private final @Nullable Output<String> capacity;
+    private @Nullable Output<String> capacity;
 
-    public Output<String> capacity() {
-        return this.capacity == null ? Codegen.empty() : this.capacity;
+    public Optional<Output<String>> capacity() {
+        return Optional.ofNullable(this.capacity);
     }
 
     /**
@@ -46,10 +47,10 @@ public final class CSIStorageCapacityArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="kind")
-      private final @Nullable Output<String> kind;
+    private @Nullable Output<String> kind;
 
-    public Output<String> kind() {
-        return this.kind == null ? Codegen.empty() : this.kind;
+    public Optional<Output<String>> kind() {
+        return Optional.ofNullable(this.kind);
     }
 
     /**
@@ -59,10 +60,10 @@ public final class CSIStorageCapacityArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="maximumVolumeSize")
-      private final @Nullable Output<String> maximumVolumeSize;
+    private @Nullable Output<String> maximumVolumeSize;
 
-    public Output<String> maximumVolumeSize() {
-        return this.maximumVolumeSize == null ? Codegen.empty() : this.maximumVolumeSize;
+    public Optional<Output<String>> maximumVolumeSize() {
+        return Optional.ofNullable(this.maximumVolumeSize);
     }
 
     /**
@@ -74,10 +75,10 @@ public final class CSIStorageCapacityArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="metadata")
-      private final @Nullable Output<ObjectMetaArgs> metadata;
+    private @Nullable Output<ObjectMetaArgs> metadata;
 
-    public Output<ObjectMetaArgs> metadata() {
-        return this.metadata == null ? Codegen.empty() : this.metadata;
+    public Optional<Output<ObjectMetaArgs>> metadata() {
+        return Optional.ofNullable(this.metadata);
     }
 
     /**
@@ -85,10 +86,10 @@ public final class CSIStorageCapacityArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="nodeTopology")
-      private final @Nullable Output<LabelSelectorArgs> nodeTopology;
+    private @Nullable Output<LabelSelectorArgs> nodeTopology;
 
-    public Output<LabelSelectorArgs> nodeTopology() {
-        return this.nodeTopology == null ? Codegen.empty() : this.nodeTopology;
+    public Optional<Output<LabelSelectorArgs>> nodeTopology() {
+        return Optional.ofNullable(this.nodeTopology);
     }
 
     /**
@@ -96,128 +97,111 @@ public final class CSIStorageCapacityArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="storageClassName", required=true)
-      private final Output<String> storageClassName;
+    private Output<String> storageClassName;
 
     public Output<String> storageClassName() {
         return this.storageClassName;
     }
 
-    public CSIStorageCapacityArgs(
-        @Nullable Output<String> apiVersion,
-        @Nullable Output<String> capacity,
-        @Nullable Output<String> kind,
-        @Nullable Output<String> maximumVolumeSize,
-        @Nullable Output<ObjectMetaArgs> metadata,
-        @Nullable Output<LabelSelectorArgs> nodeTopology,
-        Output<String> storageClassName) {
-        this.apiVersion = Codegen.stringProp("apiVersion").output().arg(apiVersion).getNullable();
-        this.capacity = capacity;
-        this.kind = Codegen.stringProp("kind").output().arg(kind).getNullable();
-        this.maximumVolumeSize = maximumVolumeSize;
-        this.metadata = metadata;
-        this.nodeTopology = nodeTopology;
-        this.storageClassName = Objects.requireNonNull(storageClassName, "expected parameter 'storageClassName' to be non-null");
-    }
+    private CSIStorageCapacityArgs() {}
 
-    private CSIStorageCapacityArgs() {
-        this.apiVersion = Codegen.empty();
-        this.capacity = Codegen.empty();
-        this.kind = Codegen.empty();
-        this.maximumVolumeSize = Codegen.empty();
-        this.metadata = Codegen.empty();
-        this.nodeTopology = Codegen.empty();
-        this.storageClassName = Codegen.empty();
+    private CSIStorageCapacityArgs(CSIStorageCapacityArgs $) {
+        this.apiVersion = $.apiVersion;
+        this.capacity = $.capacity;
+        this.kind = $.kind;
+        this.maximumVolumeSize = $.maximumVolumeSize;
+        this.metadata = $.metadata;
+        this.nodeTopology = $.nodeTopology;
+        this.storageClassName = $.storageClassName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CSIStorageCapacityArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> apiVersion;
-        private @Nullable Output<String> capacity;
-        private @Nullable Output<String> kind;
-        private @Nullable Output<String> maximumVolumeSize;
-        private @Nullable Output<ObjectMetaArgs> metadata;
-        private @Nullable Output<LabelSelectorArgs> nodeTopology;
-        private Output<String> storageClassName;
+        private CSIStorageCapacityArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CSIStorageCapacityArgs();
         }
 
         public Builder(CSIStorageCapacityArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.apiVersion = defaults.apiVersion;
-    	      this.capacity = defaults.capacity;
-    	      this.kind = defaults.kind;
-    	      this.maximumVolumeSize = defaults.maximumVolumeSize;
-    	      this.metadata = defaults.metadata;
-    	      this.nodeTopology = defaults.nodeTopology;
-    	      this.storageClassName = defaults.storageClassName;
+            $ = new CSIStorageCapacityArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder apiVersion(@Nullable Output<String> apiVersion) {
-            this.apiVersion = apiVersion;
+            $.apiVersion = apiVersion;
             return this;
         }
-        public Builder apiVersion(@Nullable String apiVersion) {
-            this.apiVersion = Codegen.ofNullable(apiVersion);
-            return this;
+
+        public Builder apiVersion(String apiVersion) {
+            return apiVersion(Output.of(apiVersion));
         }
+
         public Builder capacity(@Nullable Output<String> capacity) {
-            this.capacity = capacity;
+            $.capacity = capacity;
             return this;
         }
-        public Builder capacity(@Nullable String capacity) {
-            this.capacity = Codegen.ofNullable(capacity);
-            return this;
+
+        public Builder capacity(String capacity) {
+            return capacity(Output.of(capacity));
         }
+
         public Builder kind(@Nullable Output<String> kind) {
-            this.kind = kind;
+            $.kind = kind;
             return this;
         }
-        public Builder kind(@Nullable String kind) {
-            this.kind = Codegen.ofNullable(kind);
-            return this;
+
+        public Builder kind(String kind) {
+            return kind(Output.of(kind));
         }
+
         public Builder maximumVolumeSize(@Nullable Output<String> maximumVolumeSize) {
-            this.maximumVolumeSize = maximumVolumeSize;
+            $.maximumVolumeSize = maximumVolumeSize;
             return this;
         }
-        public Builder maximumVolumeSize(@Nullable String maximumVolumeSize) {
-            this.maximumVolumeSize = Codegen.ofNullable(maximumVolumeSize);
-            return this;
+
+        public Builder maximumVolumeSize(String maximumVolumeSize) {
+            return maximumVolumeSize(Output.of(maximumVolumeSize));
         }
+
         public Builder metadata(@Nullable Output<ObjectMetaArgs> metadata) {
-            this.metadata = metadata;
+            $.metadata = metadata;
             return this;
         }
-        public Builder metadata(@Nullable ObjectMetaArgs metadata) {
-            this.metadata = Codegen.ofNullable(metadata);
-            return this;
+
+        public Builder metadata(ObjectMetaArgs metadata) {
+            return metadata(Output.of(metadata));
         }
+
         public Builder nodeTopology(@Nullable Output<LabelSelectorArgs> nodeTopology) {
-            this.nodeTopology = nodeTopology;
+            $.nodeTopology = nodeTopology;
             return this;
         }
-        public Builder nodeTopology(@Nullable LabelSelectorArgs nodeTopology) {
-            this.nodeTopology = Codegen.ofNullable(nodeTopology);
-            return this;
+
+        public Builder nodeTopology(LabelSelectorArgs nodeTopology) {
+            return nodeTopology(Output.of(nodeTopology));
         }
+
         public Builder storageClassName(Output<String> storageClassName) {
-            this.storageClassName = Objects.requireNonNull(storageClassName);
+            $.storageClassName = storageClassName;
             return this;
         }
+
         public Builder storageClassName(String storageClassName) {
-            this.storageClassName = Output.of(Objects.requireNonNull(storageClassName));
-            return this;
-        }        public CSIStorageCapacityArgs build() {
-            return new CSIStorageCapacityArgs(apiVersion, capacity, kind, maximumVolumeSize, metadata, nodeTopology, storageClassName);
+            return storageClassName(Output.of(storageClassName));
+        }
+
+        public CSIStorageCapacityArgs build() {
+            $.apiVersion = Codegen.stringProp("apiVersion").output().arg($.apiVersion).getNullable();
+            $.kind = Codegen.stringProp("kind").output().arg($.kind).getNullable();
+            $.storageClassName = Objects.requireNonNull($.storageClassName, "expected parameter 'storageClassName' to be non-null");
+            return $;
         }
     }
+
 }

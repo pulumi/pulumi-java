@@ -5,11 +5,11 @@ package com.pulumi.aws.servicecatalog.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class ProvisionedProductStackSetProvisioningPreferencesGetArgs exte
      * 
      */
     @Import(name="accounts")
-      private final @Nullable Output<List<String>> accounts;
+    private @Nullable Output<List<String>> accounts;
 
-    public Output<List<String>> accounts() {
-        return this.accounts == null ? Codegen.empty() : this.accounts;
+    public Optional<Output<List<String>>> accounts() {
+        return Optional.ofNullable(this.accounts);
     }
 
     /**
@@ -33,10 +33,10 @@ public final class ProvisionedProductStackSetProvisioningPreferencesGetArgs exte
      * 
      */
     @Import(name="failureToleranceCount")
-      private final @Nullable Output<Integer> failureToleranceCount;
+    private @Nullable Output<Integer> failureToleranceCount;
 
-    public Output<Integer> failureToleranceCount() {
-        return this.failureToleranceCount == null ? Codegen.empty() : this.failureToleranceCount;
+    public Optional<Output<Integer>> failureToleranceCount() {
+        return Optional.ofNullable(this.failureToleranceCount);
     }
 
     /**
@@ -44,10 +44,10 @@ public final class ProvisionedProductStackSetProvisioningPreferencesGetArgs exte
      * 
      */
     @Import(name="failureTolerancePercentage")
-      private final @Nullable Output<Integer> failureTolerancePercentage;
+    private @Nullable Output<Integer> failureTolerancePercentage;
 
-    public Output<Integer> failureTolerancePercentage() {
-        return this.failureTolerancePercentage == null ? Codegen.empty() : this.failureTolerancePercentage;
+    public Optional<Output<Integer>> failureTolerancePercentage() {
+        return Optional.ofNullable(this.failureTolerancePercentage);
     }
 
     /**
@@ -55,10 +55,10 @@ public final class ProvisionedProductStackSetProvisioningPreferencesGetArgs exte
      * 
      */
     @Import(name="maxConcurrencyCount")
-      private final @Nullable Output<Integer> maxConcurrencyCount;
+    private @Nullable Output<Integer> maxConcurrencyCount;
 
-    public Output<Integer> maxConcurrencyCount() {
-        return this.maxConcurrencyCount == null ? Codegen.empty() : this.maxConcurrencyCount;
+    public Optional<Output<Integer>> maxConcurrencyCount() {
+        return Optional.ofNullable(this.maxConcurrencyCount);
     }
 
     /**
@@ -66,10 +66,10 @@ public final class ProvisionedProductStackSetProvisioningPreferencesGetArgs exte
      * 
      */
     @Import(name="maxConcurrencyPercentage")
-      private final @Nullable Output<Integer> maxConcurrencyPercentage;
+    private @Nullable Output<Integer> maxConcurrencyPercentage;
 
-    public Output<Integer> maxConcurrencyPercentage() {
-        return this.maxConcurrencyPercentage == null ? Codegen.empty() : this.maxConcurrencyPercentage;
+    public Optional<Output<Integer>> maxConcurrencyPercentage() {
+        return Optional.ofNullable(this.maxConcurrencyPercentage);
     }
 
     /**
@@ -77,121 +77,106 @@ public final class ProvisionedProductStackSetProvisioningPreferencesGetArgs exte
      * 
      */
     @Import(name="regions")
-      private final @Nullable Output<List<String>> regions;
+    private @Nullable Output<List<String>> regions;
 
-    public Output<List<String>> regions() {
-        return this.regions == null ? Codegen.empty() : this.regions;
+    public Optional<Output<List<String>>> regions() {
+        return Optional.ofNullable(this.regions);
     }
 
-    public ProvisionedProductStackSetProvisioningPreferencesGetArgs(
-        @Nullable Output<List<String>> accounts,
-        @Nullable Output<Integer> failureToleranceCount,
-        @Nullable Output<Integer> failureTolerancePercentage,
-        @Nullable Output<Integer> maxConcurrencyCount,
-        @Nullable Output<Integer> maxConcurrencyPercentage,
-        @Nullable Output<List<String>> regions) {
-        this.accounts = accounts;
-        this.failureToleranceCount = failureToleranceCount;
-        this.failureTolerancePercentage = failureTolerancePercentage;
-        this.maxConcurrencyCount = maxConcurrencyCount;
-        this.maxConcurrencyPercentage = maxConcurrencyPercentage;
-        this.regions = regions;
-    }
+    private ProvisionedProductStackSetProvisioningPreferencesGetArgs() {}
 
-    private ProvisionedProductStackSetProvisioningPreferencesGetArgs() {
-        this.accounts = Codegen.empty();
-        this.failureToleranceCount = Codegen.empty();
-        this.failureTolerancePercentage = Codegen.empty();
-        this.maxConcurrencyCount = Codegen.empty();
-        this.maxConcurrencyPercentage = Codegen.empty();
-        this.regions = Codegen.empty();
+    private ProvisionedProductStackSetProvisioningPreferencesGetArgs(ProvisionedProductStackSetProvisioningPreferencesGetArgs $) {
+        this.accounts = $.accounts;
+        this.failureToleranceCount = $.failureToleranceCount;
+        this.failureTolerancePercentage = $.failureTolerancePercentage;
+        this.maxConcurrencyCount = $.maxConcurrencyCount;
+        this.maxConcurrencyPercentage = $.maxConcurrencyPercentage;
+        this.regions = $.regions;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ProvisionedProductStackSetProvisioningPreferencesGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> accounts;
-        private @Nullable Output<Integer> failureToleranceCount;
-        private @Nullable Output<Integer> failureTolerancePercentage;
-        private @Nullable Output<Integer> maxConcurrencyCount;
-        private @Nullable Output<Integer> maxConcurrencyPercentage;
-        private @Nullable Output<List<String>> regions;
+        private ProvisionedProductStackSetProvisioningPreferencesGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ProvisionedProductStackSetProvisioningPreferencesGetArgs();
         }
 
         public Builder(ProvisionedProductStackSetProvisioningPreferencesGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accounts = defaults.accounts;
-    	      this.failureToleranceCount = defaults.failureToleranceCount;
-    	      this.failureTolerancePercentage = defaults.failureTolerancePercentage;
-    	      this.maxConcurrencyCount = defaults.maxConcurrencyCount;
-    	      this.maxConcurrencyPercentage = defaults.maxConcurrencyPercentage;
-    	      this.regions = defaults.regions;
+            $ = new ProvisionedProductStackSetProvisioningPreferencesGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder accounts(@Nullable Output<List<String>> accounts) {
-            this.accounts = accounts;
+            $.accounts = accounts;
             return this;
         }
-        public Builder accounts(@Nullable List<String> accounts) {
-            this.accounts = Codegen.ofNullable(accounts);
-            return this;
+
+        public Builder accounts(List<String> accounts) {
+            return accounts(Output.of(accounts));
         }
+
         public Builder accounts(String... accounts) {
             return accounts(List.of(accounts));
         }
+
         public Builder failureToleranceCount(@Nullable Output<Integer> failureToleranceCount) {
-            this.failureToleranceCount = failureToleranceCount;
+            $.failureToleranceCount = failureToleranceCount;
             return this;
         }
-        public Builder failureToleranceCount(@Nullable Integer failureToleranceCount) {
-            this.failureToleranceCount = Codegen.ofNullable(failureToleranceCount);
-            return this;
+
+        public Builder failureToleranceCount(Integer failureToleranceCount) {
+            return failureToleranceCount(Output.of(failureToleranceCount));
         }
+
         public Builder failureTolerancePercentage(@Nullable Output<Integer> failureTolerancePercentage) {
-            this.failureTolerancePercentage = failureTolerancePercentage;
+            $.failureTolerancePercentage = failureTolerancePercentage;
             return this;
         }
-        public Builder failureTolerancePercentage(@Nullable Integer failureTolerancePercentage) {
-            this.failureTolerancePercentage = Codegen.ofNullable(failureTolerancePercentage);
-            return this;
+
+        public Builder failureTolerancePercentage(Integer failureTolerancePercentage) {
+            return failureTolerancePercentage(Output.of(failureTolerancePercentage));
         }
+
         public Builder maxConcurrencyCount(@Nullable Output<Integer> maxConcurrencyCount) {
-            this.maxConcurrencyCount = maxConcurrencyCount;
+            $.maxConcurrencyCount = maxConcurrencyCount;
             return this;
         }
-        public Builder maxConcurrencyCount(@Nullable Integer maxConcurrencyCount) {
-            this.maxConcurrencyCount = Codegen.ofNullable(maxConcurrencyCount);
-            return this;
+
+        public Builder maxConcurrencyCount(Integer maxConcurrencyCount) {
+            return maxConcurrencyCount(Output.of(maxConcurrencyCount));
         }
+
         public Builder maxConcurrencyPercentage(@Nullable Output<Integer> maxConcurrencyPercentage) {
-            this.maxConcurrencyPercentage = maxConcurrencyPercentage;
+            $.maxConcurrencyPercentage = maxConcurrencyPercentage;
             return this;
         }
-        public Builder maxConcurrencyPercentage(@Nullable Integer maxConcurrencyPercentage) {
-            this.maxConcurrencyPercentage = Codegen.ofNullable(maxConcurrencyPercentage);
-            return this;
+
+        public Builder maxConcurrencyPercentage(Integer maxConcurrencyPercentage) {
+            return maxConcurrencyPercentage(Output.of(maxConcurrencyPercentage));
         }
+
         public Builder regions(@Nullable Output<List<String>> regions) {
-            this.regions = regions;
+            $.regions = regions;
             return this;
         }
-        public Builder regions(@Nullable List<String> regions) {
-            this.regions = Codegen.ofNullable(regions);
-            return this;
+
+        public Builder regions(List<String> regions) {
+            return regions(Output.of(regions));
         }
+
         public Builder regions(String... regions) {
             return regions(List.of(regions));
-        }        public ProvisionedProductStackSetProvisioningPreferencesGetArgs build() {
-            return new ProvisionedProductStackSetProvisioningPreferencesGetArgs(accounts, failureToleranceCount, failureTolerancePercentage, maxConcurrencyCount, maxConcurrencyPercentage, regions);
+        }
+
+        public ProvisionedProductStackSetProvisioningPreferencesGetArgs build() {
+            return $;
         }
     }
+
 }

@@ -21,10 +21,10 @@ public final class ListWorkflowVersionTriggerCallbackUrlArgs extends com.pulumi.
      * 
      */
     @Import(name="keyType")
-      private final @Nullable Either<String,KeyType> keyType;
+    private @Nullable Either<String,KeyType> keyType;
 
-    public Either<String,KeyType> keyType() {
-        return this.keyType == null ? null : this.keyType;
+    public Optional<Either<String,KeyType>> keyType() {
+        return Optional.ofNullable(this.keyType);
     }
 
     /**
@@ -32,10 +32,10 @@ public final class ListWorkflowVersionTriggerCallbackUrlArgs extends com.pulumi.
      * 
      */
     @Import(name="notAfter")
-      private final @Nullable String notAfter;
+    private @Nullable String notAfter;
 
     public Optional<String> notAfter() {
-        return this.notAfter == null ? Optional.empty() : Optional.ofNullable(this.notAfter);
+        return Optional.ofNullable(this.notAfter);
     }
 
     /**
@@ -43,7 +43,7 @@ public final class ListWorkflowVersionTriggerCallbackUrlArgs extends com.pulumi.
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -54,7 +54,7 @@ public final class ListWorkflowVersionTriggerCallbackUrlArgs extends com.pulumi.
      * 
      */
     @Import(name="triggerName", required=true)
-      private final String triggerName;
+    private String triggerName;
 
     public String triggerName() {
         return this.triggerName;
@@ -65,7 +65,7 @@ public final class ListWorkflowVersionTriggerCallbackUrlArgs extends com.pulumi.
      * 
      */
     @Import(name="versionId", required=true)
-      private final String versionId;
+    private String versionId;
 
     public String versionId() {
         return this.versionId;
@@ -76,91 +76,78 @@ public final class ListWorkflowVersionTriggerCallbackUrlArgs extends com.pulumi.
      * 
      */
     @Import(name="workflowName", required=true)
-      private final String workflowName;
+    private String workflowName;
 
     public String workflowName() {
         return this.workflowName;
     }
 
-    public ListWorkflowVersionTriggerCallbackUrlArgs(
-        @Nullable Either<String,KeyType> keyType,
-        @Nullable String notAfter,
-        String resourceGroupName,
-        String triggerName,
-        String versionId,
-        String workflowName) {
-        this.keyType = keyType;
-        this.notAfter = notAfter;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.triggerName = Objects.requireNonNull(triggerName, "expected parameter 'triggerName' to be non-null");
-        this.versionId = Objects.requireNonNull(versionId, "expected parameter 'versionId' to be non-null");
-        this.workflowName = Objects.requireNonNull(workflowName, "expected parameter 'workflowName' to be non-null");
-    }
+    private ListWorkflowVersionTriggerCallbackUrlArgs() {}
 
-    private ListWorkflowVersionTriggerCallbackUrlArgs() {
-        this.keyType = null;
-        this.notAfter = null;
-        this.resourceGroupName = null;
-        this.triggerName = null;
-        this.versionId = null;
-        this.workflowName = null;
+    private ListWorkflowVersionTriggerCallbackUrlArgs(ListWorkflowVersionTriggerCallbackUrlArgs $) {
+        this.keyType = $.keyType;
+        this.notAfter = $.notAfter;
+        this.resourceGroupName = $.resourceGroupName;
+        this.triggerName = $.triggerName;
+        this.versionId = $.versionId;
+        this.workflowName = $.workflowName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ListWorkflowVersionTriggerCallbackUrlArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Either<String,KeyType> keyType;
-        private @Nullable String notAfter;
-        private String resourceGroupName;
-        private String triggerName;
-        private String versionId;
-        private String workflowName;
+        private ListWorkflowVersionTriggerCallbackUrlArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ListWorkflowVersionTriggerCallbackUrlArgs();
         }
 
         public Builder(ListWorkflowVersionTriggerCallbackUrlArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.keyType = defaults.keyType;
-    	      this.notAfter = defaults.notAfter;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.triggerName = defaults.triggerName;
-    	      this.versionId = defaults.versionId;
-    	      this.workflowName = defaults.workflowName;
+            $ = new ListWorkflowVersionTriggerCallbackUrlArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder keyType(@Nullable Either<String,KeyType> keyType) {
-            this.keyType = keyType;
+            $.keyType = keyType;
             return this;
         }
+
         public Builder notAfter(@Nullable String notAfter) {
-            this.notAfter = notAfter;
+            $.notAfter = notAfter;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder triggerName(String triggerName) {
-            this.triggerName = Objects.requireNonNull(triggerName);
+            $.triggerName = triggerName;
             return this;
         }
+
         public Builder versionId(String versionId) {
-            this.versionId = Objects.requireNonNull(versionId);
+            $.versionId = versionId;
             return this;
         }
+
         public Builder workflowName(String workflowName) {
-            this.workflowName = Objects.requireNonNull(workflowName);
+            $.workflowName = workflowName;
             return this;
-        }        public ListWorkflowVersionTriggerCallbackUrlArgs build() {
-            return new ListWorkflowVersionTriggerCallbackUrlArgs(keyType, notAfter, resourceGroupName, triggerName, versionId, workflowName);
+        }
+
+        public ListWorkflowVersionTriggerCallbackUrlArgs build() {
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.triggerName = Objects.requireNonNull($.triggerName, "expected parameter 'triggerName' to be non-null");
+            $.versionId = Objects.requireNonNull($.versionId, "expected parameter 'versionId' to be non-null");
+            $.workflowName = Objects.requireNonNull($.workflowName, "expected parameter 'workflowName' to be non-null");
+            return $;
         }
     }
+
 }

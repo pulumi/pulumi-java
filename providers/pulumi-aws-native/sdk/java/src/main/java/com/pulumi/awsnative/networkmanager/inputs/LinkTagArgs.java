@@ -5,9 +5,9 @@ package com.pulumi.awsnative.networkmanager.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,70 +20,65 @@ public final class LinkTagArgs extends com.pulumi.resources.ResourceArgs {
     public static final LinkTagArgs Empty = new LinkTagArgs();
 
     @Import(name="key")
-      private final @Nullable Output<String> key;
+    private @Nullable Output<String> key;
 
-    public Output<String> key() {
-        return this.key == null ? Codegen.empty() : this.key;
+    public Optional<Output<String>> key() {
+        return Optional.ofNullable(this.key);
     }
 
     @Import(name="value")
-      private final @Nullable Output<String> value;
+    private @Nullable Output<String> value;
 
-    public Output<String> value() {
-        return this.value == null ? Codegen.empty() : this.value;
+    public Optional<Output<String>> value() {
+        return Optional.ofNullable(this.value);
     }
 
-    public LinkTagArgs(
-        @Nullable Output<String> key,
-        @Nullable Output<String> value) {
-        this.key = key;
-        this.value = value;
-    }
+    private LinkTagArgs() {}
 
-    private LinkTagArgs() {
-        this.key = Codegen.empty();
-        this.value = Codegen.empty();
+    private LinkTagArgs(LinkTagArgs $) {
+        this.key = $.key;
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LinkTagArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> key;
-        private @Nullable Output<String> value;
+        private LinkTagArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new LinkTagArgs();
         }
 
         public Builder(LinkTagArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.key = defaults.key;
-    	      this.value = defaults.value;
+            $ = new LinkTagArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder key(@Nullable Output<String> key) {
-            this.key = key;
+            $.key = key;
             return this;
         }
-        public Builder key(@Nullable String key) {
-            this.key = Codegen.ofNullable(key);
-            return this;
+
+        public Builder key(String key) {
+            return key(Output.of(key));
         }
+
         public Builder value(@Nullable Output<String> value) {
-            this.value = value;
+            $.value = value;
             return this;
         }
-        public Builder value(@Nullable String value) {
-            this.value = Codegen.ofNullable(value);
-            return this;
-        }        public LinkTagArgs build() {
-            return new LinkTagArgs(key, value);
+
+        public Builder value(String value) {
+            return value(Output.of(value));
+        }
+
+        public LinkTagArgs build() {
+            return $;
         }
     }
+
 }

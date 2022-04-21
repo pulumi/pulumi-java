@@ -23,7 +23,7 @@ public final class GooglePrivacyDlpV2InspectionRuleSetResponse extends com.pulum
      * 
      */
     @Import(name="infoTypes", required=true)
-      private final List<GooglePrivacyDlpV2InfoTypeResponse> infoTypes;
+    private List<GooglePrivacyDlpV2InfoTypeResponse> infoTypes;
 
     public List<GooglePrivacyDlpV2InfoTypeResponse> infoTypes() {
         return this.infoTypes;
@@ -34,61 +34,60 @@ public final class GooglePrivacyDlpV2InspectionRuleSetResponse extends com.pulum
      * 
      */
     @Import(name="rules", required=true)
-      private final List<GooglePrivacyDlpV2InspectionRuleResponse> rules;
+    private List<GooglePrivacyDlpV2InspectionRuleResponse> rules;
 
     public List<GooglePrivacyDlpV2InspectionRuleResponse> rules() {
         return this.rules;
     }
 
-    public GooglePrivacyDlpV2InspectionRuleSetResponse(
-        List<GooglePrivacyDlpV2InfoTypeResponse> infoTypes,
-        List<GooglePrivacyDlpV2InspectionRuleResponse> rules) {
-        this.infoTypes = Objects.requireNonNull(infoTypes, "expected parameter 'infoTypes' to be non-null");
-        this.rules = Objects.requireNonNull(rules, "expected parameter 'rules' to be non-null");
-    }
+    private GooglePrivacyDlpV2InspectionRuleSetResponse() {}
 
-    private GooglePrivacyDlpV2InspectionRuleSetResponse() {
-        this.infoTypes = List.of();
-        this.rules = List.of();
+    private GooglePrivacyDlpV2InspectionRuleSetResponse(GooglePrivacyDlpV2InspectionRuleSetResponse $) {
+        this.infoTypes = $.infoTypes;
+        this.rules = $.rules;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GooglePrivacyDlpV2InspectionRuleSetResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<GooglePrivacyDlpV2InfoTypeResponse> infoTypes;
-        private List<GooglePrivacyDlpV2InspectionRuleResponse> rules;
+        private GooglePrivacyDlpV2InspectionRuleSetResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GooglePrivacyDlpV2InspectionRuleSetResponse();
         }
 
         public Builder(GooglePrivacyDlpV2InspectionRuleSetResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.infoTypes = defaults.infoTypes;
-    	      this.rules = defaults.rules;
+            $ = new GooglePrivacyDlpV2InspectionRuleSetResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder infoTypes(List<GooglePrivacyDlpV2InfoTypeResponse> infoTypes) {
-            this.infoTypes = Objects.requireNonNull(infoTypes);
+            $.infoTypes = infoTypes;
             return this;
         }
+
         public Builder infoTypes(GooglePrivacyDlpV2InfoTypeResponse... infoTypes) {
             return infoTypes(List.of(infoTypes));
         }
+
         public Builder rules(List<GooglePrivacyDlpV2InspectionRuleResponse> rules) {
-            this.rules = Objects.requireNonNull(rules);
+            $.rules = rules;
             return this;
         }
+
         public Builder rules(GooglePrivacyDlpV2InspectionRuleResponse... rules) {
             return rules(List.of(rules));
-        }        public GooglePrivacyDlpV2InspectionRuleSetResponse build() {
-            return new GooglePrivacyDlpV2InspectionRuleSetResponse(infoTypes, rules);
+        }
+
+        public GooglePrivacyDlpV2InspectionRuleSetResponse build() {
+            $.infoTypes = Objects.requireNonNull($.infoTypes, "expected parameter 'infoTypes' to be non-null");
+            $.rules = Objects.requireNonNull($.rules, "expected parameter 'rules' to be non-null");
+            return $;
         }
     }
+
 }

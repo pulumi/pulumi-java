@@ -7,10 +7,10 @@ import com.pulumi.azurenative.compute.inputs.ImageDataDiskArgs;
 import com.pulumi.azurenative.compute.inputs.ImageOSDiskArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +27,10 @@ public final class ImageStorageProfileArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="dataDisks")
-      private final @Nullable Output<List<ImageDataDiskArgs>> dataDisks;
+    private @Nullable Output<List<ImageDataDiskArgs>> dataDisks;
 
-    public Output<List<ImageDataDiskArgs>> dataDisks() {
-        return this.dataDisks == null ? Codegen.empty() : this.dataDisks;
+    public Optional<Output<List<ImageDataDiskArgs>>> dataDisks() {
+        return Optional.ofNullable(this.dataDisks);
     }
 
     /**
@@ -38,10 +38,10 @@ public final class ImageStorageProfileArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="osDisk")
-      private final @Nullable Output<ImageOSDiskArgs> osDisk;
+    private @Nullable Output<ImageOSDiskArgs> osDisk;
 
-    public Output<ImageOSDiskArgs> osDisk() {
-        return this.osDisk == null ? Codegen.empty() : this.osDisk;
+    public Optional<Output<ImageOSDiskArgs>> osDisk() {
+        return Optional.ofNullable(this.osDisk);
     }
 
     /**
@@ -49,79 +49,72 @@ public final class ImageStorageProfileArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="zoneResilient")
-      private final @Nullable Output<Boolean> zoneResilient;
+    private @Nullable Output<Boolean> zoneResilient;
 
-    public Output<Boolean> zoneResilient() {
-        return this.zoneResilient == null ? Codegen.empty() : this.zoneResilient;
+    public Optional<Output<Boolean>> zoneResilient() {
+        return Optional.ofNullable(this.zoneResilient);
     }
 
-    public ImageStorageProfileArgs(
-        @Nullable Output<List<ImageDataDiskArgs>> dataDisks,
-        @Nullable Output<ImageOSDiskArgs> osDisk,
-        @Nullable Output<Boolean> zoneResilient) {
-        this.dataDisks = dataDisks;
-        this.osDisk = osDisk;
-        this.zoneResilient = zoneResilient;
-    }
+    private ImageStorageProfileArgs() {}
 
-    private ImageStorageProfileArgs() {
-        this.dataDisks = Codegen.empty();
-        this.osDisk = Codegen.empty();
-        this.zoneResilient = Codegen.empty();
+    private ImageStorageProfileArgs(ImageStorageProfileArgs $) {
+        this.dataDisks = $.dataDisks;
+        this.osDisk = $.osDisk;
+        this.zoneResilient = $.zoneResilient;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ImageStorageProfileArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<ImageDataDiskArgs>> dataDisks;
-        private @Nullable Output<ImageOSDiskArgs> osDisk;
-        private @Nullable Output<Boolean> zoneResilient;
+        private ImageStorageProfileArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ImageStorageProfileArgs();
         }
 
         public Builder(ImageStorageProfileArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dataDisks = defaults.dataDisks;
-    	      this.osDisk = defaults.osDisk;
-    	      this.zoneResilient = defaults.zoneResilient;
+            $ = new ImageStorageProfileArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder dataDisks(@Nullable Output<List<ImageDataDiskArgs>> dataDisks) {
-            this.dataDisks = dataDisks;
+            $.dataDisks = dataDisks;
             return this;
         }
-        public Builder dataDisks(@Nullable List<ImageDataDiskArgs> dataDisks) {
-            this.dataDisks = Codegen.ofNullable(dataDisks);
-            return this;
+
+        public Builder dataDisks(List<ImageDataDiskArgs> dataDisks) {
+            return dataDisks(Output.of(dataDisks));
         }
+
         public Builder dataDisks(ImageDataDiskArgs... dataDisks) {
             return dataDisks(List.of(dataDisks));
         }
+
         public Builder osDisk(@Nullable Output<ImageOSDiskArgs> osDisk) {
-            this.osDisk = osDisk;
+            $.osDisk = osDisk;
             return this;
         }
-        public Builder osDisk(@Nullable ImageOSDiskArgs osDisk) {
-            this.osDisk = Codegen.ofNullable(osDisk);
-            return this;
+
+        public Builder osDisk(ImageOSDiskArgs osDisk) {
+            return osDisk(Output.of(osDisk));
         }
+
         public Builder zoneResilient(@Nullable Output<Boolean> zoneResilient) {
-            this.zoneResilient = zoneResilient;
+            $.zoneResilient = zoneResilient;
             return this;
         }
-        public Builder zoneResilient(@Nullable Boolean zoneResilient) {
-            this.zoneResilient = Codegen.ofNullable(zoneResilient);
-            return this;
-        }        public ImageStorageProfileArgs build() {
-            return new ImageStorageProfileArgs(dataDisks, osDisk, zoneResilient);
+
+        public Builder zoneResilient(Boolean zoneResilient) {
+            return zoneResilient(Output.of(zoneResilient));
+        }
+
+        public ImageStorageProfileArgs build() {
+            return $;
         }
     }
+
 }

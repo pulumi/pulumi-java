@@ -17,45 +17,45 @@ public final class SessionInfoResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="sessionId", required=true)
-      private final String sessionId;
+    private String sessionId;
 
     public String sessionId() {
         return this.sessionId;
     }
 
-    public SessionInfoResponse(String sessionId) {
-        this.sessionId = Objects.requireNonNull(sessionId, "expected parameter 'sessionId' to be non-null");
-    }
+    private SessionInfoResponse() {}
 
-    private SessionInfoResponse() {
-        this.sessionId = null;
+    private SessionInfoResponse(SessionInfoResponse $) {
+        this.sessionId = $.sessionId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SessionInfoResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String sessionId;
+        private SessionInfoResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new SessionInfoResponse();
         }
 
         public Builder(SessionInfoResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.sessionId = defaults.sessionId;
+            $ = new SessionInfoResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder sessionId(String sessionId) {
-            this.sessionId = Objects.requireNonNull(sessionId);
+            $.sessionId = sessionId;
             return this;
-        }        public SessionInfoResponse build() {
-            return new SessionInfoResponse(sessionId);
+        }
+
+        public SessionInfoResponse build() {
+            $.sessionId = Objects.requireNonNull($.sessionId, "expected parameter 'sessionId' to be non-null");
+            return $;
         }
     }
+
 }

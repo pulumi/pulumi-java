@@ -9,10 +9,10 @@ import com.pulumi.awsnative.refactorspaces.inputs.ServiceTagArgs;
 import com.pulumi.awsnative.refactorspaces.inputs.ServiceUrlEndpointInputArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,45 +21,45 @@ public final class ServiceArgs extends com.pulumi.resources.ResourceArgs {
     public static final ServiceArgs Empty = new ServiceArgs();
 
     @Import(name="applicationIdentifier", required=true)
-      private final Output<String> applicationIdentifier;
+    private Output<String> applicationIdentifier;
 
     public Output<String> applicationIdentifier() {
         return this.applicationIdentifier;
     }
 
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     @Import(name="endpointType")
-      private final @Nullable Output<ServiceEndpointType> endpointType;
+    private @Nullable Output<ServiceEndpointType> endpointType;
 
-    public Output<ServiceEndpointType> endpointType() {
-        return this.endpointType == null ? Codegen.empty() : this.endpointType;
+    public Optional<Output<ServiceEndpointType>> endpointType() {
+        return Optional.ofNullable(this.endpointType);
     }
 
     @Import(name="environmentIdentifier", required=true)
-      private final Output<String> environmentIdentifier;
+    private Output<String> environmentIdentifier;
 
     public Output<String> environmentIdentifier() {
         return this.environmentIdentifier;
     }
 
     @Import(name="lambdaEndpoint")
-      private final @Nullable Output<ServiceLambdaEndpointInputArgs> lambdaEndpoint;
+    private @Nullable Output<ServiceLambdaEndpointInputArgs> lambdaEndpoint;
 
-    public Output<ServiceLambdaEndpointInputArgs> lambdaEndpoint() {
-        return this.lambdaEndpoint == null ? Codegen.empty() : this.lambdaEndpoint;
+    public Optional<Output<ServiceLambdaEndpointInputArgs>> lambdaEndpoint() {
+        return Optional.ofNullable(this.lambdaEndpoint);
     }
 
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -67,171 +67,148 @@ public final class ServiceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<List<ServiceTagArgs>> tags;
+    private @Nullable Output<List<ServiceTagArgs>> tags;
 
-    public Output<List<ServiceTagArgs>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<List<ServiceTagArgs>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     @Import(name="urlEndpoint")
-      private final @Nullable Output<ServiceUrlEndpointInputArgs> urlEndpoint;
+    private @Nullable Output<ServiceUrlEndpointInputArgs> urlEndpoint;
 
-    public Output<ServiceUrlEndpointInputArgs> urlEndpoint() {
-        return this.urlEndpoint == null ? Codegen.empty() : this.urlEndpoint;
+    public Optional<Output<ServiceUrlEndpointInputArgs>> urlEndpoint() {
+        return Optional.ofNullable(this.urlEndpoint);
     }
 
     @Import(name="vpcId")
-      private final @Nullable Output<String> vpcId;
+    private @Nullable Output<String> vpcId;
 
-    public Output<String> vpcId() {
-        return this.vpcId == null ? Codegen.empty() : this.vpcId;
+    public Optional<Output<String>> vpcId() {
+        return Optional.ofNullable(this.vpcId);
     }
 
-    public ServiceArgs(
-        Output<String> applicationIdentifier,
-        @Nullable Output<String> description,
-        @Nullable Output<ServiceEndpointType> endpointType,
-        Output<String> environmentIdentifier,
-        @Nullable Output<ServiceLambdaEndpointInputArgs> lambdaEndpoint,
-        @Nullable Output<String> name,
-        @Nullable Output<List<ServiceTagArgs>> tags,
-        @Nullable Output<ServiceUrlEndpointInputArgs> urlEndpoint,
-        @Nullable Output<String> vpcId) {
-        this.applicationIdentifier = Objects.requireNonNull(applicationIdentifier, "expected parameter 'applicationIdentifier' to be non-null");
-        this.description = description;
-        this.endpointType = endpointType;
-        this.environmentIdentifier = Objects.requireNonNull(environmentIdentifier, "expected parameter 'environmentIdentifier' to be non-null");
-        this.lambdaEndpoint = lambdaEndpoint;
-        this.name = name;
-        this.tags = tags;
-        this.urlEndpoint = urlEndpoint;
-        this.vpcId = vpcId;
-    }
+    private ServiceArgs() {}
 
-    private ServiceArgs() {
-        this.applicationIdentifier = Codegen.empty();
-        this.description = Codegen.empty();
-        this.endpointType = Codegen.empty();
-        this.environmentIdentifier = Codegen.empty();
-        this.lambdaEndpoint = Codegen.empty();
-        this.name = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.urlEndpoint = Codegen.empty();
-        this.vpcId = Codegen.empty();
+    private ServiceArgs(ServiceArgs $) {
+        this.applicationIdentifier = $.applicationIdentifier;
+        this.description = $.description;
+        this.endpointType = $.endpointType;
+        this.environmentIdentifier = $.environmentIdentifier;
+        this.lambdaEndpoint = $.lambdaEndpoint;
+        this.name = $.name;
+        this.tags = $.tags;
+        this.urlEndpoint = $.urlEndpoint;
+        this.vpcId = $.vpcId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ServiceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> applicationIdentifier;
-        private @Nullable Output<String> description;
-        private @Nullable Output<ServiceEndpointType> endpointType;
-        private Output<String> environmentIdentifier;
-        private @Nullable Output<ServiceLambdaEndpointInputArgs> lambdaEndpoint;
-        private @Nullable Output<String> name;
-        private @Nullable Output<List<ServiceTagArgs>> tags;
-        private @Nullable Output<ServiceUrlEndpointInputArgs> urlEndpoint;
-        private @Nullable Output<String> vpcId;
+        private ServiceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ServiceArgs();
         }
 
         public Builder(ServiceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.applicationIdentifier = defaults.applicationIdentifier;
-    	      this.description = defaults.description;
-    	      this.endpointType = defaults.endpointType;
-    	      this.environmentIdentifier = defaults.environmentIdentifier;
-    	      this.lambdaEndpoint = defaults.lambdaEndpoint;
-    	      this.name = defaults.name;
-    	      this.tags = defaults.tags;
-    	      this.urlEndpoint = defaults.urlEndpoint;
-    	      this.vpcId = defaults.vpcId;
+            $ = new ServiceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder applicationIdentifier(Output<String> applicationIdentifier) {
-            this.applicationIdentifier = Objects.requireNonNull(applicationIdentifier);
+            $.applicationIdentifier = applicationIdentifier;
             return this;
         }
+
         public Builder applicationIdentifier(String applicationIdentifier) {
-            this.applicationIdentifier = Output.of(Objects.requireNonNull(applicationIdentifier));
-            return this;
+            return applicationIdentifier(Output.of(applicationIdentifier));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder endpointType(@Nullable Output<ServiceEndpointType> endpointType) {
-            this.endpointType = endpointType;
+            $.endpointType = endpointType;
             return this;
         }
-        public Builder endpointType(@Nullable ServiceEndpointType endpointType) {
-            this.endpointType = Codegen.ofNullable(endpointType);
-            return this;
+
+        public Builder endpointType(ServiceEndpointType endpointType) {
+            return endpointType(Output.of(endpointType));
         }
+
         public Builder environmentIdentifier(Output<String> environmentIdentifier) {
-            this.environmentIdentifier = Objects.requireNonNull(environmentIdentifier);
+            $.environmentIdentifier = environmentIdentifier;
             return this;
         }
+
         public Builder environmentIdentifier(String environmentIdentifier) {
-            this.environmentIdentifier = Output.of(Objects.requireNonNull(environmentIdentifier));
-            return this;
+            return environmentIdentifier(Output.of(environmentIdentifier));
         }
+
         public Builder lambdaEndpoint(@Nullable Output<ServiceLambdaEndpointInputArgs> lambdaEndpoint) {
-            this.lambdaEndpoint = lambdaEndpoint;
+            $.lambdaEndpoint = lambdaEndpoint;
             return this;
         }
-        public Builder lambdaEndpoint(@Nullable ServiceLambdaEndpointInputArgs lambdaEndpoint) {
-            this.lambdaEndpoint = Codegen.ofNullable(lambdaEndpoint);
-            return this;
+
+        public Builder lambdaEndpoint(ServiceLambdaEndpointInputArgs lambdaEndpoint) {
+            return lambdaEndpoint(Output.of(lambdaEndpoint));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder tags(@Nullable Output<List<ServiceTagArgs>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable List<ServiceTagArgs> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(List<ServiceTagArgs> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tags(ServiceTagArgs... tags) {
             return tags(List.of(tags));
         }
+
         public Builder urlEndpoint(@Nullable Output<ServiceUrlEndpointInputArgs> urlEndpoint) {
-            this.urlEndpoint = urlEndpoint;
+            $.urlEndpoint = urlEndpoint;
             return this;
         }
-        public Builder urlEndpoint(@Nullable ServiceUrlEndpointInputArgs urlEndpoint) {
-            this.urlEndpoint = Codegen.ofNullable(urlEndpoint);
-            return this;
+
+        public Builder urlEndpoint(ServiceUrlEndpointInputArgs urlEndpoint) {
+            return urlEndpoint(Output.of(urlEndpoint));
         }
+
         public Builder vpcId(@Nullable Output<String> vpcId) {
-            this.vpcId = vpcId;
+            $.vpcId = vpcId;
             return this;
         }
-        public Builder vpcId(@Nullable String vpcId) {
-            this.vpcId = Codegen.ofNullable(vpcId);
-            return this;
-        }        public ServiceArgs build() {
-            return new ServiceArgs(applicationIdentifier, description, endpointType, environmentIdentifier, lambdaEndpoint, name, tags, urlEndpoint, vpcId);
+
+        public Builder vpcId(String vpcId) {
+            return vpcId(Output.of(vpcId));
+        }
+
+        public ServiceArgs build() {
+            $.applicationIdentifier = Objects.requireNonNull($.applicationIdentifier, "expected parameter 'applicationIdentifier' to be non-null");
+            $.environmentIdentifier = Objects.requireNonNull($.environmentIdentifier, "expected parameter 'environmentIdentifier' to be non-null");
+            return $;
         }
     }
+
 }

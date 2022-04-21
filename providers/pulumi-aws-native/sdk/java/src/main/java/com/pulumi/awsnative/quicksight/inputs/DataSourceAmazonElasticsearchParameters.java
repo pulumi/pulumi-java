@@ -21,45 +21,45 @@ public final class DataSourceAmazonElasticsearchParameters extends com.pulumi.re
      * 
      */
     @Import(name="domain", required=true)
-      private final String domain;
+    private String domain;
 
     public String domain() {
         return this.domain;
     }
 
-    public DataSourceAmazonElasticsearchParameters(String domain) {
-        this.domain = Objects.requireNonNull(domain, "expected parameter 'domain' to be non-null");
-    }
+    private DataSourceAmazonElasticsearchParameters() {}
 
-    private DataSourceAmazonElasticsearchParameters() {
-        this.domain = null;
+    private DataSourceAmazonElasticsearchParameters(DataSourceAmazonElasticsearchParameters $) {
+        this.domain = $.domain;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DataSourceAmazonElasticsearchParameters defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String domain;
+        private DataSourceAmazonElasticsearchParameters $;
 
         public Builder() {
-    	      // Empty
+            $ = new DataSourceAmazonElasticsearchParameters();
         }
 
         public Builder(DataSourceAmazonElasticsearchParameters defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.domain = defaults.domain;
+            $ = new DataSourceAmazonElasticsearchParameters(Objects.requireNonNull(defaults));
         }
 
         public Builder domain(String domain) {
-            this.domain = Objects.requireNonNull(domain);
+            $.domain = domain;
             return this;
-        }        public DataSourceAmazonElasticsearchParameters build() {
-            return new DataSourceAmazonElasticsearchParameters(domain);
+        }
+
+        public DataSourceAmazonElasticsearchParameters build() {
+            $.domain = Objects.requireNonNull($.domain, "expected parameter 'domain' to be non-null");
+            return $;
         }
     }
+
 }

@@ -24,7 +24,7 @@ public final class OperationResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="done", required=true)
-      private final Boolean done;
+    private Boolean done;
 
     public Boolean done() {
         return this.done;
@@ -35,7 +35,7 @@ public final class OperationResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="error", required=true)
-      private final StatusResponse error;
+    private StatusResponse error;
 
     public StatusResponse error() {
         return this.error;
@@ -46,7 +46,7 @@ public final class OperationResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="metadata", required=true)
-      private final Map<String,String> metadata;
+    private Map<String,String> metadata;
 
     public Map<String,String> metadata() {
         return this.metadata;
@@ -57,7 +57,7 @@ public final class OperationResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -68,82 +68,73 @@ public final class OperationResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="response", required=true)
-      private final Map<String,String> response;
+    private Map<String,String> response;
 
     public Map<String,String> response() {
         return this.response;
     }
 
-    public OperationResponse(
-        Boolean done,
-        StatusResponse error,
-        Map<String,String> metadata,
-        String name,
-        Map<String,String> response) {
-        this.done = Objects.requireNonNull(done, "expected parameter 'done' to be non-null");
-        this.error = Objects.requireNonNull(error, "expected parameter 'error' to be non-null");
-        this.metadata = Objects.requireNonNull(metadata, "expected parameter 'metadata' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.response = Objects.requireNonNull(response, "expected parameter 'response' to be non-null");
-    }
+    private OperationResponse() {}
 
-    private OperationResponse() {
-        this.done = null;
-        this.error = null;
-        this.metadata = Map.of();
-        this.name = null;
-        this.response = Map.of();
+    private OperationResponse(OperationResponse $) {
+        this.done = $.done;
+        this.error = $.error;
+        this.metadata = $.metadata;
+        this.name = $.name;
+        this.response = $.response;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(OperationResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Boolean done;
-        private StatusResponse error;
-        private Map<String,String> metadata;
-        private String name;
-        private Map<String,String> response;
+        private OperationResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new OperationResponse();
         }
 
         public Builder(OperationResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.done = defaults.done;
-    	      this.error = defaults.error;
-    	      this.metadata = defaults.metadata;
-    	      this.name = defaults.name;
-    	      this.response = defaults.response;
+            $ = new OperationResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder done(Boolean done) {
-            this.done = Objects.requireNonNull(done);
+            $.done = done;
             return this;
         }
+
         public Builder error(StatusResponse error) {
-            this.error = Objects.requireNonNull(error);
+            $.error = error;
             return this;
         }
+
         public Builder metadata(Map<String,String> metadata) {
-            this.metadata = Objects.requireNonNull(metadata);
+            $.metadata = metadata;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder response(Map<String,String> response) {
-            this.response = Objects.requireNonNull(response);
+            $.response = response;
             return this;
-        }        public OperationResponse build() {
-            return new OperationResponse(done, error, metadata, name, response);
+        }
+
+        public OperationResponse build() {
+            $.done = Objects.requireNonNull($.done, "expected parameter 'done' to be non-null");
+            $.error = Objects.requireNonNull($.error, "expected parameter 'error' to be non-null");
+            $.metadata = Objects.requireNonNull($.metadata, "expected parameter 'metadata' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.response = Objects.requireNonNull($.response, "expected parameter 'response' to be non-null");
+            return $;
         }
     }
+
 }

@@ -25,10 +25,10 @@ public final class WorkloadInquiryDetailsResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="inquiryValidation")
-      private final @Nullable InquiryValidationResponse inquiryValidation;
+    private @Nullable InquiryValidationResponse inquiryValidation;
 
     public Optional<InquiryValidationResponse> inquiryValidation() {
-        return this.inquiryValidation == null ? Optional.empty() : Optional.ofNullable(this.inquiryValidation);
+        return Optional.ofNullable(this.inquiryValidation);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class WorkloadInquiryDetailsResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="itemCount")
-      private final @Nullable Double itemCount;
+    private @Nullable Double itemCount;
 
     public Optional<Double> itemCount() {
-        return this.itemCount == null ? Optional.empty() : Optional.ofNullable(this.itemCount);
+        return Optional.ofNullable(this.itemCount);
     }
 
     /**
@@ -47,64 +47,56 @@ public final class WorkloadInquiryDetailsResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="type")
-      private final @Nullable String type;
+    private @Nullable String type;
 
     public Optional<String> type() {
-        return this.type == null ? Optional.empty() : Optional.ofNullable(this.type);
+        return Optional.ofNullable(this.type);
     }
 
-    public WorkloadInquiryDetailsResponse(
-        @Nullable InquiryValidationResponse inquiryValidation,
-        @Nullable Double itemCount,
-        @Nullable String type) {
-        this.inquiryValidation = inquiryValidation;
-        this.itemCount = itemCount;
-        this.type = type;
-    }
+    private WorkloadInquiryDetailsResponse() {}
 
-    private WorkloadInquiryDetailsResponse() {
-        this.inquiryValidation = null;
-        this.itemCount = null;
-        this.type = null;
+    private WorkloadInquiryDetailsResponse(WorkloadInquiryDetailsResponse $) {
+        this.inquiryValidation = $.inquiryValidation;
+        this.itemCount = $.itemCount;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WorkloadInquiryDetailsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable InquiryValidationResponse inquiryValidation;
-        private @Nullable Double itemCount;
-        private @Nullable String type;
+        private WorkloadInquiryDetailsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new WorkloadInquiryDetailsResponse();
         }
 
         public Builder(WorkloadInquiryDetailsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.inquiryValidation = defaults.inquiryValidation;
-    	      this.itemCount = defaults.itemCount;
-    	      this.type = defaults.type;
+            $ = new WorkloadInquiryDetailsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder inquiryValidation(@Nullable InquiryValidationResponse inquiryValidation) {
-            this.inquiryValidation = inquiryValidation;
+            $.inquiryValidation = inquiryValidation;
             return this;
         }
+
         public Builder itemCount(@Nullable Double itemCount) {
-            this.itemCount = itemCount;
+            $.itemCount = itemCount;
             return this;
         }
+
         public Builder type(@Nullable String type) {
-            this.type = type;
+            $.type = type;
             return this;
-        }        public WorkloadInquiryDetailsResponse build() {
-            return new WorkloadInquiryDetailsResponse(inquiryValidation, itemCount, type);
+        }
+
+        public WorkloadInquiryDetailsResponse build() {
+            return $;
         }
     }
+
 }

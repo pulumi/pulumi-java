@@ -21,45 +21,45 @@ public final class ApigatewayBackendConfigResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="googleServiceAccount", required=true)
-      private final String googleServiceAccount;
+    private String googleServiceAccount;
 
     public String googleServiceAccount() {
         return this.googleServiceAccount;
     }
 
-    public ApigatewayBackendConfigResponse(String googleServiceAccount) {
-        this.googleServiceAccount = Objects.requireNonNull(googleServiceAccount, "expected parameter 'googleServiceAccount' to be non-null");
-    }
+    private ApigatewayBackendConfigResponse() {}
 
-    private ApigatewayBackendConfigResponse() {
-        this.googleServiceAccount = null;
+    private ApigatewayBackendConfigResponse(ApigatewayBackendConfigResponse $) {
+        this.googleServiceAccount = $.googleServiceAccount;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ApigatewayBackendConfigResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String googleServiceAccount;
+        private ApigatewayBackendConfigResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ApigatewayBackendConfigResponse();
         }
 
         public Builder(ApigatewayBackendConfigResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.googleServiceAccount = defaults.googleServiceAccount;
+            $ = new ApigatewayBackendConfigResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder googleServiceAccount(String googleServiceAccount) {
-            this.googleServiceAccount = Objects.requireNonNull(googleServiceAccount);
+            $.googleServiceAccount = googleServiceAccount;
             return this;
-        }        public ApigatewayBackendConfigResponse build() {
-            return new ApigatewayBackendConfigResponse(googleServiceAccount);
+        }
+
+        public ApigatewayBackendConfigResponse build() {
+            $.googleServiceAccount = Objects.requireNonNull($.googleServiceAccount, "expected parameter 'googleServiceAccount' to be non-null");
+            return $;
         }
     }
+
 }

@@ -15,6 +15,7 @@ import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +28,10 @@ public final class ServiceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="hostingMode")
-      private final @Nullable Output<HostingMode> hostingMode;
+    private @Nullable Output<HostingMode> hostingMode;
 
-    public Output<HostingMode> hostingMode() {
-        return this.hostingMode == null ? Codegen.empty() : this.hostingMode;
+    public Optional<Output<HostingMode>> hostingMode() {
+        return Optional.ofNullable(this.hostingMode);
     }
 
     /**
@@ -38,10 +39,10 @@ public final class ServiceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="identity")
-      private final @Nullable Output<IdentityArgs> identity;
+    private @Nullable Output<IdentityArgs> identity;
 
-    public Output<IdentityArgs> identity() {
-        return this.identity == null ? Codegen.empty() : this.identity;
+    public Optional<Output<IdentityArgs>> identity() {
+        return Optional.ofNullable(this.identity);
     }
 
     /**
@@ -49,10 +50,10 @@ public final class ServiceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -60,10 +61,10 @@ public final class ServiceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="networkRuleSet")
-      private final @Nullable Output<NetworkRuleSetArgs> networkRuleSet;
+    private @Nullable Output<NetworkRuleSetArgs> networkRuleSet;
 
-    public Output<NetworkRuleSetArgs> networkRuleSet() {
-        return this.networkRuleSet == null ? Codegen.empty() : this.networkRuleSet;
+    public Optional<Output<NetworkRuleSetArgs>> networkRuleSet() {
+        return Optional.ofNullable(this.networkRuleSet);
     }
 
     /**
@@ -71,10 +72,10 @@ public final class ServiceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="partitionCount")
-      private final @Nullable Output<Integer> partitionCount;
+    private @Nullable Output<Integer> partitionCount;
 
-    public Output<Integer> partitionCount() {
-        return this.partitionCount == null ? Codegen.empty() : this.partitionCount;
+    public Optional<Output<Integer>> partitionCount() {
+        return Optional.ofNullable(this.partitionCount);
     }
 
     /**
@@ -82,10 +83,10 @@ public final class ServiceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="publicNetworkAccess")
-      private final @Nullable Output<PublicNetworkAccess> publicNetworkAccess;
+    private @Nullable Output<PublicNetworkAccess> publicNetworkAccess;
 
-    public Output<PublicNetworkAccess> publicNetworkAccess() {
-        return this.publicNetworkAccess == null ? Codegen.empty() : this.publicNetworkAccess;
+    public Optional<Output<PublicNetworkAccess>> publicNetworkAccess() {
+        return Optional.ofNullable(this.publicNetworkAccess);
     }
 
     /**
@@ -93,10 +94,10 @@ public final class ServiceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="replicaCount")
-      private final @Nullable Output<Integer> replicaCount;
+    private @Nullable Output<Integer> replicaCount;
 
-    public Output<Integer> replicaCount() {
-        return this.replicaCount == null ? Codegen.empty() : this.replicaCount;
+    public Optional<Output<Integer>> replicaCount() {
+        return Optional.ofNullable(this.replicaCount);
     }
 
     /**
@@ -104,7 +105,7 @@ public final class ServiceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -115,10 +116,10 @@ public final class ServiceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="searchServiceName")
-      private final @Nullable Output<String> searchServiceName;
+    private @Nullable Output<String> searchServiceName;
 
-    public Output<String> searchServiceName() {
-        return this.searchServiceName == null ? Codegen.empty() : this.searchServiceName;
+    public Optional<Output<String>> searchServiceName() {
+        return Optional.ofNullable(this.searchServiceName);
     }
 
     /**
@@ -126,10 +127,10 @@ public final class ServiceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="sku")
-      private final @Nullable Output<SkuArgs> sku;
+    private @Nullable Output<SkuArgs> sku;
 
-    public Output<SkuArgs> sku() {
-        return this.sku == null ? Codegen.empty() : this.sku;
+    public Optional<Output<SkuArgs>> sku() {
+        return Optional.ofNullable(this.sku);
     }
 
     /**
@@ -137,180 +138,153 @@ public final class ServiceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public ServiceArgs(
-        @Nullable Output<HostingMode> hostingMode,
-        @Nullable Output<IdentityArgs> identity,
-        @Nullable Output<String> location,
-        @Nullable Output<NetworkRuleSetArgs> networkRuleSet,
-        @Nullable Output<Integer> partitionCount,
-        @Nullable Output<PublicNetworkAccess> publicNetworkAccess,
-        @Nullable Output<Integer> replicaCount,
-        Output<String> resourceGroupName,
-        @Nullable Output<String> searchServiceName,
-        @Nullable Output<SkuArgs> sku,
-        @Nullable Output<Map<String,String>> tags) {
-        this.hostingMode = Codegen.objectProp("hostingMode", HostingMode.class).output().arg(hostingMode).def(HostingMode.Default_).getNullable();
-        this.identity = identity;
-        this.location = location;
-        this.networkRuleSet = networkRuleSet;
-        this.partitionCount = Codegen.integerProp("partitionCount").output().arg(partitionCount).def(1).getNullable();
-        this.publicNetworkAccess = Codegen.objectProp("publicNetworkAccess", PublicNetworkAccess.class).output().arg(publicNetworkAccess).def(PublicNetworkAccess.Enabled).getNullable();
-        this.replicaCount = Codegen.integerProp("replicaCount").output().arg(replicaCount).def(1).getNullable();
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.searchServiceName = searchServiceName;
-        this.sku = sku;
-        this.tags = tags;
-    }
+    private ServiceArgs() {}
 
-    private ServiceArgs() {
-        this.hostingMode = Codegen.empty();
-        this.identity = Codegen.empty();
-        this.location = Codegen.empty();
-        this.networkRuleSet = Codegen.empty();
-        this.partitionCount = Codegen.empty();
-        this.publicNetworkAccess = Codegen.empty();
-        this.replicaCount = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.searchServiceName = Codegen.empty();
-        this.sku = Codegen.empty();
-        this.tags = Codegen.empty();
+    private ServiceArgs(ServiceArgs $) {
+        this.hostingMode = $.hostingMode;
+        this.identity = $.identity;
+        this.location = $.location;
+        this.networkRuleSet = $.networkRuleSet;
+        this.partitionCount = $.partitionCount;
+        this.publicNetworkAccess = $.publicNetworkAccess;
+        this.replicaCount = $.replicaCount;
+        this.resourceGroupName = $.resourceGroupName;
+        this.searchServiceName = $.searchServiceName;
+        this.sku = $.sku;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ServiceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<HostingMode> hostingMode;
-        private @Nullable Output<IdentityArgs> identity;
-        private @Nullable Output<String> location;
-        private @Nullable Output<NetworkRuleSetArgs> networkRuleSet;
-        private @Nullable Output<Integer> partitionCount;
-        private @Nullable Output<PublicNetworkAccess> publicNetworkAccess;
-        private @Nullable Output<Integer> replicaCount;
-        private Output<String> resourceGroupName;
-        private @Nullable Output<String> searchServiceName;
-        private @Nullable Output<SkuArgs> sku;
-        private @Nullable Output<Map<String,String>> tags;
+        private ServiceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ServiceArgs();
         }
 
         public Builder(ServiceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.hostingMode = defaults.hostingMode;
-    	      this.identity = defaults.identity;
-    	      this.location = defaults.location;
-    	      this.networkRuleSet = defaults.networkRuleSet;
-    	      this.partitionCount = defaults.partitionCount;
-    	      this.publicNetworkAccess = defaults.publicNetworkAccess;
-    	      this.replicaCount = defaults.replicaCount;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.searchServiceName = defaults.searchServiceName;
-    	      this.sku = defaults.sku;
-    	      this.tags = defaults.tags;
+            $ = new ServiceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder hostingMode(@Nullable Output<HostingMode> hostingMode) {
-            this.hostingMode = hostingMode;
+            $.hostingMode = hostingMode;
             return this;
         }
-        public Builder hostingMode(@Nullable HostingMode hostingMode) {
-            this.hostingMode = Codegen.ofNullable(hostingMode);
-            return this;
+
+        public Builder hostingMode(HostingMode hostingMode) {
+            return hostingMode(Output.of(hostingMode));
         }
+
         public Builder identity(@Nullable Output<IdentityArgs> identity) {
-            this.identity = identity;
+            $.identity = identity;
             return this;
         }
-        public Builder identity(@Nullable IdentityArgs identity) {
-            this.identity = Codegen.ofNullable(identity);
-            return this;
+
+        public Builder identity(IdentityArgs identity) {
+            return identity(Output.of(identity));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder networkRuleSet(@Nullable Output<NetworkRuleSetArgs> networkRuleSet) {
-            this.networkRuleSet = networkRuleSet;
+            $.networkRuleSet = networkRuleSet;
             return this;
         }
-        public Builder networkRuleSet(@Nullable NetworkRuleSetArgs networkRuleSet) {
-            this.networkRuleSet = Codegen.ofNullable(networkRuleSet);
-            return this;
+
+        public Builder networkRuleSet(NetworkRuleSetArgs networkRuleSet) {
+            return networkRuleSet(Output.of(networkRuleSet));
         }
+
         public Builder partitionCount(@Nullable Output<Integer> partitionCount) {
-            this.partitionCount = partitionCount;
+            $.partitionCount = partitionCount;
             return this;
         }
-        public Builder partitionCount(@Nullable Integer partitionCount) {
-            this.partitionCount = Codegen.ofNullable(partitionCount);
-            return this;
+
+        public Builder partitionCount(Integer partitionCount) {
+            return partitionCount(Output.of(partitionCount));
         }
+
         public Builder publicNetworkAccess(@Nullable Output<PublicNetworkAccess> publicNetworkAccess) {
-            this.publicNetworkAccess = publicNetworkAccess;
+            $.publicNetworkAccess = publicNetworkAccess;
             return this;
         }
-        public Builder publicNetworkAccess(@Nullable PublicNetworkAccess publicNetworkAccess) {
-            this.publicNetworkAccess = Codegen.ofNullable(publicNetworkAccess);
-            return this;
+
+        public Builder publicNetworkAccess(PublicNetworkAccess publicNetworkAccess) {
+            return publicNetworkAccess(Output.of(publicNetworkAccess));
         }
+
         public Builder replicaCount(@Nullable Output<Integer> replicaCount) {
-            this.replicaCount = replicaCount;
+            $.replicaCount = replicaCount;
             return this;
         }
-        public Builder replicaCount(@Nullable Integer replicaCount) {
-            this.replicaCount = Codegen.ofNullable(replicaCount);
-            return this;
+
+        public Builder replicaCount(Integer replicaCount) {
+            return replicaCount(Output.of(replicaCount));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder searchServiceName(@Nullable Output<String> searchServiceName) {
-            this.searchServiceName = searchServiceName;
+            $.searchServiceName = searchServiceName;
             return this;
         }
-        public Builder searchServiceName(@Nullable String searchServiceName) {
-            this.searchServiceName = Codegen.ofNullable(searchServiceName);
-            return this;
+
+        public Builder searchServiceName(String searchServiceName) {
+            return searchServiceName(Output.of(searchServiceName));
         }
+
         public Builder sku(@Nullable Output<SkuArgs> sku) {
-            this.sku = sku;
+            $.sku = sku;
             return this;
         }
-        public Builder sku(@Nullable SkuArgs sku) {
-            this.sku = Codegen.ofNullable(sku);
-            return this;
+
+        public Builder sku(SkuArgs sku) {
+            return sku(Output.of(sku));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
-        }        public ServiceArgs build() {
-            return new ServiceArgs(hostingMode, identity, location, networkRuleSet, partitionCount, publicNetworkAccess, replicaCount, resourceGroupName, searchServiceName, sku, tags);
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
+        }
+
+        public ServiceArgs build() {
+            $.hostingMode = Codegen.objectProp("hostingMode", HostingMode.class).output().arg($.hostingMode).def(HostingMode.Default_).getNullable();
+            $.partitionCount = Codegen.integerProp("partitionCount").output().arg($.partitionCount).def(1).getNullable();
+            $.publicNetworkAccess = Codegen.objectProp("publicNetworkAccess", PublicNetworkAccess.class).output().arg($.publicNetworkAccess).def(PublicNetworkAccess.Enabled).getNullable();
+            $.replicaCount = Codegen.integerProp("replicaCount").output().arg($.replicaCount).def(1).getNullable();
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

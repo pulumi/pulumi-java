@@ -5,10 +5,10 @@ package com.pulumi.azurenative.network.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class ApplicationGatewayRewriteRuleConditionArgs extends com.pulumi
      * 
      */
     @Import(name="ignoreCase")
-      private final @Nullable Output<Boolean> ignoreCase;
+    private @Nullable Output<Boolean> ignoreCase;
 
-    public Output<Boolean> ignoreCase() {
-        return this.ignoreCase == null ? Codegen.empty() : this.ignoreCase;
+    public Optional<Output<Boolean>> ignoreCase() {
+        return Optional.ofNullable(this.ignoreCase);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class ApplicationGatewayRewriteRuleConditionArgs extends com.pulumi
      * 
      */
     @Import(name="negate")
-      private final @Nullable Output<Boolean> negate;
+    private @Nullable Output<Boolean> negate;
 
-    public Output<Boolean> negate() {
-        return this.negate == null ? Codegen.empty() : this.negate;
+    public Optional<Output<Boolean>> negate() {
+        return Optional.ofNullable(this.negate);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class ApplicationGatewayRewriteRuleConditionArgs extends com.pulumi
      * 
      */
     @Import(name="pattern")
-      private final @Nullable Output<String> pattern;
+    private @Nullable Output<String> pattern;
 
-    public Output<String> pattern() {
-        return this.pattern == null ? Codegen.empty() : this.pattern;
+    public Optional<Output<String>> pattern() {
+        return Optional.ofNullable(this.pattern);
     }
 
     /**
@@ -58,89 +58,78 @@ public final class ApplicationGatewayRewriteRuleConditionArgs extends com.pulumi
      * 
      */
     @Import(name="variable")
-      private final @Nullable Output<String> variable;
+    private @Nullable Output<String> variable;
 
-    public Output<String> variable() {
-        return this.variable == null ? Codegen.empty() : this.variable;
+    public Optional<Output<String>> variable() {
+        return Optional.ofNullable(this.variable);
     }
 
-    public ApplicationGatewayRewriteRuleConditionArgs(
-        @Nullable Output<Boolean> ignoreCase,
-        @Nullable Output<Boolean> negate,
-        @Nullable Output<String> pattern,
-        @Nullable Output<String> variable) {
-        this.ignoreCase = ignoreCase;
-        this.negate = negate;
-        this.pattern = pattern;
-        this.variable = variable;
-    }
+    private ApplicationGatewayRewriteRuleConditionArgs() {}
 
-    private ApplicationGatewayRewriteRuleConditionArgs() {
-        this.ignoreCase = Codegen.empty();
-        this.negate = Codegen.empty();
-        this.pattern = Codegen.empty();
-        this.variable = Codegen.empty();
+    private ApplicationGatewayRewriteRuleConditionArgs(ApplicationGatewayRewriteRuleConditionArgs $) {
+        this.ignoreCase = $.ignoreCase;
+        this.negate = $.negate;
+        this.pattern = $.pattern;
+        this.variable = $.variable;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ApplicationGatewayRewriteRuleConditionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> ignoreCase;
-        private @Nullable Output<Boolean> negate;
-        private @Nullable Output<String> pattern;
-        private @Nullable Output<String> variable;
+        private ApplicationGatewayRewriteRuleConditionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ApplicationGatewayRewriteRuleConditionArgs();
         }
 
         public Builder(ApplicationGatewayRewriteRuleConditionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.ignoreCase = defaults.ignoreCase;
-    	      this.negate = defaults.negate;
-    	      this.pattern = defaults.pattern;
-    	      this.variable = defaults.variable;
+            $ = new ApplicationGatewayRewriteRuleConditionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder ignoreCase(@Nullable Output<Boolean> ignoreCase) {
-            this.ignoreCase = ignoreCase;
+            $.ignoreCase = ignoreCase;
             return this;
         }
-        public Builder ignoreCase(@Nullable Boolean ignoreCase) {
-            this.ignoreCase = Codegen.ofNullable(ignoreCase);
-            return this;
+
+        public Builder ignoreCase(Boolean ignoreCase) {
+            return ignoreCase(Output.of(ignoreCase));
         }
+
         public Builder negate(@Nullable Output<Boolean> negate) {
-            this.negate = negate;
+            $.negate = negate;
             return this;
         }
-        public Builder negate(@Nullable Boolean negate) {
-            this.negate = Codegen.ofNullable(negate);
-            return this;
+
+        public Builder negate(Boolean negate) {
+            return negate(Output.of(negate));
         }
+
         public Builder pattern(@Nullable Output<String> pattern) {
-            this.pattern = pattern;
+            $.pattern = pattern;
             return this;
         }
-        public Builder pattern(@Nullable String pattern) {
-            this.pattern = Codegen.ofNullable(pattern);
-            return this;
+
+        public Builder pattern(String pattern) {
+            return pattern(Output.of(pattern));
         }
+
         public Builder variable(@Nullable Output<String> variable) {
-            this.variable = variable;
+            $.variable = variable;
             return this;
         }
-        public Builder variable(@Nullable String variable) {
-            this.variable = Codegen.ofNullable(variable);
-            return this;
-        }        public ApplicationGatewayRewriteRuleConditionArgs build() {
-            return new ApplicationGatewayRewriteRuleConditionArgs(ignoreCase, negate, pattern, variable);
+
+        public Builder variable(String variable) {
+            return variable(Output.of(variable));
+        }
+
+        public ApplicationGatewayRewriteRuleConditionArgs build() {
+            return $;
         }
     }
+
 }

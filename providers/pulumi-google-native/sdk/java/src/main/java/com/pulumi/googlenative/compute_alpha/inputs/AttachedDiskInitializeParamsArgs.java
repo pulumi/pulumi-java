@@ -5,7 +5,6 @@ package com.pulumi.googlenative.compute_alpha.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.compute_alpha.enums.AttachedDiskInitializeParamsArchitecture;
 import com.pulumi.googlenative.compute_alpha.enums.AttachedDiskInitializeParamsOnUpdateAction;
 import com.pulumi.googlenative.compute_alpha.inputs.CustomerEncryptionKeyArgs;
@@ -15,6 +14,7 @@ import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -31,10 +31,10 @@ public final class AttachedDiskInitializeParamsArgs extends com.pulumi.resources
      * 
      */
     @Import(name="architecture")
-      private final @Nullable Output<AttachedDiskInitializeParamsArchitecture> architecture;
+    private @Nullable Output<AttachedDiskInitializeParamsArchitecture> architecture;
 
-    public Output<AttachedDiskInitializeParamsArchitecture> architecture() {
-        return this.architecture == null ? Codegen.empty() : this.architecture;
+    public Optional<Output<AttachedDiskInitializeParamsArchitecture>> architecture() {
+        return Optional.ofNullable(this.architecture);
     }
 
     /**
@@ -42,10 +42,10 @@ public final class AttachedDiskInitializeParamsArgs extends com.pulumi.resources
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -53,10 +53,10 @@ public final class AttachedDiskInitializeParamsArgs extends com.pulumi.resources
      * 
      */
     @Import(name="diskName")
-      private final @Nullable Output<String> diskName;
+    private @Nullable Output<String> diskName;
 
-    public Output<String> diskName() {
-        return this.diskName == null ? Codegen.empty() : this.diskName;
+    public Optional<Output<String>> diskName() {
+        return Optional.ofNullable(this.diskName);
     }
 
     /**
@@ -64,10 +64,10 @@ public final class AttachedDiskInitializeParamsArgs extends com.pulumi.resources
      * 
      */
     @Import(name="diskSizeGb")
-      private final @Nullable Output<String> diskSizeGb;
+    private @Nullable Output<String> diskSizeGb;
 
-    public Output<String> diskSizeGb() {
-        return this.diskSizeGb == null ? Codegen.empty() : this.diskSizeGb;
+    public Optional<Output<String>> diskSizeGb() {
+        return Optional.ofNullable(this.diskSizeGb);
     }
 
     /**
@@ -75,10 +75,10 @@ public final class AttachedDiskInitializeParamsArgs extends com.pulumi.resources
      * 
      */
     @Import(name="diskType")
-      private final @Nullable Output<String> diskType;
+    private @Nullable Output<String> diskType;
 
-    public Output<String> diskType() {
-        return this.diskType == null ? Codegen.empty() : this.diskType;
+    public Optional<Output<String>> diskType() {
+        return Optional.ofNullable(this.diskType);
     }
 
     /**
@@ -86,10 +86,10 @@ public final class AttachedDiskInitializeParamsArgs extends com.pulumi.resources
      * 
      */
     @Import(name="guestOsFeatures")
-      private final @Nullable Output<List<GuestOsFeatureArgs>> guestOsFeatures;
+    private @Nullable Output<List<GuestOsFeatureArgs>> guestOsFeatures;
 
-    public Output<List<GuestOsFeatureArgs>> guestOsFeatures() {
-        return this.guestOsFeatures == null ? Codegen.empty() : this.guestOsFeatures;
+    public Optional<Output<List<GuestOsFeatureArgs>>> guestOsFeatures() {
+        return Optional.ofNullable(this.guestOsFeatures);
     }
 
     /**
@@ -97,10 +97,10 @@ public final class AttachedDiskInitializeParamsArgs extends com.pulumi.resources
      * 
      */
     @Import(name="labels")
-      private final @Nullable Output<Map<String,String>> labels;
+    private @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> labels() {
-        return this.labels == null ? Codegen.empty() : this.labels;
+    public Optional<Output<Map<String,String>>> labels() {
+        return Optional.ofNullable(this.labels);
     }
 
     /**
@@ -108,10 +108,10 @@ public final class AttachedDiskInitializeParamsArgs extends com.pulumi.resources
      * 
      */
     @Import(name="licenseCodes")
-      private final @Nullable Output<List<String>> licenseCodes;
+    private @Nullable Output<List<String>> licenseCodes;
 
-    public Output<List<String>> licenseCodes() {
-        return this.licenseCodes == null ? Codegen.empty() : this.licenseCodes;
+    public Optional<Output<List<String>>> licenseCodes() {
+        return Optional.ofNullable(this.licenseCodes);
     }
 
     /**
@@ -119,10 +119,10 @@ public final class AttachedDiskInitializeParamsArgs extends com.pulumi.resources
      * 
      */
     @Import(name="licenses")
-      private final @Nullable Output<List<String>> licenses;
+    private @Nullable Output<List<String>> licenses;
 
-    public Output<List<String>> licenses() {
-        return this.licenses == null ? Codegen.empty() : this.licenses;
+    public Optional<Output<List<String>>> licenses() {
+        return Optional.ofNullable(this.licenses);
     }
 
     /**
@@ -130,10 +130,10 @@ public final class AttachedDiskInitializeParamsArgs extends com.pulumi.resources
      * 
      */
     @Import(name="multiWriter")
-      private final @Nullable Output<Boolean> multiWriter;
+    private @Nullable Output<Boolean> multiWriter;
 
-    public Output<Boolean> multiWriter() {
-        return this.multiWriter == null ? Codegen.empty() : this.multiWriter;
+    public Optional<Output<Boolean>> multiWriter() {
+        return Optional.ofNullable(this.multiWriter);
     }
 
     /**
@@ -141,10 +141,10 @@ public final class AttachedDiskInitializeParamsArgs extends com.pulumi.resources
      * 
      */
     @Import(name="onUpdateAction")
-      private final @Nullable Output<AttachedDiskInitializeParamsOnUpdateAction> onUpdateAction;
+    private @Nullable Output<AttachedDiskInitializeParamsOnUpdateAction> onUpdateAction;
 
-    public Output<AttachedDiskInitializeParamsOnUpdateAction> onUpdateAction() {
-        return this.onUpdateAction == null ? Codegen.empty() : this.onUpdateAction;
+    public Optional<Output<AttachedDiskInitializeParamsOnUpdateAction>> onUpdateAction() {
+        return Optional.ofNullable(this.onUpdateAction);
     }
 
     /**
@@ -152,10 +152,10 @@ public final class AttachedDiskInitializeParamsArgs extends com.pulumi.resources
      * 
      */
     @Import(name="provisionedIops")
-      private final @Nullable Output<String> provisionedIops;
+    private @Nullable Output<String> provisionedIops;
 
-    public Output<String> provisionedIops() {
-        return this.provisionedIops == null ? Codegen.empty() : this.provisionedIops;
+    public Optional<Output<String>> provisionedIops() {
+        return Optional.ofNullable(this.provisionedIops);
     }
 
     /**
@@ -163,10 +163,10 @@ public final class AttachedDiskInitializeParamsArgs extends com.pulumi.resources
      * 
      */
     @Import(name="replicaZones")
-      private final @Nullable Output<List<String>> replicaZones;
+    private @Nullable Output<List<String>> replicaZones;
 
-    public Output<List<String>> replicaZones() {
-        return this.replicaZones == null ? Codegen.empty() : this.replicaZones;
+    public Optional<Output<List<String>>> replicaZones() {
+        return Optional.ofNullable(this.replicaZones);
     }
 
     /**
@@ -174,10 +174,10 @@ public final class AttachedDiskInitializeParamsArgs extends com.pulumi.resources
      * 
      */
     @Import(name="resourcePolicies")
-      private final @Nullable Output<List<String>> resourcePolicies;
+    private @Nullable Output<List<String>> resourcePolicies;
 
-    public Output<List<String>> resourcePolicies() {
-        return this.resourcePolicies == null ? Codegen.empty() : this.resourcePolicies;
+    public Optional<Output<List<String>>> resourcePolicies() {
+        return Optional.ofNullable(this.resourcePolicies);
     }
 
     /**
@@ -185,10 +185,10 @@ public final class AttachedDiskInitializeParamsArgs extends com.pulumi.resources
      * 
      */
     @Import(name="sourceImage")
-      private final @Nullable Output<String> sourceImage;
+    private @Nullable Output<String> sourceImage;
 
-    public Output<String> sourceImage() {
-        return this.sourceImage == null ? Codegen.empty() : this.sourceImage;
+    public Optional<Output<String>> sourceImage() {
+        return Optional.ofNullable(this.sourceImage);
     }
 
     /**
@@ -196,10 +196,10 @@ public final class AttachedDiskInitializeParamsArgs extends com.pulumi.resources
      * 
      */
     @Import(name="sourceImageEncryptionKey")
-      private final @Nullable Output<CustomerEncryptionKeyArgs> sourceImageEncryptionKey;
+    private @Nullable Output<CustomerEncryptionKeyArgs> sourceImageEncryptionKey;
 
-    public Output<CustomerEncryptionKeyArgs> sourceImageEncryptionKey() {
-        return this.sourceImageEncryptionKey == null ? Codegen.empty() : this.sourceImageEncryptionKey;
+    public Optional<Output<CustomerEncryptionKeyArgs>> sourceImageEncryptionKey() {
+        return Optional.ofNullable(this.sourceImageEncryptionKey);
     }
 
     /**
@@ -207,10 +207,10 @@ public final class AttachedDiskInitializeParamsArgs extends com.pulumi.resources
      * 
      */
     @Import(name="sourceInstantSnapshot")
-      private final @Nullable Output<String> sourceInstantSnapshot;
+    private @Nullable Output<String> sourceInstantSnapshot;
 
-    public Output<String> sourceInstantSnapshot() {
-        return this.sourceInstantSnapshot == null ? Codegen.empty() : this.sourceInstantSnapshot;
+    public Optional<Output<String>> sourceInstantSnapshot() {
+        return Optional.ofNullable(this.sourceInstantSnapshot);
     }
 
     /**
@@ -218,10 +218,10 @@ public final class AttachedDiskInitializeParamsArgs extends com.pulumi.resources
      * 
      */
     @Import(name="sourceSnapshot")
-      private final @Nullable Output<String> sourceSnapshot;
+    private @Nullable Output<String> sourceSnapshot;
 
-    public Output<String> sourceSnapshot() {
-        return this.sourceSnapshot == null ? Codegen.empty() : this.sourceSnapshot;
+    public Optional<Output<String>> sourceSnapshot() {
+        return Optional.ofNullable(this.sourceSnapshot);
     }
 
     /**
@@ -229,299 +229,248 @@ public final class AttachedDiskInitializeParamsArgs extends com.pulumi.resources
      * 
      */
     @Import(name="sourceSnapshotEncryptionKey")
-      private final @Nullable Output<CustomerEncryptionKeyArgs> sourceSnapshotEncryptionKey;
+    private @Nullable Output<CustomerEncryptionKeyArgs> sourceSnapshotEncryptionKey;
 
-    public Output<CustomerEncryptionKeyArgs> sourceSnapshotEncryptionKey() {
-        return this.sourceSnapshotEncryptionKey == null ? Codegen.empty() : this.sourceSnapshotEncryptionKey;
+    public Optional<Output<CustomerEncryptionKeyArgs>> sourceSnapshotEncryptionKey() {
+        return Optional.ofNullable(this.sourceSnapshotEncryptionKey);
     }
 
-    public AttachedDiskInitializeParamsArgs(
-        @Nullable Output<AttachedDiskInitializeParamsArchitecture> architecture,
-        @Nullable Output<String> description,
-        @Nullable Output<String> diskName,
-        @Nullable Output<String> diskSizeGb,
-        @Nullable Output<String> diskType,
-        @Nullable Output<List<GuestOsFeatureArgs>> guestOsFeatures,
-        @Nullable Output<Map<String,String>> labels,
-        @Nullable Output<List<String>> licenseCodes,
-        @Nullable Output<List<String>> licenses,
-        @Nullable Output<Boolean> multiWriter,
-        @Nullable Output<AttachedDiskInitializeParamsOnUpdateAction> onUpdateAction,
-        @Nullable Output<String> provisionedIops,
-        @Nullable Output<List<String>> replicaZones,
-        @Nullable Output<List<String>> resourcePolicies,
-        @Nullable Output<String> sourceImage,
-        @Nullable Output<CustomerEncryptionKeyArgs> sourceImageEncryptionKey,
-        @Nullable Output<String> sourceInstantSnapshot,
-        @Nullable Output<String> sourceSnapshot,
-        @Nullable Output<CustomerEncryptionKeyArgs> sourceSnapshotEncryptionKey) {
-        this.architecture = architecture;
-        this.description = description;
-        this.diskName = diskName;
-        this.diskSizeGb = diskSizeGb;
-        this.diskType = diskType;
-        this.guestOsFeatures = guestOsFeatures;
-        this.labels = labels;
-        this.licenseCodes = licenseCodes;
-        this.licenses = licenses;
-        this.multiWriter = multiWriter;
-        this.onUpdateAction = onUpdateAction;
-        this.provisionedIops = provisionedIops;
-        this.replicaZones = replicaZones;
-        this.resourcePolicies = resourcePolicies;
-        this.sourceImage = sourceImage;
-        this.sourceImageEncryptionKey = sourceImageEncryptionKey;
-        this.sourceInstantSnapshot = sourceInstantSnapshot;
-        this.sourceSnapshot = sourceSnapshot;
-        this.sourceSnapshotEncryptionKey = sourceSnapshotEncryptionKey;
-    }
+    private AttachedDiskInitializeParamsArgs() {}
 
-    private AttachedDiskInitializeParamsArgs() {
-        this.architecture = Codegen.empty();
-        this.description = Codegen.empty();
-        this.diskName = Codegen.empty();
-        this.diskSizeGb = Codegen.empty();
-        this.diskType = Codegen.empty();
-        this.guestOsFeatures = Codegen.empty();
-        this.labels = Codegen.empty();
-        this.licenseCodes = Codegen.empty();
-        this.licenses = Codegen.empty();
-        this.multiWriter = Codegen.empty();
-        this.onUpdateAction = Codegen.empty();
-        this.provisionedIops = Codegen.empty();
-        this.replicaZones = Codegen.empty();
-        this.resourcePolicies = Codegen.empty();
-        this.sourceImage = Codegen.empty();
-        this.sourceImageEncryptionKey = Codegen.empty();
-        this.sourceInstantSnapshot = Codegen.empty();
-        this.sourceSnapshot = Codegen.empty();
-        this.sourceSnapshotEncryptionKey = Codegen.empty();
+    private AttachedDiskInitializeParamsArgs(AttachedDiskInitializeParamsArgs $) {
+        this.architecture = $.architecture;
+        this.description = $.description;
+        this.diskName = $.diskName;
+        this.diskSizeGb = $.diskSizeGb;
+        this.diskType = $.diskType;
+        this.guestOsFeatures = $.guestOsFeatures;
+        this.labels = $.labels;
+        this.licenseCodes = $.licenseCodes;
+        this.licenses = $.licenses;
+        this.multiWriter = $.multiWriter;
+        this.onUpdateAction = $.onUpdateAction;
+        this.provisionedIops = $.provisionedIops;
+        this.replicaZones = $.replicaZones;
+        this.resourcePolicies = $.resourcePolicies;
+        this.sourceImage = $.sourceImage;
+        this.sourceImageEncryptionKey = $.sourceImageEncryptionKey;
+        this.sourceInstantSnapshot = $.sourceInstantSnapshot;
+        this.sourceSnapshot = $.sourceSnapshot;
+        this.sourceSnapshotEncryptionKey = $.sourceSnapshotEncryptionKey;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AttachedDiskInitializeParamsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<AttachedDiskInitializeParamsArchitecture> architecture;
-        private @Nullable Output<String> description;
-        private @Nullable Output<String> diskName;
-        private @Nullable Output<String> diskSizeGb;
-        private @Nullable Output<String> diskType;
-        private @Nullable Output<List<GuestOsFeatureArgs>> guestOsFeatures;
-        private @Nullable Output<Map<String,String>> labels;
-        private @Nullable Output<List<String>> licenseCodes;
-        private @Nullable Output<List<String>> licenses;
-        private @Nullable Output<Boolean> multiWriter;
-        private @Nullable Output<AttachedDiskInitializeParamsOnUpdateAction> onUpdateAction;
-        private @Nullable Output<String> provisionedIops;
-        private @Nullable Output<List<String>> replicaZones;
-        private @Nullable Output<List<String>> resourcePolicies;
-        private @Nullable Output<String> sourceImage;
-        private @Nullable Output<CustomerEncryptionKeyArgs> sourceImageEncryptionKey;
-        private @Nullable Output<String> sourceInstantSnapshot;
-        private @Nullable Output<String> sourceSnapshot;
-        private @Nullable Output<CustomerEncryptionKeyArgs> sourceSnapshotEncryptionKey;
+        private AttachedDiskInitializeParamsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AttachedDiskInitializeParamsArgs();
         }
 
         public Builder(AttachedDiskInitializeParamsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.architecture = defaults.architecture;
-    	      this.description = defaults.description;
-    	      this.diskName = defaults.diskName;
-    	      this.diskSizeGb = defaults.diskSizeGb;
-    	      this.diskType = defaults.diskType;
-    	      this.guestOsFeatures = defaults.guestOsFeatures;
-    	      this.labels = defaults.labels;
-    	      this.licenseCodes = defaults.licenseCodes;
-    	      this.licenses = defaults.licenses;
-    	      this.multiWriter = defaults.multiWriter;
-    	      this.onUpdateAction = defaults.onUpdateAction;
-    	      this.provisionedIops = defaults.provisionedIops;
-    	      this.replicaZones = defaults.replicaZones;
-    	      this.resourcePolicies = defaults.resourcePolicies;
-    	      this.sourceImage = defaults.sourceImage;
-    	      this.sourceImageEncryptionKey = defaults.sourceImageEncryptionKey;
-    	      this.sourceInstantSnapshot = defaults.sourceInstantSnapshot;
-    	      this.sourceSnapshot = defaults.sourceSnapshot;
-    	      this.sourceSnapshotEncryptionKey = defaults.sourceSnapshotEncryptionKey;
+            $ = new AttachedDiskInitializeParamsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder architecture(@Nullable Output<AttachedDiskInitializeParamsArchitecture> architecture) {
-            this.architecture = architecture;
+            $.architecture = architecture;
             return this;
         }
-        public Builder architecture(@Nullable AttachedDiskInitializeParamsArchitecture architecture) {
-            this.architecture = Codegen.ofNullable(architecture);
-            return this;
+
+        public Builder architecture(AttachedDiskInitializeParamsArchitecture architecture) {
+            return architecture(Output.of(architecture));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder diskName(@Nullable Output<String> diskName) {
-            this.diskName = diskName;
+            $.diskName = diskName;
             return this;
         }
-        public Builder diskName(@Nullable String diskName) {
-            this.diskName = Codegen.ofNullable(diskName);
-            return this;
+
+        public Builder diskName(String diskName) {
+            return diskName(Output.of(diskName));
         }
+
         public Builder diskSizeGb(@Nullable Output<String> diskSizeGb) {
-            this.diskSizeGb = diskSizeGb;
+            $.diskSizeGb = diskSizeGb;
             return this;
         }
-        public Builder diskSizeGb(@Nullable String diskSizeGb) {
-            this.diskSizeGb = Codegen.ofNullable(diskSizeGb);
-            return this;
+
+        public Builder diskSizeGb(String diskSizeGb) {
+            return diskSizeGb(Output.of(diskSizeGb));
         }
+
         public Builder diskType(@Nullable Output<String> diskType) {
-            this.diskType = diskType;
+            $.diskType = diskType;
             return this;
         }
-        public Builder diskType(@Nullable String diskType) {
-            this.diskType = Codegen.ofNullable(diskType);
-            return this;
+
+        public Builder diskType(String diskType) {
+            return diskType(Output.of(diskType));
         }
+
         public Builder guestOsFeatures(@Nullable Output<List<GuestOsFeatureArgs>> guestOsFeatures) {
-            this.guestOsFeatures = guestOsFeatures;
+            $.guestOsFeatures = guestOsFeatures;
             return this;
         }
-        public Builder guestOsFeatures(@Nullable List<GuestOsFeatureArgs> guestOsFeatures) {
-            this.guestOsFeatures = Codegen.ofNullable(guestOsFeatures);
-            return this;
+
+        public Builder guestOsFeatures(List<GuestOsFeatureArgs> guestOsFeatures) {
+            return guestOsFeatures(Output.of(guestOsFeatures));
         }
+
         public Builder guestOsFeatures(GuestOsFeatureArgs... guestOsFeatures) {
             return guestOsFeatures(List.of(guestOsFeatures));
         }
+
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
-            this.labels = labels;
+            $.labels = labels;
             return this;
         }
-        public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Codegen.ofNullable(labels);
-            return this;
+
+        public Builder labels(Map<String,String> labels) {
+            return labels(Output.of(labels));
         }
+
         public Builder licenseCodes(@Nullable Output<List<String>> licenseCodes) {
-            this.licenseCodes = licenseCodes;
+            $.licenseCodes = licenseCodes;
             return this;
         }
-        public Builder licenseCodes(@Nullable List<String> licenseCodes) {
-            this.licenseCodes = Codegen.ofNullable(licenseCodes);
-            return this;
+
+        public Builder licenseCodes(List<String> licenseCodes) {
+            return licenseCodes(Output.of(licenseCodes));
         }
+
         public Builder licenseCodes(String... licenseCodes) {
             return licenseCodes(List.of(licenseCodes));
         }
+
         public Builder licenses(@Nullable Output<List<String>> licenses) {
-            this.licenses = licenses;
+            $.licenses = licenses;
             return this;
         }
-        public Builder licenses(@Nullable List<String> licenses) {
-            this.licenses = Codegen.ofNullable(licenses);
-            return this;
+
+        public Builder licenses(List<String> licenses) {
+            return licenses(Output.of(licenses));
         }
+
         public Builder licenses(String... licenses) {
             return licenses(List.of(licenses));
         }
+
         public Builder multiWriter(@Nullable Output<Boolean> multiWriter) {
-            this.multiWriter = multiWriter;
+            $.multiWriter = multiWriter;
             return this;
         }
-        public Builder multiWriter(@Nullable Boolean multiWriter) {
-            this.multiWriter = Codegen.ofNullable(multiWriter);
-            return this;
+
+        public Builder multiWriter(Boolean multiWriter) {
+            return multiWriter(Output.of(multiWriter));
         }
+
         public Builder onUpdateAction(@Nullable Output<AttachedDiskInitializeParamsOnUpdateAction> onUpdateAction) {
-            this.onUpdateAction = onUpdateAction;
+            $.onUpdateAction = onUpdateAction;
             return this;
         }
-        public Builder onUpdateAction(@Nullable AttachedDiskInitializeParamsOnUpdateAction onUpdateAction) {
-            this.onUpdateAction = Codegen.ofNullable(onUpdateAction);
-            return this;
+
+        public Builder onUpdateAction(AttachedDiskInitializeParamsOnUpdateAction onUpdateAction) {
+            return onUpdateAction(Output.of(onUpdateAction));
         }
+
         public Builder provisionedIops(@Nullable Output<String> provisionedIops) {
-            this.provisionedIops = provisionedIops;
+            $.provisionedIops = provisionedIops;
             return this;
         }
-        public Builder provisionedIops(@Nullable String provisionedIops) {
-            this.provisionedIops = Codegen.ofNullable(provisionedIops);
-            return this;
+
+        public Builder provisionedIops(String provisionedIops) {
+            return provisionedIops(Output.of(provisionedIops));
         }
+
         public Builder replicaZones(@Nullable Output<List<String>> replicaZones) {
-            this.replicaZones = replicaZones;
+            $.replicaZones = replicaZones;
             return this;
         }
-        public Builder replicaZones(@Nullable List<String> replicaZones) {
-            this.replicaZones = Codegen.ofNullable(replicaZones);
-            return this;
+
+        public Builder replicaZones(List<String> replicaZones) {
+            return replicaZones(Output.of(replicaZones));
         }
+
         public Builder replicaZones(String... replicaZones) {
             return replicaZones(List.of(replicaZones));
         }
+
         public Builder resourcePolicies(@Nullable Output<List<String>> resourcePolicies) {
-            this.resourcePolicies = resourcePolicies;
+            $.resourcePolicies = resourcePolicies;
             return this;
         }
-        public Builder resourcePolicies(@Nullable List<String> resourcePolicies) {
-            this.resourcePolicies = Codegen.ofNullable(resourcePolicies);
-            return this;
+
+        public Builder resourcePolicies(List<String> resourcePolicies) {
+            return resourcePolicies(Output.of(resourcePolicies));
         }
+
         public Builder resourcePolicies(String... resourcePolicies) {
             return resourcePolicies(List.of(resourcePolicies));
         }
+
         public Builder sourceImage(@Nullable Output<String> sourceImage) {
-            this.sourceImage = sourceImage;
+            $.sourceImage = sourceImage;
             return this;
         }
-        public Builder sourceImage(@Nullable String sourceImage) {
-            this.sourceImage = Codegen.ofNullable(sourceImage);
-            return this;
+
+        public Builder sourceImage(String sourceImage) {
+            return sourceImage(Output.of(sourceImage));
         }
+
         public Builder sourceImageEncryptionKey(@Nullable Output<CustomerEncryptionKeyArgs> sourceImageEncryptionKey) {
-            this.sourceImageEncryptionKey = sourceImageEncryptionKey;
+            $.sourceImageEncryptionKey = sourceImageEncryptionKey;
             return this;
         }
-        public Builder sourceImageEncryptionKey(@Nullable CustomerEncryptionKeyArgs sourceImageEncryptionKey) {
-            this.sourceImageEncryptionKey = Codegen.ofNullable(sourceImageEncryptionKey);
-            return this;
+
+        public Builder sourceImageEncryptionKey(CustomerEncryptionKeyArgs sourceImageEncryptionKey) {
+            return sourceImageEncryptionKey(Output.of(sourceImageEncryptionKey));
         }
+
         public Builder sourceInstantSnapshot(@Nullable Output<String> sourceInstantSnapshot) {
-            this.sourceInstantSnapshot = sourceInstantSnapshot;
+            $.sourceInstantSnapshot = sourceInstantSnapshot;
             return this;
         }
-        public Builder sourceInstantSnapshot(@Nullable String sourceInstantSnapshot) {
-            this.sourceInstantSnapshot = Codegen.ofNullable(sourceInstantSnapshot);
-            return this;
+
+        public Builder sourceInstantSnapshot(String sourceInstantSnapshot) {
+            return sourceInstantSnapshot(Output.of(sourceInstantSnapshot));
         }
+
         public Builder sourceSnapshot(@Nullable Output<String> sourceSnapshot) {
-            this.sourceSnapshot = sourceSnapshot;
+            $.sourceSnapshot = sourceSnapshot;
             return this;
         }
-        public Builder sourceSnapshot(@Nullable String sourceSnapshot) {
-            this.sourceSnapshot = Codegen.ofNullable(sourceSnapshot);
-            return this;
+
+        public Builder sourceSnapshot(String sourceSnapshot) {
+            return sourceSnapshot(Output.of(sourceSnapshot));
         }
+
         public Builder sourceSnapshotEncryptionKey(@Nullable Output<CustomerEncryptionKeyArgs> sourceSnapshotEncryptionKey) {
-            this.sourceSnapshotEncryptionKey = sourceSnapshotEncryptionKey;
+            $.sourceSnapshotEncryptionKey = sourceSnapshotEncryptionKey;
             return this;
         }
-        public Builder sourceSnapshotEncryptionKey(@Nullable CustomerEncryptionKeyArgs sourceSnapshotEncryptionKey) {
-            this.sourceSnapshotEncryptionKey = Codegen.ofNullable(sourceSnapshotEncryptionKey);
-            return this;
-        }        public AttachedDiskInitializeParamsArgs build() {
-            return new AttachedDiskInitializeParamsArgs(architecture, description, diskName, diskSizeGb, diskType, guestOsFeatures, labels, licenseCodes, licenses, multiWriter, onUpdateAction, provisionedIops, replicaZones, resourcePolicies, sourceImage, sourceImageEncryptionKey, sourceInstantSnapshot, sourceSnapshot, sourceSnapshotEncryptionKey);
+
+        public Builder sourceSnapshotEncryptionKey(CustomerEncryptionKeyArgs sourceSnapshotEncryptionKey) {
+            return sourceSnapshotEncryptionKey(Output.of(sourceSnapshotEncryptionKey));
+        }
+
+        public AttachedDiskInitializeParamsArgs build() {
+            return $;
         }
     }
+
 }

@@ -5,10 +5,10 @@ package com.pulumi.gcp.bigquery.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class TableExternalDataConfigurationGoogleSheetsOptionsArgs extends
      * 
      */
     @Import(name="range")
-      private final @Nullable Output<String> range;
+    private @Nullable Output<String> range;
 
-    public Output<String> range() {
-        return this.range == null ? Codegen.empty() : this.range;
+    public Optional<Output<String>> range() {
+        return Optional.ofNullable(this.range);
     }
 
     /**
@@ -35,63 +35,58 @@ public final class TableExternalDataConfigurationGoogleSheetsOptionsArgs extends
      * 
      */
     @Import(name="skipLeadingRows")
-      private final @Nullable Output<Integer> skipLeadingRows;
+    private @Nullable Output<Integer> skipLeadingRows;
 
-    public Output<Integer> skipLeadingRows() {
-        return this.skipLeadingRows == null ? Codegen.empty() : this.skipLeadingRows;
+    public Optional<Output<Integer>> skipLeadingRows() {
+        return Optional.ofNullable(this.skipLeadingRows);
     }
 
-    public TableExternalDataConfigurationGoogleSheetsOptionsArgs(
-        @Nullable Output<String> range,
-        @Nullable Output<Integer> skipLeadingRows) {
-        this.range = range;
-        this.skipLeadingRows = skipLeadingRows;
-    }
+    private TableExternalDataConfigurationGoogleSheetsOptionsArgs() {}
 
-    private TableExternalDataConfigurationGoogleSheetsOptionsArgs() {
-        this.range = Codegen.empty();
-        this.skipLeadingRows = Codegen.empty();
+    private TableExternalDataConfigurationGoogleSheetsOptionsArgs(TableExternalDataConfigurationGoogleSheetsOptionsArgs $) {
+        this.range = $.range;
+        this.skipLeadingRows = $.skipLeadingRows;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TableExternalDataConfigurationGoogleSheetsOptionsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> range;
-        private @Nullable Output<Integer> skipLeadingRows;
+        private TableExternalDataConfigurationGoogleSheetsOptionsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TableExternalDataConfigurationGoogleSheetsOptionsArgs();
         }
 
         public Builder(TableExternalDataConfigurationGoogleSheetsOptionsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.range = defaults.range;
-    	      this.skipLeadingRows = defaults.skipLeadingRows;
+            $ = new TableExternalDataConfigurationGoogleSheetsOptionsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder range(@Nullable Output<String> range) {
-            this.range = range;
+            $.range = range;
             return this;
         }
-        public Builder range(@Nullable String range) {
-            this.range = Codegen.ofNullable(range);
-            return this;
+
+        public Builder range(String range) {
+            return range(Output.of(range));
         }
+
         public Builder skipLeadingRows(@Nullable Output<Integer> skipLeadingRows) {
-            this.skipLeadingRows = skipLeadingRows;
+            $.skipLeadingRows = skipLeadingRows;
             return this;
         }
-        public Builder skipLeadingRows(@Nullable Integer skipLeadingRows) {
-            this.skipLeadingRows = Codegen.ofNullable(skipLeadingRows);
-            return this;
-        }        public TableExternalDataConfigurationGoogleSheetsOptionsArgs build() {
-            return new TableExternalDataConfigurationGoogleSheetsOptionsArgs(range, skipLeadingRows);
+
+        public Builder skipLeadingRows(Integer skipLeadingRows) {
+            return skipLeadingRows(Output.of(skipLeadingRows));
+        }
+
+        public TableExternalDataConfigurationGoogleSheetsOptionsArgs build() {
+            return $;
         }
     }
+
 }

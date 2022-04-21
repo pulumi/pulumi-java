@@ -18,7 +18,7 @@ public final class SecurityPolicyRuleMatcherConfigDestinationPortResponse extend
      * 
      */
     @Import(name="ipProtocol", required=true)
-      private final String ipProtocol;
+    private String ipProtocol;
 
     public String ipProtocol() {
         return this.ipProtocol;
@@ -29,58 +29,56 @@ public final class SecurityPolicyRuleMatcherConfigDestinationPortResponse extend
      * 
      */
     @Import(name="ports", required=true)
-      private final List<String> ports;
+    private List<String> ports;
 
     public List<String> ports() {
         return this.ports;
     }
 
-    public SecurityPolicyRuleMatcherConfigDestinationPortResponse(
-        String ipProtocol,
-        List<String> ports) {
-        this.ipProtocol = Objects.requireNonNull(ipProtocol, "expected parameter 'ipProtocol' to be non-null");
-        this.ports = Objects.requireNonNull(ports, "expected parameter 'ports' to be non-null");
-    }
+    private SecurityPolicyRuleMatcherConfigDestinationPortResponse() {}
 
-    private SecurityPolicyRuleMatcherConfigDestinationPortResponse() {
-        this.ipProtocol = null;
-        this.ports = List.of();
+    private SecurityPolicyRuleMatcherConfigDestinationPortResponse(SecurityPolicyRuleMatcherConfigDestinationPortResponse $) {
+        this.ipProtocol = $.ipProtocol;
+        this.ports = $.ports;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SecurityPolicyRuleMatcherConfigDestinationPortResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String ipProtocol;
-        private List<String> ports;
+        private SecurityPolicyRuleMatcherConfigDestinationPortResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new SecurityPolicyRuleMatcherConfigDestinationPortResponse();
         }
 
         public Builder(SecurityPolicyRuleMatcherConfigDestinationPortResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.ipProtocol = defaults.ipProtocol;
-    	      this.ports = defaults.ports;
+            $ = new SecurityPolicyRuleMatcherConfigDestinationPortResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder ipProtocol(String ipProtocol) {
-            this.ipProtocol = Objects.requireNonNull(ipProtocol);
+            $.ipProtocol = ipProtocol;
             return this;
         }
+
         public Builder ports(List<String> ports) {
-            this.ports = Objects.requireNonNull(ports);
+            $.ports = ports;
             return this;
         }
+
         public Builder ports(String... ports) {
             return ports(List.of(ports));
-        }        public SecurityPolicyRuleMatcherConfigDestinationPortResponse build() {
-            return new SecurityPolicyRuleMatcherConfigDestinationPortResponse(ipProtocol, ports);
+        }
+
+        public SecurityPolicyRuleMatcherConfigDestinationPortResponse build() {
+            $.ipProtocol = Objects.requireNonNull($.ipProtocol, "expected parameter 'ipProtocol' to be non-null");
+            $.ports = Objects.requireNonNull($.ports, "expected parameter 'ports' to be non-null");
+            return $;
         }
     }
+
 }

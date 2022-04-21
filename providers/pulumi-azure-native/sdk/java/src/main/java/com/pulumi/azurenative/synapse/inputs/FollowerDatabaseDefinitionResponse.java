@@ -21,7 +21,7 @@ public final class FollowerDatabaseDefinitionResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="attachedDatabaseConfigurationName", required=true)
-      private final String attachedDatabaseConfigurationName;
+    private String attachedDatabaseConfigurationName;
 
     public String attachedDatabaseConfigurationName() {
         return this.attachedDatabaseConfigurationName;
@@ -32,7 +32,7 @@ public final class FollowerDatabaseDefinitionResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="databaseName", required=true)
-      private final String databaseName;
+    private String databaseName;
 
     public String databaseName() {
         return this.databaseName;
@@ -43,64 +43,59 @@ public final class FollowerDatabaseDefinitionResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="kustoPoolResourceId", required=true)
-      private final String kustoPoolResourceId;
+    private String kustoPoolResourceId;
 
     public String kustoPoolResourceId() {
         return this.kustoPoolResourceId;
     }
 
-    public FollowerDatabaseDefinitionResponse(
-        String attachedDatabaseConfigurationName,
-        String databaseName,
-        String kustoPoolResourceId) {
-        this.attachedDatabaseConfigurationName = Objects.requireNonNull(attachedDatabaseConfigurationName, "expected parameter 'attachedDatabaseConfigurationName' to be non-null");
-        this.databaseName = Objects.requireNonNull(databaseName, "expected parameter 'databaseName' to be non-null");
-        this.kustoPoolResourceId = Objects.requireNonNull(kustoPoolResourceId, "expected parameter 'kustoPoolResourceId' to be non-null");
-    }
+    private FollowerDatabaseDefinitionResponse() {}
 
-    private FollowerDatabaseDefinitionResponse() {
-        this.attachedDatabaseConfigurationName = null;
-        this.databaseName = null;
-        this.kustoPoolResourceId = null;
+    private FollowerDatabaseDefinitionResponse(FollowerDatabaseDefinitionResponse $) {
+        this.attachedDatabaseConfigurationName = $.attachedDatabaseConfigurationName;
+        this.databaseName = $.databaseName;
+        this.kustoPoolResourceId = $.kustoPoolResourceId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FollowerDatabaseDefinitionResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String attachedDatabaseConfigurationName;
-        private String databaseName;
-        private String kustoPoolResourceId;
+        private FollowerDatabaseDefinitionResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new FollowerDatabaseDefinitionResponse();
         }
 
         public Builder(FollowerDatabaseDefinitionResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.attachedDatabaseConfigurationName = defaults.attachedDatabaseConfigurationName;
-    	      this.databaseName = defaults.databaseName;
-    	      this.kustoPoolResourceId = defaults.kustoPoolResourceId;
+            $ = new FollowerDatabaseDefinitionResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder attachedDatabaseConfigurationName(String attachedDatabaseConfigurationName) {
-            this.attachedDatabaseConfigurationName = Objects.requireNonNull(attachedDatabaseConfigurationName);
+            $.attachedDatabaseConfigurationName = attachedDatabaseConfigurationName;
             return this;
         }
+
         public Builder databaseName(String databaseName) {
-            this.databaseName = Objects.requireNonNull(databaseName);
+            $.databaseName = databaseName;
             return this;
         }
+
         public Builder kustoPoolResourceId(String kustoPoolResourceId) {
-            this.kustoPoolResourceId = Objects.requireNonNull(kustoPoolResourceId);
+            $.kustoPoolResourceId = kustoPoolResourceId;
             return this;
-        }        public FollowerDatabaseDefinitionResponse build() {
-            return new FollowerDatabaseDefinitionResponse(attachedDatabaseConfigurationName, databaseName, kustoPoolResourceId);
+        }
+
+        public FollowerDatabaseDefinitionResponse build() {
+            $.attachedDatabaseConfigurationName = Objects.requireNonNull($.attachedDatabaseConfigurationName, "expected parameter 'attachedDatabaseConfigurationName' to be non-null");
+            $.databaseName = Objects.requireNonNull($.databaseName, "expected parameter 'databaseName' to be non-null");
+            $.kustoPoolResourceId = Objects.requireNonNull($.kustoPoolResourceId, "expected parameter 'kustoPoolResourceId' to be non-null");
+            return $;
         }
     }
+
 }

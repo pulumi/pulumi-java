@@ -5,10 +5,10 @@ package com.pulumi.awsnative.efs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -17,113 +17,106 @@ public final class MountTargetArgs extends com.pulumi.resources.ResourceArgs {
     public static final MountTargetArgs Empty = new MountTargetArgs();
 
     @Import(name="fileSystemId", required=true)
-      private final Output<String> fileSystemId;
+    private Output<String> fileSystemId;
 
     public Output<String> fileSystemId() {
         return this.fileSystemId;
     }
 
     @Import(name="ipAddress")
-      private final @Nullable Output<String> ipAddress;
+    private @Nullable Output<String> ipAddress;
 
-    public Output<String> ipAddress() {
-        return this.ipAddress == null ? Codegen.empty() : this.ipAddress;
+    public Optional<Output<String>> ipAddress() {
+        return Optional.ofNullable(this.ipAddress);
     }
 
     @Import(name="securityGroups", required=true)
-      private final Output<List<String>> securityGroups;
+    private Output<List<String>> securityGroups;
 
     public Output<List<String>> securityGroups() {
         return this.securityGroups;
     }
 
     @Import(name="subnetId", required=true)
-      private final Output<String> subnetId;
+    private Output<String> subnetId;
 
     public Output<String> subnetId() {
         return this.subnetId;
     }
 
-    public MountTargetArgs(
-        Output<String> fileSystemId,
-        @Nullable Output<String> ipAddress,
-        Output<List<String>> securityGroups,
-        Output<String> subnetId) {
-        this.fileSystemId = Objects.requireNonNull(fileSystemId, "expected parameter 'fileSystemId' to be non-null");
-        this.ipAddress = ipAddress;
-        this.securityGroups = Objects.requireNonNull(securityGroups, "expected parameter 'securityGroups' to be non-null");
-        this.subnetId = Objects.requireNonNull(subnetId, "expected parameter 'subnetId' to be non-null");
-    }
+    private MountTargetArgs() {}
 
-    private MountTargetArgs() {
-        this.fileSystemId = Codegen.empty();
-        this.ipAddress = Codegen.empty();
-        this.securityGroups = Codegen.empty();
-        this.subnetId = Codegen.empty();
+    private MountTargetArgs(MountTargetArgs $) {
+        this.fileSystemId = $.fileSystemId;
+        this.ipAddress = $.ipAddress;
+        this.securityGroups = $.securityGroups;
+        this.subnetId = $.subnetId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MountTargetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> fileSystemId;
-        private @Nullable Output<String> ipAddress;
-        private Output<List<String>> securityGroups;
-        private Output<String> subnetId;
+        private MountTargetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new MountTargetArgs();
         }
 
         public Builder(MountTargetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.fileSystemId = defaults.fileSystemId;
-    	      this.ipAddress = defaults.ipAddress;
-    	      this.securityGroups = defaults.securityGroups;
-    	      this.subnetId = defaults.subnetId;
+            $ = new MountTargetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder fileSystemId(Output<String> fileSystemId) {
-            this.fileSystemId = Objects.requireNonNull(fileSystemId);
+            $.fileSystemId = fileSystemId;
             return this;
         }
+
         public Builder fileSystemId(String fileSystemId) {
-            this.fileSystemId = Output.of(Objects.requireNonNull(fileSystemId));
-            return this;
+            return fileSystemId(Output.of(fileSystemId));
         }
+
         public Builder ipAddress(@Nullable Output<String> ipAddress) {
-            this.ipAddress = ipAddress;
+            $.ipAddress = ipAddress;
             return this;
         }
-        public Builder ipAddress(@Nullable String ipAddress) {
-            this.ipAddress = Codegen.ofNullable(ipAddress);
-            return this;
+
+        public Builder ipAddress(String ipAddress) {
+            return ipAddress(Output.of(ipAddress));
         }
+
         public Builder securityGroups(Output<List<String>> securityGroups) {
-            this.securityGroups = Objects.requireNonNull(securityGroups);
+            $.securityGroups = securityGroups;
             return this;
         }
+
         public Builder securityGroups(List<String> securityGroups) {
-            this.securityGroups = Output.of(Objects.requireNonNull(securityGroups));
-            return this;
+            return securityGroups(Output.of(securityGroups));
         }
+
         public Builder securityGroups(String... securityGroups) {
             return securityGroups(List.of(securityGroups));
         }
+
         public Builder subnetId(Output<String> subnetId) {
-            this.subnetId = Objects.requireNonNull(subnetId);
+            $.subnetId = subnetId;
             return this;
         }
+
         public Builder subnetId(String subnetId) {
-            this.subnetId = Output.of(Objects.requireNonNull(subnetId));
-            return this;
-        }        public MountTargetArgs build() {
-            return new MountTargetArgs(fileSystemId, ipAddress, securityGroups, subnetId);
+            return subnetId(Output.of(subnetId));
+        }
+
+        public MountTargetArgs build() {
+            $.fileSystemId = Objects.requireNonNull($.fileSystemId, "expected parameter 'fileSystemId' to be non-null");
+            $.securityGroups = Objects.requireNonNull($.securityGroups, "expected parameter 'securityGroups' to be non-null");
+            $.subnetId = Objects.requireNonNull($.subnetId, "expected parameter 'subnetId' to be non-null");
+            return $;
         }
     }
+
 }

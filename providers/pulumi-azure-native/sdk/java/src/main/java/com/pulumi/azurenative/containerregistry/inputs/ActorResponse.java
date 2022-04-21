@@ -23,45 +23,44 @@ public final class ActorResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable String name;
+    private @Nullable String name;
 
     public Optional<String> name() {
-        return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
+        return Optional.ofNullable(this.name);
     }
 
-    public ActorResponse(@Nullable String name) {
-        this.name = name;
-    }
+    private ActorResponse() {}
 
-    private ActorResponse() {
-        this.name = null;
+    private ActorResponse(ActorResponse $) {
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ActorResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String name;
+        private ActorResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ActorResponse();
         }
 
         public Builder(ActorResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
+            $ = new ActorResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder name(@Nullable String name) {
-            this.name = name;
+            $.name = name;
             return this;
-        }        public ActorResponse build() {
-            return new ActorResponse(name);
+        }
+
+        public ActorResponse build() {
+            return $;
         }
     }
+
 }

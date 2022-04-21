@@ -5,10 +5,10 @@ package com.pulumi.gcp.compute.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.compute.inputs.URLMapDefaultRouteActionFaultInjectionPolicyAbortGetArgs;
 import com.pulumi.gcp.compute.inputs.URLMapDefaultRouteActionFaultInjectionPolicyDelayGetArgs;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class URLMapDefaultRouteActionFaultInjectionPolicyGetArgs extends c
      * 
      */
     @Import(name="abort")
-      private final @Nullable Output<URLMapDefaultRouteActionFaultInjectionPolicyAbortGetArgs> abort;
+    private @Nullable Output<URLMapDefaultRouteActionFaultInjectionPolicyAbortGetArgs> abort;
 
-    public Output<URLMapDefaultRouteActionFaultInjectionPolicyAbortGetArgs> abort() {
-        return this.abort == null ? Codegen.empty() : this.abort;
+    public Optional<Output<URLMapDefaultRouteActionFaultInjectionPolicyAbortGetArgs>> abort() {
+        return Optional.ofNullable(this.abort);
     }
 
     /**
@@ -34,63 +34,58 @@ public final class URLMapDefaultRouteActionFaultInjectionPolicyGetArgs extends c
      * 
      */
     @Import(name="delay")
-      private final @Nullable Output<URLMapDefaultRouteActionFaultInjectionPolicyDelayGetArgs> delay;
+    private @Nullable Output<URLMapDefaultRouteActionFaultInjectionPolicyDelayGetArgs> delay;
 
-    public Output<URLMapDefaultRouteActionFaultInjectionPolicyDelayGetArgs> delay() {
-        return this.delay == null ? Codegen.empty() : this.delay;
+    public Optional<Output<URLMapDefaultRouteActionFaultInjectionPolicyDelayGetArgs>> delay() {
+        return Optional.ofNullable(this.delay);
     }
 
-    public URLMapDefaultRouteActionFaultInjectionPolicyGetArgs(
-        @Nullable Output<URLMapDefaultRouteActionFaultInjectionPolicyAbortGetArgs> abort,
-        @Nullable Output<URLMapDefaultRouteActionFaultInjectionPolicyDelayGetArgs> delay) {
-        this.abort = abort;
-        this.delay = delay;
-    }
+    private URLMapDefaultRouteActionFaultInjectionPolicyGetArgs() {}
 
-    private URLMapDefaultRouteActionFaultInjectionPolicyGetArgs() {
-        this.abort = Codegen.empty();
-        this.delay = Codegen.empty();
+    private URLMapDefaultRouteActionFaultInjectionPolicyGetArgs(URLMapDefaultRouteActionFaultInjectionPolicyGetArgs $) {
+        this.abort = $.abort;
+        this.delay = $.delay;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(URLMapDefaultRouteActionFaultInjectionPolicyGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<URLMapDefaultRouteActionFaultInjectionPolicyAbortGetArgs> abort;
-        private @Nullable Output<URLMapDefaultRouteActionFaultInjectionPolicyDelayGetArgs> delay;
+        private URLMapDefaultRouteActionFaultInjectionPolicyGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new URLMapDefaultRouteActionFaultInjectionPolicyGetArgs();
         }
 
         public Builder(URLMapDefaultRouteActionFaultInjectionPolicyGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.abort = defaults.abort;
-    	      this.delay = defaults.delay;
+            $ = new URLMapDefaultRouteActionFaultInjectionPolicyGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder abort(@Nullable Output<URLMapDefaultRouteActionFaultInjectionPolicyAbortGetArgs> abort) {
-            this.abort = abort;
+            $.abort = abort;
             return this;
         }
-        public Builder abort(@Nullable URLMapDefaultRouteActionFaultInjectionPolicyAbortGetArgs abort) {
-            this.abort = Codegen.ofNullable(abort);
-            return this;
+
+        public Builder abort(URLMapDefaultRouteActionFaultInjectionPolicyAbortGetArgs abort) {
+            return abort(Output.of(abort));
         }
+
         public Builder delay(@Nullable Output<URLMapDefaultRouteActionFaultInjectionPolicyDelayGetArgs> delay) {
-            this.delay = delay;
+            $.delay = delay;
             return this;
         }
-        public Builder delay(@Nullable URLMapDefaultRouteActionFaultInjectionPolicyDelayGetArgs delay) {
-            this.delay = Codegen.ofNullable(delay);
-            return this;
-        }        public URLMapDefaultRouteActionFaultInjectionPolicyGetArgs build() {
-            return new URLMapDefaultRouteActionFaultInjectionPolicyGetArgs(abort, delay);
+
+        public Builder delay(URLMapDefaultRouteActionFaultInjectionPolicyDelayGetArgs delay) {
+            return delay(Output.of(delay));
+        }
+
+        public URLMapDefaultRouteActionFaultInjectionPolicyGetArgs build() {
+            return $;
         }
     }
+
 }

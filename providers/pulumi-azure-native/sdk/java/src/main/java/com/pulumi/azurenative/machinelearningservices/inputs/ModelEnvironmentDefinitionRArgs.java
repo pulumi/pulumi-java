@@ -7,11 +7,11 @@ import com.pulumi.azurenative.machinelearningservices.inputs.RCranPackageArgs;
 import com.pulumi.azurenative.machinelearningservices.inputs.RGitHubPackageArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -28,10 +28,10 @@ public final class ModelEnvironmentDefinitionRArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="bioConductorPackages")
-      private final @Nullable Output<List<String>> bioConductorPackages;
+    private @Nullable Output<List<String>> bioConductorPackages;
 
-    public Output<List<String>> bioConductorPackages() {
-        return this.bioConductorPackages == null ? Codegen.empty() : this.bioConductorPackages;
+    public Optional<Output<List<String>>> bioConductorPackages() {
+        return Optional.ofNullable(this.bioConductorPackages);
     }
 
     /**
@@ -39,10 +39,10 @@ public final class ModelEnvironmentDefinitionRArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="cranPackages")
-      private final @Nullable Output<List<RCranPackageArgs>> cranPackages;
+    private @Nullable Output<List<RCranPackageArgs>> cranPackages;
 
-    public Output<List<RCranPackageArgs>> cranPackages() {
-        return this.cranPackages == null ? Codegen.empty() : this.cranPackages;
+    public Optional<Output<List<RCranPackageArgs>>> cranPackages() {
+        return Optional.ofNullable(this.cranPackages);
     }
 
     /**
@@ -50,10 +50,10 @@ public final class ModelEnvironmentDefinitionRArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="customUrlPackages")
-      private final @Nullable Output<List<String>> customUrlPackages;
+    private @Nullable Output<List<String>> customUrlPackages;
 
-    public Output<List<String>> customUrlPackages() {
-        return this.customUrlPackages == null ? Codegen.empty() : this.customUrlPackages;
+    public Optional<Output<List<String>>> customUrlPackages() {
+        return Optional.ofNullable(this.customUrlPackages);
     }
 
     /**
@@ -61,10 +61,10 @@ public final class ModelEnvironmentDefinitionRArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="gitHubPackages")
-      private final @Nullable Output<List<RGitHubPackageArgs>> gitHubPackages;
+    private @Nullable Output<List<RGitHubPackageArgs>> gitHubPackages;
 
-    public Output<List<RGitHubPackageArgs>> gitHubPackages() {
-        return this.gitHubPackages == null ? Codegen.empty() : this.gitHubPackages;
+    public Optional<Output<List<RGitHubPackageArgs>>> gitHubPackages() {
+        return Optional.ofNullable(this.gitHubPackages);
     }
 
     /**
@@ -72,10 +72,10 @@ public final class ModelEnvironmentDefinitionRArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="rVersion")
-      private final @Nullable Output<String> rVersion;
+    private @Nullable Output<String> rVersion;
 
-    public Output<String> rVersion() {
-        return this.rVersion == null ? Codegen.empty() : this.rVersion;
+    public Optional<Output<String>> rVersion() {
+        return Optional.ofNullable(this.rVersion);
     }
 
     /**
@@ -84,10 +84,10 @@ public final class ModelEnvironmentDefinitionRArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="rscriptPath")
-      private final @Nullable Output<String> rscriptPath;
+    private @Nullable Output<String> rscriptPath;
 
-    public Output<String> rscriptPath() {
-        return this.rscriptPath == null ? Codegen.empty() : this.rscriptPath;
+    public Optional<Output<String>> rscriptPath() {
+        return Optional.ofNullable(this.rscriptPath);
     }
 
     /**
@@ -95,10 +95,10 @@ public final class ModelEnvironmentDefinitionRArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="snapshotDate")
-      private final @Nullable Output<String> snapshotDate;
+    private @Nullable Output<String> snapshotDate;
 
-    public Output<String> snapshotDate() {
-        return this.snapshotDate == null ? Codegen.empty() : this.snapshotDate;
+    public Optional<Output<String>> snapshotDate() {
+        return Optional.ofNullable(this.snapshotDate);
     }
 
     /**
@@ -106,153 +106,134 @@ public final class ModelEnvironmentDefinitionRArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="userManaged")
-      private final @Nullable Output<Boolean> userManaged;
+    private @Nullable Output<Boolean> userManaged;
 
-    public Output<Boolean> userManaged() {
-        return this.userManaged == null ? Codegen.empty() : this.userManaged;
+    public Optional<Output<Boolean>> userManaged() {
+        return Optional.ofNullable(this.userManaged);
     }
 
-    public ModelEnvironmentDefinitionRArgs(
-        @Nullable Output<List<String>> bioConductorPackages,
-        @Nullable Output<List<RCranPackageArgs>> cranPackages,
-        @Nullable Output<List<String>> customUrlPackages,
-        @Nullable Output<List<RGitHubPackageArgs>> gitHubPackages,
-        @Nullable Output<String> rVersion,
-        @Nullable Output<String> rscriptPath,
-        @Nullable Output<String> snapshotDate,
-        @Nullable Output<Boolean> userManaged) {
-        this.bioConductorPackages = bioConductorPackages;
-        this.cranPackages = cranPackages;
-        this.customUrlPackages = customUrlPackages;
-        this.gitHubPackages = gitHubPackages;
-        this.rVersion = rVersion;
-        this.rscriptPath = rscriptPath;
-        this.snapshotDate = snapshotDate;
-        this.userManaged = userManaged;
-    }
+    private ModelEnvironmentDefinitionRArgs() {}
 
-    private ModelEnvironmentDefinitionRArgs() {
-        this.bioConductorPackages = Codegen.empty();
-        this.cranPackages = Codegen.empty();
-        this.customUrlPackages = Codegen.empty();
-        this.gitHubPackages = Codegen.empty();
-        this.rVersion = Codegen.empty();
-        this.rscriptPath = Codegen.empty();
-        this.snapshotDate = Codegen.empty();
-        this.userManaged = Codegen.empty();
+    private ModelEnvironmentDefinitionRArgs(ModelEnvironmentDefinitionRArgs $) {
+        this.bioConductorPackages = $.bioConductorPackages;
+        this.cranPackages = $.cranPackages;
+        this.customUrlPackages = $.customUrlPackages;
+        this.gitHubPackages = $.gitHubPackages;
+        this.rVersion = $.rVersion;
+        this.rscriptPath = $.rscriptPath;
+        this.snapshotDate = $.snapshotDate;
+        this.userManaged = $.userManaged;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ModelEnvironmentDefinitionRArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> bioConductorPackages;
-        private @Nullable Output<List<RCranPackageArgs>> cranPackages;
-        private @Nullable Output<List<String>> customUrlPackages;
-        private @Nullable Output<List<RGitHubPackageArgs>> gitHubPackages;
-        private @Nullable Output<String> rVersion;
-        private @Nullable Output<String> rscriptPath;
-        private @Nullable Output<String> snapshotDate;
-        private @Nullable Output<Boolean> userManaged;
+        private ModelEnvironmentDefinitionRArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ModelEnvironmentDefinitionRArgs();
         }
 
         public Builder(ModelEnvironmentDefinitionRArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.bioConductorPackages = defaults.bioConductorPackages;
-    	      this.cranPackages = defaults.cranPackages;
-    	      this.customUrlPackages = defaults.customUrlPackages;
-    	      this.gitHubPackages = defaults.gitHubPackages;
-    	      this.rVersion = defaults.rVersion;
-    	      this.rscriptPath = defaults.rscriptPath;
-    	      this.snapshotDate = defaults.snapshotDate;
-    	      this.userManaged = defaults.userManaged;
+            $ = new ModelEnvironmentDefinitionRArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder bioConductorPackages(@Nullable Output<List<String>> bioConductorPackages) {
-            this.bioConductorPackages = bioConductorPackages;
+            $.bioConductorPackages = bioConductorPackages;
             return this;
         }
-        public Builder bioConductorPackages(@Nullable List<String> bioConductorPackages) {
-            this.bioConductorPackages = Codegen.ofNullable(bioConductorPackages);
-            return this;
+
+        public Builder bioConductorPackages(List<String> bioConductorPackages) {
+            return bioConductorPackages(Output.of(bioConductorPackages));
         }
+
         public Builder bioConductorPackages(String... bioConductorPackages) {
             return bioConductorPackages(List.of(bioConductorPackages));
         }
+
         public Builder cranPackages(@Nullable Output<List<RCranPackageArgs>> cranPackages) {
-            this.cranPackages = cranPackages;
+            $.cranPackages = cranPackages;
             return this;
         }
-        public Builder cranPackages(@Nullable List<RCranPackageArgs> cranPackages) {
-            this.cranPackages = Codegen.ofNullable(cranPackages);
-            return this;
+
+        public Builder cranPackages(List<RCranPackageArgs> cranPackages) {
+            return cranPackages(Output.of(cranPackages));
         }
+
         public Builder cranPackages(RCranPackageArgs... cranPackages) {
             return cranPackages(List.of(cranPackages));
         }
+
         public Builder customUrlPackages(@Nullable Output<List<String>> customUrlPackages) {
-            this.customUrlPackages = customUrlPackages;
+            $.customUrlPackages = customUrlPackages;
             return this;
         }
-        public Builder customUrlPackages(@Nullable List<String> customUrlPackages) {
-            this.customUrlPackages = Codegen.ofNullable(customUrlPackages);
-            return this;
+
+        public Builder customUrlPackages(List<String> customUrlPackages) {
+            return customUrlPackages(Output.of(customUrlPackages));
         }
+
         public Builder customUrlPackages(String... customUrlPackages) {
             return customUrlPackages(List.of(customUrlPackages));
         }
+
         public Builder gitHubPackages(@Nullable Output<List<RGitHubPackageArgs>> gitHubPackages) {
-            this.gitHubPackages = gitHubPackages;
+            $.gitHubPackages = gitHubPackages;
             return this;
         }
-        public Builder gitHubPackages(@Nullable List<RGitHubPackageArgs> gitHubPackages) {
-            this.gitHubPackages = Codegen.ofNullable(gitHubPackages);
-            return this;
+
+        public Builder gitHubPackages(List<RGitHubPackageArgs> gitHubPackages) {
+            return gitHubPackages(Output.of(gitHubPackages));
         }
+
         public Builder gitHubPackages(RGitHubPackageArgs... gitHubPackages) {
             return gitHubPackages(List.of(gitHubPackages));
         }
+
         public Builder rVersion(@Nullable Output<String> rVersion) {
-            this.rVersion = rVersion;
+            $.rVersion = rVersion;
             return this;
         }
-        public Builder rVersion(@Nullable String rVersion) {
-            this.rVersion = Codegen.ofNullable(rVersion);
-            return this;
+
+        public Builder rVersion(String rVersion) {
+            return rVersion(Output.of(rVersion));
         }
+
         public Builder rscriptPath(@Nullable Output<String> rscriptPath) {
-            this.rscriptPath = rscriptPath;
+            $.rscriptPath = rscriptPath;
             return this;
         }
-        public Builder rscriptPath(@Nullable String rscriptPath) {
-            this.rscriptPath = Codegen.ofNullable(rscriptPath);
-            return this;
+
+        public Builder rscriptPath(String rscriptPath) {
+            return rscriptPath(Output.of(rscriptPath));
         }
+
         public Builder snapshotDate(@Nullable Output<String> snapshotDate) {
-            this.snapshotDate = snapshotDate;
+            $.snapshotDate = snapshotDate;
             return this;
         }
-        public Builder snapshotDate(@Nullable String snapshotDate) {
-            this.snapshotDate = Codegen.ofNullable(snapshotDate);
-            return this;
+
+        public Builder snapshotDate(String snapshotDate) {
+            return snapshotDate(Output.of(snapshotDate));
         }
+
         public Builder userManaged(@Nullable Output<Boolean> userManaged) {
-            this.userManaged = userManaged;
+            $.userManaged = userManaged;
             return this;
         }
-        public Builder userManaged(@Nullable Boolean userManaged) {
-            this.userManaged = Codegen.ofNullable(userManaged);
-            return this;
-        }        public ModelEnvironmentDefinitionRArgs build() {
-            return new ModelEnvironmentDefinitionRArgs(bioConductorPackages, cranPackages, customUrlPackages, gitHubPackages, rVersion, rscriptPath, snapshotDate, userManaged);
+
+        public Builder userManaged(Boolean userManaged) {
+            return userManaged(Output.of(userManaged));
+        }
+
+        public ModelEnvironmentDefinitionRArgs build() {
+            return $;
         }
     }
+
 }

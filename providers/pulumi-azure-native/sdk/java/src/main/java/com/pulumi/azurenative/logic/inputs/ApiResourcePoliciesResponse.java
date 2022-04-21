@@ -23,10 +23,10 @@ public final class ApiResourcePoliciesResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="content")
-      private final @Nullable String content;
+    private @Nullable String content;
 
     public Optional<String> content() {
-        return this.content == null ? Optional.empty() : Optional.ofNullable(this.content);
+        return Optional.ofNullable(this.content);
     }
 
     /**
@@ -34,55 +34,50 @@ public final class ApiResourcePoliciesResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="contentLink")
-      private final @Nullable String contentLink;
+    private @Nullable String contentLink;
 
     public Optional<String> contentLink() {
-        return this.contentLink == null ? Optional.empty() : Optional.ofNullable(this.contentLink);
+        return Optional.ofNullable(this.contentLink);
     }
 
-    public ApiResourcePoliciesResponse(
-        @Nullable String content,
-        @Nullable String contentLink) {
-        this.content = content;
-        this.contentLink = contentLink;
-    }
+    private ApiResourcePoliciesResponse() {}
 
-    private ApiResourcePoliciesResponse() {
-        this.content = null;
-        this.contentLink = null;
+    private ApiResourcePoliciesResponse(ApiResourcePoliciesResponse $) {
+        this.content = $.content;
+        this.contentLink = $.contentLink;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ApiResourcePoliciesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String content;
-        private @Nullable String contentLink;
+        private ApiResourcePoliciesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ApiResourcePoliciesResponse();
         }
 
         public Builder(ApiResourcePoliciesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.content = defaults.content;
-    	      this.contentLink = defaults.contentLink;
+            $ = new ApiResourcePoliciesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder content(@Nullable String content) {
-            this.content = content;
+            $.content = content;
             return this;
         }
+
         public Builder contentLink(@Nullable String contentLink) {
-            this.contentLink = contentLink;
+            $.contentLink = contentLink;
             return this;
-        }        public ApiResourcePoliciesResponse build() {
-            return new ApiResourcePoliciesResponse(content, contentLink);
+        }
+
+        public ApiResourcePoliciesResponse build() {
+            return $;
         }
     }
+
 }

@@ -11,6 +11,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +28,10 @@ public final class LoadBalancerResourceSettingsArgs extends com.pulumi.resources
      * 
      */
     @Import(name="backendAddressPools")
-      private final @Nullable Output<List<LBBackendAddressPoolResourceSettingsArgs>> backendAddressPools;
+    private @Nullable Output<List<LBBackendAddressPoolResourceSettingsArgs>> backendAddressPools;
 
-    public Output<List<LBBackendAddressPoolResourceSettingsArgs>> backendAddressPools() {
-        return this.backendAddressPools == null ? Codegen.empty() : this.backendAddressPools;
+    public Optional<Output<List<LBBackendAddressPoolResourceSettingsArgs>>> backendAddressPools() {
+        return Optional.ofNullable(this.backendAddressPools);
     }
 
     /**
@@ -38,10 +39,10 @@ public final class LoadBalancerResourceSettingsArgs extends com.pulumi.resources
      * 
      */
     @Import(name="frontendIPConfigurations")
-      private final @Nullable Output<List<LBFrontendIPConfigurationResourceSettingsArgs>> frontendIPConfigurations;
+    private @Nullable Output<List<LBFrontendIPConfigurationResourceSettingsArgs>> frontendIPConfigurations;
 
-    public Output<List<LBFrontendIPConfigurationResourceSettingsArgs>> frontendIPConfigurations() {
-        return this.frontendIPConfigurations == null ? Codegen.empty() : this.frontendIPConfigurations;
+    public Optional<Output<List<LBFrontendIPConfigurationResourceSettingsArgs>>> frontendIPConfigurations() {
+        return Optional.ofNullable(this.frontendIPConfigurations);
     }
 
     /**
@@ -50,7 +51,7 @@ public final class LoadBalancerResourceSettingsArgs extends com.pulumi.resources
      * 
      */
     @Import(name="resourceType", required=true)
-      private final Output<String> resourceType;
+    private Output<String> resourceType;
 
     public Output<String> resourceType() {
         return this.resourceType;
@@ -61,10 +62,10 @@ public final class LoadBalancerResourceSettingsArgs extends com.pulumi.resources
      * 
      */
     @Import(name="sku")
-      private final @Nullable Output<String> sku;
+    private @Nullable Output<String> sku;
 
-    public Output<String> sku() {
-        return this.sku == null ? Codegen.empty() : this.sku;
+    public Optional<Output<String>> sku() {
+        return Optional.ofNullable(this.sku);
     }
 
     /**
@@ -72,7 +73,7 @@ public final class LoadBalancerResourceSettingsArgs extends com.pulumi.resources
      * 
      */
     @Import(name="targetResourceName", required=true)
-      private final Output<String> targetResourceName;
+    private Output<String> targetResourceName;
 
     public Output<String> targetResourceName() {
         return this.targetResourceName;
@@ -84,121 +85,108 @@ public final class LoadBalancerResourceSettingsArgs extends com.pulumi.resources
      * 
      */
     @Import(name="zones")
-      private final @Nullable Output<String> zones;
+    private @Nullable Output<String> zones;
 
-    public Output<String> zones() {
-        return this.zones == null ? Codegen.empty() : this.zones;
+    public Optional<Output<String>> zones() {
+        return Optional.ofNullable(this.zones);
     }
 
-    public LoadBalancerResourceSettingsArgs(
-        @Nullable Output<List<LBBackendAddressPoolResourceSettingsArgs>> backendAddressPools,
-        @Nullable Output<List<LBFrontendIPConfigurationResourceSettingsArgs>> frontendIPConfigurations,
-        Output<String> resourceType,
-        @Nullable Output<String> sku,
-        Output<String> targetResourceName,
-        @Nullable Output<String> zones) {
-        this.backendAddressPools = backendAddressPools;
-        this.frontendIPConfigurations = frontendIPConfigurations;
-        this.resourceType = Codegen.stringProp("resourceType").output().arg(resourceType).require();
-        this.sku = sku;
-        this.targetResourceName = Objects.requireNonNull(targetResourceName, "expected parameter 'targetResourceName' to be non-null");
-        this.zones = zones;
-    }
+    private LoadBalancerResourceSettingsArgs() {}
 
-    private LoadBalancerResourceSettingsArgs() {
-        this.backendAddressPools = Codegen.empty();
-        this.frontendIPConfigurations = Codegen.empty();
-        this.resourceType = Codegen.empty();
-        this.sku = Codegen.empty();
-        this.targetResourceName = Codegen.empty();
-        this.zones = Codegen.empty();
+    private LoadBalancerResourceSettingsArgs(LoadBalancerResourceSettingsArgs $) {
+        this.backendAddressPools = $.backendAddressPools;
+        this.frontendIPConfigurations = $.frontendIPConfigurations;
+        this.resourceType = $.resourceType;
+        this.sku = $.sku;
+        this.targetResourceName = $.targetResourceName;
+        this.zones = $.zones;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LoadBalancerResourceSettingsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<LBBackendAddressPoolResourceSettingsArgs>> backendAddressPools;
-        private @Nullable Output<List<LBFrontendIPConfigurationResourceSettingsArgs>> frontendIPConfigurations;
-        private Output<String> resourceType;
-        private @Nullable Output<String> sku;
-        private Output<String> targetResourceName;
-        private @Nullable Output<String> zones;
+        private LoadBalancerResourceSettingsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new LoadBalancerResourceSettingsArgs();
         }
 
         public Builder(LoadBalancerResourceSettingsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.backendAddressPools = defaults.backendAddressPools;
-    	      this.frontendIPConfigurations = defaults.frontendIPConfigurations;
-    	      this.resourceType = defaults.resourceType;
-    	      this.sku = defaults.sku;
-    	      this.targetResourceName = defaults.targetResourceName;
-    	      this.zones = defaults.zones;
+            $ = new LoadBalancerResourceSettingsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder backendAddressPools(@Nullable Output<List<LBBackendAddressPoolResourceSettingsArgs>> backendAddressPools) {
-            this.backendAddressPools = backendAddressPools;
+            $.backendAddressPools = backendAddressPools;
             return this;
         }
-        public Builder backendAddressPools(@Nullable List<LBBackendAddressPoolResourceSettingsArgs> backendAddressPools) {
-            this.backendAddressPools = Codegen.ofNullable(backendAddressPools);
-            return this;
+
+        public Builder backendAddressPools(List<LBBackendAddressPoolResourceSettingsArgs> backendAddressPools) {
+            return backendAddressPools(Output.of(backendAddressPools));
         }
+
         public Builder backendAddressPools(LBBackendAddressPoolResourceSettingsArgs... backendAddressPools) {
             return backendAddressPools(List.of(backendAddressPools));
         }
+
         public Builder frontendIPConfigurations(@Nullable Output<List<LBFrontendIPConfigurationResourceSettingsArgs>> frontendIPConfigurations) {
-            this.frontendIPConfigurations = frontendIPConfigurations;
+            $.frontendIPConfigurations = frontendIPConfigurations;
             return this;
         }
-        public Builder frontendIPConfigurations(@Nullable List<LBFrontendIPConfigurationResourceSettingsArgs> frontendIPConfigurations) {
-            this.frontendIPConfigurations = Codegen.ofNullable(frontendIPConfigurations);
-            return this;
+
+        public Builder frontendIPConfigurations(List<LBFrontendIPConfigurationResourceSettingsArgs> frontendIPConfigurations) {
+            return frontendIPConfigurations(Output.of(frontendIPConfigurations));
         }
+
         public Builder frontendIPConfigurations(LBFrontendIPConfigurationResourceSettingsArgs... frontendIPConfigurations) {
             return frontendIPConfigurations(List.of(frontendIPConfigurations));
         }
+
         public Builder resourceType(Output<String> resourceType) {
-            this.resourceType = Objects.requireNonNull(resourceType);
+            $.resourceType = resourceType;
             return this;
         }
+
         public Builder resourceType(String resourceType) {
-            this.resourceType = Output.of(Objects.requireNonNull(resourceType));
-            return this;
+            return resourceType(Output.of(resourceType));
         }
+
         public Builder sku(@Nullable Output<String> sku) {
-            this.sku = sku;
+            $.sku = sku;
             return this;
         }
-        public Builder sku(@Nullable String sku) {
-            this.sku = Codegen.ofNullable(sku);
-            return this;
+
+        public Builder sku(String sku) {
+            return sku(Output.of(sku));
         }
+
         public Builder targetResourceName(Output<String> targetResourceName) {
-            this.targetResourceName = Objects.requireNonNull(targetResourceName);
+            $.targetResourceName = targetResourceName;
             return this;
         }
+
         public Builder targetResourceName(String targetResourceName) {
-            this.targetResourceName = Output.of(Objects.requireNonNull(targetResourceName));
-            return this;
+            return targetResourceName(Output.of(targetResourceName));
         }
+
         public Builder zones(@Nullable Output<String> zones) {
-            this.zones = zones;
+            $.zones = zones;
             return this;
         }
-        public Builder zones(@Nullable String zones) {
-            this.zones = Codegen.ofNullable(zones);
-            return this;
-        }        public LoadBalancerResourceSettingsArgs build() {
-            return new LoadBalancerResourceSettingsArgs(backendAddressPools, frontendIPConfigurations, resourceType, sku, targetResourceName, zones);
+
+        public Builder zones(String zones) {
+            return zones(Output.of(zones));
+        }
+
+        public LoadBalancerResourceSettingsArgs build() {
+            $.resourceType = Codegen.stringProp("resourceType").output().arg($.resourceType).require();
+            $.targetResourceName = Objects.requireNonNull($.targetResourceName, "expected parameter 'targetResourceName' to be non-null");
+            return $;
         }
     }
+
 }

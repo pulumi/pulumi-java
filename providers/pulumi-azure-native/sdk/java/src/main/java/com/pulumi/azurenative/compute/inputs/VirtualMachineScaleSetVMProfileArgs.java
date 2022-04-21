@@ -16,9 +16,9 @@ import com.pulumi.azurenative.compute.inputs.VirtualMachineScaleSetStorageProfil
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -35,10 +35,10 @@ public final class VirtualMachineScaleSetVMProfileArgs extends com.pulumi.resour
      * 
      */
     @Import(name="billingProfile")
-      private final @Nullable Output<BillingProfileArgs> billingProfile;
+    private @Nullable Output<BillingProfileArgs> billingProfile;
 
-    public Output<BillingProfileArgs> billingProfile() {
-        return this.billingProfile == null ? Codegen.empty() : this.billingProfile;
+    public Optional<Output<BillingProfileArgs>> billingProfile() {
+        return Optional.ofNullable(this.billingProfile);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class VirtualMachineScaleSetVMProfileArgs extends com.pulumi.resour
      * 
      */
     @Import(name="diagnosticsProfile")
-      private final @Nullable Output<DiagnosticsProfileArgs> diagnosticsProfile;
+    private @Nullable Output<DiagnosticsProfileArgs> diagnosticsProfile;
 
-    public Output<DiagnosticsProfileArgs> diagnosticsProfile() {
-        return this.diagnosticsProfile == null ? Codegen.empty() : this.diagnosticsProfile;
+    public Optional<Output<DiagnosticsProfileArgs>> diagnosticsProfile() {
+        return Optional.ofNullable(this.diagnosticsProfile);
     }
 
     /**
@@ -57,10 +57,10 @@ public final class VirtualMachineScaleSetVMProfileArgs extends com.pulumi.resour
      * 
      */
     @Import(name="evictionPolicy")
-      private final @Nullable Output<Either<String,VirtualMachineEvictionPolicyTypes>> evictionPolicy;
+    private @Nullable Output<Either<String,VirtualMachineEvictionPolicyTypes>> evictionPolicy;
 
-    public Output<Either<String,VirtualMachineEvictionPolicyTypes>> evictionPolicy() {
-        return this.evictionPolicy == null ? Codegen.empty() : this.evictionPolicy;
+    public Optional<Output<Either<String,VirtualMachineEvictionPolicyTypes>>> evictionPolicy() {
+        return Optional.ofNullable(this.evictionPolicy);
     }
 
     /**
@@ -68,10 +68,10 @@ public final class VirtualMachineScaleSetVMProfileArgs extends com.pulumi.resour
      * 
      */
     @Import(name="extensionProfile")
-      private final @Nullable Output<VirtualMachineScaleSetExtensionProfileArgs> extensionProfile;
+    private @Nullable Output<VirtualMachineScaleSetExtensionProfileArgs> extensionProfile;
 
-    public Output<VirtualMachineScaleSetExtensionProfileArgs> extensionProfile() {
-        return this.extensionProfile == null ? Codegen.empty() : this.extensionProfile;
+    public Optional<Output<VirtualMachineScaleSetExtensionProfileArgs>> extensionProfile() {
+        return Optional.ofNullable(this.extensionProfile);
     }
 
     /**
@@ -79,10 +79,10 @@ public final class VirtualMachineScaleSetVMProfileArgs extends com.pulumi.resour
      * 
      */
     @Import(name="licenseType")
-      private final @Nullable Output<String> licenseType;
+    private @Nullable Output<String> licenseType;
 
-    public Output<String> licenseType() {
-        return this.licenseType == null ? Codegen.empty() : this.licenseType;
+    public Optional<Output<String>> licenseType() {
+        return Optional.ofNullable(this.licenseType);
     }
 
     /**
@@ -90,10 +90,10 @@ public final class VirtualMachineScaleSetVMProfileArgs extends com.pulumi.resour
      * 
      */
     @Import(name="networkProfile")
-      private final @Nullable Output<VirtualMachineScaleSetNetworkProfileArgs> networkProfile;
+    private @Nullable Output<VirtualMachineScaleSetNetworkProfileArgs> networkProfile;
 
-    public Output<VirtualMachineScaleSetNetworkProfileArgs> networkProfile() {
-        return this.networkProfile == null ? Codegen.empty() : this.networkProfile;
+    public Optional<Output<VirtualMachineScaleSetNetworkProfileArgs>> networkProfile() {
+        return Optional.ofNullable(this.networkProfile);
     }
 
     /**
@@ -101,10 +101,10 @@ public final class VirtualMachineScaleSetVMProfileArgs extends com.pulumi.resour
      * 
      */
     @Import(name="osProfile")
-      private final @Nullable Output<VirtualMachineScaleSetOSProfileArgs> osProfile;
+    private @Nullable Output<VirtualMachineScaleSetOSProfileArgs> osProfile;
 
-    public Output<VirtualMachineScaleSetOSProfileArgs> osProfile() {
-        return this.osProfile == null ? Codegen.empty() : this.osProfile;
+    public Optional<Output<VirtualMachineScaleSetOSProfileArgs>> osProfile() {
+        return Optional.ofNullable(this.osProfile);
     }
 
     /**
@@ -112,10 +112,10 @@ public final class VirtualMachineScaleSetVMProfileArgs extends com.pulumi.resour
      * 
      */
     @Import(name="priority")
-      private final @Nullable Output<Either<String,VirtualMachinePriorityTypes>> priority;
+    private @Nullable Output<Either<String,VirtualMachinePriorityTypes>> priority;
 
-    public Output<Either<String,VirtualMachinePriorityTypes>> priority() {
-        return this.priority == null ? Codegen.empty() : this.priority;
+    public Optional<Output<Either<String,VirtualMachinePriorityTypes>>> priority() {
+        return Optional.ofNullable(this.priority);
     }
 
     /**
@@ -123,10 +123,10 @@ public final class VirtualMachineScaleSetVMProfileArgs extends com.pulumi.resour
      * 
      */
     @Import(name="scheduledEventsProfile")
-      private final @Nullable Output<ScheduledEventsProfileArgs> scheduledEventsProfile;
+    private @Nullable Output<ScheduledEventsProfileArgs> scheduledEventsProfile;
 
-    public Output<ScheduledEventsProfileArgs> scheduledEventsProfile() {
-        return this.scheduledEventsProfile == null ? Codegen.empty() : this.scheduledEventsProfile;
+    public Optional<Output<ScheduledEventsProfileArgs>> scheduledEventsProfile() {
+        return Optional.ofNullable(this.scheduledEventsProfile);
     }
 
     /**
@@ -134,10 +134,10 @@ public final class VirtualMachineScaleSetVMProfileArgs extends com.pulumi.resour
      * 
      */
     @Import(name="securityProfile")
-      private final @Nullable Output<SecurityProfileArgs> securityProfile;
+    private @Nullable Output<SecurityProfileArgs> securityProfile;
 
-    public Output<SecurityProfileArgs> securityProfile() {
-        return this.securityProfile == null ? Codegen.empty() : this.securityProfile;
+    public Optional<Output<SecurityProfileArgs>> securityProfile() {
+        return Optional.ofNullable(this.securityProfile);
     }
 
     /**
@@ -145,10 +145,10 @@ public final class VirtualMachineScaleSetVMProfileArgs extends com.pulumi.resour
      * 
      */
     @Import(name="storageProfile")
-      private final @Nullable Output<VirtualMachineScaleSetStorageProfileArgs> storageProfile;
+    private @Nullable Output<VirtualMachineScaleSetStorageProfileArgs> storageProfile;
 
-    public Output<VirtualMachineScaleSetStorageProfileArgs> storageProfile() {
-        return this.storageProfile == null ? Codegen.empty() : this.storageProfile;
+    public Optional<Output<VirtualMachineScaleSetStorageProfileArgs>> storageProfile() {
+        return Optional.ofNullable(this.storageProfile);
     }
 
     /**
@@ -156,193 +156,158 @@ public final class VirtualMachineScaleSetVMProfileArgs extends com.pulumi.resour
      * 
      */
     @Import(name="userData")
-      private final @Nullable Output<String> userData;
+    private @Nullable Output<String> userData;
 
-    public Output<String> userData() {
-        return this.userData == null ? Codegen.empty() : this.userData;
+    public Optional<Output<String>> userData() {
+        return Optional.ofNullable(this.userData);
     }
 
-    public VirtualMachineScaleSetVMProfileArgs(
-        @Nullable Output<BillingProfileArgs> billingProfile,
-        @Nullable Output<DiagnosticsProfileArgs> diagnosticsProfile,
-        @Nullable Output<Either<String,VirtualMachineEvictionPolicyTypes>> evictionPolicy,
-        @Nullable Output<VirtualMachineScaleSetExtensionProfileArgs> extensionProfile,
-        @Nullable Output<String> licenseType,
-        @Nullable Output<VirtualMachineScaleSetNetworkProfileArgs> networkProfile,
-        @Nullable Output<VirtualMachineScaleSetOSProfileArgs> osProfile,
-        @Nullable Output<Either<String,VirtualMachinePriorityTypes>> priority,
-        @Nullable Output<ScheduledEventsProfileArgs> scheduledEventsProfile,
-        @Nullable Output<SecurityProfileArgs> securityProfile,
-        @Nullable Output<VirtualMachineScaleSetStorageProfileArgs> storageProfile,
-        @Nullable Output<String> userData) {
-        this.billingProfile = billingProfile;
-        this.diagnosticsProfile = diagnosticsProfile;
-        this.evictionPolicy = evictionPolicy;
-        this.extensionProfile = extensionProfile;
-        this.licenseType = licenseType;
-        this.networkProfile = networkProfile;
-        this.osProfile = osProfile;
-        this.priority = priority;
-        this.scheduledEventsProfile = scheduledEventsProfile;
-        this.securityProfile = securityProfile;
-        this.storageProfile = storageProfile;
-        this.userData = userData;
-    }
+    private VirtualMachineScaleSetVMProfileArgs() {}
 
-    private VirtualMachineScaleSetVMProfileArgs() {
-        this.billingProfile = Codegen.empty();
-        this.diagnosticsProfile = Codegen.empty();
-        this.evictionPolicy = Codegen.empty();
-        this.extensionProfile = Codegen.empty();
-        this.licenseType = Codegen.empty();
-        this.networkProfile = Codegen.empty();
-        this.osProfile = Codegen.empty();
-        this.priority = Codegen.empty();
-        this.scheduledEventsProfile = Codegen.empty();
-        this.securityProfile = Codegen.empty();
-        this.storageProfile = Codegen.empty();
-        this.userData = Codegen.empty();
+    private VirtualMachineScaleSetVMProfileArgs(VirtualMachineScaleSetVMProfileArgs $) {
+        this.billingProfile = $.billingProfile;
+        this.diagnosticsProfile = $.diagnosticsProfile;
+        this.evictionPolicy = $.evictionPolicy;
+        this.extensionProfile = $.extensionProfile;
+        this.licenseType = $.licenseType;
+        this.networkProfile = $.networkProfile;
+        this.osProfile = $.osProfile;
+        this.priority = $.priority;
+        this.scheduledEventsProfile = $.scheduledEventsProfile;
+        this.securityProfile = $.securityProfile;
+        this.storageProfile = $.storageProfile;
+        this.userData = $.userData;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VirtualMachineScaleSetVMProfileArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<BillingProfileArgs> billingProfile;
-        private @Nullable Output<DiagnosticsProfileArgs> diagnosticsProfile;
-        private @Nullable Output<Either<String,VirtualMachineEvictionPolicyTypes>> evictionPolicy;
-        private @Nullable Output<VirtualMachineScaleSetExtensionProfileArgs> extensionProfile;
-        private @Nullable Output<String> licenseType;
-        private @Nullable Output<VirtualMachineScaleSetNetworkProfileArgs> networkProfile;
-        private @Nullable Output<VirtualMachineScaleSetOSProfileArgs> osProfile;
-        private @Nullable Output<Either<String,VirtualMachinePriorityTypes>> priority;
-        private @Nullable Output<ScheduledEventsProfileArgs> scheduledEventsProfile;
-        private @Nullable Output<SecurityProfileArgs> securityProfile;
-        private @Nullable Output<VirtualMachineScaleSetStorageProfileArgs> storageProfile;
-        private @Nullable Output<String> userData;
+        private VirtualMachineScaleSetVMProfileArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new VirtualMachineScaleSetVMProfileArgs();
         }
 
         public Builder(VirtualMachineScaleSetVMProfileArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.billingProfile = defaults.billingProfile;
-    	      this.diagnosticsProfile = defaults.diagnosticsProfile;
-    	      this.evictionPolicy = defaults.evictionPolicy;
-    	      this.extensionProfile = defaults.extensionProfile;
-    	      this.licenseType = defaults.licenseType;
-    	      this.networkProfile = defaults.networkProfile;
-    	      this.osProfile = defaults.osProfile;
-    	      this.priority = defaults.priority;
-    	      this.scheduledEventsProfile = defaults.scheduledEventsProfile;
-    	      this.securityProfile = defaults.securityProfile;
-    	      this.storageProfile = defaults.storageProfile;
-    	      this.userData = defaults.userData;
+            $ = new VirtualMachineScaleSetVMProfileArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder billingProfile(@Nullable Output<BillingProfileArgs> billingProfile) {
-            this.billingProfile = billingProfile;
+            $.billingProfile = billingProfile;
             return this;
         }
-        public Builder billingProfile(@Nullable BillingProfileArgs billingProfile) {
-            this.billingProfile = Codegen.ofNullable(billingProfile);
-            return this;
+
+        public Builder billingProfile(BillingProfileArgs billingProfile) {
+            return billingProfile(Output.of(billingProfile));
         }
+
         public Builder diagnosticsProfile(@Nullable Output<DiagnosticsProfileArgs> diagnosticsProfile) {
-            this.diagnosticsProfile = diagnosticsProfile;
+            $.diagnosticsProfile = diagnosticsProfile;
             return this;
         }
-        public Builder diagnosticsProfile(@Nullable DiagnosticsProfileArgs diagnosticsProfile) {
-            this.diagnosticsProfile = Codegen.ofNullable(diagnosticsProfile);
-            return this;
+
+        public Builder diagnosticsProfile(DiagnosticsProfileArgs diagnosticsProfile) {
+            return diagnosticsProfile(Output.of(diagnosticsProfile));
         }
+
         public Builder evictionPolicy(@Nullable Output<Either<String,VirtualMachineEvictionPolicyTypes>> evictionPolicy) {
-            this.evictionPolicy = evictionPolicy;
+            $.evictionPolicy = evictionPolicy;
             return this;
         }
-        public Builder evictionPolicy(@Nullable Either<String,VirtualMachineEvictionPolicyTypes> evictionPolicy) {
-            this.evictionPolicy = Codegen.ofNullable(evictionPolicy);
-            return this;
+
+        public Builder evictionPolicy(Either<String,VirtualMachineEvictionPolicyTypes> evictionPolicy) {
+            return evictionPolicy(Output.of(evictionPolicy));
         }
+
         public Builder extensionProfile(@Nullable Output<VirtualMachineScaleSetExtensionProfileArgs> extensionProfile) {
-            this.extensionProfile = extensionProfile;
+            $.extensionProfile = extensionProfile;
             return this;
         }
-        public Builder extensionProfile(@Nullable VirtualMachineScaleSetExtensionProfileArgs extensionProfile) {
-            this.extensionProfile = Codegen.ofNullable(extensionProfile);
-            return this;
+
+        public Builder extensionProfile(VirtualMachineScaleSetExtensionProfileArgs extensionProfile) {
+            return extensionProfile(Output.of(extensionProfile));
         }
+
         public Builder licenseType(@Nullable Output<String> licenseType) {
-            this.licenseType = licenseType;
+            $.licenseType = licenseType;
             return this;
         }
-        public Builder licenseType(@Nullable String licenseType) {
-            this.licenseType = Codegen.ofNullable(licenseType);
-            return this;
+
+        public Builder licenseType(String licenseType) {
+            return licenseType(Output.of(licenseType));
         }
+
         public Builder networkProfile(@Nullable Output<VirtualMachineScaleSetNetworkProfileArgs> networkProfile) {
-            this.networkProfile = networkProfile;
+            $.networkProfile = networkProfile;
             return this;
         }
-        public Builder networkProfile(@Nullable VirtualMachineScaleSetNetworkProfileArgs networkProfile) {
-            this.networkProfile = Codegen.ofNullable(networkProfile);
-            return this;
+
+        public Builder networkProfile(VirtualMachineScaleSetNetworkProfileArgs networkProfile) {
+            return networkProfile(Output.of(networkProfile));
         }
+
         public Builder osProfile(@Nullable Output<VirtualMachineScaleSetOSProfileArgs> osProfile) {
-            this.osProfile = osProfile;
+            $.osProfile = osProfile;
             return this;
         }
-        public Builder osProfile(@Nullable VirtualMachineScaleSetOSProfileArgs osProfile) {
-            this.osProfile = Codegen.ofNullable(osProfile);
-            return this;
+
+        public Builder osProfile(VirtualMachineScaleSetOSProfileArgs osProfile) {
+            return osProfile(Output.of(osProfile));
         }
+
         public Builder priority(@Nullable Output<Either<String,VirtualMachinePriorityTypes>> priority) {
-            this.priority = priority;
+            $.priority = priority;
             return this;
         }
-        public Builder priority(@Nullable Either<String,VirtualMachinePriorityTypes> priority) {
-            this.priority = Codegen.ofNullable(priority);
-            return this;
+
+        public Builder priority(Either<String,VirtualMachinePriorityTypes> priority) {
+            return priority(Output.of(priority));
         }
+
         public Builder scheduledEventsProfile(@Nullable Output<ScheduledEventsProfileArgs> scheduledEventsProfile) {
-            this.scheduledEventsProfile = scheduledEventsProfile;
+            $.scheduledEventsProfile = scheduledEventsProfile;
             return this;
         }
-        public Builder scheduledEventsProfile(@Nullable ScheduledEventsProfileArgs scheduledEventsProfile) {
-            this.scheduledEventsProfile = Codegen.ofNullable(scheduledEventsProfile);
-            return this;
+
+        public Builder scheduledEventsProfile(ScheduledEventsProfileArgs scheduledEventsProfile) {
+            return scheduledEventsProfile(Output.of(scheduledEventsProfile));
         }
+
         public Builder securityProfile(@Nullable Output<SecurityProfileArgs> securityProfile) {
-            this.securityProfile = securityProfile;
+            $.securityProfile = securityProfile;
             return this;
         }
-        public Builder securityProfile(@Nullable SecurityProfileArgs securityProfile) {
-            this.securityProfile = Codegen.ofNullable(securityProfile);
-            return this;
+
+        public Builder securityProfile(SecurityProfileArgs securityProfile) {
+            return securityProfile(Output.of(securityProfile));
         }
+
         public Builder storageProfile(@Nullable Output<VirtualMachineScaleSetStorageProfileArgs> storageProfile) {
-            this.storageProfile = storageProfile;
+            $.storageProfile = storageProfile;
             return this;
         }
-        public Builder storageProfile(@Nullable VirtualMachineScaleSetStorageProfileArgs storageProfile) {
-            this.storageProfile = Codegen.ofNullable(storageProfile);
-            return this;
+
+        public Builder storageProfile(VirtualMachineScaleSetStorageProfileArgs storageProfile) {
+            return storageProfile(Output.of(storageProfile));
         }
+
         public Builder userData(@Nullable Output<String> userData) {
-            this.userData = userData;
+            $.userData = userData;
             return this;
         }
-        public Builder userData(@Nullable String userData) {
-            this.userData = Codegen.ofNullable(userData);
-            return this;
-        }        public VirtualMachineScaleSetVMProfileArgs build() {
-            return new VirtualMachineScaleSetVMProfileArgs(billingProfile, diagnosticsProfile, evictionPolicy, extensionProfile, licenseType, networkProfile, osProfile, priority, scheduledEventsProfile, securityProfile, storageProfile, userData);
+
+        public Builder userData(String userData) {
+            return userData(Output.of(userData));
+        }
+
+        public VirtualMachineScaleSetVMProfileArgs build() {
+            return $;
         }
     }
+
 }

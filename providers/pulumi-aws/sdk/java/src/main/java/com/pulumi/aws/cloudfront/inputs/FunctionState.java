@@ -5,10 +5,10 @@ package com.pulumi.aws.cloudfront.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class FunctionState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="arn")
-      private final @Nullable Output<String> arn;
+    private @Nullable Output<String> arn;
 
-    public Output<String> arn() {
-        return this.arn == null ? Codegen.empty() : this.arn;
+    public Optional<Output<String>> arn() {
+        return Optional.ofNullable(this.arn);
     }
 
     /**
@@ -32,10 +32,10 @@ public final class FunctionState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="code")
-      private final @Nullable Output<String> code;
+    private @Nullable Output<String> code;
 
-    public Output<String> code() {
-        return this.code == null ? Codegen.empty() : this.code;
+    public Optional<Output<String>> code() {
+        return Optional.ofNullable(this.code);
     }
 
     /**
@@ -43,10 +43,10 @@ public final class FunctionState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="comment")
-      private final @Nullable Output<String> comment;
+    private @Nullable Output<String> comment;
 
-    public Output<String> comment() {
-        return this.comment == null ? Codegen.empty() : this.comment;
+    public Optional<Output<String>> comment() {
+        return Optional.ofNullable(this.comment);
     }
 
     /**
@@ -54,10 +54,10 @@ public final class FunctionState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="etag")
-      private final @Nullable Output<String> etag;
+    private @Nullable Output<String> etag;
 
-    public Output<String> etag() {
-        return this.etag == null ? Codegen.empty() : this.etag;
+    public Optional<Output<String>> etag() {
+        return Optional.ofNullable(this.etag);
     }
 
     /**
@@ -65,10 +65,10 @@ public final class FunctionState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="liveStageEtag")
-      private final @Nullable Output<String> liveStageEtag;
+    private @Nullable Output<String> liveStageEtag;
 
-    public Output<String> liveStageEtag() {
-        return this.liveStageEtag == null ? Codegen.empty() : this.liveStageEtag;
+    public Optional<Output<String>> liveStageEtag() {
+        return Optional.ofNullable(this.liveStageEtag);
     }
 
     /**
@@ -76,10 +76,10 @@ public final class FunctionState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -87,10 +87,10 @@ public final class FunctionState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="publish")
-      private final @Nullable Output<Boolean> publish;
+    private @Nullable Output<Boolean> publish;
 
-    public Output<Boolean> publish() {
-        return this.publish == null ? Codegen.empty() : this.publish;
+    public Optional<Output<Boolean>> publish() {
+        return Optional.ofNullable(this.publish);
     }
 
     /**
@@ -98,10 +98,10 @@ public final class FunctionState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="runtime")
-      private final @Nullable Output<String> runtime;
+    private @Nullable Output<String> runtime;
 
-    public Output<String> runtime() {
-        return this.runtime == null ? Codegen.empty() : this.runtime;
+    public Optional<Output<String>> runtime() {
+        return Optional.ofNullable(this.runtime);
     }
 
     /**
@@ -109,154 +109,128 @@ public final class FunctionState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="status")
-      private final @Nullable Output<String> status;
+    private @Nullable Output<String> status;
 
-    public Output<String> status() {
-        return this.status == null ? Codegen.empty() : this.status;
+    public Optional<Output<String>> status() {
+        return Optional.ofNullable(this.status);
     }
 
-    public FunctionState(
-        @Nullable Output<String> arn,
-        @Nullable Output<String> code,
-        @Nullable Output<String> comment,
-        @Nullable Output<String> etag,
-        @Nullable Output<String> liveStageEtag,
-        @Nullable Output<String> name,
-        @Nullable Output<Boolean> publish,
-        @Nullable Output<String> runtime,
-        @Nullable Output<String> status) {
-        this.arn = arn;
-        this.code = code;
-        this.comment = comment;
-        this.etag = etag;
-        this.liveStageEtag = liveStageEtag;
-        this.name = name;
-        this.publish = publish;
-        this.runtime = runtime;
-        this.status = status;
-    }
+    private FunctionState() {}
 
-    private FunctionState() {
-        this.arn = Codegen.empty();
-        this.code = Codegen.empty();
-        this.comment = Codegen.empty();
-        this.etag = Codegen.empty();
-        this.liveStageEtag = Codegen.empty();
-        this.name = Codegen.empty();
-        this.publish = Codegen.empty();
-        this.runtime = Codegen.empty();
-        this.status = Codegen.empty();
+    private FunctionState(FunctionState $) {
+        this.arn = $.arn;
+        this.code = $.code;
+        this.comment = $.comment;
+        this.etag = $.etag;
+        this.liveStageEtag = $.liveStageEtag;
+        this.name = $.name;
+        this.publish = $.publish;
+        this.runtime = $.runtime;
+        this.status = $.status;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FunctionState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> arn;
-        private @Nullable Output<String> code;
-        private @Nullable Output<String> comment;
-        private @Nullable Output<String> etag;
-        private @Nullable Output<String> liveStageEtag;
-        private @Nullable Output<String> name;
-        private @Nullable Output<Boolean> publish;
-        private @Nullable Output<String> runtime;
-        private @Nullable Output<String> status;
+        private FunctionState $;
 
         public Builder() {
-    	      // Empty
+            $ = new FunctionState();
         }
 
         public Builder(FunctionState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.arn = defaults.arn;
-    	      this.code = defaults.code;
-    	      this.comment = defaults.comment;
-    	      this.etag = defaults.etag;
-    	      this.liveStageEtag = defaults.liveStageEtag;
-    	      this.name = defaults.name;
-    	      this.publish = defaults.publish;
-    	      this.runtime = defaults.runtime;
-    	      this.status = defaults.status;
+            $ = new FunctionState(Objects.requireNonNull(defaults));
         }
 
         public Builder arn(@Nullable Output<String> arn) {
-            this.arn = arn;
+            $.arn = arn;
             return this;
         }
-        public Builder arn(@Nullable String arn) {
-            this.arn = Codegen.ofNullable(arn);
-            return this;
+
+        public Builder arn(String arn) {
+            return arn(Output.of(arn));
         }
+
         public Builder code(@Nullable Output<String> code) {
-            this.code = code;
+            $.code = code;
             return this;
         }
-        public Builder code(@Nullable String code) {
-            this.code = Codegen.ofNullable(code);
-            return this;
+
+        public Builder code(String code) {
+            return code(Output.of(code));
         }
+
         public Builder comment(@Nullable Output<String> comment) {
-            this.comment = comment;
+            $.comment = comment;
             return this;
         }
-        public Builder comment(@Nullable String comment) {
-            this.comment = Codegen.ofNullable(comment);
-            return this;
+
+        public Builder comment(String comment) {
+            return comment(Output.of(comment));
         }
+
         public Builder etag(@Nullable Output<String> etag) {
-            this.etag = etag;
+            $.etag = etag;
             return this;
         }
-        public Builder etag(@Nullable String etag) {
-            this.etag = Codegen.ofNullable(etag);
-            return this;
+
+        public Builder etag(String etag) {
+            return etag(Output.of(etag));
         }
+
         public Builder liveStageEtag(@Nullable Output<String> liveStageEtag) {
-            this.liveStageEtag = liveStageEtag;
+            $.liveStageEtag = liveStageEtag;
             return this;
         }
-        public Builder liveStageEtag(@Nullable String liveStageEtag) {
-            this.liveStageEtag = Codegen.ofNullable(liveStageEtag);
-            return this;
+
+        public Builder liveStageEtag(String liveStageEtag) {
+            return liveStageEtag(Output.of(liveStageEtag));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder publish(@Nullable Output<Boolean> publish) {
-            this.publish = publish;
+            $.publish = publish;
             return this;
         }
-        public Builder publish(@Nullable Boolean publish) {
-            this.publish = Codegen.ofNullable(publish);
-            return this;
+
+        public Builder publish(Boolean publish) {
+            return publish(Output.of(publish));
         }
+
         public Builder runtime(@Nullable Output<String> runtime) {
-            this.runtime = runtime;
+            $.runtime = runtime;
             return this;
         }
-        public Builder runtime(@Nullable String runtime) {
-            this.runtime = Codegen.ofNullable(runtime);
-            return this;
+
+        public Builder runtime(String runtime) {
+            return runtime(Output.of(runtime));
         }
+
         public Builder status(@Nullable Output<String> status) {
-            this.status = status;
+            $.status = status;
             return this;
         }
-        public Builder status(@Nullable String status) {
-            this.status = Codegen.ofNullable(status);
-            return this;
-        }        public FunctionState build() {
-            return new FunctionState(arn, code, comment, etag, liveStageEtag, name, publish, runtime, status);
+
+        public Builder status(String status) {
+            return status(Output.of(status));
+        }
+
+        public FunctionState build() {
+            return $;
         }
     }
+
 }

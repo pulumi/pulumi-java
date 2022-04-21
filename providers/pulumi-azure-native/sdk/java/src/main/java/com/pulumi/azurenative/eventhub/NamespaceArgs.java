@@ -6,12 +6,12 @@ package com.pulumi.azurenative.eventhub;
 import com.pulumi.azurenative.eventhub.inputs.SkuArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class NamespaceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="isAutoInflateEnabled")
-      private final @Nullable Output<Boolean> isAutoInflateEnabled;
+    private @Nullable Output<Boolean> isAutoInflateEnabled;
 
-    public Output<Boolean> isAutoInflateEnabled() {
-        return this.isAutoInflateEnabled == null ? Codegen.empty() : this.isAutoInflateEnabled;
+    public Optional<Output<Boolean>> isAutoInflateEnabled() {
+        return Optional.ofNullable(this.isAutoInflateEnabled);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class NamespaceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="kafkaEnabled")
-      private final @Nullable Output<Boolean> kafkaEnabled;
+    private @Nullable Output<Boolean> kafkaEnabled;
 
-    public Output<Boolean> kafkaEnabled() {
-        return this.kafkaEnabled == null ? Codegen.empty() : this.kafkaEnabled;
+    public Optional<Output<Boolean>> kafkaEnabled() {
+        return Optional.ofNullable(this.kafkaEnabled);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class NamespaceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -57,10 +57,10 @@ public final class NamespaceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="maximumThroughputUnits")
-      private final @Nullable Output<Integer> maximumThroughputUnits;
+    private @Nullable Output<Integer> maximumThroughputUnits;
 
-    public Output<Integer> maximumThroughputUnits() {
-        return this.maximumThroughputUnits == null ? Codegen.empty() : this.maximumThroughputUnits;
+    public Optional<Output<Integer>> maximumThroughputUnits() {
+        return Optional.ofNullable(this.maximumThroughputUnits);
     }
 
     /**
@@ -68,10 +68,10 @@ public final class NamespaceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="namespaceName")
-      private final @Nullable Output<String> namespaceName;
+    private @Nullable Output<String> namespaceName;
 
-    public Output<String> namespaceName() {
-        return this.namespaceName == null ? Codegen.empty() : this.namespaceName;
+    public Optional<Output<String>> namespaceName() {
+        return Optional.ofNullable(this.namespaceName);
     }
 
     /**
@@ -79,7 +79,7 @@ public final class NamespaceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -90,10 +90,10 @@ public final class NamespaceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="sku")
-      private final @Nullable Output<SkuArgs> sku;
+    private @Nullable Output<SkuArgs> sku;
 
-    public Output<SkuArgs> sku() {
-        return this.sku == null ? Codegen.empty() : this.sku;
+    public Optional<Output<SkuArgs>> sku() {
+        return Optional.ofNullable(this.sku);
     }
 
     /**
@@ -101,141 +101,119 @@ public final class NamespaceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public NamespaceArgs(
-        @Nullable Output<Boolean> isAutoInflateEnabled,
-        @Nullable Output<Boolean> kafkaEnabled,
-        @Nullable Output<String> location,
-        @Nullable Output<Integer> maximumThroughputUnits,
-        @Nullable Output<String> namespaceName,
-        Output<String> resourceGroupName,
-        @Nullable Output<SkuArgs> sku,
-        @Nullable Output<Map<String,String>> tags) {
-        this.isAutoInflateEnabled = isAutoInflateEnabled;
-        this.kafkaEnabled = kafkaEnabled;
-        this.location = location;
-        this.maximumThroughputUnits = maximumThroughputUnits;
-        this.namespaceName = namespaceName;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.sku = sku;
-        this.tags = tags;
-    }
+    private NamespaceArgs() {}
 
-    private NamespaceArgs() {
-        this.isAutoInflateEnabled = Codegen.empty();
-        this.kafkaEnabled = Codegen.empty();
-        this.location = Codegen.empty();
-        this.maximumThroughputUnits = Codegen.empty();
-        this.namespaceName = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.sku = Codegen.empty();
-        this.tags = Codegen.empty();
+    private NamespaceArgs(NamespaceArgs $) {
+        this.isAutoInflateEnabled = $.isAutoInflateEnabled;
+        this.kafkaEnabled = $.kafkaEnabled;
+        this.location = $.location;
+        this.maximumThroughputUnits = $.maximumThroughputUnits;
+        this.namespaceName = $.namespaceName;
+        this.resourceGroupName = $.resourceGroupName;
+        this.sku = $.sku;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NamespaceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> isAutoInflateEnabled;
-        private @Nullable Output<Boolean> kafkaEnabled;
-        private @Nullable Output<String> location;
-        private @Nullable Output<Integer> maximumThroughputUnits;
-        private @Nullable Output<String> namespaceName;
-        private Output<String> resourceGroupName;
-        private @Nullable Output<SkuArgs> sku;
-        private @Nullable Output<Map<String,String>> tags;
+        private NamespaceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new NamespaceArgs();
         }
 
         public Builder(NamespaceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.isAutoInflateEnabled = defaults.isAutoInflateEnabled;
-    	      this.kafkaEnabled = defaults.kafkaEnabled;
-    	      this.location = defaults.location;
-    	      this.maximumThroughputUnits = defaults.maximumThroughputUnits;
-    	      this.namespaceName = defaults.namespaceName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.sku = defaults.sku;
-    	      this.tags = defaults.tags;
+            $ = new NamespaceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder isAutoInflateEnabled(@Nullable Output<Boolean> isAutoInflateEnabled) {
-            this.isAutoInflateEnabled = isAutoInflateEnabled;
+            $.isAutoInflateEnabled = isAutoInflateEnabled;
             return this;
         }
-        public Builder isAutoInflateEnabled(@Nullable Boolean isAutoInflateEnabled) {
-            this.isAutoInflateEnabled = Codegen.ofNullable(isAutoInflateEnabled);
-            return this;
+
+        public Builder isAutoInflateEnabled(Boolean isAutoInflateEnabled) {
+            return isAutoInflateEnabled(Output.of(isAutoInflateEnabled));
         }
+
         public Builder kafkaEnabled(@Nullable Output<Boolean> kafkaEnabled) {
-            this.kafkaEnabled = kafkaEnabled;
+            $.kafkaEnabled = kafkaEnabled;
             return this;
         }
-        public Builder kafkaEnabled(@Nullable Boolean kafkaEnabled) {
-            this.kafkaEnabled = Codegen.ofNullable(kafkaEnabled);
-            return this;
+
+        public Builder kafkaEnabled(Boolean kafkaEnabled) {
+            return kafkaEnabled(Output.of(kafkaEnabled));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder maximumThroughputUnits(@Nullable Output<Integer> maximumThroughputUnits) {
-            this.maximumThroughputUnits = maximumThroughputUnits;
+            $.maximumThroughputUnits = maximumThroughputUnits;
             return this;
         }
-        public Builder maximumThroughputUnits(@Nullable Integer maximumThroughputUnits) {
-            this.maximumThroughputUnits = Codegen.ofNullable(maximumThroughputUnits);
-            return this;
+
+        public Builder maximumThroughputUnits(Integer maximumThroughputUnits) {
+            return maximumThroughputUnits(Output.of(maximumThroughputUnits));
         }
+
         public Builder namespaceName(@Nullable Output<String> namespaceName) {
-            this.namespaceName = namespaceName;
+            $.namespaceName = namespaceName;
             return this;
         }
-        public Builder namespaceName(@Nullable String namespaceName) {
-            this.namespaceName = Codegen.ofNullable(namespaceName);
-            return this;
+
+        public Builder namespaceName(String namespaceName) {
+            return namespaceName(Output.of(namespaceName));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder sku(@Nullable Output<SkuArgs> sku) {
-            this.sku = sku;
+            $.sku = sku;
             return this;
         }
-        public Builder sku(@Nullable SkuArgs sku) {
-            this.sku = Codegen.ofNullable(sku);
-            return this;
+
+        public Builder sku(SkuArgs sku) {
+            return sku(Output.of(sku));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
-        }        public NamespaceArgs build() {
-            return new NamespaceArgs(isAutoInflateEnabled, kafkaEnabled, location, maximumThroughputUnits, namespaceName, resourceGroupName, sku, tags);
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
+        }
+
+        public NamespaceArgs build() {
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

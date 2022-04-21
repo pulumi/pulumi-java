@@ -28,7 +28,7 @@ public final class ExecutionStatisticsResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="cpuTimeMs", required=true)
-      private final Double cpuTimeMs;
+    private Double cpuTimeMs;
 
     public Double cpuTimeMs() {
         return this.cpuTimeMs;
@@ -39,7 +39,7 @@ public final class ExecutionStatisticsResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="elapsedTimeMs", required=true)
-      private final Double elapsedTimeMs;
+    private Double elapsedTimeMs;
 
     public Double elapsedTimeMs() {
         return this.elapsedTimeMs;
@@ -50,7 +50,7 @@ public final class ExecutionStatisticsResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="executionCount", required=true)
-      private final Double executionCount;
+    private Double executionCount;
 
     public Double executionCount() {
         return this.executionCount;
@@ -61,7 +61,7 @@ public final class ExecutionStatisticsResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="hasErrors", required=true)
-      private final Boolean hasErrors;
+    private Boolean hasErrors;
 
     public Boolean hasErrors() {
         return this.hasErrors;
@@ -72,7 +72,7 @@ public final class ExecutionStatisticsResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="sqlErrors", required=true)
-      private final List<String> sqlErrors;
+    private List<String> sqlErrors;
 
     public List<String> sqlErrors() {
         return this.sqlErrors;
@@ -83,94 +83,83 @@ public final class ExecutionStatisticsResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="waitStats")
-      private final @Nullable Map<String,WaitStatisticsResponse> waitStats;
+    private @Nullable Map<String,WaitStatisticsResponse> waitStats;
 
-    public Map<String,WaitStatisticsResponse> waitStats() {
-        return this.waitStats == null ? Map.of() : this.waitStats;
+    public Optional<Map<String,WaitStatisticsResponse>> waitStats() {
+        return Optional.ofNullable(this.waitStats);
     }
 
-    public ExecutionStatisticsResponse(
-        Double cpuTimeMs,
-        Double elapsedTimeMs,
-        Double executionCount,
-        Boolean hasErrors,
-        List<String> sqlErrors,
-        @Nullable Map<String,WaitStatisticsResponse> waitStats) {
-        this.cpuTimeMs = Objects.requireNonNull(cpuTimeMs, "expected parameter 'cpuTimeMs' to be non-null");
-        this.elapsedTimeMs = Objects.requireNonNull(elapsedTimeMs, "expected parameter 'elapsedTimeMs' to be non-null");
-        this.executionCount = Objects.requireNonNull(executionCount, "expected parameter 'executionCount' to be non-null");
-        this.hasErrors = Objects.requireNonNull(hasErrors, "expected parameter 'hasErrors' to be non-null");
-        this.sqlErrors = Objects.requireNonNull(sqlErrors, "expected parameter 'sqlErrors' to be non-null");
-        this.waitStats = waitStats;
-    }
+    private ExecutionStatisticsResponse() {}
 
-    private ExecutionStatisticsResponse() {
-        this.cpuTimeMs = null;
-        this.elapsedTimeMs = null;
-        this.executionCount = null;
-        this.hasErrors = null;
-        this.sqlErrors = List.of();
-        this.waitStats = Map.of();
+    private ExecutionStatisticsResponse(ExecutionStatisticsResponse $) {
+        this.cpuTimeMs = $.cpuTimeMs;
+        this.elapsedTimeMs = $.elapsedTimeMs;
+        this.executionCount = $.executionCount;
+        this.hasErrors = $.hasErrors;
+        this.sqlErrors = $.sqlErrors;
+        this.waitStats = $.waitStats;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ExecutionStatisticsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Double cpuTimeMs;
-        private Double elapsedTimeMs;
-        private Double executionCount;
-        private Boolean hasErrors;
-        private List<String> sqlErrors;
-        private @Nullable Map<String,WaitStatisticsResponse> waitStats;
+        private ExecutionStatisticsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ExecutionStatisticsResponse();
         }
 
         public Builder(ExecutionStatisticsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cpuTimeMs = defaults.cpuTimeMs;
-    	      this.elapsedTimeMs = defaults.elapsedTimeMs;
-    	      this.executionCount = defaults.executionCount;
-    	      this.hasErrors = defaults.hasErrors;
-    	      this.sqlErrors = defaults.sqlErrors;
-    	      this.waitStats = defaults.waitStats;
+            $ = new ExecutionStatisticsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder cpuTimeMs(Double cpuTimeMs) {
-            this.cpuTimeMs = Objects.requireNonNull(cpuTimeMs);
+            $.cpuTimeMs = cpuTimeMs;
             return this;
         }
+
         public Builder elapsedTimeMs(Double elapsedTimeMs) {
-            this.elapsedTimeMs = Objects.requireNonNull(elapsedTimeMs);
+            $.elapsedTimeMs = elapsedTimeMs;
             return this;
         }
+
         public Builder executionCount(Double executionCount) {
-            this.executionCount = Objects.requireNonNull(executionCount);
+            $.executionCount = executionCount;
             return this;
         }
+
         public Builder hasErrors(Boolean hasErrors) {
-            this.hasErrors = Objects.requireNonNull(hasErrors);
+            $.hasErrors = hasErrors;
             return this;
         }
+
         public Builder sqlErrors(List<String> sqlErrors) {
-            this.sqlErrors = Objects.requireNonNull(sqlErrors);
+            $.sqlErrors = sqlErrors;
             return this;
         }
+
         public Builder sqlErrors(String... sqlErrors) {
             return sqlErrors(List.of(sqlErrors));
         }
+
         public Builder waitStats(@Nullable Map<String,WaitStatisticsResponse> waitStats) {
-            this.waitStats = waitStats;
+            $.waitStats = waitStats;
             return this;
-        }        public ExecutionStatisticsResponse build() {
-            return new ExecutionStatisticsResponse(cpuTimeMs, elapsedTimeMs, executionCount, hasErrors, sqlErrors, waitStats);
+        }
+
+        public ExecutionStatisticsResponse build() {
+            $.cpuTimeMs = Objects.requireNonNull($.cpuTimeMs, "expected parameter 'cpuTimeMs' to be non-null");
+            $.elapsedTimeMs = Objects.requireNonNull($.elapsedTimeMs, "expected parameter 'elapsedTimeMs' to be non-null");
+            $.executionCount = Objects.requireNonNull($.executionCount, "expected parameter 'executionCount' to be non-null");
+            $.hasErrors = Objects.requireNonNull($.hasErrors, "expected parameter 'hasErrors' to be non-null");
+            $.sqlErrors = Objects.requireNonNull($.sqlErrors, "expected parameter 'sqlErrors' to be non-null");
+            return $;
         }
     }
+
 }

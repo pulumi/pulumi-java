@@ -5,10 +5,10 @@ package com.pulumi.googlenative.retail_v2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class GoogleCloudRetailV2ImageArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="height")
-      private final @Nullable Output<Integer> height;
+    private @Nullable Output<Integer> height;
 
-    public Output<Integer> height() {
-        return this.height == null ? Codegen.empty() : this.height;
+    public Optional<Output<Integer>> height() {
+        return Optional.ofNullable(this.height);
     }
 
     /**
@@ -36,7 +36,7 @@ public final class GoogleCloudRetailV2ImageArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="uri", required=true)
-      private final Output<String> uri;
+    private Output<String> uri;
 
     public Output<String> uri() {
         return this.uri;
@@ -47,76 +47,69 @@ public final class GoogleCloudRetailV2ImageArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="width")
-      private final @Nullable Output<Integer> width;
+    private @Nullable Output<Integer> width;
 
-    public Output<Integer> width() {
-        return this.width == null ? Codegen.empty() : this.width;
+    public Optional<Output<Integer>> width() {
+        return Optional.ofNullable(this.width);
     }
 
-    public GoogleCloudRetailV2ImageArgs(
-        @Nullable Output<Integer> height,
-        Output<String> uri,
-        @Nullable Output<Integer> width) {
-        this.height = height;
-        this.uri = Objects.requireNonNull(uri, "expected parameter 'uri' to be non-null");
-        this.width = width;
-    }
+    private GoogleCloudRetailV2ImageArgs() {}
 
-    private GoogleCloudRetailV2ImageArgs() {
-        this.height = Codegen.empty();
-        this.uri = Codegen.empty();
-        this.width = Codegen.empty();
+    private GoogleCloudRetailV2ImageArgs(GoogleCloudRetailV2ImageArgs $) {
+        this.height = $.height;
+        this.uri = $.uri;
+        this.width = $.width;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudRetailV2ImageArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> height;
-        private Output<String> uri;
-        private @Nullable Output<Integer> width;
+        private GoogleCloudRetailV2ImageArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudRetailV2ImageArgs();
         }
 
         public Builder(GoogleCloudRetailV2ImageArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.height = defaults.height;
-    	      this.uri = defaults.uri;
-    	      this.width = defaults.width;
+            $ = new GoogleCloudRetailV2ImageArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder height(@Nullable Output<Integer> height) {
-            this.height = height;
+            $.height = height;
             return this;
         }
-        public Builder height(@Nullable Integer height) {
-            this.height = Codegen.ofNullable(height);
-            return this;
+
+        public Builder height(Integer height) {
+            return height(Output.of(height));
         }
+
         public Builder uri(Output<String> uri) {
-            this.uri = Objects.requireNonNull(uri);
+            $.uri = uri;
             return this;
         }
+
         public Builder uri(String uri) {
-            this.uri = Output.of(Objects.requireNonNull(uri));
-            return this;
+            return uri(Output.of(uri));
         }
+
         public Builder width(@Nullable Output<Integer> width) {
-            this.width = width;
+            $.width = width;
             return this;
         }
-        public Builder width(@Nullable Integer width) {
-            this.width = Codegen.ofNullable(width);
-            return this;
-        }        public GoogleCloudRetailV2ImageArgs build() {
-            return new GoogleCloudRetailV2ImageArgs(height, uri, width);
+
+        public Builder width(Integer width) {
+            return width(Output.of(width));
+        }
+
+        public GoogleCloudRetailV2ImageArgs build() {
+            $.uri = Objects.requireNonNull($.uri, "expected parameter 'uri' to be non-null");
+            return $;
         }
     }
+
 }

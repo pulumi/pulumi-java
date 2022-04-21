@@ -7,9 +7,9 @@ import com.pulumi.azurenative.containerregistry.enums.TokenCertificateName;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class TokenCertificateArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="encodedPemCertificate")
-      private final @Nullable Output<String> encodedPemCertificate;
+    private @Nullable Output<String> encodedPemCertificate;
 
-    public Output<String> encodedPemCertificate() {
-        return this.encodedPemCertificate == null ? Codegen.empty() : this.encodedPemCertificate;
+    public Optional<Output<String>> encodedPemCertificate() {
+        return Optional.ofNullable(this.encodedPemCertificate);
     }
 
     /**
@@ -37,17 +37,17 @@ public final class TokenCertificateArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="expiry")
-      private final @Nullable Output<String> expiry;
+    private @Nullable Output<String> expiry;
 
-    public Output<String> expiry() {
-        return this.expiry == null ? Codegen.empty() : this.expiry;
+    public Optional<Output<String>> expiry() {
+        return Optional.ofNullable(this.expiry);
     }
 
     @Import(name="name")
-      private final @Nullable Output<Either<String,TokenCertificateName>> name;
+    private @Nullable Output<Either<String,TokenCertificateName>> name;
 
-    public Output<Either<String,TokenCertificateName>> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<Either<String,TokenCertificateName>>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -55,89 +55,78 @@ public final class TokenCertificateArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="thumbprint")
-      private final @Nullable Output<String> thumbprint;
+    private @Nullable Output<String> thumbprint;
 
-    public Output<String> thumbprint() {
-        return this.thumbprint == null ? Codegen.empty() : this.thumbprint;
+    public Optional<Output<String>> thumbprint() {
+        return Optional.ofNullable(this.thumbprint);
     }
 
-    public TokenCertificateArgs(
-        @Nullable Output<String> encodedPemCertificate,
-        @Nullable Output<String> expiry,
-        @Nullable Output<Either<String,TokenCertificateName>> name,
-        @Nullable Output<String> thumbprint) {
-        this.encodedPemCertificate = encodedPemCertificate;
-        this.expiry = expiry;
-        this.name = name;
-        this.thumbprint = thumbprint;
-    }
+    private TokenCertificateArgs() {}
 
-    private TokenCertificateArgs() {
-        this.encodedPemCertificate = Codegen.empty();
-        this.expiry = Codegen.empty();
-        this.name = Codegen.empty();
-        this.thumbprint = Codegen.empty();
+    private TokenCertificateArgs(TokenCertificateArgs $) {
+        this.encodedPemCertificate = $.encodedPemCertificate;
+        this.expiry = $.expiry;
+        this.name = $.name;
+        this.thumbprint = $.thumbprint;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TokenCertificateArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> encodedPemCertificate;
-        private @Nullable Output<String> expiry;
-        private @Nullable Output<Either<String,TokenCertificateName>> name;
-        private @Nullable Output<String> thumbprint;
+        private TokenCertificateArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TokenCertificateArgs();
         }
 
         public Builder(TokenCertificateArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.encodedPemCertificate = defaults.encodedPemCertificate;
-    	      this.expiry = defaults.expiry;
-    	      this.name = defaults.name;
-    	      this.thumbprint = defaults.thumbprint;
+            $ = new TokenCertificateArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder encodedPemCertificate(@Nullable Output<String> encodedPemCertificate) {
-            this.encodedPemCertificate = encodedPemCertificate;
+            $.encodedPemCertificate = encodedPemCertificate;
             return this;
         }
-        public Builder encodedPemCertificate(@Nullable String encodedPemCertificate) {
-            this.encodedPemCertificate = Codegen.ofNullable(encodedPemCertificate);
-            return this;
+
+        public Builder encodedPemCertificate(String encodedPemCertificate) {
+            return encodedPemCertificate(Output.of(encodedPemCertificate));
         }
+
         public Builder expiry(@Nullable Output<String> expiry) {
-            this.expiry = expiry;
+            $.expiry = expiry;
             return this;
         }
-        public Builder expiry(@Nullable String expiry) {
-            this.expiry = Codegen.ofNullable(expiry);
-            return this;
+
+        public Builder expiry(String expiry) {
+            return expiry(Output.of(expiry));
         }
+
         public Builder name(@Nullable Output<Either<String,TokenCertificateName>> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable Either<String,TokenCertificateName> name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(Either<String,TokenCertificateName> name) {
+            return name(Output.of(name));
         }
+
         public Builder thumbprint(@Nullable Output<String> thumbprint) {
-            this.thumbprint = thumbprint;
+            $.thumbprint = thumbprint;
             return this;
         }
-        public Builder thumbprint(@Nullable String thumbprint) {
-            this.thumbprint = Codegen.ofNullable(thumbprint);
-            return this;
-        }        public TokenCertificateArgs build() {
-            return new TokenCertificateArgs(encodedPemCertificate, expiry, name, thumbprint);
+
+        public Builder thumbprint(String thumbprint) {
+            return thumbprint(Output.of(thumbprint));
+        }
+
+        public TokenCertificateArgs build() {
+            return $;
         }
     }
+
 }

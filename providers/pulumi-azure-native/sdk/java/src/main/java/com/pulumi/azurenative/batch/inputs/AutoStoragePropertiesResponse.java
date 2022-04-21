@@ -21,7 +21,7 @@ public final class AutoStoragePropertiesResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="lastKeySync", required=true)
-      private final String lastKeySync;
+    private String lastKeySync;
 
     public String lastKeySync() {
         return this.lastKeySync;
@@ -32,55 +32,52 @@ public final class AutoStoragePropertiesResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="storageAccountId", required=true)
-      private final String storageAccountId;
+    private String storageAccountId;
 
     public String storageAccountId() {
         return this.storageAccountId;
     }
 
-    public AutoStoragePropertiesResponse(
-        String lastKeySync,
-        String storageAccountId) {
-        this.lastKeySync = Objects.requireNonNull(lastKeySync, "expected parameter 'lastKeySync' to be non-null");
-        this.storageAccountId = Objects.requireNonNull(storageAccountId, "expected parameter 'storageAccountId' to be non-null");
-    }
+    private AutoStoragePropertiesResponse() {}
 
-    private AutoStoragePropertiesResponse() {
-        this.lastKeySync = null;
-        this.storageAccountId = null;
+    private AutoStoragePropertiesResponse(AutoStoragePropertiesResponse $) {
+        this.lastKeySync = $.lastKeySync;
+        this.storageAccountId = $.storageAccountId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AutoStoragePropertiesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String lastKeySync;
-        private String storageAccountId;
+        private AutoStoragePropertiesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AutoStoragePropertiesResponse();
         }
 
         public Builder(AutoStoragePropertiesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.lastKeySync = defaults.lastKeySync;
-    	      this.storageAccountId = defaults.storageAccountId;
+            $ = new AutoStoragePropertiesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder lastKeySync(String lastKeySync) {
-            this.lastKeySync = Objects.requireNonNull(lastKeySync);
+            $.lastKeySync = lastKeySync;
             return this;
         }
+
         public Builder storageAccountId(String storageAccountId) {
-            this.storageAccountId = Objects.requireNonNull(storageAccountId);
+            $.storageAccountId = storageAccountId;
             return this;
-        }        public AutoStoragePropertiesResponse build() {
-            return new AutoStoragePropertiesResponse(lastKeySync, storageAccountId);
+        }
+
+        public AutoStoragePropertiesResponse build() {
+            $.lastKeySync = Objects.requireNonNull($.lastKeySync, "expected parameter 'lastKeySync' to be non-null");
+            $.storageAccountId = Objects.requireNonNull($.storageAccountId, "expected parameter 'storageAccountId' to be non-null");
+            return $;
         }
     }
+
 }

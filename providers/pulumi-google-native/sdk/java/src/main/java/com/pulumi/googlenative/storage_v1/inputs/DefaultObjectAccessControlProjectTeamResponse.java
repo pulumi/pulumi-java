@@ -21,7 +21,7 @@ public final class DefaultObjectAccessControlProjectTeamResponse extends com.pul
      * 
      */
     @Import(name="projectNumber", required=true)
-      private final String projectNumber;
+    private String projectNumber;
 
     public String projectNumber() {
         return this.projectNumber;
@@ -32,55 +32,52 @@ public final class DefaultObjectAccessControlProjectTeamResponse extends com.pul
      * 
      */
     @Import(name="team", required=true)
-      private final String team;
+    private String team;
 
     public String team() {
         return this.team;
     }
 
-    public DefaultObjectAccessControlProjectTeamResponse(
-        String projectNumber,
-        String team) {
-        this.projectNumber = Objects.requireNonNull(projectNumber, "expected parameter 'projectNumber' to be non-null");
-        this.team = Objects.requireNonNull(team, "expected parameter 'team' to be non-null");
-    }
+    private DefaultObjectAccessControlProjectTeamResponse() {}
 
-    private DefaultObjectAccessControlProjectTeamResponse() {
-        this.projectNumber = null;
-        this.team = null;
+    private DefaultObjectAccessControlProjectTeamResponse(DefaultObjectAccessControlProjectTeamResponse $) {
+        this.projectNumber = $.projectNumber;
+        this.team = $.team;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DefaultObjectAccessControlProjectTeamResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String projectNumber;
-        private String team;
+        private DefaultObjectAccessControlProjectTeamResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new DefaultObjectAccessControlProjectTeamResponse();
         }
 
         public Builder(DefaultObjectAccessControlProjectTeamResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.projectNumber = defaults.projectNumber;
-    	      this.team = defaults.team;
+            $ = new DefaultObjectAccessControlProjectTeamResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder projectNumber(String projectNumber) {
-            this.projectNumber = Objects.requireNonNull(projectNumber);
+            $.projectNumber = projectNumber;
             return this;
         }
+
         public Builder team(String team) {
-            this.team = Objects.requireNonNull(team);
+            $.team = team;
             return this;
-        }        public DefaultObjectAccessControlProjectTeamResponse build() {
-            return new DefaultObjectAccessControlProjectTeamResponse(projectNumber, team);
+        }
+
+        public DefaultObjectAccessControlProjectTeamResponse build() {
+            $.projectNumber = Objects.requireNonNull($.projectNumber, "expected parameter 'projectNumber' to be non-null");
+            $.team = Objects.requireNonNull($.team, "expected parameter 'team' to be non-null");
+            return $;
         }
     }
+
 }

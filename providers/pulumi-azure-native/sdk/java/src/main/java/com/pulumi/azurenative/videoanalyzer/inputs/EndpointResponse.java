@@ -23,10 +23,10 @@ public final class EndpointResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="endpointUrl")
-      private final @Nullable String endpointUrl;
+    private @Nullable String endpointUrl;
 
     public Optional<String> endpointUrl() {
-        return this.endpointUrl == null ? Optional.empty() : Optional.ofNullable(this.endpointUrl);
+        return Optional.ofNullable(this.endpointUrl);
     }
 
     /**
@@ -34,55 +34,51 @@ public final class EndpointResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
     }
 
-    public EndpointResponse(
-        @Nullable String endpointUrl,
-        String type) {
-        this.endpointUrl = endpointUrl;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private EndpointResponse() {}
 
-    private EndpointResponse() {
-        this.endpointUrl = null;
-        this.type = null;
+    private EndpointResponse(EndpointResponse $) {
+        this.endpointUrl = $.endpointUrl;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EndpointResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String endpointUrl;
-        private String type;
+        private EndpointResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new EndpointResponse();
         }
 
         public Builder(EndpointResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.endpointUrl = defaults.endpointUrl;
-    	      this.type = defaults.type;
+            $ = new EndpointResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder endpointUrl(@Nullable String endpointUrl) {
-            this.endpointUrl = endpointUrl;
+            $.endpointUrl = endpointUrl;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
-        }        public EndpointResponse build() {
-            return new EndpointResponse(endpointUrl, type);
+        }
+
+        public EndpointResponse build() {
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

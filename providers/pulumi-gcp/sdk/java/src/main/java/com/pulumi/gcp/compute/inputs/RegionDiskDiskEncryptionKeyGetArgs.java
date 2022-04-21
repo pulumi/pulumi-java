@@ -5,9 +5,9 @@ package com.pulumi.gcp.compute.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class RegionDiskDiskEncryptionKeyGetArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="kmsKeyName")
-      private final @Nullable Output<String> kmsKeyName;
+    private @Nullable Output<String> kmsKeyName;
 
-    public Output<String> kmsKeyName() {
-        return this.kmsKeyName == null ? Codegen.empty() : this.kmsKeyName;
+    public Optional<Output<String>> kmsKeyName() {
+        return Optional.ofNullable(this.kmsKeyName);
     }
 
     /**
@@ -32,10 +32,10 @@ public final class RegionDiskDiskEncryptionKeyGetArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="rawKey")
-      private final @Nullable Output<String> rawKey;
+    private @Nullable Output<String> rawKey;
 
-    public Output<String> rawKey() {
-        return this.rawKey == null ? Codegen.empty() : this.rawKey;
+    public Optional<Output<String>> rawKey() {
+        return Optional.ofNullable(this.rawKey);
     }
 
     /**
@@ -45,76 +45,68 @@ public final class RegionDiskDiskEncryptionKeyGetArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="sha256")
-      private final @Nullable Output<String> sha256;
+    private @Nullable Output<String> sha256;
 
-    public Output<String> sha256() {
-        return this.sha256 == null ? Codegen.empty() : this.sha256;
+    public Optional<Output<String>> sha256() {
+        return Optional.ofNullable(this.sha256);
     }
 
-    public RegionDiskDiskEncryptionKeyGetArgs(
-        @Nullable Output<String> kmsKeyName,
-        @Nullable Output<String> rawKey,
-        @Nullable Output<String> sha256) {
-        this.kmsKeyName = kmsKeyName;
-        this.rawKey = rawKey;
-        this.sha256 = sha256;
-    }
+    private RegionDiskDiskEncryptionKeyGetArgs() {}
 
-    private RegionDiskDiskEncryptionKeyGetArgs() {
-        this.kmsKeyName = Codegen.empty();
-        this.rawKey = Codegen.empty();
-        this.sha256 = Codegen.empty();
+    private RegionDiskDiskEncryptionKeyGetArgs(RegionDiskDiskEncryptionKeyGetArgs $) {
+        this.kmsKeyName = $.kmsKeyName;
+        this.rawKey = $.rawKey;
+        this.sha256 = $.sha256;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RegionDiskDiskEncryptionKeyGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> kmsKeyName;
-        private @Nullable Output<String> rawKey;
-        private @Nullable Output<String> sha256;
+        private RegionDiskDiskEncryptionKeyGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RegionDiskDiskEncryptionKeyGetArgs();
         }
 
         public Builder(RegionDiskDiskEncryptionKeyGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.kmsKeyName = defaults.kmsKeyName;
-    	      this.rawKey = defaults.rawKey;
-    	      this.sha256 = defaults.sha256;
+            $ = new RegionDiskDiskEncryptionKeyGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder kmsKeyName(@Nullable Output<String> kmsKeyName) {
-            this.kmsKeyName = kmsKeyName;
+            $.kmsKeyName = kmsKeyName;
             return this;
         }
-        public Builder kmsKeyName(@Nullable String kmsKeyName) {
-            this.kmsKeyName = Codegen.ofNullable(kmsKeyName);
-            return this;
+
+        public Builder kmsKeyName(String kmsKeyName) {
+            return kmsKeyName(Output.of(kmsKeyName));
         }
+
         public Builder rawKey(@Nullable Output<String> rawKey) {
-            this.rawKey = rawKey;
+            $.rawKey = rawKey;
             return this;
         }
-        public Builder rawKey(@Nullable String rawKey) {
-            this.rawKey = Codegen.ofNullable(rawKey);
-            return this;
+
+        public Builder rawKey(String rawKey) {
+            return rawKey(Output.of(rawKey));
         }
+
         public Builder sha256(@Nullable Output<String> sha256) {
-            this.sha256 = sha256;
+            $.sha256 = sha256;
             return this;
         }
-        public Builder sha256(@Nullable String sha256) {
-            this.sha256 = Codegen.ofNullable(sha256);
-            return this;
-        }        public RegionDiskDiskEncryptionKeyGetArgs build() {
-            return new RegionDiskDiskEncryptionKeyGetArgs(kmsKeyName, rawKey, sha256);
+
+        public Builder sha256(String sha256) {
+            return sha256(Output.of(sha256));
+        }
+
+        public RegionDiskDiskEncryptionKeyGetArgs build() {
+            return $;
         }
     }
+
 }

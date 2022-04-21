@@ -5,9 +5,9 @@ package com.pulumi.azurenative.synapse.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class DataLakeStorageAccountDetailsArgs extends com.pulumi.resource
      * 
      */
     @Import(name="accountUrl")
-      private final @Nullable Output<String> accountUrl;
+    private @Nullable Output<String> accountUrl;
 
-    public Output<String> accountUrl() {
-        return this.accountUrl == null ? Codegen.empty() : this.accountUrl;
+    public Optional<Output<String>> accountUrl() {
+        return Optional.ofNullable(this.accountUrl);
     }
 
     /**
@@ -35,63 +35,58 @@ public final class DataLakeStorageAccountDetailsArgs extends com.pulumi.resource
      * 
      */
     @Import(name="filesystem")
-      private final @Nullable Output<String> filesystem;
+    private @Nullable Output<String> filesystem;
 
-    public Output<String> filesystem() {
-        return this.filesystem == null ? Codegen.empty() : this.filesystem;
+    public Optional<Output<String>> filesystem() {
+        return Optional.ofNullable(this.filesystem);
     }
 
-    public DataLakeStorageAccountDetailsArgs(
-        @Nullable Output<String> accountUrl,
-        @Nullable Output<String> filesystem) {
-        this.accountUrl = accountUrl;
-        this.filesystem = filesystem;
-    }
+    private DataLakeStorageAccountDetailsArgs() {}
 
-    private DataLakeStorageAccountDetailsArgs() {
-        this.accountUrl = Codegen.empty();
-        this.filesystem = Codegen.empty();
+    private DataLakeStorageAccountDetailsArgs(DataLakeStorageAccountDetailsArgs $) {
+        this.accountUrl = $.accountUrl;
+        this.filesystem = $.filesystem;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DataLakeStorageAccountDetailsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> accountUrl;
-        private @Nullable Output<String> filesystem;
+        private DataLakeStorageAccountDetailsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DataLakeStorageAccountDetailsArgs();
         }
 
         public Builder(DataLakeStorageAccountDetailsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accountUrl = defaults.accountUrl;
-    	      this.filesystem = defaults.filesystem;
+            $ = new DataLakeStorageAccountDetailsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder accountUrl(@Nullable Output<String> accountUrl) {
-            this.accountUrl = accountUrl;
+            $.accountUrl = accountUrl;
             return this;
         }
-        public Builder accountUrl(@Nullable String accountUrl) {
-            this.accountUrl = Codegen.ofNullable(accountUrl);
-            return this;
+
+        public Builder accountUrl(String accountUrl) {
+            return accountUrl(Output.of(accountUrl));
         }
+
         public Builder filesystem(@Nullable Output<String> filesystem) {
-            this.filesystem = filesystem;
+            $.filesystem = filesystem;
             return this;
         }
-        public Builder filesystem(@Nullable String filesystem) {
-            this.filesystem = Codegen.ofNullable(filesystem);
-            return this;
-        }        public DataLakeStorageAccountDetailsArgs build() {
-            return new DataLakeStorageAccountDetailsArgs(accountUrl, filesystem);
+
+        public Builder filesystem(String filesystem) {
+            return filesystem(Output.of(filesystem));
+        }
+
+        public DataLakeStorageAccountDetailsArgs build() {
+            return $;
         }
     }
+
 }

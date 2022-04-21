@@ -5,9 +5,9 @@ package com.pulumi.aws.ssm.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class PatchGroupState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="baselineId")
-      private final @Nullable Output<String> baselineId;
+    private @Nullable Output<String> baselineId;
 
-    public Output<String> baselineId() {
-        return this.baselineId == null ? Codegen.empty() : this.baselineId;
+    public Optional<Output<String>> baselineId() {
+        return Optional.ofNullable(this.baselineId);
     }
 
     /**
@@ -31,63 +31,58 @@ public final class PatchGroupState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="patchGroup")
-      private final @Nullable Output<String> patchGroup;
+    private @Nullable Output<String> patchGroup;
 
-    public Output<String> patchGroup() {
-        return this.patchGroup == null ? Codegen.empty() : this.patchGroup;
+    public Optional<Output<String>> patchGroup() {
+        return Optional.ofNullable(this.patchGroup);
     }
 
-    public PatchGroupState(
-        @Nullable Output<String> baselineId,
-        @Nullable Output<String> patchGroup) {
-        this.baselineId = baselineId;
-        this.patchGroup = patchGroup;
-    }
+    private PatchGroupState() {}
 
-    private PatchGroupState() {
-        this.baselineId = Codegen.empty();
-        this.patchGroup = Codegen.empty();
+    private PatchGroupState(PatchGroupState $) {
+        this.baselineId = $.baselineId;
+        this.patchGroup = $.patchGroup;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PatchGroupState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> baselineId;
-        private @Nullable Output<String> patchGroup;
+        private PatchGroupState $;
 
         public Builder() {
-    	      // Empty
+            $ = new PatchGroupState();
         }
 
         public Builder(PatchGroupState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.baselineId = defaults.baselineId;
-    	      this.patchGroup = defaults.patchGroup;
+            $ = new PatchGroupState(Objects.requireNonNull(defaults));
         }
 
         public Builder baselineId(@Nullable Output<String> baselineId) {
-            this.baselineId = baselineId;
+            $.baselineId = baselineId;
             return this;
         }
-        public Builder baselineId(@Nullable String baselineId) {
-            this.baselineId = Codegen.ofNullable(baselineId);
-            return this;
+
+        public Builder baselineId(String baselineId) {
+            return baselineId(Output.of(baselineId));
         }
+
         public Builder patchGroup(@Nullable Output<String> patchGroup) {
-            this.patchGroup = patchGroup;
+            $.patchGroup = patchGroup;
             return this;
         }
-        public Builder patchGroup(@Nullable String patchGroup) {
-            this.patchGroup = Codegen.ofNullable(patchGroup);
-            return this;
-        }        public PatchGroupState build() {
-            return new PatchGroupState(baselineId, patchGroup);
+
+        public Builder patchGroup(String patchGroup) {
+            return patchGroup(Output.of(patchGroup));
+        }
+
+        public PatchGroupState build() {
+            return $;
         }
     }
+
 }

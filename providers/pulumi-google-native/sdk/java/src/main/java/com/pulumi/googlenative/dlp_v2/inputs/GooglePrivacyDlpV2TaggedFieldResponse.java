@@ -24,7 +24,7 @@ public final class GooglePrivacyDlpV2TaggedFieldResponse extends com.pulumi.reso
      * 
      */
     @Import(name="customTag", required=true)
-      private final String customTag;
+    private String customTag;
 
     public String customTag() {
         return this.customTag;
@@ -35,7 +35,7 @@ public final class GooglePrivacyDlpV2TaggedFieldResponse extends com.pulumi.reso
      * 
      */
     @Import(name="field", required=true)
-      private final GooglePrivacyDlpV2FieldIdResponse field;
+    private GooglePrivacyDlpV2FieldIdResponse field;
 
     public GooglePrivacyDlpV2FieldIdResponse field() {
         return this.field;
@@ -46,7 +46,7 @@ public final class GooglePrivacyDlpV2TaggedFieldResponse extends com.pulumi.reso
      * 
      */
     @Import(name="inferred", required=true)
-      private final GoogleProtobufEmptyResponse inferred;
+    private GoogleProtobufEmptyResponse inferred;
 
     public GoogleProtobufEmptyResponse inferred() {
         return this.inferred;
@@ -57,73 +57,66 @@ public final class GooglePrivacyDlpV2TaggedFieldResponse extends com.pulumi.reso
      * 
      */
     @Import(name="infoType", required=true)
-      private final GooglePrivacyDlpV2InfoTypeResponse infoType;
+    private GooglePrivacyDlpV2InfoTypeResponse infoType;
 
     public GooglePrivacyDlpV2InfoTypeResponse infoType() {
         return this.infoType;
     }
 
-    public GooglePrivacyDlpV2TaggedFieldResponse(
-        String customTag,
-        GooglePrivacyDlpV2FieldIdResponse field,
-        GoogleProtobufEmptyResponse inferred,
-        GooglePrivacyDlpV2InfoTypeResponse infoType) {
-        this.customTag = Objects.requireNonNull(customTag, "expected parameter 'customTag' to be non-null");
-        this.field = Objects.requireNonNull(field, "expected parameter 'field' to be non-null");
-        this.inferred = Objects.requireNonNull(inferred, "expected parameter 'inferred' to be non-null");
-        this.infoType = Objects.requireNonNull(infoType, "expected parameter 'infoType' to be non-null");
-    }
+    private GooglePrivacyDlpV2TaggedFieldResponse() {}
 
-    private GooglePrivacyDlpV2TaggedFieldResponse() {
-        this.customTag = null;
-        this.field = null;
-        this.inferred = null;
-        this.infoType = null;
+    private GooglePrivacyDlpV2TaggedFieldResponse(GooglePrivacyDlpV2TaggedFieldResponse $) {
+        this.customTag = $.customTag;
+        this.field = $.field;
+        this.inferred = $.inferred;
+        this.infoType = $.infoType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GooglePrivacyDlpV2TaggedFieldResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String customTag;
-        private GooglePrivacyDlpV2FieldIdResponse field;
-        private GoogleProtobufEmptyResponse inferred;
-        private GooglePrivacyDlpV2InfoTypeResponse infoType;
+        private GooglePrivacyDlpV2TaggedFieldResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GooglePrivacyDlpV2TaggedFieldResponse();
         }
 
         public Builder(GooglePrivacyDlpV2TaggedFieldResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.customTag = defaults.customTag;
-    	      this.field = defaults.field;
-    	      this.inferred = defaults.inferred;
-    	      this.infoType = defaults.infoType;
+            $ = new GooglePrivacyDlpV2TaggedFieldResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder customTag(String customTag) {
-            this.customTag = Objects.requireNonNull(customTag);
+            $.customTag = customTag;
             return this;
         }
+
         public Builder field(GooglePrivacyDlpV2FieldIdResponse field) {
-            this.field = Objects.requireNonNull(field);
+            $.field = field;
             return this;
         }
+
         public Builder inferred(GoogleProtobufEmptyResponse inferred) {
-            this.inferred = Objects.requireNonNull(inferred);
+            $.inferred = inferred;
             return this;
         }
+
         public Builder infoType(GooglePrivacyDlpV2InfoTypeResponse infoType) {
-            this.infoType = Objects.requireNonNull(infoType);
+            $.infoType = infoType;
             return this;
-        }        public GooglePrivacyDlpV2TaggedFieldResponse build() {
-            return new GooglePrivacyDlpV2TaggedFieldResponse(customTag, field, inferred, infoType);
+        }
+
+        public GooglePrivacyDlpV2TaggedFieldResponse build() {
+            $.customTag = Objects.requireNonNull($.customTag, "expected parameter 'customTag' to be non-null");
+            $.field = Objects.requireNonNull($.field, "expected parameter 'field' to be non-null");
+            $.inferred = Objects.requireNonNull($.inferred, "expected parameter 'inferred' to be non-null");
+            $.infoType = Objects.requireNonNull($.infoType, "expected parameter 'infoType' to be non-null");
+            return $;
         }
     }
+
 }

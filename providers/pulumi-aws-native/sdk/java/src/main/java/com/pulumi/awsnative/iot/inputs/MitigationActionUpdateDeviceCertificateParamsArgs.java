@@ -6,7 +6,6 @@ package com.pulumi.awsnative.iot.inputs;
 import com.pulumi.awsnative.iot.enums.MitigationActionUpdateDeviceCertificateParamsAction;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
 
 
@@ -19,49 +18,49 @@ public final class MitigationActionUpdateDeviceCertificateParamsArgs extends com
     public static final MitigationActionUpdateDeviceCertificateParamsArgs Empty = new MitigationActionUpdateDeviceCertificateParamsArgs();
 
     @Import(name="action", required=true)
-      private final Output<MitigationActionUpdateDeviceCertificateParamsAction> action;
+    private Output<MitigationActionUpdateDeviceCertificateParamsAction> action;
 
     public Output<MitigationActionUpdateDeviceCertificateParamsAction> action() {
         return this.action;
     }
 
-    public MitigationActionUpdateDeviceCertificateParamsArgs(Output<MitigationActionUpdateDeviceCertificateParamsAction> action) {
-        this.action = Objects.requireNonNull(action, "expected parameter 'action' to be non-null");
-    }
+    private MitigationActionUpdateDeviceCertificateParamsArgs() {}
 
-    private MitigationActionUpdateDeviceCertificateParamsArgs() {
-        this.action = Codegen.empty();
+    private MitigationActionUpdateDeviceCertificateParamsArgs(MitigationActionUpdateDeviceCertificateParamsArgs $) {
+        this.action = $.action;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MitigationActionUpdateDeviceCertificateParamsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<MitigationActionUpdateDeviceCertificateParamsAction> action;
+        private MitigationActionUpdateDeviceCertificateParamsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new MitigationActionUpdateDeviceCertificateParamsArgs();
         }
 
         public Builder(MitigationActionUpdateDeviceCertificateParamsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.action = defaults.action;
+            $ = new MitigationActionUpdateDeviceCertificateParamsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder action(Output<MitigationActionUpdateDeviceCertificateParamsAction> action) {
-            this.action = Objects.requireNonNull(action);
+            $.action = action;
             return this;
         }
+
         public Builder action(MitigationActionUpdateDeviceCertificateParamsAction action) {
-            this.action = Output.of(Objects.requireNonNull(action));
-            return this;
-        }        public MitigationActionUpdateDeviceCertificateParamsArgs build() {
-            return new MitigationActionUpdateDeviceCertificateParamsArgs(action);
+            return action(Output.of(action));
+        }
+
+        public MitigationActionUpdateDeviceCertificateParamsArgs build() {
+            $.action = Objects.requireNonNull($.action, "expected parameter 'action' to be non-null");
+            return $;
         }
     }
+
 }

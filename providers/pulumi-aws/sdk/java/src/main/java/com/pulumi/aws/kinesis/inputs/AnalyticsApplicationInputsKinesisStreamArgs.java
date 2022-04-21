@@ -5,7 +5,6 @@ package com.pulumi.aws.kinesis.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,7 +18,7 @@ public final class AnalyticsApplicationInputsKinesisStreamArgs extends com.pulum
      * 
      */
     @Import(name="resourceArn", required=true)
-      private final Output<String> resourceArn;
+    private Output<String> resourceArn;
 
     public Output<String> resourceArn() {
         return this.resourceArn;
@@ -30,63 +29,60 @@ public final class AnalyticsApplicationInputsKinesisStreamArgs extends com.pulum
      * 
      */
     @Import(name="roleArn", required=true)
-      private final Output<String> roleArn;
+    private Output<String> roleArn;
 
     public Output<String> roleArn() {
         return this.roleArn;
     }
 
-    public AnalyticsApplicationInputsKinesisStreamArgs(
-        Output<String> resourceArn,
-        Output<String> roleArn) {
-        this.resourceArn = Objects.requireNonNull(resourceArn, "expected parameter 'resourceArn' to be non-null");
-        this.roleArn = Objects.requireNonNull(roleArn, "expected parameter 'roleArn' to be non-null");
-    }
+    private AnalyticsApplicationInputsKinesisStreamArgs() {}
 
-    private AnalyticsApplicationInputsKinesisStreamArgs() {
-        this.resourceArn = Codegen.empty();
-        this.roleArn = Codegen.empty();
+    private AnalyticsApplicationInputsKinesisStreamArgs(AnalyticsApplicationInputsKinesisStreamArgs $) {
+        this.resourceArn = $.resourceArn;
+        this.roleArn = $.roleArn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AnalyticsApplicationInputsKinesisStreamArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> resourceArn;
-        private Output<String> roleArn;
+        private AnalyticsApplicationInputsKinesisStreamArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AnalyticsApplicationInputsKinesisStreamArgs();
         }
 
         public Builder(AnalyticsApplicationInputsKinesisStreamArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.resourceArn = defaults.resourceArn;
-    	      this.roleArn = defaults.roleArn;
+            $ = new AnalyticsApplicationInputsKinesisStreamArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder resourceArn(Output<String> resourceArn) {
-            this.resourceArn = Objects.requireNonNull(resourceArn);
+            $.resourceArn = resourceArn;
             return this;
         }
+
         public Builder resourceArn(String resourceArn) {
-            this.resourceArn = Output.of(Objects.requireNonNull(resourceArn));
-            return this;
+            return resourceArn(Output.of(resourceArn));
         }
+
         public Builder roleArn(Output<String> roleArn) {
-            this.roleArn = Objects.requireNonNull(roleArn);
+            $.roleArn = roleArn;
             return this;
         }
+
         public Builder roleArn(String roleArn) {
-            this.roleArn = Output.of(Objects.requireNonNull(roleArn));
-            return this;
-        }        public AnalyticsApplicationInputsKinesisStreamArgs build() {
-            return new AnalyticsApplicationInputsKinesisStreamArgs(resourceArn, roleArn);
+            return roleArn(Output.of(roleArn));
+        }
+
+        public AnalyticsApplicationInputsKinesisStreamArgs build() {
+            $.resourceArn = Objects.requireNonNull($.resourceArn, "expected parameter 'resourceArn' to be non-null");
+            $.roleArn = Objects.requireNonNull($.roleArn, "expected parameter 'roleArn' to be non-null");
+            return $;
         }
     }
+
 }

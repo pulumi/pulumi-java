@@ -15,94 +15,85 @@ public final class GetNotificationArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetNotificationArgs Empty = new GetNotificationArgs();
 
     @Import(name="bucket", required=true)
-      private final String bucket;
+    private String bucket;
 
     public String bucket() {
         return this.bucket;
     }
 
     @Import(name="notification", required=true)
-      private final String notification;
+    private String notification;
 
     public String notification() {
         return this.notification;
     }
 
     @Import(name="provisionalUserProject")
-      private final @Nullable String provisionalUserProject;
+    private @Nullable String provisionalUserProject;
 
     public Optional<String> provisionalUserProject() {
-        return this.provisionalUserProject == null ? Optional.empty() : Optional.ofNullable(this.provisionalUserProject);
+        return Optional.ofNullable(this.provisionalUserProject);
     }
 
     @Import(name="userProject")
-      private final @Nullable String userProject;
+    private @Nullable String userProject;
 
     public Optional<String> userProject() {
-        return this.userProject == null ? Optional.empty() : Optional.ofNullable(this.userProject);
+        return Optional.ofNullable(this.userProject);
     }
 
-    public GetNotificationArgs(
-        String bucket,
-        String notification,
-        @Nullable String provisionalUserProject,
-        @Nullable String userProject) {
-        this.bucket = Objects.requireNonNull(bucket, "expected parameter 'bucket' to be non-null");
-        this.notification = Objects.requireNonNull(notification, "expected parameter 'notification' to be non-null");
-        this.provisionalUserProject = provisionalUserProject;
-        this.userProject = userProject;
-    }
+    private GetNotificationArgs() {}
 
-    private GetNotificationArgs() {
-        this.bucket = null;
-        this.notification = null;
-        this.provisionalUserProject = null;
-        this.userProject = null;
+    private GetNotificationArgs(GetNotificationArgs $) {
+        this.bucket = $.bucket;
+        this.notification = $.notification;
+        this.provisionalUserProject = $.provisionalUserProject;
+        this.userProject = $.userProject;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetNotificationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String bucket;
-        private String notification;
-        private @Nullable String provisionalUserProject;
-        private @Nullable String userProject;
+        private GetNotificationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetNotificationArgs();
         }
 
         public Builder(GetNotificationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.bucket = defaults.bucket;
-    	      this.notification = defaults.notification;
-    	      this.provisionalUserProject = defaults.provisionalUserProject;
-    	      this.userProject = defaults.userProject;
+            $ = new GetNotificationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder bucket(String bucket) {
-            this.bucket = Objects.requireNonNull(bucket);
+            $.bucket = bucket;
             return this;
         }
+
         public Builder notification(String notification) {
-            this.notification = Objects.requireNonNull(notification);
+            $.notification = notification;
             return this;
         }
+
         public Builder provisionalUserProject(@Nullable String provisionalUserProject) {
-            this.provisionalUserProject = provisionalUserProject;
+            $.provisionalUserProject = provisionalUserProject;
             return this;
         }
+
         public Builder userProject(@Nullable String userProject) {
-            this.userProject = userProject;
+            $.userProject = userProject;
             return this;
-        }        public GetNotificationArgs build() {
-            return new GetNotificationArgs(bucket, notification, provisionalUserProject, userProject);
+        }
+
+        public GetNotificationArgs build() {
+            $.bucket = Objects.requireNonNull($.bucket, "expected parameter 'bucket' to be non-null");
+            $.notification = Objects.requireNonNull($.notification, "expected parameter 'notification' to be non-null");
+            return $;
         }
     }
+
 }

@@ -13,62 +13,59 @@ public final class GetMembershipArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetMembershipArgs Empty = new GetMembershipArgs();
 
     @Import(name="groupId", required=true)
-      private final String groupId;
+    private String groupId;
 
     public String groupId() {
         return this.groupId;
     }
 
     @Import(name="membershipId", required=true)
-      private final String membershipId;
+    private String membershipId;
 
     public String membershipId() {
         return this.membershipId;
     }
 
-    public GetMembershipArgs(
-        String groupId,
-        String membershipId) {
-        this.groupId = Objects.requireNonNull(groupId, "expected parameter 'groupId' to be non-null");
-        this.membershipId = Objects.requireNonNull(membershipId, "expected parameter 'membershipId' to be non-null");
-    }
+    private GetMembershipArgs() {}
 
-    private GetMembershipArgs() {
-        this.groupId = null;
-        this.membershipId = null;
+    private GetMembershipArgs(GetMembershipArgs $) {
+        this.groupId = $.groupId;
+        this.membershipId = $.membershipId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetMembershipArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String groupId;
-        private String membershipId;
+        private GetMembershipArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetMembershipArgs();
         }
 
         public Builder(GetMembershipArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.groupId = defaults.groupId;
-    	      this.membershipId = defaults.membershipId;
+            $ = new GetMembershipArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder groupId(String groupId) {
-            this.groupId = Objects.requireNonNull(groupId);
+            $.groupId = groupId;
             return this;
         }
+
         public Builder membershipId(String membershipId) {
-            this.membershipId = Objects.requireNonNull(membershipId);
+            $.membershipId = membershipId;
             return this;
-        }        public GetMembershipArgs build() {
-            return new GetMembershipArgs(groupId, membershipId);
+        }
+
+        public GetMembershipArgs build() {
+            $.groupId = Objects.requireNonNull($.groupId, "expected parameter 'groupId' to be non-null");
+            $.membershipId = Objects.requireNonNull($.membershipId, "expected parameter 'membershipId' to be non-null");
+            return $;
         }
     }
+
 }

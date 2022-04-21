@@ -5,7 +5,6 @@ package com.pulumi.aws.apprunner.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,49 +18,49 @@ public final class ServiceEncryptionConfigurationArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="kmsKey", required=true)
-      private final Output<String> kmsKey;
+    private Output<String> kmsKey;
 
     public Output<String> kmsKey() {
         return this.kmsKey;
     }
 
-    public ServiceEncryptionConfigurationArgs(Output<String> kmsKey) {
-        this.kmsKey = Objects.requireNonNull(kmsKey, "expected parameter 'kmsKey' to be non-null");
-    }
+    private ServiceEncryptionConfigurationArgs() {}
 
-    private ServiceEncryptionConfigurationArgs() {
-        this.kmsKey = Codegen.empty();
+    private ServiceEncryptionConfigurationArgs(ServiceEncryptionConfigurationArgs $) {
+        this.kmsKey = $.kmsKey;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ServiceEncryptionConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> kmsKey;
+        private ServiceEncryptionConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ServiceEncryptionConfigurationArgs();
         }
 
         public Builder(ServiceEncryptionConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.kmsKey = defaults.kmsKey;
+            $ = new ServiceEncryptionConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder kmsKey(Output<String> kmsKey) {
-            this.kmsKey = Objects.requireNonNull(kmsKey);
+            $.kmsKey = kmsKey;
             return this;
         }
+
         public Builder kmsKey(String kmsKey) {
-            this.kmsKey = Output.of(Objects.requireNonNull(kmsKey));
-            return this;
-        }        public ServiceEncryptionConfigurationArgs build() {
-            return new ServiceEncryptionConfigurationArgs(kmsKey);
+            return kmsKey(Output.of(kmsKey));
+        }
+
+        public ServiceEncryptionConfigurationArgs build() {
+            $.kmsKey = Objects.requireNonNull($.kmsKey, "expected parameter 'kmsKey' to be non-null");
+            return $;
         }
     }
+
 }

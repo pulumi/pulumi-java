@@ -22,10 +22,10 @@ public final class DetectorModelDynamoDBv2 extends com.pulumi.resources.InvokeAr
     public static final DetectorModelDynamoDBv2 Empty = new DetectorModelDynamoDBv2();
 
     @Import(name="payload")
-      private final @Nullable DetectorModelPayload payload;
+    private @Nullable DetectorModelPayload payload;
 
     public Optional<DetectorModelPayload> payload() {
-        return this.payload == null ? Optional.empty() : Optional.ofNullable(this.payload);
+        return Optional.ofNullable(this.payload);
     }
 
     /**
@@ -33,55 +33,51 @@ public final class DetectorModelDynamoDBv2 extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="tableName", required=true)
-      private final String tableName;
+    private String tableName;
 
     public String tableName() {
         return this.tableName;
     }
 
-    public DetectorModelDynamoDBv2(
-        @Nullable DetectorModelPayload payload,
-        String tableName) {
-        this.payload = payload;
-        this.tableName = Objects.requireNonNull(tableName, "expected parameter 'tableName' to be non-null");
-    }
+    private DetectorModelDynamoDBv2() {}
 
-    private DetectorModelDynamoDBv2() {
-        this.payload = null;
-        this.tableName = null;
+    private DetectorModelDynamoDBv2(DetectorModelDynamoDBv2 $) {
+        this.payload = $.payload;
+        this.tableName = $.tableName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DetectorModelDynamoDBv2 defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable DetectorModelPayload payload;
-        private String tableName;
+        private DetectorModelDynamoDBv2 $;
 
         public Builder() {
-    	      // Empty
+            $ = new DetectorModelDynamoDBv2();
         }
 
         public Builder(DetectorModelDynamoDBv2 defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.payload = defaults.payload;
-    	      this.tableName = defaults.tableName;
+            $ = new DetectorModelDynamoDBv2(Objects.requireNonNull(defaults));
         }
 
         public Builder payload(@Nullable DetectorModelPayload payload) {
-            this.payload = payload;
+            $.payload = payload;
             return this;
         }
+
         public Builder tableName(String tableName) {
-            this.tableName = Objects.requireNonNull(tableName);
+            $.tableName = tableName;
             return this;
-        }        public DetectorModelDynamoDBv2 build() {
-            return new DetectorModelDynamoDBv2(payload, tableName);
+        }
+
+        public DetectorModelDynamoDBv2 build() {
+            $.tableName = Objects.requireNonNull($.tableName, "expected parameter 'tableName' to be non-null");
+            return $;
         }
     }
+
 }

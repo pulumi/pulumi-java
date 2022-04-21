@@ -7,7 +7,6 @@ import com.pulumi.azurenative.iotsecurity.enums.MdeIntegration;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -25,49 +24,49 @@ public final class DefenderSettingsPropertiesMdeIntegrationArgs extends com.pulu
      * 
      */
     @Import(name="status", required=true)
-      private final Output<Either<String,MdeIntegration>> status;
+    private Output<Either<String,MdeIntegration>> status;
 
     public Output<Either<String,MdeIntegration>> status() {
         return this.status;
     }
 
-    public DefenderSettingsPropertiesMdeIntegrationArgs(Output<Either<String,MdeIntegration>> status) {
-        this.status = Objects.requireNonNull(status, "expected parameter 'status' to be non-null");
-    }
+    private DefenderSettingsPropertiesMdeIntegrationArgs() {}
 
-    private DefenderSettingsPropertiesMdeIntegrationArgs() {
-        this.status = Codegen.empty();
+    private DefenderSettingsPropertiesMdeIntegrationArgs(DefenderSettingsPropertiesMdeIntegrationArgs $) {
+        this.status = $.status;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DefenderSettingsPropertiesMdeIntegrationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Either<String,MdeIntegration>> status;
+        private DefenderSettingsPropertiesMdeIntegrationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DefenderSettingsPropertiesMdeIntegrationArgs();
         }
 
         public Builder(DefenderSettingsPropertiesMdeIntegrationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.status = defaults.status;
+            $ = new DefenderSettingsPropertiesMdeIntegrationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder status(Output<Either<String,MdeIntegration>> status) {
-            this.status = Objects.requireNonNull(status);
+            $.status = status;
             return this;
         }
+
         public Builder status(Either<String,MdeIntegration> status) {
-            this.status = Output.of(Objects.requireNonNull(status));
-            return this;
-        }        public DefenderSettingsPropertiesMdeIntegrationArgs build() {
-            return new DefenderSettingsPropertiesMdeIntegrationArgs(status);
+            return status(Output.of(status));
+        }
+
+        public DefenderSettingsPropertiesMdeIntegrationArgs build() {
+            $.status = Objects.requireNonNull($.status, "expected parameter 'status' to be non-null");
+            return $;
         }
     }
+
 }

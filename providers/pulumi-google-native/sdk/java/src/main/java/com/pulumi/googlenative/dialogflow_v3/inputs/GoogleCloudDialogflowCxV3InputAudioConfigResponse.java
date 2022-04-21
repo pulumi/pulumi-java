@@ -24,7 +24,7 @@ public final class GoogleCloudDialogflowCxV3InputAudioConfigResponse extends com
      * 
      */
     @Import(name="audioEncoding", required=true)
-      private final String audioEncoding;
+    private String audioEncoding;
 
     public String audioEncoding() {
         return this.audioEncoding;
@@ -35,7 +35,7 @@ public final class GoogleCloudDialogflowCxV3InputAudioConfigResponse extends com
      * 
      */
     @Import(name="enableWordInfo", required=true)
-      private final Boolean enableWordInfo;
+    private Boolean enableWordInfo;
 
     public Boolean enableWordInfo() {
         return this.enableWordInfo;
@@ -46,7 +46,7 @@ public final class GoogleCloudDialogflowCxV3InputAudioConfigResponse extends com
      * 
      */
     @Import(name="model", required=true)
-      private final String model;
+    private String model;
 
     public String model() {
         return this.model;
@@ -57,7 +57,7 @@ public final class GoogleCloudDialogflowCxV3InputAudioConfigResponse extends com
      * 
      */
     @Import(name="modelVariant", required=true)
-      private final String modelVariant;
+    private String modelVariant;
 
     public String modelVariant() {
         return this.modelVariant;
@@ -68,7 +68,7 @@ public final class GoogleCloudDialogflowCxV3InputAudioConfigResponse extends com
      * 
      */
     @Import(name="phraseHints", required=true)
-      private final List<String> phraseHints;
+    private List<String> phraseHints;
 
     public List<String> phraseHints() {
         return this.phraseHints;
@@ -79,7 +79,7 @@ public final class GoogleCloudDialogflowCxV3InputAudioConfigResponse extends com
      * 
      */
     @Import(name="sampleRateHertz", required=true)
-      private final Integer sampleRateHertz;
+    private Integer sampleRateHertz;
 
     public Integer sampleRateHertz() {
         return this.sampleRateHertz;
@@ -90,103 +90,91 @@ public final class GoogleCloudDialogflowCxV3InputAudioConfigResponse extends com
      * 
      */
     @Import(name="singleUtterance", required=true)
-      private final Boolean singleUtterance;
+    private Boolean singleUtterance;
 
     public Boolean singleUtterance() {
         return this.singleUtterance;
     }
 
-    public GoogleCloudDialogflowCxV3InputAudioConfigResponse(
-        String audioEncoding,
-        Boolean enableWordInfo,
-        String model,
-        String modelVariant,
-        List<String> phraseHints,
-        Integer sampleRateHertz,
-        Boolean singleUtterance) {
-        this.audioEncoding = Objects.requireNonNull(audioEncoding, "expected parameter 'audioEncoding' to be non-null");
-        this.enableWordInfo = Objects.requireNonNull(enableWordInfo, "expected parameter 'enableWordInfo' to be non-null");
-        this.model = Objects.requireNonNull(model, "expected parameter 'model' to be non-null");
-        this.modelVariant = Objects.requireNonNull(modelVariant, "expected parameter 'modelVariant' to be non-null");
-        this.phraseHints = Objects.requireNonNull(phraseHints, "expected parameter 'phraseHints' to be non-null");
-        this.sampleRateHertz = Objects.requireNonNull(sampleRateHertz, "expected parameter 'sampleRateHertz' to be non-null");
-        this.singleUtterance = Objects.requireNonNull(singleUtterance, "expected parameter 'singleUtterance' to be non-null");
-    }
+    private GoogleCloudDialogflowCxV3InputAudioConfigResponse() {}
 
-    private GoogleCloudDialogflowCxV3InputAudioConfigResponse() {
-        this.audioEncoding = null;
-        this.enableWordInfo = null;
-        this.model = null;
-        this.modelVariant = null;
-        this.phraseHints = List.of();
-        this.sampleRateHertz = null;
-        this.singleUtterance = null;
+    private GoogleCloudDialogflowCxV3InputAudioConfigResponse(GoogleCloudDialogflowCxV3InputAudioConfigResponse $) {
+        this.audioEncoding = $.audioEncoding;
+        this.enableWordInfo = $.enableWordInfo;
+        this.model = $.model;
+        this.modelVariant = $.modelVariant;
+        this.phraseHints = $.phraseHints;
+        this.sampleRateHertz = $.sampleRateHertz;
+        this.singleUtterance = $.singleUtterance;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudDialogflowCxV3InputAudioConfigResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String audioEncoding;
-        private Boolean enableWordInfo;
-        private String model;
-        private String modelVariant;
-        private List<String> phraseHints;
-        private Integer sampleRateHertz;
-        private Boolean singleUtterance;
+        private GoogleCloudDialogflowCxV3InputAudioConfigResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudDialogflowCxV3InputAudioConfigResponse();
         }
 
         public Builder(GoogleCloudDialogflowCxV3InputAudioConfigResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.audioEncoding = defaults.audioEncoding;
-    	      this.enableWordInfo = defaults.enableWordInfo;
-    	      this.model = defaults.model;
-    	      this.modelVariant = defaults.modelVariant;
-    	      this.phraseHints = defaults.phraseHints;
-    	      this.sampleRateHertz = defaults.sampleRateHertz;
-    	      this.singleUtterance = defaults.singleUtterance;
+            $ = new GoogleCloudDialogflowCxV3InputAudioConfigResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder audioEncoding(String audioEncoding) {
-            this.audioEncoding = Objects.requireNonNull(audioEncoding);
+            $.audioEncoding = audioEncoding;
             return this;
         }
+
         public Builder enableWordInfo(Boolean enableWordInfo) {
-            this.enableWordInfo = Objects.requireNonNull(enableWordInfo);
+            $.enableWordInfo = enableWordInfo;
             return this;
         }
+
         public Builder model(String model) {
-            this.model = Objects.requireNonNull(model);
+            $.model = model;
             return this;
         }
+
         public Builder modelVariant(String modelVariant) {
-            this.modelVariant = Objects.requireNonNull(modelVariant);
+            $.modelVariant = modelVariant;
             return this;
         }
+
         public Builder phraseHints(List<String> phraseHints) {
-            this.phraseHints = Objects.requireNonNull(phraseHints);
+            $.phraseHints = phraseHints;
             return this;
         }
+
         public Builder phraseHints(String... phraseHints) {
             return phraseHints(List.of(phraseHints));
         }
+
         public Builder sampleRateHertz(Integer sampleRateHertz) {
-            this.sampleRateHertz = Objects.requireNonNull(sampleRateHertz);
+            $.sampleRateHertz = sampleRateHertz;
             return this;
         }
+
         public Builder singleUtterance(Boolean singleUtterance) {
-            this.singleUtterance = Objects.requireNonNull(singleUtterance);
+            $.singleUtterance = singleUtterance;
             return this;
-        }        public GoogleCloudDialogflowCxV3InputAudioConfigResponse build() {
-            return new GoogleCloudDialogflowCxV3InputAudioConfigResponse(audioEncoding, enableWordInfo, model, modelVariant, phraseHints, sampleRateHertz, singleUtterance);
+        }
+
+        public GoogleCloudDialogflowCxV3InputAudioConfigResponse build() {
+            $.audioEncoding = Objects.requireNonNull($.audioEncoding, "expected parameter 'audioEncoding' to be non-null");
+            $.enableWordInfo = Objects.requireNonNull($.enableWordInfo, "expected parameter 'enableWordInfo' to be non-null");
+            $.model = Objects.requireNonNull($.model, "expected parameter 'model' to be non-null");
+            $.modelVariant = Objects.requireNonNull($.modelVariant, "expected parameter 'modelVariant' to be non-null");
+            $.phraseHints = Objects.requireNonNull($.phraseHints, "expected parameter 'phraseHints' to be non-null");
+            $.sampleRateHertz = Objects.requireNonNull($.sampleRateHertz, "expected parameter 'sampleRateHertz' to be non-null");
+            $.singleUtterance = Objects.requireNonNull($.singleUtterance, "expected parameter 'singleUtterance' to be non-null");
+            return $;
         }
     }
+
 }

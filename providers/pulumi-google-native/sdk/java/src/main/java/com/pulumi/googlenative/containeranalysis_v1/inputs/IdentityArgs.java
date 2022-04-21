@@ -5,10 +5,10 @@ package com.pulumi.googlenative.containeranalysis_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class IdentityArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="revision")
-      private final @Nullable Output<Integer> revision;
+    private @Nullable Output<Integer> revision;
 
-    public Output<Integer> revision() {
-        return this.revision == null ? Codegen.empty() : this.revision;
+    public Optional<Output<Integer>> revision() {
+        return Optional.ofNullable(this.revision);
     }
 
     /**
@@ -36,63 +36,58 @@ public final class IdentityArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="updateId")
-      private final @Nullable Output<String> updateId;
+    private @Nullable Output<String> updateId;
 
-    public Output<String> updateId() {
-        return this.updateId == null ? Codegen.empty() : this.updateId;
+    public Optional<Output<String>> updateId() {
+        return Optional.ofNullable(this.updateId);
     }
 
-    public IdentityArgs(
-        @Nullable Output<Integer> revision,
-        @Nullable Output<String> updateId) {
-        this.revision = revision;
-        this.updateId = updateId;
-    }
+    private IdentityArgs() {}
 
-    private IdentityArgs() {
-        this.revision = Codegen.empty();
-        this.updateId = Codegen.empty();
+    private IdentityArgs(IdentityArgs $) {
+        this.revision = $.revision;
+        this.updateId = $.updateId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(IdentityArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> revision;
-        private @Nullable Output<String> updateId;
+        private IdentityArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new IdentityArgs();
         }
 
         public Builder(IdentityArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.revision = defaults.revision;
-    	      this.updateId = defaults.updateId;
+            $ = new IdentityArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder revision(@Nullable Output<Integer> revision) {
-            this.revision = revision;
+            $.revision = revision;
             return this;
         }
-        public Builder revision(@Nullable Integer revision) {
-            this.revision = Codegen.ofNullable(revision);
-            return this;
+
+        public Builder revision(Integer revision) {
+            return revision(Output.of(revision));
         }
+
         public Builder updateId(@Nullable Output<String> updateId) {
-            this.updateId = updateId;
+            $.updateId = updateId;
             return this;
         }
-        public Builder updateId(@Nullable String updateId) {
-            this.updateId = Codegen.ofNullable(updateId);
-            return this;
-        }        public IdentityArgs build() {
-            return new IdentityArgs(revision, updateId);
+
+        public Builder updateId(String updateId) {
+            return updateId(Output.of(updateId));
+        }
+
+        public IdentityArgs build() {
+            return $;
         }
     }
+
 }

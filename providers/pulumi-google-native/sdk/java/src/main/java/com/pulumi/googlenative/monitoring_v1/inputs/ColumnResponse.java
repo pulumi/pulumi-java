@@ -23,7 +23,7 @@ public final class ColumnResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="weight", required=true)
-      private final String weight;
+    private String weight;
 
     public String weight() {
         return this.weight;
@@ -34,58 +34,56 @@ public final class ColumnResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="widgets", required=true)
-      private final List<WidgetResponse> widgets;
+    private List<WidgetResponse> widgets;
 
     public List<WidgetResponse> widgets() {
         return this.widgets;
     }
 
-    public ColumnResponse(
-        String weight,
-        List<WidgetResponse> widgets) {
-        this.weight = Objects.requireNonNull(weight, "expected parameter 'weight' to be non-null");
-        this.widgets = Objects.requireNonNull(widgets, "expected parameter 'widgets' to be non-null");
-    }
+    private ColumnResponse() {}
 
-    private ColumnResponse() {
-        this.weight = null;
-        this.widgets = List.of();
+    private ColumnResponse(ColumnResponse $) {
+        this.weight = $.weight;
+        this.widgets = $.widgets;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ColumnResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String weight;
-        private List<WidgetResponse> widgets;
+        private ColumnResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ColumnResponse();
         }
 
         public Builder(ColumnResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.weight = defaults.weight;
-    	      this.widgets = defaults.widgets;
+            $ = new ColumnResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder weight(String weight) {
-            this.weight = Objects.requireNonNull(weight);
+            $.weight = weight;
             return this;
         }
+
         public Builder widgets(List<WidgetResponse> widgets) {
-            this.widgets = Objects.requireNonNull(widgets);
+            $.widgets = widgets;
             return this;
         }
+
         public Builder widgets(WidgetResponse... widgets) {
             return widgets(List.of(widgets));
-        }        public ColumnResponse build() {
-            return new ColumnResponse(weight, widgets);
+        }
+
+        public ColumnResponse build() {
+            $.weight = Objects.requireNonNull($.weight, "expected parameter 'weight' to be non-null");
+            $.widgets = Objects.requireNonNull($.widgets, "expected parameter 'widgets' to be non-null");
+            return $;
         }
     }
+
 }

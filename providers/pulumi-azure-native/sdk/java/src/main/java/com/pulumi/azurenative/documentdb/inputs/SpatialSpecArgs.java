@@ -7,10 +7,10 @@ import com.pulumi.azurenative.documentdb.enums.SpatialType;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,10 @@ public final class SpatialSpecArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="path")
-      private final @Nullable Output<String> path;
+    private @Nullable Output<String> path;
 
-    public Output<String> path() {
-        return this.path == null ? Codegen.empty() : this.path;
+    public Optional<Output<String>> path() {
+        return Optional.ofNullable(this.path);
     }
 
     /**
@@ -34,66 +34,62 @@ public final class SpatialSpecArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="types")
-      private final @Nullable Output<List<Either<String,SpatialType>>> types;
+    private @Nullable Output<List<Either<String,SpatialType>>> types;
 
-    public Output<List<Either<String,SpatialType>>> types() {
-        return this.types == null ? Codegen.empty() : this.types;
+    public Optional<Output<List<Either<String,SpatialType>>>> types() {
+        return Optional.ofNullable(this.types);
     }
 
-    public SpatialSpecArgs(
-        @Nullable Output<String> path,
-        @Nullable Output<List<Either<String,SpatialType>>> types) {
-        this.path = path;
-        this.types = types;
-    }
+    private SpatialSpecArgs() {}
 
-    private SpatialSpecArgs() {
-        this.path = Codegen.empty();
-        this.types = Codegen.empty();
+    private SpatialSpecArgs(SpatialSpecArgs $) {
+        this.path = $.path;
+        this.types = $.types;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SpatialSpecArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> path;
-        private @Nullable Output<List<Either<String,SpatialType>>> types;
+        private SpatialSpecArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SpatialSpecArgs();
         }
 
         public Builder(SpatialSpecArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.path = defaults.path;
-    	      this.types = defaults.types;
+            $ = new SpatialSpecArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder path(@Nullable Output<String> path) {
-            this.path = path;
+            $.path = path;
             return this;
         }
-        public Builder path(@Nullable String path) {
-            this.path = Codegen.ofNullable(path);
-            return this;
+
+        public Builder path(String path) {
+            return path(Output.of(path));
         }
+
         public Builder types(@Nullable Output<List<Either<String,SpatialType>>> types) {
-            this.types = types;
+            $.types = types;
             return this;
         }
-        public Builder types(@Nullable List<Either<String,SpatialType>> types) {
-            this.types = Codegen.ofNullable(types);
-            return this;
+
+        public Builder types(List<Either<String,SpatialType>> types) {
+            return types(Output.of(types));
         }
+
         public Builder types(Either<String,SpatialType>... types) {
             return types(List.of(types));
-        }        public SpatialSpecArgs build() {
-            return new SpatialSpecArgs(path, types);
+        }
+
+        public SpatialSpecArgs build() {
+            return $;
         }
     }
+
 }

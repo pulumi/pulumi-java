@@ -7,10 +7,10 @@ import com.pulumi.awsnative.nimblestudio.inputs.LaunchProfileStreamConfiguration
 import com.pulumi.awsnative.nimblestudio.inputs.LaunchProfileTagsArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,10 @@ public final class LaunchProfileArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -35,7 +35,7 @@ public final class LaunchProfileArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="ec2SubnetIds", required=true)
-      private final Output<List<String>> ec2SubnetIds;
+    private Output<List<String>> ec2SubnetIds;
 
     public Output<List<String>> ec2SubnetIds() {
         return this.ec2SubnetIds;
@@ -47,7 +47,7 @@ public final class LaunchProfileArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="launchProfileProtocolVersions", required=true)
-      private final Output<List<String>> launchProfileProtocolVersions;
+    private Output<List<String>> launchProfileProtocolVersions;
 
     public Output<List<String>> launchProfileProtocolVersions() {
         return this.launchProfileProtocolVersions;
@@ -58,14 +58,14 @@ public final class LaunchProfileArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     @Import(name="streamConfiguration", required=true)
-      private final Output<LaunchProfileStreamConfigurationArgs> streamConfiguration;
+    private Output<LaunchProfileStreamConfigurationArgs> streamConfiguration;
 
     public Output<LaunchProfileStreamConfigurationArgs> streamConfiguration() {
         return this.streamConfiguration;
@@ -77,7 +77,7 @@ public final class LaunchProfileArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="studioComponentIds", required=true)
-      private final Output<List<String>> studioComponentIds;
+    private Output<List<String>> studioComponentIds;
 
     public Output<List<String>> studioComponentIds() {
         return this.studioComponentIds;
@@ -88,157 +88,142 @@ public final class LaunchProfileArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="studioId", required=true)
-      private final Output<String> studioId;
+    private Output<String> studioId;
 
     public Output<String> studioId() {
         return this.studioId;
     }
 
     @Import(name="tags")
-      private final @Nullable Output<LaunchProfileTagsArgs> tags;
+    private @Nullable Output<LaunchProfileTagsArgs> tags;
 
-    public Output<LaunchProfileTagsArgs> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<LaunchProfileTagsArgs>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public LaunchProfileArgs(
-        @Nullable Output<String> description,
-        Output<List<String>> ec2SubnetIds,
-        Output<List<String>> launchProfileProtocolVersions,
-        @Nullable Output<String> name,
-        Output<LaunchProfileStreamConfigurationArgs> streamConfiguration,
-        Output<List<String>> studioComponentIds,
-        Output<String> studioId,
-        @Nullable Output<LaunchProfileTagsArgs> tags) {
-        this.description = description;
-        this.ec2SubnetIds = Objects.requireNonNull(ec2SubnetIds, "expected parameter 'ec2SubnetIds' to be non-null");
-        this.launchProfileProtocolVersions = Objects.requireNonNull(launchProfileProtocolVersions, "expected parameter 'launchProfileProtocolVersions' to be non-null");
-        this.name = name;
-        this.streamConfiguration = Objects.requireNonNull(streamConfiguration, "expected parameter 'streamConfiguration' to be non-null");
-        this.studioComponentIds = Objects.requireNonNull(studioComponentIds, "expected parameter 'studioComponentIds' to be non-null");
-        this.studioId = Objects.requireNonNull(studioId, "expected parameter 'studioId' to be non-null");
-        this.tags = tags;
-    }
+    private LaunchProfileArgs() {}
 
-    private LaunchProfileArgs() {
-        this.description = Codegen.empty();
-        this.ec2SubnetIds = Codegen.empty();
-        this.launchProfileProtocolVersions = Codegen.empty();
-        this.name = Codegen.empty();
-        this.streamConfiguration = Codegen.empty();
-        this.studioComponentIds = Codegen.empty();
-        this.studioId = Codegen.empty();
-        this.tags = Codegen.empty();
+    private LaunchProfileArgs(LaunchProfileArgs $) {
+        this.description = $.description;
+        this.ec2SubnetIds = $.ec2SubnetIds;
+        this.launchProfileProtocolVersions = $.launchProfileProtocolVersions;
+        this.name = $.name;
+        this.streamConfiguration = $.streamConfiguration;
+        this.studioComponentIds = $.studioComponentIds;
+        this.studioId = $.studioId;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LaunchProfileArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> description;
-        private Output<List<String>> ec2SubnetIds;
-        private Output<List<String>> launchProfileProtocolVersions;
-        private @Nullable Output<String> name;
-        private Output<LaunchProfileStreamConfigurationArgs> streamConfiguration;
-        private Output<List<String>> studioComponentIds;
-        private Output<String> studioId;
-        private @Nullable Output<LaunchProfileTagsArgs> tags;
+        private LaunchProfileArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new LaunchProfileArgs();
         }
 
         public Builder(LaunchProfileArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.description = defaults.description;
-    	      this.ec2SubnetIds = defaults.ec2SubnetIds;
-    	      this.launchProfileProtocolVersions = defaults.launchProfileProtocolVersions;
-    	      this.name = defaults.name;
-    	      this.streamConfiguration = defaults.streamConfiguration;
-    	      this.studioComponentIds = defaults.studioComponentIds;
-    	      this.studioId = defaults.studioId;
-    	      this.tags = defaults.tags;
+            $ = new LaunchProfileArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder ec2SubnetIds(Output<List<String>> ec2SubnetIds) {
-            this.ec2SubnetIds = Objects.requireNonNull(ec2SubnetIds);
+            $.ec2SubnetIds = ec2SubnetIds;
             return this;
         }
+
         public Builder ec2SubnetIds(List<String> ec2SubnetIds) {
-            this.ec2SubnetIds = Output.of(Objects.requireNonNull(ec2SubnetIds));
-            return this;
+            return ec2SubnetIds(Output.of(ec2SubnetIds));
         }
+
         public Builder ec2SubnetIds(String... ec2SubnetIds) {
             return ec2SubnetIds(List.of(ec2SubnetIds));
         }
+
         public Builder launchProfileProtocolVersions(Output<List<String>> launchProfileProtocolVersions) {
-            this.launchProfileProtocolVersions = Objects.requireNonNull(launchProfileProtocolVersions);
+            $.launchProfileProtocolVersions = launchProfileProtocolVersions;
             return this;
         }
+
         public Builder launchProfileProtocolVersions(List<String> launchProfileProtocolVersions) {
-            this.launchProfileProtocolVersions = Output.of(Objects.requireNonNull(launchProfileProtocolVersions));
-            return this;
+            return launchProfileProtocolVersions(Output.of(launchProfileProtocolVersions));
         }
+
         public Builder launchProfileProtocolVersions(String... launchProfileProtocolVersions) {
             return launchProfileProtocolVersions(List.of(launchProfileProtocolVersions));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder streamConfiguration(Output<LaunchProfileStreamConfigurationArgs> streamConfiguration) {
-            this.streamConfiguration = Objects.requireNonNull(streamConfiguration);
+            $.streamConfiguration = streamConfiguration;
             return this;
         }
+
         public Builder streamConfiguration(LaunchProfileStreamConfigurationArgs streamConfiguration) {
-            this.streamConfiguration = Output.of(Objects.requireNonNull(streamConfiguration));
-            return this;
+            return streamConfiguration(Output.of(streamConfiguration));
         }
+
         public Builder studioComponentIds(Output<List<String>> studioComponentIds) {
-            this.studioComponentIds = Objects.requireNonNull(studioComponentIds);
+            $.studioComponentIds = studioComponentIds;
             return this;
         }
+
         public Builder studioComponentIds(List<String> studioComponentIds) {
-            this.studioComponentIds = Output.of(Objects.requireNonNull(studioComponentIds));
-            return this;
+            return studioComponentIds(Output.of(studioComponentIds));
         }
+
         public Builder studioComponentIds(String... studioComponentIds) {
             return studioComponentIds(List.of(studioComponentIds));
         }
+
         public Builder studioId(Output<String> studioId) {
-            this.studioId = Objects.requireNonNull(studioId);
+            $.studioId = studioId;
             return this;
         }
+
         public Builder studioId(String studioId) {
-            this.studioId = Output.of(Objects.requireNonNull(studioId));
-            return this;
+            return studioId(Output.of(studioId));
         }
+
         public Builder tags(@Nullable Output<LaunchProfileTagsArgs> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable LaunchProfileTagsArgs tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
-        }        public LaunchProfileArgs build() {
-            return new LaunchProfileArgs(description, ec2SubnetIds, launchProfileProtocolVersions, name, streamConfiguration, studioComponentIds, studioId, tags);
+
+        public Builder tags(LaunchProfileTagsArgs tags) {
+            return tags(Output.of(tags));
+        }
+
+        public LaunchProfileArgs build() {
+            $.ec2SubnetIds = Objects.requireNonNull($.ec2SubnetIds, "expected parameter 'ec2SubnetIds' to be non-null");
+            $.launchProfileProtocolVersions = Objects.requireNonNull($.launchProfileProtocolVersions, "expected parameter 'launchProfileProtocolVersions' to be non-null");
+            $.streamConfiguration = Objects.requireNonNull($.streamConfiguration, "expected parameter 'streamConfiguration' to be non-null");
+            $.studioComponentIds = Objects.requireNonNull($.studioComponentIds, "expected parameter 'studioComponentIds' to be non-null");
+            $.studioId = Objects.requireNonNull($.studioId, "expected parameter 'studioId' to be non-null");
+            return $;
         }
     }
+
 }

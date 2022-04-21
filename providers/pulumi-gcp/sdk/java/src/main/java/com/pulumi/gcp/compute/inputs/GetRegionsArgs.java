@@ -19,10 +19,10 @@ public final class GetRegionsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="project")
-      private final @Nullable String project;
+    private @Nullable String project;
 
     public Optional<String> project() {
-        return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -31,55 +31,50 @@ public final class GetRegionsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="status")
-      private final @Nullable String status;
+    private @Nullable String status;
 
     public Optional<String> status() {
-        return this.status == null ? Optional.empty() : Optional.ofNullable(this.status);
+        return Optional.ofNullable(this.status);
     }
 
-    public GetRegionsArgs(
-        @Nullable String project,
-        @Nullable String status) {
-        this.project = project;
-        this.status = status;
-    }
+    private GetRegionsArgs() {}
 
-    private GetRegionsArgs() {
-        this.project = null;
-        this.status = null;
+    private GetRegionsArgs(GetRegionsArgs $) {
+        this.project = $.project;
+        this.status = $.status;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetRegionsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String project;
-        private @Nullable String status;
+        private GetRegionsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetRegionsArgs();
         }
 
         public Builder(GetRegionsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.project = defaults.project;
-    	      this.status = defaults.status;
+            $ = new GetRegionsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder project(@Nullable String project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
+
         public Builder status(@Nullable String status) {
-            this.status = status;
+            $.status = status;
             return this;
-        }        public GetRegionsArgs build() {
-            return new GetRegionsArgs(project, status);
+        }
+
+        public GetRegionsArgs build() {
+            return $;
         }
     }
+
 }

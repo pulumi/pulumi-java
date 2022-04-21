@@ -8,7 +8,6 @@ import com.pulumi.azurenative.network.enums.ManagedRuleExclusionSelectorMatchOpe
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -26,7 +25,7 @@ public final class ManagedRuleExclusionArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="matchVariable", required=true)
-      private final Output<Either<String,ManagedRuleExclusionMatchVariable>> matchVariable;
+    private Output<Either<String,ManagedRuleExclusionMatchVariable>> matchVariable;
 
     public Output<Either<String,ManagedRuleExclusionMatchVariable>> matchVariable() {
         return this.matchVariable;
@@ -37,7 +36,7 @@ public final class ManagedRuleExclusionArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="selector", required=true)
-      private final Output<String> selector;
+    private Output<String> selector;
 
     public Output<String> selector() {
         return this.selector;
@@ -48,76 +47,71 @@ public final class ManagedRuleExclusionArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="selectorMatchOperator", required=true)
-      private final Output<Either<String,ManagedRuleExclusionSelectorMatchOperator>> selectorMatchOperator;
+    private Output<Either<String,ManagedRuleExclusionSelectorMatchOperator>> selectorMatchOperator;
 
     public Output<Either<String,ManagedRuleExclusionSelectorMatchOperator>> selectorMatchOperator() {
         return this.selectorMatchOperator;
     }
 
-    public ManagedRuleExclusionArgs(
-        Output<Either<String,ManagedRuleExclusionMatchVariable>> matchVariable,
-        Output<String> selector,
-        Output<Either<String,ManagedRuleExclusionSelectorMatchOperator>> selectorMatchOperator) {
-        this.matchVariable = Objects.requireNonNull(matchVariable, "expected parameter 'matchVariable' to be non-null");
-        this.selector = Objects.requireNonNull(selector, "expected parameter 'selector' to be non-null");
-        this.selectorMatchOperator = Objects.requireNonNull(selectorMatchOperator, "expected parameter 'selectorMatchOperator' to be non-null");
-    }
+    private ManagedRuleExclusionArgs() {}
 
-    private ManagedRuleExclusionArgs() {
-        this.matchVariable = Codegen.empty();
-        this.selector = Codegen.empty();
-        this.selectorMatchOperator = Codegen.empty();
+    private ManagedRuleExclusionArgs(ManagedRuleExclusionArgs $) {
+        this.matchVariable = $.matchVariable;
+        this.selector = $.selector;
+        this.selectorMatchOperator = $.selectorMatchOperator;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ManagedRuleExclusionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Either<String,ManagedRuleExclusionMatchVariable>> matchVariable;
-        private Output<String> selector;
-        private Output<Either<String,ManagedRuleExclusionSelectorMatchOperator>> selectorMatchOperator;
+        private ManagedRuleExclusionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ManagedRuleExclusionArgs();
         }
 
         public Builder(ManagedRuleExclusionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.matchVariable = defaults.matchVariable;
-    	      this.selector = defaults.selector;
-    	      this.selectorMatchOperator = defaults.selectorMatchOperator;
+            $ = new ManagedRuleExclusionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder matchVariable(Output<Either<String,ManagedRuleExclusionMatchVariable>> matchVariable) {
-            this.matchVariable = Objects.requireNonNull(matchVariable);
+            $.matchVariable = matchVariable;
             return this;
         }
+
         public Builder matchVariable(Either<String,ManagedRuleExclusionMatchVariable> matchVariable) {
-            this.matchVariable = Output.of(Objects.requireNonNull(matchVariable));
-            return this;
+            return matchVariable(Output.of(matchVariable));
         }
+
         public Builder selector(Output<String> selector) {
-            this.selector = Objects.requireNonNull(selector);
+            $.selector = selector;
             return this;
         }
+
         public Builder selector(String selector) {
-            this.selector = Output.of(Objects.requireNonNull(selector));
-            return this;
+            return selector(Output.of(selector));
         }
+
         public Builder selectorMatchOperator(Output<Either<String,ManagedRuleExclusionSelectorMatchOperator>> selectorMatchOperator) {
-            this.selectorMatchOperator = Objects.requireNonNull(selectorMatchOperator);
+            $.selectorMatchOperator = selectorMatchOperator;
             return this;
         }
+
         public Builder selectorMatchOperator(Either<String,ManagedRuleExclusionSelectorMatchOperator> selectorMatchOperator) {
-            this.selectorMatchOperator = Output.of(Objects.requireNonNull(selectorMatchOperator));
-            return this;
-        }        public ManagedRuleExclusionArgs build() {
-            return new ManagedRuleExclusionArgs(matchVariable, selector, selectorMatchOperator);
+            return selectorMatchOperator(Output.of(selectorMatchOperator));
+        }
+
+        public ManagedRuleExclusionArgs build() {
+            $.matchVariable = Objects.requireNonNull($.matchVariable, "expected parameter 'matchVariable' to be non-null");
+            $.selector = Objects.requireNonNull($.selector, "expected parameter 'selector' to be non-null");
+            $.selectorMatchOperator = Objects.requireNonNull($.selectorMatchOperator, "expected parameter 'selectorMatchOperator' to be non-null");
+            return $;
         }
     }
+
 }

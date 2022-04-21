@@ -7,10 +7,10 @@ import com.pulumi.awsnative.iotanalytics.inputs.DatasetResourceConfigurationArgs
 import com.pulumi.awsnative.iotanalytics.inputs.DatasetVariableArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -19,113 +19,106 @@ public final class DatasetContainerActionArgs extends com.pulumi.resources.Resou
     public static final DatasetContainerActionArgs Empty = new DatasetContainerActionArgs();
 
     @Import(name="executionRoleArn", required=true)
-      private final Output<String> executionRoleArn;
+    private Output<String> executionRoleArn;
 
     public Output<String> executionRoleArn() {
         return this.executionRoleArn;
     }
 
     @Import(name="image", required=true)
-      private final Output<String> image;
+    private Output<String> image;
 
     public Output<String> image() {
         return this.image;
     }
 
     @Import(name="resourceConfiguration", required=true)
-      private final Output<DatasetResourceConfigurationArgs> resourceConfiguration;
+    private Output<DatasetResourceConfigurationArgs> resourceConfiguration;
 
     public Output<DatasetResourceConfigurationArgs> resourceConfiguration() {
         return this.resourceConfiguration;
     }
 
     @Import(name="variables")
-      private final @Nullable Output<List<DatasetVariableArgs>> variables;
+    private @Nullable Output<List<DatasetVariableArgs>> variables;
 
-    public Output<List<DatasetVariableArgs>> variables() {
-        return this.variables == null ? Codegen.empty() : this.variables;
+    public Optional<Output<List<DatasetVariableArgs>>> variables() {
+        return Optional.ofNullable(this.variables);
     }
 
-    public DatasetContainerActionArgs(
-        Output<String> executionRoleArn,
-        Output<String> image,
-        Output<DatasetResourceConfigurationArgs> resourceConfiguration,
-        @Nullable Output<List<DatasetVariableArgs>> variables) {
-        this.executionRoleArn = Objects.requireNonNull(executionRoleArn, "expected parameter 'executionRoleArn' to be non-null");
-        this.image = Objects.requireNonNull(image, "expected parameter 'image' to be non-null");
-        this.resourceConfiguration = Objects.requireNonNull(resourceConfiguration, "expected parameter 'resourceConfiguration' to be non-null");
-        this.variables = variables;
-    }
+    private DatasetContainerActionArgs() {}
 
-    private DatasetContainerActionArgs() {
-        this.executionRoleArn = Codegen.empty();
-        this.image = Codegen.empty();
-        this.resourceConfiguration = Codegen.empty();
-        this.variables = Codegen.empty();
+    private DatasetContainerActionArgs(DatasetContainerActionArgs $) {
+        this.executionRoleArn = $.executionRoleArn;
+        this.image = $.image;
+        this.resourceConfiguration = $.resourceConfiguration;
+        this.variables = $.variables;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DatasetContainerActionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> executionRoleArn;
-        private Output<String> image;
-        private Output<DatasetResourceConfigurationArgs> resourceConfiguration;
-        private @Nullable Output<List<DatasetVariableArgs>> variables;
+        private DatasetContainerActionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DatasetContainerActionArgs();
         }
 
         public Builder(DatasetContainerActionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.executionRoleArn = defaults.executionRoleArn;
-    	      this.image = defaults.image;
-    	      this.resourceConfiguration = defaults.resourceConfiguration;
-    	      this.variables = defaults.variables;
+            $ = new DatasetContainerActionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder executionRoleArn(Output<String> executionRoleArn) {
-            this.executionRoleArn = Objects.requireNonNull(executionRoleArn);
+            $.executionRoleArn = executionRoleArn;
             return this;
         }
+
         public Builder executionRoleArn(String executionRoleArn) {
-            this.executionRoleArn = Output.of(Objects.requireNonNull(executionRoleArn));
-            return this;
+            return executionRoleArn(Output.of(executionRoleArn));
         }
+
         public Builder image(Output<String> image) {
-            this.image = Objects.requireNonNull(image);
+            $.image = image;
             return this;
         }
+
         public Builder image(String image) {
-            this.image = Output.of(Objects.requireNonNull(image));
-            return this;
+            return image(Output.of(image));
         }
+
         public Builder resourceConfiguration(Output<DatasetResourceConfigurationArgs> resourceConfiguration) {
-            this.resourceConfiguration = Objects.requireNonNull(resourceConfiguration);
+            $.resourceConfiguration = resourceConfiguration;
             return this;
         }
+
         public Builder resourceConfiguration(DatasetResourceConfigurationArgs resourceConfiguration) {
-            this.resourceConfiguration = Output.of(Objects.requireNonNull(resourceConfiguration));
-            return this;
+            return resourceConfiguration(Output.of(resourceConfiguration));
         }
+
         public Builder variables(@Nullable Output<List<DatasetVariableArgs>> variables) {
-            this.variables = variables;
+            $.variables = variables;
             return this;
         }
-        public Builder variables(@Nullable List<DatasetVariableArgs> variables) {
-            this.variables = Codegen.ofNullable(variables);
-            return this;
+
+        public Builder variables(List<DatasetVariableArgs> variables) {
+            return variables(Output.of(variables));
         }
+
         public Builder variables(DatasetVariableArgs... variables) {
             return variables(List.of(variables));
-        }        public DatasetContainerActionArgs build() {
-            return new DatasetContainerActionArgs(executionRoleArn, image, resourceConfiguration, variables);
+        }
+
+        public DatasetContainerActionArgs build() {
+            $.executionRoleArn = Objects.requireNonNull($.executionRoleArn, "expected parameter 'executionRoleArn' to be non-null");
+            $.image = Objects.requireNonNull($.image, "expected parameter 'image' to be non-null");
+            $.resourceConfiguration = Objects.requireNonNull($.resourceConfiguration, "expected parameter 'resourceConfiguration' to be non-null");
+            return $;
         }
     }
+
 }

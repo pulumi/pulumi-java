@@ -17,7 +17,7 @@ public final class GetDiskEncryptionSetArgs extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="diskEncryptionSetName", required=true)
-      private final String diskEncryptionSetName;
+    private String diskEncryptionSetName;
 
     public String diskEncryptionSetName() {
         return this.diskEncryptionSetName;
@@ -28,55 +28,52 @@ public final class GetDiskEncryptionSetArgs extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public GetDiskEncryptionSetArgs(
-        String diskEncryptionSetName,
-        String resourceGroupName) {
-        this.diskEncryptionSetName = Objects.requireNonNull(diskEncryptionSetName, "expected parameter 'diskEncryptionSetName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private GetDiskEncryptionSetArgs() {}
 
-    private GetDiskEncryptionSetArgs() {
-        this.diskEncryptionSetName = null;
-        this.resourceGroupName = null;
+    private GetDiskEncryptionSetArgs(GetDiskEncryptionSetArgs $) {
+        this.diskEncryptionSetName = $.diskEncryptionSetName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetDiskEncryptionSetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String diskEncryptionSetName;
-        private String resourceGroupName;
+        private GetDiskEncryptionSetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetDiskEncryptionSetArgs();
         }
 
         public Builder(GetDiskEncryptionSetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.diskEncryptionSetName = defaults.diskEncryptionSetName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new GetDiskEncryptionSetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder diskEncryptionSetName(String diskEncryptionSetName) {
-            this.diskEncryptionSetName = Objects.requireNonNull(diskEncryptionSetName);
+            $.diskEncryptionSetName = diskEncryptionSetName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public GetDiskEncryptionSetArgs build() {
-            return new GetDiskEncryptionSetArgs(diskEncryptionSetName, resourceGroupName);
+        }
+
+        public GetDiskEncryptionSetArgs build() {
+            $.diskEncryptionSetName = Objects.requireNonNull($.diskEncryptionSetName, "expected parameter 'diskEncryptionSetName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

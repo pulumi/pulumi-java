@@ -23,45 +23,44 @@ public final class EdgeProfileResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="subscription")
-      private final @Nullable EdgeProfileSubscriptionResponse subscription;
+    private @Nullable EdgeProfileSubscriptionResponse subscription;
 
     public Optional<EdgeProfileSubscriptionResponse> subscription() {
-        return this.subscription == null ? Optional.empty() : Optional.ofNullable(this.subscription);
+        return Optional.ofNullable(this.subscription);
     }
 
-    public EdgeProfileResponse(@Nullable EdgeProfileSubscriptionResponse subscription) {
-        this.subscription = subscription;
-    }
+    private EdgeProfileResponse() {}
 
-    private EdgeProfileResponse() {
-        this.subscription = null;
+    private EdgeProfileResponse(EdgeProfileResponse $) {
+        this.subscription = $.subscription;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EdgeProfileResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable EdgeProfileSubscriptionResponse subscription;
+        private EdgeProfileResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new EdgeProfileResponse();
         }
 
         public Builder(EdgeProfileResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.subscription = defaults.subscription;
+            $ = new EdgeProfileResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder subscription(@Nullable EdgeProfileSubscriptionResponse subscription) {
-            this.subscription = subscription;
+            $.subscription = subscription;
             return this;
-        }        public EdgeProfileResponse build() {
-            return new EdgeProfileResponse(subscription);
+        }
+
+        public EdgeProfileResponse build() {
+            return $;
         }
     }
+
 }

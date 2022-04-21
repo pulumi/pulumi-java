@@ -5,11 +5,11 @@ package com.pulumi.gcp.dataproc.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class WorkflowTemplatePlacementManagedClusterConfigEndpointConfigAr
      * 
      */
     @Import(name="enableHttpPortAccess")
-      private final @Nullable Output<Boolean> enableHttpPortAccess;
+    private @Nullable Output<Boolean> enableHttpPortAccess;
 
-    public Output<Boolean> enableHttpPortAccess() {
-        return this.enableHttpPortAccess == null ? Codegen.empty() : this.enableHttpPortAccess;
+    public Optional<Output<Boolean>> enableHttpPortAccess() {
+        return Optional.ofNullable(this.enableHttpPortAccess);
     }
 
     /**
@@ -34,63 +34,58 @@ public final class WorkflowTemplatePlacementManagedClusterConfigEndpointConfigAr
      * 
      */
     @Import(name="httpPorts")
-      private final @Nullable Output<Map<String,String>> httpPorts;
+    private @Nullable Output<Map<String,String>> httpPorts;
 
-    public Output<Map<String,String>> httpPorts() {
-        return this.httpPorts == null ? Codegen.empty() : this.httpPorts;
+    public Optional<Output<Map<String,String>>> httpPorts() {
+        return Optional.ofNullable(this.httpPorts);
     }
 
-    public WorkflowTemplatePlacementManagedClusterConfigEndpointConfigArgs(
-        @Nullable Output<Boolean> enableHttpPortAccess,
-        @Nullable Output<Map<String,String>> httpPorts) {
-        this.enableHttpPortAccess = enableHttpPortAccess;
-        this.httpPorts = httpPorts;
-    }
+    private WorkflowTemplatePlacementManagedClusterConfigEndpointConfigArgs() {}
 
-    private WorkflowTemplatePlacementManagedClusterConfigEndpointConfigArgs() {
-        this.enableHttpPortAccess = Codegen.empty();
-        this.httpPorts = Codegen.empty();
+    private WorkflowTemplatePlacementManagedClusterConfigEndpointConfigArgs(WorkflowTemplatePlacementManagedClusterConfigEndpointConfigArgs $) {
+        this.enableHttpPortAccess = $.enableHttpPortAccess;
+        this.httpPorts = $.httpPorts;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WorkflowTemplatePlacementManagedClusterConfigEndpointConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> enableHttpPortAccess;
-        private @Nullable Output<Map<String,String>> httpPorts;
+        private WorkflowTemplatePlacementManagedClusterConfigEndpointConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new WorkflowTemplatePlacementManagedClusterConfigEndpointConfigArgs();
         }
 
         public Builder(WorkflowTemplatePlacementManagedClusterConfigEndpointConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.enableHttpPortAccess = defaults.enableHttpPortAccess;
-    	      this.httpPorts = defaults.httpPorts;
+            $ = new WorkflowTemplatePlacementManagedClusterConfigEndpointConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder enableHttpPortAccess(@Nullable Output<Boolean> enableHttpPortAccess) {
-            this.enableHttpPortAccess = enableHttpPortAccess;
+            $.enableHttpPortAccess = enableHttpPortAccess;
             return this;
         }
-        public Builder enableHttpPortAccess(@Nullable Boolean enableHttpPortAccess) {
-            this.enableHttpPortAccess = Codegen.ofNullable(enableHttpPortAccess);
-            return this;
+
+        public Builder enableHttpPortAccess(Boolean enableHttpPortAccess) {
+            return enableHttpPortAccess(Output.of(enableHttpPortAccess));
         }
+
         public Builder httpPorts(@Nullable Output<Map<String,String>> httpPorts) {
-            this.httpPorts = httpPorts;
+            $.httpPorts = httpPorts;
             return this;
         }
-        public Builder httpPorts(@Nullable Map<String,String> httpPorts) {
-            this.httpPorts = Codegen.ofNullable(httpPorts);
-            return this;
-        }        public WorkflowTemplatePlacementManagedClusterConfigEndpointConfigArgs build() {
-            return new WorkflowTemplatePlacementManagedClusterConfigEndpointConfigArgs(enableHttpPortAccess, httpPorts);
+
+        public Builder httpPorts(Map<String,String> httpPorts) {
+            return httpPorts(Output.of(httpPorts));
+        }
+
+        public WorkflowTemplatePlacementManagedClusterConfigEndpointConfigArgs build() {
+            return $;
         }
     }
+
 }

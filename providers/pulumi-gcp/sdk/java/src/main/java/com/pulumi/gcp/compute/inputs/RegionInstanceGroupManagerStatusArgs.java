@@ -5,12 +5,12 @@ package com.pulumi.gcp.compute.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.compute.inputs.RegionInstanceGroupManagerStatusStatefulArgs;
 import com.pulumi.gcp.compute.inputs.RegionInstanceGroupManagerStatusVersionTargetArgs;
 import java.lang.Boolean;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,10 @@ public final class RegionInstanceGroupManagerStatusArgs extends com.pulumi.resou
      * 
      */
     @Import(name="isStable")
-      private final @Nullable Output<Boolean> isStable;
+    private @Nullable Output<Boolean> isStable;
 
-    public Output<Boolean> isStable() {
-        return this.isStable == null ? Codegen.empty() : this.isStable;
+    public Optional<Output<Boolean>> isStable() {
+        return Optional.ofNullable(this.isStable);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class RegionInstanceGroupManagerStatusArgs extends com.pulumi.resou
      * 
      */
     @Import(name="statefuls")
-      private final @Nullable Output<List<RegionInstanceGroupManagerStatusStatefulArgs>> statefuls;
+    private @Nullable Output<List<RegionInstanceGroupManagerStatusStatefulArgs>> statefuls;
 
-    public Output<List<RegionInstanceGroupManagerStatusStatefulArgs>> statefuls() {
-        return this.statefuls == null ? Codegen.empty() : this.statefuls;
+    public Optional<Output<List<RegionInstanceGroupManagerStatusStatefulArgs>>> statefuls() {
+        return Optional.ofNullable(this.statefuls);
     }
 
     /**
@@ -45,82 +45,76 @@ public final class RegionInstanceGroupManagerStatusArgs extends com.pulumi.resou
      * 
      */
     @Import(name="versionTargets")
-      private final @Nullable Output<List<RegionInstanceGroupManagerStatusVersionTargetArgs>> versionTargets;
+    private @Nullable Output<List<RegionInstanceGroupManagerStatusVersionTargetArgs>> versionTargets;
 
-    public Output<List<RegionInstanceGroupManagerStatusVersionTargetArgs>> versionTargets() {
-        return this.versionTargets == null ? Codegen.empty() : this.versionTargets;
+    public Optional<Output<List<RegionInstanceGroupManagerStatusVersionTargetArgs>>> versionTargets() {
+        return Optional.ofNullable(this.versionTargets);
     }
 
-    public RegionInstanceGroupManagerStatusArgs(
-        @Nullable Output<Boolean> isStable,
-        @Nullable Output<List<RegionInstanceGroupManagerStatusStatefulArgs>> statefuls,
-        @Nullable Output<List<RegionInstanceGroupManagerStatusVersionTargetArgs>> versionTargets) {
-        this.isStable = isStable;
-        this.statefuls = statefuls;
-        this.versionTargets = versionTargets;
-    }
+    private RegionInstanceGroupManagerStatusArgs() {}
 
-    private RegionInstanceGroupManagerStatusArgs() {
-        this.isStable = Codegen.empty();
-        this.statefuls = Codegen.empty();
-        this.versionTargets = Codegen.empty();
+    private RegionInstanceGroupManagerStatusArgs(RegionInstanceGroupManagerStatusArgs $) {
+        this.isStable = $.isStable;
+        this.statefuls = $.statefuls;
+        this.versionTargets = $.versionTargets;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RegionInstanceGroupManagerStatusArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> isStable;
-        private @Nullable Output<List<RegionInstanceGroupManagerStatusStatefulArgs>> statefuls;
-        private @Nullable Output<List<RegionInstanceGroupManagerStatusVersionTargetArgs>> versionTargets;
+        private RegionInstanceGroupManagerStatusArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RegionInstanceGroupManagerStatusArgs();
         }
 
         public Builder(RegionInstanceGroupManagerStatusArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.isStable = defaults.isStable;
-    	      this.statefuls = defaults.statefuls;
-    	      this.versionTargets = defaults.versionTargets;
+            $ = new RegionInstanceGroupManagerStatusArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder isStable(@Nullable Output<Boolean> isStable) {
-            this.isStable = isStable;
+            $.isStable = isStable;
             return this;
         }
-        public Builder isStable(@Nullable Boolean isStable) {
-            this.isStable = Codegen.ofNullable(isStable);
-            return this;
+
+        public Builder isStable(Boolean isStable) {
+            return isStable(Output.of(isStable));
         }
+
         public Builder statefuls(@Nullable Output<List<RegionInstanceGroupManagerStatusStatefulArgs>> statefuls) {
-            this.statefuls = statefuls;
+            $.statefuls = statefuls;
             return this;
         }
-        public Builder statefuls(@Nullable List<RegionInstanceGroupManagerStatusStatefulArgs> statefuls) {
-            this.statefuls = Codegen.ofNullable(statefuls);
-            return this;
+
+        public Builder statefuls(List<RegionInstanceGroupManagerStatusStatefulArgs> statefuls) {
+            return statefuls(Output.of(statefuls));
         }
+
         public Builder statefuls(RegionInstanceGroupManagerStatusStatefulArgs... statefuls) {
             return statefuls(List.of(statefuls));
         }
+
         public Builder versionTargets(@Nullable Output<List<RegionInstanceGroupManagerStatusVersionTargetArgs>> versionTargets) {
-            this.versionTargets = versionTargets;
+            $.versionTargets = versionTargets;
             return this;
         }
-        public Builder versionTargets(@Nullable List<RegionInstanceGroupManagerStatusVersionTargetArgs> versionTargets) {
-            this.versionTargets = Codegen.ofNullable(versionTargets);
-            return this;
+
+        public Builder versionTargets(List<RegionInstanceGroupManagerStatusVersionTargetArgs> versionTargets) {
+            return versionTargets(Output.of(versionTargets));
         }
+
         public Builder versionTargets(RegionInstanceGroupManagerStatusVersionTargetArgs... versionTargets) {
             return versionTargets(List.of(versionTargets));
-        }        public RegionInstanceGroupManagerStatusArgs build() {
-            return new RegionInstanceGroupManagerStatusArgs(isStable, statefuls, versionTargets);
+        }
+
+        public RegionInstanceGroupManagerStatusArgs build() {
+            return $;
         }
     }
+
 }

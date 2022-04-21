@@ -26,10 +26,10 @@ public final class ManagementConfigurationPropertiesResponse extends com.pulumi.
      * 
      */
     @Import(name="applicationId")
-      private final @Nullable String applicationId;
+    private @Nullable String applicationId;
 
     public Optional<String> applicationId() {
-        return this.applicationId == null ? Optional.empty() : Optional.ofNullable(this.applicationId);
+        return Optional.ofNullable(this.applicationId);
     }
 
     /**
@@ -37,7 +37,7 @@ public final class ManagementConfigurationPropertiesResponse extends com.pulumi.
      * 
      */
     @Import(name="parameters", required=true)
-      private final List<ArmTemplateParameterResponse> parameters;
+    private List<ArmTemplateParameterResponse> parameters;
 
     public List<ArmTemplateParameterResponse> parameters() {
         return this.parameters;
@@ -48,7 +48,7 @@ public final class ManagementConfigurationPropertiesResponse extends com.pulumi.
      * 
      */
     @Import(name="parentResourceType", required=true)
-      private final String parentResourceType;
+    private String parentResourceType;
 
     public String parentResourceType() {
         return this.parentResourceType;
@@ -59,7 +59,7 @@ public final class ManagementConfigurationPropertiesResponse extends com.pulumi.
      * 
      */
     @Import(name="provisioningState", required=true)
-      private final String provisioningState;
+    private String provisioningState;
 
     public String provisioningState() {
         return this.provisioningState;
@@ -70,85 +70,76 @@ public final class ManagementConfigurationPropertiesResponse extends com.pulumi.
      * 
      */
     @Import(name="template", required=true)
-      private final Object template;
+    private Object template;
 
     public Object template() {
         return this.template;
     }
 
-    public ManagementConfigurationPropertiesResponse(
-        @Nullable String applicationId,
-        List<ArmTemplateParameterResponse> parameters,
-        String parentResourceType,
-        String provisioningState,
-        Object template) {
-        this.applicationId = applicationId;
-        this.parameters = Objects.requireNonNull(parameters, "expected parameter 'parameters' to be non-null");
-        this.parentResourceType = Objects.requireNonNull(parentResourceType, "expected parameter 'parentResourceType' to be non-null");
-        this.provisioningState = Objects.requireNonNull(provisioningState, "expected parameter 'provisioningState' to be non-null");
-        this.template = Objects.requireNonNull(template, "expected parameter 'template' to be non-null");
-    }
+    private ManagementConfigurationPropertiesResponse() {}
 
-    private ManagementConfigurationPropertiesResponse() {
-        this.applicationId = null;
-        this.parameters = List.of();
-        this.parentResourceType = null;
-        this.provisioningState = null;
-        this.template = null;
+    private ManagementConfigurationPropertiesResponse(ManagementConfigurationPropertiesResponse $) {
+        this.applicationId = $.applicationId;
+        this.parameters = $.parameters;
+        this.parentResourceType = $.parentResourceType;
+        this.provisioningState = $.provisioningState;
+        this.template = $.template;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ManagementConfigurationPropertiesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String applicationId;
-        private List<ArmTemplateParameterResponse> parameters;
-        private String parentResourceType;
-        private String provisioningState;
-        private Object template;
+        private ManagementConfigurationPropertiesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ManagementConfigurationPropertiesResponse();
         }
 
         public Builder(ManagementConfigurationPropertiesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.applicationId = defaults.applicationId;
-    	      this.parameters = defaults.parameters;
-    	      this.parentResourceType = defaults.parentResourceType;
-    	      this.provisioningState = defaults.provisioningState;
-    	      this.template = defaults.template;
+            $ = new ManagementConfigurationPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder applicationId(@Nullable String applicationId) {
-            this.applicationId = applicationId;
+            $.applicationId = applicationId;
             return this;
         }
+
         public Builder parameters(List<ArmTemplateParameterResponse> parameters) {
-            this.parameters = Objects.requireNonNull(parameters);
+            $.parameters = parameters;
             return this;
         }
+
         public Builder parameters(ArmTemplateParameterResponse... parameters) {
             return parameters(List.of(parameters));
         }
+
         public Builder parentResourceType(String parentResourceType) {
-            this.parentResourceType = Objects.requireNonNull(parentResourceType);
+            $.parentResourceType = parentResourceType;
             return this;
         }
+
         public Builder provisioningState(String provisioningState) {
-            this.provisioningState = Objects.requireNonNull(provisioningState);
+            $.provisioningState = provisioningState;
             return this;
         }
+
         public Builder template(Object template) {
-            this.template = Objects.requireNonNull(template);
+            $.template = template;
             return this;
-        }        public ManagementConfigurationPropertiesResponse build() {
-            return new ManagementConfigurationPropertiesResponse(applicationId, parameters, parentResourceType, provisioningState, template);
+        }
+
+        public ManagementConfigurationPropertiesResponse build() {
+            $.parameters = Objects.requireNonNull($.parameters, "expected parameter 'parameters' to be non-null");
+            $.parentResourceType = Objects.requireNonNull($.parentResourceType, "expected parameter 'parentResourceType' to be non-null");
+            $.provisioningState = Objects.requireNonNull($.provisioningState, "expected parameter 'provisioningState' to be non-null");
+            $.template = Objects.requireNonNull($.template, "expected parameter 'template' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,10 +5,10 @@ package com.pulumi.azurenative.insights.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -17,90 +17,84 @@ public final class EtwEventConfigurationArgs extends com.pulumi.resources.Resour
     public static final EtwEventConfigurationArgs Empty = new EtwEventConfigurationArgs();
 
     @Import(name="filter")
-      private final @Nullable Output<String> filter;
+    private @Nullable Output<String> filter;
 
-    public Output<String> filter() {
-        return this.filter == null ? Codegen.empty() : this.filter;
+    public Optional<Output<String>> filter() {
+        return Optional.ofNullable(this.filter);
     }
 
     @Import(name="id", required=true)
-      private final Output<Integer> id;
+    private Output<Integer> id;
 
     public Output<Integer> id() {
         return this.id;
     }
 
     @Import(name="name", required=true)
-      private final Output<String> name;
+    private Output<String> name;
 
     public Output<String> name() {
         return this.name;
     }
 
-    public EtwEventConfigurationArgs(
-        @Nullable Output<String> filter,
-        Output<Integer> id,
-        Output<String> name) {
-        this.filter = filter;
-        this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-    }
+    private EtwEventConfigurationArgs() {}
 
-    private EtwEventConfigurationArgs() {
-        this.filter = Codegen.empty();
-        this.id = Codegen.empty();
-        this.name = Codegen.empty();
+    private EtwEventConfigurationArgs(EtwEventConfigurationArgs $) {
+        this.filter = $.filter;
+        this.id = $.id;
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EtwEventConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> filter;
-        private Output<Integer> id;
-        private Output<String> name;
+        private EtwEventConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new EtwEventConfigurationArgs();
         }
 
         public Builder(EtwEventConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.filter = defaults.filter;
-    	      this.id = defaults.id;
-    	      this.name = defaults.name;
+            $ = new EtwEventConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder filter(@Nullable Output<String> filter) {
-            this.filter = filter;
+            $.filter = filter;
             return this;
         }
-        public Builder filter(@Nullable String filter) {
-            this.filter = Codegen.ofNullable(filter);
-            return this;
+
+        public Builder filter(String filter) {
+            return filter(Output.of(filter));
         }
+
         public Builder id(Output<Integer> id) {
-            this.id = Objects.requireNonNull(id);
+            $.id = id;
             return this;
         }
+
         public Builder id(Integer id) {
-            this.id = Output.of(Objects.requireNonNull(id));
-            return this;
+            return id(Output.of(id));
         }
+
         public Builder name(Output<String> name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Output.of(Objects.requireNonNull(name));
-            return this;
-        }        public EtwEventConfigurationArgs build() {
-            return new EtwEventConfigurationArgs(filter, id, name);
+            return name(Output.of(name));
+        }
+
+        public EtwEventConfigurationArgs build() {
+            $.id = Objects.requireNonNull($.id, "expected parameter 'id' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            return $;
         }
     }
+
 }

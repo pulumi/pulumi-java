@@ -5,11 +5,11 @@ package com.pulumi.docker.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -18,133 +18,121 @@ public final class ContainerHealthcheckArgs extends com.pulumi.resources.Resourc
     public static final ContainerHealthcheckArgs Empty = new ContainerHealthcheckArgs();
 
     @Import(name="interval")
-      private final @Nullable Output<String> interval;
+    private @Nullable Output<String> interval;
 
-    public Output<String> interval() {
-        return this.interval == null ? Codegen.empty() : this.interval;
+    public Optional<Output<String>> interval() {
+        return Optional.ofNullable(this.interval);
     }
 
     @Import(name="retries")
-      private final @Nullable Output<Integer> retries;
+    private @Nullable Output<Integer> retries;
 
-    public Output<Integer> retries() {
-        return this.retries == null ? Codegen.empty() : this.retries;
+    public Optional<Output<Integer>> retries() {
+        return Optional.ofNullable(this.retries);
     }
 
     @Import(name="startPeriod")
-      private final @Nullable Output<String> startPeriod;
+    private @Nullable Output<String> startPeriod;
 
-    public Output<String> startPeriod() {
-        return this.startPeriod == null ? Codegen.empty() : this.startPeriod;
+    public Optional<Output<String>> startPeriod() {
+        return Optional.ofNullable(this.startPeriod);
     }
 
     @Import(name="tests", required=true)
-      private final Output<List<String>> tests;
+    private Output<List<String>> tests;
 
     public Output<List<String>> tests() {
         return this.tests;
     }
 
     @Import(name="timeout")
-      private final @Nullable Output<String> timeout;
+    private @Nullable Output<String> timeout;
 
-    public Output<String> timeout() {
-        return this.timeout == null ? Codegen.empty() : this.timeout;
+    public Optional<Output<String>> timeout() {
+        return Optional.ofNullable(this.timeout);
     }
 
-    public ContainerHealthcheckArgs(
-        @Nullable Output<String> interval,
-        @Nullable Output<Integer> retries,
-        @Nullable Output<String> startPeriod,
-        Output<List<String>> tests,
-        @Nullable Output<String> timeout) {
-        this.interval = interval;
-        this.retries = retries;
-        this.startPeriod = startPeriod;
-        this.tests = Objects.requireNonNull(tests, "expected parameter 'tests' to be non-null");
-        this.timeout = timeout;
-    }
+    private ContainerHealthcheckArgs() {}
 
-    private ContainerHealthcheckArgs() {
-        this.interval = Codegen.empty();
-        this.retries = Codegen.empty();
-        this.startPeriod = Codegen.empty();
-        this.tests = Codegen.empty();
-        this.timeout = Codegen.empty();
+    private ContainerHealthcheckArgs(ContainerHealthcheckArgs $) {
+        this.interval = $.interval;
+        this.retries = $.retries;
+        this.startPeriod = $.startPeriod;
+        this.tests = $.tests;
+        this.timeout = $.timeout;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ContainerHealthcheckArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> interval;
-        private @Nullable Output<Integer> retries;
-        private @Nullable Output<String> startPeriod;
-        private Output<List<String>> tests;
-        private @Nullable Output<String> timeout;
+        private ContainerHealthcheckArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ContainerHealthcheckArgs();
         }
 
         public Builder(ContainerHealthcheckArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.interval = defaults.interval;
-    	      this.retries = defaults.retries;
-    	      this.startPeriod = defaults.startPeriod;
-    	      this.tests = defaults.tests;
-    	      this.timeout = defaults.timeout;
+            $ = new ContainerHealthcheckArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder interval(@Nullable Output<String> interval) {
-            this.interval = interval;
+            $.interval = interval;
             return this;
         }
-        public Builder interval(@Nullable String interval) {
-            this.interval = Codegen.ofNullable(interval);
-            return this;
+
+        public Builder interval(String interval) {
+            return interval(Output.of(interval));
         }
+
         public Builder retries(@Nullable Output<Integer> retries) {
-            this.retries = retries;
+            $.retries = retries;
             return this;
         }
-        public Builder retries(@Nullable Integer retries) {
-            this.retries = Codegen.ofNullable(retries);
-            return this;
+
+        public Builder retries(Integer retries) {
+            return retries(Output.of(retries));
         }
+
         public Builder startPeriod(@Nullable Output<String> startPeriod) {
-            this.startPeriod = startPeriod;
+            $.startPeriod = startPeriod;
             return this;
         }
-        public Builder startPeriod(@Nullable String startPeriod) {
-            this.startPeriod = Codegen.ofNullable(startPeriod);
-            return this;
+
+        public Builder startPeriod(String startPeriod) {
+            return startPeriod(Output.of(startPeriod));
         }
+
         public Builder tests(Output<List<String>> tests) {
-            this.tests = Objects.requireNonNull(tests);
+            $.tests = tests;
             return this;
         }
+
         public Builder tests(List<String> tests) {
-            this.tests = Output.of(Objects.requireNonNull(tests));
-            return this;
+            return tests(Output.of(tests));
         }
+
         public Builder tests(String... tests) {
             return tests(List.of(tests));
         }
+
         public Builder timeout(@Nullable Output<String> timeout) {
-            this.timeout = timeout;
+            $.timeout = timeout;
             return this;
         }
-        public Builder timeout(@Nullable String timeout) {
-            this.timeout = Codegen.ofNullable(timeout);
-            return this;
-        }        public ContainerHealthcheckArgs build() {
-            return new ContainerHealthcheckArgs(interval, retries, startPeriod, tests, timeout);
+
+        public Builder timeout(String timeout) {
+            return timeout(Output.of(timeout));
+        }
+
+        public ContainerHealthcheckArgs build() {
+            $.tests = Objects.requireNonNull($.tests, "expected parameter 'tests' to be non-null");
+            return $;
         }
     }
+
 }

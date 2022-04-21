@@ -7,12 +7,12 @@ import com.pulumi.azurenative.deviceupdate.inputs.DiagnosticStoragePropertiesArg
 import com.pulumi.azurenative.deviceupdate.inputs.IotHubSettingsArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,7 +25,7 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="accountName", required=true)
-      private final Output<String> accountName;
+    private Output<String> accountName;
 
     public Output<String> accountName() {
         return this.accountName;
@@ -36,10 +36,10 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="diagnosticStorageProperties")
-      private final @Nullable Output<DiagnosticStoragePropertiesArgs> diagnosticStorageProperties;
+    private @Nullable Output<DiagnosticStoragePropertiesArgs> diagnosticStorageProperties;
 
-    public Output<DiagnosticStoragePropertiesArgs> diagnosticStorageProperties() {
-        return this.diagnosticStorageProperties == null ? Codegen.empty() : this.diagnosticStorageProperties;
+    public Optional<Output<DiagnosticStoragePropertiesArgs>> diagnosticStorageProperties() {
+        return Optional.ofNullable(this.diagnosticStorageProperties);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="enableDiagnostics")
-      private final @Nullable Output<Boolean> enableDiagnostics;
+    private @Nullable Output<Boolean> enableDiagnostics;
 
-    public Output<Boolean> enableDiagnostics() {
-        return this.enableDiagnostics == null ? Codegen.empty() : this.enableDiagnostics;
+    public Optional<Output<Boolean>> enableDiagnostics() {
+        return Optional.ofNullable(this.enableDiagnostics);
     }
 
     /**
@@ -58,10 +58,10 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="instanceName")
-      private final @Nullable Output<String> instanceName;
+    private @Nullable Output<String> instanceName;
 
-    public Output<String> instanceName() {
-        return this.instanceName == null ? Codegen.empty() : this.instanceName;
+    public Optional<Output<String>> instanceName() {
+        return Optional.ofNullable(this.instanceName);
     }
 
     /**
@@ -69,10 +69,10 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="iotHubs")
-      private final @Nullable Output<List<IotHubSettingsArgs>> iotHubs;
+    private @Nullable Output<List<IotHubSettingsArgs>> iotHubs;
 
-    public Output<List<IotHubSettingsArgs>> iotHubs() {
-        return this.iotHubs == null ? Codegen.empty() : this.iotHubs;
+    public Optional<Output<List<IotHubSettingsArgs>>> iotHubs() {
+        return Optional.ofNullable(this.iotHubs);
     }
 
     /**
@@ -80,10 +80,10 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -91,7 +91,7 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -102,144 +102,124 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public InstanceArgs(
-        Output<String> accountName,
-        @Nullable Output<DiagnosticStoragePropertiesArgs> diagnosticStorageProperties,
-        @Nullable Output<Boolean> enableDiagnostics,
-        @Nullable Output<String> instanceName,
-        @Nullable Output<List<IotHubSettingsArgs>> iotHubs,
-        @Nullable Output<String> location,
-        Output<String> resourceGroupName,
-        @Nullable Output<Map<String,String>> tags) {
-        this.accountName = Objects.requireNonNull(accountName, "expected parameter 'accountName' to be non-null");
-        this.diagnosticStorageProperties = diagnosticStorageProperties;
-        this.enableDiagnostics = enableDiagnostics;
-        this.instanceName = instanceName;
-        this.iotHubs = iotHubs;
-        this.location = location;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.tags = tags;
-    }
+    private InstanceArgs() {}
 
-    private InstanceArgs() {
-        this.accountName = Codegen.empty();
-        this.diagnosticStorageProperties = Codegen.empty();
-        this.enableDiagnostics = Codegen.empty();
-        this.instanceName = Codegen.empty();
-        this.iotHubs = Codegen.empty();
-        this.location = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.tags = Codegen.empty();
+    private InstanceArgs(InstanceArgs $) {
+        this.accountName = $.accountName;
+        this.diagnosticStorageProperties = $.diagnosticStorageProperties;
+        this.enableDiagnostics = $.enableDiagnostics;
+        this.instanceName = $.instanceName;
+        this.iotHubs = $.iotHubs;
+        this.location = $.location;
+        this.resourceGroupName = $.resourceGroupName;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(InstanceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> accountName;
-        private @Nullable Output<DiagnosticStoragePropertiesArgs> diagnosticStorageProperties;
-        private @Nullable Output<Boolean> enableDiagnostics;
-        private @Nullable Output<String> instanceName;
-        private @Nullable Output<List<IotHubSettingsArgs>> iotHubs;
-        private @Nullable Output<String> location;
-        private Output<String> resourceGroupName;
-        private @Nullable Output<Map<String,String>> tags;
+        private InstanceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new InstanceArgs();
         }
 
         public Builder(InstanceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accountName = defaults.accountName;
-    	      this.diagnosticStorageProperties = defaults.diagnosticStorageProperties;
-    	      this.enableDiagnostics = defaults.enableDiagnostics;
-    	      this.instanceName = defaults.instanceName;
-    	      this.iotHubs = defaults.iotHubs;
-    	      this.location = defaults.location;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.tags = defaults.tags;
+            $ = new InstanceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder accountName(Output<String> accountName) {
-            this.accountName = Objects.requireNonNull(accountName);
+            $.accountName = accountName;
             return this;
         }
+
         public Builder accountName(String accountName) {
-            this.accountName = Output.of(Objects.requireNonNull(accountName));
-            return this;
+            return accountName(Output.of(accountName));
         }
+
         public Builder diagnosticStorageProperties(@Nullable Output<DiagnosticStoragePropertiesArgs> diagnosticStorageProperties) {
-            this.diagnosticStorageProperties = diagnosticStorageProperties;
+            $.diagnosticStorageProperties = diagnosticStorageProperties;
             return this;
         }
-        public Builder diagnosticStorageProperties(@Nullable DiagnosticStoragePropertiesArgs diagnosticStorageProperties) {
-            this.diagnosticStorageProperties = Codegen.ofNullable(diagnosticStorageProperties);
-            return this;
+
+        public Builder diagnosticStorageProperties(DiagnosticStoragePropertiesArgs diagnosticStorageProperties) {
+            return diagnosticStorageProperties(Output.of(diagnosticStorageProperties));
         }
+
         public Builder enableDiagnostics(@Nullable Output<Boolean> enableDiagnostics) {
-            this.enableDiagnostics = enableDiagnostics;
+            $.enableDiagnostics = enableDiagnostics;
             return this;
         }
-        public Builder enableDiagnostics(@Nullable Boolean enableDiagnostics) {
-            this.enableDiagnostics = Codegen.ofNullable(enableDiagnostics);
-            return this;
+
+        public Builder enableDiagnostics(Boolean enableDiagnostics) {
+            return enableDiagnostics(Output.of(enableDiagnostics));
         }
+
         public Builder instanceName(@Nullable Output<String> instanceName) {
-            this.instanceName = instanceName;
+            $.instanceName = instanceName;
             return this;
         }
-        public Builder instanceName(@Nullable String instanceName) {
-            this.instanceName = Codegen.ofNullable(instanceName);
-            return this;
+
+        public Builder instanceName(String instanceName) {
+            return instanceName(Output.of(instanceName));
         }
+
         public Builder iotHubs(@Nullable Output<List<IotHubSettingsArgs>> iotHubs) {
-            this.iotHubs = iotHubs;
+            $.iotHubs = iotHubs;
             return this;
         }
-        public Builder iotHubs(@Nullable List<IotHubSettingsArgs> iotHubs) {
-            this.iotHubs = Codegen.ofNullable(iotHubs);
-            return this;
+
+        public Builder iotHubs(List<IotHubSettingsArgs> iotHubs) {
+            return iotHubs(Output.of(iotHubs));
         }
+
         public Builder iotHubs(IotHubSettingsArgs... iotHubs) {
             return iotHubs(List.of(iotHubs));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
-        }        public InstanceArgs build() {
-            return new InstanceArgs(accountName, diagnosticStorageProperties, enableDiagnostics, instanceName, iotHubs, location, resourceGroupName, tags);
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
+        }
+
+        public InstanceArgs build() {
+            $.accountName = Objects.requireNonNull($.accountName, "expected parameter 'accountName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

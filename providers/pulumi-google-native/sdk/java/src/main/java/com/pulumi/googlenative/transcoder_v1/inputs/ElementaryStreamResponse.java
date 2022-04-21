@@ -24,7 +24,7 @@ public final class ElementaryStreamResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="audioStream", required=true)
-      private final AudioStreamResponse audioStream;
+    private AudioStreamResponse audioStream;
 
     public AudioStreamResponse audioStream() {
         return this.audioStream;
@@ -35,7 +35,7 @@ public final class ElementaryStreamResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="key", required=true)
-      private final String key;
+    private String key;
 
     public String key() {
         return this.key;
@@ -46,7 +46,7 @@ public final class ElementaryStreamResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="textStream", required=true)
-      private final TextStreamResponse textStream;
+    private TextStreamResponse textStream;
 
     public TextStreamResponse textStream() {
         return this.textStream;
@@ -57,73 +57,66 @@ public final class ElementaryStreamResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="videoStream", required=true)
-      private final VideoStreamResponse videoStream;
+    private VideoStreamResponse videoStream;
 
     public VideoStreamResponse videoStream() {
         return this.videoStream;
     }
 
-    public ElementaryStreamResponse(
-        AudioStreamResponse audioStream,
-        String key,
-        TextStreamResponse textStream,
-        VideoStreamResponse videoStream) {
-        this.audioStream = Objects.requireNonNull(audioStream, "expected parameter 'audioStream' to be non-null");
-        this.key = Objects.requireNonNull(key, "expected parameter 'key' to be non-null");
-        this.textStream = Objects.requireNonNull(textStream, "expected parameter 'textStream' to be non-null");
-        this.videoStream = Objects.requireNonNull(videoStream, "expected parameter 'videoStream' to be non-null");
-    }
+    private ElementaryStreamResponse() {}
 
-    private ElementaryStreamResponse() {
-        this.audioStream = null;
-        this.key = null;
-        this.textStream = null;
-        this.videoStream = null;
+    private ElementaryStreamResponse(ElementaryStreamResponse $) {
+        this.audioStream = $.audioStream;
+        this.key = $.key;
+        this.textStream = $.textStream;
+        this.videoStream = $.videoStream;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ElementaryStreamResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private AudioStreamResponse audioStream;
-        private String key;
-        private TextStreamResponse textStream;
-        private VideoStreamResponse videoStream;
+        private ElementaryStreamResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ElementaryStreamResponse();
         }
 
         public Builder(ElementaryStreamResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.audioStream = defaults.audioStream;
-    	      this.key = defaults.key;
-    	      this.textStream = defaults.textStream;
-    	      this.videoStream = defaults.videoStream;
+            $ = new ElementaryStreamResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder audioStream(AudioStreamResponse audioStream) {
-            this.audioStream = Objects.requireNonNull(audioStream);
+            $.audioStream = audioStream;
             return this;
         }
+
         public Builder key(String key) {
-            this.key = Objects.requireNonNull(key);
+            $.key = key;
             return this;
         }
+
         public Builder textStream(TextStreamResponse textStream) {
-            this.textStream = Objects.requireNonNull(textStream);
+            $.textStream = textStream;
             return this;
         }
+
         public Builder videoStream(VideoStreamResponse videoStream) {
-            this.videoStream = Objects.requireNonNull(videoStream);
+            $.videoStream = videoStream;
             return this;
-        }        public ElementaryStreamResponse build() {
-            return new ElementaryStreamResponse(audioStream, key, textStream, videoStream);
+        }
+
+        public ElementaryStreamResponse build() {
+            $.audioStream = Objects.requireNonNull($.audioStream, "expected parameter 'audioStream' to be non-null");
+            $.key = Objects.requireNonNull($.key, "expected parameter 'key' to be non-null");
+            $.textStream = Objects.requireNonNull($.textStream, "expected parameter 'textStream' to be non-null");
+            $.videoStream = Objects.requireNonNull($.videoStream, "expected parameter 'videoStream' to be non-null");
+            return $;
         }
     }
+
 }

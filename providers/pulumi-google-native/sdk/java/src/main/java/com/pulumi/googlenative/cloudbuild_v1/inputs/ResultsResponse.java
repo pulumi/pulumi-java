@@ -24,7 +24,7 @@ public final class ResultsResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="artifactManifest", required=true)
-      private final String artifactManifest;
+    private String artifactManifest;
 
     public String artifactManifest() {
         return this.artifactManifest;
@@ -35,7 +35,7 @@ public final class ResultsResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="artifactTiming", required=true)
-      private final TimeSpanResponse artifactTiming;
+    private TimeSpanResponse artifactTiming;
 
     public TimeSpanResponse artifactTiming() {
         return this.artifactTiming;
@@ -46,7 +46,7 @@ public final class ResultsResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="buildStepImages", required=true)
-      private final List<String> buildStepImages;
+    private List<String> buildStepImages;
 
     public List<String> buildStepImages() {
         return this.buildStepImages;
@@ -57,7 +57,7 @@ public final class ResultsResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="buildStepOutputs", required=true)
-      private final List<String> buildStepOutputs;
+    private List<String> buildStepOutputs;
 
     public List<String> buildStepOutputs() {
         return this.buildStepOutputs;
@@ -68,7 +68,7 @@ public final class ResultsResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="images", required=true)
-      private final List<BuiltImageResponse> images;
+    private List<BuiltImageResponse> images;
 
     public List<BuiltImageResponse> images() {
         return this.images;
@@ -79,100 +79,92 @@ public final class ResultsResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="numArtifacts", required=true)
-      private final String numArtifacts;
+    private String numArtifacts;
 
     public String numArtifacts() {
         return this.numArtifacts;
     }
 
-    public ResultsResponse(
-        String artifactManifest,
-        TimeSpanResponse artifactTiming,
-        List<String> buildStepImages,
-        List<String> buildStepOutputs,
-        List<BuiltImageResponse> images,
-        String numArtifacts) {
-        this.artifactManifest = Objects.requireNonNull(artifactManifest, "expected parameter 'artifactManifest' to be non-null");
-        this.artifactTiming = Objects.requireNonNull(artifactTiming, "expected parameter 'artifactTiming' to be non-null");
-        this.buildStepImages = Objects.requireNonNull(buildStepImages, "expected parameter 'buildStepImages' to be non-null");
-        this.buildStepOutputs = Objects.requireNonNull(buildStepOutputs, "expected parameter 'buildStepOutputs' to be non-null");
-        this.images = Objects.requireNonNull(images, "expected parameter 'images' to be non-null");
-        this.numArtifacts = Objects.requireNonNull(numArtifacts, "expected parameter 'numArtifacts' to be non-null");
-    }
+    private ResultsResponse() {}
 
-    private ResultsResponse() {
-        this.artifactManifest = null;
-        this.artifactTiming = null;
-        this.buildStepImages = List.of();
-        this.buildStepOutputs = List.of();
-        this.images = List.of();
-        this.numArtifacts = null;
+    private ResultsResponse(ResultsResponse $) {
+        this.artifactManifest = $.artifactManifest;
+        this.artifactTiming = $.artifactTiming;
+        this.buildStepImages = $.buildStepImages;
+        this.buildStepOutputs = $.buildStepOutputs;
+        this.images = $.images;
+        this.numArtifacts = $.numArtifacts;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ResultsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String artifactManifest;
-        private TimeSpanResponse artifactTiming;
-        private List<String> buildStepImages;
-        private List<String> buildStepOutputs;
-        private List<BuiltImageResponse> images;
-        private String numArtifacts;
+        private ResultsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ResultsResponse();
         }
 
         public Builder(ResultsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.artifactManifest = defaults.artifactManifest;
-    	      this.artifactTiming = defaults.artifactTiming;
-    	      this.buildStepImages = defaults.buildStepImages;
-    	      this.buildStepOutputs = defaults.buildStepOutputs;
-    	      this.images = defaults.images;
-    	      this.numArtifacts = defaults.numArtifacts;
+            $ = new ResultsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder artifactManifest(String artifactManifest) {
-            this.artifactManifest = Objects.requireNonNull(artifactManifest);
+            $.artifactManifest = artifactManifest;
             return this;
         }
+
         public Builder artifactTiming(TimeSpanResponse artifactTiming) {
-            this.artifactTiming = Objects.requireNonNull(artifactTiming);
+            $.artifactTiming = artifactTiming;
             return this;
         }
+
         public Builder buildStepImages(List<String> buildStepImages) {
-            this.buildStepImages = Objects.requireNonNull(buildStepImages);
+            $.buildStepImages = buildStepImages;
             return this;
         }
+
         public Builder buildStepImages(String... buildStepImages) {
             return buildStepImages(List.of(buildStepImages));
         }
+
         public Builder buildStepOutputs(List<String> buildStepOutputs) {
-            this.buildStepOutputs = Objects.requireNonNull(buildStepOutputs);
+            $.buildStepOutputs = buildStepOutputs;
             return this;
         }
+
         public Builder buildStepOutputs(String... buildStepOutputs) {
             return buildStepOutputs(List.of(buildStepOutputs));
         }
+
         public Builder images(List<BuiltImageResponse> images) {
-            this.images = Objects.requireNonNull(images);
+            $.images = images;
             return this;
         }
+
         public Builder images(BuiltImageResponse... images) {
             return images(List.of(images));
         }
+
         public Builder numArtifacts(String numArtifacts) {
-            this.numArtifacts = Objects.requireNonNull(numArtifacts);
+            $.numArtifacts = numArtifacts;
             return this;
-        }        public ResultsResponse build() {
-            return new ResultsResponse(artifactManifest, artifactTiming, buildStepImages, buildStepOutputs, images, numArtifacts);
+        }
+
+        public ResultsResponse build() {
+            $.artifactManifest = Objects.requireNonNull($.artifactManifest, "expected parameter 'artifactManifest' to be non-null");
+            $.artifactTiming = Objects.requireNonNull($.artifactTiming, "expected parameter 'artifactTiming' to be non-null");
+            $.buildStepImages = Objects.requireNonNull($.buildStepImages, "expected parameter 'buildStepImages' to be non-null");
+            $.buildStepOutputs = Objects.requireNonNull($.buildStepOutputs, "expected parameter 'buildStepOutputs' to be non-null");
+            $.images = Objects.requireNonNull($.images, "expected parameter 'images' to be non-null");
+            $.numArtifacts = Objects.requireNonNull($.numArtifacts, "expected parameter 'numArtifacts' to be non-null");
+            return $;
         }
     }
+
 }

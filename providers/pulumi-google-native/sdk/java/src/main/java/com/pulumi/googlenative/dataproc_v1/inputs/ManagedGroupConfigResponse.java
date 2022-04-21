@@ -21,7 +21,7 @@ public final class ManagedGroupConfigResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="instanceGroupManagerName", required=true)
-      private final String instanceGroupManagerName;
+    private String instanceGroupManagerName;
 
     public String instanceGroupManagerName() {
         return this.instanceGroupManagerName;
@@ -32,55 +32,52 @@ public final class ManagedGroupConfigResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="instanceTemplateName", required=true)
-      private final String instanceTemplateName;
+    private String instanceTemplateName;
 
     public String instanceTemplateName() {
         return this.instanceTemplateName;
     }
 
-    public ManagedGroupConfigResponse(
-        String instanceGroupManagerName,
-        String instanceTemplateName) {
-        this.instanceGroupManagerName = Objects.requireNonNull(instanceGroupManagerName, "expected parameter 'instanceGroupManagerName' to be non-null");
-        this.instanceTemplateName = Objects.requireNonNull(instanceTemplateName, "expected parameter 'instanceTemplateName' to be non-null");
-    }
+    private ManagedGroupConfigResponse() {}
 
-    private ManagedGroupConfigResponse() {
-        this.instanceGroupManagerName = null;
-        this.instanceTemplateName = null;
+    private ManagedGroupConfigResponse(ManagedGroupConfigResponse $) {
+        this.instanceGroupManagerName = $.instanceGroupManagerName;
+        this.instanceTemplateName = $.instanceTemplateName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ManagedGroupConfigResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String instanceGroupManagerName;
-        private String instanceTemplateName;
+        private ManagedGroupConfigResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ManagedGroupConfigResponse();
         }
 
         public Builder(ManagedGroupConfigResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.instanceGroupManagerName = defaults.instanceGroupManagerName;
-    	      this.instanceTemplateName = defaults.instanceTemplateName;
+            $ = new ManagedGroupConfigResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder instanceGroupManagerName(String instanceGroupManagerName) {
-            this.instanceGroupManagerName = Objects.requireNonNull(instanceGroupManagerName);
+            $.instanceGroupManagerName = instanceGroupManagerName;
             return this;
         }
+
         public Builder instanceTemplateName(String instanceTemplateName) {
-            this.instanceTemplateName = Objects.requireNonNull(instanceTemplateName);
+            $.instanceTemplateName = instanceTemplateName;
             return this;
-        }        public ManagedGroupConfigResponse build() {
-            return new ManagedGroupConfigResponse(instanceGroupManagerName, instanceTemplateName);
+        }
+
+        public ManagedGroupConfigResponse build() {
+            $.instanceGroupManagerName = Objects.requireNonNull($.instanceGroupManagerName, "expected parameter 'instanceGroupManagerName' to be non-null");
+            $.instanceTemplateName = Objects.requireNonNull($.instanceTemplateName, "expected parameter 'instanceTemplateName' to be non-null");
+            return $;
         }
     }
+
 }

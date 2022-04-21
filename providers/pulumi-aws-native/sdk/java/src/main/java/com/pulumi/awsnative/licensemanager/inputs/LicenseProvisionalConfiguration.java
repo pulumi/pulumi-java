@@ -13,45 +13,45 @@ public final class LicenseProvisionalConfiguration extends com.pulumi.resources.
     public static final LicenseProvisionalConfiguration Empty = new LicenseProvisionalConfiguration();
 
     @Import(name="maxTimeToLiveInMinutes", required=true)
-      private final Integer maxTimeToLiveInMinutes;
+    private Integer maxTimeToLiveInMinutes;
 
     public Integer maxTimeToLiveInMinutes() {
         return this.maxTimeToLiveInMinutes;
     }
 
-    public LicenseProvisionalConfiguration(Integer maxTimeToLiveInMinutes) {
-        this.maxTimeToLiveInMinutes = Objects.requireNonNull(maxTimeToLiveInMinutes, "expected parameter 'maxTimeToLiveInMinutes' to be non-null");
-    }
+    private LicenseProvisionalConfiguration() {}
 
-    private LicenseProvisionalConfiguration() {
-        this.maxTimeToLiveInMinutes = null;
+    private LicenseProvisionalConfiguration(LicenseProvisionalConfiguration $) {
+        this.maxTimeToLiveInMinutes = $.maxTimeToLiveInMinutes;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LicenseProvisionalConfiguration defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Integer maxTimeToLiveInMinutes;
+        private LicenseProvisionalConfiguration $;
 
         public Builder() {
-    	      // Empty
+            $ = new LicenseProvisionalConfiguration();
         }
 
         public Builder(LicenseProvisionalConfiguration defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.maxTimeToLiveInMinutes = defaults.maxTimeToLiveInMinutes;
+            $ = new LicenseProvisionalConfiguration(Objects.requireNonNull(defaults));
         }
 
         public Builder maxTimeToLiveInMinutes(Integer maxTimeToLiveInMinutes) {
-            this.maxTimeToLiveInMinutes = Objects.requireNonNull(maxTimeToLiveInMinutes);
+            $.maxTimeToLiveInMinutes = maxTimeToLiveInMinutes;
             return this;
-        }        public LicenseProvisionalConfiguration build() {
-            return new LicenseProvisionalConfiguration(maxTimeToLiveInMinutes);
+        }
+
+        public LicenseProvisionalConfiguration build() {
+            $.maxTimeToLiveInMinutes = Objects.requireNonNull($.maxTimeToLiveInMinutes, "expected parameter 'maxTimeToLiveInMinutes' to be non-null");
+            return $;
         }
     }
+
 }

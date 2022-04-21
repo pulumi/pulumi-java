@@ -5,7 +5,6 @@ package com.pulumi.gcp.dataloss.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.dataloss.inputs.PreventionInspectTemplateInspectConfigRuleSetInfoTypeGetArgs;
 import com.pulumi.gcp.dataloss.inputs.PreventionInspectTemplateInspectConfigRuleSetRuleGetArgs;
 import java.util.List;
@@ -22,7 +21,7 @@ public final class PreventionInspectTemplateInspectConfigRuleSetGetArgs extends 
      * 
      */
     @Import(name="infoTypes", required=true)
-      private final Output<List<PreventionInspectTemplateInspectConfigRuleSetInfoTypeGetArgs>> infoTypes;
+    private Output<List<PreventionInspectTemplateInspectConfigRuleSetInfoTypeGetArgs>> infoTypes;
 
     public Output<List<PreventionInspectTemplateInspectConfigRuleSetInfoTypeGetArgs>> infoTypes() {
         return this.infoTypes;
@@ -34,69 +33,68 @@ public final class PreventionInspectTemplateInspectConfigRuleSetGetArgs extends 
      * 
      */
     @Import(name="rules", required=true)
-      private final Output<List<PreventionInspectTemplateInspectConfigRuleSetRuleGetArgs>> rules;
+    private Output<List<PreventionInspectTemplateInspectConfigRuleSetRuleGetArgs>> rules;
 
     public Output<List<PreventionInspectTemplateInspectConfigRuleSetRuleGetArgs>> rules() {
         return this.rules;
     }
 
-    public PreventionInspectTemplateInspectConfigRuleSetGetArgs(
-        Output<List<PreventionInspectTemplateInspectConfigRuleSetInfoTypeGetArgs>> infoTypes,
-        Output<List<PreventionInspectTemplateInspectConfigRuleSetRuleGetArgs>> rules) {
-        this.infoTypes = Objects.requireNonNull(infoTypes, "expected parameter 'infoTypes' to be non-null");
-        this.rules = Objects.requireNonNull(rules, "expected parameter 'rules' to be non-null");
-    }
+    private PreventionInspectTemplateInspectConfigRuleSetGetArgs() {}
 
-    private PreventionInspectTemplateInspectConfigRuleSetGetArgs() {
-        this.infoTypes = Codegen.empty();
-        this.rules = Codegen.empty();
+    private PreventionInspectTemplateInspectConfigRuleSetGetArgs(PreventionInspectTemplateInspectConfigRuleSetGetArgs $) {
+        this.infoTypes = $.infoTypes;
+        this.rules = $.rules;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PreventionInspectTemplateInspectConfigRuleSetGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<List<PreventionInspectTemplateInspectConfigRuleSetInfoTypeGetArgs>> infoTypes;
-        private Output<List<PreventionInspectTemplateInspectConfigRuleSetRuleGetArgs>> rules;
+        private PreventionInspectTemplateInspectConfigRuleSetGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PreventionInspectTemplateInspectConfigRuleSetGetArgs();
         }
 
         public Builder(PreventionInspectTemplateInspectConfigRuleSetGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.infoTypes = defaults.infoTypes;
-    	      this.rules = defaults.rules;
+            $ = new PreventionInspectTemplateInspectConfigRuleSetGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder infoTypes(Output<List<PreventionInspectTemplateInspectConfigRuleSetInfoTypeGetArgs>> infoTypes) {
-            this.infoTypes = Objects.requireNonNull(infoTypes);
+            $.infoTypes = infoTypes;
             return this;
         }
+
         public Builder infoTypes(List<PreventionInspectTemplateInspectConfigRuleSetInfoTypeGetArgs> infoTypes) {
-            this.infoTypes = Output.of(Objects.requireNonNull(infoTypes));
-            return this;
+            return infoTypes(Output.of(infoTypes));
         }
+
         public Builder infoTypes(PreventionInspectTemplateInspectConfigRuleSetInfoTypeGetArgs... infoTypes) {
             return infoTypes(List.of(infoTypes));
         }
+
         public Builder rules(Output<List<PreventionInspectTemplateInspectConfigRuleSetRuleGetArgs>> rules) {
-            this.rules = Objects.requireNonNull(rules);
+            $.rules = rules;
             return this;
         }
+
         public Builder rules(List<PreventionInspectTemplateInspectConfigRuleSetRuleGetArgs> rules) {
-            this.rules = Output.of(Objects.requireNonNull(rules));
-            return this;
+            return rules(Output.of(rules));
         }
+
         public Builder rules(PreventionInspectTemplateInspectConfigRuleSetRuleGetArgs... rules) {
             return rules(List.of(rules));
-        }        public PreventionInspectTemplateInspectConfigRuleSetGetArgs build() {
-            return new PreventionInspectTemplateInspectConfigRuleSetGetArgs(infoTypes, rules);
+        }
+
+        public PreventionInspectTemplateInspectConfigRuleSetGetArgs build() {
+            $.infoTypes = Objects.requireNonNull($.infoTypes, "expected parameter 'infoTypes' to be non-null");
+            $.rules = Objects.requireNonNull($.rules, "expected parameter 'rules' to be non-null");
+            return $;
         }
     }
+
 }

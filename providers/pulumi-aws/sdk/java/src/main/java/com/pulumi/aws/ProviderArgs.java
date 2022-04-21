@@ -15,6 +15,7 @@ import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,24 +28,24 @@ public final class ProviderArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="accessKey")
-      private final @Nullable Output<String> accessKey;
+    private @Nullable Output<String> accessKey;
 
-    public Output<String> accessKey() {
-        return this.accessKey == null ? Codegen.empty() : this.accessKey;
+    public Optional<Output<String>> accessKey() {
+        return Optional.ofNullable(this.accessKey);
     }
 
     @Import(name="allowedAccountIds", json=true)
-      private final @Nullable Output<List<String>> allowedAccountIds;
+    private @Nullable Output<List<String>> allowedAccountIds;
 
-    public Output<List<String>> allowedAccountIds() {
-        return this.allowedAccountIds == null ? Codegen.empty() : this.allowedAccountIds;
+    public Optional<Output<List<String>>> allowedAccountIds() {
+        return Optional.ofNullable(this.allowedAccountIds);
     }
 
     @Import(name="assumeRole", json=true)
-      private final @Nullable Output<ProviderAssumeRoleArgs> assumeRole;
+    private @Nullable Output<ProviderAssumeRoleArgs> assumeRole;
 
-    public Output<ProviderAssumeRoleArgs> assumeRole() {
-        return this.assumeRole == null ? Codegen.empty() : this.assumeRole;
+    public Optional<Output<ProviderAssumeRoleArgs>> assumeRole() {
+        return Optional.ofNullable(this.assumeRole);
     }
 
     /**
@@ -52,24 +53,24 @@ public final class ProviderArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="defaultTags", json=true)
-      private final @Nullable Output<ProviderDefaultTagsArgs> defaultTags;
+    private @Nullable Output<ProviderDefaultTagsArgs> defaultTags;
 
-    public Output<ProviderDefaultTagsArgs> defaultTags() {
-        return this.defaultTags == null ? Codegen.empty() : this.defaultTags;
+    public Optional<Output<ProviderDefaultTagsArgs>> defaultTags() {
+        return Optional.ofNullable(this.defaultTags);
     }
 
     @Import(name="endpoints", json=true)
-      private final @Nullable Output<List<ProviderEndpointArgs>> endpoints;
+    private @Nullable Output<List<ProviderEndpointArgs>> endpoints;
 
-    public Output<List<ProviderEndpointArgs>> endpoints() {
-        return this.endpoints == null ? Codegen.empty() : this.endpoints;
+    public Optional<Output<List<ProviderEndpointArgs>>> endpoints() {
+        return Optional.ofNullable(this.endpoints);
     }
 
     @Import(name="forbiddenAccountIds", json=true)
-      private final @Nullable Output<List<String>> forbiddenAccountIds;
+    private @Nullable Output<List<String>> forbiddenAccountIds;
 
-    public Output<List<String>> forbiddenAccountIds() {
-        return this.forbiddenAccountIds == null ? Codegen.empty() : this.forbiddenAccountIds;
+    public Optional<Output<List<String>>> forbiddenAccountIds() {
+        return Optional.ofNullable(this.forbiddenAccountIds);
     }
 
     /**
@@ -78,10 +79,10 @@ public final class ProviderArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="httpProxy")
-      private final @Nullable Output<String> httpProxy;
+    private @Nullable Output<String> httpProxy;
 
-    public Output<String> httpProxy() {
-        return this.httpProxy == null ? Codegen.empty() : this.httpProxy;
+    public Optional<Output<String>> httpProxy() {
+        return Optional.ofNullable(this.httpProxy);
     }
 
     /**
@@ -89,10 +90,10 @@ public final class ProviderArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="ignoreTags", json=true)
-      private final @Nullable Output<ProviderIgnoreTagsArgs> ignoreTags;
+    private @Nullable Output<ProviderIgnoreTagsArgs> ignoreTags;
 
-    public Output<ProviderIgnoreTagsArgs> ignoreTags() {
-        return this.ignoreTags == null ? Codegen.empty() : this.ignoreTags;
+    public Optional<Output<ProviderIgnoreTagsArgs>> ignoreTags() {
+        return Optional.ofNullable(this.ignoreTags);
     }
 
     /**
@@ -100,10 +101,10 @@ public final class ProviderArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="insecure", json=true)
-      private final @Nullable Output<Boolean> insecure;
+    private @Nullable Output<Boolean> insecure;
 
-    public Output<Boolean> insecure() {
-        return this.insecure == null ? Codegen.empty() : this.insecure;
+    public Optional<Output<Boolean>> insecure() {
+        return Optional.ofNullable(this.insecure);
     }
 
     /**
@@ -111,10 +112,10 @@ public final class ProviderArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="maxRetries", json=true)
-      private final @Nullable Output<Integer> maxRetries;
+    private @Nullable Output<Integer> maxRetries;
 
-    public Output<Integer> maxRetries() {
-        return this.maxRetries == null ? Codegen.empty() : this.maxRetries;
+    public Optional<Output<Integer>> maxRetries() {
+        return Optional.ofNullable(this.maxRetries);
     }
 
     /**
@@ -122,10 +123,10 @@ public final class ProviderArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="profile")
-      private final @Nullable Output<String> profile;
+    private @Nullable Output<String> profile;
 
-    public Output<String> profile() {
-        return this.profile == null ? Codegen.empty() : this.profile;
+    public Optional<Output<String>> profile() {
+        return Optional.ofNullable(this.profile);
     }
 
     /**
@@ -133,10 +134,10 @@ public final class ProviderArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="region")
-      private final @Nullable Output<String> region;
+    private @Nullable Output<String> region;
 
-    public Output<String> region() {
-        return this.region == null ? Codegen.empty() : this.region;
+    public Optional<Output<String>> region() {
+        return Optional.ofNullable(this.region);
     }
 
     /**
@@ -146,10 +147,10 @@ public final class ProviderArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="s3ForcePathStyle", json=true)
-      private final @Nullable Output<Boolean> s3ForcePathStyle;
+    private @Nullable Output<Boolean> s3ForcePathStyle;
 
-    public Output<Boolean> s3ForcePathStyle() {
-        return this.s3ForcePathStyle == null ? Codegen.empty() : this.s3ForcePathStyle;
+    public Optional<Output<Boolean>> s3ForcePathStyle() {
+        return Optional.ofNullable(this.s3ForcePathStyle);
     }
 
     /**
@@ -157,10 +158,10 @@ public final class ProviderArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="secretKey")
-      private final @Nullable Output<String> secretKey;
+    private @Nullable Output<String> secretKey;
 
-    public Output<String> secretKey() {
-        return this.secretKey == null ? Codegen.empty() : this.secretKey;
+    public Optional<Output<String>> secretKey() {
+        return Optional.ofNullable(this.secretKey);
     }
 
     /**
@@ -168,10 +169,10 @@ public final class ProviderArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="sharedCredentialsFile")
-      private final @Nullable Output<String> sharedCredentialsFile;
+    private @Nullable Output<String> sharedCredentialsFile;
 
-    public Output<String> sharedCredentialsFile() {
-        return this.sharedCredentialsFile == null ? Codegen.empty() : this.sharedCredentialsFile;
+    public Optional<Output<String>> sharedCredentialsFile() {
+        return Optional.ofNullable(this.sharedCredentialsFile);
     }
 
     /**
@@ -180,10 +181,10 @@ public final class ProviderArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="skipCredentialsValidation", json=true)
-      private final @Nullable Output<Boolean> skipCredentialsValidation;
+    private @Nullable Output<Boolean> skipCredentialsValidation;
 
-    public Output<Boolean> skipCredentialsValidation() {
-        return this.skipCredentialsValidation == null ? Codegen.empty() : this.skipCredentialsValidation;
+    public Optional<Output<Boolean>> skipCredentialsValidation() {
+        return Optional.ofNullable(this.skipCredentialsValidation);
     }
 
     /**
@@ -191,17 +192,17 @@ public final class ProviderArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="skipGetEc2Platforms", json=true)
-      private final @Nullable Output<Boolean> skipGetEc2Platforms;
+    private @Nullable Output<Boolean> skipGetEc2Platforms;
 
-    public Output<Boolean> skipGetEc2Platforms() {
-        return this.skipGetEc2Platforms == null ? Codegen.empty() : this.skipGetEc2Platforms;
+    public Optional<Output<Boolean>> skipGetEc2Platforms() {
+        return Optional.ofNullable(this.skipGetEc2Platforms);
     }
 
     @Import(name="skipMetadataApiCheck", json=true)
-      private final @Nullable Output<Boolean> skipMetadataApiCheck;
+    private @Nullable Output<Boolean> skipMetadataApiCheck;
 
-    public Output<Boolean> skipMetadataApiCheck() {
-        return this.skipMetadataApiCheck == null ? Codegen.empty() : this.skipMetadataApiCheck;
+    public Optional<Output<Boolean>> skipMetadataApiCheck() {
+        return Optional.ofNullable(this.skipMetadataApiCheck);
     }
 
     /**
@@ -210,10 +211,10 @@ public final class ProviderArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="skipRegionValidation", json=true)
-      private final @Nullable Output<Boolean> skipRegionValidation;
+    private @Nullable Output<Boolean> skipRegionValidation;
 
-    public Output<Boolean> skipRegionValidation() {
-        return this.skipRegionValidation == null ? Codegen.empty() : this.skipRegionValidation;
+    public Optional<Output<Boolean>> skipRegionValidation() {
+        return Optional.ofNullable(this.skipRegionValidation);
     }
 
     /**
@@ -221,10 +222,10 @@ public final class ProviderArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="skipRequestingAccountId", json=true)
-      private final @Nullable Output<Boolean> skipRequestingAccountId;
+    private @Nullable Output<Boolean> skipRequestingAccountId;
 
-    public Output<Boolean> skipRequestingAccountId() {
-        return this.skipRequestingAccountId == null ? Codegen.empty() : this.skipRequestingAccountId;
+    public Optional<Output<Boolean>> skipRequestingAccountId() {
+        return Optional.ofNullable(this.skipRequestingAccountId);
     }
 
     /**
@@ -232,319 +233,266 @@ public final class ProviderArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="token")
-      private final @Nullable Output<String> token;
+    private @Nullable Output<String> token;
 
-    public Output<String> token() {
-        return this.token == null ? Codegen.empty() : this.token;
+    public Optional<Output<String>> token() {
+        return Optional.ofNullable(this.token);
     }
 
-    public ProviderArgs(
-        @Nullable Output<String> accessKey,
-        @Nullable Output<List<String>> allowedAccountIds,
-        @Nullable Output<ProviderAssumeRoleArgs> assumeRole,
-        @Nullable Output<ProviderDefaultTagsArgs> defaultTags,
-        @Nullable Output<List<ProviderEndpointArgs>> endpoints,
-        @Nullable Output<List<String>> forbiddenAccountIds,
-        @Nullable Output<String> httpProxy,
-        @Nullable Output<ProviderIgnoreTagsArgs> ignoreTags,
-        @Nullable Output<Boolean> insecure,
-        @Nullable Output<Integer> maxRetries,
-        @Nullable Output<String> profile,
-        @Nullable Output<String> region,
-        @Nullable Output<Boolean> s3ForcePathStyle,
-        @Nullable Output<String> secretKey,
-        @Nullable Output<String> sharedCredentialsFile,
-        @Nullable Output<Boolean> skipCredentialsValidation,
-        @Nullable Output<Boolean> skipGetEc2Platforms,
-        @Nullable Output<Boolean> skipMetadataApiCheck,
-        @Nullable Output<Boolean> skipRegionValidation,
-        @Nullable Output<Boolean> skipRequestingAccountId,
-        @Nullable Output<String> token) {
-        this.accessKey = accessKey;
-        this.allowedAccountIds = allowedAccountIds;
-        this.assumeRole = assumeRole;
-        this.defaultTags = defaultTags;
-        this.endpoints = endpoints;
-        this.forbiddenAccountIds = forbiddenAccountIds;
-        this.httpProxy = httpProxy;
-        this.ignoreTags = ignoreTags;
-        this.insecure = insecure;
-        this.maxRetries = maxRetries;
-        this.profile = Codegen.stringProp("profile").output().arg(profile).env("AWS_PROFILE").getNullable();
-        this.region = Codegen.stringProp("region").output().arg(region).env("AWS_REGION", "AWS_DEFAULT_REGION").getNullable();
-        this.s3ForcePathStyle = s3ForcePathStyle;
-        this.secretKey = secretKey;
-        this.sharedCredentialsFile = sharedCredentialsFile;
-        this.skipCredentialsValidation = Codegen.booleanProp("skipCredentialsValidation").output().arg(skipCredentialsValidation).def(true).getNullable();
-        this.skipGetEc2Platforms = Codegen.booleanProp("skipGetEc2Platforms").output().arg(skipGetEc2Platforms).def(true).getNullable();
-        this.skipMetadataApiCheck = Codegen.booleanProp("skipMetadataApiCheck").output().arg(skipMetadataApiCheck).def(true).getNullable();
-        this.skipRegionValidation = Codegen.booleanProp("skipRegionValidation").output().arg(skipRegionValidation).def(true).getNullable();
-        this.skipRequestingAccountId = skipRequestingAccountId;
-        this.token = token;
-    }
+    private ProviderArgs() {}
 
-    private ProviderArgs() {
-        this.accessKey = Codegen.empty();
-        this.allowedAccountIds = Codegen.empty();
-        this.assumeRole = Codegen.empty();
-        this.defaultTags = Codegen.empty();
-        this.endpoints = Codegen.empty();
-        this.forbiddenAccountIds = Codegen.empty();
-        this.httpProxy = Codegen.empty();
-        this.ignoreTags = Codegen.empty();
-        this.insecure = Codegen.empty();
-        this.maxRetries = Codegen.empty();
-        this.profile = Codegen.empty();
-        this.region = Codegen.empty();
-        this.s3ForcePathStyle = Codegen.empty();
-        this.secretKey = Codegen.empty();
-        this.sharedCredentialsFile = Codegen.empty();
-        this.skipCredentialsValidation = Codegen.empty();
-        this.skipGetEc2Platforms = Codegen.empty();
-        this.skipMetadataApiCheck = Codegen.empty();
-        this.skipRegionValidation = Codegen.empty();
-        this.skipRequestingAccountId = Codegen.empty();
-        this.token = Codegen.empty();
+    private ProviderArgs(ProviderArgs $) {
+        this.accessKey = $.accessKey;
+        this.allowedAccountIds = $.allowedAccountIds;
+        this.assumeRole = $.assumeRole;
+        this.defaultTags = $.defaultTags;
+        this.endpoints = $.endpoints;
+        this.forbiddenAccountIds = $.forbiddenAccountIds;
+        this.httpProxy = $.httpProxy;
+        this.ignoreTags = $.ignoreTags;
+        this.insecure = $.insecure;
+        this.maxRetries = $.maxRetries;
+        this.profile = $.profile;
+        this.region = $.region;
+        this.s3ForcePathStyle = $.s3ForcePathStyle;
+        this.secretKey = $.secretKey;
+        this.sharedCredentialsFile = $.sharedCredentialsFile;
+        this.skipCredentialsValidation = $.skipCredentialsValidation;
+        this.skipGetEc2Platforms = $.skipGetEc2Platforms;
+        this.skipMetadataApiCheck = $.skipMetadataApiCheck;
+        this.skipRegionValidation = $.skipRegionValidation;
+        this.skipRequestingAccountId = $.skipRequestingAccountId;
+        this.token = $.token;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ProviderArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> accessKey;
-        private @Nullable Output<List<String>> allowedAccountIds;
-        private @Nullable Output<ProviderAssumeRoleArgs> assumeRole;
-        private @Nullable Output<ProviderDefaultTagsArgs> defaultTags;
-        private @Nullable Output<List<ProviderEndpointArgs>> endpoints;
-        private @Nullable Output<List<String>> forbiddenAccountIds;
-        private @Nullable Output<String> httpProxy;
-        private @Nullable Output<ProviderIgnoreTagsArgs> ignoreTags;
-        private @Nullable Output<Boolean> insecure;
-        private @Nullable Output<Integer> maxRetries;
-        private @Nullable Output<String> profile;
-        private @Nullable Output<String> region;
-        private @Nullable Output<Boolean> s3ForcePathStyle;
-        private @Nullable Output<String> secretKey;
-        private @Nullable Output<String> sharedCredentialsFile;
-        private @Nullable Output<Boolean> skipCredentialsValidation;
-        private @Nullable Output<Boolean> skipGetEc2Platforms;
-        private @Nullable Output<Boolean> skipMetadataApiCheck;
-        private @Nullable Output<Boolean> skipRegionValidation;
-        private @Nullable Output<Boolean> skipRequestingAccountId;
-        private @Nullable Output<String> token;
+        private ProviderArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ProviderArgs();
         }
 
         public Builder(ProviderArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accessKey = defaults.accessKey;
-    	      this.allowedAccountIds = defaults.allowedAccountIds;
-    	      this.assumeRole = defaults.assumeRole;
-    	      this.defaultTags = defaults.defaultTags;
-    	      this.endpoints = defaults.endpoints;
-    	      this.forbiddenAccountIds = defaults.forbiddenAccountIds;
-    	      this.httpProxy = defaults.httpProxy;
-    	      this.ignoreTags = defaults.ignoreTags;
-    	      this.insecure = defaults.insecure;
-    	      this.maxRetries = defaults.maxRetries;
-    	      this.profile = defaults.profile;
-    	      this.region = defaults.region;
-    	      this.s3ForcePathStyle = defaults.s3ForcePathStyle;
-    	      this.secretKey = defaults.secretKey;
-    	      this.sharedCredentialsFile = defaults.sharedCredentialsFile;
-    	      this.skipCredentialsValidation = defaults.skipCredentialsValidation;
-    	      this.skipGetEc2Platforms = defaults.skipGetEc2Platforms;
-    	      this.skipMetadataApiCheck = defaults.skipMetadataApiCheck;
-    	      this.skipRegionValidation = defaults.skipRegionValidation;
-    	      this.skipRequestingAccountId = defaults.skipRequestingAccountId;
-    	      this.token = defaults.token;
+            $ = new ProviderArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder accessKey(@Nullable Output<String> accessKey) {
-            this.accessKey = accessKey;
+            $.accessKey = accessKey;
             return this;
         }
-        public Builder accessKey(@Nullable String accessKey) {
-            this.accessKey = Codegen.ofNullable(accessKey);
-            return this;
+
+        public Builder accessKey(String accessKey) {
+            return accessKey(Output.of(accessKey));
         }
+
         public Builder allowedAccountIds(@Nullable Output<List<String>> allowedAccountIds) {
-            this.allowedAccountIds = allowedAccountIds;
+            $.allowedAccountIds = allowedAccountIds;
             return this;
         }
-        public Builder allowedAccountIds(@Nullable List<String> allowedAccountIds) {
-            this.allowedAccountIds = Codegen.ofNullable(allowedAccountIds);
-            return this;
+
+        public Builder allowedAccountIds(List<String> allowedAccountIds) {
+            return allowedAccountIds(Output.of(allowedAccountIds));
         }
+
         public Builder allowedAccountIds(String... allowedAccountIds) {
             return allowedAccountIds(List.of(allowedAccountIds));
         }
+
         public Builder assumeRole(@Nullable Output<ProviderAssumeRoleArgs> assumeRole) {
-            this.assumeRole = assumeRole;
+            $.assumeRole = assumeRole;
             return this;
         }
-        public Builder assumeRole(@Nullable ProviderAssumeRoleArgs assumeRole) {
-            this.assumeRole = Codegen.ofNullable(assumeRole);
-            return this;
+
+        public Builder assumeRole(ProviderAssumeRoleArgs assumeRole) {
+            return assumeRole(Output.of(assumeRole));
         }
+
         public Builder defaultTags(@Nullable Output<ProviderDefaultTagsArgs> defaultTags) {
-            this.defaultTags = defaultTags;
+            $.defaultTags = defaultTags;
             return this;
         }
-        public Builder defaultTags(@Nullable ProviderDefaultTagsArgs defaultTags) {
-            this.defaultTags = Codegen.ofNullable(defaultTags);
-            return this;
+
+        public Builder defaultTags(ProviderDefaultTagsArgs defaultTags) {
+            return defaultTags(Output.of(defaultTags));
         }
+
         public Builder endpoints(@Nullable Output<List<ProviderEndpointArgs>> endpoints) {
-            this.endpoints = endpoints;
+            $.endpoints = endpoints;
             return this;
         }
-        public Builder endpoints(@Nullable List<ProviderEndpointArgs> endpoints) {
-            this.endpoints = Codegen.ofNullable(endpoints);
-            return this;
+
+        public Builder endpoints(List<ProviderEndpointArgs> endpoints) {
+            return endpoints(Output.of(endpoints));
         }
+
         public Builder endpoints(ProviderEndpointArgs... endpoints) {
             return endpoints(List.of(endpoints));
         }
+
         public Builder forbiddenAccountIds(@Nullable Output<List<String>> forbiddenAccountIds) {
-            this.forbiddenAccountIds = forbiddenAccountIds;
+            $.forbiddenAccountIds = forbiddenAccountIds;
             return this;
         }
-        public Builder forbiddenAccountIds(@Nullable List<String> forbiddenAccountIds) {
-            this.forbiddenAccountIds = Codegen.ofNullable(forbiddenAccountIds);
-            return this;
+
+        public Builder forbiddenAccountIds(List<String> forbiddenAccountIds) {
+            return forbiddenAccountIds(Output.of(forbiddenAccountIds));
         }
+
         public Builder forbiddenAccountIds(String... forbiddenAccountIds) {
             return forbiddenAccountIds(List.of(forbiddenAccountIds));
         }
+
         public Builder httpProxy(@Nullable Output<String> httpProxy) {
-            this.httpProxy = httpProxy;
+            $.httpProxy = httpProxy;
             return this;
         }
-        public Builder httpProxy(@Nullable String httpProxy) {
-            this.httpProxy = Codegen.ofNullable(httpProxy);
-            return this;
+
+        public Builder httpProxy(String httpProxy) {
+            return httpProxy(Output.of(httpProxy));
         }
+
         public Builder ignoreTags(@Nullable Output<ProviderIgnoreTagsArgs> ignoreTags) {
-            this.ignoreTags = ignoreTags;
+            $.ignoreTags = ignoreTags;
             return this;
         }
-        public Builder ignoreTags(@Nullable ProviderIgnoreTagsArgs ignoreTags) {
-            this.ignoreTags = Codegen.ofNullable(ignoreTags);
-            return this;
+
+        public Builder ignoreTags(ProviderIgnoreTagsArgs ignoreTags) {
+            return ignoreTags(Output.of(ignoreTags));
         }
+
         public Builder insecure(@Nullable Output<Boolean> insecure) {
-            this.insecure = insecure;
+            $.insecure = insecure;
             return this;
         }
-        public Builder insecure(@Nullable Boolean insecure) {
-            this.insecure = Codegen.ofNullable(insecure);
-            return this;
+
+        public Builder insecure(Boolean insecure) {
+            return insecure(Output.of(insecure));
         }
+
         public Builder maxRetries(@Nullable Output<Integer> maxRetries) {
-            this.maxRetries = maxRetries;
+            $.maxRetries = maxRetries;
             return this;
         }
-        public Builder maxRetries(@Nullable Integer maxRetries) {
-            this.maxRetries = Codegen.ofNullable(maxRetries);
-            return this;
+
+        public Builder maxRetries(Integer maxRetries) {
+            return maxRetries(Output.of(maxRetries));
         }
+
         public Builder profile(@Nullable Output<String> profile) {
-            this.profile = profile;
+            $.profile = profile;
             return this;
         }
-        public Builder profile(@Nullable String profile) {
-            this.profile = Codegen.ofNullable(profile);
-            return this;
+
+        public Builder profile(String profile) {
+            return profile(Output.of(profile));
         }
+
         public Builder region(@Nullable Output<String> region) {
-            this.region = region;
+            $.region = region;
             return this;
         }
-        public Builder region(@Nullable String region) {
-            this.region = Codegen.ofNullable(region);
-            return this;
+
+        public Builder region(String region) {
+            return region(Output.of(region));
         }
+
         public Builder s3ForcePathStyle(@Nullable Output<Boolean> s3ForcePathStyle) {
-            this.s3ForcePathStyle = s3ForcePathStyle;
+            $.s3ForcePathStyle = s3ForcePathStyle;
             return this;
         }
-        public Builder s3ForcePathStyle(@Nullable Boolean s3ForcePathStyle) {
-            this.s3ForcePathStyle = Codegen.ofNullable(s3ForcePathStyle);
-            return this;
+
+        public Builder s3ForcePathStyle(Boolean s3ForcePathStyle) {
+            return s3ForcePathStyle(Output.of(s3ForcePathStyle));
         }
+
         public Builder secretKey(@Nullable Output<String> secretKey) {
-            this.secretKey = secretKey;
+            $.secretKey = secretKey;
             return this;
         }
-        public Builder secretKey(@Nullable String secretKey) {
-            this.secretKey = Codegen.ofNullable(secretKey);
-            return this;
+
+        public Builder secretKey(String secretKey) {
+            return secretKey(Output.of(secretKey));
         }
+
         public Builder sharedCredentialsFile(@Nullable Output<String> sharedCredentialsFile) {
-            this.sharedCredentialsFile = sharedCredentialsFile;
+            $.sharedCredentialsFile = sharedCredentialsFile;
             return this;
         }
-        public Builder sharedCredentialsFile(@Nullable String sharedCredentialsFile) {
-            this.sharedCredentialsFile = Codegen.ofNullable(sharedCredentialsFile);
-            return this;
+
+        public Builder sharedCredentialsFile(String sharedCredentialsFile) {
+            return sharedCredentialsFile(Output.of(sharedCredentialsFile));
         }
+
         public Builder skipCredentialsValidation(@Nullable Output<Boolean> skipCredentialsValidation) {
-            this.skipCredentialsValidation = skipCredentialsValidation;
+            $.skipCredentialsValidation = skipCredentialsValidation;
             return this;
         }
-        public Builder skipCredentialsValidation(@Nullable Boolean skipCredentialsValidation) {
-            this.skipCredentialsValidation = Codegen.ofNullable(skipCredentialsValidation);
-            return this;
+
+        public Builder skipCredentialsValidation(Boolean skipCredentialsValidation) {
+            return skipCredentialsValidation(Output.of(skipCredentialsValidation));
         }
+
         public Builder skipGetEc2Platforms(@Nullable Output<Boolean> skipGetEc2Platforms) {
-            this.skipGetEc2Platforms = skipGetEc2Platforms;
+            $.skipGetEc2Platforms = skipGetEc2Platforms;
             return this;
         }
-        public Builder skipGetEc2Platforms(@Nullable Boolean skipGetEc2Platforms) {
-            this.skipGetEc2Platforms = Codegen.ofNullable(skipGetEc2Platforms);
-            return this;
+
+        public Builder skipGetEc2Platforms(Boolean skipGetEc2Platforms) {
+            return skipGetEc2Platforms(Output.of(skipGetEc2Platforms));
         }
+
         public Builder skipMetadataApiCheck(@Nullable Output<Boolean> skipMetadataApiCheck) {
-            this.skipMetadataApiCheck = skipMetadataApiCheck;
+            $.skipMetadataApiCheck = skipMetadataApiCheck;
             return this;
         }
-        public Builder skipMetadataApiCheck(@Nullable Boolean skipMetadataApiCheck) {
-            this.skipMetadataApiCheck = Codegen.ofNullable(skipMetadataApiCheck);
-            return this;
+
+        public Builder skipMetadataApiCheck(Boolean skipMetadataApiCheck) {
+            return skipMetadataApiCheck(Output.of(skipMetadataApiCheck));
         }
+
         public Builder skipRegionValidation(@Nullable Output<Boolean> skipRegionValidation) {
-            this.skipRegionValidation = skipRegionValidation;
+            $.skipRegionValidation = skipRegionValidation;
             return this;
         }
-        public Builder skipRegionValidation(@Nullable Boolean skipRegionValidation) {
-            this.skipRegionValidation = Codegen.ofNullable(skipRegionValidation);
-            return this;
+
+        public Builder skipRegionValidation(Boolean skipRegionValidation) {
+            return skipRegionValidation(Output.of(skipRegionValidation));
         }
+
         public Builder skipRequestingAccountId(@Nullable Output<Boolean> skipRequestingAccountId) {
-            this.skipRequestingAccountId = skipRequestingAccountId;
+            $.skipRequestingAccountId = skipRequestingAccountId;
             return this;
         }
-        public Builder skipRequestingAccountId(@Nullable Boolean skipRequestingAccountId) {
-            this.skipRequestingAccountId = Codegen.ofNullable(skipRequestingAccountId);
-            return this;
+
+        public Builder skipRequestingAccountId(Boolean skipRequestingAccountId) {
+            return skipRequestingAccountId(Output.of(skipRequestingAccountId));
         }
+
         public Builder token(@Nullable Output<String> token) {
-            this.token = token;
+            $.token = token;
             return this;
         }
-        public Builder token(@Nullable String token) {
-            this.token = Codegen.ofNullable(token);
-            return this;
-        }        public ProviderArgs build() {
-            return new ProviderArgs(accessKey, allowedAccountIds, assumeRole, defaultTags, endpoints, forbiddenAccountIds, httpProxy, ignoreTags, insecure, maxRetries, profile, region, s3ForcePathStyle, secretKey, sharedCredentialsFile, skipCredentialsValidation, skipGetEc2Platforms, skipMetadataApiCheck, skipRegionValidation, skipRequestingAccountId, token);
+
+        public Builder token(String token) {
+            return token(Output.of(token));
+        }
+
+        public ProviderArgs build() {
+            $.profile = Codegen.stringProp("profile").output().arg($.profile).env("AWS_PROFILE").getNullable();
+            $.region = Codegen.stringProp("region").output().arg($.region).env("AWS_REGION", "AWS_DEFAULT_REGION").getNullable();
+            $.skipCredentialsValidation = Codegen.booleanProp("skipCredentialsValidation").output().arg($.skipCredentialsValidation).def(true).getNullable();
+            $.skipGetEc2Platforms = Codegen.booleanProp("skipGetEc2Platforms").output().arg($.skipGetEc2Platforms).def(true).getNullable();
+            $.skipMetadataApiCheck = Codegen.booleanProp("skipMetadataApiCheck").output().arg($.skipMetadataApiCheck).def(true).getNullable();
+            $.skipRegionValidation = Codegen.booleanProp("skipRegionValidation").output().arg($.skipRegionValidation).def(true).getNullable();
+            return $;
         }
     }
+
 }

@@ -5,10 +5,10 @@ package com.pulumi.googlenative.dialogflow_v2beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.dialogflow_v2beta1.enums.GoogleCloudDialogflowV2beta1NotificationConfigMessageFormat;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class GoogleCloudDialogflowV2beta1NotificationConfigArgs extends co
      * 
      */
     @Import(name="messageFormat")
-      private final @Nullable Output<GoogleCloudDialogflowV2beta1NotificationConfigMessageFormat> messageFormat;
+    private @Nullable Output<GoogleCloudDialogflowV2beta1NotificationConfigMessageFormat> messageFormat;
 
-    public Output<GoogleCloudDialogflowV2beta1NotificationConfigMessageFormat> messageFormat() {
-        return this.messageFormat == null ? Codegen.empty() : this.messageFormat;
+    public Optional<Output<GoogleCloudDialogflowV2beta1NotificationConfigMessageFormat>> messageFormat() {
+        return Optional.ofNullable(this.messageFormat);
     }
 
     /**
@@ -36,63 +36,58 @@ public final class GoogleCloudDialogflowV2beta1NotificationConfigArgs extends co
      * 
      */
     @Import(name="topic")
-      private final @Nullable Output<String> topic;
+    private @Nullable Output<String> topic;
 
-    public Output<String> topic() {
-        return this.topic == null ? Codegen.empty() : this.topic;
+    public Optional<Output<String>> topic() {
+        return Optional.ofNullable(this.topic);
     }
 
-    public GoogleCloudDialogflowV2beta1NotificationConfigArgs(
-        @Nullable Output<GoogleCloudDialogflowV2beta1NotificationConfigMessageFormat> messageFormat,
-        @Nullable Output<String> topic) {
-        this.messageFormat = messageFormat;
-        this.topic = topic;
-    }
+    private GoogleCloudDialogflowV2beta1NotificationConfigArgs() {}
 
-    private GoogleCloudDialogflowV2beta1NotificationConfigArgs() {
-        this.messageFormat = Codegen.empty();
-        this.topic = Codegen.empty();
+    private GoogleCloudDialogflowV2beta1NotificationConfigArgs(GoogleCloudDialogflowV2beta1NotificationConfigArgs $) {
+        this.messageFormat = $.messageFormat;
+        this.topic = $.topic;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudDialogflowV2beta1NotificationConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<GoogleCloudDialogflowV2beta1NotificationConfigMessageFormat> messageFormat;
-        private @Nullable Output<String> topic;
+        private GoogleCloudDialogflowV2beta1NotificationConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudDialogflowV2beta1NotificationConfigArgs();
         }
 
         public Builder(GoogleCloudDialogflowV2beta1NotificationConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.messageFormat = defaults.messageFormat;
-    	      this.topic = defaults.topic;
+            $ = new GoogleCloudDialogflowV2beta1NotificationConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder messageFormat(@Nullable Output<GoogleCloudDialogflowV2beta1NotificationConfigMessageFormat> messageFormat) {
-            this.messageFormat = messageFormat;
+            $.messageFormat = messageFormat;
             return this;
         }
-        public Builder messageFormat(@Nullable GoogleCloudDialogflowV2beta1NotificationConfigMessageFormat messageFormat) {
-            this.messageFormat = Codegen.ofNullable(messageFormat);
-            return this;
+
+        public Builder messageFormat(GoogleCloudDialogflowV2beta1NotificationConfigMessageFormat messageFormat) {
+            return messageFormat(Output.of(messageFormat));
         }
+
         public Builder topic(@Nullable Output<String> topic) {
-            this.topic = topic;
+            $.topic = topic;
             return this;
         }
-        public Builder topic(@Nullable String topic) {
-            this.topic = Codegen.ofNullable(topic);
-            return this;
-        }        public GoogleCloudDialogflowV2beta1NotificationConfigArgs build() {
-            return new GoogleCloudDialogflowV2beta1NotificationConfigArgs(messageFormat, topic);
+
+        public Builder topic(String topic) {
+            return topic(Output.of(topic));
+        }
+
+        public GoogleCloudDialogflowV2beta1NotificationConfigArgs build() {
+            return $;
         }
     }
+
 }

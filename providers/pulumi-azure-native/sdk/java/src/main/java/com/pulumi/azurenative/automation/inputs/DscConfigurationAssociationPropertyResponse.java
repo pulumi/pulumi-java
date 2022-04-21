@@ -23,45 +23,44 @@ public final class DscConfigurationAssociationPropertyResponse extends com.pulum
      * 
      */
     @Import(name="name")
-      private final @Nullable String name;
+    private @Nullable String name;
 
     public Optional<String> name() {
-        return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
+        return Optional.ofNullable(this.name);
     }
 
-    public DscConfigurationAssociationPropertyResponse(@Nullable String name) {
-        this.name = name;
-    }
+    private DscConfigurationAssociationPropertyResponse() {}
 
-    private DscConfigurationAssociationPropertyResponse() {
-        this.name = null;
+    private DscConfigurationAssociationPropertyResponse(DscConfigurationAssociationPropertyResponse $) {
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DscConfigurationAssociationPropertyResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String name;
+        private DscConfigurationAssociationPropertyResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new DscConfigurationAssociationPropertyResponse();
         }
 
         public Builder(DscConfigurationAssociationPropertyResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
+            $ = new DscConfigurationAssociationPropertyResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder name(@Nullable String name) {
-            this.name = name;
+            $.name = name;
             return this;
-        }        public DscConfigurationAssociationPropertyResponse build() {
-            return new DscConfigurationAssociationPropertyResponse(name);
+        }
+
+        public DscConfigurationAssociationPropertyResponse build() {
+            return $;
         }
     }
+
 }

@@ -21,7 +21,7 @@ public final class GoogleDatastoreAdminV1IndexedPropertyResponse extends com.pul
      * 
      */
     @Import(name="direction", required=true)
-      private final String direction;
+    private String direction;
 
     public String direction() {
         return this.direction;
@@ -32,55 +32,52 @@ public final class GoogleDatastoreAdminV1IndexedPropertyResponse extends com.pul
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
     }
 
-    public GoogleDatastoreAdminV1IndexedPropertyResponse(
-        String direction,
-        String name) {
-        this.direction = Objects.requireNonNull(direction, "expected parameter 'direction' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-    }
+    private GoogleDatastoreAdminV1IndexedPropertyResponse() {}
 
-    private GoogleDatastoreAdminV1IndexedPropertyResponse() {
-        this.direction = null;
-        this.name = null;
+    private GoogleDatastoreAdminV1IndexedPropertyResponse(GoogleDatastoreAdminV1IndexedPropertyResponse $) {
+        this.direction = $.direction;
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleDatastoreAdminV1IndexedPropertyResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String direction;
-        private String name;
+        private GoogleDatastoreAdminV1IndexedPropertyResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleDatastoreAdminV1IndexedPropertyResponse();
         }
 
         public Builder(GoogleDatastoreAdminV1IndexedPropertyResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.direction = defaults.direction;
-    	      this.name = defaults.name;
+            $ = new GoogleDatastoreAdminV1IndexedPropertyResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder direction(String direction) {
-            this.direction = Objects.requireNonNull(direction);
+            $.direction = direction;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
-        }        public GoogleDatastoreAdminV1IndexedPropertyResponse build() {
-            return new GoogleDatastoreAdminV1IndexedPropertyResponse(direction, name);
+        }
+
+        public GoogleDatastoreAdminV1IndexedPropertyResponse build() {
+            $.direction = Objects.requireNonNull($.direction, "expected parameter 'direction' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            return $;
         }
     }
+
 }

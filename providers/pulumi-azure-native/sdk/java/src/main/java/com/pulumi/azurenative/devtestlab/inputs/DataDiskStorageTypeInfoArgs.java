@@ -7,9 +7,9 @@ import com.pulumi.azurenative.devtestlab.enums.StorageType;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class DataDiskStorageTypeInfoArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="lun")
-      private final @Nullable Output<String> lun;
+    private @Nullable Output<String> lun;
 
-    public Output<String> lun() {
-        return this.lun == null ? Codegen.empty() : this.lun;
+    public Optional<Output<String>> lun() {
+        return Optional.ofNullable(this.lun);
     }
 
     /**
@@ -37,63 +37,58 @@ public final class DataDiskStorageTypeInfoArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="storageType")
-      private final @Nullable Output<Either<String,StorageType>> storageType;
+    private @Nullable Output<Either<String,StorageType>> storageType;
 
-    public Output<Either<String,StorageType>> storageType() {
-        return this.storageType == null ? Codegen.empty() : this.storageType;
+    public Optional<Output<Either<String,StorageType>>> storageType() {
+        return Optional.ofNullable(this.storageType);
     }
 
-    public DataDiskStorageTypeInfoArgs(
-        @Nullable Output<String> lun,
-        @Nullable Output<Either<String,StorageType>> storageType) {
-        this.lun = lun;
-        this.storageType = storageType;
-    }
+    private DataDiskStorageTypeInfoArgs() {}
 
-    private DataDiskStorageTypeInfoArgs() {
-        this.lun = Codegen.empty();
-        this.storageType = Codegen.empty();
+    private DataDiskStorageTypeInfoArgs(DataDiskStorageTypeInfoArgs $) {
+        this.lun = $.lun;
+        this.storageType = $.storageType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DataDiskStorageTypeInfoArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> lun;
-        private @Nullable Output<Either<String,StorageType>> storageType;
+        private DataDiskStorageTypeInfoArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DataDiskStorageTypeInfoArgs();
         }
 
         public Builder(DataDiskStorageTypeInfoArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.lun = defaults.lun;
-    	      this.storageType = defaults.storageType;
+            $ = new DataDiskStorageTypeInfoArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder lun(@Nullable Output<String> lun) {
-            this.lun = lun;
+            $.lun = lun;
             return this;
         }
-        public Builder lun(@Nullable String lun) {
-            this.lun = Codegen.ofNullable(lun);
-            return this;
+
+        public Builder lun(String lun) {
+            return lun(Output.of(lun));
         }
+
         public Builder storageType(@Nullable Output<Either<String,StorageType>> storageType) {
-            this.storageType = storageType;
+            $.storageType = storageType;
             return this;
         }
-        public Builder storageType(@Nullable Either<String,StorageType> storageType) {
-            this.storageType = Codegen.ofNullable(storageType);
-            return this;
-        }        public DataDiskStorageTypeInfoArgs build() {
-            return new DataDiskStorageTypeInfoArgs(lun, storageType);
+
+        public Builder storageType(Either<String,StorageType> storageType) {
+            return storageType(Output.of(storageType));
+        }
+
+        public DataDiskStorageTypeInfoArgs build() {
+            return $;
         }
     }
+
 }

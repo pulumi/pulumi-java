@@ -7,10 +7,10 @@ import com.pulumi.awsnative.iotwireless.inputs.ServiceProfileLoRaWANServiceProfi
 import com.pulumi.awsnative.iotwireless.inputs.ServiceProfileTagArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,10 @@ public final class ServiceProfileArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="loRaWAN")
-      private final @Nullable Output<ServiceProfileLoRaWANServiceProfileArgs> loRaWAN;
+    private @Nullable Output<ServiceProfileLoRaWANServiceProfileArgs> loRaWAN;
 
-    public Output<ServiceProfileLoRaWANServiceProfileArgs> loRaWAN() {
-        return this.loRaWAN == null ? Codegen.empty() : this.loRaWAN;
+    public Optional<Output<ServiceProfileLoRaWANServiceProfileArgs>> loRaWAN() {
+        return Optional.ofNullable(this.loRaWAN);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class ServiceProfileArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -45,79 +45,72 @@ public final class ServiceProfileArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<List<ServiceProfileTagArgs>> tags;
+    private @Nullable Output<List<ServiceProfileTagArgs>> tags;
 
-    public Output<List<ServiceProfileTagArgs>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<List<ServiceProfileTagArgs>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public ServiceProfileArgs(
-        @Nullable Output<ServiceProfileLoRaWANServiceProfileArgs> loRaWAN,
-        @Nullable Output<String> name,
-        @Nullable Output<List<ServiceProfileTagArgs>> tags) {
-        this.loRaWAN = loRaWAN;
-        this.name = name;
-        this.tags = tags;
-    }
+    private ServiceProfileArgs() {}
 
-    private ServiceProfileArgs() {
-        this.loRaWAN = Codegen.empty();
-        this.name = Codegen.empty();
-        this.tags = Codegen.empty();
+    private ServiceProfileArgs(ServiceProfileArgs $) {
+        this.loRaWAN = $.loRaWAN;
+        this.name = $.name;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ServiceProfileArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<ServiceProfileLoRaWANServiceProfileArgs> loRaWAN;
-        private @Nullable Output<String> name;
-        private @Nullable Output<List<ServiceProfileTagArgs>> tags;
+        private ServiceProfileArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ServiceProfileArgs();
         }
 
         public Builder(ServiceProfileArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.loRaWAN = defaults.loRaWAN;
-    	      this.name = defaults.name;
-    	      this.tags = defaults.tags;
+            $ = new ServiceProfileArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder loRaWAN(@Nullable Output<ServiceProfileLoRaWANServiceProfileArgs> loRaWAN) {
-            this.loRaWAN = loRaWAN;
+            $.loRaWAN = loRaWAN;
             return this;
         }
-        public Builder loRaWAN(@Nullable ServiceProfileLoRaWANServiceProfileArgs loRaWAN) {
-            this.loRaWAN = Codegen.ofNullable(loRaWAN);
-            return this;
+
+        public Builder loRaWAN(ServiceProfileLoRaWANServiceProfileArgs loRaWAN) {
+            return loRaWAN(Output.of(loRaWAN));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder tags(@Nullable Output<List<ServiceProfileTagArgs>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable List<ServiceProfileTagArgs> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(List<ServiceProfileTagArgs> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tags(ServiceProfileTagArgs... tags) {
             return tags(List.of(tags));
-        }        public ServiceProfileArgs build() {
-            return new ServiceProfileArgs(loRaWAN, name, tags);
+        }
+
+        public ServiceProfileArgs build() {
+            return $;
         }
     }
+
 }

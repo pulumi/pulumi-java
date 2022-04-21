@@ -17,7 +17,7 @@ public final class GetVirtualNetworkGatewayLearnedRoutesArgs extends com.pulumi.
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -28,55 +28,52 @@ public final class GetVirtualNetworkGatewayLearnedRoutesArgs extends com.pulumi.
      * 
      */
     @Import(name="virtualNetworkGatewayName", required=true)
-      private final String virtualNetworkGatewayName;
+    private String virtualNetworkGatewayName;
 
     public String virtualNetworkGatewayName() {
         return this.virtualNetworkGatewayName;
     }
 
-    public GetVirtualNetworkGatewayLearnedRoutesArgs(
-        String resourceGroupName,
-        String virtualNetworkGatewayName) {
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.virtualNetworkGatewayName = Objects.requireNonNull(virtualNetworkGatewayName, "expected parameter 'virtualNetworkGatewayName' to be non-null");
-    }
+    private GetVirtualNetworkGatewayLearnedRoutesArgs() {}
 
-    private GetVirtualNetworkGatewayLearnedRoutesArgs() {
-        this.resourceGroupName = null;
-        this.virtualNetworkGatewayName = null;
+    private GetVirtualNetworkGatewayLearnedRoutesArgs(GetVirtualNetworkGatewayLearnedRoutesArgs $) {
+        this.resourceGroupName = $.resourceGroupName;
+        this.virtualNetworkGatewayName = $.virtualNetworkGatewayName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetVirtualNetworkGatewayLearnedRoutesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String resourceGroupName;
-        private String virtualNetworkGatewayName;
+        private GetVirtualNetworkGatewayLearnedRoutesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetVirtualNetworkGatewayLearnedRoutesArgs();
         }
 
         public Builder(GetVirtualNetworkGatewayLearnedRoutesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.virtualNetworkGatewayName = defaults.virtualNetworkGatewayName;
+            $ = new GetVirtualNetworkGatewayLearnedRoutesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder virtualNetworkGatewayName(String virtualNetworkGatewayName) {
-            this.virtualNetworkGatewayName = Objects.requireNonNull(virtualNetworkGatewayName);
+            $.virtualNetworkGatewayName = virtualNetworkGatewayName;
             return this;
-        }        public GetVirtualNetworkGatewayLearnedRoutesArgs build() {
-            return new GetVirtualNetworkGatewayLearnedRoutesArgs(resourceGroupName, virtualNetworkGatewayName);
+        }
+
+        public GetVirtualNetworkGatewayLearnedRoutesArgs build() {
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.virtualNetworkGatewayName = Objects.requireNonNull($.virtualNetworkGatewayName, "expected parameter 'virtualNetworkGatewayName' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,9 +5,9 @@ package com.pulumi.kubernetes.discovery.k8s.io_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class EndpointConditionsArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="ready")
-      private final @Nullable Output<Boolean> ready;
+    private @Nullable Output<Boolean> ready;
 
-    public Output<Boolean> ready() {
-        return this.ready == null ? Codegen.empty() : this.ready;
+    public Optional<Output<Boolean>> ready() {
+        return Optional.ofNullable(this.ready);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class EndpointConditionsArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="serving")
-      private final @Nullable Output<Boolean> serving;
+    private @Nullable Output<Boolean> serving;
 
-    public Output<Boolean> serving() {
-        return this.serving == null ? Codegen.empty() : this.serving;
+    public Optional<Output<Boolean>> serving() {
+        return Optional.ofNullable(this.serving);
     }
 
     /**
@@ -46,76 +46,68 @@ public final class EndpointConditionsArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="terminating")
-      private final @Nullable Output<Boolean> terminating;
+    private @Nullable Output<Boolean> terminating;
 
-    public Output<Boolean> terminating() {
-        return this.terminating == null ? Codegen.empty() : this.terminating;
+    public Optional<Output<Boolean>> terminating() {
+        return Optional.ofNullable(this.terminating);
     }
 
-    public EndpointConditionsArgs(
-        @Nullable Output<Boolean> ready,
-        @Nullable Output<Boolean> serving,
-        @Nullable Output<Boolean> terminating) {
-        this.ready = ready;
-        this.serving = serving;
-        this.terminating = terminating;
-    }
+    private EndpointConditionsArgs() {}
 
-    private EndpointConditionsArgs() {
-        this.ready = Codegen.empty();
-        this.serving = Codegen.empty();
-        this.terminating = Codegen.empty();
+    private EndpointConditionsArgs(EndpointConditionsArgs $) {
+        this.ready = $.ready;
+        this.serving = $.serving;
+        this.terminating = $.terminating;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EndpointConditionsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> ready;
-        private @Nullable Output<Boolean> serving;
-        private @Nullable Output<Boolean> terminating;
+        private EndpointConditionsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new EndpointConditionsArgs();
         }
 
         public Builder(EndpointConditionsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.ready = defaults.ready;
-    	      this.serving = defaults.serving;
-    	      this.terminating = defaults.terminating;
+            $ = new EndpointConditionsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder ready(@Nullable Output<Boolean> ready) {
-            this.ready = ready;
+            $.ready = ready;
             return this;
         }
-        public Builder ready(@Nullable Boolean ready) {
-            this.ready = Codegen.ofNullable(ready);
-            return this;
+
+        public Builder ready(Boolean ready) {
+            return ready(Output.of(ready));
         }
+
         public Builder serving(@Nullable Output<Boolean> serving) {
-            this.serving = serving;
+            $.serving = serving;
             return this;
         }
-        public Builder serving(@Nullable Boolean serving) {
-            this.serving = Codegen.ofNullable(serving);
-            return this;
+
+        public Builder serving(Boolean serving) {
+            return serving(Output.of(serving));
         }
+
         public Builder terminating(@Nullable Output<Boolean> terminating) {
-            this.terminating = terminating;
+            $.terminating = terminating;
             return this;
         }
-        public Builder terminating(@Nullable Boolean terminating) {
-            this.terminating = Codegen.ofNullable(terminating);
-            return this;
-        }        public EndpointConditionsArgs build() {
-            return new EndpointConditionsArgs(ready, serving, terminating);
+
+        public Builder terminating(Boolean terminating) {
+            return terminating(Output.of(terminating));
+        }
+
+        public EndpointConditionsArgs build() {
+            return $;
         }
     }
+
 }

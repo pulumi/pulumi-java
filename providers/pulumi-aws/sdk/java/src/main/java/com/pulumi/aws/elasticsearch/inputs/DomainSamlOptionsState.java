@@ -6,9 +6,9 @@ package com.pulumi.aws.elasticsearch.inputs;
 import com.pulumi.aws.elasticsearch.inputs.DomainSamlOptionsSamlOptionsGetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class DomainSamlOptionsState extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="domainName")
-      private final @Nullable Output<String> domainName;
+    private @Nullable Output<String> domainName;
 
-    public Output<String> domainName() {
-        return this.domainName == null ? Codegen.empty() : this.domainName;
+    public Optional<Output<String>> domainName() {
+        return Optional.ofNullable(this.domainName);
     }
 
     /**
@@ -32,63 +32,58 @@ public final class DomainSamlOptionsState extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="samlOptions")
-      private final @Nullable Output<DomainSamlOptionsSamlOptionsGetArgs> samlOptions;
+    private @Nullable Output<DomainSamlOptionsSamlOptionsGetArgs> samlOptions;
 
-    public Output<DomainSamlOptionsSamlOptionsGetArgs> samlOptions() {
-        return this.samlOptions == null ? Codegen.empty() : this.samlOptions;
+    public Optional<Output<DomainSamlOptionsSamlOptionsGetArgs>> samlOptions() {
+        return Optional.ofNullable(this.samlOptions);
     }
 
-    public DomainSamlOptionsState(
-        @Nullable Output<String> domainName,
-        @Nullable Output<DomainSamlOptionsSamlOptionsGetArgs> samlOptions) {
-        this.domainName = domainName;
-        this.samlOptions = samlOptions;
-    }
+    private DomainSamlOptionsState() {}
 
-    private DomainSamlOptionsState() {
-        this.domainName = Codegen.empty();
-        this.samlOptions = Codegen.empty();
+    private DomainSamlOptionsState(DomainSamlOptionsState $) {
+        this.domainName = $.domainName;
+        this.samlOptions = $.samlOptions;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DomainSamlOptionsState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> domainName;
-        private @Nullable Output<DomainSamlOptionsSamlOptionsGetArgs> samlOptions;
+        private DomainSamlOptionsState $;
 
         public Builder() {
-    	      // Empty
+            $ = new DomainSamlOptionsState();
         }
 
         public Builder(DomainSamlOptionsState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.domainName = defaults.domainName;
-    	      this.samlOptions = defaults.samlOptions;
+            $ = new DomainSamlOptionsState(Objects.requireNonNull(defaults));
         }
 
         public Builder domainName(@Nullable Output<String> domainName) {
-            this.domainName = domainName;
+            $.domainName = domainName;
             return this;
         }
-        public Builder domainName(@Nullable String domainName) {
-            this.domainName = Codegen.ofNullable(domainName);
-            return this;
+
+        public Builder domainName(String domainName) {
+            return domainName(Output.of(domainName));
         }
+
         public Builder samlOptions(@Nullable Output<DomainSamlOptionsSamlOptionsGetArgs> samlOptions) {
-            this.samlOptions = samlOptions;
+            $.samlOptions = samlOptions;
             return this;
         }
-        public Builder samlOptions(@Nullable DomainSamlOptionsSamlOptionsGetArgs samlOptions) {
-            this.samlOptions = Codegen.ofNullable(samlOptions);
-            return this;
-        }        public DomainSamlOptionsState build() {
-            return new DomainSamlOptionsState(domainName, samlOptions);
+
+        public Builder samlOptions(DomainSamlOptionsSamlOptionsGetArgs samlOptions) {
+            return samlOptions(Output.of(samlOptions));
+        }
+
+        public DomainSamlOptionsState build() {
+            return $;
         }
     }
+
 }

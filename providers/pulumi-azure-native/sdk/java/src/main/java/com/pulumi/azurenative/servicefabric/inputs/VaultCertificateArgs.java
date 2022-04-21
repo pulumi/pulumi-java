@@ -5,7 +5,6 @@ package com.pulumi.azurenative.servicefabric.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,7 +22,7 @@ public final class VaultCertificateArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="certificateStore", required=true)
-      private final Output<String> certificateStore;
+    private Output<String> certificateStore;
 
     public Output<String> certificateStore() {
         return this.certificateStore;
@@ -34,63 +33,60 @@ public final class VaultCertificateArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="certificateUrl", required=true)
-      private final Output<String> certificateUrl;
+    private Output<String> certificateUrl;
 
     public Output<String> certificateUrl() {
         return this.certificateUrl;
     }
 
-    public VaultCertificateArgs(
-        Output<String> certificateStore,
-        Output<String> certificateUrl) {
-        this.certificateStore = Objects.requireNonNull(certificateStore, "expected parameter 'certificateStore' to be non-null");
-        this.certificateUrl = Objects.requireNonNull(certificateUrl, "expected parameter 'certificateUrl' to be non-null");
-    }
+    private VaultCertificateArgs() {}
 
-    private VaultCertificateArgs() {
-        this.certificateStore = Codegen.empty();
-        this.certificateUrl = Codegen.empty();
+    private VaultCertificateArgs(VaultCertificateArgs $) {
+        this.certificateStore = $.certificateStore;
+        this.certificateUrl = $.certificateUrl;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VaultCertificateArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> certificateStore;
-        private Output<String> certificateUrl;
+        private VaultCertificateArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new VaultCertificateArgs();
         }
 
         public Builder(VaultCertificateArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.certificateStore = defaults.certificateStore;
-    	      this.certificateUrl = defaults.certificateUrl;
+            $ = new VaultCertificateArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder certificateStore(Output<String> certificateStore) {
-            this.certificateStore = Objects.requireNonNull(certificateStore);
+            $.certificateStore = certificateStore;
             return this;
         }
+
         public Builder certificateStore(String certificateStore) {
-            this.certificateStore = Output.of(Objects.requireNonNull(certificateStore));
-            return this;
+            return certificateStore(Output.of(certificateStore));
         }
+
         public Builder certificateUrl(Output<String> certificateUrl) {
-            this.certificateUrl = Objects.requireNonNull(certificateUrl);
+            $.certificateUrl = certificateUrl;
             return this;
         }
+
         public Builder certificateUrl(String certificateUrl) {
-            this.certificateUrl = Output.of(Objects.requireNonNull(certificateUrl));
-            return this;
-        }        public VaultCertificateArgs build() {
-            return new VaultCertificateArgs(certificateStore, certificateUrl);
+            return certificateUrl(Output.of(certificateUrl));
+        }
+
+        public VaultCertificateArgs build() {
+            $.certificateStore = Objects.requireNonNull($.certificateStore, "expected parameter 'certificateStore' to be non-null");
+            $.certificateUrl = Objects.requireNonNull($.certificateUrl, "expected parameter 'certificateUrl' to be non-null");
+            return $;
         }
     }
+
 }

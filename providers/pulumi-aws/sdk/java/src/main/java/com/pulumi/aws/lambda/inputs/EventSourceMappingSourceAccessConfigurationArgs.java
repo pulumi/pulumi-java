@@ -5,7 +5,6 @@ package com.pulumi.aws.lambda.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,7 +18,7 @@ public final class EventSourceMappingSourceAccessConfigurationArgs extends com.p
      * 
      */
     @Import(name="type", required=true)
-      private final Output<String> type;
+    private Output<String> type;
 
     public Output<String> type() {
         return this.type;
@@ -30,63 +29,60 @@ public final class EventSourceMappingSourceAccessConfigurationArgs extends com.p
      * 
      */
     @Import(name="uri", required=true)
-      private final Output<String> uri;
+    private Output<String> uri;
 
     public Output<String> uri() {
         return this.uri;
     }
 
-    public EventSourceMappingSourceAccessConfigurationArgs(
-        Output<String> type,
-        Output<String> uri) {
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-        this.uri = Objects.requireNonNull(uri, "expected parameter 'uri' to be non-null");
-    }
+    private EventSourceMappingSourceAccessConfigurationArgs() {}
 
-    private EventSourceMappingSourceAccessConfigurationArgs() {
-        this.type = Codegen.empty();
-        this.uri = Codegen.empty();
+    private EventSourceMappingSourceAccessConfigurationArgs(EventSourceMappingSourceAccessConfigurationArgs $) {
+        this.type = $.type;
+        this.uri = $.uri;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EventSourceMappingSourceAccessConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> type;
-        private Output<String> uri;
+        private EventSourceMappingSourceAccessConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new EventSourceMappingSourceAccessConfigurationArgs();
         }
 
         public Builder(EventSourceMappingSourceAccessConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.type = defaults.type;
-    	      this.uri = defaults.uri;
+            $ = new EventSourceMappingSourceAccessConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder type(Output<String> type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Output.of(Objects.requireNonNull(type));
-            return this;
+            return type(Output.of(type));
         }
+
         public Builder uri(Output<String> uri) {
-            this.uri = Objects.requireNonNull(uri);
+            $.uri = uri;
             return this;
         }
+
         public Builder uri(String uri) {
-            this.uri = Output.of(Objects.requireNonNull(uri));
-            return this;
-        }        public EventSourceMappingSourceAccessConfigurationArgs build() {
-            return new EventSourceMappingSourceAccessConfigurationArgs(type, uri);
+            return uri(Output.of(uri));
+        }
+
+        public EventSourceMappingSourceAccessConfigurationArgs build() {
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            $.uri = Objects.requireNonNull($.uri, "expected parameter 'uri' to be non-null");
+            return $;
         }
     }
+
 }

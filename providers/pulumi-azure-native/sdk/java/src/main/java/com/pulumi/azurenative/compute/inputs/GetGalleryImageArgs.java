@@ -17,7 +17,7 @@ public final class GetGalleryImageArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="galleryImageName", required=true)
-      private final String galleryImageName;
+    private String galleryImageName;
 
     public String galleryImageName() {
         return this.galleryImageName;
@@ -28,7 +28,7 @@ public final class GetGalleryImageArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="galleryName", required=true)
-      private final String galleryName;
+    private String galleryName;
 
     public String galleryName() {
         return this.galleryName;
@@ -39,64 +39,59 @@ public final class GetGalleryImageArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public GetGalleryImageArgs(
-        String galleryImageName,
-        String galleryName,
-        String resourceGroupName) {
-        this.galleryImageName = Objects.requireNonNull(galleryImageName, "expected parameter 'galleryImageName' to be non-null");
-        this.galleryName = Objects.requireNonNull(galleryName, "expected parameter 'galleryName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private GetGalleryImageArgs() {}
 
-    private GetGalleryImageArgs() {
-        this.galleryImageName = null;
-        this.galleryName = null;
-        this.resourceGroupName = null;
+    private GetGalleryImageArgs(GetGalleryImageArgs $) {
+        this.galleryImageName = $.galleryImageName;
+        this.galleryName = $.galleryName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetGalleryImageArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String galleryImageName;
-        private String galleryName;
-        private String resourceGroupName;
+        private GetGalleryImageArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetGalleryImageArgs();
         }
 
         public Builder(GetGalleryImageArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.galleryImageName = defaults.galleryImageName;
-    	      this.galleryName = defaults.galleryName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new GetGalleryImageArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder galleryImageName(String galleryImageName) {
-            this.galleryImageName = Objects.requireNonNull(galleryImageName);
+            $.galleryImageName = galleryImageName;
             return this;
         }
+
         public Builder galleryName(String galleryName) {
-            this.galleryName = Objects.requireNonNull(galleryName);
+            $.galleryName = galleryName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public GetGalleryImageArgs build() {
-            return new GetGalleryImageArgs(galleryImageName, galleryName, resourceGroupName);
+        }
+
+        public GetGalleryImageArgs build() {
+            $.galleryImageName = Objects.requireNonNull($.galleryImageName, "expected parameter 'galleryImageName' to be non-null");
+            $.galleryName = Objects.requireNonNull($.galleryName, "expected parameter 'galleryName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

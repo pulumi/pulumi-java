@@ -23,10 +23,10 @@ public final class ProductLinkResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="displayName")
-      private final @Nullable String displayName;
+    private @Nullable String displayName;
 
     public Optional<String> displayName() {
-        return this.displayName == null ? Optional.empty() : Optional.ofNullable(this.displayName);
+        return Optional.ofNullable(this.displayName);
     }
 
     /**
@@ -34,55 +34,50 @@ public final class ProductLinkResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="uri")
-      private final @Nullable String uri;
+    private @Nullable String uri;
 
     public Optional<String> uri() {
-        return this.uri == null ? Optional.empty() : Optional.ofNullable(this.uri);
+        return Optional.ofNullable(this.uri);
     }
 
-    public ProductLinkResponse(
-        @Nullable String displayName,
-        @Nullable String uri) {
-        this.displayName = displayName;
-        this.uri = uri;
-    }
+    private ProductLinkResponse() {}
 
-    private ProductLinkResponse() {
-        this.displayName = null;
-        this.uri = null;
+    private ProductLinkResponse(ProductLinkResponse $) {
+        this.displayName = $.displayName;
+        this.uri = $.uri;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ProductLinkResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String displayName;
-        private @Nullable String uri;
+        private ProductLinkResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ProductLinkResponse();
         }
 
         public Builder(ProductLinkResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.displayName = defaults.displayName;
-    	      this.uri = defaults.uri;
+            $ = new ProductLinkResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = displayName;
+            $.displayName = displayName;
             return this;
         }
+
         public Builder uri(@Nullable String uri) {
-            this.uri = uri;
+            $.uri = uri;
             return this;
-        }        public ProductLinkResponse build() {
-            return new ProductLinkResponse(displayName, uri);
+        }
+
+        public ProductLinkResponse build() {
+            return $;
         }
     }
+
 }

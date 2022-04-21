@@ -32,10 +32,10 @@ public final class QuickBooksLinkedServiceResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="accessToken")
-      private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> accessToken;
+    private @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> accessToken;
 
-    public Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> accessToken() {
-        return this.accessToken == null ? null : this.accessToken;
+    public Optional<Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse>> accessToken() {
+        return Optional.ofNullable(this.accessToken);
     }
 
     /**
@@ -43,10 +43,10 @@ public final class QuickBooksLinkedServiceResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="accessTokenSecret")
-      private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> accessTokenSecret;
+    private @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> accessTokenSecret;
 
-    public Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> accessTokenSecret() {
-        return this.accessTokenSecret == null ? null : this.accessTokenSecret;
+    public Optional<Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse>> accessTokenSecret() {
+        return Optional.ofNullable(this.accessTokenSecret);
     }
 
     /**
@@ -54,10 +54,10 @@ public final class QuickBooksLinkedServiceResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="annotations")
-      private final @Nullable List<Object> annotations;
+    private @Nullable List<Object> annotations;
 
-    public List<Object> annotations() {
-        return this.annotations == null ? List.of() : this.annotations;
+    public Optional<List<Object>> annotations() {
+        return Optional.ofNullable(this.annotations);
     }
 
     /**
@@ -65,10 +65,10 @@ public final class QuickBooksLinkedServiceResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="companyId")
-      private final @Nullable Object companyId;
+    private @Nullable Object companyId;
 
     public Optional<Object> companyId() {
-        return this.companyId == null ? Optional.empty() : Optional.ofNullable(this.companyId);
+        return Optional.ofNullable(this.companyId);
     }
 
     /**
@@ -76,10 +76,10 @@ public final class QuickBooksLinkedServiceResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="connectVia")
-      private final @Nullable IntegrationRuntimeReferenceResponse connectVia;
+    private @Nullable IntegrationRuntimeReferenceResponse connectVia;
 
     public Optional<IntegrationRuntimeReferenceResponse> connectVia() {
-        return this.connectVia == null ? Optional.empty() : Optional.ofNullable(this.connectVia);
+        return Optional.ofNullable(this.connectVia);
     }
 
     /**
@@ -87,10 +87,10 @@ public final class QuickBooksLinkedServiceResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="connectionProperties")
-      private final @Nullable Object connectionProperties;
+    private @Nullable Object connectionProperties;
 
     public Optional<Object> connectionProperties() {
-        return this.connectionProperties == null ? Optional.empty() : Optional.ofNullable(this.connectionProperties);
+        return Optional.ofNullable(this.connectionProperties);
     }
 
     /**
@@ -98,10 +98,10 @@ public final class QuickBooksLinkedServiceResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="consumerKey")
-      private final @Nullable Object consumerKey;
+    private @Nullable Object consumerKey;
 
     public Optional<Object> consumerKey() {
-        return this.consumerKey == null ? Optional.empty() : Optional.ofNullable(this.consumerKey);
+        return Optional.ofNullable(this.consumerKey);
     }
 
     /**
@@ -109,10 +109,10 @@ public final class QuickBooksLinkedServiceResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="consumerSecret")
-      private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> consumerSecret;
+    private @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> consumerSecret;
 
-    public Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> consumerSecret() {
-        return this.consumerSecret == null ? null : this.consumerSecret;
+    public Optional<Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse>> consumerSecret() {
+        return Optional.ofNullable(this.consumerSecret);
     }
 
     /**
@@ -120,10 +120,10 @@ public final class QuickBooksLinkedServiceResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="description")
-      private final @Nullable String description;
+    private @Nullable String description;
 
     public Optional<String> description() {
-        return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -131,10 +131,10 @@ public final class QuickBooksLinkedServiceResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="encryptedCredential")
-      private final @Nullable Object encryptedCredential;
+    private @Nullable Object encryptedCredential;
 
     public Optional<Object> encryptedCredential() {
-        return this.encryptedCredential == null ? Optional.empty() : Optional.ofNullable(this.encryptedCredential);
+        return Optional.ofNullable(this.encryptedCredential);
     }
 
     /**
@@ -142,10 +142,10 @@ public final class QuickBooksLinkedServiceResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="endpoint")
-      private final @Nullable Object endpoint;
+    private @Nullable Object endpoint;
 
     public Optional<Object> endpoint() {
-        return this.endpoint == null ? Optional.empty() : Optional.ofNullable(this.endpoint);
+        return Optional.ofNullable(this.endpoint);
     }
 
     /**
@@ -153,10 +153,10 @@ public final class QuickBooksLinkedServiceResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="parameters")
-      private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
+    private @Nullable Map<String,ParameterSpecificationResponse> parameters;
 
-    public Map<String,ParameterSpecificationResponse> parameters() {
-        return this.parameters == null ? Map.of() : this.parameters;
+    public Optional<Map<String,ParameterSpecificationResponse>> parameters() {
+        return Optional.ofNullable(this.parameters);
     }
 
     /**
@@ -165,7 +165,7 @@ public final class QuickBooksLinkedServiceResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
@@ -176,166 +176,127 @@ public final class QuickBooksLinkedServiceResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="useEncryptedEndpoints")
-      private final @Nullable Object useEncryptedEndpoints;
+    private @Nullable Object useEncryptedEndpoints;
 
     public Optional<Object> useEncryptedEndpoints() {
-        return this.useEncryptedEndpoints == null ? Optional.empty() : Optional.ofNullable(this.useEncryptedEndpoints);
+        return Optional.ofNullable(this.useEncryptedEndpoints);
     }
 
-    public QuickBooksLinkedServiceResponse(
-        @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> accessToken,
-        @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> accessTokenSecret,
-        @Nullable List<Object> annotations,
-        @Nullable Object companyId,
-        @Nullable IntegrationRuntimeReferenceResponse connectVia,
-        @Nullable Object connectionProperties,
-        @Nullable Object consumerKey,
-        @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> consumerSecret,
-        @Nullable String description,
-        @Nullable Object encryptedCredential,
-        @Nullable Object endpoint,
-        @Nullable Map<String,ParameterSpecificationResponse> parameters,
-        String type,
-        @Nullable Object useEncryptedEndpoints) {
-        this.accessToken = accessToken;
-        this.accessTokenSecret = accessTokenSecret;
-        this.annotations = annotations;
-        this.companyId = companyId;
-        this.connectVia = connectVia;
-        this.connectionProperties = connectionProperties;
-        this.consumerKey = consumerKey;
-        this.consumerSecret = consumerSecret;
-        this.description = description;
-        this.encryptedCredential = encryptedCredential;
-        this.endpoint = endpoint;
-        this.parameters = parameters;
-        this.type = Codegen.stringProp("type").arg(type).require();
-        this.useEncryptedEndpoints = useEncryptedEndpoints;
-    }
+    private QuickBooksLinkedServiceResponse() {}
 
-    private QuickBooksLinkedServiceResponse() {
-        this.accessToken = null;
-        this.accessTokenSecret = null;
-        this.annotations = List.of();
-        this.companyId = null;
-        this.connectVia = null;
-        this.connectionProperties = null;
-        this.consumerKey = null;
-        this.consumerSecret = null;
-        this.description = null;
-        this.encryptedCredential = null;
-        this.endpoint = null;
-        this.parameters = Map.of();
-        this.type = null;
-        this.useEncryptedEndpoints = null;
+    private QuickBooksLinkedServiceResponse(QuickBooksLinkedServiceResponse $) {
+        this.accessToken = $.accessToken;
+        this.accessTokenSecret = $.accessTokenSecret;
+        this.annotations = $.annotations;
+        this.companyId = $.companyId;
+        this.connectVia = $.connectVia;
+        this.connectionProperties = $.connectionProperties;
+        this.consumerKey = $.consumerKey;
+        this.consumerSecret = $.consumerSecret;
+        this.description = $.description;
+        this.encryptedCredential = $.encryptedCredential;
+        this.endpoint = $.endpoint;
+        this.parameters = $.parameters;
+        this.type = $.type;
+        this.useEncryptedEndpoints = $.useEncryptedEndpoints;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(QuickBooksLinkedServiceResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> accessToken;
-        private @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> accessTokenSecret;
-        private @Nullable List<Object> annotations;
-        private @Nullable Object companyId;
-        private @Nullable IntegrationRuntimeReferenceResponse connectVia;
-        private @Nullable Object connectionProperties;
-        private @Nullable Object consumerKey;
-        private @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> consumerSecret;
-        private @Nullable String description;
-        private @Nullable Object encryptedCredential;
-        private @Nullable Object endpoint;
-        private @Nullable Map<String,ParameterSpecificationResponse> parameters;
-        private String type;
-        private @Nullable Object useEncryptedEndpoints;
+        private QuickBooksLinkedServiceResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new QuickBooksLinkedServiceResponse();
         }
 
         public Builder(QuickBooksLinkedServiceResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accessToken = defaults.accessToken;
-    	      this.accessTokenSecret = defaults.accessTokenSecret;
-    	      this.annotations = defaults.annotations;
-    	      this.companyId = defaults.companyId;
-    	      this.connectVia = defaults.connectVia;
-    	      this.connectionProperties = defaults.connectionProperties;
-    	      this.consumerKey = defaults.consumerKey;
-    	      this.consumerSecret = defaults.consumerSecret;
-    	      this.description = defaults.description;
-    	      this.encryptedCredential = defaults.encryptedCredential;
-    	      this.endpoint = defaults.endpoint;
-    	      this.parameters = defaults.parameters;
-    	      this.type = defaults.type;
-    	      this.useEncryptedEndpoints = defaults.useEncryptedEndpoints;
+            $ = new QuickBooksLinkedServiceResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder accessToken(@Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> accessToken) {
-            this.accessToken = accessToken;
+            $.accessToken = accessToken;
             return this;
         }
+
         public Builder accessTokenSecret(@Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> accessTokenSecret) {
-            this.accessTokenSecret = accessTokenSecret;
+            $.accessTokenSecret = accessTokenSecret;
             return this;
         }
+
         public Builder annotations(@Nullable List<Object> annotations) {
-            this.annotations = annotations;
+            $.annotations = annotations;
             return this;
         }
+
         public Builder annotations(Object... annotations) {
             return annotations(List.of(annotations));
         }
+
         public Builder companyId(@Nullable Object companyId) {
-            this.companyId = companyId;
+            $.companyId = companyId;
             return this;
         }
+
         public Builder connectVia(@Nullable IntegrationRuntimeReferenceResponse connectVia) {
-            this.connectVia = connectVia;
+            $.connectVia = connectVia;
             return this;
         }
+
         public Builder connectionProperties(@Nullable Object connectionProperties) {
-            this.connectionProperties = connectionProperties;
+            $.connectionProperties = connectionProperties;
             return this;
         }
+
         public Builder consumerKey(@Nullable Object consumerKey) {
-            this.consumerKey = consumerKey;
+            $.consumerKey = consumerKey;
             return this;
         }
+
         public Builder consumerSecret(@Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> consumerSecret) {
-            this.consumerSecret = consumerSecret;
+            $.consumerSecret = consumerSecret;
             return this;
         }
+
         public Builder description(@Nullable String description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
+
         public Builder encryptedCredential(@Nullable Object encryptedCredential) {
-            this.encryptedCredential = encryptedCredential;
+            $.encryptedCredential = encryptedCredential;
             return this;
         }
+
         public Builder endpoint(@Nullable Object endpoint) {
-            this.endpoint = endpoint;
+            $.endpoint = endpoint;
             return this;
         }
+
         public Builder parameters(@Nullable Map<String,ParameterSpecificationResponse> parameters) {
-            this.parameters = parameters;
+            $.parameters = parameters;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder useEncryptedEndpoints(@Nullable Object useEncryptedEndpoints) {
-            this.useEncryptedEndpoints = useEncryptedEndpoints;
+            $.useEncryptedEndpoints = useEncryptedEndpoints;
             return this;
-        }        public QuickBooksLinkedServiceResponse build() {
-            return new QuickBooksLinkedServiceResponse(accessToken, accessTokenSecret, annotations, companyId, connectVia, connectionProperties, consumerKey, consumerSecret, description, encryptedCredential, endpoint, parameters, type, useEncryptedEndpoints);
+        }
+
+        public QuickBooksLinkedServiceResponse build() {
+            $.type = Codegen.stringProp("type").arg($.type).require();
+            return $;
         }
     }
+
 }

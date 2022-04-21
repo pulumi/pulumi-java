@@ -24,10 +24,10 @@ public final class HttpRequestResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="authentication")
-      private final @Nullable Object authentication;
+    private @Nullable Object authentication;
 
-    public Object authentication() {
-        return this.authentication == null ? null : this.authentication;
+    public Optional<Object> authentication() {
+        return Optional.ofNullable(this.authentication);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class HttpRequestResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="body")
-      private final @Nullable String body;
+    private @Nullable String body;
 
     public Optional<String> body() {
-        return this.body == null ? Optional.empty() : Optional.ofNullable(this.body);
+        return Optional.ofNullable(this.body);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class HttpRequestResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="headers")
-      private final @Nullable Map<String,String> headers;
+    private @Nullable Map<String,String> headers;
 
-    public Map<String,String> headers() {
-        return this.headers == null ? Map.of() : this.headers;
+    public Optional<Map<String,String>> headers() {
+        return Optional.ofNullable(this.headers);
     }
 
     /**
@@ -57,10 +57,10 @@ public final class HttpRequestResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="method")
-      private final @Nullable String method;
+    private @Nullable String method;
 
     public Optional<String> method() {
-        return this.method == null ? Optional.empty() : Optional.ofNullable(this.method);
+        return Optional.ofNullable(this.method);
     }
 
     /**
@@ -68,82 +68,68 @@ public final class HttpRequestResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="uri")
-      private final @Nullable String uri;
+    private @Nullable String uri;
 
     public Optional<String> uri() {
-        return this.uri == null ? Optional.empty() : Optional.ofNullable(this.uri);
+        return Optional.ofNullable(this.uri);
     }
 
-    public HttpRequestResponse(
-        @Nullable Object authentication,
-        @Nullable String body,
-        @Nullable Map<String,String> headers,
-        @Nullable String method,
-        @Nullable String uri) {
-        this.authentication = authentication;
-        this.body = body;
-        this.headers = headers;
-        this.method = method;
-        this.uri = uri;
-    }
+    private HttpRequestResponse() {}
 
-    private HttpRequestResponse() {
-        this.authentication = null;
-        this.body = null;
-        this.headers = Map.of();
-        this.method = null;
-        this.uri = null;
+    private HttpRequestResponse(HttpRequestResponse $) {
+        this.authentication = $.authentication;
+        this.body = $.body;
+        this.headers = $.headers;
+        this.method = $.method;
+        this.uri = $.uri;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(HttpRequestResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Object authentication;
-        private @Nullable String body;
-        private @Nullable Map<String,String> headers;
-        private @Nullable String method;
-        private @Nullable String uri;
+        private HttpRequestResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new HttpRequestResponse();
         }
 
         public Builder(HttpRequestResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.authentication = defaults.authentication;
-    	      this.body = defaults.body;
-    	      this.headers = defaults.headers;
-    	      this.method = defaults.method;
-    	      this.uri = defaults.uri;
+            $ = new HttpRequestResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder authentication(@Nullable Object authentication) {
-            this.authentication = authentication;
+            $.authentication = authentication;
             return this;
         }
+
         public Builder body(@Nullable String body) {
-            this.body = body;
+            $.body = body;
             return this;
         }
+
         public Builder headers(@Nullable Map<String,String> headers) {
-            this.headers = headers;
+            $.headers = headers;
             return this;
         }
+
         public Builder method(@Nullable String method) {
-            this.method = method;
+            $.method = method;
             return this;
         }
+
         public Builder uri(@Nullable String uri) {
-            this.uri = uri;
+            $.uri = uri;
             return this;
-        }        public HttpRequestResponse build() {
-            return new HttpRequestResponse(authentication, body, headers, method, uri);
+        }
+
+        public HttpRequestResponse build() {
+            return $;
         }
     }
+
 }

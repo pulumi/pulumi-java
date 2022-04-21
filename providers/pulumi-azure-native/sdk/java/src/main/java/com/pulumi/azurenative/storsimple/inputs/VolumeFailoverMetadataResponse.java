@@ -24,10 +24,10 @@ public final class VolumeFailoverMetadataResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="backupCreatedDate")
-      private final @Nullable String backupCreatedDate;
+    private @Nullable String backupCreatedDate;
 
     public Optional<String> backupCreatedDate() {
-        return this.backupCreatedDate == null ? Optional.empty() : Optional.ofNullable(this.backupCreatedDate);
+        return Optional.ofNullable(this.backupCreatedDate);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class VolumeFailoverMetadataResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="backupElementId")
-      private final @Nullable String backupElementId;
+    private @Nullable String backupElementId;
 
     public Optional<String> backupElementId() {
-        return this.backupElementId == null ? Optional.empty() : Optional.ofNullable(this.backupElementId);
+        return Optional.ofNullable(this.backupElementId);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class VolumeFailoverMetadataResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="backupId")
-      private final @Nullable String backupId;
+    private @Nullable String backupId;
 
     public Optional<String> backupId() {
-        return this.backupId == null ? Optional.empty() : Optional.ofNullable(this.backupId);
+        return Optional.ofNullable(this.backupId);
     }
 
     /**
@@ -57,10 +57,10 @@ public final class VolumeFailoverMetadataResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="backupPolicyId")
-      private final @Nullable String backupPolicyId;
+    private @Nullable String backupPolicyId;
 
     public Optional<String> backupPolicyId() {
-        return this.backupPolicyId == null ? Optional.empty() : Optional.ofNullable(this.backupPolicyId);
+        return Optional.ofNullable(this.backupPolicyId);
     }
 
     /**
@@ -68,10 +68,10 @@ public final class VolumeFailoverMetadataResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="sizeInBytes")
-      private final @Nullable Double sizeInBytes;
+    private @Nullable Double sizeInBytes;
 
     public Optional<Double> sizeInBytes() {
-        return this.sizeInBytes == null ? Optional.empty() : Optional.ofNullable(this.sizeInBytes);
+        return Optional.ofNullable(this.sizeInBytes);
     }
 
     /**
@@ -79,10 +79,10 @@ public final class VolumeFailoverMetadataResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="volumeId")
-      private final @Nullable String volumeId;
+    private @Nullable String volumeId;
 
     public Optional<String> volumeId() {
-        return this.volumeId == null ? Optional.empty() : Optional.ofNullable(this.volumeId);
+        return Optional.ofNullable(this.volumeId);
     }
 
     /**
@@ -90,100 +90,80 @@ public final class VolumeFailoverMetadataResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="volumeType")
-      private final @Nullable String volumeType;
+    private @Nullable String volumeType;
 
     public Optional<String> volumeType() {
-        return this.volumeType == null ? Optional.empty() : Optional.ofNullable(this.volumeType);
+        return Optional.ofNullable(this.volumeType);
     }
 
-    public VolumeFailoverMetadataResponse(
-        @Nullable String backupCreatedDate,
-        @Nullable String backupElementId,
-        @Nullable String backupId,
-        @Nullable String backupPolicyId,
-        @Nullable Double sizeInBytes,
-        @Nullable String volumeId,
-        @Nullable String volumeType) {
-        this.backupCreatedDate = backupCreatedDate;
-        this.backupElementId = backupElementId;
-        this.backupId = backupId;
-        this.backupPolicyId = backupPolicyId;
-        this.sizeInBytes = sizeInBytes;
-        this.volumeId = volumeId;
-        this.volumeType = volumeType;
-    }
+    private VolumeFailoverMetadataResponse() {}
 
-    private VolumeFailoverMetadataResponse() {
-        this.backupCreatedDate = null;
-        this.backupElementId = null;
-        this.backupId = null;
-        this.backupPolicyId = null;
-        this.sizeInBytes = null;
-        this.volumeId = null;
-        this.volumeType = null;
+    private VolumeFailoverMetadataResponse(VolumeFailoverMetadataResponse $) {
+        this.backupCreatedDate = $.backupCreatedDate;
+        this.backupElementId = $.backupElementId;
+        this.backupId = $.backupId;
+        this.backupPolicyId = $.backupPolicyId;
+        this.sizeInBytes = $.sizeInBytes;
+        this.volumeId = $.volumeId;
+        this.volumeType = $.volumeType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VolumeFailoverMetadataResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String backupCreatedDate;
-        private @Nullable String backupElementId;
-        private @Nullable String backupId;
-        private @Nullable String backupPolicyId;
-        private @Nullable Double sizeInBytes;
-        private @Nullable String volumeId;
-        private @Nullable String volumeType;
+        private VolumeFailoverMetadataResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new VolumeFailoverMetadataResponse();
         }
 
         public Builder(VolumeFailoverMetadataResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.backupCreatedDate = defaults.backupCreatedDate;
-    	      this.backupElementId = defaults.backupElementId;
-    	      this.backupId = defaults.backupId;
-    	      this.backupPolicyId = defaults.backupPolicyId;
-    	      this.sizeInBytes = defaults.sizeInBytes;
-    	      this.volumeId = defaults.volumeId;
-    	      this.volumeType = defaults.volumeType;
+            $ = new VolumeFailoverMetadataResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder backupCreatedDate(@Nullable String backupCreatedDate) {
-            this.backupCreatedDate = backupCreatedDate;
+            $.backupCreatedDate = backupCreatedDate;
             return this;
         }
+
         public Builder backupElementId(@Nullable String backupElementId) {
-            this.backupElementId = backupElementId;
+            $.backupElementId = backupElementId;
             return this;
         }
+
         public Builder backupId(@Nullable String backupId) {
-            this.backupId = backupId;
+            $.backupId = backupId;
             return this;
         }
+
         public Builder backupPolicyId(@Nullable String backupPolicyId) {
-            this.backupPolicyId = backupPolicyId;
+            $.backupPolicyId = backupPolicyId;
             return this;
         }
+
         public Builder sizeInBytes(@Nullable Double sizeInBytes) {
-            this.sizeInBytes = sizeInBytes;
+            $.sizeInBytes = sizeInBytes;
             return this;
         }
+
         public Builder volumeId(@Nullable String volumeId) {
-            this.volumeId = volumeId;
+            $.volumeId = volumeId;
             return this;
         }
+
         public Builder volumeType(@Nullable String volumeType) {
-            this.volumeType = volumeType;
+            $.volumeType = volumeType;
             return this;
-        }        public VolumeFailoverMetadataResponse build() {
-            return new VolumeFailoverMetadataResponse(backupCreatedDate, backupElementId, backupId, backupPolicyId, sizeInBytes, volumeId, volumeType);
+        }
+
+        public VolumeFailoverMetadataResponse build() {
+            return $;
         }
     }
+
 }

@@ -26,10 +26,10 @@ public final class SapTableSourceResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="additionalColumns")
-      private final @Nullable Object additionalColumns;
+    private @Nullable Object additionalColumns;
 
     public Optional<Object> additionalColumns() {
-        return this.additionalColumns == null ? Optional.empty() : Optional.ofNullable(this.additionalColumns);
+        return Optional.ofNullable(this.additionalColumns);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class SapTableSourceResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="batchSize")
-      private final @Nullable Object batchSize;
+    private @Nullable Object batchSize;
 
     public Optional<Object> batchSize() {
-        return this.batchSize == null ? Optional.empty() : Optional.ofNullable(this.batchSize);
+        return Optional.ofNullable(this.batchSize);
     }
 
     /**
@@ -48,10 +48,10 @@ public final class SapTableSourceResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="customRfcReadTableFunctionModule")
-      private final @Nullable Object customRfcReadTableFunctionModule;
+    private @Nullable Object customRfcReadTableFunctionModule;
 
     public Optional<Object> customRfcReadTableFunctionModule() {
-        return this.customRfcReadTableFunctionModule == null ? Optional.empty() : Optional.ofNullable(this.customRfcReadTableFunctionModule);
+        return Optional.ofNullable(this.customRfcReadTableFunctionModule);
     }
 
     /**
@@ -59,10 +59,10 @@ public final class SapTableSourceResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="disableMetricsCollection")
-      private final @Nullable Object disableMetricsCollection;
+    private @Nullable Object disableMetricsCollection;
 
     public Optional<Object> disableMetricsCollection() {
-        return this.disableMetricsCollection == null ? Optional.empty() : Optional.ofNullable(this.disableMetricsCollection);
+        return Optional.ofNullable(this.disableMetricsCollection);
     }
 
     /**
@@ -70,10 +70,10 @@ public final class SapTableSourceResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="maxConcurrentConnections")
-      private final @Nullable Object maxConcurrentConnections;
+    private @Nullable Object maxConcurrentConnections;
 
     public Optional<Object> maxConcurrentConnections() {
-        return this.maxConcurrentConnections == null ? Optional.empty() : Optional.ofNullable(this.maxConcurrentConnections);
+        return Optional.ofNullable(this.maxConcurrentConnections);
     }
 
     /**
@@ -81,10 +81,10 @@ public final class SapTableSourceResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="partitionOption")
-      private final @Nullable Object partitionOption;
+    private @Nullable Object partitionOption;
 
     public Optional<Object> partitionOption() {
-        return this.partitionOption == null ? Optional.empty() : Optional.ofNullable(this.partitionOption);
+        return Optional.ofNullable(this.partitionOption);
     }
 
     /**
@@ -92,10 +92,10 @@ public final class SapTableSourceResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="partitionSettings")
-      private final @Nullable SapTablePartitionSettingsResponse partitionSettings;
+    private @Nullable SapTablePartitionSettingsResponse partitionSettings;
 
     public Optional<SapTablePartitionSettingsResponse> partitionSettings() {
-        return this.partitionSettings == null ? Optional.empty() : Optional.ofNullable(this.partitionSettings);
+        return Optional.ofNullable(this.partitionSettings);
     }
 
     /**
@@ -103,10 +103,10 @@ public final class SapTableSourceResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="queryTimeout")
-      private final @Nullable Object queryTimeout;
+    private @Nullable Object queryTimeout;
 
     public Optional<Object> queryTimeout() {
-        return this.queryTimeout == null ? Optional.empty() : Optional.ofNullable(this.queryTimeout);
+        return Optional.ofNullable(this.queryTimeout);
     }
 
     /**
@@ -114,10 +114,10 @@ public final class SapTableSourceResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="rfcTableFields")
-      private final @Nullable Object rfcTableFields;
+    private @Nullable Object rfcTableFields;
 
     public Optional<Object> rfcTableFields() {
-        return this.rfcTableFields == null ? Optional.empty() : Optional.ofNullable(this.rfcTableFields);
+        return Optional.ofNullable(this.rfcTableFields);
     }
 
     /**
@@ -125,10 +125,10 @@ public final class SapTableSourceResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="rfcTableOptions")
-      private final @Nullable Object rfcTableOptions;
+    private @Nullable Object rfcTableOptions;
 
     public Optional<Object> rfcTableOptions() {
-        return this.rfcTableOptions == null ? Optional.empty() : Optional.ofNullable(this.rfcTableOptions);
+        return Optional.ofNullable(this.rfcTableOptions);
     }
 
     /**
@@ -136,10 +136,10 @@ public final class SapTableSourceResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="rowCount")
-      private final @Nullable Object rowCount;
+    private @Nullable Object rowCount;
 
     public Optional<Object> rowCount() {
-        return this.rowCount == null ? Optional.empty() : Optional.ofNullable(this.rowCount);
+        return Optional.ofNullable(this.rowCount);
     }
 
     /**
@@ -147,10 +147,10 @@ public final class SapTableSourceResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="rowSkips")
-      private final @Nullable Object rowSkips;
+    private @Nullable Object rowSkips;
 
     public Optional<Object> rowSkips() {
-        return this.rowSkips == null ? Optional.empty() : Optional.ofNullable(this.rowSkips);
+        return Optional.ofNullable(this.rowSkips);
     }
 
     /**
@@ -158,10 +158,10 @@ public final class SapTableSourceResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="sapDataColumnDelimiter")
-      private final @Nullable Object sapDataColumnDelimiter;
+    private @Nullable Object sapDataColumnDelimiter;
 
     public Optional<Object> sapDataColumnDelimiter() {
-        return this.sapDataColumnDelimiter == null ? Optional.empty() : Optional.ofNullable(this.sapDataColumnDelimiter);
+        return Optional.ofNullable(this.sapDataColumnDelimiter);
     }
 
     /**
@@ -169,10 +169,10 @@ public final class SapTableSourceResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="sourceRetryCount")
-      private final @Nullable Object sourceRetryCount;
+    private @Nullable Object sourceRetryCount;
 
     public Optional<Object> sourceRetryCount() {
-        return this.sourceRetryCount == null ? Optional.empty() : Optional.ofNullable(this.sourceRetryCount);
+        return Optional.ofNullable(this.sourceRetryCount);
     }
 
     /**
@@ -180,10 +180,10 @@ public final class SapTableSourceResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="sourceRetryWait")
-      private final @Nullable Object sourceRetryWait;
+    private @Nullable Object sourceRetryWait;
 
     public Optional<Object> sourceRetryWait() {
-        return this.sourceRetryWait == null ? Optional.empty() : Optional.ofNullable(this.sourceRetryWait);
+        return Optional.ofNullable(this.sourceRetryWait);
     }
 
     /**
@@ -192,181 +192,135 @@ public final class SapTableSourceResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
     }
 
-    public SapTableSourceResponse(
-        @Nullable Object additionalColumns,
-        @Nullable Object batchSize,
-        @Nullable Object customRfcReadTableFunctionModule,
-        @Nullable Object disableMetricsCollection,
-        @Nullable Object maxConcurrentConnections,
-        @Nullable Object partitionOption,
-        @Nullable SapTablePartitionSettingsResponse partitionSettings,
-        @Nullable Object queryTimeout,
-        @Nullable Object rfcTableFields,
-        @Nullable Object rfcTableOptions,
-        @Nullable Object rowCount,
-        @Nullable Object rowSkips,
-        @Nullable Object sapDataColumnDelimiter,
-        @Nullable Object sourceRetryCount,
-        @Nullable Object sourceRetryWait,
-        String type) {
-        this.additionalColumns = additionalColumns;
-        this.batchSize = batchSize;
-        this.customRfcReadTableFunctionModule = customRfcReadTableFunctionModule;
-        this.disableMetricsCollection = disableMetricsCollection;
-        this.maxConcurrentConnections = maxConcurrentConnections;
-        this.partitionOption = partitionOption;
-        this.partitionSettings = partitionSettings;
-        this.queryTimeout = queryTimeout;
-        this.rfcTableFields = rfcTableFields;
-        this.rfcTableOptions = rfcTableOptions;
-        this.rowCount = rowCount;
-        this.rowSkips = rowSkips;
-        this.sapDataColumnDelimiter = sapDataColumnDelimiter;
-        this.sourceRetryCount = sourceRetryCount;
-        this.sourceRetryWait = sourceRetryWait;
-        this.type = Codegen.stringProp("type").arg(type).require();
-    }
+    private SapTableSourceResponse() {}
 
-    private SapTableSourceResponse() {
-        this.additionalColumns = null;
-        this.batchSize = null;
-        this.customRfcReadTableFunctionModule = null;
-        this.disableMetricsCollection = null;
-        this.maxConcurrentConnections = null;
-        this.partitionOption = null;
-        this.partitionSettings = null;
-        this.queryTimeout = null;
-        this.rfcTableFields = null;
-        this.rfcTableOptions = null;
-        this.rowCount = null;
-        this.rowSkips = null;
-        this.sapDataColumnDelimiter = null;
-        this.sourceRetryCount = null;
-        this.sourceRetryWait = null;
-        this.type = null;
+    private SapTableSourceResponse(SapTableSourceResponse $) {
+        this.additionalColumns = $.additionalColumns;
+        this.batchSize = $.batchSize;
+        this.customRfcReadTableFunctionModule = $.customRfcReadTableFunctionModule;
+        this.disableMetricsCollection = $.disableMetricsCollection;
+        this.maxConcurrentConnections = $.maxConcurrentConnections;
+        this.partitionOption = $.partitionOption;
+        this.partitionSettings = $.partitionSettings;
+        this.queryTimeout = $.queryTimeout;
+        this.rfcTableFields = $.rfcTableFields;
+        this.rfcTableOptions = $.rfcTableOptions;
+        this.rowCount = $.rowCount;
+        this.rowSkips = $.rowSkips;
+        this.sapDataColumnDelimiter = $.sapDataColumnDelimiter;
+        this.sourceRetryCount = $.sourceRetryCount;
+        this.sourceRetryWait = $.sourceRetryWait;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SapTableSourceResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Object additionalColumns;
-        private @Nullable Object batchSize;
-        private @Nullable Object customRfcReadTableFunctionModule;
-        private @Nullable Object disableMetricsCollection;
-        private @Nullable Object maxConcurrentConnections;
-        private @Nullable Object partitionOption;
-        private @Nullable SapTablePartitionSettingsResponse partitionSettings;
-        private @Nullable Object queryTimeout;
-        private @Nullable Object rfcTableFields;
-        private @Nullable Object rfcTableOptions;
-        private @Nullable Object rowCount;
-        private @Nullable Object rowSkips;
-        private @Nullable Object sapDataColumnDelimiter;
-        private @Nullable Object sourceRetryCount;
-        private @Nullable Object sourceRetryWait;
-        private String type;
+        private SapTableSourceResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new SapTableSourceResponse();
         }
 
         public Builder(SapTableSourceResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.additionalColumns = defaults.additionalColumns;
-    	      this.batchSize = defaults.batchSize;
-    	      this.customRfcReadTableFunctionModule = defaults.customRfcReadTableFunctionModule;
-    	      this.disableMetricsCollection = defaults.disableMetricsCollection;
-    	      this.maxConcurrentConnections = defaults.maxConcurrentConnections;
-    	      this.partitionOption = defaults.partitionOption;
-    	      this.partitionSettings = defaults.partitionSettings;
-    	      this.queryTimeout = defaults.queryTimeout;
-    	      this.rfcTableFields = defaults.rfcTableFields;
-    	      this.rfcTableOptions = defaults.rfcTableOptions;
-    	      this.rowCount = defaults.rowCount;
-    	      this.rowSkips = defaults.rowSkips;
-    	      this.sapDataColumnDelimiter = defaults.sapDataColumnDelimiter;
-    	      this.sourceRetryCount = defaults.sourceRetryCount;
-    	      this.sourceRetryWait = defaults.sourceRetryWait;
-    	      this.type = defaults.type;
+            $ = new SapTableSourceResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder additionalColumns(@Nullable Object additionalColumns) {
-            this.additionalColumns = additionalColumns;
+            $.additionalColumns = additionalColumns;
             return this;
         }
+
         public Builder batchSize(@Nullable Object batchSize) {
-            this.batchSize = batchSize;
+            $.batchSize = batchSize;
             return this;
         }
+
         public Builder customRfcReadTableFunctionModule(@Nullable Object customRfcReadTableFunctionModule) {
-            this.customRfcReadTableFunctionModule = customRfcReadTableFunctionModule;
+            $.customRfcReadTableFunctionModule = customRfcReadTableFunctionModule;
             return this;
         }
+
         public Builder disableMetricsCollection(@Nullable Object disableMetricsCollection) {
-            this.disableMetricsCollection = disableMetricsCollection;
+            $.disableMetricsCollection = disableMetricsCollection;
             return this;
         }
+
         public Builder maxConcurrentConnections(@Nullable Object maxConcurrentConnections) {
-            this.maxConcurrentConnections = maxConcurrentConnections;
+            $.maxConcurrentConnections = maxConcurrentConnections;
             return this;
         }
+
         public Builder partitionOption(@Nullable Object partitionOption) {
-            this.partitionOption = partitionOption;
+            $.partitionOption = partitionOption;
             return this;
         }
+
         public Builder partitionSettings(@Nullable SapTablePartitionSettingsResponse partitionSettings) {
-            this.partitionSettings = partitionSettings;
+            $.partitionSettings = partitionSettings;
             return this;
         }
+
         public Builder queryTimeout(@Nullable Object queryTimeout) {
-            this.queryTimeout = queryTimeout;
+            $.queryTimeout = queryTimeout;
             return this;
         }
+
         public Builder rfcTableFields(@Nullable Object rfcTableFields) {
-            this.rfcTableFields = rfcTableFields;
+            $.rfcTableFields = rfcTableFields;
             return this;
         }
+
         public Builder rfcTableOptions(@Nullable Object rfcTableOptions) {
-            this.rfcTableOptions = rfcTableOptions;
+            $.rfcTableOptions = rfcTableOptions;
             return this;
         }
+
         public Builder rowCount(@Nullable Object rowCount) {
-            this.rowCount = rowCount;
+            $.rowCount = rowCount;
             return this;
         }
+
         public Builder rowSkips(@Nullable Object rowSkips) {
-            this.rowSkips = rowSkips;
+            $.rowSkips = rowSkips;
             return this;
         }
+
         public Builder sapDataColumnDelimiter(@Nullable Object sapDataColumnDelimiter) {
-            this.sapDataColumnDelimiter = sapDataColumnDelimiter;
+            $.sapDataColumnDelimiter = sapDataColumnDelimiter;
             return this;
         }
+
         public Builder sourceRetryCount(@Nullable Object sourceRetryCount) {
-            this.sourceRetryCount = sourceRetryCount;
+            $.sourceRetryCount = sourceRetryCount;
             return this;
         }
+
         public Builder sourceRetryWait(@Nullable Object sourceRetryWait) {
-            this.sourceRetryWait = sourceRetryWait;
+            $.sourceRetryWait = sourceRetryWait;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
-        }        public SapTableSourceResponse build() {
-            return new SapTableSourceResponse(additionalColumns, batchSize, customRfcReadTableFunctionModule, disableMetricsCollection, maxConcurrentConnections, partitionOption, partitionSettings, queryTimeout, rfcTableFields, rfcTableOptions, rowCount, rowSkips, sapDataColumnDelimiter, sourceRetryCount, sourceRetryWait, type);
+        }
+
+        public SapTableSourceResponse build() {
+            $.type = Codegen.stringProp("type").arg($.type).require();
+            return $;
         }
     }
+
 }

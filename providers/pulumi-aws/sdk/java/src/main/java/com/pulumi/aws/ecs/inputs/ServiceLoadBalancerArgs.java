@@ -5,10 +5,10 @@ package com.pulumi.aws.ecs.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,7 +21,7 @@ public final class ServiceLoadBalancerArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="containerName", required=true)
-      private final Output<String> containerName;
+    private Output<String> containerName;
 
     public Output<String> containerName() {
         return this.containerName;
@@ -32,7 +32,7 @@ public final class ServiceLoadBalancerArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="containerPort", required=true)
-      private final Output<Integer> containerPort;
+    private Output<Integer> containerPort;
 
     public Output<Integer> containerPort() {
         return this.containerPort;
@@ -43,10 +43,10 @@ public final class ServiceLoadBalancerArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="elbName")
-      private final @Nullable Output<String> elbName;
+    private @Nullable Output<String> elbName;
 
-    public Output<String> elbName() {
-        return this.elbName == null ? Codegen.empty() : this.elbName;
+    public Optional<Output<String>> elbName() {
+        return Optional.ofNullable(this.elbName);
     }
 
     /**
@@ -54,89 +54,80 @@ public final class ServiceLoadBalancerArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="targetGroupArn")
-      private final @Nullable Output<String> targetGroupArn;
+    private @Nullable Output<String> targetGroupArn;
 
-    public Output<String> targetGroupArn() {
-        return this.targetGroupArn == null ? Codegen.empty() : this.targetGroupArn;
+    public Optional<Output<String>> targetGroupArn() {
+        return Optional.ofNullable(this.targetGroupArn);
     }
 
-    public ServiceLoadBalancerArgs(
-        Output<String> containerName,
-        Output<Integer> containerPort,
-        @Nullable Output<String> elbName,
-        @Nullable Output<String> targetGroupArn) {
-        this.containerName = Objects.requireNonNull(containerName, "expected parameter 'containerName' to be non-null");
-        this.containerPort = Objects.requireNonNull(containerPort, "expected parameter 'containerPort' to be non-null");
-        this.elbName = elbName;
-        this.targetGroupArn = targetGroupArn;
-    }
+    private ServiceLoadBalancerArgs() {}
 
-    private ServiceLoadBalancerArgs() {
-        this.containerName = Codegen.empty();
-        this.containerPort = Codegen.empty();
-        this.elbName = Codegen.empty();
-        this.targetGroupArn = Codegen.empty();
+    private ServiceLoadBalancerArgs(ServiceLoadBalancerArgs $) {
+        this.containerName = $.containerName;
+        this.containerPort = $.containerPort;
+        this.elbName = $.elbName;
+        this.targetGroupArn = $.targetGroupArn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ServiceLoadBalancerArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> containerName;
-        private Output<Integer> containerPort;
-        private @Nullable Output<String> elbName;
-        private @Nullable Output<String> targetGroupArn;
+        private ServiceLoadBalancerArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ServiceLoadBalancerArgs();
         }
 
         public Builder(ServiceLoadBalancerArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.containerName = defaults.containerName;
-    	      this.containerPort = defaults.containerPort;
-    	      this.elbName = defaults.elbName;
-    	      this.targetGroupArn = defaults.targetGroupArn;
+            $ = new ServiceLoadBalancerArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder containerName(Output<String> containerName) {
-            this.containerName = Objects.requireNonNull(containerName);
+            $.containerName = containerName;
             return this;
         }
+
         public Builder containerName(String containerName) {
-            this.containerName = Output.of(Objects.requireNonNull(containerName));
-            return this;
+            return containerName(Output.of(containerName));
         }
+
         public Builder containerPort(Output<Integer> containerPort) {
-            this.containerPort = Objects.requireNonNull(containerPort);
+            $.containerPort = containerPort;
             return this;
         }
+
         public Builder containerPort(Integer containerPort) {
-            this.containerPort = Output.of(Objects.requireNonNull(containerPort));
-            return this;
+            return containerPort(Output.of(containerPort));
         }
+
         public Builder elbName(@Nullable Output<String> elbName) {
-            this.elbName = elbName;
+            $.elbName = elbName;
             return this;
         }
-        public Builder elbName(@Nullable String elbName) {
-            this.elbName = Codegen.ofNullable(elbName);
-            return this;
+
+        public Builder elbName(String elbName) {
+            return elbName(Output.of(elbName));
         }
+
         public Builder targetGroupArn(@Nullable Output<String> targetGroupArn) {
-            this.targetGroupArn = targetGroupArn;
+            $.targetGroupArn = targetGroupArn;
             return this;
         }
-        public Builder targetGroupArn(@Nullable String targetGroupArn) {
-            this.targetGroupArn = Codegen.ofNullable(targetGroupArn);
-            return this;
-        }        public ServiceLoadBalancerArgs build() {
-            return new ServiceLoadBalancerArgs(containerName, containerPort, elbName, targetGroupArn);
+
+        public Builder targetGroupArn(String targetGroupArn) {
+            return targetGroupArn(Output.of(targetGroupArn));
+        }
+
+        public ServiceLoadBalancerArgs build() {
+            $.containerName = Objects.requireNonNull($.containerName, "expected parameter 'containerName' to be non-null");
+            $.containerPort = Objects.requireNonNull($.containerPort, "expected parameter 'containerPort' to be non-null");
+            return $;
         }
     }
+
 }

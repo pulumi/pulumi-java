@@ -17,6 +17,7 @@ import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -33,10 +34,10 @@ public final class HDInsightSparkActivityArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="arguments")
-      private final @Nullable Output<List<Object>> arguments;
+    private @Nullable Output<List<Object>> arguments;
 
-    public Output<List<Object>> arguments() {
-        return this.arguments == null ? Codegen.empty() : this.arguments;
+    public Optional<Output<List<Object>>> arguments() {
+        return Optional.ofNullable(this.arguments);
     }
 
     /**
@@ -44,10 +45,10 @@ public final class HDInsightSparkActivityArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="className")
-      private final @Nullable Output<String> className;
+    private @Nullable Output<String> className;
 
-    public Output<String> className() {
-        return this.className == null ? Codegen.empty() : this.className;
+    public Optional<Output<String>> className() {
+        return Optional.ofNullable(this.className);
     }
 
     /**
@@ -55,10 +56,10 @@ public final class HDInsightSparkActivityArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="dependsOn")
-      private final @Nullable Output<List<ActivityDependencyArgs>> dependsOn;
+    private @Nullable Output<List<ActivityDependencyArgs>> dependsOn;
 
-    public Output<List<ActivityDependencyArgs>> dependsOn() {
-        return this.dependsOn == null ? Codegen.empty() : this.dependsOn;
+    public Optional<Output<List<ActivityDependencyArgs>>> dependsOn() {
+        return Optional.ofNullable(this.dependsOn);
     }
 
     /**
@@ -66,10 +67,10 @@ public final class HDInsightSparkActivityArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -77,7 +78,7 @@ public final class HDInsightSparkActivityArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="entryFilePath", required=true)
-      private final Output<Object> entryFilePath;
+    private Output<Object> entryFilePath;
 
     public Output<Object> entryFilePath() {
         return this.entryFilePath;
@@ -88,10 +89,10 @@ public final class HDInsightSparkActivityArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="getDebugInfo")
-      private final @Nullable Output<Either<String,HDInsightActivityDebugInfoOption>> getDebugInfo;
+    private @Nullable Output<Either<String,HDInsightActivityDebugInfoOption>> getDebugInfo;
 
-    public Output<Either<String,HDInsightActivityDebugInfoOption>> getDebugInfo() {
-        return this.getDebugInfo == null ? Codegen.empty() : this.getDebugInfo;
+    public Optional<Output<Either<String,HDInsightActivityDebugInfoOption>>> getDebugInfo() {
+        return Optional.ofNullable(this.getDebugInfo);
     }
 
     /**
@@ -99,10 +100,10 @@ public final class HDInsightSparkActivityArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="linkedServiceName")
-      private final @Nullable Output<LinkedServiceReferenceArgs> linkedServiceName;
+    private @Nullable Output<LinkedServiceReferenceArgs> linkedServiceName;
 
-    public Output<LinkedServiceReferenceArgs> linkedServiceName() {
-        return this.linkedServiceName == null ? Codegen.empty() : this.linkedServiceName;
+    public Optional<Output<LinkedServiceReferenceArgs>> linkedServiceName() {
+        return Optional.ofNullable(this.linkedServiceName);
     }
 
     /**
@@ -110,7 +111,7 @@ public final class HDInsightSparkActivityArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="name", required=true)
-      private final Output<String> name;
+    private Output<String> name;
 
     public Output<String> name() {
         return this.name;
@@ -121,10 +122,10 @@ public final class HDInsightSparkActivityArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="policy")
-      private final @Nullable Output<ActivityPolicyArgs> policy;
+    private @Nullable Output<ActivityPolicyArgs> policy;
 
-    public Output<ActivityPolicyArgs> policy() {
-        return this.policy == null ? Codegen.empty() : this.policy;
+    public Optional<Output<ActivityPolicyArgs>> policy() {
+        return Optional.ofNullable(this.policy);
     }
 
     /**
@@ -132,10 +133,10 @@ public final class HDInsightSparkActivityArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="proxyUser")
-      private final @Nullable Output<Object> proxyUser;
+    private @Nullable Output<Object> proxyUser;
 
-    public Output<Object> proxyUser() {
-        return this.proxyUser == null ? Codegen.empty() : this.proxyUser;
+    public Optional<Output<Object>> proxyUser() {
+        return Optional.ofNullable(this.proxyUser);
     }
 
     /**
@@ -143,7 +144,7 @@ public final class HDInsightSparkActivityArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="rootPath", required=true)
-      private final Output<Object> rootPath;
+    private Output<Object> rootPath;
 
     public Output<Object> rootPath() {
         return this.rootPath;
@@ -154,10 +155,10 @@ public final class HDInsightSparkActivityArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="sparkConfig")
-      private final @Nullable Output<Map<String,Object>> sparkConfig;
+    private @Nullable Output<Map<String,Object>> sparkConfig;
 
-    public Output<Map<String,Object>> sparkConfig() {
-        return this.sparkConfig == null ? Codegen.empty() : this.sparkConfig;
+    public Optional<Output<Map<String,Object>>> sparkConfig() {
+        return Optional.ofNullable(this.sparkConfig);
     }
 
     /**
@@ -165,10 +166,10 @@ public final class HDInsightSparkActivityArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="sparkJobLinkedService")
-      private final @Nullable Output<LinkedServiceReferenceArgs> sparkJobLinkedService;
+    private @Nullable Output<LinkedServiceReferenceArgs> sparkJobLinkedService;
 
-    public Output<LinkedServiceReferenceArgs> sparkJobLinkedService() {
-        return this.sparkJobLinkedService == null ? Codegen.empty() : this.sparkJobLinkedService;
+    public Optional<Output<LinkedServiceReferenceArgs>> sparkJobLinkedService() {
+        return Optional.ofNullable(this.sparkJobLinkedService);
     }
 
     /**
@@ -177,7 +178,7 @@ public final class HDInsightSparkActivityArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="type", required=true)
-      private final Output<String> type;
+    private Output<String> type;
 
     public Output<String> type() {
         return this.type;
@@ -188,241 +189,204 @@ public final class HDInsightSparkActivityArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="userProperties")
-      private final @Nullable Output<List<UserPropertyArgs>> userProperties;
+    private @Nullable Output<List<UserPropertyArgs>> userProperties;
 
-    public Output<List<UserPropertyArgs>> userProperties() {
-        return this.userProperties == null ? Codegen.empty() : this.userProperties;
+    public Optional<Output<List<UserPropertyArgs>>> userProperties() {
+        return Optional.ofNullable(this.userProperties);
     }
 
-    public HDInsightSparkActivityArgs(
-        @Nullable Output<List<Object>> arguments,
-        @Nullable Output<String> className,
-        @Nullable Output<List<ActivityDependencyArgs>> dependsOn,
-        @Nullable Output<String> description,
-        Output<Object> entryFilePath,
-        @Nullable Output<Either<String,HDInsightActivityDebugInfoOption>> getDebugInfo,
-        @Nullable Output<LinkedServiceReferenceArgs> linkedServiceName,
-        Output<String> name,
-        @Nullable Output<ActivityPolicyArgs> policy,
-        @Nullable Output<Object> proxyUser,
-        Output<Object> rootPath,
-        @Nullable Output<Map<String,Object>> sparkConfig,
-        @Nullable Output<LinkedServiceReferenceArgs> sparkJobLinkedService,
-        Output<String> type,
-        @Nullable Output<List<UserPropertyArgs>> userProperties) {
-        this.arguments = arguments;
-        this.className = className;
-        this.dependsOn = dependsOn;
-        this.description = description;
-        this.entryFilePath = Objects.requireNonNull(entryFilePath, "expected parameter 'entryFilePath' to be non-null");
-        this.getDebugInfo = getDebugInfo;
-        this.linkedServiceName = linkedServiceName;
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.policy = policy;
-        this.proxyUser = proxyUser;
-        this.rootPath = Objects.requireNonNull(rootPath, "expected parameter 'rootPath' to be non-null");
-        this.sparkConfig = sparkConfig;
-        this.sparkJobLinkedService = sparkJobLinkedService;
-        this.type = Codegen.stringProp("type").output().arg(type).require();
-        this.userProperties = userProperties;
-    }
+    private HDInsightSparkActivityArgs() {}
 
-    private HDInsightSparkActivityArgs() {
-        this.arguments = Codegen.empty();
-        this.className = Codegen.empty();
-        this.dependsOn = Codegen.empty();
-        this.description = Codegen.empty();
-        this.entryFilePath = Codegen.empty();
-        this.getDebugInfo = Codegen.empty();
-        this.linkedServiceName = Codegen.empty();
-        this.name = Codegen.empty();
-        this.policy = Codegen.empty();
-        this.proxyUser = Codegen.empty();
-        this.rootPath = Codegen.empty();
-        this.sparkConfig = Codegen.empty();
-        this.sparkJobLinkedService = Codegen.empty();
-        this.type = Codegen.empty();
-        this.userProperties = Codegen.empty();
+    private HDInsightSparkActivityArgs(HDInsightSparkActivityArgs $) {
+        this.arguments = $.arguments;
+        this.className = $.className;
+        this.dependsOn = $.dependsOn;
+        this.description = $.description;
+        this.entryFilePath = $.entryFilePath;
+        this.getDebugInfo = $.getDebugInfo;
+        this.linkedServiceName = $.linkedServiceName;
+        this.name = $.name;
+        this.policy = $.policy;
+        this.proxyUser = $.proxyUser;
+        this.rootPath = $.rootPath;
+        this.sparkConfig = $.sparkConfig;
+        this.sparkJobLinkedService = $.sparkJobLinkedService;
+        this.type = $.type;
+        this.userProperties = $.userProperties;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(HDInsightSparkActivityArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<Object>> arguments;
-        private @Nullable Output<String> className;
-        private @Nullable Output<List<ActivityDependencyArgs>> dependsOn;
-        private @Nullable Output<String> description;
-        private Output<Object> entryFilePath;
-        private @Nullable Output<Either<String,HDInsightActivityDebugInfoOption>> getDebugInfo;
-        private @Nullable Output<LinkedServiceReferenceArgs> linkedServiceName;
-        private Output<String> name;
-        private @Nullable Output<ActivityPolicyArgs> policy;
-        private @Nullable Output<Object> proxyUser;
-        private Output<Object> rootPath;
-        private @Nullable Output<Map<String,Object>> sparkConfig;
-        private @Nullable Output<LinkedServiceReferenceArgs> sparkJobLinkedService;
-        private Output<String> type;
-        private @Nullable Output<List<UserPropertyArgs>> userProperties;
+        private HDInsightSparkActivityArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new HDInsightSparkActivityArgs();
         }
 
         public Builder(HDInsightSparkActivityArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.arguments = defaults.arguments;
-    	      this.className = defaults.className;
-    	      this.dependsOn = defaults.dependsOn;
-    	      this.description = defaults.description;
-    	      this.entryFilePath = defaults.entryFilePath;
-    	      this.getDebugInfo = defaults.getDebugInfo;
-    	      this.linkedServiceName = defaults.linkedServiceName;
-    	      this.name = defaults.name;
-    	      this.policy = defaults.policy;
-    	      this.proxyUser = defaults.proxyUser;
-    	      this.rootPath = defaults.rootPath;
-    	      this.sparkConfig = defaults.sparkConfig;
-    	      this.sparkJobLinkedService = defaults.sparkJobLinkedService;
-    	      this.type = defaults.type;
-    	      this.userProperties = defaults.userProperties;
+            $ = new HDInsightSparkActivityArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder arguments(@Nullable Output<List<Object>> arguments) {
-            this.arguments = arguments;
+            $.arguments = arguments;
             return this;
         }
-        public Builder arguments(@Nullable List<Object> arguments) {
-            this.arguments = Codegen.ofNullable(arguments);
-            return this;
+
+        public Builder arguments(List<Object> arguments) {
+            return arguments(Output.of(arguments));
         }
+
         public Builder arguments(Object... arguments) {
             return arguments(List.of(arguments));
         }
+
         public Builder className(@Nullable Output<String> className) {
-            this.className = className;
+            $.className = className;
             return this;
         }
-        public Builder className(@Nullable String className) {
-            this.className = Codegen.ofNullable(className);
-            return this;
+
+        public Builder className(String className) {
+            return className(Output.of(className));
         }
+
         public Builder dependsOn(@Nullable Output<List<ActivityDependencyArgs>> dependsOn) {
-            this.dependsOn = dependsOn;
+            $.dependsOn = dependsOn;
             return this;
         }
-        public Builder dependsOn(@Nullable List<ActivityDependencyArgs> dependsOn) {
-            this.dependsOn = Codegen.ofNullable(dependsOn);
-            return this;
+
+        public Builder dependsOn(List<ActivityDependencyArgs> dependsOn) {
+            return dependsOn(Output.of(dependsOn));
         }
+
         public Builder dependsOn(ActivityDependencyArgs... dependsOn) {
             return dependsOn(List.of(dependsOn));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder entryFilePath(Output<Object> entryFilePath) {
-            this.entryFilePath = Objects.requireNonNull(entryFilePath);
+            $.entryFilePath = entryFilePath;
             return this;
         }
+
         public Builder entryFilePath(Object entryFilePath) {
-            this.entryFilePath = Output.of(Objects.requireNonNull(entryFilePath));
-            return this;
+            return entryFilePath(Output.of(entryFilePath));
         }
+
         public Builder getDebugInfo(@Nullable Output<Either<String,HDInsightActivityDebugInfoOption>> getDebugInfo) {
-            this.getDebugInfo = getDebugInfo;
+            $.getDebugInfo = getDebugInfo;
             return this;
         }
-        public Builder getDebugInfo(@Nullable Either<String,HDInsightActivityDebugInfoOption> getDebugInfo) {
-            this.getDebugInfo = Codegen.ofNullable(getDebugInfo);
-            return this;
+
+        public Builder getDebugInfo(Either<String,HDInsightActivityDebugInfoOption> getDebugInfo) {
+            return getDebugInfo(Output.of(getDebugInfo));
         }
+
         public Builder linkedServiceName(@Nullable Output<LinkedServiceReferenceArgs> linkedServiceName) {
-            this.linkedServiceName = linkedServiceName;
+            $.linkedServiceName = linkedServiceName;
             return this;
         }
-        public Builder linkedServiceName(@Nullable LinkedServiceReferenceArgs linkedServiceName) {
-            this.linkedServiceName = Codegen.ofNullable(linkedServiceName);
-            return this;
+
+        public Builder linkedServiceName(LinkedServiceReferenceArgs linkedServiceName) {
+            return linkedServiceName(Output.of(linkedServiceName));
         }
+
         public Builder name(Output<String> name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Output.of(Objects.requireNonNull(name));
-            return this;
+            return name(Output.of(name));
         }
+
         public Builder policy(@Nullable Output<ActivityPolicyArgs> policy) {
-            this.policy = policy;
+            $.policy = policy;
             return this;
         }
-        public Builder policy(@Nullable ActivityPolicyArgs policy) {
-            this.policy = Codegen.ofNullable(policy);
-            return this;
+
+        public Builder policy(ActivityPolicyArgs policy) {
+            return policy(Output.of(policy));
         }
+
         public Builder proxyUser(@Nullable Output<Object> proxyUser) {
-            this.proxyUser = proxyUser;
+            $.proxyUser = proxyUser;
             return this;
         }
-        public Builder proxyUser(@Nullable Object proxyUser) {
-            this.proxyUser = Codegen.ofNullable(proxyUser);
-            return this;
+
+        public Builder proxyUser(Object proxyUser) {
+            return proxyUser(Output.of(proxyUser));
         }
+
         public Builder rootPath(Output<Object> rootPath) {
-            this.rootPath = Objects.requireNonNull(rootPath);
+            $.rootPath = rootPath;
             return this;
         }
+
         public Builder rootPath(Object rootPath) {
-            this.rootPath = Output.of(Objects.requireNonNull(rootPath));
-            return this;
+            return rootPath(Output.of(rootPath));
         }
+
         public Builder sparkConfig(@Nullable Output<Map<String,Object>> sparkConfig) {
-            this.sparkConfig = sparkConfig;
+            $.sparkConfig = sparkConfig;
             return this;
         }
-        public Builder sparkConfig(@Nullable Map<String,Object> sparkConfig) {
-            this.sparkConfig = Codegen.ofNullable(sparkConfig);
-            return this;
+
+        public Builder sparkConfig(Map<String,Object> sparkConfig) {
+            return sparkConfig(Output.of(sparkConfig));
         }
+
         public Builder sparkJobLinkedService(@Nullable Output<LinkedServiceReferenceArgs> sparkJobLinkedService) {
-            this.sparkJobLinkedService = sparkJobLinkedService;
+            $.sparkJobLinkedService = sparkJobLinkedService;
             return this;
         }
-        public Builder sparkJobLinkedService(@Nullable LinkedServiceReferenceArgs sparkJobLinkedService) {
-            this.sparkJobLinkedService = Codegen.ofNullable(sparkJobLinkedService);
-            return this;
+
+        public Builder sparkJobLinkedService(LinkedServiceReferenceArgs sparkJobLinkedService) {
+            return sparkJobLinkedService(Output.of(sparkJobLinkedService));
         }
+
         public Builder type(Output<String> type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Output.of(Objects.requireNonNull(type));
-            return this;
+            return type(Output.of(type));
         }
+
         public Builder userProperties(@Nullable Output<List<UserPropertyArgs>> userProperties) {
-            this.userProperties = userProperties;
+            $.userProperties = userProperties;
             return this;
         }
-        public Builder userProperties(@Nullable List<UserPropertyArgs> userProperties) {
-            this.userProperties = Codegen.ofNullable(userProperties);
-            return this;
+
+        public Builder userProperties(List<UserPropertyArgs> userProperties) {
+            return userProperties(Output.of(userProperties));
         }
+
         public Builder userProperties(UserPropertyArgs... userProperties) {
             return userProperties(List.of(userProperties));
-        }        public HDInsightSparkActivityArgs build() {
-            return new HDInsightSparkActivityArgs(arguments, className, dependsOn, description, entryFilePath, getDebugInfo, linkedServiceName, name, policy, proxyUser, rootPath, sparkConfig, sparkJobLinkedService, type, userProperties);
+        }
+
+        public HDInsightSparkActivityArgs build() {
+            $.entryFilePath = Objects.requireNonNull($.entryFilePath, "expected parameter 'entryFilePath' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.rootPath = Objects.requireNonNull($.rootPath, "expected parameter 'rootPath' to be non-null");
+            $.type = Codegen.stringProp("type").output().arg($.type).require();
+            return $;
         }
     }
+
 }

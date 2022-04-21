@@ -24,48 +24,48 @@ public final class B2BPartnerContentResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="businessIdentities")
-      private final @Nullable List<BusinessIdentityResponse> businessIdentities;
+    private @Nullable List<BusinessIdentityResponse> businessIdentities;
 
-    public List<BusinessIdentityResponse> businessIdentities() {
-        return this.businessIdentities == null ? List.of() : this.businessIdentities;
+    public Optional<List<BusinessIdentityResponse>> businessIdentities() {
+        return Optional.ofNullable(this.businessIdentities);
     }
 
-    public B2BPartnerContentResponse(@Nullable List<BusinessIdentityResponse> businessIdentities) {
-        this.businessIdentities = businessIdentities;
-    }
+    private B2BPartnerContentResponse() {}
 
-    private B2BPartnerContentResponse() {
-        this.businessIdentities = List.of();
+    private B2BPartnerContentResponse(B2BPartnerContentResponse $) {
+        this.businessIdentities = $.businessIdentities;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(B2BPartnerContentResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<BusinessIdentityResponse> businessIdentities;
+        private B2BPartnerContentResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new B2BPartnerContentResponse();
         }
 
         public Builder(B2BPartnerContentResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.businessIdentities = defaults.businessIdentities;
+            $ = new B2BPartnerContentResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder businessIdentities(@Nullable List<BusinessIdentityResponse> businessIdentities) {
-            this.businessIdentities = businessIdentities;
+            $.businessIdentities = businessIdentities;
             return this;
         }
+
         public Builder businessIdentities(BusinessIdentityResponse... businessIdentities) {
             return businessIdentities(List.of(businessIdentities));
-        }        public B2BPartnerContentResponse build() {
-            return new B2BPartnerContentResponse(businessIdentities);
+        }
+
+        public B2BPartnerContentResponse build() {
+            return $;
         }
     }
+
 }

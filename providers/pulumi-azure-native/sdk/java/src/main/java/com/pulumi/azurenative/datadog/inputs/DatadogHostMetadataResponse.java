@@ -21,78 +21,70 @@ public final class DatadogHostMetadataResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="agentVersion")
-      private final @Nullable String agentVersion;
+    private @Nullable String agentVersion;
 
     public Optional<String> agentVersion() {
-        return this.agentVersion == null ? Optional.empty() : Optional.ofNullable(this.agentVersion);
+        return Optional.ofNullable(this.agentVersion);
     }
 
     @Import(name="installMethod")
-      private final @Nullable DatadogInstallMethodResponse installMethod;
+    private @Nullable DatadogInstallMethodResponse installMethod;
 
     public Optional<DatadogInstallMethodResponse> installMethod() {
-        return this.installMethod == null ? Optional.empty() : Optional.ofNullable(this.installMethod);
+        return Optional.ofNullable(this.installMethod);
     }
 
     @Import(name="logsAgent")
-      private final @Nullable DatadogLogsAgentResponse logsAgent;
+    private @Nullable DatadogLogsAgentResponse logsAgent;
 
     public Optional<DatadogLogsAgentResponse> logsAgent() {
-        return this.logsAgent == null ? Optional.empty() : Optional.ofNullable(this.logsAgent);
+        return Optional.ofNullable(this.logsAgent);
     }
 
-    public DatadogHostMetadataResponse(
-        @Nullable String agentVersion,
-        @Nullable DatadogInstallMethodResponse installMethod,
-        @Nullable DatadogLogsAgentResponse logsAgent) {
-        this.agentVersion = agentVersion;
-        this.installMethod = installMethod;
-        this.logsAgent = logsAgent;
-    }
+    private DatadogHostMetadataResponse() {}
 
-    private DatadogHostMetadataResponse() {
-        this.agentVersion = null;
-        this.installMethod = null;
-        this.logsAgent = null;
+    private DatadogHostMetadataResponse(DatadogHostMetadataResponse $) {
+        this.agentVersion = $.agentVersion;
+        this.installMethod = $.installMethod;
+        this.logsAgent = $.logsAgent;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DatadogHostMetadataResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String agentVersion;
-        private @Nullable DatadogInstallMethodResponse installMethod;
-        private @Nullable DatadogLogsAgentResponse logsAgent;
+        private DatadogHostMetadataResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new DatadogHostMetadataResponse();
         }
 
         public Builder(DatadogHostMetadataResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.agentVersion = defaults.agentVersion;
-    	      this.installMethod = defaults.installMethod;
-    	      this.logsAgent = defaults.logsAgent;
+            $ = new DatadogHostMetadataResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder agentVersion(@Nullable String agentVersion) {
-            this.agentVersion = agentVersion;
+            $.agentVersion = agentVersion;
             return this;
         }
+
         public Builder installMethod(@Nullable DatadogInstallMethodResponse installMethod) {
-            this.installMethod = installMethod;
+            $.installMethod = installMethod;
             return this;
         }
+
         public Builder logsAgent(@Nullable DatadogLogsAgentResponse logsAgent) {
-            this.logsAgent = logsAgent;
+            $.logsAgent = logsAgent;
             return this;
-        }        public DatadogHostMetadataResponse build() {
-            return new DatadogHostMetadataResponse(agentVersion, installMethod, logsAgent);
+        }
+
+        public DatadogHostMetadataResponse build() {
+            return $;
         }
     }
+
 }

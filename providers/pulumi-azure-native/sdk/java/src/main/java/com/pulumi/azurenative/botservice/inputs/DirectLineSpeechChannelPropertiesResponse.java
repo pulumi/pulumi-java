@@ -24,7 +24,7 @@ public final class DirectLineSpeechChannelPropertiesResponse extends com.pulumi.
      * 
      */
     @Import(name="cognitiveServiceRegion", required=true)
-      private final String cognitiveServiceRegion;
+    private String cognitiveServiceRegion;
 
     public String cognitiveServiceRegion() {
         return this.cognitiveServiceRegion;
@@ -35,7 +35,7 @@ public final class DirectLineSpeechChannelPropertiesResponse extends com.pulumi.
      * 
      */
     @Import(name="cognitiveServiceSubscriptionKey", required=true)
-      private final String cognitiveServiceSubscriptionKey;
+    private String cognitiveServiceSubscriptionKey;
 
     public String cognitiveServiceSubscriptionKey() {
         return this.cognitiveServiceSubscriptionKey;
@@ -46,10 +46,10 @@ public final class DirectLineSpeechChannelPropertiesResponse extends com.pulumi.
      * 
      */
     @Import(name="customSpeechModelId")
-      private final @Nullable String customSpeechModelId;
+    private @Nullable String customSpeechModelId;
 
     public Optional<String> customSpeechModelId() {
-        return this.customSpeechModelId == null ? Optional.empty() : Optional.ofNullable(this.customSpeechModelId);
+        return Optional.ofNullable(this.customSpeechModelId);
     }
 
     /**
@@ -57,10 +57,10 @@ public final class DirectLineSpeechChannelPropertiesResponse extends com.pulumi.
      * 
      */
     @Import(name="customVoiceDeploymentId")
-      private final @Nullable String customVoiceDeploymentId;
+    private @Nullable String customVoiceDeploymentId;
 
     public Optional<String> customVoiceDeploymentId() {
-        return this.customVoiceDeploymentId == null ? Optional.empty() : Optional.ofNullable(this.customVoiceDeploymentId);
+        return Optional.ofNullable(this.customVoiceDeploymentId);
     }
 
     /**
@@ -68,10 +68,10 @@ public final class DirectLineSpeechChannelPropertiesResponse extends com.pulumi.
      * 
      */
     @Import(name="isDefaultBotForCogSvcAccount")
-      private final @Nullable Boolean isDefaultBotForCogSvcAccount;
+    private @Nullable Boolean isDefaultBotForCogSvcAccount;
 
     public Optional<Boolean> isDefaultBotForCogSvcAccount() {
-        return this.isDefaultBotForCogSvcAccount == null ? Optional.empty() : Optional.ofNullable(this.isDefaultBotForCogSvcAccount);
+        return Optional.ofNullable(this.isDefaultBotForCogSvcAccount);
     }
 
     /**
@@ -79,91 +79,76 @@ public final class DirectLineSpeechChannelPropertiesResponse extends com.pulumi.
      * 
      */
     @Import(name="isEnabled")
-      private final @Nullable Boolean isEnabled;
+    private @Nullable Boolean isEnabled;
 
     public Optional<Boolean> isEnabled() {
-        return this.isEnabled == null ? Optional.empty() : Optional.ofNullable(this.isEnabled);
+        return Optional.ofNullable(this.isEnabled);
     }
 
-    public DirectLineSpeechChannelPropertiesResponse(
-        String cognitiveServiceRegion,
-        String cognitiveServiceSubscriptionKey,
-        @Nullable String customSpeechModelId,
-        @Nullable String customVoiceDeploymentId,
-        @Nullable Boolean isDefaultBotForCogSvcAccount,
-        @Nullable Boolean isEnabled) {
-        this.cognitiveServiceRegion = Objects.requireNonNull(cognitiveServiceRegion, "expected parameter 'cognitiveServiceRegion' to be non-null");
-        this.cognitiveServiceSubscriptionKey = Objects.requireNonNull(cognitiveServiceSubscriptionKey, "expected parameter 'cognitiveServiceSubscriptionKey' to be non-null");
-        this.customSpeechModelId = customSpeechModelId;
-        this.customVoiceDeploymentId = customVoiceDeploymentId;
-        this.isDefaultBotForCogSvcAccount = isDefaultBotForCogSvcAccount;
-        this.isEnabled = isEnabled;
-    }
+    private DirectLineSpeechChannelPropertiesResponse() {}
 
-    private DirectLineSpeechChannelPropertiesResponse() {
-        this.cognitiveServiceRegion = null;
-        this.cognitiveServiceSubscriptionKey = null;
-        this.customSpeechModelId = null;
-        this.customVoiceDeploymentId = null;
-        this.isDefaultBotForCogSvcAccount = null;
-        this.isEnabled = null;
+    private DirectLineSpeechChannelPropertiesResponse(DirectLineSpeechChannelPropertiesResponse $) {
+        this.cognitiveServiceRegion = $.cognitiveServiceRegion;
+        this.cognitiveServiceSubscriptionKey = $.cognitiveServiceSubscriptionKey;
+        this.customSpeechModelId = $.customSpeechModelId;
+        this.customVoiceDeploymentId = $.customVoiceDeploymentId;
+        this.isDefaultBotForCogSvcAccount = $.isDefaultBotForCogSvcAccount;
+        this.isEnabled = $.isEnabled;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DirectLineSpeechChannelPropertiesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String cognitiveServiceRegion;
-        private String cognitiveServiceSubscriptionKey;
-        private @Nullable String customSpeechModelId;
-        private @Nullable String customVoiceDeploymentId;
-        private @Nullable Boolean isDefaultBotForCogSvcAccount;
-        private @Nullable Boolean isEnabled;
+        private DirectLineSpeechChannelPropertiesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new DirectLineSpeechChannelPropertiesResponse();
         }
 
         public Builder(DirectLineSpeechChannelPropertiesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cognitiveServiceRegion = defaults.cognitiveServiceRegion;
-    	      this.cognitiveServiceSubscriptionKey = defaults.cognitiveServiceSubscriptionKey;
-    	      this.customSpeechModelId = defaults.customSpeechModelId;
-    	      this.customVoiceDeploymentId = defaults.customVoiceDeploymentId;
-    	      this.isDefaultBotForCogSvcAccount = defaults.isDefaultBotForCogSvcAccount;
-    	      this.isEnabled = defaults.isEnabled;
+            $ = new DirectLineSpeechChannelPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder cognitiveServiceRegion(String cognitiveServiceRegion) {
-            this.cognitiveServiceRegion = Objects.requireNonNull(cognitiveServiceRegion);
+            $.cognitiveServiceRegion = cognitiveServiceRegion;
             return this;
         }
+
         public Builder cognitiveServiceSubscriptionKey(String cognitiveServiceSubscriptionKey) {
-            this.cognitiveServiceSubscriptionKey = Objects.requireNonNull(cognitiveServiceSubscriptionKey);
+            $.cognitiveServiceSubscriptionKey = cognitiveServiceSubscriptionKey;
             return this;
         }
+
         public Builder customSpeechModelId(@Nullable String customSpeechModelId) {
-            this.customSpeechModelId = customSpeechModelId;
+            $.customSpeechModelId = customSpeechModelId;
             return this;
         }
+
         public Builder customVoiceDeploymentId(@Nullable String customVoiceDeploymentId) {
-            this.customVoiceDeploymentId = customVoiceDeploymentId;
+            $.customVoiceDeploymentId = customVoiceDeploymentId;
             return this;
         }
+
         public Builder isDefaultBotForCogSvcAccount(@Nullable Boolean isDefaultBotForCogSvcAccount) {
-            this.isDefaultBotForCogSvcAccount = isDefaultBotForCogSvcAccount;
+            $.isDefaultBotForCogSvcAccount = isDefaultBotForCogSvcAccount;
             return this;
         }
+
         public Builder isEnabled(@Nullable Boolean isEnabled) {
-            this.isEnabled = isEnabled;
+            $.isEnabled = isEnabled;
             return this;
-        }        public DirectLineSpeechChannelPropertiesResponse build() {
-            return new DirectLineSpeechChannelPropertiesResponse(cognitiveServiceRegion, cognitiveServiceSubscriptionKey, customSpeechModelId, customVoiceDeploymentId, isDefaultBotForCogSvcAccount, isEnabled);
+        }
+
+        public DirectLineSpeechChannelPropertiesResponse build() {
+            $.cognitiveServiceRegion = Objects.requireNonNull($.cognitiveServiceRegion, "expected parameter 'cognitiveServiceRegion' to be non-null");
+            $.cognitiveServiceSubscriptionKey = Objects.requireNonNull($.cognitiveServiceSubscriptionKey, "expected parameter 'cognitiveServiceSubscriptionKey' to be non-null");
+            return $;
         }
     }
+
 }

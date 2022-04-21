@@ -15,78 +15,72 @@ public final class GetRegionNetworkArgs extends com.pulumi.resources.InvokeArgs 
     public static final GetRegionNetworkArgs Empty = new GetRegionNetworkArgs();
 
     @Import(name="network", required=true)
-      private final String network;
+    private String network;
 
     public String network() {
         return this.network;
     }
 
     @Import(name="project")
-      private final @Nullable String project;
+    private @Nullable String project;
 
     public Optional<String> project() {
-        return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
+        return Optional.ofNullable(this.project);
     }
 
     @Import(name="region", required=true)
-      private final String region;
+    private String region;
 
     public String region() {
         return this.region;
     }
 
-    public GetRegionNetworkArgs(
-        String network,
-        @Nullable String project,
-        String region) {
-        this.network = Objects.requireNonNull(network, "expected parameter 'network' to be non-null");
-        this.project = project;
-        this.region = Objects.requireNonNull(region, "expected parameter 'region' to be non-null");
-    }
+    private GetRegionNetworkArgs() {}
 
-    private GetRegionNetworkArgs() {
-        this.network = null;
-        this.project = null;
-        this.region = null;
+    private GetRegionNetworkArgs(GetRegionNetworkArgs $) {
+        this.network = $.network;
+        this.project = $.project;
+        this.region = $.region;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetRegionNetworkArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String network;
-        private @Nullable String project;
-        private String region;
+        private GetRegionNetworkArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetRegionNetworkArgs();
         }
 
         public Builder(GetRegionNetworkArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.network = defaults.network;
-    	      this.project = defaults.project;
-    	      this.region = defaults.region;
+            $ = new GetRegionNetworkArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder network(String network) {
-            this.network = Objects.requireNonNull(network);
+            $.network = network;
             return this;
         }
+
         public Builder project(@Nullable String project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
+
         public Builder region(String region) {
-            this.region = Objects.requireNonNull(region);
+            $.region = region;
             return this;
-        }        public GetRegionNetworkArgs build() {
-            return new GetRegionNetworkArgs(network, project, region);
+        }
+
+        public GetRegionNetworkArgs build() {
+            $.network = Objects.requireNonNull($.network, "expected parameter 'network' to be non-null");
+            $.region = Objects.requireNonNull($.region, "expected parameter 'region' to be non-null");
+            return $;
         }
     }
+
 }

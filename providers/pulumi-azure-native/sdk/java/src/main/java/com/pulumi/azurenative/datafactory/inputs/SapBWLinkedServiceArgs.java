@@ -16,6 +16,7 @@ import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -32,10 +33,10 @@ public final class SapBWLinkedServiceArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="annotations")
-      private final @Nullable Output<List<Object>> annotations;
+    private @Nullable Output<List<Object>> annotations;
 
-    public Output<List<Object>> annotations() {
-        return this.annotations == null ? Codegen.empty() : this.annotations;
+    public Optional<Output<List<Object>>> annotations() {
+        return Optional.ofNullable(this.annotations);
     }
 
     /**
@@ -43,7 +44,7 @@ public final class SapBWLinkedServiceArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="clientId", required=true)
-      private final Output<Object> clientId;
+    private Output<Object> clientId;
 
     public Output<Object> clientId() {
         return this.clientId;
@@ -54,10 +55,10 @@ public final class SapBWLinkedServiceArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="connectVia")
-      private final @Nullable Output<IntegrationRuntimeReferenceArgs> connectVia;
+    private @Nullable Output<IntegrationRuntimeReferenceArgs> connectVia;
 
-    public Output<IntegrationRuntimeReferenceArgs> connectVia() {
-        return this.connectVia == null ? Codegen.empty() : this.connectVia;
+    public Optional<Output<IntegrationRuntimeReferenceArgs>> connectVia() {
+        return Optional.ofNullable(this.connectVia);
     }
 
     /**
@@ -65,10 +66,10 @@ public final class SapBWLinkedServiceArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -76,10 +77,10 @@ public final class SapBWLinkedServiceArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="encryptedCredential")
-      private final @Nullable Output<Object> encryptedCredential;
+    private @Nullable Output<Object> encryptedCredential;
 
-    public Output<Object> encryptedCredential() {
-        return this.encryptedCredential == null ? Codegen.empty() : this.encryptedCredential;
+    public Optional<Output<Object>> encryptedCredential() {
+        return Optional.ofNullable(this.encryptedCredential);
     }
 
     /**
@@ -87,10 +88,10 @@ public final class SapBWLinkedServiceArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="parameters")
-      private final @Nullable Output<Map<String,ParameterSpecificationArgs>> parameters;
+    private @Nullable Output<Map<String,ParameterSpecificationArgs>> parameters;
 
-    public Output<Map<String,ParameterSpecificationArgs>> parameters() {
-        return this.parameters == null ? Codegen.empty() : this.parameters;
+    public Optional<Output<Map<String,ParameterSpecificationArgs>>> parameters() {
+        return Optional.ofNullable(this.parameters);
     }
 
     /**
@@ -98,10 +99,10 @@ public final class SapBWLinkedServiceArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="password")
-      private final @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password;
+    private @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password;
 
-    public Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password() {
-        return this.password == null ? Codegen.empty() : this.password;
+    public Optional<Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>>> password() {
+        return Optional.ofNullable(this.password);
     }
 
     /**
@@ -109,7 +110,7 @@ public final class SapBWLinkedServiceArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="server", required=true)
-      private final Output<Object> server;
+    private Output<Object> server;
 
     public Output<Object> server() {
         return this.server;
@@ -120,7 +121,7 @@ public final class SapBWLinkedServiceArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="systemNumber", required=true)
-      private final Output<Object> systemNumber;
+    private Output<Object> systemNumber;
 
     public Output<Object> systemNumber() {
         return this.systemNumber;
@@ -132,7 +133,7 @@ public final class SapBWLinkedServiceArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="type", required=true)
-      private final Output<String> type;
+    private Output<String> type;
 
     public Output<String> type() {
         return this.type;
@@ -143,183 +144,156 @@ public final class SapBWLinkedServiceArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="userName")
-      private final @Nullable Output<Object> userName;
+    private @Nullable Output<Object> userName;
 
-    public Output<Object> userName() {
-        return this.userName == null ? Codegen.empty() : this.userName;
+    public Optional<Output<Object>> userName() {
+        return Optional.ofNullable(this.userName);
     }
 
-    public SapBWLinkedServiceArgs(
-        @Nullable Output<List<Object>> annotations,
-        Output<Object> clientId,
-        @Nullable Output<IntegrationRuntimeReferenceArgs> connectVia,
-        @Nullable Output<String> description,
-        @Nullable Output<Object> encryptedCredential,
-        @Nullable Output<Map<String,ParameterSpecificationArgs>> parameters,
-        @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password,
-        Output<Object> server,
-        Output<Object> systemNumber,
-        Output<String> type,
-        @Nullable Output<Object> userName) {
-        this.annotations = annotations;
-        this.clientId = Objects.requireNonNull(clientId, "expected parameter 'clientId' to be non-null");
-        this.connectVia = connectVia;
-        this.description = description;
-        this.encryptedCredential = encryptedCredential;
-        this.parameters = parameters;
-        this.password = password;
-        this.server = Objects.requireNonNull(server, "expected parameter 'server' to be non-null");
-        this.systemNumber = Objects.requireNonNull(systemNumber, "expected parameter 'systemNumber' to be non-null");
-        this.type = Codegen.stringProp("type").output().arg(type).require();
-        this.userName = userName;
-    }
+    private SapBWLinkedServiceArgs() {}
 
-    private SapBWLinkedServiceArgs() {
-        this.annotations = Codegen.empty();
-        this.clientId = Codegen.empty();
-        this.connectVia = Codegen.empty();
-        this.description = Codegen.empty();
-        this.encryptedCredential = Codegen.empty();
-        this.parameters = Codegen.empty();
-        this.password = Codegen.empty();
-        this.server = Codegen.empty();
-        this.systemNumber = Codegen.empty();
-        this.type = Codegen.empty();
-        this.userName = Codegen.empty();
+    private SapBWLinkedServiceArgs(SapBWLinkedServiceArgs $) {
+        this.annotations = $.annotations;
+        this.clientId = $.clientId;
+        this.connectVia = $.connectVia;
+        this.description = $.description;
+        this.encryptedCredential = $.encryptedCredential;
+        this.parameters = $.parameters;
+        this.password = $.password;
+        this.server = $.server;
+        this.systemNumber = $.systemNumber;
+        this.type = $.type;
+        this.userName = $.userName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SapBWLinkedServiceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<Object>> annotations;
-        private Output<Object> clientId;
-        private @Nullable Output<IntegrationRuntimeReferenceArgs> connectVia;
-        private @Nullable Output<String> description;
-        private @Nullable Output<Object> encryptedCredential;
-        private @Nullable Output<Map<String,ParameterSpecificationArgs>> parameters;
-        private @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password;
-        private Output<Object> server;
-        private Output<Object> systemNumber;
-        private Output<String> type;
-        private @Nullable Output<Object> userName;
+        private SapBWLinkedServiceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SapBWLinkedServiceArgs();
         }
 
         public Builder(SapBWLinkedServiceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.annotations = defaults.annotations;
-    	      this.clientId = defaults.clientId;
-    	      this.connectVia = defaults.connectVia;
-    	      this.description = defaults.description;
-    	      this.encryptedCredential = defaults.encryptedCredential;
-    	      this.parameters = defaults.parameters;
-    	      this.password = defaults.password;
-    	      this.server = defaults.server;
-    	      this.systemNumber = defaults.systemNumber;
-    	      this.type = defaults.type;
-    	      this.userName = defaults.userName;
+            $ = new SapBWLinkedServiceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder annotations(@Nullable Output<List<Object>> annotations) {
-            this.annotations = annotations;
+            $.annotations = annotations;
             return this;
         }
-        public Builder annotations(@Nullable List<Object> annotations) {
-            this.annotations = Codegen.ofNullable(annotations);
-            return this;
+
+        public Builder annotations(List<Object> annotations) {
+            return annotations(Output.of(annotations));
         }
+
         public Builder annotations(Object... annotations) {
             return annotations(List.of(annotations));
         }
+
         public Builder clientId(Output<Object> clientId) {
-            this.clientId = Objects.requireNonNull(clientId);
+            $.clientId = clientId;
             return this;
         }
+
         public Builder clientId(Object clientId) {
-            this.clientId = Output.of(Objects.requireNonNull(clientId));
-            return this;
+            return clientId(Output.of(clientId));
         }
+
         public Builder connectVia(@Nullable Output<IntegrationRuntimeReferenceArgs> connectVia) {
-            this.connectVia = connectVia;
+            $.connectVia = connectVia;
             return this;
         }
-        public Builder connectVia(@Nullable IntegrationRuntimeReferenceArgs connectVia) {
-            this.connectVia = Codegen.ofNullable(connectVia);
-            return this;
+
+        public Builder connectVia(IntegrationRuntimeReferenceArgs connectVia) {
+            return connectVia(Output.of(connectVia));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder encryptedCredential(@Nullable Output<Object> encryptedCredential) {
-            this.encryptedCredential = encryptedCredential;
+            $.encryptedCredential = encryptedCredential;
             return this;
         }
-        public Builder encryptedCredential(@Nullable Object encryptedCredential) {
-            this.encryptedCredential = Codegen.ofNullable(encryptedCredential);
-            return this;
+
+        public Builder encryptedCredential(Object encryptedCredential) {
+            return encryptedCredential(Output.of(encryptedCredential));
         }
+
         public Builder parameters(@Nullable Output<Map<String,ParameterSpecificationArgs>> parameters) {
-            this.parameters = parameters;
+            $.parameters = parameters;
             return this;
         }
-        public Builder parameters(@Nullable Map<String,ParameterSpecificationArgs> parameters) {
-            this.parameters = Codegen.ofNullable(parameters);
-            return this;
+
+        public Builder parameters(Map<String,ParameterSpecificationArgs> parameters) {
+            return parameters(Output.of(parameters));
         }
+
         public Builder password(@Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password) {
-            this.password = password;
+            $.password = password;
             return this;
         }
-        public Builder password(@Nullable Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs> password) {
-            this.password = Codegen.ofNullable(password);
-            return this;
+
+        public Builder password(Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs> password) {
+            return password(Output.of(password));
         }
+
         public Builder server(Output<Object> server) {
-            this.server = Objects.requireNonNull(server);
+            $.server = server;
             return this;
         }
+
         public Builder server(Object server) {
-            this.server = Output.of(Objects.requireNonNull(server));
-            return this;
+            return server(Output.of(server));
         }
+
         public Builder systemNumber(Output<Object> systemNumber) {
-            this.systemNumber = Objects.requireNonNull(systemNumber);
+            $.systemNumber = systemNumber;
             return this;
         }
+
         public Builder systemNumber(Object systemNumber) {
-            this.systemNumber = Output.of(Objects.requireNonNull(systemNumber));
-            return this;
+            return systemNumber(Output.of(systemNumber));
         }
+
         public Builder type(Output<String> type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Output.of(Objects.requireNonNull(type));
-            return this;
+            return type(Output.of(type));
         }
+
         public Builder userName(@Nullable Output<Object> userName) {
-            this.userName = userName;
+            $.userName = userName;
             return this;
         }
-        public Builder userName(@Nullable Object userName) {
-            this.userName = Codegen.ofNullable(userName);
-            return this;
-        }        public SapBWLinkedServiceArgs build() {
-            return new SapBWLinkedServiceArgs(annotations, clientId, connectVia, description, encryptedCredential, parameters, password, server, systemNumber, type, userName);
+
+        public Builder userName(Object userName) {
+            return userName(Output.of(userName));
+        }
+
+        public SapBWLinkedServiceArgs build() {
+            $.clientId = Objects.requireNonNull($.clientId, "expected parameter 'clientId' to be non-null");
+            $.server = Objects.requireNonNull($.server, "expected parameter 'server' to be non-null");
+            $.systemNumber = Objects.requireNonNull($.systemNumber, "expected parameter 'systemNumber' to be non-null");
+            $.type = Codegen.stringProp("type").output().arg($.type).require();
+            return $;
         }
     }
+
 }

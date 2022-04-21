@@ -17,6 +17,7 @@ import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -33,10 +34,10 @@ public final class HDInsightStreamingActivityArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="arguments")
-      private final @Nullable Output<List<Object>> arguments;
+    private @Nullable Output<List<Object>> arguments;
 
-    public Output<List<Object>> arguments() {
-        return this.arguments == null ? Codegen.empty() : this.arguments;
+    public Optional<Output<List<Object>>> arguments() {
+        return Optional.ofNullable(this.arguments);
     }
 
     /**
@@ -44,10 +45,10 @@ public final class HDInsightStreamingActivityArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="combiner")
-      private final @Nullable Output<Object> combiner;
+    private @Nullable Output<Object> combiner;
 
-    public Output<Object> combiner() {
-        return this.combiner == null ? Codegen.empty() : this.combiner;
+    public Optional<Output<Object>> combiner() {
+        return Optional.ofNullable(this.combiner);
     }
 
     /**
@@ -55,10 +56,10 @@ public final class HDInsightStreamingActivityArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="commandEnvironment")
-      private final @Nullable Output<List<Object>> commandEnvironment;
+    private @Nullable Output<List<Object>> commandEnvironment;
 
-    public Output<List<Object>> commandEnvironment() {
-        return this.commandEnvironment == null ? Codegen.empty() : this.commandEnvironment;
+    public Optional<Output<List<Object>>> commandEnvironment() {
+        return Optional.ofNullable(this.commandEnvironment);
     }
 
     /**
@@ -66,10 +67,10 @@ public final class HDInsightStreamingActivityArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="defines")
-      private final @Nullable Output<Map<String,Object>> defines;
+    private @Nullable Output<Map<String,Object>> defines;
 
-    public Output<Map<String,Object>> defines() {
-        return this.defines == null ? Codegen.empty() : this.defines;
+    public Optional<Output<Map<String,Object>>> defines() {
+        return Optional.ofNullable(this.defines);
     }
 
     /**
@@ -77,10 +78,10 @@ public final class HDInsightStreamingActivityArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="dependsOn")
-      private final @Nullable Output<List<ActivityDependencyArgs>> dependsOn;
+    private @Nullable Output<List<ActivityDependencyArgs>> dependsOn;
 
-    public Output<List<ActivityDependencyArgs>> dependsOn() {
-        return this.dependsOn == null ? Codegen.empty() : this.dependsOn;
+    public Optional<Output<List<ActivityDependencyArgs>>> dependsOn() {
+        return Optional.ofNullable(this.dependsOn);
     }
 
     /**
@@ -88,10 +89,10 @@ public final class HDInsightStreamingActivityArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -99,10 +100,10 @@ public final class HDInsightStreamingActivityArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="fileLinkedService")
-      private final @Nullable Output<LinkedServiceReferenceArgs> fileLinkedService;
+    private @Nullable Output<LinkedServiceReferenceArgs> fileLinkedService;
 
-    public Output<LinkedServiceReferenceArgs> fileLinkedService() {
-        return this.fileLinkedService == null ? Codegen.empty() : this.fileLinkedService;
+    public Optional<Output<LinkedServiceReferenceArgs>> fileLinkedService() {
+        return Optional.ofNullable(this.fileLinkedService);
     }
 
     /**
@@ -110,7 +111,7 @@ public final class HDInsightStreamingActivityArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="filePaths", required=true)
-      private final Output<List<Object>> filePaths;
+    private Output<List<Object>> filePaths;
 
     public Output<List<Object>> filePaths() {
         return this.filePaths;
@@ -121,10 +122,10 @@ public final class HDInsightStreamingActivityArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="getDebugInfo")
-      private final @Nullable Output<Either<String,HDInsightActivityDebugInfoOption>> getDebugInfo;
+    private @Nullable Output<Either<String,HDInsightActivityDebugInfoOption>> getDebugInfo;
 
-    public Output<Either<String,HDInsightActivityDebugInfoOption>> getDebugInfo() {
-        return this.getDebugInfo == null ? Codegen.empty() : this.getDebugInfo;
+    public Optional<Output<Either<String,HDInsightActivityDebugInfoOption>>> getDebugInfo() {
+        return Optional.ofNullable(this.getDebugInfo);
     }
 
     /**
@@ -132,7 +133,7 @@ public final class HDInsightStreamingActivityArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="input", required=true)
-      private final Output<Object> input;
+    private Output<Object> input;
 
     public Output<Object> input() {
         return this.input;
@@ -143,10 +144,10 @@ public final class HDInsightStreamingActivityArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="linkedServiceName")
-      private final @Nullable Output<LinkedServiceReferenceArgs> linkedServiceName;
+    private @Nullable Output<LinkedServiceReferenceArgs> linkedServiceName;
 
-    public Output<LinkedServiceReferenceArgs> linkedServiceName() {
-        return this.linkedServiceName == null ? Codegen.empty() : this.linkedServiceName;
+    public Optional<Output<LinkedServiceReferenceArgs>> linkedServiceName() {
+        return Optional.ofNullable(this.linkedServiceName);
     }
 
     /**
@@ -154,7 +155,7 @@ public final class HDInsightStreamingActivityArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="mapper", required=true)
-      private final Output<Object> mapper;
+    private Output<Object> mapper;
 
     public Output<Object> mapper() {
         return this.mapper;
@@ -165,7 +166,7 @@ public final class HDInsightStreamingActivityArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="name", required=true)
-      private final Output<String> name;
+    private Output<String> name;
 
     public Output<String> name() {
         return this.name;
@@ -176,7 +177,7 @@ public final class HDInsightStreamingActivityArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="output", required=true)
-      private final Output<Object> output;
+    private Output<Object> output;
 
     public Output<Object> output() {
         return this.output;
@@ -187,10 +188,10 @@ public final class HDInsightStreamingActivityArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="policy")
-      private final @Nullable Output<ActivityPolicyArgs> policy;
+    private @Nullable Output<ActivityPolicyArgs> policy;
 
-    public Output<ActivityPolicyArgs> policy() {
-        return this.policy == null ? Codegen.empty() : this.policy;
+    public Optional<Output<ActivityPolicyArgs>> policy() {
+        return Optional.ofNullable(this.policy);
     }
 
     /**
@@ -198,7 +199,7 @@ public final class HDInsightStreamingActivityArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="reducer", required=true)
-      private final Output<Object> reducer;
+    private Output<Object> reducer;
 
     public Output<Object> reducer() {
         return this.reducer;
@@ -209,10 +210,10 @@ public final class HDInsightStreamingActivityArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="storageLinkedServices")
-      private final @Nullable Output<List<LinkedServiceReferenceArgs>> storageLinkedServices;
+    private @Nullable Output<List<LinkedServiceReferenceArgs>> storageLinkedServices;
 
-    public Output<List<LinkedServiceReferenceArgs>> storageLinkedServices() {
-        return this.storageLinkedServices == null ? Codegen.empty() : this.storageLinkedServices;
+    public Optional<Output<List<LinkedServiceReferenceArgs>>> storageLinkedServices() {
+        return Optional.ofNullable(this.storageLinkedServices);
     }
 
     /**
@@ -221,7 +222,7 @@ public final class HDInsightStreamingActivityArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="type", required=true)
-      private final Output<String> type;
+    private Output<String> type;
 
     public Output<String> type() {
         return this.type;
@@ -232,302 +233,259 @@ public final class HDInsightStreamingActivityArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="userProperties")
-      private final @Nullable Output<List<UserPropertyArgs>> userProperties;
+    private @Nullable Output<List<UserPropertyArgs>> userProperties;
 
-    public Output<List<UserPropertyArgs>> userProperties() {
-        return this.userProperties == null ? Codegen.empty() : this.userProperties;
+    public Optional<Output<List<UserPropertyArgs>>> userProperties() {
+        return Optional.ofNullable(this.userProperties);
     }
 
-    public HDInsightStreamingActivityArgs(
-        @Nullable Output<List<Object>> arguments,
-        @Nullable Output<Object> combiner,
-        @Nullable Output<List<Object>> commandEnvironment,
-        @Nullable Output<Map<String,Object>> defines,
-        @Nullable Output<List<ActivityDependencyArgs>> dependsOn,
-        @Nullable Output<String> description,
-        @Nullable Output<LinkedServiceReferenceArgs> fileLinkedService,
-        Output<List<Object>> filePaths,
-        @Nullable Output<Either<String,HDInsightActivityDebugInfoOption>> getDebugInfo,
-        Output<Object> input,
-        @Nullable Output<LinkedServiceReferenceArgs> linkedServiceName,
-        Output<Object> mapper,
-        Output<String> name,
-        Output<Object> output,
-        @Nullable Output<ActivityPolicyArgs> policy,
-        Output<Object> reducer,
-        @Nullable Output<List<LinkedServiceReferenceArgs>> storageLinkedServices,
-        Output<String> type,
-        @Nullable Output<List<UserPropertyArgs>> userProperties) {
-        this.arguments = arguments;
-        this.combiner = combiner;
-        this.commandEnvironment = commandEnvironment;
-        this.defines = defines;
-        this.dependsOn = dependsOn;
-        this.description = description;
-        this.fileLinkedService = fileLinkedService;
-        this.filePaths = Objects.requireNonNull(filePaths, "expected parameter 'filePaths' to be non-null");
-        this.getDebugInfo = getDebugInfo;
-        this.input = Objects.requireNonNull(input, "expected parameter 'input' to be non-null");
-        this.linkedServiceName = linkedServiceName;
-        this.mapper = Objects.requireNonNull(mapper, "expected parameter 'mapper' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.output = Objects.requireNonNull(output, "expected parameter 'output' to be non-null");
-        this.policy = policy;
-        this.reducer = Objects.requireNonNull(reducer, "expected parameter 'reducer' to be non-null");
-        this.storageLinkedServices = storageLinkedServices;
-        this.type = Codegen.stringProp("type").output().arg(type).require();
-        this.userProperties = userProperties;
-    }
+    private HDInsightStreamingActivityArgs() {}
 
-    private HDInsightStreamingActivityArgs() {
-        this.arguments = Codegen.empty();
-        this.combiner = Codegen.empty();
-        this.commandEnvironment = Codegen.empty();
-        this.defines = Codegen.empty();
-        this.dependsOn = Codegen.empty();
-        this.description = Codegen.empty();
-        this.fileLinkedService = Codegen.empty();
-        this.filePaths = Codegen.empty();
-        this.getDebugInfo = Codegen.empty();
-        this.input = Codegen.empty();
-        this.linkedServiceName = Codegen.empty();
-        this.mapper = Codegen.empty();
-        this.name = Codegen.empty();
-        this.output = Codegen.empty();
-        this.policy = Codegen.empty();
-        this.reducer = Codegen.empty();
-        this.storageLinkedServices = Codegen.empty();
-        this.type = Codegen.empty();
-        this.userProperties = Codegen.empty();
+    private HDInsightStreamingActivityArgs(HDInsightStreamingActivityArgs $) {
+        this.arguments = $.arguments;
+        this.combiner = $.combiner;
+        this.commandEnvironment = $.commandEnvironment;
+        this.defines = $.defines;
+        this.dependsOn = $.dependsOn;
+        this.description = $.description;
+        this.fileLinkedService = $.fileLinkedService;
+        this.filePaths = $.filePaths;
+        this.getDebugInfo = $.getDebugInfo;
+        this.input = $.input;
+        this.linkedServiceName = $.linkedServiceName;
+        this.mapper = $.mapper;
+        this.name = $.name;
+        this.output = $.output;
+        this.policy = $.policy;
+        this.reducer = $.reducer;
+        this.storageLinkedServices = $.storageLinkedServices;
+        this.type = $.type;
+        this.userProperties = $.userProperties;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(HDInsightStreamingActivityArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<Object>> arguments;
-        private @Nullable Output<Object> combiner;
-        private @Nullable Output<List<Object>> commandEnvironment;
-        private @Nullable Output<Map<String,Object>> defines;
-        private @Nullable Output<List<ActivityDependencyArgs>> dependsOn;
-        private @Nullable Output<String> description;
-        private @Nullable Output<LinkedServiceReferenceArgs> fileLinkedService;
-        private Output<List<Object>> filePaths;
-        private @Nullable Output<Either<String,HDInsightActivityDebugInfoOption>> getDebugInfo;
-        private Output<Object> input;
-        private @Nullable Output<LinkedServiceReferenceArgs> linkedServiceName;
-        private Output<Object> mapper;
-        private Output<String> name;
-        private Output<Object> output;
-        private @Nullable Output<ActivityPolicyArgs> policy;
-        private Output<Object> reducer;
-        private @Nullable Output<List<LinkedServiceReferenceArgs>> storageLinkedServices;
-        private Output<String> type;
-        private @Nullable Output<List<UserPropertyArgs>> userProperties;
+        private HDInsightStreamingActivityArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new HDInsightStreamingActivityArgs();
         }
 
         public Builder(HDInsightStreamingActivityArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.arguments = defaults.arguments;
-    	      this.combiner = defaults.combiner;
-    	      this.commandEnvironment = defaults.commandEnvironment;
-    	      this.defines = defaults.defines;
-    	      this.dependsOn = defaults.dependsOn;
-    	      this.description = defaults.description;
-    	      this.fileLinkedService = defaults.fileLinkedService;
-    	      this.filePaths = defaults.filePaths;
-    	      this.getDebugInfo = defaults.getDebugInfo;
-    	      this.input = defaults.input;
-    	      this.linkedServiceName = defaults.linkedServiceName;
-    	      this.mapper = defaults.mapper;
-    	      this.name = defaults.name;
-    	      this.output = defaults.output;
-    	      this.policy = defaults.policy;
-    	      this.reducer = defaults.reducer;
-    	      this.storageLinkedServices = defaults.storageLinkedServices;
-    	      this.type = defaults.type;
-    	      this.userProperties = defaults.userProperties;
+            $ = new HDInsightStreamingActivityArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder arguments(@Nullable Output<List<Object>> arguments) {
-            this.arguments = arguments;
+            $.arguments = arguments;
             return this;
         }
-        public Builder arguments(@Nullable List<Object> arguments) {
-            this.arguments = Codegen.ofNullable(arguments);
-            return this;
+
+        public Builder arguments(List<Object> arguments) {
+            return arguments(Output.of(arguments));
         }
+
         public Builder arguments(Object... arguments) {
             return arguments(List.of(arguments));
         }
+
         public Builder combiner(@Nullable Output<Object> combiner) {
-            this.combiner = combiner;
+            $.combiner = combiner;
             return this;
         }
-        public Builder combiner(@Nullable Object combiner) {
-            this.combiner = Codegen.ofNullable(combiner);
-            return this;
+
+        public Builder combiner(Object combiner) {
+            return combiner(Output.of(combiner));
         }
+
         public Builder commandEnvironment(@Nullable Output<List<Object>> commandEnvironment) {
-            this.commandEnvironment = commandEnvironment;
+            $.commandEnvironment = commandEnvironment;
             return this;
         }
-        public Builder commandEnvironment(@Nullable List<Object> commandEnvironment) {
-            this.commandEnvironment = Codegen.ofNullable(commandEnvironment);
-            return this;
+
+        public Builder commandEnvironment(List<Object> commandEnvironment) {
+            return commandEnvironment(Output.of(commandEnvironment));
         }
+
         public Builder commandEnvironment(Object... commandEnvironment) {
             return commandEnvironment(List.of(commandEnvironment));
         }
+
         public Builder defines(@Nullable Output<Map<String,Object>> defines) {
-            this.defines = defines;
+            $.defines = defines;
             return this;
         }
-        public Builder defines(@Nullable Map<String,Object> defines) {
-            this.defines = Codegen.ofNullable(defines);
-            return this;
+
+        public Builder defines(Map<String,Object> defines) {
+            return defines(Output.of(defines));
         }
+
         public Builder dependsOn(@Nullable Output<List<ActivityDependencyArgs>> dependsOn) {
-            this.dependsOn = dependsOn;
+            $.dependsOn = dependsOn;
             return this;
         }
-        public Builder dependsOn(@Nullable List<ActivityDependencyArgs> dependsOn) {
-            this.dependsOn = Codegen.ofNullable(dependsOn);
-            return this;
+
+        public Builder dependsOn(List<ActivityDependencyArgs> dependsOn) {
+            return dependsOn(Output.of(dependsOn));
         }
+
         public Builder dependsOn(ActivityDependencyArgs... dependsOn) {
             return dependsOn(List.of(dependsOn));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder fileLinkedService(@Nullable Output<LinkedServiceReferenceArgs> fileLinkedService) {
-            this.fileLinkedService = fileLinkedService;
+            $.fileLinkedService = fileLinkedService;
             return this;
         }
-        public Builder fileLinkedService(@Nullable LinkedServiceReferenceArgs fileLinkedService) {
-            this.fileLinkedService = Codegen.ofNullable(fileLinkedService);
-            return this;
+
+        public Builder fileLinkedService(LinkedServiceReferenceArgs fileLinkedService) {
+            return fileLinkedService(Output.of(fileLinkedService));
         }
+
         public Builder filePaths(Output<List<Object>> filePaths) {
-            this.filePaths = Objects.requireNonNull(filePaths);
+            $.filePaths = filePaths;
             return this;
         }
+
         public Builder filePaths(List<Object> filePaths) {
-            this.filePaths = Output.of(Objects.requireNonNull(filePaths));
-            return this;
+            return filePaths(Output.of(filePaths));
         }
+
         public Builder filePaths(Object... filePaths) {
             return filePaths(List.of(filePaths));
         }
+
         public Builder getDebugInfo(@Nullable Output<Either<String,HDInsightActivityDebugInfoOption>> getDebugInfo) {
-            this.getDebugInfo = getDebugInfo;
+            $.getDebugInfo = getDebugInfo;
             return this;
         }
-        public Builder getDebugInfo(@Nullable Either<String,HDInsightActivityDebugInfoOption> getDebugInfo) {
-            this.getDebugInfo = Codegen.ofNullable(getDebugInfo);
-            return this;
+
+        public Builder getDebugInfo(Either<String,HDInsightActivityDebugInfoOption> getDebugInfo) {
+            return getDebugInfo(Output.of(getDebugInfo));
         }
+
         public Builder input(Output<Object> input) {
-            this.input = Objects.requireNonNull(input);
+            $.input = input;
             return this;
         }
+
         public Builder input(Object input) {
-            this.input = Output.of(Objects.requireNonNull(input));
-            return this;
+            return input(Output.of(input));
         }
+
         public Builder linkedServiceName(@Nullable Output<LinkedServiceReferenceArgs> linkedServiceName) {
-            this.linkedServiceName = linkedServiceName;
+            $.linkedServiceName = linkedServiceName;
             return this;
         }
-        public Builder linkedServiceName(@Nullable LinkedServiceReferenceArgs linkedServiceName) {
-            this.linkedServiceName = Codegen.ofNullable(linkedServiceName);
-            return this;
+
+        public Builder linkedServiceName(LinkedServiceReferenceArgs linkedServiceName) {
+            return linkedServiceName(Output.of(linkedServiceName));
         }
+
         public Builder mapper(Output<Object> mapper) {
-            this.mapper = Objects.requireNonNull(mapper);
+            $.mapper = mapper;
             return this;
         }
+
         public Builder mapper(Object mapper) {
-            this.mapper = Output.of(Objects.requireNonNull(mapper));
-            return this;
+            return mapper(Output.of(mapper));
         }
+
         public Builder name(Output<String> name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Output.of(Objects.requireNonNull(name));
-            return this;
+            return name(Output.of(name));
         }
+
         public Builder output(Output<Object> output) {
-            this.output = Objects.requireNonNull(output);
+            $.output = output;
             return this;
         }
+
         public Builder output(Object output) {
-            this.output = Output.of(Objects.requireNonNull(output));
-            return this;
+            return output(Output.of(output));
         }
+
         public Builder policy(@Nullable Output<ActivityPolicyArgs> policy) {
-            this.policy = policy;
+            $.policy = policy;
             return this;
         }
-        public Builder policy(@Nullable ActivityPolicyArgs policy) {
-            this.policy = Codegen.ofNullable(policy);
-            return this;
+
+        public Builder policy(ActivityPolicyArgs policy) {
+            return policy(Output.of(policy));
         }
+
         public Builder reducer(Output<Object> reducer) {
-            this.reducer = Objects.requireNonNull(reducer);
+            $.reducer = reducer;
             return this;
         }
+
         public Builder reducer(Object reducer) {
-            this.reducer = Output.of(Objects.requireNonNull(reducer));
-            return this;
+            return reducer(Output.of(reducer));
         }
+
         public Builder storageLinkedServices(@Nullable Output<List<LinkedServiceReferenceArgs>> storageLinkedServices) {
-            this.storageLinkedServices = storageLinkedServices;
+            $.storageLinkedServices = storageLinkedServices;
             return this;
         }
-        public Builder storageLinkedServices(@Nullable List<LinkedServiceReferenceArgs> storageLinkedServices) {
-            this.storageLinkedServices = Codegen.ofNullable(storageLinkedServices);
-            return this;
+
+        public Builder storageLinkedServices(List<LinkedServiceReferenceArgs> storageLinkedServices) {
+            return storageLinkedServices(Output.of(storageLinkedServices));
         }
+
         public Builder storageLinkedServices(LinkedServiceReferenceArgs... storageLinkedServices) {
             return storageLinkedServices(List.of(storageLinkedServices));
         }
+
         public Builder type(Output<String> type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Output.of(Objects.requireNonNull(type));
-            return this;
+            return type(Output.of(type));
         }
+
         public Builder userProperties(@Nullable Output<List<UserPropertyArgs>> userProperties) {
-            this.userProperties = userProperties;
+            $.userProperties = userProperties;
             return this;
         }
-        public Builder userProperties(@Nullable List<UserPropertyArgs> userProperties) {
-            this.userProperties = Codegen.ofNullable(userProperties);
-            return this;
+
+        public Builder userProperties(List<UserPropertyArgs> userProperties) {
+            return userProperties(Output.of(userProperties));
         }
+
         public Builder userProperties(UserPropertyArgs... userProperties) {
             return userProperties(List.of(userProperties));
-        }        public HDInsightStreamingActivityArgs build() {
-            return new HDInsightStreamingActivityArgs(arguments, combiner, commandEnvironment, defines, dependsOn, description, fileLinkedService, filePaths, getDebugInfo, input, linkedServiceName, mapper, name, output, policy, reducer, storageLinkedServices, type, userProperties);
+        }
+
+        public HDInsightStreamingActivityArgs build() {
+            $.filePaths = Objects.requireNonNull($.filePaths, "expected parameter 'filePaths' to be non-null");
+            $.input = Objects.requireNonNull($.input, "expected parameter 'input' to be non-null");
+            $.mapper = Objects.requireNonNull($.mapper, "expected parameter 'mapper' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.output = Objects.requireNonNull($.output, "expected parameter 'output' to be non-null");
+            $.reducer = Objects.requireNonNull($.reducer, "expected parameter 'reducer' to be non-null");
+            $.type = Codegen.stringProp("type").output().arg($.type).require();
+            return $;
         }
     }
+
 }

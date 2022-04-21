@@ -17,7 +17,7 @@ public final class GetLoadTestArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="loadTestName", required=true)
-      private final String loadTestName;
+    private String loadTestName;
 
     public String loadTestName() {
         return this.loadTestName;
@@ -28,55 +28,52 @@ public final class GetLoadTestArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public GetLoadTestArgs(
-        String loadTestName,
-        String resourceGroupName) {
-        this.loadTestName = Objects.requireNonNull(loadTestName, "expected parameter 'loadTestName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private GetLoadTestArgs() {}
 
-    private GetLoadTestArgs() {
-        this.loadTestName = null;
-        this.resourceGroupName = null;
+    private GetLoadTestArgs(GetLoadTestArgs $) {
+        this.loadTestName = $.loadTestName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetLoadTestArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String loadTestName;
-        private String resourceGroupName;
+        private GetLoadTestArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetLoadTestArgs();
         }
 
         public Builder(GetLoadTestArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.loadTestName = defaults.loadTestName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new GetLoadTestArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder loadTestName(String loadTestName) {
-            this.loadTestName = Objects.requireNonNull(loadTestName);
+            $.loadTestName = loadTestName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public GetLoadTestArgs build() {
-            return new GetLoadTestArgs(loadTestName, resourceGroupName);
+        }
+
+        public GetLoadTestArgs build() {
+            $.loadTestName = Objects.requireNonNull($.loadTestName, "expected parameter 'loadTestName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

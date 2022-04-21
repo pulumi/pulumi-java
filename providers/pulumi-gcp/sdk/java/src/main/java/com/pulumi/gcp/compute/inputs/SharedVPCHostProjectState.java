@@ -5,9 +5,9 @@ package com.pulumi.gcp.compute.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,49 +20,48 @@ public final class SharedVPCHostProjectState extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
-    public SharedVPCHostProjectState(@Nullable Output<String> project) {
-        this.project = project;
-    }
+    private SharedVPCHostProjectState() {}
 
-    private SharedVPCHostProjectState() {
-        this.project = Codegen.empty();
+    private SharedVPCHostProjectState(SharedVPCHostProjectState $) {
+        this.project = $.project;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SharedVPCHostProjectState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> project;
+        private SharedVPCHostProjectState $;
 
         public Builder() {
-    	      // Empty
+            $ = new SharedVPCHostProjectState();
         }
 
         public Builder(SharedVPCHostProjectState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.project = defaults.project;
+            $ = new SharedVPCHostProjectState(Objects.requireNonNull(defaults));
         }
 
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
-        }        public SharedVPCHostProjectState build() {
-            return new SharedVPCHostProjectState(project);
+
+        public Builder project(String project) {
+            return project(Output.of(project));
+        }
+
+        public SharedVPCHostProjectState build() {
+            return $;
         }
     }
+
 }

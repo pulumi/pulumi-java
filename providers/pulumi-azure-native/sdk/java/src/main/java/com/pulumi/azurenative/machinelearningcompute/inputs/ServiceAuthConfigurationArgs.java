@@ -5,7 +5,6 @@ package com.pulumi.azurenative.machinelearningcompute.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,7 +22,7 @@ public final class ServiceAuthConfigurationArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="primaryAuthKeyHash", required=true)
-      private final Output<String> primaryAuthKeyHash;
+    private Output<String> primaryAuthKeyHash;
 
     public Output<String> primaryAuthKeyHash() {
         return this.primaryAuthKeyHash;
@@ -34,63 +33,60 @@ public final class ServiceAuthConfigurationArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="secondaryAuthKeyHash", required=true)
-      private final Output<String> secondaryAuthKeyHash;
+    private Output<String> secondaryAuthKeyHash;
 
     public Output<String> secondaryAuthKeyHash() {
         return this.secondaryAuthKeyHash;
     }
 
-    public ServiceAuthConfigurationArgs(
-        Output<String> primaryAuthKeyHash,
-        Output<String> secondaryAuthKeyHash) {
-        this.primaryAuthKeyHash = Objects.requireNonNull(primaryAuthKeyHash, "expected parameter 'primaryAuthKeyHash' to be non-null");
-        this.secondaryAuthKeyHash = Objects.requireNonNull(secondaryAuthKeyHash, "expected parameter 'secondaryAuthKeyHash' to be non-null");
-    }
+    private ServiceAuthConfigurationArgs() {}
 
-    private ServiceAuthConfigurationArgs() {
-        this.primaryAuthKeyHash = Codegen.empty();
-        this.secondaryAuthKeyHash = Codegen.empty();
+    private ServiceAuthConfigurationArgs(ServiceAuthConfigurationArgs $) {
+        this.primaryAuthKeyHash = $.primaryAuthKeyHash;
+        this.secondaryAuthKeyHash = $.secondaryAuthKeyHash;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ServiceAuthConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> primaryAuthKeyHash;
-        private Output<String> secondaryAuthKeyHash;
+        private ServiceAuthConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ServiceAuthConfigurationArgs();
         }
 
         public Builder(ServiceAuthConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.primaryAuthKeyHash = defaults.primaryAuthKeyHash;
-    	      this.secondaryAuthKeyHash = defaults.secondaryAuthKeyHash;
+            $ = new ServiceAuthConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder primaryAuthKeyHash(Output<String> primaryAuthKeyHash) {
-            this.primaryAuthKeyHash = Objects.requireNonNull(primaryAuthKeyHash);
+            $.primaryAuthKeyHash = primaryAuthKeyHash;
             return this;
         }
+
         public Builder primaryAuthKeyHash(String primaryAuthKeyHash) {
-            this.primaryAuthKeyHash = Output.of(Objects.requireNonNull(primaryAuthKeyHash));
-            return this;
+            return primaryAuthKeyHash(Output.of(primaryAuthKeyHash));
         }
+
         public Builder secondaryAuthKeyHash(Output<String> secondaryAuthKeyHash) {
-            this.secondaryAuthKeyHash = Objects.requireNonNull(secondaryAuthKeyHash);
+            $.secondaryAuthKeyHash = secondaryAuthKeyHash;
             return this;
         }
+
         public Builder secondaryAuthKeyHash(String secondaryAuthKeyHash) {
-            this.secondaryAuthKeyHash = Output.of(Objects.requireNonNull(secondaryAuthKeyHash));
-            return this;
-        }        public ServiceAuthConfigurationArgs build() {
-            return new ServiceAuthConfigurationArgs(primaryAuthKeyHash, secondaryAuthKeyHash);
+            return secondaryAuthKeyHash(Output.of(secondaryAuthKeyHash));
+        }
+
+        public ServiceAuthConfigurationArgs build() {
+            $.primaryAuthKeyHash = Objects.requireNonNull($.primaryAuthKeyHash, "expected parameter 'primaryAuthKeyHash' to be non-null");
+            $.secondaryAuthKeyHash = Objects.requireNonNull($.secondaryAuthKeyHash, "expected parameter 'secondaryAuthKeyHash' to be non-null");
+            return $;
         }
     }
+
 }

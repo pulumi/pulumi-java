@@ -17,45 +17,45 @@ public final class GetAssetModelArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="assetModelId", required=true)
-      private final String assetModelId;
+    private String assetModelId;
 
     public String assetModelId() {
         return this.assetModelId;
     }
 
-    public GetAssetModelArgs(String assetModelId) {
-        this.assetModelId = Objects.requireNonNull(assetModelId, "expected parameter 'assetModelId' to be non-null");
-    }
+    private GetAssetModelArgs() {}
 
-    private GetAssetModelArgs() {
-        this.assetModelId = null;
+    private GetAssetModelArgs(GetAssetModelArgs $) {
+        this.assetModelId = $.assetModelId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetAssetModelArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String assetModelId;
+        private GetAssetModelArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetAssetModelArgs();
         }
 
         public Builder(GetAssetModelArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.assetModelId = defaults.assetModelId;
+            $ = new GetAssetModelArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder assetModelId(String assetModelId) {
-            this.assetModelId = Objects.requireNonNull(assetModelId);
+            $.assetModelId = assetModelId;
             return this;
-        }        public GetAssetModelArgs build() {
-            return new GetAssetModelArgs(assetModelId);
+        }
+
+        public GetAssetModelArgs build() {
+            $.assetModelId = Objects.requireNonNull($.assetModelId, "expected parameter 'assetModelId' to be non-null");
+            return $;
         }
     }
+
 }

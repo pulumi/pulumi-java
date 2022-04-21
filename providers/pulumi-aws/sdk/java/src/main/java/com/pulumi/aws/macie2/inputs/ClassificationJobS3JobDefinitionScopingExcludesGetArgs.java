@@ -6,9 +6,9 @@ package com.pulumi.aws.macie2.inputs;
 import com.pulumi.aws.macie2.inputs.ClassificationJobS3JobDefinitionScopingExcludesAndGetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,52 +21,52 @@ public final class ClassificationJobS3JobDefinitionScopingExcludesGetArgs extend
      * 
      */
     @Import(name="ands")
-      private final @Nullable Output<List<ClassificationJobS3JobDefinitionScopingExcludesAndGetArgs>> ands;
+    private @Nullable Output<List<ClassificationJobS3JobDefinitionScopingExcludesAndGetArgs>> ands;
 
-    public Output<List<ClassificationJobS3JobDefinitionScopingExcludesAndGetArgs>> ands() {
-        return this.ands == null ? Codegen.empty() : this.ands;
+    public Optional<Output<List<ClassificationJobS3JobDefinitionScopingExcludesAndGetArgs>>> ands() {
+        return Optional.ofNullable(this.ands);
     }
 
-    public ClassificationJobS3JobDefinitionScopingExcludesGetArgs(@Nullable Output<List<ClassificationJobS3JobDefinitionScopingExcludesAndGetArgs>> ands) {
-        this.ands = ands;
-    }
+    private ClassificationJobS3JobDefinitionScopingExcludesGetArgs() {}
 
-    private ClassificationJobS3JobDefinitionScopingExcludesGetArgs() {
-        this.ands = Codegen.empty();
+    private ClassificationJobS3JobDefinitionScopingExcludesGetArgs(ClassificationJobS3JobDefinitionScopingExcludesGetArgs $) {
+        this.ands = $.ands;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ClassificationJobS3JobDefinitionScopingExcludesGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<ClassificationJobS3JobDefinitionScopingExcludesAndGetArgs>> ands;
+        private ClassificationJobS3JobDefinitionScopingExcludesGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ClassificationJobS3JobDefinitionScopingExcludesGetArgs();
         }
 
         public Builder(ClassificationJobS3JobDefinitionScopingExcludesGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.ands = defaults.ands;
+            $ = new ClassificationJobS3JobDefinitionScopingExcludesGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder ands(@Nullable Output<List<ClassificationJobS3JobDefinitionScopingExcludesAndGetArgs>> ands) {
-            this.ands = ands;
+            $.ands = ands;
             return this;
         }
-        public Builder ands(@Nullable List<ClassificationJobS3JobDefinitionScopingExcludesAndGetArgs> ands) {
-            this.ands = Codegen.ofNullable(ands);
-            return this;
+
+        public Builder ands(List<ClassificationJobS3JobDefinitionScopingExcludesAndGetArgs> ands) {
+            return ands(Output.of(ands));
         }
+
         public Builder ands(ClassificationJobS3JobDefinitionScopingExcludesAndGetArgs... ands) {
             return ands(List.of(ands));
-        }        public ClassificationJobS3JobDefinitionScopingExcludesGetArgs build() {
-            return new ClassificationJobS3JobDefinitionScopingExcludesGetArgs(ands);
+        }
+
+        public ClassificationJobS3JobDefinitionScopingExcludesGetArgs build() {
+            return $;
         }
     }
+
 }

@@ -5,11 +5,11 @@ package com.pulumi.gcp.cloudbuild.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.cloudbuild.inputs.TriggerBuildArtifactsObjectsGetArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class TriggerBuildArtifactsGetArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="images")
-      private final @Nullable Output<List<String>> images;
+    private @Nullable Output<List<String>> images;
 
-    public Output<List<String>> images() {
-        return this.images == null ? Codegen.empty() : this.images;
+    public Optional<Output<List<String>>> images() {
+        return Optional.ofNullable(this.images);
     }
 
     /**
@@ -41,66 +41,62 @@ public final class TriggerBuildArtifactsGetArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="objects")
-      private final @Nullable Output<TriggerBuildArtifactsObjectsGetArgs> objects;
+    private @Nullable Output<TriggerBuildArtifactsObjectsGetArgs> objects;
 
-    public Output<TriggerBuildArtifactsObjectsGetArgs> objects() {
-        return this.objects == null ? Codegen.empty() : this.objects;
+    public Optional<Output<TriggerBuildArtifactsObjectsGetArgs>> objects() {
+        return Optional.ofNullable(this.objects);
     }
 
-    public TriggerBuildArtifactsGetArgs(
-        @Nullable Output<List<String>> images,
-        @Nullable Output<TriggerBuildArtifactsObjectsGetArgs> objects) {
-        this.images = images;
-        this.objects = objects;
-    }
+    private TriggerBuildArtifactsGetArgs() {}
 
-    private TriggerBuildArtifactsGetArgs() {
-        this.images = Codegen.empty();
-        this.objects = Codegen.empty();
+    private TriggerBuildArtifactsGetArgs(TriggerBuildArtifactsGetArgs $) {
+        this.images = $.images;
+        this.objects = $.objects;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TriggerBuildArtifactsGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> images;
-        private @Nullable Output<TriggerBuildArtifactsObjectsGetArgs> objects;
+        private TriggerBuildArtifactsGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TriggerBuildArtifactsGetArgs();
         }
 
         public Builder(TriggerBuildArtifactsGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.images = defaults.images;
-    	      this.objects = defaults.objects;
+            $ = new TriggerBuildArtifactsGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder images(@Nullable Output<List<String>> images) {
-            this.images = images;
+            $.images = images;
             return this;
         }
-        public Builder images(@Nullable List<String> images) {
-            this.images = Codegen.ofNullable(images);
-            return this;
+
+        public Builder images(List<String> images) {
+            return images(Output.of(images));
         }
+
         public Builder images(String... images) {
             return images(List.of(images));
         }
+
         public Builder objects(@Nullable Output<TriggerBuildArtifactsObjectsGetArgs> objects) {
-            this.objects = objects;
+            $.objects = objects;
             return this;
         }
-        public Builder objects(@Nullable TriggerBuildArtifactsObjectsGetArgs objects) {
-            this.objects = Codegen.ofNullable(objects);
-            return this;
-        }        public TriggerBuildArtifactsGetArgs build() {
-            return new TriggerBuildArtifactsGetArgs(images, objects);
+
+        public Builder objects(TriggerBuildArtifactsObjectsGetArgs objects) {
+            return objects(Output.of(objects));
+        }
+
+        public TriggerBuildArtifactsGetArgs build() {
+            return $;
         }
     }
+
 }

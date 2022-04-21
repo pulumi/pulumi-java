@@ -22,7 +22,7 @@ public final class EndpointResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="allowCors", required=true)
-      private final Boolean allowCors;
+    private Boolean allowCors;
 
     public Boolean allowCors() {
         return this.allowCors;
@@ -33,7 +33,7 @@ public final class EndpointResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -44,64 +44,59 @@ public final class EndpointResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="target", required=true)
-      private final String target;
+    private String target;
 
     public String target() {
         return this.target;
     }
 
-    public EndpointResponse(
-        Boolean allowCors,
-        String name,
-        String target) {
-        this.allowCors = Objects.requireNonNull(allowCors, "expected parameter 'allowCors' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.target = Objects.requireNonNull(target, "expected parameter 'target' to be non-null");
-    }
+    private EndpointResponse() {}
 
-    private EndpointResponse() {
-        this.allowCors = null;
-        this.name = null;
-        this.target = null;
+    private EndpointResponse(EndpointResponse $) {
+        this.allowCors = $.allowCors;
+        this.name = $.name;
+        this.target = $.target;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EndpointResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Boolean allowCors;
-        private String name;
-        private String target;
+        private EndpointResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new EndpointResponse();
         }
 
         public Builder(EndpointResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.allowCors = defaults.allowCors;
-    	      this.name = defaults.name;
-    	      this.target = defaults.target;
+            $ = new EndpointResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder allowCors(Boolean allowCors) {
-            this.allowCors = Objects.requireNonNull(allowCors);
+            $.allowCors = allowCors;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder target(String target) {
-            this.target = Objects.requireNonNull(target);
+            $.target = target;
             return this;
-        }        public EndpointResponse build() {
-            return new EndpointResponse(allowCors, name, target);
+        }
+
+        public EndpointResponse build() {
+            $.allowCors = Objects.requireNonNull($.allowCors, "expected parameter 'allowCors' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.target = Objects.requireNonNull($.target, "expected parameter 'target' to be non-null");
+            return $;
         }
     }
+
 }

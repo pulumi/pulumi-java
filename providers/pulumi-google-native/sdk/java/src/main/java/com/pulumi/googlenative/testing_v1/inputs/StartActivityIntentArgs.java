@@ -5,10 +5,10 @@ package com.pulumi.googlenative.testing_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class StartActivityIntentArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="action")
-      private final @Nullable Output<String> action;
+    private @Nullable Output<String> action;
 
-    public Output<String> action() {
-        return this.action == null ? Codegen.empty() : this.action;
+    public Optional<Output<String>> action() {
+        return Optional.ofNullable(this.action);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class StartActivityIntentArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="categories")
-      private final @Nullable Output<List<String>> categories;
+    private @Nullable Output<List<String>> categories;
 
-    public Output<List<String>> categories() {
-        return this.categories == null ? Codegen.empty() : this.categories;
+    public Optional<Output<List<String>>> categories() {
+        return Optional.ofNullable(this.categories);
     }
 
     /**
@@ -47,79 +47,72 @@ public final class StartActivityIntentArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="uri")
-      private final @Nullable Output<String> uri;
+    private @Nullable Output<String> uri;
 
-    public Output<String> uri() {
-        return this.uri == null ? Codegen.empty() : this.uri;
+    public Optional<Output<String>> uri() {
+        return Optional.ofNullable(this.uri);
     }
 
-    public StartActivityIntentArgs(
-        @Nullable Output<String> action,
-        @Nullable Output<List<String>> categories,
-        @Nullable Output<String> uri) {
-        this.action = action;
-        this.categories = categories;
-        this.uri = uri;
-    }
+    private StartActivityIntentArgs() {}
 
-    private StartActivityIntentArgs() {
-        this.action = Codegen.empty();
-        this.categories = Codegen.empty();
-        this.uri = Codegen.empty();
+    private StartActivityIntentArgs(StartActivityIntentArgs $) {
+        this.action = $.action;
+        this.categories = $.categories;
+        this.uri = $.uri;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(StartActivityIntentArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> action;
-        private @Nullable Output<List<String>> categories;
-        private @Nullable Output<String> uri;
+        private StartActivityIntentArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new StartActivityIntentArgs();
         }
 
         public Builder(StartActivityIntentArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.action = defaults.action;
-    	      this.categories = defaults.categories;
-    	      this.uri = defaults.uri;
+            $ = new StartActivityIntentArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder action(@Nullable Output<String> action) {
-            this.action = action;
+            $.action = action;
             return this;
         }
-        public Builder action(@Nullable String action) {
-            this.action = Codegen.ofNullable(action);
-            return this;
+
+        public Builder action(String action) {
+            return action(Output.of(action));
         }
+
         public Builder categories(@Nullable Output<List<String>> categories) {
-            this.categories = categories;
+            $.categories = categories;
             return this;
         }
-        public Builder categories(@Nullable List<String> categories) {
-            this.categories = Codegen.ofNullable(categories);
-            return this;
+
+        public Builder categories(List<String> categories) {
+            return categories(Output.of(categories));
         }
+
         public Builder categories(String... categories) {
             return categories(List.of(categories));
         }
+
         public Builder uri(@Nullable Output<String> uri) {
-            this.uri = uri;
+            $.uri = uri;
             return this;
         }
-        public Builder uri(@Nullable String uri) {
-            this.uri = Codegen.ofNullable(uri);
-            return this;
-        }        public StartActivityIntentArgs build() {
-            return new StartActivityIntentArgs(action, categories, uri);
+
+        public Builder uri(String uri) {
+            return uri(Output.of(uri));
+        }
+
+        public StartActivityIntentArgs build() {
+            return $;
         }
     }
+
 }

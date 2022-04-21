@@ -16,62 +16,57 @@ public final class DomainEncryptionAtRestOptions extends com.pulumi.resources.In
     public static final DomainEncryptionAtRestOptions Empty = new DomainEncryptionAtRestOptions();
 
     @Import(name="enabled")
-      private final @Nullable Boolean enabled;
+    private @Nullable Boolean enabled;
 
     public Optional<Boolean> enabled() {
-        return this.enabled == null ? Optional.empty() : Optional.ofNullable(this.enabled);
+        return Optional.ofNullable(this.enabled);
     }
 
     @Import(name="kmsKeyId")
-      private final @Nullable String kmsKeyId;
+    private @Nullable String kmsKeyId;
 
     public Optional<String> kmsKeyId() {
-        return this.kmsKeyId == null ? Optional.empty() : Optional.ofNullable(this.kmsKeyId);
+        return Optional.ofNullable(this.kmsKeyId);
     }
 
-    public DomainEncryptionAtRestOptions(
-        @Nullable Boolean enabled,
-        @Nullable String kmsKeyId) {
-        this.enabled = enabled;
-        this.kmsKeyId = kmsKeyId;
-    }
+    private DomainEncryptionAtRestOptions() {}
 
-    private DomainEncryptionAtRestOptions() {
-        this.enabled = null;
-        this.kmsKeyId = null;
+    private DomainEncryptionAtRestOptions(DomainEncryptionAtRestOptions $) {
+        this.enabled = $.enabled;
+        this.kmsKeyId = $.kmsKeyId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DomainEncryptionAtRestOptions defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Boolean enabled;
-        private @Nullable String kmsKeyId;
+        private DomainEncryptionAtRestOptions $;
 
         public Builder() {
-    	      // Empty
+            $ = new DomainEncryptionAtRestOptions();
         }
 
         public Builder(DomainEncryptionAtRestOptions defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.enabled = defaults.enabled;
-    	      this.kmsKeyId = defaults.kmsKeyId;
+            $ = new DomainEncryptionAtRestOptions(Objects.requireNonNull(defaults));
         }
 
         public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = enabled;
+            $.enabled = enabled;
             return this;
         }
+
         public Builder kmsKeyId(@Nullable String kmsKeyId) {
-            this.kmsKeyId = kmsKeyId;
+            $.kmsKeyId = kmsKeyId;
             return this;
-        }        public DomainEncryptionAtRestOptions build() {
-            return new DomainEncryptionAtRestOptions(enabled, kmsKeyId);
+        }
+
+        public DomainEncryptionAtRestOptions build() {
+            return $;
         }
     }
+
 }

@@ -6,7 +6,6 @@ package com.pulumi.awsnative.s3.inputs;
 import com.pulumi.awsnative.s3.inputs.BucketCorsRuleArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
 
@@ -16,52 +15,53 @@ public final class BucketCorsConfigurationArgs extends com.pulumi.resources.Reso
     public static final BucketCorsConfigurationArgs Empty = new BucketCorsConfigurationArgs();
 
     @Import(name="corsRules", required=true)
-      private final Output<List<BucketCorsRuleArgs>> corsRules;
+    private Output<List<BucketCorsRuleArgs>> corsRules;
 
     public Output<List<BucketCorsRuleArgs>> corsRules() {
         return this.corsRules;
     }
 
-    public BucketCorsConfigurationArgs(Output<List<BucketCorsRuleArgs>> corsRules) {
-        this.corsRules = Objects.requireNonNull(corsRules, "expected parameter 'corsRules' to be non-null");
-    }
+    private BucketCorsConfigurationArgs() {}
 
-    private BucketCorsConfigurationArgs() {
-        this.corsRules = Codegen.empty();
+    private BucketCorsConfigurationArgs(BucketCorsConfigurationArgs $) {
+        this.corsRules = $.corsRules;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BucketCorsConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<List<BucketCorsRuleArgs>> corsRules;
+        private BucketCorsConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new BucketCorsConfigurationArgs();
         }
 
         public Builder(BucketCorsConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.corsRules = defaults.corsRules;
+            $ = new BucketCorsConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder corsRules(Output<List<BucketCorsRuleArgs>> corsRules) {
-            this.corsRules = Objects.requireNonNull(corsRules);
+            $.corsRules = corsRules;
             return this;
         }
+
         public Builder corsRules(List<BucketCorsRuleArgs> corsRules) {
-            this.corsRules = Output.of(Objects.requireNonNull(corsRules));
-            return this;
+            return corsRules(Output.of(corsRules));
         }
+
         public Builder corsRules(BucketCorsRuleArgs... corsRules) {
             return corsRules(List.of(corsRules));
-        }        public BucketCorsConfigurationArgs build() {
-            return new BucketCorsConfigurationArgs(corsRules);
+        }
+
+        public BucketCorsConfigurationArgs build() {
+            $.corsRules = Objects.requireNonNull($.corsRules, "expected parameter 'corsRules' to be non-null");
+            return $;
         }
     }
+
 }

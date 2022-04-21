@@ -7,10 +7,10 @@ import com.pulumi.awsnative.ec2.inputs.OptionsPropertiesArgs;
 import com.pulumi.awsnative.ec2.inputs.TransitGatewayVpcAttachmentTagArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -19,10 +19,10 @@ public final class TransitGatewayVpcAttachmentArgs extends com.pulumi.resources.
     public static final TransitGatewayVpcAttachmentArgs Empty = new TransitGatewayVpcAttachmentArgs();
 
     @Import(name="addSubnetIds")
-      private final @Nullable Output<List<String>> addSubnetIds;
+    private @Nullable Output<List<String>> addSubnetIds;
 
-    public Output<List<String>> addSubnetIds() {
-        return this.addSubnetIds == null ? Codegen.empty() : this.addSubnetIds;
+    public Optional<Output<List<String>>> addSubnetIds() {
+        return Optional.ofNullable(this.addSubnetIds);
     }
 
     /**
@@ -30,175 +30,159 @@ public final class TransitGatewayVpcAttachmentArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="options")
-      private final @Nullable Output<OptionsPropertiesArgs> options;
+    private @Nullable Output<OptionsPropertiesArgs> options;
 
-    public Output<OptionsPropertiesArgs> options() {
-        return this.options == null ? Codegen.empty() : this.options;
+    public Optional<Output<OptionsPropertiesArgs>> options() {
+        return Optional.ofNullable(this.options);
     }
 
     @Import(name="removeSubnetIds")
-      private final @Nullable Output<List<String>> removeSubnetIds;
+    private @Nullable Output<List<String>> removeSubnetIds;
 
-    public Output<List<String>> removeSubnetIds() {
-        return this.removeSubnetIds == null ? Codegen.empty() : this.removeSubnetIds;
+    public Optional<Output<List<String>>> removeSubnetIds() {
+        return Optional.ofNullable(this.removeSubnetIds);
     }
 
     @Import(name="subnetIds")
-      private final @Nullable Output<List<String>> subnetIds;
+    private @Nullable Output<List<String>> subnetIds;
 
-    public Output<List<String>> subnetIds() {
-        return this.subnetIds == null ? Codegen.empty() : this.subnetIds;
+    public Optional<Output<List<String>>> subnetIds() {
+        return Optional.ofNullable(this.subnetIds);
     }
 
     @Import(name="tags")
-      private final @Nullable Output<List<TransitGatewayVpcAttachmentTagArgs>> tags;
+    private @Nullable Output<List<TransitGatewayVpcAttachmentTagArgs>> tags;
 
-    public Output<List<TransitGatewayVpcAttachmentTagArgs>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<List<TransitGatewayVpcAttachmentTagArgs>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     @Import(name="transitGatewayId")
-      private final @Nullable Output<String> transitGatewayId;
+    private @Nullable Output<String> transitGatewayId;
 
-    public Output<String> transitGatewayId() {
-        return this.transitGatewayId == null ? Codegen.empty() : this.transitGatewayId;
+    public Optional<Output<String>> transitGatewayId() {
+        return Optional.ofNullable(this.transitGatewayId);
     }
 
     @Import(name="vpcId")
-      private final @Nullable Output<String> vpcId;
+    private @Nullable Output<String> vpcId;
 
-    public Output<String> vpcId() {
-        return this.vpcId == null ? Codegen.empty() : this.vpcId;
+    public Optional<Output<String>> vpcId() {
+        return Optional.ofNullable(this.vpcId);
     }
 
-    public TransitGatewayVpcAttachmentArgs(
-        @Nullable Output<List<String>> addSubnetIds,
-        @Nullable Output<OptionsPropertiesArgs> options,
-        @Nullable Output<List<String>> removeSubnetIds,
-        @Nullable Output<List<String>> subnetIds,
-        @Nullable Output<List<TransitGatewayVpcAttachmentTagArgs>> tags,
-        @Nullable Output<String> transitGatewayId,
-        @Nullable Output<String> vpcId) {
-        this.addSubnetIds = addSubnetIds;
-        this.options = options;
-        this.removeSubnetIds = removeSubnetIds;
-        this.subnetIds = subnetIds;
-        this.tags = tags;
-        this.transitGatewayId = transitGatewayId;
-        this.vpcId = vpcId;
-    }
+    private TransitGatewayVpcAttachmentArgs() {}
 
-    private TransitGatewayVpcAttachmentArgs() {
-        this.addSubnetIds = Codegen.empty();
-        this.options = Codegen.empty();
-        this.removeSubnetIds = Codegen.empty();
-        this.subnetIds = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.transitGatewayId = Codegen.empty();
-        this.vpcId = Codegen.empty();
+    private TransitGatewayVpcAttachmentArgs(TransitGatewayVpcAttachmentArgs $) {
+        this.addSubnetIds = $.addSubnetIds;
+        this.options = $.options;
+        this.removeSubnetIds = $.removeSubnetIds;
+        this.subnetIds = $.subnetIds;
+        this.tags = $.tags;
+        this.transitGatewayId = $.transitGatewayId;
+        this.vpcId = $.vpcId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TransitGatewayVpcAttachmentArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> addSubnetIds;
-        private @Nullable Output<OptionsPropertiesArgs> options;
-        private @Nullable Output<List<String>> removeSubnetIds;
-        private @Nullable Output<List<String>> subnetIds;
-        private @Nullable Output<List<TransitGatewayVpcAttachmentTagArgs>> tags;
-        private @Nullable Output<String> transitGatewayId;
-        private @Nullable Output<String> vpcId;
+        private TransitGatewayVpcAttachmentArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TransitGatewayVpcAttachmentArgs();
         }
 
         public Builder(TransitGatewayVpcAttachmentArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.addSubnetIds = defaults.addSubnetIds;
-    	      this.options = defaults.options;
-    	      this.removeSubnetIds = defaults.removeSubnetIds;
-    	      this.subnetIds = defaults.subnetIds;
-    	      this.tags = defaults.tags;
-    	      this.transitGatewayId = defaults.transitGatewayId;
-    	      this.vpcId = defaults.vpcId;
+            $ = new TransitGatewayVpcAttachmentArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder addSubnetIds(@Nullable Output<List<String>> addSubnetIds) {
-            this.addSubnetIds = addSubnetIds;
+            $.addSubnetIds = addSubnetIds;
             return this;
         }
-        public Builder addSubnetIds(@Nullable List<String> addSubnetIds) {
-            this.addSubnetIds = Codegen.ofNullable(addSubnetIds);
-            return this;
+
+        public Builder addSubnetIds(List<String> addSubnetIds) {
+            return addSubnetIds(Output.of(addSubnetIds));
         }
+
         public Builder addSubnetIds(String... addSubnetIds) {
             return addSubnetIds(List.of(addSubnetIds));
         }
+
         public Builder options(@Nullable Output<OptionsPropertiesArgs> options) {
-            this.options = options;
+            $.options = options;
             return this;
         }
-        public Builder options(@Nullable OptionsPropertiesArgs options) {
-            this.options = Codegen.ofNullable(options);
-            return this;
+
+        public Builder options(OptionsPropertiesArgs options) {
+            return options(Output.of(options));
         }
+
         public Builder removeSubnetIds(@Nullable Output<List<String>> removeSubnetIds) {
-            this.removeSubnetIds = removeSubnetIds;
+            $.removeSubnetIds = removeSubnetIds;
             return this;
         }
-        public Builder removeSubnetIds(@Nullable List<String> removeSubnetIds) {
-            this.removeSubnetIds = Codegen.ofNullable(removeSubnetIds);
-            return this;
+
+        public Builder removeSubnetIds(List<String> removeSubnetIds) {
+            return removeSubnetIds(Output.of(removeSubnetIds));
         }
+
         public Builder removeSubnetIds(String... removeSubnetIds) {
             return removeSubnetIds(List.of(removeSubnetIds));
         }
+
         public Builder subnetIds(@Nullable Output<List<String>> subnetIds) {
-            this.subnetIds = subnetIds;
+            $.subnetIds = subnetIds;
             return this;
         }
-        public Builder subnetIds(@Nullable List<String> subnetIds) {
-            this.subnetIds = Codegen.ofNullable(subnetIds);
-            return this;
+
+        public Builder subnetIds(List<String> subnetIds) {
+            return subnetIds(Output.of(subnetIds));
         }
+
         public Builder subnetIds(String... subnetIds) {
             return subnetIds(List.of(subnetIds));
         }
+
         public Builder tags(@Nullable Output<List<TransitGatewayVpcAttachmentTagArgs>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable List<TransitGatewayVpcAttachmentTagArgs> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(List<TransitGatewayVpcAttachmentTagArgs> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tags(TransitGatewayVpcAttachmentTagArgs... tags) {
             return tags(List.of(tags));
         }
+
         public Builder transitGatewayId(@Nullable Output<String> transitGatewayId) {
-            this.transitGatewayId = transitGatewayId;
+            $.transitGatewayId = transitGatewayId;
             return this;
         }
-        public Builder transitGatewayId(@Nullable String transitGatewayId) {
-            this.transitGatewayId = Codegen.ofNullable(transitGatewayId);
-            return this;
+
+        public Builder transitGatewayId(String transitGatewayId) {
+            return transitGatewayId(Output.of(transitGatewayId));
         }
+
         public Builder vpcId(@Nullable Output<String> vpcId) {
-            this.vpcId = vpcId;
+            $.vpcId = vpcId;
             return this;
         }
-        public Builder vpcId(@Nullable String vpcId) {
-            this.vpcId = Codegen.ofNullable(vpcId);
-            return this;
-        }        public TransitGatewayVpcAttachmentArgs build() {
-            return new TransitGatewayVpcAttachmentArgs(addSubnetIds, options, removeSubnetIds, subnetIds, tags, transitGatewayId, vpcId);
+
+        public Builder vpcId(String vpcId) {
+            return vpcId(Output.of(vpcId));
+        }
+
+        public TransitGatewayVpcAttachmentArgs build() {
+            return $;
         }
     }
+
 }

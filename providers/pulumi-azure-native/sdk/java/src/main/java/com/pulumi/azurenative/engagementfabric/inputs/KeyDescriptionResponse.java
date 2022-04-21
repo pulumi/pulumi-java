@@ -21,7 +21,7 @@ public final class KeyDescriptionResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -32,7 +32,7 @@ public final class KeyDescriptionResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="rank", required=true)
-      private final String rank;
+    private String rank;
 
     public String rank() {
         return this.rank;
@@ -43,64 +43,59 @@ public final class KeyDescriptionResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="value", required=true)
-      private final String value;
+    private String value;
 
     public String value() {
         return this.value;
     }
 
-    public KeyDescriptionResponse(
-        String name,
-        String rank,
-        String value) {
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.rank = Objects.requireNonNull(rank, "expected parameter 'rank' to be non-null");
-        this.value = Objects.requireNonNull(value, "expected parameter 'value' to be non-null");
-    }
+    private KeyDescriptionResponse() {}
 
-    private KeyDescriptionResponse() {
-        this.name = null;
-        this.rank = null;
-        this.value = null;
+    private KeyDescriptionResponse(KeyDescriptionResponse $) {
+        this.name = $.name;
+        this.rank = $.rank;
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(KeyDescriptionResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String name;
-        private String rank;
-        private String value;
+        private KeyDescriptionResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new KeyDescriptionResponse();
         }
 
         public Builder(KeyDescriptionResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.rank = defaults.rank;
-    	      this.value = defaults.value;
+            $ = new KeyDescriptionResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder rank(String rank) {
-            this.rank = Objects.requireNonNull(rank);
+            $.rank = rank;
             return this;
         }
+
         public Builder value(String value) {
-            this.value = Objects.requireNonNull(value);
+            $.value = value;
             return this;
-        }        public KeyDescriptionResponse build() {
-            return new KeyDescriptionResponse(name, rank, value);
+        }
+
+        public KeyDescriptionResponse build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.rank = Objects.requireNonNull($.rank, "expected parameter 'rank' to be non-null");
+            $.value = Objects.requireNonNull($.value, "expected parameter 'value' to be non-null");
+            return $;
         }
     }
+
 }

@@ -7,11 +7,11 @@ import com.pulumi.azurenative.web.inputs.CapabilityArgs;
 import com.pulumi.azurenative.web.inputs.SkuCapacityArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -28,10 +28,10 @@ public final class SkuDescriptionArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="capabilities")
-      private final @Nullable Output<List<CapabilityArgs>> capabilities;
+    private @Nullable Output<List<CapabilityArgs>> capabilities;
 
-    public Output<List<CapabilityArgs>> capabilities() {
-        return this.capabilities == null ? Codegen.empty() : this.capabilities;
+    public Optional<Output<List<CapabilityArgs>>> capabilities() {
+        return Optional.ofNullable(this.capabilities);
     }
 
     /**
@@ -39,10 +39,10 @@ public final class SkuDescriptionArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="capacity")
-      private final @Nullable Output<Integer> capacity;
+    private @Nullable Output<Integer> capacity;
 
-    public Output<Integer> capacity() {
-        return this.capacity == null ? Codegen.empty() : this.capacity;
+    public Optional<Output<Integer>> capacity() {
+        return Optional.ofNullable(this.capacity);
     }
 
     /**
@@ -50,10 +50,10 @@ public final class SkuDescriptionArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="family")
-      private final @Nullable Output<String> family;
+    private @Nullable Output<String> family;
 
-    public Output<String> family() {
-        return this.family == null ? Codegen.empty() : this.family;
+    public Optional<Output<String>> family() {
+        return Optional.ofNullable(this.family);
     }
 
     /**
@@ -61,10 +61,10 @@ public final class SkuDescriptionArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="locations")
-      private final @Nullable Output<List<String>> locations;
+    private @Nullable Output<List<String>> locations;
 
-    public Output<List<String>> locations() {
-        return this.locations == null ? Codegen.empty() : this.locations;
+    public Optional<Output<List<String>>> locations() {
+        return Optional.ofNullable(this.locations);
     }
 
     /**
@@ -72,10 +72,10 @@ public final class SkuDescriptionArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -83,10 +83,10 @@ public final class SkuDescriptionArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="size")
-      private final @Nullable Output<String> size;
+    private @Nullable Output<String> size;
 
-    public Output<String> size() {
-        return this.size == null ? Codegen.empty() : this.size;
+    public Optional<Output<String>> size() {
+        return Optional.ofNullable(this.size);
     }
 
     /**
@@ -94,10 +94,10 @@ public final class SkuDescriptionArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="skuCapacity")
-      private final @Nullable Output<SkuCapacityArgs> skuCapacity;
+    private @Nullable Output<SkuCapacityArgs> skuCapacity;
 
-    public Output<SkuCapacityArgs> skuCapacity() {
-        return this.skuCapacity == null ? Codegen.empty() : this.skuCapacity;
+    public Optional<Output<SkuCapacityArgs>> skuCapacity() {
+        return Optional.ofNullable(this.skuCapacity);
     }
 
     /**
@@ -105,147 +105,126 @@ public final class SkuDescriptionArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="tier")
-      private final @Nullable Output<String> tier;
+    private @Nullable Output<String> tier;
 
-    public Output<String> tier() {
-        return this.tier == null ? Codegen.empty() : this.tier;
+    public Optional<Output<String>> tier() {
+        return Optional.ofNullable(this.tier);
     }
 
-    public SkuDescriptionArgs(
-        @Nullable Output<List<CapabilityArgs>> capabilities,
-        @Nullable Output<Integer> capacity,
-        @Nullable Output<String> family,
-        @Nullable Output<List<String>> locations,
-        @Nullable Output<String> name,
-        @Nullable Output<String> size,
-        @Nullable Output<SkuCapacityArgs> skuCapacity,
-        @Nullable Output<String> tier) {
-        this.capabilities = capabilities;
-        this.capacity = capacity;
-        this.family = family;
-        this.locations = locations;
-        this.name = name;
-        this.size = size;
-        this.skuCapacity = skuCapacity;
-        this.tier = tier;
-    }
+    private SkuDescriptionArgs() {}
 
-    private SkuDescriptionArgs() {
-        this.capabilities = Codegen.empty();
-        this.capacity = Codegen.empty();
-        this.family = Codegen.empty();
-        this.locations = Codegen.empty();
-        this.name = Codegen.empty();
-        this.size = Codegen.empty();
-        this.skuCapacity = Codegen.empty();
-        this.tier = Codegen.empty();
+    private SkuDescriptionArgs(SkuDescriptionArgs $) {
+        this.capabilities = $.capabilities;
+        this.capacity = $.capacity;
+        this.family = $.family;
+        this.locations = $.locations;
+        this.name = $.name;
+        this.size = $.size;
+        this.skuCapacity = $.skuCapacity;
+        this.tier = $.tier;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SkuDescriptionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<CapabilityArgs>> capabilities;
-        private @Nullable Output<Integer> capacity;
-        private @Nullable Output<String> family;
-        private @Nullable Output<List<String>> locations;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> size;
-        private @Nullable Output<SkuCapacityArgs> skuCapacity;
-        private @Nullable Output<String> tier;
+        private SkuDescriptionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SkuDescriptionArgs();
         }
 
         public Builder(SkuDescriptionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.capabilities = defaults.capabilities;
-    	      this.capacity = defaults.capacity;
-    	      this.family = defaults.family;
-    	      this.locations = defaults.locations;
-    	      this.name = defaults.name;
-    	      this.size = defaults.size;
-    	      this.skuCapacity = defaults.skuCapacity;
-    	      this.tier = defaults.tier;
+            $ = new SkuDescriptionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder capabilities(@Nullable Output<List<CapabilityArgs>> capabilities) {
-            this.capabilities = capabilities;
+            $.capabilities = capabilities;
             return this;
         }
-        public Builder capabilities(@Nullable List<CapabilityArgs> capabilities) {
-            this.capabilities = Codegen.ofNullable(capabilities);
-            return this;
+
+        public Builder capabilities(List<CapabilityArgs> capabilities) {
+            return capabilities(Output.of(capabilities));
         }
+
         public Builder capabilities(CapabilityArgs... capabilities) {
             return capabilities(List.of(capabilities));
         }
+
         public Builder capacity(@Nullable Output<Integer> capacity) {
-            this.capacity = capacity;
+            $.capacity = capacity;
             return this;
         }
-        public Builder capacity(@Nullable Integer capacity) {
-            this.capacity = Codegen.ofNullable(capacity);
-            return this;
+
+        public Builder capacity(Integer capacity) {
+            return capacity(Output.of(capacity));
         }
+
         public Builder family(@Nullable Output<String> family) {
-            this.family = family;
+            $.family = family;
             return this;
         }
-        public Builder family(@Nullable String family) {
-            this.family = Codegen.ofNullable(family);
-            return this;
+
+        public Builder family(String family) {
+            return family(Output.of(family));
         }
+
         public Builder locations(@Nullable Output<List<String>> locations) {
-            this.locations = locations;
+            $.locations = locations;
             return this;
         }
-        public Builder locations(@Nullable List<String> locations) {
-            this.locations = Codegen.ofNullable(locations);
-            return this;
+
+        public Builder locations(List<String> locations) {
+            return locations(Output.of(locations));
         }
+
         public Builder locations(String... locations) {
             return locations(List.of(locations));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder size(@Nullable Output<String> size) {
-            this.size = size;
+            $.size = size;
             return this;
         }
-        public Builder size(@Nullable String size) {
-            this.size = Codegen.ofNullable(size);
-            return this;
+
+        public Builder size(String size) {
+            return size(Output.of(size));
         }
+
         public Builder skuCapacity(@Nullable Output<SkuCapacityArgs> skuCapacity) {
-            this.skuCapacity = skuCapacity;
+            $.skuCapacity = skuCapacity;
             return this;
         }
-        public Builder skuCapacity(@Nullable SkuCapacityArgs skuCapacity) {
-            this.skuCapacity = Codegen.ofNullable(skuCapacity);
-            return this;
+
+        public Builder skuCapacity(SkuCapacityArgs skuCapacity) {
+            return skuCapacity(Output.of(skuCapacity));
         }
+
         public Builder tier(@Nullable Output<String> tier) {
-            this.tier = tier;
+            $.tier = tier;
             return this;
         }
-        public Builder tier(@Nullable String tier) {
-            this.tier = Codegen.ofNullable(tier);
-            return this;
-        }        public SkuDescriptionArgs build() {
-            return new SkuDescriptionArgs(capabilities, capacity, family, locations, name, size, skuCapacity, tier);
+
+        public Builder tier(String tier) {
+            return tier(Output.of(tier));
+        }
+
+        public SkuDescriptionArgs build() {
+            return $;
         }
     }
+
 }

@@ -5,9 +5,9 @@ package com.pulumi.aws.s3.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class BucketPolicyState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="bucket")
-      private final @Nullable Output<String> bucket;
+    private @Nullable Output<String> bucket;
 
-    public Output<String> bucket() {
-        return this.bucket == null ? Codegen.empty() : this.bucket;
+    public Optional<Output<String>> bucket() {
+        return Optional.ofNullable(this.bucket);
     }
 
     /**
@@ -31,59 +31,58 @@ public final class BucketPolicyState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="policy")
-      private final @Nullable Output<String> policy;
+    private @Nullable Output<String> policy;
 
-    public Output<String> policy() {
-        return this.policy == null ? Codegen.empty() : this.policy;
+    public Optional<Output<String>> policy() {
+        return Optional.ofNullable(this.policy);
     }
 
-    public BucketPolicyState(
-        @Nullable Output<String> bucket,
-        @Nullable Output<String> policy) {
-        this.bucket = bucket;
-        this.policy = policy;
-    }
+    private BucketPolicyState() {}
 
-    private BucketPolicyState() {
-        this.bucket = Codegen.empty();
-        this.policy = Codegen.empty();
+    private BucketPolicyState(BucketPolicyState $) {
+        this.bucket = $.bucket;
+        this.policy = $.policy;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BucketPolicyState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> bucket;
-        private @Nullable Output<String> policy;
+        private BucketPolicyState $;
 
         public Builder() {
-    	      // Empty
+            $ = new BucketPolicyState();
         }
 
         public Builder(BucketPolicyState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.bucket = defaults.bucket;
-    	      this.policy = defaults.policy;
+            $ = new BucketPolicyState(Objects.requireNonNull(defaults));
         }
 
         public Builder bucket(@Nullable Output<String> bucket) {
-            this.bucket = bucket;
+            $.bucket = bucket;
             return this;
         }
-        public Builder bucket(@Nullable String bucket) {
-            this.bucket = Codegen.ofNullable(bucket);
-            return this;
+
+        public Builder bucket(String bucket) {
+            return bucket(Output.of(bucket));
         }
+
         public Builder policy(@Nullable Output<String> policy) {
-            this.policy = policy;
+            $.policy = policy;
             return this;
-        }        public BucketPolicyState build() {
-            return new BucketPolicyState(bucket, policy);
+        }
+
+        public Builder policy(String policy) {
+            return policy(Output.of(policy));
+        }
+
+        public BucketPolicyState build() {
+            return $;
         }
     }
+
 }

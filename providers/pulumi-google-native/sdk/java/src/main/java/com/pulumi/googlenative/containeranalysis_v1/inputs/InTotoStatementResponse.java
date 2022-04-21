@@ -25,28 +25,28 @@ public final class InTotoStatementResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="predicateType", required=true)
-      private final String predicateType;
+    private String predicateType;
 
     public String predicateType() {
         return this.predicateType;
     }
 
     @Import(name="provenance", required=true)
-      private final InTotoProvenanceResponse provenance;
+    private InTotoProvenanceResponse provenance;
 
     public InTotoProvenanceResponse provenance() {
         return this.provenance;
     }
 
     @Import(name="slsaProvenance", required=true)
-      private final SlsaProvenanceResponse slsaProvenance;
+    private SlsaProvenanceResponse slsaProvenance;
 
     public SlsaProvenanceResponse slsaProvenance() {
         return this.slsaProvenance;
     }
 
     @Import(name="subject", required=true)
-      private final List<SubjectResponse> subject;
+    private List<SubjectResponse> subject;
 
     public List<SubjectResponse> subject() {
         return this.subject;
@@ -57,85 +57,77 @@ public final class InTotoStatementResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
     }
 
-    public InTotoStatementResponse(
-        String predicateType,
-        InTotoProvenanceResponse provenance,
-        SlsaProvenanceResponse slsaProvenance,
-        List<SubjectResponse> subject,
-        String type) {
-        this.predicateType = Objects.requireNonNull(predicateType, "expected parameter 'predicateType' to be non-null");
-        this.provenance = Objects.requireNonNull(provenance, "expected parameter 'provenance' to be non-null");
-        this.slsaProvenance = Objects.requireNonNull(slsaProvenance, "expected parameter 'slsaProvenance' to be non-null");
-        this.subject = Objects.requireNonNull(subject, "expected parameter 'subject' to be non-null");
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private InTotoStatementResponse() {}
 
-    private InTotoStatementResponse() {
-        this.predicateType = null;
-        this.provenance = null;
-        this.slsaProvenance = null;
-        this.subject = List.of();
-        this.type = null;
+    private InTotoStatementResponse(InTotoStatementResponse $) {
+        this.predicateType = $.predicateType;
+        this.provenance = $.provenance;
+        this.slsaProvenance = $.slsaProvenance;
+        this.subject = $.subject;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(InTotoStatementResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String predicateType;
-        private InTotoProvenanceResponse provenance;
-        private SlsaProvenanceResponse slsaProvenance;
-        private List<SubjectResponse> subject;
-        private String type;
+        private InTotoStatementResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new InTotoStatementResponse();
         }
 
         public Builder(InTotoStatementResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.predicateType = defaults.predicateType;
-    	      this.provenance = defaults.provenance;
-    	      this.slsaProvenance = defaults.slsaProvenance;
-    	      this.subject = defaults.subject;
-    	      this.type = defaults.type;
+            $ = new InTotoStatementResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder predicateType(String predicateType) {
-            this.predicateType = Objects.requireNonNull(predicateType);
+            $.predicateType = predicateType;
             return this;
         }
+
         public Builder provenance(InTotoProvenanceResponse provenance) {
-            this.provenance = Objects.requireNonNull(provenance);
+            $.provenance = provenance;
             return this;
         }
+
         public Builder slsaProvenance(SlsaProvenanceResponse slsaProvenance) {
-            this.slsaProvenance = Objects.requireNonNull(slsaProvenance);
+            $.slsaProvenance = slsaProvenance;
             return this;
         }
+
         public Builder subject(List<SubjectResponse> subject) {
-            this.subject = Objects.requireNonNull(subject);
+            $.subject = subject;
             return this;
         }
+
         public Builder subject(SubjectResponse... subject) {
             return subject(List.of(subject));
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
-        }        public InTotoStatementResponse build() {
-            return new InTotoStatementResponse(predicateType, provenance, slsaProvenance, subject, type);
+        }
+
+        public InTotoStatementResponse build() {
+            $.predicateType = Objects.requireNonNull($.predicateType, "expected parameter 'predicateType' to be non-null");
+            $.provenance = Objects.requireNonNull($.provenance, "expected parameter 'provenance' to be non-null");
+            $.slsaProvenance = Objects.requireNonNull($.slsaProvenance, "expected parameter 'slsaProvenance' to be non-null");
+            $.subject = Objects.requireNonNull($.subject, "expected parameter 'subject' to be non-null");
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

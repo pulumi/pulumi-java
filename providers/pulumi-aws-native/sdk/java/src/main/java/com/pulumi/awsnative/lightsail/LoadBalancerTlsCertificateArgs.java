@@ -5,11 +5,11 @@ package com.pulumi.awsnative.lightsail;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class LoadBalancerTlsCertificateArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="certificateAlternativeNames")
-      private final @Nullable Output<List<String>> certificateAlternativeNames;
+    private @Nullable Output<List<String>> certificateAlternativeNames;
 
-    public Output<List<String>> certificateAlternativeNames() {
-        return this.certificateAlternativeNames == null ? Codegen.empty() : this.certificateAlternativeNames;
+    public Optional<Output<List<String>>> certificateAlternativeNames() {
+        return Optional.ofNullable(this.certificateAlternativeNames);
     }
 
     /**
@@ -33,7 +33,7 @@ public final class LoadBalancerTlsCertificateArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="certificateDomainName", required=true)
-      private final Output<String> certificateDomainName;
+    private Output<String> certificateDomainName;
 
     public Output<String> certificateDomainName() {
         return this.certificateDomainName;
@@ -44,7 +44,7 @@ public final class LoadBalancerTlsCertificateArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="certificateName", required=true)
-      private final Output<String> certificateName;
+    private Output<String> certificateName;
 
     public Output<String> certificateName() {
         return this.certificateName;
@@ -55,10 +55,10 @@ public final class LoadBalancerTlsCertificateArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="isAttached")
-      private final @Nullable Output<Boolean> isAttached;
+    private @Nullable Output<Boolean> isAttached;
 
-    public Output<Boolean> isAttached() {
-        return this.isAttached == null ? Codegen.empty() : this.isAttached;
+    public Optional<Output<Boolean>> isAttached() {
+        return Optional.ofNullable(this.isAttached);
     }
 
     /**
@@ -66,105 +66,95 @@ public final class LoadBalancerTlsCertificateArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="loadBalancerName", required=true)
-      private final Output<String> loadBalancerName;
+    private Output<String> loadBalancerName;
 
     public Output<String> loadBalancerName() {
         return this.loadBalancerName;
     }
 
-    public LoadBalancerTlsCertificateArgs(
-        @Nullable Output<List<String>> certificateAlternativeNames,
-        Output<String> certificateDomainName,
-        Output<String> certificateName,
-        @Nullable Output<Boolean> isAttached,
-        Output<String> loadBalancerName) {
-        this.certificateAlternativeNames = certificateAlternativeNames;
-        this.certificateDomainName = Objects.requireNonNull(certificateDomainName, "expected parameter 'certificateDomainName' to be non-null");
-        this.certificateName = Objects.requireNonNull(certificateName, "expected parameter 'certificateName' to be non-null");
-        this.isAttached = isAttached;
-        this.loadBalancerName = Objects.requireNonNull(loadBalancerName, "expected parameter 'loadBalancerName' to be non-null");
-    }
+    private LoadBalancerTlsCertificateArgs() {}
 
-    private LoadBalancerTlsCertificateArgs() {
-        this.certificateAlternativeNames = Codegen.empty();
-        this.certificateDomainName = Codegen.empty();
-        this.certificateName = Codegen.empty();
-        this.isAttached = Codegen.empty();
-        this.loadBalancerName = Codegen.empty();
+    private LoadBalancerTlsCertificateArgs(LoadBalancerTlsCertificateArgs $) {
+        this.certificateAlternativeNames = $.certificateAlternativeNames;
+        this.certificateDomainName = $.certificateDomainName;
+        this.certificateName = $.certificateName;
+        this.isAttached = $.isAttached;
+        this.loadBalancerName = $.loadBalancerName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LoadBalancerTlsCertificateArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> certificateAlternativeNames;
-        private Output<String> certificateDomainName;
-        private Output<String> certificateName;
-        private @Nullable Output<Boolean> isAttached;
-        private Output<String> loadBalancerName;
+        private LoadBalancerTlsCertificateArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new LoadBalancerTlsCertificateArgs();
         }
 
         public Builder(LoadBalancerTlsCertificateArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.certificateAlternativeNames = defaults.certificateAlternativeNames;
-    	      this.certificateDomainName = defaults.certificateDomainName;
-    	      this.certificateName = defaults.certificateName;
-    	      this.isAttached = defaults.isAttached;
-    	      this.loadBalancerName = defaults.loadBalancerName;
+            $ = new LoadBalancerTlsCertificateArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder certificateAlternativeNames(@Nullable Output<List<String>> certificateAlternativeNames) {
-            this.certificateAlternativeNames = certificateAlternativeNames;
+            $.certificateAlternativeNames = certificateAlternativeNames;
             return this;
         }
-        public Builder certificateAlternativeNames(@Nullable List<String> certificateAlternativeNames) {
-            this.certificateAlternativeNames = Codegen.ofNullable(certificateAlternativeNames);
-            return this;
+
+        public Builder certificateAlternativeNames(List<String> certificateAlternativeNames) {
+            return certificateAlternativeNames(Output.of(certificateAlternativeNames));
         }
+
         public Builder certificateAlternativeNames(String... certificateAlternativeNames) {
             return certificateAlternativeNames(List.of(certificateAlternativeNames));
         }
+
         public Builder certificateDomainName(Output<String> certificateDomainName) {
-            this.certificateDomainName = Objects.requireNonNull(certificateDomainName);
+            $.certificateDomainName = certificateDomainName;
             return this;
         }
+
         public Builder certificateDomainName(String certificateDomainName) {
-            this.certificateDomainName = Output.of(Objects.requireNonNull(certificateDomainName));
-            return this;
+            return certificateDomainName(Output.of(certificateDomainName));
         }
+
         public Builder certificateName(Output<String> certificateName) {
-            this.certificateName = Objects.requireNonNull(certificateName);
+            $.certificateName = certificateName;
             return this;
         }
+
         public Builder certificateName(String certificateName) {
-            this.certificateName = Output.of(Objects.requireNonNull(certificateName));
-            return this;
+            return certificateName(Output.of(certificateName));
         }
+
         public Builder isAttached(@Nullable Output<Boolean> isAttached) {
-            this.isAttached = isAttached;
+            $.isAttached = isAttached;
             return this;
         }
-        public Builder isAttached(@Nullable Boolean isAttached) {
-            this.isAttached = Codegen.ofNullable(isAttached);
-            return this;
+
+        public Builder isAttached(Boolean isAttached) {
+            return isAttached(Output.of(isAttached));
         }
+
         public Builder loadBalancerName(Output<String> loadBalancerName) {
-            this.loadBalancerName = Objects.requireNonNull(loadBalancerName);
+            $.loadBalancerName = loadBalancerName;
             return this;
         }
+
         public Builder loadBalancerName(String loadBalancerName) {
-            this.loadBalancerName = Output.of(Objects.requireNonNull(loadBalancerName));
-            return this;
-        }        public LoadBalancerTlsCertificateArgs build() {
-            return new LoadBalancerTlsCertificateArgs(certificateAlternativeNames, certificateDomainName, certificateName, isAttached, loadBalancerName);
+            return loadBalancerName(Output.of(loadBalancerName));
+        }
+
+        public LoadBalancerTlsCertificateArgs build() {
+            $.certificateDomainName = Objects.requireNonNull($.certificateDomainName, "expected parameter 'certificateDomainName' to be non-null");
+            $.certificateName = Objects.requireNonNull($.certificateName, "expected parameter 'certificateName' to be non-null");
+            $.loadBalancerName = Objects.requireNonNull($.loadBalancerName, "expected parameter 'loadBalancerName' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,9 +5,9 @@ package com.pulumi.googlenative.dialogflow_v2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionTri
      * 
      */
     @Import(name="noSmalltalk")
-      private final @Nullable Output<Boolean> noSmalltalk;
+    private @Nullable Output<Boolean> noSmalltalk;
 
-    public Output<Boolean> noSmalltalk() {
-        return this.noSmalltalk == null ? Codegen.empty() : this.noSmalltalk;
+    public Optional<Output<Boolean>> noSmalltalk() {
+        return Optional.ofNullable(this.noSmalltalk);
     }
 
     /**
@@ -35,63 +35,58 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionTri
      * 
      */
     @Import(name="onlyEndUser")
-      private final @Nullable Output<Boolean> onlyEndUser;
+    private @Nullable Output<Boolean> onlyEndUser;
 
-    public Output<Boolean> onlyEndUser() {
-        return this.onlyEndUser == null ? Codegen.empty() : this.onlyEndUser;
+    public Optional<Output<Boolean>> onlyEndUser() {
+        return Optional.ofNullable(this.onlyEndUser);
     }
 
-    public GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionTriggerSettingsArgs(
-        @Nullable Output<Boolean> noSmalltalk,
-        @Nullable Output<Boolean> onlyEndUser) {
-        this.noSmalltalk = noSmalltalk;
-        this.onlyEndUser = onlyEndUser;
-    }
+    private GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionTriggerSettingsArgs() {}
 
-    private GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionTriggerSettingsArgs() {
-        this.noSmalltalk = Codegen.empty();
-        this.onlyEndUser = Codegen.empty();
+    private GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionTriggerSettingsArgs(GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionTriggerSettingsArgs $) {
+        this.noSmalltalk = $.noSmalltalk;
+        this.onlyEndUser = $.onlyEndUser;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionTriggerSettingsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> noSmalltalk;
-        private @Nullable Output<Boolean> onlyEndUser;
+        private GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionTriggerSettingsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionTriggerSettingsArgs();
         }
 
         public Builder(GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionTriggerSettingsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.noSmalltalk = defaults.noSmalltalk;
-    	      this.onlyEndUser = defaults.onlyEndUser;
+            $ = new GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionTriggerSettingsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder noSmalltalk(@Nullable Output<Boolean> noSmalltalk) {
-            this.noSmalltalk = noSmalltalk;
+            $.noSmalltalk = noSmalltalk;
             return this;
         }
-        public Builder noSmalltalk(@Nullable Boolean noSmalltalk) {
-            this.noSmalltalk = Codegen.ofNullable(noSmalltalk);
-            return this;
+
+        public Builder noSmalltalk(Boolean noSmalltalk) {
+            return noSmalltalk(Output.of(noSmalltalk));
         }
+
         public Builder onlyEndUser(@Nullable Output<Boolean> onlyEndUser) {
-            this.onlyEndUser = onlyEndUser;
+            $.onlyEndUser = onlyEndUser;
             return this;
         }
-        public Builder onlyEndUser(@Nullable Boolean onlyEndUser) {
-            this.onlyEndUser = Codegen.ofNullable(onlyEndUser);
-            return this;
-        }        public GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionTriggerSettingsArgs build() {
-            return new GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionTriggerSettingsArgs(noSmalltalk, onlyEndUser);
+
+        public Builder onlyEndUser(Boolean onlyEndUser) {
+            return onlyEndUser(Output.of(onlyEndUser));
+        }
+
+        public GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionTriggerSettingsArgs build() {
+            return $;
         }
     }
+
 }

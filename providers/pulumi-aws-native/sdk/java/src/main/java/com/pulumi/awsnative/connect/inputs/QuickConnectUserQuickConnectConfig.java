@@ -17,62 +17,59 @@ public final class QuickConnectUserQuickConnectConfig extends com.pulumi.resourc
     public static final QuickConnectUserQuickConnectConfig Empty = new QuickConnectUserQuickConnectConfig();
 
     @Import(name="contactFlowArn", required=true)
-      private final String contactFlowArn;
+    private String contactFlowArn;
 
     public String contactFlowArn() {
         return this.contactFlowArn;
     }
 
     @Import(name="userArn", required=true)
-      private final String userArn;
+    private String userArn;
 
     public String userArn() {
         return this.userArn;
     }
 
-    public QuickConnectUserQuickConnectConfig(
-        String contactFlowArn,
-        String userArn) {
-        this.contactFlowArn = Objects.requireNonNull(contactFlowArn, "expected parameter 'contactFlowArn' to be non-null");
-        this.userArn = Objects.requireNonNull(userArn, "expected parameter 'userArn' to be non-null");
-    }
+    private QuickConnectUserQuickConnectConfig() {}
 
-    private QuickConnectUserQuickConnectConfig() {
-        this.contactFlowArn = null;
-        this.userArn = null;
+    private QuickConnectUserQuickConnectConfig(QuickConnectUserQuickConnectConfig $) {
+        this.contactFlowArn = $.contactFlowArn;
+        this.userArn = $.userArn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(QuickConnectUserQuickConnectConfig defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String contactFlowArn;
-        private String userArn;
+        private QuickConnectUserQuickConnectConfig $;
 
         public Builder() {
-    	      // Empty
+            $ = new QuickConnectUserQuickConnectConfig();
         }
 
         public Builder(QuickConnectUserQuickConnectConfig defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.contactFlowArn = defaults.contactFlowArn;
-    	      this.userArn = defaults.userArn;
+            $ = new QuickConnectUserQuickConnectConfig(Objects.requireNonNull(defaults));
         }
 
         public Builder contactFlowArn(String contactFlowArn) {
-            this.contactFlowArn = Objects.requireNonNull(contactFlowArn);
+            $.contactFlowArn = contactFlowArn;
             return this;
         }
+
         public Builder userArn(String userArn) {
-            this.userArn = Objects.requireNonNull(userArn);
+            $.userArn = userArn;
             return this;
-        }        public QuickConnectUserQuickConnectConfig build() {
-            return new QuickConnectUserQuickConnectConfig(contactFlowArn, userArn);
+        }
+
+        public QuickConnectUserQuickConnectConfig build() {
+            $.contactFlowArn = Objects.requireNonNull($.contactFlowArn, "expected parameter 'contactFlowArn' to be non-null");
+            $.userArn = Objects.requireNonNull($.userArn, "expected parameter 'userArn' to be non-null");
+            return $;
         }
     }
+
 }

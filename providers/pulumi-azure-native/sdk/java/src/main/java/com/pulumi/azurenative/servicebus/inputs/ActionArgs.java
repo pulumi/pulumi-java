@@ -10,6 +10,7 @@ import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +27,10 @@ public final class ActionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="compatibilityLevel")
-      private final @Nullable Output<Integer> compatibilityLevel;
+    private @Nullable Output<Integer> compatibilityLevel;
 
-    public Output<Integer> compatibilityLevel() {
-        return this.compatibilityLevel == null ? Codegen.empty() : this.compatibilityLevel;
+    public Optional<Output<Integer>> compatibilityLevel() {
+        return Optional.ofNullable(this.compatibilityLevel);
     }
 
     /**
@@ -37,10 +38,10 @@ public final class ActionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="requiresPreprocessing")
-      private final @Nullable Output<Boolean> requiresPreprocessing;
+    private @Nullable Output<Boolean> requiresPreprocessing;
 
-    public Output<Boolean> requiresPreprocessing() {
-        return this.requiresPreprocessing == null ? Codegen.empty() : this.requiresPreprocessing;
+    public Optional<Output<Boolean>> requiresPreprocessing() {
+        return Optional.ofNullable(this.requiresPreprocessing);
     }
 
     /**
@@ -48,76 +49,69 @@ public final class ActionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="sqlExpression")
-      private final @Nullable Output<String> sqlExpression;
+    private @Nullable Output<String> sqlExpression;
 
-    public Output<String> sqlExpression() {
-        return this.sqlExpression == null ? Codegen.empty() : this.sqlExpression;
+    public Optional<Output<String>> sqlExpression() {
+        return Optional.ofNullable(this.sqlExpression);
     }
 
-    public ActionArgs(
-        @Nullable Output<Integer> compatibilityLevel,
-        @Nullable Output<Boolean> requiresPreprocessing,
-        @Nullable Output<String> sqlExpression) {
-        this.compatibilityLevel = compatibilityLevel;
-        this.requiresPreprocessing = Codegen.booleanProp("requiresPreprocessing").output().arg(requiresPreprocessing).def(true).getNullable();
-        this.sqlExpression = sqlExpression;
-    }
+    private ActionArgs() {}
 
-    private ActionArgs() {
-        this.compatibilityLevel = Codegen.empty();
-        this.requiresPreprocessing = Codegen.empty();
-        this.sqlExpression = Codegen.empty();
+    private ActionArgs(ActionArgs $) {
+        this.compatibilityLevel = $.compatibilityLevel;
+        this.requiresPreprocessing = $.requiresPreprocessing;
+        this.sqlExpression = $.sqlExpression;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ActionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> compatibilityLevel;
-        private @Nullable Output<Boolean> requiresPreprocessing;
-        private @Nullable Output<String> sqlExpression;
+        private ActionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ActionArgs();
         }
 
         public Builder(ActionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.compatibilityLevel = defaults.compatibilityLevel;
-    	      this.requiresPreprocessing = defaults.requiresPreprocessing;
-    	      this.sqlExpression = defaults.sqlExpression;
+            $ = new ActionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder compatibilityLevel(@Nullable Output<Integer> compatibilityLevel) {
-            this.compatibilityLevel = compatibilityLevel;
+            $.compatibilityLevel = compatibilityLevel;
             return this;
         }
-        public Builder compatibilityLevel(@Nullable Integer compatibilityLevel) {
-            this.compatibilityLevel = Codegen.ofNullable(compatibilityLevel);
-            return this;
+
+        public Builder compatibilityLevel(Integer compatibilityLevel) {
+            return compatibilityLevel(Output.of(compatibilityLevel));
         }
+
         public Builder requiresPreprocessing(@Nullable Output<Boolean> requiresPreprocessing) {
-            this.requiresPreprocessing = requiresPreprocessing;
+            $.requiresPreprocessing = requiresPreprocessing;
             return this;
         }
-        public Builder requiresPreprocessing(@Nullable Boolean requiresPreprocessing) {
-            this.requiresPreprocessing = Codegen.ofNullable(requiresPreprocessing);
-            return this;
+
+        public Builder requiresPreprocessing(Boolean requiresPreprocessing) {
+            return requiresPreprocessing(Output.of(requiresPreprocessing));
         }
+
         public Builder sqlExpression(@Nullable Output<String> sqlExpression) {
-            this.sqlExpression = sqlExpression;
+            $.sqlExpression = sqlExpression;
             return this;
         }
-        public Builder sqlExpression(@Nullable String sqlExpression) {
-            this.sqlExpression = Codegen.ofNullable(sqlExpression);
-            return this;
-        }        public ActionArgs build() {
-            return new ActionArgs(compatibilityLevel, requiresPreprocessing, sqlExpression);
+
+        public Builder sqlExpression(String sqlExpression) {
+            return sqlExpression(Output.of(sqlExpression));
+        }
+
+        public ActionArgs build() {
+            $.requiresPreprocessing = Codegen.booleanProp("requiresPreprocessing").output().arg($.requiresPreprocessing).def(true).getNullable();
+            return $;
         }
     }
+
 }

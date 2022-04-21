@@ -24,45 +24,45 @@ public final class BucketReplicationDestination extends com.pulumi.resources.Inv
     public static final BucketReplicationDestination Empty = new BucketReplicationDestination();
 
     @Import(name="accessControlTranslation")
-      private final @Nullable BucketAccessControlTranslation accessControlTranslation;
+    private @Nullable BucketAccessControlTranslation accessControlTranslation;
 
     public Optional<BucketAccessControlTranslation> accessControlTranslation() {
-        return this.accessControlTranslation == null ? Optional.empty() : Optional.ofNullable(this.accessControlTranslation);
+        return Optional.ofNullable(this.accessControlTranslation);
     }
 
     @Import(name="account")
-      private final @Nullable String account;
+    private @Nullable String account;
 
     public Optional<String> account() {
-        return this.account == null ? Optional.empty() : Optional.ofNullable(this.account);
+        return Optional.ofNullable(this.account);
     }
 
     @Import(name="bucket", required=true)
-      private final String bucket;
+    private String bucket;
 
     public String bucket() {
         return this.bucket;
     }
 
     @Import(name="encryptionConfiguration")
-      private final @Nullable BucketEncryptionConfiguration encryptionConfiguration;
+    private @Nullable BucketEncryptionConfiguration encryptionConfiguration;
 
     public Optional<BucketEncryptionConfiguration> encryptionConfiguration() {
-        return this.encryptionConfiguration == null ? Optional.empty() : Optional.ofNullable(this.encryptionConfiguration);
+        return Optional.ofNullable(this.encryptionConfiguration);
     }
 
     @Import(name="metrics")
-      private final @Nullable BucketMetrics metrics;
+    private @Nullable BucketMetrics metrics;
 
     public Optional<BucketMetrics> metrics() {
-        return this.metrics == null ? Optional.empty() : Optional.ofNullable(this.metrics);
+        return Optional.ofNullable(this.metrics);
     }
 
     @Import(name="replicationTime")
-      private final @Nullable BucketReplicationTime replicationTime;
+    private @Nullable BucketReplicationTime replicationTime;
 
     public Optional<BucketReplicationTime> replicationTime() {
-        return this.replicationTime == null ? Optional.empty() : Optional.ofNullable(this.replicationTime);
+        return Optional.ofNullable(this.replicationTime);
     }
 
     /**
@@ -70,100 +70,81 @@ public final class BucketReplicationDestination extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="storageClass")
-      private final @Nullable BucketReplicationDestinationStorageClass storageClass;
+    private @Nullable BucketReplicationDestinationStorageClass storageClass;
 
     public Optional<BucketReplicationDestinationStorageClass> storageClass() {
-        return this.storageClass == null ? Optional.empty() : Optional.ofNullable(this.storageClass);
+        return Optional.ofNullable(this.storageClass);
     }
 
-    public BucketReplicationDestination(
-        @Nullable BucketAccessControlTranslation accessControlTranslation,
-        @Nullable String account,
-        String bucket,
-        @Nullable BucketEncryptionConfiguration encryptionConfiguration,
-        @Nullable BucketMetrics metrics,
-        @Nullable BucketReplicationTime replicationTime,
-        @Nullable BucketReplicationDestinationStorageClass storageClass) {
-        this.accessControlTranslation = accessControlTranslation;
-        this.account = account;
-        this.bucket = Objects.requireNonNull(bucket, "expected parameter 'bucket' to be non-null");
-        this.encryptionConfiguration = encryptionConfiguration;
-        this.metrics = metrics;
-        this.replicationTime = replicationTime;
-        this.storageClass = storageClass;
-    }
+    private BucketReplicationDestination() {}
 
-    private BucketReplicationDestination() {
-        this.accessControlTranslation = null;
-        this.account = null;
-        this.bucket = null;
-        this.encryptionConfiguration = null;
-        this.metrics = null;
-        this.replicationTime = null;
-        this.storageClass = null;
+    private BucketReplicationDestination(BucketReplicationDestination $) {
+        this.accessControlTranslation = $.accessControlTranslation;
+        this.account = $.account;
+        this.bucket = $.bucket;
+        this.encryptionConfiguration = $.encryptionConfiguration;
+        this.metrics = $.metrics;
+        this.replicationTime = $.replicationTime;
+        this.storageClass = $.storageClass;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BucketReplicationDestination defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable BucketAccessControlTranslation accessControlTranslation;
-        private @Nullable String account;
-        private String bucket;
-        private @Nullable BucketEncryptionConfiguration encryptionConfiguration;
-        private @Nullable BucketMetrics metrics;
-        private @Nullable BucketReplicationTime replicationTime;
-        private @Nullable BucketReplicationDestinationStorageClass storageClass;
+        private BucketReplicationDestination $;
 
         public Builder() {
-    	      // Empty
+            $ = new BucketReplicationDestination();
         }
 
         public Builder(BucketReplicationDestination defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accessControlTranslation = defaults.accessControlTranslation;
-    	      this.account = defaults.account;
-    	      this.bucket = defaults.bucket;
-    	      this.encryptionConfiguration = defaults.encryptionConfiguration;
-    	      this.metrics = defaults.metrics;
-    	      this.replicationTime = defaults.replicationTime;
-    	      this.storageClass = defaults.storageClass;
+            $ = new BucketReplicationDestination(Objects.requireNonNull(defaults));
         }
 
         public Builder accessControlTranslation(@Nullable BucketAccessControlTranslation accessControlTranslation) {
-            this.accessControlTranslation = accessControlTranslation;
+            $.accessControlTranslation = accessControlTranslation;
             return this;
         }
+
         public Builder account(@Nullable String account) {
-            this.account = account;
+            $.account = account;
             return this;
         }
+
         public Builder bucket(String bucket) {
-            this.bucket = Objects.requireNonNull(bucket);
+            $.bucket = bucket;
             return this;
         }
+
         public Builder encryptionConfiguration(@Nullable BucketEncryptionConfiguration encryptionConfiguration) {
-            this.encryptionConfiguration = encryptionConfiguration;
+            $.encryptionConfiguration = encryptionConfiguration;
             return this;
         }
+
         public Builder metrics(@Nullable BucketMetrics metrics) {
-            this.metrics = metrics;
+            $.metrics = metrics;
             return this;
         }
+
         public Builder replicationTime(@Nullable BucketReplicationTime replicationTime) {
-            this.replicationTime = replicationTime;
+            $.replicationTime = replicationTime;
             return this;
         }
+
         public Builder storageClass(@Nullable BucketReplicationDestinationStorageClass storageClass) {
-            this.storageClass = storageClass;
+            $.storageClass = storageClass;
             return this;
-        }        public BucketReplicationDestination build() {
-            return new BucketReplicationDestination(accessControlTranslation, account, bucket, encryptionConfiguration, metrics, replicationTime, storageClass);
+        }
+
+        public BucketReplicationDestination build() {
+            $.bucket = Objects.requireNonNull($.bucket, "expected parameter 'bucket' to be non-null");
+            return $;
         }
     }
+
 }

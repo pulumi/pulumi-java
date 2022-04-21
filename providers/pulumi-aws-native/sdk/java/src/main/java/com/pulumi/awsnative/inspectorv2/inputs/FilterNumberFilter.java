@@ -15,62 +15,57 @@ public final class FilterNumberFilter extends com.pulumi.resources.InvokeArgs {
     public static final FilterNumberFilter Empty = new FilterNumberFilter();
 
     @Import(name="lowerInclusive")
-      private final @Nullable Double lowerInclusive;
+    private @Nullable Double lowerInclusive;
 
     public Optional<Double> lowerInclusive() {
-        return this.lowerInclusive == null ? Optional.empty() : Optional.ofNullable(this.lowerInclusive);
+        return Optional.ofNullable(this.lowerInclusive);
     }
 
     @Import(name="upperInclusive")
-      private final @Nullable Double upperInclusive;
+    private @Nullable Double upperInclusive;
 
     public Optional<Double> upperInclusive() {
-        return this.upperInclusive == null ? Optional.empty() : Optional.ofNullable(this.upperInclusive);
+        return Optional.ofNullable(this.upperInclusive);
     }
 
-    public FilterNumberFilter(
-        @Nullable Double lowerInclusive,
-        @Nullable Double upperInclusive) {
-        this.lowerInclusive = lowerInclusive;
-        this.upperInclusive = upperInclusive;
-    }
+    private FilterNumberFilter() {}
 
-    private FilterNumberFilter() {
-        this.lowerInclusive = null;
-        this.upperInclusive = null;
+    private FilterNumberFilter(FilterNumberFilter $) {
+        this.lowerInclusive = $.lowerInclusive;
+        this.upperInclusive = $.upperInclusive;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FilterNumberFilter defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Double lowerInclusive;
-        private @Nullable Double upperInclusive;
+        private FilterNumberFilter $;
 
         public Builder() {
-    	      // Empty
+            $ = new FilterNumberFilter();
         }
 
         public Builder(FilterNumberFilter defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.lowerInclusive = defaults.lowerInclusive;
-    	      this.upperInclusive = defaults.upperInclusive;
+            $ = new FilterNumberFilter(Objects.requireNonNull(defaults));
         }
 
         public Builder lowerInclusive(@Nullable Double lowerInclusive) {
-            this.lowerInclusive = lowerInclusive;
+            $.lowerInclusive = lowerInclusive;
             return this;
         }
+
         public Builder upperInclusive(@Nullable Double upperInclusive) {
-            this.upperInclusive = upperInclusive;
+            $.upperInclusive = upperInclusive;
             return this;
-        }        public FilterNumberFilter build() {
-            return new FilterNumberFilter(lowerInclusive, upperInclusive);
+        }
+
+        public FilterNumberFilter build() {
+            return $;
         }
     }
+
 }

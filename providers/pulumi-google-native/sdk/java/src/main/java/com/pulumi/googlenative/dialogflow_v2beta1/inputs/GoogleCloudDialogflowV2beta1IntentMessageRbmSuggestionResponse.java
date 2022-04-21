@@ -22,7 +22,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestionRespons
      * 
      */
     @Import(name="action", required=true)
-      private final GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionResponse action;
+    private GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionResponse action;
 
     public GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionResponse action() {
         return this.action;
@@ -33,55 +33,52 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestionRespons
      * 
      */
     @Import(name="reply", required=true)
-      private final GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedReplyResponse reply;
+    private GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedReplyResponse reply;
 
     public GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedReplyResponse reply() {
         return this.reply;
     }
 
-    public GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestionResponse(
-        GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionResponse action,
-        GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedReplyResponse reply) {
-        this.action = Objects.requireNonNull(action, "expected parameter 'action' to be non-null");
-        this.reply = Objects.requireNonNull(reply, "expected parameter 'reply' to be non-null");
-    }
+    private GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestionResponse() {}
 
-    private GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestionResponse() {
-        this.action = null;
-        this.reply = null;
+    private GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestionResponse(GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestionResponse $) {
+        this.action = $.action;
+        this.reply = $.reply;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestionResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionResponse action;
-        private GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedReplyResponse reply;
+        private GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestionResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestionResponse();
         }
 
         public Builder(GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestionResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.action = defaults.action;
-    	      this.reply = defaults.reply;
+            $ = new GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestionResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder action(GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionResponse action) {
-            this.action = Objects.requireNonNull(action);
+            $.action = action;
             return this;
         }
+
         public Builder reply(GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedReplyResponse reply) {
-            this.reply = Objects.requireNonNull(reply);
+            $.reply = reply;
             return this;
-        }        public GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestionResponse build() {
-            return new GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestionResponse(action, reply);
+        }
+
+        public GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestionResponse build() {
+            $.action = Objects.requireNonNull($.action, "expected parameter 'action' to be non-null");
+            $.reply = Objects.requireNonNull($.reply, "expected parameter 'reply' to be non-null");
+            return $;
         }
     }
+
 }

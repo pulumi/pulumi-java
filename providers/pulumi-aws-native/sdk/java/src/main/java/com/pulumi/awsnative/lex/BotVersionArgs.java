@@ -6,10 +6,10 @@ package com.pulumi.awsnative.lex;
 import com.pulumi.awsnative.lex.inputs.BotVersionLocaleSpecificationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -18,93 +18,88 @@ public final class BotVersionArgs extends com.pulumi.resources.ResourceArgs {
     public static final BotVersionArgs Empty = new BotVersionArgs();
 
     @Import(name="botId", required=true)
-      private final Output<String> botId;
+    private Output<String> botId;
 
     public Output<String> botId() {
         return this.botId;
     }
 
     @Import(name="botVersionLocaleSpecification", required=true)
-      private final Output<List<BotVersionLocaleSpecificationArgs>> botVersionLocaleSpecification;
+    private Output<List<BotVersionLocaleSpecificationArgs>> botVersionLocaleSpecification;
 
     public Output<List<BotVersionLocaleSpecificationArgs>> botVersionLocaleSpecification() {
         return this.botVersionLocaleSpecification;
     }
 
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
-    public BotVersionArgs(
-        Output<String> botId,
-        Output<List<BotVersionLocaleSpecificationArgs>> botVersionLocaleSpecification,
-        @Nullable Output<String> description) {
-        this.botId = Objects.requireNonNull(botId, "expected parameter 'botId' to be non-null");
-        this.botVersionLocaleSpecification = Objects.requireNonNull(botVersionLocaleSpecification, "expected parameter 'botVersionLocaleSpecification' to be non-null");
-        this.description = description;
-    }
+    private BotVersionArgs() {}
 
-    private BotVersionArgs() {
-        this.botId = Codegen.empty();
-        this.botVersionLocaleSpecification = Codegen.empty();
-        this.description = Codegen.empty();
+    private BotVersionArgs(BotVersionArgs $) {
+        this.botId = $.botId;
+        this.botVersionLocaleSpecification = $.botVersionLocaleSpecification;
+        this.description = $.description;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BotVersionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> botId;
-        private Output<List<BotVersionLocaleSpecificationArgs>> botVersionLocaleSpecification;
-        private @Nullable Output<String> description;
+        private BotVersionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new BotVersionArgs();
         }
 
         public Builder(BotVersionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.botId = defaults.botId;
-    	      this.botVersionLocaleSpecification = defaults.botVersionLocaleSpecification;
-    	      this.description = defaults.description;
+            $ = new BotVersionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder botId(Output<String> botId) {
-            this.botId = Objects.requireNonNull(botId);
+            $.botId = botId;
             return this;
         }
+
         public Builder botId(String botId) {
-            this.botId = Output.of(Objects.requireNonNull(botId));
-            return this;
+            return botId(Output.of(botId));
         }
+
         public Builder botVersionLocaleSpecification(Output<List<BotVersionLocaleSpecificationArgs>> botVersionLocaleSpecification) {
-            this.botVersionLocaleSpecification = Objects.requireNonNull(botVersionLocaleSpecification);
+            $.botVersionLocaleSpecification = botVersionLocaleSpecification;
             return this;
         }
+
         public Builder botVersionLocaleSpecification(List<BotVersionLocaleSpecificationArgs> botVersionLocaleSpecification) {
-            this.botVersionLocaleSpecification = Output.of(Objects.requireNonNull(botVersionLocaleSpecification));
-            return this;
+            return botVersionLocaleSpecification(Output.of(botVersionLocaleSpecification));
         }
+
         public Builder botVersionLocaleSpecification(BotVersionLocaleSpecificationArgs... botVersionLocaleSpecification) {
             return botVersionLocaleSpecification(List.of(botVersionLocaleSpecification));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
-        }        public BotVersionArgs build() {
-            return new BotVersionArgs(botId, botVersionLocaleSpecification, description);
+
+        public Builder description(String description) {
+            return description(Output.of(description));
+        }
+
+        public BotVersionArgs build() {
+            $.botId = Objects.requireNonNull($.botId, "expected parameter 'botId' to be non-null");
+            $.botVersionLocaleSpecification = Objects.requireNonNull($.botVersionLocaleSpecification, "expected parameter 'botVersionLocaleSpecification' to be non-null");
+            return $;
         }
     }
+
 }

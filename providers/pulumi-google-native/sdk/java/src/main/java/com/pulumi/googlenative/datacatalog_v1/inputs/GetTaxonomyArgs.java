@@ -15,78 +15,72 @@ public final class GetTaxonomyArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetTaxonomyArgs Empty = new GetTaxonomyArgs();
 
     @Import(name="location", required=true)
-      private final String location;
+    private String location;
 
     public String location() {
         return this.location;
     }
 
     @Import(name="project")
-      private final @Nullable String project;
+    private @Nullable String project;
 
     public Optional<String> project() {
-        return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
+        return Optional.ofNullable(this.project);
     }
 
     @Import(name="taxonomyId", required=true)
-      private final String taxonomyId;
+    private String taxonomyId;
 
     public String taxonomyId() {
         return this.taxonomyId;
     }
 
-    public GetTaxonomyArgs(
-        String location,
-        @Nullable String project,
-        String taxonomyId) {
-        this.location = Objects.requireNonNull(location, "expected parameter 'location' to be non-null");
-        this.project = project;
-        this.taxonomyId = Objects.requireNonNull(taxonomyId, "expected parameter 'taxonomyId' to be non-null");
-    }
+    private GetTaxonomyArgs() {}
 
-    private GetTaxonomyArgs() {
-        this.location = null;
-        this.project = null;
-        this.taxonomyId = null;
+    private GetTaxonomyArgs(GetTaxonomyArgs $) {
+        this.location = $.location;
+        this.project = $.project;
+        this.taxonomyId = $.taxonomyId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetTaxonomyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String location;
-        private @Nullable String project;
-        private String taxonomyId;
+        private GetTaxonomyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetTaxonomyArgs();
         }
 
         public Builder(GetTaxonomyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.location = defaults.location;
-    	      this.project = defaults.project;
-    	      this.taxonomyId = defaults.taxonomyId;
+            $ = new GetTaxonomyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder location(String location) {
-            this.location = Objects.requireNonNull(location);
+            $.location = location;
             return this;
         }
+
         public Builder project(@Nullable String project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
+
         public Builder taxonomyId(String taxonomyId) {
-            this.taxonomyId = Objects.requireNonNull(taxonomyId);
+            $.taxonomyId = taxonomyId;
             return this;
-        }        public GetTaxonomyArgs build() {
-            return new GetTaxonomyArgs(location, project, taxonomyId);
+        }
+
+        public GetTaxonomyArgs build() {
+            $.location = Objects.requireNonNull($.location, "expected parameter 'location' to be non-null");
+            $.taxonomyId = Objects.requireNonNull($.taxonomyId, "expected parameter 'taxonomyId' to be non-null");
+            return $;
         }
     }
+
 }

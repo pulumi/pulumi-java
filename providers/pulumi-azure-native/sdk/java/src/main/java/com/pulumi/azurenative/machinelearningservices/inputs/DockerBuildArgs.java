@@ -9,6 +9,7 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +28,10 @@ public final class DockerBuildArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="context")
-      private final @Nullable Output<String> context;
+    private @Nullable Output<String> context;
 
-    public Output<String> context() {
-        return this.context == null ? Codegen.empty() : this.context;
+    public Optional<Output<String>> context() {
+        return Optional.ofNullable(this.context);
     }
 
     /**
@@ -39,7 +40,7 @@ public final class DockerBuildArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="dockerSpecificationType", required=true)
-      private final Output<String> dockerSpecificationType;
+    private Output<String> dockerSpecificationType;
 
     public Output<String> dockerSpecificationType() {
         return this.dockerSpecificationType;
@@ -51,7 +52,7 @@ public final class DockerBuildArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="dockerfile", required=true)
-      private final Output<String> dockerfile;
+    private Output<String> dockerfile;
 
     public Output<String> dockerfile() {
         return this.dockerfile;
@@ -62,89 +63,80 @@ public final class DockerBuildArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="platform")
-      private final @Nullable Output<DockerImagePlatformArgs> platform;
+    private @Nullable Output<DockerImagePlatformArgs> platform;
 
-    public Output<DockerImagePlatformArgs> platform() {
-        return this.platform == null ? Codegen.empty() : this.platform;
+    public Optional<Output<DockerImagePlatformArgs>> platform() {
+        return Optional.ofNullable(this.platform);
     }
 
-    public DockerBuildArgs(
-        @Nullable Output<String> context,
-        Output<String> dockerSpecificationType,
-        Output<String> dockerfile,
-        @Nullable Output<DockerImagePlatformArgs> platform) {
-        this.context = context;
-        this.dockerSpecificationType = Codegen.stringProp("dockerSpecificationType").output().arg(dockerSpecificationType).require();
-        this.dockerfile = Objects.requireNonNull(dockerfile, "expected parameter 'dockerfile' to be non-null");
-        this.platform = platform;
-    }
+    private DockerBuildArgs() {}
 
-    private DockerBuildArgs() {
-        this.context = Codegen.empty();
-        this.dockerSpecificationType = Codegen.empty();
-        this.dockerfile = Codegen.empty();
-        this.platform = Codegen.empty();
+    private DockerBuildArgs(DockerBuildArgs $) {
+        this.context = $.context;
+        this.dockerSpecificationType = $.dockerSpecificationType;
+        this.dockerfile = $.dockerfile;
+        this.platform = $.platform;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DockerBuildArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> context;
-        private Output<String> dockerSpecificationType;
-        private Output<String> dockerfile;
-        private @Nullable Output<DockerImagePlatformArgs> platform;
+        private DockerBuildArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DockerBuildArgs();
         }
 
         public Builder(DockerBuildArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.context = defaults.context;
-    	      this.dockerSpecificationType = defaults.dockerSpecificationType;
-    	      this.dockerfile = defaults.dockerfile;
-    	      this.platform = defaults.platform;
+            $ = new DockerBuildArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder context(@Nullable Output<String> context) {
-            this.context = context;
+            $.context = context;
             return this;
         }
-        public Builder context(@Nullable String context) {
-            this.context = Codegen.ofNullable(context);
-            return this;
+
+        public Builder context(String context) {
+            return context(Output.of(context));
         }
+
         public Builder dockerSpecificationType(Output<String> dockerSpecificationType) {
-            this.dockerSpecificationType = Objects.requireNonNull(dockerSpecificationType);
+            $.dockerSpecificationType = dockerSpecificationType;
             return this;
         }
+
         public Builder dockerSpecificationType(String dockerSpecificationType) {
-            this.dockerSpecificationType = Output.of(Objects.requireNonNull(dockerSpecificationType));
-            return this;
+            return dockerSpecificationType(Output.of(dockerSpecificationType));
         }
+
         public Builder dockerfile(Output<String> dockerfile) {
-            this.dockerfile = Objects.requireNonNull(dockerfile);
+            $.dockerfile = dockerfile;
             return this;
         }
+
         public Builder dockerfile(String dockerfile) {
-            this.dockerfile = Output.of(Objects.requireNonNull(dockerfile));
-            return this;
+            return dockerfile(Output.of(dockerfile));
         }
+
         public Builder platform(@Nullable Output<DockerImagePlatformArgs> platform) {
-            this.platform = platform;
+            $.platform = platform;
             return this;
         }
-        public Builder platform(@Nullable DockerImagePlatformArgs platform) {
-            this.platform = Codegen.ofNullable(platform);
-            return this;
-        }        public DockerBuildArgs build() {
-            return new DockerBuildArgs(context, dockerSpecificationType, dockerfile, platform);
+
+        public Builder platform(DockerImagePlatformArgs platform) {
+            return platform(Output.of(platform));
+        }
+
+        public DockerBuildArgs build() {
+            $.dockerSpecificationType = Codegen.stringProp("dockerSpecificationType").output().arg($.dockerSpecificationType).require();
+            $.dockerfile = Objects.requireNonNull($.dockerfile, "expected parameter 'dockerfile' to be non-null");
+            return $;
         }
     }
+
 }

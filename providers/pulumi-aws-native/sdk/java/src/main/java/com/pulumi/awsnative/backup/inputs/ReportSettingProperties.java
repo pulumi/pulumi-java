@@ -24,10 +24,10 @@ public final class ReportSettingProperties extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="frameworkArns")
-      private final @Nullable List<String> frameworkArns;
+    private @Nullable List<String> frameworkArns;
 
-    public List<String> frameworkArns() {
-        return this.frameworkArns == null ? List.of() : this.frameworkArns;
+    public Optional<List<String>> frameworkArns() {
+        return Optional.ofNullable(this.frameworkArns);
     }
 
     /**
@@ -35,58 +35,55 @@ public final class ReportSettingProperties extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="reportTemplate", required=true)
-      private final String reportTemplate;
+    private String reportTemplate;
 
     public String reportTemplate() {
         return this.reportTemplate;
     }
 
-    public ReportSettingProperties(
-        @Nullable List<String> frameworkArns,
-        String reportTemplate) {
-        this.frameworkArns = frameworkArns;
-        this.reportTemplate = Objects.requireNonNull(reportTemplate, "expected parameter 'reportTemplate' to be non-null");
-    }
+    private ReportSettingProperties() {}
 
-    private ReportSettingProperties() {
-        this.frameworkArns = List.of();
-        this.reportTemplate = null;
+    private ReportSettingProperties(ReportSettingProperties $) {
+        this.frameworkArns = $.frameworkArns;
+        this.reportTemplate = $.reportTemplate;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ReportSettingProperties defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<String> frameworkArns;
-        private String reportTemplate;
+        private ReportSettingProperties $;
 
         public Builder() {
-    	      // Empty
+            $ = new ReportSettingProperties();
         }
 
         public Builder(ReportSettingProperties defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.frameworkArns = defaults.frameworkArns;
-    	      this.reportTemplate = defaults.reportTemplate;
+            $ = new ReportSettingProperties(Objects.requireNonNull(defaults));
         }
 
         public Builder frameworkArns(@Nullable List<String> frameworkArns) {
-            this.frameworkArns = frameworkArns;
+            $.frameworkArns = frameworkArns;
             return this;
         }
+
         public Builder frameworkArns(String... frameworkArns) {
             return frameworkArns(List.of(frameworkArns));
         }
+
         public Builder reportTemplate(String reportTemplate) {
-            this.reportTemplate = Objects.requireNonNull(reportTemplate);
+            $.reportTemplate = reportTemplate;
             return this;
-        }        public ReportSettingProperties build() {
-            return new ReportSettingProperties(frameworkArns, reportTemplate);
+        }
+
+        public ReportSettingProperties build() {
+            $.reportTemplate = Objects.requireNonNull($.reportTemplate, "expected parameter 'reportTemplate' to be non-null");
+            return $;
         }
     }
+
 }

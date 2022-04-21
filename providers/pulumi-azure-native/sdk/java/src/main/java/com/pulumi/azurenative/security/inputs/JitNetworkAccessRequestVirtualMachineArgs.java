@@ -6,7 +6,6 @@ package com.pulumi.azurenative.security.inputs;
 import com.pulumi.azurenative.security.inputs.JitNetworkAccessRequestPortArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +20,7 @@ public final class JitNetworkAccessRequestVirtualMachineArgs extends com.pulumi.
      * 
      */
     @Import(name="id", required=true)
-      private final Output<String> id;
+    private Output<String> id;
 
     public Output<String> id() {
         return this.id;
@@ -32,66 +31,64 @@ public final class JitNetworkAccessRequestVirtualMachineArgs extends com.pulumi.
      * 
      */
     @Import(name="ports", required=true)
-      private final Output<List<JitNetworkAccessRequestPortArgs>> ports;
+    private Output<List<JitNetworkAccessRequestPortArgs>> ports;
 
     public Output<List<JitNetworkAccessRequestPortArgs>> ports() {
         return this.ports;
     }
 
-    public JitNetworkAccessRequestVirtualMachineArgs(
-        Output<String> id,
-        Output<List<JitNetworkAccessRequestPortArgs>> ports) {
-        this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
-        this.ports = Objects.requireNonNull(ports, "expected parameter 'ports' to be non-null");
-    }
+    private JitNetworkAccessRequestVirtualMachineArgs() {}
 
-    private JitNetworkAccessRequestVirtualMachineArgs() {
-        this.id = Codegen.empty();
-        this.ports = Codegen.empty();
+    private JitNetworkAccessRequestVirtualMachineArgs(JitNetworkAccessRequestVirtualMachineArgs $) {
+        this.id = $.id;
+        this.ports = $.ports;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(JitNetworkAccessRequestVirtualMachineArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> id;
-        private Output<List<JitNetworkAccessRequestPortArgs>> ports;
+        private JitNetworkAccessRequestVirtualMachineArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new JitNetworkAccessRequestVirtualMachineArgs();
         }
 
         public Builder(JitNetworkAccessRequestVirtualMachineArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.id = defaults.id;
-    	      this.ports = defaults.ports;
+            $ = new JitNetworkAccessRequestVirtualMachineArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder id(Output<String> id) {
-            this.id = Objects.requireNonNull(id);
+            $.id = id;
             return this;
         }
+
         public Builder id(String id) {
-            this.id = Output.of(Objects.requireNonNull(id));
-            return this;
+            return id(Output.of(id));
         }
+
         public Builder ports(Output<List<JitNetworkAccessRequestPortArgs>> ports) {
-            this.ports = Objects.requireNonNull(ports);
+            $.ports = ports;
             return this;
         }
+
         public Builder ports(List<JitNetworkAccessRequestPortArgs> ports) {
-            this.ports = Output.of(Objects.requireNonNull(ports));
-            return this;
+            return ports(Output.of(ports));
         }
+
         public Builder ports(JitNetworkAccessRequestPortArgs... ports) {
             return ports(List.of(ports));
-        }        public JitNetworkAccessRequestVirtualMachineArgs build() {
-            return new JitNetworkAccessRequestVirtualMachineArgs(id, ports);
+        }
+
+        public JitNetworkAccessRequestVirtualMachineArgs build() {
+            $.id = Objects.requireNonNull($.id, "expected parameter 'id' to be non-null");
+            $.ports = Objects.requireNonNull($.ports, "expected parameter 'ports' to be non-null");
+            return $;
         }
     }
+
 }

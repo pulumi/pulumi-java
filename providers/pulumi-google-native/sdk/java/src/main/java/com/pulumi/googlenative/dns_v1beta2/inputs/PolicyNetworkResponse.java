@@ -13,7 +13,7 @@ public final class PolicyNetworkResponse extends com.pulumi.resources.InvokeArgs
     public static final PolicyNetworkResponse Empty = new PolicyNetworkResponse();
 
     @Import(name="kind", required=true)
-      private final String kind;
+    private String kind;
 
     public String kind() {
         return this.kind;
@@ -24,55 +24,52 @@ public final class PolicyNetworkResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="networkUrl", required=true)
-      private final String networkUrl;
+    private String networkUrl;
 
     public String networkUrl() {
         return this.networkUrl;
     }
 
-    public PolicyNetworkResponse(
-        String kind,
-        String networkUrl) {
-        this.kind = Objects.requireNonNull(kind, "expected parameter 'kind' to be non-null");
-        this.networkUrl = Objects.requireNonNull(networkUrl, "expected parameter 'networkUrl' to be non-null");
-    }
+    private PolicyNetworkResponse() {}
 
-    private PolicyNetworkResponse() {
-        this.kind = null;
-        this.networkUrl = null;
+    private PolicyNetworkResponse(PolicyNetworkResponse $) {
+        this.kind = $.kind;
+        this.networkUrl = $.networkUrl;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PolicyNetworkResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String kind;
-        private String networkUrl;
+        private PolicyNetworkResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new PolicyNetworkResponse();
         }
 
         public Builder(PolicyNetworkResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.kind = defaults.kind;
-    	      this.networkUrl = defaults.networkUrl;
+            $ = new PolicyNetworkResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder kind(String kind) {
-            this.kind = Objects.requireNonNull(kind);
+            $.kind = kind;
             return this;
         }
+
         public Builder networkUrl(String networkUrl) {
-            this.networkUrl = Objects.requireNonNull(networkUrl);
+            $.networkUrl = networkUrl;
             return this;
-        }        public PolicyNetworkResponse build() {
-            return new PolicyNetworkResponse(kind, networkUrl);
+        }
+
+        public PolicyNetworkResponse build() {
+            $.kind = Objects.requireNonNull($.kind, "expected parameter 'kind' to be non-null");
+            $.networkUrl = Objects.requireNonNull($.networkUrl, "expected parameter 'networkUrl' to be non-null");
+            return $;
         }
     }
+
 }

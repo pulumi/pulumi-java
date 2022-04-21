@@ -21,7 +21,7 @@ public final class MetricDescriptorMetadataResponse extends com.pulumi.resources
      * 
      */
     @Import(name="ingestDelay", required=true)
-      private final String ingestDelay;
+    private String ingestDelay;
 
     public String ingestDelay() {
         return this.ingestDelay;
@@ -32,55 +32,52 @@ public final class MetricDescriptorMetadataResponse extends com.pulumi.resources
      * 
      */
     @Import(name="samplePeriod", required=true)
-      private final String samplePeriod;
+    private String samplePeriod;
 
     public String samplePeriod() {
         return this.samplePeriod;
     }
 
-    public MetricDescriptorMetadataResponse(
-        String ingestDelay,
-        String samplePeriod) {
-        this.ingestDelay = Objects.requireNonNull(ingestDelay, "expected parameter 'ingestDelay' to be non-null");
-        this.samplePeriod = Objects.requireNonNull(samplePeriod, "expected parameter 'samplePeriod' to be non-null");
-    }
+    private MetricDescriptorMetadataResponse() {}
 
-    private MetricDescriptorMetadataResponse() {
-        this.ingestDelay = null;
-        this.samplePeriod = null;
+    private MetricDescriptorMetadataResponse(MetricDescriptorMetadataResponse $) {
+        this.ingestDelay = $.ingestDelay;
+        this.samplePeriod = $.samplePeriod;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MetricDescriptorMetadataResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String ingestDelay;
-        private String samplePeriod;
+        private MetricDescriptorMetadataResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new MetricDescriptorMetadataResponse();
         }
 
         public Builder(MetricDescriptorMetadataResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.ingestDelay = defaults.ingestDelay;
-    	      this.samplePeriod = defaults.samplePeriod;
+            $ = new MetricDescriptorMetadataResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder ingestDelay(String ingestDelay) {
-            this.ingestDelay = Objects.requireNonNull(ingestDelay);
+            $.ingestDelay = ingestDelay;
             return this;
         }
+
         public Builder samplePeriod(String samplePeriod) {
-            this.samplePeriod = Objects.requireNonNull(samplePeriod);
+            $.samplePeriod = samplePeriod;
             return this;
-        }        public MetricDescriptorMetadataResponse build() {
-            return new MetricDescriptorMetadataResponse(ingestDelay, samplePeriod);
+        }
+
+        public MetricDescriptorMetadataResponse build() {
+            $.ingestDelay = Objects.requireNonNull($.ingestDelay, "expected parameter 'ingestDelay' to be non-null");
+            $.samplePeriod = Objects.requireNonNull($.samplePeriod, "expected parameter 'samplePeriod' to be non-null");
+            return $;
         }
     }
+
 }

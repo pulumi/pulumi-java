@@ -5,9 +5,9 @@ package com.pulumi.awsnative.ec2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -16,70 +16,65 @@ public final class SpotFleetAcceleratorCountRequestArgs extends com.pulumi.resou
     public static final SpotFleetAcceleratorCountRequestArgs Empty = new SpotFleetAcceleratorCountRequestArgs();
 
     @Import(name="max")
-      private final @Nullable Output<Integer> max;
+    private @Nullable Output<Integer> max;
 
-    public Output<Integer> max() {
-        return this.max == null ? Codegen.empty() : this.max;
+    public Optional<Output<Integer>> max() {
+        return Optional.ofNullable(this.max);
     }
 
     @Import(name="min")
-      private final @Nullable Output<Integer> min;
+    private @Nullable Output<Integer> min;
 
-    public Output<Integer> min() {
-        return this.min == null ? Codegen.empty() : this.min;
+    public Optional<Output<Integer>> min() {
+        return Optional.ofNullable(this.min);
     }
 
-    public SpotFleetAcceleratorCountRequestArgs(
-        @Nullable Output<Integer> max,
-        @Nullable Output<Integer> min) {
-        this.max = max;
-        this.min = min;
-    }
+    private SpotFleetAcceleratorCountRequestArgs() {}
 
-    private SpotFleetAcceleratorCountRequestArgs() {
-        this.max = Codegen.empty();
-        this.min = Codegen.empty();
+    private SpotFleetAcceleratorCountRequestArgs(SpotFleetAcceleratorCountRequestArgs $) {
+        this.max = $.max;
+        this.min = $.min;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SpotFleetAcceleratorCountRequestArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> max;
-        private @Nullable Output<Integer> min;
+        private SpotFleetAcceleratorCountRequestArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SpotFleetAcceleratorCountRequestArgs();
         }
 
         public Builder(SpotFleetAcceleratorCountRequestArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.max = defaults.max;
-    	      this.min = defaults.min;
+            $ = new SpotFleetAcceleratorCountRequestArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder max(@Nullable Output<Integer> max) {
-            this.max = max;
+            $.max = max;
             return this;
         }
-        public Builder max(@Nullable Integer max) {
-            this.max = Codegen.ofNullable(max);
-            return this;
+
+        public Builder max(Integer max) {
+            return max(Output.of(max));
         }
+
         public Builder min(@Nullable Output<Integer> min) {
-            this.min = min;
+            $.min = min;
             return this;
         }
-        public Builder min(@Nullable Integer min) {
-            this.min = Codegen.ofNullable(min);
-            return this;
-        }        public SpotFleetAcceleratorCountRequestArgs build() {
-            return new SpotFleetAcceleratorCountRequestArgs(max, min);
+
+        public Builder min(Integer min) {
+            return min(Output.of(min));
+        }
+
+        public SpotFleetAcceleratorCountRequestArgs build() {
+            return $;
         }
     }
+
 }

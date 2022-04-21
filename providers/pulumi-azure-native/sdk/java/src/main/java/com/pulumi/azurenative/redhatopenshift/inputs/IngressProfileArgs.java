@@ -5,9 +5,9 @@ package com.pulumi.azurenative.redhatopenshift.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class IngressProfileArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="ip")
-      private final @Nullable Output<String> ip;
+    private @Nullable Output<String> ip;
 
-    public Output<String> ip() {
-        return this.ip == null ? Codegen.empty() : this.ip;
+    public Optional<Output<String>> ip() {
+        return Optional.ofNullable(this.ip);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class IngressProfileArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -46,76 +46,68 @@ public final class IngressProfileArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="visibility")
-      private final @Nullable Output<String> visibility;
+    private @Nullable Output<String> visibility;
 
-    public Output<String> visibility() {
-        return this.visibility == null ? Codegen.empty() : this.visibility;
+    public Optional<Output<String>> visibility() {
+        return Optional.ofNullable(this.visibility);
     }
 
-    public IngressProfileArgs(
-        @Nullable Output<String> ip,
-        @Nullable Output<String> name,
-        @Nullable Output<String> visibility) {
-        this.ip = ip;
-        this.name = name;
-        this.visibility = visibility;
-    }
+    private IngressProfileArgs() {}
 
-    private IngressProfileArgs() {
-        this.ip = Codegen.empty();
-        this.name = Codegen.empty();
-        this.visibility = Codegen.empty();
+    private IngressProfileArgs(IngressProfileArgs $) {
+        this.ip = $.ip;
+        this.name = $.name;
+        this.visibility = $.visibility;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(IngressProfileArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> ip;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> visibility;
+        private IngressProfileArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new IngressProfileArgs();
         }
 
         public Builder(IngressProfileArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.ip = defaults.ip;
-    	      this.name = defaults.name;
-    	      this.visibility = defaults.visibility;
+            $ = new IngressProfileArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder ip(@Nullable Output<String> ip) {
-            this.ip = ip;
+            $.ip = ip;
             return this;
         }
-        public Builder ip(@Nullable String ip) {
-            this.ip = Codegen.ofNullable(ip);
-            return this;
+
+        public Builder ip(String ip) {
+            return ip(Output.of(ip));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder visibility(@Nullable Output<String> visibility) {
-            this.visibility = visibility;
+            $.visibility = visibility;
             return this;
         }
-        public Builder visibility(@Nullable String visibility) {
-            this.visibility = Codegen.ofNullable(visibility);
-            return this;
-        }        public IngressProfileArgs build() {
-            return new IngressProfileArgs(ip, name, visibility);
+
+        public Builder visibility(String visibility) {
+            return visibility(Output.of(visibility));
+        }
+
+        public IngressProfileArgs build() {
+            return $;
         }
     }
+
 }

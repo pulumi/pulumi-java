@@ -5,10 +5,10 @@ package com.pulumi.googlenative.dataproc_v1beta2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class AcceleratorConfigArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="acceleratorCount")
-      private final @Nullable Output<Integer> acceleratorCount;
+    private @Nullable Output<Integer> acceleratorCount;
 
-    public Output<Integer> acceleratorCount() {
-        return this.acceleratorCount == null ? Codegen.empty() : this.acceleratorCount;
+    public Optional<Output<Integer>> acceleratorCount() {
+        return Optional.ofNullable(this.acceleratorCount);
     }
 
     /**
@@ -36,63 +36,58 @@ public final class AcceleratorConfigArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="acceleratorTypeUri")
-      private final @Nullable Output<String> acceleratorTypeUri;
+    private @Nullable Output<String> acceleratorTypeUri;
 
-    public Output<String> acceleratorTypeUri() {
-        return this.acceleratorTypeUri == null ? Codegen.empty() : this.acceleratorTypeUri;
+    public Optional<Output<String>> acceleratorTypeUri() {
+        return Optional.ofNullable(this.acceleratorTypeUri);
     }
 
-    public AcceleratorConfigArgs(
-        @Nullable Output<Integer> acceleratorCount,
-        @Nullable Output<String> acceleratorTypeUri) {
-        this.acceleratorCount = acceleratorCount;
-        this.acceleratorTypeUri = acceleratorTypeUri;
-    }
+    private AcceleratorConfigArgs() {}
 
-    private AcceleratorConfigArgs() {
-        this.acceleratorCount = Codegen.empty();
-        this.acceleratorTypeUri = Codegen.empty();
+    private AcceleratorConfigArgs(AcceleratorConfigArgs $) {
+        this.acceleratorCount = $.acceleratorCount;
+        this.acceleratorTypeUri = $.acceleratorTypeUri;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AcceleratorConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> acceleratorCount;
-        private @Nullable Output<String> acceleratorTypeUri;
+        private AcceleratorConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AcceleratorConfigArgs();
         }
 
         public Builder(AcceleratorConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.acceleratorCount = defaults.acceleratorCount;
-    	      this.acceleratorTypeUri = defaults.acceleratorTypeUri;
+            $ = new AcceleratorConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder acceleratorCount(@Nullable Output<Integer> acceleratorCount) {
-            this.acceleratorCount = acceleratorCount;
+            $.acceleratorCount = acceleratorCount;
             return this;
         }
-        public Builder acceleratorCount(@Nullable Integer acceleratorCount) {
-            this.acceleratorCount = Codegen.ofNullable(acceleratorCount);
-            return this;
+
+        public Builder acceleratorCount(Integer acceleratorCount) {
+            return acceleratorCount(Output.of(acceleratorCount));
         }
+
         public Builder acceleratorTypeUri(@Nullable Output<String> acceleratorTypeUri) {
-            this.acceleratorTypeUri = acceleratorTypeUri;
+            $.acceleratorTypeUri = acceleratorTypeUri;
             return this;
         }
-        public Builder acceleratorTypeUri(@Nullable String acceleratorTypeUri) {
-            this.acceleratorTypeUri = Codegen.ofNullable(acceleratorTypeUri);
-            return this;
-        }        public AcceleratorConfigArgs build() {
-            return new AcceleratorConfigArgs(acceleratorCount, acceleratorTypeUri);
+
+        public Builder acceleratorTypeUri(String acceleratorTypeUri) {
+            return acceleratorTypeUri(Output.of(acceleratorTypeUri));
+        }
+
+        public AcceleratorConfigArgs build() {
+            return $;
         }
     }
+
 }

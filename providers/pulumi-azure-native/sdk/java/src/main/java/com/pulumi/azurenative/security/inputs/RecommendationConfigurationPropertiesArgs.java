@@ -26,7 +26,7 @@ public final class RecommendationConfigurationPropertiesArgs extends com.pulumi.
      * 
      */
     @Import(name="recommendationType", required=true)
-      private final Output<Either<String,RecommendationType>> recommendationType;
+    private Output<Either<String,RecommendationType>> recommendationType;
 
     public Output<Either<String,RecommendationType>> recommendationType() {
         return this.recommendationType;
@@ -37,63 +37,60 @@ public final class RecommendationConfigurationPropertiesArgs extends com.pulumi.
      * 
      */
     @Import(name="status", required=true)
-      private final Output<Either<String,RecommendationConfigStatus>> status;
+    private Output<Either<String,RecommendationConfigStatus>> status;
 
     public Output<Either<String,RecommendationConfigStatus>> status() {
         return this.status;
     }
 
-    public RecommendationConfigurationPropertiesArgs(
-        Output<Either<String,RecommendationType>> recommendationType,
-        Output<Either<String,RecommendationConfigStatus>> status) {
-        this.recommendationType = Objects.requireNonNull(recommendationType, "expected parameter 'recommendationType' to be non-null");
-        this.status = Codegen.stringProp("status").left(RecommendationConfigStatus.class).output().arg(status).def("Enabled").require();
-    }
+    private RecommendationConfigurationPropertiesArgs() {}
 
-    private RecommendationConfigurationPropertiesArgs() {
-        this.recommendationType = Codegen.empty();
-        this.status = Codegen.empty();
+    private RecommendationConfigurationPropertiesArgs(RecommendationConfigurationPropertiesArgs $) {
+        this.recommendationType = $.recommendationType;
+        this.status = $.status;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RecommendationConfigurationPropertiesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Either<String,RecommendationType>> recommendationType;
-        private Output<Either<String,RecommendationConfigStatus>> status;
+        private RecommendationConfigurationPropertiesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RecommendationConfigurationPropertiesArgs();
         }
 
         public Builder(RecommendationConfigurationPropertiesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.recommendationType = defaults.recommendationType;
-    	      this.status = defaults.status;
+            $ = new RecommendationConfigurationPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder recommendationType(Output<Either<String,RecommendationType>> recommendationType) {
-            this.recommendationType = Objects.requireNonNull(recommendationType);
+            $.recommendationType = recommendationType;
             return this;
         }
+
         public Builder recommendationType(Either<String,RecommendationType> recommendationType) {
-            this.recommendationType = Output.of(Objects.requireNonNull(recommendationType));
-            return this;
+            return recommendationType(Output.of(recommendationType));
         }
+
         public Builder status(Output<Either<String,RecommendationConfigStatus>> status) {
-            this.status = Objects.requireNonNull(status);
+            $.status = status;
             return this;
         }
+
         public Builder status(Either<String,RecommendationConfigStatus> status) {
-            this.status = Output.of(Objects.requireNonNull(status));
-            return this;
-        }        public RecommendationConfigurationPropertiesArgs build() {
-            return new RecommendationConfigurationPropertiesArgs(recommendationType, status);
+            return status(Output.of(status));
+        }
+
+        public RecommendationConfigurationPropertiesArgs build() {
+            $.recommendationType = Objects.requireNonNull($.recommendationType, "expected parameter 'recommendationType' to be non-null");
+            $.status = Codegen.stringProp("status").left(RecommendationConfigStatus.class).output().arg($.status).def("Enabled").require();
+            return $;
         }
     }
+
 }

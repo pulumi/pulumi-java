@@ -5,9 +5,9 @@ package com.pulumi.googlenative.bigtableadmin_v2;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -16,14 +16,14 @@ public final class BackupArgs extends com.pulumi.resources.ResourceArgs {
     public static final BackupArgs Empty = new BackupArgs();
 
     @Import(name="backupId", required=true)
-      private final Output<String> backupId;
+    private Output<String> backupId;
 
     public Output<String> backupId() {
         return this.backupId;
     }
 
     @Import(name="clusterId", required=true)
-      private final Output<String> clusterId;
+    private Output<String> clusterId;
 
     public Output<String> clusterId() {
         return this.clusterId;
@@ -34,14 +34,14 @@ public final class BackupArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="expireTime", required=true)
-      private final Output<String> expireTime;
+    private Output<String> expireTime;
 
     public Output<String> expireTime() {
         return this.expireTime;
     }
 
     @Import(name="instanceId", required=true)
-      private final Output<String> instanceId;
+    private Output<String> instanceId;
 
     public Output<String> instanceId() {
         return this.instanceId;
@@ -52,17 +52,17 @@ public final class BackupArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -70,128 +70,113 @@ public final class BackupArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="sourceTable", required=true)
-      private final Output<String> sourceTable;
+    private Output<String> sourceTable;
 
     public Output<String> sourceTable() {
         return this.sourceTable;
     }
 
-    public BackupArgs(
-        Output<String> backupId,
-        Output<String> clusterId,
-        Output<String> expireTime,
-        Output<String> instanceId,
-        @Nullable Output<String> name,
-        @Nullable Output<String> project,
-        Output<String> sourceTable) {
-        this.backupId = Objects.requireNonNull(backupId, "expected parameter 'backupId' to be non-null");
-        this.clusterId = Objects.requireNonNull(clusterId, "expected parameter 'clusterId' to be non-null");
-        this.expireTime = Objects.requireNonNull(expireTime, "expected parameter 'expireTime' to be non-null");
-        this.instanceId = Objects.requireNonNull(instanceId, "expected parameter 'instanceId' to be non-null");
-        this.name = name;
-        this.project = project;
-        this.sourceTable = Objects.requireNonNull(sourceTable, "expected parameter 'sourceTable' to be non-null");
-    }
+    private BackupArgs() {}
 
-    private BackupArgs() {
-        this.backupId = Codegen.empty();
-        this.clusterId = Codegen.empty();
-        this.expireTime = Codegen.empty();
-        this.instanceId = Codegen.empty();
-        this.name = Codegen.empty();
-        this.project = Codegen.empty();
-        this.sourceTable = Codegen.empty();
+    private BackupArgs(BackupArgs $) {
+        this.backupId = $.backupId;
+        this.clusterId = $.clusterId;
+        this.expireTime = $.expireTime;
+        this.instanceId = $.instanceId;
+        this.name = $.name;
+        this.project = $.project;
+        this.sourceTable = $.sourceTable;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BackupArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> backupId;
-        private Output<String> clusterId;
-        private Output<String> expireTime;
-        private Output<String> instanceId;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> project;
-        private Output<String> sourceTable;
+        private BackupArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new BackupArgs();
         }
 
         public Builder(BackupArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.backupId = defaults.backupId;
-    	      this.clusterId = defaults.clusterId;
-    	      this.expireTime = defaults.expireTime;
-    	      this.instanceId = defaults.instanceId;
-    	      this.name = defaults.name;
-    	      this.project = defaults.project;
-    	      this.sourceTable = defaults.sourceTable;
+            $ = new BackupArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder backupId(Output<String> backupId) {
-            this.backupId = Objects.requireNonNull(backupId);
+            $.backupId = backupId;
             return this;
         }
+
         public Builder backupId(String backupId) {
-            this.backupId = Output.of(Objects.requireNonNull(backupId));
-            return this;
+            return backupId(Output.of(backupId));
         }
+
         public Builder clusterId(Output<String> clusterId) {
-            this.clusterId = Objects.requireNonNull(clusterId);
+            $.clusterId = clusterId;
             return this;
         }
+
         public Builder clusterId(String clusterId) {
-            this.clusterId = Output.of(Objects.requireNonNull(clusterId));
-            return this;
+            return clusterId(Output.of(clusterId));
         }
+
         public Builder expireTime(Output<String> expireTime) {
-            this.expireTime = Objects.requireNonNull(expireTime);
+            $.expireTime = expireTime;
             return this;
         }
+
         public Builder expireTime(String expireTime) {
-            this.expireTime = Output.of(Objects.requireNonNull(expireTime));
-            return this;
+            return expireTime(Output.of(expireTime));
         }
+
         public Builder instanceId(Output<String> instanceId) {
-            this.instanceId = Objects.requireNonNull(instanceId);
+            $.instanceId = instanceId;
             return this;
         }
+
         public Builder instanceId(String instanceId) {
-            this.instanceId = Output.of(Objects.requireNonNull(instanceId));
-            return this;
+            return instanceId(Output.of(instanceId));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder sourceTable(Output<String> sourceTable) {
-            this.sourceTable = Objects.requireNonNull(sourceTable);
+            $.sourceTable = sourceTable;
             return this;
         }
+
         public Builder sourceTable(String sourceTable) {
-            this.sourceTable = Output.of(Objects.requireNonNull(sourceTable));
-            return this;
-        }        public BackupArgs build() {
-            return new BackupArgs(backupId, clusterId, expireTime, instanceId, name, project, sourceTable);
+            return sourceTable(Output.of(sourceTable));
+        }
+
+        public BackupArgs build() {
+            $.backupId = Objects.requireNonNull($.backupId, "expected parameter 'backupId' to be non-null");
+            $.clusterId = Objects.requireNonNull($.clusterId, "expected parameter 'clusterId' to be non-null");
+            $.expireTime = Objects.requireNonNull($.expireTime, "expected parameter 'expireTime' to be non-null");
+            $.instanceId = Objects.requireNonNull($.instanceId, "expected parameter 'instanceId' to be non-null");
+            $.sourceTable = Objects.requireNonNull($.sourceTable, "expected parameter 'sourceTable' to be non-null");
+            return $;
         }
     }
+
 }

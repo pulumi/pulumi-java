@@ -5,12 +5,12 @@ package com.pulumi.googlenative.appengine_v1beta.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.appengine_v1beta.enums.ApiConfigHandlerAuthFailAction;
 import com.pulumi.googlenative.appengine_v1beta.enums.ApiConfigHandlerLogin;
 import com.pulumi.googlenative.appengine_v1beta.enums.ApiConfigHandlerSecurityLevel;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +27,10 @@ public final class ApiConfigHandlerArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="authFailAction")
-      private final @Nullable Output<ApiConfigHandlerAuthFailAction> authFailAction;
+    private @Nullable Output<ApiConfigHandlerAuthFailAction> authFailAction;
 
-    public Output<ApiConfigHandlerAuthFailAction> authFailAction() {
-        return this.authFailAction == null ? Codegen.empty() : this.authFailAction;
+    public Optional<Output<ApiConfigHandlerAuthFailAction>> authFailAction() {
+        return Optional.ofNullable(this.authFailAction);
     }
 
     /**
@@ -38,10 +38,10 @@ public final class ApiConfigHandlerArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="login")
-      private final @Nullable Output<ApiConfigHandlerLogin> login;
+    private @Nullable Output<ApiConfigHandlerLogin> login;
 
-    public Output<ApiConfigHandlerLogin> login() {
-        return this.login == null ? Codegen.empty() : this.login;
+    public Optional<Output<ApiConfigHandlerLogin>> login() {
+        return Optional.ofNullable(this.login);
     }
 
     /**
@@ -49,10 +49,10 @@ public final class ApiConfigHandlerArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="script")
-      private final @Nullable Output<String> script;
+    private @Nullable Output<String> script;
 
-    public Output<String> script() {
-        return this.script == null ? Codegen.empty() : this.script;
+    public Optional<Output<String>> script() {
+        return Optional.ofNullable(this.script);
     }
 
     /**
@@ -60,10 +60,10 @@ public final class ApiConfigHandlerArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="securityLevel")
-      private final @Nullable Output<ApiConfigHandlerSecurityLevel> securityLevel;
+    private @Nullable Output<ApiConfigHandlerSecurityLevel> securityLevel;
 
-    public Output<ApiConfigHandlerSecurityLevel> securityLevel() {
-        return this.securityLevel == null ? Codegen.empty() : this.securityLevel;
+    public Optional<Output<ApiConfigHandlerSecurityLevel>> securityLevel() {
+        return Optional.ofNullable(this.securityLevel);
     }
 
     /**
@@ -71,102 +71,88 @@ public final class ApiConfigHandlerArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="url")
-      private final @Nullable Output<String> url;
+    private @Nullable Output<String> url;
 
-    public Output<String> url() {
-        return this.url == null ? Codegen.empty() : this.url;
+    public Optional<Output<String>> url() {
+        return Optional.ofNullable(this.url);
     }
 
-    public ApiConfigHandlerArgs(
-        @Nullable Output<ApiConfigHandlerAuthFailAction> authFailAction,
-        @Nullable Output<ApiConfigHandlerLogin> login,
-        @Nullable Output<String> script,
-        @Nullable Output<ApiConfigHandlerSecurityLevel> securityLevel,
-        @Nullable Output<String> url) {
-        this.authFailAction = authFailAction;
-        this.login = login;
-        this.script = script;
-        this.securityLevel = securityLevel;
-        this.url = url;
-    }
+    private ApiConfigHandlerArgs() {}
 
-    private ApiConfigHandlerArgs() {
-        this.authFailAction = Codegen.empty();
-        this.login = Codegen.empty();
-        this.script = Codegen.empty();
-        this.securityLevel = Codegen.empty();
-        this.url = Codegen.empty();
+    private ApiConfigHandlerArgs(ApiConfigHandlerArgs $) {
+        this.authFailAction = $.authFailAction;
+        this.login = $.login;
+        this.script = $.script;
+        this.securityLevel = $.securityLevel;
+        this.url = $.url;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ApiConfigHandlerArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<ApiConfigHandlerAuthFailAction> authFailAction;
-        private @Nullable Output<ApiConfigHandlerLogin> login;
-        private @Nullable Output<String> script;
-        private @Nullable Output<ApiConfigHandlerSecurityLevel> securityLevel;
-        private @Nullable Output<String> url;
+        private ApiConfigHandlerArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ApiConfigHandlerArgs();
         }
 
         public Builder(ApiConfigHandlerArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.authFailAction = defaults.authFailAction;
-    	      this.login = defaults.login;
-    	      this.script = defaults.script;
-    	      this.securityLevel = defaults.securityLevel;
-    	      this.url = defaults.url;
+            $ = new ApiConfigHandlerArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder authFailAction(@Nullable Output<ApiConfigHandlerAuthFailAction> authFailAction) {
-            this.authFailAction = authFailAction;
+            $.authFailAction = authFailAction;
             return this;
         }
-        public Builder authFailAction(@Nullable ApiConfigHandlerAuthFailAction authFailAction) {
-            this.authFailAction = Codegen.ofNullable(authFailAction);
-            return this;
+
+        public Builder authFailAction(ApiConfigHandlerAuthFailAction authFailAction) {
+            return authFailAction(Output.of(authFailAction));
         }
+
         public Builder login(@Nullable Output<ApiConfigHandlerLogin> login) {
-            this.login = login;
+            $.login = login;
             return this;
         }
-        public Builder login(@Nullable ApiConfigHandlerLogin login) {
-            this.login = Codegen.ofNullable(login);
-            return this;
+
+        public Builder login(ApiConfigHandlerLogin login) {
+            return login(Output.of(login));
         }
+
         public Builder script(@Nullable Output<String> script) {
-            this.script = script;
+            $.script = script;
             return this;
         }
-        public Builder script(@Nullable String script) {
-            this.script = Codegen.ofNullable(script);
-            return this;
+
+        public Builder script(String script) {
+            return script(Output.of(script));
         }
+
         public Builder securityLevel(@Nullable Output<ApiConfigHandlerSecurityLevel> securityLevel) {
-            this.securityLevel = securityLevel;
+            $.securityLevel = securityLevel;
             return this;
         }
-        public Builder securityLevel(@Nullable ApiConfigHandlerSecurityLevel securityLevel) {
-            this.securityLevel = Codegen.ofNullable(securityLevel);
-            return this;
+
+        public Builder securityLevel(ApiConfigHandlerSecurityLevel securityLevel) {
+            return securityLevel(Output.of(securityLevel));
         }
+
         public Builder url(@Nullable Output<String> url) {
-            this.url = url;
+            $.url = url;
             return this;
         }
-        public Builder url(@Nullable String url) {
-            this.url = Codegen.ofNullable(url);
-            return this;
-        }        public ApiConfigHandlerArgs build() {
-            return new ApiConfigHandlerArgs(authFailAction, login, script, securityLevel, url);
+
+        public Builder url(String url) {
+            return url(Output.of(url));
+        }
+
+        public ApiConfigHandlerArgs build() {
+            return $;
         }
     }
+
 }

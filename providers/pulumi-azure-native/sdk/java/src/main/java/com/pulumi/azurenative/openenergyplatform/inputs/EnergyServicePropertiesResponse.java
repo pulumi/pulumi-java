@@ -17,97 +17,89 @@ public final class EnergyServicePropertiesResponse extends com.pulumi.resources.
     public static final EnergyServicePropertiesResponse Empty = new EnergyServicePropertiesResponse();
 
     @Import(name="authAppId")
-      private final @Nullable String authAppId;
+    private @Nullable String authAppId;
 
     public Optional<String> authAppId() {
-        return this.authAppId == null ? Optional.empty() : Optional.ofNullable(this.authAppId);
+        return Optional.ofNullable(this.authAppId);
     }
 
     @Import(name="dataPartitionNames")
-      private final @Nullable List<DataPartitionNamesResponse> dataPartitionNames;
+    private @Nullable List<DataPartitionNamesResponse> dataPartitionNames;
 
-    public List<DataPartitionNamesResponse> dataPartitionNames() {
-        return this.dataPartitionNames == null ? List.of() : this.dataPartitionNames;
+    public Optional<List<DataPartitionNamesResponse>> dataPartitionNames() {
+        return Optional.ofNullable(this.dataPartitionNames);
     }
 
     @Import(name="dnsName", required=true)
-      private final String dnsName;
+    private String dnsName;
 
     public String dnsName() {
         return this.dnsName;
     }
 
     @Import(name="provisioningState", required=true)
-      private final String provisioningState;
+    private String provisioningState;
 
     public String provisioningState() {
         return this.provisioningState;
     }
 
-    public EnergyServicePropertiesResponse(
-        @Nullable String authAppId,
-        @Nullable List<DataPartitionNamesResponse> dataPartitionNames,
-        String dnsName,
-        String provisioningState) {
-        this.authAppId = authAppId;
-        this.dataPartitionNames = dataPartitionNames;
-        this.dnsName = Objects.requireNonNull(dnsName, "expected parameter 'dnsName' to be non-null");
-        this.provisioningState = Objects.requireNonNull(provisioningState, "expected parameter 'provisioningState' to be non-null");
-    }
+    private EnergyServicePropertiesResponse() {}
 
-    private EnergyServicePropertiesResponse() {
-        this.authAppId = null;
-        this.dataPartitionNames = List.of();
-        this.dnsName = null;
-        this.provisioningState = null;
+    private EnergyServicePropertiesResponse(EnergyServicePropertiesResponse $) {
+        this.authAppId = $.authAppId;
+        this.dataPartitionNames = $.dataPartitionNames;
+        this.dnsName = $.dnsName;
+        this.provisioningState = $.provisioningState;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EnergyServicePropertiesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String authAppId;
-        private @Nullable List<DataPartitionNamesResponse> dataPartitionNames;
-        private String dnsName;
-        private String provisioningState;
+        private EnergyServicePropertiesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new EnergyServicePropertiesResponse();
         }
 
         public Builder(EnergyServicePropertiesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.authAppId = defaults.authAppId;
-    	      this.dataPartitionNames = defaults.dataPartitionNames;
-    	      this.dnsName = defaults.dnsName;
-    	      this.provisioningState = defaults.provisioningState;
+            $ = new EnergyServicePropertiesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder authAppId(@Nullable String authAppId) {
-            this.authAppId = authAppId;
+            $.authAppId = authAppId;
             return this;
         }
+
         public Builder dataPartitionNames(@Nullable List<DataPartitionNamesResponse> dataPartitionNames) {
-            this.dataPartitionNames = dataPartitionNames;
+            $.dataPartitionNames = dataPartitionNames;
             return this;
         }
+
         public Builder dataPartitionNames(DataPartitionNamesResponse... dataPartitionNames) {
             return dataPartitionNames(List.of(dataPartitionNames));
         }
+
         public Builder dnsName(String dnsName) {
-            this.dnsName = Objects.requireNonNull(dnsName);
+            $.dnsName = dnsName;
             return this;
         }
+
         public Builder provisioningState(String provisioningState) {
-            this.provisioningState = Objects.requireNonNull(provisioningState);
+            $.provisioningState = provisioningState;
             return this;
-        }        public EnergyServicePropertiesResponse build() {
-            return new EnergyServicePropertiesResponse(authAppId, dataPartitionNames, dnsName, provisioningState);
+        }
+
+        public EnergyServicePropertiesResponse build() {
+            $.dnsName = Objects.requireNonNull($.dnsName, "expected parameter 'dnsName' to be non-null");
+            $.provisioningState = Objects.requireNonNull($.provisioningState, "expected parameter 'provisioningState' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,7 +5,6 @@ package com.pulumi.googlenative.dns_v1beta2;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.dns_v1beta2.enums.ManagedZoneVisibility;
 import com.pulumi.googlenative.dns_v1beta2.inputs.ManagedZoneCloudLoggingConfigArgs;
 import com.pulumi.googlenative.dns_v1beta2.inputs.ManagedZoneDnsSecConfigArgs;
@@ -18,6 +17,7 @@ import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,17 +26,17 @@ public final class ManagedZoneArgs extends com.pulumi.resources.ResourceArgs {
     public static final ManagedZoneArgs Empty = new ManagedZoneArgs();
 
     @Import(name="clientOperationId")
-      private final @Nullable Output<String> clientOperationId;
+    private @Nullable Output<String> clientOperationId;
 
-    public Output<String> clientOperationId() {
-        return this.clientOperationId == null ? Codegen.empty() : this.clientOperationId;
+    public Optional<Output<String>> clientOperationId() {
+        return Optional.ofNullable(this.clientOperationId);
     }
 
     @Import(name="cloudLoggingConfig")
-      private final @Nullable Output<ManagedZoneCloudLoggingConfigArgs> cloudLoggingConfig;
+    private @Nullable Output<ManagedZoneCloudLoggingConfigArgs> cloudLoggingConfig;
 
-    public Output<ManagedZoneCloudLoggingConfigArgs> cloudLoggingConfig() {
-        return this.cloudLoggingConfig == null ? Codegen.empty() : this.cloudLoggingConfig;
+    public Optional<Output<ManagedZoneCloudLoggingConfigArgs>> cloudLoggingConfig() {
+        return Optional.ofNullable(this.cloudLoggingConfig);
     }
 
     /**
@@ -44,10 +44,10 @@ public final class ManagedZoneArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="creationTime")
-      private final @Nullable Output<String> creationTime;
+    private @Nullable Output<String> creationTime;
 
-    public Output<String> creationTime() {
-        return this.creationTime == null ? Codegen.empty() : this.creationTime;
+    public Optional<Output<String>> creationTime() {
+        return Optional.ofNullable(this.creationTime);
     }
 
     /**
@@ -55,10 +55,10 @@ public final class ManagedZoneArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -66,10 +66,10 @@ public final class ManagedZoneArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="dnsName")
-      private final @Nullable Output<String> dnsName;
+    private @Nullable Output<String> dnsName;
 
-    public Output<String> dnsName() {
-        return this.dnsName == null ? Codegen.empty() : this.dnsName;
+    public Optional<Output<String>> dnsName() {
+        return Optional.ofNullable(this.dnsName);
     }
 
     /**
@@ -77,10 +77,10 @@ public final class ManagedZoneArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="dnssecConfig")
-      private final @Nullable Output<ManagedZoneDnsSecConfigArgs> dnssecConfig;
+    private @Nullable Output<ManagedZoneDnsSecConfigArgs> dnssecConfig;
 
-    public Output<ManagedZoneDnsSecConfigArgs> dnssecConfig() {
-        return this.dnssecConfig == null ? Codegen.empty() : this.dnssecConfig;
+    public Optional<Output<ManagedZoneDnsSecConfigArgs>> dnssecConfig() {
+        return Optional.ofNullable(this.dnssecConfig);
     }
 
     /**
@@ -88,10 +88,10 @@ public final class ManagedZoneArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="forwardingConfig")
-      private final @Nullable Output<ManagedZoneForwardingConfigArgs> forwardingConfig;
+    private @Nullable Output<ManagedZoneForwardingConfigArgs> forwardingConfig;
 
-    public Output<ManagedZoneForwardingConfigArgs> forwardingConfig() {
-        return this.forwardingConfig == null ? Codegen.empty() : this.forwardingConfig;
+    public Optional<Output<ManagedZoneForwardingConfigArgs>> forwardingConfig() {
+        return Optional.ofNullable(this.forwardingConfig);
     }
 
     /**
@@ -99,17 +99,17 @@ public final class ManagedZoneArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="id")
-      private final @Nullable Output<String> id;
+    private @Nullable Output<String> id;
 
-    public Output<String> id() {
-        return this.id == null ? Codegen.empty() : this.id;
+    public Optional<Output<String>> id() {
+        return Optional.ofNullable(this.id);
     }
 
     @Import(name="kind")
-      private final @Nullable Output<String> kind;
+    private @Nullable Output<String> kind;
 
-    public Output<String> kind() {
-        return this.kind == null ? Codegen.empty() : this.kind;
+    public Optional<Output<String>> kind() {
+        return Optional.ofNullable(this.kind);
     }
 
     /**
@@ -117,10 +117,10 @@ public final class ManagedZoneArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="labels")
-      private final @Nullable Output<Map<String,String>> labels;
+    private @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> labels() {
-        return this.labels == null ? Codegen.empty() : this.labels;
+    public Optional<Output<Map<String,String>>> labels() {
+        return Optional.ofNullable(this.labels);
     }
 
     /**
@@ -128,10 +128,10 @@ public final class ManagedZoneArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -139,10 +139,10 @@ public final class ManagedZoneArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="nameServerSet")
-      private final @Nullable Output<String> nameServerSet;
+    private @Nullable Output<String> nameServerSet;
 
-    public Output<String> nameServerSet() {
-        return this.nameServerSet == null ? Codegen.empty() : this.nameServerSet;
+    public Optional<Output<String>> nameServerSet() {
+        return Optional.ofNullable(this.nameServerSet);
     }
 
     /**
@@ -150,10 +150,10 @@ public final class ManagedZoneArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="nameServers")
-      private final @Nullable Output<List<String>> nameServers;
+    private @Nullable Output<List<String>> nameServers;
 
-    public Output<List<String>> nameServers() {
-        return this.nameServers == null ? Codegen.empty() : this.nameServers;
+    public Optional<Output<List<String>>> nameServers() {
+        return Optional.ofNullable(this.nameServers);
     }
 
     /**
@@ -161,10 +161,10 @@ public final class ManagedZoneArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="peeringConfig")
-      private final @Nullable Output<ManagedZonePeeringConfigArgs> peeringConfig;
+    private @Nullable Output<ManagedZonePeeringConfigArgs> peeringConfig;
 
-    public Output<ManagedZonePeeringConfigArgs> peeringConfig() {
-        return this.peeringConfig == null ? Codegen.empty() : this.peeringConfig;
+    public Optional<Output<ManagedZonePeeringConfigArgs>> peeringConfig() {
+        return Optional.ofNullable(this.peeringConfig);
     }
 
     /**
@@ -172,17 +172,17 @@ public final class ManagedZoneArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="privateVisibilityConfig")
-      private final @Nullable Output<ManagedZonePrivateVisibilityConfigArgs> privateVisibilityConfig;
+    private @Nullable Output<ManagedZonePrivateVisibilityConfigArgs> privateVisibilityConfig;
 
-    public Output<ManagedZonePrivateVisibilityConfigArgs> privateVisibilityConfig() {
-        return this.privateVisibilityConfig == null ? Codegen.empty() : this.privateVisibilityConfig;
+    public Optional<Output<ManagedZonePrivateVisibilityConfigArgs>> privateVisibilityConfig() {
+        return Optional.ofNullable(this.privateVisibilityConfig);
     }
 
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -190,10 +190,10 @@ public final class ManagedZoneArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="reverseLookupConfig")
-      private final @Nullable Output<ManagedZoneReverseLookupConfigArgs> reverseLookupConfig;
+    private @Nullable Output<ManagedZoneReverseLookupConfigArgs> reverseLookupConfig;
 
-    public Output<ManagedZoneReverseLookupConfigArgs> reverseLookupConfig() {
-        return this.reverseLookupConfig == null ? Codegen.empty() : this.reverseLookupConfig;
+    public Optional<Output<ManagedZoneReverseLookupConfigArgs>> reverseLookupConfig() {
+        return Optional.ofNullable(this.reverseLookupConfig);
     }
 
     /**
@@ -201,10 +201,10 @@ public final class ManagedZoneArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="serviceDirectoryConfig")
-      private final @Nullable Output<ManagedZoneServiceDirectoryConfigArgs> serviceDirectoryConfig;
+    private @Nullable Output<ManagedZoneServiceDirectoryConfigArgs> serviceDirectoryConfig;
 
-    public Output<ManagedZoneServiceDirectoryConfigArgs> serviceDirectoryConfig() {
-        return this.serviceDirectoryConfig == null ? Codegen.empty() : this.serviceDirectoryConfig;
+    public Optional<Output<ManagedZoneServiceDirectoryConfigArgs>> serviceDirectoryConfig() {
+        return Optional.ofNullable(this.serviceDirectoryConfig);
     }
 
     /**
@@ -212,287 +212,232 @@ public final class ManagedZoneArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="visibility")
-      private final @Nullable Output<ManagedZoneVisibility> visibility;
+    private @Nullable Output<ManagedZoneVisibility> visibility;
 
-    public Output<ManagedZoneVisibility> visibility() {
-        return this.visibility == null ? Codegen.empty() : this.visibility;
+    public Optional<Output<ManagedZoneVisibility>> visibility() {
+        return Optional.ofNullable(this.visibility);
     }
 
-    public ManagedZoneArgs(
-        @Nullable Output<String> clientOperationId,
-        @Nullable Output<ManagedZoneCloudLoggingConfigArgs> cloudLoggingConfig,
-        @Nullable Output<String> creationTime,
-        @Nullable Output<String> description,
-        @Nullable Output<String> dnsName,
-        @Nullable Output<ManagedZoneDnsSecConfigArgs> dnssecConfig,
-        @Nullable Output<ManagedZoneForwardingConfigArgs> forwardingConfig,
-        @Nullable Output<String> id,
-        @Nullable Output<String> kind,
-        @Nullable Output<Map<String,String>> labels,
-        @Nullable Output<String> name,
-        @Nullable Output<String> nameServerSet,
-        @Nullable Output<List<String>> nameServers,
-        @Nullable Output<ManagedZonePeeringConfigArgs> peeringConfig,
-        @Nullable Output<ManagedZonePrivateVisibilityConfigArgs> privateVisibilityConfig,
-        @Nullable Output<String> project,
-        @Nullable Output<ManagedZoneReverseLookupConfigArgs> reverseLookupConfig,
-        @Nullable Output<ManagedZoneServiceDirectoryConfigArgs> serviceDirectoryConfig,
-        @Nullable Output<ManagedZoneVisibility> visibility) {
-        this.clientOperationId = clientOperationId;
-        this.cloudLoggingConfig = cloudLoggingConfig;
-        this.creationTime = creationTime;
-        this.description = description;
-        this.dnsName = dnsName;
-        this.dnssecConfig = dnssecConfig;
-        this.forwardingConfig = forwardingConfig;
-        this.id = id;
-        this.kind = kind;
-        this.labels = labels;
-        this.name = name;
-        this.nameServerSet = nameServerSet;
-        this.nameServers = nameServers;
-        this.peeringConfig = peeringConfig;
-        this.privateVisibilityConfig = privateVisibilityConfig;
-        this.project = project;
-        this.reverseLookupConfig = reverseLookupConfig;
-        this.serviceDirectoryConfig = serviceDirectoryConfig;
-        this.visibility = visibility;
-    }
+    private ManagedZoneArgs() {}
 
-    private ManagedZoneArgs() {
-        this.clientOperationId = Codegen.empty();
-        this.cloudLoggingConfig = Codegen.empty();
-        this.creationTime = Codegen.empty();
-        this.description = Codegen.empty();
-        this.dnsName = Codegen.empty();
-        this.dnssecConfig = Codegen.empty();
-        this.forwardingConfig = Codegen.empty();
-        this.id = Codegen.empty();
-        this.kind = Codegen.empty();
-        this.labels = Codegen.empty();
-        this.name = Codegen.empty();
-        this.nameServerSet = Codegen.empty();
-        this.nameServers = Codegen.empty();
-        this.peeringConfig = Codegen.empty();
-        this.privateVisibilityConfig = Codegen.empty();
-        this.project = Codegen.empty();
-        this.reverseLookupConfig = Codegen.empty();
-        this.serviceDirectoryConfig = Codegen.empty();
-        this.visibility = Codegen.empty();
+    private ManagedZoneArgs(ManagedZoneArgs $) {
+        this.clientOperationId = $.clientOperationId;
+        this.cloudLoggingConfig = $.cloudLoggingConfig;
+        this.creationTime = $.creationTime;
+        this.description = $.description;
+        this.dnsName = $.dnsName;
+        this.dnssecConfig = $.dnssecConfig;
+        this.forwardingConfig = $.forwardingConfig;
+        this.id = $.id;
+        this.kind = $.kind;
+        this.labels = $.labels;
+        this.name = $.name;
+        this.nameServerSet = $.nameServerSet;
+        this.nameServers = $.nameServers;
+        this.peeringConfig = $.peeringConfig;
+        this.privateVisibilityConfig = $.privateVisibilityConfig;
+        this.project = $.project;
+        this.reverseLookupConfig = $.reverseLookupConfig;
+        this.serviceDirectoryConfig = $.serviceDirectoryConfig;
+        this.visibility = $.visibility;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ManagedZoneArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> clientOperationId;
-        private @Nullable Output<ManagedZoneCloudLoggingConfigArgs> cloudLoggingConfig;
-        private @Nullable Output<String> creationTime;
-        private @Nullable Output<String> description;
-        private @Nullable Output<String> dnsName;
-        private @Nullable Output<ManagedZoneDnsSecConfigArgs> dnssecConfig;
-        private @Nullable Output<ManagedZoneForwardingConfigArgs> forwardingConfig;
-        private @Nullable Output<String> id;
-        private @Nullable Output<String> kind;
-        private @Nullable Output<Map<String,String>> labels;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> nameServerSet;
-        private @Nullable Output<List<String>> nameServers;
-        private @Nullable Output<ManagedZonePeeringConfigArgs> peeringConfig;
-        private @Nullable Output<ManagedZonePrivateVisibilityConfigArgs> privateVisibilityConfig;
-        private @Nullable Output<String> project;
-        private @Nullable Output<ManagedZoneReverseLookupConfigArgs> reverseLookupConfig;
-        private @Nullable Output<ManagedZoneServiceDirectoryConfigArgs> serviceDirectoryConfig;
-        private @Nullable Output<ManagedZoneVisibility> visibility;
+        private ManagedZoneArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ManagedZoneArgs();
         }
 
         public Builder(ManagedZoneArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.clientOperationId = defaults.clientOperationId;
-    	      this.cloudLoggingConfig = defaults.cloudLoggingConfig;
-    	      this.creationTime = defaults.creationTime;
-    	      this.description = defaults.description;
-    	      this.dnsName = defaults.dnsName;
-    	      this.dnssecConfig = defaults.dnssecConfig;
-    	      this.forwardingConfig = defaults.forwardingConfig;
-    	      this.id = defaults.id;
-    	      this.kind = defaults.kind;
-    	      this.labels = defaults.labels;
-    	      this.name = defaults.name;
-    	      this.nameServerSet = defaults.nameServerSet;
-    	      this.nameServers = defaults.nameServers;
-    	      this.peeringConfig = defaults.peeringConfig;
-    	      this.privateVisibilityConfig = defaults.privateVisibilityConfig;
-    	      this.project = defaults.project;
-    	      this.reverseLookupConfig = defaults.reverseLookupConfig;
-    	      this.serviceDirectoryConfig = defaults.serviceDirectoryConfig;
-    	      this.visibility = defaults.visibility;
+            $ = new ManagedZoneArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder clientOperationId(@Nullable Output<String> clientOperationId) {
-            this.clientOperationId = clientOperationId;
+            $.clientOperationId = clientOperationId;
             return this;
         }
-        public Builder clientOperationId(@Nullable String clientOperationId) {
-            this.clientOperationId = Codegen.ofNullable(clientOperationId);
-            return this;
+
+        public Builder clientOperationId(String clientOperationId) {
+            return clientOperationId(Output.of(clientOperationId));
         }
+
         public Builder cloudLoggingConfig(@Nullable Output<ManagedZoneCloudLoggingConfigArgs> cloudLoggingConfig) {
-            this.cloudLoggingConfig = cloudLoggingConfig;
+            $.cloudLoggingConfig = cloudLoggingConfig;
             return this;
         }
-        public Builder cloudLoggingConfig(@Nullable ManagedZoneCloudLoggingConfigArgs cloudLoggingConfig) {
-            this.cloudLoggingConfig = Codegen.ofNullable(cloudLoggingConfig);
-            return this;
+
+        public Builder cloudLoggingConfig(ManagedZoneCloudLoggingConfigArgs cloudLoggingConfig) {
+            return cloudLoggingConfig(Output.of(cloudLoggingConfig));
         }
+
         public Builder creationTime(@Nullable Output<String> creationTime) {
-            this.creationTime = creationTime;
+            $.creationTime = creationTime;
             return this;
         }
-        public Builder creationTime(@Nullable String creationTime) {
-            this.creationTime = Codegen.ofNullable(creationTime);
-            return this;
+
+        public Builder creationTime(String creationTime) {
+            return creationTime(Output.of(creationTime));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder dnsName(@Nullable Output<String> dnsName) {
-            this.dnsName = dnsName;
+            $.dnsName = dnsName;
             return this;
         }
-        public Builder dnsName(@Nullable String dnsName) {
-            this.dnsName = Codegen.ofNullable(dnsName);
-            return this;
+
+        public Builder dnsName(String dnsName) {
+            return dnsName(Output.of(dnsName));
         }
+
         public Builder dnssecConfig(@Nullable Output<ManagedZoneDnsSecConfigArgs> dnssecConfig) {
-            this.dnssecConfig = dnssecConfig;
+            $.dnssecConfig = dnssecConfig;
             return this;
         }
-        public Builder dnssecConfig(@Nullable ManagedZoneDnsSecConfigArgs dnssecConfig) {
-            this.dnssecConfig = Codegen.ofNullable(dnssecConfig);
-            return this;
+
+        public Builder dnssecConfig(ManagedZoneDnsSecConfigArgs dnssecConfig) {
+            return dnssecConfig(Output.of(dnssecConfig));
         }
+
         public Builder forwardingConfig(@Nullable Output<ManagedZoneForwardingConfigArgs> forwardingConfig) {
-            this.forwardingConfig = forwardingConfig;
+            $.forwardingConfig = forwardingConfig;
             return this;
         }
-        public Builder forwardingConfig(@Nullable ManagedZoneForwardingConfigArgs forwardingConfig) {
-            this.forwardingConfig = Codegen.ofNullable(forwardingConfig);
-            return this;
+
+        public Builder forwardingConfig(ManagedZoneForwardingConfigArgs forwardingConfig) {
+            return forwardingConfig(Output.of(forwardingConfig));
         }
+
         public Builder id(@Nullable Output<String> id) {
-            this.id = id;
+            $.id = id;
             return this;
         }
-        public Builder id(@Nullable String id) {
-            this.id = Codegen.ofNullable(id);
-            return this;
+
+        public Builder id(String id) {
+            return id(Output.of(id));
         }
+
         public Builder kind(@Nullable Output<String> kind) {
-            this.kind = kind;
+            $.kind = kind;
             return this;
         }
-        public Builder kind(@Nullable String kind) {
-            this.kind = Codegen.ofNullable(kind);
-            return this;
+
+        public Builder kind(String kind) {
+            return kind(Output.of(kind));
         }
+
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
-            this.labels = labels;
+            $.labels = labels;
             return this;
         }
-        public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Codegen.ofNullable(labels);
-            return this;
+
+        public Builder labels(Map<String,String> labels) {
+            return labels(Output.of(labels));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder nameServerSet(@Nullable Output<String> nameServerSet) {
-            this.nameServerSet = nameServerSet;
+            $.nameServerSet = nameServerSet;
             return this;
         }
-        public Builder nameServerSet(@Nullable String nameServerSet) {
-            this.nameServerSet = Codegen.ofNullable(nameServerSet);
-            return this;
+
+        public Builder nameServerSet(String nameServerSet) {
+            return nameServerSet(Output.of(nameServerSet));
         }
+
         public Builder nameServers(@Nullable Output<List<String>> nameServers) {
-            this.nameServers = nameServers;
+            $.nameServers = nameServers;
             return this;
         }
-        public Builder nameServers(@Nullable List<String> nameServers) {
-            this.nameServers = Codegen.ofNullable(nameServers);
-            return this;
+
+        public Builder nameServers(List<String> nameServers) {
+            return nameServers(Output.of(nameServers));
         }
+
         public Builder nameServers(String... nameServers) {
             return nameServers(List.of(nameServers));
         }
+
         public Builder peeringConfig(@Nullable Output<ManagedZonePeeringConfigArgs> peeringConfig) {
-            this.peeringConfig = peeringConfig;
+            $.peeringConfig = peeringConfig;
             return this;
         }
-        public Builder peeringConfig(@Nullable ManagedZonePeeringConfigArgs peeringConfig) {
-            this.peeringConfig = Codegen.ofNullable(peeringConfig);
-            return this;
+
+        public Builder peeringConfig(ManagedZonePeeringConfigArgs peeringConfig) {
+            return peeringConfig(Output.of(peeringConfig));
         }
+
         public Builder privateVisibilityConfig(@Nullable Output<ManagedZonePrivateVisibilityConfigArgs> privateVisibilityConfig) {
-            this.privateVisibilityConfig = privateVisibilityConfig;
+            $.privateVisibilityConfig = privateVisibilityConfig;
             return this;
         }
-        public Builder privateVisibilityConfig(@Nullable ManagedZonePrivateVisibilityConfigArgs privateVisibilityConfig) {
-            this.privateVisibilityConfig = Codegen.ofNullable(privateVisibilityConfig);
-            return this;
+
+        public Builder privateVisibilityConfig(ManagedZonePrivateVisibilityConfigArgs privateVisibilityConfig) {
+            return privateVisibilityConfig(Output.of(privateVisibilityConfig));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder reverseLookupConfig(@Nullable Output<ManagedZoneReverseLookupConfigArgs> reverseLookupConfig) {
-            this.reverseLookupConfig = reverseLookupConfig;
+            $.reverseLookupConfig = reverseLookupConfig;
             return this;
         }
-        public Builder reverseLookupConfig(@Nullable ManagedZoneReverseLookupConfigArgs reverseLookupConfig) {
-            this.reverseLookupConfig = Codegen.ofNullable(reverseLookupConfig);
-            return this;
+
+        public Builder reverseLookupConfig(ManagedZoneReverseLookupConfigArgs reverseLookupConfig) {
+            return reverseLookupConfig(Output.of(reverseLookupConfig));
         }
+
         public Builder serviceDirectoryConfig(@Nullable Output<ManagedZoneServiceDirectoryConfigArgs> serviceDirectoryConfig) {
-            this.serviceDirectoryConfig = serviceDirectoryConfig;
+            $.serviceDirectoryConfig = serviceDirectoryConfig;
             return this;
         }
-        public Builder serviceDirectoryConfig(@Nullable ManagedZoneServiceDirectoryConfigArgs serviceDirectoryConfig) {
-            this.serviceDirectoryConfig = Codegen.ofNullable(serviceDirectoryConfig);
-            return this;
+
+        public Builder serviceDirectoryConfig(ManagedZoneServiceDirectoryConfigArgs serviceDirectoryConfig) {
+            return serviceDirectoryConfig(Output.of(serviceDirectoryConfig));
         }
+
         public Builder visibility(@Nullable Output<ManagedZoneVisibility> visibility) {
-            this.visibility = visibility;
+            $.visibility = visibility;
             return this;
         }
-        public Builder visibility(@Nullable ManagedZoneVisibility visibility) {
-            this.visibility = Codegen.ofNullable(visibility);
-            return this;
-        }        public ManagedZoneArgs build() {
-            return new ManagedZoneArgs(clientOperationId, cloudLoggingConfig, creationTime, description, dnsName, dnssecConfig, forwardingConfig, id, kind, labels, name, nameServerSet, nameServers, peeringConfig, privateVisibilityConfig, project, reverseLookupConfig, serviceDirectoryConfig, visibility);
+
+        public Builder visibility(ManagedZoneVisibility visibility) {
+            return visibility(Output.of(visibility));
+        }
+
+        public ManagedZoneArgs build() {
+            return $;
         }
     }
+
 }

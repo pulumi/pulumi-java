@@ -25,10 +25,10 @@ public final class LinuxConfigurationResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="disablePasswordAuthentication")
-      private final @Nullable Boolean disablePasswordAuthentication;
+    private @Nullable Boolean disablePasswordAuthentication;
 
     public Optional<Boolean> disablePasswordAuthentication() {
-        return this.disablePasswordAuthentication == null ? Optional.empty() : Optional.ofNullable(this.disablePasswordAuthentication);
+        return Optional.ofNullable(this.disablePasswordAuthentication);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class LinuxConfigurationResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="patchSettings")
-      private final @Nullable LinuxPatchSettingsResponse patchSettings;
+    private @Nullable LinuxPatchSettingsResponse patchSettings;
 
     public Optional<LinuxPatchSettingsResponse> patchSettings() {
-        return this.patchSettings == null ? Optional.empty() : Optional.ofNullable(this.patchSettings);
+        return Optional.ofNullable(this.patchSettings);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class LinuxConfigurationResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="provisionVMAgent")
-      private final @Nullable Boolean provisionVMAgent;
+    private @Nullable Boolean provisionVMAgent;
 
     public Optional<Boolean> provisionVMAgent() {
-        return this.provisionVMAgent == null ? Optional.empty() : Optional.ofNullable(this.provisionVMAgent);
+        return Optional.ofNullable(this.provisionVMAgent);
     }
 
     /**
@@ -58,73 +58,62 @@ public final class LinuxConfigurationResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="ssh")
-      private final @Nullable SshConfigurationResponse ssh;
+    private @Nullable SshConfigurationResponse ssh;
 
     public Optional<SshConfigurationResponse> ssh() {
-        return this.ssh == null ? Optional.empty() : Optional.ofNullable(this.ssh);
+        return Optional.ofNullable(this.ssh);
     }
 
-    public LinuxConfigurationResponse(
-        @Nullable Boolean disablePasswordAuthentication,
-        @Nullable LinuxPatchSettingsResponse patchSettings,
-        @Nullable Boolean provisionVMAgent,
-        @Nullable SshConfigurationResponse ssh) {
-        this.disablePasswordAuthentication = disablePasswordAuthentication;
-        this.patchSettings = patchSettings;
-        this.provisionVMAgent = provisionVMAgent;
-        this.ssh = ssh;
-    }
+    private LinuxConfigurationResponse() {}
 
-    private LinuxConfigurationResponse() {
-        this.disablePasswordAuthentication = null;
-        this.patchSettings = null;
-        this.provisionVMAgent = null;
-        this.ssh = null;
+    private LinuxConfigurationResponse(LinuxConfigurationResponse $) {
+        this.disablePasswordAuthentication = $.disablePasswordAuthentication;
+        this.patchSettings = $.patchSettings;
+        this.provisionVMAgent = $.provisionVMAgent;
+        this.ssh = $.ssh;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LinuxConfigurationResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Boolean disablePasswordAuthentication;
-        private @Nullable LinuxPatchSettingsResponse patchSettings;
-        private @Nullable Boolean provisionVMAgent;
-        private @Nullable SshConfigurationResponse ssh;
+        private LinuxConfigurationResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new LinuxConfigurationResponse();
         }
 
         public Builder(LinuxConfigurationResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.disablePasswordAuthentication = defaults.disablePasswordAuthentication;
-    	      this.patchSettings = defaults.patchSettings;
-    	      this.provisionVMAgent = defaults.provisionVMAgent;
-    	      this.ssh = defaults.ssh;
+            $ = new LinuxConfigurationResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder disablePasswordAuthentication(@Nullable Boolean disablePasswordAuthentication) {
-            this.disablePasswordAuthentication = disablePasswordAuthentication;
+            $.disablePasswordAuthentication = disablePasswordAuthentication;
             return this;
         }
+
         public Builder patchSettings(@Nullable LinuxPatchSettingsResponse patchSettings) {
-            this.patchSettings = patchSettings;
+            $.patchSettings = patchSettings;
             return this;
         }
+
         public Builder provisionVMAgent(@Nullable Boolean provisionVMAgent) {
-            this.provisionVMAgent = provisionVMAgent;
+            $.provisionVMAgent = provisionVMAgent;
             return this;
         }
+
         public Builder ssh(@Nullable SshConfigurationResponse ssh) {
-            this.ssh = ssh;
+            $.ssh = ssh;
             return this;
-        }        public LinuxConfigurationResponse build() {
-            return new LinuxConfigurationResponse(disablePasswordAuthentication, patchSettings, provisionVMAgent, ssh);
+        }
+
+        public LinuxConfigurationResponse build() {
+            return $;
         }
     }
+
 }

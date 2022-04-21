@@ -7,9 +7,9 @@ import com.pulumi.awsnative.ecr.inputs.ReplicationConfigurationReplicationDestin
 import com.pulumi.awsnative.ecr.inputs.ReplicationConfigurationRepositoryFilterArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,7 +26,7 @@ public final class ReplicationConfigurationReplicationRuleArgs extends com.pulum
      * 
      */
     @Import(name="destinations", required=true)
-      private final Output<List<ReplicationConfigurationReplicationDestinationArgs>> destinations;
+    private Output<List<ReplicationConfigurationReplicationDestinationArgs>> destinations;
 
     public Output<List<ReplicationConfigurationReplicationDestinationArgs>> destinations() {
         return this.destinations;
@@ -37,69 +37,67 @@ public final class ReplicationConfigurationReplicationRuleArgs extends com.pulum
      * 
      */
     @Import(name="repositoryFilters")
-      private final @Nullable Output<List<ReplicationConfigurationRepositoryFilterArgs>> repositoryFilters;
+    private @Nullable Output<List<ReplicationConfigurationRepositoryFilterArgs>> repositoryFilters;
 
-    public Output<List<ReplicationConfigurationRepositoryFilterArgs>> repositoryFilters() {
-        return this.repositoryFilters == null ? Codegen.empty() : this.repositoryFilters;
+    public Optional<Output<List<ReplicationConfigurationRepositoryFilterArgs>>> repositoryFilters() {
+        return Optional.ofNullable(this.repositoryFilters);
     }
 
-    public ReplicationConfigurationReplicationRuleArgs(
-        Output<List<ReplicationConfigurationReplicationDestinationArgs>> destinations,
-        @Nullable Output<List<ReplicationConfigurationRepositoryFilterArgs>> repositoryFilters) {
-        this.destinations = Objects.requireNonNull(destinations, "expected parameter 'destinations' to be non-null");
-        this.repositoryFilters = repositoryFilters;
-    }
+    private ReplicationConfigurationReplicationRuleArgs() {}
 
-    private ReplicationConfigurationReplicationRuleArgs() {
-        this.destinations = Codegen.empty();
-        this.repositoryFilters = Codegen.empty();
+    private ReplicationConfigurationReplicationRuleArgs(ReplicationConfigurationReplicationRuleArgs $) {
+        this.destinations = $.destinations;
+        this.repositoryFilters = $.repositoryFilters;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ReplicationConfigurationReplicationRuleArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<List<ReplicationConfigurationReplicationDestinationArgs>> destinations;
-        private @Nullable Output<List<ReplicationConfigurationRepositoryFilterArgs>> repositoryFilters;
+        private ReplicationConfigurationReplicationRuleArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ReplicationConfigurationReplicationRuleArgs();
         }
 
         public Builder(ReplicationConfigurationReplicationRuleArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.destinations = defaults.destinations;
-    	      this.repositoryFilters = defaults.repositoryFilters;
+            $ = new ReplicationConfigurationReplicationRuleArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder destinations(Output<List<ReplicationConfigurationReplicationDestinationArgs>> destinations) {
-            this.destinations = Objects.requireNonNull(destinations);
+            $.destinations = destinations;
             return this;
         }
+
         public Builder destinations(List<ReplicationConfigurationReplicationDestinationArgs> destinations) {
-            this.destinations = Output.of(Objects.requireNonNull(destinations));
-            return this;
+            return destinations(Output.of(destinations));
         }
+
         public Builder destinations(ReplicationConfigurationReplicationDestinationArgs... destinations) {
             return destinations(List.of(destinations));
         }
+
         public Builder repositoryFilters(@Nullable Output<List<ReplicationConfigurationRepositoryFilterArgs>> repositoryFilters) {
-            this.repositoryFilters = repositoryFilters;
+            $.repositoryFilters = repositoryFilters;
             return this;
         }
-        public Builder repositoryFilters(@Nullable List<ReplicationConfigurationRepositoryFilterArgs> repositoryFilters) {
-            this.repositoryFilters = Codegen.ofNullable(repositoryFilters);
-            return this;
+
+        public Builder repositoryFilters(List<ReplicationConfigurationRepositoryFilterArgs> repositoryFilters) {
+            return repositoryFilters(Output.of(repositoryFilters));
         }
+
         public Builder repositoryFilters(ReplicationConfigurationRepositoryFilterArgs... repositoryFilters) {
             return repositoryFilters(List.of(repositoryFilters));
-        }        public ReplicationConfigurationReplicationRuleArgs build() {
-            return new ReplicationConfigurationReplicationRuleArgs(destinations, repositoryFilters);
+        }
+
+        public ReplicationConfigurationReplicationRuleArgs build() {
+            $.destinations = Objects.requireNonNull($.destinations, "expected parameter 'destinations' to be non-null");
+            return $;
         }
     }
+
 }

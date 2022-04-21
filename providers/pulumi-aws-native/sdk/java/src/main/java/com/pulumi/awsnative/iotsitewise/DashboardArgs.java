@@ -6,10 +6,10 @@ package com.pulumi.awsnative.iotsitewise;
 import com.pulumi.awsnative.iotsitewise.inputs.DashboardTagArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,7 +22,7 @@ public final class DashboardArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="dashboardDefinition", required=true)
-      private final Output<String> dashboardDefinition;
+    private Output<String> dashboardDefinition;
 
     public Output<String> dashboardDefinition() {
         return this.dashboardDefinition;
@@ -33,7 +33,7 @@ public final class DashboardArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="dashboardDescription", required=true)
-      private final Output<String> dashboardDescription;
+    private Output<String> dashboardDescription;
 
     public Output<String> dashboardDescription() {
         return this.dashboardDescription;
@@ -44,10 +44,10 @@ public final class DashboardArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="dashboardName")
-      private final @Nullable Output<String> dashboardName;
+    private @Nullable Output<String> dashboardName;
 
-    public Output<String> dashboardName() {
-        return this.dashboardName == null ? Codegen.empty() : this.dashboardName;
+    public Optional<Output<String>> dashboardName() {
+        return Optional.ofNullable(this.dashboardName);
     }
 
     /**
@@ -55,10 +55,10 @@ public final class DashboardArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="projectId")
-      private final @Nullable Output<String> projectId;
+    private @Nullable Output<String> projectId;
 
-    public Output<String> projectId() {
-        return this.projectId == null ? Codegen.empty() : this.projectId;
+    public Optional<Output<String>> projectId() {
+        return Optional.ofNullable(this.projectId);
     }
 
     /**
@@ -66,105 +66,94 @@ public final class DashboardArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<List<DashboardTagArgs>> tags;
+    private @Nullable Output<List<DashboardTagArgs>> tags;
 
-    public Output<List<DashboardTagArgs>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<List<DashboardTagArgs>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public DashboardArgs(
-        Output<String> dashboardDefinition,
-        Output<String> dashboardDescription,
-        @Nullable Output<String> dashboardName,
-        @Nullable Output<String> projectId,
-        @Nullable Output<List<DashboardTagArgs>> tags) {
-        this.dashboardDefinition = Objects.requireNonNull(dashboardDefinition, "expected parameter 'dashboardDefinition' to be non-null");
-        this.dashboardDescription = Objects.requireNonNull(dashboardDescription, "expected parameter 'dashboardDescription' to be non-null");
-        this.dashboardName = dashboardName;
-        this.projectId = projectId;
-        this.tags = tags;
-    }
+    private DashboardArgs() {}
 
-    private DashboardArgs() {
-        this.dashboardDefinition = Codegen.empty();
-        this.dashboardDescription = Codegen.empty();
-        this.dashboardName = Codegen.empty();
-        this.projectId = Codegen.empty();
-        this.tags = Codegen.empty();
+    private DashboardArgs(DashboardArgs $) {
+        this.dashboardDefinition = $.dashboardDefinition;
+        this.dashboardDescription = $.dashboardDescription;
+        this.dashboardName = $.dashboardName;
+        this.projectId = $.projectId;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DashboardArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> dashboardDefinition;
-        private Output<String> dashboardDescription;
-        private @Nullable Output<String> dashboardName;
-        private @Nullable Output<String> projectId;
-        private @Nullable Output<List<DashboardTagArgs>> tags;
+        private DashboardArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DashboardArgs();
         }
 
         public Builder(DashboardArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dashboardDefinition = defaults.dashboardDefinition;
-    	      this.dashboardDescription = defaults.dashboardDescription;
-    	      this.dashboardName = defaults.dashboardName;
-    	      this.projectId = defaults.projectId;
-    	      this.tags = defaults.tags;
+            $ = new DashboardArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder dashboardDefinition(Output<String> dashboardDefinition) {
-            this.dashboardDefinition = Objects.requireNonNull(dashboardDefinition);
+            $.dashboardDefinition = dashboardDefinition;
             return this;
         }
+
         public Builder dashboardDefinition(String dashboardDefinition) {
-            this.dashboardDefinition = Output.of(Objects.requireNonNull(dashboardDefinition));
-            return this;
+            return dashboardDefinition(Output.of(dashboardDefinition));
         }
+
         public Builder dashboardDescription(Output<String> dashboardDescription) {
-            this.dashboardDescription = Objects.requireNonNull(dashboardDescription);
+            $.dashboardDescription = dashboardDescription;
             return this;
         }
+
         public Builder dashboardDescription(String dashboardDescription) {
-            this.dashboardDescription = Output.of(Objects.requireNonNull(dashboardDescription));
-            return this;
+            return dashboardDescription(Output.of(dashboardDescription));
         }
+
         public Builder dashboardName(@Nullable Output<String> dashboardName) {
-            this.dashboardName = dashboardName;
+            $.dashboardName = dashboardName;
             return this;
         }
-        public Builder dashboardName(@Nullable String dashboardName) {
-            this.dashboardName = Codegen.ofNullable(dashboardName);
-            return this;
+
+        public Builder dashboardName(String dashboardName) {
+            return dashboardName(Output.of(dashboardName));
         }
+
         public Builder projectId(@Nullable Output<String> projectId) {
-            this.projectId = projectId;
+            $.projectId = projectId;
             return this;
         }
-        public Builder projectId(@Nullable String projectId) {
-            this.projectId = Codegen.ofNullable(projectId);
-            return this;
+
+        public Builder projectId(String projectId) {
+            return projectId(Output.of(projectId));
         }
+
         public Builder tags(@Nullable Output<List<DashboardTagArgs>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable List<DashboardTagArgs> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(List<DashboardTagArgs> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tags(DashboardTagArgs... tags) {
             return tags(List.of(tags));
-        }        public DashboardArgs build() {
-            return new DashboardArgs(dashboardDefinition, dashboardDescription, dashboardName, projectId, tags);
+        }
+
+        public DashboardArgs build() {
+            $.dashboardDefinition = Objects.requireNonNull($.dashboardDefinition, "expected parameter 'dashboardDefinition' to be non-null");
+            $.dashboardDescription = Objects.requireNonNull($.dashboardDescription, "expected parameter 'dashboardDescription' to be non-null");
+            return $;
         }
     }
+
 }

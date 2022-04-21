@@ -5,7 +5,6 @@ package com.pulumi.gcp.appengine.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,49 +18,49 @@ public final class StandardAppVersionVpcAccessConnectorArgs extends com.pulumi.r
      * 
      */
     @Import(name="name", required=true)
-      private final Output<String> name;
+    private Output<String> name;
 
     public Output<String> name() {
         return this.name;
     }
 
-    public StandardAppVersionVpcAccessConnectorArgs(Output<String> name) {
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-    }
+    private StandardAppVersionVpcAccessConnectorArgs() {}
 
-    private StandardAppVersionVpcAccessConnectorArgs() {
-        this.name = Codegen.empty();
+    private StandardAppVersionVpcAccessConnectorArgs(StandardAppVersionVpcAccessConnectorArgs $) {
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(StandardAppVersionVpcAccessConnectorArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> name;
+        private StandardAppVersionVpcAccessConnectorArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new StandardAppVersionVpcAccessConnectorArgs();
         }
 
         public Builder(StandardAppVersionVpcAccessConnectorArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
+            $ = new StandardAppVersionVpcAccessConnectorArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder name(Output<String> name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Output.of(Objects.requireNonNull(name));
-            return this;
-        }        public StandardAppVersionVpcAccessConnectorArgs build() {
-            return new StandardAppVersionVpcAccessConnectorArgs(name);
+            return name(Output.of(name));
+        }
+
+        public StandardAppVersionVpcAccessConnectorArgs build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            return $;
         }
     }
+
 }

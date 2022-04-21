@@ -22,10 +22,10 @@ public final class GetAvailabilityZonesArgs extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="allAvailabilityZones")
-      private final @Nullable Boolean allAvailabilityZones;
+    private @Nullable Boolean allAvailabilityZones;
 
     public Optional<Boolean> allAvailabilityZones() {
-        return this.allAvailabilityZones == null ? Optional.empty() : Optional.ofNullable(this.allAvailabilityZones);
+        return Optional.ofNullable(this.allAvailabilityZones);
     }
 
     /**
@@ -33,10 +33,10 @@ public final class GetAvailabilityZonesArgs extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="excludeNames")
-      private final @Nullable List<String> excludeNames;
+    private @Nullable List<String> excludeNames;
 
-    public List<String> excludeNames() {
-        return this.excludeNames == null ? List.of() : this.excludeNames;
+    public Optional<List<String>> excludeNames() {
+        return Optional.ofNullable(this.excludeNames);
     }
 
     /**
@@ -44,10 +44,10 @@ public final class GetAvailabilityZonesArgs extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="excludeZoneIds")
-      private final @Nullable List<String> excludeZoneIds;
+    private @Nullable List<String> excludeZoneIds;
 
-    public List<String> excludeZoneIds() {
-        return this.excludeZoneIds == null ? List.of() : this.excludeZoneIds;
+    public Optional<List<String>> excludeZoneIds() {
+        return Optional.ofNullable(this.excludeZoneIds);
     }
 
     /**
@@ -55,10 +55,10 @@ public final class GetAvailabilityZonesArgs extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="filters")
-      private final @Nullable List<GetAvailabilityZonesFilter> filters;
+    private @Nullable List<GetAvailabilityZonesFilter> filters;
 
-    public List<GetAvailabilityZonesFilter> filters() {
-        return this.filters == null ? List.of() : this.filters;
+    public Optional<List<GetAvailabilityZonesFilter>> filters() {
+        return Optional.ofNullable(this.filters);
     }
 
     /**
@@ -69,91 +69,80 @@ public final class GetAvailabilityZonesArgs extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="state")
-      private final @Nullable String state;
+    private @Nullable String state;
 
     public Optional<String> state() {
-        return this.state == null ? Optional.empty() : Optional.ofNullable(this.state);
+        return Optional.ofNullable(this.state);
     }
 
-    public GetAvailabilityZonesArgs(
-        @Nullable Boolean allAvailabilityZones,
-        @Nullable List<String> excludeNames,
-        @Nullable List<String> excludeZoneIds,
-        @Nullable List<GetAvailabilityZonesFilter> filters,
-        @Nullable String state) {
-        this.allAvailabilityZones = allAvailabilityZones;
-        this.excludeNames = excludeNames;
-        this.excludeZoneIds = excludeZoneIds;
-        this.filters = filters;
-        this.state = state;
-    }
+    private GetAvailabilityZonesArgs() {}
 
-    private GetAvailabilityZonesArgs() {
-        this.allAvailabilityZones = null;
-        this.excludeNames = List.of();
-        this.excludeZoneIds = List.of();
-        this.filters = List.of();
-        this.state = null;
+    private GetAvailabilityZonesArgs(GetAvailabilityZonesArgs $) {
+        this.allAvailabilityZones = $.allAvailabilityZones;
+        this.excludeNames = $.excludeNames;
+        this.excludeZoneIds = $.excludeZoneIds;
+        this.filters = $.filters;
+        this.state = $.state;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetAvailabilityZonesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Boolean allAvailabilityZones;
-        private @Nullable List<String> excludeNames;
-        private @Nullable List<String> excludeZoneIds;
-        private @Nullable List<GetAvailabilityZonesFilter> filters;
-        private @Nullable String state;
+        private GetAvailabilityZonesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetAvailabilityZonesArgs();
         }
 
         public Builder(GetAvailabilityZonesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.allAvailabilityZones = defaults.allAvailabilityZones;
-    	      this.excludeNames = defaults.excludeNames;
-    	      this.excludeZoneIds = defaults.excludeZoneIds;
-    	      this.filters = defaults.filters;
-    	      this.state = defaults.state;
+            $ = new GetAvailabilityZonesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder allAvailabilityZones(@Nullable Boolean allAvailabilityZones) {
-            this.allAvailabilityZones = allAvailabilityZones;
+            $.allAvailabilityZones = allAvailabilityZones;
             return this;
         }
+
         public Builder excludeNames(@Nullable List<String> excludeNames) {
-            this.excludeNames = excludeNames;
+            $.excludeNames = excludeNames;
             return this;
         }
+
         public Builder excludeNames(String... excludeNames) {
             return excludeNames(List.of(excludeNames));
         }
+
         public Builder excludeZoneIds(@Nullable List<String> excludeZoneIds) {
-            this.excludeZoneIds = excludeZoneIds;
+            $.excludeZoneIds = excludeZoneIds;
             return this;
         }
+
         public Builder excludeZoneIds(String... excludeZoneIds) {
             return excludeZoneIds(List.of(excludeZoneIds));
         }
+
         public Builder filters(@Nullable List<GetAvailabilityZonesFilter> filters) {
-            this.filters = filters;
+            $.filters = filters;
             return this;
         }
+
         public Builder filters(GetAvailabilityZonesFilter... filters) {
             return filters(List.of(filters));
         }
+
         public Builder state(@Nullable String state) {
-            this.state = state;
+            $.state = state;
             return this;
-        }        public GetAvailabilityZonesArgs build() {
-            return new GetAvailabilityZonesArgs(allAvailabilityZones, excludeNames, excludeZoneIds, filters, state);
+        }
+
+        public GetAvailabilityZonesArgs build() {
+            return $;
         }
     }
+
 }

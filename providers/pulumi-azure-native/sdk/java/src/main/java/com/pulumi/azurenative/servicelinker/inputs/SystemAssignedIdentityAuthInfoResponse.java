@@ -23,45 +23,45 @@ public final class SystemAssignedIdentityAuthInfoResponse extends com.pulumi.res
      * 
      */
     @Import(name="authType", required=true)
-      private final String authType;
+    private String authType;
 
     public String authType() {
         return this.authType;
     }
 
-    public SystemAssignedIdentityAuthInfoResponse(String authType) {
-        this.authType = Codegen.stringProp("authType").arg(authType).require();
-    }
+    private SystemAssignedIdentityAuthInfoResponse() {}
 
-    private SystemAssignedIdentityAuthInfoResponse() {
-        this.authType = null;
+    private SystemAssignedIdentityAuthInfoResponse(SystemAssignedIdentityAuthInfoResponse $) {
+        this.authType = $.authType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SystemAssignedIdentityAuthInfoResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String authType;
+        private SystemAssignedIdentityAuthInfoResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new SystemAssignedIdentityAuthInfoResponse();
         }
 
         public Builder(SystemAssignedIdentityAuthInfoResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.authType = defaults.authType;
+            $ = new SystemAssignedIdentityAuthInfoResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder authType(String authType) {
-            this.authType = Objects.requireNonNull(authType);
+            $.authType = authType;
             return this;
-        }        public SystemAssignedIdentityAuthInfoResponse build() {
-            return new SystemAssignedIdentityAuthInfoResponse(authType);
+        }
+
+        public SystemAssignedIdentityAuthInfoResponse build() {
+            $.authType = Codegen.stringProp("authType").arg($.authType).require();
+            return $;
         }
     }
+
 }

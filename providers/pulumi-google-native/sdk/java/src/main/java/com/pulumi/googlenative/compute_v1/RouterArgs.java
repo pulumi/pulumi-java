@@ -5,7 +5,6 @@ package com.pulumi.googlenative.compute_v1;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.compute_v1.inputs.RouterBgpArgs;
 import com.pulumi.googlenative.compute_v1.inputs.RouterBgpPeerArgs;
 import com.pulumi.googlenative.compute_v1.inputs.RouterInterfaceArgs;
@@ -14,6 +13,7 @@ import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class RouterArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="bgp")
-      private final @Nullable Output<RouterBgpArgs> bgp;
+    private @Nullable Output<RouterBgpArgs> bgp;
 
-    public Output<RouterBgpArgs> bgp() {
-        return this.bgp == null ? Codegen.empty() : this.bgp;
+    public Optional<Output<RouterBgpArgs>> bgp() {
+        return Optional.ofNullable(this.bgp);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class RouterArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="bgpPeers")
-      private final @Nullable Output<List<RouterBgpPeerArgs>> bgpPeers;
+    private @Nullable Output<List<RouterBgpPeerArgs>> bgpPeers;
 
-    public Output<List<RouterBgpPeerArgs>> bgpPeers() {
-        return this.bgpPeers == null ? Codegen.empty() : this.bgpPeers;
+    public Optional<Output<List<RouterBgpPeerArgs>>> bgpPeers() {
+        return Optional.ofNullable(this.bgpPeers);
     }
 
     /**
@@ -48,10 +48,10 @@ public final class RouterArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -59,10 +59,10 @@ public final class RouterArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="encryptedInterconnectRouter")
-      private final @Nullable Output<Boolean> encryptedInterconnectRouter;
+    private @Nullable Output<Boolean> encryptedInterconnectRouter;
 
-    public Output<Boolean> encryptedInterconnectRouter() {
-        return this.encryptedInterconnectRouter == null ? Codegen.empty() : this.encryptedInterconnectRouter;
+    public Optional<Output<Boolean>> encryptedInterconnectRouter() {
+        return Optional.ofNullable(this.encryptedInterconnectRouter);
     }
 
     /**
@@ -70,10 +70,10 @@ public final class RouterArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="interfaces")
-      private final @Nullable Output<List<RouterInterfaceArgs>> interfaces;
+    private @Nullable Output<List<RouterInterfaceArgs>> interfaces;
 
-    public Output<List<RouterInterfaceArgs>> interfaces() {
-        return this.interfaces == null ? Codegen.empty() : this.interfaces;
+    public Optional<Output<List<RouterInterfaceArgs>>> interfaces() {
+        return Optional.ofNullable(this.interfaces);
     }
 
     /**
@@ -81,10 +81,10 @@ public final class RouterArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -92,10 +92,10 @@ public final class RouterArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="nats")
-      private final @Nullable Output<List<RouterNatArgs>> nats;
+    private @Nullable Output<List<RouterNatArgs>> nats;
 
-    public Output<List<RouterNatArgs>> nats() {
-        return this.nats == null ? Codegen.empty() : this.nats;
+    public Optional<Output<List<RouterNatArgs>>> nats() {
+        return Optional.ofNullable(this.nats);
     }
 
     /**
@@ -103,210 +103,182 @@ public final class RouterArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="network")
-      private final @Nullable Output<String> network;
+    private @Nullable Output<String> network;
 
-    public Output<String> network() {
-        return this.network == null ? Codegen.empty() : this.network;
+    public Optional<Output<String>> network() {
+        return Optional.ofNullable(this.network);
     }
 
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     @Import(name="region", required=true)
-      private final Output<String> region;
+    private Output<String> region;
 
     public Output<String> region() {
         return this.region;
     }
 
     @Import(name="requestId")
-      private final @Nullable Output<String> requestId;
+    private @Nullable Output<String> requestId;
 
-    public Output<String> requestId() {
-        return this.requestId == null ? Codegen.empty() : this.requestId;
+    public Optional<Output<String>> requestId() {
+        return Optional.ofNullable(this.requestId);
     }
 
-    public RouterArgs(
-        @Nullable Output<RouterBgpArgs> bgp,
-        @Nullable Output<List<RouterBgpPeerArgs>> bgpPeers,
-        @Nullable Output<String> description,
-        @Nullable Output<Boolean> encryptedInterconnectRouter,
-        @Nullable Output<List<RouterInterfaceArgs>> interfaces,
-        @Nullable Output<String> name,
-        @Nullable Output<List<RouterNatArgs>> nats,
-        @Nullable Output<String> network,
-        @Nullable Output<String> project,
-        Output<String> region,
-        @Nullable Output<String> requestId) {
-        this.bgp = bgp;
-        this.bgpPeers = bgpPeers;
-        this.description = description;
-        this.encryptedInterconnectRouter = encryptedInterconnectRouter;
-        this.interfaces = interfaces;
-        this.name = name;
-        this.nats = nats;
-        this.network = network;
-        this.project = project;
-        this.region = Objects.requireNonNull(region, "expected parameter 'region' to be non-null");
-        this.requestId = requestId;
-    }
+    private RouterArgs() {}
 
-    private RouterArgs() {
-        this.bgp = Codegen.empty();
-        this.bgpPeers = Codegen.empty();
-        this.description = Codegen.empty();
-        this.encryptedInterconnectRouter = Codegen.empty();
-        this.interfaces = Codegen.empty();
-        this.name = Codegen.empty();
-        this.nats = Codegen.empty();
-        this.network = Codegen.empty();
-        this.project = Codegen.empty();
-        this.region = Codegen.empty();
-        this.requestId = Codegen.empty();
+    private RouterArgs(RouterArgs $) {
+        this.bgp = $.bgp;
+        this.bgpPeers = $.bgpPeers;
+        this.description = $.description;
+        this.encryptedInterconnectRouter = $.encryptedInterconnectRouter;
+        this.interfaces = $.interfaces;
+        this.name = $.name;
+        this.nats = $.nats;
+        this.network = $.network;
+        this.project = $.project;
+        this.region = $.region;
+        this.requestId = $.requestId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RouterArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<RouterBgpArgs> bgp;
-        private @Nullable Output<List<RouterBgpPeerArgs>> bgpPeers;
-        private @Nullable Output<String> description;
-        private @Nullable Output<Boolean> encryptedInterconnectRouter;
-        private @Nullable Output<List<RouterInterfaceArgs>> interfaces;
-        private @Nullable Output<String> name;
-        private @Nullable Output<List<RouterNatArgs>> nats;
-        private @Nullable Output<String> network;
-        private @Nullable Output<String> project;
-        private Output<String> region;
-        private @Nullable Output<String> requestId;
+        private RouterArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RouterArgs();
         }
 
         public Builder(RouterArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.bgp = defaults.bgp;
-    	      this.bgpPeers = defaults.bgpPeers;
-    	      this.description = defaults.description;
-    	      this.encryptedInterconnectRouter = defaults.encryptedInterconnectRouter;
-    	      this.interfaces = defaults.interfaces;
-    	      this.name = defaults.name;
-    	      this.nats = defaults.nats;
-    	      this.network = defaults.network;
-    	      this.project = defaults.project;
-    	      this.region = defaults.region;
-    	      this.requestId = defaults.requestId;
+            $ = new RouterArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder bgp(@Nullable Output<RouterBgpArgs> bgp) {
-            this.bgp = bgp;
+            $.bgp = bgp;
             return this;
         }
-        public Builder bgp(@Nullable RouterBgpArgs bgp) {
-            this.bgp = Codegen.ofNullable(bgp);
-            return this;
+
+        public Builder bgp(RouterBgpArgs bgp) {
+            return bgp(Output.of(bgp));
         }
+
         public Builder bgpPeers(@Nullable Output<List<RouterBgpPeerArgs>> bgpPeers) {
-            this.bgpPeers = bgpPeers;
+            $.bgpPeers = bgpPeers;
             return this;
         }
-        public Builder bgpPeers(@Nullable List<RouterBgpPeerArgs> bgpPeers) {
-            this.bgpPeers = Codegen.ofNullable(bgpPeers);
-            return this;
+
+        public Builder bgpPeers(List<RouterBgpPeerArgs> bgpPeers) {
+            return bgpPeers(Output.of(bgpPeers));
         }
+
         public Builder bgpPeers(RouterBgpPeerArgs... bgpPeers) {
             return bgpPeers(List.of(bgpPeers));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder encryptedInterconnectRouter(@Nullable Output<Boolean> encryptedInterconnectRouter) {
-            this.encryptedInterconnectRouter = encryptedInterconnectRouter;
+            $.encryptedInterconnectRouter = encryptedInterconnectRouter;
             return this;
         }
-        public Builder encryptedInterconnectRouter(@Nullable Boolean encryptedInterconnectRouter) {
-            this.encryptedInterconnectRouter = Codegen.ofNullable(encryptedInterconnectRouter);
-            return this;
+
+        public Builder encryptedInterconnectRouter(Boolean encryptedInterconnectRouter) {
+            return encryptedInterconnectRouter(Output.of(encryptedInterconnectRouter));
         }
+
         public Builder interfaces(@Nullable Output<List<RouterInterfaceArgs>> interfaces) {
-            this.interfaces = interfaces;
+            $.interfaces = interfaces;
             return this;
         }
-        public Builder interfaces(@Nullable List<RouterInterfaceArgs> interfaces) {
-            this.interfaces = Codegen.ofNullable(interfaces);
-            return this;
+
+        public Builder interfaces(List<RouterInterfaceArgs> interfaces) {
+            return interfaces(Output.of(interfaces));
         }
+
         public Builder interfaces(RouterInterfaceArgs... interfaces) {
             return interfaces(List.of(interfaces));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder nats(@Nullable Output<List<RouterNatArgs>> nats) {
-            this.nats = nats;
+            $.nats = nats;
             return this;
         }
-        public Builder nats(@Nullable List<RouterNatArgs> nats) {
-            this.nats = Codegen.ofNullable(nats);
-            return this;
+
+        public Builder nats(List<RouterNatArgs> nats) {
+            return nats(Output.of(nats));
         }
+
         public Builder nats(RouterNatArgs... nats) {
             return nats(List.of(nats));
         }
+
         public Builder network(@Nullable Output<String> network) {
-            this.network = network;
+            $.network = network;
             return this;
         }
-        public Builder network(@Nullable String network) {
-            this.network = Codegen.ofNullable(network);
-            return this;
+
+        public Builder network(String network) {
+            return network(Output.of(network));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder region(Output<String> region) {
-            this.region = Objects.requireNonNull(region);
+            $.region = region;
             return this;
         }
+
         public Builder region(String region) {
-            this.region = Output.of(Objects.requireNonNull(region));
-            return this;
+            return region(Output.of(region));
         }
+
         public Builder requestId(@Nullable Output<String> requestId) {
-            this.requestId = requestId;
+            $.requestId = requestId;
             return this;
         }
-        public Builder requestId(@Nullable String requestId) {
-            this.requestId = Codegen.ofNullable(requestId);
-            return this;
-        }        public RouterArgs build() {
-            return new RouterArgs(bgp, bgpPeers, description, encryptedInterconnectRouter, interfaces, name, nats, network, project, region, requestId);
+
+        public Builder requestId(String requestId) {
+            return requestId(Output.of(requestId));
+        }
+
+        public RouterArgs build() {
+            $.region = Objects.requireNonNull($.region, "expected parameter 'region' to be non-null");
+            return $;
         }
     }
+
 }

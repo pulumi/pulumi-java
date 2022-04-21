@@ -5,10 +5,10 @@ package com.pulumi.azurenative.customerinsights.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,7 +25,7 @@ public final class AssignmentPrincipalArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="principalId", required=true)
-      private final Output<String> principalId;
+    private Output<String> principalId;
 
     public Output<String> principalId() {
         return this.principalId;
@@ -36,10 +36,10 @@ public final class AssignmentPrincipalArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="principalMetadata")
-      private final @Nullable Output<Map<String,String>> principalMetadata;
+    private @Nullable Output<Map<String,String>> principalMetadata;
 
-    public Output<Map<String,String>> principalMetadata() {
-        return this.principalMetadata == null ? Codegen.empty() : this.principalMetadata;
+    public Optional<Output<Map<String,String>>> principalMetadata() {
+        return Optional.ofNullable(this.principalMetadata);
     }
 
     /**
@@ -47,76 +47,70 @@ public final class AssignmentPrincipalArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="principalType", required=true)
-      private final Output<String> principalType;
+    private Output<String> principalType;
 
     public Output<String> principalType() {
         return this.principalType;
     }
 
-    public AssignmentPrincipalArgs(
-        Output<String> principalId,
-        @Nullable Output<Map<String,String>> principalMetadata,
-        Output<String> principalType) {
-        this.principalId = Objects.requireNonNull(principalId, "expected parameter 'principalId' to be non-null");
-        this.principalMetadata = principalMetadata;
-        this.principalType = Objects.requireNonNull(principalType, "expected parameter 'principalType' to be non-null");
-    }
+    private AssignmentPrincipalArgs() {}
 
-    private AssignmentPrincipalArgs() {
-        this.principalId = Codegen.empty();
-        this.principalMetadata = Codegen.empty();
-        this.principalType = Codegen.empty();
+    private AssignmentPrincipalArgs(AssignmentPrincipalArgs $) {
+        this.principalId = $.principalId;
+        this.principalMetadata = $.principalMetadata;
+        this.principalType = $.principalType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AssignmentPrincipalArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> principalId;
-        private @Nullable Output<Map<String,String>> principalMetadata;
-        private Output<String> principalType;
+        private AssignmentPrincipalArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AssignmentPrincipalArgs();
         }
 
         public Builder(AssignmentPrincipalArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.principalId = defaults.principalId;
-    	      this.principalMetadata = defaults.principalMetadata;
-    	      this.principalType = defaults.principalType;
+            $ = new AssignmentPrincipalArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder principalId(Output<String> principalId) {
-            this.principalId = Objects.requireNonNull(principalId);
+            $.principalId = principalId;
             return this;
         }
+
         public Builder principalId(String principalId) {
-            this.principalId = Output.of(Objects.requireNonNull(principalId));
-            return this;
+            return principalId(Output.of(principalId));
         }
+
         public Builder principalMetadata(@Nullable Output<Map<String,String>> principalMetadata) {
-            this.principalMetadata = principalMetadata;
+            $.principalMetadata = principalMetadata;
             return this;
         }
-        public Builder principalMetadata(@Nullable Map<String,String> principalMetadata) {
-            this.principalMetadata = Codegen.ofNullable(principalMetadata);
-            return this;
+
+        public Builder principalMetadata(Map<String,String> principalMetadata) {
+            return principalMetadata(Output.of(principalMetadata));
         }
+
         public Builder principalType(Output<String> principalType) {
-            this.principalType = Objects.requireNonNull(principalType);
+            $.principalType = principalType;
             return this;
         }
+
         public Builder principalType(String principalType) {
-            this.principalType = Output.of(Objects.requireNonNull(principalType));
-            return this;
-        }        public AssignmentPrincipalArgs build() {
-            return new AssignmentPrincipalArgs(principalId, principalMetadata, principalType);
+            return principalType(Output.of(principalType));
+        }
+
+        public AssignmentPrincipalArgs build() {
+            $.principalId = Objects.requireNonNull($.principalId, "expected parameter 'principalId' to be non-null");
+            $.principalType = Objects.requireNonNull($.principalType, "expected parameter 'principalType' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,10 +5,10 @@ package com.pulumi.googlenative.compute_beta.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.compute_beta.inputs.FixedOrPercentArgs;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class InstanceGroupManagerVersionArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="instanceTemplate")
-      private final @Nullable Output<String> instanceTemplate;
+    private @Nullable Output<String> instanceTemplate;
 
-    public Output<String> instanceTemplate() {
-        return this.instanceTemplate == null ? Codegen.empty() : this.instanceTemplate;
+    public Optional<Output<String>> instanceTemplate() {
+        return Optional.ofNullable(this.instanceTemplate);
     }
 
     /**
@@ -32,10 +32,10 @@ public final class InstanceGroupManagerVersionArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -43,76 +43,68 @@ public final class InstanceGroupManagerVersionArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="targetSize")
-      private final @Nullable Output<FixedOrPercentArgs> targetSize;
+    private @Nullable Output<FixedOrPercentArgs> targetSize;
 
-    public Output<FixedOrPercentArgs> targetSize() {
-        return this.targetSize == null ? Codegen.empty() : this.targetSize;
+    public Optional<Output<FixedOrPercentArgs>> targetSize() {
+        return Optional.ofNullable(this.targetSize);
     }
 
-    public InstanceGroupManagerVersionArgs(
-        @Nullable Output<String> instanceTemplate,
-        @Nullable Output<String> name,
-        @Nullable Output<FixedOrPercentArgs> targetSize) {
-        this.instanceTemplate = instanceTemplate;
-        this.name = name;
-        this.targetSize = targetSize;
-    }
+    private InstanceGroupManagerVersionArgs() {}
 
-    private InstanceGroupManagerVersionArgs() {
-        this.instanceTemplate = Codegen.empty();
-        this.name = Codegen.empty();
-        this.targetSize = Codegen.empty();
+    private InstanceGroupManagerVersionArgs(InstanceGroupManagerVersionArgs $) {
+        this.instanceTemplate = $.instanceTemplate;
+        this.name = $.name;
+        this.targetSize = $.targetSize;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(InstanceGroupManagerVersionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> instanceTemplate;
-        private @Nullable Output<String> name;
-        private @Nullable Output<FixedOrPercentArgs> targetSize;
+        private InstanceGroupManagerVersionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new InstanceGroupManagerVersionArgs();
         }
 
         public Builder(InstanceGroupManagerVersionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.instanceTemplate = defaults.instanceTemplate;
-    	      this.name = defaults.name;
-    	      this.targetSize = defaults.targetSize;
+            $ = new InstanceGroupManagerVersionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder instanceTemplate(@Nullable Output<String> instanceTemplate) {
-            this.instanceTemplate = instanceTemplate;
+            $.instanceTemplate = instanceTemplate;
             return this;
         }
-        public Builder instanceTemplate(@Nullable String instanceTemplate) {
-            this.instanceTemplate = Codegen.ofNullable(instanceTemplate);
-            return this;
+
+        public Builder instanceTemplate(String instanceTemplate) {
+            return instanceTemplate(Output.of(instanceTemplate));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder targetSize(@Nullable Output<FixedOrPercentArgs> targetSize) {
-            this.targetSize = targetSize;
+            $.targetSize = targetSize;
             return this;
         }
-        public Builder targetSize(@Nullable FixedOrPercentArgs targetSize) {
-            this.targetSize = Codegen.ofNullable(targetSize);
-            return this;
-        }        public InstanceGroupManagerVersionArgs build() {
-            return new InstanceGroupManagerVersionArgs(instanceTemplate, name, targetSize);
+
+        public Builder targetSize(FixedOrPercentArgs targetSize) {
+            return targetSize(Output.of(targetSize));
+        }
+
+        public InstanceGroupManagerVersionArgs build() {
+            return $;
         }
     }
+
 }

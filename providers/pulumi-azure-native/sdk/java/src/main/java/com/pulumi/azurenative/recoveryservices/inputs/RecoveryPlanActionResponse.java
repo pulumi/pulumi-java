@@ -26,7 +26,7 @@ public final class RecoveryPlanActionResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="actionName", required=true)
-      private final String actionName;
+    private String actionName;
 
     public String actionName() {
         return this.actionName;
@@ -37,7 +37,7 @@ public final class RecoveryPlanActionResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="customDetails", required=true)
-      private final Object customDetails;
+    private Object customDetails;
 
     public Object customDetails() {
         return this.customDetails;
@@ -48,7 +48,7 @@ public final class RecoveryPlanActionResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="failoverDirections", required=true)
-      private final List<String> failoverDirections;
+    private List<String> failoverDirections;
 
     public List<String> failoverDirections() {
         return this.failoverDirections;
@@ -59,79 +59,74 @@ public final class RecoveryPlanActionResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="failoverTypes", required=true)
-      private final List<String> failoverTypes;
+    private List<String> failoverTypes;
 
     public List<String> failoverTypes() {
         return this.failoverTypes;
     }
 
-    public RecoveryPlanActionResponse(
-        String actionName,
-        Object customDetails,
-        List<String> failoverDirections,
-        List<String> failoverTypes) {
-        this.actionName = Objects.requireNonNull(actionName, "expected parameter 'actionName' to be non-null");
-        this.customDetails = Objects.requireNonNull(customDetails, "expected parameter 'customDetails' to be non-null");
-        this.failoverDirections = Objects.requireNonNull(failoverDirections, "expected parameter 'failoverDirections' to be non-null");
-        this.failoverTypes = Objects.requireNonNull(failoverTypes, "expected parameter 'failoverTypes' to be non-null");
-    }
+    private RecoveryPlanActionResponse() {}
 
-    private RecoveryPlanActionResponse() {
-        this.actionName = null;
-        this.customDetails = null;
-        this.failoverDirections = List.of();
-        this.failoverTypes = List.of();
+    private RecoveryPlanActionResponse(RecoveryPlanActionResponse $) {
+        this.actionName = $.actionName;
+        this.customDetails = $.customDetails;
+        this.failoverDirections = $.failoverDirections;
+        this.failoverTypes = $.failoverTypes;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RecoveryPlanActionResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String actionName;
-        private Object customDetails;
-        private List<String> failoverDirections;
-        private List<String> failoverTypes;
+        private RecoveryPlanActionResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new RecoveryPlanActionResponse();
         }
 
         public Builder(RecoveryPlanActionResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.actionName = defaults.actionName;
-    	      this.customDetails = defaults.customDetails;
-    	      this.failoverDirections = defaults.failoverDirections;
-    	      this.failoverTypes = defaults.failoverTypes;
+            $ = new RecoveryPlanActionResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder actionName(String actionName) {
-            this.actionName = Objects.requireNonNull(actionName);
+            $.actionName = actionName;
             return this;
         }
+
         public Builder customDetails(Object customDetails) {
-            this.customDetails = Objects.requireNonNull(customDetails);
+            $.customDetails = customDetails;
             return this;
         }
+
         public Builder failoverDirections(List<String> failoverDirections) {
-            this.failoverDirections = Objects.requireNonNull(failoverDirections);
+            $.failoverDirections = failoverDirections;
             return this;
         }
+
         public Builder failoverDirections(String... failoverDirections) {
             return failoverDirections(List.of(failoverDirections));
         }
+
         public Builder failoverTypes(List<String> failoverTypes) {
-            this.failoverTypes = Objects.requireNonNull(failoverTypes);
+            $.failoverTypes = failoverTypes;
             return this;
         }
+
         public Builder failoverTypes(String... failoverTypes) {
             return failoverTypes(List.of(failoverTypes));
-        }        public RecoveryPlanActionResponse build() {
-            return new RecoveryPlanActionResponse(actionName, customDetails, failoverDirections, failoverTypes);
+        }
+
+        public RecoveryPlanActionResponse build() {
+            $.actionName = Objects.requireNonNull($.actionName, "expected parameter 'actionName' to be non-null");
+            $.customDetails = Objects.requireNonNull($.customDetails, "expected parameter 'customDetails' to be non-null");
+            $.failoverDirections = Objects.requireNonNull($.failoverDirections, "expected parameter 'failoverDirections' to be non-null");
+            $.failoverTypes = Objects.requireNonNull($.failoverTypes, "expected parameter 'failoverTypes' to be non-null");
+            return $;
         }
     }
+
 }

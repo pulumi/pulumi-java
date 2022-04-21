@@ -5,9 +5,9 @@ package com.pulumi.googlenative.cloudasset_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class PubsubDestinationArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="topic")
-      private final @Nullable Output<String> topic;
+    private @Nullable Output<String> topic;
 
-    public Output<String> topic() {
-        return this.topic == null ? Codegen.empty() : this.topic;
+    public Optional<Output<String>> topic() {
+        return Optional.ofNullable(this.topic);
     }
 
-    public PubsubDestinationArgs(@Nullable Output<String> topic) {
-        this.topic = topic;
-    }
+    private PubsubDestinationArgs() {}
 
-    private PubsubDestinationArgs() {
-        this.topic = Codegen.empty();
+    private PubsubDestinationArgs(PubsubDestinationArgs $) {
+        this.topic = $.topic;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PubsubDestinationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> topic;
+        private PubsubDestinationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PubsubDestinationArgs();
         }
 
         public Builder(PubsubDestinationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.topic = defaults.topic;
+            $ = new PubsubDestinationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder topic(@Nullable Output<String> topic) {
-            this.topic = topic;
+            $.topic = topic;
             return this;
         }
-        public Builder topic(@Nullable String topic) {
-            this.topic = Codegen.ofNullable(topic);
-            return this;
-        }        public PubsubDestinationArgs build() {
-            return new PubsubDestinationArgs(topic);
+
+        public Builder topic(String topic) {
+            return topic(Output.of(topic));
+        }
+
+        public PubsubDestinationArgs build() {
+            return $;
         }
     }
+
 }

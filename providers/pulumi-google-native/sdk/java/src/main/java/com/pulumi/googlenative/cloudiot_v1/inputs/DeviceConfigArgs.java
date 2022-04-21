@@ -5,9 +5,9 @@ package com.pulumi.googlenative.cloudiot_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class DeviceConfigArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="binaryData")
-      private final @Nullable Output<String> binaryData;
+    private @Nullable Output<String> binaryData;
 
-    public Output<String> binaryData() {
-        return this.binaryData == null ? Codegen.empty() : this.binaryData;
+    public Optional<Output<String>> binaryData() {
+        return Optional.ofNullable(this.binaryData);
     }
 
-    public DeviceConfigArgs(@Nullable Output<String> binaryData) {
-        this.binaryData = binaryData;
-    }
+    private DeviceConfigArgs() {}
 
-    private DeviceConfigArgs() {
-        this.binaryData = Codegen.empty();
+    private DeviceConfigArgs(DeviceConfigArgs $) {
+        this.binaryData = $.binaryData;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DeviceConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> binaryData;
+        private DeviceConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DeviceConfigArgs();
         }
 
         public Builder(DeviceConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.binaryData = defaults.binaryData;
+            $ = new DeviceConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder binaryData(@Nullable Output<String> binaryData) {
-            this.binaryData = binaryData;
+            $.binaryData = binaryData;
             return this;
         }
-        public Builder binaryData(@Nullable String binaryData) {
-            this.binaryData = Codegen.ofNullable(binaryData);
-            return this;
-        }        public DeviceConfigArgs build() {
-            return new DeviceConfigArgs(binaryData);
+
+        public Builder binaryData(String binaryData) {
+            return binaryData(Output.of(binaryData));
+        }
+
+        public DeviceConfigArgs build() {
+            return $;
         }
     }
+
 }

@@ -22,7 +22,7 @@ public final class GoogleCloudDialogflowCxV3IntentParameterResponse extends com.
      * 
      */
     @Import(name="entityType", required=true)
-      private final String entityType;
+    private String entityType;
 
     public String entityType() {
         return this.entityType;
@@ -33,7 +33,7 @@ public final class GoogleCloudDialogflowCxV3IntentParameterResponse extends com.
      * 
      */
     @Import(name="isList", required=true)
-      private final Boolean isList;
+    private Boolean isList;
 
     public Boolean isList() {
         return this.isList;
@@ -44,64 +44,59 @@ public final class GoogleCloudDialogflowCxV3IntentParameterResponse extends com.
      * 
      */
     @Import(name="redact", required=true)
-      private final Boolean redact;
+    private Boolean redact;
 
     public Boolean redact() {
         return this.redact;
     }
 
-    public GoogleCloudDialogflowCxV3IntentParameterResponse(
-        String entityType,
-        Boolean isList,
-        Boolean redact) {
-        this.entityType = Objects.requireNonNull(entityType, "expected parameter 'entityType' to be non-null");
-        this.isList = Objects.requireNonNull(isList, "expected parameter 'isList' to be non-null");
-        this.redact = Objects.requireNonNull(redact, "expected parameter 'redact' to be non-null");
-    }
+    private GoogleCloudDialogflowCxV3IntentParameterResponse() {}
 
-    private GoogleCloudDialogflowCxV3IntentParameterResponse() {
-        this.entityType = null;
-        this.isList = null;
-        this.redact = null;
+    private GoogleCloudDialogflowCxV3IntentParameterResponse(GoogleCloudDialogflowCxV3IntentParameterResponse $) {
+        this.entityType = $.entityType;
+        this.isList = $.isList;
+        this.redact = $.redact;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudDialogflowCxV3IntentParameterResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String entityType;
-        private Boolean isList;
-        private Boolean redact;
+        private GoogleCloudDialogflowCxV3IntentParameterResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudDialogflowCxV3IntentParameterResponse();
         }
 
         public Builder(GoogleCloudDialogflowCxV3IntentParameterResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.entityType = defaults.entityType;
-    	      this.isList = defaults.isList;
-    	      this.redact = defaults.redact;
+            $ = new GoogleCloudDialogflowCxV3IntentParameterResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder entityType(String entityType) {
-            this.entityType = Objects.requireNonNull(entityType);
+            $.entityType = entityType;
             return this;
         }
+
         public Builder isList(Boolean isList) {
-            this.isList = Objects.requireNonNull(isList);
+            $.isList = isList;
             return this;
         }
+
         public Builder redact(Boolean redact) {
-            this.redact = Objects.requireNonNull(redact);
+            $.redact = redact;
             return this;
-        }        public GoogleCloudDialogflowCxV3IntentParameterResponse build() {
-            return new GoogleCloudDialogflowCxV3IntentParameterResponse(entityType, isList, redact);
+        }
+
+        public GoogleCloudDialogflowCxV3IntentParameterResponse build() {
+            $.entityType = Objects.requireNonNull($.entityType, "expected parameter 'entityType' to be non-null");
+            $.isList = Objects.requireNonNull($.isList, "expected parameter 'isList' to be non-null");
+            $.redact = Objects.requireNonNull($.redact, "expected parameter 'redact' to be non-null");
+            return $;
         }
     }
+
 }

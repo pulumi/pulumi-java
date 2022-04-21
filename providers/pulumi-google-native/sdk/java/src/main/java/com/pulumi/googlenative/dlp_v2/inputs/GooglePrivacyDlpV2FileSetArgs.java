@@ -5,10 +5,10 @@ package com.pulumi.googlenative.dlp_v2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2CloudStorageRegexFileSetArgs;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class GooglePrivacyDlpV2FileSetArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="regexFileSet")
-      private final @Nullable Output<GooglePrivacyDlpV2CloudStorageRegexFileSetArgs> regexFileSet;
+    private @Nullable Output<GooglePrivacyDlpV2CloudStorageRegexFileSetArgs> regexFileSet;
 
-    public Output<GooglePrivacyDlpV2CloudStorageRegexFileSetArgs> regexFileSet() {
-        return this.regexFileSet == null ? Codegen.empty() : this.regexFileSet;
+    public Optional<Output<GooglePrivacyDlpV2CloudStorageRegexFileSetArgs>> regexFileSet() {
+        return Optional.ofNullable(this.regexFileSet);
     }
 
     /**
@@ -36,63 +36,58 @@ public final class GooglePrivacyDlpV2FileSetArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="url")
-      private final @Nullable Output<String> url;
+    private @Nullable Output<String> url;
 
-    public Output<String> url() {
-        return this.url == null ? Codegen.empty() : this.url;
+    public Optional<Output<String>> url() {
+        return Optional.ofNullable(this.url);
     }
 
-    public GooglePrivacyDlpV2FileSetArgs(
-        @Nullable Output<GooglePrivacyDlpV2CloudStorageRegexFileSetArgs> regexFileSet,
-        @Nullable Output<String> url) {
-        this.regexFileSet = regexFileSet;
-        this.url = url;
-    }
+    private GooglePrivacyDlpV2FileSetArgs() {}
 
-    private GooglePrivacyDlpV2FileSetArgs() {
-        this.regexFileSet = Codegen.empty();
-        this.url = Codegen.empty();
+    private GooglePrivacyDlpV2FileSetArgs(GooglePrivacyDlpV2FileSetArgs $) {
+        this.regexFileSet = $.regexFileSet;
+        this.url = $.url;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GooglePrivacyDlpV2FileSetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<GooglePrivacyDlpV2CloudStorageRegexFileSetArgs> regexFileSet;
-        private @Nullable Output<String> url;
+        private GooglePrivacyDlpV2FileSetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GooglePrivacyDlpV2FileSetArgs();
         }
 
         public Builder(GooglePrivacyDlpV2FileSetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.regexFileSet = defaults.regexFileSet;
-    	      this.url = defaults.url;
+            $ = new GooglePrivacyDlpV2FileSetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder regexFileSet(@Nullable Output<GooglePrivacyDlpV2CloudStorageRegexFileSetArgs> regexFileSet) {
-            this.regexFileSet = regexFileSet;
+            $.regexFileSet = regexFileSet;
             return this;
         }
-        public Builder regexFileSet(@Nullable GooglePrivacyDlpV2CloudStorageRegexFileSetArgs regexFileSet) {
-            this.regexFileSet = Codegen.ofNullable(regexFileSet);
-            return this;
+
+        public Builder regexFileSet(GooglePrivacyDlpV2CloudStorageRegexFileSetArgs regexFileSet) {
+            return regexFileSet(Output.of(regexFileSet));
         }
+
         public Builder url(@Nullable Output<String> url) {
-            this.url = url;
+            $.url = url;
             return this;
         }
-        public Builder url(@Nullable String url) {
-            this.url = Codegen.ofNullable(url);
-            return this;
-        }        public GooglePrivacyDlpV2FileSetArgs build() {
-            return new GooglePrivacyDlpV2FileSetArgs(regexFileSet, url);
+
+        public Builder url(String url) {
+            return url(Output.of(url));
+        }
+
+        public GooglePrivacyDlpV2FileSetArgs build() {
+            return $;
         }
     }
+
 }

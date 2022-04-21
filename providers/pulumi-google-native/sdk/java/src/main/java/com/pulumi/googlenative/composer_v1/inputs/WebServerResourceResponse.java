@@ -21,7 +21,7 @@ public final class WebServerResourceResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="cpu", required=true)
-      private final Double cpu;
+    private Double cpu;
 
     public Double cpu() {
         return this.cpu;
@@ -32,7 +32,7 @@ public final class WebServerResourceResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="memoryGb", required=true)
-      private final Double memoryGb;
+    private Double memoryGb;
 
     public Double memoryGb() {
         return this.memoryGb;
@@ -43,64 +43,59 @@ public final class WebServerResourceResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="storageGb", required=true)
-      private final Double storageGb;
+    private Double storageGb;
 
     public Double storageGb() {
         return this.storageGb;
     }
 
-    public WebServerResourceResponse(
-        Double cpu,
-        Double memoryGb,
-        Double storageGb) {
-        this.cpu = Objects.requireNonNull(cpu, "expected parameter 'cpu' to be non-null");
-        this.memoryGb = Objects.requireNonNull(memoryGb, "expected parameter 'memoryGb' to be non-null");
-        this.storageGb = Objects.requireNonNull(storageGb, "expected parameter 'storageGb' to be non-null");
-    }
+    private WebServerResourceResponse() {}
 
-    private WebServerResourceResponse() {
-        this.cpu = null;
-        this.memoryGb = null;
-        this.storageGb = null;
+    private WebServerResourceResponse(WebServerResourceResponse $) {
+        this.cpu = $.cpu;
+        this.memoryGb = $.memoryGb;
+        this.storageGb = $.storageGb;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WebServerResourceResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Double cpu;
-        private Double memoryGb;
-        private Double storageGb;
+        private WebServerResourceResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new WebServerResourceResponse();
         }
 
         public Builder(WebServerResourceResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cpu = defaults.cpu;
-    	      this.memoryGb = defaults.memoryGb;
-    	      this.storageGb = defaults.storageGb;
+            $ = new WebServerResourceResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder cpu(Double cpu) {
-            this.cpu = Objects.requireNonNull(cpu);
+            $.cpu = cpu;
             return this;
         }
+
         public Builder memoryGb(Double memoryGb) {
-            this.memoryGb = Objects.requireNonNull(memoryGb);
+            $.memoryGb = memoryGb;
             return this;
         }
+
         public Builder storageGb(Double storageGb) {
-            this.storageGb = Objects.requireNonNull(storageGb);
+            $.storageGb = storageGb;
             return this;
-        }        public WebServerResourceResponse build() {
-            return new WebServerResourceResponse(cpu, memoryGb, storageGb);
+        }
+
+        public WebServerResourceResponse build() {
+            $.cpu = Objects.requireNonNull($.cpu, "expected parameter 'cpu' to be non-null");
+            $.memoryGb = Objects.requireNonNull($.memoryGb, "expected parameter 'memoryGb' to be non-null");
+            $.storageGb = Objects.requireNonNull($.storageGb, "expected parameter 'storageGb' to be non-null");
+            return $;
         }
     }
+
 }

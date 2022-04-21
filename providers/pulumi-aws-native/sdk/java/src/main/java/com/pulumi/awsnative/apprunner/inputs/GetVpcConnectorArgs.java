@@ -17,45 +17,45 @@ public final class GetVpcConnectorArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="vpcConnectorArn", required=true)
-      private final String vpcConnectorArn;
+    private String vpcConnectorArn;
 
     public String vpcConnectorArn() {
         return this.vpcConnectorArn;
     }
 
-    public GetVpcConnectorArgs(String vpcConnectorArn) {
-        this.vpcConnectorArn = Objects.requireNonNull(vpcConnectorArn, "expected parameter 'vpcConnectorArn' to be non-null");
-    }
+    private GetVpcConnectorArgs() {}
 
-    private GetVpcConnectorArgs() {
-        this.vpcConnectorArn = null;
+    private GetVpcConnectorArgs(GetVpcConnectorArgs $) {
+        this.vpcConnectorArn = $.vpcConnectorArn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetVpcConnectorArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String vpcConnectorArn;
+        private GetVpcConnectorArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetVpcConnectorArgs();
         }
 
         public Builder(GetVpcConnectorArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.vpcConnectorArn = defaults.vpcConnectorArn;
+            $ = new GetVpcConnectorArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder vpcConnectorArn(String vpcConnectorArn) {
-            this.vpcConnectorArn = Objects.requireNonNull(vpcConnectorArn);
+            $.vpcConnectorArn = vpcConnectorArn;
             return this;
-        }        public GetVpcConnectorArgs build() {
-            return new GetVpcConnectorArgs(vpcConnectorArn);
+        }
+
+        public GetVpcConnectorArgs build() {
+            $.vpcConnectorArn = Objects.requireNonNull($.vpcConnectorArn, "expected parameter 'vpcConnectorArn' to be non-null");
+            return $;
         }
     }
+
 }

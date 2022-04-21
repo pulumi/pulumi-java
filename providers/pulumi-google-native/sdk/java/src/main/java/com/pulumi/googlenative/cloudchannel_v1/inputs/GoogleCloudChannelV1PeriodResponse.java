@@ -22,7 +22,7 @@ public final class GoogleCloudChannelV1PeriodResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="duration", required=true)
-      private final Integer duration;
+    private Integer duration;
 
     public Integer duration() {
         return this.duration;
@@ -33,55 +33,52 @@ public final class GoogleCloudChannelV1PeriodResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="periodType", required=true)
-      private final String periodType;
+    private String periodType;
 
     public String periodType() {
         return this.periodType;
     }
 
-    public GoogleCloudChannelV1PeriodResponse(
-        Integer duration,
-        String periodType) {
-        this.duration = Objects.requireNonNull(duration, "expected parameter 'duration' to be non-null");
-        this.periodType = Objects.requireNonNull(periodType, "expected parameter 'periodType' to be non-null");
-    }
+    private GoogleCloudChannelV1PeriodResponse() {}
 
-    private GoogleCloudChannelV1PeriodResponse() {
-        this.duration = null;
-        this.periodType = null;
+    private GoogleCloudChannelV1PeriodResponse(GoogleCloudChannelV1PeriodResponse $) {
+        this.duration = $.duration;
+        this.periodType = $.periodType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudChannelV1PeriodResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Integer duration;
-        private String periodType;
+        private GoogleCloudChannelV1PeriodResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudChannelV1PeriodResponse();
         }
 
         public Builder(GoogleCloudChannelV1PeriodResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.duration = defaults.duration;
-    	      this.periodType = defaults.periodType;
+            $ = new GoogleCloudChannelV1PeriodResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder duration(Integer duration) {
-            this.duration = Objects.requireNonNull(duration);
+            $.duration = duration;
             return this;
         }
+
         public Builder periodType(String periodType) {
-            this.periodType = Objects.requireNonNull(periodType);
+            $.periodType = periodType;
             return this;
-        }        public GoogleCloudChannelV1PeriodResponse build() {
-            return new GoogleCloudChannelV1PeriodResponse(duration, periodType);
+        }
+
+        public GoogleCloudChannelV1PeriodResponse build() {
+            $.duration = Objects.requireNonNull($.duration, "expected parameter 'duration' to be non-null");
+            $.periodType = Objects.requireNonNull($.periodType, "expected parameter 'periodType' to be non-null");
+            return $;
         }
     }
+
 }

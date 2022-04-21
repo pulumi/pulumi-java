@@ -21,7 +21,7 @@ public final class PredictionResponseMappings extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="grade", required=true)
-      private final String grade;
+    private String grade;
 
     public String grade() {
         return this.grade;
@@ -32,7 +32,7 @@ public final class PredictionResponseMappings extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="reason", required=true)
-      private final String reason;
+    private String reason;
 
     public String reason() {
         return this.reason;
@@ -43,64 +43,59 @@ public final class PredictionResponseMappings extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="score", required=true)
-      private final String score;
+    private String score;
 
     public String score() {
         return this.score;
     }
 
-    public PredictionResponseMappings(
-        String grade,
-        String reason,
-        String score) {
-        this.grade = Objects.requireNonNull(grade, "expected parameter 'grade' to be non-null");
-        this.reason = Objects.requireNonNull(reason, "expected parameter 'reason' to be non-null");
-        this.score = Objects.requireNonNull(score, "expected parameter 'score' to be non-null");
-    }
+    private PredictionResponseMappings() {}
 
-    private PredictionResponseMappings() {
-        this.grade = null;
-        this.reason = null;
-        this.score = null;
+    private PredictionResponseMappings(PredictionResponseMappings $) {
+        this.grade = $.grade;
+        this.reason = $.reason;
+        this.score = $.score;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PredictionResponseMappings defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String grade;
-        private String reason;
-        private String score;
+        private PredictionResponseMappings $;
 
         public Builder() {
-    	      // Empty
+            $ = new PredictionResponseMappings();
         }
 
         public Builder(PredictionResponseMappings defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.grade = defaults.grade;
-    	      this.reason = defaults.reason;
-    	      this.score = defaults.score;
+            $ = new PredictionResponseMappings(Objects.requireNonNull(defaults));
         }
 
         public Builder grade(String grade) {
-            this.grade = Objects.requireNonNull(grade);
+            $.grade = grade;
             return this;
         }
+
         public Builder reason(String reason) {
-            this.reason = Objects.requireNonNull(reason);
+            $.reason = reason;
             return this;
         }
+
         public Builder score(String score) {
-            this.score = Objects.requireNonNull(score);
+            $.score = score;
             return this;
-        }        public PredictionResponseMappings build() {
-            return new PredictionResponseMappings(grade, reason, score);
+        }
+
+        public PredictionResponseMappings build() {
+            $.grade = Objects.requireNonNull($.grade, "expected parameter 'grade' to be non-null");
+            $.reason = Objects.requireNonNull($.reason, "expected parameter 'reason' to be non-null");
+            $.score = Objects.requireNonNull($.score, "expected parameter 'score' to be non-null");
+            return $;
         }
     }
+
 }

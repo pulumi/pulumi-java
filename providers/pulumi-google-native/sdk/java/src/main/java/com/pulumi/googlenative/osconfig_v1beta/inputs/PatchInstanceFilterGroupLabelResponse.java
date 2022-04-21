@@ -22,45 +22,45 @@ public final class PatchInstanceFilterGroupLabelResponse extends com.pulumi.reso
      * 
      */
     @Import(name="labels", required=true)
-      private final Map<String,String> labels;
+    private Map<String,String> labels;
 
     public Map<String,String> labels() {
         return this.labels;
     }
 
-    public PatchInstanceFilterGroupLabelResponse(Map<String,String> labels) {
-        this.labels = Objects.requireNonNull(labels, "expected parameter 'labels' to be non-null");
-    }
+    private PatchInstanceFilterGroupLabelResponse() {}
 
-    private PatchInstanceFilterGroupLabelResponse() {
-        this.labels = Map.of();
+    private PatchInstanceFilterGroupLabelResponse(PatchInstanceFilterGroupLabelResponse $) {
+        this.labels = $.labels;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PatchInstanceFilterGroupLabelResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Map<String,String> labels;
+        private PatchInstanceFilterGroupLabelResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new PatchInstanceFilterGroupLabelResponse();
         }
 
         public Builder(PatchInstanceFilterGroupLabelResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.labels = defaults.labels;
+            $ = new PatchInstanceFilterGroupLabelResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder labels(Map<String,String> labels) {
-            this.labels = Objects.requireNonNull(labels);
+            $.labels = labels;
             return this;
-        }        public PatchInstanceFilterGroupLabelResponse build() {
-            return new PatchInstanceFilterGroupLabelResponse(labels);
+        }
+
+        public PatchInstanceFilterGroupLabelResponse build() {
+            $.labels = Objects.requireNonNull($.labels, "expected parameter 'labels' to be non-null");
+            return $;
         }
     }
+
 }

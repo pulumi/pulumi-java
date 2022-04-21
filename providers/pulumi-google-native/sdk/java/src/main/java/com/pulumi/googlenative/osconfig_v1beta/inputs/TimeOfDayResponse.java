@@ -21,7 +21,7 @@ public final class TimeOfDayResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="hours", required=true)
-      private final Integer hours;
+    private Integer hours;
 
     public Integer hours() {
         return this.hours;
@@ -32,7 +32,7 @@ public final class TimeOfDayResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="minutes", required=true)
-      private final Integer minutes;
+    private Integer minutes;
 
     public Integer minutes() {
         return this.minutes;
@@ -43,7 +43,7 @@ public final class TimeOfDayResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="nanos", required=true)
-      private final Integer nanos;
+    private Integer nanos;
 
     public Integer nanos() {
         return this.nanos;
@@ -54,73 +54,66 @@ public final class TimeOfDayResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="seconds", required=true)
-      private final Integer seconds;
+    private Integer seconds;
 
     public Integer seconds() {
         return this.seconds;
     }
 
-    public TimeOfDayResponse(
-        Integer hours,
-        Integer minutes,
-        Integer nanos,
-        Integer seconds) {
-        this.hours = Objects.requireNonNull(hours, "expected parameter 'hours' to be non-null");
-        this.minutes = Objects.requireNonNull(minutes, "expected parameter 'minutes' to be non-null");
-        this.nanos = Objects.requireNonNull(nanos, "expected parameter 'nanos' to be non-null");
-        this.seconds = Objects.requireNonNull(seconds, "expected parameter 'seconds' to be non-null");
-    }
+    private TimeOfDayResponse() {}
 
-    private TimeOfDayResponse() {
-        this.hours = null;
-        this.minutes = null;
-        this.nanos = null;
-        this.seconds = null;
+    private TimeOfDayResponse(TimeOfDayResponse $) {
+        this.hours = $.hours;
+        this.minutes = $.minutes;
+        this.nanos = $.nanos;
+        this.seconds = $.seconds;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TimeOfDayResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Integer hours;
-        private Integer minutes;
-        private Integer nanos;
-        private Integer seconds;
+        private TimeOfDayResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new TimeOfDayResponse();
         }
 
         public Builder(TimeOfDayResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.hours = defaults.hours;
-    	      this.minutes = defaults.minutes;
-    	      this.nanos = defaults.nanos;
-    	      this.seconds = defaults.seconds;
+            $ = new TimeOfDayResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder hours(Integer hours) {
-            this.hours = Objects.requireNonNull(hours);
+            $.hours = hours;
             return this;
         }
+
         public Builder minutes(Integer minutes) {
-            this.minutes = Objects.requireNonNull(minutes);
+            $.minutes = minutes;
             return this;
         }
+
         public Builder nanos(Integer nanos) {
-            this.nanos = Objects.requireNonNull(nanos);
+            $.nanos = nanos;
             return this;
         }
+
         public Builder seconds(Integer seconds) {
-            this.seconds = Objects.requireNonNull(seconds);
+            $.seconds = seconds;
             return this;
-        }        public TimeOfDayResponse build() {
-            return new TimeOfDayResponse(hours, minutes, nanos, seconds);
+        }
+
+        public TimeOfDayResponse build() {
+            $.hours = Objects.requireNonNull($.hours, "expected parameter 'hours' to be non-null");
+            $.minutes = Objects.requireNonNull($.minutes, "expected parameter 'minutes' to be non-null");
+            $.nanos = Objects.requireNonNull($.nanos, "expected parameter 'nanos' to be non-null");
+            $.seconds = Objects.requireNonNull($.seconds, "expected parameter 'seconds' to be non-null");
+            return $;
         }
     }
+
 }

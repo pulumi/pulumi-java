@@ -14,62 +14,59 @@ public final class BackupPlanAdvancedBackupSettingResourceType extends com.pulum
     public static final BackupPlanAdvancedBackupSettingResourceType Empty = new BackupPlanAdvancedBackupSettingResourceType();
 
     @Import(name="backupOptions", required=true)
-      private final Object backupOptions;
+    private Object backupOptions;
 
     public Object backupOptions() {
         return this.backupOptions;
     }
 
     @Import(name="resourceType", required=true)
-      private final String resourceType;
+    private String resourceType;
 
     public String resourceType() {
         return this.resourceType;
     }
 
-    public BackupPlanAdvancedBackupSettingResourceType(
-        Object backupOptions,
-        String resourceType) {
-        this.backupOptions = Objects.requireNonNull(backupOptions, "expected parameter 'backupOptions' to be non-null");
-        this.resourceType = Objects.requireNonNull(resourceType, "expected parameter 'resourceType' to be non-null");
-    }
+    private BackupPlanAdvancedBackupSettingResourceType() {}
 
-    private BackupPlanAdvancedBackupSettingResourceType() {
-        this.backupOptions = null;
-        this.resourceType = null;
+    private BackupPlanAdvancedBackupSettingResourceType(BackupPlanAdvancedBackupSettingResourceType $) {
+        this.backupOptions = $.backupOptions;
+        this.resourceType = $.resourceType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BackupPlanAdvancedBackupSettingResourceType defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Object backupOptions;
-        private String resourceType;
+        private BackupPlanAdvancedBackupSettingResourceType $;
 
         public Builder() {
-    	      // Empty
+            $ = new BackupPlanAdvancedBackupSettingResourceType();
         }
 
         public Builder(BackupPlanAdvancedBackupSettingResourceType defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.backupOptions = defaults.backupOptions;
-    	      this.resourceType = defaults.resourceType;
+            $ = new BackupPlanAdvancedBackupSettingResourceType(Objects.requireNonNull(defaults));
         }
 
         public Builder backupOptions(Object backupOptions) {
-            this.backupOptions = Objects.requireNonNull(backupOptions);
+            $.backupOptions = backupOptions;
             return this;
         }
+
         public Builder resourceType(String resourceType) {
-            this.resourceType = Objects.requireNonNull(resourceType);
+            $.resourceType = resourceType;
             return this;
-        }        public BackupPlanAdvancedBackupSettingResourceType build() {
-            return new BackupPlanAdvancedBackupSettingResourceType(backupOptions, resourceType);
+        }
+
+        public BackupPlanAdvancedBackupSettingResourceType build() {
+            $.backupOptions = Objects.requireNonNull($.backupOptions, "expected parameter 'backupOptions' to be non-null");
+            $.resourceType = Objects.requireNonNull($.resourceType, "expected parameter 'resourceType' to be non-null");
+            return $;
         }
     }
+
 }

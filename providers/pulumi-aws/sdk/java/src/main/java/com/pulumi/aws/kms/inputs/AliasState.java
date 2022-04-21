@@ -5,9 +5,9 @@ package com.pulumi.aws.kms.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class AliasState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="arn")
-      private final @Nullable Output<String> arn;
+    private @Nullable Output<String> arn;
 
-    public Output<String> arn() {
-        return this.arn == null ? Codegen.empty() : this.arn;
+    public Optional<Output<String>> arn() {
+        return Optional.ofNullable(this.arn);
     }
 
     /**
@@ -31,10 +31,10 @@ public final class AliasState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -43,10 +43,10 @@ public final class AliasState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="namePrefix")
-      private final @Nullable Output<String> namePrefix;
+    private @Nullable Output<String> namePrefix;
 
-    public Output<String> namePrefix() {
-        return this.namePrefix == null ? Codegen.empty() : this.namePrefix;
+    public Optional<Output<String>> namePrefix() {
+        return Optional.ofNullable(this.namePrefix);
     }
 
     /**
@@ -54,10 +54,10 @@ public final class AliasState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="targetKeyArn")
-      private final @Nullable Output<String> targetKeyArn;
+    private @Nullable Output<String> targetKeyArn;
 
-    public Output<String> targetKeyArn() {
-        return this.targetKeyArn == null ? Codegen.empty() : this.targetKeyArn;
+    public Optional<Output<String>> targetKeyArn() {
+        return Optional.ofNullable(this.targetKeyArn);
     }
 
     /**
@@ -65,102 +65,88 @@ public final class AliasState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="targetKeyId")
-      private final @Nullable Output<String> targetKeyId;
+    private @Nullable Output<String> targetKeyId;
 
-    public Output<String> targetKeyId() {
-        return this.targetKeyId == null ? Codegen.empty() : this.targetKeyId;
+    public Optional<Output<String>> targetKeyId() {
+        return Optional.ofNullable(this.targetKeyId);
     }
 
-    public AliasState(
-        @Nullable Output<String> arn,
-        @Nullable Output<String> name,
-        @Nullable Output<String> namePrefix,
-        @Nullable Output<String> targetKeyArn,
-        @Nullable Output<String> targetKeyId) {
-        this.arn = arn;
-        this.name = name;
-        this.namePrefix = namePrefix;
-        this.targetKeyArn = targetKeyArn;
-        this.targetKeyId = targetKeyId;
-    }
+    private AliasState() {}
 
-    private AliasState() {
-        this.arn = Codegen.empty();
-        this.name = Codegen.empty();
-        this.namePrefix = Codegen.empty();
-        this.targetKeyArn = Codegen.empty();
-        this.targetKeyId = Codegen.empty();
+    private AliasState(AliasState $) {
+        this.arn = $.arn;
+        this.name = $.name;
+        this.namePrefix = $.namePrefix;
+        this.targetKeyArn = $.targetKeyArn;
+        this.targetKeyId = $.targetKeyId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AliasState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> arn;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> namePrefix;
-        private @Nullable Output<String> targetKeyArn;
-        private @Nullable Output<String> targetKeyId;
+        private AliasState $;
 
         public Builder() {
-    	      // Empty
+            $ = new AliasState();
         }
 
         public Builder(AliasState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.arn = defaults.arn;
-    	      this.name = defaults.name;
-    	      this.namePrefix = defaults.namePrefix;
-    	      this.targetKeyArn = defaults.targetKeyArn;
-    	      this.targetKeyId = defaults.targetKeyId;
+            $ = new AliasState(Objects.requireNonNull(defaults));
         }
 
         public Builder arn(@Nullable Output<String> arn) {
-            this.arn = arn;
+            $.arn = arn;
             return this;
         }
-        public Builder arn(@Nullable String arn) {
-            this.arn = Codegen.ofNullable(arn);
-            return this;
+
+        public Builder arn(String arn) {
+            return arn(Output.of(arn));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder namePrefix(@Nullable Output<String> namePrefix) {
-            this.namePrefix = namePrefix;
+            $.namePrefix = namePrefix;
             return this;
         }
-        public Builder namePrefix(@Nullable String namePrefix) {
-            this.namePrefix = Codegen.ofNullable(namePrefix);
-            return this;
+
+        public Builder namePrefix(String namePrefix) {
+            return namePrefix(Output.of(namePrefix));
         }
+
         public Builder targetKeyArn(@Nullable Output<String> targetKeyArn) {
-            this.targetKeyArn = targetKeyArn;
+            $.targetKeyArn = targetKeyArn;
             return this;
         }
-        public Builder targetKeyArn(@Nullable String targetKeyArn) {
-            this.targetKeyArn = Codegen.ofNullable(targetKeyArn);
-            return this;
+
+        public Builder targetKeyArn(String targetKeyArn) {
+            return targetKeyArn(Output.of(targetKeyArn));
         }
+
         public Builder targetKeyId(@Nullable Output<String> targetKeyId) {
-            this.targetKeyId = targetKeyId;
+            $.targetKeyId = targetKeyId;
             return this;
         }
-        public Builder targetKeyId(@Nullable String targetKeyId) {
-            this.targetKeyId = Codegen.ofNullable(targetKeyId);
-            return this;
-        }        public AliasState build() {
-            return new AliasState(arn, name, namePrefix, targetKeyArn, targetKeyId);
+
+        public Builder targetKeyId(String targetKeyId) {
+            return targetKeyId(Output.of(targetKeyId));
+        }
+
+        public AliasState build() {
+            return $;
         }
     }
+
 }

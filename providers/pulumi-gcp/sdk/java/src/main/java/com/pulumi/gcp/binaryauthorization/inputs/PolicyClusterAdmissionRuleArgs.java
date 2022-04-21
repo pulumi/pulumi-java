@@ -5,10 +5,10 @@ package com.pulumi.gcp.binaryauthorization.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,7 +21,7 @@ public final class PolicyClusterAdmissionRuleArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="cluster", required=true)
-      private final Output<String> cluster;
+    private Output<String> cluster;
 
     public Output<String> cluster() {
         return this.cluster;
@@ -33,7 +33,7 @@ public final class PolicyClusterAdmissionRuleArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="enforcementMode", required=true)
-      private final Output<String> enforcementMode;
+    private Output<String> enforcementMode;
 
     public Output<String> enforcementMode() {
         return this.enforcementMode;
@@ -45,7 +45,7 @@ public final class PolicyClusterAdmissionRuleArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="evaluationMode", required=true)
-      private final Output<String> evaluationMode;
+    private Output<String> evaluationMode;
 
     public Output<String> evaluationMode() {
         return this.evaluationMode;
@@ -63,92 +63,85 @@ public final class PolicyClusterAdmissionRuleArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="requireAttestationsBies")
-      private final @Nullable Output<List<String>> requireAttestationsBies;
+    private @Nullable Output<List<String>> requireAttestationsBies;
 
-    public Output<List<String>> requireAttestationsBies() {
-        return this.requireAttestationsBies == null ? Codegen.empty() : this.requireAttestationsBies;
+    public Optional<Output<List<String>>> requireAttestationsBies() {
+        return Optional.ofNullable(this.requireAttestationsBies);
     }
 
-    public PolicyClusterAdmissionRuleArgs(
-        Output<String> cluster,
-        Output<String> enforcementMode,
-        Output<String> evaluationMode,
-        @Nullable Output<List<String>> requireAttestationsBies) {
-        this.cluster = Objects.requireNonNull(cluster, "expected parameter 'cluster' to be non-null");
-        this.enforcementMode = Objects.requireNonNull(enforcementMode, "expected parameter 'enforcementMode' to be non-null");
-        this.evaluationMode = Objects.requireNonNull(evaluationMode, "expected parameter 'evaluationMode' to be non-null");
-        this.requireAttestationsBies = requireAttestationsBies;
-    }
+    private PolicyClusterAdmissionRuleArgs() {}
 
-    private PolicyClusterAdmissionRuleArgs() {
-        this.cluster = Codegen.empty();
-        this.enforcementMode = Codegen.empty();
-        this.evaluationMode = Codegen.empty();
-        this.requireAttestationsBies = Codegen.empty();
+    private PolicyClusterAdmissionRuleArgs(PolicyClusterAdmissionRuleArgs $) {
+        this.cluster = $.cluster;
+        this.enforcementMode = $.enforcementMode;
+        this.evaluationMode = $.evaluationMode;
+        this.requireAttestationsBies = $.requireAttestationsBies;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PolicyClusterAdmissionRuleArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> cluster;
-        private Output<String> enforcementMode;
-        private Output<String> evaluationMode;
-        private @Nullable Output<List<String>> requireAttestationsBies;
+        private PolicyClusterAdmissionRuleArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PolicyClusterAdmissionRuleArgs();
         }
 
         public Builder(PolicyClusterAdmissionRuleArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cluster = defaults.cluster;
-    	      this.enforcementMode = defaults.enforcementMode;
-    	      this.evaluationMode = defaults.evaluationMode;
-    	      this.requireAttestationsBies = defaults.requireAttestationsBies;
+            $ = new PolicyClusterAdmissionRuleArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder cluster(Output<String> cluster) {
-            this.cluster = Objects.requireNonNull(cluster);
+            $.cluster = cluster;
             return this;
         }
+
         public Builder cluster(String cluster) {
-            this.cluster = Output.of(Objects.requireNonNull(cluster));
-            return this;
+            return cluster(Output.of(cluster));
         }
+
         public Builder enforcementMode(Output<String> enforcementMode) {
-            this.enforcementMode = Objects.requireNonNull(enforcementMode);
+            $.enforcementMode = enforcementMode;
             return this;
         }
+
         public Builder enforcementMode(String enforcementMode) {
-            this.enforcementMode = Output.of(Objects.requireNonNull(enforcementMode));
-            return this;
+            return enforcementMode(Output.of(enforcementMode));
         }
+
         public Builder evaluationMode(Output<String> evaluationMode) {
-            this.evaluationMode = Objects.requireNonNull(evaluationMode);
+            $.evaluationMode = evaluationMode;
             return this;
         }
+
         public Builder evaluationMode(String evaluationMode) {
-            this.evaluationMode = Output.of(Objects.requireNonNull(evaluationMode));
-            return this;
+            return evaluationMode(Output.of(evaluationMode));
         }
+
         public Builder requireAttestationsBies(@Nullable Output<List<String>> requireAttestationsBies) {
-            this.requireAttestationsBies = requireAttestationsBies;
+            $.requireAttestationsBies = requireAttestationsBies;
             return this;
         }
-        public Builder requireAttestationsBies(@Nullable List<String> requireAttestationsBies) {
-            this.requireAttestationsBies = Codegen.ofNullable(requireAttestationsBies);
-            return this;
+
+        public Builder requireAttestationsBies(List<String> requireAttestationsBies) {
+            return requireAttestationsBies(Output.of(requireAttestationsBies));
         }
+
         public Builder requireAttestationsBies(String... requireAttestationsBies) {
             return requireAttestationsBies(List.of(requireAttestationsBies));
-        }        public PolicyClusterAdmissionRuleArgs build() {
-            return new PolicyClusterAdmissionRuleArgs(cluster, enforcementMode, evaluationMode, requireAttestationsBies);
+        }
+
+        public PolicyClusterAdmissionRuleArgs build() {
+            $.cluster = Objects.requireNonNull($.cluster, "expected parameter 'cluster' to be non-null");
+            $.enforcementMode = Objects.requireNonNull($.enforcementMode, "expected parameter 'enforcementMode' to be non-null");
+            $.evaluationMode = Objects.requireNonNull($.evaluationMode, "expected parameter 'evaluationMode' to be non-null");
+            return $;
         }
     }
+
 }

@@ -24,7 +24,7 @@ public final class ActionGroupResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="actionGroupId", required=true)
-      private final String actionGroupId;
+    private String actionGroupId;
 
     public String actionGroupId() {
         return this.actionGroupId;
@@ -35,55 +35,51 @@ public final class ActionGroupResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="webhookProperties")
-      private final @Nullable Map<String,String> webhookProperties;
+    private @Nullable Map<String,String> webhookProperties;
 
-    public Map<String,String> webhookProperties() {
-        return this.webhookProperties == null ? Map.of() : this.webhookProperties;
+    public Optional<Map<String,String>> webhookProperties() {
+        return Optional.ofNullable(this.webhookProperties);
     }
 
-    public ActionGroupResponse(
-        String actionGroupId,
-        @Nullable Map<String,String> webhookProperties) {
-        this.actionGroupId = Objects.requireNonNull(actionGroupId, "expected parameter 'actionGroupId' to be non-null");
-        this.webhookProperties = webhookProperties;
-    }
+    private ActionGroupResponse() {}
 
-    private ActionGroupResponse() {
-        this.actionGroupId = null;
-        this.webhookProperties = Map.of();
+    private ActionGroupResponse(ActionGroupResponse $) {
+        this.actionGroupId = $.actionGroupId;
+        this.webhookProperties = $.webhookProperties;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ActionGroupResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String actionGroupId;
-        private @Nullable Map<String,String> webhookProperties;
+        private ActionGroupResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ActionGroupResponse();
         }
 
         public Builder(ActionGroupResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.actionGroupId = defaults.actionGroupId;
-    	      this.webhookProperties = defaults.webhookProperties;
+            $ = new ActionGroupResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder actionGroupId(String actionGroupId) {
-            this.actionGroupId = Objects.requireNonNull(actionGroupId);
+            $.actionGroupId = actionGroupId;
             return this;
         }
+
         public Builder webhookProperties(@Nullable Map<String,String> webhookProperties) {
-            this.webhookProperties = webhookProperties;
+            $.webhookProperties = webhookProperties;
             return this;
-        }        public ActionGroupResponse build() {
-            return new ActionGroupResponse(actionGroupId, webhookProperties);
+        }
+
+        public ActionGroupResponse build() {
+            $.actionGroupId = Objects.requireNonNull($.actionGroupId, "expected parameter 'actionGroupId' to be non-null");
+            return $;
         }
     }
+
 }

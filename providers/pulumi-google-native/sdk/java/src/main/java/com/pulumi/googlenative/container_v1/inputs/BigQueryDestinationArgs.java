@@ -5,9 +5,9 @@ package com.pulumi.googlenative.container_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class BigQueryDestinationArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="datasetId")
-      private final @Nullable Output<String> datasetId;
+    private @Nullable Output<String> datasetId;
 
-    public Output<String> datasetId() {
-        return this.datasetId == null ? Codegen.empty() : this.datasetId;
+    public Optional<Output<String>> datasetId() {
+        return Optional.ofNullable(this.datasetId);
     }
 
-    public BigQueryDestinationArgs(@Nullable Output<String> datasetId) {
-        this.datasetId = datasetId;
-    }
+    private BigQueryDestinationArgs() {}
 
-    private BigQueryDestinationArgs() {
-        this.datasetId = Codegen.empty();
+    private BigQueryDestinationArgs(BigQueryDestinationArgs $) {
+        this.datasetId = $.datasetId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BigQueryDestinationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> datasetId;
+        private BigQueryDestinationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new BigQueryDestinationArgs();
         }
 
         public Builder(BigQueryDestinationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.datasetId = defaults.datasetId;
+            $ = new BigQueryDestinationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder datasetId(@Nullable Output<String> datasetId) {
-            this.datasetId = datasetId;
+            $.datasetId = datasetId;
             return this;
         }
-        public Builder datasetId(@Nullable String datasetId) {
-            this.datasetId = Codegen.ofNullable(datasetId);
-            return this;
-        }        public BigQueryDestinationArgs build() {
-            return new BigQueryDestinationArgs(datasetId);
+
+        public Builder datasetId(String datasetId) {
+            return datasetId(Output.of(datasetId));
+        }
+
+        public BigQueryDestinationArgs build() {
+            return $;
         }
     }
+
 }

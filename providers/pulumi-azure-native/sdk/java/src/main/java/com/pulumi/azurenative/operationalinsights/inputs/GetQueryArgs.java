@@ -17,7 +17,7 @@ public final class GetQueryArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="id", required=true)
-      private final String id;
+    private String id;
 
     public String id() {
         return this.id;
@@ -28,7 +28,7 @@ public final class GetQueryArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="queryPackName", required=true)
-      private final String queryPackName;
+    private String queryPackName;
 
     public String queryPackName() {
         return this.queryPackName;
@@ -39,64 +39,59 @@ public final class GetQueryArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public GetQueryArgs(
-        String id,
-        String queryPackName,
-        String resourceGroupName) {
-        this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
-        this.queryPackName = Objects.requireNonNull(queryPackName, "expected parameter 'queryPackName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private GetQueryArgs() {}
 
-    private GetQueryArgs() {
-        this.id = null;
-        this.queryPackName = null;
-        this.resourceGroupName = null;
+    private GetQueryArgs(GetQueryArgs $) {
+        this.id = $.id;
+        this.queryPackName = $.queryPackName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetQueryArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String id;
-        private String queryPackName;
-        private String resourceGroupName;
+        private GetQueryArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetQueryArgs();
         }
 
         public Builder(GetQueryArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.id = defaults.id;
-    	      this.queryPackName = defaults.queryPackName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new GetQueryArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder id(String id) {
-            this.id = Objects.requireNonNull(id);
+            $.id = id;
             return this;
         }
+
         public Builder queryPackName(String queryPackName) {
-            this.queryPackName = Objects.requireNonNull(queryPackName);
+            $.queryPackName = queryPackName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public GetQueryArgs build() {
-            return new GetQueryArgs(id, queryPackName, resourceGroupName);
+        }
+
+        public GetQueryArgs build() {
+            $.id = Objects.requireNonNull($.id, "expected parameter 'id' to be non-null");
+            $.queryPackName = Objects.requireNonNull($.queryPackName, "expected parameter 'queryPackName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

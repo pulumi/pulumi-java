@@ -21,7 +21,7 @@ public final class MediaGraphTlsValidationOptionsResponse extends com.pulumi.res
      * 
      */
     @Import(name="ignoreHostname", required=true)
-      private final Boolean ignoreHostname;
+    private Boolean ignoreHostname;
 
     public Boolean ignoreHostname() {
         return this.ignoreHostname;
@@ -32,55 +32,52 @@ public final class MediaGraphTlsValidationOptionsResponse extends com.pulumi.res
      * 
      */
     @Import(name="ignoreSignature", required=true)
-      private final Boolean ignoreSignature;
+    private Boolean ignoreSignature;
 
     public Boolean ignoreSignature() {
         return this.ignoreSignature;
     }
 
-    public MediaGraphTlsValidationOptionsResponse(
-        Boolean ignoreHostname,
-        Boolean ignoreSignature) {
-        this.ignoreHostname = Objects.requireNonNull(ignoreHostname, "expected parameter 'ignoreHostname' to be non-null");
-        this.ignoreSignature = Objects.requireNonNull(ignoreSignature, "expected parameter 'ignoreSignature' to be non-null");
-    }
+    private MediaGraphTlsValidationOptionsResponse() {}
 
-    private MediaGraphTlsValidationOptionsResponse() {
-        this.ignoreHostname = null;
-        this.ignoreSignature = null;
+    private MediaGraphTlsValidationOptionsResponse(MediaGraphTlsValidationOptionsResponse $) {
+        this.ignoreHostname = $.ignoreHostname;
+        this.ignoreSignature = $.ignoreSignature;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MediaGraphTlsValidationOptionsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Boolean ignoreHostname;
-        private Boolean ignoreSignature;
+        private MediaGraphTlsValidationOptionsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new MediaGraphTlsValidationOptionsResponse();
         }
 
         public Builder(MediaGraphTlsValidationOptionsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.ignoreHostname = defaults.ignoreHostname;
-    	      this.ignoreSignature = defaults.ignoreSignature;
+            $ = new MediaGraphTlsValidationOptionsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder ignoreHostname(Boolean ignoreHostname) {
-            this.ignoreHostname = Objects.requireNonNull(ignoreHostname);
+            $.ignoreHostname = ignoreHostname;
             return this;
         }
+
         public Builder ignoreSignature(Boolean ignoreSignature) {
-            this.ignoreSignature = Objects.requireNonNull(ignoreSignature);
+            $.ignoreSignature = ignoreSignature;
             return this;
-        }        public MediaGraphTlsValidationOptionsResponse build() {
-            return new MediaGraphTlsValidationOptionsResponse(ignoreHostname, ignoreSignature);
+        }
+
+        public MediaGraphTlsValidationOptionsResponse build() {
+            $.ignoreHostname = Objects.requireNonNull($.ignoreHostname, "expected parameter 'ignoreHostname' to be non-null");
+            $.ignoreSignature = Objects.requireNonNull($.ignoreSignature, "expected parameter 'ignoreSignature' to be non-null");
+            return $;
         }
     }
+
 }

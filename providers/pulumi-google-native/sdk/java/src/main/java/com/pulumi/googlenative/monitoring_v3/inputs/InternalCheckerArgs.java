@@ -5,10 +5,10 @@ package com.pulumi.googlenative.monitoring_v3.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.monitoring_v3.enums.InternalCheckerState;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class InternalCheckerArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="displayName")
-      private final @Nullable Output<String> displayName;
+    private @Nullable Output<String> displayName;
 
-    public Output<String> displayName() {
-        return this.displayName == null ? Codegen.empty() : this.displayName;
+    public Optional<Output<String>> displayName() {
+        return Optional.ofNullable(this.displayName);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class InternalCheckerArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="gcpZone")
-      private final @Nullable Output<String> gcpZone;
+    private @Nullable Output<String> gcpZone;
 
-    public Output<String> gcpZone() {
-        return this.gcpZone == null ? Codegen.empty() : this.gcpZone;
+    public Optional<Output<String>> gcpZone() {
+        return Optional.ofNullable(this.gcpZone);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class InternalCheckerArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -58,10 +58,10 @@ public final class InternalCheckerArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="network")
-      private final @Nullable Output<String> network;
+    private @Nullable Output<String> network;
 
-    public Output<String> network() {
-        return this.network == null ? Codegen.empty() : this.network;
+    public Optional<Output<String>> network() {
+        return Optional.ofNullable(this.network);
     }
 
     /**
@@ -69,10 +69,10 @@ public final class InternalCheckerArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="peerProjectId")
-      private final @Nullable Output<String> peerProjectId;
+    private @Nullable Output<String> peerProjectId;
 
-    public Output<String> peerProjectId() {
-        return this.peerProjectId == null ? Codegen.empty() : this.peerProjectId;
+    public Optional<Output<String>> peerProjectId() {
+        return Optional.ofNullable(this.peerProjectId);
     }
 
     /**
@@ -80,115 +80,98 @@ public final class InternalCheckerArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="state")
-      private final @Nullable Output<InternalCheckerState> state;
+    private @Nullable Output<InternalCheckerState> state;
 
-    public Output<InternalCheckerState> state() {
-        return this.state == null ? Codegen.empty() : this.state;
+    public Optional<Output<InternalCheckerState>> state() {
+        return Optional.ofNullable(this.state);
     }
 
-    public InternalCheckerArgs(
-        @Nullable Output<String> displayName,
-        @Nullable Output<String> gcpZone,
-        @Nullable Output<String> name,
-        @Nullable Output<String> network,
-        @Nullable Output<String> peerProjectId,
-        @Nullable Output<InternalCheckerState> state) {
-        this.displayName = displayName;
-        this.gcpZone = gcpZone;
-        this.name = name;
-        this.network = network;
-        this.peerProjectId = peerProjectId;
-        this.state = state;
-    }
+    private InternalCheckerArgs() {}
 
-    private InternalCheckerArgs() {
-        this.displayName = Codegen.empty();
-        this.gcpZone = Codegen.empty();
-        this.name = Codegen.empty();
-        this.network = Codegen.empty();
-        this.peerProjectId = Codegen.empty();
-        this.state = Codegen.empty();
+    private InternalCheckerArgs(InternalCheckerArgs $) {
+        this.displayName = $.displayName;
+        this.gcpZone = $.gcpZone;
+        this.name = $.name;
+        this.network = $.network;
+        this.peerProjectId = $.peerProjectId;
+        this.state = $.state;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(InternalCheckerArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> displayName;
-        private @Nullable Output<String> gcpZone;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> network;
-        private @Nullable Output<String> peerProjectId;
-        private @Nullable Output<InternalCheckerState> state;
+        private InternalCheckerArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new InternalCheckerArgs();
         }
 
         public Builder(InternalCheckerArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.displayName = defaults.displayName;
-    	      this.gcpZone = defaults.gcpZone;
-    	      this.name = defaults.name;
-    	      this.network = defaults.network;
-    	      this.peerProjectId = defaults.peerProjectId;
-    	      this.state = defaults.state;
+            $ = new InternalCheckerArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder displayName(@Nullable Output<String> displayName) {
-            this.displayName = displayName;
+            $.displayName = displayName;
             return this;
         }
-        public Builder displayName(@Nullable String displayName) {
-            this.displayName = Codegen.ofNullable(displayName);
-            return this;
+
+        public Builder displayName(String displayName) {
+            return displayName(Output.of(displayName));
         }
+
         public Builder gcpZone(@Nullable Output<String> gcpZone) {
-            this.gcpZone = gcpZone;
+            $.gcpZone = gcpZone;
             return this;
         }
-        public Builder gcpZone(@Nullable String gcpZone) {
-            this.gcpZone = Codegen.ofNullable(gcpZone);
-            return this;
+
+        public Builder gcpZone(String gcpZone) {
+            return gcpZone(Output.of(gcpZone));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder network(@Nullable Output<String> network) {
-            this.network = network;
+            $.network = network;
             return this;
         }
-        public Builder network(@Nullable String network) {
-            this.network = Codegen.ofNullable(network);
-            return this;
+
+        public Builder network(String network) {
+            return network(Output.of(network));
         }
+
         public Builder peerProjectId(@Nullable Output<String> peerProjectId) {
-            this.peerProjectId = peerProjectId;
+            $.peerProjectId = peerProjectId;
             return this;
         }
-        public Builder peerProjectId(@Nullable String peerProjectId) {
-            this.peerProjectId = Codegen.ofNullable(peerProjectId);
-            return this;
+
+        public Builder peerProjectId(String peerProjectId) {
+            return peerProjectId(Output.of(peerProjectId));
         }
+
         public Builder state(@Nullable Output<InternalCheckerState> state) {
-            this.state = state;
+            $.state = state;
             return this;
         }
-        public Builder state(@Nullable InternalCheckerState state) {
-            this.state = Codegen.ofNullable(state);
-            return this;
-        }        public InternalCheckerArgs build() {
-            return new InternalCheckerArgs(displayName, gcpZone, name, network, peerProjectId, state);
+
+        public Builder state(InternalCheckerState state) {
+            return state(Output.of(state));
+        }
+
+        public InternalCheckerArgs build() {
+            return $;
         }
     }
+
 }

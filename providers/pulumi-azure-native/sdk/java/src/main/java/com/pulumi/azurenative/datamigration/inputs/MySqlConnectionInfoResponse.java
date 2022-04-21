@@ -25,10 +25,10 @@ public final class MySqlConnectionInfoResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="password")
-      private final @Nullable String password;
+    private @Nullable String password;
 
     public Optional<String> password() {
-        return this.password == null ? Optional.empty() : Optional.ofNullable(this.password);
+        return Optional.ofNullable(this.password);
     }
 
     /**
@@ -36,7 +36,7 @@ public final class MySqlConnectionInfoResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="port", required=true)
-      private final Integer port;
+    private Integer port;
 
     public Integer port() {
         return this.port;
@@ -47,7 +47,7 @@ public final class MySqlConnectionInfoResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="serverName", required=true)
-      private final String serverName;
+    private String serverName;
 
     public String serverName() {
         return this.serverName;
@@ -59,7 +59,7 @@ public final class MySqlConnectionInfoResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
@@ -70,82 +70,71 @@ public final class MySqlConnectionInfoResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="userName")
-      private final @Nullable String userName;
+    private @Nullable String userName;
 
     public Optional<String> userName() {
-        return this.userName == null ? Optional.empty() : Optional.ofNullable(this.userName);
+        return Optional.ofNullable(this.userName);
     }
 
-    public MySqlConnectionInfoResponse(
-        @Nullable String password,
-        Integer port,
-        String serverName,
-        String type,
-        @Nullable String userName) {
-        this.password = password;
-        this.port = Objects.requireNonNull(port, "expected parameter 'port' to be non-null");
-        this.serverName = Objects.requireNonNull(serverName, "expected parameter 'serverName' to be non-null");
-        this.type = Codegen.stringProp("type").arg(type).require();
-        this.userName = userName;
-    }
+    private MySqlConnectionInfoResponse() {}
 
-    private MySqlConnectionInfoResponse() {
-        this.password = null;
-        this.port = null;
-        this.serverName = null;
-        this.type = null;
-        this.userName = null;
+    private MySqlConnectionInfoResponse(MySqlConnectionInfoResponse $) {
+        this.password = $.password;
+        this.port = $.port;
+        this.serverName = $.serverName;
+        this.type = $.type;
+        this.userName = $.userName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MySqlConnectionInfoResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String password;
-        private Integer port;
-        private String serverName;
-        private String type;
-        private @Nullable String userName;
+        private MySqlConnectionInfoResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new MySqlConnectionInfoResponse();
         }
 
         public Builder(MySqlConnectionInfoResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.password = defaults.password;
-    	      this.port = defaults.port;
-    	      this.serverName = defaults.serverName;
-    	      this.type = defaults.type;
-    	      this.userName = defaults.userName;
+            $ = new MySqlConnectionInfoResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder password(@Nullable String password) {
-            this.password = password;
+            $.password = password;
             return this;
         }
+
         public Builder port(Integer port) {
-            this.port = Objects.requireNonNull(port);
+            $.port = port;
             return this;
         }
+
         public Builder serverName(String serverName) {
-            this.serverName = Objects.requireNonNull(serverName);
+            $.serverName = serverName;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder userName(@Nullable String userName) {
-            this.userName = userName;
+            $.userName = userName;
             return this;
-        }        public MySqlConnectionInfoResponse build() {
-            return new MySqlConnectionInfoResponse(password, port, serverName, type, userName);
+        }
+
+        public MySqlConnectionInfoResponse build() {
+            $.port = Objects.requireNonNull($.port, "expected parameter 'port' to be non-null");
+            $.serverName = Objects.requireNonNull($.serverName, "expected parameter 'serverName' to be non-null");
+            $.type = Codegen.stringProp("type").arg($.type).require();
+            return $;
         }
     }
+
 }

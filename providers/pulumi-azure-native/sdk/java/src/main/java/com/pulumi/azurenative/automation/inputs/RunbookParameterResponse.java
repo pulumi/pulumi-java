@@ -25,10 +25,10 @@ public final class RunbookParameterResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="defaultValue")
-      private final @Nullable String defaultValue;
+    private @Nullable String defaultValue;
 
     public Optional<String> defaultValue() {
-        return this.defaultValue == null ? Optional.empty() : Optional.ofNullable(this.defaultValue);
+        return Optional.ofNullable(this.defaultValue);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class RunbookParameterResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="isMandatory")
-      private final @Nullable Boolean isMandatory;
+    private @Nullable Boolean isMandatory;
 
     public Optional<Boolean> isMandatory() {
-        return this.isMandatory == null ? Optional.empty() : Optional.ofNullable(this.isMandatory);
+        return Optional.ofNullable(this.isMandatory);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class RunbookParameterResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="position")
-      private final @Nullable Integer position;
+    private @Nullable Integer position;
 
     public Optional<Integer> position() {
-        return this.position == null ? Optional.empty() : Optional.ofNullable(this.position);
+        return Optional.ofNullable(this.position);
     }
 
     /**
@@ -58,73 +58,62 @@ public final class RunbookParameterResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="type")
-      private final @Nullable String type;
+    private @Nullable String type;
 
     public Optional<String> type() {
-        return this.type == null ? Optional.empty() : Optional.ofNullable(this.type);
+        return Optional.ofNullable(this.type);
     }
 
-    public RunbookParameterResponse(
-        @Nullable String defaultValue,
-        @Nullable Boolean isMandatory,
-        @Nullable Integer position,
-        @Nullable String type) {
-        this.defaultValue = defaultValue;
-        this.isMandatory = isMandatory;
-        this.position = position;
-        this.type = type;
-    }
+    private RunbookParameterResponse() {}
 
-    private RunbookParameterResponse() {
-        this.defaultValue = null;
-        this.isMandatory = null;
-        this.position = null;
-        this.type = null;
+    private RunbookParameterResponse(RunbookParameterResponse $) {
+        this.defaultValue = $.defaultValue;
+        this.isMandatory = $.isMandatory;
+        this.position = $.position;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RunbookParameterResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String defaultValue;
-        private @Nullable Boolean isMandatory;
-        private @Nullable Integer position;
-        private @Nullable String type;
+        private RunbookParameterResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new RunbookParameterResponse();
         }
 
         public Builder(RunbookParameterResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.defaultValue = defaults.defaultValue;
-    	      this.isMandatory = defaults.isMandatory;
-    	      this.position = defaults.position;
-    	      this.type = defaults.type;
+            $ = new RunbookParameterResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder defaultValue(@Nullable String defaultValue) {
-            this.defaultValue = defaultValue;
+            $.defaultValue = defaultValue;
             return this;
         }
+
         public Builder isMandatory(@Nullable Boolean isMandatory) {
-            this.isMandatory = isMandatory;
+            $.isMandatory = isMandatory;
             return this;
         }
+
         public Builder position(@Nullable Integer position) {
-            this.position = position;
+            $.position = position;
             return this;
         }
+
         public Builder type(@Nullable String type) {
-            this.type = type;
+            $.type = type;
             return this;
-        }        public RunbookParameterResponse build() {
-            return new RunbookParameterResponse(defaultValue, isMandatory, position, type);
+        }
+
+        public RunbookParameterResponse build() {
+            return $;
         }
     }
+
 }

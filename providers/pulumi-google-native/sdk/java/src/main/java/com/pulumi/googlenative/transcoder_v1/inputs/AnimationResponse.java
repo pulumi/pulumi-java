@@ -23,7 +23,7 @@ public final class AnimationResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="animationEnd", required=true)
-      private final AnimationEndResponse animationEnd;
+    private AnimationEndResponse animationEnd;
 
     public AnimationEndResponse animationEnd() {
         return this.animationEnd;
@@ -34,7 +34,7 @@ public final class AnimationResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="animationFade", required=true)
-      private final AnimationFadeResponse animationFade;
+    private AnimationFadeResponse animationFade;
 
     public AnimationFadeResponse animationFade() {
         return this.animationFade;
@@ -45,64 +45,59 @@ public final class AnimationResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="animationStatic", required=true)
-      private final AnimationStaticResponse animationStatic;
+    private AnimationStaticResponse animationStatic;
 
     public AnimationStaticResponse animationStatic() {
         return this.animationStatic;
     }
 
-    public AnimationResponse(
-        AnimationEndResponse animationEnd,
-        AnimationFadeResponse animationFade,
-        AnimationStaticResponse animationStatic) {
-        this.animationEnd = Objects.requireNonNull(animationEnd, "expected parameter 'animationEnd' to be non-null");
-        this.animationFade = Objects.requireNonNull(animationFade, "expected parameter 'animationFade' to be non-null");
-        this.animationStatic = Objects.requireNonNull(animationStatic, "expected parameter 'animationStatic' to be non-null");
-    }
+    private AnimationResponse() {}
 
-    private AnimationResponse() {
-        this.animationEnd = null;
-        this.animationFade = null;
-        this.animationStatic = null;
+    private AnimationResponse(AnimationResponse $) {
+        this.animationEnd = $.animationEnd;
+        this.animationFade = $.animationFade;
+        this.animationStatic = $.animationStatic;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AnimationResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private AnimationEndResponse animationEnd;
-        private AnimationFadeResponse animationFade;
-        private AnimationStaticResponse animationStatic;
+        private AnimationResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AnimationResponse();
         }
 
         public Builder(AnimationResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.animationEnd = defaults.animationEnd;
-    	      this.animationFade = defaults.animationFade;
-    	      this.animationStatic = defaults.animationStatic;
+            $ = new AnimationResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder animationEnd(AnimationEndResponse animationEnd) {
-            this.animationEnd = Objects.requireNonNull(animationEnd);
+            $.animationEnd = animationEnd;
             return this;
         }
+
         public Builder animationFade(AnimationFadeResponse animationFade) {
-            this.animationFade = Objects.requireNonNull(animationFade);
+            $.animationFade = animationFade;
             return this;
         }
+
         public Builder animationStatic(AnimationStaticResponse animationStatic) {
-            this.animationStatic = Objects.requireNonNull(animationStatic);
+            $.animationStatic = animationStatic;
             return this;
-        }        public AnimationResponse build() {
-            return new AnimationResponse(animationEnd, animationFade, animationStatic);
+        }
+
+        public AnimationResponse build() {
+            $.animationEnd = Objects.requireNonNull($.animationEnd, "expected parameter 'animationEnd' to be non-null");
+            $.animationFade = Objects.requireNonNull($.animationFade, "expected parameter 'animationFade' to be non-null");
+            $.animationStatic = Objects.requireNonNull($.animationStatic, "expected parameter 'animationStatic' to be non-null");
+            return $;
         }
     }
+
 }

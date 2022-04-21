@@ -21,7 +21,7 @@ public final class GoogleCloudApigeeV1ApiCategoryDataResponse extends com.pulumi
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -32,7 +32,7 @@ public final class GoogleCloudApigeeV1ApiCategoryDataResponse extends com.pulumi
      * 
      */
     @Import(name="siteId", required=true)
-      private final String siteId;
+    private String siteId;
 
     public String siteId() {
         return this.siteId;
@@ -43,64 +43,59 @@ public final class GoogleCloudApigeeV1ApiCategoryDataResponse extends com.pulumi
      * 
      */
     @Import(name="updateTime", required=true)
-      private final String updateTime;
+    private String updateTime;
 
     public String updateTime() {
         return this.updateTime;
     }
 
-    public GoogleCloudApigeeV1ApiCategoryDataResponse(
-        String name,
-        String siteId,
-        String updateTime) {
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.siteId = Objects.requireNonNull(siteId, "expected parameter 'siteId' to be non-null");
-        this.updateTime = Objects.requireNonNull(updateTime, "expected parameter 'updateTime' to be non-null");
-    }
+    private GoogleCloudApigeeV1ApiCategoryDataResponse() {}
 
-    private GoogleCloudApigeeV1ApiCategoryDataResponse() {
-        this.name = null;
-        this.siteId = null;
-        this.updateTime = null;
+    private GoogleCloudApigeeV1ApiCategoryDataResponse(GoogleCloudApigeeV1ApiCategoryDataResponse $) {
+        this.name = $.name;
+        this.siteId = $.siteId;
+        this.updateTime = $.updateTime;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudApigeeV1ApiCategoryDataResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String name;
-        private String siteId;
-        private String updateTime;
+        private GoogleCloudApigeeV1ApiCategoryDataResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudApigeeV1ApiCategoryDataResponse();
         }
 
         public Builder(GoogleCloudApigeeV1ApiCategoryDataResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.siteId = defaults.siteId;
-    	      this.updateTime = defaults.updateTime;
+            $ = new GoogleCloudApigeeV1ApiCategoryDataResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder siteId(String siteId) {
-            this.siteId = Objects.requireNonNull(siteId);
+            $.siteId = siteId;
             return this;
         }
+
         public Builder updateTime(String updateTime) {
-            this.updateTime = Objects.requireNonNull(updateTime);
+            $.updateTime = updateTime;
             return this;
-        }        public GoogleCloudApigeeV1ApiCategoryDataResponse build() {
-            return new GoogleCloudApigeeV1ApiCategoryDataResponse(name, siteId, updateTime);
+        }
+
+        public GoogleCloudApigeeV1ApiCategoryDataResponse build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.siteId = Objects.requireNonNull($.siteId, "expected parameter 'siteId' to be non-null");
+            $.updateTime = Objects.requireNonNull($.updateTime, "expected parameter 'updateTime' to be non-null");
+            return $;
         }
     }
+
 }

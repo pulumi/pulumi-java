@@ -18,6 +18,7 @@ import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -30,10 +31,10 @@ public final class ConnectionMonitorArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="autoStart")
-      private final @Nullable Output<Boolean> autoStart;
+    private @Nullable Output<Boolean> autoStart;
 
-    public Output<Boolean> autoStart() {
-        return this.autoStart == null ? Codegen.empty() : this.autoStart;
+    public Optional<Output<Boolean>> autoStart() {
+        return Optional.ofNullable(this.autoStart);
     }
 
     /**
@@ -41,10 +42,10 @@ public final class ConnectionMonitorArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="connectionMonitorName")
-      private final @Nullable Output<String> connectionMonitorName;
+    private @Nullable Output<String> connectionMonitorName;
 
-    public Output<String> connectionMonitorName() {
-        return this.connectionMonitorName == null ? Codegen.empty() : this.connectionMonitorName;
+    public Optional<Output<String>> connectionMonitorName() {
+        return Optional.ofNullable(this.connectionMonitorName);
     }
 
     /**
@@ -52,10 +53,10 @@ public final class ConnectionMonitorArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="destination")
-      private final @Nullable Output<ConnectionMonitorDestinationArgs> destination;
+    private @Nullable Output<ConnectionMonitorDestinationArgs> destination;
 
-    public Output<ConnectionMonitorDestinationArgs> destination() {
-        return this.destination == null ? Codegen.empty() : this.destination;
+    public Optional<Output<ConnectionMonitorDestinationArgs>> destination() {
+        return Optional.ofNullable(this.destination);
     }
 
     /**
@@ -63,10 +64,10 @@ public final class ConnectionMonitorArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="endpoints")
-      private final @Nullable Output<List<ConnectionMonitorEndpointArgs>> endpoints;
+    private @Nullable Output<List<ConnectionMonitorEndpointArgs>> endpoints;
 
-    public Output<List<ConnectionMonitorEndpointArgs>> endpoints() {
-        return this.endpoints == null ? Codegen.empty() : this.endpoints;
+    public Optional<Output<List<ConnectionMonitorEndpointArgs>>> endpoints() {
+        return Optional.ofNullable(this.endpoints);
     }
 
     /**
@@ -74,10 +75,10 @@ public final class ConnectionMonitorArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -85,10 +86,10 @@ public final class ConnectionMonitorArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="migrate")
-      private final @Nullable Output<String> migrate;
+    private @Nullable Output<String> migrate;
 
-    public Output<String> migrate() {
-        return this.migrate == null ? Codegen.empty() : this.migrate;
+    public Optional<Output<String>> migrate() {
+        return Optional.ofNullable(this.migrate);
     }
 
     /**
@@ -96,10 +97,10 @@ public final class ConnectionMonitorArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="monitoringIntervalInSeconds")
-      private final @Nullable Output<Integer> monitoringIntervalInSeconds;
+    private @Nullable Output<Integer> monitoringIntervalInSeconds;
 
-    public Output<Integer> monitoringIntervalInSeconds() {
-        return this.monitoringIntervalInSeconds == null ? Codegen.empty() : this.monitoringIntervalInSeconds;
+    public Optional<Output<Integer>> monitoringIntervalInSeconds() {
+        return Optional.ofNullable(this.monitoringIntervalInSeconds);
     }
 
     /**
@@ -107,7 +108,7 @@ public final class ConnectionMonitorArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="networkWatcherName", required=true)
-      private final Output<String> networkWatcherName;
+    private Output<String> networkWatcherName;
 
     public Output<String> networkWatcherName() {
         return this.networkWatcherName;
@@ -118,10 +119,10 @@ public final class ConnectionMonitorArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="notes")
-      private final @Nullable Output<String> notes;
+    private @Nullable Output<String> notes;
 
-    public Output<String> notes() {
-        return this.notes == null ? Codegen.empty() : this.notes;
+    public Optional<Output<String>> notes() {
+        return Optional.ofNullable(this.notes);
     }
 
     /**
@@ -129,10 +130,10 @@ public final class ConnectionMonitorArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="outputs")
-      private final @Nullable Output<List<ConnectionMonitorOutputArgs>> outputs;
+    private @Nullable Output<List<ConnectionMonitorOutputArgs>> outputs;
 
-    public Output<List<ConnectionMonitorOutputArgs>> outputs() {
-        return this.outputs == null ? Codegen.empty() : this.outputs;
+    public Optional<Output<List<ConnectionMonitorOutputArgs>>> outputs() {
+        return Optional.ofNullable(this.outputs);
     }
 
     /**
@@ -140,7 +141,7 @@ public final class ConnectionMonitorArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -151,10 +152,10 @@ public final class ConnectionMonitorArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="source")
-      private final @Nullable Output<ConnectionMonitorSourceArgs> source;
+    private @Nullable Output<ConnectionMonitorSourceArgs> source;
 
-    public Output<ConnectionMonitorSourceArgs> source() {
-        return this.source == null ? Codegen.empty() : this.source;
+    public Optional<Output<ConnectionMonitorSourceArgs>> source() {
+        return Optional.ofNullable(this.source);
     }
 
     /**
@@ -162,10 +163,10 @@ public final class ConnectionMonitorArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -173,10 +174,10 @@ public final class ConnectionMonitorArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="testConfigurations")
-      private final @Nullable Output<List<ConnectionMonitorTestConfigurationArgs>> testConfigurations;
+    private @Nullable Output<List<ConnectionMonitorTestConfigurationArgs>> testConfigurations;
 
-    public Output<List<ConnectionMonitorTestConfigurationArgs>> testConfigurations() {
-        return this.testConfigurations == null ? Codegen.empty() : this.testConfigurations;
+    public Optional<Output<List<ConnectionMonitorTestConfigurationArgs>>> testConfigurations() {
+        return Optional.ofNullable(this.testConfigurations);
     }
 
     /**
@@ -184,244 +185,208 @@ public final class ConnectionMonitorArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="testGroups")
-      private final @Nullable Output<List<ConnectionMonitorTestGroupArgs>> testGroups;
+    private @Nullable Output<List<ConnectionMonitorTestGroupArgs>> testGroups;
 
-    public Output<List<ConnectionMonitorTestGroupArgs>> testGroups() {
-        return this.testGroups == null ? Codegen.empty() : this.testGroups;
+    public Optional<Output<List<ConnectionMonitorTestGroupArgs>>> testGroups() {
+        return Optional.ofNullable(this.testGroups);
     }
 
-    public ConnectionMonitorArgs(
-        @Nullable Output<Boolean> autoStart,
-        @Nullable Output<String> connectionMonitorName,
-        @Nullable Output<ConnectionMonitorDestinationArgs> destination,
-        @Nullable Output<List<ConnectionMonitorEndpointArgs>> endpoints,
-        @Nullable Output<String> location,
-        @Nullable Output<String> migrate,
-        @Nullable Output<Integer> monitoringIntervalInSeconds,
-        Output<String> networkWatcherName,
-        @Nullable Output<String> notes,
-        @Nullable Output<List<ConnectionMonitorOutputArgs>> outputs,
-        Output<String> resourceGroupName,
-        @Nullable Output<ConnectionMonitorSourceArgs> source,
-        @Nullable Output<Map<String,String>> tags,
-        @Nullable Output<List<ConnectionMonitorTestConfigurationArgs>> testConfigurations,
-        @Nullable Output<List<ConnectionMonitorTestGroupArgs>> testGroups) {
-        this.autoStart = Codegen.booleanProp("autoStart").output().arg(autoStart).def(true).getNullable();
-        this.connectionMonitorName = connectionMonitorName;
-        this.destination = destination;
-        this.endpoints = endpoints;
-        this.location = location;
-        this.migrate = migrate;
-        this.monitoringIntervalInSeconds = Codegen.integerProp("monitoringIntervalInSeconds").output().arg(monitoringIntervalInSeconds).def(60).getNullable();
-        this.networkWatcherName = Objects.requireNonNull(networkWatcherName, "expected parameter 'networkWatcherName' to be non-null");
-        this.notes = notes;
-        this.outputs = outputs;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.source = source;
-        this.tags = tags;
-        this.testConfigurations = testConfigurations;
-        this.testGroups = testGroups;
-    }
+    private ConnectionMonitorArgs() {}
 
-    private ConnectionMonitorArgs() {
-        this.autoStart = Codegen.empty();
-        this.connectionMonitorName = Codegen.empty();
-        this.destination = Codegen.empty();
-        this.endpoints = Codegen.empty();
-        this.location = Codegen.empty();
-        this.migrate = Codegen.empty();
-        this.monitoringIntervalInSeconds = Codegen.empty();
-        this.networkWatcherName = Codegen.empty();
-        this.notes = Codegen.empty();
-        this.outputs = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.source = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.testConfigurations = Codegen.empty();
-        this.testGroups = Codegen.empty();
+    private ConnectionMonitorArgs(ConnectionMonitorArgs $) {
+        this.autoStart = $.autoStart;
+        this.connectionMonitorName = $.connectionMonitorName;
+        this.destination = $.destination;
+        this.endpoints = $.endpoints;
+        this.location = $.location;
+        this.migrate = $.migrate;
+        this.monitoringIntervalInSeconds = $.monitoringIntervalInSeconds;
+        this.networkWatcherName = $.networkWatcherName;
+        this.notes = $.notes;
+        this.outputs = $.outputs;
+        this.resourceGroupName = $.resourceGroupName;
+        this.source = $.source;
+        this.tags = $.tags;
+        this.testConfigurations = $.testConfigurations;
+        this.testGroups = $.testGroups;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ConnectionMonitorArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> autoStart;
-        private @Nullable Output<String> connectionMonitorName;
-        private @Nullable Output<ConnectionMonitorDestinationArgs> destination;
-        private @Nullable Output<List<ConnectionMonitorEndpointArgs>> endpoints;
-        private @Nullable Output<String> location;
-        private @Nullable Output<String> migrate;
-        private @Nullable Output<Integer> monitoringIntervalInSeconds;
-        private Output<String> networkWatcherName;
-        private @Nullable Output<String> notes;
-        private @Nullable Output<List<ConnectionMonitorOutputArgs>> outputs;
-        private Output<String> resourceGroupName;
-        private @Nullable Output<ConnectionMonitorSourceArgs> source;
-        private @Nullable Output<Map<String,String>> tags;
-        private @Nullable Output<List<ConnectionMonitorTestConfigurationArgs>> testConfigurations;
-        private @Nullable Output<List<ConnectionMonitorTestGroupArgs>> testGroups;
+        private ConnectionMonitorArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ConnectionMonitorArgs();
         }
 
         public Builder(ConnectionMonitorArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.autoStart = defaults.autoStart;
-    	      this.connectionMonitorName = defaults.connectionMonitorName;
-    	      this.destination = defaults.destination;
-    	      this.endpoints = defaults.endpoints;
-    	      this.location = defaults.location;
-    	      this.migrate = defaults.migrate;
-    	      this.monitoringIntervalInSeconds = defaults.monitoringIntervalInSeconds;
-    	      this.networkWatcherName = defaults.networkWatcherName;
-    	      this.notes = defaults.notes;
-    	      this.outputs = defaults.outputs;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.source = defaults.source;
-    	      this.tags = defaults.tags;
-    	      this.testConfigurations = defaults.testConfigurations;
-    	      this.testGroups = defaults.testGroups;
+            $ = new ConnectionMonitorArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder autoStart(@Nullable Output<Boolean> autoStart) {
-            this.autoStart = autoStart;
+            $.autoStart = autoStart;
             return this;
         }
-        public Builder autoStart(@Nullable Boolean autoStart) {
-            this.autoStart = Codegen.ofNullable(autoStart);
-            return this;
+
+        public Builder autoStart(Boolean autoStart) {
+            return autoStart(Output.of(autoStart));
         }
+
         public Builder connectionMonitorName(@Nullable Output<String> connectionMonitorName) {
-            this.connectionMonitorName = connectionMonitorName;
+            $.connectionMonitorName = connectionMonitorName;
             return this;
         }
-        public Builder connectionMonitorName(@Nullable String connectionMonitorName) {
-            this.connectionMonitorName = Codegen.ofNullable(connectionMonitorName);
-            return this;
+
+        public Builder connectionMonitorName(String connectionMonitorName) {
+            return connectionMonitorName(Output.of(connectionMonitorName));
         }
+
         public Builder destination(@Nullable Output<ConnectionMonitorDestinationArgs> destination) {
-            this.destination = destination;
+            $.destination = destination;
             return this;
         }
-        public Builder destination(@Nullable ConnectionMonitorDestinationArgs destination) {
-            this.destination = Codegen.ofNullable(destination);
-            return this;
+
+        public Builder destination(ConnectionMonitorDestinationArgs destination) {
+            return destination(Output.of(destination));
         }
+
         public Builder endpoints(@Nullable Output<List<ConnectionMonitorEndpointArgs>> endpoints) {
-            this.endpoints = endpoints;
+            $.endpoints = endpoints;
             return this;
         }
-        public Builder endpoints(@Nullable List<ConnectionMonitorEndpointArgs> endpoints) {
-            this.endpoints = Codegen.ofNullable(endpoints);
-            return this;
+
+        public Builder endpoints(List<ConnectionMonitorEndpointArgs> endpoints) {
+            return endpoints(Output.of(endpoints));
         }
+
         public Builder endpoints(ConnectionMonitorEndpointArgs... endpoints) {
             return endpoints(List.of(endpoints));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder migrate(@Nullable Output<String> migrate) {
-            this.migrate = migrate;
+            $.migrate = migrate;
             return this;
         }
-        public Builder migrate(@Nullable String migrate) {
-            this.migrate = Codegen.ofNullable(migrate);
-            return this;
+
+        public Builder migrate(String migrate) {
+            return migrate(Output.of(migrate));
         }
+
         public Builder monitoringIntervalInSeconds(@Nullable Output<Integer> monitoringIntervalInSeconds) {
-            this.monitoringIntervalInSeconds = monitoringIntervalInSeconds;
+            $.monitoringIntervalInSeconds = monitoringIntervalInSeconds;
             return this;
         }
-        public Builder monitoringIntervalInSeconds(@Nullable Integer monitoringIntervalInSeconds) {
-            this.monitoringIntervalInSeconds = Codegen.ofNullable(monitoringIntervalInSeconds);
-            return this;
+
+        public Builder monitoringIntervalInSeconds(Integer monitoringIntervalInSeconds) {
+            return monitoringIntervalInSeconds(Output.of(monitoringIntervalInSeconds));
         }
+
         public Builder networkWatcherName(Output<String> networkWatcherName) {
-            this.networkWatcherName = Objects.requireNonNull(networkWatcherName);
+            $.networkWatcherName = networkWatcherName;
             return this;
         }
+
         public Builder networkWatcherName(String networkWatcherName) {
-            this.networkWatcherName = Output.of(Objects.requireNonNull(networkWatcherName));
-            return this;
+            return networkWatcherName(Output.of(networkWatcherName));
         }
+
         public Builder notes(@Nullable Output<String> notes) {
-            this.notes = notes;
+            $.notes = notes;
             return this;
         }
-        public Builder notes(@Nullable String notes) {
-            this.notes = Codegen.ofNullable(notes);
-            return this;
+
+        public Builder notes(String notes) {
+            return notes(Output.of(notes));
         }
+
         public Builder outputs(@Nullable Output<List<ConnectionMonitorOutputArgs>> outputs) {
-            this.outputs = outputs;
+            $.outputs = outputs;
             return this;
         }
-        public Builder outputs(@Nullable List<ConnectionMonitorOutputArgs> outputs) {
-            this.outputs = Codegen.ofNullable(outputs);
-            return this;
+
+        public Builder outputs(List<ConnectionMonitorOutputArgs> outputs) {
+            return outputs(Output.of(outputs));
         }
+
         public Builder outputs(ConnectionMonitorOutputArgs... outputs) {
             return outputs(List.of(outputs));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder source(@Nullable Output<ConnectionMonitorSourceArgs> source) {
-            this.source = source;
+            $.source = source;
             return this;
         }
-        public Builder source(@Nullable ConnectionMonitorSourceArgs source) {
-            this.source = Codegen.ofNullable(source);
-            return this;
+
+        public Builder source(ConnectionMonitorSourceArgs source) {
+            return source(Output.of(source));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder testConfigurations(@Nullable Output<List<ConnectionMonitorTestConfigurationArgs>> testConfigurations) {
-            this.testConfigurations = testConfigurations;
+            $.testConfigurations = testConfigurations;
             return this;
         }
-        public Builder testConfigurations(@Nullable List<ConnectionMonitorTestConfigurationArgs> testConfigurations) {
-            this.testConfigurations = Codegen.ofNullable(testConfigurations);
-            return this;
+
+        public Builder testConfigurations(List<ConnectionMonitorTestConfigurationArgs> testConfigurations) {
+            return testConfigurations(Output.of(testConfigurations));
         }
+
         public Builder testConfigurations(ConnectionMonitorTestConfigurationArgs... testConfigurations) {
             return testConfigurations(List.of(testConfigurations));
         }
+
         public Builder testGroups(@Nullable Output<List<ConnectionMonitorTestGroupArgs>> testGroups) {
-            this.testGroups = testGroups;
+            $.testGroups = testGroups;
             return this;
         }
-        public Builder testGroups(@Nullable List<ConnectionMonitorTestGroupArgs> testGroups) {
-            this.testGroups = Codegen.ofNullable(testGroups);
-            return this;
+
+        public Builder testGroups(List<ConnectionMonitorTestGroupArgs> testGroups) {
+            return testGroups(Output.of(testGroups));
         }
+
         public Builder testGroups(ConnectionMonitorTestGroupArgs... testGroups) {
             return testGroups(List.of(testGroups));
-        }        public ConnectionMonitorArgs build() {
-            return new ConnectionMonitorArgs(autoStart, connectionMonitorName, destination, endpoints, location, migrate, monitoringIntervalInSeconds, networkWatcherName, notes, outputs, resourceGroupName, source, tags, testConfigurations, testGroups);
+        }
+
+        public ConnectionMonitorArgs build() {
+            $.autoStart = Codegen.booleanProp("autoStart").output().arg($.autoStart).def(true).getNullable();
+            $.monitoringIntervalInSeconds = Codegen.integerProp("monitoringIntervalInSeconds").output().arg($.monitoringIntervalInSeconds).def(60).getNullable();
+            $.networkWatcherName = Objects.requireNonNull($.networkWatcherName, "expected parameter 'networkWatcherName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

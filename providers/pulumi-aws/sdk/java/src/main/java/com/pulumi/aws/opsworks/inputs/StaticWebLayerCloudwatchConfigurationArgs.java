@@ -6,10 +6,10 @@ package com.pulumi.aws.opsworks.inputs;
 import com.pulumi.aws.opsworks.inputs.StaticWebLayerCloudwatchConfigurationLogStreamArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -18,73 +18,69 @@ public final class StaticWebLayerCloudwatchConfigurationArgs extends com.pulumi.
     public static final StaticWebLayerCloudwatchConfigurationArgs Empty = new StaticWebLayerCloudwatchConfigurationArgs();
 
     @Import(name="enabled")
-      private final @Nullable Output<Boolean> enabled;
+    private @Nullable Output<Boolean> enabled;
 
-    public Output<Boolean> enabled() {
-        return this.enabled == null ? Codegen.empty() : this.enabled;
+    public Optional<Output<Boolean>> enabled() {
+        return Optional.ofNullable(this.enabled);
     }
 
     @Import(name="logStreams")
-      private final @Nullable Output<List<StaticWebLayerCloudwatchConfigurationLogStreamArgs>> logStreams;
+    private @Nullable Output<List<StaticWebLayerCloudwatchConfigurationLogStreamArgs>> logStreams;
 
-    public Output<List<StaticWebLayerCloudwatchConfigurationLogStreamArgs>> logStreams() {
-        return this.logStreams == null ? Codegen.empty() : this.logStreams;
+    public Optional<Output<List<StaticWebLayerCloudwatchConfigurationLogStreamArgs>>> logStreams() {
+        return Optional.ofNullable(this.logStreams);
     }
 
-    public StaticWebLayerCloudwatchConfigurationArgs(
-        @Nullable Output<Boolean> enabled,
-        @Nullable Output<List<StaticWebLayerCloudwatchConfigurationLogStreamArgs>> logStreams) {
-        this.enabled = enabled;
-        this.logStreams = logStreams;
-    }
+    private StaticWebLayerCloudwatchConfigurationArgs() {}
 
-    private StaticWebLayerCloudwatchConfigurationArgs() {
-        this.enabled = Codegen.empty();
-        this.logStreams = Codegen.empty();
+    private StaticWebLayerCloudwatchConfigurationArgs(StaticWebLayerCloudwatchConfigurationArgs $) {
+        this.enabled = $.enabled;
+        this.logStreams = $.logStreams;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(StaticWebLayerCloudwatchConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> enabled;
-        private @Nullable Output<List<StaticWebLayerCloudwatchConfigurationLogStreamArgs>> logStreams;
+        private StaticWebLayerCloudwatchConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new StaticWebLayerCloudwatchConfigurationArgs();
         }
 
         public Builder(StaticWebLayerCloudwatchConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.enabled = defaults.enabled;
-    	      this.logStreams = defaults.logStreams;
+            $ = new StaticWebLayerCloudwatchConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder enabled(@Nullable Output<Boolean> enabled) {
-            this.enabled = enabled;
+            $.enabled = enabled;
             return this;
         }
-        public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Codegen.ofNullable(enabled);
-            return this;
+
+        public Builder enabled(Boolean enabled) {
+            return enabled(Output.of(enabled));
         }
+
         public Builder logStreams(@Nullable Output<List<StaticWebLayerCloudwatchConfigurationLogStreamArgs>> logStreams) {
-            this.logStreams = logStreams;
+            $.logStreams = logStreams;
             return this;
         }
-        public Builder logStreams(@Nullable List<StaticWebLayerCloudwatchConfigurationLogStreamArgs> logStreams) {
-            this.logStreams = Codegen.ofNullable(logStreams);
-            return this;
+
+        public Builder logStreams(List<StaticWebLayerCloudwatchConfigurationLogStreamArgs> logStreams) {
+            return logStreams(Output.of(logStreams));
         }
+
         public Builder logStreams(StaticWebLayerCloudwatchConfigurationLogStreamArgs... logStreams) {
             return logStreams(List.of(logStreams));
-        }        public StaticWebLayerCloudwatchConfigurationArgs build() {
-            return new StaticWebLayerCloudwatchConfigurationArgs(enabled, logStreams);
+        }
+
+        public StaticWebLayerCloudwatchConfigurationArgs build() {
+            return $;
         }
     }
+
 }

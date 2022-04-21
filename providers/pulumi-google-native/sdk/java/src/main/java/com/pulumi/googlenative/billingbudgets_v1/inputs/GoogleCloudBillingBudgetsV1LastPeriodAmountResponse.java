@@ -3,7 +3,7 @@
 
 package com.pulumi.googlenative.billingbudgets_v1.inputs;
 
-import java.util.Objects;
+
 
 
 /**
@@ -14,28 +14,19 @@ public final class GoogleCloudBillingBudgetsV1LastPeriodAmountResponse extends c
 
     public static final GoogleCloudBillingBudgetsV1LastPeriodAmountResponse Empty = new GoogleCloudBillingBudgetsV1LastPeriodAmountResponse();
 
-    public GoogleCloudBillingBudgetsV1LastPeriodAmountResponse() {
-    }
-
     public static Builder builder() {
         return new Builder();
     }
 
-    public static Builder builder(GoogleCloudBillingBudgetsV1LastPeriodAmountResponse defaults) {
-        return new Builder(defaults);
-    }
-
     public static final class Builder {
+        private GoogleCloudBillingBudgetsV1LastPeriodAmountResponse $;
 
         public Builder() {
-    	      // Empty
-        }
-
-        public Builder(GoogleCloudBillingBudgetsV1LastPeriodAmountResponse defaults) {
-    	      Objects.requireNonNull(defaults);
+            $ = new GoogleCloudBillingBudgetsV1LastPeriodAmountResponse();
         }
         public GoogleCloudBillingBudgetsV1LastPeriodAmountResponse build() {
-            return new GoogleCloudBillingBudgetsV1LastPeriodAmountResponse();
+            return $;
         }
     }
+
 }

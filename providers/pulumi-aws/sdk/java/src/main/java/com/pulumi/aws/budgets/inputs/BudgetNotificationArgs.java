@@ -5,11 +5,11 @@ package com.pulumi.aws.budgets.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,7 +22,7 @@ public final class BudgetNotificationArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="comparisonOperator", required=true)
-      private final Output<String> comparisonOperator;
+    private Output<String> comparisonOperator;
 
     public Output<String> comparisonOperator() {
         return this.comparisonOperator;
@@ -33,7 +33,7 @@ public final class BudgetNotificationArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="notificationType", required=true)
-      private final Output<String> notificationType;
+    private Output<String> notificationType;
 
     public Output<String> notificationType() {
         return this.notificationType;
@@ -44,10 +44,10 @@ public final class BudgetNotificationArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="subscriberEmailAddresses")
-      private final @Nullable Output<List<String>> subscriberEmailAddresses;
+    private @Nullable Output<List<String>> subscriberEmailAddresses;
 
-    public Output<List<String>> subscriberEmailAddresses() {
-        return this.subscriberEmailAddresses == null ? Codegen.empty() : this.subscriberEmailAddresses;
+    public Optional<Output<List<String>>> subscriberEmailAddresses() {
+        return Optional.ofNullable(this.subscriberEmailAddresses);
     }
 
     /**
@@ -55,10 +55,10 @@ public final class BudgetNotificationArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="subscriberSnsTopicArns")
-      private final @Nullable Output<List<String>> subscriberSnsTopicArns;
+    private @Nullable Output<List<String>> subscriberSnsTopicArns;
 
-    public Output<List<String>> subscriberSnsTopicArns() {
-        return this.subscriberSnsTopicArns == null ? Codegen.empty() : this.subscriberSnsTopicArns;
+    public Optional<Output<List<String>>> subscriberSnsTopicArns() {
+        return Optional.ofNullable(this.subscriberSnsTopicArns);
     }
 
     /**
@@ -66,7 +66,7 @@ public final class BudgetNotificationArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="threshold", required=true)
-      private final Output<Double> threshold;
+    private Output<Double> threshold;
 
     public Output<Double> threshold() {
         return this.threshold;
@@ -77,121 +77,110 @@ public final class BudgetNotificationArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="thresholdType", required=true)
-      private final Output<String> thresholdType;
+    private Output<String> thresholdType;
 
     public Output<String> thresholdType() {
         return this.thresholdType;
     }
 
-    public BudgetNotificationArgs(
-        Output<String> comparisonOperator,
-        Output<String> notificationType,
-        @Nullable Output<List<String>> subscriberEmailAddresses,
-        @Nullable Output<List<String>> subscriberSnsTopicArns,
-        Output<Double> threshold,
-        Output<String> thresholdType) {
-        this.comparisonOperator = Objects.requireNonNull(comparisonOperator, "expected parameter 'comparisonOperator' to be non-null");
-        this.notificationType = Objects.requireNonNull(notificationType, "expected parameter 'notificationType' to be non-null");
-        this.subscriberEmailAddresses = subscriberEmailAddresses;
-        this.subscriberSnsTopicArns = subscriberSnsTopicArns;
-        this.threshold = Objects.requireNonNull(threshold, "expected parameter 'threshold' to be non-null");
-        this.thresholdType = Objects.requireNonNull(thresholdType, "expected parameter 'thresholdType' to be non-null");
-    }
+    private BudgetNotificationArgs() {}
 
-    private BudgetNotificationArgs() {
-        this.comparisonOperator = Codegen.empty();
-        this.notificationType = Codegen.empty();
-        this.subscriberEmailAddresses = Codegen.empty();
-        this.subscriberSnsTopicArns = Codegen.empty();
-        this.threshold = Codegen.empty();
-        this.thresholdType = Codegen.empty();
+    private BudgetNotificationArgs(BudgetNotificationArgs $) {
+        this.comparisonOperator = $.comparisonOperator;
+        this.notificationType = $.notificationType;
+        this.subscriberEmailAddresses = $.subscriberEmailAddresses;
+        this.subscriberSnsTopicArns = $.subscriberSnsTopicArns;
+        this.threshold = $.threshold;
+        this.thresholdType = $.thresholdType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BudgetNotificationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> comparisonOperator;
-        private Output<String> notificationType;
-        private @Nullable Output<List<String>> subscriberEmailAddresses;
-        private @Nullable Output<List<String>> subscriberSnsTopicArns;
-        private Output<Double> threshold;
-        private Output<String> thresholdType;
+        private BudgetNotificationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new BudgetNotificationArgs();
         }
 
         public Builder(BudgetNotificationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.comparisonOperator = defaults.comparisonOperator;
-    	      this.notificationType = defaults.notificationType;
-    	      this.subscriberEmailAddresses = defaults.subscriberEmailAddresses;
-    	      this.subscriberSnsTopicArns = defaults.subscriberSnsTopicArns;
-    	      this.threshold = defaults.threshold;
-    	      this.thresholdType = defaults.thresholdType;
+            $ = new BudgetNotificationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder comparisonOperator(Output<String> comparisonOperator) {
-            this.comparisonOperator = Objects.requireNonNull(comparisonOperator);
+            $.comparisonOperator = comparisonOperator;
             return this;
         }
+
         public Builder comparisonOperator(String comparisonOperator) {
-            this.comparisonOperator = Output.of(Objects.requireNonNull(comparisonOperator));
-            return this;
+            return comparisonOperator(Output.of(comparisonOperator));
         }
+
         public Builder notificationType(Output<String> notificationType) {
-            this.notificationType = Objects.requireNonNull(notificationType);
+            $.notificationType = notificationType;
             return this;
         }
+
         public Builder notificationType(String notificationType) {
-            this.notificationType = Output.of(Objects.requireNonNull(notificationType));
-            return this;
+            return notificationType(Output.of(notificationType));
         }
+
         public Builder subscriberEmailAddresses(@Nullable Output<List<String>> subscriberEmailAddresses) {
-            this.subscriberEmailAddresses = subscriberEmailAddresses;
+            $.subscriberEmailAddresses = subscriberEmailAddresses;
             return this;
         }
-        public Builder subscriberEmailAddresses(@Nullable List<String> subscriberEmailAddresses) {
-            this.subscriberEmailAddresses = Codegen.ofNullable(subscriberEmailAddresses);
-            return this;
+
+        public Builder subscriberEmailAddresses(List<String> subscriberEmailAddresses) {
+            return subscriberEmailAddresses(Output.of(subscriberEmailAddresses));
         }
+
         public Builder subscriberEmailAddresses(String... subscriberEmailAddresses) {
             return subscriberEmailAddresses(List.of(subscriberEmailAddresses));
         }
+
         public Builder subscriberSnsTopicArns(@Nullable Output<List<String>> subscriberSnsTopicArns) {
-            this.subscriberSnsTopicArns = subscriberSnsTopicArns;
+            $.subscriberSnsTopicArns = subscriberSnsTopicArns;
             return this;
         }
-        public Builder subscriberSnsTopicArns(@Nullable List<String> subscriberSnsTopicArns) {
-            this.subscriberSnsTopicArns = Codegen.ofNullable(subscriberSnsTopicArns);
-            return this;
+
+        public Builder subscriberSnsTopicArns(List<String> subscriberSnsTopicArns) {
+            return subscriberSnsTopicArns(Output.of(subscriberSnsTopicArns));
         }
+
         public Builder subscriberSnsTopicArns(String... subscriberSnsTopicArns) {
             return subscriberSnsTopicArns(List.of(subscriberSnsTopicArns));
         }
+
         public Builder threshold(Output<Double> threshold) {
-            this.threshold = Objects.requireNonNull(threshold);
+            $.threshold = threshold;
             return this;
         }
+
         public Builder threshold(Double threshold) {
-            this.threshold = Output.of(Objects.requireNonNull(threshold));
-            return this;
+            return threshold(Output.of(threshold));
         }
+
         public Builder thresholdType(Output<String> thresholdType) {
-            this.thresholdType = Objects.requireNonNull(thresholdType);
+            $.thresholdType = thresholdType;
             return this;
         }
+
         public Builder thresholdType(String thresholdType) {
-            this.thresholdType = Output.of(Objects.requireNonNull(thresholdType));
-            return this;
-        }        public BudgetNotificationArgs build() {
-            return new BudgetNotificationArgs(comparisonOperator, notificationType, subscriberEmailAddresses, subscriberSnsTopicArns, threshold, thresholdType);
+            return thresholdType(Output.of(thresholdType));
+        }
+
+        public BudgetNotificationArgs build() {
+            $.comparisonOperator = Objects.requireNonNull($.comparisonOperator, "expected parameter 'comparisonOperator' to be non-null");
+            $.notificationType = Objects.requireNonNull($.notificationType, "expected parameter 'notificationType' to be non-null");
+            $.threshold = Objects.requireNonNull($.threshold, "expected parameter 'threshold' to be non-null");
+            $.thresholdType = Objects.requireNonNull($.thresholdType, "expected parameter 'thresholdType' to be non-null");
+            return $;
         }
     }
+
 }

@@ -17,7 +17,7 @@ public final class GetvNetPeeringArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="peeringName", required=true)
-      private final String peeringName;
+    private String peeringName;
 
     public String peeringName() {
         return this.peeringName;
@@ -28,7 +28,7 @@ public final class GetvNetPeeringArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -39,64 +39,59 @@ public final class GetvNetPeeringArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="workspaceName", required=true)
-      private final String workspaceName;
+    private String workspaceName;
 
     public String workspaceName() {
         return this.workspaceName;
     }
 
-    public GetvNetPeeringArgs(
-        String peeringName,
-        String resourceGroupName,
-        String workspaceName) {
-        this.peeringName = Objects.requireNonNull(peeringName, "expected parameter 'peeringName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.workspaceName = Objects.requireNonNull(workspaceName, "expected parameter 'workspaceName' to be non-null");
-    }
+    private GetvNetPeeringArgs() {}
 
-    private GetvNetPeeringArgs() {
-        this.peeringName = null;
-        this.resourceGroupName = null;
-        this.workspaceName = null;
+    private GetvNetPeeringArgs(GetvNetPeeringArgs $) {
+        this.peeringName = $.peeringName;
+        this.resourceGroupName = $.resourceGroupName;
+        this.workspaceName = $.workspaceName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetvNetPeeringArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String peeringName;
-        private String resourceGroupName;
-        private String workspaceName;
+        private GetvNetPeeringArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetvNetPeeringArgs();
         }
 
         public Builder(GetvNetPeeringArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.peeringName = defaults.peeringName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.workspaceName = defaults.workspaceName;
+            $ = new GetvNetPeeringArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder peeringName(String peeringName) {
-            this.peeringName = Objects.requireNonNull(peeringName);
+            $.peeringName = peeringName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder workspaceName(String workspaceName) {
-            this.workspaceName = Objects.requireNonNull(workspaceName);
+            $.workspaceName = workspaceName;
             return this;
-        }        public GetvNetPeeringArgs build() {
-            return new GetvNetPeeringArgs(peeringName, resourceGroupName, workspaceName);
+        }
+
+        public GetvNetPeeringArgs build() {
+            $.peeringName = Objects.requireNonNull($.peeringName, "expected parameter 'peeringName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.workspaceName = Objects.requireNonNull($.workspaceName, "expected parameter 'workspaceName' to be non-null");
+            return $;
         }
     }
+
 }

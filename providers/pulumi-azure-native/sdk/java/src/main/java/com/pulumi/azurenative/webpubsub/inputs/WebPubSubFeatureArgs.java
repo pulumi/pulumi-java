@@ -7,10 +7,10 @@ import com.pulumi.azurenative.webpubsub.enums.FeatureFlags;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -30,7 +30,7 @@ public final class WebPubSubFeatureArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="flag", required=true)
-      private final Output<Either<String,FeatureFlags>> flag;
+    private Output<Either<String,FeatureFlags>> flag;
 
     public Output<Either<String,FeatureFlags>> flag() {
         return this.flag;
@@ -41,10 +41,10 @@ public final class WebPubSubFeatureArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="properties")
-      private final @Nullable Output<Map<String,String>> properties;
+    private @Nullable Output<Map<String,String>> properties;
 
-    public Output<Map<String,String>> properties() {
-        return this.properties == null ? Codegen.empty() : this.properties;
+    public Optional<Output<Map<String,String>>> properties() {
+        return Optional.ofNullable(this.properties);
     }
 
     /**
@@ -52,76 +52,70 @@ public final class WebPubSubFeatureArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="value", required=true)
-      private final Output<String> value;
+    private Output<String> value;
 
     public Output<String> value() {
         return this.value;
     }
 
-    public WebPubSubFeatureArgs(
-        Output<Either<String,FeatureFlags>> flag,
-        @Nullable Output<Map<String,String>> properties,
-        Output<String> value) {
-        this.flag = Objects.requireNonNull(flag, "expected parameter 'flag' to be non-null");
-        this.properties = properties;
-        this.value = Objects.requireNonNull(value, "expected parameter 'value' to be non-null");
-    }
+    private WebPubSubFeatureArgs() {}
 
-    private WebPubSubFeatureArgs() {
-        this.flag = Codegen.empty();
-        this.properties = Codegen.empty();
-        this.value = Codegen.empty();
+    private WebPubSubFeatureArgs(WebPubSubFeatureArgs $) {
+        this.flag = $.flag;
+        this.properties = $.properties;
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WebPubSubFeatureArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Either<String,FeatureFlags>> flag;
-        private @Nullable Output<Map<String,String>> properties;
-        private Output<String> value;
+        private WebPubSubFeatureArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new WebPubSubFeatureArgs();
         }
 
         public Builder(WebPubSubFeatureArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.flag = defaults.flag;
-    	      this.properties = defaults.properties;
-    	      this.value = defaults.value;
+            $ = new WebPubSubFeatureArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder flag(Output<Either<String,FeatureFlags>> flag) {
-            this.flag = Objects.requireNonNull(flag);
+            $.flag = flag;
             return this;
         }
+
         public Builder flag(Either<String,FeatureFlags> flag) {
-            this.flag = Output.of(Objects.requireNonNull(flag));
-            return this;
+            return flag(Output.of(flag));
         }
+
         public Builder properties(@Nullable Output<Map<String,String>> properties) {
-            this.properties = properties;
+            $.properties = properties;
             return this;
         }
-        public Builder properties(@Nullable Map<String,String> properties) {
-            this.properties = Codegen.ofNullable(properties);
-            return this;
+
+        public Builder properties(Map<String,String> properties) {
+            return properties(Output.of(properties));
         }
+
         public Builder value(Output<String> value) {
-            this.value = Objects.requireNonNull(value);
+            $.value = value;
             return this;
         }
+
         public Builder value(String value) {
-            this.value = Output.of(Objects.requireNonNull(value));
-            return this;
-        }        public WebPubSubFeatureArgs build() {
-            return new WebPubSubFeatureArgs(flag, properties, value);
+            return value(Output.of(value));
+        }
+
+        public WebPubSubFeatureArgs build() {
+            $.flag = Objects.requireNonNull($.flag, "expected parameter 'flag' to be non-null");
+            $.value = Objects.requireNonNull($.value, "expected parameter 'value' to be non-null");
+            return $;
         }
     }
+
 }

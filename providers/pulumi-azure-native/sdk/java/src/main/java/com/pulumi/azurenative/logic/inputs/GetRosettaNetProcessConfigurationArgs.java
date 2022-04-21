@@ -17,7 +17,7 @@ public final class GetRosettaNetProcessConfigurationArgs extends com.pulumi.reso
      * 
      */
     @Import(name="integrationAccountName", required=true)
-      private final String integrationAccountName;
+    private String integrationAccountName;
 
     public String integrationAccountName() {
         return this.integrationAccountName;
@@ -28,7 +28,7 @@ public final class GetRosettaNetProcessConfigurationArgs extends com.pulumi.reso
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -39,64 +39,59 @@ public final class GetRosettaNetProcessConfigurationArgs extends com.pulumi.reso
      * 
      */
     @Import(name="rosettaNetProcessConfigurationName", required=true)
-      private final String rosettaNetProcessConfigurationName;
+    private String rosettaNetProcessConfigurationName;
 
     public String rosettaNetProcessConfigurationName() {
         return this.rosettaNetProcessConfigurationName;
     }
 
-    public GetRosettaNetProcessConfigurationArgs(
-        String integrationAccountName,
-        String resourceGroupName,
-        String rosettaNetProcessConfigurationName) {
-        this.integrationAccountName = Objects.requireNonNull(integrationAccountName, "expected parameter 'integrationAccountName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.rosettaNetProcessConfigurationName = Objects.requireNonNull(rosettaNetProcessConfigurationName, "expected parameter 'rosettaNetProcessConfigurationName' to be non-null");
-    }
+    private GetRosettaNetProcessConfigurationArgs() {}
 
-    private GetRosettaNetProcessConfigurationArgs() {
-        this.integrationAccountName = null;
-        this.resourceGroupName = null;
-        this.rosettaNetProcessConfigurationName = null;
+    private GetRosettaNetProcessConfigurationArgs(GetRosettaNetProcessConfigurationArgs $) {
+        this.integrationAccountName = $.integrationAccountName;
+        this.resourceGroupName = $.resourceGroupName;
+        this.rosettaNetProcessConfigurationName = $.rosettaNetProcessConfigurationName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetRosettaNetProcessConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String integrationAccountName;
-        private String resourceGroupName;
-        private String rosettaNetProcessConfigurationName;
+        private GetRosettaNetProcessConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetRosettaNetProcessConfigurationArgs();
         }
 
         public Builder(GetRosettaNetProcessConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.integrationAccountName = defaults.integrationAccountName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.rosettaNetProcessConfigurationName = defaults.rosettaNetProcessConfigurationName;
+            $ = new GetRosettaNetProcessConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder integrationAccountName(String integrationAccountName) {
-            this.integrationAccountName = Objects.requireNonNull(integrationAccountName);
+            $.integrationAccountName = integrationAccountName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder rosettaNetProcessConfigurationName(String rosettaNetProcessConfigurationName) {
-            this.rosettaNetProcessConfigurationName = Objects.requireNonNull(rosettaNetProcessConfigurationName);
+            $.rosettaNetProcessConfigurationName = rosettaNetProcessConfigurationName;
             return this;
-        }        public GetRosettaNetProcessConfigurationArgs build() {
-            return new GetRosettaNetProcessConfigurationArgs(integrationAccountName, resourceGroupName, rosettaNetProcessConfigurationName);
+        }
+
+        public GetRosettaNetProcessConfigurationArgs build() {
+            $.integrationAccountName = Objects.requireNonNull($.integrationAccountName, "expected parameter 'integrationAccountName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.rosettaNetProcessConfigurationName = Objects.requireNonNull($.rosettaNetProcessConfigurationName, "expected parameter 'rosettaNetProcessConfigurationName' to be non-null");
+            return $;
         }
     }
+
 }

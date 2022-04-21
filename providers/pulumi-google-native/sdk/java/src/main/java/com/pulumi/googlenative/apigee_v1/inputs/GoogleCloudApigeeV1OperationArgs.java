@@ -5,10 +5,10 @@ package com.pulumi.googlenative.apigee_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class GoogleCloudApigeeV1OperationArgs extends com.pulumi.resources
      * 
      */
     @Import(name="methods")
-      private final @Nullable Output<List<String>> methods;
+    private @Nullable Output<List<String>> methods;
 
-    public Output<List<String>> methods() {
-        return this.methods == null ? Codegen.empty() : this.methods;
+    public Optional<Output<List<String>>> methods() {
+        return Optional.ofNullable(this.methods);
     }
 
     /**
@@ -36,66 +36,63 @@ public final class GoogleCloudApigeeV1OperationArgs extends com.pulumi.resources
      * 
      */
     @Import(name="resource", required=true)
-      private final Output<String> resource;
+    private Output<String> resource;
 
     public Output<String> resource() {
         return this.resource;
     }
 
-    public GoogleCloudApigeeV1OperationArgs(
-        @Nullable Output<List<String>> methods,
-        Output<String> resource) {
-        this.methods = methods;
-        this.resource = Objects.requireNonNull(resource, "expected parameter 'resource' to be non-null");
-    }
+    private GoogleCloudApigeeV1OperationArgs() {}
 
-    private GoogleCloudApigeeV1OperationArgs() {
-        this.methods = Codegen.empty();
-        this.resource = Codegen.empty();
+    private GoogleCloudApigeeV1OperationArgs(GoogleCloudApigeeV1OperationArgs $) {
+        this.methods = $.methods;
+        this.resource = $.resource;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudApigeeV1OperationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> methods;
-        private Output<String> resource;
+        private GoogleCloudApigeeV1OperationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudApigeeV1OperationArgs();
         }
 
         public Builder(GoogleCloudApigeeV1OperationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.methods = defaults.methods;
-    	      this.resource = defaults.resource;
+            $ = new GoogleCloudApigeeV1OperationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder methods(@Nullable Output<List<String>> methods) {
-            this.methods = methods;
+            $.methods = methods;
             return this;
         }
-        public Builder methods(@Nullable List<String> methods) {
-            this.methods = Codegen.ofNullable(methods);
-            return this;
+
+        public Builder methods(List<String> methods) {
+            return methods(Output.of(methods));
         }
+
         public Builder methods(String... methods) {
             return methods(List.of(methods));
         }
+
         public Builder resource(Output<String> resource) {
-            this.resource = Objects.requireNonNull(resource);
+            $.resource = resource;
             return this;
         }
+
         public Builder resource(String resource) {
-            this.resource = Output.of(Objects.requireNonNull(resource));
-            return this;
-        }        public GoogleCloudApigeeV1OperationArgs build() {
-            return new GoogleCloudApigeeV1OperationArgs(methods, resource);
+            return resource(Output.of(resource));
+        }
+
+        public GoogleCloudApigeeV1OperationArgs build() {
+            $.resource = Objects.requireNonNull($.resource, "expected parameter 'resource' to be non-null");
+            return $;
         }
     }
+
 }

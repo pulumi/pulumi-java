@@ -6,11 +6,11 @@ package com.pulumi.aws.lex;
 import com.pulumi.aws.lex.inputs.SlotTypeEnumerationValueArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class SlotTypeArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="createVersion")
-      private final @Nullable Output<Boolean> createVersion;
+    private @Nullable Output<Boolean> createVersion;
 
-    public Output<Boolean> createVersion() {
-        return this.createVersion == null ? Codegen.empty() : this.createVersion;
+    public Optional<Output<Boolean>> createVersion() {
+        return Optional.ofNullable(this.createVersion);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class SlotTypeArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -49,7 +49,7 @@ public final class SlotTypeArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="enumerationValues", required=true)
-      private final Output<List<SlotTypeEnumerationValueArgs>> enumerationValues;
+    private Output<List<SlotTypeEnumerationValueArgs>> enumerationValues;
 
     public Output<List<SlotTypeEnumerationValueArgs>> enumerationValues() {
         return this.enumerationValues;
@@ -60,10 +60,10 @@ public final class SlotTypeArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -74,105 +74,93 @@ public final class SlotTypeArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="valueSelectionStrategy")
-      private final @Nullable Output<String> valueSelectionStrategy;
+    private @Nullable Output<String> valueSelectionStrategy;
 
-    public Output<String> valueSelectionStrategy() {
-        return this.valueSelectionStrategy == null ? Codegen.empty() : this.valueSelectionStrategy;
+    public Optional<Output<String>> valueSelectionStrategy() {
+        return Optional.ofNullable(this.valueSelectionStrategy);
     }
 
-    public SlotTypeArgs(
-        @Nullable Output<Boolean> createVersion,
-        @Nullable Output<String> description,
-        Output<List<SlotTypeEnumerationValueArgs>> enumerationValues,
-        @Nullable Output<String> name,
-        @Nullable Output<String> valueSelectionStrategy) {
-        this.createVersion = createVersion;
-        this.description = description;
-        this.enumerationValues = Objects.requireNonNull(enumerationValues, "expected parameter 'enumerationValues' to be non-null");
-        this.name = name;
-        this.valueSelectionStrategy = valueSelectionStrategy;
-    }
+    private SlotTypeArgs() {}
 
-    private SlotTypeArgs() {
-        this.createVersion = Codegen.empty();
-        this.description = Codegen.empty();
-        this.enumerationValues = Codegen.empty();
-        this.name = Codegen.empty();
-        this.valueSelectionStrategy = Codegen.empty();
+    private SlotTypeArgs(SlotTypeArgs $) {
+        this.createVersion = $.createVersion;
+        this.description = $.description;
+        this.enumerationValues = $.enumerationValues;
+        this.name = $.name;
+        this.valueSelectionStrategy = $.valueSelectionStrategy;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SlotTypeArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> createVersion;
-        private @Nullable Output<String> description;
-        private Output<List<SlotTypeEnumerationValueArgs>> enumerationValues;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> valueSelectionStrategy;
+        private SlotTypeArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SlotTypeArgs();
         }
 
         public Builder(SlotTypeArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.createVersion = defaults.createVersion;
-    	      this.description = defaults.description;
-    	      this.enumerationValues = defaults.enumerationValues;
-    	      this.name = defaults.name;
-    	      this.valueSelectionStrategy = defaults.valueSelectionStrategy;
+            $ = new SlotTypeArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder createVersion(@Nullable Output<Boolean> createVersion) {
-            this.createVersion = createVersion;
+            $.createVersion = createVersion;
             return this;
         }
-        public Builder createVersion(@Nullable Boolean createVersion) {
-            this.createVersion = Codegen.ofNullable(createVersion);
-            return this;
+
+        public Builder createVersion(Boolean createVersion) {
+            return createVersion(Output.of(createVersion));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder enumerationValues(Output<List<SlotTypeEnumerationValueArgs>> enumerationValues) {
-            this.enumerationValues = Objects.requireNonNull(enumerationValues);
+            $.enumerationValues = enumerationValues;
             return this;
         }
+
         public Builder enumerationValues(List<SlotTypeEnumerationValueArgs> enumerationValues) {
-            this.enumerationValues = Output.of(Objects.requireNonNull(enumerationValues));
-            return this;
+            return enumerationValues(Output.of(enumerationValues));
         }
+
         public Builder enumerationValues(SlotTypeEnumerationValueArgs... enumerationValues) {
             return enumerationValues(List.of(enumerationValues));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder valueSelectionStrategy(@Nullable Output<String> valueSelectionStrategy) {
-            this.valueSelectionStrategy = valueSelectionStrategy;
+            $.valueSelectionStrategy = valueSelectionStrategy;
             return this;
         }
-        public Builder valueSelectionStrategy(@Nullable String valueSelectionStrategy) {
-            this.valueSelectionStrategy = Codegen.ofNullable(valueSelectionStrategy);
-            return this;
-        }        public SlotTypeArgs build() {
-            return new SlotTypeArgs(createVersion, description, enumerationValues, name, valueSelectionStrategy);
+
+        public Builder valueSelectionStrategy(String valueSelectionStrategy) {
+            return valueSelectionStrategy(Output.of(valueSelectionStrategy));
+        }
+
+        public SlotTypeArgs build() {
+            $.enumerationValues = Objects.requireNonNull($.enumerationValues, "expected parameter 'enumerationValues' to be non-null");
+            return $;
         }
     }
+
 }

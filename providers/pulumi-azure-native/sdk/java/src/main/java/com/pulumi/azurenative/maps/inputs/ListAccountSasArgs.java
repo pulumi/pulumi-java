@@ -24,7 +24,7 @@ public final class ListAccountSasArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="accountName", required=true)
-      private final String accountName;
+    private String accountName;
 
     public String accountName() {
         return this.accountName;
@@ -35,7 +35,7 @@ public final class ListAccountSasArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="expiry", required=true)
-      private final String expiry;
+    private String expiry;
 
     public String expiry() {
         return this.expiry;
@@ -46,7 +46,7 @@ public final class ListAccountSasArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="maxRatePerSecond", required=true)
-      private final Integer maxRatePerSecond;
+    private Integer maxRatePerSecond;
 
     public Integer maxRatePerSecond() {
         return this.maxRatePerSecond;
@@ -57,7 +57,7 @@ public final class ListAccountSasArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="principalId", required=true)
-      private final String principalId;
+    private String principalId;
 
     public String principalId() {
         return this.principalId;
@@ -68,10 +68,10 @@ public final class ListAccountSasArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="regions")
-      private final @Nullable List<String> regions;
+    private @Nullable List<String> regions;
 
-    public List<String> regions() {
-        return this.regions == null ? List.of() : this.regions;
+    public Optional<List<String>> regions() {
+        return Optional.ofNullable(this.regions);
     }
 
     /**
@@ -79,7 +79,7 @@ public final class ListAccountSasArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -90,7 +90,7 @@ public final class ListAccountSasArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="signingKey", required=true)
-      private final Either<String,SigningKey> signingKey;
+    private Either<String,SigningKey> signingKey;
 
     public Either<String,SigningKey> signingKey() {
         return this.signingKey;
@@ -101,112 +101,97 @@ public final class ListAccountSasArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="start", required=true)
-      private final String start;
+    private String start;
 
     public String start() {
         return this.start;
     }
 
-    public ListAccountSasArgs(
-        String accountName,
-        String expiry,
-        Integer maxRatePerSecond,
-        String principalId,
-        @Nullable List<String> regions,
-        String resourceGroupName,
-        Either<String,SigningKey> signingKey,
-        String start) {
-        this.accountName = Objects.requireNonNull(accountName, "expected parameter 'accountName' to be non-null");
-        this.expiry = Objects.requireNonNull(expiry, "expected parameter 'expiry' to be non-null");
-        this.maxRatePerSecond = Codegen.integerProp("maxRatePerSecond").arg(maxRatePerSecond).def(500).require();
-        this.principalId = Objects.requireNonNull(principalId, "expected parameter 'principalId' to be non-null");
-        this.regions = regions;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.signingKey = Objects.requireNonNull(signingKey, "expected parameter 'signingKey' to be non-null");
-        this.start = Objects.requireNonNull(start, "expected parameter 'start' to be non-null");
-    }
+    private ListAccountSasArgs() {}
 
-    private ListAccountSasArgs() {
-        this.accountName = null;
-        this.expiry = null;
-        this.maxRatePerSecond = null;
-        this.principalId = null;
-        this.regions = List.of();
-        this.resourceGroupName = null;
-        this.signingKey = null;
-        this.start = null;
+    private ListAccountSasArgs(ListAccountSasArgs $) {
+        this.accountName = $.accountName;
+        this.expiry = $.expiry;
+        this.maxRatePerSecond = $.maxRatePerSecond;
+        this.principalId = $.principalId;
+        this.regions = $.regions;
+        this.resourceGroupName = $.resourceGroupName;
+        this.signingKey = $.signingKey;
+        this.start = $.start;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ListAccountSasArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String accountName;
-        private String expiry;
-        private Integer maxRatePerSecond;
-        private String principalId;
-        private @Nullable List<String> regions;
-        private String resourceGroupName;
-        private Either<String,SigningKey> signingKey;
-        private String start;
+        private ListAccountSasArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ListAccountSasArgs();
         }
 
         public Builder(ListAccountSasArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accountName = defaults.accountName;
-    	      this.expiry = defaults.expiry;
-    	      this.maxRatePerSecond = defaults.maxRatePerSecond;
-    	      this.principalId = defaults.principalId;
-    	      this.regions = defaults.regions;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.signingKey = defaults.signingKey;
-    	      this.start = defaults.start;
+            $ = new ListAccountSasArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder accountName(String accountName) {
-            this.accountName = Objects.requireNonNull(accountName);
+            $.accountName = accountName;
             return this;
         }
+
         public Builder expiry(String expiry) {
-            this.expiry = Objects.requireNonNull(expiry);
+            $.expiry = expiry;
             return this;
         }
+
         public Builder maxRatePerSecond(Integer maxRatePerSecond) {
-            this.maxRatePerSecond = Objects.requireNonNull(maxRatePerSecond);
+            $.maxRatePerSecond = maxRatePerSecond;
             return this;
         }
+
         public Builder principalId(String principalId) {
-            this.principalId = Objects.requireNonNull(principalId);
+            $.principalId = principalId;
             return this;
         }
+
         public Builder regions(@Nullable List<String> regions) {
-            this.regions = regions;
+            $.regions = regions;
             return this;
         }
+
         public Builder regions(String... regions) {
             return regions(List.of(regions));
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder signingKey(Either<String,SigningKey> signingKey) {
-            this.signingKey = Objects.requireNonNull(signingKey);
+            $.signingKey = signingKey;
             return this;
         }
+
         public Builder start(String start) {
-            this.start = Objects.requireNonNull(start);
+            $.start = start;
             return this;
-        }        public ListAccountSasArgs build() {
-            return new ListAccountSasArgs(accountName, expiry, maxRatePerSecond, principalId, regions, resourceGroupName, signingKey, start);
+        }
+
+        public ListAccountSasArgs build() {
+            $.accountName = Objects.requireNonNull($.accountName, "expected parameter 'accountName' to be non-null");
+            $.expiry = Objects.requireNonNull($.expiry, "expected parameter 'expiry' to be non-null");
+            $.maxRatePerSecond = Codegen.integerProp("maxRatePerSecond").arg($.maxRatePerSecond).def(500).require();
+            $.principalId = Objects.requireNonNull($.principalId, "expected parameter 'principalId' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.signingKey = Objects.requireNonNull($.signingKey, "expected parameter 'signingKey' to be non-null");
+            $.start = Objects.requireNonNull($.start, "expected parameter 'start' to be non-null");
+            return $;
         }
     }
+
 }

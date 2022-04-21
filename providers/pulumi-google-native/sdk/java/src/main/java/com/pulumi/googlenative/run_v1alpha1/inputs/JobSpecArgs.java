@@ -5,11 +5,11 @@ package com.pulumi.googlenative.run_v1alpha1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.run_v1alpha1.inputs.InstanceTemplateSpecArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class JobSpecArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="activeDeadlineSeconds")
-      private final @Nullable Output<String> activeDeadlineSeconds;
+    private @Nullable Output<String> activeDeadlineSeconds;
 
-    public Output<String> activeDeadlineSeconds() {
-        return this.activeDeadlineSeconds == null ? Codegen.empty() : this.activeDeadlineSeconds;
+    public Optional<Output<String>> activeDeadlineSeconds() {
+        return Optional.ofNullable(this.activeDeadlineSeconds);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class JobSpecArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="backoffLimit")
-      private final @Nullable Output<Integer> backoffLimit;
+    private @Nullable Output<Integer> backoffLimit;
 
-    public Output<Integer> backoffLimit() {
-        return this.backoffLimit == null ? Codegen.empty() : this.backoffLimit;
+    public Optional<Output<Integer>> backoffLimit() {
+        return Optional.ofNullable(this.backoffLimit);
     }
 
     /**
@@ -48,10 +48,10 @@ public final class JobSpecArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="completions")
-      private final @Nullable Output<Integer> completions;
+    private @Nullable Output<Integer> completions;
 
-    public Output<Integer> completions() {
-        return this.completions == null ? Codegen.empty() : this.completions;
+    public Optional<Output<Integer>> completions() {
+        return Optional.ofNullable(this.completions);
     }
 
     /**
@@ -59,10 +59,10 @@ public final class JobSpecArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="parallelism")
-      private final @Nullable Output<Integer> parallelism;
+    private @Nullable Output<Integer> parallelism;
 
-    public Output<Integer> parallelism() {
-        return this.parallelism == null ? Codegen.empty() : this.parallelism;
+    public Optional<Output<Integer>> parallelism() {
+        return Optional.ofNullable(this.parallelism);
     }
 
     /**
@@ -70,10 +70,10 @@ public final class JobSpecArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="template")
-      private final @Nullable Output<InstanceTemplateSpecArgs> template;
+    private @Nullable Output<InstanceTemplateSpecArgs> template;
 
-    public Output<InstanceTemplateSpecArgs> template() {
-        return this.template == null ? Codegen.empty() : this.template;
+    public Optional<Output<InstanceTemplateSpecArgs>> template() {
+        return Optional.ofNullable(this.template);
     }
 
     /**
@@ -81,115 +81,98 @@ public final class JobSpecArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="ttlSecondsAfterFinished")
-      private final @Nullable Output<Integer> ttlSecondsAfterFinished;
+    private @Nullable Output<Integer> ttlSecondsAfterFinished;
 
-    public Output<Integer> ttlSecondsAfterFinished() {
-        return this.ttlSecondsAfterFinished == null ? Codegen.empty() : this.ttlSecondsAfterFinished;
+    public Optional<Output<Integer>> ttlSecondsAfterFinished() {
+        return Optional.ofNullable(this.ttlSecondsAfterFinished);
     }
 
-    public JobSpecArgs(
-        @Nullable Output<String> activeDeadlineSeconds,
-        @Nullable Output<Integer> backoffLimit,
-        @Nullable Output<Integer> completions,
-        @Nullable Output<Integer> parallelism,
-        @Nullable Output<InstanceTemplateSpecArgs> template,
-        @Nullable Output<Integer> ttlSecondsAfterFinished) {
-        this.activeDeadlineSeconds = activeDeadlineSeconds;
-        this.backoffLimit = backoffLimit;
-        this.completions = completions;
-        this.parallelism = parallelism;
-        this.template = template;
-        this.ttlSecondsAfterFinished = ttlSecondsAfterFinished;
-    }
+    private JobSpecArgs() {}
 
-    private JobSpecArgs() {
-        this.activeDeadlineSeconds = Codegen.empty();
-        this.backoffLimit = Codegen.empty();
-        this.completions = Codegen.empty();
-        this.parallelism = Codegen.empty();
-        this.template = Codegen.empty();
-        this.ttlSecondsAfterFinished = Codegen.empty();
+    private JobSpecArgs(JobSpecArgs $) {
+        this.activeDeadlineSeconds = $.activeDeadlineSeconds;
+        this.backoffLimit = $.backoffLimit;
+        this.completions = $.completions;
+        this.parallelism = $.parallelism;
+        this.template = $.template;
+        this.ttlSecondsAfterFinished = $.ttlSecondsAfterFinished;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(JobSpecArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> activeDeadlineSeconds;
-        private @Nullable Output<Integer> backoffLimit;
-        private @Nullable Output<Integer> completions;
-        private @Nullable Output<Integer> parallelism;
-        private @Nullable Output<InstanceTemplateSpecArgs> template;
-        private @Nullable Output<Integer> ttlSecondsAfterFinished;
+        private JobSpecArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new JobSpecArgs();
         }
 
         public Builder(JobSpecArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.activeDeadlineSeconds = defaults.activeDeadlineSeconds;
-    	      this.backoffLimit = defaults.backoffLimit;
-    	      this.completions = defaults.completions;
-    	      this.parallelism = defaults.parallelism;
-    	      this.template = defaults.template;
-    	      this.ttlSecondsAfterFinished = defaults.ttlSecondsAfterFinished;
+            $ = new JobSpecArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder activeDeadlineSeconds(@Nullable Output<String> activeDeadlineSeconds) {
-            this.activeDeadlineSeconds = activeDeadlineSeconds;
+            $.activeDeadlineSeconds = activeDeadlineSeconds;
             return this;
         }
-        public Builder activeDeadlineSeconds(@Nullable String activeDeadlineSeconds) {
-            this.activeDeadlineSeconds = Codegen.ofNullable(activeDeadlineSeconds);
-            return this;
+
+        public Builder activeDeadlineSeconds(String activeDeadlineSeconds) {
+            return activeDeadlineSeconds(Output.of(activeDeadlineSeconds));
         }
+
         public Builder backoffLimit(@Nullable Output<Integer> backoffLimit) {
-            this.backoffLimit = backoffLimit;
+            $.backoffLimit = backoffLimit;
             return this;
         }
-        public Builder backoffLimit(@Nullable Integer backoffLimit) {
-            this.backoffLimit = Codegen.ofNullable(backoffLimit);
-            return this;
+
+        public Builder backoffLimit(Integer backoffLimit) {
+            return backoffLimit(Output.of(backoffLimit));
         }
+
         public Builder completions(@Nullable Output<Integer> completions) {
-            this.completions = completions;
+            $.completions = completions;
             return this;
         }
-        public Builder completions(@Nullable Integer completions) {
-            this.completions = Codegen.ofNullable(completions);
-            return this;
+
+        public Builder completions(Integer completions) {
+            return completions(Output.of(completions));
         }
+
         public Builder parallelism(@Nullable Output<Integer> parallelism) {
-            this.parallelism = parallelism;
+            $.parallelism = parallelism;
             return this;
         }
-        public Builder parallelism(@Nullable Integer parallelism) {
-            this.parallelism = Codegen.ofNullable(parallelism);
-            return this;
+
+        public Builder parallelism(Integer parallelism) {
+            return parallelism(Output.of(parallelism));
         }
+
         public Builder template(@Nullable Output<InstanceTemplateSpecArgs> template) {
-            this.template = template;
+            $.template = template;
             return this;
         }
-        public Builder template(@Nullable InstanceTemplateSpecArgs template) {
-            this.template = Codegen.ofNullable(template);
-            return this;
+
+        public Builder template(InstanceTemplateSpecArgs template) {
+            return template(Output.of(template));
         }
+
         public Builder ttlSecondsAfterFinished(@Nullable Output<Integer> ttlSecondsAfterFinished) {
-            this.ttlSecondsAfterFinished = ttlSecondsAfterFinished;
+            $.ttlSecondsAfterFinished = ttlSecondsAfterFinished;
             return this;
         }
-        public Builder ttlSecondsAfterFinished(@Nullable Integer ttlSecondsAfterFinished) {
-            this.ttlSecondsAfterFinished = Codegen.ofNullable(ttlSecondsAfterFinished);
-            return this;
-        }        public JobSpecArgs build() {
-            return new JobSpecArgs(activeDeadlineSeconds, backoffLimit, completions, parallelism, template, ttlSecondsAfterFinished);
+
+        public Builder ttlSecondsAfterFinished(Integer ttlSecondsAfterFinished) {
+            return ttlSecondsAfterFinished(Output.of(ttlSecondsAfterFinished));
+        }
+
+        public JobSpecArgs build() {
+            return $;
         }
     }
+
 }

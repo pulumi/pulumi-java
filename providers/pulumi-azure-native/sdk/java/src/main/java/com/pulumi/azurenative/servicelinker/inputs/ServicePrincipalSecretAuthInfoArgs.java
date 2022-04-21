@@ -24,7 +24,7 @@ public final class ServicePrincipalSecretAuthInfoArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="authType", required=true)
-      private final Output<String> authType;
+    private Output<String> authType;
 
     public Output<String> authType() {
         return this.authType;
@@ -35,7 +35,7 @@ public final class ServicePrincipalSecretAuthInfoArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="clientId", required=true)
-      private final Output<String> clientId;
+    private Output<String> clientId;
 
     public Output<String> clientId() {
         return this.clientId;
@@ -46,7 +46,7 @@ public final class ServicePrincipalSecretAuthInfoArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="principalId", required=true)
-      private final Output<String> principalId;
+    private Output<String> principalId;
 
     public Output<String> principalId() {
         return this.principalId;
@@ -57,89 +57,82 @@ public final class ServicePrincipalSecretAuthInfoArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="secret", required=true)
-      private final Output<String> secret;
+    private Output<String> secret;
 
     public Output<String> secret() {
         return this.secret;
     }
 
-    public ServicePrincipalSecretAuthInfoArgs(
-        Output<String> authType,
-        Output<String> clientId,
-        Output<String> principalId,
-        Output<String> secret) {
-        this.authType = Codegen.stringProp("authType").output().arg(authType).require();
-        this.clientId = Objects.requireNonNull(clientId, "expected parameter 'clientId' to be non-null");
-        this.principalId = Objects.requireNonNull(principalId, "expected parameter 'principalId' to be non-null");
-        this.secret = Objects.requireNonNull(secret, "expected parameter 'secret' to be non-null");
-    }
+    private ServicePrincipalSecretAuthInfoArgs() {}
 
-    private ServicePrincipalSecretAuthInfoArgs() {
-        this.authType = Codegen.empty();
-        this.clientId = Codegen.empty();
-        this.principalId = Codegen.empty();
-        this.secret = Codegen.empty();
+    private ServicePrincipalSecretAuthInfoArgs(ServicePrincipalSecretAuthInfoArgs $) {
+        this.authType = $.authType;
+        this.clientId = $.clientId;
+        this.principalId = $.principalId;
+        this.secret = $.secret;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ServicePrincipalSecretAuthInfoArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> authType;
-        private Output<String> clientId;
-        private Output<String> principalId;
-        private Output<String> secret;
+        private ServicePrincipalSecretAuthInfoArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ServicePrincipalSecretAuthInfoArgs();
         }
 
         public Builder(ServicePrincipalSecretAuthInfoArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.authType = defaults.authType;
-    	      this.clientId = defaults.clientId;
-    	      this.principalId = defaults.principalId;
-    	      this.secret = defaults.secret;
+            $ = new ServicePrincipalSecretAuthInfoArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder authType(Output<String> authType) {
-            this.authType = Objects.requireNonNull(authType);
+            $.authType = authType;
             return this;
         }
+
         public Builder authType(String authType) {
-            this.authType = Output.of(Objects.requireNonNull(authType));
-            return this;
+            return authType(Output.of(authType));
         }
+
         public Builder clientId(Output<String> clientId) {
-            this.clientId = Objects.requireNonNull(clientId);
+            $.clientId = clientId;
             return this;
         }
+
         public Builder clientId(String clientId) {
-            this.clientId = Output.of(Objects.requireNonNull(clientId));
-            return this;
+            return clientId(Output.of(clientId));
         }
+
         public Builder principalId(Output<String> principalId) {
-            this.principalId = Objects.requireNonNull(principalId);
+            $.principalId = principalId;
             return this;
         }
+
         public Builder principalId(String principalId) {
-            this.principalId = Output.of(Objects.requireNonNull(principalId));
-            return this;
+            return principalId(Output.of(principalId));
         }
+
         public Builder secret(Output<String> secret) {
-            this.secret = Objects.requireNonNull(secret);
+            $.secret = secret;
             return this;
         }
+
         public Builder secret(String secret) {
-            this.secret = Output.of(Objects.requireNonNull(secret));
-            return this;
-        }        public ServicePrincipalSecretAuthInfoArgs build() {
-            return new ServicePrincipalSecretAuthInfoArgs(authType, clientId, principalId, secret);
+            return secret(Output.of(secret));
+        }
+
+        public ServicePrincipalSecretAuthInfoArgs build() {
+            $.authType = Codegen.stringProp("authType").output().arg($.authType).require();
+            $.clientId = Objects.requireNonNull($.clientId, "expected parameter 'clientId' to be non-null");
+            $.principalId = Objects.requireNonNull($.principalId, "expected parameter 'principalId' to be non-null");
+            $.secret = Objects.requireNonNull($.secret, "expected parameter 'secret' to be non-null");
+            return $;
         }
     }
+
 }

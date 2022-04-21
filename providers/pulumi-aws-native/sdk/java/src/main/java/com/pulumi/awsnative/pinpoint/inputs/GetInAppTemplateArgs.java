@@ -13,45 +13,45 @@ public final class GetInAppTemplateArgs extends com.pulumi.resources.InvokeArgs 
     public static final GetInAppTemplateArgs Empty = new GetInAppTemplateArgs();
 
     @Import(name="templateName", required=true)
-      private final String templateName;
+    private String templateName;
 
     public String templateName() {
         return this.templateName;
     }
 
-    public GetInAppTemplateArgs(String templateName) {
-        this.templateName = Objects.requireNonNull(templateName, "expected parameter 'templateName' to be non-null");
-    }
+    private GetInAppTemplateArgs() {}
 
-    private GetInAppTemplateArgs() {
-        this.templateName = null;
+    private GetInAppTemplateArgs(GetInAppTemplateArgs $) {
+        this.templateName = $.templateName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetInAppTemplateArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String templateName;
+        private GetInAppTemplateArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetInAppTemplateArgs();
         }
 
         public Builder(GetInAppTemplateArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.templateName = defaults.templateName;
+            $ = new GetInAppTemplateArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder templateName(String templateName) {
-            this.templateName = Objects.requireNonNull(templateName);
+            $.templateName = templateName;
             return this;
-        }        public GetInAppTemplateArgs build() {
-            return new GetInAppTemplateArgs(templateName);
+        }
+
+        public GetInAppTemplateArgs build() {
+            $.templateName = Objects.requireNonNull($.templateName, "expected parameter 'templateName' to be non-null");
+            return $;
         }
     }
+
 }

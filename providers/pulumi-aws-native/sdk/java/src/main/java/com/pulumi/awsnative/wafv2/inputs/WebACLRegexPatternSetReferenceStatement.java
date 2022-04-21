@@ -16,81 +16,77 @@ public final class WebACLRegexPatternSetReferenceStatement extends com.pulumi.re
     public static final WebACLRegexPatternSetReferenceStatement Empty = new WebACLRegexPatternSetReferenceStatement();
 
     @Import(name="arn", required=true)
-      private final String arn;
+    private String arn;
 
     public String arn() {
         return this.arn;
     }
 
     @Import(name="fieldToMatch", required=true)
-      private final WebACLFieldToMatch fieldToMatch;
+    private WebACLFieldToMatch fieldToMatch;
 
     public WebACLFieldToMatch fieldToMatch() {
         return this.fieldToMatch;
     }
 
     @Import(name="textTransformations", required=true)
-      private final List<WebACLTextTransformation> textTransformations;
+    private List<WebACLTextTransformation> textTransformations;
 
     public List<WebACLTextTransformation> textTransformations() {
         return this.textTransformations;
     }
 
-    public WebACLRegexPatternSetReferenceStatement(
-        String arn,
-        WebACLFieldToMatch fieldToMatch,
-        List<WebACLTextTransformation> textTransformations) {
-        this.arn = Objects.requireNonNull(arn, "expected parameter 'arn' to be non-null");
-        this.fieldToMatch = Objects.requireNonNull(fieldToMatch, "expected parameter 'fieldToMatch' to be non-null");
-        this.textTransformations = Objects.requireNonNull(textTransformations, "expected parameter 'textTransformations' to be non-null");
-    }
+    private WebACLRegexPatternSetReferenceStatement() {}
 
-    private WebACLRegexPatternSetReferenceStatement() {
-        this.arn = null;
-        this.fieldToMatch = null;
-        this.textTransformations = List.of();
+    private WebACLRegexPatternSetReferenceStatement(WebACLRegexPatternSetReferenceStatement $) {
+        this.arn = $.arn;
+        this.fieldToMatch = $.fieldToMatch;
+        this.textTransformations = $.textTransformations;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WebACLRegexPatternSetReferenceStatement defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String arn;
-        private WebACLFieldToMatch fieldToMatch;
-        private List<WebACLTextTransformation> textTransformations;
+        private WebACLRegexPatternSetReferenceStatement $;
 
         public Builder() {
-    	      // Empty
+            $ = new WebACLRegexPatternSetReferenceStatement();
         }
 
         public Builder(WebACLRegexPatternSetReferenceStatement defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.arn = defaults.arn;
-    	      this.fieldToMatch = defaults.fieldToMatch;
-    	      this.textTransformations = defaults.textTransformations;
+            $ = new WebACLRegexPatternSetReferenceStatement(Objects.requireNonNull(defaults));
         }
 
         public Builder arn(String arn) {
-            this.arn = Objects.requireNonNull(arn);
+            $.arn = arn;
             return this;
         }
+
         public Builder fieldToMatch(WebACLFieldToMatch fieldToMatch) {
-            this.fieldToMatch = Objects.requireNonNull(fieldToMatch);
+            $.fieldToMatch = fieldToMatch;
             return this;
         }
+
         public Builder textTransformations(List<WebACLTextTransformation> textTransformations) {
-            this.textTransformations = Objects.requireNonNull(textTransformations);
+            $.textTransformations = textTransformations;
             return this;
         }
+
         public Builder textTransformations(WebACLTextTransformation... textTransformations) {
             return textTransformations(List.of(textTransformations));
-        }        public WebACLRegexPatternSetReferenceStatement build() {
-            return new WebACLRegexPatternSetReferenceStatement(arn, fieldToMatch, textTransformations);
+        }
+
+        public WebACLRegexPatternSetReferenceStatement build() {
+            $.arn = Objects.requireNonNull($.arn, "expected parameter 'arn' to be non-null");
+            $.fieldToMatch = Objects.requireNonNull($.fieldToMatch, "expected parameter 'fieldToMatch' to be non-null");
+            $.textTransformations = Objects.requireNonNull($.textTransformations, "expected parameter 'textTransformations' to be non-null");
+            return $;
         }
     }
+
 }

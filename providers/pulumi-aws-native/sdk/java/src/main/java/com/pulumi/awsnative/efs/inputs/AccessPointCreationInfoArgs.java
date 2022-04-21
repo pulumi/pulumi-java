@@ -5,7 +5,6 @@ package com.pulumi.awsnative.efs.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,7 +18,7 @@ public final class AccessPointCreationInfoArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="ownerGid", required=true)
-      private final Output<String> ownerGid;
+    private Output<String> ownerGid;
 
     public Output<String> ownerGid() {
         return this.ownerGid;
@@ -30,7 +29,7 @@ public final class AccessPointCreationInfoArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="ownerUid", required=true)
-      private final Output<String> ownerUid;
+    private Output<String> ownerUid;
 
     public Output<String> ownerUid() {
         return this.ownerUid;
@@ -41,76 +40,71 @@ public final class AccessPointCreationInfoArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="permissions", required=true)
-      private final Output<String> permissions;
+    private Output<String> permissions;
 
     public Output<String> permissions() {
         return this.permissions;
     }
 
-    public AccessPointCreationInfoArgs(
-        Output<String> ownerGid,
-        Output<String> ownerUid,
-        Output<String> permissions) {
-        this.ownerGid = Objects.requireNonNull(ownerGid, "expected parameter 'ownerGid' to be non-null");
-        this.ownerUid = Objects.requireNonNull(ownerUid, "expected parameter 'ownerUid' to be non-null");
-        this.permissions = Objects.requireNonNull(permissions, "expected parameter 'permissions' to be non-null");
-    }
+    private AccessPointCreationInfoArgs() {}
 
-    private AccessPointCreationInfoArgs() {
-        this.ownerGid = Codegen.empty();
-        this.ownerUid = Codegen.empty();
-        this.permissions = Codegen.empty();
+    private AccessPointCreationInfoArgs(AccessPointCreationInfoArgs $) {
+        this.ownerGid = $.ownerGid;
+        this.ownerUid = $.ownerUid;
+        this.permissions = $.permissions;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AccessPointCreationInfoArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> ownerGid;
-        private Output<String> ownerUid;
-        private Output<String> permissions;
+        private AccessPointCreationInfoArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AccessPointCreationInfoArgs();
         }
 
         public Builder(AccessPointCreationInfoArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.ownerGid = defaults.ownerGid;
-    	      this.ownerUid = defaults.ownerUid;
-    	      this.permissions = defaults.permissions;
+            $ = new AccessPointCreationInfoArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder ownerGid(Output<String> ownerGid) {
-            this.ownerGid = Objects.requireNonNull(ownerGid);
+            $.ownerGid = ownerGid;
             return this;
         }
+
         public Builder ownerGid(String ownerGid) {
-            this.ownerGid = Output.of(Objects.requireNonNull(ownerGid));
-            return this;
+            return ownerGid(Output.of(ownerGid));
         }
+
         public Builder ownerUid(Output<String> ownerUid) {
-            this.ownerUid = Objects.requireNonNull(ownerUid);
+            $.ownerUid = ownerUid;
             return this;
         }
+
         public Builder ownerUid(String ownerUid) {
-            this.ownerUid = Output.of(Objects.requireNonNull(ownerUid));
-            return this;
+            return ownerUid(Output.of(ownerUid));
         }
+
         public Builder permissions(Output<String> permissions) {
-            this.permissions = Objects.requireNonNull(permissions);
+            $.permissions = permissions;
             return this;
         }
+
         public Builder permissions(String permissions) {
-            this.permissions = Output.of(Objects.requireNonNull(permissions));
-            return this;
-        }        public AccessPointCreationInfoArgs build() {
-            return new AccessPointCreationInfoArgs(ownerGid, ownerUid, permissions);
+            return permissions(Output.of(permissions));
+        }
+
+        public AccessPointCreationInfoArgs build() {
+            $.ownerGid = Objects.requireNonNull($.ownerGid, "expected parameter 'ownerGid' to be non-null");
+            $.ownerUid = Objects.requireNonNull($.ownerUid, "expected parameter 'ownerUid' to be non-null");
+            $.permissions = Objects.requireNonNull($.permissions, "expected parameter 'permissions' to be non-null");
+            return $;
         }
     }
+
 }

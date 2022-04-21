@@ -18,81 +18,77 @@ public final class ModelDefinitionModelOptionsResponse extends com.pulumi.resour
     public static final ModelDefinitionModelOptionsResponse Empty = new ModelDefinitionModelOptionsResponse();
 
     @Import(name="labels", required=true)
-      private final List<String> labels;
+    private List<String> labels;
 
     public List<String> labels() {
         return this.labels;
     }
 
     @Import(name="lossType", required=true)
-      private final String lossType;
+    private String lossType;
 
     public String lossType() {
         return this.lossType;
     }
 
     @Import(name="modelType", required=true)
-      private final String modelType;
+    private String modelType;
 
     public String modelType() {
         return this.modelType;
     }
 
-    public ModelDefinitionModelOptionsResponse(
-        List<String> labels,
-        String lossType,
-        String modelType) {
-        this.labels = Objects.requireNonNull(labels, "expected parameter 'labels' to be non-null");
-        this.lossType = Objects.requireNonNull(lossType, "expected parameter 'lossType' to be non-null");
-        this.modelType = Objects.requireNonNull(modelType, "expected parameter 'modelType' to be non-null");
-    }
+    private ModelDefinitionModelOptionsResponse() {}
 
-    private ModelDefinitionModelOptionsResponse() {
-        this.labels = List.of();
-        this.lossType = null;
-        this.modelType = null;
+    private ModelDefinitionModelOptionsResponse(ModelDefinitionModelOptionsResponse $) {
+        this.labels = $.labels;
+        this.lossType = $.lossType;
+        this.modelType = $.modelType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ModelDefinitionModelOptionsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<String> labels;
-        private String lossType;
-        private String modelType;
+        private ModelDefinitionModelOptionsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ModelDefinitionModelOptionsResponse();
         }
 
         public Builder(ModelDefinitionModelOptionsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.labels = defaults.labels;
-    	      this.lossType = defaults.lossType;
-    	      this.modelType = defaults.modelType;
+            $ = new ModelDefinitionModelOptionsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder labels(List<String> labels) {
-            this.labels = Objects.requireNonNull(labels);
+            $.labels = labels;
             return this;
         }
+
         public Builder labels(String... labels) {
             return labels(List.of(labels));
         }
+
         public Builder lossType(String lossType) {
-            this.lossType = Objects.requireNonNull(lossType);
+            $.lossType = lossType;
             return this;
         }
+
         public Builder modelType(String modelType) {
-            this.modelType = Objects.requireNonNull(modelType);
+            $.modelType = modelType;
             return this;
-        }        public ModelDefinitionModelOptionsResponse build() {
-            return new ModelDefinitionModelOptionsResponse(labels, lossType, modelType);
+        }
+
+        public ModelDefinitionModelOptionsResponse build() {
+            $.labels = Objects.requireNonNull($.labels, "expected parameter 'labels' to be non-null");
+            $.lossType = Objects.requireNonNull($.lossType, "expected parameter 'lossType' to be non-null");
+            $.modelType = Objects.requireNonNull($.modelType, "expected parameter 'modelType' to be non-null");
+            return $;
         }
     }
+
 }

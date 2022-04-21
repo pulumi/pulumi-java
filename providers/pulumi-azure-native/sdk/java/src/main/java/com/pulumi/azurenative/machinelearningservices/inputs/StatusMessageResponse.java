@@ -21,7 +21,7 @@ public final class StatusMessageResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="code", required=true)
-      private final String code;
+    private String code;
 
     public String code() {
         return this.code;
@@ -32,7 +32,7 @@ public final class StatusMessageResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="createdTimeUtc", required=true)
-      private final String createdTimeUtc;
+    private String createdTimeUtc;
 
     public String createdTimeUtc() {
         return this.createdTimeUtc;
@@ -43,7 +43,7 @@ public final class StatusMessageResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="level", required=true)
-      private final String level;
+    private String level;
 
     public String level() {
         return this.level;
@@ -54,73 +54,66 @@ public final class StatusMessageResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="message", required=true)
-      private final String message;
+    private String message;
 
     public String message() {
         return this.message;
     }
 
-    public StatusMessageResponse(
-        String code,
-        String createdTimeUtc,
-        String level,
-        String message) {
-        this.code = Objects.requireNonNull(code, "expected parameter 'code' to be non-null");
-        this.createdTimeUtc = Objects.requireNonNull(createdTimeUtc, "expected parameter 'createdTimeUtc' to be non-null");
-        this.level = Objects.requireNonNull(level, "expected parameter 'level' to be non-null");
-        this.message = Objects.requireNonNull(message, "expected parameter 'message' to be non-null");
-    }
+    private StatusMessageResponse() {}
 
-    private StatusMessageResponse() {
-        this.code = null;
-        this.createdTimeUtc = null;
-        this.level = null;
-        this.message = null;
+    private StatusMessageResponse(StatusMessageResponse $) {
+        this.code = $.code;
+        this.createdTimeUtc = $.createdTimeUtc;
+        this.level = $.level;
+        this.message = $.message;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(StatusMessageResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String code;
-        private String createdTimeUtc;
-        private String level;
-        private String message;
+        private StatusMessageResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new StatusMessageResponse();
         }
 
         public Builder(StatusMessageResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.code = defaults.code;
-    	      this.createdTimeUtc = defaults.createdTimeUtc;
-    	      this.level = defaults.level;
-    	      this.message = defaults.message;
+            $ = new StatusMessageResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder code(String code) {
-            this.code = Objects.requireNonNull(code);
+            $.code = code;
             return this;
         }
+
         public Builder createdTimeUtc(String createdTimeUtc) {
-            this.createdTimeUtc = Objects.requireNonNull(createdTimeUtc);
+            $.createdTimeUtc = createdTimeUtc;
             return this;
         }
+
         public Builder level(String level) {
-            this.level = Objects.requireNonNull(level);
+            $.level = level;
             return this;
         }
+
         public Builder message(String message) {
-            this.message = Objects.requireNonNull(message);
+            $.message = message;
             return this;
-        }        public StatusMessageResponse build() {
-            return new StatusMessageResponse(code, createdTimeUtc, level, message);
+        }
+
+        public StatusMessageResponse build() {
+            $.code = Objects.requireNonNull($.code, "expected parameter 'code' to be non-null");
+            $.createdTimeUtc = Objects.requireNonNull($.createdTimeUtc, "expected parameter 'createdTimeUtc' to be non-null");
+            $.level = Objects.requireNonNull($.level, "expected parameter 'level' to be non-null");
+            $.message = Objects.requireNonNull($.message, "expected parameter 'message' to be non-null");
+            return $;
         }
     }
+
 }

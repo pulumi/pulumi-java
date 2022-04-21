@@ -15,78 +15,72 @@ public final class GetConnectorArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetConnectorArgs Empty = new GetConnectorArgs();
 
     @Import(name="connectorId", required=true)
-      private final String connectorId;
+    private String connectorId;
 
     public String connectorId() {
         return this.connectorId;
     }
 
     @Import(name="location", required=true)
-      private final String location;
+    private String location;
 
     public String location() {
         return this.location;
     }
 
     @Import(name="project")
-      private final @Nullable String project;
+    private @Nullable String project;
 
     public Optional<String> project() {
-        return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
+        return Optional.ofNullable(this.project);
     }
 
-    public GetConnectorArgs(
-        String connectorId,
-        String location,
-        @Nullable String project) {
-        this.connectorId = Objects.requireNonNull(connectorId, "expected parameter 'connectorId' to be non-null");
-        this.location = Objects.requireNonNull(location, "expected parameter 'location' to be non-null");
-        this.project = project;
-    }
+    private GetConnectorArgs() {}
 
-    private GetConnectorArgs() {
-        this.connectorId = null;
-        this.location = null;
-        this.project = null;
+    private GetConnectorArgs(GetConnectorArgs $) {
+        this.connectorId = $.connectorId;
+        this.location = $.location;
+        this.project = $.project;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetConnectorArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String connectorId;
-        private String location;
-        private @Nullable String project;
+        private GetConnectorArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetConnectorArgs();
         }
 
         public Builder(GetConnectorArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.connectorId = defaults.connectorId;
-    	      this.location = defaults.location;
-    	      this.project = defaults.project;
+            $ = new GetConnectorArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder connectorId(String connectorId) {
-            this.connectorId = Objects.requireNonNull(connectorId);
+            $.connectorId = connectorId;
             return this;
         }
+
         public Builder location(String location) {
-            this.location = Objects.requireNonNull(location);
+            $.location = location;
             return this;
         }
+
         public Builder project(@Nullable String project) {
-            this.project = project;
+            $.project = project;
             return this;
-        }        public GetConnectorArgs build() {
-            return new GetConnectorArgs(connectorId, location, project);
+        }
+
+        public GetConnectorArgs build() {
+            $.connectorId = Objects.requireNonNull($.connectorId, "expected parameter 'connectorId' to be non-null");
+            $.location = Objects.requireNonNull($.location, "expected parameter 'location' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,10 +5,10 @@ package com.pulumi.googlenative.servicemanagement_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class QuotaLimitArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="defaultLimit")
-      private final @Nullable Output<String> defaultLimit;
+    private @Nullable Output<String> defaultLimit;
 
-    public Output<String> defaultLimit() {
-        return this.defaultLimit == null ? Codegen.empty() : this.defaultLimit;
+    public Optional<Output<String>> defaultLimit() {
+        return Optional.ofNullable(this.defaultLimit);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class QuotaLimitArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class QuotaLimitArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="displayName")
-      private final @Nullable Output<String> displayName;
+    private @Nullable Output<String> displayName;
 
-    public Output<String> displayName() {
-        return this.displayName == null ? Codegen.empty() : this.displayName;
+    public Optional<Output<String>> displayName() {
+        return Optional.ofNullable(this.displayName);
     }
 
     /**
@@ -58,10 +58,10 @@ public final class QuotaLimitArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="duration")
-      private final @Nullable Output<String> duration;
+    private @Nullable Output<String> duration;
 
-    public Output<String> duration() {
-        return this.duration == null ? Codegen.empty() : this.duration;
+    public Optional<Output<String>> duration() {
+        return Optional.ofNullable(this.duration);
     }
 
     /**
@@ -69,10 +69,10 @@ public final class QuotaLimitArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="freeTier")
-      private final @Nullable Output<String> freeTier;
+    private @Nullable Output<String> freeTier;
 
-    public Output<String> freeTier() {
-        return this.freeTier == null ? Codegen.empty() : this.freeTier;
+    public Optional<Output<String>> freeTier() {
+        return Optional.ofNullable(this.freeTier);
     }
 
     /**
@@ -80,10 +80,10 @@ public final class QuotaLimitArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="maxLimit")
-      private final @Nullable Output<String> maxLimit;
+    private @Nullable Output<String> maxLimit;
 
-    public Output<String> maxLimit() {
-        return this.maxLimit == null ? Codegen.empty() : this.maxLimit;
+    public Optional<Output<String>> maxLimit() {
+        return Optional.ofNullable(this.maxLimit);
     }
 
     /**
@@ -91,10 +91,10 @@ public final class QuotaLimitArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="metric")
-      private final @Nullable Output<String> metric;
+    private @Nullable Output<String> metric;
 
-    public Output<String> metric() {
-        return this.metric == null ? Codegen.empty() : this.metric;
+    public Optional<Output<String>> metric() {
+        return Optional.ofNullable(this.metric);
     }
 
     /**
@@ -102,10 +102,10 @@ public final class QuotaLimitArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -113,10 +113,10 @@ public final class QuotaLimitArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="unit")
-      private final @Nullable Output<String> unit;
+    private @Nullable Output<String> unit;
 
-    public Output<String> unit() {
-        return this.unit == null ? Codegen.empty() : this.unit;
+    public Optional<Output<String>> unit() {
+        return Optional.ofNullable(this.unit);
     }
 
     /**
@@ -124,167 +124,138 @@ public final class QuotaLimitArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="values")
-      private final @Nullable Output<Map<String,String>> values;
+    private @Nullable Output<Map<String,String>> values;
 
-    public Output<Map<String,String>> values() {
-        return this.values == null ? Codegen.empty() : this.values;
+    public Optional<Output<Map<String,String>>> values() {
+        return Optional.ofNullable(this.values);
     }
 
-    public QuotaLimitArgs(
-        @Nullable Output<String> defaultLimit,
-        @Nullable Output<String> description,
-        @Nullable Output<String> displayName,
-        @Nullable Output<String> duration,
-        @Nullable Output<String> freeTier,
-        @Nullable Output<String> maxLimit,
-        @Nullable Output<String> metric,
-        @Nullable Output<String> name,
-        @Nullable Output<String> unit,
-        @Nullable Output<Map<String,String>> values) {
-        this.defaultLimit = defaultLimit;
-        this.description = description;
-        this.displayName = displayName;
-        this.duration = duration;
-        this.freeTier = freeTier;
-        this.maxLimit = maxLimit;
-        this.metric = metric;
-        this.name = name;
-        this.unit = unit;
-        this.values = values;
-    }
+    private QuotaLimitArgs() {}
 
-    private QuotaLimitArgs() {
-        this.defaultLimit = Codegen.empty();
-        this.description = Codegen.empty();
-        this.displayName = Codegen.empty();
-        this.duration = Codegen.empty();
-        this.freeTier = Codegen.empty();
-        this.maxLimit = Codegen.empty();
-        this.metric = Codegen.empty();
-        this.name = Codegen.empty();
-        this.unit = Codegen.empty();
-        this.values = Codegen.empty();
+    private QuotaLimitArgs(QuotaLimitArgs $) {
+        this.defaultLimit = $.defaultLimit;
+        this.description = $.description;
+        this.displayName = $.displayName;
+        this.duration = $.duration;
+        this.freeTier = $.freeTier;
+        this.maxLimit = $.maxLimit;
+        this.metric = $.metric;
+        this.name = $.name;
+        this.unit = $.unit;
+        this.values = $.values;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(QuotaLimitArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> defaultLimit;
-        private @Nullable Output<String> description;
-        private @Nullable Output<String> displayName;
-        private @Nullable Output<String> duration;
-        private @Nullable Output<String> freeTier;
-        private @Nullable Output<String> maxLimit;
-        private @Nullable Output<String> metric;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> unit;
-        private @Nullable Output<Map<String,String>> values;
+        private QuotaLimitArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new QuotaLimitArgs();
         }
 
         public Builder(QuotaLimitArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.defaultLimit = defaults.defaultLimit;
-    	      this.description = defaults.description;
-    	      this.displayName = defaults.displayName;
-    	      this.duration = defaults.duration;
-    	      this.freeTier = defaults.freeTier;
-    	      this.maxLimit = defaults.maxLimit;
-    	      this.metric = defaults.metric;
-    	      this.name = defaults.name;
-    	      this.unit = defaults.unit;
-    	      this.values = defaults.values;
+            $ = new QuotaLimitArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder defaultLimit(@Nullable Output<String> defaultLimit) {
-            this.defaultLimit = defaultLimit;
+            $.defaultLimit = defaultLimit;
             return this;
         }
-        public Builder defaultLimit(@Nullable String defaultLimit) {
-            this.defaultLimit = Codegen.ofNullable(defaultLimit);
-            return this;
+
+        public Builder defaultLimit(String defaultLimit) {
+            return defaultLimit(Output.of(defaultLimit));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder displayName(@Nullable Output<String> displayName) {
-            this.displayName = displayName;
+            $.displayName = displayName;
             return this;
         }
-        public Builder displayName(@Nullable String displayName) {
-            this.displayName = Codegen.ofNullable(displayName);
-            return this;
+
+        public Builder displayName(String displayName) {
+            return displayName(Output.of(displayName));
         }
+
         public Builder duration(@Nullable Output<String> duration) {
-            this.duration = duration;
+            $.duration = duration;
             return this;
         }
-        public Builder duration(@Nullable String duration) {
-            this.duration = Codegen.ofNullable(duration);
-            return this;
+
+        public Builder duration(String duration) {
+            return duration(Output.of(duration));
         }
+
         public Builder freeTier(@Nullable Output<String> freeTier) {
-            this.freeTier = freeTier;
+            $.freeTier = freeTier;
             return this;
         }
-        public Builder freeTier(@Nullable String freeTier) {
-            this.freeTier = Codegen.ofNullable(freeTier);
-            return this;
+
+        public Builder freeTier(String freeTier) {
+            return freeTier(Output.of(freeTier));
         }
+
         public Builder maxLimit(@Nullable Output<String> maxLimit) {
-            this.maxLimit = maxLimit;
+            $.maxLimit = maxLimit;
             return this;
         }
-        public Builder maxLimit(@Nullable String maxLimit) {
-            this.maxLimit = Codegen.ofNullable(maxLimit);
-            return this;
+
+        public Builder maxLimit(String maxLimit) {
+            return maxLimit(Output.of(maxLimit));
         }
+
         public Builder metric(@Nullable Output<String> metric) {
-            this.metric = metric;
+            $.metric = metric;
             return this;
         }
-        public Builder metric(@Nullable String metric) {
-            this.metric = Codegen.ofNullable(metric);
-            return this;
+
+        public Builder metric(String metric) {
+            return metric(Output.of(metric));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder unit(@Nullable Output<String> unit) {
-            this.unit = unit;
+            $.unit = unit;
             return this;
         }
-        public Builder unit(@Nullable String unit) {
-            this.unit = Codegen.ofNullable(unit);
-            return this;
+
+        public Builder unit(String unit) {
+            return unit(Output.of(unit));
         }
+
         public Builder values(@Nullable Output<Map<String,String>> values) {
-            this.values = values;
+            $.values = values;
             return this;
         }
-        public Builder values(@Nullable Map<String,String> values) {
-            this.values = Codegen.ofNullable(values);
-            return this;
-        }        public QuotaLimitArgs build() {
-            return new QuotaLimitArgs(defaultLimit, description, displayName, duration, freeTier, maxLimit, metric, name, unit, values);
+
+        public Builder values(Map<String,String> values) {
+            return values(Output.of(values));
+        }
+
+        public QuotaLimitArgs build() {
+            return $;
         }
     }
+
 }

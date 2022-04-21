@@ -6,10 +6,10 @@ package com.pulumi.azurenative.testbase;
 import com.pulumi.azurenative.testbase.inputs.NotificationEventReceiverArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class CustomerEventArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="customerEventName")
-      private final @Nullable Output<String> customerEventName;
+    private @Nullable Output<String> customerEventName;
 
-    public Output<String> customerEventName() {
-        return this.customerEventName == null ? Codegen.empty() : this.customerEventName;
+    public Optional<Output<String>> customerEventName() {
+        return Optional.ofNullable(this.customerEventName);
     }
 
     /**
@@ -33,7 +33,7 @@ public final class CustomerEventArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="eventName", required=true)
-      private final Output<String> eventName;
+    private Output<String> eventName;
 
     public Output<String> eventName() {
         return this.eventName;
@@ -44,7 +44,7 @@ public final class CustomerEventArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="receivers", required=true)
-      private final Output<List<NotificationEventReceiverArgs>> receivers;
+    private Output<List<NotificationEventReceiverArgs>> receivers;
 
     public Output<List<NotificationEventReceiverArgs>> receivers() {
         return this.receivers;
@@ -55,7 +55,7 @@ public final class CustomerEventArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -66,105 +66,96 @@ public final class CustomerEventArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="testBaseAccountName", required=true)
-      private final Output<String> testBaseAccountName;
+    private Output<String> testBaseAccountName;
 
     public Output<String> testBaseAccountName() {
         return this.testBaseAccountName;
     }
 
-    public CustomerEventArgs(
-        @Nullable Output<String> customerEventName,
-        Output<String> eventName,
-        Output<List<NotificationEventReceiverArgs>> receivers,
-        Output<String> resourceGroupName,
-        Output<String> testBaseAccountName) {
-        this.customerEventName = customerEventName;
-        this.eventName = Objects.requireNonNull(eventName, "expected parameter 'eventName' to be non-null");
-        this.receivers = Objects.requireNonNull(receivers, "expected parameter 'receivers' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.testBaseAccountName = Objects.requireNonNull(testBaseAccountName, "expected parameter 'testBaseAccountName' to be non-null");
-    }
+    private CustomerEventArgs() {}
 
-    private CustomerEventArgs() {
-        this.customerEventName = Codegen.empty();
-        this.eventName = Codegen.empty();
-        this.receivers = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.testBaseAccountName = Codegen.empty();
+    private CustomerEventArgs(CustomerEventArgs $) {
+        this.customerEventName = $.customerEventName;
+        this.eventName = $.eventName;
+        this.receivers = $.receivers;
+        this.resourceGroupName = $.resourceGroupName;
+        this.testBaseAccountName = $.testBaseAccountName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CustomerEventArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> customerEventName;
-        private Output<String> eventName;
-        private Output<List<NotificationEventReceiverArgs>> receivers;
-        private Output<String> resourceGroupName;
-        private Output<String> testBaseAccountName;
+        private CustomerEventArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CustomerEventArgs();
         }
 
         public Builder(CustomerEventArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.customerEventName = defaults.customerEventName;
-    	      this.eventName = defaults.eventName;
-    	      this.receivers = defaults.receivers;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.testBaseAccountName = defaults.testBaseAccountName;
+            $ = new CustomerEventArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder customerEventName(@Nullable Output<String> customerEventName) {
-            this.customerEventName = customerEventName;
+            $.customerEventName = customerEventName;
             return this;
         }
-        public Builder customerEventName(@Nullable String customerEventName) {
-            this.customerEventName = Codegen.ofNullable(customerEventName);
-            return this;
+
+        public Builder customerEventName(String customerEventName) {
+            return customerEventName(Output.of(customerEventName));
         }
+
         public Builder eventName(Output<String> eventName) {
-            this.eventName = Objects.requireNonNull(eventName);
+            $.eventName = eventName;
             return this;
         }
+
         public Builder eventName(String eventName) {
-            this.eventName = Output.of(Objects.requireNonNull(eventName));
-            return this;
+            return eventName(Output.of(eventName));
         }
+
         public Builder receivers(Output<List<NotificationEventReceiverArgs>> receivers) {
-            this.receivers = Objects.requireNonNull(receivers);
+            $.receivers = receivers;
             return this;
         }
+
         public Builder receivers(List<NotificationEventReceiverArgs> receivers) {
-            this.receivers = Output.of(Objects.requireNonNull(receivers));
-            return this;
+            return receivers(Output.of(receivers));
         }
+
         public Builder receivers(NotificationEventReceiverArgs... receivers) {
             return receivers(List.of(receivers));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder testBaseAccountName(Output<String> testBaseAccountName) {
-            this.testBaseAccountName = Objects.requireNonNull(testBaseAccountName);
+            $.testBaseAccountName = testBaseAccountName;
             return this;
         }
+
         public Builder testBaseAccountName(String testBaseAccountName) {
-            this.testBaseAccountName = Output.of(Objects.requireNonNull(testBaseAccountName));
-            return this;
-        }        public CustomerEventArgs build() {
-            return new CustomerEventArgs(customerEventName, eventName, receivers, resourceGroupName, testBaseAccountName);
+            return testBaseAccountName(Output.of(testBaseAccountName));
+        }
+
+        public CustomerEventArgs build() {
+            $.eventName = Objects.requireNonNull($.eventName, "expected parameter 'eventName' to be non-null");
+            $.receivers = Objects.requireNonNull($.receivers, "expected parameter 'receivers' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.testBaseAccountName = Objects.requireNonNull($.testBaseAccountName, "expected parameter 'testBaseAccountName' to be non-null");
+            return $;
         }
     }
+
 }

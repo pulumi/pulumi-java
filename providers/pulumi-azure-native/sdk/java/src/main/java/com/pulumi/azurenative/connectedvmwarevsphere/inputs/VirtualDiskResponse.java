@@ -24,10 +24,10 @@ public final class VirtualDiskResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="controllerKey")
-      private final @Nullable Integer controllerKey;
+    private @Nullable Integer controllerKey;
 
     public Optional<Integer> controllerKey() {
-        return this.controllerKey == null ? Optional.empty() : Optional.ofNullable(this.controllerKey);
+        return Optional.ofNullable(this.controllerKey);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class VirtualDiskResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="deviceKey")
-      private final @Nullable Integer deviceKey;
+    private @Nullable Integer deviceKey;
 
     public Optional<Integer> deviceKey() {
-        return this.deviceKey == null ? Optional.empty() : Optional.ofNullable(this.deviceKey);
+        return Optional.ofNullable(this.deviceKey);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class VirtualDiskResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="deviceName")
-      private final @Nullable String deviceName;
+    private @Nullable String deviceName;
 
     public Optional<String> deviceName() {
-        return this.deviceName == null ? Optional.empty() : Optional.ofNullable(this.deviceName);
+        return Optional.ofNullable(this.deviceName);
     }
 
     /**
@@ -57,10 +57,10 @@ public final class VirtualDiskResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="diskMode")
-      private final @Nullable String diskMode;
+    private @Nullable String diskMode;
 
     public Optional<String> diskMode() {
-        return this.diskMode == null ? Optional.empty() : Optional.ofNullable(this.diskMode);
+        return Optional.ofNullable(this.diskMode);
     }
 
     /**
@@ -68,7 +68,7 @@ public final class VirtualDiskResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="diskObjectId", required=true)
-      private final String diskObjectId;
+    private String diskObjectId;
 
     public String diskObjectId() {
         return this.diskObjectId;
@@ -79,10 +79,10 @@ public final class VirtualDiskResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="diskSizeGB")
-      private final @Nullable Integer diskSizeGB;
+    private @Nullable Integer diskSizeGB;
 
     public Optional<Integer> diskSizeGB() {
-        return this.diskSizeGB == null ? Optional.empty() : Optional.ofNullable(this.diskSizeGB);
+        return Optional.ofNullable(this.diskSizeGB);
     }
 
     /**
@@ -90,10 +90,10 @@ public final class VirtualDiskResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="diskType")
-      private final @Nullable String diskType;
+    private @Nullable String diskType;
 
     public Optional<String> diskType() {
-        return this.diskType == null ? Optional.empty() : Optional.ofNullable(this.diskType);
+        return Optional.ofNullable(this.diskType);
     }
 
     /**
@@ -101,7 +101,7 @@ public final class VirtualDiskResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="label", required=true)
-      private final String label;
+    private String label;
 
     public String label() {
         return this.label;
@@ -112,10 +112,10 @@ public final class VirtualDiskResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable String name;
+    private @Nullable String name;
 
     public Optional<String> name() {
-        return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -123,127 +123,100 @@ public final class VirtualDiskResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="unitNumber")
-      private final @Nullable Integer unitNumber;
+    private @Nullable Integer unitNumber;
 
     public Optional<Integer> unitNumber() {
-        return this.unitNumber == null ? Optional.empty() : Optional.ofNullable(this.unitNumber);
+        return Optional.ofNullable(this.unitNumber);
     }
 
-    public VirtualDiskResponse(
-        @Nullable Integer controllerKey,
-        @Nullable Integer deviceKey,
-        @Nullable String deviceName,
-        @Nullable String diskMode,
-        String diskObjectId,
-        @Nullable Integer diskSizeGB,
-        @Nullable String diskType,
-        String label,
-        @Nullable String name,
-        @Nullable Integer unitNumber) {
-        this.controllerKey = controllerKey;
-        this.deviceKey = deviceKey;
-        this.deviceName = deviceName;
-        this.diskMode = diskMode;
-        this.diskObjectId = Objects.requireNonNull(diskObjectId, "expected parameter 'diskObjectId' to be non-null");
-        this.diskSizeGB = diskSizeGB;
-        this.diskType = diskType;
-        this.label = Objects.requireNonNull(label, "expected parameter 'label' to be non-null");
-        this.name = name;
-        this.unitNumber = unitNumber;
-    }
+    private VirtualDiskResponse() {}
 
-    private VirtualDiskResponse() {
-        this.controllerKey = null;
-        this.deviceKey = null;
-        this.deviceName = null;
-        this.diskMode = null;
-        this.diskObjectId = null;
-        this.diskSizeGB = null;
-        this.diskType = null;
-        this.label = null;
-        this.name = null;
-        this.unitNumber = null;
+    private VirtualDiskResponse(VirtualDiskResponse $) {
+        this.controllerKey = $.controllerKey;
+        this.deviceKey = $.deviceKey;
+        this.deviceName = $.deviceName;
+        this.diskMode = $.diskMode;
+        this.diskObjectId = $.diskObjectId;
+        this.diskSizeGB = $.diskSizeGB;
+        this.diskType = $.diskType;
+        this.label = $.label;
+        this.name = $.name;
+        this.unitNumber = $.unitNumber;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VirtualDiskResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Integer controllerKey;
-        private @Nullable Integer deviceKey;
-        private @Nullable String deviceName;
-        private @Nullable String diskMode;
-        private String diskObjectId;
-        private @Nullable Integer diskSizeGB;
-        private @Nullable String diskType;
-        private String label;
-        private @Nullable String name;
-        private @Nullable Integer unitNumber;
+        private VirtualDiskResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new VirtualDiskResponse();
         }
 
         public Builder(VirtualDiskResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.controllerKey = defaults.controllerKey;
-    	      this.deviceKey = defaults.deviceKey;
-    	      this.deviceName = defaults.deviceName;
-    	      this.diskMode = defaults.diskMode;
-    	      this.diskObjectId = defaults.diskObjectId;
-    	      this.diskSizeGB = defaults.diskSizeGB;
-    	      this.diskType = defaults.diskType;
-    	      this.label = defaults.label;
-    	      this.name = defaults.name;
-    	      this.unitNumber = defaults.unitNumber;
+            $ = new VirtualDiskResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder controllerKey(@Nullable Integer controllerKey) {
-            this.controllerKey = controllerKey;
+            $.controllerKey = controllerKey;
             return this;
         }
+
         public Builder deviceKey(@Nullable Integer deviceKey) {
-            this.deviceKey = deviceKey;
+            $.deviceKey = deviceKey;
             return this;
         }
+
         public Builder deviceName(@Nullable String deviceName) {
-            this.deviceName = deviceName;
+            $.deviceName = deviceName;
             return this;
         }
+
         public Builder diskMode(@Nullable String diskMode) {
-            this.diskMode = diskMode;
+            $.diskMode = diskMode;
             return this;
         }
+
         public Builder diskObjectId(String diskObjectId) {
-            this.diskObjectId = Objects.requireNonNull(diskObjectId);
+            $.diskObjectId = diskObjectId;
             return this;
         }
+
         public Builder diskSizeGB(@Nullable Integer diskSizeGB) {
-            this.diskSizeGB = diskSizeGB;
+            $.diskSizeGB = diskSizeGB;
             return this;
         }
+
         public Builder diskType(@Nullable String diskType) {
-            this.diskType = diskType;
+            $.diskType = diskType;
             return this;
         }
+
         public Builder label(String label) {
-            this.label = Objects.requireNonNull(label);
+            $.label = label;
             return this;
         }
+
         public Builder name(@Nullable String name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
+
         public Builder unitNumber(@Nullable Integer unitNumber) {
-            this.unitNumber = unitNumber;
+            $.unitNumber = unitNumber;
             return this;
-        }        public VirtualDiskResponse build() {
-            return new VirtualDiskResponse(controllerKey, deviceKey, deviceName, diskMode, diskObjectId, diskSizeGB, diskType, label, name, unitNumber);
+        }
+
+        public VirtualDiskResponse build() {
+            $.diskObjectId = Objects.requireNonNull($.diskObjectId, "expected parameter 'diskObjectId' to be non-null");
+            $.label = Objects.requireNonNull($.label, "expected parameter 'label' to be non-null");
+            return $;
         }
     }
+
 }

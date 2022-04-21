@@ -21,7 +21,7 @@ public final class GooglePrivacyDlpV2CharsToIgnoreResponse extends com.pulumi.re
      * 
      */
     @Import(name="charactersToSkip", required=true)
-      private final String charactersToSkip;
+    private String charactersToSkip;
 
     public String charactersToSkip() {
         return this.charactersToSkip;
@@ -32,55 +32,52 @@ public final class GooglePrivacyDlpV2CharsToIgnoreResponse extends com.pulumi.re
      * 
      */
     @Import(name="commonCharactersToIgnore", required=true)
-      private final String commonCharactersToIgnore;
+    private String commonCharactersToIgnore;
 
     public String commonCharactersToIgnore() {
         return this.commonCharactersToIgnore;
     }
 
-    public GooglePrivacyDlpV2CharsToIgnoreResponse(
-        String charactersToSkip,
-        String commonCharactersToIgnore) {
-        this.charactersToSkip = Objects.requireNonNull(charactersToSkip, "expected parameter 'charactersToSkip' to be non-null");
-        this.commonCharactersToIgnore = Objects.requireNonNull(commonCharactersToIgnore, "expected parameter 'commonCharactersToIgnore' to be non-null");
-    }
+    private GooglePrivacyDlpV2CharsToIgnoreResponse() {}
 
-    private GooglePrivacyDlpV2CharsToIgnoreResponse() {
-        this.charactersToSkip = null;
-        this.commonCharactersToIgnore = null;
+    private GooglePrivacyDlpV2CharsToIgnoreResponse(GooglePrivacyDlpV2CharsToIgnoreResponse $) {
+        this.charactersToSkip = $.charactersToSkip;
+        this.commonCharactersToIgnore = $.commonCharactersToIgnore;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GooglePrivacyDlpV2CharsToIgnoreResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String charactersToSkip;
-        private String commonCharactersToIgnore;
+        private GooglePrivacyDlpV2CharsToIgnoreResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GooglePrivacyDlpV2CharsToIgnoreResponse();
         }
 
         public Builder(GooglePrivacyDlpV2CharsToIgnoreResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.charactersToSkip = defaults.charactersToSkip;
-    	      this.commonCharactersToIgnore = defaults.commonCharactersToIgnore;
+            $ = new GooglePrivacyDlpV2CharsToIgnoreResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder charactersToSkip(String charactersToSkip) {
-            this.charactersToSkip = Objects.requireNonNull(charactersToSkip);
+            $.charactersToSkip = charactersToSkip;
             return this;
         }
+
         public Builder commonCharactersToIgnore(String commonCharactersToIgnore) {
-            this.commonCharactersToIgnore = Objects.requireNonNull(commonCharactersToIgnore);
+            $.commonCharactersToIgnore = commonCharactersToIgnore;
             return this;
-        }        public GooglePrivacyDlpV2CharsToIgnoreResponse build() {
-            return new GooglePrivacyDlpV2CharsToIgnoreResponse(charactersToSkip, commonCharactersToIgnore);
+        }
+
+        public GooglePrivacyDlpV2CharsToIgnoreResponse build() {
+            $.charactersToSkip = Objects.requireNonNull($.charactersToSkip, "expected parameter 'charactersToSkip' to be non-null");
+            $.commonCharactersToIgnore = Objects.requireNonNull($.commonCharactersToIgnore, "expected parameter 'commonCharactersToIgnore' to be non-null");
+            return $;
         }
     }
+
 }

@@ -18,7 +18,7 @@ public final class LoadBalancerFrontendIPConfigurationResponse extends com.pulum
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -29,55 +29,52 @@ public final class LoadBalancerFrontendIPConfigurationResponse extends com.pulum
      * 
      */
     @Import(name="properties", required=true)
-      private final LoadBalancerFrontendIPConfigurationPropertiesResponse properties;
+    private LoadBalancerFrontendIPConfigurationPropertiesResponse properties;
 
     public LoadBalancerFrontendIPConfigurationPropertiesResponse properties() {
         return this.properties;
     }
 
-    public LoadBalancerFrontendIPConfigurationResponse(
-        String name,
-        LoadBalancerFrontendIPConfigurationPropertiesResponse properties) {
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.properties = Objects.requireNonNull(properties, "expected parameter 'properties' to be non-null");
-    }
+    private LoadBalancerFrontendIPConfigurationResponse() {}
 
-    private LoadBalancerFrontendIPConfigurationResponse() {
-        this.name = null;
-        this.properties = null;
+    private LoadBalancerFrontendIPConfigurationResponse(LoadBalancerFrontendIPConfigurationResponse $) {
+        this.name = $.name;
+        this.properties = $.properties;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LoadBalancerFrontendIPConfigurationResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String name;
-        private LoadBalancerFrontendIPConfigurationPropertiesResponse properties;
+        private LoadBalancerFrontendIPConfigurationResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new LoadBalancerFrontendIPConfigurationResponse();
         }
 
         public Builder(LoadBalancerFrontendIPConfigurationResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.properties = defaults.properties;
+            $ = new LoadBalancerFrontendIPConfigurationResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder properties(LoadBalancerFrontendIPConfigurationPropertiesResponse properties) {
-            this.properties = Objects.requireNonNull(properties);
+            $.properties = properties;
             return this;
-        }        public LoadBalancerFrontendIPConfigurationResponse build() {
-            return new LoadBalancerFrontendIPConfigurationResponse(name, properties);
+        }
+
+        public LoadBalancerFrontendIPConfigurationResponse build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.properties = Objects.requireNonNull($.properties, "expected parameter 'properties' to be non-null");
+            return $;
         }
     }
+
 }

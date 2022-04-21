@@ -21,10 +21,10 @@ public final class GetGlobalUserPersonalPreferencesArgs extends com.pulumi.resou
      * 
      */
     @Import(name="addRemove")
-      private final @Nullable Either<String,AddRemove> addRemove;
+    private @Nullable Either<String,AddRemove> addRemove;
 
-    public Either<String,AddRemove> addRemove() {
-        return this.addRemove == null ? null : this.addRemove;
+    public Optional<Either<String,AddRemove>> addRemove() {
+        return Optional.ofNullable(this.addRemove);
     }
 
     /**
@@ -32,10 +32,10 @@ public final class GetGlobalUserPersonalPreferencesArgs extends com.pulumi.resou
      * 
      */
     @Import(name="labAccountResourceId")
-      private final @Nullable String labAccountResourceId;
+    private @Nullable String labAccountResourceId;
 
     public Optional<String> labAccountResourceId() {
-        return this.labAccountResourceId == null ? Optional.empty() : Optional.ofNullable(this.labAccountResourceId);
+        return Optional.ofNullable(this.labAccountResourceId);
     }
 
     /**
@@ -43,10 +43,10 @@ public final class GetGlobalUserPersonalPreferencesArgs extends com.pulumi.resou
      * 
      */
     @Import(name="labResourceId")
-      private final @Nullable String labResourceId;
+    private @Nullable String labResourceId;
 
     public Optional<String> labResourceId() {
-        return this.labResourceId == null ? Optional.empty() : Optional.ofNullable(this.labResourceId);
+        return Optional.ofNullable(this.labResourceId);
     }
 
     /**
@@ -54,73 +54,63 @@ public final class GetGlobalUserPersonalPreferencesArgs extends com.pulumi.resou
      * 
      */
     @Import(name="userName", required=true)
-      private final String userName;
+    private String userName;
 
     public String userName() {
         return this.userName;
     }
 
-    public GetGlobalUserPersonalPreferencesArgs(
-        @Nullable Either<String,AddRemove> addRemove,
-        @Nullable String labAccountResourceId,
-        @Nullable String labResourceId,
-        String userName) {
-        this.addRemove = addRemove;
-        this.labAccountResourceId = labAccountResourceId;
-        this.labResourceId = labResourceId;
-        this.userName = Objects.requireNonNull(userName, "expected parameter 'userName' to be non-null");
-    }
+    private GetGlobalUserPersonalPreferencesArgs() {}
 
-    private GetGlobalUserPersonalPreferencesArgs() {
-        this.addRemove = null;
-        this.labAccountResourceId = null;
-        this.labResourceId = null;
-        this.userName = null;
+    private GetGlobalUserPersonalPreferencesArgs(GetGlobalUserPersonalPreferencesArgs $) {
+        this.addRemove = $.addRemove;
+        this.labAccountResourceId = $.labAccountResourceId;
+        this.labResourceId = $.labResourceId;
+        this.userName = $.userName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetGlobalUserPersonalPreferencesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Either<String,AddRemove> addRemove;
-        private @Nullable String labAccountResourceId;
-        private @Nullable String labResourceId;
-        private String userName;
+        private GetGlobalUserPersonalPreferencesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetGlobalUserPersonalPreferencesArgs();
         }
 
         public Builder(GetGlobalUserPersonalPreferencesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.addRemove = defaults.addRemove;
-    	      this.labAccountResourceId = defaults.labAccountResourceId;
-    	      this.labResourceId = defaults.labResourceId;
-    	      this.userName = defaults.userName;
+            $ = new GetGlobalUserPersonalPreferencesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder addRemove(@Nullable Either<String,AddRemove> addRemove) {
-            this.addRemove = addRemove;
+            $.addRemove = addRemove;
             return this;
         }
+
         public Builder labAccountResourceId(@Nullable String labAccountResourceId) {
-            this.labAccountResourceId = labAccountResourceId;
+            $.labAccountResourceId = labAccountResourceId;
             return this;
         }
+
         public Builder labResourceId(@Nullable String labResourceId) {
-            this.labResourceId = labResourceId;
+            $.labResourceId = labResourceId;
             return this;
         }
+
         public Builder userName(String userName) {
-            this.userName = Objects.requireNonNull(userName);
+            $.userName = userName;
             return this;
-        }        public GetGlobalUserPersonalPreferencesArgs build() {
-            return new GetGlobalUserPersonalPreferencesArgs(addRemove, labAccountResourceId, labResourceId, userName);
+        }
+
+        public GetGlobalUserPersonalPreferencesArgs build() {
+            $.userName = Objects.requireNonNull($.userName, "expected parameter 'userName' to be non-null");
+            return $;
         }
     }
+
 }

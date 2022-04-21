@@ -5,9 +5,9 @@ package com.pulumi.azurenative.agfoodplatform;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class ExtensionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="extensionId")
-      private final @Nullable Output<String> extensionId;
+    private @Nullable Output<String> extensionId;
 
-    public Output<String> extensionId() {
-        return this.extensionId == null ? Codegen.empty() : this.extensionId;
+    public Optional<Output<String>> extensionId() {
+        return Optional.ofNullable(this.extensionId);
     }
 
     /**
@@ -31,7 +31,7 @@ public final class ExtensionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="farmBeatsResourceName", required=true)
-      private final Output<String> farmBeatsResourceName;
+    private Output<String> farmBeatsResourceName;
 
     public Output<String> farmBeatsResourceName() {
         return this.farmBeatsResourceName;
@@ -42,76 +42,70 @@ public final class ExtensionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public ExtensionArgs(
-        @Nullable Output<String> extensionId,
-        Output<String> farmBeatsResourceName,
-        Output<String> resourceGroupName) {
-        this.extensionId = extensionId;
-        this.farmBeatsResourceName = Objects.requireNonNull(farmBeatsResourceName, "expected parameter 'farmBeatsResourceName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private ExtensionArgs() {}
 
-    private ExtensionArgs() {
-        this.extensionId = Codegen.empty();
-        this.farmBeatsResourceName = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
+    private ExtensionArgs(ExtensionArgs $) {
+        this.extensionId = $.extensionId;
+        this.farmBeatsResourceName = $.farmBeatsResourceName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ExtensionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> extensionId;
-        private Output<String> farmBeatsResourceName;
-        private Output<String> resourceGroupName;
+        private ExtensionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ExtensionArgs();
         }
 
         public Builder(ExtensionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.extensionId = defaults.extensionId;
-    	      this.farmBeatsResourceName = defaults.farmBeatsResourceName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new ExtensionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder extensionId(@Nullable Output<String> extensionId) {
-            this.extensionId = extensionId;
+            $.extensionId = extensionId;
             return this;
         }
-        public Builder extensionId(@Nullable String extensionId) {
-            this.extensionId = Codegen.ofNullable(extensionId);
-            return this;
+
+        public Builder extensionId(String extensionId) {
+            return extensionId(Output.of(extensionId));
         }
+
         public Builder farmBeatsResourceName(Output<String> farmBeatsResourceName) {
-            this.farmBeatsResourceName = Objects.requireNonNull(farmBeatsResourceName);
+            $.farmBeatsResourceName = farmBeatsResourceName;
             return this;
         }
+
         public Builder farmBeatsResourceName(String farmBeatsResourceName) {
-            this.farmBeatsResourceName = Output.of(Objects.requireNonNull(farmBeatsResourceName));
-            return this;
+            return farmBeatsResourceName(Output.of(farmBeatsResourceName));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
-        }        public ExtensionArgs build() {
-            return new ExtensionArgs(extensionId, farmBeatsResourceName, resourceGroupName);
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        public ExtensionArgs build() {
+            $.farmBeatsResourceName = Objects.requireNonNull($.farmBeatsResourceName, "expected parameter 'farmBeatsResourceName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

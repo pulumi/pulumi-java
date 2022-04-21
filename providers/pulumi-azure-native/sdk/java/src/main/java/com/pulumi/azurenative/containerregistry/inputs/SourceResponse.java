@@ -23,10 +23,10 @@ public final class SourceResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="addr")
-      private final @Nullable String addr;
+    private @Nullable String addr;
 
     public Optional<String> addr() {
-        return this.addr == null ? Optional.empty() : Optional.ofNullable(this.addr);
+        return Optional.ofNullable(this.addr);
     }
 
     /**
@@ -34,55 +34,50 @@ public final class SourceResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="instanceID")
-      private final @Nullable String instanceID;
+    private @Nullable String instanceID;
 
     public Optional<String> instanceID() {
-        return this.instanceID == null ? Optional.empty() : Optional.ofNullable(this.instanceID);
+        return Optional.ofNullable(this.instanceID);
     }
 
-    public SourceResponse(
-        @Nullable String addr,
-        @Nullable String instanceID) {
-        this.addr = addr;
-        this.instanceID = instanceID;
-    }
+    private SourceResponse() {}
 
-    private SourceResponse() {
-        this.addr = null;
-        this.instanceID = null;
+    private SourceResponse(SourceResponse $) {
+        this.addr = $.addr;
+        this.instanceID = $.instanceID;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SourceResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String addr;
-        private @Nullable String instanceID;
+        private SourceResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new SourceResponse();
         }
 
         public Builder(SourceResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.addr = defaults.addr;
-    	      this.instanceID = defaults.instanceID;
+            $ = new SourceResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder addr(@Nullable String addr) {
-            this.addr = addr;
+            $.addr = addr;
             return this;
         }
+
         public Builder instanceID(@Nullable String instanceID) {
-            this.instanceID = instanceID;
+            $.instanceID = instanceID;
             return this;
-        }        public SourceResponse build() {
-            return new SourceResponse(addr, instanceID);
+        }
+
+        public SourceResponse build() {
+            return $;
         }
     }
+
 }

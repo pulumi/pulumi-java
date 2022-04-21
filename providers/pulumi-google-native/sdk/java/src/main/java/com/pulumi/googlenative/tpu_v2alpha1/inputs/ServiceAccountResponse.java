@@ -22,7 +22,7 @@ public final class ServiceAccountResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="email", required=true)
-      private final String email;
+    private String email;
 
     public String email() {
         return this.email;
@@ -33,58 +33,56 @@ public final class ServiceAccountResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="scope", required=true)
-      private final List<String> scope;
+    private List<String> scope;
 
     public List<String> scope() {
         return this.scope;
     }
 
-    public ServiceAccountResponse(
-        String email,
-        List<String> scope) {
-        this.email = Objects.requireNonNull(email, "expected parameter 'email' to be non-null");
-        this.scope = Objects.requireNonNull(scope, "expected parameter 'scope' to be non-null");
-    }
+    private ServiceAccountResponse() {}
 
-    private ServiceAccountResponse() {
-        this.email = null;
-        this.scope = List.of();
+    private ServiceAccountResponse(ServiceAccountResponse $) {
+        this.email = $.email;
+        this.scope = $.scope;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ServiceAccountResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String email;
-        private List<String> scope;
+        private ServiceAccountResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ServiceAccountResponse();
         }
 
         public Builder(ServiceAccountResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.email = defaults.email;
-    	      this.scope = defaults.scope;
+            $ = new ServiceAccountResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder email(String email) {
-            this.email = Objects.requireNonNull(email);
+            $.email = email;
             return this;
         }
+
         public Builder scope(List<String> scope) {
-            this.scope = Objects.requireNonNull(scope);
+            $.scope = scope;
             return this;
         }
+
         public Builder scope(String... scope) {
             return scope(List.of(scope));
-        }        public ServiceAccountResponse build() {
-            return new ServiceAccountResponse(email, scope);
+        }
+
+        public ServiceAccountResponse build() {
+            $.email = Objects.requireNonNull($.email, "expected parameter 'email' to be non-null");
+            $.scope = Objects.requireNonNull($.scope, "expected parameter 'scope' to be non-null");
+            return $;
         }
     }
+
 }

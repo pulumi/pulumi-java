@@ -29,10 +29,10 @@ public final class DataControllerPropertiesResponse extends com.pulumi.resources
      * 
      */
     @Import(name="basicLoginInformation")
-      private final @Nullable BasicLoginInformationResponse basicLoginInformation;
+    private @Nullable BasicLoginInformationResponse basicLoginInformation;
 
     public Optional<BasicLoginInformationResponse> basicLoginInformation() {
-        return this.basicLoginInformation == null ? Optional.empty() : Optional.ofNullable(this.basicLoginInformation);
+        return Optional.ofNullable(this.basicLoginInformation);
     }
 
     /**
@@ -40,10 +40,10 @@ public final class DataControllerPropertiesResponse extends com.pulumi.resources
      * 
      */
     @Import(name="k8sRaw")
-      private final @Nullable Object k8sRaw;
+    private @Nullable Object k8sRaw;
 
     public Optional<Object> k8sRaw() {
-        return this.k8sRaw == null ? Optional.empty() : Optional.ofNullable(this.k8sRaw);
+        return Optional.ofNullable(this.k8sRaw);
     }
 
     /**
@@ -51,10 +51,10 @@ public final class DataControllerPropertiesResponse extends com.pulumi.resources
      * 
      */
     @Import(name="lastUploadedDate")
-      private final @Nullable String lastUploadedDate;
+    private @Nullable String lastUploadedDate;
 
     public Optional<String> lastUploadedDate() {
-        return this.lastUploadedDate == null ? Optional.empty() : Optional.ofNullable(this.lastUploadedDate);
+        return Optional.ofNullable(this.lastUploadedDate);
     }
 
     /**
@@ -62,10 +62,10 @@ public final class DataControllerPropertiesResponse extends com.pulumi.resources
      * 
      */
     @Import(name="logAnalyticsWorkspaceConfig")
-      private final @Nullable LogAnalyticsWorkspaceConfigResponse logAnalyticsWorkspaceConfig;
+    private @Nullable LogAnalyticsWorkspaceConfigResponse logAnalyticsWorkspaceConfig;
 
     public Optional<LogAnalyticsWorkspaceConfigResponse> logAnalyticsWorkspaceConfig() {
-        return this.logAnalyticsWorkspaceConfig == null ? Optional.empty() : Optional.ofNullable(this.logAnalyticsWorkspaceConfig);
+        return Optional.ofNullable(this.logAnalyticsWorkspaceConfig);
     }
 
     /**
@@ -73,14 +73,14 @@ public final class DataControllerPropertiesResponse extends com.pulumi.resources
      * 
      */
     @Import(name="onPremiseProperty")
-      private final @Nullable OnPremisePropertyResponse onPremiseProperty;
+    private @Nullable OnPremisePropertyResponse onPremiseProperty;
 
     public Optional<OnPremisePropertyResponse> onPremiseProperty() {
-        return this.onPremiseProperty == null ? Optional.empty() : Optional.ofNullable(this.onPremiseProperty);
+        return Optional.ofNullable(this.onPremiseProperty);
     }
 
     @Import(name="provisioningState", required=true)
-      private final String provisioningState;
+    private String provisioningState;
 
     public String provisioningState() {
         return this.provisioningState;
@@ -91,10 +91,10 @@ public final class DataControllerPropertiesResponse extends com.pulumi.resources
      * 
      */
     @Import(name="uploadServicePrincipal")
-      private final @Nullable UploadServicePrincipalResponse uploadServicePrincipal;
+    private @Nullable UploadServicePrincipalResponse uploadServicePrincipal;
 
     public Optional<UploadServicePrincipalResponse> uploadServicePrincipal() {
-        return this.uploadServicePrincipal == null ? Optional.empty() : Optional.ofNullable(this.uploadServicePrincipal);
+        return Optional.ofNullable(this.uploadServicePrincipal);
     }
 
     /**
@@ -102,109 +102,87 @@ public final class DataControllerPropertiesResponse extends com.pulumi.resources
      * 
      */
     @Import(name="uploadWatermark")
-      private final @Nullable UploadWatermarkResponse uploadWatermark;
+    private @Nullable UploadWatermarkResponse uploadWatermark;
 
     public Optional<UploadWatermarkResponse> uploadWatermark() {
-        return this.uploadWatermark == null ? Optional.empty() : Optional.ofNullable(this.uploadWatermark);
+        return Optional.ofNullable(this.uploadWatermark);
     }
 
-    public DataControllerPropertiesResponse(
-        @Nullable BasicLoginInformationResponse basicLoginInformation,
-        @Nullable Object k8sRaw,
-        @Nullable String lastUploadedDate,
-        @Nullable LogAnalyticsWorkspaceConfigResponse logAnalyticsWorkspaceConfig,
-        @Nullable OnPremisePropertyResponse onPremiseProperty,
-        String provisioningState,
-        @Nullable UploadServicePrincipalResponse uploadServicePrincipal,
-        @Nullable UploadWatermarkResponse uploadWatermark) {
-        this.basicLoginInformation = basicLoginInformation;
-        this.k8sRaw = k8sRaw;
-        this.lastUploadedDate = lastUploadedDate;
-        this.logAnalyticsWorkspaceConfig = logAnalyticsWorkspaceConfig;
-        this.onPremiseProperty = onPremiseProperty;
-        this.provisioningState = Objects.requireNonNull(provisioningState, "expected parameter 'provisioningState' to be non-null");
-        this.uploadServicePrincipal = uploadServicePrincipal;
-        this.uploadWatermark = uploadWatermark;
-    }
+    private DataControllerPropertiesResponse() {}
 
-    private DataControllerPropertiesResponse() {
-        this.basicLoginInformation = null;
-        this.k8sRaw = null;
-        this.lastUploadedDate = null;
-        this.logAnalyticsWorkspaceConfig = null;
-        this.onPremiseProperty = null;
-        this.provisioningState = null;
-        this.uploadServicePrincipal = null;
-        this.uploadWatermark = null;
+    private DataControllerPropertiesResponse(DataControllerPropertiesResponse $) {
+        this.basicLoginInformation = $.basicLoginInformation;
+        this.k8sRaw = $.k8sRaw;
+        this.lastUploadedDate = $.lastUploadedDate;
+        this.logAnalyticsWorkspaceConfig = $.logAnalyticsWorkspaceConfig;
+        this.onPremiseProperty = $.onPremiseProperty;
+        this.provisioningState = $.provisioningState;
+        this.uploadServicePrincipal = $.uploadServicePrincipal;
+        this.uploadWatermark = $.uploadWatermark;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DataControllerPropertiesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable BasicLoginInformationResponse basicLoginInformation;
-        private @Nullable Object k8sRaw;
-        private @Nullable String lastUploadedDate;
-        private @Nullable LogAnalyticsWorkspaceConfigResponse logAnalyticsWorkspaceConfig;
-        private @Nullable OnPremisePropertyResponse onPremiseProperty;
-        private String provisioningState;
-        private @Nullable UploadServicePrincipalResponse uploadServicePrincipal;
-        private @Nullable UploadWatermarkResponse uploadWatermark;
+        private DataControllerPropertiesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new DataControllerPropertiesResponse();
         }
 
         public Builder(DataControllerPropertiesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.basicLoginInformation = defaults.basicLoginInformation;
-    	      this.k8sRaw = defaults.k8sRaw;
-    	      this.lastUploadedDate = defaults.lastUploadedDate;
-    	      this.logAnalyticsWorkspaceConfig = defaults.logAnalyticsWorkspaceConfig;
-    	      this.onPremiseProperty = defaults.onPremiseProperty;
-    	      this.provisioningState = defaults.provisioningState;
-    	      this.uploadServicePrincipal = defaults.uploadServicePrincipal;
-    	      this.uploadWatermark = defaults.uploadWatermark;
+            $ = new DataControllerPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder basicLoginInformation(@Nullable BasicLoginInformationResponse basicLoginInformation) {
-            this.basicLoginInformation = basicLoginInformation;
+            $.basicLoginInformation = basicLoginInformation;
             return this;
         }
+
         public Builder k8sRaw(@Nullable Object k8sRaw) {
-            this.k8sRaw = k8sRaw;
+            $.k8sRaw = k8sRaw;
             return this;
         }
+
         public Builder lastUploadedDate(@Nullable String lastUploadedDate) {
-            this.lastUploadedDate = lastUploadedDate;
+            $.lastUploadedDate = lastUploadedDate;
             return this;
         }
+
         public Builder logAnalyticsWorkspaceConfig(@Nullable LogAnalyticsWorkspaceConfigResponse logAnalyticsWorkspaceConfig) {
-            this.logAnalyticsWorkspaceConfig = logAnalyticsWorkspaceConfig;
+            $.logAnalyticsWorkspaceConfig = logAnalyticsWorkspaceConfig;
             return this;
         }
+
         public Builder onPremiseProperty(@Nullable OnPremisePropertyResponse onPremiseProperty) {
-            this.onPremiseProperty = onPremiseProperty;
+            $.onPremiseProperty = onPremiseProperty;
             return this;
         }
+
         public Builder provisioningState(String provisioningState) {
-            this.provisioningState = Objects.requireNonNull(provisioningState);
+            $.provisioningState = provisioningState;
             return this;
         }
+
         public Builder uploadServicePrincipal(@Nullable UploadServicePrincipalResponse uploadServicePrincipal) {
-            this.uploadServicePrincipal = uploadServicePrincipal;
+            $.uploadServicePrincipal = uploadServicePrincipal;
             return this;
         }
+
         public Builder uploadWatermark(@Nullable UploadWatermarkResponse uploadWatermark) {
-            this.uploadWatermark = uploadWatermark;
+            $.uploadWatermark = uploadWatermark;
             return this;
-        }        public DataControllerPropertiesResponse build() {
-            return new DataControllerPropertiesResponse(basicLoginInformation, k8sRaw, lastUploadedDate, logAnalyticsWorkspaceConfig, onPremiseProperty, provisioningState, uploadServicePrincipal, uploadWatermark);
+        }
+
+        public DataControllerPropertiesResponse build() {
+            $.provisioningState = Objects.requireNonNull($.provisioningState, "expected parameter 'provisioningState' to be non-null");
+            return $;
         }
     }
+
 }

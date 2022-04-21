@@ -23,10 +23,10 @@ public final class Template extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="htmlPart")
-      private final @Nullable String htmlPart;
+    private @Nullable String htmlPart;
 
     public Optional<String> htmlPart() {
-        return this.htmlPart == null ? Optional.empty() : Optional.ofNullable(this.htmlPart);
+        return Optional.ofNullable(this.htmlPart);
     }
 
     /**
@@ -34,7 +34,7 @@ public final class Template extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="subjectPart", required=true)
-      private final String subjectPart;
+    private String subjectPart;
 
     public String subjectPart() {
         return this.subjectPart;
@@ -45,10 +45,10 @@ public final class Template extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="templateName")
-      private final @Nullable String templateName;
+    private @Nullable String templateName;
 
     public Optional<String> templateName() {
-        return this.templateName == null ? Optional.empty() : Optional.ofNullable(this.templateName);
+        return Optional.ofNullable(this.templateName);
     }
 
     /**
@@ -56,73 +56,63 @@ public final class Template extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="textPart")
-      private final @Nullable String textPart;
+    private @Nullable String textPart;
 
     public Optional<String> textPart() {
-        return this.textPart == null ? Optional.empty() : Optional.ofNullable(this.textPart);
+        return Optional.ofNullable(this.textPart);
     }
 
-    public Template(
-        @Nullable String htmlPart,
-        String subjectPart,
-        @Nullable String templateName,
-        @Nullable String textPart) {
-        this.htmlPart = htmlPart;
-        this.subjectPart = Objects.requireNonNull(subjectPart, "expected parameter 'subjectPart' to be non-null");
-        this.templateName = templateName;
-        this.textPart = textPart;
-    }
+    private Template() {}
 
-    private Template() {
-        this.htmlPart = null;
-        this.subjectPart = null;
-        this.templateName = null;
-        this.textPart = null;
+    private Template(Template $) {
+        this.htmlPart = $.htmlPart;
+        this.subjectPart = $.subjectPart;
+        this.templateName = $.templateName;
+        this.textPart = $.textPart;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(Template defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String htmlPart;
-        private String subjectPart;
-        private @Nullable String templateName;
-        private @Nullable String textPart;
+        private Template $;
 
         public Builder() {
-    	      // Empty
+            $ = new Template();
         }
 
         public Builder(Template defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.htmlPart = defaults.htmlPart;
-    	      this.subjectPart = defaults.subjectPart;
-    	      this.templateName = defaults.templateName;
-    	      this.textPart = defaults.textPart;
+            $ = new Template(Objects.requireNonNull(defaults));
         }
 
         public Builder htmlPart(@Nullable String htmlPart) {
-            this.htmlPart = htmlPart;
+            $.htmlPart = htmlPart;
             return this;
         }
+
         public Builder subjectPart(String subjectPart) {
-            this.subjectPart = Objects.requireNonNull(subjectPart);
+            $.subjectPart = subjectPart;
             return this;
         }
+
         public Builder templateName(@Nullable String templateName) {
-            this.templateName = templateName;
+            $.templateName = templateName;
             return this;
         }
+
         public Builder textPart(@Nullable String textPart) {
-            this.textPart = textPart;
+            $.textPart = textPart;
             return this;
-        }        public Template build() {
-            return new Template(htmlPart, subjectPart, templateName, textPart);
+        }
+
+        public Template build() {
+            $.subjectPart = Objects.requireNonNull($.subjectPart, "expected parameter 'subjectPart' to be non-null");
+            return $;
         }
     }
+
 }

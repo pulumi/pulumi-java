@@ -9,10 +9,10 @@ import com.pulumi.azurenative.network.inputs.ManagedRuleExclusionArgs;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -29,10 +29,10 @@ public final class FrontDoorManagedRuleOverrideArgs extends com.pulumi.resources
      * 
      */
     @Import(name="action")
-      private final @Nullable Output<Either<String,ActionType>> action;
+    private @Nullable Output<Either<String,ActionType>> action;
 
-    public Output<Either<String,ActionType>> action() {
-        return this.action == null ? Codegen.empty() : this.action;
+    public Optional<Output<Either<String,ActionType>>> action() {
+        return Optional.ofNullable(this.action);
     }
 
     /**
@@ -40,10 +40,10 @@ public final class FrontDoorManagedRuleOverrideArgs extends com.pulumi.resources
      * 
      */
     @Import(name="enabledState")
-      private final @Nullable Output<Either<String,ManagedRuleEnabledState>> enabledState;
+    private @Nullable Output<Either<String,ManagedRuleEnabledState>> enabledState;
 
-    public Output<Either<String,ManagedRuleEnabledState>> enabledState() {
-        return this.enabledState == null ? Codegen.empty() : this.enabledState;
+    public Optional<Output<Either<String,ManagedRuleEnabledState>>> enabledState() {
+        return Optional.ofNullable(this.enabledState);
     }
 
     /**
@@ -51,10 +51,10 @@ public final class FrontDoorManagedRuleOverrideArgs extends com.pulumi.resources
      * 
      */
     @Import(name="exclusions")
-      private final @Nullable Output<List<ManagedRuleExclusionArgs>> exclusions;
+    private @Nullable Output<List<ManagedRuleExclusionArgs>> exclusions;
 
-    public Output<List<ManagedRuleExclusionArgs>> exclusions() {
-        return this.exclusions == null ? Codegen.empty() : this.exclusions;
+    public Optional<Output<List<ManagedRuleExclusionArgs>>> exclusions() {
+        return Optional.ofNullable(this.exclusions);
     }
 
     /**
@@ -62,92 +62,83 @@ public final class FrontDoorManagedRuleOverrideArgs extends com.pulumi.resources
      * 
      */
     @Import(name="ruleId", required=true)
-      private final Output<String> ruleId;
+    private Output<String> ruleId;
 
     public Output<String> ruleId() {
         return this.ruleId;
     }
 
-    public FrontDoorManagedRuleOverrideArgs(
-        @Nullable Output<Either<String,ActionType>> action,
-        @Nullable Output<Either<String,ManagedRuleEnabledState>> enabledState,
-        @Nullable Output<List<ManagedRuleExclusionArgs>> exclusions,
-        Output<String> ruleId) {
-        this.action = action;
-        this.enabledState = enabledState;
-        this.exclusions = exclusions;
-        this.ruleId = Objects.requireNonNull(ruleId, "expected parameter 'ruleId' to be non-null");
-    }
+    private FrontDoorManagedRuleOverrideArgs() {}
 
-    private FrontDoorManagedRuleOverrideArgs() {
-        this.action = Codegen.empty();
-        this.enabledState = Codegen.empty();
-        this.exclusions = Codegen.empty();
-        this.ruleId = Codegen.empty();
+    private FrontDoorManagedRuleOverrideArgs(FrontDoorManagedRuleOverrideArgs $) {
+        this.action = $.action;
+        this.enabledState = $.enabledState;
+        this.exclusions = $.exclusions;
+        this.ruleId = $.ruleId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FrontDoorManagedRuleOverrideArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Either<String,ActionType>> action;
-        private @Nullable Output<Either<String,ManagedRuleEnabledState>> enabledState;
-        private @Nullable Output<List<ManagedRuleExclusionArgs>> exclusions;
-        private Output<String> ruleId;
+        private FrontDoorManagedRuleOverrideArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new FrontDoorManagedRuleOverrideArgs();
         }
 
         public Builder(FrontDoorManagedRuleOverrideArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.action = defaults.action;
-    	      this.enabledState = defaults.enabledState;
-    	      this.exclusions = defaults.exclusions;
-    	      this.ruleId = defaults.ruleId;
+            $ = new FrontDoorManagedRuleOverrideArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder action(@Nullable Output<Either<String,ActionType>> action) {
-            this.action = action;
+            $.action = action;
             return this;
         }
-        public Builder action(@Nullable Either<String,ActionType> action) {
-            this.action = Codegen.ofNullable(action);
-            return this;
+
+        public Builder action(Either<String,ActionType> action) {
+            return action(Output.of(action));
         }
+
         public Builder enabledState(@Nullable Output<Either<String,ManagedRuleEnabledState>> enabledState) {
-            this.enabledState = enabledState;
+            $.enabledState = enabledState;
             return this;
         }
-        public Builder enabledState(@Nullable Either<String,ManagedRuleEnabledState> enabledState) {
-            this.enabledState = Codegen.ofNullable(enabledState);
-            return this;
+
+        public Builder enabledState(Either<String,ManagedRuleEnabledState> enabledState) {
+            return enabledState(Output.of(enabledState));
         }
+
         public Builder exclusions(@Nullable Output<List<ManagedRuleExclusionArgs>> exclusions) {
-            this.exclusions = exclusions;
+            $.exclusions = exclusions;
             return this;
         }
-        public Builder exclusions(@Nullable List<ManagedRuleExclusionArgs> exclusions) {
-            this.exclusions = Codegen.ofNullable(exclusions);
-            return this;
+
+        public Builder exclusions(List<ManagedRuleExclusionArgs> exclusions) {
+            return exclusions(Output.of(exclusions));
         }
+
         public Builder exclusions(ManagedRuleExclusionArgs... exclusions) {
             return exclusions(List.of(exclusions));
         }
+
         public Builder ruleId(Output<String> ruleId) {
-            this.ruleId = Objects.requireNonNull(ruleId);
+            $.ruleId = ruleId;
             return this;
         }
+
         public Builder ruleId(String ruleId) {
-            this.ruleId = Output.of(Objects.requireNonNull(ruleId));
-            return this;
-        }        public FrontDoorManagedRuleOverrideArgs build() {
-            return new FrontDoorManagedRuleOverrideArgs(action, enabledState, exclusions, ruleId);
+            return ruleId(Output.of(ruleId));
+        }
+
+        public FrontDoorManagedRuleOverrideArgs build() {
+            $.ruleId = Objects.requireNonNull($.ruleId, "expected parameter 'ruleId' to be non-null");
+            return $;
         }
     }
+
 }

@@ -6,11 +6,11 @@ package com.pulumi.azurenative.webpubsub.inputs;
 import com.pulumi.azurenative.webpubsub.inputs.EventHandlerTemplateArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,49 +27,48 @@ public final class EventHandlerSettingsArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="items")
-      private final @Nullable Output<Map<String,List<EventHandlerTemplateArgs>>> items;
+    private @Nullable Output<Map<String,List<EventHandlerTemplateArgs>>> items;
 
-    public Output<Map<String,List<EventHandlerTemplateArgs>>> items() {
-        return this.items == null ? Codegen.empty() : this.items;
+    public Optional<Output<Map<String,List<EventHandlerTemplateArgs>>>> items() {
+        return Optional.ofNullable(this.items);
     }
 
-    public EventHandlerSettingsArgs(@Nullable Output<Map<String,List<EventHandlerTemplateArgs>>> items) {
-        this.items = items;
-    }
+    private EventHandlerSettingsArgs() {}
 
-    private EventHandlerSettingsArgs() {
-        this.items = Codegen.empty();
+    private EventHandlerSettingsArgs(EventHandlerSettingsArgs $) {
+        this.items = $.items;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EventHandlerSettingsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Map<String,List<EventHandlerTemplateArgs>>> items;
+        private EventHandlerSettingsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new EventHandlerSettingsArgs();
         }
 
         public Builder(EventHandlerSettingsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.items = defaults.items;
+            $ = new EventHandlerSettingsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder items(@Nullable Output<Map<String,List<EventHandlerTemplateArgs>>> items) {
-            this.items = items;
+            $.items = items;
             return this;
         }
-        public Builder items(@Nullable Map<String,List<EventHandlerTemplateArgs>> items) {
-            this.items = Codegen.ofNullable(items);
-            return this;
-        }        public EventHandlerSettingsArgs build() {
-            return new EventHandlerSettingsArgs(items);
+
+        public Builder items(Map<String,List<EventHandlerTemplateArgs>> items) {
+            return items(Output.of(items));
+        }
+
+        public EventHandlerSettingsArgs build() {
+            return $;
         }
     }
+
 }

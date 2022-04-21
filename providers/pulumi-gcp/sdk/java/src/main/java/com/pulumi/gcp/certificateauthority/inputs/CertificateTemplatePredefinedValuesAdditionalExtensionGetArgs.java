@@ -5,11 +5,11 @@ package com.pulumi.gcp.certificateauthority.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.certificateauthority.inputs.CertificateTemplatePredefinedValuesAdditionalExtensionObjectIdGetArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class CertificateTemplatePredefinedValuesAdditionalExtensionGetArgs
      * 
      */
     @Import(name="critical")
-      private final @Nullable Output<Boolean> critical;
+    private @Nullable Output<Boolean> critical;
 
-    public Output<Boolean> critical() {
-        return this.critical == null ? Codegen.empty() : this.critical;
+    public Optional<Output<Boolean>> critical() {
+        return Optional.ofNullable(this.critical);
     }
 
     /**
@@ -33,7 +33,7 @@ public final class CertificateTemplatePredefinedValuesAdditionalExtensionGetArgs
      * 
      */
     @Import(name="objectId", required=true)
-      private final Output<CertificateTemplatePredefinedValuesAdditionalExtensionObjectIdGetArgs> objectId;
+    private Output<CertificateTemplatePredefinedValuesAdditionalExtensionObjectIdGetArgs> objectId;
 
     public Output<CertificateTemplatePredefinedValuesAdditionalExtensionObjectIdGetArgs> objectId() {
         return this.objectId;
@@ -44,76 +44,70 @@ public final class CertificateTemplatePredefinedValuesAdditionalExtensionGetArgs
      * 
      */
     @Import(name="value", required=true)
-      private final Output<String> value;
+    private Output<String> value;
 
     public Output<String> value() {
         return this.value;
     }
 
-    public CertificateTemplatePredefinedValuesAdditionalExtensionGetArgs(
-        @Nullable Output<Boolean> critical,
-        Output<CertificateTemplatePredefinedValuesAdditionalExtensionObjectIdGetArgs> objectId,
-        Output<String> value) {
-        this.critical = critical;
-        this.objectId = Objects.requireNonNull(objectId, "expected parameter 'objectId' to be non-null");
-        this.value = Objects.requireNonNull(value, "expected parameter 'value' to be non-null");
-    }
+    private CertificateTemplatePredefinedValuesAdditionalExtensionGetArgs() {}
 
-    private CertificateTemplatePredefinedValuesAdditionalExtensionGetArgs() {
-        this.critical = Codegen.empty();
-        this.objectId = Codegen.empty();
-        this.value = Codegen.empty();
+    private CertificateTemplatePredefinedValuesAdditionalExtensionGetArgs(CertificateTemplatePredefinedValuesAdditionalExtensionGetArgs $) {
+        this.critical = $.critical;
+        this.objectId = $.objectId;
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CertificateTemplatePredefinedValuesAdditionalExtensionGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> critical;
-        private Output<CertificateTemplatePredefinedValuesAdditionalExtensionObjectIdGetArgs> objectId;
-        private Output<String> value;
+        private CertificateTemplatePredefinedValuesAdditionalExtensionGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CertificateTemplatePredefinedValuesAdditionalExtensionGetArgs();
         }
 
         public Builder(CertificateTemplatePredefinedValuesAdditionalExtensionGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.critical = defaults.critical;
-    	      this.objectId = defaults.objectId;
-    	      this.value = defaults.value;
+            $ = new CertificateTemplatePredefinedValuesAdditionalExtensionGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder critical(@Nullable Output<Boolean> critical) {
-            this.critical = critical;
+            $.critical = critical;
             return this;
         }
-        public Builder critical(@Nullable Boolean critical) {
-            this.critical = Codegen.ofNullable(critical);
-            return this;
+
+        public Builder critical(Boolean critical) {
+            return critical(Output.of(critical));
         }
+
         public Builder objectId(Output<CertificateTemplatePredefinedValuesAdditionalExtensionObjectIdGetArgs> objectId) {
-            this.objectId = Objects.requireNonNull(objectId);
+            $.objectId = objectId;
             return this;
         }
+
         public Builder objectId(CertificateTemplatePredefinedValuesAdditionalExtensionObjectIdGetArgs objectId) {
-            this.objectId = Output.of(Objects.requireNonNull(objectId));
-            return this;
+            return objectId(Output.of(objectId));
         }
+
         public Builder value(Output<String> value) {
-            this.value = Objects.requireNonNull(value);
+            $.value = value;
             return this;
         }
+
         public Builder value(String value) {
-            this.value = Output.of(Objects.requireNonNull(value));
-            return this;
-        }        public CertificateTemplatePredefinedValuesAdditionalExtensionGetArgs build() {
-            return new CertificateTemplatePredefinedValuesAdditionalExtensionGetArgs(critical, objectId, value);
+            return value(Output.of(value));
+        }
+
+        public CertificateTemplatePredefinedValuesAdditionalExtensionGetArgs build() {
+            $.objectId = Objects.requireNonNull($.objectId, "expected parameter 'objectId' to be non-null");
+            $.value = Objects.requireNonNull($.value, "expected parameter 'value' to be non-null");
+            return $;
         }
     }
+
 }

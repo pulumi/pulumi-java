@@ -5,9 +5,9 @@ package com.pulumi.googlenative.firebaseappcheck_v1beta;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -16,7 +16,7 @@ public final class DebugTokenArgs extends com.pulumi.resources.ResourceArgs {
     public static final DebugTokenArgs Empty = new DebugTokenArgs();
 
     @Import(name="appId", required=true)
-      private final Output<String> appId;
+    private Output<String> appId;
 
     public Output<String> appId() {
         return this.appId;
@@ -27,7 +27,7 @@ public final class DebugTokenArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="displayName", required=true)
-      private final Output<String> displayName;
+    private Output<String> displayName;
 
     public Output<String> displayName() {
         return this.displayName;
@@ -38,17 +38,17 @@ public final class DebugTokenArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -56,102 +56,91 @@ public final class DebugTokenArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="token", required=true)
-      private final Output<String> token;
+    private Output<String> token;
 
     public Output<String> token() {
         return this.token;
     }
 
-    public DebugTokenArgs(
-        Output<String> appId,
-        Output<String> displayName,
-        @Nullable Output<String> name,
-        @Nullable Output<String> project,
-        Output<String> token) {
-        this.appId = Objects.requireNonNull(appId, "expected parameter 'appId' to be non-null");
-        this.displayName = Objects.requireNonNull(displayName, "expected parameter 'displayName' to be non-null");
-        this.name = name;
-        this.project = project;
-        this.token = Objects.requireNonNull(token, "expected parameter 'token' to be non-null");
-    }
+    private DebugTokenArgs() {}
 
-    private DebugTokenArgs() {
-        this.appId = Codegen.empty();
-        this.displayName = Codegen.empty();
-        this.name = Codegen.empty();
-        this.project = Codegen.empty();
-        this.token = Codegen.empty();
+    private DebugTokenArgs(DebugTokenArgs $) {
+        this.appId = $.appId;
+        this.displayName = $.displayName;
+        this.name = $.name;
+        this.project = $.project;
+        this.token = $.token;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DebugTokenArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> appId;
-        private Output<String> displayName;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> project;
-        private Output<String> token;
+        private DebugTokenArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DebugTokenArgs();
         }
 
         public Builder(DebugTokenArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.appId = defaults.appId;
-    	      this.displayName = defaults.displayName;
-    	      this.name = defaults.name;
-    	      this.project = defaults.project;
-    	      this.token = defaults.token;
+            $ = new DebugTokenArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder appId(Output<String> appId) {
-            this.appId = Objects.requireNonNull(appId);
+            $.appId = appId;
             return this;
         }
+
         public Builder appId(String appId) {
-            this.appId = Output.of(Objects.requireNonNull(appId));
-            return this;
+            return appId(Output.of(appId));
         }
+
         public Builder displayName(Output<String> displayName) {
-            this.displayName = Objects.requireNonNull(displayName);
+            $.displayName = displayName;
             return this;
         }
+
         public Builder displayName(String displayName) {
-            this.displayName = Output.of(Objects.requireNonNull(displayName));
-            return this;
+            return displayName(Output.of(displayName));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder token(Output<String> token) {
-            this.token = Objects.requireNonNull(token);
+            $.token = token;
             return this;
         }
+
         public Builder token(String token) {
-            this.token = Output.of(Objects.requireNonNull(token));
-            return this;
-        }        public DebugTokenArgs build() {
-            return new DebugTokenArgs(appId, displayName, name, project, token);
+            return token(Output.of(token));
+        }
+
+        public DebugTokenArgs build() {
+            $.appId = Objects.requireNonNull($.appId, "expected parameter 'appId' to be non-null");
+            $.displayName = Objects.requireNonNull($.displayName, "expected parameter 'displayName' to be non-null");
+            $.token = Objects.requireNonNull($.token, "expected parameter 'token' to be non-null");
+            return $;
         }
     }
+
 }

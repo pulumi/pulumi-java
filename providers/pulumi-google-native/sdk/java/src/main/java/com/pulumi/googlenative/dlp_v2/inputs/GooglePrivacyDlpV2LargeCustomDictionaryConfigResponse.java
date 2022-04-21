@@ -23,7 +23,7 @@ public final class GooglePrivacyDlpV2LargeCustomDictionaryConfigResponse extends
      * 
      */
     @Import(name="bigQueryField", required=true)
-      private final GooglePrivacyDlpV2BigQueryFieldResponse bigQueryField;
+    private GooglePrivacyDlpV2BigQueryFieldResponse bigQueryField;
 
     public GooglePrivacyDlpV2BigQueryFieldResponse bigQueryField() {
         return this.bigQueryField;
@@ -34,7 +34,7 @@ public final class GooglePrivacyDlpV2LargeCustomDictionaryConfigResponse extends
      * 
      */
     @Import(name="cloudStorageFileSet", required=true)
-      private final GooglePrivacyDlpV2CloudStorageFileSetResponse cloudStorageFileSet;
+    private GooglePrivacyDlpV2CloudStorageFileSetResponse cloudStorageFileSet;
 
     public GooglePrivacyDlpV2CloudStorageFileSetResponse cloudStorageFileSet() {
         return this.cloudStorageFileSet;
@@ -45,64 +45,59 @@ public final class GooglePrivacyDlpV2LargeCustomDictionaryConfigResponse extends
      * 
      */
     @Import(name="outputPath", required=true)
-      private final GooglePrivacyDlpV2CloudStoragePathResponse outputPath;
+    private GooglePrivacyDlpV2CloudStoragePathResponse outputPath;
 
     public GooglePrivacyDlpV2CloudStoragePathResponse outputPath() {
         return this.outputPath;
     }
 
-    public GooglePrivacyDlpV2LargeCustomDictionaryConfigResponse(
-        GooglePrivacyDlpV2BigQueryFieldResponse bigQueryField,
-        GooglePrivacyDlpV2CloudStorageFileSetResponse cloudStorageFileSet,
-        GooglePrivacyDlpV2CloudStoragePathResponse outputPath) {
-        this.bigQueryField = Objects.requireNonNull(bigQueryField, "expected parameter 'bigQueryField' to be non-null");
-        this.cloudStorageFileSet = Objects.requireNonNull(cloudStorageFileSet, "expected parameter 'cloudStorageFileSet' to be non-null");
-        this.outputPath = Objects.requireNonNull(outputPath, "expected parameter 'outputPath' to be non-null");
-    }
+    private GooglePrivacyDlpV2LargeCustomDictionaryConfigResponse() {}
 
-    private GooglePrivacyDlpV2LargeCustomDictionaryConfigResponse() {
-        this.bigQueryField = null;
-        this.cloudStorageFileSet = null;
-        this.outputPath = null;
+    private GooglePrivacyDlpV2LargeCustomDictionaryConfigResponse(GooglePrivacyDlpV2LargeCustomDictionaryConfigResponse $) {
+        this.bigQueryField = $.bigQueryField;
+        this.cloudStorageFileSet = $.cloudStorageFileSet;
+        this.outputPath = $.outputPath;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GooglePrivacyDlpV2LargeCustomDictionaryConfigResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private GooglePrivacyDlpV2BigQueryFieldResponse bigQueryField;
-        private GooglePrivacyDlpV2CloudStorageFileSetResponse cloudStorageFileSet;
-        private GooglePrivacyDlpV2CloudStoragePathResponse outputPath;
+        private GooglePrivacyDlpV2LargeCustomDictionaryConfigResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GooglePrivacyDlpV2LargeCustomDictionaryConfigResponse();
         }
 
         public Builder(GooglePrivacyDlpV2LargeCustomDictionaryConfigResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.bigQueryField = defaults.bigQueryField;
-    	      this.cloudStorageFileSet = defaults.cloudStorageFileSet;
-    	      this.outputPath = defaults.outputPath;
+            $ = new GooglePrivacyDlpV2LargeCustomDictionaryConfigResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder bigQueryField(GooglePrivacyDlpV2BigQueryFieldResponse bigQueryField) {
-            this.bigQueryField = Objects.requireNonNull(bigQueryField);
+            $.bigQueryField = bigQueryField;
             return this;
         }
+
         public Builder cloudStorageFileSet(GooglePrivacyDlpV2CloudStorageFileSetResponse cloudStorageFileSet) {
-            this.cloudStorageFileSet = Objects.requireNonNull(cloudStorageFileSet);
+            $.cloudStorageFileSet = cloudStorageFileSet;
             return this;
         }
+
         public Builder outputPath(GooglePrivacyDlpV2CloudStoragePathResponse outputPath) {
-            this.outputPath = Objects.requireNonNull(outputPath);
+            $.outputPath = outputPath;
             return this;
-        }        public GooglePrivacyDlpV2LargeCustomDictionaryConfigResponse build() {
-            return new GooglePrivacyDlpV2LargeCustomDictionaryConfigResponse(bigQueryField, cloudStorageFileSet, outputPath);
+        }
+
+        public GooglePrivacyDlpV2LargeCustomDictionaryConfigResponse build() {
+            $.bigQueryField = Objects.requireNonNull($.bigQueryField, "expected parameter 'bigQueryField' to be non-null");
+            $.cloudStorageFileSet = Objects.requireNonNull($.cloudStorageFileSet, "expected parameter 'cloudStorageFileSet' to be non-null");
+            $.outputPath = Objects.requireNonNull($.outputPath, "expected parameter 'outputPath' to be non-null");
+            return $;
         }
     }
+
 }

@@ -17,45 +17,45 @@ public final class GetFirewallDomainListArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="id", required=true)
-      private final String id;
+    private String id;
 
     public String id() {
         return this.id;
     }
 
-    public GetFirewallDomainListArgs(String id) {
-        this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
-    }
+    private GetFirewallDomainListArgs() {}
 
-    private GetFirewallDomainListArgs() {
-        this.id = null;
+    private GetFirewallDomainListArgs(GetFirewallDomainListArgs $) {
+        this.id = $.id;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetFirewallDomainListArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String id;
+        private GetFirewallDomainListArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetFirewallDomainListArgs();
         }
 
         public Builder(GetFirewallDomainListArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.id = defaults.id;
+            $ = new GetFirewallDomainListArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder id(String id) {
-            this.id = Objects.requireNonNull(id);
+            $.id = id;
             return this;
-        }        public GetFirewallDomainListArgs build() {
-            return new GetFirewallDomainListArgs(id);
+        }
+
+        public GetFirewallDomainListArgs build() {
+            $.id = Objects.requireNonNull($.id, "expected parameter 'id' to be non-null");
+            return $;
         }
     }
+
 }

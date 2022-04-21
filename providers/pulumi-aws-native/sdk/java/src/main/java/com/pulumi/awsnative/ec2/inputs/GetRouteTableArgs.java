@@ -17,45 +17,45 @@ public final class GetRouteTableArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="routeTableId", required=true)
-      private final String routeTableId;
+    private String routeTableId;
 
     public String routeTableId() {
         return this.routeTableId;
     }
 
-    public GetRouteTableArgs(String routeTableId) {
-        this.routeTableId = Objects.requireNonNull(routeTableId, "expected parameter 'routeTableId' to be non-null");
-    }
+    private GetRouteTableArgs() {}
 
-    private GetRouteTableArgs() {
-        this.routeTableId = null;
+    private GetRouteTableArgs(GetRouteTableArgs $) {
+        this.routeTableId = $.routeTableId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetRouteTableArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String routeTableId;
+        private GetRouteTableArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetRouteTableArgs();
         }
 
         public Builder(GetRouteTableArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.routeTableId = defaults.routeTableId;
+            $ = new GetRouteTableArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder routeTableId(String routeTableId) {
-            this.routeTableId = Objects.requireNonNull(routeTableId);
+            $.routeTableId = routeTableId;
             return this;
-        }        public GetRouteTableArgs build() {
-            return new GetRouteTableArgs(routeTableId);
+        }
+
+        public GetRouteTableArgs build() {
+            $.routeTableId = Objects.requireNonNull($.routeTableId, "expected parameter 'routeTableId' to be non-null");
+            return $;
         }
     }
+
 }

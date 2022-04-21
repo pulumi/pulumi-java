@@ -23,7 +23,7 @@ public final class GoogleCloudDatalabelingV1beta1TextClassificationConfigRespons
      * 
      */
     @Import(name="allowMultiLabel", required=true)
-      private final Boolean allowMultiLabel;
+    private Boolean allowMultiLabel;
 
     public Boolean allowMultiLabel() {
         return this.allowMultiLabel;
@@ -34,7 +34,7 @@ public final class GoogleCloudDatalabelingV1beta1TextClassificationConfigRespons
      * 
      */
     @Import(name="annotationSpecSet", required=true)
-      private final String annotationSpecSet;
+    private String annotationSpecSet;
 
     public String annotationSpecSet() {
         return this.annotationSpecSet;
@@ -45,64 +45,59 @@ public final class GoogleCloudDatalabelingV1beta1TextClassificationConfigRespons
      * 
      */
     @Import(name="sentimentConfig", required=true)
-      private final GoogleCloudDatalabelingV1beta1SentimentConfigResponse sentimentConfig;
+    private GoogleCloudDatalabelingV1beta1SentimentConfigResponse sentimentConfig;
 
     public GoogleCloudDatalabelingV1beta1SentimentConfigResponse sentimentConfig() {
         return this.sentimentConfig;
     }
 
-    public GoogleCloudDatalabelingV1beta1TextClassificationConfigResponse(
-        Boolean allowMultiLabel,
-        String annotationSpecSet,
-        GoogleCloudDatalabelingV1beta1SentimentConfigResponse sentimentConfig) {
-        this.allowMultiLabel = Objects.requireNonNull(allowMultiLabel, "expected parameter 'allowMultiLabel' to be non-null");
-        this.annotationSpecSet = Objects.requireNonNull(annotationSpecSet, "expected parameter 'annotationSpecSet' to be non-null");
-        this.sentimentConfig = Objects.requireNonNull(sentimentConfig, "expected parameter 'sentimentConfig' to be non-null");
-    }
+    private GoogleCloudDatalabelingV1beta1TextClassificationConfigResponse() {}
 
-    private GoogleCloudDatalabelingV1beta1TextClassificationConfigResponse() {
-        this.allowMultiLabel = null;
-        this.annotationSpecSet = null;
-        this.sentimentConfig = null;
+    private GoogleCloudDatalabelingV1beta1TextClassificationConfigResponse(GoogleCloudDatalabelingV1beta1TextClassificationConfigResponse $) {
+        this.allowMultiLabel = $.allowMultiLabel;
+        this.annotationSpecSet = $.annotationSpecSet;
+        this.sentimentConfig = $.sentimentConfig;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudDatalabelingV1beta1TextClassificationConfigResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Boolean allowMultiLabel;
-        private String annotationSpecSet;
-        private GoogleCloudDatalabelingV1beta1SentimentConfigResponse sentimentConfig;
+        private GoogleCloudDatalabelingV1beta1TextClassificationConfigResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudDatalabelingV1beta1TextClassificationConfigResponse();
         }
 
         public Builder(GoogleCloudDatalabelingV1beta1TextClassificationConfigResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.allowMultiLabel = defaults.allowMultiLabel;
-    	      this.annotationSpecSet = defaults.annotationSpecSet;
-    	      this.sentimentConfig = defaults.sentimentConfig;
+            $ = new GoogleCloudDatalabelingV1beta1TextClassificationConfigResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder allowMultiLabel(Boolean allowMultiLabel) {
-            this.allowMultiLabel = Objects.requireNonNull(allowMultiLabel);
+            $.allowMultiLabel = allowMultiLabel;
             return this;
         }
+
         public Builder annotationSpecSet(String annotationSpecSet) {
-            this.annotationSpecSet = Objects.requireNonNull(annotationSpecSet);
+            $.annotationSpecSet = annotationSpecSet;
             return this;
         }
+
         public Builder sentimentConfig(GoogleCloudDatalabelingV1beta1SentimentConfigResponse sentimentConfig) {
-            this.sentimentConfig = Objects.requireNonNull(sentimentConfig);
+            $.sentimentConfig = sentimentConfig;
             return this;
-        }        public GoogleCloudDatalabelingV1beta1TextClassificationConfigResponse build() {
-            return new GoogleCloudDatalabelingV1beta1TextClassificationConfigResponse(allowMultiLabel, annotationSpecSet, sentimentConfig);
+        }
+
+        public GoogleCloudDatalabelingV1beta1TextClassificationConfigResponse build() {
+            $.allowMultiLabel = Objects.requireNonNull($.allowMultiLabel, "expected parameter 'allowMultiLabel' to be non-null");
+            $.annotationSpecSet = Objects.requireNonNull($.annotationSpecSet, "expected parameter 'annotationSpecSet' to be non-null");
+            $.sentimentConfig = Objects.requireNonNull($.sentimentConfig, "expected parameter 'sentimentConfig' to be non-null");
+            return $;
         }
     }
+
 }

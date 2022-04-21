@@ -18,78 +18,73 @@ public final class RuleGroupVisibilityConfig extends com.pulumi.resources.Invoke
     public static final RuleGroupVisibilityConfig Empty = new RuleGroupVisibilityConfig();
 
     @Import(name="cloudWatchMetricsEnabled", required=true)
-      private final Boolean cloudWatchMetricsEnabled;
+    private Boolean cloudWatchMetricsEnabled;
 
     public Boolean cloudWatchMetricsEnabled() {
         return this.cloudWatchMetricsEnabled;
     }
 
     @Import(name="metricName", required=true)
-      private final String metricName;
+    private String metricName;
 
     public String metricName() {
         return this.metricName;
     }
 
     @Import(name="sampledRequestsEnabled", required=true)
-      private final Boolean sampledRequestsEnabled;
+    private Boolean sampledRequestsEnabled;
 
     public Boolean sampledRequestsEnabled() {
         return this.sampledRequestsEnabled;
     }
 
-    public RuleGroupVisibilityConfig(
-        Boolean cloudWatchMetricsEnabled,
-        String metricName,
-        Boolean sampledRequestsEnabled) {
-        this.cloudWatchMetricsEnabled = Objects.requireNonNull(cloudWatchMetricsEnabled, "expected parameter 'cloudWatchMetricsEnabled' to be non-null");
-        this.metricName = Objects.requireNonNull(metricName, "expected parameter 'metricName' to be non-null");
-        this.sampledRequestsEnabled = Objects.requireNonNull(sampledRequestsEnabled, "expected parameter 'sampledRequestsEnabled' to be non-null");
-    }
+    private RuleGroupVisibilityConfig() {}
 
-    private RuleGroupVisibilityConfig() {
-        this.cloudWatchMetricsEnabled = null;
-        this.metricName = null;
-        this.sampledRequestsEnabled = null;
+    private RuleGroupVisibilityConfig(RuleGroupVisibilityConfig $) {
+        this.cloudWatchMetricsEnabled = $.cloudWatchMetricsEnabled;
+        this.metricName = $.metricName;
+        this.sampledRequestsEnabled = $.sampledRequestsEnabled;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RuleGroupVisibilityConfig defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Boolean cloudWatchMetricsEnabled;
-        private String metricName;
-        private Boolean sampledRequestsEnabled;
+        private RuleGroupVisibilityConfig $;
 
         public Builder() {
-    	      // Empty
+            $ = new RuleGroupVisibilityConfig();
         }
 
         public Builder(RuleGroupVisibilityConfig defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cloudWatchMetricsEnabled = defaults.cloudWatchMetricsEnabled;
-    	      this.metricName = defaults.metricName;
-    	      this.sampledRequestsEnabled = defaults.sampledRequestsEnabled;
+            $ = new RuleGroupVisibilityConfig(Objects.requireNonNull(defaults));
         }
 
         public Builder cloudWatchMetricsEnabled(Boolean cloudWatchMetricsEnabled) {
-            this.cloudWatchMetricsEnabled = Objects.requireNonNull(cloudWatchMetricsEnabled);
+            $.cloudWatchMetricsEnabled = cloudWatchMetricsEnabled;
             return this;
         }
+
         public Builder metricName(String metricName) {
-            this.metricName = Objects.requireNonNull(metricName);
+            $.metricName = metricName;
             return this;
         }
+
         public Builder sampledRequestsEnabled(Boolean sampledRequestsEnabled) {
-            this.sampledRequestsEnabled = Objects.requireNonNull(sampledRequestsEnabled);
+            $.sampledRequestsEnabled = sampledRequestsEnabled;
             return this;
-        }        public RuleGroupVisibilityConfig build() {
-            return new RuleGroupVisibilityConfig(cloudWatchMetricsEnabled, metricName, sampledRequestsEnabled);
+        }
+
+        public RuleGroupVisibilityConfig build() {
+            $.cloudWatchMetricsEnabled = Objects.requireNonNull($.cloudWatchMetricsEnabled, "expected parameter 'cloudWatchMetricsEnabled' to be non-null");
+            $.metricName = Objects.requireNonNull($.metricName, "expected parameter 'metricName' to be non-null");
+            $.sampledRequestsEnabled = Objects.requireNonNull($.sampledRequestsEnabled, "expected parameter 'sampledRequestsEnabled' to be non-null");
+            return $;
         }
     }
+
 }

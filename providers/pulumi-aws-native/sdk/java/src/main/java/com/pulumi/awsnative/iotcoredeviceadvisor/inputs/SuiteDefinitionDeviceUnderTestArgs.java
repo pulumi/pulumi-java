@@ -5,9 +5,9 @@ package com.pulumi.awsnative.iotcoredeviceadvisor.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -16,70 +16,65 @@ public final class SuiteDefinitionDeviceUnderTestArgs extends com.pulumi.resourc
     public static final SuiteDefinitionDeviceUnderTestArgs Empty = new SuiteDefinitionDeviceUnderTestArgs();
 
     @Import(name="certificateArn")
-      private final @Nullable Output<String> certificateArn;
+    private @Nullable Output<String> certificateArn;
 
-    public Output<String> certificateArn() {
-        return this.certificateArn == null ? Codegen.empty() : this.certificateArn;
+    public Optional<Output<String>> certificateArn() {
+        return Optional.ofNullable(this.certificateArn);
     }
 
     @Import(name="thingArn")
-      private final @Nullable Output<String> thingArn;
+    private @Nullable Output<String> thingArn;
 
-    public Output<String> thingArn() {
-        return this.thingArn == null ? Codegen.empty() : this.thingArn;
+    public Optional<Output<String>> thingArn() {
+        return Optional.ofNullable(this.thingArn);
     }
 
-    public SuiteDefinitionDeviceUnderTestArgs(
-        @Nullable Output<String> certificateArn,
-        @Nullable Output<String> thingArn) {
-        this.certificateArn = certificateArn;
-        this.thingArn = thingArn;
-    }
+    private SuiteDefinitionDeviceUnderTestArgs() {}
 
-    private SuiteDefinitionDeviceUnderTestArgs() {
-        this.certificateArn = Codegen.empty();
-        this.thingArn = Codegen.empty();
+    private SuiteDefinitionDeviceUnderTestArgs(SuiteDefinitionDeviceUnderTestArgs $) {
+        this.certificateArn = $.certificateArn;
+        this.thingArn = $.thingArn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SuiteDefinitionDeviceUnderTestArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> certificateArn;
-        private @Nullable Output<String> thingArn;
+        private SuiteDefinitionDeviceUnderTestArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SuiteDefinitionDeviceUnderTestArgs();
         }
 
         public Builder(SuiteDefinitionDeviceUnderTestArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.certificateArn = defaults.certificateArn;
-    	      this.thingArn = defaults.thingArn;
+            $ = new SuiteDefinitionDeviceUnderTestArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder certificateArn(@Nullable Output<String> certificateArn) {
-            this.certificateArn = certificateArn;
+            $.certificateArn = certificateArn;
             return this;
         }
-        public Builder certificateArn(@Nullable String certificateArn) {
-            this.certificateArn = Codegen.ofNullable(certificateArn);
-            return this;
+
+        public Builder certificateArn(String certificateArn) {
+            return certificateArn(Output.of(certificateArn));
         }
+
         public Builder thingArn(@Nullable Output<String> thingArn) {
-            this.thingArn = thingArn;
+            $.thingArn = thingArn;
             return this;
         }
-        public Builder thingArn(@Nullable String thingArn) {
-            this.thingArn = Codegen.ofNullable(thingArn);
-            return this;
-        }        public SuiteDefinitionDeviceUnderTestArgs build() {
-            return new SuiteDefinitionDeviceUnderTestArgs(certificateArn, thingArn);
+
+        public Builder thingArn(String thingArn) {
+            return thingArn(Output.of(thingArn));
+        }
+
+        public SuiteDefinitionDeviceUnderTestArgs build() {
+            return $;
         }
     }
+
 }

@@ -17,7 +17,7 @@ public final class GetServerCollectorArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="projectName", required=true)
-      private final String projectName;
+    private String projectName;
 
     public String projectName() {
         return this.projectName;
@@ -28,7 +28,7 @@ public final class GetServerCollectorArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -39,64 +39,59 @@ public final class GetServerCollectorArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="serverCollectorName", required=true)
-      private final String serverCollectorName;
+    private String serverCollectorName;
 
     public String serverCollectorName() {
         return this.serverCollectorName;
     }
 
-    public GetServerCollectorArgs(
-        String projectName,
-        String resourceGroupName,
-        String serverCollectorName) {
-        this.projectName = Objects.requireNonNull(projectName, "expected parameter 'projectName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.serverCollectorName = Objects.requireNonNull(serverCollectorName, "expected parameter 'serverCollectorName' to be non-null");
-    }
+    private GetServerCollectorArgs() {}
 
-    private GetServerCollectorArgs() {
-        this.projectName = null;
-        this.resourceGroupName = null;
-        this.serverCollectorName = null;
+    private GetServerCollectorArgs(GetServerCollectorArgs $) {
+        this.projectName = $.projectName;
+        this.resourceGroupName = $.resourceGroupName;
+        this.serverCollectorName = $.serverCollectorName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetServerCollectorArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String projectName;
-        private String resourceGroupName;
-        private String serverCollectorName;
+        private GetServerCollectorArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetServerCollectorArgs();
         }
 
         public Builder(GetServerCollectorArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.projectName = defaults.projectName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.serverCollectorName = defaults.serverCollectorName;
+            $ = new GetServerCollectorArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder projectName(String projectName) {
-            this.projectName = Objects.requireNonNull(projectName);
+            $.projectName = projectName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder serverCollectorName(String serverCollectorName) {
-            this.serverCollectorName = Objects.requireNonNull(serverCollectorName);
+            $.serverCollectorName = serverCollectorName;
             return this;
-        }        public GetServerCollectorArgs build() {
-            return new GetServerCollectorArgs(projectName, resourceGroupName, serverCollectorName);
+        }
+
+        public GetServerCollectorArgs build() {
+            $.projectName = Objects.requireNonNull($.projectName, "expected parameter 'projectName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.serverCollectorName = Objects.requireNonNull($.serverCollectorName, "expected parameter 'serverCollectorName' to be non-null");
+            return $;
         }
     }
+
 }

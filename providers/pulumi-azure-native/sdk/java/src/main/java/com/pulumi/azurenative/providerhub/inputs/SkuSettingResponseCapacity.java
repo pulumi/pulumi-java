@@ -16,94 +16,84 @@ public final class SkuSettingResponseCapacity extends com.pulumi.resources.Invok
     public static final SkuSettingResponseCapacity Empty = new SkuSettingResponseCapacity();
 
     @Import(name="default")
-      private final @Nullable Integer default_;
+    private @Nullable Integer default_;
 
     public Optional<Integer> default_() {
-        return this.default_ == null ? Optional.empty() : Optional.ofNullable(this.default_);
+        return Optional.ofNullable(this.default_);
     }
 
     @Import(name="maximum")
-      private final @Nullable Integer maximum;
+    private @Nullable Integer maximum;
 
     public Optional<Integer> maximum() {
-        return this.maximum == null ? Optional.empty() : Optional.ofNullable(this.maximum);
+        return Optional.ofNullable(this.maximum);
     }
 
     @Import(name="minimum", required=true)
-      private final Integer minimum;
+    private Integer minimum;
 
     public Integer minimum() {
         return this.minimum;
     }
 
     @Import(name="scaleType")
-      private final @Nullable String scaleType;
+    private @Nullable String scaleType;
 
     public Optional<String> scaleType() {
-        return this.scaleType == null ? Optional.empty() : Optional.ofNullable(this.scaleType);
+        return Optional.ofNullable(this.scaleType);
     }
 
-    public SkuSettingResponseCapacity(
-        @Nullable Integer default_,
-        @Nullable Integer maximum,
-        Integer minimum,
-        @Nullable String scaleType) {
-        this.default_ = default_;
-        this.maximum = maximum;
-        this.minimum = Objects.requireNonNull(minimum, "expected parameter 'minimum' to be non-null");
-        this.scaleType = scaleType;
-    }
+    private SkuSettingResponseCapacity() {}
 
-    private SkuSettingResponseCapacity() {
-        this.default_ = null;
-        this.maximum = null;
-        this.minimum = null;
-        this.scaleType = null;
+    private SkuSettingResponseCapacity(SkuSettingResponseCapacity $) {
+        this.default_ = $.default_;
+        this.maximum = $.maximum;
+        this.minimum = $.minimum;
+        this.scaleType = $.scaleType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SkuSettingResponseCapacity defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Integer default_;
-        private @Nullable Integer maximum;
-        private Integer minimum;
-        private @Nullable String scaleType;
+        private SkuSettingResponseCapacity $;
 
         public Builder() {
-    	      // Empty
+            $ = new SkuSettingResponseCapacity();
         }
 
         public Builder(SkuSettingResponseCapacity defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.default_ = defaults.default_;
-    	      this.maximum = defaults.maximum;
-    	      this.minimum = defaults.minimum;
-    	      this.scaleType = defaults.scaleType;
+            $ = new SkuSettingResponseCapacity(Objects.requireNonNull(defaults));
         }
 
         public Builder default_(@Nullable Integer default_) {
-            this.default_ = default_;
+            $.default_ = default_;
             return this;
         }
+
         public Builder maximum(@Nullable Integer maximum) {
-            this.maximum = maximum;
+            $.maximum = maximum;
             return this;
         }
+
         public Builder minimum(Integer minimum) {
-            this.minimum = Objects.requireNonNull(minimum);
+            $.minimum = minimum;
             return this;
         }
+
         public Builder scaleType(@Nullable String scaleType) {
-            this.scaleType = scaleType;
+            $.scaleType = scaleType;
             return this;
-        }        public SkuSettingResponseCapacity build() {
-            return new SkuSettingResponseCapacity(default_, maximum, minimum, scaleType);
+        }
+
+        public SkuSettingResponseCapacity build() {
+            $.minimum = Objects.requireNonNull($.minimum, "expected parameter 'minimum' to be non-null");
+            return $;
         }
     }
+
 }

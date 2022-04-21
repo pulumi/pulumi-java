@@ -5,10 +5,10 @@ package com.pulumi.azurenative.providerhub.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -17,76 +17,73 @@ public final class DefaultRolloutSpecificationCanaryArgs extends com.pulumi.reso
     public static final DefaultRolloutSpecificationCanaryArgs Empty = new DefaultRolloutSpecificationCanaryArgs();
 
     @Import(name="regions")
-      private final @Nullable Output<List<String>> regions;
+    private @Nullable Output<List<String>> regions;
 
-    public Output<List<String>> regions() {
-        return this.regions == null ? Codegen.empty() : this.regions;
+    public Optional<Output<List<String>>> regions() {
+        return Optional.ofNullable(this.regions);
     }
 
     @Import(name="skipRegions")
-      private final @Nullable Output<List<String>> skipRegions;
+    private @Nullable Output<List<String>> skipRegions;
 
-    public Output<List<String>> skipRegions() {
-        return this.skipRegions == null ? Codegen.empty() : this.skipRegions;
+    public Optional<Output<List<String>>> skipRegions() {
+        return Optional.ofNullable(this.skipRegions);
     }
 
-    public DefaultRolloutSpecificationCanaryArgs(
-        @Nullable Output<List<String>> regions,
-        @Nullable Output<List<String>> skipRegions) {
-        this.regions = regions;
-        this.skipRegions = skipRegions;
-    }
+    private DefaultRolloutSpecificationCanaryArgs() {}
 
-    private DefaultRolloutSpecificationCanaryArgs() {
-        this.regions = Codegen.empty();
-        this.skipRegions = Codegen.empty();
+    private DefaultRolloutSpecificationCanaryArgs(DefaultRolloutSpecificationCanaryArgs $) {
+        this.regions = $.regions;
+        this.skipRegions = $.skipRegions;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DefaultRolloutSpecificationCanaryArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> regions;
-        private @Nullable Output<List<String>> skipRegions;
+        private DefaultRolloutSpecificationCanaryArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DefaultRolloutSpecificationCanaryArgs();
         }
 
         public Builder(DefaultRolloutSpecificationCanaryArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.regions = defaults.regions;
-    	      this.skipRegions = defaults.skipRegions;
+            $ = new DefaultRolloutSpecificationCanaryArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder regions(@Nullable Output<List<String>> regions) {
-            this.regions = regions;
+            $.regions = regions;
             return this;
         }
-        public Builder regions(@Nullable List<String> regions) {
-            this.regions = Codegen.ofNullable(regions);
-            return this;
+
+        public Builder regions(List<String> regions) {
+            return regions(Output.of(regions));
         }
+
         public Builder regions(String... regions) {
             return regions(List.of(regions));
         }
+
         public Builder skipRegions(@Nullable Output<List<String>> skipRegions) {
-            this.skipRegions = skipRegions;
+            $.skipRegions = skipRegions;
             return this;
         }
-        public Builder skipRegions(@Nullable List<String> skipRegions) {
-            this.skipRegions = Codegen.ofNullable(skipRegions);
-            return this;
+
+        public Builder skipRegions(List<String> skipRegions) {
+            return skipRegions(Output.of(skipRegions));
         }
+
         public Builder skipRegions(String... skipRegions) {
             return skipRegions(List.of(skipRegions));
-        }        public DefaultRolloutSpecificationCanaryArgs build() {
-            return new DefaultRolloutSpecificationCanaryArgs(regions, skipRegions);
+        }
+
+        public DefaultRolloutSpecificationCanaryArgs build() {
+            return $;
         }
     }
+
 }

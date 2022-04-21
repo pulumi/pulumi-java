@@ -5,7 +5,6 @@ package com.pulumi.googlenative.assuredworkloads_v1;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.assuredworkloads_v1.enums.WorkloadComplianceRegime;
 import com.pulumi.googlenative.assuredworkloads_v1.inputs.GoogleCloudAssuredworkloadsV1WorkloadKMSSettingsArgs;
 import com.pulumi.googlenative.assuredworkloads_v1.inputs.GoogleCloudAssuredworkloadsV1WorkloadResourceSettingsArgs;
@@ -14,6 +13,7 @@ import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class WorkloadArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="billingAccount")
-      private final @Nullable Output<String> billingAccount;
+    private @Nullable Output<String> billingAccount;
 
-    public Output<String> billingAccount() {
-        return this.billingAccount == null ? Codegen.empty() : this.billingAccount;
+    public Optional<Output<String>> billingAccount() {
+        return Optional.ofNullable(this.billingAccount);
     }
 
     /**
@@ -37,7 +37,7 @@ public final class WorkloadArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="complianceRegime", required=true)
-      private final Output<WorkloadComplianceRegime> complianceRegime;
+    private Output<WorkloadComplianceRegime> complianceRegime;
 
     public Output<WorkloadComplianceRegime> complianceRegime() {
         return this.complianceRegime;
@@ -48,7 +48,7 @@ public final class WorkloadArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="displayName", required=true)
-      private final Output<String> displayName;
+    private Output<String> displayName;
 
     public Output<String> displayName() {
         return this.displayName;
@@ -59,10 +59,10 @@ public final class WorkloadArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="enableSovereignControls")
-      private final @Nullable Output<Boolean> enableSovereignControls;
+    private @Nullable Output<Boolean> enableSovereignControls;
 
-    public Output<Boolean> enableSovereignControls() {
-        return this.enableSovereignControls == null ? Codegen.empty() : this.enableSovereignControls;
+    public Optional<Output<Boolean>> enableSovereignControls() {
+        return Optional.ofNullable(this.enableSovereignControls);
     }
 
     /**
@@ -70,17 +70,17 @@ public final class WorkloadArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="etag")
-      private final @Nullable Output<String> etag;
+    private @Nullable Output<String> etag;
 
-    public Output<String> etag() {
-        return this.etag == null ? Codegen.empty() : this.etag;
+    public Optional<Output<String>> etag() {
+        return Optional.ofNullable(this.etag);
     }
 
     @Import(name="externalId")
-      private final @Nullable Output<String> externalId;
+    private @Nullable Output<String> externalId;
 
-    public Output<String> externalId() {
-        return this.externalId == null ? Codegen.empty() : this.externalId;
+    public Optional<Output<String>> externalId() {
+        return Optional.ofNullable(this.externalId);
     }
 
     /**
@@ -88,10 +88,10 @@ public final class WorkloadArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="kmsSettings")
-      private final @Nullable Output<GoogleCloudAssuredworkloadsV1WorkloadKMSSettingsArgs> kmsSettings;
+    private @Nullable Output<GoogleCloudAssuredworkloadsV1WorkloadKMSSettingsArgs> kmsSettings;
 
-    public Output<GoogleCloudAssuredworkloadsV1WorkloadKMSSettingsArgs> kmsSettings() {
-        return this.kmsSettings == null ? Codegen.empty() : this.kmsSettings;
+    public Optional<Output<GoogleCloudAssuredworkloadsV1WorkloadKMSSettingsArgs>> kmsSettings() {
+        return Optional.ofNullable(this.kmsSettings);
     }
 
     /**
@@ -99,17 +99,17 @@ public final class WorkloadArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="labels")
-      private final @Nullable Output<Map<String,String>> labels;
+    private @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> labels() {
-        return this.labels == null ? Codegen.empty() : this.labels;
+    public Optional<Output<Map<String,String>>> labels() {
+        return Optional.ofNullable(this.labels);
     }
 
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -117,14 +117,14 @@ public final class WorkloadArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     @Import(name="organizationId", required=true)
-      private final Output<String> organizationId;
+    private Output<String> organizationId;
 
     public Output<String> organizationId() {
         return this.organizationId;
@@ -135,10 +135,10 @@ public final class WorkloadArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="provisionedResourcesParent")
-      private final @Nullable Output<String> provisionedResourcesParent;
+    private @Nullable Output<String> provisionedResourcesParent;
 
-    public Output<String> provisionedResourcesParent() {
-        return this.provisionedResourcesParent == null ? Codegen.empty() : this.provisionedResourcesParent;
+    public Optional<Output<String>> provisionedResourcesParent() {
+        return Optional.ofNullable(this.provisionedResourcesParent);
     }
 
     /**
@@ -146,209 +146,175 @@ public final class WorkloadArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceSettings")
-      private final @Nullable Output<List<GoogleCloudAssuredworkloadsV1WorkloadResourceSettingsArgs>> resourceSettings;
+    private @Nullable Output<List<GoogleCloudAssuredworkloadsV1WorkloadResourceSettingsArgs>> resourceSettings;
 
-    public Output<List<GoogleCloudAssuredworkloadsV1WorkloadResourceSettingsArgs>> resourceSettings() {
-        return this.resourceSettings == null ? Codegen.empty() : this.resourceSettings;
+    public Optional<Output<List<GoogleCloudAssuredworkloadsV1WorkloadResourceSettingsArgs>>> resourceSettings() {
+        return Optional.ofNullable(this.resourceSettings);
     }
 
-    public WorkloadArgs(
-        @Nullable Output<String> billingAccount,
-        Output<WorkloadComplianceRegime> complianceRegime,
-        Output<String> displayName,
-        @Nullable Output<Boolean> enableSovereignControls,
-        @Nullable Output<String> etag,
-        @Nullable Output<String> externalId,
-        @Nullable Output<GoogleCloudAssuredworkloadsV1WorkloadKMSSettingsArgs> kmsSettings,
-        @Nullable Output<Map<String,String>> labels,
-        @Nullable Output<String> location,
-        @Nullable Output<String> name,
-        Output<String> organizationId,
-        @Nullable Output<String> provisionedResourcesParent,
-        @Nullable Output<List<GoogleCloudAssuredworkloadsV1WorkloadResourceSettingsArgs>> resourceSettings) {
-        this.billingAccount = billingAccount;
-        this.complianceRegime = Objects.requireNonNull(complianceRegime, "expected parameter 'complianceRegime' to be non-null");
-        this.displayName = Objects.requireNonNull(displayName, "expected parameter 'displayName' to be non-null");
-        this.enableSovereignControls = enableSovereignControls;
-        this.etag = etag;
-        this.externalId = externalId;
-        this.kmsSettings = kmsSettings;
-        this.labels = labels;
-        this.location = location;
-        this.name = name;
-        this.organizationId = Objects.requireNonNull(organizationId, "expected parameter 'organizationId' to be non-null");
-        this.provisionedResourcesParent = provisionedResourcesParent;
-        this.resourceSettings = resourceSettings;
-    }
+    private WorkloadArgs() {}
 
-    private WorkloadArgs() {
-        this.billingAccount = Codegen.empty();
-        this.complianceRegime = Codegen.empty();
-        this.displayName = Codegen.empty();
-        this.enableSovereignControls = Codegen.empty();
-        this.etag = Codegen.empty();
-        this.externalId = Codegen.empty();
-        this.kmsSettings = Codegen.empty();
-        this.labels = Codegen.empty();
-        this.location = Codegen.empty();
-        this.name = Codegen.empty();
-        this.organizationId = Codegen.empty();
-        this.provisionedResourcesParent = Codegen.empty();
-        this.resourceSettings = Codegen.empty();
+    private WorkloadArgs(WorkloadArgs $) {
+        this.billingAccount = $.billingAccount;
+        this.complianceRegime = $.complianceRegime;
+        this.displayName = $.displayName;
+        this.enableSovereignControls = $.enableSovereignControls;
+        this.etag = $.etag;
+        this.externalId = $.externalId;
+        this.kmsSettings = $.kmsSettings;
+        this.labels = $.labels;
+        this.location = $.location;
+        this.name = $.name;
+        this.organizationId = $.organizationId;
+        this.provisionedResourcesParent = $.provisionedResourcesParent;
+        this.resourceSettings = $.resourceSettings;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WorkloadArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> billingAccount;
-        private Output<WorkloadComplianceRegime> complianceRegime;
-        private Output<String> displayName;
-        private @Nullable Output<Boolean> enableSovereignControls;
-        private @Nullable Output<String> etag;
-        private @Nullable Output<String> externalId;
-        private @Nullable Output<GoogleCloudAssuredworkloadsV1WorkloadKMSSettingsArgs> kmsSettings;
-        private @Nullable Output<Map<String,String>> labels;
-        private @Nullable Output<String> location;
-        private @Nullable Output<String> name;
-        private Output<String> organizationId;
-        private @Nullable Output<String> provisionedResourcesParent;
-        private @Nullable Output<List<GoogleCloudAssuredworkloadsV1WorkloadResourceSettingsArgs>> resourceSettings;
+        private WorkloadArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new WorkloadArgs();
         }
 
         public Builder(WorkloadArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.billingAccount = defaults.billingAccount;
-    	      this.complianceRegime = defaults.complianceRegime;
-    	      this.displayName = defaults.displayName;
-    	      this.enableSovereignControls = defaults.enableSovereignControls;
-    	      this.etag = defaults.etag;
-    	      this.externalId = defaults.externalId;
-    	      this.kmsSettings = defaults.kmsSettings;
-    	      this.labels = defaults.labels;
-    	      this.location = defaults.location;
-    	      this.name = defaults.name;
-    	      this.organizationId = defaults.organizationId;
-    	      this.provisionedResourcesParent = defaults.provisionedResourcesParent;
-    	      this.resourceSettings = defaults.resourceSettings;
+            $ = new WorkloadArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder billingAccount(@Nullable Output<String> billingAccount) {
-            this.billingAccount = billingAccount;
+            $.billingAccount = billingAccount;
             return this;
         }
-        public Builder billingAccount(@Nullable String billingAccount) {
-            this.billingAccount = Codegen.ofNullable(billingAccount);
-            return this;
+
+        public Builder billingAccount(String billingAccount) {
+            return billingAccount(Output.of(billingAccount));
         }
+
         public Builder complianceRegime(Output<WorkloadComplianceRegime> complianceRegime) {
-            this.complianceRegime = Objects.requireNonNull(complianceRegime);
+            $.complianceRegime = complianceRegime;
             return this;
         }
+
         public Builder complianceRegime(WorkloadComplianceRegime complianceRegime) {
-            this.complianceRegime = Output.of(Objects.requireNonNull(complianceRegime));
-            return this;
+            return complianceRegime(Output.of(complianceRegime));
         }
+
         public Builder displayName(Output<String> displayName) {
-            this.displayName = Objects.requireNonNull(displayName);
+            $.displayName = displayName;
             return this;
         }
+
         public Builder displayName(String displayName) {
-            this.displayName = Output.of(Objects.requireNonNull(displayName));
-            return this;
+            return displayName(Output.of(displayName));
         }
+
         public Builder enableSovereignControls(@Nullable Output<Boolean> enableSovereignControls) {
-            this.enableSovereignControls = enableSovereignControls;
+            $.enableSovereignControls = enableSovereignControls;
             return this;
         }
-        public Builder enableSovereignControls(@Nullable Boolean enableSovereignControls) {
-            this.enableSovereignControls = Codegen.ofNullable(enableSovereignControls);
-            return this;
+
+        public Builder enableSovereignControls(Boolean enableSovereignControls) {
+            return enableSovereignControls(Output.of(enableSovereignControls));
         }
+
         public Builder etag(@Nullable Output<String> etag) {
-            this.etag = etag;
+            $.etag = etag;
             return this;
         }
-        public Builder etag(@Nullable String etag) {
-            this.etag = Codegen.ofNullable(etag);
-            return this;
+
+        public Builder etag(String etag) {
+            return etag(Output.of(etag));
         }
+
         public Builder externalId(@Nullable Output<String> externalId) {
-            this.externalId = externalId;
+            $.externalId = externalId;
             return this;
         }
-        public Builder externalId(@Nullable String externalId) {
-            this.externalId = Codegen.ofNullable(externalId);
-            return this;
+
+        public Builder externalId(String externalId) {
+            return externalId(Output.of(externalId));
         }
+
         public Builder kmsSettings(@Nullable Output<GoogleCloudAssuredworkloadsV1WorkloadKMSSettingsArgs> kmsSettings) {
-            this.kmsSettings = kmsSettings;
+            $.kmsSettings = kmsSettings;
             return this;
         }
-        public Builder kmsSettings(@Nullable GoogleCloudAssuredworkloadsV1WorkloadKMSSettingsArgs kmsSettings) {
-            this.kmsSettings = Codegen.ofNullable(kmsSettings);
-            return this;
+
+        public Builder kmsSettings(GoogleCloudAssuredworkloadsV1WorkloadKMSSettingsArgs kmsSettings) {
+            return kmsSettings(Output.of(kmsSettings));
         }
+
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
-            this.labels = labels;
+            $.labels = labels;
             return this;
         }
-        public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Codegen.ofNullable(labels);
-            return this;
+
+        public Builder labels(Map<String,String> labels) {
+            return labels(Output.of(labels));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder organizationId(Output<String> organizationId) {
-            this.organizationId = Objects.requireNonNull(organizationId);
+            $.organizationId = organizationId;
             return this;
         }
+
         public Builder organizationId(String organizationId) {
-            this.organizationId = Output.of(Objects.requireNonNull(organizationId));
-            return this;
+            return organizationId(Output.of(organizationId));
         }
+
         public Builder provisionedResourcesParent(@Nullable Output<String> provisionedResourcesParent) {
-            this.provisionedResourcesParent = provisionedResourcesParent;
+            $.provisionedResourcesParent = provisionedResourcesParent;
             return this;
         }
-        public Builder provisionedResourcesParent(@Nullable String provisionedResourcesParent) {
-            this.provisionedResourcesParent = Codegen.ofNullable(provisionedResourcesParent);
-            return this;
+
+        public Builder provisionedResourcesParent(String provisionedResourcesParent) {
+            return provisionedResourcesParent(Output.of(provisionedResourcesParent));
         }
+
         public Builder resourceSettings(@Nullable Output<List<GoogleCloudAssuredworkloadsV1WorkloadResourceSettingsArgs>> resourceSettings) {
-            this.resourceSettings = resourceSettings;
+            $.resourceSettings = resourceSettings;
             return this;
         }
-        public Builder resourceSettings(@Nullable List<GoogleCloudAssuredworkloadsV1WorkloadResourceSettingsArgs> resourceSettings) {
-            this.resourceSettings = Codegen.ofNullable(resourceSettings);
-            return this;
+
+        public Builder resourceSettings(List<GoogleCloudAssuredworkloadsV1WorkloadResourceSettingsArgs> resourceSettings) {
+            return resourceSettings(Output.of(resourceSettings));
         }
+
         public Builder resourceSettings(GoogleCloudAssuredworkloadsV1WorkloadResourceSettingsArgs... resourceSettings) {
             return resourceSettings(List.of(resourceSettings));
-        }        public WorkloadArgs build() {
-            return new WorkloadArgs(billingAccount, complianceRegime, displayName, enableSovereignControls, etag, externalId, kmsSettings, labels, location, name, organizationId, provisionedResourcesParent, resourceSettings);
+        }
+
+        public WorkloadArgs build() {
+            $.complianceRegime = Objects.requireNonNull($.complianceRegime, "expected parameter 'complianceRegime' to be non-null");
+            $.displayName = Objects.requireNonNull($.displayName, "expected parameter 'displayName' to be non-null");
+            $.organizationId = Objects.requireNonNull($.organizationId, "expected parameter 'organizationId' to be non-null");
+            return $;
         }
     }
+
 }

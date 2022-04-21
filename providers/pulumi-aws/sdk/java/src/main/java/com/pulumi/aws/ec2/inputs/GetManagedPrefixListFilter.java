@@ -18,7 +18,7 @@ public final class GetManagedPrefixListFilter extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -29,58 +29,56 @@ public final class GetManagedPrefixListFilter extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="values", required=true)
-      private final List<String> values;
+    private List<String> values;
 
     public List<String> values() {
         return this.values;
     }
 
-    public GetManagedPrefixListFilter(
-        String name,
-        List<String> values) {
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.values = Objects.requireNonNull(values, "expected parameter 'values' to be non-null");
-    }
+    private GetManagedPrefixListFilter() {}
 
-    private GetManagedPrefixListFilter() {
-        this.name = null;
-        this.values = List.of();
+    private GetManagedPrefixListFilter(GetManagedPrefixListFilter $) {
+        this.name = $.name;
+        this.values = $.values;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetManagedPrefixListFilter defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String name;
-        private List<String> values;
+        private GetManagedPrefixListFilter $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetManagedPrefixListFilter();
         }
 
         public Builder(GetManagedPrefixListFilter defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.values = defaults.values;
+            $ = new GetManagedPrefixListFilter(Objects.requireNonNull(defaults));
         }
 
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder values(List<String> values) {
-            this.values = Objects.requireNonNull(values);
+            $.values = values;
             return this;
         }
+
         public Builder values(String... values) {
             return values(List.of(values));
-        }        public GetManagedPrefixListFilter build() {
-            return new GetManagedPrefixListFilter(name, values);
+        }
+
+        public GetManagedPrefixListFilter build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.values = Objects.requireNonNull($.values, "expected parameter 'values' to be non-null");
+            return $;
         }
     }
+
 }

@@ -18,45 +18,45 @@ public final class MemcacheParametersResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="params", required=true)
-      private final Map<String,String> params;
+    private Map<String,String> params;
 
     public Map<String,String> params() {
         return this.params;
     }
 
-    public MemcacheParametersResponse(Map<String,String> params) {
-        this.params = Objects.requireNonNull(params, "expected parameter 'params' to be non-null");
-    }
+    private MemcacheParametersResponse() {}
 
-    private MemcacheParametersResponse() {
-        this.params = Map.of();
+    private MemcacheParametersResponse(MemcacheParametersResponse $) {
+        this.params = $.params;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MemcacheParametersResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Map<String,String> params;
+        private MemcacheParametersResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new MemcacheParametersResponse();
         }
 
         public Builder(MemcacheParametersResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.params = defaults.params;
+            $ = new MemcacheParametersResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder params(Map<String,String> params) {
-            this.params = Objects.requireNonNull(params);
+            $.params = params;
             return this;
-        }        public MemcacheParametersResponse build() {
-            return new MemcacheParametersResponse(params);
+        }
+
+        public MemcacheParametersResponse build() {
+            $.params = Objects.requireNonNull($.params, "expected parameter 'params' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,10 +5,10 @@ package com.pulumi.azurenative.cdn.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,14 +25,14 @@ public final class UrlRewriteActionParametersArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="destination", required=true)
-      private final Output<String> destination;
+    private Output<String> destination;
 
     public Output<String> destination() {
         return this.destination;
     }
 
     @Import(name="odataType", required=true)
-      private final Output<String> odataType;
+    private Output<String> odataType;
 
     public Output<String> odataType() {
         return this.odataType;
@@ -43,10 +43,10 @@ public final class UrlRewriteActionParametersArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="preserveUnmatchedPath")
-      private final @Nullable Output<Boolean> preserveUnmatchedPath;
+    private @Nullable Output<Boolean> preserveUnmatchedPath;
 
-    public Output<Boolean> preserveUnmatchedPath() {
-        return this.preserveUnmatchedPath == null ? Codegen.empty() : this.preserveUnmatchedPath;
+    public Optional<Output<Boolean>> preserveUnmatchedPath() {
+        return Optional.ofNullable(this.preserveUnmatchedPath);
     }
 
     /**
@@ -54,89 +54,81 @@ public final class UrlRewriteActionParametersArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="sourcePattern", required=true)
-      private final Output<String> sourcePattern;
+    private Output<String> sourcePattern;
 
     public Output<String> sourcePattern() {
         return this.sourcePattern;
     }
 
-    public UrlRewriteActionParametersArgs(
-        Output<String> destination,
-        Output<String> odataType,
-        @Nullable Output<Boolean> preserveUnmatchedPath,
-        Output<String> sourcePattern) {
-        this.destination = Objects.requireNonNull(destination, "expected parameter 'destination' to be non-null");
-        this.odataType = Objects.requireNonNull(odataType, "expected parameter 'odataType' to be non-null");
-        this.preserveUnmatchedPath = preserveUnmatchedPath;
-        this.sourcePattern = Objects.requireNonNull(sourcePattern, "expected parameter 'sourcePattern' to be non-null");
-    }
+    private UrlRewriteActionParametersArgs() {}
 
-    private UrlRewriteActionParametersArgs() {
-        this.destination = Codegen.empty();
-        this.odataType = Codegen.empty();
-        this.preserveUnmatchedPath = Codegen.empty();
-        this.sourcePattern = Codegen.empty();
+    private UrlRewriteActionParametersArgs(UrlRewriteActionParametersArgs $) {
+        this.destination = $.destination;
+        this.odataType = $.odataType;
+        this.preserveUnmatchedPath = $.preserveUnmatchedPath;
+        this.sourcePattern = $.sourcePattern;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(UrlRewriteActionParametersArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> destination;
-        private Output<String> odataType;
-        private @Nullable Output<Boolean> preserveUnmatchedPath;
-        private Output<String> sourcePattern;
+        private UrlRewriteActionParametersArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new UrlRewriteActionParametersArgs();
         }
 
         public Builder(UrlRewriteActionParametersArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.destination = defaults.destination;
-    	      this.odataType = defaults.odataType;
-    	      this.preserveUnmatchedPath = defaults.preserveUnmatchedPath;
-    	      this.sourcePattern = defaults.sourcePattern;
+            $ = new UrlRewriteActionParametersArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder destination(Output<String> destination) {
-            this.destination = Objects.requireNonNull(destination);
+            $.destination = destination;
             return this;
         }
+
         public Builder destination(String destination) {
-            this.destination = Output.of(Objects.requireNonNull(destination));
-            return this;
+            return destination(Output.of(destination));
         }
+
         public Builder odataType(Output<String> odataType) {
-            this.odataType = Objects.requireNonNull(odataType);
+            $.odataType = odataType;
             return this;
         }
+
         public Builder odataType(String odataType) {
-            this.odataType = Output.of(Objects.requireNonNull(odataType));
-            return this;
+            return odataType(Output.of(odataType));
         }
+
         public Builder preserveUnmatchedPath(@Nullable Output<Boolean> preserveUnmatchedPath) {
-            this.preserveUnmatchedPath = preserveUnmatchedPath;
+            $.preserveUnmatchedPath = preserveUnmatchedPath;
             return this;
         }
-        public Builder preserveUnmatchedPath(@Nullable Boolean preserveUnmatchedPath) {
-            this.preserveUnmatchedPath = Codegen.ofNullable(preserveUnmatchedPath);
-            return this;
+
+        public Builder preserveUnmatchedPath(Boolean preserveUnmatchedPath) {
+            return preserveUnmatchedPath(Output.of(preserveUnmatchedPath));
         }
+
         public Builder sourcePattern(Output<String> sourcePattern) {
-            this.sourcePattern = Objects.requireNonNull(sourcePattern);
+            $.sourcePattern = sourcePattern;
             return this;
         }
+
         public Builder sourcePattern(String sourcePattern) {
-            this.sourcePattern = Output.of(Objects.requireNonNull(sourcePattern));
-            return this;
-        }        public UrlRewriteActionParametersArgs build() {
-            return new UrlRewriteActionParametersArgs(destination, odataType, preserveUnmatchedPath, sourcePattern);
+            return sourcePattern(Output.of(sourcePattern));
+        }
+
+        public UrlRewriteActionParametersArgs build() {
+            $.destination = Objects.requireNonNull($.destination, "expected parameter 'destination' to be non-null");
+            $.odataType = Objects.requireNonNull($.odataType, "expected parameter 'odataType' to be non-null");
+            $.sourcePattern = Objects.requireNonNull($.sourcePattern, "expected parameter 'sourcePattern' to be non-null");
+            return $;
         }
     }
+
 }

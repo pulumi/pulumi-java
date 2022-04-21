@@ -5,11 +5,11 @@ package com.pulumi.googlenative.containeranalysis_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.containeranalysis_v1.inputs.NonCompliantFileArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,73 +22,69 @@ public final class ComplianceOccurrenceArgs extends com.pulumi.resources.Resourc
     public static final ComplianceOccurrenceArgs Empty = new ComplianceOccurrenceArgs();
 
     @Import(name="nonComplianceReason")
-      private final @Nullable Output<String> nonComplianceReason;
+    private @Nullable Output<String> nonComplianceReason;
 
-    public Output<String> nonComplianceReason() {
-        return this.nonComplianceReason == null ? Codegen.empty() : this.nonComplianceReason;
+    public Optional<Output<String>> nonComplianceReason() {
+        return Optional.ofNullable(this.nonComplianceReason);
     }
 
     @Import(name="nonCompliantFiles")
-      private final @Nullable Output<List<NonCompliantFileArgs>> nonCompliantFiles;
+    private @Nullable Output<List<NonCompliantFileArgs>> nonCompliantFiles;
 
-    public Output<List<NonCompliantFileArgs>> nonCompliantFiles() {
-        return this.nonCompliantFiles == null ? Codegen.empty() : this.nonCompliantFiles;
+    public Optional<Output<List<NonCompliantFileArgs>>> nonCompliantFiles() {
+        return Optional.ofNullable(this.nonCompliantFiles);
     }
 
-    public ComplianceOccurrenceArgs(
-        @Nullable Output<String> nonComplianceReason,
-        @Nullable Output<List<NonCompliantFileArgs>> nonCompliantFiles) {
-        this.nonComplianceReason = nonComplianceReason;
-        this.nonCompliantFiles = nonCompliantFiles;
-    }
+    private ComplianceOccurrenceArgs() {}
 
-    private ComplianceOccurrenceArgs() {
-        this.nonComplianceReason = Codegen.empty();
-        this.nonCompliantFiles = Codegen.empty();
+    private ComplianceOccurrenceArgs(ComplianceOccurrenceArgs $) {
+        this.nonComplianceReason = $.nonComplianceReason;
+        this.nonCompliantFiles = $.nonCompliantFiles;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ComplianceOccurrenceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> nonComplianceReason;
-        private @Nullable Output<List<NonCompliantFileArgs>> nonCompliantFiles;
+        private ComplianceOccurrenceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ComplianceOccurrenceArgs();
         }
 
         public Builder(ComplianceOccurrenceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.nonComplianceReason = defaults.nonComplianceReason;
-    	      this.nonCompliantFiles = defaults.nonCompliantFiles;
+            $ = new ComplianceOccurrenceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder nonComplianceReason(@Nullable Output<String> nonComplianceReason) {
-            this.nonComplianceReason = nonComplianceReason;
+            $.nonComplianceReason = nonComplianceReason;
             return this;
         }
-        public Builder nonComplianceReason(@Nullable String nonComplianceReason) {
-            this.nonComplianceReason = Codegen.ofNullable(nonComplianceReason);
-            return this;
+
+        public Builder nonComplianceReason(String nonComplianceReason) {
+            return nonComplianceReason(Output.of(nonComplianceReason));
         }
+
         public Builder nonCompliantFiles(@Nullable Output<List<NonCompliantFileArgs>> nonCompliantFiles) {
-            this.nonCompliantFiles = nonCompliantFiles;
+            $.nonCompliantFiles = nonCompliantFiles;
             return this;
         }
-        public Builder nonCompliantFiles(@Nullable List<NonCompliantFileArgs> nonCompliantFiles) {
-            this.nonCompliantFiles = Codegen.ofNullable(nonCompliantFiles);
-            return this;
+
+        public Builder nonCompliantFiles(List<NonCompliantFileArgs> nonCompliantFiles) {
+            return nonCompliantFiles(Output.of(nonCompliantFiles));
         }
+
         public Builder nonCompliantFiles(NonCompliantFileArgs... nonCompliantFiles) {
             return nonCompliantFiles(List.of(nonCompliantFiles));
-        }        public ComplianceOccurrenceArgs build() {
-            return new ComplianceOccurrenceArgs(nonComplianceReason, nonCompliantFiles);
+        }
+
+        public ComplianceOccurrenceArgs build() {
+            return $;
         }
     }
+
 }

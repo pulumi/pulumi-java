@@ -26,10 +26,10 @@ public final class AzureWorkloadContainerExtendedInfoResponse extends com.pulumi
      * 
      */
     @Import(name="hostServerName")
-      private final @Nullable String hostServerName;
+    private @Nullable String hostServerName;
 
     public Optional<String> hostServerName() {
-        return this.hostServerName == null ? Optional.empty() : Optional.ofNullable(this.hostServerName);
+        return Optional.ofNullable(this.hostServerName);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class AzureWorkloadContainerExtendedInfoResponse extends com.pulumi
      * 
      */
     @Import(name="inquiryInfo")
-      private final @Nullable InquiryInfoResponse inquiryInfo;
+    private @Nullable InquiryInfoResponse inquiryInfo;
 
     public Optional<InquiryInfoResponse> inquiryInfo() {
-        return this.inquiryInfo == null ? Optional.empty() : Optional.ofNullable(this.inquiryInfo);
+        return Optional.ofNullable(this.inquiryInfo);
     }
 
     /**
@@ -48,67 +48,60 @@ public final class AzureWorkloadContainerExtendedInfoResponse extends com.pulumi
      * 
      */
     @Import(name="nodesList")
-      private final @Nullable List<DistributedNodesInfoResponse> nodesList;
+    private @Nullable List<DistributedNodesInfoResponse> nodesList;
 
-    public List<DistributedNodesInfoResponse> nodesList() {
-        return this.nodesList == null ? List.of() : this.nodesList;
+    public Optional<List<DistributedNodesInfoResponse>> nodesList() {
+        return Optional.ofNullable(this.nodesList);
     }
 
-    public AzureWorkloadContainerExtendedInfoResponse(
-        @Nullable String hostServerName,
-        @Nullable InquiryInfoResponse inquiryInfo,
-        @Nullable List<DistributedNodesInfoResponse> nodesList) {
-        this.hostServerName = hostServerName;
-        this.inquiryInfo = inquiryInfo;
-        this.nodesList = nodesList;
-    }
+    private AzureWorkloadContainerExtendedInfoResponse() {}
 
-    private AzureWorkloadContainerExtendedInfoResponse() {
-        this.hostServerName = null;
-        this.inquiryInfo = null;
-        this.nodesList = List.of();
+    private AzureWorkloadContainerExtendedInfoResponse(AzureWorkloadContainerExtendedInfoResponse $) {
+        this.hostServerName = $.hostServerName;
+        this.inquiryInfo = $.inquiryInfo;
+        this.nodesList = $.nodesList;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AzureWorkloadContainerExtendedInfoResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String hostServerName;
-        private @Nullable InquiryInfoResponse inquiryInfo;
-        private @Nullable List<DistributedNodesInfoResponse> nodesList;
+        private AzureWorkloadContainerExtendedInfoResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AzureWorkloadContainerExtendedInfoResponse();
         }
 
         public Builder(AzureWorkloadContainerExtendedInfoResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.hostServerName = defaults.hostServerName;
-    	      this.inquiryInfo = defaults.inquiryInfo;
-    	      this.nodesList = defaults.nodesList;
+            $ = new AzureWorkloadContainerExtendedInfoResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder hostServerName(@Nullable String hostServerName) {
-            this.hostServerName = hostServerName;
+            $.hostServerName = hostServerName;
             return this;
         }
+
         public Builder inquiryInfo(@Nullable InquiryInfoResponse inquiryInfo) {
-            this.inquiryInfo = inquiryInfo;
+            $.inquiryInfo = inquiryInfo;
             return this;
         }
+
         public Builder nodesList(@Nullable List<DistributedNodesInfoResponse> nodesList) {
-            this.nodesList = nodesList;
+            $.nodesList = nodesList;
             return this;
         }
+
         public Builder nodesList(DistributedNodesInfoResponse... nodesList) {
             return nodesList(List.of(nodesList));
-        }        public AzureWorkloadContainerExtendedInfoResponse build() {
-            return new AzureWorkloadContainerExtendedInfoResponse(hostServerName, inquiryInfo, nodesList);
+        }
+
+        public AzureWorkloadContainerExtendedInfoResponse build() {
+            return $;
         }
     }
+
 }

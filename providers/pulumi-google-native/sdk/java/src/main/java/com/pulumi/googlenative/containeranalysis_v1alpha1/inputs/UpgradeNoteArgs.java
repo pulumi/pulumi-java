@@ -5,12 +5,12 @@ package com.pulumi.googlenative.containeranalysis_v1alpha1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.containeranalysis_v1alpha1.inputs.UpgradeDistributionArgs;
 import com.pulumi.googlenative.containeranalysis_v1alpha1.inputs.VersionArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +27,10 @@ public final class UpgradeNoteArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="distributions")
-      private final @Nullable Output<List<UpgradeDistributionArgs>> distributions;
+    private @Nullable Output<List<UpgradeDistributionArgs>> distributions;
 
-    public Output<List<UpgradeDistributionArgs>> distributions() {
-        return this.distributions == null ? Codegen.empty() : this.distributions;
+    public Optional<Output<List<UpgradeDistributionArgs>>> distributions() {
+        return Optional.ofNullable(this.distributions);
     }
 
     /**
@@ -38,10 +38,10 @@ public final class UpgradeNoteArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="package")
-      private final @Nullable Output<String> package_;
+    private @Nullable Output<String> package_;
 
-    public Output<String> package_() {
-        return this.package_ == null ? Codegen.empty() : this.package_;
+    public Optional<Output<String>> package_() {
+        return Optional.ofNullable(this.package_);
     }
 
     /**
@@ -49,79 +49,72 @@ public final class UpgradeNoteArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="version")
-      private final @Nullable Output<VersionArgs> version;
+    private @Nullable Output<VersionArgs> version;
 
-    public Output<VersionArgs> version() {
-        return this.version == null ? Codegen.empty() : this.version;
+    public Optional<Output<VersionArgs>> version() {
+        return Optional.ofNullable(this.version);
     }
 
-    public UpgradeNoteArgs(
-        @Nullable Output<List<UpgradeDistributionArgs>> distributions,
-        @Nullable Output<String> package_,
-        @Nullable Output<VersionArgs> version) {
-        this.distributions = distributions;
-        this.package_ = package_;
-        this.version = version;
-    }
+    private UpgradeNoteArgs() {}
 
-    private UpgradeNoteArgs() {
-        this.distributions = Codegen.empty();
-        this.package_ = Codegen.empty();
-        this.version = Codegen.empty();
+    private UpgradeNoteArgs(UpgradeNoteArgs $) {
+        this.distributions = $.distributions;
+        this.package_ = $.package_;
+        this.version = $.version;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(UpgradeNoteArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<UpgradeDistributionArgs>> distributions;
-        private @Nullable Output<String> package_;
-        private @Nullable Output<VersionArgs> version;
+        private UpgradeNoteArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new UpgradeNoteArgs();
         }
 
         public Builder(UpgradeNoteArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.distributions = defaults.distributions;
-    	      this.package_ = defaults.package_;
-    	      this.version = defaults.version;
+            $ = new UpgradeNoteArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder distributions(@Nullable Output<List<UpgradeDistributionArgs>> distributions) {
-            this.distributions = distributions;
+            $.distributions = distributions;
             return this;
         }
-        public Builder distributions(@Nullable List<UpgradeDistributionArgs> distributions) {
-            this.distributions = Codegen.ofNullable(distributions);
-            return this;
+
+        public Builder distributions(List<UpgradeDistributionArgs> distributions) {
+            return distributions(Output.of(distributions));
         }
+
         public Builder distributions(UpgradeDistributionArgs... distributions) {
             return distributions(List.of(distributions));
         }
+
         public Builder package_(@Nullable Output<String> package_) {
-            this.package_ = package_;
+            $.package_ = package_;
             return this;
         }
-        public Builder package_(@Nullable String package_) {
-            this.package_ = Codegen.ofNullable(package_);
-            return this;
+
+        public Builder package_(String package_) {
+            return package_(Output.of(package_));
         }
+
         public Builder version(@Nullable Output<VersionArgs> version) {
-            this.version = version;
+            $.version = version;
             return this;
         }
-        public Builder version(@Nullable VersionArgs version) {
-            this.version = Codegen.ofNullable(version);
-            return this;
-        }        public UpgradeNoteArgs build() {
-            return new UpgradeNoteArgs(distributions, package_, version);
+
+        public Builder version(VersionArgs version) {
+            return version(Output.of(version));
+        }
+
+        public UpgradeNoteArgs build() {
+            return $;
         }
     }
+
 }

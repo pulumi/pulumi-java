@@ -21,45 +21,45 @@ public final class DateAfterCreationResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="daysAfterCreationGreaterThan", required=true)
-      private final Double daysAfterCreationGreaterThan;
+    private Double daysAfterCreationGreaterThan;
 
     public Double daysAfterCreationGreaterThan() {
         return this.daysAfterCreationGreaterThan;
     }
 
-    public DateAfterCreationResponse(Double daysAfterCreationGreaterThan) {
-        this.daysAfterCreationGreaterThan = Objects.requireNonNull(daysAfterCreationGreaterThan, "expected parameter 'daysAfterCreationGreaterThan' to be non-null");
-    }
+    private DateAfterCreationResponse() {}
 
-    private DateAfterCreationResponse() {
-        this.daysAfterCreationGreaterThan = null;
+    private DateAfterCreationResponse(DateAfterCreationResponse $) {
+        this.daysAfterCreationGreaterThan = $.daysAfterCreationGreaterThan;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DateAfterCreationResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Double daysAfterCreationGreaterThan;
+        private DateAfterCreationResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new DateAfterCreationResponse();
         }
 
         public Builder(DateAfterCreationResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.daysAfterCreationGreaterThan = defaults.daysAfterCreationGreaterThan;
+            $ = new DateAfterCreationResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder daysAfterCreationGreaterThan(Double daysAfterCreationGreaterThan) {
-            this.daysAfterCreationGreaterThan = Objects.requireNonNull(daysAfterCreationGreaterThan);
+            $.daysAfterCreationGreaterThan = daysAfterCreationGreaterThan;
             return this;
-        }        public DateAfterCreationResponse build() {
-            return new DateAfterCreationResponse(daysAfterCreationGreaterThan);
+        }
+
+        public DateAfterCreationResponse build() {
+            $.daysAfterCreationGreaterThan = Objects.requireNonNull($.daysAfterCreationGreaterThan, "expected parameter 'daysAfterCreationGreaterThan' to be non-null");
+            return $;
         }
     }
+
 }

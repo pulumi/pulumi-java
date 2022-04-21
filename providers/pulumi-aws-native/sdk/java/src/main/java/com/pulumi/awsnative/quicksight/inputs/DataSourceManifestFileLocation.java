@@ -21,7 +21,7 @@ public final class DataSourceManifestFileLocation extends com.pulumi.resources.I
      * 
      */
     @Import(name="bucket", required=true)
-      private final String bucket;
+    private String bucket;
 
     public String bucket() {
         return this.bucket;
@@ -32,55 +32,52 @@ public final class DataSourceManifestFileLocation extends com.pulumi.resources.I
      * 
      */
     @Import(name="key", required=true)
-      private final String key;
+    private String key;
 
     public String key() {
         return this.key;
     }
 
-    public DataSourceManifestFileLocation(
-        String bucket,
-        String key) {
-        this.bucket = Objects.requireNonNull(bucket, "expected parameter 'bucket' to be non-null");
-        this.key = Objects.requireNonNull(key, "expected parameter 'key' to be non-null");
-    }
+    private DataSourceManifestFileLocation() {}
 
-    private DataSourceManifestFileLocation() {
-        this.bucket = null;
-        this.key = null;
+    private DataSourceManifestFileLocation(DataSourceManifestFileLocation $) {
+        this.bucket = $.bucket;
+        this.key = $.key;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DataSourceManifestFileLocation defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String bucket;
-        private String key;
+        private DataSourceManifestFileLocation $;
 
         public Builder() {
-    	      // Empty
+            $ = new DataSourceManifestFileLocation();
         }
 
         public Builder(DataSourceManifestFileLocation defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.bucket = defaults.bucket;
-    	      this.key = defaults.key;
+            $ = new DataSourceManifestFileLocation(Objects.requireNonNull(defaults));
         }
 
         public Builder bucket(String bucket) {
-            this.bucket = Objects.requireNonNull(bucket);
+            $.bucket = bucket;
             return this;
         }
+
         public Builder key(String key) {
-            this.key = Objects.requireNonNull(key);
+            $.key = key;
             return this;
-        }        public DataSourceManifestFileLocation build() {
-            return new DataSourceManifestFileLocation(bucket, key);
+        }
+
+        public DataSourceManifestFileLocation build() {
+            $.bucket = Objects.requireNonNull($.bucket, "expected parameter 'bucket' to be non-null");
+            $.key = Objects.requireNonNull($.key, "expected parameter 'key' to be non-null");
+            return $;
         }
     }
+
 }

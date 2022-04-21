@@ -17,45 +17,45 @@ public final class GetCertificateAuthorityActivationArgs extends com.pulumi.reso
      * 
      */
     @Import(name="certificateAuthorityArn", required=true)
-      private final String certificateAuthorityArn;
+    private String certificateAuthorityArn;
 
     public String certificateAuthorityArn() {
         return this.certificateAuthorityArn;
     }
 
-    public GetCertificateAuthorityActivationArgs(String certificateAuthorityArn) {
-        this.certificateAuthorityArn = Objects.requireNonNull(certificateAuthorityArn, "expected parameter 'certificateAuthorityArn' to be non-null");
-    }
+    private GetCertificateAuthorityActivationArgs() {}
 
-    private GetCertificateAuthorityActivationArgs() {
-        this.certificateAuthorityArn = null;
+    private GetCertificateAuthorityActivationArgs(GetCertificateAuthorityActivationArgs $) {
+        this.certificateAuthorityArn = $.certificateAuthorityArn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetCertificateAuthorityActivationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String certificateAuthorityArn;
+        private GetCertificateAuthorityActivationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetCertificateAuthorityActivationArgs();
         }
 
         public Builder(GetCertificateAuthorityActivationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.certificateAuthorityArn = defaults.certificateAuthorityArn;
+            $ = new GetCertificateAuthorityActivationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder certificateAuthorityArn(String certificateAuthorityArn) {
-            this.certificateAuthorityArn = Objects.requireNonNull(certificateAuthorityArn);
+            $.certificateAuthorityArn = certificateAuthorityArn;
             return this;
-        }        public GetCertificateAuthorityActivationArgs build() {
-            return new GetCertificateAuthorityActivationArgs(certificateAuthorityArn);
+        }
+
+        public GetCertificateAuthorityActivationArgs build() {
+            $.certificateAuthorityArn = Objects.requireNonNull($.certificateAuthorityArn, "expected parameter 'certificateAuthorityArn' to be non-null");
+            return $;
         }
     }
+
 }

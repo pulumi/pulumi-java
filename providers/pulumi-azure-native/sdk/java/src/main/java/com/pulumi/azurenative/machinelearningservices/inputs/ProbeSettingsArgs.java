@@ -5,10 +5,10 @@ package com.pulumi.azurenative.machinelearningservices.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class ProbeSettingsArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="failureThreshold")
-      private final @Nullable Output<Integer> failureThreshold;
+    private @Nullable Output<Integer> failureThreshold;
 
-    public Output<Integer> failureThreshold() {
-        return this.failureThreshold == null ? Codegen.empty() : this.failureThreshold;
+    public Optional<Output<Integer>> failureThreshold() {
+        return Optional.ofNullable(this.failureThreshold);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class ProbeSettingsArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="initialDelay")
-      private final @Nullable Output<String> initialDelay;
+    private @Nullable Output<String> initialDelay;
 
-    public Output<String> initialDelay() {
-        return this.initialDelay == null ? Codegen.empty() : this.initialDelay;
+    public Optional<Output<String>> initialDelay() {
+        return Optional.ofNullable(this.initialDelay);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class ProbeSettingsArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="period")
-      private final @Nullable Output<String> period;
+    private @Nullable Output<String> period;
 
-    public Output<String> period() {
-        return this.period == null ? Codegen.empty() : this.period;
+    public Optional<Output<String>> period() {
+        return Optional.ofNullable(this.period);
     }
 
     /**
@@ -58,10 +58,10 @@ public final class ProbeSettingsArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="successThreshold")
-      private final @Nullable Output<Integer> successThreshold;
+    private @Nullable Output<Integer> successThreshold;
 
-    public Output<Integer> successThreshold() {
-        return this.successThreshold == null ? Codegen.empty() : this.successThreshold;
+    public Optional<Output<Integer>> successThreshold() {
+        return Optional.ofNullable(this.successThreshold);
     }
 
     /**
@@ -69,102 +69,88 @@ public final class ProbeSettingsArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="timeout")
-      private final @Nullable Output<String> timeout;
+    private @Nullable Output<String> timeout;
 
-    public Output<String> timeout() {
-        return this.timeout == null ? Codegen.empty() : this.timeout;
+    public Optional<Output<String>> timeout() {
+        return Optional.ofNullable(this.timeout);
     }
 
-    public ProbeSettingsArgs(
-        @Nullable Output<Integer> failureThreshold,
-        @Nullable Output<String> initialDelay,
-        @Nullable Output<String> period,
-        @Nullable Output<Integer> successThreshold,
-        @Nullable Output<String> timeout) {
-        this.failureThreshold = failureThreshold;
-        this.initialDelay = initialDelay;
-        this.period = period;
-        this.successThreshold = successThreshold;
-        this.timeout = timeout;
-    }
+    private ProbeSettingsArgs() {}
 
-    private ProbeSettingsArgs() {
-        this.failureThreshold = Codegen.empty();
-        this.initialDelay = Codegen.empty();
-        this.period = Codegen.empty();
-        this.successThreshold = Codegen.empty();
-        this.timeout = Codegen.empty();
+    private ProbeSettingsArgs(ProbeSettingsArgs $) {
+        this.failureThreshold = $.failureThreshold;
+        this.initialDelay = $.initialDelay;
+        this.period = $.period;
+        this.successThreshold = $.successThreshold;
+        this.timeout = $.timeout;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ProbeSettingsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> failureThreshold;
-        private @Nullable Output<String> initialDelay;
-        private @Nullable Output<String> period;
-        private @Nullable Output<Integer> successThreshold;
-        private @Nullable Output<String> timeout;
+        private ProbeSettingsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ProbeSettingsArgs();
         }
 
         public Builder(ProbeSettingsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.failureThreshold = defaults.failureThreshold;
-    	      this.initialDelay = defaults.initialDelay;
-    	      this.period = defaults.period;
-    	      this.successThreshold = defaults.successThreshold;
-    	      this.timeout = defaults.timeout;
+            $ = new ProbeSettingsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder failureThreshold(@Nullable Output<Integer> failureThreshold) {
-            this.failureThreshold = failureThreshold;
+            $.failureThreshold = failureThreshold;
             return this;
         }
-        public Builder failureThreshold(@Nullable Integer failureThreshold) {
-            this.failureThreshold = Codegen.ofNullable(failureThreshold);
-            return this;
+
+        public Builder failureThreshold(Integer failureThreshold) {
+            return failureThreshold(Output.of(failureThreshold));
         }
+
         public Builder initialDelay(@Nullable Output<String> initialDelay) {
-            this.initialDelay = initialDelay;
+            $.initialDelay = initialDelay;
             return this;
         }
-        public Builder initialDelay(@Nullable String initialDelay) {
-            this.initialDelay = Codegen.ofNullable(initialDelay);
-            return this;
+
+        public Builder initialDelay(String initialDelay) {
+            return initialDelay(Output.of(initialDelay));
         }
+
         public Builder period(@Nullable Output<String> period) {
-            this.period = period;
+            $.period = period;
             return this;
         }
-        public Builder period(@Nullable String period) {
-            this.period = Codegen.ofNullable(period);
-            return this;
+
+        public Builder period(String period) {
+            return period(Output.of(period));
         }
+
         public Builder successThreshold(@Nullable Output<Integer> successThreshold) {
-            this.successThreshold = successThreshold;
+            $.successThreshold = successThreshold;
             return this;
         }
-        public Builder successThreshold(@Nullable Integer successThreshold) {
-            this.successThreshold = Codegen.ofNullable(successThreshold);
-            return this;
+
+        public Builder successThreshold(Integer successThreshold) {
+            return successThreshold(Output.of(successThreshold));
         }
+
         public Builder timeout(@Nullable Output<String> timeout) {
-            this.timeout = timeout;
+            $.timeout = timeout;
             return this;
         }
-        public Builder timeout(@Nullable String timeout) {
-            this.timeout = Codegen.ofNullable(timeout);
-            return this;
-        }        public ProbeSettingsArgs build() {
-            return new ProbeSettingsArgs(failureThreshold, initialDelay, period, successThreshold, timeout);
+
+        public Builder timeout(String timeout) {
+            return timeout(Output.of(timeout));
+        }
+
+        public ProbeSettingsArgs build() {
+            return $;
         }
     }
+
 }

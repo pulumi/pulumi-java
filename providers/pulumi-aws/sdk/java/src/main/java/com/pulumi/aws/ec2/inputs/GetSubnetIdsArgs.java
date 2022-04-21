@@ -22,10 +22,10 @@ public final class GetSubnetIdsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="filters")
-      private final @Nullable List<GetSubnetIdsFilter> filters;
+    private @Nullable List<GetSubnetIdsFilter> filters;
 
-    public List<GetSubnetIdsFilter> filters() {
-        return this.filters == null ? List.of() : this.filters;
+    public Optional<List<GetSubnetIdsFilter>> filters() {
+        return Optional.ofNullable(this.filters);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class GetSubnetIdsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Map<String,String> tags;
+    private @Nullable Map<String,String> tags;
 
-    public Map<String,String> tags() {
-        return this.tags == null ? Map.of() : this.tags;
+    public Optional<Map<String,String>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -45,67 +45,61 @@ public final class GetSubnetIdsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="vpcId", required=true)
-      private final String vpcId;
+    private String vpcId;
 
     public String vpcId() {
         return this.vpcId;
     }
 
-    public GetSubnetIdsArgs(
-        @Nullable List<GetSubnetIdsFilter> filters,
-        @Nullable Map<String,String> tags,
-        String vpcId) {
-        this.filters = filters;
-        this.tags = tags;
-        this.vpcId = Objects.requireNonNull(vpcId, "expected parameter 'vpcId' to be non-null");
-    }
+    private GetSubnetIdsArgs() {}
 
-    private GetSubnetIdsArgs() {
-        this.filters = List.of();
-        this.tags = Map.of();
-        this.vpcId = null;
+    private GetSubnetIdsArgs(GetSubnetIdsArgs $) {
+        this.filters = $.filters;
+        this.tags = $.tags;
+        this.vpcId = $.vpcId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetSubnetIdsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<GetSubnetIdsFilter> filters;
-        private @Nullable Map<String,String> tags;
-        private String vpcId;
+        private GetSubnetIdsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetSubnetIdsArgs();
         }
 
         public Builder(GetSubnetIdsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.filters = defaults.filters;
-    	      this.tags = defaults.tags;
-    	      this.vpcId = defaults.vpcId;
+            $ = new GetSubnetIdsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder filters(@Nullable List<GetSubnetIdsFilter> filters) {
-            this.filters = filters;
+            $.filters = filters;
             return this;
         }
+
         public Builder filters(GetSubnetIdsFilter... filters) {
             return filters(List.of(filters));
         }
+
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
+
         public Builder vpcId(String vpcId) {
-            this.vpcId = Objects.requireNonNull(vpcId);
+            $.vpcId = vpcId;
             return this;
-        }        public GetSubnetIdsArgs build() {
-            return new GetSubnetIdsArgs(filters, tags, vpcId);
+        }
+
+        public GetSubnetIdsArgs build() {
+            $.vpcId = Objects.requireNonNull($.vpcId, "expected parameter 'vpcId' to be non-null");
+            return $;
         }
     }
+
 }

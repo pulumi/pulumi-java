@@ -23,7 +23,7 @@ public final class TypeResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="fields", required=true)
-      private final List<FieldResponse> fields;
+    private List<FieldResponse> fields;
 
     public List<FieldResponse> fields() {
         return this.fields;
@@ -34,7 +34,7 @@ public final class TypeResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -45,67 +45,63 @@ public final class TypeResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="primitive", required=true)
-      private final String primitive;
+    private String primitive;
 
     public String primitive() {
         return this.primitive;
     }
 
-    public TypeResponse(
-        List<FieldResponse> fields,
-        String name,
-        String primitive) {
-        this.fields = Objects.requireNonNull(fields, "expected parameter 'fields' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.primitive = Objects.requireNonNull(primitive, "expected parameter 'primitive' to be non-null");
-    }
+    private TypeResponse() {}
 
-    private TypeResponse() {
-        this.fields = List.of();
-        this.name = null;
-        this.primitive = null;
+    private TypeResponse(TypeResponse $) {
+        this.fields = $.fields;
+        this.name = $.name;
+        this.primitive = $.primitive;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TypeResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<FieldResponse> fields;
-        private String name;
-        private String primitive;
+        private TypeResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new TypeResponse();
         }
 
         public Builder(TypeResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.fields = defaults.fields;
-    	      this.name = defaults.name;
-    	      this.primitive = defaults.primitive;
+            $ = new TypeResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder fields(List<FieldResponse> fields) {
-            this.fields = Objects.requireNonNull(fields);
+            $.fields = fields;
             return this;
         }
+
         public Builder fields(FieldResponse... fields) {
             return fields(List.of(fields));
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder primitive(String primitive) {
-            this.primitive = Objects.requireNonNull(primitive);
+            $.primitive = primitive;
             return this;
-        }        public TypeResponse build() {
-            return new TypeResponse(fields, name, primitive);
+        }
+
+        public TypeResponse build() {
+            $.fields = Objects.requireNonNull($.fields, "expected parameter 'fields' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.primitive = Objects.requireNonNull($.primitive, "expected parameter 'primitive' to be non-null");
+            return $;
         }
     }
+
 }

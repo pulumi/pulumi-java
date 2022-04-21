@@ -17,45 +17,45 @@ public final class GetCellArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="cellName", required=true)
-      private final String cellName;
+    private String cellName;
 
     public String cellName() {
         return this.cellName;
     }
 
-    public GetCellArgs(String cellName) {
-        this.cellName = Objects.requireNonNull(cellName, "expected parameter 'cellName' to be non-null");
-    }
+    private GetCellArgs() {}
 
-    private GetCellArgs() {
-        this.cellName = null;
+    private GetCellArgs(GetCellArgs $) {
+        this.cellName = $.cellName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetCellArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String cellName;
+        private GetCellArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetCellArgs();
         }
 
         public Builder(GetCellArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cellName = defaults.cellName;
+            $ = new GetCellArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder cellName(String cellName) {
-            this.cellName = Objects.requireNonNull(cellName);
+            $.cellName = cellName;
             return this;
-        }        public GetCellArgs build() {
-            return new GetCellArgs(cellName);
+        }
+
+        public GetCellArgs build() {
+            $.cellName = Objects.requireNonNull($.cellName, "expected parameter 'cellName' to be non-null");
+            return $;
         }
     }
+
 }

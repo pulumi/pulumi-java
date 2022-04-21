@@ -22,45 +22,45 @@ public final class AssignmentGroupLabelResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="labels", required=true)
-      private final Map<String,String> labels;
+    private Map<String,String> labels;
 
     public Map<String,String> labels() {
         return this.labels;
     }
 
-    public AssignmentGroupLabelResponse(Map<String,String> labels) {
-        this.labels = Objects.requireNonNull(labels, "expected parameter 'labels' to be non-null");
-    }
+    private AssignmentGroupLabelResponse() {}
 
-    private AssignmentGroupLabelResponse() {
-        this.labels = Map.of();
+    private AssignmentGroupLabelResponse(AssignmentGroupLabelResponse $) {
+        this.labels = $.labels;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AssignmentGroupLabelResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Map<String,String> labels;
+        private AssignmentGroupLabelResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AssignmentGroupLabelResponse();
         }
 
         public Builder(AssignmentGroupLabelResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.labels = defaults.labels;
+            $ = new AssignmentGroupLabelResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder labels(Map<String,String> labels) {
-            this.labels = Objects.requireNonNull(labels);
+            $.labels = labels;
             return this;
-        }        public AssignmentGroupLabelResponse build() {
-            return new AssignmentGroupLabelResponse(labels);
+        }
+
+        public AssignmentGroupLabelResponse build() {
+            $.labels = Objects.requireNonNull($.labels, "expected parameter 'labels' to be non-null");
+            return $;
         }
     }
+
 }

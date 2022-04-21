@@ -13,45 +13,45 @@ public final class GetRemoteImageArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetRemoteImageArgs Empty = new GetRemoteImageArgs();
 
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
     }
 
-    public GetRemoteImageArgs(String name) {
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-    }
+    private GetRemoteImageArgs() {}
 
-    private GetRemoteImageArgs() {
-        this.name = null;
+    private GetRemoteImageArgs(GetRemoteImageArgs $) {
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetRemoteImageArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String name;
+        private GetRemoteImageArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetRemoteImageArgs();
         }
 
         public Builder(GetRemoteImageArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
+            $ = new GetRemoteImageArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
-        }        public GetRemoteImageArgs build() {
-            return new GetRemoteImageArgs(name);
+        }
+
+        public GetRemoteImageArgs build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            return $;
         }
     }
+
 }

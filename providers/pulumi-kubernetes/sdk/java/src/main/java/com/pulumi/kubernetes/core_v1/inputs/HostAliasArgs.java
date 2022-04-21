@@ -5,10 +5,10 @@ package com.pulumi.kubernetes.core_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class HostAliasArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="hostnames")
-      private final @Nullable Output<List<String>> hostnames;
+    private @Nullable Output<List<String>> hostnames;
 
-    public Output<List<String>> hostnames() {
-        return this.hostnames == null ? Codegen.empty() : this.hostnames;
+    public Optional<Output<List<String>>> hostnames() {
+        return Optional.ofNullable(this.hostnames);
     }
 
     /**
@@ -36,66 +36,62 @@ public final class HostAliasArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="ip")
-      private final @Nullable Output<String> ip;
+    private @Nullable Output<String> ip;
 
-    public Output<String> ip() {
-        return this.ip == null ? Codegen.empty() : this.ip;
+    public Optional<Output<String>> ip() {
+        return Optional.ofNullable(this.ip);
     }
 
-    public HostAliasArgs(
-        @Nullable Output<List<String>> hostnames,
-        @Nullable Output<String> ip) {
-        this.hostnames = hostnames;
-        this.ip = ip;
-    }
+    private HostAliasArgs() {}
 
-    private HostAliasArgs() {
-        this.hostnames = Codegen.empty();
-        this.ip = Codegen.empty();
+    private HostAliasArgs(HostAliasArgs $) {
+        this.hostnames = $.hostnames;
+        this.ip = $.ip;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(HostAliasArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> hostnames;
-        private @Nullable Output<String> ip;
+        private HostAliasArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new HostAliasArgs();
         }
 
         public Builder(HostAliasArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.hostnames = defaults.hostnames;
-    	      this.ip = defaults.ip;
+            $ = new HostAliasArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder hostnames(@Nullable Output<List<String>> hostnames) {
-            this.hostnames = hostnames;
+            $.hostnames = hostnames;
             return this;
         }
-        public Builder hostnames(@Nullable List<String> hostnames) {
-            this.hostnames = Codegen.ofNullable(hostnames);
-            return this;
+
+        public Builder hostnames(List<String> hostnames) {
+            return hostnames(Output.of(hostnames));
         }
+
         public Builder hostnames(String... hostnames) {
             return hostnames(List.of(hostnames));
         }
+
         public Builder ip(@Nullable Output<String> ip) {
-            this.ip = ip;
+            $.ip = ip;
             return this;
         }
-        public Builder ip(@Nullable String ip) {
-            this.ip = Codegen.ofNullable(ip);
-            return this;
-        }        public HostAliasArgs build() {
-            return new HostAliasArgs(hostnames, ip);
+
+        public Builder ip(String ip) {
+            return ip(Output.of(ip));
+        }
+
+        public HostAliasArgs build() {
+            return $;
         }
     }
+
 }

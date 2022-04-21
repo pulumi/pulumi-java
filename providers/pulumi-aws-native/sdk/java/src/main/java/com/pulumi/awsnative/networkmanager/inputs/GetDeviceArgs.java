@@ -17,7 +17,7 @@ public final class GetDeviceArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="deviceId", required=true)
-      private final String deviceId;
+    private String deviceId;
 
     public String deviceId() {
         return this.deviceId;
@@ -28,55 +28,52 @@ public final class GetDeviceArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="globalNetworkId", required=true)
-      private final String globalNetworkId;
+    private String globalNetworkId;
 
     public String globalNetworkId() {
         return this.globalNetworkId;
     }
 
-    public GetDeviceArgs(
-        String deviceId,
-        String globalNetworkId) {
-        this.deviceId = Objects.requireNonNull(deviceId, "expected parameter 'deviceId' to be non-null");
-        this.globalNetworkId = Objects.requireNonNull(globalNetworkId, "expected parameter 'globalNetworkId' to be non-null");
-    }
+    private GetDeviceArgs() {}
 
-    private GetDeviceArgs() {
-        this.deviceId = null;
-        this.globalNetworkId = null;
+    private GetDeviceArgs(GetDeviceArgs $) {
+        this.deviceId = $.deviceId;
+        this.globalNetworkId = $.globalNetworkId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetDeviceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String deviceId;
-        private String globalNetworkId;
+        private GetDeviceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetDeviceArgs();
         }
 
         public Builder(GetDeviceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.deviceId = defaults.deviceId;
-    	      this.globalNetworkId = defaults.globalNetworkId;
+            $ = new GetDeviceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder deviceId(String deviceId) {
-            this.deviceId = Objects.requireNonNull(deviceId);
+            $.deviceId = deviceId;
             return this;
         }
+
         public Builder globalNetworkId(String globalNetworkId) {
-            this.globalNetworkId = Objects.requireNonNull(globalNetworkId);
+            $.globalNetworkId = globalNetworkId;
             return this;
-        }        public GetDeviceArgs build() {
-            return new GetDeviceArgs(deviceId, globalNetworkId);
+        }
+
+        public GetDeviceArgs build() {
+            $.deviceId = Objects.requireNonNull($.deviceId, "expected parameter 'deviceId' to be non-null");
+            $.globalNetworkId = Objects.requireNonNull($.globalNetworkId, "expected parameter 'globalNetworkId' to be non-null");
+            return $;
         }
     }
+
 }

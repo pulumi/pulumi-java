@@ -37,302 +37,252 @@ public final class DataSourceParameters extends com.pulumi.resources.InvokeArgs 
     public static final DataSourceParameters Empty = new DataSourceParameters();
 
     @Import(name="amazonElasticsearchParameters")
-      private final @Nullable DataSourceAmazonElasticsearchParameters amazonElasticsearchParameters;
+    private @Nullable DataSourceAmazonElasticsearchParameters amazonElasticsearchParameters;
 
     public Optional<DataSourceAmazonElasticsearchParameters> amazonElasticsearchParameters() {
-        return this.amazonElasticsearchParameters == null ? Optional.empty() : Optional.ofNullable(this.amazonElasticsearchParameters);
+        return Optional.ofNullable(this.amazonElasticsearchParameters);
     }
 
     @Import(name="amazonOpenSearchParameters")
-      private final @Nullable DataSourceAmazonOpenSearchParameters amazonOpenSearchParameters;
+    private @Nullable DataSourceAmazonOpenSearchParameters amazonOpenSearchParameters;
 
     public Optional<DataSourceAmazonOpenSearchParameters> amazonOpenSearchParameters() {
-        return this.amazonOpenSearchParameters == null ? Optional.empty() : Optional.ofNullable(this.amazonOpenSearchParameters);
+        return Optional.ofNullable(this.amazonOpenSearchParameters);
     }
 
     @Import(name="athenaParameters")
-      private final @Nullable DataSourceAthenaParameters athenaParameters;
+    private @Nullable DataSourceAthenaParameters athenaParameters;
 
     public Optional<DataSourceAthenaParameters> athenaParameters() {
-        return this.athenaParameters == null ? Optional.empty() : Optional.ofNullable(this.athenaParameters);
+        return Optional.ofNullable(this.athenaParameters);
     }
 
     @Import(name="auroraParameters")
-      private final @Nullable DataSourceAuroraParameters auroraParameters;
+    private @Nullable DataSourceAuroraParameters auroraParameters;
 
     public Optional<DataSourceAuroraParameters> auroraParameters() {
-        return this.auroraParameters == null ? Optional.empty() : Optional.ofNullable(this.auroraParameters);
+        return Optional.ofNullable(this.auroraParameters);
     }
 
     @Import(name="auroraPostgreSqlParameters")
-      private final @Nullable DataSourceAuroraPostgreSqlParameters auroraPostgreSqlParameters;
+    private @Nullable DataSourceAuroraPostgreSqlParameters auroraPostgreSqlParameters;
 
     public Optional<DataSourceAuroraPostgreSqlParameters> auroraPostgreSqlParameters() {
-        return this.auroraPostgreSqlParameters == null ? Optional.empty() : Optional.ofNullable(this.auroraPostgreSqlParameters);
+        return Optional.ofNullable(this.auroraPostgreSqlParameters);
     }
 
     @Import(name="mariaDbParameters")
-      private final @Nullable DataSourceMariaDbParameters mariaDbParameters;
+    private @Nullable DataSourceMariaDbParameters mariaDbParameters;
 
     public Optional<DataSourceMariaDbParameters> mariaDbParameters() {
-        return this.mariaDbParameters == null ? Optional.empty() : Optional.ofNullable(this.mariaDbParameters);
+        return Optional.ofNullable(this.mariaDbParameters);
     }
 
     @Import(name="mySqlParameters")
-      private final @Nullable DataSourceMySqlParameters mySqlParameters;
+    private @Nullable DataSourceMySqlParameters mySqlParameters;
 
     public Optional<DataSourceMySqlParameters> mySqlParameters() {
-        return this.mySqlParameters == null ? Optional.empty() : Optional.ofNullable(this.mySqlParameters);
+        return Optional.ofNullable(this.mySqlParameters);
     }
 
     @Import(name="oracleParameters")
-      private final @Nullable DataSourceOracleParameters oracleParameters;
+    private @Nullable DataSourceOracleParameters oracleParameters;
 
     public Optional<DataSourceOracleParameters> oracleParameters() {
-        return this.oracleParameters == null ? Optional.empty() : Optional.ofNullable(this.oracleParameters);
+        return Optional.ofNullable(this.oracleParameters);
     }
 
     @Import(name="postgreSqlParameters")
-      private final @Nullable DataSourcePostgreSqlParameters postgreSqlParameters;
+    private @Nullable DataSourcePostgreSqlParameters postgreSqlParameters;
 
     public Optional<DataSourcePostgreSqlParameters> postgreSqlParameters() {
-        return this.postgreSqlParameters == null ? Optional.empty() : Optional.ofNullable(this.postgreSqlParameters);
+        return Optional.ofNullable(this.postgreSqlParameters);
     }
 
     @Import(name="prestoParameters")
-      private final @Nullable DataSourcePrestoParameters prestoParameters;
+    private @Nullable DataSourcePrestoParameters prestoParameters;
 
     public Optional<DataSourcePrestoParameters> prestoParameters() {
-        return this.prestoParameters == null ? Optional.empty() : Optional.ofNullable(this.prestoParameters);
+        return Optional.ofNullable(this.prestoParameters);
     }
 
     @Import(name="rdsParameters")
-      private final @Nullable DataSourceRdsParameters rdsParameters;
+    private @Nullable DataSourceRdsParameters rdsParameters;
 
     public Optional<DataSourceRdsParameters> rdsParameters() {
-        return this.rdsParameters == null ? Optional.empty() : Optional.ofNullable(this.rdsParameters);
+        return Optional.ofNullable(this.rdsParameters);
     }
 
     @Import(name="redshiftParameters")
-      private final @Nullable DataSourceRedshiftParameters redshiftParameters;
+    private @Nullable DataSourceRedshiftParameters redshiftParameters;
 
     public Optional<DataSourceRedshiftParameters> redshiftParameters() {
-        return this.redshiftParameters == null ? Optional.empty() : Optional.ofNullable(this.redshiftParameters);
+        return Optional.ofNullable(this.redshiftParameters);
     }
 
     @Import(name="s3Parameters")
-      private final @Nullable DataSourceS3Parameters s3Parameters;
+    private @Nullable DataSourceS3Parameters s3Parameters;
 
     public Optional<DataSourceS3Parameters> s3Parameters() {
-        return this.s3Parameters == null ? Optional.empty() : Optional.ofNullable(this.s3Parameters);
+        return Optional.ofNullable(this.s3Parameters);
     }
 
     @Import(name="snowflakeParameters")
-      private final @Nullable DataSourceSnowflakeParameters snowflakeParameters;
+    private @Nullable DataSourceSnowflakeParameters snowflakeParameters;
 
     public Optional<DataSourceSnowflakeParameters> snowflakeParameters() {
-        return this.snowflakeParameters == null ? Optional.empty() : Optional.ofNullable(this.snowflakeParameters);
+        return Optional.ofNullable(this.snowflakeParameters);
     }
 
     @Import(name="sparkParameters")
-      private final @Nullable DataSourceSparkParameters sparkParameters;
+    private @Nullable DataSourceSparkParameters sparkParameters;
 
     public Optional<DataSourceSparkParameters> sparkParameters() {
-        return this.sparkParameters == null ? Optional.empty() : Optional.ofNullable(this.sparkParameters);
+        return Optional.ofNullable(this.sparkParameters);
     }
 
     @Import(name="sqlServerParameters")
-      private final @Nullable DataSourceSqlServerParameters sqlServerParameters;
+    private @Nullable DataSourceSqlServerParameters sqlServerParameters;
 
     public Optional<DataSourceSqlServerParameters> sqlServerParameters() {
-        return this.sqlServerParameters == null ? Optional.empty() : Optional.ofNullable(this.sqlServerParameters);
+        return Optional.ofNullable(this.sqlServerParameters);
     }
 
     @Import(name="teradataParameters")
-      private final @Nullable DataSourceTeradataParameters teradataParameters;
+    private @Nullable DataSourceTeradataParameters teradataParameters;
 
     public Optional<DataSourceTeradataParameters> teradataParameters() {
-        return this.teradataParameters == null ? Optional.empty() : Optional.ofNullable(this.teradataParameters);
+        return Optional.ofNullable(this.teradataParameters);
     }
 
-    public DataSourceParameters(
-        @Nullable DataSourceAmazonElasticsearchParameters amazonElasticsearchParameters,
-        @Nullable DataSourceAmazonOpenSearchParameters amazonOpenSearchParameters,
-        @Nullable DataSourceAthenaParameters athenaParameters,
-        @Nullable DataSourceAuroraParameters auroraParameters,
-        @Nullable DataSourceAuroraPostgreSqlParameters auroraPostgreSqlParameters,
-        @Nullable DataSourceMariaDbParameters mariaDbParameters,
-        @Nullable DataSourceMySqlParameters mySqlParameters,
-        @Nullable DataSourceOracleParameters oracleParameters,
-        @Nullable DataSourcePostgreSqlParameters postgreSqlParameters,
-        @Nullable DataSourcePrestoParameters prestoParameters,
-        @Nullable DataSourceRdsParameters rdsParameters,
-        @Nullable DataSourceRedshiftParameters redshiftParameters,
-        @Nullable DataSourceS3Parameters s3Parameters,
-        @Nullable DataSourceSnowflakeParameters snowflakeParameters,
-        @Nullable DataSourceSparkParameters sparkParameters,
-        @Nullable DataSourceSqlServerParameters sqlServerParameters,
-        @Nullable DataSourceTeradataParameters teradataParameters) {
-        this.amazonElasticsearchParameters = amazonElasticsearchParameters;
-        this.amazonOpenSearchParameters = amazonOpenSearchParameters;
-        this.athenaParameters = athenaParameters;
-        this.auroraParameters = auroraParameters;
-        this.auroraPostgreSqlParameters = auroraPostgreSqlParameters;
-        this.mariaDbParameters = mariaDbParameters;
-        this.mySqlParameters = mySqlParameters;
-        this.oracleParameters = oracleParameters;
-        this.postgreSqlParameters = postgreSqlParameters;
-        this.prestoParameters = prestoParameters;
-        this.rdsParameters = rdsParameters;
-        this.redshiftParameters = redshiftParameters;
-        this.s3Parameters = s3Parameters;
-        this.snowflakeParameters = snowflakeParameters;
-        this.sparkParameters = sparkParameters;
-        this.sqlServerParameters = sqlServerParameters;
-        this.teradataParameters = teradataParameters;
-    }
+    private DataSourceParameters() {}
 
-    private DataSourceParameters() {
-        this.amazonElasticsearchParameters = null;
-        this.amazonOpenSearchParameters = null;
-        this.athenaParameters = null;
-        this.auroraParameters = null;
-        this.auroraPostgreSqlParameters = null;
-        this.mariaDbParameters = null;
-        this.mySqlParameters = null;
-        this.oracleParameters = null;
-        this.postgreSqlParameters = null;
-        this.prestoParameters = null;
-        this.rdsParameters = null;
-        this.redshiftParameters = null;
-        this.s3Parameters = null;
-        this.snowflakeParameters = null;
-        this.sparkParameters = null;
-        this.sqlServerParameters = null;
-        this.teradataParameters = null;
+    private DataSourceParameters(DataSourceParameters $) {
+        this.amazonElasticsearchParameters = $.amazonElasticsearchParameters;
+        this.amazonOpenSearchParameters = $.amazonOpenSearchParameters;
+        this.athenaParameters = $.athenaParameters;
+        this.auroraParameters = $.auroraParameters;
+        this.auroraPostgreSqlParameters = $.auroraPostgreSqlParameters;
+        this.mariaDbParameters = $.mariaDbParameters;
+        this.mySqlParameters = $.mySqlParameters;
+        this.oracleParameters = $.oracleParameters;
+        this.postgreSqlParameters = $.postgreSqlParameters;
+        this.prestoParameters = $.prestoParameters;
+        this.rdsParameters = $.rdsParameters;
+        this.redshiftParameters = $.redshiftParameters;
+        this.s3Parameters = $.s3Parameters;
+        this.snowflakeParameters = $.snowflakeParameters;
+        this.sparkParameters = $.sparkParameters;
+        this.sqlServerParameters = $.sqlServerParameters;
+        this.teradataParameters = $.teradataParameters;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DataSourceParameters defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable DataSourceAmazonElasticsearchParameters amazonElasticsearchParameters;
-        private @Nullable DataSourceAmazonOpenSearchParameters amazonOpenSearchParameters;
-        private @Nullable DataSourceAthenaParameters athenaParameters;
-        private @Nullable DataSourceAuroraParameters auroraParameters;
-        private @Nullable DataSourceAuroraPostgreSqlParameters auroraPostgreSqlParameters;
-        private @Nullable DataSourceMariaDbParameters mariaDbParameters;
-        private @Nullable DataSourceMySqlParameters mySqlParameters;
-        private @Nullable DataSourceOracleParameters oracleParameters;
-        private @Nullable DataSourcePostgreSqlParameters postgreSqlParameters;
-        private @Nullable DataSourcePrestoParameters prestoParameters;
-        private @Nullable DataSourceRdsParameters rdsParameters;
-        private @Nullable DataSourceRedshiftParameters redshiftParameters;
-        private @Nullable DataSourceS3Parameters s3Parameters;
-        private @Nullable DataSourceSnowflakeParameters snowflakeParameters;
-        private @Nullable DataSourceSparkParameters sparkParameters;
-        private @Nullable DataSourceSqlServerParameters sqlServerParameters;
-        private @Nullable DataSourceTeradataParameters teradataParameters;
+        private DataSourceParameters $;
 
         public Builder() {
-    	      // Empty
+            $ = new DataSourceParameters();
         }
 
         public Builder(DataSourceParameters defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.amazonElasticsearchParameters = defaults.amazonElasticsearchParameters;
-    	      this.amazonOpenSearchParameters = defaults.amazonOpenSearchParameters;
-    	      this.athenaParameters = defaults.athenaParameters;
-    	      this.auroraParameters = defaults.auroraParameters;
-    	      this.auroraPostgreSqlParameters = defaults.auroraPostgreSqlParameters;
-    	      this.mariaDbParameters = defaults.mariaDbParameters;
-    	      this.mySqlParameters = defaults.mySqlParameters;
-    	      this.oracleParameters = defaults.oracleParameters;
-    	      this.postgreSqlParameters = defaults.postgreSqlParameters;
-    	      this.prestoParameters = defaults.prestoParameters;
-    	      this.rdsParameters = defaults.rdsParameters;
-    	      this.redshiftParameters = defaults.redshiftParameters;
-    	      this.s3Parameters = defaults.s3Parameters;
-    	      this.snowflakeParameters = defaults.snowflakeParameters;
-    	      this.sparkParameters = defaults.sparkParameters;
-    	      this.sqlServerParameters = defaults.sqlServerParameters;
-    	      this.teradataParameters = defaults.teradataParameters;
+            $ = new DataSourceParameters(Objects.requireNonNull(defaults));
         }
 
         public Builder amazonElasticsearchParameters(@Nullable DataSourceAmazonElasticsearchParameters amazonElasticsearchParameters) {
-            this.amazonElasticsearchParameters = amazonElasticsearchParameters;
+            $.amazonElasticsearchParameters = amazonElasticsearchParameters;
             return this;
         }
+
         public Builder amazonOpenSearchParameters(@Nullable DataSourceAmazonOpenSearchParameters amazonOpenSearchParameters) {
-            this.amazonOpenSearchParameters = amazonOpenSearchParameters;
+            $.amazonOpenSearchParameters = amazonOpenSearchParameters;
             return this;
         }
+
         public Builder athenaParameters(@Nullable DataSourceAthenaParameters athenaParameters) {
-            this.athenaParameters = athenaParameters;
+            $.athenaParameters = athenaParameters;
             return this;
         }
+
         public Builder auroraParameters(@Nullable DataSourceAuroraParameters auroraParameters) {
-            this.auroraParameters = auroraParameters;
+            $.auroraParameters = auroraParameters;
             return this;
         }
+
         public Builder auroraPostgreSqlParameters(@Nullable DataSourceAuroraPostgreSqlParameters auroraPostgreSqlParameters) {
-            this.auroraPostgreSqlParameters = auroraPostgreSqlParameters;
+            $.auroraPostgreSqlParameters = auroraPostgreSqlParameters;
             return this;
         }
+
         public Builder mariaDbParameters(@Nullable DataSourceMariaDbParameters mariaDbParameters) {
-            this.mariaDbParameters = mariaDbParameters;
+            $.mariaDbParameters = mariaDbParameters;
             return this;
         }
+
         public Builder mySqlParameters(@Nullable DataSourceMySqlParameters mySqlParameters) {
-            this.mySqlParameters = mySqlParameters;
+            $.mySqlParameters = mySqlParameters;
             return this;
         }
+
         public Builder oracleParameters(@Nullable DataSourceOracleParameters oracleParameters) {
-            this.oracleParameters = oracleParameters;
+            $.oracleParameters = oracleParameters;
             return this;
         }
+
         public Builder postgreSqlParameters(@Nullable DataSourcePostgreSqlParameters postgreSqlParameters) {
-            this.postgreSqlParameters = postgreSqlParameters;
+            $.postgreSqlParameters = postgreSqlParameters;
             return this;
         }
+
         public Builder prestoParameters(@Nullable DataSourcePrestoParameters prestoParameters) {
-            this.prestoParameters = prestoParameters;
+            $.prestoParameters = prestoParameters;
             return this;
         }
+
         public Builder rdsParameters(@Nullable DataSourceRdsParameters rdsParameters) {
-            this.rdsParameters = rdsParameters;
+            $.rdsParameters = rdsParameters;
             return this;
         }
+
         public Builder redshiftParameters(@Nullable DataSourceRedshiftParameters redshiftParameters) {
-            this.redshiftParameters = redshiftParameters;
+            $.redshiftParameters = redshiftParameters;
             return this;
         }
+
         public Builder s3Parameters(@Nullable DataSourceS3Parameters s3Parameters) {
-            this.s3Parameters = s3Parameters;
+            $.s3Parameters = s3Parameters;
             return this;
         }
+
         public Builder snowflakeParameters(@Nullable DataSourceSnowflakeParameters snowflakeParameters) {
-            this.snowflakeParameters = snowflakeParameters;
+            $.snowflakeParameters = snowflakeParameters;
             return this;
         }
+
         public Builder sparkParameters(@Nullable DataSourceSparkParameters sparkParameters) {
-            this.sparkParameters = sparkParameters;
+            $.sparkParameters = sparkParameters;
             return this;
         }
+
         public Builder sqlServerParameters(@Nullable DataSourceSqlServerParameters sqlServerParameters) {
-            this.sqlServerParameters = sqlServerParameters;
+            $.sqlServerParameters = sqlServerParameters;
             return this;
         }
+
         public Builder teradataParameters(@Nullable DataSourceTeradataParameters teradataParameters) {
-            this.teradataParameters = teradataParameters;
+            $.teradataParameters = teradataParameters;
             return this;
-        }        public DataSourceParameters build() {
-            return new DataSourceParameters(amazonElasticsearchParameters, amazonOpenSearchParameters, athenaParameters, auroraParameters, auroraPostgreSqlParameters, mariaDbParameters, mySqlParameters, oracleParameters, postgreSqlParameters, prestoParameters, rdsParameters, redshiftParameters, s3Parameters, snowflakeParameters, sparkParameters, sqlServerParameters, teradataParameters);
+        }
+
+        public DataSourceParameters build() {
+            return $;
         }
     }
+
 }

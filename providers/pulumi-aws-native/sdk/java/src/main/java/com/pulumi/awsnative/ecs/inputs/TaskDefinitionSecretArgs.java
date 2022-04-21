@@ -5,7 +5,6 @@ package com.pulumi.awsnative.ecs.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -15,70 +14,67 @@ public final class TaskDefinitionSecretArgs extends com.pulumi.resources.Resourc
     public static final TaskDefinitionSecretArgs Empty = new TaskDefinitionSecretArgs();
 
     @Import(name="name", required=true)
-      private final Output<String> name;
+    private Output<String> name;
 
     public Output<String> name() {
         return this.name;
     }
 
     @Import(name="valueFrom", required=true)
-      private final Output<String> valueFrom;
+    private Output<String> valueFrom;
 
     public Output<String> valueFrom() {
         return this.valueFrom;
     }
 
-    public TaskDefinitionSecretArgs(
-        Output<String> name,
-        Output<String> valueFrom) {
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.valueFrom = Objects.requireNonNull(valueFrom, "expected parameter 'valueFrom' to be non-null");
-    }
+    private TaskDefinitionSecretArgs() {}
 
-    private TaskDefinitionSecretArgs() {
-        this.name = Codegen.empty();
-        this.valueFrom = Codegen.empty();
+    private TaskDefinitionSecretArgs(TaskDefinitionSecretArgs $) {
+        this.name = $.name;
+        this.valueFrom = $.valueFrom;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TaskDefinitionSecretArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> name;
-        private Output<String> valueFrom;
+        private TaskDefinitionSecretArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TaskDefinitionSecretArgs();
         }
 
         public Builder(TaskDefinitionSecretArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.valueFrom = defaults.valueFrom;
+            $ = new TaskDefinitionSecretArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder name(Output<String> name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Output.of(Objects.requireNonNull(name));
-            return this;
+            return name(Output.of(name));
         }
+
         public Builder valueFrom(Output<String> valueFrom) {
-            this.valueFrom = Objects.requireNonNull(valueFrom);
+            $.valueFrom = valueFrom;
             return this;
         }
+
         public Builder valueFrom(String valueFrom) {
-            this.valueFrom = Output.of(Objects.requireNonNull(valueFrom));
-            return this;
-        }        public TaskDefinitionSecretArgs build() {
-            return new TaskDefinitionSecretArgs(name, valueFrom);
+            return valueFrom(Output.of(valueFrom));
+        }
+
+        public TaskDefinitionSecretArgs build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.valueFrom = Objects.requireNonNull($.valueFrom, "expected parameter 'valueFrom' to be non-null");
+            return $;
         }
     }
+
 }

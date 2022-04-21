@@ -5,11 +5,11 @@ package com.pulumi.gcp.serviceusage;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class ConsumerQuotaOverrideArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="dimensions")
-      private final @Nullable Output<Map<String,String>> dimensions;
+    private @Nullable Output<Map<String,String>> dimensions;
 
-    public Output<Map<String,String>> dimensions() {
-        return this.dimensions == null ? Codegen.empty() : this.dimensions;
+    public Optional<Output<Map<String,String>>> dimensions() {
+        return Optional.ofNullable(this.dimensions);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class ConsumerQuotaOverrideArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="force")
-      private final @Nullable Output<Boolean> force;
+    private @Nullable Output<Boolean> force;
 
-    public Output<Boolean> force() {
-        return this.force == null ? Codegen.empty() : this.force;
+    public Optional<Output<Boolean>> force() {
+        return Optional.ofNullable(this.force);
     }
 
     /**
@@ -45,7 +45,7 @@ public final class ConsumerQuotaOverrideArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="limit", required=true)
-      private final Output<String> limit;
+    private Output<String> limit;
 
     public Output<String> limit() {
         return this.limit;
@@ -56,7 +56,7 @@ public final class ConsumerQuotaOverrideArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="metric", required=true)
-      private final Output<String> metric;
+    private Output<String> metric;
 
     public Output<String> metric() {
         return this.metric;
@@ -67,7 +67,7 @@ public final class ConsumerQuotaOverrideArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="overrideValue", required=true)
-      private final Output<String> overrideValue;
+    private Output<String> overrideValue;
 
     public Output<String> overrideValue() {
         return this.overrideValue;
@@ -79,10 +79,10 @@ public final class ConsumerQuotaOverrideArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -90,128 +90,112 @@ public final class ConsumerQuotaOverrideArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="service", required=true)
-      private final Output<String> service;
+    private Output<String> service;
 
     public Output<String> service() {
         return this.service;
     }
 
-    public ConsumerQuotaOverrideArgs(
-        @Nullable Output<Map<String,String>> dimensions,
-        @Nullable Output<Boolean> force,
-        Output<String> limit,
-        Output<String> metric,
-        Output<String> overrideValue,
-        @Nullable Output<String> project,
-        Output<String> service) {
-        this.dimensions = dimensions;
-        this.force = force;
-        this.limit = Objects.requireNonNull(limit, "expected parameter 'limit' to be non-null");
-        this.metric = Objects.requireNonNull(metric, "expected parameter 'metric' to be non-null");
-        this.overrideValue = Objects.requireNonNull(overrideValue, "expected parameter 'overrideValue' to be non-null");
-        this.project = project;
-        this.service = Objects.requireNonNull(service, "expected parameter 'service' to be non-null");
-    }
+    private ConsumerQuotaOverrideArgs() {}
 
-    private ConsumerQuotaOverrideArgs() {
-        this.dimensions = Codegen.empty();
-        this.force = Codegen.empty();
-        this.limit = Codegen.empty();
-        this.metric = Codegen.empty();
-        this.overrideValue = Codegen.empty();
-        this.project = Codegen.empty();
-        this.service = Codegen.empty();
+    private ConsumerQuotaOverrideArgs(ConsumerQuotaOverrideArgs $) {
+        this.dimensions = $.dimensions;
+        this.force = $.force;
+        this.limit = $.limit;
+        this.metric = $.metric;
+        this.overrideValue = $.overrideValue;
+        this.project = $.project;
+        this.service = $.service;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ConsumerQuotaOverrideArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Map<String,String>> dimensions;
-        private @Nullable Output<Boolean> force;
-        private Output<String> limit;
-        private Output<String> metric;
-        private Output<String> overrideValue;
-        private @Nullable Output<String> project;
-        private Output<String> service;
+        private ConsumerQuotaOverrideArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ConsumerQuotaOverrideArgs();
         }
 
         public Builder(ConsumerQuotaOverrideArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dimensions = defaults.dimensions;
-    	      this.force = defaults.force;
-    	      this.limit = defaults.limit;
-    	      this.metric = defaults.metric;
-    	      this.overrideValue = defaults.overrideValue;
-    	      this.project = defaults.project;
-    	      this.service = defaults.service;
+            $ = new ConsumerQuotaOverrideArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder dimensions(@Nullable Output<Map<String,String>> dimensions) {
-            this.dimensions = dimensions;
+            $.dimensions = dimensions;
             return this;
         }
-        public Builder dimensions(@Nullable Map<String,String> dimensions) {
-            this.dimensions = Codegen.ofNullable(dimensions);
-            return this;
+
+        public Builder dimensions(Map<String,String> dimensions) {
+            return dimensions(Output.of(dimensions));
         }
+
         public Builder force(@Nullable Output<Boolean> force) {
-            this.force = force;
+            $.force = force;
             return this;
         }
-        public Builder force(@Nullable Boolean force) {
-            this.force = Codegen.ofNullable(force);
-            return this;
+
+        public Builder force(Boolean force) {
+            return force(Output.of(force));
         }
+
         public Builder limit(Output<String> limit) {
-            this.limit = Objects.requireNonNull(limit);
+            $.limit = limit;
             return this;
         }
+
         public Builder limit(String limit) {
-            this.limit = Output.of(Objects.requireNonNull(limit));
-            return this;
+            return limit(Output.of(limit));
         }
+
         public Builder metric(Output<String> metric) {
-            this.metric = Objects.requireNonNull(metric);
+            $.metric = metric;
             return this;
         }
+
         public Builder metric(String metric) {
-            this.metric = Output.of(Objects.requireNonNull(metric));
-            return this;
+            return metric(Output.of(metric));
         }
+
         public Builder overrideValue(Output<String> overrideValue) {
-            this.overrideValue = Objects.requireNonNull(overrideValue);
+            $.overrideValue = overrideValue;
             return this;
         }
+
         public Builder overrideValue(String overrideValue) {
-            this.overrideValue = Output.of(Objects.requireNonNull(overrideValue));
-            return this;
+            return overrideValue(Output.of(overrideValue));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder service(Output<String> service) {
-            this.service = Objects.requireNonNull(service);
+            $.service = service;
             return this;
         }
+
         public Builder service(String service) {
-            this.service = Output.of(Objects.requireNonNull(service));
-            return this;
-        }        public ConsumerQuotaOverrideArgs build() {
-            return new ConsumerQuotaOverrideArgs(dimensions, force, limit, metric, overrideValue, project, service);
+            return service(Output.of(service));
+        }
+
+        public ConsumerQuotaOverrideArgs build() {
+            $.limit = Objects.requireNonNull($.limit, "expected parameter 'limit' to be non-null");
+            $.metric = Objects.requireNonNull($.metric, "expected parameter 'metric' to be non-null");
+            $.overrideValue = Objects.requireNonNull($.overrideValue, "expected parameter 'overrideValue' to be non-null");
+            $.service = Objects.requireNonNull($.service, "expected parameter 'service' to be non-null");
+            return $;
         }
     }
+
 }

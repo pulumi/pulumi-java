@@ -5,11 +5,11 @@ package com.pulumi.gcp.accesscontextmanager;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.accesscontextmanager.inputs.AccessLevelsAccessLevelArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,10 @@ public final class AccessLevelsArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="accessLevels")
-      private final @Nullable Output<List<AccessLevelsAccessLevelArgs>> accessLevels;
+    private @Nullable Output<List<AccessLevelsAccessLevelArgs>> accessLevels;
 
-    public Output<List<AccessLevelsAccessLevelArgs>> accessLevels() {
-        return this.accessLevels == null ? Codegen.empty() : this.accessLevels;
+    public Optional<Output<List<AccessLevelsAccessLevelArgs>>> accessLevels() {
+        return Optional.ofNullable(this.accessLevels);
     }
 
     /**
@@ -35,66 +35,63 @@ public final class AccessLevelsArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="parent", required=true)
-      private final Output<String> parent;
+    private Output<String> parent;
 
     public Output<String> parent() {
         return this.parent;
     }
 
-    public AccessLevelsArgs(
-        @Nullable Output<List<AccessLevelsAccessLevelArgs>> accessLevels,
-        Output<String> parent) {
-        this.accessLevels = accessLevels;
-        this.parent = Objects.requireNonNull(parent, "expected parameter 'parent' to be non-null");
-    }
+    private AccessLevelsArgs() {}
 
-    private AccessLevelsArgs() {
-        this.accessLevels = Codegen.empty();
-        this.parent = Codegen.empty();
+    private AccessLevelsArgs(AccessLevelsArgs $) {
+        this.accessLevels = $.accessLevels;
+        this.parent = $.parent;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AccessLevelsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<AccessLevelsAccessLevelArgs>> accessLevels;
-        private Output<String> parent;
+        private AccessLevelsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AccessLevelsArgs();
         }
 
         public Builder(AccessLevelsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accessLevels = defaults.accessLevels;
-    	      this.parent = defaults.parent;
+            $ = new AccessLevelsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder accessLevels(@Nullable Output<List<AccessLevelsAccessLevelArgs>> accessLevels) {
-            this.accessLevels = accessLevels;
+            $.accessLevels = accessLevels;
             return this;
         }
-        public Builder accessLevels(@Nullable List<AccessLevelsAccessLevelArgs> accessLevels) {
-            this.accessLevels = Codegen.ofNullable(accessLevels);
-            return this;
+
+        public Builder accessLevels(List<AccessLevelsAccessLevelArgs> accessLevels) {
+            return accessLevels(Output.of(accessLevels));
         }
+
         public Builder accessLevels(AccessLevelsAccessLevelArgs... accessLevels) {
             return accessLevels(List.of(accessLevels));
         }
+
         public Builder parent(Output<String> parent) {
-            this.parent = Objects.requireNonNull(parent);
+            $.parent = parent;
             return this;
         }
+
         public Builder parent(String parent) {
-            this.parent = Output.of(Objects.requireNonNull(parent));
-            return this;
-        }        public AccessLevelsArgs build() {
-            return new AccessLevelsArgs(accessLevels, parent);
+            return parent(Output.of(parent));
+        }
+
+        public AccessLevelsArgs build() {
+            $.parent = Objects.requireNonNull($.parent, "expected parameter 'parent' to be non-null");
+            return $;
         }
     }
+
 }

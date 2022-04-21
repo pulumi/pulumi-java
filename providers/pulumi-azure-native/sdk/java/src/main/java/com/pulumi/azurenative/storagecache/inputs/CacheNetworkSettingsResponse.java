@@ -26,10 +26,10 @@ public final class CacheNetworkSettingsResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="dnsSearchDomain")
-      private final @Nullable String dnsSearchDomain;
+    private @Nullable String dnsSearchDomain;
 
     public Optional<String> dnsSearchDomain() {
-        return this.dnsSearchDomain == null ? Optional.empty() : Optional.ofNullable(this.dnsSearchDomain);
+        return Optional.ofNullable(this.dnsSearchDomain);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class CacheNetworkSettingsResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="dnsServers")
-      private final @Nullable List<String> dnsServers;
+    private @Nullable List<String> dnsServers;
 
-    public List<String> dnsServers() {
-        return this.dnsServers == null ? List.of() : this.dnsServers;
+    public Optional<List<String>> dnsServers() {
+        return Optional.ofNullable(this.dnsServers);
     }
 
     /**
@@ -48,10 +48,10 @@ public final class CacheNetworkSettingsResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="mtu")
-      private final @Nullable Integer mtu;
+    private @Nullable Integer mtu;
 
     public Optional<Integer> mtu() {
-        return this.mtu == null ? Optional.empty() : Optional.ofNullable(this.mtu);
+        return Optional.ofNullable(this.mtu);
     }
 
     /**
@@ -59,10 +59,10 @@ public final class CacheNetworkSettingsResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="ntpServer")
-      private final @Nullable String ntpServer;
+    private @Nullable String ntpServer;
 
     public Optional<String> ntpServer() {
-        return this.ntpServer == null ? Optional.empty() : Optional.ofNullable(this.ntpServer);
+        return Optional.ofNullable(this.ntpServer);
     }
 
     /**
@@ -70,88 +70,79 @@ public final class CacheNetworkSettingsResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="utilityAddresses", required=true)
-      private final List<String> utilityAddresses;
+    private List<String> utilityAddresses;
 
     public List<String> utilityAddresses() {
         return this.utilityAddresses;
     }
 
-    public CacheNetworkSettingsResponse(
-        @Nullable String dnsSearchDomain,
-        @Nullable List<String> dnsServers,
-        @Nullable Integer mtu,
-        @Nullable String ntpServer,
-        List<String> utilityAddresses) {
-        this.dnsSearchDomain = dnsSearchDomain;
-        this.dnsServers = dnsServers;
-        this.mtu = Codegen.integerProp("mtu").arg(mtu).def(1500).getNullable();
-        this.ntpServer = Codegen.stringProp("ntpServer").arg(ntpServer).def("time.windows.com").getNullable();
-        this.utilityAddresses = Objects.requireNonNull(utilityAddresses, "expected parameter 'utilityAddresses' to be non-null");
-    }
+    private CacheNetworkSettingsResponse() {}
 
-    private CacheNetworkSettingsResponse() {
-        this.dnsSearchDomain = null;
-        this.dnsServers = List.of();
-        this.mtu = null;
-        this.ntpServer = null;
-        this.utilityAddresses = List.of();
+    private CacheNetworkSettingsResponse(CacheNetworkSettingsResponse $) {
+        this.dnsSearchDomain = $.dnsSearchDomain;
+        this.dnsServers = $.dnsServers;
+        this.mtu = $.mtu;
+        this.ntpServer = $.ntpServer;
+        this.utilityAddresses = $.utilityAddresses;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CacheNetworkSettingsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String dnsSearchDomain;
-        private @Nullable List<String> dnsServers;
-        private @Nullable Integer mtu;
-        private @Nullable String ntpServer;
-        private List<String> utilityAddresses;
+        private CacheNetworkSettingsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new CacheNetworkSettingsResponse();
         }
 
         public Builder(CacheNetworkSettingsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dnsSearchDomain = defaults.dnsSearchDomain;
-    	      this.dnsServers = defaults.dnsServers;
-    	      this.mtu = defaults.mtu;
-    	      this.ntpServer = defaults.ntpServer;
-    	      this.utilityAddresses = defaults.utilityAddresses;
+            $ = new CacheNetworkSettingsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder dnsSearchDomain(@Nullable String dnsSearchDomain) {
-            this.dnsSearchDomain = dnsSearchDomain;
+            $.dnsSearchDomain = dnsSearchDomain;
             return this;
         }
+
         public Builder dnsServers(@Nullable List<String> dnsServers) {
-            this.dnsServers = dnsServers;
+            $.dnsServers = dnsServers;
             return this;
         }
+
         public Builder dnsServers(String... dnsServers) {
             return dnsServers(List.of(dnsServers));
         }
+
         public Builder mtu(@Nullable Integer mtu) {
-            this.mtu = mtu;
+            $.mtu = mtu;
             return this;
         }
+
         public Builder ntpServer(@Nullable String ntpServer) {
-            this.ntpServer = ntpServer;
+            $.ntpServer = ntpServer;
             return this;
         }
+
         public Builder utilityAddresses(List<String> utilityAddresses) {
-            this.utilityAddresses = Objects.requireNonNull(utilityAddresses);
+            $.utilityAddresses = utilityAddresses;
             return this;
         }
+
         public Builder utilityAddresses(String... utilityAddresses) {
             return utilityAddresses(List.of(utilityAddresses));
-        }        public CacheNetworkSettingsResponse build() {
-            return new CacheNetworkSettingsResponse(dnsSearchDomain, dnsServers, mtu, ntpServer, utilityAddresses);
+        }
+
+        public CacheNetworkSettingsResponse build() {
+            $.mtu = Codegen.integerProp("mtu").arg($.mtu).def(1500).getNullable();
+            $.ntpServer = Codegen.stringProp("ntpServer").arg($.ntpServer).def("time.windows.com").getNullable();
+            $.utilityAddresses = Objects.requireNonNull($.utilityAddresses, "expected parameter 'utilityAddresses' to be non-null");
+            return $;
         }
     }
+
 }

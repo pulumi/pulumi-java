@@ -5,7 +5,6 @@ package com.pulumi.aws.ec2;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,7 +18,7 @@ public final class SnapshotCreateVolumePermissionArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="accountId", required=true)
-      private final Output<String> accountId;
+    private Output<String> accountId;
 
     public Output<String> accountId() {
         return this.accountId;
@@ -30,63 +29,60 @@ public final class SnapshotCreateVolumePermissionArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="snapshotId", required=true)
-      private final Output<String> snapshotId;
+    private Output<String> snapshotId;
 
     public Output<String> snapshotId() {
         return this.snapshotId;
     }
 
-    public SnapshotCreateVolumePermissionArgs(
-        Output<String> accountId,
-        Output<String> snapshotId) {
-        this.accountId = Objects.requireNonNull(accountId, "expected parameter 'accountId' to be non-null");
-        this.snapshotId = Objects.requireNonNull(snapshotId, "expected parameter 'snapshotId' to be non-null");
-    }
+    private SnapshotCreateVolumePermissionArgs() {}
 
-    private SnapshotCreateVolumePermissionArgs() {
-        this.accountId = Codegen.empty();
-        this.snapshotId = Codegen.empty();
+    private SnapshotCreateVolumePermissionArgs(SnapshotCreateVolumePermissionArgs $) {
+        this.accountId = $.accountId;
+        this.snapshotId = $.snapshotId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SnapshotCreateVolumePermissionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> accountId;
-        private Output<String> snapshotId;
+        private SnapshotCreateVolumePermissionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SnapshotCreateVolumePermissionArgs();
         }
 
         public Builder(SnapshotCreateVolumePermissionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accountId = defaults.accountId;
-    	      this.snapshotId = defaults.snapshotId;
+            $ = new SnapshotCreateVolumePermissionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder accountId(Output<String> accountId) {
-            this.accountId = Objects.requireNonNull(accountId);
+            $.accountId = accountId;
             return this;
         }
+
         public Builder accountId(String accountId) {
-            this.accountId = Output.of(Objects.requireNonNull(accountId));
-            return this;
+            return accountId(Output.of(accountId));
         }
+
         public Builder snapshotId(Output<String> snapshotId) {
-            this.snapshotId = Objects.requireNonNull(snapshotId);
+            $.snapshotId = snapshotId;
             return this;
         }
+
         public Builder snapshotId(String snapshotId) {
-            this.snapshotId = Output.of(Objects.requireNonNull(snapshotId));
-            return this;
-        }        public SnapshotCreateVolumePermissionArgs build() {
-            return new SnapshotCreateVolumePermissionArgs(accountId, snapshotId);
+            return snapshotId(Output.of(snapshotId));
+        }
+
+        public SnapshotCreateVolumePermissionArgs build() {
+            $.accountId = Objects.requireNonNull($.accountId, "expected parameter 'accountId' to be non-null");
+            $.snapshotId = Objects.requireNonNull($.snapshotId, "expected parameter 'snapshotId' to be non-null");
+            return $;
         }
     }
+
 }

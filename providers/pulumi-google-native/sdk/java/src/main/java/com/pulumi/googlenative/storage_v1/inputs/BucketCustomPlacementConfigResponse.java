@@ -22,48 +22,49 @@ public final class BucketCustomPlacementConfigResponse extends com.pulumi.resour
      * 
      */
     @Import(name="dataLocations", required=true)
-      private final List<String> dataLocations;
+    private List<String> dataLocations;
 
     public List<String> dataLocations() {
         return this.dataLocations;
     }
 
-    public BucketCustomPlacementConfigResponse(List<String> dataLocations) {
-        this.dataLocations = Objects.requireNonNull(dataLocations, "expected parameter 'dataLocations' to be non-null");
-    }
+    private BucketCustomPlacementConfigResponse() {}
 
-    private BucketCustomPlacementConfigResponse() {
-        this.dataLocations = List.of();
+    private BucketCustomPlacementConfigResponse(BucketCustomPlacementConfigResponse $) {
+        this.dataLocations = $.dataLocations;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BucketCustomPlacementConfigResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<String> dataLocations;
+        private BucketCustomPlacementConfigResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new BucketCustomPlacementConfigResponse();
         }
 
         public Builder(BucketCustomPlacementConfigResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dataLocations = defaults.dataLocations;
+            $ = new BucketCustomPlacementConfigResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder dataLocations(List<String> dataLocations) {
-            this.dataLocations = Objects.requireNonNull(dataLocations);
+            $.dataLocations = dataLocations;
             return this;
         }
+
         public Builder dataLocations(String... dataLocations) {
             return dataLocations(List.of(dataLocations));
-        }        public BucketCustomPlacementConfigResponse build() {
-            return new BucketCustomPlacementConfigResponse(dataLocations);
+        }
+
+        public BucketCustomPlacementConfigResponse build() {
+            $.dataLocations = Objects.requireNonNull($.dataLocations, "expected parameter 'dataLocations' to be non-null");
+            return $;
         }
     }
+
 }

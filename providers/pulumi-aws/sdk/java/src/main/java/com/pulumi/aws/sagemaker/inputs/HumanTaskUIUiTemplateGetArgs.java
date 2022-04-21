@@ -5,9 +5,9 @@ package com.pulumi.aws.sagemaker.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class HumanTaskUIUiTemplateGetArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="content")
-      private final @Nullable Output<String> content;
+    private @Nullable Output<String> content;
 
-    public Output<String> content() {
-        return this.content == null ? Codegen.empty() : this.content;
+    public Optional<Output<String>> content() {
+        return Optional.ofNullable(this.content);
     }
 
     /**
@@ -31,10 +31,10 @@ public final class HumanTaskUIUiTemplateGetArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="contentSha256")
-      private final @Nullable Output<String> contentSha256;
+    private @Nullable Output<String> contentSha256;
 
-    public Output<String> contentSha256() {
-        return this.contentSha256 == null ? Codegen.empty() : this.contentSha256;
+    public Optional<Output<String>> contentSha256() {
+        return Optional.ofNullable(this.contentSha256);
     }
 
     /**
@@ -42,76 +42,68 @@ public final class HumanTaskUIUiTemplateGetArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="url")
-      private final @Nullable Output<String> url;
+    private @Nullable Output<String> url;
 
-    public Output<String> url() {
-        return this.url == null ? Codegen.empty() : this.url;
+    public Optional<Output<String>> url() {
+        return Optional.ofNullable(this.url);
     }
 
-    public HumanTaskUIUiTemplateGetArgs(
-        @Nullable Output<String> content,
-        @Nullable Output<String> contentSha256,
-        @Nullable Output<String> url) {
-        this.content = content;
-        this.contentSha256 = contentSha256;
-        this.url = url;
-    }
+    private HumanTaskUIUiTemplateGetArgs() {}
 
-    private HumanTaskUIUiTemplateGetArgs() {
-        this.content = Codegen.empty();
-        this.contentSha256 = Codegen.empty();
-        this.url = Codegen.empty();
+    private HumanTaskUIUiTemplateGetArgs(HumanTaskUIUiTemplateGetArgs $) {
+        this.content = $.content;
+        this.contentSha256 = $.contentSha256;
+        this.url = $.url;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(HumanTaskUIUiTemplateGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> content;
-        private @Nullable Output<String> contentSha256;
-        private @Nullable Output<String> url;
+        private HumanTaskUIUiTemplateGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new HumanTaskUIUiTemplateGetArgs();
         }
 
         public Builder(HumanTaskUIUiTemplateGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.content = defaults.content;
-    	      this.contentSha256 = defaults.contentSha256;
-    	      this.url = defaults.url;
+            $ = new HumanTaskUIUiTemplateGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder content(@Nullable Output<String> content) {
-            this.content = content;
+            $.content = content;
             return this;
         }
-        public Builder content(@Nullable String content) {
-            this.content = Codegen.ofNullable(content);
-            return this;
+
+        public Builder content(String content) {
+            return content(Output.of(content));
         }
+
         public Builder contentSha256(@Nullable Output<String> contentSha256) {
-            this.contentSha256 = contentSha256;
+            $.contentSha256 = contentSha256;
             return this;
         }
-        public Builder contentSha256(@Nullable String contentSha256) {
-            this.contentSha256 = Codegen.ofNullable(contentSha256);
-            return this;
+
+        public Builder contentSha256(String contentSha256) {
+            return contentSha256(Output.of(contentSha256));
         }
+
         public Builder url(@Nullable Output<String> url) {
-            this.url = url;
+            $.url = url;
             return this;
         }
-        public Builder url(@Nullable String url) {
-            this.url = Codegen.ofNullable(url);
-            return this;
-        }        public HumanTaskUIUiTemplateGetArgs build() {
-            return new HumanTaskUIUiTemplateGetArgs(content, contentSha256, url);
+
+        public Builder url(String url) {
+            return url(Output.of(url));
+        }
+
+        public HumanTaskUIUiTemplateGetArgs build() {
+            return $;
         }
     }
+
 }

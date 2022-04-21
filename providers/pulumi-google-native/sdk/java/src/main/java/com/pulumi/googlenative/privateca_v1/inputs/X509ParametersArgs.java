@@ -5,7 +5,6 @@ package com.pulumi.googlenative.privateca_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.privateca_v1.inputs.CaOptionsArgs;
 import com.pulumi.googlenative.privateca_v1.inputs.KeyUsageArgs;
 import com.pulumi.googlenative.privateca_v1.inputs.ObjectIdArgs;
@@ -13,6 +12,7 @@ import com.pulumi.googlenative.privateca_v1.inputs.X509ExtensionArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -29,10 +29,10 @@ public final class X509ParametersArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="additionalExtensions")
-      private final @Nullable Output<List<X509ExtensionArgs>> additionalExtensions;
+    private @Nullable Output<List<X509ExtensionArgs>> additionalExtensions;
 
-    public Output<List<X509ExtensionArgs>> additionalExtensions() {
-        return this.additionalExtensions == null ? Codegen.empty() : this.additionalExtensions;
+    public Optional<Output<List<X509ExtensionArgs>>> additionalExtensions() {
+        return Optional.ofNullable(this.additionalExtensions);
     }
 
     /**
@@ -40,10 +40,10 @@ public final class X509ParametersArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="aiaOcspServers")
-      private final @Nullable Output<List<String>> aiaOcspServers;
+    private @Nullable Output<List<String>> aiaOcspServers;
 
-    public Output<List<String>> aiaOcspServers() {
-        return this.aiaOcspServers == null ? Codegen.empty() : this.aiaOcspServers;
+    public Optional<Output<List<String>>> aiaOcspServers() {
+        return Optional.ofNullable(this.aiaOcspServers);
     }
 
     /**
@@ -51,10 +51,10 @@ public final class X509ParametersArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="caOptions")
-      private final @Nullable Output<CaOptionsArgs> caOptions;
+    private @Nullable Output<CaOptionsArgs> caOptions;
 
-    public Output<CaOptionsArgs> caOptions() {
-        return this.caOptions == null ? Codegen.empty() : this.caOptions;
+    public Optional<Output<CaOptionsArgs>> caOptions() {
+        return Optional.ofNullable(this.caOptions);
     }
 
     /**
@@ -62,10 +62,10 @@ public final class X509ParametersArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="keyUsage")
-      private final @Nullable Output<KeyUsageArgs> keyUsage;
+    private @Nullable Output<KeyUsageArgs> keyUsage;
 
-    public Output<KeyUsageArgs> keyUsage() {
-        return this.keyUsage == null ? Codegen.empty() : this.keyUsage;
+    public Optional<Output<KeyUsageArgs>> keyUsage() {
+        return Optional.ofNullable(this.keyUsage);
     }
 
     /**
@@ -73,111 +73,100 @@ public final class X509ParametersArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="policyIds")
-      private final @Nullable Output<List<ObjectIdArgs>> policyIds;
+    private @Nullable Output<List<ObjectIdArgs>> policyIds;
 
-    public Output<List<ObjectIdArgs>> policyIds() {
-        return this.policyIds == null ? Codegen.empty() : this.policyIds;
+    public Optional<Output<List<ObjectIdArgs>>> policyIds() {
+        return Optional.ofNullable(this.policyIds);
     }
 
-    public X509ParametersArgs(
-        @Nullable Output<List<X509ExtensionArgs>> additionalExtensions,
-        @Nullable Output<List<String>> aiaOcspServers,
-        @Nullable Output<CaOptionsArgs> caOptions,
-        @Nullable Output<KeyUsageArgs> keyUsage,
-        @Nullable Output<List<ObjectIdArgs>> policyIds) {
-        this.additionalExtensions = additionalExtensions;
-        this.aiaOcspServers = aiaOcspServers;
-        this.caOptions = caOptions;
-        this.keyUsage = keyUsage;
-        this.policyIds = policyIds;
-    }
+    private X509ParametersArgs() {}
 
-    private X509ParametersArgs() {
-        this.additionalExtensions = Codegen.empty();
-        this.aiaOcspServers = Codegen.empty();
-        this.caOptions = Codegen.empty();
-        this.keyUsage = Codegen.empty();
-        this.policyIds = Codegen.empty();
+    private X509ParametersArgs(X509ParametersArgs $) {
+        this.additionalExtensions = $.additionalExtensions;
+        this.aiaOcspServers = $.aiaOcspServers;
+        this.caOptions = $.caOptions;
+        this.keyUsage = $.keyUsage;
+        this.policyIds = $.policyIds;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(X509ParametersArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<X509ExtensionArgs>> additionalExtensions;
-        private @Nullable Output<List<String>> aiaOcspServers;
-        private @Nullable Output<CaOptionsArgs> caOptions;
-        private @Nullable Output<KeyUsageArgs> keyUsage;
-        private @Nullable Output<List<ObjectIdArgs>> policyIds;
+        private X509ParametersArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new X509ParametersArgs();
         }
 
         public Builder(X509ParametersArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.additionalExtensions = defaults.additionalExtensions;
-    	      this.aiaOcspServers = defaults.aiaOcspServers;
-    	      this.caOptions = defaults.caOptions;
-    	      this.keyUsage = defaults.keyUsage;
-    	      this.policyIds = defaults.policyIds;
+            $ = new X509ParametersArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder additionalExtensions(@Nullable Output<List<X509ExtensionArgs>> additionalExtensions) {
-            this.additionalExtensions = additionalExtensions;
+            $.additionalExtensions = additionalExtensions;
             return this;
         }
-        public Builder additionalExtensions(@Nullable List<X509ExtensionArgs> additionalExtensions) {
-            this.additionalExtensions = Codegen.ofNullable(additionalExtensions);
-            return this;
+
+        public Builder additionalExtensions(List<X509ExtensionArgs> additionalExtensions) {
+            return additionalExtensions(Output.of(additionalExtensions));
         }
+
         public Builder additionalExtensions(X509ExtensionArgs... additionalExtensions) {
             return additionalExtensions(List.of(additionalExtensions));
         }
+
         public Builder aiaOcspServers(@Nullable Output<List<String>> aiaOcspServers) {
-            this.aiaOcspServers = aiaOcspServers;
+            $.aiaOcspServers = aiaOcspServers;
             return this;
         }
-        public Builder aiaOcspServers(@Nullable List<String> aiaOcspServers) {
-            this.aiaOcspServers = Codegen.ofNullable(aiaOcspServers);
-            return this;
+
+        public Builder aiaOcspServers(List<String> aiaOcspServers) {
+            return aiaOcspServers(Output.of(aiaOcspServers));
         }
+
         public Builder aiaOcspServers(String... aiaOcspServers) {
             return aiaOcspServers(List.of(aiaOcspServers));
         }
+
         public Builder caOptions(@Nullable Output<CaOptionsArgs> caOptions) {
-            this.caOptions = caOptions;
+            $.caOptions = caOptions;
             return this;
         }
-        public Builder caOptions(@Nullable CaOptionsArgs caOptions) {
-            this.caOptions = Codegen.ofNullable(caOptions);
-            return this;
+
+        public Builder caOptions(CaOptionsArgs caOptions) {
+            return caOptions(Output.of(caOptions));
         }
+
         public Builder keyUsage(@Nullable Output<KeyUsageArgs> keyUsage) {
-            this.keyUsage = keyUsage;
+            $.keyUsage = keyUsage;
             return this;
         }
-        public Builder keyUsage(@Nullable KeyUsageArgs keyUsage) {
-            this.keyUsage = Codegen.ofNullable(keyUsage);
-            return this;
+
+        public Builder keyUsage(KeyUsageArgs keyUsage) {
+            return keyUsage(Output.of(keyUsage));
         }
+
         public Builder policyIds(@Nullable Output<List<ObjectIdArgs>> policyIds) {
-            this.policyIds = policyIds;
+            $.policyIds = policyIds;
             return this;
         }
-        public Builder policyIds(@Nullable List<ObjectIdArgs> policyIds) {
-            this.policyIds = Codegen.ofNullable(policyIds);
-            return this;
+
+        public Builder policyIds(List<ObjectIdArgs> policyIds) {
+            return policyIds(Output.of(policyIds));
         }
+
         public Builder policyIds(ObjectIdArgs... policyIds) {
             return policyIds(List.of(policyIds));
-        }        public X509ParametersArgs build() {
-            return new X509ParametersArgs(additionalExtensions, aiaOcspServers, caOptions, keyUsage, policyIds);
+        }
+
+        public X509ParametersArgs build() {
+            return $;
         }
     }
+
 }

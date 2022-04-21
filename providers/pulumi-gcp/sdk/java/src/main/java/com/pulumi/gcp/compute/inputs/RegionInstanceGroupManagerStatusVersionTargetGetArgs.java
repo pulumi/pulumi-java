@@ -5,9 +5,9 @@ package com.pulumi.gcp.compute.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -16,49 +16,48 @@ public final class RegionInstanceGroupManagerStatusVersionTargetGetArgs extends 
     public static final RegionInstanceGroupManagerStatusVersionTargetGetArgs Empty = new RegionInstanceGroupManagerStatusVersionTargetGetArgs();
 
     @Import(name="isReached")
-      private final @Nullable Output<Boolean> isReached;
+    private @Nullable Output<Boolean> isReached;
 
-    public Output<Boolean> isReached() {
-        return this.isReached == null ? Codegen.empty() : this.isReached;
+    public Optional<Output<Boolean>> isReached() {
+        return Optional.ofNullable(this.isReached);
     }
 
-    public RegionInstanceGroupManagerStatusVersionTargetGetArgs(@Nullable Output<Boolean> isReached) {
-        this.isReached = isReached;
-    }
+    private RegionInstanceGroupManagerStatusVersionTargetGetArgs() {}
 
-    private RegionInstanceGroupManagerStatusVersionTargetGetArgs() {
-        this.isReached = Codegen.empty();
+    private RegionInstanceGroupManagerStatusVersionTargetGetArgs(RegionInstanceGroupManagerStatusVersionTargetGetArgs $) {
+        this.isReached = $.isReached;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RegionInstanceGroupManagerStatusVersionTargetGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> isReached;
+        private RegionInstanceGroupManagerStatusVersionTargetGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RegionInstanceGroupManagerStatusVersionTargetGetArgs();
         }
 
         public Builder(RegionInstanceGroupManagerStatusVersionTargetGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.isReached = defaults.isReached;
+            $ = new RegionInstanceGroupManagerStatusVersionTargetGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder isReached(@Nullable Output<Boolean> isReached) {
-            this.isReached = isReached;
+            $.isReached = isReached;
             return this;
         }
-        public Builder isReached(@Nullable Boolean isReached) {
-            this.isReached = Codegen.ofNullable(isReached);
-            return this;
-        }        public RegionInstanceGroupManagerStatusVersionTargetGetArgs build() {
-            return new RegionInstanceGroupManagerStatusVersionTargetGetArgs(isReached);
+
+        public Builder isReached(Boolean isReached) {
+            return isReached(Output.of(isReached));
+        }
+
+        public RegionInstanceGroupManagerStatusVersionTargetGetArgs build() {
+            return $;
         }
     }
+
 }

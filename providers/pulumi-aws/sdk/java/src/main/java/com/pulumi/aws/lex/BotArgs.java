@@ -8,13 +8,13 @@ import com.pulumi.aws.lex.inputs.BotClarificationPromptArgs;
 import com.pulumi.aws.lex.inputs.BotIntentArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,7 +27,7 @@ public final class BotArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="abortStatement", required=true)
-      private final Output<BotAbortStatementArgs> abortStatement;
+    private Output<BotAbortStatementArgs> abortStatement;
 
     public Output<BotAbortStatementArgs> abortStatement() {
         return this.abortStatement;
@@ -38,7 +38,7 @@ public final class BotArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="childDirected", required=true)
-      private final Output<Boolean> childDirected;
+    private Output<Boolean> childDirected;
 
     public Output<Boolean> childDirected() {
         return this.childDirected;
@@ -49,10 +49,10 @@ public final class BotArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="clarificationPrompt")
-      private final @Nullable Output<BotClarificationPromptArgs> clarificationPrompt;
+    private @Nullable Output<BotClarificationPromptArgs> clarificationPrompt;
 
-    public Output<BotClarificationPromptArgs> clarificationPrompt() {
-        return this.clarificationPrompt == null ? Codegen.empty() : this.clarificationPrompt;
+    public Optional<Output<BotClarificationPromptArgs>> clarificationPrompt() {
+        return Optional.ofNullable(this.clarificationPrompt);
     }
 
     /**
@@ -60,10 +60,10 @@ public final class BotArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="createVersion")
-      private final @Nullable Output<Boolean> createVersion;
+    private @Nullable Output<Boolean> createVersion;
 
-    public Output<Boolean> createVersion() {
-        return this.createVersion == null ? Codegen.empty() : this.createVersion;
+    public Optional<Output<Boolean>> createVersion() {
+        return Optional.ofNullable(this.createVersion);
     }
 
     /**
@@ -71,10 +71,10 @@ public final class BotArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -82,10 +82,10 @@ public final class BotArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="detectSentiment")
-      private final @Nullable Output<Boolean> detectSentiment;
+    private @Nullable Output<Boolean> detectSentiment;
 
-    public Output<Boolean> detectSentiment() {
-        return this.detectSentiment == null ? Codegen.empty() : this.detectSentiment;
+    public Optional<Output<Boolean>> detectSentiment() {
+        return Optional.ofNullable(this.detectSentiment);
     }
 
     /**
@@ -93,10 +93,10 @@ public final class BotArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="enableModelImprovements")
-      private final @Nullable Output<Boolean> enableModelImprovements;
+    private @Nullable Output<Boolean> enableModelImprovements;
 
-    public Output<Boolean> enableModelImprovements() {
-        return this.enableModelImprovements == null ? Codegen.empty() : this.enableModelImprovements;
+    public Optional<Output<Boolean>> enableModelImprovements() {
+        return Optional.ofNullable(this.enableModelImprovements);
     }
 
     /**
@@ -104,10 +104,10 @@ public final class BotArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="idleSessionTtlInSeconds")
-      private final @Nullable Output<Integer> idleSessionTtlInSeconds;
+    private @Nullable Output<Integer> idleSessionTtlInSeconds;
 
-    public Output<Integer> idleSessionTtlInSeconds() {
-        return this.idleSessionTtlInSeconds == null ? Codegen.empty() : this.idleSessionTtlInSeconds;
+    public Optional<Output<Integer>> idleSessionTtlInSeconds() {
+        return Optional.ofNullable(this.idleSessionTtlInSeconds);
     }
 
     /**
@@ -115,7 +115,7 @@ public final class BotArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="intents", required=true)
-      private final Output<List<BotIntentArgs>> intents;
+    private Output<List<BotIntentArgs>> intents;
 
     public Output<List<BotIntentArgs>> intents() {
         return this.intents;
@@ -126,10 +126,10 @@ public final class BotArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="locale")
-      private final @Nullable Output<String> locale;
+    private @Nullable Output<String> locale;
 
-    public Output<String> locale() {
-        return this.locale == null ? Codegen.empty() : this.locale;
+    public Optional<Output<String>> locale() {
+        return Optional.ofNullable(this.locale);
     }
 
     /**
@@ -137,10 +137,10 @@ public final class BotArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -148,10 +148,10 @@ public final class BotArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="nluIntentConfidenceThreshold")
-      private final @Nullable Output<Double> nluIntentConfidenceThreshold;
+    private @Nullable Output<Double> nluIntentConfidenceThreshold;
 
-    public Output<Double> nluIntentConfidenceThreshold() {
-        return this.nluIntentConfidenceThreshold == null ? Codegen.empty() : this.nluIntentConfidenceThreshold;
+    public Optional<Output<Double>> nluIntentConfidenceThreshold() {
+        return Optional.ofNullable(this.nluIntentConfidenceThreshold);
     }
 
     /**
@@ -159,10 +159,10 @@ public final class BotArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="processBehavior")
-      private final @Nullable Output<String> processBehavior;
+    private @Nullable Output<String> processBehavior;
 
-    public Output<String> processBehavior() {
-        return this.processBehavior == null ? Codegen.empty() : this.processBehavior;
+    public Optional<Output<String>> processBehavior() {
+        return Optional.ofNullable(this.processBehavior);
     }
 
     /**
@@ -170,222 +170,185 @@ public final class BotArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="voiceId")
-      private final @Nullable Output<String> voiceId;
+    private @Nullable Output<String> voiceId;
 
-    public Output<String> voiceId() {
-        return this.voiceId == null ? Codegen.empty() : this.voiceId;
+    public Optional<Output<String>> voiceId() {
+        return Optional.ofNullable(this.voiceId);
     }
 
-    public BotArgs(
-        Output<BotAbortStatementArgs> abortStatement,
-        Output<Boolean> childDirected,
-        @Nullable Output<BotClarificationPromptArgs> clarificationPrompt,
-        @Nullable Output<Boolean> createVersion,
-        @Nullable Output<String> description,
-        @Nullable Output<Boolean> detectSentiment,
-        @Nullable Output<Boolean> enableModelImprovements,
-        @Nullable Output<Integer> idleSessionTtlInSeconds,
-        Output<List<BotIntentArgs>> intents,
-        @Nullable Output<String> locale,
-        @Nullable Output<String> name,
-        @Nullable Output<Double> nluIntentConfidenceThreshold,
-        @Nullable Output<String> processBehavior,
-        @Nullable Output<String> voiceId) {
-        this.abortStatement = Objects.requireNonNull(abortStatement, "expected parameter 'abortStatement' to be non-null");
-        this.childDirected = Objects.requireNonNull(childDirected, "expected parameter 'childDirected' to be non-null");
-        this.clarificationPrompt = clarificationPrompt;
-        this.createVersion = createVersion;
-        this.description = description;
-        this.detectSentiment = detectSentiment;
-        this.enableModelImprovements = enableModelImprovements;
-        this.idleSessionTtlInSeconds = idleSessionTtlInSeconds;
-        this.intents = Objects.requireNonNull(intents, "expected parameter 'intents' to be non-null");
-        this.locale = locale;
-        this.name = name;
-        this.nluIntentConfidenceThreshold = nluIntentConfidenceThreshold;
-        this.processBehavior = processBehavior;
-        this.voiceId = voiceId;
-    }
+    private BotArgs() {}
 
-    private BotArgs() {
-        this.abortStatement = Codegen.empty();
-        this.childDirected = Codegen.empty();
-        this.clarificationPrompt = Codegen.empty();
-        this.createVersion = Codegen.empty();
-        this.description = Codegen.empty();
-        this.detectSentiment = Codegen.empty();
-        this.enableModelImprovements = Codegen.empty();
-        this.idleSessionTtlInSeconds = Codegen.empty();
-        this.intents = Codegen.empty();
-        this.locale = Codegen.empty();
-        this.name = Codegen.empty();
-        this.nluIntentConfidenceThreshold = Codegen.empty();
-        this.processBehavior = Codegen.empty();
-        this.voiceId = Codegen.empty();
+    private BotArgs(BotArgs $) {
+        this.abortStatement = $.abortStatement;
+        this.childDirected = $.childDirected;
+        this.clarificationPrompt = $.clarificationPrompt;
+        this.createVersion = $.createVersion;
+        this.description = $.description;
+        this.detectSentiment = $.detectSentiment;
+        this.enableModelImprovements = $.enableModelImprovements;
+        this.idleSessionTtlInSeconds = $.idleSessionTtlInSeconds;
+        this.intents = $.intents;
+        this.locale = $.locale;
+        this.name = $.name;
+        this.nluIntentConfidenceThreshold = $.nluIntentConfidenceThreshold;
+        this.processBehavior = $.processBehavior;
+        this.voiceId = $.voiceId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BotArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<BotAbortStatementArgs> abortStatement;
-        private Output<Boolean> childDirected;
-        private @Nullable Output<BotClarificationPromptArgs> clarificationPrompt;
-        private @Nullable Output<Boolean> createVersion;
-        private @Nullable Output<String> description;
-        private @Nullable Output<Boolean> detectSentiment;
-        private @Nullable Output<Boolean> enableModelImprovements;
-        private @Nullable Output<Integer> idleSessionTtlInSeconds;
-        private Output<List<BotIntentArgs>> intents;
-        private @Nullable Output<String> locale;
-        private @Nullable Output<String> name;
-        private @Nullable Output<Double> nluIntentConfidenceThreshold;
-        private @Nullable Output<String> processBehavior;
-        private @Nullable Output<String> voiceId;
+        private BotArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new BotArgs();
         }
 
         public Builder(BotArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.abortStatement = defaults.abortStatement;
-    	      this.childDirected = defaults.childDirected;
-    	      this.clarificationPrompt = defaults.clarificationPrompt;
-    	      this.createVersion = defaults.createVersion;
-    	      this.description = defaults.description;
-    	      this.detectSentiment = defaults.detectSentiment;
-    	      this.enableModelImprovements = defaults.enableModelImprovements;
-    	      this.idleSessionTtlInSeconds = defaults.idleSessionTtlInSeconds;
-    	      this.intents = defaults.intents;
-    	      this.locale = defaults.locale;
-    	      this.name = defaults.name;
-    	      this.nluIntentConfidenceThreshold = defaults.nluIntentConfidenceThreshold;
-    	      this.processBehavior = defaults.processBehavior;
-    	      this.voiceId = defaults.voiceId;
+            $ = new BotArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder abortStatement(Output<BotAbortStatementArgs> abortStatement) {
-            this.abortStatement = Objects.requireNonNull(abortStatement);
+            $.abortStatement = abortStatement;
             return this;
         }
+
         public Builder abortStatement(BotAbortStatementArgs abortStatement) {
-            this.abortStatement = Output.of(Objects.requireNonNull(abortStatement));
-            return this;
+            return abortStatement(Output.of(abortStatement));
         }
+
         public Builder childDirected(Output<Boolean> childDirected) {
-            this.childDirected = Objects.requireNonNull(childDirected);
+            $.childDirected = childDirected;
             return this;
         }
+
         public Builder childDirected(Boolean childDirected) {
-            this.childDirected = Output.of(Objects.requireNonNull(childDirected));
-            return this;
+            return childDirected(Output.of(childDirected));
         }
+
         public Builder clarificationPrompt(@Nullable Output<BotClarificationPromptArgs> clarificationPrompt) {
-            this.clarificationPrompt = clarificationPrompt;
+            $.clarificationPrompt = clarificationPrompt;
             return this;
         }
-        public Builder clarificationPrompt(@Nullable BotClarificationPromptArgs clarificationPrompt) {
-            this.clarificationPrompt = Codegen.ofNullable(clarificationPrompt);
-            return this;
+
+        public Builder clarificationPrompt(BotClarificationPromptArgs clarificationPrompt) {
+            return clarificationPrompt(Output.of(clarificationPrompt));
         }
+
         public Builder createVersion(@Nullable Output<Boolean> createVersion) {
-            this.createVersion = createVersion;
+            $.createVersion = createVersion;
             return this;
         }
-        public Builder createVersion(@Nullable Boolean createVersion) {
-            this.createVersion = Codegen.ofNullable(createVersion);
-            return this;
+
+        public Builder createVersion(Boolean createVersion) {
+            return createVersion(Output.of(createVersion));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder detectSentiment(@Nullable Output<Boolean> detectSentiment) {
-            this.detectSentiment = detectSentiment;
+            $.detectSentiment = detectSentiment;
             return this;
         }
-        public Builder detectSentiment(@Nullable Boolean detectSentiment) {
-            this.detectSentiment = Codegen.ofNullable(detectSentiment);
-            return this;
+
+        public Builder detectSentiment(Boolean detectSentiment) {
+            return detectSentiment(Output.of(detectSentiment));
         }
+
         public Builder enableModelImprovements(@Nullable Output<Boolean> enableModelImprovements) {
-            this.enableModelImprovements = enableModelImprovements;
+            $.enableModelImprovements = enableModelImprovements;
             return this;
         }
-        public Builder enableModelImprovements(@Nullable Boolean enableModelImprovements) {
-            this.enableModelImprovements = Codegen.ofNullable(enableModelImprovements);
-            return this;
+
+        public Builder enableModelImprovements(Boolean enableModelImprovements) {
+            return enableModelImprovements(Output.of(enableModelImprovements));
         }
+
         public Builder idleSessionTtlInSeconds(@Nullable Output<Integer> idleSessionTtlInSeconds) {
-            this.idleSessionTtlInSeconds = idleSessionTtlInSeconds;
+            $.idleSessionTtlInSeconds = idleSessionTtlInSeconds;
             return this;
         }
-        public Builder idleSessionTtlInSeconds(@Nullable Integer idleSessionTtlInSeconds) {
-            this.idleSessionTtlInSeconds = Codegen.ofNullable(idleSessionTtlInSeconds);
-            return this;
+
+        public Builder idleSessionTtlInSeconds(Integer idleSessionTtlInSeconds) {
+            return idleSessionTtlInSeconds(Output.of(idleSessionTtlInSeconds));
         }
+
         public Builder intents(Output<List<BotIntentArgs>> intents) {
-            this.intents = Objects.requireNonNull(intents);
+            $.intents = intents;
             return this;
         }
+
         public Builder intents(List<BotIntentArgs> intents) {
-            this.intents = Output.of(Objects.requireNonNull(intents));
-            return this;
+            return intents(Output.of(intents));
         }
+
         public Builder intents(BotIntentArgs... intents) {
             return intents(List.of(intents));
         }
+
         public Builder locale(@Nullable Output<String> locale) {
-            this.locale = locale;
+            $.locale = locale;
             return this;
         }
-        public Builder locale(@Nullable String locale) {
-            this.locale = Codegen.ofNullable(locale);
-            return this;
+
+        public Builder locale(String locale) {
+            return locale(Output.of(locale));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder nluIntentConfidenceThreshold(@Nullable Output<Double> nluIntentConfidenceThreshold) {
-            this.nluIntentConfidenceThreshold = nluIntentConfidenceThreshold;
+            $.nluIntentConfidenceThreshold = nluIntentConfidenceThreshold;
             return this;
         }
-        public Builder nluIntentConfidenceThreshold(@Nullable Double nluIntentConfidenceThreshold) {
-            this.nluIntentConfidenceThreshold = Codegen.ofNullable(nluIntentConfidenceThreshold);
-            return this;
+
+        public Builder nluIntentConfidenceThreshold(Double nluIntentConfidenceThreshold) {
+            return nluIntentConfidenceThreshold(Output.of(nluIntentConfidenceThreshold));
         }
+
         public Builder processBehavior(@Nullable Output<String> processBehavior) {
-            this.processBehavior = processBehavior;
+            $.processBehavior = processBehavior;
             return this;
         }
-        public Builder processBehavior(@Nullable String processBehavior) {
-            this.processBehavior = Codegen.ofNullable(processBehavior);
-            return this;
+
+        public Builder processBehavior(String processBehavior) {
+            return processBehavior(Output.of(processBehavior));
         }
+
         public Builder voiceId(@Nullable Output<String> voiceId) {
-            this.voiceId = voiceId;
+            $.voiceId = voiceId;
             return this;
         }
-        public Builder voiceId(@Nullable String voiceId) {
-            this.voiceId = Codegen.ofNullable(voiceId);
-            return this;
-        }        public BotArgs build() {
-            return new BotArgs(abortStatement, childDirected, clarificationPrompt, createVersion, description, detectSentiment, enableModelImprovements, idleSessionTtlInSeconds, intents, locale, name, nluIntentConfidenceThreshold, processBehavior, voiceId);
+
+        public Builder voiceId(String voiceId) {
+            return voiceId(Output.of(voiceId));
+        }
+
+        public BotArgs build() {
+            $.abortStatement = Objects.requireNonNull($.abortStatement, "expected parameter 'abortStatement' to be non-null");
+            $.childDirected = Objects.requireNonNull($.childDirected, "expected parameter 'childDirected' to be non-null");
+            $.intents = Objects.requireNonNull($.intents, "expected parameter 'intents' to be non-null");
+            return $;
         }
     }
+
 }

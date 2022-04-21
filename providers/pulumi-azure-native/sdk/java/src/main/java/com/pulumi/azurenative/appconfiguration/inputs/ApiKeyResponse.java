@@ -22,7 +22,7 @@ public final class ApiKeyResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="connectionString", required=true)
-      private final String connectionString;
+    private String connectionString;
 
     public String connectionString() {
         return this.connectionString;
@@ -33,7 +33,7 @@ public final class ApiKeyResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="id", required=true)
-      private final String id;
+    private String id;
 
     public String id() {
         return this.id;
@@ -44,7 +44,7 @@ public final class ApiKeyResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="lastModified", required=true)
-      private final String lastModified;
+    private String lastModified;
 
     public String lastModified() {
         return this.lastModified;
@@ -55,7 +55,7 @@ public final class ApiKeyResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -66,7 +66,7 @@ public final class ApiKeyResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="readOnly", required=true)
-      private final Boolean readOnly;
+    private Boolean readOnly;
 
     public Boolean readOnly() {
         return this.readOnly;
@@ -77,91 +77,80 @@ public final class ApiKeyResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="value", required=true)
-      private final String value;
+    private String value;
 
     public String value() {
         return this.value;
     }
 
-    public ApiKeyResponse(
-        String connectionString,
-        String id,
-        String lastModified,
-        String name,
-        Boolean readOnly,
-        String value) {
-        this.connectionString = Objects.requireNonNull(connectionString, "expected parameter 'connectionString' to be non-null");
-        this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
-        this.lastModified = Objects.requireNonNull(lastModified, "expected parameter 'lastModified' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.readOnly = Objects.requireNonNull(readOnly, "expected parameter 'readOnly' to be non-null");
-        this.value = Objects.requireNonNull(value, "expected parameter 'value' to be non-null");
-    }
+    private ApiKeyResponse() {}
 
-    private ApiKeyResponse() {
-        this.connectionString = null;
-        this.id = null;
-        this.lastModified = null;
-        this.name = null;
-        this.readOnly = null;
-        this.value = null;
+    private ApiKeyResponse(ApiKeyResponse $) {
+        this.connectionString = $.connectionString;
+        this.id = $.id;
+        this.lastModified = $.lastModified;
+        this.name = $.name;
+        this.readOnly = $.readOnly;
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ApiKeyResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String connectionString;
-        private String id;
-        private String lastModified;
-        private String name;
-        private Boolean readOnly;
-        private String value;
+        private ApiKeyResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ApiKeyResponse();
         }
 
         public Builder(ApiKeyResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.connectionString = defaults.connectionString;
-    	      this.id = defaults.id;
-    	      this.lastModified = defaults.lastModified;
-    	      this.name = defaults.name;
-    	      this.readOnly = defaults.readOnly;
-    	      this.value = defaults.value;
+            $ = new ApiKeyResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder connectionString(String connectionString) {
-            this.connectionString = Objects.requireNonNull(connectionString);
+            $.connectionString = connectionString;
             return this;
         }
+
         public Builder id(String id) {
-            this.id = Objects.requireNonNull(id);
+            $.id = id;
             return this;
         }
+
         public Builder lastModified(String lastModified) {
-            this.lastModified = Objects.requireNonNull(lastModified);
+            $.lastModified = lastModified;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder readOnly(Boolean readOnly) {
-            this.readOnly = Objects.requireNonNull(readOnly);
+            $.readOnly = readOnly;
             return this;
         }
+
         public Builder value(String value) {
-            this.value = Objects.requireNonNull(value);
+            $.value = value;
             return this;
-        }        public ApiKeyResponse build() {
-            return new ApiKeyResponse(connectionString, id, lastModified, name, readOnly, value);
+        }
+
+        public ApiKeyResponse build() {
+            $.connectionString = Objects.requireNonNull($.connectionString, "expected parameter 'connectionString' to be non-null");
+            $.id = Objects.requireNonNull($.id, "expected parameter 'id' to be non-null");
+            $.lastModified = Objects.requireNonNull($.lastModified, "expected parameter 'lastModified' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.readOnly = Objects.requireNonNull($.readOnly, "expected parameter 'readOnly' to be non-null");
+            $.value = Objects.requireNonNull($.value, "expected parameter 'value' to be non-null");
+            return $;
         }
     }
+
 }

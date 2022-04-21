@@ -20,7 +20,7 @@ public final class GetDomainNameArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="domainName", required=true)
-      private final String domainName;
+    private String domainName;
 
     public String domainName() {
         return this.domainName;
@@ -31,55 +31,51 @@ public final class GetDomainNameArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Map<String,String> tags;
+    private @Nullable Map<String,String> tags;
 
-    public Map<String,String> tags() {
-        return this.tags == null ? Map.of() : this.tags;
+    public Optional<Map<String,String>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public GetDomainNameArgs(
-        String domainName,
-        @Nullable Map<String,String> tags) {
-        this.domainName = Objects.requireNonNull(domainName, "expected parameter 'domainName' to be non-null");
-        this.tags = tags;
-    }
+    private GetDomainNameArgs() {}
 
-    private GetDomainNameArgs() {
-        this.domainName = null;
-        this.tags = Map.of();
+    private GetDomainNameArgs(GetDomainNameArgs $) {
+        this.domainName = $.domainName;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetDomainNameArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String domainName;
-        private @Nullable Map<String,String> tags;
+        private GetDomainNameArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetDomainNameArgs();
         }
 
         public Builder(GetDomainNameArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.domainName = defaults.domainName;
-    	      this.tags = defaults.tags;
+            $ = new GetDomainNameArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder domainName(String domainName) {
-            this.domainName = Objects.requireNonNull(domainName);
+            $.domainName = domainName;
             return this;
         }
+
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
-        }        public GetDomainNameArgs build() {
-            return new GetDomainNameArgs(domainName, tags);
+        }
+
+        public GetDomainNameArgs build() {
+            $.domainName = Objects.requireNonNull($.domainName, "expected parameter 'domainName' to be non-null");
+            return $;
         }
     }
+
 }

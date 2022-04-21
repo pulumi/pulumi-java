@@ -21,45 +21,45 @@ public final class GoogleCloudMlV1__ManualScalingResponse extends com.pulumi.res
      * 
      */
     @Import(name="nodes", required=true)
-      private final Integer nodes;
+    private Integer nodes;
 
     public Integer nodes() {
         return this.nodes;
     }
 
-    public GoogleCloudMlV1__ManualScalingResponse(Integer nodes) {
-        this.nodes = Objects.requireNonNull(nodes, "expected parameter 'nodes' to be non-null");
-    }
+    private GoogleCloudMlV1__ManualScalingResponse() {}
 
-    private GoogleCloudMlV1__ManualScalingResponse() {
-        this.nodes = null;
+    private GoogleCloudMlV1__ManualScalingResponse(GoogleCloudMlV1__ManualScalingResponse $) {
+        this.nodes = $.nodes;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudMlV1__ManualScalingResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Integer nodes;
+        private GoogleCloudMlV1__ManualScalingResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudMlV1__ManualScalingResponse();
         }
 
         public Builder(GoogleCloudMlV1__ManualScalingResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.nodes = defaults.nodes;
+            $ = new GoogleCloudMlV1__ManualScalingResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder nodes(Integer nodes) {
-            this.nodes = Objects.requireNonNull(nodes);
+            $.nodes = nodes;
             return this;
-        }        public GoogleCloudMlV1__ManualScalingResponse build() {
-            return new GoogleCloudMlV1__ManualScalingResponse(nodes);
+        }
+
+        public GoogleCloudMlV1__ManualScalingResponse build() {
+            $.nodes = Objects.requireNonNull($.nodes, "expected parameter 'nodes' to be non-null");
+            return $;
         }
     }
+
 }

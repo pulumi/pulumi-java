@@ -15,6 +15,7 @@ import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,7 +28,7 @@ public final class FluxConfigurationArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="clusterName", required=true)
-      private final Output<String> clusterName;
+    private Output<String> clusterName;
 
     public Output<String> clusterName() {
         return this.clusterName;
@@ -38,7 +39,7 @@ public final class FluxConfigurationArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="clusterResourceName", required=true)
-      private final Output<String> clusterResourceName;
+    private Output<String> clusterResourceName;
 
     public Output<String> clusterResourceName() {
         return this.clusterResourceName;
@@ -49,7 +50,7 @@ public final class FluxConfigurationArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="clusterRp", required=true)
-      private final Output<String> clusterRp;
+    private Output<String> clusterRp;
 
     public Output<String> clusterRp() {
         return this.clusterRp;
@@ -60,10 +61,10 @@ public final class FluxConfigurationArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="configurationProtectedSettings")
-      private final @Nullable Output<Map<String,String>> configurationProtectedSettings;
+    private @Nullable Output<Map<String,String>> configurationProtectedSettings;
 
-    public Output<Map<String,String>> configurationProtectedSettings() {
-        return this.configurationProtectedSettings == null ? Codegen.empty() : this.configurationProtectedSettings;
+    public Optional<Output<Map<String,String>>> configurationProtectedSettings() {
+        return Optional.ofNullable(this.configurationProtectedSettings);
     }
 
     /**
@@ -71,10 +72,10 @@ public final class FluxConfigurationArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="fluxConfigurationName")
-      private final @Nullable Output<String> fluxConfigurationName;
+    private @Nullable Output<String> fluxConfigurationName;
 
-    public Output<String> fluxConfigurationName() {
-        return this.fluxConfigurationName == null ? Codegen.empty() : this.fluxConfigurationName;
+    public Optional<Output<String>> fluxConfigurationName() {
+        return Optional.ofNullable(this.fluxConfigurationName);
     }
 
     /**
@@ -82,10 +83,10 @@ public final class FluxConfigurationArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="gitRepository")
-      private final @Nullable Output<GitRepositoryDefinitionArgs> gitRepository;
+    private @Nullable Output<GitRepositoryDefinitionArgs> gitRepository;
 
-    public Output<GitRepositoryDefinitionArgs> gitRepository() {
-        return this.gitRepository == null ? Codegen.empty() : this.gitRepository;
+    public Optional<Output<GitRepositoryDefinitionArgs>> gitRepository() {
+        return Optional.ofNullable(this.gitRepository);
     }
 
     /**
@@ -93,10 +94,10 @@ public final class FluxConfigurationArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="kustomizations")
-      private final @Nullable Output<Map<String,KustomizationDefinitionArgs>> kustomizations;
+    private @Nullable Output<Map<String,KustomizationDefinitionArgs>> kustomizations;
 
-    public Output<Map<String,KustomizationDefinitionArgs>> kustomizations() {
-        return this.kustomizations == null ? Codegen.empty() : this.kustomizations;
+    public Optional<Output<Map<String,KustomizationDefinitionArgs>>> kustomizations() {
+        return Optional.ofNullable(this.kustomizations);
     }
 
     /**
@@ -104,10 +105,10 @@ public final class FluxConfigurationArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="namespace")
-      private final @Nullable Output<String> namespace;
+    private @Nullable Output<String> namespace;
 
-    public Output<String> namespace() {
-        return this.namespace == null ? Codegen.empty() : this.namespace;
+    public Optional<Output<String>> namespace() {
+        return Optional.ofNullable(this.namespace);
     }
 
     /**
@@ -115,7 +116,7 @@ public final class FluxConfigurationArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -126,10 +127,10 @@ public final class FluxConfigurationArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="scope")
-      private final @Nullable Output<Either<String,ScopeType>> scope;
+    private @Nullable Output<Either<String,ScopeType>> scope;
 
-    public Output<Either<String,ScopeType>> scope() {
-        return this.scope == null ? Codegen.empty() : this.scope;
+    public Optional<Output<Either<String,ScopeType>>> scope() {
+        return Optional.ofNullable(this.scope);
     }
 
     /**
@@ -137,10 +138,10 @@ public final class FluxConfigurationArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="sourceKind")
-      private final @Nullable Output<Either<String,SourceKindType>> sourceKind;
+    private @Nullable Output<Either<String,SourceKindType>> sourceKind;
 
-    public Output<Either<String,SourceKindType>> sourceKind() {
-        return this.sourceKind == null ? Codegen.empty() : this.sourceKind;
+    public Optional<Output<Either<String,SourceKindType>>> sourceKind() {
+        return Optional.ofNullable(this.sourceKind);
     }
 
     /**
@@ -148,193 +149,164 @@ public final class FluxConfigurationArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="suspend")
-      private final @Nullable Output<Boolean> suspend;
+    private @Nullable Output<Boolean> suspend;
 
-    public Output<Boolean> suspend() {
-        return this.suspend == null ? Codegen.empty() : this.suspend;
+    public Optional<Output<Boolean>> suspend() {
+        return Optional.ofNullable(this.suspend);
     }
 
-    public FluxConfigurationArgs(
-        Output<String> clusterName,
-        Output<String> clusterResourceName,
-        Output<String> clusterRp,
-        @Nullable Output<Map<String,String>> configurationProtectedSettings,
-        @Nullable Output<String> fluxConfigurationName,
-        @Nullable Output<GitRepositoryDefinitionArgs> gitRepository,
-        @Nullable Output<Map<String,KustomizationDefinitionArgs>> kustomizations,
-        @Nullable Output<String> namespace,
-        Output<String> resourceGroupName,
-        @Nullable Output<Either<String,ScopeType>> scope,
-        @Nullable Output<Either<String,SourceKindType>> sourceKind,
-        @Nullable Output<Boolean> suspend) {
-        this.clusterName = Objects.requireNonNull(clusterName, "expected parameter 'clusterName' to be non-null");
-        this.clusterResourceName = Objects.requireNonNull(clusterResourceName, "expected parameter 'clusterResourceName' to be non-null");
-        this.clusterRp = Objects.requireNonNull(clusterRp, "expected parameter 'clusterRp' to be non-null");
-        this.configurationProtectedSettings = configurationProtectedSettings;
-        this.fluxConfigurationName = fluxConfigurationName;
-        this.gitRepository = gitRepository;
-        this.kustomizations = kustomizations;
-        this.namespace = Codegen.stringProp("namespace").output().arg(namespace).def("default").getNullable();
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.scope = scope;
-        this.sourceKind = sourceKind;
-        this.suspend = Codegen.booleanProp("suspend").output().arg(suspend).def(false).getNullable();
-    }
+    private FluxConfigurationArgs() {}
 
-    private FluxConfigurationArgs() {
-        this.clusterName = Codegen.empty();
-        this.clusterResourceName = Codegen.empty();
-        this.clusterRp = Codegen.empty();
-        this.configurationProtectedSettings = Codegen.empty();
-        this.fluxConfigurationName = Codegen.empty();
-        this.gitRepository = Codegen.empty();
-        this.kustomizations = Codegen.empty();
-        this.namespace = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.scope = Codegen.empty();
-        this.sourceKind = Codegen.empty();
-        this.suspend = Codegen.empty();
+    private FluxConfigurationArgs(FluxConfigurationArgs $) {
+        this.clusterName = $.clusterName;
+        this.clusterResourceName = $.clusterResourceName;
+        this.clusterRp = $.clusterRp;
+        this.configurationProtectedSettings = $.configurationProtectedSettings;
+        this.fluxConfigurationName = $.fluxConfigurationName;
+        this.gitRepository = $.gitRepository;
+        this.kustomizations = $.kustomizations;
+        this.namespace = $.namespace;
+        this.resourceGroupName = $.resourceGroupName;
+        this.scope = $.scope;
+        this.sourceKind = $.sourceKind;
+        this.suspend = $.suspend;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FluxConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> clusterName;
-        private Output<String> clusterResourceName;
-        private Output<String> clusterRp;
-        private @Nullable Output<Map<String,String>> configurationProtectedSettings;
-        private @Nullable Output<String> fluxConfigurationName;
-        private @Nullable Output<GitRepositoryDefinitionArgs> gitRepository;
-        private @Nullable Output<Map<String,KustomizationDefinitionArgs>> kustomizations;
-        private @Nullable Output<String> namespace;
-        private Output<String> resourceGroupName;
-        private @Nullable Output<Either<String,ScopeType>> scope;
-        private @Nullable Output<Either<String,SourceKindType>> sourceKind;
-        private @Nullable Output<Boolean> suspend;
+        private FluxConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new FluxConfigurationArgs();
         }
 
         public Builder(FluxConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.clusterName = defaults.clusterName;
-    	      this.clusterResourceName = defaults.clusterResourceName;
-    	      this.clusterRp = defaults.clusterRp;
-    	      this.configurationProtectedSettings = defaults.configurationProtectedSettings;
-    	      this.fluxConfigurationName = defaults.fluxConfigurationName;
-    	      this.gitRepository = defaults.gitRepository;
-    	      this.kustomizations = defaults.kustomizations;
-    	      this.namespace = defaults.namespace;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.scope = defaults.scope;
-    	      this.sourceKind = defaults.sourceKind;
-    	      this.suspend = defaults.suspend;
+            $ = new FluxConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder clusterName(Output<String> clusterName) {
-            this.clusterName = Objects.requireNonNull(clusterName);
+            $.clusterName = clusterName;
             return this;
         }
+
         public Builder clusterName(String clusterName) {
-            this.clusterName = Output.of(Objects.requireNonNull(clusterName));
-            return this;
+            return clusterName(Output.of(clusterName));
         }
+
         public Builder clusterResourceName(Output<String> clusterResourceName) {
-            this.clusterResourceName = Objects.requireNonNull(clusterResourceName);
+            $.clusterResourceName = clusterResourceName;
             return this;
         }
+
         public Builder clusterResourceName(String clusterResourceName) {
-            this.clusterResourceName = Output.of(Objects.requireNonNull(clusterResourceName));
-            return this;
+            return clusterResourceName(Output.of(clusterResourceName));
         }
+
         public Builder clusterRp(Output<String> clusterRp) {
-            this.clusterRp = Objects.requireNonNull(clusterRp);
+            $.clusterRp = clusterRp;
             return this;
         }
+
         public Builder clusterRp(String clusterRp) {
-            this.clusterRp = Output.of(Objects.requireNonNull(clusterRp));
-            return this;
+            return clusterRp(Output.of(clusterRp));
         }
+
         public Builder configurationProtectedSettings(@Nullable Output<Map<String,String>> configurationProtectedSettings) {
-            this.configurationProtectedSettings = configurationProtectedSettings;
+            $.configurationProtectedSettings = configurationProtectedSettings;
             return this;
         }
-        public Builder configurationProtectedSettings(@Nullable Map<String,String> configurationProtectedSettings) {
-            this.configurationProtectedSettings = Codegen.ofNullable(configurationProtectedSettings);
-            return this;
+
+        public Builder configurationProtectedSettings(Map<String,String> configurationProtectedSettings) {
+            return configurationProtectedSettings(Output.of(configurationProtectedSettings));
         }
+
         public Builder fluxConfigurationName(@Nullable Output<String> fluxConfigurationName) {
-            this.fluxConfigurationName = fluxConfigurationName;
+            $.fluxConfigurationName = fluxConfigurationName;
             return this;
         }
-        public Builder fluxConfigurationName(@Nullable String fluxConfigurationName) {
-            this.fluxConfigurationName = Codegen.ofNullable(fluxConfigurationName);
-            return this;
+
+        public Builder fluxConfigurationName(String fluxConfigurationName) {
+            return fluxConfigurationName(Output.of(fluxConfigurationName));
         }
+
         public Builder gitRepository(@Nullable Output<GitRepositoryDefinitionArgs> gitRepository) {
-            this.gitRepository = gitRepository;
+            $.gitRepository = gitRepository;
             return this;
         }
-        public Builder gitRepository(@Nullable GitRepositoryDefinitionArgs gitRepository) {
-            this.gitRepository = Codegen.ofNullable(gitRepository);
-            return this;
+
+        public Builder gitRepository(GitRepositoryDefinitionArgs gitRepository) {
+            return gitRepository(Output.of(gitRepository));
         }
+
         public Builder kustomizations(@Nullable Output<Map<String,KustomizationDefinitionArgs>> kustomizations) {
-            this.kustomizations = kustomizations;
+            $.kustomizations = kustomizations;
             return this;
         }
-        public Builder kustomizations(@Nullable Map<String,KustomizationDefinitionArgs> kustomizations) {
-            this.kustomizations = Codegen.ofNullable(kustomizations);
-            return this;
+
+        public Builder kustomizations(Map<String,KustomizationDefinitionArgs> kustomizations) {
+            return kustomizations(Output.of(kustomizations));
         }
+
         public Builder namespace(@Nullable Output<String> namespace) {
-            this.namespace = namespace;
+            $.namespace = namespace;
             return this;
         }
-        public Builder namespace(@Nullable String namespace) {
-            this.namespace = Codegen.ofNullable(namespace);
-            return this;
+
+        public Builder namespace(String namespace) {
+            return namespace(Output.of(namespace));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder scope(@Nullable Output<Either<String,ScopeType>> scope) {
-            this.scope = scope;
+            $.scope = scope;
             return this;
         }
-        public Builder scope(@Nullable Either<String,ScopeType> scope) {
-            this.scope = Codegen.ofNullable(scope);
-            return this;
+
+        public Builder scope(Either<String,ScopeType> scope) {
+            return scope(Output.of(scope));
         }
+
         public Builder sourceKind(@Nullable Output<Either<String,SourceKindType>> sourceKind) {
-            this.sourceKind = sourceKind;
+            $.sourceKind = sourceKind;
             return this;
         }
-        public Builder sourceKind(@Nullable Either<String,SourceKindType> sourceKind) {
-            this.sourceKind = Codegen.ofNullable(sourceKind);
-            return this;
+
+        public Builder sourceKind(Either<String,SourceKindType> sourceKind) {
+            return sourceKind(Output.of(sourceKind));
         }
+
         public Builder suspend(@Nullable Output<Boolean> suspend) {
-            this.suspend = suspend;
+            $.suspend = suspend;
             return this;
         }
-        public Builder suspend(@Nullable Boolean suspend) {
-            this.suspend = Codegen.ofNullable(suspend);
-            return this;
-        }        public FluxConfigurationArgs build() {
-            return new FluxConfigurationArgs(clusterName, clusterResourceName, clusterRp, configurationProtectedSettings, fluxConfigurationName, gitRepository, kustomizations, namespace, resourceGroupName, scope, sourceKind, suspend);
+
+        public Builder suspend(Boolean suspend) {
+            return suspend(Output.of(suspend));
+        }
+
+        public FluxConfigurationArgs build() {
+            $.clusterName = Objects.requireNonNull($.clusterName, "expected parameter 'clusterName' to be non-null");
+            $.clusterResourceName = Objects.requireNonNull($.clusterResourceName, "expected parameter 'clusterResourceName' to be non-null");
+            $.clusterRp = Objects.requireNonNull($.clusterRp, "expected parameter 'clusterRp' to be non-null");
+            $.namespace = Codegen.stringProp("namespace").output().arg($.namespace).def("default").getNullable();
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.suspend = Codegen.booleanProp("suspend").output().arg($.suspend).def(false).getNullable();
+            return $;
         }
     }
+
 }

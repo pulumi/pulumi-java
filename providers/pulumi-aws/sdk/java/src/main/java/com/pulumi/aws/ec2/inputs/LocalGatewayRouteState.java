@@ -5,9 +5,9 @@ package com.pulumi.aws.ec2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class LocalGatewayRouteState extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="destinationCidrBlock")
-      private final @Nullable Output<String> destinationCidrBlock;
+    private @Nullable Output<String> destinationCidrBlock;
 
-    public Output<String> destinationCidrBlock() {
-        return this.destinationCidrBlock == null ? Codegen.empty() : this.destinationCidrBlock;
+    public Optional<Output<String>> destinationCidrBlock() {
+        return Optional.ofNullable(this.destinationCidrBlock);
     }
 
     /**
@@ -31,10 +31,10 @@ public final class LocalGatewayRouteState extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="localGatewayRouteTableId")
-      private final @Nullable Output<String> localGatewayRouteTableId;
+    private @Nullable Output<String> localGatewayRouteTableId;
 
-    public Output<String> localGatewayRouteTableId() {
-        return this.localGatewayRouteTableId == null ? Codegen.empty() : this.localGatewayRouteTableId;
+    public Optional<Output<String>> localGatewayRouteTableId() {
+        return Optional.ofNullable(this.localGatewayRouteTableId);
     }
 
     /**
@@ -42,76 +42,68 @@ public final class LocalGatewayRouteState extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="localGatewayVirtualInterfaceGroupId")
-      private final @Nullable Output<String> localGatewayVirtualInterfaceGroupId;
+    private @Nullable Output<String> localGatewayVirtualInterfaceGroupId;
 
-    public Output<String> localGatewayVirtualInterfaceGroupId() {
-        return this.localGatewayVirtualInterfaceGroupId == null ? Codegen.empty() : this.localGatewayVirtualInterfaceGroupId;
+    public Optional<Output<String>> localGatewayVirtualInterfaceGroupId() {
+        return Optional.ofNullable(this.localGatewayVirtualInterfaceGroupId);
     }
 
-    public LocalGatewayRouteState(
-        @Nullable Output<String> destinationCidrBlock,
-        @Nullable Output<String> localGatewayRouteTableId,
-        @Nullable Output<String> localGatewayVirtualInterfaceGroupId) {
-        this.destinationCidrBlock = destinationCidrBlock;
-        this.localGatewayRouteTableId = localGatewayRouteTableId;
-        this.localGatewayVirtualInterfaceGroupId = localGatewayVirtualInterfaceGroupId;
-    }
+    private LocalGatewayRouteState() {}
 
-    private LocalGatewayRouteState() {
-        this.destinationCidrBlock = Codegen.empty();
-        this.localGatewayRouteTableId = Codegen.empty();
-        this.localGatewayVirtualInterfaceGroupId = Codegen.empty();
+    private LocalGatewayRouteState(LocalGatewayRouteState $) {
+        this.destinationCidrBlock = $.destinationCidrBlock;
+        this.localGatewayRouteTableId = $.localGatewayRouteTableId;
+        this.localGatewayVirtualInterfaceGroupId = $.localGatewayVirtualInterfaceGroupId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LocalGatewayRouteState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> destinationCidrBlock;
-        private @Nullable Output<String> localGatewayRouteTableId;
-        private @Nullable Output<String> localGatewayVirtualInterfaceGroupId;
+        private LocalGatewayRouteState $;
 
         public Builder() {
-    	      // Empty
+            $ = new LocalGatewayRouteState();
         }
 
         public Builder(LocalGatewayRouteState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.destinationCidrBlock = defaults.destinationCidrBlock;
-    	      this.localGatewayRouteTableId = defaults.localGatewayRouteTableId;
-    	      this.localGatewayVirtualInterfaceGroupId = defaults.localGatewayVirtualInterfaceGroupId;
+            $ = new LocalGatewayRouteState(Objects.requireNonNull(defaults));
         }
 
         public Builder destinationCidrBlock(@Nullable Output<String> destinationCidrBlock) {
-            this.destinationCidrBlock = destinationCidrBlock;
+            $.destinationCidrBlock = destinationCidrBlock;
             return this;
         }
-        public Builder destinationCidrBlock(@Nullable String destinationCidrBlock) {
-            this.destinationCidrBlock = Codegen.ofNullable(destinationCidrBlock);
-            return this;
+
+        public Builder destinationCidrBlock(String destinationCidrBlock) {
+            return destinationCidrBlock(Output.of(destinationCidrBlock));
         }
+
         public Builder localGatewayRouteTableId(@Nullable Output<String> localGatewayRouteTableId) {
-            this.localGatewayRouteTableId = localGatewayRouteTableId;
+            $.localGatewayRouteTableId = localGatewayRouteTableId;
             return this;
         }
-        public Builder localGatewayRouteTableId(@Nullable String localGatewayRouteTableId) {
-            this.localGatewayRouteTableId = Codegen.ofNullable(localGatewayRouteTableId);
-            return this;
+
+        public Builder localGatewayRouteTableId(String localGatewayRouteTableId) {
+            return localGatewayRouteTableId(Output.of(localGatewayRouteTableId));
         }
+
         public Builder localGatewayVirtualInterfaceGroupId(@Nullable Output<String> localGatewayVirtualInterfaceGroupId) {
-            this.localGatewayVirtualInterfaceGroupId = localGatewayVirtualInterfaceGroupId;
+            $.localGatewayVirtualInterfaceGroupId = localGatewayVirtualInterfaceGroupId;
             return this;
         }
-        public Builder localGatewayVirtualInterfaceGroupId(@Nullable String localGatewayVirtualInterfaceGroupId) {
-            this.localGatewayVirtualInterfaceGroupId = Codegen.ofNullable(localGatewayVirtualInterfaceGroupId);
-            return this;
-        }        public LocalGatewayRouteState build() {
-            return new LocalGatewayRouteState(destinationCidrBlock, localGatewayRouteTableId, localGatewayVirtualInterfaceGroupId);
+
+        public Builder localGatewayVirtualInterfaceGroupId(String localGatewayVirtualInterfaceGroupId) {
+            return localGatewayVirtualInterfaceGroupId(Output.of(localGatewayVirtualInterfaceGroupId));
+        }
+
+        public LocalGatewayRouteState build() {
+            return $;
         }
     }
+
 }

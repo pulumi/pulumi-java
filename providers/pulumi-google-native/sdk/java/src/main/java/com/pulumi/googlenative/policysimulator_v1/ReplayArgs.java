@@ -5,10 +5,10 @@ package com.pulumi.googlenative.policysimulator_v1;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.policysimulator_v1.inputs.GoogleCloudPolicysimulatorV1ReplayConfigArgs;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,90 +21,83 @@ public final class ReplayArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="config", required=true)
-      private final Output<GoogleCloudPolicysimulatorV1ReplayConfigArgs> config;
+    private Output<GoogleCloudPolicysimulatorV1ReplayConfigArgs> config;
 
     public Output<GoogleCloudPolicysimulatorV1ReplayConfigArgs> config() {
         return this.config;
     }
 
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
-    public ReplayArgs(
-        Output<GoogleCloudPolicysimulatorV1ReplayConfigArgs> config,
-        @Nullable Output<String> location,
-        @Nullable Output<String> project) {
-        this.config = Objects.requireNonNull(config, "expected parameter 'config' to be non-null");
-        this.location = location;
-        this.project = project;
-    }
+    private ReplayArgs() {}
 
-    private ReplayArgs() {
-        this.config = Codegen.empty();
-        this.location = Codegen.empty();
-        this.project = Codegen.empty();
+    private ReplayArgs(ReplayArgs $) {
+        this.config = $.config;
+        this.location = $.location;
+        this.project = $.project;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ReplayArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<GoogleCloudPolicysimulatorV1ReplayConfigArgs> config;
-        private @Nullable Output<String> location;
-        private @Nullable Output<String> project;
+        private ReplayArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ReplayArgs();
         }
 
         public Builder(ReplayArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.config = defaults.config;
-    	      this.location = defaults.location;
-    	      this.project = defaults.project;
+            $ = new ReplayArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder config(Output<GoogleCloudPolicysimulatorV1ReplayConfigArgs> config) {
-            this.config = Objects.requireNonNull(config);
+            $.config = config;
             return this;
         }
+
         public Builder config(GoogleCloudPolicysimulatorV1ReplayConfigArgs config) {
-            this.config = Output.of(Objects.requireNonNull(config));
-            return this;
+            return config(Output.of(config));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
-        }        public ReplayArgs build() {
-            return new ReplayArgs(config, location, project);
+
+        public Builder project(String project) {
+            return project(Output.of(project));
+        }
+
+        public ReplayArgs build() {
+            $.config = Objects.requireNonNull($.config, "expected parameter 'config' to be non-null");
+            return $;
         }
     }
+
 }

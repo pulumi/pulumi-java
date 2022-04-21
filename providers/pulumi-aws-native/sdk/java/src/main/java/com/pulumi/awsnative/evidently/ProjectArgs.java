@@ -7,10 +7,10 @@ import com.pulumi.awsnative.evidently.inputs.ProjectDataDeliveryObjectArgs;
 import com.pulumi.awsnative.evidently.inputs.ProjectTagArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -19,24 +19,24 @@ public final class ProjectArgs extends com.pulumi.resources.ResourceArgs {
     public static final ProjectArgs Empty = new ProjectArgs();
 
     @Import(name="dataDelivery")
-      private final @Nullable Output<ProjectDataDeliveryObjectArgs> dataDelivery;
+    private @Nullable Output<ProjectDataDeliveryObjectArgs> dataDelivery;
 
-    public Output<ProjectDataDeliveryObjectArgs> dataDelivery() {
-        return this.dataDelivery == null ? Codegen.empty() : this.dataDelivery;
+    public Optional<Output<ProjectDataDeliveryObjectArgs>> dataDelivery() {
+        return Optional.ofNullable(this.dataDelivery);
     }
 
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -44,92 +44,82 @@ public final class ProjectArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<List<ProjectTagArgs>> tags;
+    private @Nullable Output<List<ProjectTagArgs>> tags;
 
-    public Output<List<ProjectTagArgs>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<List<ProjectTagArgs>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public ProjectArgs(
-        @Nullable Output<ProjectDataDeliveryObjectArgs> dataDelivery,
-        @Nullable Output<String> description,
-        @Nullable Output<String> name,
-        @Nullable Output<List<ProjectTagArgs>> tags) {
-        this.dataDelivery = dataDelivery;
-        this.description = description;
-        this.name = name;
-        this.tags = tags;
-    }
+    private ProjectArgs() {}
 
-    private ProjectArgs() {
-        this.dataDelivery = Codegen.empty();
-        this.description = Codegen.empty();
-        this.name = Codegen.empty();
-        this.tags = Codegen.empty();
+    private ProjectArgs(ProjectArgs $) {
+        this.dataDelivery = $.dataDelivery;
+        this.description = $.description;
+        this.name = $.name;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ProjectArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<ProjectDataDeliveryObjectArgs> dataDelivery;
-        private @Nullable Output<String> description;
-        private @Nullable Output<String> name;
-        private @Nullable Output<List<ProjectTagArgs>> tags;
+        private ProjectArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ProjectArgs();
         }
 
         public Builder(ProjectArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dataDelivery = defaults.dataDelivery;
-    	      this.description = defaults.description;
-    	      this.name = defaults.name;
-    	      this.tags = defaults.tags;
+            $ = new ProjectArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder dataDelivery(@Nullable Output<ProjectDataDeliveryObjectArgs> dataDelivery) {
-            this.dataDelivery = dataDelivery;
+            $.dataDelivery = dataDelivery;
             return this;
         }
-        public Builder dataDelivery(@Nullable ProjectDataDeliveryObjectArgs dataDelivery) {
-            this.dataDelivery = Codegen.ofNullable(dataDelivery);
-            return this;
+
+        public Builder dataDelivery(ProjectDataDeliveryObjectArgs dataDelivery) {
+            return dataDelivery(Output.of(dataDelivery));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder tags(@Nullable Output<List<ProjectTagArgs>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable List<ProjectTagArgs> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(List<ProjectTagArgs> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tags(ProjectTagArgs... tags) {
             return tags(List.of(tags));
-        }        public ProjectArgs build() {
-            return new ProjectArgs(dataDelivery, description, name, tags);
+        }
+
+        public ProjectArgs build() {
+            return $;
         }
     }
+
 }

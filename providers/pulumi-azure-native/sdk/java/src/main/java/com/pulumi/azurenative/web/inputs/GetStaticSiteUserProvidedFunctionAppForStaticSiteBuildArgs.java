@@ -17,7 +17,7 @@ public final class GetStaticSiteUserProvidedFunctionAppForStaticSiteBuildArgs ex
      * 
      */
     @Import(name="environmentName", required=true)
-      private final String environmentName;
+    private String environmentName;
 
     public String environmentName() {
         return this.environmentName;
@@ -28,7 +28,7 @@ public final class GetStaticSiteUserProvidedFunctionAppForStaticSiteBuildArgs ex
      * 
      */
     @Import(name="functionAppName", required=true)
-      private final String functionAppName;
+    private String functionAppName;
 
     public String functionAppName() {
         return this.functionAppName;
@@ -39,7 +39,7 @@ public final class GetStaticSiteUserProvidedFunctionAppForStaticSiteBuildArgs ex
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -50,73 +50,66 @@ public final class GetStaticSiteUserProvidedFunctionAppForStaticSiteBuildArgs ex
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public GetStaticSiteUserProvidedFunctionAppForStaticSiteBuildArgs(
-        String environmentName,
-        String functionAppName,
-        String name,
-        String resourceGroupName) {
-        this.environmentName = Objects.requireNonNull(environmentName, "expected parameter 'environmentName' to be non-null");
-        this.functionAppName = Objects.requireNonNull(functionAppName, "expected parameter 'functionAppName' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private GetStaticSiteUserProvidedFunctionAppForStaticSiteBuildArgs() {}
 
-    private GetStaticSiteUserProvidedFunctionAppForStaticSiteBuildArgs() {
-        this.environmentName = null;
-        this.functionAppName = null;
-        this.name = null;
-        this.resourceGroupName = null;
+    private GetStaticSiteUserProvidedFunctionAppForStaticSiteBuildArgs(GetStaticSiteUserProvidedFunctionAppForStaticSiteBuildArgs $) {
+        this.environmentName = $.environmentName;
+        this.functionAppName = $.functionAppName;
+        this.name = $.name;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetStaticSiteUserProvidedFunctionAppForStaticSiteBuildArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String environmentName;
-        private String functionAppName;
-        private String name;
-        private String resourceGroupName;
+        private GetStaticSiteUserProvidedFunctionAppForStaticSiteBuildArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetStaticSiteUserProvidedFunctionAppForStaticSiteBuildArgs();
         }
 
         public Builder(GetStaticSiteUserProvidedFunctionAppForStaticSiteBuildArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.environmentName = defaults.environmentName;
-    	      this.functionAppName = defaults.functionAppName;
-    	      this.name = defaults.name;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new GetStaticSiteUserProvidedFunctionAppForStaticSiteBuildArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder environmentName(String environmentName) {
-            this.environmentName = Objects.requireNonNull(environmentName);
+            $.environmentName = environmentName;
             return this;
         }
+
         public Builder functionAppName(String functionAppName) {
-            this.functionAppName = Objects.requireNonNull(functionAppName);
+            $.functionAppName = functionAppName;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public GetStaticSiteUserProvidedFunctionAppForStaticSiteBuildArgs build() {
-            return new GetStaticSiteUserProvidedFunctionAppForStaticSiteBuildArgs(environmentName, functionAppName, name, resourceGroupName);
+        }
+
+        public GetStaticSiteUserProvidedFunctionAppForStaticSiteBuildArgs build() {
+            $.environmentName = Objects.requireNonNull($.environmentName, "expected parameter 'environmentName' to be non-null");
+            $.functionAppName = Objects.requireNonNull($.functionAppName, "expected parameter 'functionAppName' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

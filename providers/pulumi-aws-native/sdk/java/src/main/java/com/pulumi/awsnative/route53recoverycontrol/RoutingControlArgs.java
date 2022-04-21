@@ -5,9 +5,9 @@ package com.pulumi.awsnative.route53recoverycontrol;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class RoutingControlArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="clusterArn")
-      private final @Nullable Output<String> clusterArn;
+    private @Nullable Output<String> clusterArn;
 
-    public Output<String> clusterArn() {
-        return this.clusterArn == null ? Codegen.empty() : this.clusterArn;
+    public Optional<Output<String>> clusterArn() {
+        return Optional.ofNullable(this.clusterArn);
     }
 
     /**
@@ -31,10 +31,10 @@ public final class RoutingControlArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="controlPanelArn")
-      private final @Nullable Output<String> controlPanelArn;
+    private @Nullable Output<String> controlPanelArn;
 
-    public Output<String> controlPanelArn() {
-        return this.controlPanelArn == null ? Codegen.empty() : this.controlPanelArn;
+    public Optional<Output<String>> controlPanelArn() {
+        return Optional.ofNullable(this.controlPanelArn);
     }
 
     /**
@@ -42,76 +42,68 @@ public final class RoutingControlArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
-    public RoutingControlArgs(
-        @Nullable Output<String> clusterArn,
-        @Nullable Output<String> controlPanelArn,
-        @Nullable Output<String> name) {
-        this.clusterArn = clusterArn;
-        this.controlPanelArn = controlPanelArn;
-        this.name = name;
-    }
+    private RoutingControlArgs() {}
 
-    private RoutingControlArgs() {
-        this.clusterArn = Codegen.empty();
-        this.controlPanelArn = Codegen.empty();
-        this.name = Codegen.empty();
+    private RoutingControlArgs(RoutingControlArgs $) {
+        this.clusterArn = $.clusterArn;
+        this.controlPanelArn = $.controlPanelArn;
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RoutingControlArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> clusterArn;
-        private @Nullable Output<String> controlPanelArn;
-        private @Nullable Output<String> name;
+        private RoutingControlArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RoutingControlArgs();
         }
 
         public Builder(RoutingControlArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.clusterArn = defaults.clusterArn;
-    	      this.controlPanelArn = defaults.controlPanelArn;
-    	      this.name = defaults.name;
+            $ = new RoutingControlArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder clusterArn(@Nullable Output<String> clusterArn) {
-            this.clusterArn = clusterArn;
+            $.clusterArn = clusterArn;
             return this;
         }
-        public Builder clusterArn(@Nullable String clusterArn) {
-            this.clusterArn = Codegen.ofNullable(clusterArn);
-            return this;
+
+        public Builder clusterArn(String clusterArn) {
+            return clusterArn(Output.of(clusterArn));
         }
+
         public Builder controlPanelArn(@Nullable Output<String> controlPanelArn) {
-            this.controlPanelArn = controlPanelArn;
+            $.controlPanelArn = controlPanelArn;
             return this;
         }
-        public Builder controlPanelArn(@Nullable String controlPanelArn) {
-            this.controlPanelArn = Codegen.ofNullable(controlPanelArn);
-            return this;
+
+        public Builder controlPanelArn(String controlPanelArn) {
+            return controlPanelArn(Output.of(controlPanelArn));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
-        }        public RoutingControlArgs build() {
-            return new RoutingControlArgs(clusterArn, controlPanelArn, name);
+
+        public Builder name(String name) {
+            return name(Output.of(name));
+        }
+
+        public RoutingControlArgs build() {
+            return $;
         }
     }
+
 }

@@ -24,10 +24,10 @@ public final class ImageTemplateRestartCustomizerResponse extends com.pulumi.res
      * 
      */
     @Import(name="name")
-      private final @Nullable String name;
+    private @Nullable String name;
 
     public Optional<String> name() {
-        return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class ImageTemplateRestartCustomizerResponse extends com.pulumi.res
      * 
      */
     @Import(name="restartCheckCommand")
-      private final @Nullable String restartCheckCommand;
+    private @Nullable String restartCheckCommand;
 
     public Optional<String> restartCheckCommand() {
-        return this.restartCheckCommand == null ? Optional.empty() : Optional.ofNullable(this.restartCheckCommand);
+        return Optional.ofNullable(this.restartCheckCommand);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class ImageTemplateRestartCustomizerResponse extends com.pulumi.res
      * 
      */
     @Import(name="restartCommand")
-      private final @Nullable String restartCommand;
+    private @Nullable String restartCommand;
 
     public Optional<String> restartCommand() {
-        return this.restartCommand == null ? Optional.empty() : Optional.ofNullable(this.restartCommand);
+        return Optional.ofNullable(this.restartCommand);
     }
 
     /**
@@ -57,10 +57,10 @@ public final class ImageTemplateRestartCustomizerResponse extends com.pulumi.res
      * 
      */
     @Import(name="restartTimeout")
-      private final @Nullable String restartTimeout;
+    private @Nullable String restartTimeout;
 
     public Optional<String> restartTimeout() {
-        return this.restartTimeout == null ? Optional.empty() : Optional.ofNullable(this.restartTimeout);
+        return Optional.ofNullable(this.restartTimeout);
     }
 
     /**
@@ -69,82 +69,69 @@ public final class ImageTemplateRestartCustomizerResponse extends com.pulumi.res
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
     }
 
-    public ImageTemplateRestartCustomizerResponse(
-        @Nullable String name,
-        @Nullable String restartCheckCommand,
-        @Nullable String restartCommand,
-        @Nullable String restartTimeout,
-        String type) {
-        this.name = name;
-        this.restartCheckCommand = restartCheckCommand;
-        this.restartCommand = restartCommand;
-        this.restartTimeout = restartTimeout;
-        this.type = Codegen.stringProp("type").arg(type).require();
-    }
+    private ImageTemplateRestartCustomizerResponse() {}
 
-    private ImageTemplateRestartCustomizerResponse() {
-        this.name = null;
-        this.restartCheckCommand = null;
-        this.restartCommand = null;
-        this.restartTimeout = null;
-        this.type = null;
+    private ImageTemplateRestartCustomizerResponse(ImageTemplateRestartCustomizerResponse $) {
+        this.name = $.name;
+        this.restartCheckCommand = $.restartCheckCommand;
+        this.restartCommand = $.restartCommand;
+        this.restartTimeout = $.restartTimeout;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ImageTemplateRestartCustomizerResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String name;
-        private @Nullable String restartCheckCommand;
-        private @Nullable String restartCommand;
-        private @Nullable String restartTimeout;
-        private String type;
+        private ImageTemplateRestartCustomizerResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ImageTemplateRestartCustomizerResponse();
         }
 
         public Builder(ImageTemplateRestartCustomizerResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.restartCheckCommand = defaults.restartCheckCommand;
-    	      this.restartCommand = defaults.restartCommand;
-    	      this.restartTimeout = defaults.restartTimeout;
-    	      this.type = defaults.type;
+            $ = new ImageTemplateRestartCustomizerResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder name(@Nullable String name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
+
         public Builder restartCheckCommand(@Nullable String restartCheckCommand) {
-            this.restartCheckCommand = restartCheckCommand;
+            $.restartCheckCommand = restartCheckCommand;
             return this;
         }
+
         public Builder restartCommand(@Nullable String restartCommand) {
-            this.restartCommand = restartCommand;
+            $.restartCommand = restartCommand;
             return this;
         }
+
         public Builder restartTimeout(@Nullable String restartTimeout) {
-            this.restartTimeout = restartTimeout;
+            $.restartTimeout = restartTimeout;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
-        }        public ImageTemplateRestartCustomizerResponse build() {
-            return new ImageTemplateRestartCustomizerResponse(name, restartCheckCommand, restartCommand, restartTimeout, type);
+        }
+
+        public ImageTemplateRestartCustomizerResponse build() {
+            $.type = Codegen.stringProp("type").arg($.type).require();
+            return $;
         }
     }
+
 }

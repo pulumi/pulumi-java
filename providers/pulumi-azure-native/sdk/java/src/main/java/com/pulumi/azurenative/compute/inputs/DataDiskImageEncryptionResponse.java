@@ -24,10 +24,10 @@ public final class DataDiskImageEncryptionResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="diskEncryptionSetId")
-      private final @Nullable String diskEncryptionSetId;
+    private @Nullable String diskEncryptionSetId;
 
     public Optional<String> diskEncryptionSetId() {
-        return this.diskEncryptionSetId == null ? Optional.empty() : Optional.ofNullable(this.diskEncryptionSetId);
+        return Optional.ofNullable(this.diskEncryptionSetId);
     }
 
     /**
@@ -35,55 +35,51 @@ public final class DataDiskImageEncryptionResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="lun", required=true)
-      private final Integer lun;
+    private Integer lun;
 
     public Integer lun() {
         return this.lun;
     }
 
-    public DataDiskImageEncryptionResponse(
-        @Nullable String diskEncryptionSetId,
-        Integer lun) {
-        this.diskEncryptionSetId = diskEncryptionSetId;
-        this.lun = Objects.requireNonNull(lun, "expected parameter 'lun' to be non-null");
-    }
+    private DataDiskImageEncryptionResponse() {}
 
-    private DataDiskImageEncryptionResponse() {
-        this.diskEncryptionSetId = null;
-        this.lun = null;
+    private DataDiskImageEncryptionResponse(DataDiskImageEncryptionResponse $) {
+        this.diskEncryptionSetId = $.diskEncryptionSetId;
+        this.lun = $.lun;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DataDiskImageEncryptionResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String diskEncryptionSetId;
-        private Integer lun;
+        private DataDiskImageEncryptionResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new DataDiskImageEncryptionResponse();
         }
 
         public Builder(DataDiskImageEncryptionResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.diskEncryptionSetId = defaults.diskEncryptionSetId;
-    	      this.lun = defaults.lun;
+            $ = new DataDiskImageEncryptionResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder diskEncryptionSetId(@Nullable String diskEncryptionSetId) {
-            this.diskEncryptionSetId = diskEncryptionSetId;
+            $.diskEncryptionSetId = diskEncryptionSetId;
             return this;
         }
+
         public Builder lun(Integer lun) {
-            this.lun = Objects.requireNonNull(lun);
+            $.lun = lun;
             return this;
-        }        public DataDiskImageEncryptionResponse build() {
-            return new DataDiskImageEncryptionResponse(diskEncryptionSetId, lun);
+        }
+
+        public DataDiskImageEncryptionResponse build() {
+            $.lun = Objects.requireNonNull($.lun, "expected parameter 'lun' to be non-null");
+            return $;
         }
     }
+
 }

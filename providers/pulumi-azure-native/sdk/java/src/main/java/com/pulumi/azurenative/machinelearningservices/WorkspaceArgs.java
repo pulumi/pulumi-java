@@ -16,6 +16,7 @@ import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -28,10 +29,10 @@ public final class WorkspaceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="allowPublicAccessWhenBehindVnet")
-      private final @Nullable Output<Boolean> allowPublicAccessWhenBehindVnet;
+    private @Nullable Output<Boolean> allowPublicAccessWhenBehindVnet;
 
-    public Output<Boolean> allowPublicAccessWhenBehindVnet() {
-        return this.allowPublicAccessWhenBehindVnet == null ? Codegen.empty() : this.allowPublicAccessWhenBehindVnet;
+    public Optional<Output<Boolean>> allowPublicAccessWhenBehindVnet() {
+        return Optional.ofNullable(this.allowPublicAccessWhenBehindVnet);
     }
 
     /**
@@ -39,10 +40,10 @@ public final class WorkspaceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="applicationInsights")
-      private final @Nullable Output<String> applicationInsights;
+    private @Nullable Output<String> applicationInsights;
 
-    public Output<String> applicationInsights() {
-        return this.applicationInsights == null ? Codegen.empty() : this.applicationInsights;
+    public Optional<Output<String>> applicationInsights() {
+        return Optional.ofNullable(this.applicationInsights);
     }
 
     /**
@@ -50,10 +51,10 @@ public final class WorkspaceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="containerRegistry")
-      private final @Nullable Output<String> containerRegistry;
+    private @Nullable Output<String> containerRegistry;
 
-    public Output<String> containerRegistry() {
-        return this.containerRegistry == null ? Codegen.empty() : this.containerRegistry;
+    public Optional<Output<String>> containerRegistry() {
+        return Optional.ofNullable(this.containerRegistry);
     }
 
     /**
@@ -61,10 +62,10 @@ public final class WorkspaceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -72,10 +73,10 @@ public final class WorkspaceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="discoveryUrl")
-      private final @Nullable Output<String> discoveryUrl;
+    private @Nullable Output<String> discoveryUrl;
 
-    public Output<String> discoveryUrl() {
-        return this.discoveryUrl == null ? Codegen.empty() : this.discoveryUrl;
+    public Optional<Output<String>> discoveryUrl() {
+        return Optional.ofNullable(this.discoveryUrl);
     }
 
     /**
@@ -83,10 +84,10 @@ public final class WorkspaceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="encryption")
-      private final @Nullable Output<EncryptionPropertyArgs> encryption;
+    private @Nullable Output<EncryptionPropertyArgs> encryption;
 
-    public Output<EncryptionPropertyArgs> encryption() {
-        return this.encryption == null ? Codegen.empty() : this.encryption;
+    public Optional<Output<EncryptionPropertyArgs>> encryption() {
+        return Optional.ofNullable(this.encryption);
     }
 
     /**
@@ -94,10 +95,10 @@ public final class WorkspaceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="friendlyName")
-      private final @Nullable Output<String> friendlyName;
+    private @Nullable Output<String> friendlyName;
 
-    public Output<String> friendlyName() {
-        return this.friendlyName == null ? Codegen.empty() : this.friendlyName;
+    public Optional<Output<String>> friendlyName() {
+        return Optional.ofNullable(this.friendlyName);
     }
 
     /**
@@ -105,10 +106,10 @@ public final class WorkspaceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="hbiWorkspace")
-      private final @Nullable Output<Boolean> hbiWorkspace;
+    private @Nullable Output<Boolean> hbiWorkspace;
 
-    public Output<Boolean> hbiWorkspace() {
-        return this.hbiWorkspace == null ? Codegen.empty() : this.hbiWorkspace;
+    public Optional<Output<Boolean>> hbiWorkspace() {
+        return Optional.ofNullable(this.hbiWorkspace);
     }
 
     /**
@@ -116,10 +117,10 @@ public final class WorkspaceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="identity")
-      private final @Nullable Output<IdentityArgs> identity;
+    private @Nullable Output<IdentityArgs> identity;
 
-    public Output<IdentityArgs> identity() {
-        return this.identity == null ? Codegen.empty() : this.identity;
+    public Optional<Output<IdentityArgs>> identity() {
+        return Optional.ofNullable(this.identity);
     }
 
     /**
@@ -127,10 +128,10 @@ public final class WorkspaceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="imageBuildCompute")
-      private final @Nullable Output<String> imageBuildCompute;
+    private @Nullable Output<String> imageBuildCompute;
 
-    public Output<String> imageBuildCompute() {
-        return this.imageBuildCompute == null ? Codegen.empty() : this.imageBuildCompute;
+    public Optional<Output<String>> imageBuildCompute() {
+        return Optional.ofNullable(this.imageBuildCompute);
     }
 
     /**
@@ -138,10 +139,10 @@ public final class WorkspaceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="keyVault")
-      private final @Nullable Output<String> keyVault;
+    private @Nullable Output<String> keyVault;
 
-    public Output<String> keyVault() {
-        return this.keyVault == null ? Codegen.empty() : this.keyVault;
+    public Optional<Output<String>> keyVault() {
+        return Optional.ofNullable(this.keyVault);
     }
 
     /**
@@ -149,10 +150,10 @@ public final class WorkspaceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -160,10 +161,10 @@ public final class WorkspaceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="primaryUserAssignedIdentity")
-      private final @Nullable Output<String> primaryUserAssignedIdentity;
+    private @Nullable Output<String> primaryUserAssignedIdentity;
 
-    public Output<String> primaryUserAssignedIdentity() {
-        return this.primaryUserAssignedIdentity == null ? Codegen.empty() : this.primaryUserAssignedIdentity;
+    public Optional<Output<String>> primaryUserAssignedIdentity() {
+        return Optional.ofNullable(this.primaryUserAssignedIdentity);
     }
 
     /**
@@ -171,7 +172,7 @@ public final class WorkspaceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -182,10 +183,10 @@ public final class WorkspaceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="serviceManagedResourcesSettings")
-      private final @Nullable Output<ServiceManagedResourcesSettingsArgs> serviceManagedResourcesSettings;
+    private @Nullable Output<ServiceManagedResourcesSettingsArgs> serviceManagedResourcesSettings;
 
-    public Output<ServiceManagedResourcesSettingsArgs> serviceManagedResourcesSettings() {
-        return this.serviceManagedResourcesSettings == null ? Codegen.empty() : this.serviceManagedResourcesSettings;
+    public Optional<Output<ServiceManagedResourcesSettingsArgs>> serviceManagedResourcesSettings() {
+        return Optional.ofNullable(this.serviceManagedResourcesSettings);
     }
 
     /**
@@ -193,10 +194,10 @@ public final class WorkspaceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="sharedPrivateLinkResources")
-      private final @Nullable Output<List<SharedPrivateLinkResourceArgs>> sharedPrivateLinkResources;
+    private @Nullable Output<List<SharedPrivateLinkResourceArgs>> sharedPrivateLinkResources;
 
-    public Output<List<SharedPrivateLinkResourceArgs>> sharedPrivateLinkResources() {
-        return this.sharedPrivateLinkResources == null ? Codegen.empty() : this.sharedPrivateLinkResources;
+    public Optional<Output<List<SharedPrivateLinkResourceArgs>>> sharedPrivateLinkResources() {
+        return Optional.ofNullable(this.sharedPrivateLinkResources);
     }
 
     /**
@@ -204,10 +205,10 @@ public final class WorkspaceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="sku")
-      private final @Nullable Output<SkuArgs> sku;
+    private @Nullable Output<SkuArgs> sku;
 
-    public Output<SkuArgs> sku() {
-        return this.sku == null ? Codegen.empty() : this.sku;
+    public Optional<Output<SkuArgs>> sku() {
+        return Optional.ofNullable(this.sku);
     }
 
     /**
@@ -215,10 +216,10 @@ public final class WorkspaceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="storageAccount")
-      private final @Nullable Output<String> storageAccount;
+    private @Nullable Output<String> storageAccount;
 
-    public Output<String> storageAccount() {
-        return this.storageAccount == null ? Codegen.empty() : this.storageAccount;
+    public Optional<Output<String>> storageAccount() {
+        return Optional.ofNullable(this.storageAccount);
     }
 
     /**
@@ -226,10 +227,10 @@ public final class WorkspaceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -237,300 +238,245 @@ public final class WorkspaceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="workspaceName")
-      private final @Nullable Output<String> workspaceName;
+    private @Nullable Output<String> workspaceName;
 
-    public Output<String> workspaceName() {
-        return this.workspaceName == null ? Codegen.empty() : this.workspaceName;
+    public Optional<Output<String>> workspaceName() {
+        return Optional.ofNullable(this.workspaceName);
     }
 
-    public WorkspaceArgs(
-        @Nullable Output<Boolean> allowPublicAccessWhenBehindVnet,
-        @Nullable Output<String> applicationInsights,
-        @Nullable Output<String> containerRegistry,
-        @Nullable Output<String> description,
-        @Nullable Output<String> discoveryUrl,
-        @Nullable Output<EncryptionPropertyArgs> encryption,
-        @Nullable Output<String> friendlyName,
-        @Nullable Output<Boolean> hbiWorkspace,
-        @Nullable Output<IdentityArgs> identity,
-        @Nullable Output<String> imageBuildCompute,
-        @Nullable Output<String> keyVault,
-        @Nullable Output<String> location,
-        @Nullable Output<String> primaryUserAssignedIdentity,
-        Output<String> resourceGroupName,
-        @Nullable Output<ServiceManagedResourcesSettingsArgs> serviceManagedResourcesSettings,
-        @Nullable Output<List<SharedPrivateLinkResourceArgs>> sharedPrivateLinkResources,
-        @Nullable Output<SkuArgs> sku,
-        @Nullable Output<String> storageAccount,
-        @Nullable Output<Map<String,String>> tags,
-        @Nullable Output<String> workspaceName) {
-        this.allowPublicAccessWhenBehindVnet = Codegen.booleanProp("allowPublicAccessWhenBehindVnet").output().arg(allowPublicAccessWhenBehindVnet).def(false).getNullable();
-        this.applicationInsights = applicationInsights;
-        this.containerRegistry = containerRegistry;
-        this.description = description;
-        this.discoveryUrl = discoveryUrl;
-        this.encryption = encryption;
-        this.friendlyName = friendlyName;
-        this.hbiWorkspace = Codegen.booleanProp("hbiWorkspace").output().arg(hbiWorkspace).def(false).getNullable();
-        this.identity = identity;
-        this.imageBuildCompute = imageBuildCompute;
-        this.keyVault = keyVault;
-        this.location = location;
-        this.primaryUserAssignedIdentity = primaryUserAssignedIdentity;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.serviceManagedResourcesSettings = serviceManagedResourcesSettings;
-        this.sharedPrivateLinkResources = sharedPrivateLinkResources;
-        this.sku = sku;
-        this.storageAccount = storageAccount;
-        this.tags = tags;
-        this.workspaceName = workspaceName;
-    }
+    private WorkspaceArgs() {}
 
-    private WorkspaceArgs() {
-        this.allowPublicAccessWhenBehindVnet = Codegen.empty();
-        this.applicationInsights = Codegen.empty();
-        this.containerRegistry = Codegen.empty();
-        this.description = Codegen.empty();
-        this.discoveryUrl = Codegen.empty();
-        this.encryption = Codegen.empty();
-        this.friendlyName = Codegen.empty();
-        this.hbiWorkspace = Codegen.empty();
-        this.identity = Codegen.empty();
-        this.imageBuildCompute = Codegen.empty();
-        this.keyVault = Codegen.empty();
-        this.location = Codegen.empty();
-        this.primaryUserAssignedIdentity = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.serviceManagedResourcesSettings = Codegen.empty();
-        this.sharedPrivateLinkResources = Codegen.empty();
-        this.sku = Codegen.empty();
-        this.storageAccount = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.workspaceName = Codegen.empty();
+    private WorkspaceArgs(WorkspaceArgs $) {
+        this.allowPublicAccessWhenBehindVnet = $.allowPublicAccessWhenBehindVnet;
+        this.applicationInsights = $.applicationInsights;
+        this.containerRegistry = $.containerRegistry;
+        this.description = $.description;
+        this.discoveryUrl = $.discoveryUrl;
+        this.encryption = $.encryption;
+        this.friendlyName = $.friendlyName;
+        this.hbiWorkspace = $.hbiWorkspace;
+        this.identity = $.identity;
+        this.imageBuildCompute = $.imageBuildCompute;
+        this.keyVault = $.keyVault;
+        this.location = $.location;
+        this.primaryUserAssignedIdentity = $.primaryUserAssignedIdentity;
+        this.resourceGroupName = $.resourceGroupName;
+        this.serviceManagedResourcesSettings = $.serviceManagedResourcesSettings;
+        this.sharedPrivateLinkResources = $.sharedPrivateLinkResources;
+        this.sku = $.sku;
+        this.storageAccount = $.storageAccount;
+        this.tags = $.tags;
+        this.workspaceName = $.workspaceName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WorkspaceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> allowPublicAccessWhenBehindVnet;
-        private @Nullable Output<String> applicationInsights;
-        private @Nullable Output<String> containerRegistry;
-        private @Nullable Output<String> description;
-        private @Nullable Output<String> discoveryUrl;
-        private @Nullable Output<EncryptionPropertyArgs> encryption;
-        private @Nullable Output<String> friendlyName;
-        private @Nullable Output<Boolean> hbiWorkspace;
-        private @Nullable Output<IdentityArgs> identity;
-        private @Nullable Output<String> imageBuildCompute;
-        private @Nullable Output<String> keyVault;
-        private @Nullable Output<String> location;
-        private @Nullable Output<String> primaryUserAssignedIdentity;
-        private Output<String> resourceGroupName;
-        private @Nullable Output<ServiceManagedResourcesSettingsArgs> serviceManagedResourcesSettings;
-        private @Nullable Output<List<SharedPrivateLinkResourceArgs>> sharedPrivateLinkResources;
-        private @Nullable Output<SkuArgs> sku;
-        private @Nullable Output<String> storageAccount;
-        private @Nullable Output<Map<String,String>> tags;
-        private @Nullable Output<String> workspaceName;
+        private WorkspaceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new WorkspaceArgs();
         }
 
         public Builder(WorkspaceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.allowPublicAccessWhenBehindVnet = defaults.allowPublicAccessWhenBehindVnet;
-    	      this.applicationInsights = defaults.applicationInsights;
-    	      this.containerRegistry = defaults.containerRegistry;
-    	      this.description = defaults.description;
-    	      this.discoveryUrl = defaults.discoveryUrl;
-    	      this.encryption = defaults.encryption;
-    	      this.friendlyName = defaults.friendlyName;
-    	      this.hbiWorkspace = defaults.hbiWorkspace;
-    	      this.identity = defaults.identity;
-    	      this.imageBuildCompute = defaults.imageBuildCompute;
-    	      this.keyVault = defaults.keyVault;
-    	      this.location = defaults.location;
-    	      this.primaryUserAssignedIdentity = defaults.primaryUserAssignedIdentity;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.serviceManagedResourcesSettings = defaults.serviceManagedResourcesSettings;
-    	      this.sharedPrivateLinkResources = defaults.sharedPrivateLinkResources;
-    	      this.sku = defaults.sku;
-    	      this.storageAccount = defaults.storageAccount;
-    	      this.tags = defaults.tags;
-    	      this.workspaceName = defaults.workspaceName;
+            $ = new WorkspaceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder allowPublicAccessWhenBehindVnet(@Nullable Output<Boolean> allowPublicAccessWhenBehindVnet) {
-            this.allowPublicAccessWhenBehindVnet = allowPublicAccessWhenBehindVnet;
+            $.allowPublicAccessWhenBehindVnet = allowPublicAccessWhenBehindVnet;
             return this;
         }
-        public Builder allowPublicAccessWhenBehindVnet(@Nullable Boolean allowPublicAccessWhenBehindVnet) {
-            this.allowPublicAccessWhenBehindVnet = Codegen.ofNullable(allowPublicAccessWhenBehindVnet);
-            return this;
+
+        public Builder allowPublicAccessWhenBehindVnet(Boolean allowPublicAccessWhenBehindVnet) {
+            return allowPublicAccessWhenBehindVnet(Output.of(allowPublicAccessWhenBehindVnet));
         }
+
         public Builder applicationInsights(@Nullable Output<String> applicationInsights) {
-            this.applicationInsights = applicationInsights;
+            $.applicationInsights = applicationInsights;
             return this;
         }
-        public Builder applicationInsights(@Nullable String applicationInsights) {
-            this.applicationInsights = Codegen.ofNullable(applicationInsights);
-            return this;
+
+        public Builder applicationInsights(String applicationInsights) {
+            return applicationInsights(Output.of(applicationInsights));
         }
+
         public Builder containerRegistry(@Nullable Output<String> containerRegistry) {
-            this.containerRegistry = containerRegistry;
+            $.containerRegistry = containerRegistry;
             return this;
         }
-        public Builder containerRegistry(@Nullable String containerRegistry) {
-            this.containerRegistry = Codegen.ofNullable(containerRegistry);
-            return this;
+
+        public Builder containerRegistry(String containerRegistry) {
+            return containerRegistry(Output.of(containerRegistry));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder discoveryUrl(@Nullable Output<String> discoveryUrl) {
-            this.discoveryUrl = discoveryUrl;
+            $.discoveryUrl = discoveryUrl;
             return this;
         }
-        public Builder discoveryUrl(@Nullable String discoveryUrl) {
-            this.discoveryUrl = Codegen.ofNullable(discoveryUrl);
-            return this;
+
+        public Builder discoveryUrl(String discoveryUrl) {
+            return discoveryUrl(Output.of(discoveryUrl));
         }
+
         public Builder encryption(@Nullable Output<EncryptionPropertyArgs> encryption) {
-            this.encryption = encryption;
+            $.encryption = encryption;
             return this;
         }
-        public Builder encryption(@Nullable EncryptionPropertyArgs encryption) {
-            this.encryption = Codegen.ofNullable(encryption);
-            return this;
+
+        public Builder encryption(EncryptionPropertyArgs encryption) {
+            return encryption(Output.of(encryption));
         }
+
         public Builder friendlyName(@Nullable Output<String> friendlyName) {
-            this.friendlyName = friendlyName;
+            $.friendlyName = friendlyName;
             return this;
         }
-        public Builder friendlyName(@Nullable String friendlyName) {
-            this.friendlyName = Codegen.ofNullable(friendlyName);
-            return this;
+
+        public Builder friendlyName(String friendlyName) {
+            return friendlyName(Output.of(friendlyName));
         }
+
         public Builder hbiWorkspace(@Nullable Output<Boolean> hbiWorkspace) {
-            this.hbiWorkspace = hbiWorkspace;
+            $.hbiWorkspace = hbiWorkspace;
             return this;
         }
-        public Builder hbiWorkspace(@Nullable Boolean hbiWorkspace) {
-            this.hbiWorkspace = Codegen.ofNullable(hbiWorkspace);
-            return this;
+
+        public Builder hbiWorkspace(Boolean hbiWorkspace) {
+            return hbiWorkspace(Output.of(hbiWorkspace));
         }
+
         public Builder identity(@Nullable Output<IdentityArgs> identity) {
-            this.identity = identity;
+            $.identity = identity;
             return this;
         }
-        public Builder identity(@Nullable IdentityArgs identity) {
-            this.identity = Codegen.ofNullable(identity);
-            return this;
+
+        public Builder identity(IdentityArgs identity) {
+            return identity(Output.of(identity));
         }
+
         public Builder imageBuildCompute(@Nullable Output<String> imageBuildCompute) {
-            this.imageBuildCompute = imageBuildCompute;
+            $.imageBuildCompute = imageBuildCompute;
             return this;
         }
-        public Builder imageBuildCompute(@Nullable String imageBuildCompute) {
-            this.imageBuildCompute = Codegen.ofNullable(imageBuildCompute);
-            return this;
+
+        public Builder imageBuildCompute(String imageBuildCompute) {
+            return imageBuildCompute(Output.of(imageBuildCompute));
         }
+
         public Builder keyVault(@Nullable Output<String> keyVault) {
-            this.keyVault = keyVault;
+            $.keyVault = keyVault;
             return this;
         }
-        public Builder keyVault(@Nullable String keyVault) {
-            this.keyVault = Codegen.ofNullable(keyVault);
-            return this;
+
+        public Builder keyVault(String keyVault) {
+            return keyVault(Output.of(keyVault));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder primaryUserAssignedIdentity(@Nullable Output<String> primaryUserAssignedIdentity) {
-            this.primaryUserAssignedIdentity = primaryUserAssignedIdentity;
+            $.primaryUserAssignedIdentity = primaryUserAssignedIdentity;
             return this;
         }
-        public Builder primaryUserAssignedIdentity(@Nullable String primaryUserAssignedIdentity) {
-            this.primaryUserAssignedIdentity = Codegen.ofNullable(primaryUserAssignedIdentity);
-            return this;
+
+        public Builder primaryUserAssignedIdentity(String primaryUserAssignedIdentity) {
+            return primaryUserAssignedIdentity(Output.of(primaryUserAssignedIdentity));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder serviceManagedResourcesSettings(@Nullable Output<ServiceManagedResourcesSettingsArgs> serviceManagedResourcesSettings) {
-            this.serviceManagedResourcesSettings = serviceManagedResourcesSettings;
+            $.serviceManagedResourcesSettings = serviceManagedResourcesSettings;
             return this;
         }
-        public Builder serviceManagedResourcesSettings(@Nullable ServiceManagedResourcesSettingsArgs serviceManagedResourcesSettings) {
-            this.serviceManagedResourcesSettings = Codegen.ofNullable(serviceManagedResourcesSettings);
-            return this;
+
+        public Builder serviceManagedResourcesSettings(ServiceManagedResourcesSettingsArgs serviceManagedResourcesSettings) {
+            return serviceManagedResourcesSettings(Output.of(serviceManagedResourcesSettings));
         }
+
         public Builder sharedPrivateLinkResources(@Nullable Output<List<SharedPrivateLinkResourceArgs>> sharedPrivateLinkResources) {
-            this.sharedPrivateLinkResources = sharedPrivateLinkResources;
+            $.sharedPrivateLinkResources = sharedPrivateLinkResources;
             return this;
         }
-        public Builder sharedPrivateLinkResources(@Nullable List<SharedPrivateLinkResourceArgs> sharedPrivateLinkResources) {
-            this.sharedPrivateLinkResources = Codegen.ofNullable(sharedPrivateLinkResources);
-            return this;
+
+        public Builder sharedPrivateLinkResources(List<SharedPrivateLinkResourceArgs> sharedPrivateLinkResources) {
+            return sharedPrivateLinkResources(Output.of(sharedPrivateLinkResources));
         }
+
         public Builder sharedPrivateLinkResources(SharedPrivateLinkResourceArgs... sharedPrivateLinkResources) {
             return sharedPrivateLinkResources(List.of(sharedPrivateLinkResources));
         }
+
         public Builder sku(@Nullable Output<SkuArgs> sku) {
-            this.sku = sku;
+            $.sku = sku;
             return this;
         }
-        public Builder sku(@Nullable SkuArgs sku) {
-            this.sku = Codegen.ofNullable(sku);
-            return this;
+
+        public Builder sku(SkuArgs sku) {
+            return sku(Output.of(sku));
         }
+
         public Builder storageAccount(@Nullable Output<String> storageAccount) {
-            this.storageAccount = storageAccount;
+            $.storageAccount = storageAccount;
             return this;
         }
-        public Builder storageAccount(@Nullable String storageAccount) {
-            this.storageAccount = Codegen.ofNullable(storageAccount);
-            return this;
+
+        public Builder storageAccount(String storageAccount) {
+            return storageAccount(Output.of(storageAccount));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder workspaceName(@Nullable Output<String> workspaceName) {
-            this.workspaceName = workspaceName;
+            $.workspaceName = workspaceName;
             return this;
         }
-        public Builder workspaceName(@Nullable String workspaceName) {
-            this.workspaceName = Codegen.ofNullable(workspaceName);
-            return this;
-        }        public WorkspaceArgs build() {
-            return new WorkspaceArgs(allowPublicAccessWhenBehindVnet, applicationInsights, containerRegistry, description, discoveryUrl, encryption, friendlyName, hbiWorkspace, identity, imageBuildCompute, keyVault, location, primaryUserAssignedIdentity, resourceGroupName, serviceManagedResourcesSettings, sharedPrivateLinkResources, sku, storageAccount, tags, workspaceName);
+
+        public Builder workspaceName(String workspaceName) {
+            return workspaceName(Output.of(workspaceName));
+        }
+
+        public WorkspaceArgs build() {
+            $.allowPublicAccessWhenBehindVnet = Codegen.booleanProp("allowPublicAccessWhenBehindVnet").output().arg($.allowPublicAccessWhenBehindVnet).def(false).getNullable();
+            $.hbiWorkspace = Codegen.booleanProp("hbiWorkspace").output().arg($.hbiWorkspace).def(false).getNullable();
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

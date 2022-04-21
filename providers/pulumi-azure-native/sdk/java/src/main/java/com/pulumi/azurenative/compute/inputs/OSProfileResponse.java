@@ -28,10 +28,10 @@ public final class OSProfileResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="adminPassword")
-      private final @Nullable String adminPassword;
+    private @Nullable String adminPassword;
 
     public Optional<String> adminPassword() {
-        return this.adminPassword == null ? Optional.empty() : Optional.ofNullable(this.adminPassword);
+        return Optional.ofNullable(this.adminPassword);
     }
 
     /**
@@ -39,10 +39,10 @@ public final class OSProfileResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="adminUsername")
-      private final @Nullable String adminUsername;
+    private @Nullable String adminUsername;
 
     public Optional<String> adminUsername() {
-        return this.adminUsername == null ? Optional.empty() : Optional.ofNullable(this.adminUsername);
+        return Optional.ofNullable(this.adminUsername);
     }
 
     /**
@@ -50,10 +50,10 @@ public final class OSProfileResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="allowExtensionOperations")
-      private final @Nullable Boolean allowExtensionOperations;
+    private @Nullable Boolean allowExtensionOperations;
 
     public Optional<Boolean> allowExtensionOperations() {
-        return this.allowExtensionOperations == null ? Optional.empty() : Optional.ofNullable(this.allowExtensionOperations);
+        return Optional.ofNullable(this.allowExtensionOperations);
     }
 
     /**
@@ -61,10 +61,10 @@ public final class OSProfileResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="computerName")
-      private final @Nullable String computerName;
+    private @Nullable String computerName;
 
     public Optional<String> computerName() {
-        return this.computerName == null ? Optional.empty() : Optional.ofNullable(this.computerName);
+        return Optional.ofNullable(this.computerName);
     }
 
     /**
@@ -72,10 +72,10 @@ public final class OSProfileResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="customData")
-      private final @Nullable String customData;
+    private @Nullable String customData;
 
     public Optional<String> customData() {
-        return this.customData == null ? Optional.empty() : Optional.ofNullable(this.customData);
+        return Optional.ofNullable(this.customData);
     }
 
     /**
@@ -83,10 +83,10 @@ public final class OSProfileResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="linuxConfiguration")
-      private final @Nullable LinuxConfigurationResponse linuxConfiguration;
+    private @Nullable LinuxConfigurationResponse linuxConfiguration;
 
     public Optional<LinuxConfigurationResponse> linuxConfiguration() {
-        return this.linuxConfiguration == null ? Optional.empty() : Optional.ofNullable(this.linuxConfiguration);
+        return Optional.ofNullable(this.linuxConfiguration);
     }
 
     /**
@@ -94,10 +94,10 @@ public final class OSProfileResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="requireGuestProvisionSignal")
-      private final @Nullable Boolean requireGuestProvisionSignal;
+    private @Nullable Boolean requireGuestProvisionSignal;
 
     public Optional<Boolean> requireGuestProvisionSignal() {
-        return this.requireGuestProvisionSignal == null ? Optional.empty() : Optional.ofNullable(this.requireGuestProvisionSignal);
+        return Optional.ofNullable(this.requireGuestProvisionSignal);
     }
 
     /**
@@ -105,10 +105,10 @@ public final class OSProfileResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="secrets")
-      private final @Nullable List<VaultSecretGroupResponse> secrets;
+    private @Nullable List<VaultSecretGroupResponse> secrets;
 
-    public List<VaultSecretGroupResponse> secrets() {
-        return this.secrets == null ? List.of() : this.secrets;
+    public Optional<List<VaultSecretGroupResponse>> secrets() {
+        return Optional.ofNullable(this.secrets);
     }
 
     /**
@@ -116,121 +116,96 @@ public final class OSProfileResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="windowsConfiguration")
-      private final @Nullable WindowsConfigurationResponse windowsConfiguration;
+    private @Nullable WindowsConfigurationResponse windowsConfiguration;
 
     public Optional<WindowsConfigurationResponse> windowsConfiguration() {
-        return this.windowsConfiguration == null ? Optional.empty() : Optional.ofNullable(this.windowsConfiguration);
+        return Optional.ofNullable(this.windowsConfiguration);
     }
 
-    public OSProfileResponse(
-        @Nullable String adminPassword,
-        @Nullable String adminUsername,
-        @Nullable Boolean allowExtensionOperations,
-        @Nullable String computerName,
-        @Nullable String customData,
-        @Nullable LinuxConfigurationResponse linuxConfiguration,
-        @Nullable Boolean requireGuestProvisionSignal,
-        @Nullable List<VaultSecretGroupResponse> secrets,
-        @Nullable WindowsConfigurationResponse windowsConfiguration) {
-        this.adminPassword = adminPassword;
-        this.adminUsername = adminUsername;
-        this.allowExtensionOperations = allowExtensionOperations;
-        this.computerName = computerName;
-        this.customData = customData;
-        this.linuxConfiguration = linuxConfiguration;
-        this.requireGuestProvisionSignal = requireGuestProvisionSignal;
-        this.secrets = secrets;
-        this.windowsConfiguration = windowsConfiguration;
-    }
+    private OSProfileResponse() {}
 
-    private OSProfileResponse() {
-        this.adminPassword = null;
-        this.adminUsername = null;
-        this.allowExtensionOperations = null;
-        this.computerName = null;
-        this.customData = null;
-        this.linuxConfiguration = null;
-        this.requireGuestProvisionSignal = null;
-        this.secrets = List.of();
-        this.windowsConfiguration = null;
+    private OSProfileResponse(OSProfileResponse $) {
+        this.adminPassword = $.adminPassword;
+        this.adminUsername = $.adminUsername;
+        this.allowExtensionOperations = $.allowExtensionOperations;
+        this.computerName = $.computerName;
+        this.customData = $.customData;
+        this.linuxConfiguration = $.linuxConfiguration;
+        this.requireGuestProvisionSignal = $.requireGuestProvisionSignal;
+        this.secrets = $.secrets;
+        this.windowsConfiguration = $.windowsConfiguration;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(OSProfileResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String adminPassword;
-        private @Nullable String adminUsername;
-        private @Nullable Boolean allowExtensionOperations;
-        private @Nullable String computerName;
-        private @Nullable String customData;
-        private @Nullable LinuxConfigurationResponse linuxConfiguration;
-        private @Nullable Boolean requireGuestProvisionSignal;
-        private @Nullable List<VaultSecretGroupResponse> secrets;
-        private @Nullable WindowsConfigurationResponse windowsConfiguration;
+        private OSProfileResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new OSProfileResponse();
         }
 
         public Builder(OSProfileResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.adminPassword = defaults.adminPassword;
-    	      this.adminUsername = defaults.adminUsername;
-    	      this.allowExtensionOperations = defaults.allowExtensionOperations;
-    	      this.computerName = defaults.computerName;
-    	      this.customData = defaults.customData;
-    	      this.linuxConfiguration = defaults.linuxConfiguration;
-    	      this.requireGuestProvisionSignal = defaults.requireGuestProvisionSignal;
-    	      this.secrets = defaults.secrets;
-    	      this.windowsConfiguration = defaults.windowsConfiguration;
+            $ = new OSProfileResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder adminPassword(@Nullable String adminPassword) {
-            this.adminPassword = adminPassword;
+            $.adminPassword = adminPassword;
             return this;
         }
+
         public Builder adminUsername(@Nullable String adminUsername) {
-            this.adminUsername = adminUsername;
+            $.adminUsername = adminUsername;
             return this;
         }
+
         public Builder allowExtensionOperations(@Nullable Boolean allowExtensionOperations) {
-            this.allowExtensionOperations = allowExtensionOperations;
+            $.allowExtensionOperations = allowExtensionOperations;
             return this;
         }
+
         public Builder computerName(@Nullable String computerName) {
-            this.computerName = computerName;
+            $.computerName = computerName;
             return this;
         }
+
         public Builder customData(@Nullable String customData) {
-            this.customData = customData;
+            $.customData = customData;
             return this;
         }
+
         public Builder linuxConfiguration(@Nullable LinuxConfigurationResponse linuxConfiguration) {
-            this.linuxConfiguration = linuxConfiguration;
+            $.linuxConfiguration = linuxConfiguration;
             return this;
         }
+
         public Builder requireGuestProvisionSignal(@Nullable Boolean requireGuestProvisionSignal) {
-            this.requireGuestProvisionSignal = requireGuestProvisionSignal;
+            $.requireGuestProvisionSignal = requireGuestProvisionSignal;
             return this;
         }
+
         public Builder secrets(@Nullable List<VaultSecretGroupResponse> secrets) {
-            this.secrets = secrets;
+            $.secrets = secrets;
             return this;
         }
+
         public Builder secrets(VaultSecretGroupResponse... secrets) {
             return secrets(List.of(secrets));
         }
+
         public Builder windowsConfiguration(@Nullable WindowsConfigurationResponse windowsConfiguration) {
-            this.windowsConfiguration = windowsConfiguration;
+            $.windowsConfiguration = windowsConfiguration;
             return this;
-        }        public OSProfileResponse build() {
-            return new OSProfileResponse(adminPassword, adminUsername, allowExtensionOperations, computerName, customData, linuxConfiguration, requireGuestProvisionSignal, secrets, windowsConfiguration);
+        }
+
+        public OSProfileResponse build() {
+            return $;
         }
     }
+
 }

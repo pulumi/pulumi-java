@@ -23,10 +23,10 @@ public final class SqlServerInstancePropertiesResponse extends com.pulumi.resour
      * 
      */
     @Import(name="collation")
-      private final @Nullable String collation;
+    private @Nullable String collation;
 
     public Optional<String> collation() {
-        return this.collation == null ? Optional.empty() : Optional.ofNullable(this.collation);
+        return Optional.ofNullable(this.collation);
     }
 
     /**
@@ -34,7 +34,7 @@ public final class SqlServerInstancePropertiesResponse extends com.pulumi.resour
      * 
      */
     @Import(name="containerResourceId", required=true)
-      private final String containerResourceId;
+    private String containerResourceId;
 
     public String containerResourceId() {
         return this.containerResourceId;
@@ -45,7 +45,7 @@ public final class SqlServerInstancePropertiesResponse extends com.pulumi.resour
      * 
      */
     @Import(name="createTime", required=true)
-      private final String createTime;
+    private String createTime;
 
     public String createTime() {
         return this.createTime;
@@ -56,10 +56,10 @@ public final class SqlServerInstancePropertiesResponse extends com.pulumi.resour
      * 
      */
     @Import(name="currentVersion")
-      private final @Nullable String currentVersion;
+    private @Nullable String currentVersion;
 
     public Optional<String> currentVersion() {
-        return this.currentVersion == null ? Optional.empty() : Optional.ofNullable(this.currentVersion);
+        return Optional.ofNullable(this.currentVersion);
     }
 
     /**
@@ -67,10 +67,10 @@ public final class SqlServerInstancePropertiesResponse extends com.pulumi.resour
      * 
      */
     @Import(name="edition")
-      private final @Nullable String edition;
+    private @Nullable String edition;
 
     public Optional<String> edition() {
-        return this.edition == null ? Optional.empty() : Optional.ofNullable(this.edition);
+        return Optional.ofNullable(this.edition);
     }
 
     /**
@@ -78,10 +78,10 @@ public final class SqlServerInstancePropertiesResponse extends com.pulumi.resour
      * 
      */
     @Import(name="instanceName")
-      private final @Nullable String instanceName;
+    private @Nullable String instanceName;
 
     public Optional<String> instanceName() {
-        return this.instanceName == null ? Optional.empty() : Optional.ofNullable(this.instanceName);
+        return Optional.ofNullable(this.instanceName);
     }
 
     /**
@@ -89,10 +89,10 @@ public final class SqlServerInstancePropertiesResponse extends com.pulumi.resour
      * 
      */
     @Import(name="licenseType")
-      private final @Nullable String licenseType;
+    private @Nullable String licenseType;
 
     public Optional<String> licenseType() {
-        return this.licenseType == null ? Optional.empty() : Optional.ofNullable(this.licenseType);
+        return Optional.ofNullable(this.licenseType);
     }
 
     /**
@@ -100,10 +100,10 @@ public final class SqlServerInstancePropertiesResponse extends com.pulumi.resour
      * 
      */
     @Import(name="patchLevel")
-      private final @Nullable String patchLevel;
+    private @Nullable String patchLevel;
 
     public Optional<String> patchLevel() {
-        return this.patchLevel == null ? Optional.empty() : Optional.ofNullable(this.patchLevel);
+        return Optional.ofNullable(this.patchLevel);
     }
 
     /**
@@ -111,14 +111,14 @@ public final class SqlServerInstancePropertiesResponse extends com.pulumi.resour
      * 
      */
     @Import(name="productId")
-      private final @Nullable String productId;
+    private @Nullable String productId;
 
     public Optional<String> productId() {
-        return this.productId == null ? Optional.empty() : Optional.ofNullable(this.productId);
+        return Optional.ofNullable(this.productId);
     }
 
     @Import(name="provisioningState", required=true)
-      private final String provisioningState;
+    private String provisioningState;
 
     public String provisioningState() {
         return this.provisioningState;
@@ -129,7 +129,7 @@ public final class SqlServerInstancePropertiesResponse extends com.pulumi.resour
      * 
      */
     @Import(name="status", required=true)
-      private final String status;
+    private String status;
 
     public String status() {
         return this.status;
@@ -140,10 +140,10 @@ public final class SqlServerInstancePropertiesResponse extends com.pulumi.resour
      * 
      */
     @Import(name="tcpDynamicPorts")
-      private final @Nullable String tcpDynamicPorts;
+    private @Nullable String tcpDynamicPorts;
 
     public Optional<String> tcpDynamicPorts() {
-        return this.tcpDynamicPorts == null ? Optional.empty() : Optional.ofNullable(this.tcpDynamicPorts);
+        return Optional.ofNullable(this.tcpDynamicPorts);
     }
 
     /**
@@ -151,10 +151,10 @@ public final class SqlServerInstancePropertiesResponse extends com.pulumi.resour
      * 
      */
     @Import(name="tcpStaticPorts")
-      private final @Nullable String tcpStaticPorts;
+    private @Nullable String tcpStaticPorts;
 
     public Optional<String> tcpStaticPorts() {
-        return this.tcpStaticPorts == null ? Optional.empty() : Optional.ofNullable(this.tcpStaticPorts);
+        return Optional.ofNullable(this.tcpStaticPorts);
     }
 
     /**
@@ -162,10 +162,10 @@ public final class SqlServerInstancePropertiesResponse extends com.pulumi.resour
      * 
      */
     @Import(name="vCore")
-      private final @Nullable String vCore;
+    private @Nullable String vCore;
 
     public Optional<String> vCore() {
-        return this.vCore == null ? Optional.empty() : Optional.ofNullable(this.vCore);
+        return Optional.ofNullable(this.vCore);
     }
 
     /**
@@ -173,172 +173,132 @@ public final class SqlServerInstancePropertiesResponse extends com.pulumi.resour
      * 
      */
     @Import(name="version")
-      private final @Nullable String version;
+    private @Nullable String version;
 
     public Optional<String> version() {
-        return this.version == null ? Optional.empty() : Optional.ofNullable(this.version);
+        return Optional.ofNullable(this.version);
     }
 
-    public SqlServerInstancePropertiesResponse(
-        @Nullable String collation,
-        String containerResourceId,
-        String createTime,
-        @Nullable String currentVersion,
-        @Nullable String edition,
-        @Nullable String instanceName,
-        @Nullable String licenseType,
-        @Nullable String patchLevel,
-        @Nullable String productId,
-        String provisioningState,
-        String status,
-        @Nullable String tcpDynamicPorts,
-        @Nullable String tcpStaticPorts,
-        @Nullable String vCore,
-        @Nullable String version) {
-        this.collation = collation;
-        this.containerResourceId = Objects.requireNonNull(containerResourceId, "expected parameter 'containerResourceId' to be non-null");
-        this.createTime = Objects.requireNonNull(createTime, "expected parameter 'createTime' to be non-null");
-        this.currentVersion = currentVersion;
-        this.edition = edition;
-        this.instanceName = instanceName;
-        this.licenseType = licenseType;
-        this.patchLevel = patchLevel;
-        this.productId = productId;
-        this.provisioningState = Objects.requireNonNull(provisioningState, "expected parameter 'provisioningState' to be non-null");
-        this.status = Objects.requireNonNull(status, "expected parameter 'status' to be non-null");
-        this.tcpDynamicPorts = tcpDynamicPorts;
-        this.tcpStaticPorts = tcpStaticPorts;
-        this.vCore = vCore;
-        this.version = version;
-    }
+    private SqlServerInstancePropertiesResponse() {}
 
-    private SqlServerInstancePropertiesResponse() {
-        this.collation = null;
-        this.containerResourceId = null;
-        this.createTime = null;
-        this.currentVersion = null;
-        this.edition = null;
-        this.instanceName = null;
-        this.licenseType = null;
-        this.patchLevel = null;
-        this.productId = null;
-        this.provisioningState = null;
-        this.status = null;
-        this.tcpDynamicPorts = null;
-        this.tcpStaticPorts = null;
-        this.vCore = null;
-        this.version = null;
+    private SqlServerInstancePropertiesResponse(SqlServerInstancePropertiesResponse $) {
+        this.collation = $.collation;
+        this.containerResourceId = $.containerResourceId;
+        this.createTime = $.createTime;
+        this.currentVersion = $.currentVersion;
+        this.edition = $.edition;
+        this.instanceName = $.instanceName;
+        this.licenseType = $.licenseType;
+        this.patchLevel = $.patchLevel;
+        this.productId = $.productId;
+        this.provisioningState = $.provisioningState;
+        this.status = $.status;
+        this.tcpDynamicPorts = $.tcpDynamicPorts;
+        this.tcpStaticPorts = $.tcpStaticPorts;
+        this.vCore = $.vCore;
+        this.version = $.version;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SqlServerInstancePropertiesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String collation;
-        private String containerResourceId;
-        private String createTime;
-        private @Nullable String currentVersion;
-        private @Nullable String edition;
-        private @Nullable String instanceName;
-        private @Nullable String licenseType;
-        private @Nullable String patchLevel;
-        private @Nullable String productId;
-        private String provisioningState;
-        private String status;
-        private @Nullable String tcpDynamicPorts;
-        private @Nullable String tcpStaticPorts;
-        private @Nullable String vCore;
-        private @Nullable String version;
+        private SqlServerInstancePropertiesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new SqlServerInstancePropertiesResponse();
         }
 
         public Builder(SqlServerInstancePropertiesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.collation = defaults.collation;
-    	      this.containerResourceId = defaults.containerResourceId;
-    	      this.createTime = defaults.createTime;
-    	      this.currentVersion = defaults.currentVersion;
-    	      this.edition = defaults.edition;
-    	      this.instanceName = defaults.instanceName;
-    	      this.licenseType = defaults.licenseType;
-    	      this.patchLevel = defaults.patchLevel;
-    	      this.productId = defaults.productId;
-    	      this.provisioningState = defaults.provisioningState;
-    	      this.status = defaults.status;
-    	      this.tcpDynamicPorts = defaults.tcpDynamicPorts;
-    	      this.tcpStaticPorts = defaults.tcpStaticPorts;
-    	      this.vCore = defaults.vCore;
-    	      this.version = defaults.version;
+            $ = new SqlServerInstancePropertiesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder collation(@Nullable String collation) {
-            this.collation = collation;
+            $.collation = collation;
             return this;
         }
+
         public Builder containerResourceId(String containerResourceId) {
-            this.containerResourceId = Objects.requireNonNull(containerResourceId);
+            $.containerResourceId = containerResourceId;
             return this;
         }
+
         public Builder createTime(String createTime) {
-            this.createTime = Objects.requireNonNull(createTime);
+            $.createTime = createTime;
             return this;
         }
+
         public Builder currentVersion(@Nullable String currentVersion) {
-            this.currentVersion = currentVersion;
+            $.currentVersion = currentVersion;
             return this;
         }
+
         public Builder edition(@Nullable String edition) {
-            this.edition = edition;
+            $.edition = edition;
             return this;
         }
+
         public Builder instanceName(@Nullable String instanceName) {
-            this.instanceName = instanceName;
+            $.instanceName = instanceName;
             return this;
         }
+
         public Builder licenseType(@Nullable String licenseType) {
-            this.licenseType = licenseType;
+            $.licenseType = licenseType;
             return this;
         }
+
         public Builder patchLevel(@Nullable String patchLevel) {
-            this.patchLevel = patchLevel;
+            $.patchLevel = patchLevel;
             return this;
         }
+
         public Builder productId(@Nullable String productId) {
-            this.productId = productId;
+            $.productId = productId;
             return this;
         }
+
         public Builder provisioningState(String provisioningState) {
-            this.provisioningState = Objects.requireNonNull(provisioningState);
+            $.provisioningState = provisioningState;
             return this;
         }
+
         public Builder status(String status) {
-            this.status = Objects.requireNonNull(status);
+            $.status = status;
             return this;
         }
+
         public Builder tcpDynamicPorts(@Nullable String tcpDynamicPorts) {
-            this.tcpDynamicPorts = tcpDynamicPorts;
+            $.tcpDynamicPorts = tcpDynamicPorts;
             return this;
         }
+
         public Builder tcpStaticPorts(@Nullable String tcpStaticPorts) {
-            this.tcpStaticPorts = tcpStaticPorts;
+            $.tcpStaticPorts = tcpStaticPorts;
             return this;
         }
+
         public Builder vCore(@Nullable String vCore) {
-            this.vCore = vCore;
+            $.vCore = vCore;
             return this;
         }
+
         public Builder version(@Nullable String version) {
-            this.version = version;
+            $.version = version;
             return this;
-        }        public SqlServerInstancePropertiesResponse build() {
-            return new SqlServerInstancePropertiesResponse(collation, containerResourceId, createTime, currentVersion, edition, instanceName, licenseType, patchLevel, productId, provisioningState, status, tcpDynamicPorts, tcpStaticPorts, vCore, version);
+        }
+
+        public SqlServerInstancePropertiesResponse build() {
+            $.containerResourceId = Objects.requireNonNull($.containerResourceId, "expected parameter 'containerResourceId' to be non-null");
+            $.createTime = Objects.requireNonNull($.createTime, "expected parameter 'createTime' to be non-null");
+            $.provisioningState = Objects.requireNonNull($.provisioningState, "expected parameter 'provisioningState' to be non-null");
+            $.status = Objects.requireNonNull($.status, "expected parameter 'status' to be non-null");
+            return $;
         }
     }
+
 }

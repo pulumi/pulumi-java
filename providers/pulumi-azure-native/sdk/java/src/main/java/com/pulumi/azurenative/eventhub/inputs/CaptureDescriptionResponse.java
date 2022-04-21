@@ -26,10 +26,10 @@ public final class CaptureDescriptionResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="destination")
-      private final @Nullable DestinationResponse destination;
+    private @Nullable DestinationResponse destination;
 
     public Optional<DestinationResponse> destination() {
-        return this.destination == null ? Optional.empty() : Optional.ofNullable(this.destination);
+        return Optional.ofNullable(this.destination);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class CaptureDescriptionResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="enabled")
-      private final @Nullable Boolean enabled;
+    private @Nullable Boolean enabled;
 
     public Optional<Boolean> enabled() {
-        return this.enabled == null ? Optional.empty() : Optional.ofNullable(this.enabled);
+        return Optional.ofNullable(this.enabled);
     }
 
     /**
@@ -48,10 +48,10 @@ public final class CaptureDescriptionResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="encoding")
-      private final @Nullable String encoding;
+    private @Nullable String encoding;
 
     public Optional<String> encoding() {
-        return this.encoding == null ? Optional.empty() : Optional.ofNullable(this.encoding);
+        return Optional.ofNullable(this.encoding);
     }
 
     /**
@@ -59,10 +59,10 @@ public final class CaptureDescriptionResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="intervalInSeconds")
-      private final @Nullable Integer intervalInSeconds;
+    private @Nullable Integer intervalInSeconds;
 
     public Optional<Integer> intervalInSeconds() {
-        return this.intervalInSeconds == null ? Optional.empty() : Optional.ofNullable(this.intervalInSeconds);
+        return Optional.ofNullable(this.intervalInSeconds);
     }
 
     /**
@@ -70,10 +70,10 @@ public final class CaptureDescriptionResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="sizeLimitInBytes")
-      private final @Nullable Integer sizeLimitInBytes;
+    private @Nullable Integer sizeLimitInBytes;
 
     public Optional<Integer> sizeLimitInBytes() {
-        return this.sizeLimitInBytes == null ? Optional.empty() : Optional.ofNullable(this.sizeLimitInBytes);
+        return Optional.ofNullable(this.sizeLimitInBytes);
     }
 
     /**
@@ -81,91 +81,74 @@ public final class CaptureDescriptionResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="skipEmptyArchives")
-      private final @Nullable Boolean skipEmptyArchives;
+    private @Nullable Boolean skipEmptyArchives;
 
     public Optional<Boolean> skipEmptyArchives() {
-        return this.skipEmptyArchives == null ? Optional.empty() : Optional.ofNullable(this.skipEmptyArchives);
+        return Optional.ofNullable(this.skipEmptyArchives);
     }
 
-    public CaptureDescriptionResponse(
-        @Nullable DestinationResponse destination,
-        @Nullable Boolean enabled,
-        @Nullable String encoding,
-        @Nullable Integer intervalInSeconds,
-        @Nullable Integer sizeLimitInBytes,
-        @Nullable Boolean skipEmptyArchives) {
-        this.destination = destination;
-        this.enabled = enabled;
-        this.encoding = encoding;
-        this.intervalInSeconds = intervalInSeconds;
-        this.sizeLimitInBytes = sizeLimitInBytes;
-        this.skipEmptyArchives = skipEmptyArchives;
-    }
+    private CaptureDescriptionResponse() {}
 
-    private CaptureDescriptionResponse() {
-        this.destination = null;
-        this.enabled = null;
-        this.encoding = null;
-        this.intervalInSeconds = null;
-        this.sizeLimitInBytes = null;
-        this.skipEmptyArchives = null;
+    private CaptureDescriptionResponse(CaptureDescriptionResponse $) {
+        this.destination = $.destination;
+        this.enabled = $.enabled;
+        this.encoding = $.encoding;
+        this.intervalInSeconds = $.intervalInSeconds;
+        this.sizeLimitInBytes = $.sizeLimitInBytes;
+        this.skipEmptyArchives = $.skipEmptyArchives;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CaptureDescriptionResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable DestinationResponse destination;
-        private @Nullable Boolean enabled;
-        private @Nullable String encoding;
-        private @Nullable Integer intervalInSeconds;
-        private @Nullable Integer sizeLimitInBytes;
-        private @Nullable Boolean skipEmptyArchives;
+        private CaptureDescriptionResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new CaptureDescriptionResponse();
         }
 
         public Builder(CaptureDescriptionResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.destination = defaults.destination;
-    	      this.enabled = defaults.enabled;
-    	      this.encoding = defaults.encoding;
-    	      this.intervalInSeconds = defaults.intervalInSeconds;
-    	      this.sizeLimitInBytes = defaults.sizeLimitInBytes;
-    	      this.skipEmptyArchives = defaults.skipEmptyArchives;
+            $ = new CaptureDescriptionResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder destination(@Nullable DestinationResponse destination) {
-            this.destination = destination;
+            $.destination = destination;
             return this;
         }
+
         public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = enabled;
+            $.enabled = enabled;
             return this;
         }
+
         public Builder encoding(@Nullable String encoding) {
-            this.encoding = encoding;
+            $.encoding = encoding;
             return this;
         }
+
         public Builder intervalInSeconds(@Nullable Integer intervalInSeconds) {
-            this.intervalInSeconds = intervalInSeconds;
+            $.intervalInSeconds = intervalInSeconds;
             return this;
         }
+
         public Builder sizeLimitInBytes(@Nullable Integer sizeLimitInBytes) {
-            this.sizeLimitInBytes = sizeLimitInBytes;
+            $.sizeLimitInBytes = sizeLimitInBytes;
             return this;
         }
+
         public Builder skipEmptyArchives(@Nullable Boolean skipEmptyArchives) {
-            this.skipEmptyArchives = skipEmptyArchives;
+            $.skipEmptyArchives = skipEmptyArchives;
             return this;
-        }        public CaptureDescriptionResponse build() {
-            return new CaptureDescriptionResponse(destination, enabled, encoding, intervalInSeconds, sizeLimitInBytes, skipEmptyArchives);
+        }
+
+        public CaptureDescriptionResponse build() {
+            return $;
         }
     }
+
 }

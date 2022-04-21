@@ -21,7 +21,7 @@ public final class AssignedUserResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="objectId", required=true)
-      private final String objectId;
+    private String objectId;
 
     public String objectId() {
         return this.objectId;
@@ -32,55 +32,52 @@ public final class AssignedUserResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="tenantId", required=true)
-      private final String tenantId;
+    private String tenantId;
 
     public String tenantId() {
         return this.tenantId;
     }
 
-    public AssignedUserResponse(
-        String objectId,
-        String tenantId) {
-        this.objectId = Objects.requireNonNull(objectId, "expected parameter 'objectId' to be non-null");
-        this.tenantId = Objects.requireNonNull(tenantId, "expected parameter 'tenantId' to be non-null");
-    }
+    private AssignedUserResponse() {}
 
-    private AssignedUserResponse() {
-        this.objectId = null;
-        this.tenantId = null;
+    private AssignedUserResponse(AssignedUserResponse $) {
+        this.objectId = $.objectId;
+        this.tenantId = $.tenantId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AssignedUserResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String objectId;
-        private String tenantId;
+        private AssignedUserResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AssignedUserResponse();
         }
 
         public Builder(AssignedUserResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.objectId = defaults.objectId;
-    	      this.tenantId = defaults.tenantId;
+            $ = new AssignedUserResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder objectId(String objectId) {
-            this.objectId = Objects.requireNonNull(objectId);
+            $.objectId = objectId;
             return this;
         }
+
         public Builder tenantId(String tenantId) {
-            this.tenantId = Objects.requireNonNull(tenantId);
+            $.tenantId = tenantId;
             return this;
-        }        public AssignedUserResponse build() {
-            return new AssignedUserResponse(objectId, tenantId);
+        }
+
+        public AssignedUserResponse build() {
+            $.objectId = Objects.requireNonNull($.objectId, "expected parameter 'objectId' to be non-null");
+            $.tenantId = Objects.requireNonNull($.tenantId, "expected parameter 'tenantId' to be non-null");
+            return $;
         }
     }
+
 }

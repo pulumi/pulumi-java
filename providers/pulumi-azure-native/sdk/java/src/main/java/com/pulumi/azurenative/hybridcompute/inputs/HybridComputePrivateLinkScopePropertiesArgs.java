@@ -7,9 +7,9 @@ import com.pulumi.azurenative.hybridcompute.enums.PublicNetworkAccessType;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,49 +26,48 @@ public final class HybridComputePrivateLinkScopePropertiesArgs extends com.pulum
      * 
      */
     @Import(name="publicNetworkAccess")
-      private final @Nullable Output<Either<String,PublicNetworkAccessType>> publicNetworkAccess;
+    private @Nullable Output<Either<String,PublicNetworkAccessType>> publicNetworkAccess;
 
-    public Output<Either<String,PublicNetworkAccessType>> publicNetworkAccess() {
-        return this.publicNetworkAccess == null ? Codegen.empty() : this.publicNetworkAccess;
+    public Optional<Output<Either<String,PublicNetworkAccessType>>> publicNetworkAccess() {
+        return Optional.ofNullable(this.publicNetworkAccess);
     }
 
-    public HybridComputePrivateLinkScopePropertiesArgs(@Nullable Output<Either<String,PublicNetworkAccessType>> publicNetworkAccess) {
-        this.publicNetworkAccess = publicNetworkAccess;
-    }
+    private HybridComputePrivateLinkScopePropertiesArgs() {}
 
-    private HybridComputePrivateLinkScopePropertiesArgs() {
-        this.publicNetworkAccess = Codegen.empty();
+    private HybridComputePrivateLinkScopePropertiesArgs(HybridComputePrivateLinkScopePropertiesArgs $) {
+        this.publicNetworkAccess = $.publicNetworkAccess;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(HybridComputePrivateLinkScopePropertiesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Either<String,PublicNetworkAccessType>> publicNetworkAccess;
+        private HybridComputePrivateLinkScopePropertiesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new HybridComputePrivateLinkScopePropertiesArgs();
         }
 
         public Builder(HybridComputePrivateLinkScopePropertiesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.publicNetworkAccess = defaults.publicNetworkAccess;
+            $ = new HybridComputePrivateLinkScopePropertiesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder publicNetworkAccess(@Nullable Output<Either<String,PublicNetworkAccessType>> publicNetworkAccess) {
-            this.publicNetworkAccess = publicNetworkAccess;
+            $.publicNetworkAccess = publicNetworkAccess;
             return this;
         }
-        public Builder publicNetworkAccess(@Nullable Either<String,PublicNetworkAccessType> publicNetworkAccess) {
-            this.publicNetworkAccess = Codegen.ofNullable(publicNetworkAccess);
-            return this;
-        }        public HybridComputePrivateLinkScopePropertiesArgs build() {
-            return new HybridComputePrivateLinkScopePropertiesArgs(publicNetworkAccess);
+
+        public Builder publicNetworkAccess(Either<String,PublicNetworkAccessType> publicNetworkAccess) {
+            return publicNetworkAccess(Output.of(publicNetworkAccess));
+        }
+
+        public HybridComputePrivateLinkScopePropertiesArgs build() {
+            return $;
         }
     }
+
 }

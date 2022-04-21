@@ -22,7 +22,7 @@ public final class PageResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="content", required=true)
-      private final String content;
+    private String content;
 
     public String content() {
         return this.content;
@@ -33,7 +33,7 @@ public final class PageResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -44,67 +44,63 @@ public final class PageResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="subpages", required=true)
-      private final List<PageResponse> subpages;
+    private List<PageResponse> subpages;
 
     public List<PageResponse> subpages() {
         return this.subpages;
     }
 
-    public PageResponse(
-        String content,
-        String name,
-        List<PageResponse> subpages) {
-        this.content = Objects.requireNonNull(content, "expected parameter 'content' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.subpages = Objects.requireNonNull(subpages, "expected parameter 'subpages' to be non-null");
-    }
+    private PageResponse() {}
 
-    private PageResponse() {
-        this.content = null;
-        this.name = null;
-        this.subpages = List.of();
+    private PageResponse(PageResponse $) {
+        this.content = $.content;
+        this.name = $.name;
+        this.subpages = $.subpages;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PageResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String content;
-        private String name;
-        private List<PageResponse> subpages;
+        private PageResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new PageResponse();
         }
 
         public Builder(PageResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.content = defaults.content;
-    	      this.name = defaults.name;
-    	      this.subpages = defaults.subpages;
+            $ = new PageResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder content(String content) {
-            this.content = Objects.requireNonNull(content);
+            $.content = content;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder subpages(List<PageResponse> subpages) {
-            this.subpages = Objects.requireNonNull(subpages);
+            $.subpages = subpages;
             return this;
         }
+
         public Builder subpages(PageResponse... subpages) {
             return subpages(List.of(subpages));
-        }        public PageResponse build() {
-            return new PageResponse(content, name, subpages);
+        }
+
+        public PageResponse build() {
+            $.content = Objects.requireNonNull($.content, "expected parameter 'content' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.subpages = Objects.requireNonNull($.subpages, "expected parameter 'subpages' to be non-null");
+            return $;
         }
     }
+
 }

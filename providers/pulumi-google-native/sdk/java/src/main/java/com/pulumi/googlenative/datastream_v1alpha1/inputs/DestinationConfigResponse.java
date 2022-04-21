@@ -22,7 +22,7 @@ public final class DestinationConfigResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="destinationConnectionProfileName", required=true)
-      private final String destinationConnectionProfileName;
+    private String destinationConnectionProfileName;
 
     public String destinationConnectionProfileName() {
         return this.destinationConnectionProfileName;
@@ -33,55 +33,52 @@ public final class DestinationConfigResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="gcsDestinationConfig", required=true)
-      private final GcsDestinationConfigResponse gcsDestinationConfig;
+    private GcsDestinationConfigResponse gcsDestinationConfig;
 
     public GcsDestinationConfigResponse gcsDestinationConfig() {
         return this.gcsDestinationConfig;
     }
 
-    public DestinationConfigResponse(
-        String destinationConnectionProfileName,
-        GcsDestinationConfigResponse gcsDestinationConfig) {
-        this.destinationConnectionProfileName = Objects.requireNonNull(destinationConnectionProfileName, "expected parameter 'destinationConnectionProfileName' to be non-null");
-        this.gcsDestinationConfig = Objects.requireNonNull(gcsDestinationConfig, "expected parameter 'gcsDestinationConfig' to be non-null");
-    }
+    private DestinationConfigResponse() {}
 
-    private DestinationConfigResponse() {
-        this.destinationConnectionProfileName = null;
-        this.gcsDestinationConfig = null;
+    private DestinationConfigResponse(DestinationConfigResponse $) {
+        this.destinationConnectionProfileName = $.destinationConnectionProfileName;
+        this.gcsDestinationConfig = $.gcsDestinationConfig;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DestinationConfigResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String destinationConnectionProfileName;
-        private GcsDestinationConfigResponse gcsDestinationConfig;
+        private DestinationConfigResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new DestinationConfigResponse();
         }
 
         public Builder(DestinationConfigResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.destinationConnectionProfileName = defaults.destinationConnectionProfileName;
-    	      this.gcsDestinationConfig = defaults.gcsDestinationConfig;
+            $ = new DestinationConfigResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder destinationConnectionProfileName(String destinationConnectionProfileName) {
-            this.destinationConnectionProfileName = Objects.requireNonNull(destinationConnectionProfileName);
+            $.destinationConnectionProfileName = destinationConnectionProfileName;
             return this;
         }
+
         public Builder gcsDestinationConfig(GcsDestinationConfigResponse gcsDestinationConfig) {
-            this.gcsDestinationConfig = Objects.requireNonNull(gcsDestinationConfig);
+            $.gcsDestinationConfig = gcsDestinationConfig;
             return this;
-        }        public DestinationConfigResponse build() {
-            return new DestinationConfigResponse(destinationConnectionProfileName, gcsDestinationConfig);
+        }
+
+        public DestinationConfigResponse build() {
+            $.destinationConnectionProfileName = Objects.requireNonNull($.destinationConnectionProfileName, "expected parameter 'destinationConnectionProfileName' to be non-null");
+            $.gcsDestinationConfig = Objects.requireNonNull($.gcsDestinationConfig, "expected parameter 'gcsDestinationConfig' to be non-null");
+            return $;
         }
     }
+
 }

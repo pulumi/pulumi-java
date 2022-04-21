@@ -5,11 +5,11 @@ package com.pulumi.googlenative.deploymentmanager_alpha.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.deploymentmanager_alpha.inputs.DiagnosticArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class PollingOptionsArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="diagnostics")
-      private final @Nullable Output<List<DiagnosticArgs>> diagnostics;
+    private @Nullable Output<List<DiagnosticArgs>> diagnostics;
 
-    public Output<List<DiagnosticArgs>> diagnostics() {
-        return this.diagnostics == null ? Codegen.empty() : this.diagnostics;
+    public Optional<Output<List<DiagnosticArgs>>> diagnostics() {
+        return Optional.ofNullable(this.diagnostics);
     }
 
     /**
@@ -33,10 +33,10 @@ public final class PollingOptionsArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="failCondition")
-      private final @Nullable Output<String> failCondition;
+    private @Nullable Output<String> failCondition;
 
-    public Output<String> failCondition() {
-        return this.failCondition == null ? Codegen.empty() : this.failCondition;
+    public Optional<Output<String>> failCondition() {
+        return Optional.ofNullable(this.failCondition);
     }
 
     /**
@@ -44,10 +44,10 @@ public final class PollingOptionsArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="finishCondition")
-      private final @Nullable Output<String> finishCondition;
+    private @Nullable Output<String> finishCondition;
 
-    public Output<String> finishCondition() {
-        return this.finishCondition == null ? Codegen.empty() : this.finishCondition;
+    public Optional<Output<String>> finishCondition() {
+        return Optional.ofNullable(this.finishCondition);
     }
 
     /**
@@ -55,10 +55,10 @@ public final class PollingOptionsArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="pollingLink")
-      private final @Nullable Output<String> pollingLink;
+    private @Nullable Output<String> pollingLink;
 
-    public Output<String> pollingLink() {
-        return this.pollingLink == null ? Codegen.empty() : this.pollingLink;
+    public Optional<Output<String>> pollingLink() {
+        return Optional.ofNullable(this.pollingLink);
     }
 
     /**
@@ -66,105 +66,92 @@ public final class PollingOptionsArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="targetLink")
-      private final @Nullable Output<String> targetLink;
+    private @Nullable Output<String> targetLink;
 
-    public Output<String> targetLink() {
-        return this.targetLink == null ? Codegen.empty() : this.targetLink;
+    public Optional<Output<String>> targetLink() {
+        return Optional.ofNullable(this.targetLink);
     }
 
-    public PollingOptionsArgs(
-        @Nullable Output<List<DiagnosticArgs>> diagnostics,
-        @Nullable Output<String> failCondition,
-        @Nullable Output<String> finishCondition,
-        @Nullable Output<String> pollingLink,
-        @Nullable Output<String> targetLink) {
-        this.diagnostics = diagnostics;
-        this.failCondition = failCondition;
-        this.finishCondition = finishCondition;
-        this.pollingLink = pollingLink;
-        this.targetLink = targetLink;
-    }
+    private PollingOptionsArgs() {}
 
-    private PollingOptionsArgs() {
-        this.diagnostics = Codegen.empty();
-        this.failCondition = Codegen.empty();
-        this.finishCondition = Codegen.empty();
-        this.pollingLink = Codegen.empty();
-        this.targetLink = Codegen.empty();
+    private PollingOptionsArgs(PollingOptionsArgs $) {
+        this.diagnostics = $.diagnostics;
+        this.failCondition = $.failCondition;
+        this.finishCondition = $.finishCondition;
+        this.pollingLink = $.pollingLink;
+        this.targetLink = $.targetLink;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PollingOptionsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<DiagnosticArgs>> diagnostics;
-        private @Nullable Output<String> failCondition;
-        private @Nullable Output<String> finishCondition;
-        private @Nullable Output<String> pollingLink;
-        private @Nullable Output<String> targetLink;
+        private PollingOptionsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PollingOptionsArgs();
         }
 
         public Builder(PollingOptionsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.diagnostics = defaults.diagnostics;
-    	      this.failCondition = defaults.failCondition;
-    	      this.finishCondition = defaults.finishCondition;
-    	      this.pollingLink = defaults.pollingLink;
-    	      this.targetLink = defaults.targetLink;
+            $ = new PollingOptionsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder diagnostics(@Nullable Output<List<DiagnosticArgs>> diagnostics) {
-            this.diagnostics = diagnostics;
+            $.diagnostics = diagnostics;
             return this;
         }
-        public Builder diagnostics(@Nullable List<DiagnosticArgs> diagnostics) {
-            this.diagnostics = Codegen.ofNullable(diagnostics);
-            return this;
+
+        public Builder diagnostics(List<DiagnosticArgs> diagnostics) {
+            return diagnostics(Output.of(diagnostics));
         }
+
         public Builder diagnostics(DiagnosticArgs... diagnostics) {
             return diagnostics(List.of(diagnostics));
         }
+
         public Builder failCondition(@Nullable Output<String> failCondition) {
-            this.failCondition = failCondition;
+            $.failCondition = failCondition;
             return this;
         }
-        public Builder failCondition(@Nullable String failCondition) {
-            this.failCondition = Codegen.ofNullable(failCondition);
-            return this;
+
+        public Builder failCondition(String failCondition) {
+            return failCondition(Output.of(failCondition));
         }
+
         public Builder finishCondition(@Nullable Output<String> finishCondition) {
-            this.finishCondition = finishCondition;
+            $.finishCondition = finishCondition;
             return this;
         }
-        public Builder finishCondition(@Nullable String finishCondition) {
-            this.finishCondition = Codegen.ofNullable(finishCondition);
-            return this;
+
+        public Builder finishCondition(String finishCondition) {
+            return finishCondition(Output.of(finishCondition));
         }
+
         public Builder pollingLink(@Nullable Output<String> pollingLink) {
-            this.pollingLink = pollingLink;
+            $.pollingLink = pollingLink;
             return this;
         }
-        public Builder pollingLink(@Nullable String pollingLink) {
-            this.pollingLink = Codegen.ofNullable(pollingLink);
-            return this;
+
+        public Builder pollingLink(String pollingLink) {
+            return pollingLink(Output.of(pollingLink));
         }
+
         public Builder targetLink(@Nullable Output<String> targetLink) {
-            this.targetLink = targetLink;
+            $.targetLink = targetLink;
             return this;
         }
-        public Builder targetLink(@Nullable String targetLink) {
-            this.targetLink = Codegen.ofNullable(targetLink);
-            return this;
-        }        public PollingOptionsArgs build() {
-            return new PollingOptionsArgs(diagnostics, failCondition, finishCondition, pollingLink, targetLink);
+
+        public Builder targetLink(String targetLink) {
+            return targetLink(Output.of(targetLink));
+        }
+
+        public PollingOptionsArgs build() {
+            return $;
         }
     }
+
 }

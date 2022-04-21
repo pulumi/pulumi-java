@@ -21,7 +21,7 @@ public final class AliasIpRangeResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="ipCidrRange", required=true)
-      private final String ipCidrRange;
+    private String ipCidrRange;
 
     public String ipCidrRange() {
         return this.ipCidrRange;
@@ -32,55 +32,52 @@ public final class AliasIpRangeResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="subnetworkRangeName", required=true)
-      private final String subnetworkRangeName;
+    private String subnetworkRangeName;
 
     public String subnetworkRangeName() {
         return this.subnetworkRangeName;
     }
 
-    public AliasIpRangeResponse(
-        String ipCidrRange,
-        String subnetworkRangeName) {
-        this.ipCidrRange = Objects.requireNonNull(ipCidrRange, "expected parameter 'ipCidrRange' to be non-null");
-        this.subnetworkRangeName = Objects.requireNonNull(subnetworkRangeName, "expected parameter 'subnetworkRangeName' to be non-null");
-    }
+    private AliasIpRangeResponse() {}
 
-    private AliasIpRangeResponse() {
-        this.ipCidrRange = null;
-        this.subnetworkRangeName = null;
+    private AliasIpRangeResponse(AliasIpRangeResponse $) {
+        this.ipCidrRange = $.ipCidrRange;
+        this.subnetworkRangeName = $.subnetworkRangeName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AliasIpRangeResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String ipCidrRange;
-        private String subnetworkRangeName;
+        private AliasIpRangeResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AliasIpRangeResponse();
         }
 
         public Builder(AliasIpRangeResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.ipCidrRange = defaults.ipCidrRange;
-    	      this.subnetworkRangeName = defaults.subnetworkRangeName;
+            $ = new AliasIpRangeResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder ipCidrRange(String ipCidrRange) {
-            this.ipCidrRange = Objects.requireNonNull(ipCidrRange);
+            $.ipCidrRange = ipCidrRange;
             return this;
         }
+
         public Builder subnetworkRangeName(String subnetworkRangeName) {
-            this.subnetworkRangeName = Objects.requireNonNull(subnetworkRangeName);
+            $.subnetworkRangeName = subnetworkRangeName;
             return this;
-        }        public AliasIpRangeResponse build() {
-            return new AliasIpRangeResponse(ipCidrRange, subnetworkRangeName);
+        }
+
+        public AliasIpRangeResponse build() {
+            $.ipCidrRange = Objects.requireNonNull($.ipCidrRange, "expected parameter 'ipCidrRange' to be non-null");
+            $.subnetworkRangeName = Objects.requireNonNull($.subnetworkRangeName, "expected parameter 'subnetworkRangeName' to be non-null");
+            return $;
         }
     }
+
 }

@@ -26,10 +26,10 @@ public final class ClusterUpgradePolicyResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="deltaHealthPolicy")
-      private final @Nullable ClusterUpgradeDeltaHealthPolicyResponse deltaHealthPolicy;
+    private @Nullable ClusterUpgradeDeltaHealthPolicyResponse deltaHealthPolicy;
 
     public Optional<ClusterUpgradeDeltaHealthPolicyResponse> deltaHealthPolicy() {
-        return this.deltaHealthPolicy == null ? Optional.empty() : Optional.ofNullable(this.deltaHealthPolicy);
+        return Optional.ofNullable(this.deltaHealthPolicy);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class ClusterUpgradePolicyResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="forceRestart")
-      private final @Nullable Boolean forceRestart;
+    private @Nullable Boolean forceRestart;
 
     public Optional<Boolean> forceRestart() {
-        return this.forceRestart == null ? Optional.empty() : Optional.ofNullable(this.forceRestart);
+        return Optional.ofNullable(this.forceRestart);
     }
 
     /**
@@ -48,7 +48,7 @@ public final class ClusterUpgradePolicyResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="healthCheckRetryTimeout", required=true)
-      private final String healthCheckRetryTimeout;
+    private String healthCheckRetryTimeout;
 
     public String healthCheckRetryTimeout() {
         return this.healthCheckRetryTimeout;
@@ -59,7 +59,7 @@ public final class ClusterUpgradePolicyResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="healthCheckStableDuration", required=true)
-      private final String healthCheckStableDuration;
+    private String healthCheckStableDuration;
 
     public String healthCheckStableDuration() {
         return this.healthCheckStableDuration;
@@ -70,7 +70,7 @@ public final class ClusterUpgradePolicyResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="healthCheckWaitDuration", required=true)
-      private final String healthCheckWaitDuration;
+    private String healthCheckWaitDuration;
 
     public String healthCheckWaitDuration() {
         return this.healthCheckWaitDuration;
@@ -81,7 +81,7 @@ public final class ClusterUpgradePolicyResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="healthPolicy", required=true)
-      private final ClusterHealthPolicyResponse healthPolicy;
+    private ClusterHealthPolicyResponse healthPolicy;
 
     public ClusterHealthPolicyResponse healthPolicy() {
         return this.healthPolicy;
@@ -92,7 +92,7 @@ public final class ClusterUpgradePolicyResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="upgradeDomainTimeout", required=true)
-      private final String upgradeDomainTimeout;
+    private String upgradeDomainTimeout;
 
     public String upgradeDomainTimeout() {
         return this.upgradeDomainTimeout;
@@ -103,7 +103,7 @@ public final class ClusterUpgradePolicyResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="upgradeReplicaSetCheckTimeout", required=true)
-      private final String upgradeReplicaSetCheckTimeout;
+    private String upgradeReplicaSetCheckTimeout;
 
     public String upgradeReplicaSetCheckTimeout() {
         return this.upgradeReplicaSetCheckTimeout;
@@ -114,118 +114,99 @@ public final class ClusterUpgradePolicyResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="upgradeTimeout", required=true)
-      private final String upgradeTimeout;
+    private String upgradeTimeout;
 
     public String upgradeTimeout() {
         return this.upgradeTimeout;
     }
 
-    public ClusterUpgradePolicyResponse(
-        @Nullable ClusterUpgradeDeltaHealthPolicyResponse deltaHealthPolicy,
-        @Nullable Boolean forceRestart,
-        String healthCheckRetryTimeout,
-        String healthCheckStableDuration,
-        String healthCheckWaitDuration,
-        ClusterHealthPolicyResponse healthPolicy,
-        String upgradeDomainTimeout,
-        String upgradeReplicaSetCheckTimeout,
-        String upgradeTimeout) {
-        this.deltaHealthPolicy = deltaHealthPolicy;
-        this.forceRestart = forceRestart;
-        this.healthCheckRetryTimeout = Objects.requireNonNull(healthCheckRetryTimeout, "expected parameter 'healthCheckRetryTimeout' to be non-null");
-        this.healthCheckStableDuration = Objects.requireNonNull(healthCheckStableDuration, "expected parameter 'healthCheckStableDuration' to be non-null");
-        this.healthCheckWaitDuration = Objects.requireNonNull(healthCheckWaitDuration, "expected parameter 'healthCheckWaitDuration' to be non-null");
-        this.healthPolicy = Objects.requireNonNull(healthPolicy, "expected parameter 'healthPolicy' to be non-null");
-        this.upgradeDomainTimeout = Objects.requireNonNull(upgradeDomainTimeout, "expected parameter 'upgradeDomainTimeout' to be non-null");
-        this.upgradeReplicaSetCheckTimeout = Objects.requireNonNull(upgradeReplicaSetCheckTimeout, "expected parameter 'upgradeReplicaSetCheckTimeout' to be non-null");
-        this.upgradeTimeout = Objects.requireNonNull(upgradeTimeout, "expected parameter 'upgradeTimeout' to be non-null");
-    }
+    private ClusterUpgradePolicyResponse() {}
 
-    private ClusterUpgradePolicyResponse() {
-        this.deltaHealthPolicy = null;
-        this.forceRestart = null;
-        this.healthCheckRetryTimeout = null;
-        this.healthCheckStableDuration = null;
-        this.healthCheckWaitDuration = null;
-        this.healthPolicy = null;
-        this.upgradeDomainTimeout = null;
-        this.upgradeReplicaSetCheckTimeout = null;
-        this.upgradeTimeout = null;
+    private ClusterUpgradePolicyResponse(ClusterUpgradePolicyResponse $) {
+        this.deltaHealthPolicy = $.deltaHealthPolicy;
+        this.forceRestart = $.forceRestart;
+        this.healthCheckRetryTimeout = $.healthCheckRetryTimeout;
+        this.healthCheckStableDuration = $.healthCheckStableDuration;
+        this.healthCheckWaitDuration = $.healthCheckWaitDuration;
+        this.healthPolicy = $.healthPolicy;
+        this.upgradeDomainTimeout = $.upgradeDomainTimeout;
+        this.upgradeReplicaSetCheckTimeout = $.upgradeReplicaSetCheckTimeout;
+        this.upgradeTimeout = $.upgradeTimeout;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ClusterUpgradePolicyResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable ClusterUpgradeDeltaHealthPolicyResponse deltaHealthPolicy;
-        private @Nullable Boolean forceRestart;
-        private String healthCheckRetryTimeout;
-        private String healthCheckStableDuration;
-        private String healthCheckWaitDuration;
-        private ClusterHealthPolicyResponse healthPolicy;
-        private String upgradeDomainTimeout;
-        private String upgradeReplicaSetCheckTimeout;
-        private String upgradeTimeout;
+        private ClusterUpgradePolicyResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ClusterUpgradePolicyResponse();
         }
 
         public Builder(ClusterUpgradePolicyResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.deltaHealthPolicy = defaults.deltaHealthPolicy;
-    	      this.forceRestart = defaults.forceRestart;
-    	      this.healthCheckRetryTimeout = defaults.healthCheckRetryTimeout;
-    	      this.healthCheckStableDuration = defaults.healthCheckStableDuration;
-    	      this.healthCheckWaitDuration = defaults.healthCheckWaitDuration;
-    	      this.healthPolicy = defaults.healthPolicy;
-    	      this.upgradeDomainTimeout = defaults.upgradeDomainTimeout;
-    	      this.upgradeReplicaSetCheckTimeout = defaults.upgradeReplicaSetCheckTimeout;
-    	      this.upgradeTimeout = defaults.upgradeTimeout;
+            $ = new ClusterUpgradePolicyResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder deltaHealthPolicy(@Nullable ClusterUpgradeDeltaHealthPolicyResponse deltaHealthPolicy) {
-            this.deltaHealthPolicy = deltaHealthPolicy;
+            $.deltaHealthPolicy = deltaHealthPolicy;
             return this;
         }
+
         public Builder forceRestart(@Nullable Boolean forceRestart) {
-            this.forceRestart = forceRestart;
+            $.forceRestart = forceRestart;
             return this;
         }
+
         public Builder healthCheckRetryTimeout(String healthCheckRetryTimeout) {
-            this.healthCheckRetryTimeout = Objects.requireNonNull(healthCheckRetryTimeout);
+            $.healthCheckRetryTimeout = healthCheckRetryTimeout;
             return this;
         }
+
         public Builder healthCheckStableDuration(String healthCheckStableDuration) {
-            this.healthCheckStableDuration = Objects.requireNonNull(healthCheckStableDuration);
+            $.healthCheckStableDuration = healthCheckStableDuration;
             return this;
         }
+
         public Builder healthCheckWaitDuration(String healthCheckWaitDuration) {
-            this.healthCheckWaitDuration = Objects.requireNonNull(healthCheckWaitDuration);
+            $.healthCheckWaitDuration = healthCheckWaitDuration;
             return this;
         }
+
         public Builder healthPolicy(ClusterHealthPolicyResponse healthPolicy) {
-            this.healthPolicy = Objects.requireNonNull(healthPolicy);
+            $.healthPolicy = healthPolicy;
             return this;
         }
+
         public Builder upgradeDomainTimeout(String upgradeDomainTimeout) {
-            this.upgradeDomainTimeout = Objects.requireNonNull(upgradeDomainTimeout);
+            $.upgradeDomainTimeout = upgradeDomainTimeout;
             return this;
         }
+
         public Builder upgradeReplicaSetCheckTimeout(String upgradeReplicaSetCheckTimeout) {
-            this.upgradeReplicaSetCheckTimeout = Objects.requireNonNull(upgradeReplicaSetCheckTimeout);
+            $.upgradeReplicaSetCheckTimeout = upgradeReplicaSetCheckTimeout;
             return this;
         }
+
         public Builder upgradeTimeout(String upgradeTimeout) {
-            this.upgradeTimeout = Objects.requireNonNull(upgradeTimeout);
+            $.upgradeTimeout = upgradeTimeout;
             return this;
-        }        public ClusterUpgradePolicyResponse build() {
-            return new ClusterUpgradePolicyResponse(deltaHealthPolicy, forceRestart, healthCheckRetryTimeout, healthCheckStableDuration, healthCheckWaitDuration, healthPolicy, upgradeDomainTimeout, upgradeReplicaSetCheckTimeout, upgradeTimeout);
+        }
+
+        public ClusterUpgradePolicyResponse build() {
+            $.healthCheckRetryTimeout = Objects.requireNonNull($.healthCheckRetryTimeout, "expected parameter 'healthCheckRetryTimeout' to be non-null");
+            $.healthCheckStableDuration = Objects.requireNonNull($.healthCheckStableDuration, "expected parameter 'healthCheckStableDuration' to be non-null");
+            $.healthCheckWaitDuration = Objects.requireNonNull($.healthCheckWaitDuration, "expected parameter 'healthCheckWaitDuration' to be non-null");
+            $.healthPolicy = Objects.requireNonNull($.healthPolicy, "expected parameter 'healthPolicy' to be non-null");
+            $.upgradeDomainTimeout = Objects.requireNonNull($.upgradeDomainTimeout, "expected parameter 'upgradeDomainTimeout' to be non-null");
+            $.upgradeReplicaSetCheckTimeout = Objects.requireNonNull($.upgradeReplicaSetCheckTimeout, "expected parameter 'upgradeReplicaSetCheckTimeout' to be non-null");
+            $.upgradeTimeout = Objects.requireNonNull($.upgradeTimeout, "expected parameter 'upgradeTimeout' to be non-null");
+            return $;
         }
     }
+
 }

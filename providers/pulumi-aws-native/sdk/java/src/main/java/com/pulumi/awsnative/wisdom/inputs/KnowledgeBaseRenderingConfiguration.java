@@ -15,45 +15,44 @@ public final class KnowledgeBaseRenderingConfiguration extends com.pulumi.resour
     public static final KnowledgeBaseRenderingConfiguration Empty = new KnowledgeBaseRenderingConfiguration();
 
     @Import(name="templateUri")
-      private final @Nullable String templateUri;
+    private @Nullable String templateUri;
 
     public Optional<String> templateUri() {
-        return this.templateUri == null ? Optional.empty() : Optional.ofNullable(this.templateUri);
+        return Optional.ofNullable(this.templateUri);
     }
 
-    public KnowledgeBaseRenderingConfiguration(@Nullable String templateUri) {
-        this.templateUri = templateUri;
-    }
+    private KnowledgeBaseRenderingConfiguration() {}
 
-    private KnowledgeBaseRenderingConfiguration() {
-        this.templateUri = null;
+    private KnowledgeBaseRenderingConfiguration(KnowledgeBaseRenderingConfiguration $) {
+        this.templateUri = $.templateUri;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(KnowledgeBaseRenderingConfiguration defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String templateUri;
+        private KnowledgeBaseRenderingConfiguration $;
 
         public Builder() {
-    	      // Empty
+            $ = new KnowledgeBaseRenderingConfiguration();
         }
 
         public Builder(KnowledgeBaseRenderingConfiguration defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.templateUri = defaults.templateUri;
+            $ = new KnowledgeBaseRenderingConfiguration(Objects.requireNonNull(defaults));
         }
 
         public Builder templateUri(@Nullable String templateUri) {
-            this.templateUri = templateUri;
+            $.templateUri = templateUri;
             return this;
-        }        public KnowledgeBaseRenderingConfiguration build() {
-            return new KnowledgeBaseRenderingConfiguration(templateUri);
+        }
+
+        public KnowledgeBaseRenderingConfiguration build() {
+            return $;
         }
     }
+
 }

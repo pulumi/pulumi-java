@@ -5,10 +5,10 @@ package com.pulumi.aws.iam.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class AccountPasswordPolicyState extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="allowUsersToChangePassword")
-      private final @Nullable Output<Boolean> allowUsersToChangePassword;
+    private @Nullable Output<Boolean> allowUsersToChangePassword;
 
-    public Output<Boolean> allowUsersToChangePassword() {
-        return this.allowUsersToChangePassword == null ? Codegen.empty() : this.allowUsersToChangePassword;
+    public Optional<Output<Boolean>> allowUsersToChangePassword() {
+        return Optional.ofNullable(this.allowUsersToChangePassword);
     }
 
     /**
@@ -32,10 +32,10 @@ public final class AccountPasswordPolicyState extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="expirePasswords")
-      private final @Nullable Output<Boolean> expirePasswords;
+    private @Nullable Output<Boolean> expirePasswords;
 
-    public Output<Boolean> expirePasswords() {
-        return this.expirePasswords == null ? Codegen.empty() : this.expirePasswords;
+    public Optional<Output<Boolean>> expirePasswords() {
+        return Optional.ofNullable(this.expirePasswords);
     }
 
     /**
@@ -43,10 +43,10 @@ public final class AccountPasswordPolicyState extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="hardExpiry")
-      private final @Nullable Output<Boolean> hardExpiry;
+    private @Nullable Output<Boolean> hardExpiry;
 
-    public Output<Boolean> hardExpiry() {
-        return this.hardExpiry == null ? Codegen.empty() : this.hardExpiry;
+    public Optional<Output<Boolean>> hardExpiry() {
+        return Optional.ofNullable(this.hardExpiry);
     }
 
     /**
@@ -54,10 +54,10 @@ public final class AccountPasswordPolicyState extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="maxPasswordAge")
-      private final @Nullable Output<Integer> maxPasswordAge;
+    private @Nullable Output<Integer> maxPasswordAge;
 
-    public Output<Integer> maxPasswordAge() {
-        return this.maxPasswordAge == null ? Codegen.empty() : this.maxPasswordAge;
+    public Optional<Output<Integer>> maxPasswordAge() {
+        return Optional.ofNullable(this.maxPasswordAge);
     }
 
     /**
@@ -65,10 +65,10 @@ public final class AccountPasswordPolicyState extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="minimumPasswordLength")
-      private final @Nullable Output<Integer> minimumPasswordLength;
+    private @Nullable Output<Integer> minimumPasswordLength;
 
-    public Output<Integer> minimumPasswordLength() {
-        return this.minimumPasswordLength == null ? Codegen.empty() : this.minimumPasswordLength;
+    public Optional<Output<Integer>> minimumPasswordLength() {
+        return Optional.ofNullable(this.minimumPasswordLength);
     }
 
     /**
@@ -76,10 +76,10 @@ public final class AccountPasswordPolicyState extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="passwordReusePrevention")
-      private final @Nullable Output<Integer> passwordReusePrevention;
+    private @Nullable Output<Integer> passwordReusePrevention;
 
-    public Output<Integer> passwordReusePrevention() {
-        return this.passwordReusePrevention == null ? Codegen.empty() : this.passwordReusePrevention;
+    public Optional<Output<Integer>> passwordReusePrevention() {
+        return Optional.ofNullable(this.passwordReusePrevention);
     }
 
     /**
@@ -87,10 +87,10 @@ public final class AccountPasswordPolicyState extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="requireLowercaseCharacters")
-      private final @Nullable Output<Boolean> requireLowercaseCharacters;
+    private @Nullable Output<Boolean> requireLowercaseCharacters;
 
-    public Output<Boolean> requireLowercaseCharacters() {
-        return this.requireLowercaseCharacters == null ? Codegen.empty() : this.requireLowercaseCharacters;
+    public Optional<Output<Boolean>> requireLowercaseCharacters() {
+        return Optional.ofNullable(this.requireLowercaseCharacters);
     }
 
     /**
@@ -98,10 +98,10 @@ public final class AccountPasswordPolicyState extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="requireNumbers")
-      private final @Nullable Output<Boolean> requireNumbers;
+    private @Nullable Output<Boolean> requireNumbers;
 
-    public Output<Boolean> requireNumbers() {
-        return this.requireNumbers == null ? Codegen.empty() : this.requireNumbers;
+    public Optional<Output<Boolean>> requireNumbers() {
+        return Optional.ofNullable(this.requireNumbers);
     }
 
     /**
@@ -109,10 +109,10 @@ public final class AccountPasswordPolicyState extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="requireSymbols")
-      private final @Nullable Output<Boolean> requireSymbols;
+    private @Nullable Output<Boolean> requireSymbols;
 
-    public Output<Boolean> requireSymbols() {
-        return this.requireSymbols == null ? Codegen.empty() : this.requireSymbols;
+    public Optional<Output<Boolean>> requireSymbols() {
+        return Optional.ofNullable(this.requireSymbols);
     }
 
     /**
@@ -120,167 +120,138 @@ public final class AccountPasswordPolicyState extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="requireUppercaseCharacters")
-      private final @Nullable Output<Boolean> requireUppercaseCharacters;
+    private @Nullable Output<Boolean> requireUppercaseCharacters;
 
-    public Output<Boolean> requireUppercaseCharacters() {
-        return this.requireUppercaseCharacters == null ? Codegen.empty() : this.requireUppercaseCharacters;
+    public Optional<Output<Boolean>> requireUppercaseCharacters() {
+        return Optional.ofNullable(this.requireUppercaseCharacters);
     }
 
-    public AccountPasswordPolicyState(
-        @Nullable Output<Boolean> allowUsersToChangePassword,
-        @Nullable Output<Boolean> expirePasswords,
-        @Nullable Output<Boolean> hardExpiry,
-        @Nullable Output<Integer> maxPasswordAge,
-        @Nullable Output<Integer> minimumPasswordLength,
-        @Nullable Output<Integer> passwordReusePrevention,
-        @Nullable Output<Boolean> requireLowercaseCharacters,
-        @Nullable Output<Boolean> requireNumbers,
-        @Nullable Output<Boolean> requireSymbols,
-        @Nullable Output<Boolean> requireUppercaseCharacters) {
-        this.allowUsersToChangePassword = allowUsersToChangePassword;
-        this.expirePasswords = expirePasswords;
-        this.hardExpiry = hardExpiry;
-        this.maxPasswordAge = maxPasswordAge;
-        this.minimumPasswordLength = minimumPasswordLength;
-        this.passwordReusePrevention = passwordReusePrevention;
-        this.requireLowercaseCharacters = requireLowercaseCharacters;
-        this.requireNumbers = requireNumbers;
-        this.requireSymbols = requireSymbols;
-        this.requireUppercaseCharacters = requireUppercaseCharacters;
-    }
+    private AccountPasswordPolicyState() {}
 
-    private AccountPasswordPolicyState() {
-        this.allowUsersToChangePassword = Codegen.empty();
-        this.expirePasswords = Codegen.empty();
-        this.hardExpiry = Codegen.empty();
-        this.maxPasswordAge = Codegen.empty();
-        this.minimumPasswordLength = Codegen.empty();
-        this.passwordReusePrevention = Codegen.empty();
-        this.requireLowercaseCharacters = Codegen.empty();
-        this.requireNumbers = Codegen.empty();
-        this.requireSymbols = Codegen.empty();
-        this.requireUppercaseCharacters = Codegen.empty();
+    private AccountPasswordPolicyState(AccountPasswordPolicyState $) {
+        this.allowUsersToChangePassword = $.allowUsersToChangePassword;
+        this.expirePasswords = $.expirePasswords;
+        this.hardExpiry = $.hardExpiry;
+        this.maxPasswordAge = $.maxPasswordAge;
+        this.minimumPasswordLength = $.minimumPasswordLength;
+        this.passwordReusePrevention = $.passwordReusePrevention;
+        this.requireLowercaseCharacters = $.requireLowercaseCharacters;
+        this.requireNumbers = $.requireNumbers;
+        this.requireSymbols = $.requireSymbols;
+        this.requireUppercaseCharacters = $.requireUppercaseCharacters;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AccountPasswordPolicyState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> allowUsersToChangePassword;
-        private @Nullable Output<Boolean> expirePasswords;
-        private @Nullable Output<Boolean> hardExpiry;
-        private @Nullable Output<Integer> maxPasswordAge;
-        private @Nullable Output<Integer> minimumPasswordLength;
-        private @Nullable Output<Integer> passwordReusePrevention;
-        private @Nullable Output<Boolean> requireLowercaseCharacters;
-        private @Nullable Output<Boolean> requireNumbers;
-        private @Nullable Output<Boolean> requireSymbols;
-        private @Nullable Output<Boolean> requireUppercaseCharacters;
+        private AccountPasswordPolicyState $;
 
         public Builder() {
-    	      // Empty
+            $ = new AccountPasswordPolicyState();
         }
 
         public Builder(AccountPasswordPolicyState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.allowUsersToChangePassword = defaults.allowUsersToChangePassword;
-    	      this.expirePasswords = defaults.expirePasswords;
-    	      this.hardExpiry = defaults.hardExpiry;
-    	      this.maxPasswordAge = defaults.maxPasswordAge;
-    	      this.minimumPasswordLength = defaults.minimumPasswordLength;
-    	      this.passwordReusePrevention = defaults.passwordReusePrevention;
-    	      this.requireLowercaseCharacters = defaults.requireLowercaseCharacters;
-    	      this.requireNumbers = defaults.requireNumbers;
-    	      this.requireSymbols = defaults.requireSymbols;
-    	      this.requireUppercaseCharacters = defaults.requireUppercaseCharacters;
+            $ = new AccountPasswordPolicyState(Objects.requireNonNull(defaults));
         }
 
         public Builder allowUsersToChangePassword(@Nullable Output<Boolean> allowUsersToChangePassword) {
-            this.allowUsersToChangePassword = allowUsersToChangePassword;
+            $.allowUsersToChangePassword = allowUsersToChangePassword;
             return this;
         }
-        public Builder allowUsersToChangePassword(@Nullable Boolean allowUsersToChangePassword) {
-            this.allowUsersToChangePassword = Codegen.ofNullable(allowUsersToChangePassword);
-            return this;
+
+        public Builder allowUsersToChangePassword(Boolean allowUsersToChangePassword) {
+            return allowUsersToChangePassword(Output.of(allowUsersToChangePassword));
         }
+
         public Builder expirePasswords(@Nullable Output<Boolean> expirePasswords) {
-            this.expirePasswords = expirePasswords;
+            $.expirePasswords = expirePasswords;
             return this;
         }
-        public Builder expirePasswords(@Nullable Boolean expirePasswords) {
-            this.expirePasswords = Codegen.ofNullable(expirePasswords);
-            return this;
+
+        public Builder expirePasswords(Boolean expirePasswords) {
+            return expirePasswords(Output.of(expirePasswords));
         }
+
         public Builder hardExpiry(@Nullable Output<Boolean> hardExpiry) {
-            this.hardExpiry = hardExpiry;
+            $.hardExpiry = hardExpiry;
             return this;
         }
-        public Builder hardExpiry(@Nullable Boolean hardExpiry) {
-            this.hardExpiry = Codegen.ofNullable(hardExpiry);
-            return this;
+
+        public Builder hardExpiry(Boolean hardExpiry) {
+            return hardExpiry(Output.of(hardExpiry));
         }
+
         public Builder maxPasswordAge(@Nullable Output<Integer> maxPasswordAge) {
-            this.maxPasswordAge = maxPasswordAge;
+            $.maxPasswordAge = maxPasswordAge;
             return this;
         }
-        public Builder maxPasswordAge(@Nullable Integer maxPasswordAge) {
-            this.maxPasswordAge = Codegen.ofNullable(maxPasswordAge);
-            return this;
+
+        public Builder maxPasswordAge(Integer maxPasswordAge) {
+            return maxPasswordAge(Output.of(maxPasswordAge));
         }
+
         public Builder minimumPasswordLength(@Nullable Output<Integer> minimumPasswordLength) {
-            this.minimumPasswordLength = minimumPasswordLength;
+            $.minimumPasswordLength = minimumPasswordLength;
             return this;
         }
-        public Builder minimumPasswordLength(@Nullable Integer minimumPasswordLength) {
-            this.minimumPasswordLength = Codegen.ofNullable(minimumPasswordLength);
-            return this;
+
+        public Builder minimumPasswordLength(Integer minimumPasswordLength) {
+            return minimumPasswordLength(Output.of(minimumPasswordLength));
         }
+
         public Builder passwordReusePrevention(@Nullable Output<Integer> passwordReusePrevention) {
-            this.passwordReusePrevention = passwordReusePrevention;
+            $.passwordReusePrevention = passwordReusePrevention;
             return this;
         }
-        public Builder passwordReusePrevention(@Nullable Integer passwordReusePrevention) {
-            this.passwordReusePrevention = Codegen.ofNullable(passwordReusePrevention);
-            return this;
+
+        public Builder passwordReusePrevention(Integer passwordReusePrevention) {
+            return passwordReusePrevention(Output.of(passwordReusePrevention));
         }
+
         public Builder requireLowercaseCharacters(@Nullable Output<Boolean> requireLowercaseCharacters) {
-            this.requireLowercaseCharacters = requireLowercaseCharacters;
+            $.requireLowercaseCharacters = requireLowercaseCharacters;
             return this;
         }
-        public Builder requireLowercaseCharacters(@Nullable Boolean requireLowercaseCharacters) {
-            this.requireLowercaseCharacters = Codegen.ofNullable(requireLowercaseCharacters);
-            return this;
+
+        public Builder requireLowercaseCharacters(Boolean requireLowercaseCharacters) {
+            return requireLowercaseCharacters(Output.of(requireLowercaseCharacters));
         }
+
         public Builder requireNumbers(@Nullable Output<Boolean> requireNumbers) {
-            this.requireNumbers = requireNumbers;
+            $.requireNumbers = requireNumbers;
             return this;
         }
-        public Builder requireNumbers(@Nullable Boolean requireNumbers) {
-            this.requireNumbers = Codegen.ofNullable(requireNumbers);
-            return this;
+
+        public Builder requireNumbers(Boolean requireNumbers) {
+            return requireNumbers(Output.of(requireNumbers));
         }
+
         public Builder requireSymbols(@Nullable Output<Boolean> requireSymbols) {
-            this.requireSymbols = requireSymbols;
+            $.requireSymbols = requireSymbols;
             return this;
         }
-        public Builder requireSymbols(@Nullable Boolean requireSymbols) {
-            this.requireSymbols = Codegen.ofNullable(requireSymbols);
-            return this;
+
+        public Builder requireSymbols(Boolean requireSymbols) {
+            return requireSymbols(Output.of(requireSymbols));
         }
+
         public Builder requireUppercaseCharacters(@Nullable Output<Boolean> requireUppercaseCharacters) {
-            this.requireUppercaseCharacters = requireUppercaseCharacters;
+            $.requireUppercaseCharacters = requireUppercaseCharacters;
             return this;
         }
-        public Builder requireUppercaseCharacters(@Nullable Boolean requireUppercaseCharacters) {
-            this.requireUppercaseCharacters = Codegen.ofNullable(requireUppercaseCharacters);
-            return this;
-        }        public AccountPasswordPolicyState build() {
-            return new AccountPasswordPolicyState(allowUsersToChangePassword, expirePasswords, hardExpiry, maxPasswordAge, minimumPasswordLength, passwordReusePrevention, requireLowercaseCharacters, requireNumbers, requireSymbols, requireUppercaseCharacters);
+
+        public Builder requireUppercaseCharacters(Boolean requireUppercaseCharacters) {
+            return requireUppercaseCharacters(Output.of(requireUppercaseCharacters));
+        }
+
+        public AccountPasswordPolicyState build() {
+            return $;
         }
     }
+
 }

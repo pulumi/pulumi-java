@@ -22,7 +22,7 @@ public final class SecurityPolicyAdaptiveProtectionConfigLayer7DdosDefenseConfig
      * 
      */
     @Import(name="enable", required=true)
-      private final Boolean enable;
+    private Boolean enable;
 
     public Boolean enable() {
         return this.enable;
@@ -33,55 +33,52 @@ public final class SecurityPolicyAdaptiveProtectionConfigLayer7DdosDefenseConfig
      * 
      */
     @Import(name="ruleVisibility", required=true)
-      private final String ruleVisibility;
+    private String ruleVisibility;
 
     public String ruleVisibility() {
         return this.ruleVisibility;
     }
 
-    public SecurityPolicyAdaptiveProtectionConfigLayer7DdosDefenseConfigResponse(
-        Boolean enable,
-        String ruleVisibility) {
-        this.enable = Objects.requireNonNull(enable, "expected parameter 'enable' to be non-null");
-        this.ruleVisibility = Objects.requireNonNull(ruleVisibility, "expected parameter 'ruleVisibility' to be non-null");
-    }
+    private SecurityPolicyAdaptiveProtectionConfigLayer7DdosDefenseConfigResponse() {}
 
-    private SecurityPolicyAdaptiveProtectionConfigLayer7DdosDefenseConfigResponse() {
-        this.enable = null;
-        this.ruleVisibility = null;
+    private SecurityPolicyAdaptiveProtectionConfigLayer7DdosDefenseConfigResponse(SecurityPolicyAdaptiveProtectionConfigLayer7DdosDefenseConfigResponse $) {
+        this.enable = $.enable;
+        this.ruleVisibility = $.ruleVisibility;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SecurityPolicyAdaptiveProtectionConfigLayer7DdosDefenseConfigResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Boolean enable;
-        private String ruleVisibility;
+        private SecurityPolicyAdaptiveProtectionConfigLayer7DdosDefenseConfigResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new SecurityPolicyAdaptiveProtectionConfigLayer7DdosDefenseConfigResponse();
         }
 
         public Builder(SecurityPolicyAdaptiveProtectionConfigLayer7DdosDefenseConfigResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.enable = defaults.enable;
-    	      this.ruleVisibility = defaults.ruleVisibility;
+            $ = new SecurityPolicyAdaptiveProtectionConfigLayer7DdosDefenseConfigResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder enable(Boolean enable) {
-            this.enable = Objects.requireNonNull(enable);
+            $.enable = enable;
             return this;
         }
+
         public Builder ruleVisibility(String ruleVisibility) {
-            this.ruleVisibility = Objects.requireNonNull(ruleVisibility);
+            $.ruleVisibility = ruleVisibility;
             return this;
-        }        public SecurityPolicyAdaptiveProtectionConfigLayer7DdosDefenseConfigResponse build() {
-            return new SecurityPolicyAdaptiveProtectionConfigLayer7DdosDefenseConfigResponse(enable, ruleVisibility);
+        }
+
+        public SecurityPolicyAdaptiveProtectionConfigLayer7DdosDefenseConfigResponse build() {
+            $.enable = Objects.requireNonNull($.enable, "expected parameter 'enable' to be non-null");
+            $.ruleVisibility = Objects.requireNonNull($.ruleVisibility, "expected parameter 'ruleVisibility' to be non-null");
+            return $;
         }
     }
+
 }

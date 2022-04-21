@@ -5,10 +5,10 @@ package com.pulumi.aws.networkfirewall.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,7 +22,7 @@ public final class RuleGroupRuleGroupRulesSourceStatefulRuleRuleOptionArgs exten
      * 
      */
     @Import(name="keyword", required=true)
-      private final Output<String> keyword;
+    private Output<String> keyword;
 
     public Output<String> keyword() {
         return this.keyword;
@@ -33,66 +33,63 @@ public final class RuleGroupRuleGroupRulesSourceStatefulRuleRuleOptionArgs exten
      * 
      */
     @Import(name="settings")
-      private final @Nullable Output<List<String>> settings;
+    private @Nullable Output<List<String>> settings;
 
-    public Output<List<String>> settings() {
-        return this.settings == null ? Codegen.empty() : this.settings;
+    public Optional<Output<List<String>>> settings() {
+        return Optional.ofNullable(this.settings);
     }
 
-    public RuleGroupRuleGroupRulesSourceStatefulRuleRuleOptionArgs(
-        Output<String> keyword,
-        @Nullable Output<List<String>> settings) {
-        this.keyword = Objects.requireNonNull(keyword, "expected parameter 'keyword' to be non-null");
-        this.settings = settings;
-    }
+    private RuleGroupRuleGroupRulesSourceStatefulRuleRuleOptionArgs() {}
 
-    private RuleGroupRuleGroupRulesSourceStatefulRuleRuleOptionArgs() {
-        this.keyword = Codegen.empty();
-        this.settings = Codegen.empty();
+    private RuleGroupRuleGroupRulesSourceStatefulRuleRuleOptionArgs(RuleGroupRuleGroupRulesSourceStatefulRuleRuleOptionArgs $) {
+        this.keyword = $.keyword;
+        this.settings = $.settings;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RuleGroupRuleGroupRulesSourceStatefulRuleRuleOptionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> keyword;
-        private @Nullable Output<List<String>> settings;
+        private RuleGroupRuleGroupRulesSourceStatefulRuleRuleOptionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RuleGroupRuleGroupRulesSourceStatefulRuleRuleOptionArgs();
         }
 
         public Builder(RuleGroupRuleGroupRulesSourceStatefulRuleRuleOptionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.keyword = defaults.keyword;
-    	      this.settings = defaults.settings;
+            $ = new RuleGroupRuleGroupRulesSourceStatefulRuleRuleOptionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder keyword(Output<String> keyword) {
-            this.keyword = Objects.requireNonNull(keyword);
+            $.keyword = keyword;
             return this;
         }
+
         public Builder keyword(String keyword) {
-            this.keyword = Output.of(Objects.requireNonNull(keyword));
-            return this;
+            return keyword(Output.of(keyword));
         }
+
         public Builder settings(@Nullable Output<List<String>> settings) {
-            this.settings = settings;
+            $.settings = settings;
             return this;
         }
-        public Builder settings(@Nullable List<String> settings) {
-            this.settings = Codegen.ofNullable(settings);
-            return this;
+
+        public Builder settings(List<String> settings) {
+            return settings(Output.of(settings));
         }
+
         public Builder settings(String... settings) {
             return settings(List.of(settings));
-        }        public RuleGroupRuleGroupRulesSourceStatefulRuleRuleOptionArgs build() {
-            return new RuleGroupRuleGroupRulesSourceStatefulRuleRuleOptionArgs(keyword, settings);
+        }
+
+        public RuleGroupRuleGroupRulesSourceStatefulRuleRuleOptionArgs build() {
+            $.keyword = Objects.requireNonNull($.keyword, "expected parameter 'keyword' to be non-null");
+            return $;
         }
     }
+
 }

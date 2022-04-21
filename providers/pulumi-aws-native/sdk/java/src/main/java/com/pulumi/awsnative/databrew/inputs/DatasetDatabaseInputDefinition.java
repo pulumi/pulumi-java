@@ -20,10 +20,10 @@ public final class DatasetDatabaseInputDefinition extends com.pulumi.resources.I
      * 
      */
     @Import(name="databaseTableName")
-      private final @Nullable String databaseTableName;
+    private @Nullable String databaseTableName;
 
     public Optional<String> databaseTableName() {
-        return this.databaseTableName == null ? Optional.empty() : Optional.ofNullable(this.databaseTableName);
+        return Optional.ofNullable(this.databaseTableName);
     }
 
     /**
@@ -31,7 +31,7 @@ public final class DatasetDatabaseInputDefinition extends com.pulumi.resources.I
      * 
      */
     @Import(name="glueConnectionName", required=true)
-      private final String glueConnectionName;
+    private String glueConnectionName;
 
     public String glueConnectionName() {
         return this.glueConnectionName;
@@ -42,80 +42,70 @@ public final class DatasetDatabaseInputDefinition extends com.pulumi.resources.I
      * 
      */
     @Import(name="queryString")
-      private final @Nullable String queryString;
+    private @Nullable String queryString;
 
     public Optional<String> queryString() {
-        return this.queryString == null ? Optional.empty() : Optional.ofNullable(this.queryString);
+        return Optional.ofNullable(this.queryString);
     }
 
     @Import(name="tempDirectory")
-      private final @Nullable DatasetS3Location tempDirectory;
+    private @Nullable DatasetS3Location tempDirectory;
 
     public Optional<DatasetS3Location> tempDirectory() {
-        return this.tempDirectory == null ? Optional.empty() : Optional.ofNullable(this.tempDirectory);
+        return Optional.ofNullable(this.tempDirectory);
     }
 
-    public DatasetDatabaseInputDefinition(
-        @Nullable String databaseTableName,
-        String glueConnectionName,
-        @Nullable String queryString,
-        @Nullable DatasetS3Location tempDirectory) {
-        this.databaseTableName = databaseTableName;
-        this.glueConnectionName = Objects.requireNonNull(glueConnectionName, "expected parameter 'glueConnectionName' to be non-null");
-        this.queryString = queryString;
-        this.tempDirectory = tempDirectory;
-    }
+    private DatasetDatabaseInputDefinition() {}
 
-    private DatasetDatabaseInputDefinition() {
-        this.databaseTableName = null;
-        this.glueConnectionName = null;
-        this.queryString = null;
-        this.tempDirectory = null;
+    private DatasetDatabaseInputDefinition(DatasetDatabaseInputDefinition $) {
+        this.databaseTableName = $.databaseTableName;
+        this.glueConnectionName = $.glueConnectionName;
+        this.queryString = $.queryString;
+        this.tempDirectory = $.tempDirectory;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DatasetDatabaseInputDefinition defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String databaseTableName;
-        private String glueConnectionName;
-        private @Nullable String queryString;
-        private @Nullable DatasetS3Location tempDirectory;
+        private DatasetDatabaseInputDefinition $;
 
         public Builder() {
-    	      // Empty
+            $ = new DatasetDatabaseInputDefinition();
         }
 
         public Builder(DatasetDatabaseInputDefinition defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.databaseTableName = defaults.databaseTableName;
-    	      this.glueConnectionName = defaults.glueConnectionName;
-    	      this.queryString = defaults.queryString;
-    	      this.tempDirectory = defaults.tempDirectory;
+            $ = new DatasetDatabaseInputDefinition(Objects.requireNonNull(defaults));
         }
 
         public Builder databaseTableName(@Nullable String databaseTableName) {
-            this.databaseTableName = databaseTableName;
+            $.databaseTableName = databaseTableName;
             return this;
         }
+
         public Builder glueConnectionName(String glueConnectionName) {
-            this.glueConnectionName = Objects.requireNonNull(glueConnectionName);
+            $.glueConnectionName = glueConnectionName;
             return this;
         }
+
         public Builder queryString(@Nullable String queryString) {
-            this.queryString = queryString;
+            $.queryString = queryString;
             return this;
         }
+
         public Builder tempDirectory(@Nullable DatasetS3Location tempDirectory) {
-            this.tempDirectory = tempDirectory;
+            $.tempDirectory = tempDirectory;
             return this;
-        }        public DatasetDatabaseInputDefinition build() {
-            return new DatasetDatabaseInputDefinition(databaseTableName, glueConnectionName, queryString, tempDirectory);
+        }
+
+        public DatasetDatabaseInputDefinition build() {
+            $.glueConnectionName = Objects.requireNonNull($.glueConnectionName, "expected parameter 'glueConnectionName' to be non-null");
+            return $;
         }
     }
+
 }

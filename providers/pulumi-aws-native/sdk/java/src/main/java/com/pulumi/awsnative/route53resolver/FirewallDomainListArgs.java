@@ -6,10 +6,10 @@ package com.pulumi.awsnative.route53resolver;
 import com.pulumi.awsnative.route53resolver.inputs.FirewallDomainListTagArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,17 +22,17 @@ public final class FirewallDomainListArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="domainFileUrl")
-      private final @Nullable Output<String> domainFileUrl;
+    private @Nullable Output<String> domainFileUrl;
 
-    public Output<String> domainFileUrl() {
-        return this.domainFileUrl == null ? Codegen.empty() : this.domainFileUrl;
+    public Optional<Output<String>> domainFileUrl() {
+        return Optional.ofNullable(this.domainFileUrl);
     }
 
     @Import(name="domains")
-      private final @Nullable Output<List<String>> domains;
+    private @Nullable Output<List<String>> domains;
 
-    public Output<List<String>> domains() {
-        return this.domains == null ? Codegen.empty() : this.domains;
+    public Optional<Output<List<String>>> domains() {
+        return Optional.ofNullable(this.domains);
     }
 
     /**
@@ -40,10 +40,10 @@ public final class FirewallDomainListArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -51,95 +51,86 @@ public final class FirewallDomainListArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<List<FirewallDomainListTagArgs>> tags;
+    private @Nullable Output<List<FirewallDomainListTagArgs>> tags;
 
-    public Output<List<FirewallDomainListTagArgs>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<List<FirewallDomainListTagArgs>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public FirewallDomainListArgs(
-        @Nullable Output<String> domainFileUrl,
-        @Nullable Output<List<String>> domains,
-        @Nullable Output<String> name,
-        @Nullable Output<List<FirewallDomainListTagArgs>> tags) {
-        this.domainFileUrl = domainFileUrl;
-        this.domains = domains;
-        this.name = name;
-        this.tags = tags;
-    }
+    private FirewallDomainListArgs() {}
 
-    private FirewallDomainListArgs() {
-        this.domainFileUrl = Codegen.empty();
-        this.domains = Codegen.empty();
-        this.name = Codegen.empty();
-        this.tags = Codegen.empty();
+    private FirewallDomainListArgs(FirewallDomainListArgs $) {
+        this.domainFileUrl = $.domainFileUrl;
+        this.domains = $.domains;
+        this.name = $.name;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FirewallDomainListArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> domainFileUrl;
-        private @Nullable Output<List<String>> domains;
-        private @Nullable Output<String> name;
-        private @Nullable Output<List<FirewallDomainListTagArgs>> tags;
+        private FirewallDomainListArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new FirewallDomainListArgs();
         }
 
         public Builder(FirewallDomainListArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.domainFileUrl = defaults.domainFileUrl;
-    	      this.domains = defaults.domains;
-    	      this.name = defaults.name;
-    	      this.tags = defaults.tags;
+            $ = new FirewallDomainListArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder domainFileUrl(@Nullable Output<String> domainFileUrl) {
-            this.domainFileUrl = domainFileUrl;
+            $.domainFileUrl = domainFileUrl;
             return this;
         }
-        public Builder domainFileUrl(@Nullable String domainFileUrl) {
-            this.domainFileUrl = Codegen.ofNullable(domainFileUrl);
-            return this;
+
+        public Builder domainFileUrl(String domainFileUrl) {
+            return domainFileUrl(Output.of(domainFileUrl));
         }
+
         public Builder domains(@Nullable Output<List<String>> domains) {
-            this.domains = domains;
+            $.domains = domains;
             return this;
         }
-        public Builder domains(@Nullable List<String> domains) {
-            this.domains = Codegen.ofNullable(domains);
-            return this;
+
+        public Builder domains(List<String> domains) {
+            return domains(Output.of(domains));
         }
+
         public Builder domains(String... domains) {
             return domains(List.of(domains));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder tags(@Nullable Output<List<FirewallDomainListTagArgs>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable List<FirewallDomainListTagArgs> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(List<FirewallDomainListTagArgs> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tags(FirewallDomainListTagArgs... tags) {
             return tags(List.of(tags));
-        }        public FirewallDomainListArgs build() {
-            return new FirewallDomainListArgs(domainFileUrl, domains, name, tags);
+        }
+
+        public FirewallDomainListArgs build() {
+            return $;
         }
     }
+
 }

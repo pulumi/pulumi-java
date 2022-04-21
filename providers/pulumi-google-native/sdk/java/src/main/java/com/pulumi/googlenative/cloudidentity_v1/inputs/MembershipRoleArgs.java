@@ -5,11 +5,11 @@ package com.pulumi.googlenative.cloudidentity_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.cloudidentity_v1.inputs.ExpiryDetailArgs;
 import com.pulumi.googlenative.cloudidentity_v1.inputs.RestrictionEvaluationsArgs;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class MembershipRoleArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="expiryDetail")
-      private final @Nullable Output<ExpiryDetailArgs> expiryDetail;
+    private @Nullable Output<ExpiryDetailArgs> expiryDetail;
 
-    public Output<ExpiryDetailArgs> expiryDetail() {
-        return this.expiryDetail == null ? Codegen.empty() : this.expiryDetail;
+    public Optional<Output<ExpiryDetailArgs>> expiryDetail() {
+        return Optional.ofNullable(this.expiryDetail);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class MembershipRoleArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -48,76 +48,68 @@ public final class MembershipRoleArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="restrictionEvaluations")
-      private final @Nullable Output<RestrictionEvaluationsArgs> restrictionEvaluations;
+    private @Nullable Output<RestrictionEvaluationsArgs> restrictionEvaluations;
 
-    public Output<RestrictionEvaluationsArgs> restrictionEvaluations() {
-        return this.restrictionEvaluations == null ? Codegen.empty() : this.restrictionEvaluations;
+    public Optional<Output<RestrictionEvaluationsArgs>> restrictionEvaluations() {
+        return Optional.ofNullable(this.restrictionEvaluations);
     }
 
-    public MembershipRoleArgs(
-        @Nullable Output<ExpiryDetailArgs> expiryDetail,
-        @Nullable Output<String> name,
-        @Nullable Output<RestrictionEvaluationsArgs> restrictionEvaluations) {
-        this.expiryDetail = expiryDetail;
-        this.name = name;
-        this.restrictionEvaluations = restrictionEvaluations;
-    }
+    private MembershipRoleArgs() {}
 
-    private MembershipRoleArgs() {
-        this.expiryDetail = Codegen.empty();
-        this.name = Codegen.empty();
-        this.restrictionEvaluations = Codegen.empty();
+    private MembershipRoleArgs(MembershipRoleArgs $) {
+        this.expiryDetail = $.expiryDetail;
+        this.name = $.name;
+        this.restrictionEvaluations = $.restrictionEvaluations;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MembershipRoleArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<ExpiryDetailArgs> expiryDetail;
-        private @Nullable Output<String> name;
-        private @Nullable Output<RestrictionEvaluationsArgs> restrictionEvaluations;
+        private MembershipRoleArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new MembershipRoleArgs();
         }
 
         public Builder(MembershipRoleArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.expiryDetail = defaults.expiryDetail;
-    	      this.name = defaults.name;
-    	      this.restrictionEvaluations = defaults.restrictionEvaluations;
+            $ = new MembershipRoleArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder expiryDetail(@Nullable Output<ExpiryDetailArgs> expiryDetail) {
-            this.expiryDetail = expiryDetail;
+            $.expiryDetail = expiryDetail;
             return this;
         }
-        public Builder expiryDetail(@Nullable ExpiryDetailArgs expiryDetail) {
-            this.expiryDetail = Codegen.ofNullable(expiryDetail);
-            return this;
+
+        public Builder expiryDetail(ExpiryDetailArgs expiryDetail) {
+            return expiryDetail(Output.of(expiryDetail));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder restrictionEvaluations(@Nullable Output<RestrictionEvaluationsArgs> restrictionEvaluations) {
-            this.restrictionEvaluations = restrictionEvaluations;
+            $.restrictionEvaluations = restrictionEvaluations;
             return this;
         }
-        public Builder restrictionEvaluations(@Nullable RestrictionEvaluationsArgs restrictionEvaluations) {
-            this.restrictionEvaluations = Codegen.ofNullable(restrictionEvaluations);
-            return this;
-        }        public MembershipRoleArgs build() {
-            return new MembershipRoleArgs(expiryDetail, name, restrictionEvaluations);
+
+        public Builder restrictionEvaluations(RestrictionEvaluationsArgs restrictionEvaluations) {
+            return restrictionEvaluations(Output.of(restrictionEvaluations));
+        }
+
+        public MembershipRoleArgs build() {
+            return $;
         }
     }
+
 }

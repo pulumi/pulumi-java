@@ -17,7 +17,7 @@ public final class ListSqlMigrationServiceAuthKeysArgs extends com.pulumi.resour
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -28,55 +28,52 @@ public final class ListSqlMigrationServiceAuthKeysArgs extends com.pulumi.resour
      * 
      */
     @Import(name="sqlMigrationServiceName", required=true)
-      private final String sqlMigrationServiceName;
+    private String sqlMigrationServiceName;
 
     public String sqlMigrationServiceName() {
         return this.sqlMigrationServiceName;
     }
 
-    public ListSqlMigrationServiceAuthKeysArgs(
-        String resourceGroupName,
-        String sqlMigrationServiceName) {
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.sqlMigrationServiceName = Objects.requireNonNull(sqlMigrationServiceName, "expected parameter 'sqlMigrationServiceName' to be non-null");
-    }
+    private ListSqlMigrationServiceAuthKeysArgs() {}
 
-    private ListSqlMigrationServiceAuthKeysArgs() {
-        this.resourceGroupName = null;
-        this.sqlMigrationServiceName = null;
+    private ListSqlMigrationServiceAuthKeysArgs(ListSqlMigrationServiceAuthKeysArgs $) {
+        this.resourceGroupName = $.resourceGroupName;
+        this.sqlMigrationServiceName = $.sqlMigrationServiceName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ListSqlMigrationServiceAuthKeysArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String resourceGroupName;
-        private String sqlMigrationServiceName;
+        private ListSqlMigrationServiceAuthKeysArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ListSqlMigrationServiceAuthKeysArgs();
         }
 
         public Builder(ListSqlMigrationServiceAuthKeysArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.sqlMigrationServiceName = defaults.sqlMigrationServiceName;
+            $ = new ListSqlMigrationServiceAuthKeysArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder sqlMigrationServiceName(String sqlMigrationServiceName) {
-            this.sqlMigrationServiceName = Objects.requireNonNull(sqlMigrationServiceName);
+            $.sqlMigrationServiceName = sqlMigrationServiceName;
             return this;
-        }        public ListSqlMigrationServiceAuthKeysArgs build() {
-            return new ListSqlMigrationServiceAuthKeysArgs(resourceGroupName, sqlMigrationServiceName);
+        }
+
+        public ListSqlMigrationServiceAuthKeysArgs build() {
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.sqlMigrationServiceName = Objects.requireNonNull($.sqlMigrationServiceName, "expected parameter 'sqlMigrationServiceName' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,7 +5,6 @@ package com.pulumi.googlenative.notebooks_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.notebooks_v1.enums.ExecutionTemplateJobType;
 import com.pulumi.googlenative.notebooks_v1.inputs.DataprocParametersArgs;
 import com.pulumi.googlenative.notebooks_v1.inputs.SchedulerAcceleratorConfigArgs;
@@ -13,6 +12,7 @@ import com.pulumi.googlenative.notebooks_v1.inputs.VertexAIParametersArgs;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -29,10 +29,10 @@ public final class ExecutionTemplateArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="acceleratorConfig")
-      private final @Nullable Output<SchedulerAcceleratorConfigArgs> acceleratorConfig;
+    private @Nullable Output<SchedulerAcceleratorConfigArgs> acceleratorConfig;
 
-    public Output<SchedulerAcceleratorConfigArgs> acceleratorConfig() {
-        return this.acceleratorConfig == null ? Codegen.empty() : this.acceleratorConfig;
+    public Optional<Output<SchedulerAcceleratorConfigArgs>> acceleratorConfig() {
+        return Optional.ofNullable(this.acceleratorConfig);
     }
 
     /**
@@ -40,10 +40,10 @@ public final class ExecutionTemplateArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="containerImageUri")
-      private final @Nullable Output<String> containerImageUri;
+    private @Nullable Output<String> containerImageUri;
 
-    public Output<String> containerImageUri() {
-        return this.containerImageUri == null ? Codegen.empty() : this.containerImageUri;
+    public Optional<Output<String>> containerImageUri() {
+        return Optional.ofNullable(this.containerImageUri);
     }
 
     /**
@@ -51,10 +51,10 @@ public final class ExecutionTemplateArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="dataprocParameters")
-      private final @Nullable Output<DataprocParametersArgs> dataprocParameters;
+    private @Nullable Output<DataprocParametersArgs> dataprocParameters;
 
-    public Output<DataprocParametersArgs> dataprocParameters() {
-        return this.dataprocParameters == null ? Codegen.empty() : this.dataprocParameters;
+    public Optional<Output<DataprocParametersArgs>> dataprocParameters() {
+        return Optional.ofNullable(this.dataprocParameters);
     }
 
     /**
@@ -62,10 +62,10 @@ public final class ExecutionTemplateArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="inputNotebookFile")
-      private final @Nullable Output<String> inputNotebookFile;
+    private @Nullable Output<String> inputNotebookFile;
 
-    public Output<String> inputNotebookFile() {
-        return this.inputNotebookFile == null ? Codegen.empty() : this.inputNotebookFile;
+    public Optional<Output<String>> inputNotebookFile() {
+        return Optional.ofNullable(this.inputNotebookFile);
     }
 
     /**
@@ -73,10 +73,10 @@ public final class ExecutionTemplateArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="jobType")
-      private final @Nullable Output<ExecutionTemplateJobType> jobType;
+    private @Nullable Output<ExecutionTemplateJobType> jobType;
 
-    public Output<ExecutionTemplateJobType> jobType() {
-        return this.jobType == null ? Codegen.empty() : this.jobType;
+    public Optional<Output<ExecutionTemplateJobType>> jobType() {
+        return Optional.ofNullable(this.jobType);
     }
 
     /**
@@ -84,10 +84,10 @@ public final class ExecutionTemplateArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="kernelSpec")
-      private final @Nullable Output<String> kernelSpec;
+    private @Nullable Output<String> kernelSpec;
 
-    public Output<String> kernelSpec() {
-        return this.kernelSpec == null ? Codegen.empty() : this.kernelSpec;
+    public Optional<Output<String>> kernelSpec() {
+        return Optional.ofNullable(this.kernelSpec);
     }
 
     /**
@@ -95,10 +95,10 @@ public final class ExecutionTemplateArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="labels")
-      private final @Nullable Output<Map<String,String>> labels;
+    private @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> labels() {
-        return this.labels == null ? Codegen.empty() : this.labels;
+    public Optional<Output<Map<String,String>>> labels() {
+        return Optional.ofNullable(this.labels);
     }
 
     /**
@@ -106,10 +106,10 @@ public final class ExecutionTemplateArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="masterType")
-      private final @Nullable Output<String> masterType;
+    private @Nullable Output<String> masterType;
 
-    public Output<String> masterType() {
-        return this.masterType == null ? Codegen.empty() : this.masterType;
+    public Optional<Output<String>> masterType() {
+        return Optional.ofNullable(this.masterType);
     }
 
     /**
@@ -117,10 +117,10 @@ public final class ExecutionTemplateArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="outputNotebookFolder")
-      private final @Nullable Output<String> outputNotebookFolder;
+    private @Nullable Output<String> outputNotebookFolder;
 
-    public Output<String> outputNotebookFolder() {
-        return this.outputNotebookFolder == null ? Codegen.empty() : this.outputNotebookFolder;
+    public Optional<Output<String>> outputNotebookFolder() {
+        return Optional.ofNullable(this.outputNotebookFolder);
     }
 
     /**
@@ -128,10 +128,10 @@ public final class ExecutionTemplateArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="parameters")
-      private final @Nullable Output<String> parameters;
+    private @Nullable Output<String> parameters;
 
-    public Output<String> parameters() {
-        return this.parameters == null ? Codegen.empty() : this.parameters;
+    public Optional<Output<String>> parameters() {
+        return Optional.ofNullable(this.parameters);
     }
 
     /**
@@ -139,10 +139,10 @@ public final class ExecutionTemplateArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="paramsYamlFile")
-      private final @Nullable Output<String> paramsYamlFile;
+    private @Nullable Output<String> paramsYamlFile;
 
-    public Output<String> paramsYamlFile() {
-        return this.paramsYamlFile == null ? Codegen.empty() : this.paramsYamlFile;
+    public Optional<Output<String>> paramsYamlFile() {
+        return Optional.ofNullable(this.paramsYamlFile);
     }
 
     /**
@@ -150,10 +150,10 @@ public final class ExecutionTemplateArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="serviceAccount")
-      private final @Nullable Output<String> serviceAccount;
+    private @Nullable Output<String> serviceAccount;
 
-    public Output<String> serviceAccount() {
-        return this.serviceAccount == null ? Codegen.empty() : this.serviceAccount;
+    public Optional<Output<String>> serviceAccount() {
+        return Optional.ofNullable(this.serviceAccount);
     }
 
     /**
@@ -161,206 +161,168 @@ public final class ExecutionTemplateArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="vertexAiParameters")
-      private final @Nullable Output<VertexAIParametersArgs> vertexAiParameters;
+    private @Nullable Output<VertexAIParametersArgs> vertexAiParameters;
 
-    public Output<VertexAIParametersArgs> vertexAiParameters() {
-        return this.vertexAiParameters == null ? Codegen.empty() : this.vertexAiParameters;
+    public Optional<Output<VertexAIParametersArgs>> vertexAiParameters() {
+        return Optional.ofNullable(this.vertexAiParameters);
     }
 
-    public ExecutionTemplateArgs(
-        @Nullable Output<SchedulerAcceleratorConfigArgs> acceleratorConfig,
-        @Nullable Output<String> containerImageUri,
-        @Nullable Output<DataprocParametersArgs> dataprocParameters,
-        @Nullable Output<String> inputNotebookFile,
-        @Nullable Output<ExecutionTemplateJobType> jobType,
-        @Nullable Output<String> kernelSpec,
-        @Nullable Output<Map<String,String>> labels,
-        @Nullable Output<String> masterType,
-        @Nullable Output<String> outputNotebookFolder,
-        @Nullable Output<String> parameters,
-        @Nullable Output<String> paramsYamlFile,
-        @Nullable Output<String> serviceAccount,
-        @Nullable Output<VertexAIParametersArgs> vertexAiParameters) {
-        this.acceleratorConfig = acceleratorConfig;
-        this.containerImageUri = containerImageUri;
-        this.dataprocParameters = dataprocParameters;
-        this.inputNotebookFile = inputNotebookFile;
-        this.jobType = jobType;
-        this.kernelSpec = kernelSpec;
-        this.labels = labels;
-        this.masterType = masterType;
-        this.outputNotebookFolder = outputNotebookFolder;
-        this.parameters = parameters;
-        this.paramsYamlFile = paramsYamlFile;
-        this.serviceAccount = serviceAccount;
-        this.vertexAiParameters = vertexAiParameters;
-    }
+    private ExecutionTemplateArgs() {}
 
-    private ExecutionTemplateArgs() {
-        this.acceleratorConfig = Codegen.empty();
-        this.containerImageUri = Codegen.empty();
-        this.dataprocParameters = Codegen.empty();
-        this.inputNotebookFile = Codegen.empty();
-        this.jobType = Codegen.empty();
-        this.kernelSpec = Codegen.empty();
-        this.labels = Codegen.empty();
-        this.masterType = Codegen.empty();
-        this.outputNotebookFolder = Codegen.empty();
-        this.parameters = Codegen.empty();
-        this.paramsYamlFile = Codegen.empty();
-        this.serviceAccount = Codegen.empty();
-        this.vertexAiParameters = Codegen.empty();
+    private ExecutionTemplateArgs(ExecutionTemplateArgs $) {
+        this.acceleratorConfig = $.acceleratorConfig;
+        this.containerImageUri = $.containerImageUri;
+        this.dataprocParameters = $.dataprocParameters;
+        this.inputNotebookFile = $.inputNotebookFile;
+        this.jobType = $.jobType;
+        this.kernelSpec = $.kernelSpec;
+        this.labels = $.labels;
+        this.masterType = $.masterType;
+        this.outputNotebookFolder = $.outputNotebookFolder;
+        this.parameters = $.parameters;
+        this.paramsYamlFile = $.paramsYamlFile;
+        this.serviceAccount = $.serviceAccount;
+        this.vertexAiParameters = $.vertexAiParameters;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ExecutionTemplateArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<SchedulerAcceleratorConfigArgs> acceleratorConfig;
-        private @Nullable Output<String> containerImageUri;
-        private @Nullable Output<DataprocParametersArgs> dataprocParameters;
-        private @Nullable Output<String> inputNotebookFile;
-        private @Nullable Output<ExecutionTemplateJobType> jobType;
-        private @Nullable Output<String> kernelSpec;
-        private @Nullable Output<Map<String,String>> labels;
-        private @Nullable Output<String> masterType;
-        private @Nullable Output<String> outputNotebookFolder;
-        private @Nullable Output<String> parameters;
-        private @Nullable Output<String> paramsYamlFile;
-        private @Nullable Output<String> serviceAccount;
-        private @Nullable Output<VertexAIParametersArgs> vertexAiParameters;
+        private ExecutionTemplateArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ExecutionTemplateArgs();
         }
 
         public Builder(ExecutionTemplateArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.acceleratorConfig = defaults.acceleratorConfig;
-    	      this.containerImageUri = defaults.containerImageUri;
-    	      this.dataprocParameters = defaults.dataprocParameters;
-    	      this.inputNotebookFile = defaults.inputNotebookFile;
-    	      this.jobType = defaults.jobType;
-    	      this.kernelSpec = defaults.kernelSpec;
-    	      this.labels = defaults.labels;
-    	      this.masterType = defaults.masterType;
-    	      this.outputNotebookFolder = defaults.outputNotebookFolder;
-    	      this.parameters = defaults.parameters;
-    	      this.paramsYamlFile = defaults.paramsYamlFile;
-    	      this.serviceAccount = defaults.serviceAccount;
-    	      this.vertexAiParameters = defaults.vertexAiParameters;
+            $ = new ExecutionTemplateArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder acceleratorConfig(@Nullable Output<SchedulerAcceleratorConfigArgs> acceleratorConfig) {
-            this.acceleratorConfig = acceleratorConfig;
+            $.acceleratorConfig = acceleratorConfig;
             return this;
         }
-        public Builder acceleratorConfig(@Nullable SchedulerAcceleratorConfigArgs acceleratorConfig) {
-            this.acceleratorConfig = Codegen.ofNullable(acceleratorConfig);
-            return this;
+
+        public Builder acceleratorConfig(SchedulerAcceleratorConfigArgs acceleratorConfig) {
+            return acceleratorConfig(Output.of(acceleratorConfig));
         }
+
         public Builder containerImageUri(@Nullable Output<String> containerImageUri) {
-            this.containerImageUri = containerImageUri;
+            $.containerImageUri = containerImageUri;
             return this;
         }
-        public Builder containerImageUri(@Nullable String containerImageUri) {
-            this.containerImageUri = Codegen.ofNullable(containerImageUri);
-            return this;
+
+        public Builder containerImageUri(String containerImageUri) {
+            return containerImageUri(Output.of(containerImageUri));
         }
+
         public Builder dataprocParameters(@Nullable Output<DataprocParametersArgs> dataprocParameters) {
-            this.dataprocParameters = dataprocParameters;
+            $.dataprocParameters = dataprocParameters;
             return this;
         }
-        public Builder dataprocParameters(@Nullable DataprocParametersArgs dataprocParameters) {
-            this.dataprocParameters = Codegen.ofNullable(dataprocParameters);
-            return this;
+
+        public Builder dataprocParameters(DataprocParametersArgs dataprocParameters) {
+            return dataprocParameters(Output.of(dataprocParameters));
         }
+
         public Builder inputNotebookFile(@Nullable Output<String> inputNotebookFile) {
-            this.inputNotebookFile = inputNotebookFile;
+            $.inputNotebookFile = inputNotebookFile;
             return this;
         }
-        public Builder inputNotebookFile(@Nullable String inputNotebookFile) {
-            this.inputNotebookFile = Codegen.ofNullable(inputNotebookFile);
-            return this;
+
+        public Builder inputNotebookFile(String inputNotebookFile) {
+            return inputNotebookFile(Output.of(inputNotebookFile));
         }
+
         public Builder jobType(@Nullable Output<ExecutionTemplateJobType> jobType) {
-            this.jobType = jobType;
+            $.jobType = jobType;
             return this;
         }
-        public Builder jobType(@Nullable ExecutionTemplateJobType jobType) {
-            this.jobType = Codegen.ofNullable(jobType);
-            return this;
+
+        public Builder jobType(ExecutionTemplateJobType jobType) {
+            return jobType(Output.of(jobType));
         }
+
         public Builder kernelSpec(@Nullable Output<String> kernelSpec) {
-            this.kernelSpec = kernelSpec;
+            $.kernelSpec = kernelSpec;
             return this;
         }
-        public Builder kernelSpec(@Nullable String kernelSpec) {
-            this.kernelSpec = Codegen.ofNullable(kernelSpec);
-            return this;
+
+        public Builder kernelSpec(String kernelSpec) {
+            return kernelSpec(Output.of(kernelSpec));
         }
+
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
-            this.labels = labels;
+            $.labels = labels;
             return this;
         }
-        public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Codegen.ofNullable(labels);
-            return this;
+
+        public Builder labels(Map<String,String> labels) {
+            return labels(Output.of(labels));
         }
+
         public Builder masterType(@Nullable Output<String> masterType) {
-            this.masterType = masterType;
+            $.masterType = masterType;
             return this;
         }
-        public Builder masterType(@Nullable String masterType) {
-            this.masterType = Codegen.ofNullable(masterType);
-            return this;
+
+        public Builder masterType(String masterType) {
+            return masterType(Output.of(masterType));
         }
+
         public Builder outputNotebookFolder(@Nullable Output<String> outputNotebookFolder) {
-            this.outputNotebookFolder = outputNotebookFolder;
+            $.outputNotebookFolder = outputNotebookFolder;
             return this;
         }
-        public Builder outputNotebookFolder(@Nullable String outputNotebookFolder) {
-            this.outputNotebookFolder = Codegen.ofNullable(outputNotebookFolder);
-            return this;
+
+        public Builder outputNotebookFolder(String outputNotebookFolder) {
+            return outputNotebookFolder(Output.of(outputNotebookFolder));
         }
+
         public Builder parameters(@Nullable Output<String> parameters) {
-            this.parameters = parameters;
+            $.parameters = parameters;
             return this;
         }
-        public Builder parameters(@Nullable String parameters) {
-            this.parameters = Codegen.ofNullable(parameters);
-            return this;
+
+        public Builder parameters(String parameters) {
+            return parameters(Output.of(parameters));
         }
+
         public Builder paramsYamlFile(@Nullable Output<String> paramsYamlFile) {
-            this.paramsYamlFile = paramsYamlFile;
+            $.paramsYamlFile = paramsYamlFile;
             return this;
         }
-        public Builder paramsYamlFile(@Nullable String paramsYamlFile) {
-            this.paramsYamlFile = Codegen.ofNullable(paramsYamlFile);
-            return this;
+
+        public Builder paramsYamlFile(String paramsYamlFile) {
+            return paramsYamlFile(Output.of(paramsYamlFile));
         }
+
         public Builder serviceAccount(@Nullable Output<String> serviceAccount) {
-            this.serviceAccount = serviceAccount;
+            $.serviceAccount = serviceAccount;
             return this;
         }
-        public Builder serviceAccount(@Nullable String serviceAccount) {
-            this.serviceAccount = Codegen.ofNullable(serviceAccount);
-            return this;
+
+        public Builder serviceAccount(String serviceAccount) {
+            return serviceAccount(Output.of(serviceAccount));
         }
+
         public Builder vertexAiParameters(@Nullable Output<VertexAIParametersArgs> vertexAiParameters) {
-            this.vertexAiParameters = vertexAiParameters;
+            $.vertexAiParameters = vertexAiParameters;
             return this;
         }
-        public Builder vertexAiParameters(@Nullable VertexAIParametersArgs vertexAiParameters) {
-            this.vertexAiParameters = Codegen.ofNullable(vertexAiParameters);
-            return this;
-        }        public ExecutionTemplateArgs build() {
-            return new ExecutionTemplateArgs(acceleratorConfig, containerImageUri, dataprocParameters, inputNotebookFile, jobType, kernelSpec, labels, masterType, outputNotebookFolder, parameters, paramsYamlFile, serviceAccount, vertexAiParameters);
+
+        public Builder vertexAiParameters(VertexAIParametersArgs vertexAiParameters) {
+            return vertexAiParameters(Output.of(vertexAiParameters));
+        }
+
+        public ExecutionTemplateArgs build() {
+            return $;
         }
     }
+
 }

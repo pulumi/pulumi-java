@@ -19,10 +19,10 @@ public final class GetInstanceArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="instanceAlias")
-      private final @Nullable String instanceAlias;
+    private @Nullable String instanceAlias;
 
     public Optional<String> instanceAlias() {
-        return this.instanceAlias == null ? Optional.empty() : Optional.ofNullable(this.instanceAlias);
+        return Optional.ofNullable(this.instanceAlias);
     }
 
     /**
@@ -30,55 +30,50 @@ public final class GetInstanceArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="instanceId")
-      private final @Nullable String instanceId;
+    private @Nullable String instanceId;
 
     public Optional<String> instanceId() {
-        return this.instanceId == null ? Optional.empty() : Optional.ofNullable(this.instanceId);
+        return Optional.ofNullable(this.instanceId);
     }
 
-    public GetInstanceArgs(
-        @Nullable String instanceAlias,
-        @Nullable String instanceId) {
-        this.instanceAlias = instanceAlias;
-        this.instanceId = instanceId;
-    }
+    private GetInstanceArgs() {}
 
-    private GetInstanceArgs() {
-        this.instanceAlias = null;
-        this.instanceId = null;
+    private GetInstanceArgs(GetInstanceArgs $) {
+        this.instanceAlias = $.instanceAlias;
+        this.instanceId = $.instanceId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetInstanceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String instanceAlias;
-        private @Nullable String instanceId;
+        private GetInstanceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetInstanceArgs();
         }
 
         public Builder(GetInstanceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.instanceAlias = defaults.instanceAlias;
-    	      this.instanceId = defaults.instanceId;
+            $ = new GetInstanceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder instanceAlias(@Nullable String instanceAlias) {
-            this.instanceAlias = instanceAlias;
+            $.instanceAlias = instanceAlias;
             return this;
         }
+
         public Builder instanceId(@Nullable String instanceId) {
-            this.instanceId = instanceId;
+            $.instanceId = instanceId;
             return this;
-        }        public GetInstanceArgs build() {
-            return new GetInstanceArgs(instanceAlias, instanceId);
+        }
+
+        public GetInstanceArgs build() {
+            return $;
         }
     }
+
 }

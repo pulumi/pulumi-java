@@ -7,10 +7,10 @@ import com.pulumi.azurenative.servicefabric.enums.ServiceLoadMetricWeight;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +27,10 @@ public final class ServiceLoadMetricDescriptionArgs extends com.pulumi.resources
      * 
      */
     @Import(name="defaultLoad")
-      private final @Nullable Output<Integer> defaultLoad;
+    private @Nullable Output<Integer> defaultLoad;
 
-    public Output<Integer> defaultLoad() {
-        return this.defaultLoad == null ? Codegen.empty() : this.defaultLoad;
+    public Optional<Output<Integer>> defaultLoad() {
+        return Optional.ofNullable(this.defaultLoad);
     }
 
     /**
@@ -38,7 +38,7 @@ public final class ServiceLoadMetricDescriptionArgs extends com.pulumi.resources
      * 
      */
     @Import(name="name", required=true)
-      private final Output<String> name;
+    private Output<String> name;
 
     public Output<String> name() {
         return this.name;
@@ -49,10 +49,10 @@ public final class ServiceLoadMetricDescriptionArgs extends com.pulumi.resources
      * 
      */
     @Import(name="primaryDefaultLoad")
-      private final @Nullable Output<Integer> primaryDefaultLoad;
+    private @Nullable Output<Integer> primaryDefaultLoad;
 
-    public Output<Integer> primaryDefaultLoad() {
-        return this.primaryDefaultLoad == null ? Codegen.empty() : this.primaryDefaultLoad;
+    public Optional<Output<Integer>> primaryDefaultLoad() {
+        return Optional.ofNullable(this.primaryDefaultLoad);
     }
 
     /**
@@ -60,10 +60,10 @@ public final class ServiceLoadMetricDescriptionArgs extends com.pulumi.resources
      * 
      */
     @Import(name="secondaryDefaultLoad")
-      private final @Nullable Output<Integer> secondaryDefaultLoad;
+    private @Nullable Output<Integer> secondaryDefaultLoad;
 
-    public Output<Integer> secondaryDefaultLoad() {
-        return this.secondaryDefaultLoad == null ? Codegen.empty() : this.secondaryDefaultLoad;
+    public Optional<Output<Integer>> secondaryDefaultLoad() {
+        return Optional.ofNullable(this.secondaryDefaultLoad);
     }
 
     /**
@@ -71,102 +71,89 @@ public final class ServiceLoadMetricDescriptionArgs extends com.pulumi.resources
      * 
      */
     @Import(name="weight")
-      private final @Nullable Output<Either<String,ServiceLoadMetricWeight>> weight;
+    private @Nullable Output<Either<String,ServiceLoadMetricWeight>> weight;
 
-    public Output<Either<String,ServiceLoadMetricWeight>> weight() {
-        return this.weight == null ? Codegen.empty() : this.weight;
+    public Optional<Output<Either<String,ServiceLoadMetricWeight>>> weight() {
+        return Optional.ofNullable(this.weight);
     }
 
-    public ServiceLoadMetricDescriptionArgs(
-        @Nullable Output<Integer> defaultLoad,
-        Output<String> name,
-        @Nullable Output<Integer> primaryDefaultLoad,
-        @Nullable Output<Integer> secondaryDefaultLoad,
-        @Nullable Output<Either<String,ServiceLoadMetricWeight>> weight) {
-        this.defaultLoad = defaultLoad;
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.primaryDefaultLoad = primaryDefaultLoad;
-        this.secondaryDefaultLoad = secondaryDefaultLoad;
-        this.weight = weight;
-    }
+    private ServiceLoadMetricDescriptionArgs() {}
 
-    private ServiceLoadMetricDescriptionArgs() {
-        this.defaultLoad = Codegen.empty();
-        this.name = Codegen.empty();
-        this.primaryDefaultLoad = Codegen.empty();
-        this.secondaryDefaultLoad = Codegen.empty();
-        this.weight = Codegen.empty();
+    private ServiceLoadMetricDescriptionArgs(ServiceLoadMetricDescriptionArgs $) {
+        this.defaultLoad = $.defaultLoad;
+        this.name = $.name;
+        this.primaryDefaultLoad = $.primaryDefaultLoad;
+        this.secondaryDefaultLoad = $.secondaryDefaultLoad;
+        this.weight = $.weight;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ServiceLoadMetricDescriptionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> defaultLoad;
-        private Output<String> name;
-        private @Nullable Output<Integer> primaryDefaultLoad;
-        private @Nullable Output<Integer> secondaryDefaultLoad;
-        private @Nullable Output<Either<String,ServiceLoadMetricWeight>> weight;
+        private ServiceLoadMetricDescriptionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ServiceLoadMetricDescriptionArgs();
         }
 
         public Builder(ServiceLoadMetricDescriptionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.defaultLoad = defaults.defaultLoad;
-    	      this.name = defaults.name;
-    	      this.primaryDefaultLoad = defaults.primaryDefaultLoad;
-    	      this.secondaryDefaultLoad = defaults.secondaryDefaultLoad;
-    	      this.weight = defaults.weight;
+            $ = new ServiceLoadMetricDescriptionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder defaultLoad(@Nullable Output<Integer> defaultLoad) {
-            this.defaultLoad = defaultLoad;
+            $.defaultLoad = defaultLoad;
             return this;
         }
-        public Builder defaultLoad(@Nullable Integer defaultLoad) {
-            this.defaultLoad = Codegen.ofNullable(defaultLoad);
-            return this;
+
+        public Builder defaultLoad(Integer defaultLoad) {
+            return defaultLoad(Output.of(defaultLoad));
         }
+
         public Builder name(Output<String> name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Output.of(Objects.requireNonNull(name));
-            return this;
+            return name(Output.of(name));
         }
+
         public Builder primaryDefaultLoad(@Nullable Output<Integer> primaryDefaultLoad) {
-            this.primaryDefaultLoad = primaryDefaultLoad;
+            $.primaryDefaultLoad = primaryDefaultLoad;
             return this;
         }
-        public Builder primaryDefaultLoad(@Nullable Integer primaryDefaultLoad) {
-            this.primaryDefaultLoad = Codegen.ofNullable(primaryDefaultLoad);
-            return this;
+
+        public Builder primaryDefaultLoad(Integer primaryDefaultLoad) {
+            return primaryDefaultLoad(Output.of(primaryDefaultLoad));
         }
+
         public Builder secondaryDefaultLoad(@Nullable Output<Integer> secondaryDefaultLoad) {
-            this.secondaryDefaultLoad = secondaryDefaultLoad;
+            $.secondaryDefaultLoad = secondaryDefaultLoad;
             return this;
         }
-        public Builder secondaryDefaultLoad(@Nullable Integer secondaryDefaultLoad) {
-            this.secondaryDefaultLoad = Codegen.ofNullable(secondaryDefaultLoad);
-            return this;
+
+        public Builder secondaryDefaultLoad(Integer secondaryDefaultLoad) {
+            return secondaryDefaultLoad(Output.of(secondaryDefaultLoad));
         }
+
         public Builder weight(@Nullable Output<Either<String,ServiceLoadMetricWeight>> weight) {
-            this.weight = weight;
+            $.weight = weight;
             return this;
         }
-        public Builder weight(@Nullable Either<String,ServiceLoadMetricWeight> weight) {
-            this.weight = Codegen.ofNullable(weight);
-            return this;
-        }        public ServiceLoadMetricDescriptionArgs build() {
-            return new ServiceLoadMetricDescriptionArgs(defaultLoad, name, primaryDefaultLoad, secondaryDefaultLoad, weight);
+
+        public Builder weight(Either<String,ServiceLoadMetricWeight> weight) {
+            return weight(Output.of(weight));
+        }
+
+        public ServiceLoadMetricDescriptionArgs build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            return $;
         }
     }
+
 }

@@ -23,10 +23,10 @@ public final class ApplicationPackageSupportUrlsResponse extends com.pulumi.reso
      * 
      */
     @Import(name="governmentCloud")
-      private final @Nullable String governmentCloud;
+    private @Nullable String governmentCloud;
 
     public Optional<String> governmentCloud() {
-        return this.governmentCloud == null ? Optional.empty() : Optional.ofNullable(this.governmentCloud);
+        return Optional.ofNullable(this.governmentCloud);
     }
 
     /**
@@ -34,55 +34,50 @@ public final class ApplicationPackageSupportUrlsResponse extends com.pulumi.reso
      * 
      */
     @Import(name="publicAzure")
-      private final @Nullable String publicAzure;
+    private @Nullable String publicAzure;
 
     public Optional<String> publicAzure() {
-        return this.publicAzure == null ? Optional.empty() : Optional.ofNullable(this.publicAzure);
+        return Optional.ofNullable(this.publicAzure);
     }
 
-    public ApplicationPackageSupportUrlsResponse(
-        @Nullable String governmentCloud,
-        @Nullable String publicAzure) {
-        this.governmentCloud = governmentCloud;
-        this.publicAzure = publicAzure;
-    }
+    private ApplicationPackageSupportUrlsResponse() {}
 
-    private ApplicationPackageSupportUrlsResponse() {
-        this.governmentCloud = null;
-        this.publicAzure = null;
+    private ApplicationPackageSupportUrlsResponse(ApplicationPackageSupportUrlsResponse $) {
+        this.governmentCloud = $.governmentCloud;
+        this.publicAzure = $.publicAzure;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ApplicationPackageSupportUrlsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String governmentCloud;
-        private @Nullable String publicAzure;
+        private ApplicationPackageSupportUrlsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ApplicationPackageSupportUrlsResponse();
         }
 
         public Builder(ApplicationPackageSupportUrlsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.governmentCloud = defaults.governmentCloud;
-    	      this.publicAzure = defaults.publicAzure;
+            $ = new ApplicationPackageSupportUrlsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder governmentCloud(@Nullable String governmentCloud) {
-            this.governmentCloud = governmentCloud;
+            $.governmentCloud = governmentCloud;
             return this;
         }
+
         public Builder publicAzure(@Nullable String publicAzure) {
-            this.publicAzure = publicAzure;
+            $.publicAzure = publicAzure;
             return this;
-        }        public ApplicationPackageSupportUrlsResponse build() {
-            return new ApplicationPackageSupportUrlsResponse(governmentCloud, publicAzure);
+        }
+
+        public ApplicationPackageSupportUrlsResponse build() {
+            return $;
         }
     }
+
 }

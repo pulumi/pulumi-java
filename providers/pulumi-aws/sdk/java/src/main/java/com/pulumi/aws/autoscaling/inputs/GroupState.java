@@ -13,13 +13,13 @@ import com.pulumi.aws.autoscaling.inputs.GroupWarmPoolGetArgs;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -32,10 +32,10 @@ public final class GroupState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="arn")
-      private final @Nullable Output<String> arn;
+    private @Nullable Output<String> arn;
 
-    public Output<String> arn() {
-        return this.arn == null ? Codegen.empty() : this.arn;
+    public Optional<Output<String>> arn() {
+        return Optional.ofNullable(this.arn);
     }
 
     /**
@@ -43,10 +43,10 @@ public final class GroupState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="availabilityZones")
-      private final @Nullable Output<List<String>> availabilityZones;
+    private @Nullable Output<List<String>> availabilityZones;
 
-    public Output<List<String>> availabilityZones() {
-        return this.availabilityZones == null ? Codegen.empty() : this.availabilityZones;
+    public Optional<Output<List<String>>> availabilityZones() {
+        return Optional.ofNullable(this.availabilityZones);
     }
 
     /**
@@ -54,10 +54,10 @@ public final class GroupState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="capacityRebalance")
-      private final @Nullable Output<Boolean> capacityRebalance;
+    private @Nullable Output<Boolean> capacityRebalance;
 
-    public Output<Boolean> capacityRebalance() {
-        return this.capacityRebalance == null ? Codegen.empty() : this.capacityRebalance;
+    public Optional<Output<Boolean>> capacityRebalance() {
+        return Optional.ofNullable(this.capacityRebalance);
     }
 
     /**
@@ -65,10 +65,10 @@ public final class GroupState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="defaultCooldown")
-      private final @Nullable Output<Integer> defaultCooldown;
+    private @Nullable Output<Integer> defaultCooldown;
 
-    public Output<Integer> defaultCooldown() {
-        return this.defaultCooldown == null ? Codegen.empty() : this.defaultCooldown;
+    public Optional<Output<Integer>> defaultCooldown() {
+        return Optional.ofNullable(this.defaultCooldown);
     }
 
     /**
@@ -78,10 +78,10 @@ public final class GroupState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="desiredCapacity")
-      private final @Nullable Output<Integer> desiredCapacity;
+    private @Nullable Output<Integer> desiredCapacity;
 
-    public Output<Integer> desiredCapacity() {
-        return this.desiredCapacity == null ? Codegen.empty() : this.desiredCapacity;
+    public Optional<Output<Integer>> desiredCapacity() {
+        return Optional.ofNullable(this.desiredCapacity);
     }
 
     /**
@@ -89,10 +89,10 @@ public final class GroupState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="enabledMetrics")
-      private final @Nullable Output<List<String>> enabledMetrics;
+    private @Nullable Output<List<String>> enabledMetrics;
 
-    public Output<List<String>> enabledMetrics() {
-        return this.enabledMetrics == null ? Codegen.empty() : this.enabledMetrics;
+    public Optional<Output<List<String>>> enabledMetrics() {
+        return Optional.ofNullable(this.enabledMetrics);
     }
 
     /**
@@ -104,17 +104,17 @@ public final class GroupState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="forceDelete")
-      private final @Nullable Output<Boolean> forceDelete;
+    private @Nullable Output<Boolean> forceDelete;
 
-    public Output<Boolean> forceDelete() {
-        return this.forceDelete == null ? Codegen.empty() : this.forceDelete;
+    public Optional<Output<Boolean>> forceDelete() {
+        return Optional.ofNullable(this.forceDelete);
     }
 
     @Import(name="forceDeleteWarmPool")
-      private final @Nullable Output<Boolean> forceDeleteWarmPool;
+    private @Nullable Output<Boolean> forceDeleteWarmPool;
 
-    public Output<Boolean> forceDeleteWarmPool() {
-        return this.forceDeleteWarmPool == null ? Codegen.empty() : this.forceDeleteWarmPool;
+    public Optional<Output<Boolean>> forceDeleteWarmPool() {
+        return Optional.ofNullable(this.forceDeleteWarmPool);
     }
 
     /**
@@ -122,10 +122,10 @@ public final class GroupState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="healthCheckGracePeriod")
-      private final @Nullable Output<Integer> healthCheckGracePeriod;
+    private @Nullable Output<Integer> healthCheckGracePeriod;
 
-    public Output<Integer> healthCheckGracePeriod() {
-        return this.healthCheckGracePeriod == null ? Codegen.empty() : this.healthCheckGracePeriod;
+    public Optional<Output<Integer>> healthCheckGracePeriod() {
+        return Optional.ofNullable(this.healthCheckGracePeriod);
     }
 
     /**
@@ -133,10 +133,10 @@ public final class GroupState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="healthCheckType")
-      private final @Nullable Output<String> healthCheckType;
+    private @Nullable Output<String> healthCheckType;
 
-    public Output<String> healthCheckType() {
-        return this.healthCheckType == null ? Codegen.empty() : this.healthCheckType;
+    public Optional<Output<String>> healthCheckType() {
+        return Optional.ofNullable(this.healthCheckType);
     }
 
     /**
@@ -150,10 +150,10 @@ public final class GroupState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="initialLifecycleHooks")
-      private final @Nullable Output<List<GroupInitialLifecycleHookGetArgs>> initialLifecycleHooks;
+    private @Nullable Output<List<GroupInitialLifecycleHookGetArgs>> initialLifecycleHooks;
 
-    public Output<List<GroupInitialLifecycleHookGetArgs>> initialLifecycleHooks() {
-        return this.initialLifecycleHooks == null ? Codegen.empty() : this.initialLifecycleHooks;
+    public Optional<Output<List<GroupInitialLifecycleHookGetArgs>>> initialLifecycleHooks() {
+        return Optional.ofNullable(this.initialLifecycleHooks);
     }
 
     /**
@@ -163,10 +163,10 @@ public final class GroupState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="instanceRefresh")
-      private final @Nullable Output<GroupInstanceRefreshGetArgs> instanceRefresh;
+    private @Nullable Output<GroupInstanceRefreshGetArgs> instanceRefresh;
 
-    public Output<GroupInstanceRefreshGetArgs> instanceRefresh() {
-        return this.instanceRefresh == null ? Codegen.empty() : this.instanceRefresh;
+    public Optional<Output<GroupInstanceRefreshGetArgs>> instanceRefresh() {
+        return Optional.ofNullable(this.instanceRefresh);
     }
 
     /**
@@ -174,10 +174,10 @@ public final class GroupState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="launchConfiguration")
-      private final @Nullable Output<String> launchConfiguration;
+    private @Nullable Output<String> launchConfiguration;
 
-    public Output<String> launchConfiguration() {
-        return this.launchConfiguration == null ? Codegen.empty() : this.launchConfiguration;
+    public Optional<Output<String>> launchConfiguration() {
+        return Optional.ofNullable(this.launchConfiguration);
     }
 
     /**
@@ -185,10 +185,10 @@ public final class GroupState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="launchTemplate")
-      private final @Nullable Output<GroupLaunchTemplateGetArgs> launchTemplate;
+    private @Nullable Output<GroupLaunchTemplateGetArgs> launchTemplate;
 
-    public Output<GroupLaunchTemplateGetArgs> launchTemplate() {
-        return this.launchTemplate == null ? Codegen.empty() : this.launchTemplate;
+    public Optional<Output<GroupLaunchTemplateGetArgs>> launchTemplate() {
+        return Optional.ofNullable(this.launchTemplate);
     }
 
     /**
@@ -197,10 +197,10 @@ public final class GroupState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="loadBalancers")
-      private final @Nullable Output<List<String>> loadBalancers;
+    private @Nullable Output<List<String>> loadBalancers;
 
-    public Output<List<String>> loadBalancers() {
-        return this.loadBalancers == null ? Codegen.empty() : this.loadBalancers;
+    public Optional<Output<List<String>>> loadBalancers() {
+        return Optional.ofNullable(this.loadBalancers);
     }
 
     /**
@@ -208,10 +208,10 @@ public final class GroupState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="maxInstanceLifetime")
-      private final @Nullable Output<Integer> maxInstanceLifetime;
+    private @Nullable Output<Integer> maxInstanceLifetime;
 
-    public Output<Integer> maxInstanceLifetime() {
-        return this.maxInstanceLifetime == null ? Codegen.empty() : this.maxInstanceLifetime;
+    public Optional<Output<Integer>> maxInstanceLifetime() {
+        return Optional.ofNullable(this.maxInstanceLifetime);
     }
 
     /**
@@ -219,10 +219,10 @@ public final class GroupState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="maxSize")
-      private final @Nullable Output<Integer> maxSize;
+    private @Nullable Output<Integer> maxSize;
 
-    public Output<Integer> maxSize() {
-        return this.maxSize == null ? Codegen.empty() : this.maxSize;
+    public Optional<Output<Integer>> maxSize() {
+        return Optional.ofNullable(this.maxSize);
     }
 
     /**
@@ -230,10 +230,10 @@ public final class GroupState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="metricsGranularity")
-      private final @Nullable Output<Either<String,MetricsGranularity>> metricsGranularity;
+    private @Nullable Output<Either<String,MetricsGranularity>> metricsGranularity;
 
-    public Output<Either<String,MetricsGranularity>> metricsGranularity() {
-        return this.metricsGranularity == null ? Codegen.empty() : this.metricsGranularity;
+    public Optional<Output<Either<String,MetricsGranularity>>> metricsGranularity() {
+        return Optional.ofNullable(this.metricsGranularity);
     }
 
     /**
@@ -244,10 +244,10 @@ public final class GroupState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="minElbCapacity")
-      private final @Nullable Output<Integer> minElbCapacity;
+    private @Nullable Output<Integer> minElbCapacity;
 
-    public Output<Integer> minElbCapacity() {
-        return this.minElbCapacity == null ? Codegen.empty() : this.minElbCapacity;
+    public Optional<Output<Integer>> minElbCapacity() {
+        return Optional.ofNullable(this.minElbCapacity);
     }
 
     /**
@@ -255,10 +255,10 @@ public final class GroupState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="minSize")
-      private final @Nullable Output<Integer> minSize;
+    private @Nullable Output<Integer> minSize;
 
-    public Output<Integer> minSize() {
-        return this.minSize == null ? Codegen.empty() : this.minSize;
+    public Optional<Output<Integer>> minSize() {
+        return Optional.ofNullable(this.minSize);
     }
 
     /**
@@ -266,10 +266,10 @@ public final class GroupState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="mixedInstancesPolicy")
-      private final @Nullable Output<GroupMixedInstancesPolicyGetArgs> mixedInstancesPolicy;
+    private @Nullable Output<GroupMixedInstancesPolicyGetArgs> mixedInstancesPolicy;
 
-    public Output<GroupMixedInstancesPolicyGetArgs> mixedInstancesPolicy() {
-        return this.mixedInstancesPolicy == null ? Codegen.empty() : this.mixedInstancesPolicy;
+    public Optional<Output<GroupMixedInstancesPolicyGetArgs>> mixedInstancesPolicy() {
+        return Optional.ofNullable(this.mixedInstancesPolicy);
     }
 
     /**
@@ -277,10 +277,10 @@ public final class GroupState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -289,10 +289,10 @@ public final class GroupState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="namePrefix")
-      private final @Nullable Output<String> namePrefix;
+    private @Nullable Output<String> namePrefix;
 
-    public Output<String> namePrefix() {
-        return this.namePrefix == null ? Codegen.empty() : this.namePrefix;
+    public Optional<Output<String>> namePrefix() {
+        return Optional.ofNullable(this.namePrefix);
     }
 
     /**
@@ -300,10 +300,10 @@ public final class GroupState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="placementGroup")
-      private final @Nullable Output<String> placementGroup;
+    private @Nullable Output<String> placementGroup;
 
-    public Output<String> placementGroup() {
-        return this.placementGroup == null ? Codegen.empty() : this.placementGroup;
+    public Optional<Output<String>> placementGroup() {
+        return Optional.ofNullable(this.placementGroup);
     }
 
     /**
@@ -313,10 +313,10 @@ public final class GroupState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="protectFromScaleIn")
-      private final @Nullable Output<Boolean> protectFromScaleIn;
+    private @Nullable Output<Boolean> protectFromScaleIn;
 
-    public Output<Boolean> protectFromScaleIn() {
-        return this.protectFromScaleIn == null ? Codegen.empty() : this.protectFromScaleIn;
+    public Optional<Output<Boolean>> protectFromScaleIn() {
+        return Optional.ofNullable(this.protectFromScaleIn);
     }
 
     /**
@@ -324,10 +324,10 @@ public final class GroupState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="serviceLinkedRoleArn")
-      private final @Nullable Output<String> serviceLinkedRoleArn;
+    private @Nullable Output<String> serviceLinkedRoleArn;
 
-    public Output<String> serviceLinkedRoleArn() {
-        return this.serviceLinkedRoleArn == null ? Codegen.empty() : this.serviceLinkedRoleArn;
+    public Optional<Output<String>> serviceLinkedRoleArn() {
+        return Optional.ofNullable(this.serviceLinkedRoleArn);
     }
 
     /**
@@ -336,10 +336,10 @@ public final class GroupState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="suspendedProcesses")
-      private final @Nullable Output<List<String>> suspendedProcesses;
+    private @Nullable Output<List<String>> suspendedProcesses;
 
-    public Output<List<String>> suspendedProcesses() {
-        return this.suspendedProcesses == null ? Codegen.empty() : this.suspendedProcesses;
+    public Optional<Output<List<String>>> suspendedProcesses() {
+        return Optional.ofNullable(this.suspendedProcesses);
     }
 
     /**
@@ -347,10 +347,10 @@ public final class GroupState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<List<GroupTagGetArgs>> tags;
+    private @Nullable Output<List<GroupTagGetArgs>> tags;
 
-    public Output<List<GroupTagGetArgs>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<List<GroupTagGetArgs>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -358,10 +358,10 @@ public final class GroupState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tagsCollection")
-      private final @Nullable Output<List<Map<String,String>>> tagsCollection;
+    private @Nullable Output<List<Map<String,String>>> tagsCollection;
 
-    public Output<List<Map<String,String>>> tagsCollection() {
-        return this.tagsCollection == null ? Codegen.empty() : this.tagsCollection;
+    public Optional<Output<List<Map<String,String>>>> tagsCollection() {
+        return Optional.ofNullable(this.tagsCollection);
     }
 
     /**
@@ -369,10 +369,10 @@ public final class GroupState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="targetGroupArns")
-      private final @Nullable Output<List<String>> targetGroupArns;
+    private @Nullable Output<List<String>> targetGroupArns;
 
-    public Output<List<String>> targetGroupArns() {
-        return this.targetGroupArns == null ? Codegen.empty() : this.targetGroupArns;
+    public Optional<Output<List<String>>> targetGroupArns() {
+        return Optional.ofNullable(this.targetGroupArns);
     }
 
     /**
@@ -380,10 +380,10 @@ public final class GroupState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="terminationPolicies")
-      private final @Nullable Output<List<String>> terminationPolicies;
+    private @Nullable Output<List<String>> terminationPolicies;
 
-    public Output<List<String>> terminationPolicies() {
-        return this.terminationPolicies == null ? Codegen.empty() : this.terminationPolicies;
+    public Optional<Output<List<String>>> terminationPolicies() {
+        return Optional.ofNullable(this.terminationPolicies);
     }
 
     /**
@@ -391,10 +391,10 @@ public final class GroupState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="vpcZoneIdentifiers")
-      private final @Nullable Output<List<String>> vpcZoneIdentifiers;
+    private @Nullable Output<List<String>> vpcZoneIdentifiers;
 
-    public Output<List<String>> vpcZoneIdentifiers() {
-        return this.vpcZoneIdentifiers == null ? Codegen.empty() : this.vpcZoneIdentifiers;
+    public Optional<Output<List<String>>> vpcZoneIdentifiers() {
+        return Optional.ofNullable(this.vpcZoneIdentifiers);
     }
 
     /**
@@ -406,10 +406,10 @@ public final class GroupState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="waitForCapacityTimeout")
-      private final @Nullable Output<String> waitForCapacityTimeout;
+    private @Nullable Output<String> waitForCapacityTimeout;
 
-    public Output<String> waitForCapacityTimeout() {
-        return this.waitForCapacityTimeout == null ? Codegen.empty() : this.waitForCapacityTimeout;
+    public Optional<Output<String>> waitForCapacityTimeout() {
+        return Optional.ofNullable(this.waitForCapacityTimeout);
     }
 
     /**
@@ -421,10 +421,10 @@ public final class GroupState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="waitForElbCapacity")
-      private final @Nullable Output<Integer> waitForElbCapacity;
+    private @Nullable Output<Integer> waitForElbCapacity;
 
-    public Output<Integer> waitForElbCapacity() {
-        return this.waitForElbCapacity == null ? Codegen.empty() : this.waitForElbCapacity;
+    public Optional<Output<Integer>> waitForElbCapacity() {
+        return Optional.ofNullable(this.waitForElbCapacity);
     }
 
     /**
@@ -433,511 +433,428 @@ public final class GroupState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="warmPool")
-      private final @Nullable Output<GroupWarmPoolGetArgs> warmPool;
+    private @Nullable Output<GroupWarmPoolGetArgs> warmPool;
 
-    public Output<GroupWarmPoolGetArgs> warmPool() {
-        return this.warmPool == null ? Codegen.empty() : this.warmPool;
+    public Optional<Output<GroupWarmPoolGetArgs>> warmPool() {
+        return Optional.ofNullable(this.warmPool);
     }
 
-    public GroupState(
-        @Nullable Output<String> arn,
-        @Nullable Output<List<String>> availabilityZones,
-        @Nullable Output<Boolean> capacityRebalance,
-        @Nullable Output<Integer> defaultCooldown,
-        @Nullable Output<Integer> desiredCapacity,
-        @Nullable Output<List<String>> enabledMetrics,
-        @Nullable Output<Boolean> forceDelete,
-        @Nullable Output<Boolean> forceDeleteWarmPool,
-        @Nullable Output<Integer> healthCheckGracePeriod,
-        @Nullable Output<String> healthCheckType,
-        @Nullable Output<List<GroupInitialLifecycleHookGetArgs>> initialLifecycleHooks,
-        @Nullable Output<GroupInstanceRefreshGetArgs> instanceRefresh,
-        @Nullable Output<String> launchConfiguration,
-        @Nullable Output<GroupLaunchTemplateGetArgs> launchTemplate,
-        @Nullable Output<List<String>> loadBalancers,
-        @Nullable Output<Integer> maxInstanceLifetime,
-        @Nullable Output<Integer> maxSize,
-        @Nullable Output<Either<String,MetricsGranularity>> metricsGranularity,
-        @Nullable Output<Integer> minElbCapacity,
-        @Nullable Output<Integer> minSize,
-        @Nullable Output<GroupMixedInstancesPolicyGetArgs> mixedInstancesPolicy,
-        @Nullable Output<String> name,
-        @Nullable Output<String> namePrefix,
-        @Nullable Output<String> placementGroup,
-        @Nullable Output<Boolean> protectFromScaleIn,
-        @Nullable Output<String> serviceLinkedRoleArn,
-        @Nullable Output<List<String>> suspendedProcesses,
-        @Nullable Output<List<GroupTagGetArgs>> tags,
-        @Nullable Output<List<Map<String,String>>> tagsCollection,
-        @Nullable Output<List<String>> targetGroupArns,
-        @Nullable Output<List<String>> terminationPolicies,
-        @Nullable Output<List<String>> vpcZoneIdentifiers,
-        @Nullable Output<String> waitForCapacityTimeout,
-        @Nullable Output<Integer> waitForElbCapacity,
-        @Nullable Output<GroupWarmPoolGetArgs> warmPool) {
-        this.arn = arn;
-        this.availabilityZones = availabilityZones;
-        this.capacityRebalance = capacityRebalance;
-        this.defaultCooldown = defaultCooldown;
-        this.desiredCapacity = desiredCapacity;
-        this.enabledMetrics = enabledMetrics;
-        this.forceDelete = forceDelete;
-        this.forceDeleteWarmPool = forceDeleteWarmPool;
-        this.healthCheckGracePeriod = healthCheckGracePeriod;
-        this.healthCheckType = healthCheckType;
-        this.initialLifecycleHooks = initialLifecycleHooks;
-        this.instanceRefresh = instanceRefresh;
-        this.launchConfiguration = launchConfiguration;
-        this.launchTemplate = launchTemplate;
-        this.loadBalancers = loadBalancers;
-        this.maxInstanceLifetime = maxInstanceLifetime;
-        this.maxSize = maxSize;
-        this.metricsGranularity = metricsGranularity;
-        this.minElbCapacity = minElbCapacity;
-        this.minSize = minSize;
-        this.mixedInstancesPolicy = mixedInstancesPolicy;
-        this.name = name;
-        this.namePrefix = namePrefix;
-        this.placementGroup = placementGroup;
-        this.protectFromScaleIn = protectFromScaleIn;
-        this.serviceLinkedRoleArn = serviceLinkedRoleArn;
-        this.suspendedProcesses = suspendedProcesses;
-        this.tags = tags;
-        this.tagsCollection = tagsCollection;
-        this.targetGroupArns = targetGroupArns;
-        this.terminationPolicies = terminationPolicies;
-        this.vpcZoneIdentifiers = vpcZoneIdentifiers;
-        this.waitForCapacityTimeout = waitForCapacityTimeout;
-        this.waitForElbCapacity = waitForElbCapacity;
-        this.warmPool = warmPool;
-    }
+    private GroupState() {}
 
-    private GroupState() {
-        this.arn = Codegen.empty();
-        this.availabilityZones = Codegen.empty();
-        this.capacityRebalance = Codegen.empty();
-        this.defaultCooldown = Codegen.empty();
-        this.desiredCapacity = Codegen.empty();
-        this.enabledMetrics = Codegen.empty();
-        this.forceDelete = Codegen.empty();
-        this.forceDeleteWarmPool = Codegen.empty();
-        this.healthCheckGracePeriod = Codegen.empty();
-        this.healthCheckType = Codegen.empty();
-        this.initialLifecycleHooks = Codegen.empty();
-        this.instanceRefresh = Codegen.empty();
-        this.launchConfiguration = Codegen.empty();
-        this.launchTemplate = Codegen.empty();
-        this.loadBalancers = Codegen.empty();
-        this.maxInstanceLifetime = Codegen.empty();
-        this.maxSize = Codegen.empty();
-        this.metricsGranularity = Codegen.empty();
-        this.minElbCapacity = Codegen.empty();
-        this.minSize = Codegen.empty();
-        this.mixedInstancesPolicy = Codegen.empty();
-        this.name = Codegen.empty();
-        this.namePrefix = Codegen.empty();
-        this.placementGroup = Codegen.empty();
-        this.protectFromScaleIn = Codegen.empty();
-        this.serviceLinkedRoleArn = Codegen.empty();
-        this.suspendedProcesses = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.tagsCollection = Codegen.empty();
-        this.targetGroupArns = Codegen.empty();
-        this.terminationPolicies = Codegen.empty();
-        this.vpcZoneIdentifiers = Codegen.empty();
-        this.waitForCapacityTimeout = Codegen.empty();
-        this.waitForElbCapacity = Codegen.empty();
-        this.warmPool = Codegen.empty();
+    private GroupState(GroupState $) {
+        this.arn = $.arn;
+        this.availabilityZones = $.availabilityZones;
+        this.capacityRebalance = $.capacityRebalance;
+        this.defaultCooldown = $.defaultCooldown;
+        this.desiredCapacity = $.desiredCapacity;
+        this.enabledMetrics = $.enabledMetrics;
+        this.forceDelete = $.forceDelete;
+        this.forceDeleteWarmPool = $.forceDeleteWarmPool;
+        this.healthCheckGracePeriod = $.healthCheckGracePeriod;
+        this.healthCheckType = $.healthCheckType;
+        this.initialLifecycleHooks = $.initialLifecycleHooks;
+        this.instanceRefresh = $.instanceRefresh;
+        this.launchConfiguration = $.launchConfiguration;
+        this.launchTemplate = $.launchTemplate;
+        this.loadBalancers = $.loadBalancers;
+        this.maxInstanceLifetime = $.maxInstanceLifetime;
+        this.maxSize = $.maxSize;
+        this.metricsGranularity = $.metricsGranularity;
+        this.minElbCapacity = $.minElbCapacity;
+        this.minSize = $.minSize;
+        this.mixedInstancesPolicy = $.mixedInstancesPolicy;
+        this.name = $.name;
+        this.namePrefix = $.namePrefix;
+        this.placementGroup = $.placementGroup;
+        this.protectFromScaleIn = $.protectFromScaleIn;
+        this.serviceLinkedRoleArn = $.serviceLinkedRoleArn;
+        this.suspendedProcesses = $.suspendedProcesses;
+        this.tags = $.tags;
+        this.tagsCollection = $.tagsCollection;
+        this.targetGroupArns = $.targetGroupArns;
+        this.terminationPolicies = $.terminationPolicies;
+        this.vpcZoneIdentifiers = $.vpcZoneIdentifiers;
+        this.waitForCapacityTimeout = $.waitForCapacityTimeout;
+        this.waitForElbCapacity = $.waitForElbCapacity;
+        this.warmPool = $.warmPool;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GroupState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> arn;
-        private @Nullable Output<List<String>> availabilityZones;
-        private @Nullable Output<Boolean> capacityRebalance;
-        private @Nullable Output<Integer> defaultCooldown;
-        private @Nullable Output<Integer> desiredCapacity;
-        private @Nullable Output<List<String>> enabledMetrics;
-        private @Nullable Output<Boolean> forceDelete;
-        private @Nullable Output<Boolean> forceDeleteWarmPool;
-        private @Nullable Output<Integer> healthCheckGracePeriod;
-        private @Nullable Output<String> healthCheckType;
-        private @Nullable Output<List<GroupInitialLifecycleHookGetArgs>> initialLifecycleHooks;
-        private @Nullable Output<GroupInstanceRefreshGetArgs> instanceRefresh;
-        private @Nullable Output<String> launchConfiguration;
-        private @Nullable Output<GroupLaunchTemplateGetArgs> launchTemplate;
-        private @Nullable Output<List<String>> loadBalancers;
-        private @Nullable Output<Integer> maxInstanceLifetime;
-        private @Nullable Output<Integer> maxSize;
-        private @Nullable Output<Either<String,MetricsGranularity>> metricsGranularity;
-        private @Nullable Output<Integer> minElbCapacity;
-        private @Nullable Output<Integer> minSize;
-        private @Nullable Output<GroupMixedInstancesPolicyGetArgs> mixedInstancesPolicy;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> namePrefix;
-        private @Nullable Output<String> placementGroup;
-        private @Nullable Output<Boolean> protectFromScaleIn;
-        private @Nullable Output<String> serviceLinkedRoleArn;
-        private @Nullable Output<List<String>> suspendedProcesses;
-        private @Nullable Output<List<GroupTagGetArgs>> tags;
-        private @Nullable Output<List<Map<String,String>>> tagsCollection;
-        private @Nullable Output<List<String>> targetGroupArns;
-        private @Nullable Output<List<String>> terminationPolicies;
-        private @Nullable Output<List<String>> vpcZoneIdentifiers;
-        private @Nullable Output<String> waitForCapacityTimeout;
-        private @Nullable Output<Integer> waitForElbCapacity;
-        private @Nullable Output<GroupWarmPoolGetArgs> warmPool;
+        private GroupState $;
 
         public Builder() {
-    	      // Empty
+            $ = new GroupState();
         }
 
         public Builder(GroupState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.arn = defaults.arn;
-    	      this.availabilityZones = defaults.availabilityZones;
-    	      this.capacityRebalance = defaults.capacityRebalance;
-    	      this.defaultCooldown = defaults.defaultCooldown;
-    	      this.desiredCapacity = defaults.desiredCapacity;
-    	      this.enabledMetrics = defaults.enabledMetrics;
-    	      this.forceDelete = defaults.forceDelete;
-    	      this.forceDeleteWarmPool = defaults.forceDeleteWarmPool;
-    	      this.healthCheckGracePeriod = defaults.healthCheckGracePeriod;
-    	      this.healthCheckType = defaults.healthCheckType;
-    	      this.initialLifecycleHooks = defaults.initialLifecycleHooks;
-    	      this.instanceRefresh = defaults.instanceRefresh;
-    	      this.launchConfiguration = defaults.launchConfiguration;
-    	      this.launchTemplate = defaults.launchTemplate;
-    	      this.loadBalancers = defaults.loadBalancers;
-    	      this.maxInstanceLifetime = defaults.maxInstanceLifetime;
-    	      this.maxSize = defaults.maxSize;
-    	      this.metricsGranularity = defaults.metricsGranularity;
-    	      this.minElbCapacity = defaults.minElbCapacity;
-    	      this.minSize = defaults.minSize;
-    	      this.mixedInstancesPolicy = defaults.mixedInstancesPolicy;
-    	      this.name = defaults.name;
-    	      this.namePrefix = defaults.namePrefix;
-    	      this.placementGroup = defaults.placementGroup;
-    	      this.protectFromScaleIn = defaults.protectFromScaleIn;
-    	      this.serviceLinkedRoleArn = defaults.serviceLinkedRoleArn;
-    	      this.suspendedProcesses = defaults.suspendedProcesses;
-    	      this.tags = defaults.tags;
-    	      this.tagsCollection = defaults.tagsCollection;
-    	      this.targetGroupArns = defaults.targetGroupArns;
-    	      this.terminationPolicies = defaults.terminationPolicies;
-    	      this.vpcZoneIdentifiers = defaults.vpcZoneIdentifiers;
-    	      this.waitForCapacityTimeout = defaults.waitForCapacityTimeout;
-    	      this.waitForElbCapacity = defaults.waitForElbCapacity;
-    	      this.warmPool = defaults.warmPool;
+            $ = new GroupState(Objects.requireNonNull(defaults));
         }
 
         public Builder arn(@Nullable Output<String> arn) {
-            this.arn = arn;
+            $.arn = arn;
             return this;
         }
-        public Builder arn(@Nullable String arn) {
-            this.arn = Codegen.ofNullable(arn);
-            return this;
+
+        public Builder arn(String arn) {
+            return arn(Output.of(arn));
         }
+
         public Builder availabilityZones(@Nullable Output<List<String>> availabilityZones) {
-            this.availabilityZones = availabilityZones;
+            $.availabilityZones = availabilityZones;
             return this;
         }
-        public Builder availabilityZones(@Nullable List<String> availabilityZones) {
-            this.availabilityZones = Codegen.ofNullable(availabilityZones);
-            return this;
+
+        public Builder availabilityZones(List<String> availabilityZones) {
+            return availabilityZones(Output.of(availabilityZones));
         }
+
         public Builder availabilityZones(String... availabilityZones) {
             return availabilityZones(List.of(availabilityZones));
         }
+
         public Builder capacityRebalance(@Nullable Output<Boolean> capacityRebalance) {
-            this.capacityRebalance = capacityRebalance;
+            $.capacityRebalance = capacityRebalance;
             return this;
         }
-        public Builder capacityRebalance(@Nullable Boolean capacityRebalance) {
-            this.capacityRebalance = Codegen.ofNullable(capacityRebalance);
-            return this;
+
+        public Builder capacityRebalance(Boolean capacityRebalance) {
+            return capacityRebalance(Output.of(capacityRebalance));
         }
+
         public Builder defaultCooldown(@Nullable Output<Integer> defaultCooldown) {
-            this.defaultCooldown = defaultCooldown;
+            $.defaultCooldown = defaultCooldown;
             return this;
         }
-        public Builder defaultCooldown(@Nullable Integer defaultCooldown) {
-            this.defaultCooldown = Codegen.ofNullable(defaultCooldown);
-            return this;
+
+        public Builder defaultCooldown(Integer defaultCooldown) {
+            return defaultCooldown(Output.of(defaultCooldown));
         }
+
         public Builder desiredCapacity(@Nullable Output<Integer> desiredCapacity) {
-            this.desiredCapacity = desiredCapacity;
+            $.desiredCapacity = desiredCapacity;
             return this;
         }
-        public Builder desiredCapacity(@Nullable Integer desiredCapacity) {
-            this.desiredCapacity = Codegen.ofNullable(desiredCapacity);
-            return this;
+
+        public Builder desiredCapacity(Integer desiredCapacity) {
+            return desiredCapacity(Output.of(desiredCapacity));
         }
+
         public Builder enabledMetrics(@Nullable Output<List<String>> enabledMetrics) {
-            this.enabledMetrics = enabledMetrics;
+            $.enabledMetrics = enabledMetrics;
             return this;
         }
-        public Builder enabledMetrics(@Nullable List<String> enabledMetrics) {
-            this.enabledMetrics = Codegen.ofNullable(enabledMetrics);
-            return this;
+
+        public Builder enabledMetrics(List<String> enabledMetrics) {
+            return enabledMetrics(Output.of(enabledMetrics));
         }
+
         public Builder enabledMetrics(String... enabledMetrics) {
             return enabledMetrics(List.of(enabledMetrics));
         }
+
         public Builder forceDelete(@Nullable Output<Boolean> forceDelete) {
-            this.forceDelete = forceDelete;
+            $.forceDelete = forceDelete;
             return this;
         }
-        public Builder forceDelete(@Nullable Boolean forceDelete) {
-            this.forceDelete = Codegen.ofNullable(forceDelete);
-            return this;
+
+        public Builder forceDelete(Boolean forceDelete) {
+            return forceDelete(Output.of(forceDelete));
         }
+
         public Builder forceDeleteWarmPool(@Nullable Output<Boolean> forceDeleteWarmPool) {
-            this.forceDeleteWarmPool = forceDeleteWarmPool;
+            $.forceDeleteWarmPool = forceDeleteWarmPool;
             return this;
         }
-        public Builder forceDeleteWarmPool(@Nullable Boolean forceDeleteWarmPool) {
-            this.forceDeleteWarmPool = Codegen.ofNullable(forceDeleteWarmPool);
-            return this;
+
+        public Builder forceDeleteWarmPool(Boolean forceDeleteWarmPool) {
+            return forceDeleteWarmPool(Output.of(forceDeleteWarmPool));
         }
+
         public Builder healthCheckGracePeriod(@Nullable Output<Integer> healthCheckGracePeriod) {
-            this.healthCheckGracePeriod = healthCheckGracePeriod;
+            $.healthCheckGracePeriod = healthCheckGracePeriod;
             return this;
         }
-        public Builder healthCheckGracePeriod(@Nullable Integer healthCheckGracePeriod) {
-            this.healthCheckGracePeriod = Codegen.ofNullable(healthCheckGracePeriod);
-            return this;
+
+        public Builder healthCheckGracePeriod(Integer healthCheckGracePeriod) {
+            return healthCheckGracePeriod(Output.of(healthCheckGracePeriod));
         }
+
         public Builder healthCheckType(@Nullable Output<String> healthCheckType) {
-            this.healthCheckType = healthCheckType;
+            $.healthCheckType = healthCheckType;
             return this;
         }
-        public Builder healthCheckType(@Nullable String healthCheckType) {
-            this.healthCheckType = Codegen.ofNullable(healthCheckType);
-            return this;
+
+        public Builder healthCheckType(String healthCheckType) {
+            return healthCheckType(Output.of(healthCheckType));
         }
+
         public Builder initialLifecycleHooks(@Nullable Output<List<GroupInitialLifecycleHookGetArgs>> initialLifecycleHooks) {
-            this.initialLifecycleHooks = initialLifecycleHooks;
+            $.initialLifecycleHooks = initialLifecycleHooks;
             return this;
         }
-        public Builder initialLifecycleHooks(@Nullable List<GroupInitialLifecycleHookGetArgs> initialLifecycleHooks) {
-            this.initialLifecycleHooks = Codegen.ofNullable(initialLifecycleHooks);
-            return this;
+
+        public Builder initialLifecycleHooks(List<GroupInitialLifecycleHookGetArgs> initialLifecycleHooks) {
+            return initialLifecycleHooks(Output.of(initialLifecycleHooks));
         }
+
         public Builder initialLifecycleHooks(GroupInitialLifecycleHookGetArgs... initialLifecycleHooks) {
             return initialLifecycleHooks(List.of(initialLifecycleHooks));
         }
+
         public Builder instanceRefresh(@Nullable Output<GroupInstanceRefreshGetArgs> instanceRefresh) {
-            this.instanceRefresh = instanceRefresh;
+            $.instanceRefresh = instanceRefresh;
             return this;
         }
-        public Builder instanceRefresh(@Nullable GroupInstanceRefreshGetArgs instanceRefresh) {
-            this.instanceRefresh = Codegen.ofNullable(instanceRefresh);
-            return this;
+
+        public Builder instanceRefresh(GroupInstanceRefreshGetArgs instanceRefresh) {
+            return instanceRefresh(Output.of(instanceRefresh));
         }
+
         public Builder launchConfiguration(@Nullable Output<String> launchConfiguration) {
-            this.launchConfiguration = launchConfiguration;
+            $.launchConfiguration = launchConfiguration;
             return this;
         }
+
+        public Builder launchConfiguration(String launchConfiguration) {
+            return launchConfiguration(Output.of(launchConfiguration));
+        }
+
         public Builder launchTemplate(@Nullable Output<GroupLaunchTemplateGetArgs> launchTemplate) {
-            this.launchTemplate = launchTemplate;
+            $.launchTemplate = launchTemplate;
             return this;
         }
-        public Builder launchTemplate(@Nullable GroupLaunchTemplateGetArgs launchTemplate) {
-            this.launchTemplate = Codegen.ofNullable(launchTemplate);
-            return this;
+
+        public Builder launchTemplate(GroupLaunchTemplateGetArgs launchTemplate) {
+            return launchTemplate(Output.of(launchTemplate));
         }
+
         public Builder loadBalancers(@Nullable Output<List<String>> loadBalancers) {
-            this.loadBalancers = loadBalancers;
+            $.loadBalancers = loadBalancers;
             return this;
         }
-        public Builder loadBalancers(@Nullable List<String> loadBalancers) {
-            this.loadBalancers = Codegen.ofNullable(loadBalancers);
-            return this;
+
+        public Builder loadBalancers(List<String> loadBalancers) {
+            return loadBalancers(Output.of(loadBalancers));
         }
+
         public Builder loadBalancers(String... loadBalancers) {
             return loadBalancers(List.of(loadBalancers));
         }
+
         public Builder maxInstanceLifetime(@Nullable Output<Integer> maxInstanceLifetime) {
-            this.maxInstanceLifetime = maxInstanceLifetime;
+            $.maxInstanceLifetime = maxInstanceLifetime;
             return this;
         }
-        public Builder maxInstanceLifetime(@Nullable Integer maxInstanceLifetime) {
-            this.maxInstanceLifetime = Codegen.ofNullable(maxInstanceLifetime);
-            return this;
+
+        public Builder maxInstanceLifetime(Integer maxInstanceLifetime) {
+            return maxInstanceLifetime(Output.of(maxInstanceLifetime));
         }
+
         public Builder maxSize(@Nullable Output<Integer> maxSize) {
-            this.maxSize = maxSize;
+            $.maxSize = maxSize;
             return this;
         }
-        public Builder maxSize(@Nullable Integer maxSize) {
-            this.maxSize = Codegen.ofNullable(maxSize);
-            return this;
+
+        public Builder maxSize(Integer maxSize) {
+            return maxSize(Output.of(maxSize));
         }
+
         public Builder metricsGranularity(@Nullable Output<Either<String,MetricsGranularity>> metricsGranularity) {
-            this.metricsGranularity = metricsGranularity;
+            $.metricsGranularity = metricsGranularity;
             return this;
         }
-        public Builder metricsGranularity(@Nullable Either<String,MetricsGranularity> metricsGranularity) {
-            this.metricsGranularity = Codegen.ofNullable(metricsGranularity);
-            return this;
+
+        public Builder metricsGranularity(Either<String,MetricsGranularity> metricsGranularity) {
+            return metricsGranularity(Output.of(metricsGranularity));
         }
+
         public Builder minElbCapacity(@Nullable Output<Integer> minElbCapacity) {
-            this.minElbCapacity = minElbCapacity;
+            $.minElbCapacity = minElbCapacity;
             return this;
         }
-        public Builder minElbCapacity(@Nullable Integer minElbCapacity) {
-            this.minElbCapacity = Codegen.ofNullable(minElbCapacity);
-            return this;
+
+        public Builder minElbCapacity(Integer minElbCapacity) {
+            return minElbCapacity(Output.of(minElbCapacity));
         }
+
         public Builder minSize(@Nullable Output<Integer> minSize) {
-            this.minSize = minSize;
+            $.minSize = minSize;
             return this;
         }
-        public Builder minSize(@Nullable Integer minSize) {
-            this.minSize = Codegen.ofNullable(minSize);
-            return this;
+
+        public Builder minSize(Integer minSize) {
+            return minSize(Output.of(minSize));
         }
+
         public Builder mixedInstancesPolicy(@Nullable Output<GroupMixedInstancesPolicyGetArgs> mixedInstancesPolicy) {
-            this.mixedInstancesPolicy = mixedInstancesPolicy;
+            $.mixedInstancesPolicy = mixedInstancesPolicy;
             return this;
         }
-        public Builder mixedInstancesPolicy(@Nullable GroupMixedInstancesPolicyGetArgs mixedInstancesPolicy) {
-            this.mixedInstancesPolicy = Codegen.ofNullable(mixedInstancesPolicy);
-            return this;
+
+        public Builder mixedInstancesPolicy(GroupMixedInstancesPolicyGetArgs mixedInstancesPolicy) {
+            return mixedInstancesPolicy(Output.of(mixedInstancesPolicy));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder namePrefix(@Nullable Output<String> namePrefix) {
-            this.namePrefix = namePrefix;
+            $.namePrefix = namePrefix;
             return this;
         }
-        public Builder namePrefix(@Nullable String namePrefix) {
-            this.namePrefix = Codegen.ofNullable(namePrefix);
-            return this;
+
+        public Builder namePrefix(String namePrefix) {
+            return namePrefix(Output.of(namePrefix));
         }
+
         public Builder placementGroup(@Nullable Output<String> placementGroup) {
-            this.placementGroup = placementGroup;
+            $.placementGroup = placementGroup;
             return this;
         }
+
+        public Builder placementGroup(String placementGroup) {
+            return placementGroup(Output.of(placementGroup));
+        }
+
         public Builder protectFromScaleIn(@Nullable Output<Boolean> protectFromScaleIn) {
-            this.protectFromScaleIn = protectFromScaleIn;
+            $.protectFromScaleIn = protectFromScaleIn;
             return this;
         }
-        public Builder protectFromScaleIn(@Nullable Boolean protectFromScaleIn) {
-            this.protectFromScaleIn = Codegen.ofNullable(protectFromScaleIn);
-            return this;
+
+        public Builder protectFromScaleIn(Boolean protectFromScaleIn) {
+            return protectFromScaleIn(Output.of(protectFromScaleIn));
         }
+
         public Builder serviceLinkedRoleArn(@Nullable Output<String> serviceLinkedRoleArn) {
-            this.serviceLinkedRoleArn = serviceLinkedRoleArn;
+            $.serviceLinkedRoleArn = serviceLinkedRoleArn;
             return this;
         }
-        public Builder serviceLinkedRoleArn(@Nullable String serviceLinkedRoleArn) {
-            this.serviceLinkedRoleArn = Codegen.ofNullable(serviceLinkedRoleArn);
-            return this;
+
+        public Builder serviceLinkedRoleArn(String serviceLinkedRoleArn) {
+            return serviceLinkedRoleArn(Output.of(serviceLinkedRoleArn));
         }
+
         public Builder suspendedProcesses(@Nullable Output<List<String>> suspendedProcesses) {
-            this.suspendedProcesses = suspendedProcesses;
+            $.suspendedProcesses = suspendedProcesses;
             return this;
         }
-        public Builder suspendedProcesses(@Nullable List<String> suspendedProcesses) {
-            this.suspendedProcesses = Codegen.ofNullable(suspendedProcesses);
-            return this;
+
+        public Builder suspendedProcesses(List<String> suspendedProcesses) {
+            return suspendedProcesses(Output.of(suspendedProcesses));
         }
+
         public Builder suspendedProcesses(String... suspendedProcesses) {
             return suspendedProcesses(List.of(suspendedProcesses));
         }
+
         public Builder tags(@Nullable Output<List<GroupTagGetArgs>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable List<GroupTagGetArgs> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(List<GroupTagGetArgs> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tags(GroupTagGetArgs... tags) {
             return tags(List.of(tags));
         }
+
         public Builder tagsCollection(@Nullable Output<List<Map<String,String>>> tagsCollection) {
-            this.tagsCollection = tagsCollection;
+            $.tagsCollection = tagsCollection;
             return this;
         }
-        public Builder tagsCollection(@Nullable List<Map<String,String>> tagsCollection) {
-            this.tagsCollection = Codegen.ofNullable(tagsCollection);
-            return this;
+
+        public Builder tagsCollection(List<Map<String,String>> tagsCollection) {
+            return tagsCollection(Output.of(tagsCollection));
         }
+
+        public Builder tagsCollection(Map<String,String>... tagsCollection) {
+            return tagsCollection(List.of(tagsCollection));
+        }
+
         public Builder targetGroupArns(@Nullable Output<List<String>> targetGroupArns) {
-            this.targetGroupArns = targetGroupArns;
+            $.targetGroupArns = targetGroupArns;
             return this;
         }
-        public Builder targetGroupArns(@Nullable List<String> targetGroupArns) {
-            this.targetGroupArns = Codegen.ofNullable(targetGroupArns);
-            return this;
+
+        public Builder targetGroupArns(List<String> targetGroupArns) {
+            return targetGroupArns(Output.of(targetGroupArns));
         }
+
         public Builder targetGroupArns(String... targetGroupArns) {
             return targetGroupArns(List.of(targetGroupArns));
         }
+
         public Builder terminationPolicies(@Nullable Output<List<String>> terminationPolicies) {
-            this.terminationPolicies = terminationPolicies;
+            $.terminationPolicies = terminationPolicies;
             return this;
         }
-        public Builder terminationPolicies(@Nullable List<String> terminationPolicies) {
-            this.terminationPolicies = Codegen.ofNullable(terminationPolicies);
-            return this;
+
+        public Builder terminationPolicies(List<String> terminationPolicies) {
+            return terminationPolicies(Output.of(terminationPolicies));
         }
+
         public Builder terminationPolicies(String... terminationPolicies) {
             return terminationPolicies(List.of(terminationPolicies));
         }
+
         public Builder vpcZoneIdentifiers(@Nullable Output<List<String>> vpcZoneIdentifiers) {
-            this.vpcZoneIdentifiers = vpcZoneIdentifiers;
+            $.vpcZoneIdentifiers = vpcZoneIdentifiers;
             return this;
         }
-        public Builder vpcZoneIdentifiers(@Nullable List<String> vpcZoneIdentifiers) {
-            this.vpcZoneIdentifiers = Codegen.ofNullable(vpcZoneIdentifiers);
-            return this;
+
+        public Builder vpcZoneIdentifiers(List<String> vpcZoneIdentifiers) {
+            return vpcZoneIdentifiers(Output.of(vpcZoneIdentifiers));
         }
+
         public Builder vpcZoneIdentifiers(String... vpcZoneIdentifiers) {
             return vpcZoneIdentifiers(List.of(vpcZoneIdentifiers));
         }
+
         public Builder waitForCapacityTimeout(@Nullable Output<String> waitForCapacityTimeout) {
-            this.waitForCapacityTimeout = waitForCapacityTimeout;
+            $.waitForCapacityTimeout = waitForCapacityTimeout;
             return this;
         }
-        public Builder waitForCapacityTimeout(@Nullable String waitForCapacityTimeout) {
-            this.waitForCapacityTimeout = Codegen.ofNullable(waitForCapacityTimeout);
-            return this;
+
+        public Builder waitForCapacityTimeout(String waitForCapacityTimeout) {
+            return waitForCapacityTimeout(Output.of(waitForCapacityTimeout));
         }
+
         public Builder waitForElbCapacity(@Nullable Output<Integer> waitForElbCapacity) {
-            this.waitForElbCapacity = waitForElbCapacity;
+            $.waitForElbCapacity = waitForElbCapacity;
             return this;
         }
-        public Builder waitForElbCapacity(@Nullable Integer waitForElbCapacity) {
-            this.waitForElbCapacity = Codegen.ofNullable(waitForElbCapacity);
-            return this;
+
+        public Builder waitForElbCapacity(Integer waitForElbCapacity) {
+            return waitForElbCapacity(Output.of(waitForElbCapacity));
         }
+
         public Builder warmPool(@Nullable Output<GroupWarmPoolGetArgs> warmPool) {
-            this.warmPool = warmPool;
+            $.warmPool = warmPool;
             return this;
         }
-        public Builder warmPool(@Nullable GroupWarmPoolGetArgs warmPool) {
-            this.warmPool = Codegen.ofNullable(warmPool);
-            return this;
-        }        public GroupState build() {
-            return new GroupState(arn, availabilityZones, capacityRebalance, defaultCooldown, desiredCapacity, enabledMetrics, forceDelete, forceDeleteWarmPool, healthCheckGracePeriod, healthCheckType, initialLifecycleHooks, instanceRefresh, launchConfiguration, launchTemplate, loadBalancers, maxInstanceLifetime, maxSize, metricsGranularity, minElbCapacity, minSize, mixedInstancesPolicy, name, namePrefix, placementGroup, protectFromScaleIn, serviceLinkedRoleArn, suspendedProcesses, tags, tagsCollection, targetGroupArns, terminationPolicies, vpcZoneIdentifiers, waitForCapacityTimeout, waitForElbCapacity, warmPool);
+
+        public Builder warmPool(GroupWarmPoolGetArgs warmPool) {
+            return warmPool(Output.of(warmPool));
+        }
+
+        public GroupState build() {
+            return $;
         }
     }
+
 }

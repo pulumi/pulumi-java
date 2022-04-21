@@ -27,7 +27,7 @@ public final class SchemaResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="categories", required=true)
-      private final List<String> categories;
+    private List<String> categories;
 
     public List<String> categories() {
         return this.categories;
@@ -38,10 +38,10 @@ public final class SchemaResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="columns")
-      private final @Nullable List<ColumnResponse> columns;
+    private @Nullable List<ColumnResponse> columns;
 
-    public List<ColumnResponse> columns() {
-        return this.columns == null ? List.of() : this.columns;
+    public Optional<List<ColumnResponse>> columns() {
+        return Optional.ofNullable(this.columns);
     }
 
     /**
@@ -49,10 +49,10 @@ public final class SchemaResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable String description;
+    private @Nullable String description;
 
     public Optional<String> description() {
-        return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -60,10 +60,10 @@ public final class SchemaResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="displayName")
-      private final @Nullable String displayName;
+    private @Nullable String displayName;
 
     public Optional<String> displayName() {
-        return this.displayName == null ? Optional.empty() : Optional.ofNullable(this.displayName);
+        return Optional.ofNullable(this.displayName);
     }
 
     /**
@@ -71,7 +71,7 @@ public final class SchemaResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="labels", required=true)
-      private final List<String> labels;
+    private List<String> labels;
 
     public List<String> labels() {
         return this.labels;
@@ -82,10 +82,10 @@ public final class SchemaResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable String name;
+    private @Nullable String name;
 
     public Optional<String> name() {
-        return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -93,7 +93,7 @@ public final class SchemaResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="restoredLogs", required=true)
-      private final RestoredLogsResponse restoredLogs;
+    private RestoredLogsResponse restoredLogs;
 
     public RestoredLogsResponse restoredLogs() {
         return this.restoredLogs;
@@ -104,7 +104,7 @@ public final class SchemaResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="searchResults", required=true)
-      private final SearchResultsResponse searchResults;
+    private SearchResultsResponse searchResults;
 
     public SearchResultsResponse searchResults() {
         return this.searchResults;
@@ -115,7 +115,7 @@ public final class SchemaResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="solutions", required=true)
-      private final List<String> solutions;
+    private List<String> solutions;
 
     public List<String> solutions() {
         return this.solutions;
@@ -126,7 +126,7 @@ public final class SchemaResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="source", required=true)
-      private final String source;
+    private String source;
 
     public String source() {
         return this.source;
@@ -137,7 +137,7 @@ public final class SchemaResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="standardColumns", required=true)
-      private final List<ColumnResponse> standardColumns;
+    private List<ColumnResponse> standardColumns;
 
     public List<ColumnResponse> standardColumns() {
         return this.standardColumns;
@@ -148,7 +148,7 @@ public final class SchemaResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="tableSubType", required=true)
-      private final String tableSubType;
+    private String tableSubType;
 
     public String tableSubType() {
         return this.tableSubType;
@@ -159,169 +159,145 @@ public final class SchemaResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="tableType", required=true)
-      private final String tableType;
+    private String tableType;
 
     public String tableType() {
         return this.tableType;
     }
 
-    public SchemaResponse(
-        List<String> categories,
-        @Nullable List<ColumnResponse> columns,
-        @Nullable String description,
-        @Nullable String displayName,
-        List<String> labels,
-        @Nullable String name,
-        RestoredLogsResponse restoredLogs,
-        SearchResultsResponse searchResults,
-        List<String> solutions,
-        String source,
-        List<ColumnResponse> standardColumns,
-        String tableSubType,
-        String tableType) {
-        this.categories = Objects.requireNonNull(categories, "expected parameter 'categories' to be non-null");
-        this.columns = columns;
-        this.description = description;
-        this.displayName = displayName;
-        this.labels = Objects.requireNonNull(labels, "expected parameter 'labels' to be non-null");
-        this.name = name;
-        this.restoredLogs = Objects.requireNonNull(restoredLogs, "expected parameter 'restoredLogs' to be non-null");
-        this.searchResults = Objects.requireNonNull(searchResults, "expected parameter 'searchResults' to be non-null");
-        this.solutions = Objects.requireNonNull(solutions, "expected parameter 'solutions' to be non-null");
-        this.source = Objects.requireNonNull(source, "expected parameter 'source' to be non-null");
-        this.standardColumns = Objects.requireNonNull(standardColumns, "expected parameter 'standardColumns' to be non-null");
-        this.tableSubType = Objects.requireNonNull(tableSubType, "expected parameter 'tableSubType' to be non-null");
-        this.tableType = Objects.requireNonNull(tableType, "expected parameter 'tableType' to be non-null");
-    }
+    private SchemaResponse() {}
 
-    private SchemaResponse() {
-        this.categories = List.of();
-        this.columns = List.of();
-        this.description = null;
-        this.displayName = null;
-        this.labels = List.of();
-        this.name = null;
-        this.restoredLogs = null;
-        this.searchResults = null;
-        this.solutions = List.of();
-        this.source = null;
-        this.standardColumns = List.of();
-        this.tableSubType = null;
-        this.tableType = null;
+    private SchemaResponse(SchemaResponse $) {
+        this.categories = $.categories;
+        this.columns = $.columns;
+        this.description = $.description;
+        this.displayName = $.displayName;
+        this.labels = $.labels;
+        this.name = $.name;
+        this.restoredLogs = $.restoredLogs;
+        this.searchResults = $.searchResults;
+        this.solutions = $.solutions;
+        this.source = $.source;
+        this.standardColumns = $.standardColumns;
+        this.tableSubType = $.tableSubType;
+        this.tableType = $.tableType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SchemaResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<String> categories;
-        private @Nullable List<ColumnResponse> columns;
-        private @Nullable String description;
-        private @Nullable String displayName;
-        private List<String> labels;
-        private @Nullable String name;
-        private RestoredLogsResponse restoredLogs;
-        private SearchResultsResponse searchResults;
-        private List<String> solutions;
-        private String source;
-        private List<ColumnResponse> standardColumns;
-        private String tableSubType;
-        private String tableType;
+        private SchemaResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new SchemaResponse();
         }
 
         public Builder(SchemaResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.categories = defaults.categories;
-    	      this.columns = defaults.columns;
-    	      this.description = defaults.description;
-    	      this.displayName = defaults.displayName;
-    	      this.labels = defaults.labels;
-    	      this.name = defaults.name;
-    	      this.restoredLogs = defaults.restoredLogs;
-    	      this.searchResults = defaults.searchResults;
-    	      this.solutions = defaults.solutions;
-    	      this.source = defaults.source;
-    	      this.standardColumns = defaults.standardColumns;
-    	      this.tableSubType = defaults.tableSubType;
-    	      this.tableType = defaults.tableType;
+            $ = new SchemaResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder categories(List<String> categories) {
-            this.categories = Objects.requireNonNull(categories);
+            $.categories = categories;
             return this;
         }
+
         public Builder categories(String... categories) {
             return categories(List.of(categories));
         }
+
         public Builder columns(@Nullable List<ColumnResponse> columns) {
-            this.columns = columns;
+            $.columns = columns;
             return this;
         }
+
         public Builder columns(ColumnResponse... columns) {
             return columns(List.of(columns));
         }
+
         public Builder description(@Nullable String description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
+
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = displayName;
+            $.displayName = displayName;
             return this;
         }
+
         public Builder labels(List<String> labels) {
-            this.labels = Objects.requireNonNull(labels);
+            $.labels = labels;
             return this;
         }
+
         public Builder labels(String... labels) {
             return labels(List.of(labels));
         }
+
         public Builder name(@Nullable String name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
+
         public Builder restoredLogs(RestoredLogsResponse restoredLogs) {
-            this.restoredLogs = Objects.requireNonNull(restoredLogs);
+            $.restoredLogs = restoredLogs;
             return this;
         }
+
         public Builder searchResults(SearchResultsResponse searchResults) {
-            this.searchResults = Objects.requireNonNull(searchResults);
+            $.searchResults = searchResults;
             return this;
         }
+
         public Builder solutions(List<String> solutions) {
-            this.solutions = Objects.requireNonNull(solutions);
+            $.solutions = solutions;
             return this;
         }
+
         public Builder solutions(String... solutions) {
             return solutions(List.of(solutions));
         }
+
         public Builder source(String source) {
-            this.source = Objects.requireNonNull(source);
+            $.source = source;
             return this;
         }
+
         public Builder standardColumns(List<ColumnResponse> standardColumns) {
-            this.standardColumns = Objects.requireNonNull(standardColumns);
+            $.standardColumns = standardColumns;
             return this;
         }
+
         public Builder standardColumns(ColumnResponse... standardColumns) {
             return standardColumns(List.of(standardColumns));
         }
+
         public Builder tableSubType(String tableSubType) {
-            this.tableSubType = Objects.requireNonNull(tableSubType);
+            $.tableSubType = tableSubType;
             return this;
         }
+
         public Builder tableType(String tableType) {
-            this.tableType = Objects.requireNonNull(tableType);
+            $.tableType = tableType;
             return this;
-        }        public SchemaResponse build() {
-            return new SchemaResponse(categories, columns, description, displayName, labels, name, restoredLogs, searchResults, solutions, source, standardColumns, tableSubType, tableType);
+        }
+
+        public SchemaResponse build() {
+            $.categories = Objects.requireNonNull($.categories, "expected parameter 'categories' to be non-null");
+            $.labels = Objects.requireNonNull($.labels, "expected parameter 'labels' to be non-null");
+            $.restoredLogs = Objects.requireNonNull($.restoredLogs, "expected parameter 'restoredLogs' to be non-null");
+            $.searchResults = Objects.requireNonNull($.searchResults, "expected parameter 'searchResults' to be non-null");
+            $.solutions = Objects.requireNonNull($.solutions, "expected parameter 'solutions' to be non-null");
+            $.source = Objects.requireNonNull($.source, "expected parameter 'source' to be non-null");
+            $.standardColumns = Objects.requireNonNull($.standardColumns, "expected parameter 'standardColumns' to be non-null");
+            $.tableSubType = Objects.requireNonNull($.tableSubType, "expected parameter 'tableSubType' to be non-null");
+            $.tableType = Objects.requireNonNull($.tableType, "expected parameter 'tableType' to be non-null");
+            return $;
         }
     }
+
 }

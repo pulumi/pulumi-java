@@ -6,7 +6,6 @@ package com.pulumi.aws.s3.inputs;
 import com.pulumi.aws.s3.inputs.BucketReplicationConfigRuleDestinationReplicationTimeTimeArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +19,7 @@ public final class BucketReplicationConfigRuleDestinationReplicationTimeArgs ext
      * 
      */
     @Import(name="status", required=true)
-      private final Output<String> status;
+    private Output<String> status;
 
     public Output<String> status() {
         return this.status;
@@ -31,63 +30,60 @@ public final class BucketReplicationConfigRuleDestinationReplicationTimeArgs ext
      * 
      */
     @Import(name="time", required=true)
-      private final Output<BucketReplicationConfigRuleDestinationReplicationTimeTimeArgs> time;
+    private Output<BucketReplicationConfigRuleDestinationReplicationTimeTimeArgs> time;
 
     public Output<BucketReplicationConfigRuleDestinationReplicationTimeTimeArgs> time() {
         return this.time;
     }
 
-    public BucketReplicationConfigRuleDestinationReplicationTimeArgs(
-        Output<String> status,
-        Output<BucketReplicationConfigRuleDestinationReplicationTimeTimeArgs> time) {
-        this.status = Objects.requireNonNull(status, "expected parameter 'status' to be non-null");
-        this.time = Objects.requireNonNull(time, "expected parameter 'time' to be non-null");
-    }
+    private BucketReplicationConfigRuleDestinationReplicationTimeArgs() {}
 
-    private BucketReplicationConfigRuleDestinationReplicationTimeArgs() {
-        this.status = Codegen.empty();
-        this.time = Codegen.empty();
+    private BucketReplicationConfigRuleDestinationReplicationTimeArgs(BucketReplicationConfigRuleDestinationReplicationTimeArgs $) {
+        this.status = $.status;
+        this.time = $.time;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BucketReplicationConfigRuleDestinationReplicationTimeArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> status;
-        private Output<BucketReplicationConfigRuleDestinationReplicationTimeTimeArgs> time;
+        private BucketReplicationConfigRuleDestinationReplicationTimeArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new BucketReplicationConfigRuleDestinationReplicationTimeArgs();
         }
 
         public Builder(BucketReplicationConfigRuleDestinationReplicationTimeArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.status = defaults.status;
-    	      this.time = defaults.time;
+            $ = new BucketReplicationConfigRuleDestinationReplicationTimeArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder status(Output<String> status) {
-            this.status = Objects.requireNonNull(status);
+            $.status = status;
             return this;
         }
+
         public Builder status(String status) {
-            this.status = Output.of(Objects.requireNonNull(status));
-            return this;
+            return status(Output.of(status));
         }
+
         public Builder time(Output<BucketReplicationConfigRuleDestinationReplicationTimeTimeArgs> time) {
-            this.time = Objects.requireNonNull(time);
+            $.time = time;
             return this;
         }
+
         public Builder time(BucketReplicationConfigRuleDestinationReplicationTimeTimeArgs time) {
-            this.time = Output.of(Objects.requireNonNull(time));
-            return this;
-        }        public BucketReplicationConfigRuleDestinationReplicationTimeArgs build() {
-            return new BucketReplicationConfigRuleDestinationReplicationTimeArgs(status, time);
+            return time(Output.of(time));
+        }
+
+        public BucketReplicationConfigRuleDestinationReplicationTimeArgs build() {
+            $.status = Objects.requireNonNull($.status, "expected parameter 'status' to be non-null");
+            $.time = Objects.requireNonNull($.time, "expected parameter 'time' to be non-null");
+            return $;
         }
     }
+
 }

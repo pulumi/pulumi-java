@@ -17,7 +17,7 @@ public final class GetStageArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="restApiId", required=true)
-      private final String restApiId;
+    private String restApiId;
 
     public String restApiId() {
         return this.restApiId;
@@ -28,55 +28,52 @@ public final class GetStageArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="stageName", required=true)
-      private final String stageName;
+    private String stageName;
 
     public String stageName() {
         return this.stageName;
     }
 
-    public GetStageArgs(
-        String restApiId,
-        String stageName) {
-        this.restApiId = Objects.requireNonNull(restApiId, "expected parameter 'restApiId' to be non-null");
-        this.stageName = Objects.requireNonNull(stageName, "expected parameter 'stageName' to be non-null");
-    }
+    private GetStageArgs() {}
 
-    private GetStageArgs() {
-        this.restApiId = null;
-        this.stageName = null;
+    private GetStageArgs(GetStageArgs $) {
+        this.restApiId = $.restApiId;
+        this.stageName = $.stageName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetStageArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String restApiId;
-        private String stageName;
+        private GetStageArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetStageArgs();
         }
 
         public Builder(GetStageArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.restApiId = defaults.restApiId;
-    	      this.stageName = defaults.stageName;
+            $ = new GetStageArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder restApiId(String restApiId) {
-            this.restApiId = Objects.requireNonNull(restApiId);
+            $.restApiId = restApiId;
             return this;
         }
+
         public Builder stageName(String stageName) {
-            this.stageName = Objects.requireNonNull(stageName);
+            $.stageName = stageName;
             return this;
-        }        public GetStageArgs build() {
-            return new GetStageArgs(restApiId, stageName);
+        }
+
+        public GetStageArgs build() {
+            $.restApiId = Objects.requireNonNull($.restApiId, "expected parameter 'restApiId' to be non-null");
+            $.stageName = Objects.requireNonNull($.stageName, "expected parameter 'stageName' to be non-null");
+            return $;
         }
     }
+
 }

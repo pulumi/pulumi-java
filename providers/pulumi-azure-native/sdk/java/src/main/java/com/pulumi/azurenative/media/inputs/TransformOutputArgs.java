@@ -13,10 +13,10 @@ import com.pulumi.azurenative.media.inputs.VideoAnalyzerPresetArgs;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -33,10 +33,10 @@ public final class TransformOutputArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="onError")
-      private final @Nullable Output<Either<String,OnErrorType>> onError;
+    private @Nullable Output<Either<String,OnErrorType>> onError;
 
-    public Output<Either<String,OnErrorType>> onError() {
-        return this.onError == null ? Codegen.empty() : this.onError;
+    public Optional<Output<Either<String,OnErrorType>>> onError() {
+        return Optional.ofNullable(this.onError);
     }
 
     /**
@@ -44,7 +44,7 @@ public final class TransformOutputArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="preset", required=true)
-      private final Output<Object> preset;
+    private Output<Object> preset;
 
     public Output<Object> preset() {
         return this.preset;
@@ -55,76 +55,69 @@ public final class TransformOutputArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="relativePriority")
-      private final @Nullable Output<Either<String,Priority>> relativePriority;
+    private @Nullable Output<Either<String,Priority>> relativePriority;
 
-    public Output<Either<String,Priority>> relativePriority() {
-        return this.relativePriority == null ? Codegen.empty() : this.relativePriority;
+    public Optional<Output<Either<String,Priority>>> relativePriority() {
+        return Optional.ofNullable(this.relativePriority);
     }
 
-    public TransformOutputArgs(
-        @Nullable Output<Either<String,OnErrorType>> onError,
-        Output<Object> preset,
-        @Nullable Output<Either<String,Priority>> relativePriority) {
-        this.onError = onError;
-        this.preset = Objects.requireNonNull(preset, "expected parameter 'preset' to be non-null");
-        this.relativePriority = relativePriority;
-    }
+    private TransformOutputArgs() {}
 
-    private TransformOutputArgs() {
-        this.onError = Codegen.empty();
-        this.preset = Codegen.empty();
-        this.relativePriority = Codegen.empty();
+    private TransformOutputArgs(TransformOutputArgs $) {
+        this.onError = $.onError;
+        this.preset = $.preset;
+        this.relativePriority = $.relativePriority;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TransformOutputArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Either<String,OnErrorType>> onError;
-        private Output<Object> preset;
-        private @Nullable Output<Either<String,Priority>> relativePriority;
+        private TransformOutputArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TransformOutputArgs();
         }
 
         public Builder(TransformOutputArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.onError = defaults.onError;
-    	      this.preset = defaults.preset;
-    	      this.relativePriority = defaults.relativePriority;
+            $ = new TransformOutputArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder onError(@Nullable Output<Either<String,OnErrorType>> onError) {
-            this.onError = onError;
+            $.onError = onError;
             return this;
         }
-        public Builder onError(@Nullable Either<String,OnErrorType> onError) {
-            this.onError = Codegen.ofNullable(onError);
-            return this;
+
+        public Builder onError(Either<String,OnErrorType> onError) {
+            return onError(Output.of(onError));
         }
+
         public Builder preset(Output<Object> preset) {
-            this.preset = Objects.requireNonNull(preset);
+            $.preset = preset;
             return this;
         }
+
         public Builder preset(Object preset) {
-            this.preset = Output.of(Objects.requireNonNull(preset));
-            return this;
+            return preset(Output.of(preset));
         }
+
         public Builder relativePriority(@Nullable Output<Either<String,Priority>> relativePriority) {
-            this.relativePriority = relativePriority;
+            $.relativePriority = relativePriority;
             return this;
         }
-        public Builder relativePriority(@Nullable Either<String,Priority> relativePriority) {
-            this.relativePriority = Codegen.ofNullable(relativePriority);
-            return this;
-        }        public TransformOutputArgs build() {
-            return new TransformOutputArgs(onError, preset, relativePriority);
+
+        public Builder relativePriority(Either<String,Priority> relativePriority) {
+            return relativePriority(Output.of(relativePriority));
+        }
+
+        public TransformOutputArgs build() {
+            $.preset = Objects.requireNonNull($.preset, "expected parameter 'preset' to be non-null");
+            return $;
         }
     }
+
 }

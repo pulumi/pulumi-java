@@ -5,10 +5,10 @@ package com.pulumi.aws.cloudwatch.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,7 +21,7 @@ public final class EventTargetRedshiftTargetArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="database", required=true)
-      private final Output<String> database;
+    private Output<String> database;
 
     public Output<String> database() {
         return this.database;
@@ -32,10 +32,10 @@ public final class EventTargetRedshiftTargetArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="dbUser")
-      private final @Nullable Output<String> dbUser;
+    private @Nullable Output<String> dbUser;
 
-    public Output<String> dbUser() {
-        return this.dbUser == null ? Codegen.empty() : this.dbUser;
+    public Optional<Output<String>> dbUser() {
+        return Optional.ofNullable(this.dbUser);
     }
 
     /**
@@ -43,10 +43,10 @@ public final class EventTargetRedshiftTargetArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="secretsManagerArn")
-      private final @Nullable Output<String> secretsManagerArn;
+    private @Nullable Output<String> secretsManagerArn;
 
-    public Output<String> secretsManagerArn() {
-        return this.secretsManagerArn == null ? Codegen.empty() : this.secretsManagerArn;
+    public Optional<Output<String>> secretsManagerArn() {
+        return Optional.ofNullable(this.secretsManagerArn);
     }
 
     /**
@@ -54,10 +54,10 @@ public final class EventTargetRedshiftTargetArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="sql")
-      private final @Nullable Output<String> sql;
+    private @Nullable Output<String> sql;
 
-    public Output<String> sql() {
-        return this.sql == null ? Codegen.empty() : this.sql;
+    public Optional<Output<String>> sql() {
+        return Optional.ofNullable(this.sql);
     }
 
     /**
@@ -65,10 +65,10 @@ public final class EventTargetRedshiftTargetArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="statementName")
-      private final @Nullable Output<String> statementName;
+    private @Nullable Output<String> statementName;
 
-    public Output<String> statementName() {
-        return this.statementName == null ? Codegen.empty() : this.statementName;
+    public Optional<Output<String>> statementName() {
+        return Optional.ofNullable(this.statementName);
     }
 
     /**
@@ -76,115 +76,99 @@ public final class EventTargetRedshiftTargetArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="withEvent")
-      private final @Nullable Output<Boolean> withEvent;
+    private @Nullable Output<Boolean> withEvent;
 
-    public Output<Boolean> withEvent() {
-        return this.withEvent == null ? Codegen.empty() : this.withEvent;
+    public Optional<Output<Boolean>> withEvent() {
+        return Optional.ofNullable(this.withEvent);
     }
 
-    public EventTargetRedshiftTargetArgs(
-        Output<String> database,
-        @Nullable Output<String> dbUser,
-        @Nullable Output<String> secretsManagerArn,
-        @Nullable Output<String> sql,
-        @Nullable Output<String> statementName,
-        @Nullable Output<Boolean> withEvent) {
-        this.database = Objects.requireNonNull(database, "expected parameter 'database' to be non-null");
-        this.dbUser = dbUser;
-        this.secretsManagerArn = secretsManagerArn;
-        this.sql = sql;
-        this.statementName = statementName;
-        this.withEvent = withEvent;
-    }
+    private EventTargetRedshiftTargetArgs() {}
 
-    private EventTargetRedshiftTargetArgs() {
-        this.database = Codegen.empty();
-        this.dbUser = Codegen.empty();
-        this.secretsManagerArn = Codegen.empty();
-        this.sql = Codegen.empty();
-        this.statementName = Codegen.empty();
-        this.withEvent = Codegen.empty();
+    private EventTargetRedshiftTargetArgs(EventTargetRedshiftTargetArgs $) {
+        this.database = $.database;
+        this.dbUser = $.dbUser;
+        this.secretsManagerArn = $.secretsManagerArn;
+        this.sql = $.sql;
+        this.statementName = $.statementName;
+        this.withEvent = $.withEvent;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EventTargetRedshiftTargetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> database;
-        private @Nullable Output<String> dbUser;
-        private @Nullable Output<String> secretsManagerArn;
-        private @Nullable Output<String> sql;
-        private @Nullable Output<String> statementName;
-        private @Nullable Output<Boolean> withEvent;
+        private EventTargetRedshiftTargetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new EventTargetRedshiftTargetArgs();
         }
 
         public Builder(EventTargetRedshiftTargetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.database = defaults.database;
-    	      this.dbUser = defaults.dbUser;
-    	      this.secretsManagerArn = defaults.secretsManagerArn;
-    	      this.sql = defaults.sql;
-    	      this.statementName = defaults.statementName;
-    	      this.withEvent = defaults.withEvent;
+            $ = new EventTargetRedshiftTargetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder database(Output<String> database) {
-            this.database = Objects.requireNonNull(database);
+            $.database = database;
             return this;
         }
+
         public Builder database(String database) {
-            this.database = Output.of(Objects.requireNonNull(database));
-            return this;
+            return database(Output.of(database));
         }
+
         public Builder dbUser(@Nullable Output<String> dbUser) {
-            this.dbUser = dbUser;
+            $.dbUser = dbUser;
             return this;
         }
-        public Builder dbUser(@Nullable String dbUser) {
-            this.dbUser = Codegen.ofNullable(dbUser);
-            return this;
+
+        public Builder dbUser(String dbUser) {
+            return dbUser(Output.of(dbUser));
         }
+
         public Builder secretsManagerArn(@Nullable Output<String> secretsManagerArn) {
-            this.secretsManagerArn = secretsManagerArn;
+            $.secretsManagerArn = secretsManagerArn;
             return this;
         }
-        public Builder secretsManagerArn(@Nullable String secretsManagerArn) {
-            this.secretsManagerArn = Codegen.ofNullable(secretsManagerArn);
-            return this;
+
+        public Builder secretsManagerArn(String secretsManagerArn) {
+            return secretsManagerArn(Output.of(secretsManagerArn));
         }
+
         public Builder sql(@Nullable Output<String> sql) {
-            this.sql = sql;
+            $.sql = sql;
             return this;
         }
-        public Builder sql(@Nullable String sql) {
-            this.sql = Codegen.ofNullable(sql);
-            return this;
+
+        public Builder sql(String sql) {
+            return sql(Output.of(sql));
         }
+
         public Builder statementName(@Nullable Output<String> statementName) {
-            this.statementName = statementName;
+            $.statementName = statementName;
             return this;
         }
-        public Builder statementName(@Nullable String statementName) {
-            this.statementName = Codegen.ofNullable(statementName);
-            return this;
+
+        public Builder statementName(String statementName) {
+            return statementName(Output.of(statementName));
         }
+
         public Builder withEvent(@Nullable Output<Boolean> withEvent) {
-            this.withEvent = withEvent;
+            $.withEvent = withEvent;
             return this;
         }
-        public Builder withEvent(@Nullable Boolean withEvent) {
-            this.withEvent = Codegen.ofNullable(withEvent);
-            return this;
-        }        public EventTargetRedshiftTargetArgs build() {
-            return new EventTargetRedshiftTargetArgs(database, dbUser, secretsManagerArn, sql, statementName, withEvent);
+
+        public Builder withEvent(Boolean withEvent) {
+            return withEvent(Output.of(withEvent));
+        }
+
+        public EventTargetRedshiftTargetArgs build() {
+            $.database = Objects.requireNonNull($.database, "expected parameter 'database' to be non-null");
+            return $;
         }
     }
+
 }

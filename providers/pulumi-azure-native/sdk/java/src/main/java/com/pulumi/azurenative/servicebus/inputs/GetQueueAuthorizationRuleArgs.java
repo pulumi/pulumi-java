@@ -17,7 +17,7 @@ public final class GetQueueAuthorizationRuleArgs extends com.pulumi.resources.In
      * 
      */
     @Import(name="authorizationRuleName", required=true)
-      private final String authorizationRuleName;
+    private String authorizationRuleName;
 
     public String authorizationRuleName() {
         return this.authorizationRuleName;
@@ -28,7 +28,7 @@ public final class GetQueueAuthorizationRuleArgs extends com.pulumi.resources.In
      * 
      */
     @Import(name="namespaceName", required=true)
-      private final String namespaceName;
+    private String namespaceName;
 
     public String namespaceName() {
         return this.namespaceName;
@@ -39,7 +39,7 @@ public final class GetQueueAuthorizationRuleArgs extends com.pulumi.resources.In
      * 
      */
     @Import(name="queueName", required=true)
-      private final String queueName;
+    private String queueName;
 
     public String queueName() {
         return this.queueName;
@@ -50,73 +50,66 @@ public final class GetQueueAuthorizationRuleArgs extends com.pulumi.resources.In
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public GetQueueAuthorizationRuleArgs(
-        String authorizationRuleName,
-        String namespaceName,
-        String queueName,
-        String resourceGroupName) {
-        this.authorizationRuleName = Objects.requireNonNull(authorizationRuleName, "expected parameter 'authorizationRuleName' to be non-null");
-        this.namespaceName = Objects.requireNonNull(namespaceName, "expected parameter 'namespaceName' to be non-null");
-        this.queueName = Objects.requireNonNull(queueName, "expected parameter 'queueName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private GetQueueAuthorizationRuleArgs() {}
 
-    private GetQueueAuthorizationRuleArgs() {
-        this.authorizationRuleName = null;
-        this.namespaceName = null;
-        this.queueName = null;
-        this.resourceGroupName = null;
+    private GetQueueAuthorizationRuleArgs(GetQueueAuthorizationRuleArgs $) {
+        this.authorizationRuleName = $.authorizationRuleName;
+        this.namespaceName = $.namespaceName;
+        this.queueName = $.queueName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetQueueAuthorizationRuleArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String authorizationRuleName;
-        private String namespaceName;
-        private String queueName;
-        private String resourceGroupName;
+        private GetQueueAuthorizationRuleArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetQueueAuthorizationRuleArgs();
         }
 
         public Builder(GetQueueAuthorizationRuleArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.authorizationRuleName = defaults.authorizationRuleName;
-    	      this.namespaceName = defaults.namespaceName;
-    	      this.queueName = defaults.queueName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new GetQueueAuthorizationRuleArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder authorizationRuleName(String authorizationRuleName) {
-            this.authorizationRuleName = Objects.requireNonNull(authorizationRuleName);
+            $.authorizationRuleName = authorizationRuleName;
             return this;
         }
+
         public Builder namespaceName(String namespaceName) {
-            this.namespaceName = Objects.requireNonNull(namespaceName);
+            $.namespaceName = namespaceName;
             return this;
         }
+
         public Builder queueName(String queueName) {
-            this.queueName = Objects.requireNonNull(queueName);
+            $.queueName = queueName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public GetQueueAuthorizationRuleArgs build() {
-            return new GetQueueAuthorizationRuleArgs(authorizationRuleName, namespaceName, queueName, resourceGroupName);
+        }
+
+        public GetQueueAuthorizationRuleArgs build() {
+            $.authorizationRuleName = Objects.requireNonNull($.authorizationRuleName, "expected parameter 'authorizationRuleName' to be non-null");
+            $.namespaceName = Objects.requireNonNull($.namespaceName, "expected parameter 'namespaceName' to be non-null");
+            $.queueName = Objects.requireNonNull($.queueName, "expected parameter 'queueName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,7 +5,6 @@ package com.pulumi.azurenative.network.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +23,7 @@ public final class HubRouteArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="destinationType", required=true)
-      private final Output<String> destinationType;
+    private Output<String> destinationType;
 
     public Output<String> destinationType() {
         return this.destinationType;
@@ -35,7 +34,7 @@ public final class HubRouteArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="destinations", required=true)
-      private final Output<List<String>> destinations;
+    private Output<List<String>> destinations;
 
     public Output<List<String>> destinations() {
         return this.destinations;
@@ -46,7 +45,7 @@ public final class HubRouteArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name", required=true)
-      private final Output<String> name;
+    private Output<String> name;
 
     public Output<String> name() {
         return this.name;
@@ -57,7 +56,7 @@ public final class HubRouteArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="nextHop", required=true)
-      private final Output<String> nextHop;
+    private Output<String> nextHop;
 
     public Output<String> nextHop() {
         return this.nextHop;
@@ -68,105 +67,97 @@ public final class HubRouteArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="nextHopType", required=true)
-      private final Output<String> nextHopType;
+    private Output<String> nextHopType;
 
     public Output<String> nextHopType() {
         return this.nextHopType;
     }
 
-    public HubRouteArgs(
-        Output<String> destinationType,
-        Output<List<String>> destinations,
-        Output<String> name,
-        Output<String> nextHop,
-        Output<String> nextHopType) {
-        this.destinationType = Objects.requireNonNull(destinationType, "expected parameter 'destinationType' to be non-null");
-        this.destinations = Objects.requireNonNull(destinations, "expected parameter 'destinations' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.nextHop = Objects.requireNonNull(nextHop, "expected parameter 'nextHop' to be non-null");
-        this.nextHopType = Objects.requireNonNull(nextHopType, "expected parameter 'nextHopType' to be non-null");
-    }
+    private HubRouteArgs() {}
 
-    private HubRouteArgs() {
-        this.destinationType = Codegen.empty();
-        this.destinations = Codegen.empty();
-        this.name = Codegen.empty();
-        this.nextHop = Codegen.empty();
-        this.nextHopType = Codegen.empty();
+    private HubRouteArgs(HubRouteArgs $) {
+        this.destinationType = $.destinationType;
+        this.destinations = $.destinations;
+        this.name = $.name;
+        this.nextHop = $.nextHop;
+        this.nextHopType = $.nextHopType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(HubRouteArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> destinationType;
-        private Output<List<String>> destinations;
-        private Output<String> name;
-        private Output<String> nextHop;
-        private Output<String> nextHopType;
+        private HubRouteArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new HubRouteArgs();
         }
 
         public Builder(HubRouteArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.destinationType = defaults.destinationType;
-    	      this.destinations = defaults.destinations;
-    	      this.name = defaults.name;
-    	      this.nextHop = defaults.nextHop;
-    	      this.nextHopType = defaults.nextHopType;
+            $ = new HubRouteArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder destinationType(Output<String> destinationType) {
-            this.destinationType = Objects.requireNonNull(destinationType);
+            $.destinationType = destinationType;
             return this;
         }
+
         public Builder destinationType(String destinationType) {
-            this.destinationType = Output.of(Objects.requireNonNull(destinationType));
-            return this;
+            return destinationType(Output.of(destinationType));
         }
+
         public Builder destinations(Output<List<String>> destinations) {
-            this.destinations = Objects.requireNonNull(destinations);
+            $.destinations = destinations;
             return this;
         }
+
         public Builder destinations(List<String> destinations) {
-            this.destinations = Output.of(Objects.requireNonNull(destinations));
-            return this;
+            return destinations(Output.of(destinations));
         }
+
         public Builder destinations(String... destinations) {
             return destinations(List.of(destinations));
         }
+
         public Builder name(Output<String> name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Output.of(Objects.requireNonNull(name));
-            return this;
+            return name(Output.of(name));
         }
+
         public Builder nextHop(Output<String> nextHop) {
-            this.nextHop = Objects.requireNonNull(nextHop);
+            $.nextHop = nextHop;
             return this;
         }
+
         public Builder nextHop(String nextHop) {
-            this.nextHop = Output.of(Objects.requireNonNull(nextHop));
-            return this;
+            return nextHop(Output.of(nextHop));
         }
+
         public Builder nextHopType(Output<String> nextHopType) {
-            this.nextHopType = Objects.requireNonNull(nextHopType);
+            $.nextHopType = nextHopType;
             return this;
         }
+
         public Builder nextHopType(String nextHopType) {
-            this.nextHopType = Output.of(Objects.requireNonNull(nextHopType));
-            return this;
-        }        public HubRouteArgs build() {
-            return new HubRouteArgs(destinationType, destinations, name, nextHop, nextHopType);
+            return nextHopType(Output.of(nextHopType));
+        }
+
+        public HubRouteArgs build() {
+            $.destinationType = Objects.requireNonNull($.destinationType, "expected parameter 'destinationType' to be non-null");
+            $.destinations = Objects.requireNonNull($.destinations, "expected parameter 'destinations' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.nextHop = Objects.requireNonNull($.nextHop, "expected parameter 'nextHop' to be non-null");
+            $.nextHopType = Objects.requireNonNull($.nextHopType, "expected parameter 'nextHopType' to be non-null");
+            return $;
         }
     }
+
 }

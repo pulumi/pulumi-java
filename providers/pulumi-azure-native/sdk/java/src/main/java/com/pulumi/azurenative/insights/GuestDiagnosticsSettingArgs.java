@@ -6,11 +6,11 @@ package com.pulumi.azurenative.insights;
 import com.pulumi.azurenative.insights.inputs.DataSourceArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,10 @@ public final class GuestDiagnosticsSettingArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="dataSources")
-      private final @Nullable Output<List<DataSourceArgs>> dataSources;
+    private @Nullable Output<List<DataSourceArgs>> dataSources;
 
-    public Output<List<DataSourceArgs>> dataSources() {
-        return this.dataSources == null ? Codegen.empty() : this.dataSources;
+    public Optional<Output<List<DataSourceArgs>>> dataSources() {
+        return Optional.ofNullable(this.dataSources);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class GuestDiagnosticsSettingArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="diagnosticSettingsName")
-      private final @Nullable Output<String> diagnosticSettingsName;
+    private @Nullable Output<String> diagnosticSettingsName;
 
-    public Output<String> diagnosticSettingsName() {
-        return this.diagnosticSettingsName == null ? Codegen.empty() : this.diagnosticSettingsName;
+    public Optional<Output<String>> diagnosticSettingsName() {
+        return Optional.ofNullable(this.diagnosticSettingsName);
     }
 
     /**
@@ -45,10 +45,10 @@ public final class GuestDiagnosticsSettingArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -56,17 +56,17 @@ public final class GuestDiagnosticsSettingArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="osType")
-      private final @Nullable Output<String> osType;
+    private @Nullable Output<String> osType;
 
-    public Output<String> osType() {
-        return this.osType == null ? Codegen.empty() : this.osType;
+    public Optional<Output<String>> osType() {
+        return Optional.ofNullable(this.osType);
     }
 
     @Import(name="proxySetting")
-      private final @Nullable Output<String> proxySetting;
+    private @Nullable Output<String> proxySetting;
 
-    public Output<String> proxySetting() {
-        return this.proxySetting == null ? Codegen.empty() : this.proxySetting;
+    public Optional<Output<String>> proxySetting() {
+        return Optional.ofNullable(this.proxySetting);
     }
 
     /**
@@ -74,7 +74,7 @@ public final class GuestDiagnosticsSettingArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -85,131 +85,113 @@ public final class GuestDiagnosticsSettingArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public GuestDiagnosticsSettingArgs(
-        @Nullable Output<List<DataSourceArgs>> dataSources,
-        @Nullable Output<String> diagnosticSettingsName,
-        @Nullable Output<String> location,
-        @Nullable Output<String> osType,
-        @Nullable Output<String> proxySetting,
-        Output<String> resourceGroupName,
-        @Nullable Output<Map<String,String>> tags) {
-        this.dataSources = dataSources;
-        this.diagnosticSettingsName = diagnosticSettingsName;
-        this.location = location;
-        this.osType = osType;
-        this.proxySetting = proxySetting;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.tags = tags;
-    }
+    private GuestDiagnosticsSettingArgs() {}
 
-    private GuestDiagnosticsSettingArgs() {
-        this.dataSources = Codegen.empty();
-        this.diagnosticSettingsName = Codegen.empty();
-        this.location = Codegen.empty();
-        this.osType = Codegen.empty();
-        this.proxySetting = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.tags = Codegen.empty();
+    private GuestDiagnosticsSettingArgs(GuestDiagnosticsSettingArgs $) {
+        this.dataSources = $.dataSources;
+        this.diagnosticSettingsName = $.diagnosticSettingsName;
+        this.location = $.location;
+        this.osType = $.osType;
+        this.proxySetting = $.proxySetting;
+        this.resourceGroupName = $.resourceGroupName;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GuestDiagnosticsSettingArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<DataSourceArgs>> dataSources;
-        private @Nullable Output<String> diagnosticSettingsName;
-        private @Nullable Output<String> location;
-        private @Nullable Output<String> osType;
-        private @Nullable Output<String> proxySetting;
-        private Output<String> resourceGroupName;
-        private @Nullable Output<Map<String,String>> tags;
+        private GuestDiagnosticsSettingArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GuestDiagnosticsSettingArgs();
         }
 
         public Builder(GuestDiagnosticsSettingArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dataSources = defaults.dataSources;
-    	      this.diagnosticSettingsName = defaults.diagnosticSettingsName;
-    	      this.location = defaults.location;
-    	      this.osType = defaults.osType;
-    	      this.proxySetting = defaults.proxySetting;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.tags = defaults.tags;
+            $ = new GuestDiagnosticsSettingArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder dataSources(@Nullable Output<List<DataSourceArgs>> dataSources) {
-            this.dataSources = dataSources;
+            $.dataSources = dataSources;
             return this;
         }
-        public Builder dataSources(@Nullable List<DataSourceArgs> dataSources) {
-            this.dataSources = Codegen.ofNullable(dataSources);
-            return this;
+
+        public Builder dataSources(List<DataSourceArgs> dataSources) {
+            return dataSources(Output.of(dataSources));
         }
+
         public Builder dataSources(DataSourceArgs... dataSources) {
             return dataSources(List.of(dataSources));
         }
+
         public Builder diagnosticSettingsName(@Nullable Output<String> diagnosticSettingsName) {
-            this.diagnosticSettingsName = diagnosticSettingsName;
+            $.diagnosticSettingsName = diagnosticSettingsName;
             return this;
         }
-        public Builder diagnosticSettingsName(@Nullable String diagnosticSettingsName) {
-            this.diagnosticSettingsName = Codegen.ofNullable(diagnosticSettingsName);
-            return this;
+
+        public Builder diagnosticSettingsName(String diagnosticSettingsName) {
+            return diagnosticSettingsName(Output.of(diagnosticSettingsName));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder osType(@Nullable Output<String> osType) {
-            this.osType = osType;
+            $.osType = osType;
             return this;
         }
-        public Builder osType(@Nullable String osType) {
-            this.osType = Codegen.ofNullable(osType);
-            return this;
+
+        public Builder osType(String osType) {
+            return osType(Output.of(osType));
         }
+
         public Builder proxySetting(@Nullable Output<String> proxySetting) {
-            this.proxySetting = proxySetting;
+            $.proxySetting = proxySetting;
             return this;
         }
-        public Builder proxySetting(@Nullable String proxySetting) {
-            this.proxySetting = Codegen.ofNullable(proxySetting);
-            return this;
+
+        public Builder proxySetting(String proxySetting) {
+            return proxySetting(Output.of(proxySetting));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
-        }        public GuestDiagnosticsSettingArgs build() {
-            return new GuestDiagnosticsSettingArgs(dataSources, diagnosticSettingsName, location, osType, proxySetting, resourceGroupName, tags);
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
+        }
+
+        public GuestDiagnosticsSettingArgs build() {
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

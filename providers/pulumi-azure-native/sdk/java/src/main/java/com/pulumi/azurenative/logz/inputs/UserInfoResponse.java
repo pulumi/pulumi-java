@@ -19,10 +19,10 @@ public final class UserInfoResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="emailAddress")
-      private final @Nullable String emailAddress;
+    private @Nullable String emailAddress;
 
     public Optional<String> emailAddress() {
-        return this.emailAddress == null ? Optional.empty() : Optional.ofNullable(this.emailAddress);
+        return Optional.ofNullable(this.emailAddress);
     }
 
     /**
@@ -30,10 +30,10 @@ public final class UserInfoResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="firstName")
-      private final @Nullable String firstName;
+    private @Nullable String firstName;
 
     public Optional<String> firstName() {
-        return this.firstName == null ? Optional.empty() : Optional.ofNullable(this.firstName);
+        return Optional.ofNullable(this.firstName);
     }
 
     /**
@@ -41,10 +41,10 @@ public final class UserInfoResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="lastName")
-      private final @Nullable String lastName;
+    private @Nullable String lastName;
 
     public Optional<String> lastName() {
-        return this.lastName == null ? Optional.empty() : Optional.ofNullable(this.lastName);
+        return Optional.ofNullable(this.lastName);
     }
 
     /**
@@ -52,73 +52,62 @@ public final class UserInfoResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="phoneNumber")
-      private final @Nullable String phoneNumber;
+    private @Nullable String phoneNumber;
 
     public Optional<String> phoneNumber() {
-        return this.phoneNumber == null ? Optional.empty() : Optional.ofNullable(this.phoneNumber);
+        return Optional.ofNullable(this.phoneNumber);
     }
 
-    public UserInfoResponse(
-        @Nullable String emailAddress,
-        @Nullable String firstName,
-        @Nullable String lastName,
-        @Nullable String phoneNumber) {
-        this.emailAddress = emailAddress;
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.phoneNumber = phoneNumber;
-    }
+    private UserInfoResponse() {}
 
-    private UserInfoResponse() {
-        this.emailAddress = null;
-        this.firstName = null;
-        this.lastName = null;
-        this.phoneNumber = null;
+    private UserInfoResponse(UserInfoResponse $) {
+        this.emailAddress = $.emailAddress;
+        this.firstName = $.firstName;
+        this.lastName = $.lastName;
+        this.phoneNumber = $.phoneNumber;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(UserInfoResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String emailAddress;
-        private @Nullable String firstName;
-        private @Nullable String lastName;
-        private @Nullable String phoneNumber;
+        private UserInfoResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new UserInfoResponse();
         }
 
         public Builder(UserInfoResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.emailAddress = defaults.emailAddress;
-    	      this.firstName = defaults.firstName;
-    	      this.lastName = defaults.lastName;
-    	      this.phoneNumber = defaults.phoneNumber;
+            $ = new UserInfoResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder emailAddress(@Nullable String emailAddress) {
-            this.emailAddress = emailAddress;
+            $.emailAddress = emailAddress;
             return this;
         }
+
         public Builder firstName(@Nullable String firstName) {
-            this.firstName = firstName;
+            $.firstName = firstName;
             return this;
         }
+
         public Builder lastName(@Nullable String lastName) {
-            this.lastName = lastName;
+            $.lastName = lastName;
             return this;
         }
+
         public Builder phoneNumber(@Nullable String phoneNumber) {
-            this.phoneNumber = phoneNumber;
+            $.phoneNumber = phoneNumber;
             return this;
-        }        public UserInfoResponse build() {
-            return new UserInfoResponse(emailAddress, firstName, lastName, phoneNumber);
+        }
+
+        public UserInfoResponse build() {
+            return $;
         }
     }
+
 }

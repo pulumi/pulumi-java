@@ -24,7 +24,7 @@ public final class OpenShiftManagedClusterMasterPoolProfileResponse extends com.
      * 
      */
     @Import(name="count", required=true)
-      private final Integer count;
+    private Integer count;
 
     public Integer count() {
         return this.count;
@@ -35,10 +35,10 @@ public final class OpenShiftManagedClusterMasterPoolProfileResponse extends com.
      * 
      */
     @Import(name="name")
-      private final @Nullable String name;
+    private @Nullable String name;
 
     public Optional<String> name() {
-        return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class OpenShiftManagedClusterMasterPoolProfileResponse extends com.
      * 
      */
     @Import(name="osType")
-      private final @Nullable String osType;
+    private @Nullable String osType;
 
     public Optional<String> osType() {
-        return this.osType == null ? Optional.empty() : Optional.ofNullable(this.osType);
+        return Optional.ofNullable(this.osType);
     }
 
     /**
@@ -57,10 +57,10 @@ public final class OpenShiftManagedClusterMasterPoolProfileResponse extends com.
      * 
      */
     @Import(name="subnetCidr")
-      private final @Nullable String subnetCidr;
+    private @Nullable String subnetCidr;
 
     public Optional<String> subnetCidr() {
-        return this.subnetCidr == null ? Optional.empty() : Optional.ofNullable(this.subnetCidr);
+        return Optional.ofNullable(this.subnetCidr);
     }
 
     /**
@@ -68,82 +68,70 @@ public final class OpenShiftManagedClusterMasterPoolProfileResponse extends com.
      * 
      */
     @Import(name="vmSize", required=true)
-      private final String vmSize;
+    private String vmSize;
 
     public String vmSize() {
         return this.vmSize;
     }
 
-    public OpenShiftManagedClusterMasterPoolProfileResponse(
-        Integer count,
-        @Nullable String name,
-        @Nullable String osType,
-        @Nullable String subnetCidr,
-        String vmSize) {
-        this.count = Objects.requireNonNull(count, "expected parameter 'count' to be non-null");
-        this.name = name;
-        this.osType = osType;
-        this.subnetCidr = subnetCidr;
-        this.vmSize = Objects.requireNonNull(vmSize, "expected parameter 'vmSize' to be non-null");
-    }
+    private OpenShiftManagedClusterMasterPoolProfileResponse() {}
 
-    private OpenShiftManagedClusterMasterPoolProfileResponse() {
-        this.count = null;
-        this.name = null;
-        this.osType = null;
-        this.subnetCidr = null;
-        this.vmSize = null;
+    private OpenShiftManagedClusterMasterPoolProfileResponse(OpenShiftManagedClusterMasterPoolProfileResponse $) {
+        this.count = $.count;
+        this.name = $.name;
+        this.osType = $.osType;
+        this.subnetCidr = $.subnetCidr;
+        this.vmSize = $.vmSize;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(OpenShiftManagedClusterMasterPoolProfileResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Integer count;
-        private @Nullable String name;
-        private @Nullable String osType;
-        private @Nullable String subnetCidr;
-        private String vmSize;
+        private OpenShiftManagedClusterMasterPoolProfileResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new OpenShiftManagedClusterMasterPoolProfileResponse();
         }
 
         public Builder(OpenShiftManagedClusterMasterPoolProfileResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.count = defaults.count;
-    	      this.name = defaults.name;
-    	      this.osType = defaults.osType;
-    	      this.subnetCidr = defaults.subnetCidr;
-    	      this.vmSize = defaults.vmSize;
+            $ = new OpenShiftManagedClusterMasterPoolProfileResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder count(Integer count) {
-            this.count = Objects.requireNonNull(count);
+            $.count = count;
             return this;
         }
+
         public Builder name(@Nullable String name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
+
         public Builder osType(@Nullable String osType) {
-            this.osType = osType;
+            $.osType = osType;
             return this;
         }
+
         public Builder subnetCidr(@Nullable String subnetCidr) {
-            this.subnetCidr = subnetCidr;
+            $.subnetCidr = subnetCidr;
             return this;
         }
+
         public Builder vmSize(String vmSize) {
-            this.vmSize = Objects.requireNonNull(vmSize);
+            $.vmSize = vmSize;
             return this;
-        }        public OpenShiftManagedClusterMasterPoolProfileResponse build() {
-            return new OpenShiftManagedClusterMasterPoolProfileResponse(count, name, osType, subnetCidr, vmSize);
+        }
+
+        public OpenShiftManagedClusterMasterPoolProfileResponse build() {
+            $.count = Objects.requireNonNull($.count, "expected parameter 'count' to be non-null");
+            $.vmSize = Objects.requireNonNull($.vmSize, "expected parameter 'vmSize' to be non-null");
+            return $;
         }
     }
+
 }

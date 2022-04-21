@@ -5,7 +5,6 @@ package com.pulumi.aws.kinesis.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,49 +18,49 @@ public final class AnalyticsApplicationOutputSchemaArgs extends com.pulumi.resou
      * 
      */
     @Import(name="recordFormatType", required=true)
-      private final Output<String> recordFormatType;
+    private Output<String> recordFormatType;
 
     public Output<String> recordFormatType() {
         return this.recordFormatType;
     }
 
-    public AnalyticsApplicationOutputSchemaArgs(Output<String> recordFormatType) {
-        this.recordFormatType = Objects.requireNonNull(recordFormatType, "expected parameter 'recordFormatType' to be non-null");
-    }
+    private AnalyticsApplicationOutputSchemaArgs() {}
 
-    private AnalyticsApplicationOutputSchemaArgs() {
-        this.recordFormatType = Codegen.empty();
+    private AnalyticsApplicationOutputSchemaArgs(AnalyticsApplicationOutputSchemaArgs $) {
+        this.recordFormatType = $.recordFormatType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AnalyticsApplicationOutputSchemaArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> recordFormatType;
+        private AnalyticsApplicationOutputSchemaArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AnalyticsApplicationOutputSchemaArgs();
         }
 
         public Builder(AnalyticsApplicationOutputSchemaArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.recordFormatType = defaults.recordFormatType;
+            $ = new AnalyticsApplicationOutputSchemaArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder recordFormatType(Output<String> recordFormatType) {
-            this.recordFormatType = Objects.requireNonNull(recordFormatType);
+            $.recordFormatType = recordFormatType;
             return this;
         }
+
         public Builder recordFormatType(String recordFormatType) {
-            this.recordFormatType = Output.of(Objects.requireNonNull(recordFormatType));
-            return this;
-        }        public AnalyticsApplicationOutputSchemaArgs build() {
-            return new AnalyticsApplicationOutputSchemaArgs(recordFormatType);
+            return recordFormatType(Output.of(recordFormatType));
+        }
+
+        public AnalyticsApplicationOutputSchemaArgs build() {
+            $.recordFormatType = Objects.requireNonNull($.recordFormatType, "expected parameter 'recordFormatType' to be non-null");
+            return $;
         }
     }
+
 }

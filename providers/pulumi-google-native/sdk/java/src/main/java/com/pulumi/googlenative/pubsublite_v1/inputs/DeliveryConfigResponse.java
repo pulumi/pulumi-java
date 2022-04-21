@@ -21,45 +21,45 @@ public final class DeliveryConfigResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="deliveryRequirement", required=true)
-      private final String deliveryRequirement;
+    private String deliveryRequirement;
 
     public String deliveryRequirement() {
         return this.deliveryRequirement;
     }
 
-    public DeliveryConfigResponse(String deliveryRequirement) {
-        this.deliveryRequirement = Objects.requireNonNull(deliveryRequirement, "expected parameter 'deliveryRequirement' to be non-null");
-    }
+    private DeliveryConfigResponse() {}
 
-    private DeliveryConfigResponse() {
-        this.deliveryRequirement = null;
+    private DeliveryConfigResponse(DeliveryConfigResponse $) {
+        this.deliveryRequirement = $.deliveryRequirement;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DeliveryConfigResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String deliveryRequirement;
+        private DeliveryConfigResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new DeliveryConfigResponse();
         }
 
         public Builder(DeliveryConfigResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.deliveryRequirement = defaults.deliveryRequirement;
+            $ = new DeliveryConfigResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder deliveryRequirement(String deliveryRequirement) {
-            this.deliveryRequirement = Objects.requireNonNull(deliveryRequirement);
+            $.deliveryRequirement = deliveryRequirement;
             return this;
-        }        public DeliveryConfigResponse build() {
-            return new DeliveryConfigResponse(deliveryRequirement);
+        }
+
+        public DeliveryConfigResponse build() {
+            $.deliveryRequirement = Objects.requireNonNull($.deliveryRequirement, "expected parameter 'deliveryRequirement' to be non-null");
+            return $;
         }
     }
+
 }

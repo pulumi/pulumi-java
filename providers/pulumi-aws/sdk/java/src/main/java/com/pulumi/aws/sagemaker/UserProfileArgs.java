@@ -6,10 +6,10 @@ package com.pulumi.aws.sagemaker;
 import com.pulumi.aws.sagemaker.inputs.UserProfileUserSettingsArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,7 +22,7 @@ public final class UserProfileArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="domainId", required=true)
-      private final Output<String> domainId;
+    private Output<String> domainId;
 
     public Output<String> domainId() {
         return this.domainId;
@@ -33,10 +33,10 @@ public final class UserProfileArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="singleSignOnUserIdentifier")
-      private final @Nullable Output<String> singleSignOnUserIdentifier;
+    private @Nullable Output<String> singleSignOnUserIdentifier;
 
-    public Output<String> singleSignOnUserIdentifier() {
-        return this.singleSignOnUserIdentifier == null ? Codegen.empty() : this.singleSignOnUserIdentifier;
+    public Optional<Output<String>> singleSignOnUserIdentifier() {
+        return Optional.ofNullable(this.singleSignOnUserIdentifier);
     }
 
     /**
@@ -44,10 +44,10 @@ public final class UserProfileArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="singleSignOnUserValue")
-      private final @Nullable Output<String> singleSignOnUserValue;
+    private @Nullable Output<String> singleSignOnUserValue;
 
-    public Output<String> singleSignOnUserValue() {
-        return this.singleSignOnUserValue == null ? Codegen.empty() : this.singleSignOnUserValue;
+    public Optional<Output<String>> singleSignOnUserValue() {
+        return Optional.ofNullable(this.singleSignOnUserValue);
     }
 
     /**
@@ -55,10 +55,10 @@ public final class UserProfileArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -66,7 +66,7 @@ public final class UserProfileArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="userProfileName", required=true)
-      private final Output<String> userProfileName;
+    private Output<String> userProfileName;
 
     public Output<String> userProfileName() {
         return this.userProfileName;
@@ -77,115 +77,100 @@ public final class UserProfileArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="userSettings")
-      private final @Nullable Output<UserProfileUserSettingsArgs> userSettings;
+    private @Nullable Output<UserProfileUserSettingsArgs> userSettings;
 
-    public Output<UserProfileUserSettingsArgs> userSettings() {
-        return this.userSettings == null ? Codegen.empty() : this.userSettings;
+    public Optional<Output<UserProfileUserSettingsArgs>> userSettings() {
+        return Optional.ofNullable(this.userSettings);
     }
 
-    public UserProfileArgs(
-        Output<String> domainId,
-        @Nullable Output<String> singleSignOnUserIdentifier,
-        @Nullable Output<String> singleSignOnUserValue,
-        @Nullable Output<Map<String,String>> tags,
-        Output<String> userProfileName,
-        @Nullable Output<UserProfileUserSettingsArgs> userSettings) {
-        this.domainId = Objects.requireNonNull(domainId, "expected parameter 'domainId' to be non-null");
-        this.singleSignOnUserIdentifier = singleSignOnUserIdentifier;
-        this.singleSignOnUserValue = singleSignOnUserValue;
-        this.tags = tags;
-        this.userProfileName = Objects.requireNonNull(userProfileName, "expected parameter 'userProfileName' to be non-null");
-        this.userSettings = userSettings;
-    }
+    private UserProfileArgs() {}
 
-    private UserProfileArgs() {
-        this.domainId = Codegen.empty();
-        this.singleSignOnUserIdentifier = Codegen.empty();
-        this.singleSignOnUserValue = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.userProfileName = Codegen.empty();
-        this.userSettings = Codegen.empty();
+    private UserProfileArgs(UserProfileArgs $) {
+        this.domainId = $.domainId;
+        this.singleSignOnUserIdentifier = $.singleSignOnUserIdentifier;
+        this.singleSignOnUserValue = $.singleSignOnUserValue;
+        this.tags = $.tags;
+        this.userProfileName = $.userProfileName;
+        this.userSettings = $.userSettings;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(UserProfileArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> domainId;
-        private @Nullable Output<String> singleSignOnUserIdentifier;
-        private @Nullable Output<String> singleSignOnUserValue;
-        private @Nullable Output<Map<String,String>> tags;
-        private Output<String> userProfileName;
-        private @Nullable Output<UserProfileUserSettingsArgs> userSettings;
+        private UserProfileArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new UserProfileArgs();
         }
 
         public Builder(UserProfileArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.domainId = defaults.domainId;
-    	      this.singleSignOnUserIdentifier = defaults.singleSignOnUserIdentifier;
-    	      this.singleSignOnUserValue = defaults.singleSignOnUserValue;
-    	      this.tags = defaults.tags;
-    	      this.userProfileName = defaults.userProfileName;
-    	      this.userSettings = defaults.userSettings;
+            $ = new UserProfileArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder domainId(Output<String> domainId) {
-            this.domainId = Objects.requireNonNull(domainId);
+            $.domainId = domainId;
             return this;
         }
+
         public Builder domainId(String domainId) {
-            this.domainId = Output.of(Objects.requireNonNull(domainId));
-            return this;
+            return domainId(Output.of(domainId));
         }
+
         public Builder singleSignOnUserIdentifier(@Nullable Output<String> singleSignOnUserIdentifier) {
-            this.singleSignOnUserIdentifier = singleSignOnUserIdentifier;
+            $.singleSignOnUserIdentifier = singleSignOnUserIdentifier;
             return this;
         }
-        public Builder singleSignOnUserIdentifier(@Nullable String singleSignOnUserIdentifier) {
-            this.singleSignOnUserIdentifier = Codegen.ofNullable(singleSignOnUserIdentifier);
-            return this;
+
+        public Builder singleSignOnUserIdentifier(String singleSignOnUserIdentifier) {
+            return singleSignOnUserIdentifier(Output.of(singleSignOnUserIdentifier));
         }
+
         public Builder singleSignOnUserValue(@Nullable Output<String> singleSignOnUserValue) {
-            this.singleSignOnUserValue = singleSignOnUserValue;
+            $.singleSignOnUserValue = singleSignOnUserValue;
             return this;
         }
-        public Builder singleSignOnUserValue(@Nullable String singleSignOnUserValue) {
-            this.singleSignOnUserValue = Codegen.ofNullable(singleSignOnUserValue);
-            return this;
+
+        public Builder singleSignOnUserValue(String singleSignOnUserValue) {
+            return singleSignOnUserValue(Output.of(singleSignOnUserValue));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder userProfileName(Output<String> userProfileName) {
-            this.userProfileName = Objects.requireNonNull(userProfileName);
+            $.userProfileName = userProfileName;
             return this;
         }
+
         public Builder userProfileName(String userProfileName) {
-            this.userProfileName = Output.of(Objects.requireNonNull(userProfileName));
-            return this;
+            return userProfileName(Output.of(userProfileName));
         }
+
         public Builder userSettings(@Nullable Output<UserProfileUserSettingsArgs> userSettings) {
-            this.userSettings = userSettings;
+            $.userSettings = userSettings;
             return this;
         }
-        public Builder userSettings(@Nullable UserProfileUserSettingsArgs userSettings) {
-            this.userSettings = Codegen.ofNullable(userSettings);
-            return this;
-        }        public UserProfileArgs build() {
-            return new UserProfileArgs(domainId, singleSignOnUserIdentifier, singleSignOnUserValue, tags, userProfileName, userSettings);
+
+        public Builder userSettings(UserProfileUserSettingsArgs userSettings) {
+            return userSettings(Output.of(userSettings));
+        }
+
+        public UserProfileArgs build() {
+            $.domainId = Objects.requireNonNull($.domainId, "expected parameter 'domainId' to be non-null");
+            $.userProfileName = Objects.requireNonNull($.userProfileName, "expected parameter 'userProfileName' to be non-null");
+            return $;
         }
     }
+
 }

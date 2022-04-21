@@ -20,7 +20,7 @@ public final class PolicyInfoResponse extends com.pulumi.resources.InvokeArgs {
     public static final PolicyInfoResponse Empty = new PolicyInfoResponse();
 
     @Import(name="policyId", required=true)
-      private final String policyId;
+    private String policyId;
 
     public String policyId() {
         return this.policyId;
@@ -31,71 +31,65 @@ public final class PolicyInfoResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="policyParameters")
-      private final @Nullable PolicyParametersResponse policyParameters;
+    private @Nullable PolicyParametersResponse policyParameters;
 
     public Optional<PolicyParametersResponse> policyParameters() {
-        return this.policyParameters == null ? Optional.empty() : Optional.ofNullable(this.policyParameters);
+        return Optional.ofNullable(this.policyParameters);
     }
 
     @Import(name="policyVersion", required=true)
-      private final String policyVersion;
+    private String policyVersion;
 
     public String policyVersion() {
         return this.policyVersion;
     }
 
-    public PolicyInfoResponse(
-        String policyId,
-        @Nullable PolicyParametersResponse policyParameters,
-        String policyVersion) {
-        this.policyId = Objects.requireNonNull(policyId, "expected parameter 'policyId' to be non-null");
-        this.policyParameters = policyParameters;
-        this.policyVersion = Objects.requireNonNull(policyVersion, "expected parameter 'policyVersion' to be non-null");
-    }
+    private PolicyInfoResponse() {}
 
-    private PolicyInfoResponse() {
-        this.policyId = null;
-        this.policyParameters = null;
-        this.policyVersion = null;
+    private PolicyInfoResponse(PolicyInfoResponse $) {
+        this.policyId = $.policyId;
+        this.policyParameters = $.policyParameters;
+        this.policyVersion = $.policyVersion;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PolicyInfoResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String policyId;
-        private @Nullable PolicyParametersResponse policyParameters;
-        private String policyVersion;
+        private PolicyInfoResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new PolicyInfoResponse();
         }
 
         public Builder(PolicyInfoResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.policyId = defaults.policyId;
-    	      this.policyParameters = defaults.policyParameters;
-    	      this.policyVersion = defaults.policyVersion;
+            $ = new PolicyInfoResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder policyId(String policyId) {
-            this.policyId = Objects.requireNonNull(policyId);
+            $.policyId = policyId;
             return this;
         }
+
         public Builder policyParameters(@Nullable PolicyParametersResponse policyParameters) {
-            this.policyParameters = policyParameters;
+            $.policyParameters = policyParameters;
             return this;
         }
+
         public Builder policyVersion(String policyVersion) {
-            this.policyVersion = Objects.requireNonNull(policyVersion);
+            $.policyVersion = policyVersion;
             return this;
-        }        public PolicyInfoResponse build() {
-            return new PolicyInfoResponse(policyId, policyParameters, policyVersion);
+        }
+
+        public PolicyInfoResponse build() {
+            $.policyId = Objects.requireNonNull($.policyId, "expected parameter 'policyId' to be non-null");
+            $.policyVersion = Objects.requireNonNull($.policyVersion, "expected parameter 'policyVersion' to be non-null");
+            return $;
         }
     }
+
 }

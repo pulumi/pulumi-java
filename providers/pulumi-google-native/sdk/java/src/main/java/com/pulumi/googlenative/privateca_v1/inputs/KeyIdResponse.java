@@ -21,45 +21,45 @@ public final class KeyIdResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="keyId", required=true)
-      private final String keyId;
+    private String keyId;
 
     public String keyId() {
         return this.keyId;
     }
 
-    public KeyIdResponse(String keyId) {
-        this.keyId = Objects.requireNonNull(keyId, "expected parameter 'keyId' to be non-null");
-    }
+    private KeyIdResponse() {}
 
-    private KeyIdResponse() {
-        this.keyId = null;
+    private KeyIdResponse(KeyIdResponse $) {
+        this.keyId = $.keyId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(KeyIdResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String keyId;
+        private KeyIdResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new KeyIdResponse();
         }
 
         public Builder(KeyIdResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.keyId = defaults.keyId;
+            $ = new KeyIdResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder keyId(String keyId) {
-            this.keyId = Objects.requireNonNull(keyId);
+            $.keyId = keyId;
             return this;
-        }        public KeyIdResponse build() {
-            return new KeyIdResponse(keyId);
+        }
+
+        public KeyIdResponse build() {
+            $.keyId = Objects.requireNonNull($.keyId, "expected parameter 'keyId' to be non-null");
+            return $;
         }
     }
+
 }

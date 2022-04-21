@@ -23,45 +23,45 @@ public final class InputAttribute extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="jsonPath", required=true)
-      private final String jsonPath;
+    private String jsonPath;
 
     public String jsonPath() {
         return this.jsonPath;
     }
 
-    public InputAttribute(String jsonPath) {
-        this.jsonPath = Objects.requireNonNull(jsonPath, "expected parameter 'jsonPath' to be non-null");
-    }
+    private InputAttribute() {}
 
-    private InputAttribute() {
-        this.jsonPath = null;
+    private InputAttribute(InputAttribute $) {
+        this.jsonPath = $.jsonPath;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(InputAttribute defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String jsonPath;
+        private InputAttribute $;
 
         public Builder() {
-    	      // Empty
+            $ = new InputAttribute();
         }
 
         public Builder(InputAttribute defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.jsonPath = defaults.jsonPath;
+            $ = new InputAttribute(Objects.requireNonNull(defaults));
         }
 
         public Builder jsonPath(String jsonPath) {
-            this.jsonPath = Objects.requireNonNull(jsonPath);
+            $.jsonPath = jsonPath;
             return this;
-        }        public InputAttribute build() {
-            return new InputAttribute(jsonPath);
+        }
+
+        public InputAttribute build() {
+            $.jsonPath = Objects.requireNonNull($.jsonPath, "expected parameter 'jsonPath' to be non-null");
+            return $;
         }
     }
+
 }

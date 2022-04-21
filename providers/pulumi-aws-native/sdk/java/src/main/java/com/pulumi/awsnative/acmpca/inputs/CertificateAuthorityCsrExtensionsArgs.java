@@ -7,9 +7,9 @@ import com.pulumi.awsnative.acmpca.inputs.CertificateAuthorityAccessDescriptionA
 import com.pulumi.awsnative.acmpca.inputs.CertificateAuthorityKeyUsageArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,73 +22,69 @@ public final class CertificateAuthorityCsrExtensionsArgs extends com.pulumi.reso
     public static final CertificateAuthorityCsrExtensionsArgs Empty = new CertificateAuthorityCsrExtensionsArgs();
 
     @Import(name="keyUsage")
-      private final @Nullable Output<CertificateAuthorityKeyUsageArgs> keyUsage;
+    private @Nullable Output<CertificateAuthorityKeyUsageArgs> keyUsage;
 
-    public Output<CertificateAuthorityKeyUsageArgs> keyUsage() {
-        return this.keyUsage == null ? Codegen.empty() : this.keyUsage;
+    public Optional<Output<CertificateAuthorityKeyUsageArgs>> keyUsage() {
+        return Optional.ofNullable(this.keyUsage);
     }
 
     @Import(name="subjectInformationAccess")
-      private final @Nullable Output<List<CertificateAuthorityAccessDescriptionArgs>> subjectInformationAccess;
+    private @Nullable Output<List<CertificateAuthorityAccessDescriptionArgs>> subjectInformationAccess;
 
-    public Output<List<CertificateAuthorityAccessDescriptionArgs>> subjectInformationAccess() {
-        return this.subjectInformationAccess == null ? Codegen.empty() : this.subjectInformationAccess;
+    public Optional<Output<List<CertificateAuthorityAccessDescriptionArgs>>> subjectInformationAccess() {
+        return Optional.ofNullable(this.subjectInformationAccess);
     }
 
-    public CertificateAuthorityCsrExtensionsArgs(
-        @Nullable Output<CertificateAuthorityKeyUsageArgs> keyUsage,
-        @Nullable Output<List<CertificateAuthorityAccessDescriptionArgs>> subjectInformationAccess) {
-        this.keyUsage = keyUsage;
-        this.subjectInformationAccess = subjectInformationAccess;
-    }
+    private CertificateAuthorityCsrExtensionsArgs() {}
 
-    private CertificateAuthorityCsrExtensionsArgs() {
-        this.keyUsage = Codegen.empty();
-        this.subjectInformationAccess = Codegen.empty();
+    private CertificateAuthorityCsrExtensionsArgs(CertificateAuthorityCsrExtensionsArgs $) {
+        this.keyUsage = $.keyUsage;
+        this.subjectInformationAccess = $.subjectInformationAccess;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CertificateAuthorityCsrExtensionsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<CertificateAuthorityKeyUsageArgs> keyUsage;
-        private @Nullable Output<List<CertificateAuthorityAccessDescriptionArgs>> subjectInformationAccess;
+        private CertificateAuthorityCsrExtensionsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CertificateAuthorityCsrExtensionsArgs();
         }
 
         public Builder(CertificateAuthorityCsrExtensionsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.keyUsage = defaults.keyUsage;
-    	      this.subjectInformationAccess = defaults.subjectInformationAccess;
+            $ = new CertificateAuthorityCsrExtensionsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder keyUsage(@Nullable Output<CertificateAuthorityKeyUsageArgs> keyUsage) {
-            this.keyUsage = keyUsage;
+            $.keyUsage = keyUsage;
             return this;
         }
-        public Builder keyUsage(@Nullable CertificateAuthorityKeyUsageArgs keyUsage) {
-            this.keyUsage = Codegen.ofNullable(keyUsage);
-            return this;
+
+        public Builder keyUsage(CertificateAuthorityKeyUsageArgs keyUsage) {
+            return keyUsage(Output.of(keyUsage));
         }
+
         public Builder subjectInformationAccess(@Nullable Output<List<CertificateAuthorityAccessDescriptionArgs>> subjectInformationAccess) {
-            this.subjectInformationAccess = subjectInformationAccess;
+            $.subjectInformationAccess = subjectInformationAccess;
             return this;
         }
-        public Builder subjectInformationAccess(@Nullable List<CertificateAuthorityAccessDescriptionArgs> subjectInformationAccess) {
-            this.subjectInformationAccess = Codegen.ofNullable(subjectInformationAccess);
-            return this;
+
+        public Builder subjectInformationAccess(List<CertificateAuthorityAccessDescriptionArgs> subjectInformationAccess) {
+            return subjectInformationAccess(Output.of(subjectInformationAccess));
         }
+
         public Builder subjectInformationAccess(CertificateAuthorityAccessDescriptionArgs... subjectInformationAccess) {
             return subjectInformationAccess(List.of(subjectInformationAccess));
-        }        public CertificateAuthorityCsrExtensionsArgs build() {
-            return new CertificateAuthorityCsrExtensionsArgs(keyUsage, subjectInformationAccess);
+        }
+
+        public CertificateAuthorityCsrExtensionsArgs build() {
+            return $;
         }
     }
+
 }

@@ -21,7 +21,7 @@ public final class OperationBatchStatusResponseItemResponse extends com.pulumi.r
      * 
      */
     @Import(name="operationUrl", required=true)
-      private final String operationUrl;
+    private String operationUrl;
 
     public String operationUrl() {
         return this.operationUrl;
@@ -32,55 +32,52 @@ public final class OperationBatchStatusResponseItemResponse extends com.pulumi.r
      * 
      */
     @Import(name="status", required=true)
-      private final String status;
+    private String status;
 
     public String status() {
         return this.status;
     }
 
-    public OperationBatchStatusResponseItemResponse(
-        String operationUrl,
-        String status) {
-        this.operationUrl = Objects.requireNonNull(operationUrl, "expected parameter 'operationUrl' to be non-null");
-        this.status = Objects.requireNonNull(status, "expected parameter 'status' to be non-null");
-    }
+    private OperationBatchStatusResponseItemResponse() {}
 
-    private OperationBatchStatusResponseItemResponse() {
-        this.operationUrl = null;
-        this.status = null;
+    private OperationBatchStatusResponseItemResponse(OperationBatchStatusResponseItemResponse $) {
+        this.operationUrl = $.operationUrl;
+        this.status = $.status;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(OperationBatchStatusResponseItemResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String operationUrl;
-        private String status;
+        private OperationBatchStatusResponseItemResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new OperationBatchStatusResponseItemResponse();
         }
 
         public Builder(OperationBatchStatusResponseItemResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.operationUrl = defaults.operationUrl;
-    	      this.status = defaults.status;
+            $ = new OperationBatchStatusResponseItemResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder operationUrl(String operationUrl) {
-            this.operationUrl = Objects.requireNonNull(operationUrl);
+            $.operationUrl = operationUrl;
             return this;
         }
+
         public Builder status(String status) {
-            this.status = Objects.requireNonNull(status);
+            $.status = status;
             return this;
-        }        public OperationBatchStatusResponseItemResponse build() {
-            return new OperationBatchStatusResponseItemResponse(operationUrl, status);
+        }
+
+        public OperationBatchStatusResponseItemResponse build() {
+            $.operationUrl = Objects.requireNonNull($.operationUrl, "expected parameter 'operationUrl' to be non-null");
+            $.status = Objects.requireNonNull($.status, "expected parameter 'status' to be non-null");
+            return $;
         }
     }
+
 }

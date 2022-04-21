@@ -24,10 +24,10 @@ public final class RequestsBasedTriggerResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="count")
-      private final @Nullable Integer count;
+    private @Nullable Integer count;
 
     public Optional<Integer> count() {
-        return this.count == null ? Optional.empty() : Optional.ofNullable(this.count);
+        return Optional.ofNullable(this.count);
     }
 
     /**
@@ -35,55 +35,50 @@ public final class RequestsBasedTriggerResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="timeInterval")
-      private final @Nullable String timeInterval;
+    private @Nullable String timeInterval;
 
     public Optional<String> timeInterval() {
-        return this.timeInterval == null ? Optional.empty() : Optional.ofNullable(this.timeInterval);
+        return Optional.ofNullable(this.timeInterval);
     }
 
-    public RequestsBasedTriggerResponse(
-        @Nullable Integer count,
-        @Nullable String timeInterval) {
-        this.count = count;
-        this.timeInterval = timeInterval;
-    }
+    private RequestsBasedTriggerResponse() {}
 
-    private RequestsBasedTriggerResponse() {
-        this.count = null;
-        this.timeInterval = null;
+    private RequestsBasedTriggerResponse(RequestsBasedTriggerResponse $) {
+        this.count = $.count;
+        this.timeInterval = $.timeInterval;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RequestsBasedTriggerResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Integer count;
-        private @Nullable String timeInterval;
+        private RequestsBasedTriggerResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new RequestsBasedTriggerResponse();
         }
 
         public Builder(RequestsBasedTriggerResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.count = defaults.count;
-    	      this.timeInterval = defaults.timeInterval;
+            $ = new RequestsBasedTriggerResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder count(@Nullable Integer count) {
-            this.count = count;
+            $.count = count;
             return this;
         }
+
         public Builder timeInterval(@Nullable String timeInterval) {
-            this.timeInterval = timeInterval;
+            $.timeInterval = timeInterval;
             return this;
-        }        public RequestsBasedTriggerResponse build() {
-            return new RequestsBasedTriggerResponse(count, timeInterval);
+        }
+
+        public RequestsBasedTriggerResponse build() {
+            return $;
         }
     }
+
 }

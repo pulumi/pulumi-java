@@ -5,13 +5,13 @@ package com.pulumi.gcp.compute;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.compute.inputs.OrganizationSecurityPolicyRuleMatchArgs;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,7 +25,7 @@ public final class OrganizationSecurityPolicyRuleArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="action", required=true)
-      private final Output<String> action;
+    private Output<String> action;
 
     public Output<String> action() {
         return this.action;
@@ -36,10 +36,10 @@ public final class OrganizationSecurityPolicyRuleArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -48,10 +48,10 @@ public final class OrganizationSecurityPolicyRuleArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="direction")
-      private final @Nullable Output<String> direction;
+    private @Nullable Output<String> direction;
 
-    public Output<String> direction() {
-        return this.direction == null ? Codegen.empty() : this.direction;
+    public Optional<Output<String>> direction() {
+        return Optional.ofNullable(this.direction);
     }
 
     /**
@@ -61,10 +61,10 @@ public final class OrganizationSecurityPolicyRuleArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="enableLogging")
-      private final @Nullable Output<Boolean> enableLogging;
+    private @Nullable Output<Boolean> enableLogging;
 
-    public Output<Boolean> enableLogging() {
-        return this.enableLogging == null ? Codegen.empty() : this.enableLogging;
+    public Optional<Output<Boolean>> enableLogging() {
+        return Optional.ofNullable(this.enableLogging);
     }
 
     /**
@@ -73,7 +73,7 @@ public final class OrganizationSecurityPolicyRuleArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="match", required=true)
-      private final Output<OrganizationSecurityPolicyRuleMatchArgs> match;
+    private Output<OrganizationSecurityPolicyRuleMatchArgs> match;
 
     public Output<OrganizationSecurityPolicyRuleMatchArgs> match() {
         return this.match;
@@ -84,7 +84,7 @@ public final class OrganizationSecurityPolicyRuleArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="policyId", required=true)
-      private final Output<String> policyId;
+    private Output<String> policyId;
 
     public Output<String> policyId() {
         return this.policyId;
@@ -95,10 +95,10 @@ public final class OrganizationSecurityPolicyRuleArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="preview")
-      private final @Nullable Output<Boolean> preview;
+    private @Nullable Output<Boolean> preview;
 
-    public Output<Boolean> preview() {
-        return this.preview == null ? Codegen.empty() : this.preview;
+    public Optional<Output<Boolean>> preview() {
+        return Optional.ofNullable(this.preview);
     }
 
     /**
@@ -108,7 +108,7 @@ public final class OrganizationSecurityPolicyRuleArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="priority", required=true)
-      private final Output<Integer> priority;
+    private Output<Integer> priority;
 
     public Output<Integer> priority() {
         return this.priority;
@@ -122,10 +122,10 @@ public final class OrganizationSecurityPolicyRuleArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="targetResources")
-      private final @Nullable Output<List<String>> targetResources;
+    private @Nullable Output<List<String>> targetResources;
 
-    public Output<List<String>> targetResources() {
-        return this.targetResources == null ? Codegen.empty() : this.targetResources;
+    public Optional<Output<List<String>>> targetResources() {
+        return Optional.ofNullable(this.targetResources);
     }
 
     /**
@@ -134,173 +134,150 @@ public final class OrganizationSecurityPolicyRuleArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="targetServiceAccounts")
-      private final @Nullable Output<List<String>> targetServiceAccounts;
+    private @Nullable Output<List<String>> targetServiceAccounts;
 
-    public Output<List<String>> targetServiceAccounts() {
-        return this.targetServiceAccounts == null ? Codegen.empty() : this.targetServiceAccounts;
+    public Optional<Output<List<String>>> targetServiceAccounts() {
+        return Optional.ofNullable(this.targetServiceAccounts);
     }
 
-    public OrganizationSecurityPolicyRuleArgs(
-        Output<String> action,
-        @Nullable Output<String> description,
-        @Nullable Output<String> direction,
-        @Nullable Output<Boolean> enableLogging,
-        Output<OrganizationSecurityPolicyRuleMatchArgs> match,
-        Output<String> policyId,
-        @Nullable Output<Boolean> preview,
-        Output<Integer> priority,
-        @Nullable Output<List<String>> targetResources,
-        @Nullable Output<List<String>> targetServiceAccounts) {
-        this.action = Objects.requireNonNull(action, "expected parameter 'action' to be non-null");
-        this.description = description;
-        this.direction = direction;
-        this.enableLogging = enableLogging;
-        this.match = Objects.requireNonNull(match, "expected parameter 'match' to be non-null");
-        this.policyId = Objects.requireNonNull(policyId, "expected parameter 'policyId' to be non-null");
-        this.preview = preview;
-        this.priority = Objects.requireNonNull(priority, "expected parameter 'priority' to be non-null");
-        this.targetResources = targetResources;
-        this.targetServiceAccounts = targetServiceAccounts;
-    }
+    private OrganizationSecurityPolicyRuleArgs() {}
 
-    private OrganizationSecurityPolicyRuleArgs() {
-        this.action = Codegen.empty();
-        this.description = Codegen.empty();
-        this.direction = Codegen.empty();
-        this.enableLogging = Codegen.empty();
-        this.match = Codegen.empty();
-        this.policyId = Codegen.empty();
-        this.preview = Codegen.empty();
-        this.priority = Codegen.empty();
-        this.targetResources = Codegen.empty();
-        this.targetServiceAccounts = Codegen.empty();
+    private OrganizationSecurityPolicyRuleArgs(OrganizationSecurityPolicyRuleArgs $) {
+        this.action = $.action;
+        this.description = $.description;
+        this.direction = $.direction;
+        this.enableLogging = $.enableLogging;
+        this.match = $.match;
+        this.policyId = $.policyId;
+        this.preview = $.preview;
+        this.priority = $.priority;
+        this.targetResources = $.targetResources;
+        this.targetServiceAccounts = $.targetServiceAccounts;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(OrganizationSecurityPolicyRuleArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> action;
-        private @Nullable Output<String> description;
-        private @Nullable Output<String> direction;
-        private @Nullable Output<Boolean> enableLogging;
-        private Output<OrganizationSecurityPolicyRuleMatchArgs> match;
-        private Output<String> policyId;
-        private @Nullable Output<Boolean> preview;
-        private Output<Integer> priority;
-        private @Nullable Output<List<String>> targetResources;
-        private @Nullable Output<List<String>> targetServiceAccounts;
+        private OrganizationSecurityPolicyRuleArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new OrganizationSecurityPolicyRuleArgs();
         }
 
         public Builder(OrganizationSecurityPolicyRuleArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.action = defaults.action;
-    	      this.description = defaults.description;
-    	      this.direction = defaults.direction;
-    	      this.enableLogging = defaults.enableLogging;
-    	      this.match = defaults.match;
-    	      this.policyId = defaults.policyId;
-    	      this.preview = defaults.preview;
-    	      this.priority = defaults.priority;
-    	      this.targetResources = defaults.targetResources;
-    	      this.targetServiceAccounts = defaults.targetServiceAccounts;
+            $ = new OrganizationSecurityPolicyRuleArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder action(Output<String> action) {
-            this.action = Objects.requireNonNull(action);
+            $.action = action;
             return this;
         }
+
         public Builder action(String action) {
-            this.action = Output.of(Objects.requireNonNull(action));
-            return this;
+            return action(Output.of(action));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder direction(@Nullable Output<String> direction) {
-            this.direction = direction;
+            $.direction = direction;
             return this;
         }
-        public Builder direction(@Nullable String direction) {
-            this.direction = Codegen.ofNullable(direction);
-            return this;
+
+        public Builder direction(String direction) {
+            return direction(Output.of(direction));
         }
+
         public Builder enableLogging(@Nullable Output<Boolean> enableLogging) {
-            this.enableLogging = enableLogging;
+            $.enableLogging = enableLogging;
             return this;
         }
-        public Builder enableLogging(@Nullable Boolean enableLogging) {
-            this.enableLogging = Codegen.ofNullable(enableLogging);
-            return this;
+
+        public Builder enableLogging(Boolean enableLogging) {
+            return enableLogging(Output.of(enableLogging));
         }
+
         public Builder match(Output<OrganizationSecurityPolicyRuleMatchArgs> match) {
-            this.match = Objects.requireNonNull(match);
+            $.match = match;
             return this;
         }
+
         public Builder match(OrganizationSecurityPolicyRuleMatchArgs match) {
-            this.match = Output.of(Objects.requireNonNull(match));
-            return this;
+            return match(Output.of(match));
         }
+
         public Builder policyId(Output<String> policyId) {
-            this.policyId = Objects.requireNonNull(policyId);
+            $.policyId = policyId;
             return this;
         }
+
         public Builder policyId(String policyId) {
-            this.policyId = Output.of(Objects.requireNonNull(policyId));
-            return this;
+            return policyId(Output.of(policyId));
         }
+
         public Builder preview(@Nullable Output<Boolean> preview) {
-            this.preview = preview;
+            $.preview = preview;
             return this;
         }
-        public Builder preview(@Nullable Boolean preview) {
-            this.preview = Codegen.ofNullable(preview);
-            return this;
+
+        public Builder preview(Boolean preview) {
+            return preview(Output.of(preview));
         }
+
         public Builder priority(Output<Integer> priority) {
-            this.priority = Objects.requireNonNull(priority);
+            $.priority = priority;
             return this;
         }
+
         public Builder priority(Integer priority) {
-            this.priority = Output.of(Objects.requireNonNull(priority));
-            return this;
+            return priority(Output.of(priority));
         }
+
         public Builder targetResources(@Nullable Output<List<String>> targetResources) {
-            this.targetResources = targetResources;
+            $.targetResources = targetResources;
             return this;
         }
-        public Builder targetResources(@Nullable List<String> targetResources) {
-            this.targetResources = Codegen.ofNullable(targetResources);
-            return this;
+
+        public Builder targetResources(List<String> targetResources) {
+            return targetResources(Output.of(targetResources));
         }
+
         public Builder targetResources(String... targetResources) {
             return targetResources(List.of(targetResources));
         }
+
         public Builder targetServiceAccounts(@Nullable Output<List<String>> targetServiceAccounts) {
-            this.targetServiceAccounts = targetServiceAccounts;
+            $.targetServiceAccounts = targetServiceAccounts;
             return this;
         }
-        public Builder targetServiceAccounts(@Nullable List<String> targetServiceAccounts) {
-            this.targetServiceAccounts = Codegen.ofNullable(targetServiceAccounts);
-            return this;
+
+        public Builder targetServiceAccounts(List<String> targetServiceAccounts) {
+            return targetServiceAccounts(Output.of(targetServiceAccounts));
         }
+
         public Builder targetServiceAccounts(String... targetServiceAccounts) {
             return targetServiceAccounts(List.of(targetServiceAccounts));
-        }        public OrganizationSecurityPolicyRuleArgs build() {
-            return new OrganizationSecurityPolicyRuleArgs(action, description, direction, enableLogging, match, policyId, preview, priority, targetResources, targetServiceAccounts);
+        }
+
+        public OrganizationSecurityPolicyRuleArgs build() {
+            $.action = Objects.requireNonNull($.action, "expected parameter 'action' to be non-null");
+            $.match = Objects.requireNonNull($.match, "expected parameter 'match' to be non-null");
+            $.policyId = Objects.requireNonNull($.policyId, "expected parameter 'policyId' to be non-null");
+            $.priority = Objects.requireNonNull($.priority, "expected parameter 'priority' to be non-null");
+            return $;
         }
     }
+
 }

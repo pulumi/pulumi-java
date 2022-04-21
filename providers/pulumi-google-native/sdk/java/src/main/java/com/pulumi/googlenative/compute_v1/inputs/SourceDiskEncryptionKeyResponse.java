@@ -18,7 +18,7 @@ public final class SourceDiskEncryptionKeyResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="diskEncryptionKey", required=true)
-      private final CustomerEncryptionKeyResponse diskEncryptionKey;
+    private CustomerEncryptionKeyResponse diskEncryptionKey;
 
     public CustomerEncryptionKeyResponse diskEncryptionKey() {
         return this.diskEncryptionKey;
@@ -29,55 +29,52 @@ public final class SourceDiskEncryptionKeyResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="sourceDisk", required=true)
-      private final String sourceDisk;
+    private String sourceDisk;
 
     public String sourceDisk() {
         return this.sourceDisk;
     }
 
-    public SourceDiskEncryptionKeyResponse(
-        CustomerEncryptionKeyResponse diskEncryptionKey,
-        String sourceDisk) {
-        this.diskEncryptionKey = Objects.requireNonNull(diskEncryptionKey, "expected parameter 'diskEncryptionKey' to be non-null");
-        this.sourceDisk = Objects.requireNonNull(sourceDisk, "expected parameter 'sourceDisk' to be non-null");
-    }
+    private SourceDiskEncryptionKeyResponse() {}
 
-    private SourceDiskEncryptionKeyResponse() {
-        this.diskEncryptionKey = null;
-        this.sourceDisk = null;
+    private SourceDiskEncryptionKeyResponse(SourceDiskEncryptionKeyResponse $) {
+        this.diskEncryptionKey = $.diskEncryptionKey;
+        this.sourceDisk = $.sourceDisk;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SourceDiskEncryptionKeyResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private CustomerEncryptionKeyResponse diskEncryptionKey;
-        private String sourceDisk;
+        private SourceDiskEncryptionKeyResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new SourceDiskEncryptionKeyResponse();
         }
 
         public Builder(SourceDiskEncryptionKeyResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.diskEncryptionKey = defaults.diskEncryptionKey;
-    	      this.sourceDisk = defaults.sourceDisk;
+            $ = new SourceDiskEncryptionKeyResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder diskEncryptionKey(CustomerEncryptionKeyResponse diskEncryptionKey) {
-            this.diskEncryptionKey = Objects.requireNonNull(diskEncryptionKey);
+            $.diskEncryptionKey = diskEncryptionKey;
             return this;
         }
+
         public Builder sourceDisk(String sourceDisk) {
-            this.sourceDisk = Objects.requireNonNull(sourceDisk);
+            $.sourceDisk = sourceDisk;
             return this;
-        }        public SourceDiskEncryptionKeyResponse build() {
-            return new SourceDiskEncryptionKeyResponse(diskEncryptionKey, sourceDisk);
+        }
+
+        public SourceDiskEncryptionKeyResponse build() {
+            $.diskEncryptionKey = Objects.requireNonNull($.diskEncryptionKey, "expected parameter 'diskEncryptionKey' to be non-null");
+            $.sourceDisk = Objects.requireNonNull($.sourceDisk, "expected parameter 'sourceDisk' to be non-null");
+            return $;
         }
     }
+
 }

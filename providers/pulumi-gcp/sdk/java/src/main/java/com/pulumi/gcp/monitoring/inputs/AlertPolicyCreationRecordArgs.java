@@ -5,9 +5,9 @@ package com.pulumi.gcp.monitoring.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -16,70 +16,65 @@ public final class AlertPolicyCreationRecordArgs extends com.pulumi.resources.Re
     public static final AlertPolicyCreationRecordArgs Empty = new AlertPolicyCreationRecordArgs();
 
     @Import(name="mutateTime")
-      private final @Nullable Output<String> mutateTime;
+    private @Nullable Output<String> mutateTime;
 
-    public Output<String> mutateTime() {
-        return this.mutateTime == null ? Codegen.empty() : this.mutateTime;
+    public Optional<Output<String>> mutateTime() {
+        return Optional.ofNullable(this.mutateTime);
     }
 
     @Import(name="mutatedBy")
-      private final @Nullable Output<String> mutatedBy;
+    private @Nullable Output<String> mutatedBy;
 
-    public Output<String> mutatedBy() {
-        return this.mutatedBy == null ? Codegen.empty() : this.mutatedBy;
+    public Optional<Output<String>> mutatedBy() {
+        return Optional.ofNullable(this.mutatedBy);
     }
 
-    public AlertPolicyCreationRecordArgs(
-        @Nullable Output<String> mutateTime,
-        @Nullable Output<String> mutatedBy) {
-        this.mutateTime = mutateTime;
-        this.mutatedBy = mutatedBy;
-    }
+    private AlertPolicyCreationRecordArgs() {}
 
-    private AlertPolicyCreationRecordArgs() {
-        this.mutateTime = Codegen.empty();
-        this.mutatedBy = Codegen.empty();
+    private AlertPolicyCreationRecordArgs(AlertPolicyCreationRecordArgs $) {
+        this.mutateTime = $.mutateTime;
+        this.mutatedBy = $.mutatedBy;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AlertPolicyCreationRecordArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> mutateTime;
-        private @Nullable Output<String> mutatedBy;
+        private AlertPolicyCreationRecordArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AlertPolicyCreationRecordArgs();
         }
 
         public Builder(AlertPolicyCreationRecordArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.mutateTime = defaults.mutateTime;
-    	      this.mutatedBy = defaults.mutatedBy;
+            $ = new AlertPolicyCreationRecordArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder mutateTime(@Nullable Output<String> mutateTime) {
-            this.mutateTime = mutateTime;
+            $.mutateTime = mutateTime;
             return this;
         }
-        public Builder mutateTime(@Nullable String mutateTime) {
-            this.mutateTime = Codegen.ofNullable(mutateTime);
-            return this;
+
+        public Builder mutateTime(String mutateTime) {
+            return mutateTime(Output.of(mutateTime));
         }
+
         public Builder mutatedBy(@Nullable Output<String> mutatedBy) {
-            this.mutatedBy = mutatedBy;
+            $.mutatedBy = mutatedBy;
             return this;
         }
-        public Builder mutatedBy(@Nullable String mutatedBy) {
-            this.mutatedBy = Codegen.ofNullable(mutatedBy);
-            return this;
-        }        public AlertPolicyCreationRecordArgs build() {
-            return new AlertPolicyCreationRecordArgs(mutateTime, mutatedBy);
+
+        public Builder mutatedBy(String mutatedBy) {
+            return mutatedBy(Output.of(mutatedBy));
+        }
+
+        public AlertPolicyCreationRecordArgs build() {
+            return $;
         }
     }
+
 }

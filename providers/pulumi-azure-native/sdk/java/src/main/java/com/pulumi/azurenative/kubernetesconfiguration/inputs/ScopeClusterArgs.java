@@ -5,9 +5,9 @@ package com.pulumi.azurenative.kubernetesconfiguration.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class ScopeClusterArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="releaseNamespace")
-      private final @Nullable Output<String> releaseNamespace;
+    private @Nullable Output<String> releaseNamespace;
 
-    public Output<String> releaseNamespace() {
-        return this.releaseNamespace == null ? Codegen.empty() : this.releaseNamespace;
+    public Optional<Output<String>> releaseNamespace() {
+        return Optional.ofNullable(this.releaseNamespace);
     }
 
-    public ScopeClusterArgs(@Nullable Output<String> releaseNamespace) {
-        this.releaseNamespace = releaseNamespace;
-    }
+    private ScopeClusterArgs() {}
 
-    private ScopeClusterArgs() {
-        this.releaseNamespace = Codegen.empty();
+    private ScopeClusterArgs(ScopeClusterArgs $) {
+        this.releaseNamespace = $.releaseNamespace;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ScopeClusterArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> releaseNamespace;
+        private ScopeClusterArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ScopeClusterArgs();
         }
 
         public Builder(ScopeClusterArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.releaseNamespace = defaults.releaseNamespace;
+            $ = new ScopeClusterArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder releaseNamespace(@Nullable Output<String> releaseNamespace) {
-            this.releaseNamespace = releaseNamespace;
+            $.releaseNamespace = releaseNamespace;
             return this;
         }
-        public Builder releaseNamespace(@Nullable String releaseNamespace) {
-            this.releaseNamespace = Codegen.ofNullable(releaseNamespace);
-            return this;
-        }        public ScopeClusterArgs build() {
-            return new ScopeClusterArgs(releaseNamespace);
+
+        public Builder releaseNamespace(String releaseNamespace) {
+            return releaseNamespace(Output.of(releaseNamespace));
+        }
+
+        public ScopeClusterArgs build() {
+            return $;
         }
     }
+
 }

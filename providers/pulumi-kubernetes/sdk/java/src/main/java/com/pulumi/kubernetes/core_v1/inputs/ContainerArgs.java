@@ -5,7 +5,6 @@ package com.pulumi.kubernetes.core_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.kubernetes.core_v1.inputs.ContainerPortArgs;
 import com.pulumi.kubernetes.core_v1.inputs.EnvFromSourceArgs;
 import com.pulumi.kubernetes.core_v1.inputs.EnvVarArgs;
@@ -19,6 +18,7 @@ import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -35,10 +35,10 @@ public final class ContainerArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="args")
-      private final @Nullable Output<List<String>> args;
+    private @Nullable Output<List<String>> args;
 
-    public Output<List<String>> args() {
-        return this.args == null ? Codegen.empty() : this.args;
+    public Optional<Output<List<String>>> args() {
+        return Optional.ofNullable(this.args);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class ContainerArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="command")
-      private final @Nullable Output<List<String>> command;
+    private @Nullable Output<List<String>> command;
 
-    public Output<List<String>> command() {
-        return this.command == null ? Codegen.empty() : this.command;
+    public Optional<Output<List<String>>> command() {
+        return Optional.ofNullable(this.command);
     }
 
     /**
@@ -57,10 +57,10 @@ public final class ContainerArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="env")
-      private final @Nullable Output<List<EnvVarArgs>> env;
+    private @Nullable Output<List<EnvVarArgs>> env;
 
-    public Output<List<EnvVarArgs>> env() {
-        return this.env == null ? Codegen.empty() : this.env;
+    public Optional<Output<List<EnvVarArgs>>> env() {
+        return Optional.ofNullable(this.env);
     }
 
     /**
@@ -68,10 +68,10 @@ public final class ContainerArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="envFrom")
-      private final @Nullable Output<List<EnvFromSourceArgs>> envFrom;
+    private @Nullable Output<List<EnvFromSourceArgs>> envFrom;
 
-    public Output<List<EnvFromSourceArgs>> envFrom() {
-        return this.envFrom == null ? Codegen.empty() : this.envFrom;
+    public Optional<Output<List<EnvFromSourceArgs>>> envFrom() {
+        return Optional.ofNullable(this.envFrom);
     }
 
     /**
@@ -79,10 +79,10 @@ public final class ContainerArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="image")
-      private final @Nullable Output<String> image;
+    private @Nullable Output<String> image;
 
-    public Output<String> image() {
-        return this.image == null ? Codegen.empty() : this.image;
+    public Optional<Output<String>> image() {
+        return Optional.ofNullable(this.image);
     }
 
     /**
@@ -95,10 +95,10 @@ public final class ContainerArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="imagePullPolicy")
-      private final @Nullable Output<String> imagePullPolicy;
+    private @Nullable Output<String> imagePullPolicy;
 
-    public Output<String> imagePullPolicy() {
-        return this.imagePullPolicy == null ? Codegen.empty() : this.imagePullPolicy;
+    public Optional<Output<String>> imagePullPolicy() {
+        return Optional.ofNullable(this.imagePullPolicy);
     }
 
     /**
@@ -106,10 +106,10 @@ public final class ContainerArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="lifecycle")
-      private final @Nullable Output<LifecycleArgs> lifecycle;
+    private @Nullable Output<LifecycleArgs> lifecycle;
 
-    public Output<LifecycleArgs> lifecycle() {
-        return this.lifecycle == null ? Codegen.empty() : this.lifecycle;
+    public Optional<Output<LifecycleArgs>> lifecycle() {
+        return Optional.ofNullable(this.lifecycle);
     }
 
     /**
@@ -117,10 +117,10 @@ public final class ContainerArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="livenessProbe")
-      private final @Nullable Output<ProbeArgs> livenessProbe;
+    private @Nullable Output<ProbeArgs> livenessProbe;
 
-    public Output<ProbeArgs> livenessProbe() {
-        return this.livenessProbe == null ? Codegen.empty() : this.livenessProbe;
+    public Optional<Output<ProbeArgs>> livenessProbe() {
+        return Optional.ofNullable(this.livenessProbe);
     }
 
     /**
@@ -128,7 +128,7 @@ public final class ContainerArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name", required=true)
-      private final Output<String> name;
+    private Output<String> name;
 
     public Output<String> name() {
         return this.name;
@@ -139,10 +139,10 @@ public final class ContainerArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="ports")
-      private final @Nullable Output<List<ContainerPortArgs>> ports;
+    private @Nullable Output<List<ContainerPortArgs>> ports;
 
-    public Output<List<ContainerPortArgs>> ports() {
-        return this.ports == null ? Codegen.empty() : this.ports;
+    public Optional<Output<List<ContainerPortArgs>>> ports() {
+        return Optional.ofNullable(this.ports);
     }
 
     /**
@@ -150,10 +150,10 @@ public final class ContainerArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="readinessProbe")
-      private final @Nullable Output<ProbeArgs> readinessProbe;
+    private @Nullable Output<ProbeArgs> readinessProbe;
 
-    public Output<ProbeArgs> readinessProbe() {
-        return this.readinessProbe == null ? Codegen.empty() : this.readinessProbe;
+    public Optional<Output<ProbeArgs>> readinessProbe() {
+        return Optional.ofNullable(this.readinessProbe);
     }
 
     /**
@@ -161,10 +161,10 @@ public final class ContainerArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resources")
-      private final @Nullable Output<ResourceRequirementsArgs> resources;
+    private @Nullable Output<ResourceRequirementsArgs> resources;
 
-    public Output<ResourceRequirementsArgs> resources() {
-        return this.resources == null ? Codegen.empty() : this.resources;
+    public Optional<Output<ResourceRequirementsArgs>> resources() {
+        return Optional.ofNullable(this.resources);
     }
 
     /**
@@ -172,10 +172,10 @@ public final class ContainerArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="securityContext")
-      private final @Nullable Output<SecurityContextArgs> securityContext;
+    private @Nullable Output<SecurityContextArgs> securityContext;
 
-    public Output<SecurityContextArgs> securityContext() {
-        return this.securityContext == null ? Codegen.empty() : this.securityContext;
+    public Optional<Output<SecurityContextArgs>> securityContext() {
+        return Optional.ofNullable(this.securityContext);
     }
 
     /**
@@ -183,10 +183,10 @@ public final class ContainerArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="startupProbe")
-      private final @Nullable Output<ProbeArgs> startupProbe;
+    private @Nullable Output<ProbeArgs> startupProbe;
 
-    public Output<ProbeArgs> startupProbe() {
-        return this.startupProbe == null ? Codegen.empty() : this.startupProbe;
+    public Optional<Output<ProbeArgs>> startupProbe() {
+        return Optional.ofNullable(this.startupProbe);
     }
 
     /**
@@ -194,10 +194,10 @@ public final class ContainerArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="stdin")
-      private final @Nullable Output<Boolean> stdin;
+    private @Nullable Output<Boolean> stdin;
 
-    public Output<Boolean> stdin() {
-        return this.stdin == null ? Codegen.empty() : this.stdin;
+    public Optional<Output<Boolean>> stdin() {
+        return Optional.ofNullable(this.stdin);
     }
 
     /**
@@ -205,10 +205,10 @@ public final class ContainerArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="stdinOnce")
-      private final @Nullable Output<Boolean> stdinOnce;
+    private @Nullable Output<Boolean> stdinOnce;
 
-    public Output<Boolean> stdinOnce() {
-        return this.stdinOnce == null ? Codegen.empty() : this.stdinOnce;
+    public Optional<Output<Boolean>> stdinOnce() {
+        return Optional.ofNullable(this.stdinOnce);
     }
 
     /**
@@ -216,10 +216,10 @@ public final class ContainerArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="terminationMessagePath")
-      private final @Nullable Output<String> terminationMessagePath;
+    private @Nullable Output<String> terminationMessagePath;
 
-    public Output<String> terminationMessagePath() {
-        return this.terminationMessagePath == null ? Codegen.empty() : this.terminationMessagePath;
+    public Optional<Output<String>> terminationMessagePath() {
+        return Optional.ofNullable(this.terminationMessagePath);
     }
 
     /**
@@ -231,10 +231,10 @@ public final class ContainerArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="terminationMessagePolicy")
-      private final @Nullable Output<String> terminationMessagePolicy;
+    private @Nullable Output<String> terminationMessagePolicy;
 
-    public Output<String> terminationMessagePolicy() {
-        return this.terminationMessagePolicy == null ? Codegen.empty() : this.terminationMessagePolicy;
+    public Optional<Output<String>> terminationMessagePolicy() {
+        return Optional.ofNullable(this.terminationMessagePolicy);
     }
 
     /**
@@ -242,10 +242,10 @@ public final class ContainerArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tty")
-      private final @Nullable Output<Boolean> tty;
+    private @Nullable Output<Boolean> tty;
 
-    public Output<Boolean> tty() {
-        return this.tty == null ? Codegen.empty() : this.tty;
+    public Optional<Output<Boolean>> tty() {
+        return Optional.ofNullable(this.tty);
     }
 
     /**
@@ -253,10 +253,10 @@ public final class ContainerArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="volumeDevices")
-      private final @Nullable Output<List<VolumeDeviceArgs>> volumeDevices;
+    private @Nullable Output<List<VolumeDeviceArgs>> volumeDevices;
 
-    public Output<List<VolumeDeviceArgs>> volumeDevices() {
-        return this.volumeDevices == null ? Codegen.empty() : this.volumeDevices;
+    public Optional<Output<List<VolumeDeviceArgs>>> volumeDevices() {
+        return Optional.ofNullable(this.volumeDevices);
     }
 
     /**
@@ -264,10 +264,10 @@ public final class ContainerArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="volumeMounts")
-      private final @Nullable Output<List<VolumeMountArgs>> volumeMounts;
+    private @Nullable Output<List<VolumeMountArgs>> volumeMounts;
 
-    public Output<List<VolumeMountArgs>> volumeMounts() {
-        return this.volumeMounts == null ? Codegen.empty() : this.volumeMounts;
+    public Optional<Output<List<VolumeMountArgs>>> volumeMounts() {
+        return Optional.ofNullable(this.volumeMounts);
     }
 
     /**
@@ -275,344 +275,287 @@ public final class ContainerArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="workingDir")
-      private final @Nullable Output<String> workingDir;
+    private @Nullable Output<String> workingDir;
 
-    public Output<String> workingDir() {
-        return this.workingDir == null ? Codegen.empty() : this.workingDir;
+    public Optional<Output<String>> workingDir() {
+        return Optional.ofNullable(this.workingDir);
     }
 
-    public ContainerArgs(
-        @Nullable Output<List<String>> args,
-        @Nullable Output<List<String>> command,
-        @Nullable Output<List<EnvVarArgs>> env,
-        @Nullable Output<List<EnvFromSourceArgs>> envFrom,
-        @Nullable Output<String> image,
-        @Nullable Output<String> imagePullPolicy,
-        @Nullable Output<LifecycleArgs> lifecycle,
-        @Nullable Output<ProbeArgs> livenessProbe,
-        Output<String> name,
-        @Nullable Output<List<ContainerPortArgs>> ports,
-        @Nullable Output<ProbeArgs> readinessProbe,
-        @Nullable Output<ResourceRequirementsArgs> resources,
-        @Nullable Output<SecurityContextArgs> securityContext,
-        @Nullable Output<ProbeArgs> startupProbe,
-        @Nullable Output<Boolean> stdin,
-        @Nullable Output<Boolean> stdinOnce,
-        @Nullable Output<String> terminationMessagePath,
-        @Nullable Output<String> terminationMessagePolicy,
-        @Nullable Output<Boolean> tty,
-        @Nullable Output<List<VolumeDeviceArgs>> volumeDevices,
-        @Nullable Output<List<VolumeMountArgs>> volumeMounts,
-        @Nullable Output<String> workingDir) {
-        this.args = args;
-        this.command = command;
-        this.env = env;
-        this.envFrom = envFrom;
-        this.image = image;
-        this.imagePullPolicy = imagePullPolicy;
-        this.lifecycle = lifecycle;
-        this.livenessProbe = livenessProbe;
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.ports = ports;
-        this.readinessProbe = readinessProbe;
-        this.resources = resources;
-        this.securityContext = securityContext;
-        this.startupProbe = startupProbe;
-        this.stdin = stdin;
-        this.stdinOnce = stdinOnce;
-        this.terminationMessagePath = terminationMessagePath;
-        this.terminationMessagePolicy = terminationMessagePolicy;
-        this.tty = tty;
-        this.volumeDevices = volumeDevices;
-        this.volumeMounts = volumeMounts;
-        this.workingDir = workingDir;
-    }
+    private ContainerArgs() {}
 
-    private ContainerArgs() {
-        this.args = Codegen.empty();
-        this.command = Codegen.empty();
-        this.env = Codegen.empty();
-        this.envFrom = Codegen.empty();
-        this.image = Codegen.empty();
-        this.imagePullPolicy = Codegen.empty();
-        this.lifecycle = Codegen.empty();
-        this.livenessProbe = Codegen.empty();
-        this.name = Codegen.empty();
-        this.ports = Codegen.empty();
-        this.readinessProbe = Codegen.empty();
-        this.resources = Codegen.empty();
-        this.securityContext = Codegen.empty();
-        this.startupProbe = Codegen.empty();
-        this.stdin = Codegen.empty();
-        this.stdinOnce = Codegen.empty();
-        this.terminationMessagePath = Codegen.empty();
-        this.terminationMessagePolicy = Codegen.empty();
-        this.tty = Codegen.empty();
-        this.volumeDevices = Codegen.empty();
-        this.volumeMounts = Codegen.empty();
-        this.workingDir = Codegen.empty();
+    private ContainerArgs(ContainerArgs $) {
+        this.args = $.args;
+        this.command = $.command;
+        this.env = $.env;
+        this.envFrom = $.envFrom;
+        this.image = $.image;
+        this.imagePullPolicy = $.imagePullPolicy;
+        this.lifecycle = $.lifecycle;
+        this.livenessProbe = $.livenessProbe;
+        this.name = $.name;
+        this.ports = $.ports;
+        this.readinessProbe = $.readinessProbe;
+        this.resources = $.resources;
+        this.securityContext = $.securityContext;
+        this.startupProbe = $.startupProbe;
+        this.stdin = $.stdin;
+        this.stdinOnce = $.stdinOnce;
+        this.terminationMessagePath = $.terminationMessagePath;
+        this.terminationMessagePolicy = $.terminationMessagePolicy;
+        this.tty = $.tty;
+        this.volumeDevices = $.volumeDevices;
+        this.volumeMounts = $.volumeMounts;
+        this.workingDir = $.workingDir;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ContainerArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> args;
-        private @Nullable Output<List<String>> command;
-        private @Nullable Output<List<EnvVarArgs>> env;
-        private @Nullable Output<List<EnvFromSourceArgs>> envFrom;
-        private @Nullable Output<String> image;
-        private @Nullable Output<String> imagePullPolicy;
-        private @Nullable Output<LifecycleArgs> lifecycle;
-        private @Nullable Output<ProbeArgs> livenessProbe;
-        private Output<String> name;
-        private @Nullable Output<List<ContainerPortArgs>> ports;
-        private @Nullable Output<ProbeArgs> readinessProbe;
-        private @Nullable Output<ResourceRequirementsArgs> resources;
-        private @Nullable Output<SecurityContextArgs> securityContext;
-        private @Nullable Output<ProbeArgs> startupProbe;
-        private @Nullable Output<Boolean> stdin;
-        private @Nullable Output<Boolean> stdinOnce;
-        private @Nullable Output<String> terminationMessagePath;
-        private @Nullable Output<String> terminationMessagePolicy;
-        private @Nullable Output<Boolean> tty;
-        private @Nullable Output<List<VolumeDeviceArgs>> volumeDevices;
-        private @Nullable Output<List<VolumeMountArgs>> volumeMounts;
-        private @Nullable Output<String> workingDir;
+        private ContainerArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ContainerArgs();
         }
 
         public Builder(ContainerArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.args = defaults.args;
-    	      this.command = defaults.command;
-    	      this.env = defaults.env;
-    	      this.envFrom = defaults.envFrom;
-    	      this.image = defaults.image;
-    	      this.imagePullPolicy = defaults.imagePullPolicy;
-    	      this.lifecycle = defaults.lifecycle;
-    	      this.livenessProbe = defaults.livenessProbe;
-    	      this.name = defaults.name;
-    	      this.ports = defaults.ports;
-    	      this.readinessProbe = defaults.readinessProbe;
-    	      this.resources = defaults.resources;
-    	      this.securityContext = defaults.securityContext;
-    	      this.startupProbe = defaults.startupProbe;
-    	      this.stdin = defaults.stdin;
-    	      this.stdinOnce = defaults.stdinOnce;
-    	      this.terminationMessagePath = defaults.terminationMessagePath;
-    	      this.terminationMessagePolicy = defaults.terminationMessagePolicy;
-    	      this.tty = defaults.tty;
-    	      this.volumeDevices = defaults.volumeDevices;
-    	      this.volumeMounts = defaults.volumeMounts;
-    	      this.workingDir = defaults.workingDir;
+            $ = new ContainerArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder args(@Nullable Output<List<String>> args) {
-            this.args = args;
+            $.args = args;
             return this;
         }
-        public Builder args(@Nullable List<String> args) {
-            this.args = Codegen.ofNullable(args);
-            return this;
+
+        public Builder args(List<String> args) {
+            return args(Output.of(args));
         }
+
         public Builder args(String... args) {
             return args(List.of(args));
         }
+
         public Builder command(@Nullable Output<List<String>> command) {
-            this.command = command;
+            $.command = command;
             return this;
         }
-        public Builder command(@Nullable List<String> command) {
-            this.command = Codegen.ofNullable(command);
-            return this;
+
+        public Builder command(List<String> command) {
+            return command(Output.of(command));
         }
+
         public Builder command(String... command) {
             return command(List.of(command));
         }
+
         public Builder env(@Nullable Output<List<EnvVarArgs>> env) {
-            this.env = env;
+            $.env = env;
             return this;
         }
-        public Builder env(@Nullable List<EnvVarArgs> env) {
-            this.env = Codegen.ofNullable(env);
-            return this;
+
+        public Builder env(List<EnvVarArgs> env) {
+            return env(Output.of(env));
         }
+
         public Builder env(EnvVarArgs... env) {
             return env(List.of(env));
         }
+
         public Builder envFrom(@Nullable Output<List<EnvFromSourceArgs>> envFrom) {
-            this.envFrom = envFrom;
+            $.envFrom = envFrom;
             return this;
         }
-        public Builder envFrom(@Nullable List<EnvFromSourceArgs> envFrom) {
-            this.envFrom = Codegen.ofNullable(envFrom);
-            return this;
+
+        public Builder envFrom(List<EnvFromSourceArgs> envFrom) {
+            return envFrom(Output.of(envFrom));
         }
+
         public Builder envFrom(EnvFromSourceArgs... envFrom) {
             return envFrom(List.of(envFrom));
         }
+
         public Builder image(@Nullable Output<String> image) {
-            this.image = image;
+            $.image = image;
             return this;
         }
-        public Builder image(@Nullable String image) {
-            this.image = Codegen.ofNullable(image);
-            return this;
+
+        public Builder image(String image) {
+            return image(Output.of(image));
         }
+
         public Builder imagePullPolicy(@Nullable Output<String> imagePullPolicy) {
-            this.imagePullPolicy = imagePullPolicy;
+            $.imagePullPolicy = imagePullPolicy;
             return this;
         }
-        public Builder imagePullPolicy(@Nullable String imagePullPolicy) {
-            this.imagePullPolicy = Codegen.ofNullable(imagePullPolicy);
-            return this;
+
+        public Builder imagePullPolicy(String imagePullPolicy) {
+            return imagePullPolicy(Output.of(imagePullPolicy));
         }
+
         public Builder lifecycle(@Nullable Output<LifecycleArgs> lifecycle) {
-            this.lifecycle = lifecycle;
+            $.lifecycle = lifecycle;
             return this;
         }
-        public Builder lifecycle(@Nullable LifecycleArgs lifecycle) {
-            this.lifecycle = Codegen.ofNullable(lifecycle);
-            return this;
+
+        public Builder lifecycle(LifecycleArgs lifecycle) {
+            return lifecycle(Output.of(lifecycle));
         }
+
         public Builder livenessProbe(@Nullable Output<ProbeArgs> livenessProbe) {
-            this.livenessProbe = livenessProbe;
+            $.livenessProbe = livenessProbe;
             return this;
         }
-        public Builder livenessProbe(@Nullable ProbeArgs livenessProbe) {
-            this.livenessProbe = Codegen.ofNullable(livenessProbe);
-            return this;
+
+        public Builder livenessProbe(ProbeArgs livenessProbe) {
+            return livenessProbe(Output.of(livenessProbe));
         }
+
         public Builder name(Output<String> name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Output.of(Objects.requireNonNull(name));
-            return this;
+            return name(Output.of(name));
         }
+
         public Builder ports(@Nullable Output<List<ContainerPortArgs>> ports) {
-            this.ports = ports;
+            $.ports = ports;
             return this;
         }
-        public Builder ports(@Nullable List<ContainerPortArgs> ports) {
-            this.ports = Codegen.ofNullable(ports);
-            return this;
+
+        public Builder ports(List<ContainerPortArgs> ports) {
+            return ports(Output.of(ports));
         }
+
         public Builder ports(ContainerPortArgs... ports) {
             return ports(List.of(ports));
         }
+
         public Builder readinessProbe(@Nullable Output<ProbeArgs> readinessProbe) {
-            this.readinessProbe = readinessProbe;
+            $.readinessProbe = readinessProbe;
             return this;
         }
-        public Builder readinessProbe(@Nullable ProbeArgs readinessProbe) {
-            this.readinessProbe = Codegen.ofNullable(readinessProbe);
-            return this;
+
+        public Builder readinessProbe(ProbeArgs readinessProbe) {
+            return readinessProbe(Output.of(readinessProbe));
         }
+
         public Builder resources(@Nullable Output<ResourceRequirementsArgs> resources) {
-            this.resources = resources;
+            $.resources = resources;
             return this;
         }
-        public Builder resources(@Nullable ResourceRequirementsArgs resources) {
-            this.resources = Codegen.ofNullable(resources);
-            return this;
+
+        public Builder resources(ResourceRequirementsArgs resources) {
+            return resources(Output.of(resources));
         }
+
         public Builder securityContext(@Nullable Output<SecurityContextArgs> securityContext) {
-            this.securityContext = securityContext;
+            $.securityContext = securityContext;
             return this;
         }
-        public Builder securityContext(@Nullable SecurityContextArgs securityContext) {
-            this.securityContext = Codegen.ofNullable(securityContext);
-            return this;
+
+        public Builder securityContext(SecurityContextArgs securityContext) {
+            return securityContext(Output.of(securityContext));
         }
+
         public Builder startupProbe(@Nullable Output<ProbeArgs> startupProbe) {
-            this.startupProbe = startupProbe;
+            $.startupProbe = startupProbe;
             return this;
         }
-        public Builder startupProbe(@Nullable ProbeArgs startupProbe) {
-            this.startupProbe = Codegen.ofNullable(startupProbe);
-            return this;
+
+        public Builder startupProbe(ProbeArgs startupProbe) {
+            return startupProbe(Output.of(startupProbe));
         }
+
         public Builder stdin(@Nullable Output<Boolean> stdin) {
-            this.stdin = stdin;
+            $.stdin = stdin;
             return this;
         }
-        public Builder stdin(@Nullable Boolean stdin) {
-            this.stdin = Codegen.ofNullable(stdin);
-            return this;
+
+        public Builder stdin(Boolean stdin) {
+            return stdin(Output.of(stdin));
         }
+
         public Builder stdinOnce(@Nullable Output<Boolean> stdinOnce) {
-            this.stdinOnce = stdinOnce;
+            $.stdinOnce = stdinOnce;
             return this;
         }
-        public Builder stdinOnce(@Nullable Boolean stdinOnce) {
-            this.stdinOnce = Codegen.ofNullable(stdinOnce);
-            return this;
+
+        public Builder stdinOnce(Boolean stdinOnce) {
+            return stdinOnce(Output.of(stdinOnce));
         }
+
         public Builder terminationMessagePath(@Nullable Output<String> terminationMessagePath) {
-            this.terminationMessagePath = terminationMessagePath;
+            $.terminationMessagePath = terminationMessagePath;
             return this;
         }
-        public Builder terminationMessagePath(@Nullable String terminationMessagePath) {
-            this.terminationMessagePath = Codegen.ofNullable(terminationMessagePath);
-            return this;
+
+        public Builder terminationMessagePath(String terminationMessagePath) {
+            return terminationMessagePath(Output.of(terminationMessagePath));
         }
+
         public Builder terminationMessagePolicy(@Nullable Output<String> terminationMessagePolicy) {
-            this.terminationMessagePolicy = terminationMessagePolicy;
+            $.terminationMessagePolicy = terminationMessagePolicy;
             return this;
         }
-        public Builder terminationMessagePolicy(@Nullable String terminationMessagePolicy) {
-            this.terminationMessagePolicy = Codegen.ofNullable(terminationMessagePolicy);
-            return this;
+
+        public Builder terminationMessagePolicy(String terminationMessagePolicy) {
+            return terminationMessagePolicy(Output.of(terminationMessagePolicy));
         }
+
         public Builder tty(@Nullable Output<Boolean> tty) {
-            this.tty = tty;
+            $.tty = tty;
             return this;
         }
-        public Builder tty(@Nullable Boolean tty) {
-            this.tty = Codegen.ofNullable(tty);
-            return this;
+
+        public Builder tty(Boolean tty) {
+            return tty(Output.of(tty));
         }
+
         public Builder volumeDevices(@Nullable Output<List<VolumeDeviceArgs>> volumeDevices) {
-            this.volumeDevices = volumeDevices;
+            $.volumeDevices = volumeDevices;
             return this;
         }
-        public Builder volumeDevices(@Nullable List<VolumeDeviceArgs> volumeDevices) {
-            this.volumeDevices = Codegen.ofNullable(volumeDevices);
-            return this;
+
+        public Builder volumeDevices(List<VolumeDeviceArgs> volumeDevices) {
+            return volumeDevices(Output.of(volumeDevices));
         }
+
         public Builder volumeDevices(VolumeDeviceArgs... volumeDevices) {
             return volumeDevices(List.of(volumeDevices));
         }
+
         public Builder volumeMounts(@Nullable Output<List<VolumeMountArgs>> volumeMounts) {
-            this.volumeMounts = volumeMounts;
+            $.volumeMounts = volumeMounts;
             return this;
         }
-        public Builder volumeMounts(@Nullable List<VolumeMountArgs> volumeMounts) {
-            this.volumeMounts = Codegen.ofNullable(volumeMounts);
-            return this;
+
+        public Builder volumeMounts(List<VolumeMountArgs> volumeMounts) {
+            return volumeMounts(Output.of(volumeMounts));
         }
+
         public Builder volumeMounts(VolumeMountArgs... volumeMounts) {
             return volumeMounts(List.of(volumeMounts));
         }
+
         public Builder workingDir(@Nullable Output<String> workingDir) {
-            this.workingDir = workingDir;
+            $.workingDir = workingDir;
             return this;
         }
-        public Builder workingDir(@Nullable String workingDir) {
-            this.workingDir = Codegen.ofNullable(workingDir);
-            return this;
-        }        public ContainerArgs build() {
-            return new ContainerArgs(args, command, env, envFrom, image, imagePullPolicy, lifecycle, livenessProbe, name, ports, readinessProbe, resources, securityContext, startupProbe, stdin, stdinOnce, terminationMessagePath, terminationMessagePolicy, tty, volumeDevices, volumeMounts, workingDir);
+
+        public Builder workingDir(String workingDir) {
+            return workingDir(Output.of(workingDir));
+        }
+
+        public ContainerArgs build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            return $;
         }
     }
+
 }

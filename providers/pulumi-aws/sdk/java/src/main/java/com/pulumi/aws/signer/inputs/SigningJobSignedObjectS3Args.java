@@ -5,9 +5,9 @@ package com.pulumi.aws.signer.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class SigningJobSignedObjectS3Args extends com.pulumi.resources.Res
      * 
      */
     @Import(name="bucket")
-      private final @Nullable Output<String> bucket;
+    private @Nullable Output<String> bucket;
 
-    public Output<String> bucket() {
-        return this.bucket == null ? Codegen.empty() : this.bucket;
+    public Optional<Output<String>> bucket() {
+        return Optional.ofNullable(this.bucket);
     }
 
     /**
@@ -31,63 +31,58 @@ public final class SigningJobSignedObjectS3Args extends com.pulumi.resources.Res
      * 
      */
     @Import(name="key")
-      private final @Nullable Output<String> key;
+    private @Nullable Output<String> key;
 
-    public Output<String> key() {
-        return this.key == null ? Codegen.empty() : this.key;
+    public Optional<Output<String>> key() {
+        return Optional.ofNullable(this.key);
     }
 
-    public SigningJobSignedObjectS3Args(
-        @Nullable Output<String> bucket,
-        @Nullable Output<String> key) {
-        this.bucket = bucket;
-        this.key = key;
-    }
+    private SigningJobSignedObjectS3Args() {}
 
-    private SigningJobSignedObjectS3Args() {
-        this.bucket = Codegen.empty();
-        this.key = Codegen.empty();
+    private SigningJobSignedObjectS3Args(SigningJobSignedObjectS3Args $) {
+        this.bucket = $.bucket;
+        this.key = $.key;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SigningJobSignedObjectS3Args defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> bucket;
-        private @Nullable Output<String> key;
+        private SigningJobSignedObjectS3Args $;
 
         public Builder() {
-    	      // Empty
+            $ = new SigningJobSignedObjectS3Args();
         }
 
         public Builder(SigningJobSignedObjectS3Args defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.bucket = defaults.bucket;
-    	      this.key = defaults.key;
+            $ = new SigningJobSignedObjectS3Args(Objects.requireNonNull(defaults));
         }
 
         public Builder bucket(@Nullable Output<String> bucket) {
-            this.bucket = bucket;
+            $.bucket = bucket;
             return this;
         }
-        public Builder bucket(@Nullable String bucket) {
-            this.bucket = Codegen.ofNullable(bucket);
-            return this;
+
+        public Builder bucket(String bucket) {
+            return bucket(Output.of(bucket));
         }
+
         public Builder key(@Nullable Output<String> key) {
-            this.key = key;
+            $.key = key;
             return this;
         }
-        public Builder key(@Nullable String key) {
-            this.key = Codegen.ofNullable(key);
-            return this;
-        }        public SigningJobSignedObjectS3Args build() {
-            return new SigningJobSignedObjectS3Args(bucket, key);
+
+        public Builder key(String key) {
+            return key(Output.of(key));
+        }
+
+        public SigningJobSignedObjectS3Args build() {
+            return $;
         }
     }
+
 }

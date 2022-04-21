@@ -5,10 +5,10 @@ package com.pulumi.azurenative.devices.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class MessagingEndpointPropertiesArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="lockDurationAsIso8601")
-      private final @Nullable Output<String> lockDurationAsIso8601;
+    private @Nullable Output<String> lockDurationAsIso8601;
 
-    public Output<String> lockDurationAsIso8601() {
-        return this.lockDurationAsIso8601 == null ? Codegen.empty() : this.lockDurationAsIso8601;
+    public Optional<Output<String>> lockDurationAsIso8601() {
+        return Optional.ofNullable(this.lockDurationAsIso8601);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class MessagingEndpointPropertiesArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="maxDeliveryCount")
-      private final @Nullable Output<Integer> maxDeliveryCount;
+    private @Nullable Output<Integer> maxDeliveryCount;
 
-    public Output<Integer> maxDeliveryCount() {
-        return this.maxDeliveryCount == null ? Codegen.empty() : this.maxDeliveryCount;
+    public Optional<Output<Integer>> maxDeliveryCount() {
+        return Optional.ofNullable(this.maxDeliveryCount);
     }
 
     /**
@@ -47,76 +47,68 @@ public final class MessagingEndpointPropertiesArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="ttlAsIso8601")
-      private final @Nullable Output<String> ttlAsIso8601;
+    private @Nullable Output<String> ttlAsIso8601;
 
-    public Output<String> ttlAsIso8601() {
-        return this.ttlAsIso8601 == null ? Codegen.empty() : this.ttlAsIso8601;
+    public Optional<Output<String>> ttlAsIso8601() {
+        return Optional.ofNullable(this.ttlAsIso8601);
     }
 
-    public MessagingEndpointPropertiesArgs(
-        @Nullable Output<String> lockDurationAsIso8601,
-        @Nullable Output<Integer> maxDeliveryCount,
-        @Nullable Output<String> ttlAsIso8601) {
-        this.lockDurationAsIso8601 = lockDurationAsIso8601;
-        this.maxDeliveryCount = maxDeliveryCount;
-        this.ttlAsIso8601 = ttlAsIso8601;
-    }
+    private MessagingEndpointPropertiesArgs() {}
 
-    private MessagingEndpointPropertiesArgs() {
-        this.lockDurationAsIso8601 = Codegen.empty();
-        this.maxDeliveryCount = Codegen.empty();
-        this.ttlAsIso8601 = Codegen.empty();
+    private MessagingEndpointPropertiesArgs(MessagingEndpointPropertiesArgs $) {
+        this.lockDurationAsIso8601 = $.lockDurationAsIso8601;
+        this.maxDeliveryCount = $.maxDeliveryCount;
+        this.ttlAsIso8601 = $.ttlAsIso8601;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MessagingEndpointPropertiesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> lockDurationAsIso8601;
-        private @Nullable Output<Integer> maxDeliveryCount;
-        private @Nullable Output<String> ttlAsIso8601;
+        private MessagingEndpointPropertiesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new MessagingEndpointPropertiesArgs();
         }
 
         public Builder(MessagingEndpointPropertiesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.lockDurationAsIso8601 = defaults.lockDurationAsIso8601;
-    	      this.maxDeliveryCount = defaults.maxDeliveryCount;
-    	      this.ttlAsIso8601 = defaults.ttlAsIso8601;
+            $ = new MessagingEndpointPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder lockDurationAsIso8601(@Nullable Output<String> lockDurationAsIso8601) {
-            this.lockDurationAsIso8601 = lockDurationAsIso8601;
+            $.lockDurationAsIso8601 = lockDurationAsIso8601;
             return this;
         }
-        public Builder lockDurationAsIso8601(@Nullable String lockDurationAsIso8601) {
-            this.lockDurationAsIso8601 = Codegen.ofNullable(lockDurationAsIso8601);
-            return this;
+
+        public Builder lockDurationAsIso8601(String lockDurationAsIso8601) {
+            return lockDurationAsIso8601(Output.of(lockDurationAsIso8601));
         }
+
         public Builder maxDeliveryCount(@Nullable Output<Integer> maxDeliveryCount) {
-            this.maxDeliveryCount = maxDeliveryCount;
+            $.maxDeliveryCount = maxDeliveryCount;
             return this;
         }
-        public Builder maxDeliveryCount(@Nullable Integer maxDeliveryCount) {
-            this.maxDeliveryCount = Codegen.ofNullable(maxDeliveryCount);
-            return this;
+
+        public Builder maxDeliveryCount(Integer maxDeliveryCount) {
+            return maxDeliveryCount(Output.of(maxDeliveryCount));
         }
+
         public Builder ttlAsIso8601(@Nullable Output<String> ttlAsIso8601) {
-            this.ttlAsIso8601 = ttlAsIso8601;
+            $.ttlAsIso8601 = ttlAsIso8601;
             return this;
         }
-        public Builder ttlAsIso8601(@Nullable String ttlAsIso8601) {
-            this.ttlAsIso8601 = Codegen.ofNullable(ttlAsIso8601);
-            return this;
-        }        public MessagingEndpointPropertiesArgs build() {
-            return new MessagingEndpointPropertiesArgs(lockDurationAsIso8601, maxDeliveryCount, ttlAsIso8601);
+
+        public Builder ttlAsIso8601(String ttlAsIso8601) {
+            return ttlAsIso8601(Output.of(ttlAsIso8601));
+        }
+
+        public MessagingEndpointPropertiesArgs build() {
+            return $;
         }
     }
+
 }

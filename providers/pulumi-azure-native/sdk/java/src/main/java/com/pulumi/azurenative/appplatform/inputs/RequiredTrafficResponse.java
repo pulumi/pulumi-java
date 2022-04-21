@@ -23,7 +23,7 @@ public final class RequiredTrafficResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="direction", required=true)
-      private final String direction;
+    private String direction;
 
     public String direction() {
         return this.direction;
@@ -34,7 +34,7 @@ public final class RequiredTrafficResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="fqdns", required=true)
-      private final List<String> fqdns;
+    private List<String> fqdns;
 
     public List<String> fqdns() {
         return this.fqdns;
@@ -45,7 +45,7 @@ public final class RequiredTrafficResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="ips", required=true)
-      private final List<String> ips;
+    private List<String> ips;
 
     public List<String> ips() {
         return this.ips;
@@ -56,7 +56,7 @@ public final class RequiredTrafficResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="port", required=true)
-      private final Integer port;
+    private Integer port;
 
     public Integer port() {
         return this.port;
@@ -67,88 +67,81 @@ public final class RequiredTrafficResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="protocol", required=true)
-      private final String protocol;
+    private String protocol;
 
     public String protocol() {
         return this.protocol;
     }
 
-    public RequiredTrafficResponse(
-        String direction,
-        List<String> fqdns,
-        List<String> ips,
-        Integer port,
-        String protocol) {
-        this.direction = Objects.requireNonNull(direction, "expected parameter 'direction' to be non-null");
-        this.fqdns = Objects.requireNonNull(fqdns, "expected parameter 'fqdns' to be non-null");
-        this.ips = Objects.requireNonNull(ips, "expected parameter 'ips' to be non-null");
-        this.port = Objects.requireNonNull(port, "expected parameter 'port' to be non-null");
-        this.protocol = Objects.requireNonNull(protocol, "expected parameter 'protocol' to be non-null");
-    }
+    private RequiredTrafficResponse() {}
 
-    private RequiredTrafficResponse() {
-        this.direction = null;
-        this.fqdns = List.of();
-        this.ips = List.of();
-        this.port = null;
-        this.protocol = null;
+    private RequiredTrafficResponse(RequiredTrafficResponse $) {
+        this.direction = $.direction;
+        this.fqdns = $.fqdns;
+        this.ips = $.ips;
+        this.port = $.port;
+        this.protocol = $.protocol;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RequiredTrafficResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String direction;
-        private List<String> fqdns;
-        private List<String> ips;
-        private Integer port;
-        private String protocol;
+        private RequiredTrafficResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new RequiredTrafficResponse();
         }
 
         public Builder(RequiredTrafficResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.direction = defaults.direction;
-    	      this.fqdns = defaults.fqdns;
-    	      this.ips = defaults.ips;
-    	      this.port = defaults.port;
-    	      this.protocol = defaults.protocol;
+            $ = new RequiredTrafficResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder direction(String direction) {
-            this.direction = Objects.requireNonNull(direction);
+            $.direction = direction;
             return this;
         }
+
         public Builder fqdns(List<String> fqdns) {
-            this.fqdns = Objects.requireNonNull(fqdns);
+            $.fqdns = fqdns;
             return this;
         }
+
         public Builder fqdns(String... fqdns) {
             return fqdns(List.of(fqdns));
         }
+
         public Builder ips(List<String> ips) {
-            this.ips = Objects.requireNonNull(ips);
+            $.ips = ips;
             return this;
         }
+
         public Builder ips(String... ips) {
             return ips(List.of(ips));
         }
+
         public Builder port(Integer port) {
-            this.port = Objects.requireNonNull(port);
+            $.port = port;
             return this;
         }
+
         public Builder protocol(String protocol) {
-            this.protocol = Objects.requireNonNull(protocol);
+            $.protocol = protocol;
             return this;
-        }        public RequiredTrafficResponse build() {
-            return new RequiredTrafficResponse(direction, fqdns, ips, port, protocol);
+        }
+
+        public RequiredTrafficResponse build() {
+            $.direction = Objects.requireNonNull($.direction, "expected parameter 'direction' to be non-null");
+            $.fqdns = Objects.requireNonNull($.fqdns, "expected parameter 'fqdns' to be non-null");
+            $.ips = Objects.requireNonNull($.ips, "expected parameter 'ips' to be non-null");
+            $.port = Objects.requireNonNull($.port, "expected parameter 'port' to be non-null");
+            $.protocol = Objects.requireNonNull($.protocol, "expected parameter 'protocol' to be non-null");
+            return $;
         }
     }
+
 }

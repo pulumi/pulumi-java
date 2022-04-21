@@ -15,110 +15,99 @@ public final class GetGameServerClusterArgs extends com.pulumi.resources.InvokeA
     public static final GetGameServerClusterArgs Empty = new GetGameServerClusterArgs();
 
     @Import(name="gameServerClusterId", required=true)
-      private final String gameServerClusterId;
+    private String gameServerClusterId;
 
     public String gameServerClusterId() {
         return this.gameServerClusterId;
     }
 
     @Import(name="location", required=true)
-      private final String location;
+    private String location;
 
     public String location() {
         return this.location;
     }
 
     @Import(name="project")
-      private final @Nullable String project;
+    private @Nullable String project;
 
     public Optional<String> project() {
-        return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
+        return Optional.ofNullable(this.project);
     }
 
     @Import(name="realmId", required=true)
-      private final String realmId;
+    private String realmId;
 
     public String realmId() {
         return this.realmId;
     }
 
     @Import(name="view")
-      private final @Nullable String view;
+    private @Nullable String view;
 
     public Optional<String> view() {
-        return this.view == null ? Optional.empty() : Optional.ofNullable(this.view);
+        return Optional.ofNullable(this.view);
     }
 
-    public GetGameServerClusterArgs(
-        String gameServerClusterId,
-        String location,
-        @Nullable String project,
-        String realmId,
-        @Nullable String view) {
-        this.gameServerClusterId = Objects.requireNonNull(gameServerClusterId, "expected parameter 'gameServerClusterId' to be non-null");
-        this.location = Objects.requireNonNull(location, "expected parameter 'location' to be non-null");
-        this.project = project;
-        this.realmId = Objects.requireNonNull(realmId, "expected parameter 'realmId' to be non-null");
-        this.view = view;
-    }
+    private GetGameServerClusterArgs() {}
 
-    private GetGameServerClusterArgs() {
-        this.gameServerClusterId = null;
-        this.location = null;
-        this.project = null;
-        this.realmId = null;
-        this.view = null;
+    private GetGameServerClusterArgs(GetGameServerClusterArgs $) {
+        this.gameServerClusterId = $.gameServerClusterId;
+        this.location = $.location;
+        this.project = $.project;
+        this.realmId = $.realmId;
+        this.view = $.view;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetGameServerClusterArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String gameServerClusterId;
-        private String location;
-        private @Nullable String project;
-        private String realmId;
-        private @Nullable String view;
+        private GetGameServerClusterArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetGameServerClusterArgs();
         }
 
         public Builder(GetGameServerClusterArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.gameServerClusterId = defaults.gameServerClusterId;
-    	      this.location = defaults.location;
-    	      this.project = defaults.project;
-    	      this.realmId = defaults.realmId;
-    	      this.view = defaults.view;
+            $ = new GetGameServerClusterArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder gameServerClusterId(String gameServerClusterId) {
-            this.gameServerClusterId = Objects.requireNonNull(gameServerClusterId);
+            $.gameServerClusterId = gameServerClusterId;
             return this;
         }
+
         public Builder location(String location) {
-            this.location = Objects.requireNonNull(location);
+            $.location = location;
             return this;
         }
+
         public Builder project(@Nullable String project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
+
         public Builder realmId(String realmId) {
-            this.realmId = Objects.requireNonNull(realmId);
+            $.realmId = realmId;
             return this;
         }
+
         public Builder view(@Nullable String view) {
-            this.view = view;
+            $.view = view;
             return this;
-        }        public GetGameServerClusterArgs build() {
-            return new GetGameServerClusterArgs(gameServerClusterId, location, project, realmId, view);
+        }
+
+        public GetGameServerClusterArgs build() {
+            $.gameServerClusterId = Objects.requireNonNull($.gameServerClusterId, "expected parameter 'gameServerClusterId' to be non-null");
+            $.location = Objects.requireNonNull($.location, "expected parameter 'location' to be non-null");
+            $.realmId = Objects.requireNonNull($.realmId, "expected parameter 'realmId' to be non-null");
+            return $;
         }
     }
+
 }

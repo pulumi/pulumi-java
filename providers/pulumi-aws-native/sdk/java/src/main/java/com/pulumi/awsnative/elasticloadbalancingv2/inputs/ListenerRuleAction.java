@@ -21,158 +21,136 @@ public final class ListenerRuleAction extends com.pulumi.resources.InvokeArgs {
     public static final ListenerRuleAction Empty = new ListenerRuleAction();
 
     @Import(name="authenticateCognitoConfig")
-      private final @Nullable ListenerRuleAuthenticateCognitoConfig authenticateCognitoConfig;
+    private @Nullable ListenerRuleAuthenticateCognitoConfig authenticateCognitoConfig;
 
     public Optional<ListenerRuleAuthenticateCognitoConfig> authenticateCognitoConfig() {
-        return this.authenticateCognitoConfig == null ? Optional.empty() : Optional.ofNullable(this.authenticateCognitoConfig);
+        return Optional.ofNullable(this.authenticateCognitoConfig);
     }
 
     @Import(name="authenticateOidcConfig")
-      private final @Nullable ListenerRuleAuthenticateOidcConfig authenticateOidcConfig;
+    private @Nullable ListenerRuleAuthenticateOidcConfig authenticateOidcConfig;
 
     public Optional<ListenerRuleAuthenticateOidcConfig> authenticateOidcConfig() {
-        return this.authenticateOidcConfig == null ? Optional.empty() : Optional.ofNullable(this.authenticateOidcConfig);
+        return Optional.ofNullable(this.authenticateOidcConfig);
     }
 
     @Import(name="fixedResponseConfig")
-      private final @Nullable ListenerRuleFixedResponseConfig fixedResponseConfig;
+    private @Nullable ListenerRuleFixedResponseConfig fixedResponseConfig;
 
     public Optional<ListenerRuleFixedResponseConfig> fixedResponseConfig() {
-        return this.fixedResponseConfig == null ? Optional.empty() : Optional.ofNullable(this.fixedResponseConfig);
+        return Optional.ofNullable(this.fixedResponseConfig);
     }
 
     @Import(name="forwardConfig")
-      private final @Nullable ListenerRuleForwardConfig forwardConfig;
+    private @Nullable ListenerRuleForwardConfig forwardConfig;
 
     public Optional<ListenerRuleForwardConfig> forwardConfig() {
-        return this.forwardConfig == null ? Optional.empty() : Optional.ofNullable(this.forwardConfig);
+        return Optional.ofNullable(this.forwardConfig);
     }
 
     @Import(name="order")
-      private final @Nullable Integer order;
+    private @Nullable Integer order;
 
     public Optional<Integer> order() {
-        return this.order == null ? Optional.empty() : Optional.ofNullable(this.order);
+        return Optional.ofNullable(this.order);
     }
 
     @Import(name="redirectConfig")
-      private final @Nullable ListenerRuleRedirectConfig redirectConfig;
+    private @Nullable ListenerRuleRedirectConfig redirectConfig;
 
     public Optional<ListenerRuleRedirectConfig> redirectConfig() {
-        return this.redirectConfig == null ? Optional.empty() : Optional.ofNullable(this.redirectConfig);
+        return Optional.ofNullable(this.redirectConfig);
     }
 
     @Import(name="targetGroupArn")
-      private final @Nullable String targetGroupArn;
+    private @Nullable String targetGroupArn;
 
     public Optional<String> targetGroupArn() {
-        return this.targetGroupArn == null ? Optional.empty() : Optional.ofNullable(this.targetGroupArn);
+        return Optional.ofNullable(this.targetGroupArn);
     }
 
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
     }
 
-    public ListenerRuleAction(
-        @Nullable ListenerRuleAuthenticateCognitoConfig authenticateCognitoConfig,
-        @Nullable ListenerRuleAuthenticateOidcConfig authenticateOidcConfig,
-        @Nullable ListenerRuleFixedResponseConfig fixedResponseConfig,
-        @Nullable ListenerRuleForwardConfig forwardConfig,
-        @Nullable Integer order,
-        @Nullable ListenerRuleRedirectConfig redirectConfig,
-        @Nullable String targetGroupArn,
-        String type) {
-        this.authenticateCognitoConfig = authenticateCognitoConfig;
-        this.authenticateOidcConfig = authenticateOidcConfig;
-        this.fixedResponseConfig = fixedResponseConfig;
-        this.forwardConfig = forwardConfig;
-        this.order = order;
-        this.redirectConfig = redirectConfig;
-        this.targetGroupArn = targetGroupArn;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private ListenerRuleAction() {}
 
-    private ListenerRuleAction() {
-        this.authenticateCognitoConfig = null;
-        this.authenticateOidcConfig = null;
-        this.fixedResponseConfig = null;
-        this.forwardConfig = null;
-        this.order = null;
-        this.redirectConfig = null;
-        this.targetGroupArn = null;
-        this.type = null;
+    private ListenerRuleAction(ListenerRuleAction $) {
+        this.authenticateCognitoConfig = $.authenticateCognitoConfig;
+        this.authenticateOidcConfig = $.authenticateOidcConfig;
+        this.fixedResponseConfig = $.fixedResponseConfig;
+        this.forwardConfig = $.forwardConfig;
+        this.order = $.order;
+        this.redirectConfig = $.redirectConfig;
+        this.targetGroupArn = $.targetGroupArn;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ListenerRuleAction defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable ListenerRuleAuthenticateCognitoConfig authenticateCognitoConfig;
-        private @Nullable ListenerRuleAuthenticateOidcConfig authenticateOidcConfig;
-        private @Nullable ListenerRuleFixedResponseConfig fixedResponseConfig;
-        private @Nullable ListenerRuleForwardConfig forwardConfig;
-        private @Nullable Integer order;
-        private @Nullable ListenerRuleRedirectConfig redirectConfig;
-        private @Nullable String targetGroupArn;
-        private String type;
+        private ListenerRuleAction $;
 
         public Builder() {
-    	      // Empty
+            $ = new ListenerRuleAction();
         }
 
         public Builder(ListenerRuleAction defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.authenticateCognitoConfig = defaults.authenticateCognitoConfig;
-    	      this.authenticateOidcConfig = defaults.authenticateOidcConfig;
-    	      this.fixedResponseConfig = defaults.fixedResponseConfig;
-    	      this.forwardConfig = defaults.forwardConfig;
-    	      this.order = defaults.order;
-    	      this.redirectConfig = defaults.redirectConfig;
-    	      this.targetGroupArn = defaults.targetGroupArn;
-    	      this.type = defaults.type;
+            $ = new ListenerRuleAction(Objects.requireNonNull(defaults));
         }
 
         public Builder authenticateCognitoConfig(@Nullable ListenerRuleAuthenticateCognitoConfig authenticateCognitoConfig) {
-            this.authenticateCognitoConfig = authenticateCognitoConfig;
+            $.authenticateCognitoConfig = authenticateCognitoConfig;
             return this;
         }
+
         public Builder authenticateOidcConfig(@Nullable ListenerRuleAuthenticateOidcConfig authenticateOidcConfig) {
-            this.authenticateOidcConfig = authenticateOidcConfig;
+            $.authenticateOidcConfig = authenticateOidcConfig;
             return this;
         }
+
         public Builder fixedResponseConfig(@Nullable ListenerRuleFixedResponseConfig fixedResponseConfig) {
-            this.fixedResponseConfig = fixedResponseConfig;
+            $.fixedResponseConfig = fixedResponseConfig;
             return this;
         }
+
         public Builder forwardConfig(@Nullable ListenerRuleForwardConfig forwardConfig) {
-            this.forwardConfig = forwardConfig;
+            $.forwardConfig = forwardConfig;
             return this;
         }
+
         public Builder order(@Nullable Integer order) {
-            this.order = order;
+            $.order = order;
             return this;
         }
+
         public Builder redirectConfig(@Nullable ListenerRuleRedirectConfig redirectConfig) {
-            this.redirectConfig = redirectConfig;
+            $.redirectConfig = redirectConfig;
             return this;
         }
+
         public Builder targetGroupArn(@Nullable String targetGroupArn) {
-            this.targetGroupArn = targetGroupArn;
+            $.targetGroupArn = targetGroupArn;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
-        }        public ListenerRuleAction build() {
-            return new ListenerRuleAction(authenticateCognitoConfig, authenticateOidcConfig, fixedResponseConfig, forwardConfig, order, redirectConfig, targetGroupArn, type);
+        }
+
+        public ListenerRuleAction build() {
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

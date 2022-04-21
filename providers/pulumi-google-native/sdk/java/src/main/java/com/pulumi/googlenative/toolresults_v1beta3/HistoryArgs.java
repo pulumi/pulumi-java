@@ -5,10 +5,10 @@ package com.pulumi.googlenative.toolresults_v1beta3;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.toolresults_v1beta3.enums.HistoryTestPlatform;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class HistoryArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="displayName")
-      private final @Nullable Output<String> displayName;
+    private @Nullable Output<String> displayName;
 
-    public Output<String> displayName() {
-        return this.displayName == null ? Codegen.empty() : this.displayName;
+    public Optional<Output<String>> displayName() {
+        return Optional.ofNullable(this.displayName);
     }
 
     /**
@@ -32,10 +32,10 @@ public final class HistoryArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="historyId")
-      private final @Nullable Output<String> historyId;
+    private @Nullable Output<String> historyId;
 
-    public Output<String> historyId() {
-        return this.historyId == null ? Codegen.empty() : this.historyId;
+    public Optional<Output<String>> historyId() {
+        return Optional.ofNullable(this.historyId);
     }
 
     /**
@@ -43,24 +43,24 @@ public final class HistoryArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     @Import(name="requestId")
-      private final @Nullable Output<String> requestId;
+    private @Nullable Output<String> requestId;
 
-    public Output<String> requestId() {
-        return this.requestId == null ? Codegen.empty() : this.requestId;
+    public Optional<Output<String>> requestId() {
+        return Optional.ofNullable(this.requestId);
     }
 
     /**
@@ -68,115 +68,98 @@ public final class HistoryArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="testPlatform")
-      private final @Nullable Output<HistoryTestPlatform> testPlatform;
+    private @Nullable Output<HistoryTestPlatform> testPlatform;
 
-    public Output<HistoryTestPlatform> testPlatform() {
-        return this.testPlatform == null ? Codegen.empty() : this.testPlatform;
+    public Optional<Output<HistoryTestPlatform>> testPlatform() {
+        return Optional.ofNullable(this.testPlatform);
     }
 
-    public HistoryArgs(
-        @Nullable Output<String> displayName,
-        @Nullable Output<String> historyId,
-        @Nullable Output<String> name,
-        @Nullable Output<String> project,
-        @Nullable Output<String> requestId,
-        @Nullable Output<HistoryTestPlatform> testPlatform) {
-        this.displayName = displayName;
-        this.historyId = historyId;
-        this.name = name;
-        this.project = project;
-        this.requestId = requestId;
-        this.testPlatform = testPlatform;
-    }
+    private HistoryArgs() {}
 
-    private HistoryArgs() {
-        this.displayName = Codegen.empty();
-        this.historyId = Codegen.empty();
-        this.name = Codegen.empty();
-        this.project = Codegen.empty();
-        this.requestId = Codegen.empty();
-        this.testPlatform = Codegen.empty();
+    private HistoryArgs(HistoryArgs $) {
+        this.displayName = $.displayName;
+        this.historyId = $.historyId;
+        this.name = $.name;
+        this.project = $.project;
+        this.requestId = $.requestId;
+        this.testPlatform = $.testPlatform;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(HistoryArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> displayName;
-        private @Nullable Output<String> historyId;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> project;
-        private @Nullable Output<String> requestId;
-        private @Nullable Output<HistoryTestPlatform> testPlatform;
+        private HistoryArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new HistoryArgs();
         }
 
         public Builder(HistoryArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.displayName = defaults.displayName;
-    	      this.historyId = defaults.historyId;
-    	      this.name = defaults.name;
-    	      this.project = defaults.project;
-    	      this.requestId = defaults.requestId;
-    	      this.testPlatform = defaults.testPlatform;
+            $ = new HistoryArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder displayName(@Nullable Output<String> displayName) {
-            this.displayName = displayName;
+            $.displayName = displayName;
             return this;
         }
-        public Builder displayName(@Nullable String displayName) {
-            this.displayName = Codegen.ofNullable(displayName);
-            return this;
+
+        public Builder displayName(String displayName) {
+            return displayName(Output.of(displayName));
         }
+
         public Builder historyId(@Nullable Output<String> historyId) {
-            this.historyId = historyId;
+            $.historyId = historyId;
             return this;
         }
-        public Builder historyId(@Nullable String historyId) {
-            this.historyId = Codegen.ofNullable(historyId);
-            return this;
+
+        public Builder historyId(String historyId) {
+            return historyId(Output.of(historyId));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder requestId(@Nullable Output<String> requestId) {
-            this.requestId = requestId;
+            $.requestId = requestId;
             return this;
         }
-        public Builder requestId(@Nullable String requestId) {
-            this.requestId = Codegen.ofNullable(requestId);
-            return this;
+
+        public Builder requestId(String requestId) {
+            return requestId(Output.of(requestId));
         }
+
         public Builder testPlatform(@Nullable Output<HistoryTestPlatform> testPlatform) {
-            this.testPlatform = testPlatform;
+            $.testPlatform = testPlatform;
             return this;
         }
-        public Builder testPlatform(@Nullable HistoryTestPlatform testPlatform) {
-            this.testPlatform = Codegen.ofNullable(testPlatform);
-            return this;
-        }        public HistoryArgs build() {
-            return new HistoryArgs(displayName, historyId, name, project, requestId, testPlatform);
+
+        public Builder testPlatform(HistoryTestPlatform testPlatform) {
+            return testPlatform(Output.of(testPlatform));
+        }
+
+        public HistoryArgs build() {
+            return $;
         }
     }
+
 }

@@ -5,9 +5,9 @@ package com.pulumi.gcp.dataproc.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -16,110 +16,99 @@ public final class JobStatusArgs extends com.pulumi.resources.ResourceArgs {
     public static final JobStatusArgs Empty = new JobStatusArgs();
 
     @Import(name="details")
-      private final @Nullable Output<String> details;
+    private @Nullable Output<String> details;
 
-    public Output<String> details() {
-        return this.details == null ? Codegen.empty() : this.details;
+    public Optional<Output<String>> details() {
+        return Optional.ofNullable(this.details);
     }
 
     @Import(name="state")
-      private final @Nullable Output<String> state;
+    private @Nullable Output<String> state;
 
-    public Output<String> state() {
-        return this.state == null ? Codegen.empty() : this.state;
+    public Optional<Output<String>> state() {
+        return Optional.ofNullable(this.state);
     }
 
     @Import(name="stateStartTime")
-      private final @Nullable Output<String> stateStartTime;
+    private @Nullable Output<String> stateStartTime;
 
-    public Output<String> stateStartTime() {
-        return this.stateStartTime == null ? Codegen.empty() : this.stateStartTime;
+    public Optional<Output<String>> stateStartTime() {
+        return Optional.ofNullable(this.stateStartTime);
     }
 
     @Import(name="substate")
-      private final @Nullable Output<String> substate;
+    private @Nullable Output<String> substate;
 
-    public Output<String> substate() {
-        return this.substate == null ? Codegen.empty() : this.substate;
+    public Optional<Output<String>> substate() {
+        return Optional.ofNullable(this.substate);
     }
 
-    public JobStatusArgs(
-        @Nullable Output<String> details,
-        @Nullable Output<String> state,
-        @Nullable Output<String> stateStartTime,
-        @Nullable Output<String> substate) {
-        this.details = details;
-        this.state = state;
-        this.stateStartTime = stateStartTime;
-        this.substate = substate;
-    }
+    private JobStatusArgs() {}
 
-    private JobStatusArgs() {
-        this.details = Codegen.empty();
-        this.state = Codegen.empty();
-        this.stateStartTime = Codegen.empty();
-        this.substate = Codegen.empty();
+    private JobStatusArgs(JobStatusArgs $) {
+        this.details = $.details;
+        this.state = $.state;
+        this.stateStartTime = $.stateStartTime;
+        this.substate = $.substate;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(JobStatusArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> details;
-        private @Nullable Output<String> state;
-        private @Nullable Output<String> stateStartTime;
-        private @Nullable Output<String> substate;
+        private JobStatusArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new JobStatusArgs();
         }
 
         public Builder(JobStatusArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.details = defaults.details;
-    	      this.state = defaults.state;
-    	      this.stateStartTime = defaults.stateStartTime;
-    	      this.substate = defaults.substate;
+            $ = new JobStatusArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder details(@Nullable Output<String> details) {
-            this.details = details;
+            $.details = details;
             return this;
         }
-        public Builder details(@Nullable String details) {
-            this.details = Codegen.ofNullable(details);
-            return this;
+
+        public Builder details(String details) {
+            return details(Output.of(details));
         }
+
         public Builder state(@Nullable Output<String> state) {
-            this.state = state;
+            $.state = state;
             return this;
         }
-        public Builder state(@Nullable String state) {
-            this.state = Codegen.ofNullable(state);
-            return this;
+
+        public Builder state(String state) {
+            return state(Output.of(state));
         }
+
         public Builder stateStartTime(@Nullable Output<String> stateStartTime) {
-            this.stateStartTime = stateStartTime;
+            $.stateStartTime = stateStartTime;
             return this;
         }
-        public Builder stateStartTime(@Nullable String stateStartTime) {
-            this.stateStartTime = Codegen.ofNullable(stateStartTime);
-            return this;
+
+        public Builder stateStartTime(String stateStartTime) {
+            return stateStartTime(Output.of(stateStartTime));
         }
+
         public Builder substate(@Nullable Output<String> substate) {
-            this.substate = substate;
+            $.substate = substate;
             return this;
         }
-        public Builder substate(@Nullable String substate) {
-            this.substate = Codegen.ofNullable(substate);
-            return this;
-        }        public JobStatusArgs build() {
-            return new JobStatusArgs(details, state, stateStartTime, substate);
+
+        public Builder substate(String substate) {
+            return substate(Output.of(substate));
+        }
+
+        public JobStatusArgs build() {
+            return $;
         }
     }
+
 }

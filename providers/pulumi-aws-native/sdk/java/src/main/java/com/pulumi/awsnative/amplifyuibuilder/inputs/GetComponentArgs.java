@@ -13,78 +13,73 @@ public final class GetComponentArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetComponentArgs Empty = new GetComponentArgs();
 
     @Import(name="appId", required=true)
-      private final String appId;
+    private String appId;
 
     public String appId() {
         return this.appId;
     }
 
     @Import(name="environmentName", required=true)
-      private final String environmentName;
+    private String environmentName;
 
     public String environmentName() {
         return this.environmentName;
     }
 
     @Import(name="id", required=true)
-      private final String id;
+    private String id;
 
     public String id() {
         return this.id;
     }
 
-    public GetComponentArgs(
-        String appId,
-        String environmentName,
-        String id) {
-        this.appId = Objects.requireNonNull(appId, "expected parameter 'appId' to be non-null");
-        this.environmentName = Objects.requireNonNull(environmentName, "expected parameter 'environmentName' to be non-null");
-        this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
-    }
+    private GetComponentArgs() {}
 
-    private GetComponentArgs() {
-        this.appId = null;
-        this.environmentName = null;
-        this.id = null;
+    private GetComponentArgs(GetComponentArgs $) {
+        this.appId = $.appId;
+        this.environmentName = $.environmentName;
+        this.id = $.id;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetComponentArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String appId;
-        private String environmentName;
-        private String id;
+        private GetComponentArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetComponentArgs();
         }
 
         public Builder(GetComponentArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.appId = defaults.appId;
-    	      this.environmentName = defaults.environmentName;
-    	      this.id = defaults.id;
+            $ = new GetComponentArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder appId(String appId) {
-            this.appId = Objects.requireNonNull(appId);
+            $.appId = appId;
             return this;
         }
+
         public Builder environmentName(String environmentName) {
-            this.environmentName = Objects.requireNonNull(environmentName);
+            $.environmentName = environmentName;
             return this;
         }
+
         public Builder id(String id) {
-            this.id = Objects.requireNonNull(id);
+            $.id = id;
             return this;
-        }        public GetComponentArgs build() {
-            return new GetComponentArgs(appId, environmentName, id);
+        }
+
+        public GetComponentArgs build() {
+            $.appId = Objects.requireNonNull($.appId, "expected parameter 'appId' to be non-null");
+            $.environmentName = Objects.requireNonNull($.environmentName, "expected parameter 'environmentName' to be non-null");
+            $.id = Objects.requireNonNull($.id, "expected parameter 'id' to be non-null");
+            return $;
         }
     }
+
 }

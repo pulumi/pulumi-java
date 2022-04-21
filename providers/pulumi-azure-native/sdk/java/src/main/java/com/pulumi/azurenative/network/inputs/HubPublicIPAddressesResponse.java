@@ -25,10 +25,10 @@ public final class HubPublicIPAddressesResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="addresses")
-      private final @Nullable List<AzureFirewallPublicIPAddressResponse> addresses;
+    private @Nullable List<AzureFirewallPublicIPAddressResponse> addresses;
 
-    public List<AzureFirewallPublicIPAddressResponse> addresses() {
-        return this.addresses == null ? List.of() : this.addresses;
+    public Optional<List<AzureFirewallPublicIPAddressResponse>> addresses() {
+        return Optional.ofNullable(this.addresses);
     }
 
     /**
@@ -36,58 +36,54 @@ public final class HubPublicIPAddressesResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="count")
-      private final @Nullable Integer count;
+    private @Nullable Integer count;
 
     public Optional<Integer> count() {
-        return this.count == null ? Optional.empty() : Optional.ofNullable(this.count);
+        return Optional.ofNullable(this.count);
     }
 
-    public HubPublicIPAddressesResponse(
-        @Nullable List<AzureFirewallPublicIPAddressResponse> addresses,
-        @Nullable Integer count) {
-        this.addresses = addresses;
-        this.count = count;
-    }
+    private HubPublicIPAddressesResponse() {}
 
-    private HubPublicIPAddressesResponse() {
-        this.addresses = List.of();
-        this.count = null;
+    private HubPublicIPAddressesResponse(HubPublicIPAddressesResponse $) {
+        this.addresses = $.addresses;
+        this.count = $.count;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(HubPublicIPAddressesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<AzureFirewallPublicIPAddressResponse> addresses;
-        private @Nullable Integer count;
+        private HubPublicIPAddressesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new HubPublicIPAddressesResponse();
         }
 
         public Builder(HubPublicIPAddressesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.addresses = defaults.addresses;
-    	      this.count = defaults.count;
+            $ = new HubPublicIPAddressesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder addresses(@Nullable List<AzureFirewallPublicIPAddressResponse> addresses) {
-            this.addresses = addresses;
+            $.addresses = addresses;
             return this;
         }
+
         public Builder addresses(AzureFirewallPublicIPAddressResponse... addresses) {
             return addresses(List.of(addresses));
         }
+
         public Builder count(@Nullable Integer count) {
-            this.count = count;
+            $.count = count;
             return this;
-        }        public HubPublicIPAddressesResponse build() {
-            return new HubPublicIPAddressesResponse(addresses, count);
+        }
+
+        public HubPublicIPAddressesResponse build() {
+            return $;
         }
     }
+
 }

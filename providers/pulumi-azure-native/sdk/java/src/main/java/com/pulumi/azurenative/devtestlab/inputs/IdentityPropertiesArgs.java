@@ -7,9 +7,9 @@ import com.pulumi.azurenative.devtestlab.enums.ManagedIdentityType;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class IdentityPropertiesArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="clientSecretUrl")
-      private final @Nullable Output<String> clientSecretUrl;
+    private @Nullable Output<String> clientSecretUrl;
 
-    public Output<String> clientSecretUrl() {
-        return this.clientSecretUrl == null ? Codegen.empty() : this.clientSecretUrl;
+    public Optional<Output<String>> clientSecretUrl() {
+        return Optional.ofNullable(this.clientSecretUrl);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class IdentityPropertiesArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="principalId")
-      private final @Nullable Output<String> principalId;
+    private @Nullable Output<String> principalId;
 
-    public Output<String> principalId() {
-        return this.principalId == null ? Codegen.empty() : this.principalId;
+    public Optional<Output<String>> principalId() {
+        return Optional.ofNullable(this.principalId);
     }
 
     /**
@@ -48,10 +48,10 @@ public final class IdentityPropertiesArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="tenantId")
-      private final @Nullable Output<String> tenantId;
+    private @Nullable Output<String> tenantId;
 
-    public Output<String> tenantId() {
-        return this.tenantId == null ? Codegen.empty() : this.tenantId;
+    public Optional<Output<String>> tenantId() {
+        return Optional.ofNullable(this.tenantId);
     }
 
     /**
@@ -59,89 +59,78 @@ public final class IdentityPropertiesArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="type")
-      private final @Nullable Output<Either<String,ManagedIdentityType>> type;
+    private @Nullable Output<Either<String,ManagedIdentityType>> type;
 
-    public Output<Either<String,ManagedIdentityType>> type() {
-        return this.type == null ? Codegen.empty() : this.type;
+    public Optional<Output<Either<String,ManagedIdentityType>>> type() {
+        return Optional.ofNullable(this.type);
     }
 
-    public IdentityPropertiesArgs(
-        @Nullable Output<String> clientSecretUrl,
-        @Nullable Output<String> principalId,
-        @Nullable Output<String> tenantId,
-        @Nullable Output<Either<String,ManagedIdentityType>> type) {
-        this.clientSecretUrl = clientSecretUrl;
-        this.principalId = principalId;
-        this.tenantId = tenantId;
-        this.type = type;
-    }
+    private IdentityPropertiesArgs() {}
 
-    private IdentityPropertiesArgs() {
-        this.clientSecretUrl = Codegen.empty();
-        this.principalId = Codegen.empty();
-        this.tenantId = Codegen.empty();
-        this.type = Codegen.empty();
+    private IdentityPropertiesArgs(IdentityPropertiesArgs $) {
+        this.clientSecretUrl = $.clientSecretUrl;
+        this.principalId = $.principalId;
+        this.tenantId = $.tenantId;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(IdentityPropertiesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> clientSecretUrl;
-        private @Nullable Output<String> principalId;
-        private @Nullable Output<String> tenantId;
-        private @Nullable Output<Either<String,ManagedIdentityType>> type;
+        private IdentityPropertiesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new IdentityPropertiesArgs();
         }
 
         public Builder(IdentityPropertiesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.clientSecretUrl = defaults.clientSecretUrl;
-    	      this.principalId = defaults.principalId;
-    	      this.tenantId = defaults.tenantId;
-    	      this.type = defaults.type;
+            $ = new IdentityPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder clientSecretUrl(@Nullable Output<String> clientSecretUrl) {
-            this.clientSecretUrl = clientSecretUrl;
+            $.clientSecretUrl = clientSecretUrl;
             return this;
         }
-        public Builder clientSecretUrl(@Nullable String clientSecretUrl) {
-            this.clientSecretUrl = Codegen.ofNullable(clientSecretUrl);
-            return this;
+
+        public Builder clientSecretUrl(String clientSecretUrl) {
+            return clientSecretUrl(Output.of(clientSecretUrl));
         }
+
         public Builder principalId(@Nullable Output<String> principalId) {
-            this.principalId = principalId;
+            $.principalId = principalId;
             return this;
         }
-        public Builder principalId(@Nullable String principalId) {
-            this.principalId = Codegen.ofNullable(principalId);
-            return this;
+
+        public Builder principalId(String principalId) {
+            return principalId(Output.of(principalId));
         }
+
         public Builder tenantId(@Nullable Output<String> tenantId) {
-            this.tenantId = tenantId;
+            $.tenantId = tenantId;
             return this;
         }
-        public Builder tenantId(@Nullable String tenantId) {
-            this.tenantId = Codegen.ofNullable(tenantId);
-            return this;
+
+        public Builder tenantId(String tenantId) {
+            return tenantId(Output.of(tenantId));
         }
+
         public Builder type(@Nullable Output<Either<String,ManagedIdentityType>> type) {
-            this.type = type;
+            $.type = type;
             return this;
         }
-        public Builder type(@Nullable Either<String,ManagedIdentityType> type) {
-            this.type = Codegen.ofNullable(type);
-            return this;
-        }        public IdentityPropertiesArgs build() {
-            return new IdentityPropertiesArgs(clientSecretUrl, principalId, tenantId, type);
+
+        public Builder type(Either<String,ManagedIdentityType> type) {
+            return type(Output.of(type));
+        }
+
+        public IdentityPropertiesArgs build() {
+            return $;
         }
     }
+
 }

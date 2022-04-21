@@ -5,7 +5,6 @@ package com.pulumi.awsnative.iotanalytics.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -15,70 +14,67 @@ public final class DatasetIotEventsDestinationConfigurationArgs extends com.pulu
     public static final DatasetIotEventsDestinationConfigurationArgs Empty = new DatasetIotEventsDestinationConfigurationArgs();
 
     @Import(name="inputName", required=true)
-      private final Output<String> inputName;
+    private Output<String> inputName;
 
     public Output<String> inputName() {
         return this.inputName;
     }
 
     @Import(name="roleArn", required=true)
-      private final Output<String> roleArn;
+    private Output<String> roleArn;
 
     public Output<String> roleArn() {
         return this.roleArn;
     }
 
-    public DatasetIotEventsDestinationConfigurationArgs(
-        Output<String> inputName,
-        Output<String> roleArn) {
-        this.inputName = Objects.requireNonNull(inputName, "expected parameter 'inputName' to be non-null");
-        this.roleArn = Objects.requireNonNull(roleArn, "expected parameter 'roleArn' to be non-null");
-    }
+    private DatasetIotEventsDestinationConfigurationArgs() {}
 
-    private DatasetIotEventsDestinationConfigurationArgs() {
-        this.inputName = Codegen.empty();
-        this.roleArn = Codegen.empty();
+    private DatasetIotEventsDestinationConfigurationArgs(DatasetIotEventsDestinationConfigurationArgs $) {
+        this.inputName = $.inputName;
+        this.roleArn = $.roleArn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DatasetIotEventsDestinationConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> inputName;
-        private Output<String> roleArn;
+        private DatasetIotEventsDestinationConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DatasetIotEventsDestinationConfigurationArgs();
         }
 
         public Builder(DatasetIotEventsDestinationConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.inputName = defaults.inputName;
-    	      this.roleArn = defaults.roleArn;
+            $ = new DatasetIotEventsDestinationConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder inputName(Output<String> inputName) {
-            this.inputName = Objects.requireNonNull(inputName);
+            $.inputName = inputName;
             return this;
         }
+
         public Builder inputName(String inputName) {
-            this.inputName = Output.of(Objects.requireNonNull(inputName));
-            return this;
+            return inputName(Output.of(inputName));
         }
+
         public Builder roleArn(Output<String> roleArn) {
-            this.roleArn = Objects.requireNonNull(roleArn);
+            $.roleArn = roleArn;
             return this;
         }
+
         public Builder roleArn(String roleArn) {
-            this.roleArn = Output.of(Objects.requireNonNull(roleArn));
-            return this;
-        }        public DatasetIotEventsDestinationConfigurationArgs build() {
-            return new DatasetIotEventsDestinationConfigurationArgs(inputName, roleArn);
+            return roleArn(Output.of(roleArn));
+        }
+
+        public DatasetIotEventsDestinationConfigurationArgs build() {
+            $.inputName = Objects.requireNonNull($.inputName, "expected parameter 'inputName' to be non-null");
+            $.roleArn = Objects.requireNonNull($.roleArn, "expected parameter 'roleArn' to be non-null");
+            return $;
         }
     }
+
 }

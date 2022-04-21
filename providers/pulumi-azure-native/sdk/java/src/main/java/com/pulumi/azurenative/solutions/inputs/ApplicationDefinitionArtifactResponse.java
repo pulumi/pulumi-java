@@ -21,7 +21,7 @@ public final class ApplicationDefinitionArtifactResponse extends com.pulumi.reso
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -32,7 +32,7 @@ public final class ApplicationDefinitionArtifactResponse extends com.pulumi.reso
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
@@ -43,64 +43,59 @@ public final class ApplicationDefinitionArtifactResponse extends com.pulumi.reso
      * 
      */
     @Import(name="uri", required=true)
-      private final String uri;
+    private String uri;
 
     public String uri() {
         return this.uri;
     }
 
-    public ApplicationDefinitionArtifactResponse(
-        String name,
-        String type,
-        String uri) {
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-        this.uri = Objects.requireNonNull(uri, "expected parameter 'uri' to be non-null");
-    }
+    private ApplicationDefinitionArtifactResponse() {}
 
-    private ApplicationDefinitionArtifactResponse() {
-        this.name = null;
-        this.type = null;
-        this.uri = null;
+    private ApplicationDefinitionArtifactResponse(ApplicationDefinitionArtifactResponse $) {
+        this.name = $.name;
+        this.type = $.type;
+        this.uri = $.uri;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ApplicationDefinitionArtifactResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String name;
-        private String type;
-        private String uri;
+        private ApplicationDefinitionArtifactResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ApplicationDefinitionArtifactResponse();
         }
 
         public Builder(ApplicationDefinitionArtifactResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.type = defaults.type;
-    	      this.uri = defaults.uri;
+            $ = new ApplicationDefinitionArtifactResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder uri(String uri) {
-            this.uri = Objects.requireNonNull(uri);
+            $.uri = uri;
             return this;
-        }        public ApplicationDefinitionArtifactResponse build() {
-            return new ApplicationDefinitionArtifactResponse(name, type, uri);
+        }
+
+        public ApplicationDefinitionArtifactResponse build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            $.uri = Objects.requireNonNull($.uri, "expected parameter 'uri' to be non-null");
+            return $;
         }
     }
+
 }

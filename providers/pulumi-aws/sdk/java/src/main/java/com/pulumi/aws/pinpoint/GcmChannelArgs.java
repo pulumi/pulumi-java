@@ -5,10 +5,10 @@ package com.pulumi.aws.pinpoint;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,7 +21,7 @@ public final class GcmChannelArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="apiKey", required=true)
-      private final Output<String> apiKey;
+    private Output<String> apiKey;
 
     public Output<String> apiKey() {
         return this.apiKey;
@@ -32,7 +32,7 @@ public final class GcmChannelArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="applicationId", required=true)
-      private final Output<String> applicationId;
+    private Output<String> applicationId;
 
     public Output<String> applicationId() {
         return this.applicationId;
@@ -43,76 +43,70 @@ public final class GcmChannelArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="enabled")
-      private final @Nullable Output<Boolean> enabled;
+    private @Nullable Output<Boolean> enabled;
 
-    public Output<Boolean> enabled() {
-        return this.enabled == null ? Codegen.empty() : this.enabled;
+    public Optional<Output<Boolean>> enabled() {
+        return Optional.ofNullable(this.enabled);
     }
 
-    public GcmChannelArgs(
-        Output<String> apiKey,
-        Output<String> applicationId,
-        @Nullable Output<Boolean> enabled) {
-        this.apiKey = Objects.requireNonNull(apiKey, "expected parameter 'apiKey' to be non-null");
-        this.applicationId = Objects.requireNonNull(applicationId, "expected parameter 'applicationId' to be non-null");
-        this.enabled = enabled;
-    }
+    private GcmChannelArgs() {}
 
-    private GcmChannelArgs() {
-        this.apiKey = Codegen.empty();
-        this.applicationId = Codegen.empty();
-        this.enabled = Codegen.empty();
+    private GcmChannelArgs(GcmChannelArgs $) {
+        this.apiKey = $.apiKey;
+        this.applicationId = $.applicationId;
+        this.enabled = $.enabled;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GcmChannelArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> apiKey;
-        private Output<String> applicationId;
-        private @Nullable Output<Boolean> enabled;
+        private GcmChannelArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GcmChannelArgs();
         }
 
         public Builder(GcmChannelArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.apiKey = defaults.apiKey;
-    	      this.applicationId = defaults.applicationId;
-    	      this.enabled = defaults.enabled;
+            $ = new GcmChannelArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder apiKey(Output<String> apiKey) {
-            this.apiKey = Objects.requireNonNull(apiKey);
+            $.apiKey = apiKey;
             return this;
         }
+
         public Builder apiKey(String apiKey) {
-            this.apiKey = Output.of(Objects.requireNonNull(apiKey));
-            return this;
+            return apiKey(Output.of(apiKey));
         }
+
         public Builder applicationId(Output<String> applicationId) {
-            this.applicationId = Objects.requireNonNull(applicationId);
+            $.applicationId = applicationId;
             return this;
         }
+
         public Builder applicationId(String applicationId) {
-            this.applicationId = Output.of(Objects.requireNonNull(applicationId));
-            return this;
+            return applicationId(Output.of(applicationId));
         }
+
         public Builder enabled(@Nullable Output<Boolean> enabled) {
-            this.enabled = enabled;
+            $.enabled = enabled;
             return this;
         }
-        public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Codegen.ofNullable(enabled);
-            return this;
-        }        public GcmChannelArgs build() {
-            return new GcmChannelArgs(apiKey, applicationId, enabled);
+
+        public Builder enabled(Boolean enabled) {
+            return enabled(Output.of(enabled));
+        }
+
+        public GcmChannelArgs build() {
+            $.apiKey = Objects.requireNonNull($.apiKey, "expected parameter 'apiKey' to be non-null");
+            $.applicationId = Objects.requireNonNull($.applicationId, "expected parameter 'applicationId' to be non-null");
+            return $;
         }
     }
+
 }

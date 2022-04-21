@@ -5,11 +5,11 @@ package com.pulumi.googlenative.networkservices_v1beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.networkservices_v1beta1.enums.MetadataLabelMatcherMetadataLabelMatchCriteria;
 import com.pulumi.googlenative.networkservices_v1beta1.inputs.MetadataLabelsArgs;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class MetadataLabelMatcherArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="metadataLabelMatchCriteria")
-      private final @Nullable Output<MetadataLabelMatcherMetadataLabelMatchCriteria> metadataLabelMatchCriteria;
+    private @Nullable Output<MetadataLabelMatcherMetadataLabelMatchCriteria> metadataLabelMatchCriteria;
 
-    public Output<MetadataLabelMatcherMetadataLabelMatchCriteria> metadataLabelMatchCriteria() {
-        return this.metadataLabelMatchCriteria == null ? Codegen.empty() : this.metadataLabelMatchCriteria;
+    public Optional<Output<MetadataLabelMatcherMetadataLabelMatchCriteria>> metadataLabelMatchCriteria() {
+        return Optional.ofNullable(this.metadataLabelMatchCriteria);
     }
 
     /**
@@ -37,66 +37,62 @@ public final class MetadataLabelMatcherArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="metadataLabels")
-      private final @Nullable Output<List<MetadataLabelsArgs>> metadataLabels;
+    private @Nullable Output<List<MetadataLabelsArgs>> metadataLabels;
 
-    public Output<List<MetadataLabelsArgs>> metadataLabels() {
-        return this.metadataLabels == null ? Codegen.empty() : this.metadataLabels;
+    public Optional<Output<List<MetadataLabelsArgs>>> metadataLabels() {
+        return Optional.ofNullable(this.metadataLabels);
     }
 
-    public MetadataLabelMatcherArgs(
-        @Nullable Output<MetadataLabelMatcherMetadataLabelMatchCriteria> metadataLabelMatchCriteria,
-        @Nullable Output<List<MetadataLabelsArgs>> metadataLabels) {
-        this.metadataLabelMatchCriteria = metadataLabelMatchCriteria;
-        this.metadataLabels = metadataLabels;
-    }
+    private MetadataLabelMatcherArgs() {}
 
-    private MetadataLabelMatcherArgs() {
-        this.metadataLabelMatchCriteria = Codegen.empty();
-        this.metadataLabels = Codegen.empty();
+    private MetadataLabelMatcherArgs(MetadataLabelMatcherArgs $) {
+        this.metadataLabelMatchCriteria = $.metadataLabelMatchCriteria;
+        this.metadataLabels = $.metadataLabels;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MetadataLabelMatcherArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<MetadataLabelMatcherMetadataLabelMatchCriteria> metadataLabelMatchCriteria;
-        private @Nullable Output<List<MetadataLabelsArgs>> metadataLabels;
+        private MetadataLabelMatcherArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new MetadataLabelMatcherArgs();
         }
 
         public Builder(MetadataLabelMatcherArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.metadataLabelMatchCriteria = defaults.metadataLabelMatchCriteria;
-    	      this.metadataLabels = defaults.metadataLabels;
+            $ = new MetadataLabelMatcherArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder metadataLabelMatchCriteria(@Nullable Output<MetadataLabelMatcherMetadataLabelMatchCriteria> metadataLabelMatchCriteria) {
-            this.metadataLabelMatchCriteria = metadataLabelMatchCriteria;
+            $.metadataLabelMatchCriteria = metadataLabelMatchCriteria;
             return this;
         }
-        public Builder metadataLabelMatchCriteria(@Nullable MetadataLabelMatcherMetadataLabelMatchCriteria metadataLabelMatchCriteria) {
-            this.metadataLabelMatchCriteria = Codegen.ofNullable(metadataLabelMatchCriteria);
-            return this;
+
+        public Builder metadataLabelMatchCriteria(MetadataLabelMatcherMetadataLabelMatchCriteria metadataLabelMatchCriteria) {
+            return metadataLabelMatchCriteria(Output.of(metadataLabelMatchCriteria));
         }
+
         public Builder metadataLabels(@Nullable Output<List<MetadataLabelsArgs>> metadataLabels) {
-            this.metadataLabels = metadataLabels;
+            $.metadataLabels = metadataLabels;
             return this;
         }
-        public Builder metadataLabels(@Nullable List<MetadataLabelsArgs> metadataLabels) {
-            this.metadataLabels = Codegen.ofNullable(metadataLabels);
-            return this;
+
+        public Builder metadataLabels(List<MetadataLabelsArgs> metadataLabels) {
+            return metadataLabels(Output.of(metadataLabels));
         }
+
         public Builder metadataLabels(MetadataLabelsArgs... metadataLabels) {
             return metadataLabels(List.of(metadataLabels));
-        }        public MetadataLabelMatcherArgs build() {
-            return new MetadataLabelMatcherArgs(metadataLabelMatchCriteria, metadataLabels);
+        }
+
+        public MetadataLabelMatcherArgs build() {
+            return $;
         }
     }
+
 }

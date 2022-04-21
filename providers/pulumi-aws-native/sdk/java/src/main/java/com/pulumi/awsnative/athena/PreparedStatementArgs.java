@@ -5,9 +5,9 @@ package com.pulumi.awsnative.athena;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class PreparedStatementArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -31,7 +31,7 @@ public final class PreparedStatementArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="queryStatement", required=true)
-      private final Output<String> queryStatement;
+    private Output<String> queryStatement;
 
     public Output<String> queryStatement() {
         return this.queryStatement;
@@ -42,7 +42,7 @@ public final class PreparedStatementArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="statementName", required=true)
-      private final Output<String> statementName;
+    private Output<String> statementName;
 
     public Output<String> statementName() {
         return this.statementName;
@@ -53,89 +53,81 @@ public final class PreparedStatementArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="workGroup", required=true)
-      private final Output<String> workGroup;
+    private Output<String> workGroup;
 
     public Output<String> workGroup() {
         return this.workGroup;
     }
 
-    public PreparedStatementArgs(
-        @Nullable Output<String> description,
-        Output<String> queryStatement,
-        Output<String> statementName,
-        Output<String> workGroup) {
-        this.description = description;
-        this.queryStatement = Objects.requireNonNull(queryStatement, "expected parameter 'queryStatement' to be non-null");
-        this.statementName = Objects.requireNonNull(statementName, "expected parameter 'statementName' to be non-null");
-        this.workGroup = Objects.requireNonNull(workGroup, "expected parameter 'workGroup' to be non-null");
-    }
+    private PreparedStatementArgs() {}
 
-    private PreparedStatementArgs() {
-        this.description = Codegen.empty();
-        this.queryStatement = Codegen.empty();
-        this.statementName = Codegen.empty();
-        this.workGroup = Codegen.empty();
+    private PreparedStatementArgs(PreparedStatementArgs $) {
+        this.description = $.description;
+        this.queryStatement = $.queryStatement;
+        this.statementName = $.statementName;
+        this.workGroup = $.workGroup;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PreparedStatementArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> description;
-        private Output<String> queryStatement;
-        private Output<String> statementName;
-        private Output<String> workGroup;
+        private PreparedStatementArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PreparedStatementArgs();
         }
 
         public Builder(PreparedStatementArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.description = defaults.description;
-    	      this.queryStatement = defaults.queryStatement;
-    	      this.statementName = defaults.statementName;
-    	      this.workGroup = defaults.workGroup;
+            $ = new PreparedStatementArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder queryStatement(Output<String> queryStatement) {
-            this.queryStatement = Objects.requireNonNull(queryStatement);
+            $.queryStatement = queryStatement;
             return this;
         }
+
         public Builder queryStatement(String queryStatement) {
-            this.queryStatement = Output.of(Objects.requireNonNull(queryStatement));
-            return this;
+            return queryStatement(Output.of(queryStatement));
         }
+
         public Builder statementName(Output<String> statementName) {
-            this.statementName = Objects.requireNonNull(statementName);
+            $.statementName = statementName;
             return this;
         }
+
         public Builder statementName(String statementName) {
-            this.statementName = Output.of(Objects.requireNonNull(statementName));
-            return this;
+            return statementName(Output.of(statementName));
         }
+
         public Builder workGroup(Output<String> workGroup) {
-            this.workGroup = Objects.requireNonNull(workGroup);
+            $.workGroup = workGroup;
             return this;
         }
+
         public Builder workGroup(String workGroup) {
-            this.workGroup = Output.of(Objects.requireNonNull(workGroup));
-            return this;
-        }        public PreparedStatementArgs build() {
-            return new PreparedStatementArgs(description, queryStatement, statementName, workGroup);
+            return workGroup(Output.of(workGroup));
+        }
+
+        public PreparedStatementArgs build() {
+            $.queryStatement = Objects.requireNonNull($.queryStatement, "expected parameter 'queryStatement' to be non-null");
+            $.statementName = Objects.requireNonNull($.statementName, "expected parameter 'statementName' to be non-null");
+            $.workGroup = Objects.requireNonNull($.workGroup, "expected parameter 'workGroup' to be non-null");
+            return $;
         }
     }
+
 }

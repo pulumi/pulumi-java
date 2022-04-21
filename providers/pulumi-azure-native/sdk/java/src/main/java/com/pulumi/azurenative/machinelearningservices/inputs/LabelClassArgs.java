@@ -5,10 +5,10 @@ package com.pulumi.azurenative.machinelearningservices.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class LabelClassArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="displayName")
-      private final @Nullable Output<String> displayName;
+    private @Nullable Output<String> displayName;
 
-    public Output<String> displayName() {
-        return this.displayName == null ? Codegen.empty() : this.displayName;
+    public Optional<Output<String>> displayName() {
+        return Optional.ofNullable(this.displayName);
     }
 
     /**
@@ -36,63 +36,58 @@ public final class LabelClassArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="subclasses")
-      private final @Nullable Output<Map<String,LabelClassArgs>> subclasses;
+    private @Nullable Output<Map<String,LabelClassArgs>> subclasses;
 
-    public Output<Map<String,LabelClassArgs>> subclasses() {
-        return this.subclasses == null ? Codegen.empty() : this.subclasses;
+    public Optional<Output<Map<String,LabelClassArgs>>> subclasses() {
+        return Optional.ofNullable(this.subclasses);
     }
 
-    public LabelClassArgs(
-        @Nullable Output<String> displayName,
-        @Nullable Output<Map<String,LabelClassArgs>> subclasses) {
-        this.displayName = displayName;
-        this.subclasses = subclasses;
-    }
+    private LabelClassArgs() {}
 
-    private LabelClassArgs() {
-        this.displayName = Codegen.empty();
-        this.subclasses = Codegen.empty();
+    private LabelClassArgs(LabelClassArgs $) {
+        this.displayName = $.displayName;
+        this.subclasses = $.subclasses;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LabelClassArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> displayName;
-        private @Nullable Output<Map<String,LabelClassArgs>> subclasses;
+        private LabelClassArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new LabelClassArgs();
         }
 
         public Builder(LabelClassArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.displayName = defaults.displayName;
-    	      this.subclasses = defaults.subclasses;
+            $ = new LabelClassArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder displayName(@Nullable Output<String> displayName) {
-            this.displayName = displayName;
+            $.displayName = displayName;
             return this;
         }
-        public Builder displayName(@Nullable String displayName) {
-            this.displayName = Codegen.ofNullable(displayName);
-            return this;
+
+        public Builder displayName(String displayName) {
+            return displayName(Output.of(displayName));
         }
+
         public Builder subclasses(@Nullable Output<Map<String,LabelClassArgs>> subclasses) {
-            this.subclasses = subclasses;
+            $.subclasses = subclasses;
             return this;
         }
-        public Builder subclasses(@Nullable Map<String,LabelClassArgs> subclasses) {
-            this.subclasses = Codegen.ofNullable(subclasses);
-            return this;
-        }        public LabelClassArgs build() {
-            return new LabelClassArgs(displayName, subclasses);
+
+        public Builder subclasses(Map<String,LabelClassArgs> subclasses) {
+            return subclasses(Output.of(subclasses));
+        }
+
+        public LabelClassArgs build() {
+            return $;
         }
     }
+
 }

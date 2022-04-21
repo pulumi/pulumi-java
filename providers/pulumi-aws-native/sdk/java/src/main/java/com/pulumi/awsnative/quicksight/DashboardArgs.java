@@ -10,10 +10,10 @@ import com.pulumi.awsnative.quicksight.inputs.DashboardSourceEntityArgs;
 import com.pulumi.awsnative.quicksight.inputs.DashboardTagArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,24 +22,24 @@ public final class DashboardArgs extends com.pulumi.resources.ResourceArgs {
     public static final DashboardArgs Empty = new DashboardArgs();
 
     @Import(name="awsAccountId", required=true)
-      private final Output<String> awsAccountId;
+    private Output<String> awsAccountId;
 
     public Output<String> awsAccountId() {
         return this.awsAccountId;
     }
 
     @Import(name="dashboardId", required=true)
-      private final Output<String> dashboardId;
+    private Output<String> dashboardId;
 
     public Output<String> dashboardId() {
         return this.dashboardId;
     }
 
     @Import(name="dashboardPublishOptions")
-      private final @Nullable Output<DashboardPublishOptionsArgs> dashboardPublishOptions;
+    private @Nullable Output<DashboardPublishOptionsArgs> dashboardPublishOptions;
 
-    public Output<DashboardPublishOptionsArgs> dashboardPublishOptions() {
-        return this.dashboardPublishOptions == null ? Codegen.empty() : this.dashboardPublishOptions;
+    public Optional<Output<DashboardPublishOptionsArgs>> dashboardPublishOptions() {
+        return Optional.ofNullable(this.dashboardPublishOptions);
     }
 
     /**
@@ -47,17 +47,17 @@ public final class DashboardArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     @Import(name="parameters")
-      private final @Nullable Output<DashboardParametersArgs> parameters;
+    private @Nullable Output<DashboardParametersArgs> parameters;
 
-    public Output<DashboardParametersArgs> parameters() {
-        return this.parameters == null ? Codegen.empty() : this.parameters;
+    public Optional<Output<DashboardParametersArgs>> parameters() {
+        return Optional.ofNullable(this.parameters);
     }
 
     /**
@@ -69,14 +69,14 @@ public final class DashboardArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="permissions")
-      private final @Nullable Output<List<DashboardResourcePermissionArgs>> permissions;
+    private @Nullable Output<List<DashboardResourcePermissionArgs>> permissions;
 
-    public Output<List<DashboardResourcePermissionArgs>> permissions() {
-        return this.permissions == null ? Codegen.empty() : this.permissions;
+    public Optional<Output<List<DashboardResourcePermissionArgs>>> permissions() {
+        return Optional.ofNullable(this.permissions);
     }
 
     @Import(name="sourceEntity", required=true)
-      private final Output<DashboardSourceEntityArgs> sourceEntity;
+    private Output<DashboardSourceEntityArgs> sourceEntity;
 
     public Output<DashboardSourceEntityArgs> sourceEntity() {
         return this.sourceEntity;
@@ -88,10 +88,10 @@ public final class DashboardArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<List<DashboardTagArgs>> tags;
+    private @Nullable Output<List<DashboardTagArgs>> tags;
 
-    public Output<List<DashboardTagArgs>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<List<DashboardTagArgs>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -102,10 +102,10 @@ public final class DashboardArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="themeArn")
-      private final @Nullable Output<String> themeArn;
+    private @Nullable Output<String> themeArn;
 
-    public Output<String> themeArn() {
-        return this.themeArn == null ? Codegen.empty() : this.themeArn;
+    public Optional<Output<String>> themeArn() {
+        return Optional.ofNullable(this.themeArn);
     }
 
     /**
@@ -113,173 +113,149 @@ public final class DashboardArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="versionDescription")
-      private final @Nullable Output<String> versionDescription;
+    private @Nullable Output<String> versionDescription;
 
-    public Output<String> versionDescription() {
-        return this.versionDescription == null ? Codegen.empty() : this.versionDescription;
+    public Optional<Output<String>> versionDescription() {
+        return Optional.ofNullable(this.versionDescription);
     }
 
-    public DashboardArgs(
-        Output<String> awsAccountId,
-        Output<String> dashboardId,
-        @Nullable Output<DashboardPublishOptionsArgs> dashboardPublishOptions,
-        @Nullable Output<String> name,
-        @Nullable Output<DashboardParametersArgs> parameters,
-        @Nullable Output<List<DashboardResourcePermissionArgs>> permissions,
-        Output<DashboardSourceEntityArgs> sourceEntity,
-        @Nullable Output<List<DashboardTagArgs>> tags,
-        @Nullable Output<String> themeArn,
-        @Nullable Output<String> versionDescription) {
-        this.awsAccountId = Objects.requireNonNull(awsAccountId, "expected parameter 'awsAccountId' to be non-null");
-        this.dashboardId = Objects.requireNonNull(dashboardId, "expected parameter 'dashboardId' to be non-null");
-        this.dashboardPublishOptions = dashboardPublishOptions;
-        this.name = name;
-        this.parameters = parameters;
-        this.permissions = permissions;
-        this.sourceEntity = Objects.requireNonNull(sourceEntity, "expected parameter 'sourceEntity' to be non-null");
-        this.tags = tags;
-        this.themeArn = themeArn;
-        this.versionDescription = versionDescription;
-    }
+    private DashboardArgs() {}
 
-    private DashboardArgs() {
-        this.awsAccountId = Codegen.empty();
-        this.dashboardId = Codegen.empty();
-        this.dashboardPublishOptions = Codegen.empty();
-        this.name = Codegen.empty();
-        this.parameters = Codegen.empty();
-        this.permissions = Codegen.empty();
-        this.sourceEntity = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.themeArn = Codegen.empty();
-        this.versionDescription = Codegen.empty();
+    private DashboardArgs(DashboardArgs $) {
+        this.awsAccountId = $.awsAccountId;
+        this.dashboardId = $.dashboardId;
+        this.dashboardPublishOptions = $.dashboardPublishOptions;
+        this.name = $.name;
+        this.parameters = $.parameters;
+        this.permissions = $.permissions;
+        this.sourceEntity = $.sourceEntity;
+        this.tags = $.tags;
+        this.themeArn = $.themeArn;
+        this.versionDescription = $.versionDescription;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DashboardArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> awsAccountId;
-        private Output<String> dashboardId;
-        private @Nullable Output<DashboardPublishOptionsArgs> dashboardPublishOptions;
-        private @Nullable Output<String> name;
-        private @Nullable Output<DashboardParametersArgs> parameters;
-        private @Nullable Output<List<DashboardResourcePermissionArgs>> permissions;
-        private Output<DashboardSourceEntityArgs> sourceEntity;
-        private @Nullable Output<List<DashboardTagArgs>> tags;
-        private @Nullable Output<String> themeArn;
-        private @Nullable Output<String> versionDescription;
+        private DashboardArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DashboardArgs();
         }
 
         public Builder(DashboardArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.awsAccountId = defaults.awsAccountId;
-    	      this.dashboardId = defaults.dashboardId;
-    	      this.dashboardPublishOptions = defaults.dashboardPublishOptions;
-    	      this.name = defaults.name;
-    	      this.parameters = defaults.parameters;
-    	      this.permissions = defaults.permissions;
-    	      this.sourceEntity = defaults.sourceEntity;
-    	      this.tags = defaults.tags;
-    	      this.themeArn = defaults.themeArn;
-    	      this.versionDescription = defaults.versionDescription;
+            $ = new DashboardArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder awsAccountId(Output<String> awsAccountId) {
-            this.awsAccountId = Objects.requireNonNull(awsAccountId);
+            $.awsAccountId = awsAccountId;
             return this;
         }
+
         public Builder awsAccountId(String awsAccountId) {
-            this.awsAccountId = Output.of(Objects.requireNonNull(awsAccountId));
-            return this;
+            return awsAccountId(Output.of(awsAccountId));
         }
+
         public Builder dashboardId(Output<String> dashboardId) {
-            this.dashboardId = Objects.requireNonNull(dashboardId);
+            $.dashboardId = dashboardId;
             return this;
         }
+
         public Builder dashboardId(String dashboardId) {
-            this.dashboardId = Output.of(Objects.requireNonNull(dashboardId));
-            return this;
+            return dashboardId(Output.of(dashboardId));
         }
+
         public Builder dashboardPublishOptions(@Nullable Output<DashboardPublishOptionsArgs> dashboardPublishOptions) {
-            this.dashboardPublishOptions = dashboardPublishOptions;
+            $.dashboardPublishOptions = dashboardPublishOptions;
             return this;
         }
-        public Builder dashboardPublishOptions(@Nullable DashboardPublishOptionsArgs dashboardPublishOptions) {
-            this.dashboardPublishOptions = Codegen.ofNullable(dashboardPublishOptions);
-            return this;
+
+        public Builder dashboardPublishOptions(DashboardPublishOptionsArgs dashboardPublishOptions) {
+            return dashboardPublishOptions(Output.of(dashboardPublishOptions));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder parameters(@Nullable Output<DashboardParametersArgs> parameters) {
-            this.parameters = parameters;
+            $.parameters = parameters;
             return this;
         }
-        public Builder parameters(@Nullable DashboardParametersArgs parameters) {
-            this.parameters = Codegen.ofNullable(parameters);
-            return this;
+
+        public Builder parameters(DashboardParametersArgs parameters) {
+            return parameters(Output.of(parameters));
         }
+
         public Builder permissions(@Nullable Output<List<DashboardResourcePermissionArgs>> permissions) {
-            this.permissions = permissions;
+            $.permissions = permissions;
             return this;
         }
-        public Builder permissions(@Nullable List<DashboardResourcePermissionArgs> permissions) {
-            this.permissions = Codegen.ofNullable(permissions);
-            return this;
+
+        public Builder permissions(List<DashboardResourcePermissionArgs> permissions) {
+            return permissions(Output.of(permissions));
         }
+
         public Builder permissions(DashboardResourcePermissionArgs... permissions) {
             return permissions(List.of(permissions));
         }
+
         public Builder sourceEntity(Output<DashboardSourceEntityArgs> sourceEntity) {
-            this.sourceEntity = Objects.requireNonNull(sourceEntity);
+            $.sourceEntity = sourceEntity;
             return this;
         }
+
         public Builder sourceEntity(DashboardSourceEntityArgs sourceEntity) {
-            this.sourceEntity = Output.of(Objects.requireNonNull(sourceEntity));
-            return this;
+            return sourceEntity(Output.of(sourceEntity));
         }
+
         public Builder tags(@Nullable Output<List<DashboardTagArgs>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable List<DashboardTagArgs> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(List<DashboardTagArgs> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tags(DashboardTagArgs... tags) {
             return tags(List.of(tags));
         }
+
         public Builder themeArn(@Nullable Output<String> themeArn) {
-            this.themeArn = themeArn;
+            $.themeArn = themeArn;
             return this;
         }
-        public Builder themeArn(@Nullable String themeArn) {
-            this.themeArn = Codegen.ofNullable(themeArn);
-            return this;
+
+        public Builder themeArn(String themeArn) {
+            return themeArn(Output.of(themeArn));
         }
+
         public Builder versionDescription(@Nullable Output<String> versionDescription) {
-            this.versionDescription = versionDescription;
+            $.versionDescription = versionDescription;
             return this;
         }
-        public Builder versionDescription(@Nullable String versionDescription) {
-            this.versionDescription = Codegen.ofNullable(versionDescription);
-            return this;
-        }        public DashboardArgs build() {
-            return new DashboardArgs(awsAccountId, dashboardId, dashboardPublishOptions, name, parameters, permissions, sourceEntity, tags, themeArn, versionDescription);
+
+        public Builder versionDescription(String versionDescription) {
+            return versionDescription(Output.of(versionDescription));
+        }
+
+        public DashboardArgs build() {
+            $.awsAccountId = Objects.requireNonNull($.awsAccountId, "expected parameter 'awsAccountId' to be non-null");
+            $.dashboardId = Objects.requireNonNull($.dashboardId, "expected parameter 'dashboardId' to be non-null");
+            $.sourceEntity = Objects.requireNonNull($.sourceEntity, "expected parameter 'sourceEntity' to be non-null");
+            return $;
         }
     }
+
 }

@@ -7,12 +7,12 @@ import com.pulumi.aws.ec2.inputs.AmiCopyEbsBlockDeviceArgs;
 import com.pulumi.aws.ec2.inputs.AmiCopyEphemeralBlockDeviceArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class AmiCopyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class AmiCopyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="destinationOutpostArn")
-      private final @Nullable Output<String> destinationOutpostArn;
+    private @Nullable Output<String> destinationOutpostArn;
 
-    public Output<String> destinationOutpostArn() {
-        return this.destinationOutpostArn == null ? Codegen.empty() : this.destinationOutpostArn;
+    public Optional<Output<String>> destinationOutpostArn() {
+        return Optional.ofNullable(this.destinationOutpostArn);
     }
 
     /**
@@ -49,10 +49,10 @@ public final class AmiCopyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="ebsBlockDevices")
-      private final @Nullable Output<List<AmiCopyEbsBlockDeviceArgs>> ebsBlockDevices;
+    private @Nullable Output<List<AmiCopyEbsBlockDeviceArgs>> ebsBlockDevices;
 
-    public Output<List<AmiCopyEbsBlockDeviceArgs>> ebsBlockDevices() {
-        return this.ebsBlockDevices == null ? Codegen.empty() : this.ebsBlockDevices;
+    public Optional<Output<List<AmiCopyEbsBlockDeviceArgs>>> ebsBlockDevices() {
+        return Optional.ofNullable(this.ebsBlockDevices);
     }
 
     /**
@@ -60,10 +60,10 @@ public final class AmiCopyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="encrypted")
-      private final @Nullable Output<Boolean> encrypted;
+    private @Nullable Output<Boolean> encrypted;
 
-    public Output<Boolean> encrypted() {
-        return this.encrypted == null ? Codegen.empty() : this.encrypted;
+    public Optional<Output<Boolean>> encrypted() {
+        return Optional.ofNullable(this.encrypted);
     }
 
     /**
@@ -72,10 +72,10 @@ public final class AmiCopyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="ephemeralBlockDevices")
-      private final @Nullable Output<List<AmiCopyEphemeralBlockDeviceArgs>> ephemeralBlockDevices;
+    private @Nullable Output<List<AmiCopyEphemeralBlockDeviceArgs>> ephemeralBlockDevices;
 
-    public Output<List<AmiCopyEphemeralBlockDeviceArgs>> ephemeralBlockDevices() {
-        return this.ephemeralBlockDevices == null ? Codegen.empty() : this.ephemeralBlockDevices;
+    public Optional<Output<List<AmiCopyEphemeralBlockDeviceArgs>>> ephemeralBlockDevices() {
+        return Optional.ofNullable(this.ephemeralBlockDevices);
     }
 
     /**
@@ -85,10 +85,10 @@ public final class AmiCopyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="kmsKeyId")
-      private final @Nullable Output<String> kmsKeyId;
+    private @Nullable Output<String> kmsKeyId;
 
-    public Output<String> kmsKeyId() {
-        return this.kmsKeyId == null ? Codegen.empty() : this.kmsKeyId;
+    public Optional<Output<String>> kmsKeyId() {
+        return Optional.ofNullable(this.kmsKeyId);
     }
 
     /**
@@ -96,10 +96,10 @@ public final class AmiCopyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -108,7 +108,7 @@ public final class AmiCopyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="sourceAmiId", required=true)
-      private final Output<String> sourceAmiId;
+    private Output<String> sourceAmiId;
 
     public Output<String> sourceAmiId() {
         return this.sourceAmiId;
@@ -120,7 +120,7 @@ public final class AmiCopyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="sourceAmiRegion", required=true)
-      private final Output<String> sourceAmiRegion;
+    private Output<String> sourceAmiRegion;
 
     public Output<String> sourceAmiRegion() {
         return this.sourceAmiRegion;
@@ -131,173 +131,148 @@ public final class AmiCopyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public AmiCopyArgs(
-        @Nullable Output<String> description,
-        @Nullable Output<String> destinationOutpostArn,
-        @Nullable Output<List<AmiCopyEbsBlockDeviceArgs>> ebsBlockDevices,
-        @Nullable Output<Boolean> encrypted,
-        @Nullable Output<List<AmiCopyEphemeralBlockDeviceArgs>> ephemeralBlockDevices,
-        @Nullable Output<String> kmsKeyId,
-        @Nullable Output<String> name,
-        Output<String> sourceAmiId,
-        Output<String> sourceAmiRegion,
-        @Nullable Output<Map<String,String>> tags) {
-        this.description = description;
-        this.destinationOutpostArn = destinationOutpostArn;
-        this.ebsBlockDevices = ebsBlockDevices;
-        this.encrypted = encrypted;
-        this.ephemeralBlockDevices = ephemeralBlockDevices;
-        this.kmsKeyId = kmsKeyId;
-        this.name = name;
-        this.sourceAmiId = Objects.requireNonNull(sourceAmiId, "expected parameter 'sourceAmiId' to be non-null");
-        this.sourceAmiRegion = Objects.requireNonNull(sourceAmiRegion, "expected parameter 'sourceAmiRegion' to be non-null");
-        this.tags = tags;
-    }
+    private AmiCopyArgs() {}
 
-    private AmiCopyArgs() {
-        this.description = Codegen.empty();
-        this.destinationOutpostArn = Codegen.empty();
-        this.ebsBlockDevices = Codegen.empty();
-        this.encrypted = Codegen.empty();
-        this.ephemeralBlockDevices = Codegen.empty();
-        this.kmsKeyId = Codegen.empty();
-        this.name = Codegen.empty();
-        this.sourceAmiId = Codegen.empty();
-        this.sourceAmiRegion = Codegen.empty();
-        this.tags = Codegen.empty();
+    private AmiCopyArgs(AmiCopyArgs $) {
+        this.description = $.description;
+        this.destinationOutpostArn = $.destinationOutpostArn;
+        this.ebsBlockDevices = $.ebsBlockDevices;
+        this.encrypted = $.encrypted;
+        this.ephemeralBlockDevices = $.ephemeralBlockDevices;
+        this.kmsKeyId = $.kmsKeyId;
+        this.name = $.name;
+        this.sourceAmiId = $.sourceAmiId;
+        this.sourceAmiRegion = $.sourceAmiRegion;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AmiCopyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> description;
-        private @Nullable Output<String> destinationOutpostArn;
-        private @Nullable Output<List<AmiCopyEbsBlockDeviceArgs>> ebsBlockDevices;
-        private @Nullable Output<Boolean> encrypted;
-        private @Nullable Output<List<AmiCopyEphemeralBlockDeviceArgs>> ephemeralBlockDevices;
-        private @Nullable Output<String> kmsKeyId;
-        private @Nullable Output<String> name;
-        private Output<String> sourceAmiId;
-        private Output<String> sourceAmiRegion;
-        private @Nullable Output<Map<String,String>> tags;
+        private AmiCopyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AmiCopyArgs();
         }
 
         public Builder(AmiCopyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.description = defaults.description;
-    	      this.destinationOutpostArn = defaults.destinationOutpostArn;
-    	      this.ebsBlockDevices = defaults.ebsBlockDevices;
-    	      this.encrypted = defaults.encrypted;
-    	      this.ephemeralBlockDevices = defaults.ephemeralBlockDevices;
-    	      this.kmsKeyId = defaults.kmsKeyId;
-    	      this.name = defaults.name;
-    	      this.sourceAmiId = defaults.sourceAmiId;
-    	      this.sourceAmiRegion = defaults.sourceAmiRegion;
-    	      this.tags = defaults.tags;
+            $ = new AmiCopyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder destinationOutpostArn(@Nullable Output<String> destinationOutpostArn) {
-            this.destinationOutpostArn = destinationOutpostArn;
+            $.destinationOutpostArn = destinationOutpostArn;
             return this;
         }
-        public Builder destinationOutpostArn(@Nullable String destinationOutpostArn) {
-            this.destinationOutpostArn = Codegen.ofNullable(destinationOutpostArn);
-            return this;
+
+        public Builder destinationOutpostArn(String destinationOutpostArn) {
+            return destinationOutpostArn(Output.of(destinationOutpostArn));
         }
+
         public Builder ebsBlockDevices(@Nullable Output<List<AmiCopyEbsBlockDeviceArgs>> ebsBlockDevices) {
-            this.ebsBlockDevices = ebsBlockDevices;
+            $.ebsBlockDevices = ebsBlockDevices;
             return this;
         }
-        public Builder ebsBlockDevices(@Nullable List<AmiCopyEbsBlockDeviceArgs> ebsBlockDevices) {
-            this.ebsBlockDevices = Codegen.ofNullable(ebsBlockDevices);
-            return this;
+
+        public Builder ebsBlockDevices(List<AmiCopyEbsBlockDeviceArgs> ebsBlockDevices) {
+            return ebsBlockDevices(Output.of(ebsBlockDevices));
         }
+
         public Builder ebsBlockDevices(AmiCopyEbsBlockDeviceArgs... ebsBlockDevices) {
             return ebsBlockDevices(List.of(ebsBlockDevices));
         }
+
         public Builder encrypted(@Nullable Output<Boolean> encrypted) {
-            this.encrypted = encrypted;
+            $.encrypted = encrypted;
             return this;
         }
-        public Builder encrypted(@Nullable Boolean encrypted) {
-            this.encrypted = Codegen.ofNullable(encrypted);
-            return this;
+
+        public Builder encrypted(Boolean encrypted) {
+            return encrypted(Output.of(encrypted));
         }
+
         public Builder ephemeralBlockDevices(@Nullable Output<List<AmiCopyEphemeralBlockDeviceArgs>> ephemeralBlockDevices) {
-            this.ephemeralBlockDevices = ephemeralBlockDevices;
+            $.ephemeralBlockDevices = ephemeralBlockDevices;
             return this;
         }
-        public Builder ephemeralBlockDevices(@Nullable List<AmiCopyEphemeralBlockDeviceArgs> ephemeralBlockDevices) {
-            this.ephemeralBlockDevices = Codegen.ofNullable(ephemeralBlockDevices);
-            return this;
+
+        public Builder ephemeralBlockDevices(List<AmiCopyEphemeralBlockDeviceArgs> ephemeralBlockDevices) {
+            return ephemeralBlockDevices(Output.of(ephemeralBlockDevices));
         }
+
         public Builder ephemeralBlockDevices(AmiCopyEphemeralBlockDeviceArgs... ephemeralBlockDevices) {
             return ephemeralBlockDevices(List.of(ephemeralBlockDevices));
         }
+
         public Builder kmsKeyId(@Nullable Output<String> kmsKeyId) {
-            this.kmsKeyId = kmsKeyId;
+            $.kmsKeyId = kmsKeyId;
             return this;
         }
-        public Builder kmsKeyId(@Nullable String kmsKeyId) {
-            this.kmsKeyId = Codegen.ofNullable(kmsKeyId);
-            return this;
+
+        public Builder kmsKeyId(String kmsKeyId) {
+            return kmsKeyId(Output.of(kmsKeyId));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder sourceAmiId(Output<String> sourceAmiId) {
-            this.sourceAmiId = Objects.requireNonNull(sourceAmiId);
+            $.sourceAmiId = sourceAmiId;
             return this;
         }
+
         public Builder sourceAmiId(String sourceAmiId) {
-            this.sourceAmiId = Output.of(Objects.requireNonNull(sourceAmiId));
-            return this;
+            return sourceAmiId(Output.of(sourceAmiId));
         }
+
         public Builder sourceAmiRegion(Output<String> sourceAmiRegion) {
-            this.sourceAmiRegion = Objects.requireNonNull(sourceAmiRegion);
+            $.sourceAmiRegion = sourceAmiRegion;
             return this;
         }
+
         public Builder sourceAmiRegion(String sourceAmiRegion) {
-            this.sourceAmiRegion = Output.of(Objects.requireNonNull(sourceAmiRegion));
-            return this;
+            return sourceAmiRegion(Output.of(sourceAmiRegion));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
-        }        public AmiCopyArgs build() {
-            return new AmiCopyArgs(description, destinationOutpostArn, ebsBlockDevices, encrypted, ephemeralBlockDevices, kmsKeyId, name, sourceAmiId, sourceAmiRegion, tags);
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
+        }
+
+        public AmiCopyArgs build() {
+            $.sourceAmiId = Objects.requireNonNull($.sourceAmiId, "expected parameter 'sourceAmiId' to be non-null");
+            $.sourceAmiRegion = Objects.requireNonNull($.sourceAmiRegion, "expected parameter 'sourceAmiRegion' to be non-null");
+            return $;
         }
     }
+
 }

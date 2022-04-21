@@ -9,6 +9,7 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +22,10 @@ public final class ASCDataConnectorArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="dataConnectorId")
-      private final @Nullable Output<String> dataConnectorId;
+    private @Nullable Output<String> dataConnectorId;
 
-    public Output<String> dataConnectorId() {
-        return this.dataConnectorId == null ? Codegen.empty() : this.dataConnectorId;
+    public Optional<Output<String>> dataConnectorId() {
+        return Optional.ofNullable(this.dataConnectorId);
     }
 
     /**
@@ -32,10 +33,10 @@ public final class ASCDataConnectorArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="dataTypes")
-      private final @Nullable Output<AlertsDataTypeOfDataConnectorArgs> dataTypes;
+    private @Nullable Output<AlertsDataTypeOfDataConnectorArgs> dataTypes;
 
-    public Output<AlertsDataTypeOfDataConnectorArgs> dataTypes() {
-        return this.dataTypes == null ? Codegen.empty() : this.dataTypes;
+    public Optional<Output<AlertsDataTypeOfDataConnectorArgs>> dataTypes() {
+        return Optional.ofNullable(this.dataTypes);
     }
 
     /**
@@ -44,7 +45,7 @@ public final class ASCDataConnectorArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="kind", required=true)
-      private final Output<String> kind;
+    private Output<String> kind;
 
     public Output<String> kind() {
         return this.kind;
@@ -55,7 +56,7 @@ public final class ASCDataConnectorArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -66,10 +67,10 @@ public final class ASCDataConnectorArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="subscriptionId")
-      private final @Nullable Output<String> subscriptionId;
+    private @Nullable Output<String> subscriptionId;
 
-    public Output<String> subscriptionId() {
-        return this.subscriptionId == null ? Codegen.empty() : this.subscriptionId;
+    public Optional<Output<String>> subscriptionId() {
+        return Optional.ofNullable(this.subscriptionId);
     }
 
     /**
@@ -77,115 +78,101 @@ public final class ASCDataConnectorArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="workspaceName", required=true)
-      private final Output<String> workspaceName;
+    private Output<String> workspaceName;
 
     public Output<String> workspaceName() {
         return this.workspaceName;
     }
 
-    public ASCDataConnectorArgs(
-        @Nullable Output<String> dataConnectorId,
-        @Nullable Output<AlertsDataTypeOfDataConnectorArgs> dataTypes,
-        Output<String> kind,
-        Output<String> resourceGroupName,
-        @Nullable Output<String> subscriptionId,
-        Output<String> workspaceName) {
-        this.dataConnectorId = dataConnectorId;
-        this.dataTypes = dataTypes;
-        this.kind = Codegen.stringProp("kind").output().arg(kind).require();
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.subscriptionId = subscriptionId;
-        this.workspaceName = Objects.requireNonNull(workspaceName, "expected parameter 'workspaceName' to be non-null");
-    }
+    private ASCDataConnectorArgs() {}
 
-    private ASCDataConnectorArgs() {
-        this.dataConnectorId = Codegen.empty();
-        this.dataTypes = Codegen.empty();
-        this.kind = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.subscriptionId = Codegen.empty();
-        this.workspaceName = Codegen.empty();
+    private ASCDataConnectorArgs(ASCDataConnectorArgs $) {
+        this.dataConnectorId = $.dataConnectorId;
+        this.dataTypes = $.dataTypes;
+        this.kind = $.kind;
+        this.resourceGroupName = $.resourceGroupName;
+        this.subscriptionId = $.subscriptionId;
+        this.workspaceName = $.workspaceName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ASCDataConnectorArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> dataConnectorId;
-        private @Nullable Output<AlertsDataTypeOfDataConnectorArgs> dataTypes;
-        private Output<String> kind;
-        private Output<String> resourceGroupName;
-        private @Nullable Output<String> subscriptionId;
-        private Output<String> workspaceName;
+        private ASCDataConnectorArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ASCDataConnectorArgs();
         }
 
         public Builder(ASCDataConnectorArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dataConnectorId = defaults.dataConnectorId;
-    	      this.dataTypes = defaults.dataTypes;
-    	      this.kind = defaults.kind;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.subscriptionId = defaults.subscriptionId;
-    	      this.workspaceName = defaults.workspaceName;
+            $ = new ASCDataConnectorArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder dataConnectorId(@Nullable Output<String> dataConnectorId) {
-            this.dataConnectorId = dataConnectorId;
+            $.dataConnectorId = dataConnectorId;
             return this;
         }
-        public Builder dataConnectorId(@Nullable String dataConnectorId) {
-            this.dataConnectorId = Codegen.ofNullable(dataConnectorId);
-            return this;
+
+        public Builder dataConnectorId(String dataConnectorId) {
+            return dataConnectorId(Output.of(dataConnectorId));
         }
+
         public Builder dataTypes(@Nullable Output<AlertsDataTypeOfDataConnectorArgs> dataTypes) {
-            this.dataTypes = dataTypes;
+            $.dataTypes = dataTypes;
             return this;
         }
-        public Builder dataTypes(@Nullable AlertsDataTypeOfDataConnectorArgs dataTypes) {
-            this.dataTypes = Codegen.ofNullable(dataTypes);
-            return this;
+
+        public Builder dataTypes(AlertsDataTypeOfDataConnectorArgs dataTypes) {
+            return dataTypes(Output.of(dataTypes));
         }
+
         public Builder kind(Output<String> kind) {
-            this.kind = Objects.requireNonNull(kind);
+            $.kind = kind;
             return this;
         }
+
         public Builder kind(String kind) {
-            this.kind = Output.of(Objects.requireNonNull(kind));
-            return this;
+            return kind(Output.of(kind));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder subscriptionId(@Nullable Output<String> subscriptionId) {
-            this.subscriptionId = subscriptionId;
+            $.subscriptionId = subscriptionId;
             return this;
         }
-        public Builder subscriptionId(@Nullable String subscriptionId) {
-            this.subscriptionId = Codegen.ofNullable(subscriptionId);
-            return this;
+
+        public Builder subscriptionId(String subscriptionId) {
+            return subscriptionId(Output.of(subscriptionId));
         }
+
         public Builder workspaceName(Output<String> workspaceName) {
-            this.workspaceName = Objects.requireNonNull(workspaceName);
+            $.workspaceName = workspaceName;
             return this;
         }
+
         public Builder workspaceName(String workspaceName) {
-            this.workspaceName = Output.of(Objects.requireNonNull(workspaceName));
-            return this;
-        }        public ASCDataConnectorArgs build() {
-            return new ASCDataConnectorArgs(dataConnectorId, dataTypes, kind, resourceGroupName, subscriptionId, workspaceName);
+            return workspaceName(Output.of(workspaceName));
+        }
+
+        public ASCDataConnectorArgs build() {
+            $.kind = Codegen.stringProp("kind").output().arg($.kind).require();
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.workspaceName = Objects.requireNonNull($.workspaceName, "expected parameter 'workspaceName' to be non-null");
+            return $;
         }
     }
+
 }

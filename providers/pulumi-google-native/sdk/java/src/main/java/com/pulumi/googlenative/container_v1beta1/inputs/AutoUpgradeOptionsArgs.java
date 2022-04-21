@@ -3,7 +3,7 @@
 
 package com.pulumi.googlenative.container_v1beta1.inputs;
 
-import java.util.Objects;
+
 
 
 /**
@@ -14,28 +14,19 @@ public final class AutoUpgradeOptionsArgs extends com.pulumi.resources.ResourceA
 
     public static final AutoUpgradeOptionsArgs Empty = new AutoUpgradeOptionsArgs();
 
-    public AutoUpgradeOptionsArgs() {
-    }
-
     public static Builder builder() {
         return new Builder();
     }
 
-    public static Builder builder(AutoUpgradeOptionsArgs defaults) {
-        return new Builder(defaults);
-    }
-
     public static final class Builder {
+        private AutoUpgradeOptionsArgs $;
 
         public Builder() {
-    	      // Empty
-        }
-
-        public Builder(AutoUpgradeOptionsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
+            $ = new AutoUpgradeOptionsArgs();
         }
         public AutoUpgradeOptionsArgs build() {
-            return new AutoUpgradeOptionsArgs();
+            return $;
         }
     }
+
 }

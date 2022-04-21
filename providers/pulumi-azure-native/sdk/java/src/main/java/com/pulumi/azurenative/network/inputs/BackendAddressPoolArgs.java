@@ -6,10 +6,10 @@ package com.pulumi.azurenative.network.inputs;
 import com.pulumi.azurenative.network.inputs.LoadBalancerBackendAddressArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class BackendAddressPoolArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="id")
-      private final @Nullable Output<String> id;
+    private @Nullable Output<String> id;
 
-    public Output<String> id() {
-        return this.id == null ? Codegen.empty() : this.id;
+    public Optional<Output<String>> id() {
+        return Optional.ofNullable(this.id);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class BackendAddressPoolArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="loadBalancerBackendAddresses")
-      private final @Nullable Output<List<LoadBalancerBackendAddressArgs>> loadBalancerBackendAddresses;
+    private @Nullable Output<List<LoadBalancerBackendAddressArgs>> loadBalancerBackendAddresses;
 
-    public Output<List<LoadBalancerBackendAddressArgs>> loadBalancerBackendAddresses() {
-        return this.loadBalancerBackendAddresses == null ? Codegen.empty() : this.loadBalancerBackendAddresses;
+    public Optional<Output<List<LoadBalancerBackendAddressArgs>>> loadBalancerBackendAddresses() {
+        return Optional.ofNullable(this.loadBalancerBackendAddresses);
     }
 
     /**
@@ -48,10 +48,10 @@ public final class BackendAddressPoolArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -59,92 +59,82 @@ public final class BackendAddressPoolArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
-    public BackendAddressPoolArgs(
-        @Nullable Output<String> id,
-        @Nullable Output<List<LoadBalancerBackendAddressArgs>> loadBalancerBackendAddresses,
-        @Nullable Output<String> location,
-        @Nullable Output<String> name) {
-        this.id = id;
-        this.loadBalancerBackendAddresses = loadBalancerBackendAddresses;
-        this.location = location;
-        this.name = name;
-    }
+    private BackendAddressPoolArgs() {}
 
-    private BackendAddressPoolArgs() {
-        this.id = Codegen.empty();
-        this.loadBalancerBackendAddresses = Codegen.empty();
-        this.location = Codegen.empty();
-        this.name = Codegen.empty();
+    private BackendAddressPoolArgs(BackendAddressPoolArgs $) {
+        this.id = $.id;
+        this.loadBalancerBackendAddresses = $.loadBalancerBackendAddresses;
+        this.location = $.location;
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BackendAddressPoolArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> id;
-        private @Nullable Output<List<LoadBalancerBackendAddressArgs>> loadBalancerBackendAddresses;
-        private @Nullable Output<String> location;
-        private @Nullable Output<String> name;
+        private BackendAddressPoolArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new BackendAddressPoolArgs();
         }
 
         public Builder(BackendAddressPoolArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.id = defaults.id;
-    	      this.loadBalancerBackendAddresses = defaults.loadBalancerBackendAddresses;
-    	      this.location = defaults.location;
-    	      this.name = defaults.name;
+            $ = new BackendAddressPoolArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder id(@Nullable Output<String> id) {
-            this.id = id;
+            $.id = id;
             return this;
         }
-        public Builder id(@Nullable String id) {
-            this.id = Codegen.ofNullable(id);
-            return this;
+
+        public Builder id(String id) {
+            return id(Output.of(id));
         }
+
         public Builder loadBalancerBackendAddresses(@Nullable Output<List<LoadBalancerBackendAddressArgs>> loadBalancerBackendAddresses) {
-            this.loadBalancerBackendAddresses = loadBalancerBackendAddresses;
+            $.loadBalancerBackendAddresses = loadBalancerBackendAddresses;
             return this;
         }
-        public Builder loadBalancerBackendAddresses(@Nullable List<LoadBalancerBackendAddressArgs> loadBalancerBackendAddresses) {
-            this.loadBalancerBackendAddresses = Codegen.ofNullable(loadBalancerBackendAddresses);
-            return this;
+
+        public Builder loadBalancerBackendAddresses(List<LoadBalancerBackendAddressArgs> loadBalancerBackendAddresses) {
+            return loadBalancerBackendAddresses(Output.of(loadBalancerBackendAddresses));
         }
+
         public Builder loadBalancerBackendAddresses(LoadBalancerBackendAddressArgs... loadBalancerBackendAddresses) {
             return loadBalancerBackendAddresses(List.of(loadBalancerBackendAddresses));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
-        }        public BackendAddressPoolArgs build() {
-            return new BackendAddressPoolArgs(id, loadBalancerBackendAddresses, location, name);
+
+        public Builder name(String name) {
+            return name(Output.of(name));
+        }
+
+        public BackendAddressPoolArgs build() {
+            return $;
         }
     }
+
 }

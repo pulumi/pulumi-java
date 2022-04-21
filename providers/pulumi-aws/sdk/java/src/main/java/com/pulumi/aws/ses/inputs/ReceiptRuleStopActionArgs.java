@@ -5,10 +5,10 @@ package com.pulumi.aws.ses.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,7 +21,7 @@ public final class ReceiptRuleStopActionArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="position", required=true)
-      private final Output<Integer> position;
+    private Output<Integer> position;
 
     public Output<Integer> position() {
         return this.position;
@@ -32,7 +32,7 @@ public final class ReceiptRuleStopActionArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="scope", required=true)
-      private final Output<String> scope;
+    private Output<String> scope;
 
     public Output<String> scope() {
         return this.scope;
@@ -43,76 +43,70 @@ public final class ReceiptRuleStopActionArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="topicArn")
-      private final @Nullable Output<String> topicArn;
+    private @Nullable Output<String> topicArn;
 
-    public Output<String> topicArn() {
-        return this.topicArn == null ? Codegen.empty() : this.topicArn;
+    public Optional<Output<String>> topicArn() {
+        return Optional.ofNullable(this.topicArn);
     }
 
-    public ReceiptRuleStopActionArgs(
-        Output<Integer> position,
-        Output<String> scope,
-        @Nullable Output<String> topicArn) {
-        this.position = Objects.requireNonNull(position, "expected parameter 'position' to be non-null");
-        this.scope = Objects.requireNonNull(scope, "expected parameter 'scope' to be non-null");
-        this.topicArn = topicArn;
-    }
+    private ReceiptRuleStopActionArgs() {}
 
-    private ReceiptRuleStopActionArgs() {
-        this.position = Codegen.empty();
-        this.scope = Codegen.empty();
-        this.topicArn = Codegen.empty();
+    private ReceiptRuleStopActionArgs(ReceiptRuleStopActionArgs $) {
+        this.position = $.position;
+        this.scope = $.scope;
+        this.topicArn = $.topicArn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ReceiptRuleStopActionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Integer> position;
-        private Output<String> scope;
-        private @Nullable Output<String> topicArn;
+        private ReceiptRuleStopActionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ReceiptRuleStopActionArgs();
         }
 
         public Builder(ReceiptRuleStopActionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.position = defaults.position;
-    	      this.scope = defaults.scope;
-    	      this.topicArn = defaults.topicArn;
+            $ = new ReceiptRuleStopActionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder position(Output<Integer> position) {
-            this.position = Objects.requireNonNull(position);
+            $.position = position;
             return this;
         }
+
         public Builder position(Integer position) {
-            this.position = Output.of(Objects.requireNonNull(position));
-            return this;
+            return position(Output.of(position));
         }
+
         public Builder scope(Output<String> scope) {
-            this.scope = Objects.requireNonNull(scope);
+            $.scope = scope;
             return this;
         }
+
         public Builder scope(String scope) {
-            this.scope = Output.of(Objects.requireNonNull(scope));
-            return this;
+            return scope(Output.of(scope));
         }
+
         public Builder topicArn(@Nullable Output<String> topicArn) {
-            this.topicArn = topicArn;
+            $.topicArn = topicArn;
             return this;
         }
-        public Builder topicArn(@Nullable String topicArn) {
-            this.topicArn = Codegen.ofNullable(topicArn);
-            return this;
-        }        public ReceiptRuleStopActionArgs build() {
-            return new ReceiptRuleStopActionArgs(position, scope, topicArn);
+
+        public Builder topicArn(String topicArn) {
+            return topicArn(Output.of(topicArn));
+        }
+
+        public ReceiptRuleStopActionArgs build() {
+            $.position = Objects.requireNonNull($.position, "expected parameter 'position' to be non-null");
+            $.scope = Objects.requireNonNull($.scope, "expected parameter 'scope' to be non-null");
+            return $;
         }
     }
+
 }

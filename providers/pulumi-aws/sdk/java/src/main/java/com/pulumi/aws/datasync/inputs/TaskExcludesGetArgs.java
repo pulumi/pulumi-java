@@ -5,9 +5,9 @@ package com.pulumi.aws.datasync.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class TaskExcludesGetArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="filterType")
-      private final @Nullable Output<String> filterType;
+    private @Nullable Output<String> filterType;
 
-    public Output<String> filterType() {
-        return this.filterType == null ? Codegen.empty() : this.filterType;
+    public Optional<Output<String>> filterType() {
+        return Optional.ofNullable(this.filterType);
     }
 
     /**
@@ -31,63 +31,58 @@ public final class TaskExcludesGetArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="value")
-      private final @Nullable Output<String> value;
+    private @Nullable Output<String> value;
 
-    public Output<String> value() {
-        return this.value == null ? Codegen.empty() : this.value;
+    public Optional<Output<String>> value() {
+        return Optional.ofNullable(this.value);
     }
 
-    public TaskExcludesGetArgs(
-        @Nullable Output<String> filterType,
-        @Nullable Output<String> value) {
-        this.filterType = filterType;
-        this.value = value;
-    }
+    private TaskExcludesGetArgs() {}
 
-    private TaskExcludesGetArgs() {
-        this.filterType = Codegen.empty();
-        this.value = Codegen.empty();
+    private TaskExcludesGetArgs(TaskExcludesGetArgs $) {
+        this.filterType = $.filterType;
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TaskExcludesGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> filterType;
-        private @Nullable Output<String> value;
+        private TaskExcludesGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TaskExcludesGetArgs();
         }
 
         public Builder(TaskExcludesGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.filterType = defaults.filterType;
-    	      this.value = defaults.value;
+            $ = new TaskExcludesGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder filterType(@Nullable Output<String> filterType) {
-            this.filterType = filterType;
+            $.filterType = filterType;
             return this;
         }
-        public Builder filterType(@Nullable String filterType) {
-            this.filterType = Codegen.ofNullable(filterType);
-            return this;
+
+        public Builder filterType(String filterType) {
+            return filterType(Output.of(filterType));
         }
+
         public Builder value(@Nullable Output<String> value) {
-            this.value = value;
+            $.value = value;
             return this;
         }
-        public Builder value(@Nullable String value) {
-            this.value = Codegen.ofNullable(value);
-            return this;
-        }        public TaskExcludesGetArgs build() {
-            return new TaskExcludesGetArgs(filterType, value);
+
+        public Builder value(String value) {
+            return value(Output.of(value));
+        }
+
+        public TaskExcludesGetArgs build() {
+            return $;
         }
     }
+
 }

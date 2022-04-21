@@ -8,10 +8,10 @@ import com.pulumi.azurenative.servicefabric.enums.Protocol;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -28,7 +28,7 @@ public final class LoadBalancingRuleArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="backendPort", required=true)
-      private final Output<Integer> backendPort;
+    private Output<Integer> backendPort;
 
     public Output<Integer> backendPort() {
         return this.backendPort;
@@ -39,7 +39,7 @@ public final class LoadBalancingRuleArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="frontendPort", required=true)
-      private final Output<Integer> frontendPort;
+    private Output<Integer> frontendPort;
 
     public Output<Integer> frontendPort() {
         return this.frontendPort;
@@ -50,7 +50,7 @@ public final class LoadBalancingRuleArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="probeProtocol", required=true)
-      private final Output<Either<String,ProbeProtocol>> probeProtocol;
+    private Output<Either<String,ProbeProtocol>> probeProtocol;
 
     public Output<Either<String,ProbeProtocol>> probeProtocol() {
         return this.probeProtocol;
@@ -61,10 +61,10 @@ public final class LoadBalancingRuleArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="probeRequestPath")
-      private final @Nullable Output<String> probeRequestPath;
+    private @Nullable Output<String> probeRequestPath;
 
-    public Output<String> probeRequestPath() {
-        return this.probeRequestPath == null ? Codegen.empty() : this.probeRequestPath;
+    public Optional<Output<String>> probeRequestPath() {
+        return Optional.ofNullable(this.probeRequestPath);
     }
 
     /**
@@ -72,102 +72,92 @@ public final class LoadBalancingRuleArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="protocol", required=true)
-      private final Output<Either<String,Protocol>> protocol;
+    private Output<Either<String,Protocol>> protocol;
 
     public Output<Either<String,Protocol>> protocol() {
         return this.protocol;
     }
 
-    public LoadBalancingRuleArgs(
-        Output<Integer> backendPort,
-        Output<Integer> frontendPort,
-        Output<Either<String,ProbeProtocol>> probeProtocol,
-        @Nullable Output<String> probeRequestPath,
-        Output<Either<String,Protocol>> protocol) {
-        this.backendPort = Objects.requireNonNull(backendPort, "expected parameter 'backendPort' to be non-null");
-        this.frontendPort = Objects.requireNonNull(frontendPort, "expected parameter 'frontendPort' to be non-null");
-        this.probeProtocol = Objects.requireNonNull(probeProtocol, "expected parameter 'probeProtocol' to be non-null");
-        this.probeRequestPath = probeRequestPath;
-        this.protocol = Objects.requireNonNull(protocol, "expected parameter 'protocol' to be non-null");
-    }
+    private LoadBalancingRuleArgs() {}
 
-    private LoadBalancingRuleArgs() {
-        this.backendPort = Codegen.empty();
-        this.frontendPort = Codegen.empty();
-        this.probeProtocol = Codegen.empty();
-        this.probeRequestPath = Codegen.empty();
-        this.protocol = Codegen.empty();
+    private LoadBalancingRuleArgs(LoadBalancingRuleArgs $) {
+        this.backendPort = $.backendPort;
+        this.frontendPort = $.frontendPort;
+        this.probeProtocol = $.probeProtocol;
+        this.probeRequestPath = $.probeRequestPath;
+        this.protocol = $.protocol;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LoadBalancingRuleArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Integer> backendPort;
-        private Output<Integer> frontendPort;
-        private Output<Either<String,ProbeProtocol>> probeProtocol;
-        private @Nullable Output<String> probeRequestPath;
-        private Output<Either<String,Protocol>> protocol;
+        private LoadBalancingRuleArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new LoadBalancingRuleArgs();
         }
 
         public Builder(LoadBalancingRuleArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.backendPort = defaults.backendPort;
-    	      this.frontendPort = defaults.frontendPort;
-    	      this.probeProtocol = defaults.probeProtocol;
-    	      this.probeRequestPath = defaults.probeRequestPath;
-    	      this.protocol = defaults.protocol;
+            $ = new LoadBalancingRuleArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder backendPort(Output<Integer> backendPort) {
-            this.backendPort = Objects.requireNonNull(backendPort);
+            $.backendPort = backendPort;
             return this;
         }
+
         public Builder backendPort(Integer backendPort) {
-            this.backendPort = Output.of(Objects.requireNonNull(backendPort));
-            return this;
+            return backendPort(Output.of(backendPort));
         }
+
         public Builder frontendPort(Output<Integer> frontendPort) {
-            this.frontendPort = Objects.requireNonNull(frontendPort);
+            $.frontendPort = frontendPort;
             return this;
         }
+
         public Builder frontendPort(Integer frontendPort) {
-            this.frontendPort = Output.of(Objects.requireNonNull(frontendPort));
-            return this;
+            return frontendPort(Output.of(frontendPort));
         }
+
         public Builder probeProtocol(Output<Either<String,ProbeProtocol>> probeProtocol) {
-            this.probeProtocol = Objects.requireNonNull(probeProtocol);
+            $.probeProtocol = probeProtocol;
             return this;
         }
+
         public Builder probeProtocol(Either<String,ProbeProtocol> probeProtocol) {
-            this.probeProtocol = Output.of(Objects.requireNonNull(probeProtocol));
-            return this;
+            return probeProtocol(Output.of(probeProtocol));
         }
+
         public Builder probeRequestPath(@Nullable Output<String> probeRequestPath) {
-            this.probeRequestPath = probeRequestPath;
+            $.probeRequestPath = probeRequestPath;
             return this;
         }
-        public Builder probeRequestPath(@Nullable String probeRequestPath) {
-            this.probeRequestPath = Codegen.ofNullable(probeRequestPath);
-            return this;
+
+        public Builder probeRequestPath(String probeRequestPath) {
+            return probeRequestPath(Output.of(probeRequestPath));
         }
+
         public Builder protocol(Output<Either<String,Protocol>> protocol) {
-            this.protocol = Objects.requireNonNull(protocol);
+            $.protocol = protocol;
             return this;
         }
+
         public Builder protocol(Either<String,Protocol> protocol) {
-            this.protocol = Output.of(Objects.requireNonNull(protocol));
-            return this;
-        }        public LoadBalancingRuleArgs build() {
-            return new LoadBalancingRuleArgs(backendPort, frontendPort, probeProtocol, probeRequestPath, protocol);
+            return protocol(Output.of(protocol));
+        }
+
+        public LoadBalancingRuleArgs build() {
+            $.backendPort = Objects.requireNonNull($.backendPort, "expected parameter 'backendPort' to be non-null");
+            $.frontendPort = Objects.requireNonNull($.frontendPort, "expected parameter 'frontendPort' to be non-null");
+            $.probeProtocol = Objects.requireNonNull($.probeProtocol, "expected parameter 'probeProtocol' to be non-null");
+            $.protocol = Objects.requireNonNull($.protocol, "expected parameter 'protocol' to be non-null");
+            return $;
         }
     }
+
 }

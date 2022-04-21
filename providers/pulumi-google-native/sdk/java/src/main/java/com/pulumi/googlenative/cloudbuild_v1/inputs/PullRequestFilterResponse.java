@@ -22,7 +22,7 @@ public final class PullRequestFilterResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="branch", required=true)
-      private final String branch;
+    private String branch;
 
     public String branch() {
         return this.branch;
@@ -33,7 +33,7 @@ public final class PullRequestFilterResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="commentControl", required=true)
-      private final String commentControl;
+    private String commentControl;
 
     public String commentControl() {
         return this.commentControl;
@@ -44,64 +44,59 @@ public final class PullRequestFilterResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="invertRegex", required=true)
-      private final Boolean invertRegex;
+    private Boolean invertRegex;
 
     public Boolean invertRegex() {
         return this.invertRegex;
     }
 
-    public PullRequestFilterResponse(
-        String branch,
-        String commentControl,
-        Boolean invertRegex) {
-        this.branch = Objects.requireNonNull(branch, "expected parameter 'branch' to be non-null");
-        this.commentControl = Objects.requireNonNull(commentControl, "expected parameter 'commentControl' to be non-null");
-        this.invertRegex = Objects.requireNonNull(invertRegex, "expected parameter 'invertRegex' to be non-null");
-    }
+    private PullRequestFilterResponse() {}
 
-    private PullRequestFilterResponse() {
-        this.branch = null;
-        this.commentControl = null;
-        this.invertRegex = null;
+    private PullRequestFilterResponse(PullRequestFilterResponse $) {
+        this.branch = $.branch;
+        this.commentControl = $.commentControl;
+        this.invertRegex = $.invertRegex;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PullRequestFilterResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String branch;
-        private String commentControl;
-        private Boolean invertRegex;
+        private PullRequestFilterResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new PullRequestFilterResponse();
         }
 
         public Builder(PullRequestFilterResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.branch = defaults.branch;
-    	      this.commentControl = defaults.commentControl;
-    	      this.invertRegex = defaults.invertRegex;
+            $ = new PullRequestFilterResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder branch(String branch) {
-            this.branch = Objects.requireNonNull(branch);
+            $.branch = branch;
             return this;
         }
+
         public Builder commentControl(String commentControl) {
-            this.commentControl = Objects.requireNonNull(commentControl);
+            $.commentControl = commentControl;
             return this;
         }
+
         public Builder invertRegex(Boolean invertRegex) {
-            this.invertRegex = Objects.requireNonNull(invertRegex);
+            $.invertRegex = invertRegex;
             return this;
-        }        public PullRequestFilterResponse build() {
-            return new PullRequestFilterResponse(branch, commentControl, invertRegex);
+        }
+
+        public PullRequestFilterResponse build() {
+            $.branch = Objects.requireNonNull($.branch, "expected parameter 'branch' to be non-null");
+            $.commentControl = Objects.requireNonNull($.commentControl, "expected parameter 'commentControl' to be non-null");
+            $.invertRegex = Objects.requireNonNull($.invertRegex, "expected parameter 'invertRegex' to be non-null");
+            return $;
         }
     }
+
 }

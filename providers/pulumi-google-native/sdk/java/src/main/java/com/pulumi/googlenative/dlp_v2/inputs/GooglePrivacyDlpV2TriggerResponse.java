@@ -22,7 +22,7 @@ public final class GooglePrivacyDlpV2TriggerResponse extends com.pulumi.resource
      * 
      */
     @Import(name="manual", required=true)
-      private final GooglePrivacyDlpV2ManualResponse manual;
+    private GooglePrivacyDlpV2ManualResponse manual;
 
     public GooglePrivacyDlpV2ManualResponse manual() {
         return this.manual;
@@ -33,55 +33,52 @@ public final class GooglePrivacyDlpV2TriggerResponse extends com.pulumi.resource
      * 
      */
     @Import(name="schedule", required=true)
-      private final GooglePrivacyDlpV2ScheduleResponse schedule;
+    private GooglePrivacyDlpV2ScheduleResponse schedule;
 
     public GooglePrivacyDlpV2ScheduleResponse schedule() {
         return this.schedule;
     }
 
-    public GooglePrivacyDlpV2TriggerResponse(
-        GooglePrivacyDlpV2ManualResponse manual,
-        GooglePrivacyDlpV2ScheduleResponse schedule) {
-        this.manual = Objects.requireNonNull(manual, "expected parameter 'manual' to be non-null");
-        this.schedule = Objects.requireNonNull(schedule, "expected parameter 'schedule' to be non-null");
-    }
+    private GooglePrivacyDlpV2TriggerResponse() {}
 
-    private GooglePrivacyDlpV2TriggerResponse() {
-        this.manual = null;
-        this.schedule = null;
+    private GooglePrivacyDlpV2TriggerResponse(GooglePrivacyDlpV2TriggerResponse $) {
+        this.manual = $.manual;
+        this.schedule = $.schedule;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GooglePrivacyDlpV2TriggerResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private GooglePrivacyDlpV2ManualResponse manual;
-        private GooglePrivacyDlpV2ScheduleResponse schedule;
+        private GooglePrivacyDlpV2TriggerResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GooglePrivacyDlpV2TriggerResponse();
         }
 
         public Builder(GooglePrivacyDlpV2TriggerResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.manual = defaults.manual;
-    	      this.schedule = defaults.schedule;
+            $ = new GooglePrivacyDlpV2TriggerResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder manual(GooglePrivacyDlpV2ManualResponse manual) {
-            this.manual = Objects.requireNonNull(manual);
+            $.manual = manual;
             return this;
         }
+
         public Builder schedule(GooglePrivacyDlpV2ScheduleResponse schedule) {
-            this.schedule = Objects.requireNonNull(schedule);
+            $.schedule = schedule;
             return this;
-        }        public GooglePrivacyDlpV2TriggerResponse build() {
-            return new GooglePrivacyDlpV2TriggerResponse(manual, schedule);
+        }
+
+        public GooglePrivacyDlpV2TriggerResponse build() {
+            $.manual = Objects.requireNonNull($.manual, "expected parameter 'manual' to be non-null");
+            $.schedule = Objects.requireNonNull($.schedule, "expected parameter 'schedule' to be non-null");
+            return $;
         }
     }
+
 }

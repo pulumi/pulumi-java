@@ -5,7 +5,6 @@ package com.pulumi.aws.rds;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,7 +18,7 @@ public final class ClusterRoleAssociationArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="dbClusterIdentifier", required=true)
-      private final Output<String> dbClusterIdentifier;
+    private Output<String> dbClusterIdentifier;
 
     public Output<String> dbClusterIdentifier() {
         return this.dbClusterIdentifier;
@@ -30,7 +29,7 @@ public final class ClusterRoleAssociationArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="featureName", required=true)
-      private final Output<String> featureName;
+    private Output<String> featureName;
 
     public Output<String> featureName() {
         return this.featureName;
@@ -41,76 +40,71 @@ public final class ClusterRoleAssociationArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="roleArn", required=true)
-      private final Output<String> roleArn;
+    private Output<String> roleArn;
 
     public Output<String> roleArn() {
         return this.roleArn;
     }
 
-    public ClusterRoleAssociationArgs(
-        Output<String> dbClusterIdentifier,
-        Output<String> featureName,
-        Output<String> roleArn) {
-        this.dbClusterIdentifier = Objects.requireNonNull(dbClusterIdentifier, "expected parameter 'dbClusterIdentifier' to be non-null");
-        this.featureName = Objects.requireNonNull(featureName, "expected parameter 'featureName' to be non-null");
-        this.roleArn = Objects.requireNonNull(roleArn, "expected parameter 'roleArn' to be non-null");
-    }
+    private ClusterRoleAssociationArgs() {}
 
-    private ClusterRoleAssociationArgs() {
-        this.dbClusterIdentifier = Codegen.empty();
-        this.featureName = Codegen.empty();
-        this.roleArn = Codegen.empty();
+    private ClusterRoleAssociationArgs(ClusterRoleAssociationArgs $) {
+        this.dbClusterIdentifier = $.dbClusterIdentifier;
+        this.featureName = $.featureName;
+        this.roleArn = $.roleArn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ClusterRoleAssociationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> dbClusterIdentifier;
-        private Output<String> featureName;
-        private Output<String> roleArn;
+        private ClusterRoleAssociationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ClusterRoleAssociationArgs();
         }
 
         public Builder(ClusterRoleAssociationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dbClusterIdentifier = defaults.dbClusterIdentifier;
-    	      this.featureName = defaults.featureName;
-    	      this.roleArn = defaults.roleArn;
+            $ = new ClusterRoleAssociationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder dbClusterIdentifier(Output<String> dbClusterIdentifier) {
-            this.dbClusterIdentifier = Objects.requireNonNull(dbClusterIdentifier);
+            $.dbClusterIdentifier = dbClusterIdentifier;
             return this;
         }
+
         public Builder dbClusterIdentifier(String dbClusterIdentifier) {
-            this.dbClusterIdentifier = Output.of(Objects.requireNonNull(dbClusterIdentifier));
-            return this;
+            return dbClusterIdentifier(Output.of(dbClusterIdentifier));
         }
+
         public Builder featureName(Output<String> featureName) {
-            this.featureName = Objects.requireNonNull(featureName);
+            $.featureName = featureName;
             return this;
         }
+
         public Builder featureName(String featureName) {
-            this.featureName = Output.of(Objects.requireNonNull(featureName));
-            return this;
+            return featureName(Output.of(featureName));
         }
+
         public Builder roleArn(Output<String> roleArn) {
-            this.roleArn = Objects.requireNonNull(roleArn);
+            $.roleArn = roleArn;
             return this;
         }
+
         public Builder roleArn(String roleArn) {
-            this.roleArn = Output.of(Objects.requireNonNull(roleArn));
-            return this;
-        }        public ClusterRoleAssociationArgs build() {
-            return new ClusterRoleAssociationArgs(dbClusterIdentifier, featureName, roleArn);
+            return roleArn(Output.of(roleArn));
+        }
+
+        public ClusterRoleAssociationArgs build() {
+            $.dbClusterIdentifier = Objects.requireNonNull($.dbClusterIdentifier, "expected parameter 'dbClusterIdentifier' to be non-null");
+            $.featureName = Objects.requireNonNull($.featureName, "expected parameter 'featureName' to be non-null");
+            $.roleArn = Objects.requireNonNull($.roleArn, "expected parameter 'roleArn' to be non-null");
+            return $;
         }
     }
+
 }

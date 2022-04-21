@@ -5,10 +5,10 @@ package com.pulumi.azurenative.web.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class ContainerResourcesArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="cpu")
-      private final @Nullable Output<Double> cpu;
+    private @Nullable Output<Double> cpu;
 
-    public Output<Double> cpu() {
-        return this.cpu == null ? Codegen.empty() : this.cpu;
+    public Optional<Output<Double>> cpu() {
+        return Optional.ofNullable(this.cpu);
     }
 
     /**
@@ -36,63 +36,58 @@ public final class ContainerResourcesArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="memory")
-      private final @Nullable Output<String> memory;
+    private @Nullable Output<String> memory;
 
-    public Output<String> memory() {
-        return this.memory == null ? Codegen.empty() : this.memory;
+    public Optional<Output<String>> memory() {
+        return Optional.ofNullable(this.memory);
     }
 
-    public ContainerResourcesArgs(
-        @Nullable Output<Double> cpu,
-        @Nullable Output<String> memory) {
-        this.cpu = cpu;
-        this.memory = memory;
-    }
+    private ContainerResourcesArgs() {}
 
-    private ContainerResourcesArgs() {
-        this.cpu = Codegen.empty();
-        this.memory = Codegen.empty();
+    private ContainerResourcesArgs(ContainerResourcesArgs $) {
+        this.cpu = $.cpu;
+        this.memory = $.memory;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ContainerResourcesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Double> cpu;
-        private @Nullable Output<String> memory;
+        private ContainerResourcesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ContainerResourcesArgs();
         }
 
         public Builder(ContainerResourcesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cpu = defaults.cpu;
-    	      this.memory = defaults.memory;
+            $ = new ContainerResourcesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder cpu(@Nullable Output<Double> cpu) {
-            this.cpu = cpu;
+            $.cpu = cpu;
             return this;
         }
-        public Builder cpu(@Nullable Double cpu) {
-            this.cpu = Codegen.ofNullable(cpu);
-            return this;
+
+        public Builder cpu(Double cpu) {
+            return cpu(Output.of(cpu));
         }
+
         public Builder memory(@Nullable Output<String> memory) {
-            this.memory = memory;
+            $.memory = memory;
             return this;
         }
-        public Builder memory(@Nullable String memory) {
-            this.memory = Codegen.ofNullable(memory);
-            return this;
-        }        public ContainerResourcesArgs build() {
-            return new ContainerResourcesArgs(cpu, memory);
+
+        public Builder memory(String memory) {
+            return memory(Output.of(memory));
+        }
+
+        public ContainerResourcesArgs build() {
+            return $;
         }
     }
+
 }

@@ -21,45 +21,45 @@ public final class TimeZoneResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="version", required=true)
-      private final String version;
+    private String version;
 
     public String version() {
         return this.version;
     }
 
-    public TimeZoneResponse(String version) {
-        this.version = Objects.requireNonNull(version, "expected parameter 'version' to be non-null");
-    }
+    private TimeZoneResponse() {}
 
-    private TimeZoneResponse() {
-        this.version = null;
+    private TimeZoneResponse(TimeZoneResponse $) {
+        this.version = $.version;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TimeZoneResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String version;
+        private TimeZoneResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new TimeZoneResponse();
         }
 
         public Builder(TimeZoneResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.version = defaults.version;
+            $ = new TimeZoneResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder version(String version) {
-            this.version = Objects.requireNonNull(version);
+            $.version = version;
             return this;
-        }        public TimeZoneResponse build() {
-            return new TimeZoneResponse(version);
+        }
+
+        public TimeZoneResponse build() {
+            $.version = Objects.requireNonNull($.version, "expected parameter 'version' to be non-null");
+            return $;
         }
     }
+
 }

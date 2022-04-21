@@ -8,9 +8,9 @@ import com.pulumi.awsnative.sagemaker.inputs.MonitoringScheduleMonitoringJobDefi
 import com.pulumi.awsnative.sagemaker.inputs.MonitoringScheduleScheduleConfigArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,10 @@ public final class MonitoringScheduleConfigArgs extends com.pulumi.resources.Res
     public static final MonitoringScheduleConfigArgs Empty = new MonitoringScheduleConfigArgs();
 
     @Import(name="monitoringJobDefinition")
-      private final @Nullable Output<MonitoringScheduleMonitoringJobDefinitionArgs> monitoringJobDefinition;
+    private @Nullable Output<MonitoringScheduleMonitoringJobDefinitionArgs> monitoringJobDefinition;
 
-    public Output<MonitoringScheduleMonitoringJobDefinitionArgs> monitoringJobDefinition() {
-        return this.monitoringJobDefinition == null ? Codegen.empty() : this.monitoringJobDefinition;
+    public Optional<Output<MonitoringScheduleMonitoringJobDefinitionArgs>> monitoringJobDefinition() {
+        return Optional.ofNullable(this.monitoringJobDefinition);
     }
 
     /**
@@ -34,103 +34,92 @@ public final class MonitoringScheduleConfigArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="monitoringJobDefinitionName")
-      private final @Nullable Output<String> monitoringJobDefinitionName;
+    private @Nullable Output<String> monitoringJobDefinitionName;
 
-    public Output<String> monitoringJobDefinitionName() {
-        return this.monitoringJobDefinitionName == null ? Codegen.empty() : this.monitoringJobDefinitionName;
+    public Optional<Output<String>> monitoringJobDefinitionName() {
+        return Optional.ofNullable(this.monitoringJobDefinitionName);
     }
 
     @Import(name="monitoringType")
-      private final @Nullable Output<MonitoringScheduleMonitoringType> monitoringType;
+    private @Nullable Output<MonitoringScheduleMonitoringType> monitoringType;
 
-    public Output<MonitoringScheduleMonitoringType> monitoringType() {
-        return this.monitoringType == null ? Codegen.empty() : this.monitoringType;
+    public Optional<Output<MonitoringScheduleMonitoringType>> monitoringType() {
+        return Optional.ofNullable(this.monitoringType);
     }
 
     @Import(name="scheduleConfig")
-      private final @Nullable Output<MonitoringScheduleScheduleConfigArgs> scheduleConfig;
+    private @Nullable Output<MonitoringScheduleScheduleConfigArgs> scheduleConfig;
 
-    public Output<MonitoringScheduleScheduleConfigArgs> scheduleConfig() {
-        return this.scheduleConfig == null ? Codegen.empty() : this.scheduleConfig;
+    public Optional<Output<MonitoringScheduleScheduleConfigArgs>> scheduleConfig() {
+        return Optional.ofNullable(this.scheduleConfig);
     }
 
-    public MonitoringScheduleConfigArgs(
-        @Nullable Output<MonitoringScheduleMonitoringJobDefinitionArgs> monitoringJobDefinition,
-        @Nullable Output<String> monitoringJobDefinitionName,
-        @Nullable Output<MonitoringScheduleMonitoringType> monitoringType,
-        @Nullable Output<MonitoringScheduleScheduleConfigArgs> scheduleConfig) {
-        this.monitoringJobDefinition = monitoringJobDefinition;
-        this.monitoringJobDefinitionName = monitoringJobDefinitionName;
-        this.monitoringType = monitoringType;
-        this.scheduleConfig = scheduleConfig;
-    }
+    private MonitoringScheduleConfigArgs() {}
 
-    private MonitoringScheduleConfigArgs() {
-        this.monitoringJobDefinition = Codegen.empty();
-        this.monitoringJobDefinitionName = Codegen.empty();
-        this.monitoringType = Codegen.empty();
-        this.scheduleConfig = Codegen.empty();
+    private MonitoringScheduleConfigArgs(MonitoringScheduleConfigArgs $) {
+        this.monitoringJobDefinition = $.monitoringJobDefinition;
+        this.monitoringJobDefinitionName = $.monitoringJobDefinitionName;
+        this.monitoringType = $.monitoringType;
+        this.scheduleConfig = $.scheduleConfig;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MonitoringScheduleConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<MonitoringScheduleMonitoringJobDefinitionArgs> monitoringJobDefinition;
-        private @Nullable Output<String> monitoringJobDefinitionName;
-        private @Nullable Output<MonitoringScheduleMonitoringType> monitoringType;
-        private @Nullable Output<MonitoringScheduleScheduleConfigArgs> scheduleConfig;
+        private MonitoringScheduleConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new MonitoringScheduleConfigArgs();
         }
 
         public Builder(MonitoringScheduleConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.monitoringJobDefinition = defaults.monitoringJobDefinition;
-    	      this.monitoringJobDefinitionName = defaults.monitoringJobDefinitionName;
-    	      this.monitoringType = defaults.monitoringType;
-    	      this.scheduleConfig = defaults.scheduleConfig;
+            $ = new MonitoringScheduleConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder monitoringJobDefinition(@Nullable Output<MonitoringScheduleMonitoringJobDefinitionArgs> monitoringJobDefinition) {
-            this.monitoringJobDefinition = monitoringJobDefinition;
+            $.monitoringJobDefinition = monitoringJobDefinition;
             return this;
         }
-        public Builder monitoringJobDefinition(@Nullable MonitoringScheduleMonitoringJobDefinitionArgs monitoringJobDefinition) {
-            this.monitoringJobDefinition = Codegen.ofNullable(monitoringJobDefinition);
-            return this;
+
+        public Builder monitoringJobDefinition(MonitoringScheduleMonitoringJobDefinitionArgs monitoringJobDefinition) {
+            return monitoringJobDefinition(Output.of(monitoringJobDefinition));
         }
+
         public Builder monitoringJobDefinitionName(@Nullable Output<String> monitoringJobDefinitionName) {
-            this.monitoringJobDefinitionName = monitoringJobDefinitionName;
+            $.monitoringJobDefinitionName = monitoringJobDefinitionName;
             return this;
         }
-        public Builder monitoringJobDefinitionName(@Nullable String monitoringJobDefinitionName) {
-            this.monitoringJobDefinitionName = Codegen.ofNullable(monitoringJobDefinitionName);
-            return this;
+
+        public Builder monitoringJobDefinitionName(String monitoringJobDefinitionName) {
+            return monitoringJobDefinitionName(Output.of(monitoringJobDefinitionName));
         }
+
         public Builder monitoringType(@Nullable Output<MonitoringScheduleMonitoringType> monitoringType) {
-            this.monitoringType = monitoringType;
+            $.monitoringType = monitoringType;
             return this;
         }
-        public Builder monitoringType(@Nullable MonitoringScheduleMonitoringType monitoringType) {
-            this.monitoringType = Codegen.ofNullable(monitoringType);
-            return this;
+
+        public Builder monitoringType(MonitoringScheduleMonitoringType monitoringType) {
+            return monitoringType(Output.of(monitoringType));
         }
+
         public Builder scheduleConfig(@Nullable Output<MonitoringScheduleScheduleConfigArgs> scheduleConfig) {
-            this.scheduleConfig = scheduleConfig;
+            $.scheduleConfig = scheduleConfig;
             return this;
         }
-        public Builder scheduleConfig(@Nullable MonitoringScheduleScheduleConfigArgs scheduleConfig) {
-            this.scheduleConfig = Codegen.ofNullable(scheduleConfig);
-            return this;
-        }        public MonitoringScheduleConfigArgs build() {
-            return new MonitoringScheduleConfigArgs(monitoringJobDefinition, monitoringJobDefinitionName, monitoringType, scheduleConfig);
+
+        public Builder scheduleConfig(MonitoringScheduleScheduleConfigArgs scheduleConfig) {
+            return scheduleConfig(Output.of(scheduleConfig));
+        }
+
+        public MonitoringScheduleConfigArgs build() {
+            return $;
         }
     }
+
 }

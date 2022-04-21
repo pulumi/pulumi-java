@@ -21,10 +21,10 @@ public final class JobRecurrenceResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="count")
-      private final @Nullable Integer count;
+    private @Nullable Integer count;
 
     public Optional<Integer> count() {
-        return this.count == null ? Optional.empty() : Optional.ofNullable(this.count);
+        return Optional.ofNullable(this.count);
     }
 
     /**
@@ -32,10 +32,10 @@ public final class JobRecurrenceResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="endTime")
-      private final @Nullable String endTime;
+    private @Nullable String endTime;
 
     public Optional<String> endTime() {
-        return this.endTime == null ? Optional.empty() : Optional.ofNullable(this.endTime);
+        return Optional.ofNullable(this.endTime);
     }
 
     /**
@@ -43,10 +43,10 @@ public final class JobRecurrenceResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="frequency")
-      private final @Nullable String frequency;
+    private @Nullable String frequency;
 
     public Optional<String> frequency() {
-        return this.frequency == null ? Optional.empty() : Optional.ofNullable(this.frequency);
+        return Optional.ofNullable(this.frequency);
     }
 
     /**
@@ -54,89 +54,75 @@ public final class JobRecurrenceResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="interval")
-      private final @Nullable Integer interval;
+    private @Nullable Integer interval;
 
     public Optional<Integer> interval() {
-        return this.interval == null ? Optional.empty() : Optional.ofNullable(this.interval);
+        return Optional.ofNullable(this.interval);
     }
 
     @Import(name="schedule")
-      private final @Nullable JobRecurrenceScheduleResponse schedule;
+    private @Nullable JobRecurrenceScheduleResponse schedule;
 
     public Optional<JobRecurrenceScheduleResponse> schedule() {
-        return this.schedule == null ? Optional.empty() : Optional.ofNullable(this.schedule);
+        return Optional.ofNullable(this.schedule);
     }
 
-    public JobRecurrenceResponse(
-        @Nullable Integer count,
-        @Nullable String endTime,
-        @Nullable String frequency,
-        @Nullable Integer interval,
-        @Nullable JobRecurrenceScheduleResponse schedule) {
-        this.count = count;
-        this.endTime = endTime;
-        this.frequency = frequency;
-        this.interval = interval;
-        this.schedule = schedule;
-    }
+    private JobRecurrenceResponse() {}
 
-    private JobRecurrenceResponse() {
-        this.count = null;
-        this.endTime = null;
-        this.frequency = null;
-        this.interval = null;
-        this.schedule = null;
+    private JobRecurrenceResponse(JobRecurrenceResponse $) {
+        this.count = $.count;
+        this.endTime = $.endTime;
+        this.frequency = $.frequency;
+        this.interval = $.interval;
+        this.schedule = $.schedule;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(JobRecurrenceResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Integer count;
-        private @Nullable String endTime;
-        private @Nullable String frequency;
-        private @Nullable Integer interval;
-        private @Nullable JobRecurrenceScheduleResponse schedule;
+        private JobRecurrenceResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new JobRecurrenceResponse();
         }
 
         public Builder(JobRecurrenceResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.count = defaults.count;
-    	      this.endTime = defaults.endTime;
-    	      this.frequency = defaults.frequency;
-    	      this.interval = defaults.interval;
-    	      this.schedule = defaults.schedule;
+            $ = new JobRecurrenceResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder count(@Nullable Integer count) {
-            this.count = count;
+            $.count = count;
             return this;
         }
+
         public Builder endTime(@Nullable String endTime) {
-            this.endTime = endTime;
+            $.endTime = endTime;
             return this;
         }
+
         public Builder frequency(@Nullable String frequency) {
-            this.frequency = frequency;
+            $.frequency = frequency;
             return this;
         }
+
         public Builder interval(@Nullable Integer interval) {
-            this.interval = interval;
+            $.interval = interval;
             return this;
         }
+
         public Builder schedule(@Nullable JobRecurrenceScheduleResponse schedule) {
-            this.schedule = schedule;
+            $.schedule = schedule;
             return this;
-        }        public JobRecurrenceResponse build() {
-            return new JobRecurrenceResponse(count, endTime, frequency, interval, schedule);
+        }
+
+        public JobRecurrenceResponse build() {
+            return $;
         }
     }
+
 }

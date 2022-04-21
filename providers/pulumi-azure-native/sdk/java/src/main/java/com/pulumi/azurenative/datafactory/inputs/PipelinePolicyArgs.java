@@ -6,8 +6,8 @@ package com.pulumi.azurenative.datafactory.inputs;
 import com.pulumi.azurenative.datafactory.inputs.PipelineElapsedTimeMetricPolicyArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class PipelinePolicyArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="elapsedTimeMetric")
-      private final @Nullable Output<PipelineElapsedTimeMetricPolicyArgs> elapsedTimeMetric;
+    private @Nullable Output<PipelineElapsedTimeMetricPolicyArgs> elapsedTimeMetric;
 
-    public Output<PipelineElapsedTimeMetricPolicyArgs> elapsedTimeMetric() {
-        return this.elapsedTimeMetric == null ? Codegen.empty() : this.elapsedTimeMetric;
+    public Optional<Output<PipelineElapsedTimeMetricPolicyArgs>> elapsedTimeMetric() {
+        return Optional.ofNullable(this.elapsedTimeMetric);
     }
 
-    public PipelinePolicyArgs(@Nullable Output<PipelineElapsedTimeMetricPolicyArgs> elapsedTimeMetric) {
-        this.elapsedTimeMetric = elapsedTimeMetric;
-    }
+    private PipelinePolicyArgs() {}
 
-    private PipelinePolicyArgs() {
-        this.elapsedTimeMetric = Codegen.empty();
+    private PipelinePolicyArgs(PipelinePolicyArgs $) {
+        this.elapsedTimeMetric = $.elapsedTimeMetric;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PipelinePolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<PipelineElapsedTimeMetricPolicyArgs> elapsedTimeMetric;
+        private PipelinePolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PipelinePolicyArgs();
         }
 
         public Builder(PipelinePolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.elapsedTimeMetric = defaults.elapsedTimeMetric;
+            $ = new PipelinePolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder elapsedTimeMetric(@Nullable Output<PipelineElapsedTimeMetricPolicyArgs> elapsedTimeMetric) {
-            this.elapsedTimeMetric = elapsedTimeMetric;
+            $.elapsedTimeMetric = elapsedTimeMetric;
             return this;
         }
-        public Builder elapsedTimeMetric(@Nullable PipelineElapsedTimeMetricPolicyArgs elapsedTimeMetric) {
-            this.elapsedTimeMetric = Codegen.ofNullable(elapsedTimeMetric);
-            return this;
-        }        public PipelinePolicyArgs build() {
-            return new PipelinePolicyArgs(elapsedTimeMetric);
+
+        public Builder elapsedTimeMetric(PipelineElapsedTimeMetricPolicyArgs elapsedTimeMetric) {
+            return elapsedTimeMetric(Output.of(elapsedTimeMetric));
+        }
+
+        public PipelinePolicyArgs build() {
+            return $;
         }
     }
+
 }

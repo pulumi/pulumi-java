@@ -5,7 +5,6 @@ package com.pulumi.awsnative.wisdom.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -15,49 +14,49 @@ public final class AssistantAssociationAssociationDataArgs extends com.pulumi.re
     public static final AssistantAssociationAssociationDataArgs Empty = new AssistantAssociationAssociationDataArgs();
 
     @Import(name="knowledgeBaseId", required=true)
-      private final Output<String> knowledgeBaseId;
+    private Output<String> knowledgeBaseId;
 
     public Output<String> knowledgeBaseId() {
         return this.knowledgeBaseId;
     }
 
-    public AssistantAssociationAssociationDataArgs(Output<String> knowledgeBaseId) {
-        this.knowledgeBaseId = Objects.requireNonNull(knowledgeBaseId, "expected parameter 'knowledgeBaseId' to be non-null");
-    }
+    private AssistantAssociationAssociationDataArgs() {}
 
-    private AssistantAssociationAssociationDataArgs() {
-        this.knowledgeBaseId = Codegen.empty();
+    private AssistantAssociationAssociationDataArgs(AssistantAssociationAssociationDataArgs $) {
+        this.knowledgeBaseId = $.knowledgeBaseId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AssistantAssociationAssociationDataArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> knowledgeBaseId;
+        private AssistantAssociationAssociationDataArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AssistantAssociationAssociationDataArgs();
         }
 
         public Builder(AssistantAssociationAssociationDataArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.knowledgeBaseId = defaults.knowledgeBaseId;
+            $ = new AssistantAssociationAssociationDataArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder knowledgeBaseId(Output<String> knowledgeBaseId) {
-            this.knowledgeBaseId = Objects.requireNonNull(knowledgeBaseId);
+            $.knowledgeBaseId = knowledgeBaseId;
             return this;
         }
+
         public Builder knowledgeBaseId(String knowledgeBaseId) {
-            this.knowledgeBaseId = Output.of(Objects.requireNonNull(knowledgeBaseId));
-            return this;
-        }        public AssistantAssociationAssociationDataArgs build() {
-            return new AssistantAssociationAssociationDataArgs(knowledgeBaseId);
+            return knowledgeBaseId(Output.of(knowledgeBaseId));
+        }
+
+        public AssistantAssociationAssociationDataArgs build() {
+            $.knowledgeBaseId = Objects.requireNonNull($.knowledgeBaseId, "expected parameter 'knowledgeBaseId' to be non-null");
+            return $;
         }
     }
+
 }

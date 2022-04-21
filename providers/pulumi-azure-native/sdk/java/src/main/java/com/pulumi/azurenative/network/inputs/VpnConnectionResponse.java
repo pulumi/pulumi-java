@@ -32,10 +32,10 @@ public final class VpnConnectionResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="connectionBandwidth")
-      private final @Nullable Integer connectionBandwidth;
+    private @Nullable Integer connectionBandwidth;
 
     public Optional<Integer> connectionBandwidth() {
-        return this.connectionBandwidth == null ? Optional.empty() : Optional.ofNullable(this.connectionBandwidth);
+        return Optional.ofNullable(this.connectionBandwidth);
     }
 
     /**
@@ -43,7 +43,7 @@ public final class VpnConnectionResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="connectionStatus", required=true)
-      private final String connectionStatus;
+    private String connectionStatus;
 
     public String connectionStatus() {
         return this.connectionStatus;
@@ -54,10 +54,10 @@ public final class VpnConnectionResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="dpdTimeoutSeconds")
-      private final @Nullable Integer dpdTimeoutSeconds;
+    private @Nullable Integer dpdTimeoutSeconds;
 
     public Optional<Integer> dpdTimeoutSeconds() {
-        return this.dpdTimeoutSeconds == null ? Optional.empty() : Optional.ofNullable(this.dpdTimeoutSeconds);
+        return Optional.ofNullable(this.dpdTimeoutSeconds);
     }
 
     /**
@@ -65,7 +65,7 @@ public final class VpnConnectionResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="egressBytesTransferred", required=true)
-      private final Double egressBytesTransferred;
+    private Double egressBytesTransferred;
 
     public Double egressBytesTransferred() {
         return this.egressBytesTransferred;
@@ -76,10 +76,10 @@ public final class VpnConnectionResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="enableBgp")
-      private final @Nullable Boolean enableBgp;
+    private @Nullable Boolean enableBgp;
 
     public Optional<Boolean> enableBgp() {
-        return this.enableBgp == null ? Optional.empty() : Optional.ofNullable(this.enableBgp);
+        return Optional.ofNullable(this.enableBgp);
     }
 
     /**
@@ -87,10 +87,10 @@ public final class VpnConnectionResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="enableInternetSecurity")
-      private final @Nullable Boolean enableInternetSecurity;
+    private @Nullable Boolean enableInternetSecurity;
 
     public Optional<Boolean> enableInternetSecurity() {
-        return this.enableInternetSecurity == null ? Optional.empty() : Optional.ofNullable(this.enableInternetSecurity);
+        return Optional.ofNullable(this.enableInternetSecurity);
     }
 
     /**
@@ -98,10 +98,10 @@ public final class VpnConnectionResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="enableRateLimiting")
-      private final @Nullable Boolean enableRateLimiting;
+    private @Nullable Boolean enableRateLimiting;
 
     public Optional<Boolean> enableRateLimiting() {
-        return this.enableRateLimiting == null ? Optional.empty() : Optional.ofNullable(this.enableRateLimiting);
+        return Optional.ofNullable(this.enableRateLimiting);
     }
 
     /**
@@ -109,7 +109,7 @@ public final class VpnConnectionResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="etag", required=true)
-      private final String etag;
+    private String etag;
 
     public String etag() {
         return this.etag;
@@ -120,10 +120,10 @@ public final class VpnConnectionResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="id")
-      private final @Nullable String id;
+    private @Nullable String id;
 
     public Optional<String> id() {
-        return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
+        return Optional.ofNullable(this.id);
     }
 
     /**
@@ -131,7 +131,7 @@ public final class VpnConnectionResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="ingressBytesTransferred", required=true)
-      private final Double ingressBytesTransferred;
+    private Double ingressBytesTransferred;
 
     public Double ingressBytesTransferred() {
         return this.ingressBytesTransferred;
@@ -142,10 +142,10 @@ public final class VpnConnectionResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="ipsecPolicies")
-      private final @Nullable List<IpsecPolicyResponse> ipsecPolicies;
+    private @Nullable List<IpsecPolicyResponse> ipsecPolicies;
 
-    public List<IpsecPolicyResponse> ipsecPolicies() {
-        return this.ipsecPolicies == null ? List.of() : this.ipsecPolicies;
+    public Optional<List<IpsecPolicyResponse>> ipsecPolicies() {
+        return Optional.ofNullable(this.ipsecPolicies);
     }
 
     /**
@@ -153,10 +153,10 @@ public final class VpnConnectionResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="name")
-      private final @Nullable String name;
+    private @Nullable String name;
 
     public Optional<String> name() {
-        return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -164,7 +164,7 @@ public final class VpnConnectionResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="provisioningState", required=true)
-      private final String provisioningState;
+    private String provisioningState;
 
     public String provisioningState() {
         return this.provisioningState;
@@ -175,10 +175,10 @@ public final class VpnConnectionResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="remoteVpnSite")
-      private final @Nullable SubResourceResponse remoteVpnSite;
+    private @Nullable SubResourceResponse remoteVpnSite;
 
     public Optional<SubResourceResponse> remoteVpnSite() {
-        return this.remoteVpnSite == null ? Optional.empty() : Optional.ofNullable(this.remoteVpnSite);
+        return Optional.ofNullable(this.remoteVpnSite);
     }
 
     /**
@@ -186,10 +186,10 @@ public final class VpnConnectionResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="routingConfiguration")
-      private final @Nullable RoutingConfigurationResponse routingConfiguration;
+    private @Nullable RoutingConfigurationResponse routingConfiguration;
 
     public Optional<RoutingConfigurationResponse> routingConfiguration() {
-        return this.routingConfiguration == null ? Optional.empty() : Optional.ofNullable(this.routingConfiguration);
+        return Optional.ofNullable(this.routingConfiguration);
     }
 
     /**
@@ -197,10 +197,10 @@ public final class VpnConnectionResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="routingWeight")
-      private final @Nullable Integer routingWeight;
+    private @Nullable Integer routingWeight;
 
     public Optional<Integer> routingWeight() {
-        return this.routingWeight == null ? Optional.empty() : Optional.ofNullable(this.routingWeight);
+        return Optional.ofNullable(this.routingWeight);
     }
 
     /**
@@ -208,10 +208,10 @@ public final class VpnConnectionResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="sharedKey")
-      private final @Nullable String sharedKey;
+    private @Nullable String sharedKey;
 
     public Optional<String> sharedKey() {
-        return this.sharedKey == null ? Optional.empty() : Optional.ofNullable(this.sharedKey);
+        return Optional.ofNullable(this.sharedKey);
     }
 
     /**
@@ -219,10 +219,10 @@ public final class VpnConnectionResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="trafficSelectorPolicies")
-      private final @Nullable List<TrafficSelectorPolicyResponse> trafficSelectorPolicies;
+    private @Nullable List<TrafficSelectorPolicyResponse> trafficSelectorPolicies;
 
-    public List<TrafficSelectorPolicyResponse> trafficSelectorPolicies() {
-        return this.trafficSelectorPolicies == null ? List.of() : this.trafficSelectorPolicies;
+    public Optional<List<TrafficSelectorPolicyResponse>> trafficSelectorPolicies() {
+        return Optional.ofNullable(this.trafficSelectorPolicies);
     }
 
     /**
@@ -230,10 +230,10 @@ public final class VpnConnectionResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="useLocalAzureIpAddress")
-      private final @Nullable Boolean useLocalAzureIpAddress;
+    private @Nullable Boolean useLocalAzureIpAddress;
 
     public Optional<Boolean> useLocalAzureIpAddress() {
-        return this.useLocalAzureIpAddress == null ? Optional.empty() : Optional.ofNullable(this.useLocalAzureIpAddress);
+        return Optional.ofNullable(this.useLocalAzureIpAddress);
     }
 
     /**
@@ -241,10 +241,10 @@ public final class VpnConnectionResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="usePolicyBasedTrafficSelectors")
-      private final @Nullable Boolean usePolicyBasedTrafficSelectors;
+    private @Nullable Boolean usePolicyBasedTrafficSelectors;
 
     public Optional<Boolean> usePolicyBasedTrafficSelectors() {
-        return this.usePolicyBasedTrafficSelectors == null ? Optional.empty() : Optional.ofNullable(this.usePolicyBasedTrafficSelectors);
+        return Optional.ofNullable(this.usePolicyBasedTrafficSelectors);
     }
 
     /**
@@ -252,10 +252,10 @@ public final class VpnConnectionResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="vpnConnectionProtocolType")
-      private final @Nullable String vpnConnectionProtocolType;
+    private @Nullable String vpnConnectionProtocolType;
 
     public Optional<String> vpnConnectionProtocolType() {
-        return this.vpnConnectionProtocolType == null ? Optional.empty() : Optional.ofNullable(this.vpnConnectionProtocolType);
+        return Optional.ofNullable(this.vpnConnectionProtocolType);
     }
 
     /**
@@ -263,244 +263,187 @@ public final class VpnConnectionResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="vpnLinkConnections")
-      private final @Nullable List<VpnSiteLinkConnectionResponse> vpnLinkConnections;
+    private @Nullable List<VpnSiteLinkConnectionResponse> vpnLinkConnections;
 
-    public List<VpnSiteLinkConnectionResponse> vpnLinkConnections() {
-        return this.vpnLinkConnections == null ? List.of() : this.vpnLinkConnections;
+    public Optional<List<VpnSiteLinkConnectionResponse>> vpnLinkConnections() {
+        return Optional.ofNullable(this.vpnLinkConnections);
     }
 
-    public VpnConnectionResponse(
-        @Nullable Integer connectionBandwidth,
-        String connectionStatus,
-        @Nullable Integer dpdTimeoutSeconds,
-        Double egressBytesTransferred,
-        @Nullable Boolean enableBgp,
-        @Nullable Boolean enableInternetSecurity,
-        @Nullable Boolean enableRateLimiting,
-        String etag,
-        @Nullable String id,
-        Double ingressBytesTransferred,
-        @Nullable List<IpsecPolicyResponse> ipsecPolicies,
-        @Nullable String name,
-        String provisioningState,
-        @Nullable SubResourceResponse remoteVpnSite,
-        @Nullable RoutingConfigurationResponse routingConfiguration,
-        @Nullable Integer routingWeight,
-        @Nullable String sharedKey,
-        @Nullable List<TrafficSelectorPolicyResponse> trafficSelectorPolicies,
-        @Nullable Boolean useLocalAzureIpAddress,
-        @Nullable Boolean usePolicyBasedTrafficSelectors,
-        @Nullable String vpnConnectionProtocolType,
-        @Nullable List<VpnSiteLinkConnectionResponse> vpnLinkConnections) {
-        this.connectionBandwidth = connectionBandwidth;
-        this.connectionStatus = Objects.requireNonNull(connectionStatus, "expected parameter 'connectionStatus' to be non-null");
-        this.dpdTimeoutSeconds = dpdTimeoutSeconds;
-        this.egressBytesTransferred = Objects.requireNonNull(egressBytesTransferred, "expected parameter 'egressBytesTransferred' to be non-null");
-        this.enableBgp = enableBgp;
-        this.enableInternetSecurity = enableInternetSecurity;
-        this.enableRateLimiting = enableRateLimiting;
-        this.etag = Objects.requireNonNull(etag, "expected parameter 'etag' to be non-null");
-        this.id = id;
-        this.ingressBytesTransferred = Objects.requireNonNull(ingressBytesTransferred, "expected parameter 'ingressBytesTransferred' to be non-null");
-        this.ipsecPolicies = ipsecPolicies;
-        this.name = name;
-        this.provisioningState = Objects.requireNonNull(provisioningState, "expected parameter 'provisioningState' to be non-null");
-        this.remoteVpnSite = remoteVpnSite;
-        this.routingConfiguration = routingConfiguration;
-        this.routingWeight = routingWeight;
-        this.sharedKey = sharedKey;
-        this.trafficSelectorPolicies = trafficSelectorPolicies;
-        this.useLocalAzureIpAddress = useLocalAzureIpAddress;
-        this.usePolicyBasedTrafficSelectors = usePolicyBasedTrafficSelectors;
-        this.vpnConnectionProtocolType = vpnConnectionProtocolType;
-        this.vpnLinkConnections = vpnLinkConnections;
-    }
+    private VpnConnectionResponse() {}
 
-    private VpnConnectionResponse() {
-        this.connectionBandwidth = null;
-        this.connectionStatus = null;
-        this.dpdTimeoutSeconds = null;
-        this.egressBytesTransferred = null;
-        this.enableBgp = null;
-        this.enableInternetSecurity = null;
-        this.enableRateLimiting = null;
-        this.etag = null;
-        this.id = null;
-        this.ingressBytesTransferred = null;
-        this.ipsecPolicies = List.of();
-        this.name = null;
-        this.provisioningState = null;
-        this.remoteVpnSite = null;
-        this.routingConfiguration = null;
-        this.routingWeight = null;
-        this.sharedKey = null;
-        this.trafficSelectorPolicies = List.of();
-        this.useLocalAzureIpAddress = null;
-        this.usePolicyBasedTrafficSelectors = null;
-        this.vpnConnectionProtocolType = null;
-        this.vpnLinkConnections = List.of();
+    private VpnConnectionResponse(VpnConnectionResponse $) {
+        this.connectionBandwidth = $.connectionBandwidth;
+        this.connectionStatus = $.connectionStatus;
+        this.dpdTimeoutSeconds = $.dpdTimeoutSeconds;
+        this.egressBytesTransferred = $.egressBytesTransferred;
+        this.enableBgp = $.enableBgp;
+        this.enableInternetSecurity = $.enableInternetSecurity;
+        this.enableRateLimiting = $.enableRateLimiting;
+        this.etag = $.etag;
+        this.id = $.id;
+        this.ingressBytesTransferred = $.ingressBytesTransferred;
+        this.ipsecPolicies = $.ipsecPolicies;
+        this.name = $.name;
+        this.provisioningState = $.provisioningState;
+        this.remoteVpnSite = $.remoteVpnSite;
+        this.routingConfiguration = $.routingConfiguration;
+        this.routingWeight = $.routingWeight;
+        this.sharedKey = $.sharedKey;
+        this.trafficSelectorPolicies = $.trafficSelectorPolicies;
+        this.useLocalAzureIpAddress = $.useLocalAzureIpAddress;
+        this.usePolicyBasedTrafficSelectors = $.usePolicyBasedTrafficSelectors;
+        this.vpnConnectionProtocolType = $.vpnConnectionProtocolType;
+        this.vpnLinkConnections = $.vpnLinkConnections;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VpnConnectionResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Integer connectionBandwidth;
-        private String connectionStatus;
-        private @Nullable Integer dpdTimeoutSeconds;
-        private Double egressBytesTransferred;
-        private @Nullable Boolean enableBgp;
-        private @Nullable Boolean enableInternetSecurity;
-        private @Nullable Boolean enableRateLimiting;
-        private String etag;
-        private @Nullable String id;
-        private Double ingressBytesTransferred;
-        private @Nullable List<IpsecPolicyResponse> ipsecPolicies;
-        private @Nullable String name;
-        private String provisioningState;
-        private @Nullable SubResourceResponse remoteVpnSite;
-        private @Nullable RoutingConfigurationResponse routingConfiguration;
-        private @Nullable Integer routingWeight;
-        private @Nullable String sharedKey;
-        private @Nullable List<TrafficSelectorPolicyResponse> trafficSelectorPolicies;
-        private @Nullable Boolean useLocalAzureIpAddress;
-        private @Nullable Boolean usePolicyBasedTrafficSelectors;
-        private @Nullable String vpnConnectionProtocolType;
-        private @Nullable List<VpnSiteLinkConnectionResponse> vpnLinkConnections;
+        private VpnConnectionResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new VpnConnectionResponse();
         }
 
         public Builder(VpnConnectionResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.connectionBandwidth = defaults.connectionBandwidth;
-    	      this.connectionStatus = defaults.connectionStatus;
-    	      this.dpdTimeoutSeconds = defaults.dpdTimeoutSeconds;
-    	      this.egressBytesTransferred = defaults.egressBytesTransferred;
-    	      this.enableBgp = defaults.enableBgp;
-    	      this.enableInternetSecurity = defaults.enableInternetSecurity;
-    	      this.enableRateLimiting = defaults.enableRateLimiting;
-    	      this.etag = defaults.etag;
-    	      this.id = defaults.id;
-    	      this.ingressBytesTransferred = defaults.ingressBytesTransferred;
-    	      this.ipsecPolicies = defaults.ipsecPolicies;
-    	      this.name = defaults.name;
-    	      this.provisioningState = defaults.provisioningState;
-    	      this.remoteVpnSite = defaults.remoteVpnSite;
-    	      this.routingConfiguration = defaults.routingConfiguration;
-    	      this.routingWeight = defaults.routingWeight;
-    	      this.sharedKey = defaults.sharedKey;
-    	      this.trafficSelectorPolicies = defaults.trafficSelectorPolicies;
-    	      this.useLocalAzureIpAddress = defaults.useLocalAzureIpAddress;
-    	      this.usePolicyBasedTrafficSelectors = defaults.usePolicyBasedTrafficSelectors;
-    	      this.vpnConnectionProtocolType = defaults.vpnConnectionProtocolType;
-    	      this.vpnLinkConnections = defaults.vpnLinkConnections;
+            $ = new VpnConnectionResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder connectionBandwidth(@Nullable Integer connectionBandwidth) {
-            this.connectionBandwidth = connectionBandwidth;
+            $.connectionBandwidth = connectionBandwidth;
             return this;
         }
+
         public Builder connectionStatus(String connectionStatus) {
-            this.connectionStatus = Objects.requireNonNull(connectionStatus);
+            $.connectionStatus = connectionStatus;
             return this;
         }
+
         public Builder dpdTimeoutSeconds(@Nullable Integer dpdTimeoutSeconds) {
-            this.dpdTimeoutSeconds = dpdTimeoutSeconds;
+            $.dpdTimeoutSeconds = dpdTimeoutSeconds;
             return this;
         }
+
         public Builder egressBytesTransferred(Double egressBytesTransferred) {
-            this.egressBytesTransferred = Objects.requireNonNull(egressBytesTransferred);
+            $.egressBytesTransferred = egressBytesTransferred;
             return this;
         }
+
         public Builder enableBgp(@Nullable Boolean enableBgp) {
-            this.enableBgp = enableBgp;
+            $.enableBgp = enableBgp;
             return this;
         }
+
         public Builder enableInternetSecurity(@Nullable Boolean enableInternetSecurity) {
-            this.enableInternetSecurity = enableInternetSecurity;
+            $.enableInternetSecurity = enableInternetSecurity;
             return this;
         }
+
         public Builder enableRateLimiting(@Nullable Boolean enableRateLimiting) {
-            this.enableRateLimiting = enableRateLimiting;
+            $.enableRateLimiting = enableRateLimiting;
             return this;
         }
+
         public Builder etag(String etag) {
-            this.etag = Objects.requireNonNull(etag);
+            $.etag = etag;
             return this;
         }
+
         public Builder id(@Nullable String id) {
-            this.id = id;
+            $.id = id;
             return this;
         }
+
         public Builder ingressBytesTransferred(Double ingressBytesTransferred) {
-            this.ingressBytesTransferred = Objects.requireNonNull(ingressBytesTransferred);
+            $.ingressBytesTransferred = ingressBytesTransferred;
             return this;
         }
+
         public Builder ipsecPolicies(@Nullable List<IpsecPolicyResponse> ipsecPolicies) {
-            this.ipsecPolicies = ipsecPolicies;
+            $.ipsecPolicies = ipsecPolicies;
             return this;
         }
+
         public Builder ipsecPolicies(IpsecPolicyResponse... ipsecPolicies) {
             return ipsecPolicies(List.of(ipsecPolicies));
         }
+
         public Builder name(@Nullable String name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
+
         public Builder provisioningState(String provisioningState) {
-            this.provisioningState = Objects.requireNonNull(provisioningState);
+            $.provisioningState = provisioningState;
             return this;
         }
+
         public Builder remoteVpnSite(@Nullable SubResourceResponse remoteVpnSite) {
-            this.remoteVpnSite = remoteVpnSite;
+            $.remoteVpnSite = remoteVpnSite;
             return this;
         }
+
         public Builder routingConfiguration(@Nullable RoutingConfigurationResponse routingConfiguration) {
-            this.routingConfiguration = routingConfiguration;
+            $.routingConfiguration = routingConfiguration;
             return this;
         }
+
         public Builder routingWeight(@Nullable Integer routingWeight) {
-            this.routingWeight = routingWeight;
+            $.routingWeight = routingWeight;
             return this;
         }
+
         public Builder sharedKey(@Nullable String sharedKey) {
-            this.sharedKey = sharedKey;
+            $.sharedKey = sharedKey;
             return this;
         }
+
         public Builder trafficSelectorPolicies(@Nullable List<TrafficSelectorPolicyResponse> trafficSelectorPolicies) {
-            this.trafficSelectorPolicies = trafficSelectorPolicies;
+            $.trafficSelectorPolicies = trafficSelectorPolicies;
             return this;
         }
+
         public Builder trafficSelectorPolicies(TrafficSelectorPolicyResponse... trafficSelectorPolicies) {
             return trafficSelectorPolicies(List.of(trafficSelectorPolicies));
         }
+
         public Builder useLocalAzureIpAddress(@Nullable Boolean useLocalAzureIpAddress) {
-            this.useLocalAzureIpAddress = useLocalAzureIpAddress;
+            $.useLocalAzureIpAddress = useLocalAzureIpAddress;
             return this;
         }
+
         public Builder usePolicyBasedTrafficSelectors(@Nullable Boolean usePolicyBasedTrafficSelectors) {
-            this.usePolicyBasedTrafficSelectors = usePolicyBasedTrafficSelectors;
+            $.usePolicyBasedTrafficSelectors = usePolicyBasedTrafficSelectors;
             return this;
         }
+
         public Builder vpnConnectionProtocolType(@Nullable String vpnConnectionProtocolType) {
-            this.vpnConnectionProtocolType = vpnConnectionProtocolType;
+            $.vpnConnectionProtocolType = vpnConnectionProtocolType;
             return this;
         }
+
         public Builder vpnLinkConnections(@Nullable List<VpnSiteLinkConnectionResponse> vpnLinkConnections) {
-            this.vpnLinkConnections = vpnLinkConnections;
+            $.vpnLinkConnections = vpnLinkConnections;
             return this;
         }
+
         public Builder vpnLinkConnections(VpnSiteLinkConnectionResponse... vpnLinkConnections) {
             return vpnLinkConnections(List.of(vpnLinkConnections));
-        }        public VpnConnectionResponse build() {
-            return new VpnConnectionResponse(connectionBandwidth, connectionStatus, dpdTimeoutSeconds, egressBytesTransferred, enableBgp, enableInternetSecurity, enableRateLimiting, etag, id, ingressBytesTransferred, ipsecPolicies, name, provisioningState, remoteVpnSite, routingConfiguration, routingWeight, sharedKey, trafficSelectorPolicies, useLocalAzureIpAddress, usePolicyBasedTrafficSelectors, vpnConnectionProtocolType, vpnLinkConnections);
+        }
+
+        public VpnConnectionResponse build() {
+            $.connectionStatus = Objects.requireNonNull($.connectionStatus, "expected parameter 'connectionStatus' to be non-null");
+            $.egressBytesTransferred = Objects.requireNonNull($.egressBytesTransferred, "expected parameter 'egressBytesTransferred' to be non-null");
+            $.etag = Objects.requireNonNull($.etag, "expected parameter 'etag' to be non-null");
+            $.ingressBytesTransferred = Objects.requireNonNull($.ingressBytesTransferred, "expected parameter 'ingressBytesTransferred' to be non-null");
+            $.provisioningState = Objects.requireNonNull($.provisioningState, "expected parameter 'provisioningState' to be non-null");
+            return $;
         }
     }
+
 }

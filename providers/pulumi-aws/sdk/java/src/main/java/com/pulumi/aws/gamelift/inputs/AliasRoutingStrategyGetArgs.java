@@ -5,9 +5,9 @@ package com.pulumi.aws.gamelift.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class AliasRoutingStrategyGetArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="fleetId")
-      private final @Nullable Output<String> fleetId;
+    private @Nullable Output<String> fleetId;
 
-    public Output<String> fleetId() {
-        return this.fleetId == null ? Codegen.empty() : this.fleetId;
+    public Optional<Output<String>> fleetId() {
+        return Optional.ofNullable(this.fleetId);
     }
 
     /**
@@ -31,10 +31,10 @@ public final class AliasRoutingStrategyGetArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="message")
-      private final @Nullable Output<String> message;
+    private @Nullable Output<String> message;
 
-    public Output<String> message() {
-        return this.message == null ? Codegen.empty() : this.message;
+    public Optional<Output<String>> message() {
+        return Optional.ofNullable(this.message);
     }
 
     /**
@@ -42,76 +42,69 @@ public final class AliasRoutingStrategyGetArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="type", required=true)
-      private final Output<String> type;
+    private Output<String> type;
 
     public Output<String> type() {
         return this.type;
     }
 
-    public AliasRoutingStrategyGetArgs(
-        @Nullable Output<String> fleetId,
-        @Nullable Output<String> message,
-        Output<String> type) {
-        this.fleetId = fleetId;
-        this.message = message;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private AliasRoutingStrategyGetArgs() {}
 
-    private AliasRoutingStrategyGetArgs() {
-        this.fleetId = Codegen.empty();
-        this.message = Codegen.empty();
-        this.type = Codegen.empty();
+    private AliasRoutingStrategyGetArgs(AliasRoutingStrategyGetArgs $) {
+        this.fleetId = $.fleetId;
+        this.message = $.message;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AliasRoutingStrategyGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> fleetId;
-        private @Nullable Output<String> message;
-        private Output<String> type;
+        private AliasRoutingStrategyGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AliasRoutingStrategyGetArgs();
         }
 
         public Builder(AliasRoutingStrategyGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.fleetId = defaults.fleetId;
-    	      this.message = defaults.message;
-    	      this.type = defaults.type;
+            $ = new AliasRoutingStrategyGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder fleetId(@Nullable Output<String> fleetId) {
-            this.fleetId = fleetId;
+            $.fleetId = fleetId;
             return this;
         }
-        public Builder fleetId(@Nullable String fleetId) {
-            this.fleetId = Codegen.ofNullable(fleetId);
-            return this;
+
+        public Builder fleetId(String fleetId) {
+            return fleetId(Output.of(fleetId));
         }
+
         public Builder message(@Nullable Output<String> message) {
-            this.message = message;
+            $.message = message;
             return this;
         }
-        public Builder message(@Nullable String message) {
-            this.message = Codegen.ofNullable(message);
-            return this;
+
+        public Builder message(String message) {
+            return message(Output.of(message));
         }
+
         public Builder type(Output<String> type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Output.of(Objects.requireNonNull(type));
-            return this;
-        }        public AliasRoutingStrategyGetArgs build() {
-            return new AliasRoutingStrategyGetArgs(fleetId, message, type);
+            return type(Output.of(type));
+        }
+
+        public AliasRoutingStrategyGetArgs build() {
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

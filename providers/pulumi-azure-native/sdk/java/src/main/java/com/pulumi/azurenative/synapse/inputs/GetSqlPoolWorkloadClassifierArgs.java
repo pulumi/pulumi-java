@@ -17,7 +17,7 @@ public final class GetSqlPoolWorkloadClassifierArgs extends com.pulumi.resources
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -28,7 +28,7 @@ public final class GetSqlPoolWorkloadClassifierArgs extends com.pulumi.resources
      * 
      */
     @Import(name="sqlPoolName", required=true)
-      private final String sqlPoolName;
+    private String sqlPoolName;
 
     public String sqlPoolName() {
         return this.sqlPoolName;
@@ -39,7 +39,7 @@ public final class GetSqlPoolWorkloadClassifierArgs extends com.pulumi.resources
      * 
      */
     @Import(name="workloadClassifierName", required=true)
-      private final String workloadClassifierName;
+    private String workloadClassifierName;
 
     public String workloadClassifierName() {
         return this.workloadClassifierName;
@@ -50,7 +50,7 @@ public final class GetSqlPoolWorkloadClassifierArgs extends com.pulumi.resources
      * 
      */
     @Import(name="workloadGroupName", required=true)
-      private final String workloadGroupName;
+    private String workloadGroupName;
 
     public String workloadGroupName() {
         return this.workloadGroupName;
@@ -61,82 +61,73 @@ public final class GetSqlPoolWorkloadClassifierArgs extends com.pulumi.resources
      * 
      */
     @Import(name="workspaceName", required=true)
-      private final String workspaceName;
+    private String workspaceName;
 
     public String workspaceName() {
         return this.workspaceName;
     }
 
-    public GetSqlPoolWorkloadClassifierArgs(
-        String resourceGroupName,
-        String sqlPoolName,
-        String workloadClassifierName,
-        String workloadGroupName,
-        String workspaceName) {
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.sqlPoolName = Objects.requireNonNull(sqlPoolName, "expected parameter 'sqlPoolName' to be non-null");
-        this.workloadClassifierName = Objects.requireNonNull(workloadClassifierName, "expected parameter 'workloadClassifierName' to be non-null");
-        this.workloadGroupName = Objects.requireNonNull(workloadGroupName, "expected parameter 'workloadGroupName' to be non-null");
-        this.workspaceName = Objects.requireNonNull(workspaceName, "expected parameter 'workspaceName' to be non-null");
-    }
+    private GetSqlPoolWorkloadClassifierArgs() {}
 
-    private GetSqlPoolWorkloadClassifierArgs() {
-        this.resourceGroupName = null;
-        this.sqlPoolName = null;
-        this.workloadClassifierName = null;
-        this.workloadGroupName = null;
-        this.workspaceName = null;
+    private GetSqlPoolWorkloadClassifierArgs(GetSqlPoolWorkloadClassifierArgs $) {
+        this.resourceGroupName = $.resourceGroupName;
+        this.sqlPoolName = $.sqlPoolName;
+        this.workloadClassifierName = $.workloadClassifierName;
+        this.workloadGroupName = $.workloadGroupName;
+        this.workspaceName = $.workspaceName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetSqlPoolWorkloadClassifierArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String resourceGroupName;
-        private String sqlPoolName;
-        private String workloadClassifierName;
-        private String workloadGroupName;
-        private String workspaceName;
+        private GetSqlPoolWorkloadClassifierArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetSqlPoolWorkloadClassifierArgs();
         }
 
         public Builder(GetSqlPoolWorkloadClassifierArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.sqlPoolName = defaults.sqlPoolName;
-    	      this.workloadClassifierName = defaults.workloadClassifierName;
-    	      this.workloadGroupName = defaults.workloadGroupName;
-    	      this.workspaceName = defaults.workspaceName;
+            $ = new GetSqlPoolWorkloadClassifierArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder sqlPoolName(String sqlPoolName) {
-            this.sqlPoolName = Objects.requireNonNull(sqlPoolName);
+            $.sqlPoolName = sqlPoolName;
             return this;
         }
+
         public Builder workloadClassifierName(String workloadClassifierName) {
-            this.workloadClassifierName = Objects.requireNonNull(workloadClassifierName);
+            $.workloadClassifierName = workloadClassifierName;
             return this;
         }
+
         public Builder workloadGroupName(String workloadGroupName) {
-            this.workloadGroupName = Objects.requireNonNull(workloadGroupName);
+            $.workloadGroupName = workloadGroupName;
             return this;
         }
+
         public Builder workspaceName(String workspaceName) {
-            this.workspaceName = Objects.requireNonNull(workspaceName);
+            $.workspaceName = workspaceName;
             return this;
-        }        public GetSqlPoolWorkloadClassifierArgs build() {
-            return new GetSqlPoolWorkloadClassifierArgs(resourceGroupName, sqlPoolName, workloadClassifierName, workloadGroupName, workspaceName);
+        }
+
+        public GetSqlPoolWorkloadClassifierArgs build() {
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.sqlPoolName = Objects.requireNonNull($.sqlPoolName, "expected parameter 'sqlPoolName' to be non-null");
+            $.workloadClassifierName = Objects.requireNonNull($.workloadClassifierName, "expected parameter 'workloadClassifierName' to be non-null");
+            $.workloadGroupName = Objects.requireNonNull($.workloadGroupName, "expected parameter 'workloadGroupName' to be non-null");
+            $.workspaceName = Objects.requireNonNull($.workspaceName, "expected parameter 'workspaceName' to be non-null");
+            return $;
         }
     }
+
 }

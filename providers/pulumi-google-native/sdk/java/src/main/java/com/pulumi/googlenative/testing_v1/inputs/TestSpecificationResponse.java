@@ -29,7 +29,7 @@ public final class TestSpecificationResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="androidInstrumentationTest", required=true)
-      private final AndroidInstrumentationTestResponse androidInstrumentationTest;
+    private AndroidInstrumentationTestResponse androidInstrumentationTest;
 
     public AndroidInstrumentationTestResponse androidInstrumentationTest() {
         return this.androidInstrumentationTest;
@@ -40,7 +40,7 @@ public final class TestSpecificationResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="androidRoboTest", required=true)
-      private final AndroidRoboTestResponse androidRoboTest;
+    private AndroidRoboTestResponse androidRoboTest;
 
     public AndroidRoboTestResponse androidRoboTest() {
         return this.androidRoboTest;
@@ -51,7 +51,7 @@ public final class TestSpecificationResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="androidTestLoop", required=true)
-      private final AndroidTestLoopResponse androidTestLoop;
+    private AndroidTestLoopResponse androidTestLoop;
 
     public AndroidTestLoopResponse androidTestLoop() {
         return this.androidTestLoop;
@@ -62,7 +62,7 @@ public final class TestSpecificationResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="disablePerformanceMetrics", required=true)
-      private final Boolean disablePerformanceMetrics;
+    private Boolean disablePerformanceMetrics;
 
     public Boolean disablePerformanceMetrics() {
         return this.disablePerformanceMetrics;
@@ -73,7 +73,7 @@ public final class TestSpecificationResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="disableVideoRecording", required=true)
-      private final Boolean disableVideoRecording;
+    private Boolean disableVideoRecording;
 
     public Boolean disableVideoRecording() {
         return this.disableVideoRecording;
@@ -84,7 +84,7 @@ public final class TestSpecificationResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="iosTestLoop", required=true)
-      private final IosTestLoopResponse iosTestLoop;
+    private IosTestLoopResponse iosTestLoop;
 
     public IosTestLoopResponse iosTestLoop() {
         return this.iosTestLoop;
@@ -95,7 +95,7 @@ public final class TestSpecificationResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="iosTestSetup", required=true)
-      private final IosTestSetupResponse iosTestSetup;
+    private IosTestSetupResponse iosTestSetup;
 
     public IosTestSetupResponse iosTestSetup() {
         return this.iosTestSetup;
@@ -106,7 +106,7 @@ public final class TestSpecificationResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="iosXcTest", required=true)
-      private final IosXcTestResponse iosXcTest;
+    private IosXcTestResponse iosXcTest;
 
     public IosXcTestResponse iosXcTest() {
         return this.iosXcTest;
@@ -117,7 +117,7 @@ public final class TestSpecificationResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="testSetup", required=true)
-      private final TestSetupResponse testSetup;
+    private TestSetupResponse testSetup;
 
     public TestSetupResponse testSetup() {
         return this.testSetup;
@@ -128,127 +128,108 @@ public final class TestSpecificationResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="testTimeout", required=true)
-      private final String testTimeout;
+    private String testTimeout;
 
     public String testTimeout() {
         return this.testTimeout;
     }
 
-    public TestSpecificationResponse(
-        AndroidInstrumentationTestResponse androidInstrumentationTest,
-        AndroidRoboTestResponse androidRoboTest,
-        AndroidTestLoopResponse androidTestLoop,
-        Boolean disablePerformanceMetrics,
-        Boolean disableVideoRecording,
-        IosTestLoopResponse iosTestLoop,
-        IosTestSetupResponse iosTestSetup,
-        IosXcTestResponse iosXcTest,
-        TestSetupResponse testSetup,
-        String testTimeout) {
-        this.androidInstrumentationTest = Objects.requireNonNull(androidInstrumentationTest, "expected parameter 'androidInstrumentationTest' to be non-null");
-        this.androidRoboTest = Objects.requireNonNull(androidRoboTest, "expected parameter 'androidRoboTest' to be non-null");
-        this.androidTestLoop = Objects.requireNonNull(androidTestLoop, "expected parameter 'androidTestLoop' to be non-null");
-        this.disablePerformanceMetrics = Objects.requireNonNull(disablePerformanceMetrics, "expected parameter 'disablePerformanceMetrics' to be non-null");
-        this.disableVideoRecording = Objects.requireNonNull(disableVideoRecording, "expected parameter 'disableVideoRecording' to be non-null");
-        this.iosTestLoop = Objects.requireNonNull(iosTestLoop, "expected parameter 'iosTestLoop' to be non-null");
-        this.iosTestSetup = Objects.requireNonNull(iosTestSetup, "expected parameter 'iosTestSetup' to be non-null");
-        this.iosXcTest = Objects.requireNonNull(iosXcTest, "expected parameter 'iosXcTest' to be non-null");
-        this.testSetup = Objects.requireNonNull(testSetup, "expected parameter 'testSetup' to be non-null");
-        this.testTimeout = Objects.requireNonNull(testTimeout, "expected parameter 'testTimeout' to be non-null");
-    }
+    private TestSpecificationResponse() {}
 
-    private TestSpecificationResponse() {
-        this.androidInstrumentationTest = null;
-        this.androidRoboTest = null;
-        this.androidTestLoop = null;
-        this.disablePerformanceMetrics = null;
-        this.disableVideoRecording = null;
-        this.iosTestLoop = null;
-        this.iosTestSetup = null;
-        this.iosXcTest = null;
-        this.testSetup = null;
-        this.testTimeout = null;
+    private TestSpecificationResponse(TestSpecificationResponse $) {
+        this.androidInstrumentationTest = $.androidInstrumentationTest;
+        this.androidRoboTest = $.androidRoboTest;
+        this.androidTestLoop = $.androidTestLoop;
+        this.disablePerformanceMetrics = $.disablePerformanceMetrics;
+        this.disableVideoRecording = $.disableVideoRecording;
+        this.iosTestLoop = $.iosTestLoop;
+        this.iosTestSetup = $.iosTestSetup;
+        this.iosXcTest = $.iosXcTest;
+        this.testSetup = $.testSetup;
+        this.testTimeout = $.testTimeout;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TestSpecificationResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private AndroidInstrumentationTestResponse androidInstrumentationTest;
-        private AndroidRoboTestResponse androidRoboTest;
-        private AndroidTestLoopResponse androidTestLoop;
-        private Boolean disablePerformanceMetrics;
-        private Boolean disableVideoRecording;
-        private IosTestLoopResponse iosTestLoop;
-        private IosTestSetupResponse iosTestSetup;
-        private IosXcTestResponse iosXcTest;
-        private TestSetupResponse testSetup;
-        private String testTimeout;
+        private TestSpecificationResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new TestSpecificationResponse();
         }
 
         public Builder(TestSpecificationResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.androidInstrumentationTest = defaults.androidInstrumentationTest;
-    	      this.androidRoboTest = defaults.androidRoboTest;
-    	      this.androidTestLoop = defaults.androidTestLoop;
-    	      this.disablePerformanceMetrics = defaults.disablePerformanceMetrics;
-    	      this.disableVideoRecording = defaults.disableVideoRecording;
-    	      this.iosTestLoop = defaults.iosTestLoop;
-    	      this.iosTestSetup = defaults.iosTestSetup;
-    	      this.iosXcTest = defaults.iosXcTest;
-    	      this.testSetup = defaults.testSetup;
-    	      this.testTimeout = defaults.testTimeout;
+            $ = new TestSpecificationResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder androidInstrumentationTest(AndroidInstrumentationTestResponse androidInstrumentationTest) {
-            this.androidInstrumentationTest = Objects.requireNonNull(androidInstrumentationTest);
+            $.androidInstrumentationTest = androidInstrumentationTest;
             return this;
         }
+
         public Builder androidRoboTest(AndroidRoboTestResponse androidRoboTest) {
-            this.androidRoboTest = Objects.requireNonNull(androidRoboTest);
+            $.androidRoboTest = androidRoboTest;
             return this;
         }
+
         public Builder androidTestLoop(AndroidTestLoopResponse androidTestLoop) {
-            this.androidTestLoop = Objects.requireNonNull(androidTestLoop);
+            $.androidTestLoop = androidTestLoop;
             return this;
         }
+
         public Builder disablePerformanceMetrics(Boolean disablePerformanceMetrics) {
-            this.disablePerformanceMetrics = Objects.requireNonNull(disablePerformanceMetrics);
+            $.disablePerformanceMetrics = disablePerformanceMetrics;
             return this;
         }
+
         public Builder disableVideoRecording(Boolean disableVideoRecording) {
-            this.disableVideoRecording = Objects.requireNonNull(disableVideoRecording);
+            $.disableVideoRecording = disableVideoRecording;
             return this;
         }
+
         public Builder iosTestLoop(IosTestLoopResponse iosTestLoop) {
-            this.iosTestLoop = Objects.requireNonNull(iosTestLoop);
+            $.iosTestLoop = iosTestLoop;
             return this;
         }
+
         public Builder iosTestSetup(IosTestSetupResponse iosTestSetup) {
-            this.iosTestSetup = Objects.requireNonNull(iosTestSetup);
+            $.iosTestSetup = iosTestSetup;
             return this;
         }
+
         public Builder iosXcTest(IosXcTestResponse iosXcTest) {
-            this.iosXcTest = Objects.requireNonNull(iosXcTest);
+            $.iosXcTest = iosXcTest;
             return this;
         }
+
         public Builder testSetup(TestSetupResponse testSetup) {
-            this.testSetup = Objects.requireNonNull(testSetup);
+            $.testSetup = testSetup;
             return this;
         }
+
         public Builder testTimeout(String testTimeout) {
-            this.testTimeout = Objects.requireNonNull(testTimeout);
+            $.testTimeout = testTimeout;
             return this;
-        }        public TestSpecificationResponse build() {
-            return new TestSpecificationResponse(androidInstrumentationTest, androidRoboTest, androidTestLoop, disablePerformanceMetrics, disableVideoRecording, iosTestLoop, iosTestSetup, iosXcTest, testSetup, testTimeout);
+        }
+
+        public TestSpecificationResponse build() {
+            $.androidInstrumentationTest = Objects.requireNonNull($.androidInstrumentationTest, "expected parameter 'androidInstrumentationTest' to be non-null");
+            $.androidRoboTest = Objects.requireNonNull($.androidRoboTest, "expected parameter 'androidRoboTest' to be non-null");
+            $.androidTestLoop = Objects.requireNonNull($.androidTestLoop, "expected parameter 'androidTestLoop' to be non-null");
+            $.disablePerformanceMetrics = Objects.requireNonNull($.disablePerformanceMetrics, "expected parameter 'disablePerformanceMetrics' to be non-null");
+            $.disableVideoRecording = Objects.requireNonNull($.disableVideoRecording, "expected parameter 'disableVideoRecording' to be non-null");
+            $.iosTestLoop = Objects.requireNonNull($.iosTestLoop, "expected parameter 'iosTestLoop' to be non-null");
+            $.iosTestSetup = Objects.requireNonNull($.iosTestSetup, "expected parameter 'iosTestSetup' to be non-null");
+            $.iosXcTest = Objects.requireNonNull($.iosXcTest, "expected parameter 'iosXcTest' to be non-null");
+            $.testSetup = Objects.requireNonNull($.testSetup, "expected parameter 'testSetup' to be non-null");
+            $.testTimeout = Objects.requireNonNull($.testTimeout, "expected parameter 'testTimeout' to be non-null");
+            return $;
         }
     }
+
 }

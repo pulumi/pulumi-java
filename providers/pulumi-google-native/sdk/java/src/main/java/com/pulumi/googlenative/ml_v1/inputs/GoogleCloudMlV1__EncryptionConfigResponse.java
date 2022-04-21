@@ -21,45 +21,45 @@ public final class GoogleCloudMlV1__EncryptionConfigResponse extends com.pulumi.
      * 
      */
     @Import(name="kmsKeyName", required=true)
-      private final String kmsKeyName;
+    private String kmsKeyName;
 
     public String kmsKeyName() {
         return this.kmsKeyName;
     }
 
-    public GoogleCloudMlV1__EncryptionConfigResponse(String kmsKeyName) {
-        this.kmsKeyName = Objects.requireNonNull(kmsKeyName, "expected parameter 'kmsKeyName' to be non-null");
-    }
+    private GoogleCloudMlV1__EncryptionConfigResponse() {}
 
-    private GoogleCloudMlV1__EncryptionConfigResponse() {
-        this.kmsKeyName = null;
+    private GoogleCloudMlV1__EncryptionConfigResponse(GoogleCloudMlV1__EncryptionConfigResponse $) {
+        this.kmsKeyName = $.kmsKeyName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudMlV1__EncryptionConfigResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String kmsKeyName;
+        private GoogleCloudMlV1__EncryptionConfigResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudMlV1__EncryptionConfigResponse();
         }
 
         public Builder(GoogleCloudMlV1__EncryptionConfigResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.kmsKeyName = defaults.kmsKeyName;
+            $ = new GoogleCloudMlV1__EncryptionConfigResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder kmsKeyName(String kmsKeyName) {
-            this.kmsKeyName = Objects.requireNonNull(kmsKeyName);
+            $.kmsKeyName = kmsKeyName;
             return this;
-        }        public GoogleCloudMlV1__EncryptionConfigResponse build() {
-            return new GoogleCloudMlV1__EncryptionConfigResponse(kmsKeyName);
+        }
+
+        public GoogleCloudMlV1__EncryptionConfigResponse build() {
+            $.kmsKeyName = Objects.requireNonNull($.kmsKeyName, "expected parameter 'kmsKeyName' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,9 +5,9 @@ package com.pulumi.azurenative.providerhub.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -16,130 +16,116 @@ public final class LinkedAccessCheckArgs extends com.pulumi.resources.ResourceAr
     public static final LinkedAccessCheckArgs Empty = new LinkedAccessCheckArgs();
 
     @Import(name="actionName")
-      private final @Nullable Output<String> actionName;
+    private @Nullable Output<String> actionName;
 
-    public Output<String> actionName() {
-        return this.actionName == null ? Codegen.empty() : this.actionName;
+    public Optional<Output<String>> actionName() {
+        return Optional.ofNullable(this.actionName);
     }
 
     @Import(name="linkedAction")
-      private final @Nullable Output<String> linkedAction;
+    private @Nullable Output<String> linkedAction;
 
-    public Output<String> linkedAction() {
-        return this.linkedAction == null ? Codegen.empty() : this.linkedAction;
+    public Optional<Output<String>> linkedAction() {
+        return Optional.ofNullable(this.linkedAction);
     }
 
     @Import(name="linkedActionVerb")
-      private final @Nullable Output<String> linkedActionVerb;
+    private @Nullable Output<String> linkedActionVerb;
 
-    public Output<String> linkedActionVerb() {
-        return this.linkedActionVerb == null ? Codegen.empty() : this.linkedActionVerb;
+    public Optional<Output<String>> linkedActionVerb() {
+        return Optional.ofNullable(this.linkedActionVerb);
     }
 
     @Import(name="linkedProperty")
-      private final @Nullable Output<String> linkedProperty;
+    private @Nullable Output<String> linkedProperty;
 
-    public Output<String> linkedProperty() {
-        return this.linkedProperty == null ? Codegen.empty() : this.linkedProperty;
+    public Optional<Output<String>> linkedProperty() {
+        return Optional.ofNullable(this.linkedProperty);
     }
 
     @Import(name="linkedType")
-      private final @Nullable Output<String> linkedType;
+    private @Nullable Output<String> linkedType;
 
-    public Output<String> linkedType() {
-        return this.linkedType == null ? Codegen.empty() : this.linkedType;
+    public Optional<Output<String>> linkedType() {
+        return Optional.ofNullable(this.linkedType);
     }
 
-    public LinkedAccessCheckArgs(
-        @Nullable Output<String> actionName,
-        @Nullable Output<String> linkedAction,
-        @Nullable Output<String> linkedActionVerb,
-        @Nullable Output<String> linkedProperty,
-        @Nullable Output<String> linkedType) {
-        this.actionName = actionName;
-        this.linkedAction = linkedAction;
-        this.linkedActionVerb = linkedActionVerb;
-        this.linkedProperty = linkedProperty;
-        this.linkedType = linkedType;
-    }
+    private LinkedAccessCheckArgs() {}
 
-    private LinkedAccessCheckArgs() {
-        this.actionName = Codegen.empty();
-        this.linkedAction = Codegen.empty();
-        this.linkedActionVerb = Codegen.empty();
-        this.linkedProperty = Codegen.empty();
-        this.linkedType = Codegen.empty();
+    private LinkedAccessCheckArgs(LinkedAccessCheckArgs $) {
+        this.actionName = $.actionName;
+        this.linkedAction = $.linkedAction;
+        this.linkedActionVerb = $.linkedActionVerb;
+        this.linkedProperty = $.linkedProperty;
+        this.linkedType = $.linkedType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LinkedAccessCheckArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> actionName;
-        private @Nullable Output<String> linkedAction;
-        private @Nullable Output<String> linkedActionVerb;
-        private @Nullable Output<String> linkedProperty;
-        private @Nullable Output<String> linkedType;
+        private LinkedAccessCheckArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new LinkedAccessCheckArgs();
         }
 
         public Builder(LinkedAccessCheckArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.actionName = defaults.actionName;
-    	      this.linkedAction = defaults.linkedAction;
-    	      this.linkedActionVerb = defaults.linkedActionVerb;
-    	      this.linkedProperty = defaults.linkedProperty;
-    	      this.linkedType = defaults.linkedType;
+            $ = new LinkedAccessCheckArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder actionName(@Nullable Output<String> actionName) {
-            this.actionName = actionName;
+            $.actionName = actionName;
             return this;
         }
-        public Builder actionName(@Nullable String actionName) {
-            this.actionName = Codegen.ofNullable(actionName);
-            return this;
+
+        public Builder actionName(String actionName) {
+            return actionName(Output.of(actionName));
         }
+
         public Builder linkedAction(@Nullable Output<String> linkedAction) {
-            this.linkedAction = linkedAction;
+            $.linkedAction = linkedAction;
             return this;
         }
-        public Builder linkedAction(@Nullable String linkedAction) {
-            this.linkedAction = Codegen.ofNullable(linkedAction);
-            return this;
+
+        public Builder linkedAction(String linkedAction) {
+            return linkedAction(Output.of(linkedAction));
         }
+
         public Builder linkedActionVerb(@Nullable Output<String> linkedActionVerb) {
-            this.linkedActionVerb = linkedActionVerb;
+            $.linkedActionVerb = linkedActionVerb;
             return this;
         }
-        public Builder linkedActionVerb(@Nullable String linkedActionVerb) {
-            this.linkedActionVerb = Codegen.ofNullable(linkedActionVerb);
-            return this;
+
+        public Builder linkedActionVerb(String linkedActionVerb) {
+            return linkedActionVerb(Output.of(linkedActionVerb));
         }
+
         public Builder linkedProperty(@Nullable Output<String> linkedProperty) {
-            this.linkedProperty = linkedProperty;
+            $.linkedProperty = linkedProperty;
             return this;
         }
-        public Builder linkedProperty(@Nullable String linkedProperty) {
-            this.linkedProperty = Codegen.ofNullable(linkedProperty);
-            return this;
+
+        public Builder linkedProperty(String linkedProperty) {
+            return linkedProperty(Output.of(linkedProperty));
         }
+
         public Builder linkedType(@Nullable Output<String> linkedType) {
-            this.linkedType = linkedType;
+            $.linkedType = linkedType;
             return this;
         }
-        public Builder linkedType(@Nullable String linkedType) {
-            this.linkedType = Codegen.ofNullable(linkedType);
-            return this;
-        }        public LinkedAccessCheckArgs build() {
-            return new LinkedAccessCheckArgs(actionName, linkedAction, linkedActionVerb, linkedProperty, linkedType);
+
+        public Builder linkedType(String linkedType) {
+            return linkedType(Output.of(linkedType));
+        }
+
+        public LinkedAccessCheckArgs build() {
+            return $;
         }
     }
+
 }

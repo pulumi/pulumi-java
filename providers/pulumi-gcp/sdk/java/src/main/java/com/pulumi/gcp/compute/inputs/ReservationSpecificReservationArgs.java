@@ -5,10 +5,10 @@ package com.pulumi.gcp.compute.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.compute.inputs.ReservationSpecificReservationInstancePropertiesArgs;
 import java.lang.Integer;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,7 +21,7 @@ public final class ReservationSpecificReservationArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="count", required=true)
-      private final Output<Integer> count;
+    private Output<Integer> count;
 
     public Output<Integer> count() {
         return this.count;
@@ -33,10 +33,10 @@ public final class ReservationSpecificReservationArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="inUseCount")
-      private final @Nullable Output<Integer> inUseCount;
+    private @Nullable Output<Integer> inUseCount;
 
-    public Output<Integer> inUseCount() {
-        return this.inUseCount == null ? Codegen.empty() : this.inUseCount;
+    public Optional<Output<Integer>> inUseCount() {
+        return Optional.ofNullable(this.inUseCount);
     }
 
     /**
@@ -45,76 +45,70 @@ public final class ReservationSpecificReservationArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="instanceProperties", required=true)
-      private final Output<ReservationSpecificReservationInstancePropertiesArgs> instanceProperties;
+    private Output<ReservationSpecificReservationInstancePropertiesArgs> instanceProperties;
 
     public Output<ReservationSpecificReservationInstancePropertiesArgs> instanceProperties() {
         return this.instanceProperties;
     }
 
-    public ReservationSpecificReservationArgs(
-        Output<Integer> count,
-        @Nullable Output<Integer> inUseCount,
-        Output<ReservationSpecificReservationInstancePropertiesArgs> instanceProperties) {
-        this.count = Objects.requireNonNull(count, "expected parameter 'count' to be non-null");
-        this.inUseCount = inUseCount;
-        this.instanceProperties = Objects.requireNonNull(instanceProperties, "expected parameter 'instanceProperties' to be non-null");
-    }
+    private ReservationSpecificReservationArgs() {}
 
-    private ReservationSpecificReservationArgs() {
-        this.count = Codegen.empty();
-        this.inUseCount = Codegen.empty();
-        this.instanceProperties = Codegen.empty();
+    private ReservationSpecificReservationArgs(ReservationSpecificReservationArgs $) {
+        this.count = $.count;
+        this.inUseCount = $.inUseCount;
+        this.instanceProperties = $.instanceProperties;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ReservationSpecificReservationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Integer> count;
-        private @Nullable Output<Integer> inUseCount;
-        private Output<ReservationSpecificReservationInstancePropertiesArgs> instanceProperties;
+        private ReservationSpecificReservationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ReservationSpecificReservationArgs();
         }
 
         public Builder(ReservationSpecificReservationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.count = defaults.count;
-    	      this.inUseCount = defaults.inUseCount;
-    	      this.instanceProperties = defaults.instanceProperties;
+            $ = new ReservationSpecificReservationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder count(Output<Integer> count) {
-            this.count = Objects.requireNonNull(count);
+            $.count = count;
             return this;
         }
+
         public Builder count(Integer count) {
-            this.count = Output.of(Objects.requireNonNull(count));
-            return this;
+            return count(Output.of(count));
         }
+
         public Builder inUseCount(@Nullable Output<Integer> inUseCount) {
-            this.inUseCount = inUseCount;
+            $.inUseCount = inUseCount;
             return this;
         }
-        public Builder inUseCount(@Nullable Integer inUseCount) {
-            this.inUseCount = Codegen.ofNullable(inUseCount);
-            return this;
+
+        public Builder inUseCount(Integer inUseCount) {
+            return inUseCount(Output.of(inUseCount));
         }
+
         public Builder instanceProperties(Output<ReservationSpecificReservationInstancePropertiesArgs> instanceProperties) {
-            this.instanceProperties = Objects.requireNonNull(instanceProperties);
+            $.instanceProperties = instanceProperties;
             return this;
         }
+
         public Builder instanceProperties(ReservationSpecificReservationInstancePropertiesArgs instanceProperties) {
-            this.instanceProperties = Output.of(Objects.requireNonNull(instanceProperties));
-            return this;
-        }        public ReservationSpecificReservationArgs build() {
-            return new ReservationSpecificReservationArgs(count, inUseCount, instanceProperties);
+            return instanceProperties(Output.of(instanceProperties));
+        }
+
+        public ReservationSpecificReservationArgs build() {
+            $.count = Objects.requireNonNull($.count, "expected parameter 'count' to be non-null");
+            $.instanceProperties = Objects.requireNonNull($.instanceProperties, "expected parameter 'instanceProperties' to be non-null");
+            return $;
         }
     }
+
 }

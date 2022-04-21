@@ -5,9 +5,9 @@ package com.pulumi.aws.workspaces.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class DirectoryWorkspaceAccessPropertiesArgs extends com.pulumi.res
      * 
      */
     @Import(name="deviceTypeAndroid")
-      private final @Nullable Output<String> deviceTypeAndroid;
+    private @Nullable Output<String> deviceTypeAndroid;
 
-    public Output<String> deviceTypeAndroid() {
-        return this.deviceTypeAndroid == null ? Codegen.empty() : this.deviceTypeAndroid;
+    public Optional<Output<String>> deviceTypeAndroid() {
+        return Optional.ofNullable(this.deviceTypeAndroid);
     }
 
     /**
@@ -31,10 +31,10 @@ public final class DirectoryWorkspaceAccessPropertiesArgs extends com.pulumi.res
      * 
      */
     @Import(name="deviceTypeChromeos")
-      private final @Nullable Output<String> deviceTypeChromeos;
+    private @Nullable Output<String> deviceTypeChromeos;
 
-    public Output<String> deviceTypeChromeos() {
-        return this.deviceTypeChromeos == null ? Codegen.empty() : this.deviceTypeChromeos;
+    public Optional<Output<String>> deviceTypeChromeos() {
+        return Optional.ofNullable(this.deviceTypeChromeos);
     }
 
     /**
@@ -42,10 +42,10 @@ public final class DirectoryWorkspaceAccessPropertiesArgs extends com.pulumi.res
      * 
      */
     @Import(name="deviceTypeIos")
-      private final @Nullable Output<String> deviceTypeIos;
+    private @Nullable Output<String> deviceTypeIos;
 
-    public Output<String> deviceTypeIos() {
-        return this.deviceTypeIos == null ? Codegen.empty() : this.deviceTypeIos;
+    public Optional<Output<String>> deviceTypeIos() {
+        return Optional.ofNullable(this.deviceTypeIos);
     }
 
     /**
@@ -53,10 +53,10 @@ public final class DirectoryWorkspaceAccessPropertiesArgs extends com.pulumi.res
      * 
      */
     @Import(name="deviceTypeLinux")
-      private final @Nullable Output<String> deviceTypeLinux;
+    private @Nullable Output<String> deviceTypeLinux;
 
-    public Output<String> deviceTypeLinux() {
-        return this.deviceTypeLinux == null ? Codegen.empty() : this.deviceTypeLinux;
+    public Optional<Output<String>> deviceTypeLinux() {
+        return Optional.ofNullable(this.deviceTypeLinux);
     }
 
     /**
@@ -64,10 +64,10 @@ public final class DirectoryWorkspaceAccessPropertiesArgs extends com.pulumi.res
      * 
      */
     @Import(name="deviceTypeOsx")
-      private final @Nullable Output<String> deviceTypeOsx;
+    private @Nullable Output<String> deviceTypeOsx;
 
-    public Output<String> deviceTypeOsx() {
-        return this.deviceTypeOsx == null ? Codegen.empty() : this.deviceTypeOsx;
+    public Optional<Output<String>> deviceTypeOsx() {
+        return Optional.ofNullable(this.deviceTypeOsx);
     }
 
     /**
@@ -75,10 +75,10 @@ public final class DirectoryWorkspaceAccessPropertiesArgs extends com.pulumi.res
      * 
      */
     @Import(name="deviceTypeWeb")
-      private final @Nullable Output<String> deviceTypeWeb;
+    private @Nullable Output<String> deviceTypeWeb;
 
-    public Output<String> deviceTypeWeb() {
-        return this.deviceTypeWeb == null ? Codegen.empty() : this.deviceTypeWeb;
+    public Optional<Output<String>> deviceTypeWeb() {
+        return Optional.ofNullable(this.deviceTypeWeb);
     }
 
     /**
@@ -86,10 +86,10 @@ public final class DirectoryWorkspaceAccessPropertiesArgs extends com.pulumi.res
      * 
      */
     @Import(name="deviceTypeWindows")
-      private final @Nullable Output<String> deviceTypeWindows;
+    private @Nullable Output<String> deviceTypeWindows;
 
-    public Output<String> deviceTypeWindows() {
-        return this.deviceTypeWindows == null ? Codegen.empty() : this.deviceTypeWindows;
+    public Optional<Output<String>> deviceTypeWindows() {
+        return Optional.ofNullable(this.deviceTypeWindows);
     }
 
     /**
@@ -97,141 +97,118 @@ public final class DirectoryWorkspaceAccessPropertiesArgs extends com.pulumi.res
      * 
      */
     @Import(name="deviceTypeZeroclient")
-      private final @Nullable Output<String> deviceTypeZeroclient;
+    private @Nullable Output<String> deviceTypeZeroclient;
 
-    public Output<String> deviceTypeZeroclient() {
-        return this.deviceTypeZeroclient == null ? Codegen.empty() : this.deviceTypeZeroclient;
+    public Optional<Output<String>> deviceTypeZeroclient() {
+        return Optional.ofNullable(this.deviceTypeZeroclient);
     }
 
-    public DirectoryWorkspaceAccessPropertiesArgs(
-        @Nullable Output<String> deviceTypeAndroid,
-        @Nullable Output<String> deviceTypeChromeos,
-        @Nullable Output<String> deviceTypeIos,
-        @Nullable Output<String> deviceTypeLinux,
-        @Nullable Output<String> deviceTypeOsx,
-        @Nullable Output<String> deviceTypeWeb,
-        @Nullable Output<String> deviceTypeWindows,
-        @Nullable Output<String> deviceTypeZeroclient) {
-        this.deviceTypeAndroid = deviceTypeAndroid;
-        this.deviceTypeChromeos = deviceTypeChromeos;
-        this.deviceTypeIos = deviceTypeIos;
-        this.deviceTypeLinux = deviceTypeLinux;
-        this.deviceTypeOsx = deviceTypeOsx;
-        this.deviceTypeWeb = deviceTypeWeb;
-        this.deviceTypeWindows = deviceTypeWindows;
-        this.deviceTypeZeroclient = deviceTypeZeroclient;
-    }
+    private DirectoryWorkspaceAccessPropertiesArgs() {}
 
-    private DirectoryWorkspaceAccessPropertiesArgs() {
-        this.deviceTypeAndroid = Codegen.empty();
-        this.deviceTypeChromeos = Codegen.empty();
-        this.deviceTypeIos = Codegen.empty();
-        this.deviceTypeLinux = Codegen.empty();
-        this.deviceTypeOsx = Codegen.empty();
-        this.deviceTypeWeb = Codegen.empty();
-        this.deviceTypeWindows = Codegen.empty();
-        this.deviceTypeZeroclient = Codegen.empty();
+    private DirectoryWorkspaceAccessPropertiesArgs(DirectoryWorkspaceAccessPropertiesArgs $) {
+        this.deviceTypeAndroid = $.deviceTypeAndroid;
+        this.deviceTypeChromeos = $.deviceTypeChromeos;
+        this.deviceTypeIos = $.deviceTypeIos;
+        this.deviceTypeLinux = $.deviceTypeLinux;
+        this.deviceTypeOsx = $.deviceTypeOsx;
+        this.deviceTypeWeb = $.deviceTypeWeb;
+        this.deviceTypeWindows = $.deviceTypeWindows;
+        this.deviceTypeZeroclient = $.deviceTypeZeroclient;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DirectoryWorkspaceAccessPropertiesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> deviceTypeAndroid;
-        private @Nullable Output<String> deviceTypeChromeos;
-        private @Nullable Output<String> deviceTypeIos;
-        private @Nullable Output<String> deviceTypeLinux;
-        private @Nullable Output<String> deviceTypeOsx;
-        private @Nullable Output<String> deviceTypeWeb;
-        private @Nullable Output<String> deviceTypeWindows;
-        private @Nullable Output<String> deviceTypeZeroclient;
+        private DirectoryWorkspaceAccessPropertiesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DirectoryWorkspaceAccessPropertiesArgs();
         }
 
         public Builder(DirectoryWorkspaceAccessPropertiesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.deviceTypeAndroid = defaults.deviceTypeAndroid;
-    	      this.deviceTypeChromeos = defaults.deviceTypeChromeos;
-    	      this.deviceTypeIos = defaults.deviceTypeIos;
-    	      this.deviceTypeLinux = defaults.deviceTypeLinux;
-    	      this.deviceTypeOsx = defaults.deviceTypeOsx;
-    	      this.deviceTypeWeb = defaults.deviceTypeWeb;
-    	      this.deviceTypeWindows = defaults.deviceTypeWindows;
-    	      this.deviceTypeZeroclient = defaults.deviceTypeZeroclient;
+            $ = new DirectoryWorkspaceAccessPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder deviceTypeAndroid(@Nullable Output<String> deviceTypeAndroid) {
-            this.deviceTypeAndroid = deviceTypeAndroid;
+            $.deviceTypeAndroid = deviceTypeAndroid;
             return this;
         }
-        public Builder deviceTypeAndroid(@Nullable String deviceTypeAndroid) {
-            this.deviceTypeAndroid = Codegen.ofNullable(deviceTypeAndroid);
-            return this;
+
+        public Builder deviceTypeAndroid(String deviceTypeAndroid) {
+            return deviceTypeAndroid(Output.of(deviceTypeAndroid));
         }
+
         public Builder deviceTypeChromeos(@Nullable Output<String> deviceTypeChromeos) {
-            this.deviceTypeChromeos = deviceTypeChromeos;
+            $.deviceTypeChromeos = deviceTypeChromeos;
             return this;
         }
-        public Builder deviceTypeChromeos(@Nullable String deviceTypeChromeos) {
-            this.deviceTypeChromeos = Codegen.ofNullable(deviceTypeChromeos);
-            return this;
+
+        public Builder deviceTypeChromeos(String deviceTypeChromeos) {
+            return deviceTypeChromeos(Output.of(deviceTypeChromeos));
         }
+
         public Builder deviceTypeIos(@Nullable Output<String> deviceTypeIos) {
-            this.deviceTypeIos = deviceTypeIos;
+            $.deviceTypeIos = deviceTypeIos;
             return this;
         }
-        public Builder deviceTypeIos(@Nullable String deviceTypeIos) {
-            this.deviceTypeIos = Codegen.ofNullable(deviceTypeIos);
-            return this;
+
+        public Builder deviceTypeIos(String deviceTypeIos) {
+            return deviceTypeIos(Output.of(deviceTypeIos));
         }
+
         public Builder deviceTypeLinux(@Nullable Output<String> deviceTypeLinux) {
-            this.deviceTypeLinux = deviceTypeLinux;
+            $.deviceTypeLinux = deviceTypeLinux;
             return this;
         }
-        public Builder deviceTypeLinux(@Nullable String deviceTypeLinux) {
-            this.deviceTypeLinux = Codegen.ofNullable(deviceTypeLinux);
-            return this;
+
+        public Builder deviceTypeLinux(String deviceTypeLinux) {
+            return deviceTypeLinux(Output.of(deviceTypeLinux));
         }
+
         public Builder deviceTypeOsx(@Nullable Output<String> deviceTypeOsx) {
-            this.deviceTypeOsx = deviceTypeOsx;
+            $.deviceTypeOsx = deviceTypeOsx;
             return this;
         }
-        public Builder deviceTypeOsx(@Nullable String deviceTypeOsx) {
-            this.deviceTypeOsx = Codegen.ofNullable(deviceTypeOsx);
-            return this;
+
+        public Builder deviceTypeOsx(String deviceTypeOsx) {
+            return deviceTypeOsx(Output.of(deviceTypeOsx));
         }
+
         public Builder deviceTypeWeb(@Nullable Output<String> deviceTypeWeb) {
-            this.deviceTypeWeb = deviceTypeWeb;
+            $.deviceTypeWeb = deviceTypeWeb;
             return this;
         }
-        public Builder deviceTypeWeb(@Nullable String deviceTypeWeb) {
-            this.deviceTypeWeb = Codegen.ofNullable(deviceTypeWeb);
-            return this;
+
+        public Builder deviceTypeWeb(String deviceTypeWeb) {
+            return deviceTypeWeb(Output.of(deviceTypeWeb));
         }
+
         public Builder deviceTypeWindows(@Nullable Output<String> deviceTypeWindows) {
-            this.deviceTypeWindows = deviceTypeWindows;
+            $.deviceTypeWindows = deviceTypeWindows;
             return this;
         }
-        public Builder deviceTypeWindows(@Nullable String deviceTypeWindows) {
-            this.deviceTypeWindows = Codegen.ofNullable(deviceTypeWindows);
-            return this;
+
+        public Builder deviceTypeWindows(String deviceTypeWindows) {
+            return deviceTypeWindows(Output.of(deviceTypeWindows));
         }
+
         public Builder deviceTypeZeroclient(@Nullable Output<String> deviceTypeZeroclient) {
-            this.deviceTypeZeroclient = deviceTypeZeroclient;
+            $.deviceTypeZeroclient = deviceTypeZeroclient;
             return this;
         }
-        public Builder deviceTypeZeroclient(@Nullable String deviceTypeZeroclient) {
-            this.deviceTypeZeroclient = Codegen.ofNullable(deviceTypeZeroclient);
-            return this;
-        }        public DirectoryWorkspaceAccessPropertiesArgs build() {
-            return new DirectoryWorkspaceAccessPropertiesArgs(deviceTypeAndroid, deviceTypeChromeos, deviceTypeIos, deviceTypeLinux, deviceTypeOsx, deviceTypeWeb, deviceTypeWindows, deviceTypeZeroclient);
+
+        public Builder deviceTypeZeroclient(String deviceTypeZeroclient) {
+            return deviceTypeZeroclient(Output.of(deviceTypeZeroclient));
+        }
+
+        public DirectoryWorkspaceAccessPropertiesArgs build() {
+            return $;
         }
     }
+
 }

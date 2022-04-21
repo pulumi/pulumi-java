@@ -8,10 +8,10 @@ import com.pulumi.azurenative.automation.inputs.AdvancedScheduleArgs;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class ScheduleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="advancedSchedule")
-      private final @Nullable Output<AdvancedScheduleArgs> advancedSchedule;
+    private @Nullable Output<AdvancedScheduleArgs> advancedSchedule;
 
-    public Output<AdvancedScheduleArgs> advancedSchedule() {
-        return this.advancedSchedule == null ? Codegen.empty() : this.advancedSchedule;
+    public Optional<Output<AdvancedScheduleArgs>> advancedSchedule() {
+        return Optional.ofNullable(this.advancedSchedule);
     }
 
     /**
@@ -35,7 +35,7 @@ public final class ScheduleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="automationAccountName", required=true)
-      private final Output<String> automationAccountName;
+    private Output<String> automationAccountName;
 
     public Output<String> automationAccountName() {
         return this.automationAccountName;
@@ -46,10 +46,10 @@ public final class ScheduleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -57,10 +57,10 @@ public final class ScheduleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="expiryTime")
-      private final @Nullable Output<String> expiryTime;
+    private @Nullable Output<String> expiryTime;
 
-    public Output<String> expiryTime() {
-        return this.expiryTime == null ? Codegen.empty() : this.expiryTime;
+    public Optional<Output<String>> expiryTime() {
+        return Optional.ofNullable(this.expiryTime);
     }
 
     /**
@@ -68,7 +68,7 @@ public final class ScheduleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="frequency", required=true)
-      private final Output<Either<String,ScheduleFrequency>> frequency;
+    private Output<Either<String,ScheduleFrequency>> frequency;
 
     public Output<Either<String,ScheduleFrequency>> frequency() {
         return this.frequency;
@@ -79,10 +79,10 @@ public final class ScheduleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="interval")
-      private final @Nullable Output<Object> interval;
+    private @Nullable Output<Object> interval;
 
-    public Output<Object> interval() {
-        return this.interval == null ? Codegen.empty() : this.interval;
+    public Optional<Output<Object>> interval() {
+        return Optional.ofNullable(this.interval);
     }
 
     /**
@@ -90,7 +90,7 @@ public final class ScheduleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name", required=true)
-      private final Output<String> name;
+    private Output<String> name;
 
     public Output<String> name() {
         return this.name;
@@ -101,7 +101,7 @@ public final class ScheduleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -112,10 +112,10 @@ public final class ScheduleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="scheduleName")
-      private final @Nullable Output<String> scheduleName;
+    private @Nullable Output<String> scheduleName;
 
-    public Output<String> scheduleName() {
-        return this.scheduleName == null ? Codegen.empty() : this.scheduleName;
+    public Optional<Output<String>> scheduleName() {
+        return Optional.ofNullable(this.scheduleName);
     }
 
     /**
@@ -123,7 +123,7 @@ public final class ScheduleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="startTime", required=true)
-      private final Output<String> startTime;
+    private Output<String> startTime;
 
     public Output<String> startTime() {
         return this.startTime;
@@ -134,180 +134,153 @@ public final class ScheduleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="timeZone")
-      private final @Nullable Output<String> timeZone;
+    private @Nullable Output<String> timeZone;
 
-    public Output<String> timeZone() {
-        return this.timeZone == null ? Codegen.empty() : this.timeZone;
+    public Optional<Output<String>> timeZone() {
+        return Optional.ofNullable(this.timeZone);
     }
 
-    public ScheduleArgs(
-        @Nullable Output<AdvancedScheduleArgs> advancedSchedule,
-        Output<String> automationAccountName,
-        @Nullable Output<String> description,
-        @Nullable Output<String> expiryTime,
-        Output<Either<String,ScheduleFrequency>> frequency,
-        @Nullable Output<Object> interval,
-        Output<String> name,
-        Output<String> resourceGroupName,
-        @Nullable Output<String> scheduleName,
-        Output<String> startTime,
-        @Nullable Output<String> timeZone) {
-        this.advancedSchedule = advancedSchedule;
-        this.automationAccountName = Objects.requireNonNull(automationAccountName, "expected parameter 'automationAccountName' to be non-null");
-        this.description = description;
-        this.expiryTime = expiryTime;
-        this.frequency = Objects.requireNonNull(frequency, "expected parameter 'frequency' to be non-null");
-        this.interval = interval;
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.scheduleName = scheduleName;
-        this.startTime = Objects.requireNonNull(startTime, "expected parameter 'startTime' to be non-null");
-        this.timeZone = timeZone;
-    }
+    private ScheduleArgs() {}
 
-    private ScheduleArgs() {
-        this.advancedSchedule = Codegen.empty();
-        this.automationAccountName = Codegen.empty();
-        this.description = Codegen.empty();
-        this.expiryTime = Codegen.empty();
-        this.frequency = Codegen.empty();
-        this.interval = Codegen.empty();
-        this.name = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.scheduleName = Codegen.empty();
-        this.startTime = Codegen.empty();
-        this.timeZone = Codegen.empty();
+    private ScheduleArgs(ScheduleArgs $) {
+        this.advancedSchedule = $.advancedSchedule;
+        this.automationAccountName = $.automationAccountName;
+        this.description = $.description;
+        this.expiryTime = $.expiryTime;
+        this.frequency = $.frequency;
+        this.interval = $.interval;
+        this.name = $.name;
+        this.resourceGroupName = $.resourceGroupName;
+        this.scheduleName = $.scheduleName;
+        this.startTime = $.startTime;
+        this.timeZone = $.timeZone;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ScheduleArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<AdvancedScheduleArgs> advancedSchedule;
-        private Output<String> automationAccountName;
-        private @Nullable Output<String> description;
-        private @Nullable Output<String> expiryTime;
-        private Output<Either<String,ScheduleFrequency>> frequency;
-        private @Nullable Output<Object> interval;
-        private Output<String> name;
-        private Output<String> resourceGroupName;
-        private @Nullable Output<String> scheduleName;
-        private Output<String> startTime;
-        private @Nullable Output<String> timeZone;
+        private ScheduleArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ScheduleArgs();
         }
 
         public Builder(ScheduleArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.advancedSchedule = defaults.advancedSchedule;
-    	      this.automationAccountName = defaults.automationAccountName;
-    	      this.description = defaults.description;
-    	      this.expiryTime = defaults.expiryTime;
-    	      this.frequency = defaults.frequency;
-    	      this.interval = defaults.interval;
-    	      this.name = defaults.name;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.scheduleName = defaults.scheduleName;
-    	      this.startTime = defaults.startTime;
-    	      this.timeZone = defaults.timeZone;
+            $ = new ScheduleArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder advancedSchedule(@Nullable Output<AdvancedScheduleArgs> advancedSchedule) {
-            this.advancedSchedule = advancedSchedule;
+            $.advancedSchedule = advancedSchedule;
             return this;
         }
-        public Builder advancedSchedule(@Nullable AdvancedScheduleArgs advancedSchedule) {
-            this.advancedSchedule = Codegen.ofNullable(advancedSchedule);
-            return this;
+
+        public Builder advancedSchedule(AdvancedScheduleArgs advancedSchedule) {
+            return advancedSchedule(Output.of(advancedSchedule));
         }
+
         public Builder automationAccountName(Output<String> automationAccountName) {
-            this.automationAccountName = Objects.requireNonNull(automationAccountName);
+            $.automationAccountName = automationAccountName;
             return this;
         }
+
         public Builder automationAccountName(String automationAccountName) {
-            this.automationAccountName = Output.of(Objects.requireNonNull(automationAccountName));
-            return this;
+            return automationAccountName(Output.of(automationAccountName));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder expiryTime(@Nullable Output<String> expiryTime) {
-            this.expiryTime = expiryTime;
+            $.expiryTime = expiryTime;
             return this;
         }
-        public Builder expiryTime(@Nullable String expiryTime) {
-            this.expiryTime = Codegen.ofNullable(expiryTime);
-            return this;
+
+        public Builder expiryTime(String expiryTime) {
+            return expiryTime(Output.of(expiryTime));
         }
+
         public Builder frequency(Output<Either<String,ScheduleFrequency>> frequency) {
-            this.frequency = Objects.requireNonNull(frequency);
+            $.frequency = frequency;
             return this;
         }
+
         public Builder frequency(Either<String,ScheduleFrequency> frequency) {
-            this.frequency = Output.of(Objects.requireNonNull(frequency));
-            return this;
+            return frequency(Output.of(frequency));
         }
+
         public Builder interval(@Nullable Output<Object> interval) {
-            this.interval = interval;
+            $.interval = interval;
             return this;
         }
-        public Builder interval(@Nullable Object interval) {
-            this.interval = Codegen.ofNullable(interval);
-            return this;
+
+        public Builder interval(Object interval) {
+            return interval(Output.of(interval));
         }
+
         public Builder name(Output<String> name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Output.of(Objects.requireNonNull(name));
-            return this;
+            return name(Output.of(name));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder scheduleName(@Nullable Output<String> scheduleName) {
-            this.scheduleName = scheduleName;
+            $.scheduleName = scheduleName;
             return this;
         }
-        public Builder scheduleName(@Nullable String scheduleName) {
-            this.scheduleName = Codegen.ofNullable(scheduleName);
-            return this;
+
+        public Builder scheduleName(String scheduleName) {
+            return scheduleName(Output.of(scheduleName));
         }
+
         public Builder startTime(Output<String> startTime) {
-            this.startTime = Objects.requireNonNull(startTime);
+            $.startTime = startTime;
             return this;
         }
+
         public Builder startTime(String startTime) {
-            this.startTime = Output.of(Objects.requireNonNull(startTime));
-            return this;
+            return startTime(Output.of(startTime));
         }
+
         public Builder timeZone(@Nullable Output<String> timeZone) {
-            this.timeZone = timeZone;
+            $.timeZone = timeZone;
             return this;
         }
-        public Builder timeZone(@Nullable String timeZone) {
-            this.timeZone = Codegen.ofNullable(timeZone);
-            return this;
-        }        public ScheduleArgs build() {
-            return new ScheduleArgs(advancedSchedule, automationAccountName, description, expiryTime, frequency, interval, name, resourceGroupName, scheduleName, startTime, timeZone);
+
+        public Builder timeZone(String timeZone) {
+            return timeZone(Output.of(timeZone));
+        }
+
+        public ScheduleArgs build() {
+            $.automationAccountName = Objects.requireNonNull($.automationAccountName, "expected parameter 'automationAccountName' to be non-null");
+            $.frequency = Objects.requireNonNull($.frequency, "expected parameter 'frequency' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.startTime = Objects.requireNonNull($.startTime, "expected parameter 'startTime' to be non-null");
+            return $;
         }
     }
+
 }

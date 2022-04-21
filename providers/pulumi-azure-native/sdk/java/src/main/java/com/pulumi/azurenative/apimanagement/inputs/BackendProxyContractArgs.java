@@ -5,9 +5,9 @@ package com.pulumi.azurenative.apimanagement.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class BackendProxyContractArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="password")
-      private final @Nullable Output<String> password;
+    private @Nullable Output<String> password;
 
-    public Output<String> password() {
-        return this.password == null ? Codegen.empty() : this.password;
+    public Optional<Output<String>> password() {
+        return Optional.ofNullable(this.password);
     }
 
     /**
@@ -35,7 +35,7 @@ public final class BackendProxyContractArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="url", required=true)
-      private final Output<String> url;
+    private Output<String> url;
 
     public Output<String> url() {
         return this.url;
@@ -46,76 +46,69 @@ public final class BackendProxyContractArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="username")
-      private final @Nullable Output<String> username;
+    private @Nullable Output<String> username;
 
-    public Output<String> username() {
-        return this.username == null ? Codegen.empty() : this.username;
+    public Optional<Output<String>> username() {
+        return Optional.ofNullable(this.username);
     }
 
-    public BackendProxyContractArgs(
-        @Nullable Output<String> password,
-        Output<String> url,
-        @Nullable Output<String> username) {
-        this.password = password;
-        this.url = Objects.requireNonNull(url, "expected parameter 'url' to be non-null");
-        this.username = username;
-    }
+    private BackendProxyContractArgs() {}
 
-    private BackendProxyContractArgs() {
-        this.password = Codegen.empty();
-        this.url = Codegen.empty();
-        this.username = Codegen.empty();
+    private BackendProxyContractArgs(BackendProxyContractArgs $) {
+        this.password = $.password;
+        this.url = $.url;
+        this.username = $.username;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BackendProxyContractArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> password;
-        private Output<String> url;
-        private @Nullable Output<String> username;
+        private BackendProxyContractArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new BackendProxyContractArgs();
         }
 
         public Builder(BackendProxyContractArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.password = defaults.password;
-    	      this.url = defaults.url;
-    	      this.username = defaults.username;
+            $ = new BackendProxyContractArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder password(@Nullable Output<String> password) {
-            this.password = password;
+            $.password = password;
             return this;
         }
-        public Builder password(@Nullable String password) {
-            this.password = Codegen.ofNullable(password);
-            return this;
+
+        public Builder password(String password) {
+            return password(Output.of(password));
         }
+
         public Builder url(Output<String> url) {
-            this.url = Objects.requireNonNull(url);
+            $.url = url;
             return this;
         }
+
         public Builder url(String url) {
-            this.url = Output.of(Objects.requireNonNull(url));
-            return this;
+            return url(Output.of(url));
         }
+
         public Builder username(@Nullable Output<String> username) {
-            this.username = username;
+            $.username = username;
             return this;
         }
-        public Builder username(@Nullable String username) {
-            this.username = Codegen.ofNullable(username);
-            return this;
-        }        public BackendProxyContractArgs build() {
-            return new BackendProxyContractArgs(password, url, username);
+
+        public Builder username(String username) {
+            return username(Output.of(username));
+        }
+
+        public BackendProxyContractArgs build() {
+            $.url = Objects.requireNonNull($.url, "expected parameter 'url' to be non-null");
+            return $;
         }
     }
+
 }

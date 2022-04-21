@@ -5,7 +5,6 @@ package com.pulumi.googlenative.dlp_v2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,49 +22,49 @@ public final class GooglePrivacyDlpV2TransientCryptoKeyArgs extends com.pulumi.r
      * 
      */
     @Import(name="name", required=true)
-      private final Output<String> name;
+    private Output<String> name;
 
     public Output<String> name() {
         return this.name;
     }
 
-    public GooglePrivacyDlpV2TransientCryptoKeyArgs(Output<String> name) {
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-    }
+    private GooglePrivacyDlpV2TransientCryptoKeyArgs() {}
 
-    private GooglePrivacyDlpV2TransientCryptoKeyArgs() {
-        this.name = Codegen.empty();
+    private GooglePrivacyDlpV2TransientCryptoKeyArgs(GooglePrivacyDlpV2TransientCryptoKeyArgs $) {
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GooglePrivacyDlpV2TransientCryptoKeyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> name;
+        private GooglePrivacyDlpV2TransientCryptoKeyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GooglePrivacyDlpV2TransientCryptoKeyArgs();
         }
 
         public Builder(GooglePrivacyDlpV2TransientCryptoKeyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
+            $ = new GooglePrivacyDlpV2TransientCryptoKeyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder name(Output<String> name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Output.of(Objects.requireNonNull(name));
-            return this;
-        }        public GooglePrivacyDlpV2TransientCryptoKeyArgs build() {
-            return new GooglePrivacyDlpV2TransientCryptoKeyArgs(name);
+            return name(Output.of(name));
+        }
+
+        public GooglePrivacyDlpV2TransientCryptoKeyArgs build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            return $;
         }
     }
+
 }

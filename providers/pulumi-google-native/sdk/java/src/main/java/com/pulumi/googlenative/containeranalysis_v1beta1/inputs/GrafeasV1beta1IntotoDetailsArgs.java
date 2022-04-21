@@ -5,11 +5,11 @@ package com.pulumi.googlenative.containeranalysis_v1beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.containeranalysis_v1beta1.inputs.GrafeasV1beta1IntotoSignatureArgs;
 import com.pulumi.googlenative.containeranalysis_v1beta1.inputs.LinkArgs;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,73 +22,69 @@ public final class GrafeasV1beta1IntotoDetailsArgs extends com.pulumi.resources.
     public static final GrafeasV1beta1IntotoDetailsArgs Empty = new GrafeasV1beta1IntotoDetailsArgs();
 
     @Import(name="signatures")
-      private final @Nullable Output<List<GrafeasV1beta1IntotoSignatureArgs>> signatures;
+    private @Nullable Output<List<GrafeasV1beta1IntotoSignatureArgs>> signatures;
 
-    public Output<List<GrafeasV1beta1IntotoSignatureArgs>> signatures() {
-        return this.signatures == null ? Codegen.empty() : this.signatures;
+    public Optional<Output<List<GrafeasV1beta1IntotoSignatureArgs>>> signatures() {
+        return Optional.ofNullable(this.signatures);
     }
 
     @Import(name="signed")
-      private final @Nullable Output<LinkArgs> signed;
+    private @Nullable Output<LinkArgs> signed;
 
-    public Output<LinkArgs> signed() {
-        return this.signed == null ? Codegen.empty() : this.signed;
+    public Optional<Output<LinkArgs>> signed() {
+        return Optional.ofNullable(this.signed);
     }
 
-    public GrafeasV1beta1IntotoDetailsArgs(
-        @Nullable Output<List<GrafeasV1beta1IntotoSignatureArgs>> signatures,
-        @Nullable Output<LinkArgs> signed) {
-        this.signatures = signatures;
-        this.signed = signed;
-    }
+    private GrafeasV1beta1IntotoDetailsArgs() {}
 
-    private GrafeasV1beta1IntotoDetailsArgs() {
-        this.signatures = Codegen.empty();
-        this.signed = Codegen.empty();
+    private GrafeasV1beta1IntotoDetailsArgs(GrafeasV1beta1IntotoDetailsArgs $) {
+        this.signatures = $.signatures;
+        this.signed = $.signed;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GrafeasV1beta1IntotoDetailsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<GrafeasV1beta1IntotoSignatureArgs>> signatures;
-        private @Nullable Output<LinkArgs> signed;
+        private GrafeasV1beta1IntotoDetailsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GrafeasV1beta1IntotoDetailsArgs();
         }
 
         public Builder(GrafeasV1beta1IntotoDetailsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.signatures = defaults.signatures;
-    	      this.signed = defaults.signed;
+            $ = new GrafeasV1beta1IntotoDetailsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder signatures(@Nullable Output<List<GrafeasV1beta1IntotoSignatureArgs>> signatures) {
-            this.signatures = signatures;
+            $.signatures = signatures;
             return this;
         }
-        public Builder signatures(@Nullable List<GrafeasV1beta1IntotoSignatureArgs> signatures) {
-            this.signatures = Codegen.ofNullable(signatures);
-            return this;
+
+        public Builder signatures(List<GrafeasV1beta1IntotoSignatureArgs> signatures) {
+            return signatures(Output.of(signatures));
         }
+
         public Builder signatures(GrafeasV1beta1IntotoSignatureArgs... signatures) {
             return signatures(List.of(signatures));
         }
+
         public Builder signed(@Nullable Output<LinkArgs> signed) {
-            this.signed = signed;
+            $.signed = signed;
             return this;
         }
-        public Builder signed(@Nullable LinkArgs signed) {
-            this.signed = Codegen.ofNullable(signed);
-            return this;
-        }        public GrafeasV1beta1IntotoDetailsArgs build() {
-            return new GrafeasV1beta1IntotoDetailsArgs(signatures, signed);
+
+        public Builder signed(LinkArgs signed) {
+            return signed(Output.of(signed));
+        }
+
+        public GrafeasV1beta1IntotoDetailsArgs build() {
+            return $;
         }
     }
+
 }

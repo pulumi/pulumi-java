@@ -17,7 +17,7 @@ public final class GetRepositoryEncryptionConfiguration extends com.pulumi.resou
      * 
      */
     @Import(name="encryptionType", required=true)
-      private final String encryptionType;
+    private String encryptionType;
 
     public String encryptionType() {
         return this.encryptionType;
@@ -28,55 +28,52 @@ public final class GetRepositoryEncryptionConfiguration extends com.pulumi.resou
      * 
      */
     @Import(name="kmsKey", required=true)
-      private final String kmsKey;
+    private String kmsKey;
 
     public String kmsKey() {
         return this.kmsKey;
     }
 
-    public GetRepositoryEncryptionConfiguration(
-        String encryptionType,
-        String kmsKey) {
-        this.encryptionType = Objects.requireNonNull(encryptionType, "expected parameter 'encryptionType' to be non-null");
-        this.kmsKey = Objects.requireNonNull(kmsKey, "expected parameter 'kmsKey' to be non-null");
-    }
+    private GetRepositoryEncryptionConfiguration() {}
 
-    private GetRepositoryEncryptionConfiguration() {
-        this.encryptionType = null;
-        this.kmsKey = null;
+    private GetRepositoryEncryptionConfiguration(GetRepositoryEncryptionConfiguration $) {
+        this.encryptionType = $.encryptionType;
+        this.kmsKey = $.kmsKey;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetRepositoryEncryptionConfiguration defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String encryptionType;
-        private String kmsKey;
+        private GetRepositoryEncryptionConfiguration $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetRepositoryEncryptionConfiguration();
         }
 
         public Builder(GetRepositoryEncryptionConfiguration defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.encryptionType = defaults.encryptionType;
-    	      this.kmsKey = defaults.kmsKey;
+            $ = new GetRepositoryEncryptionConfiguration(Objects.requireNonNull(defaults));
         }
 
         public Builder encryptionType(String encryptionType) {
-            this.encryptionType = Objects.requireNonNull(encryptionType);
+            $.encryptionType = encryptionType;
             return this;
         }
+
         public Builder kmsKey(String kmsKey) {
-            this.kmsKey = Objects.requireNonNull(kmsKey);
+            $.kmsKey = kmsKey;
             return this;
-        }        public GetRepositoryEncryptionConfiguration build() {
-            return new GetRepositoryEncryptionConfiguration(encryptionType, kmsKey);
+        }
+
+        public GetRepositoryEncryptionConfiguration build() {
+            $.encryptionType = Objects.requireNonNull($.encryptionType, "expected parameter 'encryptionType' to be non-null");
+            $.kmsKey = Objects.requireNonNull($.kmsKey, "expected parameter 'kmsKey' to be non-null");
+            return $;
         }
     }
+
 }

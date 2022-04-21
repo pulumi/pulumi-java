@@ -5,7 +5,6 @@ package com.pulumi.gcp.dataproc.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,52 +19,53 @@ public final class WorkflowTemplateParameterValidationRegexGetArgs extends com.p
      * 
      */
     @Import(name="regexes", required=true)
-      private final Output<List<String>> regexes;
+    private Output<List<String>> regexes;
 
     public Output<List<String>> regexes() {
         return this.regexes;
     }
 
-    public WorkflowTemplateParameterValidationRegexGetArgs(Output<List<String>> regexes) {
-        this.regexes = Objects.requireNonNull(regexes, "expected parameter 'regexes' to be non-null");
-    }
+    private WorkflowTemplateParameterValidationRegexGetArgs() {}
 
-    private WorkflowTemplateParameterValidationRegexGetArgs() {
-        this.regexes = Codegen.empty();
+    private WorkflowTemplateParameterValidationRegexGetArgs(WorkflowTemplateParameterValidationRegexGetArgs $) {
+        this.regexes = $.regexes;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WorkflowTemplateParameterValidationRegexGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<List<String>> regexes;
+        private WorkflowTemplateParameterValidationRegexGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new WorkflowTemplateParameterValidationRegexGetArgs();
         }
 
         public Builder(WorkflowTemplateParameterValidationRegexGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.regexes = defaults.regexes;
+            $ = new WorkflowTemplateParameterValidationRegexGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder regexes(Output<List<String>> regexes) {
-            this.regexes = Objects.requireNonNull(regexes);
+            $.regexes = regexes;
             return this;
         }
+
         public Builder regexes(List<String> regexes) {
-            this.regexes = Output.of(Objects.requireNonNull(regexes));
-            return this;
+            return regexes(Output.of(regexes));
         }
+
         public Builder regexes(String... regexes) {
             return regexes(List.of(regexes));
-        }        public WorkflowTemplateParameterValidationRegexGetArgs build() {
-            return new WorkflowTemplateParameterValidationRegexGetArgs(regexes);
+        }
+
+        public WorkflowTemplateParameterValidationRegexGetArgs build() {
+            $.regexes = Objects.requireNonNull($.regexes, "expected parameter 'regexes' to be non-null");
+            return $;
         }
     }
+
 }

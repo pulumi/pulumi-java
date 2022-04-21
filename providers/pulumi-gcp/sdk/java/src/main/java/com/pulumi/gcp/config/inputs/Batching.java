@@ -16,62 +16,57 @@ public final class Batching extends com.pulumi.resources.InvokeArgs {
     public static final Batching Empty = new Batching();
 
     @Import(name="enableBatching")
-      private final @Nullable Boolean enableBatching;
+    private @Nullable Boolean enableBatching;
 
     public Optional<Boolean> enableBatching() {
-        return this.enableBatching == null ? Optional.empty() : Optional.ofNullable(this.enableBatching);
+        return Optional.ofNullable(this.enableBatching);
     }
 
     @Import(name="sendAfter")
-      private final @Nullable String sendAfter;
+    private @Nullable String sendAfter;
 
     public Optional<String> sendAfter() {
-        return this.sendAfter == null ? Optional.empty() : Optional.ofNullable(this.sendAfter);
+        return Optional.ofNullable(this.sendAfter);
     }
 
-    public Batching(
-        @Nullable Boolean enableBatching,
-        @Nullable String sendAfter) {
-        this.enableBatching = enableBatching;
-        this.sendAfter = sendAfter;
-    }
+    private Batching() {}
 
-    private Batching() {
-        this.enableBatching = null;
-        this.sendAfter = null;
+    private Batching(Batching $) {
+        this.enableBatching = $.enableBatching;
+        this.sendAfter = $.sendAfter;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(Batching defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Boolean enableBatching;
-        private @Nullable String sendAfter;
+        private Batching $;
 
         public Builder() {
-    	      // Empty
+            $ = new Batching();
         }
 
         public Builder(Batching defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.enableBatching = defaults.enableBatching;
-    	      this.sendAfter = defaults.sendAfter;
+            $ = new Batching(Objects.requireNonNull(defaults));
         }
 
         public Builder enableBatching(@Nullable Boolean enableBatching) {
-            this.enableBatching = enableBatching;
+            $.enableBatching = enableBatching;
             return this;
         }
+
         public Builder sendAfter(@Nullable String sendAfter) {
-            this.sendAfter = sendAfter;
+            $.sendAfter = sendAfter;
             return this;
-        }        public Batching build() {
-            return new Batching(enableBatching, sendAfter);
+        }
+
+        public Batching build() {
+            return $;
         }
     }
+
 }

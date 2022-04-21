@@ -16,87 +16,85 @@ public final class GetResourcePolicySnapshotSchedulePolicySchedule extends com.p
     public static final GetResourcePolicySnapshotSchedulePolicySchedule Empty = new GetResourcePolicySnapshotSchedulePolicySchedule();
 
     @Import(name="dailySchedules", required=true)
-      private final List<GetResourcePolicySnapshotSchedulePolicyScheduleDailySchedule> dailySchedules;
+    private List<GetResourcePolicySnapshotSchedulePolicyScheduleDailySchedule> dailySchedules;
 
     public List<GetResourcePolicySnapshotSchedulePolicyScheduleDailySchedule> dailySchedules() {
         return this.dailySchedules;
     }
 
     @Import(name="hourlySchedules", required=true)
-      private final List<GetResourcePolicySnapshotSchedulePolicyScheduleHourlySchedule> hourlySchedules;
+    private List<GetResourcePolicySnapshotSchedulePolicyScheduleHourlySchedule> hourlySchedules;
 
     public List<GetResourcePolicySnapshotSchedulePolicyScheduleHourlySchedule> hourlySchedules() {
         return this.hourlySchedules;
     }
 
     @Import(name="weeklySchedules", required=true)
-      private final List<GetResourcePolicySnapshotSchedulePolicyScheduleWeeklySchedule> weeklySchedules;
+    private List<GetResourcePolicySnapshotSchedulePolicyScheduleWeeklySchedule> weeklySchedules;
 
     public List<GetResourcePolicySnapshotSchedulePolicyScheduleWeeklySchedule> weeklySchedules() {
         return this.weeklySchedules;
     }
 
-    public GetResourcePolicySnapshotSchedulePolicySchedule(
-        List<GetResourcePolicySnapshotSchedulePolicyScheduleDailySchedule> dailySchedules,
-        List<GetResourcePolicySnapshotSchedulePolicyScheduleHourlySchedule> hourlySchedules,
-        List<GetResourcePolicySnapshotSchedulePolicyScheduleWeeklySchedule> weeklySchedules) {
-        this.dailySchedules = Objects.requireNonNull(dailySchedules, "expected parameter 'dailySchedules' to be non-null");
-        this.hourlySchedules = Objects.requireNonNull(hourlySchedules, "expected parameter 'hourlySchedules' to be non-null");
-        this.weeklySchedules = Objects.requireNonNull(weeklySchedules, "expected parameter 'weeklySchedules' to be non-null");
-    }
+    private GetResourcePolicySnapshotSchedulePolicySchedule() {}
 
-    private GetResourcePolicySnapshotSchedulePolicySchedule() {
-        this.dailySchedules = List.of();
-        this.hourlySchedules = List.of();
-        this.weeklySchedules = List.of();
+    private GetResourcePolicySnapshotSchedulePolicySchedule(GetResourcePolicySnapshotSchedulePolicySchedule $) {
+        this.dailySchedules = $.dailySchedules;
+        this.hourlySchedules = $.hourlySchedules;
+        this.weeklySchedules = $.weeklySchedules;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetResourcePolicySnapshotSchedulePolicySchedule defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<GetResourcePolicySnapshotSchedulePolicyScheduleDailySchedule> dailySchedules;
-        private List<GetResourcePolicySnapshotSchedulePolicyScheduleHourlySchedule> hourlySchedules;
-        private List<GetResourcePolicySnapshotSchedulePolicyScheduleWeeklySchedule> weeklySchedules;
+        private GetResourcePolicySnapshotSchedulePolicySchedule $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetResourcePolicySnapshotSchedulePolicySchedule();
         }
 
         public Builder(GetResourcePolicySnapshotSchedulePolicySchedule defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dailySchedules = defaults.dailySchedules;
-    	      this.hourlySchedules = defaults.hourlySchedules;
-    	      this.weeklySchedules = defaults.weeklySchedules;
+            $ = new GetResourcePolicySnapshotSchedulePolicySchedule(Objects.requireNonNull(defaults));
         }
 
         public Builder dailySchedules(List<GetResourcePolicySnapshotSchedulePolicyScheduleDailySchedule> dailySchedules) {
-            this.dailySchedules = Objects.requireNonNull(dailySchedules);
+            $.dailySchedules = dailySchedules;
             return this;
         }
+
         public Builder dailySchedules(GetResourcePolicySnapshotSchedulePolicyScheduleDailySchedule... dailySchedules) {
             return dailySchedules(List.of(dailySchedules));
         }
+
         public Builder hourlySchedules(List<GetResourcePolicySnapshotSchedulePolicyScheduleHourlySchedule> hourlySchedules) {
-            this.hourlySchedules = Objects.requireNonNull(hourlySchedules);
+            $.hourlySchedules = hourlySchedules;
             return this;
         }
+
         public Builder hourlySchedules(GetResourcePolicySnapshotSchedulePolicyScheduleHourlySchedule... hourlySchedules) {
             return hourlySchedules(List.of(hourlySchedules));
         }
+
         public Builder weeklySchedules(List<GetResourcePolicySnapshotSchedulePolicyScheduleWeeklySchedule> weeklySchedules) {
-            this.weeklySchedules = Objects.requireNonNull(weeklySchedules);
+            $.weeklySchedules = weeklySchedules;
             return this;
         }
+
         public Builder weeklySchedules(GetResourcePolicySnapshotSchedulePolicyScheduleWeeklySchedule... weeklySchedules) {
             return weeklySchedules(List.of(weeklySchedules));
-        }        public GetResourcePolicySnapshotSchedulePolicySchedule build() {
-            return new GetResourcePolicySnapshotSchedulePolicySchedule(dailySchedules, hourlySchedules, weeklySchedules);
+        }
+
+        public GetResourcePolicySnapshotSchedulePolicySchedule build() {
+            $.dailySchedules = Objects.requireNonNull($.dailySchedules, "expected parameter 'dailySchedules' to be non-null");
+            $.hourlySchedules = Objects.requireNonNull($.hourlySchedules, "expected parameter 'hourlySchedules' to be non-null");
+            $.weeklySchedules = Objects.requireNonNull($.weeklySchedules, "expected parameter 'weeklySchedules' to be non-null");
+            return $;
         }
     }
+
 }

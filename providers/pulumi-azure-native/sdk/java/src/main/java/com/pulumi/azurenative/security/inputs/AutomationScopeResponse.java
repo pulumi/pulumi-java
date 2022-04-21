@@ -23,10 +23,10 @@ public final class AutomationScopeResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="description")
-      private final @Nullable String description;
+    private @Nullable String description;
 
     public Optional<String> description() {
-        return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -34,55 +34,50 @@ public final class AutomationScopeResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="scopePath")
-      private final @Nullable String scopePath;
+    private @Nullable String scopePath;
 
     public Optional<String> scopePath() {
-        return this.scopePath == null ? Optional.empty() : Optional.ofNullable(this.scopePath);
+        return Optional.ofNullable(this.scopePath);
     }
 
-    public AutomationScopeResponse(
-        @Nullable String description,
-        @Nullable String scopePath) {
-        this.description = description;
-        this.scopePath = scopePath;
-    }
+    private AutomationScopeResponse() {}
 
-    private AutomationScopeResponse() {
-        this.description = null;
-        this.scopePath = null;
+    private AutomationScopeResponse(AutomationScopeResponse $) {
+        this.description = $.description;
+        this.scopePath = $.scopePath;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AutomationScopeResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String description;
-        private @Nullable String scopePath;
+        private AutomationScopeResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AutomationScopeResponse();
         }
 
         public Builder(AutomationScopeResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.description = defaults.description;
-    	      this.scopePath = defaults.scopePath;
+            $ = new AutomationScopeResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder description(@Nullable String description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
+
         public Builder scopePath(@Nullable String scopePath) {
-            this.scopePath = scopePath;
+            $.scopePath = scopePath;
             return this;
-        }        public AutomationScopeResponse build() {
-            return new AutomationScopeResponse(description, scopePath);
+        }
+
+        public AutomationScopeResponse build() {
+            return $;
         }
     }
+
 }

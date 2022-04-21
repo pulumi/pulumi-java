@@ -23,45 +23,45 @@ public final class ContentKeyPolicyOpenRestrictionResponse extends com.pulumi.re
      * 
      */
     @Import(name="odataType", required=true)
-      private final String odataType;
+    private String odataType;
 
     public String odataType() {
         return this.odataType;
     }
 
-    public ContentKeyPolicyOpenRestrictionResponse(String odataType) {
-        this.odataType = Codegen.stringProp("odataType").arg(odataType).require();
-    }
+    private ContentKeyPolicyOpenRestrictionResponse() {}
 
-    private ContentKeyPolicyOpenRestrictionResponse() {
-        this.odataType = null;
+    private ContentKeyPolicyOpenRestrictionResponse(ContentKeyPolicyOpenRestrictionResponse $) {
+        this.odataType = $.odataType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ContentKeyPolicyOpenRestrictionResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String odataType;
+        private ContentKeyPolicyOpenRestrictionResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ContentKeyPolicyOpenRestrictionResponse();
         }
 
         public Builder(ContentKeyPolicyOpenRestrictionResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.odataType = defaults.odataType;
+            $ = new ContentKeyPolicyOpenRestrictionResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder odataType(String odataType) {
-            this.odataType = Objects.requireNonNull(odataType);
+            $.odataType = odataType;
             return this;
-        }        public ContentKeyPolicyOpenRestrictionResponse build() {
-            return new ContentKeyPolicyOpenRestrictionResponse(odataType);
+        }
+
+        public ContentKeyPolicyOpenRestrictionResponse build() {
+            $.odataType = Codegen.stringProp("odataType").arg($.odataType).require();
+            return $;
         }
     }
+
 }

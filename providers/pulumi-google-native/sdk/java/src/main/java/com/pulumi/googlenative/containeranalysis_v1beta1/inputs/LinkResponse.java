@@ -25,7 +25,7 @@ public final class LinkResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="byproducts", required=true)
-      private final ByProductsResponse byproducts;
+    private ByProductsResponse byproducts;
 
     public ByProductsResponse byproducts() {
         return this.byproducts;
@@ -36,7 +36,7 @@ public final class LinkResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="command", required=true)
-      private final List<String> command;
+    private List<String> command;
 
     public List<String> command() {
         return this.command;
@@ -47,7 +47,7 @@ public final class LinkResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="environment", required=true)
-      private final EnvironmentResponse environment;
+    private EnvironmentResponse environment;
 
     public EnvironmentResponse environment() {
         return this.environment;
@@ -58,7 +58,7 @@ public final class LinkResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="materials", required=true)
-      private final List<GrafeasV1beta1IntotoArtifactResponse> materials;
+    private List<GrafeasV1beta1IntotoArtifactResponse> materials;
 
     public List<GrafeasV1beta1IntotoArtifactResponse> materials() {
         return this.materials;
@@ -69,91 +69,85 @@ public final class LinkResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="products", required=true)
-      private final List<GrafeasV1beta1IntotoArtifactResponse> products;
+    private List<GrafeasV1beta1IntotoArtifactResponse> products;
 
     public List<GrafeasV1beta1IntotoArtifactResponse> products() {
         return this.products;
     }
 
-    public LinkResponse(
-        ByProductsResponse byproducts,
-        List<String> command,
-        EnvironmentResponse environment,
-        List<GrafeasV1beta1IntotoArtifactResponse> materials,
-        List<GrafeasV1beta1IntotoArtifactResponse> products) {
-        this.byproducts = Objects.requireNonNull(byproducts, "expected parameter 'byproducts' to be non-null");
-        this.command = Objects.requireNonNull(command, "expected parameter 'command' to be non-null");
-        this.environment = Objects.requireNonNull(environment, "expected parameter 'environment' to be non-null");
-        this.materials = Objects.requireNonNull(materials, "expected parameter 'materials' to be non-null");
-        this.products = Objects.requireNonNull(products, "expected parameter 'products' to be non-null");
-    }
+    private LinkResponse() {}
 
-    private LinkResponse() {
-        this.byproducts = null;
-        this.command = List.of();
-        this.environment = null;
-        this.materials = List.of();
-        this.products = List.of();
+    private LinkResponse(LinkResponse $) {
+        this.byproducts = $.byproducts;
+        this.command = $.command;
+        this.environment = $.environment;
+        this.materials = $.materials;
+        this.products = $.products;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LinkResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private ByProductsResponse byproducts;
-        private List<String> command;
-        private EnvironmentResponse environment;
-        private List<GrafeasV1beta1IntotoArtifactResponse> materials;
-        private List<GrafeasV1beta1IntotoArtifactResponse> products;
+        private LinkResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new LinkResponse();
         }
 
         public Builder(LinkResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.byproducts = defaults.byproducts;
-    	      this.command = defaults.command;
-    	      this.environment = defaults.environment;
-    	      this.materials = defaults.materials;
-    	      this.products = defaults.products;
+            $ = new LinkResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder byproducts(ByProductsResponse byproducts) {
-            this.byproducts = Objects.requireNonNull(byproducts);
+            $.byproducts = byproducts;
             return this;
         }
+
         public Builder command(List<String> command) {
-            this.command = Objects.requireNonNull(command);
+            $.command = command;
             return this;
         }
+
         public Builder command(String... command) {
             return command(List.of(command));
         }
+
         public Builder environment(EnvironmentResponse environment) {
-            this.environment = Objects.requireNonNull(environment);
+            $.environment = environment;
             return this;
         }
+
         public Builder materials(List<GrafeasV1beta1IntotoArtifactResponse> materials) {
-            this.materials = Objects.requireNonNull(materials);
+            $.materials = materials;
             return this;
         }
+
         public Builder materials(GrafeasV1beta1IntotoArtifactResponse... materials) {
             return materials(List.of(materials));
         }
+
         public Builder products(List<GrafeasV1beta1IntotoArtifactResponse> products) {
-            this.products = Objects.requireNonNull(products);
+            $.products = products;
             return this;
         }
+
         public Builder products(GrafeasV1beta1IntotoArtifactResponse... products) {
             return products(List.of(products));
-        }        public LinkResponse build() {
-            return new LinkResponse(byproducts, command, environment, materials, products);
+        }
+
+        public LinkResponse build() {
+            $.byproducts = Objects.requireNonNull($.byproducts, "expected parameter 'byproducts' to be non-null");
+            $.command = Objects.requireNonNull($.command, "expected parameter 'command' to be non-null");
+            $.environment = Objects.requireNonNull($.environment, "expected parameter 'environment' to be non-null");
+            $.materials = Objects.requireNonNull($.materials, "expected parameter 'materials' to be non-null");
+            $.products = Objects.requireNonNull($.products, "expected parameter 'products' to be non-null");
+            return $;
         }
     }
+
 }

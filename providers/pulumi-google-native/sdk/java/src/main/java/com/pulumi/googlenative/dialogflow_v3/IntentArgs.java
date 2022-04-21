@@ -5,7 +5,6 @@ package com.pulumi.googlenative.dialogflow_v3;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.dialogflow_v3.inputs.GoogleCloudDialogflowCxV3IntentParameterArgs;
 import com.pulumi.googlenative.dialogflow_v3.inputs.GoogleCloudDialogflowCxV3IntentTrainingPhraseArgs;
 import java.lang.Boolean;
@@ -14,6 +13,7 @@ import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,7 +22,7 @@ public final class IntentArgs extends com.pulumi.resources.ResourceArgs {
     public static final IntentArgs Empty = new IntentArgs();
 
     @Import(name="agentId", required=true)
-      private final Output<String> agentId;
+    private Output<String> agentId;
 
     public Output<String> agentId() {
         return this.agentId;
@@ -33,10 +33,10 @@ public final class IntentArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -44,7 +44,7 @@ public final class IntentArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="displayName", required=true)
-      private final Output<String> displayName;
+    private Output<String> displayName;
 
     public Output<String> displayName() {
         return this.displayName;
@@ -55,10 +55,10 @@ public final class IntentArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="isFallback")
-      private final @Nullable Output<Boolean> isFallback;
+    private @Nullable Output<Boolean> isFallback;
 
-    public Output<Boolean> isFallback() {
-        return this.isFallback == null ? Codegen.empty() : this.isFallback;
+    public Optional<Output<Boolean>> isFallback() {
+        return Optional.ofNullable(this.isFallback);
     }
 
     /**
@@ -66,24 +66,24 @@ public final class IntentArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="labels")
-      private final @Nullable Output<Map<String,String>> labels;
+    private @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> labels() {
-        return this.labels == null ? Codegen.empty() : this.labels;
+    public Optional<Output<Map<String,String>>> labels() {
+        return Optional.ofNullable(this.labels);
     }
 
     @Import(name="languageCode")
-      private final @Nullable Output<String> languageCode;
+    private @Nullable Output<String> languageCode;
 
-    public Output<String> languageCode() {
-        return this.languageCode == null ? Codegen.empty() : this.languageCode;
+    public Optional<Output<String>> languageCode() {
+        return Optional.ofNullable(this.languageCode);
     }
 
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -91,10 +91,10 @@ public final class IntentArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -102,10 +102,10 @@ public final class IntentArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="parameters")
-      private final @Nullable Output<List<GoogleCloudDialogflowCxV3IntentParameterArgs>> parameters;
+    private @Nullable Output<List<GoogleCloudDialogflowCxV3IntentParameterArgs>> parameters;
 
-    public Output<List<GoogleCloudDialogflowCxV3IntentParameterArgs>> parameters() {
-        return this.parameters == null ? Codegen.empty() : this.parameters;
+    public Optional<Output<List<GoogleCloudDialogflowCxV3IntentParameterArgs>>> parameters() {
+        return Optional.ofNullable(this.parameters);
     }
 
     /**
@@ -113,17 +113,17 @@ public final class IntentArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="priority")
-      private final @Nullable Output<Integer> priority;
+    private @Nullable Output<Integer> priority;
 
-    public Output<Integer> priority() {
-        return this.priority == null ? Codegen.empty() : this.priority;
+    public Optional<Output<Integer>> priority() {
+        return Optional.ofNullable(this.priority);
     }
 
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -131,199 +131,168 @@ public final class IntentArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="trainingPhrases")
-      private final @Nullable Output<List<GoogleCloudDialogflowCxV3IntentTrainingPhraseArgs>> trainingPhrases;
+    private @Nullable Output<List<GoogleCloudDialogflowCxV3IntentTrainingPhraseArgs>> trainingPhrases;
 
-    public Output<List<GoogleCloudDialogflowCxV3IntentTrainingPhraseArgs>> trainingPhrases() {
-        return this.trainingPhrases == null ? Codegen.empty() : this.trainingPhrases;
+    public Optional<Output<List<GoogleCloudDialogflowCxV3IntentTrainingPhraseArgs>>> trainingPhrases() {
+        return Optional.ofNullable(this.trainingPhrases);
     }
 
-    public IntentArgs(
-        Output<String> agentId,
-        @Nullable Output<String> description,
-        Output<String> displayName,
-        @Nullable Output<Boolean> isFallback,
-        @Nullable Output<Map<String,String>> labels,
-        @Nullable Output<String> languageCode,
-        @Nullable Output<String> location,
-        @Nullable Output<String> name,
-        @Nullable Output<List<GoogleCloudDialogflowCxV3IntentParameterArgs>> parameters,
-        @Nullable Output<Integer> priority,
-        @Nullable Output<String> project,
-        @Nullable Output<List<GoogleCloudDialogflowCxV3IntentTrainingPhraseArgs>> trainingPhrases) {
-        this.agentId = Objects.requireNonNull(agentId, "expected parameter 'agentId' to be non-null");
-        this.description = description;
-        this.displayName = Objects.requireNonNull(displayName, "expected parameter 'displayName' to be non-null");
-        this.isFallback = isFallback;
-        this.labels = labels;
-        this.languageCode = languageCode;
-        this.location = location;
-        this.name = name;
-        this.parameters = parameters;
-        this.priority = priority;
-        this.project = project;
-        this.trainingPhrases = trainingPhrases;
-    }
+    private IntentArgs() {}
 
-    private IntentArgs() {
-        this.agentId = Codegen.empty();
-        this.description = Codegen.empty();
-        this.displayName = Codegen.empty();
-        this.isFallback = Codegen.empty();
-        this.labels = Codegen.empty();
-        this.languageCode = Codegen.empty();
-        this.location = Codegen.empty();
-        this.name = Codegen.empty();
-        this.parameters = Codegen.empty();
-        this.priority = Codegen.empty();
-        this.project = Codegen.empty();
-        this.trainingPhrases = Codegen.empty();
+    private IntentArgs(IntentArgs $) {
+        this.agentId = $.agentId;
+        this.description = $.description;
+        this.displayName = $.displayName;
+        this.isFallback = $.isFallback;
+        this.labels = $.labels;
+        this.languageCode = $.languageCode;
+        this.location = $.location;
+        this.name = $.name;
+        this.parameters = $.parameters;
+        this.priority = $.priority;
+        this.project = $.project;
+        this.trainingPhrases = $.trainingPhrases;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(IntentArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> agentId;
-        private @Nullable Output<String> description;
-        private Output<String> displayName;
-        private @Nullable Output<Boolean> isFallback;
-        private @Nullable Output<Map<String,String>> labels;
-        private @Nullable Output<String> languageCode;
-        private @Nullable Output<String> location;
-        private @Nullable Output<String> name;
-        private @Nullable Output<List<GoogleCloudDialogflowCxV3IntentParameterArgs>> parameters;
-        private @Nullable Output<Integer> priority;
-        private @Nullable Output<String> project;
-        private @Nullable Output<List<GoogleCloudDialogflowCxV3IntentTrainingPhraseArgs>> trainingPhrases;
+        private IntentArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new IntentArgs();
         }
 
         public Builder(IntentArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.agentId = defaults.agentId;
-    	      this.description = defaults.description;
-    	      this.displayName = defaults.displayName;
-    	      this.isFallback = defaults.isFallback;
-    	      this.labels = defaults.labels;
-    	      this.languageCode = defaults.languageCode;
-    	      this.location = defaults.location;
-    	      this.name = defaults.name;
-    	      this.parameters = defaults.parameters;
-    	      this.priority = defaults.priority;
-    	      this.project = defaults.project;
-    	      this.trainingPhrases = defaults.trainingPhrases;
+            $ = new IntentArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder agentId(Output<String> agentId) {
-            this.agentId = Objects.requireNonNull(agentId);
+            $.agentId = agentId;
             return this;
         }
+
         public Builder agentId(String agentId) {
-            this.agentId = Output.of(Objects.requireNonNull(agentId));
-            return this;
+            return agentId(Output.of(agentId));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder displayName(Output<String> displayName) {
-            this.displayName = Objects.requireNonNull(displayName);
+            $.displayName = displayName;
             return this;
         }
+
         public Builder displayName(String displayName) {
-            this.displayName = Output.of(Objects.requireNonNull(displayName));
-            return this;
+            return displayName(Output.of(displayName));
         }
+
         public Builder isFallback(@Nullable Output<Boolean> isFallback) {
-            this.isFallback = isFallback;
+            $.isFallback = isFallback;
             return this;
         }
-        public Builder isFallback(@Nullable Boolean isFallback) {
-            this.isFallback = Codegen.ofNullable(isFallback);
-            return this;
+
+        public Builder isFallback(Boolean isFallback) {
+            return isFallback(Output.of(isFallback));
         }
+
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
-            this.labels = labels;
+            $.labels = labels;
             return this;
         }
-        public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Codegen.ofNullable(labels);
-            return this;
+
+        public Builder labels(Map<String,String> labels) {
+            return labels(Output.of(labels));
         }
+
         public Builder languageCode(@Nullable Output<String> languageCode) {
-            this.languageCode = languageCode;
+            $.languageCode = languageCode;
             return this;
         }
-        public Builder languageCode(@Nullable String languageCode) {
-            this.languageCode = Codegen.ofNullable(languageCode);
-            return this;
+
+        public Builder languageCode(String languageCode) {
+            return languageCode(Output.of(languageCode));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder parameters(@Nullable Output<List<GoogleCloudDialogflowCxV3IntentParameterArgs>> parameters) {
-            this.parameters = parameters;
+            $.parameters = parameters;
             return this;
         }
-        public Builder parameters(@Nullable List<GoogleCloudDialogflowCxV3IntentParameterArgs> parameters) {
-            this.parameters = Codegen.ofNullable(parameters);
-            return this;
+
+        public Builder parameters(List<GoogleCloudDialogflowCxV3IntentParameterArgs> parameters) {
+            return parameters(Output.of(parameters));
         }
+
         public Builder parameters(GoogleCloudDialogflowCxV3IntentParameterArgs... parameters) {
             return parameters(List.of(parameters));
         }
+
         public Builder priority(@Nullable Output<Integer> priority) {
-            this.priority = priority;
+            $.priority = priority;
             return this;
         }
-        public Builder priority(@Nullable Integer priority) {
-            this.priority = Codegen.ofNullable(priority);
-            return this;
+
+        public Builder priority(Integer priority) {
+            return priority(Output.of(priority));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder trainingPhrases(@Nullable Output<List<GoogleCloudDialogflowCxV3IntentTrainingPhraseArgs>> trainingPhrases) {
-            this.trainingPhrases = trainingPhrases;
+            $.trainingPhrases = trainingPhrases;
             return this;
         }
-        public Builder trainingPhrases(@Nullable List<GoogleCloudDialogflowCxV3IntentTrainingPhraseArgs> trainingPhrases) {
-            this.trainingPhrases = Codegen.ofNullable(trainingPhrases);
-            return this;
+
+        public Builder trainingPhrases(List<GoogleCloudDialogflowCxV3IntentTrainingPhraseArgs> trainingPhrases) {
+            return trainingPhrases(Output.of(trainingPhrases));
         }
+
         public Builder trainingPhrases(GoogleCloudDialogflowCxV3IntentTrainingPhraseArgs... trainingPhrases) {
             return trainingPhrases(List.of(trainingPhrases));
-        }        public IntentArgs build() {
-            return new IntentArgs(agentId, description, displayName, isFallback, labels, languageCode, location, name, parameters, priority, project, trainingPhrases);
+        }
+
+        public IntentArgs build() {
+            $.agentId = Objects.requireNonNull($.agentId, "expected parameter 'agentId' to be non-null");
+            $.displayName = Objects.requireNonNull($.displayName, "expected parameter 'displayName' to be non-null");
+            return $;
         }
     }
+
 }

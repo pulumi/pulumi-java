@@ -22,7 +22,7 @@ public final class AwsS3DataResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="awsAccessKey", required=true)
-      private final AwsAccessKeyResponse awsAccessKey;
+    private AwsAccessKeyResponse awsAccessKey;
 
     public AwsAccessKeyResponse awsAccessKey() {
         return this.awsAccessKey;
@@ -33,7 +33,7 @@ public final class AwsS3DataResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="bucketName", required=true)
-      private final String bucketName;
+    private String bucketName;
 
     public String bucketName() {
         return this.bucketName;
@@ -44,7 +44,7 @@ public final class AwsS3DataResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="path", required=true)
-      private final String path;
+    private String path;
 
     public String path() {
         return this.path;
@@ -55,73 +55,66 @@ public final class AwsS3DataResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="roleArn", required=true)
-      private final String roleArn;
+    private String roleArn;
 
     public String roleArn() {
         return this.roleArn;
     }
 
-    public AwsS3DataResponse(
-        AwsAccessKeyResponse awsAccessKey,
-        String bucketName,
-        String path,
-        String roleArn) {
-        this.awsAccessKey = Objects.requireNonNull(awsAccessKey, "expected parameter 'awsAccessKey' to be non-null");
-        this.bucketName = Objects.requireNonNull(bucketName, "expected parameter 'bucketName' to be non-null");
-        this.path = Objects.requireNonNull(path, "expected parameter 'path' to be non-null");
-        this.roleArn = Objects.requireNonNull(roleArn, "expected parameter 'roleArn' to be non-null");
-    }
+    private AwsS3DataResponse() {}
 
-    private AwsS3DataResponse() {
-        this.awsAccessKey = null;
-        this.bucketName = null;
-        this.path = null;
-        this.roleArn = null;
+    private AwsS3DataResponse(AwsS3DataResponse $) {
+        this.awsAccessKey = $.awsAccessKey;
+        this.bucketName = $.bucketName;
+        this.path = $.path;
+        this.roleArn = $.roleArn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AwsS3DataResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private AwsAccessKeyResponse awsAccessKey;
-        private String bucketName;
-        private String path;
-        private String roleArn;
+        private AwsS3DataResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AwsS3DataResponse();
         }
 
         public Builder(AwsS3DataResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.awsAccessKey = defaults.awsAccessKey;
-    	      this.bucketName = defaults.bucketName;
-    	      this.path = defaults.path;
-    	      this.roleArn = defaults.roleArn;
+            $ = new AwsS3DataResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder awsAccessKey(AwsAccessKeyResponse awsAccessKey) {
-            this.awsAccessKey = Objects.requireNonNull(awsAccessKey);
+            $.awsAccessKey = awsAccessKey;
             return this;
         }
+
         public Builder bucketName(String bucketName) {
-            this.bucketName = Objects.requireNonNull(bucketName);
+            $.bucketName = bucketName;
             return this;
         }
+
         public Builder path(String path) {
-            this.path = Objects.requireNonNull(path);
+            $.path = path;
             return this;
         }
+
         public Builder roleArn(String roleArn) {
-            this.roleArn = Objects.requireNonNull(roleArn);
+            $.roleArn = roleArn;
             return this;
-        }        public AwsS3DataResponse build() {
-            return new AwsS3DataResponse(awsAccessKey, bucketName, path, roleArn);
+        }
+
+        public AwsS3DataResponse build() {
+            $.awsAccessKey = Objects.requireNonNull($.awsAccessKey, "expected parameter 'awsAccessKey' to be non-null");
+            $.bucketName = Objects.requireNonNull($.bucketName, "expected parameter 'bucketName' to be non-null");
+            $.path = Objects.requireNonNull($.path, "expected parameter 'path' to be non-null");
+            $.roleArn = Objects.requireNonNull($.roleArn, "expected parameter 'roleArn' to be non-null");
+            return $;
         }
     }
+
 }

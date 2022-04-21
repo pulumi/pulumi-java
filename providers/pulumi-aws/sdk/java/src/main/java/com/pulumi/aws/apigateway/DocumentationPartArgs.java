@@ -6,7 +6,6 @@ package com.pulumi.aws.apigateway;
 import com.pulumi.aws.apigateway.inputs.DocumentationPartLocationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +19,7 @@ public final class DocumentationPartArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="location", required=true)
-      private final Output<DocumentationPartLocationArgs> location;
+    private Output<DocumentationPartLocationArgs> location;
 
     public Output<DocumentationPartLocationArgs> location() {
         return this.location;
@@ -31,7 +30,7 @@ public final class DocumentationPartArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="properties", required=true)
-      private final Output<String> properties;
+    private Output<String> properties;
 
     public Output<String> properties() {
         return this.properties;
@@ -42,76 +41,71 @@ public final class DocumentationPartArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="restApiId", required=true)
-      private final Output<String> restApiId;
+    private Output<String> restApiId;
 
     public Output<String> restApiId() {
         return this.restApiId;
     }
 
-    public DocumentationPartArgs(
-        Output<DocumentationPartLocationArgs> location,
-        Output<String> properties,
-        Output<String> restApiId) {
-        this.location = Objects.requireNonNull(location, "expected parameter 'location' to be non-null");
-        this.properties = Objects.requireNonNull(properties, "expected parameter 'properties' to be non-null");
-        this.restApiId = Objects.requireNonNull(restApiId, "expected parameter 'restApiId' to be non-null");
-    }
+    private DocumentationPartArgs() {}
 
-    private DocumentationPartArgs() {
-        this.location = Codegen.empty();
-        this.properties = Codegen.empty();
-        this.restApiId = Codegen.empty();
+    private DocumentationPartArgs(DocumentationPartArgs $) {
+        this.location = $.location;
+        this.properties = $.properties;
+        this.restApiId = $.restApiId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DocumentationPartArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<DocumentationPartLocationArgs> location;
-        private Output<String> properties;
-        private Output<String> restApiId;
+        private DocumentationPartArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DocumentationPartArgs();
         }
 
         public Builder(DocumentationPartArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.location = defaults.location;
-    	      this.properties = defaults.properties;
-    	      this.restApiId = defaults.restApiId;
+            $ = new DocumentationPartArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder location(Output<DocumentationPartLocationArgs> location) {
-            this.location = Objects.requireNonNull(location);
+            $.location = location;
             return this;
         }
+
         public Builder location(DocumentationPartLocationArgs location) {
-            this.location = Output.of(Objects.requireNonNull(location));
-            return this;
+            return location(Output.of(location));
         }
+
         public Builder properties(Output<String> properties) {
-            this.properties = Objects.requireNonNull(properties);
+            $.properties = properties;
             return this;
         }
+
         public Builder properties(String properties) {
-            this.properties = Output.of(Objects.requireNonNull(properties));
-            return this;
+            return properties(Output.of(properties));
         }
+
         public Builder restApiId(Output<String> restApiId) {
-            this.restApiId = Objects.requireNonNull(restApiId);
+            $.restApiId = restApiId;
             return this;
         }
+
         public Builder restApiId(String restApiId) {
-            this.restApiId = Output.of(Objects.requireNonNull(restApiId));
-            return this;
-        }        public DocumentationPartArgs build() {
-            return new DocumentationPartArgs(location, properties, restApiId);
+            return restApiId(Output.of(restApiId));
+        }
+
+        public DocumentationPartArgs build() {
+            $.location = Objects.requireNonNull($.location, "expected parameter 'location' to be non-null");
+            $.properties = Objects.requireNonNull($.properties, "expected parameter 'properties' to be non-null");
+            $.restApiId = Objects.requireNonNull($.restApiId, "expected parameter 'restApiId' to be non-null");
+            return $;
         }
     }
+
 }

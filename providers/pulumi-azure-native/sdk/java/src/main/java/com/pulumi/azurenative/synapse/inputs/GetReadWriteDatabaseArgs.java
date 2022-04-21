@@ -17,7 +17,7 @@ public final class GetReadWriteDatabaseArgs extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="databaseName", required=true)
-      private final String databaseName;
+    private String databaseName;
 
     public String databaseName() {
         return this.databaseName;
@@ -28,7 +28,7 @@ public final class GetReadWriteDatabaseArgs extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="kustoPoolName", required=true)
-      private final String kustoPoolName;
+    private String kustoPoolName;
 
     public String kustoPoolName() {
         return this.kustoPoolName;
@@ -39,7 +39,7 @@ public final class GetReadWriteDatabaseArgs extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -50,73 +50,66 @@ public final class GetReadWriteDatabaseArgs extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="workspaceName", required=true)
-      private final String workspaceName;
+    private String workspaceName;
 
     public String workspaceName() {
         return this.workspaceName;
     }
 
-    public GetReadWriteDatabaseArgs(
-        String databaseName,
-        String kustoPoolName,
-        String resourceGroupName,
-        String workspaceName) {
-        this.databaseName = Objects.requireNonNull(databaseName, "expected parameter 'databaseName' to be non-null");
-        this.kustoPoolName = Objects.requireNonNull(kustoPoolName, "expected parameter 'kustoPoolName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.workspaceName = Objects.requireNonNull(workspaceName, "expected parameter 'workspaceName' to be non-null");
-    }
+    private GetReadWriteDatabaseArgs() {}
 
-    private GetReadWriteDatabaseArgs() {
-        this.databaseName = null;
-        this.kustoPoolName = null;
-        this.resourceGroupName = null;
-        this.workspaceName = null;
+    private GetReadWriteDatabaseArgs(GetReadWriteDatabaseArgs $) {
+        this.databaseName = $.databaseName;
+        this.kustoPoolName = $.kustoPoolName;
+        this.resourceGroupName = $.resourceGroupName;
+        this.workspaceName = $.workspaceName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetReadWriteDatabaseArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String databaseName;
-        private String kustoPoolName;
-        private String resourceGroupName;
-        private String workspaceName;
+        private GetReadWriteDatabaseArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetReadWriteDatabaseArgs();
         }
 
         public Builder(GetReadWriteDatabaseArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.databaseName = defaults.databaseName;
-    	      this.kustoPoolName = defaults.kustoPoolName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.workspaceName = defaults.workspaceName;
+            $ = new GetReadWriteDatabaseArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder databaseName(String databaseName) {
-            this.databaseName = Objects.requireNonNull(databaseName);
+            $.databaseName = databaseName;
             return this;
         }
+
         public Builder kustoPoolName(String kustoPoolName) {
-            this.kustoPoolName = Objects.requireNonNull(kustoPoolName);
+            $.kustoPoolName = kustoPoolName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder workspaceName(String workspaceName) {
-            this.workspaceName = Objects.requireNonNull(workspaceName);
+            $.workspaceName = workspaceName;
             return this;
-        }        public GetReadWriteDatabaseArgs build() {
-            return new GetReadWriteDatabaseArgs(databaseName, kustoPoolName, resourceGroupName, workspaceName);
+        }
+
+        public GetReadWriteDatabaseArgs build() {
+            $.databaseName = Objects.requireNonNull($.databaseName, "expected parameter 'databaseName' to be non-null");
+            $.kustoPoolName = Objects.requireNonNull($.kustoPoolName, "expected parameter 'kustoPoolName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.workspaceName = Objects.requireNonNull($.workspaceName, "expected parameter 'workspaceName' to be non-null");
+            return $;
         }
     }
+
 }

@@ -6,10 +6,10 @@ package com.pulumi.azurenative.databoxedge.inputs;
 import com.pulumi.azurenative.databoxedge.inputs.MetricDimensionArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class MetricCounterArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="additionalDimensions")
-      private final @Nullable Output<List<MetricDimensionArgs>> additionalDimensions;
+    private @Nullable Output<List<MetricDimensionArgs>> additionalDimensions;
 
-    public Output<List<MetricDimensionArgs>> additionalDimensions() {
-        return this.additionalDimensions == null ? Codegen.empty() : this.additionalDimensions;
+    public Optional<Output<List<MetricDimensionArgs>>> additionalDimensions() {
+        return Optional.ofNullable(this.additionalDimensions);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class MetricCounterArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="dimensionFilter")
-      private final @Nullable Output<List<MetricDimensionArgs>> dimensionFilter;
+    private @Nullable Output<List<MetricDimensionArgs>> dimensionFilter;
 
-    public Output<List<MetricDimensionArgs>> dimensionFilter() {
-        return this.dimensionFilter == null ? Codegen.empty() : this.dimensionFilter;
+    public Optional<Output<List<MetricDimensionArgs>>> dimensionFilter() {
+        return Optional.ofNullable(this.dimensionFilter);
     }
 
     /**
@@ -48,10 +48,10 @@ public final class MetricCounterArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="instance")
-      private final @Nullable Output<String> instance;
+    private @Nullable Output<String> instance;
 
-    public Output<String> instance() {
-        return this.instance == null ? Codegen.empty() : this.instance;
+    public Optional<Output<String>> instance() {
+        return Optional.ofNullable(this.instance);
     }
 
     /**
@@ -59,95 +59,87 @@ public final class MetricCounterArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name", required=true)
-      private final Output<String> name;
+    private Output<String> name;
 
     public Output<String> name() {
         return this.name;
     }
 
-    public MetricCounterArgs(
-        @Nullable Output<List<MetricDimensionArgs>> additionalDimensions,
-        @Nullable Output<List<MetricDimensionArgs>> dimensionFilter,
-        @Nullable Output<String> instance,
-        Output<String> name) {
-        this.additionalDimensions = additionalDimensions;
-        this.dimensionFilter = dimensionFilter;
-        this.instance = instance;
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-    }
+    private MetricCounterArgs() {}
 
-    private MetricCounterArgs() {
-        this.additionalDimensions = Codegen.empty();
-        this.dimensionFilter = Codegen.empty();
-        this.instance = Codegen.empty();
-        this.name = Codegen.empty();
+    private MetricCounterArgs(MetricCounterArgs $) {
+        this.additionalDimensions = $.additionalDimensions;
+        this.dimensionFilter = $.dimensionFilter;
+        this.instance = $.instance;
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MetricCounterArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<MetricDimensionArgs>> additionalDimensions;
-        private @Nullable Output<List<MetricDimensionArgs>> dimensionFilter;
-        private @Nullable Output<String> instance;
-        private Output<String> name;
+        private MetricCounterArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new MetricCounterArgs();
         }
 
         public Builder(MetricCounterArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.additionalDimensions = defaults.additionalDimensions;
-    	      this.dimensionFilter = defaults.dimensionFilter;
-    	      this.instance = defaults.instance;
-    	      this.name = defaults.name;
+            $ = new MetricCounterArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder additionalDimensions(@Nullable Output<List<MetricDimensionArgs>> additionalDimensions) {
-            this.additionalDimensions = additionalDimensions;
+            $.additionalDimensions = additionalDimensions;
             return this;
         }
-        public Builder additionalDimensions(@Nullable List<MetricDimensionArgs> additionalDimensions) {
-            this.additionalDimensions = Codegen.ofNullable(additionalDimensions);
-            return this;
+
+        public Builder additionalDimensions(List<MetricDimensionArgs> additionalDimensions) {
+            return additionalDimensions(Output.of(additionalDimensions));
         }
+
         public Builder additionalDimensions(MetricDimensionArgs... additionalDimensions) {
             return additionalDimensions(List.of(additionalDimensions));
         }
+
         public Builder dimensionFilter(@Nullable Output<List<MetricDimensionArgs>> dimensionFilter) {
-            this.dimensionFilter = dimensionFilter;
+            $.dimensionFilter = dimensionFilter;
             return this;
         }
-        public Builder dimensionFilter(@Nullable List<MetricDimensionArgs> dimensionFilter) {
-            this.dimensionFilter = Codegen.ofNullable(dimensionFilter);
-            return this;
+
+        public Builder dimensionFilter(List<MetricDimensionArgs> dimensionFilter) {
+            return dimensionFilter(Output.of(dimensionFilter));
         }
+
         public Builder dimensionFilter(MetricDimensionArgs... dimensionFilter) {
             return dimensionFilter(List.of(dimensionFilter));
         }
+
         public Builder instance(@Nullable Output<String> instance) {
-            this.instance = instance;
+            $.instance = instance;
             return this;
         }
-        public Builder instance(@Nullable String instance) {
-            this.instance = Codegen.ofNullable(instance);
-            return this;
+
+        public Builder instance(String instance) {
+            return instance(Output.of(instance));
         }
+
         public Builder name(Output<String> name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Output.of(Objects.requireNonNull(name));
-            return this;
-        }        public MetricCounterArgs build() {
-            return new MetricCounterArgs(additionalDimensions, dimensionFilter, instance, name);
+            return name(Output.of(name));
+        }
+
+        public MetricCounterArgs build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            return $;
         }
     }
+
 }

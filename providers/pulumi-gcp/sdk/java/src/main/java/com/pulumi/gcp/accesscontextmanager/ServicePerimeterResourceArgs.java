@@ -5,7 +5,6 @@ package com.pulumi.gcp.accesscontextmanager;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,7 +18,7 @@ public final class ServicePerimeterResourceArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="perimeterName", required=true)
-      private final Output<String> perimeterName;
+    private Output<String> perimeterName;
 
     public Output<String> perimeterName() {
         return this.perimeterName;
@@ -32,63 +31,60 @@ public final class ServicePerimeterResourceArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="resource", required=true)
-      private final Output<String> resource;
+    private Output<String> resource;
 
     public Output<String> resource() {
         return this.resource;
     }
 
-    public ServicePerimeterResourceArgs(
-        Output<String> perimeterName,
-        Output<String> resource) {
-        this.perimeterName = Objects.requireNonNull(perimeterName, "expected parameter 'perimeterName' to be non-null");
-        this.resource = Objects.requireNonNull(resource, "expected parameter 'resource' to be non-null");
-    }
+    private ServicePerimeterResourceArgs() {}
 
-    private ServicePerimeterResourceArgs() {
-        this.perimeterName = Codegen.empty();
-        this.resource = Codegen.empty();
+    private ServicePerimeterResourceArgs(ServicePerimeterResourceArgs $) {
+        this.perimeterName = $.perimeterName;
+        this.resource = $.resource;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ServicePerimeterResourceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> perimeterName;
-        private Output<String> resource;
+        private ServicePerimeterResourceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ServicePerimeterResourceArgs();
         }
 
         public Builder(ServicePerimeterResourceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.perimeterName = defaults.perimeterName;
-    	      this.resource = defaults.resource;
+            $ = new ServicePerimeterResourceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder perimeterName(Output<String> perimeterName) {
-            this.perimeterName = Objects.requireNonNull(perimeterName);
+            $.perimeterName = perimeterName;
             return this;
         }
+
         public Builder perimeterName(String perimeterName) {
-            this.perimeterName = Output.of(Objects.requireNonNull(perimeterName));
-            return this;
+            return perimeterName(Output.of(perimeterName));
         }
+
         public Builder resource(Output<String> resource) {
-            this.resource = Objects.requireNonNull(resource);
+            $.resource = resource;
             return this;
         }
+
         public Builder resource(String resource) {
-            this.resource = Output.of(Objects.requireNonNull(resource));
-            return this;
-        }        public ServicePerimeterResourceArgs build() {
-            return new ServicePerimeterResourceArgs(perimeterName, resource);
+            return resource(Output.of(resource));
+        }
+
+        public ServicePerimeterResourceArgs build() {
+            $.perimeterName = Objects.requireNonNull($.perimeterName, "expected parameter 'perimeterName' to be non-null");
+            $.resource = Objects.requireNonNull($.resource, "expected parameter 'resource' to be non-null");
+            return $;
         }
     }
+
 }

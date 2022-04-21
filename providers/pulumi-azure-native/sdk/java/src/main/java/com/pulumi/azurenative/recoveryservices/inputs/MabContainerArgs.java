@@ -15,6 +15,7 @@ import java.lang.Double;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -31,10 +32,10 @@ public final class MabContainerArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="agentVersion")
-      private final @Nullable Output<String> agentVersion;
+    private @Nullable Output<String> agentVersion;
 
-    public Output<String> agentVersion() {
-        return this.agentVersion == null ? Codegen.empty() : this.agentVersion;
+    public Optional<Output<String>> agentVersion() {
+        return Optional.ofNullable(this.agentVersion);
     }
 
     /**
@@ -42,10 +43,10 @@ public final class MabContainerArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="backupManagementType")
-      private final @Nullable Output<Either<String,BackupManagementType>> backupManagementType;
+    private @Nullable Output<Either<String,BackupManagementType>> backupManagementType;
 
-    public Output<Either<String,BackupManagementType>> backupManagementType() {
-        return this.backupManagementType == null ? Codegen.empty() : this.backupManagementType;
+    public Optional<Output<Either<String,BackupManagementType>>> backupManagementType() {
+        return Optional.ofNullable(this.backupManagementType);
     }
 
     /**
@@ -53,10 +54,10 @@ public final class MabContainerArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="canReRegister")
-      private final @Nullable Output<Boolean> canReRegister;
+    private @Nullable Output<Boolean> canReRegister;
 
-    public Output<Boolean> canReRegister() {
-        return this.canReRegister == null ? Codegen.empty() : this.canReRegister;
+    public Optional<Output<Boolean>> canReRegister() {
+        return Optional.ofNullable(this.canReRegister);
     }
 
     /**
@@ -64,10 +65,10 @@ public final class MabContainerArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="containerHealthState")
-      private final @Nullable Output<String> containerHealthState;
+    private @Nullable Output<String> containerHealthState;
 
-    public Output<String> containerHealthState() {
-        return this.containerHealthState == null ? Codegen.empty() : this.containerHealthState;
+    public Optional<Output<String>> containerHealthState() {
+        return Optional.ofNullable(this.containerHealthState);
     }
 
     /**
@@ -75,10 +76,10 @@ public final class MabContainerArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="containerId")
-      private final @Nullable Output<Double> containerId;
+    private @Nullable Output<Double> containerId;
 
-    public Output<Double> containerId() {
-        return this.containerId == null ? Codegen.empty() : this.containerId;
+    public Optional<Output<Double>> containerId() {
+        return Optional.ofNullable(this.containerId);
     }
 
     /**
@@ -90,7 +91,7 @@ public final class MabContainerArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="containerType", required=true)
-      private final Output<String> containerType;
+    private Output<String> containerType;
 
     public Output<String> containerType() {
         return this.containerType;
@@ -101,10 +102,10 @@ public final class MabContainerArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="extendedInfo")
-      private final @Nullable Output<MabContainerExtendedInfoArgs> extendedInfo;
+    private @Nullable Output<MabContainerExtendedInfoArgs> extendedInfo;
 
-    public Output<MabContainerExtendedInfoArgs> extendedInfo() {
-        return this.extendedInfo == null ? Codegen.empty() : this.extendedInfo;
+    public Optional<Output<MabContainerExtendedInfoArgs>> extendedInfo() {
+        return Optional.ofNullable(this.extendedInfo);
     }
 
     /**
@@ -112,10 +113,10 @@ public final class MabContainerArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="friendlyName")
-      private final @Nullable Output<String> friendlyName;
+    private @Nullable Output<String> friendlyName;
 
-    public Output<String> friendlyName() {
-        return this.friendlyName == null ? Codegen.empty() : this.friendlyName;
+    public Optional<Output<String>> friendlyName() {
+        return Optional.ofNullable(this.friendlyName);
     }
 
     /**
@@ -123,10 +124,10 @@ public final class MabContainerArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="healthStatus")
-      private final @Nullable Output<String> healthStatus;
+    private @Nullable Output<String> healthStatus;
 
-    public Output<String> healthStatus() {
-        return this.healthStatus == null ? Codegen.empty() : this.healthStatus;
+    public Optional<Output<String>> healthStatus() {
+        return Optional.ofNullable(this.healthStatus);
     }
 
     /**
@@ -134,10 +135,10 @@ public final class MabContainerArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="mabContainerHealthDetails")
-      private final @Nullable Output<List<MABContainerHealthDetailsArgs>> mabContainerHealthDetails;
+    private @Nullable Output<List<MABContainerHealthDetailsArgs>> mabContainerHealthDetails;
 
-    public Output<List<MABContainerHealthDetailsArgs>> mabContainerHealthDetails() {
-        return this.mabContainerHealthDetails == null ? Codegen.empty() : this.mabContainerHealthDetails;
+    public Optional<Output<List<MABContainerHealthDetailsArgs>>> mabContainerHealthDetails() {
+        return Optional.ofNullable(this.mabContainerHealthDetails);
     }
 
     /**
@@ -145,10 +146,10 @@ public final class MabContainerArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="protectedItemCount")
-      private final @Nullable Output<Double> protectedItemCount;
+    private @Nullable Output<Double> protectedItemCount;
 
-    public Output<Double> protectedItemCount() {
-        return this.protectedItemCount == null ? Codegen.empty() : this.protectedItemCount;
+    public Optional<Output<Double>> protectedItemCount() {
+        return Optional.ofNullable(this.protectedItemCount);
     }
 
     /**
@@ -156,196 +157,163 @@ public final class MabContainerArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="registrationStatus")
-      private final @Nullable Output<String> registrationStatus;
+    private @Nullable Output<String> registrationStatus;
 
-    public Output<String> registrationStatus() {
-        return this.registrationStatus == null ? Codegen.empty() : this.registrationStatus;
+    public Optional<Output<String>> registrationStatus() {
+        return Optional.ofNullable(this.registrationStatus);
     }
 
-    public MabContainerArgs(
-        @Nullable Output<String> agentVersion,
-        @Nullable Output<Either<String,BackupManagementType>> backupManagementType,
-        @Nullable Output<Boolean> canReRegister,
-        @Nullable Output<String> containerHealthState,
-        @Nullable Output<Double> containerId,
-        Output<String> containerType,
-        @Nullable Output<MabContainerExtendedInfoArgs> extendedInfo,
-        @Nullable Output<String> friendlyName,
-        @Nullable Output<String> healthStatus,
-        @Nullable Output<List<MABContainerHealthDetailsArgs>> mabContainerHealthDetails,
-        @Nullable Output<Double> protectedItemCount,
-        @Nullable Output<String> registrationStatus) {
-        this.agentVersion = agentVersion;
-        this.backupManagementType = backupManagementType;
-        this.canReRegister = canReRegister;
-        this.containerHealthState = containerHealthState;
-        this.containerId = containerId;
-        this.containerType = Codegen.stringProp("containerType").output().arg(containerType).require();
-        this.extendedInfo = extendedInfo;
-        this.friendlyName = friendlyName;
-        this.healthStatus = healthStatus;
-        this.mabContainerHealthDetails = mabContainerHealthDetails;
-        this.protectedItemCount = protectedItemCount;
-        this.registrationStatus = registrationStatus;
-    }
+    private MabContainerArgs() {}
 
-    private MabContainerArgs() {
-        this.agentVersion = Codegen.empty();
-        this.backupManagementType = Codegen.empty();
-        this.canReRegister = Codegen.empty();
-        this.containerHealthState = Codegen.empty();
-        this.containerId = Codegen.empty();
-        this.containerType = Codegen.empty();
-        this.extendedInfo = Codegen.empty();
-        this.friendlyName = Codegen.empty();
-        this.healthStatus = Codegen.empty();
-        this.mabContainerHealthDetails = Codegen.empty();
-        this.protectedItemCount = Codegen.empty();
-        this.registrationStatus = Codegen.empty();
+    private MabContainerArgs(MabContainerArgs $) {
+        this.agentVersion = $.agentVersion;
+        this.backupManagementType = $.backupManagementType;
+        this.canReRegister = $.canReRegister;
+        this.containerHealthState = $.containerHealthState;
+        this.containerId = $.containerId;
+        this.containerType = $.containerType;
+        this.extendedInfo = $.extendedInfo;
+        this.friendlyName = $.friendlyName;
+        this.healthStatus = $.healthStatus;
+        this.mabContainerHealthDetails = $.mabContainerHealthDetails;
+        this.protectedItemCount = $.protectedItemCount;
+        this.registrationStatus = $.registrationStatus;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MabContainerArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> agentVersion;
-        private @Nullable Output<Either<String,BackupManagementType>> backupManagementType;
-        private @Nullable Output<Boolean> canReRegister;
-        private @Nullable Output<String> containerHealthState;
-        private @Nullable Output<Double> containerId;
-        private Output<String> containerType;
-        private @Nullable Output<MabContainerExtendedInfoArgs> extendedInfo;
-        private @Nullable Output<String> friendlyName;
-        private @Nullable Output<String> healthStatus;
-        private @Nullable Output<List<MABContainerHealthDetailsArgs>> mabContainerHealthDetails;
-        private @Nullable Output<Double> protectedItemCount;
-        private @Nullable Output<String> registrationStatus;
+        private MabContainerArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new MabContainerArgs();
         }
 
         public Builder(MabContainerArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.agentVersion = defaults.agentVersion;
-    	      this.backupManagementType = defaults.backupManagementType;
-    	      this.canReRegister = defaults.canReRegister;
-    	      this.containerHealthState = defaults.containerHealthState;
-    	      this.containerId = defaults.containerId;
-    	      this.containerType = defaults.containerType;
-    	      this.extendedInfo = defaults.extendedInfo;
-    	      this.friendlyName = defaults.friendlyName;
-    	      this.healthStatus = defaults.healthStatus;
-    	      this.mabContainerHealthDetails = defaults.mabContainerHealthDetails;
-    	      this.protectedItemCount = defaults.protectedItemCount;
-    	      this.registrationStatus = defaults.registrationStatus;
+            $ = new MabContainerArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder agentVersion(@Nullable Output<String> agentVersion) {
-            this.agentVersion = agentVersion;
+            $.agentVersion = agentVersion;
             return this;
         }
-        public Builder agentVersion(@Nullable String agentVersion) {
-            this.agentVersion = Codegen.ofNullable(agentVersion);
-            return this;
+
+        public Builder agentVersion(String agentVersion) {
+            return agentVersion(Output.of(agentVersion));
         }
+
         public Builder backupManagementType(@Nullable Output<Either<String,BackupManagementType>> backupManagementType) {
-            this.backupManagementType = backupManagementType;
+            $.backupManagementType = backupManagementType;
             return this;
         }
-        public Builder backupManagementType(@Nullable Either<String,BackupManagementType> backupManagementType) {
-            this.backupManagementType = Codegen.ofNullable(backupManagementType);
-            return this;
+
+        public Builder backupManagementType(Either<String,BackupManagementType> backupManagementType) {
+            return backupManagementType(Output.of(backupManagementType));
         }
+
         public Builder canReRegister(@Nullable Output<Boolean> canReRegister) {
-            this.canReRegister = canReRegister;
+            $.canReRegister = canReRegister;
             return this;
         }
-        public Builder canReRegister(@Nullable Boolean canReRegister) {
-            this.canReRegister = Codegen.ofNullable(canReRegister);
-            return this;
+
+        public Builder canReRegister(Boolean canReRegister) {
+            return canReRegister(Output.of(canReRegister));
         }
+
         public Builder containerHealthState(@Nullable Output<String> containerHealthState) {
-            this.containerHealthState = containerHealthState;
+            $.containerHealthState = containerHealthState;
             return this;
         }
-        public Builder containerHealthState(@Nullable String containerHealthState) {
-            this.containerHealthState = Codegen.ofNullable(containerHealthState);
-            return this;
+
+        public Builder containerHealthState(String containerHealthState) {
+            return containerHealthState(Output.of(containerHealthState));
         }
+
         public Builder containerId(@Nullable Output<Double> containerId) {
-            this.containerId = containerId;
+            $.containerId = containerId;
             return this;
         }
-        public Builder containerId(@Nullable Double containerId) {
-            this.containerId = Codegen.ofNullable(containerId);
-            return this;
+
+        public Builder containerId(Double containerId) {
+            return containerId(Output.of(containerId));
         }
+
         public Builder containerType(Output<String> containerType) {
-            this.containerType = Objects.requireNonNull(containerType);
+            $.containerType = containerType;
             return this;
         }
+
         public Builder containerType(String containerType) {
-            this.containerType = Output.of(Objects.requireNonNull(containerType));
-            return this;
+            return containerType(Output.of(containerType));
         }
+
         public Builder extendedInfo(@Nullable Output<MabContainerExtendedInfoArgs> extendedInfo) {
-            this.extendedInfo = extendedInfo;
+            $.extendedInfo = extendedInfo;
             return this;
         }
-        public Builder extendedInfo(@Nullable MabContainerExtendedInfoArgs extendedInfo) {
-            this.extendedInfo = Codegen.ofNullable(extendedInfo);
-            return this;
+
+        public Builder extendedInfo(MabContainerExtendedInfoArgs extendedInfo) {
+            return extendedInfo(Output.of(extendedInfo));
         }
+
         public Builder friendlyName(@Nullable Output<String> friendlyName) {
-            this.friendlyName = friendlyName;
+            $.friendlyName = friendlyName;
             return this;
         }
-        public Builder friendlyName(@Nullable String friendlyName) {
-            this.friendlyName = Codegen.ofNullable(friendlyName);
-            return this;
+
+        public Builder friendlyName(String friendlyName) {
+            return friendlyName(Output.of(friendlyName));
         }
+
         public Builder healthStatus(@Nullable Output<String> healthStatus) {
-            this.healthStatus = healthStatus;
+            $.healthStatus = healthStatus;
             return this;
         }
-        public Builder healthStatus(@Nullable String healthStatus) {
-            this.healthStatus = Codegen.ofNullable(healthStatus);
-            return this;
+
+        public Builder healthStatus(String healthStatus) {
+            return healthStatus(Output.of(healthStatus));
         }
+
         public Builder mabContainerHealthDetails(@Nullable Output<List<MABContainerHealthDetailsArgs>> mabContainerHealthDetails) {
-            this.mabContainerHealthDetails = mabContainerHealthDetails;
+            $.mabContainerHealthDetails = mabContainerHealthDetails;
             return this;
         }
-        public Builder mabContainerHealthDetails(@Nullable List<MABContainerHealthDetailsArgs> mabContainerHealthDetails) {
-            this.mabContainerHealthDetails = Codegen.ofNullable(mabContainerHealthDetails);
-            return this;
+
+        public Builder mabContainerHealthDetails(List<MABContainerHealthDetailsArgs> mabContainerHealthDetails) {
+            return mabContainerHealthDetails(Output.of(mabContainerHealthDetails));
         }
+
         public Builder mabContainerHealthDetails(MABContainerHealthDetailsArgs... mabContainerHealthDetails) {
             return mabContainerHealthDetails(List.of(mabContainerHealthDetails));
         }
+
         public Builder protectedItemCount(@Nullable Output<Double> protectedItemCount) {
-            this.protectedItemCount = protectedItemCount;
+            $.protectedItemCount = protectedItemCount;
             return this;
         }
-        public Builder protectedItemCount(@Nullable Double protectedItemCount) {
-            this.protectedItemCount = Codegen.ofNullable(protectedItemCount);
-            return this;
+
+        public Builder protectedItemCount(Double protectedItemCount) {
+            return protectedItemCount(Output.of(protectedItemCount));
         }
+
         public Builder registrationStatus(@Nullable Output<String> registrationStatus) {
-            this.registrationStatus = registrationStatus;
+            $.registrationStatus = registrationStatus;
             return this;
         }
-        public Builder registrationStatus(@Nullable String registrationStatus) {
-            this.registrationStatus = Codegen.ofNullable(registrationStatus);
-            return this;
-        }        public MabContainerArgs build() {
-            return new MabContainerArgs(agentVersion, backupManagementType, canReRegister, containerHealthState, containerId, containerType, extendedInfo, friendlyName, healthStatus, mabContainerHealthDetails, protectedItemCount, registrationStatus);
+
+        public Builder registrationStatus(String registrationStatus) {
+            return registrationStatus(Output.of(registrationStatus));
+        }
+
+        public MabContainerArgs build() {
+            $.containerType = Codegen.stringProp("containerType").output().arg($.containerType).require();
+            return $;
         }
     }
+
 }

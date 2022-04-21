@@ -30,10 +30,10 @@ public final class AzureKeyVaultLinkedServiceResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="annotations")
-      private final @Nullable List<Object> annotations;
+    private @Nullable List<Object> annotations;
 
-    public List<Object> annotations() {
-        return this.annotations == null ? List.of() : this.annotations;
+    public Optional<List<Object>> annotations() {
+        return Optional.ofNullable(this.annotations);
     }
 
     /**
@@ -41,7 +41,7 @@ public final class AzureKeyVaultLinkedServiceResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="baseUrl", required=true)
-      private final Object baseUrl;
+    private Object baseUrl;
 
     public Object baseUrl() {
         return this.baseUrl;
@@ -52,10 +52,10 @@ public final class AzureKeyVaultLinkedServiceResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="connectVia")
-      private final @Nullable IntegrationRuntimeReferenceResponse connectVia;
+    private @Nullable IntegrationRuntimeReferenceResponse connectVia;
 
     public Optional<IntegrationRuntimeReferenceResponse> connectVia() {
-        return this.connectVia == null ? Optional.empty() : Optional.ofNullable(this.connectVia);
+        return Optional.ofNullable(this.connectVia);
     }
 
     /**
@@ -63,10 +63,10 @@ public final class AzureKeyVaultLinkedServiceResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="credential")
-      private final @Nullable CredentialReferenceResponse credential;
+    private @Nullable CredentialReferenceResponse credential;
 
     public Optional<CredentialReferenceResponse> credential() {
-        return this.credential == null ? Optional.empty() : Optional.ofNullable(this.credential);
+        return Optional.ofNullable(this.credential);
     }
 
     /**
@@ -74,10 +74,10 @@ public final class AzureKeyVaultLinkedServiceResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="description")
-      private final @Nullable String description;
+    private @Nullable String description;
 
     public Optional<String> description() {
-        return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -85,10 +85,10 @@ public final class AzureKeyVaultLinkedServiceResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="parameters")
-      private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
+    private @Nullable Map<String,ParameterSpecificationResponse> parameters;
 
-    public Map<String,ParameterSpecificationResponse> parameters() {
-        return this.parameters == null ? Map.of() : this.parameters;
+    public Optional<Map<String,ParameterSpecificationResponse>> parameters() {
+        return Optional.ofNullable(this.parameters);
     }
 
     /**
@@ -97,103 +97,86 @@ public final class AzureKeyVaultLinkedServiceResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
     }
 
-    public AzureKeyVaultLinkedServiceResponse(
-        @Nullable List<Object> annotations,
-        Object baseUrl,
-        @Nullable IntegrationRuntimeReferenceResponse connectVia,
-        @Nullable CredentialReferenceResponse credential,
-        @Nullable String description,
-        @Nullable Map<String,ParameterSpecificationResponse> parameters,
-        String type) {
-        this.annotations = annotations;
-        this.baseUrl = Objects.requireNonNull(baseUrl, "expected parameter 'baseUrl' to be non-null");
-        this.connectVia = connectVia;
-        this.credential = credential;
-        this.description = description;
-        this.parameters = parameters;
-        this.type = Codegen.stringProp("type").arg(type).require();
-    }
+    private AzureKeyVaultLinkedServiceResponse() {}
 
-    private AzureKeyVaultLinkedServiceResponse() {
-        this.annotations = List.of();
-        this.baseUrl = null;
-        this.connectVia = null;
-        this.credential = null;
-        this.description = null;
-        this.parameters = Map.of();
-        this.type = null;
+    private AzureKeyVaultLinkedServiceResponse(AzureKeyVaultLinkedServiceResponse $) {
+        this.annotations = $.annotations;
+        this.baseUrl = $.baseUrl;
+        this.connectVia = $.connectVia;
+        this.credential = $.credential;
+        this.description = $.description;
+        this.parameters = $.parameters;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AzureKeyVaultLinkedServiceResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<Object> annotations;
-        private Object baseUrl;
-        private @Nullable IntegrationRuntimeReferenceResponse connectVia;
-        private @Nullable CredentialReferenceResponse credential;
-        private @Nullable String description;
-        private @Nullable Map<String,ParameterSpecificationResponse> parameters;
-        private String type;
+        private AzureKeyVaultLinkedServiceResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AzureKeyVaultLinkedServiceResponse();
         }
 
         public Builder(AzureKeyVaultLinkedServiceResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.annotations = defaults.annotations;
-    	      this.baseUrl = defaults.baseUrl;
-    	      this.connectVia = defaults.connectVia;
-    	      this.credential = defaults.credential;
-    	      this.description = defaults.description;
-    	      this.parameters = defaults.parameters;
-    	      this.type = defaults.type;
+            $ = new AzureKeyVaultLinkedServiceResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder annotations(@Nullable List<Object> annotations) {
-            this.annotations = annotations;
+            $.annotations = annotations;
             return this;
         }
+
         public Builder annotations(Object... annotations) {
             return annotations(List.of(annotations));
         }
+
         public Builder baseUrl(Object baseUrl) {
-            this.baseUrl = Objects.requireNonNull(baseUrl);
+            $.baseUrl = baseUrl;
             return this;
         }
+
         public Builder connectVia(@Nullable IntegrationRuntimeReferenceResponse connectVia) {
-            this.connectVia = connectVia;
+            $.connectVia = connectVia;
             return this;
         }
+
         public Builder credential(@Nullable CredentialReferenceResponse credential) {
-            this.credential = credential;
+            $.credential = credential;
             return this;
         }
+
         public Builder description(@Nullable String description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
+
         public Builder parameters(@Nullable Map<String,ParameterSpecificationResponse> parameters) {
-            this.parameters = parameters;
+            $.parameters = parameters;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
-        }        public AzureKeyVaultLinkedServiceResponse build() {
-            return new AzureKeyVaultLinkedServiceResponse(annotations, baseUrl, connectVia, credential, description, parameters, type);
+        }
+
+        public AzureKeyVaultLinkedServiceResponse build() {
+            $.baseUrl = Objects.requireNonNull($.baseUrl, "expected parameter 'baseUrl' to be non-null");
+            $.type = Codegen.stringProp("type").arg($.type).require();
+            return $;
         }
     }
+
 }

@@ -5,10 +5,10 @@ package com.pulumi.googlenative.gkehub_v1alpha.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,52 +25,52 @@ public final class CloudAuditLoggingFeatureSpecArgs extends com.pulumi.resources
      * 
      */
     @Import(name="allowlistedServiceAccounts")
-      private final @Nullable Output<List<String>> allowlistedServiceAccounts;
+    private @Nullable Output<List<String>> allowlistedServiceAccounts;
 
-    public Output<List<String>> allowlistedServiceAccounts() {
-        return this.allowlistedServiceAccounts == null ? Codegen.empty() : this.allowlistedServiceAccounts;
+    public Optional<Output<List<String>>> allowlistedServiceAccounts() {
+        return Optional.ofNullable(this.allowlistedServiceAccounts);
     }
 
-    public CloudAuditLoggingFeatureSpecArgs(@Nullable Output<List<String>> allowlistedServiceAccounts) {
-        this.allowlistedServiceAccounts = allowlistedServiceAccounts;
-    }
+    private CloudAuditLoggingFeatureSpecArgs() {}
 
-    private CloudAuditLoggingFeatureSpecArgs() {
-        this.allowlistedServiceAccounts = Codegen.empty();
+    private CloudAuditLoggingFeatureSpecArgs(CloudAuditLoggingFeatureSpecArgs $) {
+        this.allowlistedServiceAccounts = $.allowlistedServiceAccounts;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CloudAuditLoggingFeatureSpecArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> allowlistedServiceAccounts;
+        private CloudAuditLoggingFeatureSpecArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CloudAuditLoggingFeatureSpecArgs();
         }
 
         public Builder(CloudAuditLoggingFeatureSpecArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.allowlistedServiceAccounts = defaults.allowlistedServiceAccounts;
+            $ = new CloudAuditLoggingFeatureSpecArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder allowlistedServiceAccounts(@Nullable Output<List<String>> allowlistedServiceAccounts) {
-            this.allowlistedServiceAccounts = allowlistedServiceAccounts;
+            $.allowlistedServiceAccounts = allowlistedServiceAccounts;
             return this;
         }
-        public Builder allowlistedServiceAccounts(@Nullable List<String> allowlistedServiceAccounts) {
-            this.allowlistedServiceAccounts = Codegen.ofNullable(allowlistedServiceAccounts);
-            return this;
+
+        public Builder allowlistedServiceAccounts(List<String> allowlistedServiceAccounts) {
+            return allowlistedServiceAccounts(Output.of(allowlistedServiceAccounts));
         }
+
         public Builder allowlistedServiceAccounts(String... allowlistedServiceAccounts) {
             return allowlistedServiceAccounts(List.of(allowlistedServiceAccounts));
-        }        public CloudAuditLoggingFeatureSpecArgs build() {
-            return new CloudAuditLoggingFeatureSpecArgs(allowlistedServiceAccounts);
+        }
+
+        public CloudAuditLoggingFeatureSpecArgs build() {
+            return $;
         }
     }
+
 }

@@ -6,10 +6,10 @@ package com.pulumi.azurenative.batch.inputs;
 import com.pulumi.azurenative.batch.enums.ComputeNodeDeallocationOption;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class FixedScaleSettingsArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="nodeDeallocationOption")
-      private final @Nullable Output<ComputeNodeDeallocationOption> nodeDeallocationOption;
+    private @Nullable Output<ComputeNodeDeallocationOption> nodeDeallocationOption;
 
-    public Output<ComputeNodeDeallocationOption> nodeDeallocationOption() {
-        return this.nodeDeallocationOption == null ? Codegen.empty() : this.nodeDeallocationOption;
+    public Optional<Output<ComputeNodeDeallocationOption>> nodeDeallocationOption() {
+        return Optional.ofNullable(this.nodeDeallocationOption);
     }
 
     /**
@@ -33,10 +33,10 @@ public final class FixedScaleSettingsArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="resizeTimeout")
-      private final @Nullable Output<String> resizeTimeout;
+    private @Nullable Output<String> resizeTimeout;
 
-    public Output<String> resizeTimeout() {
-        return this.resizeTimeout == null ? Codegen.empty() : this.resizeTimeout;
+    public Optional<Output<String>> resizeTimeout() {
+        return Optional.ofNullable(this.resizeTimeout);
     }
 
     /**
@@ -44,10 +44,10 @@ public final class FixedScaleSettingsArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="targetDedicatedNodes")
-      private final @Nullable Output<Integer> targetDedicatedNodes;
+    private @Nullable Output<Integer> targetDedicatedNodes;
 
-    public Output<Integer> targetDedicatedNodes() {
-        return this.targetDedicatedNodes == null ? Codegen.empty() : this.targetDedicatedNodes;
+    public Optional<Output<Integer>> targetDedicatedNodes() {
+        return Optional.ofNullable(this.targetDedicatedNodes);
     }
 
     /**
@@ -55,89 +55,78 @@ public final class FixedScaleSettingsArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="targetLowPriorityNodes")
-      private final @Nullable Output<Integer> targetLowPriorityNodes;
+    private @Nullable Output<Integer> targetLowPriorityNodes;
 
-    public Output<Integer> targetLowPriorityNodes() {
-        return this.targetLowPriorityNodes == null ? Codegen.empty() : this.targetLowPriorityNodes;
+    public Optional<Output<Integer>> targetLowPriorityNodes() {
+        return Optional.ofNullable(this.targetLowPriorityNodes);
     }
 
-    public FixedScaleSettingsArgs(
-        @Nullable Output<ComputeNodeDeallocationOption> nodeDeallocationOption,
-        @Nullable Output<String> resizeTimeout,
-        @Nullable Output<Integer> targetDedicatedNodes,
-        @Nullable Output<Integer> targetLowPriorityNodes) {
-        this.nodeDeallocationOption = nodeDeallocationOption;
-        this.resizeTimeout = resizeTimeout;
-        this.targetDedicatedNodes = targetDedicatedNodes;
-        this.targetLowPriorityNodes = targetLowPriorityNodes;
-    }
+    private FixedScaleSettingsArgs() {}
 
-    private FixedScaleSettingsArgs() {
-        this.nodeDeallocationOption = Codegen.empty();
-        this.resizeTimeout = Codegen.empty();
-        this.targetDedicatedNodes = Codegen.empty();
-        this.targetLowPriorityNodes = Codegen.empty();
+    private FixedScaleSettingsArgs(FixedScaleSettingsArgs $) {
+        this.nodeDeallocationOption = $.nodeDeallocationOption;
+        this.resizeTimeout = $.resizeTimeout;
+        this.targetDedicatedNodes = $.targetDedicatedNodes;
+        this.targetLowPriorityNodes = $.targetLowPriorityNodes;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FixedScaleSettingsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<ComputeNodeDeallocationOption> nodeDeallocationOption;
-        private @Nullable Output<String> resizeTimeout;
-        private @Nullable Output<Integer> targetDedicatedNodes;
-        private @Nullable Output<Integer> targetLowPriorityNodes;
+        private FixedScaleSettingsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new FixedScaleSettingsArgs();
         }
 
         public Builder(FixedScaleSettingsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.nodeDeallocationOption = defaults.nodeDeallocationOption;
-    	      this.resizeTimeout = defaults.resizeTimeout;
-    	      this.targetDedicatedNodes = defaults.targetDedicatedNodes;
-    	      this.targetLowPriorityNodes = defaults.targetLowPriorityNodes;
+            $ = new FixedScaleSettingsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder nodeDeallocationOption(@Nullable Output<ComputeNodeDeallocationOption> nodeDeallocationOption) {
-            this.nodeDeallocationOption = nodeDeallocationOption;
+            $.nodeDeallocationOption = nodeDeallocationOption;
             return this;
         }
-        public Builder nodeDeallocationOption(@Nullable ComputeNodeDeallocationOption nodeDeallocationOption) {
-            this.nodeDeallocationOption = Codegen.ofNullable(nodeDeallocationOption);
-            return this;
+
+        public Builder nodeDeallocationOption(ComputeNodeDeallocationOption nodeDeallocationOption) {
+            return nodeDeallocationOption(Output.of(nodeDeallocationOption));
         }
+
         public Builder resizeTimeout(@Nullable Output<String> resizeTimeout) {
-            this.resizeTimeout = resizeTimeout;
+            $.resizeTimeout = resizeTimeout;
             return this;
         }
-        public Builder resizeTimeout(@Nullable String resizeTimeout) {
-            this.resizeTimeout = Codegen.ofNullable(resizeTimeout);
-            return this;
+
+        public Builder resizeTimeout(String resizeTimeout) {
+            return resizeTimeout(Output.of(resizeTimeout));
         }
+
         public Builder targetDedicatedNodes(@Nullable Output<Integer> targetDedicatedNodes) {
-            this.targetDedicatedNodes = targetDedicatedNodes;
+            $.targetDedicatedNodes = targetDedicatedNodes;
             return this;
         }
-        public Builder targetDedicatedNodes(@Nullable Integer targetDedicatedNodes) {
-            this.targetDedicatedNodes = Codegen.ofNullable(targetDedicatedNodes);
-            return this;
+
+        public Builder targetDedicatedNodes(Integer targetDedicatedNodes) {
+            return targetDedicatedNodes(Output.of(targetDedicatedNodes));
         }
+
         public Builder targetLowPriorityNodes(@Nullable Output<Integer> targetLowPriorityNodes) {
-            this.targetLowPriorityNodes = targetLowPriorityNodes;
+            $.targetLowPriorityNodes = targetLowPriorityNodes;
             return this;
         }
-        public Builder targetLowPriorityNodes(@Nullable Integer targetLowPriorityNodes) {
-            this.targetLowPriorityNodes = Codegen.ofNullable(targetLowPriorityNodes);
-            return this;
-        }        public FixedScaleSettingsArgs build() {
-            return new FixedScaleSettingsArgs(nodeDeallocationOption, resizeTimeout, targetDedicatedNodes, targetLowPriorityNodes);
+
+        public Builder targetLowPriorityNodes(Integer targetLowPriorityNodes) {
+            return targetLowPriorityNodes(Output.of(targetLowPriorityNodes));
+        }
+
+        public FixedScaleSettingsArgs build() {
+            return $;
         }
     }
+
 }

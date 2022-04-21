@@ -25,7 +25,7 @@ public final class FieldResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="cardinality", required=true)
-      private final String cardinality;
+    private String cardinality;
 
     public String cardinality() {
         return this.cardinality;
@@ -36,7 +36,7 @@ public final class FieldResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="defaultValue", required=true)
-      private final String defaultValue;
+    private String defaultValue;
 
     public String defaultValue() {
         return this.defaultValue;
@@ -47,7 +47,7 @@ public final class FieldResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="jsonName", required=true)
-      private final String jsonName;
+    private String jsonName;
 
     public String jsonName() {
         return this.jsonName;
@@ -58,7 +58,7 @@ public final class FieldResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="kind", required=true)
-      private final String kind;
+    private String kind;
 
     public String kind() {
         return this.kind;
@@ -69,7 +69,7 @@ public final class FieldResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -80,7 +80,7 @@ public final class FieldResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="number", required=true)
-      private final Integer number;
+    private Integer number;
 
     public Integer number() {
         return this.number;
@@ -91,7 +91,7 @@ public final class FieldResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="oneofIndex", required=true)
-      private final Integer oneofIndex;
+    private Integer oneofIndex;
 
     public Integer oneofIndex() {
         return this.oneofIndex;
@@ -102,7 +102,7 @@ public final class FieldResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="options", required=true)
-      private final List<OptionResponse> options;
+    private List<OptionResponse> options;
 
     public List<OptionResponse> options() {
         return this.options;
@@ -113,7 +113,7 @@ public final class FieldResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="packed", required=true)
-      private final Boolean packed;
+    private Boolean packed;
 
     public Boolean packed() {
         return this.packed;
@@ -124,130 +124,112 @@ public final class FieldResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="typeUrl", required=true)
-      private final String typeUrl;
+    private String typeUrl;
 
     public String typeUrl() {
         return this.typeUrl;
     }
 
-    public FieldResponse(
-        String cardinality,
-        String defaultValue,
-        String jsonName,
-        String kind,
-        String name,
-        Integer number,
-        Integer oneofIndex,
-        List<OptionResponse> options,
-        Boolean packed,
-        String typeUrl) {
-        this.cardinality = Objects.requireNonNull(cardinality, "expected parameter 'cardinality' to be non-null");
-        this.defaultValue = Objects.requireNonNull(defaultValue, "expected parameter 'defaultValue' to be non-null");
-        this.jsonName = Objects.requireNonNull(jsonName, "expected parameter 'jsonName' to be non-null");
-        this.kind = Objects.requireNonNull(kind, "expected parameter 'kind' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.number = Objects.requireNonNull(number, "expected parameter 'number' to be non-null");
-        this.oneofIndex = Objects.requireNonNull(oneofIndex, "expected parameter 'oneofIndex' to be non-null");
-        this.options = Objects.requireNonNull(options, "expected parameter 'options' to be non-null");
-        this.packed = Objects.requireNonNull(packed, "expected parameter 'packed' to be non-null");
-        this.typeUrl = Objects.requireNonNull(typeUrl, "expected parameter 'typeUrl' to be non-null");
-    }
+    private FieldResponse() {}
 
-    private FieldResponse() {
-        this.cardinality = null;
-        this.defaultValue = null;
-        this.jsonName = null;
-        this.kind = null;
-        this.name = null;
-        this.number = null;
-        this.oneofIndex = null;
-        this.options = List.of();
-        this.packed = null;
-        this.typeUrl = null;
+    private FieldResponse(FieldResponse $) {
+        this.cardinality = $.cardinality;
+        this.defaultValue = $.defaultValue;
+        this.jsonName = $.jsonName;
+        this.kind = $.kind;
+        this.name = $.name;
+        this.number = $.number;
+        this.oneofIndex = $.oneofIndex;
+        this.options = $.options;
+        this.packed = $.packed;
+        this.typeUrl = $.typeUrl;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FieldResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String cardinality;
-        private String defaultValue;
-        private String jsonName;
-        private String kind;
-        private String name;
-        private Integer number;
-        private Integer oneofIndex;
-        private List<OptionResponse> options;
-        private Boolean packed;
-        private String typeUrl;
+        private FieldResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new FieldResponse();
         }
 
         public Builder(FieldResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cardinality = defaults.cardinality;
-    	      this.defaultValue = defaults.defaultValue;
-    	      this.jsonName = defaults.jsonName;
-    	      this.kind = defaults.kind;
-    	      this.name = defaults.name;
-    	      this.number = defaults.number;
-    	      this.oneofIndex = defaults.oneofIndex;
-    	      this.options = defaults.options;
-    	      this.packed = defaults.packed;
-    	      this.typeUrl = defaults.typeUrl;
+            $ = new FieldResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder cardinality(String cardinality) {
-            this.cardinality = Objects.requireNonNull(cardinality);
+            $.cardinality = cardinality;
             return this;
         }
+
         public Builder defaultValue(String defaultValue) {
-            this.defaultValue = Objects.requireNonNull(defaultValue);
+            $.defaultValue = defaultValue;
             return this;
         }
+
         public Builder jsonName(String jsonName) {
-            this.jsonName = Objects.requireNonNull(jsonName);
+            $.jsonName = jsonName;
             return this;
         }
+
         public Builder kind(String kind) {
-            this.kind = Objects.requireNonNull(kind);
+            $.kind = kind;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder number(Integer number) {
-            this.number = Objects.requireNonNull(number);
+            $.number = number;
             return this;
         }
+
         public Builder oneofIndex(Integer oneofIndex) {
-            this.oneofIndex = Objects.requireNonNull(oneofIndex);
+            $.oneofIndex = oneofIndex;
             return this;
         }
+
         public Builder options(List<OptionResponse> options) {
-            this.options = Objects.requireNonNull(options);
+            $.options = options;
             return this;
         }
+
         public Builder options(OptionResponse... options) {
             return options(List.of(options));
         }
+
         public Builder packed(Boolean packed) {
-            this.packed = Objects.requireNonNull(packed);
+            $.packed = packed;
             return this;
         }
+
         public Builder typeUrl(String typeUrl) {
-            this.typeUrl = Objects.requireNonNull(typeUrl);
+            $.typeUrl = typeUrl;
             return this;
-        }        public FieldResponse build() {
-            return new FieldResponse(cardinality, defaultValue, jsonName, kind, name, number, oneofIndex, options, packed, typeUrl);
+        }
+
+        public FieldResponse build() {
+            $.cardinality = Objects.requireNonNull($.cardinality, "expected parameter 'cardinality' to be non-null");
+            $.defaultValue = Objects.requireNonNull($.defaultValue, "expected parameter 'defaultValue' to be non-null");
+            $.jsonName = Objects.requireNonNull($.jsonName, "expected parameter 'jsonName' to be non-null");
+            $.kind = Objects.requireNonNull($.kind, "expected parameter 'kind' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.number = Objects.requireNonNull($.number, "expected parameter 'number' to be non-null");
+            $.oneofIndex = Objects.requireNonNull($.oneofIndex, "expected parameter 'oneofIndex' to be non-null");
+            $.options = Objects.requireNonNull($.options, "expected parameter 'options' to be non-null");
+            $.packed = Objects.requireNonNull($.packed, "expected parameter 'packed' to be non-null");
+            $.typeUrl = Objects.requireNonNull($.typeUrl, "expected parameter 'typeUrl' to be non-null");
+            return $;
         }
     }
+
 }

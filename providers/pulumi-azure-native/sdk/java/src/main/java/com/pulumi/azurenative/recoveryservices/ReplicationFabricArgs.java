@@ -6,9 +6,9 @@ package com.pulumi.azurenative.recoveryservices;
 import com.pulumi.azurenative.recoveryservices.inputs.FabricCreationInputPropertiesArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class ReplicationFabricArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="fabricName")
-      private final @Nullable Output<String> fabricName;
+    private @Nullable Output<String> fabricName;
 
-    public Output<String> fabricName() {
-        return this.fabricName == null ? Codegen.empty() : this.fabricName;
+    public Optional<Output<String>> fabricName() {
+        return Optional.ofNullable(this.fabricName);
     }
 
     /**
@@ -32,10 +32,10 @@ public final class ReplicationFabricArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="properties")
-      private final @Nullable Output<FabricCreationInputPropertiesArgs> properties;
+    private @Nullable Output<FabricCreationInputPropertiesArgs> properties;
 
-    public Output<FabricCreationInputPropertiesArgs> properties() {
-        return this.properties == null ? Codegen.empty() : this.properties;
+    public Optional<Output<FabricCreationInputPropertiesArgs>> properties() {
+        return Optional.ofNullable(this.properties);
     }
 
     /**
@@ -43,7 +43,7 @@ public final class ReplicationFabricArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -54,89 +54,80 @@ public final class ReplicationFabricArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="resourceName", required=true)
-      private final Output<String> resourceName;
+    private Output<String> resourceName;
 
     public Output<String> resourceName() {
         return this.resourceName;
     }
 
-    public ReplicationFabricArgs(
-        @Nullable Output<String> fabricName,
-        @Nullable Output<FabricCreationInputPropertiesArgs> properties,
-        Output<String> resourceGroupName,
-        Output<String> resourceName) {
-        this.fabricName = fabricName;
-        this.properties = properties;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.resourceName = Objects.requireNonNull(resourceName, "expected parameter 'resourceName' to be non-null");
-    }
+    private ReplicationFabricArgs() {}
 
-    private ReplicationFabricArgs() {
-        this.fabricName = Codegen.empty();
-        this.properties = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.resourceName = Codegen.empty();
+    private ReplicationFabricArgs(ReplicationFabricArgs $) {
+        this.fabricName = $.fabricName;
+        this.properties = $.properties;
+        this.resourceGroupName = $.resourceGroupName;
+        this.resourceName = $.resourceName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ReplicationFabricArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> fabricName;
-        private @Nullable Output<FabricCreationInputPropertiesArgs> properties;
-        private Output<String> resourceGroupName;
-        private Output<String> resourceName;
+        private ReplicationFabricArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ReplicationFabricArgs();
         }
 
         public Builder(ReplicationFabricArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.fabricName = defaults.fabricName;
-    	      this.properties = defaults.properties;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.resourceName = defaults.resourceName;
+            $ = new ReplicationFabricArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder fabricName(@Nullable Output<String> fabricName) {
-            this.fabricName = fabricName;
+            $.fabricName = fabricName;
             return this;
         }
-        public Builder fabricName(@Nullable String fabricName) {
-            this.fabricName = Codegen.ofNullable(fabricName);
-            return this;
+
+        public Builder fabricName(String fabricName) {
+            return fabricName(Output.of(fabricName));
         }
+
         public Builder properties(@Nullable Output<FabricCreationInputPropertiesArgs> properties) {
-            this.properties = properties;
+            $.properties = properties;
             return this;
         }
-        public Builder properties(@Nullable FabricCreationInputPropertiesArgs properties) {
-            this.properties = Codegen.ofNullable(properties);
-            return this;
+
+        public Builder properties(FabricCreationInputPropertiesArgs properties) {
+            return properties(Output.of(properties));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder resourceName(Output<String> resourceName) {
-            this.resourceName = Objects.requireNonNull(resourceName);
+            $.resourceName = resourceName;
             return this;
         }
+
         public Builder resourceName(String resourceName) {
-            this.resourceName = Output.of(Objects.requireNonNull(resourceName));
-            return this;
-        }        public ReplicationFabricArgs build() {
-            return new ReplicationFabricArgs(fabricName, properties, resourceGroupName, resourceName);
+            return resourceName(Output.of(resourceName));
+        }
+
+        public ReplicationFabricArgs build() {
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.resourceName = Objects.requireNonNull($.resourceName, "expected parameter 'resourceName' to be non-null");
+            return $;
         }
     }
+
 }

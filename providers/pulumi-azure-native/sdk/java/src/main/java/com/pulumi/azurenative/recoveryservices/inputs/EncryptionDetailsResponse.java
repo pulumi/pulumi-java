@@ -23,10 +23,10 @@ public final class EncryptionDetailsResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="kekCertExpiryDate")
-      private final @Nullable String kekCertExpiryDate;
+    private @Nullable String kekCertExpiryDate;
 
     public Optional<String> kekCertExpiryDate() {
-        return this.kekCertExpiryDate == null ? Optional.empty() : Optional.ofNullable(this.kekCertExpiryDate);
+        return Optional.ofNullable(this.kekCertExpiryDate);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class EncryptionDetailsResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="kekCertThumbprint")
-      private final @Nullable String kekCertThumbprint;
+    private @Nullable String kekCertThumbprint;
 
     public Optional<String> kekCertThumbprint() {
-        return this.kekCertThumbprint == null ? Optional.empty() : Optional.ofNullable(this.kekCertThumbprint);
+        return Optional.ofNullable(this.kekCertThumbprint);
     }
 
     /**
@@ -45,64 +45,56 @@ public final class EncryptionDetailsResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="kekState")
-      private final @Nullable String kekState;
+    private @Nullable String kekState;
 
     public Optional<String> kekState() {
-        return this.kekState == null ? Optional.empty() : Optional.ofNullable(this.kekState);
+        return Optional.ofNullable(this.kekState);
     }
 
-    public EncryptionDetailsResponse(
-        @Nullable String kekCertExpiryDate,
-        @Nullable String kekCertThumbprint,
-        @Nullable String kekState) {
-        this.kekCertExpiryDate = kekCertExpiryDate;
-        this.kekCertThumbprint = kekCertThumbprint;
-        this.kekState = kekState;
-    }
+    private EncryptionDetailsResponse() {}
 
-    private EncryptionDetailsResponse() {
-        this.kekCertExpiryDate = null;
-        this.kekCertThumbprint = null;
-        this.kekState = null;
+    private EncryptionDetailsResponse(EncryptionDetailsResponse $) {
+        this.kekCertExpiryDate = $.kekCertExpiryDate;
+        this.kekCertThumbprint = $.kekCertThumbprint;
+        this.kekState = $.kekState;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EncryptionDetailsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String kekCertExpiryDate;
-        private @Nullable String kekCertThumbprint;
-        private @Nullable String kekState;
+        private EncryptionDetailsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new EncryptionDetailsResponse();
         }
 
         public Builder(EncryptionDetailsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.kekCertExpiryDate = defaults.kekCertExpiryDate;
-    	      this.kekCertThumbprint = defaults.kekCertThumbprint;
-    	      this.kekState = defaults.kekState;
+            $ = new EncryptionDetailsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder kekCertExpiryDate(@Nullable String kekCertExpiryDate) {
-            this.kekCertExpiryDate = kekCertExpiryDate;
+            $.kekCertExpiryDate = kekCertExpiryDate;
             return this;
         }
+
         public Builder kekCertThumbprint(@Nullable String kekCertThumbprint) {
-            this.kekCertThumbprint = kekCertThumbprint;
+            $.kekCertThumbprint = kekCertThumbprint;
             return this;
         }
+
         public Builder kekState(@Nullable String kekState) {
-            this.kekState = kekState;
+            $.kekState = kekState;
             return this;
-        }        public EncryptionDetailsResponse build() {
-            return new EncryptionDetailsResponse(kekCertExpiryDate, kekCertThumbprint, kekState);
+        }
+
+        public EncryptionDetailsResponse build() {
+            return $;
         }
     }
+
 }

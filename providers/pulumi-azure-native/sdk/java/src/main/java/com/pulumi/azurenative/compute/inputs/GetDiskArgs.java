@@ -17,7 +17,7 @@ public final class GetDiskArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="diskName", required=true)
-      private final String diskName;
+    private String diskName;
 
     public String diskName() {
         return this.diskName;
@@ -28,55 +28,52 @@ public final class GetDiskArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public GetDiskArgs(
-        String diskName,
-        String resourceGroupName) {
-        this.diskName = Objects.requireNonNull(diskName, "expected parameter 'diskName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private GetDiskArgs() {}
 
-    private GetDiskArgs() {
-        this.diskName = null;
-        this.resourceGroupName = null;
+    private GetDiskArgs(GetDiskArgs $) {
+        this.diskName = $.diskName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetDiskArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String diskName;
-        private String resourceGroupName;
+        private GetDiskArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetDiskArgs();
         }
 
         public Builder(GetDiskArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.diskName = defaults.diskName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new GetDiskArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder diskName(String diskName) {
-            this.diskName = Objects.requireNonNull(diskName);
+            $.diskName = diskName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public GetDiskArgs build() {
-            return new GetDiskArgs(diskName, resourceGroupName);
+        }
+
+        public GetDiskArgs build() {
+            $.diskName = Objects.requireNonNull($.diskName, "expected parameter 'diskName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

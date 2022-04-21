@@ -8,12 +8,12 @@ import com.pulumi.aws.mwaa.inputs.EnvironmentLoggingConfigurationGetArgs;
 import com.pulumi.aws.mwaa.inputs.EnvironmentNetworkConfigurationGetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class EnvironmentState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="airflowConfigurationOptions")
-      private final @Nullable Output<Map<String,String>> airflowConfigurationOptions;
+    private @Nullable Output<Map<String,String>> airflowConfigurationOptions;
 
-    public Output<Map<String,String>> airflowConfigurationOptions() {
-        return this.airflowConfigurationOptions == null ? Codegen.empty() : this.airflowConfigurationOptions;
+    public Optional<Output<Map<String,String>>> airflowConfigurationOptions() {
+        return Optional.ofNullable(this.airflowConfigurationOptions);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class EnvironmentState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="airflowVersion")
-      private final @Nullable Output<String> airflowVersion;
+    private @Nullable Output<String> airflowVersion;
 
-    public Output<String> airflowVersion() {
-        return this.airflowVersion == null ? Codegen.empty() : this.airflowVersion;
+    public Optional<Output<String>> airflowVersion() {
+        return Optional.ofNullable(this.airflowVersion);
     }
 
     /**
@@ -48,10 +48,10 @@ public final class EnvironmentState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="arn")
-      private final @Nullable Output<String> arn;
+    private @Nullable Output<String> arn;
 
-    public Output<String> arn() {
-        return this.arn == null ? Codegen.empty() : this.arn;
+    public Optional<Output<String>> arn() {
+        return Optional.ofNullable(this.arn);
     }
 
     /**
@@ -60,10 +60,10 @@ public final class EnvironmentState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="createdAt")
-      private final @Nullable Output<String> createdAt;
+    private @Nullable Output<String> createdAt;
 
-    public Output<String> createdAt() {
-        return this.createdAt == null ? Codegen.empty() : this.createdAt;
+    public Optional<Output<String>> createdAt() {
+        return Optional.ofNullable(this.createdAt);
     }
 
     /**
@@ -71,10 +71,10 @@ public final class EnvironmentState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="dagS3Path")
-      private final @Nullable Output<String> dagS3Path;
+    private @Nullable Output<String> dagS3Path;
 
-    public Output<String> dagS3Path() {
-        return this.dagS3Path == null ? Codegen.empty() : this.dagS3Path;
+    public Optional<Output<String>> dagS3Path() {
+        return Optional.ofNullable(this.dagS3Path);
     }
 
     /**
@@ -82,10 +82,10 @@ public final class EnvironmentState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="environmentClass")
-      private final @Nullable Output<String> environmentClass;
+    private @Nullable Output<String> environmentClass;
 
-    public Output<String> environmentClass() {
-        return this.environmentClass == null ? Codegen.empty() : this.environmentClass;
+    public Optional<Output<String>> environmentClass() {
+        return Optional.ofNullable(this.environmentClass);
     }
 
     /**
@@ -93,10 +93,10 @@ public final class EnvironmentState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="executionRoleArn")
-      private final @Nullable Output<String> executionRoleArn;
+    private @Nullable Output<String> executionRoleArn;
 
-    public Output<String> executionRoleArn() {
-        return this.executionRoleArn == null ? Codegen.empty() : this.executionRoleArn;
+    public Optional<Output<String>> executionRoleArn() {
+        return Optional.ofNullable(this.executionRoleArn);
     }
 
     /**
@@ -104,17 +104,17 @@ public final class EnvironmentState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="kmsKey")
-      private final @Nullable Output<String> kmsKey;
+    private @Nullable Output<String> kmsKey;
 
-    public Output<String> kmsKey() {
-        return this.kmsKey == null ? Codegen.empty() : this.kmsKey;
+    public Optional<Output<String>> kmsKey() {
+        return Optional.ofNullable(this.kmsKey);
     }
 
     @Import(name="lastUpdateds")
-      private final @Nullable Output<List<EnvironmentLastUpdatedGetArgs>> lastUpdateds;
+    private @Nullable Output<List<EnvironmentLastUpdatedGetArgs>> lastUpdateds;
 
-    public Output<List<EnvironmentLastUpdatedGetArgs>> lastUpdateds() {
-        return this.lastUpdateds == null ? Codegen.empty() : this.lastUpdateds;
+    public Optional<Output<List<EnvironmentLastUpdatedGetArgs>>> lastUpdateds() {
+        return Optional.ofNullable(this.lastUpdateds);
     }
 
     /**
@@ -122,10 +122,10 @@ public final class EnvironmentState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="loggingConfiguration")
-      private final @Nullable Output<EnvironmentLoggingConfigurationGetArgs> loggingConfiguration;
+    private @Nullable Output<EnvironmentLoggingConfigurationGetArgs> loggingConfiguration;
 
-    public Output<EnvironmentLoggingConfigurationGetArgs> loggingConfiguration() {
-        return this.loggingConfiguration == null ? Codegen.empty() : this.loggingConfiguration;
+    public Optional<Output<EnvironmentLoggingConfigurationGetArgs>> loggingConfiguration() {
+        return Optional.ofNullable(this.loggingConfiguration);
     }
 
     /**
@@ -133,10 +133,10 @@ public final class EnvironmentState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="maxWorkers")
-      private final @Nullable Output<Integer> maxWorkers;
+    private @Nullable Output<Integer> maxWorkers;
 
-    public Output<Integer> maxWorkers() {
-        return this.maxWorkers == null ? Codegen.empty() : this.maxWorkers;
+    public Optional<Output<Integer>> maxWorkers() {
+        return Optional.ofNullable(this.maxWorkers);
     }
 
     /**
@@ -144,10 +144,10 @@ public final class EnvironmentState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="minWorkers")
-      private final @Nullable Output<Integer> minWorkers;
+    private @Nullable Output<Integer> minWorkers;
 
-    public Output<Integer> minWorkers() {
-        return this.minWorkers == null ? Codegen.empty() : this.minWorkers;
+    public Optional<Output<Integer>> minWorkers() {
+        return Optional.ofNullable(this.minWorkers);
     }
 
     /**
@@ -155,10 +155,10 @@ public final class EnvironmentState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -166,10 +166,10 @@ public final class EnvironmentState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="networkConfiguration")
-      private final @Nullable Output<EnvironmentNetworkConfigurationGetArgs> networkConfiguration;
+    private @Nullable Output<EnvironmentNetworkConfigurationGetArgs> networkConfiguration;
 
-    public Output<EnvironmentNetworkConfigurationGetArgs> networkConfiguration() {
-        return this.networkConfiguration == null ? Codegen.empty() : this.networkConfiguration;
+    public Optional<Output<EnvironmentNetworkConfigurationGetArgs>> networkConfiguration() {
+        return Optional.ofNullable(this.networkConfiguration);
     }
 
     /**
@@ -177,10 +177,10 @@ public final class EnvironmentState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="pluginsS3ObjectVersion")
-      private final @Nullable Output<String> pluginsS3ObjectVersion;
+    private @Nullable Output<String> pluginsS3ObjectVersion;
 
-    public Output<String> pluginsS3ObjectVersion() {
-        return this.pluginsS3ObjectVersion == null ? Codegen.empty() : this.pluginsS3ObjectVersion;
+    public Optional<Output<String>> pluginsS3ObjectVersion() {
+        return Optional.ofNullable(this.pluginsS3ObjectVersion);
     }
 
     /**
@@ -188,10 +188,10 @@ public final class EnvironmentState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="pluginsS3Path")
-      private final @Nullable Output<String> pluginsS3Path;
+    private @Nullable Output<String> pluginsS3Path;
 
-    public Output<String> pluginsS3Path() {
-        return this.pluginsS3Path == null ? Codegen.empty() : this.pluginsS3Path;
+    public Optional<Output<String>> pluginsS3Path() {
+        return Optional.ofNullable(this.pluginsS3Path);
     }
 
     /**
@@ -199,10 +199,10 @@ public final class EnvironmentState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="requirementsS3ObjectVersion")
-      private final @Nullable Output<String> requirementsS3ObjectVersion;
+    private @Nullable Output<String> requirementsS3ObjectVersion;
 
-    public Output<String> requirementsS3ObjectVersion() {
-        return this.requirementsS3ObjectVersion == null ? Codegen.empty() : this.requirementsS3ObjectVersion;
+    public Optional<Output<String>> requirementsS3ObjectVersion() {
+        return Optional.ofNullable(this.requirementsS3ObjectVersion);
     }
 
     /**
@@ -210,10 +210,10 @@ public final class EnvironmentState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="requirementsS3Path")
-      private final @Nullable Output<String> requirementsS3Path;
+    private @Nullable Output<String> requirementsS3Path;
 
-    public Output<String> requirementsS3Path() {
-        return this.requirementsS3Path == null ? Codegen.empty() : this.requirementsS3Path;
+    public Optional<Output<String>> requirementsS3Path() {
+        return Optional.ofNullable(this.requirementsS3Path);
     }
 
     /**
@@ -221,10 +221,10 @@ public final class EnvironmentState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="serviceRoleArn")
-      private final @Nullable Output<String> serviceRoleArn;
+    private @Nullable Output<String> serviceRoleArn;
 
-    public Output<String> serviceRoleArn() {
-        return this.serviceRoleArn == null ? Codegen.empty() : this.serviceRoleArn;
+    public Optional<Output<String>> serviceRoleArn() {
+        return Optional.ofNullable(this.serviceRoleArn);
     }
 
     /**
@@ -232,10 +232,10 @@ public final class EnvironmentState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="sourceBucketArn")
-      private final @Nullable Output<String> sourceBucketArn;
+    private @Nullable Output<String> sourceBucketArn;
 
-    public Output<String> sourceBucketArn() {
-        return this.sourceBucketArn == null ? Codegen.empty() : this.sourceBucketArn;
+    public Optional<Output<String>> sourceBucketArn() {
+        return Optional.ofNullable(this.sourceBucketArn);
     }
 
     /**
@@ -243,10 +243,10 @@ public final class EnvironmentState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="status")
-      private final @Nullable Output<String> status;
+    private @Nullable Output<String> status;
 
-    public Output<String> status() {
-        return this.status == null ? Codegen.empty() : this.status;
+    public Optional<Output<String>> status() {
+        return Optional.ofNullable(this.status);
     }
 
     /**
@@ -254,10 +254,10 @@ public final class EnvironmentState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -265,10 +265,10 @@ public final class EnvironmentState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tagsAll")
-      private final @Nullable Output<Map<String,String>> tagsAll;
+    private @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> tagsAll() {
-        return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
+    public Optional<Output<Map<String,String>>> tagsAll() {
+        return Optional.ofNullable(this.tagsAll);
     }
 
     /**
@@ -276,10 +276,10 @@ public final class EnvironmentState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="webserverAccessMode")
-      private final @Nullable Output<String> webserverAccessMode;
+    private @Nullable Output<String> webserverAccessMode;
 
-    public Output<String> webserverAccessMode() {
-        return this.webserverAccessMode == null ? Codegen.empty() : this.webserverAccessMode;
+    public Optional<Output<String>> webserverAccessMode() {
+        return Optional.ofNullable(this.webserverAccessMode);
     }
 
     /**
@@ -287,10 +287,10 @@ public final class EnvironmentState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="webserverUrl")
-      private final @Nullable Output<String> webserverUrl;
+    private @Nullable Output<String> webserverUrl;
 
-    public Output<String> webserverUrl() {
-        return this.webserverUrl == null ? Codegen.empty() : this.webserverUrl;
+    public Optional<Output<String>> webserverUrl() {
+        return Optional.ofNullable(this.webserverUrl);
     }
 
     /**
@@ -298,378 +298,302 @@ public final class EnvironmentState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="weeklyMaintenanceWindowStart")
-      private final @Nullable Output<String> weeklyMaintenanceWindowStart;
+    private @Nullable Output<String> weeklyMaintenanceWindowStart;
 
-    public Output<String> weeklyMaintenanceWindowStart() {
-        return this.weeklyMaintenanceWindowStart == null ? Codegen.empty() : this.weeklyMaintenanceWindowStart;
+    public Optional<Output<String>> weeklyMaintenanceWindowStart() {
+        return Optional.ofNullable(this.weeklyMaintenanceWindowStart);
     }
 
-    public EnvironmentState(
-        @Nullable Output<Map<String,String>> airflowConfigurationOptions,
-        @Nullable Output<String> airflowVersion,
-        @Nullable Output<String> arn,
-        @Nullable Output<String> createdAt,
-        @Nullable Output<String> dagS3Path,
-        @Nullable Output<String> environmentClass,
-        @Nullable Output<String> executionRoleArn,
-        @Nullable Output<String> kmsKey,
-        @Nullable Output<List<EnvironmentLastUpdatedGetArgs>> lastUpdateds,
-        @Nullable Output<EnvironmentLoggingConfigurationGetArgs> loggingConfiguration,
-        @Nullable Output<Integer> maxWorkers,
-        @Nullable Output<Integer> minWorkers,
-        @Nullable Output<String> name,
-        @Nullable Output<EnvironmentNetworkConfigurationGetArgs> networkConfiguration,
-        @Nullable Output<String> pluginsS3ObjectVersion,
-        @Nullable Output<String> pluginsS3Path,
-        @Nullable Output<String> requirementsS3ObjectVersion,
-        @Nullable Output<String> requirementsS3Path,
-        @Nullable Output<String> serviceRoleArn,
-        @Nullable Output<String> sourceBucketArn,
-        @Nullable Output<String> status,
-        @Nullable Output<Map<String,String>> tags,
-        @Nullable Output<Map<String,String>> tagsAll,
-        @Nullable Output<String> webserverAccessMode,
-        @Nullable Output<String> webserverUrl,
-        @Nullable Output<String> weeklyMaintenanceWindowStart) {
-        this.airflowConfigurationOptions = airflowConfigurationOptions;
-        this.airflowVersion = airflowVersion;
-        this.arn = arn;
-        this.createdAt = createdAt;
-        this.dagS3Path = dagS3Path;
-        this.environmentClass = environmentClass;
-        this.executionRoleArn = executionRoleArn;
-        this.kmsKey = kmsKey;
-        this.lastUpdateds = lastUpdateds;
-        this.loggingConfiguration = loggingConfiguration;
-        this.maxWorkers = maxWorkers;
-        this.minWorkers = minWorkers;
-        this.name = name;
-        this.networkConfiguration = networkConfiguration;
-        this.pluginsS3ObjectVersion = pluginsS3ObjectVersion;
-        this.pluginsS3Path = pluginsS3Path;
-        this.requirementsS3ObjectVersion = requirementsS3ObjectVersion;
-        this.requirementsS3Path = requirementsS3Path;
-        this.serviceRoleArn = serviceRoleArn;
-        this.sourceBucketArn = sourceBucketArn;
-        this.status = status;
-        this.tags = tags;
-        this.tagsAll = tagsAll;
-        this.webserverAccessMode = webserverAccessMode;
-        this.webserverUrl = webserverUrl;
-        this.weeklyMaintenanceWindowStart = weeklyMaintenanceWindowStart;
-    }
+    private EnvironmentState() {}
 
-    private EnvironmentState() {
-        this.airflowConfigurationOptions = Codegen.empty();
-        this.airflowVersion = Codegen.empty();
-        this.arn = Codegen.empty();
-        this.createdAt = Codegen.empty();
-        this.dagS3Path = Codegen.empty();
-        this.environmentClass = Codegen.empty();
-        this.executionRoleArn = Codegen.empty();
-        this.kmsKey = Codegen.empty();
-        this.lastUpdateds = Codegen.empty();
-        this.loggingConfiguration = Codegen.empty();
-        this.maxWorkers = Codegen.empty();
-        this.minWorkers = Codegen.empty();
-        this.name = Codegen.empty();
-        this.networkConfiguration = Codegen.empty();
-        this.pluginsS3ObjectVersion = Codegen.empty();
-        this.pluginsS3Path = Codegen.empty();
-        this.requirementsS3ObjectVersion = Codegen.empty();
-        this.requirementsS3Path = Codegen.empty();
-        this.serviceRoleArn = Codegen.empty();
-        this.sourceBucketArn = Codegen.empty();
-        this.status = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.tagsAll = Codegen.empty();
-        this.webserverAccessMode = Codegen.empty();
-        this.webserverUrl = Codegen.empty();
-        this.weeklyMaintenanceWindowStart = Codegen.empty();
+    private EnvironmentState(EnvironmentState $) {
+        this.airflowConfigurationOptions = $.airflowConfigurationOptions;
+        this.airflowVersion = $.airflowVersion;
+        this.arn = $.arn;
+        this.createdAt = $.createdAt;
+        this.dagS3Path = $.dagS3Path;
+        this.environmentClass = $.environmentClass;
+        this.executionRoleArn = $.executionRoleArn;
+        this.kmsKey = $.kmsKey;
+        this.lastUpdateds = $.lastUpdateds;
+        this.loggingConfiguration = $.loggingConfiguration;
+        this.maxWorkers = $.maxWorkers;
+        this.minWorkers = $.minWorkers;
+        this.name = $.name;
+        this.networkConfiguration = $.networkConfiguration;
+        this.pluginsS3ObjectVersion = $.pluginsS3ObjectVersion;
+        this.pluginsS3Path = $.pluginsS3Path;
+        this.requirementsS3ObjectVersion = $.requirementsS3ObjectVersion;
+        this.requirementsS3Path = $.requirementsS3Path;
+        this.serviceRoleArn = $.serviceRoleArn;
+        this.sourceBucketArn = $.sourceBucketArn;
+        this.status = $.status;
+        this.tags = $.tags;
+        this.tagsAll = $.tagsAll;
+        this.webserverAccessMode = $.webserverAccessMode;
+        this.webserverUrl = $.webserverUrl;
+        this.weeklyMaintenanceWindowStart = $.weeklyMaintenanceWindowStart;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EnvironmentState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Map<String,String>> airflowConfigurationOptions;
-        private @Nullable Output<String> airflowVersion;
-        private @Nullable Output<String> arn;
-        private @Nullable Output<String> createdAt;
-        private @Nullable Output<String> dagS3Path;
-        private @Nullable Output<String> environmentClass;
-        private @Nullable Output<String> executionRoleArn;
-        private @Nullable Output<String> kmsKey;
-        private @Nullable Output<List<EnvironmentLastUpdatedGetArgs>> lastUpdateds;
-        private @Nullable Output<EnvironmentLoggingConfigurationGetArgs> loggingConfiguration;
-        private @Nullable Output<Integer> maxWorkers;
-        private @Nullable Output<Integer> minWorkers;
-        private @Nullable Output<String> name;
-        private @Nullable Output<EnvironmentNetworkConfigurationGetArgs> networkConfiguration;
-        private @Nullable Output<String> pluginsS3ObjectVersion;
-        private @Nullable Output<String> pluginsS3Path;
-        private @Nullable Output<String> requirementsS3ObjectVersion;
-        private @Nullable Output<String> requirementsS3Path;
-        private @Nullable Output<String> serviceRoleArn;
-        private @Nullable Output<String> sourceBucketArn;
-        private @Nullable Output<String> status;
-        private @Nullable Output<Map<String,String>> tags;
-        private @Nullable Output<Map<String,String>> tagsAll;
-        private @Nullable Output<String> webserverAccessMode;
-        private @Nullable Output<String> webserverUrl;
-        private @Nullable Output<String> weeklyMaintenanceWindowStart;
+        private EnvironmentState $;
 
         public Builder() {
-    	      // Empty
+            $ = new EnvironmentState();
         }
 
         public Builder(EnvironmentState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.airflowConfigurationOptions = defaults.airflowConfigurationOptions;
-    	      this.airflowVersion = defaults.airflowVersion;
-    	      this.arn = defaults.arn;
-    	      this.createdAt = defaults.createdAt;
-    	      this.dagS3Path = defaults.dagS3Path;
-    	      this.environmentClass = defaults.environmentClass;
-    	      this.executionRoleArn = defaults.executionRoleArn;
-    	      this.kmsKey = defaults.kmsKey;
-    	      this.lastUpdateds = defaults.lastUpdateds;
-    	      this.loggingConfiguration = defaults.loggingConfiguration;
-    	      this.maxWorkers = defaults.maxWorkers;
-    	      this.minWorkers = defaults.minWorkers;
-    	      this.name = defaults.name;
-    	      this.networkConfiguration = defaults.networkConfiguration;
-    	      this.pluginsS3ObjectVersion = defaults.pluginsS3ObjectVersion;
-    	      this.pluginsS3Path = defaults.pluginsS3Path;
-    	      this.requirementsS3ObjectVersion = defaults.requirementsS3ObjectVersion;
-    	      this.requirementsS3Path = defaults.requirementsS3Path;
-    	      this.serviceRoleArn = defaults.serviceRoleArn;
-    	      this.sourceBucketArn = defaults.sourceBucketArn;
-    	      this.status = defaults.status;
-    	      this.tags = defaults.tags;
-    	      this.tagsAll = defaults.tagsAll;
-    	      this.webserverAccessMode = defaults.webserverAccessMode;
-    	      this.webserverUrl = defaults.webserverUrl;
-    	      this.weeklyMaintenanceWindowStart = defaults.weeklyMaintenanceWindowStart;
+            $ = new EnvironmentState(Objects.requireNonNull(defaults));
         }
 
         public Builder airflowConfigurationOptions(@Nullable Output<Map<String,String>> airflowConfigurationOptions) {
-            this.airflowConfigurationOptions = airflowConfigurationOptions;
+            $.airflowConfigurationOptions = airflowConfigurationOptions;
             return this;
         }
-        public Builder airflowConfigurationOptions(@Nullable Map<String,String> airflowConfigurationOptions) {
-            this.airflowConfigurationOptions = Codegen.ofNullable(airflowConfigurationOptions);
-            return this;
+
+        public Builder airflowConfigurationOptions(Map<String,String> airflowConfigurationOptions) {
+            return airflowConfigurationOptions(Output.of(airflowConfigurationOptions));
         }
+
         public Builder airflowVersion(@Nullable Output<String> airflowVersion) {
-            this.airflowVersion = airflowVersion;
+            $.airflowVersion = airflowVersion;
             return this;
         }
-        public Builder airflowVersion(@Nullable String airflowVersion) {
-            this.airflowVersion = Codegen.ofNullable(airflowVersion);
-            return this;
+
+        public Builder airflowVersion(String airflowVersion) {
+            return airflowVersion(Output.of(airflowVersion));
         }
+
         public Builder arn(@Nullable Output<String> arn) {
-            this.arn = arn;
+            $.arn = arn;
             return this;
         }
-        public Builder arn(@Nullable String arn) {
-            this.arn = Codegen.ofNullable(arn);
-            return this;
+
+        public Builder arn(String arn) {
+            return arn(Output.of(arn));
         }
+
         public Builder createdAt(@Nullable Output<String> createdAt) {
-            this.createdAt = createdAt;
+            $.createdAt = createdAt;
             return this;
         }
-        public Builder createdAt(@Nullable String createdAt) {
-            this.createdAt = Codegen.ofNullable(createdAt);
-            return this;
+
+        public Builder createdAt(String createdAt) {
+            return createdAt(Output.of(createdAt));
         }
+
         public Builder dagS3Path(@Nullable Output<String> dagS3Path) {
-            this.dagS3Path = dagS3Path;
+            $.dagS3Path = dagS3Path;
             return this;
         }
-        public Builder dagS3Path(@Nullable String dagS3Path) {
-            this.dagS3Path = Codegen.ofNullable(dagS3Path);
-            return this;
+
+        public Builder dagS3Path(String dagS3Path) {
+            return dagS3Path(Output.of(dagS3Path));
         }
+
         public Builder environmentClass(@Nullable Output<String> environmentClass) {
-            this.environmentClass = environmentClass;
+            $.environmentClass = environmentClass;
             return this;
         }
-        public Builder environmentClass(@Nullable String environmentClass) {
-            this.environmentClass = Codegen.ofNullable(environmentClass);
-            return this;
+
+        public Builder environmentClass(String environmentClass) {
+            return environmentClass(Output.of(environmentClass));
         }
+
         public Builder executionRoleArn(@Nullable Output<String> executionRoleArn) {
-            this.executionRoleArn = executionRoleArn;
+            $.executionRoleArn = executionRoleArn;
             return this;
         }
-        public Builder executionRoleArn(@Nullable String executionRoleArn) {
-            this.executionRoleArn = Codegen.ofNullable(executionRoleArn);
-            return this;
+
+        public Builder executionRoleArn(String executionRoleArn) {
+            return executionRoleArn(Output.of(executionRoleArn));
         }
+
         public Builder kmsKey(@Nullable Output<String> kmsKey) {
-            this.kmsKey = kmsKey;
+            $.kmsKey = kmsKey;
             return this;
         }
-        public Builder kmsKey(@Nullable String kmsKey) {
-            this.kmsKey = Codegen.ofNullable(kmsKey);
-            return this;
+
+        public Builder kmsKey(String kmsKey) {
+            return kmsKey(Output.of(kmsKey));
         }
+
         public Builder lastUpdateds(@Nullable Output<List<EnvironmentLastUpdatedGetArgs>> lastUpdateds) {
-            this.lastUpdateds = lastUpdateds;
+            $.lastUpdateds = lastUpdateds;
             return this;
         }
-        public Builder lastUpdateds(@Nullable List<EnvironmentLastUpdatedGetArgs> lastUpdateds) {
-            this.lastUpdateds = Codegen.ofNullable(lastUpdateds);
-            return this;
+
+        public Builder lastUpdateds(List<EnvironmentLastUpdatedGetArgs> lastUpdateds) {
+            return lastUpdateds(Output.of(lastUpdateds));
         }
+
         public Builder lastUpdateds(EnvironmentLastUpdatedGetArgs... lastUpdateds) {
             return lastUpdateds(List.of(lastUpdateds));
         }
+
         public Builder loggingConfiguration(@Nullable Output<EnvironmentLoggingConfigurationGetArgs> loggingConfiguration) {
-            this.loggingConfiguration = loggingConfiguration;
+            $.loggingConfiguration = loggingConfiguration;
             return this;
         }
-        public Builder loggingConfiguration(@Nullable EnvironmentLoggingConfigurationGetArgs loggingConfiguration) {
-            this.loggingConfiguration = Codegen.ofNullable(loggingConfiguration);
-            return this;
+
+        public Builder loggingConfiguration(EnvironmentLoggingConfigurationGetArgs loggingConfiguration) {
+            return loggingConfiguration(Output.of(loggingConfiguration));
         }
+
         public Builder maxWorkers(@Nullable Output<Integer> maxWorkers) {
-            this.maxWorkers = maxWorkers;
+            $.maxWorkers = maxWorkers;
             return this;
         }
-        public Builder maxWorkers(@Nullable Integer maxWorkers) {
-            this.maxWorkers = Codegen.ofNullable(maxWorkers);
-            return this;
+
+        public Builder maxWorkers(Integer maxWorkers) {
+            return maxWorkers(Output.of(maxWorkers));
         }
+
         public Builder minWorkers(@Nullable Output<Integer> minWorkers) {
-            this.minWorkers = minWorkers;
+            $.minWorkers = minWorkers;
             return this;
         }
-        public Builder minWorkers(@Nullable Integer minWorkers) {
-            this.minWorkers = Codegen.ofNullable(minWorkers);
-            return this;
+
+        public Builder minWorkers(Integer minWorkers) {
+            return minWorkers(Output.of(minWorkers));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder networkConfiguration(@Nullable Output<EnvironmentNetworkConfigurationGetArgs> networkConfiguration) {
-            this.networkConfiguration = networkConfiguration;
+            $.networkConfiguration = networkConfiguration;
             return this;
         }
-        public Builder networkConfiguration(@Nullable EnvironmentNetworkConfigurationGetArgs networkConfiguration) {
-            this.networkConfiguration = Codegen.ofNullable(networkConfiguration);
-            return this;
+
+        public Builder networkConfiguration(EnvironmentNetworkConfigurationGetArgs networkConfiguration) {
+            return networkConfiguration(Output.of(networkConfiguration));
         }
+
         public Builder pluginsS3ObjectVersion(@Nullable Output<String> pluginsS3ObjectVersion) {
-            this.pluginsS3ObjectVersion = pluginsS3ObjectVersion;
+            $.pluginsS3ObjectVersion = pluginsS3ObjectVersion;
             return this;
         }
-        public Builder pluginsS3ObjectVersion(@Nullable String pluginsS3ObjectVersion) {
-            this.pluginsS3ObjectVersion = Codegen.ofNullable(pluginsS3ObjectVersion);
-            return this;
+
+        public Builder pluginsS3ObjectVersion(String pluginsS3ObjectVersion) {
+            return pluginsS3ObjectVersion(Output.of(pluginsS3ObjectVersion));
         }
+
         public Builder pluginsS3Path(@Nullable Output<String> pluginsS3Path) {
-            this.pluginsS3Path = pluginsS3Path;
+            $.pluginsS3Path = pluginsS3Path;
             return this;
         }
-        public Builder pluginsS3Path(@Nullable String pluginsS3Path) {
-            this.pluginsS3Path = Codegen.ofNullable(pluginsS3Path);
-            return this;
+
+        public Builder pluginsS3Path(String pluginsS3Path) {
+            return pluginsS3Path(Output.of(pluginsS3Path));
         }
+
         public Builder requirementsS3ObjectVersion(@Nullable Output<String> requirementsS3ObjectVersion) {
-            this.requirementsS3ObjectVersion = requirementsS3ObjectVersion;
+            $.requirementsS3ObjectVersion = requirementsS3ObjectVersion;
             return this;
         }
-        public Builder requirementsS3ObjectVersion(@Nullable String requirementsS3ObjectVersion) {
-            this.requirementsS3ObjectVersion = Codegen.ofNullable(requirementsS3ObjectVersion);
-            return this;
+
+        public Builder requirementsS3ObjectVersion(String requirementsS3ObjectVersion) {
+            return requirementsS3ObjectVersion(Output.of(requirementsS3ObjectVersion));
         }
+
         public Builder requirementsS3Path(@Nullable Output<String> requirementsS3Path) {
-            this.requirementsS3Path = requirementsS3Path;
+            $.requirementsS3Path = requirementsS3Path;
             return this;
         }
-        public Builder requirementsS3Path(@Nullable String requirementsS3Path) {
-            this.requirementsS3Path = Codegen.ofNullable(requirementsS3Path);
-            return this;
+
+        public Builder requirementsS3Path(String requirementsS3Path) {
+            return requirementsS3Path(Output.of(requirementsS3Path));
         }
+
         public Builder serviceRoleArn(@Nullable Output<String> serviceRoleArn) {
-            this.serviceRoleArn = serviceRoleArn;
+            $.serviceRoleArn = serviceRoleArn;
             return this;
         }
-        public Builder serviceRoleArn(@Nullable String serviceRoleArn) {
-            this.serviceRoleArn = Codegen.ofNullable(serviceRoleArn);
-            return this;
+
+        public Builder serviceRoleArn(String serviceRoleArn) {
+            return serviceRoleArn(Output.of(serviceRoleArn));
         }
+
         public Builder sourceBucketArn(@Nullable Output<String> sourceBucketArn) {
-            this.sourceBucketArn = sourceBucketArn;
+            $.sourceBucketArn = sourceBucketArn;
             return this;
         }
-        public Builder sourceBucketArn(@Nullable String sourceBucketArn) {
-            this.sourceBucketArn = Codegen.ofNullable(sourceBucketArn);
-            return this;
+
+        public Builder sourceBucketArn(String sourceBucketArn) {
+            return sourceBucketArn(Output.of(sourceBucketArn));
         }
+
         public Builder status(@Nullable Output<String> status) {
-            this.status = status;
+            $.status = status;
             return this;
         }
-        public Builder status(@Nullable String status) {
-            this.status = Codegen.ofNullable(status);
-            return this;
+
+        public Builder status(String status) {
+            return status(Output.of(status));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
-            this.tagsAll = tagsAll;
+            $.tagsAll = tagsAll;
             return this;
         }
-        public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Codegen.ofNullable(tagsAll);
-            return this;
+
+        public Builder tagsAll(Map<String,String> tagsAll) {
+            return tagsAll(Output.of(tagsAll));
         }
+
         public Builder webserverAccessMode(@Nullable Output<String> webserverAccessMode) {
-            this.webserverAccessMode = webserverAccessMode;
+            $.webserverAccessMode = webserverAccessMode;
             return this;
         }
-        public Builder webserverAccessMode(@Nullable String webserverAccessMode) {
-            this.webserverAccessMode = Codegen.ofNullable(webserverAccessMode);
-            return this;
+
+        public Builder webserverAccessMode(String webserverAccessMode) {
+            return webserverAccessMode(Output.of(webserverAccessMode));
         }
+
         public Builder webserverUrl(@Nullable Output<String> webserverUrl) {
-            this.webserverUrl = webserverUrl;
+            $.webserverUrl = webserverUrl;
             return this;
         }
-        public Builder webserverUrl(@Nullable String webserverUrl) {
-            this.webserverUrl = Codegen.ofNullable(webserverUrl);
-            return this;
+
+        public Builder webserverUrl(String webserverUrl) {
+            return webserverUrl(Output.of(webserverUrl));
         }
+
         public Builder weeklyMaintenanceWindowStart(@Nullable Output<String> weeklyMaintenanceWindowStart) {
-            this.weeklyMaintenanceWindowStart = weeklyMaintenanceWindowStart;
+            $.weeklyMaintenanceWindowStart = weeklyMaintenanceWindowStart;
             return this;
         }
-        public Builder weeklyMaintenanceWindowStart(@Nullable String weeklyMaintenanceWindowStart) {
-            this.weeklyMaintenanceWindowStart = Codegen.ofNullable(weeklyMaintenanceWindowStart);
-            return this;
-        }        public EnvironmentState build() {
-            return new EnvironmentState(airflowConfigurationOptions, airflowVersion, arn, createdAt, dagS3Path, environmentClass, executionRoleArn, kmsKey, lastUpdateds, loggingConfiguration, maxWorkers, minWorkers, name, networkConfiguration, pluginsS3ObjectVersion, pluginsS3Path, requirementsS3ObjectVersion, requirementsS3Path, serviceRoleArn, sourceBucketArn, status, tags, tagsAll, webserverAccessMode, webserverUrl, weeklyMaintenanceWindowStart);
+
+        public Builder weeklyMaintenanceWindowStart(String weeklyMaintenanceWindowStart) {
+            return weeklyMaintenanceWindowStart(Output.of(weeklyMaintenanceWindowStart));
+        }
+
+        public EnvironmentState build() {
+            return $;
         }
     }
+
 }

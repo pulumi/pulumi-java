@@ -15,7 +15,7 @@ public final class GetPipelineDefinitionParameterObject extends com.pulumi.resou
     public static final GetPipelineDefinitionParameterObject Empty = new GetPipelineDefinitionParameterObject();
 
     @Import(name="attributes", required=true)
-      private final List<GetPipelineDefinitionParameterObjectAttribute> attributes;
+    private List<GetPipelineDefinitionParameterObjectAttribute> attributes;
 
     public List<GetPipelineDefinitionParameterObjectAttribute> attributes() {
         return this.attributes;
@@ -26,58 +26,56 @@ public final class GetPipelineDefinitionParameterObject extends com.pulumi.resou
      * 
      */
     @Import(name="id", required=true)
-      private final String id;
+    private String id;
 
     public String id() {
         return this.id;
     }
 
-    public GetPipelineDefinitionParameterObject(
-        List<GetPipelineDefinitionParameterObjectAttribute> attributes,
-        String id) {
-        this.attributes = Objects.requireNonNull(attributes, "expected parameter 'attributes' to be non-null");
-        this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
-    }
+    private GetPipelineDefinitionParameterObject() {}
 
-    private GetPipelineDefinitionParameterObject() {
-        this.attributes = List.of();
-        this.id = null;
+    private GetPipelineDefinitionParameterObject(GetPipelineDefinitionParameterObject $) {
+        this.attributes = $.attributes;
+        this.id = $.id;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetPipelineDefinitionParameterObject defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<GetPipelineDefinitionParameterObjectAttribute> attributes;
-        private String id;
+        private GetPipelineDefinitionParameterObject $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetPipelineDefinitionParameterObject();
         }
 
         public Builder(GetPipelineDefinitionParameterObject defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.attributes = defaults.attributes;
-    	      this.id = defaults.id;
+            $ = new GetPipelineDefinitionParameterObject(Objects.requireNonNull(defaults));
         }
 
         public Builder attributes(List<GetPipelineDefinitionParameterObjectAttribute> attributes) {
-            this.attributes = Objects.requireNonNull(attributes);
+            $.attributes = attributes;
             return this;
         }
+
         public Builder attributes(GetPipelineDefinitionParameterObjectAttribute... attributes) {
             return attributes(List.of(attributes));
         }
+
         public Builder id(String id) {
-            this.id = Objects.requireNonNull(id);
+            $.id = id;
             return this;
-        }        public GetPipelineDefinitionParameterObject build() {
-            return new GetPipelineDefinitionParameterObject(attributes, id);
+        }
+
+        public GetPipelineDefinitionParameterObject build() {
+            $.attributes = Objects.requireNonNull($.attributes, "expected parameter 'attributes' to be non-null");
+            $.id = Objects.requireNonNull($.id, "expected parameter 'id' to be non-null");
+            return $;
         }
     }
+
 }

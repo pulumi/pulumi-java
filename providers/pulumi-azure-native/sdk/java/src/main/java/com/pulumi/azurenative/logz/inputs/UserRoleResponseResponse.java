@@ -23,45 +23,44 @@ public final class UserRoleResponseResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="role")
-      private final @Nullable String role;
+    private @Nullable String role;
 
     public Optional<String> role() {
-        return this.role == null ? Optional.empty() : Optional.ofNullable(this.role);
+        return Optional.ofNullable(this.role);
     }
 
-    public UserRoleResponseResponse(@Nullable String role) {
-        this.role = role;
-    }
+    private UserRoleResponseResponse() {}
 
-    private UserRoleResponseResponse() {
-        this.role = null;
+    private UserRoleResponseResponse(UserRoleResponseResponse $) {
+        this.role = $.role;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(UserRoleResponseResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String role;
+        private UserRoleResponseResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new UserRoleResponseResponse();
         }
 
         public Builder(UserRoleResponseResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.role = defaults.role;
+            $ = new UserRoleResponseResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder role(@Nullable String role) {
-            this.role = role;
+            $.role = role;
             return this;
-        }        public UserRoleResponseResponse build() {
-            return new UserRoleResponseResponse(role);
+        }
+
+        public UserRoleResponseResponse build() {
+            return $;
         }
     }
+
 }

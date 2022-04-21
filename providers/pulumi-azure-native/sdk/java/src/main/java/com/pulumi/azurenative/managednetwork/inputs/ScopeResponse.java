@@ -24,10 +24,10 @@ public final class ScopeResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="managementGroups")
-      private final @Nullable List<ResourceIdResponse> managementGroups;
+    private @Nullable List<ResourceIdResponse> managementGroups;
 
-    public List<ResourceIdResponse> managementGroups() {
-        return this.managementGroups == null ? List.of() : this.managementGroups;
+    public Optional<List<ResourceIdResponse>> managementGroups() {
+        return Optional.ofNullable(this.managementGroups);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class ScopeResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="subnets")
-      private final @Nullable List<ResourceIdResponse> subnets;
+    private @Nullable List<ResourceIdResponse> subnets;
 
-    public List<ResourceIdResponse> subnets() {
-        return this.subnets == null ? List.of() : this.subnets;
+    public Optional<List<ResourceIdResponse>> subnets() {
+        return Optional.ofNullable(this.subnets);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class ScopeResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="subscriptions")
-      private final @Nullable List<ResourceIdResponse> subscriptions;
+    private @Nullable List<ResourceIdResponse> subscriptions;
 
-    public List<ResourceIdResponse> subscriptions() {
-        return this.subscriptions == null ? List.of() : this.subscriptions;
+    public Optional<List<ResourceIdResponse>> subscriptions() {
+        return Optional.ofNullable(this.subscriptions);
     }
 
     /**
@@ -57,85 +57,78 @@ public final class ScopeResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="virtualNetworks")
-      private final @Nullable List<ResourceIdResponse> virtualNetworks;
+    private @Nullable List<ResourceIdResponse> virtualNetworks;
 
-    public List<ResourceIdResponse> virtualNetworks() {
-        return this.virtualNetworks == null ? List.of() : this.virtualNetworks;
+    public Optional<List<ResourceIdResponse>> virtualNetworks() {
+        return Optional.ofNullable(this.virtualNetworks);
     }
 
-    public ScopeResponse(
-        @Nullable List<ResourceIdResponse> managementGroups,
-        @Nullable List<ResourceIdResponse> subnets,
-        @Nullable List<ResourceIdResponse> subscriptions,
-        @Nullable List<ResourceIdResponse> virtualNetworks) {
-        this.managementGroups = managementGroups;
-        this.subnets = subnets;
-        this.subscriptions = subscriptions;
-        this.virtualNetworks = virtualNetworks;
-    }
+    private ScopeResponse() {}
 
-    private ScopeResponse() {
-        this.managementGroups = List.of();
-        this.subnets = List.of();
-        this.subscriptions = List.of();
-        this.virtualNetworks = List.of();
+    private ScopeResponse(ScopeResponse $) {
+        this.managementGroups = $.managementGroups;
+        this.subnets = $.subnets;
+        this.subscriptions = $.subscriptions;
+        this.virtualNetworks = $.virtualNetworks;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ScopeResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<ResourceIdResponse> managementGroups;
-        private @Nullable List<ResourceIdResponse> subnets;
-        private @Nullable List<ResourceIdResponse> subscriptions;
-        private @Nullable List<ResourceIdResponse> virtualNetworks;
+        private ScopeResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ScopeResponse();
         }
 
         public Builder(ScopeResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.managementGroups = defaults.managementGroups;
-    	      this.subnets = defaults.subnets;
-    	      this.subscriptions = defaults.subscriptions;
-    	      this.virtualNetworks = defaults.virtualNetworks;
+            $ = new ScopeResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder managementGroups(@Nullable List<ResourceIdResponse> managementGroups) {
-            this.managementGroups = managementGroups;
+            $.managementGroups = managementGroups;
             return this;
         }
+
         public Builder managementGroups(ResourceIdResponse... managementGroups) {
             return managementGroups(List.of(managementGroups));
         }
+
         public Builder subnets(@Nullable List<ResourceIdResponse> subnets) {
-            this.subnets = subnets;
+            $.subnets = subnets;
             return this;
         }
+
         public Builder subnets(ResourceIdResponse... subnets) {
             return subnets(List.of(subnets));
         }
+
         public Builder subscriptions(@Nullable List<ResourceIdResponse> subscriptions) {
-            this.subscriptions = subscriptions;
+            $.subscriptions = subscriptions;
             return this;
         }
+
         public Builder subscriptions(ResourceIdResponse... subscriptions) {
             return subscriptions(List.of(subscriptions));
         }
+
         public Builder virtualNetworks(@Nullable List<ResourceIdResponse> virtualNetworks) {
-            this.virtualNetworks = virtualNetworks;
+            $.virtualNetworks = virtualNetworks;
             return this;
         }
+
         public Builder virtualNetworks(ResourceIdResponse... virtualNetworks) {
             return virtualNetworks(List.of(virtualNetworks));
-        }        public ScopeResponse build() {
-            return new ScopeResponse(managementGroups, subnets, subscriptions, virtualNetworks);
+        }
+
+        public ScopeResponse build() {
+            return $;
         }
     }
+
 }

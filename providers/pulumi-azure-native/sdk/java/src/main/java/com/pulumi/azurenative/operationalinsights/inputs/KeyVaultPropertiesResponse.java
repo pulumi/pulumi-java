@@ -24,10 +24,10 @@ public final class KeyVaultPropertiesResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="keyName")
-      private final @Nullable String keyName;
+    private @Nullable String keyName;
 
     public Optional<String> keyName() {
-        return this.keyName == null ? Optional.empty() : Optional.ofNullable(this.keyName);
+        return Optional.ofNullable(this.keyName);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class KeyVaultPropertiesResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="keyRsaSize")
-      private final @Nullable Integer keyRsaSize;
+    private @Nullable Integer keyRsaSize;
 
     public Optional<Integer> keyRsaSize() {
-        return this.keyRsaSize == null ? Optional.empty() : Optional.ofNullable(this.keyRsaSize);
+        return Optional.ofNullable(this.keyRsaSize);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class KeyVaultPropertiesResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="keyVaultUri")
-      private final @Nullable String keyVaultUri;
+    private @Nullable String keyVaultUri;
 
     public Optional<String> keyVaultUri() {
-        return this.keyVaultUri == null ? Optional.empty() : Optional.ofNullable(this.keyVaultUri);
+        return Optional.ofNullable(this.keyVaultUri);
     }
 
     /**
@@ -57,73 +57,62 @@ public final class KeyVaultPropertiesResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="keyVersion")
-      private final @Nullable String keyVersion;
+    private @Nullable String keyVersion;
 
     public Optional<String> keyVersion() {
-        return this.keyVersion == null ? Optional.empty() : Optional.ofNullable(this.keyVersion);
+        return Optional.ofNullable(this.keyVersion);
     }
 
-    public KeyVaultPropertiesResponse(
-        @Nullable String keyName,
-        @Nullable Integer keyRsaSize,
-        @Nullable String keyVaultUri,
-        @Nullable String keyVersion) {
-        this.keyName = keyName;
-        this.keyRsaSize = keyRsaSize;
-        this.keyVaultUri = keyVaultUri;
-        this.keyVersion = keyVersion;
-    }
+    private KeyVaultPropertiesResponse() {}
 
-    private KeyVaultPropertiesResponse() {
-        this.keyName = null;
-        this.keyRsaSize = null;
-        this.keyVaultUri = null;
-        this.keyVersion = null;
+    private KeyVaultPropertiesResponse(KeyVaultPropertiesResponse $) {
+        this.keyName = $.keyName;
+        this.keyRsaSize = $.keyRsaSize;
+        this.keyVaultUri = $.keyVaultUri;
+        this.keyVersion = $.keyVersion;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(KeyVaultPropertiesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String keyName;
-        private @Nullable Integer keyRsaSize;
-        private @Nullable String keyVaultUri;
-        private @Nullable String keyVersion;
+        private KeyVaultPropertiesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new KeyVaultPropertiesResponse();
         }
 
         public Builder(KeyVaultPropertiesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.keyName = defaults.keyName;
-    	      this.keyRsaSize = defaults.keyRsaSize;
-    	      this.keyVaultUri = defaults.keyVaultUri;
-    	      this.keyVersion = defaults.keyVersion;
+            $ = new KeyVaultPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder keyName(@Nullable String keyName) {
-            this.keyName = keyName;
+            $.keyName = keyName;
             return this;
         }
+
         public Builder keyRsaSize(@Nullable Integer keyRsaSize) {
-            this.keyRsaSize = keyRsaSize;
+            $.keyRsaSize = keyRsaSize;
             return this;
         }
+
         public Builder keyVaultUri(@Nullable String keyVaultUri) {
-            this.keyVaultUri = keyVaultUri;
+            $.keyVaultUri = keyVaultUri;
             return this;
         }
+
         public Builder keyVersion(@Nullable String keyVersion) {
-            this.keyVersion = keyVersion;
+            $.keyVersion = keyVersion;
             return this;
-        }        public KeyVaultPropertiesResponse build() {
-            return new KeyVaultPropertiesResponse(keyName, keyRsaSize, keyVaultUri, keyVersion);
+        }
+
+        public KeyVaultPropertiesResponse build() {
+            return $;
         }
     }
+
 }

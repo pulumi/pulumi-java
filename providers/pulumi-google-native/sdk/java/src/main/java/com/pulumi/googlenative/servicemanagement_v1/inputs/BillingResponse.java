@@ -22,48 +22,49 @@ public final class BillingResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="consumerDestinations", required=true)
-      private final List<BillingDestinationResponse> consumerDestinations;
+    private List<BillingDestinationResponse> consumerDestinations;
 
     public List<BillingDestinationResponse> consumerDestinations() {
         return this.consumerDestinations;
     }
 
-    public BillingResponse(List<BillingDestinationResponse> consumerDestinations) {
-        this.consumerDestinations = Objects.requireNonNull(consumerDestinations, "expected parameter 'consumerDestinations' to be non-null");
-    }
+    private BillingResponse() {}
 
-    private BillingResponse() {
-        this.consumerDestinations = List.of();
+    private BillingResponse(BillingResponse $) {
+        this.consumerDestinations = $.consumerDestinations;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BillingResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<BillingDestinationResponse> consumerDestinations;
+        private BillingResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new BillingResponse();
         }
 
         public Builder(BillingResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.consumerDestinations = defaults.consumerDestinations;
+            $ = new BillingResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder consumerDestinations(List<BillingDestinationResponse> consumerDestinations) {
-            this.consumerDestinations = Objects.requireNonNull(consumerDestinations);
+            $.consumerDestinations = consumerDestinations;
             return this;
         }
+
         public Builder consumerDestinations(BillingDestinationResponse... consumerDestinations) {
             return consumerDestinations(List.of(consumerDestinations));
-        }        public BillingResponse build() {
-            return new BillingResponse(consumerDestinations);
+        }
+
+        public BillingResponse build() {
+            $.consumerDestinations = Objects.requireNonNull($.consumerDestinations, "expected parameter 'consumerDestinations' to be non-null");
+            return $;
         }
     }
+
 }

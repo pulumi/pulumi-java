@@ -5,10 +5,10 @@ package com.pulumi.azurenative.network.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class IPConfigurationBgpPeeringAddressArgs extends com.pulumi.resou
      * 
      */
     @Import(name="customBgpIpAddresses")
-      private final @Nullable Output<List<String>> customBgpIpAddresses;
+    private @Nullable Output<List<String>> customBgpIpAddresses;
 
-    public Output<List<String>> customBgpIpAddresses() {
-        return this.customBgpIpAddresses == null ? Codegen.empty() : this.customBgpIpAddresses;
+    public Optional<Output<List<String>>> customBgpIpAddresses() {
+        return Optional.ofNullable(this.customBgpIpAddresses);
     }
 
     /**
@@ -36,66 +36,62 @@ public final class IPConfigurationBgpPeeringAddressArgs extends com.pulumi.resou
      * 
      */
     @Import(name="ipconfigurationId")
-      private final @Nullable Output<String> ipconfigurationId;
+    private @Nullable Output<String> ipconfigurationId;
 
-    public Output<String> ipconfigurationId() {
-        return this.ipconfigurationId == null ? Codegen.empty() : this.ipconfigurationId;
+    public Optional<Output<String>> ipconfigurationId() {
+        return Optional.ofNullable(this.ipconfigurationId);
     }
 
-    public IPConfigurationBgpPeeringAddressArgs(
-        @Nullable Output<List<String>> customBgpIpAddresses,
-        @Nullable Output<String> ipconfigurationId) {
-        this.customBgpIpAddresses = customBgpIpAddresses;
-        this.ipconfigurationId = ipconfigurationId;
-    }
+    private IPConfigurationBgpPeeringAddressArgs() {}
 
-    private IPConfigurationBgpPeeringAddressArgs() {
-        this.customBgpIpAddresses = Codegen.empty();
-        this.ipconfigurationId = Codegen.empty();
+    private IPConfigurationBgpPeeringAddressArgs(IPConfigurationBgpPeeringAddressArgs $) {
+        this.customBgpIpAddresses = $.customBgpIpAddresses;
+        this.ipconfigurationId = $.ipconfigurationId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(IPConfigurationBgpPeeringAddressArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> customBgpIpAddresses;
-        private @Nullable Output<String> ipconfigurationId;
+        private IPConfigurationBgpPeeringAddressArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new IPConfigurationBgpPeeringAddressArgs();
         }
 
         public Builder(IPConfigurationBgpPeeringAddressArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.customBgpIpAddresses = defaults.customBgpIpAddresses;
-    	      this.ipconfigurationId = defaults.ipconfigurationId;
+            $ = new IPConfigurationBgpPeeringAddressArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder customBgpIpAddresses(@Nullable Output<List<String>> customBgpIpAddresses) {
-            this.customBgpIpAddresses = customBgpIpAddresses;
+            $.customBgpIpAddresses = customBgpIpAddresses;
             return this;
         }
-        public Builder customBgpIpAddresses(@Nullable List<String> customBgpIpAddresses) {
-            this.customBgpIpAddresses = Codegen.ofNullable(customBgpIpAddresses);
-            return this;
+
+        public Builder customBgpIpAddresses(List<String> customBgpIpAddresses) {
+            return customBgpIpAddresses(Output.of(customBgpIpAddresses));
         }
+
         public Builder customBgpIpAddresses(String... customBgpIpAddresses) {
             return customBgpIpAddresses(List.of(customBgpIpAddresses));
         }
+
         public Builder ipconfigurationId(@Nullable Output<String> ipconfigurationId) {
-            this.ipconfigurationId = ipconfigurationId;
+            $.ipconfigurationId = ipconfigurationId;
             return this;
         }
-        public Builder ipconfigurationId(@Nullable String ipconfigurationId) {
-            this.ipconfigurationId = Codegen.ofNullable(ipconfigurationId);
-            return this;
-        }        public IPConfigurationBgpPeeringAddressArgs build() {
-            return new IPConfigurationBgpPeeringAddressArgs(customBgpIpAddresses, ipconfigurationId);
+
+        public Builder ipconfigurationId(String ipconfigurationId) {
+            return ipconfigurationId(Output.of(ipconfigurationId));
+        }
+
+        public IPConfigurationBgpPeeringAddressArgs build() {
+            return $;
         }
     }
+
 }

@@ -6,11 +6,11 @@ package com.pulumi.aws.kms;
 import com.pulumi.aws.kms.inputs.GrantConstraintArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,10 @@ public final class GrantArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="constraints")
-      private final @Nullable Output<List<GrantConstraintArgs>> constraints;
+    private @Nullable Output<List<GrantConstraintArgs>> constraints;
 
-    public Output<List<GrantConstraintArgs>> constraints() {
-        return this.constraints == null ? Codegen.empty() : this.constraints;
+    public Optional<Output<List<GrantConstraintArgs>>> constraints() {
+        return Optional.ofNullable(this.constraints);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class GrantArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="grantCreationTokens")
-      private final @Nullable Output<List<String>> grantCreationTokens;
+    private @Nullable Output<List<String>> grantCreationTokens;
 
-    public Output<List<String>> grantCreationTokens() {
-        return this.grantCreationTokens == null ? Codegen.empty() : this.grantCreationTokens;
+    public Optional<Output<List<String>>> grantCreationTokens() {
+        return Optional.ofNullable(this.grantCreationTokens);
     }
 
     /**
@@ -45,7 +45,7 @@ public final class GrantArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="granteePrincipal", required=true)
-      private final Output<String> granteePrincipal;
+    private Output<String> granteePrincipal;
 
     public Output<String> granteePrincipal() {
         return this.granteePrincipal;
@@ -56,7 +56,7 @@ public final class GrantArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="keyId", required=true)
-      private final Output<String> keyId;
+    private Output<String> keyId;
 
     public Output<String> keyId() {
         return this.keyId;
@@ -67,10 +67,10 @@ public final class GrantArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -78,7 +78,7 @@ public final class GrantArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="operations", required=true)
-      private final Output<List<String>> operations;
+    private Output<List<String>> operations;
 
     public Output<List<String>> operations() {
         return this.operations;
@@ -90,10 +90,10 @@ public final class GrantArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="retireOnDelete")
-      private final @Nullable Output<Boolean> retireOnDelete;
+    private @Nullable Output<Boolean> retireOnDelete;
 
-    public Output<Boolean> retireOnDelete() {
-        return this.retireOnDelete == null ? Codegen.empty() : this.retireOnDelete;
+    public Optional<Output<Boolean>> retireOnDelete() {
+        return Optional.ofNullable(this.retireOnDelete);
     }
 
     /**
@@ -101,150 +101,133 @@ public final class GrantArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="retiringPrincipal")
-      private final @Nullable Output<String> retiringPrincipal;
+    private @Nullable Output<String> retiringPrincipal;
 
-    public Output<String> retiringPrincipal() {
-        return this.retiringPrincipal == null ? Codegen.empty() : this.retiringPrincipal;
+    public Optional<Output<String>> retiringPrincipal() {
+        return Optional.ofNullable(this.retiringPrincipal);
     }
 
-    public GrantArgs(
-        @Nullable Output<List<GrantConstraintArgs>> constraints,
-        @Nullable Output<List<String>> grantCreationTokens,
-        Output<String> granteePrincipal,
-        Output<String> keyId,
-        @Nullable Output<String> name,
-        Output<List<String>> operations,
-        @Nullable Output<Boolean> retireOnDelete,
-        @Nullable Output<String> retiringPrincipal) {
-        this.constraints = constraints;
-        this.grantCreationTokens = grantCreationTokens;
-        this.granteePrincipal = Objects.requireNonNull(granteePrincipal, "expected parameter 'granteePrincipal' to be non-null");
-        this.keyId = Objects.requireNonNull(keyId, "expected parameter 'keyId' to be non-null");
-        this.name = name;
-        this.operations = Objects.requireNonNull(operations, "expected parameter 'operations' to be non-null");
-        this.retireOnDelete = retireOnDelete;
-        this.retiringPrincipal = retiringPrincipal;
-    }
+    private GrantArgs() {}
 
-    private GrantArgs() {
-        this.constraints = Codegen.empty();
-        this.grantCreationTokens = Codegen.empty();
-        this.granteePrincipal = Codegen.empty();
-        this.keyId = Codegen.empty();
-        this.name = Codegen.empty();
-        this.operations = Codegen.empty();
-        this.retireOnDelete = Codegen.empty();
-        this.retiringPrincipal = Codegen.empty();
+    private GrantArgs(GrantArgs $) {
+        this.constraints = $.constraints;
+        this.grantCreationTokens = $.grantCreationTokens;
+        this.granteePrincipal = $.granteePrincipal;
+        this.keyId = $.keyId;
+        this.name = $.name;
+        this.operations = $.operations;
+        this.retireOnDelete = $.retireOnDelete;
+        this.retiringPrincipal = $.retiringPrincipal;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GrantArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<GrantConstraintArgs>> constraints;
-        private @Nullable Output<List<String>> grantCreationTokens;
-        private Output<String> granteePrincipal;
-        private Output<String> keyId;
-        private @Nullable Output<String> name;
-        private Output<List<String>> operations;
-        private @Nullable Output<Boolean> retireOnDelete;
-        private @Nullable Output<String> retiringPrincipal;
+        private GrantArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GrantArgs();
         }
 
         public Builder(GrantArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.constraints = defaults.constraints;
-    	      this.grantCreationTokens = defaults.grantCreationTokens;
-    	      this.granteePrincipal = defaults.granteePrincipal;
-    	      this.keyId = defaults.keyId;
-    	      this.name = defaults.name;
-    	      this.operations = defaults.operations;
-    	      this.retireOnDelete = defaults.retireOnDelete;
-    	      this.retiringPrincipal = defaults.retiringPrincipal;
+            $ = new GrantArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder constraints(@Nullable Output<List<GrantConstraintArgs>> constraints) {
-            this.constraints = constraints;
+            $.constraints = constraints;
             return this;
         }
-        public Builder constraints(@Nullable List<GrantConstraintArgs> constraints) {
-            this.constraints = Codegen.ofNullable(constraints);
-            return this;
+
+        public Builder constraints(List<GrantConstraintArgs> constraints) {
+            return constraints(Output.of(constraints));
         }
+
         public Builder constraints(GrantConstraintArgs... constraints) {
             return constraints(List.of(constraints));
         }
+
         public Builder grantCreationTokens(@Nullable Output<List<String>> grantCreationTokens) {
-            this.grantCreationTokens = grantCreationTokens;
+            $.grantCreationTokens = grantCreationTokens;
             return this;
         }
-        public Builder grantCreationTokens(@Nullable List<String> grantCreationTokens) {
-            this.grantCreationTokens = Codegen.ofNullable(grantCreationTokens);
-            return this;
+
+        public Builder grantCreationTokens(List<String> grantCreationTokens) {
+            return grantCreationTokens(Output.of(grantCreationTokens));
         }
+
         public Builder grantCreationTokens(String... grantCreationTokens) {
             return grantCreationTokens(List.of(grantCreationTokens));
         }
+
         public Builder granteePrincipal(Output<String> granteePrincipal) {
-            this.granteePrincipal = Objects.requireNonNull(granteePrincipal);
+            $.granteePrincipal = granteePrincipal;
             return this;
         }
+
         public Builder granteePrincipal(String granteePrincipal) {
-            this.granteePrincipal = Output.of(Objects.requireNonNull(granteePrincipal));
-            return this;
+            return granteePrincipal(Output.of(granteePrincipal));
         }
+
         public Builder keyId(Output<String> keyId) {
-            this.keyId = Objects.requireNonNull(keyId);
+            $.keyId = keyId;
             return this;
         }
+
         public Builder keyId(String keyId) {
-            this.keyId = Output.of(Objects.requireNonNull(keyId));
-            return this;
+            return keyId(Output.of(keyId));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder operations(Output<List<String>> operations) {
-            this.operations = Objects.requireNonNull(operations);
+            $.operations = operations;
             return this;
         }
+
         public Builder operations(List<String> operations) {
-            this.operations = Output.of(Objects.requireNonNull(operations));
-            return this;
+            return operations(Output.of(operations));
         }
+
         public Builder operations(String... operations) {
             return operations(List.of(operations));
         }
+
         public Builder retireOnDelete(@Nullable Output<Boolean> retireOnDelete) {
-            this.retireOnDelete = retireOnDelete;
+            $.retireOnDelete = retireOnDelete;
             return this;
         }
-        public Builder retireOnDelete(@Nullable Boolean retireOnDelete) {
-            this.retireOnDelete = Codegen.ofNullable(retireOnDelete);
-            return this;
+
+        public Builder retireOnDelete(Boolean retireOnDelete) {
+            return retireOnDelete(Output.of(retireOnDelete));
         }
+
         public Builder retiringPrincipal(@Nullable Output<String> retiringPrincipal) {
-            this.retiringPrincipal = retiringPrincipal;
+            $.retiringPrincipal = retiringPrincipal;
             return this;
         }
-        public Builder retiringPrincipal(@Nullable String retiringPrincipal) {
-            this.retiringPrincipal = Codegen.ofNullable(retiringPrincipal);
-            return this;
-        }        public GrantArgs build() {
-            return new GrantArgs(constraints, grantCreationTokens, granteePrincipal, keyId, name, operations, retireOnDelete, retiringPrincipal);
+
+        public Builder retiringPrincipal(String retiringPrincipal) {
+            return retiringPrincipal(Output.of(retiringPrincipal));
+        }
+
+        public GrantArgs build() {
+            $.granteePrincipal = Objects.requireNonNull($.granteePrincipal, "expected parameter 'granteePrincipal' to be non-null");
+            $.keyId = Objects.requireNonNull($.keyId, "expected parameter 'keyId' to be non-null");
+            $.operations = Objects.requireNonNull($.operations, "expected parameter 'operations' to be non-null");
+            return $;
         }
     }
+
 }

@@ -25,7 +25,7 @@ public final class GooglePrivacyDlpV2InspectJobConfigResponse extends com.pulumi
      * 
      */
     @Import(name="actions", required=true)
-      private final List<GooglePrivacyDlpV2ActionResponse> actions;
+    private List<GooglePrivacyDlpV2ActionResponse> actions;
 
     public List<GooglePrivacyDlpV2ActionResponse> actions() {
         return this.actions;
@@ -36,7 +36,7 @@ public final class GooglePrivacyDlpV2InspectJobConfigResponse extends com.pulumi
      * 
      */
     @Import(name="inspectConfig", required=true)
-      private final GooglePrivacyDlpV2InspectConfigResponse inspectConfig;
+    private GooglePrivacyDlpV2InspectConfigResponse inspectConfig;
 
     public GooglePrivacyDlpV2InspectConfigResponse inspectConfig() {
         return this.inspectConfig;
@@ -47,7 +47,7 @@ public final class GooglePrivacyDlpV2InspectJobConfigResponse extends com.pulumi
      * 
      */
     @Import(name="inspectTemplateName", required=true)
-      private final String inspectTemplateName;
+    private String inspectTemplateName;
 
     public String inspectTemplateName() {
         return this.inspectTemplateName;
@@ -58,76 +58,70 @@ public final class GooglePrivacyDlpV2InspectJobConfigResponse extends com.pulumi
      * 
      */
     @Import(name="storageConfig", required=true)
-      private final GooglePrivacyDlpV2StorageConfigResponse storageConfig;
+    private GooglePrivacyDlpV2StorageConfigResponse storageConfig;
 
     public GooglePrivacyDlpV2StorageConfigResponse storageConfig() {
         return this.storageConfig;
     }
 
-    public GooglePrivacyDlpV2InspectJobConfigResponse(
-        List<GooglePrivacyDlpV2ActionResponse> actions,
-        GooglePrivacyDlpV2InspectConfigResponse inspectConfig,
-        String inspectTemplateName,
-        GooglePrivacyDlpV2StorageConfigResponse storageConfig) {
-        this.actions = Objects.requireNonNull(actions, "expected parameter 'actions' to be non-null");
-        this.inspectConfig = Objects.requireNonNull(inspectConfig, "expected parameter 'inspectConfig' to be non-null");
-        this.inspectTemplateName = Objects.requireNonNull(inspectTemplateName, "expected parameter 'inspectTemplateName' to be non-null");
-        this.storageConfig = Objects.requireNonNull(storageConfig, "expected parameter 'storageConfig' to be non-null");
-    }
+    private GooglePrivacyDlpV2InspectJobConfigResponse() {}
 
-    private GooglePrivacyDlpV2InspectJobConfigResponse() {
-        this.actions = List.of();
-        this.inspectConfig = null;
-        this.inspectTemplateName = null;
-        this.storageConfig = null;
+    private GooglePrivacyDlpV2InspectJobConfigResponse(GooglePrivacyDlpV2InspectJobConfigResponse $) {
+        this.actions = $.actions;
+        this.inspectConfig = $.inspectConfig;
+        this.inspectTemplateName = $.inspectTemplateName;
+        this.storageConfig = $.storageConfig;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GooglePrivacyDlpV2InspectJobConfigResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<GooglePrivacyDlpV2ActionResponse> actions;
-        private GooglePrivacyDlpV2InspectConfigResponse inspectConfig;
-        private String inspectTemplateName;
-        private GooglePrivacyDlpV2StorageConfigResponse storageConfig;
+        private GooglePrivacyDlpV2InspectJobConfigResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GooglePrivacyDlpV2InspectJobConfigResponse();
         }
 
         public Builder(GooglePrivacyDlpV2InspectJobConfigResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.actions = defaults.actions;
-    	      this.inspectConfig = defaults.inspectConfig;
-    	      this.inspectTemplateName = defaults.inspectTemplateName;
-    	      this.storageConfig = defaults.storageConfig;
+            $ = new GooglePrivacyDlpV2InspectJobConfigResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder actions(List<GooglePrivacyDlpV2ActionResponse> actions) {
-            this.actions = Objects.requireNonNull(actions);
+            $.actions = actions;
             return this;
         }
+
         public Builder actions(GooglePrivacyDlpV2ActionResponse... actions) {
             return actions(List.of(actions));
         }
+
         public Builder inspectConfig(GooglePrivacyDlpV2InspectConfigResponse inspectConfig) {
-            this.inspectConfig = Objects.requireNonNull(inspectConfig);
+            $.inspectConfig = inspectConfig;
             return this;
         }
+
         public Builder inspectTemplateName(String inspectTemplateName) {
-            this.inspectTemplateName = Objects.requireNonNull(inspectTemplateName);
+            $.inspectTemplateName = inspectTemplateName;
             return this;
         }
+
         public Builder storageConfig(GooglePrivacyDlpV2StorageConfigResponse storageConfig) {
-            this.storageConfig = Objects.requireNonNull(storageConfig);
+            $.storageConfig = storageConfig;
             return this;
-        }        public GooglePrivacyDlpV2InspectJobConfigResponse build() {
-            return new GooglePrivacyDlpV2InspectJobConfigResponse(actions, inspectConfig, inspectTemplateName, storageConfig);
+        }
+
+        public GooglePrivacyDlpV2InspectJobConfigResponse build() {
+            $.actions = Objects.requireNonNull($.actions, "expected parameter 'actions' to be non-null");
+            $.inspectConfig = Objects.requireNonNull($.inspectConfig, "expected parameter 'inspectConfig' to be non-null");
+            $.inspectTemplateName = Objects.requireNonNull($.inspectTemplateName, "expected parameter 'inspectTemplateName' to be non-null");
+            $.storageConfig = Objects.requireNonNull($.storageConfig, "expected parameter 'storageConfig' to be non-null");
+            return $;
         }
     }
+
 }

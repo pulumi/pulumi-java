@@ -21,45 +21,45 @@ public final class ReleaseChannelResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="channel", required=true)
-      private final String channel;
+    private String channel;
 
     public String channel() {
         return this.channel;
     }
 
-    public ReleaseChannelResponse(String channel) {
-        this.channel = Objects.requireNonNull(channel, "expected parameter 'channel' to be non-null");
-    }
+    private ReleaseChannelResponse() {}
 
-    private ReleaseChannelResponse() {
-        this.channel = null;
+    private ReleaseChannelResponse(ReleaseChannelResponse $) {
+        this.channel = $.channel;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ReleaseChannelResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String channel;
+        private ReleaseChannelResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ReleaseChannelResponse();
         }
 
         public Builder(ReleaseChannelResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.channel = defaults.channel;
+            $ = new ReleaseChannelResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder channel(String channel) {
-            this.channel = Objects.requireNonNull(channel);
+            $.channel = channel;
             return this;
-        }        public ReleaseChannelResponse build() {
-            return new ReleaseChannelResponse(channel);
+        }
+
+        public ReleaseChannelResponse build() {
+            $.channel = Objects.requireNonNull($.channel, "expected parameter 'channel' to be non-null");
+            return $;
         }
     }
+
 }

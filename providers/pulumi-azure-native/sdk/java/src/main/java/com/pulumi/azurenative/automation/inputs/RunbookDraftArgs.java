@@ -7,12 +7,12 @@ import com.pulumi.azurenative.automation.inputs.ContentLinkArgs;
 import com.pulumi.azurenative.automation.inputs.RunbookParameterArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class RunbookDraftArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="creationTime")
-      private final @Nullable Output<String> creationTime;
+    private @Nullable Output<String> creationTime;
 
-    public Output<String> creationTime() {
-        return this.creationTime == null ? Codegen.empty() : this.creationTime;
+    public Optional<Output<String>> creationTime() {
+        return Optional.ofNullable(this.creationTime);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class RunbookDraftArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="draftContentLink")
-      private final @Nullable Output<ContentLinkArgs> draftContentLink;
+    private @Nullable Output<ContentLinkArgs> draftContentLink;
 
-    public Output<ContentLinkArgs> draftContentLink() {
-        return this.draftContentLink == null ? Codegen.empty() : this.draftContentLink;
+    public Optional<Output<ContentLinkArgs>> draftContentLink() {
+        return Optional.ofNullable(this.draftContentLink);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class RunbookDraftArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="inEdit")
-      private final @Nullable Output<Boolean> inEdit;
+    private @Nullable Output<Boolean> inEdit;
 
-    public Output<Boolean> inEdit() {
-        return this.inEdit == null ? Codegen.empty() : this.inEdit;
+    public Optional<Output<Boolean>> inEdit() {
+        return Optional.ofNullable(this.inEdit);
     }
 
     /**
@@ -58,10 +58,10 @@ public final class RunbookDraftArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="lastModifiedTime")
-      private final @Nullable Output<String> lastModifiedTime;
+    private @Nullable Output<String> lastModifiedTime;
 
-    public Output<String> lastModifiedTime() {
-        return this.lastModifiedTime == null ? Codegen.empty() : this.lastModifiedTime;
+    public Optional<Output<String>> lastModifiedTime() {
+        return Optional.ofNullable(this.lastModifiedTime);
     }
 
     /**
@@ -69,10 +69,10 @@ public final class RunbookDraftArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="outputTypes")
-      private final @Nullable Output<List<String>> outputTypes;
+    private @Nullable Output<List<String>> outputTypes;
 
-    public Output<List<String>> outputTypes() {
-        return this.outputTypes == null ? Codegen.empty() : this.outputTypes;
+    public Optional<Output<List<String>>> outputTypes() {
+        return Optional.ofNullable(this.outputTypes);
     }
 
     /**
@@ -80,118 +80,102 @@ public final class RunbookDraftArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="parameters")
-      private final @Nullable Output<Map<String,RunbookParameterArgs>> parameters;
+    private @Nullable Output<Map<String,RunbookParameterArgs>> parameters;
 
-    public Output<Map<String,RunbookParameterArgs>> parameters() {
-        return this.parameters == null ? Codegen.empty() : this.parameters;
+    public Optional<Output<Map<String,RunbookParameterArgs>>> parameters() {
+        return Optional.ofNullable(this.parameters);
     }
 
-    public RunbookDraftArgs(
-        @Nullable Output<String> creationTime,
-        @Nullable Output<ContentLinkArgs> draftContentLink,
-        @Nullable Output<Boolean> inEdit,
-        @Nullable Output<String> lastModifiedTime,
-        @Nullable Output<List<String>> outputTypes,
-        @Nullable Output<Map<String,RunbookParameterArgs>> parameters) {
-        this.creationTime = creationTime;
-        this.draftContentLink = draftContentLink;
-        this.inEdit = inEdit;
-        this.lastModifiedTime = lastModifiedTime;
-        this.outputTypes = outputTypes;
-        this.parameters = parameters;
-    }
+    private RunbookDraftArgs() {}
 
-    private RunbookDraftArgs() {
-        this.creationTime = Codegen.empty();
-        this.draftContentLink = Codegen.empty();
-        this.inEdit = Codegen.empty();
-        this.lastModifiedTime = Codegen.empty();
-        this.outputTypes = Codegen.empty();
-        this.parameters = Codegen.empty();
+    private RunbookDraftArgs(RunbookDraftArgs $) {
+        this.creationTime = $.creationTime;
+        this.draftContentLink = $.draftContentLink;
+        this.inEdit = $.inEdit;
+        this.lastModifiedTime = $.lastModifiedTime;
+        this.outputTypes = $.outputTypes;
+        this.parameters = $.parameters;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RunbookDraftArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> creationTime;
-        private @Nullable Output<ContentLinkArgs> draftContentLink;
-        private @Nullable Output<Boolean> inEdit;
-        private @Nullable Output<String> lastModifiedTime;
-        private @Nullable Output<List<String>> outputTypes;
-        private @Nullable Output<Map<String,RunbookParameterArgs>> parameters;
+        private RunbookDraftArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RunbookDraftArgs();
         }
 
         public Builder(RunbookDraftArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.creationTime = defaults.creationTime;
-    	      this.draftContentLink = defaults.draftContentLink;
-    	      this.inEdit = defaults.inEdit;
-    	      this.lastModifiedTime = defaults.lastModifiedTime;
-    	      this.outputTypes = defaults.outputTypes;
-    	      this.parameters = defaults.parameters;
+            $ = new RunbookDraftArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder creationTime(@Nullable Output<String> creationTime) {
-            this.creationTime = creationTime;
+            $.creationTime = creationTime;
             return this;
         }
-        public Builder creationTime(@Nullable String creationTime) {
-            this.creationTime = Codegen.ofNullable(creationTime);
-            return this;
+
+        public Builder creationTime(String creationTime) {
+            return creationTime(Output.of(creationTime));
         }
+
         public Builder draftContentLink(@Nullable Output<ContentLinkArgs> draftContentLink) {
-            this.draftContentLink = draftContentLink;
+            $.draftContentLink = draftContentLink;
             return this;
         }
-        public Builder draftContentLink(@Nullable ContentLinkArgs draftContentLink) {
-            this.draftContentLink = Codegen.ofNullable(draftContentLink);
-            return this;
+
+        public Builder draftContentLink(ContentLinkArgs draftContentLink) {
+            return draftContentLink(Output.of(draftContentLink));
         }
+
         public Builder inEdit(@Nullable Output<Boolean> inEdit) {
-            this.inEdit = inEdit;
+            $.inEdit = inEdit;
             return this;
         }
-        public Builder inEdit(@Nullable Boolean inEdit) {
-            this.inEdit = Codegen.ofNullable(inEdit);
-            return this;
+
+        public Builder inEdit(Boolean inEdit) {
+            return inEdit(Output.of(inEdit));
         }
+
         public Builder lastModifiedTime(@Nullable Output<String> lastModifiedTime) {
-            this.lastModifiedTime = lastModifiedTime;
+            $.lastModifiedTime = lastModifiedTime;
             return this;
         }
-        public Builder lastModifiedTime(@Nullable String lastModifiedTime) {
-            this.lastModifiedTime = Codegen.ofNullable(lastModifiedTime);
-            return this;
+
+        public Builder lastModifiedTime(String lastModifiedTime) {
+            return lastModifiedTime(Output.of(lastModifiedTime));
         }
+
         public Builder outputTypes(@Nullable Output<List<String>> outputTypes) {
-            this.outputTypes = outputTypes;
+            $.outputTypes = outputTypes;
             return this;
         }
-        public Builder outputTypes(@Nullable List<String> outputTypes) {
-            this.outputTypes = Codegen.ofNullable(outputTypes);
-            return this;
+
+        public Builder outputTypes(List<String> outputTypes) {
+            return outputTypes(Output.of(outputTypes));
         }
+
         public Builder outputTypes(String... outputTypes) {
             return outputTypes(List.of(outputTypes));
         }
+
         public Builder parameters(@Nullable Output<Map<String,RunbookParameterArgs>> parameters) {
-            this.parameters = parameters;
+            $.parameters = parameters;
             return this;
         }
-        public Builder parameters(@Nullable Map<String,RunbookParameterArgs> parameters) {
-            this.parameters = Codegen.ofNullable(parameters);
-            return this;
-        }        public RunbookDraftArgs build() {
-            return new RunbookDraftArgs(creationTime, draftContentLink, inEdit, lastModifiedTime, outputTypes, parameters);
+
+        public Builder parameters(Map<String,RunbookParameterArgs> parameters) {
+            return parameters(Output.of(parameters));
+        }
+
+        public RunbookDraftArgs build() {
+            return $;
         }
     }
+
 }

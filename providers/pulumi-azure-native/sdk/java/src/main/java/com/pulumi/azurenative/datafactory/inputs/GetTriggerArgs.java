@@ -17,7 +17,7 @@ public final class GetTriggerArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="factoryName", required=true)
-      private final String factoryName;
+    private String factoryName;
 
     public String factoryName() {
         return this.factoryName;
@@ -28,7 +28,7 @@ public final class GetTriggerArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -39,64 +39,59 @@ public final class GetTriggerArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="triggerName", required=true)
-      private final String triggerName;
+    private String triggerName;
 
     public String triggerName() {
         return this.triggerName;
     }
 
-    public GetTriggerArgs(
-        String factoryName,
-        String resourceGroupName,
-        String triggerName) {
-        this.factoryName = Objects.requireNonNull(factoryName, "expected parameter 'factoryName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.triggerName = Objects.requireNonNull(triggerName, "expected parameter 'triggerName' to be non-null");
-    }
+    private GetTriggerArgs() {}
 
-    private GetTriggerArgs() {
-        this.factoryName = null;
-        this.resourceGroupName = null;
-        this.triggerName = null;
+    private GetTriggerArgs(GetTriggerArgs $) {
+        this.factoryName = $.factoryName;
+        this.resourceGroupName = $.resourceGroupName;
+        this.triggerName = $.triggerName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetTriggerArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String factoryName;
-        private String resourceGroupName;
-        private String triggerName;
+        private GetTriggerArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetTriggerArgs();
         }
 
         public Builder(GetTriggerArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.factoryName = defaults.factoryName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.triggerName = defaults.triggerName;
+            $ = new GetTriggerArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder factoryName(String factoryName) {
-            this.factoryName = Objects.requireNonNull(factoryName);
+            $.factoryName = factoryName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder triggerName(String triggerName) {
-            this.triggerName = Objects.requireNonNull(triggerName);
+            $.triggerName = triggerName;
             return this;
-        }        public GetTriggerArgs build() {
-            return new GetTriggerArgs(factoryName, resourceGroupName, triggerName);
+        }
+
+        public GetTriggerArgs build() {
+            $.factoryName = Objects.requireNonNull($.factoryName, "expected parameter 'factoryName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.triggerName = Objects.requireNonNull($.triggerName, "expected parameter 'triggerName' to be non-null");
+            return $;
         }
     }
+
 }

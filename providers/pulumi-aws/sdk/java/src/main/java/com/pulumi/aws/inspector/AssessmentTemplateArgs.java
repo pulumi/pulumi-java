@@ -5,12 +5,12 @@ package com.pulumi.aws.inspector;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,7 +23,7 @@ public final class AssessmentTemplateArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="duration", required=true)
-      private final Output<Integer> duration;
+    private Output<Integer> duration;
 
     public Output<Integer> duration() {
         return this.duration;
@@ -34,10 +34,10 @@ public final class AssessmentTemplateArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -45,7 +45,7 @@ public final class AssessmentTemplateArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="rulesPackageArns", required=true)
-      private final Output<List<String>> rulesPackageArns;
+    private Output<List<String>> rulesPackageArns;
 
     public Output<List<String>> rulesPackageArns() {
         return this.rulesPackageArns;
@@ -56,10 +56,10 @@ public final class AssessmentTemplateArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -67,105 +67,95 @@ public final class AssessmentTemplateArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="targetArn", required=true)
-      private final Output<String> targetArn;
+    private Output<String> targetArn;
 
     public Output<String> targetArn() {
         return this.targetArn;
     }
 
-    public AssessmentTemplateArgs(
-        Output<Integer> duration,
-        @Nullable Output<String> name,
-        Output<List<String>> rulesPackageArns,
-        @Nullable Output<Map<String,String>> tags,
-        Output<String> targetArn) {
-        this.duration = Objects.requireNonNull(duration, "expected parameter 'duration' to be non-null");
-        this.name = name;
-        this.rulesPackageArns = Objects.requireNonNull(rulesPackageArns, "expected parameter 'rulesPackageArns' to be non-null");
-        this.tags = tags;
-        this.targetArn = Objects.requireNonNull(targetArn, "expected parameter 'targetArn' to be non-null");
-    }
+    private AssessmentTemplateArgs() {}
 
-    private AssessmentTemplateArgs() {
-        this.duration = Codegen.empty();
-        this.name = Codegen.empty();
-        this.rulesPackageArns = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.targetArn = Codegen.empty();
+    private AssessmentTemplateArgs(AssessmentTemplateArgs $) {
+        this.duration = $.duration;
+        this.name = $.name;
+        this.rulesPackageArns = $.rulesPackageArns;
+        this.tags = $.tags;
+        this.targetArn = $.targetArn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AssessmentTemplateArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Integer> duration;
-        private @Nullable Output<String> name;
-        private Output<List<String>> rulesPackageArns;
-        private @Nullable Output<Map<String,String>> tags;
-        private Output<String> targetArn;
+        private AssessmentTemplateArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AssessmentTemplateArgs();
         }
 
         public Builder(AssessmentTemplateArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.duration = defaults.duration;
-    	      this.name = defaults.name;
-    	      this.rulesPackageArns = defaults.rulesPackageArns;
-    	      this.tags = defaults.tags;
-    	      this.targetArn = defaults.targetArn;
+            $ = new AssessmentTemplateArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder duration(Output<Integer> duration) {
-            this.duration = Objects.requireNonNull(duration);
+            $.duration = duration;
             return this;
         }
+
         public Builder duration(Integer duration) {
-            this.duration = Output.of(Objects.requireNonNull(duration));
-            return this;
+            return duration(Output.of(duration));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder rulesPackageArns(Output<List<String>> rulesPackageArns) {
-            this.rulesPackageArns = Objects.requireNonNull(rulesPackageArns);
+            $.rulesPackageArns = rulesPackageArns;
             return this;
         }
+
         public Builder rulesPackageArns(List<String> rulesPackageArns) {
-            this.rulesPackageArns = Output.of(Objects.requireNonNull(rulesPackageArns));
-            return this;
+            return rulesPackageArns(Output.of(rulesPackageArns));
         }
+
         public Builder rulesPackageArns(String... rulesPackageArns) {
             return rulesPackageArns(List.of(rulesPackageArns));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder targetArn(Output<String> targetArn) {
-            this.targetArn = Objects.requireNonNull(targetArn);
+            $.targetArn = targetArn;
             return this;
         }
+
         public Builder targetArn(String targetArn) {
-            this.targetArn = Output.of(Objects.requireNonNull(targetArn));
-            return this;
-        }        public AssessmentTemplateArgs build() {
-            return new AssessmentTemplateArgs(duration, name, rulesPackageArns, tags, targetArn);
+            return targetArn(Output.of(targetArn));
+        }
+
+        public AssessmentTemplateArgs build() {
+            $.duration = Objects.requireNonNull($.duration, "expected parameter 'duration' to be non-null");
+            $.rulesPackageArns = Objects.requireNonNull($.rulesPackageArns, "expected parameter 'rulesPackageArns' to be non-null");
+            $.targetArn = Objects.requireNonNull($.targetArn, "expected parameter 'targetArn' to be non-null");
+            return $;
         }
     }
+
 }

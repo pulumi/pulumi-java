@@ -5,9 +5,9 @@ package com.pulumi.azurenative.authorization.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class ParameterValuesValueArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="value")
-      private final @Nullable Output<Object> value;
+    private @Nullable Output<Object> value;
 
-    public Output<Object> value() {
-        return this.value == null ? Codegen.empty() : this.value;
+    public Optional<Output<Object>> value() {
+        return Optional.ofNullable(this.value);
     }
 
-    public ParameterValuesValueArgs(@Nullable Output<Object> value) {
-        this.value = value;
-    }
+    private ParameterValuesValueArgs() {}
 
-    private ParameterValuesValueArgs() {
-        this.value = Codegen.empty();
+    private ParameterValuesValueArgs(ParameterValuesValueArgs $) {
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ParameterValuesValueArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Object> value;
+        private ParameterValuesValueArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ParameterValuesValueArgs();
         }
 
         public Builder(ParameterValuesValueArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.value = defaults.value;
+            $ = new ParameterValuesValueArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder value(@Nullable Output<Object> value) {
-            this.value = value;
+            $.value = value;
             return this;
         }
-        public Builder value(@Nullable Object value) {
-            this.value = Codegen.ofNullable(value);
-            return this;
-        }        public ParameterValuesValueArgs build() {
-            return new ParameterValuesValueArgs(value);
+
+        public Builder value(Object value) {
+            return value(Output.of(value));
+        }
+
+        public ParameterValuesValueArgs build() {
+            return $;
         }
     }
+
 }

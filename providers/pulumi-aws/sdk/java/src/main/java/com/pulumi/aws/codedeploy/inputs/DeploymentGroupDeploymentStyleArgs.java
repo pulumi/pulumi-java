@@ -5,9 +5,9 @@ package com.pulumi.aws.codedeploy.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class DeploymentGroupDeploymentStyleArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="deploymentOption")
-      private final @Nullable Output<String> deploymentOption;
+    private @Nullable Output<String> deploymentOption;
 
-    public Output<String> deploymentOption() {
-        return this.deploymentOption == null ? Codegen.empty() : this.deploymentOption;
+    public Optional<Output<String>> deploymentOption() {
+        return Optional.ofNullable(this.deploymentOption);
     }
 
     /**
@@ -31,63 +31,58 @@ public final class DeploymentGroupDeploymentStyleArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="deploymentType")
-      private final @Nullable Output<String> deploymentType;
+    private @Nullable Output<String> deploymentType;
 
-    public Output<String> deploymentType() {
-        return this.deploymentType == null ? Codegen.empty() : this.deploymentType;
+    public Optional<Output<String>> deploymentType() {
+        return Optional.ofNullable(this.deploymentType);
     }
 
-    public DeploymentGroupDeploymentStyleArgs(
-        @Nullable Output<String> deploymentOption,
-        @Nullable Output<String> deploymentType) {
-        this.deploymentOption = deploymentOption;
-        this.deploymentType = deploymentType;
-    }
+    private DeploymentGroupDeploymentStyleArgs() {}
 
-    private DeploymentGroupDeploymentStyleArgs() {
-        this.deploymentOption = Codegen.empty();
-        this.deploymentType = Codegen.empty();
+    private DeploymentGroupDeploymentStyleArgs(DeploymentGroupDeploymentStyleArgs $) {
+        this.deploymentOption = $.deploymentOption;
+        this.deploymentType = $.deploymentType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DeploymentGroupDeploymentStyleArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> deploymentOption;
-        private @Nullable Output<String> deploymentType;
+        private DeploymentGroupDeploymentStyleArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DeploymentGroupDeploymentStyleArgs();
         }
 
         public Builder(DeploymentGroupDeploymentStyleArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.deploymentOption = defaults.deploymentOption;
-    	      this.deploymentType = defaults.deploymentType;
+            $ = new DeploymentGroupDeploymentStyleArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder deploymentOption(@Nullable Output<String> deploymentOption) {
-            this.deploymentOption = deploymentOption;
+            $.deploymentOption = deploymentOption;
             return this;
         }
-        public Builder deploymentOption(@Nullable String deploymentOption) {
-            this.deploymentOption = Codegen.ofNullable(deploymentOption);
-            return this;
+
+        public Builder deploymentOption(String deploymentOption) {
+            return deploymentOption(Output.of(deploymentOption));
         }
+
         public Builder deploymentType(@Nullable Output<String> deploymentType) {
-            this.deploymentType = deploymentType;
+            $.deploymentType = deploymentType;
             return this;
         }
-        public Builder deploymentType(@Nullable String deploymentType) {
-            this.deploymentType = Codegen.ofNullable(deploymentType);
-            return this;
-        }        public DeploymentGroupDeploymentStyleArgs build() {
-            return new DeploymentGroupDeploymentStyleArgs(deploymentOption, deploymentType);
+
+        public Builder deploymentType(String deploymentType) {
+            return deploymentType(Output.of(deploymentType));
+        }
+
+        public DeploymentGroupDeploymentStyleArgs build() {
+            return $;
         }
     }
+
 }

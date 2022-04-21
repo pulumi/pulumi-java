@@ -24,10 +24,10 @@ public final class FunctionInputResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="dataType")
-      private final @Nullable String dataType;
+    private @Nullable String dataType;
 
     public Optional<String> dataType() {
-        return this.dataType == null ? Optional.empty() : Optional.ofNullable(this.dataType);
+        return Optional.ofNullable(this.dataType);
     }
 
     /**
@@ -35,55 +35,50 @@ public final class FunctionInputResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="isConfigurationParameter")
-      private final @Nullable Boolean isConfigurationParameter;
+    private @Nullable Boolean isConfigurationParameter;
 
     public Optional<Boolean> isConfigurationParameter() {
-        return this.isConfigurationParameter == null ? Optional.empty() : Optional.ofNullable(this.isConfigurationParameter);
+        return Optional.ofNullable(this.isConfigurationParameter);
     }
 
-    public FunctionInputResponse(
-        @Nullable String dataType,
-        @Nullable Boolean isConfigurationParameter) {
-        this.dataType = dataType;
-        this.isConfigurationParameter = isConfigurationParameter;
-    }
+    private FunctionInputResponse() {}
 
-    private FunctionInputResponse() {
-        this.dataType = null;
-        this.isConfigurationParameter = null;
+    private FunctionInputResponse(FunctionInputResponse $) {
+        this.dataType = $.dataType;
+        this.isConfigurationParameter = $.isConfigurationParameter;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FunctionInputResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String dataType;
-        private @Nullable Boolean isConfigurationParameter;
+        private FunctionInputResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new FunctionInputResponse();
         }
 
         public Builder(FunctionInputResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dataType = defaults.dataType;
-    	      this.isConfigurationParameter = defaults.isConfigurationParameter;
+            $ = new FunctionInputResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder dataType(@Nullable String dataType) {
-            this.dataType = dataType;
+            $.dataType = dataType;
             return this;
         }
+
         public Builder isConfigurationParameter(@Nullable Boolean isConfigurationParameter) {
-            this.isConfigurationParameter = isConfigurationParameter;
+            $.isConfigurationParameter = isConfigurationParameter;
             return this;
-        }        public FunctionInputResponse build() {
-            return new FunctionInputResponse(dataType, isConfigurationParameter);
+        }
+
+        public FunctionInputResponse build() {
+            return $;
         }
     }
+
 }

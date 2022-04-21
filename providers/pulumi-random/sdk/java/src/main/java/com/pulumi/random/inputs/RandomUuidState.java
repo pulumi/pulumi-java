@@ -5,11 +5,11 @@ package com.pulumi.random.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class RandomUuidState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="keepers")
-      private final @Nullable Output<Map<String,Object>> keepers;
+    private @Nullable Output<Map<String,Object>> keepers;
 
-    public Output<Map<String,Object>> keepers() {
-        return this.keepers == null ? Codegen.empty() : this.keepers;
+    public Optional<Output<Map<String,Object>>> keepers() {
+        return Optional.ofNullable(this.keepers);
     }
 
     /**
@@ -33,63 +33,58 @@ public final class RandomUuidState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="result")
-      private final @Nullable Output<String> result;
+    private @Nullable Output<String> result;
 
-    public Output<String> result() {
-        return this.result == null ? Codegen.empty() : this.result;
+    public Optional<Output<String>> result() {
+        return Optional.ofNullable(this.result);
     }
 
-    public RandomUuidState(
-        @Nullable Output<Map<String,Object>> keepers,
-        @Nullable Output<String> result) {
-        this.keepers = keepers;
-        this.result = result;
-    }
+    private RandomUuidState() {}
 
-    private RandomUuidState() {
-        this.keepers = Codegen.empty();
-        this.result = Codegen.empty();
+    private RandomUuidState(RandomUuidState $) {
+        this.keepers = $.keepers;
+        this.result = $.result;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RandomUuidState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Map<String,Object>> keepers;
-        private @Nullable Output<String> result;
+        private RandomUuidState $;
 
         public Builder() {
-    	      // Empty
+            $ = new RandomUuidState();
         }
 
         public Builder(RandomUuidState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.keepers = defaults.keepers;
-    	      this.result = defaults.result;
+            $ = new RandomUuidState(Objects.requireNonNull(defaults));
         }
 
         public Builder keepers(@Nullable Output<Map<String,Object>> keepers) {
-            this.keepers = keepers;
+            $.keepers = keepers;
             return this;
         }
-        public Builder keepers(@Nullable Map<String,Object> keepers) {
-            this.keepers = Codegen.ofNullable(keepers);
-            return this;
+
+        public Builder keepers(Map<String,Object> keepers) {
+            return keepers(Output.of(keepers));
         }
+
         public Builder result(@Nullable Output<String> result) {
-            this.result = result;
+            $.result = result;
             return this;
         }
-        public Builder result(@Nullable String result) {
-            this.result = Codegen.ofNullable(result);
-            return this;
-        }        public RandomUuidState build() {
-            return new RandomUuidState(keepers, result);
+
+        public Builder result(String result) {
+            return result(Output.of(result));
+        }
+
+        public RandomUuidState build() {
+            return $;
         }
     }
+
 }

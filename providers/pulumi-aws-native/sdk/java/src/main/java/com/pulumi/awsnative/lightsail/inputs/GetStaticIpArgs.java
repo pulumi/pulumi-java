@@ -17,45 +17,45 @@ public final class GetStaticIpArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="staticIpName", required=true)
-      private final String staticIpName;
+    private String staticIpName;
 
     public String staticIpName() {
         return this.staticIpName;
     }
 
-    public GetStaticIpArgs(String staticIpName) {
-        this.staticIpName = Objects.requireNonNull(staticIpName, "expected parameter 'staticIpName' to be non-null");
-    }
+    private GetStaticIpArgs() {}
 
-    private GetStaticIpArgs() {
-        this.staticIpName = null;
+    private GetStaticIpArgs(GetStaticIpArgs $) {
+        this.staticIpName = $.staticIpName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetStaticIpArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String staticIpName;
+        private GetStaticIpArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetStaticIpArgs();
         }
 
         public Builder(GetStaticIpArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.staticIpName = defaults.staticIpName;
+            $ = new GetStaticIpArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder staticIpName(String staticIpName) {
-            this.staticIpName = Objects.requireNonNull(staticIpName);
+            $.staticIpName = staticIpName;
             return this;
-        }        public GetStaticIpArgs build() {
-            return new GetStaticIpArgs(staticIpName);
+        }
+
+        public GetStaticIpArgs build() {
+            $.staticIpName = Objects.requireNonNull($.staticIpName, "expected parameter 'staticIpName' to be non-null");
+            return $;
         }
     }
+
 }

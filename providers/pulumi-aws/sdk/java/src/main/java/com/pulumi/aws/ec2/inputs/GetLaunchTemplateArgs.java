@@ -22,10 +22,10 @@ public final class GetLaunchTemplateArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="filters")
-      private final @Nullable List<GetLaunchTemplateFilter> filters;
+    private @Nullable List<GetLaunchTemplateFilter> filters;
 
-    public List<GetLaunchTemplateFilter> filters() {
-        return this.filters == null ? List.of() : this.filters;
+    public Optional<List<GetLaunchTemplateFilter>> filters() {
+        return Optional.ofNullable(this.filters);
     }
 
     /**
@@ -33,10 +33,10 @@ public final class GetLaunchTemplateArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="id")
-      private final @Nullable String id;
+    private @Nullable String id;
 
     public Optional<String> id() {
-        return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
+        return Optional.ofNullable(this.id);
     }
 
     /**
@@ -44,10 +44,10 @@ public final class GetLaunchTemplateArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="name")
-      private final @Nullable String name;
+    private @Nullable String name;
 
     public Optional<String> name() {
-        return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -55,76 +55,66 @@ public final class GetLaunchTemplateArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="tags")
-      private final @Nullable Map<String,String> tags;
+    private @Nullable Map<String,String> tags;
 
-    public Map<String,String> tags() {
-        return this.tags == null ? Map.of() : this.tags;
+    public Optional<Map<String,String>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public GetLaunchTemplateArgs(
-        @Nullable List<GetLaunchTemplateFilter> filters,
-        @Nullable String id,
-        @Nullable String name,
-        @Nullable Map<String,String> tags) {
-        this.filters = filters;
-        this.id = id;
-        this.name = name;
-        this.tags = tags;
-    }
+    private GetLaunchTemplateArgs() {}
 
-    private GetLaunchTemplateArgs() {
-        this.filters = List.of();
-        this.id = null;
-        this.name = null;
-        this.tags = Map.of();
+    private GetLaunchTemplateArgs(GetLaunchTemplateArgs $) {
+        this.filters = $.filters;
+        this.id = $.id;
+        this.name = $.name;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetLaunchTemplateArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<GetLaunchTemplateFilter> filters;
-        private @Nullable String id;
-        private @Nullable String name;
-        private @Nullable Map<String,String> tags;
+        private GetLaunchTemplateArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetLaunchTemplateArgs();
         }
 
         public Builder(GetLaunchTemplateArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.filters = defaults.filters;
-    	      this.id = defaults.id;
-    	      this.name = defaults.name;
-    	      this.tags = defaults.tags;
+            $ = new GetLaunchTemplateArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder filters(@Nullable List<GetLaunchTemplateFilter> filters) {
-            this.filters = filters;
+            $.filters = filters;
             return this;
         }
+
         public Builder filters(GetLaunchTemplateFilter... filters) {
             return filters(List.of(filters));
         }
+
         public Builder id(@Nullable String id) {
-            this.id = id;
+            $.id = id;
             return this;
         }
+
         public Builder name(@Nullable String name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
+
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
-        }        public GetLaunchTemplateArgs build() {
-            return new GetLaunchTemplateArgs(filters, id, name, tags);
+        }
+
+        public GetLaunchTemplateArgs build() {
+            return $;
         }
     }
+
 }

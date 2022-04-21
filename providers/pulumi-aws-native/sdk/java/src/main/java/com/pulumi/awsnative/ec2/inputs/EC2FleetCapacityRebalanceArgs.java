@@ -6,9 +6,9 @@ package com.pulumi.awsnative.ec2.inputs;
 import com.pulumi.awsnative.ec2.enums.EC2FleetCapacityRebalanceReplacementStrategy;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -17,70 +17,65 @@ public final class EC2FleetCapacityRebalanceArgs extends com.pulumi.resources.Re
     public static final EC2FleetCapacityRebalanceArgs Empty = new EC2FleetCapacityRebalanceArgs();
 
     @Import(name="replacementStrategy")
-      private final @Nullable Output<EC2FleetCapacityRebalanceReplacementStrategy> replacementStrategy;
+    private @Nullable Output<EC2FleetCapacityRebalanceReplacementStrategy> replacementStrategy;
 
-    public Output<EC2FleetCapacityRebalanceReplacementStrategy> replacementStrategy() {
-        return this.replacementStrategy == null ? Codegen.empty() : this.replacementStrategy;
+    public Optional<Output<EC2FleetCapacityRebalanceReplacementStrategy>> replacementStrategy() {
+        return Optional.ofNullable(this.replacementStrategy);
     }
 
     @Import(name="terminationDelay")
-      private final @Nullable Output<Integer> terminationDelay;
+    private @Nullable Output<Integer> terminationDelay;
 
-    public Output<Integer> terminationDelay() {
-        return this.terminationDelay == null ? Codegen.empty() : this.terminationDelay;
+    public Optional<Output<Integer>> terminationDelay() {
+        return Optional.ofNullable(this.terminationDelay);
     }
 
-    public EC2FleetCapacityRebalanceArgs(
-        @Nullable Output<EC2FleetCapacityRebalanceReplacementStrategy> replacementStrategy,
-        @Nullable Output<Integer> terminationDelay) {
-        this.replacementStrategy = replacementStrategy;
-        this.terminationDelay = terminationDelay;
-    }
+    private EC2FleetCapacityRebalanceArgs() {}
 
-    private EC2FleetCapacityRebalanceArgs() {
-        this.replacementStrategy = Codegen.empty();
-        this.terminationDelay = Codegen.empty();
+    private EC2FleetCapacityRebalanceArgs(EC2FleetCapacityRebalanceArgs $) {
+        this.replacementStrategy = $.replacementStrategy;
+        this.terminationDelay = $.terminationDelay;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EC2FleetCapacityRebalanceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<EC2FleetCapacityRebalanceReplacementStrategy> replacementStrategy;
-        private @Nullable Output<Integer> terminationDelay;
+        private EC2FleetCapacityRebalanceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new EC2FleetCapacityRebalanceArgs();
         }
 
         public Builder(EC2FleetCapacityRebalanceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.replacementStrategy = defaults.replacementStrategy;
-    	      this.terminationDelay = defaults.terminationDelay;
+            $ = new EC2FleetCapacityRebalanceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder replacementStrategy(@Nullable Output<EC2FleetCapacityRebalanceReplacementStrategy> replacementStrategy) {
-            this.replacementStrategy = replacementStrategy;
+            $.replacementStrategy = replacementStrategy;
             return this;
         }
-        public Builder replacementStrategy(@Nullable EC2FleetCapacityRebalanceReplacementStrategy replacementStrategy) {
-            this.replacementStrategy = Codegen.ofNullable(replacementStrategy);
-            return this;
+
+        public Builder replacementStrategy(EC2FleetCapacityRebalanceReplacementStrategy replacementStrategy) {
+            return replacementStrategy(Output.of(replacementStrategy));
         }
+
         public Builder terminationDelay(@Nullable Output<Integer> terminationDelay) {
-            this.terminationDelay = terminationDelay;
+            $.terminationDelay = terminationDelay;
             return this;
         }
-        public Builder terminationDelay(@Nullable Integer terminationDelay) {
-            this.terminationDelay = Codegen.ofNullable(terminationDelay);
-            return this;
-        }        public EC2FleetCapacityRebalanceArgs build() {
-            return new EC2FleetCapacityRebalanceArgs(replacementStrategy, terminationDelay);
+
+        public Builder terminationDelay(Integer terminationDelay) {
+            return terminationDelay(Output.of(terminationDelay));
+        }
+
+        public EC2FleetCapacityRebalanceArgs build() {
+            return $;
         }
     }
+
 }

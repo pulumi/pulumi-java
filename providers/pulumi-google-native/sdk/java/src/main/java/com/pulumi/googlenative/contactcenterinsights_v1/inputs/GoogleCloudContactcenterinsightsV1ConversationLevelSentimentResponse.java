@@ -22,7 +22,7 @@ public final class GoogleCloudContactcenterinsightsV1ConversationLevelSentimentR
      * 
      */
     @Import(name="channelTag", required=true)
-      private final Integer channelTag;
+    private Integer channelTag;
 
     public Integer channelTag() {
         return this.channelTag;
@@ -33,55 +33,52 @@ public final class GoogleCloudContactcenterinsightsV1ConversationLevelSentimentR
      * 
      */
     @Import(name="sentimentData", required=true)
-      private final GoogleCloudContactcenterinsightsV1SentimentDataResponse sentimentData;
+    private GoogleCloudContactcenterinsightsV1SentimentDataResponse sentimentData;
 
     public GoogleCloudContactcenterinsightsV1SentimentDataResponse sentimentData() {
         return this.sentimentData;
     }
 
-    public GoogleCloudContactcenterinsightsV1ConversationLevelSentimentResponse(
-        Integer channelTag,
-        GoogleCloudContactcenterinsightsV1SentimentDataResponse sentimentData) {
-        this.channelTag = Objects.requireNonNull(channelTag, "expected parameter 'channelTag' to be non-null");
-        this.sentimentData = Objects.requireNonNull(sentimentData, "expected parameter 'sentimentData' to be non-null");
-    }
+    private GoogleCloudContactcenterinsightsV1ConversationLevelSentimentResponse() {}
 
-    private GoogleCloudContactcenterinsightsV1ConversationLevelSentimentResponse() {
-        this.channelTag = null;
-        this.sentimentData = null;
+    private GoogleCloudContactcenterinsightsV1ConversationLevelSentimentResponse(GoogleCloudContactcenterinsightsV1ConversationLevelSentimentResponse $) {
+        this.channelTag = $.channelTag;
+        this.sentimentData = $.sentimentData;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudContactcenterinsightsV1ConversationLevelSentimentResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Integer channelTag;
-        private GoogleCloudContactcenterinsightsV1SentimentDataResponse sentimentData;
+        private GoogleCloudContactcenterinsightsV1ConversationLevelSentimentResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudContactcenterinsightsV1ConversationLevelSentimentResponse();
         }
 
         public Builder(GoogleCloudContactcenterinsightsV1ConversationLevelSentimentResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.channelTag = defaults.channelTag;
-    	      this.sentimentData = defaults.sentimentData;
+            $ = new GoogleCloudContactcenterinsightsV1ConversationLevelSentimentResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder channelTag(Integer channelTag) {
-            this.channelTag = Objects.requireNonNull(channelTag);
+            $.channelTag = channelTag;
             return this;
         }
+
         public Builder sentimentData(GoogleCloudContactcenterinsightsV1SentimentDataResponse sentimentData) {
-            this.sentimentData = Objects.requireNonNull(sentimentData);
+            $.sentimentData = sentimentData;
             return this;
-        }        public GoogleCloudContactcenterinsightsV1ConversationLevelSentimentResponse build() {
-            return new GoogleCloudContactcenterinsightsV1ConversationLevelSentimentResponse(channelTag, sentimentData);
+        }
+
+        public GoogleCloudContactcenterinsightsV1ConversationLevelSentimentResponse build() {
+            $.channelTag = Objects.requireNonNull($.channelTag, "expected parameter 'channelTag' to be non-null");
+            $.sentimentData = Objects.requireNonNull($.sentimentData, "expected parameter 'sentimentData' to be non-null");
+            return $;
         }
     }
+
 }

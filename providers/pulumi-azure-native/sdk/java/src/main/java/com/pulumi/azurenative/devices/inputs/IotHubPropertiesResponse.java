@@ -36,10 +36,10 @@ public final class IotHubPropertiesResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="authorizationPolicies")
-      private final @Nullable List<SharedAccessSignatureAuthorizationRuleResponse> authorizationPolicies;
+    private @Nullable List<SharedAccessSignatureAuthorizationRuleResponse> authorizationPolicies;
 
-    public List<SharedAccessSignatureAuthorizationRuleResponse> authorizationPolicies() {
-        return this.authorizationPolicies == null ? List.of() : this.authorizationPolicies;
+    public Optional<List<SharedAccessSignatureAuthorizationRuleResponse>> authorizationPolicies() {
+        return Optional.ofNullable(this.authorizationPolicies);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class IotHubPropertiesResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="cloudToDevice")
-      private final @Nullable CloudToDevicePropertiesResponse cloudToDevice;
+    private @Nullable CloudToDevicePropertiesResponse cloudToDevice;
 
     public Optional<CloudToDevicePropertiesResponse> cloudToDevice() {
-        return this.cloudToDevice == null ? Optional.empty() : Optional.ofNullable(this.cloudToDevice);
+        return Optional.ofNullable(this.cloudToDevice);
     }
 
     /**
@@ -58,10 +58,10 @@ public final class IotHubPropertiesResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="comments")
-      private final @Nullable String comments;
+    private @Nullable String comments;
 
     public Optional<String> comments() {
-        return this.comments == null ? Optional.empty() : Optional.ofNullable(this.comments);
+        return Optional.ofNullable(this.comments);
     }
 
     /**
@@ -69,10 +69,10 @@ public final class IotHubPropertiesResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="enableFileUploadNotifications")
-      private final @Nullable Boolean enableFileUploadNotifications;
+    private @Nullable Boolean enableFileUploadNotifications;
 
     public Optional<Boolean> enableFileUploadNotifications() {
-        return this.enableFileUploadNotifications == null ? Optional.empty() : Optional.ofNullable(this.enableFileUploadNotifications);
+        return Optional.ofNullable(this.enableFileUploadNotifications);
     }
 
     /**
@@ -80,10 +80,10 @@ public final class IotHubPropertiesResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="eventHubEndpoints")
-      private final @Nullable Map<String,EventHubPropertiesResponse> eventHubEndpoints;
+    private @Nullable Map<String,EventHubPropertiesResponse> eventHubEndpoints;
 
-    public Map<String,EventHubPropertiesResponse> eventHubEndpoints() {
-        return this.eventHubEndpoints == null ? Map.of() : this.eventHubEndpoints;
+    public Optional<Map<String,EventHubPropertiesResponse>> eventHubEndpoints() {
+        return Optional.ofNullable(this.eventHubEndpoints);
     }
 
     /**
@@ -91,10 +91,10 @@ public final class IotHubPropertiesResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="features")
-      private final @Nullable String features;
+    private @Nullable String features;
 
     public Optional<String> features() {
-        return this.features == null ? Optional.empty() : Optional.ofNullable(this.features);
+        return Optional.ofNullable(this.features);
     }
 
     /**
@@ -102,7 +102,7 @@ public final class IotHubPropertiesResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="hostName", required=true)
-      private final String hostName;
+    private String hostName;
 
     public String hostName() {
         return this.hostName;
@@ -113,10 +113,10 @@ public final class IotHubPropertiesResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="ipFilterRules")
-      private final @Nullable List<IpFilterRuleResponse> ipFilterRules;
+    private @Nullable List<IpFilterRuleResponse> ipFilterRules;
 
-    public List<IpFilterRuleResponse> ipFilterRules() {
-        return this.ipFilterRules == null ? List.of() : this.ipFilterRules;
+    public Optional<List<IpFilterRuleResponse>> ipFilterRules() {
+        return Optional.ofNullable(this.ipFilterRules);
     }
 
     /**
@@ -124,7 +124,7 @@ public final class IotHubPropertiesResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="locations", required=true)
-      private final List<IotHubLocationDescriptionResponse> locations;
+    private List<IotHubLocationDescriptionResponse> locations;
 
     public List<IotHubLocationDescriptionResponse> locations() {
         return this.locations;
@@ -135,10 +135,10 @@ public final class IotHubPropertiesResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="messagingEndpoints")
-      private final @Nullable Map<String,MessagingEndpointPropertiesResponse> messagingEndpoints;
+    private @Nullable Map<String,MessagingEndpointPropertiesResponse> messagingEndpoints;
 
-    public Map<String,MessagingEndpointPropertiesResponse> messagingEndpoints() {
-        return this.messagingEndpoints == null ? Map.of() : this.messagingEndpoints;
+    public Optional<Map<String,MessagingEndpointPropertiesResponse>> messagingEndpoints() {
+        return Optional.ofNullable(this.messagingEndpoints);
     }
 
     /**
@@ -146,10 +146,10 @@ public final class IotHubPropertiesResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="minTlsVersion")
-      private final @Nullable String minTlsVersion;
+    private @Nullable String minTlsVersion;
 
     public Optional<String> minTlsVersion() {
-        return this.minTlsVersion == null ? Optional.empty() : Optional.ofNullable(this.minTlsVersion);
+        return Optional.ofNullable(this.minTlsVersion);
     }
 
     /**
@@ -157,10 +157,10 @@ public final class IotHubPropertiesResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="networkRuleSets")
-      private final @Nullable NetworkRuleSetPropertiesResponse networkRuleSets;
+    private @Nullable NetworkRuleSetPropertiesResponse networkRuleSets;
 
     public Optional<NetworkRuleSetPropertiesResponse> networkRuleSets() {
-        return this.networkRuleSets == null ? Optional.empty() : Optional.ofNullable(this.networkRuleSets);
+        return Optional.ofNullable(this.networkRuleSets);
     }
 
     /**
@@ -168,10 +168,10 @@ public final class IotHubPropertiesResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="privateEndpointConnections")
-      private final @Nullable List<PrivateEndpointConnectionResponse> privateEndpointConnections;
+    private @Nullable List<PrivateEndpointConnectionResponse> privateEndpointConnections;
 
-    public List<PrivateEndpointConnectionResponse> privateEndpointConnections() {
-        return this.privateEndpointConnections == null ? List.of() : this.privateEndpointConnections;
+    public Optional<List<PrivateEndpointConnectionResponse>> privateEndpointConnections() {
+        return Optional.ofNullable(this.privateEndpointConnections);
     }
 
     /**
@@ -179,7 +179,7 @@ public final class IotHubPropertiesResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="provisioningState", required=true)
-      private final String provisioningState;
+    private String provisioningState;
 
     public String provisioningState() {
         return this.provisioningState;
@@ -190,10 +190,10 @@ public final class IotHubPropertiesResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="publicNetworkAccess")
-      private final @Nullable String publicNetworkAccess;
+    private @Nullable String publicNetworkAccess;
 
     public Optional<String> publicNetworkAccess() {
-        return this.publicNetworkAccess == null ? Optional.empty() : Optional.ofNullable(this.publicNetworkAccess);
+        return Optional.ofNullable(this.publicNetworkAccess);
     }
 
     /**
@@ -201,10 +201,10 @@ public final class IotHubPropertiesResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="routing")
-      private final @Nullable RoutingPropertiesResponse routing;
+    private @Nullable RoutingPropertiesResponse routing;
 
     public Optional<RoutingPropertiesResponse> routing() {
-        return this.routing == null ? Optional.empty() : Optional.ofNullable(this.routing);
+        return Optional.ofNullable(this.routing);
     }
 
     /**
@@ -212,7 +212,7 @@ public final class IotHubPropertiesResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="state", required=true)
-      private final String state;
+    private String state;
 
     public String state() {
         return this.state;
@@ -223,211 +223,166 @@ public final class IotHubPropertiesResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="storageEndpoints")
-      private final @Nullable Map<String,StorageEndpointPropertiesResponse> storageEndpoints;
+    private @Nullable Map<String,StorageEndpointPropertiesResponse> storageEndpoints;
 
-    public Map<String,StorageEndpointPropertiesResponse> storageEndpoints() {
-        return this.storageEndpoints == null ? Map.of() : this.storageEndpoints;
+    public Optional<Map<String,StorageEndpointPropertiesResponse>> storageEndpoints() {
+        return Optional.ofNullable(this.storageEndpoints);
     }
 
-    public IotHubPropertiesResponse(
-        @Nullable List<SharedAccessSignatureAuthorizationRuleResponse> authorizationPolicies,
-        @Nullable CloudToDevicePropertiesResponse cloudToDevice,
-        @Nullable String comments,
-        @Nullable Boolean enableFileUploadNotifications,
-        @Nullable Map<String,EventHubPropertiesResponse> eventHubEndpoints,
-        @Nullable String features,
-        String hostName,
-        @Nullable List<IpFilterRuleResponse> ipFilterRules,
-        List<IotHubLocationDescriptionResponse> locations,
-        @Nullable Map<String,MessagingEndpointPropertiesResponse> messagingEndpoints,
-        @Nullable String minTlsVersion,
-        @Nullable NetworkRuleSetPropertiesResponse networkRuleSets,
-        @Nullable List<PrivateEndpointConnectionResponse> privateEndpointConnections,
-        String provisioningState,
-        @Nullable String publicNetworkAccess,
-        @Nullable RoutingPropertiesResponse routing,
-        String state,
-        @Nullable Map<String,StorageEndpointPropertiesResponse> storageEndpoints) {
-        this.authorizationPolicies = authorizationPolicies;
-        this.cloudToDevice = cloudToDevice;
-        this.comments = comments;
-        this.enableFileUploadNotifications = enableFileUploadNotifications;
-        this.eventHubEndpoints = eventHubEndpoints;
-        this.features = features;
-        this.hostName = Objects.requireNonNull(hostName, "expected parameter 'hostName' to be non-null");
-        this.ipFilterRules = ipFilterRules;
-        this.locations = Objects.requireNonNull(locations, "expected parameter 'locations' to be non-null");
-        this.messagingEndpoints = messagingEndpoints;
-        this.minTlsVersion = minTlsVersion;
-        this.networkRuleSets = networkRuleSets;
-        this.privateEndpointConnections = privateEndpointConnections;
-        this.provisioningState = Objects.requireNonNull(provisioningState, "expected parameter 'provisioningState' to be non-null");
-        this.publicNetworkAccess = publicNetworkAccess;
-        this.routing = routing;
-        this.state = Objects.requireNonNull(state, "expected parameter 'state' to be non-null");
-        this.storageEndpoints = storageEndpoints;
-    }
+    private IotHubPropertiesResponse() {}
 
-    private IotHubPropertiesResponse() {
-        this.authorizationPolicies = List.of();
-        this.cloudToDevice = null;
-        this.comments = null;
-        this.enableFileUploadNotifications = null;
-        this.eventHubEndpoints = Map.of();
-        this.features = null;
-        this.hostName = null;
-        this.ipFilterRules = List.of();
-        this.locations = List.of();
-        this.messagingEndpoints = Map.of();
-        this.minTlsVersion = null;
-        this.networkRuleSets = null;
-        this.privateEndpointConnections = List.of();
-        this.provisioningState = null;
-        this.publicNetworkAccess = null;
-        this.routing = null;
-        this.state = null;
-        this.storageEndpoints = Map.of();
+    private IotHubPropertiesResponse(IotHubPropertiesResponse $) {
+        this.authorizationPolicies = $.authorizationPolicies;
+        this.cloudToDevice = $.cloudToDevice;
+        this.comments = $.comments;
+        this.enableFileUploadNotifications = $.enableFileUploadNotifications;
+        this.eventHubEndpoints = $.eventHubEndpoints;
+        this.features = $.features;
+        this.hostName = $.hostName;
+        this.ipFilterRules = $.ipFilterRules;
+        this.locations = $.locations;
+        this.messagingEndpoints = $.messagingEndpoints;
+        this.minTlsVersion = $.minTlsVersion;
+        this.networkRuleSets = $.networkRuleSets;
+        this.privateEndpointConnections = $.privateEndpointConnections;
+        this.provisioningState = $.provisioningState;
+        this.publicNetworkAccess = $.publicNetworkAccess;
+        this.routing = $.routing;
+        this.state = $.state;
+        this.storageEndpoints = $.storageEndpoints;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(IotHubPropertiesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<SharedAccessSignatureAuthorizationRuleResponse> authorizationPolicies;
-        private @Nullable CloudToDevicePropertiesResponse cloudToDevice;
-        private @Nullable String comments;
-        private @Nullable Boolean enableFileUploadNotifications;
-        private @Nullable Map<String,EventHubPropertiesResponse> eventHubEndpoints;
-        private @Nullable String features;
-        private String hostName;
-        private @Nullable List<IpFilterRuleResponse> ipFilterRules;
-        private List<IotHubLocationDescriptionResponse> locations;
-        private @Nullable Map<String,MessagingEndpointPropertiesResponse> messagingEndpoints;
-        private @Nullable String minTlsVersion;
-        private @Nullable NetworkRuleSetPropertiesResponse networkRuleSets;
-        private @Nullable List<PrivateEndpointConnectionResponse> privateEndpointConnections;
-        private String provisioningState;
-        private @Nullable String publicNetworkAccess;
-        private @Nullable RoutingPropertiesResponse routing;
-        private String state;
-        private @Nullable Map<String,StorageEndpointPropertiesResponse> storageEndpoints;
+        private IotHubPropertiesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new IotHubPropertiesResponse();
         }
 
         public Builder(IotHubPropertiesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.authorizationPolicies = defaults.authorizationPolicies;
-    	      this.cloudToDevice = defaults.cloudToDevice;
-    	      this.comments = defaults.comments;
-    	      this.enableFileUploadNotifications = defaults.enableFileUploadNotifications;
-    	      this.eventHubEndpoints = defaults.eventHubEndpoints;
-    	      this.features = defaults.features;
-    	      this.hostName = defaults.hostName;
-    	      this.ipFilterRules = defaults.ipFilterRules;
-    	      this.locations = defaults.locations;
-    	      this.messagingEndpoints = defaults.messagingEndpoints;
-    	      this.minTlsVersion = defaults.minTlsVersion;
-    	      this.networkRuleSets = defaults.networkRuleSets;
-    	      this.privateEndpointConnections = defaults.privateEndpointConnections;
-    	      this.provisioningState = defaults.provisioningState;
-    	      this.publicNetworkAccess = defaults.publicNetworkAccess;
-    	      this.routing = defaults.routing;
-    	      this.state = defaults.state;
-    	      this.storageEndpoints = defaults.storageEndpoints;
+            $ = new IotHubPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder authorizationPolicies(@Nullable List<SharedAccessSignatureAuthorizationRuleResponse> authorizationPolicies) {
-            this.authorizationPolicies = authorizationPolicies;
+            $.authorizationPolicies = authorizationPolicies;
             return this;
         }
+
         public Builder authorizationPolicies(SharedAccessSignatureAuthorizationRuleResponse... authorizationPolicies) {
             return authorizationPolicies(List.of(authorizationPolicies));
         }
+
         public Builder cloudToDevice(@Nullable CloudToDevicePropertiesResponse cloudToDevice) {
-            this.cloudToDevice = cloudToDevice;
+            $.cloudToDevice = cloudToDevice;
             return this;
         }
+
         public Builder comments(@Nullable String comments) {
-            this.comments = comments;
+            $.comments = comments;
             return this;
         }
+
         public Builder enableFileUploadNotifications(@Nullable Boolean enableFileUploadNotifications) {
-            this.enableFileUploadNotifications = enableFileUploadNotifications;
+            $.enableFileUploadNotifications = enableFileUploadNotifications;
             return this;
         }
+
         public Builder eventHubEndpoints(@Nullable Map<String,EventHubPropertiesResponse> eventHubEndpoints) {
-            this.eventHubEndpoints = eventHubEndpoints;
+            $.eventHubEndpoints = eventHubEndpoints;
             return this;
         }
+
         public Builder features(@Nullable String features) {
-            this.features = features;
+            $.features = features;
             return this;
         }
+
         public Builder hostName(String hostName) {
-            this.hostName = Objects.requireNonNull(hostName);
+            $.hostName = hostName;
             return this;
         }
+
         public Builder ipFilterRules(@Nullable List<IpFilterRuleResponse> ipFilterRules) {
-            this.ipFilterRules = ipFilterRules;
+            $.ipFilterRules = ipFilterRules;
             return this;
         }
+
         public Builder ipFilterRules(IpFilterRuleResponse... ipFilterRules) {
             return ipFilterRules(List.of(ipFilterRules));
         }
+
         public Builder locations(List<IotHubLocationDescriptionResponse> locations) {
-            this.locations = Objects.requireNonNull(locations);
+            $.locations = locations;
             return this;
         }
+
         public Builder locations(IotHubLocationDescriptionResponse... locations) {
             return locations(List.of(locations));
         }
+
         public Builder messagingEndpoints(@Nullable Map<String,MessagingEndpointPropertiesResponse> messagingEndpoints) {
-            this.messagingEndpoints = messagingEndpoints;
+            $.messagingEndpoints = messagingEndpoints;
             return this;
         }
+
         public Builder minTlsVersion(@Nullable String minTlsVersion) {
-            this.minTlsVersion = minTlsVersion;
+            $.minTlsVersion = minTlsVersion;
             return this;
         }
+
         public Builder networkRuleSets(@Nullable NetworkRuleSetPropertiesResponse networkRuleSets) {
-            this.networkRuleSets = networkRuleSets;
+            $.networkRuleSets = networkRuleSets;
             return this;
         }
+
         public Builder privateEndpointConnections(@Nullable List<PrivateEndpointConnectionResponse> privateEndpointConnections) {
-            this.privateEndpointConnections = privateEndpointConnections;
+            $.privateEndpointConnections = privateEndpointConnections;
             return this;
         }
+
         public Builder privateEndpointConnections(PrivateEndpointConnectionResponse... privateEndpointConnections) {
             return privateEndpointConnections(List.of(privateEndpointConnections));
         }
+
         public Builder provisioningState(String provisioningState) {
-            this.provisioningState = Objects.requireNonNull(provisioningState);
+            $.provisioningState = provisioningState;
             return this;
         }
+
         public Builder publicNetworkAccess(@Nullable String publicNetworkAccess) {
-            this.publicNetworkAccess = publicNetworkAccess;
+            $.publicNetworkAccess = publicNetworkAccess;
             return this;
         }
+
         public Builder routing(@Nullable RoutingPropertiesResponse routing) {
-            this.routing = routing;
+            $.routing = routing;
             return this;
         }
+
         public Builder state(String state) {
-            this.state = Objects.requireNonNull(state);
+            $.state = state;
             return this;
         }
+
         public Builder storageEndpoints(@Nullable Map<String,StorageEndpointPropertiesResponse> storageEndpoints) {
-            this.storageEndpoints = storageEndpoints;
+            $.storageEndpoints = storageEndpoints;
             return this;
-        }        public IotHubPropertiesResponse build() {
-            return new IotHubPropertiesResponse(authorizationPolicies, cloudToDevice, comments, enableFileUploadNotifications, eventHubEndpoints, features, hostName, ipFilterRules, locations, messagingEndpoints, minTlsVersion, networkRuleSets, privateEndpointConnections, provisioningState, publicNetworkAccess, routing, state, storageEndpoints);
+        }
+
+        public IotHubPropertiesResponse build() {
+            $.hostName = Objects.requireNonNull($.hostName, "expected parameter 'hostName' to be non-null");
+            $.locations = Objects.requireNonNull($.locations, "expected parameter 'locations' to be non-null");
+            $.provisioningState = Objects.requireNonNull($.provisioningState, "expected parameter 'provisioningState' to be non-null");
+            $.state = Objects.requireNonNull($.state, "expected parameter 'state' to be non-null");
+            return $;
         }
     }
+
 }

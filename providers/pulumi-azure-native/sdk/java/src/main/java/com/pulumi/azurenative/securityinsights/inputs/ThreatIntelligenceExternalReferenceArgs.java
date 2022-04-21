@@ -5,10 +5,10 @@ package com.pulumi.azurenative.securityinsights.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class ThreatIntelligenceExternalReferenceArgs extends com.pulumi.re
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class ThreatIntelligenceExternalReferenceArgs extends com.pulumi.re
      * 
      */
     @Import(name="externalId")
-      private final @Nullable Output<String> externalId;
+    private @Nullable Output<String> externalId;
 
-    public Output<String> externalId() {
-        return this.externalId == null ? Codegen.empty() : this.externalId;
+    public Optional<Output<String>> externalId() {
+        return Optional.ofNullable(this.externalId);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class ThreatIntelligenceExternalReferenceArgs extends com.pulumi.re
      * 
      */
     @Import(name="hashes")
-      private final @Nullable Output<Map<String,String>> hashes;
+    private @Nullable Output<Map<String,String>> hashes;
 
-    public Output<Map<String,String>> hashes() {
-        return this.hashes == null ? Codegen.empty() : this.hashes;
+    public Optional<Output<Map<String,String>>> hashes() {
+        return Optional.ofNullable(this.hashes);
     }
 
     /**
@@ -58,10 +58,10 @@ public final class ThreatIntelligenceExternalReferenceArgs extends com.pulumi.re
      * 
      */
     @Import(name="sourceName")
-      private final @Nullable Output<String> sourceName;
+    private @Nullable Output<String> sourceName;
 
-    public Output<String> sourceName() {
-        return this.sourceName == null ? Codegen.empty() : this.sourceName;
+    public Optional<Output<String>> sourceName() {
+        return Optional.ofNullable(this.sourceName);
     }
 
     /**
@@ -69,102 +69,88 @@ public final class ThreatIntelligenceExternalReferenceArgs extends com.pulumi.re
      * 
      */
     @Import(name="url")
-      private final @Nullable Output<String> url;
+    private @Nullable Output<String> url;
 
-    public Output<String> url() {
-        return this.url == null ? Codegen.empty() : this.url;
+    public Optional<Output<String>> url() {
+        return Optional.ofNullable(this.url);
     }
 
-    public ThreatIntelligenceExternalReferenceArgs(
-        @Nullable Output<String> description,
-        @Nullable Output<String> externalId,
-        @Nullable Output<Map<String,String>> hashes,
-        @Nullable Output<String> sourceName,
-        @Nullable Output<String> url) {
-        this.description = description;
-        this.externalId = externalId;
-        this.hashes = hashes;
-        this.sourceName = sourceName;
-        this.url = url;
-    }
+    private ThreatIntelligenceExternalReferenceArgs() {}
 
-    private ThreatIntelligenceExternalReferenceArgs() {
-        this.description = Codegen.empty();
-        this.externalId = Codegen.empty();
-        this.hashes = Codegen.empty();
-        this.sourceName = Codegen.empty();
-        this.url = Codegen.empty();
+    private ThreatIntelligenceExternalReferenceArgs(ThreatIntelligenceExternalReferenceArgs $) {
+        this.description = $.description;
+        this.externalId = $.externalId;
+        this.hashes = $.hashes;
+        this.sourceName = $.sourceName;
+        this.url = $.url;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ThreatIntelligenceExternalReferenceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> description;
-        private @Nullable Output<String> externalId;
-        private @Nullable Output<Map<String,String>> hashes;
-        private @Nullable Output<String> sourceName;
-        private @Nullable Output<String> url;
+        private ThreatIntelligenceExternalReferenceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ThreatIntelligenceExternalReferenceArgs();
         }
 
         public Builder(ThreatIntelligenceExternalReferenceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.description = defaults.description;
-    	      this.externalId = defaults.externalId;
-    	      this.hashes = defaults.hashes;
-    	      this.sourceName = defaults.sourceName;
-    	      this.url = defaults.url;
+            $ = new ThreatIntelligenceExternalReferenceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder externalId(@Nullable Output<String> externalId) {
-            this.externalId = externalId;
+            $.externalId = externalId;
             return this;
         }
-        public Builder externalId(@Nullable String externalId) {
-            this.externalId = Codegen.ofNullable(externalId);
-            return this;
+
+        public Builder externalId(String externalId) {
+            return externalId(Output.of(externalId));
         }
+
         public Builder hashes(@Nullable Output<Map<String,String>> hashes) {
-            this.hashes = hashes;
+            $.hashes = hashes;
             return this;
         }
-        public Builder hashes(@Nullable Map<String,String> hashes) {
-            this.hashes = Codegen.ofNullable(hashes);
-            return this;
+
+        public Builder hashes(Map<String,String> hashes) {
+            return hashes(Output.of(hashes));
         }
+
         public Builder sourceName(@Nullable Output<String> sourceName) {
-            this.sourceName = sourceName;
+            $.sourceName = sourceName;
             return this;
         }
-        public Builder sourceName(@Nullable String sourceName) {
-            this.sourceName = Codegen.ofNullable(sourceName);
-            return this;
+
+        public Builder sourceName(String sourceName) {
+            return sourceName(Output.of(sourceName));
         }
+
         public Builder url(@Nullable Output<String> url) {
-            this.url = url;
+            $.url = url;
             return this;
         }
-        public Builder url(@Nullable String url) {
-            this.url = Codegen.ofNullable(url);
-            return this;
-        }        public ThreatIntelligenceExternalReferenceArgs build() {
-            return new ThreatIntelligenceExternalReferenceArgs(description, externalId, hashes, sourceName, url);
+
+        public Builder url(String url) {
+            return url(Output.of(url));
+        }
+
+        public ThreatIntelligenceExternalReferenceArgs build() {
+            return $;
         }
     }
+
 }

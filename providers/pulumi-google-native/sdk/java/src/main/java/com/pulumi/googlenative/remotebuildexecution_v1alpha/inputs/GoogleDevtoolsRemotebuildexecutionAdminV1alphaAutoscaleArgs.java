@@ -5,9 +5,9 @@ package com.pulumi.googlenative.remotebuildexecution_v1alpha.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaAutoscaleArgs e
      * 
      */
     @Import(name="maxSize")
-      private final @Nullable Output<String> maxSize;
+    private @Nullable Output<String> maxSize;
 
-    public Output<String> maxSize() {
-        return this.maxSize == null ? Codegen.empty() : this.maxSize;
+    public Optional<Output<String>> maxSize() {
+        return Optional.ofNullable(this.maxSize);
     }
 
     /**
@@ -35,63 +35,58 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaAutoscaleArgs e
      * 
      */
     @Import(name="minSize")
-      private final @Nullable Output<String> minSize;
+    private @Nullable Output<String> minSize;
 
-    public Output<String> minSize() {
-        return this.minSize == null ? Codegen.empty() : this.minSize;
+    public Optional<Output<String>> minSize() {
+        return Optional.ofNullable(this.minSize);
     }
 
-    public GoogleDevtoolsRemotebuildexecutionAdminV1alphaAutoscaleArgs(
-        @Nullable Output<String> maxSize,
-        @Nullable Output<String> minSize) {
-        this.maxSize = maxSize;
-        this.minSize = minSize;
-    }
+    private GoogleDevtoolsRemotebuildexecutionAdminV1alphaAutoscaleArgs() {}
 
-    private GoogleDevtoolsRemotebuildexecutionAdminV1alphaAutoscaleArgs() {
-        this.maxSize = Codegen.empty();
-        this.minSize = Codegen.empty();
+    private GoogleDevtoolsRemotebuildexecutionAdminV1alphaAutoscaleArgs(GoogleDevtoolsRemotebuildexecutionAdminV1alphaAutoscaleArgs $) {
+        this.maxSize = $.maxSize;
+        this.minSize = $.minSize;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleDevtoolsRemotebuildexecutionAdminV1alphaAutoscaleArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> maxSize;
-        private @Nullable Output<String> minSize;
+        private GoogleDevtoolsRemotebuildexecutionAdminV1alphaAutoscaleArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleDevtoolsRemotebuildexecutionAdminV1alphaAutoscaleArgs();
         }
 
         public Builder(GoogleDevtoolsRemotebuildexecutionAdminV1alphaAutoscaleArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.maxSize = defaults.maxSize;
-    	      this.minSize = defaults.minSize;
+            $ = new GoogleDevtoolsRemotebuildexecutionAdminV1alphaAutoscaleArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder maxSize(@Nullable Output<String> maxSize) {
-            this.maxSize = maxSize;
+            $.maxSize = maxSize;
             return this;
         }
-        public Builder maxSize(@Nullable String maxSize) {
-            this.maxSize = Codegen.ofNullable(maxSize);
-            return this;
+
+        public Builder maxSize(String maxSize) {
+            return maxSize(Output.of(maxSize));
         }
+
         public Builder minSize(@Nullable Output<String> minSize) {
-            this.minSize = minSize;
+            $.minSize = minSize;
             return this;
         }
-        public Builder minSize(@Nullable String minSize) {
-            this.minSize = Codegen.ofNullable(minSize);
-            return this;
-        }        public GoogleDevtoolsRemotebuildexecutionAdminV1alphaAutoscaleArgs build() {
-            return new GoogleDevtoolsRemotebuildexecutionAdminV1alphaAutoscaleArgs(maxSize, minSize);
+
+        public Builder minSize(String minSize) {
+            return minSize(Output.of(minSize));
+        }
+
+        public GoogleDevtoolsRemotebuildexecutionAdminV1alphaAutoscaleArgs build() {
+            return $;
         }
     }
+
 }

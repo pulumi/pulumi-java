@@ -6,9 +6,9 @@ package com.pulumi.awsnative.iotanalytics.inputs;
 import com.pulumi.awsnative.iotanalytics.inputs.DatasetGlueConfigurationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -17,110 +17,102 @@ public final class DatasetS3DestinationConfigurationArgs extends com.pulumi.reso
     public static final DatasetS3DestinationConfigurationArgs Empty = new DatasetS3DestinationConfigurationArgs();
 
     @Import(name="bucket", required=true)
-      private final Output<String> bucket;
+    private Output<String> bucket;
 
     public Output<String> bucket() {
         return this.bucket;
     }
 
     @Import(name="glueConfiguration")
-      private final @Nullable Output<DatasetGlueConfigurationArgs> glueConfiguration;
+    private @Nullable Output<DatasetGlueConfigurationArgs> glueConfiguration;
 
-    public Output<DatasetGlueConfigurationArgs> glueConfiguration() {
-        return this.glueConfiguration == null ? Codegen.empty() : this.glueConfiguration;
+    public Optional<Output<DatasetGlueConfigurationArgs>> glueConfiguration() {
+        return Optional.ofNullable(this.glueConfiguration);
     }
 
     @Import(name="key", required=true)
-      private final Output<String> key;
+    private Output<String> key;
 
     public Output<String> key() {
         return this.key;
     }
 
     @Import(name="roleArn", required=true)
-      private final Output<String> roleArn;
+    private Output<String> roleArn;
 
     public Output<String> roleArn() {
         return this.roleArn;
     }
 
-    public DatasetS3DestinationConfigurationArgs(
-        Output<String> bucket,
-        @Nullable Output<DatasetGlueConfigurationArgs> glueConfiguration,
-        Output<String> key,
-        Output<String> roleArn) {
-        this.bucket = Objects.requireNonNull(bucket, "expected parameter 'bucket' to be non-null");
-        this.glueConfiguration = glueConfiguration;
-        this.key = Objects.requireNonNull(key, "expected parameter 'key' to be non-null");
-        this.roleArn = Objects.requireNonNull(roleArn, "expected parameter 'roleArn' to be non-null");
-    }
+    private DatasetS3DestinationConfigurationArgs() {}
 
-    private DatasetS3DestinationConfigurationArgs() {
-        this.bucket = Codegen.empty();
-        this.glueConfiguration = Codegen.empty();
-        this.key = Codegen.empty();
-        this.roleArn = Codegen.empty();
+    private DatasetS3DestinationConfigurationArgs(DatasetS3DestinationConfigurationArgs $) {
+        this.bucket = $.bucket;
+        this.glueConfiguration = $.glueConfiguration;
+        this.key = $.key;
+        this.roleArn = $.roleArn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DatasetS3DestinationConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> bucket;
-        private @Nullable Output<DatasetGlueConfigurationArgs> glueConfiguration;
-        private Output<String> key;
-        private Output<String> roleArn;
+        private DatasetS3DestinationConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DatasetS3DestinationConfigurationArgs();
         }
 
         public Builder(DatasetS3DestinationConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.bucket = defaults.bucket;
-    	      this.glueConfiguration = defaults.glueConfiguration;
-    	      this.key = defaults.key;
-    	      this.roleArn = defaults.roleArn;
+            $ = new DatasetS3DestinationConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder bucket(Output<String> bucket) {
-            this.bucket = Objects.requireNonNull(bucket);
+            $.bucket = bucket;
             return this;
         }
+
         public Builder bucket(String bucket) {
-            this.bucket = Output.of(Objects.requireNonNull(bucket));
-            return this;
+            return bucket(Output.of(bucket));
         }
+
         public Builder glueConfiguration(@Nullable Output<DatasetGlueConfigurationArgs> glueConfiguration) {
-            this.glueConfiguration = glueConfiguration;
+            $.glueConfiguration = glueConfiguration;
             return this;
         }
-        public Builder glueConfiguration(@Nullable DatasetGlueConfigurationArgs glueConfiguration) {
-            this.glueConfiguration = Codegen.ofNullable(glueConfiguration);
-            return this;
+
+        public Builder glueConfiguration(DatasetGlueConfigurationArgs glueConfiguration) {
+            return glueConfiguration(Output.of(glueConfiguration));
         }
+
         public Builder key(Output<String> key) {
-            this.key = Objects.requireNonNull(key);
+            $.key = key;
             return this;
         }
+
         public Builder key(String key) {
-            this.key = Output.of(Objects.requireNonNull(key));
-            return this;
+            return key(Output.of(key));
         }
+
         public Builder roleArn(Output<String> roleArn) {
-            this.roleArn = Objects.requireNonNull(roleArn);
+            $.roleArn = roleArn;
             return this;
         }
+
         public Builder roleArn(String roleArn) {
-            this.roleArn = Output.of(Objects.requireNonNull(roleArn));
-            return this;
-        }        public DatasetS3DestinationConfigurationArgs build() {
-            return new DatasetS3DestinationConfigurationArgs(bucket, glueConfiguration, key, roleArn);
+            return roleArn(Output.of(roleArn));
+        }
+
+        public DatasetS3DestinationConfigurationArgs build() {
+            $.bucket = Objects.requireNonNull($.bucket, "expected parameter 'bucket' to be non-null");
+            $.key = Objects.requireNonNull($.key, "expected parameter 'key' to be non-null");
+            $.roleArn = Objects.requireNonNull($.roleArn, "expected parameter 'roleArn' to be non-null");
+            return $;
         }
     }
+
 }

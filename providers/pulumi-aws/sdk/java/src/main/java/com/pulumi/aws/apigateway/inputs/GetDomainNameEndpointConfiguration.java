@@ -18,48 +18,49 @@ public final class GetDomainNameEndpointConfiguration extends com.pulumi.resourc
      * 
      */
     @Import(name="types", required=true)
-      private final List<String> types;
+    private List<String> types;
 
     public List<String> types() {
         return this.types;
     }
 
-    public GetDomainNameEndpointConfiguration(List<String> types) {
-        this.types = Objects.requireNonNull(types, "expected parameter 'types' to be non-null");
-    }
+    private GetDomainNameEndpointConfiguration() {}
 
-    private GetDomainNameEndpointConfiguration() {
-        this.types = List.of();
+    private GetDomainNameEndpointConfiguration(GetDomainNameEndpointConfiguration $) {
+        this.types = $.types;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetDomainNameEndpointConfiguration defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<String> types;
+        private GetDomainNameEndpointConfiguration $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetDomainNameEndpointConfiguration();
         }
 
         public Builder(GetDomainNameEndpointConfiguration defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.types = defaults.types;
+            $ = new GetDomainNameEndpointConfiguration(Objects.requireNonNull(defaults));
         }
 
         public Builder types(List<String> types) {
-            this.types = Objects.requireNonNull(types);
+            $.types = types;
             return this;
         }
+
         public Builder types(String... types) {
             return types(List.of(types));
-        }        public GetDomainNameEndpointConfiguration build() {
-            return new GetDomainNameEndpointConfiguration(types);
+        }
+
+        public GetDomainNameEndpointConfiguration build() {
+            $.types = Objects.requireNonNull($.types, "expected parameter 'types' to be non-null");
+            return $;
         }
     }
+
 }

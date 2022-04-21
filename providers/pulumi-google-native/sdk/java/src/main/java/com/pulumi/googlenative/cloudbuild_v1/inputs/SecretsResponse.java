@@ -23,7 +23,7 @@ public final class SecretsResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="inline", required=true)
-      private final List<InlineSecretResponse> inline;
+    private List<InlineSecretResponse> inline;
 
     public List<InlineSecretResponse> inline() {
         return this.inline;
@@ -34,61 +34,60 @@ public final class SecretsResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="secretManager", required=true)
-      private final List<SecretManagerSecretResponse> secretManager;
+    private List<SecretManagerSecretResponse> secretManager;
 
     public List<SecretManagerSecretResponse> secretManager() {
         return this.secretManager;
     }
 
-    public SecretsResponse(
-        List<InlineSecretResponse> inline,
-        List<SecretManagerSecretResponse> secretManager) {
-        this.inline = Objects.requireNonNull(inline, "expected parameter 'inline' to be non-null");
-        this.secretManager = Objects.requireNonNull(secretManager, "expected parameter 'secretManager' to be non-null");
-    }
+    private SecretsResponse() {}
 
-    private SecretsResponse() {
-        this.inline = List.of();
-        this.secretManager = List.of();
+    private SecretsResponse(SecretsResponse $) {
+        this.inline = $.inline;
+        this.secretManager = $.secretManager;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SecretsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<InlineSecretResponse> inline;
-        private List<SecretManagerSecretResponse> secretManager;
+        private SecretsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new SecretsResponse();
         }
 
         public Builder(SecretsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.inline = defaults.inline;
-    	      this.secretManager = defaults.secretManager;
+            $ = new SecretsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder inline(List<InlineSecretResponse> inline) {
-            this.inline = Objects.requireNonNull(inline);
+            $.inline = inline;
             return this;
         }
+
         public Builder inline(InlineSecretResponse... inline) {
             return inline(List.of(inline));
         }
+
         public Builder secretManager(List<SecretManagerSecretResponse> secretManager) {
-            this.secretManager = Objects.requireNonNull(secretManager);
+            $.secretManager = secretManager;
             return this;
         }
+
         public Builder secretManager(SecretManagerSecretResponse... secretManager) {
             return secretManager(List.of(secretManager));
-        }        public SecretsResponse build() {
-            return new SecretsResponse(inline, secretManager);
+        }
+
+        public SecretsResponse build() {
+            $.inline = Objects.requireNonNull($.inline, "expected parameter 'inline' to be non-null");
+            $.secretManager = Objects.requireNonNull($.secretManager, "expected parameter 'secretManager' to be non-null");
+            return $;
         }
     }
+
 }

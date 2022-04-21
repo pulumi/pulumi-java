@@ -17,6 +17,7 @@ import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -33,10 +34,10 @@ public final class HDInsightLinkedServiceArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="annotations")
-      private final @Nullable Output<List<Object>> annotations;
+    private @Nullable Output<List<Object>> annotations;
 
-    public Output<List<Object>> annotations() {
-        return this.annotations == null ? Codegen.empty() : this.annotations;
+    public Optional<Output<List<Object>>> annotations() {
+        return Optional.ofNullable(this.annotations);
     }
 
     /**
@@ -44,7 +45,7 @@ public final class HDInsightLinkedServiceArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="clusterUri", required=true)
-      private final Output<Object> clusterUri;
+    private Output<Object> clusterUri;
 
     public Output<Object> clusterUri() {
         return this.clusterUri;
@@ -55,10 +56,10 @@ public final class HDInsightLinkedServiceArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="connectVia")
-      private final @Nullable Output<IntegrationRuntimeReferenceArgs> connectVia;
+    private @Nullable Output<IntegrationRuntimeReferenceArgs> connectVia;
 
-    public Output<IntegrationRuntimeReferenceArgs> connectVia() {
-        return this.connectVia == null ? Codegen.empty() : this.connectVia;
+    public Optional<Output<IntegrationRuntimeReferenceArgs>> connectVia() {
+        return Optional.ofNullable(this.connectVia);
     }
 
     /**
@@ -66,10 +67,10 @@ public final class HDInsightLinkedServiceArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -77,10 +78,10 @@ public final class HDInsightLinkedServiceArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="encryptedCredential")
-      private final @Nullable Output<Object> encryptedCredential;
+    private @Nullable Output<Object> encryptedCredential;
 
-    public Output<Object> encryptedCredential() {
-        return this.encryptedCredential == null ? Codegen.empty() : this.encryptedCredential;
+    public Optional<Output<Object>> encryptedCredential() {
+        return Optional.ofNullable(this.encryptedCredential);
     }
 
     /**
@@ -88,10 +89,10 @@ public final class HDInsightLinkedServiceArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="fileSystem")
-      private final @Nullable Output<Object> fileSystem;
+    private @Nullable Output<Object> fileSystem;
 
-    public Output<Object> fileSystem() {
-        return this.fileSystem == null ? Codegen.empty() : this.fileSystem;
+    public Optional<Output<Object>> fileSystem() {
+        return Optional.ofNullable(this.fileSystem);
     }
 
     /**
@@ -99,10 +100,10 @@ public final class HDInsightLinkedServiceArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="hcatalogLinkedServiceName")
-      private final @Nullable Output<LinkedServiceReferenceArgs> hcatalogLinkedServiceName;
+    private @Nullable Output<LinkedServiceReferenceArgs> hcatalogLinkedServiceName;
 
-    public Output<LinkedServiceReferenceArgs> hcatalogLinkedServiceName() {
-        return this.hcatalogLinkedServiceName == null ? Codegen.empty() : this.hcatalogLinkedServiceName;
+    public Optional<Output<LinkedServiceReferenceArgs>> hcatalogLinkedServiceName() {
+        return Optional.ofNullable(this.hcatalogLinkedServiceName);
     }
 
     /**
@@ -110,10 +111,10 @@ public final class HDInsightLinkedServiceArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="isEspEnabled")
-      private final @Nullable Output<Object> isEspEnabled;
+    private @Nullable Output<Object> isEspEnabled;
 
-    public Output<Object> isEspEnabled() {
-        return this.isEspEnabled == null ? Codegen.empty() : this.isEspEnabled;
+    public Optional<Output<Object>> isEspEnabled() {
+        return Optional.ofNullable(this.isEspEnabled);
     }
 
     /**
@@ -121,10 +122,10 @@ public final class HDInsightLinkedServiceArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="linkedServiceName")
-      private final @Nullable Output<LinkedServiceReferenceArgs> linkedServiceName;
+    private @Nullable Output<LinkedServiceReferenceArgs> linkedServiceName;
 
-    public Output<LinkedServiceReferenceArgs> linkedServiceName() {
-        return this.linkedServiceName == null ? Codegen.empty() : this.linkedServiceName;
+    public Optional<Output<LinkedServiceReferenceArgs>> linkedServiceName() {
+        return Optional.ofNullable(this.linkedServiceName);
     }
 
     /**
@@ -132,10 +133,10 @@ public final class HDInsightLinkedServiceArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="parameters")
-      private final @Nullable Output<Map<String,ParameterSpecificationArgs>> parameters;
+    private @Nullable Output<Map<String,ParameterSpecificationArgs>> parameters;
 
-    public Output<Map<String,ParameterSpecificationArgs>> parameters() {
-        return this.parameters == null ? Codegen.empty() : this.parameters;
+    public Optional<Output<Map<String,ParameterSpecificationArgs>>> parameters() {
+        return Optional.ofNullable(this.parameters);
     }
 
     /**
@@ -143,10 +144,10 @@ public final class HDInsightLinkedServiceArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="password")
-      private final @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password;
+    private @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password;
 
-    public Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password() {
-        return this.password == null ? Codegen.empty() : this.password;
+    public Optional<Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>>> password() {
+        return Optional.ofNullable(this.password);
     }
 
     /**
@@ -155,7 +156,7 @@ public final class HDInsightLinkedServiceArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="type", required=true)
-      private final Output<String> type;
+    private Output<String> type;
 
     public Output<String> type() {
         return this.type;
@@ -166,209 +167,174 @@ public final class HDInsightLinkedServiceArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="userName")
-      private final @Nullable Output<Object> userName;
+    private @Nullable Output<Object> userName;
 
-    public Output<Object> userName() {
-        return this.userName == null ? Codegen.empty() : this.userName;
+    public Optional<Output<Object>> userName() {
+        return Optional.ofNullable(this.userName);
     }
 
-    public HDInsightLinkedServiceArgs(
-        @Nullable Output<List<Object>> annotations,
-        Output<Object> clusterUri,
-        @Nullable Output<IntegrationRuntimeReferenceArgs> connectVia,
-        @Nullable Output<String> description,
-        @Nullable Output<Object> encryptedCredential,
-        @Nullable Output<Object> fileSystem,
-        @Nullable Output<LinkedServiceReferenceArgs> hcatalogLinkedServiceName,
-        @Nullable Output<Object> isEspEnabled,
-        @Nullable Output<LinkedServiceReferenceArgs> linkedServiceName,
-        @Nullable Output<Map<String,ParameterSpecificationArgs>> parameters,
-        @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password,
-        Output<String> type,
-        @Nullable Output<Object> userName) {
-        this.annotations = annotations;
-        this.clusterUri = Objects.requireNonNull(clusterUri, "expected parameter 'clusterUri' to be non-null");
-        this.connectVia = connectVia;
-        this.description = description;
-        this.encryptedCredential = encryptedCredential;
-        this.fileSystem = fileSystem;
-        this.hcatalogLinkedServiceName = hcatalogLinkedServiceName;
-        this.isEspEnabled = isEspEnabled;
-        this.linkedServiceName = linkedServiceName;
-        this.parameters = parameters;
-        this.password = password;
-        this.type = Codegen.stringProp("type").output().arg(type).require();
-        this.userName = userName;
-    }
+    private HDInsightLinkedServiceArgs() {}
 
-    private HDInsightLinkedServiceArgs() {
-        this.annotations = Codegen.empty();
-        this.clusterUri = Codegen.empty();
-        this.connectVia = Codegen.empty();
-        this.description = Codegen.empty();
-        this.encryptedCredential = Codegen.empty();
-        this.fileSystem = Codegen.empty();
-        this.hcatalogLinkedServiceName = Codegen.empty();
-        this.isEspEnabled = Codegen.empty();
-        this.linkedServiceName = Codegen.empty();
-        this.parameters = Codegen.empty();
-        this.password = Codegen.empty();
-        this.type = Codegen.empty();
-        this.userName = Codegen.empty();
+    private HDInsightLinkedServiceArgs(HDInsightLinkedServiceArgs $) {
+        this.annotations = $.annotations;
+        this.clusterUri = $.clusterUri;
+        this.connectVia = $.connectVia;
+        this.description = $.description;
+        this.encryptedCredential = $.encryptedCredential;
+        this.fileSystem = $.fileSystem;
+        this.hcatalogLinkedServiceName = $.hcatalogLinkedServiceName;
+        this.isEspEnabled = $.isEspEnabled;
+        this.linkedServiceName = $.linkedServiceName;
+        this.parameters = $.parameters;
+        this.password = $.password;
+        this.type = $.type;
+        this.userName = $.userName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(HDInsightLinkedServiceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<Object>> annotations;
-        private Output<Object> clusterUri;
-        private @Nullable Output<IntegrationRuntimeReferenceArgs> connectVia;
-        private @Nullable Output<String> description;
-        private @Nullable Output<Object> encryptedCredential;
-        private @Nullable Output<Object> fileSystem;
-        private @Nullable Output<LinkedServiceReferenceArgs> hcatalogLinkedServiceName;
-        private @Nullable Output<Object> isEspEnabled;
-        private @Nullable Output<LinkedServiceReferenceArgs> linkedServiceName;
-        private @Nullable Output<Map<String,ParameterSpecificationArgs>> parameters;
-        private @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password;
-        private Output<String> type;
-        private @Nullable Output<Object> userName;
+        private HDInsightLinkedServiceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new HDInsightLinkedServiceArgs();
         }
 
         public Builder(HDInsightLinkedServiceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.annotations = defaults.annotations;
-    	      this.clusterUri = defaults.clusterUri;
-    	      this.connectVia = defaults.connectVia;
-    	      this.description = defaults.description;
-    	      this.encryptedCredential = defaults.encryptedCredential;
-    	      this.fileSystem = defaults.fileSystem;
-    	      this.hcatalogLinkedServiceName = defaults.hcatalogLinkedServiceName;
-    	      this.isEspEnabled = defaults.isEspEnabled;
-    	      this.linkedServiceName = defaults.linkedServiceName;
-    	      this.parameters = defaults.parameters;
-    	      this.password = defaults.password;
-    	      this.type = defaults.type;
-    	      this.userName = defaults.userName;
+            $ = new HDInsightLinkedServiceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder annotations(@Nullable Output<List<Object>> annotations) {
-            this.annotations = annotations;
+            $.annotations = annotations;
             return this;
         }
-        public Builder annotations(@Nullable List<Object> annotations) {
-            this.annotations = Codegen.ofNullable(annotations);
-            return this;
+
+        public Builder annotations(List<Object> annotations) {
+            return annotations(Output.of(annotations));
         }
+
         public Builder annotations(Object... annotations) {
             return annotations(List.of(annotations));
         }
+
         public Builder clusterUri(Output<Object> clusterUri) {
-            this.clusterUri = Objects.requireNonNull(clusterUri);
+            $.clusterUri = clusterUri;
             return this;
         }
+
         public Builder clusterUri(Object clusterUri) {
-            this.clusterUri = Output.of(Objects.requireNonNull(clusterUri));
-            return this;
+            return clusterUri(Output.of(clusterUri));
         }
+
         public Builder connectVia(@Nullable Output<IntegrationRuntimeReferenceArgs> connectVia) {
-            this.connectVia = connectVia;
+            $.connectVia = connectVia;
             return this;
         }
-        public Builder connectVia(@Nullable IntegrationRuntimeReferenceArgs connectVia) {
-            this.connectVia = Codegen.ofNullable(connectVia);
-            return this;
+
+        public Builder connectVia(IntegrationRuntimeReferenceArgs connectVia) {
+            return connectVia(Output.of(connectVia));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder encryptedCredential(@Nullable Output<Object> encryptedCredential) {
-            this.encryptedCredential = encryptedCredential;
+            $.encryptedCredential = encryptedCredential;
             return this;
         }
-        public Builder encryptedCredential(@Nullable Object encryptedCredential) {
-            this.encryptedCredential = Codegen.ofNullable(encryptedCredential);
-            return this;
+
+        public Builder encryptedCredential(Object encryptedCredential) {
+            return encryptedCredential(Output.of(encryptedCredential));
         }
+
         public Builder fileSystem(@Nullable Output<Object> fileSystem) {
-            this.fileSystem = fileSystem;
+            $.fileSystem = fileSystem;
             return this;
         }
-        public Builder fileSystem(@Nullable Object fileSystem) {
-            this.fileSystem = Codegen.ofNullable(fileSystem);
-            return this;
+
+        public Builder fileSystem(Object fileSystem) {
+            return fileSystem(Output.of(fileSystem));
         }
+
         public Builder hcatalogLinkedServiceName(@Nullable Output<LinkedServiceReferenceArgs> hcatalogLinkedServiceName) {
-            this.hcatalogLinkedServiceName = hcatalogLinkedServiceName;
+            $.hcatalogLinkedServiceName = hcatalogLinkedServiceName;
             return this;
         }
-        public Builder hcatalogLinkedServiceName(@Nullable LinkedServiceReferenceArgs hcatalogLinkedServiceName) {
-            this.hcatalogLinkedServiceName = Codegen.ofNullable(hcatalogLinkedServiceName);
-            return this;
+
+        public Builder hcatalogLinkedServiceName(LinkedServiceReferenceArgs hcatalogLinkedServiceName) {
+            return hcatalogLinkedServiceName(Output.of(hcatalogLinkedServiceName));
         }
+
         public Builder isEspEnabled(@Nullable Output<Object> isEspEnabled) {
-            this.isEspEnabled = isEspEnabled;
+            $.isEspEnabled = isEspEnabled;
             return this;
         }
-        public Builder isEspEnabled(@Nullable Object isEspEnabled) {
-            this.isEspEnabled = Codegen.ofNullable(isEspEnabled);
-            return this;
+
+        public Builder isEspEnabled(Object isEspEnabled) {
+            return isEspEnabled(Output.of(isEspEnabled));
         }
+
         public Builder linkedServiceName(@Nullable Output<LinkedServiceReferenceArgs> linkedServiceName) {
-            this.linkedServiceName = linkedServiceName;
+            $.linkedServiceName = linkedServiceName;
             return this;
         }
-        public Builder linkedServiceName(@Nullable LinkedServiceReferenceArgs linkedServiceName) {
-            this.linkedServiceName = Codegen.ofNullable(linkedServiceName);
-            return this;
+
+        public Builder linkedServiceName(LinkedServiceReferenceArgs linkedServiceName) {
+            return linkedServiceName(Output.of(linkedServiceName));
         }
+
         public Builder parameters(@Nullable Output<Map<String,ParameterSpecificationArgs>> parameters) {
-            this.parameters = parameters;
+            $.parameters = parameters;
             return this;
         }
-        public Builder parameters(@Nullable Map<String,ParameterSpecificationArgs> parameters) {
-            this.parameters = Codegen.ofNullable(parameters);
-            return this;
+
+        public Builder parameters(Map<String,ParameterSpecificationArgs> parameters) {
+            return parameters(Output.of(parameters));
         }
+
         public Builder password(@Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password) {
-            this.password = password;
+            $.password = password;
             return this;
         }
-        public Builder password(@Nullable Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs> password) {
-            this.password = Codegen.ofNullable(password);
-            return this;
+
+        public Builder password(Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs> password) {
+            return password(Output.of(password));
         }
+
         public Builder type(Output<String> type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Output.of(Objects.requireNonNull(type));
-            return this;
+            return type(Output.of(type));
         }
+
         public Builder userName(@Nullable Output<Object> userName) {
-            this.userName = userName;
+            $.userName = userName;
             return this;
         }
-        public Builder userName(@Nullable Object userName) {
-            this.userName = Codegen.ofNullable(userName);
-            return this;
-        }        public HDInsightLinkedServiceArgs build() {
-            return new HDInsightLinkedServiceArgs(annotations, clusterUri, connectVia, description, encryptedCredential, fileSystem, hcatalogLinkedServiceName, isEspEnabled, linkedServiceName, parameters, password, type, userName);
+
+        public Builder userName(Object userName) {
+            return userName(Output.of(userName));
+        }
+
+        public HDInsightLinkedServiceArgs build() {
+            $.clusterUri = Objects.requireNonNull($.clusterUri, "expected parameter 'clusterUri' to be non-null");
+            $.type = Codegen.stringProp("type").output().arg($.type).require();
+            return $;
         }
     }
+
 }

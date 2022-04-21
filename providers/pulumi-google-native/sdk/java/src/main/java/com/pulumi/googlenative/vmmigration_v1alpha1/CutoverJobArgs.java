@@ -5,9 +5,9 @@ package com.pulumi.googlenative.vmmigration_v1alpha1;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -16,150 +16,136 @@ public final class CutoverJobArgs extends com.pulumi.resources.ResourceArgs {
     public static final CutoverJobArgs Empty = new CutoverJobArgs();
 
     @Import(name="cutoverJobId", required=true)
-      private final Output<String> cutoverJobId;
+    private Output<String> cutoverJobId;
 
     public Output<String> cutoverJobId() {
         return this.cutoverJobId;
     }
 
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     @Import(name="migratingVmId", required=true)
-      private final Output<String> migratingVmId;
+    private Output<String> migratingVmId;
 
     public Output<String> migratingVmId() {
         return this.migratingVmId;
     }
 
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     @Import(name="requestId")
-      private final @Nullable Output<String> requestId;
+    private @Nullable Output<String> requestId;
 
-    public Output<String> requestId() {
-        return this.requestId == null ? Codegen.empty() : this.requestId;
+    public Optional<Output<String>> requestId() {
+        return Optional.ofNullable(this.requestId);
     }
 
     @Import(name="sourceId", required=true)
-      private final Output<String> sourceId;
+    private Output<String> sourceId;
 
     public Output<String> sourceId() {
         return this.sourceId;
     }
 
-    public CutoverJobArgs(
-        Output<String> cutoverJobId,
-        @Nullable Output<String> location,
-        Output<String> migratingVmId,
-        @Nullable Output<String> project,
-        @Nullable Output<String> requestId,
-        Output<String> sourceId) {
-        this.cutoverJobId = Objects.requireNonNull(cutoverJobId, "expected parameter 'cutoverJobId' to be non-null");
-        this.location = location;
-        this.migratingVmId = Objects.requireNonNull(migratingVmId, "expected parameter 'migratingVmId' to be non-null");
-        this.project = project;
-        this.requestId = requestId;
-        this.sourceId = Objects.requireNonNull(sourceId, "expected parameter 'sourceId' to be non-null");
-    }
+    private CutoverJobArgs() {}
 
-    private CutoverJobArgs() {
-        this.cutoverJobId = Codegen.empty();
-        this.location = Codegen.empty();
-        this.migratingVmId = Codegen.empty();
-        this.project = Codegen.empty();
-        this.requestId = Codegen.empty();
-        this.sourceId = Codegen.empty();
+    private CutoverJobArgs(CutoverJobArgs $) {
+        this.cutoverJobId = $.cutoverJobId;
+        this.location = $.location;
+        this.migratingVmId = $.migratingVmId;
+        this.project = $.project;
+        this.requestId = $.requestId;
+        this.sourceId = $.sourceId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CutoverJobArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> cutoverJobId;
-        private @Nullable Output<String> location;
-        private Output<String> migratingVmId;
-        private @Nullable Output<String> project;
-        private @Nullable Output<String> requestId;
-        private Output<String> sourceId;
+        private CutoverJobArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CutoverJobArgs();
         }
 
         public Builder(CutoverJobArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cutoverJobId = defaults.cutoverJobId;
-    	      this.location = defaults.location;
-    	      this.migratingVmId = defaults.migratingVmId;
-    	      this.project = defaults.project;
-    	      this.requestId = defaults.requestId;
-    	      this.sourceId = defaults.sourceId;
+            $ = new CutoverJobArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder cutoverJobId(Output<String> cutoverJobId) {
-            this.cutoverJobId = Objects.requireNonNull(cutoverJobId);
+            $.cutoverJobId = cutoverJobId;
             return this;
         }
+
         public Builder cutoverJobId(String cutoverJobId) {
-            this.cutoverJobId = Output.of(Objects.requireNonNull(cutoverJobId));
-            return this;
+            return cutoverJobId(Output.of(cutoverJobId));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder migratingVmId(Output<String> migratingVmId) {
-            this.migratingVmId = Objects.requireNonNull(migratingVmId);
+            $.migratingVmId = migratingVmId;
             return this;
         }
+
         public Builder migratingVmId(String migratingVmId) {
-            this.migratingVmId = Output.of(Objects.requireNonNull(migratingVmId));
-            return this;
+            return migratingVmId(Output.of(migratingVmId));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder requestId(@Nullable Output<String> requestId) {
-            this.requestId = requestId;
+            $.requestId = requestId;
             return this;
         }
-        public Builder requestId(@Nullable String requestId) {
-            this.requestId = Codegen.ofNullable(requestId);
-            return this;
+
+        public Builder requestId(String requestId) {
+            return requestId(Output.of(requestId));
         }
+
         public Builder sourceId(Output<String> sourceId) {
-            this.sourceId = Objects.requireNonNull(sourceId);
+            $.sourceId = sourceId;
             return this;
         }
+
         public Builder sourceId(String sourceId) {
-            this.sourceId = Output.of(Objects.requireNonNull(sourceId));
-            return this;
-        }        public CutoverJobArgs build() {
-            return new CutoverJobArgs(cutoverJobId, location, migratingVmId, project, requestId, sourceId);
+            return sourceId(Output.of(sourceId));
+        }
+
+        public CutoverJobArgs build() {
+            $.cutoverJobId = Objects.requireNonNull($.cutoverJobId, "expected parameter 'cutoverJobId' to be non-null");
+            $.migratingVmId = Objects.requireNonNull($.migratingVmId, "expected parameter 'migratingVmId' to be non-null");
+            $.sourceId = Objects.requireNonNull($.sourceId, "expected parameter 'sourceId' to be non-null");
+            return $;
         }
     }
+
 }

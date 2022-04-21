@@ -23,45 +23,44 @@ public final class ResourceIdResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="id")
-      private final @Nullable String id;
+    private @Nullable String id;
 
     public Optional<String> id() {
-        return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
+        return Optional.ofNullable(this.id);
     }
 
-    public ResourceIdResponse(@Nullable String id) {
-        this.id = id;
-    }
+    private ResourceIdResponse() {}
 
-    private ResourceIdResponse() {
-        this.id = null;
+    private ResourceIdResponse(ResourceIdResponse $) {
+        this.id = $.id;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ResourceIdResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String id;
+        private ResourceIdResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ResourceIdResponse();
         }
 
         public Builder(ResourceIdResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.id = defaults.id;
+            $ = new ResourceIdResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder id(@Nullable String id) {
-            this.id = id;
+            $.id = id;
             return this;
-        }        public ResourceIdResponse build() {
-            return new ResourceIdResponse(id);
+        }
+
+        public ResourceIdResponse build() {
+            return $;
         }
     }
+
 }

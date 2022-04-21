@@ -22,7 +22,7 @@ public final class FilterOptionsResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="filter", required=true)
-      private final FilterResponse filter;
+    private FilterResponse filter;
 
     public FilterResponse filter() {
         return this.filter;
@@ -33,55 +33,52 @@ public final class FilterOptionsResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="objectType", required=true)
-      private final String objectType;
+    private String objectType;
 
     public String objectType() {
         return this.objectType;
     }
 
-    public FilterOptionsResponse(
-        FilterResponse filter,
-        String objectType) {
-        this.filter = Objects.requireNonNull(filter, "expected parameter 'filter' to be non-null");
-        this.objectType = Objects.requireNonNull(objectType, "expected parameter 'objectType' to be non-null");
-    }
+    private FilterOptionsResponse() {}
 
-    private FilterOptionsResponse() {
-        this.filter = null;
-        this.objectType = null;
+    private FilterOptionsResponse(FilterOptionsResponse $) {
+        this.filter = $.filter;
+        this.objectType = $.objectType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FilterOptionsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private FilterResponse filter;
-        private String objectType;
+        private FilterOptionsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new FilterOptionsResponse();
         }
 
         public Builder(FilterOptionsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.filter = defaults.filter;
-    	      this.objectType = defaults.objectType;
+            $ = new FilterOptionsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder filter(FilterResponse filter) {
-            this.filter = Objects.requireNonNull(filter);
+            $.filter = filter;
             return this;
         }
+
         public Builder objectType(String objectType) {
-            this.objectType = Objects.requireNonNull(objectType);
+            $.objectType = objectType;
             return this;
-        }        public FilterOptionsResponse build() {
-            return new FilterOptionsResponse(filter, objectType);
+        }
+
+        public FilterOptionsResponse build() {
+            $.filter = Objects.requireNonNull($.filter, "expected parameter 'filter' to be non-null");
+            $.objectType = Objects.requireNonNull($.objectType, "expected parameter 'objectType' to be non-null");
+            return $;
         }
     }
+
 }

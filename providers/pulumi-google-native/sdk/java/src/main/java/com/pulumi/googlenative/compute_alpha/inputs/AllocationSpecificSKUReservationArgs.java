@@ -5,10 +5,10 @@ package com.pulumi.googlenative.compute_alpha.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.compute_alpha.inputs.AllocationSpecificSKUAllocationReservedInstancePropertiesArgs;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class AllocationSpecificSKUReservationArgs extends com.pulumi.resou
      * 
      */
     @Import(name="count")
-      private final @Nullable Output<String> count;
+    private @Nullable Output<String> count;
 
-    public Output<String> count() {
-        return this.count == null ? Codegen.empty() : this.count;
+    public Optional<Output<String>> count() {
+        return Optional.ofNullable(this.count);
     }
 
     /**
@@ -36,63 +36,58 @@ public final class AllocationSpecificSKUReservationArgs extends com.pulumi.resou
      * 
      */
     @Import(name="instanceProperties")
-      private final @Nullable Output<AllocationSpecificSKUAllocationReservedInstancePropertiesArgs> instanceProperties;
+    private @Nullable Output<AllocationSpecificSKUAllocationReservedInstancePropertiesArgs> instanceProperties;
 
-    public Output<AllocationSpecificSKUAllocationReservedInstancePropertiesArgs> instanceProperties() {
-        return this.instanceProperties == null ? Codegen.empty() : this.instanceProperties;
+    public Optional<Output<AllocationSpecificSKUAllocationReservedInstancePropertiesArgs>> instanceProperties() {
+        return Optional.ofNullable(this.instanceProperties);
     }
 
-    public AllocationSpecificSKUReservationArgs(
-        @Nullable Output<String> count,
-        @Nullable Output<AllocationSpecificSKUAllocationReservedInstancePropertiesArgs> instanceProperties) {
-        this.count = count;
-        this.instanceProperties = instanceProperties;
-    }
+    private AllocationSpecificSKUReservationArgs() {}
 
-    private AllocationSpecificSKUReservationArgs() {
-        this.count = Codegen.empty();
-        this.instanceProperties = Codegen.empty();
+    private AllocationSpecificSKUReservationArgs(AllocationSpecificSKUReservationArgs $) {
+        this.count = $.count;
+        this.instanceProperties = $.instanceProperties;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AllocationSpecificSKUReservationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> count;
-        private @Nullable Output<AllocationSpecificSKUAllocationReservedInstancePropertiesArgs> instanceProperties;
+        private AllocationSpecificSKUReservationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AllocationSpecificSKUReservationArgs();
         }
 
         public Builder(AllocationSpecificSKUReservationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.count = defaults.count;
-    	      this.instanceProperties = defaults.instanceProperties;
+            $ = new AllocationSpecificSKUReservationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder count(@Nullable Output<String> count) {
-            this.count = count;
+            $.count = count;
             return this;
         }
-        public Builder count(@Nullable String count) {
-            this.count = Codegen.ofNullable(count);
-            return this;
+
+        public Builder count(String count) {
+            return count(Output.of(count));
         }
+
         public Builder instanceProperties(@Nullable Output<AllocationSpecificSKUAllocationReservedInstancePropertiesArgs> instanceProperties) {
-            this.instanceProperties = instanceProperties;
+            $.instanceProperties = instanceProperties;
             return this;
         }
-        public Builder instanceProperties(@Nullable AllocationSpecificSKUAllocationReservedInstancePropertiesArgs instanceProperties) {
-            this.instanceProperties = Codegen.ofNullable(instanceProperties);
-            return this;
-        }        public AllocationSpecificSKUReservationArgs build() {
-            return new AllocationSpecificSKUReservationArgs(count, instanceProperties);
+
+        public Builder instanceProperties(AllocationSpecificSKUAllocationReservedInstancePropertiesArgs instanceProperties) {
+            return instanceProperties(Output.of(instanceProperties));
+        }
+
+        public AllocationSpecificSKUReservationArgs build() {
+            return $;
         }
     }
+
 }

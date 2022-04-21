@@ -18,7 +18,7 @@ public final class GetBotAssociationArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="instanceId", required=true)
-      private final String instanceId;
+    private String instanceId;
 
     public String instanceId() {
         return this.instanceId;
@@ -29,55 +29,52 @@ public final class GetBotAssociationArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="lexBot", required=true)
-      private final GetBotAssociationLexBot lexBot;
+    private GetBotAssociationLexBot lexBot;
 
     public GetBotAssociationLexBot lexBot() {
         return this.lexBot;
     }
 
-    public GetBotAssociationArgs(
-        String instanceId,
-        GetBotAssociationLexBot lexBot) {
-        this.instanceId = Objects.requireNonNull(instanceId, "expected parameter 'instanceId' to be non-null");
-        this.lexBot = Objects.requireNonNull(lexBot, "expected parameter 'lexBot' to be non-null");
-    }
+    private GetBotAssociationArgs() {}
 
-    private GetBotAssociationArgs() {
-        this.instanceId = null;
-        this.lexBot = null;
+    private GetBotAssociationArgs(GetBotAssociationArgs $) {
+        this.instanceId = $.instanceId;
+        this.lexBot = $.lexBot;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetBotAssociationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String instanceId;
-        private GetBotAssociationLexBot lexBot;
+        private GetBotAssociationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetBotAssociationArgs();
         }
 
         public Builder(GetBotAssociationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.instanceId = defaults.instanceId;
-    	      this.lexBot = defaults.lexBot;
+            $ = new GetBotAssociationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder instanceId(String instanceId) {
-            this.instanceId = Objects.requireNonNull(instanceId);
+            $.instanceId = instanceId;
             return this;
         }
+
         public Builder lexBot(GetBotAssociationLexBot lexBot) {
-            this.lexBot = Objects.requireNonNull(lexBot);
+            $.lexBot = lexBot;
             return this;
-        }        public GetBotAssociationArgs build() {
-            return new GetBotAssociationArgs(instanceId, lexBot);
+        }
+
+        public GetBotAssociationArgs build() {
+            $.instanceId = Objects.requireNonNull($.instanceId, "expected parameter 'instanceId' to be non-null");
+            $.lexBot = Objects.requireNonNull($.lexBot, "expected parameter 'lexBot' to be non-null");
+            return $;
         }
     }
+
 }

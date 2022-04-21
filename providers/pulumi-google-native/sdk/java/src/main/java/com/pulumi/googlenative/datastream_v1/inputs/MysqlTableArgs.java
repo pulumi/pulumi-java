@@ -5,11 +5,11 @@ package com.pulumi.googlenative.datastream_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.datastream_v1.inputs.MysqlColumnArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class MysqlTableArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="mysqlColumns")
-      private final @Nullable Output<List<MysqlColumnArgs>> mysqlColumns;
+    private @Nullable Output<List<MysqlColumnArgs>> mysqlColumns;
 
-    public Output<List<MysqlColumnArgs>> mysqlColumns() {
-        return this.mysqlColumns == null ? Codegen.empty() : this.mysqlColumns;
+    public Optional<Output<List<MysqlColumnArgs>>> mysqlColumns() {
+        return Optional.ofNullable(this.mysqlColumns);
     }
 
     /**
@@ -37,66 +37,62 @@ public final class MysqlTableArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="table")
-      private final @Nullable Output<String> table;
+    private @Nullable Output<String> table;
 
-    public Output<String> table() {
-        return this.table == null ? Codegen.empty() : this.table;
+    public Optional<Output<String>> table() {
+        return Optional.ofNullable(this.table);
     }
 
-    public MysqlTableArgs(
-        @Nullable Output<List<MysqlColumnArgs>> mysqlColumns,
-        @Nullable Output<String> table) {
-        this.mysqlColumns = mysqlColumns;
-        this.table = table;
-    }
+    private MysqlTableArgs() {}
 
-    private MysqlTableArgs() {
-        this.mysqlColumns = Codegen.empty();
-        this.table = Codegen.empty();
+    private MysqlTableArgs(MysqlTableArgs $) {
+        this.mysqlColumns = $.mysqlColumns;
+        this.table = $.table;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MysqlTableArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<MysqlColumnArgs>> mysqlColumns;
-        private @Nullable Output<String> table;
+        private MysqlTableArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new MysqlTableArgs();
         }
 
         public Builder(MysqlTableArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.mysqlColumns = defaults.mysqlColumns;
-    	      this.table = defaults.table;
+            $ = new MysqlTableArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder mysqlColumns(@Nullable Output<List<MysqlColumnArgs>> mysqlColumns) {
-            this.mysqlColumns = mysqlColumns;
+            $.mysqlColumns = mysqlColumns;
             return this;
         }
-        public Builder mysqlColumns(@Nullable List<MysqlColumnArgs> mysqlColumns) {
-            this.mysqlColumns = Codegen.ofNullable(mysqlColumns);
-            return this;
+
+        public Builder mysqlColumns(List<MysqlColumnArgs> mysqlColumns) {
+            return mysqlColumns(Output.of(mysqlColumns));
         }
+
         public Builder mysqlColumns(MysqlColumnArgs... mysqlColumns) {
             return mysqlColumns(List.of(mysqlColumns));
         }
+
         public Builder table(@Nullable Output<String> table) {
-            this.table = table;
+            $.table = table;
             return this;
         }
-        public Builder table(@Nullable String table) {
-            this.table = Codegen.ofNullable(table);
-            return this;
-        }        public MysqlTableArgs build() {
-            return new MysqlTableArgs(mysqlColumns, table);
+
+        public Builder table(String table) {
+            return table(Output.of(table));
+        }
+
+        public MysqlTableArgs build() {
+            return $;
         }
     }
+
 }

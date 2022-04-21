@@ -5,9 +5,9 @@ package com.pulumi.azurenative.portal;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class ConsoleWithLocationArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="consoleName")
-      private final @Nullable Output<String> consoleName;
+    private @Nullable Output<String> consoleName;
 
-    public Output<String> consoleName() {
-        return this.consoleName == null ? Codegen.empty() : this.consoleName;
+    public Optional<Output<String>> consoleName() {
+        return Optional.ofNullable(this.consoleName);
     }
 
     /**
@@ -31,63 +31,59 @@ public final class ConsoleWithLocationArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="location", required=true)
-      private final Output<String> location;
+    private Output<String> location;
 
     public Output<String> location() {
         return this.location;
     }
 
-    public ConsoleWithLocationArgs(
-        @Nullable Output<String> consoleName,
-        Output<String> location) {
-        this.consoleName = consoleName;
-        this.location = Objects.requireNonNull(location, "expected parameter 'location' to be non-null");
-    }
+    private ConsoleWithLocationArgs() {}
 
-    private ConsoleWithLocationArgs() {
-        this.consoleName = Codegen.empty();
-        this.location = Codegen.empty();
+    private ConsoleWithLocationArgs(ConsoleWithLocationArgs $) {
+        this.consoleName = $.consoleName;
+        this.location = $.location;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ConsoleWithLocationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> consoleName;
-        private Output<String> location;
+        private ConsoleWithLocationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ConsoleWithLocationArgs();
         }
 
         public Builder(ConsoleWithLocationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.consoleName = defaults.consoleName;
-    	      this.location = defaults.location;
+            $ = new ConsoleWithLocationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder consoleName(@Nullable Output<String> consoleName) {
-            this.consoleName = consoleName;
+            $.consoleName = consoleName;
             return this;
         }
-        public Builder consoleName(@Nullable String consoleName) {
-            this.consoleName = Codegen.ofNullable(consoleName);
-            return this;
+
+        public Builder consoleName(String consoleName) {
+            return consoleName(Output.of(consoleName));
         }
+
         public Builder location(Output<String> location) {
-            this.location = Objects.requireNonNull(location);
+            $.location = location;
             return this;
         }
+
         public Builder location(String location) {
-            this.location = Output.of(Objects.requireNonNull(location));
-            return this;
-        }        public ConsoleWithLocationArgs build() {
-            return new ConsoleWithLocationArgs(consoleName, location);
+            return location(Output.of(location));
+        }
+
+        public ConsoleWithLocationArgs build() {
+            $.location = Objects.requireNonNull($.location, "expected parameter 'location' to be non-null");
+            return $;
         }
     }
+
 }

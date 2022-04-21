@@ -5,7 +5,6 @@ package com.pulumi.googlenative.privateca_v1beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.privateca_v1beta1.inputs.ReusableConfigValuesArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +23,7 @@ public final class ReusableConfigWrapperArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="reusableConfig", required=true)
-      private final Output<String> reusableConfig;
+    private Output<String> reusableConfig;
 
     public Output<String> reusableConfig() {
         return this.reusableConfig;
@@ -35,63 +34,60 @@ public final class ReusableConfigWrapperArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="reusableConfigValues", required=true)
-      private final Output<ReusableConfigValuesArgs> reusableConfigValues;
+    private Output<ReusableConfigValuesArgs> reusableConfigValues;
 
     public Output<ReusableConfigValuesArgs> reusableConfigValues() {
         return this.reusableConfigValues;
     }
 
-    public ReusableConfigWrapperArgs(
-        Output<String> reusableConfig,
-        Output<ReusableConfigValuesArgs> reusableConfigValues) {
-        this.reusableConfig = Objects.requireNonNull(reusableConfig, "expected parameter 'reusableConfig' to be non-null");
-        this.reusableConfigValues = Objects.requireNonNull(reusableConfigValues, "expected parameter 'reusableConfigValues' to be non-null");
-    }
+    private ReusableConfigWrapperArgs() {}
 
-    private ReusableConfigWrapperArgs() {
-        this.reusableConfig = Codegen.empty();
-        this.reusableConfigValues = Codegen.empty();
+    private ReusableConfigWrapperArgs(ReusableConfigWrapperArgs $) {
+        this.reusableConfig = $.reusableConfig;
+        this.reusableConfigValues = $.reusableConfigValues;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ReusableConfigWrapperArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> reusableConfig;
-        private Output<ReusableConfigValuesArgs> reusableConfigValues;
+        private ReusableConfigWrapperArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ReusableConfigWrapperArgs();
         }
 
         public Builder(ReusableConfigWrapperArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.reusableConfig = defaults.reusableConfig;
-    	      this.reusableConfigValues = defaults.reusableConfigValues;
+            $ = new ReusableConfigWrapperArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder reusableConfig(Output<String> reusableConfig) {
-            this.reusableConfig = Objects.requireNonNull(reusableConfig);
+            $.reusableConfig = reusableConfig;
             return this;
         }
+
         public Builder reusableConfig(String reusableConfig) {
-            this.reusableConfig = Output.of(Objects.requireNonNull(reusableConfig));
-            return this;
+            return reusableConfig(Output.of(reusableConfig));
         }
+
         public Builder reusableConfigValues(Output<ReusableConfigValuesArgs> reusableConfigValues) {
-            this.reusableConfigValues = Objects.requireNonNull(reusableConfigValues);
+            $.reusableConfigValues = reusableConfigValues;
             return this;
         }
+
         public Builder reusableConfigValues(ReusableConfigValuesArgs reusableConfigValues) {
-            this.reusableConfigValues = Output.of(Objects.requireNonNull(reusableConfigValues));
-            return this;
-        }        public ReusableConfigWrapperArgs build() {
-            return new ReusableConfigWrapperArgs(reusableConfig, reusableConfigValues);
+            return reusableConfigValues(Output.of(reusableConfigValues));
+        }
+
+        public ReusableConfigWrapperArgs build() {
+            $.reusableConfig = Objects.requireNonNull($.reusableConfig, "expected parameter 'reusableConfig' to be non-null");
+            $.reusableConfigValues = Objects.requireNonNull($.reusableConfigValues, "expected parameter 'reusableConfigValues' to be non-null");
+            return $;
         }
     }
+
 }

@@ -7,12 +7,12 @@ import com.pulumi.awsnative.opsworkscm.inputs.ServerEngineAttributeArgs;
 import com.pulumi.awsnative.opsworkscm.inputs.ServerTagArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,462 +21,407 @@ public final class ServerArgs extends com.pulumi.resources.ResourceArgs {
     public static final ServerArgs Empty = new ServerArgs();
 
     @Import(name="associatePublicIpAddress")
-      private final @Nullable Output<Boolean> associatePublicIpAddress;
+    private @Nullable Output<Boolean> associatePublicIpAddress;
 
-    public Output<Boolean> associatePublicIpAddress() {
-        return this.associatePublicIpAddress == null ? Codegen.empty() : this.associatePublicIpAddress;
+    public Optional<Output<Boolean>> associatePublicIpAddress() {
+        return Optional.ofNullable(this.associatePublicIpAddress);
     }
 
     @Import(name="backupId")
-      private final @Nullable Output<String> backupId;
+    private @Nullable Output<String> backupId;
 
-    public Output<String> backupId() {
-        return this.backupId == null ? Codegen.empty() : this.backupId;
+    public Optional<Output<String>> backupId() {
+        return Optional.ofNullable(this.backupId);
     }
 
     @Import(name="backupRetentionCount")
-      private final @Nullable Output<Integer> backupRetentionCount;
+    private @Nullable Output<Integer> backupRetentionCount;
 
-    public Output<Integer> backupRetentionCount() {
-        return this.backupRetentionCount == null ? Codegen.empty() : this.backupRetentionCount;
+    public Optional<Output<Integer>> backupRetentionCount() {
+        return Optional.ofNullable(this.backupRetentionCount);
     }
 
     @Import(name="customCertificate")
-      private final @Nullable Output<String> customCertificate;
+    private @Nullable Output<String> customCertificate;
 
-    public Output<String> customCertificate() {
-        return this.customCertificate == null ? Codegen.empty() : this.customCertificate;
+    public Optional<Output<String>> customCertificate() {
+        return Optional.ofNullable(this.customCertificate);
     }
 
     @Import(name="customDomain")
-      private final @Nullable Output<String> customDomain;
+    private @Nullable Output<String> customDomain;
 
-    public Output<String> customDomain() {
-        return this.customDomain == null ? Codegen.empty() : this.customDomain;
+    public Optional<Output<String>> customDomain() {
+        return Optional.ofNullable(this.customDomain);
     }
 
     @Import(name="customPrivateKey")
-      private final @Nullable Output<String> customPrivateKey;
+    private @Nullable Output<String> customPrivateKey;
 
-    public Output<String> customPrivateKey() {
-        return this.customPrivateKey == null ? Codegen.empty() : this.customPrivateKey;
+    public Optional<Output<String>> customPrivateKey() {
+        return Optional.ofNullable(this.customPrivateKey);
     }
 
     @Import(name="disableAutomatedBackup")
-      private final @Nullable Output<Boolean> disableAutomatedBackup;
+    private @Nullable Output<Boolean> disableAutomatedBackup;
 
-    public Output<Boolean> disableAutomatedBackup() {
-        return this.disableAutomatedBackup == null ? Codegen.empty() : this.disableAutomatedBackup;
+    public Optional<Output<Boolean>> disableAutomatedBackup() {
+        return Optional.ofNullable(this.disableAutomatedBackup);
     }
 
     @Import(name="engine")
-      private final @Nullable Output<String> engine;
+    private @Nullable Output<String> engine;
 
-    public Output<String> engine() {
-        return this.engine == null ? Codegen.empty() : this.engine;
+    public Optional<Output<String>> engine() {
+        return Optional.ofNullable(this.engine);
     }
 
     @Import(name="engineAttributes")
-      private final @Nullable Output<List<ServerEngineAttributeArgs>> engineAttributes;
+    private @Nullable Output<List<ServerEngineAttributeArgs>> engineAttributes;
 
-    public Output<List<ServerEngineAttributeArgs>> engineAttributes() {
-        return this.engineAttributes == null ? Codegen.empty() : this.engineAttributes;
+    public Optional<Output<List<ServerEngineAttributeArgs>>> engineAttributes() {
+        return Optional.ofNullable(this.engineAttributes);
     }
 
     @Import(name="engineModel")
-      private final @Nullable Output<String> engineModel;
+    private @Nullable Output<String> engineModel;
 
-    public Output<String> engineModel() {
-        return this.engineModel == null ? Codegen.empty() : this.engineModel;
+    public Optional<Output<String>> engineModel() {
+        return Optional.ofNullable(this.engineModel);
     }
 
     @Import(name="engineVersion")
-      private final @Nullable Output<String> engineVersion;
+    private @Nullable Output<String> engineVersion;
 
-    public Output<String> engineVersion() {
-        return this.engineVersion == null ? Codegen.empty() : this.engineVersion;
+    public Optional<Output<String>> engineVersion() {
+        return Optional.ofNullable(this.engineVersion);
     }
 
     @Import(name="instanceProfileArn", required=true)
-      private final Output<String> instanceProfileArn;
+    private Output<String> instanceProfileArn;
 
     public Output<String> instanceProfileArn() {
         return this.instanceProfileArn;
     }
 
     @Import(name="instanceType", required=true)
-      private final Output<String> instanceType;
+    private Output<String> instanceType;
 
     public Output<String> instanceType() {
         return this.instanceType;
     }
 
     @Import(name="keyPair")
-      private final @Nullable Output<String> keyPair;
+    private @Nullable Output<String> keyPair;
 
-    public Output<String> keyPair() {
-        return this.keyPair == null ? Codegen.empty() : this.keyPair;
+    public Optional<Output<String>> keyPair() {
+        return Optional.ofNullable(this.keyPair);
     }
 
     @Import(name="preferredBackupWindow")
-      private final @Nullable Output<String> preferredBackupWindow;
+    private @Nullable Output<String> preferredBackupWindow;
 
-    public Output<String> preferredBackupWindow() {
-        return this.preferredBackupWindow == null ? Codegen.empty() : this.preferredBackupWindow;
+    public Optional<Output<String>> preferredBackupWindow() {
+        return Optional.ofNullable(this.preferredBackupWindow);
     }
 
     @Import(name="preferredMaintenanceWindow")
-      private final @Nullable Output<String> preferredMaintenanceWindow;
+    private @Nullable Output<String> preferredMaintenanceWindow;
 
-    public Output<String> preferredMaintenanceWindow() {
-        return this.preferredMaintenanceWindow == null ? Codegen.empty() : this.preferredMaintenanceWindow;
+    public Optional<Output<String>> preferredMaintenanceWindow() {
+        return Optional.ofNullable(this.preferredMaintenanceWindow);
     }
 
     @Import(name="securityGroupIds")
-      private final @Nullable Output<List<String>> securityGroupIds;
+    private @Nullable Output<List<String>> securityGroupIds;
 
-    public Output<List<String>> securityGroupIds() {
-        return this.securityGroupIds == null ? Codegen.empty() : this.securityGroupIds;
+    public Optional<Output<List<String>>> securityGroupIds() {
+        return Optional.ofNullable(this.securityGroupIds);
     }
 
     @Import(name="serverName")
-      private final @Nullable Output<String> serverName;
+    private @Nullable Output<String> serverName;
 
-    public Output<String> serverName() {
-        return this.serverName == null ? Codegen.empty() : this.serverName;
+    public Optional<Output<String>> serverName() {
+        return Optional.ofNullable(this.serverName);
     }
 
     @Import(name="serviceRoleArn", required=true)
-      private final Output<String> serviceRoleArn;
+    private Output<String> serviceRoleArn;
 
     public Output<String> serviceRoleArn() {
         return this.serviceRoleArn;
     }
 
     @Import(name="subnetIds")
-      private final @Nullable Output<List<String>> subnetIds;
+    private @Nullable Output<List<String>> subnetIds;
 
-    public Output<List<String>> subnetIds() {
-        return this.subnetIds == null ? Codegen.empty() : this.subnetIds;
+    public Optional<Output<List<String>>> subnetIds() {
+        return Optional.ofNullable(this.subnetIds);
     }
 
     @Import(name="tags")
-      private final @Nullable Output<List<ServerTagArgs>> tags;
+    private @Nullable Output<List<ServerTagArgs>> tags;
 
-    public Output<List<ServerTagArgs>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<List<ServerTagArgs>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public ServerArgs(
-        @Nullable Output<Boolean> associatePublicIpAddress,
-        @Nullable Output<String> backupId,
-        @Nullable Output<Integer> backupRetentionCount,
-        @Nullable Output<String> customCertificate,
-        @Nullable Output<String> customDomain,
-        @Nullable Output<String> customPrivateKey,
-        @Nullable Output<Boolean> disableAutomatedBackup,
-        @Nullable Output<String> engine,
-        @Nullable Output<List<ServerEngineAttributeArgs>> engineAttributes,
-        @Nullable Output<String> engineModel,
-        @Nullable Output<String> engineVersion,
-        Output<String> instanceProfileArn,
-        Output<String> instanceType,
-        @Nullable Output<String> keyPair,
-        @Nullable Output<String> preferredBackupWindow,
-        @Nullable Output<String> preferredMaintenanceWindow,
-        @Nullable Output<List<String>> securityGroupIds,
-        @Nullable Output<String> serverName,
-        Output<String> serviceRoleArn,
-        @Nullable Output<List<String>> subnetIds,
-        @Nullable Output<List<ServerTagArgs>> tags) {
-        this.associatePublicIpAddress = associatePublicIpAddress;
-        this.backupId = backupId;
-        this.backupRetentionCount = backupRetentionCount;
-        this.customCertificate = customCertificate;
-        this.customDomain = customDomain;
-        this.customPrivateKey = customPrivateKey;
-        this.disableAutomatedBackup = disableAutomatedBackup;
-        this.engine = engine;
-        this.engineAttributes = engineAttributes;
-        this.engineModel = engineModel;
-        this.engineVersion = engineVersion;
-        this.instanceProfileArn = Objects.requireNonNull(instanceProfileArn, "expected parameter 'instanceProfileArn' to be non-null");
-        this.instanceType = Objects.requireNonNull(instanceType, "expected parameter 'instanceType' to be non-null");
-        this.keyPair = keyPair;
-        this.preferredBackupWindow = preferredBackupWindow;
-        this.preferredMaintenanceWindow = preferredMaintenanceWindow;
-        this.securityGroupIds = securityGroupIds;
-        this.serverName = serverName;
-        this.serviceRoleArn = Objects.requireNonNull(serviceRoleArn, "expected parameter 'serviceRoleArn' to be non-null");
-        this.subnetIds = subnetIds;
-        this.tags = tags;
-    }
+    private ServerArgs() {}
 
-    private ServerArgs() {
-        this.associatePublicIpAddress = Codegen.empty();
-        this.backupId = Codegen.empty();
-        this.backupRetentionCount = Codegen.empty();
-        this.customCertificate = Codegen.empty();
-        this.customDomain = Codegen.empty();
-        this.customPrivateKey = Codegen.empty();
-        this.disableAutomatedBackup = Codegen.empty();
-        this.engine = Codegen.empty();
-        this.engineAttributes = Codegen.empty();
-        this.engineModel = Codegen.empty();
-        this.engineVersion = Codegen.empty();
-        this.instanceProfileArn = Codegen.empty();
-        this.instanceType = Codegen.empty();
-        this.keyPair = Codegen.empty();
-        this.preferredBackupWindow = Codegen.empty();
-        this.preferredMaintenanceWindow = Codegen.empty();
-        this.securityGroupIds = Codegen.empty();
-        this.serverName = Codegen.empty();
-        this.serviceRoleArn = Codegen.empty();
-        this.subnetIds = Codegen.empty();
-        this.tags = Codegen.empty();
+    private ServerArgs(ServerArgs $) {
+        this.associatePublicIpAddress = $.associatePublicIpAddress;
+        this.backupId = $.backupId;
+        this.backupRetentionCount = $.backupRetentionCount;
+        this.customCertificate = $.customCertificate;
+        this.customDomain = $.customDomain;
+        this.customPrivateKey = $.customPrivateKey;
+        this.disableAutomatedBackup = $.disableAutomatedBackup;
+        this.engine = $.engine;
+        this.engineAttributes = $.engineAttributes;
+        this.engineModel = $.engineModel;
+        this.engineVersion = $.engineVersion;
+        this.instanceProfileArn = $.instanceProfileArn;
+        this.instanceType = $.instanceType;
+        this.keyPair = $.keyPair;
+        this.preferredBackupWindow = $.preferredBackupWindow;
+        this.preferredMaintenanceWindow = $.preferredMaintenanceWindow;
+        this.securityGroupIds = $.securityGroupIds;
+        this.serverName = $.serverName;
+        this.serviceRoleArn = $.serviceRoleArn;
+        this.subnetIds = $.subnetIds;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ServerArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> associatePublicIpAddress;
-        private @Nullable Output<String> backupId;
-        private @Nullable Output<Integer> backupRetentionCount;
-        private @Nullable Output<String> customCertificate;
-        private @Nullable Output<String> customDomain;
-        private @Nullable Output<String> customPrivateKey;
-        private @Nullable Output<Boolean> disableAutomatedBackup;
-        private @Nullable Output<String> engine;
-        private @Nullable Output<List<ServerEngineAttributeArgs>> engineAttributes;
-        private @Nullable Output<String> engineModel;
-        private @Nullable Output<String> engineVersion;
-        private Output<String> instanceProfileArn;
-        private Output<String> instanceType;
-        private @Nullable Output<String> keyPair;
-        private @Nullable Output<String> preferredBackupWindow;
-        private @Nullable Output<String> preferredMaintenanceWindow;
-        private @Nullable Output<List<String>> securityGroupIds;
-        private @Nullable Output<String> serverName;
-        private Output<String> serviceRoleArn;
-        private @Nullable Output<List<String>> subnetIds;
-        private @Nullable Output<List<ServerTagArgs>> tags;
+        private ServerArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ServerArgs();
         }
 
         public Builder(ServerArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.associatePublicIpAddress = defaults.associatePublicIpAddress;
-    	      this.backupId = defaults.backupId;
-    	      this.backupRetentionCount = defaults.backupRetentionCount;
-    	      this.customCertificate = defaults.customCertificate;
-    	      this.customDomain = defaults.customDomain;
-    	      this.customPrivateKey = defaults.customPrivateKey;
-    	      this.disableAutomatedBackup = defaults.disableAutomatedBackup;
-    	      this.engine = defaults.engine;
-    	      this.engineAttributes = defaults.engineAttributes;
-    	      this.engineModel = defaults.engineModel;
-    	      this.engineVersion = defaults.engineVersion;
-    	      this.instanceProfileArn = defaults.instanceProfileArn;
-    	      this.instanceType = defaults.instanceType;
-    	      this.keyPair = defaults.keyPair;
-    	      this.preferredBackupWindow = defaults.preferredBackupWindow;
-    	      this.preferredMaintenanceWindow = defaults.preferredMaintenanceWindow;
-    	      this.securityGroupIds = defaults.securityGroupIds;
-    	      this.serverName = defaults.serverName;
-    	      this.serviceRoleArn = defaults.serviceRoleArn;
-    	      this.subnetIds = defaults.subnetIds;
-    	      this.tags = defaults.tags;
+            $ = new ServerArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder associatePublicIpAddress(@Nullable Output<Boolean> associatePublicIpAddress) {
-            this.associatePublicIpAddress = associatePublicIpAddress;
+            $.associatePublicIpAddress = associatePublicIpAddress;
             return this;
         }
-        public Builder associatePublicIpAddress(@Nullable Boolean associatePublicIpAddress) {
-            this.associatePublicIpAddress = Codegen.ofNullable(associatePublicIpAddress);
-            return this;
+
+        public Builder associatePublicIpAddress(Boolean associatePublicIpAddress) {
+            return associatePublicIpAddress(Output.of(associatePublicIpAddress));
         }
+
         public Builder backupId(@Nullable Output<String> backupId) {
-            this.backupId = backupId;
+            $.backupId = backupId;
             return this;
         }
-        public Builder backupId(@Nullable String backupId) {
-            this.backupId = Codegen.ofNullable(backupId);
-            return this;
+
+        public Builder backupId(String backupId) {
+            return backupId(Output.of(backupId));
         }
+
         public Builder backupRetentionCount(@Nullable Output<Integer> backupRetentionCount) {
-            this.backupRetentionCount = backupRetentionCount;
+            $.backupRetentionCount = backupRetentionCount;
             return this;
         }
-        public Builder backupRetentionCount(@Nullable Integer backupRetentionCount) {
-            this.backupRetentionCount = Codegen.ofNullable(backupRetentionCount);
-            return this;
+
+        public Builder backupRetentionCount(Integer backupRetentionCount) {
+            return backupRetentionCount(Output.of(backupRetentionCount));
         }
+
         public Builder customCertificate(@Nullable Output<String> customCertificate) {
-            this.customCertificate = customCertificate;
+            $.customCertificate = customCertificate;
             return this;
         }
-        public Builder customCertificate(@Nullable String customCertificate) {
-            this.customCertificate = Codegen.ofNullable(customCertificate);
-            return this;
+
+        public Builder customCertificate(String customCertificate) {
+            return customCertificate(Output.of(customCertificate));
         }
+
         public Builder customDomain(@Nullable Output<String> customDomain) {
-            this.customDomain = customDomain;
+            $.customDomain = customDomain;
             return this;
         }
-        public Builder customDomain(@Nullable String customDomain) {
-            this.customDomain = Codegen.ofNullable(customDomain);
-            return this;
+
+        public Builder customDomain(String customDomain) {
+            return customDomain(Output.of(customDomain));
         }
+
         public Builder customPrivateKey(@Nullable Output<String> customPrivateKey) {
-            this.customPrivateKey = customPrivateKey;
+            $.customPrivateKey = customPrivateKey;
             return this;
         }
-        public Builder customPrivateKey(@Nullable String customPrivateKey) {
-            this.customPrivateKey = Codegen.ofNullable(customPrivateKey);
-            return this;
+
+        public Builder customPrivateKey(String customPrivateKey) {
+            return customPrivateKey(Output.of(customPrivateKey));
         }
+
         public Builder disableAutomatedBackup(@Nullable Output<Boolean> disableAutomatedBackup) {
-            this.disableAutomatedBackup = disableAutomatedBackup;
+            $.disableAutomatedBackup = disableAutomatedBackup;
             return this;
         }
-        public Builder disableAutomatedBackup(@Nullable Boolean disableAutomatedBackup) {
-            this.disableAutomatedBackup = Codegen.ofNullable(disableAutomatedBackup);
-            return this;
+
+        public Builder disableAutomatedBackup(Boolean disableAutomatedBackup) {
+            return disableAutomatedBackup(Output.of(disableAutomatedBackup));
         }
+
         public Builder engine(@Nullable Output<String> engine) {
-            this.engine = engine;
+            $.engine = engine;
             return this;
         }
-        public Builder engine(@Nullable String engine) {
-            this.engine = Codegen.ofNullable(engine);
-            return this;
+
+        public Builder engine(String engine) {
+            return engine(Output.of(engine));
         }
+
         public Builder engineAttributes(@Nullable Output<List<ServerEngineAttributeArgs>> engineAttributes) {
-            this.engineAttributes = engineAttributes;
+            $.engineAttributes = engineAttributes;
             return this;
         }
-        public Builder engineAttributes(@Nullable List<ServerEngineAttributeArgs> engineAttributes) {
-            this.engineAttributes = Codegen.ofNullable(engineAttributes);
-            return this;
+
+        public Builder engineAttributes(List<ServerEngineAttributeArgs> engineAttributes) {
+            return engineAttributes(Output.of(engineAttributes));
         }
+
         public Builder engineAttributes(ServerEngineAttributeArgs... engineAttributes) {
             return engineAttributes(List.of(engineAttributes));
         }
+
         public Builder engineModel(@Nullable Output<String> engineModel) {
-            this.engineModel = engineModel;
+            $.engineModel = engineModel;
             return this;
         }
-        public Builder engineModel(@Nullable String engineModel) {
-            this.engineModel = Codegen.ofNullable(engineModel);
-            return this;
+
+        public Builder engineModel(String engineModel) {
+            return engineModel(Output.of(engineModel));
         }
+
         public Builder engineVersion(@Nullable Output<String> engineVersion) {
-            this.engineVersion = engineVersion;
+            $.engineVersion = engineVersion;
             return this;
         }
-        public Builder engineVersion(@Nullable String engineVersion) {
-            this.engineVersion = Codegen.ofNullable(engineVersion);
-            return this;
+
+        public Builder engineVersion(String engineVersion) {
+            return engineVersion(Output.of(engineVersion));
         }
+
         public Builder instanceProfileArn(Output<String> instanceProfileArn) {
-            this.instanceProfileArn = Objects.requireNonNull(instanceProfileArn);
+            $.instanceProfileArn = instanceProfileArn;
             return this;
         }
+
         public Builder instanceProfileArn(String instanceProfileArn) {
-            this.instanceProfileArn = Output.of(Objects.requireNonNull(instanceProfileArn));
-            return this;
+            return instanceProfileArn(Output.of(instanceProfileArn));
         }
+
         public Builder instanceType(Output<String> instanceType) {
-            this.instanceType = Objects.requireNonNull(instanceType);
+            $.instanceType = instanceType;
             return this;
         }
+
         public Builder instanceType(String instanceType) {
-            this.instanceType = Output.of(Objects.requireNonNull(instanceType));
-            return this;
+            return instanceType(Output.of(instanceType));
         }
+
         public Builder keyPair(@Nullable Output<String> keyPair) {
-            this.keyPair = keyPair;
+            $.keyPair = keyPair;
             return this;
         }
-        public Builder keyPair(@Nullable String keyPair) {
-            this.keyPair = Codegen.ofNullable(keyPair);
-            return this;
+
+        public Builder keyPair(String keyPair) {
+            return keyPair(Output.of(keyPair));
         }
+
         public Builder preferredBackupWindow(@Nullable Output<String> preferredBackupWindow) {
-            this.preferredBackupWindow = preferredBackupWindow;
+            $.preferredBackupWindow = preferredBackupWindow;
             return this;
         }
-        public Builder preferredBackupWindow(@Nullable String preferredBackupWindow) {
-            this.preferredBackupWindow = Codegen.ofNullable(preferredBackupWindow);
-            return this;
+
+        public Builder preferredBackupWindow(String preferredBackupWindow) {
+            return preferredBackupWindow(Output.of(preferredBackupWindow));
         }
+
         public Builder preferredMaintenanceWindow(@Nullable Output<String> preferredMaintenanceWindow) {
-            this.preferredMaintenanceWindow = preferredMaintenanceWindow;
+            $.preferredMaintenanceWindow = preferredMaintenanceWindow;
             return this;
         }
-        public Builder preferredMaintenanceWindow(@Nullable String preferredMaintenanceWindow) {
-            this.preferredMaintenanceWindow = Codegen.ofNullable(preferredMaintenanceWindow);
-            return this;
+
+        public Builder preferredMaintenanceWindow(String preferredMaintenanceWindow) {
+            return preferredMaintenanceWindow(Output.of(preferredMaintenanceWindow));
         }
+
         public Builder securityGroupIds(@Nullable Output<List<String>> securityGroupIds) {
-            this.securityGroupIds = securityGroupIds;
+            $.securityGroupIds = securityGroupIds;
             return this;
         }
-        public Builder securityGroupIds(@Nullable List<String> securityGroupIds) {
-            this.securityGroupIds = Codegen.ofNullable(securityGroupIds);
-            return this;
+
+        public Builder securityGroupIds(List<String> securityGroupIds) {
+            return securityGroupIds(Output.of(securityGroupIds));
         }
+
         public Builder securityGroupIds(String... securityGroupIds) {
             return securityGroupIds(List.of(securityGroupIds));
         }
+
         public Builder serverName(@Nullable Output<String> serverName) {
-            this.serverName = serverName;
+            $.serverName = serverName;
             return this;
         }
-        public Builder serverName(@Nullable String serverName) {
-            this.serverName = Codegen.ofNullable(serverName);
-            return this;
+
+        public Builder serverName(String serverName) {
+            return serverName(Output.of(serverName));
         }
+
         public Builder serviceRoleArn(Output<String> serviceRoleArn) {
-            this.serviceRoleArn = Objects.requireNonNull(serviceRoleArn);
+            $.serviceRoleArn = serviceRoleArn;
             return this;
         }
+
         public Builder serviceRoleArn(String serviceRoleArn) {
-            this.serviceRoleArn = Output.of(Objects.requireNonNull(serviceRoleArn));
-            return this;
+            return serviceRoleArn(Output.of(serviceRoleArn));
         }
+
         public Builder subnetIds(@Nullable Output<List<String>> subnetIds) {
-            this.subnetIds = subnetIds;
+            $.subnetIds = subnetIds;
             return this;
         }
-        public Builder subnetIds(@Nullable List<String> subnetIds) {
-            this.subnetIds = Codegen.ofNullable(subnetIds);
-            return this;
+
+        public Builder subnetIds(List<String> subnetIds) {
+            return subnetIds(Output.of(subnetIds));
         }
+
         public Builder subnetIds(String... subnetIds) {
             return subnetIds(List.of(subnetIds));
         }
+
         public Builder tags(@Nullable Output<List<ServerTagArgs>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable List<ServerTagArgs> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(List<ServerTagArgs> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tags(ServerTagArgs... tags) {
             return tags(List.of(tags));
-        }        public ServerArgs build() {
-            return new ServerArgs(associatePublicIpAddress, backupId, backupRetentionCount, customCertificate, customDomain, customPrivateKey, disableAutomatedBackup, engine, engineAttributes, engineModel, engineVersion, instanceProfileArn, instanceType, keyPair, preferredBackupWindow, preferredMaintenanceWindow, securityGroupIds, serverName, serviceRoleArn, subnetIds, tags);
+        }
+
+        public ServerArgs build() {
+            $.instanceProfileArn = Objects.requireNonNull($.instanceProfileArn, "expected parameter 'instanceProfileArn' to be non-null");
+            $.instanceType = Objects.requireNonNull($.instanceType, "expected parameter 'instanceType' to be non-null");
+            $.serviceRoleArn = Objects.requireNonNull($.serviceRoleArn, "expected parameter 'serviceRoleArn' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,9 +5,9 @@ package com.pulumi.azurenative.healthcareapis.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class IotEventHubIngestionEndpointConfigurationArgs extends com.pul
      * 
      */
     @Import(name="consumerGroup")
-      private final @Nullable Output<String> consumerGroup;
+    private @Nullable Output<String> consumerGroup;
 
-    public Output<String> consumerGroup() {
-        return this.consumerGroup == null ? Codegen.empty() : this.consumerGroup;
+    public Optional<Output<String>> consumerGroup() {
+        return Optional.ofNullable(this.consumerGroup);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class IotEventHubIngestionEndpointConfigurationArgs extends com.pul
      * 
      */
     @Import(name="eventHubName")
-      private final @Nullable Output<String> eventHubName;
+    private @Nullable Output<String> eventHubName;
 
-    public Output<String> eventHubName() {
-        return this.eventHubName == null ? Codegen.empty() : this.eventHubName;
+    public Optional<Output<String>> eventHubName() {
+        return Optional.ofNullable(this.eventHubName);
     }
 
     /**
@@ -46,76 +46,68 @@ public final class IotEventHubIngestionEndpointConfigurationArgs extends com.pul
      * 
      */
     @Import(name="fullyQualifiedEventHubNamespace")
-      private final @Nullable Output<String> fullyQualifiedEventHubNamespace;
+    private @Nullable Output<String> fullyQualifiedEventHubNamespace;
 
-    public Output<String> fullyQualifiedEventHubNamespace() {
-        return this.fullyQualifiedEventHubNamespace == null ? Codegen.empty() : this.fullyQualifiedEventHubNamespace;
+    public Optional<Output<String>> fullyQualifiedEventHubNamespace() {
+        return Optional.ofNullable(this.fullyQualifiedEventHubNamespace);
     }
 
-    public IotEventHubIngestionEndpointConfigurationArgs(
-        @Nullable Output<String> consumerGroup,
-        @Nullable Output<String> eventHubName,
-        @Nullable Output<String> fullyQualifiedEventHubNamespace) {
-        this.consumerGroup = consumerGroup;
-        this.eventHubName = eventHubName;
-        this.fullyQualifiedEventHubNamespace = fullyQualifiedEventHubNamespace;
-    }
+    private IotEventHubIngestionEndpointConfigurationArgs() {}
 
-    private IotEventHubIngestionEndpointConfigurationArgs() {
-        this.consumerGroup = Codegen.empty();
-        this.eventHubName = Codegen.empty();
-        this.fullyQualifiedEventHubNamespace = Codegen.empty();
+    private IotEventHubIngestionEndpointConfigurationArgs(IotEventHubIngestionEndpointConfigurationArgs $) {
+        this.consumerGroup = $.consumerGroup;
+        this.eventHubName = $.eventHubName;
+        this.fullyQualifiedEventHubNamespace = $.fullyQualifiedEventHubNamespace;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(IotEventHubIngestionEndpointConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> consumerGroup;
-        private @Nullable Output<String> eventHubName;
-        private @Nullable Output<String> fullyQualifiedEventHubNamespace;
+        private IotEventHubIngestionEndpointConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new IotEventHubIngestionEndpointConfigurationArgs();
         }
 
         public Builder(IotEventHubIngestionEndpointConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.consumerGroup = defaults.consumerGroup;
-    	      this.eventHubName = defaults.eventHubName;
-    	      this.fullyQualifiedEventHubNamespace = defaults.fullyQualifiedEventHubNamespace;
+            $ = new IotEventHubIngestionEndpointConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder consumerGroup(@Nullable Output<String> consumerGroup) {
-            this.consumerGroup = consumerGroup;
+            $.consumerGroup = consumerGroup;
             return this;
         }
-        public Builder consumerGroup(@Nullable String consumerGroup) {
-            this.consumerGroup = Codegen.ofNullable(consumerGroup);
-            return this;
+
+        public Builder consumerGroup(String consumerGroup) {
+            return consumerGroup(Output.of(consumerGroup));
         }
+
         public Builder eventHubName(@Nullable Output<String> eventHubName) {
-            this.eventHubName = eventHubName;
+            $.eventHubName = eventHubName;
             return this;
         }
-        public Builder eventHubName(@Nullable String eventHubName) {
-            this.eventHubName = Codegen.ofNullable(eventHubName);
-            return this;
+
+        public Builder eventHubName(String eventHubName) {
+            return eventHubName(Output.of(eventHubName));
         }
+
         public Builder fullyQualifiedEventHubNamespace(@Nullable Output<String> fullyQualifiedEventHubNamespace) {
-            this.fullyQualifiedEventHubNamespace = fullyQualifiedEventHubNamespace;
+            $.fullyQualifiedEventHubNamespace = fullyQualifiedEventHubNamespace;
             return this;
         }
-        public Builder fullyQualifiedEventHubNamespace(@Nullable String fullyQualifiedEventHubNamespace) {
-            this.fullyQualifiedEventHubNamespace = Codegen.ofNullable(fullyQualifiedEventHubNamespace);
-            return this;
-        }        public IotEventHubIngestionEndpointConfigurationArgs build() {
-            return new IotEventHubIngestionEndpointConfigurationArgs(consumerGroup, eventHubName, fullyQualifiedEventHubNamespace);
+
+        public Builder fullyQualifiedEventHubNamespace(String fullyQualifiedEventHubNamespace) {
+            return fullyQualifiedEventHubNamespace(Output.of(fullyQualifiedEventHubNamespace));
+        }
+
+        public IotEventHubIngestionEndpointConfigurationArgs build() {
+            return $;
         }
     }
+
 }

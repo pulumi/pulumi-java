@@ -23,7 +23,7 @@ public final class GoogleCloudChannelV1CloudIdentityInfoResponse extends com.pul
      * 
      */
     @Import(name="adminConsoleUri", required=true)
-      private final String adminConsoleUri;
+    private String adminConsoleUri;
 
     public String adminConsoleUri() {
         return this.adminConsoleUri;
@@ -34,7 +34,7 @@ public final class GoogleCloudChannelV1CloudIdentityInfoResponse extends com.pul
      * 
      */
     @Import(name="alternateEmail", required=true)
-      private final String alternateEmail;
+    private String alternateEmail;
 
     public String alternateEmail() {
         return this.alternateEmail;
@@ -45,7 +45,7 @@ public final class GoogleCloudChannelV1CloudIdentityInfoResponse extends com.pul
      * 
      */
     @Import(name="customerType", required=true)
-      private final String customerType;
+    private String customerType;
 
     public String customerType() {
         return this.customerType;
@@ -56,7 +56,7 @@ public final class GoogleCloudChannelV1CloudIdentityInfoResponse extends com.pul
      * 
      */
     @Import(name="eduData", required=true)
-      private final GoogleCloudChannelV1EduDataResponse eduData;
+    private GoogleCloudChannelV1EduDataResponse eduData;
 
     public GoogleCloudChannelV1EduDataResponse eduData() {
         return this.eduData;
@@ -67,7 +67,7 @@ public final class GoogleCloudChannelV1CloudIdentityInfoResponse extends com.pul
      * 
      */
     @Import(name="isDomainVerified", required=true)
-      private final Boolean isDomainVerified;
+    private Boolean isDomainVerified;
 
     public Boolean isDomainVerified() {
         return this.isDomainVerified;
@@ -78,7 +78,7 @@ public final class GoogleCloudChannelV1CloudIdentityInfoResponse extends com.pul
      * 
      */
     @Import(name="languageCode", required=true)
-      private final String languageCode;
+    private String languageCode;
 
     public String languageCode() {
         return this.languageCode;
@@ -89,7 +89,7 @@ public final class GoogleCloudChannelV1CloudIdentityInfoResponse extends com.pul
      * 
      */
     @Import(name="phoneNumber", required=true)
-      private final String phoneNumber;
+    private String phoneNumber;
 
     public String phoneNumber() {
         return this.phoneNumber;
@@ -100,109 +100,94 @@ public final class GoogleCloudChannelV1CloudIdentityInfoResponse extends com.pul
      * 
      */
     @Import(name="primaryDomain", required=true)
-      private final String primaryDomain;
+    private String primaryDomain;
 
     public String primaryDomain() {
         return this.primaryDomain;
     }
 
-    public GoogleCloudChannelV1CloudIdentityInfoResponse(
-        String adminConsoleUri,
-        String alternateEmail,
-        String customerType,
-        GoogleCloudChannelV1EduDataResponse eduData,
-        Boolean isDomainVerified,
-        String languageCode,
-        String phoneNumber,
-        String primaryDomain) {
-        this.adminConsoleUri = Objects.requireNonNull(adminConsoleUri, "expected parameter 'adminConsoleUri' to be non-null");
-        this.alternateEmail = Objects.requireNonNull(alternateEmail, "expected parameter 'alternateEmail' to be non-null");
-        this.customerType = Objects.requireNonNull(customerType, "expected parameter 'customerType' to be non-null");
-        this.eduData = Objects.requireNonNull(eduData, "expected parameter 'eduData' to be non-null");
-        this.isDomainVerified = Objects.requireNonNull(isDomainVerified, "expected parameter 'isDomainVerified' to be non-null");
-        this.languageCode = Objects.requireNonNull(languageCode, "expected parameter 'languageCode' to be non-null");
-        this.phoneNumber = Objects.requireNonNull(phoneNumber, "expected parameter 'phoneNumber' to be non-null");
-        this.primaryDomain = Objects.requireNonNull(primaryDomain, "expected parameter 'primaryDomain' to be non-null");
-    }
+    private GoogleCloudChannelV1CloudIdentityInfoResponse() {}
 
-    private GoogleCloudChannelV1CloudIdentityInfoResponse() {
-        this.adminConsoleUri = null;
-        this.alternateEmail = null;
-        this.customerType = null;
-        this.eduData = null;
-        this.isDomainVerified = null;
-        this.languageCode = null;
-        this.phoneNumber = null;
-        this.primaryDomain = null;
+    private GoogleCloudChannelV1CloudIdentityInfoResponse(GoogleCloudChannelV1CloudIdentityInfoResponse $) {
+        this.adminConsoleUri = $.adminConsoleUri;
+        this.alternateEmail = $.alternateEmail;
+        this.customerType = $.customerType;
+        this.eduData = $.eduData;
+        this.isDomainVerified = $.isDomainVerified;
+        this.languageCode = $.languageCode;
+        this.phoneNumber = $.phoneNumber;
+        this.primaryDomain = $.primaryDomain;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudChannelV1CloudIdentityInfoResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String adminConsoleUri;
-        private String alternateEmail;
-        private String customerType;
-        private GoogleCloudChannelV1EduDataResponse eduData;
-        private Boolean isDomainVerified;
-        private String languageCode;
-        private String phoneNumber;
-        private String primaryDomain;
+        private GoogleCloudChannelV1CloudIdentityInfoResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudChannelV1CloudIdentityInfoResponse();
         }
 
         public Builder(GoogleCloudChannelV1CloudIdentityInfoResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.adminConsoleUri = defaults.adminConsoleUri;
-    	      this.alternateEmail = defaults.alternateEmail;
-    	      this.customerType = defaults.customerType;
-    	      this.eduData = defaults.eduData;
-    	      this.isDomainVerified = defaults.isDomainVerified;
-    	      this.languageCode = defaults.languageCode;
-    	      this.phoneNumber = defaults.phoneNumber;
-    	      this.primaryDomain = defaults.primaryDomain;
+            $ = new GoogleCloudChannelV1CloudIdentityInfoResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder adminConsoleUri(String adminConsoleUri) {
-            this.adminConsoleUri = Objects.requireNonNull(adminConsoleUri);
+            $.adminConsoleUri = adminConsoleUri;
             return this;
         }
+
         public Builder alternateEmail(String alternateEmail) {
-            this.alternateEmail = Objects.requireNonNull(alternateEmail);
+            $.alternateEmail = alternateEmail;
             return this;
         }
+
         public Builder customerType(String customerType) {
-            this.customerType = Objects.requireNonNull(customerType);
+            $.customerType = customerType;
             return this;
         }
+
         public Builder eduData(GoogleCloudChannelV1EduDataResponse eduData) {
-            this.eduData = Objects.requireNonNull(eduData);
+            $.eduData = eduData;
             return this;
         }
+
         public Builder isDomainVerified(Boolean isDomainVerified) {
-            this.isDomainVerified = Objects.requireNonNull(isDomainVerified);
+            $.isDomainVerified = isDomainVerified;
             return this;
         }
+
         public Builder languageCode(String languageCode) {
-            this.languageCode = Objects.requireNonNull(languageCode);
+            $.languageCode = languageCode;
             return this;
         }
+
         public Builder phoneNumber(String phoneNumber) {
-            this.phoneNumber = Objects.requireNonNull(phoneNumber);
+            $.phoneNumber = phoneNumber;
             return this;
         }
+
         public Builder primaryDomain(String primaryDomain) {
-            this.primaryDomain = Objects.requireNonNull(primaryDomain);
+            $.primaryDomain = primaryDomain;
             return this;
-        }        public GoogleCloudChannelV1CloudIdentityInfoResponse build() {
-            return new GoogleCloudChannelV1CloudIdentityInfoResponse(adminConsoleUri, alternateEmail, customerType, eduData, isDomainVerified, languageCode, phoneNumber, primaryDomain);
+        }
+
+        public GoogleCloudChannelV1CloudIdentityInfoResponse build() {
+            $.adminConsoleUri = Objects.requireNonNull($.adminConsoleUri, "expected parameter 'adminConsoleUri' to be non-null");
+            $.alternateEmail = Objects.requireNonNull($.alternateEmail, "expected parameter 'alternateEmail' to be non-null");
+            $.customerType = Objects.requireNonNull($.customerType, "expected parameter 'customerType' to be non-null");
+            $.eduData = Objects.requireNonNull($.eduData, "expected parameter 'eduData' to be non-null");
+            $.isDomainVerified = Objects.requireNonNull($.isDomainVerified, "expected parameter 'isDomainVerified' to be non-null");
+            $.languageCode = Objects.requireNonNull($.languageCode, "expected parameter 'languageCode' to be non-null");
+            $.phoneNumber = Objects.requireNonNull($.phoneNumber, "expected parameter 'phoneNumber' to be non-null");
+            $.primaryDomain = Objects.requireNonNull($.primaryDomain, "expected parameter 'primaryDomain' to be non-null");
+            return $;
         }
     }
+
 }

@@ -24,10 +24,10 @@ public final class MongoDBCollectionGetPropertiesResponseResource extends com.pu
      * 
      */
     @Import(name="analyticalStorageTtl")
-      private final @Nullable Integer analyticalStorageTtl;
+    private @Nullable Integer analyticalStorageTtl;
 
     public Optional<Integer> analyticalStorageTtl() {
-        return this.analyticalStorageTtl == null ? Optional.empty() : Optional.ofNullable(this.analyticalStorageTtl);
+        return Optional.ofNullable(this.analyticalStorageTtl);
     }
 
     /**
@@ -35,7 +35,7 @@ public final class MongoDBCollectionGetPropertiesResponseResource extends com.pu
      * 
      */
     @Import(name="etag", required=true)
-      private final String etag;
+    private String etag;
 
     public String etag() {
         return this.etag;
@@ -46,7 +46,7 @@ public final class MongoDBCollectionGetPropertiesResponseResource extends com.pu
      * 
      */
     @Import(name="id", required=true)
-      private final String id;
+    private String id;
 
     public String id() {
         return this.id;
@@ -57,10 +57,10 @@ public final class MongoDBCollectionGetPropertiesResponseResource extends com.pu
      * 
      */
     @Import(name="indexes")
-      private final @Nullable List<MongoIndexResponse> indexes;
+    private @Nullable List<MongoIndexResponse> indexes;
 
-    public List<MongoIndexResponse> indexes() {
-        return this.indexes == null ? List.of() : this.indexes;
+    public Optional<List<MongoIndexResponse>> indexes() {
+        return Optional.ofNullable(this.indexes);
     }
 
     /**
@@ -68,7 +68,7 @@ public final class MongoDBCollectionGetPropertiesResponseResource extends com.pu
      * 
      */
     @Import(name="rid", required=true)
-      private final String rid;
+    private String rid;
 
     public String rid() {
         return this.rid;
@@ -79,10 +79,10 @@ public final class MongoDBCollectionGetPropertiesResponseResource extends com.pu
      * 
      */
     @Import(name="shardKey")
-      private final @Nullable Map<String,String> shardKey;
+    private @Nullable Map<String,String> shardKey;
 
-    public Map<String,String> shardKey() {
-        return this.shardKey == null ? Map.of() : this.shardKey;
+    public Optional<Map<String,String>> shardKey() {
+        return Optional.ofNullable(this.shardKey);
     }
 
     /**
@@ -90,103 +90,88 @@ public final class MongoDBCollectionGetPropertiesResponseResource extends com.pu
      * 
      */
     @Import(name="ts", required=true)
-      private final Double ts;
+    private Double ts;
 
     public Double ts() {
         return this.ts;
     }
 
-    public MongoDBCollectionGetPropertiesResponseResource(
-        @Nullable Integer analyticalStorageTtl,
-        String etag,
-        String id,
-        @Nullable List<MongoIndexResponse> indexes,
-        String rid,
-        @Nullable Map<String,String> shardKey,
-        Double ts) {
-        this.analyticalStorageTtl = analyticalStorageTtl;
-        this.etag = Objects.requireNonNull(etag, "expected parameter 'etag' to be non-null");
-        this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
-        this.indexes = indexes;
-        this.rid = Objects.requireNonNull(rid, "expected parameter 'rid' to be non-null");
-        this.shardKey = shardKey;
-        this.ts = Objects.requireNonNull(ts, "expected parameter 'ts' to be non-null");
-    }
+    private MongoDBCollectionGetPropertiesResponseResource() {}
 
-    private MongoDBCollectionGetPropertiesResponseResource() {
-        this.analyticalStorageTtl = null;
-        this.etag = null;
-        this.id = null;
-        this.indexes = List.of();
-        this.rid = null;
-        this.shardKey = Map.of();
-        this.ts = null;
+    private MongoDBCollectionGetPropertiesResponseResource(MongoDBCollectionGetPropertiesResponseResource $) {
+        this.analyticalStorageTtl = $.analyticalStorageTtl;
+        this.etag = $.etag;
+        this.id = $.id;
+        this.indexes = $.indexes;
+        this.rid = $.rid;
+        this.shardKey = $.shardKey;
+        this.ts = $.ts;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MongoDBCollectionGetPropertiesResponseResource defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Integer analyticalStorageTtl;
-        private String etag;
-        private String id;
-        private @Nullable List<MongoIndexResponse> indexes;
-        private String rid;
-        private @Nullable Map<String,String> shardKey;
-        private Double ts;
+        private MongoDBCollectionGetPropertiesResponseResource $;
 
         public Builder() {
-    	      // Empty
+            $ = new MongoDBCollectionGetPropertiesResponseResource();
         }
 
         public Builder(MongoDBCollectionGetPropertiesResponseResource defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.analyticalStorageTtl = defaults.analyticalStorageTtl;
-    	      this.etag = defaults.etag;
-    	      this.id = defaults.id;
-    	      this.indexes = defaults.indexes;
-    	      this.rid = defaults.rid;
-    	      this.shardKey = defaults.shardKey;
-    	      this.ts = defaults.ts;
+            $ = new MongoDBCollectionGetPropertiesResponseResource(Objects.requireNonNull(defaults));
         }
 
         public Builder analyticalStorageTtl(@Nullable Integer analyticalStorageTtl) {
-            this.analyticalStorageTtl = analyticalStorageTtl;
+            $.analyticalStorageTtl = analyticalStorageTtl;
             return this;
         }
+
         public Builder etag(String etag) {
-            this.etag = Objects.requireNonNull(etag);
+            $.etag = etag;
             return this;
         }
+
         public Builder id(String id) {
-            this.id = Objects.requireNonNull(id);
+            $.id = id;
             return this;
         }
+
         public Builder indexes(@Nullable List<MongoIndexResponse> indexes) {
-            this.indexes = indexes;
+            $.indexes = indexes;
             return this;
         }
+
         public Builder indexes(MongoIndexResponse... indexes) {
             return indexes(List.of(indexes));
         }
+
         public Builder rid(String rid) {
-            this.rid = Objects.requireNonNull(rid);
+            $.rid = rid;
             return this;
         }
+
         public Builder shardKey(@Nullable Map<String,String> shardKey) {
-            this.shardKey = shardKey;
+            $.shardKey = shardKey;
             return this;
         }
+
         public Builder ts(Double ts) {
-            this.ts = Objects.requireNonNull(ts);
+            $.ts = ts;
             return this;
-        }        public MongoDBCollectionGetPropertiesResponseResource build() {
-            return new MongoDBCollectionGetPropertiesResponseResource(analyticalStorageTtl, etag, id, indexes, rid, shardKey, ts);
+        }
+
+        public MongoDBCollectionGetPropertiesResponseResource build() {
+            $.etag = Objects.requireNonNull($.etag, "expected parameter 'etag' to be non-null");
+            $.id = Objects.requireNonNull($.id, "expected parameter 'id' to be non-null");
+            $.rid = Objects.requireNonNull($.rid, "expected parameter 'rid' to be non-null");
+            $.ts = Objects.requireNonNull($.ts, "expected parameter 'ts' to be non-null");
+            return $;
         }
     }
+
 }

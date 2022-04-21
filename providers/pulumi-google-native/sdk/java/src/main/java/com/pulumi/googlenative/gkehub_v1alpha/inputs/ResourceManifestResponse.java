@@ -22,7 +22,7 @@ public final class ResourceManifestResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="clusterScoped", required=true)
-      private final Boolean clusterScoped;
+    private Boolean clusterScoped;
 
     public Boolean clusterScoped() {
         return this.clusterScoped;
@@ -33,55 +33,52 @@ public final class ResourceManifestResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="manifest", required=true)
-      private final String manifest;
+    private String manifest;
 
     public String manifest() {
         return this.manifest;
     }
 
-    public ResourceManifestResponse(
-        Boolean clusterScoped,
-        String manifest) {
-        this.clusterScoped = Objects.requireNonNull(clusterScoped, "expected parameter 'clusterScoped' to be non-null");
-        this.manifest = Objects.requireNonNull(manifest, "expected parameter 'manifest' to be non-null");
-    }
+    private ResourceManifestResponse() {}
 
-    private ResourceManifestResponse() {
-        this.clusterScoped = null;
-        this.manifest = null;
+    private ResourceManifestResponse(ResourceManifestResponse $) {
+        this.clusterScoped = $.clusterScoped;
+        this.manifest = $.manifest;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ResourceManifestResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Boolean clusterScoped;
-        private String manifest;
+        private ResourceManifestResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ResourceManifestResponse();
         }
 
         public Builder(ResourceManifestResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.clusterScoped = defaults.clusterScoped;
-    	      this.manifest = defaults.manifest;
+            $ = new ResourceManifestResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder clusterScoped(Boolean clusterScoped) {
-            this.clusterScoped = Objects.requireNonNull(clusterScoped);
+            $.clusterScoped = clusterScoped;
             return this;
         }
+
         public Builder manifest(String manifest) {
-            this.manifest = Objects.requireNonNull(manifest);
+            $.manifest = manifest;
             return this;
-        }        public ResourceManifestResponse build() {
-            return new ResourceManifestResponse(clusterScoped, manifest);
+        }
+
+        public ResourceManifestResponse build() {
+            $.clusterScoped = Objects.requireNonNull($.clusterScoped, "expected parameter 'clusterScoped' to be non-null");
+            $.manifest = Objects.requireNonNull($.manifest, "expected parameter 'manifest' to be non-null");
+            return $;
         }
     }
+
 }

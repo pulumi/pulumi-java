@@ -7,9 +7,9 @@ import com.pulumi.azurenative.documentdb.enums.ServerVersion;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,49 +22,48 @@ public final class ApiPropertiesArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="serverVersion")
-      private final @Nullable Output<Either<String,ServerVersion>> serverVersion;
+    private @Nullable Output<Either<String,ServerVersion>> serverVersion;
 
-    public Output<Either<String,ServerVersion>> serverVersion() {
-        return this.serverVersion == null ? Codegen.empty() : this.serverVersion;
+    public Optional<Output<Either<String,ServerVersion>>> serverVersion() {
+        return Optional.ofNullable(this.serverVersion);
     }
 
-    public ApiPropertiesArgs(@Nullable Output<Either<String,ServerVersion>> serverVersion) {
-        this.serverVersion = serverVersion;
-    }
+    private ApiPropertiesArgs() {}
 
-    private ApiPropertiesArgs() {
-        this.serverVersion = Codegen.empty();
+    private ApiPropertiesArgs(ApiPropertiesArgs $) {
+        this.serverVersion = $.serverVersion;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ApiPropertiesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Either<String,ServerVersion>> serverVersion;
+        private ApiPropertiesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ApiPropertiesArgs();
         }
 
         public Builder(ApiPropertiesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.serverVersion = defaults.serverVersion;
+            $ = new ApiPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder serverVersion(@Nullable Output<Either<String,ServerVersion>> serverVersion) {
-            this.serverVersion = serverVersion;
+            $.serverVersion = serverVersion;
             return this;
         }
-        public Builder serverVersion(@Nullable Either<String,ServerVersion> serverVersion) {
-            this.serverVersion = Codegen.ofNullable(serverVersion);
-            return this;
-        }        public ApiPropertiesArgs build() {
-            return new ApiPropertiesArgs(serverVersion);
+
+        public Builder serverVersion(Either<String,ServerVersion> serverVersion) {
+            return serverVersion(Output.of(serverVersion));
+        }
+
+        public ApiPropertiesArgs build() {
+            return $;
         }
     }
+
 }

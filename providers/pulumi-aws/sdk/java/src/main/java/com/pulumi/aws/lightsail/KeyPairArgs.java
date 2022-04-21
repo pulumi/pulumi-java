@@ -5,9 +5,9 @@ package com.pulumi.aws.lightsail;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,17 +21,17 @@ public final class KeyPairArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     @Import(name="namePrefix")
-      private final @Nullable Output<String> namePrefix;
+    private @Nullable Output<String> namePrefix;
 
-    public Output<String> namePrefix() {
-        return this.namePrefix == null ? Codegen.empty() : this.namePrefix;
+    public Optional<Output<String>> namePrefix() {
+        return Optional.ofNullable(this.namePrefix);
     }
 
     /**
@@ -40,10 +40,10 @@ public final class KeyPairArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="pgpKey")
-      private final @Nullable Output<String> pgpKey;
+    private @Nullable Output<String> pgpKey;
 
-    public Output<String> pgpKey() {
-        return this.pgpKey == null ? Codegen.empty() : this.pgpKey;
+    public Optional<Output<String>> pgpKey() {
+        return Optional.ofNullable(this.pgpKey);
     }
 
     /**
@@ -52,89 +52,78 @@ public final class KeyPairArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="publicKey")
-      private final @Nullable Output<String> publicKey;
+    private @Nullable Output<String> publicKey;
 
-    public Output<String> publicKey() {
-        return this.publicKey == null ? Codegen.empty() : this.publicKey;
+    public Optional<Output<String>> publicKey() {
+        return Optional.ofNullable(this.publicKey);
     }
 
-    public KeyPairArgs(
-        @Nullable Output<String> name,
-        @Nullable Output<String> namePrefix,
-        @Nullable Output<String> pgpKey,
-        @Nullable Output<String> publicKey) {
-        this.name = name;
-        this.namePrefix = namePrefix;
-        this.pgpKey = pgpKey;
-        this.publicKey = publicKey;
-    }
+    private KeyPairArgs() {}
 
-    private KeyPairArgs() {
-        this.name = Codegen.empty();
-        this.namePrefix = Codegen.empty();
-        this.pgpKey = Codegen.empty();
-        this.publicKey = Codegen.empty();
+    private KeyPairArgs(KeyPairArgs $) {
+        this.name = $.name;
+        this.namePrefix = $.namePrefix;
+        this.pgpKey = $.pgpKey;
+        this.publicKey = $.publicKey;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(KeyPairArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> namePrefix;
-        private @Nullable Output<String> pgpKey;
-        private @Nullable Output<String> publicKey;
+        private KeyPairArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new KeyPairArgs();
         }
 
         public Builder(KeyPairArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.namePrefix = defaults.namePrefix;
-    	      this.pgpKey = defaults.pgpKey;
-    	      this.publicKey = defaults.publicKey;
+            $ = new KeyPairArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder namePrefix(@Nullable Output<String> namePrefix) {
-            this.namePrefix = namePrefix;
+            $.namePrefix = namePrefix;
             return this;
         }
-        public Builder namePrefix(@Nullable String namePrefix) {
-            this.namePrefix = Codegen.ofNullable(namePrefix);
-            return this;
+
+        public Builder namePrefix(String namePrefix) {
+            return namePrefix(Output.of(namePrefix));
         }
+
         public Builder pgpKey(@Nullable Output<String> pgpKey) {
-            this.pgpKey = pgpKey;
+            $.pgpKey = pgpKey;
             return this;
         }
-        public Builder pgpKey(@Nullable String pgpKey) {
-            this.pgpKey = Codegen.ofNullable(pgpKey);
-            return this;
+
+        public Builder pgpKey(String pgpKey) {
+            return pgpKey(Output.of(pgpKey));
         }
+
         public Builder publicKey(@Nullable Output<String> publicKey) {
-            this.publicKey = publicKey;
+            $.publicKey = publicKey;
             return this;
         }
-        public Builder publicKey(@Nullable String publicKey) {
-            this.publicKey = Codegen.ofNullable(publicKey);
-            return this;
-        }        public KeyPairArgs build() {
-            return new KeyPairArgs(name, namePrefix, pgpKey, publicKey);
+
+        public Builder publicKey(String publicKey) {
+            return publicKey(Output.of(publicKey));
+        }
+
+        public KeyPairArgs build() {
+            return $;
         }
     }
+
 }

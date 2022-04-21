@@ -5,9 +5,9 @@ package com.pulumi.aws.cloudwatch.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class LogResourcePolicyState extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="policyDocument")
-      private final @Nullable Output<String> policyDocument;
+    private @Nullable Output<String> policyDocument;
 
-    public Output<String> policyDocument() {
-        return this.policyDocument == null ? Codegen.empty() : this.policyDocument;
+    public Optional<Output<String>> policyDocument() {
+        return Optional.ofNullable(this.policyDocument);
     }
 
     /**
@@ -31,63 +31,58 @@ public final class LogResourcePolicyState extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="policyName")
-      private final @Nullable Output<String> policyName;
+    private @Nullable Output<String> policyName;
 
-    public Output<String> policyName() {
-        return this.policyName == null ? Codegen.empty() : this.policyName;
+    public Optional<Output<String>> policyName() {
+        return Optional.ofNullable(this.policyName);
     }
 
-    public LogResourcePolicyState(
-        @Nullable Output<String> policyDocument,
-        @Nullable Output<String> policyName) {
-        this.policyDocument = policyDocument;
-        this.policyName = policyName;
-    }
+    private LogResourcePolicyState() {}
 
-    private LogResourcePolicyState() {
-        this.policyDocument = Codegen.empty();
-        this.policyName = Codegen.empty();
+    private LogResourcePolicyState(LogResourcePolicyState $) {
+        this.policyDocument = $.policyDocument;
+        this.policyName = $.policyName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LogResourcePolicyState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> policyDocument;
-        private @Nullable Output<String> policyName;
+        private LogResourcePolicyState $;
 
         public Builder() {
-    	      // Empty
+            $ = new LogResourcePolicyState();
         }
 
         public Builder(LogResourcePolicyState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.policyDocument = defaults.policyDocument;
-    	      this.policyName = defaults.policyName;
+            $ = new LogResourcePolicyState(Objects.requireNonNull(defaults));
         }
 
         public Builder policyDocument(@Nullable Output<String> policyDocument) {
-            this.policyDocument = policyDocument;
+            $.policyDocument = policyDocument;
             return this;
         }
-        public Builder policyDocument(@Nullable String policyDocument) {
-            this.policyDocument = Codegen.ofNullable(policyDocument);
-            return this;
+
+        public Builder policyDocument(String policyDocument) {
+            return policyDocument(Output.of(policyDocument));
         }
+
         public Builder policyName(@Nullable Output<String> policyName) {
-            this.policyName = policyName;
+            $.policyName = policyName;
             return this;
         }
-        public Builder policyName(@Nullable String policyName) {
-            this.policyName = Codegen.ofNullable(policyName);
-            return this;
-        }        public LogResourcePolicyState build() {
-            return new LogResourcePolicyState(policyDocument, policyName);
+
+        public Builder policyName(String policyName) {
+            return policyName(Output.of(policyName));
+        }
+
+        public LogResourcePolicyState build() {
+            return $;
         }
     }
+
 }

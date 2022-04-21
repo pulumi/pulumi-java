@@ -5,9 +5,9 @@ package com.pulumi.googlenative.cloudbuild_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class SecretManagerSecretArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="env")
-      private final @Nullable Output<String> env;
+    private @Nullable Output<String> env;
 
-    public Output<String> env() {
-        return this.env == null ? Codegen.empty() : this.env;
+    public Optional<Output<String>> env() {
+        return Optional.ofNullable(this.env);
     }
 
     /**
@@ -35,63 +35,58 @@ public final class SecretManagerSecretArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="versionName")
-      private final @Nullable Output<String> versionName;
+    private @Nullable Output<String> versionName;
 
-    public Output<String> versionName() {
-        return this.versionName == null ? Codegen.empty() : this.versionName;
+    public Optional<Output<String>> versionName() {
+        return Optional.ofNullable(this.versionName);
     }
 
-    public SecretManagerSecretArgs(
-        @Nullable Output<String> env,
-        @Nullable Output<String> versionName) {
-        this.env = env;
-        this.versionName = versionName;
-    }
+    private SecretManagerSecretArgs() {}
 
-    private SecretManagerSecretArgs() {
-        this.env = Codegen.empty();
-        this.versionName = Codegen.empty();
+    private SecretManagerSecretArgs(SecretManagerSecretArgs $) {
+        this.env = $.env;
+        this.versionName = $.versionName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SecretManagerSecretArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> env;
-        private @Nullable Output<String> versionName;
+        private SecretManagerSecretArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SecretManagerSecretArgs();
         }
 
         public Builder(SecretManagerSecretArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.env = defaults.env;
-    	      this.versionName = defaults.versionName;
+            $ = new SecretManagerSecretArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder env(@Nullable Output<String> env) {
-            this.env = env;
+            $.env = env;
             return this;
         }
-        public Builder env(@Nullable String env) {
-            this.env = Codegen.ofNullable(env);
-            return this;
+
+        public Builder env(String env) {
+            return env(Output.of(env));
         }
+
         public Builder versionName(@Nullable Output<String> versionName) {
-            this.versionName = versionName;
+            $.versionName = versionName;
             return this;
         }
-        public Builder versionName(@Nullable String versionName) {
-            this.versionName = Codegen.ofNullable(versionName);
-            return this;
-        }        public SecretManagerSecretArgs build() {
-            return new SecretManagerSecretArgs(env, versionName);
+
+        public Builder versionName(String versionName) {
+            return versionName(Output.of(versionName));
+        }
+
+        public SecretManagerSecretArgs build() {
+            return $;
         }
     }
+
 }

@@ -24,7 +24,7 @@ public final class ScriptSecureStringExecutionParameterResponse extends com.pulu
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -35,10 +35,10 @@ public final class ScriptSecureStringExecutionParameterResponse extends com.pulu
      * 
      */
     @Import(name="secureValue")
-      private final @Nullable String secureValue;
+    private @Nullable String secureValue;
 
     public Optional<String> secureValue() {
-        return this.secureValue == null ? Optional.empty() : Optional.ofNullable(this.secureValue);
+        return Optional.ofNullable(this.secureValue);
     }
 
     /**
@@ -47,64 +47,58 @@ public final class ScriptSecureStringExecutionParameterResponse extends com.pulu
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
     }
 
-    public ScriptSecureStringExecutionParameterResponse(
-        String name,
-        @Nullable String secureValue,
-        String type) {
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.secureValue = secureValue;
-        this.type = Codegen.stringProp("type").arg(type).require();
-    }
+    private ScriptSecureStringExecutionParameterResponse() {}
 
-    private ScriptSecureStringExecutionParameterResponse() {
-        this.name = null;
-        this.secureValue = null;
-        this.type = null;
+    private ScriptSecureStringExecutionParameterResponse(ScriptSecureStringExecutionParameterResponse $) {
+        this.name = $.name;
+        this.secureValue = $.secureValue;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ScriptSecureStringExecutionParameterResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String name;
-        private @Nullable String secureValue;
-        private String type;
+        private ScriptSecureStringExecutionParameterResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ScriptSecureStringExecutionParameterResponse();
         }
 
         public Builder(ScriptSecureStringExecutionParameterResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.secureValue = defaults.secureValue;
-    	      this.type = defaults.type;
+            $ = new ScriptSecureStringExecutionParameterResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder secureValue(@Nullable String secureValue) {
-            this.secureValue = secureValue;
+            $.secureValue = secureValue;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
-        }        public ScriptSecureStringExecutionParameterResponse build() {
-            return new ScriptSecureStringExecutionParameterResponse(name, secureValue, type);
+        }
+
+        public ScriptSecureStringExecutionParameterResponse build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.type = Codegen.stringProp("type").arg($.type).require();
+            return $;
         }
     }
+
 }

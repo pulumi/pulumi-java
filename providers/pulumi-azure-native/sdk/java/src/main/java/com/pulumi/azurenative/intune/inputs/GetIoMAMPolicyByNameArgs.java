@@ -19,7 +19,7 @@ public final class GetIoMAMPolicyByNameArgs extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="hostName", required=true)
-      private final String hostName;
+    private String hostName;
 
     public String hostName() {
         return this.hostName;
@@ -30,7 +30,7 @@ public final class GetIoMAMPolicyByNameArgs extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="policyName", required=true)
-      private final String policyName;
+    private String policyName;
 
     public String policyName() {
         return this.policyName;
@@ -41,64 +41,58 @@ public final class GetIoMAMPolicyByNameArgs extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="select")
-      private final @Nullable String select;
+    private @Nullable String select;
 
     public Optional<String> select() {
-        return this.select == null ? Optional.empty() : Optional.ofNullable(this.select);
+        return Optional.ofNullable(this.select);
     }
 
-    public GetIoMAMPolicyByNameArgs(
-        String hostName,
-        String policyName,
-        @Nullable String select) {
-        this.hostName = Objects.requireNonNull(hostName, "expected parameter 'hostName' to be non-null");
-        this.policyName = Objects.requireNonNull(policyName, "expected parameter 'policyName' to be non-null");
-        this.select = select;
-    }
+    private GetIoMAMPolicyByNameArgs() {}
 
-    private GetIoMAMPolicyByNameArgs() {
-        this.hostName = null;
-        this.policyName = null;
-        this.select = null;
+    private GetIoMAMPolicyByNameArgs(GetIoMAMPolicyByNameArgs $) {
+        this.hostName = $.hostName;
+        this.policyName = $.policyName;
+        this.select = $.select;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetIoMAMPolicyByNameArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String hostName;
-        private String policyName;
-        private @Nullable String select;
+        private GetIoMAMPolicyByNameArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetIoMAMPolicyByNameArgs();
         }
 
         public Builder(GetIoMAMPolicyByNameArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.hostName = defaults.hostName;
-    	      this.policyName = defaults.policyName;
-    	      this.select = defaults.select;
+            $ = new GetIoMAMPolicyByNameArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder hostName(String hostName) {
-            this.hostName = Objects.requireNonNull(hostName);
+            $.hostName = hostName;
             return this;
         }
+
         public Builder policyName(String policyName) {
-            this.policyName = Objects.requireNonNull(policyName);
+            $.policyName = policyName;
             return this;
         }
+
         public Builder select(@Nullable String select) {
-            this.select = select;
+            $.select = select;
             return this;
-        }        public GetIoMAMPolicyByNameArgs build() {
-            return new GetIoMAMPolicyByNameArgs(hostName, policyName, select);
+        }
+
+        public GetIoMAMPolicyByNameArgs build() {
+            $.hostName = Objects.requireNonNull($.hostName, "expected parameter 'hostName' to be non-null");
+            $.policyName = Objects.requireNonNull($.policyName, "expected parameter 'policyName' to be non-null");
+            return $;
         }
     }
+
 }

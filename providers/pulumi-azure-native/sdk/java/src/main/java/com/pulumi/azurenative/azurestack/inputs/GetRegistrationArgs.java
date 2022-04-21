@@ -17,7 +17,7 @@ public final class GetRegistrationArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="registrationName", required=true)
-      private final String registrationName;
+    private String registrationName;
 
     public String registrationName() {
         return this.registrationName;
@@ -28,55 +28,52 @@ public final class GetRegistrationArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroup", required=true)
-      private final String resourceGroup;
+    private String resourceGroup;
 
     public String resourceGroup() {
         return this.resourceGroup;
     }
 
-    public GetRegistrationArgs(
-        String registrationName,
-        String resourceGroup) {
-        this.registrationName = Objects.requireNonNull(registrationName, "expected parameter 'registrationName' to be non-null");
-        this.resourceGroup = Objects.requireNonNull(resourceGroup, "expected parameter 'resourceGroup' to be non-null");
-    }
+    private GetRegistrationArgs() {}
 
-    private GetRegistrationArgs() {
-        this.registrationName = null;
-        this.resourceGroup = null;
+    private GetRegistrationArgs(GetRegistrationArgs $) {
+        this.registrationName = $.registrationName;
+        this.resourceGroup = $.resourceGroup;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetRegistrationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String registrationName;
-        private String resourceGroup;
+        private GetRegistrationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetRegistrationArgs();
         }
 
         public Builder(GetRegistrationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.registrationName = defaults.registrationName;
-    	      this.resourceGroup = defaults.resourceGroup;
+            $ = new GetRegistrationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder registrationName(String registrationName) {
-            this.registrationName = Objects.requireNonNull(registrationName);
+            $.registrationName = registrationName;
             return this;
         }
+
         public Builder resourceGroup(String resourceGroup) {
-            this.resourceGroup = Objects.requireNonNull(resourceGroup);
+            $.resourceGroup = resourceGroup;
             return this;
-        }        public GetRegistrationArgs build() {
-            return new GetRegistrationArgs(registrationName, resourceGroup);
+        }
+
+        public GetRegistrationArgs build() {
+            $.registrationName = Objects.requireNonNull($.registrationName, "expected parameter 'registrationName' to be non-null");
+            $.resourceGroup = Objects.requireNonNull($.resourceGroup, "expected parameter 'resourceGroup' to be non-null");
+            return $;
         }
     }
+
 }

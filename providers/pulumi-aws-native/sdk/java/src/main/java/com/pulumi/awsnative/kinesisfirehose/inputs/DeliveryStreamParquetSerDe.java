@@ -17,126 +17,109 @@ public final class DeliveryStreamParquetSerDe extends com.pulumi.resources.Invok
     public static final DeliveryStreamParquetSerDe Empty = new DeliveryStreamParquetSerDe();
 
     @Import(name="blockSizeBytes")
-      private final @Nullable Integer blockSizeBytes;
+    private @Nullable Integer blockSizeBytes;
 
     public Optional<Integer> blockSizeBytes() {
-        return this.blockSizeBytes == null ? Optional.empty() : Optional.ofNullable(this.blockSizeBytes);
+        return Optional.ofNullable(this.blockSizeBytes);
     }
 
     @Import(name="compression")
-      private final @Nullable String compression;
+    private @Nullable String compression;
 
     public Optional<String> compression() {
-        return this.compression == null ? Optional.empty() : Optional.ofNullable(this.compression);
+        return Optional.ofNullable(this.compression);
     }
 
     @Import(name="enableDictionaryCompression")
-      private final @Nullable Boolean enableDictionaryCompression;
+    private @Nullable Boolean enableDictionaryCompression;
 
     public Optional<Boolean> enableDictionaryCompression() {
-        return this.enableDictionaryCompression == null ? Optional.empty() : Optional.ofNullable(this.enableDictionaryCompression);
+        return Optional.ofNullable(this.enableDictionaryCompression);
     }
 
     @Import(name="maxPaddingBytes")
-      private final @Nullable Integer maxPaddingBytes;
+    private @Nullable Integer maxPaddingBytes;
 
     public Optional<Integer> maxPaddingBytes() {
-        return this.maxPaddingBytes == null ? Optional.empty() : Optional.ofNullable(this.maxPaddingBytes);
+        return Optional.ofNullable(this.maxPaddingBytes);
     }
 
     @Import(name="pageSizeBytes")
-      private final @Nullable Integer pageSizeBytes;
+    private @Nullable Integer pageSizeBytes;
 
     public Optional<Integer> pageSizeBytes() {
-        return this.pageSizeBytes == null ? Optional.empty() : Optional.ofNullable(this.pageSizeBytes);
+        return Optional.ofNullable(this.pageSizeBytes);
     }
 
     @Import(name="writerVersion")
-      private final @Nullable String writerVersion;
+    private @Nullable String writerVersion;
 
     public Optional<String> writerVersion() {
-        return this.writerVersion == null ? Optional.empty() : Optional.ofNullable(this.writerVersion);
+        return Optional.ofNullable(this.writerVersion);
     }
 
-    public DeliveryStreamParquetSerDe(
-        @Nullable Integer blockSizeBytes,
-        @Nullable String compression,
-        @Nullable Boolean enableDictionaryCompression,
-        @Nullable Integer maxPaddingBytes,
-        @Nullable Integer pageSizeBytes,
-        @Nullable String writerVersion) {
-        this.blockSizeBytes = blockSizeBytes;
-        this.compression = compression;
-        this.enableDictionaryCompression = enableDictionaryCompression;
-        this.maxPaddingBytes = maxPaddingBytes;
-        this.pageSizeBytes = pageSizeBytes;
-        this.writerVersion = writerVersion;
-    }
+    private DeliveryStreamParquetSerDe() {}
 
-    private DeliveryStreamParquetSerDe() {
-        this.blockSizeBytes = null;
-        this.compression = null;
-        this.enableDictionaryCompression = null;
-        this.maxPaddingBytes = null;
-        this.pageSizeBytes = null;
-        this.writerVersion = null;
+    private DeliveryStreamParquetSerDe(DeliveryStreamParquetSerDe $) {
+        this.blockSizeBytes = $.blockSizeBytes;
+        this.compression = $.compression;
+        this.enableDictionaryCompression = $.enableDictionaryCompression;
+        this.maxPaddingBytes = $.maxPaddingBytes;
+        this.pageSizeBytes = $.pageSizeBytes;
+        this.writerVersion = $.writerVersion;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DeliveryStreamParquetSerDe defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Integer blockSizeBytes;
-        private @Nullable String compression;
-        private @Nullable Boolean enableDictionaryCompression;
-        private @Nullable Integer maxPaddingBytes;
-        private @Nullable Integer pageSizeBytes;
-        private @Nullable String writerVersion;
+        private DeliveryStreamParquetSerDe $;
 
         public Builder() {
-    	      // Empty
+            $ = new DeliveryStreamParquetSerDe();
         }
 
         public Builder(DeliveryStreamParquetSerDe defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.blockSizeBytes = defaults.blockSizeBytes;
-    	      this.compression = defaults.compression;
-    	      this.enableDictionaryCompression = defaults.enableDictionaryCompression;
-    	      this.maxPaddingBytes = defaults.maxPaddingBytes;
-    	      this.pageSizeBytes = defaults.pageSizeBytes;
-    	      this.writerVersion = defaults.writerVersion;
+            $ = new DeliveryStreamParquetSerDe(Objects.requireNonNull(defaults));
         }
 
         public Builder blockSizeBytes(@Nullable Integer blockSizeBytes) {
-            this.blockSizeBytes = blockSizeBytes;
+            $.blockSizeBytes = blockSizeBytes;
             return this;
         }
+
         public Builder compression(@Nullable String compression) {
-            this.compression = compression;
+            $.compression = compression;
             return this;
         }
+
         public Builder enableDictionaryCompression(@Nullable Boolean enableDictionaryCompression) {
-            this.enableDictionaryCompression = enableDictionaryCompression;
+            $.enableDictionaryCompression = enableDictionaryCompression;
             return this;
         }
+
         public Builder maxPaddingBytes(@Nullable Integer maxPaddingBytes) {
-            this.maxPaddingBytes = maxPaddingBytes;
+            $.maxPaddingBytes = maxPaddingBytes;
             return this;
         }
+
         public Builder pageSizeBytes(@Nullable Integer pageSizeBytes) {
-            this.pageSizeBytes = pageSizeBytes;
+            $.pageSizeBytes = pageSizeBytes;
             return this;
         }
+
         public Builder writerVersion(@Nullable String writerVersion) {
-            this.writerVersion = writerVersion;
+            $.writerVersion = writerVersion;
             return this;
-        }        public DeliveryStreamParquetSerDe build() {
-            return new DeliveryStreamParquetSerDe(blockSizeBytes, compression, enableDictionaryCompression, maxPaddingBytes, pageSizeBytes, writerVersion);
+        }
+
+        public DeliveryStreamParquetSerDe build() {
+            return $;
         }
     }
+
 }

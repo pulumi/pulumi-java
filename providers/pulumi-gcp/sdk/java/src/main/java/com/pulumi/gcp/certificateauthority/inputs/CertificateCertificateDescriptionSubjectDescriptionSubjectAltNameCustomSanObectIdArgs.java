@@ -5,10 +5,10 @@ package com.pulumi.gcp.certificateauthority.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,52 +21,52 @@ public final class CertificateCertificateDescriptionSubjectDescriptionSubjectAlt
      * 
      */
     @Import(name="objectIdPaths")
-      private final @Nullable Output<List<Integer>> objectIdPaths;
+    private @Nullable Output<List<Integer>> objectIdPaths;
 
-    public Output<List<Integer>> objectIdPaths() {
-        return this.objectIdPaths == null ? Codegen.empty() : this.objectIdPaths;
+    public Optional<Output<List<Integer>>> objectIdPaths() {
+        return Optional.ofNullable(this.objectIdPaths);
     }
 
-    public CertificateCertificateDescriptionSubjectDescriptionSubjectAltNameCustomSanObectIdArgs(@Nullable Output<List<Integer>> objectIdPaths) {
-        this.objectIdPaths = objectIdPaths;
-    }
+    private CertificateCertificateDescriptionSubjectDescriptionSubjectAltNameCustomSanObectIdArgs() {}
 
-    private CertificateCertificateDescriptionSubjectDescriptionSubjectAltNameCustomSanObectIdArgs() {
-        this.objectIdPaths = Codegen.empty();
+    private CertificateCertificateDescriptionSubjectDescriptionSubjectAltNameCustomSanObectIdArgs(CertificateCertificateDescriptionSubjectDescriptionSubjectAltNameCustomSanObectIdArgs $) {
+        this.objectIdPaths = $.objectIdPaths;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CertificateCertificateDescriptionSubjectDescriptionSubjectAltNameCustomSanObectIdArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<Integer>> objectIdPaths;
+        private CertificateCertificateDescriptionSubjectDescriptionSubjectAltNameCustomSanObectIdArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CertificateCertificateDescriptionSubjectDescriptionSubjectAltNameCustomSanObectIdArgs();
         }
 
         public Builder(CertificateCertificateDescriptionSubjectDescriptionSubjectAltNameCustomSanObectIdArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.objectIdPaths = defaults.objectIdPaths;
+            $ = new CertificateCertificateDescriptionSubjectDescriptionSubjectAltNameCustomSanObectIdArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder objectIdPaths(@Nullable Output<List<Integer>> objectIdPaths) {
-            this.objectIdPaths = objectIdPaths;
+            $.objectIdPaths = objectIdPaths;
             return this;
         }
-        public Builder objectIdPaths(@Nullable List<Integer> objectIdPaths) {
-            this.objectIdPaths = Codegen.ofNullable(objectIdPaths);
-            return this;
+
+        public Builder objectIdPaths(List<Integer> objectIdPaths) {
+            return objectIdPaths(Output.of(objectIdPaths));
         }
+
         public Builder objectIdPaths(Integer... objectIdPaths) {
             return objectIdPaths(List.of(objectIdPaths));
-        }        public CertificateCertificateDescriptionSubjectDescriptionSubjectAltNameCustomSanObectIdArgs build() {
-            return new CertificateCertificateDescriptionSubjectDescriptionSubjectAltNameCustomSanObectIdArgs(objectIdPaths);
+        }
+
+        public CertificateCertificateDescriptionSubjectDescriptionSubjectAltNameCustomSanObectIdArgs build() {
+            return $;
         }
     }
+
 }

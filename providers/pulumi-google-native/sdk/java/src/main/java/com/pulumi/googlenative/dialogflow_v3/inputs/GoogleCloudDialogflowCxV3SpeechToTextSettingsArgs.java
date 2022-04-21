@@ -5,9 +5,9 @@ package com.pulumi.googlenative.dialogflow_v3.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class GoogleCloudDialogflowCxV3SpeechToTextSettingsArgs extends com
      * 
      */
     @Import(name="enableSpeechAdaptation")
-      private final @Nullable Output<Boolean> enableSpeechAdaptation;
+    private @Nullable Output<Boolean> enableSpeechAdaptation;
 
-    public Output<Boolean> enableSpeechAdaptation() {
-        return this.enableSpeechAdaptation == null ? Codegen.empty() : this.enableSpeechAdaptation;
+    public Optional<Output<Boolean>> enableSpeechAdaptation() {
+        return Optional.ofNullable(this.enableSpeechAdaptation);
     }
 
-    public GoogleCloudDialogflowCxV3SpeechToTextSettingsArgs(@Nullable Output<Boolean> enableSpeechAdaptation) {
-        this.enableSpeechAdaptation = enableSpeechAdaptation;
-    }
+    private GoogleCloudDialogflowCxV3SpeechToTextSettingsArgs() {}
 
-    private GoogleCloudDialogflowCxV3SpeechToTextSettingsArgs() {
-        this.enableSpeechAdaptation = Codegen.empty();
+    private GoogleCloudDialogflowCxV3SpeechToTextSettingsArgs(GoogleCloudDialogflowCxV3SpeechToTextSettingsArgs $) {
+        this.enableSpeechAdaptation = $.enableSpeechAdaptation;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudDialogflowCxV3SpeechToTextSettingsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> enableSpeechAdaptation;
+        private GoogleCloudDialogflowCxV3SpeechToTextSettingsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudDialogflowCxV3SpeechToTextSettingsArgs();
         }
 
         public Builder(GoogleCloudDialogflowCxV3SpeechToTextSettingsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.enableSpeechAdaptation = defaults.enableSpeechAdaptation;
+            $ = new GoogleCloudDialogflowCxV3SpeechToTextSettingsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder enableSpeechAdaptation(@Nullable Output<Boolean> enableSpeechAdaptation) {
-            this.enableSpeechAdaptation = enableSpeechAdaptation;
+            $.enableSpeechAdaptation = enableSpeechAdaptation;
             return this;
         }
-        public Builder enableSpeechAdaptation(@Nullable Boolean enableSpeechAdaptation) {
-            this.enableSpeechAdaptation = Codegen.ofNullable(enableSpeechAdaptation);
-            return this;
-        }        public GoogleCloudDialogflowCxV3SpeechToTextSettingsArgs build() {
-            return new GoogleCloudDialogflowCxV3SpeechToTextSettingsArgs(enableSpeechAdaptation);
+
+        public Builder enableSpeechAdaptation(Boolean enableSpeechAdaptation) {
+            return enableSpeechAdaptation(Output.of(enableSpeechAdaptation));
+        }
+
+        public GoogleCloudDialogflowCxV3SpeechToTextSettingsArgs build() {
+            return $;
         }
     }
+
 }

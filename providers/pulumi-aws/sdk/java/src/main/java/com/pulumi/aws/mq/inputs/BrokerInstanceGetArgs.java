@@ -5,10 +5,10 @@ package com.pulumi.aws.mq.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -17,93 +17,86 @@ public final class BrokerInstanceGetArgs extends com.pulumi.resources.ResourceAr
     public static final BrokerInstanceGetArgs Empty = new BrokerInstanceGetArgs();
 
     @Import(name="consoleUrl")
-      private final @Nullable Output<String> consoleUrl;
+    private @Nullable Output<String> consoleUrl;
 
-    public Output<String> consoleUrl() {
-        return this.consoleUrl == null ? Codegen.empty() : this.consoleUrl;
+    public Optional<Output<String>> consoleUrl() {
+        return Optional.ofNullable(this.consoleUrl);
     }
 
     @Import(name="endpoints")
-      private final @Nullable Output<List<String>> endpoints;
+    private @Nullable Output<List<String>> endpoints;
 
-    public Output<List<String>> endpoints() {
-        return this.endpoints == null ? Codegen.empty() : this.endpoints;
+    public Optional<Output<List<String>>> endpoints() {
+        return Optional.ofNullable(this.endpoints);
     }
 
     @Import(name="ipAddress")
-      private final @Nullable Output<String> ipAddress;
+    private @Nullable Output<String> ipAddress;
 
-    public Output<String> ipAddress() {
-        return this.ipAddress == null ? Codegen.empty() : this.ipAddress;
+    public Optional<Output<String>> ipAddress() {
+        return Optional.ofNullable(this.ipAddress);
     }
 
-    public BrokerInstanceGetArgs(
-        @Nullable Output<String> consoleUrl,
-        @Nullable Output<List<String>> endpoints,
-        @Nullable Output<String> ipAddress) {
-        this.consoleUrl = consoleUrl;
-        this.endpoints = endpoints;
-        this.ipAddress = ipAddress;
-    }
+    private BrokerInstanceGetArgs() {}
 
-    private BrokerInstanceGetArgs() {
-        this.consoleUrl = Codegen.empty();
-        this.endpoints = Codegen.empty();
-        this.ipAddress = Codegen.empty();
+    private BrokerInstanceGetArgs(BrokerInstanceGetArgs $) {
+        this.consoleUrl = $.consoleUrl;
+        this.endpoints = $.endpoints;
+        this.ipAddress = $.ipAddress;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BrokerInstanceGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> consoleUrl;
-        private @Nullable Output<List<String>> endpoints;
-        private @Nullable Output<String> ipAddress;
+        private BrokerInstanceGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new BrokerInstanceGetArgs();
         }
 
         public Builder(BrokerInstanceGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.consoleUrl = defaults.consoleUrl;
-    	      this.endpoints = defaults.endpoints;
-    	      this.ipAddress = defaults.ipAddress;
+            $ = new BrokerInstanceGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder consoleUrl(@Nullable Output<String> consoleUrl) {
-            this.consoleUrl = consoleUrl;
+            $.consoleUrl = consoleUrl;
             return this;
         }
-        public Builder consoleUrl(@Nullable String consoleUrl) {
-            this.consoleUrl = Codegen.ofNullable(consoleUrl);
-            return this;
+
+        public Builder consoleUrl(String consoleUrl) {
+            return consoleUrl(Output.of(consoleUrl));
         }
+
         public Builder endpoints(@Nullable Output<List<String>> endpoints) {
-            this.endpoints = endpoints;
+            $.endpoints = endpoints;
             return this;
         }
-        public Builder endpoints(@Nullable List<String> endpoints) {
-            this.endpoints = Codegen.ofNullable(endpoints);
-            return this;
+
+        public Builder endpoints(List<String> endpoints) {
+            return endpoints(Output.of(endpoints));
         }
+
         public Builder endpoints(String... endpoints) {
             return endpoints(List.of(endpoints));
         }
+
         public Builder ipAddress(@Nullable Output<String> ipAddress) {
-            this.ipAddress = ipAddress;
+            $.ipAddress = ipAddress;
             return this;
         }
-        public Builder ipAddress(@Nullable String ipAddress) {
-            this.ipAddress = Codegen.ofNullable(ipAddress);
-            return this;
-        }        public BrokerInstanceGetArgs build() {
-            return new BrokerInstanceGetArgs(consoleUrl, endpoints, ipAddress);
+
+        public Builder ipAddress(String ipAddress) {
+            return ipAddress(Output.of(ipAddress));
+        }
+
+        public BrokerInstanceGetArgs build() {
+            return $;
         }
     }
+
 }

@@ -5,10 +5,10 @@ package com.pulumi.awsnative.cloudfront.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -17,110 +17,101 @@ public final class ResponseHeadersPolicyStrictTransportSecurityArgs extends com.
     public static final ResponseHeadersPolicyStrictTransportSecurityArgs Empty = new ResponseHeadersPolicyStrictTransportSecurityArgs();
 
     @Import(name="accessControlMaxAgeSec", required=true)
-      private final Output<Integer> accessControlMaxAgeSec;
+    private Output<Integer> accessControlMaxAgeSec;
 
     public Output<Integer> accessControlMaxAgeSec() {
         return this.accessControlMaxAgeSec;
     }
 
     @Import(name="includeSubdomains")
-      private final @Nullable Output<Boolean> includeSubdomains;
+    private @Nullable Output<Boolean> includeSubdomains;
 
-    public Output<Boolean> includeSubdomains() {
-        return this.includeSubdomains == null ? Codegen.empty() : this.includeSubdomains;
+    public Optional<Output<Boolean>> includeSubdomains() {
+        return Optional.ofNullable(this.includeSubdomains);
     }
 
     @Import(name="override", required=true)
-      private final Output<Boolean> override;
+    private Output<Boolean> override;
 
     public Output<Boolean> override() {
         return this.override;
     }
 
     @Import(name="preload")
-      private final @Nullable Output<Boolean> preload;
+    private @Nullable Output<Boolean> preload;
 
-    public Output<Boolean> preload() {
-        return this.preload == null ? Codegen.empty() : this.preload;
+    public Optional<Output<Boolean>> preload() {
+        return Optional.ofNullable(this.preload);
     }
 
-    public ResponseHeadersPolicyStrictTransportSecurityArgs(
-        Output<Integer> accessControlMaxAgeSec,
-        @Nullable Output<Boolean> includeSubdomains,
-        Output<Boolean> override,
-        @Nullable Output<Boolean> preload) {
-        this.accessControlMaxAgeSec = Objects.requireNonNull(accessControlMaxAgeSec, "expected parameter 'accessControlMaxAgeSec' to be non-null");
-        this.includeSubdomains = includeSubdomains;
-        this.override = Objects.requireNonNull(override, "expected parameter 'override' to be non-null");
-        this.preload = preload;
-    }
+    private ResponseHeadersPolicyStrictTransportSecurityArgs() {}
 
-    private ResponseHeadersPolicyStrictTransportSecurityArgs() {
-        this.accessControlMaxAgeSec = Codegen.empty();
-        this.includeSubdomains = Codegen.empty();
-        this.override = Codegen.empty();
-        this.preload = Codegen.empty();
+    private ResponseHeadersPolicyStrictTransportSecurityArgs(ResponseHeadersPolicyStrictTransportSecurityArgs $) {
+        this.accessControlMaxAgeSec = $.accessControlMaxAgeSec;
+        this.includeSubdomains = $.includeSubdomains;
+        this.override = $.override;
+        this.preload = $.preload;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ResponseHeadersPolicyStrictTransportSecurityArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Integer> accessControlMaxAgeSec;
-        private @Nullable Output<Boolean> includeSubdomains;
-        private Output<Boolean> override;
-        private @Nullable Output<Boolean> preload;
+        private ResponseHeadersPolicyStrictTransportSecurityArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ResponseHeadersPolicyStrictTransportSecurityArgs();
         }
 
         public Builder(ResponseHeadersPolicyStrictTransportSecurityArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accessControlMaxAgeSec = defaults.accessControlMaxAgeSec;
-    	      this.includeSubdomains = defaults.includeSubdomains;
-    	      this.override = defaults.override;
-    	      this.preload = defaults.preload;
+            $ = new ResponseHeadersPolicyStrictTransportSecurityArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder accessControlMaxAgeSec(Output<Integer> accessControlMaxAgeSec) {
-            this.accessControlMaxAgeSec = Objects.requireNonNull(accessControlMaxAgeSec);
+            $.accessControlMaxAgeSec = accessControlMaxAgeSec;
             return this;
         }
+
         public Builder accessControlMaxAgeSec(Integer accessControlMaxAgeSec) {
-            this.accessControlMaxAgeSec = Output.of(Objects.requireNonNull(accessControlMaxAgeSec));
-            return this;
+            return accessControlMaxAgeSec(Output.of(accessControlMaxAgeSec));
         }
+
         public Builder includeSubdomains(@Nullable Output<Boolean> includeSubdomains) {
-            this.includeSubdomains = includeSubdomains;
+            $.includeSubdomains = includeSubdomains;
             return this;
         }
-        public Builder includeSubdomains(@Nullable Boolean includeSubdomains) {
-            this.includeSubdomains = Codegen.ofNullable(includeSubdomains);
-            return this;
+
+        public Builder includeSubdomains(Boolean includeSubdomains) {
+            return includeSubdomains(Output.of(includeSubdomains));
         }
+
         public Builder override(Output<Boolean> override) {
-            this.override = Objects.requireNonNull(override);
+            $.override = override;
             return this;
         }
+
         public Builder override(Boolean override) {
-            this.override = Output.of(Objects.requireNonNull(override));
-            return this;
+            return override(Output.of(override));
         }
+
         public Builder preload(@Nullable Output<Boolean> preload) {
-            this.preload = preload;
+            $.preload = preload;
             return this;
         }
-        public Builder preload(@Nullable Boolean preload) {
-            this.preload = Codegen.ofNullable(preload);
-            return this;
-        }        public ResponseHeadersPolicyStrictTransportSecurityArgs build() {
-            return new ResponseHeadersPolicyStrictTransportSecurityArgs(accessControlMaxAgeSec, includeSubdomains, override, preload);
+
+        public Builder preload(Boolean preload) {
+            return preload(Output.of(preload));
+        }
+
+        public ResponseHeadersPolicyStrictTransportSecurityArgs build() {
+            $.accessControlMaxAgeSec = Objects.requireNonNull($.accessControlMaxAgeSec, "expected parameter 'accessControlMaxAgeSec' to be non-null");
+            $.override = Objects.requireNonNull($.override, "expected parameter 'override' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,9 +5,9 @@ package com.pulumi.googlenative.apigateway_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class ApigatewayApiConfigFileArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="contents")
-      private final @Nullable Output<String> contents;
+    private @Nullable Output<String> contents;
 
-    public Output<String> contents() {
-        return this.contents == null ? Codegen.empty() : this.contents;
+    public Optional<Output<String>> contents() {
+        return Optional.ofNullable(this.contents);
     }
 
     /**
@@ -35,63 +35,58 @@ public final class ApigatewayApiConfigFileArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="path")
-      private final @Nullable Output<String> path;
+    private @Nullable Output<String> path;
 
-    public Output<String> path() {
-        return this.path == null ? Codegen.empty() : this.path;
+    public Optional<Output<String>> path() {
+        return Optional.ofNullable(this.path);
     }
 
-    public ApigatewayApiConfigFileArgs(
-        @Nullable Output<String> contents,
-        @Nullable Output<String> path) {
-        this.contents = contents;
-        this.path = path;
-    }
+    private ApigatewayApiConfigFileArgs() {}
 
-    private ApigatewayApiConfigFileArgs() {
-        this.contents = Codegen.empty();
-        this.path = Codegen.empty();
+    private ApigatewayApiConfigFileArgs(ApigatewayApiConfigFileArgs $) {
+        this.contents = $.contents;
+        this.path = $.path;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ApigatewayApiConfigFileArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> contents;
-        private @Nullable Output<String> path;
+        private ApigatewayApiConfigFileArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ApigatewayApiConfigFileArgs();
         }
 
         public Builder(ApigatewayApiConfigFileArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.contents = defaults.contents;
-    	      this.path = defaults.path;
+            $ = new ApigatewayApiConfigFileArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder contents(@Nullable Output<String> contents) {
-            this.contents = contents;
+            $.contents = contents;
             return this;
         }
-        public Builder contents(@Nullable String contents) {
-            this.contents = Codegen.ofNullable(contents);
-            return this;
+
+        public Builder contents(String contents) {
+            return contents(Output.of(contents));
         }
+
         public Builder path(@Nullable Output<String> path) {
-            this.path = path;
+            $.path = path;
             return this;
         }
-        public Builder path(@Nullable String path) {
-            this.path = Codegen.ofNullable(path);
-            return this;
-        }        public ApigatewayApiConfigFileArgs build() {
-            return new ApigatewayApiConfigFileArgs(contents, path);
+
+        public Builder path(String path) {
+            return path(Output.of(path));
+        }
+
+        public ApigatewayApiConfigFileArgs build() {
+            return $;
         }
     }
+
 }

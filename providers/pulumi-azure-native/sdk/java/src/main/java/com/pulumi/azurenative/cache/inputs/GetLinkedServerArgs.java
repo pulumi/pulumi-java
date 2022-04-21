@@ -17,7 +17,7 @@ public final class GetLinkedServerArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="linkedServerName", required=true)
-      private final String linkedServerName;
+    private String linkedServerName;
 
     public String linkedServerName() {
         return this.linkedServerName;
@@ -28,7 +28,7 @@ public final class GetLinkedServerArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -39,64 +39,59 @@ public final class GetLinkedServerArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public GetLinkedServerArgs(
-        String linkedServerName,
-        String name,
-        String resourceGroupName) {
-        this.linkedServerName = Objects.requireNonNull(linkedServerName, "expected parameter 'linkedServerName' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private GetLinkedServerArgs() {}
 
-    private GetLinkedServerArgs() {
-        this.linkedServerName = null;
-        this.name = null;
-        this.resourceGroupName = null;
+    private GetLinkedServerArgs(GetLinkedServerArgs $) {
+        this.linkedServerName = $.linkedServerName;
+        this.name = $.name;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetLinkedServerArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String linkedServerName;
-        private String name;
-        private String resourceGroupName;
+        private GetLinkedServerArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetLinkedServerArgs();
         }
 
         public Builder(GetLinkedServerArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.linkedServerName = defaults.linkedServerName;
-    	      this.name = defaults.name;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new GetLinkedServerArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder linkedServerName(String linkedServerName) {
-            this.linkedServerName = Objects.requireNonNull(linkedServerName);
+            $.linkedServerName = linkedServerName;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public GetLinkedServerArgs build() {
-            return new GetLinkedServerArgs(linkedServerName, name, resourceGroupName);
+        }
+
+        public GetLinkedServerArgs build() {
+            $.linkedServerName = Objects.requireNonNull($.linkedServerName, "expected parameter 'linkedServerName' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

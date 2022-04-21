@@ -17,132 +17,123 @@ public final class GetServiceTemplateSpec extends com.pulumi.resources.InvokeArg
     public static final GetServiceTemplateSpec Empty = new GetServiceTemplateSpec();
 
     @Import(name="containerConcurrency", required=true)
-      private final Integer containerConcurrency;
+    private Integer containerConcurrency;
 
     public Integer containerConcurrency() {
         return this.containerConcurrency;
     }
 
     @Import(name="containers", required=true)
-      private final List<GetServiceTemplateSpecContainer> containers;
+    private List<GetServiceTemplateSpecContainer> containers;
 
     public List<GetServiceTemplateSpecContainer> containers() {
         return this.containers;
     }
 
     @Import(name="serviceAccountName", required=true)
-      private final String serviceAccountName;
+    private String serviceAccountName;
 
     public String serviceAccountName() {
         return this.serviceAccountName;
     }
 
     @Import(name="servingState", required=true)
-      private final String servingState;
+    private String servingState;
 
     public String servingState() {
         return this.servingState;
     }
 
     @Import(name="timeoutSeconds", required=true)
-      private final Integer timeoutSeconds;
+    private Integer timeoutSeconds;
 
     public Integer timeoutSeconds() {
         return this.timeoutSeconds;
     }
 
     @Import(name="volumes", required=true)
-      private final List<GetServiceTemplateSpecVolume> volumes;
+    private List<GetServiceTemplateSpecVolume> volumes;
 
     public List<GetServiceTemplateSpecVolume> volumes() {
         return this.volumes;
     }
 
-    public GetServiceTemplateSpec(
-        Integer containerConcurrency,
-        List<GetServiceTemplateSpecContainer> containers,
-        String serviceAccountName,
-        String servingState,
-        Integer timeoutSeconds,
-        List<GetServiceTemplateSpecVolume> volumes) {
-        this.containerConcurrency = Objects.requireNonNull(containerConcurrency, "expected parameter 'containerConcurrency' to be non-null");
-        this.containers = Objects.requireNonNull(containers, "expected parameter 'containers' to be non-null");
-        this.serviceAccountName = Objects.requireNonNull(serviceAccountName, "expected parameter 'serviceAccountName' to be non-null");
-        this.servingState = Objects.requireNonNull(servingState, "expected parameter 'servingState' to be non-null");
-        this.timeoutSeconds = Objects.requireNonNull(timeoutSeconds, "expected parameter 'timeoutSeconds' to be non-null");
-        this.volumes = Objects.requireNonNull(volumes, "expected parameter 'volumes' to be non-null");
-    }
+    private GetServiceTemplateSpec() {}
 
-    private GetServiceTemplateSpec() {
-        this.containerConcurrency = null;
-        this.containers = List.of();
-        this.serviceAccountName = null;
-        this.servingState = null;
-        this.timeoutSeconds = null;
-        this.volumes = List.of();
+    private GetServiceTemplateSpec(GetServiceTemplateSpec $) {
+        this.containerConcurrency = $.containerConcurrency;
+        this.containers = $.containers;
+        this.serviceAccountName = $.serviceAccountName;
+        this.servingState = $.servingState;
+        this.timeoutSeconds = $.timeoutSeconds;
+        this.volumes = $.volumes;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetServiceTemplateSpec defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Integer containerConcurrency;
-        private List<GetServiceTemplateSpecContainer> containers;
-        private String serviceAccountName;
-        private String servingState;
-        private Integer timeoutSeconds;
-        private List<GetServiceTemplateSpecVolume> volumes;
+        private GetServiceTemplateSpec $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetServiceTemplateSpec();
         }
 
         public Builder(GetServiceTemplateSpec defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.containerConcurrency = defaults.containerConcurrency;
-    	      this.containers = defaults.containers;
-    	      this.serviceAccountName = defaults.serviceAccountName;
-    	      this.servingState = defaults.servingState;
-    	      this.timeoutSeconds = defaults.timeoutSeconds;
-    	      this.volumes = defaults.volumes;
+            $ = new GetServiceTemplateSpec(Objects.requireNonNull(defaults));
         }
 
         public Builder containerConcurrency(Integer containerConcurrency) {
-            this.containerConcurrency = Objects.requireNonNull(containerConcurrency);
+            $.containerConcurrency = containerConcurrency;
             return this;
         }
+
         public Builder containers(List<GetServiceTemplateSpecContainer> containers) {
-            this.containers = Objects.requireNonNull(containers);
+            $.containers = containers;
             return this;
         }
+
         public Builder containers(GetServiceTemplateSpecContainer... containers) {
             return containers(List.of(containers));
         }
+
         public Builder serviceAccountName(String serviceAccountName) {
-            this.serviceAccountName = Objects.requireNonNull(serviceAccountName);
+            $.serviceAccountName = serviceAccountName;
             return this;
         }
+
         public Builder servingState(String servingState) {
-            this.servingState = Objects.requireNonNull(servingState);
+            $.servingState = servingState;
             return this;
         }
+
         public Builder timeoutSeconds(Integer timeoutSeconds) {
-            this.timeoutSeconds = Objects.requireNonNull(timeoutSeconds);
+            $.timeoutSeconds = timeoutSeconds;
             return this;
         }
+
         public Builder volumes(List<GetServiceTemplateSpecVolume> volumes) {
-            this.volumes = Objects.requireNonNull(volumes);
+            $.volumes = volumes;
             return this;
         }
+
         public Builder volumes(GetServiceTemplateSpecVolume... volumes) {
             return volumes(List.of(volumes));
-        }        public GetServiceTemplateSpec build() {
-            return new GetServiceTemplateSpec(containerConcurrency, containers, serviceAccountName, servingState, timeoutSeconds, volumes);
+        }
+
+        public GetServiceTemplateSpec build() {
+            $.containerConcurrency = Objects.requireNonNull($.containerConcurrency, "expected parameter 'containerConcurrency' to be non-null");
+            $.containers = Objects.requireNonNull($.containers, "expected parameter 'containers' to be non-null");
+            $.serviceAccountName = Objects.requireNonNull($.serviceAccountName, "expected parameter 'serviceAccountName' to be non-null");
+            $.servingState = Objects.requireNonNull($.servingState, "expected parameter 'servingState' to be non-null");
+            $.timeoutSeconds = Objects.requireNonNull($.timeoutSeconds, "expected parameter 'timeoutSeconds' to be non-null");
+            $.volumes = Objects.requireNonNull($.volumes, "expected parameter 'volumes' to be non-null");
+            return $;
         }
     }
+
 }

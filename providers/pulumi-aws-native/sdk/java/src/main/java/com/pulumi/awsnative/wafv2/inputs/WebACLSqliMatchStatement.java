@@ -19,65 +19,63 @@ public final class WebACLSqliMatchStatement extends com.pulumi.resources.InvokeA
     public static final WebACLSqliMatchStatement Empty = new WebACLSqliMatchStatement();
 
     @Import(name="fieldToMatch", required=true)
-      private final WebACLFieldToMatch fieldToMatch;
+    private WebACLFieldToMatch fieldToMatch;
 
     public WebACLFieldToMatch fieldToMatch() {
         return this.fieldToMatch;
     }
 
     @Import(name="textTransformations", required=true)
-      private final List<WebACLTextTransformation> textTransformations;
+    private List<WebACLTextTransformation> textTransformations;
 
     public List<WebACLTextTransformation> textTransformations() {
         return this.textTransformations;
     }
 
-    public WebACLSqliMatchStatement(
-        WebACLFieldToMatch fieldToMatch,
-        List<WebACLTextTransformation> textTransformations) {
-        this.fieldToMatch = Objects.requireNonNull(fieldToMatch, "expected parameter 'fieldToMatch' to be non-null");
-        this.textTransformations = Objects.requireNonNull(textTransformations, "expected parameter 'textTransformations' to be non-null");
-    }
+    private WebACLSqliMatchStatement() {}
 
-    private WebACLSqliMatchStatement() {
-        this.fieldToMatch = null;
-        this.textTransformations = List.of();
+    private WebACLSqliMatchStatement(WebACLSqliMatchStatement $) {
+        this.fieldToMatch = $.fieldToMatch;
+        this.textTransformations = $.textTransformations;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WebACLSqliMatchStatement defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private WebACLFieldToMatch fieldToMatch;
-        private List<WebACLTextTransformation> textTransformations;
+        private WebACLSqliMatchStatement $;
 
         public Builder() {
-    	      // Empty
+            $ = new WebACLSqliMatchStatement();
         }
 
         public Builder(WebACLSqliMatchStatement defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.fieldToMatch = defaults.fieldToMatch;
-    	      this.textTransformations = defaults.textTransformations;
+            $ = new WebACLSqliMatchStatement(Objects.requireNonNull(defaults));
         }
 
         public Builder fieldToMatch(WebACLFieldToMatch fieldToMatch) {
-            this.fieldToMatch = Objects.requireNonNull(fieldToMatch);
+            $.fieldToMatch = fieldToMatch;
             return this;
         }
+
         public Builder textTransformations(List<WebACLTextTransformation> textTransformations) {
-            this.textTransformations = Objects.requireNonNull(textTransformations);
+            $.textTransformations = textTransformations;
             return this;
         }
+
         public Builder textTransformations(WebACLTextTransformation... textTransformations) {
             return textTransformations(List.of(textTransformations));
-        }        public WebACLSqliMatchStatement build() {
-            return new WebACLSqliMatchStatement(fieldToMatch, textTransformations);
+        }
+
+        public WebACLSqliMatchStatement build() {
+            $.fieldToMatch = Objects.requireNonNull($.fieldToMatch, "expected parameter 'fieldToMatch' to be non-null");
+            $.textTransformations = Objects.requireNonNull($.textTransformations, "expected parameter 'textTransformations' to be non-null");
+            return $;
         }
     }
+
 }

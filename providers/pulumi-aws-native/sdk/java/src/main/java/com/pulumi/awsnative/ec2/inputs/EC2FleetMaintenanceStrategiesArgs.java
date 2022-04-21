@@ -6,8 +6,8 @@ package com.pulumi.awsnative.ec2.inputs;
 import com.pulumi.awsnative.ec2.inputs.EC2FleetCapacityRebalanceArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -16,49 +16,48 @@ public final class EC2FleetMaintenanceStrategiesArgs extends com.pulumi.resource
     public static final EC2FleetMaintenanceStrategiesArgs Empty = new EC2FleetMaintenanceStrategiesArgs();
 
     @Import(name="capacityRebalance")
-      private final @Nullable Output<EC2FleetCapacityRebalanceArgs> capacityRebalance;
+    private @Nullable Output<EC2FleetCapacityRebalanceArgs> capacityRebalance;
 
-    public Output<EC2FleetCapacityRebalanceArgs> capacityRebalance() {
-        return this.capacityRebalance == null ? Codegen.empty() : this.capacityRebalance;
+    public Optional<Output<EC2FleetCapacityRebalanceArgs>> capacityRebalance() {
+        return Optional.ofNullable(this.capacityRebalance);
     }
 
-    public EC2FleetMaintenanceStrategiesArgs(@Nullable Output<EC2FleetCapacityRebalanceArgs> capacityRebalance) {
-        this.capacityRebalance = capacityRebalance;
-    }
+    private EC2FleetMaintenanceStrategiesArgs() {}
 
-    private EC2FleetMaintenanceStrategiesArgs() {
-        this.capacityRebalance = Codegen.empty();
+    private EC2FleetMaintenanceStrategiesArgs(EC2FleetMaintenanceStrategiesArgs $) {
+        this.capacityRebalance = $.capacityRebalance;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EC2FleetMaintenanceStrategiesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<EC2FleetCapacityRebalanceArgs> capacityRebalance;
+        private EC2FleetMaintenanceStrategiesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new EC2FleetMaintenanceStrategiesArgs();
         }
 
         public Builder(EC2FleetMaintenanceStrategiesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.capacityRebalance = defaults.capacityRebalance;
+            $ = new EC2FleetMaintenanceStrategiesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder capacityRebalance(@Nullable Output<EC2FleetCapacityRebalanceArgs> capacityRebalance) {
-            this.capacityRebalance = capacityRebalance;
+            $.capacityRebalance = capacityRebalance;
             return this;
         }
-        public Builder capacityRebalance(@Nullable EC2FleetCapacityRebalanceArgs capacityRebalance) {
-            this.capacityRebalance = Codegen.ofNullable(capacityRebalance);
-            return this;
-        }        public EC2FleetMaintenanceStrategiesArgs build() {
-            return new EC2FleetMaintenanceStrategiesArgs(capacityRebalance);
+
+        public Builder capacityRebalance(EC2FleetCapacityRebalanceArgs capacityRebalance) {
+            return capacityRebalance(Output.of(capacityRebalance));
+        }
+
+        public EC2FleetMaintenanceStrategiesArgs build() {
+            return $;
         }
     }
+
 }

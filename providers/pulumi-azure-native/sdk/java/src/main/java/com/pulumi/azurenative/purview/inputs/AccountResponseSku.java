@@ -24,10 +24,10 @@ public final class AccountResponseSku extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="capacity")
-      private final @Nullable Integer capacity;
+    private @Nullable Integer capacity;
 
     public Optional<Integer> capacity() {
-        return this.capacity == null ? Optional.empty() : Optional.ofNullable(this.capacity);
+        return Optional.ofNullable(this.capacity);
     }
 
     /**
@@ -35,55 +35,50 @@ public final class AccountResponseSku extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable String name;
+    private @Nullable String name;
 
     public Optional<String> name() {
-        return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
+        return Optional.ofNullable(this.name);
     }
 
-    public AccountResponseSku(
-        @Nullable Integer capacity,
-        @Nullable String name) {
-        this.capacity = capacity;
-        this.name = name;
-    }
+    private AccountResponseSku() {}
 
-    private AccountResponseSku() {
-        this.capacity = null;
-        this.name = null;
+    private AccountResponseSku(AccountResponseSku $) {
+        this.capacity = $.capacity;
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AccountResponseSku defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Integer capacity;
-        private @Nullable String name;
+        private AccountResponseSku $;
 
         public Builder() {
-    	      // Empty
+            $ = new AccountResponseSku();
         }
 
         public Builder(AccountResponseSku defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.capacity = defaults.capacity;
-    	      this.name = defaults.name;
+            $ = new AccountResponseSku(Objects.requireNonNull(defaults));
         }
 
         public Builder capacity(@Nullable Integer capacity) {
-            this.capacity = capacity;
+            $.capacity = capacity;
             return this;
         }
+
         public Builder name(@Nullable String name) {
-            this.name = name;
+            $.name = name;
             return this;
-        }        public AccountResponseSku build() {
-            return new AccountResponseSku(capacity, name);
+        }
+
+        public AccountResponseSku build() {
+            return $;
         }
     }
+
 }

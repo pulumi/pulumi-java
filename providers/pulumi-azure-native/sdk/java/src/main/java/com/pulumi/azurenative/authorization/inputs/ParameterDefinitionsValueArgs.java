@@ -8,11 +8,11 @@ import com.pulumi.azurenative.authorization.inputs.ParameterDefinitionsValueMeta
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -29,10 +29,10 @@ public final class ParameterDefinitionsValueArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="allowedValues")
-      private final @Nullable Output<List<Object>> allowedValues;
+    private @Nullable Output<List<Object>> allowedValues;
 
-    public Output<List<Object>> allowedValues() {
-        return this.allowedValues == null ? Codegen.empty() : this.allowedValues;
+    public Optional<Output<List<Object>>> allowedValues() {
+        return Optional.ofNullable(this.allowedValues);
     }
 
     /**
@@ -40,10 +40,10 @@ public final class ParameterDefinitionsValueArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="defaultValue")
-      private final @Nullable Output<Object> defaultValue;
+    private @Nullable Output<Object> defaultValue;
 
-    public Output<Object> defaultValue() {
-        return this.defaultValue == null ? Codegen.empty() : this.defaultValue;
+    public Optional<Output<Object>> defaultValue() {
+        return Optional.ofNullable(this.defaultValue);
     }
 
     /**
@@ -51,10 +51,10 @@ public final class ParameterDefinitionsValueArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="metadata")
-      private final @Nullable Output<ParameterDefinitionsValueMetadataArgs> metadata;
+    private @Nullable Output<ParameterDefinitionsValueMetadataArgs> metadata;
 
-    public Output<ParameterDefinitionsValueMetadataArgs> metadata() {
-        return this.metadata == null ? Codegen.empty() : this.metadata;
+    public Optional<Output<ParameterDefinitionsValueMetadataArgs>> metadata() {
+        return Optional.ofNullable(this.metadata);
     }
 
     /**
@@ -62,92 +62,82 @@ public final class ParameterDefinitionsValueArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="type")
-      private final @Nullable Output<Either<String,ParameterType>> type;
+    private @Nullable Output<Either<String,ParameterType>> type;
 
-    public Output<Either<String,ParameterType>> type() {
-        return this.type == null ? Codegen.empty() : this.type;
+    public Optional<Output<Either<String,ParameterType>>> type() {
+        return Optional.ofNullable(this.type);
     }
 
-    public ParameterDefinitionsValueArgs(
-        @Nullable Output<List<Object>> allowedValues,
-        @Nullable Output<Object> defaultValue,
-        @Nullable Output<ParameterDefinitionsValueMetadataArgs> metadata,
-        @Nullable Output<Either<String,ParameterType>> type) {
-        this.allowedValues = allowedValues;
-        this.defaultValue = defaultValue;
-        this.metadata = metadata;
-        this.type = type;
-    }
+    private ParameterDefinitionsValueArgs() {}
 
-    private ParameterDefinitionsValueArgs() {
-        this.allowedValues = Codegen.empty();
-        this.defaultValue = Codegen.empty();
-        this.metadata = Codegen.empty();
-        this.type = Codegen.empty();
+    private ParameterDefinitionsValueArgs(ParameterDefinitionsValueArgs $) {
+        this.allowedValues = $.allowedValues;
+        this.defaultValue = $.defaultValue;
+        this.metadata = $.metadata;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ParameterDefinitionsValueArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<Object>> allowedValues;
-        private @Nullable Output<Object> defaultValue;
-        private @Nullable Output<ParameterDefinitionsValueMetadataArgs> metadata;
-        private @Nullable Output<Either<String,ParameterType>> type;
+        private ParameterDefinitionsValueArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ParameterDefinitionsValueArgs();
         }
 
         public Builder(ParameterDefinitionsValueArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.allowedValues = defaults.allowedValues;
-    	      this.defaultValue = defaults.defaultValue;
-    	      this.metadata = defaults.metadata;
-    	      this.type = defaults.type;
+            $ = new ParameterDefinitionsValueArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder allowedValues(@Nullable Output<List<Object>> allowedValues) {
-            this.allowedValues = allowedValues;
+            $.allowedValues = allowedValues;
             return this;
         }
-        public Builder allowedValues(@Nullable List<Object> allowedValues) {
-            this.allowedValues = Codegen.ofNullable(allowedValues);
-            return this;
+
+        public Builder allowedValues(List<Object> allowedValues) {
+            return allowedValues(Output.of(allowedValues));
         }
+
         public Builder allowedValues(Object... allowedValues) {
             return allowedValues(List.of(allowedValues));
         }
+
         public Builder defaultValue(@Nullable Output<Object> defaultValue) {
-            this.defaultValue = defaultValue;
+            $.defaultValue = defaultValue;
             return this;
         }
-        public Builder defaultValue(@Nullable Object defaultValue) {
-            this.defaultValue = Codegen.ofNullable(defaultValue);
-            return this;
+
+        public Builder defaultValue(Object defaultValue) {
+            return defaultValue(Output.of(defaultValue));
         }
+
         public Builder metadata(@Nullable Output<ParameterDefinitionsValueMetadataArgs> metadata) {
-            this.metadata = metadata;
+            $.metadata = metadata;
             return this;
         }
-        public Builder metadata(@Nullable ParameterDefinitionsValueMetadataArgs metadata) {
-            this.metadata = Codegen.ofNullable(metadata);
-            return this;
+
+        public Builder metadata(ParameterDefinitionsValueMetadataArgs metadata) {
+            return metadata(Output.of(metadata));
         }
+
         public Builder type(@Nullable Output<Either<String,ParameterType>> type) {
-            this.type = type;
+            $.type = type;
             return this;
         }
-        public Builder type(@Nullable Either<String,ParameterType> type) {
-            this.type = Codegen.ofNullable(type);
-            return this;
-        }        public ParameterDefinitionsValueArgs build() {
-            return new ParameterDefinitionsValueArgs(allowedValues, defaultValue, metadata, type);
+
+        public Builder type(Either<String,ParameterType> type) {
+            return type(Output.of(type));
+        }
+
+        public ParameterDefinitionsValueArgs build() {
+            return $;
         }
     }
+
 }

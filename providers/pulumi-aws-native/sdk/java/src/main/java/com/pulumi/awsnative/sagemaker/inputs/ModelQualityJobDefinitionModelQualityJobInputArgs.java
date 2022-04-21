@@ -7,7 +7,6 @@ import com.pulumi.awsnative.sagemaker.inputs.ModelQualityJobDefinitionEndpointIn
 import com.pulumi.awsnative.sagemaker.inputs.ModelQualityJobDefinitionMonitoringGroundTruthS3InputArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
 
 
@@ -20,70 +19,67 @@ public final class ModelQualityJobDefinitionModelQualityJobInputArgs extends com
     public static final ModelQualityJobDefinitionModelQualityJobInputArgs Empty = new ModelQualityJobDefinitionModelQualityJobInputArgs();
 
     @Import(name="endpointInput", required=true)
-      private final Output<ModelQualityJobDefinitionEndpointInputArgs> endpointInput;
+    private Output<ModelQualityJobDefinitionEndpointInputArgs> endpointInput;
 
     public Output<ModelQualityJobDefinitionEndpointInputArgs> endpointInput() {
         return this.endpointInput;
     }
 
     @Import(name="groundTruthS3Input", required=true)
-      private final Output<ModelQualityJobDefinitionMonitoringGroundTruthS3InputArgs> groundTruthS3Input;
+    private Output<ModelQualityJobDefinitionMonitoringGroundTruthS3InputArgs> groundTruthS3Input;
 
     public Output<ModelQualityJobDefinitionMonitoringGroundTruthS3InputArgs> groundTruthS3Input() {
         return this.groundTruthS3Input;
     }
 
-    public ModelQualityJobDefinitionModelQualityJobInputArgs(
-        Output<ModelQualityJobDefinitionEndpointInputArgs> endpointInput,
-        Output<ModelQualityJobDefinitionMonitoringGroundTruthS3InputArgs> groundTruthS3Input) {
-        this.endpointInput = Objects.requireNonNull(endpointInput, "expected parameter 'endpointInput' to be non-null");
-        this.groundTruthS3Input = Objects.requireNonNull(groundTruthS3Input, "expected parameter 'groundTruthS3Input' to be non-null");
-    }
+    private ModelQualityJobDefinitionModelQualityJobInputArgs() {}
 
-    private ModelQualityJobDefinitionModelQualityJobInputArgs() {
-        this.endpointInput = Codegen.empty();
-        this.groundTruthS3Input = Codegen.empty();
+    private ModelQualityJobDefinitionModelQualityJobInputArgs(ModelQualityJobDefinitionModelQualityJobInputArgs $) {
+        this.endpointInput = $.endpointInput;
+        this.groundTruthS3Input = $.groundTruthS3Input;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ModelQualityJobDefinitionModelQualityJobInputArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<ModelQualityJobDefinitionEndpointInputArgs> endpointInput;
-        private Output<ModelQualityJobDefinitionMonitoringGroundTruthS3InputArgs> groundTruthS3Input;
+        private ModelQualityJobDefinitionModelQualityJobInputArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ModelQualityJobDefinitionModelQualityJobInputArgs();
         }
 
         public Builder(ModelQualityJobDefinitionModelQualityJobInputArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.endpointInput = defaults.endpointInput;
-    	      this.groundTruthS3Input = defaults.groundTruthS3Input;
+            $ = new ModelQualityJobDefinitionModelQualityJobInputArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder endpointInput(Output<ModelQualityJobDefinitionEndpointInputArgs> endpointInput) {
-            this.endpointInput = Objects.requireNonNull(endpointInput);
+            $.endpointInput = endpointInput;
             return this;
         }
+
         public Builder endpointInput(ModelQualityJobDefinitionEndpointInputArgs endpointInput) {
-            this.endpointInput = Output.of(Objects.requireNonNull(endpointInput));
-            return this;
+            return endpointInput(Output.of(endpointInput));
         }
+
         public Builder groundTruthS3Input(Output<ModelQualityJobDefinitionMonitoringGroundTruthS3InputArgs> groundTruthS3Input) {
-            this.groundTruthS3Input = Objects.requireNonNull(groundTruthS3Input);
+            $.groundTruthS3Input = groundTruthS3Input;
             return this;
         }
+
         public Builder groundTruthS3Input(ModelQualityJobDefinitionMonitoringGroundTruthS3InputArgs groundTruthS3Input) {
-            this.groundTruthS3Input = Output.of(Objects.requireNonNull(groundTruthS3Input));
-            return this;
-        }        public ModelQualityJobDefinitionModelQualityJobInputArgs build() {
-            return new ModelQualityJobDefinitionModelQualityJobInputArgs(endpointInput, groundTruthS3Input);
+            return groundTruthS3Input(Output.of(groundTruthS3Input));
+        }
+
+        public ModelQualityJobDefinitionModelQualityJobInputArgs build() {
+            $.endpointInput = Objects.requireNonNull($.endpointInput, "expected parameter 'endpointInput' to be non-null");
+            $.groundTruthS3Input = Objects.requireNonNull($.groundTruthS3Input, "expected parameter 'groundTruthS3Input' to be non-null");
+            return $;
         }
     }
+
 }

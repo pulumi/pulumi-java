@@ -13,62 +13,59 @@ public final class GetEnvironmentArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetEnvironmentArgs Empty = new GetEnvironmentArgs();
 
     @Import(name="environmentId", required=true)
-      private final String environmentId;
+    private String environmentId;
 
     public String environmentId() {
         return this.environmentId;
     }
 
     @Import(name="organizationId", required=true)
-      private final String organizationId;
+    private String organizationId;
 
     public String organizationId() {
         return this.organizationId;
     }
 
-    public GetEnvironmentArgs(
-        String environmentId,
-        String organizationId) {
-        this.environmentId = Objects.requireNonNull(environmentId, "expected parameter 'environmentId' to be non-null");
-        this.organizationId = Objects.requireNonNull(organizationId, "expected parameter 'organizationId' to be non-null");
-    }
+    private GetEnvironmentArgs() {}
 
-    private GetEnvironmentArgs() {
-        this.environmentId = null;
-        this.organizationId = null;
+    private GetEnvironmentArgs(GetEnvironmentArgs $) {
+        this.environmentId = $.environmentId;
+        this.organizationId = $.organizationId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetEnvironmentArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String environmentId;
-        private String organizationId;
+        private GetEnvironmentArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetEnvironmentArgs();
         }
 
         public Builder(GetEnvironmentArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.environmentId = defaults.environmentId;
-    	      this.organizationId = defaults.organizationId;
+            $ = new GetEnvironmentArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder environmentId(String environmentId) {
-            this.environmentId = Objects.requireNonNull(environmentId);
+            $.environmentId = environmentId;
             return this;
         }
+
         public Builder organizationId(String organizationId) {
-            this.organizationId = Objects.requireNonNull(organizationId);
+            $.organizationId = organizationId;
             return this;
-        }        public GetEnvironmentArgs build() {
-            return new GetEnvironmentArgs(environmentId, organizationId);
+        }
+
+        public GetEnvironmentArgs build() {
+            $.environmentId = Objects.requireNonNull($.environmentId, "expected parameter 'environmentId' to be non-null");
+            $.organizationId = Objects.requireNonNull($.organizationId, "expected parameter 'organizationId' to be non-null");
+            return $;
         }
     }
+
 }

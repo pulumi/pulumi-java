@@ -5,12 +5,12 @@ package com.pulumi.gcp.spanner;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -28,7 +28,7 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="config", required=true)
-      private final Output<String> config;
+    private Output<String> config;
 
     public Output<String> config() {
         return this.config;
@@ -40,7 +40,7 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="displayName", required=true)
-      private final Output<String> displayName;
+    private Output<String> displayName;
 
     public Output<String> displayName() {
         return this.displayName;
@@ -52,10 +52,10 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="forceDestroy")
-      private final @Nullable Output<Boolean> forceDestroy;
+    private @Nullable Output<Boolean> forceDestroy;
 
-    public Output<Boolean> forceDestroy() {
-        return this.forceDestroy == null ? Codegen.empty() : this.forceDestroy;
+    public Optional<Output<Boolean>> forceDestroy() {
+        return Optional.ofNullable(this.forceDestroy);
     }
 
     /**
@@ -64,10 +64,10 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="labels")
-      private final @Nullable Output<Map<String,String>> labels;
+    private @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> labels() {
-        return this.labels == null ? Codegen.empty() : this.labels;
+    public Optional<Output<Map<String,String>>> labels() {
+        return Optional.ofNullable(this.labels);
     }
 
     /**
@@ -77,10 +77,10 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -89,10 +89,10 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="numNodes")
-      private final @Nullable Output<Integer> numNodes;
+    private @Nullable Output<Integer> numNodes;
 
-    public Output<Integer> numNodes() {
-        return this.numNodes == null ? Codegen.empty() : this.numNodes;
+    public Optional<Output<Integer>> numNodes() {
+        return Optional.ofNullable(this.numNodes);
     }
 
     /**
@@ -101,10 +101,10 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="processingUnits")
-      private final @Nullable Output<Integer> processingUnits;
+    private @Nullable Output<Integer> processingUnits;
 
-    public Output<Integer> processingUnits() {
-        return this.processingUnits == null ? Codegen.empty() : this.processingUnits;
+    public Optional<Output<Integer>> processingUnits() {
+        return Optional.ofNullable(this.processingUnits);
     }
 
     /**
@@ -113,141 +113,120 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
-    public InstanceArgs(
-        Output<String> config,
-        Output<String> displayName,
-        @Nullable Output<Boolean> forceDestroy,
-        @Nullable Output<Map<String,String>> labels,
-        @Nullable Output<String> name,
-        @Nullable Output<Integer> numNodes,
-        @Nullable Output<Integer> processingUnits,
-        @Nullable Output<String> project) {
-        this.config = Objects.requireNonNull(config, "expected parameter 'config' to be non-null");
-        this.displayName = Objects.requireNonNull(displayName, "expected parameter 'displayName' to be non-null");
-        this.forceDestroy = forceDestroy;
-        this.labels = labels;
-        this.name = name;
-        this.numNodes = numNodes;
-        this.processingUnits = processingUnits;
-        this.project = project;
-    }
+    private InstanceArgs() {}
 
-    private InstanceArgs() {
-        this.config = Codegen.empty();
-        this.displayName = Codegen.empty();
-        this.forceDestroy = Codegen.empty();
-        this.labels = Codegen.empty();
-        this.name = Codegen.empty();
-        this.numNodes = Codegen.empty();
-        this.processingUnits = Codegen.empty();
-        this.project = Codegen.empty();
+    private InstanceArgs(InstanceArgs $) {
+        this.config = $.config;
+        this.displayName = $.displayName;
+        this.forceDestroy = $.forceDestroy;
+        this.labels = $.labels;
+        this.name = $.name;
+        this.numNodes = $.numNodes;
+        this.processingUnits = $.processingUnits;
+        this.project = $.project;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(InstanceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> config;
-        private Output<String> displayName;
-        private @Nullable Output<Boolean> forceDestroy;
-        private @Nullable Output<Map<String,String>> labels;
-        private @Nullable Output<String> name;
-        private @Nullable Output<Integer> numNodes;
-        private @Nullable Output<Integer> processingUnits;
-        private @Nullable Output<String> project;
+        private InstanceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new InstanceArgs();
         }
 
         public Builder(InstanceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.config = defaults.config;
-    	      this.displayName = defaults.displayName;
-    	      this.forceDestroy = defaults.forceDestroy;
-    	      this.labels = defaults.labels;
-    	      this.name = defaults.name;
-    	      this.numNodes = defaults.numNodes;
-    	      this.processingUnits = defaults.processingUnits;
-    	      this.project = defaults.project;
+            $ = new InstanceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder config(Output<String> config) {
-            this.config = Objects.requireNonNull(config);
+            $.config = config;
             return this;
         }
+
         public Builder config(String config) {
-            this.config = Output.of(Objects.requireNonNull(config));
-            return this;
+            return config(Output.of(config));
         }
+
         public Builder displayName(Output<String> displayName) {
-            this.displayName = Objects.requireNonNull(displayName);
+            $.displayName = displayName;
             return this;
         }
+
         public Builder displayName(String displayName) {
-            this.displayName = Output.of(Objects.requireNonNull(displayName));
-            return this;
+            return displayName(Output.of(displayName));
         }
+
         public Builder forceDestroy(@Nullable Output<Boolean> forceDestroy) {
-            this.forceDestroy = forceDestroy;
+            $.forceDestroy = forceDestroy;
             return this;
         }
-        public Builder forceDestroy(@Nullable Boolean forceDestroy) {
-            this.forceDestroy = Codegen.ofNullable(forceDestroy);
-            return this;
+
+        public Builder forceDestroy(Boolean forceDestroy) {
+            return forceDestroy(Output.of(forceDestroy));
         }
+
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
-            this.labels = labels;
+            $.labels = labels;
             return this;
         }
-        public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Codegen.ofNullable(labels);
-            return this;
+
+        public Builder labels(Map<String,String> labels) {
+            return labels(Output.of(labels));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder numNodes(@Nullable Output<Integer> numNodes) {
-            this.numNodes = numNodes;
+            $.numNodes = numNodes;
             return this;
         }
-        public Builder numNodes(@Nullable Integer numNodes) {
-            this.numNodes = Codegen.ofNullable(numNodes);
-            return this;
+
+        public Builder numNodes(Integer numNodes) {
+            return numNodes(Output.of(numNodes));
         }
+
         public Builder processingUnits(@Nullable Output<Integer> processingUnits) {
-            this.processingUnits = processingUnits;
+            $.processingUnits = processingUnits;
             return this;
         }
-        public Builder processingUnits(@Nullable Integer processingUnits) {
-            this.processingUnits = Codegen.ofNullable(processingUnits);
-            return this;
+
+        public Builder processingUnits(Integer processingUnits) {
+            return processingUnits(Output.of(processingUnits));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
-        }        public InstanceArgs build() {
-            return new InstanceArgs(config, displayName, forceDestroy, labels, name, numNodes, processingUnits, project);
+
+        public Builder project(String project) {
+            return project(Output.of(project));
+        }
+
+        public InstanceArgs build() {
+            $.config = Objects.requireNonNull($.config, "expected parameter 'config' to be non-null");
+            $.displayName = Objects.requireNonNull($.displayName, "expected parameter 'displayName' to be non-null");
+            return $;
         }
     }
+
 }

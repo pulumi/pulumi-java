@@ -12,11 +12,11 @@ import com.pulumi.aws.lex.inputs.IntentRejectionStatementArgs;
 import com.pulumi.aws.lex.inputs.IntentSlotArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -33,10 +33,10 @@ public final class IntentArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="conclusionStatement")
-      private final @Nullable Output<IntentConclusionStatementArgs> conclusionStatement;
+    private @Nullable Output<IntentConclusionStatementArgs> conclusionStatement;
 
-    public Output<IntentConclusionStatementArgs> conclusionStatement() {
-        return this.conclusionStatement == null ? Codegen.empty() : this.conclusionStatement;
+    public Optional<Output<IntentConclusionStatementArgs>> conclusionStatement() {
+        return Optional.ofNullable(this.conclusionStatement);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class IntentArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="confirmationPrompt")
-      private final @Nullable Output<IntentConfirmationPromptArgs> confirmationPrompt;
+    private @Nullable Output<IntentConfirmationPromptArgs> confirmationPrompt;
 
-    public Output<IntentConfirmationPromptArgs> confirmationPrompt() {
-        return this.confirmationPrompt == null ? Codegen.empty() : this.confirmationPrompt;
+    public Optional<Output<IntentConfirmationPromptArgs>> confirmationPrompt() {
+        return Optional.ofNullable(this.confirmationPrompt);
     }
 
     /**
@@ -58,10 +58,10 @@ public final class IntentArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="createVersion")
-      private final @Nullable Output<Boolean> createVersion;
+    private @Nullable Output<Boolean> createVersion;
 
-    public Output<Boolean> createVersion() {
-        return this.createVersion == null ? Codegen.empty() : this.createVersion;
+    public Optional<Output<Boolean>> createVersion() {
+        return Optional.ofNullable(this.createVersion);
     }
 
     /**
@@ -69,10 +69,10 @@ public final class IntentArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -81,10 +81,10 @@ public final class IntentArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="dialogCodeHook")
-      private final @Nullable Output<IntentDialogCodeHookArgs> dialogCodeHook;
+    private @Nullable Output<IntentDialogCodeHookArgs> dialogCodeHook;
 
-    public Output<IntentDialogCodeHookArgs> dialogCodeHook() {
-        return this.dialogCodeHook == null ? Codegen.empty() : this.dialogCodeHook;
+    public Optional<Output<IntentDialogCodeHookArgs>> dialogCodeHook() {
+        return Optional.ofNullable(this.dialogCodeHook);
     }
 
     /**
@@ -95,10 +95,10 @@ public final class IntentArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="followUpPrompt")
-      private final @Nullable Output<IntentFollowUpPromptArgs> followUpPrompt;
+    private @Nullable Output<IntentFollowUpPromptArgs> followUpPrompt;
 
-    public Output<IntentFollowUpPromptArgs> followUpPrompt() {
-        return this.followUpPrompt == null ? Codegen.empty() : this.followUpPrompt;
+    public Optional<Output<IntentFollowUpPromptArgs>> followUpPrompt() {
+        return Optional.ofNullable(this.followUpPrompt);
     }
 
     /**
@@ -108,7 +108,7 @@ public final class IntentArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="fulfillmentActivity", required=true)
-      private final Output<IntentFulfillmentActivityArgs> fulfillmentActivity;
+    private Output<IntentFulfillmentActivityArgs> fulfillmentActivity;
 
     public Output<IntentFulfillmentActivityArgs> fulfillmentActivity() {
         return this.fulfillmentActivity;
@@ -119,10 +119,10 @@ public final class IntentArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -133,10 +133,10 @@ public final class IntentArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="parentIntentSignature")
-      private final @Nullable Output<String> parentIntentSignature;
+    private @Nullable Output<String> parentIntentSignature;
 
-    public Output<String> parentIntentSignature() {
-        return this.parentIntentSignature == null ? Codegen.empty() : this.parentIntentSignature;
+    public Optional<Output<String>> parentIntentSignature() {
+        return Optional.ofNullable(this.parentIntentSignature);
     }
 
     /**
@@ -146,10 +146,10 @@ public final class IntentArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="rejectionStatement")
-      private final @Nullable Output<IntentRejectionStatementArgs> rejectionStatement;
+    private @Nullable Output<IntentRejectionStatementArgs> rejectionStatement;
 
-    public Output<IntentRejectionStatementArgs> rejectionStatement() {
-        return this.rejectionStatement == null ? Codegen.empty() : this.rejectionStatement;
+    public Optional<Output<IntentRejectionStatementArgs>> rejectionStatement() {
+        return Optional.ofNullable(this.rejectionStatement);
     }
 
     /**
@@ -159,10 +159,10 @@ public final class IntentArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="sampleUtterances")
-      private final @Nullable Output<List<String>> sampleUtterances;
+    private @Nullable Output<List<String>> sampleUtterances;
 
-    public Output<List<String>> sampleUtterances() {
-        return this.sampleUtterances == null ? Codegen.empty() : this.sampleUtterances;
+    public Optional<Output<List<String>>> sampleUtterances() {
+        return Optional.ofNullable(this.sampleUtterances);
     }
 
     /**
@@ -171,199 +171,167 @@ public final class IntentArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="slots")
-      private final @Nullable Output<List<IntentSlotArgs>> slots;
+    private @Nullable Output<List<IntentSlotArgs>> slots;
 
-    public Output<List<IntentSlotArgs>> slots() {
-        return this.slots == null ? Codegen.empty() : this.slots;
+    public Optional<Output<List<IntentSlotArgs>>> slots() {
+        return Optional.ofNullable(this.slots);
     }
 
-    public IntentArgs(
-        @Nullable Output<IntentConclusionStatementArgs> conclusionStatement,
-        @Nullable Output<IntentConfirmationPromptArgs> confirmationPrompt,
-        @Nullable Output<Boolean> createVersion,
-        @Nullable Output<String> description,
-        @Nullable Output<IntentDialogCodeHookArgs> dialogCodeHook,
-        @Nullable Output<IntentFollowUpPromptArgs> followUpPrompt,
-        Output<IntentFulfillmentActivityArgs> fulfillmentActivity,
-        @Nullable Output<String> name,
-        @Nullable Output<String> parentIntentSignature,
-        @Nullable Output<IntentRejectionStatementArgs> rejectionStatement,
-        @Nullable Output<List<String>> sampleUtterances,
-        @Nullable Output<List<IntentSlotArgs>> slots) {
-        this.conclusionStatement = conclusionStatement;
-        this.confirmationPrompt = confirmationPrompt;
-        this.createVersion = createVersion;
-        this.description = description;
-        this.dialogCodeHook = dialogCodeHook;
-        this.followUpPrompt = followUpPrompt;
-        this.fulfillmentActivity = Objects.requireNonNull(fulfillmentActivity, "expected parameter 'fulfillmentActivity' to be non-null");
-        this.name = name;
-        this.parentIntentSignature = parentIntentSignature;
-        this.rejectionStatement = rejectionStatement;
-        this.sampleUtterances = sampleUtterances;
-        this.slots = slots;
-    }
+    private IntentArgs() {}
 
-    private IntentArgs() {
-        this.conclusionStatement = Codegen.empty();
-        this.confirmationPrompt = Codegen.empty();
-        this.createVersion = Codegen.empty();
-        this.description = Codegen.empty();
-        this.dialogCodeHook = Codegen.empty();
-        this.followUpPrompt = Codegen.empty();
-        this.fulfillmentActivity = Codegen.empty();
-        this.name = Codegen.empty();
-        this.parentIntentSignature = Codegen.empty();
-        this.rejectionStatement = Codegen.empty();
-        this.sampleUtterances = Codegen.empty();
-        this.slots = Codegen.empty();
+    private IntentArgs(IntentArgs $) {
+        this.conclusionStatement = $.conclusionStatement;
+        this.confirmationPrompt = $.confirmationPrompt;
+        this.createVersion = $.createVersion;
+        this.description = $.description;
+        this.dialogCodeHook = $.dialogCodeHook;
+        this.followUpPrompt = $.followUpPrompt;
+        this.fulfillmentActivity = $.fulfillmentActivity;
+        this.name = $.name;
+        this.parentIntentSignature = $.parentIntentSignature;
+        this.rejectionStatement = $.rejectionStatement;
+        this.sampleUtterances = $.sampleUtterances;
+        this.slots = $.slots;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(IntentArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<IntentConclusionStatementArgs> conclusionStatement;
-        private @Nullable Output<IntentConfirmationPromptArgs> confirmationPrompt;
-        private @Nullable Output<Boolean> createVersion;
-        private @Nullable Output<String> description;
-        private @Nullable Output<IntentDialogCodeHookArgs> dialogCodeHook;
-        private @Nullable Output<IntentFollowUpPromptArgs> followUpPrompt;
-        private Output<IntentFulfillmentActivityArgs> fulfillmentActivity;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> parentIntentSignature;
-        private @Nullable Output<IntentRejectionStatementArgs> rejectionStatement;
-        private @Nullable Output<List<String>> sampleUtterances;
-        private @Nullable Output<List<IntentSlotArgs>> slots;
+        private IntentArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new IntentArgs();
         }
 
         public Builder(IntentArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.conclusionStatement = defaults.conclusionStatement;
-    	      this.confirmationPrompt = defaults.confirmationPrompt;
-    	      this.createVersion = defaults.createVersion;
-    	      this.description = defaults.description;
-    	      this.dialogCodeHook = defaults.dialogCodeHook;
-    	      this.followUpPrompt = defaults.followUpPrompt;
-    	      this.fulfillmentActivity = defaults.fulfillmentActivity;
-    	      this.name = defaults.name;
-    	      this.parentIntentSignature = defaults.parentIntentSignature;
-    	      this.rejectionStatement = defaults.rejectionStatement;
-    	      this.sampleUtterances = defaults.sampleUtterances;
-    	      this.slots = defaults.slots;
+            $ = new IntentArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder conclusionStatement(@Nullable Output<IntentConclusionStatementArgs> conclusionStatement) {
-            this.conclusionStatement = conclusionStatement;
+            $.conclusionStatement = conclusionStatement;
             return this;
         }
-        public Builder conclusionStatement(@Nullable IntentConclusionStatementArgs conclusionStatement) {
-            this.conclusionStatement = Codegen.ofNullable(conclusionStatement);
-            return this;
+
+        public Builder conclusionStatement(IntentConclusionStatementArgs conclusionStatement) {
+            return conclusionStatement(Output.of(conclusionStatement));
         }
+
         public Builder confirmationPrompt(@Nullable Output<IntentConfirmationPromptArgs> confirmationPrompt) {
-            this.confirmationPrompt = confirmationPrompt;
+            $.confirmationPrompt = confirmationPrompt;
             return this;
         }
-        public Builder confirmationPrompt(@Nullable IntentConfirmationPromptArgs confirmationPrompt) {
-            this.confirmationPrompt = Codegen.ofNullable(confirmationPrompt);
-            return this;
+
+        public Builder confirmationPrompt(IntentConfirmationPromptArgs confirmationPrompt) {
+            return confirmationPrompt(Output.of(confirmationPrompt));
         }
+
         public Builder createVersion(@Nullable Output<Boolean> createVersion) {
-            this.createVersion = createVersion;
+            $.createVersion = createVersion;
             return this;
         }
-        public Builder createVersion(@Nullable Boolean createVersion) {
-            this.createVersion = Codegen.ofNullable(createVersion);
-            return this;
+
+        public Builder createVersion(Boolean createVersion) {
+            return createVersion(Output.of(createVersion));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder dialogCodeHook(@Nullable Output<IntentDialogCodeHookArgs> dialogCodeHook) {
-            this.dialogCodeHook = dialogCodeHook;
+            $.dialogCodeHook = dialogCodeHook;
             return this;
         }
-        public Builder dialogCodeHook(@Nullable IntentDialogCodeHookArgs dialogCodeHook) {
-            this.dialogCodeHook = Codegen.ofNullable(dialogCodeHook);
-            return this;
+
+        public Builder dialogCodeHook(IntentDialogCodeHookArgs dialogCodeHook) {
+            return dialogCodeHook(Output.of(dialogCodeHook));
         }
+
         public Builder followUpPrompt(@Nullable Output<IntentFollowUpPromptArgs> followUpPrompt) {
-            this.followUpPrompt = followUpPrompt;
+            $.followUpPrompt = followUpPrompt;
             return this;
         }
-        public Builder followUpPrompt(@Nullable IntentFollowUpPromptArgs followUpPrompt) {
-            this.followUpPrompt = Codegen.ofNullable(followUpPrompt);
-            return this;
+
+        public Builder followUpPrompt(IntentFollowUpPromptArgs followUpPrompt) {
+            return followUpPrompt(Output.of(followUpPrompt));
         }
+
         public Builder fulfillmentActivity(Output<IntentFulfillmentActivityArgs> fulfillmentActivity) {
-            this.fulfillmentActivity = Objects.requireNonNull(fulfillmentActivity);
+            $.fulfillmentActivity = fulfillmentActivity;
             return this;
         }
+
         public Builder fulfillmentActivity(IntentFulfillmentActivityArgs fulfillmentActivity) {
-            this.fulfillmentActivity = Output.of(Objects.requireNonNull(fulfillmentActivity));
-            return this;
+            return fulfillmentActivity(Output.of(fulfillmentActivity));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder parentIntentSignature(@Nullable Output<String> parentIntentSignature) {
-            this.parentIntentSignature = parentIntentSignature;
+            $.parentIntentSignature = parentIntentSignature;
             return this;
         }
-        public Builder parentIntentSignature(@Nullable String parentIntentSignature) {
-            this.parentIntentSignature = Codegen.ofNullable(parentIntentSignature);
-            return this;
+
+        public Builder parentIntentSignature(String parentIntentSignature) {
+            return parentIntentSignature(Output.of(parentIntentSignature));
         }
+
         public Builder rejectionStatement(@Nullable Output<IntentRejectionStatementArgs> rejectionStatement) {
-            this.rejectionStatement = rejectionStatement;
+            $.rejectionStatement = rejectionStatement;
             return this;
         }
-        public Builder rejectionStatement(@Nullable IntentRejectionStatementArgs rejectionStatement) {
-            this.rejectionStatement = Codegen.ofNullable(rejectionStatement);
-            return this;
+
+        public Builder rejectionStatement(IntentRejectionStatementArgs rejectionStatement) {
+            return rejectionStatement(Output.of(rejectionStatement));
         }
+
         public Builder sampleUtterances(@Nullable Output<List<String>> sampleUtterances) {
-            this.sampleUtterances = sampleUtterances;
+            $.sampleUtterances = sampleUtterances;
             return this;
         }
-        public Builder sampleUtterances(@Nullable List<String> sampleUtterances) {
-            this.sampleUtterances = Codegen.ofNullable(sampleUtterances);
-            return this;
+
+        public Builder sampleUtterances(List<String> sampleUtterances) {
+            return sampleUtterances(Output.of(sampleUtterances));
         }
+
         public Builder sampleUtterances(String... sampleUtterances) {
             return sampleUtterances(List.of(sampleUtterances));
         }
+
         public Builder slots(@Nullable Output<List<IntentSlotArgs>> slots) {
-            this.slots = slots;
+            $.slots = slots;
             return this;
         }
-        public Builder slots(@Nullable List<IntentSlotArgs> slots) {
-            this.slots = Codegen.ofNullable(slots);
-            return this;
+
+        public Builder slots(List<IntentSlotArgs> slots) {
+            return slots(Output.of(slots));
         }
+
         public Builder slots(IntentSlotArgs... slots) {
             return slots(List.of(slots));
-        }        public IntentArgs build() {
-            return new IntentArgs(conclusionStatement, confirmationPrompt, createVersion, description, dialogCodeHook, followUpPrompt, fulfillmentActivity, name, parentIntentSignature, rejectionStatement, sampleUtterances, slots);
+        }
+
+        public IntentArgs build() {
+            $.fulfillmentActivity = Objects.requireNonNull($.fulfillmentActivity, "expected parameter 'fulfillmentActivity' to be non-null");
+            return $;
         }
     }
+
 }

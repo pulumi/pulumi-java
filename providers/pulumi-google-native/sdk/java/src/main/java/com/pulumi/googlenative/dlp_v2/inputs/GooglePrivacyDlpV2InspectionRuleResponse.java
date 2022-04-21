@@ -22,7 +22,7 @@ public final class GooglePrivacyDlpV2InspectionRuleResponse extends com.pulumi.r
      * 
      */
     @Import(name="exclusionRule", required=true)
-      private final GooglePrivacyDlpV2ExclusionRuleResponse exclusionRule;
+    private GooglePrivacyDlpV2ExclusionRuleResponse exclusionRule;
 
     public GooglePrivacyDlpV2ExclusionRuleResponse exclusionRule() {
         return this.exclusionRule;
@@ -33,55 +33,52 @@ public final class GooglePrivacyDlpV2InspectionRuleResponse extends com.pulumi.r
      * 
      */
     @Import(name="hotwordRule", required=true)
-      private final GooglePrivacyDlpV2HotwordRuleResponse hotwordRule;
+    private GooglePrivacyDlpV2HotwordRuleResponse hotwordRule;
 
     public GooglePrivacyDlpV2HotwordRuleResponse hotwordRule() {
         return this.hotwordRule;
     }
 
-    public GooglePrivacyDlpV2InspectionRuleResponse(
-        GooglePrivacyDlpV2ExclusionRuleResponse exclusionRule,
-        GooglePrivacyDlpV2HotwordRuleResponse hotwordRule) {
-        this.exclusionRule = Objects.requireNonNull(exclusionRule, "expected parameter 'exclusionRule' to be non-null");
-        this.hotwordRule = Objects.requireNonNull(hotwordRule, "expected parameter 'hotwordRule' to be non-null");
-    }
+    private GooglePrivacyDlpV2InspectionRuleResponse() {}
 
-    private GooglePrivacyDlpV2InspectionRuleResponse() {
-        this.exclusionRule = null;
-        this.hotwordRule = null;
+    private GooglePrivacyDlpV2InspectionRuleResponse(GooglePrivacyDlpV2InspectionRuleResponse $) {
+        this.exclusionRule = $.exclusionRule;
+        this.hotwordRule = $.hotwordRule;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GooglePrivacyDlpV2InspectionRuleResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private GooglePrivacyDlpV2ExclusionRuleResponse exclusionRule;
-        private GooglePrivacyDlpV2HotwordRuleResponse hotwordRule;
+        private GooglePrivacyDlpV2InspectionRuleResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GooglePrivacyDlpV2InspectionRuleResponse();
         }
 
         public Builder(GooglePrivacyDlpV2InspectionRuleResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.exclusionRule = defaults.exclusionRule;
-    	      this.hotwordRule = defaults.hotwordRule;
+            $ = new GooglePrivacyDlpV2InspectionRuleResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder exclusionRule(GooglePrivacyDlpV2ExclusionRuleResponse exclusionRule) {
-            this.exclusionRule = Objects.requireNonNull(exclusionRule);
+            $.exclusionRule = exclusionRule;
             return this;
         }
+
         public Builder hotwordRule(GooglePrivacyDlpV2HotwordRuleResponse hotwordRule) {
-            this.hotwordRule = Objects.requireNonNull(hotwordRule);
+            $.hotwordRule = hotwordRule;
             return this;
-        }        public GooglePrivacyDlpV2InspectionRuleResponse build() {
-            return new GooglePrivacyDlpV2InspectionRuleResponse(exclusionRule, hotwordRule);
+        }
+
+        public GooglePrivacyDlpV2InspectionRuleResponse build() {
+            $.exclusionRule = Objects.requireNonNull($.exclusionRule, "expected parameter 'exclusionRule' to be non-null");
+            $.hotwordRule = Objects.requireNonNull($.hotwordRule, "expected parameter 'hotwordRule' to be non-null");
+            return $;
         }
     }
+
 }

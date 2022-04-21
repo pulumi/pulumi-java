@@ -17,7 +17,7 @@ public final class GetWebAppVnetConnectionSlotArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -28,7 +28,7 @@ public final class GetWebAppVnetConnectionSlotArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -39,7 +39,7 @@ public final class GetWebAppVnetConnectionSlotArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="slot", required=true)
-      private final String slot;
+    private String slot;
 
     public String slot() {
         return this.slot;
@@ -50,73 +50,66 @@ public final class GetWebAppVnetConnectionSlotArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="vnetName", required=true)
-      private final String vnetName;
+    private String vnetName;
 
     public String vnetName() {
         return this.vnetName;
     }
 
-    public GetWebAppVnetConnectionSlotArgs(
-        String name,
-        String resourceGroupName,
-        String slot,
-        String vnetName) {
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.slot = Objects.requireNonNull(slot, "expected parameter 'slot' to be non-null");
-        this.vnetName = Objects.requireNonNull(vnetName, "expected parameter 'vnetName' to be non-null");
-    }
+    private GetWebAppVnetConnectionSlotArgs() {}
 
-    private GetWebAppVnetConnectionSlotArgs() {
-        this.name = null;
-        this.resourceGroupName = null;
-        this.slot = null;
-        this.vnetName = null;
+    private GetWebAppVnetConnectionSlotArgs(GetWebAppVnetConnectionSlotArgs $) {
+        this.name = $.name;
+        this.resourceGroupName = $.resourceGroupName;
+        this.slot = $.slot;
+        this.vnetName = $.vnetName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetWebAppVnetConnectionSlotArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String name;
-        private String resourceGroupName;
-        private String slot;
-        private String vnetName;
+        private GetWebAppVnetConnectionSlotArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetWebAppVnetConnectionSlotArgs();
         }
 
         public Builder(GetWebAppVnetConnectionSlotArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.slot = defaults.slot;
-    	      this.vnetName = defaults.vnetName;
+            $ = new GetWebAppVnetConnectionSlotArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder slot(String slot) {
-            this.slot = Objects.requireNonNull(slot);
+            $.slot = slot;
             return this;
         }
+
         public Builder vnetName(String vnetName) {
-            this.vnetName = Objects.requireNonNull(vnetName);
+            $.vnetName = vnetName;
             return this;
-        }        public GetWebAppVnetConnectionSlotArgs build() {
-            return new GetWebAppVnetConnectionSlotArgs(name, resourceGroupName, slot, vnetName);
+        }
+
+        public GetWebAppVnetConnectionSlotArgs build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.slot = Objects.requireNonNull($.slot, "expected parameter 'slot' to be non-null");
+            $.vnetName = Objects.requireNonNull($.vnetName, "expected parameter 'vnetName' to be non-null");
+            return $;
         }
     }
+
 }

@@ -6,10 +6,10 @@ package com.pulumi.awsnative.kendra.inputs;
 import com.pulumi.awsnative.kendra.inputs.DataSourceToIndexFieldMappingArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -18,188 +18,175 @@ public final class DataSourceGoogleDriveConfigurationArgs extends com.pulumi.res
     public static final DataSourceGoogleDriveConfigurationArgs Empty = new DataSourceGoogleDriveConfigurationArgs();
 
     @Import(name="excludeMimeTypes")
-      private final @Nullable Output<List<String>> excludeMimeTypes;
+    private @Nullable Output<List<String>> excludeMimeTypes;
 
-    public Output<List<String>> excludeMimeTypes() {
-        return this.excludeMimeTypes == null ? Codegen.empty() : this.excludeMimeTypes;
+    public Optional<Output<List<String>>> excludeMimeTypes() {
+        return Optional.ofNullable(this.excludeMimeTypes);
     }
 
     @Import(name="excludeSharedDrives")
-      private final @Nullable Output<List<String>> excludeSharedDrives;
+    private @Nullable Output<List<String>> excludeSharedDrives;
 
-    public Output<List<String>> excludeSharedDrives() {
-        return this.excludeSharedDrives == null ? Codegen.empty() : this.excludeSharedDrives;
+    public Optional<Output<List<String>>> excludeSharedDrives() {
+        return Optional.ofNullable(this.excludeSharedDrives);
     }
 
     @Import(name="excludeUserAccounts")
-      private final @Nullable Output<List<String>> excludeUserAccounts;
+    private @Nullable Output<List<String>> excludeUserAccounts;
 
-    public Output<List<String>> excludeUserAccounts() {
-        return this.excludeUserAccounts == null ? Codegen.empty() : this.excludeUserAccounts;
+    public Optional<Output<List<String>>> excludeUserAccounts() {
+        return Optional.ofNullable(this.excludeUserAccounts);
     }
 
     @Import(name="exclusionPatterns")
-      private final @Nullable Output<List<String>> exclusionPatterns;
+    private @Nullable Output<List<String>> exclusionPatterns;
 
-    public Output<List<String>> exclusionPatterns() {
-        return this.exclusionPatterns == null ? Codegen.empty() : this.exclusionPatterns;
+    public Optional<Output<List<String>>> exclusionPatterns() {
+        return Optional.ofNullable(this.exclusionPatterns);
     }
 
     @Import(name="fieldMappings")
-      private final @Nullable Output<List<DataSourceToIndexFieldMappingArgs>> fieldMappings;
+    private @Nullable Output<List<DataSourceToIndexFieldMappingArgs>> fieldMappings;
 
-    public Output<List<DataSourceToIndexFieldMappingArgs>> fieldMappings() {
-        return this.fieldMappings == null ? Codegen.empty() : this.fieldMappings;
+    public Optional<Output<List<DataSourceToIndexFieldMappingArgs>>> fieldMappings() {
+        return Optional.ofNullable(this.fieldMappings);
     }
 
     @Import(name="inclusionPatterns")
-      private final @Nullable Output<List<String>> inclusionPatterns;
+    private @Nullable Output<List<String>> inclusionPatterns;
 
-    public Output<List<String>> inclusionPatterns() {
-        return this.inclusionPatterns == null ? Codegen.empty() : this.inclusionPatterns;
+    public Optional<Output<List<String>>> inclusionPatterns() {
+        return Optional.ofNullable(this.inclusionPatterns);
     }
 
     @Import(name="secretArn", required=true)
-      private final Output<String> secretArn;
+    private Output<String> secretArn;
 
     public Output<String> secretArn() {
         return this.secretArn;
     }
 
-    public DataSourceGoogleDriveConfigurationArgs(
-        @Nullable Output<List<String>> excludeMimeTypes,
-        @Nullable Output<List<String>> excludeSharedDrives,
-        @Nullable Output<List<String>> excludeUserAccounts,
-        @Nullable Output<List<String>> exclusionPatterns,
-        @Nullable Output<List<DataSourceToIndexFieldMappingArgs>> fieldMappings,
-        @Nullable Output<List<String>> inclusionPatterns,
-        Output<String> secretArn) {
-        this.excludeMimeTypes = excludeMimeTypes;
-        this.excludeSharedDrives = excludeSharedDrives;
-        this.excludeUserAccounts = excludeUserAccounts;
-        this.exclusionPatterns = exclusionPatterns;
-        this.fieldMappings = fieldMappings;
-        this.inclusionPatterns = inclusionPatterns;
-        this.secretArn = Objects.requireNonNull(secretArn, "expected parameter 'secretArn' to be non-null");
-    }
+    private DataSourceGoogleDriveConfigurationArgs() {}
 
-    private DataSourceGoogleDriveConfigurationArgs() {
-        this.excludeMimeTypes = Codegen.empty();
-        this.excludeSharedDrives = Codegen.empty();
-        this.excludeUserAccounts = Codegen.empty();
-        this.exclusionPatterns = Codegen.empty();
-        this.fieldMappings = Codegen.empty();
-        this.inclusionPatterns = Codegen.empty();
-        this.secretArn = Codegen.empty();
+    private DataSourceGoogleDriveConfigurationArgs(DataSourceGoogleDriveConfigurationArgs $) {
+        this.excludeMimeTypes = $.excludeMimeTypes;
+        this.excludeSharedDrives = $.excludeSharedDrives;
+        this.excludeUserAccounts = $.excludeUserAccounts;
+        this.exclusionPatterns = $.exclusionPatterns;
+        this.fieldMappings = $.fieldMappings;
+        this.inclusionPatterns = $.inclusionPatterns;
+        this.secretArn = $.secretArn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DataSourceGoogleDriveConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> excludeMimeTypes;
-        private @Nullable Output<List<String>> excludeSharedDrives;
-        private @Nullable Output<List<String>> excludeUserAccounts;
-        private @Nullable Output<List<String>> exclusionPatterns;
-        private @Nullable Output<List<DataSourceToIndexFieldMappingArgs>> fieldMappings;
-        private @Nullable Output<List<String>> inclusionPatterns;
-        private Output<String> secretArn;
+        private DataSourceGoogleDriveConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DataSourceGoogleDriveConfigurationArgs();
         }
 
         public Builder(DataSourceGoogleDriveConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.excludeMimeTypes = defaults.excludeMimeTypes;
-    	      this.excludeSharedDrives = defaults.excludeSharedDrives;
-    	      this.excludeUserAccounts = defaults.excludeUserAccounts;
-    	      this.exclusionPatterns = defaults.exclusionPatterns;
-    	      this.fieldMappings = defaults.fieldMappings;
-    	      this.inclusionPatterns = defaults.inclusionPatterns;
-    	      this.secretArn = defaults.secretArn;
+            $ = new DataSourceGoogleDriveConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder excludeMimeTypes(@Nullable Output<List<String>> excludeMimeTypes) {
-            this.excludeMimeTypes = excludeMimeTypes;
+            $.excludeMimeTypes = excludeMimeTypes;
             return this;
         }
-        public Builder excludeMimeTypes(@Nullable List<String> excludeMimeTypes) {
-            this.excludeMimeTypes = Codegen.ofNullable(excludeMimeTypes);
-            return this;
+
+        public Builder excludeMimeTypes(List<String> excludeMimeTypes) {
+            return excludeMimeTypes(Output.of(excludeMimeTypes));
         }
+
         public Builder excludeMimeTypes(String... excludeMimeTypes) {
             return excludeMimeTypes(List.of(excludeMimeTypes));
         }
+
         public Builder excludeSharedDrives(@Nullable Output<List<String>> excludeSharedDrives) {
-            this.excludeSharedDrives = excludeSharedDrives;
+            $.excludeSharedDrives = excludeSharedDrives;
             return this;
         }
-        public Builder excludeSharedDrives(@Nullable List<String> excludeSharedDrives) {
-            this.excludeSharedDrives = Codegen.ofNullable(excludeSharedDrives);
-            return this;
+
+        public Builder excludeSharedDrives(List<String> excludeSharedDrives) {
+            return excludeSharedDrives(Output.of(excludeSharedDrives));
         }
+
         public Builder excludeSharedDrives(String... excludeSharedDrives) {
             return excludeSharedDrives(List.of(excludeSharedDrives));
         }
+
         public Builder excludeUserAccounts(@Nullable Output<List<String>> excludeUserAccounts) {
-            this.excludeUserAccounts = excludeUserAccounts;
+            $.excludeUserAccounts = excludeUserAccounts;
             return this;
         }
-        public Builder excludeUserAccounts(@Nullable List<String> excludeUserAccounts) {
-            this.excludeUserAccounts = Codegen.ofNullable(excludeUserAccounts);
-            return this;
+
+        public Builder excludeUserAccounts(List<String> excludeUserAccounts) {
+            return excludeUserAccounts(Output.of(excludeUserAccounts));
         }
+
         public Builder excludeUserAccounts(String... excludeUserAccounts) {
             return excludeUserAccounts(List.of(excludeUserAccounts));
         }
+
         public Builder exclusionPatterns(@Nullable Output<List<String>> exclusionPatterns) {
-            this.exclusionPatterns = exclusionPatterns;
+            $.exclusionPatterns = exclusionPatterns;
             return this;
         }
-        public Builder exclusionPatterns(@Nullable List<String> exclusionPatterns) {
-            this.exclusionPatterns = Codegen.ofNullable(exclusionPatterns);
-            return this;
+
+        public Builder exclusionPatterns(List<String> exclusionPatterns) {
+            return exclusionPatterns(Output.of(exclusionPatterns));
         }
+
         public Builder exclusionPatterns(String... exclusionPatterns) {
             return exclusionPatterns(List.of(exclusionPatterns));
         }
+
         public Builder fieldMappings(@Nullable Output<List<DataSourceToIndexFieldMappingArgs>> fieldMappings) {
-            this.fieldMappings = fieldMappings;
+            $.fieldMappings = fieldMappings;
             return this;
         }
-        public Builder fieldMappings(@Nullable List<DataSourceToIndexFieldMappingArgs> fieldMappings) {
-            this.fieldMappings = Codegen.ofNullable(fieldMappings);
-            return this;
+
+        public Builder fieldMappings(List<DataSourceToIndexFieldMappingArgs> fieldMappings) {
+            return fieldMappings(Output.of(fieldMappings));
         }
+
         public Builder fieldMappings(DataSourceToIndexFieldMappingArgs... fieldMappings) {
             return fieldMappings(List.of(fieldMappings));
         }
+
         public Builder inclusionPatterns(@Nullable Output<List<String>> inclusionPatterns) {
-            this.inclusionPatterns = inclusionPatterns;
+            $.inclusionPatterns = inclusionPatterns;
             return this;
         }
-        public Builder inclusionPatterns(@Nullable List<String> inclusionPatterns) {
-            this.inclusionPatterns = Codegen.ofNullable(inclusionPatterns);
-            return this;
+
+        public Builder inclusionPatterns(List<String> inclusionPatterns) {
+            return inclusionPatterns(Output.of(inclusionPatterns));
         }
+
         public Builder inclusionPatterns(String... inclusionPatterns) {
             return inclusionPatterns(List.of(inclusionPatterns));
         }
+
         public Builder secretArn(Output<String> secretArn) {
-            this.secretArn = Objects.requireNonNull(secretArn);
+            $.secretArn = secretArn;
             return this;
         }
+
         public Builder secretArn(String secretArn) {
-            this.secretArn = Output.of(Objects.requireNonNull(secretArn));
-            return this;
-        }        public DataSourceGoogleDriveConfigurationArgs build() {
-            return new DataSourceGoogleDriveConfigurationArgs(excludeMimeTypes, excludeSharedDrives, excludeUserAccounts, exclusionPatterns, fieldMappings, inclusionPatterns, secretArn);
+            return secretArn(Output.of(secretArn));
+        }
+
+        public DataSourceGoogleDriveConfigurationArgs build() {
+            $.secretArn = Objects.requireNonNull($.secretArn, "expected parameter 'secretArn' to be non-null");
+            return $;
         }
     }
+
 }

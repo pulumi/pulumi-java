@@ -5,10 +5,10 @@ package com.pulumi.kubernetes.core_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class ContainerStateTerminatedArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="containerID")
-      private final @Nullable Output<String> containerID;
+    private @Nullable Output<String> containerID;
 
-    public Output<String> containerID() {
-        return this.containerID == null ? Codegen.empty() : this.containerID;
+    public Optional<Output<String>> containerID() {
+        return Optional.ofNullable(this.containerID);
     }
 
     /**
@@ -36,7 +36,7 @@ public final class ContainerStateTerminatedArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="exitCode", required=true)
-      private final Output<Integer> exitCode;
+    private Output<Integer> exitCode;
 
     public Output<Integer> exitCode() {
         return this.exitCode;
@@ -47,10 +47,10 @@ public final class ContainerStateTerminatedArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="finishedAt")
-      private final @Nullable Output<String> finishedAt;
+    private @Nullable Output<String> finishedAt;
 
-    public Output<String> finishedAt() {
-        return this.finishedAt == null ? Codegen.empty() : this.finishedAt;
+    public Optional<Output<String>> finishedAt() {
+        return Optional.ofNullable(this.finishedAt);
     }
 
     /**
@@ -58,10 +58,10 @@ public final class ContainerStateTerminatedArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="message")
-      private final @Nullable Output<String> message;
+    private @Nullable Output<String> message;
 
-    public Output<String> message() {
-        return this.message == null ? Codegen.empty() : this.message;
+    public Optional<Output<String>> message() {
+        return Optional.ofNullable(this.message);
     }
 
     /**
@@ -69,10 +69,10 @@ public final class ContainerStateTerminatedArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="reason")
-      private final @Nullable Output<String> reason;
+    private @Nullable Output<String> reason;
 
-    public Output<String> reason() {
-        return this.reason == null ? Codegen.empty() : this.reason;
+    public Optional<Output<String>> reason() {
+        return Optional.ofNullable(this.reason);
     }
 
     /**
@@ -80,10 +80,10 @@ public final class ContainerStateTerminatedArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="signal")
-      private final @Nullable Output<Integer> signal;
+    private @Nullable Output<Integer> signal;
 
-    public Output<Integer> signal() {
-        return this.signal == null ? Codegen.empty() : this.signal;
+    public Optional<Output<Integer>> signal() {
+        return Optional.ofNullable(this.signal);
     }
 
     /**
@@ -91,128 +91,109 @@ public final class ContainerStateTerminatedArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="startedAt")
-      private final @Nullable Output<String> startedAt;
+    private @Nullable Output<String> startedAt;
 
-    public Output<String> startedAt() {
-        return this.startedAt == null ? Codegen.empty() : this.startedAt;
+    public Optional<Output<String>> startedAt() {
+        return Optional.ofNullable(this.startedAt);
     }
 
-    public ContainerStateTerminatedArgs(
-        @Nullable Output<String> containerID,
-        Output<Integer> exitCode,
-        @Nullable Output<String> finishedAt,
-        @Nullable Output<String> message,
-        @Nullable Output<String> reason,
-        @Nullable Output<Integer> signal,
-        @Nullable Output<String> startedAt) {
-        this.containerID = containerID;
-        this.exitCode = Objects.requireNonNull(exitCode, "expected parameter 'exitCode' to be non-null");
-        this.finishedAt = finishedAt;
-        this.message = message;
-        this.reason = reason;
-        this.signal = signal;
-        this.startedAt = startedAt;
-    }
+    private ContainerStateTerminatedArgs() {}
 
-    private ContainerStateTerminatedArgs() {
-        this.containerID = Codegen.empty();
-        this.exitCode = Codegen.empty();
-        this.finishedAt = Codegen.empty();
-        this.message = Codegen.empty();
-        this.reason = Codegen.empty();
-        this.signal = Codegen.empty();
-        this.startedAt = Codegen.empty();
+    private ContainerStateTerminatedArgs(ContainerStateTerminatedArgs $) {
+        this.containerID = $.containerID;
+        this.exitCode = $.exitCode;
+        this.finishedAt = $.finishedAt;
+        this.message = $.message;
+        this.reason = $.reason;
+        this.signal = $.signal;
+        this.startedAt = $.startedAt;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ContainerStateTerminatedArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> containerID;
-        private Output<Integer> exitCode;
-        private @Nullable Output<String> finishedAt;
-        private @Nullable Output<String> message;
-        private @Nullable Output<String> reason;
-        private @Nullable Output<Integer> signal;
-        private @Nullable Output<String> startedAt;
+        private ContainerStateTerminatedArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ContainerStateTerminatedArgs();
         }
 
         public Builder(ContainerStateTerminatedArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.containerID = defaults.containerID;
-    	      this.exitCode = defaults.exitCode;
-    	      this.finishedAt = defaults.finishedAt;
-    	      this.message = defaults.message;
-    	      this.reason = defaults.reason;
-    	      this.signal = defaults.signal;
-    	      this.startedAt = defaults.startedAt;
+            $ = new ContainerStateTerminatedArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder containerID(@Nullable Output<String> containerID) {
-            this.containerID = containerID;
+            $.containerID = containerID;
             return this;
         }
-        public Builder containerID(@Nullable String containerID) {
-            this.containerID = Codegen.ofNullable(containerID);
-            return this;
+
+        public Builder containerID(String containerID) {
+            return containerID(Output.of(containerID));
         }
+
         public Builder exitCode(Output<Integer> exitCode) {
-            this.exitCode = Objects.requireNonNull(exitCode);
+            $.exitCode = exitCode;
             return this;
         }
+
         public Builder exitCode(Integer exitCode) {
-            this.exitCode = Output.of(Objects.requireNonNull(exitCode));
-            return this;
+            return exitCode(Output.of(exitCode));
         }
+
         public Builder finishedAt(@Nullable Output<String> finishedAt) {
-            this.finishedAt = finishedAt;
+            $.finishedAt = finishedAt;
             return this;
         }
-        public Builder finishedAt(@Nullable String finishedAt) {
-            this.finishedAt = Codegen.ofNullable(finishedAt);
-            return this;
+
+        public Builder finishedAt(String finishedAt) {
+            return finishedAt(Output.of(finishedAt));
         }
+
         public Builder message(@Nullable Output<String> message) {
-            this.message = message;
+            $.message = message;
             return this;
         }
-        public Builder message(@Nullable String message) {
-            this.message = Codegen.ofNullable(message);
-            return this;
+
+        public Builder message(String message) {
+            return message(Output.of(message));
         }
+
         public Builder reason(@Nullable Output<String> reason) {
-            this.reason = reason;
+            $.reason = reason;
             return this;
         }
-        public Builder reason(@Nullable String reason) {
-            this.reason = Codegen.ofNullable(reason);
-            return this;
+
+        public Builder reason(String reason) {
+            return reason(Output.of(reason));
         }
+
         public Builder signal(@Nullable Output<Integer> signal) {
-            this.signal = signal;
+            $.signal = signal;
             return this;
         }
-        public Builder signal(@Nullable Integer signal) {
-            this.signal = Codegen.ofNullable(signal);
-            return this;
+
+        public Builder signal(Integer signal) {
+            return signal(Output.of(signal));
         }
+
         public Builder startedAt(@Nullable Output<String> startedAt) {
-            this.startedAt = startedAt;
+            $.startedAt = startedAt;
             return this;
         }
-        public Builder startedAt(@Nullable String startedAt) {
-            this.startedAt = Codegen.ofNullable(startedAt);
-            return this;
-        }        public ContainerStateTerminatedArgs build() {
-            return new ContainerStateTerminatedArgs(containerID, exitCode, finishedAt, message, reason, signal, startedAt);
+
+        public Builder startedAt(String startedAt) {
+            return startedAt(Output.of(startedAt));
+        }
+
+        public ContainerStateTerminatedArgs build() {
+            $.exitCode = Objects.requireNonNull($.exitCode, "expected parameter 'exitCode' to be non-null");
+            return $;
         }
     }
+
 }

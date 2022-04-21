@@ -5,9 +5,9 @@ package com.pulumi.awsnative.iotwireless.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,7 +20,7 @@ public final class FuotaTaskLoRaWANArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="rfRegion", required=true)
-      private final Output<String> rfRegion;
+    private Output<String> rfRegion;
 
     public Output<String> rfRegion() {
         return this.rfRegion;
@@ -31,63 +31,59 @@ public final class FuotaTaskLoRaWANArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="startTime")
-      private final @Nullable Output<String> startTime;
+    private @Nullable Output<String> startTime;
 
-    public Output<String> startTime() {
-        return this.startTime == null ? Codegen.empty() : this.startTime;
+    public Optional<Output<String>> startTime() {
+        return Optional.ofNullable(this.startTime);
     }
 
-    public FuotaTaskLoRaWANArgs(
-        Output<String> rfRegion,
-        @Nullable Output<String> startTime) {
-        this.rfRegion = Objects.requireNonNull(rfRegion, "expected parameter 'rfRegion' to be non-null");
-        this.startTime = startTime;
-    }
+    private FuotaTaskLoRaWANArgs() {}
 
-    private FuotaTaskLoRaWANArgs() {
-        this.rfRegion = Codegen.empty();
-        this.startTime = Codegen.empty();
+    private FuotaTaskLoRaWANArgs(FuotaTaskLoRaWANArgs $) {
+        this.rfRegion = $.rfRegion;
+        this.startTime = $.startTime;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FuotaTaskLoRaWANArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> rfRegion;
-        private @Nullable Output<String> startTime;
+        private FuotaTaskLoRaWANArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new FuotaTaskLoRaWANArgs();
         }
 
         public Builder(FuotaTaskLoRaWANArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.rfRegion = defaults.rfRegion;
-    	      this.startTime = defaults.startTime;
+            $ = new FuotaTaskLoRaWANArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder rfRegion(Output<String> rfRegion) {
-            this.rfRegion = Objects.requireNonNull(rfRegion);
+            $.rfRegion = rfRegion;
             return this;
         }
+
         public Builder rfRegion(String rfRegion) {
-            this.rfRegion = Output.of(Objects.requireNonNull(rfRegion));
-            return this;
+            return rfRegion(Output.of(rfRegion));
         }
+
         public Builder startTime(@Nullable Output<String> startTime) {
-            this.startTime = startTime;
+            $.startTime = startTime;
             return this;
         }
-        public Builder startTime(@Nullable String startTime) {
-            this.startTime = Codegen.ofNullable(startTime);
-            return this;
-        }        public FuotaTaskLoRaWANArgs build() {
-            return new FuotaTaskLoRaWANArgs(rfRegion, startTime);
+
+        public Builder startTime(String startTime) {
+            return startTime(Output.of(startTime));
+        }
+
+        public FuotaTaskLoRaWANArgs build() {
+            $.rfRegion = Objects.requireNonNull($.rfRegion, "expected parameter 'rfRegion' to be non-null");
+            return $;
         }
     }
+
 }

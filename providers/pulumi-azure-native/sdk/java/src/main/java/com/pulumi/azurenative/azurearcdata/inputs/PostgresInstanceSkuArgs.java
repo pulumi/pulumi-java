@@ -11,6 +11,7 @@ import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +28,10 @@ public final class PostgresInstanceSkuArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="capacity")
-      private final @Nullable Output<Integer> capacity;
+    private @Nullable Output<Integer> capacity;
 
-    public Output<Integer> capacity() {
-        return this.capacity == null ? Codegen.empty() : this.capacity;
+    public Optional<Output<Integer>> capacity() {
+        return Optional.ofNullable(this.capacity);
     }
 
     /**
@@ -38,10 +39,10 @@ public final class PostgresInstanceSkuArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="dev")
-      private final @Nullable Output<Boolean> dev;
+    private @Nullable Output<Boolean> dev;
 
-    public Output<Boolean> dev() {
-        return this.dev == null ? Codegen.empty() : this.dev;
+    public Optional<Output<Boolean>> dev() {
+        return Optional.ofNullable(this.dev);
     }
 
     /**
@@ -49,10 +50,10 @@ public final class PostgresInstanceSkuArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="family")
-      private final @Nullable Output<String> family;
+    private @Nullable Output<String> family;
 
-    public Output<String> family() {
-        return this.family == null ? Codegen.empty() : this.family;
+    public Optional<Output<String>> family() {
+        return Optional.ofNullable(this.family);
     }
 
     /**
@@ -60,7 +61,7 @@ public final class PostgresInstanceSkuArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="name", required=true)
-      private final Output<String> name;
+    private Output<String> name;
 
     public Output<String> name() {
         return this.name;
@@ -71,10 +72,10 @@ public final class PostgresInstanceSkuArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="size")
-      private final @Nullable Output<String> size;
+    private @Nullable Output<String> size;
 
-    public Output<String> size() {
-        return this.size == null ? Codegen.empty() : this.size;
+    public Optional<Output<String>> size() {
+        return Optional.ofNullable(this.size);
     }
 
     /**
@@ -82,115 +83,101 @@ public final class PostgresInstanceSkuArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="tier")
-      private final @Nullable Output<PostgresInstanceSkuTier> tier;
+    private @Nullable Output<PostgresInstanceSkuTier> tier;
 
-    public Output<PostgresInstanceSkuTier> tier() {
-        return this.tier == null ? Codegen.empty() : this.tier;
+    public Optional<Output<PostgresInstanceSkuTier>> tier() {
+        return Optional.ofNullable(this.tier);
     }
 
-    public PostgresInstanceSkuArgs(
-        @Nullable Output<Integer> capacity,
-        @Nullable Output<Boolean> dev,
-        @Nullable Output<String> family,
-        Output<String> name,
-        @Nullable Output<String> size,
-        @Nullable Output<PostgresInstanceSkuTier> tier) {
-        this.capacity = capacity;
-        this.dev = Codegen.booleanProp("dev").output().arg(dev).def(true).getNullable();
-        this.family = family;
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.size = size;
-        this.tier = Codegen.objectProp("tier", PostgresInstanceSkuTier.class).output().arg(tier).def(PostgresInstanceSkuTier.Hyperscale).getNullable();
-    }
+    private PostgresInstanceSkuArgs() {}
 
-    private PostgresInstanceSkuArgs() {
-        this.capacity = Codegen.empty();
-        this.dev = Codegen.empty();
-        this.family = Codegen.empty();
-        this.name = Codegen.empty();
-        this.size = Codegen.empty();
-        this.tier = Codegen.empty();
+    private PostgresInstanceSkuArgs(PostgresInstanceSkuArgs $) {
+        this.capacity = $.capacity;
+        this.dev = $.dev;
+        this.family = $.family;
+        this.name = $.name;
+        this.size = $.size;
+        this.tier = $.tier;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PostgresInstanceSkuArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> capacity;
-        private @Nullable Output<Boolean> dev;
-        private @Nullable Output<String> family;
-        private Output<String> name;
-        private @Nullable Output<String> size;
-        private @Nullable Output<PostgresInstanceSkuTier> tier;
+        private PostgresInstanceSkuArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PostgresInstanceSkuArgs();
         }
 
         public Builder(PostgresInstanceSkuArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.capacity = defaults.capacity;
-    	      this.dev = defaults.dev;
-    	      this.family = defaults.family;
-    	      this.name = defaults.name;
-    	      this.size = defaults.size;
-    	      this.tier = defaults.tier;
+            $ = new PostgresInstanceSkuArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder capacity(@Nullable Output<Integer> capacity) {
-            this.capacity = capacity;
+            $.capacity = capacity;
             return this;
         }
-        public Builder capacity(@Nullable Integer capacity) {
-            this.capacity = Codegen.ofNullable(capacity);
-            return this;
+
+        public Builder capacity(Integer capacity) {
+            return capacity(Output.of(capacity));
         }
+
         public Builder dev(@Nullable Output<Boolean> dev) {
-            this.dev = dev;
+            $.dev = dev;
             return this;
         }
-        public Builder dev(@Nullable Boolean dev) {
-            this.dev = Codegen.ofNullable(dev);
-            return this;
+
+        public Builder dev(Boolean dev) {
+            return dev(Output.of(dev));
         }
+
         public Builder family(@Nullable Output<String> family) {
-            this.family = family;
+            $.family = family;
             return this;
         }
-        public Builder family(@Nullable String family) {
-            this.family = Codegen.ofNullable(family);
-            return this;
+
+        public Builder family(String family) {
+            return family(Output.of(family));
         }
+
         public Builder name(Output<String> name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Output.of(Objects.requireNonNull(name));
-            return this;
+            return name(Output.of(name));
         }
+
         public Builder size(@Nullable Output<String> size) {
-            this.size = size;
+            $.size = size;
             return this;
         }
-        public Builder size(@Nullable String size) {
-            this.size = Codegen.ofNullable(size);
-            return this;
+
+        public Builder size(String size) {
+            return size(Output.of(size));
         }
+
         public Builder tier(@Nullable Output<PostgresInstanceSkuTier> tier) {
-            this.tier = tier;
+            $.tier = tier;
             return this;
         }
-        public Builder tier(@Nullable PostgresInstanceSkuTier tier) {
-            this.tier = Codegen.ofNullable(tier);
-            return this;
-        }        public PostgresInstanceSkuArgs build() {
-            return new PostgresInstanceSkuArgs(capacity, dev, family, name, size, tier);
+
+        public Builder tier(PostgresInstanceSkuTier tier) {
+            return tier(Output.of(tier));
+        }
+
+        public PostgresInstanceSkuArgs build() {
+            $.dev = Codegen.booleanProp("dev").output().arg($.dev).def(true).getNullable();
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.tier = Codegen.objectProp("tier", PostgresInstanceSkuTier.class).output().arg($.tier).def(PostgresInstanceSkuTier.Hyperscale).getNullable();
+            return $;
         }
     }
+
 }

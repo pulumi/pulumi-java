@@ -5,9 +5,9 @@ package com.pulumi.aws.codebuild.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class ProjectFileSystemLocationArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="identifier")
-      private final @Nullable Output<String> identifier;
+    private @Nullable Output<String> identifier;
 
-    public Output<String> identifier() {
-        return this.identifier == null ? Codegen.empty() : this.identifier;
+    public Optional<Output<String>> identifier() {
+        return Optional.ofNullable(this.identifier);
     }
 
     /**
@@ -31,10 +31,10 @@ public final class ProjectFileSystemLocationArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -42,10 +42,10 @@ public final class ProjectFileSystemLocationArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="mountOptions")
-      private final @Nullable Output<String> mountOptions;
+    private @Nullable Output<String> mountOptions;
 
-    public Output<String> mountOptions() {
-        return this.mountOptions == null ? Codegen.empty() : this.mountOptions;
+    public Optional<Output<String>> mountOptions() {
+        return Optional.ofNullable(this.mountOptions);
     }
 
     /**
@@ -53,10 +53,10 @@ public final class ProjectFileSystemLocationArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="mountPoint")
-      private final @Nullable Output<String> mountPoint;
+    private @Nullable Output<String> mountPoint;
 
-    public Output<String> mountPoint() {
-        return this.mountPoint == null ? Codegen.empty() : this.mountPoint;
+    public Optional<Output<String>> mountPoint() {
+        return Optional.ofNullable(this.mountPoint);
     }
 
     /**
@@ -64,102 +64,88 @@ public final class ProjectFileSystemLocationArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="type")
-      private final @Nullable Output<String> type;
+    private @Nullable Output<String> type;
 
-    public Output<String> type() {
-        return this.type == null ? Codegen.empty() : this.type;
+    public Optional<Output<String>> type() {
+        return Optional.ofNullable(this.type);
     }
 
-    public ProjectFileSystemLocationArgs(
-        @Nullable Output<String> identifier,
-        @Nullable Output<String> location,
-        @Nullable Output<String> mountOptions,
-        @Nullable Output<String> mountPoint,
-        @Nullable Output<String> type) {
-        this.identifier = identifier;
-        this.location = location;
-        this.mountOptions = mountOptions;
-        this.mountPoint = mountPoint;
-        this.type = type;
-    }
+    private ProjectFileSystemLocationArgs() {}
 
-    private ProjectFileSystemLocationArgs() {
-        this.identifier = Codegen.empty();
-        this.location = Codegen.empty();
-        this.mountOptions = Codegen.empty();
-        this.mountPoint = Codegen.empty();
-        this.type = Codegen.empty();
+    private ProjectFileSystemLocationArgs(ProjectFileSystemLocationArgs $) {
+        this.identifier = $.identifier;
+        this.location = $.location;
+        this.mountOptions = $.mountOptions;
+        this.mountPoint = $.mountPoint;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ProjectFileSystemLocationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> identifier;
-        private @Nullable Output<String> location;
-        private @Nullable Output<String> mountOptions;
-        private @Nullable Output<String> mountPoint;
-        private @Nullable Output<String> type;
+        private ProjectFileSystemLocationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ProjectFileSystemLocationArgs();
         }
 
         public Builder(ProjectFileSystemLocationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.identifier = defaults.identifier;
-    	      this.location = defaults.location;
-    	      this.mountOptions = defaults.mountOptions;
-    	      this.mountPoint = defaults.mountPoint;
-    	      this.type = defaults.type;
+            $ = new ProjectFileSystemLocationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder identifier(@Nullable Output<String> identifier) {
-            this.identifier = identifier;
+            $.identifier = identifier;
             return this;
         }
-        public Builder identifier(@Nullable String identifier) {
-            this.identifier = Codegen.ofNullable(identifier);
-            return this;
+
+        public Builder identifier(String identifier) {
+            return identifier(Output.of(identifier));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder mountOptions(@Nullable Output<String> mountOptions) {
-            this.mountOptions = mountOptions;
+            $.mountOptions = mountOptions;
             return this;
         }
-        public Builder mountOptions(@Nullable String mountOptions) {
-            this.mountOptions = Codegen.ofNullable(mountOptions);
-            return this;
+
+        public Builder mountOptions(String mountOptions) {
+            return mountOptions(Output.of(mountOptions));
         }
+
         public Builder mountPoint(@Nullable Output<String> mountPoint) {
-            this.mountPoint = mountPoint;
+            $.mountPoint = mountPoint;
             return this;
         }
-        public Builder mountPoint(@Nullable String mountPoint) {
-            this.mountPoint = Codegen.ofNullable(mountPoint);
-            return this;
+
+        public Builder mountPoint(String mountPoint) {
+            return mountPoint(Output.of(mountPoint));
         }
+
         public Builder type(@Nullable Output<String> type) {
-            this.type = type;
+            $.type = type;
             return this;
         }
-        public Builder type(@Nullable String type) {
-            this.type = Codegen.ofNullable(type);
-            return this;
-        }        public ProjectFileSystemLocationArgs build() {
-            return new ProjectFileSystemLocationArgs(identifier, location, mountOptions, mountPoint, type);
+
+        public Builder type(String type) {
+            return type(Output.of(type));
+        }
+
+        public ProjectFileSystemLocationArgs build() {
+            return $;
         }
     }
+
 }

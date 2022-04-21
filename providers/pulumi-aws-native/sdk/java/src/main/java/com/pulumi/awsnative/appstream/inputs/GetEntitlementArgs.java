@@ -13,62 +13,59 @@ public final class GetEntitlementArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetEntitlementArgs Empty = new GetEntitlementArgs();
 
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
     }
 
     @Import(name="stackName", required=true)
-      private final String stackName;
+    private String stackName;
 
     public String stackName() {
         return this.stackName;
     }
 
-    public GetEntitlementArgs(
-        String name,
-        String stackName) {
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.stackName = Objects.requireNonNull(stackName, "expected parameter 'stackName' to be non-null");
-    }
+    private GetEntitlementArgs() {}
 
-    private GetEntitlementArgs() {
-        this.name = null;
-        this.stackName = null;
+    private GetEntitlementArgs(GetEntitlementArgs $) {
+        this.name = $.name;
+        this.stackName = $.stackName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetEntitlementArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String name;
-        private String stackName;
+        private GetEntitlementArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetEntitlementArgs();
         }
 
         public Builder(GetEntitlementArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.stackName = defaults.stackName;
+            $ = new GetEntitlementArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder stackName(String stackName) {
-            this.stackName = Objects.requireNonNull(stackName);
+            $.stackName = stackName;
             return this;
-        }        public GetEntitlementArgs build() {
-            return new GetEntitlementArgs(name, stackName);
+        }
+
+        public GetEntitlementArgs build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.stackName = Objects.requireNonNull($.stackName, "expected parameter 'stackName' to be non-null");
+            return $;
         }
     }
+
 }

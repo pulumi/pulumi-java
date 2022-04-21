@@ -17,7 +17,7 @@ public final class GetModuleArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="automationAccountName", required=true)
-      private final String automationAccountName;
+    private String automationAccountName;
 
     public String automationAccountName() {
         return this.automationAccountName;
@@ -28,7 +28,7 @@ public final class GetModuleArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="moduleName", required=true)
-      private final String moduleName;
+    private String moduleName;
 
     public String moduleName() {
         return this.moduleName;
@@ -39,64 +39,59 @@ public final class GetModuleArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public GetModuleArgs(
-        String automationAccountName,
-        String moduleName,
-        String resourceGroupName) {
-        this.automationAccountName = Objects.requireNonNull(automationAccountName, "expected parameter 'automationAccountName' to be non-null");
-        this.moduleName = Objects.requireNonNull(moduleName, "expected parameter 'moduleName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private GetModuleArgs() {}
 
-    private GetModuleArgs() {
-        this.automationAccountName = null;
-        this.moduleName = null;
-        this.resourceGroupName = null;
+    private GetModuleArgs(GetModuleArgs $) {
+        this.automationAccountName = $.automationAccountName;
+        this.moduleName = $.moduleName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetModuleArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String automationAccountName;
-        private String moduleName;
-        private String resourceGroupName;
+        private GetModuleArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetModuleArgs();
         }
 
         public Builder(GetModuleArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.automationAccountName = defaults.automationAccountName;
-    	      this.moduleName = defaults.moduleName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new GetModuleArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder automationAccountName(String automationAccountName) {
-            this.automationAccountName = Objects.requireNonNull(automationAccountName);
+            $.automationAccountName = automationAccountName;
             return this;
         }
+
         public Builder moduleName(String moduleName) {
-            this.moduleName = Objects.requireNonNull(moduleName);
+            $.moduleName = moduleName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public GetModuleArgs build() {
-            return new GetModuleArgs(automationAccountName, moduleName, resourceGroupName);
+        }
+
+        public GetModuleArgs build() {
+            $.automationAccountName = Objects.requireNonNull($.automationAccountName, "expected parameter 'automationAccountName' to be non-null");
+            $.moduleName = Objects.requireNonNull($.moduleName, "expected parameter 'moduleName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

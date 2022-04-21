@@ -7,9 +7,9 @@ import com.pulumi.azurenative.cdn.enums.SharedPrivateLinkResourceStatus;
 import com.pulumi.azurenative.cdn.inputs.ResourceReferenceArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class SharedPrivateLinkResourcePropertiesArgs extends com.pulumi.re
      * 
      */
     @Import(name="groupId")
-      private final @Nullable Output<String> groupId;
+    private @Nullable Output<String> groupId;
 
-    public Output<String> groupId() {
-        return this.groupId == null ? Codegen.empty() : this.groupId;
+    public Optional<Output<String>> groupId() {
+        return Optional.ofNullable(this.groupId);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class SharedPrivateLinkResourcePropertiesArgs extends com.pulumi.re
      * 
      */
     @Import(name="privateLink")
-      private final @Nullable Output<ResourceReferenceArgs> privateLink;
+    private @Nullable Output<ResourceReferenceArgs> privateLink;
 
-    public Output<ResourceReferenceArgs> privateLink() {
-        return this.privateLink == null ? Codegen.empty() : this.privateLink;
+    public Optional<Output<ResourceReferenceArgs>> privateLink() {
+        return Optional.ofNullable(this.privateLink);
     }
 
     /**
@@ -48,10 +48,10 @@ public final class SharedPrivateLinkResourcePropertiesArgs extends com.pulumi.re
      * 
      */
     @Import(name="privateLinkLocation")
-      private final @Nullable Output<String> privateLinkLocation;
+    private @Nullable Output<String> privateLinkLocation;
 
-    public Output<String> privateLinkLocation() {
-        return this.privateLinkLocation == null ? Codegen.empty() : this.privateLinkLocation;
+    public Optional<Output<String>> privateLinkLocation() {
+        return Optional.ofNullable(this.privateLinkLocation);
     }
 
     /**
@@ -59,10 +59,10 @@ public final class SharedPrivateLinkResourcePropertiesArgs extends com.pulumi.re
      * 
      */
     @Import(name="requestMessage")
-      private final @Nullable Output<String> requestMessage;
+    private @Nullable Output<String> requestMessage;
 
-    public Output<String> requestMessage() {
-        return this.requestMessage == null ? Codegen.empty() : this.requestMessage;
+    public Optional<Output<String>> requestMessage() {
+        return Optional.ofNullable(this.requestMessage);
     }
 
     /**
@@ -70,102 +70,88 @@ public final class SharedPrivateLinkResourcePropertiesArgs extends com.pulumi.re
      * 
      */
     @Import(name="status")
-      private final @Nullable Output<SharedPrivateLinkResourceStatus> status;
+    private @Nullable Output<SharedPrivateLinkResourceStatus> status;
 
-    public Output<SharedPrivateLinkResourceStatus> status() {
-        return this.status == null ? Codegen.empty() : this.status;
+    public Optional<Output<SharedPrivateLinkResourceStatus>> status() {
+        return Optional.ofNullable(this.status);
     }
 
-    public SharedPrivateLinkResourcePropertiesArgs(
-        @Nullable Output<String> groupId,
-        @Nullable Output<ResourceReferenceArgs> privateLink,
-        @Nullable Output<String> privateLinkLocation,
-        @Nullable Output<String> requestMessage,
-        @Nullable Output<SharedPrivateLinkResourceStatus> status) {
-        this.groupId = groupId;
-        this.privateLink = privateLink;
-        this.privateLinkLocation = privateLinkLocation;
-        this.requestMessage = requestMessage;
-        this.status = status;
-    }
+    private SharedPrivateLinkResourcePropertiesArgs() {}
 
-    private SharedPrivateLinkResourcePropertiesArgs() {
-        this.groupId = Codegen.empty();
-        this.privateLink = Codegen.empty();
-        this.privateLinkLocation = Codegen.empty();
-        this.requestMessage = Codegen.empty();
-        this.status = Codegen.empty();
+    private SharedPrivateLinkResourcePropertiesArgs(SharedPrivateLinkResourcePropertiesArgs $) {
+        this.groupId = $.groupId;
+        this.privateLink = $.privateLink;
+        this.privateLinkLocation = $.privateLinkLocation;
+        this.requestMessage = $.requestMessage;
+        this.status = $.status;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SharedPrivateLinkResourcePropertiesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> groupId;
-        private @Nullable Output<ResourceReferenceArgs> privateLink;
-        private @Nullable Output<String> privateLinkLocation;
-        private @Nullable Output<String> requestMessage;
-        private @Nullable Output<SharedPrivateLinkResourceStatus> status;
+        private SharedPrivateLinkResourcePropertiesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SharedPrivateLinkResourcePropertiesArgs();
         }
 
         public Builder(SharedPrivateLinkResourcePropertiesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.groupId = defaults.groupId;
-    	      this.privateLink = defaults.privateLink;
-    	      this.privateLinkLocation = defaults.privateLinkLocation;
-    	      this.requestMessage = defaults.requestMessage;
-    	      this.status = defaults.status;
+            $ = new SharedPrivateLinkResourcePropertiesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder groupId(@Nullable Output<String> groupId) {
-            this.groupId = groupId;
+            $.groupId = groupId;
             return this;
         }
-        public Builder groupId(@Nullable String groupId) {
-            this.groupId = Codegen.ofNullable(groupId);
-            return this;
+
+        public Builder groupId(String groupId) {
+            return groupId(Output.of(groupId));
         }
+
         public Builder privateLink(@Nullable Output<ResourceReferenceArgs> privateLink) {
-            this.privateLink = privateLink;
+            $.privateLink = privateLink;
             return this;
         }
-        public Builder privateLink(@Nullable ResourceReferenceArgs privateLink) {
-            this.privateLink = Codegen.ofNullable(privateLink);
-            return this;
+
+        public Builder privateLink(ResourceReferenceArgs privateLink) {
+            return privateLink(Output.of(privateLink));
         }
+
         public Builder privateLinkLocation(@Nullable Output<String> privateLinkLocation) {
-            this.privateLinkLocation = privateLinkLocation;
+            $.privateLinkLocation = privateLinkLocation;
             return this;
         }
-        public Builder privateLinkLocation(@Nullable String privateLinkLocation) {
-            this.privateLinkLocation = Codegen.ofNullable(privateLinkLocation);
-            return this;
+
+        public Builder privateLinkLocation(String privateLinkLocation) {
+            return privateLinkLocation(Output.of(privateLinkLocation));
         }
+
         public Builder requestMessage(@Nullable Output<String> requestMessage) {
-            this.requestMessage = requestMessage;
+            $.requestMessage = requestMessage;
             return this;
         }
-        public Builder requestMessage(@Nullable String requestMessage) {
-            this.requestMessage = Codegen.ofNullable(requestMessage);
-            return this;
+
+        public Builder requestMessage(String requestMessage) {
+            return requestMessage(Output.of(requestMessage));
         }
+
         public Builder status(@Nullable Output<SharedPrivateLinkResourceStatus> status) {
-            this.status = status;
+            $.status = status;
             return this;
         }
-        public Builder status(@Nullable SharedPrivateLinkResourceStatus status) {
-            this.status = Codegen.ofNullable(status);
-            return this;
-        }        public SharedPrivateLinkResourcePropertiesArgs build() {
-            return new SharedPrivateLinkResourcePropertiesArgs(groupId, privateLink, privateLinkLocation, requestMessage, status);
+
+        public Builder status(SharedPrivateLinkResourceStatus status) {
+            return status(Output.of(status));
+        }
+
+        public SharedPrivateLinkResourcePropertiesArgs build() {
+            return $;
         }
     }
+
 }

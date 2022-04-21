@@ -7,10 +7,10 @@ import com.pulumi.azurenative.devops.enums.AuthorizationType;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,7 +27,7 @@ public final class AuthorizationArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="authorizationType", required=true)
-      private final Output<Either<String,AuthorizationType>> authorizationType;
+    private Output<Either<String,AuthorizationType>> authorizationType;
 
     public Output<Either<String,AuthorizationType>> authorizationType() {
         return this.authorizationType;
@@ -38,63 +38,59 @@ public final class AuthorizationArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="parameters")
-      private final @Nullable Output<Map<String,String>> parameters;
+    private @Nullable Output<Map<String,String>> parameters;
 
-    public Output<Map<String,String>> parameters() {
-        return this.parameters == null ? Codegen.empty() : this.parameters;
+    public Optional<Output<Map<String,String>>> parameters() {
+        return Optional.ofNullable(this.parameters);
     }
 
-    public AuthorizationArgs(
-        Output<Either<String,AuthorizationType>> authorizationType,
-        @Nullable Output<Map<String,String>> parameters) {
-        this.authorizationType = Objects.requireNonNull(authorizationType, "expected parameter 'authorizationType' to be non-null");
-        this.parameters = parameters;
-    }
+    private AuthorizationArgs() {}
 
-    private AuthorizationArgs() {
-        this.authorizationType = Codegen.empty();
-        this.parameters = Codegen.empty();
+    private AuthorizationArgs(AuthorizationArgs $) {
+        this.authorizationType = $.authorizationType;
+        this.parameters = $.parameters;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AuthorizationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Either<String,AuthorizationType>> authorizationType;
-        private @Nullable Output<Map<String,String>> parameters;
+        private AuthorizationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AuthorizationArgs();
         }
 
         public Builder(AuthorizationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.authorizationType = defaults.authorizationType;
-    	      this.parameters = defaults.parameters;
+            $ = new AuthorizationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder authorizationType(Output<Either<String,AuthorizationType>> authorizationType) {
-            this.authorizationType = Objects.requireNonNull(authorizationType);
+            $.authorizationType = authorizationType;
             return this;
         }
+
         public Builder authorizationType(Either<String,AuthorizationType> authorizationType) {
-            this.authorizationType = Output.of(Objects.requireNonNull(authorizationType));
-            return this;
+            return authorizationType(Output.of(authorizationType));
         }
+
         public Builder parameters(@Nullable Output<Map<String,String>> parameters) {
-            this.parameters = parameters;
+            $.parameters = parameters;
             return this;
         }
-        public Builder parameters(@Nullable Map<String,String> parameters) {
-            this.parameters = Codegen.ofNullable(parameters);
-            return this;
-        }        public AuthorizationArgs build() {
-            return new AuthorizationArgs(authorizationType, parameters);
+
+        public Builder parameters(Map<String,String> parameters) {
+            return parameters(Output.of(parameters));
+        }
+
+        public AuthorizationArgs build() {
+            $.authorizationType = Objects.requireNonNull($.authorizationType, "expected parameter 'authorizationType' to be non-null");
+            return $;
         }
     }
+
 }

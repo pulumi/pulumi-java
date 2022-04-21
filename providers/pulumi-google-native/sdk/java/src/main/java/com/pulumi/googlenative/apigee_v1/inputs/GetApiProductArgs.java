@@ -13,62 +13,59 @@ public final class GetApiProductArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetApiProductArgs Empty = new GetApiProductArgs();
 
     @Import(name="apiproductId", required=true)
-      private final String apiproductId;
+    private String apiproductId;
 
     public String apiproductId() {
         return this.apiproductId;
     }
 
     @Import(name="organizationId", required=true)
-      private final String organizationId;
+    private String organizationId;
 
     public String organizationId() {
         return this.organizationId;
     }
 
-    public GetApiProductArgs(
-        String apiproductId,
-        String organizationId) {
-        this.apiproductId = Objects.requireNonNull(apiproductId, "expected parameter 'apiproductId' to be non-null");
-        this.organizationId = Objects.requireNonNull(organizationId, "expected parameter 'organizationId' to be non-null");
-    }
+    private GetApiProductArgs() {}
 
-    private GetApiProductArgs() {
-        this.apiproductId = null;
-        this.organizationId = null;
+    private GetApiProductArgs(GetApiProductArgs $) {
+        this.apiproductId = $.apiproductId;
+        this.organizationId = $.organizationId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetApiProductArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String apiproductId;
-        private String organizationId;
+        private GetApiProductArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetApiProductArgs();
         }
 
         public Builder(GetApiProductArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.apiproductId = defaults.apiproductId;
-    	      this.organizationId = defaults.organizationId;
+            $ = new GetApiProductArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder apiproductId(String apiproductId) {
-            this.apiproductId = Objects.requireNonNull(apiproductId);
+            $.apiproductId = apiproductId;
             return this;
         }
+
         public Builder organizationId(String organizationId) {
-            this.organizationId = Objects.requireNonNull(organizationId);
+            $.organizationId = organizationId;
             return this;
-        }        public GetApiProductArgs build() {
-            return new GetApiProductArgs(apiproductId, organizationId);
+        }
+
+        public GetApiProductArgs build() {
+            $.apiproductId = Objects.requireNonNull($.apiproductId, "expected parameter 'apiproductId' to be non-null");
+            $.organizationId = Objects.requireNonNull($.organizationId, "expected parameter 'organizationId' to be non-null");
+            return $;
         }
     }
+
 }

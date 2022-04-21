@@ -22,7 +22,7 @@ public final class PipelineConditionResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="pipelineReadyCondition", required=true)
-      private final PipelineReadyConditionResponse pipelineReadyCondition;
+    private PipelineReadyConditionResponse pipelineReadyCondition;
 
     public PipelineReadyConditionResponse pipelineReadyCondition() {
         return this.pipelineReadyCondition;
@@ -33,55 +33,52 @@ public final class PipelineConditionResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="targetsPresentCondition", required=true)
-      private final TargetsPresentConditionResponse targetsPresentCondition;
+    private TargetsPresentConditionResponse targetsPresentCondition;
 
     public TargetsPresentConditionResponse targetsPresentCondition() {
         return this.targetsPresentCondition;
     }
 
-    public PipelineConditionResponse(
-        PipelineReadyConditionResponse pipelineReadyCondition,
-        TargetsPresentConditionResponse targetsPresentCondition) {
-        this.pipelineReadyCondition = Objects.requireNonNull(pipelineReadyCondition, "expected parameter 'pipelineReadyCondition' to be non-null");
-        this.targetsPresentCondition = Objects.requireNonNull(targetsPresentCondition, "expected parameter 'targetsPresentCondition' to be non-null");
-    }
+    private PipelineConditionResponse() {}
 
-    private PipelineConditionResponse() {
-        this.pipelineReadyCondition = null;
-        this.targetsPresentCondition = null;
+    private PipelineConditionResponse(PipelineConditionResponse $) {
+        this.pipelineReadyCondition = $.pipelineReadyCondition;
+        this.targetsPresentCondition = $.targetsPresentCondition;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PipelineConditionResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private PipelineReadyConditionResponse pipelineReadyCondition;
-        private TargetsPresentConditionResponse targetsPresentCondition;
+        private PipelineConditionResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new PipelineConditionResponse();
         }
 
         public Builder(PipelineConditionResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.pipelineReadyCondition = defaults.pipelineReadyCondition;
-    	      this.targetsPresentCondition = defaults.targetsPresentCondition;
+            $ = new PipelineConditionResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder pipelineReadyCondition(PipelineReadyConditionResponse pipelineReadyCondition) {
-            this.pipelineReadyCondition = Objects.requireNonNull(pipelineReadyCondition);
+            $.pipelineReadyCondition = pipelineReadyCondition;
             return this;
         }
+
         public Builder targetsPresentCondition(TargetsPresentConditionResponse targetsPresentCondition) {
-            this.targetsPresentCondition = Objects.requireNonNull(targetsPresentCondition);
+            $.targetsPresentCondition = targetsPresentCondition;
             return this;
-        }        public PipelineConditionResponse build() {
-            return new PipelineConditionResponse(pipelineReadyCondition, targetsPresentCondition);
+        }
+
+        public PipelineConditionResponse build() {
+            $.pipelineReadyCondition = Objects.requireNonNull($.pipelineReadyCondition, "expected parameter 'pipelineReadyCondition' to be non-null");
+            $.targetsPresentCondition = Objects.requireNonNull($.targetsPresentCondition, "expected parameter 'targetsPresentCondition' to be non-null");
+            return $;
         }
     }
+
 }

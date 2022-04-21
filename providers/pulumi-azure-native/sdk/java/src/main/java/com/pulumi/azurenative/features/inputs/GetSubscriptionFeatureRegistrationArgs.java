@@ -17,7 +17,7 @@ public final class GetSubscriptionFeatureRegistrationArgs extends com.pulumi.res
      * 
      */
     @Import(name="featureName", required=true)
-      private final String featureName;
+    private String featureName;
 
     public String featureName() {
         return this.featureName;
@@ -28,55 +28,52 @@ public final class GetSubscriptionFeatureRegistrationArgs extends com.pulumi.res
      * 
      */
     @Import(name="providerNamespace", required=true)
-      private final String providerNamespace;
+    private String providerNamespace;
 
     public String providerNamespace() {
         return this.providerNamespace;
     }
 
-    public GetSubscriptionFeatureRegistrationArgs(
-        String featureName,
-        String providerNamespace) {
-        this.featureName = Objects.requireNonNull(featureName, "expected parameter 'featureName' to be non-null");
-        this.providerNamespace = Objects.requireNonNull(providerNamespace, "expected parameter 'providerNamespace' to be non-null");
-    }
+    private GetSubscriptionFeatureRegistrationArgs() {}
 
-    private GetSubscriptionFeatureRegistrationArgs() {
-        this.featureName = null;
-        this.providerNamespace = null;
+    private GetSubscriptionFeatureRegistrationArgs(GetSubscriptionFeatureRegistrationArgs $) {
+        this.featureName = $.featureName;
+        this.providerNamespace = $.providerNamespace;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetSubscriptionFeatureRegistrationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String featureName;
-        private String providerNamespace;
+        private GetSubscriptionFeatureRegistrationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetSubscriptionFeatureRegistrationArgs();
         }
 
         public Builder(GetSubscriptionFeatureRegistrationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.featureName = defaults.featureName;
-    	      this.providerNamespace = defaults.providerNamespace;
+            $ = new GetSubscriptionFeatureRegistrationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder featureName(String featureName) {
-            this.featureName = Objects.requireNonNull(featureName);
+            $.featureName = featureName;
             return this;
         }
+
         public Builder providerNamespace(String providerNamespace) {
-            this.providerNamespace = Objects.requireNonNull(providerNamespace);
+            $.providerNamespace = providerNamespace;
             return this;
-        }        public GetSubscriptionFeatureRegistrationArgs build() {
-            return new GetSubscriptionFeatureRegistrationArgs(featureName, providerNamespace);
+        }
+
+        public GetSubscriptionFeatureRegistrationArgs build() {
+            $.featureName = Objects.requireNonNull($.featureName, "expected parameter 'featureName' to be non-null");
+            $.providerNamespace = Objects.requireNonNull($.providerNamespace, "expected parameter 'providerNamespace' to be non-null");
+            return $;
         }
     }
+
 }

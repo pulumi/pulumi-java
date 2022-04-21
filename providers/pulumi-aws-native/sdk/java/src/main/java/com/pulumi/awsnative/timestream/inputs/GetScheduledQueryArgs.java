@@ -13,45 +13,45 @@ public final class GetScheduledQueryArgs extends com.pulumi.resources.InvokeArgs
     public static final GetScheduledQueryArgs Empty = new GetScheduledQueryArgs();
 
     @Import(name="arn", required=true)
-      private final String arn;
+    private String arn;
 
     public String arn() {
         return this.arn;
     }
 
-    public GetScheduledQueryArgs(String arn) {
-        this.arn = Objects.requireNonNull(arn, "expected parameter 'arn' to be non-null");
-    }
+    private GetScheduledQueryArgs() {}
 
-    private GetScheduledQueryArgs() {
-        this.arn = null;
+    private GetScheduledQueryArgs(GetScheduledQueryArgs $) {
+        this.arn = $.arn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetScheduledQueryArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String arn;
+        private GetScheduledQueryArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetScheduledQueryArgs();
         }
 
         public Builder(GetScheduledQueryArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.arn = defaults.arn;
+            $ = new GetScheduledQueryArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder arn(String arn) {
-            this.arn = Objects.requireNonNull(arn);
+            $.arn = arn;
             return this;
-        }        public GetScheduledQueryArgs build() {
-            return new GetScheduledQueryArgs(arn);
+        }
+
+        public GetScheduledQueryArgs build() {
+            $.arn = Objects.requireNonNull($.arn, "expected parameter 'arn' to be non-null");
+            return $;
         }
     }
+
 }

@@ -8,11 +8,11 @@ import com.pulumi.azurenative.compute.inputs.VaultSecretGroupArgs;
 import com.pulumi.azurenative.compute.inputs.WindowsConfigurationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -29,10 +29,10 @@ public final class OSProfileArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="adminPassword")
-      private final @Nullable Output<String> adminPassword;
+    private @Nullable Output<String> adminPassword;
 
-    public Output<String> adminPassword() {
-        return this.adminPassword == null ? Codegen.empty() : this.adminPassword;
+    public Optional<Output<String>> adminPassword() {
+        return Optional.ofNullable(this.adminPassword);
     }
 
     /**
@@ -40,10 +40,10 @@ public final class OSProfileArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="adminUsername")
-      private final @Nullable Output<String> adminUsername;
+    private @Nullable Output<String> adminUsername;
 
-    public Output<String> adminUsername() {
-        return this.adminUsername == null ? Codegen.empty() : this.adminUsername;
+    public Optional<Output<String>> adminUsername() {
+        return Optional.ofNullable(this.adminUsername);
     }
 
     /**
@@ -51,10 +51,10 @@ public final class OSProfileArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="allowExtensionOperations")
-      private final @Nullable Output<Boolean> allowExtensionOperations;
+    private @Nullable Output<Boolean> allowExtensionOperations;
 
-    public Output<Boolean> allowExtensionOperations() {
-        return this.allowExtensionOperations == null ? Codegen.empty() : this.allowExtensionOperations;
+    public Optional<Output<Boolean>> allowExtensionOperations() {
+        return Optional.ofNullable(this.allowExtensionOperations);
     }
 
     /**
@@ -62,10 +62,10 @@ public final class OSProfileArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="computerName")
-      private final @Nullable Output<String> computerName;
+    private @Nullable Output<String> computerName;
 
-    public Output<String> computerName() {
-        return this.computerName == null ? Codegen.empty() : this.computerName;
+    public Optional<Output<String>> computerName() {
+        return Optional.ofNullable(this.computerName);
     }
 
     /**
@@ -73,10 +73,10 @@ public final class OSProfileArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="customData")
-      private final @Nullable Output<String> customData;
+    private @Nullable Output<String> customData;
 
-    public Output<String> customData() {
-        return this.customData == null ? Codegen.empty() : this.customData;
+    public Optional<Output<String>> customData() {
+        return Optional.ofNullable(this.customData);
     }
 
     /**
@@ -84,10 +84,10 @@ public final class OSProfileArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="linuxConfiguration")
-      private final @Nullable Output<LinuxConfigurationArgs> linuxConfiguration;
+    private @Nullable Output<LinuxConfigurationArgs> linuxConfiguration;
 
-    public Output<LinuxConfigurationArgs> linuxConfiguration() {
-        return this.linuxConfiguration == null ? Codegen.empty() : this.linuxConfiguration;
+    public Optional<Output<LinuxConfigurationArgs>> linuxConfiguration() {
+        return Optional.ofNullable(this.linuxConfiguration);
     }
 
     /**
@@ -95,10 +95,10 @@ public final class OSProfileArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="requireGuestProvisionSignal")
-      private final @Nullable Output<Boolean> requireGuestProvisionSignal;
+    private @Nullable Output<Boolean> requireGuestProvisionSignal;
 
-    public Output<Boolean> requireGuestProvisionSignal() {
-        return this.requireGuestProvisionSignal == null ? Codegen.empty() : this.requireGuestProvisionSignal;
+    public Optional<Output<Boolean>> requireGuestProvisionSignal() {
+        return Optional.ofNullable(this.requireGuestProvisionSignal);
     }
 
     /**
@@ -106,10 +106,10 @@ public final class OSProfileArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="secrets")
-      private final @Nullable Output<List<VaultSecretGroupArgs>> secrets;
+    private @Nullable Output<List<VaultSecretGroupArgs>> secrets;
 
-    public Output<List<VaultSecretGroupArgs>> secrets() {
-        return this.secrets == null ? Codegen.empty() : this.secrets;
+    public Optional<Output<List<VaultSecretGroupArgs>>> secrets() {
+        return Optional.ofNullable(this.secrets);
     }
 
     /**
@@ -117,157 +117,132 @@ public final class OSProfileArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="windowsConfiguration")
-      private final @Nullable Output<WindowsConfigurationArgs> windowsConfiguration;
+    private @Nullable Output<WindowsConfigurationArgs> windowsConfiguration;
 
-    public Output<WindowsConfigurationArgs> windowsConfiguration() {
-        return this.windowsConfiguration == null ? Codegen.empty() : this.windowsConfiguration;
+    public Optional<Output<WindowsConfigurationArgs>> windowsConfiguration() {
+        return Optional.ofNullable(this.windowsConfiguration);
     }
 
-    public OSProfileArgs(
-        @Nullable Output<String> adminPassword,
-        @Nullable Output<String> adminUsername,
-        @Nullable Output<Boolean> allowExtensionOperations,
-        @Nullable Output<String> computerName,
-        @Nullable Output<String> customData,
-        @Nullable Output<LinuxConfigurationArgs> linuxConfiguration,
-        @Nullable Output<Boolean> requireGuestProvisionSignal,
-        @Nullable Output<List<VaultSecretGroupArgs>> secrets,
-        @Nullable Output<WindowsConfigurationArgs> windowsConfiguration) {
-        this.adminPassword = adminPassword;
-        this.adminUsername = adminUsername;
-        this.allowExtensionOperations = allowExtensionOperations;
-        this.computerName = computerName;
-        this.customData = customData;
-        this.linuxConfiguration = linuxConfiguration;
-        this.requireGuestProvisionSignal = requireGuestProvisionSignal;
-        this.secrets = secrets;
-        this.windowsConfiguration = windowsConfiguration;
-    }
+    private OSProfileArgs() {}
 
-    private OSProfileArgs() {
-        this.adminPassword = Codegen.empty();
-        this.adminUsername = Codegen.empty();
-        this.allowExtensionOperations = Codegen.empty();
-        this.computerName = Codegen.empty();
-        this.customData = Codegen.empty();
-        this.linuxConfiguration = Codegen.empty();
-        this.requireGuestProvisionSignal = Codegen.empty();
-        this.secrets = Codegen.empty();
-        this.windowsConfiguration = Codegen.empty();
+    private OSProfileArgs(OSProfileArgs $) {
+        this.adminPassword = $.adminPassword;
+        this.adminUsername = $.adminUsername;
+        this.allowExtensionOperations = $.allowExtensionOperations;
+        this.computerName = $.computerName;
+        this.customData = $.customData;
+        this.linuxConfiguration = $.linuxConfiguration;
+        this.requireGuestProvisionSignal = $.requireGuestProvisionSignal;
+        this.secrets = $.secrets;
+        this.windowsConfiguration = $.windowsConfiguration;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(OSProfileArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> adminPassword;
-        private @Nullable Output<String> adminUsername;
-        private @Nullable Output<Boolean> allowExtensionOperations;
-        private @Nullable Output<String> computerName;
-        private @Nullable Output<String> customData;
-        private @Nullable Output<LinuxConfigurationArgs> linuxConfiguration;
-        private @Nullable Output<Boolean> requireGuestProvisionSignal;
-        private @Nullable Output<List<VaultSecretGroupArgs>> secrets;
-        private @Nullable Output<WindowsConfigurationArgs> windowsConfiguration;
+        private OSProfileArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new OSProfileArgs();
         }
 
         public Builder(OSProfileArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.adminPassword = defaults.adminPassword;
-    	      this.adminUsername = defaults.adminUsername;
-    	      this.allowExtensionOperations = defaults.allowExtensionOperations;
-    	      this.computerName = defaults.computerName;
-    	      this.customData = defaults.customData;
-    	      this.linuxConfiguration = defaults.linuxConfiguration;
-    	      this.requireGuestProvisionSignal = defaults.requireGuestProvisionSignal;
-    	      this.secrets = defaults.secrets;
-    	      this.windowsConfiguration = defaults.windowsConfiguration;
+            $ = new OSProfileArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder adminPassword(@Nullable Output<String> adminPassword) {
-            this.adminPassword = adminPassword;
+            $.adminPassword = adminPassword;
             return this;
         }
-        public Builder adminPassword(@Nullable String adminPassword) {
-            this.adminPassword = Codegen.ofNullable(adminPassword);
-            return this;
+
+        public Builder adminPassword(String adminPassword) {
+            return adminPassword(Output.of(adminPassword));
         }
+
         public Builder adminUsername(@Nullable Output<String> adminUsername) {
-            this.adminUsername = adminUsername;
+            $.adminUsername = adminUsername;
             return this;
         }
-        public Builder adminUsername(@Nullable String adminUsername) {
-            this.adminUsername = Codegen.ofNullable(adminUsername);
-            return this;
+
+        public Builder adminUsername(String adminUsername) {
+            return adminUsername(Output.of(adminUsername));
         }
+
         public Builder allowExtensionOperations(@Nullable Output<Boolean> allowExtensionOperations) {
-            this.allowExtensionOperations = allowExtensionOperations;
+            $.allowExtensionOperations = allowExtensionOperations;
             return this;
         }
-        public Builder allowExtensionOperations(@Nullable Boolean allowExtensionOperations) {
-            this.allowExtensionOperations = Codegen.ofNullable(allowExtensionOperations);
-            return this;
+
+        public Builder allowExtensionOperations(Boolean allowExtensionOperations) {
+            return allowExtensionOperations(Output.of(allowExtensionOperations));
         }
+
         public Builder computerName(@Nullable Output<String> computerName) {
-            this.computerName = computerName;
+            $.computerName = computerName;
             return this;
         }
-        public Builder computerName(@Nullable String computerName) {
-            this.computerName = Codegen.ofNullable(computerName);
-            return this;
+
+        public Builder computerName(String computerName) {
+            return computerName(Output.of(computerName));
         }
+
         public Builder customData(@Nullable Output<String> customData) {
-            this.customData = customData;
+            $.customData = customData;
             return this;
         }
-        public Builder customData(@Nullable String customData) {
-            this.customData = Codegen.ofNullable(customData);
-            return this;
+
+        public Builder customData(String customData) {
+            return customData(Output.of(customData));
         }
+
         public Builder linuxConfiguration(@Nullable Output<LinuxConfigurationArgs> linuxConfiguration) {
-            this.linuxConfiguration = linuxConfiguration;
+            $.linuxConfiguration = linuxConfiguration;
             return this;
         }
-        public Builder linuxConfiguration(@Nullable LinuxConfigurationArgs linuxConfiguration) {
-            this.linuxConfiguration = Codegen.ofNullable(linuxConfiguration);
-            return this;
+
+        public Builder linuxConfiguration(LinuxConfigurationArgs linuxConfiguration) {
+            return linuxConfiguration(Output.of(linuxConfiguration));
         }
+
         public Builder requireGuestProvisionSignal(@Nullable Output<Boolean> requireGuestProvisionSignal) {
-            this.requireGuestProvisionSignal = requireGuestProvisionSignal;
+            $.requireGuestProvisionSignal = requireGuestProvisionSignal;
             return this;
         }
-        public Builder requireGuestProvisionSignal(@Nullable Boolean requireGuestProvisionSignal) {
-            this.requireGuestProvisionSignal = Codegen.ofNullable(requireGuestProvisionSignal);
-            return this;
+
+        public Builder requireGuestProvisionSignal(Boolean requireGuestProvisionSignal) {
+            return requireGuestProvisionSignal(Output.of(requireGuestProvisionSignal));
         }
+
         public Builder secrets(@Nullable Output<List<VaultSecretGroupArgs>> secrets) {
-            this.secrets = secrets;
+            $.secrets = secrets;
             return this;
         }
-        public Builder secrets(@Nullable List<VaultSecretGroupArgs> secrets) {
-            this.secrets = Codegen.ofNullable(secrets);
-            return this;
+
+        public Builder secrets(List<VaultSecretGroupArgs> secrets) {
+            return secrets(Output.of(secrets));
         }
+
         public Builder secrets(VaultSecretGroupArgs... secrets) {
             return secrets(List.of(secrets));
         }
+
         public Builder windowsConfiguration(@Nullable Output<WindowsConfigurationArgs> windowsConfiguration) {
-            this.windowsConfiguration = windowsConfiguration;
+            $.windowsConfiguration = windowsConfiguration;
             return this;
         }
-        public Builder windowsConfiguration(@Nullable WindowsConfigurationArgs windowsConfiguration) {
-            this.windowsConfiguration = Codegen.ofNullable(windowsConfiguration);
-            return this;
-        }        public OSProfileArgs build() {
-            return new OSProfileArgs(adminPassword, adminUsername, allowExtensionOperations, computerName, customData, linuxConfiguration, requireGuestProvisionSignal, secrets, windowsConfiguration);
+
+        public Builder windowsConfiguration(WindowsConfigurationArgs windowsConfiguration) {
+            return windowsConfiguration(Output.of(windowsConfiguration));
+        }
+
+        public OSProfileArgs build() {
+            return $;
         }
     }
+
 }

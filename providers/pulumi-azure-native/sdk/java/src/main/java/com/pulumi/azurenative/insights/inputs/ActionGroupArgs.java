@@ -5,10 +5,10 @@ package com.pulumi.azurenative.insights.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,7 +25,7 @@ public final class ActionGroupArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="actionGroupId", required=true)
-      private final Output<String> actionGroupId;
+    private Output<String> actionGroupId;
 
     public Output<String> actionGroupId() {
         return this.actionGroupId;
@@ -36,63 +36,59 @@ public final class ActionGroupArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="webhookProperties")
-      private final @Nullable Output<Map<String,String>> webhookProperties;
+    private @Nullable Output<Map<String,String>> webhookProperties;
 
-    public Output<Map<String,String>> webhookProperties() {
-        return this.webhookProperties == null ? Codegen.empty() : this.webhookProperties;
+    public Optional<Output<Map<String,String>>> webhookProperties() {
+        return Optional.ofNullable(this.webhookProperties);
     }
 
-    public ActionGroupArgs(
-        Output<String> actionGroupId,
-        @Nullable Output<Map<String,String>> webhookProperties) {
-        this.actionGroupId = Objects.requireNonNull(actionGroupId, "expected parameter 'actionGroupId' to be non-null");
-        this.webhookProperties = webhookProperties;
-    }
+    private ActionGroupArgs() {}
 
-    private ActionGroupArgs() {
-        this.actionGroupId = Codegen.empty();
-        this.webhookProperties = Codegen.empty();
+    private ActionGroupArgs(ActionGroupArgs $) {
+        this.actionGroupId = $.actionGroupId;
+        this.webhookProperties = $.webhookProperties;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ActionGroupArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> actionGroupId;
-        private @Nullable Output<Map<String,String>> webhookProperties;
+        private ActionGroupArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ActionGroupArgs();
         }
 
         public Builder(ActionGroupArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.actionGroupId = defaults.actionGroupId;
-    	      this.webhookProperties = defaults.webhookProperties;
+            $ = new ActionGroupArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder actionGroupId(Output<String> actionGroupId) {
-            this.actionGroupId = Objects.requireNonNull(actionGroupId);
+            $.actionGroupId = actionGroupId;
             return this;
         }
+
         public Builder actionGroupId(String actionGroupId) {
-            this.actionGroupId = Output.of(Objects.requireNonNull(actionGroupId));
-            return this;
+            return actionGroupId(Output.of(actionGroupId));
         }
+
         public Builder webhookProperties(@Nullable Output<Map<String,String>> webhookProperties) {
-            this.webhookProperties = webhookProperties;
+            $.webhookProperties = webhookProperties;
             return this;
         }
-        public Builder webhookProperties(@Nullable Map<String,String> webhookProperties) {
-            this.webhookProperties = Codegen.ofNullable(webhookProperties);
-            return this;
-        }        public ActionGroupArgs build() {
-            return new ActionGroupArgs(actionGroupId, webhookProperties);
+
+        public Builder webhookProperties(Map<String,String> webhookProperties) {
+            return webhookProperties(Output.of(webhookProperties));
+        }
+
+        public ActionGroupArgs build() {
+            $.actionGroupId = Objects.requireNonNull($.actionGroupId, "expected parameter 'actionGroupId' to be non-null");
+            return $;
         }
     }
+
 }

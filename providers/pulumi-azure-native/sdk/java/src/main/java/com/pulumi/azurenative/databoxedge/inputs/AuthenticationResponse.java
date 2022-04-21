@@ -23,45 +23,44 @@ public final class AuthenticationResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="symmetricKey")
-      private final @Nullable SymmetricKeyResponse symmetricKey;
+    private @Nullable SymmetricKeyResponse symmetricKey;
 
     public Optional<SymmetricKeyResponse> symmetricKey() {
-        return this.symmetricKey == null ? Optional.empty() : Optional.ofNullable(this.symmetricKey);
+        return Optional.ofNullable(this.symmetricKey);
     }
 
-    public AuthenticationResponse(@Nullable SymmetricKeyResponse symmetricKey) {
-        this.symmetricKey = symmetricKey;
-    }
+    private AuthenticationResponse() {}
 
-    private AuthenticationResponse() {
-        this.symmetricKey = null;
+    private AuthenticationResponse(AuthenticationResponse $) {
+        this.symmetricKey = $.symmetricKey;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AuthenticationResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable SymmetricKeyResponse symmetricKey;
+        private AuthenticationResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AuthenticationResponse();
         }
 
         public Builder(AuthenticationResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.symmetricKey = defaults.symmetricKey;
+            $ = new AuthenticationResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder symmetricKey(@Nullable SymmetricKeyResponse symmetricKey) {
-            this.symmetricKey = symmetricKey;
+            $.symmetricKey = symmetricKey;
             return this;
-        }        public AuthenticationResponse build() {
-            return new AuthenticationResponse(symmetricKey);
+        }
+
+        public AuthenticationResponse build() {
+            return $;
         }
     }
+
 }

@@ -8,9 +8,9 @@ import com.pulumi.azurenative.storage.inputs.DeleteRetentionPolicyArgs;
 import com.pulumi.azurenative.storage.inputs.ProtocolSettingsArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,7 +23,7 @@ public final class FileServicePropertiesArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="accountName", required=true)
-      private final Output<String> accountName;
+    private Output<String> accountName;
 
     public Output<String> accountName() {
         return this.accountName;
@@ -34,10 +34,10 @@ public final class FileServicePropertiesArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="cors")
-      private final @Nullable Output<CorsRulesArgs> cors;
+    private @Nullable Output<CorsRulesArgs> cors;
 
-    public Output<CorsRulesArgs> cors() {
-        return this.cors == null ? Codegen.empty() : this.cors;
+    public Optional<Output<CorsRulesArgs>> cors() {
+        return Optional.ofNullable(this.cors);
     }
 
     /**
@@ -45,10 +45,10 @@ public final class FileServicePropertiesArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="fileServicesName")
-      private final @Nullable Output<String> fileServicesName;
+    private @Nullable Output<String> fileServicesName;
 
-    public Output<String> fileServicesName() {
-        return this.fileServicesName == null ? Codegen.empty() : this.fileServicesName;
+    public Optional<Output<String>> fileServicesName() {
+        return Optional.ofNullable(this.fileServicesName);
     }
 
     /**
@@ -56,10 +56,10 @@ public final class FileServicePropertiesArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="protocolSettings")
-      private final @Nullable Output<ProtocolSettingsArgs> protocolSettings;
+    private @Nullable Output<ProtocolSettingsArgs> protocolSettings;
 
-    public Output<ProtocolSettingsArgs> protocolSettings() {
-        return this.protocolSettings == null ? Codegen.empty() : this.protocolSettings;
+    public Optional<Output<ProtocolSettingsArgs>> protocolSettings() {
+        return Optional.ofNullable(this.protocolSettings);
     }
 
     /**
@@ -67,7 +67,7 @@ public final class FileServicePropertiesArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -78,115 +78,100 @@ public final class FileServicePropertiesArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="shareDeleteRetentionPolicy")
-      private final @Nullable Output<DeleteRetentionPolicyArgs> shareDeleteRetentionPolicy;
+    private @Nullable Output<DeleteRetentionPolicyArgs> shareDeleteRetentionPolicy;
 
-    public Output<DeleteRetentionPolicyArgs> shareDeleteRetentionPolicy() {
-        return this.shareDeleteRetentionPolicy == null ? Codegen.empty() : this.shareDeleteRetentionPolicy;
+    public Optional<Output<DeleteRetentionPolicyArgs>> shareDeleteRetentionPolicy() {
+        return Optional.ofNullable(this.shareDeleteRetentionPolicy);
     }
 
-    public FileServicePropertiesArgs(
-        Output<String> accountName,
-        @Nullable Output<CorsRulesArgs> cors,
-        @Nullable Output<String> fileServicesName,
-        @Nullable Output<ProtocolSettingsArgs> protocolSettings,
-        Output<String> resourceGroupName,
-        @Nullable Output<DeleteRetentionPolicyArgs> shareDeleteRetentionPolicy) {
-        this.accountName = Objects.requireNonNull(accountName, "expected parameter 'accountName' to be non-null");
-        this.cors = cors;
-        this.fileServicesName = fileServicesName;
-        this.protocolSettings = protocolSettings;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.shareDeleteRetentionPolicy = shareDeleteRetentionPolicy;
-    }
+    private FileServicePropertiesArgs() {}
 
-    private FileServicePropertiesArgs() {
-        this.accountName = Codegen.empty();
-        this.cors = Codegen.empty();
-        this.fileServicesName = Codegen.empty();
-        this.protocolSettings = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.shareDeleteRetentionPolicy = Codegen.empty();
+    private FileServicePropertiesArgs(FileServicePropertiesArgs $) {
+        this.accountName = $.accountName;
+        this.cors = $.cors;
+        this.fileServicesName = $.fileServicesName;
+        this.protocolSettings = $.protocolSettings;
+        this.resourceGroupName = $.resourceGroupName;
+        this.shareDeleteRetentionPolicy = $.shareDeleteRetentionPolicy;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FileServicePropertiesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> accountName;
-        private @Nullable Output<CorsRulesArgs> cors;
-        private @Nullable Output<String> fileServicesName;
-        private @Nullable Output<ProtocolSettingsArgs> protocolSettings;
-        private Output<String> resourceGroupName;
-        private @Nullable Output<DeleteRetentionPolicyArgs> shareDeleteRetentionPolicy;
+        private FileServicePropertiesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new FileServicePropertiesArgs();
         }
 
         public Builder(FileServicePropertiesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accountName = defaults.accountName;
-    	      this.cors = defaults.cors;
-    	      this.fileServicesName = defaults.fileServicesName;
-    	      this.protocolSettings = defaults.protocolSettings;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.shareDeleteRetentionPolicy = defaults.shareDeleteRetentionPolicy;
+            $ = new FileServicePropertiesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder accountName(Output<String> accountName) {
-            this.accountName = Objects.requireNonNull(accountName);
+            $.accountName = accountName;
             return this;
         }
+
         public Builder accountName(String accountName) {
-            this.accountName = Output.of(Objects.requireNonNull(accountName));
-            return this;
+            return accountName(Output.of(accountName));
         }
+
         public Builder cors(@Nullable Output<CorsRulesArgs> cors) {
-            this.cors = cors;
+            $.cors = cors;
             return this;
         }
-        public Builder cors(@Nullable CorsRulesArgs cors) {
-            this.cors = Codegen.ofNullable(cors);
-            return this;
+
+        public Builder cors(CorsRulesArgs cors) {
+            return cors(Output.of(cors));
         }
+
         public Builder fileServicesName(@Nullable Output<String> fileServicesName) {
-            this.fileServicesName = fileServicesName;
+            $.fileServicesName = fileServicesName;
             return this;
         }
-        public Builder fileServicesName(@Nullable String fileServicesName) {
-            this.fileServicesName = Codegen.ofNullable(fileServicesName);
-            return this;
+
+        public Builder fileServicesName(String fileServicesName) {
+            return fileServicesName(Output.of(fileServicesName));
         }
+
         public Builder protocolSettings(@Nullable Output<ProtocolSettingsArgs> protocolSettings) {
-            this.protocolSettings = protocolSettings;
+            $.protocolSettings = protocolSettings;
             return this;
         }
-        public Builder protocolSettings(@Nullable ProtocolSettingsArgs protocolSettings) {
-            this.protocolSettings = Codegen.ofNullable(protocolSettings);
-            return this;
+
+        public Builder protocolSettings(ProtocolSettingsArgs protocolSettings) {
+            return protocolSettings(Output.of(protocolSettings));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder shareDeleteRetentionPolicy(@Nullable Output<DeleteRetentionPolicyArgs> shareDeleteRetentionPolicy) {
-            this.shareDeleteRetentionPolicy = shareDeleteRetentionPolicy;
+            $.shareDeleteRetentionPolicy = shareDeleteRetentionPolicy;
             return this;
         }
-        public Builder shareDeleteRetentionPolicy(@Nullable DeleteRetentionPolicyArgs shareDeleteRetentionPolicy) {
-            this.shareDeleteRetentionPolicy = Codegen.ofNullable(shareDeleteRetentionPolicy);
-            return this;
-        }        public FileServicePropertiesArgs build() {
-            return new FileServicePropertiesArgs(accountName, cors, fileServicesName, protocolSettings, resourceGroupName, shareDeleteRetentionPolicy);
+
+        public Builder shareDeleteRetentionPolicy(DeleteRetentionPolicyArgs shareDeleteRetentionPolicy) {
+            return shareDeleteRetentionPolicy(Output.of(shareDeleteRetentionPolicy));
+        }
+
+        public FileServicePropertiesArgs build() {
+            $.accountName = Objects.requireNonNull($.accountName, "expected parameter 'accountName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

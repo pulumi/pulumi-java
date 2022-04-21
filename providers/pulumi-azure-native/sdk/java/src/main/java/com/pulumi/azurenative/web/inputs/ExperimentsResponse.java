@@ -24,48 +24,48 @@ public final class ExperimentsResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="rampUpRules")
-      private final @Nullable List<RampUpRuleResponse> rampUpRules;
+    private @Nullable List<RampUpRuleResponse> rampUpRules;
 
-    public List<RampUpRuleResponse> rampUpRules() {
-        return this.rampUpRules == null ? List.of() : this.rampUpRules;
+    public Optional<List<RampUpRuleResponse>> rampUpRules() {
+        return Optional.ofNullable(this.rampUpRules);
     }
 
-    public ExperimentsResponse(@Nullable List<RampUpRuleResponse> rampUpRules) {
-        this.rampUpRules = rampUpRules;
-    }
+    private ExperimentsResponse() {}
 
-    private ExperimentsResponse() {
-        this.rampUpRules = List.of();
+    private ExperimentsResponse(ExperimentsResponse $) {
+        this.rampUpRules = $.rampUpRules;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ExperimentsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<RampUpRuleResponse> rampUpRules;
+        private ExperimentsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ExperimentsResponse();
         }
 
         public Builder(ExperimentsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.rampUpRules = defaults.rampUpRules;
+            $ = new ExperimentsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder rampUpRules(@Nullable List<RampUpRuleResponse> rampUpRules) {
-            this.rampUpRules = rampUpRules;
+            $.rampUpRules = rampUpRules;
             return this;
         }
+
         public Builder rampUpRules(RampUpRuleResponse... rampUpRules) {
             return rampUpRules(List.of(rampUpRules));
-        }        public ExperimentsResponse build() {
-            return new ExperimentsResponse(rampUpRules);
+        }
+
+        public ExperimentsResponse build() {
+            return $;
         }
     }
+
 }

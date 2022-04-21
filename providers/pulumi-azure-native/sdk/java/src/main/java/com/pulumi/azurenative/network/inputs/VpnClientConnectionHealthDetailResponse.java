@@ -22,7 +22,7 @@ public final class VpnClientConnectionHealthDetailResponse extends com.pulumi.re
      * 
      */
     @Import(name="egressBytesTransferred", required=true)
-      private final Double egressBytesTransferred;
+    private Double egressBytesTransferred;
 
     public Double egressBytesTransferred() {
         return this.egressBytesTransferred;
@@ -33,7 +33,7 @@ public final class VpnClientConnectionHealthDetailResponse extends com.pulumi.re
      * 
      */
     @Import(name="egressPacketsTransferred", required=true)
-      private final Double egressPacketsTransferred;
+    private Double egressPacketsTransferred;
 
     public Double egressPacketsTransferred() {
         return this.egressPacketsTransferred;
@@ -44,7 +44,7 @@ public final class VpnClientConnectionHealthDetailResponse extends com.pulumi.re
      * 
      */
     @Import(name="ingressBytesTransferred", required=true)
-      private final Double ingressBytesTransferred;
+    private Double ingressBytesTransferred;
 
     public Double ingressBytesTransferred() {
         return this.ingressBytesTransferred;
@@ -55,7 +55,7 @@ public final class VpnClientConnectionHealthDetailResponse extends com.pulumi.re
      * 
      */
     @Import(name="ingressPacketsTransferred", required=true)
-      private final Double ingressPacketsTransferred;
+    private Double ingressPacketsTransferred;
 
     public Double ingressPacketsTransferred() {
         return this.ingressPacketsTransferred;
@@ -66,7 +66,7 @@ public final class VpnClientConnectionHealthDetailResponse extends com.pulumi.re
      * 
      */
     @Import(name="maxBandwidth", required=true)
-      private final Double maxBandwidth;
+    private Double maxBandwidth;
 
     public Double maxBandwidth() {
         return this.maxBandwidth;
@@ -77,7 +77,7 @@ public final class VpnClientConnectionHealthDetailResponse extends com.pulumi.re
      * 
      */
     @Import(name="maxPacketsPerSecond", required=true)
-      private final Double maxPacketsPerSecond;
+    private Double maxPacketsPerSecond;
 
     public Double maxPacketsPerSecond() {
         return this.maxPacketsPerSecond;
@@ -88,7 +88,7 @@ public final class VpnClientConnectionHealthDetailResponse extends com.pulumi.re
      * 
      */
     @Import(name="privateIpAddress", required=true)
-      private final String privateIpAddress;
+    private String privateIpAddress;
 
     public String privateIpAddress() {
         return this.privateIpAddress;
@@ -99,7 +99,7 @@ public final class VpnClientConnectionHealthDetailResponse extends com.pulumi.re
      * 
      */
     @Import(name="publicIpAddress", required=true)
-      private final String publicIpAddress;
+    private String publicIpAddress;
 
     public String publicIpAddress() {
         return this.publicIpAddress;
@@ -110,7 +110,7 @@ public final class VpnClientConnectionHealthDetailResponse extends com.pulumi.re
      * 
      */
     @Import(name="vpnConnectionDuration", required=true)
-      private final Double vpnConnectionDuration;
+    private Double vpnConnectionDuration;
 
     public Double vpnConnectionDuration() {
         return this.vpnConnectionDuration;
@@ -121,7 +121,7 @@ public final class VpnClientConnectionHealthDetailResponse extends com.pulumi.re
      * 
      */
     @Import(name="vpnConnectionId", required=true)
-      private final String vpnConnectionId;
+    private String vpnConnectionId;
 
     public String vpnConnectionId() {
         return this.vpnConnectionId;
@@ -132,7 +132,7 @@ public final class VpnClientConnectionHealthDetailResponse extends com.pulumi.re
      * 
      */
     @Import(name="vpnConnectionTime", required=true)
-      private final String vpnConnectionTime;
+    private String vpnConnectionTime;
 
     public String vpnConnectionTime() {
         return this.vpnConnectionTime;
@@ -143,145 +143,122 @@ public final class VpnClientConnectionHealthDetailResponse extends com.pulumi.re
      * 
      */
     @Import(name="vpnUserName", required=true)
-      private final String vpnUserName;
+    private String vpnUserName;
 
     public String vpnUserName() {
         return this.vpnUserName;
     }
 
-    public VpnClientConnectionHealthDetailResponse(
-        Double egressBytesTransferred,
-        Double egressPacketsTransferred,
-        Double ingressBytesTransferred,
-        Double ingressPacketsTransferred,
-        Double maxBandwidth,
-        Double maxPacketsPerSecond,
-        String privateIpAddress,
-        String publicIpAddress,
-        Double vpnConnectionDuration,
-        String vpnConnectionId,
-        String vpnConnectionTime,
-        String vpnUserName) {
-        this.egressBytesTransferred = Objects.requireNonNull(egressBytesTransferred, "expected parameter 'egressBytesTransferred' to be non-null");
-        this.egressPacketsTransferred = Objects.requireNonNull(egressPacketsTransferred, "expected parameter 'egressPacketsTransferred' to be non-null");
-        this.ingressBytesTransferred = Objects.requireNonNull(ingressBytesTransferred, "expected parameter 'ingressBytesTransferred' to be non-null");
-        this.ingressPacketsTransferred = Objects.requireNonNull(ingressPacketsTransferred, "expected parameter 'ingressPacketsTransferred' to be non-null");
-        this.maxBandwidth = Objects.requireNonNull(maxBandwidth, "expected parameter 'maxBandwidth' to be non-null");
-        this.maxPacketsPerSecond = Objects.requireNonNull(maxPacketsPerSecond, "expected parameter 'maxPacketsPerSecond' to be non-null");
-        this.privateIpAddress = Objects.requireNonNull(privateIpAddress, "expected parameter 'privateIpAddress' to be non-null");
-        this.publicIpAddress = Objects.requireNonNull(publicIpAddress, "expected parameter 'publicIpAddress' to be non-null");
-        this.vpnConnectionDuration = Objects.requireNonNull(vpnConnectionDuration, "expected parameter 'vpnConnectionDuration' to be non-null");
-        this.vpnConnectionId = Objects.requireNonNull(vpnConnectionId, "expected parameter 'vpnConnectionId' to be non-null");
-        this.vpnConnectionTime = Objects.requireNonNull(vpnConnectionTime, "expected parameter 'vpnConnectionTime' to be non-null");
-        this.vpnUserName = Objects.requireNonNull(vpnUserName, "expected parameter 'vpnUserName' to be non-null");
-    }
+    private VpnClientConnectionHealthDetailResponse() {}
 
-    private VpnClientConnectionHealthDetailResponse() {
-        this.egressBytesTransferred = null;
-        this.egressPacketsTransferred = null;
-        this.ingressBytesTransferred = null;
-        this.ingressPacketsTransferred = null;
-        this.maxBandwidth = null;
-        this.maxPacketsPerSecond = null;
-        this.privateIpAddress = null;
-        this.publicIpAddress = null;
-        this.vpnConnectionDuration = null;
-        this.vpnConnectionId = null;
-        this.vpnConnectionTime = null;
-        this.vpnUserName = null;
+    private VpnClientConnectionHealthDetailResponse(VpnClientConnectionHealthDetailResponse $) {
+        this.egressBytesTransferred = $.egressBytesTransferred;
+        this.egressPacketsTransferred = $.egressPacketsTransferred;
+        this.ingressBytesTransferred = $.ingressBytesTransferred;
+        this.ingressPacketsTransferred = $.ingressPacketsTransferred;
+        this.maxBandwidth = $.maxBandwidth;
+        this.maxPacketsPerSecond = $.maxPacketsPerSecond;
+        this.privateIpAddress = $.privateIpAddress;
+        this.publicIpAddress = $.publicIpAddress;
+        this.vpnConnectionDuration = $.vpnConnectionDuration;
+        this.vpnConnectionId = $.vpnConnectionId;
+        this.vpnConnectionTime = $.vpnConnectionTime;
+        this.vpnUserName = $.vpnUserName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VpnClientConnectionHealthDetailResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Double egressBytesTransferred;
-        private Double egressPacketsTransferred;
-        private Double ingressBytesTransferred;
-        private Double ingressPacketsTransferred;
-        private Double maxBandwidth;
-        private Double maxPacketsPerSecond;
-        private String privateIpAddress;
-        private String publicIpAddress;
-        private Double vpnConnectionDuration;
-        private String vpnConnectionId;
-        private String vpnConnectionTime;
-        private String vpnUserName;
+        private VpnClientConnectionHealthDetailResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new VpnClientConnectionHealthDetailResponse();
         }
 
         public Builder(VpnClientConnectionHealthDetailResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.egressBytesTransferred = defaults.egressBytesTransferred;
-    	      this.egressPacketsTransferred = defaults.egressPacketsTransferred;
-    	      this.ingressBytesTransferred = defaults.ingressBytesTransferred;
-    	      this.ingressPacketsTransferred = defaults.ingressPacketsTransferred;
-    	      this.maxBandwidth = defaults.maxBandwidth;
-    	      this.maxPacketsPerSecond = defaults.maxPacketsPerSecond;
-    	      this.privateIpAddress = defaults.privateIpAddress;
-    	      this.publicIpAddress = defaults.publicIpAddress;
-    	      this.vpnConnectionDuration = defaults.vpnConnectionDuration;
-    	      this.vpnConnectionId = defaults.vpnConnectionId;
-    	      this.vpnConnectionTime = defaults.vpnConnectionTime;
-    	      this.vpnUserName = defaults.vpnUserName;
+            $ = new VpnClientConnectionHealthDetailResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder egressBytesTransferred(Double egressBytesTransferred) {
-            this.egressBytesTransferred = Objects.requireNonNull(egressBytesTransferred);
+            $.egressBytesTransferred = egressBytesTransferred;
             return this;
         }
+
         public Builder egressPacketsTransferred(Double egressPacketsTransferred) {
-            this.egressPacketsTransferred = Objects.requireNonNull(egressPacketsTransferred);
+            $.egressPacketsTransferred = egressPacketsTransferred;
             return this;
         }
+
         public Builder ingressBytesTransferred(Double ingressBytesTransferred) {
-            this.ingressBytesTransferred = Objects.requireNonNull(ingressBytesTransferred);
+            $.ingressBytesTransferred = ingressBytesTransferred;
             return this;
         }
+
         public Builder ingressPacketsTransferred(Double ingressPacketsTransferred) {
-            this.ingressPacketsTransferred = Objects.requireNonNull(ingressPacketsTransferred);
+            $.ingressPacketsTransferred = ingressPacketsTransferred;
             return this;
         }
+
         public Builder maxBandwidth(Double maxBandwidth) {
-            this.maxBandwidth = Objects.requireNonNull(maxBandwidth);
+            $.maxBandwidth = maxBandwidth;
             return this;
         }
+
         public Builder maxPacketsPerSecond(Double maxPacketsPerSecond) {
-            this.maxPacketsPerSecond = Objects.requireNonNull(maxPacketsPerSecond);
+            $.maxPacketsPerSecond = maxPacketsPerSecond;
             return this;
         }
+
         public Builder privateIpAddress(String privateIpAddress) {
-            this.privateIpAddress = Objects.requireNonNull(privateIpAddress);
+            $.privateIpAddress = privateIpAddress;
             return this;
         }
+
         public Builder publicIpAddress(String publicIpAddress) {
-            this.publicIpAddress = Objects.requireNonNull(publicIpAddress);
+            $.publicIpAddress = publicIpAddress;
             return this;
         }
+
         public Builder vpnConnectionDuration(Double vpnConnectionDuration) {
-            this.vpnConnectionDuration = Objects.requireNonNull(vpnConnectionDuration);
+            $.vpnConnectionDuration = vpnConnectionDuration;
             return this;
         }
+
         public Builder vpnConnectionId(String vpnConnectionId) {
-            this.vpnConnectionId = Objects.requireNonNull(vpnConnectionId);
+            $.vpnConnectionId = vpnConnectionId;
             return this;
         }
+
         public Builder vpnConnectionTime(String vpnConnectionTime) {
-            this.vpnConnectionTime = Objects.requireNonNull(vpnConnectionTime);
+            $.vpnConnectionTime = vpnConnectionTime;
             return this;
         }
+
         public Builder vpnUserName(String vpnUserName) {
-            this.vpnUserName = Objects.requireNonNull(vpnUserName);
+            $.vpnUserName = vpnUserName;
             return this;
-        }        public VpnClientConnectionHealthDetailResponse build() {
-            return new VpnClientConnectionHealthDetailResponse(egressBytesTransferred, egressPacketsTransferred, ingressBytesTransferred, ingressPacketsTransferred, maxBandwidth, maxPacketsPerSecond, privateIpAddress, publicIpAddress, vpnConnectionDuration, vpnConnectionId, vpnConnectionTime, vpnUserName);
+        }
+
+        public VpnClientConnectionHealthDetailResponse build() {
+            $.egressBytesTransferred = Objects.requireNonNull($.egressBytesTransferred, "expected parameter 'egressBytesTransferred' to be non-null");
+            $.egressPacketsTransferred = Objects.requireNonNull($.egressPacketsTransferred, "expected parameter 'egressPacketsTransferred' to be non-null");
+            $.ingressBytesTransferred = Objects.requireNonNull($.ingressBytesTransferred, "expected parameter 'ingressBytesTransferred' to be non-null");
+            $.ingressPacketsTransferred = Objects.requireNonNull($.ingressPacketsTransferred, "expected parameter 'ingressPacketsTransferred' to be non-null");
+            $.maxBandwidth = Objects.requireNonNull($.maxBandwidth, "expected parameter 'maxBandwidth' to be non-null");
+            $.maxPacketsPerSecond = Objects.requireNonNull($.maxPacketsPerSecond, "expected parameter 'maxPacketsPerSecond' to be non-null");
+            $.privateIpAddress = Objects.requireNonNull($.privateIpAddress, "expected parameter 'privateIpAddress' to be non-null");
+            $.publicIpAddress = Objects.requireNonNull($.publicIpAddress, "expected parameter 'publicIpAddress' to be non-null");
+            $.vpnConnectionDuration = Objects.requireNonNull($.vpnConnectionDuration, "expected parameter 'vpnConnectionDuration' to be non-null");
+            $.vpnConnectionId = Objects.requireNonNull($.vpnConnectionId, "expected parameter 'vpnConnectionId' to be non-null");
+            $.vpnConnectionTime = Objects.requireNonNull($.vpnConnectionTime, "expected parameter 'vpnConnectionTime' to be non-null");
+            $.vpnUserName = Objects.requireNonNull($.vpnUserName, "expected parameter 'vpnUserName' to be non-null");
+            return $;
         }
     }
+
 }

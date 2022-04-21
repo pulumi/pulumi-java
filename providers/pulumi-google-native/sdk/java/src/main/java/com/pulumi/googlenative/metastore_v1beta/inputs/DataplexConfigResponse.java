@@ -22,45 +22,45 @@ public final class DataplexConfigResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="lakeResources", required=true)
-      private final Map<String,String> lakeResources;
+    private Map<String,String> lakeResources;
 
     public Map<String,String> lakeResources() {
         return this.lakeResources;
     }
 
-    public DataplexConfigResponse(Map<String,String> lakeResources) {
-        this.lakeResources = Objects.requireNonNull(lakeResources, "expected parameter 'lakeResources' to be non-null");
-    }
+    private DataplexConfigResponse() {}
 
-    private DataplexConfigResponse() {
-        this.lakeResources = Map.of();
+    private DataplexConfigResponse(DataplexConfigResponse $) {
+        this.lakeResources = $.lakeResources;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DataplexConfigResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Map<String,String> lakeResources;
+        private DataplexConfigResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new DataplexConfigResponse();
         }
 
         public Builder(DataplexConfigResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.lakeResources = defaults.lakeResources;
+            $ = new DataplexConfigResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder lakeResources(Map<String,String> lakeResources) {
-            this.lakeResources = Objects.requireNonNull(lakeResources);
+            $.lakeResources = lakeResources;
             return this;
-        }        public DataplexConfigResponse build() {
-            return new DataplexConfigResponse(lakeResources);
+        }
+
+        public DataplexConfigResponse build() {
+            $.lakeResources = Objects.requireNonNull($.lakeResources, "expected parameter 'lakeResources' to be non-null");
+            return $;
         }
     }
+
 }

@@ -23,7 +23,7 @@ public final class StaticSiteUserARMResourceResponse extends com.pulumi.resource
      * 
      */
     @Import(name="displayName", required=true)
-      private final String displayName;
+    private String displayName;
 
     public String displayName() {
         return this.displayName;
@@ -34,7 +34,7 @@ public final class StaticSiteUserARMResourceResponse extends com.pulumi.resource
      * 
      */
     @Import(name="id", required=true)
-      private final String id;
+    private String id;
 
     public String id() {
         return this.id;
@@ -45,10 +45,10 @@ public final class StaticSiteUserARMResourceResponse extends com.pulumi.resource
      * 
      */
     @Import(name="kind")
-      private final @Nullable String kind;
+    private @Nullable String kind;
 
     public Optional<String> kind() {
-        return this.kind == null ? Optional.empty() : Optional.ofNullable(this.kind);
+        return Optional.ofNullable(this.kind);
     }
 
     /**
@@ -56,7 +56,7 @@ public final class StaticSiteUserARMResourceResponse extends com.pulumi.resource
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -67,7 +67,7 @@ public final class StaticSiteUserARMResourceResponse extends com.pulumi.resource
      * 
      */
     @Import(name="provider", required=true)
-      private final String provider;
+    private String provider;
 
     public String provider() {
         return this.provider;
@@ -78,10 +78,10 @@ public final class StaticSiteUserARMResourceResponse extends com.pulumi.resource
      * 
      */
     @Import(name="roles")
-      private final @Nullable String roles;
+    private @Nullable String roles;
 
     public Optional<String> roles() {
-        return this.roles == null ? Optional.empty() : Optional.ofNullable(this.roles);
+        return Optional.ofNullable(this.roles);
     }
 
     /**
@@ -89,7 +89,7 @@ public final class StaticSiteUserARMResourceResponse extends com.pulumi.resource
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
@@ -100,109 +100,92 @@ public final class StaticSiteUserARMResourceResponse extends com.pulumi.resource
      * 
      */
     @Import(name="userId", required=true)
-      private final String userId;
+    private String userId;
 
     public String userId() {
         return this.userId;
     }
 
-    public StaticSiteUserARMResourceResponse(
-        String displayName,
-        String id,
-        @Nullable String kind,
-        String name,
-        String provider,
-        @Nullable String roles,
-        String type,
-        String userId) {
-        this.displayName = Objects.requireNonNull(displayName, "expected parameter 'displayName' to be non-null");
-        this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
-        this.kind = kind;
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.provider = Objects.requireNonNull(provider, "expected parameter 'provider' to be non-null");
-        this.roles = roles;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-        this.userId = Objects.requireNonNull(userId, "expected parameter 'userId' to be non-null");
-    }
+    private StaticSiteUserARMResourceResponse() {}
 
-    private StaticSiteUserARMResourceResponse() {
-        this.displayName = null;
-        this.id = null;
-        this.kind = null;
-        this.name = null;
-        this.provider = null;
-        this.roles = null;
-        this.type = null;
-        this.userId = null;
+    private StaticSiteUserARMResourceResponse(StaticSiteUserARMResourceResponse $) {
+        this.displayName = $.displayName;
+        this.id = $.id;
+        this.kind = $.kind;
+        this.name = $.name;
+        this.provider = $.provider;
+        this.roles = $.roles;
+        this.type = $.type;
+        this.userId = $.userId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(StaticSiteUserARMResourceResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String displayName;
-        private String id;
-        private @Nullable String kind;
-        private String name;
-        private String provider;
-        private @Nullable String roles;
-        private String type;
-        private String userId;
+        private StaticSiteUserARMResourceResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new StaticSiteUserARMResourceResponse();
         }
 
         public Builder(StaticSiteUserARMResourceResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.displayName = defaults.displayName;
-    	      this.id = defaults.id;
-    	      this.kind = defaults.kind;
-    	      this.name = defaults.name;
-    	      this.provider = defaults.provider;
-    	      this.roles = defaults.roles;
-    	      this.type = defaults.type;
-    	      this.userId = defaults.userId;
+            $ = new StaticSiteUserARMResourceResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder displayName(String displayName) {
-            this.displayName = Objects.requireNonNull(displayName);
+            $.displayName = displayName;
             return this;
         }
+
         public Builder id(String id) {
-            this.id = Objects.requireNonNull(id);
+            $.id = id;
             return this;
         }
+
         public Builder kind(@Nullable String kind) {
-            this.kind = kind;
+            $.kind = kind;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder provider(String provider) {
-            this.provider = Objects.requireNonNull(provider);
+            $.provider = provider;
             return this;
         }
+
         public Builder roles(@Nullable String roles) {
-            this.roles = roles;
+            $.roles = roles;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder userId(String userId) {
-            this.userId = Objects.requireNonNull(userId);
+            $.userId = userId;
             return this;
-        }        public StaticSiteUserARMResourceResponse build() {
-            return new StaticSiteUserARMResourceResponse(displayName, id, kind, name, provider, roles, type, userId);
+        }
+
+        public StaticSiteUserARMResourceResponse build() {
+            $.displayName = Objects.requireNonNull($.displayName, "expected parameter 'displayName' to be non-null");
+            $.id = Objects.requireNonNull($.id, "expected parameter 'id' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.provider = Objects.requireNonNull($.provider, "expected parameter 'provider' to be non-null");
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            $.userId = Objects.requireNonNull($.userId, "expected parameter 'userId' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,7 +5,6 @@ package com.pulumi.aws.appmesh.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,49 +18,49 @@ public final class GatewayRouteSpecGrpcRouteMatchGetArgs extends com.pulumi.reso
      * 
      */
     @Import(name="serviceName", required=true)
-      private final Output<String> serviceName;
+    private Output<String> serviceName;
 
     public Output<String> serviceName() {
         return this.serviceName;
     }
 
-    public GatewayRouteSpecGrpcRouteMatchGetArgs(Output<String> serviceName) {
-        this.serviceName = Objects.requireNonNull(serviceName, "expected parameter 'serviceName' to be non-null");
-    }
+    private GatewayRouteSpecGrpcRouteMatchGetArgs() {}
 
-    private GatewayRouteSpecGrpcRouteMatchGetArgs() {
-        this.serviceName = Codegen.empty();
+    private GatewayRouteSpecGrpcRouteMatchGetArgs(GatewayRouteSpecGrpcRouteMatchGetArgs $) {
+        this.serviceName = $.serviceName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GatewayRouteSpecGrpcRouteMatchGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> serviceName;
+        private GatewayRouteSpecGrpcRouteMatchGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GatewayRouteSpecGrpcRouteMatchGetArgs();
         }
 
         public Builder(GatewayRouteSpecGrpcRouteMatchGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.serviceName = defaults.serviceName;
+            $ = new GatewayRouteSpecGrpcRouteMatchGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder serviceName(Output<String> serviceName) {
-            this.serviceName = Objects.requireNonNull(serviceName);
+            $.serviceName = serviceName;
             return this;
         }
+
         public Builder serviceName(String serviceName) {
-            this.serviceName = Output.of(Objects.requireNonNull(serviceName));
-            return this;
-        }        public GatewayRouteSpecGrpcRouteMatchGetArgs build() {
-            return new GatewayRouteSpecGrpcRouteMatchGetArgs(serviceName);
+            return serviceName(Output.of(serviceName));
+        }
+
+        public GatewayRouteSpecGrpcRouteMatchGetArgs build() {
+            $.serviceName = Objects.requireNonNull($.serviceName, "expected parameter 'serviceName' to be non-null");
+            return $;
         }
     }
+
 }

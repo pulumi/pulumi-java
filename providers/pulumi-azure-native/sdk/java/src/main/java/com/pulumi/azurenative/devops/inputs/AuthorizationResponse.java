@@ -24,7 +24,7 @@ public final class AuthorizationResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="authorizationType", required=true)
-      private final String authorizationType;
+    private String authorizationType;
 
     public String authorizationType() {
         return this.authorizationType;
@@ -35,55 +35,51 @@ public final class AuthorizationResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="parameters")
-      private final @Nullable Map<String,String> parameters;
+    private @Nullable Map<String,String> parameters;
 
-    public Map<String,String> parameters() {
-        return this.parameters == null ? Map.of() : this.parameters;
+    public Optional<Map<String,String>> parameters() {
+        return Optional.ofNullable(this.parameters);
     }
 
-    public AuthorizationResponse(
-        String authorizationType,
-        @Nullable Map<String,String> parameters) {
-        this.authorizationType = Objects.requireNonNull(authorizationType, "expected parameter 'authorizationType' to be non-null");
-        this.parameters = parameters;
-    }
+    private AuthorizationResponse() {}
 
-    private AuthorizationResponse() {
-        this.authorizationType = null;
-        this.parameters = Map.of();
+    private AuthorizationResponse(AuthorizationResponse $) {
+        this.authorizationType = $.authorizationType;
+        this.parameters = $.parameters;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AuthorizationResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String authorizationType;
-        private @Nullable Map<String,String> parameters;
+        private AuthorizationResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AuthorizationResponse();
         }
 
         public Builder(AuthorizationResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.authorizationType = defaults.authorizationType;
-    	      this.parameters = defaults.parameters;
+            $ = new AuthorizationResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder authorizationType(String authorizationType) {
-            this.authorizationType = Objects.requireNonNull(authorizationType);
+            $.authorizationType = authorizationType;
             return this;
         }
+
         public Builder parameters(@Nullable Map<String,String> parameters) {
-            this.parameters = parameters;
+            $.parameters = parameters;
             return this;
-        }        public AuthorizationResponse build() {
-            return new AuthorizationResponse(authorizationType, parameters);
+        }
+
+        public AuthorizationResponse build() {
+            $.authorizationType = Objects.requireNonNull($.authorizationType, "expected parameter 'authorizationType' to be non-null");
+            return $;
         }
     }
+
 }

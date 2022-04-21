@@ -17,45 +17,45 @@ public final class GetInstanceNetworkPerformanceConfig extends com.pulumi.resour
      * 
      */
     @Import(name="totalEgressBandwidthTier", required=true)
-      private final String totalEgressBandwidthTier;
+    private String totalEgressBandwidthTier;
 
     public String totalEgressBandwidthTier() {
         return this.totalEgressBandwidthTier;
     }
 
-    public GetInstanceNetworkPerformanceConfig(String totalEgressBandwidthTier) {
-        this.totalEgressBandwidthTier = Objects.requireNonNull(totalEgressBandwidthTier, "expected parameter 'totalEgressBandwidthTier' to be non-null");
-    }
+    private GetInstanceNetworkPerformanceConfig() {}
 
-    private GetInstanceNetworkPerformanceConfig() {
-        this.totalEgressBandwidthTier = null;
+    private GetInstanceNetworkPerformanceConfig(GetInstanceNetworkPerformanceConfig $) {
+        this.totalEgressBandwidthTier = $.totalEgressBandwidthTier;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetInstanceNetworkPerformanceConfig defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String totalEgressBandwidthTier;
+        private GetInstanceNetworkPerformanceConfig $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetInstanceNetworkPerformanceConfig();
         }
 
         public Builder(GetInstanceNetworkPerformanceConfig defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.totalEgressBandwidthTier = defaults.totalEgressBandwidthTier;
+            $ = new GetInstanceNetworkPerformanceConfig(Objects.requireNonNull(defaults));
         }
 
         public Builder totalEgressBandwidthTier(String totalEgressBandwidthTier) {
-            this.totalEgressBandwidthTier = Objects.requireNonNull(totalEgressBandwidthTier);
+            $.totalEgressBandwidthTier = totalEgressBandwidthTier;
             return this;
-        }        public GetInstanceNetworkPerformanceConfig build() {
-            return new GetInstanceNetworkPerformanceConfig(totalEgressBandwidthTier);
+        }
+
+        public GetInstanceNetworkPerformanceConfig build() {
+            $.totalEgressBandwidthTier = Objects.requireNonNull($.totalEgressBandwidthTier, "expected parameter 'totalEgressBandwidthTier' to be non-null");
+            return $;
         }
     }
+
 }

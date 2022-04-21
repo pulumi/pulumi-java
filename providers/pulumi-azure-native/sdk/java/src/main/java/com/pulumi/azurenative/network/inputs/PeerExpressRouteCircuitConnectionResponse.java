@@ -24,10 +24,10 @@ public final class PeerExpressRouteCircuitConnectionResponse extends com.pulumi.
      * 
      */
     @Import(name="addressPrefix")
-      private final @Nullable String addressPrefix;
+    private @Nullable String addressPrefix;
 
     public Optional<String> addressPrefix() {
-        return this.addressPrefix == null ? Optional.empty() : Optional.ofNullable(this.addressPrefix);
+        return Optional.ofNullable(this.addressPrefix);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class PeerExpressRouteCircuitConnectionResponse extends com.pulumi.
      * 
      */
     @Import(name="authResourceGuid")
-      private final @Nullable String authResourceGuid;
+    private @Nullable String authResourceGuid;
 
     public Optional<String> authResourceGuid() {
-        return this.authResourceGuid == null ? Optional.empty() : Optional.ofNullable(this.authResourceGuid);
+        return Optional.ofNullable(this.authResourceGuid);
     }
 
     /**
@@ -46,7 +46,7 @@ public final class PeerExpressRouteCircuitConnectionResponse extends com.pulumi.
      * 
      */
     @Import(name="circuitConnectionStatus", required=true)
-      private final String circuitConnectionStatus;
+    private String circuitConnectionStatus;
 
     public String circuitConnectionStatus() {
         return this.circuitConnectionStatus;
@@ -57,10 +57,10 @@ public final class PeerExpressRouteCircuitConnectionResponse extends com.pulumi.
      * 
      */
     @Import(name="connectionName")
-      private final @Nullable String connectionName;
+    private @Nullable String connectionName;
 
     public Optional<String> connectionName() {
-        return this.connectionName == null ? Optional.empty() : Optional.ofNullable(this.connectionName);
+        return Optional.ofNullable(this.connectionName);
     }
 
     /**
@@ -68,7 +68,7 @@ public final class PeerExpressRouteCircuitConnectionResponse extends com.pulumi.
      * 
      */
     @Import(name="etag", required=true)
-      private final String etag;
+    private String etag;
 
     public String etag() {
         return this.etag;
@@ -79,10 +79,10 @@ public final class PeerExpressRouteCircuitConnectionResponse extends com.pulumi.
      * 
      */
     @Import(name="expressRouteCircuitPeering")
-      private final @Nullable SubResourceResponse expressRouteCircuitPeering;
+    private @Nullable SubResourceResponse expressRouteCircuitPeering;
 
     public Optional<SubResourceResponse> expressRouteCircuitPeering() {
-        return this.expressRouteCircuitPeering == null ? Optional.empty() : Optional.ofNullable(this.expressRouteCircuitPeering);
+        return Optional.ofNullable(this.expressRouteCircuitPeering);
     }
 
     /**
@@ -90,10 +90,10 @@ public final class PeerExpressRouteCircuitConnectionResponse extends com.pulumi.
      * 
      */
     @Import(name="id")
-      private final @Nullable String id;
+    private @Nullable String id;
 
     public Optional<String> id() {
-        return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
+        return Optional.ofNullable(this.id);
     }
 
     /**
@@ -101,10 +101,10 @@ public final class PeerExpressRouteCircuitConnectionResponse extends com.pulumi.
      * 
      */
     @Import(name="name")
-      private final @Nullable String name;
+    private @Nullable String name;
 
     public Optional<String> name() {
-        return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -112,10 +112,10 @@ public final class PeerExpressRouteCircuitConnectionResponse extends com.pulumi.
      * 
      */
     @Import(name="peerExpressRouteCircuitPeering")
-      private final @Nullable SubResourceResponse peerExpressRouteCircuitPeering;
+    private @Nullable SubResourceResponse peerExpressRouteCircuitPeering;
 
     public Optional<SubResourceResponse> peerExpressRouteCircuitPeering() {
-        return this.peerExpressRouteCircuitPeering == null ? Optional.empty() : Optional.ofNullable(this.peerExpressRouteCircuitPeering);
+        return Optional.ofNullable(this.peerExpressRouteCircuitPeering);
     }
 
     /**
@@ -123,7 +123,7 @@ public final class PeerExpressRouteCircuitConnectionResponse extends com.pulumi.
      * 
      */
     @Import(name="provisioningState", required=true)
-      private final String provisioningState;
+    private String provisioningState;
 
     public String provisioningState() {
         return this.provisioningState;
@@ -134,136 +134,108 @@ public final class PeerExpressRouteCircuitConnectionResponse extends com.pulumi.
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
     }
 
-    public PeerExpressRouteCircuitConnectionResponse(
-        @Nullable String addressPrefix,
-        @Nullable String authResourceGuid,
-        String circuitConnectionStatus,
-        @Nullable String connectionName,
-        String etag,
-        @Nullable SubResourceResponse expressRouteCircuitPeering,
-        @Nullable String id,
-        @Nullable String name,
-        @Nullable SubResourceResponse peerExpressRouteCircuitPeering,
-        String provisioningState,
-        String type) {
-        this.addressPrefix = addressPrefix;
-        this.authResourceGuid = authResourceGuid;
-        this.circuitConnectionStatus = Objects.requireNonNull(circuitConnectionStatus, "expected parameter 'circuitConnectionStatus' to be non-null");
-        this.connectionName = connectionName;
-        this.etag = Objects.requireNonNull(etag, "expected parameter 'etag' to be non-null");
-        this.expressRouteCircuitPeering = expressRouteCircuitPeering;
-        this.id = id;
-        this.name = name;
-        this.peerExpressRouteCircuitPeering = peerExpressRouteCircuitPeering;
-        this.provisioningState = Objects.requireNonNull(provisioningState, "expected parameter 'provisioningState' to be non-null");
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private PeerExpressRouteCircuitConnectionResponse() {}
 
-    private PeerExpressRouteCircuitConnectionResponse() {
-        this.addressPrefix = null;
-        this.authResourceGuid = null;
-        this.circuitConnectionStatus = null;
-        this.connectionName = null;
-        this.etag = null;
-        this.expressRouteCircuitPeering = null;
-        this.id = null;
-        this.name = null;
-        this.peerExpressRouteCircuitPeering = null;
-        this.provisioningState = null;
-        this.type = null;
+    private PeerExpressRouteCircuitConnectionResponse(PeerExpressRouteCircuitConnectionResponse $) {
+        this.addressPrefix = $.addressPrefix;
+        this.authResourceGuid = $.authResourceGuid;
+        this.circuitConnectionStatus = $.circuitConnectionStatus;
+        this.connectionName = $.connectionName;
+        this.etag = $.etag;
+        this.expressRouteCircuitPeering = $.expressRouteCircuitPeering;
+        this.id = $.id;
+        this.name = $.name;
+        this.peerExpressRouteCircuitPeering = $.peerExpressRouteCircuitPeering;
+        this.provisioningState = $.provisioningState;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PeerExpressRouteCircuitConnectionResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String addressPrefix;
-        private @Nullable String authResourceGuid;
-        private String circuitConnectionStatus;
-        private @Nullable String connectionName;
-        private String etag;
-        private @Nullable SubResourceResponse expressRouteCircuitPeering;
-        private @Nullable String id;
-        private @Nullable String name;
-        private @Nullable SubResourceResponse peerExpressRouteCircuitPeering;
-        private String provisioningState;
-        private String type;
+        private PeerExpressRouteCircuitConnectionResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new PeerExpressRouteCircuitConnectionResponse();
         }
 
         public Builder(PeerExpressRouteCircuitConnectionResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.addressPrefix = defaults.addressPrefix;
-    	      this.authResourceGuid = defaults.authResourceGuid;
-    	      this.circuitConnectionStatus = defaults.circuitConnectionStatus;
-    	      this.connectionName = defaults.connectionName;
-    	      this.etag = defaults.etag;
-    	      this.expressRouteCircuitPeering = defaults.expressRouteCircuitPeering;
-    	      this.id = defaults.id;
-    	      this.name = defaults.name;
-    	      this.peerExpressRouteCircuitPeering = defaults.peerExpressRouteCircuitPeering;
-    	      this.provisioningState = defaults.provisioningState;
-    	      this.type = defaults.type;
+            $ = new PeerExpressRouteCircuitConnectionResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder addressPrefix(@Nullable String addressPrefix) {
-            this.addressPrefix = addressPrefix;
+            $.addressPrefix = addressPrefix;
             return this;
         }
+
         public Builder authResourceGuid(@Nullable String authResourceGuid) {
-            this.authResourceGuid = authResourceGuid;
+            $.authResourceGuid = authResourceGuid;
             return this;
         }
+
         public Builder circuitConnectionStatus(String circuitConnectionStatus) {
-            this.circuitConnectionStatus = Objects.requireNonNull(circuitConnectionStatus);
+            $.circuitConnectionStatus = circuitConnectionStatus;
             return this;
         }
+
         public Builder connectionName(@Nullable String connectionName) {
-            this.connectionName = connectionName;
+            $.connectionName = connectionName;
             return this;
         }
+
         public Builder etag(String etag) {
-            this.etag = Objects.requireNonNull(etag);
+            $.etag = etag;
             return this;
         }
+
         public Builder expressRouteCircuitPeering(@Nullable SubResourceResponse expressRouteCircuitPeering) {
-            this.expressRouteCircuitPeering = expressRouteCircuitPeering;
+            $.expressRouteCircuitPeering = expressRouteCircuitPeering;
             return this;
         }
+
         public Builder id(@Nullable String id) {
-            this.id = id;
+            $.id = id;
             return this;
         }
+
         public Builder name(@Nullable String name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
+
         public Builder peerExpressRouteCircuitPeering(@Nullable SubResourceResponse peerExpressRouteCircuitPeering) {
-            this.peerExpressRouteCircuitPeering = peerExpressRouteCircuitPeering;
+            $.peerExpressRouteCircuitPeering = peerExpressRouteCircuitPeering;
             return this;
         }
+
         public Builder provisioningState(String provisioningState) {
-            this.provisioningState = Objects.requireNonNull(provisioningState);
+            $.provisioningState = provisioningState;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
-        }        public PeerExpressRouteCircuitConnectionResponse build() {
-            return new PeerExpressRouteCircuitConnectionResponse(addressPrefix, authResourceGuid, circuitConnectionStatus, connectionName, etag, expressRouteCircuitPeering, id, name, peerExpressRouteCircuitPeering, provisioningState, type);
+        }
+
+        public PeerExpressRouteCircuitConnectionResponse build() {
+            $.circuitConnectionStatus = Objects.requireNonNull($.circuitConnectionStatus, "expected parameter 'circuitConnectionStatus' to be non-null");
+            $.etag = Objects.requireNonNull($.etag, "expected parameter 'etag' to be non-null");
+            $.provisioningState = Objects.requireNonNull($.provisioningState, "expected parameter 'provisioningState' to be non-null");
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

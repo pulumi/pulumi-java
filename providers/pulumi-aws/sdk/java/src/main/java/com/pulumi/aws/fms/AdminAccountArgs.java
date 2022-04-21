@@ -5,9 +5,9 @@ package com.pulumi.aws.fms;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,49 +20,48 @@ public final class AdminAccountArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="accountId")
-      private final @Nullable Output<String> accountId;
+    private @Nullable Output<String> accountId;
 
-    public Output<String> accountId() {
-        return this.accountId == null ? Codegen.empty() : this.accountId;
+    public Optional<Output<String>> accountId() {
+        return Optional.ofNullable(this.accountId);
     }
 
-    public AdminAccountArgs(@Nullable Output<String> accountId) {
-        this.accountId = accountId;
-    }
+    private AdminAccountArgs() {}
 
-    private AdminAccountArgs() {
-        this.accountId = Codegen.empty();
+    private AdminAccountArgs(AdminAccountArgs $) {
+        this.accountId = $.accountId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AdminAccountArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> accountId;
+        private AdminAccountArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AdminAccountArgs();
         }
 
         public Builder(AdminAccountArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accountId = defaults.accountId;
+            $ = new AdminAccountArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder accountId(@Nullable Output<String> accountId) {
-            this.accountId = accountId;
+            $.accountId = accountId;
             return this;
         }
-        public Builder accountId(@Nullable String accountId) {
-            this.accountId = Codegen.ofNullable(accountId);
-            return this;
-        }        public AdminAccountArgs build() {
-            return new AdminAccountArgs(accountId);
+
+        public Builder accountId(String accountId) {
+            return accountId(Output.of(accountId));
+        }
+
+        public AdminAccountArgs build() {
+            return $;
         }
     }
+
 }

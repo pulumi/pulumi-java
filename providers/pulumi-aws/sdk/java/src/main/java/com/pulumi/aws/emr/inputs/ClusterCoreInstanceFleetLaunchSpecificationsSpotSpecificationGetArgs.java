@@ -5,10 +5,10 @@ package com.pulumi.aws.emr.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,7 +21,7 @@ public final class ClusterCoreInstanceFleetLaunchSpecificationsSpotSpecification
      * 
      */
     @Import(name="allocationStrategy", required=true)
-      private final Output<String> allocationStrategy;
+    private Output<String> allocationStrategy;
 
     public Output<String> allocationStrategy() {
         return this.allocationStrategy;
@@ -32,10 +32,10 @@ public final class ClusterCoreInstanceFleetLaunchSpecificationsSpotSpecification
      * 
      */
     @Import(name="blockDurationMinutes")
-      private final @Nullable Output<Integer> blockDurationMinutes;
+    private @Nullable Output<Integer> blockDurationMinutes;
 
-    public Output<Integer> blockDurationMinutes() {
-        return this.blockDurationMinutes == null ? Codegen.empty() : this.blockDurationMinutes;
+    public Optional<Output<Integer>> blockDurationMinutes() {
+        return Optional.ofNullable(this.blockDurationMinutes);
     }
 
     /**
@@ -43,7 +43,7 @@ public final class ClusterCoreInstanceFleetLaunchSpecificationsSpotSpecification
      * 
      */
     @Import(name="timeoutAction", required=true)
-      private final Output<String> timeoutAction;
+    private Output<String> timeoutAction;
 
     public Output<String> timeoutAction() {
         return this.timeoutAction;
@@ -54,89 +54,81 @@ public final class ClusterCoreInstanceFleetLaunchSpecificationsSpotSpecification
      * 
      */
     @Import(name="timeoutDurationMinutes", required=true)
-      private final Output<Integer> timeoutDurationMinutes;
+    private Output<Integer> timeoutDurationMinutes;
 
     public Output<Integer> timeoutDurationMinutes() {
         return this.timeoutDurationMinutes;
     }
 
-    public ClusterCoreInstanceFleetLaunchSpecificationsSpotSpecificationGetArgs(
-        Output<String> allocationStrategy,
-        @Nullable Output<Integer> blockDurationMinutes,
-        Output<String> timeoutAction,
-        Output<Integer> timeoutDurationMinutes) {
-        this.allocationStrategy = Objects.requireNonNull(allocationStrategy, "expected parameter 'allocationStrategy' to be non-null");
-        this.blockDurationMinutes = blockDurationMinutes;
-        this.timeoutAction = Objects.requireNonNull(timeoutAction, "expected parameter 'timeoutAction' to be non-null");
-        this.timeoutDurationMinutes = Objects.requireNonNull(timeoutDurationMinutes, "expected parameter 'timeoutDurationMinutes' to be non-null");
-    }
+    private ClusterCoreInstanceFleetLaunchSpecificationsSpotSpecificationGetArgs() {}
 
-    private ClusterCoreInstanceFleetLaunchSpecificationsSpotSpecificationGetArgs() {
-        this.allocationStrategy = Codegen.empty();
-        this.blockDurationMinutes = Codegen.empty();
-        this.timeoutAction = Codegen.empty();
-        this.timeoutDurationMinutes = Codegen.empty();
+    private ClusterCoreInstanceFleetLaunchSpecificationsSpotSpecificationGetArgs(ClusterCoreInstanceFleetLaunchSpecificationsSpotSpecificationGetArgs $) {
+        this.allocationStrategy = $.allocationStrategy;
+        this.blockDurationMinutes = $.blockDurationMinutes;
+        this.timeoutAction = $.timeoutAction;
+        this.timeoutDurationMinutes = $.timeoutDurationMinutes;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ClusterCoreInstanceFleetLaunchSpecificationsSpotSpecificationGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> allocationStrategy;
-        private @Nullable Output<Integer> blockDurationMinutes;
-        private Output<String> timeoutAction;
-        private Output<Integer> timeoutDurationMinutes;
+        private ClusterCoreInstanceFleetLaunchSpecificationsSpotSpecificationGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ClusterCoreInstanceFleetLaunchSpecificationsSpotSpecificationGetArgs();
         }
 
         public Builder(ClusterCoreInstanceFleetLaunchSpecificationsSpotSpecificationGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.allocationStrategy = defaults.allocationStrategy;
-    	      this.blockDurationMinutes = defaults.blockDurationMinutes;
-    	      this.timeoutAction = defaults.timeoutAction;
-    	      this.timeoutDurationMinutes = defaults.timeoutDurationMinutes;
+            $ = new ClusterCoreInstanceFleetLaunchSpecificationsSpotSpecificationGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder allocationStrategy(Output<String> allocationStrategy) {
-            this.allocationStrategy = Objects.requireNonNull(allocationStrategy);
+            $.allocationStrategy = allocationStrategy;
             return this;
         }
+
         public Builder allocationStrategy(String allocationStrategy) {
-            this.allocationStrategy = Output.of(Objects.requireNonNull(allocationStrategy));
-            return this;
+            return allocationStrategy(Output.of(allocationStrategy));
         }
+
         public Builder blockDurationMinutes(@Nullable Output<Integer> blockDurationMinutes) {
-            this.blockDurationMinutes = blockDurationMinutes;
+            $.blockDurationMinutes = blockDurationMinutes;
             return this;
         }
-        public Builder blockDurationMinutes(@Nullable Integer blockDurationMinutes) {
-            this.blockDurationMinutes = Codegen.ofNullable(blockDurationMinutes);
-            return this;
+
+        public Builder blockDurationMinutes(Integer blockDurationMinutes) {
+            return blockDurationMinutes(Output.of(blockDurationMinutes));
         }
+
         public Builder timeoutAction(Output<String> timeoutAction) {
-            this.timeoutAction = Objects.requireNonNull(timeoutAction);
+            $.timeoutAction = timeoutAction;
             return this;
         }
+
         public Builder timeoutAction(String timeoutAction) {
-            this.timeoutAction = Output.of(Objects.requireNonNull(timeoutAction));
-            return this;
+            return timeoutAction(Output.of(timeoutAction));
         }
+
         public Builder timeoutDurationMinutes(Output<Integer> timeoutDurationMinutes) {
-            this.timeoutDurationMinutes = Objects.requireNonNull(timeoutDurationMinutes);
+            $.timeoutDurationMinutes = timeoutDurationMinutes;
             return this;
         }
+
         public Builder timeoutDurationMinutes(Integer timeoutDurationMinutes) {
-            this.timeoutDurationMinutes = Output.of(Objects.requireNonNull(timeoutDurationMinutes));
-            return this;
-        }        public ClusterCoreInstanceFleetLaunchSpecificationsSpotSpecificationGetArgs build() {
-            return new ClusterCoreInstanceFleetLaunchSpecificationsSpotSpecificationGetArgs(allocationStrategy, blockDurationMinutes, timeoutAction, timeoutDurationMinutes);
+            return timeoutDurationMinutes(Output.of(timeoutDurationMinutes));
+        }
+
+        public ClusterCoreInstanceFleetLaunchSpecificationsSpotSpecificationGetArgs build() {
+            $.allocationStrategy = Objects.requireNonNull($.allocationStrategy, "expected parameter 'allocationStrategy' to be non-null");
+            $.timeoutAction = Objects.requireNonNull($.timeoutAction, "expected parameter 'timeoutAction' to be non-null");
+            $.timeoutDurationMinutes = Objects.requireNonNull($.timeoutDurationMinutes, "expected parameter 'timeoutDurationMinutes' to be non-null");
+            return $;
         }
     }
+
 }

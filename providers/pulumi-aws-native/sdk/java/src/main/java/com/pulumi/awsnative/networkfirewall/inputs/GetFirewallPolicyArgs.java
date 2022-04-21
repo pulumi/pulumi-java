@@ -13,45 +13,45 @@ public final class GetFirewallPolicyArgs extends com.pulumi.resources.InvokeArgs
     public static final GetFirewallPolicyArgs Empty = new GetFirewallPolicyArgs();
 
     @Import(name="firewallPolicyArn", required=true)
-      private final String firewallPolicyArn;
+    private String firewallPolicyArn;
 
     public String firewallPolicyArn() {
         return this.firewallPolicyArn;
     }
 
-    public GetFirewallPolicyArgs(String firewallPolicyArn) {
-        this.firewallPolicyArn = Objects.requireNonNull(firewallPolicyArn, "expected parameter 'firewallPolicyArn' to be non-null");
-    }
+    private GetFirewallPolicyArgs() {}
 
-    private GetFirewallPolicyArgs() {
-        this.firewallPolicyArn = null;
+    private GetFirewallPolicyArgs(GetFirewallPolicyArgs $) {
+        this.firewallPolicyArn = $.firewallPolicyArn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetFirewallPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String firewallPolicyArn;
+        private GetFirewallPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetFirewallPolicyArgs();
         }
 
         public Builder(GetFirewallPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.firewallPolicyArn = defaults.firewallPolicyArn;
+            $ = new GetFirewallPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder firewallPolicyArn(String firewallPolicyArn) {
-            this.firewallPolicyArn = Objects.requireNonNull(firewallPolicyArn);
+            $.firewallPolicyArn = firewallPolicyArn;
             return this;
-        }        public GetFirewallPolicyArgs build() {
-            return new GetFirewallPolicyArgs(firewallPolicyArn);
+        }
+
+        public GetFirewallPolicyArgs build() {
+            $.firewallPolicyArn = Objects.requireNonNull($.firewallPolicyArn, "expected parameter 'firewallPolicyArn' to be non-null");
+            return $;
         }
     }
+
 }

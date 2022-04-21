@@ -5,7 +5,6 @@ package com.pulumi.googlenative.cloudchannel_v1;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.cloudchannel_v1.enums.ChannelPartnerLinkLinkState;
 import java.lang.String;
 import java.util.Objects;
@@ -16,7 +15,7 @@ public final class ChannelPartnerLinkArgs extends com.pulumi.resources.ResourceA
     public static final ChannelPartnerLinkArgs Empty = new ChannelPartnerLinkArgs();
 
     @Import(name="accountId", required=true)
-      private final Output<String> accountId;
+    private Output<String> accountId;
 
     public Output<String> accountId() {
         return this.accountId;
@@ -27,7 +26,7 @@ public final class ChannelPartnerLinkArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="linkState", required=true)
-      private final Output<ChannelPartnerLinkLinkState> linkState;
+    private Output<ChannelPartnerLinkLinkState> linkState;
 
     public Output<ChannelPartnerLinkLinkState> linkState() {
         return this.linkState;
@@ -38,76 +37,71 @@ public final class ChannelPartnerLinkArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="resellerCloudIdentityId", required=true)
-      private final Output<String> resellerCloudIdentityId;
+    private Output<String> resellerCloudIdentityId;
 
     public Output<String> resellerCloudIdentityId() {
         return this.resellerCloudIdentityId;
     }
 
-    public ChannelPartnerLinkArgs(
-        Output<String> accountId,
-        Output<ChannelPartnerLinkLinkState> linkState,
-        Output<String> resellerCloudIdentityId) {
-        this.accountId = Objects.requireNonNull(accountId, "expected parameter 'accountId' to be non-null");
-        this.linkState = Objects.requireNonNull(linkState, "expected parameter 'linkState' to be non-null");
-        this.resellerCloudIdentityId = Objects.requireNonNull(resellerCloudIdentityId, "expected parameter 'resellerCloudIdentityId' to be non-null");
-    }
+    private ChannelPartnerLinkArgs() {}
 
-    private ChannelPartnerLinkArgs() {
-        this.accountId = Codegen.empty();
-        this.linkState = Codegen.empty();
-        this.resellerCloudIdentityId = Codegen.empty();
+    private ChannelPartnerLinkArgs(ChannelPartnerLinkArgs $) {
+        this.accountId = $.accountId;
+        this.linkState = $.linkState;
+        this.resellerCloudIdentityId = $.resellerCloudIdentityId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ChannelPartnerLinkArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> accountId;
-        private Output<ChannelPartnerLinkLinkState> linkState;
-        private Output<String> resellerCloudIdentityId;
+        private ChannelPartnerLinkArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ChannelPartnerLinkArgs();
         }
 
         public Builder(ChannelPartnerLinkArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accountId = defaults.accountId;
-    	      this.linkState = defaults.linkState;
-    	      this.resellerCloudIdentityId = defaults.resellerCloudIdentityId;
+            $ = new ChannelPartnerLinkArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder accountId(Output<String> accountId) {
-            this.accountId = Objects.requireNonNull(accountId);
+            $.accountId = accountId;
             return this;
         }
+
         public Builder accountId(String accountId) {
-            this.accountId = Output.of(Objects.requireNonNull(accountId));
-            return this;
+            return accountId(Output.of(accountId));
         }
+
         public Builder linkState(Output<ChannelPartnerLinkLinkState> linkState) {
-            this.linkState = Objects.requireNonNull(linkState);
+            $.linkState = linkState;
             return this;
         }
+
         public Builder linkState(ChannelPartnerLinkLinkState linkState) {
-            this.linkState = Output.of(Objects.requireNonNull(linkState));
-            return this;
+            return linkState(Output.of(linkState));
         }
+
         public Builder resellerCloudIdentityId(Output<String> resellerCloudIdentityId) {
-            this.resellerCloudIdentityId = Objects.requireNonNull(resellerCloudIdentityId);
+            $.resellerCloudIdentityId = resellerCloudIdentityId;
             return this;
         }
+
         public Builder resellerCloudIdentityId(String resellerCloudIdentityId) {
-            this.resellerCloudIdentityId = Output.of(Objects.requireNonNull(resellerCloudIdentityId));
-            return this;
-        }        public ChannelPartnerLinkArgs build() {
-            return new ChannelPartnerLinkArgs(accountId, linkState, resellerCloudIdentityId);
+            return resellerCloudIdentityId(Output.of(resellerCloudIdentityId));
+        }
+
+        public ChannelPartnerLinkArgs build() {
+            $.accountId = Objects.requireNonNull($.accountId, "expected parameter 'accountId' to be non-null");
+            $.linkState = Objects.requireNonNull($.linkState, "expected parameter 'linkState' to be non-null");
+            $.resellerCloudIdentityId = Objects.requireNonNull($.resellerCloudIdentityId, "expected parameter 'resellerCloudIdentityId' to be non-null");
+            return $;
         }
     }
+
 }

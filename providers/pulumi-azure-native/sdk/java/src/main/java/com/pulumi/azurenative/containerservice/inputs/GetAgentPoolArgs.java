@@ -17,7 +17,7 @@ public final class GetAgentPoolArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="agentPoolName", required=true)
-      private final String agentPoolName;
+    private String agentPoolName;
 
     public String agentPoolName() {
         return this.agentPoolName;
@@ -28,7 +28,7 @@ public final class GetAgentPoolArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -39,64 +39,59 @@ public final class GetAgentPoolArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceName", required=true)
-      private final String resourceName;
+    private String resourceName;
 
     public String resourceName() {
         return this.resourceName;
     }
 
-    public GetAgentPoolArgs(
-        String agentPoolName,
-        String resourceGroupName,
-        String resourceName) {
-        this.agentPoolName = Objects.requireNonNull(agentPoolName, "expected parameter 'agentPoolName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.resourceName = Objects.requireNonNull(resourceName, "expected parameter 'resourceName' to be non-null");
-    }
+    private GetAgentPoolArgs() {}
 
-    private GetAgentPoolArgs() {
-        this.agentPoolName = null;
-        this.resourceGroupName = null;
-        this.resourceName = null;
+    private GetAgentPoolArgs(GetAgentPoolArgs $) {
+        this.agentPoolName = $.agentPoolName;
+        this.resourceGroupName = $.resourceGroupName;
+        this.resourceName = $.resourceName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetAgentPoolArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String agentPoolName;
-        private String resourceGroupName;
-        private String resourceName;
+        private GetAgentPoolArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetAgentPoolArgs();
         }
 
         public Builder(GetAgentPoolArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.agentPoolName = defaults.agentPoolName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.resourceName = defaults.resourceName;
+            $ = new GetAgentPoolArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder agentPoolName(String agentPoolName) {
-            this.agentPoolName = Objects.requireNonNull(agentPoolName);
+            $.agentPoolName = agentPoolName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceName(String resourceName) {
-            this.resourceName = Objects.requireNonNull(resourceName);
+            $.resourceName = resourceName;
             return this;
-        }        public GetAgentPoolArgs build() {
-            return new GetAgentPoolArgs(agentPoolName, resourceGroupName, resourceName);
+        }
+
+        public GetAgentPoolArgs build() {
+            $.agentPoolName = Objects.requireNonNull($.agentPoolName, "expected parameter 'agentPoolName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.resourceName = Objects.requireNonNull($.resourceName, "expected parameter 'resourceName' to be non-null");
+            return $;
         }
     }
+
 }

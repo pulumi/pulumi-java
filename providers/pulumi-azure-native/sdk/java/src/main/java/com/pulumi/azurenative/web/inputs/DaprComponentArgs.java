@@ -6,10 +6,10 @@ package com.pulumi.azurenative.web.inputs;
 import com.pulumi.azurenative.web.inputs.DaprMetadataArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class DaprComponentArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="metadata")
-      private final @Nullable Output<List<DaprMetadataArgs>> metadata;
+    private @Nullable Output<List<DaprMetadataArgs>> metadata;
 
-    public Output<List<DaprMetadataArgs>> metadata() {
-        return this.metadata == null ? Codegen.empty() : this.metadata;
+    public Optional<Output<List<DaprMetadataArgs>>> metadata() {
+        return Optional.ofNullable(this.metadata);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class DaprComponentArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -48,10 +48,10 @@ public final class DaprComponentArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="type")
-      private final @Nullable Output<String> type;
+    private @Nullable Output<String> type;
 
-    public Output<String> type() {
-        return this.type == null ? Codegen.empty() : this.type;
+    public Optional<Output<String>> type() {
+        return Optional.ofNullable(this.type);
     }
 
     /**
@@ -59,92 +59,82 @@ public final class DaprComponentArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="version")
-      private final @Nullable Output<String> version;
+    private @Nullable Output<String> version;
 
-    public Output<String> version() {
-        return this.version == null ? Codegen.empty() : this.version;
+    public Optional<Output<String>> version() {
+        return Optional.ofNullable(this.version);
     }
 
-    public DaprComponentArgs(
-        @Nullable Output<List<DaprMetadataArgs>> metadata,
-        @Nullable Output<String> name,
-        @Nullable Output<String> type,
-        @Nullable Output<String> version) {
-        this.metadata = metadata;
-        this.name = name;
-        this.type = type;
-        this.version = version;
-    }
+    private DaprComponentArgs() {}
 
-    private DaprComponentArgs() {
-        this.metadata = Codegen.empty();
-        this.name = Codegen.empty();
-        this.type = Codegen.empty();
-        this.version = Codegen.empty();
+    private DaprComponentArgs(DaprComponentArgs $) {
+        this.metadata = $.metadata;
+        this.name = $.name;
+        this.type = $.type;
+        this.version = $.version;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DaprComponentArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<DaprMetadataArgs>> metadata;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> type;
-        private @Nullable Output<String> version;
+        private DaprComponentArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DaprComponentArgs();
         }
 
         public Builder(DaprComponentArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.metadata = defaults.metadata;
-    	      this.name = defaults.name;
-    	      this.type = defaults.type;
-    	      this.version = defaults.version;
+            $ = new DaprComponentArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder metadata(@Nullable Output<List<DaprMetadataArgs>> metadata) {
-            this.metadata = metadata;
+            $.metadata = metadata;
             return this;
         }
-        public Builder metadata(@Nullable List<DaprMetadataArgs> metadata) {
-            this.metadata = Codegen.ofNullable(metadata);
-            return this;
+
+        public Builder metadata(List<DaprMetadataArgs> metadata) {
+            return metadata(Output.of(metadata));
         }
+
         public Builder metadata(DaprMetadataArgs... metadata) {
             return metadata(List.of(metadata));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder type(@Nullable Output<String> type) {
-            this.type = type;
+            $.type = type;
             return this;
         }
-        public Builder type(@Nullable String type) {
-            this.type = Codegen.ofNullable(type);
-            return this;
+
+        public Builder type(String type) {
+            return type(Output.of(type));
         }
+
         public Builder version(@Nullable Output<String> version) {
-            this.version = version;
+            $.version = version;
             return this;
         }
-        public Builder version(@Nullable String version) {
-            this.version = Codegen.ofNullable(version);
-            return this;
-        }        public DaprComponentArgs build() {
-            return new DaprComponentArgs(metadata, name, type, version);
+
+        public Builder version(String version) {
+            return version(Output.of(version));
+        }
+
+        public DaprComponentArgs build() {
+            return $;
         }
     }
+
 }

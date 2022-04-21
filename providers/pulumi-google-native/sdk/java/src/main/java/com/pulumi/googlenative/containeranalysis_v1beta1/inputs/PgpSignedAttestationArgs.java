@@ -5,10 +5,10 @@ package com.pulumi.googlenative.containeranalysis_v1beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.containeranalysis_v1beta1.enums.PgpSignedAttestationContentType;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class PgpSignedAttestationArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="contentType")
-      private final @Nullable Output<PgpSignedAttestationContentType> contentType;
+    private @Nullable Output<PgpSignedAttestationContentType> contentType;
 
-    public Output<PgpSignedAttestationContentType> contentType() {
-        return this.contentType == null ? Codegen.empty() : this.contentType;
+    public Optional<Output<PgpSignedAttestationContentType>> contentType() {
+        return Optional.ofNullable(this.contentType);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class PgpSignedAttestationArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="pgpKeyId")
-      private final @Nullable Output<String> pgpKeyId;
+    private @Nullable Output<String> pgpKeyId;
 
-    public Output<String> pgpKeyId() {
-        return this.pgpKeyId == null ? Codegen.empty() : this.pgpKeyId;
+    public Optional<Output<String>> pgpKeyId() {
+        return Optional.ofNullable(this.pgpKeyId);
     }
 
     /**
@@ -47,76 +47,69 @@ public final class PgpSignedAttestationArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="signature", required=true)
-      private final Output<String> signature;
+    private Output<String> signature;
 
     public Output<String> signature() {
         return this.signature;
     }
 
-    public PgpSignedAttestationArgs(
-        @Nullable Output<PgpSignedAttestationContentType> contentType,
-        @Nullable Output<String> pgpKeyId,
-        Output<String> signature) {
-        this.contentType = contentType;
-        this.pgpKeyId = pgpKeyId;
-        this.signature = Objects.requireNonNull(signature, "expected parameter 'signature' to be non-null");
-    }
+    private PgpSignedAttestationArgs() {}
 
-    private PgpSignedAttestationArgs() {
-        this.contentType = Codegen.empty();
-        this.pgpKeyId = Codegen.empty();
-        this.signature = Codegen.empty();
+    private PgpSignedAttestationArgs(PgpSignedAttestationArgs $) {
+        this.contentType = $.contentType;
+        this.pgpKeyId = $.pgpKeyId;
+        this.signature = $.signature;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PgpSignedAttestationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<PgpSignedAttestationContentType> contentType;
-        private @Nullable Output<String> pgpKeyId;
-        private Output<String> signature;
+        private PgpSignedAttestationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PgpSignedAttestationArgs();
         }
 
         public Builder(PgpSignedAttestationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.contentType = defaults.contentType;
-    	      this.pgpKeyId = defaults.pgpKeyId;
-    	      this.signature = defaults.signature;
+            $ = new PgpSignedAttestationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder contentType(@Nullable Output<PgpSignedAttestationContentType> contentType) {
-            this.contentType = contentType;
+            $.contentType = contentType;
             return this;
         }
-        public Builder contentType(@Nullable PgpSignedAttestationContentType contentType) {
-            this.contentType = Codegen.ofNullable(contentType);
-            return this;
+
+        public Builder contentType(PgpSignedAttestationContentType contentType) {
+            return contentType(Output.of(contentType));
         }
+
         public Builder pgpKeyId(@Nullable Output<String> pgpKeyId) {
-            this.pgpKeyId = pgpKeyId;
+            $.pgpKeyId = pgpKeyId;
             return this;
         }
-        public Builder pgpKeyId(@Nullable String pgpKeyId) {
-            this.pgpKeyId = Codegen.ofNullable(pgpKeyId);
-            return this;
+
+        public Builder pgpKeyId(String pgpKeyId) {
+            return pgpKeyId(Output.of(pgpKeyId));
         }
+
         public Builder signature(Output<String> signature) {
-            this.signature = Objects.requireNonNull(signature);
+            $.signature = signature;
             return this;
         }
+
         public Builder signature(String signature) {
-            this.signature = Output.of(Objects.requireNonNull(signature));
-            return this;
-        }        public PgpSignedAttestationArgs build() {
-            return new PgpSignedAttestationArgs(contentType, pgpKeyId, signature);
+            return signature(Output.of(signature));
+        }
+
+        public PgpSignedAttestationArgs build() {
+            $.signature = Objects.requireNonNull($.signature, "expected parameter 'signature' to be non-null");
+            return $;
         }
     }
+
 }

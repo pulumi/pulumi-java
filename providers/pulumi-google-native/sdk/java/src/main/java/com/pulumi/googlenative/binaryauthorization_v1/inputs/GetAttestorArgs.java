@@ -15,62 +15,58 @@ public final class GetAttestorArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetAttestorArgs Empty = new GetAttestorArgs();
 
     @Import(name="attestorId", required=true)
-      private final String attestorId;
+    private String attestorId;
 
     public String attestorId() {
         return this.attestorId;
     }
 
     @Import(name="project")
-      private final @Nullable String project;
+    private @Nullable String project;
 
     public Optional<String> project() {
-        return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
+        return Optional.ofNullable(this.project);
     }
 
-    public GetAttestorArgs(
-        String attestorId,
-        @Nullable String project) {
-        this.attestorId = Objects.requireNonNull(attestorId, "expected parameter 'attestorId' to be non-null");
-        this.project = project;
-    }
+    private GetAttestorArgs() {}
 
-    private GetAttestorArgs() {
-        this.attestorId = null;
-        this.project = null;
+    private GetAttestorArgs(GetAttestorArgs $) {
+        this.attestorId = $.attestorId;
+        this.project = $.project;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetAttestorArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String attestorId;
-        private @Nullable String project;
+        private GetAttestorArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetAttestorArgs();
         }
 
         public Builder(GetAttestorArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.attestorId = defaults.attestorId;
-    	      this.project = defaults.project;
+            $ = new GetAttestorArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder attestorId(String attestorId) {
-            this.attestorId = Objects.requireNonNull(attestorId);
+            $.attestorId = attestorId;
             return this;
         }
+
         public Builder project(@Nullable String project) {
-            this.project = project;
+            $.project = project;
             return this;
-        }        public GetAttestorArgs build() {
-            return new GetAttestorArgs(attestorId, project);
+        }
+
+        public GetAttestorArgs build() {
+            $.attestorId = Objects.requireNonNull($.attestorId, "expected parameter 'attestorId' to be non-null");
+            return $;
         }
     }
+
 }

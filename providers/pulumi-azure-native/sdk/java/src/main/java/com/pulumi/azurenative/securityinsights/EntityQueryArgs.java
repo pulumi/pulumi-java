@@ -7,9 +7,9 @@ import com.pulumi.azurenative.securityinsights.enums.CustomEntityQueryKind;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class EntityQueryArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="entityQueryId")
-      private final @Nullable Output<String> entityQueryId;
+    private @Nullable Output<String> entityQueryId;
 
-    public Output<String> entityQueryId() {
-        return this.entityQueryId == null ? Codegen.empty() : this.entityQueryId;
+    public Optional<Output<String>> entityQueryId() {
+        return Optional.ofNullable(this.entityQueryId);
     }
 
     /**
@@ -33,7 +33,7 @@ public final class EntityQueryArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="kind", required=true)
-      private final Output<Either<String,CustomEntityQueryKind>> kind;
+    private Output<Either<String,CustomEntityQueryKind>> kind;
 
     public Output<Either<String,CustomEntityQueryKind>> kind() {
         return this.kind;
@@ -44,7 +44,7 @@ public final class EntityQueryArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="operationalInsightsResourceProvider", required=true)
-      private final Output<String> operationalInsightsResourceProvider;
+    private Output<String> operationalInsightsResourceProvider;
 
     public Output<String> operationalInsightsResourceProvider() {
         return this.operationalInsightsResourceProvider;
@@ -55,7 +55,7 @@ public final class EntityQueryArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -66,102 +66,92 @@ public final class EntityQueryArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="workspaceName", required=true)
-      private final Output<String> workspaceName;
+    private Output<String> workspaceName;
 
     public Output<String> workspaceName() {
         return this.workspaceName;
     }
 
-    public EntityQueryArgs(
-        @Nullable Output<String> entityQueryId,
-        Output<Either<String,CustomEntityQueryKind>> kind,
-        Output<String> operationalInsightsResourceProvider,
-        Output<String> resourceGroupName,
-        Output<String> workspaceName) {
-        this.entityQueryId = entityQueryId;
-        this.kind = Objects.requireNonNull(kind, "expected parameter 'kind' to be non-null");
-        this.operationalInsightsResourceProvider = Objects.requireNonNull(operationalInsightsResourceProvider, "expected parameter 'operationalInsightsResourceProvider' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.workspaceName = Objects.requireNonNull(workspaceName, "expected parameter 'workspaceName' to be non-null");
-    }
+    private EntityQueryArgs() {}
 
-    private EntityQueryArgs() {
-        this.entityQueryId = Codegen.empty();
-        this.kind = Codegen.empty();
-        this.operationalInsightsResourceProvider = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.workspaceName = Codegen.empty();
+    private EntityQueryArgs(EntityQueryArgs $) {
+        this.entityQueryId = $.entityQueryId;
+        this.kind = $.kind;
+        this.operationalInsightsResourceProvider = $.operationalInsightsResourceProvider;
+        this.resourceGroupName = $.resourceGroupName;
+        this.workspaceName = $.workspaceName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EntityQueryArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> entityQueryId;
-        private Output<Either<String,CustomEntityQueryKind>> kind;
-        private Output<String> operationalInsightsResourceProvider;
-        private Output<String> resourceGroupName;
-        private Output<String> workspaceName;
+        private EntityQueryArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new EntityQueryArgs();
         }
 
         public Builder(EntityQueryArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.entityQueryId = defaults.entityQueryId;
-    	      this.kind = defaults.kind;
-    	      this.operationalInsightsResourceProvider = defaults.operationalInsightsResourceProvider;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.workspaceName = defaults.workspaceName;
+            $ = new EntityQueryArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder entityQueryId(@Nullable Output<String> entityQueryId) {
-            this.entityQueryId = entityQueryId;
+            $.entityQueryId = entityQueryId;
             return this;
         }
-        public Builder entityQueryId(@Nullable String entityQueryId) {
-            this.entityQueryId = Codegen.ofNullable(entityQueryId);
-            return this;
+
+        public Builder entityQueryId(String entityQueryId) {
+            return entityQueryId(Output.of(entityQueryId));
         }
+
         public Builder kind(Output<Either<String,CustomEntityQueryKind>> kind) {
-            this.kind = Objects.requireNonNull(kind);
+            $.kind = kind;
             return this;
         }
+
         public Builder kind(Either<String,CustomEntityQueryKind> kind) {
-            this.kind = Output.of(Objects.requireNonNull(kind));
-            return this;
+            return kind(Output.of(kind));
         }
+
         public Builder operationalInsightsResourceProvider(Output<String> operationalInsightsResourceProvider) {
-            this.operationalInsightsResourceProvider = Objects.requireNonNull(operationalInsightsResourceProvider);
+            $.operationalInsightsResourceProvider = operationalInsightsResourceProvider;
             return this;
         }
+
         public Builder operationalInsightsResourceProvider(String operationalInsightsResourceProvider) {
-            this.operationalInsightsResourceProvider = Output.of(Objects.requireNonNull(operationalInsightsResourceProvider));
-            return this;
+            return operationalInsightsResourceProvider(Output.of(operationalInsightsResourceProvider));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder workspaceName(Output<String> workspaceName) {
-            this.workspaceName = Objects.requireNonNull(workspaceName);
+            $.workspaceName = workspaceName;
             return this;
         }
+
         public Builder workspaceName(String workspaceName) {
-            this.workspaceName = Output.of(Objects.requireNonNull(workspaceName));
-            return this;
-        }        public EntityQueryArgs build() {
-            return new EntityQueryArgs(entityQueryId, kind, operationalInsightsResourceProvider, resourceGroupName, workspaceName);
+            return workspaceName(Output.of(workspaceName));
+        }
+
+        public EntityQueryArgs build() {
+            $.kind = Objects.requireNonNull($.kind, "expected parameter 'kind' to be non-null");
+            $.operationalInsightsResourceProvider = Objects.requireNonNull($.operationalInsightsResourceProvider, "expected parameter 'operationalInsightsResourceProvider' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.workspaceName = Objects.requireNonNull($.workspaceName, "expected parameter 'workspaceName' to be non-null");
+            return $;
         }
     }
+
 }

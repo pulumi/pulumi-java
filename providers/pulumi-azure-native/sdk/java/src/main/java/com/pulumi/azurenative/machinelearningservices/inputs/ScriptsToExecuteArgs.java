@@ -6,8 +6,8 @@ package com.pulumi.azurenative.machinelearningservices.inputs;
 import com.pulumi.azurenative.machinelearningservices.inputs.ScriptReferenceArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class ScriptsToExecuteArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="creationScript")
-      private final @Nullable Output<ScriptReferenceArgs> creationScript;
+    private @Nullable Output<ScriptReferenceArgs> creationScript;
 
-    public Output<ScriptReferenceArgs> creationScript() {
-        return this.creationScript == null ? Codegen.empty() : this.creationScript;
+    public Optional<Output<ScriptReferenceArgs>> creationScript() {
+        return Optional.ofNullable(this.creationScript);
     }
 
     /**
@@ -35,63 +35,58 @@ public final class ScriptsToExecuteArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="startupScript")
-      private final @Nullable Output<ScriptReferenceArgs> startupScript;
+    private @Nullable Output<ScriptReferenceArgs> startupScript;
 
-    public Output<ScriptReferenceArgs> startupScript() {
-        return this.startupScript == null ? Codegen.empty() : this.startupScript;
+    public Optional<Output<ScriptReferenceArgs>> startupScript() {
+        return Optional.ofNullable(this.startupScript);
     }
 
-    public ScriptsToExecuteArgs(
-        @Nullable Output<ScriptReferenceArgs> creationScript,
-        @Nullable Output<ScriptReferenceArgs> startupScript) {
-        this.creationScript = creationScript;
-        this.startupScript = startupScript;
-    }
+    private ScriptsToExecuteArgs() {}
 
-    private ScriptsToExecuteArgs() {
-        this.creationScript = Codegen.empty();
-        this.startupScript = Codegen.empty();
+    private ScriptsToExecuteArgs(ScriptsToExecuteArgs $) {
+        this.creationScript = $.creationScript;
+        this.startupScript = $.startupScript;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ScriptsToExecuteArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<ScriptReferenceArgs> creationScript;
-        private @Nullable Output<ScriptReferenceArgs> startupScript;
+        private ScriptsToExecuteArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ScriptsToExecuteArgs();
         }
 
         public Builder(ScriptsToExecuteArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.creationScript = defaults.creationScript;
-    	      this.startupScript = defaults.startupScript;
+            $ = new ScriptsToExecuteArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder creationScript(@Nullable Output<ScriptReferenceArgs> creationScript) {
-            this.creationScript = creationScript;
+            $.creationScript = creationScript;
             return this;
         }
-        public Builder creationScript(@Nullable ScriptReferenceArgs creationScript) {
-            this.creationScript = Codegen.ofNullable(creationScript);
-            return this;
+
+        public Builder creationScript(ScriptReferenceArgs creationScript) {
+            return creationScript(Output.of(creationScript));
         }
+
         public Builder startupScript(@Nullable Output<ScriptReferenceArgs> startupScript) {
-            this.startupScript = startupScript;
+            $.startupScript = startupScript;
             return this;
         }
-        public Builder startupScript(@Nullable ScriptReferenceArgs startupScript) {
-            this.startupScript = Codegen.ofNullable(startupScript);
-            return this;
-        }        public ScriptsToExecuteArgs build() {
-            return new ScriptsToExecuteArgs(creationScript, startupScript);
+
+        public Builder startupScript(ScriptReferenceArgs startupScript) {
+            return startupScript(Output.of(startupScript));
+        }
+
+        public ScriptsToExecuteArgs build() {
+            return $;
         }
     }
+
 }

@@ -23,7 +23,7 @@ public final class OracleColumnResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="column", required=true)
-      private final String column;
+    private String column;
 
     public String column() {
         return this.column;
@@ -34,7 +34,7 @@ public final class OracleColumnResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="dataType", required=true)
-      private final String dataType;
+    private String dataType;
 
     public String dataType() {
         return this.dataType;
@@ -45,7 +45,7 @@ public final class OracleColumnResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="encoding", required=true)
-      private final String encoding;
+    private String encoding;
 
     public String encoding() {
         return this.encoding;
@@ -56,7 +56,7 @@ public final class OracleColumnResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="length", required=true)
-      private final Integer length;
+    private Integer length;
 
     public Integer length() {
         return this.length;
@@ -67,7 +67,7 @@ public final class OracleColumnResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="nullable", required=true)
-      private final Boolean nullable;
+    private Boolean nullable;
 
     public Boolean nullable() {
         return this.nullable;
@@ -78,7 +78,7 @@ public final class OracleColumnResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="ordinalPosition", required=true)
-      private final Integer ordinalPosition;
+    private Integer ordinalPosition;
 
     public Integer ordinalPosition() {
         return this.ordinalPosition;
@@ -89,7 +89,7 @@ public final class OracleColumnResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="precision", required=true)
-      private final Integer precision;
+    private Integer precision;
 
     public Integer precision() {
         return this.precision;
@@ -100,7 +100,7 @@ public final class OracleColumnResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="primaryKey", required=true)
-      private final Boolean primaryKey;
+    private Boolean primaryKey;
 
     public Boolean primaryKey() {
         return this.primaryKey;
@@ -111,118 +111,101 @@ public final class OracleColumnResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="scale", required=true)
-      private final Integer scale;
+    private Integer scale;
 
     public Integer scale() {
         return this.scale;
     }
 
-    public OracleColumnResponse(
-        String column,
-        String dataType,
-        String encoding,
-        Integer length,
-        Boolean nullable,
-        Integer ordinalPosition,
-        Integer precision,
-        Boolean primaryKey,
-        Integer scale) {
-        this.column = Objects.requireNonNull(column, "expected parameter 'column' to be non-null");
-        this.dataType = Objects.requireNonNull(dataType, "expected parameter 'dataType' to be non-null");
-        this.encoding = Objects.requireNonNull(encoding, "expected parameter 'encoding' to be non-null");
-        this.length = Objects.requireNonNull(length, "expected parameter 'length' to be non-null");
-        this.nullable = Objects.requireNonNull(nullable, "expected parameter 'nullable' to be non-null");
-        this.ordinalPosition = Objects.requireNonNull(ordinalPosition, "expected parameter 'ordinalPosition' to be non-null");
-        this.precision = Objects.requireNonNull(precision, "expected parameter 'precision' to be non-null");
-        this.primaryKey = Objects.requireNonNull(primaryKey, "expected parameter 'primaryKey' to be non-null");
-        this.scale = Objects.requireNonNull(scale, "expected parameter 'scale' to be non-null");
-    }
+    private OracleColumnResponse() {}
 
-    private OracleColumnResponse() {
-        this.column = null;
-        this.dataType = null;
-        this.encoding = null;
-        this.length = null;
-        this.nullable = null;
-        this.ordinalPosition = null;
-        this.precision = null;
-        this.primaryKey = null;
-        this.scale = null;
+    private OracleColumnResponse(OracleColumnResponse $) {
+        this.column = $.column;
+        this.dataType = $.dataType;
+        this.encoding = $.encoding;
+        this.length = $.length;
+        this.nullable = $.nullable;
+        this.ordinalPosition = $.ordinalPosition;
+        this.precision = $.precision;
+        this.primaryKey = $.primaryKey;
+        this.scale = $.scale;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(OracleColumnResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String column;
-        private String dataType;
-        private String encoding;
-        private Integer length;
-        private Boolean nullable;
-        private Integer ordinalPosition;
-        private Integer precision;
-        private Boolean primaryKey;
-        private Integer scale;
+        private OracleColumnResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new OracleColumnResponse();
         }
 
         public Builder(OracleColumnResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.column = defaults.column;
-    	      this.dataType = defaults.dataType;
-    	      this.encoding = defaults.encoding;
-    	      this.length = defaults.length;
-    	      this.nullable = defaults.nullable;
-    	      this.ordinalPosition = defaults.ordinalPosition;
-    	      this.precision = defaults.precision;
-    	      this.primaryKey = defaults.primaryKey;
-    	      this.scale = defaults.scale;
+            $ = new OracleColumnResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder column(String column) {
-            this.column = Objects.requireNonNull(column);
+            $.column = column;
             return this;
         }
+
         public Builder dataType(String dataType) {
-            this.dataType = Objects.requireNonNull(dataType);
+            $.dataType = dataType;
             return this;
         }
+
         public Builder encoding(String encoding) {
-            this.encoding = Objects.requireNonNull(encoding);
+            $.encoding = encoding;
             return this;
         }
+
         public Builder length(Integer length) {
-            this.length = Objects.requireNonNull(length);
+            $.length = length;
             return this;
         }
+
         public Builder nullable(Boolean nullable) {
-            this.nullable = Objects.requireNonNull(nullable);
+            $.nullable = nullable;
             return this;
         }
+
         public Builder ordinalPosition(Integer ordinalPosition) {
-            this.ordinalPosition = Objects.requireNonNull(ordinalPosition);
+            $.ordinalPosition = ordinalPosition;
             return this;
         }
+
         public Builder precision(Integer precision) {
-            this.precision = Objects.requireNonNull(precision);
+            $.precision = precision;
             return this;
         }
+
         public Builder primaryKey(Boolean primaryKey) {
-            this.primaryKey = Objects.requireNonNull(primaryKey);
+            $.primaryKey = primaryKey;
             return this;
         }
+
         public Builder scale(Integer scale) {
-            this.scale = Objects.requireNonNull(scale);
+            $.scale = scale;
             return this;
-        }        public OracleColumnResponse build() {
-            return new OracleColumnResponse(column, dataType, encoding, length, nullable, ordinalPosition, precision, primaryKey, scale);
+        }
+
+        public OracleColumnResponse build() {
+            $.column = Objects.requireNonNull($.column, "expected parameter 'column' to be non-null");
+            $.dataType = Objects.requireNonNull($.dataType, "expected parameter 'dataType' to be non-null");
+            $.encoding = Objects.requireNonNull($.encoding, "expected parameter 'encoding' to be non-null");
+            $.length = Objects.requireNonNull($.length, "expected parameter 'length' to be non-null");
+            $.nullable = Objects.requireNonNull($.nullable, "expected parameter 'nullable' to be non-null");
+            $.ordinalPosition = Objects.requireNonNull($.ordinalPosition, "expected parameter 'ordinalPosition' to be non-null");
+            $.precision = Objects.requireNonNull($.precision, "expected parameter 'precision' to be non-null");
+            $.primaryKey = Objects.requireNonNull($.primaryKey, "expected parameter 'primaryKey' to be non-null");
+            $.scale = Objects.requireNonNull($.scale, "expected parameter 'scale' to be non-null");
+            return $;
         }
     }
+
 }

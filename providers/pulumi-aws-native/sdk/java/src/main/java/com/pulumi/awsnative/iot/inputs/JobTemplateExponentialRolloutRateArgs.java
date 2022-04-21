@@ -6,7 +6,6 @@ package com.pulumi.awsnative.iot.inputs;
 import com.pulumi.awsnative.iot.inputs.JobTemplateRateIncreaseCriteriaArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.lang.Integer;
 import java.util.Objects;
@@ -25,7 +24,7 @@ public final class JobTemplateExponentialRolloutRateArgs extends com.pulumi.reso
      * 
      */
     @Import(name="baseRatePerMinute", required=true)
-      private final Output<Integer> baseRatePerMinute;
+    private Output<Integer> baseRatePerMinute;
 
     public Output<Integer> baseRatePerMinute() {
         return this.baseRatePerMinute;
@@ -36,7 +35,7 @@ public final class JobTemplateExponentialRolloutRateArgs extends com.pulumi.reso
      * 
      */
     @Import(name="incrementFactor", required=true)
-      private final Output<Double> incrementFactor;
+    private Output<Double> incrementFactor;
 
     public Output<Double> incrementFactor() {
         return this.incrementFactor;
@@ -47,76 +46,71 @@ public final class JobTemplateExponentialRolloutRateArgs extends com.pulumi.reso
      * 
      */
     @Import(name="rateIncreaseCriteria", required=true)
-      private final Output<JobTemplateRateIncreaseCriteriaArgs> rateIncreaseCriteria;
+    private Output<JobTemplateRateIncreaseCriteriaArgs> rateIncreaseCriteria;
 
     public Output<JobTemplateRateIncreaseCriteriaArgs> rateIncreaseCriteria() {
         return this.rateIncreaseCriteria;
     }
 
-    public JobTemplateExponentialRolloutRateArgs(
-        Output<Integer> baseRatePerMinute,
-        Output<Double> incrementFactor,
-        Output<JobTemplateRateIncreaseCriteriaArgs> rateIncreaseCriteria) {
-        this.baseRatePerMinute = Objects.requireNonNull(baseRatePerMinute, "expected parameter 'baseRatePerMinute' to be non-null");
-        this.incrementFactor = Objects.requireNonNull(incrementFactor, "expected parameter 'incrementFactor' to be non-null");
-        this.rateIncreaseCriteria = Objects.requireNonNull(rateIncreaseCriteria, "expected parameter 'rateIncreaseCriteria' to be non-null");
-    }
+    private JobTemplateExponentialRolloutRateArgs() {}
 
-    private JobTemplateExponentialRolloutRateArgs() {
-        this.baseRatePerMinute = Codegen.empty();
-        this.incrementFactor = Codegen.empty();
-        this.rateIncreaseCriteria = Codegen.empty();
+    private JobTemplateExponentialRolloutRateArgs(JobTemplateExponentialRolloutRateArgs $) {
+        this.baseRatePerMinute = $.baseRatePerMinute;
+        this.incrementFactor = $.incrementFactor;
+        this.rateIncreaseCriteria = $.rateIncreaseCriteria;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(JobTemplateExponentialRolloutRateArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Integer> baseRatePerMinute;
-        private Output<Double> incrementFactor;
-        private Output<JobTemplateRateIncreaseCriteriaArgs> rateIncreaseCriteria;
+        private JobTemplateExponentialRolloutRateArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new JobTemplateExponentialRolloutRateArgs();
         }
 
         public Builder(JobTemplateExponentialRolloutRateArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.baseRatePerMinute = defaults.baseRatePerMinute;
-    	      this.incrementFactor = defaults.incrementFactor;
-    	      this.rateIncreaseCriteria = defaults.rateIncreaseCriteria;
+            $ = new JobTemplateExponentialRolloutRateArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder baseRatePerMinute(Output<Integer> baseRatePerMinute) {
-            this.baseRatePerMinute = Objects.requireNonNull(baseRatePerMinute);
+            $.baseRatePerMinute = baseRatePerMinute;
             return this;
         }
+
         public Builder baseRatePerMinute(Integer baseRatePerMinute) {
-            this.baseRatePerMinute = Output.of(Objects.requireNonNull(baseRatePerMinute));
-            return this;
+            return baseRatePerMinute(Output.of(baseRatePerMinute));
         }
+
         public Builder incrementFactor(Output<Double> incrementFactor) {
-            this.incrementFactor = Objects.requireNonNull(incrementFactor);
+            $.incrementFactor = incrementFactor;
             return this;
         }
+
         public Builder incrementFactor(Double incrementFactor) {
-            this.incrementFactor = Output.of(Objects.requireNonNull(incrementFactor));
-            return this;
+            return incrementFactor(Output.of(incrementFactor));
         }
+
         public Builder rateIncreaseCriteria(Output<JobTemplateRateIncreaseCriteriaArgs> rateIncreaseCriteria) {
-            this.rateIncreaseCriteria = Objects.requireNonNull(rateIncreaseCriteria);
+            $.rateIncreaseCriteria = rateIncreaseCriteria;
             return this;
         }
+
         public Builder rateIncreaseCriteria(JobTemplateRateIncreaseCriteriaArgs rateIncreaseCriteria) {
-            this.rateIncreaseCriteria = Output.of(Objects.requireNonNull(rateIncreaseCriteria));
-            return this;
-        }        public JobTemplateExponentialRolloutRateArgs build() {
-            return new JobTemplateExponentialRolloutRateArgs(baseRatePerMinute, incrementFactor, rateIncreaseCriteria);
+            return rateIncreaseCriteria(Output.of(rateIncreaseCriteria));
+        }
+
+        public JobTemplateExponentialRolloutRateArgs build() {
+            $.baseRatePerMinute = Objects.requireNonNull($.baseRatePerMinute, "expected parameter 'baseRatePerMinute' to be non-null");
+            $.incrementFactor = Objects.requireNonNull($.incrementFactor, "expected parameter 'incrementFactor' to be non-null");
+            $.rateIncreaseCriteria = Objects.requireNonNull($.rateIncreaseCriteria, "expected parameter 'rateIncreaseCriteria' to be non-null");
+            return $;
         }
     }
+
 }

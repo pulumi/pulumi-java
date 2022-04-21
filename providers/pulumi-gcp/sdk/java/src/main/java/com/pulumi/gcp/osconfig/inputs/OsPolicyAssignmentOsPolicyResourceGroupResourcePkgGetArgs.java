@@ -5,7 +5,6 @@ package com.pulumi.gcp.osconfig.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.osconfig.inputs.OsPolicyAssignmentOsPolicyResourceGroupResourcePkgAptGetArgs;
 import com.pulumi.gcp.osconfig.inputs.OsPolicyAssignmentOsPolicyResourceGroupResourcePkgDebGetArgs;
 import com.pulumi.gcp.osconfig.inputs.OsPolicyAssignmentOsPolicyResourceGroupResourcePkgGoogetGetArgs;
@@ -15,6 +14,7 @@ import com.pulumi.gcp.osconfig.inputs.OsPolicyAssignmentOsPolicyResourceGroupRes
 import com.pulumi.gcp.osconfig.inputs.OsPolicyAssignmentOsPolicyResourceGroupResourcePkgZypperGetArgs;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +27,10 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourcePkgGetArgs ext
      * 
      */
     @Import(name="apt")
-      private final @Nullable Output<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgAptGetArgs> apt;
+    private @Nullable Output<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgAptGetArgs> apt;
 
-    public Output<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgAptGetArgs> apt() {
-        return this.apt == null ? Codegen.empty() : this.apt;
+    public Optional<Output<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgAptGetArgs>> apt() {
+        return Optional.ofNullable(this.apt);
     }
 
     /**
@@ -38,10 +38,10 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourcePkgGetArgs ext
      * 
      */
     @Import(name="deb")
-      private final @Nullable Output<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgDebGetArgs> deb;
+    private @Nullable Output<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgDebGetArgs> deb;
 
-    public Output<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgDebGetArgs> deb() {
-        return this.deb == null ? Codegen.empty() : this.deb;
+    public Optional<Output<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgDebGetArgs>> deb() {
+        return Optional.ofNullable(this.deb);
     }
 
     /**
@@ -49,7 +49,7 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourcePkgGetArgs ext
      * 
      */
     @Import(name="desiredState", required=true)
-      private final Output<String> desiredState;
+    private Output<String> desiredState;
 
     public Output<String> desiredState() {
         return this.desiredState;
@@ -60,10 +60,10 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourcePkgGetArgs ext
      * 
      */
     @Import(name="googet")
-      private final @Nullable Output<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgGoogetGetArgs> googet;
+    private @Nullable Output<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgGoogetGetArgs> googet;
 
-    public Output<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgGoogetGetArgs> googet() {
-        return this.googet == null ? Codegen.empty() : this.googet;
+    public Optional<Output<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgGoogetGetArgs>> googet() {
+        return Optional.ofNullable(this.googet);
     }
 
     /**
@@ -71,10 +71,10 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourcePkgGetArgs ext
      * 
      */
     @Import(name="msi")
-      private final @Nullable Output<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgMsiGetArgs> msi;
+    private @Nullable Output<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgMsiGetArgs> msi;
 
-    public Output<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgMsiGetArgs> msi() {
-        return this.msi == null ? Codegen.empty() : this.msi;
+    public Optional<Output<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgMsiGetArgs>> msi() {
+        return Optional.ofNullable(this.msi);
     }
 
     /**
@@ -82,10 +82,10 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourcePkgGetArgs ext
      * 
      */
     @Import(name="rpm")
-      private final @Nullable Output<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgRpmGetArgs> rpm;
+    private @Nullable Output<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgRpmGetArgs> rpm;
 
-    public Output<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgRpmGetArgs> rpm() {
-        return this.rpm == null ? Codegen.empty() : this.rpm;
+    public Optional<Output<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgRpmGetArgs>> rpm() {
+        return Optional.ofNullable(this.rpm);
     }
 
     /**
@@ -93,10 +93,10 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourcePkgGetArgs ext
      * 
      */
     @Import(name="yum")
-      private final @Nullable Output<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgYumGetArgs> yum;
+    private @Nullable Output<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgYumGetArgs> yum;
 
-    public Output<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgYumGetArgs> yum() {
-        return this.yum == null ? Codegen.empty() : this.yum;
+    public Optional<Output<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgYumGetArgs>> yum() {
+        return Optional.ofNullable(this.yum);
     }
 
     /**
@@ -104,141 +104,119 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourcePkgGetArgs ext
      * 
      */
     @Import(name="zypper")
-      private final @Nullable Output<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgZypperGetArgs> zypper;
+    private @Nullable Output<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgZypperGetArgs> zypper;
 
-    public Output<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgZypperGetArgs> zypper() {
-        return this.zypper == null ? Codegen.empty() : this.zypper;
+    public Optional<Output<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgZypperGetArgs>> zypper() {
+        return Optional.ofNullable(this.zypper);
     }
 
-    public OsPolicyAssignmentOsPolicyResourceGroupResourcePkgGetArgs(
-        @Nullable Output<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgAptGetArgs> apt,
-        @Nullable Output<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgDebGetArgs> deb,
-        Output<String> desiredState,
-        @Nullable Output<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgGoogetGetArgs> googet,
-        @Nullable Output<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgMsiGetArgs> msi,
-        @Nullable Output<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgRpmGetArgs> rpm,
-        @Nullable Output<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgYumGetArgs> yum,
-        @Nullable Output<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgZypperGetArgs> zypper) {
-        this.apt = apt;
-        this.deb = deb;
-        this.desiredState = Objects.requireNonNull(desiredState, "expected parameter 'desiredState' to be non-null");
-        this.googet = googet;
-        this.msi = msi;
-        this.rpm = rpm;
-        this.yum = yum;
-        this.zypper = zypper;
-    }
+    private OsPolicyAssignmentOsPolicyResourceGroupResourcePkgGetArgs() {}
 
-    private OsPolicyAssignmentOsPolicyResourceGroupResourcePkgGetArgs() {
-        this.apt = Codegen.empty();
-        this.deb = Codegen.empty();
-        this.desiredState = Codegen.empty();
-        this.googet = Codegen.empty();
-        this.msi = Codegen.empty();
-        this.rpm = Codegen.empty();
-        this.yum = Codegen.empty();
-        this.zypper = Codegen.empty();
+    private OsPolicyAssignmentOsPolicyResourceGroupResourcePkgGetArgs(OsPolicyAssignmentOsPolicyResourceGroupResourcePkgGetArgs $) {
+        this.apt = $.apt;
+        this.deb = $.deb;
+        this.desiredState = $.desiredState;
+        this.googet = $.googet;
+        this.msi = $.msi;
+        this.rpm = $.rpm;
+        this.yum = $.yum;
+        this.zypper = $.zypper;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(OsPolicyAssignmentOsPolicyResourceGroupResourcePkgGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgAptGetArgs> apt;
-        private @Nullable Output<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgDebGetArgs> deb;
-        private Output<String> desiredState;
-        private @Nullable Output<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgGoogetGetArgs> googet;
-        private @Nullable Output<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgMsiGetArgs> msi;
-        private @Nullable Output<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgRpmGetArgs> rpm;
-        private @Nullable Output<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgYumGetArgs> yum;
-        private @Nullable Output<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgZypperGetArgs> zypper;
+        private OsPolicyAssignmentOsPolicyResourceGroupResourcePkgGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new OsPolicyAssignmentOsPolicyResourceGroupResourcePkgGetArgs();
         }
 
         public Builder(OsPolicyAssignmentOsPolicyResourceGroupResourcePkgGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.apt = defaults.apt;
-    	      this.deb = defaults.deb;
-    	      this.desiredState = defaults.desiredState;
-    	      this.googet = defaults.googet;
-    	      this.msi = defaults.msi;
-    	      this.rpm = defaults.rpm;
-    	      this.yum = defaults.yum;
-    	      this.zypper = defaults.zypper;
+            $ = new OsPolicyAssignmentOsPolicyResourceGroupResourcePkgGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder apt(@Nullable Output<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgAptGetArgs> apt) {
-            this.apt = apt;
+            $.apt = apt;
             return this;
         }
-        public Builder apt(@Nullable OsPolicyAssignmentOsPolicyResourceGroupResourcePkgAptGetArgs apt) {
-            this.apt = Codegen.ofNullable(apt);
-            return this;
+
+        public Builder apt(OsPolicyAssignmentOsPolicyResourceGroupResourcePkgAptGetArgs apt) {
+            return apt(Output.of(apt));
         }
+
         public Builder deb(@Nullable Output<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgDebGetArgs> deb) {
-            this.deb = deb;
+            $.deb = deb;
             return this;
         }
-        public Builder deb(@Nullable OsPolicyAssignmentOsPolicyResourceGroupResourcePkgDebGetArgs deb) {
-            this.deb = Codegen.ofNullable(deb);
-            return this;
+
+        public Builder deb(OsPolicyAssignmentOsPolicyResourceGroupResourcePkgDebGetArgs deb) {
+            return deb(Output.of(deb));
         }
+
         public Builder desiredState(Output<String> desiredState) {
-            this.desiredState = Objects.requireNonNull(desiredState);
+            $.desiredState = desiredState;
             return this;
         }
+
         public Builder desiredState(String desiredState) {
-            this.desiredState = Output.of(Objects.requireNonNull(desiredState));
-            return this;
+            return desiredState(Output.of(desiredState));
         }
+
         public Builder googet(@Nullable Output<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgGoogetGetArgs> googet) {
-            this.googet = googet;
+            $.googet = googet;
             return this;
         }
-        public Builder googet(@Nullable OsPolicyAssignmentOsPolicyResourceGroupResourcePkgGoogetGetArgs googet) {
-            this.googet = Codegen.ofNullable(googet);
-            return this;
+
+        public Builder googet(OsPolicyAssignmentOsPolicyResourceGroupResourcePkgGoogetGetArgs googet) {
+            return googet(Output.of(googet));
         }
+
         public Builder msi(@Nullable Output<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgMsiGetArgs> msi) {
-            this.msi = msi;
+            $.msi = msi;
             return this;
         }
-        public Builder msi(@Nullable OsPolicyAssignmentOsPolicyResourceGroupResourcePkgMsiGetArgs msi) {
-            this.msi = Codegen.ofNullable(msi);
-            return this;
+
+        public Builder msi(OsPolicyAssignmentOsPolicyResourceGroupResourcePkgMsiGetArgs msi) {
+            return msi(Output.of(msi));
         }
+
         public Builder rpm(@Nullable Output<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgRpmGetArgs> rpm) {
-            this.rpm = rpm;
+            $.rpm = rpm;
             return this;
         }
-        public Builder rpm(@Nullable OsPolicyAssignmentOsPolicyResourceGroupResourcePkgRpmGetArgs rpm) {
-            this.rpm = Codegen.ofNullable(rpm);
-            return this;
+
+        public Builder rpm(OsPolicyAssignmentOsPolicyResourceGroupResourcePkgRpmGetArgs rpm) {
+            return rpm(Output.of(rpm));
         }
+
         public Builder yum(@Nullable Output<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgYumGetArgs> yum) {
-            this.yum = yum;
+            $.yum = yum;
             return this;
         }
-        public Builder yum(@Nullable OsPolicyAssignmentOsPolicyResourceGroupResourcePkgYumGetArgs yum) {
-            this.yum = Codegen.ofNullable(yum);
-            return this;
+
+        public Builder yum(OsPolicyAssignmentOsPolicyResourceGroupResourcePkgYumGetArgs yum) {
+            return yum(Output.of(yum));
         }
+
         public Builder zypper(@Nullable Output<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgZypperGetArgs> zypper) {
-            this.zypper = zypper;
+            $.zypper = zypper;
             return this;
         }
-        public Builder zypper(@Nullable OsPolicyAssignmentOsPolicyResourceGroupResourcePkgZypperGetArgs zypper) {
-            this.zypper = Codegen.ofNullable(zypper);
-            return this;
-        }        public OsPolicyAssignmentOsPolicyResourceGroupResourcePkgGetArgs build() {
-            return new OsPolicyAssignmentOsPolicyResourceGroupResourcePkgGetArgs(apt, deb, desiredState, googet, msi, rpm, yum, zypper);
+
+        public Builder zypper(OsPolicyAssignmentOsPolicyResourceGroupResourcePkgZypperGetArgs zypper) {
+            return zypper(Output.of(zypper));
+        }
+
+        public OsPolicyAssignmentOsPolicyResourceGroupResourcePkgGetArgs build() {
+            $.desiredState = Objects.requireNonNull($.desiredState, "expected parameter 'desiredState' to be non-null");
+            return $;
         }
     }
+
 }

@@ -17,45 +17,45 @@ public final class GetEgressOnlyInternetGatewayArgs extends com.pulumi.resources
      * 
      */
     @Import(name="id", required=true)
-      private final String id;
+    private String id;
 
     public String id() {
         return this.id;
     }
 
-    public GetEgressOnlyInternetGatewayArgs(String id) {
-        this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
-    }
+    private GetEgressOnlyInternetGatewayArgs() {}
 
-    private GetEgressOnlyInternetGatewayArgs() {
-        this.id = null;
+    private GetEgressOnlyInternetGatewayArgs(GetEgressOnlyInternetGatewayArgs $) {
+        this.id = $.id;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetEgressOnlyInternetGatewayArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String id;
+        private GetEgressOnlyInternetGatewayArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetEgressOnlyInternetGatewayArgs();
         }
 
         public Builder(GetEgressOnlyInternetGatewayArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.id = defaults.id;
+            $ = new GetEgressOnlyInternetGatewayArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder id(String id) {
-            this.id = Objects.requireNonNull(id);
+            $.id = id;
             return this;
-        }        public GetEgressOnlyInternetGatewayArgs build() {
-            return new GetEgressOnlyInternetGatewayArgs(id);
+        }
+
+        public GetEgressOnlyInternetGatewayArgs build() {
+            $.id = Objects.requireNonNull($.id, "expected parameter 'id' to be non-null");
+            return $;
         }
     }
+
 }

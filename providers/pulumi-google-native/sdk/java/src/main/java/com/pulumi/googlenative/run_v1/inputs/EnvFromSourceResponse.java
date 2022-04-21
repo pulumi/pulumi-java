@@ -23,7 +23,7 @@ public final class EnvFromSourceResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="configMapRef", required=true)
-      private final ConfigMapEnvSourceResponse configMapRef;
+    private ConfigMapEnvSourceResponse configMapRef;
 
     public ConfigMapEnvSourceResponse configMapRef() {
         return this.configMapRef;
@@ -34,7 +34,7 @@ public final class EnvFromSourceResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="prefix", required=true)
-      private final String prefix;
+    private String prefix;
 
     public String prefix() {
         return this.prefix;
@@ -45,64 +45,59 @@ public final class EnvFromSourceResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="secretRef", required=true)
-      private final SecretEnvSourceResponse secretRef;
+    private SecretEnvSourceResponse secretRef;
 
     public SecretEnvSourceResponse secretRef() {
         return this.secretRef;
     }
 
-    public EnvFromSourceResponse(
-        ConfigMapEnvSourceResponse configMapRef,
-        String prefix,
-        SecretEnvSourceResponse secretRef) {
-        this.configMapRef = Objects.requireNonNull(configMapRef, "expected parameter 'configMapRef' to be non-null");
-        this.prefix = Objects.requireNonNull(prefix, "expected parameter 'prefix' to be non-null");
-        this.secretRef = Objects.requireNonNull(secretRef, "expected parameter 'secretRef' to be non-null");
-    }
+    private EnvFromSourceResponse() {}
 
-    private EnvFromSourceResponse() {
-        this.configMapRef = null;
-        this.prefix = null;
-        this.secretRef = null;
+    private EnvFromSourceResponse(EnvFromSourceResponse $) {
+        this.configMapRef = $.configMapRef;
+        this.prefix = $.prefix;
+        this.secretRef = $.secretRef;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EnvFromSourceResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private ConfigMapEnvSourceResponse configMapRef;
-        private String prefix;
-        private SecretEnvSourceResponse secretRef;
+        private EnvFromSourceResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new EnvFromSourceResponse();
         }
 
         public Builder(EnvFromSourceResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.configMapRef = defaults.configMapRef;
-    	      this.prefix = defaults.prefix;
-    	      this.secretRef = defaults.secretRef;
+            $ = new EnvFromSourceResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder configMapRef(ConfigMapEnvSourceResponse configMapRef) {
-            this.configMapRef = Objects.requireNonNull(configMapRef);
+            $.configMapRef = configMapRef;
             return this;
         }
+
         public Builder prefix(String prefix) {
-            this.prefix = Objects.requireNonNull(prefix);
+            $.prefix = prefix;
             return this;
         }
+
         public Builder secretRef(SecretEnvSourceResponse secretRef) {
-            this.secretRef = Objects.requireNonNull(secretRef);
+            $.secretRef = secretRef;
             return this;
-        }        public EnvFromSourceResponse build() {
-            return new EnvFromSourceResponse(configMapRef, prefix, secretRef);
+        }
+
+        public EnvFromSourceResponse build() {
+            $.configMapRef = Objects.requireNonNull($.configMapRef, "expected parameter 'configMapRef' to be non-null");
+            $.prefix = Objects.requireNonNull($.prefix, "expected parameter 'prefix' to be non-null");
+            $.secretRef = Objects.requireNonNull($.secretRef, "expected parameter 'secretRef' to be non-null");
+            return $;
         }
     }
+
 }

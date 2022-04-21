@@ -22,7 +22,7 @@ public final class GoogleCloudMlV1__MetricSpecResponse extends com.pulumi.resour
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -33,55 +33,52 @@ public final class GoogleCloudMlV1__MetricSpecResponse extends com.pulumi.resour
      * 
      */
     @Import(name="target", required=true)
-      private final Integer target;
+    private Integer target;
 
     public Integer target() {
         return this.target;
     }
 
-    public GoogleCloudMlV1__MetricSpecResponse(
-        String name,
-        Integer target) {
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.target = Objects.requireNonNull(target, "expected parameter 'target' to be non-null");
-    }
+    private GoogleCloudMlV1__MetricSpecResponse() {}
 
-    private GoogleCloudMlV1__MetricSpecResponse() {
-        this.name = null;
-        this.target = null;
+    private GoogleCloudMlV1__MetricSpecResponse(GoogleCloudMlV1__MetricSpecResponse $) {
+        this.name = $.name;
+        this.target = $.target;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudMlV1__MetricSpecResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String name;
-        private Integer target;
+        private GoogleCloudMlV1__MetricSpecResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudMlV1__MetricSpecResponse();
         }
 
         public Builder(GoogleCloudMlV1__MetricSpecResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.target = defaults.target;
+            $ = new GoogleCloudMlV1__MetricSpecResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder target(Integer target) {
-            this.target = Objects.requireNonNull(target);
+            $.target = target;
             return this;
-        }        public GoogleCloudMlV1__MetricSpecResponse build() {
-            return new GoogleCloudMlV1__MetricSpecResponse(name, target);
+        }
+
+        public GoogleCloudMlV1__MetricSpecResponse build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.target = Objects.requireNonNull($.target, "expected parameter 'target' to be non-null");
+            return $;
         }
     }
+
 }

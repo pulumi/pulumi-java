@@ -5,10 +5,10 @@ package com.pulumi.googlenative.jobs_v3.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.jobs_v3.enums.ProcessingOptionsHtmlSanitization;
 import java.lang.Boolean;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class ProcessingOptionsArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="disableStreetAddressResolution")
-      private final @Nullable Output<Boolean> disableStreetAddressResolution;
+    private @Nullable Output<Boolean> disableStreetAddressResolution;
 
-    public Output<Boolean> disableStreetAddressResolution() {
-        return this.disableStreetAddressResolution == null ? Codegen.empty() : this.disableStreetAddressResolution;
+    public Optional<Output<Boolean>> disableStreetAddressResolution() {
+        return Optional.ofNullable(this.disableStreetAddressResolution);
     }
 
     /**
@@ -36,63 +36,58 @@ public final class ProcessingOptionsArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="htmlSanitization")
-      private final @Nullable Output<ProcessingOptionsHtmlSanitization> htmlSanitization;
+    private @Nullable Output<ProcessingOptionsHtmlSanitization> htmlSanitization;
 
-    public Output<ProcessingOptionsHtmlSanitization> htmlSanitization() {
-        return this.htmlSanitization == null ? Codegen.empty() : this.htmlSanitization;
+    public Optional<Output<ProcessingOptionsHtmlSanitization>> htmlSanitization() {
+        return Optional.ofNullable(this.htmlSanitization);
     }
 
-    public ProcessingOptionsArgs(
-        @Nullable Output<Boolean> disableStreetAddressResolution,
-        @Nullable Output<ProcessingOptionsHtmlSanitization> htmlSanitization) {
-        this.disableStreetAddressResolution = disableStreetAddressResolution;
-        this.htmlSanitization = htmlSanitization;
-    }
+    private ProcessingOptionsArgs() {}
 
-    private ProcessingOptionsArgs() {
-        this.disableStreetAddressResolution = Codegen.empty();
-        this.htmlSanitization = Codegen.empty();
+    private ProcessingOptionsArgs(ProcessingOptionsArgs $) {
+        this.disableStreetAddressResolution = $.disableStreetAddressResolution;
+        this.htmlSanitization = $.htmlSanitization;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ProcessingOptionsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> disableStreetAddressResolution;
-        private @Nullable Output<ProcessingOptionsHtmlSanitization> htmlSanitization;
+        private ProcessingOptionsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ProcessingOptionsArgs();
         }
 
         public Builder(ProcessingOptionsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.disableStreetAddressResolution = defaults.disableStreetAddressResolution;
-    	      this.htmlSanitization = defaults.htmlSanitization;
+            $ = new ProcessingOptionsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder disableStreetAddressResolution(@Nullable Output<Boolean> disableStreetAddressResolution) {
-            this.disableStreetAddressResolution = disableStreetAddressResolution;
+            $.disableStreetAddressResolution = disableStreetAddressResolution;
             return this;
         }
-        public Builder disableStreetAddressResolution(@Nullable Boolean disableStreetAddressResolution) {
-            this.disableStreetAddressResolution = Codegen.ofNullable(disableStreetAddressResolution);
-            return this;
+
+        public Builder disableStreetAddressResolution(Boolean disableStreetAddressResolution) {
+            return disableStreetAddressResolution(Output.of(disableStreetAddressResolution));
         }
+
         public Builder htmlSanitization(@Nullable Output<ProcessingOptionsHtmlSanitization> htmlSanitization) {
-            this.htmlSanitization = htmlSanitization;
+            $.htmlSanitization = htmlSanitization;
             return this;
         }
-        public Builder htmlSanitization(@Nullable ProcessingOptionsHtmlSanitization htmlSanitization) {
-            this.htmlSanitization = Codegen.ofNullable(htmlSanitization);
-            return this;
-        }        public ProcessingOptionsArgs build() {
-            return new ProcessingOptionsArgs(disableStreetAddressResolution, htmlSanitization);
+
+        public Builder htmlSanitization(ProcessingOptionsHtmlSanitization htmlSanitization) {
+            return htmlSanitization(Output.of(htmlSanitization));
+        }
+
+        public ProcessingOptionsArgs build() {
+            return $;
         }
     }
+
 }

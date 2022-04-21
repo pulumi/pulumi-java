@@ -24,10 +24,10 @@ public final class SubnetResourceSettingsResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="addressPrefix")
-      private final @Nullable String addressPrefix;
+    private @Nullable String addressPrefix;
 
     public Optional<String> addressPrefix() {
-        return this.addressPrefix == null ? Optional.empty() : Optional.ofNullable(this.addressPrefix);
+        return Optional.ofNullable(this.addressPrefix);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class SubnetResourceSettingsResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="name")
-      private final @Nullable String name;
+    private @Nullable String name;
 
     public Optional<String> name() {
-        return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -46,64 +46,56 @@ public final class SubnetResourceSettingsResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="networkSecurityGroup")
-      private final @Nullable NsgReferenceResponse networkSecurityGroup;
+    private @Nullable NsgReferenceResponse networkSecurityGroup;
 
     public Optional<NsgReferenceResponse> networkSecurityGroup() {
-        return this.networkSecurityGroup == null ? Optional.empty() : Optional.ofNullable(this.networkSecurityGroup);
+        return Optional.ofNullable(this.networkSecurityGroup);
     }
 
-    public SubnetResourceSettingsResponse(
-        @Nullable String addressPrefix,
-        @Nullable String name,
-        @Nullable NsgReferenceResponse networkSecurityGroup) {
-        this.addressPrefix = addressPrefix;
-        this.name = name;
-        this.networkSecurityGroup = networkSecurityGroup;
-    }
+    private SubnetResourceSettingsResponse() {}
 
-    private SubnetResourceSettingsResponse() {
-        this.addressPrefix = null;
-        this.name = null;
-        this.networkSecurityGroup = null;
+    private SubnetResourceSettingsResponse(SubnetResourceSettingsResponse $) {
+        this.addressPrefix = $.addressPrefix;
+        this.name = $.name;
+        this.networkSecurityGroup = $.networkSecurityGroup;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SubnetResourceSettingsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String addressPrefix;
-        private @Nullable String name;
-        private @Nullable NsgReferenceResponse networkSecurityGroup;
+        private SubnetResourceSettingsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new SubnetResourceSettingsResponse();
         }
 
         public Builder(SubnetResourceSettingsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.addressPrefix = defaults.addressPrefix;
-    	      this.name = defaults.name;
-    	      this.networkSecurityGroup = defaults.networkSecurityGroup;
+            $ = new SubnetResourceSettingsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder addressPrefix(@Nullable String addressPrefix) {
-            this.addressPrefix = addressPrefix;
+            $.addressPrefix = addressPrefix;
             return this;
         }
+
         public Builder name(@Nullable String name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
+
         public Builder networkSecurityGroup(@Nullable NsgReferenceResponse networkSecurityGroup) {
-            this.networkSecurityGroup = networkSecurityGroup;
+            $.networkSecurityGroup = networkSecurityGroup;
             return this;
-        }        public SubnetResourceSettingsResponse build() {
-            return new SubnetResourceSettingsResponse(addressPrefix, name, networkSecurityGroup);
+        }
+
+        public SubnetResourceSettingsResponse build() {
+            return $;
         }
     }
+
 }

@@ -5,10 +5,10 @@ package com.pulumi.googlenative.dlp_v2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2InfoTypeArgs;
 import java.lang.Integer;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class GooglePrivacyDlpV2InfoTypeLimitArgs extends com.pulumi.resour
      * 
      */
     @Import(name="infoType")
-      private final @Nullable Output<GooglePrivacyDlpV2InfoTypeArgs> infoType;
+    private @Nullable Output<GooglePrivacyDlpV2InfoTypeArgs> infoType;
 
-    public Output<GooglePrivacyDlpV2InfoTypeArgs> infoType() {
-        return this.infoType == null ? Codegen.empty() : this.infoType;
+    public Optional<Output<GooglePrivacyDlpV2InfoTypeArgs>> infoType() {
+        return Optional.ofNullable(this.infoType);
     }
 
     /**
@@ -36,63 +36,58 @@ public final class GooglePrivacyDlpV2InfoTypeLimitArgs extends com.pulumi.resour
      * 
      */
     @Import(name="maxFindings")
-      private final @Nullable Output<Integer> maxFindings;
+    private @Nullable Output<Integer> maxFindings;
 
-    public Output<Integer> maxFindings() {
-        return this.maxFindings == null ? Codegen.empty() : this.maxFindings;
+    public Optional<Output<Integer>> maxFindings() {
+        return Optional.ofNullable(this.maxFindings);
     }
 
-    public GooglePrivacyDlpV2InfoTypeLimitArgs(
-        @Nullable Output<GooglePrivacyDlpV2InfoTypeArgs> infoType,
-        @Nullable Output<Integer> maxFindings) {
-        this.infoType = infoType;
-        this.maxFindings = maxFindings;
-    }
+    private GooglePrivacyDlpV2InfoTypeLimitArgs() {}
 
-    private GooglePrivacyDlpV2InfoTypeLimitArgs() {
-        this.infoType = Codegen.empty();
-        this.maxFindings = Codegen.empty();
+    private GooglePrivacyDlpV2InfoTypeLimitArgs(GooglePrivacyDlpV2InfoTypeLimitArgs $) {
+        this.infoType = $.infoType;
+        this.maxFindings = $.maxFindings;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GooglePrivacyDlpV2InfoTypeLimitArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<GooglePrivacyDlpV2InfoTypeArgs> infoType;
-        private @Nullable Output<Integer> maxFindings;
+        private GooglePrivacyDlpV2InfoTypeLimitArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GooglePrivacyDlpV2InfoTypeLimitArgs();
         }
 
         public Builder(GooglePrivacyDlpV2InfoTypeLimitArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.infoType = defaults.infoType;
-    	      this.maxFindings = defaults.maxFindings;
+            $ = new GooglePrivacyDlpV2InfoTypeLimitArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder infoType(@Nullable Output<GooglePrivacyDlpV2InfoTypeArgs> infoType) {
-            this.infoType = infoType;
+            $.infoType = infoType;
             return this;
         }
-        public Builder infoType(@Nullable GooglePrivacyDlpV2InfoTypeArgs infoType) {
-            this.infoType = Codegen.ofNullable(infoType);
-            return this;
+
+        public Builder infoType(GooglePrivacyDlpV2InfoTypeArgs infoType) {
+            return infoType(Output.of(infoType));
         }
+
         public Builder maxFindings(@Nullable Output<Integer> maxFindings) {
-            this.maxFindings = maxFindings;
+            $.maxFindings = maxFindings;
             return this;
         }
-        public Builder maxFindings(@Nullable Integer maxFindings) {
-            this.maxFindings = Codegen.ofNullable(maxFindings);
-            return this;
-        }        public GooglePrivacyDlpV2InfoTypeLimitArgs build() {
-            return new GooglePrivacyDlpV2InfoTypeLimitArgs(infoType, maxFindings);
+
+        public Builder maxFindings(Integer maxFindings) {
+            return maxFindings(Output.of(maxFindings));
+        }
+
+        public GooglePrivacyDlpV2InfoTypeLimitArgs build() {
+            return $;
         }
     }
+
 }

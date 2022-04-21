@@ -6,9 +6,9 @@ package com.pulumi.awsnative.kinesisfirehose.inputs;
 import com.pulumi.awsnative.kinesisfirehose.enums.DeliveryStreamEncryptionConfigurationInputKeyType;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -17,70 +17,66 @@ public final class DeliveryStreamEncryptionConfigurationInputArgs extends com.pu
     public static final DeliveryStreamEncryptionConfigurationInputArgs Empty = new DeliveryStreamEncryptionConfigurationInputArgs();
 
     @Import(name="keyARN")
-      private final @Nullable Output<String> keyARN;
+    private @Nullable Output<String> keyARN;
 
-    public Output<String> keyARN() {
-        return this.keyARN == null ? Codegen.empty() : this.keyARN;
+    public Optional<Output<String>> keyARN() {
+        return Optional.ofNullable(this.keyARN);
     }
 
     @Import(name="keyType", required=true)
-      private final Output<DeliveryStreamEncryptionConfigurationInputKeyType> keyType;
+    private Output<DeliveryStreamEncryptionConfigurationInputKeyType> keyType;
 
     public Output<DeliveryStreamEncryptionConfigurationInputKeyType> keyType() {
         return this.keyType;
     }
 
-    public DeliveryStreamEncryptionConfigurationInputArgs(
-        @Nullable Output<String> keyARN,
-        Output<DeliveryStreamEncryptionConfigurationInputKeyType> keyType) {
-        this.keyARN = keyARN;
-        this.keyType = Objects.requireNonNull(keyType, "expected parameter 'keyType' to be non-null");
-    }
+    private DeliveryStreamEncryptionConfigurationInputArgs() {}
 
-    private DeliveryStreamEncryptionConfigurationInputArgs() {
-        this.keyARN = Codegen.empty();
-        this.keyType = Codegen.empty();
+    private DeliveryStreamEncryptionConfigurationInputArgs(DeliveryStreamEncryptionConfigurationInputArgs $) {
+        this.keyARN = $.keyARN;
+        this.keyType = $.keyType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DeliveryStreamEncryptionConfigurationInputArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> keyARN;
-        private Output<DeliveryStreamEncryptionConfigurationInputKeyType> keyType;
+        private DeliveryStreamEncryptionConfigurationInputArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DeliveryStreamEncryptionConfigurationInputArgs();
         }
 
         public Builder(DeliveryStreamEncryptionConfigurationInputArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.keyARN = defaults.keyARN;
-    	      this.keyType = defaults.keyType;
+            $ = new DeliveryStreamEncryptionConfigurationInputArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder keyARN(@Nullable Output<String> keyARN) {
-            this.keyARN = keyARN;
+            $.keyARN = keyARN;
             return this;
         }
-        public Builder keyARN(@Nullable String keyARN) {
-            this.keyARN = Codegen.ofNullable(keyARN);
-            return this;
+
+        public Builder keyARN(String keyARN) {
+            return keyARN(Output.of(keyARN));
         }
+
         public Builder keyType(Output<DeliveryStreamEncryptionConfigurationInputKeyType> keyType) {
-            this.keyType = Objects.requireNonNull(keyType);
+            $.keyType = keyType;
             return this;
         }
+
         public Builder keyType(DeliveryStreamEncryptionConfigurationInputKeyType keyType) {
-            this.keyType = Output.of(Objects.requireNonNull(keyType));
-            return this;
-        }        public DeliveryStreamEncryptionConfigurationInputArgs build() {
-            return new DeliveryStreamEncryptionConfigurationInputArgs(keyARN, keyType);
+            return keyType(Output.of(keyType));
+        }
+
+        public DeliveryStreamEncryptionConfigurationInputArgs build() {
+            $.keyType = Objects.requireNonNull($.keyType, "expected parameter 'keyType' to be non-null");
+            return $;
         }
     }
+
 }

@@ -6,7 +6,6 @@ package com.pulumi.awsnative.wafv2.inputs;
 import com.pulumi.awsnative.wafv2.enums.RuleGroupTextTransformationType;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -20,70 +19,67 @@ public final class RuleGroupTextTransformationArgs extends com.pulumi.resources.
     public static final RuleGroupTextTransformationArgs Empty = new RuleGroupTextTransformationArgs();
 
     @Import(name="priority", required=true)
-      private final Output<Integer> priority;
+    private Output<Integer> priority;
 
     public Output<Integer> priority() {
         return this.priority;
     }
 
     @Import(name="type", required=true)
-      private final Output<RuleGroupTextTransformationType> type;
+    private Output<RuleGroupTextTransformationType> type;
 
     public Output<RuleGroupTextTransformationType> type() {
         return this.type;
     }
 
-    public RuleGroupTextTransformationArgs(
-        Output<Integer> priority,
-        Output<RuleGroupTextTransformationType> type) {
-        this.priority = Objects.requireNonNull(priority, "expected parameter 'priority' to be non-null");
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private RuleGroupTextTransformationArgs() {}
 
-    private RuleGroupTextTransformationArgs() {
-        this.priority = Codegen.empty();
-        this.type = Codegen.empty();
+    private RuleGroupTextTransformationArgs(RuleGroupTextTransformationArgs $) {
+        this.priority = $.priority;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RuleGroupTextTransformationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Integer> priority;
-        private Output<RuleGroupTextTransformationType> type;
+        private RuleGroupTextTransformationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RuleGroupTextTransformationArgs();
         }
 
         public Builder(RuleGroupTextTransformationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.priority = defaults.priority;
-    	      this.type = defaults.type;
+            $ = new RuleGroupTextTransformationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder priority(Output<Integer> priority) {
-            this.priority = Objects.requireNonNull(priority);
+            $.priority = priority;
             return this;
         }
+
         public Builder priority(Integer priority) {
-            this.priority = Output.of(Objects.requireNonNull(priority));
-            return this;
+            return priority(Output.of(priority));
         }
+
         public Builder type(Output<RuleGroupTextTransformationType> type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder type(RuleGroupTextTransformationType type) {
-            this.type = Output.of(Objects.requireNonNull(type));
-            return this;
-        }        public RuleGroupTextTransformationArgs build() {
-            return new RuleGroupTextTransformationArgs(priority, type);
+            return type(Output.of(type));
+        }
+
+        public RuleGroupTextTransformationArgs build() {
+            $.priority = Objects.requireNonNull($.priority, "expected parameter 'priority' to be non-null");
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

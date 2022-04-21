@@ -15,110 +15,100 @@ public final class GetBuildArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetBuildArgs Empty = new GetBuildArgs();
 
     @Import(name="buildId", required=true)
-      private final String buildId;
+    private String buildId;
 
     public String buildId() {
         return this.buildId;
     }
 
     @Import(name="id", required=true)
-      private final String id;
+    private String id;
 
     public String id() {
         return this.id;
     }
 
     @Import(name="location", required=true)
-      private final String location;
+    private String location;
 
     public String location() {
         return this.location;
     }
 
     @Import(name="project")
-      private final @Nullable String project;
+    private @Nullable String project;
 
     public Optional<String> project() {
-        return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
+        return Optional.ofNullable(this.project);
     }
 
     @Import(name="projectId", required=true)
-      private final String projectId;
+    private String projectId;
 
     public String projectId() {
         return this.projectId;
     }
 
-    public GetBuildArgs(
-        String buildId,
-        String id,
-        String location,
-        @Nullable String project,
-        String projectId) {
-        this.buildId = Objects.requireNonNull(buildId, "expected parameter 'buildId' to be non-null");
-        this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
-        this.location = Objects.requireNonNull(location, "expected parameter 'location' to be non-null");
-        this.project = project;
-        this.projectId = Objects.requireNonNull(projectId, "expected parameter 'projectId' to be non-null");
-    }
+    private GetBuildArgs() {}
 
-    private GetBuildArgs() {
-        this.buildId = null;
-        this.id = null;
-        this.location = null;
-        this.project = null;
-        this.projectId = null;
+    private GetBuildArgs(GetBuildArgs $) {
+        this.buildId = $.buildId;
+        this.id = $.id;
+        this.location = $.location;
+        this.project = $.project;
+        this.projectId = $.projectId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetBuildArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String buildId;
-        private String id;
-        private String location;
-        private @Nullable String project;
-        private String projectId;
+        private GetBuildArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetBuildArgs();
         }
 
         public Builder(GetBuildArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.buildId = defaults.buildId;
-    	      this.id = defaults.id;
-    	      this.location = defaults.location;
-    	      this.project = defaults.project;
-    	      this.projectId = defaults.projectId;
+            $ = new GetBuildArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder buildId(String buildId) {
-            this.buildId = Objects.requireNonNull(buildId);
+            $.buildId = buildId;
             return this;
         }
+
         public Builder id(String id) {
-            this.id = Objects.requireNonNull(id);
+            $.id = id;
             return this;
         }
+
         public Builder location(String location) {
-            this.location = Objects.requireNonNull(location);
+            $.location = location;
             return this;
         }
+
         public Builder project(@Nullable String project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
+
         public Builder projectId(String projectId) {
-            this.projectId = Objects.requireNonNull(projectId);
+            $.projectId = projectId;
             return this;
-        }        public GetBuildArgs build() {
-            return new GetBuildArgs(buildId, id, location, project, projectId);
+        }
+
+        public GetBuildArgs build() {
+            $.buildId = Objects.requireNonNull($.buildId, "expected parameter 'buildId' to be non-null");
+            $.id = Objects.requireNonNull($.id, "expected parameter 'id' to be non-null");
+            $.location = Objects.requireNonNull($.location, "expected parameter 'location' to be non-null");
+            $.projectId = Objects.requireNonNull($.projectId, "expected parameter 'projectId' to be non-null");
+            return $;
         }
     }
+
 }

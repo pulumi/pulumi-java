@@ -6,7 +6,6 @@ package com.pulumi.awsnative.wafv2.inputs;
 import com.pulumi.awsnative.wafv2.inputs.WebACLStatementArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
 
@@ -16,52 +15,53 @@ public final class WebACLOrStatementArgs extends com.pulumi.resources.ResourceAr
     public static final WebACLOrStatementArgs Empty = new WebACLOrStatementArgs();
 
     @Import(name="statements", required=true)
-      private final Output<List<WebACLStatementArgs>> statements;
+    private Output<List<WebACLStatementArgs>> statements;
 
     public Output<List<WebACLStatementArgs>> statements() {
         return this.statements;
     }
 
-    public WebACLOrStatementArgs(Output<List<WebACLStatementArgs>> statements) {
-        this.statements = Objects.requireNonNull(statements, "expected parameter 'statements' to be non-null");
-    }
+    private WebACLOrStatementArgs() {}
 
-    private WebACLOrStatementArgs() {
-        this.statements = Codegen.empty();
+    private WebACLOrStatementArgs(WebACLOrStatementArgs $) {
+        this.statements = $.statements;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WebACLOrStatementArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<List<WebACLStatementArgs>> statements;
+        private WebACLOrStatementArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new WebACLOrStatementArgs();
         }
 
         public Builder(WebACLOrStatementArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.statements = defaults.statements;
+            $ = new WebACLOrStatementArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder statements(Output<List<WebACLStatementArgs>> statements) {
-            this.statements = Objects.requireNonNull(statements);
+            $.statements = statements;
             return this;
         }
+
         public Builder statements(List<WebACLStatementArgs> statements) {
-            this.statements = Output.of(Objects.requireNonNull(statements));
-            return this;
+            return statements(Output.of(statements));
         }
+
         public Builder statements(WebACLStatementArgs... statements) {
             return statements(List.of(statements));
-        }        public WebACLOrStatementArgs build() {
-            return new WebACLOrStatementArgs(statements);
+        }
+
+        public WebACLOrStatementArgs build() {
+            $.statements = Objects.requireNonNull($.statements, "expected parameter 'statements' to be non-null");
+            return $;
         }
     }
+
 }

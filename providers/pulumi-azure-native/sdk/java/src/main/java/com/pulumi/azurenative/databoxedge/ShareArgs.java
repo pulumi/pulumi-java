@@ -14,10 +14,10 @@ import com.pulumi.azurenative.databoxedge.inputs.UserAccessRightArgs;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -30,7 +30,7 @@ public final class ShareArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="accessProtocol", required=true)
-      private final Output<Either<String,ShareAccessProtocol>> accessProtocol;
+    private Output<Either<String,ShareAccessProtocol>> accessProtocol;
 
     public Output<Either<String,ShareAccessProtocol>> accessProtocol() {
         return this.accessProtocol;
@@ -41,10 +41,10 @@ public final class ShareArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="azureContainerInfo")
-      private final @Nullable Output<AzureContainerInfoArgs> azureContainerInfo;
+    private @Nullable Output<AzureContainerInfoArgs> azureContainerInfo;
 
-    public Output<AzureContainerInfoArgs> azureContainerInfo() {
-        return this.azureContainerInfo == null ? Codegen.empty() : this.azureContainerInfo;
+    public Optional<Output<AzureContainerInfoArgs>> azureContainerInfo() {
+        return Optional.ofNullable(this.azureContainerInfo);
     }
 
     /**
@@ -52,10 +52,10 @@ public final class ShareArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="clientAccessRights")
-      private final @Nullable Output<List<ClientAccessRightArgs>> clientAccessRights;
+    private @Nullable Output<List<ClientAccessRightArgs>> clientAccessRights;
 
-    public Output<List<ClientAccessRightArgs>> clientAccessRights() {
-        return this.clientAccessRights == null ? Codegen.empty() : this.clientAccessRights;
+    public Optional<Output<List<ClientAccessRightArgs>>> clientAccessRights() {
+        return Optional.ofNullable(this.clientAccessRights);
     }
 
     /**
@@ -63,10 +63,10 @@ public final class ShareArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="dataPolicy")
-      private final @Nullable Output<Either<String,DataPolicy>> dataPolicy;
+    private @Nullable Output<Either<String,DataPolicy>> dataPolicy;
 
-    public Output<Either<String,DataPolicy>> dataPolicy() {
-        return this.dataPolicy == null ? Codegen.empty() : this.dataPolicy;
+    public Optional<Output<Either<String,DataPolicy>>> dataPolicy() {
+        return Optional.ofNullable(this.dataPolicy);
     }
 
     /**
@@ -74,10 +74,10 @@ public final class ShareArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -85,7 +85,7 @@ public final class ShareArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="deviceName", required=true)
-      private final Output<String> deviceName;
+    private Output<String> deviceName;
 
     public Output<String> deviceName() {
         return this.deviceName;
@@ -96,7 +96,7 @@ public final class ShareArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="monitoringStatus", required=true)
-      private final Output<Either<String,MonitoringStatus>> monitoringStatus;
+    private Output<Either<String,MonitoringStatus>> monitoringStatus;
 
     public Output<Either<String,MonitoringStatus>> monitoringStatus() {
         return this.monitoringStatus;
@@ -107,10 +107,10 @@ public final class ShareArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -118,10 +118,10 @@ public final class ShareArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="refreshDetails")
-      private final @Nullable Output<RefreshDetailsArgs> refreshDetails;
+    private @Nullable Output<RefreshDetailsArgs> refreshDetails;
 
-    public Output<RefreshDetailsArgs> refreshDetails() {
-        return this.refreshDetails == null ? Codegen.empty() : this.refreshDetails;
+    public Optional<Output<RefreshDetailsArgs>> refreshDetails() {
+        return Optional.ofNullable(this.refreshDetails);
     }
 
     /**
@@ -129,7 +129,7 @@ public final class ShareArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -140,7 +140,7 @@ public final class ShareArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="shareStatus", required=true)
-      private final Output<Either<String,ShareStatus>> shareStatus;
+    private Output<Either<String,ShareStatus>> shareStatus;
 
     public Output<Either<String,ShareStatus>> shareStatus() {
         return this.shareStatus;
@@ -151,199 +151,171 @@ public final class ShareArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="userAccessRights")
-      private final @Nullable Output<List<UserAccessRightArgs>> userAccessRights;
+    private @Nullable Output<List<UserAccessRightArgs>> userAccessRights;
 
-    public Output<List<UserAccessRightArgs>> userAccessRights() {
-        return this.userAccessRights == null ? Codegen.empty() : this.userAccessRights;
+    public Optional<Output<List<UserAccessRightArgs>>> userAccessRights() {
+        return Optional.ofNullable(this.userAccessRights);
     }
 
-    public ShareArgs(
-        Output<Either<String,ShareAccessProtocol>> accessProtocol,
-        @Nullable Output<AzureContainerInfoArgs> azureContainerInfo,
-        @Nullable Output<List<ClientAccessRightArgs>> clientAccessRights,
-        @Nullable Output<Either<String,DataPolicy>> dataPolicy,
-        @Nullable Output<String> description,
-        Output<String> deviceName,
-        Output<Either<String,MonitoringStatus>> monitoringStatus,
-        @Nullable Output<String> name,
-        @Nullable Output<RefreshDetailsArgs> refreshDetails,
-        Output<String> resourceGroupName,
-        Output<Either<String,ShareStatus>> shareStatus,
-        @Nullable Output<List<UserAccessRightArgs>> userAccessRights) {
-        this.accessProtocol = Objects.requireNonNull(accessProtocol, "expected parameter 'accessProtocol' to be non-null");
-        this.azureContainerInfo = azureContainerInfo;
-        this.clientAccessRights = clientAccessRights;
-        this.dataPolicy = dataPolicy;
-        this.description = description;
-        this.deviceName = Objects.requireNonNull(deviceName, "expected parameter 'deviceName' to be non-null");
-        this.monitoringStatus = Objects.requireNonNull(monitoringStatus, "expected parameter 'monitoringStatus' to be non-null");
-        this.name = name;
-        this.refreshDetails = refreshDetails;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.shareStatus = Objects.requireNonNull(shareStatus, "expected parameter 'shareStatus' to be non-null");
-        this.userAccessRights = userAccessRights;
-    }
+    private ShareArgs() {}
 
-    private ShareArgs() {
-        this.accessProtocol = Codegen.empty();
-        this.azureContainerInfo = Codegen.empty();
-        this.clientAccessRights = Codegen.empty();
-        this.dataPolicy = Codegen.empty();
-        this.description = Codegen.empty();
-        this.deviceName = Codegen.empty();
-        this.monitoringStatus = Codegen.empty();
-        this.name = Codegen.empty();
-        this.refreshDetails = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.shareStatus = Codegen.empty();
-        this.userAccessRights = Codegen.empty();
+    private ShareArgs(ShareArgs $) {
+        this.accessProtocol = $.accessProtocol;
+        this.azureContainerInfo = $.azureContainerInfo;
+        this.clientAccessRights = $.clientAccessRights;
+        this.dataPolicy = $.dataPolicy;
+        this.description = $.description;
+        this.deviceName = $.deviceName;
+        this.monitoringStatus = $.monitoringStatus;
+        this.name = $.name;
+        this.refreshDetails = $.refreshDetails;
+        this.resourceGroupName = $.resourceGroupName;
+        this.shareStatus = $.shareStatus;
+        this.userAccessRights = $.userAccessRights;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ShareArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Either<String,ShareAccessProtocol>> accessProtocol;
-        private @Nullable Output<AzureContainerInfoArgs> azureContainerInfo;
-        private @Nullable Output<List<ClientAccessRightArgs>> clientAccessRights;
-        private @Nullable Output<Either<String,DataPolicy>> dataPolicy;
-        private @Nullable Output<String> description;
-        private Output<String> deviceName;
-        private Output<Either<String,MonitoringStatus>> monitoringStatus;
-        private @Nullable Output<String> name;
-        private @Nullable Output<RefreshDetailsArgs> refreshDetails;
-        private Output<String> resourceGroupName;
-        private Output<Either<String,ShareStatus>> shareStatus;
-        private @Nullable Output<List<UserAccessRightArgs>> userAccessRights;
+        private ShareArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ShareArgs();
         }
 
         public Builder(ShareArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accessProtocol = defaults.accessProtocol;
-    	      this.azureContainerInfo = defaults.azureContainerInfo;
-    	      this.clientAccessRights = defaults.clientAccessRights;
-    	      this.dataPolicy = defaults.dataPolicy;
-    	      this.description = defaults.description;
-    	      this.deviceName = defaults.deviceName;
-    	      this.monitoringStatus = defaults.monitoringStatus;
-    	      this.name = defaults.name;
-    	      this.refreshDetails = defaults.refreshDetails;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.shareStatus = defaults.shareStatus;
-    	      this.userAccessRights = defaults.userAccessRights;
+            $ = new ShareArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder accessProtocol(Output<Either<String,ShareAccessProtocol>> accessProtocol) {
-            this.accessProtocol = Objects.requireNonNull(accessProtocol);
+            $.accessProtocol = accessProtocol;
             return this;
         }
+
         public Builder accessProtocol(Either<String,ShareAccessProtocol> accessProtocol) {
-            this.accessProtocol = Output.of(Objects.requireNonNull(accessProtocol));
-            return this;
+            return accessProtocol(Output.of(accessProtocol));
         }
+
         public Builder azureContainerInfo(@Nullable Output<AzureContainerInfoArgs> azureContainerInfo) {
-            this.azureContainerInfo = azureContainerInfo;
+            $.azureContainerInfo = azureContainerInfo;
             return this;
         }
-        public Builder azureContainerInfo(@Nullable AzureContainerInfoArgs azureContainerInfo) {
-            this.azureContainerInfo = Codegen.ofNullable(azureContainerInfo);
-            return this;
+
+        public Builder azureContainerInfo(AzureContainerInfoArgs azureContainerInfo) {
+            return azureContainerInfo(Output.of(azureContainerInfo));
         }
+
         public Builder clientAccessRights(@Nullable Output<List<ClientAccessRightArgs>> clientAccessRights) {
-            this.clientAccessRights = clientAccessRights;
+            $.clientAccessRights = clientAccessRights;
             return this;
         }
-        public Builder clientAccessRights(@Nullable List<ClientAccessRightArgs> clientAccessRights) {
-            this.clientAccessRights = Codegen.ofNullable(clientAccessRights);
-            return this;
+
+        public Builder clientAccessRights(List<ClientAccessRightArgs> clientAccessRights) {
+            return clientAccessRights(Output.of(clientAccessRights));
         }
+
         public Builder clientAccessRights(ClientAccessRightArgs... clientAccessRights) {
             return clientAccessRights(List.of(clientAccessRights));
         }
+
         public Builder dataPolicy(@Nullable Output<Either<String,DataPolicy>> dataPolicy) {
-            this.dataPolicy = dataPolicy;
+            $.dataPolicy = dataPolicy;
             return this;
         }
-        public Builder dataPolicy(@Nullable Either<String,DataPolicy> dataPolicy) {
-            this.dataPolicy = Codegen.ofNullable(dataPolicy);
-            return this;
+
+        public Builder dataPolicy(Either<String,DataPolicy> dataPolicy) {
+            return dataPolicy(Output.of(dataPolicy));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder deviceName(Output<String> deviceName) {
-            this.deviceName = Objects.requireNonNull(deviceName);
+            $.deviceName = deviceName;
             return this;
         }
+
         public Builder deviceName(String deviceName) {
-            this.deviceName = Output.of(Objects.requireNonNull(deviceName));
-            return this;
+            return deviceName(Output.of(deviceName));
         }
+
         public Builder monitoringStatus(Output<Either<String,MonitoringStatus>> monitoringStatus) {
-            this.monitoringStatus = Objects.requireNonNull(monitoringStatus);
+            $.monitoringStatus = monitoringStatus;
             return this;
         }
+
         public Builder monitoringStatus(Either<String,MonitoringStatus> monitoringStatus) {
-            this.monitoringStatus = Output.of(Objects.requireNonNull(monitoringStatus));
-            return this;
+            return monitoringStatus(Output.of(monitoringStatus));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder refreshDetails(@Nullable Output<RefreshDetailsArgs> refreshDetails) {
-            this.refreshDetails = refreshDetails;
+            $.refreshDetails = refreshDetails;
             return this;
         }
-        public Builder refreshDetails(@Nullable RefreshDetailsArgs refreshDetails) {
-            this.refreshDetails = Codegen.ofNullable(refreshDetails);
-            return this;
+
+        public Builder refreshDetails(RefreshDetailsArgs refreshDetails) {
+            return refreshDetails(Output.of(refreshDetails));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder shareStatus(Output<Either<String,ShareStatus>> shareStatus) {
-            this.shareStatus = Objects.requireNonNull(shareStatus);
+            $.shareStatus = shareStatus;
             return this;
         }
+
         public Builder shareStatus(Either<String,ShareStatus> shareStatus) {
-            this.shareStatus = Output.of(Objects.requireNonNull(shareStatus));
-            return this;
+            return shareStatus(Output.of(shareStatus));
         }
+
         public Builder userAccessRights(@Nullable Output<List<UserAccessRightArgs>> userAccessRights) {
-            this.userAccessRights = userAccessRights;
+            $.userAccessRights = userAccessRights;
             return this;
         }
-        public Builder userAccessRights(@Nullable List<UserAccessRightArgs> userAccessRights) {
-            this.userAccessRights = Codegen.ofNullable(userAccessRights);
-            return this;
+
+        public Builder userAccessRights(List<UserAccessRightArgs> userAccessRights) {
+            return userAccessRights(Output.of(userAccessRights));
         }
+
         public Builder userAccessRights(UserAccessRightArgs... userAccessRights) {
             return userAccessRights(List.of(userAccessRights));
-        }        public ShareArgs build() {
-            return new ShareArgs(accessProtocol, azureContainerInfo, clientAccessRights, dataPolicy, description, deviceName, monitoringStatus, name, refreshDetails, resourceGroupName, shareStatus, userAccessRights);
+        }
+
+        public ShareArgs build() {
+            $.accessProtocol = Objects.requireNonNull($.accessProtocol, "expected parameter 'accessProtocol' to be non-null");
+            $.deviceName = Objects.requireNonNull($.deviceName, "expected parameter 'deviceName' to be non-null");
+            $.monitoringStatus = Objects.requireNonNull($.monitoringStatus, "expected parameter 'monitoringStatus' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.shareStatus = Objects.requireNonNull($.shareStatus, "expected parameter 'shareStatus' to be non-null");
+            return $;
         }
     }
+
 }

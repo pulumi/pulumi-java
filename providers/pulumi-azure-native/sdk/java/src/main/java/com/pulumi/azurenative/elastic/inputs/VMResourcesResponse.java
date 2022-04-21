@@ -23,45 +23,44 @@ public final class VMResourcesResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="vmResourceId")
-      private final @Nullable String vmResourceId;
+    private @Nullable String vmResourceId;
 
     public Optional<String> vmResourceId() {
-        return this.vmResourceId == null ? Optional.empty() : Optional.ofNullable(this.vmResourceId);
+        return Optional.ofNullable(this.vmResourceId);
     }
 
-    public VMResourcesResponse(@Nullable String vmResourceId) {
-        this.vmResourceId = vmResourceId;
-    }
+    private VMResourcesResponse() {}
 
-    private VMResourcesResponse() {
-        this.vmResourceId = null;
+    private VMResourcesResponse(VMResourcesResponse $) {
+        this.vmResourceId = $.vmResourceId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VMResourcesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String vmResourceId;
+        private VMResourcesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new VMResourcesResponse();
         }
 
         public Builder(VMResourcesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.vmResourceId = defaults.vmResourceId;
+            $ = new VMResourcesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder vmResourceId(@Nullable String vmResourceId) {
-            this.vmResourceId = vmResourceId;
+            $.vmResourceId = vmResourceId;
             return this;
-        }        public VMResourcesResponse build() {
-            return new VMResourcesResponse(vmResourceId);
+        }
+
+        public VMResourcesResponse build() {
+            return $;
         }
     }
+
 }

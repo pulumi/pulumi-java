@@ -23,10 +23,10 @@ public final class AutomaticOSUpgradePolicyResponse extends com.pulumi.resources
      * 
      */
     @Import(name="disableAutomaticRollback")
-      private final @Nullable Boolean disableAutomaticRollback;
+    private @Nullable Boolean disableAutomaticRollback;
 
     public Optional<Boolean> disableAutomaticRollback() {
-        return this.disableAutomaticRollback == null ? Optional.empty() : Optional.ofNullable(this.disableAutomaticRollback);
+        return Optional.ofNullable(this.disableAutomaticRollback);
     }
 
     /**
@@ -34,55 +34,50 @@ public final class AutomaticOSUpgradePolicyResponse extends com.pulumi.resources
      * 
      */
     @Import(name="enableAutomaticOSUpgrade")
-      private final @Nullable Boolean enableAutomaticOSUpgrade;
+    private @Nullable Boolean enableAutomaticOSUpgrade;
 
     public Optional<Boolean> enableAutomaticOSUpgrade() {
-        return this.enableAutomaticOSUpgrade == null ? Optional.empty() : Optional.ofNullable(this.enableAutomaticOSUpgrade);
+        return Optional.ofNullable(this.enableAutomaticOSUpgrade);
     }
 
-    public AutomaticOSUpgradePolicyResponse(
-        @Nullable Boolean disableAutomaticRollback,
-        @Nullable Boolean enableAutomaticOSUpgrade) {
-        this.disableAutomaticRollback = disableAutomaticRollback;
-        this.enableAutomaticOSUpgrade = enableAutomaticOSUpgrade;
-    }
+    private AutomaticOSUpgradePolicyResponse() {}
 
-    private AutomaticOSUpgradePolicyResponse() {
-        this.disableAutomaticRollback = null;
-        this.enableAutomaticOSUpgrade = null;
+    private AutomaticOSUpgradePolicyResponse(AutomaticOSUpgradePolicyResponse $) {
+        this.disableAutomaticRollback = $.disableAutomaticRollback;
+        this.enableAutomaticOSUpgrade = $.enableAutomaticOSUpgrade;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AutomaticOSUpgradePolicyResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Boolean disableAutomaticRollback;
-        private @Nullable Boolean enableAutomaticOSUpgrade;
+        private AutomaticOSUpgradePolicyResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AutomaticOSUpgradePolicyResponse();
         }
 
         public Builder(AutomaticOSUpgradePolicyResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.disableAutomaticRollback = defaults.disableAutomaticRollback;
-    	      this.enableAutomaticOSUpgrade = defaults.enableAutomaticOSUpgrade;
+            $ = new AutomaticOSUpgradePolicyResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder disableAutomaticRollback(@Nullable Boolean disableAutomaticRollback) {
-            this.disableAutomaticRollback = disableAutomaticRollback;
+            $.disableAutomaticRollback = disableAutomaticRollback;
             return this;
         }
+
         public Builder enableAutomaticOSUpgrade(@Nullable Boolean enableAutomaticOSUpgrade) {
-            this.enableAutomaticOSUpgrade = enableAutomaticOSUpgrade;
+            $.enableAutomaticOSUpgrade = enableAutomaticOSUpgrade;
             return this;
-        }        public AutomaticOSUpgradePolicyResponse build() {
-            return new AutomaticOSUpgradePolicyResponse(disableAutomaticRollback, enableAutomaticOSUpgrade);
+        }
+
+        public AutomaticOSUpgradePolicyResponse build() {
+            return $;
         }
     }
+
 }

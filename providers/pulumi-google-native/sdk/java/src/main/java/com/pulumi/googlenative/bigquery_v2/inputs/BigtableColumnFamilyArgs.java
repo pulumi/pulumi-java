@@ -5,12 +5,12 @@ package com.pulumi.googlenative.bigquery_v2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.bigquery_v2.inputs.BigtableColumnArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,10 @@ public final class BigtableColumnFamilyArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="columns")
-      private final @Nullable Output<List<BigtableColumnArgs>> columns;
+    private @Nullable Output<List<BigtableColumnArgs>> columns;
 
-    public Output<List<BigtableColumnArgs>> columns() {
-        return this.columns == null ? Codegen.empty() : this.columns;
+    public Optional<Output<List<BigtableColumnArgs>>> columns() {
+        return Optional.ofNullable(this.columns);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class BigtableColumnFamilyArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="encoding")
-      private final @Nullable Output<String> encoding;
+    private @Nullable Output<String> encoding;
 
-    public Output<String> encoding() {
-        return this.encoding == null ? Codegen.empty() : this.encoding;
+    public Optional<Output<String>> encoding() {
+        return Optional.ofNullable(this.encoding);
     }
 
     /**
@@ -45,10 +45,10 @@ public final class BigtableColumnFamilyArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="familyId")
-      private final @Nullable Output<String> familyId;
+    private @Nullable Output<String> familyId;
 
-    public Output<String> familyId() {
-        return this.familyId == null ? Codegen.empty() : this.familyId;
+    public Optional<Output<String>> familyId() {
+        return Optional.ofNullable(this.familyId);
     }
 
     /**
@@ -56,10 +56,10 @@ public final class BigtableColumnFamilyArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="onlyReadLatest")
-      private final @Nullable Output<Boolean> onlyReadLatest;
+    private @Nullable Output<Boolean> onlyReadLatest;
 
-    public Output<Boolean> onlyReadLatest() {
-        return this.onlyReadLatest == null ? Codegen.empty() : this.onlyReadLatest;
+    public Optional<Output<Boolean>> onlyReadLatest() {
+        return Optional.ofNullable(this.onlyReadLatest);
     }
 
     /**
@@ -67,105 +67,92 @@ public final class BigtableColumnFamilyArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="type")
-      private final @Nullable Output<String> type;
+    private @Nullable Output<String> type;
 
-    public Output<String> type() {
-        return this.type == null ? Codegen.empty() : this.type;
+    public Optional<Output<String>> type() {
+        return Optional.ofNullable(this.type);
     }
 
-    public BigtableColumnFamilyArgs(
-        @Nullable Output<List<BigtableColumnArgs>> columns,
-        @Nullable Output<String> encoding,
-        @Nullable Output<String> familyId,
-        @Nullable Output<Boolean> onlyReadLatest,
-        @Nullable Output<String> type) {
-        this.columns = columns;
-        this.encoding = encoding;
-        this.familyId = familyId;
-        this.onlyReadLatest = onlyReadLatest;
-        this.type = type;
-    }
+    private BigtableColumnFamilyArgs() {}
 
-    private BigtableColumnFamilyArgs() {
-        this.columns = Codegen.empty();
-        this.encoding = Codegen.empty();
-        this.familyId = Codegen.empty();
-        this.onlyReadLatest = Codegen.empty();
-        this.type = Codegen.empty();
+    private BigtableColumnFamilyArgs(BigtableColumnFamilyArgs $) {
+        this.columns = $.columns;
+        this.encoding = $.encoding;
+        this.familyId = $.familyId;
+        this.onlyReadLatest = $.onlyReadLatest;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BigtableColumnFamilyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<BigtableColumnArgs>> columns;
-        private @Nullable Output<String> encoding;
-        private @Nullable Output<String> familyId;
-        private @Nullable Output<Boolean> onlyReadLatest;
-        private @Nullable Output<String> type;
+        private BigtableColumnFamilyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new BigtableColumnFamilyArgs();
         }
 
         public Builder(BigtableColumnFamilyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.columns = defaults.columns;
-    	      this.encoding = defaults.encoding;
-    	      this.familyId = defaults.familyId;
-    	      this.onlyReadLatest = defaults.onlyReadLatest;
-    	      this.type = defaults.type;
+            $ = new BigtableColumnFamilyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder columns(@Nullable Output<List<BigtableColumnArgs>> columns) {
-            this.columns = columns;
+            $.columns = columns;
             return this;
         }
-        public Builder columns(@Nullable List<BigtableColumnArgs> columns) {
-            this.columns = Codegen.ofNullable(columns);
-            return this;
+
+        public Builder columns(List<BigtableColumnArgs> columns) {
+            return columns(Output.of(columns));
         }
+
         public Builder columns(BigtableColumnArgs... columns) {
             return columns(List.of(columns));
         }
+
         public Builder encoding(@Nullable Output<String> encoding) {
-            this.encoding = encoding;
+            $.encoding = encoding;
             return this;
         }
-        public Builder encoding(@Nullable String encoding) {
-            this.encoding = Codegen.ofNullable(encoding);
-            return this;
+
+        public Builder encoding(String encoding) {
+            return encoding(Output.of(encoding));
         }
+
         public Builder familyId(@Nullable Output<String> familyId) {
-            this.familyId = familyId;
+            $.familyId = familyId;
             return this;
         }
-        public Builder familyId(@Nullable String familyId) {
-            this.familyId = Codegen.ofNullable(familyId);
-            return this;
+
+        public Builder familyId(String familyId) {
+            return familyId(Output.of(familyId));
         }
+
         public Builder onlyReadLatest(@Nullable Output<Boolean> onlyReadLatest) {
-            this.onlyReadLatest = onlyReadLatest;
+            $.onlyReadLatest = onlyReadLatest;
             return this;
         }
-        public Builder onlyReadLatest(@Nullable Boolean onlyReadLatest) {
-            this.onlyReadLatest = Codegen.ofNullable(onlyReadLatest);
-            return this;
+
+        public Builder onlyReadLatest(Boolean onlyReadLatest) {
+            return onlyReadLatest(Output.of(onlyReadLatest));
         }
+
         public Builder type(@Nullable Output<String> type) {
-            this.type = type;
+            $.type = type;
             return this;
         }
-        public Builder type(@Nullable String type) {
-            this.type = Codegen.ofNullable(type);
-            return this;
-        }        public BigtableColumnFamilyArgs build() {
-            return new BigtableColumnFamilyArgs(columns, encoding, familyId, onlyReadLatest, type);
+
+        public Builder type(String type) {
+            return type(Output.of(type));
+        }
+
+        public BigtableColumnFamilyArgs build() {
+            return $;
         }
     }
+
 }

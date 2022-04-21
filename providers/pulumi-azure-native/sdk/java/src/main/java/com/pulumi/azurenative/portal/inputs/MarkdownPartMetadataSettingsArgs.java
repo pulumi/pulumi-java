@@ -6,8 +6,8 @@ package com.pulumi.azurenative.portal.inputs;
 import com.pulumi.azurenative.portal.inputs.MarkdownPartMetadataContentArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class MarkdownPartMetadataSettingsArgs extends com.pulumi.resources
      * 
      */
     @Import(name="content")
-      private final @Nullable Output<MarkdownPartMetadataContentArgs> content;
+    private @Nullable Output<MarkdownPartMetadataContentArgs> content;
 
-    public Output<MarkdownPartMetadataContentArgs> content() {
-        return this.content == null ? Codegen.empty() : this.content;
+    public Optional<Output<MarkdownPartMetadataContentArgs>> content() {
+        return Optional.ofNullable(this.content);
     }
 
-    public MarkdownPartMetadataSettingsArgs(@Nullable Output<MarkdownPartMetadataContentArgs> content) {
-        this.content = content;
-    }
+    private MarkdownPartMetadataSettingsArgs() {}
 
-    private MarkdownPartMetadataSettingsArgs() {
-        this.content = Codegen.empty();
+    private MarkdownPartMetadataSettingsArgs(MarkdownPartMetadataSettingsArgs $) {
+        this.content = $.content;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MarkdownPartMetadataSettingsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<MarkdownPartMetadataContentArgs> content;
+        private MarkdownPartMetadataSettingsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new MarkdownPartMetadataSettingsArgs();
         }
 
         public Builder(MarkdownPartMetadataSettingsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.content = defaults.content;
+            $ = new MarkdownPartMetadataSettingsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder content(@Nullable Output<MarkdownPartMetadataContentArgs> content) {
-            this.content = content;
+            $.content = content;
             return this;
         }
-        public Builder content(@Nullable MarkdownPartMetadataContentArgs content) {
-            this.content = Codegen.ofNullable(content);
-            return this;
-        }        public MarkdownPartMetadataSettingsArgs build() {
-            return new MarkdownPartMetadataSettingsArgs(content);
+
+        public Builder content(MarkdownPartMetadataContentArgs content) {
+            return content(Output.of(content));
+        }
+
+        public MarkdownPartMetadataSettingsArgs build() {
+            return $;
         }
     }
+
 }

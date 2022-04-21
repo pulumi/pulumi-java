@@ -24,10 +24,10 @@ public final class AttachNewDataDiskOptionsResponse extends com.pulumi.resources
      * 
      */
     @Import(name="diskName")
-      private final @Nullable String diskName;
+    private @Nullable String diskName;
 
     public Optional<String> diskName() {
-        return this.diskName == null ? Optional.empty() : Optional.ofNullable(this.diskName);
+        return Optional.ofNullable(this.diskName);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class AttachNewDataDiskOptionsResponse extends com.pulumi.resources
      * 
      */
     @Import(name="diskSizeGiB")
-      private final @Nullable Integer diskSizeGiB;
+    private @Nullable Integer diskSizeGiB;
 
     public Optional<Integer> diskSizeGiB() {
-        return this.diskSizeGiB == null ? Optional.empty() : Optional.ofNullable(this.diskSizeGiB);
+        return Optional.ofNullable(this.diskSizeGiB);
     }
 
     /**
@@ -46,64 +46,56 @@ public final class AttachNewDataDiskOptionsResponse extends com.pulumi.resources
      * 
      */
     @Import(name="diskType")
-      private final @Nullable String diskType;
+    private @Nullable String diskType;
 
     public Optional<String> diskType() {
-        return this.diskType == null ? Optional.empty() : Optional.ofNullable(this.diskType);
+        return Optional.ofNullable(this.diskType);
     }
 
-    public AttachNewDataDiskOptionsResponse(
-        @Nullable String diskName,
-        @Nullable Integer diskSizeGiB,
-        @Nullable String diskType) {
-        this.diskName = diskName;
-        this.diskSizeGiB = diskSizeGiB;
-        this.diskType = diskType;
-    }
+    private AttachNewDataDiskOptionsResponse() {}
 
-    private AttachNewDataDiskOptionsResponse() {
-        this.diskName = null;
-        this.diskSizeGiB = null;
-        this.diskType = null;
+    private AttachNewDataDiskOptionsResponse(AttachNewDataDiskOptionsResponse $) {
+        this.diskName = $.diskName;
+        this.diskSizeGiB = $.diskSizeGiB;
+        this.diskType = $.diskType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AttachNewDataDiskOptionsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String diskName;
-        private @Nullable Integer diskSizeGiB;
-        private @Nullable String diskType;
+        private AttachNewDataDiskOptionsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AttachNewDataDiskOptionsResponse();
         }
 
         public Builder(AttachNewDataDiskOptionsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.diskName = defaults.diskName;
-    	      this.diskSizeGiB = defaults.diskSizeGiB;
-    	      this.diskType = defaults.diskType;
+            $ = new AttachNewDataDiskOptionsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder diskName(@Nullable String diskName) {
-            this.diskName = diskName;
+            $.diskName = diskName;
             return this;
         }
+
         public Builder diskSizeGiB(@Nullable Integer diskSizeGiB) {
-            this.diskSizeGiB = diskSizeGiB;
+            $.diskSizeGiB = diskSizeGiB;
             return this;
         }
+
         public Builder diskType(@Nullable String diskType) {
-            this.diskType = diskType;
+            $.diskType = diskType;
             return this;
-        }        public AttachNewDataDiskOptionsResponse build() {
-            return new AttachNewDataDiskOptionsResponse(diskName, diskSizeGiB, diskType);
+        }
+
+        public AttachNewDataDiskOptionsResponse build() {
+            return $;
         }
     }
+
 }

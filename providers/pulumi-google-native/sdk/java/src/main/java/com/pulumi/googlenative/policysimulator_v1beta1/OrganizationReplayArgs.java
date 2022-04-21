@@ -5,10 +5,10 @@ package com.pulumi.googlenative.policysimulator_v1beta1;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.policysimulator_v1beta1.inputs.GoogleCloudPolicysimulatorV1beta1ReplayConfigArgs;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,90 +21,84 @@ public final class OrganizationReplayArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="config", required=true)
-      private final Output<GoogleCloudPolicysimulatorV1beta1ReplayConfigArgs> config;
+    private Output<GoogleCloudPolicysimulatorV1beta1ReplayConfigArgs> config;
 
     public Output<GoogleCloudPolicysimulatorV1beta1ReplayConfigArgs> config() {
         return this.config;
     }
 
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     @Import(name="organizationId", required=true)
-      private final Output<String> organizationId;
+    private Output<String> organizationId;
 
     public Output<String> organizationId() {
         return this.organizationId;
     }
 
-    public OrganizationReplayArgs(
-        Output<GoogleCloudPolicysimulatorV1beta1ReplayConfigArgs> config,
-        @Nullable Output<String> location,
-        Output<String> organizationId) {
-        this.config = Objects.requireNonNull(config, "expected parameter 'config' to be non-null");
-        this.location = location;
-        this.organizationId = Objects.requireNonNull(organizationId, "expected parameter 'organizationId' to be non-null");
-    }
+    private OrganizationReplayArgs() {}
 
-    private OrganizationReplayArgs() {
-        this.config = Codegen.empty();
-        this.location = Codegen.empty();
-        this.organizationId = Codegen.empty();
+    private OrganizationReplayArgs(OrganizationReplayArgs $) {
+        this.config = $.config;
+        this.location = $.location;
+        this.organizationId = $.organizationId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(OrganizationReplayArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<GoogleCloudPolicysimulatorV1beta1ReplayConfigArgs> config;
-        private @Nullable Output<String> location;
-        private Output<String> organizationId;
+        private OrganizationReplayArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new OrganizationReplayArgs();
         }
 
         public Builder(OrganizationReplayArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.config = defaults.config;
-    	      this.location = defaults.location;
-    	      this.organizationId = defaults.organizationId;
+            $ = new OrganizationReplayArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder config(Output<GoogleCloudPolicysimulatorV1beta1ReplayConfigArgs> config) {
-            this.config = Objects.requireNonNull(config);
+            $.config = config;
             return this;
         }
+
         public Builder config(GoogleCloudPolicysimulatorV1beta1ReplayConfigArgs config) {
-            this.config = Output.of(Objects.requireNonNull(config));
-            return this;
+            return config(Output.of(config));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder organizationId(Output<String> organizationId) {
-            this.organizationId = Objects.requireNonNull(organizationId);
+            $.organizationId = organizationId;
             return this;
         }
+
         public Builder organizationId(String organizationId) {
-            this.organizationId = Output.of(Objects.requireNonNull(organizationId));
-            return this;
-        }        public OrganizationReplayArgs build() {
-            return new OrganizationReplayArgs(config, location, organizationId);
+            return organizationId(Output.of(organizationId));
+        }
+
+        public OrganizationReplayArgs build() {
+            $.config = Objects.requireNonNull($.config, "expected parameter 'config' to be non-null");
+            $.organizationId = Objects.requireNonNull($.organizationId, "expected parameter 'organizationId' to be non-null");
+            return $;
         }
     }
+
 }

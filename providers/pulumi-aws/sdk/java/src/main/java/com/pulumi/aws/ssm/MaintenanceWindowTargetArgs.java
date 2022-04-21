@@ -6,10 +6,10 @@ package com.pulumi.aws.ssm;
 import com.pulumi.aws.ssm.inputs.MaintenanceWindowTargetTargetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class MaintenanceWindowTargetArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -33,10 +33,10 @@ public final class MaintenanceWindowTargetArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -44,10 +44,10 @@ public final class MaintenanceWindowTargetArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="ownerInformation")
-      private final @Nullable Output<String> ownerInformation;
+    private @Nullable Output<String> ownerInformation;
 
-    public Output<String> ownerInformation() {
-        return this.ownerInformation == null ? Codegen.empty() : this.ownerInformation;
+    public Optional<Output<String>> ownerInformation() {
+        return Optional.ofNullable(this.ownerInformation);
     }
 
     /**
@@ -55,7 +55,7 @@ public final class MaintenanceWindowTargetArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="resourceType", required=true)
-      private final Output<String> resourceType;
+    private Output<String> resourceType;
 
     public Output<String> resourceType() {
         return this.resourceType;
@@ -67,7 +67,7 @@ public final class MaintenanceWindowTargetArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="targets", required=true)
-      private final Output<List<MaintenanceWindowTargetTargetArgs>> targets;
+    private Output<List<MaintenanceWindowTargetTargetArgs>> targets;
 
     public Output<List<MaintenanceWindowTargetTargetArgs>> targets() {
         return this.targets;
@@ -78,118 +78,105 @@ public final class MaintenanceWindowTargetArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="windowId", required=true)
-      private final Output<String> windowId;
+    private Output<String> windowId;
 
     public Output<String> windowId() {
         return this.windowId;
     }
 
-    public MaintenanceWindowTargetArgs(
-        @Nullable Output<String> description,
-        @Nullable Output<String> name,
-        @Nullable Output<String> ownerInformation,
-        Output<String> resourceType,
-        Output<List<MaintenanceWindowTargetTargetArgs>> targets,
-        Output<String> windowId) {
-        this.description = description;
-        this.name = name;
-        this.ownerInformation = ownerInformation;
-        this.resourceType = Objects.requireNonNull(resourceType, "expected parameter 'resourceType' to be non-null");
-        this.targets = Objects.requireNonNull(targets, "expected parameter 'targets' to be non-null");
-        this.windowId = Objects.requireNonNull(windowId, "expected parameter 'windowId' to be non-null");
-    }
+    private MaintenanceWindowTargetArgs() {}
 
-    private MaintenanceWindowTargetArgs() {
-        this.description = Codegen.empty();
-        this.name = Codegen.empty();
-        this.ownerInformation = Codegen.empty();
-        this.resourceType = Codegen.empty();
-        this.targets = Codegen.empty();
-        this.windowId = Codegen.empty();
+    private MaintenanceWindowTargetArgs(MaintenanceWindowTargetArgs $) {
+        this.description = $.description;
+        this.name = $.name;
+        this.ownerInformation = $.ownerInformation;
+        this.resourceType = $.resourceType;
+        this.targets = $.targets;
+        this.windowId = $.windowId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MaintenanceWindowTargetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> description;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> ownerInformation;
-        private Output<String> resourceType;
-        private Output<List<MaintenanceWindowTargetTargetArgs>> targets;
-        private Output<String> windowId;
+        private MaintenanceWindowTargetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new MaintenanceWindowTargetArgs();
         }
 
         public Builder(MaintenanceWindowTargetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.description = defaults.description;
-    	      this.name = defaults.name;
-    	      this.ownerInformation = defaults.ownerInformation;
-    	      this.resourceType = defaults.resourceType;
-    	      this.targets = defaults.targets;
-    	      this.windowId = defaults.windowId;
+            $ = new MaintenanceWindowTargetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder ownerInformation(@Nullable Output<String> ownerInformation) {
-            this.ownerInformation = ownerInformation;
+            $.ownerInformation = ownerInformation;
             return this;
         }
-        public Builder ownerInformation(@Nullable String ownerInformation) {
-            this.ownerInformation = Codegen.ofNullable(ownerInformation);
-            return this;
+
+        public Builder ownerInformation(String ownerInformation) {
+            return ownerInformation(Output.of(ownerInformation));
         }
+
         public Builder resourceType(Output<String> resourceType) {
-            this.resourceType = Objects.requireNonNull(resourceType);
+            $.resourceType = resourceType;
             return this;
         }
+
         public Builder resourceType(String resourceType) {
-            this.resourceType = Output.of(Objects.requireNonNull(resourceType));
-            return this;
+            return resourceType(Output.of(resourceType));
         }
+
         public Builder targets(Output<List<MaintenanceWindowTargetTargetArgs>> targets) {
-            this.targets = Objects.requireNonNull(targets);
+            $.targets = targets;
             return this;
         }
+
         public Builder targets(List<MaintenanceWindowTargetTargetArgs> targets) {
-            this.targets = Output.of(Objects.requireNonNull(targets));
-            return this;
+            return targets(Output.of(targets));
         }
+
         public Builder targets(MaintenanceWindowTargetTargetArgs... targets) {
             return targets(List.of(targets));
         }
+
         public Builder windowId(Output<String> windowId) {
-            this.windowId = Objects.requireNonNull(windowId);
+            $.windowId = windowId;
             return this;
         }
+
         public Builder windowId(String windowId) {
-            this.windowId = Output.of(Objects.requireNonNull(windowId));
-            return this;
-        }        public MaintenanceWindowTargetArgs build() {
-            return new MaintenanceWindowTargetArgs(description, name, ownerInformation, resourceType, targets, windowId);
+            return windowId(Output.of(windowId));
+        }
+
+        public MaintenanceWindowTargetArgs build() {
+            $.resourceType = Objects.requireNonNull($.resourceType, "expected parameter 'resourceType' to be non-null");
+            $.targets = Objects.requireNonNull($.targets, "expected parameter 'targets' to be non-null");
+            $.windowId = Objects.requireNonNull($.windowId, "expected parameter 'windowId' to be non-null");
+            return $;
         }
     }
+
 }

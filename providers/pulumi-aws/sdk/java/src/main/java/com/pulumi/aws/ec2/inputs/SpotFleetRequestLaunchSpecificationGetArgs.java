@@ -8,12 +8,12 @@ import com.pulumi.aws.ec2.inputs.SpotFleetRequestLaunchSpecificationEphemeralBlo
 import com.pulumi.aws.ec2.inputs.SpotFleetRequestLaunchSpecificationRootBlockDeviceGetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,17 +22,17 @@ public final class SpotFleetRequestLaunchSpecificationGetArgs extends com.pulumi
     public static final SpotFleetRequestLaunchSpecificationGetArgs Empty = new SpotFleetRequestLaunchSpecificationGetArgs();
 
     @Import(name="ami", required=true)
-      private final Output<String> ami;
+    private Output<String> ami;
 
     public Output<String> ami() {
         return this.ami;
     }
 
     @Import(name="associatePublicIpAddress")
-      private final @Nullable Output<Boolean> associatePublicIpAddress;
+    private @Nullable Output<Boolean> associatePublicIpAddress;
 
-    public Output<Boolean> associatePublicIpAddress() {
-        return this.associatePublicIpAddress == null ? Codegen.empty() : this.associatePublicIpAddress;
+    public Optional<Output<Boolean>> associatePublicIpAddress() {
+        return Optional.ofNullable(this.associatePublicIpAddress);
     }
 
     /**
@@ -40,45 +40,45 @@ public final class SpotFleetRequestLaunchSpecificationGetArgs extends com.pulumi
      * 
      */
     @Import(name="availabilityZone")
-      private final @Nullable Output<String> availabilityZone;
+    private @Nullable Output<String> availabilityZone;
 
-    public Output<String> availabilityZone() {
-        return this.availabilityZone == null ? Codegen.empty() : this.availabilityZone;
+    public Optional<Output<String>> availabilityZone() {
+        return Optional.ofNullable(this.availabilityZone);
     }
 
     @Import(name="ebsBlockDevices")
-      private final @Nullable Output<List<SpotFleetRequestLaunchSpecificationEbsBlockDeviceGetArgs>> ebsBlockDevices;
+    private @Nullable Output<List<SpotFleetRequestLaunchSpecificationEbsBlockDeviceGetArgs>> ebsBlockDevices;
 
-    public Output<List<SpotFleetRequestLaunchSpecificationEbsBlockDeviceGetArgs>> ebsBlockDevices() {
-        return this.ebsBlockDevices == null ? Codegen.empty() : this.ebsBlockDevices;
+    public Optional<Output<List<SpotFleetRequestLaunchSpecificationEbsBlockDeviceGetArgs>>> ebsBlockDevices() {
+        return Optional.ofNullable(this.ebsBlockDevices);
     }
 
     @Import(name="ebsOptimized")
-      private final @Nullable Output<Boolean> ebsOptimized;
+    private @Nullable Output<Boolean> ebsOptimized;
 
-    public Output<Boolean> ebsOptimized() {
-        return this.ebsOptimized == null ? Codegen.empty() : this.ebsOptimized;
+    public Optional<Output<Boolean>> ebsOptimized() {
+        return Optional.ofNullable(this.ebsOptimized);
     }
 
     @Import(name="ephemeralBlockDevices")
-      private final @Nullable Output<List<SpotFleetRequestLaunchSpecificationEphemeralBlockDeviceGetArgs>> ephemeralBlockDevices;
+    private @Nullable Output<List<SpotFleetRequestLaunchSpecificationEphemeralBlockDeviceGetArgs>> ephemeralBlockDevices;
 
-    public Output<List<SpotFleetRequestLaunchSpecificationEphemeralBlockDeviceGetArgs>> ephemeralBlockDevices() {
-        return this.ephemeralBlockDevices == null ? Codegen.empty() : this.ephemeralBlockDevices;
+    public Optional<Output<List<SpotFleetRequestLaunchSpecificationEphemeralBlockDeviceGetArgs>>> ephemeralBlockDevices() {
+        return Optional.ofNullable(this.ephemeralBlockDevices);
     }
 
     @Import(name="iamInstanceProfile")
-      private final @Nullable Output<String> iamInstanceProfile;
+    private @Nullable Output<String> iamInstanceProfile;
 
-    public Output<String> iamInstanceProfile() {
-        return this.iamInstanceProfile == null ? Codegen.empty() : this.iamInstanceProfile;
+    public Optional<Output<String>> iamInstanceProfile() {
+        return Optional.ofNullable(this.iamInstanceProfile);
     }
 
     @Import(name="iamInstanceProfileArn")
-      private final @Nullable Output<String> iamInstanceProfileArn;
+    private @Nullable Output<String> iamInstanceProfileArn;
 
-    public Output<String> iamInstanceProfileArn() {
-        return this.iamInstanceProfileArn == null ? Codegen.empty() : this.iamInstanceProfileArn;
+    public Optional<Output<String>> iamInstanceProfileArn() {
+        return Optional.ofNullable(this.iamInstanceProfileArn);
     }
 
     /**
@@ -86,45 +86,45 @@ public final class SpotFleetRequestLaunchSpecificationGetArgs extends com.pulumi
      * 
      */
     @Import(name="instanceType", required=true)
-      private final Output<String> instanceType;
+    private Output<String> instanceType;
 
     public Output<String> instanceType() {
         return this.instanceType;
     }
 
     @Import(name="keyName")
-      private final @Nullable Output<String> keyName;
+    private @Nullable Output<String> keyName;
 
-    public Output<String> keyName() {
-        return this.keyName == null ? Codegen.empty() : this.keyName;
+    public Optional<Output<String>> keyName() {
+        return Optional.ofNullable(this.keyName);
     }
 
     @Import(name="monitoring")
-      private final @Nullable Output<Boolean> monitoring;
+    private @Nullable Output<Boolean> monitoring;
 
-    public Output<Boolean> monitoring() {
-        return this.monitoring == null ? Codegen.empty() : this.monitoring;
+    public Optional<Output<Boolean>> monitoring() {
+        return Optional.ofNullable(this.monitoring);
     }
 
     @Import(name="placementGroup")
-      private final @Nullable Output<String> placementGroup;
+    private @Nullable Output<String> placementGroup;
 
-    public Output<String> placementGroup() {
-        return this.placementGroup == null ? Codegen.empty() : this.placementGroup;
+    public Optional<Output<String>> placementGroup() {
+        return Optional.ofNullable(this.placementGroup);
     }
 
     @Import(name="placementTenancy")
-      private final @Nullable Output<String> placementTenancy;
+    private @Nullable Output<String> placementTenancy;
 
-    public Output<String> placementTenancy() {
-        return this.placementTenancy == null ? Codegen.empty() : this.placementTenancy;
+    public Optional<Output<String>> placementTenancy() {
+        return Optional.ofNullable(this.placementTenancy);
     }
 
     @Import(name="rootBlockDevices")
-      private final @Nullable Output<List<SpotFleetRequestLaunchSpecificationRootBlockDeviceGetArgs>> rootBlockDevices;
+    private @Nullable Output<List<SpotFleetRequestLaunchSpecificationRootBlockDeviceGetArgs>> rootBlockDevices;
 
-    public Output<List<SpotFleetRequestLaunchSpecificationRootBlockDeviceGetArgs>> rootBlockDevices() {
-        return this.rootBlockDevices == null ? Codegen.empty() : this.rootBlockDevices;
+    public Optional<Output<List<SpotFleetRequestLaunchSpecificationRootBlockDeviceGetArgs>>> rootBlockDevices() {
+        return Optional.ofNullable(this.rootBlockDevices);
     }
 
     /**
@@ -132,10 +132,10 @@ public final class SpotFleetRequestLaunchSpecificationGetArgs extends com.pulumi
      * 
      */
     @Import(name="spotPrice")
-      private final @Nullable Output<String> spotPrice;
+    private @Nullable Output<String> spotPrice;
 
-    public Output<String> spotPrice() {
-        return this.spotPrice == null ? Codegen.empty() : this.spotPrice;
+    public Optional<Output<String>> spotPrice() {
+        return Optional.ofNullable(this.spotPrice);
     }
 
     /**
@@ -143,10 +143,10 @@ public final class SpotFleetRequestLaunchSpecificationGetArgs extends com.pulumi
      * 
      */
     @Import(name="subnetId")
-      private final @Nullable Output<String> subnetId;
+    private @Nullable Output<String> subnetId;
 
-    public Output<String> subnetId() {
-        return this.subnetId == null ? Codegen.empty() : this.subnetId;
+    public Optional<Output<String>> subnetId() {
+        return Optional.ofNullable(this.subnetId);
     }
 
     /**
@@ -154,24 +154,24 @@ public final class SpotFleetRequestLaunchSpecificationGetArgs extends com.pulumi
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     @Import(name="userData")
-      private final @Nullable Output<String> userData;
+    private @Nullable Output<String> userData;
 
-    public Output<String> userData() {
-        return this.userData == null ? Codegen.empty() : this.userData;
+    public Optional<Output<String>> userData() {
+        return Optional.ofNullable(this.userData);
     }
 
     @Import(name="vpcSecurityGroupIds")
-      private final @Nullable Output<List<String>> vpcSecurityGroupIds;
+    private @Nullable Output<List<String>> vpcSecurityGroupIds;
 
-    public Output<List<String>> vpcSecurityGroupIds() {
-        return this.vpcSecurityGroupIds == null ? Codegen.empty() : this.vpcSecurityGroupIds;
+    public Optional<Output<List<String>>> vpcSecurityGroupIds() {
+        return Optional.ofNullable(this.vpcSecurityGroupIds);
     }
 
     /**
@@ -179,309 +179,256 @@ public final class SpotFleetRequestLaunchSpecificationGetArgs extends com.pulumi
      * 
      */
     @Import(name="weightedCapacity")
-      private final @Nullable Output<String> weightedCapacity;
+    private @Nullable Output<String> weightedCapacity;
 
-    public Output<String> weightedCapacity() {
-        return this.weightedCapacity == null ? Codegen.empty() : this.weightedCapacity;
+    public Optional<Output<String>> weightedCapacity() {
+        return Optional.ofNullable(this.weightedCapacity);
     }
 
-    public SpotFleetRequestLaunchSpecificationGetArgs(
-        Output<String> ami,
-        @Nullable Output<Boolean> associatePublicIpAddress,
-        @Nullable Output<String> availabilityZone,
-        @Nullable Output<List<SpotFleetRequestLaunchSpecificationEbsBlockDeviceGetArgs>> ebsBlockDevices,
-        @Nullable Output<Boolean> ebsOptimized,
-        @Nullable Output<List<SpotFleetRequestLaunchSpecificationEphemeralBlockDeviceGetArgs>> ephemeralBlockDevices,
-        @Nullable Output<String> iamInstanceProfile,
-        @Nullable Output<String> iamInstanceProfileArn,
-        Output<String> instanceType,
-        @Nullable Output<String> keyName,
-        @Nullable Output<Boolean> monitoring,
-        @Nullable Output<String> placementGroup,
-        @Nullable Output<String> placementTenancy,
-        @Nullable Output<List<SpotFleetRequestLaunchSpecificationRootBlockDeviceGetArgs>> rootBlockDevices,
-        @Nullable Output<String> spotPrice,
-        @Nullable Output<String> subnetId,
-        @Nullable Output<Map<String,String>> tags,
-        @Nullable Output<String> userData,
-        @Nullable Output<List<String>> vpcSecurityGroupIds,
-        @Nullable Output<String> weightedCapacity) {
-        this.ami = Objects.requireNonNull(ami, "expected parameter 'ami' to be non-null");
-        this.associatePublicIpAddress = associatePublicIpAddress;
-        this.availabilityZone = availabilityZone;
-        this.ebsBlockDevices = ebsBlockDevices;
-        this.ebsOptimized = ebsOptimized;
-        this.ephemeralBlockDevices = ephemeralBlockDevices;
-        this.iamInstanceProfile = iamInstanceProfile;
-        this.iamInstanceProfileArn = iamInstanceProfileArn;
-        this.instanceType = Objects.requireNonNull(instanceType, "expected parameter 'instanceType' to be non-null");
-        this.keyName = keyName;
-        this.monitoring = monitoring;
-        this.placementGroup = placementGroup;
-        this.placementTenancy = placementTenancy;
-        this.rootBlockDevices = rootBlockDevices;
-        this.spotPrice = spotPrice;
-        this.subnetId = subnetId;
-        this.tags = tags;
-        this.userData = userData;
-        this.vpcSecurityGroupIds = vpcSecurityGroupIds;
-        this.weightedCapacity = weightedCapacity;
-    }
+    private SpotFleetRequestLaunchSpecificationGetArgs() {}
 
-    private SpotFleetRequestLaunchSpecificationGetArgs() {
-        this.ami = Codegen.empty();
-        this.associatePublicIpAddress = Codegen.empty();
-        this.availabilityZone = Codegen.empty();
-        this.ebsBlockDevices = Codegen.empty();
-        this.ebsOptimized = Codegen.empty();
-        this.ephemeralBlockDevices = Codegen.empty();
-        this.iamInstanceProfile = Codegen.empty();
-        this.iamInstanceProfileArn = Codegen.empty();
-        this.instanceType = Codegen.empty();
-        this.keyName = Codegen.empty();
-        this.monitoring = Codegen.empty();
-        this.placementGroup = Codegen.empty();
-        this.placementTenancy = Codegen.empty();
-        this.rootBlockDevices = Codegen.empty();
-        this.spotPrice = Codegen.empty();
-        this.subnetId = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.userData = Codegen.empty();
-        this.vpcSecurityGroupIds = Codegen.empty();
-        this.weightedCapacity = Codegen.empty();
+    private SpotFleetRequestLaunchSpecificationGetArgs(SpotFleetRequestLaunchSpecificationGetArgs $) {
+        this.ami = $.ami;
+        this.associatePublicIpAddress = $.associatePublicIpAddress;
+        this.availabilityZone = $.availabilityZone;
+        this.ebsBlockDevices = $.ebsBlockDevices;
+        this.ebsOptimized = $.ebsOptimized;
+        this.ephemeralBlockDevices = $.ephemeralBlockDevices;
+        this.iamInstanceProfile = $.iamInstanceProfile;
+        this.iamInstanceProfileArn = $.iamInstanceProfileArn;
+        this.instanceType = $.instanceType;
+        this.keyName = $.keyName;
+        this.monitoring = $.monitoring;
+        this.placementGroup = $.placementGroup;
+        this.placementTenancy = $.placementTenancy;
+        this.rootBlockDevices = $.rootBlockDevices;
+        this.spotPrice = $.spotPrice;
+        this.subnetId = $.subnetId;
+        this.tags = $.tags;
+        this.userData = $.userData;
+        this.vpcSecurityGroupIds = $.vpcSecurityGroupIds;
+        this.weightedCapacity = $.weightedCapacity;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SpotFleetRequestLaunchSpecificationGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> ami;
-        private @Nullable Output<Boolean> associatePublicIpAddress;
-        private @Nullable Output<String> availabilityZone;
-        private @Nullable Output<List<SpotFleetRequestLaunchSpecificationEbsBlockDeviceGetArgs>> ebsBlockDevices;
-        private @Nullable Output<Boolean> ebsOptimized;
-        private @Nullable Output<List<SpotFleetRequestLaunchSpecificationEphemeralBlockDeviceGetArgs>> ephemeralBlockDevices;
-        private @Nullable Output<String> iamInstanceProfile;
-        private @Nullable Output<String> iamInstanceProfileArn;
-        private Output<String> instanceType;
-        private @Nullable Output<String> keyName;
-        private @Nullable Output<Boolean> monitoring;
-        private @Nullable Output<String> placementGroup;
-        private @Nullable Output<String> placementTenancy;
-        private @Nullable Output<List<SpotFleetRequestLaunchSpecificationRootBlockDeviceGetArgs>> rootBlockDevices;
-        private @Nullable Output<String> spotPrice;
-        private @Nullable Output<String> subnetId;
-        private @Nullable Output<Map<String,String>> tags;
-        private @Nullable Output<String> userData;
-        private @Nullable Output<List<String>> vpcSecurityGroupIds;
-        private @Nullable Output<String> weightedCapacity;
+        private SpotFleetRequestLaunchSpecificationGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SpotFleetRequestLaunchSpecificationGetArgs();
         }
 
         public Builder(SpotFleetRequestLaunchSpecificationGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.ami = defaults.ami;
-    	      this.associatePublicIpAddress = defaults.associatePublicIpAddress;
-    	      this.availabilityZone = defaults.availabilityZone;
-    	      this.ebsBlockDevices = defaults.ebsBlockDevices;
-    	      this.ebsOptimized = defaults.ebsOptimized;
-    	      this.ephemeralBlockDevices = defaults.ephemeralBlockDevices;
-    	      this.iamInstanceProfile = defaults.iamInstanceProfile;
-    	      this.iamInstanceProfileArn = defaults.iamInstanceProfileArn;
-    	      this.instanceType = defaults.instanceType;
-    	      this.keyName = defaults.keyName;
-    	      this.monitoring = defaults.monitoring;
-    	      this.placementGroup = defaults.placementGroup;
-    	      this.placementTenancy = defaults.placementTenancy;
-    	      this.rootBlockDevices = defaults.rootBlockDevices;
-    	      this.spotPrice = defaults.spotPrice;
-    	      this.subnetId = defaults.subnetId;
-    	      this.tags = defaults.tags;
-    	      this.userData = defaults.userData;
-    	      this.vpcSecurityGroupIds = defaults.vpcSecurityGroupIds;
-    	      this.weightedCapacity = defaults.weightedCapacity;
+            $ = new SpotFleetRequestLaunchSpecificationGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder ami(Output<String> ami) {
-            this.ami = Objects.requireNonNull(ami);
+            $.ami = ami;
             return this;
         }
+
         public Builder ami(String ami) {
-            this.ami = Output.of(Objects.requireNonNull(ami));
-            return this;
+            return ami(Output.of(ami));
         }
+
         public Builder associatePublicIpAddress(@Nullable Output<Boolean> associatePublicIpAddress) {
-            this.associatePublicIpAddress = associatePublicIpAddress;
+            $.associatePublicIpAddress = associatePublicIpAddress;
             return this;
         }
-        public Builder associatePublicIpAddress(@Nullable Boolean associatePublicIpAddress) {
-            this.associatePublicIpAddress = Codegen.ofNullable(associatePublicIpAddress);
-            return this;
+
+        public Builder associatePublicIpAddress(Boolean associatePublicIpAddress) {
+            return associatePublicIpAddress(Output.of(associatePublicIpAddress));
         }
+
         public Builder availabilityZone(@Nullable Output<String> availabilityZone) {
-            this.availabilityZone = availabilityZone;
+            $.availabilityZone = availabilityZone;
             return this;
         }
-        public Builder availabilityZone(@Nullable String availabilityZone) {
-            this.availabilityZone = Codegen.ofNullable(availabilityZone);
-            return this;
+
+        public Builder availabilityZone(String availabilityZone) {
+            return availabilityZone(Output.of(availabilityZone));
         }
+
         public Builder ebsBlockDevices(@Nullable Output<List<SpotFleetRequestLaunchSpecificationEbsBlockDeviceGetArgs>> ebsBlockDevices) {
-            this.ebsBlockDevices = ebsBlockDevices;
+            $.ebsBlockDevices = ebsBlockDevices;
             return this;
         }
-        public Builder ebsBlockDevices(@Nullable List<SpotFleetRequestLaunchSpecificationEbsBlockDeviceGetArgs> ebsBlockDevices) {
-            this.ebsBlockDevices = Codegen.ofNullable(ebsBlockDevices);
-            return this;
+
+        public Builder ebsBlockDevices(List<SpotFleetRequestLaunchSpecificationEbsBlockDeviceGetArgs> ebsBlockDevices) {
+            return ebsBlockDevices(Output.of(ebsBlockDevices));
         }
+
         public Builder ebsBlockDevices(SpotFleetRequestLaunchSpecificationEbsBlockDeviceGetArgs... ebsBlockDevices) {
             return ebsBlockDevices(List.of(ebsBlockDevices));
         }
+
         public Builder ebsOptimized(@Nullable Output<Boolean> ebsOptimized) {
-            this.ebsOptimized = ebsOptimized;
+            $.ebsOptimized = ebsOptimized;
             return this;
         }
-        public Builder ebsOptimized(@Nullable Boolean ebsOptimized) {
-            this.ebsOptimized = Codegen.ofNullable(ebsOptimized);
-            return this;
+
+        public Builder ebsOptimized(Boolean ebsOptimized) {
+            return ebsOptimized(Output.of(ebsOptimized));
         }
+
         public Builder ephemeralBlockDevices(@Nullable Output<List<SpotFleetRequestLaunchSpecificationEphemeralBlockDeviceGetArgs>> ephemeralBlockDevices) {
-            this.ephemeralBlockDevices = ephemeralBlockDevices;
+            $.ephemeralBlockDevices = ephemeralBlockDevices;
             return this;
         }
-        public Builder ephemeralBlockDevices(@Nullable List<SpotFleetRequestLaunchSpecificationEphemeralBlockDeviceGetArgs> ephemeralBlockDevices) {
-            this.ephemeralBlockDevices = Codegen.ofNullable(ephemeralBlockDevices);
-            return this;
+
+        public Builder ephemeralBlockDevices(List<SpotFleetRequestLaunchSpecificationEphemeralBlockDeviceGetArgs> ephemeralBlockDevices) {
+            return ephemeralBlockDevices(Output.of(ephemeralBlockDevices));
         }
+
         public Builder ephemeralBlockDevices(SpotFleetRequestLaunchSpecificationEphemeralBlockDeviceGetArgs... ephemeralBlockDevices) {
             return ephemeralBlockDevices(List.of(ephemeralBlockDevices));
         }
+
         public Builder iamInstanceProfile(@Nullable Output<String> iamInstanceProfile) {
-            this.iamInstanceProfile = iamInstanceProfile;
+            $.iamInstanceProfile = iamInstanceProfile;
             return this;
         }
-        public Builder iamInstanceProfile(@Nullable String iamInstanceProfile) {
-            this.iamInstanceProfile = Codegen.ofNullable(iamInstanceProfile);
-            return this;
+
+        public Builder iamInstanceProfile(String iamInstanceProfile) {
+            return iamInstanceProfile(Output.of(iamInstanceProfile));
         }
+
         public Builder iamInstanceProfileArn(@Nullable Output<String> iamInstanceProfileArn) {
-            this.iamInstanceProfileArn = iamInstanceProfileArn;
+            $.iamInstanceProfileArn = iamInstanceProfileArn;
             return this;
         }
-        public Builder iamInstanceProfileArn(@Nullable String iamInstanceProfileArn) {
-            this.iamInstanceProfileArn = Codegen.ofNullable(iamInstanceProfileArn);
-            return this;
+
+        public Builder iamInstanceProfileArn(String iamInstanceProfileArn) {
+            return iamInstanceProfileArn(Output.of(iamInstanceProfileArn));
         }
+
         public Builder instanceType(Output<String> instanceType) {
-            this.instanceType = Objects.requireNonNull(instanceType);
+            $.instanceType = instanceType;
             return this;
         }
+
         public Builder instanceType(String instanceType) {
-            this.instanceType = Output.of(Objects.requireNonNull(instanceType));
-            return this;
+            return instanceType(Output.of(instanceType));
         }
+
         public Builder keyName(@Nullable Output<String> keyName) {
-            this.keyName = keyName;
+            $.keyName = keyName;
             return this;
         }
-        public Builder keyName(@Nullable String keyName) {
-            this.keyName = Codegen.ofNullable(keyName);
-            return this;
+
+        public Builder keyName(String keyName) {
+            return keyName(Output.of(keyName));
         }
+
         public Builder monitoring(@Nullable Output<Boolean> monitoring) {
-            this.monitoring = monitoring;
+            $.monitoring = monitoring;
             return this;
         }
-        public Builder monitoring(@Nullable Boolean monitoring) {
-            this.monitoring = Codegen.ofNullable(monitoring);
-            return this;
+
+        public Builder monitoring(Boolean monitoring) {
+            return monitoring(Output.of(monitoring));
         }
+
         public Builder placementGroup(@Nullable Output<String> placementGroup) {
-            this.placementGroup = placementGroup;
+            $.placementGroup = placementGroup;
             return this;
         }
-        public Builder placementGroup(@Nullable String placementGroup) {
-            this.placementGroup = Codegen.ofNullable(placementGroup);
-            return this;
+
+        public Builder placementGroup(String placementGroup) {
+            return placementGroup(Output.of(placementGroup));
         }
+
         public Builder placementTenancy(@Nullable Output<String> placementTenancy) {
-            this.placementTenancy = placementTenancy;
+            $.placementTenancy = placementTenancy;
             return this;
         }
-        public Builder placementTenancy(@Nullable String placementTenancy) {
-            this.placementTenancy = Codegen.ofNullable(placementTenancy);
-            return this;
+
+        public Builder placementTenancy(String placementTenancy) {
+            return placementTenancy(Output.of(placementTenancy));
         }
+
         public Builder rootBlockDevices(@Nullable Output<List<SpotFleetRequestLaunchSpecificationRootBlockDeviceGetArgs>> rootBlockDevices) {
-            this.rootBlockDevices = rootBlockDevices;
+            $.rootBlockDevices = rootBlockDevices;
             return this;
         }
-        public Builder rootBlockDevices(@Nullable List<SpotFleetRequestLaunchSpecificationRootBlockDeviceGetArgs> rootBlockDevices) {
-            this.rootBlockDevices = Codegen.ofNullable(rootBlockDevices);
-            return this;
+
+        public Builder rootBlockDevices(List<SpotFleetRequestLaunchSpecificationRootBlockDeviceGetArgs> rootBlockDevices) {
+            return rootBlockDevices(Output.of(rootBlockDevices));
         }
+
         public Builder rootBlockDevices(SpotFleetRequestLaunchSpecificationRootBlockDeviceGetArgs... rootBlockDevices) {
             return rootBlockDevices(List.of(rootBlockDevices));
         }
+
         public Builder spotPrice(@Nullable Output<String> spotPrice) {
-            this.spotPrice = spotPrice;
+            $.spotPrice = spotPrice;
             return this;
         }
-        public Builder spotPrice(@Nullable String spotPrice) {
-            this.spotPrice = Codegen.ofNullable(spotPrice);
-            return this;
+
+        public Builder spotPrice(String spotPrice) {
+            return spotPrice(Output.of(spotPrice));
         }
+
         public Builder subnetId(@Nullable Output<String> subnetId) {
-            this.subnetId = subnetId;
+            $.subnetId = subnetId;
             return this;
         }
-        public Builder subnetId(@Nullable String subnetId) {
-            this.subnetId = Codegen.ofNullable(subnetId);
-            return this;
+
+        public Builder subnetId(String subnetId) {
+            return subnetId(Output.of(subnetId));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder userData(@Nullable Output<String> userData) {
-            this.userData = userData;
+            $.userData = userData;
             return this;
         }
-        public Builder userData(@Nullable String userData) {
-            this.userData = Codegen.ofNullable(userData);
-            return this;
+
+        public Builder userData(String userData) {
+            return userData(Output.of(userData));
         }
+
         public Builder vpcSecurityGroupIds(@Nullable Output<List<String>> vpcSecurityGroupIds) {
-            this.vpcSecurityGroupIds = vpcSecurityGroupIds;
+            $.vpcSecurityGroupIds = vpcSecurityGroupIds;
             return this;
         }
-        public Builder vpcSecurityGroupIds(@Nullable List<String> vpcSecurityGroupIds) {
-            this.vpcSecurityGroupIds = Codegen.ofNullable(vpcSecurityGroupIds);
-            return this;
+
+        public Builder vpcSecurityGroupIds(List<String> vpcSecurityGroupIds) {
+            return vpcSecurityGroupIds(Output.of(vpcSecurityGroupIds));
         }
+
         public Builder vpcSecurityGroupIds(String... vpcSecurityGroupIds) {
             return vpcSecurityGroupIds(List.of(vpcSecurityGroupIds));
         }
+
         public Builder weightedCapacity(@Nullable Output<String> weightedCapacity) {
-            this.weightedCapacity = weightedCapacity;
+            $.weightedCapacity = weightedCapacity;
             return this;
         }
-        public Builder weightedCapacity(@Nullable String weightedCapacity) {
-            this.weightedCapacity = Codegen.ofNullable(weightedCapacity);
-            return this;
-        }        public SpotFleetRequestLaunchSpecificationGetArgs build() {
-            return new SpotFleetRequestLaunchSpecificationGetArgs(ami, associatePublicIpAddress, availabilityZone, ebsBlockDevices, ebsOptimized, ephemeralBlockDevices, iamInstanceProfile, iamInstanceProfileArn, instanceType, keyName, monitoring, placementGroup, placementTenancy, rootBlockDevices, spotPrice, subnetId, tags, userData, vpcSecurityGroupIds, weightedCapacity);
+
+        public Builder weightedCapacity(String weightedCapacity) {
+            return weightedCapacity(Output.of(weightedCapacity));
+        }
+
+        public SpotFleetRequestLaunchSpecificationGetArgs build() {
+            $.ami = Objects.requireNonNull($.ami, "expected parameter 'ami' to be non-null");
+            $.instanceType = Objects.requireNonNull($.instanceType, "expected parameter 'instanceType' to be non-null");
+            return $;
         }
     }
+
 }

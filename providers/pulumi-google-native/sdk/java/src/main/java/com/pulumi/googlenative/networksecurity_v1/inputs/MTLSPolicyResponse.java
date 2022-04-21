@@ -22,48 +22,49 @@ public final class MTLSPolicyResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="clientValidationCa", required=true)
-      private final List<ValidationCAResponse> clientValidationCa;
+    private List<ValidationCAResponse> clientValidationCa;
 
     public List<ValidationCAResponse> clientValidationCa() {
         return this.clientValidationCa;
     }
 
-    public MTLSPolicyResponse(List<ValidationCAResponse> clientValidationCa) {
-        this.clientValidationCa = Objects.requireNonNull(clientValidationCa, "expected parameter 'clientValidationCa' to be non-null");
-    }
+    private MTLSPolicyResponse() {}
 
-    private MTLSPolicyResponse() {
-        this.clientValidationCa = List.of();
+    private MTLSPolicyResponse(MTLSPolicyResponse $) {
+        this.clientValidationCa = $.clientValidationCa;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MTLSPolicyResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<ValidationCAResponse> clientValidationCa;
+        private MTLSPolicyResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new MTLSPolicyResponse();
         }
 
         public Builder(MTLSPolicyResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.clientValidationCa = defaults.clientValidationCa;
+            $ = new MTLSPolicyResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder clientValidationCa(List<ValidationCAResponse> clientValidationCa) {
-            this.clientValidationCa = Objects.requireNonNull(clientValidationCa);
+            $.clientValidationCa = clientValidationCa;
             return this;
         }
+
         public Builder clientValidationCa(ValidationCAResponse... clientValidationCa) {
             return clientValidationCa(List.of(clientValidationCa));
-        }        public MTLSPolicyResponse build() {
-            return new MTLSPolicyResponse(clientValidationCa);
+        }
+
+        public MTLSPolicyResponse build() {
+            $.clientValidationCa = Objects.requireNonNull($.clientValidationCa, "expected parameter 'clientValidationCa' to be non-null");
+            return $;
         }
     }
+
 }

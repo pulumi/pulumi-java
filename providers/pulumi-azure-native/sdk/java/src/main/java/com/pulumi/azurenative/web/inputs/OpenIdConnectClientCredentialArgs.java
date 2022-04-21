@@ -6,9 +6,9 @@ package com.pulumi.azurenative.web.inputs;
 import com.pulumi.azurenative.web.enums.ClientCredentialMethod;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class OpenIdConnectClientCredentialArgs extends com.pulumi.resource
      * 
      */
     @Import(name="clientSecretSettingName")
-      private final @Nullable Output<String> clientSecretSettingName;
+    private @Nullable Output<String> clientSecretSettingName;
 
-    public Output<String> clientSecretSettingName() {
-        return this.clientSecretSettingName == null ? Codegen.empty() : this.clientSecretSettingName;
+    public Optional<Output<String>> clientSecretSettingName() {
+        return Optional.ofNullable(this.clientSecretSettingName);
     }
 
     /**
@@ -36,63 +36,58 @@ public final class OpenIdConnectClientCredentialArgs extends com.pulumi.resource
      * 
      */
     @Import(name="method")
-      private final @Nullable Output<ClientCredentialMethod> method;
+    private @Nullable Output<ClientCredentialMethod> method;
 
-    public Output<ClientCredentialMethod> method() {
-        return this.method == null ? Codegen.empty() : this.method;
+    public Optional<Output<ClientCredentialMethod>> method() {
+        return Optional.ofNullable(this.method);
     }
 
-    public OpenIdConnectClientCredentialArgs(
-        @Nullable Output<String> clientSecretSettingName,
-        @Nullable Output<ClientCredentialMethod> method) {
-        this.clientSecretSettingName = clientSecretSettingName;
-        this.method = method;
-    }
+    private OpenIdConnectClientCredentialArgs() {}
 
-    private OpenIdConnectClientCredentialArgs() {
-        this.clientSecretSettingName = Codegen.empty();
-        this.method = Codegen.empty();
+    private OpenIdConnectClientCredentialArgs(OpenIdConnectClientCredentialArgs $) {
+        this.clientSecretSettingName = $.clientSecretSettingName;
+        this.method = $.method;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(OpenIdConnectClientCredentialArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> clientSecretSettingName;
-        private @Nullable Output<ClientCredentialMethod> method;
+        private OpenIdConnectClientCredentialArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new OpenIdConnectClientCredentialArgs();
         }
 
         public Builder(OpenIdConnectClientCredentialArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.clientSecretSettingName = defaults.clientSecretSettingName;
-    	      this.method = defaults.method;
+            $ = new OpenIdConnectClientCredentialArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder clientSecretSettingName(@Nullable Output<String> clientSecretSettingName) {
-            this.clientSecretSettingName = clientSecretSettingName;
+            $.clientSecretSettingName = clientSecretSettingName;
             return this;
         }
-        public Builder clientSecretSettingName(@Nullable String clientSecretSettingName) {
-            this.clientSecretSettingName = Codegen.ofNullable(clientSecretSettingName);
-            return this;
+
+        public Builder clientSecretSettingName(String clientSecretSettingName) {
+            return clientSecretSettingName(Output.of(clientSecretSettingName));
         }
+
         public Builder method(@Nullable Output<ClientCredentialMethod> method) {
-            this.method = method;
+            $.method = method;
             return this;
         }
-        public Builder method(@Nullable ClientCredentialMethod method) {
-            this.method = Codegen.ofNullable(method);
-            return this;
-        }        public OpenIdConnectClientCredentialArgs build() {
-            return new OpenIdConnectClientCredentialArgs(clientSecretSettingName, method);
+
+        public Builder method(ClientCredentialMethod method) {
+            return method(Output.of(method));
+        }
+
+        public OpenIdConnectClientCredentialArgs build() {
+            return $;
         }
     }
+
 }

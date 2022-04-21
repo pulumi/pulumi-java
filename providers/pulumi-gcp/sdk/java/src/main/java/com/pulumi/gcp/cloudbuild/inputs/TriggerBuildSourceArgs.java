@@ -5,10 +5,10 @@ package com.pulumi.gcp.cloudbuild.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.cloudbuild.inputs.TriggerBuildSourceRepoSourceArgs;
 import com.pulumi.gcp.cloudbuild.inputs.TriggerBuildSourceStorageSourceArgs;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class TriggerBuildSourceArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="repoSource")
-      private final @Nullable Output<TriggerBuildSourceRepoSourceArgs> repoSource;
+    private @Nullable Output<TriggerBuildSourceRepoSourceArgs> repoSource;
 
-    public Output<TriggerBuildSourceRepoSourceArgs> repoSource() {
-        return this.repoSource == null ? Codegen.empty() : this.repoSource;
+    public Optional<Output<TriggerBuildSourceRepoSourceArgs>> repoSource() {
+        return Optional.ofNullable(this.repoSource);
     }
 
     /**
@@ -34,63 +34,58 @@ public final class TriggerBuildSourceArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="storageSource")
-      private final @Nullable Output<TriggerBuildSourceStorageSourceArgs> storageSource;
+    private @Nullable Output<TriggerBuildSourceStorageSourceArgs> storageSource;
 
-    public Output<TriggerBuildSourceStorageSourceArgs> storageSource() {
-        return this.storageSource == null ? Codegen.empty() : this.storageSource;
+    public Optional<Output<TriggerBuildSourceStorageSourceArgs>> storageSource() {
+        return Optional.ofNullable(this.storageSource);
     }
 
-    public TriggerBuildSourceArgs(
-        @Nullable Output<TriggerBuildSourceRepoSourceArgs> repoSource,
-        @Nullable Output<TriggerBuildSourceStorageSourceArgs> storageSource) {
-        this.repoSource = repoSource;
-        this.storageSource = storageSource;
-    }
+    private TriggerBuildSourceArgs() {}
 
-    private TriggerBuildSourceArgs() {
-        this.repoSource = Codegen.empty();
-        this.storageSource = Codegen.empty();
+    private TriggerBuildSourceArgs(TriggerBuildSourceArgs $) {
+        this.repoSource = $.repoSource;
+        this.storageSource = $.storageSource;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TriggerBuildSourceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<TriggerBuildSourceRepoSourceArgs> repoSource;
-        private @Nullable Output<TriggerBuildSourceStorageSourceArgs> storageSource;
+        private TriggerBuildSourceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TriggerBuildSourceArgs();
         }
 
         public Builder(TriggerBuildSourceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.repoSource = defaults.repoSource;
-    	      this.storageSource = defaults.storageSource;
+            $ = new TriggerBuildSourceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder repoSource(@Nullable Output<TriggerBuildSourceRepoSourceArgs> repoSource) {
-            this.repoSource = repoSource;
+            $.repoSource = repoSource;
             return this;
         }
-        public Builder repoSource(@Nullable TriggerBuildSourceRepoSourceArgs repoSource) {
-            this.repoSource = Codegen.ofNullable(repoSource);
-            return this;
+
+        public Builder repoSource(TriggerBuildSourceRepoSourceArgs repoSource) {
+            return repoSource(Output.of(repoSource));
         }
+
         public Builder storageSource(@Nullable Output<TriggerBuildSourceStorageSourceArgs> storageSource) {
-            this.storageSource = storageSource;
+            $.storageSource = storageSource;
             return this;
         }
-        public Builder storageSource(@Nullable TriggerBuildSourceStorageSourceArgs storageSource) {
-            this.storageSource = Codegen.ofNullable(storageSource);
-            return this;
-        }        public TriggerBuildSourceArgs build() {
-            return new TriggerBuildSourceArgs(repoSource, storageSource);
+
+        public Builder storageSource(TriggerBuildSourceStorageSourceArgs storageSource) {
+            return storageSource(Output.of(storageSource));
+        }
+
+        public TriggerBuildSourceArgs build() {
+            return $;
         }
     }
+
 }

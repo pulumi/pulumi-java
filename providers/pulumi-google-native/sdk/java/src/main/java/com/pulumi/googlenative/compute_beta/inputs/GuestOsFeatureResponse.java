@@ -21,45 +21,45 @@ public final class GuestOsFeatureResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
     }
 
-    public GuestOsFeatureResponse(String type) {
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private GuestOsFeatureResponse() {}
 
-    private GuestOsFeatureResponse() {
-        this.type = null;
+    private GuestOsFeatureResponse(GuestOsFeatureResponse $) {
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GuestOsFeatureResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String type;
+        private GuestOsFeatureResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GuestOsFeatureResponse();
         }
 
         public Builder(GuestOsFeatureResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.type = defaults.type;
+            $ = new GuestOsFeatureResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
-        }        public GuestOsFeatureResponse build() {
-            return new GuestOsFeatureResponse(type);
+        }
+
+        public GuestOsFeatureResponse build() {
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

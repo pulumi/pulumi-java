@@ -5,7 +5,6 @@ package com.pulumi.aws.appmesh.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,49 +18,49 @@ public final class VirtualNodeSpecListenerTlsValidationTrustFileArgs extends com
      * 
      */
     @Import(name="certificateChain", required=true)
-      private final Output<String> certificateChain;
+    private Output<String> certificateChain;
 
     public Output<String> certificateChain() {
         return this.certificateChain;
     }
 
-    public VirtualNodeSpecListenerTlsValidationTrustFileArgs(Output<String> certificateChain) {
-        this.certificateChain = Objects.requireNonNull(certificateChain, "expected parameter 'certificateChain' to be non-null");
-    }
+    private VirtualNodeSpecListenerTlsValidationTrustFileArgs() {}
 
-    private VirtualNodeSpecListenerTlsValidationTrustFileArgs() {
-        this.certificateChain = Codegen.empty();
+    private VirtualNodeSpecListenerTlsValidationTrustFileArgs(VirtualNodeSpecListenerTlsValidationTrustFileArgs $) {
+        this.certificateChain = $.certificateChain;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VirtualNodeSpecListenerTlsValidationTrustFileArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> certificateChain;
+        private VirtualNodeSpecListenerTlsValidationTrustFileArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new VirtualNodeSpecListenerTlsValidationTrustFileArgs();
         }
 
         public Builder(VirtualNodeSpecListenerTlsValidationTrustFileArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.certificateChain = defaults.certificateChain;
+            $ = new VirtualNodeSpecListenerTlsValidationTrustFileArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder certificateChain(Output<String> certificateChain) {
-            this.certificateChain = Objects.requireNonNull(certificateChain);
+            $.certificateChain = certificateChain;
             return this;
         }
+
         public Builder certificateChain(String certificateChain) {
-            this.certificateChain = Output.of(Objects.requireNonNull(certificateChain));
-            return this;
-        }        public VirtualNodeSpecListenerTlsValidationTrustFileArgs build() {
-            return new VirtualNodeSpecListenerTlsValidationTrustFileArgs(certificateChain);
+            return certificateChain(Output.of(certificateChain));
+        }
+
+        public VirtualNodeSpecListenerTlsValidationTrustFileArgs build() {
+            $.certificateChain = Objects.requireNonNull($.certificateChain, "expected parameter 'certificateChain' to be non-null");
+            return $;
         }
     }
+
 }

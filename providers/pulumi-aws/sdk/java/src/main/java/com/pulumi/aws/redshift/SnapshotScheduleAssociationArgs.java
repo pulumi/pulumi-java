@@ -5,7 +5,6 @@ package com.pulumi.aws.redshift;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,7 +18,7 @@ public final class SnapshotScheduleAssociationArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="clusterIdentifier", required=true)
-      private final Output<String> clusterIdentifier;
+    private Output<String> clusterIdentifier;
 
     public Output<String> clusterIdentifier() {
         return this.clusterIdentifier;
@@ -30,63 +29,60 @@ public final class SnapshotScheduleAssociationArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="scheduleIdentifier", required=true)
-      private final Output<String> scheduleIdentifier;
+    private Output<String> scheduleIdentifier;
 
     public Output<String> scheduleIdentifier() {
         return this.scheduleIdentifier;
     }
 
-    public SnapshotScheduleAssociationArgs(
-        Output<String> clusterIdentifier,
-        Output<String> scheduleIdentifier) {
-        this.clusterIdentifier = Objects.requireNonNull(clusterIdentifier, "expected parameter 'clusterIdentifier' to be non-null");
-        this.scheduleIdentifier = Objects.requireNonNull(scheduleIdentifier, "expected parameter 'scheduleIdentifier' to be non-null");
-    }
+    private SnapshotScheduleAssociationArgs() {}
 
-    private SnapshotScheduleAssociationArgs() {
-        this.clusterIdentifier = Codegen.empty();
-        this.scheduleIdentifier = Codegen.empty();
+    private SnapshotScheduleAssociationArgs(SnapshotScheduleAssociationArgs $) {
+        this.clusterIdentifier = $.clusterIdentifier;
+        this.scheduleIdentifier = $.scheduleIdentifier;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SnapshotScheduleAssociationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> clusterIdentifier;
-        private Output<String> scheduleIdentifier;
+        private SnapshotScheduleAssociationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SnapshotScheduleAssociationArgs();
         }
 
         public Builder(SnapshotScheduleAssociationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.clusterIdentifier = defaults.clusterIdentifier;
-    	      this.scheduleIdentifier = defaults.scheduleIdentifier;
+            $ = new SnapshotScheduleAssociationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder clusterIdentifier(Output<String> clusterIdentifier) {
-            this.clusterIdentifier = Objects.requireNonNull(clusterIdentifier);
+            $.clusterIdentifier = clusterIdentifier;
             return this;
         }
+
         public Builder clusterIdentifier(String clusterIdentifier) {
-            this.clusterIdentifier = Output.of(Objects.requireNonNull(clusterIdentifier));
-            return this;
+            return clusterIdentifier(Output.of(clusterIdentifier));
         }
+
         public Builder scheduleIdentifier(Output<String> scheduleIdentifier) {
-            this.scheduleIdentifier = Objects.requireNonNull(scheduleIdentifier);
+            $.scheduleIdentifier = scheduleIdentifier;
             return this;
         }
+
         public Builder scheduleIdentifier(String scheduleIdentifier) {
-            this.scheduleIdentifier = Output.of(Objects.requireNonNull(scheduleIdentifier));
-            return this;
-        }        public SnapshotScheduleAssociationArgs build() {
-            return new SnapshotScheduleAssociationArgs(clusterIdentifier, scheduleIdentifier);
+            return scheduleIdentifier(Output.of(scheduleIdentifier));
+        }
+
+        public SnapshotScheduleAssociationArgs build() {
+            $.clusterIdentifier = Objects.requireNonNull($.clusterIdentifier, "expected parameter 'clusterIdentifier' to be non-null");
+            $.scheduleIdentifier = Objects.requireNonNull($.scheduleIdentifier, "expected parameter 'scheduleIdentifier' to be non-null");
+            return $;
         }
     }
+
 }

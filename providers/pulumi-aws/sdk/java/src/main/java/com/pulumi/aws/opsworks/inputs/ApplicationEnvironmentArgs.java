@@ -5,10 +5,10 @@ package com.pulumi.aws.opsworks.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,7 +21,7 @@ public final class ApplicationEnvironmentArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="key", required=true)
-      private final Output<String> key;
+    private Output<String> key;
 
     public Output<String> key() {
         return this.key;
@@ -32,10 +32,10 @@ public final class ApplicationEnvironmentArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="secure")
-      private final @Nullable Output<Boolean> secure;
+    private @Nullable Output<Boolean> secure;
 
-    public Output<Boolean> secure() {
-        return this.secure == null ? Codegen.empty() : this.secure;
+    public Optional<Output<Boolean>> secure() {
+        return Optional.ofNullable(this.secure);
     }
 
     /**
@@ -43,76 +43,70 @@ public final class ApplicationEnvironmentArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="value", required=true)
-      private final Output<String> value;
+    private Output<String> value;
 
     public Output<String> value() {
         return this.value;
     }
 
-    public ApplicationEnvironmentArgs(
-        Output<String> key,
-        @Nullable Output<Boolean> secure,
-        Output<String> value) {
-        this.key = Objects.requireNonNull(key, "expected parameter 'key' to be non-null");
-        this.secure = secure;
-        this.value = Objects.requireNonNull(value, "expected parameter 'value' to be non-null");
-    }
+    private ApplicationEnvironmentArgs() {}
 
-    private ApplicationEnvironmentArgs() {
-        this.key = Codegen.empty();
-        this.secure = Codegen.empty();
-        this.value = Codegen.empty();
+    private ApplicationEnvironmentArgs(ApplicationEnvironmentArgs $) {
+        this.key = $.key;
+        this.secure = $.secure;
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ApplicationEnvironmentArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> key;
-        private @Nullable Output<Boolean> secure;
-        private Output<String> value;
+        private ApplicationEnvironmentArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ApplicationEnvironmentArgs();
         }
 
         public Builder(ApplicationEnvironmentArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.key = defaults.key;
-    	      this.secure = defaults.secure;
-    	      this.value = defaults.value;
+            $ = new ApplicationEnvironmentArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder key(Output<String> key) {
-            this.key = Objects.requireNonNull(key);
+            $.key = key;
             return this;
         }
+
         public Builder key(String key) {
-            this.key = Output.of(Objects.requireNonNull(key));
-            return this;
+            return key(Output.of(key));
         }
+
         public Builder secure(@Nullable Output<Boolean> secure) {
-            this.secure = secure;
+            $.secure = secure;
             return this;
         }
-        public Builder secure(@Nullable Boolean secure) {
-            this.secure = Codegen.ofNullable(secure);
-            return this;
+
+        public Builder secure(Boolean secure) {
+            return secure(Output.of(secure));
         }
+
         public Builder value(Output<String> value) {
-            this.value = Objects.requireNonNull(value);
+            $.value = value;
             return this;
         }
+
         public Builder value(String value) {
-            this.value = Output.of(Objects.requireNonNull(value));
-            return this;
-        }        public ApplicationEnvironmentArgs build() {
-            return new ApplicationEnvironmentArgs(key, secure, value);
+            return value(Output.of(value));
+        }
+
+        public ApplicationEnvironmentArgs build() {
+            $.key = Objects.requireNonNull($.key, "expected parameter 'key' to be non-null");
+            $.value = Objects.requireNonNull($.value, "expected parameter 'value' to be non-null");
+            return $;
         }
     }
+
 }

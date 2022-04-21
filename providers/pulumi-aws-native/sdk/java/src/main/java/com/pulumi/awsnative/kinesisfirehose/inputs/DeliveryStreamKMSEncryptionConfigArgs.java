@@ -5,7 +5,6 @@ package com.pulumi.awsnative.kinesisfirehose.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -15,49 +14,49 @@ public final class DeliveryStreamKMSEncryptionConfigArgs extends com.pulumi.reso
     public static final DeliveryStreamKMSEncryptionConfigArgs Empty = new DeliveryStreamKMSEncryptionConfigArgs();
 
     @Import(name="aWSKMSKeyARN", required=true)
-      private final Output<String> aWSKMSKeyARN;
+    private Output<String> aWSKMSKeyARN;
 
     public Output<String> aWSKMSKeyARN() {
         return this.aWSKMSKeyARN;
     }
 
-    public DeliveryStreamKMSEncryptionConfigArgs(Output<String> aWSKMSKeyARN) {
-        this.aWSKMSKeyARN = Objects.requireNonNull(aWSKMSKeyARN, "expected parameter 'aWSKMSKeyARN' to be non-null");
-    }
+    private DeliveryStreamKMSEncryptionConfigArgs() {}
 
-    private DeliveryStreamKMSEncryptionConfigArgs() {
-        this.aWSKMSKeyARN = Codegen.empty();
+    private DeliveryStreamKMSEncryptionConfigArgs(DeliveryStreamKMSEncryptionConfigArgs $) {
+        this.aWSKMSKeyARN = $.aWSKMSKeyARN;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DeliveryStreamKMSEncryptionConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> aWSKMSKeyARN;
+        private DeliveryStreamKMSEncryptionConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DeliveryStreamKMSEncryptionConfigArgs();
         }
 
         public Builder(DeliveryStreamKMSEncryptionConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.aWSKMSKeyARN = defaults.aWSKMSKeyARN;
+            $ = new DeliveryStreamKMSEncryptionConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder aWSKMSKeyARN(Output<String> aWSKMSKeyARN) {
-            this.aWSKMSKeyARN = Objects.requireNonNull(aWSKMSKeyARN);
+            $.aWSKMSKeyARN = aWSKMSKeyARN;
             return this;
         }
+
         public Builder aWSKMSKeyARN(String aWSKMSKeyARN) {
-            this.aWSKMSKeyARN = Output.of(Objects.requireNonNull(aWSKMSKeyARN));
-            return this;
-        }        public DeliveryStreamKMSEncryptionConfigArgs build() {
-            return new DeliveryStreamKMSEncryptionConfigArgs(aWSKMSKeyARN);
+            return aWSKMSKeyARN(Output.of(aWSKMSKeyARN));
+        }
+
+        public DeliveryStreamKMSEncryptionConfigArgs build() {
+            $.aWSKMSKeyARN = Objects.requireNonNull($.aWSKMSKeyARN, "expected parameter 'aWSKMSKeyARN' to be non-null");
+            return $;
         }
     }
+
 }

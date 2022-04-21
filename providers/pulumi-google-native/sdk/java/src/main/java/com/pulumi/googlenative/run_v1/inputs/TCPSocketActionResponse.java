@@ -22,7 +22,7 @@ public final class TCPSocketActionResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="host", required=true)
-      private final String host;
+    private String host;
 
     public String host() {
         return this.host;
@@ -33,55 +33,52 @@ public final class TCPSocketActionResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="port", required=true)
-      private final Integer port;
+    private Integer port;
 
     public Integer port() {
         return this.port;
     }
 
-    public TCPSocketActionResponse(
-        String host,
-        Integer port) {
-        this.host = Objects.requireNonNull(host, "expected parameter 'host' to be non-null");
-        this.port = Objects.requireNonNull(port, "expected parameter 'port' to be non-null");
-    }
+    private TCPSocketActionResponse() {}
 
-    private TCPSocketActionResponse() {
-        this.host = null;
-        this.port = null;
+    private TCPSocketActionResponse(TCPSocketActionResponse $) {
+        this.host = $.host;
+        this.port = $.port;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TCPSocketActionResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String host;
-        private Integer port;
+        private TCPSocketActionResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new TCPSocketActionResponse();
         }
 
         public Builder(TCPSocketActionResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.host = defaults.host;
-    	      this.port = defaults.port;
+            $ = new TCPSocketActionResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder host(String host) {
-            this.host = Objects.requireNonNull(host);
+            $.host = host;
             return this;
         }
+
         public Builder port(Integer port) {
-            this.port = Objects.requireNonNull(port);
+            $.port = port;
             return this;
-        }        public TCPSocketActionResponse build() {
-            return new TCPSocketActionResponse(host, port);
+        }
+
+        public TCPSocketActionResponse build() {
+            $.host = Objects.requireNonNull($.host, "expected parameter 'host' to be non-null");
+            $.port = Objects.requireNonNull($.port, "expected parameter 'port' to be non-null");
+            return $;
         }
     }
+
 }

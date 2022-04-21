@@ -24,7 +24,7 @@ public final class NetworkInterfaceDnsSettingsResponse extends com.pulumi.resour
      * 
      */
     @Import(name="appliedDnsServers", required=true)
-      private final List<String> appliedDnsServers;
+    private List<String> appliedDnsServers;
 
     public List<String> appliedDnsServers() {
         return this.appliedDnsServers;
@@ -35,10 +35,10 @@ public final class NetworkInterfaceDnsSettingsResponse extends com.pulumi.resour
      * 
      */
     @Import(name="dnsServers")
-      private final @Nullable List<String> dnsServers;
+    private @Nullable List<String> dnsServers;
 
-    public List<String> dnsServers() {
-        return this.dnsServers == null ? List.of() : this.dnsServers;
+    public Optional<List<String>> dnsServers() {
+        return Optional.ofNullable(this.dnsServers);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class NetworkInterfaceDnsSettingsResponse extends com.pulumi.resour
      * 
      */
     @Import(name="internalDnsNameLabel")
-      private final @Nullable String internalDnsNameLabel;
+    private @Nullable String internalDnsNameLabel;
 
     public Optional<String> internalDnsNameLabel() {
-        return this.internalDnsNameLabel == null ? Optional.empty() : Optional.ofNullable(this.internalDnsNameLabel);
+        return Optional.ofNullable(this.internalDnsNameLabel);
     }
 
     /**
@@ -57,7 +57,7 @@ public final class NetworkInterfaceDnsSettingsResponse extends com.pulumi.resour
      * 
      */
     @Import(name="internalDomainNameSuffix", required=true)
-      private final String internalDomainNameSuffix;
+    private String internalDomainNameSuffix;
 
     public String internalDomainNameSuffix() {
         return this.internalDomainNameSuffix;
@@ -68,88 +68,79 @@ public final class NetworkInterfaceDnsSettingsResponse extends com.pulumi.resour
      * 
      */
     @Import(name="internalFqdn", required=true)
-      private final String internalFqdn;
+    private String internalFqdn;
 
     public String internalFqdn() {
         return this.internalFqdn;
     }
 
-    public NetworkInterfaceDnsSettingsResponse(
-        List<String> appliedDnsServers,
-        @Nullable List<String> dnsServers,
-        @Nullable String internalDnsNameLabel,
-        String internalDomainNameSuffix,
-        String internalFqdn) {
-        this.appliedDnsServers = Objects.requireNonNull(appliedDnsServers, "expected parameter 'appliedDnsServers' to be non-null");
-        this.dnsServers = dnsServers;
-        this.internalDnsNameLabel = internalDnsNameLabel;
-        this.internalDomainNameSuffix = Objects.requireNonNull(internalDomainNameSuffix, "expected parameter 'internalDomainNameSuffix' to be non-null");
-        this.internalFqdn = Objects.requireNonNull(internalFqdn, "expected parameter 'internalFqdn' to be non-null");
-    }
+    private NetworkInterfaceDnsSettingsResponse() {}
 
-    private NetworkInterfaceDnsSettingsResponse() {
-        this.appliedDnsServers = List.of();
-        this.dnsServers = List.of();
-        this.internalDnsNameLabel = null;
-        this.internalDomainNameSuffix = null;
-        this.internalFqdn = null;
+    private NetworkInterfaceDnsSettingsResponse(NetworkInterfaceDnsSettingsResponse $) {
+        this.appliedDnsServers = $.appliedDnsServers;
+        this.dnsServers = $.dnsServers;
+        this.internalDnsNameLabel = $.internalDnsNameLabel;
+        this.internalDomainNameSuffix = $.internalDomainNameSuffix;
+        this.internalFqdn = $.internalFqdn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NetworkInterfaceDnsSettingsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<String> appliedDnsServers;
-        private @Nullable List<String> dnsServers;
-        private @Nullable String internalDnsNameLabel;
-        private String internalDomainNameSuffix;
-        private String internalFqdn;
+        private NetworkInterfaceDnsSettingsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new NetworkInterfaceDnsSettingsResponse();
         }
 
         public Builder(NetworkInterfaceDnsSettingsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.appliedDnsServers = defaults.appliedDnsServers;
-    	      this.dnsServers = defaults.dnsServers;
-    	      this.internalDnsNameLabel = defaults.internalDnsNameLabel;
-    	      this.internalDomainNameSuffix = defaults.internalDomainNameSuffix;
-    	      this.internalFqdn = defaults.internalFqdn;
+            $ = new NetworkInterfaceDnsSettingsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder appliedDnsServers(List<String> appliedDnsServers) {
-            this.appliedDnsServers = Objects.requireNonNull(appliedDnsServers);
+            $.appliedDnsServers = appliedDnsServers;
             return this;
         }
+
         public Builder appliedDnsServers(String... appliedDnsServers) {
             return appliedDnsServers(List.of(appliedDnsServers));
         }
+
         public Builder dnsServers(@Nullable List<String> dnsServers) {
-            this.dnsServers = dnsServers;
+            $.dnsServers = dnsServers;
             return this;
         }
+
         public Builder dnsServers(String... dnsServers) {
             return dnsServers(List.of(dnsServers));
         }
+
         public Builder internalDnsNameLabel(@Nullable String internalDnsNameLabel) {
-            this.internalDnsNameLabel = internalDnsNameLabel;
+            $.internalDnsNameLabel = internalDnsNameLabel;
             return this;
         }
+
         public Builder internalDomainNameSuffix(String internalDomainNameSuffix) {
-            this.internalDomainNameSuffix = Objects.requireNonNull(internalDomainNameSuffix);
+            $.internalDomainNameSuffix = internalDomainNameSuffix;
             return this;
         }
+
         public Builder internalFqdn(String internalFqdn) {
-            this.internalFqdn = Objects.requireNonNull(internalFqdn);
+            $.internalFqdn = internalFqdn;
             return this;
-        }        public NetworkInterfaceDnsSettingsResponse build() {
-            return new NetworkInterfaceDnsSettingsResponse(appliedDnsServers, dnsServers, internalDnsNameLabel, internalDomainNameSuffix, internalFqdn);
+        }
+
+        public NetworkInterfaceDnsSettingsResponse build() {
+            $.appliedDnsServers = Objects.requireNonNull($.appliedDnsServers, "expected parameter 'appliedDnsServers' to be non-null");
+            $.internalDomainNameSuffix = Objects.requireNonNull($.internalDomainNameSuffix, "expected parameter 'internalDomainNameSuffix' to be non-null");
+            $.internalFqdn = Objects.requireNonNull($.internalFqdn, "expected parameter 'internalFqdn' to be non-null");
+            return $;
         }
     }
+
 }

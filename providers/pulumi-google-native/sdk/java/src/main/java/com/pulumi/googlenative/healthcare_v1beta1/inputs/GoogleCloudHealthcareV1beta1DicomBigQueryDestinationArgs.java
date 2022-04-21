@@ -5,11 +5,11 @@ package com.pulumi.googlenative.healthcare_v1beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.healthcare_v1beta1.enums.GoogleCloudHealthcareV1beta1DicomBigQueryDestinationWriteDisposition;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class GoogleCloudHealthcareV1beta1DicomBigQueryDestinationArgs exte
      * 
      */
     @Import(name="force")
-      private final @Nullable Output<Boolean> force;
+    private @Nullable Output<Boolean> force;
 
-    public Output<Boolean> force() {
-        return this.force == null ? Codegen.empty() : this.force;
+    public Optional<Output<Boolean>> force() {
+        return Optional.ofNullable(this.force);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class GoogleCloudHealthcareV1beta1DicomBigQueryDestinationArgs exte
      * 
      */
     @Import(name="tableUri")
-      private final @Nullable Output<String> tableUri;
+    private @Nullable Output<String> tableUri;
 
-    public Output<String> tableUri() {
-        return this.tableUri == null ? Codegen.empty() : this.tableUri;
+    public Optional<Output<String>> tableUri() {
+        return Optional.ofNullable(this.tableUri);
     }
 
     /**
@@ -48,76 +48,68 @@ public final class GoogleCloudHealthcareV1beta1DicomBigQueryDestinationArgs exte
      * 
      */
     @Import(name="writeDisposition")
-      private final @Nullable Output<GoogleCloudHealthcareV1beta1DicomBigQueryDestinationWriteDisposition> writeDisposition;
+    private @Nullable Output<GoogleCloudHealthcareV1beta1DicomBigQueryDestinationWriteDisposition> writeDisposition;
 
-    public Output<GoogleCloudHealthcareV1beta1DicomBigQueryDestinationWriteDisposition> writeDisposition() {
-        return this.writeDisposition == null ? Codegen.empty() : this.writeDisposition;
+    public Optional<Output<GoogleCloudHealthcareV1beta1DicomBigQueryDestinationWriteDisposition>> writeDisposition() {
+        return Optional.ofNullable(this.writeDisposition);
     }
 
-    public GoogleCloudHealthcareV1beta1DicomBigQueryDestinationArgs(
-        @Nullable Output<Boolean> force,
-        @Nullable Output<String> tableUri,
-        @Nullable Output<GoogleCloudHealthcareV1beta1DicomBigQueryDestinationWriteDisposition> writeDisposition) {
-        this.force = force;
-        this.tableUri = tableUri;
-        this.writeDisposition = writeDisposition;
-    }
+    private GoogleCloudHealthcareV1beta1DicomBigQueryDestinationArgs() {}
 
-    private GoogleCloudHealthcareV1beta1DicomBigQueryDestinationArgs() {
-        this.force = Codegen.empty();
-        this.tableUri = Codegen.empty();
-        this.writeDisposition = Codegen.empty();
+    private GoogleCloudHealthcareV1beta1DicomBigQueryDestinationArgs(GoogleCloudHealthcareV1beta1DicomBigQueryDestinationArgs $) {
+        this.force = $.force;
+        this.tableUri = $.tableUri;
+        this.writeDisposition = $.writeDisposition;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudHealthcareV1beta1DicomBigQueryDestinationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> force;
-        private @Nullable Output<String> tableUri;
-        private @Nullable Output<GoogleCloudHealthcareV1beta1DicomBigQueryDestinationWriteDisposition> writeDisposition;
+        private GoogleCloudHealthcareV1beta1DicomBigQueryDestinationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudHealthcareV1beta1DicomBigQueryDestinationArgs();
         }
 
         public Builder(GoogleCloudHealthcareV1beta1DicomBigQueryDestinationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.force = defaults.force;
-    	      this.tableUri = defaults.tableUri;
-    	      this.writeDisposition = defaults.writeDisposition;
+            $ = new GoogleCloudHealthcareV1beta1DicomBigQueryDestinationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder force(@Nullable Output<Boolean> force) {
-            this.force = force;
+            $.force = force;
             return this;
         }
-        public Builder force(@Nullable Boolean force) {
-            this.force = Codegen.ofNullable(force);
-            return this;
+
+        public Builder force(Boolean force) {
+            return force(Output.of(force));
         }
+
         public Builder tableUri(@Nullable Output<String> tableUri) {
-            this.tableUri = tableUri;
+            $.tableUri = tableUri;
             return this;
         }
-        public Builder tableUri(@Nullable String tableUri) {
-            this.tableUri = Codegen.ofNullable(tableUri);
-            return this;
+
+        public Builder tableUri(String tableUri) {
+            return tableUri(Output.of(tableUri));
         }
+
         public Builder writeDisposition(@Nullable Output<GoogleCloudHealthcareV1beta1DicomBigQueryDestinationWriteDisposition> writeDisposition) {
-            this.writeDisposition = writeDisposition;
+            $.writeDisposition = writeDisposition;
             return this;
         }
-        public Builder writeDisposition(@Nullable GoogleCloudHealthcareV1beta1DicomBigQueryDestinationWriteDisposition writeDisposition) {
-            this.writeDisposition = Codegen.ofNullable(writeDisposition);
-            return this;
-        }        public GoogleCloudHealthcareV1beta1DicomBigQueryDestinationArgs build() {
-            return new GoogleCloudHealthcareV1beta1DicomBigQueryDestinationArgs(force, tableUri, writeDisposition);
+
+        public Builder writeDisposition(GoogleCloudHealthcareV1beta1DicomBigQueryDestinationWriteDisposition writeDisposition) {
+            return writeDisposition(Output.of(writeDisposition));
+        }
+
+        public GoogleCloudHealthcareV1beta1DicomBigQueryDestinationArgs build() {
+            return $;
         }
     }
+
 }

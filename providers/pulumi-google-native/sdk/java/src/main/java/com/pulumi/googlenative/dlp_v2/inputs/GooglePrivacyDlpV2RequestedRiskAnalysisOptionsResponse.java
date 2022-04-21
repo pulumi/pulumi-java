@@ -21,45 +21,45 @@ public final class GooglePrivacyDlpV2RequestedRiskAnalysisOptionsResponse extend
      * 
      */
     @Import(name="jobConfig", required=true)
-      private final GooglePrivacyDlpV2RiskAnalysisJobConfigResponse jobConfig;
+    private GooglePrivacyDlpV2RiskAnalysisJobConfigResponse jobConfig;
 
     public GooglePrivacyDlpV2RiskAnalysisJobConfigResponse jobConfig() {
         return this.jobConfig;
     }
 
-    public GooglePrivacyDlpV2RequestedRiskAnalysisOptionsResponse(GooglePrivacyDlpV2RiskAnalysisJobConfigResponse jobConfig) {
-        this.jobConfig = Objects.requireNonNull(jobConfig, "expected parameter 'jobConfig' to be non-null");
-    }
+    private GooglePrivacyDlpV2RequestedRiskAnalysisOptionsResponse() {}
 
-    private GooglePrivacyDlpV2RequestedRiskAnalysisOptionsResponse() {
-        this.jobConfig = null;
+    private GooglePrivacyDlpV2RequestedRiskAnalysisOptionsResponse(GooglePrivacyDlpV2RequestedRiskAnalysisOptionsResponse $) {
+        this.jobConfig = $.jobConfig;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GooglePrivacyDlpV2RequestedRiskAnalysisOptionsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private GooglePrivacyDlpV2RiskAnalysisJobConfigResponse jobConfig;
+        private GooglePrivacyDlpV2RequestedRiskAnalysisOptionsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GooglePrivacyDlpV2RequestedRiskAnalysisOptionsResponse();
         }
 
         public Builder(GooglePrivacyDlpV2RequestedRiskAnalysisOptionsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.jobConfig = defaults.jobConfig;
+            $ = new GooglePrivacyDlpV2RequestedRiskAnalysisOptionsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder jobConfig(GooglePrivacyDlpV2RiskAnalysisJobConfigResponse jobConfig) {
-            this.jobConfig = Objects.requireNonNull(jobConfig);
+            $.jobConfig = jobConfig;
             return this;
-        }        public GooglePrivacyDlpV2RequestedRiskAnalysisOptionsResponse build() {
-            return new GooglePrivacyDlpV2RequestedRiskAnalysisOptionsResponse(jobConfig);
+        }
+
+        public GooglePrivacyDlpV2RequestedRiskAnalysisOptionsResponse build() {
+            $.jobConfig = Objects.requireNonNull($.jobConfig, "expected parameter 'jobConfig' to be non-null");
+            return $;
         }
     }
+
 }

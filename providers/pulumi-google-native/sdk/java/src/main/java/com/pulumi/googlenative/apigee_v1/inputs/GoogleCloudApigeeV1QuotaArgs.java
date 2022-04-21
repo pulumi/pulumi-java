@@ -5,9 +5,9 @@ package com.pulumi.googlenative.apigee_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,7 +24,7 @@ public final class GoogleCloudApigeeV1QuotaArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="interval", required=true)
-      private final Output<String> interval;
+    private Output<String> interval;
 
     public Output<String> interval() {
         return this.interval;
@@ -35,7 +35,7 @@ public final class GoogleCloudApigeeV1QuotaArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="limit", required=true)
-      private final Output<String> limit;
+    private Output<String> limit;
 
     public Output<String> limit() {
         return this.limit;
@@ -46,76 +46,70 @@ public final class GoogleCloudApigeeV1QuotaArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="timeUnit")
-      private final @Nullable Output<String> timeUnit;
+    private @Nullable Output<String> timeUnit;
 
-    public Output<String> timeUnit() {
-        return this.timeUnit == null ? Codegen.empty() : this.timeUnit;
+    public Optional<Output<String>> timeUnit() {
+        return Optional.ofNullable(this.timeUnit);
     }
 
-    public GoogleCloudApigeeV1QuotaArgs(
-        Output<String> interval,
-        Output<String> limit,
-        @Nullable Output<String> timeUnit) {
-        this.interval = Objects.requireNonNull(interval, "expected parameter 'interval' to be non-null");
-        this.limit = Objects.requireNonNull(limit, "expected parameter 'limit' to be non-null");
-        this.timeUnit = timeUnit;
-    }
+    private GoogleCloudApigeeV1QuotaArgs() {}
 
-    private GoogleCloudApigeeV1QuotaArgs() {
-        this.interval = Codegen.empty();
-        this.limit = Codegen.empty();
-        this.timeUnit = Codegen.empty();
+    private GoogleCloudApigeeV1QuotaArgs(GoogleCloudApigeeV1QuotaArgs $) {
+        this.interval = $.interval;
+        this.limit = $.limit;
+        this.timeUnit = $.timeUnit;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudApigeeV1QuotaArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> interval;
-        private Output<String> limit;
-        private @Nullable Output<String> timeUnit;
+        private GoogleCloudApigeeV1QuotaArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudApigeeV1QuotaArgs();
         }
 
         public Builder(GoogleCloudApigeeV1QuotaArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.interval = defaults.interval;
-    	      this.limit = defaults.limit;
-    	      this.timeUnit = defaults.timeUnit;
+            $ = new GoogleCloudApigeeV1QuotaArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder interval(Output<String> interval) {
-            this.interval = Objects.requireNonNull(interval);
+            $.interval = interval;
             return this;
         }
+
         public Builder interval(String interval) {
-            this.interval = Output.of(Objects.requireNonNull(interval));
-            return this;
+            return interval(Output.of(interval));
         }
+
         public Builder limit(Output<String> limit) {
-            this.limit = Objects.requireNonNull(limit);
+            $.limit = limit;
             return this;
         }
+
         public Builder limit(String limit) {
-            this.limit = Output.of(Objects.requireNonNull(limit));
-            return this;
+            return limit(Output.of(limit));
         }
+
         public Builder timeUnit(@Nullable Output<String> timeUnit) {
-            this.timeUnit = timeUnit;
+            $.timeUnit = timeUnit;
             return this;
         }
-        public Builder timeUnit(@Nullable String timeUnit) {
-            this.timeUnit = Codegen.ofNullable(timeUnit);
-            return this;
-        }        public GoogleCloudApigeeV1QuotaArgs build() {
-            return new GoogleCloudApigeeV1QuotaArgs(interval, limit, timeUnit);
+
+        public Builder timeUnit(String timeUnit) {
+            return timeUnit(Output.of(timeUnit));
+        }
+
+        public GoogleCloudApigeeV1QuotaArgs build() {
+            $.interval = Objects.requireNonNull($.interval, "expected parameter 'interval' to be non-null");
+            $.limit = Objects.requireNonNull($.limit, "expected parameter 'limit' to be non-null");
+            return $;
         }
     }
+
 }

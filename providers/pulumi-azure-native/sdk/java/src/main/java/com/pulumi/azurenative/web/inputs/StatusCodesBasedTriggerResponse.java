@@ -24,10 +24,10 @@ public final class StatusCodesBasedTriggerResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="count")
-      private final @Nullable Integer count;
+    private @Nullable Integer count;
 
     public Optional<Integer> count() {
-        return this.count == null ? Optional.empty() : Optional.ofNullable(this.count);
+        return Optional.ofNullable(this.count);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class StatusCodesBasedTriggerResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="path")
-      private final @Nullable String path;
+    private @Nullable String path;
 
     public Optional<String> path() {
-        return this.path == null ? Optional.empty() : Optional.ofNullable(this.path);
+        return Optional.ofNullable(this.path);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class StatusCodesBasedTriggerResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="status")
-      private final @Nullable Integer status;
+    private @Nullable Integer status;
 
     public Optional<Integer> status() {
-        return this.status == null ? Optional.empty() : Optional.ofNullable(this.status);
+        return Optional.ofNullable(this.status);
     }
 
     /**
@@ -57,10 +57,10 @@ public final class StatusCodesBasedTriggerResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="subStatus")
-      private final @Nullable Integer subStatus;
+    private @Nullable Integer subStatus;
 
     public Optional<Integer> subStatus() {
-        return this.subStatus == null ? Optional.empty() : Optional.ofNullable(this.subStatus);
+        return Optional.ofNullable(this.subStatus);
     }
 
     /**
@@ -68,10 +68,10 @@ public final class StatusCodesBasedTriggerResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="timeInterval")
-      private final @Nullable String timeInterval;
+    private @Nullable String timeInterval;
 
     public Optional<String> timeInterval() {
-        return this.timeInterval == null ? Optional.empty() : Optional.ofNullable(this.timeInterval);
+        return Optional.ofNullable(this.timeInterval);
     }
 
     /**
@@ -79,91 +79,74 @@ public final class StatusCodesBasedTriggerResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="win32Status")
-      private final @Nullable Integer win32Status;
+    private @Nullable Integer win32Status;
 
     public Optional<Integer> win32Status() {
-        return this.win32Status == null ? Optional.empty() : Optional.ofNullable(this.win32Status);
+        return Optional.ofNullable(this.win32Status);
     }
 
-    public StatusCodesBasedTriggerResponse(
-        @Nullable Integer count,
-        @Nullable String path,
-        @Nullable Integer status,
-        @Nullable Integer subStatus,
-        @Nullable String timeInterval,
-        @Nullable Integer win32Status) {
-        this.count = count;
-        this.path = path;
-        this.status = status;
-        this.subStatus = subStatus;
-        this.timeInterval = timeInterval;
-        this.win32Status = win32Status;
-    }
+    private StatusCodesBasedTriggerResponse() {}
 
-    private StatusCodesBasedTriggerResponse() {
-        this.count = null;
-        this.path = null;
-        this.status = null;
-        this.subStatus = null;
-        this.timeInterval = null;
-        this.win32Status = null;
+    private StatusCodesBasedTriggerResponse(StatusCodesBasedTriggerResponse $) {
+        this.count = $.count;
+        this.path = $.path;
+        this.status = $.status;
+        this.subStatus = $.subStatus;
+        this.timeInterval = $.timeInterval;
+        this.win32Status = $.win32Status;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(StatusCodesBasedTriggerResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Integer count;
-        private @Nullable String path;
-        private @Nullable Integer status;
-        private @Nullable Integer subStatus;
-        private @Nullable String timeInterval;
-        private @Nullable Integer win32Status;
+        private StatusCodesBasedTriggerResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new StatusCodesBasedTriggerResponse();
         }
 
         public Builder(StatusCodesBasedTriggerResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.count = defaults.count;
-    	      this.path = defaults.path;
-    	      this.status = defaults.status;
-    	      this.subStatus = defaults.subStatus;
-    	      this.timeInterval = defaults.timeInterval;
-    	      this.win32Status = defaults.win32Status;
+            $ = new StatusCodesBasedTriggerResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder count(@Nullable Integer count) {
-            this.count = count;
+            $.count = count;
             return this;
         }
+
         public Builder path(@Nullable String path) {
-            this.path = path;
+            $.path = path;
             return this;
         }
+
         public Builder status(@Nullable Integer status) {
-            this.status = status;
+            $.status = status;
             return this;
         }
+
         public Builder subStatus(@Nullable Integer subStatus) {
-            this.subStatus = subStatus;
+            $.subStatus = subStatus;
             return this;
         }
+
         public Builder timeInterval(@Nullable String timeInterval) {
-            this.timeInterval = timeInterval;
+            $.timeInterval = timeInterval;
             return this;
         }
+
         public Builder win32Status(@Nullable Integer win32Status) {
-            this.win32Status = win32Status;
+            $.win32Status = win32Status;
             return this;
-        }        public StatusCodesBasedTriggerResponse build() {
-            return new StatusCodesBasedTriggerResponse(count, path, status, subStatus, timeInterval, win32Status);
+        }
+
+        public StatusCodesBasedTriggerResponse build() {
+            return $;
         }
     }
+
 }

@@ -23,45 +23,44 @@ public final class ControllerDetailsResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="id")
-      private final @Nullable String id;
+    private @Nullable String id;
 
     public Optional<String> id() {
-        return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
+        return Optional.ofNullable(this.id);
     }
 
-    public ControllerDetailsResponse(@Nullable String id) {
-        this.id = id;
-    }
+    private ControllerDetailsResponse() {}
 
-    private ControllerDetailsResponse() {
-        this.id = null;
+    private ControllerDetailsResponse(ControllerDetailsResponse $) {
+        this.id = $.id;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ControllerDetailsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String id;
+        private ControllerDetailsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ControllerDetailsResponse();
         }
 
         public Builder(ControllerDetailsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.id = defaults.id;
+            $ = new ControllerDetailsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder id(@Nullable String id) {
-            this.id = id;
+            $.id = id;
             return this;
-        }        public ControllerDetailsResponse build() {
-            return new ControllerDetailsResponse(id);
+        }
+
+        public ControllerDetailsResponse build() {
+            return $;
         }
     }
+
 }

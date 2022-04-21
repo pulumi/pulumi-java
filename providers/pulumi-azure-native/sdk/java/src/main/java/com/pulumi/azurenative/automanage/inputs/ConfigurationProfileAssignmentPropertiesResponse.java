@@ -24,10 +24,10 @@ public final class ConfigurationProfileAssignmentPropertiesResponse extends com.
      * 
      */
     @Import(name="accountId")
-      private final @Nullable String accountId;
+    private @Nullable String accountId;
 
     public Optional<String> accountId() {
-        return this.accountId == null ? Optional.empty() : Optional.ofNullable(this.accountId);
+        return Optional.ofNullable(this.accountId);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class ConfigurationProfileAssignmentPropertiesResponse extends com.
      * 
      */
     @Import(name="compliance")
-      private final @Nullable ConfigurationProfileAssignmentComplianceResponse compliance;
+    private @Nullable ConfigurationProfileAssignmentComplianceResponse compliance;
 
     public Optional<ConfigurationProfileAssignmentComplianceResponse> compliance() {
-        return this.compliance == null ? Optional.empty() : Optional.ofNullable(this.compliance);
+        return Optional.ofNullable(this.compliance);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class ConfigurationProfileAssignmentPropertiesResponse extends com.
      * 
      */
     @Import(name="configurationProfile")
-      private final @Nullable String configurationProfile;
+    private @Nullable String configurationProfile;
 
     public Optional<String> configurationProfile() {
-        return this.configurationProfile == null ? Optional.empty() : Optional.ofNullable(this.configurationProfile);
+        return Optional.ofNullable(this.configurationProfile);
     }
 
     /**
@@ -57,10 +57,10 @@ public final class ConfigurationProfileAssignmentPropertiesResponse extends com.
      * 
      */
     @Import(name="configurationProfilePreferenceId")
-      private final @Nullable String configurationProfilePreferenceId;
+    private @Nullable String configurationProfilePreferenceId;
 
     public Optional<String> configurationProfilePreferenceId() {
-        return this.configurationProfilePreferenceId == null ? Optional.empty() : Optional.ofNullable(this.configurationProfilePreferenceId);
+        return Optional.ofNullable(this.configurationProfilePreferenceId);
     }
 
     /**
@@ -68,7 +68,7 @@ public final class ConfigurationProfileAssignmentPropertiesResponse extends com.
      * 
      */
     @Import(name="provisioningState", required=true)
-      private final String provisioningState;
+    private String provisioningState;
 
     public String provisioningState() {
         return this.provisioningState;
@@ -79,91 +79,75 @@ public final class ConfigurationProfileAssignmentPropertiesResponse extends com.
      * 
      */
     @Import(name="targetId")
-      private final @Nullable String targetId;
+    private @Nullable String targetId;
 
     public Optional<String> targetId() {
-        return this.targetId == null ? Optional.empty() : Optional.ofNullable(this.targetId);
+        return Optional.ofNullable(this.targetId);
     }
 
-    public ConfigurationProfileAssignmentPropertiesResponse(
-        @Nullable String accountId,
-        @Nullable ConfigurationProfileAssignmentComplianceResponse compliance,
-        @Nullable String configurationProfile,
-        @Nullable String configurationProfilePreferenceId,
-        String provisioningState,
-        @Nullable String targetId) {
-        this.accountId = accountId;
-        this.compliance = compliance;
-        this.configurationProfile = configurationProfile;
-        this.configurationProfilePreferenceId = configurationProfilePreferenceId;
-        this.provisioningState = Objects.requireNonNull(provisioningState, "expected parameter 'provisioningState' to be non-null");
-        this.targetId = targetId;
-    }
+    private ConfigurationProfileAssignmentPropertiesResponse() {}
 
-    private ConfigurationProfileAssignmentPropertiesResponse() {
-        this.accountId = null;
-        this.compliance = null;
-        this.configurationProfile = null;
-        this.configurationProfilePreferenceId = null;
-        this.provisioningState = null;
-        this.targetId = null;
+    private ConfigurationProfileAssignmentPropertiesResponse(ConfigurationProfileAssignmentPropertiesResponse $) {
+        this.accountId = $.accountId;
+        this.compliance = $.compliance;
+        this.configurationProfile = $.configurationProfile;
+        this.configurationProfilePreferenceId = $.configurationProfilePreferenceId;
+        this.provisioningState = $.provisioningState;
+        this.targetId = $.targetId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ConfigurationProfileAssignmentPropertiesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String accountId;
-        private @Nullable ConfigurationProfileAssignmentComplianceResponse compliance;
-        private @Nullable String configurationProfile;
-        private @Nullable String configurationProfilePreferenceId;
-        private String provisioningState;
-        private @Nullable String targetId;
+        private ConfigurationProfileAssignmentPropertiesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ConfigurationProfileAssignmentPropertiesResponse();
         }
 
         public Builder(ConfigurationProfileAssignmentPropertiesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accountId = defaults.accountId;
-    	      this.compliance = defaults.compliance;
-    	      this.configurationProfile = defaults.configurationProfile;
-    	      this.configurationProfilePreferenceId = defaults.configurationProfilePreferenceId;
-    	      this.provisioningState = defaults.provisioningState;
-    	      this.targetId = defaults.targetId;
+            $ = new ConfigurationProfileAssignmentPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder accountId(@Nullable String accountId) {
-            this.accountId = accountId;
+            $.accountId = accountId;
             return this;
         }
+
         public Builder compliance(@Nullable ConfigurationProfileAssignmentComplianceResponse compliance) {
-            this.compliance = compliance;
+            $.compliance = compliance;
             return this;
         }
+
         public Builder configurationProfile(@Nullable String configurationProfile) {
-            this.configurationProfile = configurationProfile;
+            $.configurationProfile = configurationProfile;
             return this;
         }
+
         public Builder configurationProfilePreferenceId(@Nullable String configurationProfilePreferenceId) {
-            this.configurationProfilePreferenceId = configurationProfilePreferenceId;
+            $.configurationProfilePreferenceId = configurationProfilePreferenceId;
             return this;
         }
+
         public Builder provisioningState(String provisioningState) {
-            this.provisioningState = Objects.requireNonNull(provisioningState);
+            $.provisioningState = provisioningState;
             return this;
         }
+
         public Builder targetId(@Nullable String targetId) {
-            this.targetId = targetId;
+            $.targetId = targetId;
             return this;
-        }        public ConfigurationProfileAssignmentPropertiesResponse build() {
-            return new ConfigurationProfileAssignmentPropertiesResponse(accountId, compliance, configurationProfile, configurationProfilePreferenceId, provisioningState, targetId);
+        }
+
+        public ConfigurationProfileAssignmentPropertiesResponse build() {
+            $.provisioningState = Objects.requireNonNull($.provisioningState, "expected parameter 'provisioningState' to be non-null");
+            return $;
         }
     }
+
 }

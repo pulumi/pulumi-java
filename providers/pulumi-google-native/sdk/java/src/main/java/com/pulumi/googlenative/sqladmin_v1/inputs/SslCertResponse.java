@@ -21,7 +21,7 @@ public final class SslCertResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="cert", required=true)
-      private final String cert;
+    private String cert;
 
     public String cert() {
         return this.cert;
@@ -32,7 +32,7 @@ public final class SslCertResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="certSerialNumber", required=true)
-      private final String certSerialNumber;
+    private String certSerialNumber;
 
     public String certSerialNumber() {
         return this.certSerialNumber;
@@ -43,7 +43,7 @@ public final class SslCertResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="commonName", required=true)
-      private final String commonName;
+    private String commonName;
 
     public String commonName() {
         return this.commonName;
@@ -54,7 +54,7 @@ public final class SslCertResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="createTime", required=true)
-      private final String createTime;
+    private String createTime;
 
     public String createTime() {
         return this.createTime;
@@ -65,7 +65,7 @@ public final class SslCertResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="expirationTime", required=true)
-      private final String expirationTime;
+    private String expirationTime;
 
     public String expirationTime() {
         return this.expirationTime;
@@ -76,7 +76,7 @@ public final class SslCertResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="instance", required=true)
-      private final String instance;
+    private String instance;
 
     public String instance() {
         return this.instance;
@@ -87,7 +87,7 @@ public final class SslCertResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="kind", required=true)
-      private final String kind;
+    private String kind;
 
     public String kind() {
         return this.kind;
@@ -98,7 +98,7 @@ public final class SslCertResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="selfLink", required=true)
-      private final String selfLink;
+    private String selfLink;
 
     public String selfLink() {
         return this.selfLink;
@@ -109,118 +109,101 @@ public final class SslCertResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="sha1Fingerprint", required=true)
-      private final String sha1Fingerprint;
+    private String sha1Fingerprint;
 
     public String sha1Fingerprint() {
         return this.sha1Fingerprint;
     }
 
-    public SslCertResponse(
-        String cert,
-        String certSerialNumber,
-        String commonName,
-        String createTime,
-        String expirationTime,
-        String instance,
-        String kind,
-        String selfLink,
-        String sha1Fingerprint) {
-        this.cert = Objects.requireNonNull(cert, "expected parameter 'cert' to be non-null");
-        this.certSerialNumber = Objects.requireNonNull(certSerialNumber, "expected parameter 'certSerialNumber' to be non-null");
-        this.commonName = Objects.requireNonNull(commonName, "expected parameter 'commonName' to be non-null");
-        this.createTime = Objects.requireNonNull(createTime, "expected parameter 'createTime' to be non-null");
-        this.expirationTime = Objects.requireNonNull(expirationTime, "expected parameter 'expirationTime' to be non-null");
-        this.instance = Objects.requireNonNull(instance, "expected parameter 'instance' to be non-null");
-        this.kind = Objects.requireNonNull(kind, "expected parameter 'kind' to be non-null");
-        this.selfLink = Objects.requireNonNull(selfLink, "expected parameter 'selfLink' to be non-null");
-        this.sha1Fingerprint = Objects.requireNonNull(sha1Fingerprint, "expected parameter 'sha1Fingerprint' to be non-null");
-    }
+    private SslCertResponse() {}
 
-    private SslCertResponse() {
-        this.cert = null;
-        this.certSerialNumber = null;
-        this.commonName = null;
-        this.createTime = null;
-        this.expirationTime = null;
-        this.instance = null;
-        this.kind = null;
-        this.selfLink = null;
-        this.sha1Fingerprint = null;
+    private SslCertResponse(SslCertResponse $) {
+        this.cert = $.cert;
+        this.certSerialNumber = $.certSerialNumber;
+        this.commonName = $.commonName;
+        this.createTime = $.createTime;
+        this.expirationTime = $.expirationTime;
+        this.instance = $.instance;
+        this.kind = $.kind;
+        this.selfLink = $.selfLink;
+        this.sha1Fingerprint = $.sha1Fingerprint;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SslCertResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String cert;
-        private String certSerialNumber;
-        private String commonName;
-        private String createTime;
-        private String expirationTime;
-        private String instance;
-        private String kind;
-        private String selfLink;
-        private String sha1Fingerprint;
+        private SslCertResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new SslCertResponse();
         }
 
         public Builder(SslCertResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cert = defaults.cert;
-    	      this.certSerialNumber = defaults.certSerialNumber;
-    	      this.commonName = defaults.commonName;
-    	      this.createTime = defaults.createTime;
-    	      this.expirationTime = defaults.expirationTime;
-    	      this.instance = defaults.instance;
-    	      this.kind = defaults.kind;
-    	      this.selfLink = defaults.selfLink;
-    	      this.sha1Fingerprint = defaults.sha1Fingerprint;
+            $ = new SslCertResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder cert(String cert) {
-            this.cert = Objects.requireNonNull(cert);
+            $.cert = cert;
             return this;
         }
+
         public Builder certSerialNumber(String certSerialNumber) {
-            this.certSerialNumber = Objects.requireNonNull(certSerialNumber);
+            $.certSerialNumber = certSerialNumber;
             return this;
         }
+
         public Builder commonName(String commonName) {
-            this.commonName = Objects.requireNonNull(commonName);
+            $.commonName = commonName;
             return this;
         }
+
         public Builder createTime(String createTime) {
-            this.createTime = Objects.requireNonNull(createTime);
+            $.createTime = createTime;
             return this;
         }
+
         public Builder expirationTime(String expirationTime) {
-            this.expirationTime = Objects.requireNonNull(expirationTime);
+            $.expirationTime = expirationTime;
             return this;
         }
+
         public Builder instance(String instance) {
-            this.instance = Objects.requireNonNull(instance);
+            $.instance = instance;
             return this;
         }
+
         public Builder kind(String kind) {
-            this.kind = Objects.requireNonNull(kind);
+            $.kind = kind;
             return this;
         }
+
         public Builder selfLink(String selfLink) {
-            this.selfLink = Objects.requireNonNull(selfLink);
+            $.selfLink = selfLink;
             return this;
         }
+
         public Builder sha1Fingerprint(String sha1Fingerprint) {
-            this.sha1Fingerprint = Objects.requireNonNull(sha1Fingerprint);
+            $.sha1Fingerprint = sha1Fingerprint;
             return this;
-        }        public SslCertResponse build() {
-            return new SslCertResponse(cert, certSerialNumber, commonName, createTime, expirationTime, instance, kind, selfLink, sha1Fingerprint);
+        }
+
+        public SslCertResponse build() {
+            $.cert = Objects.requireNonNull($.cert, "expected parameter 'cert' to be non-null");
+            $.certSerialNumber = Objects.requireNonNull($.certSerialNumber, "expected parameter 'certSerialNumber' to be non-null");
+            $.commonName = Objects.requireNonNull($.commonName, "expected parameter 'commonName' to be non-null");
+            $.createTime = Objects.requireNonNull($.createTime, "expected parameter 'createTime' to be non-null");
+            $.expirationTime = Objects.requireNonNull($.expirationTime, "expected parameter 'expirationTime' to be non-null");
+            $.instance = Objects.requireNonNull($.instance, "expected parameter 'instance' to be non-null");
+            $.kind = Objects.requireNonNull($.kind, "expected parameter 'kind' to be non-null");
+            $.selfLink = Objects.requireNonNull($.selfLink, "expected parameter 'selfLink' to be non-null");
+            $.sha1Fingerprint = Objects.requireNonNull($.sha1Fingerprint, "expected parameter 'sha1Fingerprint' to be non-null");
+            return $;
         }
     }
+
 }

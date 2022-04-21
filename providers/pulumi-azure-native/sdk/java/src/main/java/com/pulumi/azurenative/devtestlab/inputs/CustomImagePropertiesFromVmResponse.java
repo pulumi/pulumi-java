@@ -25,10 +25,10 @@ public final class CustomImagePropertiesFromVmResponse extends com.pulumi.resour
      * 
      */
     @Import(name="linuxOsInfo")
-      private final @Nullable LinuxOsInfoResponse linuxOsInfo;
+    private @Nullable LinuxOsInfoResponse linuxOsInfo;
 
     public Optional<LinuxOsInfoResponse> linuxOsInfo() {
-        return this.linuxOsInfo == null ? Optional.empty() : Optional.ofNullable(this.linuxOsInfo);
+        return Optional.ofNullable(this.linuxOsInfo);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class CustomImagePropertiesFromVmResponse extends com.pulumi.resour
      * 
      */
     @Import(name="sourceVmId")
-      private final @Nullable String sourceVmId;
+    private @Nullable String sourceVmId;
 
     public Optional<String> sourceVmId() {
-        return this.sourceVmId == null ? Optional.empty() : Optional.ofNullable(this.sourceVmId);
+        return Optional.ofNullable(this.sourceVmId);
     }
 
     /**
@@ -47,64 +47,56 @@ public final class CustomImagePropertiesFromVmResponse extends com.pulumi.resour
      * 
      */
     @Import(name="windowsOsInfo")
-      private final @Nullable WindowsOsInfoResponse windowsOsInfo;
+    private @Nullable WindowsOsInfoResponse windowsOsInfo;
 
     public Optional<WindowsOsInfoResponse> windowsOsInfo() {
-        return this.windowsOsInfo == null ? Optional.empty() : Optional.ofNullable(this.windowsOsInfo);
+        return Optional.ofNullable(this.windowsOsInfo);
     }
 
-    public CustomImagePropertiesFromVmResponse(
-        @Nullable LinuxOsInfoResponse linuxOsInfo,
-        @Nullable String sourceVmId,
-        @Nullable WindowsOsInfoResponse windowsOsInfo) {
-        this.linuxOsInfo = linuxOsInfo;
-        this.sourceVmId = sourceVmId;
-        this.windowsOsInfo = windowsOsInfo;
-    }
+    private CustomImagePropertiesFromVmResponse() {}
 
-    private CustomImagePropertiesFromVmResponse() {
-        this.linuxOsInfo = null;
-        this.sourceVmId = null;
-        this.windowsOsInfo = null;
+    private CustomImagePropertiesFromVmResponse(CustomImagePropertiesFromVmResponse $) {
+        this.linuxOsInfo = $.linuxOsInfo;
+        this.sourceVmId = $.sourceVmId;
+        this.windowsOsInfo = $.windowsOsInfo;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CustomImagePropertiesFromVmResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable LinuxOsInfoResponse linuxOsInfo;
-        private @Nullable String sourceVmId;
-        private @Nullable WindowsOsInfoResponse windowsOsInfo;
+        private CustomImagePropertiesFromVmResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new CustomImagePropertiesFromVmResponse();
         }
 
         public Builder(CustomImagePropertiesFromVmResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.linuxOsInfo = defaults.linuxOsInfo;
-    	      this.sourceVmId = defaults.sourceVmId;
-    	      this.windowsOsInfo = defaults.windowsOsInfo;
+            $ = new CustomImagePropertiesFromVmResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder linuxOsInfo(@Nullable LinuxOsInfoResponse linuxOsInfo) {
-            this.linuxOsInfo = linuxOsInfo;
+            $.linuxOsInfo = linuxOsInfo;
             return this;
         }
+
         public Builder sourceVmId(@Nullable String sourceVmId) {
-            this.sourceVmId = sourceVmId;
+            $.sourceVmId = sourceVmId;
             return this;
         }
+
         public Builder windowsOsInfo(@Nullable WindowsOsInfoResponse windowsOsInfo) {
-            this.windowsOsInfo = windowsOsInfo;
+            $.windowsOsInfo = windowsOsInfo;
             return this;
-        }        public CustomImagePropertiesFromVmResponse build() {
-            return new CustomImagePropertiesFromVmResponse(linuxOsInfo, sourceVmId, windowsOsInfo);
+        }
+
+        public CustomImagePropertiesFromVmResponse build() {
+            return $;
         }
     }
+
 }

@@ -5,12 +5,12 @@ package com.pulumi.googlenative.healthcare_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.healthcare_v1.enums.TypePrimitive;
 import com.pulumi.googlenative.healthcare_v1.inputs.FieldArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +27,10 @@ public final class TypeArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="fields")
-      private final @Nullable Output<List<FieldArgs>> fields;
+    private @Nullable Output<List<FieldArgs>> fields;
 
-    public Output<List<FieldArgs>> fields() {
-        return this.fields == null ? Codegen.empty() : this.fields;
+    public Optional<Output<List<FieldArgs>>> fields() {
+        return Optional.ofNullable(this.fields);
     }
 
     /**
@@ -38,10 +38,10 @@ public final class TypeArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -49,79 +49,72 @@ public final class TypeArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="primitive")
-      private final @Nullable Output<TypePrimitive> primitive;
+    private @Nullable Output<TypePrimitive> primitive;
 
-    public Output<TypePrimitive> primitive() {
-        return this.primitive == null ? Codegen.empty() : this.primitive;
+    public Optional<Output<TypePrimitive>> primitive() {
+        return Optional.ofNullable(this.primitive);
     }
 
-    public TypeArgs(
-        @Nullable Output<List<FieldArgs>> fields,
-        @Nullable Output<String> name,
-        @Nullable Output<TypePrimitive> primitive) {
-        this.fields = fields;
-        this.name = name;
-        this.primitive = primitive;
-    }
+    private TypeArgs() {}
 
-    private TypeArgs() {
-        this.fields = Codegen.empty();
-        this.name = Codegen.empty();
-        this.primitive = Codegen.empty();
+    private TypeArgs(TypeArgs $) {
+        this.fields = $.fields;
+        this.name = $.name;
+        this.primitive = $.primitive;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TypeArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<FieldArgs>> fields;
-        private @Nullable Output<String> name;
-        private @Nullable Output<TypePrimitive> primitive;
+        private TypeArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TypeArgs();
         }
 
         public Builder(TypeArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.fields = defaults.fields;
-    	      this.name = defaults.name;
-    	      this.primitive = defaults.primitive;
+            $ = new TypeArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder fields(@Nullable Output<List<FieldArgs>> fields) {
-            this.fields = fields;
+            $.fields = fields;
             return this;
         }
-        public Builder fields(@Nullable List<FieldArgs> fields) {
-            this.fields = Codegen.ofNullable(fields);
-            return this;
+
+        public Builder fields(List<FieldArgs> fields) {
+            return fields(Output.of(fields));
         }
+
         public Builder fields(FieldArgs... fields) {
             return fields(List.of(fields));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder primitive(@Nullable Output<TypePrimitive> primitive) {
-            this.primitive = primitive;
+            $.primitive = primitive;
             return this;
         }
-        public Builder primitive(@Nullable TypePrimitive primitive) {
-            this.primitive = Codegen.ofNullable(primitive);
-            return this;
-        }        public TypeArgs build() {
-            return new TypeArgs(fields, name, primitive);
+
+        public Builder primitive(TypePrimitive primitive) {
+            return primitive(Output.of(primitive));
+        }
+
+        public TypeArgs build() {
+            return $;
         }
     }
+
 }

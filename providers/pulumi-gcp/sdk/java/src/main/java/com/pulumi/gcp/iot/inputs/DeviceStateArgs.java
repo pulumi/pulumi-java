@@ -5,9 +5,9 @@ package com.pulumi.gcp.iot.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -16,70 +16,65 @@ public final class DeviceStateArgs extends com.pulumi.resources.ResourceArgs {
     public static final DeviceStateArgs Empty = new DeviceStateArgs();
 
     @Import(name="binaryData")
-      private final @Nullable Output<String> binaryData;
+    private @Nullable Output<String> binaryData;
 
-    public Output<String> binaryData() {
-        return this.binaryData == null ? Codegen.empty() : this.binaryData;
+    public Optional<Output<String>> binaryData() {
+        return Optional.ofNullable(this.binaryData);
     }
 
     @Import(name="updateTime")
-      private final @Nullable Output<String> updateTime;
+    private @Nullable Output<String> updateTime;
 
-    public Output<String> updateTime() {
-        return this.updateTime == null ? Codegen.empty() : this.updateTime;
+    public Optional<Output<String>> updateTime() {
+        return Optional.ofNullable(this.updateTime);
     }
 
-    public DeviceStateArgs(
-        @Nullable Output<String> binaryData,
-        @Nullable Output<String> updateTime) {
-        this.binaryData = binaryData;
-        this.updateTime = updateTime;
-    }
+    private DeviceStateArgs() {}
 
-    private DeviceStateArgs() {
-        this.binaryData = Codegen.empty();
-        this.updateTime = Codegen.empty();
+    private DeviceStateArgs(DeviceStateArgs $) {
+        this.binaryData = $.binaryData;
+        this.updateTime = $.updateTime;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DeviceStateArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> binaryData;
-        private @Nullable Output<String> updateTime;
+        private DeviceStateArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DeviceStateArgs();
         }
 
         public Builder(DeviceStateArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.binaryData = defaults.binaryData;
-    	      this.updateTime = defaults.updateTime;
+            $ = new DeviceStateArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder binaryData(@Nullable Output<String> binaryData) {
-            this.binaryData = binaryData;
+            $.binaryData = binaryData;
             return this;
         }
-        public Builder binaryData(@Nullable String binaryData) {
-            this.binaryData = Codegen.ofNullable(binaryData);
-            return this;
+
+        public Builder binaryData(String binaryData) {
+            return binaryData(Output.of(binaryData));
         }
+
         public Builder updateTime(@Nullable Output<String> updateTime) {
-            this.updateTime = updateTime;
+            $.updateTime = updateTime;
             return this;
         }
-        public Builder updateTime(@Nullable String updateTime) {
-            this.updateTime = Codegen.ofNullable(updateTime);
-            return this;
-        }        public DeviceStateArgs build() {
-            return new DeviceStateArgs(binaryData, updateTime);
+
+        public Builder updateTime(String updateTime) {
+            return updateTime(Output.of(updateTime));
+        }
+
+        public DeviceStateArgs build() {
+            return $;
         }
     }
+
 }

@@ -23,10 +23,10 @@ public final class SqlUpsertSettingsResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="interimSchemaName")
-      private final @Nullable Object interimSchemaName;
+    private @Nullable Object interimSchemaName;
 
     public Optional<Object> interimSchemaName() {
-        return this.interimSchemaName == null ? Optional.empty() : Optional.ofNullable(this.interimSchemaName);
+        return Optional.ofNullable(this.interimSchemaName);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class SqlUpsertSettingsResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="keys")
-      private final @Nullable Object keys;
+    private @Nullable Object keys;
 
     public Optional<Object> keys() {
-        return this.keys == null ? Optional.empty() : Optional.ofNullable(this.keys);
+        return Optional.ofNullable(this.keys);
     }
 
     /**
@@ -45,64 +45,56 @@ public final class SqlUpsertSettingsResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="useTempDB")
-      private final @Nullable Object useTempDB;
+    private @Nullable Object useTempDB;
 
     public Optional<Object> useTempDB() {
-        return this.useTempDB == null ? Optional.empty() : Optional.ofNullable(this.useTempDB);
+        return Optional.ofNullable(this.useTempDB);
     }
 
-    public SqlUpsertSettingsResponse(
-        @Nullable Object interimSchemaName,
-        @Nullable Object keys,
-        @Nullable Object useTempDB) {
-        this.interimSchemaName = interimSchemaName;
-        this.keys = keys;
-        this.useTempDB = useTempDB;
-    }
+    private SqlUpsertSettingsResponse() {}
 
-    private SqlUpsertSettingsResponse() {
-        this.interimSchemaName = null;
-        this.keys = null;
-        this.useTempDB = null;
+    private SqlUpsertSettingsResponse(SqlUpsertSettingsResponse $) {
+        this.interimSchemaName = $.interimSchemaName;
+        this.keys = $.keys;
+        this.useTempDB = $.useTempDB;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SqlUpsertSettingsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Object interimSchemaName;
-        private @Nullable Object keys;
-        private @Nullable Object useTempDB;
+        private SqlUpsertSettingsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new SqlUpsertSettingsResponse();
         }
 
         public Builder(SqlUpsertSettingsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.interimSchemaName = defaults.interimSchemaName;
-    	      this.keys = defaults.keys;
-    	      this.useTempDB = defaults.useTempDB;
+            $ = new SqlUpsertSettingsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder interimSchemaName(@Nullable Object interimSchemaName) {
-            this.interimSchemaName = interimSchemaName;
+            $.interimSchemaName = interimSchemaName;
             return this;
         }
+
         public Builder keys(@Nullable Object keys) {
-            this.keys = keys;
+            $.keys = keys;
             return this;
         }
+
         public Builder useTempDB(@Nullable Object useTempDB) {
-            this.useTempDB = useTempDB;
+            $.useTempDB = useTempDB;
             return this;
-        }        public SqlUpsertSettingsResponse build() {
-            return new SqlUpsertSettingsResponse(interimSchemaName, keys, useTempDB);
+        }
+
+        public SqlUpsertSettingsResponse build() {
+            return $;
         }
     }
+
 }

@@ -5,7 +5,6 @@ package com.pulumi.azurenative.servicefabricmesh.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.util.Objects;
 
@@ -23,7 +22,7 @@ public final class ResourceRequestsArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="cpu", required=true)
-      private final Output<Double> cpu;
+    private Output<Double> cpu;
 
     public Output<Double> cpu() {
         return this.cpu;
@@ -34,63 +33,60 @@ public final class ResourceRequestsArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="memoryInGB", required=true)
-      private final Output<Double> memoryInGB;
+    private Output<Double> memoryInGB;
 
     public Output<Double> memoryInGB() {
         return this.memoryInGB;
     }
 
-    public ResourceRequestsArgs(
-        Output<Double> cpu,
-        Output<Double> memoryInGB) {
-        this.cpu = Objects.requireNonNull(cpu, "expected parameter 'cpu' to be non-null");
-        this.memoryInGB = Objects.requireNonNull(memoryInGB, "expected parameter 'memoryInGB' to be non-null");
-    }
+    private ResourceRequestsArgs() {}
 
-    private ResourceRequestsArgs() {
-        this.cpu = Codegen.empty();
-        this.memoryInGB = Codegen.empty();
+    private ResourceRequestsArgs(ResourceRequestsArgs $) {
+        this.cpu = $.cpu;
+        this.memoryInGB = $.memoryInGB;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ResourceRequestsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Double> cpu;
-        private Output<Double> memoryInGB;
+        private ResourceRequestsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ResourceRequestsArgs();
         }
 
         public Builder(ResourceRequestsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cpu = defaults.cpu;
-    	      this.memoryInGB = defaults.memoryInGB;
+            $ = new ResourceRequestsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder cpu(Output<Double> cpu) {
-            this.cpu = Objects.requireNonNull(cpu);
+            $.cpu = cpu;
             return this;
         }
+
         public Builder cpu(Double cpu) {
-            this.cpu = Output.of(Objects.requireNonNull(cpu));
-            return this;
+            return cpu(Output.of(cpu));
         }
+
         public Builder memoryInGB(Output<Double> memoryInGB) {
-            this.memoryInGB = Objects.requireNonNull(memoryInGB);
+            $.memoryInGB = memoryInGB;
             return this;
         }
+
         public Builder memoryInGB(Double memoryInGB) {
-            this.memoryInGB = Output.of(Objects.requireNonNull(memoryInGB));
-            return this;
-        }        public ResourceRequestsArgs build() {
-            return new ResourceRequestsArgs(cpu, memoryInGB);
+            return memoryInGB(Output.of(memoryInGB));
+        }
+
+        public ResourceRequestsArgs build() {
+            $.cpu = Objects.requireNonNull($.cpu, "expected parameter 'cpu' to be non-null");
+            $.memoryInGB = Objects.requireNonNull($.memoryInGB, "expected parameter 'memoryInGB' to be non-null");
+            return $;
         }
     }
+
 }

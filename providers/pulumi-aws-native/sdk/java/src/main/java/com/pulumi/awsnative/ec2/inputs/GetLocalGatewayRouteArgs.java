@@ -17,7 +17,7 @@ public final class GetLocalGatewayRouteArgs extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="destinationCidrBlock", required=true)
-      private final String destinationCidrBlock;
+    private String destinationCidrBlock;
 
     public String destinationCidrBlock() {
         return this.destinationCidrBlock;
@@ -28,55 +28,52 @@ public final class GetLocalGatewayRouteArgs extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="localGatewayRouteTableId", required=true)
-      private final String localGatewayRouteTableId;
+    private String localGatewayRouteTableId;
 
     public String localGatewayRouteTableId() {
         return this.localGatewayRouteTableId;
     }
 
-    public GetLocalGatewayRouteArgs(
-        String destinationCidrBlock,
-        String localGatewayRouteTableId) {
-        this.destinationCidrBlock = Objects.requireNonNull(destinationCidrBlock, "expected parameter 'destinationCidrBlock' to be non-null");
-        this.localGatewayRouteTableId = Objects.requireNonNull(localGatewayRouteTableId, "expected parameter 'localGatewayRouteTableId' to be non-null");
-    }
+    private GetLocalGatewayRouteArgs() {}
 
-    private GetLocalGatewayRouteArgs() {
-        this.destinationCidrBlock = null;
-        this.localGatewayRouteTableId = null;
+    private GetLocalGatewayRouteArgs(GetLocalGatewayRouteArgs $) {
+        this.destinationCidrBlock = $.destinationCidrBlock;
+        this.localGatewayRouteTableId = $.localGatewayRouteTableId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetLocalGatewayRouteArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String destinationCidrBlock;
-        private String localGatewayRouteTableId;
+        private GetLocalGatewayRouteArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetLocalGatewayRouteArgs();
         }
 
         public Builder(GetLocalGatewayRouteArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.destinationCidrBlock = defaults.destinationCidrBlock;
-    	      this.localGatewayRouteTableId = defaults.localGatewayRouteTableId;
+            $ = new GetLocalGatewayRouteArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder destinationCidrBlock(String destinationCidrBlock) {
-            this.destinationCidrBlock = Objects.requireNonNull(destinationCidrBlock);
+            $.destinationCidrBlock = destinationCidrBlock;
             return this;
         }
+
         public Builder localGatewayRouteTableId(String localGatewayRouteTableId) {
-            this.localGatewayRouteTableId = Objects.requireNonNull(localGatewayRouteTableId);
+            $.localGatewayRouteTableId = localGatewayRouteTableId;
             return this;
-        }        public GetLocalGatewayRouteArgs build() {
-            return new GetLocalGatewayRouteArgs(destinationCidrBlock, localGatewayRouteTableId);
+        }
+
+        public GetLocalGatewayRouteArgs build() {
+            $.destinationCidrBlock = Objects.requireNonNull($.destinationCidrBlock, "expected parameter 'destinationCidrBlock' to be non-null");
+            $.localGatewayRouteTableId = Objects.requireNonNull($.localGatewayRouteTableId, "expected parameter 'localGatewayRouteTableId' to be non-null");
+            return $;
         }
     }
+
 }

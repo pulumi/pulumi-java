@@ -5,7 +5,6 @@ package com.pulumi.aws.appmesh.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -19,7 +18,7 @@ public final class RouteSpecHttp2RouteMatchHeaderMatchRangeGetArgs extends com.p
      * 
      */
     @Import(name="end", required=true)
-      private final Output<Integer> end;
+    private Output<Integer> end;
 
     public Output<Integer> end() {
         return this.end;
@@ -30,63 +29,60 @@ public final class RouteSpecHttp2RouteMatchHeaderMatchRangeGetArgs extends com.p
      * 
      */
     @Import(name="start", required=true)
-      private final Output<Integer> start;
+    private Output<Integer> start;
 
     public Output<Integer> start() {
         return this.start;
     }
 
-    public RouteSpecHttp2RouteMatchHeaderMatchRangeGetArgs(
-        Output<Integer> end,
-        Output<Integer> start) {
-        this.end = Objects.requireNonNull(end, "expected parameter 'end' to be non-null");
-        this.start = Objects.requireNonNull(start, "expected parameter 'start' to be non-null");
-    }
+    private RouteSpecHttp2RouteMatchHeaderMatchRangeGetArgs() {}
 
-    private RouteSpecHttp2RouteMatchHeaderMatchRangeGetArgs() {
-        this.end = Codegen.empty();
-        this.start = Codegen.empty();
+    private RouteSpecHttp2RouteMatchHeaderMatchRangeGetArgs(RouteSpecHttp2RouteMatchHeaderMatchRangeGetArgs $) {
+        this.end = $.end;
+        this.start = $.start;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RouteSpecHttp2RouteMatchHeaderMatchRangeGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Integer> end;
-        private Output<Integer> start;
+        private RouteSpecHttp2RouteMatchHeaderMatchRangeGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RouteSpecHttp2RouteMatchHeaderMatchRangeGetArgs();
         }
 
         public Builder(RouteSpecHttp2RouteMatchHeaderMatchRangeGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.end = defaults.end;
-    	      this.start = defaults.start;
+            $ = new RouteSpecHttp2RouteMatchHeaderMatchRangeGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder end(Output<Integer> end) {
-            this.end = Objects.requireNonNull(end);
+            $.end = end;
             return this;
         }
+
         public Builder end(Integer end) {
-            this.end = Output.of(Objects.requireNonNull(end));
-            return this;
+            return end(Output.of(end));
         }
+
         public Builder start(Output<Integer> start) {
-            this.start = Objects.requireNonNull(start);
+            $.start = start;
             return this;
         }
+
         public Builder start(Integer start) {
-            this.start = Output.of(Objects.requireNonNull(start));
-            return this;
-        }        public RouteSpecHttp2RouteMatchHeaderMatchRangeGetArgs build() {
-            return new RouteSpecHttp2RouteMatchHeaderMatchRangeGetArgs(end, start);
+            return start(Output.of(start));
+        }
+
+        public RouteSpecHttp2RouteMatchHeaderMatchRangeGetArgs build() {
+            $.end = Objects.requireNonNull($.end, "expected parameter 'end' to be non-null");
+            $.start = Objects.requireNonNull($.start, "expected parameter 'start' to be non-null");
+            return $;
         }
     }
+
 }

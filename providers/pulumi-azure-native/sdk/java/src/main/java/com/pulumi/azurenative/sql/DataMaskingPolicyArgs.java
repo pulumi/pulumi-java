@@ -6,9 +6,9 @@ package com.pulumi.azurenative.sql;
 import com.pulumi.azurenative.sql.enums.DataMaskingState;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class DataMaskingPolicyArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="dataMaskingPolicyName")
-      private final @Nullable Output<String> dataMaskingPolicyName;
+    private @Nullable Output<String> dataMaskingPolicyName;
 
-    public Output<String> dataMaskingPolicyName() {
-        return this.dataMaskingPolicyName == null ? Codegen.empty() : this.dataMaskingPolicyName;
+    public Optional<Output<String>> dataMaskingPolicyName() {
+        return Optional.ofNullable(this.dataMaskingPolicyName);
     }
 
     /**
@@ -32,7 +32,7 @@ public final class DataMaskingPolicyArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="dataMaskingState", required=true)
-      private final Output<DataMaskingState> dataMaskingState;
+    private Output<DataMaskingState> dataMaskingState;
 
     public Output<DataMaskingState> dataMaskingState() {
         return this.dataMaskingState;
@@ -43,7 +43,7 @@ public final class DataMaskingPolicyArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="databaseName", required=true)
-      private final Output<String> databaseName;
+    private Output<String> databaseName;
 
     public Output<String> databaseName() {
         return this.databaseName;
@@ -54,10 +54,10 @@ public final class DataMaskingPolicyArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="exemptPrincipals")
-      private final @Nullable Output<String> exemptPrincipals;
+    private @Nullable Output<String> exemptPrincipals;
 
-    public Output<String> exemptPrincipals() {
-        return this.exemptPrincipals == null ? Codegen.empty() : this.exemptPrincipals;
+    public Optional<Output<String>> exemptPrincipals() {
+        return Optional.ofNullable(this.exemptPrincipals);
     }
 
     /**
@@ -65,7 +65,7 @@ public final class DataMaskingPolicyArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -76,115 +76,102 @@ public final class DataMaskingPolicyArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="serverName", required=true)
-      private final Output<String> serverName;
+    private Output<String> serverName;
 
     public Output<String> serverName() {
         return this.serverName;
     }
 
-    public DataMaskingPolicyArgs(
-        @Nullable Output<String> dataMaskingPolicyName,
-        Output<DataMaskingState> dataMaskingState,
-        Output<String> databaseName,
-        @Nullable Output<String> exemptPrincipals,
-        Output<String> resourceGroupName,
-        Output<String> serverName) {
-        this.dataMaskingPolicyName = dataMaskingPolicyName;
-        this.dataMaskingState = Objects.requireNonNull(dataMaskingState, "expected parameter 'dataMaskingState' to be non-null");
-        this.databaseName = Objects.requireNonNull(databaseName, "expected parameter 'databaseName' to be non-null");
-        this.exemptPrincipals = exemptPrincipals;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.serverName = Objects.requireNonNull(serverName, "expected parameter 'serverName' to be non-null");
-    }
+    private DataMaskingPolicyArgs() {}
 
-    private DataMaskingPolicyArgs() {
-        this.dataMaskingPolicyName = Codegen.empty();
-        this.dataMaskingState = Codegen.empty();
-        this.databaseName = Codegen.empty();
-        this.exemptPrincipals = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.serverName = Codegen.empty();
+    private DataMaskingPolicyArgs(DataMaskingPolicyArgs $) {
+        this.dataMaskingPolicyName = $.dataMaskingPolicyName;
+        this.dataMaskingState = $.dataMaskingState;
+        this.databaseName = $.databaseName;
+        this.exemptPrincipals = $.exemptPrincipals;
+        this.resourceGroupName = $.resourceGroupName;
+        this.serverName = $.serverName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DataMaskingPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> dataMaskingPolicyName;
-        private Output<DataMaskingState> dataMaskingState;
-        private Output<String> databaseName;
-        private @Nullable Output<String> exemptPrincipals;
-        private Output<String> resourceGroupName;
-        private Output<String> serverName;
+        private DataMaskingPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DataMaskingPolicyArgs();
         }
 
         public Builder(DataMaskingPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dataMaskingPolicyName = defaults.dataMaskingPolicyName;
-    	      this.dataMaskingState = defaults.dataMaskingState;
-    	      this.databaseName = defaults.databaseName;
-    	      this.exemptPrincipals = defaults.exemptPrincipals;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.serverName = defaults.serverName;
+            $ = new DataMaskingPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder dataMaskingPolicyName(@Nullable Output<String> dataMaskingPolicyName) {
-            this.dataMaskingPolicyName = dataMaskingPolicyName;
+            $.dataMaskingPolicyName = dataMaskingPolicyName;
             return this;
         }
-        public Builder dataMaskingPolicyName(@Nullable String dataMaskingPolicyName) {
-            this.dataMaskingPolicyName = Codegen.ofNullable(dataMaskingPolicyName);
-            return this;
+
+        public Builder dataMaskingPolicyName(String dataMaskingPolicyName) {
+            return dataMaskingPolicyName(Output.of(dataMaskingPolicyName));
         }
+
         public Builder dataMaskingState(Output<DataMaskingState> dataMaskingState) {
-            this.dataMaskingState = Objects.requireNonNull(dataMaskingState);
+            $.dataMaskingState = dataMaskingState;
             return this;
         }
+
         public Builder dataMaskingState(DataMaskingState dataMaskingState) {
-            this.dataMaskingState = Output.of(Objects.requireNonNull(dataMaskingState));
-            return this;
+            return dataMaskingState(Output.of(dataMaskingState));
         }
+
         public Builder databaseName(Output<String> databaseName) {
-            this.databaseName = Objects.requireNonNull(databaseName);
+            $.databaseName = databaseName;
             return this;
         }
+
         public Builder databaseName(String databaseName) {
-            this.databaseName = Output.of(Objects.requireNonNull(databaseName));
-            return this;
+            return databaseName(Output.of(databaseName));
         }
+
         public Builder exemptPrincipals(@Nullable Output<String> exemptPrincipals) {
-            this.exemptPrincipals = exemptPrincipals;
+            $.exemptPrincipals = exemptPrincipals;
             return this;
         }
-        public Builder exemptPrincipals(@Nullable String exemptPrincipals) {
-            this.exemptPrincipals = Codegen.ofNullable(exemptPrincipals);
-            return this;
+
+        public Builder exemptPrincipals(String exemptPrincipals) {
+            return exemptPrincipals(Output.of(exemptPrincipals));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder serverName(Output<String> serverName) {
-            this.serverName = Objects.requireNonNull(serverName);
+            $.serverName = serverName;
             return this;
         }
+
         public Builder serverName(String serverName) {
-            this.serverName = Output.of(Objects.requireNonNull(serverName));
-            return this;
-        }        public DataMaskingPolicyArgs build() {
-            return new DataMaskingPolicyArgs(dataMaskingPolicyName, dataMaskingState, databaseName, exemptPrincipals, resourceGroupName, serverName);
+            return serverName(Output.of(serverName));
+        }
+
+        public DataMaskingPolicyArgs build() {
+            $.dataMaskingState = Objects.requireNonNull($.dataMaskingState, "expected parameter 'dataMaskingState' to be non-null");
+            $.databaseName = Objects.requireNonNull($.databaseName, "expected parameter 'databaseName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.serverName = Objects.requireNonNull($.serverName, "expected parameter 'serverName' to be non-null");
+            return $;
         }
     }
+
 }

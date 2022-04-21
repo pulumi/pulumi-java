@@ -10,10 +10,10 @@ import com.pulumi.awsnative.elasticloadbalancingv2.inputs.ListenerForwardConfigA
 import com.pulumi.awsnative.elasticloadbalancingv2.inputs.ListenerRedirectConfigArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,190 +22,168 @@ public final class ListenerActionArgs extends com.pulumi.resources.ResourceArgs 
     public static final ListenerActionArgs Empty = new ListenerActionArgs();
 
     @Import(name="authenticateCognitoConfig")
-      private final @Nullable Output<ListenerAuthenticateCognitoConfigArgs> authenticateCognitoConfig;
+    private @Nullable Output<ListenerAuthenticateCognitoConfigArgs> authenticateCognitoConfig;
 
-    public Output<ListenerAuthenticateCognitoConfigArgs> authenticateCognitoConfig() {
-        return this.authenticateCognitoConfig == null ? Codegen.empty() : this.authenticateCognitoConfig;
+    public Optional<Output<ListenerAuthenticateCognitoConfigArgs>> authenticateCognitoConfig() {
+        return Optional.ofNullable(this.authenticateCognitoConfig);
     }
 
     @Import(name="authenticateOidcConfig")
-      private final @Nullable Output<ListenerAuthenticateOidcConfigArgs> authenticateOidcConfig;
+    private @Nullable Output<ListenerAuthenticateOidcConfigArgs> authenticateOidcConfig;
 
-    public Output<ListenerAuthenticateOidcConfigArgs> authenticateOidcConfig() {
-        return this.authenticateOidcConfig == null ? Codegen.empty() : this.authenticateOidcConfig;
+    public Optional<Output<ListenerAuthenticateOidcConfigArgs>> authenticateOidcConfig() {
+        return Optional.ofNullable(this.authenticateOidcConfig);
     }
 
     @Import(name="fixedResponseConfig")
-      private final @Nullable Output<ListenerFixedResponseConfigArgs> fixedResponseConfig;
+    private @Nullable Output<ListenerFixedResponseConfigArgs> fixedResponseConfig;
 
-    public Output<ListenerFixedResponseConfigArgs> fixedResponseConfig() {
-        return this.fixedResponseConfig == null ? Codegen.empty() : this.fixedResponseConfig;
+    public Optional<Output<ListenerFixedResponseConfigArgs>> fixedResponseConfig() {
+        return Optional.ofNullable(this.fixedResponseConfig);
     }
 
     @Import(name="forwardConfig")
-      private final @Nullable Output<ListenerForwardConfigArgs> forwardConfig;
+    private @Nullable Output<ListenerForwardConfigArgs> forwardConfig;
 
-    public Output<ListenerForwardConfigArgs> forwardConfig() {
-        return this.forwardConfig == null ? Codegen.empty() : this.forwardConfig;
+    public Optional<Output<ListenerForwardConfigArgs>> forwardConfig() {
+        return Optional.ofNullable(this.forwardConfig);
     }
 
     @Import(name="order")
-      private final @Nullable Output<Integer> order;
+    private @Nullable Output<Integer> order;
 
-    public Output<Integer> order() {
-        return this.order == null ? Codegen.empty() : this.order;
+    public Optional<Output<Integer>> order() {
+        return Optional.ofNullable(this.order);
     }
 
     @Import(name="redirectConfig")
-      private final @Nullable Output<ListenerRedirectConfigArgs> redirectConfig;
+    private @Nullable Output<ListenerRedirectConfigArgs> redirectConfig;
 
-    public Output<ListenerRedirectConfigArgs> redirectConfig() {
-        return this.redirectConfig == null ? Codegen.empty() : this.redirectConfig;
+    public Optional<Output<ListenerRedirectConfigArgs>> redirectConfig() {
+        return Optional.ofNullable(this.redirectConfig);
     }
 
     @Import(name="targetGroupArn")
-      private final @Nullable Output<String> targetGroupArn;
+    private @Nullable Output<String> targetGroupArn;
 
-    public Output<String> targetGroupArn() {
-        return this.targetGroupArn == null ? Codegen.empty() : this.targetGroupArn;
+    public Optional<Output<String>> targetGroupArn() {
+        return Optional.ofNullable(this.targetGroupArn);
     }
 
     @Import(name="type", required=true)
-      private final Output<String> type;
+    private Output<String> type;
 
     public Output<String> type() {
         return this.type;
     }
 
-    public ListenerActionArgs(
-        @Nullable Output<ListenerAuthenticateCognitoConfigArgs> authenticateCognitoConfig,
-        @Nullable Output<ListenerAuthenticateOidcConfigArgs> authenticateOidcConfig,
-        @Nullable Output<ListenerFixedResponseConfigArgs> fixedResponseConfig,
-        @Nullable Output<ListenerForwardConfigArgs> forwardConfig,
-        @Nullable Output<Integer> order,
-        @Nullable Output<ListenerRedirectConfigArgs> redirectConfig,
-        @Nullable Output<String> targetGroupArn,
-        Output<String> type) {
-        this.authenticateCognitoConfig = authenticateCognitoConfig;
-        this.authenticateOidcConfig = authenticateOidcConfig;
-        this.fixedResponseConfig = fixedResponseConfig;
-        this.forwardConfig = forwardConfig;
-        this.order = order;
-        this.redirectConfig = redirectConfig;
-        this.targetGroupArn = targetGroupArn;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private ListenerActionArgs() {}
 
-    private ListenerActionArgs() {
-        this.authenticateCognitoConfig = Codegen.empty();
-        this.authenticateOidcConfig = Codegen.empty();
-        this.fixedResponseConfig = Codegen.empty();
-        this.forwardConfig = Codegen.empty();
-        this.order = Codegen.empty();
-        this.redirectConfig = Codegen.empty();
-        this.targetGroupArn = Codegen.empty();
-        this.type = Codegen.empty();
+    private ListenerActionArgs(ListenerActionArgs $) {
+        this.authenticateCognitoConfig = $.authenticateCognitoConfig;
+        this.authenticateOidcConfig = $.authenticateOidcConfig;
+        this.fixedResponseConfig = $.fixedResponseConfig;
+        this.forwardConfig = $.forwardConfig;
+        this.order = $.order;
+        this.redirectConfig = $.redirectConfig;
+        this.targetGroupArn = $.targetGroupArn;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ListenerActionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<ListenerAuthenticateCognitoConfigArgs> authenticateCognitoConfig;
-        private @Nullable Output<ListenerAuthenticateOidcConfigArgs> authenticateOidcConfig;
-        private @Nullable Output<ListenerFixedResponseConfigArgs> fixedResponseConfig;
-        private @Nullable Output<ListenerForwardConfigArgs> forwardConfig;
-        private @Nullable Output<Integer> order;
-        private @Nullable Output<ListenerRedirectConfigArgs> redirectConfig;
-        private @Nullable Output<String> targetGroupArn;
-        private Output<String> type;
+        private ListenerActionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ListenerActionArgs();
         }
 
         public Builder(ListenerActionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.authenticateCognitoConfig = defaults.authenticateCognitoConfig;
-    	      this.authenticateOidcConfig = defaults.authenticateOidcConfig;
-    	      this.fixedResponseConfig = defaults.fixedResponseConfig;
-    	      this.forwardConfig = defaults.forwardConfig;
-    	      this.order = defaults.order;
-    	      this.redirectConfig = defaults.redirectConfig;
-    	      this.targetGroupArn = defaults.targetGroupArn;
-    	      this.type = defaults.type;
+            $ = new ListenerActionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder authenticateCognitoConfig(@Nullable Output<ListenerAuthenticateCognitoConfigArgs> authenticateCognitoConfig) {
-            this.authenticateCognitoConfig = authenticateCognitoConfig;
+            $.authenticateCognitoConfig = authenticateCognitoConfig;
             return this;
         }
-        public Builder authenticateCognitoConfig(@Nullable ListenerAuthenticateCognitoConfigArgs authenticateCognitoConfig) {
-            this.authenticateCognitoConfig = Codegen.ofNullable(authenticateCognitoConfig);
-            return this;
+
+        public Builder authenticateCognitoConfig(ListenerAuthenticateCognitoConfigArgs authenticateCognitoConfig) {
+            return authenticateCognitoConfig(Output.of(authenticateCognitoConfig));
         }
+
         public Builder authenticateOidcConfig(@Nullable Output<ListenerAuthenticateOidcConfigArgs> authenticateOidcConfig) {
-            this.authenticateOidcConfig = authenticateOidcConfig;
+            $.authenticateOidcConfig = authenticateOidcConfig;
             return this;
         }
-        public Builder authenticateOidcConfig(@Nullable ListenerAuthenticateOidcConfigArgs authenticateOidcConfig) {
-            this.authenticateOidcConfig = Codegen.ofNullable(authenticateOidcConfig);
-            return this;
+
+        public Builder authenticateOidcConfig(ListenerAuthenticateOidcConfigArgs authenticateOidcConfig) {
+            return authenticateOidcConfig(Output.of(authenticateOidcConfig));
         }
+
         public Builder fixedResponseConfig(@Nullable Output<ListenerFixedResponseConfigArgs> fixedResponseConfig) {
-            this.fixedResponseConfig = fixedResponseConfig;
+            $.fixedResponseConfig = fixedResponseConfig;
             return this;
         }
-        public Builder fixedResponseConfig(@Nullable ListenerFixedResponseConfigArgs fixedResponseConfig) {
-            this.fixedResponseConfig = Codegen.ofNullable(fixedResponseConfig);
-            return this;
+
+        public Builder fixedResponseConfig(ListenerFixedResponseConfigArgs fixedResponseConfig) {
+            return fixedResponseConfig(Output.of(fixedResponseConfig));
         }
+
         public Builder forwardConfig(@Nullable Output<ListenerForwardConfigArgs> forwardConfig) {
-            this.forwardConfig = forwardConfig;
+            $.forwardConfig = forwardConfig;
             return this;
         }
-        public Builder forwardConfig(@Nullable ListenerForwardConfigArgs forwardConfig) {
-            this.forwardConfig = Codegen.ofNullable(forwardConfig);
-            return this;
+
+        public Builder forwardConfig(ListenerForwardConfigArgs forwardConfig) {
+            return forwardConfig(Output.of(forwardConfig));
         }
+
         public Builder order(@Nullable Output<Integer> order) {
-            this.order = order;
+            $.order = order;
             return this;
         }
-        public Builder order(@Nullable Integer order) {
-            this.order = Codegen.ofNullable(order);
-            return this;
+
+        public Builder order(Integer order) {
+            return order(Output.of(order));
         }
+
         public Builder redirectConfig(@Nullable Output<ListenerRedirectConfigArgs> redirectConfig) {
-            this.redirectConfig = redirectConfig;
+            $.redirectConfig = redirectConfig;
             return this;
         }
-        public Builder redirectConfig(@Nullable ListenerRedirectConfigArgs redirectConfig) {
-            this.redirectConfig = Codegen.ofNullable(redirectConfig);
-            return this;
+
+        public Builder redirectConfig(ListenerRedirectConfigArgs redirectConfig) {
+            return redirectConfig(Output.of(redirectConfig));
         }
+
         public Builder targetGroupArn(@Nullable Output<String> targetGroupArn) {
-            this.targetGroupArn = targetGroupArn;
+            $.targetGroupArn = targetGroupArn;
             return this;
         }
-        public Builder targetGroupArn(@Nullable String targetGroupArn) {
-            this.targetGroupArn = Codegen.ofNullable(targetGroupArn);
-            return this;
+
+        public Builder targetGroupArn(String targetGroupArn) {
+            return targetGroupArn(Output.of(targetGroupArn));
         }
+
         public Builder type(Output<String> type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Output.of(Objects.requireNonNull(type));
-            return this;
-        }        public ListenerActionArgs build() {
-            return new ListenerActionArgs(authenticateCognitoConfig, authenticateOidcConfig, fixedResponseConfig, forwardConfig, order, redirectConfig, targetGroupArn, type);
+            return type(Output.of(type));
+        }
+
+        public ListenerActionArgs build() {
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

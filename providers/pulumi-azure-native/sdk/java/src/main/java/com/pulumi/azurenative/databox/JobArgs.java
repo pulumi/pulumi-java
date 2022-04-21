@@ -19,6 +19,7 @@ import java.lang.Object;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -31,10 +32,10 @@ public final class JobArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="deliveryInfo")
-      private final @Nullable Output<JobDeliveryInfoArgs> deliveryInfo;
+    private @Nullable Output<JobDeliveryInfoArgs> deliveryInfo;
 
-    public Output<JobDeliveryInfoArgs> deliveryInfo() {
-        return this.deliveryInfo == null ? Codegen.empty() : this.deliveryInfo;
+    public Optional<Output<JobDeliveryInfoArgs>> deliveryInfo() {
+        return Optional.ofNullable(this.deliveryInfo);
     }
 
     /**
@@ -42,10 +43,10 @@ public final class JobArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="deliveryType")
-      private final @Nullable Output<Either<String,JobDeliveryType>> deliveryType;
+    private @Nullable Output<Either<String,JobDeliveryType>> deliveryType;
 
-    public Output<Either<String,JobDeliveryType>> deliveryType() {
-        return this.deliveryType == null ? Codegen.empty() : this.deliveryType;
+    public Optional<Output<Either<String,JobDeliveryType>>> deliveryType() {
+        return Optional.ofNullable(this.deliveryType);
     }
 
     /**
@@ -53,10 +54,10 @@ public final class JobArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="details")
-      private final @Nullable Output<Object> details;
+    private @Nullable Output<Object> details;
 
-    public Output<Object> details() {
-        return this.details == null ? Codegen.empty() : this.details;
+    public Optional<Output<Object>> details() {
+        return Optional.ofNullable(this.details);
     }
 
     /**
@@ -64,10 +65,10 @@ public final class JobArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="identity")
-      private final @Nullable Output<ResourceIdentityArgs> identity;
+    private @Nullable Output<ResourceIdentityArgs> identity;
 
-    public Output<ResourceIdentityArgs> identity() {
-        return this.identity == null ? Codegen.empty() : this.identity;
+    public Optional<Output<ResourceIdentityArgs>> identity() {
+        return Optional.ofNullable(this.identity);
     }
 
     /**
@@ -75,10 +76,10 @@ public final class JobArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="jobName")
-      private final @Nullable Output<String> jobName;
+    private @Nullable Output<String> jobName;
 
-    public Output<String> jobName() {
-        return this.jobName == null ? Codegen.empty() : this.jobName;
+    public Optional<Output<String>> jobName() {
+        return Optional.ofNullable(this.jobName);
     }
 
     /**
@@ -86,10 +87,10 @@ public final class JobArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -97,7 +98,7 @@ public final class JobArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -108,7 +109,7 @@ public final class JobArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="sku", required=true)
-      private final Output<SkuArgs> sku;
+    private Output<SkuArgs> sku;
 
     public Output<SkuArgs> sku() {
         return this.sku;
@@ -119,10 +120,10 @@ public final class JobArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -130,167 +131,142 @@ public final class JobArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="transferType", required=true)
-      private final Output<Either<String,TransferType>> transferType;
+    private Output<Either<String,TransferType>> transferType;
 
     public Output<Either<String,TransferType>> transferType() {
         return this.transferType;
     }
 
-    public JobArgs(
-        @Nullable Output<JobDeliveryInfoArgs> deliveryInfo,
-        @Nullable Output<Either<String,JobDeliveryType>> deliveryType,
-        @Nullable Output<Object> details,
-        @Nullable Output<ResourceIdentityArgs> identity,
-        @Nullable Output<String> jobName,
-        @Nullable Output<String> location,
-        Output<String> resourceGroupName,
-        Output<SkuArgs> sku,
-        @Nullable Output<Map<String,String>> tags,
-        Output<Either<String,TransferType>> transferType) {
-        this.deliveryInfo = deliveryInfo;
-        this.deliveryType = Codegen.stringProp("deliveryType").left(JobDeliveryType.class).output().arg(deliveryType).def("NonScheduled").getNullable();
-        this.details = details;
-        this.identity = identity;
-        this.jobName = jobName;
-        this.location = location;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.sku = Objects.requireNonNull(sku, "expected parameter 'sku' to be non-null");
-        this.tags = tags;
-        this.transferType = Objects.requireNonNull(transferType, "expected parameter 'transferType' to be non-null");
-    }
+    private JobArgs() {}
 
-    private JobArgs() {
-        this.deliveryInfo = Codegen.empty();
-        this.deliveryType = Codegen.empty();
-        this.details = Codegen.empty();
-        this.identity = Codegen.empty();
-        this.jobName = Codegen.empty();
-        this.location = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.sku = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.transferType = Codegen.empty();
+    private JobArgs(JobArgs $) {
+        this.deliveryInfo = $.deliveryInfo;
+        this.deliveryType = $.deliveryType;
+        this.details = $.details;
+        this.identity = $.identity;
+        this.jobName = $.jobName;
+        this.location = $.location;
+        this.resourceGroupName = $.resourceGroupName;
+        this.sku = $.sku;
+        this.tags = $.tags;
+        this.transferType = $.transferType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(JobArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<JobDeliveryInfoArgs> deliveryInfo;
-        private @Nullable Output<Either<String,JobDeliveryType>> deliveryType;
-        private @Nullable Output<Object> details;
-        private @Nullable Output<ResourceIdentityArgs> identity;
-        private @Nullable Output<String> jobName;
-        private @Nullable Output<String> location;
-        private Output<String> resourceGroupName;
-        private Output<SkuArgs> sku;
-        private @Nullable Output<Map<String,String>> tags;
-        private Output<Either<String,TransferType>> transferType;
+        private JobArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new JobArgs();
         }
 
         public Builder(JobArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.deliveryInfo = defaults.deliveryInfo;
-    	      this.deliveryType = defaults.deliveryType;
-    	      this.details = defaults.details;
-    	      this.identity = defaults.identity;
-    	      this.jobName = defaults.jobName;
-    	      this.location = defaults.location;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.sku = defaults.sku;
-    	      this.tags = defaults.tags;
-    	      this.transferType = defaults.transferType;
+            $ = new JobArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder deliveryInfo(@Nullable Output<JobDeliveryInfoArgs> deliveryInfo) {
-            this.deliveryInfo = deliveryInfo;
+            $.deliveryInfo = deliveryInfo;
             return this;
         }
-        public Builder deliveryInfo(@Nullable JobDeliveryInfoArgs deliveryInfo) {
-            this.deliveryInfo = Codegen.ofNullable(deliveryInfo);
-            return this;
+
+        public Builder deliveryInfo(JobDeliveryInfoArgs deliveryInfo) {
+            return deliveryInfo(Output.of(deliveryInfo));
         }
+
         public Builder deliveryType(@Nullable Output<Either<String,JobDeliveryType>> deliveryType) {
-            this.deliveryType = deliveryType;
+            $.deliveryType = deliveryType;
             return this;
         }
-        public Builder deliveryType(@Nullable Either<String,JobDeliveryType> deliveryType) {
-            this.deliveryType = Codegen.ofNullable(deliveryType);
-            return this;
+
+        public Builder deliveryType(Either<String,JobDeliveryType> deliveryType) {
+            return deliveryType(Output.of(deliveryType));
         }
+
         public Builder details(@Nullable Output<Object> details) {
-            this.details = details;
+            $.details = details;
             return this;
         }
-        public Builder details(@Nullable Object details) {
-            this.details = Codegen.ofNullable(details);
-            return this;
+
+        public Builder details(Object details) {
+            return details(Output.of(details));
         }
+
         public Builder identity(@Nullable Output<ResourceIdentityArgs> identity) {
-            this.identity = identity;
+            $.identity = identity;
             return this;
         }
-        public Builder identity(@Nullable ResourceIdentityArgs identity) {
-            this.identity = Codegen.ofNullable(identity);
-            return this;
+
+        public Builder identity(ResourceIdentityArgs identity) {
+            return identity(Output.of(identity));
         }
+
         public Builder jobName(@Nullable Output<String> jobName) {
-            this.jobName = jobName;
+            $.jobName = jobName;
             return this;
         }
-        public Builder jobName(@Nullable String jobName) {
-            this.jobName = Codegen.ofNullable(jobName);
-            return this;
+
+        public Builder jobName(String jobName) {
+            return jobName(Output.of(jobName));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder sku(Output<SkuArgs> sku) {
-            this.sku = Objects.requireNonNull(sku);
+            $.sku = sku;
             return this;
         }
+
         public Builder sku(SkuArgs sku) {
-            this.sku = Output.of(Objects.requireNonNull(sku));
-            return this;
+            return sku(Output.of(sku));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder transferType(Output<Either<String,TransferType>> transferType) {
-            this.transferType = Objects.requireNonNull(transferType);
+            $.transferType = transferType;
             return this;
         }
+
         public Builder transferType(Either<String,TransferType> transferType) {
-            this.transferType = Output.of(Objects.requireNonNull(transferType));
-            return this;
-        }        public JobArgs build() {
-            return new JobArgs(deliveryInfo, deliveryType, details, identity, jobName, location, resourceGroupName, sku, tags, transferType);
+            return transferType(Output.of(transferType));
+        }
+
+        public JobArgs build() {
+            $.deliveryType = Codegen.stringProp("deliveryType").left(JobDeliveryType.class).output().arg($.deliveryType).def("NonScheduled").getNullable();
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.sku = Objects.requireNonNull($.sku, "expected parameter 'sku' to be non-null");
+            $.transferType = Objects.requireNonNull($.transferType, "expected parameter 'transferType' to be non-null");
+            return $;
         }
     }
+
 }

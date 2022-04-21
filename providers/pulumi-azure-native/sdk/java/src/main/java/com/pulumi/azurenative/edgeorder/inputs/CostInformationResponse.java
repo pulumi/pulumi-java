@@ -23,7 +23,7 @@ public final class CostInformationResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="billingInfoUrl", required=true)
-      private final String billingInfoUrl;
+    private String billingInfoUrl;
 
     public String billingInfoUrl() {
         return this.billingInfoUrl;
@@ -34,58 +34,56 @@ public final class CostInformationResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="billingMeterDetails", required=true)
-      private final List<BillingMeterDetailsResponse> billingMeterDetails;
+    private List<BillingMeterDetailsResponse> billingMeterDetails;
 
     public List<BillingMeterDetailsResponse> billingMeterDetails() {
         return this.billingMeterDetails;
     }
 
-    public CostInformationResponse(
-        String billingInfoUrl,
-        List<BillingMeterDetailsResponse> billingMeterDetails) {
-        this.billingInfoUrl = Objects.requireNonNull(billingInfoUrl, "expected parameter 'billingInfoUrl' to be non-null");
-        this.billingMeterDetails = Objects.requireNonNull(billingMeterDetails, "expected parameter 'billingMeterDetails' to be non-null");
-    }
+    private CostInformationResponse() {}
 
-    private CostInformationResponse() {
-        this.billingInfoUrl = null;
-        this.billingMeterDetails = List.of();
+    private CostInformationResponse(CostInformationResponse $) {
+        this.billingInfoUrl = $.billingInfoUrl;
+        this.billingMeterDetails = $.billingMeterDetails;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CostInformationResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String billingInfoUrl;
-        private List<BillingMeterDetailsResponse> billingMeterDetails;
+        private CostInformationResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new CostInformationResponse();
         }
 
         public Builder(CostInformationResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.billingInfoUrl = defaults.billingInfoUrl;
-    	      this.billingMeterDetails = defaults.billingMeterDetails;
+            $ = new CostInformationResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder billingInfoUrl(String billingInfoUrl) {
-            this.billingInfoUrl = Objects.requireNonNull(billingInfoUrl);
+            $.billingInfoUrl = billingInfoUrl;
             return this;
         }
+
         public Builder billingMeterDetails(List<BillingMeterDetailsResponse> billingMeterDetails) {
-            this.billingMeterDetails = Objects.requireNonNull(billingMeterDetails);
+            $.billingMeterDetails = billingMeterDetails;
             return this;
         }
+
         public Builder billingMeterDetails(BillingMeterDetailsResponse... billingMeterDetails) {
             return billingMeterDetails(List.of(billingMeterDetails));
-        }        public CostInformationResponse build() {
-            return new CostInformationResponse(billingInfoUrl, billingMeterDetails);
+        }
+
+        public CostInformationResponse build() {
+            $.billingInfoUrl = Objects.requireNonNull($.billingInfoUrl, "expected parameter 'billingInfoUrl' to be non-null");
+            $.billingMeterDetails = Objects.requireNonNull($.billingMeterDetails, "expected parameter 'billingMeterDetails' to be non-null");
+            return $;
         }
     }
+
 }

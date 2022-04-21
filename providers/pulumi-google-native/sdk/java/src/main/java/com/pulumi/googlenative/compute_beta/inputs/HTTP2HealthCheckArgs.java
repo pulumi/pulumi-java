@@ -5,12 +5,12 @@ package com.pulumi.googlenative.compute_beta.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.compute_beta.enums.HTTP2HealthCheckPortSpecification;
 import com.pulumi.googlenative.compute_beta.enums.HTTP2HealthCheckProxyHeader;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,10 @@ public final class HTTP2HealthCheckArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="host")
-      private final @Nullable Output<String> host;
+    private @Nullable Output<String> host;
 
-    public Output<String> host() {
-        return this.host == null ? Codegen.empty() : this.host;
+    public Optional<Output<String>> host() {
+        return Optional.ofNullable(this.host);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class HTTP2HealthCheckArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="port")
-      private final @Nullable Output<Integer> port;
+    private @Nullable Output<Integer> port;
 
-    public Output<Integer> port() {
-        return this.port == null ? Codegen.empty() : this.port;
+    public Optional<Output<Integer>> port() {
+        return Optional.ofNullable(this.port);
     }
 
     /**
@@ -45,10 +45,10 @@ public final class HTTP2HealthCheckArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="portName")
-      private final @Nullable Output<String> portName;
+    private @Nullable Output<String> portName;
 
-    public Output<String> portName() {
-        return this.portName == null ? Codegen.empty() : this.portName;
+    public Optional<Output<String>> portName() {
+        return Optional.ofNullable(this.portName);
     }
 
     /**
@@ -56,10 +56,10 @@ public final class HTTP2HealthCheckArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="portSpecification")
-      private final @Nullable Output<HTTP2HealthCheckPortSpecification> portSpecification;
+    private @Nullable Output<HTTP2HealthCheckPortSpecification> portSpecification;
 
-    public Output<HTTP2HealthCheckPortSpecification> portSpecification() {
-        return this.portSpecification == null ? Codegen.empty() : this.portSpecification;
+    public Optional<Output<HTTP2HealthCheckPortSpecification>> portSpecification() {
+        return Optional.ofNullable(this.portSpecification);
     }
 
     /**
@@ -67,10 +67,10 @@ public final class HTTP2HealthCheckArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="proxyHeader")
-      private final @Nullable Output<HTTP2HealthCheckProxyHeader> proxyHeader;
+    private @Nullable Output<HTTP2HealthCheckProxyHeader> proxyHeader;
 
-    public Output<HTTP2HealthCheckProxyHeader> proxyHeader() {
-        return this.proxyHeader == null ? Codegen.empty() : this.proxyHeader;
+    public Optional<Output<HTTP2HealthCheckProxyHeader>> proxyHeader() {
+        return Optional.ofNullable(this.proxyHeader);
     }
 
     /**
@@ -78,10 +78,10 @@ public final class HTTP2HealthCheckArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="requestPath")
-      private final @Nullable Output<String> requestPath;
+    private @Nullable Output<String> requestPath;
 
-    public Output<String> requestPath() {
-        return this.requestPath == null ? Codegen.empty() : this.requestPath;
+    public Optional<Output<String>> requestPath() {
+        return Optional.ofNullable(this.requestPath);
     }
 
     /**
@@ -89,128 +89,108 @@ public final class HTTP2HealthCheckArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="response")
-      private final @Nullable Output<String> response;
+    private @Nullable Output<String> response;
 
-    public Output<String> response() {
-        return this.response == null ? Codegen.empty() : this.response;
+    public Optional<Output<String>> response() {
+        return Optional.ofNullable(this.response);
     }
 
-    public HTTP2HealthCheckArgs(
-        @Nullable Output<String> host,
-        @Nullable Output<Integer> port,
-        @Nullable Output<String> portName,
-        @Nullable Output<HTTP2HealthCheckPortSpecification> portSpecification,
-        @Nullable Output<HTTP2HealthCheckProxyHeader> proxyHeader,
-        @Nullable Output<String> requestPath,
-        @Nullable Output<String> response) {
-        this.host = host;
-        this.port = port;
-        this.portName = portName;
-        this.portSpecification = portSpecification;
-        this.proxyHeader = proxyHeader;
-        this.requestPath = requestPath;
-        this.response = response;
-    }
+    private HTTP2HealthCheckArgs() {}
 
-    private HTTP2HealthCheckArgs() {
-        this.host = Codegen.empty();
-        this.port = Codegen.empty();
-        this.portName = Codegen.empty();
-        this.portSpecification = Codegen.empty();
-        this.proxyHeader = Codegen.empty();
-        this.requestPath = Codegen.empty();
-        this.response = Codegen.empty();
+    private HTTP2HealthCheckArgs(HTTP2HealthCheckArgs $) {
+        this.host = $.host;
+        this.port = $.port;
+        this.portName = $.portName;
+        this.portSpecification = $.portSpecification;
+        this.proxyHeader = $.proxyHeader;
+        this.requestPath = $.requestPath;
+        this.response = $.response;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(HTTP2HealthCheckArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> host;
-        private @Nullable Output<Integer> port;
-        private @Nullable Output<String> portName;
-        private @Nullable Output<HTTP2HealthCheckPortSpecification> portSpecification;
-        private @Nullable Output<HTTP2HealthCheckProxyHeader> proxyHeader;
-        private @Nullable Output<String> requestPath;
-        private @Nullable Output<String> response;
+        private HTTP2HealthCheckArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new HTTP2HealthCheckArgs();
         }
 
         public Builder(HTTP2HealthCheckArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.host = defaults.host;
-    	      this.port = defaults.port;
-    	      this.portName = defaults.portName;
-    	      this.portSpecification = defaults.portSpecification;
-    	      this.proxyHeader = defaults.proxyHeader;
-    	      this.requestPath = defaults.requestPath;
-    	      this.response = defaults.response;
+            $ = new HTTP2HealthCheckArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder host(@Nullable Output<String> host) {
-            this.host = host;
+            $.host = host;
             return this;
         }
-        public Builder host(@Nullable String host) {
-            this.host = Codegen.ofNullable(host);
-            return this;
+
+        public Builder host(String host) {
+            return host(Output.of(host));
         }
+
         public Builder port(@Nullable Output<Integer> port) {
-            this.port = port;
+            $.port = port;
             return this;
         }
-        public Builder port(@Nullable Integer port) {
-            this.port = Codegen.ofNullable(port);
-            return this;
+
+        public Builder port(Integer port) {
+            return port(Output.of(port));
         }
+
         public Builder portName(@Nullable Output<String> portName) {
-            this.portName = portName;
+            $.portName = portName;
             return this;
         }
-        public Builder portName(@Nullable String portName) {
-            this.portName = Codegen.ofNullable(portName);
-            return this;
+
+        public Builder portName(String portName) {
+            return portName(Output.of(portName));
         }
+
         public Builder portSpecification(@Nullable Output<HTTP2HealthCheckPortSpecification> portSpecification) {
-            this.portSpecification = portSpecification;
+            $.portSpecification = portSpecification;
             return this;
         }
-        public Builder portSpecification(@Nullable HTTP2HealthCheckPortSpecification portSpecification) {
-            this.portSpecification = Codegen.ofNullable(portSpecification);
-            return this;
+
+        public Builder portSpecification(HTTP2HealthCheckPortSpecification portSpecification) {
+            return portSpecification(Output.of(portSpecification));
         }
+
         public Builder proxyHeader(@Nullable Output<HTTP2HealthCheckProxyHeader> proxyHeader) {
-            this.proxyHeader = proxyHeader;
+            $.proxyHeader = proxyHeader;
             return this;
         }
-        public Builder proxyHeader(@Nullable HTTP2HealthCheckProxyHeader proxyHeader) {
-            this.proxyHeader = Codegen.ofNullable(proxyHeader);
-            return this;
+
+        public Builder proxyHeader(HTTP2HealthCheckProxyHeader proxyHeader) {
+            return proxyHeader(Output.of(proxyHeader));
         }
+
         public Builder requestPath(@Nullable Output<String> requestPath) {
-            this.requestPath = requestPath;
+            $.requestPath = requestPath;
             return this;
         }
-        public Builder requestPath(@Nullable String requestPath) {
-            this.requestPath = Codegen.ofNullable(requestPath);
-            return this;
+
+        public Builder requestPath(String requestPath) {
+            return requestPath(Output.of(requestPath));
         }
+
         public Builder response(@Nullable Output<String> response) {
-            this.response = response;
+            $.response = response;
             return this;
         }
-        public Builder response(@Nullable String response) {
-            this.response = Codegen.ofNullable(response);
-            return this;
-        }        public HTTP2HealthCheckArgs build() {
-            return new HTTP2HealthCheckArgs(host, port, portName, portSpecification, proxyHeader, requestPath, response);
+
+        public Builder response(String response) {
+            return response(Output.of(response));
+        }
+
+        public HTTP2HealthCheckArgs build() {
+            return $;
         }
     }
+
 }

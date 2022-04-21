@@ -6,11 +6,11 @@ package com.pulumi.aws.connect;
 import com.pulumi.aws.connect.inputs.HoursOfOperationConfigArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,7 +23,7 @@ public final class HoursOfOperationArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="configs", required=true)
-      private final Output<List<HoursOfOperationConfigArgs>> configs;
+    private Output<List<HoursOfOperationConfigArgs>> configs;
 
     public Output<List<HoursOfOperationConfigArgs>> configs() {
         return this.configs;
@@ -34,10 +34,10 @@ public final class HoursOfOperationArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -45,7 +45,7 @@ public final class HoursOfOperationArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="instanceId", required=true)
-      private final Output<String> instanceId;
+    private Output<String> instanceId;
 
     public Output<String> instanceId() {
         return this.instanceId;
@@ -56,10 +56,10 @@ public final class HoursOfOperationArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -67,10 +67,10 @@ public final class HoursOfOperationArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -78,10 +78,10 @@ public final class HoursOfOperationArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="tagsAll")
-      private final @Nullable Output<Map<String,String>> tagsAll;
+    private @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> tagsAll() {
-        return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
+    public Optional<Output<Map<String,String>>> tagsAll() {
+        return Optional.ofNullable(this.tagsAll);
     }
 
     /**
@@ -89,131 +89,115 @@ public final class HoursOfOperationArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="timeZone", required=true)
-      private final Output<String> timeZone;
+    private Output<String> timeZone;
 
     public Output<String> timeZone() {
         return this.timeZone;
     }
 
-    public HoursOfOperationArgs(
-        Output<List<HoursOfOperationConfigArgs>> configs,
-        @Nullable Output<String> description,
-        Output<String> instanceId,
-        @Nullable Output<String> name,
-        @Nullable Output<Map<String,String>> tags,
-        @Nullable Output<Map<String,String>> tagsAll,
-        Output<String> timeZone) {
-        this.configs = Objects.requireNonNull(configs, "expected parameter 'configs' to be non-null");
-        this.description = description;
-        this.instanceId = Objects.requireNonNull(instanceId, "expected parameter 'instanceId' to be non-null");
-        this.name = name;
-        this.tags = tags;
-        this.tagsAll = tagsAll;
-        this.timeZone = Objects.requireNonNull(timeZone, "expected parameter 'timeZone' to be non-null");
-    }
+    private HoursOfOperationArgs() {}
 
-    private HoursOfOperationArgs() {
-        this.configs = Codegen.empty();
-        this.description = Codegen.empty();
-        this.instanceId = Codegen.empty();
-        this.name = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.tagsAll = Codegen.empty();
-        this.timeZone = Codegen.empty();
+    private HoursOfOperationArgs(HoursOfOperationArgs $) {
+        this.configs = $.configs;
+        this.description = $.description;
+        this.instanceId = $.instanceId;
+        this.name = $.name;
+        this.tags = $.tags;
+        this.tagsAll = $.tagsAll;
+        this.timeZone = $.timeZone;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(HoursOfOperationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<List<HoursOfOperationConfigArgs>> configs;
-        private @Nullable Output<String> description;
-        private Output<String> instanceId;
-        private @Nullable Output<String> name;
-        private @Nullable Output<Map<String,String>> tags;
-        private @Nullable Output<Map<String,String>> tagsAll;
-        private Output<String> timeZone;
+        private HoursOfOperationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new HoursOfOperationArgs();
         }
 
         public Builder(HoursOfOperationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.configs = defaults.configs;
-    	      this.description = defaults.description;
-    	      this.instanceId = defaults.instanceId;
-    	      this.name = defaults.name;
-    	      this.tags = defaults.tags;
-    	      this.tagsAll = defaults.tagsAll;
-    	      this.timeZone = defaults.timeZone;
+            $ = new HoursOfOperationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder configs(Output<List<HoursOfOperationConfigArgs>> configs) {
-            this.configs = Objects.requireNonNull(configs);
+            $.configs = configs;
             return this;
         }
+
         public Builder configs(List<HoursOfOperationConfigArgs> configs) {
-            this.configs = Output.of(Objects.requireNonNull(configs));
-            return this;
+            return configs(Output.of(configs));
         }
+
         public Builder configs(HoursOfOperationConfigArgs... configs) {
             return configs(List.of(configs));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder instanceId(Output<String> instanceId) {
-            this.instanceId = Objects.requireNonNull(instanceId);
+            $.instanceId = instanceId;
             return this;
         }
+
         public Builder instanceId(String instanceId) {
-            this.instanceId = Output.of(Objects.requireNonNull(instanceId));
-            return this;
+            return instanceId(Output.of(instanceId));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
-            this.tagsAll = tagsAll;
+            $.tagsAll = tagsAll;
             return this;
         }
-        public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Codegen.ofNullable(tagsAll);
-            return this;
+
+        public Builder tagsAll(Map<String,String> tagsAll) {
+            return tagsAll(Output.of(tagsAll));
         }
+
         public Builder timeZone(Output<String> timeZone) {
-            this.timeZone = Objects.requireNonNull(timeZone);
+            $.timeZone = timeZone;
             return this;
         }
+
         public Builder timeZone(String timeZone) {
-            this.timeZone = Output.of(Objects.requireNonNull(timeZone));
-            return this;
-        }        public HoursOfOperationArgs build() {
-            return new HoursOfOperationArgs(configs, description, instanceId, name, tags, tagsAll, timeZone);
+            return timeZone(Output.of(timeZone));
+        }
+
+        public HoursOfOperationArgs build() {
+            $.configs = Objects.requireNonNull($.configs, "expected parameter 'configs' to be non-null");
+            $.instanceId = Objects.requireNonNull($.instanceId, "expected parameter 'instanceId' to be non-null");
+            $.timeZone = Objects.requireNonNull($.timeZone, "expected parameter 'timeZone' to be non-null");
+            return $;
         }
     }
+
 }

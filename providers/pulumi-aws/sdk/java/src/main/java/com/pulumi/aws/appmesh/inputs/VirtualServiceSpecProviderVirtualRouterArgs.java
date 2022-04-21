@@ -5,7 +5,6 @@ package com.pulumi.aws.appmesh.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,49 +18,49 @@ public final class VirtualServiceSpecProviderVirtualRouterArgs extends com.pulum
      * 
      */
     @Import(name="virtualRouterName", required=true)
-      private final Output<String> virtualRouterName;
+    private Output<String> virtualRouterName;
 
     public Output<String> virtualRouterName() {
         return this.virtualRouterName;
     }
 
-    public VirtualServiceSpecProviderVirtualRouterArgs(Output<String> virtualRouterName) {
-        this.virtualRouterName = Objects.requireNonNull(virtualRouterName, "expected parameter 'virtualRouterName' to be non-null");
-    }
+    private VirtualServiceSpecProviderVirtualRouterArgs() {}
 
-    private VirtualServiceSpecProviderVirtualRouterArgs() {
-        this.virtualRouterName = Codegen.empty();
+    private VirtualServiceSpecProviderVirtualRouterArgs(VirtualServiceSpecProviderVirtualRouterArgs $) {
+        this.virtualRouterName = $.virtualRouterName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VirtualServiceSpecProviderVirtualRouterArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> virtualRouterName;
+        private VirtualServiceSpecProviderVirtualRouterArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new VirtualServiceSpecProviderVirtualRouterArgs();
         }
 
         public Builder(VirtualServiceSpecProviderVirtualRouterArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.virtualRouterName = defaults.virtualRouterName;
+            $ = new VirtualServiceSpecProviderVirtualRouterArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder virtualRouterName(Output<String> virtualRouterName) {
-            this.virtualRouterName = Objects.requireNonNull(virtualRouterName);
+            $.virtualRouterName = virtualRouterName;
             return this;
         }
+
         public Builder virtualRouterName(String virtualRouterName) {
-            this.virtualRouterName = Output.of(Objects.requireNonNull(virtualRouterName));
-            return this;
-        }        public VirtualServiceSpecProviderVirtualRouterArgs build() {
-            return new VirtualServiceSpecProviderVirtualRouterArgs(virtualRouterName);
+            return virtualRouterName(Output.of(virtualRouterName));
+        }
+
+        public VirtualServiceSpecProviderVirtualRouterArgs build() {
+            $.virtualRouterName = Objects.requireNonNull($.virtualRouterName, "expected parameter 'virtualRouterName' to be non-null");
+            return $;
         }
     }
+
 }

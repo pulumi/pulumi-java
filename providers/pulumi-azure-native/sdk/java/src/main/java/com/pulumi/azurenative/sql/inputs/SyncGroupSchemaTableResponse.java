@@ -25,10 +25,10 @@ public final class SyncGroupSchemaTableResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="columns")
-      private final @Nullable List<SyncGroupSchemaTableColumnResponse> columns;
+    private @Nullable List<SyncGroupSchemaTableColumnResponse> columns;
 
-    public List<SyncGroupSchemaTableColumnResponse> columns() {
-        return this.columns == null ? List.of() : this.columns;
+    public Optional<List<SyncGroupSchemaTableColumnResponse>> columns() {
+        return Optional.ofNullable(this.columns);
     }
 
     /**
@@ -36,58 +36,54 @@ public final class SyncGroupSchemaTableResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="quotedName")
-      private final @Nullable String quotedName;
+    private @Nullable String quotedName;
 
     public Optional<String> quotedName() {
-        return this.quotedName == null ? Optional.empty() : Optional.ofNullable(this.quotedName);
+        return Optional.ofNullable(this.quotedName);
     }
 
-    public SyncGroupSchemaTableResponse(
-        @Nullable List<SyncGroupSchemaTableColumnResponse> columns,
-        @Nullable String quotedName) {
-        this.columns = columns;
-        this.quotedName = quotedName;
-    }
+    private SyncGroupSchemaTableResponse() {}
 
-    private SyncGroupSchemaTableResponse() {
-        this.columns = List.of();
-        this.quotedName = null;
+    private SyncGroupSchemaTableResponse(SyncGroupSchemaTableResponse $) {
+        this.columns = $.columns;
+        this.quotedName = $.quotedName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SyncGroupSchemaTableResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<SyncGroupSchemaTableColumnResponse> columns;
-        private @Nullable String quotedName;
+        private SyncGroupSchemaTableResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new SyncGroupSchemaTableResponse();
         }
 
         public Builder(SyncGroupSchemaTableResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.columns = defaults.columns;
-    	      this.quotedName = defaults.quotedName;
+            $ = new SyncGroupSchemaTableResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder columns(@Nullable List<SyncGroupSchemaTableColumnResponse> columns) {
-            this.columns = columns;
+            $.columns = columns;
             return this;
         }
+
         public Builder columns(SyncGroupSchemaTableColumnResponse... columns) {
             return columns(List.of(columns));
         }
+
         public Builder quotedName(@Nullable String quotedName) {
-            this.quotedName = quotedName;
+            $.quotedName = quotedName;
             return this;
-        }        public SyncGroupSchemaTableResponse build() {
-            return new SyncGroupSchemaTableResponse(columns, quotedName);
+        }
+
+        public SyncGroupSchemaTableResponse build() {
+            return $;
         }
     }
+
 }

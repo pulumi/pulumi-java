@@ -24,10 +24,10 @@ public final class LogStorageSettingsResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="enableReliableLogging")
-      private final @Nullable Object enableReliableLogging;
+    private @Nullable Object enableReliableLogging;
 
     public Optional<Object> enableReliableLogging() {
-        return this.enableReliableLogging == null ? Optional.empty() : Optional.ofNullable(this.enableReliableLogging);
+        return Optional.ofNullable(this.enableReliableLogging);
     }
 
     /**
@@ -35,7 +35,7 @@ public final class LogStorageSettingsResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="linkedServiceName", required=true)
-      private final LinkedServiceReferenceResponse linkedServiceName;
+    private LinkedServiceReferenceResponse linkedServiceName;
 
     public LinkedServiceReferenceResponse linkedServiceName() {
         return this.linkedServiceName;
@@ -46,10 +46,10 @@ public final class LogStorageSettingsResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="logLevel")
-      private final @Nullable Object logLevel;
+    private @Nullable Object logLevel;
 
     public Optional<Object> logLevel() {
-        return this.logLevel == null ? Optional.empty() : Optional.ofNullable(this.logLevel);
+        return Optional.ofNullable(this.logLevel);
     }
 
     /**
@@ -57,73 +57,63 @@ public final class LogStorageSettingsResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="path")
-      private final @Nullable Object path;
+    private @Nullable Object path;
 
     public Optional<Object> path() {
-        return this.path == null ? Optional.empty() : Optional.ofNullable(this.path);
+        return Optional.ofNullable(this.path);
     }
 
-    public LogStorageSettingsResponse(
-        @Nullable Object enableReliableLogging,
-        LinkedServiceReferenceResponse linkedServiceName,
-        @Nullable Object logLevel,
-        @Nullable Object path) {
-        this.enableReliableLogging = enableReliableLogging;
-        this.linkedServiceName = Objects.requireNonNull(linkedServiceName, "expected parameter 'linkedServiceName' to be non-null");
-        this.logLevel = logLevel;
-        this.path = path;
-    }
+    private LogStorageSettingsResponse() {}
 
-    private LogStorageSettingsResponse() {
-        this.enableReliableLogging = null;
-        this.linkedServiceName = null;
-        this.logLevel = null;
-        this.path = null;
+    private LogStorageSettingsResponse(LogStorageSettingsResponse $) {
+        this.enableReliableLogging = $.enableReliableLogging;
+        this.linkedServiceName = $.linkedServiceName;
+        this.logLevel = $.logLevel;
+        this.path = $.path;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LogStorageSettingsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Object enableReliableLogging;
-        private LinkedServiceReferenceResponse linkedServiceName;
-        private @Nullable Object logLevel;
-        private @Nullable Object path;
+        private LogStorageSettingsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new LogStorageSettingsResponse();
         }
 
         public Builder(LogStorageSettingsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.enableReliableLogging = defaults.enableReliableLogging;
-    	      this.linkedServiceName = defaults.linkedServiceName;
-    	      this.logLevel = defaults.logLevel;
-    	      this.path = defaults.path;
+            $ = new LogStorageSettingsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder enableReliableLogging(@Nullable Object enableReliableLogging) {
-            this.enableReliableLogging = enableReliableLogging;
+            $.enableReliableLogging = enableReliableLogging;
             return this;
         }
+
         public Builder linkedServiceName(LinkedServiceReferenceResponse linkedServiceName) {
-            this.linkedServiceName = Objects.requireNonNull(linkedServiceName);
+            $.linkedServiceName = linkedServiceName;
             return this;
         }
+
         public Builder logLevel(@Nullable Object logLevel) {
-            this.logLevel = logLevel;
+            $.logLevel = logLevel;
             return this;
         }
+
         public Builder path(@Nullable Object path) {
-            this.path = path;
+            $.path = path;
             return this;
-        }        public LogStorageSettingsResponse build() {
-            return new LogStorageSettingsResponse(enableReliableLogging, linkedServiceName, logLevel, path);
+        }
+
+        public LogStorageSettingsResponse build() {
+            $.linkedServiceName = Objects.requireNonNull($.linkedServiceName, "expected parameter 'linkedServiceName' to be non-null");
+            return $;
         }
     }
+
 }

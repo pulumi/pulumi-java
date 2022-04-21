@@ -13,62 +13,59 @@ public final class GetMissionProfileArgs extends com.pulumi.resources.InvokeArgs
     public static final GetMissionProfileArgs Empty = new GetMissionProfileArgs();
 
     @Import(name="arn", required=true)
-      private final String arn;
+    private String arn;
 
     public String arn() {
         return this.arn;
     }
 
     @Import(name="id", required=true)
-      private final String id;
+    private String id;
 
     public String id() {
         return this.id;
     }
 
-    public GetMissionProfileArgs(
-        String arn,
-        String id) {
-        this.arn = Objects.requireNonNull(arn, "expected parameter 'arn' to be non-null");
-        this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
-    }
+    private GetMissionProfileArgs() {}
 
-    private GetMissionProfileArgs() {
-        this.arn = null;
-        this.id = null;
+    private GetMissionProfileArgs(GetMissionProfileArgs $) {
+        this.arn = $.arn;
+        this.id = $.id;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetMissionProfileArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String arn;
-        private String id;
+        private GetMissionProfileArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetMissionProfileArgs();
         }
 
         public Builder(GetMissionProfileArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.arn = defaults.arn;
-    	      this.id = defaults.id;
+            $ = new GetMissionProfileArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder arn(String arn) {
-            this.arn = Objects.requireNonNull(arn);
+            $.arn = arn;
             return this;
         }
+
         public Builder id(String id) {
-            this.id = Objects.requireNonNull(id);
+            $.id = id;
             return this;
-        }        public GetMissionProfileArgs build() {
-            return new GetMissionProfileArgs(arn, id);
+        }
+
+        public GetMissionProfileArgs build() {
+            $.arn = Objects.requireNonNull($.arn, "expected parameter 'arn' to be non-null");
+            $.id = Objects.requireNonNull($.id, "expected parameter 'id' to be non-null");
+            return $;
         }
     }
+
 }

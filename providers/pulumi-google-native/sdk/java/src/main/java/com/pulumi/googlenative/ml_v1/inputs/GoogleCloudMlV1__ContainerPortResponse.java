@@ -21,45 +21,45 @@ public final class GoogleCloudMlV1__ContainerPortResponse extends com.pulumi.res
      * 
      */
     @Import(name="containerPort", required=true)
-      private final Integer containerPort;
+    private Integer containerPort;
 
     public Integer containerPort() {
         return this.containerPort;
     }
 
-    public GoogleCloudMlV1__ContainerPortResponse(Integer containerPort) {
-        this.containerPort = Objects.requireNonNull(containerPort, "expected parameter 'containerPort' to be non-null");
-    }
+    private GoogleCloudMlV1__ContainerPortResponse() {}
 
-    private GoogleCloudMlV1__ContainerPortResponse() {
-        this.containerPort = null;
+    private GoogleCloudMlV1__ContainerPortResponse(GoogleCloudMlV1__ContainerPortResponse $) {
+        this.containerPort = $.containerPort;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudMlV1__ContainerPortResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Integer containerPort;
+        private GoogleCloudMlV1__ContainerPortResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudMlV1__ContainerPortResponse();
         }
 
         public Builder(GoogleCloudMlV1__ContainerPortResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.containerPort = defaults.containerPort;
+            $ = new GoogleCloudMlV1__ContainerPortResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder containerPort(Integer containerPort) {
-            this.containerPort = Objects.requireNonNull(containerPort);
+            $.containerPort = containerPort;
             return this;
-        }        public GoogleCloudMlV1__ContainerPortResponse build() {
-            return new GoogleCloudMlV1__ContainerPortResponse(containerPort);
+        }
+
+        public GoogleCloudMlV1__ContainerPortResponse build() {
+            $.containerPort = Objects.requireNonNull($.containerPort, "expected parameter 'containerPort' to be non-null");
+            return $;
         }
     }
+
 }

@@ -23,45 +23,44 @@ public final class HourDetailsResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="minute")
-      private final @Nullable Integer minute;
+    private @Nullable Integer minute;
 
     public Optional<Integer> minute() {
-        return this.minute == null ? Optional.empty() : Optional.ofNullable(this.minute);
+        return Optional.ofNullable(this.minute);
     }
 
-    public HourDetailsResponse(@Nullable Integer minute) {
-        this.minute = minute;
-    }
+    private HourDetailsResponse() {}
 
-    private HourDetailsResponse() {
-        this.minute = null;
+    private HourDetailsResponse(HourDetailsResponse $) {
+        this.minute = $.minute;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(HourDetailsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Integer minute;
+        private HourDetailsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new HourDetailsResponse();
         }
 
         public Builder(HourDetailsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.minute = defaults.minute;
+            $ = new HourDetailsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder minute(@Nullable Integer minute) {
-            this.minute = minute;
+            $.minute = minute;
             return this;
-        }        public HourDetailsResponse build() {
-            return new HourDetailsResponse(minute);
+        }
+
+        public HourDetailsResponse build() {
+            return $;
         }
     }
+
 }

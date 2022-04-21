@@ -24,10 +24,10 @@ public final class PortResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="backendPort")
-      private final @Nullable Integer backendPort;
+    private @Nullable Integer backendPort;
 
     public Optional<Integer> backendPort() {
-        return this.backendPort == null ? Optional.empty() : Optional.ofNullable(this.backendPort);
+        return Optional.ofNullable(this.backendPort);
     }
 
     /**
@@ -35,55 +35,50 @@ public final class PortResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="transportProtocol")
-      private final @Nullable String transportProtocol;
+    private @Nullable String transportProtocol;
 
     public Optional<String> transportProtocol() {
-        return this.transportProtocol == null ? Optional.empty() : Optional.ofNullable(this.transportProtocol);
+        return Optional.ofNullable(this.transportProtocol);
     }
 
-    public PortResponse(
-        @Nullable Integer backendPort,
-        @Nullable String transportProtocol) {
-        this.backendPort = backendPort;
-        this.transportProtocol = transportProtocol;
-    }
+    private PortResponse() {}
 
-    private PortResponse() {
-        this.backendPort = null;
-        this.transportProtocol = null;
+    private PortResponse(PortResponse $) {
+        this.backendPort = $.backendPort;
+        this.transportProtocol = $.transportProtocol;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PortResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Integer backendPort;
-        private @Nullable String transportProtocol;
+        private PortResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new PortResponse();
         }
 
         public Builder(PortResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.backendPort = defaults.backendPort;
-    	      this.transportProtocol = defaults.transportProtocol;
+            $ = new PortResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder backendPort(@Nullable Integer backendPort) {
-            this.backendPort = backendPort;
+            $.backendPort = backendPort;
             return this;
         }
+
         public Builder transportProtocol(@Nullable String transportProtocol) {
-            this.transportProtocol = transportProtocol;
+            $.transportProtocol = transportProtocol;
             return this;
-        }        public PortResponse build() {
-            return new PortResponse(backendPort, transportProtocol);
+        }
+
+        public PortResponse build() {
+            return $;
         }
     }
+
 }

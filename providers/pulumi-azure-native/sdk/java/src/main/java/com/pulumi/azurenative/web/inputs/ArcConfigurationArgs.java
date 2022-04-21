@@ -7,9 +7,9 @@ import com.pulumi.azurenative.web.enums.StorageType;
 import com.pulumi.azurenative.web.inputs.FrontEndConfigurationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -18,170 +18,150 @@ public final class ArcConfigurationArgs extends com.pulumi.resources.ResourceArg
     public static final ArcConfigurationArgs Empty = new ArcConfigurationArgs();
 
     @Import(name="artifactStorageAccessMode")
-      private final @Nullable Output<String> artifactStorageAccessMode;
+    private @Nullable Output<String> artifactStorageAccessMode;
 
-    public Output<String> artifactStorageAccessMode() {
-        return this.artifactStorageAccessMode == null ? Codegen.empty() : this.artifactStorageAccessMode;
+    public Optional<Output<String>> artifactStorageAccessMode() {
+        return Optional.ofNullable(this.artifactStorageAccessMode);
     }
 
     @Import(name="artifactStorageClassName")
-      private final @Nullable Output<String> artifactStorageClassName;
+    private @Nullable Output<String> artifactStorageClassName;
 
-    public Output<String> artifactStorageClassName() {
-        return this.artifactStorageClassName == null ? Codegen.empty() : this.artifactStorageClassName;
+    public Optional<Output<String>> artifactStorageClassName() {
+        return Optional.ofNullable(this.artifactStorageClassName);
     }
 
     @Import(name="artifactStorageMountPath")
-      private final @Nullable Output<String> artifactStorageMountPath;
+    private @Nullable Output<String> artifactStorageMountPath;
 
-    public Output<String> artifactStorageMountPath() {
-        return this.artifactStorageMountPath == null ? Codegen.empty() : this.artifactStorageMountPath;
+    public Optional<Output<String>> artifactStorageMountPath() {
+        return Optional.ofNullable(this.artifactStorageMountPath);
     }
 
     @Import(name="artifactStorageNodeName")
-      private final @Nullable Output<String> artifactStorageNodeName;
+    private @Nullable Output<String> artifactStorageNodeName;
 
-    public Output<String> artifactStorageNodeName() {
-        return this.artifactStorageNodeName == null ? Codegen.empty() : this.artifactStorageNodeName;
+    public Optional<Output<String>> artifactStorageNodeName() {
+        return Optional.ofNullable(this.artifactStorageNodeName);
     }
 
     @Import(name="artifactsStorageType")
-      private final @Nullable Output<StorageType> artifactsStorageType;
+    private @Nullable Output<StorageType> artifactsStorageType;
 
-    public Output<StorageType> artifactsStorageType() {
-        return this.artifactsStorageType == null ? Codegen.empty() : this.artifactsStorageType;
+    public Optional<Output<StorageType>> artifactsStorageType() {
+        return Optional.ofNullable(this.artifactsStorageType);
     }
 
     @Import(name="frontEndServiceConfiguration")
-      private final @Nullable Output<FrontEndConfigurationArgs> frontEndServiceConfiguration;
+    private @Nullable Output<FrontEndConfigurationArgs> frontEndServiceConfiguration;
 
-    public Output<FrontEndConfigurationArgs> frontEndServiceConfiguration() {
-        return this.frontEndServiceConfiguration == null ? Codegen.empty() : this.frontEndServiceConfiguration;
+    public Optional<Output<FrontEndConfigurationArgs>> frontEndServiceConfiguration() {
+        return Optional.ofNullable(this.frontEndServiceConfiguration);
     }
 
     @Import(name="kubeConfig")
-      private final @Nullable Output<String> kubeConfig;
+    private @Nullable Output<String> kubeConfig;
 
-    public Output<String> kubeConfig() {
-        return this.kubeConfig == null ? Codegen.empty() : this.kubeConfig;
+    public Optional<Output<String>> kubeConfig() {
+        return Optional.ofNullable(this.kubeConfig);
     }
 
-    public ArcConfigurationArgs(
-        @Nullable Output<String> artifactStorageAccessMode,
-        @Nullable Output<String> artifactStorageClassName,
-        @Nullable Output<String> artifactStorageMountPath,
-        @Nullable Output<String> artifactStorageNodeName,
-        @Nullable Output<StorageType> artifactsStorageType,
-        @Nullable Output<FrontEndConfigurationArgs> frontEndServiceConfiguration,
-        @Nullable Output<String> kubeConfig) {
-        this.artifactStorageAccessMode = artifactStorageAccessMode;
-        this.artifactStorageClassName = artifactStorageClassName;
-        this.artifactStorageMountPath = artifactStorageMountPath;
-        this.artifactStorageNodeName = artifactStorageNodeName;
-        this.artifactsStorageType = artifactsStorageType;
-        this.frontEndServiceConfiguration = frontEndServiceConfiguration;
-        this.kubeConfig = kubeConfig;
-    }
+    private ArcConfigurationArgs() {}
 
-    private ArcConfigurationArgs() {
-        this.artifactStorageAccessMode = Codegen.empty();
-        this.artifactStorageClassName = Codegen.empty();
-        this.artifactStorageMountPath = Codegen.empty();
-        this.artifactStorageNodeName = Codegen.empty();
-        this.artifactsStorageType = Codegen.empty();
-        this.frontEndServiceConfiguration = Codegen.empty();
-        this.kubeConfig = Codegen.empty();
+    private ArcConfigurationArgs(ArcConfigurationArgs $) {
+        this.artifactStorageAccessMode = $.artifactStorageAccessMode;
+        this.artifactStorageClassName = $.artifactStorageClassName;
+        this.artifactStorageMountPath = $.artifactStorageMountPath;
+        this.artifactStorageNodeName = $.artifactStorageNodeName;
+        this.artifactsStorageType = $.artifactsStorageType;
+        this.frontEndServiceConfiguration = $.frontEndServiceConfiguration;
+        this.kubeConfig = $.kubeConfig;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ArcConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> artifactStorageAccessMode;
-        private @Nullable Output<String> artifactStorageClassName;
-        private @Nullable Output<String> artifactStorageMountPath;
-        private @Nullable Output<String> artifactStorageNodeName;
-        private @Nullable Output<StorageType> artifactsStorageType;
-        private @Nullable Output<FrontEndConfigurationArgs> frontEndServiceConfiguration;
-        private @Nullable Output<String> kubeConfig;
+        private ArcConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ArcConfigurationArgs();
         }
 
         public Builder(ArcConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.artifactStorageAccessMode = defaults.artifactStorageAccessMode;
-    	      this.artifactStorageClassName = defaults.artifactStorageClassName;
-    	      this.artifactStorageMountPath = defaults.artifactStorageMountPath;
-    	      this.artifactStorageNodeName = defaults.artifactStorageNodeName;
-    	      this.artifactsStorageType = defaults.artifactsStorageType;
-    	      this.frontEndServiceConfiguration = defaults.frontEndServiceConfiguration;
-    	      this.kubeConfig = defaults.kubeConfig;
+            $ = new ArcConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder artifactStorageAccessMode(@Nullable Output<String> artifactStorageAccessMode) {
-            this.artifactStorageAccessMode = artifactStorageAccessMode;
+            $.artifactStorageAccessMode = artifactStorageAccessMode;
             return this;
         }
-        public Builder artifactStorageAccessMode(@Nullable String artifactStorageAccessMode) {
-            this.artifactStorageAccessMode = Codegen.ofNullable(artifactStorageAccessMode);
-            return this;
+
+        public Builder artifactStorageAccessMode(String artifactStorageAccessMode) {
+            return artifactStorageAccessMode(Output.of(artifactStorageAccessMode));
         }
+
         public Builder artifactStorageClassName(@Nullable Output<String> artifactStorageClassName) {
-            this.artifactStorageClassName = artifactStorageClassName;
+            $.artifactStorageClassName = artifactStorageClassName;
             return this;
         }
-        public Builder artifactStorageClassName(@Nullable String artifactStorageClassName) {
-            this.artifactStorageClassName = Codegen.ofNullable(artifactStorageClassName);
-            return this;
+
+        public Builder artifactStorageClassName(String artifactStorageClassName) {
+            return artifactStorageClassName(Output.of(artifactStorageClassName));
         }
+
         public Builder artifactStorageMountPath(@Nullable Output<String> artifactStorageMountPath) {
-            this.artifactStorageMountPath = artifactStorageMountPath;
+            $.artifactStorageMountPath = artifactStorageMountPath;
             return this;
         }
-        public Builder artifactStorageMountPath(@Nullable String artifactStorageMountPath) {
-            this.artifactStorageMountPath = Codegen.ofNullable(artifactStorageMountPath);
-            return this;
+
+        public Builder artifactStorageMountPath(String artifactStorageMountPath) {
+            return artifactStorageMountPath(Output.of(artifactStorageMountPath));
         }
+
         public Builder artifactStorageNodeName(@Nullable Output<String> artifactStorageNodeName) {
-            this.artifactStorageNodeName = artifactStorageNodeName;
+            $.artifactStorageNodeName = artifactStorageNodeName;
             return this;
         }
-        public Builder artifactStorageNodeName(@Nullable String artifactStorageNodeName) {
-            this.artifactStorageNodeName = Codegen.ofNullable(artifactStorageNodeName);
-            return this;
+
+        public Builder artifactStorageNodeName(String artifactStorageNodeName) {
+            return artifactStorageNodeName(Output.of(artifactStorageNodeName));
         }
+
         public Builder artifactsStorageType(@Nullable Output<StorageType> artifactsStorageType) {
-            this.artifactsStorageType = artifactsStorageType;
+            $.artifactsStorageType = artifactsStorageType;
             return this;
         }
-        public Builder artifactsStorageType(@Nullable StorageType artifactsStorageType) {
-            this.artifactsStorageType = Codegen.ofNullable(artifactsStorageType);
-            return this;
+
+        public Builder artifactsStorageType(StorageType artifactsStorageType) {
+            return artifactsStorageType(Output.of(artifactsStorageType));
         }
+
         public Builder frontEndServiceConfiguration(@Nullable Output<FrontEndConfigurationArgs> frontEndServiceConfiguration) {
-            this.frontEndServiceConfiguration = frontEndServiceConfiguration;
+            $.frontEndServiceConfiguration = frontEndServiceConfiguration;
             return this;
         }
-        public Builder frontEndServiceConfiguration(@Nullable FrontEndConfigurationArgs frontEndServiceConfiguration) {
-            this.frontEndServiceConfiguration = Codegen.ofNullable(frontEndServiceConfiguration);
-            return this;
+
+        public Builder frontEndServiceConfiguration(FrontEndConfigurationArgs frontEndServiceConfiguration) {
+            return frontEndServiceConfiguration(Output.of(frontEndServiceConfiguration));
         }
+
         public Builder kubeConfig(@Nullable Output<String> kubeConfig) {
-            this.kubeConfig = kubeConfig;
+            $.kubeConfig = kubeConfig;
             return this;
         }
-        public Builder kubeConfig(@Nullable String kubeConfig) {
-            this.kubeConfig = Codegen.ofNullable(kubeConfig);
-            return this;
-        }        public ArcConfigurationArgs build() {
-            return new ArcConfigurationArgs(artifactStorageAccessMode, artifactStorageClassName, artifactStorageMountPath, artifactStorageNodeName, artifactsStorageType, frontEndServiceConfiguration, kubeConfig);
+
+        public Builder kubeConfig(String kubeConfig) {
+            return kubeConfig(Output.of(kubeConfig));
+        }
+
+        public ArcConfigurationArgs build() {
+            return $;
         }
     }
+
 }

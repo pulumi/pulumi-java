@@ -25,10 +25,10 @@ public final class ContainerServiceNetworkProfileResponse extends com.pulumi.res
      * 
      */
     @Import(name="dnsServiceIP")
-      private final @Nullable String dnsServiceIP;
+    private @Nullable String dnsServiceIP;
 
     public Optional<String> dnsServiceIP() {
-        return this.dnsServiceIP == null ? Optional.empty() : Optional.ofNullable(this.dnsServiceIP);
+        return Optional.ofNullable(this.dnsServiceIP);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class ContainerServiceNetworkProfileResponse extends com.pulumi.res
      * 
      */
     @Import(name="dockerBridgeCidr")
-      private final @Nullable String dockerBridgeCidr;
+    private @Nullable String dockerBridgeCidr;
 
     public Optional<String> dockerBridgeCidr() {
-        return this.dockerBridgeCidr == null ? Optional.empty() : Optional.ofNullable(this.dockerBridgeCidr);
+        return Optional.ofNullable(this.dockerBridgeCidr);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class ContainerServiceNetworkProfileResponse extends com.pulumi.res
      * 
      */
     @Import(name="loadBalancerProfile")
-      private final @Nullable ManagedClusterLoadBalancerProfileResponse loadBalancerProfile;
+    private @Nullable ManagedClusterLoadBalancerProfileResponse loadBalancerProfile;
 
     public Optional<ManagedClusterLoadBalancerProfileResponse> loadBalancerProfile() {
-        return this.loadBalancerProfile == null ? Optional.empty() : Optional.ofNullable(this.loadBalancerProfile);
+        return Optional.ofNullable(this.loadBalancerProfile);
     }
 
     /**
@@ -58,10 +58,10 @@ public final class ContainerServiceNetworkProfileResponse extends com.pulumi.res
      * 
      */
     @Import(name="loadBalancerSku")
-      private final @Nullable String loadBalancerSku;
+    private @Nullable String loadBalancerSku;
 
     public Optional<String> loadBalancerSku() {
-        return this.loadBalancerSku == null ? Optional.empty() : Optional.ofNullable(this.loadBalancerSku);
+        return Optional.ofNullable(this.loadBalancerSku);
     }
 
     /**
@@ -69,10 +69,10 @@ public final class ContainerServiceNetworkProfileResponse extends com.pulumi.res
      * 
      */
     @Import(name="networkMode")
-      private final @Nullable String networkMode;
+    private @Nullable String networkMode;
 
     public Optional<String> networkMode() {
-        return this.networkMode == null ? Optional.empty() : Optional.ofNullable(this.networkMode);
+        return Optional.ofNullable(this.networkMode);
     }
 
     /**
@@ -80,10 +80,10 @@ public final class ContainerServiceNetworkProfileResponse extends com.pulumi.res
      * 
      */
     @Import(name="networkPlugin")
-      private final @Nullable String networkPlugin;
+    private @Nullable String networkPlugin;
 
     public Optional<String> networkPlugin() {
-        return this.networkPlugin == null ? Optional.empty() : Optional.ofNullable(this.networkPlugin);
+        return Optional.ofNullable(this.networkPlugin);
     }
 
     /**
@@ -91,10 +91,10 @@ public final class ContainerServiceNetworkProfileResponse extends com.pulumi.res
      * 
      */
     @Import(name="networkPolicy")
-      private final @Nullable String networkPolicy;
+    private @Nullable String networkPolicy;
 
     public Optional<String> networkPolicy() {
-        return this.networkPolicy == null ? Optional.empty() : Optional.ofNullable(this.networkPolicy);
+        return Optional.ofNullable(this.networkPolicy);
     }
 
     /**
@@ -102,10 +102,10 @@ public final class ContainerServiceNetworkProfileResponse extends com.pulumi.res
      * 
      */
     @Import(name="outboundType")
-      private final @Nullable String outboundType;
+    private @Nullable String outboundType;
 
     public Optional<String> outboundType() {
-        return this.outboundType == null ? Optional.empty() : Optional.ofNullable(this.outboundType);
+        return Optional.ofNullable(this.outboundType);
     }
 
     /**
@@ -113,10 +113,10 @@ public final class ContainerServiceNetworkProfileResponse extends com.pulumi.res
      * 
      */
     @Import(name="podCidr")
-      private final @Nullable String podCidr;
+    private @Nullable String podCidr;
 
     public Optional<String> podCidr() {
-        return this.podCidr == null ? Optional.empty() : Optional.ofNullable(this.podCidr);
+        return Optional.ofNullable(this.podCidr);
     }
 
     /**
@@ -124,127 +124,104 @@ public final class ContainerServiceNetworkProfileResponse extends com.pulumi.res
      * 
      */
     @Import(name="serviceCidr")
-      private final @Nullable String serviceCidr;
+    private @Nullable String serviceCidr;
 
     public Optional<String> serviceCidr() {
-        return this.serviceCidr == null ? Optional.empty() : Optional.ofNullable(this.serviceCidr);
+        return Optional.ofNullable(this.serviceCidr);
     }
 
-    public ContainerServiceNetworkProfileResponse(
-        @Nullable String dnsServiceIP,
-        @Nullable String dockerBridgeCidr,
-        @Nullable ManagedClusterLoadBalancerProfileResponse loadBalancerProfile,
-        @Nullable String loadBalancerSku,
-        @Nullable String networkMode,
-        @Nullable String networkPlugin,
-        @Nullable String networkPolicy,
-        @Nullable String outboundType,
-        @Nullable String podCidr,
-        @Nullable String serviceCidr) {
-        this.dnsServiceIP = Codegen.stringProp("dnsServiceIP").arg(dnsServiceIP).def("10.0.0.10").getNullable();
-        this.dockerBridgeCidr = Codegen.stringProp("dockerBridgeCidr").arg(dockerBridgeCidr).def("172.17.0.1/16").getNullable();
-        this.loadBalancerProfile = loadBalancerProfile;
-        this.loadBalancerSku = loadBalancerSku;
-        this.networkMode = networkMode;
-        this.networkPlugin = Codegen.stringProp("networkPlugin").arg(networkPlugin).def("kubenet").getNullable();
-        this.networkPolicy = networkPolicy;
-        this.outboundType = Codegen.stringProp("outboundType").arg(outboundType).def("loadBalancer").getNullable();
-        this.podCidr = Codegen.stringProp("podCidr").arg(podCidr).def("10.244.0.0/16").getNullable();
-        this.serviceCidr = Codegen.stringProp("serviceCidr").arg(serviceCidr).def("10.0.0.0/16").getNullable();
-    }
+    private ContainerServiceNetworkProfileResponse() {}
 
-    private ContainerServiceNetworkProfileResponse() {
-        this.dnsServiceIP = null;
-        this.dockerBridgeCidr = null;
-        this.loadBalancerProfile = null;
-        this.loadBalancerSku = null;
-        this.networkMode = null;
-        this.networkPlugin = null;
-        this.networkPolicy = null;
-        this.outboundType = null;
-        this.podCidr = null;
-        this.serviceCidr = null;
+    private ContainerServiceNetworkProfileResponse(ContainerServiceNetworkProfileResponse $) {
+        this.dnsServiceIP = $.dnsServiceIP;
+        this.dockerBridgeCidr = $.dockerBridgeCidr;
+        this.loadBalancerProfile = $.loadBalancerProfile;
+        this.loadBalancerSku = $.loadBalancerSku;
+        this.networkMode = $.networkMode;
+        this.networkPlugin = $.networkPlugin;
+        this.networkPolicy = $.networkPolicy;
+        this.outboundType = $.outboundType;
+        this.podCidr = $.podCidr;
+        this.serviceCidr = $.serviceCidr;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ContainerServiceNetworkProfileResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String dnsServiceIP;
-        private @Nullable String dockerBridgeCidr;
-        private @Nullable ManagedClusterLoadBalancerProfileResponse loadBalancerProfile;
-        private @Nullable String loadBalancerSku;
-        private @Nullable String networkMode;
-        private @Nullable String networkPlugin;
-        private @Nullable String networkPolicy;
-        private @Nullable String outboundType;
-        private @Nullable String podCidr;
-        private @Nullable String serviceCidr;
+        private ContainerServiceNetworkProfileResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ContainerServiceNetworkProfileResponse();
         }
 
         public Builder(ContainerServiceNetworkProfileResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dnsServiceIP = defaults.dnsServiceIP;
-    	      this.dockerBridgeCidr = defaults.dockerBridgeCidr;
-    	      this.loadBalancerProfile = defaults.loadBalancerProfile;
-    	      this.loadBalancerSku = defaults.loadBalancerSku;
-    	      this.networkMode = defaults.networkMode;
-    	      this.networkPlugin = defaults.networkPlugin;
-    	      this.networkPolicy = defaults.networkPolicy;
-    	      this.outboundType = defaults.outboundType;
-    	      this.podCidr = defaults.podCidr;
-    	      this.serviceCidr = defaults.serviceCidr;
+            $ = new ContainerServiceNetworkProfileResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder dnsServiceIP(@Nullable String dnsServiceIP) {
-            this.dnsServiceIP = dnsServiceIP;
+            $.dnsServiceIP = dnsServiceIP;
             return this;
         }
+
         public Builder dockerBridgeCidr(@Nullable String dockerBridgeCidr) {
-            this.dockerBridgeCidr = dockerBridgeCidr;
+            $.dockerBridgeCidr = dockerBridgeCidr;
             return this;
         }
+
         public Builder loadBalancerProfile(@Nullable ManagedClusterLoadBalancerProfileResponse loadBalancerProfile) {
-            this.loadBalancerProfile = loadBalancerProfile;
+            $.loadBalancerProfile = loadBalancerProfile;
             return this;
         }
+
         public Builder loadBalancerSku(@Nullable String loadBalancerSku) {
-            this.loadBalancerSku = loadBalancerSku;
+            $.loadBalancerSku = loadBalancerSku;
             return this;
         }
+
         public Builder networkMode(@Nullable String networkMode) {
-            this.networkMode = networkMode;
+            $.networkMode = networkMode;
             return this;
         }
+
         public Builder networkPlugin(@Nullable String networkPlugin) {
-            this.networkPlugin = networkPlugin;
+            $.networkPlugin = networkPlugin;
             return this;
         }
+
         public Builder networkPolicy(@Nullable String networkPolicy) {
-            this.networkPolicy = networkPolicy;
+            $.networkPolicy = networkPolicy;
             return this;
         }
+
         public Builder outboundType(@Nullable String outboundType) {
-            this.outboundType = outboundType;
+            $.outboundType = outboundType;
             return this;
         }
+
         public Builder podCidr(@Nullable String podCidr) {
-            this.podCidr = podCidr;
+            $.podCidr = podCidr;
             return this;
         }
+
         public Builder serviceCidr(@Nullable String serviceCidr) {
-            this.serviceCidr = serviceCidr;
+            $.serviceCidr = serviceCidr;
             return this;
-        }        public ContainerServiceNetworkProfileResponse build() {
-            return new ContainerServiceNetworkProfileResponse(dnsServiceIP, dockerBridgeCidr, loadBalancerProfile, loadBalancerSku, networkMode, networkPlugin, networkPolicy, outboundType, podCidr, serviceCidr);
+        }
+
+        public ContainerServiceNetworkProfileResponse build() {
+            $.dnsServiceIP = Codegen.stringProp("dnsServiceIP").arg($.dnsServiceIP).def("10.0.0.10").getNullable();
+            $.dockerBridgeCidr = Codegen.stringProp("dockerBridgeCidr").arg($.dockerBridgeCidr).def("172.17.0.1/16").getNullable();
+            $.networkPlugin = Codegen.stringProp("networkPlugin").arg($.networkPlugin).def("kubenet").getNullable();
+            $.outboundType = Codegen.stringProp("outboundType").arg($.outboundType).def("loadBalancer").getNullable();
+            $.podCidr = Codegen.stringProp("podCidr").arg($.podCidr).def("10.244.0.0/16").getNullable();
+            $.serviceCidr = Codegen.stringProp("serviceCidr").arg($.serviceCidr).def("10.0.0.0/16").getNullable();
+            return $;
         }
     }
+
 }

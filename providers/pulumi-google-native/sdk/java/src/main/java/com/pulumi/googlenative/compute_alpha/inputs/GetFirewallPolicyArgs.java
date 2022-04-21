@@ -13,45 +13,45 @@ public final class GetFirewallPolicyArgs extends com.pulumi.resources.InvokeArgs
     public static final GetFirewallPolicyArgs Empty = new GetFirewallPolicyArgs();
 
     @Import(name="firewallPolicy", required=true)
-      private final String firewallPolicy;
+    private String firewallPolicy;
 
     public String firewallPolicy() {
         return this.firewallPolicy;
     }
 
-    public GetFirewallPolicyArgs(String firewallPolicy) {
-        this.firewallPolicy = Objects.requireNonNull(firewallPolicy, "expected parameter 'firewallPolicy' to be non-null");
-    }
+    private GetFirewallPolicyArgs() {}
 
-    private GetFirewallPolicyArgs() {
-        this.firewallPolicy = null;
+    private GetFirewallPolicyArgs(GetFirewallPolicyArgs $) {
+        this.firewallPolicy = $.firewallPolicy;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetFirewallPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String firewallPolicy;
+        private GetFirewallPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetFirewallPolicyArgs();
         }
 
         public Builder(GetFirewallPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.firewallPolicy = defaults.firewallPolicy;
+            $ = new GetFirewallPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder firewallPolicy(String firewallPolicy) {
-            this.firewallPolicy = Objects.requireNonNull(firewallPolicy);
+            $.firewallPolicy = firewallPolicy;
             return this;
-        }        public GetFirewallPolicyArgs build() {
-            return new GetFirewallPolicyArgs(firewallPolicy);
+        }
+
+        public GetFirewallPolicyArgs build() {
+            $.firewallPolicy = Objects.requireNonNull($.firewallPolicy, "expected parameter 'firewallPolicy' to be non-null");
+            return $;
         }
     }
+
 }

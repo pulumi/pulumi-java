@@ -22,7 +22,7 @@ public final class RuntimeConfigResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="containerImage", required=true)
-      private final String containerImage;
+    private String containerImage;
 
     public String containerImage() {
         return this.containerImage;
@@ -33,7 +33,7 @@ public final class RuntimeConfigResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="properties", required=true)
-      private final Map<String,String> properties;
+    private Map<String,String> properties;
 
     public Map<String,String> properties() {
         return this.properties;
@@ -44,64 +44,59 @@ public final class RuntimeConfigResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="version", required=true)
-      private final String version;
+    private String version;
 
     public String version() {
         return this.version;
     }
 
-    public RuntimeConfigResponse(
-        String containerImage,
-        Map<String,String> properties,
-        String version) {
-        this.containerImage = Objects.requireNonNull(containerImage, "expected parameter 'containerImage' to be non-null");
-        this.properties = Objects.requireNonNull(properties, "expected parameter 'properties' to be non-null");
-        this.version = Objects.requireNonNull(version, "expected parameter 'version' to be non-null");
-    }
+    private RuntimeConfigResponse() {}
 
-    private RuntimeConfigResponse() {
-        this.containerImage = null;
-        this.properties = Map.of();
-        this.version = null;
+    private RuntimeConfigResponse(RuntimeConfigResponse $) {
+        this.containerImage = $.containerImage;
+        this.properties = $.properties;
+        this.version = $.version;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RuntimeConfigResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String containerImage;
-        private Map<String,String> properties;
-        private String version;
+        private RuntimeConfigResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new RuntimeConfigResponse();
         }
 
         public Builder(RuntimeConfigResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.containerImage = defaults.containerImage;
-    	      this.properties = defaults.properties;
-    	      this.version = defaults.version;
+            $ = new RuntimeConfigResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder containerImage(String containerImage) {
-            this.containerImage = Objects.requireNonNull(containerImage);
+            $.containerImage = containerImage;
             return this;
         }
+
         public Builder properties(Map<String,String> properties) {
-            this.properties = Objects.requireNonNull(properties);
+            $.properties = properties;
             return this;
         }
+
         public Builder version(String version) {
-            this.version = Objects.requireNonNull(version);
+            $.version = version;
             return this;
-        }        public RuntimeConfigResponse build() {
-            return new RuntimeConfigResponse(containerImage, properties, version);
+        }
+
+        public RuntimeConfigResponse build() {
+            $.containerImage = Objects.requireNonNull($.containerImage, "expected parameter 'containerImage' to be non-null");
+            $.properties = Objects.requireNonNull($.properties, "expected parameter 'properties' to be non-null");
+            $.version = Objects.requireNonNull($.version, "expected parameter 'version' to be non-null");
+            return $;
         }
     }
+
 }

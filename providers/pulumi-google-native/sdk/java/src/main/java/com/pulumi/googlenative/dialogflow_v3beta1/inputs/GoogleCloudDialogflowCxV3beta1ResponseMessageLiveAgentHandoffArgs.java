@@ -5,10 +5,10 @@ package com.pulumi.googlenative.dialogflow_v3beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,49 +25,48 @@ public final class GoogleCloudDialogflowCxV3beta1ResponseMessageLiveAgentHandoff
      * 
      */
     @Import(name="metadata")
-      private final @Nullable Output<Map<String,String>> metadata;
+    private @Nullable Output<Map<String,String>> metadata;
 
-    public Output<Map<String,String>> metadata() {
-        return this.metadata == null ? Codegen.empty() : this.metadata;
+    public Optional<Output<Map<String,String>>> metadata() {
+        return Optional.ofNullable(this.metadata);
     }
 
-    public GoogleCloudDialogflowCxV3beta1ResponseMessageLiveAgentHandoffArgs(@Nullable Output<Map<String,String>> metadata) {
-        this.metadata = metadata;
-    }
+    private GoogleCloudDialogflowCxV3beta1ResponseMessageLiveAgentHandoffArgs() {}
 
-    private GoogleCloudDialogflowCxV3beta1ResponseMessageLiveAgentHandoffArgs() {
-        this.metadata = Codegen.empty();
+    private GoogleCloudDialogflowCxV3beta1ResponseMessageLiveAgentHandoffArgs(GoogleCloudDialogflowCxV3beta1ResponseMessageLiveAgentHandoffArgs $) {
+        this.metadata = $.metadata;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudDialogflowCxV3beta1ResponseMessageLiveAgentHandoffArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Map<String,String>> metadata;
+        private GoogleCloudDialogflowCxV3beta1ResponseMessageLiveAgentHandoffArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudDialogflowCxV3beta1ResponseMessageLiveAgentHandoffArgs();
         }
 
         public Builder(GoogleCloudDialogflowCxV3beta1ResponseMessageLiveAgentHandoffArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.metadata = defaults.metadata;
+            $ = new GoogleCloudDialogflowCxV3beta1ResponseMessageLiveAgentHandoffArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder metadata(@Nullable Output<Map<String,String>> metadata) {
-            this.metadata = metadata;
+            $.metadata = metadata;
             return this;
         }
-        public Builder metadata(@Nullable Map<String,String> metadata) {
-            this.metadata = Codegen.ofNullable(metadata);
-            return this;
-        }        public GoogleCloudDialogflowCxV3beta1ResponseMessageLiveAgentHandoffArgs build() {
-            return new GoogleCloudDialogflowCxV3beta1ResponseMessageLiveAgentHandoffArgs(metadata);
+
+        public Builder metadata(Map<String,String> metadata) {
+            return metadata(Output.of(metadata));
+        }
+
+        public GoogleCloudDialogflowCxV3beta1ResponseMessageLiveAgentHandoffArgs build() {
+            return $;
         }
     }
+
 }

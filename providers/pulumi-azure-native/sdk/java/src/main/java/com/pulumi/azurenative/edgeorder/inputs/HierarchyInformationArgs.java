@@ -5,9 +5,9 @@ package com.pulumi.azurenative.edgeorder.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class HierarchyInformationArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="configurationName")
-      private final @Nullable Output<String> configurationName;
+    private @Nullable Output<String> configurationName;
 
-    public Output<String> configurationName() {
-        return this.configurationName == null ? Codegen.empty() : this.configurationName;
+    public Optional<Output<String>> configurationName() {
+        return Optional.ofNullable(this.configurationName);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class HierarchyInformationArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="productFamilyName")
-      private final @Nullable Output<String> productFamilyName;
+    private @Nullable Output<String> productFamilyName;
 
-    public Output<String> productFamilyName() {
-        return this.productFamilyName == null ? Codegen.empty() : this.productFamilyName;
+    public Optional<Output<String>> productFamilyName() {
+        return Optional.ofNullable(this.productFamilyName);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class HierarchyInformationArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="productLineName")
-      private final @Nullable Output<String> productLineName;
+    private @Nullable Output<String> productLineName;
 
-    public Output<String> productLineName() {
-        return this.productLineName == null ? Codegen.empty() : this.productLineName;
+    public Optional<Output<String>> productLineName() {
+        return Optional.ofNullable(this.productLineName);
     }
 
     /**
@@ -57,89 +57,78 @@ public final class HierarchyInformationArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="productName")
-      private final @Nullable Output<String> productName;
+    private @Nullable Output<String> productName;
 
-    public Output<String> productName() {
-        return this.productName == null ? Codegen.empty() : this.productName;
+    public Optional<Output<String>> productName() {
+        return Optional.ofNullable(this.productName);
     }
 
-    public HierarchyInformationArgs(
-        @Nullable Output<String> configurationName,
-        @Nullable Output<String> productFamilyName,
-        @Nullable Output<String> productLineName,
-        @Nullable Output<String> productName) {
-        this.configurationName = configurationName;
-        this.productFamilyName = productFamilyName;
-        this.productLineName = productLineName;
-        this.productName = productName;
-    }
+    private HierarchyInformationArgs() {}
 
-    private HierarchyInformationArgs() {
-        this.configurationName = Codegen.empty();
-        this.productFamilyName = Codegen.empty();
-        this.productLineName = Codegen.empty();
-        this.productName = Codegen.empty();
+    private HierarchyInformationArgs(HierarchyInformationArgs $) {
+        this.configurationName = $.configurationName;
+        this.productFamilyName = $.productFamilyName;
+        this.productLineName = $.productLineName;
+        this.productName = $.productName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(HierarchyInformationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> configurationName;
-        private @Nullable Output<String> productFamilyName;
-        private @Nullable Output<String> productLineName;
-        private @Nullable Output<String> productName;
+        private HierarchyInformationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new HierarchyInformationArgs();
         }
 
         public Builder(HierarchyInformationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.configurationName = defaults.configurationName;
-    	      this.productFamilyName = defaults.productFamilyName;
-    	      this.productLineName = defaults.productLineName;
-    	      this.productName = defaults.productName;
+            $ = new HierarchyInformationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder configurationName(@Nullable Output<String> configurationName) {
-            this.configurationName = configurationName;
+            $.configurationName = configurationName;
             return this;
         }
-        public Builder configurationName(@Nullable String configurationName) {
-            this.configurationName = Codegen.ofNullable(configurationName);
-            return this;
+
+        public Builder configurationName(String configurationName) {
+            return configurationName(Output.of(configurationName));
         }
+
         public Builder productFamilyName(@Nullable Output<String> productFamilyName) {
-            this.productFamilyName = productFamilyName;
+            $.productFamilyName = productFamilyName;
             return this;
         }
-        public Builder productFamilyName(@Nullable String productFamilyName) {
-            this.productFamilyName = Codegen.ofNullable(productFamilyName);
-            return this;
+
+        public Builder productFamilyName(String productFamilyName) {
+            return productFamilyName(Output.of(productFamilyName));
         }
+
         public Builder productLineName(@Nullable Output<String> productLineName) {
-            this.productLineName = productLineName;
+            $.productLineName = productLineName;
             return this;
         }
-        public Builder productLineName(@Nullable String productLineName) {
-            this.productLineName = Codegen.ofNullable(productLineName);
-            return this;
+
+        public Builder productLineName(String productLineName) {
+            return productLineName(Output.of(productLineName));
         }
+
         public Builder productName(@Nullable Output<String> productName) {
-            this.productName = productName;
+            $.productName = productName;
             return this;
         }
-        public Builder productName(@Nullable String productName) {
-            this.productName = Codegen.ofNullable(productName);
-            return this;
-        }        public HierarchyInformationArgs build() {
-            return new HierarchyInformationArgs(configurationName, productFamilyName, productLineName, productName);
+
+        public Builder productName(String productName) {
+            return productName(Output.of(productName));
+        }
+
+        public HierarchyInformationArgs build() {
+            return $;
         }
     }
+
 }

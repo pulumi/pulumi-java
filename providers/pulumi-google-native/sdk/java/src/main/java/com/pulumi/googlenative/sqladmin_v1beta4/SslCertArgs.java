@@ -5,9 +5,9 @@ package com.pulumi.googlenative.sqladmin_v1beta4;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,90 +20,83 @@ public final class SslCertArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="commonName")
-      private final @Nullable Output<String> commonName;
+    private @Nullable Output<String> commonName;
 
-    public Output<String> commonName() {
-        return this.commonName == null ? Codegen.empty() : this.commonName;
+    public Optional<Output<String>> commonName() {
+        return Optional.ofNullable(this.commonName);
     }
 
     @Import(name="instance", required=true)
-      private final Output<String> instance;
+    private Output<String> instance;
 
     public Output<String> instance() {
         return this.instance;
     }
 
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
-    public SslCertArgs(
-        @Nullable Output<String> commonName,
-        Output<String> instance,
-        @Nullable Output<String> project) {
-        this.commonName = commonName;
-        this.instance = Objects.requireNonNull(instance, "expected parameter 'instance' to be non-null");
-        this.project = project;
-    }
+    private SslCertArgs() {}
 
-    private SslCertArgs() {
-        this.commonName = Codegen.empty();
-        this.instance = Codegen.empty();
-        this.project = Codegen.empty();
+    private SslCertArgs(SslCertArgs $) {
+        this.commonName = $.commonName;
+        this.instance = $.instance;
+        this.project = $.project;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SslCertArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> commonName;
-        private Output<String> instance;
-        private @Nullable Output<String> project;
+        private SslCertArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SslCertArgs();
         }
 
         public Builder(SslCertArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.commonName = defaults.commonName;
-    	      this.instance = defaults.instance;
-    	      this.project = defaults.project;
+            $ = new SslCertArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder commonName(@Nullable Output<String> commonName) {
-            this.commonName = commonName;
+            $.commonName = commonName;
             return this;
         }
-        public Builder commonName(@Nullable String commonName) {
-            this.commonName = Codegen.ofNullable(commonName);
-            return this;
+
+        public Builder commonName(String commonName) {
+            return commonName(Output.of(commonName));
         }
+
         public Builder instance(Output<String> instance) {
-            this.instance = Objects.requireNonNull(instance);
+            $.instance = instance;
             return this;
         }
+
         public Builder instance(String instance) {
-            this.instance = Output.of(Objects.requireNonNull(instance));
-            return this;
+            return instance(Output.of(instance));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
-        }        public SslCertArgs build() {
-            return new SslCertArgs(commonName, instance, project);
+
+        public Builder project(String project) {
+            return project(Output.of(project));
+        }
+
+        public SslCertArgs build() {
+            $.instance = Objects.requireNonNull($.instance, "expected parameter 'instance' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,9 +5,9 @@ package com.pulumi.googlenative.appengine_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class ScriptHandlerArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="scriptPath")
-      private final @Nullable Output<String> scriptPath;
+    private @Nullable Output<String> scriptPath;
 
-    public Output<String> scriptPath() {
-        return this.scriptPath == null ? Codegen.empty() : this.scriptPath;
+    public Optional<Output<String>> scriptPath() {
+        return Optional.ofNullable(this.scriptPath);
     }
 
-    public ScriptHandlerArgs(@Nullable Output<String> scriptPath) {
-        this.scriptPath = scriptPath;
-    }
+    private ScriptHandlerArgs() {}
 
-    private ScriptHandlerArgs() {
-        this.scriptPath = Codegen.empty();
+    private ScriptHandlerArgs(ScriptHandlerArgs $) {
+        this.scriptPath = $.scriptPath;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ScriptHandlerArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> scriptPath;
+        private ScriptHandlerArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ScriptHandlerArgs();
         }
 
         public Builder(ScriptHandlerArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.scriptPath = defaults.scriptPath;
+            $ = new ScriptHandlerArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder scriptPath(@Nullable Output<String> scriptPath) {
-            this.scriptPath = scriptPath;
+            $.scriptPath = scriptPath;
             return this;
         }
-        public Builder scriptPath(@Nullable String scriptPath) {
-            this.scriptPath = Codegen.ofNullable(scriptPath);
-            return this;
-        }        public ScriptHandlerArgs build() {
-            return new ScriptHandlerArgs(scriptPath);
+
+        public Builder scriptPath(String scriptPath) {
+            return scriptPath(Output.of(scriptPath));
+        }
+
+        public ScriptHandlerArgs build() {
+            return $;
         }
     }
+
 }

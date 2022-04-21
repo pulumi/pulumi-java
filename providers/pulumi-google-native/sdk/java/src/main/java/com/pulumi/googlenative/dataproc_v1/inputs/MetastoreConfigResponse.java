@@ -21,45 +21,45 @@ public final class MetastoreConfigResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="dataprocMetastoreService", required=true)
-      private final String dataprocMetastoreService;
+    private String dataprocMetastoreService;
 
     public String dataprocMetastoreService() {
         return this.dataprocMetastoreService;
     }
 
-    public MetastoreConfigResponse(String dataprocMetastoreService) {
-        this.dataprocMetastoreService = Objects.requireNonNull(dataprocMetastoreService, "expected parameter 'dataprocMetastoreService' to be non-null");
-    }
+    private MetastoreConfigResponse() {}
 
-    private MetastoreConfigResponse() {
-        this.dataprocMetastoreService = null;
+    private MetastoreConfigResponse(MetastoreConfigResponse $) {
+        this.dataprocMetastoreService = $.dataprocMetastoreService;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MetastoreConfigResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String dataprocMetastoreService;
+        private MetastoreConfigResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new MetastoreConfigResponse();
         }
 
         public Builder(MetastoreConfigResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dataprocMetastoreService = defaults.dataprocMetastoreService;
+            $ = new MetastoreConfigResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder dataprocMetastoreService(String dataprocMetastoreService) {
-            this.dataprocMetastoreService = Objects.requireNonNull(dataprocMetastoreService);
+            $.dataprocMetastoreService = dataprocMetastoreService;
             return this;
-        }        public MetastoreConfigResponse build() {
-            return new MetastoreConfigResponse(dataprocMetastoreService);
+        }
+
+        public MetastoreConfigResponse build() {
+            $.dataprocMetastoreService = Objects.requireNonNull($.dataprocMetastoreService, "expected parameter 'dataprocMetastoreService' to be non-null");
+            return $;
         }
     }
+
 }

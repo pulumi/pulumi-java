@@ -5,12 +5,12 @@ package com.pulumi.googlenative.artifactregistry_v1beta2;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.artifactregistry_v1beta2.enums.RepositoryFormat;
 import com.pulumi.googlenative.artifactregistry_v1beta2.inputs.MavenRepositoryConfigArgs;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,10 @@ public final class RepositoryArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="createTime")
-      private final @Nullable Output<String> createTime;
+    private @Nullable Output<String> createTime;
 
-    public Output<String> createTime() {
-        return this.createTime == null ? Codegen.empty() : this.createTime;
+    public Optional<Output<String>> createTime() {
+        return Optional.ofNullable(this.createTime);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class RepositoryArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -45,10 +45,10 @@ public final class RepositoryArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="format")
-      private final @Nullable Output<RepositoryFormat> format;
+    private @Nullable Output<RepositoryFormat> format;
 
-    public Output<RepositoryFormat> format() {
-        return this.format == null ? Codegen.empty() : this.format;
+    public Optional<Output<RepositoryFormat>> format() {
+        return Optional.ofNullable(this.format);
     }
 
     /**
@@ -56,10 +56,10 @@ public final class RepositoryArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="kmsKeyName")
-      private final @Nullable Output<String> kmsKeyName;
+    private @Nullable Output<String> kmsKeyName;
 
-    public Output<String> kmsKeyName() {
-        return this.kmsKeyName == null ? Codegen.empty() : this.kmsKeyName;
+    public Optional<Output<String>> kmsKeyName() {
+        return Optional.ofNullable(this.kmsKeyName);
     }
 
     /**
@@ -67,17 +67,17 @@ public final class RepositoryArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="labels")
-      private final @Nullable Output<Map<String,String>> labels;
+    private @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> labels() {
-        return this.labels == null ? Codegen.empty() : this.labels;
+    public Optional<Output<Map<String,String>>> labels() {
+        return Optional.ofNullable(this.labels);
     }
 
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -85,10 +85,10 @@ public final class RepositoryArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="mavenConfig")
-      private final @Nullable Output<MavenRepositoryConfigArgs> mavenConfig;
+    private @Nullable Output<MavenRepositoryConfigArgs> mavenConfig;
 
-    public Output<MavenRepositoryConfigArgs> mavenConfig() {
-        return this.mavenConfig == null ? Codegen.empty() : this.mavenConfig;
+    public Optional<Output<MavenRepositoryConfigArgs>> mavenConfig() {
+        return Optional.ofNullable(this.mavenConfig);
     }
 
     /**
@@ -96,24 +96,24 @@ public final class RepositoryArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     @Import(name="repositoryId")
-      private final @Nullable Output<String> repositoryId;
+    private @Nullable Output<String> repositoryId;
 
-    public Output<String> repositoryId() {
-        return this.repositoryId == null ? Codegen.empty() : this.repositoryId;
+    public Optional<Output<String>> repositoryId() {
+        return Optional.ofNullable(this.repositoryId);
     }
 
     /**
@@ -121,180 +121,148 @@ public final class RepositoryArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="updateTime")
-      private final @Nullable Output<String> updateTime;
+    private @Nullable Output<String> updateTime;
 
-    public Output<String> updateTime() {
-        return this.updateTime == null ? Codegen.empty() : this.updateTime;
+    public Optional<Output<String>> updateTime() {
+        return Optional.ofNullable(this.updateTime);
     }
 
-    public RepositoryArgs(
-        @Nullable Output<String> createTime,
-        @Nullable Output<String> description,
-        @Nullable Output<RepositoryFormat> format,
-        @Nullable Output<String> kmsKeyName,
-        @Nullable Output<Map<String,String>> labels,
-        @Nullable Output<String> location,
-        @Nullable Output<MavenRepositoryConfigArgs> mavenConfig,
-        @Nullable Output<String> name,
-        @Nullable Output<String> project,
-        @Nullable Output<String> repositoryId,
-        @Nullable Output<String> updateTime) {
-        this.createTime = createTime;
-        this.description = description;
-        this.format = format;
-        this.kmsKeyName = kmsKeyName;
-        this.labels = labels;
-        this.location = location;
-        this.mavenConfig = mavenConfig;
-        this.name = name;
-        this.project = project;
-        this.repositoryId = repositoryId;
-        this.updateTime = updateTime;
-    }
+    private RepositoryArgs() {}
 
-    private RepositoryArgs() {
-        this.createTime = Codegen.empty();
-        this.description = Codegen.empty();
-        this.format = Codegen.empty();
-        this.kmsKeyName = Codegen.empty();
-        this.labels = Codegen.empty();
-        this.location = Codegen.empty();
-        this.mavenConfig = Codegen.empty();
-        this.name = Codegen.empty();
-        this.project = Codegen.empty();
-        this.repositoryId = Codegen.empty();
-        this.updateTime = Codegen.empty();
+    private RepositoryArgs(RepositoryArgs $) {
+        this.createTime = $.createTime;
+        this.description = $.description;
+        this.format = $.format;
+        this.kmsKeyName = $.kmsKeyName;
+        this.labels = $.labels;
+        this.location = $.location;
+        this.mavenConfig = $.mavenConfig;
+        this.name = $.name;
+        this.project = $.project;
+        this.repositoryId = $.repositoryId;
+        this.updateTime = $.updateTime;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RepositoryArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> createTime;
-        private @Nullable Output<String> description;
-        private @Nullable Output<RepositoryFormat> format;
-        private @Nullable Output<String> kmsKeyName;
-        private @Nullable Output<Map<String,String>> labels;
-        private @Nullable Output<String> location;
-        private @Nullable Output<MavenRepositoryConfigArgs> mavenConfig;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> project;
-        private @Nullable Output<String> repositoryId;
-        private @Nullable Output<String> updateTime;
+        private RepositoryArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RepositoryArgs();
         }
 
         public Builder(RepositoryArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.createTime = defaults.createTime;
-    	      this.description = defaults.description;
-    	      this.format = defaults.format;
-    	      this.kmsKeyName = defaults.kmsKeyName;
-    	      this.labels = defaults.labels;
-    	      this.location = defaults.location;
-    	      this.mavenConfig = defaults.mavenConfig;
-    	      this.name = defaults.name;
-    	      this.project = defaults.project;
-    	      this.repositoryId = defaults.repositoryId;
-    	      this.updateTime = defaults.updateTime;
+            $ = new RepositoryArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder createTime(@Nullable Output<String> createTime) {
-            this.createTime = createTime;
+            $.createTime = createTime;
             return this;
         }
-        public Builder createTime(@Nullable String createTime) {
-            this.createTime = Codegen.ofNullable(createTime);
-            return this;
+
+        public Builder createTime(String createTime) {
+            return createTime(Output.of(createTime));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder format(@Nullable Output<RepositoryFormat> format) {
-            this.format = format;
+            $.format = format;
             return this;
         }
-        public Builder format(@Nullable RepositoryFormat format) {
-            this.format = Codegen.ofNullable(format);
-            return this;
+
+        public Builder format(RepositoryFormat format) {
+            return format(Output.of(format));
         }
+
         public Builder kmsKeyName(@Nullable Output<String> kmsKeyName) {
-            this.kmsKeyName = kmsKeyName;
+            $.kmsKeyName = kmsKeyName;
             return this;
         }
-        public Builder kmsKeyName(@Nullable String kmsKeyName) {
-            this.kmsKeyName = Codegen.ofNullable(kmsKeyName);
-            return this;
+
+        public Builder kmsKeyName(String kmsKeyName) {
+            return kmsKeyName(Output.of(kmsKeyName));
         }
+
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
-            this.labels = labels;
+            $.labels = labels;
             return this;
         }
-        public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Codegen.ofNullable(labels);
-            return this;
+
+        public Builder labels(Map<String,String> labels) {
+            return labels(Output.of(labels));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder mavenConfig(@Nullable Output<MavenRepositoryConfigArgs> mavenConfig) {
-            this.mavenConfig = mavenConfig;
+            $.mavenConfig = mavenConfig;
             return this;
         }
-        public Builder mavenConfig(@Nullable MavenRepositoryConfigArgs mavenConfig) {
-            this.mavenConfig = Codegen.ofNullable(mavenConfig);
-            return this;
+
+        public Builder mavenConfig(MavenRepositoryConfigArgs mavenConfig) {
+            return mavenConfig(Output.of(mavenConfig));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder repositoryId(@Nullable Output<String> repositoryId) {
-            this.repositoryId = repositoryId;
+            $.repositoryId = repositoryId;
             return this;
         }
-        public Builder repositoryId(@Nullable String repositoryId) {
-            this.repositoryId = Codegen.ofNullable(repositoryId);
-            return this;
+
+        public Builder repositoryId(String repositoryId) {
+            return repositoryId(Output.of(repositoryId));
         }
+
         public Builder updateTime(@Nullable Output<String> updateTime) {
-            this.updateTime = updateTime;
+            $.updateTime = updateTime;
             return this;
         }
-        public Builder updateTime(@Nullable String updateTime) {
-            this.updateTime = Codegen.ofNullable(updateTime);
-            return this;
-        }        public RepositoryArgs build() {
-            return new RepositoryArgs(createTime, description, format, kmsKeyName, labels, location, mavenConfig, name, project, repositoryId, updateTime);
+
+        public Builder updateTime(String updateTime) {
+            return updateTime(Output.of(updateTime));
+        }
+
+        public RepositoryArgs build() {
+            return $;
         }
     }
+
 }

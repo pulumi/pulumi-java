@@ -17,7 +17,7 @@ public final class GetEventHubEventSourceArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="environmentName", required=true)
-      private final String environmentName;
+    private String environmentName;
 
     public String environmentName() {
         return this.environmentName;
@@ -28,7 +28,7 @@ public final class GetEventHubEventSourceArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="eventSourceName", required=true)
-      private final String eventSourceName;
+    private String eventSourceName;
 
     public String eventSourceName() {
         return this.eventSourceName;
@@ -39,64 +39,59 @@ public final class GetEventHubEventSourceArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public GetEventHubEventSourceArgs(
-        String environmentName,
-        String eventSourceName,
-        String resourceGroupName) {
-        this.environmentName = Objects.requireNonNull(environmentName, "expected parameter 'environmentName' to be non-null");
-        this.eventSourceName = Objects.requireNonNull(eventSourceName, "expected parameter 'eventSourceName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private GetEventHubEventSourceArgs() {}
 
-    private GetEventHubEventSourceArgs() {
-        this.environmentName = null;
-        this.eventSourceName = null;
-        this.resourceGroupName = null;
+    private GetEventHubEventSourceArgs(GetEventHubEventSourceArgs $) {
+        this.environmentName = $.environmentName;
+        this.eventSourceName = $.eventSourceName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetEventHubEventSourceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String environmentName;
-        private String eventSourceName;
-        private String resourceGroupName;
+        private GetEventHubEventSourceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetEventHubEventSourceArgs();
         }
 
         public Builder(GetEventHubEventSourceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.environmentName = defaults.environmentName;
-    	      this.eventSourceName = defaults.eventSourceName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new GetEventHubEventSourceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder environmentName(String environmentName) {
-            this.environmentName = Objects.requireNonNull(environmentName);
+            $.environmentName = environmentName;
             return this;
         }
+
         public Builder eventSourceName(String eventSourceName) {
-            this.eventSourceName = Objects.requireNonNull(eventSourceName);
+            $.eventSourceName = eventSourceName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public GetEventHubEventSourceArgs build() {
-            return new GetEventHubEventSourceArgs(environmentName, eventSourceName, resourceGroupName);
+        }
+
+        public GetEventHubEventSourceArgs build() {
+            $.environmentName = Objects.requireNonNull($.environmentName, "expected parameter 'environmentName' to be non-null");
+            $.eventSourceName = Objects.requireNonNull($.eventSourceName, "expected parameter 'eventSourceName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

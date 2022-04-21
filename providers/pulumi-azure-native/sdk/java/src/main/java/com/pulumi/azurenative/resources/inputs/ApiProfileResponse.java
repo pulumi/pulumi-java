@@ -17,7 +17,7 @@ public final class ApiProfileResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="apiVersion", required=true)
-      private final String apiVersion;
+    private String apiVersion;
 
     public String apiVersion() {
         return this.apiVersion;
@@ -28,55 +28,52 @@ public final class ApiProfileResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="profileVersion", required=true)
-      private final String profileVersion;
+    private String profileVersion;
 
     public String profileVersion() {
         return this.profileVersion;
     }
 
-    public ApiProfileResponse(
-        String apiVersion,
-        String profileVersion) {
-        this.apiVersion = Objects.requireNonNull(apiVersion, "expected parameter 'apiVersion' to be non-null");
-        this.profileVersion = Objects.requireNonNull(profileVersion, "expected parameter 'profileVersion' to be non-null");
-    }
+    private ApiProfileResponse() {}
 
-    private ApiProfileResponse() {
-        this.apiVersion = null;
-        this.profileVersion = null;
+    private ApiProfileResponse(ApiProfileResponse $) {
+        this.apiVersion = $.apiVersion;
+        this.profileVersion = $.profileVersion;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ApiProfileResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String apiVersion;
-        private String profileVersion;
+        private ApiProfileResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ApiProfileResponse();
         }
 
         public Builder(ApiProfileResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.apiVersion = defaults.apiVersion;
-    	      this.profileVersion = defaults.profileVersion;
+            $ = new ApiProfileResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder apiVersion(String apiVersion) {
-            this.apiVersion = Objects.requireNonNull(apiVersion);
+            $.apiVersion = apiVersion;
             return this;
         }
+
         public Builder profileVersion(String profileVersion) {
-            this.profileVersion = Objects.requireNonNull(profileVersion);
+            $.profileVersion = profileVersion;
             return this;
-        }        public ApiProfileResponse build() {
-            return new ApiProfileResponse(apiVersion, profileVersion);
+        }
+
+        public ApiProfileResponse build() {
+            $.apiVersion = Objects.requireNonNull($.apiVersion, "expected parameter 'apiVersion' to be non-null");
+            $.profileVersion = Objects.requireNonNull($.profileVersion, "expected parameter 'profileVersion' to be non-null");
+            return $;
         }
     }
+
 }

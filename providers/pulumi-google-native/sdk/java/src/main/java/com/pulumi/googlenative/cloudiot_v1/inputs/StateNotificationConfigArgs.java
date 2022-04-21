@@ -5,9 +5,9 @@ package com.pulumi.googlenative.cloudiot_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class StateNotificationConfigArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="pubsubTopicName")
-      private final @Nullable Output<String> pubsubTopicName;
+    private @Nullable Output<String> pubsubTopicName;
 
-    public Output<String> pubsubTopicName() {
-        return this.pubsubTopicName == null ? Codegen.empty() : this.pubsubTopicName;
+    public Optional<Output<String>> pubsubTopicName() {
+        return Optional.ofNullable(this.pubsubTopicName);
     }
 
-    public StateNotificationConfigArgs(@Nullable Output<String> pubsubTopicName) {
-        this.pubsubTopicName = pubsubTopicName;
-    }
+    private StateNotificationConfigArgs() {}
 
-    private StateNotificationConfigArgs() {
-        this.pubsubTopicName = Codegen.empty();
+    private StateNotificationConfigArgs(StateNotificationConfigArgs $) {
+        this.pubsubTopicName = $.pubsubTopicName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(StateNotificationConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> pubsubTopicName;
+        private StateNotificationConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new StateNotificationConfigArgs();
         }
 
         public Builder(StateNotificationConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.pubsubTopicName = defaults.pubsubTopicName;
+            $ = new StateNotificationConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder pubsubTopicName(@Nullable Output<String> pubsubTopicName) {
-            this.pubsubTopicName = pubsubTopicName;
+            $.pubsubTopicName = pubsubTopicName;
             return this;
         }
-        public Builder pubsubTopicName(@Nullable String pubsubTopicName) {
-            this.pubsubTopicName = Codegen.ofNullable(pubsubTopicName);
-            return this;
-        }        public StateNotificationConfigArgs build() {
-            return new StateNotificationConfigArgs(pubsubTopicName);
+
+        public Builder pubsubTopicName(String pubsubTopicName) {
+            return pubsubTopicName(Output.of(pubsubTopicName));
+        }
+
+        public StateNotificationConfigArgs build() {
+            return $;
         }
     }
+
 }

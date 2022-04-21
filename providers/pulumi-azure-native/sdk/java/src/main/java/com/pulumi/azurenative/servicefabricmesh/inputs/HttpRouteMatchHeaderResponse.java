@@ -23,7 +23,7 @@ public final class HttpRouteMatchHeaderResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -34,10 +34,10 @@ public final class HttpRouteMatchHeaderResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="type")
-      private final @Nullable String type;
+    private @Nullable String type;
 
     public Optional<String> type() {
-        return this.type == null ? Optional.empty() : Optional.ofNullable(this.type);
+        return Optional.ofNullable(this.type);
     }
 
     /**
@@ -45,64 +45,57 @@ public final class HttpRouteMatchHeaderResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="value")
-      private final @Nullable String value;
+    private @Nullable String value;
 
     public Optional<String> value() {
-        return this.value == null ? Optional.empty() : Optional.ofNullable(this.value);
+        return Optional.ofNullable(this.value);
     }
 
-    public HttpRouteMatchHeaderResponse(
-        String name,
-        @Nullable String type,
-        @Nullable String value) {
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.type = type;
-        this.value = value;
-    }
+    private HttpRouteMatchHeaderResponse() {}
 
-    private HttpRouteMatchHeaderResponse() {
-        this.name = null;
-        this.type = null;
-        this.value = null;
+    private HttpRouteMatchHeaderResponse(HttpRouteMatchHeaderResponse $) {
+        this.name = $.name;
+        this.type = $.type;
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(HttpRouteMatchHeaderResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String name;
-        private @Nullable String type;
-        private @Nullable String value;
+        private HttpRouteMatchHeaderResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new HttpRouteMatchHeaderResponse();
         }
 
         public Builder(HttpRouteMatchHeaderResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.type = defaults.type;
-    	      this.value = defaults.value;
+            $ = new HttpRouteMatchHeaderResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder type(@Nullable String type) {
-            this.type = type;
+            $.type = type;
             return this;
         }
+
         public Builder value(@Nullable String value) {
-            this.value = value;
+            $.value = value;
             return this;
-        }        public HttpRouteMatchHeaderResponse build() {
-            return new HttpRouteMatchHeaderResponse(name, type, value);
+        }
+
+        public HttpRouteMatchHeaderResponse build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            return $;
         }
     }
+
 }

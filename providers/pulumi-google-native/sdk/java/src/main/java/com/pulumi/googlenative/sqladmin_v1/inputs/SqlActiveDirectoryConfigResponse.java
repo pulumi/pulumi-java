@@ -21,7 +21,7 @@ public final class SqlActiveDirectoryConfigResponse extends com.pulumi.resources
      * 
      */
     @Import(name="domain", required=true)
-      private final String domain;
+    private String domain;
 
     public String domain() {
         return this.domain;
@@ -32,55 +32,52 @@ public final class SqlActiveDirectoryConfigResponse extends com.pulumi.resources
      * 
      */
     @Import(name="kind", required=true)
-      private final String kind;
+    private String kind;
 
     public String kind() {
         return this.kind;
     }
 
-    public SqlActiveDirectoryConfigResponse(
-        String domain,
-        String kind) {
-        this.domain = Objects.requireNonNull(domain, "expected parameter 'domain' to be non-null");
-        this.kind = Objects.requireNonNull(kind, "expected parameter 'kind' to be non-null");
-    }
+    private SqlActiveDirectoryConfigResponse() {}
 
-    private SqlActiveDirectoryConfigResponse() {
-        this.domain = null;
-        this.kind = null;
+    private SqlActiveDirectoryConfigResponse(SqlActiveDirectoryConfigResponse $) {
+        this.domain = $.domain;
+        this.kind = $.kind;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SqlActiveDirectoryConfigResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String domain;
-        private String kind;
+        private SqlActiveDirectoryConfigResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new SqlActiveDirectoryConfigResponse();
         }
 
         public Builder(SqlActiveDirectoryConfigResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.domain = defaults.domain;
-    	      this.kind = defaults.kind;
+            $ = new SqlActiveDirectoryConfigResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder domain(String domain) {
-            this.domain = Objects.requireNonNull(domain);
+            $.domain = domain;
             return this;
         }
+
         public Builder kind(String kind) {
-            this.kind = Objects.requireNonNull(kind);
+            $.kind = kind;
             return this;
-        }        public SqlActiveDirectoryConfigResponse build() {
-            return new SqlActiveDirectoryConfigResponse(domain, kind);
+        }
+
+        public SqlActiveDirectoryConfigResponse build() {
+            $.domain = Objects.requireNonNull($.domain, "expected parameter 'domain' to be non-null");
+            $.kind = Objects.requireNonNull($.kind, "expected parameter 'kind' to be non-null");
+            return $;
         }
     }
+
 }

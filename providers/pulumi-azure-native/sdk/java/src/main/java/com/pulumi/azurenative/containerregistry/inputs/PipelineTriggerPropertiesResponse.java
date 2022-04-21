@@ -19,45 +19,44 @@ public final class PipelineTriggerPropertiesResponse extends com.pulumi.resource
      * 
      */
     @Import(name="sourceTrigger")
-      private final @Nullable PipelineSourceTriggerPropertiesResponse sourceTrigger;
+    private @Nullable PipelineSourceTriggerPropertiesResponse sourceTrigger;
 
     public Optional<PipelineSourceTriggerPropertiesResponse> sourceTrigger() {
-        return this.sourceTrigger == null ? Optional.empty() : Optional.ofNullable(this.sourceTrigger);
+        return Optional.ofNullable(this.sourceTrigger);
     }
 
-    public PipelineTriggerPropertiesResponse(@Nullable PipelineSourceTriggerPropertiesResponse sourceTrigger) {
-        this.sourceTrigger = sourceTrigger;
-    }
+    private PipelineTriggerPropertiesResponse() {}
 
-    private PipelineTriggerPropertiesResponse() {
-        this.sourceTrigger = null;
+    private PipelineTriggerPropertiesResponse(PipelineTriggerPropertiesResponse $) {
+        this.sourceTrigger = $.sourceTrigger;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PipelineTriggerPropertiesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable PipelineSourceTriggerPropertiesResponse sourceTrigger;
+        private PipelineTriggerPropertiesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new PipelineTriggerPropertiesResponse();
         }
 
         public Builder(PipelineTriggerPropertiesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.sourceTrigger = defaults.sourceTrigger;
+            $ = new PipelineTriggerPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder sourceTrigger(@Nullable PipelineSourceTriggerPropertiesResponse sourceTrigger) {
-            this.sourceTrigger = sourceTrigger;
+            $.sourceTrigger = sourceTrigger;
             return this;
-        }        public PipelineTriggerPropertiesResponse build() {
-            return new PipelineTriggerPropertiesResponse(sourceTrigger);
+        }
+
+        public PipelineTriggerPropertiesResponse build() {
+            return $;
         }
     }
+
 }

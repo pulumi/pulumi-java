@@ -17,78 +17,70 @@ public final class LicenseConsumptionConfiguration extends com.pulumi.resources.
     public static final LicenseConsumptionConfiguration Empty = new LicenseConsumptionConfiguration();
 
     @Import(name="borrowConfiguration")
-      private final @Nullable LicenseBorrowConfiguration borrowConfiguration;
+    private @Nullable LicenseBorrowConfiguration borrowConfiguration;
 
     public Optional<LicenseBorrowConfiguration> borrowConfiguration() {
-        return this.borrowConfiguration == null ? Optional.empty() : Optional.ofNullable(this.borrowConfiguration);
+        return Optional.ofNullable(this.borrowConfiguration);
     }
 
     @Import(name="provisionalConfiguration")
-      private final @Nullable LicenseProvisionalConfiguration provisionalConfiguration;
+    private @Nullable LicenseProvisionalConfiguration provisionalConfiguration;
 
     public Optional<LicenseProvisionalConfiguration> provisionalConfiguration() {
-        return this.provisionalConfiguration == null ? Optional.empty() : Optional.ofNullable(this.provisionalConfiguration);
+        return Optional.ofNullable(this.provisionalConfiguration);
     }
 
     @Import(name="renewType")
-      private final @Nullable String renewType;
+    private @Nullable String renewType;
 
     public Optional<String> renewType() {
-        return this.renewType == null ? Optional.empty() : Optional.ofNullable(this.renewType);
+        return Optional.ofNullable(this.renewType);
     }
 
-    public LicenseConsumptionConfiguration(
-        @Nullable LicenseBorrowConfiguration borrowConfiguration,
-        @Nullable LicenseProvisionalConfiguration provisionalConfiguration,
-        @Nullable String renewType) {
-        this.borrowConfiguration = borrowConfiguration;
-        this.provisionalConfiguration = provisionalConfiguration;
-        this.renewType = renewType;
-    }
+    private LicenseConsumptionConfiguration() {}
 
-    private LicenseConsumptionConfiguration() {
-        this.borrowConfiguration = null;
-        this.provisionalConfiguration = null;
-        this.renewType = null;
+    private LicenseConsumptionConfiguration(LicenseConsumptionConfiguration $) {
+        this.borrowConfiguration = $.borrowConfiguration;
+        this.provisionalConfiguration = $.provisionalConfiguration;
+        this.renewType = $.renewType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LicenseConsumptionConfiguration defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable LicenseBorrowConfiguration borrowConfiguration;
-        private @Nullable LicenseProvisionalConfiguration provisionalConfiguration;
-        private @Nullable String renewType;
+        private LicenseConsumptionConfiguration $;
 
         public Builder() {
-    	      // Empty
+            $ = new LicenseConsumptionConfiguration();
         }
 
         public Builder(LicenseConsumptionConfiguration defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.borrowConfiguration = defaults.borrowConfiguration;
-    	      this.provisionalConfiguration = defaults.provisionalConfiguration;
-    	      this.renewType = defaults.renewType;
+            $ = new LicenseConsumptionConfiguration(Objects.requireNonNull(defaults));
         }
 
         public Builder borrowConfiguration(@Nullable LicenseBorrowConfiguration borrowConfiguration) {
-            this.borrowConfiguration = borrowConfiguration;
+            $.borrowConfiguration = borrowConfiguration;
             return this;
         }
+
         public Builder provisionalConfiguration(@Nullable LicenseProvisionalConfiguration provisionalConfiguration) {
-            this.provisionalConfiguration = provisionalConfiguration;
+            $.provisionalConfiguration = provisionalConfiguration;
             return this;
         }
+
         public Builder renewType(@Nullable String renewType) {
-            this.renewType = renewType;
+            $.renewType = renewType;
             return this;
-        }        public LicenseConsumptionConfiguration build() {
-            return new LicenseConsumptionConfiguration(borrowConfiguration, provisionalConfiguration, renewType);
+        }
+
+        public LicenseConsumptionConfiguration build() {
+            return $;
         }
     }
+
 }

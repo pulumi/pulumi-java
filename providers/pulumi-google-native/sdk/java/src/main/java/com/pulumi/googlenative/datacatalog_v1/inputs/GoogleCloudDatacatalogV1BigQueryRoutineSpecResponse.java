@@ -22,48 +22,49 @@ public final class GoogleCloudDatacatalogV1BigQueryRoutineSpecResponse extends c
      * 
      */
     @Import(name="importedLibraries", required=true)
-      private final List<String> importedLibraries;
+    private List<String> importedLibraries;
 
     public List<String> importedLibraries() {
         return this.importedLibraries;
     }
 
-    public GoogleCloudDatacatalogV1BigQueryRoutineSpecResponse(List<String> importedLibraries) {
-        this.importedLibraries = Objects.requireNonNull(importedLibraries, "expected parameter 'importedLibraries' to be non-null");
-    }
+    private GoogleCloudDatacatalogV1BigQueryRoutineSpecResponse() {}
 
-    private GoogleCloudDatacatalogV1BigQueryRoutineSpecResponse() {
-        this.importedLibraries = List.of();
+    private GoogleCloudDatacatalogV1BigQueryRoutineSpecResponse(GoogleCloudDatacatalogV1BigQueryRoutineSpecResponse $) {
+        this.importedLibraries = $.importedLibraries;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudDatacatalogV1BigQueryRoutineSpecResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<String> importedLibraries;
+        private GoogleCloudDatacatalogV1BigQueryRoutineSpecResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudDatacatalogV1BigQueryRoutineSpecResponse();
         }
 
         public Builder(GoogleCloudDatacatalogV1BigQueryRoutineSpecResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.importedLibraries = defaults.importedLibraries;
+            $ = new GoogleCloudDatacatalogV1BigQueryRoutineSpecResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder importedLibraries(List<String> importedLibraries) {
-            this.importedLibraries = Objects.requireNonNull(importedLibraries);
+            $.importedLibraries = importedLibraries;
             return this;
         }
+
         public Builder importedLibraries(String... importedLibraries) {
             return importedLibraries(List.of(importedLibraries));
-        }        public GoogleCloudDatacatalogV1BigQueryRoutineSpecResponse build() {
-            return new GoogleCloudDatacatalogV1BigQueryRoutineSpecResponse(importedLibraries);
+        }
+
+        public GoogleCloudDatacatalogV1BigQueryRoutineSpecResponse build() {
+            $.importedLibraries = Objects.requireNonNull($.importedLibraries, "expected parameter 'importedLibraries' to be non-null");
+            return $;
         }
     }
+
 }

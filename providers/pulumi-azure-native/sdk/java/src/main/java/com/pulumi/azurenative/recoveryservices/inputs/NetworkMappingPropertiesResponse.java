@@ -27,10 +27,10 @@ public final class NetworkMappingPropertiesResponse extends com.pulumi.resources
      * 
      */
     @Import(name="fabricSpecificSettings")
-      private final @Nullable Object fabricSpecificSettings;
+    private @Nullable Object fabricSpecificSettings;
 
-    public Object fabricSpecificSettings() {
-        return this.fabricSpecificSettings == null ? null : this.fabricSpecificSettings;
+    public Optional<Object> fabricSpecificSettings() {
+        return Optional.ofNullable(this.fabricSpecificSettings);
     }
 
     /**
@@ -38,10 +38,10 @@ public final class NetworkMappingPropertiesResponse extends com.pulumi.resources
      * 
      */
     @Import(name="primaryFabricFriendlyName")
-      private final @Nullable String primaryFabricFriendlyName;
+    private @Nullable String primaryFabricFriendlyName;
 
     public Optional<String> primaryFabricFriendlyName() {
-        return this.primaryFabricFriendlyName == null ? Optional.empty() : Optional.ofNullable(this.primaryFabricFriendlyName);
+        return Optional.ofNullable(this.primaryFabricFriendlyName);
     }
 
     /**
@@ -49,10 +49,10 @@ public final class NetworkMappingPropertiesResponse extends com.pulumi.resources
      * 
      */
     @Import(name="primaryNetworkFriendlyName")
-      private final @Nullable String primaryNetworkFriendlyName;
+    private @Nullable String primaryNetworkFriendlyName;
 
     public Optional<String> primaryNetworkFriendlyName() {
-        return this.primaryNetworkFriendlyName == null ? Optional.empty() : Optional.ofNullable(this.primaryNetworkFriendlyName);
+        return Optional.ofNullable(this.primaryNetworkFriendlyName);
     }
 
     /**
@@ -60,10 +60,10 @@ public final class NetworkMappingPropertiesResponse extends com.pulumi.resources
      * 
      */
     @Import(name="primaryNetworkId")
-      private final @Nullable String primaryNetworkId;
+    private @Nullable String primaryNetworkId;
 
     public Optional<String> primaryNetworkId() {
-        return this.primaryNetworkId == null ? Optional.empty() : Optional.ofNullable(this.primaryNetworkId);
+        return Optional.ofNullable(this.primaryNetworkId);
     }
 
     /**
@@ -71,10 +71,10 @@ public final class NetworkMappingPropertiesResponse extends com.pulumi.resources
      * 
      */
     @Import(name="recoveryFabricArmId")
-      private final @Nullable String recoveryFabricArmId;
+    private @Nullable String recoveryFabricArmId;
 
     public Optional<String> recoveryFabricArmId() {
-        return this.recoveryFabricArmId == null ? Optional.empty() : Optional.ofNullable(this.recoveryFabricArmId);
+        return Optional.ofNullable(this.recoveryFabricArmId);
     }
 
     /**
@@ -82,10 +82,10 @@ public final class NetworkMappingPropertiesResponse extends com.pulumi.resources
      * 
      */
     @Import(name="recoveryFabricFriendlyName")
-      private final @Nullable String recoveryFabricFriendlyName;
+    private @Nullable String recoveryFabricFriendlyName;
 
     public Optional<String> recoveryFabricFriendlyName() {
-        return this.recoveryFabricFriendlyName == null ? Optional.empty() : Optional.ofNullable(this.recoveryFabricFriendlyName);
+        return Optional.ofNullable(this.recoveryFabricFriendlyName);
     }
 
     /**
@@ -93,10 +93,10 @@ public final class NetworkMappingPropertiesResponse extends com.pulumi.resources
      * 
      */
     @Import(name="recoveryNetworkFriendlyName")
-      private final @Nullable String recoveryNetworkFriendlyName;
+    private @Nullable String recoveryNetworkFriendlyName;
 
     public Optional<String> recoveryNetworkFriendlyName() {
-        return this.recoveryNetworkFriendlyName == null ? Optional.empty() : Optional.ofNullable(this.recoveryNetworkFriendlyName);
+        return Optional.ofNullable(this.recoveryNetworkFriendlyName);
     }
 
     /**
@@ -104,10 +104,10 @@ public final class NetworkMappingPropertiesResponse extends com.pulumi.resources
      * 
      */
     @Import(name="recoveryNetworkId")
-      private final @Nullable String recoveryNetworkId;
+    private @Nullable String recoveryNetworkId;
 
     public Optional<String> recoveryNetworkId() {
-        return this.recoveryNetworkId == null ? Optional.empty() : Optional.ofNullable(this.recoveryNetworkId);
+        return Optional.ofNullable(this.recoveryNetworkId);
     }
 
     /**
@@ -115,118 +115,92 @@ public final class NetworkMappingPropertiesResponse extends com.pulumi.resources
      * 
      */
     @Import(name="state")
-      private final @Nullable String state;
+    private @Nullable String state;
 
     public Optional<String> state() {
-        return this.state == null ? Optional.empty() : Optional.ofNullable(this.state);
+        return Optional.ofNullable(this.state);
     }
 
-    public NetworkMappingPropertiesResponse(
-        @Nullable Object fabricSpecificSettings,
-        @Nullable String primaryFabricFriendlyName,
-        @Nullable String primaryNetworkFriendlyName,
-        @Nullable String primaryNetworkId,
-        @Nullable String recoveryFabricArmId,
-        @Nullable String recoveryFabricFriendlyName,
-        @Nullable String recoveryNetworkFriendlyName,
-        @Nullable String recoveryNetworkId,
-        @Nullable String state) {
-        this.fabricSpecificSettings = fabricSpecificSettings;
-        this.primaryFabricFriendlyName = primaryFabricFriendlyName;
-        this.primaryNetworkFriendlyName = primaryNetworkFriendlyName;
-        this.primaryNetworkId = primaryNetworkId;
-        this.recoveryFabricArmId = recoveryFabricArmId;
-        this.recoveryFabricFriendlyName = recoveryFabricFriendlyName;
-        this.recoveryNetworkFriendlyName = recoveryNetworkFriendlyName;
-        this.recoveryNetworkId = recoveryNetworkId;
-        this.state = state;
-    }
+    private NetworkMappingPropertiesResponse() {}
 
-    private NetworkMappingPropertiesResponse() {
-        this.fabricSpecificSettings = null;
-        this.primaryFabricFriendlyName = null;
-        this.primaryNetworkFriendlyName = null;
-        this.primaryNetworkId = null;
-        this.recoveryFabricArmId = null;
-        this.recoveryFabricFriendlyName = null;
-        this.recoveryNetworkFriendlyName = null;
-        this.recoveryNetworkId = null;
-        this.state = null;
+    private NetworkMappingPropertiesResponse(NetworkMappingPropertiesResponse $) {
+        this.fabricSpecificSettings = $.fabricSpecificSettings;
+        this.primaryFabricFriendlyName = $.primaryFabricFriendlyName;
+        this.primaryNetworkFriendlyName = $.primaryNetworkFriendlyName;
+        this.primaryNetworkId = $.primaryNetworkId;
+        this.recoveryFabricArmId = $.recoveryFabricArmId;
+        this.recoveryFabricFriendlyName = $.recoveryFabricFriendlyName;
+        this.recoveryNetworkFriendlyName = $.recoveryNetworkFriendlyName;
+        this.recoveryNetworkId = $.recoveryNetworkId;
+        this.state = $.state;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NetworkMappingPropertiesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Object fabricSpecificSettings;
-        private @Nullable String primaryFabricFriendlyName;
-        private @Nullable String primaryNetworkFriendlyName;
-        private @Nullable String primaryNetworkId;
-        private @Nullable String recoveryFabricArmId;
-        private @Nullable String recoveryFabricFriendlyName;
-        private @Nullable String recoveryNetworkFriendlyName;
-        private @Nullable String recoveryNetworkId;
-        private @Nullable String state;
+        private NetworkMappingPropertiesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new NetworkMappingPropertiesResponse();
         }
 
         public Builder(NetworkMappingPropertiesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.fabricSpecificSettings = defaults.fabricSpecificSettings;
-    	      this.primaryFabricFriendlyName = defaults.primaryFabricFriendlyName;
-    	      this.primaryNetworkFriendlyName = defaults.primaryNetworkFriendlyName;
-    	      this.primaryNetworkId = defaults.primaryNetworkId;
-    	      this.recoveryFabricArmId = defaults.recoveryFabricArmId;
-    	      this.recoveryFabricFriendlyName = defaults.recoveryFabricFriendlyName;
-    	      this.recoveryNetworkFriendlyName = defaults.recoveryNetworkFriendlyName;
-    	      this.recoveryNetworkId = defaults.recoveryNetworkId;
-    	      this.state = defaults.state;
+            $ = new NetworkMappingPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder fabricSpecificSettings(@Nullable Object fabricSpecificSettings) {
-            this.fabricSpecificSettings = fabricSpecificSettings;
+            $.fabricSpecificSettings = fabricSpecificSettings;
             return this;
         }
+
         public Builder primaryFabricFriendlyName(@Nullable String primaryFabricFriendlyName) {
-            this.primaryFabricFriendlyName = primaryFabricFriendlyName;
+            $.primaryFabricFriendlyName = primaryFabricFriendlyName;
             return this;
         }
+
         public Builder primaryNetworkFriendlyName(@Nullable String primaryNetworkFriendlyName) {
-            this.primaryNetworkFriendlyName = primaryNetworkFriendlyName;
+            $.primaryNetworkFriendlyName = primaryNetworkFriendlyName;
             return this;
         }
+
         public Builder primaryNetworkId(@Nullable String primaryNetworkId) {
-            this.primaryNetworkId = primaryNetworkId;
+            $.primaryNetworkId = primaryNetworkId;
             return this;
         }
+
         public Builder recoveryFabricArmId(@Nullable String recoveryFabricArmId) {
-            this.recoveryFabricArmId = recoveryFabricArmId;
+            $.recoveryFabricArmId = recoveryFabricArmId;
             return this;
         }
+
         public Builder recoveryFabricFriendlyName(@Nullable String recoveryFabricFriendlyName) {
-            this.recoveryFabricFriendlyName = recoveryFabricFriendlyName;
+            $.recoveryFabricFriendlyName = recoveryFabricFriendlyName;
             return this;
         }
+
         public Builder recoveryNetworkFriendlyName(@Nullable String recoveryNetworkFriendlyName) {
-            this.recoveryNetworkFriendlyName = recoveryNetworkFriendlyName;
+            $.recoveryNetworkFriendlyName = recoveryNetworkFriendlyName;
             return this;
         }
+
         public Builder recoveryNetworkId(@Nullable String recoveryNetworkId) {
-            this.recoveryNetworkId = recoveryNetworkId;
+            $.recoveryNetworkId = recoveryNetworkId;
             return this;
         }
+
         public Builder state(@Nullable String state) {
-            this.state = state;
+            $.state = state;
             return this;
-        }        public NetworkMappingPropertiesResponse build() {
-            return new NetworkMappingPropertiesResponse(fabricSpecificSettings, primaryFabricFriendlyName, primaryNetworkFriendlyName, primaryNetworkId, recoveryFabricArmId, recoveryFabricFriendlyName, recoveryNetworkFriendlyName, recoveryNetworkId, state);
+        }
+
+        public NetworkMappingPropertiesResponse build() {
+            return $;
         }
     }
+
 }

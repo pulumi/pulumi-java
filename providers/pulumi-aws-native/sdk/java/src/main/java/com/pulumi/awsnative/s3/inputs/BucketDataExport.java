@@ -18,7 +18,7 @@ public final class BucketDataExport extends com.pulumi.resources.InvokeArgs {
     public static final BucketDataExport Empty = new BucketDataExport();
 
     @Import(name="destination", required=true)
-      private final BucketDestination destination;
+    private BucketDestination destination;
 
     public BucketDestination destination() {
         return this.destination;
@@ -29,55 +29,52 @@ public final class BucketDataExport extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="outputSchemaVersion", required=true)
-      private final String outputSchemaVersion;
+    private String outputSchemaVersion;
 
     public String outputSchemaVersion() {
         return this.outputSchemaVersion;
     }
 
-    public BucketDataExport(
-        BucketDestination destination,
-        String outputSchemaVersion) {
-        this.destination = Objects.requireNonNull(destination, "expected parameter 'destination' to be non-null");
-        this.outputSchemaVersion = Objects.requireNonNull(outputSchemaVersion, "expected parameter 'outputSchemaVersion' to be non-null");
-    }
+    private BucketDataExport() {}
 
-    private BucketDataExport() {
-        this.destination = null;
-        this.outputSchemaVersion = null;
+    private BucketDataExport(BucketDataExport $) {
+        this.destination = $.destination;
+        this.outputSchemaVersion = $.outputSchemaVersion;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BucketDataExport defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private BucketDestination destination;
-        private String outputSchemaVersion;
+        private BucketDataExport $;
 
         public Builder() {
-    	      // Empty
+            $ = new BucketDataExport();
         }
 
         public Builder(BucketDataExport defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.destination = defaults.destination;
-    	      this.outputSchemaVersion = defaults.outputSchemaVersion;
+            $ = new BucketDataExport(Objects.requireNonNull(defaults));
         }
 
         public Builder destination(BucketDestination destination) {
-            this.destination = Objects.requireNonNull(destination);
+            $.destination = destination;
             return this;
         }
+
         public Builder outputSchemaVersion(String outputSchemaVersion) {
-            this.outputSchemaVersion = Objects.requireNonNull(outputSchemaVersion);
+            $.outputSchemaVersion = outputSchemaVersion;
             return this;
-        }        public BucketDataExport build() {
-            return new BucketDataExport(destination, outputSchemaVersion);
+        }
+
+        public BucketDataExport build() {
+            $.destination = Objects.requireNonNull($.destination, "expected parameter 'destination' to be non-null");
+            $.outputSchemaVersion = Objects.requireNonNull($.outputSchemaVersion, "expected parameter 'outputSchemaVersion' to be non-null");
+            return $;
         }
     }
+
 }

@@ -17,7 +17,7 @@ public final class GetBillingRoleAssignmentByBillingAccountArgs extends com.pulu
      * 
      */
     @Import(name="billingAccountName", required=true)
-      private final String billingAccountName;
+    private String billingAccountName;
 
     public String billingAccountName() {
         return this.billingAccountName;
@@ -28,55 +28,52 @@ public final class GetBillingRoleAssignmentByBillingAccountArgs extends com.pulu
      * 
      */
     @Import(name="billingRoleAssignmentName", required=true)
-      private final String billingRoleAssignmentName;
+    private String billingRoleAssignmentName;
 
     public String billingRoleAssignmentName() {
         return this.billingRoleAssignmentName;
     }
 
-    public GetBillingRoleAssignmentByBillingAccountArgs(
-        String billingAccountName,
-        String billingRoleAssignmentName) {
-        this.billingAccountName = Objects.requireNonNull(billingAccountName, "expected parameter 'billingAccountName' to be non-null");
-        this.billingRoleAssignmentName = Objects.requireNonNull(billingRoleAssignmentName, "expected parameter 'billingRoleAssignmentName' to be non-null");
-    }
+    private GetBillingRoleAssignmentByBillingAccountArgs() {}
 
-    private GetBillingRoleAssignmentByBillingAccountArgs() {
-        this.billingAccountName = null;
-        this.billingRoleAssignmentName = null;
+    private GetBillingRoleAssignmentByBillingAccountArgs(GetBillingRoleAssignmentByBillingAccountArgs $) {
+        this.billingAccountName = $.billingAccountName;
+        this.billingRoleAssignmentName = $.billingRoleAssignmentName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetBillingRoleAssignmentByBillingAccountArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String billingAccountName;
-        private String billingRoleAssignmentName;
+        private GetBillingRoleAssignmentByBillingAccountArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetBillingRoleAssignmentByBillingAccountArgs();
         }
 
         public Builder(GetBillingRoleAssignmentByBillingAccountArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.billingAccountName = defaults.billingAccountName;
-    	      this.billingRoleAssignmentName = defaults.billingRoleAssignmentName;
+            $ = new GetBillingRoleAssignmentByBillingAccountArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder billingAccountName(String billingAccountName) {
-            this.billingAccountName = Objects.requireNonNull(billingAccountName);
+            $.billingAccountName = billingAccountName;
             return this;
         }
+
         public Builder billingRoleAssignmentName(String billingRoleAssignmentName) {
-            this.billingRoleAssignmentName = Objects.requireNonNull(billingRoleAssignmentName);
+            $.billingRoleAssignmentName = billingRoleAssignmentName;
             return this;
-        }        public GetBillingRoleAssignmentByBillingAccountArgs build() {
-            return new GetBillingRoleAssignmentByBillingAccountArgs(billingAccountName, billingRoleAssignmentName);
+        }
+
+        public GetBillingRoleAssignmentByBillingAccountArgs build() {
+            $.billingAccountName = Objects.requireNonNull($.billingAccountName, "expected parameter 'billingAccountName' to be non-null");
+            $.billingRoleAssignmentName = Objects.requireNonNull($.billingRoleAssignmentName, "expected parameter 'billingRoleAssignmentName' to be non-null");
+            return $;
         }
     }
+
 }

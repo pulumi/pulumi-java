@@ -26,10 +26,10 @@ public final class CosmosDbMongoDbApiSourceResponse extends com.pulumi.resources
      * 
      */
     @Import(name="additionalColumns")
-      private final @Nullable Object additionalColumns;
+    private @Nullable Object additionalColumns;
 
     public Optional<Object> additionalColumns() {
-        return this.additionalColumns == null ? Optional.empty() : Optional.ofNullable(this.additionalColumns);
+        return Optional.ofNullable(this.additionalColumns);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class CosmosDbMongoDbApiSourceResponse extends com.pulumi.resources
      * 
      */
     @Import(name="batchSize")
-      private final @Nullable Object batchSize;
+    private @Nullable Object batchSize;
 
     public Optional<Object> batchSize() {
-        return this.batchSize == null ? Optional.empty() : Optional.ofNullable(this.batchSize);
+        return Optional.ofNullable(this.batchSize);
     }
 
     /**
@@ -48,10 +48,10 @@ public final class CosmosDbMongoDbApiSourceResponse extends com.pulumi.resources
      * 
      */
     @Import(name="cursorMethods")
-      private final @Nullable MongoDbCursorMethodsPropertiesResponse cursorMethods;
+    private @Nullable MongoDbCursorMethodsPropertiesResponse cursorMethods;
 
     public Optional<MongoDbCursorMethodsPropertiesResponse> cursorMethods() {
-        return this.cursorMethods == null ? Optional.empty() : Optional.ofNullable(this.cursorMethods);
+        return Optional.ofNullable(this.cursorMethods);
     }
 
     /**
@@ -59,10 +59,10 @@ public final class CosmosDbMongoDbApiSourceResponse extends com.pulumi.resources
      * 
      */
     @Import(name="disableMetricsCollection")
-      private final @Nullable Object disableMetricsCollection;
+    private @Nullable Object disableMetricsCollection;
 
     public Optional<Object> disableMetricsCollection() {
-        return this.disableMetricsCollection == null ? Optional.empty() : Optional.ofNullable(this.disableMetricsCollection);
+        return Optional.ofNullable(this.disableMetricsCollection);
     }
 
     /**
@@ -70,10 +70,10 @@ public final class CosmosDbMongoDbApiSourceResponse extends com.pulumi.resources
      * 
      */
     @Import(name="filter")
-      private final @Nullable Object filter;
+    private @Nullable Object filter;
 
     public Optional<Object> filter() {
-        return this.filter == null ? Optional.empty() : Optional.ofNullable(this.filter);
+        return Optional.ofNullable(this.filter);
     }
 
     /**
@@ -81,10 +81,10 @@ public final class CosmosDbMongoDbApiSourceResponse extends com.pulumi.resources
      * 
      */
     @Import(name="maxConcurrentConnections")
-      private final @Nullable Object maxConcurrentConnections;
+    private @Nullable Object maxConcurrentConnections;
 
     public Optional<Object> maxConcurrentConnections() {
-        return this.maxConcurrentConnections == null ? Optional.empty() : Optional.ofNullable(this.maxConcurrentConnections);
+        return Optional.ofNullable(this.maxConcurrentConnections);
     }
 
     /**
@@ -92,10 +92,10 @@ public final class CosmosDbMongoDbApiSourceResponse extends com.pulumi.resources
      * 
      */
     @Import(name="queryTimeout")
-      private final @Nullable Object queryTimeout;
+    private @Nullable Object queryTimeout;
 
     public Optional<Object> queryTimeout() {
-        return this.queryTimeout == null ? Optional.empty() : Optional.ofNullable(this.queryTimeout);
+        return Optional.ofNullable(this.queryTimeout);
     }
 
     /**
@@ -103,10 +103,10 @@ public final class CosmosDbMongoDbApiSourceResponse extends com.pulumi.resources
      * 
      */
     @Import(name="sourceRetryCount")
-      private final @Nullable Object sourceRetryCount;
+    private @Nullable Object sourceRetryCount;
 
     public Optional<Object> sourceRetryCount() {
-        return this.sourceRetryCount == null ? Optional.empty() : Optional.ofNullable(this.sourceRetryCount);
+        return Optional.ofNullable(this.sourceRetryCount);
     }
 
     /**
@@ -114,10 +114,10 @@ public final class CosmosDbMongoDbApiSourceResponse extends com.pulumi.resources
      * 
      */
     @Import(name="sourceRetryWait")
-      private final @Nullable Object sourceRetryWait;
+    private @Nullable Object sourceRetryWait;
 
     public Optional<Object> sourceRetryWait() {
-        return this.sourceRetryWait == null ? Optional.empty() : Optional.ofNullable(this.sourceRetryWait);
+        return Optional.ofNullable(this.sourceRetryWait);
     }
 
     /**
@@ -126,127 +126,99 @@ public final class CosmosDbMongoDbApiSourceResponse extends com.pulumi.resources
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
     }
 
-    public CosmosDbMongoDbApiSourceResponse(
-        @Nullable Object additionalColumns,
-        @Nullable Object batchSize,
-        @Nullable MongoDbCursorMethodsPropertiesResponse cursorMethods,
-        @Nullable Object disableMetricsCollection,
-        @Nullable Object filter,
-        @Nullable Object maxConcurrentConnections,
-        @Nullable Object queryTimeout,
-        @Nullable Object sourceRetryCount,
-        @Nullable Object sourceRetryWait,
-        String type) {
-        this.additionalColumns = additionalColumns;
-        this.batchSize = batchSize;
-        this.cursorMethods = cursorMethods;
-        this.disableMetricsCollection = disableMetricsCollection;
-        this.filter = filter;
-        this.maxConcurrentConnections = maxConcurrentConnections;
-        this.queryTimeout = queryTimeout;
-        this.sourceRetryCount = sourceRetryCount;
-        this.sourceRetryWait = sourceRetryWait;
-        this.type = Codegen.stringProp("type").arg(type).require();
-    }
+    private CosmosDbMongoDbApiSourceResponse() {}
 
-    private CosmosDbMongoDbApiSourceResponse() {
-        this.additionalColumns = null;
-        this.batchSize = null;
-        this.cursorMethods = null;
-        this.disableMetricsCollection = null;
-        this.filter = null;
-        this.maxConcurrentConnections = null;
-        this.queryTimeout = null;
-        this.sourceRetryCount = null;
-        this.sourceRetryWait = null;
-        this.type = null;
+    private CosmosDbMongoDbApiSourceResponse(CosmosDbMongoDbApiSourceResponse $) {
+        this.additionalColumns = $.additionalColumns;
+        this.batchSize = $.batchSize;
+        this.cursorMethods = $.cursorMethods;
+        this.disableMetricsCollection = $.disableMetricsCollection;
+        this.filter = $.filter;
+        this.maxConcurrentConnections = $.maxConcurrentConnections;
+        this.queryTimeout = $.queryTimeout;
+        this.sourceRetryCount = $.sourceRetryCount;
+        this.sourceRetryWait = $.sourceRetryWait;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CosmosDbMongoDbApiSourceResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Object additionalColumns;
-        private @Nullable Object batchSize;
-        private @Nullable MongoDbCursorMethodsPropertiesResponse cursorMethods;
-        private @Nullable Object disableMetricsCollection;
-        private @Nullable Object filter;
-        private @Nullable Object maxConcurrentConnections;
-        private @Nullable Object queryTimeout;
-        private @Nullable Object sourceRetryCount;
-        private @Nullable Object sourceRetryWait;
-        private String type;
+        private CosmosDbMongoDbApiSourceResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new CosmosDbMongoDbApiSourceResponse();
         }
 
         public Builder(CosmosDbMongoDbApiSourceResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.additionalColumns = defaults.additionalColumns;
-    	      this.batchSize = defaults.batchSize;
-    	      this.cursorMethods = defaults.cursorMethods;
-    	      this.disableMetricsCollection = defaults.disableMetricsCollection;
-    	      this.filter = defaults.filter;
-    	      this.maxConcurrentConnections = defaults.maxConcurrentConnections;
-    	      this.queryTimeout = defaults.queryTimeout;
-    	      this.sourceRetryCount = defaults.sourceRetryCount;
-    	      this.sourceRetryWait = defaults.sourceRetryWait;
-    	      this.type = defaults.type;
+            $ = new CosmosDbMongoDbApiSourceResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder additionalColumns(@Nullable Object additionalColumns) {
-            this.additionalColumns = additionalColumns;
+            $.additionalColumns = additionalColumns;
             return this;
         }
+
         public Builder batchSize(@Nullable Object batchSize) {
-            this.batchSize = batchSize;
+            $.batchSize = batchSize;
             return this;
         }
+
         public Builder cursorMethods(@Nullable MongoDbCursorMethodsPropertiesResponse cursorMethods) {
-            this.cursorMethods = cursorMethods;
+            $.cursorMethods = cursorMethods;
             return this;
         }
+
         public Builder disableMetricsCollection(@Nullable Object disableMetricsCollection) {
-            this.disableMetricsCollection = disableMetricsCollection;
+            $.disableMetricsCollection = disableMetricsCollection;
             return this;
         }
+
         public Builder filter(@Nullable Object filter) {
-            this.filter = filter;
+            $.filter = filter;
             return this;
         }
+
         public Builder maxConcurrentConnections(@Nullable Object maxConcurrentConnections) {
-            this.maxConcurrentConnections = maxConcurrentConnections;
+            $.maxConcurrentConnections = maxConcurrentConnections;
             return this;
         }
+
         public Builder queryTimeout(@Nullable Object queryTimeout) {
-            this.queryTimeout = queryTimeout;
+            $.queryTimeout = queryTimeout;
             return this;
         }
+
         public Builder sourceRetryCount(@Nullable Object sourceRetryCount) {
-            this.sourceRetryCount = sourceRetryCount;
+            $.sourceRetryCount = sourceRetryCount;
             return this;
         }
+
         public Builder sourceRetryWait(@Nullable Object sourceRetryWait) {
-            this.sourceRetryWait = sourceRetryWait;
+            $.sourceRetryWait = sourceRetryWait;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
-        }        public CosmosDbMongoDbApiSourceResponse build() {
-            return new CosmosDbMongoDbApiSourceResponse(additionalColumns, batchSize, cursorMethods, disableMetricsCollection, filter, maxConcurrentConnections, queryTimeout, sourceRetryCount, sourceRetryWait, type);
+        }
+
+        public CosmosDbMongoDbApiSourceResponse build() {
+            $.type = Codegen.stringProp("type").arg($.type).require();
+            return $;
         }
     }
+
 }

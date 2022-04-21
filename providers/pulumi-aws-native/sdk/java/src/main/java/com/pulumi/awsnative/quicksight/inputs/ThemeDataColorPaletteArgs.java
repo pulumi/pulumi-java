@@ -5,10 +5,10 @@ package com.pulumi.awsnative.quicksight.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +27,10 @@ public final class ThemeDataColorPaletteArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="colors")
-      private final @Nullable Output<List<String>> colors;
+    private @Nullable Output<List<String>> colors;
 
-    public Output<List<String>> colors() {
-        return this.colors == null ? Codegen.empty() : this.colors;
+    public Optional<Output<List<String>>> colors() {
+        return Optional.ofNullable(this.colors);
     }
 
     /**
@@ -39,10 +39,10 @@ public final class ThemeDataColorPaletteArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="emptyFillColor")
-      private final @Nullable Output<String> emptyFillColor;
+    private @Nullable Output<String> emptyFillColor;
 
-    public Output<String> emptyFillColor() {
-        return this.emptyFillColor == null ? Codegen.empty() : this.emptyFillColor;
+    public Optional<Output<String>> emptyFillColor() {
+        return Optional.ofNullable(this.emptyFillColor);
     }
 
     /**
@@ -50,82 +50,76 @@ public final class ThemeDataColorPaletteArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="minMaxGradient")
-      private final @Nullable Output<List<String>> minMaxGradient;
+    private @Nullable Output<List<String>> minMaxGradient;
 
-    public Output<List<String>> minMaxGradient() {
-        return this.minMaxGradient == null ? Codegen.empty() : this.minMaxGradient;
+    public Optional<Output<List<String>>> minMaxGradient() {
+        return Optional.ofNullable(this.minMaxGradient);
     }
 
-    public ThemeDataColorPaletteArgs(
-        @Nullable Output<List<String>> colors,
-        @Nullable Output<String> emptyFillColor,
-        @Nullable Output<List<String>> minMaxGradient) {
-        this.colors = colors;
-        this.emptyFillColor = emptyFillColor;
-        this.minMaxGradient = minMaxGradient;
-    }
+    private ThemeDataColorPaletteArgs() {}
 
-    private ThemeDataColorPaletteArgs() {
-        this.colors = Codegen.empty();
-        this.emptyFillColor = Codegen.empty();
-        this.minMaxGradient = Codegen.empty();
+    private ThemeDataColorPaletteArgs(ThemeDataColorPaletteArgs $) {
+        this.colors = $.colors;
+        this.emptyFillColor = $.emptyFillColor;
+        this.minMaxGradient = $.minMaxGradient;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ThemeDataColorPaletteArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> colors;
-        private @Nullable Output<String> emptyFillColor;
-        private @Nullable Output<List<String>> minMaxGradient;
+        private ThemeDataColorPaletteArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ThemeDataColorPaletteArgs();
         }
 
         public Builder(ThemeDataColorPaletteArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.colors = defaults.colors;
-    	      this.emptyFillColor = defaults.emptyFillColor;
-    	      this.minMaxGradient = defaults.minMaxGradient;
+            $ = new ThemeDataColorPaletteArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder colors(@Nullable Output<List<String>> colors) {
-            this.colors = colors;
+            $.colors = colors;
             return this;
         }
-        public Builder colors(@Nullable List<String> colors) {
-            this.colors = Codegen.ofNullable(colors);
-            return this;
+
+        public Builder colors(List<String> colors) {
+            return colors(Output.of(colors));
         }
+
         public Builder colors(String... colors) {
             return colors(List.of(colors));
         }
+
         public Builder emptyFillColor(@Nullable Output<String> emptyFillColor) {
-            this.emptyFillColor = emptyFillColor;
+            $.emptyFillColor = emptyFillColor;
             return this;
         }
-        public Builder emptyFillColor(@Nullable String emptyFillColor) {
-            this.emptyFillColor = Codegen.ofNullable(emptyFillColor);
-            return this;
+
+        public Builder emptyFillColor(String emptyFillColor) {
+            return emptyFillColor(Output.of(emptyFillColor));
         }
+
         public Builder minMaxGradient(@Nullable Output<List<String>> minMaxGradient) {
-            this.minMaxGradient = minMaxGradient;
+            $.minMaxGradient = minMaxGradient;
             return this;
         }
-        public Builder minMaxGradient(@Nullable List<String> minMaxGradient) {
-            this.minMaxGradient = Codegen.ofNullable(minMaxGradient);
-            return this;
+
+        public Builder minMaxGradient(List<String> minMaxGradient) {
+            return minMaxGradient(Output.of(minMaxGradient));
         }
+
         public Builder minMaxGradient(String... minMaxGradient) {
             return minMaxGradient(List.of(minMaxGradient));
-        }        public ThemeDataColorPaletteArgs build() {
-            return new ThemeDataColorPaletteArgs(colors, emptyFillColor, minMaxGradient);
+        }
+
+        public ThemeDataColorPaletteArgs build() {
+            return $;
         }
     }
+
 }

@@ -6,7 +6,6 @@ package com.pulumi.aws.eks.inputs;
 import com.pulumi.aws.eks.inputs.ClusterEncryptionConfigProviderArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +20,7 @@ public final class ClusterEncryptionConfigArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="provider", required=true)
-      private final Output<ClusterEncryptionConfigProviderArgs> provider;
+    private Output<ClusterEncryptionConfigProviderArgs> provider;
 
     public Output<ClusterEncryptionConfigProviderArgs> provider() {
         return this.provider;
@@ -32,66 +31,64 @@ public final class ClusterEncryptionConfigArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="resources", required=true)
-      private final Output<List<String>> resources;
+    private Output<List<String>> resources;
 
     public Output<List<String>> resources() {
         return this.resources;
     }
 
-    public ClusterEncryptionConfigArgs(
-        Output<ClusterEncryptionConfigProviderArgs> provider,
-        Output<List<String>> resources) {
-        this.provider = Objects.requireNonNull(provider, "expected parameter 'provider' to be non-null");
-        this.resources = Objects.requireNonNull(resources, "expected parameter 'resources' to be non-null");
-    }
+    private ClusterEncryptionConfigArgs() {}
 
-    private ClusterEncryptionConfigArgs() {
-        this.provider = Codegen.empty();
-        this.resources = Codegen.empty();
+    private ClusterEncryptionConfigArgs(ClusterEncryptionConfigArgs $) {
+        this.provider = $.provider;
+        this.resources = $.resources;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ClusterEncryptionConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<ClusterEncryptionConfigProviderArgs> provider;
-        private Output<List<String>> resources;
+        private ClusterEncryptionConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ClusterEncryptionConfigArgs();
         }
 
         public Builder(ClusterEncryptionConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.provider = defaults.provider;
-    	      this.resources = defaults.resources;
+            $ = new ClusterEncryptionConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder provider(Output<ClusterEncryptionConfigProviderArgs> provider) {
-            this.provider = Objects.requireNonNull(provider);
+            $.provider = provider;
             return this;
         }
+
         public Builder provider(ClusterEncryptionConfigProviderArgs provider) {
-            this.provider = Output.of(Objects.requireNonNull(provider));
-            return this;
+            return provider(Output.of(provider));
         }
+
         public Builder resources(Output<List<String>> resources) {
-            this.resources = Objects.requireNonNull(resources);
+            $.resources = resources;
             return this;
         }
+
         public Builder resources(List<String> resources) {
-            this.resources = Output.of(Objects.requireNonNull(resources));
-            return this;
+            return resources(Output.of(resources));
         }
+
         public Builder resources(String... resources) {
             return resources(List.of(resources));
-        }        public ClusterEncryptionConfigArgs build() {
-            return new ClusterEncryptionConfigArgs(provider, resources);
+        }
+
+        public ClusterEncryptionConfigArgs build() {
+            $.provider = Objects.requireNonNull($.provider, "expected parameter 'provider' to be non-null");
+            $.resources = Objects.requireNonNull($.resources, "expected parameter 'resources' to be non-null");
+            return $;
         }
     }
+
 }

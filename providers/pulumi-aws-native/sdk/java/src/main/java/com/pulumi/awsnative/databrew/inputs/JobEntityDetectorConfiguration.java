@@ -17,65 +17,62 @@ public final class JobEntityDetectorConfiguration extends com.pulumi.resources.I
     public static final JobEntityDetectorConfiguration Empty = new JobEntityDetectorConfiguration();
 
     @Import(name="allowedStatistics")
-      private final @Nullable JobAllowedStatistics allowedStatistics;
+    private @Nullable JobAllowedStatistics allowedStatistics;
 
     public Optional<JobAllowedStatistics> allowedStatistics() {
-        return this.allowedStatistics == null ? Optional.empty() : Optional.ofNullable(this.allowedStatistics);
+        return Optional.ofNullable(this.allowedStatistics);
     }
 
     @Import(name="entityTypes", required=true)
-      private final List<String> entityTypes;
+    private List<String> entityTypes;
 
     public List<String> entityTypes() {
         return this.entityTypes;
     }
 
-    public JobEntityDetectorConfiguration(
-        @Nullable JobAllowedStatistics allowedStatistics,
-        List<String> entityTypes) {
-        this.allowedStatistics = allowedStatistics;
-        this.entityTypes = Objects.requireNonNull(entityTypes, "expected parameter 'entityTypes' to be non-null");
-    }
+    private JobEntityDetectorConfiguration() {}
 
-    private JobEntityDetectorConfiguration() {
-        this.allowedStatistics = null;
-        this.entityTypes = List.of();
+    private JobEntityDetectorConfiguration(JobEntityDetectorConfiguration $) {
+        this.allowedStatistics = $.allowedStatistics;
+        this.entityTypes = $.entityTypes;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(JobEntityDetectorConfiguration defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable JobAllowedStatistics allowedStatistics;
-        private List<String> entityTypes;
+        private JobEntityDetectorConfiguration $;
 
         public Builder() {
-    	      // Empty
+            $ = new JobEntityDetectorConfiguration();
         }
 
         public Builder(JobEntityDetectorConfiguration defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.allowedStatistics = defaults.allowedStatistics;
-    	      this.entityTypes = defaults.entityTypes;
+            $ = new JobEntityDetectorConfiguration(Objects.requireNonNull(defaults));
         }
 
         public Builder allowedStatistics(@Nullable JobAllowedStatistics allowedStatistics) {
-            this.allowedStatistics = allowedStatistics;
+            $.allowedStatistics = allowedStatistics;
             return this;
         }
+
         public Builder entityTypes(List<String> entityTypes) {
-            this.entityTypes = Objects.requireNonNull(entityTypes);
+            $.entityTypes = entityTypes;
             return this;
         }
+
         public Builder entityTypes(String... entityTypes) {
             return entityTypes(List.of(entityTypes));
-        }        public JobEntityDetectorConfiguration build() {
-            return new JobEntityDetectorConfiguration(allowedStatistics, entityTypes);
+        }
+
+        public JobEntityDetectorConfiguration build() {
+            $.entityTypes = Objects.requireNonNull($.entityTypes, "expected parameter 'entityTypes' to be non-null");
+            return $;
         }
     }
+
 }

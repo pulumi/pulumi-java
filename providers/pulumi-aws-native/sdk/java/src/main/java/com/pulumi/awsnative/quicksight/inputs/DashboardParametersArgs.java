@@ -9,9 +9,9 @@ import com.pulumi.awsnative.quicksight.inputs.DashboardIntegerParameterArgs;
 import com.pulumi.awsnative.quicksight.inputs.DashboardStringParameterArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -28,10 +28,10 @@ public final class DashboardParametersArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="dateTimeParameters")
-      private final @Nullable Output<List<DashboardDateTimeParameterArgs>> dateTimeParameters;
+    private @Nullable Output<List<DashboardDateTimeParameterArgs>> dateTimeParameters;
 
-    public Output<List<DashboardDateTimeParameterArgs>> dateTimeParameters() {
-        return this.dateTimeParameters == null ? Codegen.empty() : this.dateTimeParameters;
+    public Optional<Output<List<DashboardDateTimeParameterArgs>>> dateTimeParameters() {
+        return Optional.ofNullable(this.dateTimeParameters);
     }
 
     /**
@@ -39,10 +39,10 @@ public final class DashboardParametersArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="decimalParameters")
-      private final @Nullable Output<List<DashboardDecimalParameterArgs>> decimalParameters;
+    private @Nullable Output<List<DashboardDecimalParameterArgs>> decimalParameters;
 
-    public Output<List<DashboardDecimalParameterArgs>> decimalParameters() {
-        return this.decimalParameters == null ? Codegen.empty() : this.decimalParameters;
+    public Optional<Output<List<DashboardDecimalParameterArgs>>> decimalParameters() {
+        return Optional.ofNullable(this.decimalParameters);
     }
 
     /**
@@ -50,10 +50,10 @@ public final class DashboardParametersArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="integerParameters")
-      private final @Nullable Output<List<DashboardIntegerParameterArgs>> integerParameters;
+    private @Nullable Output<List<DashboardIntegerParameterArgs>> integerParameters;
 
-    public Output<List<DashboardIntegerParameterArgs>> integerParameters() {
-        return this.integerParameters == null ? Codegen.empty() : this.integerParameters;
+    public Optional<Output<List<DashboardIntegerParameterArgs>>> integerParameters() {
+        return Optional.ofNullable(this.integerParameters);
     }
 
     /**
@@ -61,101 +61,94 @@ public final class DashboardParametersArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="stringParameters")
-      private final @Nullable Output<List<DashboardStringParameterArgs>> stringParameters;
+    private @Nullable Output<List<DashboardStringParameterArgs>> stringParameters;
 
-    public Output<List<DashboardStringParameterArgs>> stringParameters() {
-        return this.stringParameters == null ? Codegen.empty() : this.stringParameters;
+    public Optional<Output<List<DashboardStringParameterArgs>>> stringParameters() {
+        return Optional.ofNullable(this.stringParameters);
     }
 
-    public DashboardParametersArgs(
-        @Nullable Output<List<DashboardDateTimeParameterArgs>> dateTimeParameters,
-        @Nullable Output<List<DashboardDecimalParameterArgs>> decimalParameters,
-        @Nullable Output<List<DashboardIntegerParameterArgs>> integerParameters,
-        @Nullable Output<List<DashboardStringParameterArgs>> stringParameters) {
-        this.dateTimeParameters = dateTimeParameters;
-        this.decimalParameters = decimalParameters;
-        this.integerParameters = integerParameters;
-        this.stringParameters = stringParameters;
-    }
+    private DashboardParametersArgs() {}
 
-    private DashboardParametersArgs() {
-        this.dateTimeParameters = Codegen.empty();
-        this.decimalParameters = Codegen.empty();
-        this.integerParameters = Codegen.empty();
-        this.stringParameters = Codegen.empty();
+    private DashboardParametersArgs(DashboardParametersArgs $) {
+        this.dateTimeParameters = $.dateTimeParameters;
+        this.decimalParameters = $.decimalParameters;
+        this.integerParameters = $.integerParameters;
+        this.stringParameters = $.stringParameters;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DashboardParametersArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<DashboardDateTimeParameterArgs>> dateTimeParameters;
-        private @Nullable Output<List<DashboardDecimalParameterArgs>> decimalParameters;
-        private @Nullable Output<List<DashboardIntegerParameterArgs>> integerParameters;
-        private @Nullable Output<List<DashboardStringParameterArgs>> stringParameters;
+        private DashboardParametersArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DashboardParametersArgs();
         }
 
         public Builder(DashboardParametersArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dateTimeParameters = defaults.dateTimeParameters;
-    	      this.decimalParameters = defaults.decimalParameters;
-    	      this.integerParameters = defaults.integerParameters;
-    	      this.stringParameters = defaults.stringParameters;
+            $ = new DashboardParametersArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder dateTimeParameters(@Nullable Output<List<DashboardDateTimeParameterArgs>> dateTimeParameters) {
-            this.dateTimeParameters = dateTimeParameters;
+            $.dateTimeParameters = dateTimeParameters;
             return this;
         }
-        public Builder dateTimeParameters(@Nullable List<DashboardDateTimeParameterArgs> dateTimeParameters) {
-            this.dateTimeParameters = Codegen.ofNullable(dateTimeParameters);
-            return this;
+
+        public Builder dateTimeParameters(List<DashboardDateTimeParameterArgs> dateTimeParameters) {
+            return dateTimeParameters(Output.of(dateTimeParameters));
         }
+
         public Builder dateTimeParameters(DashboardDateTimeParameterArgs... dateTimeParameters) {
             return dateTimeParameters(List.of(dateTimeParameters));
         }
+
         public Builder decimalParameters(@Nullable Output<List<DashboardDecimalParameterArgs>> decimalParameters) {
-            this.decimalParameters = decimalParameters;
+            $.decimalParameters = decimalParameters;
             return this;
         }
-        public Builder decimalParameters(@Nullable List<DashboardDecimalParameterArgs> decimalParameters) {
-            this.decimalParameters = Codegen.ofNullable(decimalParameters);
-            return this;
+
+        public Builder decimalParameters(List<DashboardDecimalParameterArgs> decimalParameters) {
+            return decimalParameters(Output.of(decimalParameters));
         }
+
         public Builder decimalParameters(DashboardDecimalParameterArgs... decimalParameters) {
             return decimalParameters(List.of(decimalParameters));
         }
+
         public Builder integerParameters(@Nullable Output<List<DashboardIntegerParameterArgs>> integerParameters) {
-            this.integerParameters = integerParameters;
+            $.integerParameters = integerParameters;
             return this;
         }
-        public Builder integerParameters(@Nullable List<DashboardIntegerParameterArgs> integerParameters) {
-            this.integerParameters = Codegen.ofNullable(integerParameters);
-            return this;
+
+        public Builder integerParameters(List<DashboardIntegerParameterArgs> integerParameters) {
+            return integerParameters(Output.of(integerParameters));
         }
+
         public Builder integerParameters(DashboardIntegerParameterArgs... integerParameters) {
             return integerParameters(List.of(integerParameters));
         }
+
         public Builder stringParameters(@Nullable Output<List<DashboardStringParameterArgs>> stringParameters) {
-            this.stringParameters = stringParameters;
+            $.stringParameters = stringParameters;
             return this;
         }
-        public Builder stringParameters(@Nullable List<DashboardStringParameterArgs> stringParameters) {
-            this.stringParameters = Codegen.ofNullable(stringParameters);
-            return this;
+
+        public Builder stringParameters(List<DashboardStringParameterArgs> stringParameters) {
+            return stringParameters(Output.of(stringParameters));
         }
+
         public Builder stringParameters(DashboardStringParameterArgs... stringParameters) {
             return stringParameters(List.of(stringParameters));
-        }        public DashboardParametersArgs build() {
-            return new DashboardParametersArgs(dateTimeParameters, decimalParameters, integerParameters, stringParameters);
+        }
+
+        public DashboardParametersArgs build() {
+            return $;
         }
     }
+
 }

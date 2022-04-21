@@ -24,7 +24,7 @@ public final class VirtualNetworkGatewaySkuResponse extends com.pulumi.resources
      * 
      */
     @Import(name="capacity", required=true)
-      private final Integer capacity;
+    private Integer capacity;
 
     public Integer capacity() {
         return this.capacity;
@@ -35,10 +35,10 @@ public final class VirtualNetworkGatewaySkuResponse extends com.pulumi.resources
      * 
      */
     @Import(name="name")
-      private final @Nullable String name;
+    private @Nullable String name;
 
     public Optional<String> name() {
-        return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -46,64 +46,57 @@ public final class VirtualNetworkGatewaySkuResponse extends com.pulumi.resources
      * 
      */
     @Import(name="tier")
-      private final @Nullable String tier;
+    private @Nullable String tier;
 
     public Optional<String> tier() {
-        return this.tier == null ? Optional.empty() : Optional.ofNullable(this.tier);
+        return Optional.ofNullable(this.tier);
     }
 
-    public VirtualNetworkGatewaySkuResponse(
-        Integer capacity,
-        @Nullable String name,
-        @Nullable String tier) {
-        this.capacity = Objects.requireNonNull(capacity, "expected parameter 'capacity' to be non-null");
-        this.name = name;
-        this.tier = tier;
-    }
+    private VirtualNetworkGatewaySkuResponse() {}
 
-    private VirtualNetworkGatewaySkuResponse() {
-        this.capacity = null;
-        this.name = null;
-        this.tier = null;
+    private VirtualNetworkGatewaySkuResponse(VirtualNetworkGatewaySkuResponse $) {
+        this.capacity = $.capacity;
+        this.name = $.name;
+        this.tier = $.tier;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VirtualNetworkGatewaySkuResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Integer capacity;
-        private @Nullable String name;
-        private @Nullable String tier;
+        private VirtualNetworkGatewaySkuResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new VirtualNetworkGatewaySkuResponse();
         }
 
         public Builder(VirtualNetworkGatewaySkuResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.capacity = defaults.capacity;
-    	      this.name = defaults.name;
-    	      this.tier = defaults.tier;
+            $ = new VirtualNetworkGatewaySkuResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder capacity(Integer capacity) {
-            this.capacity = Objects.requireNonNull(capacity);
+            $.capacity = capacity;
             return this;
         }
+
         public Builder name(@Nullable String name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
+
         public Builder tier(@Nullable String tier) {
-            this.tier = tier;
+            $.tier = tier;
             return this;
-        }        public VirtualNetworkGatewaySkuResponse build() {
-            return new VirtualNetworkGatewaySkuResponse(capacity, name, tier);
+        }
+
+        public VirtualNetworkGatewaySkuResponse build() {
+            $.capacity = Objects.requireNonNull($.capacity, "expected parameter 'capacity' to be non-null");
+            return $;
         }
     }
+
 }

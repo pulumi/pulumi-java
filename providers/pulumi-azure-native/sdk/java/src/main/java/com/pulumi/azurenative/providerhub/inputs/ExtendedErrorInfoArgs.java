@@ -6,10 +6,10 @@ package com.pulumi.azurenative.providerhub.inputs;
 import com.pulumi.azurenative.providerhub.inputs.TypedErrorInfoArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -18,136 +18,124 @@ public final class ExtendedErrorInfoArgs extends com.pulumi.resources.ResourceAr
     public static final ExtendedErrorInfoArgs Empty = new ExtendedErrorInfoArgs();
 
     @Import(name="additionalInfo")
-      private final @Nullable Output<List<TypedErrorInfoArgs>> additionalInfo;
+    private @Nullable Output<List<TypedErrorInfoArgs>> additionalInfo;
 
-    public Output<List<TypedErrorInfoArgs>> additionalInfo() {
-        return this.additionalInfo == null ? Codegen.empty() : this.additionalInfo;
+    public Optional<Output<List<TypedErrorInfoArgs>>> additionalInfo() {
+        return Optional.ofNullable(this.additionalInfo);
     }
 
     @Import(name="code")
-      private final @Nullable Output<String> code;
+    private @Nullable Output<String> code;
 
-    public Output<String> code() {
-        return this.code == null ? Codegen.empty() : this.code;
+    public Optional<Output<String>> code() {
+        return Optional.ofNullable(this.code);
     }
 
     @Import(name="details")
-      private final @Nullable Output<List<ExtendedErrorInfoArgs>> details;
+    private @Nullable Output<List<ExtendedErrorInfoArgs>> details;
 
-    public Output<List<ExtendedErrorInfoArgs>> details() {
-        return this.details == null ? Codegen.empty() : this.details;
+    public Optional<Output<List<ExtendedErrorInfoArgs>>> details() {
+        return Optional.ofNullable(this.details);
     }
 
     @Import(name="message")
-      private final @Nullable Output<String> message;
+    private @Nullable Output<String> message;
 
-    public Output<String> message() {
-        return this.message == null ? Codegen.empty() : this.message;
+    public Optional<Output<String>> message() {
+        return Optional.ofNullable(this.message);
     }
 
     @Import(name="target")
-      private final @Nullable Output<String> target;
+    private @Nullable Output<String> target;
 
-    public Output<String> target() {
-        return this.target == null ? Codegen.empty() : this.target;
+    public Optional<Output<String>> target() {
+        return Optional.ofNullable(this.target);
     }
 
-    public ExtendedErrorInfoArgs(
-        @Nullable Output<List<TypedErrorInfoArgs>> additionalInfo,
-        @Nullable Output<String> code,
-        @Nullable Output<List<ExtendedErrorInfoArgs>> details,
-        @Nullable Output<String> message,
-        @Nullable Output<String> target) {
-        this.additionalInfo = additionalInfo;
-        this.code = code;
-        this.details = details;
-        this.message = message;
-        this.target = target;
-    }
+    private ExtendedErrorInfoArgs() {}
 
-    private ExtendedErrorInfoArgs() {
-        this.additionalInfo = Codegen.empty();
-        this.code = Codegen.empty();
-        this.details = Codegen.empty();
-        this.message = Codegen.empty();
-        this.target = Codegen.empty();
+    private ExtendedErrorInfoArgs(ExtendedErrorInfoArgs $) {
+        this.additionalInfo = $.additionalInfo;
+        this.code = $.code;
+        this.details = $.details;
+        this.message = $.message;
+        this.target = $.target;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ExtendedErrorInfoArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<TypedErrorInfoArgs>> additionalInfo;
-        private @Nullable Output<String> code;
-        private @Nullable Output<List<ExtendedErrorInfoArgs>> details;
-        private @Nullable Output<String> message;
-        private @Nullable Output<String> target;
+        private ExtendedErrorInfoArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ExtendedErrorInfoArgs();
         }
 
         public Builder(ExtendedErrorInfoArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.additionalInfo = defaults.additionalInfo;
-    	      this.code = defaults.code;
-    	      this.details = defaults.details;
-    	      this.message = defaults.message;
-    	      this.target = defaults.target;
+            $ = new ExtendedErrorInfoArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder additionalInfo(@Nullable Output<List<TypedErrorInfoArgs>> additionalInfo) {
-            this.additionalInfo = additionalInfo;
+            $.additionalInfo = additionalInfo;
             return this;
         }
-        public Builder additionalInfo(@Nullable List<TypedErrorInfoArgs> additionalInfo) {
-            this.additionalInfo = Codegen.ofNullable(additionalInfo);
-            return this;
+
+        public Builder additionalInfo(List<TypedErrorInfoArgs> additionalInfo) {
+            return additionalInfo(Output.of(additionalInfo));
         }
+
         public Builder additionalInfo(TypedErrorInfoArgs... additionalInfo) {
             return additionalInfo(List.of(additionalInfo));
         }
+
         public Builder code(@Nullable Output<String> code) {
-            this.code = code;
+            $.code = code;
             return this;
         }
-        public Builder code(@Nullable String code) {
-            this.code = Codegen.ofNullable(code);
-            return this;
+
+        public Builder code(String code) {
+            return code(Output.of(code));
         }
+
         public Builder details(@Nullable Output<List<ExtendedErrorInfoArgs>> details) {
-            this.details = details;
+            $.details = details;
             return this;
         }
-        public Builder details(@Nullable List<ExtendedErrorInfoArgs> details) {
-            this.details = Codegen.ofNullable(details);
-            return this;
+
+        public Builder details(List<ExtendedErrorInfoArgs> details) {
+            return details(Output.of(details));
         }
+
         public Builder details(ExtendedErrorInfoArgs... details) {
             return details(List.of(details));
         }
+
         public Builder message(@Nullable Output<String> message) {
-            this.message = message;
+            $.message = message;
             return this;
         }
-        public Builder message(@Nullable String message) {
-            this.message = Codegen.ofNullable(message);
-            return this;
+
+        public Builder message(String message) {
+            return message(Output.of(message));
         }
+
         public Builder target(@Nullable Output<String> target) {
-            this.target = target;
+            $.target = target;
             return this;
         }
-        public Builder target(@Nullable String target) {
-            this.target = Codegen.ofNullable(target);
-            return this;
-        }        public ExtendedErrorInfoArgs build() {
-            return new ExtendedErrorInfoArgs(additionalInfo, code, details, message, target);
+
+        public Builder target(String target) {
+            return target(Output.of(target));
+        }
+
+        public ExtendedErrorInfoArgs build() {
+            return $;
         }
     }
+
 }

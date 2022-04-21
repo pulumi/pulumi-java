@@ -5,9 +5,9 @@ package com.pulumi.gcp.certificateauthority.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -16,49 +16,48 @@ public final class CertificateCertificateDescriptionCertFingerprintArgs extends 
     public static final CertificateCertificateDescriptionCertFingerprintArgs Empty = new CertificateCertificateDescriptionCertFingerprintArgs();
 
     @Import(name="sha256Hash")
-      private final @Nullable Output<String> sha256Hash;
+    private @Nullable Output<String> sha256Hash;
 
-    public Output<String> sha256Hash() {
-        return this.sha256Hash == null ? Codegen.empty() : this.sha256Hash;
+    public Optional<Output<String>> sha256Hash() {
+        return Optional.ofNullable(this.sha256Hash);
     }
 
-    public CertificateCertificateDescriptionCertFingerprintArgs(@Nullable Output<String> sha256Hash) {
-        this.sha256Hash = sha256Hash;
-    }
+    private CertificateCertificateDescriptionCertFingerprintArgs() {}
 
-    private CertificateCertificateDescriptionCertFingerprintArgs() {
-        this.sha256Hash = Codegen.empty();
+    private CertificateCertificateDescriptionCertFingerprintArgs(CertificateCertificateDescriptionCertFingerprintArgs $) {
+        this.sha256Hash = $.sha256Hash;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CertificateCertificateDescriptionCertFingerprintArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> sha256Hash;
+        private CertificateCertificateDescriptionCertFingerprintArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CertificateCertificateDescriptionCertFingerprintArgs();
         }
 
         public Builder(CertificateCertificateDescriptionCertFingerprintArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.sha256Hash = defaults.sha256Hash;
+            $ = new CertificateCertificateDescriptionCertFingerprintArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder sha256Hash(@Nullable Output<String> sha256Hash) {
-            this.sha256Hash = sha256Hash;
+            $.sha256Hash = sha256Hash;
             return this;
         }
-        public Builder sha256Hash(@Nullable String sha256Hash) {
-            this.sha256Hash = Codegen.ofNullable(sha256Hash);
-            return this;
-        }        public CertificateCertificateDescriptionCertFingerprintArgs build() {
-            return new CertificateCertificateDescriptionCertFingerprintArgs(sha256Hash);
+
+        public Builder sha256Hash(String sha256Hash) {
+            return sha256Hash(Output.of(sha256Hash));
+        }
+
+        public CertificateCertificateDescriptionCertFingerprintArgs build() {
+            return $;
         }
     }
+
 }

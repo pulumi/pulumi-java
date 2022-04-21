@@ -17,7 +17,7 @@ public final class GetRoleManagementPolicyAssignmentArgs extends com.pulumi.reso
      * 
      */
     @Import(name="roleManagementPolicyAssignmentName", required=true)
-      private final String roleManagementPolicyAssignmentName;
+    private String roleManagementPolicyAssignmentName;
 
     public String roleManagementPolicyAssignmentName() {
         return this.roleManagementPolicyAssignmentName;
@@ -28,55 +28,52 @@ public final class GetRoleManagementPolicyAssignmentArgs extends com.pulumi.reso
      * 
      */
     @Import(name="scope", required=true)
-      private final String scope;
+    private String scope;
 
     public String scope() {
         return this.scope;
     }
 
-    public GetRoleManagementPolicyAssignmentArgs(
-        String roleManagementPolicyAssignmentName,
-        String scope) {
-        this.roleManagementPolicyAssignmentName = Objects.requireNonNull(roleManagementPolicyAssignmentName, "expected parameter 'roleManagementPolicyAssignmentName' to be non-null");
-        this.scope = Objects.requireNonNull(scope, "expected parameter 'scope' to be non-null");
-    }
+    private GetRoleManagementPolicyAssignmentArgs() {}
 
-    private GetRoleManagementPolicyAssignmentArgs() {
-        this.roleManagementPolicyAssignmentName = null;
-        this.scope = null;
+    private GetRoleManagementPolicyAssignmentArgs(GetRoleManagementPolicyAssignmentArgs $) {
+        this.roleManagementPolicyAssignmentName = $.roleManagementPolicyAssignmentName;
+        this.scope = $.scope;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetRoleManagementPolicyAssignmentArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String roleManagementPolicyAssignmentName;
-        private String scope;
+        private GetRoleManagementPolicyAssignmentArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetRoleManagementPolicyAssignmentArgs();
         }
 
         public Builder(GetRoleManagementPolicyAssignmentArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.roleManagementPolicyAssignmentName = defaults.roleManagementPolicyAssignmentName;
-    	      this.scope = defaults.scope;
+            $ = new GetRoleManagementPolicyAssignmentArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder roleManagementPolicyAssignmentName(String roleManagementPolicyAssignmentName) {
-            this.roleManagementPolicyAssignmentName = Objects.requireNonNull(roleManagementPolicyAssignmentName);
+            $.roleManagementPolicyAssignmentName = roleManagementPolicyAssignmentName;
             return this;
         }
+
         public Builder scope(String scope) {
-            this.scope = Objects.requireNonNull(scope);
+            $.scope = scope;
             return this;
-        }        public GetRoleManagementPolicyAssignmentArgs build() {
-            return new GetRoleManagementPolicyAssignmentArgs(roleManagementPolicyAssignmentName, scope);
+        }
+
+        public GetRoleManagementPolicyAssignmentArgs build() {
+            $.roleManagementPolicyAssignmentName = Objects.requireNonNull($.roleManagementPolicyAssignmentName, "expected parameter 'roleManagementPolicyAssignmentName' to be non-null");
+            $.scope = Objects.requireNonNull($.scope, "expected parameter 'scope' to be non-null");
+            return $;
         }
     }
+
 }

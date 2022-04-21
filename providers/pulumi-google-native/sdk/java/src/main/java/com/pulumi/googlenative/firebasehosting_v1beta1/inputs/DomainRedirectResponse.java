@@ -21,7 +21,7 @@ public final class DomainRedirectResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="domainName", required=true)
-      private final String domainName;
+    private String domainName;
 
     public String domainName() {
         return this.domainName;
@@ -32,55 +32,52 @@ public final class DomainRedirectResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
     }
 
-    public DomainRedirectResponse(
-        String domainName,
-        String type) {
-        this.domainName = Objects.requireNonNull(domainName, "expected parameter 'domainName' to be non-null");
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private DomainRedirectResponse() {}
 
-    private DomainRedirectResponse() {
-        this.domainName = null;
-        this.type = null;
+    private DomainRedirectResponse(DomainRedirectResponse $) {
+        this.domainName = $.domainName;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DomainRedirectResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String domainName;
-        private String type;
+        private DomainRedirectResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new DomainRedirectResponse();
         }
 
         public Builder(DomainRedirectResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.domainName = defaults.domainName;
-    	      this.type = defaults.type;
+            $ = new DomainRedirectResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder domainName(String domainName) {
-            this.domainName = Objects.requireNonNull(domainName);
+            $.domainName = domainName;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
-        }        public DomainRedirectResponse build() {
-            return new DomainRedirectResponse(domainName, type);
+        }
+
+        public DomainRedirectResponse build() {
+            $.domainName = Objects.requireNonNull($.domainName, "expected parameter 'domainName' to be non-null");
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

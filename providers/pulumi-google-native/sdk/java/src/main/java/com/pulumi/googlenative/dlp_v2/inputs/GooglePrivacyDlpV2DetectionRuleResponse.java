@@ -21,45 +21,45 @@ public final class GooglePrivacyDlpV2DetectionRuleResponse extends com.pulumi.re
      * 
      */
     @Import(name="hotwordRule", required=true)
-      private final GooglePrivacyDlpV2HotwordRuleResponse hotwordRule;
+    private GooglePrivacyDlpV2HotwordRuleResponse hotwordRule;
 
     public GooglePrivacyDlpV2HotwordRuleResponse hotwordRule() {
         return this.hotwordRule;
     }
 
-    public GooglePrivacyDlpV2DetectionRuleResponse(GooglePrivacyDlpV2HotwordRuleResponse hotwordRule) {
-        this.hotwordRule = Objects.requireNonNull(hotwordRule, "expected parameter 'hotwordRule' to be non-null");
-    }
+    private GooglePrivacyDlpV2DetectionRuleResponse() {}
 
-    private GooglePrivacyDlpV2DetectionRuleResponse() {
-        this.hotwordRule = null;
+    private GooglePrivacyDlpV2DetectionRuleResponse(GooglePrivacyDlpV2DetectionRuleResponse $) {
+        this.hotwordRule = $.hotwordRule;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GooglePrivacyDlpV2DetectionRuleResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private GooglePrivacyDlpV2HotwordRuleResponse hotwordRule;
+        private GooglePrivacyDlpV2DetectionRuleResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GooglePrivacyDlpV2DetectionRuleResponse();
         }
 
         public Builder(GooglePrivacyDlpV2DetectionRuleResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.hotwordRule = defaults.hotwordRule;
+            $ = new GooglePrivacyDlpV2DetectionRuleResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder hotwordRule(GooglePrivacyDlpV2HotwordRuleResponse hotwordRule) {
-            this.hotwordRule = Objects.requireNonNull(hotwordRule);
+            $.hotwordRule = hotwordRule;
             return this;
-        }        public GooglePrivacyDlpV2DetectionRuleResponse build() {
-            return new GooglePrivacyDlpV2DetectionRuleResponse(hotwordRule);
+        }
+
+        public GooglePrivacyDlpV2DetectionRuleResponse build() {
+            $.hotwordRule = Objects.requireNonNull($.hotwordRule, "expected parameter 'hotwordRule' to be non-null");
+            return $;
         }
     }
+
 }

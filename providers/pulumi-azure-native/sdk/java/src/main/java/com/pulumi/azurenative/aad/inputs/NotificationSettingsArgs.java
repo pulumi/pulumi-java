@@ -8,10 +8,10 @@ import com.pulumi.azurenative.aad.enums.NotifyGlobalAdmins;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -28,10 +28,10 @@ public final class NotificationSettingsArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="additionalRecipients")
-      private final @Nullable Output<List<String>> additionalRecipients;
+    private @Nullable Output<List<String>> additionalRecipients;
 
-    public Output<List<String>> additionalRecipients() {
-        return this.additionalRecipients == null ? Codegen.empty() : this.additionalRecipients;
+    public Optional<Output<List<String>>> additionalRecipients() {
+        return Optional.ofNullable(this.additionalRecipients);
     }
 
     /**
@@ -39,10 +39,10 @@ public final class NotificationSettingsArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="notifyDcAdmins")
-      private final @Nullable Output<Either<String,NotifyDcAdmins>> notifyDcAdmins;
+    private @Nullable Output<Either<String,NotifyDcAdmins>> notifyDcAdmins;
 
-    public Output<Either<String,NotifyDcAdmins>> notifyDcAdmins() {
-        return this.notifyDcAdmins == null ? Codegen.empty() : this.notifyDcAdmins;
+    public Optional<Output<Either<String,NotifyDcAdmins>>> notifyDcAdmins() {
+        return Optional.ofNullable(this.notifyDcAdmins);
     }
 
     /**
@@ -50,79 +50,72 @@ public final class NotificationSettingsArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="notifyGlobalAdmins")
-      private final @Nullable Output<Either<String,NotifyGlobalAdmins>> notifyGlobalAdmins;
+    private @Nullable Output<Either<String,NotifyGlobalAdmins>> notifyGlobalAdmins;
 
-    public Output<Either<String,NotifyGlobalAdmins>> notifyGlobalAdmins() {
-        return this.notifyGlobalAdmins == null ? Codegen.empty() : this.notifyGlobalAdmins;
+    public Optional<Output<Either<String,NotifyGlobalAdmins>>> notifyGlobalAdmins() {
+        return Optional.ofNullable(this.notifyGlobalAdmins);
     }
 
-    public NotificationSettingsArgs(
-        @Nullable Output<List<String>> additionalRecipients,
-        @Nullable Output<Either<String,NotifyDcAdmins>> notifyDcAdmins,
-        @Nullable Output<Either<String,NotifyGlobalAdmins>> notifyGlobalAdmins) {
-        this.additionalRecipients = additionalRecipients;
-        this.notifyDcAdmins = notifyDcAdmins;
-        this.notifyGlobalAdmins = notifyGlobalAdmins;
-    }
+    private NotificationSettingsArgs() {}
 
-    private NotificationSettingsArgs() {
-        this.additionalRecipients = Codegen.empty();
-        this.notifyDcAdmins = Codegen.empty();
-        this.notifyGlobalAdmins = Codegen.empty();
+    private NotificationSettingsArgs(NotificationSettingsArgs $) {
+        this.additionalRecipients = $.additionalRecipients;
+        this.notifyDcAdmins = $.notifyDcAdmins;
+        this.notifyGlobalAdmins = $.notifyGlobalAdmins;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NotificationSettingsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> additionalRecipients;
-        private @Nullable Output<Either<String,NotifyDcAdmins>> notifyDcAdmins;
-        private @Nullable Output<Either<String,NotifyGlobalAdmins>> notifyGlobalAdmins;
+        private NotificationSettingsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new NotificationSettingsArgs();
         }
 
         public Builder(NotificationSettingsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.additionalRecipients = defaults.additionalRecipients;
-    	      this.notifyDcAdmins = defaults.notifyDcAdmins;
-    	      this.notifyGlobalAdmins = defaults.notifyGlobalAdmins;
+            $ = new NotificationSettingsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder additionalRecipients(@Nullable Output<List<String>> additionalRecipients) {
-            this.additionalRecipients = additionalRecipients;
+            $.additionalRecipients = additionalRecipients;
             return this;
         }
-        public Builder additionalRecipients(@Nullable List<String> additionalRecipients) {
-            this.additionalRecipients = Codegen.ofNullable(additionalRecipients);
-            return this;
+
+        public Builder additionalRecipients(List<String> additionalRecipients) {
+            return additionalRecipients(Output.of(additionalRecipients));
         }
+
         public Builder additionalRecipients(String... additionalRecipients) {
             return additionalRecipients(List.of(additionalRecipients));
         }
+
         public Builder notifyDcAdmins(@Nullable Output<Either<String,NotifyDcAdmins>> notifyDcAdmins) {
-            this.notifyDcAdmins = notifyDcAdmins;
+            $.notifyDcAdmins = notifyDcAdmins;
             return this;
         }
-        public Builder notifyDcAdmins(@Nullable Either<String,NotifyDcAdmins> notifyDcAdmins) {
-            this.notifyDcAdmins = Codegen.ofNullable(notifyDcAdmins);
-            return this;
+
+        public Builder notifyDcAdmins(Either<String,NotifyDcAdmins> notifyDcAdmins) {
+            return notifyDcAdmins(Output.of(notifyDcAdmins));
         }
+
         public Builder notifyGlobalAdmins(@Nullable Output<Either<String,NotifyGlobalAdmins>> notifyGlobalAdmins) {
-            this.notifyGlobalAdmins = notifyGlobalAdmins;
+            $.notifyGlobalAdmins = notifyGlobalAdmins;
             return this;
         }
-        public Builder notifyGlobalAdmins(@Nullable Either<String,NotifyGlobalAdmins> notifyGlobalAdmins) {
-            this.notifyGlobalAdmins = Codegen.ofNullable(notifyGlobalAdmins);
-            return this;
-        }        public NotificationSettingsArgs build() {
-            return new NotificationSettingsArgs(additionalRecipients, notifyDcAdmins, notifyGlobalAdmins);
+
+        public Builder notifyGlobalAdmins(Either<String,NotifyGlobalAdmins> notifyGlobalAdmins) {
+            return notifyGlobalAdmins(Output.of(notifyGlobalAdmins));
+        }
+
+        public NotificationSettingsArgs build() {
+            return $;
         }
     }
+
 }

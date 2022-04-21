@@ -30,10 +30,10 @@ public final class OriginEndpointHlsManifest extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="adMarkers")
-      private final @Nullable OriginEndpointHlsManifestAdMarkers adMarkers;
+    private @Nullable OriginEndpointHlsManifestAdMarkers adMarkers;
 
     public Optional<OriginEndpointHlsManifestAdMarkers> adMarkers() {
-        return this.adMarkers == null ? Optional.empty() : Optional.ofNullable(this.adMarkers);
+        return Optional.ofNullable(this.adMarkers);
     }
 
     /**
@@ -41,17 +41,17 @@ public final class OriginEndpointHlsManifest extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="adTriggers")
-      private final @Nullable List<OriginEndpointHlsManifestAdTriggersItem> adTriggers;
+    private @Nullable List<OriginEndpointHlsManifestAdTriggersItem> adTriggers;
 
-    public List<OriginEndpointHlsManifestAdTriggersItem> adTriggers() {
-        return this.adTriggers == null ? List.of() : this.adTriggers;
+    public Optional<List<OriginEndpointHlsManifestAdTriggersItem>> adTriggers() {
+        return Optional.ofNullable(this.adTriggers);
     }
 
     @Import(name="adsOnDeliveryRestrictions")
-      private final @Nullable OriginEndpointAdsOnDeliveryRestrictions adsOnDeliveryRestrictions;
+    private @Nullable OriginEndpointAdsOnDeliveryRestrictions adsOnDeliveryRestrictions;
 
     public Optional<OriginEndpointAdsOnDeliveryRestrictions> adsOnDeliveryRestrictions() {
-        return this.adsOnDeliveryRestrictions == null ? Optional.empty() : Optional.ofNullable(this.adsOnDeliveryRestrictions);
+        return Optional.ofNullable(this.adsOnDeliveryRestrictions);
     }
 
     /**
@@ -59,7 +59,7 @@ public final class OriginEndpointHlsManifest extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="id", required=true)
-      private final String id;
+    private String id;
 
     public String id() {
         return this.id;
@@ -70,10 +70,10 @@ public final class OriginEndpointHlsManifest extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="includeIframeOnlyStream")
-      private final @Nullable Boolean includeIframeOnlyStream;
+    private @Nullable Boolean includeIframeOnlyStream;
 
     public Optional<Boolean> includeIframeOnlyStream() {
-        return this.includeIframeOnlyStream == null ? Optional.empty() : Optional.ofNullable(this.includeIframeOnlyStream);
+        return Optional.ofNullable(this.includeIframeOnlyStream);
     }
 
     /**
@@ -81,10 +81,10 @@ public final class OriginEndpointHlsManifest extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="manifestName")
-      private final @Nullable String manifestName;
+    private @Nullable String manifestName;
 
     public Optional<String> manifestName() {
-        return this.manifestName == null ? Optional.empty() : Optional.ofNullable(this.manifestName);
+        return Optional.ofNullable(this.manifestName);
     }
 
     /**
@@ -92,10 +92,10 @@ public final class OriginEndpointHlsManifest extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="playlistType")
-      private final @Nullable OriginEndpointHlsManifestPlaylistType playlistType;
+    private @Nullable OriginEndpointHlsManifestPlaylistType playlistType;
 
     public Optional<OriginEndpointHlsManifestPlaylistType> playlistType() {
-        return this.playlistType == null ? Optional.empty() : Optional.ofNullable(this.playlistType);
+        return Optional.ofNullable(this.playlistType);
     }
 
     /**
@@ -103,10 +103,10 @@ public final class OriginEndpointHlsManifest extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="playlistWindowSeconds")
-      private final @Nullable Integer playlistWindowSeconds;
+    private @Nullable Integer playlistWindowSeconds;
 
     public Optional<Integer> playlistWindowSeconds() {
-        return this.playlistWindowSeconds == null ? Optional.empty() : Optional.ofNullable(this.playlistWindowSeconds);
+        return Optional.ofNullable(this.playlistWindowSeconds);
     }
 
     /**
@@ -114,10 +114,10 @@ public final class OriginEndpointHlsManifest extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="programDateTimeIntervalSeconds")
-      private final @Nullable Integer programDateTimeIntervalSeconds;
+    private @Nullable Integer programDateTimeIntervalSeconds;
 
     public Optional<Integer> programDateTimeIntervalSeconds() {
-        return this.programDateTimeIntervalSeconds == null ? Optional.empty() : Optional.ofNullable(this.programDateTimeIntervalSeconds);
+        return Optional.ofNullable(this.programDateTimeIntervalSeconds);
     }
 
     /**
@@ -125,130 +125,103 @@ public final class OriginEndpointHlsManifest extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="url")
-      private final @Nullable String url;
+    private @Nullable String url;
 
     public Optional<String> url() {
-        return this.url == null ? Optional.empty() : Optional.ofNullable(this.url);
+        return Optional.ofNullable(this.url);
     }
 
-    public OriginEndpointHlsManifest(
-        @Nullable OriginEndpointHlsManifestAdMarkers adMarkers,
-        @Nullable List<OriginEndpointHlsManifestAdTriggersItem> adTriggers,
-        @Nullable OriginEndpointAdsOnDeliveryRestrictions adsOnDeliveryRestrictions,
-        String id,
-        @Nullable Boolean includeIframeOnlyStream,
-        @Nullable String manifestName,
-        @Nullable OriginEndpointHlsManifestPlaylistType playlistType,
-        @Nullable Integer playlistWindowSeconds,
-        @Nullable Integer programDateTimeIntervalSeconds,
-        @Nullable String url) {
-        this.adMarkers = adMarkers;
-        this.adTriggers = adTriggers;
-        this.adsOnDeliveryRestrictions = adsOnDeliveryRestrictions;
-        this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
-        this.includeIframeOnlyStream = includeIframeOnlyStream;
-        this.manifestName = manifestName;
-        this.playlistType = playlistType;
-        this.playlistWindowSeconds = playlistWindowSeconds;
-        this.programDateTimeIntervalSeconds = programDateTimeIntervalSeconds;
-        this.url = url;
-    }
+    private OriginEndpointHlsManifest() {}
 
-    private OriginEndpointHlsManifest() {
-        this.adMarkers = null;
-        this.adTriggers = List.of();
-        this.adsOnDeliveryRestrictions = null;
-        this.id = null;
-        this.includeIframeOnlyStream = null;
-        this.manifestName = null;
-        this.playlistType = null;
-        this.playlistWindowSeconds = null;
-        this.programDateTimeIntervalSeconds = null;
-        this.url = null;
+    private OriginEndpointHlsManifest(OriginEndpointHlsManifest $) {
+        this.adMarkers = $.adMarkers;
+        this.adTriggers = $.adTriggers;
+        this.adsOnDeliveryRestrictions = $.adsOnDeliveryRestrictions;
+        this.id = $.id;
+        this.includeIframeOnlyStream = $.includeIframeOnlyStream;
+        this.manifestName = $.manifestName;
+        this.playlistType = $.playlistType;
+        this.playlistWindowSeconds = $.playlistWindowSeconds;
+        this.programDateTimeIntervalSeconds = $.programDateTimeIntervalSeconds;
+        this.url = $.url;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(OriginEndpointHlsManifest defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable OriginEndpointHlsManifestAdMarkers adMarkers;
-        private @Nullable List<OriginEndpointHlsManifestAdTriggersItem> adTriggers;
-        private @Nullable OriginEndpointAdsOnDeliveryRestrictions adsOnDeliveryRestrictions;
-        private String id;
-        private @Nullable Boolean includeIframeOnlyStream;
-        private @Nullable String manifestName;
-        private @Nullable OriginEndpointHlsManifestPlaylistType playlistType;
-        private @Nullable Integer playlistWindowSeconds;
-        private @Nullable Integer programDateTimeIntervalSeconds;
-        private @Nullable String url;
+        private OriginEndpointHlsManifest $;
 
         public Builder() {
-    	      // Empty
+            $ = new OriginEndpointHlsManifest();
         }
 
         public Builder(OriginEndpointHlsManifest defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.adMarkers = defaults.adMarkers;
-    	      this.adTriggers = defaults.adTriggers;
-    	      this.adsOnDeliveryRestrictions = defaults.adsOnDeliveryRestrictions;
-    	      this.id = defaults.id;
-    	      this.includeIframeOnlyStream = defaults.includeIframeOnlyStream;
-    	      this.manifestName = defaults.manifestName;
-    	      this.playlistType = defaults.playlistType;
-    	      this.playlistWindowSeconds = defaults.playlistWindowSeconds;
-    	      this.programDateTimeIntervalSeconds = defaults.programDateTimeIntervalSeconds;
-    	      this.url = defaults.url;
+            $ = new OriginEndpointHlsManifest(Objects.requireNonNull(defaults));
         }
 
         public Builder adMarkers(@Nullable OriginEndpointHlsManifestAdMarkers adMarkers) {
-            this.adMarkers = adMarkers;
+            $.adMarkers = adMarkers;
             return this;
         }
+
         public Builder adTriggers(@Nullable List<OriginEndpointHlsManifestAdTriggersItem> adTriggers) {
-            this.adTriggers = adTriggers;
+            $.adTriggers = adTriggers;
             return this;
         }
+
         public Builder adTriggers(OriginEndpointHlsManifestAdTriggersItem... adTriggers) {
             return adTriggers(List.of(adTriggers));
         }
+
         public Builder adsOnDeliveryRestrictions(@Nullable OriginEndpointAdsOnDeliveryRestrictions adsOnDeliveryRestrictions) {
-            this.adsOnDeliveryRestrictions = adsOnDeliveryRestrictions;
+            $.adsOnDeliveryRestrictions = adsOnDeliveryRestrictions;
             return this;
         }
+
         public Builder id(String id) {
-            this.id = Objects.requireNonNull(id);
+            $.id = id;
             return this;
         }
+
         public Builder includeIframeOnlyStream(@Nullable Boolean includeIframeOnlyStream) {
-            this.includeIframeOnlyStream = includeIframeOnlyStream;
+            $.includeIframeOnlyStream = includeIframeOnlyStream;
             return this;
         }
+
         public Builder manifestName(@Nullable String manifestName) {
-            this.manifestName = manifestName;
+            $.manifestName = manifestName;
             return this;
         }
+
         public Builder playlistType(@Nullable OriginEndpointHlsManifestPlaylistType playlistType) {
-            this.playlistType = playlistType;
+            $.playlistType = playlistType;
             return this;
         }
+
         public Builder playlistWindowSeconds(@Nullable Integer playlistWindowSeconds) {
-            this.playlistWindowSeconds = playlistWindowSeconds;
+            $.playlistWindowSeconds = playlistWindowSeconds;
             return this;
         }
+
         public Builder programDateTimeIntervalSeconds(@Nullable Integer programDateTimeIntervalSeconds) {
-            this.programDateTimeIntervalSeconds = programDateTimeIntervalSeconds;
+            $.programDateTimeIntervalSeconds = programDateTimeIntervalSeconds;
             return this;
         }
+
         public Builder url(@Nullable String url) {
-            this.url = url;
+            $.url = url;
             return this;
-        }        public OriginEndpointHlsManifest build() {
-            return new OriginEndpointHlsManifest(adMarkers, adTriggers, adsOnDeliveryRestrictions, id, includeIframeOnlyStream, manifestName, playlistType, playlistWindowSeconds, programDateTimeIntervalSeconds, url);
+        }
+
+        public OriginEndpointHlsManifest build() {
+            $.id = Objects.requireNonNull($.id, "expected parameter 'id' to be non-null");
+            return $;
         }
     }
+
 }

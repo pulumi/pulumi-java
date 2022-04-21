@@ -5,9 +5,9 @@ package com.pulumi.azurenative.logic.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class IpAddressRangeArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="addressRange")
-      private final @Nullable Output<String> addressRange;
+    private @Nullable Output<String> addressRange;
 
-    public Output<String> addressRange() {
-        return this.addressRange == null ? Codegen.empty() : this.addressRange;
+    public Optional<Output<String>> addressRange() {
+        return Optional.ofNullable(this.addressRange);
     }
 
-    public IpAddressRangeArgs(@Nullable Output<String> addressRange) {
-        this.addressRange = addressRange;
-    }
+    private IpAddressRangeArgs() {}
 
-    private IpAddressRangeArgs() {
-        this.addressRange = Codegen.empty();
+    private IpAddressRangeArgs(IpAddressRangeArgs $) {
+        this.addressRange = $.addressRange;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(IpAddressRangeArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> addressRange;
+        private IpAddressRangeArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new IpAddressRangeArgs();
         }
 
         public Builder(IpAddressRangeArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.addressRange = defaults.addressRange;
+            $ = new IpAddressRangeArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder addressRange(@Nullable Output<String> addressRange) {
-            this.addressRange = addressRange;
+            $.addressRange = addressRange;
             return this;
         }
-        public Builder addressRange(@Nullable String addressRange) {
-            this.addressRange = Codegen.ofNullable(addressRange);
-            return this;
-        }        public IpAddressRangeArgs build() {
-            return new IpAddressRangeArgs(addressRange);
+
+        public Builder addressRange(String addressRange) {
+            return addressRange(Output.of(addressRange));
+        }
+
+        public IpAddressRangeArgs build() {
+            return $;
         }
     }
+
 }

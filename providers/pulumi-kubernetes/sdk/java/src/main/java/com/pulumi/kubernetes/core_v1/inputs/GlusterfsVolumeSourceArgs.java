@@ -5,10 +5,10 @@ package com.pulumi.kubernetes.core_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,7 +25,7 @@ public final class GlusterfsVolumeSourceArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="endpoints", required=true)
-      private final Output<String> endpoints;
+    private Output<String> endpoints;
 
     public Output<String> endpoints() {
         return this.endpoints;
@@ -36,7 +36,7 @@ public final class GlusterfsVolumeSourceArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="path", required=true)
-      private final Output<String> path;
+    private Output<String> path;
 
     public Output<String> path() {
         return this.path;
@@ -47,76 +47,70 @@ public final class GlusterfsVolumeSourceArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="readOnly")
-      private final @Nullable Output<Boolean> readOnly;
+    private @Nullable Output<Boolean> readOnly;
 
-    public Output<Boolean> readOnly() {
-        return this.readOnly == null ? Codegen.empty() : this.readOnly;
+    public Optional<Output<Boolean>> readOnly() {
+        return Optional.ofNullable(this.readOnly);
     }
 
-    public GlusterfsVolumeSourceArgs(
-        Output<String> endpoints,
-        Output<String> path,
-        @Nullable Output<Boolean> readOnly) {
-        this.endpoints = Objects.requireNonNull(endpoints, "expected parameter 'endpoints' to be non-null");
-        this.path = Objects.requireNonNull(path, "expected parameter 'path' to be non-null");
-        this.readOnly = readOnly;
-    }
+    private GlusterfsVolumeSourceArgs() {}
 
-    private GlusterfsVolumeSourceArgs() {
-        this.endpoints = Codegen.empty();
-        this.path = Codegen.empty();
-        this.readOnly = Codegen.empty();
+    private GlusterfsVolumeSourceArgs(GlusterfsVolumeSourceArgs $) {
+        this.endpoints = $.endpoints;
+        this.path = $.path;
+        this.readOnly = $.readOnly;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GlusterfsVolumeSourceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> endpoints;
-        private Output<String> path;
-        private @Nullable Output<Boolean> readOnly;
+        private GlusterfsVolumeSourceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GlusterfsVolumeSourceArgs();
         }
 
         public Builder(GlusterfsVolumeSourceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.endpoints = defaults.endpoints;
-    	      this.path = defaults.path;
-    	      this.readOnly = defaults.readOnly;
+            $ = new GlusterfsVolumeSourceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder endpoints(Output<String> endpoints) {
-            this.endpoints = Objects.requireNonNull(endpoints);
+            $.endpoints = endpoints;
             return this;
         }
+
         public Builder endpoints(String endpoints) {
-            this.endpoints = Output.of(Objects.requireNonNull(endpoints));
-            return this;
+            return endpoints(Output.of(endpoints));
         }
+
         public Builder path(Output<String> path) {
-            this.path = Objects.requireNonNull(path);
+            $.path = path;
             return this;
         }
+
         public Builder path(String path) {
-            this.path = Output.of(Objects.requireNonNull(path));
-            return this;
+            return path(Output.of(path));
         }
+
         public Builder readOnly(@Nullable Output<Boolean> readOnly) {
-            this.readOnly = readOnly;
+            $.readOnly = readOnly;
             return this;
         }
-        public Builder readOnly(@Nullable Boolean readOnly) {
-            this.readOnly = Codegen.ofNullable(readOnly);
-            return this;
-        }        public GlusterfsVolumeSourceArgs build() {
-            return new GlusterfsVolumeSourceArgs(endpoints, path, readOnly);
+
+        public Builder readOnly(Boolean readOnly) {
+            return readOnly(Output.of(readOnly));
+        }
+
+        public GlusterfsVolumeSourceArgs build() {
+            $.endpoints = Objects.requireNonNull($.endpoints, "expected parameter 'endpoints' to be non-null");
+            $.path = Objects.requireNonNull($.path, "expected parameter 'path' to be non-null");
+            return $;
         }
     }
+
 }

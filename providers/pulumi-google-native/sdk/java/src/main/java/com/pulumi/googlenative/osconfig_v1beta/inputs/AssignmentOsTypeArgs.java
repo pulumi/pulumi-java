@@ -5,9 +5,9 @@ package com.pulumi.googlenative.osconfig_v1beta.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class AssignmentOsTypeArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="osArchitecture")
-      private final @Nullable Output<String> osArchitecture;
+    private @Nullable Output<String> osArchitecture;
 
-    public Output<String> osArchitecture() {
-        return this.osArchitecture == null ? Codegen.empty() : this.osArchitecture;
+    public Optional<Output<String>> osArchitecture() {
+        return Optional.ofNullable(this.osArchitecture);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class AssignmentOsTypeArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="osShortName")
-      private final @Nullable Output<String> osShortName;
+    private @Nullable Output<String> osShortName;
 
-    public Output<String> osShortName() {
-        return this.osShortName == null ? Codegen.empty() : this.osShortName;
+    public Optional<Output<String>> osShortName() {
+        return Optional.ofNullable(this.osShortName);
     }
 
     /**
@@ -46,76 +46,68 @@ public final class AssignmentOsTypeArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="osVersion")
-      private final @Nullable Output<String> osVersion;
+    private @Nullable Output<String> osVersion;
 
-    public Output<String> osVersion() {
-        return this.osVersion == null ? Codegen.empty() : this.osVersion;
+    public Optional<Output<String>> osVersion() {
+        return Optional.ofNullable(this.osVersion);
     }
 
-    public AssignmentOsTypeArgs(
-        @Nullable Output<String> osArchitecture,
-        @Nullable Output<String> osShortName,
-        @Nullable Output<String> osVersion) {
-        this.osArchitecture = osArchitecture;
-        this.osShortName = osShortName;
-        this.osVersion = osVersion;
-    }
+    private AssignmentOsTypeArgs() {}
 
-    private AssignmentOsTypeArgs() {
-        this.osArchitecture = Codegen.empty();
-        this.osShortName = Codegen.empty();
-        this.osVersion = Codegen.empty();
+    private AssignmentOsTypeArgs(AssignmentOsTypeArgs $) {
+        this.osArchitecture = $.osArchitecture;
+        this.osShortName = $.osShortName;
+        this.osVersion = $.osVersion;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AssignmentOsTypeArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> osArchitecture;
-        private @Nullable Output<String> osShortName;
-        private @Nullable Output<String> osVersion;
+        private AssignmentOsTypeArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AssignmentOsTypeArgs();
         }
 
         public Builder(AssignmentOsTypeArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.osArchitecture = defaults.osArchitecture;
-    	      this.osShortName = defaults.osShortName;
-    	      this.osVersion = defaults.osVersion;
+            $ = new AssignmentOsTypeArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder osArchitecture(@Nullable Output<String> osArchitecture) {
-            this.osArchitecture = osArchitecture;
+            $.osArchitecture = osArchitecture;
             return this;
         }
-        public Builder osArchitecture(@Nullable String osArchitecture) {
-            this.osArchitecture = Codegen.ofNullable(osArchitecture);
-            return this;
+
+        public Builder osArchitecture(String osArchitecture) {
+            return osArchitecture(Output.of(osArchitecture));
         }
+
         public Builder osShortName(@Nullable Output<String> osShortName) {
-            this.osShortName = osShortName;
+            $.osShortName = osShortName;
             return this;
         }
-        public Builder osShortName(@Nullable String osShortName) {
-            this.osShortName = Codegen.ofNullable(osShortName);
-            return this;
+
+        public Builder osShortName(String osShortName) {
+            return osShortName(Output.of(osShortName));
         }
+
         public Builder osVersion(@Nullable Output<String> osVersion) {
-            this.osVersion = osVersion;
+            $.osVersion = osVersion;
             return this;
         }
-        public Builder osVersion(@Nullable String osVersion) {
-            this.osVersion = Codegen.ofNullable(osVersion);
-            return this;
-        }        public AssignmentOsTypeArgs build() {
-            return new AssignmentOsTypeArgs(osArchitecture, osShortName, osVersion);
+
+        public Builder osVersion(String osVersion) {
+            return osVersion(Output.of(osVersion));
+        }
+
+        public AssignmentOsTypeArgs build() {
+            return $;
         }
     }
+
 }

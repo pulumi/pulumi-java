@@ -13,62 +13,59 @@ public final class GetApplicationArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetApplicationArgs Empty = new GetApplicationArgs();
 
     @Import(name="applicationIdentifier", required=true)
-      private final String applicationIdentifier;
+    private String applicationIdentifier;
 
     public String applicationIdentifier() {
         return this.applicationIdentifier;
     }
 
     @Import(name="environmentIdentifier", required=true)
-      private final String environmentIdentifier;
+    private String environmentIdentifier;
 
     public String environmentIdentifier() {
         return this.environmentIdentifier;
     }
 
-    public GetApplicationArgs(
-        String applicationIdentifier,
-        String environmentIdentifier) {
-        this.applicationIdentifier = Objects.requireNonNull(applicationIdentifier, "expected parameter 'applicationIdentifier' to be non-null");
-        this.environmentIdentifier = Objects.requireNonNull(environmentIdentifier, "expected parameter 'environmentIdentifier' to be non-null");
-    }
+    private GetApplicationArgs() {}
 
-    private GetApplicationArgs() {
-        this.applicationIdentifier = null;
-        this.environmentIdentifier = null;
+    private GetApplicationArgs(GetApplicationArgs $) {
+        this.applicationIdentifier = $.applicationIdentifier;
+        this.environmentIdentifier = $.environmentIdentifier;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetApplicationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String applicationIdentifier;
-        private String environmentIdentifier;
+        private GetApplicationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetApplicationArgs();
         }
 
         public Builder(GetApplicationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.applicationIdentifier = defaults.applicationIdentifier;
-    	      this.environmentIdentifier = defaults.environmentIdentifier;
+            $ = new GetApplicationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder applicationIdentifier(String applicationIdentifier) {
-            this.applicationIdentifier = Objects.requireNonNull(applicationIdentifier);
+            $.applicationIdentifier = applicationIdentifier;
             return this;
         }
+
         public Builder environmentIdentifier(String environmentIdentifier) {
-            this.environmentIdentifier = Objects.requireNonNull(environmentIdentifier);
+            $.environmentIdentifier = environmentIdentifier;
             return this;
-        }        public GetApplicationArgs build() {
-            return new GetApplicationArgs(applicationIdentifier, environmentIdentifier);
+        }
+
+        public GetApplicationArgs build() {
+            $.applicationIdentifier = Objects.requireNonNull($.applicationIdentifier, "expected parameter 'applicationIdentifier' to be non-null");
+            $.environmentIdentifier = Objects.requireNonNull($.environmentIdentifier, "expected parameter 'environmentIdentifier' to be non-null");
+            return $;
         }
     }
+
 }

@@ -22,48 +22,49 @@ public final class RelationshipTypeMappingResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="fieldMappings", required=true)
-      private final List<RelationshipTypeFieldMappingResponse> fieldMappings;
+    private List<RelationshipTypeFieldMappingResponse> fieldMappings;
 
     public List<RelationshipTypeFieldMappingResponse> fieldMappings() {
         return this.fieldMappings;
     }
 
-    public RelationshipTypeMappingResponse(List<RelationshipTypeFieldMappingResponse> fieldMappings) {
-        this.fieldMappings = Objects.requireNonNull(fieldMappings, "expected parameter 'fieldMappings' to be non-null");
-    }
+    private RelationshipTypeMappingResponse() {}
 
-    private RelationshipTypeMappingResponse() {
-        this.fieldMappings = List.of();
+    private RelationshipTypeMappingResponse(RelationshipTypeMappingResponse $) {
+        this.fieldMappings = $.fieldMappings;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RelationshipTypeMappingResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<RelationshipTypeFieldMappingResponse> fieldMappings;
+        private RelationshipTypeMappingResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new RelationshipTypeMappingResponse();
         }
 
         public Builder(RelationshipTypeMappingResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.fieldMappings = defaults.fieldMappings;
+            $ = new RelationshipTypeMappingResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder fieldMappings(List<RelationshipTypeFieldMappingResponse> fieldMappings) {
-            this.fieldMappings = Objects.requireNonNull(fieldMappings);
+            $.fieldMappings = fieldMappings;
             return this;
         }
+
         public Builder fieldMappings(RelationshipTypeFieldMappingResponse... fieldMappings) {
             return fieldMappings(List.of(fieldMappings));
-        }        public RelationshipTypeMappingResponse build() {
-            return new RelationshipTypeMappingResponse(fieldMappings);
+        }
+
+        public RelationshipTypeMappingResponse build() {
+            $.fieldMappings = Objects.requireNonNull($.fieldMappings, "expected parameter 'fieldMappings' to be non-null");
+            return $;
         }
     }
+
 }

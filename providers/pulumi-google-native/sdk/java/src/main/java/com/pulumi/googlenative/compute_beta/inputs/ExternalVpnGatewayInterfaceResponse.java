@@ -21,45 +21,45 @@ public final class ExternalVpnGatewayInterfaceResponse extends com.pulumi.resour
      * 
      */
     @Import(name="ipAddress", required=true)
-      private final String ipAddress;
+    private String ipAddress;
 
     public String ipAddress() {
         return this.ipAddress;
     }
 
-    public ExternalVpnGatewayInterfaceResponse(String ipAddress) {
-        this.ipAddress = Objects.requireNonNull(ipAddress, "expected parameter 'ipAddress' to be non-null");
-    }
+    private ExternalVpnGatewayInterfaceResponse() {}
 
-    private ExternalVpnGatewayInterfaceResponse() {
-        this.ipAddress = null;
+    private ExternalVpnGatewayInterfaceResponse(ExternalVpnGatewayInterfaceResponse $) {
+        this.ipAddress = $.ipAddress;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ExternalVpnGatewayInterfaceResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String ipAddress;
+        private ExternalVpnGatewayInterfaceResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ExternalVpnGatewayInterfaceResponse();
         }
 
         public Builder(ExternalVpnGatewayInterfaceResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.ipAddress = defaults.ipAddress;
+            $ = new ExternalVpnGatewayInterfaceResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder ipAddress(String ipAddress) {
-            this.ipAddress = Objects.requireNonNull(ipAddress);
+            $.ipAddress = ipAddress;
             return this;
-        }        public ExternalVpnGatewayInterfaceResponse build() {
-            return new ExternalVpnGatewayInterfaceResponse(ipAddress);
+        }
+
+        public ExternalVpnGatewayInterfaceResponse build() {
+            $.ipAddress = Objects.requireNonNull($.ipAddress, "expected parameter 'ipAddress' to be non-null");
+            return $;
         }
     }
+
 }

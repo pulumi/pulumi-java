@@ -5,10 +5,10 @@ package com.pulumi.gcp.storage;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,7 +21,7 @@ public final class DefaultObjectACLArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="bucket", required=true)
-      private final Output<String> bucket;
+    private Output<String> bucket;
 
     public Output<String> bucket() {
         return this.bucket;
@@ -34,66 +34,63 @@ public final class DefaultObjectACLArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="roleEntities")
-      private final @Nullable Output<List<String>> roleEntities;
+    private @Nullable Output<List<String>> roleEntities;
 
-    public Output<List<String>> roleEntities() {
-        return this.roleEntities == null ? Codegen.empty() : this.roleEntities;
+    public Optional<Output<List<String>>> roleEntities() {
+        return Optional.ofNullable(this.roleEntities);
     }
 
-    public DefaultObjectACLArgs(
-        Output<String> bucket,
-        @Nullable Output<List<String>> roleEntities) {
-        this.bucket = Objects.requireNonNull(bucket, "expected parameter 'bucket' to be non-null");
-        this.roleEntities = roleEntities;
-    }
+    private DefaultObjectACLArgs() {}
 
-    private DefaultObjectACLArgs() {
-        this.bucket = Codegen.empty();
-        this.roleEntities = Codegen.empty();
+    private DefaultObjectACLArgs(DefaultObjectACLArgs $) {
+        this.bucket = $.bucket;
+        this.roleEntities = $.roleEntities;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DefaultObjectACLArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> bucket;
-        private @Nullable Output<List<String>> roleEntities;
+        private DefaultObjectACLArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DefaultObjectACLArgs();
         }
 
         public Builder(DefaultObjectACLArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.bucket = defaults.bucket;
-    	      this.roleEntities = defaults.roleEntities;
+            $ = new DefaultObjectACLArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder bucket(Output<String> bucket) {
-            this.bucket = Objects.requireNonNull(bucket);
+            $.bucket = bucket;
             return this;
         }
+
         public Builder bucket(String bucket) {
-            this.bucket = Output.of(Objects.requireNonNull(bucket));
-            return this;
+            return bucket(Output.of(bucket));
         }
+
         public Builder roleEntities(@Nullable Output<List<String>> roleEntities) {
-            this.roleEntities = roleEntities;
+            $.roleEntities = roleEntities;
             return this;
         }
-        public Builder roleEntities(@Nullable List<String> roleEntities) {
-            this.roleEntities = Codegen.ofNullable(roleEntities);
-            return this;
+
+        public Builder roleEntities(List<String> roleEntities) {
+            return roleEntities(Output.of(roleEntities));
         }
+
         public Builder roleEntities(String... roleEntities) {
             return roleEntities(List.of(roleEntities));
-        }        public DefaultObjectACLArgs build() {
-            return new DefaultObjectACLArgs(bucket, roleEntities);
+        }
+
+        public DefaultObjectACLArgs build() {
+            $.bucket = Objects.requireNonNull($.bucket, "expected parameter 'bucket' to be non-null");
+            return $;
         }
     }
+
 }

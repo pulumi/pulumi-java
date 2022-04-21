@@ -23,7 +23,7 @@ public final class TlsCertificateContextResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="certificatePaths", required=true)
-      private final TlsCertificatePathsResponse certificatePaths;
+    private TlsCertificatePathsResponse certificatePaths;
 
     public TlsCertificatePathsResponse certificatePaths() {
         return this.certificatePaths;
@@ -34,7 +34,7 @@ public final class TlsCertificateContextResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="certificateSource", required=true)
-      private final String certificateSource;
+    private String certificateSource;
 
     public String certificateSource() {
         return this.certificateSource;
@@ -45,64 +45,59 @@ public final class TlsCertificateContextResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="sdsConfig", required=true)
-      private final SdsConfigResponse sdsConfig;
+    private SdsConfigResponse sdsConfig;
 
     public SdsConfigResponse sdsConfig() {
         return this.sdsConfig;
     }
 
-    public TlsCertificateContextResponse(
-        TlsCertificatePathsResponse certificatePaths,
-        String certificateSource,
-        SdsConfigResponse sdsConfig) {
-        this.certificatePaths = Objects.requireNonNull(certificatePaths, "expected parameter 'certificatePaths' to be non-null");
-        this.certificateSource = Objects.requireNonNull(certificateSource, "expected parameter 'certificateSource' to be non-null");
-        this.sdsConfig = Objects.requireNonNull(sdsConfig, "expected parameter 'sdsConfig' to be non-null");
-    }
+    private TlsCertificateContextResponse() {}
 
-    private TlsCertificateContextResponse() {
-        this.certificatePaths = null;
-        this.certificateSource = null;
-        this.sdsConfig = null;
+    private TlsCertificateContextResponse(TlsCertificateContextResponse $) {
+        this.certificatePaths = $.certificatePaths;
+        this.certificateSource = $.certificateSource;
+        this.sdsConfig = $.sdsConfig;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TlsCertificateContextResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private TlsCertificatePathsResponse certificatePaths;
-        private String certificateSource;
-        private SdsConfigResponse sdsConfig;
+        private TlsCertificateContextResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new TlsCertificateContextResponse();
         }
 
         public Builder(TlsCertificateContextResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.certificatePaths = defaults.certificatePaths;
-    	      this.certificateSource = defaults.certificateSource;
-    	      this.sdsConfig = defaults.sdsConfig;
+            $ = new TlsCertificateContextResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder certificatePaths(TlsCertificatePathsResponse certificatePaths) {
-            this.certificatePaths = Objects.requireNonNull(certificatePaths);
+            $.certificatePaths = certificatePaths;
             return this;
         }
+
         public Builder certificateSource(String certificateSource) {
-            this.certificateSource = Objects.requireNonNull(certificateSource);
+            $.certificateSource = certificateSource;
             return this;
         }
+
         public Builder sdsConfig(SdsConfigResponse sdsConfig) {
-            this.sdsConfig = Objects.requireNonNull(sdsConfig);
+            $.sdsConfig = sdsConfig;
             return this;
-        }        public TlsCertificateContextResponse build() {
-            return new TlsCertificateContextResponse(certificatePaths, certificateSource, sdsConfig);
+        }
+
+        public TlsCertificateContextResponse build() {
+            $.certificatePaths = Objects.requireNonNull($.certificatePaths, "expected parameter 'certificatePaths' to be non-null");
+            $.certificateSource = Objects.requireNonNull($.certificateSource, "expected parameter 'certificateSource' to be non-null");
+            $.sdsConfig = Objects.requireNonNull($.sdsConfig, "expected parameter 'sdsConfig' to be non-null");
+            return $;
         }
     }
+
 }

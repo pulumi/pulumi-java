@@ -17,7 +17,7 @@ public final class GetPrivateAtlaseArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="accountName", required=true)
-      private final String accountName;
+    private String accountName;
 
     public String accountName() {
         return this.accountName;
@@ -28,7 +28,7 @@ public final class GetPrivateAtlaseArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="privateAtlasName", required=true)
-      private final String privateAtlasName;
+    private String privateAtlasName;
 
     public String privateAtlasName() {
         return this.privateAtlasName;
@@ -39,64 +39,59 @@ public final class GetPrivateAtlaseArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public GetPrivateAtlaseArgs(
-        String accountName,
-        String privateAtlasName,
-        String resourceGroupName) {
-        this.accountName = Objects.requireNonNull(accountName, "expected parameter 'accountName' to be non-null");
-        this.privateAtlasName = Objects.requireNonNull(privateAtlasName, "expected parameter 'privateAtlasName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private GetPrivateAtlaseArgs() {}
 
-    private GetPrivateAtlaseArgs() {
-        this.accountName = null;
-        this.privateAtlasName = null;
-        this.resourceGroupName = null;
+    private GetPrivateAtlaseArgs(GetPrivateAtlaseArgs $) {
+        this.accountName = $.accountName;
+        this.privateAtlasName = $.privateAtlasName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetPrivateAtlaseArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String accountName;
-        private String privateAtlasName;
-        private String resourceGroupName;
+        private GetPrivateAtlaseArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetPrivateAtlaseArgs();
         }
 
         public Builder(GetPrivateAtlaseArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accountName = defaults.accountName;
-    	      this.privateAtlasName = defaults.privateAtlasName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new GetPrivateAtlaseArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder accountName(String accountName) {
-            this.accountName = Objects.requireNonNull(accountName);
+            $.accountName = accountName;
             return this;
         }
+
         public Builder privateAtlasName(String privateAtlasName) {
-            this.privateAtlasName = Objects.requireNonNull(privateAtlasName);
+            $.privateAtlasName = privateAtlasName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public GetPrivateAtlaseArgs build() {
-            return new GetPrivateAtlaseArgs(accountName, privateAtlasName, resourceGroupName);
+        }
+
+        public GetPrivateAtlaseArgs build() {
+            $.accountName = Objects.requireNonNull($.accountName, "expected parameter 'accountName' to be non-null");
+            $.privateAtlasName = Objects.requireNonNull($.privateAtlasName, "expected parameter 'privateAtlasName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

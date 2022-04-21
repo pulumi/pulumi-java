@@ -5,9 +5,9 @@ package com.pulumi.azurenative.containerservice.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,7 +24,7 @@ public final class ManagedClusterServicePrincipalProfileArgs extends com.pulumi.
      * 
      */
     @Import(name="clientId", required=true)
-      private final Output<String> clientId;
+    private Output<String> clientId;
 
     public Output<String> clientId() {
         return this.clientId;
@@ -35,63 +35,59 @@ public final class ManagedClusterServicePrincipalProfileArgs extends com.pulumi.
      * 
      */
     @Import(name="secret")
-      private final @Nullable Output<String> secret;
+    private @Nullable Output<String> secret;
 
-    public Output<String> secret() {
-        return this.secret == null ? Codegen.empty() : this.secret;
+    public Optional<Output<String>> secret() {
+        return Optional.ofNullable(this.secret);
     }
 
-    public ManagedClusterServicePrincipalProfileArgs(
-        Output<String> clientId,
-        @Nullable Output<String> secret) {
-        this.clientId = Objects.requireNonNull(clientId, "expected parameter 'clientId' to be non-null");
-        this.secret = secret;
-    }
+    private ManagedClusterServicePrincipalProfileArgs() {}
 
-    private ManagedClusterServicePrincipalProfileArgs() {
-        this.clientId = Codegen.empty();
-        this.secret = Codegen.empty();
+    private ManagedClusterServicePrincipalProfileArgs(ManagedClusterServicePrincipalProfileArgs $) {
+        this.clientId = $.clientId;
+        this.secret = $.secret;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ManagedClusterServicePrincipalProfileArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> clientId;
-        private @Nullable Output<String> secret;
+        private ManagedClusterServicePrincipalProfileArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ManagedClusterServicePrincipalProfileArgs();
         }
 
         public Builder(ManagedClusterServicePrincipalProfileArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.clientId = defaults.clientId;
-    	      this.secret = defaults.secret;
+            $ = new ManagedClusterServicePrincipalProfileArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder clientId(Output<String> clientId) {
-            this.clientId = Objects.requireNonNull(clientId);
+            $.clientId = clientId;
             return this;
         }
+
         public Builder clientId(String clientId) {
-            this.clientId = Output.of(Objects.requireNonNull(clientId));
-            return this;
+            return clientId(Output.of(clientId));
         }
+
         public Builder secret(@Nullable Output<String> secret) {
-            this.secret = secret;
+            $.secret = secret;
             return this;
         }
-        public Builder secret(@Nullable String secret) {
-            this.secret = Codegen.ofNullable(secret);
-            return this;
-        }        public ManagedClusterServicePrincipalProfileArgs build() {
-            return new ManagedClusterServicePrincipalProfileArgs(clientId, secret);
+
+        public Builder secret(String secret) {
+            return secret(Output.of(secret));
+        }
+
+        public ManagedClusterServicePrincipalProfileArgs build() {
+            $.clientId = Objects.requireNonNull($.clientId, "expected parameter 'clientId' to be non-null");
+            return $;
         }
     }
+
 }

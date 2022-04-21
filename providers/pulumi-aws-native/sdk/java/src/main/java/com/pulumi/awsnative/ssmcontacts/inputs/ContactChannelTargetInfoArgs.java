@@ -5,7 +5,6 @@ package com.pulumi.awsnative.ssmcontacts.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +23,7 @@ public final class ContactChannelTargetInfoArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="channelId", required=true)
-      private final Output<String> channelId;
+    private Output<String> channelId;
 
     public Output<String> channelId() {
         return this.channelId;
@@ -35,63 +34,60 @@ public final class ContactChannelTargetInfoArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="retryIntervalInMinutes", required=true)
-      private final Output<Integer> retryIntervalInMinutes;
+    private Output<Integer> retryIntervalInMinutes;
 
     public Output<Integer> retryIntervalInMinutes() {
         return this.retryIntervalInMinutes;
     }
 
-    public ContactChannelTargetInfoArgs(
-        Output<String> channelId,
-        Output<Integer> retryIntervalInMinutes) {
-        this.channelId = Objects.requireNonNull(channelId, "expected parameter 'channelId' to be non-null");
-        this.retryIntervalInMinutes = Objects.requireNonNull(retryIntervalInMinutes, "expected parameter 'retryIntervalInMinutes' to be non-null");
-    }
+    private ContactChannelTargetInfoArgs() {}
 
-    private ContactChannelTargetInfoArgs() {
-        this.channelId = Codegen.empty();
-        this.retryIntervalInMinutes = Codegen.empty();
+    private ContactChannelTargetInfoArgs(ContactChannelTargetInfoArgs $) {
+        this.channelId = $.channelId;
+        this.retryIntervalInMinutes = $.retryIntervalInMinutes;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ContactChannelTargetInfoArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> channelId;
-        private Output<Integer> retryIntervalInMinutes;
+        private ContactChannelTargetInfoArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ContactChannelTargetInfoArgs();
         }
 
         public Builder(ContactChannelTargetInfoArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.channelId = defaults.channelId;
-    	      this.retryIntervalInMinutes = defaults.retryIntervalInMinutes;
+            $ = new ContactChannelTargetInfoArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder channelId(Output<String> channelId) {
-            this.channelId = Objects.requireNonNull(channelId);
+            $.channelId = channelId;
             return this;
         }
+
         public Builder channelId(String channelId) {
-            this.channelId = Output.of(Objects.requireNonNull(channelId));
-            return this;
+            return channelId(Output.of(channelId));
         }
+
         public Builder retryIntervalInMinutes(Output<Integer> retryIntervalInMinutes) {
-            this.retryIntervalInMinutes = Objects.requireNonNull(retryIntervalInMinutes);
+            $.retryIntervalInMinutes = retryIntervalInMinutes;
             return this;
         }
+
         public Builder retryIntervalInMinutes(Integer retryIntervalInMinutes) {
-            this.retryIntervalInMinutes = Output.of(Objects.requireNonNull(retryIntervalInMinutes));
-            return this;
-        }        public ContactChannelTargetInfoArgs build() {
-            return new ContactChannelTargetInfoArgs(channelId, retryIntervalInMinutes);
+            return retryIntervalInMinutes(Output.of(retryIntervalInMinutes));
+        }
+
+        public ContactChannelTargetInfoArgs build() {
+            $.channelId = Objects.requireNonNull($.channelId, "expected parameter 'channelId' to be non-null");
+            $.retryIntervalInMinutes = Objects.requireNonNull($.retryIntervalInMinutes, "expected parameter 'retryIntervalInMinutes' to be non-null");
+            return $;
         }
     }
+
 }

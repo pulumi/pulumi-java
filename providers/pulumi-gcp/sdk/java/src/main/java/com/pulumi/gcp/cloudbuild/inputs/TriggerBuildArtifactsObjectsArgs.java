@@ -5,11 +5,11 @@ package com.pulumi.gcp.cloudbuild.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.cloudbuild.inputs.TriggerBuildArtifactsObjectsTimingArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class TriggerBuildArtifactsObjectsArgs extends com.pulumi.resources
      * 
      */
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class TriggerBuildArtifactsObjectsArgs extends com.pulumi.resources
      * 
      */
     @Import(name="paths")
-      private final @Nullable Output<List<String>> paths;
+    private @Nullable Output<List<String>> paths;
 
-    public Output<List<String>> paths() {
-        return this.paths == null ? Codegen.empty() : this.paths;
+    public Optional<Output<List<String>>> paths() {
+        return Optional.ofNullable(this.paths);
     }
 
     /**
@@ -48,82 +48,76 @@ public final class TriggerBuildArtifactsObjectsArgs extends com.pulumi.resources
      * 
      */
     @Import(name="timings")
-      private final @Nullable Output<List<TriggerBuildArtifactsObjectsTimingArgs>> timings;
+    private @Nullable Output<List<TriggerBuildArtifactsObjectsTimingArgs>> timings;
 
-    public Output<List<TriggerBuildArtifactsObjectsTimingArgs>> timings() {
-        return this.timings == null ? Codegen.empty() : this.timings;
+    public Optional<Output<List<TriggerBuildArtifactsObjectsTimingArgs>>> timings() {
+        return Optional.ofNullable(this.timings);
     }
 
-    public TriggerBuildArtifactsObjectsArgs(
-        @Nullable Output<String> location,
-        @Nullable Output<List<String>> paths,
-        @Nullable Output<List<TriggerBuildArtifactsObjectsTimingArgs>> timings) {
-        this.location = location;
-        this.paths = paths;
-        this.timings = timings;
-    }
+    private TriggerBuildArtifactsObjectsArgs() {}
 
-    private TriggerBuildArtifactsObjectsArgs() {
-        this.location = Codegen.empty();
-        this.paths = Codegen.empty();
-        this.timings = Codegen.empty();
+    private TriggerBuildArtifactsObjectsArgs(TriggerBuildArtifactsObjectsArgs $) {
+        this.location = $.location;
+        this.paths = $.paths;
+        this.timings = $.timings;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TriggerBuildArtifactsObjectsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> location;
-        private @Nullable Output<List<String>> paths;
-        private @Nullable Output<List<TriggerBuildArtifactsObjectsTimingArgs>> timings;
+        private TriggerBuildArtifactsObjectsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TriggerBuildArtifactsObjectsArgs();
         }
 
         public Builder(TriggerBuildArtifactsObjectsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.location = defaults.location;
-    	      this.paths = defaults.paths;
-    	      this.timings = defaults.timings;
+            $ = new TriggerBuildArtifactsObjectsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder paths(@Nullable Output<List<String>> paths) {
-            this.paths = paths;
+            $.paths = paths;
             return this;
         }
-        public Builder paths(@Nullable List<String> paths) {
-            this.paths = Codegen.ofNullable(paths);
-            return this;
+
+        public Builder paths(List<String> paths) {
+            return paths(Output.of(paths));
         }
+
         public Builder paths(String... paths) {
             return paths(List.of(paths));
         }
+
         public Builder timings(@Nullable Output<List<TriggerBuildArtifactsObjectsTimingArgs>> timings) {
-            this.timings = timings;
+            $.timings = timings;
             return this;
         }
-        public Builder timings(@Nullable List<TriggerBuildArtifactsObjectsTimingArgs> timings) {
-            this.timings = Codegen.ofNullable(timings);
-            return this;
+
+        public Builder timings(List<TriggerBuildArtifactsObjectsTimingArgs> timings) {
+            return timings(Output.of(timings));
         }
+
         public Builder timings(TriggerBuildArtifactsObjectsTimingArgs... timings) {
             return timings(List.of(timings));
-        }        public TriggerBuildArtifactsObjectsArgs build() {
-            return new TriggerBuildArtifactsObjectsArgs(location, paths, timings);
+        }
+
+        public TriggerBuildArtifactsObjectsArgs build() {
+            return $;
         }
     }
+
 }

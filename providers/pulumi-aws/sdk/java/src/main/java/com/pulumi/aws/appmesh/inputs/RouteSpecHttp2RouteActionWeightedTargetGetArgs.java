@@ -5,7 +5,6 @@ package com.pulumi.aws.appmesh.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +19,7 @@ public final class RouteSpecHttp2RouteActionWeightedTargetGetArgs extends com.pu
      * 
      */
     @Import(name="virtualNode", required=true)
-      private final Output<String> virtualNode;
+    private Output<String> virtualNode;
 
     public Output<String> virtualNode() {
         return this.virtualNode;
@@ -31,63 +30,60 @@ public final class RouteSpecHttp2RouteActionWeightedTargetGetArgs extends com.pu
      * 
      */
     @Import(name="weight", required=true)
-      private final Output<Integer> weight;
+    private Output<Integer> weight;
 
     public Output<Integer> weight() {
         return this.weight;
     }
 
-    public RouteSpecHttp2RouteActionWeightedTargetGetArgs(
-        Output<String> virtualNode,
-        Output<Integer> weight) {
-        this.virtualNode = Objects.requireNonNull(virtualNode, "expected parameter 'virtualNode' to be non-null");
-        this.weight = Objects.requireNonNull(weight, "expected parameter 'weight' to be non-null");
-    }
+    private RouteSpecHttp2RouteActionWeightedTargetGetArgs() {}
 
-    private RouteSpecHttp2RouteActionWeightedTargetGetArgs() {
-        this.virtualNode = Codegen.empty();
-        this.weight = Codegen.empty();
+    private RouteSpecHttp2RouteActionWeightedTargetGetArgs(RouteSpecHttp2RouteActionWeightedTargetGetArgs $) {
+        this.virtualNode = $.virtualNode;
+        this.weight = $.weight;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RouteSpecHttp2RouteActionWeightedTargetGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> virtualNode;
-        private Output<Integer> weight;
+        private RouteSpecHttp2RouteActionWeightedTargetGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RouteSpecHttp2RouteActionWeightedTargetGetArgs();
         }
 
         public Builder(RouteSpecHttp2RouteActionWeightedTargetGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.virtualNode = defaults.virtualNode;
-    	      this.weight = defaults.weight;
+            $ = new RouteSpecHttp2RouteActionWeightedTargetGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder virtualNode(Output<String> virtualNode) {
-            this.virtualNode = Objects.requireNonNull(virtualNode);
+            $.virtualNode = virtualNode;
             return this;
         }
+
         public Builder virtualNode(String virtualNode) {
-            this.virtualNode = Output.of(Objects.requireNonNull(virtualNode));
-            return this;
+            return virtualNode(Output.of(virtualNode));
         }
+
         public Builder weight(Output<Integer> weight) {
-            this.weight = Objects.requireNonNull(weight);
+            $.weight = weight;
             return this;
         }
+
         public Builder weight(Integer weight) {
-            this.weight = Output.of(Objects.requireNonNull(weight));
-            return this;
-        }        public RouteSpecHttp2RouteActionWeightedTargetGetArgs build() {
-            return new RouteSpecHttp2RouteActionWeightedTargetGetArgs(virtualNode, weight);
+            return weight(Output.of(weight));
+        }
+
+        public RouteSpecHttp2RouteActionWeightedTargetGetArgs build() {
+            $.virtualNode = Objects.requireNonNull($.virtualNode, "expected parameter 'virtualNode' to be non-null");
+            $.weight = Objects.requireNonNull($.weight, "expected parameter 'weight' to be non-null");
+            return $;
         }
     }
+
 }

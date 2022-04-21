@@ -19,45 +19,44 @@ public final class ChannelLogConfiguration extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="logGroupName")
-      private final @Nullable String logGroupName;
+    private @Nullable String logGroupName;
 
     public Optional<String> logGroupName() {
-        return this.logGroupName == null ? Optional.empty() : Optional.ofNullable(this.logGroupName);
+        return Optional.ofNullable(this.logGroupName);
     }
 
-    public ChannelLogConfiguration(@Nullable String logGroupName) {
-        this.logGroupName = logGroupName;
-    }
+    private ChannelLogConfiguration() {}
 
-    private ChannelLogConfiguration() {
-        this.logGroupName = null;
+    private ChannelLogConfiguration(ChannelLogConfiguration $) {
+        this.logGroupName = $.logGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ChannelLogConfiguration defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String logGroupName;
+        private ChannelLogConfiguration $;
 
         public Builder() {
-    	      // Empty
+            $ = new ChannelLogConfiguration();
         }
 
         public Builder(ChannelLogConfiguration defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.logGroupName = defaults.logGroupName;
+            $ = new ChannelLogConfiguration(Objects.requireNonNull(defaults));
         }
 
         public Builder logGroupName(@Nullable String logGroupName) {
-            this.logGroupName = logGroupName;
+            $.logGroupName = logGroupName;
             return this;
-        }        public ChannelLogConfiguration build() {
-            return new ChannelLogConfiguration(logGroupName);
+        }
+
+        public ChannelLogConfiguration build() {
+            return $;
         }
     }
+
 }

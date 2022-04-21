@@ -20,10 +20,10 @@ public final class GlobalReplicationGroupMember extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="replicationGroupId")
-      private final @Nullable String replicationGroupId;
+    private @Nullable String replicationGroupId;
 
     public Optional<String> replicationGroupId() {
-        return this.replicationGroupId == null ? Optional.empty() : Optional.ofNullable(this.replicationGroupId);
+        return Optional.ofNullable(this.replicationGroupId);
     }
 
     /**
@@ -31,10 +31,10 @@ public final class GlobalReplicationGroupMember extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="replicationGroupRegion")
-      private final @Nullable String replicationGroupRegion;
+    private @Nullable String replicationGroupRegion;
 
     public Optional<String> replicationGroupRegion() {
-        return this.replicationGroupRegion == null ? Optional.empty() : Optional.ofNullable(this.replicationGroupRegion);
+        return Optional.ofNullable(this.replicationGroupRegion);
     }
 
     /**
@@ -42,64 +42,56 @@ public final class GlobalReplicationGroupMember extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="role")
-      private final @Nullable GlobalReplicationGroupMemberRole role;
+    private @Nullable GlobalReplicationGroupMemberRole role;
 
     public Optional<GlobalReplicationGroupMemberRole> role() {
-        return this.role == null ? Optional.empty() : Optional.ofNullable(this.role);
+        return Optional.ofNullable(this.role);
     }
 
-    public GlobalReplicationGroupMember(
-        @Nullable String replicationGroupId,
-        @Nullable String replicationGroupRegion,
-        @Nullable GlobalReplicationGroupMemberRole role) {
-        this.replicationGroupId = replicationGroupId;
-        this.replicationGroupRegion = replicationGroupRegion;
-        this.role = role;
-    }
+    private GlobalReplicationGroupMember() {}
 
-    private GlobalReplicationGroupMember() {
-        this.replicationGroupId = null;
-        this.replicationGroupRegion = null;
-        this.role = null;
+    private GlobalReplicationGroupMember(GlobalReplicationGroupMember $) {
+        this.replicationGroupId = $.replicationGroupId;
+        this.replicationGroupRegion = $.replicationGroupRegion;
+        this.role = $.role;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GlobalReplicationGroupMember defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String replicationGroupId;
-        private @Nullable String replicationGroupRegion;
-        private @Nullable GlobalReplicationGroupMemberRole role;
+        private GlobalReplicationGroupMember $;
 
         public Builder() {
-    	      // Empty
+            $ = new GlobalReplicationGroupMember();
         }
 
         public Builder(GlobalReplicationGroupMember defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.replicationGroupId = defaults.replicationGroupId;
-    	      this.replicationGroupRegion = defaults.replicationGroupRegion;
-    	      this.role = defaults.role;
+            $ = new GlobalReplicationGroupMember(Objects.requireNonNull(defaults));
         }
 
         public Builder replicationGroupId(@Nullable String replicationGroupId) {
-            this.replicationGroupId = replicationGroupId;
+            $.replicationGroupId = replicationGroupId;
             return this;
         }
+
         public Builder replicationGroupRegion(@Nullable String replicationGroupRegion) {
-            this.replicationGroupRegion = replicationGroupRegion;
+            $.replicationGroupRegion = replicationGroupRegion;
             return this;
         }
+
         public Builder role(@Nullable GlobalReplicationGroupMemberRole role) {
-            this.role = role;
+            $.role = role;
             return this;
-        }        public GlobalReplicationGroupMember build() {
-            return new GlobalReplicationGroupMember(replicationGroupId, replicationGroupRegion, role);
+        }
+
+        public GlobalReplicationGroupMember build() {
+            return $;
         }
     }
+
 }

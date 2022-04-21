@@ -22,7 +22,7 @@ public final class NotificationPreferenceResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="sendNotification", required=true)
-      private final Boolean sendNotification;
+    private Boolean sendNotification;
 
     public Boolean sendNotification() {
         return this.sendNotification;
@@ -33,55 +33,52 @@ public final class NotificationPreferenceResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="stageName", required=true)
-      private final String stageName;
+    private String stageName;
 
     public String stageName() {
         return this.stageName;
     }
 
-    public NotificationPreferenceResponse(
-        Boolean sendNotification,
-        String stageName) {
-        this.sendNotification = Objects.requireNonNull(sendNotification, "expected parameter 'sendNotification' to be non-null");
-        this.stageName = Objects.requireNonNull(stageName, "expected parameter 'stageName' to be non-null");
-    }
+    private NotificationPreferenceResponse() {}
 
-    private NotificationPreferenceResponse() {
-        this.sendNotification = null;
-        this.stageName = null;
+    private NotificationPreferenceResponse(NotificationPreferenceResponse $) {
+        this.sendNotification = $.sendNotification;
+        this.stageName = $.stageName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NotificationPreferenceResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Boolean sendNotification;
-        private String stageName;
+        private NotificationPreferenceResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new NotificationPreferenceResponse();
         }
 
         public Builder(NotificationPreferenceResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.sendNotification = defaults.sendNotification;
-    	      this.stageName = defaults.stageName;
+            $ = new NotificationPreferenceResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder sendNotification(Boolean sendNotification) {
-            this.sendNotification = Objects.requireNonNull(sendNotification);
+            $.sendNotification = sendNotification;
             return this;
         }
+
         public Builder stageName(String stageName) {
-            this.stageName = Objects.requireNonNull(stageName);
+            $.stageName = stageName;
             return this;
-        }        public NotificationPreferenceResponse build() {
-            return new NotificationPreferenceResponse(sendNotification, stageName);
+        }
+
+        public NotificationPreferenceResponse build() {
+            $.sendNotification = Objects.requireNonNull($.sendNotification, "expected parameter 'sendNotification' to be non-null");
+            $.stageName = Objects.requireNonNull($.stageName, "expected parameter 'stageName' to be non-null");
+            return $;
         }
     }
+
 }

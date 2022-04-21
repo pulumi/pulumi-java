@@ -5,9 +5,9 @@ package com.pulumi.azurenative.storage.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class EncryptionIdentityArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="encryptionUserAssignedIdentity")
-      private final @Nullable Output<String> encryptionUserAssignedIdentity;
+    private @Nullable Output<String> encryptionUserAssignedIdentity;
 
-    public Output<String> encryptionUserAssignedIdentity() {
-        return this.encryptionUserAssignedIdentity == null ? Codegen.empty() : this.encryptionUserAssignedIdentity;
+    public Optional<Output<String>> encryptionUserAssignedIdentity() {
+        return Optional.ofNullable(this.encryptionUserAssignedIdentity);
     }
 
-    public EncryptionIdentityArgs(@Nullable Output<String> encryptionUserAssignedIdentity) {
-        this.encryptionUserAssignedIdentity = encryptionUserAssignedIdentity;
-    }
+    private EncryptionIdentityArgs() {}
 
-    private EncryptionIdentityArgs() {
-        this.encryptionUserAssignedIdentity = Codegen.empty();
+    private EncryptionIdentityArgs(EncryptionIdentityArgs $) {
+        this.encryptionUserAssignedIdentity = $.encryptionUserAssignedIdentity;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EncryptionIdentityArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> encryptionUserAssignedIdentity;
+        private EncryptionIdentityArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new EncryptionIdentityArgs();
         }
 
         public Builder(EncryptionIdentityArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.encryptionUserAssignedIdentity = defaults.encryptionUserAssignedIdentity;
+            $ = new EncryptionIdentityArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder encryptionUserAssignedIdentity(@Nullable Output<String> encryptionUserAssignedIdentity) {
-            this.encryptionUserAssignedIdentity = encryptionUserAssignedIdentity;
+            $.encryptionUserAssignedIdentity = encryptionUserAssignedIdentity;
             return this;
         }
-        public Builder encryptionUserAssignedIdentity(@Nullable String encryptionUserAssignedIdentity) {
-            this.encryptionUserAssignedIdentity = Codegen.ofNullable(encryptionUserAssignedIdentity);
-            return this;
-        }        public EncryptionIdentityArgs build() {
-            return new EncryptionIdentityArgs(encryptionUserAssignedIdentity);
+
+        public Builder encryptionUserAssignedIdentity(String encryptionUserAssignedIdentity) {
+            return encryptionUserAssignedIdentity(Output.of(encryptionUserAssignedIdentity));
+        }
+
+        public EncryptionIdentityArgs build() {
+            return $;
         }
     }
+
 }

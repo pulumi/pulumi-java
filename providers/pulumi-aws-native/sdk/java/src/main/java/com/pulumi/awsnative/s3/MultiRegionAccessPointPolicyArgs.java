@@ -5,7 +5,6 @@ package com.pulumi.awsnative.s3;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +19,7 @@ public final class MultiRegionAccessPointPolicyArgs extends com.pulumi.resources
      * 
      */
     @Import(name="mrapName", required=true)
-      private final Output<String> mrapName;
+    private Output<String> mrapName;
 
     public Output<String> mrapName() {
         return this.mrapName;
@@ -31,63 +30,60 @@ public final class MultiRegionAccessPointPolicyArgs extends com.pulumi.resources
      * 
      */
     @Import(name="policy", required=true)
-      private final Output<Object> policy;
+    private Output<Object> policy;
 
     public Output<Object> policy() {
         return this.policy;
     }
 
-    public MultiRegionAccessPointPolicyArgs(
-        Output<String> mrapName,
-        Output<Object> policy) {
-        this.mrapName = Objects.requireNonNull(mrapName, "expected parameter 'mrapName' to be non-null");
-        this.policy = Objects.requireNonNull(policy, "expected parameter 'policy' to be non-null");
-    }
+    private MultiRegionAccessPointPolicyArgs() {}
 
-    private MultiRegionAccessPointPolicyArgs() {
-        this.mrapName = Codegen.empty();
-        this.policy = Codegen.empty();
+    private MultiRegionAccessPointPolicyArgs(MultiRegionAccessPointPolicyArgs $) {
+        this.mrapName = $.mrapName;
+        this.policy = $.policy;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MultiRegionAccessPointPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> mrapName;
-        private Output<Object> policy;
+        private MultiRegionAccessPointPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new MultiRegionAccessPointPolicyArgs();
         }
 
         public Builder(MultiRegionAccessPointPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.mrapName = defaults.mrapName;
-    	      this.policy = defaults.policy;
+            $ = new MultiRegionAccessPointPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder mrapName(Output<String> mrapName) {
-            this.mrapName = Objects.requireNonNull(mrapName);
+            $.mrapName = mrapName;
             return this;
         }
+
         public Builder mrapName(String mrapName) {
-            this.mrapName = Output.of(Objects.requireNonNull(mrapName));
-            return this;
+            return mrapName(Output.of(mrapName));
         }
+
         public Builder policy(Output<Object> policy) {
-            this.policy = Objects.requireNonNull(policy);
+            $.policy = policy;
             return this;
         }
+
         public Builder policy(Object policy) {
-            this.policy = Output.of(Objects.requireNonNull(policy));
-            return this;
-        }        public MultiRegionAccessPointPolicyArgs build() {
-            return new MultiRegionAccessPointPolicyArgs(mrapName, policy);
+            return policy(Output.of(policy));
+        }
+
+        public MultiRegionAccessPointPolicyArgs build() {
+            $.mrapName = Objects.requireNonNull($.mrapName, "expected parameter 'mrapName' to be non-null");
+            $.policy = Objects.requireNonNull($.policy, "expected parameter 'policy' to be non-null");
+            return $;
         }
     }
+
 }

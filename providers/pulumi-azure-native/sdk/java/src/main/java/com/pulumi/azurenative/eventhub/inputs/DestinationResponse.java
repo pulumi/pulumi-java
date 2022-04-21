@@ -23,10 +23,10 @@ public final class DestinationResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="archiveNameFormat")
-      private final @Nullable String archiveNameFormat;
+    private @Nullable String archiveNameFormat;
 
     public Optional<String> archiveNameFormat() {
-        return this.archiveNameFormat == null ? Optional.empty() : Optional.ofNullable(this.archiveNameFormat);
+        return Optional.ofNullable(this.archiveNameFormat);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class DestinationResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="blobContainer")
-      private final @Nullable String blobContainer;
+    private @Nullable String blobContainer;
 
     public Optional<String> blobContainer() {
-        return this.blobContainer == null ? Optional.empty() : Optional.ofNullable(this.blobContainer);
+        return Optional.ofNullable(this.blobContainer);
     }
 
     /**
@@ -45,10 +45,10 @@ public final class DestinationResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable String name;
+    private @Nullable String name;
 
     public Optional<String> name() {
-        return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -56,73 +56,62 @@ public final class DestinationResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="storageAccountResourceId")
-      private final @Nullable String storageAccountResourceId;
+    private @Nullable String storageAccountResourceId;
 
     public Optional<String> storageAccountResourceId() {
-        return this.storageAccountResourceId == null ? Optional.empty() : Optional.ofNullable(this.storageAccountResourceId);
+        return Optional.ofNullable(this.storageAccountResourceId);
     }
 
-    public DestinationResponse(
-        @Nullable String archiveNameFormat,
-        @Nullable String blobContainer,
-        @Nullable String name,
-        @Nullable String storageAccountResourceId) {
-        this.archiveNameFormat = archiveNameFormat;
-        this.blobContainer = blobContainer;
-        this.name = name;
-        this.storageAccountResourceId = storageAccountResourceId;
-    }
+    private DestinationResponse() {}
 
-    private DestinationResponse() {
-        this.archiveNameFormat = null;
-        this.blobContainer = null;
-        this.name = null;
-        this.storageAccountResourceId = null;
+    private DestinationResponse(DestinationResponse $) {
+        this.archiveNameFormat = $.archiveNameFormat;
+        this.blobContainer = $.blobContainer;
+        this.name = $.name;
+        this.storageAccountResourceId = $.storageAccountResourceId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DestinationResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String archiveNameFormat;
-        private @Nullable String blobContainer;
-        private @Nullable String name;
-        private @Nullable String storageAccountResourceId;
+        private DestinationResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new DestinationResponse();
         }
 
         public Builder(DestinationResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.archiveNameFormat = defaults.archiveNameFormat;
-    	      this.blobContainer = defaults.blobContainer;
-    	      this.name = defaults.name;
-    	      this.storageAccountResourceId = defaults.storageAccountResourceId;
+            $ = new DestinationResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder archiveNameFormat(@Nullable String archiveNameFormat) {
-            this.archiveNameFormat = archiveNameFormat;
+            $.archiveNameFormat = archiveNameFormat;
             return this;
         }
+
         public Builder blobContainer(@Nullable String blobContainer) {
-            this.blobContainer = blobContainer;
+            $.blobContainer = blobContainer;
             return this;
         }
+
         public Builder name(@Nullable String name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
+
         public Builder storageAccountResourceId(@Nullable String storageAccountResourceId) {
-            this.storageAccountResourceId = storageAccountResourceId;
+            $.storageAccountResourceId = storageAccountResourceId;
             return this;
-        }        public DestinationResponse build() {
-            return new DestinationResponse(archiveNameFormat, blobContainer, name, storageAccountResourceId);
+        }
+
+        public DestinationResponse build() {
+            return $;
         }
     }
+
 }

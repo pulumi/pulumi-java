@@ -7,9 +7,9 @@ import com.pulumi.azurenative.dbforpostgresql.enums.IdentityType;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,49 +26,48 @@ public final class ResourceIdentityArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="type")
-      private final @Nullable Output<Either<String,IdentityType>> type;
+    private @Nullable Output<Either<String,IdentityType>> type;
 
-    public Output<Either<String,IdentityType>> type() {
-        return this.type == null ? Codegen.empty() : this.type;
+    public Optional<Output<Either<String,IdentityType>>> type() {
+        return Optional.ofNullable(this.type);
     }
 
-    public ResourceIdentityArgs(@Nullable Output<Either<String,IdentityType>> type) {
-        this.type = type;
-    }
+    private ResourceIdentityArgs() {}
 
-    private ResourceIdentityArgs() {
-        this.type = Codegen.empty();
+    private ResourceIdentityArgs(ResourceIdentityArgs $) {
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ResourceIdentityArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Either<String,IdentityType>> type;
+        private ResourceIdentityArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ResourceIdentityArgs();
         }
 
         public Builder(ResourceIdentityArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.type = defaults.type;
+            $ = new ResourceIdentityArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder type(@Nullable Output<Either<String,IdentityType>> type) {
-            this.type = type;
+            $.type = type;
             return this;
         }
-        public Builder type(@Nullable Either<String,IdentityType> type) {
-            this.type = Codegen.ofNullable(type);
-            return this;
-        }        public ResourceIdentityArgs build() {
-            return new ResourceIdentityArgs(type);
+
+        public Builder type(Either<String,IdentityType> type) {
+            return type(Output.of(type));
+        }
+
+        public ResourceIdentityArgs build() {
+            return $;
         }
     }
+
 }

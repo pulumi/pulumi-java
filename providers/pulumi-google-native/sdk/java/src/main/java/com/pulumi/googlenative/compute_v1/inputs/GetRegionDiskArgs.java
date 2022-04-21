@@ -15,78 +15,72 @@ public final class GetRegionDiskArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetRegionDiskArgs Empty = new GetRegionDiskArgs();
 
     @Import(name="disk", required=true)
-      private final String disk;
+    private String disk;
 
     public String disk() {
         return this.disk;
     }
 
     @Import(name="project")
-      private final @Nullable String project;
+    private @Nullable String project;
 
     public Optional<String> project() {
-        return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
+        return Optional.ofNullable(this.project);
     }
 
     @Import(name="region", required=true)
-      private final String region;
+    private String region;
 
     public String region() {
         return this.region;
     }
 
-    public GetRegionDiskArgs(
-        String disk,
-        @Nullable String project,
-        String region) {
-        this.disk = Objects.requireNonNull(disk, "expected parameter 'disk' to be non-null");
-        this.project = project;
-        this.region = Objects.requireNonNull(region, "expected parameter 'region' to be non-null");
-    }
+    private GetRegionDiskArgs() {}
 
-    private GetRegionDiskArgs() {
-        this.disk = null;
-        this.project = null;
-        this.region = null;
+    private GetRegionDiskArgs(GetRegionDiskArgs $) {
+        this.disk = $.disk;
+        this.project = $.project;
+        this.region = $.region;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetRegionDiskArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String disk;
-        private @Nullable String project;
-        private String region;
+        private GetRegionDiskArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetRegionDiskArgs();
         }
 
         public Builder(GetRegionDiskArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.disk = defaults.disk;
-    	      this.project = defaults.project;
-    	      this.region = defaults.region;
+            $ = new GetRegionDiskArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder disk(String disk) {
-            this.disk = Objects.requireNonNull(disk);
+            $.disk = disk;
             return this;
         }
+
         public Builder project(@Nullable String project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
+
         public Builder region(String region) {
-            this.region = Objects.requireNonNull(region);
+            $.region = region;
             return this;
-        }        public GetRegionDiskArgs build() {
-            return new GetRegionDiskArgs(disk, project, region);
+        }
+
+        public GetRegionDiskArgs build() {
+            $.disk = Objects.requireNonNull($.disk, "expected parameter 'disk' to be non-null");
+            $.region = Objects.requireNonNull($.region, "expected parameter 'region' to be non-null");
+            return $;
         }
     }
+
 }

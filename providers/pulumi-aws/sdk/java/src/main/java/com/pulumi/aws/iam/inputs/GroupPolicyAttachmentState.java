@@ -5,9 +5,9 @@ package com.pulumi.aws.iam.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class GroupPolicyAttachmentState extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="group")
-      private final @Nullable Output<String> group;
+    private @Nullable Output<String> group;
 
-    public Output<String> group() {
-        return this.group == null ? Codegen.empty() : this.group;
+    public Optional<Output<String>> group() {
+        return Optional.ofNullable(this.group);
     }
 
     /**
@@ -31,59 +31,58 @@ public final class GroupPolicyAttachmentState extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="policyArn")
-      private final @Nullable Output<String> policyArn;
+    private @Nullable Output<String> policyArn;
 
-    public Output<String> policyArn() {
-        return this.policyArn == null ? Codegen.empty() : this.policyArn;
+    public Optional<Output<String>> policyArn() {
+        return Optional.ofNullable(this.policyArn);
     }
 
-    public GroupPolicyAttachmentState(
-        @Nullable Output<String> group,
-        @Nullable Output<String> policyArn) {
-        this.group = group;
-        this.policyArn = policyArn;
-    }
+    private GroupPolicyAttachmentState() {}
 
-    private GroupPolicyAttachmentState() {
-        this.group = Codegen.empty();
-        this.policyArn = Codegen.empty();
+    private GroupPolicyAttachmentState(GroupPolicyAttachmentState $) {
+        this.group = $.group;
+        this.policyArn = $.policyArn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GroupPolicyAttachmentState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> group;
-        private @Nullable Output<String> policyArn;
+        private GroupPolicyAttachmentState $;
 
         public Builder() {
-    	      // Empty
+            $ = new GroupPolicyAttachmentState();
         }
 
         public Builder(GroupPolicyAttachmentState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.group = defaults.group;
-    	      this.policyArn = defaults.policyArn;
+            $ = new GroupPolicyAttachmentState(Objects.requireNonNull(defaults));
         }
 
         public Builder group(@Nullable Output<String> group) {
-            this.group = group;
+            $.group = group;
             return this;
         }
+
+        public Builder group(String group) {
+            return group(Output.of(group));
+        }
+
         public Builder policyArn(@Nullable Output<String> policyArn) {
-            this.policyArn = policyArn;
+            $.policyArn = policyArn;
             return this;
         }
-        public Builder policyArn(@Nullable String policyArn) {
-            this.policyArn = Codegen.ofNullable(policyArn);
-            return this;
-        }        public GroupPolicyAttachmentState build() {
-            return new GroupPolicyAttachmentState(group, policyArn);
+
+        public Builder policyArn(String policyArn) {
+            return policyArn(Output.of(policyArn));
+        }
+
+        public GroupPolicyAttachmentState build() {
+            return $;
         }
     }
+
 }

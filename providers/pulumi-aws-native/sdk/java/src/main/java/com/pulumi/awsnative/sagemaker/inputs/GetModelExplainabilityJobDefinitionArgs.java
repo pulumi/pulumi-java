@@ -17,45 +17,45 @@ public final class GetModelExplainabilityJobDefinitionArgs extends com.pulumi.re
      * 
      */
     @Import(name="jobDefinitionArn", required=true)
-      private final String jobDefinitionArn;
+    private String jobDefinitionArn;
 
     public String jobDefinitionArn() {
         return this.jobDefinitionArn;
     }
 
-    public GetModelExplainabilityJobDefinitionArgs(String jobDefinitionArn) {
-        this.jobDefinitionArn = Objects.requireNonNull(jobDefinitionArn, "expected parameter 'jobDefinitionArn' to be non-null");
-    }
+    private GetModelExplainabilityJobDefinitionArgs() {}
 
-    private GetModelExplainabilityJobDefinitionArgs() {
-        this.jobDefinitionArn = null;
+    private GetModelExplainabilityJobDefinitionArgs(GetModelExplainabilityJobDefinitionArgs $) {
+        this.jobDefinitionArn = $.jobDefinitionArn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetModelExplainabilityJobDefinitionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String jobDefinitionArn;
+        private GetModelExplainabilityJobDefinitionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetModelExplainabilityJobDefinitionArgs();
         }
 
         public Builder(GetModelExplainabilityJobDefinitionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.jobDefinitionArn = defaults.jobDefinitionArn;
+            $ = new GetModelExplainabilityJobDefinitionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder jobDefinitionArn(String jobDefinitionArn) {
-            this.jobDefinitionArn = Objects.requireNonNull(jobDefinitionArn);
+            $.jobDefinitionArn = jobDefinitionArn;
             return this;
-        }        public GetModelExplainabilityJobDefinitionArgs build() {
-            return new GetModelExplainabilityJobDefinitionArgs(jobDefinitionArn);
+        }
+
+        public GetModelExplainabilityJobDefinitionArgs build() {
+            $.jobDefinitionArn = Objects.requireNonNull($.jobDefinitionArn, "expected parameter 'jobDefinitionArn' to be non-null");
+            return $;
         }
     }
+
 }

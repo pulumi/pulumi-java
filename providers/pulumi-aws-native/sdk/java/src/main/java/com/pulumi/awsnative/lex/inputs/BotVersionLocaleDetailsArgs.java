@@ -5,7 +5,6 @@ package com.pulumi.awsnative.lex.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,49 +18,49 @@ public final class BotVersionLocaleDetailsArgs extends com.pulumi.resources.Reso
     public static final BotVersionLocaleDetailsArgs Empty = new BotVersionLocaleDetailsArgs();
 
     @Import(name="sourceBotVersion", required=true)
-      private final Output<String> sourceBotVersion;
+    private Output<String> sourceBotVersion;
 
     public Output<String> sourceBotVersion() {
         return this.sourceBotVersion;
     }
 
-    public BotVersionLocaleDetailsArgs(Output<String> sourceBotVersion) {
-        this.sourceBotVersion = Objects.requireNonNull(sourceBotVersion, "expected parameter 'sourceBotVersion' to be non-null");
-    }
+    private BotVersionLocaleDetailsArgs() {}
 
-    private BotVersionLocaleDetailsArgs() {
-        this.sourceBotVersion = Codegen.empty();
+    private BotVersionLocaleDetailsArgs(BotVersionLocaleDetailsArgs $) {
+        this.sourceBotVersion = $.sourceBotVersion;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BotVersionLocaleDetailsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> sourceBotVersion;
+        private BotVersionLocaleDetailsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new BotVersionLocaleDetailsArgs();
         }
 
         public Builder(BotVersionLocaleDetailsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.sourceBotVersion = defaults.sourceBotVersion;
+            $ = new BotVersionLocaleDetailsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder sourceBotVersion(Output<String> sourceBotVersion) {
-            this.sourceBotVersion = Objects.requireNonNull(sourceBotVersion);
+            $.sourceBotVersion = sourceBotVersion;
             return this;
         }
+
         public Builder sourceBotVersion(String sourceBotVersion) {
-            this.sourceBotVersion = Output.of(Objects.requireNonNull(sourceBotVersion));
-            return this;
-        }        public BotVersionLocaleDetailsArgs build() {
-            return new BotVersionLocaleDetailsArgs(sourceBotVersion);
+            return sourceBotVersion(Output.of(sourceBotVersion));
+        }
+
+        public BotVersionLocaleDetailsArgs build() {
+            $.sourceBotVersion = Objects.requireNonNull($.sourceBotVersion, "expected parameter 'sourceBotVersion' to be non-null");
+            return $;
         }
     }
+
 }

@@ -23,45 +23,44 @@ public final class ResourceSetNLBResource extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="arn")
-      private final @Nullable String arn;
+    private @Nullable String arn;
 
     public Optional<String> arn() {
-        return this.arn == null ? Optional.empty() : Optional.ofNullable(this.arn);
+        return Optional.ofNullable(this.arn);
     }
 
-    public ResourceSetNLBResource(@Nullable String arn) {
-        this.arn = arn;
-    }
+    private ResourceSetNLBResource() {}
 
-    private ResourceSetNLBResource() {
-        this.arn = null;
+    private ResourceSetNLBResource(ResourceSetNLBResource $) {
+        this.arn = $.arn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ResourceSetNLBResource defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String arn;
+        private ResourceSetNLBResource $;
 
         public Builder() {
-    	      // Empty
+            $ = new ResourceSetNLBResource();
         }
 
         public Builder(ResourceSetNLBResource defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.arn = defaults.arn;
+            $ = new ResourceSetNLBResource(Objects.requireNonNull(defaults));
         }
 
         public Builder arn(@Nullable String arn) {
-            this.arn = arn;
+            $.arn = arn;
             return this;
-        }        public ResourceSetNLBResource build() {
-            return new ResourceSetNLBResource(arn);
+        }
+
+        public ResourceSetNLBResource build() {
+            return $;
         }
     }
+
 }

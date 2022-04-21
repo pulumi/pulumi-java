@@ -21,45 +21,45 @@ public final class ContainerServiceSshPublicKeyResponse extends com.pulumi.resou
      * 
      */
     @Import(name="keyData", required=true)
-      private final String keyData;
+    private String keyData;
 
     public String keyData() {
         return this.keyData;
     }
 
-    public ContainerServiceSshPublicKeyResponse(String keyData) {
-        this.keyData = Objects.requireNonNull(keyData, "expected parameter 'keyData' to be non-null");
-    }
+    private ContainerServiceSshPublicKeyResponse() {}
 
-    private ContainerServiceSshPublicKeyResponse() {
-        this.keyData = null;
+    private ContainerServiceSshPublicKeyResponse(ContainerServiceSshPublicKeyResponse $) {
+        this.keyData = $.keyData;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ContainerServiceSshPublicKeyResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String keyData;
+        private ContainerServiceSshPublicKeyResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ContainerServiceSshPublicKeyResponse();
         }
 
         public Builder(ContainerServiceSshPublicKeyResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.keyData = defaults.keyData;
+            $ = new ContainerServiceSshPublicKeyResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder keyData(String keyData) {
-            this.keyData = Objects.requireNonNull(keyData);
+            $.keyData = keyData;
             return this;
-        }        public ContainerServiceSshPublicKeyResponse build() {
-            return new ContainerServiceSshPublicKeyResponse(keyData);
+        }
+
+        public ContainerServiceSshPublicKeyResponse build() {
+            $.keyData = Objects.requireNonNull($.keyData, "expected parameter 'keyData' to be non-null");
+            return $;
         }
     }
+
 }

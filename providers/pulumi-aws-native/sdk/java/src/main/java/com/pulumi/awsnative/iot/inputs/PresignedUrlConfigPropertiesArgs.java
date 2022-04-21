@@ -5,10 +5,10 @@ package com.pulumi.awsnative.iot.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,70 +21,66 @@ public final class PresignedUrlConfigPropertiesArgs extends com.pulumi.resources
     public static final PresignedUrlConfigPropertiesArgs Empty = new PresignedUrlConfigPropertiesArgs();
 
     @Import(name="expiresInSec")
-      private final @Nullable Output<Integer> expiresInSec;
+    private @Nullable Output<Integer> expiresInSec;
 
-    public Output<Integer> expiresInSec() {
-        return this.expiresInSec == null ? Codegen.empty() : this.expiresInSec;
+    public Optional<Output<Integer>> expiresInSec() {
+        return Optional.ofNullable(this.expiresInSec);
     }
 
     @Import(name="roleArn", required=true)
-      private final Output<String> roleArn;
+    private Output<String> roleArn;
 
     public Output<String> roleArn() {
         return this.roleArn;
     }
 
-    public PresignedUrlConfigPropertiesArgs(
-        @Nullable Output<Integer> expiresInSec,
-        Output<String> roleArn) {
-        this.expiresInSec = expiresInSec;
-        this.roleArn = Objects.requireNonNull(roleArn, "expected parameter 'roleArn' to be non-null");
-    }
+    private PresignedUrlConfigPropertiesArgs() {}
 
-    private PresignedUrlConfigPropertiesArgs() {
-        this.expiresInSec = Codegen.empty();
-        this.roleArn = Codegen.empty();
+    private PresignedUrlConfigPropertiesArgs(PresignedUrlConfigPropertiesArgs $) {
+        this.expiresInSec = $.expiresInSec;
+        this.roleArn = $.roleArn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PresignedUrlConfigPropertiesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> expiresInSec;
-        private Output<String> roleArn;
+        private PresignedUrlConfigPropertiesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PresignedUrlConfigPropertiesArgs();
         }
 
         public Builder(PresignedUrlConfigPropertiesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.expiresInSec = defaults.expiresInSec;
-    	      this.roleArn = defaults.roleArn;
+            $ = new PresignedUrlConfigPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder expiresInSec(@Nullable Output<Integer> expiresInSec) {
-            this.expiresInSec = expiresInSec;
+            $.expiresInSec = expiresInSec;
             return this;
         }
-        public Builder expiresInSec(@Nullable Integer expiresInSec) {
-            this.expiresInSec = Codegen.ofNullable(expiresInSec);
-            return this;
+
+        public Builder expiresInSec(Integer expiresInSec) {
+            return expiresInSec(Output.of(expiresInSec));
         }
+
         public Builder roleArn(Output<String> roleArn) {
-            this.roleArn = Objects.requireNonNull(roleArn);
+            $.roleArn = roleArn;
             return this;
         }
+
         public Builder roleArn(String roleArn) {
-            this.roleArn = Output.of(Objects.requireNonNull(roleArn));
-            return this;
-        }        public PresignedUrlConfigPropertiesArgs build() {
-            return new PresignedUrlConfigPropertiesArgs(expiresInSec, roleArn);
+            return roleArn(Output.of(roleArn));
+        }
+
+        public PresignedUrlConfigPropertiesArgs build() {
+            $.roleArn = Objects.requireNonNull($.roleArn, "expected parameter 'roleArn' to be non-null");
+            return $;
         }
     }
+
 }

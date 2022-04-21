@@ -7,10 +7,10 @@ import com.pulumi.azurenative.web.inputs.BlobStorageTokenStoreArgs;
 import com.pulumi.azurenative.web.inputs.FileSystemTokenStoreArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +27,10 @@ public final class TokenStoreArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="azureBlobStorage")
-      private final @Nullable Output<BlobStorageTokenStoreArgs> azureBlobStorage;
+    private @Nullable Output<BlobStorageTokenStoreArgs> azureBlobStorage;
 
-    public Output<BlobStorageTokenStoreArgs> azureBlobStorage() {
-        return this.azureBlobStorage == null ? Codegen.empty() : this.azureBlobStorage;
+    public Optional<Output<BlobStorageTokenStoreArgs>> azureBlobStorage() {
+        return Optional.ofNullable(this.azureBlobStorage);
     }
 
     /**
@@ -39,10 +39,10 @@ public final class TokenStoreArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="enabled")
-      private final @Nullable Output<Boolean> enabled;
+    private @Nullable Output<Boolean> enabled;
 
-    public Output<Boolean> enabled() {
-        return this.enabled == null ? Codegen.empty() : this.enabled;
+    public Optional<Output<Boolean>> enabled() {
+        return Optional.ofNullable(this.enabled);
     }
 
     /**
@@ -50,10 +50,10 @@ public final class TokenStoreArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="fileSystem")
-      private final @Nullable Output<FileSystemTokenStoreArgs> fileSystem;
+    private @Nullable Output<FileSystemTokenStoreArgs> fileSystem;
 
-    public Output<FileSystemTokenStoreArgs> fileSystem() {
-        return this.fileSystem == null ? Codegen.empty() : this.fileSystem;
+    public Optional<Output<FileSystemTokenStoreArgs>> fileSystem() {
+        return Optional.ofNullable(this.fileSystem);
     }
 
     /**
@@ -62,89 +62,78 @@ public final class TokenStoreArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tokenRefreshExtensionHours")
-      private final @Nullable Output<Double> tokenRefreshExtensionHours;
+    private @Nullable Output<Double> tokenRefreshExtensionHours;
 
-    public Output<Double> tokenRefreshExtensionHours() {
-        return this.tokenRefreshExtensionHours == null ? Codegen.empty() : this.tokenRefreshExtensionHours;
+    public Optional<Output<Double>> tokenRefreshExtensionHours() {
+        return Optional.ofNullable(this.tokenRefreshExtensionHours);
     }
 
-    public TokenStoreArgs(
-        @Nullable Output<BlobStorageTokenStoreArgs> azureBlobStorage,
-        @Nullable Output<Boolean> enabled,
-        @Nullable Output<FileSystemTokenStoreArgs> fileSystem,
-        @Nullable Output<Double> tokenRefreshExtensionHours) {
-        this.azureBlobStorage = azureBlobStorage;
-        this.enabled = enabled;
-        this.fileSystem = fileSystem;
-        this.tokenRefreshExtensionHours = tokenRefreshExtensionHours;
-    }
+    private TokenStoreArgs() {}
 
-    private TokenStoreArgs() {
-        this.azureBlobStorage = Codegen.empty();
-        this.enabled = Codegen.empty();
-        this.fileSystem = Codegen.empty();
-        this.tokenRefreshExtensionHours = Codegen.empty();
+    private TokenStoreArgs(TokenStoreArgs $) {
+        this.azureBlobStorage = $.azureBlobStorage;
+        this.enabled = $.enabled;
+        this.fileSystem = $.fileSystem;
+        this.tokenRefreshExtensionHours = $.tokenRefreshExtensionHours;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TokenStoreArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<BlobStorageTokenStoreArgs> azureBlobStorage;
-        private @Nullable Output<Boolean> enabled;
-        private @Nullable Output<FileSystemTokenStoreArgs> fileSystem;
-        private @Nullable Output<Double> tokenRefreshExtensionHours;
+        private TokenStoreArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TokenStoreArgs();
         }
 
         public Builder(TokenStoreArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.azureBlobStorage = defaults.azureBlobStorage;
-    	      this.enabled = defaults.enabled;
-    	      this.fileSystem = defaults.fileSystem;
-    	      this.tokenRefreshExtensionHours = defaults.tokenRefreshExtensionHours;
+            $ = new TokenStoreArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder azureBlobStorage(@Nullable Output<BlobStorageTokenStoreArgs> azureBlobStorage) {
-            this.azureBlobStorage = azureBlobStorage;
+            $.azureBlobStorage = azureBlobStorage;
             return this;
         }
-        public Builder azureBlobStorage(@Nullable BlobStorageTokenStoreArgs azureBlobStorage) {
-            this.azureBlobStorage = Codegen.ofNullable(azureBlobStorage);
-            return this;
+
+        public Builder azureBlobStorage(BlobStorageTokenStoreArgs azureBlobStorage) {
+            return azureBlobStorage(Output.of(azureBlobStorage));
         }
+
         public Builder enabled(@Nullable Output<Boolean> enabled) {
-            this.enabled = enabled;
+            $.enabled = enabled;
             return this;
         }
-        public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Codegen.ofNullable(enabled);
-            return this;
+
+        public Builder enabled(Boolean enabled) {
+            return enabled(Output.of(enabled));
         }
+
         public Builder fileSystem(@Nullable Output<FileSystemTokenStoreArgs> fileSystem) {
-            this.fileSystem = fileSystem;
+            $.fileSystem = fileSystem;
             return this;
         }
-        public Builder fileSystem(@Nullable FileSystemTokenStoreArgs fileSystem) {
-            this.fileSystem = Codegen.ofNullable(fileSystem);
-            return this;
+
+        public Builder fileSystem(FileSystemTokenStoreArgs fileSystem) {
+            return fileSystem(Output.of(fileSystem));
         }
+
         public Builder tokenRefreshExtensionHours(@Nullable Output<Double> tokenRefreshExtensionHours) {
-            this.tokenRefreshExtensionHours = tokenRefreshExtensionHours;
+            $.tokenRefreshExtensionHours = tokenRefreshExtensionHours;
             return this;
         }
-        public Builder tokenRefreshExtensionHours(@Nullable Double tokenRefreshExtensionHours) {
-            this.tokenRefreshExtensionHours = Codegen.ofNullable(tokenRefreshExtensionHours);
-            return this;
-        }        public TokenStoreArgs build() {
-            return new TokenStoreArgs(azureBlobStorage, enabled, fileSystem, tokenRefreshExtensionHours);
+
+        public Builder tokenRefreshExtensionHours(Double tokenRefreshExtensionHours) {
+            return tokenRefreshExtensionHours(Output.of(tokenRefreshExtensionHours));
+        }
+
+        public TokenStoreArgs build() {
+            return $;
         }
     }
+
 }

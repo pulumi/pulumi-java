@@ -21,7 +21,7 @@ public final class MessageCountDetailsResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="activeMessageCount", required=true)
-      private final Double activeMessageCount;
+    private Double activeMessageCount;
 
     public Double activeMessageCount() {
         return this.activeMessageCount;
@@ -32,7 +32,7 @@ public final class MessageCountDetailsResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="deadLetterMessageCount", required=true)
-      private final Double deadLetterMessageCount;
+    private Double deadLetterMessageCount;
 
     public Double deadLetterMessageCount() {
         return this.deadLetterMessageCount;
@@ -43,7 +43,7 @@ public final class MessageCountDetailsResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="scheduledMessageCount", required=true)
-      private final Double scheduledMessageCount;
+    private Double scheduledMessageCount;
 
     public Double scheduledMessageCount() {
         return this.scheduledMessageCount;
@@ -54,7 +54,7 @@ public final class MessageCountDetailsResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="transferDeadLetterMessageCount", required=true)
-      private final Double transferDeadLetterMessageCount;
+    private Double transferDeadLetterMessageCount;
 
     public Double transferDeadLetterMessageCount() {
         return this.transferDeadLetterMessageCount;
@@ -65,82 +65,73 @@ public final class MessageCountDetailsResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="transferMessageCount", required=true)
-      private final Double transferMessageCount;
+    private Double transferMessageCount;
 
     public Double transferMessageCount() {
         return this.transferMessageCount;
     }
 
-    public MessageCountDetailsResponse(
-        Double activeMessageCount,
-        Double deadLetterMessageCount,
-        Double scheduledMessageCount,
-        Double transferDeadLetterMessageCount,
-        Double transferMessageCount) {
-        this.activeMessageCount = Objects.requireNonNull(activeMessageCount, "expected parameter 'activeMessageCount' to be non-null");
-        this.deadLetterMessageCount = Objects.requireNonNull(deadLetterMessageCount, "expected parameter 'deadLetterMessageCount' to be non-null");
-        this.scheduledMessageCount = Objects.requireNonNull(scheduledMessageCount, "expected parameter 'scheduledMessageCount' to be non-null");
-        this.transferDeadLetterMessageCount = Objects.requireNonNull(transferDeadLetterMessageCount, "expected parameter 'transferDeadLetterMessageCount' to be non-null");
-        this.transferMessageCount = Objects.requireNonNull(transferMessageCount, "expected parameter 'transferMessageCount' to be non-null");
-    }
+    private MessageCountDetailsResponse() {}
 
-    private MessageCountDetailsResponse() {
-        this.activeMessageCount = null;
-        this.deadLetterMessageCount = null;
-        this.scheduledMessageCount = null;
-        this.transferDeadLetterMessageCount = null;
-        this.transferMessageCount = null;
+    private MessageCountDetailsResponse(MessageCountDetailsResponse $) {
+        this.activeMessageCount = $.activeMessageCount;
+        this.deadLetterMessageCount = $.deadLetterMessageCount;
+        this.scheduledMessageCount = $.scheduledMessageCount;
+        this.transferDeadLetterMessageCount = $.transferDeadLetterMessageCount;
+        this.transferMessageCount = $.transferMessageCount;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MessageCountDetailsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Double activeMessageCount;
-        private Double deadLetterMessageCount;
-        private Double scheduledMessageCount;
-        private Double transferDeadLetterMessageCount;
-        private Double transferMessageCount;
+        private MessageCountDetailsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new MessageCountDetailsResponse();
         }
 
         public Builder(MessageCountDetailsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.activeMessageCount = defaults.activeMessageCount;
-    	      this.deadLetterMessageCount = defaults.deadLetterMessageCount;
-    	      this.scheduledMessageCount = defaults.scheduledMessageCount;
-    	      this.transferDeadLetterMessageCount = defaults.transferDeadLetterMessageCount;
-    	      this.transferMessageCount = defaults.transferMessageCount;
+            $ = new MessageCountDetailsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder activeMessageCount(Double activeMessageCount) {
-            this.activeMessageCount = Objects.requireNonNull(activeMessageCount);
+            $.activeMessageCount = activeMessageCount;
             return this;
         }
+
         public Builder deadLetterMessageCount(Double deadLetterMessageCount) {
-            this.deadLetterMessageCount = Objects.requireNonNull(deadLetterMessageCount);
+            $.deadLetterMessageCount = deadLetterMessageCount;
             return this;
         }
+
         public Builder scheduledMessageCount(Double scheduledMessageCount) {
-            this.scheduledMessageCount = Objects.requireNonNull(scheduledMessageCount);
+            $.scheduledMessageCount = scheduledMessageCount;
             return this;
         }
+
         public Builder transferDeadLetterMessageCount(Double transferDeadLetterMessageCount) {
-            this.transferDeadLetterMessageCount = Objects.requireNonNull(transferDeadLetterMessageCount);
+            $.transferDeadLetterMessageCount = transferDeadLetterMessageCount;
             return this;
         }
+
         public Builder transferMessageCount(Double transferMessageCount) {
-            this.transferMessageCount = Objects.requireNonNull(transferMessageCount);
+            $.transferMessageCount = transferMessageCount;
             return this;
-        }        public MessageCountDetailsResponse build() {
-            return new MessageCountDetailsResponse(activeMessageCount, deadLetterMessageCount, scheduledMessageCount, transferDeadLetterMessageCount, transferMessageCount);
+        }
+
+        public MessageCountDetailsResponse build() {
+            $.activeMessageCount = Objects.requireNonNull($.activeMessageCount, "expected parameter 'activeMessageCount' to be non-null");
+            $.deadLetterMessageCount = Objects.requireNonNull($.deadLetterMessageCount, "expected parameter 'deadLetterMessageCount' to be non-null");
+            $.scheduledMessageCount = Objects.requireNonNull($.scheduledMessageCount, "expected parameter 'scheduledMessageCount' to be non-null");
+            $.transferDeadLetterMessageCount = Objects.requireNonNull($.transferDeadLetterMessageCount, "expected parameter 'transferDeadLetterMessageCount' to be non-null");
+            $.transferMessageCount = Objects.requireNonNull($.transferMessageCount, "expected parameter 'transferMessageCount' to be non-null");
+            return $;
         }
     }
+
 }

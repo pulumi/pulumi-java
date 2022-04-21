@@ -17,7 +17,7 @@ public final class GetScriptExecutionArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="privateCloudName", required=true)
-      private final String privateCloudName;
+    private String privateCloudName;
 
     public String privateCloudName() {
         return this.privateCloudName;
@@ -28,7 +28,7 @@ public final class GetScriptExecutionArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -39,64 +39,59 @@ public final class GetScriptExecutionArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="scriptExecutionName", required=true)
-      private final String scriptExecutionName;
+    private String scriptExecutionName;
 
     public String scriptExecutionName() {
         return this.scriptExecutionName;
     }
 
-    public GetScriptExecutionArgs(
-        String privateCloudName,
-        String resourceGroupName,
-        String scriptExecutionName) {
-        this.privateCloudName = Objects.requireNonNull(privateCloudName, "expected parameter 'privateCloudName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.scriptExecutionName = Objects.requireNonNull(scriptExecutionName, "expected parameter 'scriptExecutionName' to be non-null");
-    }
+    private GetScriptExecutionArgs() {}
 
-    private GetScriptExecutionArgs() {
-        this.privateCloudName = null;
-        this.resourceGroupName = null;
-        this.scriptExecutionName = null;
+    private GetScriptExecutionArgs(GetScriptExecutionArgs $) {
+        this.privateCloudName = $.privateCloudName;
+        this.resourceGroupName = $.resourceGroupName;
+        this.scriptExecutionName = $.scriptExecutionName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetScriptExecutionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String privateCloudName;
-        private String resourceGroupName;
-        private String scriptExecutionName;
+        private GetScriptExecutionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetScriptExecutionArgs();
         }
 
         public Builder(GetScriptExecutionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.privateCloudName = defaults.privateCloudName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.scriptExecutionName = defaults.scriptExecutionName;
+            $ = new GetScriptExecutionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder privateCloudName(String privateCloudName) {
-            this.privateCloudName = Objects.requireNonNull(privateCloudName);
+            $.privateCloudName = privateCloudName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder scriptExecutionName(String scriptExecutionName) {
-            this.scriptExecutionName = Objects.requireNonNull(scriptExecutionName);
+            $.scriptExecutionName = scriptExecutionName;
             return this;
-        }        public GetScriptExecutionArgs build() {
-            return new GetScriptExecutionArgs(privateCloudName, resourceGroupName, scriptExecutionName);
+        }
+
+        public GetScriptExecutionArgs build() {
+            $.privateCloudName = Objects.requireNonNull($.privateCloudName, "expected parameter 'privateCloudName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.scriptExecutionName = Objects.requireNonNull($.scriptExecutionName, "expected parameter 'scriptExecutionName' to be non-null");
+            return $;
         }
     }
+
 }

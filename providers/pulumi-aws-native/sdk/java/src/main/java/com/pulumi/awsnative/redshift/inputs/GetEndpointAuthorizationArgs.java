@@ -17,7 +17,7 @@ public final class GetEndpointAuthorizationArgs extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="account", required=true)
-      private final String account;
+    private String account;
 
     public String account() {
         return this.account;
@@ -28,55 +28,52 @@ public final class GetEndpointAuthorizationArgs extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="clusterIdentifier", required=true)
-      private final String clusterIdentifier;
+    private String clusterIdentifier;
 
     public String clusterIdentifier() {
         return this.clusterIdentifier;
     }
 
-    public GetEndpointAuthorizationArgs(
-        String account,
-        String clusterIdentifier) {
-        this.account = Objects.requireNonNull(account, "expected parameter 'account' to be non-null");
-        this.clusterIdentifier = Objects.requireNonNull(clusterIdentifier, "expected parameter 'clusterIdentifier' to be non-null");
-    }
+    private GetEndpointAuthorizationArgs() {}
 
-    private GetEndpointAuthorizationArgs() {
-        this.account = null;
-        this.clusterIdentifier = null;
+    private GetEndpointAuthorizationArgs(GetEndpointAuthorizationArgs $) {
+        this.account = $.account;
+        this.clusterIdentifier = $.clusterIdentifier;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetEndpointAuthorizationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String account;
-        private String clusterIdentifier;
+        private GetEndpointAuthorizationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetEndpointAuthorizationArgs();
         }
 
         public Builder(GetEndpointAuthorizationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.account = defaults.account;
-    	      this.clusterIdentifier = defaults.clusterIdentifier;
+            $ = new GetEndpointAuthorizationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder account(String account) {
-            this.account = Objects.requireNonNull(account);
+            $.account = account;
             return this;
         }
+
         public Builder clusterIdentifier(String clusterIdentifier) {
-            this.clusterIdentifier = Objects.requireNonNull(clusterIdentifier);
+            $.clusterIdentifier = clusterIdentifier;
             return this;
-        }        public GetEndpointAuthorizationArgs build() {
-            return new GetEndpointAuthorizationArgs(account, clusterIdentifier);
+        }
+
+        public GetEndpointAuthorizationArgs build() {
+            $.account = Objects.requireNonNull($.account, "expected parameter 'account' to be non-null");
+            $.clusterIdentifier = Objects.requireNonNull($.clusterIdentifier, "expected parameter 'clusterIdentifier' to be non-null");
+            return $;
         }
     }
+
 }

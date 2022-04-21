@@ -38,10 +38,10 @@ public final class AKSServiceResponseResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="aadAuthEnabled")
-      private final @Nullable Boolean aadAuthEnabled;
+    private @Nullable Boolean aadAuthEnabled;
 
     public Optional<Boolean> aadAuthEnabled() {
-        return this.aadAuthEnabled == null ? Optional.empty() : Optional.ofNullable(this.aadAuthEnabled);
+        return Optional.ofNullable(this.aadAuthEnabled);
     }
 
     /**
@@ -49,10 +49,10 @@ public final class AKSServiceResponseResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="appInsightsEnabled")
-      private final @Nullable Boolean appInsightsEnabled;
+    private @Nullable Boolean appInsightsEnabled;
 
     public Optional<Boolean> appInsightsEnabled() {
-        return this.appInsightsEnabled == null ? Optional.empty() : Optional.ofNullable(this.appInsightsEnabled);
+        return Optional.ofNullable(this.appInsightsEnabled);
     }
 
     /**
@@ -60,10 +60,10 @@ public final class AKSServiceResponseResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="authEnabled")
-      private final @Nullable Boolean authEnabled;
+    private @Nullable Boolean authEnabled;
 
     public Optional<Boolean> authEnabled() {
-        return this.authEnabled == null ? Optional.empty() : Optional.ofNullable(this.authEnabled);
+        return Optional.ofNullable(this.authEnabled);
     }
 
     /**
@@ -71,10 +71,10 @@ public final class AKSServiceResponseResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="autoScaler")
-      private final @Nullable AKSServiceResponseResponseAutoScaler autoScaler;
+    private @Nullable AKSServiceResponseResponseAutoScaler autoScaler;
 
     public Optional<AKSServiceResponseResponseAutoScaler> autoScaler() {
-        return this.autoScaler == null ? Optional.empty() : Optional.ofNullable(this.autoScaler);
+        return Optional.ofNullable(this.autoScaler);
     }
 
     /**
@@ -82,10 +82,10 @@ public final class AKSServiceResponseResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="computeName")
-      private final @Nullable String computeName;
+    private @Nullable String computeName;
 
     public Optional<String> computeName() {
-        return this.computeName == null ? Optional.empty() : Optional.ofNullable(this.computeName);
+        return Optional.ofNullable(this.computeName);
     }
 
     /**
@@ -94,7 +94,7 @@ public final class AKSServiceResponseResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="computeType", required=true)
-      private final String computeType;
+    private String computeType;
 
     public String computeType() {
         return this.computeType;
@@ -105,10 +105,10 @@ public final class AKSServiceResponseResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="containerResourceRequirements")
-      private final @Nullable ContainerResourceRequirementsResponse containerResourceRequirements;
+    private @Nullable ContainerResourceRequirementsResponse containerResourceRequirements;
 
     public Optional<ContainerResourceRequirementsResponse> containerResourceRequirements() {
-        return this.containerResourceRequirements == null ? Optional.empty() : Optional.ofNullable(this.containerResourceRequirements);
+        return Optional.ofNullable(this.containerResourceRequirements);
     }
 
     /**
@@ -116,10 +116,10 @@ public final class AKSServiceResponseResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="dataCollection")
-      private final @Nullable AKSServiceResponseResponseDataCollection dataCollection;
+    private @Nullable AKSServiceResponseResponseDataCollection dataCollection;
 
     public Optional<AKSServiceResponseResponseDataCollection> dataCollection() {
-        return this.dataCollection == null ? Optional.empty() : Optional.ofNullable(this.dataCollection);
+        return Optional.ofNullable(this.dataCollection);
     }
 
     /**
@@ -127,7 +127,7 @@ public final class AKSServiceResponseResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="deploymentStatus", required=true)
-      private final AKSServiceResponseResponseDeploymentStatus deploymentStatus;
+    private AKSServiceResponseResponseDeploymentStatus deploymentStatus;
 
     public AKSServiceResponseResponseDeploymentStatus deploymentStatus() {
         return this.deploymentStatus;
@@ -138,10 +138,10 @@ public final class AKSServiceResponseResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="deploymentType")
-      private final @Nullable String deploymentType;
+    private @Nullable String deploymentType;
 
     public Optional<String> deploymentType() {
-        return this.deploymentType == null ? Optional.empty() : Optional.ofNullable(this.deploymentType);
+        return Optional.ofNullable(this.deploymentType);
     }
 
     /**
@@ -149,10 +149,10 @@ public final class AKSServiceResponseResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="description")
-      private final @Nullable String description;
+    private @Nullable String description;
 
     public Optional<String> description() {
-        return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -160,10 +160,10 @@ public final class AKSServiceResponseResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="environmentImageRequest")
-      private final @Nullable AKSServiceResponseResponseEnvironmentImageRequest environmentImageRequest;
+    private @Nullable AKSServiceResponseResponseEnvironmentImageRequest environmentImageRequest;
 
     public Optional<AKSServiceResponseResponseEnvironmentImageRequest> environmentImageRequest() {
-        return this.environmentImageRequest == null ? Optional.empty() : Optional.ofNullable(this.environmentImageRequest);
+        return Optional.ofNullable(this.environmentImageRequest);
     }
 
     /**
@@ -171,7 +171,7 @@ public final class AKSServiceResponseResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="error", required=true)
-      private final ServiceResponseBaseResponseError error;
+    private ServiceResponseBaseResponseError error;
 
     public ServiceResponseBaseResponseError error() {
         return this.error;
@@ -182,10 +182,10 @@ public final class AKSServiceResponseResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="isDefault")
-      private final @Nullable Boolean isDefault;
+    private @Nullable Boolean isDefault;
 
     public Optional<Boolean> isDefault() {
-        return this.isDefault == null ? Optional.empty() : Optional.ofNullable(this.isDefault);
+        return Optional.ofNullable(this.isDefault);
     }
 
     /**
@@ -193,10 +193,10 @@ public final class AKSServiceResponseResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="kvTags")
-      private final @Nullable Map<String,String> kvTags;
+    private @Nullable Map<String,String> kvTags;
 
-    public Map<String,String> kvTags() {
-        return this.kvTags == null ? Map.of() : this.kvTags;
+    public Optional<Map<String,String>> kvTags() {
+        return Optional.ofNullable(this.kvTags);
     }
 
     /**
@@ -204,10 +204,10 @@ public final class AKSServiceResponseResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="livenessProbeRequirements")
-      private final @Nullable AKSServiceResponseResponseLivenessProbeRequirements livenessProbeRequirements;
+    private @Nullable AKSServiceResponseResponseLivenessProbeRequirements livenessProbeRequirements;
 
     public Optional<AKSServiceResponseResponseLivenessProbeRequirements> livenessProbeRequirements() {
-        return this.livenessProbeRequirements == null ? Optional.empty() : Optional.ofNullable(this.livenessProbeRequirements);
+        return Optional.ofNullable(this.livenessProbeRequirements);
     }
 
     /**
@@ -215,10 +215,10 @@ public final class AKSServiceResponseResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="maxConcurrentRequestsPerContainer")
-      private final @Nullable Integer maxConcurrentRequestsPerContainer;
+    private @Nullable Integer maxConcurrentRequestsPerContainer;
 
     public Optional<Integer> maxConcurrentRequestsPerContainer() {
-        return this.maxConcurrentRequestsPerContainer == null ? Optional.empty() : Optional.ofNullable(this.maxConcurrentRequestsPerContainer);
+        return Optional.ofNullable(this.maxConcurrentRequestsPerContainer);
     }
 
     /**
@@ -226,10 +226,10 @@ public final class AKSServiceResponseResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="maxQueueWaitMs")
-      private final @Nullable Integer maxQueueWaitMs;
+    private @Nullable Integer maxQueueWaitMs;
 
     public Optional<Integer> maxQueueWaitMs() {
-        return this.maxQueueWaitMs == null ? Optional.empty() : Optional.ofNullable(this.maxQueueWaitMs);
+        return Optional.ofNullable(this.maxQueueWaitMs);
     }
 
     /**
@@ -237,7 +237,7 @@ public final class AKSServiceResponseResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="modelConfigMap", required=true)
-      private final Map<String,Object> modelConfigMap;
+    private Map<String,Object> modelConfigMap;
 
     public Map<String,Object> modelConfigMap() {
         return this.modelConfigMap;
@@ -248,10 +248,10 @@ public final class AKSServiceResponseResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="models")
-      private final @Nullable List<ModelResponse> models;
+    private @Nullable List<ModelResponse> models;
 
-    public List<ModelResponse> models() {
-        return this.models == null ? List.of() : this.models;
+    public Optional<List<ModelResponse>> models() {
+        return Optional.ofNullable(this.models);
     }
 
     /**
@@ -259,10 +259,10 @@ public final class AKSServiceResponseResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="namespace")
-      private final @Nullable String namespace;
+    private @Nullable String namespace;
 
     public Optional<String> namespace() {
-        return this.namespace == null ? Optional.empty() : Optional.ofNullable(this.namespace);
+        return Optional.ofNullable(this.namespace);
     }
 
     /**
@@ -270,10 +270,10 @@ public final class AKSServiceResponseResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="numReplicas")
-      private final @Nullable Integer numReplicas;
+    private @Nullable Integer numReplicas;
 
     public Optional<Integer> numReplicas() {
-        return this.numReplicas == null ? Optional.empty() : Optional.ofNullable(this.numReplicas);
+        return Optional.ofNullable(this.numReplicas);
     }
 
     /**
@@ -281,10 +281,10 @@ public final class AKSServiceResponseResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="properties")
-      private final @Nullable Map<String,String> properties;
+    private @Nullable Map<String,String> properties;
 
-    public Map<String,String> properties() {
-        return this.properties == null ? Map.of() : this.properties;
+    public Optional<Map<String,String>> properties() {
+        return Optional.ofNullable(this.properties);
     }
 
     /**
@@ -292,10 +292,10 @@ public final class AKSServiceResponseResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="scoringTimeoutMs")
-      private final @Nullable Integer scoringTimeoutMs;
+    private @Nullable Integer scoringTimeoutMs;
 
     public Optional<Integer> scoringTimeoutMs() {
-        return this.scoringTimeoutMs == null ? Optional.empty() : Optional.ofNullable(this.scoringTimeoutMs);
+        return Optional.ofNullable(this.scoringTimeoutMs);
     }
 
     /**
@@ -303,7 +303,7 @@ public final class AKSServiceResponseResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="scoringUri", required=true)
-      private final String scoringUri;
+    private String scoringUri;
 
     public String scoringUri() {
         return this.scoringUri;
@@ -314,7 +314,7 @@ public final class AKSServiceResponseResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="state", required=true)
-      private final String state;
+    private String state;
 
     public String state() {
         return this.state;
@@ -325,7 +325,7 @@ public final class AKSServiceResponseResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="swaggerUri", required=true)
-      private final String swaggerUri;
+    private String swaggerUri;
 
     public String swaggerUri() {
         return this.swaggerUri;
@@ -336,10 +336,10 @@ public final class AKSServiceResponseResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="trafficPercentile")
-      private final @Nullable Double trafficPercentile;
+    private @Nullable Double trafficPercentile;
 
     public Optional<Double> trafficPercentile() {
-        return this.trafficPercentile == null ? Optional.empty() : Optional.ofNullable(this.trafficPercentile);
+        return Optional.ofNullable(this.trafficPercentile);
     }
 
     /**
@@ -347,301 +347,223 @@ public final class AKSServiceResponseResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="type")
-      private final @Nullable String type;
+    private @Nullable String type;
 
     public Optional<String> type() {
-        return this.type == null ? Optional.empty() : Optional.ofNullable(this.type);
+        return Optional.ofNullable(this.type);
     }
 
-    public AKSServiceResponseResponse(
-        @Nullable Boolean aadAuthEnabled,
-        @Nullable Boolean appInsightsEnabled,
-        @Nullable Boolean authEnabled,
-        @Nullable AKSServiceResponseResponseAutoScaler autoScaler,
-        @Nullable String computeName,
-        String computeType,
-        @Nullable ContainerResourceRequirementsResponse containerResourceRequirements,
-        @Nullable AKSServiceResponseResponseDataCollection dataCollection,
-        AKSServiceResponseResponseDeploymentStatus deploymentStatus,
-        @Nullable String deploymentType,
-        @Nullable String description,
-        @Nullable AKSServiceResponseResponseEnvironmentImageRequest environmentImageRequest,
-        ServiceResponseBaseResponseError error,
-        @Nullable Boolean isDefault,
-        @Nullable Map<String,String> kvTags,
-        @Nullable AKSServiceResponseResponseLivenessProbeRequirements livenessProbeRequirements,
-        @Nullable Integer maxConcurrentRequestsPerContainer,
-        @Nullable Integer maxQueueWaitMs,
-        Map<String,Object> modelConfigMap,
-        @Nullable List<ModelResponse> models,
-        @Nullable String namespace,
-        @Nullable Integer numReplicas,
-        @Nullable Map<String,String> properties,
-        @Nullable Integer scoringTimeoutMs,
-        String scoringUri,
-        String state,
-        String swaggerUri,
-        @Nullable Double trafficPercentile,
-        @Nullable String type) {
-        this.aadAuthEnabled = aadAuthEnabled;
-        this.appInsightsEnabled = appInsightsEnabled;
-        this.authEnabled = authEnabled;
-        this.autoScaler = autoScaler;
-        this.computeName = computeName;
-        this.computeType = Codegen.stringProp("computeType").arg(computeType).require();
-        this.containerResourceRequirements = containerResourceRequirements;
-        this.dataCollection = dataCollection;
-        this.deploymentStatus = Objects.requireNonNull(deploymentStatus, "expected parameter 'deploymentStatus' to be non-null");
-        this.deploymentType = deploymentType;
-        this.description = description;
-        this.environmentImageRequest = environmentImageRequest;
-        this.error = Objects.requireNonNull(error, "expected parameter 'error' to be non-null");
-        this.isDefault = isDefault;
-        this.kvTags = kvTags;
-        this.livenessProbeRequirements = livenessProbeRequirements;
-        this.maxConcurrentRequestsPerContainer = maxConcurrentRequestsPerContainer;
-        this.maxQueueWaitMs = maxQueueWaitMs;
-        this.modelConfigMap = Objects.requireNonNull(modelConfigMap, "expected parameter 'modelConfigMap' to be non-null");
-        this.models = models;
-        this.namespace = namespace;
-        this.numReplicas = numReplicas;
-        this.properties = properties;
-        this.scoringTimeoutMs = scoringTimeoutMs;
-        this.scoringUri = Objects.requireNonNull(scoringUri, "expected parameter 'scoringUri' to be non-null");
-        this.state = Objects.requireNonNull(state, "expected parameter 'state' to be non-null");
-        this.swaggerUri = Objects.requireNonNull(swaggerUri, "expected parameter 'swaggerUri' to be non-null");
-        this.trafficPercentile = trafficPercentile;
-        this.type = type;
-    }
+    private AKSServiceResponseResponse() {}
 
-    private AKSServiceResponseResponse() {
-        this.aadAuthEnabled = null;
-        this.appInsightsEnabled = null;
-        this.authEnabled = null;
-        this.autoScaler = null;
-        this.computeName = null;
-        this.computeType = null;
-        this.containerResourceRequirements = null;
-        this.dataCollection = null;
-        this.deploymentStatus = null;
-        this.deploymentType = null;
-        this.description = null;
-        this.environmentImageRequest = null;
-        this.error = null;
-        this.isDefault = null;
-        this.kvTags = Map.of();
-        this.livenessProbeRequirements = null;
-        this.maxConcurrentRequestsPerContainer = null;
-        this.maxQueueWaitMs = null;
-        this.modelConfigMap = Map.of();
-        this.models = List.of();
-        this.namespace = null;
-        this.numReplicas = null;
-        this.properties = Map.of();
-        this.scoringTimeoutMs = null;
-        this.scoringUri = null;
-        this.state = null;
-        this.swaggerUri = null;
-        this.trafficPercentile = null;
-        this.type = null;
+    private AKSServiceResponseResponse(AKSServiceResponseResponse $) {
+        this.aadAuthEnabled = $.aadAuthEnabled;
+        this.appInsightsEnabled = $.appInsightsEnabled;
+        this.authEnabled = $.authEnabled;
+        this.autoScaler = $.autoScaler;
+        this.computeName = $.computeName;
+        this.computeType = $.computeType;
+        this.containerResourceRequirements = $.containerResourceRequirements;
+        this.dataCollection = $.dataCollection;
+        this.deploymentStatus = $.deploymentStatus;
+        this.deploymentType = $.deploymentType;
+        this.description = $.description;
+        this.environmentImageRequest = $.environmentImageRequest;
+        this.error = $.error;
+        this.isDefault = $.isDefault;
+        this.kvTags = $.kvTags;
+        this.livenessProbeRequirements = $.livenessProbeRequirements;
+        this.maxConcurrentRequestsPerContainer = $.maxConcurrentRequestsPerContainer;
+        this.maxQueueWaitMs = $.maxQueueWaitMs;
+        this.modelConfigMap = $.modelConfigMap;
+        this.models = $.models;
+        this.namespace = $.namespace;
+        this.numReplicas = $.numReplicas;
+        this.properties = $.properties;
+        this.scoringTimeoutMs = $.scoringTimeoutMs;
+        this.scoringUri = $.scoringUri;
+        this.state = $.state;
+        this.swaggerUri = $.swaggerUri;
+        this.trafficPercentile = $.trafficPercentile;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AKSServiceResponseResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Boolean aadAuthEnabled;
-        private @Nullable Boolean appInsightsEnabled;
-        private @Nullable Boolean authEnabled;
-        private @Nullable AKSServiceResponseResponseAutoScaler autoScaler;
-        private @Nullable String computeName;
-        private String computeType;
-        private @Nullable ContainerResourceRequirementsResponse containerResourceRequirements;
-        private @Nullable AKSServiceResponseResponseDataCollection dataCollection;
-        private AKSServiceResponseResponseDeploymentStatus deploymentStatus;
-        private @Nullable String deploymentType;
-        private @Nullable String description;
-        private @Nullable AKSServiceResponseResponseEnvironmentImageRequest environmentImageRequest;
-        private ServiceResponseBaseResponseError error;
-        private @Nullable Boolean isDefault;
-        private @Nullable Map<String,String> kvTags;
-        private @Nullable AKSServiceResponseResponseLivenessProbeRequirements livenessProbeRequirements;
-        private @Nullable Integer maxConcurrentRequestsPerContainer;
-        private @Nullable Integer maxQueueWaitMs;
-        private Map<String,Object> modelConfigMap;
-        private @Nullable List<ModelResponse> models;
-        private @Nullable String namespace;
-        private @Nullable Integer numReplicas;
-        private @Nullable Map<String,String> properties;
-        private @Nullable Integer scoringTimeoutMs;
-        private String scoringUri;
-        private String state;
-        private String swaggerUri;
-        private @Nullable Double trafficPercentile;
-        private @Nullable String type;
+        private AKSServiceResponseResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AKSServiceResponseResponse();
         }
 
         public Builder(AKSServiceResponseResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.aadAuthEnabled = defaults.aadAuthEnabled;
-    	      this.appInsightsEnabled = defaults.appInsightsEnabled;
-    	      this.authEnabled = defaults.authEnabled;
-    	      this.autoScaler = defaults.autoScaler;
-    	      this.computeName = defaults.computeName;
-    	      this.computeType = defaults.computeType;
-    	      this.containerResourceRequirements = defaults.containerResourceRequirements;
-    	      this.dataCollection = defaults.dataCollection;
-    	      this.deploymentStatus = defaults.deploymentStatus;
-    	      this.deploymentType = defaults.deploymentType;
-    	      this.description = defaults.description;
-    	      this.environmentImageRequest = defaults.environmentImageRequest;
-    	      this.error = defaults.error;
-    	      this.isDefault = defaults.isDefault;
-    	      this.kvTags = defaults.kvTags;
-    	      this.livenessProbeRequirements = defaults.livenessProbeRequirements;
-    	      this.maxConcurrentRequestsPerContainer = defaults.maxConcurrentRequestsPerContainer;
-    	      this.maxQueueWaitMs = defaults.maxQueueWaitMs;
-    	      this.modelConfigMap = defaults.modelConfigMap;
-    	      this.models = defaults.models;
-    	      this.namespace = defaults.namespace;
-    	      this.numReplicas = defaults.numReplicas;
-    	      this.properties = defaults.properties;
-    	      this.scoringTimeoutMs = defaults.scoringTimeoutMs;
-    	      this.scoringUri = defaults.scoringUri;
-    	      this.state = defaults.state;
-    	      this.swaggerUri = defaults.swaggerUri;
-    	      this.trafficPercentile = defaults.trafficPercentile;
-    	      this.type = defaults.type;
+            $ = new AKSServiceResponseResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder aadAuthEnabled(@Nullable Boolean aadAuthEnabled) {
-            this.aadAuthEnabled = aadAuthEnabled;
+            $.aadAuthEnabled = aadAuthEnabled;
             return this;
         }
+
         public Builder appInsightsEnabled(@Nullable Boolean appInsightsEnabled) {
-            this.appInsightsEnabled = appInsightsEnabled;
+            $.appInsightsEnabled = appInsightsEnabled;
             return this;
         }
+
         public Builder authEnabled(@Nullable Boolean authEnabled) {
-            this.authEnabled = authEnabled;
+            $.authEnabled = authEnabled;
             return this;
         }
+
         public Builder autoScaler(@Nullable AKSServiceResponseResponseAutoScaler autoScaler) {
-            this.autoScaler = autoScaler;
+            $.autoScaler = autoScaler;
             return this;
         }
+
         public Builder computeName(@Nullable String computeName) {
-            this.computeName = computeName;
+            $.computeName = computeName;
             return this;
         }
+
         public Builder computeType(String computeType) {
-            this.computeType = Objects.requireNonNull(computeType);
+            $.computeType = computeType;
             return this;
         }
+
         public Builder containerResourceRequirements(@Nullable ContainerResourceRequirementsResponse containerResourceRequirements) {
-            this.containerResourceRequirements = containerResourceRequirements;
+            $.containerResourceRequirements = containerResourceRequirements;
             return this;
         }
+
         public Builder dataCollection(@Nullable AKSServiceResponseResponseDataCollection dataCollection) {
-            this.dataCollection = dataCollection;
+            $.dataCollection = dataCollection;
             return this;
         }
+
         public Builder deploymentStatus(AKSServiceResponseResponseDeploymentStatus deploymentStatus) {
-            this.deploymentStatus = Objects.requireNonNull(deploymentStatus);
+            $.deploymentStatus = deploymentStatus;
             return this;
         }
+
         public Builder deploymentType(@Nullable String deploymentType) {
-            this.deploymentType = deploymentType;
+            $.deploymentType = deploymentType;
             return this;
         }
+
         public Builder description(@Nullable String description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
+
         public Builder environmentImageRequest(@Nullable AKSServiceResponseResponseEnvironmentImageRequest environmentImageRequest) {
-            this.environmentImageRequest = environmentImageRequest;
+            $.environmentImageRequest = environmentImageRequest;
             return this;
         }
+
         public Builder error(ServiceResponseBaseResponseError error) {
-            this.error = Objects.requireNonNull(error);
+            $.error = error;
             return this;
         }
+
         public Builder isDefault(@Nullable Boolean isDefault) {
-            this.isDefault = isDefault;
+            $.isDefault = isDefault;
             return this;
         }
+
         public Builder kvTags(@Nullable Map<String,String> kvTags) {
-            this.kvTags = kvTags;
+            $.kvTags = kvTags;
             return this;
         }
+
         public Builder livenessProbeRequirements(@Nullable AKSServiceResponseResponseLivenessProbeRequirements livenessProbeRequirements) {
-            this.livenessProbeRequirements = livenessProbeRequirements;
+            $.livenessProbeRequirements = livenessProbeRequirements;
             return this;
         }
+
         public Builder maxConcurrentRequestsPerContainer(@Nullable Integer maxConcurrentRequestsPerContainer) {
-            this.maxConcurrentRequestsPerContainer = maxConcurrentRequestsPerContainer;
+            $.maxConcurrentRequestsPerContainer = maxConcurrentRequestsPerContainer;
             return this;
         }
+
         public Builder maxQueueWaitMs(@Nullable Integer maxQueueWaitMs) {
-            this.maxQueueWaitMs = maxQueueWaitMs;
+            $.maxQueueWaitMs = maxQueueWaitMs;
             return this;
         }
+
         public Builder modelConfigMap(Map<String,Object> modelConfigMap) {
-            this.modelConfigMap = Objects.requireNonNull(modelConfigMap);
+            $.modelConfigMap = modelConfigMap;
             return this;
         }
+
         public Builder models(@Nullable List<ModelResponse> models) {
-            this.models = models;
+            $.models = models;
             return this;
         }
+
         public Builder models(ModelResponse... models) {
             return models(List.of(models));
         }
+
         public Builder namespace(@Nullable String namespace) {
-            this.namespace = namespace;
+            $.namespace = namespace;
             return this;
         }
+
         public Builder numReplicas(@Nullable Integer numReplicas) {
-            this.numReplicas = numReplicas;
+            $.numReplicas = numReplicas;
             return this;
         }
+
         public Builder properties(@Nullable Map<String,String> properties) {
-            this.properties = properties;
+            $.properties = properties;
             return this;
         }
+
         public Builder scoringTimeoutMs(@Nullable Integer scoringTimeoutMs) {
-            this.scoringTimeoutMs = scoringTimeoutMs;
+            $.scoringTimeoutMs = scoringTimeoutMs;
             return this;
         }
+
         public Builder scoringUri(String scoringUri) {
-            this.scoringUri = Objects.requireNonNull(scoringUri);
+            $.scoringUri = scoringUri;
             return this;
         }
+
         public Builder state(String state) {
-            this.state = Objects.requireNonNull(state);
+            $.state = state;
             return this;
         }
+
         public Builder swaggerUri(String swaggerUri) {
-            this.swaggerUri = Objects.requireNonNull(swaggerUri);
+            $.swaggerUri = swaggerUri;
             return this;
         }
+
         public Builder trafficPercentile(@Nullable Double trafficPercentile) {
-            this.trafficPercentile = trafficPercentile;
+            $.trafficPercentile = trafficPercentile;
             return this;
         }
+
         public Builder type(@Nullable String type) {
-            this.type = type;
+            $.type = type;
             return this;
-        }        public AKSServiceResponseResponse build() {
-            return new AKSServiceResponseResponse(aadAuthEnabled, appInsightsEnabled, authEnabled, autoScaler, computeName, computeType, containerResourceRequirements, dataCollection, deploymentStatus, deploymentType, description, environmentImageRequest, error, isDefault, kvTags, livenessProbeRequirements, maxConcurrentRequestsPerContainer, maxQueueWaitMs, modelConfigMap, models, namespace, numReplicas, properties, scoringTimeoutMs, scoringUri, state, swaggerUri, trafficPercentile, type);
+        }
+
+        public AKSServiceResponseResponse build() {
+            $.computeType = Codegen.stringProp("computeType").arg($.computeType).require();
+            $.deploymentStatus = Objects.requireNonNull($.deploymentStatus, "expected parameter 'deploymentStatus' to be non-null");
+            $.error = Objects.requireNonNull($.error, "expected parameter 'error' to be non-null");
+            $.modelConfigMap = Objects.requireNonNull($.modelConfigMap, "expected parameter 'modelConfigMap' to be non-null");
+            $.scoringUri = Objects.requireNonNull($.scoringUri, "expected parameter 'scoringUri' to be non-null");
+            $.state = Objects.requireNonNull($.state, "expected parameter 'state' to be non-null");
+            $.swaggerUri = Objects.requireNonNull($.swaggerUri, "expected parameter 'swaggerUri' to be non-null");
+            return $;
         }
     }
+
 }

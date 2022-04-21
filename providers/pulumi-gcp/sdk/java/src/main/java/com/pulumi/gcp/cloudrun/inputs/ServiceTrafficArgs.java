@@ -5,11 +5,11 @@ package com.pulumi.gcp.cloudrun.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class ServiceTrafficArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="latestRevision")
-      private final @Nullable Output<Boolean> latestRevision;
+    private @Nullable Output<Boolean> latestRevision;
 
-    public Output<Boolean> latestRevision() {
-        return this.latestRevision == null ? Codegen.empty() : this.latestRevision;
+    public Optional<Output<Boolean>> latestRevision() {
+        return Optional.ofNullable(this.latestRevision);
     }
 
     /**
@@ -36,7 +36,7 @@ public final class ServiceTrafficArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="percent", required=true)
-      private final Output<Integer> percent;
+    private Output<Integer> percent;
 
     public Output<Integer> percent() {
         return this.percent;
@@ -47,76 +47,69 @@ public final class ServiceTrafficArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="revisionName")
-      private final @Nullable Output<String> revisionName;
+    private @Nullable Output<String> revisionName;
 
-    public Output<String> revisionName() {
-        return this.revisionName == null ? Codegen.empty() : this.revisionName;
+    public Optional<Output<String>> revisionName() {
+        return Optional.ofNullable(this.revisionName);
     }
 
-    public ServiceTrafficArgs(
-        @Nullable Output<Boolean> latestRevision,
-        Output<Integer> percent,
-        @Nullable Output<String> revisionName) {
-        this.latestRevision = latestRevision;
-        this.percent = Objects.requireNonNull(percent, "expected parameter 'percent' to be non-null");
-        this.revisionName = revisionName;
-    }
+    private ServiceTrafficArgs() {}
 
-    private ServiceTrafficArgs() {
-        this.latestRevision = Codegen.empty();
-        this.percent = Codegen.empty();
-        this.revisionName = Codegen.empty();
+    private ServiceTrafficArgs(ServiceTrafficArgs $) {
+        this.latestRevision = $.latestRevision;
+        this.percent = $.percent;
+        this.revisionName = $.revisionName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ServiceTrafficArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> latestRevision;
-        private Output<Integer> percent;
-        private @Nullable Output<String> revisionName;
+        private ServiceTrafficArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ServiceTrafficArgs();
         }
 
         public Builder(ServiceTrafficArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.latestRevision = defaults.latestRevision;
-    	      this.percent = defaults.percent;
-    	      this.revisionName = defaults.revisionName;
+            $ = new ServiceTrafficArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder latestRevision(@Nullable Output<Boolean> latestRevision) {
-            this.latestRevision = latestRevision;
+            $.latestRevision = latestRevision;
             return this;
         }
-        public Builder latestRevision(@Nullable Boolean latestRevision) {
-            this.latestRevision = Codegen.ofNullable(latestRevision);
-            return this;
+
+        public Builder latestRevision(Boolean latestRevision) {
+            return latestRevision(Output.of(latestRevision));
         }
+
         public Builder percent(Output<Integer> percent) {
-            this.percent = Objects.requireNonNull(percent);
+            $.percent = percent;
             return this;
         }
+
         public Builder percent(Integer percent) {
-            this.percent = Output.of(Objects.requireNonNull(percent));
-            return this;
+            return percent(Output.of(percent));
         }
+
         public Builder revisionName(@Nullable Output<String> revisionName) {
-            this.revisionName = revisionName;
+            $.revisionName = revisionName;
             return this;
         }
-        public Builder revisionName(@Nullable String revisionName) {
-            this.revisionName = Codegen.ofNullable(revisionName);
-            return this;
-        }        public ServiceTrafficArgs build() {
-            return new ServiceTrafficArgs(latestRevision, percent, revisionName);
+
+        public Builder revisionName(String revisionName) {
+            return revisionName(Output.of(revisionName));
+        }
+
+        public ServiceTrafficArgs build() {
+            $.percent = Objects.requireNonNull($.percent, "expected parameter 'percent' to be non-null");
+            return $;
         }
     }
+
 }

@@ -21,7 +21,7 @@ public final class KubernetesRoleStorageClassInfoResponse extends com.pulumi.res
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -32,7 +32,7 @@ public final class KubernetesRoleStorageClassInfoResponse extends com.pulumi.res
      * 
      */
     @Import(name="posixCompliant", required=true)
-      private final String posixCompliant;
+    private String posixCompliant;
 
     public String posixCompliant() {
         return this.posixCompliant;
@@ -43,64 +43,59 @@ public final class KubernetesRoleStorageClassInfoResponse extends com.pulumi.res
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
     }
 
-    public KubernetesRoleStorageClassInfoResponse(
-        String name,
-        String posixCompliant,
-        String type) {
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.posixCompliant = Objects.requireNonNull(posixCompliant, "expected parameter 'posixCompliant' to be non-null");
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private KubernetesRoleStorageClassInfoResponse() {}
 
-    private KubernetesRoleStorageClassInfoResponse() {
-        this.name = null;
-        this.posixCompliant = null;
-        this.type = null;
+    private KubernetesRoleStorageClassInfoResponse(KubernetesRoleStorageClassInfoResponse $) {
+        this.name = $.name;
+        this.posixCompliant = $.posixCompliant;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(KubernetesRoleStorageClassInfoResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String name;
-        private String posixCompliant;
-        private String type;
+        private KubernetesRoleStorageClassInfoResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new KubernetesRoleStorageClassInfoResponse();
         }
 
         public Builder(KubernetesRoleStorageClassInfoResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.posixCompliant = defaults.posixCompliant;
-    	      this.type = defaults.type;
+            $ = new KubernetesRoleStorageClassInfoResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder posixCompliant(String posixCompliant) {
-            this.posixCompliant = Objects.requireNonNull(posixCompliant);
+            $.posixCompliant = posixCompliant;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
-        }        public KubernetesRoleStorageClassInfoResponse build() {
-            return new KubernetesRoleStorageClassInfoResponse(name, posixCompliant, type);
+        }
+
+        public KubernetesRoleStorageClassInfoResponse build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.posixCompliant = Objects.requireNonNull($.posixCompliant, "expected parameter 'posixCompliant' to be non-null");
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

@@ -21,45 +21,45 @@ public final class BlobShareResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="sasUri", required=true)
-      private final String sasUri;
+    private String sasUri;
 
     public String sasUri() {
         return this.sasUri;
     }
 
-    public BlobShareResponse(String sasUri) {
-        this.sasUri = Objects.requireNonNull(sasUri, "expected parameter 'sasUri' to be non-null");
-    }
+    private BlobShareResponse() {}
 
-    private BlobShareResponse() {
-        this.sasUri = null;
+    private BlobShareResponse(BlobShareResponse $) {
+        this.sasUri = $.sasUri;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BlobShareResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String sasUri;
+        private BlobShareResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new BlobShareResponse();
         }
 
         public Builder(BlobShareResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.sasUri = defaults.sasUri;
+            $ = new BlobShareResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder sasUri(String sasUri) {
-            this.sasUri = Objects.requireNonNull(sasUri);
+            $.sasUri = sasUri;
             return this;
-        }        public BlobShareResponse build() {
-            return new BlobShareResponse(sasUri);
+        }
+
+        public BlobShareResponse build() {
+            $.sasUri = Objects.requireNonNull($.sasUri, "expected parameter 'sasUri' to be non-null");
+            return $;
         }
     }
+
 }

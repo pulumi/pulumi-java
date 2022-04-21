@@ -23,10 +23,10 @@ public final class SapTablePartitionSettingsResponse extends com.pulumi.resource
      * 
      */
     @Import(name="maxPartitionsNumber")
-      private final @Nullable Object maxPartitionsNumber;
+    private @Nullable Object maxPartitionsNumber;
 
     public Optional<Object> maxPartitionsNumber() {
-        return this.maxPartitionsNumber == null ? Optional.empty() : Optional.ofNullable(this.maxPartitionsNumber);
+        return Optional.ofNullable(this.maxPartitionsNumber);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class SapTablePartitionSettingsResponse extends com.pulumi.resource
      * 
      */
     @Import(name="partitionColumnName")
-      private final @Nullable Object partitionColumnName;
+    private @Nullable Object partitionColumnName;
 
     public Optional<Object> partitionColumnName() {
-        return this.partitionColumnName == null ? Optional.empty() : Optional.ofNullable(this.partitionColumnName);
+        return Optional.ofNullable(this.partitionColumnName);
     }
 
     /**
@@ -45,10 +45,10 @@ public final class SapTablePartitionSettingsResponse extends com.pulumi.resource
      * 
      */
     @Import(name="partitionLowerBound")
-      private final @Nullable Object partitionLowerBound;
+    private @Nullable Object partitionLowerBound;
 
     public Optional<Object> partitionLowerBound() {
-        return this.partitionLowerBound == null ? Optional.empty() : Optional.ofNullable(this.partitionLowerBound);
+        return Optional.ofNullable(this.partitionLowerBound);
     }
 
     /**
@@ -56,73 +56,62 @@ public final class SapTablePartitionSettingsResponse extends com.pulumi.resource
      * 
      */
     @Import(name="partitionUpperBound")
-      private final @Nullable Object partitionUpperBound;
+    private @Nullable Object partitionUpperBound;
 
     public Optional<Object> partitionUpperBound() {
-        return this.partitionUpperBound == null ? Optional.empty() : Optional.ofNullable(this.partitionUpperBound);
+        return Optional.ofNullable(this.partitionUpperBound);
     }
 
-    public SapTablePartitionSettingsResponse(
-        @Nullable Object maxPartitionsNumber,
-        @Nullable Object partitionColumnName,
-        @Nullable Object partitionLowerBound,
-        @Nullable Object partitionUpperBound) {
-        this.maxPartitionsNumber = maxPartitionsNumber;
-        this.partitionColumnName = partitionColumnName;
-        this.partitionLowerBound = partitionLowerBound;
-        this.partitionUpperBound = partitionUpperBound;
-    }
+    private SapTablePartitionSettingsResponse() {}
 
-    private SapTablePartitionSettingsResponse() {
-        this.maxPartitionsNumber = null;
-        this.partitionColumnName = null;
-        this.partitionLowerBound = null;
-        this.partitionUpperBound = null;
+    private SapTablePartitionSettingsResponse(SapTablePartitionSettingsResponse $) {
+        this.maxPartitionsNumber = $.maxPartitionsNumber;
+        this.partitionColumnName = $.partitionColumnName;
+        this.partitionLowerBound = $.partitionLowerBound;
+        this.partitionUpperBound = $.partitionUpperBound;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SapTablePartitionSettingsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Object maxPartitionsNumber;
-        private @Nullable Object partitionColumnName;
-        private @Nullable Object partitionLowerBound;
-        private @Nullable Object partitionUpperBound;
+        private SapTablePartitionSettingsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new SapTablePartitionSettingsResponse();
         }
 
         public Builder(SapTablePartitionSettingsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.maxPartitionsNumber = defaults.maxPartitionsNumber;
-    	      this.partitionColumnName = defaults.partitionColumnName;
-    	      this.partitionLowerBound = defaults.partitionLowerBound;
-    	      this.partitionUpperBound = defaults.partitionUpperBound;
+            $ = new SapTablePartitionSettingsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder maxPartitionsNumber(@Nullable Object maxPartitionsNumber) {
-            this.maxPartitionsNumber = maxPartitionsNumber;
+            $.maxPartitionsNumber = maxPartitionsNumber;
             return this;
         }
+
         public Builder partitionColumnName(@Nullable Object partitionColumnName) {
-            this.partitionColumnName = partitionColumnName;
+            $.partitionColumnName = partitionColumnName;
             return this;
         }
+
         public Builder partitionLowerBound(@Nullable Object partitionLowerBound) {
-            this.partitionLowerBound = partitionLowerBound;
+            $.partitionLowerBound = partitionLowerBound;
             return this;
         }
+
         public Builder partitionUpperBound(@Nullable Object partitionUpperBound) {
-            this.partitionUpperBound = partitionUpperBound;
+            $.partitionUpperBound = partitionUpperBound;
             return this;
-        }        public SapTablePartitionSettingsResponse build() {
-            return new SapTablePartitionSettingsResponse(maxPartitionsNumber, partitionColumnName, partitionLowerBound, partitionUpperBound);
+        }
+
+        public SapTablePartitionSettingsResponse build() {
+            return $;
         }
     }
+
 }

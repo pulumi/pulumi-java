@@ -26,7 +26,7 @@ public final class TestExecutionResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="environment", required=true)
-      private final EnvironmentResponse environment;
+    private EnvironmentResponse environment;
 
     public EnvironmentResponse environment() {
         return this.environment;
@@ -37,7 +37,7 @@ public final class TestExecutionResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="matrixId", required=true)
-      private final String matrixId;
+    private String matrixId;
 
     public String matrixId() {
         return this.matrixId;
@@ -48,7 +48,7 @@ public final class TestExecutionResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="project", required=true)
-      private final String project;
+    private String project;
 
     public String project() {
         return this.project;
@@ -59,7 +59,7 @@ public final class TestExecutionResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="shard", required=true)
-      private final ShardResponse shard;
+    private ShardResponse shard;
 
     public ShardResponse shard() {
         return this.shard;
@@ -70,7 +70,7 @@ public final class TestExecutionResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="state", required=true)
-      private final String state;
+    private String state;
 
     public String state() {
         return this.state;
@@ -81,7 +81,7 @@ public final class TestExecutionResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="testDetails", required=true)
-      private final TestDetailsResponse testDetails;
+    private TestDetailsResponse testDetails;
 
     public TestDetailsResponse testDetails() {
         return this.testDetails;
@@ -92,7 +92,7 @@ public final class TestExecutionResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="testSpecification", required=true)
-      private final TestSpecificationResponse testSpecification;
+    private TestSpecificationResponse testSpecification;
 
     public TestSpecificationResponse testSpecification() {
         return this.testSpecification;
@@ -103,7 +103,7 @@ public final class TestExecutionResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="timestamp", required=true)
-      private final String timestamp;
+    private String timestamp;
 
     public String timestamp() {
         return this.timestamp;
@@ -114,118 +114,101 @@ public final class TestExecutionResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="toolResultsStep", required=true)
-      private final ToolResultsStepResponse toolResultsStep;
+    private ToolResultsStepResponse toolResultsStep;
 
     public ToolResultsStepResponse toolResultsStep() {
         return this.toolResultsStep;
     }
 
-    public TestExecutionResponse(
-        EnvironmentResponse environment,
-        String matrixId,
-        String project,
-        ShardResponse shard,
-        String state,
-        TestDetailsResponse testDetails,
-        TestSpecificationResponse testSpecification,
-        String timestamp,
-        ToolResultsStepResponse toolResultsStep) {
-        this.environment = Objects.requireNonNull(environment, "expected parameter 'environment' to be non-null");
-        this.matrixId = Objects.requireNonNull(matrixId, "expected parameter 'matrixId' to be non-null");
-        this.project = Objects.requireNonNull(project, "expected parameter 'project' to be non-null");
-        this.shard = Objects.requireNonNull(shard, "expected parameter 'shard' to be non-null");
-        this.state = Objects.requireNonNull(state, "expected parameter 'state' to be non-null");
-        this.testDetails = Objects.requireNonNull(testDetails, "expected parameter 'testDetails' to be non-null");
-        this.testSpecification = Objects.requireNonNull(testSpecification, "expected parameter 'testSpecification' to be non-null");
-        this.timestamp = Objects.requireNonNull(timestamp, "expected parameter 'timestamp' to be non-null");
-        this.toolResultsStep = Objects.requireNonNull(toolResultsStep, "expected parameter 'toolResultsStep' to be non-null");
-    }
+    private TestExecutionResponse() {}
 
-    private TestExecutionResponse() {
-        this.environment = null;
-        this.matrixId = null;
-        this.project = null;
-        this.shard = null;
-        this.state = null;
-        this.testDetails = null;
-        this.testSpecification = null;
-        this.timestamp = null;
-        this.toolResultsStep = null;
+    private TestExecutionResponse(TestExecutionResponse $) {
+        this.environment = $.environment;
+        this.matrixId = $.matrixId;
+        this.project = $.project;
+        this.shard = $.shard;
+        this.state = $.state;
+        this.testDetails = $.testDetails;
+        this.testSpecification = $.testSpecification;
+        this.timestamp = $.timestamp;
+        this.toolResultsStep = $.toolResultsStep;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TestExecutionResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private EnvironmentResponse environment;
-        private String matrixId;
-        private String project;
-        private ShardResponse shard;
-        private String state;
-        private TestDetailsResponse testDetails;
-        private TestSpecificationResponse testSpecification;
-        private String timestamp;
-        private ToolResultsStepResponse toolResultsStep;
+        private TestExecutionResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new TestExecutionResponse();
         }
 
         public Builder(TestExecutionResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.environment = defaults.environment;
-    	      this.matrixId = defaults.matrixId;
-    	      this.project = defaults.project;
-    	      this.shard = defaults.shard;
-    	      this.state = defaults.state;
-    	      this.testDetails = defaults.testDetails;
-    	      this.testSpecification = defaults.testSpecification;
-    	      this.timestamp = defaults.timestamp;
-    	      this.toolResultsStep = defaults.toolResultsStep;
+            $ = new TestExecutionResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder environment(EnvironmentResponse environment) {
-            this.environment = Objects.requireNonNull(environment);
+            $.environment = environment;
             return this;
         }
+
         public Builder matrixId(String matrixId) {
-            this.matrixId = Objects.requireNonNull(matrixId);
+            $.matrixId = matrixId;
             return this;
         }
+
         public Builder project(String project) {
-            this.project = Objects.requireNonNull(project);
+            $.project = project;
             return this;
         }
+
         public Builder shard(ShardResponse shard) {
-            this.shard = Objects.requireNonNull(shard);
+            $.shard = shard;
             return this;
         }
+
         public Builder state(String state) {
-            this.state = Objects.requireNonNull(state);
+            $.state = state;
             return this;
         }
+
         public Builder testDetails(TestDetailsResponse testDetails) {
-            this.testDetails = Objects.requireNonNull(testDetails);
+            $.testDetails = testDetails;
             return this;
         }
+
         public Builder testSpecification(TestSpecificationResponse testSpecification) {
-            this.testSpecification = Objects.requireNonNull(testSpecification);
+            $.testSpecification = testSpecification;
             return this;
         }
+
         public Builder timestamp(String timestamp) {
-            this.timestamp = Objects.requireNonNull(timestamp);
+            $.timestamp = timestamp;
             return this;
         }
+
         public Builder toolResultsStep(ToolResultsStepResponse toolResultsStep) {
-            this.toolResultsStep = Objects.requireNonNull(toolResultsStep);
+            $.toolResultsStep = toolResultsStep;
             return this;
-        }        public TestExecutionResponse build() {
-            return new TestExecutionResponse(environment, matrixId, project, shard, state, testDetails, testSpecification, timestamp, toolResultsStep);
+        }
+
+        public TestExecutionResponse build() {
+            $.environment = Objects.requireNonNull($.environment, "expected parameter 'environment' to be non-null");
+            $.matrixId = Objects.requireNonNull($.matrixId, "expected parameter 'matrixId' to be non-null");
+            $.project = Objects.requireNonNull($.project, "expected parameter 'project' to be non-null");
+            $.shard = Objects.requireNonNull($.shard, "expected parameter 'shard' to be non-null");
+            $.state = Objects.requireNonNull($.state, "expected parameter 'state' to be non-null");
+            $.testDetails = Objects.requireNonNull($.testDetails, "expected parameter 'testDetails' to be non-null");
+            $.testSpecification = Objects.requireNonNull($.testSpecification, "expected parameter 'testSpecification' to be non-null");
+            $.timestamp = Objects.requireNonNull($.timestamp, "expected parameter 'timestamp' to be non-null");
+            $.toolResultsStep = Objects.requireNonNull($.toolResultsStep, "expected parameter 'toolResultsStep' to be non-null");
+            return $;
         }
     }
+
 }

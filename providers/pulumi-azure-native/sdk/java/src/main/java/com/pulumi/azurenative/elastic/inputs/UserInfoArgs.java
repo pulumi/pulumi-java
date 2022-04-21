@@ -6,9 +6,9 @@ package com.pulumi.azurenative.elastic.inputs;
 import com.pulumi.azurenative.elastic.inputs.CompanyInfoArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class UserInfoArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="companyInfo")
-      private final @Nullable Output<CompanyInfoArgs> companyInfo;
+    private @Nullable Output<CompanyInfoArgs> companyInfo;
 
-    public Output<CompanyInfoArgs> companyInfo() {
-        return this.companyInfo == null ? Codegen.empty() : this.companyInfo;
+    public Optional<Output<CompanyInfoArgs>> companyInfo() {
+        return Optional.ofNullable(this.companyInfo);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class UserInfoArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="companyName")
-      private final @Nullable Output<String> companyName;
+    private @Nullable Output<String> companyName;
 
-    public Output<String> companyName() {
-        return this.companyName == null ? Codegen.empty() : this.companyName;
+    public Optional<Output<String>> companyName() {
+        return Optional.ofNullable(this.companyName);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class UserInfoArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="emailAddress")
-      private final @Nullable Output<String> emailAddress;
+    private @Nullable Output<String> emailAddress;
 
-    public Output<String> emailAddress() {
-        return this.emailAddress == null ? Codegen.empty() : this.emailAddress;
+    public Optional<Output<String>> emailAddress() {
+        return Optional.ofNullable(this.emailAddress);
     }
 
     /**
@@ -58,10 +58,10 @@ public final class UserInfoArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="firstName")
-      private final @Nullable Output<String> firstName;
+    private @Nullable Output<String> firstName;
 
-    public Output<String> firstName() {
-        return this.firstName == null ? Codegen.empty() : this.firstName;
+    public Optional<Output<String>> firstName() {
+        return Optional.ofNullable(this.firstName);
     }
 
     /**
@@ -69,102 +69,88 @@ public final class UserInfoArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="lastName")
-      private final @Nullable Output<String> lastName;
+    private @Nullable Output<String> lastName;
 
-    public Output<String> lastName() {
-        return this.lastName == null ? Codegen.empty() : this.lastName;
+    public Optional<Output<String>> lastName() {
+        return Optional.ofNullable(this.lastName);
     }
 
-    public UserInfoArgs(
-        @Nullable Output<CompanyInfoArgs> companyInfo,
-        @Nullable Output<String> companyName,
-        @Nullable Output<String> emailAddress,
-        @Nullable Output<String> firstName,
-        @Nullable Output<String> lastName) {
-        this.companyInfo = companyInfo;
-        this.companyName = companyName;
-        this.emailAddress = emailAddress;
-        this.firstName = firstName;
-        this.lastName = lastName;
-    }
+    private UserInfoArgs() {}
 
-    private UserInfoArgs() {
-        this.companyInfo = Codegen.empty();
-        this.companyName = Codegen.empty();
-        this.emailAddress = Codegen.empty();
-        this.firstName = Codegen.empty();
-        this.lastName = Codegen.empty();
+    private UserInfoArgs(UserInfoArgs $) {
+        this.companyInfo = $.companyInfo;
+        this.companyName = $.companyName;
+        this.emailAddress = $.emailAddress;
+        this.firstName = $.firstName;
+        this.lastName = $.lastName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(UserInfoArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<CompanyInfoArgs> companyInfo;
-        private @Nullable Output<String> companyName;
-        private @Nullable Output<String> emailAddress;
-        private @Nullable Output<String> firstName;
-        private @Nullable Output<String> lastName;
+        private UserInfoArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new UserInfoArgs();
         }
 
         public Builder(UserInfoArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.companyInfo = defaults.companyInfo;
-    	      this.companyName = defaults.companyName;
-    	      this.emailAddress = defaults.emailAddress;
-    	      this.firstName = defaults.firstName;
-    	      this.lastName = defaults.lastName;
+            $ = new UserInfoArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder companyInfo(@Nullable Output<CompanyInfoArgs> companyInfo) {
-            this.companyInfo = companyInfo;
+            $.companyInfo = companyInfo;
             return this;
         }
-        public Builder companyInfo(@Nullable CompanyInfoArgs companyInfo) {
-            this.companyInfo = Codegen.ofNullable(companyInfo);
-            return this;
+
+        public Builder companyInfo(CompanyInfoArgs companyInfo) {
+            return companyInfo(Output.of(companyInfo));
         }
+
         public Builder companyName(@Nullable Output<String> companyName) {
-            this.companyName = companyName;
+            $.companyName = companyName;
             return this;
         }
-        public Builder companyName(@Nullable String companyName) {
-            this.companyName = Codegen.ofNullable(companyName);
-            return this;
+
+        public Builder companyName(String companyName) {
+            return companyName(Output.of(companyName));
         }
+
         public Builder emailAddress(@Nullable Output<String> emailAddress) {
-            this.emailAddress = emailAddress;
+            $.emailAddress = emailAddress;
             return this;
         }
-        public Builder emailAddress(@Nullable String emailAddress) {
-            this.emailAddress = Codegen.ofNullable(emailAddress);
-            return this;
+
+        public Builder emailAddress(String emailAddress) {
+            return emailAddress(Output.of(emailAddress));
         }
+
         public Builder firstName(@Nullable Output<String> firstName) {
-            this.firstName = firstName;
+            $.firstName = firstName;
             return this;
         }
-        public Builder firstName(@Nullable String firstName) {
-            this.firstName = Codegen.ofNullable(firstName);
-            return this;
+
+        public Builder firstName(String firstName) {
+            return firstName(Output.of(firstName));
         }
+
         public Builder lastName(@Nullable Output<String> lastName) {
-            this.lastName = lastName;
+            $.lastName = lastName;
             return this;
         }
-        public Builder lastName(@Nullable String lastName) {
-            this.lastName = Codegen.ofNullable(lastName);
-            return this;
-        }        public UserInfoArgs build() {
-            return new UserInfoArgs(companyInfo, companyName, emailAddress, firstName, lastName);
+
+        public Builder lastName(String lastName) {
+            return lastName(Output.of(lastName));
+        }
+
+        public UserInfoArgs build() {
+            return $;
         }
     }
+
 }

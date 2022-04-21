@@ -26,7 +26,7 @@ public final class AndroidRoboTestResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="appApk", required=true)
-      private final FileReferenceResponse appApk;
+    private FileReferenceResponse appApk;
 
     public FileReferenceResponse appApk() {
         return this.appApk;
@@ -37,7 +37,7 @@ public final class AndroidRoboTestResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="appBundle", required=true)
-      private final AppBundleResponse appBundle;
+    private AppBundleResponse appBundle;
 
     public AppBundleResponse appBundle() {
         return this.appBundle;
@@ -48,7 +48,7 @@ public final class AndroidRoboTestResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="appInitialActivity", required=true)
-      private final String appInitialActivity;
+    private String appInitialActivity;
 
     public String appInitialActivity() {
         return this.appInitialActivity;
@@ -59,7 +59,7 @@ public final class AndroidRoboTestResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="appPackageId", required=true)
-      private final String appPackageId;
+    private String appPackageId;
 
     public String appPackageId() {
         return this.appPackageId;
@@ -70,7 +70,7 @@ public final class AndroidRoboTestResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="roboDirectives", required=true)
-      private final List<RoboDirectiveResponse> roboDirectives;
+    private List<RoboDirectiveResponse> roboDirectives;
 
     public List<RoboDirectiveResponse> roboDirectives() {
         return this.roboDirectives;
@@ -81,7 +81,7 @@ public final class AndroidRoboTestResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="roboMode", required=true)
-      private final String roboMode;
+    private String roboMode;
 
     public String roboMode() {
         return this.roboMode;
@@ -92,7 +92,7 @@ public final class AndroidRoboTestResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="roboScript", required=true)
-      private final FileReferenceResponse roboScript;
+    private FileReferenceResponse roboScript;
 
     public FileReferenceResponse roboScript() {
         return this.roboScript;
@@ -103,115 +103,102 @@ public final class AndroidRoboTestResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="startingIntents", required=true)
-      private final List<RoboStartingIntentResponse> startingIntents;
+    private List<RoboStartingIntentResponse> startingIntents;
 
     public List<RoboStartingIntentResponse> startingIntents() {
         return this.startingIntents;
     }
 
-    public AndroidRoboTestResponse(
-        FileReferenceResponse appApk,
-        AppBundleResponse appBundle,
-        String appInitialActivity,
-        String appPackageId,
-        List<RoboDirectiveResponse> roboDirectives,
-        String roboMode,
-        FileReferenceResponse roboScript,
-        List<RoboStartingIntentResponse> startingIntents) {
-        this.appApk = Objects.requireNonNull(appApk, "expected parameter 'appApk' to be non-null");
-        this.appBundle = Objects.requireNonNull(appBundle, "expected parameter 'appBundle' to be non-null");
-        this.appInitialActivity = Objects.requireNonNull(appInitialActivity, "expected parameter 'appInitialActivity' to be non-null");
-        this.appPackageId = Objects.requireNonNull(appPackageId, "expected parameter 'appPackageId' to be non-null");
-        this.roboDirectives = Objects.requireNonNull(roboDirectives, "expected parameter 'roboDirectives' to be non-null");
-        this.roboMode = Objects.requireNonNull(roboMode, "expected parameter 'roboMode' to be non-null");
-        this.roboScript = Objects.requireNonNull(roboScript, "expected parameter 'roboScript' to be non-null");
-        this.startingIntents = Objects.requireNonNull(startingIntents, "expected parameter 'startingIntents' to be non-null");
-    }
+    private AndroidRoboTestResponse() {}
 
-    private AndroidRoboTestResponse() {
-        this.appApk = null;
-        this.appBundle = null;
-        this.appInitialActivity = null;
-        this.appPackageId = null;
-        this.roboDirectives = List.of();
-        this.roboMode = null;
-        this.roboScript = null;
-        this.startingIntents = List.of();
+    private AndroidRoboTestResponse(AndroidRoboTestResponse $) {
+        this.appApk = $.appApk;
+        this.appBundle = $.appBundle;
+        this.appInitialActivity = $.appInitialActivity;
+        this.appPackageId = $.appPackageId;
+        this.roboDirectives = $.roboDirectives;
+        this.roboMode = $.roboMode;
+        this.roboScript = $.roboScript;
+        this.startingIntents = $.startingIntents;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AndroidRoboTestResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private FileReferenceResponse appApk;
-        private AppBundleResponse appBundle;
-        private String appInitialActivity;
-        private String appPackageId;
-        private List<RoboDirectiveResponse> roboDirectives;
-        private String roboMode;
-        private FileReferenceResponse roboScript;
-        private List<RoboStartingIntentResponse> startingIntents;
+        private AndroidRoboTestResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AndroidRoboTestResponse();
         }
 
         public Builder(AndroidRoboTestResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.appApk = defaults.appApk;
-    	      this.appBundle = defaults.appBundle;
-    	      this.appInitialActivity = defaults.appInitialActivity;
-    	      this.appPackageId = defaults.appPackageId;
-    	      this.roboDirectives = defaults.roboDirectives;
-    	      this.roboMode = defaults.roboMode;
-    	      this.roboScript = defaults.roboScript;
-    	      this.startingIntents = defaults.startingIntents;
+            $ = new AndroidRoboTestResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder appApk(FileReferenceResponse appApk) {
-            this.appApk = Objects.requireNonNull(appApk);
+            $.appApk = appApk;
             return this;
         }
+
         public Builder appBundle(AppBundleResponse appBundle) {
-            this.appBundle = Objects.requireNonNull(appBundle);
+            $.appBundle = appBundle;
             return this;
         }
+
         public Builder appInitialActivity(String appInitialActivity) {
-            this.appInitialActivity = Objects.requireNonNull(appInitialActivity);
+            $.appInitialActivity = appInitialActivity;
             return this;
         }
+
         public Builder appPackageId(String appPackageId) {
-            this.appPackageId = Objects.requireNonNull(appPackageId);
+            $.appPackageId = appPackageId;
             return this;
         }
+
         public Builder roboDirectives(List<RoboDirectiveResponse> roboDirectives) {
-            this.roboDirectives = Objects.requireNonNull(roboDirectives);
+            $.roboDirectives = roboDirectives;
             return this;
         }
+
         public Builder roboDirectives(RoboDirectiveResponse... roboDirectives) {
             return roboDirectives(List.of(roboDirectives));
         }
+
         public Builder roboMode(String roboMode) {
-            this.roboMode = Objects.requireNonNull(roboMode);
+            $.roboMode = roboMode;
             return this;
         }
+
         public Builder roboScript(FileReferenceResponse roboScript) {
-            this.roboScript = Objects.requireNonNull(roboScript);
+            $.roboScript = roboScript;
             return this;
         }
+
         public Builder startingIntents(List<RoboStartingIntentResponse> startingIntents) {
-            this.startingIntents = Objects.requireNonNull(startingIntents);
+            $.startingIntents = startingIntents;
             return this;
         }
+
         public Builder startingIntents(RoboStartingIntentResponse... startingIntents) {
             return startingIntents(List.of(startingIntents));
-        }        public AndroidRoboTestResponse build() {
-            return new AndroidRoboTestResponse(appApk, appBundle, appInitialActivity, appPackageId, roboDirectives, roboMode, roboScript, startingIntents);
+        }
+
+        public AndroidRoboTestResponse build() {
+            $.appApk = Objects.requireNonNull($.appApk, "expected parameter 'appApk' to be non-null");
+            $.appBundle = Objects.requireNonNull($.appBundle, "expected parameter 'appBundle' to be non-null");
+            $.appInitialActivity = Objects.requireNonNull($.appInitialActivity, "expected parameter 'appInitialActivity' to be non-null");
+            $.appPackageId = Objects.requireNonNull($.appPackageId, "expected parameter 'appPackageId' to be non-null");
+            $.roboDirectives = Objects.requireNonNull($.roboDirectives, "expected parameter 'roboDirectives' to be non-null");
+            $.roboMode = Objects.requireNonNull($.roboMode, "expected parameter 'roboMode' to be non-null");
+            $.roboScript = Objects.requireNonNull($.roboScript, "expected parameter 'roboScript' to be non-null");
+            $.startingIntents = Objects.requireNonNull($.startingIntents, "expected parameter 'startingIntents' to be non-null");
+            return $;
         }
     }
+
 }

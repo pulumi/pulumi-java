@@ -23,45 +23,44 @@ public final class MonitoringScheduleConstraintsResource extends com.pulumi.reso
      * 
      */
     @Import(name="s3Uri")
-      private final @Nullable String s3Uri;
+    private @Nullable String s3Uri;
 
     public Optional<String> s3Uri() {
-        return this.s3Uri == null ? Optional.empty() : Optional.ofNullable(this.s3Uri);
+        return Optional.ofNullable(this.s3Uri);
     }
 
-    public MonitoringScheduleConstraintsResource(@Nullable String s3Uri) {
-        this.s3Uri = s3Uri;
-    }
+    private MonitoringScheduleConstraintsResource() {}
 
-    private MonitoringScheduleConstraintsResource() {
-        this.s3Uri = null;
+    private MonitoringScheduleConstraintsResource(MonitoringScheduleConstraintsResource $) {
+        this.s3Uri = $.s3Uri;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MonitoringScheduleConstraintsResource defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String s3Uri;
+        private MonitoringScheduleConstraintsResource $;
 
         public Builder() {
-    	      // Empty
+            $ = new MonitoringScheduleConstraintsResource();
         }
 
         public Builder(MonitoringScheduleConstraintsResource defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.s3Uri = defaults.s3Uri;
+            $ = new MonitoringScheduleConstraintsResource(Objects.requireNonNull(defaults));
         }
 
         public Builder s3Uri(@Nullable String s3Uri) {
-            this.s3Uri = s3Uri;
+            $.s3Uri = s3Uri;
             return this;
-        }        public MonitoringScheduleConstraintsResource build() {
-            return new MonitoringScheduleConstraintsResource(s3Uri);
+        }
+
+        public MonitoringScheduleConstraintsResource build() {
+            return $;
         }
     }
+
 }

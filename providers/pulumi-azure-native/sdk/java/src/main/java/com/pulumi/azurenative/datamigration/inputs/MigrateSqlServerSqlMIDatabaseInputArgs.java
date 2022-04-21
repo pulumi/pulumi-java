@@ -6,10 +6,10 @@ package com.pulumi.azurenative.datamigration.inputs;
 import com.pulumi.azurenative.datamigration.inputs.FileShareArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class MigrateSqlServerSqlMIDatabaseInputArgs extends com.pulumi.res
      * 
      */
     @Import(name="backupFilePaths")
-      private final @Nullable Output<List<String>> backupFilePaths;
+    private @Nullable Output<List<String>> backupFilePaths;
 
-    public Output<List<String>> backupFilePaths() {
-        return this.backupFilePaths == null ? Codegen.empty() : this.backupFilePaths;
+    public Optional<Output<List<String>>> backupFilePaths() {
+        return Optional.ofNullable(this.backupFilePaths);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class MigrateSqlServerSqlMIDatabaseInputArgs extends com.pulumi.res
      * 
      */
     @Import(name="backupFileShare")
-      private final @Nullable Output<FileShareArgs> backupFileShare;
+    private @Nullable Output<FileShareArgs> backupFileShare;
 
-    public Output<FileShareArgs> backupFileShare() {
-        return this.backupFileShare == null ? Codegen.empty() : this.backupFileShare;
+    public Optional<Output<FileShareArgs>> backupFileShare() {
+        return Optional.ofNullable(this.backupFileShare);
     }
 
     /**
@@ -48,7 +48,7 @@ public final class MigrateSqlServerSqlMIDatabaseInputArgs extends com.pulumi.res
      * 
      */
     @Import(name="name", required=true)
-      private final Output<String> name;
+    private Output<String> name;
 
     public Output<String> name() {
         return this.name;
@@ -59,92 +59,84 @@ public final class MigrateSqlServerSqlMIDatabaseInputArgs extends com.pulumi.res
      * 
      */
     @Import(name="restoreDatabaseName", required=true)
-      private final Output<String> restoreDatabaseName;
+    private Output<String> restoreDatabaseName;
 
     public Output<String> restoreDatabaseName() {
         return this.restoreDatabaseName;
     }
 
-    public MigrateSqlServerSqlMIDatabaseInputArgs(
-        @Nullable Output<List<String>> backupFilePaths,
-        @Nullable Output<FileShareArgs> backupFileShare,
-        Output<String> name,
-        Output<String> restoreDatabaseName) {
-        this.backupFilePaths = backupFilePaths;
-        this.backupFileShare = backupFileShare;
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.restoreDatabaseName = Objects.requireNonNull(restoreDatabaseName, "expected parameter 'restoreDatabaseName' to be non-null");
-    }
+    private MigrateSqlServerSqlMIDatabaseInputArgs() {}
 
-    private MigrateSqlServerSqlMIDatabaseInputArgs() {
-        this.backupFilePaths = Codegen.empty();
-        this.backupFileShare = Codegen.empty();
-        this.name = Codegen.empty();
-        this.restoreDatabaseName = Codegen.empty();
+    private MigrateSqlServerSqlMIDatabaseInputArgs(MigrateSqlServerSqlMIDatabaseInputArgs $) {
+        this.backupFilePaths = $.backupFilePaths;
+        this.backupFileShare = $.backupFileShare;
+        this.name = $.name;
+        this.restoreDatabaseName = $.restoreDatabaseName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MigrateSqlServerSqlMIDatabaseInputArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> backupFilePaths;
-        private @Nullable Output<FileShareArgs> backupFileShare;
-        private Output<String> name;
-        private Output<String> restoreDatabaseName;
+        private MigrateSqlServerSqlMIDatabaseInputArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new MigrateSqlServerSqlMIDatabaseInputArgs();
         }
 
         public Builder(MigrateSqlServerSqlMIDatabaseInputArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.backupFilePaths = defaults.backupFilePaths;
-    	      this.backupFileShare = defaults.backupFileShare;
-    	      this.name = defaults.name;
-    	      this.restoreDatabaseName = defaults.restoreDatabaseName;
+            $ = new MigrateSqlServerSqlMIDatabaseInputArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder backupFilePaths(@Nullable Output<List<String>> backupFilePaths) {
-            this.backupFilePaths = backupFilePaths;
+            $.backupFilePaths = backupFilePaths;
             return this;
         }
-        public Builder backupFilePaths(@Nullable List<String> backupFilePaths) {
-            this.backupFilePaths = Codegen.ofNullable(backupFilePaths);
-            return this;
+
+        public Builder backupFilePaths(List<String> backupFilePaths) {
+            return backupFilePaths(Output.of(backupFilePaths));
         }
+
         public Builder backupFilePaths(String... backupFilePaths) {
             return backupFilePaths(List.of(backupFilePaths));
         }
+
         public Builder backupFileShare(@Nullable Output<FileShareArgs> backupFileShare) {
-            this.backupFileShare = backupFileShare;
+            $.backupFileShare = backupFileShare;
             return this;
         }
-        public Builder backupFileShare(@Nullable FileShareArgs backupFileShare) {
-            this.backupFileShare = Codegen.ofNullable(backupFileShare);
-            return this;
+
+        public Builder backupFileShare(FileShareArgs backupFileShare) {
+            return backupFileShare(Output.of(backupFileShare));
         }
+
         public Builder name(Output<String> name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Output.of(Objects.requireNonNull(name));
-            return this;
+            return name(Output.of(name));
         }
+
         public Builder restoreDatabaseName(Output<String> restoreDatabaseName) {
-            this.restoreDatabaseName = Objects.requireNonNull(restoreDatabaseName);
+            $.restoreDatabaseName = restoreDatabaseName;
             return this;
         }
+
         public Builder restoreDatabaseName(String restoreDatabaseName) {
-            this.restoreDatabaseName = Output.of(Objects.requireNonNull(restoreDatabaseName));
-            return this;
-        }        public MigrateSqlServerSqlMIDatabaseInputArgs build() {
-            return new MigrateSqlServerSqlMIDatabaseInputArgs(backupFilePaths, backupFileShare, name, restoreDatabaseName);
+            return restoreDatabaseName(Output.of(restoreDatabaseName));
+        }
+
+        public MigrateSqlServerSqlMIDatabaseInputArgs build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.restoreDatabaseName = Objects.requireNonNull($.restoreDatabaseName, "expected parameter 'restoreDatabaseName' to be non-null");
+            return $;
         }
     }
+
 }

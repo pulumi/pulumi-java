@@ -27,7 +27,7 @@ public final class MigrationItemPropertiesResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="allowedOperations", required=true)
-      private final List<String> allowedOperations;
+    private List<String> allowedOperations;
 
     public List<String> allowedOperations() {
         return this.allowedOperations;
@@ -38,7 +38,7 @@ public final class MigrationItemPropertiesResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="currentJob", required=true)
-      private final CurrentJobDetailsResponse currentJob;
+    private CurrentJobDetailsResponse currentJob;
 
     public CurrentJobDetailsResponse currentJob() {
         return this.currentJob;
@@ -49,7 +49,7 @@ public final class MigrationItemPropertiesResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="health", required=true)
-      private final String health;
+    private String health;
 
     public String health() {
         return this.health;
@@ -60,7 +60,7 @@ public final class MigrationItemPropertiesResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="healthErrors", required=true)
-      private final List<HealthErrorResponse> healthErrors;
+    private List<HealthErrorResponse> healthErrors;
 
     public List<HealthErrorResponse> healthErrors() {
         return this.healthErrors;
@@ -71,7 +71,7 @@ public final class MigrationItemPropertiesResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="machineName", required=true)
-      private final String machineName;
+    private String machineName;
 
     public String machineName() {
         return this.machineName;
@@ -82,7 +82,7 @@ public final class MigrationItemPropertiesResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="migrationState", required=true)
-      private final String migrationState;
+    private String migrationState;
 
     public String migrationState() {
         return this.migrationState;
@@ -93,7 +93,7 @@ public final class MigrationItemPropertiesResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="migrationStateDescription", required=true)
-      private final String migrationStateDescription;
+    private String migrationStateDescription;
 
     public String migrationStateDescription() {
         return this.migrationStateDescription;
@@ -104,7 +104,7 @@ public final class MigrationItemPropertiesResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="policyFriendlyName", required=true)
-      private final String policyFriendlyName;
+    private String policyFriendlyName;
 
     public String policyFriendlyName() {
         return this.policyFriendlyName;
@@ -115,7 +115,7 @@ public final class MigrationItemPropertiesResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="policyId", required=true)
-      private final String policyId;
+    private String policyId;
 
     public String policyId() {
         return this.policyId;
@@ -126,10 +126,10 @@ public final class MigrationItemPropertiesResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="providerSpecificDetails")
-      private final @Nullable VMwareCbtMigrationDetailsResponse providerSpecificDetails;
+    private @Nullable VMwareCbtMigrationDetailsResponse providerSpecificDetails;
 
     public Optional<VMwareCbtMigrationDetailsResponse> providerSpecificDetails() {
-        return this.providerSpecificDetails == null ? Optional.empty() : Optional.ofNullable(this.providerSpecificDetails);
+        return Optional.ofNullable(this.providerSpecificDetails);
     }
 
     /**
@@ -137,7 +137,7 @@ public final class MigrationItemPropertiesResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="recoveryServicesProviderId", required=true)
-      private final String recoveryServicesProviderId;
+    private String recoveryServicesProviderId;
 
     public String recoveryServicesProviderId() {
         return this.recoveryServicesProviderId;
@@ -148,7 +148,7 @@ public final class MigrationItemPropertiesResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="testMigrateState", required=true)
-      private final String testMigrateState;
+    private String testMigrateState;
 
     public String testMigrateState() {
         return this.testMigrateState;
@@ -159,160 +159,136 @@ public final class MigrationItemPropertiesResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="testMigrateStateDescription", required=true)
-      private final String testMigrateStateDescription;
+    private String testMigrateStateDescription;
 
     public String testMigrateStateDescription() {
         return this.testMigrateStateDescription;
     }
 
-    public MigrationItemPropertiesResponse(
-        List<String> allowedOperations,
-        CurrentJobDetailsResponse currentJob,
-        String health,
-        List<HealthErrorResponse> healthErrors,
-        String machineName,
-        String migrationState,
-        String migrationStateDescription,
-        String policyFriendlyName,
-        String policyId,
-        @Nullable VMwareCbtMigrationDetailsResponse providerSpecificDetails,
-        String recoveryServicesProviderId,
-        String testMigrateState,
-        String testMigrateStateDescription) {
-        this.allowedOperations = Objects.requireNonNull(allowedOperations, "expected parameter 'allowedOperations' to be non-null");
-        this.currentJob = Objects.requireNonNull(currentJob, "expected parameter 'currentJob' to be non-null");
-        this.health = Objects.requireNonNull(health, "expected parameter 'health' to be non-null");
-        this.healthErrors = Objects.requireNonNull(healthErrors, "expected parameter 'healthErrors' to be non-null");
-        this.machineName = Objects.requireNonNull(machineName, "expected parameter 'machineName' to be non-null");
-        this.migrationState = Objects.requireNonNull(migrationState, "expected parameter 'migrationState' to be non-null");
-        this.migrationStateDescription = Objects.requireNonNull(migrationStateDescription, "expected parameter 'migrationStateDescription' to be non-null");
-        this.policyFriendlyName = Objects.requireNonNull(policyFriendlyName, "expected parameter 'policyFriendlyName' to be non-null");
-        this.policyId = Objects.requireNonNull(policyId, "expected parameter 'policyId' to be non-null");
-        this.providerSpecificDetails = providerSpecificDetails;
-        this.recoveryServicesProviderId = Objects.requireNonNull(recoveryServicesProviderId, "expected parameter 'recoveryServicesProviderId' to be non-null");
-        this.testMigrateState = Objects.requireNonNull(testMigrateState, "expected parameter 'testMigrateState' to be non-null");
-        this.testMigrateStateDescription = Objects.requireNonNull(testMigrateStateDescription, "expected parameter 'testMigrateStateDescription' to be non-null");
-    }
+    private MigrationItemPropertiesResponse() {}
 
-    private MigrationItemPropertiesResponse() {
-        this.allowedOperations = List.of();
-        this.currentJob = null;
-        this.health = null;
-        this.healthErrors = List.of();
-        this.machineName = null;
-        this.migrationState = null;
-        this.migrationStateDescription = null;
-        this.policyFriendlyName = null;
-        this.policyId = null;
-        this.providerSpecificDetails = null;
-        this.recoveryServicesProviderId = null;
-        this.testMigrateState = null;
-        this.testMigrateStateDescription = null;
+    private MigrationItemPropertiesResponse(MigrationItemPropertiesResponse $) {
+        this.allowedOperations = $.allowedOperations;
+        this.currentJob = $.currentJob;
+        this.health = $.health;
+        this.healthErrors = $.healthErrors;
+        this.machineName = $.machineName;
+        this.migrationState = $.migrationState;
+        this.migrationStateDescription = $.migrationStateDescription;
+        this.policyFriendlyName = $.policyFriendlyName;
+        this.policyId = $.policyId;
+        this.providerSpecificDetails = $.providerSpecificDetails;
+        this.recoveryServicesProviderId = $.recoveryServicesProviderId;
+        this.testMigrateState = $.testMigrateState;
+        this.testMigrateStateDescription = $.testMigrateStateDescription;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MigrationItemPropertiesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<String> allowedOperations;
-        private CurrentJobDetailsResponse currentJob;
-        private String health;
-        private List<HealthErrorResponse> healthErrors;
-        private String machineName;
-        private String migrationState;
-        private String migrationStateDescription;
-        private String policyFriendlyName;
-        private String policyId;
-        private @Nullable VMwareCbtMigrationDetailsResponse providerSpecificDetails;
-        private String recoveryServicesProviderId;
-        private String testMigrateState;
-        private String testMigrateStateDescription;
+        private MigrationItemPropertiesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new MigrationItemPropertiesResponse();
         }
 
         public Builder(MigrationItemPropertiesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.allowedOperations = defaults.allowedOperations;
-    	      this.currentJob = defaults.currentJob;
-    	      this.health = defaults.health;
-    	      this.healthErrors = defaults.healthErrors;
-    	      this.machineName = defaults.machineName;
-    	      this.migrationState = defaults.migrationState;
-    	      this.migrationStateDescription = defaults.migrationStateDescription;
-    	      this.policyFriendlyName = defaults.policyFriendlyName;
-    	      this.policyId = defaults.policyId;
-    	      this.providerSpecificDetails = defaults.providerSpecificDetails;
-    	      this.recoveryServicesProviderId = defaults.recoveryServicesProviderId;
-    	      this.testMigrateState = defaults.testMigrateState;
-    	      this.testMigrateStateDescription = defaults.testMigrateStateDescription;
+            $ = new MigrationItemPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder allowedOperations(List<String> allowedOperations) {
-            this.allowedOperations = Objects.requireNonNull(allowedOperations);
+            $.allowedOperations = allowedOperations;
             return this;
         }
+
         public Builder allowedOperations(String... allowedOperations) {
             return allowedOperations(List.of(allowedOperations));
         }
+
         public Builder currentJob(CurrentJobDetailsResponse currentJob) {
-            this.currentJob = Objects.requireNonNull(currentJob);
+            $.currentJob = currentJob;
             return this;
         }
+
         public Builder health(String health) {
-            this.health = Objects.requireNonNull(health);
+            $.health = health;
             return this;
         }
+
         public Builder healthErrors(List<HealthErrorResponse> healthErrors) {
-            this.healthErrors = Objects.requireNonNull(healthErrors);
+            $.healthErrors = healthErrors;
             return this;
         }
+
         public Builder healthErrors(HealthErrorResponse... healthErrors) {
             return healthErrors(List.of(healthErrors));
         }
+
         public Builder machineName(String machineName) {
-            this.machineName = Objects.requireNonNull(machineName);
+            $.machineName = machineName;
             return this;
         }
+
         public Builder migrationState(String migrationState) {
-            this.migrationState = Objects.requireNonNull(migrationState);
+            $.migrationState = migrationState;
             return this;
         }
+
         public Builder migrationStateDescription(String migrationStateDescription) {
-            this.migrationStateDescription = Objects.requireNonNull(migrationStateDescription);
+            $.migrationStateDescription = migrationStateDescription;
             return this;
         }
+
         public Builder policyFriendlyName(String policyFriendlyName) {
-            this.policyFriendlyName = Objects.requireNonNull(policyFriendlyName);
+            $.policyFriendlyName = policyFriendlyName;
             return this;
         }
+
         public Builder policyId(String policyId) {
-            this.policyId = Objects.requireNonNull(policyId);
+            $.policyId = policyId;
             return this;
         }
+
         public Builder providerSpecificDetails(@Nullable VMwareCbtMigrationDetailsResponse providerSpecificDetails) {
-            this.providerSpecificDetails = providerSpecificDetails;
+            $.providerSpecificDetails = providerSpecificDetails;
             return this;
         }
+
         public Builder recoveryServicesProviderId(String recoveryServicesProviderId) {
-            this.recoveryServicesProviderId = Objects.requireNonNull(recoveryServicesProviderId);
+            $.recoveryServicesProviderId = recoveryServicesProviderId;
             return this;
         }
+
         public Builder testMigrateState(String testMigrateState) {
-            this.testMigrateState = Objects.requireNonNull(testMigrateState);
+            $.testMigrateState = testMigrateState;
             return this;
         }
+
         public Builder testMigrateStateDescription(String testMigrateStateDescription) {
-            this.testMigrateStateDescription = Objects.requireNonNull(testMigrateStateDescription);
+            $.testMigrateStateDescription = testMigrateStateDescription;
             return this;
-        }        public MigrationItemPropertiesResponse build() {
-            return new MigrationItemPropertiesResponse(allowedOperations, currentJob, health, healthErrors, machineName, migrationState, migrationStateDescription, policyFriendlyName, policyId, providerSpecificDetails, recoveryServicesProviderId, testMigrateState, testMigrateStateDescription);
+        }
+
+        public MigrationItemPropertiesResponse build() {
+            $.allowedOperations = Objects.requireNonNull($.allowedOperations, "expected parameter 'allowedOperations' to be non-null");
+            $.currentJob = Objects.requireNonNull($.currentJob, "expected parameter 'currentJob' to be non-null");
+            $.health = Objects.requireNonNull($.health, "expected parameter 'health' to be non-null");
+            $.healthErrors = Objects.requireNonNull($.healthErrors, "expected parameter 'healthErrors' to be non-null");
+            $.machineName = Objects.requireNonNull($.machineName, "expected parameter 'machineName' to be non-null");
+            $.migrationState = Objects.requireNonNull($.migrationState, "expected parameter 'migrationState' to be non-null");
+            $.migrationStateDescription = Objects.requireNonNull($.migrationStateDescription, "expected parameter 'migrationStateDescription' to be non-null");
+            $.policyFriendlyName = Objects.requireNonNull($.policyFriendlyName, "expected parameter 'policyFriendlyName' to be non-null");
+            $.policyId = Objects.requireNonNull($.policyId, "expected parameter 'policyId' to be non-null");
+            $.recoveryServicesProviderId = Objects.requireNonNull($.recoveryServicesProviderId, "expected parameter 'recoveryServicesProviderId' to be non-null");
+            $.testMigrateState = Objects.requireNonNull($.testMigrateState, "expected parameter 'testMigrateState' to be non-null");
+            $.testMigrateStateDescription = Objects.requireNonNull($.testMigrateStateDescription, "expected parameter 'testMigrateStateDescription' to be non-null");
+            return $;
         }
     }
+
 }

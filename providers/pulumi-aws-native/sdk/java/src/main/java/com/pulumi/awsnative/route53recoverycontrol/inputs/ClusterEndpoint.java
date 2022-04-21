@@ -15,62 +15,57 @@ public final class ClusterEndpoint extends com.pulumi.resources.InvokeArgs {
     public static final ClusterEndpoint Empty = new ClusterEndpoint();
 
     @Import(name="endpoint")
-      private final @Nullable String endpoint;
+    private @Nullable String endpoint;
 
     public Optional<String> endpoint() {
-        return this.endpoint == null ? Optional.empty() : Optional.ofNullable(this.endpoint);
+        return Optional.ofNullable(this.endpoint);
     }
 
     @Import(name="region")
-      private final @Nullable String region;
+    private @Nullable String region;
 
     public Optional<String> region() {
-        return this.region == null ? Optional.empty() : Optional.ofNullable(this.region);
+        return Optional.ofNullable(this.region);
     }
 
-    public ClusterEndpoint(
-        @Nullable String endpoint,
-        @Nullable String region) {
-        this.endpoint = endpoint;
-        this.region = region;
-    }
+    private ClusterEndpoint() {}
 
-    private ClusterEndpoint() {
-        this.endpoint = null;
-        this.region = null;
+    private ClusterEndpoint(ClusterEndpoint $) {
+        this.endpoint = $.endpoint;
+        this.region = $.region;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ClusterEndpoint defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String endpoint;
-        private @Nullable String region;
+        private ClusterEndpoint $;
 
         public Builder() {
-    	      // Empty
+            $ = new ClusterEndpoint();
         }
 
         public Builder(ClusterEndpoint defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.endpoint = defaults.endpoint;
-    	      this.region = defaults.region;
+            $ = new ClusterEndpoint(Objects.requireNonNull(defaults));
         }
 
         public Builder endpoint(@Nullable String endpoint) {
-            this.endpoint = endpoint;
+            $.endpoint = endpoint;
             return this;
         }
+
         public Builder region(@Nullable String region) {
-            this.region = region;
+            $.region = region;
             return this;
-        }        public ClusterEndpoint build() {
-            return new ClusterEndpoint(endpoint, region);
+        }
+
+        public ClusterEndpoint build() {
+            return $;
         }
     }
+
 }

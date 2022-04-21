@@ -6,10 +6,10 @@ package com.pulumi.azurenative.insights.inputs;
 import com.pulumi.azurenative.insights.enums.ConditionOperator;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class ManagementEventAggregationConditionArgs extends com.pulumi.re
      * 
      */
     @Import(name="operator")
-      private final @Nullable Output<ConditionOperator> operator;
+    private @Nullable Output<ConditionOperator> operator;
 
-    public Output<ConditionOperator> operator() {
-        return this.operator == null ? Codegen.empty() : this.operator;
+    public Optional<Output<ConditionOperator>> operator() {
+        return Optional.ofNullable(this.operator);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class ManagementEventAggregationConditionArgs extends com.pulumi.re
      * 
      */
     @Import(name="threshold")
-      private final @Nullable Output<Double> threshold;
+    private @Nullable Output<Double> threshold;
 
-    public Output<Double> threshold() {
-        return this.threshold == null ? Codegen.empty() : this.threshold;
+    public Optional<Output<Double>> threshold() {
+        return Optional.ofNullable(this.threshold);
     }
 
     /**
@@ -48,76 +48,68 @@ public final class ManagementEventAggregationConditionArgs extends com.pulumi.re
      * 
      */
     @Import(name="windowSize")
-      private final @Nullable Output<String> windowSize;
+    private @Nullable Output<String> windowSize;
 
-    public Output<String> windowSize() {
-        return this.windowSize == null ? Codegen.empty() : this.windowSize;
+    public Optional<Output<String>> windowSize() {
+        return Optional.ofNullable(this.windowSize);
     }
 
-    public ManagementEventAggregationConditionArgs(
-        @Nullable Output<ConditionOperator> operator,
-        @Nullable Output<Double> threshold,
-        @Nullable Output<String> windowSize) {
-        this.operator = operator;
-        this.threshold = threshold;
-        this.windowSize = windowSize;
-    }
+    private ManagementEventAggregationConditionArgs() {}
 
-    private ManagementEventAggregationConditionArgs() {
-        this.operator = Codegen.empty();
-        this.threshold = Codegen.empty();
-        this.windowSize = Codegen.empty();
+    private ManagementEventAggregationConditionArgs(ManagementEventAggregationConditionArgs $) {
+        this.operator = $.operator;
+        this.threshold = $.threshold;
+        this.windowSize = $.windowSize;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ManagementEventAggregationConditionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<ConditionOperator> operator;
-        private @Nullable Output<Double> threshold;
-        private @Nullable Output<String> windowSize;
+        private ManagementEventAggregationConditionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ManagementEventAggregationConditionArgs();
         }
 
         public Builder(ManagementEventAggregationConditionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.operator = defaults.operator;
-    	      this.threshold = defaults.threshold;
-    	      this.windowSize = defaults.windowSize;
+            $ = new ManagementEventAggregationConditionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder operator(@Nullable Output<ConditionOperator> operator) {
-            this.operator = operator;
+            $.operator = operator;
             return this;
         }
-        public Builder operator(@Nullable ConditionOperator operator) {
-            this.operator = Codegen.ofNullable(operator);
-            return this;
+
+        public Builder operator(ConditionOperator operator) {
+            return operator(Output.of(operator));
         }
+
         public Builder threshold(@Nullable Output<Double> threshold) {
-            this.threshold = threshold;
+            $.threshold = threshold;
             return this;
         }
-        public Builder threshold(@Nullable Double threshold) {
-            this.threshold = Codegen.ofNullable(threshold);
-            return this;
+
+        public Builder threshold(Double threshold) {
+            return threshold(Output.of(threshold));
         }
+
         public Builder windowSize(@Nullable Output<String> windowSize) {
-            this.windowSize = windowSize;
+            $.windowSize = windowSize;
             return this;
         }
-        public Builder windowSize(@Nullable String windowSize) {
-            this.windowSize = Codegen.ofNullable(windowSize);
-            return this;
-        }        public ManagementEventAggregationConditionArgs build() {
-            return new ManagementEventAggregationConditionArgs(operator, threshold, windowSize);
+
+        public Builder windowSize(String windowSize) {
+            return windowSize(Output.of(windowSize));
+        }
+
+        public ManagementEventAggregationConditionArgs build() {
+            return $;
         }
     }
+
 }

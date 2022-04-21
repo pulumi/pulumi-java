@@ -14,62 +14,59 @@ public final class GetListenerDefaultActionForwardStickiness extends com.pulumi.
     public static final GetListenerDefaultActionForwardStickiness Empty = new GetListenerDefaultActionForwardStickiness();
 
     @Import(name="duration", required=true)
-      private final Integer duration;
+    private Integer duration;
 
     public Integer duration() {
         return this.duration;
     }
 
     @Import(name="enabled", required=true)
-      private final Boolean enabled;
+    private Boolean enabled;
 
     public Boolean enabled() {
         return this.enabled;
     }
 
-    public GetListenerDefaultActionForwardStickiness(
-        Integer duration,
-        Boolean enabled) {
-        this.duration = Objects.requireNonNull(duration, "expected parameter 'duration' to be non-null");
-        this.enabled = Objects.requireNonNull(enabled, "expected parameter 'enabled' to be non-null");
-    }
+    private GetListenerDefaultActionForwardStickiness() {}
 
-    private GetListenerDefaultActionForwardStickiness() {
-        this.duration = null;
-        this.enabled = null;
+    private GetListenerDefaultActionForwardStickiness(GetListenerDefaultActionForwardStickiness $) {
+        this.duration = $.duration;
+        this.enabled = $.enabled;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetListenerDefaultActionForwardStickiness defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Integer duration;
-        private Boolean enabled;
+        private GetListenerDefaultActionForwardStickiness $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetListenerDefaultActionForwardStickiness();
         }
 
         public Builder(GetListenerDefaultActionForwardStickiness defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.duration = defaults.duration;
-    	      this.enabled = defaults.enabled;
+            $ = new GetListenerDefaultActionForwardStickiness(Objects.requireNonNull(defaults));
         }
 
         public Builder duration(Integer duration) {
-            this.duration = Objects.requireNonNull(duration);
+            $.duration = duration;
             return this;
         }
+
         public Builder enabled(Boolean enabled) {
-            this.enabled = Objects.requireNonNull(enabled);
+            $.enabled = enabled;
             return this;
-        }        public GetListenerDefaultActionForwardStickiness build() {
-            return new GetListenerDefaultActionForwardStickiness(duration, enabled);
+        }
+
+        public GetListenerDefaultActionForwardStickiness build() {
+            $.duration = Objects.requireNonNull($.duration, "expected parameter 'duration' to be non-null");
+            $.enabled = Objects.requireNonNull($.enabled, "expected parameter 'enabled' to be non-null");
+            return $;
         }
     }
+
 }

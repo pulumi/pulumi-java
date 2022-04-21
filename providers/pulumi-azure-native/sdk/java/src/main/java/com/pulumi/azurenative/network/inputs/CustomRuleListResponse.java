@@ -24,48 +24,48 @@ public final class CustomRuleListResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="rules")
-      private final @Nullable List<CustomRuleResponse> rules;
+    private @Nullable List<CustomRuleResponse> rules;
 
-    public List<CustomRuleResponse> rules() {
-        return this.rules == null ? List.of() : this.rules;
+    public Optional<List<CustomRuleResponse>> rules() {
+        return Optional.ofNullable(this.rules);
     }
 
-    public CustomRuleListResponse(@Nullable List<CustomRuleResponse> rules) {
-        this.rules = rules;
-    }
+    private CustomRuleListResponse() {}
 
-    private CustomRuleListResponse() {
-        this.rules = List.of();
+    private CustomRuleListResponse(CustomRuleListResponse $) {
+        this.rules = $.rules;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CustomRuleListResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<CustomRuleResponse> rules;
+        private CustomRuleListResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new CustomRuleListResponse();
         }
 
         public Builder(CustomRuleListResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.rules = defaults.rules;
+            $ = new CustomRuleListResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder rules(@Nullable List<CustomRuleResponse> rules) {
-            this.rules = rules;
+            $.rules = rules;
             return this;
         }
+
         public Builder rules(CustomRuleResponse... rules) {
             return rules(List.of(rules));
-        }        public CustomRuleListResponse build() {
-            return new CustomRuleListResponse(rules);
+        }
+
+        public CustomRuleListResponse build() {
+            return $;
         }
     }
+
 }

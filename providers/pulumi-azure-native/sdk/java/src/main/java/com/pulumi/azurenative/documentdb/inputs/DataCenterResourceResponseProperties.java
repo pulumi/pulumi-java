@@ -26,10 +26,10 @@ public final class DataCenterResourceResponseProperties extends com.pulumi.resou
      * 
      */
     @Import(name="base64EncodedCassandraYamlFragment")
-      private final @Nullable String base64EncodedCassandraYamlFragment;
+    private @Nullable String base64EncodedCassandraYamlFragment;
 
     public Optional<String> base64EncodedCassandraYamlFragment() {
-        return this.base64EncodedCassandraYamlFragment == null ? Optional.empty() : Optional.ofNullable(this.base64EncodedCassandraYamlFragment);
+        return Optional.ofNullable(this.base64EncodedCassandraYamlFragment);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class DataCenterResourceResponseProperties extends com.pulumi.resou
      * 
      */
     @Import(name="dataCenterLocation")
-      private final @Nullable String dataCenterLocation;
+    private @Nullable String dataCenterLocation;
 
     public Optional<String> dataCenterLocation() {
-        return this.dataCenterLocation == null ? Optional.empty() : Optional.ofNullable(this.dataCenterLocation);
+        return Optional.ofNullable(this.dataCenterLocation);
     }
 
     /**
@@ -48,10 +48,10 @@ public final class DataCenterResourceResponseProperties extends com.pulumi.resou
      * 
      */
     @Import(name="delegatedSubnetId")
-      private final @Nullable String delegatedSubnetId;
+    private @Nullable String delegatedSubnetId;
 
     public Optional<String> delegatedSubnetId() {
-        return this.delegatedSubnetId == null ? Optional.empty() : Optional.ofNullable(this.delegatedSubnetId);
+        return Optional.ofNullable(this.delegatedSubnetId);
     }
 
     /**
@@ -59,10 +59,10 @@ public final class DataCenterResourceResponseProperties extends com.pulumi.resou
      * 
      */
     @Import(name="nodeCount")
-      private final @Nullable Integer nodeCount;
+    private @Nullable Integer nodeCount;
 
     public Optional<Integer> nodeCount() {
-        return this.nodeCount == null ? Optional.empty() : Optional.ofNullable(this.nodeCount);
+        return Optional.ofNullable(this.nodeCount);
     }
 
     /**
@@ -70,10 +70,10 @@ public final class DataCenterResourceResponseProperties extends com.pulumi.resou
      * 
      */
     @Import(name="provisioningState")
-      private final @Nullable String provisioningState;
+    private @Nullable String provisioningState;
 
     public Optional<String> provisioningState() {
-        return this.provisioningState == null ? Optional.empty() : Optional.ofNullable(this.provisioningState);
+        return Optional.ofNullable(this.provisioningState);
     }
 
     /**
@@ -81,94 +81,79 @@ public final class DataCenterResourceResponseProperties extends com.pulumi.resou
      * 
      */
     @Import(name="seedNodes", required=true)
-      private final List<SeedNodeResponse> seedNodes;
+    private List<SeedNodeResponse> seedNodes;
 
     public List<SeedNodeResponse> seedNodes() {
         return this.seedNodes;
     }
 
-    public DataCenterResourceResponseProperties(
-        @Nullable String base64EncodedCassandraYamlFragment,
-        @Nullable String dataCenterLocation,
-        @Nullable String delegatedSubnetId,
-        @Nullable Integer nodeCount,
-        @Nullable String provisioningState,
-        List<SeedNodeResponse> seedNodes) {
-        this.base64EncodedCassandraYamlFragment = base64EncodedCassandraYamlFragment;
-        this.dataCenterLocation = dataCenterLocation;
-        this.delegatedSubnetId = delegatedSubnetId;
-        this.nodeCount = nodeCount;
-        this.provisioningState = provisioningState;
-        this.seedNodes = Objects.requireNonNull(seedNodes, "expected parameter 'seedNodes' to be non-null");
-    }
+    private DataCenterResourceResponseProperties() {}
 
-    private DataCenterResourceResponseProperties() {
-        this.base64EncodedCassandraYamlFragment = null;
-        this.dataCenterLocation = null;
-        this.delegatedSubnetId = null;
-        this.nodeCount = null;
-        this.provisioningState = null;
-        this.seedNodes = List.of();
+    private DataCenterResourceResponseProperties(DataCenterResourceResponseProperties $) {
+        this.base64EncodedCassandraYamlFragment = $.base64EncodedCassandraYamlFragment;
+        this.dataCenterLocation = $.dataCenterLocation;
+        this.delegatedSubnetId = $.delegatedSubnetId;
+        this.nodeCount = $.nodeCount;
+        this.provisioningState = $.provisioningState;
+        this.seedNodes = $.seedNodes;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DataCenterResourceResponseProperties defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String base64EncodedCassandraYamlFragment;
-        private @Nullable String dataCenterLocation;
-        private @Nullable String delegatedSubnetId;
-        private @Nullable Integer nodeCount;
-        private @Nullable String provisioningState;
-        private List<SeedNodeResponse> seedNodes;
+        private DataCenterResourceResponseProperties $;
 
         public Builder() {
-    	      // Empty
+            $ = new DataCenterResourceResponseProperties();
         }
 
         public Builder(DataCenterResourceResponseProperties defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.base64EncodedCassandraYamlFragment = defaults.base64EncodedCassandraYamlFragment;
-    	      this.dataCenterLocation = defaults.dataCenterLocation;
-    	      this.delegatedSubnetId = defaults.delegatedSubnetId;
-    	      this.nodeCount = defaults.nodeCount;
-    	      this.provisioningState = defaults.provisioningState;
-    	      this.seedNodes = defaults.seedNodes;
+            $ = new DataCenterResourceResponseProperties(Objects.requireNonNull(defaults));
         }
 
         public Builder base64EncodedCassandraYamlFragment(@Nullable String base64EncodedCassandraYamlFragment) {
-            this.base64EncodedCassandraYamlFragment = base64EncodedCassandraYamlFragment;
+            $.base64EncodedCassandraYamlFragment = base64EncodedCassandraYamlFragment;
             return this;
         }
+
         public Builder dataCenterLocation(@Nullable String dataCenterLocation) {
-            this.dataCenterLocation = dataCenterLocation;
+            $.dataCenterLocation = dataCenterLocation;
             return this;
         }
+
         public Builder delegatedSubnetId(@Nullable String delegatedSubnetId) {
-            this.delegatedSubnetId = delegatedSubnetId;
+            $.delegatedSubnetId = delegatedSubnetId;
             return this;
         }
+
         public Builder nodeCount(@Nullable Integer nodeCount) {
-            this.nodeCount = nodeCount;
+            $.nodeCount = nodeCount;
             return this;
         }
+
         public Builder provisioningState(@Nullable String provisioningState) {
-            this.provisioningState = provisioningState;
+            $.provisioningState = provisioningState;
             return this;
         }
+
         public Builder seedNodes(List<SeedNodeResponse> seedNodes) {
-            this.seedNodes = Objects.requireNonNull(seedNodes);
+            $.seedNodes = seedNodes;
             return this;
         }
+
         public Builder seedNodes(SeedNodeResponse... seedNodes) {
             return seedNodes(List.of(seedNodes));
-        }        public DataCenterResourceResponseProperties build() {
-            return new DataCenterResourceResponseProperties(base64EncodedCassandraYamlFragment, dataCenterLocation, delegatedSubnetId, nodeCount, provisioningState, seedNodes);
+        }
+
+        public DataCenterResourceResponseProperties build() {
+            $.seedNodes = Objects.requireNonNull($.seedNodes, "expected parameter 'seedNodes' to be non-null");
+            return $;
         }
     }
+
 }

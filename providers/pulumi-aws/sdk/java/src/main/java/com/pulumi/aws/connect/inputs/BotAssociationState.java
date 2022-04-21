@@ -6,9 +6,9 @@ package com.pulumi.aws.connect.inputs;
 import com.pulumi.aws.connect.inputs.BotAssociationLexBotGetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class BotAssociationState extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="instanceId")
-      private final @Nullable Output<String> instanceId;
+    private @Nullable Output<String> instanceId;
 
-    public Output<String> instanceId() {
-        return this.instanceId == null ? Codegen.empty() : this.instanceId;
+    public Optional<Output<String>> instanceId() {
+        return Optional.ofNullable(this.instanceId);
     }
 
     /**
@@ -32,63 +32,58 @@ public final class BotAssociationState extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="lexBot")
-      private final @Nullable Output<BotAssociationLexBotGetArgs> lexBot;
+    private @Nullable Output<BotAssociationLexBotGetArgs> lexBot;
 
-    public Output<BotAssociationLexBotGetArgs> lexBot() {
-        return this.lexBot == null ? Codegen.empty() : this.lexBot;
+    public Optional<Output<BotAssociationLexBotGetArgs>> lexBot() {
+        return Optional.ofNullable(this.lexBot);
     }
 
-    public BotAssociationState(
-        @Nullable Output<String> instanceId,
-        @Nullable Output<BotAssociationLexBotGetArgs> lexBot) {
-        this.instanceId = instanceId;
-        this.lexBot = lexBot;
-    }
+    private BotAssociationState() {}
 
-    private BotAssociationState() {
-        this.instanceId = Codegen.empty();
-        this.lexBot = Codegen.empty();
+    private BotAssociationState(BotAssociationState $) {
+        this.instanceId = $.instanceId;
+        this.lexBot = $.lexBot;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BotAssociationState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> instanceId;
-        private @Nullable Output<BotAssociationLexBotGetArgs> lexBot;
+        private BotAssociationState $;
 
         public Builder() {
-    	      // Empty
+            $ = new BotAssociationState();
         }
 
         public Builder(BotAssociationState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.instanceId = defaults.instanceId;
-    	      this.lexBot = defaults.lexBot;
+            $ = new BotAssociationState(Objects.requireNonNull(defaults));
         }
 
         public Builder instanceId(@Nullable Output<String> instanceId) {
-            this.instanceId = instanceId;
+            $.instanceId = instanceId;
             return this;
         }
-        public Builder instanceId(@Nullable String instanceId) {
-            this.instanceId = Codegen.ofNullable(instanceId);
-            return this;
+
+        public Builder instanceId(String instanceId) {
+            return instanceId(Output.of(instanceId));
         }
+
         public Builder lexBot(@Nullable Output<BotAssociationLexBotGetArgs> lexBot) {
-            this.lexBot = lexBot;
+            $.lexBot = lexBot;
             return this;
         }
-        public Builder lexBot(@Nullable BotAssociationLexBotGetArgs lexBot) {
-            this.lexBot = Codegen.ofNullable(lexBot);
-            return this;
-        }        public BotAssociationState build() {
-            return new BotAssociationState(instanceId, lexBot);
+
+        public Builder lexBot(BotAssociationLexBotGetArgs lexBot) {
+            return lexBot(Output.of(lexBot));
+        }
+
+        public BotAssociationState build() {
+            return $;
         }
     }
+
 }

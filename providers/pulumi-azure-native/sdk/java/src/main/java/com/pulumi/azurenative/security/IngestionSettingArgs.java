@@ -5,9 +5,9 @@ package com.pulumi.azurenative.security;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,49 +20,48 @@ public final class IngestionSettingArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="ingestionSettingName")
-      private final @Nullable Output<String> ingestionSettingName;
+    private @Nullable Output<String> ingestionSettingName;
 
-    public Output<String> ingestionSettingName() {
-        return this.ingestionSettingName == null ? Codegen.empty() : this.ingestionSettingName;
+    public Optional<Output<String>> ingestionSettingName() {
+        return Optional.ofNullable(this.ingestionSettingName);
     }
 
-    public IngestionSettingArgs(@Nullable Output<String> ingestionSettingName) {
-        this.ingestionSettingName = ingestionSettingName;
-    }
+    private IngestionSettingArgs() {}
 
-    private IngestionSettingArgs() {
-        this.ingestionSettingName = Codegen.empty();
+    private IngestionSettingArgs(IngestionSettingArgs $) {
+        this.ingestionSettingName = $.ingestionSettingName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(IngestionSettingArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> ingestionSettingName;
+        private IngestionSettingArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new IngestionSettingArgs();
         }
 
         public Builder(IngestionSettingArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.ingestionSettingName = defaults.ingestionSettingName;
+            $ = new IngestionSettingArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder ingestionSettingName(@Nullable Output<String> ingestionSettingName) {
-            this.ingestionSettingName = ingestionSettingName;
+            $.ingestionSettingName = ingestionSettingName;
             return this;
         }
-        public Builder ingestionSettingName(@Nullable String ingestionSettingName) {
-            this.ingestionSettingName = Codegen.ofNullable(ingestionSettingName);
-            return this;
-        }        public IngestionSettingArgs build() {
-            return new IngestionSettingArgs(ingestionSettingName);
+
+        public Builder ingestionSettingName(String ingestionSettingName) {
+            return ingestionSettingName(Output.of(ingestionSettingName));
+        }
+
+        public IngestionSettingArgs build() {
+            return $;
         }
     }
+
 }

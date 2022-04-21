@@ -5,7 +5,6 @@ package com.pulumi.aws.ec2;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,7 +18,7 @@ public final class VpnConnectionRouteArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="destinationCidrBlock", required=true)
-      private final Output<String> destinationCidrBlock;
+    private Output<String> destinationCidrBlock;
 
     public Output<String> destinationCidrBlock() {
         return this.destinationCidrBlock;
@@ -30,63 +29,60 @@ public final class VpnConnectionRouteArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="vpnConnectionId", required=true)
-      private final Output<String> vpnConnectionId;
+    private Output<String> vpnConnectionId;
 
     public Output<String> vpnConnectionId() {
         return this.vpnConnectionId;
     }
 
-    public VpnConnectionRouteArgs(
-        Output<String> destinationCidrBlock,
-        Output<String> vpnConnectionId) {
-        this.destinationCidrBlock = Objects.requireNonNull(destinationCidrBlock, "expected parameter 'destinationCidrBlock' to be non-null");
-        this.vpnConnectionId = Objects.requireNonNull(vpnConnectionId, "expected parameter 'vpnConnectionId' to be non-null");
-    }
+    private VpnConnectionRouteArgs() {}
 
-    private VpnConnectionRouteArgs() {
-        this.destinationCidrBlock = Codegen.empty();
-        this.vpnConnectionId = Codegen.empty();
+    private VpnConnectionRouteArgs(VpnConnectionRouteArgs $) {
+        this.destinationCidrBlock = $.destinationCidrBlock;
+        this.vpnConnectionId = $.vpnConnectionId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VpnConnectionRouteArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> destinationCidrBlock;
-        private Output<String> vpnConnectionId;
+        private VpnConnectionRouteArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new VpnConnectionRouteArgs();
         }
 
         public Builder(VpnConnectionRouteArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.destinationCidrBlock = defaults.destinationCidrBlock;
-    	      this.vpnConnectionId = defaults.vpnConnectionId;
+            $ = new VpnConnectionRouteArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder destinationCidrBlock(Output<String> destinationCidrBlock) {
-            this.destinationCidrBlock = Objects.requireNonNull(destinationCidrBlock);
+            $.destinationCidrBlock = destinationCidrBlock;
             return this;
         }
+
         public Builder destinationCidrBlock(String destinationCidrBlock) {
-            this.destinationCidrBlock = Output.of(Objects.requireNonNull(destinationCidrBlock));
-            return this;
+            return destinationCidrBlock(Output.of(destinationCidrBlock));
         }
+
         public Builder vpnConnectionId(Output<String> vpnConnectionId) {
-            this.vpnConnectionId = Objects.requireNonNull(vpnConnectionId);
+            $.vpnConnectionId = vpnConnectionId;
             return this;
         }
+
         public Builder vpnConnectionId(String vpnConnectionId) {
-            this.vpnConnectionId = Output.of(Objects.requireNonNull(vpnConnectionId));
-            return this;
-        }        public VpnConnectionRouteArgs build() {
-            return new VpnConnectionRouteArgs(destinationCidrBlock, vpnConnectionId);
+            return vpnConnectionId(Output.of(vpnConnectionId));
+        }
+
+        public VpnConnectionRouteArgs build() {
+            $.destinationCidrBlock = Objects.requireNonNull($.destinationCidrBlock, "expected parameter 'destinationCidrBlock' to be non-null");
+            $.vpnConnectionId = Objects.requireNonNull($.vpnConnectionId, "expected parameter 'vpnConnectionId' to be non-null");
+            return $;
         }
     }
+
 }

@@ -22,7 +22,7 @@ public final class EndpointsApiServiceResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="configId", required=true)
-      private final String configId;
+    private String configId;
 
     public String configId() {
         return this.configId;
@@ -33,7 +33,7 @@ public final class EndpointsApiServiceResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="disableTraceSampling", required=true)
-      private final Boolean disableTraceSampling;
+    private Boolean disableTraceSampling;
 
     public Boolean disableTraceSampling() {
         return this.disableTraceSampling;
@@ -44,7 +44,7 @@ public final class EndpointsApiServiceResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -55,73 +55,66 @@ public final class EndpointsApiServiceResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="rolloutStrategy", required=true)
-      private final String rolloutStrategy;
+    private String rolloutStrategy;
 
     public String rolloutStrategy() {
         return this.rolloutStrategy;
     }
 
-    public EndpointsApiServiceResponse(
-        String configId,
-        Boolean disableTraceSampling,
-        String name,
-        String rolloutStrategy) {
-        this.configId = Objects.requireNonNull(configId, "expected parameter 'configId' to be non-null");
-        this.disableTraceSampling = Objects.requireNonNull(disableTraceSampling, "expected parameter 'disableTraceSampling' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.rolloutStrategy = Objects.requireNonNull(rolloutStrategy, "expected parameter 'rolloutStrategy' to be non-null");
-    }
+    private EndpointsApiServiceResponse() {}
 
-    private EndpointsApiServiceResponse() {
-        this.configId = null;
-        this.disableTraceSampling = null;
-        this.name = null;
-        this.rolloutStrategy = null;
+    private EndpointsApiServiceResponse(EndpointsApiServiceResponse $) {
+        this.configId = $.configId;
+        this.disableTraceSampling = $.disableTraceSampling;
+        this.name = $.name;
+        this.rolloutStrategy = $.rolloutStrategy;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EndpointsApiServiceResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String configId;
-        private Boolean disableTraceSampling;
-        private String name;
-        private String rolloutStrategy;
+        private EndpointsApiServiceResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new EndpointsApiServiceResponse();
         }
 
         public Builder(EndpointsApiServiceResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.configId = defaults.configId;
-    	      this.disableTraceSampling = defaults.disableTraceSampling;
-    	      this.name = defaults.name;
-    	      this.rolloutStrategy = defaults.rolloutStrategy;
+            $ = new EndpointsApiServiceResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder configId(String configId) {
-            this.configId = Objects.requireNonNull(configId);
+            $.configId = configId;
             return this;
         }
+
         public Builder disableTraceSampling(Boolean disableTraceSampling) {
-            this.disableTraceSampling = Objects.requireNonNull(disableTraceSampling);
+            $.disableTraceSampling = disableTraceSampling;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder rolloutStrategy(String rolloutStrategy) {
-            this.rolloutStrategy = Objects.requireNonNull(rolloutStrategy);
+            $.rolloutStrategy = rolloutStrategy;
             return this;
-        }        public EndpointsApiServiceResponse build() {
-            return new EndpointsApiServiceResponse(configId, disableTraceSampling, name, rolloutStrategy);
+        }
+
+        public EndpointsApiServiceResponse build() {
+            $.configId = Objects.requireNonNull($.configId, "expected parameter 'configId' to be non-null");
+            $.disableTraceSampling = Objects.requireNonNull($.disableTraceSampling, "expected parameter 'disableTraceSampling' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.rolloutStrategy = Objects.requireNonNull($.rolloutStrategy, "expected parameter 'rolloutStrategy' to be non-null");
+            return $;
         }
     }
+
 }

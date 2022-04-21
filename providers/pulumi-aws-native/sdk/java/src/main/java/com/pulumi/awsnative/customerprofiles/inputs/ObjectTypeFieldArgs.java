@@ -6,9 +6,9 @@ package com.pulumi.awsnative.customerprofiles.inputs;
 import com.pulumi.awsnative.customerprofiles.enums.ObjectTypeFieldContentType;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class ObjectTypeFieldArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="contentType")
-      private final @Nullable Output<ObjectTypeFieldContentType> contentType;
+    private @Nullable Output<ObjectTypeFieldContentType> contentType;
 
-    public Output<ObjectTypeFieldContentType> contentType() {
-        return this.contentType == null ? Codegen.empty() : this.contentType;
+    public Optional<Output<ObjectTypeFieldContentType>> contentType() {
+        return Optional.ofNullable(this.contentType);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class ObjectTypeFieldArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="source")
-      private final @Nullable Output<String> source;
+    private @Nullable Output<String> source;
 
-    public Output<String> source() {
-        return this.source == null ? Codegen.empty() : this.source;
+    public Optional<Output<String>> source() {
+        return Optional.ofNullable(this.source);
     }
 
     /**
@@ -47,76 +47,68 @@ public final class ObjectTypeFieldArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="target")
-      private final @Nullable Output<String> target;
+    private @Nullable Output<String> target;
 
-    public Output<String> target() {
-        return this.target == null ? Codegen.empty() : this.target;
+    public Optional<Output<String>> target() {
+        return Optional.ofNullable(this.target);
     }
 
-    public ObjectTypeFieldArgs(
-        @Nullable Output<ObjectTypeFieldContentType> contentType,
-        @Nullable Output<String> source,
-        @Nullable Output<String> target) {
-        this.contentType = contentType;
-        this.source = source;
-        this.target = target;
-    }
+    private ObjectTypeFieldArgs() {}
 
-    private ObjectTypeFieldArgs() {
-        this.contentType = Codegen.empty();
-        this.source = Codegen.empty();
-        this.target = Codegen.empty();
+    private ObjectTypeFieldArgs(ObjectTypeFieldArgs $) {
+        this.contentType = $.contentType;
+        this.source = $.source;
+        this.target = $.target;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ObjectTypeFieldArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<ObjectTypeFieldContentType> contentType;
-        private @Nullable Output<String> source;
-        private @Nullable Output<String> target;
+        private ObjectTypeFieldArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ObjectTypeFieldArgs();
         }
 
         public Builder(ObjectTypeFieldArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.contentType = defaults.contentType;
-    	      this.source = defaults.source;
-    	      this.target = defaults.target;
+            $ = new ObjectTypeFieldArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder contentType(@Nullable Output<ObjectTypeFieldContentType> contentType) {
-            this.contentType = contentType;
+            $.contentType = contentType;
             return this;
         }
-        public Builder contentType(@Nullable ObjectTypeFieldContentType contentType) {
-            this.contentType = Codegen.ofNullable(contentType);
-            return this;
+
+        public Builder contentType(ObjectTypeFieldContentType contentType) {
+            return contentType(Output.of(contentType));
         }
+
         public Builder source(@Nullable Output<String> source) {
-            this.source = source;
+            $.source = source;
             return this;
         }
-        public Builder source(@Nullable String source) {
-            this.source = Codegen.ofNullable(source);
-            return this;
+
+        public Builder source(String source) {
+            return source(Output.of(source));
         }
+
         public Builder target(@Nullable Output<String> target) {
-            this.target = target;
+            $.target = target;
             return this;
         }
-        public Builder target(@Nullable String target) {
-            this.target = Codegen.ofNullable(target);
-            return this;
-        }        public ObjectTypeFieldArgs build() {
-            return new ObjectTypeFieldArgs(contentType, source, target);
+
+        public Builder target(String target) {
+            return target(Output.of(target));
+        }
+
+        public ObjectTypeFieldArgs build() {
+            return $;
         }
     }
+
 }

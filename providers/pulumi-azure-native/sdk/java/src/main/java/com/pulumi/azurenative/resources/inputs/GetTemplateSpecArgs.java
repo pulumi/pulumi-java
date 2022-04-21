@@ -19,10 +19,10 @@ public final class GetTemplateSpecArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="expand")
-      private final @Nullable String expand;
+    private @Nullable String expand;
 
     public Optional<String> expand() {
-        return this.expand == null ? Optional.empty() : Optional.ofNullable(this.expand);
+        return Optional.ofNullable(this.expand);
     }
 
     /**
@@ -30,7 +30,7 @@ public final class GetTemplateSpecArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -41,64 +41,58 @@ public final class GetTemplateSpecArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="templateSpecName", required=true)
-      private final String templateSpecName;
+    private String templateSpecName;
 
     public String templateSpecName() {
         return this.templateSpecName;
     }
 
-    public GetTemplateSpecArgs(
-        @Nullable String expand,
-        String resourceGroupName,
-        String templateSpecName) {
-        this.expand = expand;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.templateSpecName = Objects.requireNonNull(templateSpecName, "expected parameter 'templateSpecName' to be non-null");
-    }
+    private GetTemplateSpecArgs() {}
 
-    private GetTemplateSpecArgs() {
-        this.expand = null;
-        this.resourceGroupName = null;
-        this.templateSpecName = null;
+    private GetTemplateSpecArgs(GetTemplateSpecArgs $) {
+        this.expand = $.expand;
+        this.resourceGroupName = $.resourceGroupName;
+        this.templateSpecName = $.templateSpecName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetTemplateSpecArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String expand;
-        private String resourceGroupName;
-        private String templateSpecName;
+        private GetTemplateSpecArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetTemplateSpecArgs();
         }
 
         public Builder(GetTemplateSpecArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.expand = defaults.expand;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.templateSpecName = defaults.templateSpecName;
+            $ = new GetTemplateSpecArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder expand(@Nullable String expand) {
-            this.expand = expand;
+            $.expand = expand;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder templateSpecName(String templateSpecName) {
-            this.templateSpecName = Objects.requireNonNull(templateSpecName);
+            $.templateSpecName = templateSpecName;
             return this;
-        }        public GetTemplateSpecArgs build() {
-            return new GetTemplateSpecArgs(expand, resourceGroupName, templateSpecName);
+        }
+
+        public GetTemplateSpecArgs build() {
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.templateSpecName = Objects.requireNonNull($.templateSpecName, "expected parameter 'templateSpecName' to be non-null");
+            return $;
         }
     }
+
 }

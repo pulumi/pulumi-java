@@ -21,7 +21,7 @@ public final class MysqlSourceConfigResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="excludeObjects", required=true)
-      private final MysqlRdbmsResponse excludeObjects;
+    private MysqlRdbmsResponse excludeObjects;
 
     public MysqlRdbmsResponse excludeObjects() {
         return this.excludeObjects;
@@ -32,55 +32,52 @@ public final class MysqlSourceConfigResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="includeObjects", required=true)
-      private final MysqlRdbmsResponse includeObjects;
+    private MysqlRdbmsResponse includeObjects;
 
     public MysqlRdbmsResponse includeObjects() {
         return this.includeObjects;
     }
 
-    public MysqlSourceConfigResponse(
-        MysqlRdbmsResponse excludeObjects,
-        MysqlRdbmsResponse includeObjects) {
-        this.excludeObjects = Objects.requireNonNull(excludeObjects, "expected parameter 'excludeObjects' to be non-null");
-        this.includeObjects = Objects.requireNonNull(includeObjects, "expected parameter 'includeObjects' to be non-null");
-    }
+    private MysqlSourceConfigResponse() {}
 
-    private MysqlSourceConfigResponse() {
-        this.excludeObjects = null;
-        this.includeObjects = null;
+    private MysqlSourceConfigResponse(MysqlSourceConfigResponse $) {
+        this.excludeObjects = $.excludeObjects;
+        this.includeObjects = $.includeObjects;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MysqlSourceConfigResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private MysqlRdbmsResponse excludeObjects;
-        private MysqlRdbmsResponse includeObjects;
+        private MysqlSourceConfigResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new MysqlSourceConfigResponse();
         }
 
         public Builder(MysqlSourceConfigResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.excludeObjects = defaults.excludeObjects;
-    	      this.includeObjects = defaults.includeObjects;
+            $ = new MysqlSourceConfigResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder excludeObjects(MysqlRdbmsResponse excludeObjects) {
-            this.excludeObjects = Objects.requireNonNull(excludeObjects);
+            $.excludeObjects = excludeObjects;
             return this;
         }
+
         public Builder includeObjects(MysqlRdbmsResponse includeObjects) {
-            this.includeObjects = Objects.requireNonNull(includeObjects);
+            $.includeObjects = includeObjects;
             return this;
-        }        public MysqlSourceConfigResponse build() {
-            return new MysqlSourceConfigResponse(excludeObjects, includeObjects);
+        }
+
+        public MysqlSourceConfigResponse build() {
+            $.excludeObjects = Objects.requireNonNull($.excludeObjects, "expected parameter 'excludeObjects' to be non-null");
+            $.includeObjects = Objects.requireNonNull($.includeObjects, "expected parameter 'includeObjects' to be non-null");
+            return $;
         }
     }
+
 }

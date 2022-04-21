@@ -17,45 +17,45 @@ public final class SecurityPolicyRecaptchaOptionsConfigResponse extends com.pulu
      * 
      */
     @Import(name="redirectSiteKey", required=true)
-      private final String redirectSiteKey;
+    private String redirectSiteKey;
 
     public String redirectSiteKey() {
         return this.redirectSiteKey;
     }
 
-    public SecurityPolicyRecaptchaOptionsConfigResponse(String redirectSiteKey) {
-        this.redirectSiteKey = Objects.requireNonNull(redirectSiteKey, "expected parameter 'redirectSiteKey' to be non-null");
-    }
+    private SecurityPolicyRecaptchaOptionsConfigResponse() {}
 
-    private SecurityPolicyRecaptchaOptionsConfigResponse() {
-        this.redirectSiteKey = null;
+    private SecurityPolicyRecaptchaOptionsConfigResponse(SecurityPolicyRecaptchaOptionsConfigResponse $) {
+        this.redirectSiteKey = $.redirectSiteKey;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SecurityPolicyRecaptchaOptionsConfigResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String redirectSiteKey;
+        private SecurityPolicyRecaptchaOptionsConfigResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new SecurityPolicyRecaptchaOptionsConfigResponse();
         }
 
         public Builder(SecurityPolicyRecaptchaOptionsConfigResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.redirectSiteKey = defaults.redirectSiteKey;
+            $ = new SecurityPolicyRecaptchaOptionsConfigResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder redirectSiteKey(String redirectSiteKey) {
-            this.redirectSiteKey = Objects.requireNonNull(redirectSiteKey);
+            $.redirectSiteKey = redirectSiteKey;
             return this;
-        }        public SecurityPolicyRecaptchaOptionsConfigResponse build() {
-            return new SecurityPolicyRecaptchaOptionsConfigResponse(redirectSiteKey);
+        }
+
+        public SecurityPolicyRecaptchaOptionsConfigResponse build() {
+            $.redirectSiteKey = Objects.requireNonNull($.redirectSiteKey, "expected parameter 'redirectSiteKey' to be non-null");
+            return $;
         }
     }
+
 }

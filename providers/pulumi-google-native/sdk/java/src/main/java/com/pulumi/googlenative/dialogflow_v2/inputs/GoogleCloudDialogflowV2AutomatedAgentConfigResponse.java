@@ -21,45 +21,45 @@ public final class GoogleCloudDialogflowV2AutomatedAgentConfigResponse extends c
      * 
      */
     @Import(name="agent", required=true)
-      private final String agent;
+    private String agent;
 
     public String agent() {
         return this.agent;
     }
 
-    public GoogleCloudDialogflowV2AutomatedAgentConfigResponse(String agent) {
-        this.agent = Objects.requireNonNull(agent, "expected parameter 'agent' to be non-null");
-    }
+    private GoogleCloudDialogflowV2AutomatedAgentConfigResponse() {}
 
-    private GoogleCloudDialogflowV2AutomatedAgentConfigResponse() {
-        this.agent = null;
+    private GoogleCloudDialogflowV2AutomatedAgentConfigResponse(GoogleCloudDialogflowV2AutomatedAgentConfigResponse $) {
+        this.agent = $.agent;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudDialogflowV2AutomatedAgentConfigResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String agent;
+        private GoogleCloudDialogflowV2AutomatedAgentConfigResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudDialogflowV2AutomatedAgentConfigResponse();
         }
 
         public Builder(GoogleCloudDialogflowV2AutomatedAgentConfigResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.agent = defaults.agent;
+            $ = new GoogleCloudDialogflowV2AutomatedAgentConfigResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder agent(String agent) {
-            this.agent = Objects.requireNonNull(agent);
+            $.agent = agent;
             return this;
-        }        public GoogleCloudDialogflowV2AutomatedAgentConfigResponse build() {
-            return new GoogleCloudDialogflowV2AutomatedAgentConfigResponse(agent);
+        }
+
+        public GoogleCloudDialogflowV2AutomatedAgentConfigResponse build() {
+            $.agent = Objects.requireNonNull($.agent, "expected parameter 'agent' to be non-null");
+            return $;
         }
     }
+
 }

@@ -25,7 +25,7 @@ public final class InvoiceSectionWithCreateSubPermissionResponse extends com.pul
      * 
      */
     @Import(name="billingProfileDisplayName", required=true)
-      private final String billingProfileDisplayName;
+    private String billingProfileDisplayName;
 
     public String billingProfileDisplayName() {
         return this.billingProfileDisplayName;
@@ -36,7 +36,7 @@ public final class InvoiceSectionWithCreateSubPermissionResponse extends com.pul
      * 
      */
     @Import(name="billingProfileId", required=true)
-      private final String billingProfileId;
+    private String billingProfileId;
 
     public String billingProfileId() {
         return this.billingProfileId;
@@ -47,7 +47,7 @@ public final class InvoiceSectionWithCreateSubPermissionResponse extends com.pul
      * 
      */
     @Import(name="billingProfileSpendingLimit", required=true)
-      private final String billingProfileSpendingLimit;
+    private String billingProfileSpendingLimit;
 
     public String billingProfileSpendingLimit() {
         return this.billingProfileSpendingLimit;
@@ -58,7 +58,7 @@ public final class InvoiceSectionWithCreateSubPermissionResponse extends com.pul
      * 
      */
     @Import(name="billingProfileStatus", required=true)
-      private final String billingProfileStatus;
+    private String billingProfileStatus;
 
     public String billingProfileStatus() {
         return this.billingProfileStatus;
@@ -69,7 +69,7 @@ public final class InvoiceSectionWithCreateSubPermissionResponse extends com.pul
      * 
      */
     @Import(name="billingProfileStatusReasonCode", required=true)
-      private final String billingProfileStatusReasonCode;
+    private String billingProfileStatusReasonCode;
 
     public String billingProfileStatusReasonCode() {
         return this.billingProfileStatusReasonCode;
@@ -80,7 +80,7 @@ public final class InvoiceSectionWithCreateSubPermissionResponse extends com.pul
      * 
      */
     @Import(name="billingProfileSystemId", required=true)
-      private final String billingProfileSystemId;
+    private String billingProfileSystemId;
 
     public String billingProfileSystemId() {
         return this.billingProfileSystemId;
@@ -91,10 +91,10 @@ public final class InvoiceSectionWithCreateSubPermissionResponse extends com.pul
      * 
      */
     @Import(name="enabledAzurePlans")
-      private final @Nullable List<AzurePlanResponse> enabledAzurePlans;
+    private @Nullable List<AzurePlanResponse> enabledAzurePlans;
 
-    public List<AzurePlanResponse> enabledAzurePlans() {
-        return this.enabledAzurePlans == null ? List.of() : this.enabledAzurePlans;
+    public Optional<List<AzurePlanResponse>> enabledAzurePlans() {
+        return Optional.ofNullable(this.enabledAzurePlans);
     }
 
     /**
@@ -102,7 +102,7 @@ public final class InvoiceSectionWithCreateSubPermissionResponse extends com.pul
      * 
      */
     @Import(name="invoiceSectionDisplayName", required=true)
-      private final String invoiceSectionDisplayName;
+    private String invoiceSectionDisplayName;
 
     public String invoiceSectionDisplayName() {
         return this.invoiceSectionDisplayName;
@@ -113,7 +113,7 @@ public final class InvoiceSectionWithCreateSubPermissionResponse extends com.pul
      * 
      */
     @Import(name="invoiceSectionId", required=true)
-      private final String invoiceSectionId;
+    private String invoiceSectionId;
 
     public String invoiceSectionId() {
         return this.invoiceSectionId;
@@ -124,130 +124,111 @@ public final class InvoiceSectionWithCreateSubPermissionResponse extends com.pul
      * 
      */
     @Import(name="invoiceSectionSystemId", required=true)
-      private final String invoiceSectionSystemId;
+    private String invoiceSectionSystemId;
 
     public String invoiceSectionSystemId() {
         return this.invoiceSectionSystemId;
     }
 
-    public InvoiceSectionWithCreateSubPermissionResponse(
-        String billingProfileDisplayName,
-        String billingProfileId,
-        String billingProfileSpendingLimit,
-        String billingProfileStatus,
-        String billingProfileStatusReasonCode,
-        String billingProfileSystemId,
-        @Nullable List<AzurePlanResponse> enabledAzurePlans,
-        String invoiceSectionDisplayName,
-        String invoiceSectionId,
-        String invoiceSectionSystemId) {
-        this.billingProfileDisplayName = Objects.requireNonNull(billingProfileDisplayName, "expected parameter 'billingProfileDisplayName' to be non-null");
-        this.billingProfileId = Objects.requireNonNull(billingProfileId, "expected parameter 'billingProfileId' to be non-null");
-        this.billingProfileSpendingLimit = Objects.requireNonNull(billingProfileSpendingLimit, "expected parameter 'billingProfileSpendingLimit' to be non-null");
-        this.billingProfileStatus = Objects.requireNonNull(billingProfileStatus, "expected parameter 'billingProfileStatus' to be non-null");
-        this.billingProfileStatusReasonCode = Objects.requireNonNull(billingProfileStatusReasonCode, "expected parameter 'billingProfileStatusReasonCode' to be non-null");
-        this.billingProfileSystemId = Objects.requireNonNull(billingProfileSystemId, "expected parameter 'billingProfileSystemId' to be non-null");
-        this.enabledAzurePlans = enabledAzurePlans;
-        this.invoiceSectionDisplayName = Objects.requireNonNull(invoiceSectionDisplayName, "expected parameter 'invoiceSectionDisplayName' to be non-null");
-        this.invoiceSectionId = Objects.requireNonNull(invoiceSectionId, "expected parameter 'invoiceSectionId' to be non-null");
-        this.invoiceSectionSystemId = Objects.requireNonNull(invoiceSectionSystemId, "expected parameter 'invoiceSectionSystemId' to be non-null");
-    }
+    private InvoiceSectionWithCreateSubPermissionResponse() {}
 
-    private InvoiceSectionWithCreateSubPermissionResponse() {
-        this.billingProfileDisplayName = null;
-        this.billingProfileId = null;
-        this.billingProfileSpendingLimit = null;
-        this.billingProfileStatus = null;
-        this.billingProfileStatusReasonCode = null;
-        this.billingProfileSystemId = null;
-        this.enabledAzurePlans = List.of();
-        this.invoiceSectionDisplayName = null;
-        this.invoiceSectionId = null;
-        this.invoiceSectionSystemId = null;
+    private InvoiceSectionWithCreateSubPermissionResponse(InvoiceSectionWithCreateSubPermissionResponse $) {
+        this.billingProfileDisplayName = $.billingProfileDisplayName;
+        this.billingProfileId = $.billingProfileId;
+        this.billingProfileSpendingLimit = $.billingProfileSpendingLimit;
+        this.billingProfileStatus = $.billingProfileStatus;
+        this.billingProfileStatusReasonCode = $.billingProfileStatusReasonCode;
+        this.billingProfileSystemId = $.billingProfileSystemId;
+        this.enabledAzurePlans = $.enabledAzurePlans;
+        this.invoiceSectionDisplayName = $.invoiceSectionDisplayName;
+        this.invoiceSectionId = $.invoiceSectionId;
+        this.invoiceSectionSystemId = $.invoiceSectionSystemId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(InvoiceSectionWithCreateSubPermissionResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String billingProfileDisplayName;
-        private String billingProfileId;
-        private String billingProfileSpendingLimit;
-        private String billingProfileStatus;
-        private String billingProfileStatusReasonCode;
-        private String billingProfileSystemId;
-        private @Nullable List<AzurePlanResponse> enabledAzurePlans;
-        private String invoiceSectionDisplayName;
-        private String invoiceSectionId;
-        private String invoiceSectionSystemId;
+        private InvoiceSectionWithCreateSubPermissionResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new InvoiceSectionWithCreateSubPermissionResponse();
         }
 
         public Builder(InvoiceSectionWithCreateSubPermissionResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.billingProfileDisplayName = defaults.billingProfileDisplayName;
-    	      this.billingProfileId = defaults.billingProfileId;
-    	      this.billingProfileSpendingLimit = defaults.billingProfileSpendingLimit;
-    	      this.billingProfileStatus = defaults.billingProfileStatus;
-    	      this.billingProfileStatusReasonCode = defaults.billingProfileStatusReasonCode;
-    	      this.billingProfileSystemId = defaults.billingProfileSystemId;
-    	      this.enabledAzurePlans = defaults.enabledAzurePlans;
-    	      this.invoiceSectionDisplayName = defaults.invoiceSectionDisplayName;
-    	      this.invoiceSectionId = defaults.invoiceSectionId;
-    	      this.invoiceSectionSystemId = defaults.invoiceSectionSystemId;
+            $ = new InvoiceSectionWithCreateSubPermissionResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder billingProfileDisplayName(String billingProfileDisplayName) {
-            this.billingProfileDisplayName = Objects.requireNonNull(billingProfileDisplayName);
+            $.billingProfileDisplayName = billingProfileDisplayName;
             return this;
         }
+
         public Builder billingProfileId(String billingProfileId) {
-            this.billingProfileId = Objects.requireNonNull(billingProfileId);
+            $.billingProfileId = billingProfileId;
             return this;
         }
+
         public Builder billingProfileSpendingLimit(String billingProfileSpendingLimit) {
-            this.billingProfileSpendingLimit = Objects.requireNonNull(billingProfileSpendingLimit);
+            $.billingProfileSpendingLimit = billingProfileSpendingLimit;
             return this;
         }
+
         public Builder billingProfileStatus(String billingProfileStatus) {
-            this.billingProfileStatus = Objects.requireNonNull(billingProfileStatus);
+            $.billingProfileStatus = billingProfileStatus;
             return this;
         }
+
         public Builder billingProfileStatusReasonCode(String billingProfileStatusReasonCode) {
-            this.billingProfileStatusReasonCode = Objects.requireNonNull(billingProfileStatusReasonCode);
+            $.billingProfileStatusReasonCode = billingProfileStatusReasonCode;
             return this;
         }
+
         public Builder billingProfileSystemId(String billingProfileSystemId) {
-            this.billingProfileSystemId = Objects.requireNonNull(billingProfileSystemId);
+            $.billingProfileSystemId = billingProfileSystemId;
             return this;
         }
+
         public Builder enabledAzurePlans(@Nullable List<AzurePlanResponse> enabledAzurePlans) {
-            this.enabledAzurePlans = enabledAzurePlans;
+            $.enabledAzurePlans = enabledAzurePlans;
             return this;
         }
+
         public Builder enabledAzurePlans(AzurePlanResponse... enabledAzurePlans) {
             return enabledAzurePlans(List.of(enabledAzurePlans));
         }
+
         public Builder invoiceSectionDisplayName(String invoiceSectionDisplayName) {
-            this.invoiceSectionDisplayName = Objects.requireNonNull(invoiceSectionDisplayName);
+            $.invoiceSectionDisplayName = invoiceSectionDisplayName;
             return this;
         }
+
         public Builder invoiceSectionId(String invoiceSectionId) {
-            this.invoiceSectionId = Objects.requireNonNull(invoiceSectionId);
+            $.invoiceSectionId = invoiceSectionId;
             return this;
         }
+
         public Builder invoiceSectionSystemId(String invoiceSectionSystemId) {
-            this.invoiceSectionSystemId = Objects.requireNonNull(invoiceSectionSystemId);
+            $.invoiceSectionSystemId = invoiceSectionSystemId;
             return this;
-        }        public InvoiceSectionWithCreateSubPermissionResponse build() {
-            return new InvoiceSectionWithCreateSubPermissionResponse(billingProfileDisplayName, billingProfileId, billingProfileSpendingLimit, billingProfileStatus, billingProfileStatusReasonCode, billingProfileSystemId, enabledAzurePlans, invoiceSectionDisplayName, invoiceSectionId, invoiceSectionSystemId);
+        }
+
+        public InvoiceSectionWithCreateSubPermissionResponse build() {
+            $.billingProfileDisplayName = Objects.requireNonNull($.billingProfileDisplayName, "expected parameter 'billingProfileDisplayName' to be non-null");
+            $.billingProfileId = Objects.requireNonNull($.billingProfileId, "expected parameter 'billingProfileId' to be non-null");
+            $.billingProfileSpendingLimit = Objects.requireNonNull($.billingProfileSpendingLimit, "expected parameter 'billingProfileSpendingLimit' to be non-null");
+            $.billingProfileStatus = Objects.requireNonNull($.billingProfileStatus, "expected parameter 'billingProfileStatus' to be non-null");
+            $.billingProfileStatusReasonCode = Objects.requireNonNull($.billingProfileStatusReasonCode, "expected parameter 'billingProfileStatusReasonCode' to be non-null");
+            $.billingProfileSystemId = Objects.requireNonNull($.billingProfileSystemId, "expected parameter 'billingProfileSystemId' to be non-null");
+            $.invoiceSectionDisplayName = Objects.requireNonNull($.invoiceSectionDisplayName, "expected parameter 'invoiceSectionDisplayName' to be non-null");
+            $.invoiceSectionId = Objects.requireNonNull($.invoiceSectionId, "expected parameter 'invoiceSectionId' to be non-null");
+            $.invoiceSectionSystemId = Objects.requireNonNull($.invoiceSectionSystemId, "expected parameter 'invoiceSectionSystemId' to be non-null");
+            return $;
         }
     }
+
 }

@@ -14,6 +14,7 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -31,7 +32,7 @@ public final class ServerPropertiesForRestoreArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="createMode", required=true)
-      private final Output<String> createMode;
+    private Output<String> createMode;
 
     public Output<String> createMode() {
         return this.createMode;
@@ -42,10 +43,10 @@ public final class ServerPropertiesForRestoreArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="minimalTlsVersion")
-      private final @Nullable Output<Either<String,MinimalTlsVersionEnum>> minimalTlsVersion;
+    private @Nullable Output<Either<String,MinimalTlsVersionEnum>> minimalTlsVersion;
 
-    public Output<Either<String,MinimalTlsVersionEnum>> minimalTlsVersion() {
-        return this.minimalTlsVersion == null ? Codegen.empty() : this.minimalTlsVersion;
+    public Optional<Output<Either<String,MinimalTlsVersionEnum>>> minimalTlsVersion() {
+        return Optional.ofNullable(this.minimalTlsVersion);
     }
 
     /**
@@ -53,10 +54,10 @@ public final class ServerPropertiesForRestoreArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="publicNetworkAccess")
-      private final @Nullable Output<Either<String,PublicNetworkAccessEnum>> publicNetworkAccess;
+    private @Nullable Output<Either<String,PublicNetworkAccessEnum>> publicNetworkAccess;
 
-    public Output<Either<String,PublicNetworkAccessEnum>> publicNetworkAccess() {
-        return this.publicNetworkAccess == null ? Codegen.empty() : this.publicNetworkAccess;
+    public Optional<Output<Either<String,PublicNetworkAccessEnum>>> publicNetworkAccess() {
+        return Optional.ofNullable(this.publicNetworkAccess);
     }
 
     /**
@@ -64,7 +65,7 @@ public final class ServerPropertiesForRestoreArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="restorePointInTime", required=true)
-      private final Output<String> restorePointInTime;
+    private Output<String> restorePointInTime;
 
     public Output<String> restorePointInTime() {
         return this.restorePointInTime;
@@ -75,7 +76,7 @@ public final class ServerPropertiesForRestoreArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="sourceServerId", required=true)
-      private final Output<String> sourceServerId;
+    private Output<String> sourceServerId;
 
     public Output<String> sourceServerId() {
         return this.sourceServerId;
@@ -86,10 +87,10 @@ public final class ServerPropertiesForRestoreArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="sslEnforcement")
-      private final @Nullable Output<SslEnforcementEnum> sslEnforcement;
+    private @Nullable Output<SslEnforcementEnum> sslEnforcement;
 
-    public Output<SslEnforcementEnum> sslEnforcement() {
-        return this.sslEnforcement == null ? Codegen.empty() : this.sslEnforcement;
+    public Optional<Output<SslEnforcementEnum>> sslEnforcement() {
+        return Optional.ofNullable(this.sslEnforcement);
     }
 
     /**
@@ -97,10 +98,10 @@ public final class ServerPropertiesForRestoreArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="storageProfile")
-      private final @Nullable Output<StorageProfileArgs> storageProfile;
+    private @Nullable Output<StorageProfileArgs> storageProfile;
 
-    public Output<StorageProfileArgs> storageProfile() {
-        return this.storageProfile == null ? Codegen.empty() : this.storageProfile;
+    public Optional<Output<StorageProfileArgs>> storageProfile() {
+        return Optional.ofNullable(this.storageProfile);
     }
 
     /**
@@ -108,141 +109,121 @@ public final class ServerPropertiesForRestoreArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="version")
-      private final @Nullable Output<Either<String,ServerVersion>> version;
+    private @Nullable Output<Either<String,ServerVersion>> version;
 
-    public Output<Either<String,ServerVersion>> version() {
-        return this.version == null ? Codegen.empty() : this.version;
+    public Optional<Output<Either<String,ServerVersion>>> version() {
+        return Optional.ofNullable(this.version);
     }
 
-    public ServerPropertiesForRestoreArgs(
-        Output<String> createMode,
-        @Nullable Output<Either<String,MinimalTlsVersionEnum>> minimalTlsVersion,
-        @Nullable Output<Either<String,PublicNetworkAccessEnum>> publicNetworkAccess,
-        Output<String> restorePointInTime,
-        Output<String> sourceServerId,
-        @Nullable Output<SslEnforcementEnum> sslEnforcement,
-        @Nullable Output<StorageProfileArgs> storageProfile,
-        @Nullable Output<Either<String,ServerVersion>> version) {
-        this.createMode = Codegen.stringProp("createMode").output().arg(createMode).require();
-        this.minimalTlsVersion = minimalTlsVersion;
-        this.publicNetworkAccess = publicNetworkAccess;
-        this.restorePointInTime = Objects.requireNonNull(restorePointInTime, "expected parameter 'restorePointInTime' to be non-null");
-        this.sourceServerId = Objects.requireNonNull(sourceServerId, "expected parameter 'sourceServerId' to be non-null");
-        this.sslEnforcement = sslEnforcement;
-        this.storageProfile = storageProfile;
-        this.version = version;
-    }
+    private ServerPropertiesForRestoreArgs() {}
 
-    private ServerPropertiesForRestoreArgs() {
-        this.createMode = Codegen.empty();
-        this.minimalTlsVersion = Codegen.empty();
-        this.publicNetworkAccess = Codegen.empty();
-        this.restorePointInTime = Codegen.empty();
-        this.sourceServerId = Codegen.empty();
-        this.sslEnforcement = Codegen.empty();
-        this.storageProfile = Codegen.empty();
-        this.version = Codegen.empty();
+    private ServerPropertiesForRestoreArgs(ServerPropertiesForRestoreArgs $) {
+        this.createMode = $.createMode;
+        this.minimalTlsVersion = $.minimalTlsVersion;
+        this.publicNetworkAccess = $.publicNetworkAccess;
+        this.restorePointInTime = $.restorePointInTime;
+        this.sourceServerId = $.sourceServerId;
+        this.sslEnforcement = $.sslEnforcement;
+        this.storageProfile = $.storageProfile;
+        this.version = $.version;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ServerPropertiesForRestoreArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> createMode;
-        private @Nullable Output<Either<String,MinimalTlsVersionEnum>> minimalTlsVersion;
-        private @Nullable Output<Either<String,PublicNetworkAccessEnum>> publicNetworkAccess;
-        private Output<String> restorePointInTime;
-        private Output<String> sourceServerId;
-        private @Nullable Output<SslEnforcementEnum> sslEnforcement;
-        private @Nullable Output<StorageProfileArgs> storageProfile;
-        private @Nullable Output<Either<String,ServerVersion>> version;
+        private ServerPropertiesForRestoreArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ServerPropertiesForRestoreArgs();
         }
 
         public Builder(ServerPropertiesForRestoreArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.createMode = defaults.createMode;
-    	      this.minimalTlsVersion = defaults.minimalTlsVersion;
-    	      this.publicNetworkAccess = defaults.publicNetworkAccess;
-    	      this.restorePointInTime = defaults.restorePointInTime;
-    	      this.sourceServerId = defaults.sourceServerId;
-    	      this.sslEnforcement = defaults.sslEnforcement;
-    	      this.storageProfile = defaults.storageProfile;
-    	      this.version = defaults.version;
+            $ = new ServerPropertiesForRestoreArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder createMode(Output<String> createMode) {
-            this.createMode = Objects.requireNonNull(createMode);
+            $.createMode = createMode;
             return this;
         }
+
         public Builder createMode(String createMode) {
-            this.createMode = Output.of(Objects.requireNonNull(createMode));
-            return this;
+            return createMode(Output.of(createMode));
         }
+
         public Builder minimalTlsVersion(@Nullable Output<Either<String,MinimalTlsVersionEnum>> minimalTlsVersion) {
-            this.minimalTlsVersion = minimalTlsVersion;
+            $.minimalTlsVersion = minimalTlsVersion;
             return this;
         }
-        public Builder minimalTlsVersion(@Nullable Either<String,MinimalTlsVersionEnum> minimalTlsVersion) {
-            this.minimalTlsVersion = Codegen.ofNullable(minimalTlsVersion);
-            return this;
+
+        public Builder minimalTlsVersion(Either<String,MinimalTlsVersionEnum> minimalTlsVersion) {
+            return minimalTlsVersion(Output.of(minimalTlsVersion));
         }
+
         public Builder publicNetworkAccess(@Nullable Output<Either<String,PublicNetworkAccessEnum>> publicNetworkAccess) {
-            this.publicNetworkAccess = publicNetworkAccess;
+            $.publicNetworkAccess = publicNetworkAccess;
             return this;
         }
-        public Builder publicNetworkAccess(@Nullable Either<String,PublicNetworkAccessEnum> publicNetworkAccess) {
-            this.publicNetworkAccess = Codegen.ofNullable(publicNetworkAccess);
-            return this;
+
+        public Builder publicNetworkAccess(Either<String,PublicNetworkAccessEnum> publicNetworkAccess) {
+            return publicNetworkAccess(Output.of(publicNetworkAccess));
         }
+
         public Builder restorePointInTime(Output<String> restorePointInTime) {
-            this.restorePointInTime = Objects.requireNonNull(restorePointInTime);
+            $.restorePointInTime = restorePointInTime;
             return this;
         }
+
         public Builder restorePointInTime(String restorePointInTime) {
-            this.restorePointInTime = Output.of(Objects.requireNonNull(restorePointInTime));
-            return this;
+            return restorePointInTime(Output.of(restorePointInTime));
         }
+
         public Builder sourceServerId(Output<String> sourceServerId) {
-            this.sourceServerId = Objects.requireNonNull(sourceServerId);
+            $.sourceServerId = sourceServerId;
             return this;
         }
+
         public Builder sourceServerId(String sourceServerId) {
-            this.sourceServerId = Output.of(Objects.requireNonNull(sourceServerId));
-            return this;
+            return sourceServerId(Output.of(sourceServerId));
         }
+
         public Builder sslEnforcement(@Nullable Output<SslEnforcementEnum> sslEnforcement) {
-            this.sslEnforcement = sslEnforcement;
+            $.sslEnforcement = sslEnforcement;
             return this;
         }
-        public Builder sslEnforcement(@Nullable SslEnforcementEnum sslEnforcement) {
-            this.sslEnforcement = Codegen.ofNullable(sslEnforcement);
-            return this;
+
+        public Builder sslEnforcement(SslEnforcementEnum sslEnforcement) {
+            return sslEnforcement(Output.of(sslEnforcement));
         }
+
         public Builder storageProfile(@Nullable Output<StorageProfileArgs> storageProfile) {
-            this.storageProfile = storageProfile;
+            $.storageProfile = storageProfile;
             return this;
         }
-        public Builder storageProfile(@Nullable StorageProfileArgs storageProfile) {
-            this.storageProfile = Codegen.ofNullable(storageProfile);
-            return this;
+
+        public Builder storageProfile(StorageProfileArgs storageProfile) {
+            return storageProfile(Output.of(storageProfile));
         }
+
         public Builder version(@Nullable Output<Either<String,ServerVersion>> version) {
-            this.version = version;
+            $.version = version;
             return this;
         }
-        public Builder version(@Nullable Either<String,ServerVersion> version) {
-            this.version = Codegen.ofNullable(version);
-            return this;
-        }        public ServerPropertiesForRestoreArgs build() {
-            return new ServerPropertiesForRestoreArgs(createMode, minimalTlsVersion, publicNetworkAccess, restorePointInTime, sourceServerId, sslEnforcement, storageProfile, version);
+
+        public Builder version(Either<String,ServerVersion> version) {
+            return version(Output.of(version));
+        }
+
+        public ServerPropertiesForRestoreArgs build() {
+            $.createMode = Codegen.stringProp("createMode").output().arg($.createMode).require();
+            $.restorePointInTime = Objects.requireNonNull($.restorePointInTime, "expected parameter 'restorePointInTime' to be non-null");
+            $.sourceServerId = Objects.requireNonNull($.sourceServerId, "expected parameter 'sourceServerId' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,7 +5,6 @@ package com.pulumi.googlenative.dialogflow_v2beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.dialogflow_v2beta1.enums.GoogleCloudDialogflowV2beta1IntentMessagePlatform;
 import com.pulumi.googlenative.dialogflow_v2beta1.inputs.GoogleCloudDialogflowV2beta1IntentMessageBasicCardArgs;
 import com.pulumi.googlenative.dialogflow_v2beta1.inputs.GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCardArgs;
@@ -29,6 +28,7 @@ import com.pulumi.googlenative.dialogflow_v2beta1.inputs.GoogleCloudDialogflowV2
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -45,10 +45,10 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageArgs extends com.pul
      * 
      */
     @Import(name="basicCard")
-      private final @Nullable Output<GoogleCloudDialogflowV2beta1IntentMessageBasicCardArgs> basicCard;
+    private @Nullable Output<GoogleCloudDialogflowV2beta1IntentMessageBasicCardArgs> basicCard;
 
-    public Output<GoogleCloudDialogflowV2beta1IntentMessageBasicCardArgs> basicCard() {
-        return this.basicCard == null ? Codegen.empty() : this.basicCard;
+    public Optional<Output<GoogleCloudDialogflowV2beta1IntentMessageBasicCardArgs>> basicCard() {
+        return Optional.ofNullable(this.basicCard);
     }
 
     /**
@@ -56,10 +56,10 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageArgs extends com.pul
      * 
      */
     @Import(name="browseCarouselCard")
-      private final @Nullable Output<GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCardArgs> browseCarouselCard;
+    private @Nullable Output<GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCardArgs> browseCarouselCard;
 
-    public Output<GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCardArgs> browseCarouselCard() {
-        return this.browseCarouselCard == null ? Codegen.empty() : this.browseCarouselCard;
+    public Optional<Output<GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCardArgs>> browseCarouselCard() {
+        return Optional.ofNullable(this.browseCarouselCard);
     }
 
     /**
@@ -67,10 +67,10 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageArgs extends com.pul
      * 
      */
     @Import(name="card")
-      private final @Nullable Output<GoogleCloudDialogflowV2beta1IntentMessageCardArgs> card;
+    private @Nullable Output<GoogleCloudDialogflowV2beta1IntentMessageCardArgs> card;
 
-    public Output<GoogleCloudDialogflowV2beta1IntentMessageCardArgs> card() {
-        return this.card == null ? Codegen.empty() : this.card;
+    public Optional<Output<GoogleCloudDialogflowV2beta1IntentMessageCardArgs>> card() {
+        return Optional.ofNullable(this.card);
     }
 
     /**
@@ -78,10 +78,10 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageArgs extends com.pul
      * 
      */
     @Import(name="carouselSelect")
-      private final @Nullable Output<GoogleCloudDialogflowV2beta1IntentMessageCarouselSelectArgs> carouselSelect;
+    private @Nullable Output<GoogleCloudDialogflowV2beta1IntentMessageCarouselSelectArgs> carouselSelect;
 
-    public Output<GoogleCloudDialogflowV2beta1IntentMessageCarouselSelectArgs> carouselSelect() {
-        return this.carouselSelect == null ? Codegen.empty() : this.carouselSelect;
+    public Optional<Output<GoogleCloudDialogflowV2beta1IntentMessageCarouselSelectArgs>> carouselSelect() {
+        return Optional.ofNullable(this.carouselSelect);
     }
 
     /**
@@ -89,10 +89,10 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageArgs extends com.pul
      * 
      */
     @Import(name="image")
-      private final @Nullable Output<GoogleCloudDialogflowV2beta1IntentMessageImageArgs> image;
+    private @Nullable Output<GoogleCloudDialogflowV2beta1IntentMessageImageArgs> image;
 
-    public Output<GoogleCloudDialogflowV2beta1IntentMessageImageArgs> image() {
-        return this.image == null ? Codegen.empty() : this.image;
+    public Optional<Output<GoogleCloudDialogflowV2beta1IntentMessageImageArgs>> image() {
+        return Optional.ofNullable(this.image);
     }
 
     /**
@@ -100,10 +100,10 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageArgs extends com.pul
      * 
      */
     @Import(name="linkOutSuggestion")
-      private final @Nullable Output<GoogleCloudDialogflowV2beta1IntentMessageLinkOutSuggestionArgs> linkOutSuggestion;
+    private @Nullable Output<GoogleCloudDialogflowV2beta1IntentMessageLinkOutSuggestionArgs> linkOutSuggestion;
 
-    public Output<GoogleCloudDialogflowV2beta1IntentMessageLinkOutSuggestionArgs> linkOutSuggestion() {
-        return this.linkOutSuggestion == null ? Codegen.empty() : this.linkOutSuggestion;
+    public Optional<Output<GoogleCloudDialogflowV2beta1IntentMessageLinkOutSuggestionArgs>> linkOutSuggestion() {
+        return Optional.ofNullable(this.linkOutSuggestion);
     }
 
     /**
@@ -111,10 +111,10 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageArgs extends com.pul
      * 
      */
     @Import(name="listSelect")
-      private final @Nullable Output<GoogleCloudDialogflowV2beta1IntentMessageListSelectArgs> listSelect;
+    private @Nullable Output<GoogleCloudDialogflowV2beta1IntentMessageListSelectArgs> listSelect;
 
-    public Output<GoogleCloudDialogflowV2beta1IntentMessageListSelectArgs> listSelect() {
-        return this.listSelect == null ? Codegen.empty() : this.listSelect;
+    public Optional<Output<GoogleCloudDialogflowV2beta1IntentMessageListSelectArgs>> listSelect() {
+        return Optional.ofNullable(this.listSelect);
     }
 
     /**
@@ -122,10 +122,10 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageArgs extends com.pul
      * 
      */
     @Import(name="mediaContent")
-      private final @Nullable Output<GoogleCloudDialogflowV2beta1IntentMessageMediaContentArgs> mediaContent;
+    private @Nullable Output<GoogleCloudDialogflowV2beta1IntentMessageMediaContentArgs> mediaContent;
 
-    public Output<GoogleCloudDialogflowV2beta1IntentMessageMediaContentArgs> mediaContent() {
-        return this.mediaContent == null ? Codegen.empty() : this.mediaContent;
+    public Optional<Output<GoogleCloudDialogflowV2beta1IntentMessageMediaContentArgs>> mediaContent() {
+        return Optional.ofNullable(this.mediaContent);
     }
 
     /**
@@ -133,10 +133,10 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageArgs extends com.pul
      * 
      */
     @Import(name="payload")
-      private final @Nullable Output<Map<String,String>> payload;
+    private @Nullable Output<Map<String,String>> payload;
 
-    public Output<Map<String,String>> payload() {
-        return this.payload == null ? Codegen.empty() : this.payload;
+    public Optional<Output<Map<String,String>>> payload() {
+        return Optional.ofNullable(this.payload);
     }
 
     /**
@@ -144,10 +144,10 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageArgs extends com.pul
      * 
      */
     @Import(name="platform")
-      private final @Nullable Output<GoogleCloudDialogflowV2beta1IntentMessagePlatform> platform;
+    private @Nullable Output<GoogleCloudDialogflowV2beta1IntentMessagePlatform> platform;
 
-    public Output<GoogleCloudDialogflowV2beta1IntentMessagePlatform> platform() {
-        return this.platform == null ? Codegen.empty() : this.platform;
+    public Optional<Output<GoogleCloudDialogflowV2beta1IntentMessagePlatform>> platform() {
+        return Optional.ofNullable(this.platform);
     }
 
     /**
@@ -155,10 +155,10 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageArgs extends com.pul
      * 
      */
     @Import(name="quickReplies")
-      private final @Nullable Output<GoogleCloudDialogflowV2beta1IntentMessageQuickRepliesArgs> quickReplies;
+    private @Nullable Output<GoogleCloudDialogflowV2beta1IntentMessageQuickRepliesArgs> quickReplies;
 
-    public Output<GoogleCloudDialogflowV2beta1IntentMessageQuickRepliesArgs> quickReplies() {
-        return this.quickReplies == null ? Codegen.empty() : this.quickReplies;
+    public Optional<Output<GoogleCloudDialogflowV2beta1IntentMessageQuickRepliesArgs>> quickReplies() {
+        return Optional.ofNullable(this.quickReplies);
     }
 
     /**
@@ -166,10 +166,10 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageArgs extends com.pul
      * 
      */
     @Import(name="rbmCarouselRichCard")
-      private final @Nullable Output<GoogleCloudDialogflowV2beta1IntentMessageRbmCarouselCardArgs> rbmCarouselRichCard;
+    private @Nullable Output<GoogleCloudDialogflowV2beta1IntentMessageRbmCarouselCardArgs> rbmCarouselRichCard;
 
-    public Output<GoogleCloudDialogflowV2beta1IntentMessageRbmCarouselCardArgs> rbmCarouselRichCard() {
-        return this.rbmCarouselRichCard == null ? Codegen.empty() : this.rbmCarouselRichCard;
+    public Optional<Output<GoogleCloudDialogflowV2beta1IntentMessageRbmCarouselCardArgs>> rbmCarouselRichCard() {
+        return Optional.ofNullable(this.rbmCarouselRichCard);
     }
 
     /**
@@ -177,10 +177,10 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageArgs extends com.pul
      * 
      */
     @Import(name="rbmStandaloneRichCard")
-      private final @Nullable Output<GoogleCloudDialogflowV2beta1IntentMessageRbmStandaloneCardArgs> rbmStandaloneRichCard;
+    private @Nullable Output<GoogleCloudDialogflowV2beta1IntentMessageRbmStandaloneCardArgs> rbmStandaloneRichCard;
 
-    public Output<GoogleCloudDialogflowV2beta1IntentMessageRbmStandaloneCardArgs> rbmStandaloneRichCard() {
-        return this.rbmStandaloneRichCard == null ? Codegen.empty() : this.rbmStandaloneRichCard;
+    public Optional<Output<GoogleCloudDialogflowV2beta1IntentMessageRbmStandaloneCardArgs>> rbmStandaloneRichCard() {
+        return Optional.ofNullable(this.rbmStandaloneRichCard);
     }
 
     /**
@@ -188,10 +188,10 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageArgs extends com.pul
      * 
      */
     @Import(name="rbmText")
-      private final @Nullable Output<GoogleCloudDialogflowV2beta1IntentMessageRbmTextArgs> rbmText;
+    private @Nullable Output<GoogleCloudDialogflowV2beta1IntentMessageRbmTextArgs> rbmText;
 
-    public Output<GoogleCloudDialogflowV2beta1IntentMessageRbmTextArgs> rbmText() {
-        return this.rbmText == null ? Codegen.empty() : this.rbmText;
+    public Optional<Output<GoogleCloudDialogflowV2beta1IntentMessageRbmTextArgs>> rbmText() {
+        return Optional.ofNullable(this.rbmText);
     }
 
     /**
@@ -199,10 +199,10 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageArgs extends com.pul
      * 
      */
     @Import(name="simpleResponses")
-      private final @Nullable Output<GoogleCloudDialogflowV2beta1IntentMessageSimpleResponsesArgs> simpleResponses;
+    private @Nullable Output<GoogleCloudDialogflowV2beta1IntentMessageSimpleResponsesArgs> simpleResponses;
 
-    public Output<GoogleCloudDialogflowV2beta1IntentMessageSimpleResponsesArgs> simpleResponses() {
-        return this.simpleResponses == null ? Codegen.empty() : this.simpleResponses;
+    public Optional<Output<GoogleCloudDialogflowV2beta1IntentMessageSimpleResponsesArgs>> simpleResponses() {
+        return Optional.ofNullable(this.simpleResponses);
     }
 
     /**
@@ -210,10 +210,10 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageArgs extends com.pul
      * 
      */
     @Import(name="suggestions")
-      private final @Nullable Output<GoogleCloudDialogflowV2beta1IntentMessageSuggestionsArgs> suggestions;
+    private @Nullable Output<GoogleCloudDialogflowV2beta1IntentMessageSuggestionsArgs> suggestions;
 
-    public Output<GoogleCloudDialogflowV2beta1IntentMessageSuggestionsArgs> suggestions() {
-        return this.suggestions == null ? Codegen.empty() : this.suggestions;
+    public Optional<Output<GoogleCloudDialogflowV2beta1IntentMessageSuggestionsArgs>> suggestions() {
+        return Optional.ofNullable(this.suggestions);
     }
 
     /**
@@ -221,10 +221,10 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageArgs extends com.pul
      * 
      */
     @Import(name="tableCard")
-      private final @Nullable Output<GoogleCloudDialogflowV2beta1IntentMessageTableCardArgs> tableCard;
+    private @Nullable Output<GoogleCloudDialogflowV2beta1IntentMessageTableCardArgs> tableCard;
 
-    public Output<GoogleCloudDialogflowV2beta1IntentMessageTableCardArgs> tableCard() {
-        return this.tableCard == null ? Codegen.empty() : this.tableCard;
+    public Optional<Output<GoogleCloudDialogflowV2beta1IntentMessageTableCardArgs>> tableCard() {
+        return Optional.ofNullable(this.tableCard);
     }
 
     /**
@@ -232,10 +232,10 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageArgs extends com.pul
      * 
      */
     @Import(name="telephonyPlayAudio")
-      private final @Nullable Output<GoogleCloudDialogflowV2beta1IntentMessageTelephonyPlayAudioArgs> telephonyPlayAudio;
+    private @Nullable Output<GoogleCloudDialogflowV2beta1IntentMessageTelephonyPlayAudioArgs> telephonyPlayAudio;
 
-    public Output<GoogleCloudDialogflowV2beta1IntentMessageTelephonyPlayAudioArgs> telephonyPlayAudio() {
-        return this.telephonyPlayAudio == null ? Codegen.empty() : this.telephonyPlayAudio;
+    public Optional<Output<GoogleCloudDialogflowV2beta1IntentMessageTelephonyPlayAudioArgs>> telephonyPlayAudio() {
+        return Optional.ofNullable(this.telephonyPlayAudio);
     }
 
     /**
@@ -243,10 +243,10 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageArgs extends com.pul
      * 
      */
     @Import(name="telephonySynthesizeSpeech")
-      private final @Nullable Output<GoogleCloudDialogflowV2beta1IntentMessageTelephonySynthesizeSpeechArgs> telephonySynthesizeSpeech;
+    private @Nullable Output<GoogleCloudDialogflowV2beta1IntentMessageTelephonySynthesizeSpeechArgs> telephonySynthesizeSpeech;
 
-    public Output<GoogleCloudDialogflowV2beta1IntentMessageTelephonySynthesizeSpeechArgs> telephonySynthesizeSpeech() {
-        return this.telephonySynthesizeSpeech == null ? Codegen.empty() : this.telephonySynthesizeSpeech;
+    public Optional<Output<GoogleCloudDialogflowV2beta1IntentMessageTelephonySynthesizeSpeechArgs>> telephonySynthesizeSpeech() {
+        return Optional.ofNullable(this.telephonySynthesizeSpeech);
     }
 
     /**
@@ -254,10 +254,10 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageArgs extends com.pul
      * 
      */
     @Import(name="telephonyTransferCall")
-      private final @Nullable Output<GoogleCloudDialogflowV2beta1IntentMessageTelephonyTransferCallArgs> telephonyTransferCall;
+    private @Nullable Output<GoogleCloudDialogflowV2beta1IntentMessageTelephonyTransferCallArgs> telephonyTransferCall;
 
-    public Output<GoogleCloudDialogflowV2beta1IntentMessageTelephonyTransferCallArgs> telephonyTransferCall() {
-        return this.telephonyTransferCall == null ? Codegen.empty() : this.telephonyTransferCall;
+    public Optional<Output<GoogleCloudDialogflowV2beta1IntentMessageTelephonyTransferCallArgs>> telephonyTransferCall() {
+        return Optional.ofNullable(this.telephonyTransferCall);
     }
 
     /**
@@ -265,310 +265,248 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageArgs extends com.pul
      * 
      */
     @Import(name="text")
-      private final @Nullable Output<GoogleCloudDialogflowV2beta1IntentMessageTextArgs> text;
+    private @Nullable Output<GoogleCloudDialogflowV2beta1IntentMessageTextArgs> text;
 
-    public Output<GoogleCloudDialogflowV2beta1IntentMessageTextArgs> text() {
-        return this.text == null ? Codegen.empty() : this.text;
+    public Optional<Output<GoogleCloudDialogflowV2beta1IntentMessageTextArgs>> text() {
+        return Optional.ofNullable(this.text);
     }
 
-    public GoogleCloudDialogflowV2beta1IntentMessageArgs(
-        @Nullable Output<GoogleCloudDialogflowV2beta1IntentMessageBasicCardArgs> basicCard,
-        @Nullable Output<GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCardArgs> browseCarouselCard,
-        @Nullable Output<GoogleCloudDialogflowV2beta1IntentMessageCardArgs> card,
-        @Nullable Output<GoogleCloudDialogflowV2beta1IntentMessageCarouselSelectArgs> carouselSelect,
-        @Nullable Output<GoogleCloudDialogflowV2beta1IntentMessageImageArgs> image,
-        @Nullable Output<GoogleCloudDialogflowV2beta1IntentMessageLinkOutSuggestionArgs> linkOutSuggestion,
-        @Nullable Output<GoogleCloudDialogflowV2beta1IntentMessageListSelectArgs> listSelect,
-        @Nullable Output<GoogleCloudDialogflowV2beta1IntentMessageMediaContentArgs> mediaContent,
-        @Nullable Output<Map<String,String>> payload,
-        @Nullable Output<GoogleCloudDialogflowV2beta1IntentMessagePlatform> platform,
-        @Nullable Output<GoogleCloudDialogflowV2beta1IntentMessageQuickRepliesArgs> quickReplies,
-        @Nullable Output<GoogleCloudDialogflowV2beta1IntentMessageRbmCarouselCardArgs> rbmCarouselRichCard,
-        @Nullable Output<GoogleCloudDialogflowV2beta1IntentMessageRbmStandaloneCardArgs> rbmStandaloneRichCard,
-        @Nullable Output<GoogleCloudDialogflowV2beta1IntentMessageRbmTextArgs> rbmText,
-        @Nullable Output<GoogleCloudDialogflowV2beta1IntentMessageSimpleResponsesArgs> simpleResponses,
-        @Nullable Output<GoogleCloudDialogflowV2beta1IntentMessageSuggestionsArgs> suggestions,
-        @Nullable Output<GoogleCloudDialogflowV2beta1IntentMessageTableCardArgs> tableCard,
-        @Nullable Output<GoogleCloudDialogflowV2beta1IntentMessageTelephonyPlayAudioArgs> telephonyPlayAudio,
-        @Nullable Output<GoogleCloudDialogflowV2beta1IntentMessageTelephonySynthesizeSpeechArgs> telephonySynthesizeSpeech,
-        @Nullable Output<GoogleCloudDialogflowV2beta1IntentMessageTelephonyTransferCallArgs> telephonyTransferCall,
-        @Nullable Output<GoogleCloudDialogflowV2beta1IntentMessageTextArgs> text) {
-        this.basicCard = basicCard;
-        this.browseCarouselCard = browseCarouselCard;
-        this.card = card;
-        this.carouselSelect = carouselSelect;
-        this.image = image;
-        this.linkOutSuggestion = linkOutSuggestion;
-        this.listSelect = listSelect;
-        this.mediaContent = mediaContent;
-        this.payload = payload;
-        this.platform = platform;
-        this.quickReplies = quickReplies;
-        this.rbmCarouselRichCard = rbmCarouselRichCard;
-        this.rbmStandaloneRichCard = rbmStandaloneRichCard;
-        this.rbmText = rbmText;
-        this.simpleResponses = simpleResponses;
-        this.suggestions = suggestions;
-        this.tableCard = tableCard;
-        this.telephonyPlayAudio = telephonyPlayAudio;
-        this.telephonySynthesizeSpeech = telephonySynthesizeSpeech;
-        this.telephonyTransferCall = telephonyTransferCall;
-        this.text = text;
-    }
+    private GoogleCloudDialogflowV2beta1IntentMessageArgs() {}
 
-    private GoogleCloudDialogflowV2beta1IntentMessageArgs() {
-        this.basicCard = Codegen.empty();
-        this.browseCarouselCard = Codegen.empty();
-        this.card = Codegen.empty();
-        this.carouselSelect = Codegen.empty();
-        this.image = Codegen.empty();
-        this.linkOutSuggestion = Codegen.empty();
-        this.listSelect = Codegen.empty();
-        this.mediaContent = Codegen.empty();
-        this.payload = Codegen.empty();
-        this.platform = Codegen.empty();
-        this.quickReplies = Codegen.empty();
-        this.rbmCarouselRichCard = Codegen.empty();
-        this.rbmStandaloneRichCard = Codegen.empty();
-        this.rbmText = Codegen.empty();
-        this.simpleResponses = Codegen.empty();
-        this.suggestions = Codegen.empty();
-        this.tableCard = Codegen.empty();
-        this.telephonyPlayAudio = Codegen.empty();
-        this.telephonySynthesizeSpeech = Codegen.empty();
-        this.telephonyTransferCall = Codegen.empty();
-        this.text = Codegen.empty();
+    private GoogleCloudDialogflowV2beta1IntentMessageArgs(GoogleCloudDialogflowV2beta1IntentMessageArgs $) {
+        this.basicCard = $.basicCard;
+        this.browseCarouselCard = $.browseCarouselCard;
+        this.card = $.card;
+        this.carouselSelect = $.carouselSelect;
+        this.image = $.image;
+        this.linkOutSuggestion = $.linkOutSuggestion;
+        this.listSelect = $.listSelect;
+        this.mediaContent = $.mediaContent;
+        this.payload = $.payload;
+        this.platform = $.platform;
+        this.quickReplies = $.quickReplies;
+        this.rbmCarouselRichCard = $.rbmCarouselRichCard;
+        this.rbmStandaloneRichCard = $.rbmStandaloneRichCard;
+        this.rbmText = $.rbmText;
+        this.simpleResponses = $.simpleResponses;
+        this.suggestions = $.suggestions;
+        this.tableCard = $.tableCard;
+        this.telephonyPlayAudio = $.telephonyPlayAudio;
+        this.telephonySynthesizeSpeech = $.telephonySynthesizeSpeech;
+        this.telephonyTransferCall = $.telephonyTransferCall;
+        this.text = $.text;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudDialogflowV2beta1IntentMessageArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<GoogleCloudDialogflowV2beta1IntentMessageBasicCardArgs> basicCard;
-        private @Nullable Output<GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCardArgs> browseCarouselCard;
-        private @Nullable Output<GoogleCloudDialogflowV2beta1IntentMessageCardArgs> card;
-        private @Nullable Output<GoogleCloudDialogflowV2beta1IntentMessageCarouselSelectArgs> carouselSelect;
-        private @Nullable Output<GoogleCloudDialogflowV2beta1IntentMessageImageArgs> image;
-        private @Nullable Output<GoogleCloudDialogflowV2beta1IntentMessageLinkOutSuggestionArgs> linkOutSuggestion;
-        private @Nullable Output<GoogleCloudDialogflowV2beta1IntentMessageListSelectArgs> listSelect;
-        private @Nullable Output<GoogleCloudDialogflowV2beta1IntentMessageMediaContentArgs> mediaContent;
-        private @Nullable Output<Map<String,String>> payload;
-        private @Nullable Output<GoogleCloudDialogflowV2beta1IntentMessagePlatform> platform;
-        private @Nullable Output<GoogleCloudDialogflowV2beta1IntentMessageQuickRepliesArgs> quickReplies;
-        private @Nullable Output<GoogleCloudDialogflowV2beta1IntentMessageRbmCarouselCardArgs> rbmCarouselRichCard;
-        private @Nullable Output<GoogleCloudDialogflowV2beta1IntentMessageRbmStandaloneCardArgs> rbmStandaloneRichCard;
-        private @Nullable Output<GoogleCloudDialogflowV2beta1IntentMessageRbmTextArgs> rbmText;
-        private @Nullable Output<GoogleCloudDialogflowV2beta1IntentMessageSimpleResponsesArgs> simpleResponses;
-        private @Nullable Output<GoogleCloudDialogflowV2beta1IntentMessageSuggestionsArgs> suggestions;
-        private @Nullable Output<GoogleCloudDialogflowV2beta1IntentMessageTableCardArgs> tableCard;
-        private @Nullable Output<GoogleCloudDialogflowV2beta1IntentMessageTelephonyPlayAudioArgs> telephonyPlayAudio;
-        private @Nullable Output<GoogleCloudDialogflowV2beta1IntentMessageTelephonySynthesizeSpeechArgs> telephonySynthesizeSpeech;
-        private @Nullable Output<GoogleCloudDialogflowV2beta1IntentMessageTelephonyTransferCallArgs> telephonyTransferCall;
-        private @Nullable Output<GoogleCloudDialogflowV2beta1IntentMessageTextArgs> text;
+        private GoogleCloudDialogflowV2beta1IntentMessageArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudDialogflowV2beta1IntentMessageArgs();
         }
 
         public Builder(GoogleCloudDialogflowV2beta1IntentMessageArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.basicCard = defaults.basicCard;
-    	      this.browseCarouselCard = defaults.browseCarouselCard;
-    	      this.card = defaults.card;
-    	      this.carouselSelect = defaults.carouselSelect;
-    	      this.image = defaults.image;
-    	      this.linkOutSuggestion = defaults.linkOutSuggestion;
-    	      this.listSelect = defaults.listSelect;
-    	      this.mediaContent = defaults.mediaContent;
-    	      this.payload = defaults.payload;
-    	      this.platform = defaults.platform;
-    	      this.quickReplies = defaults.quickReplies;
-    	      this.rbmCarouselRichCard = defaults.rbmCarouselRichCard;
-    	      this.rbmStandaloneRichCard = defaults.rbmStandaloneRichCard;
-    	      this.rbmText = defaults.rbmText;
-    	      this.simpleResponses = defaults.simpleResponses;
-    	      this.suggestions = defaults.suggestions;
-    	      this.tableCard = defaults.tableCard;
-    	      this.telephonyPlayAudio = defaults.telephonyPlayAudio;
-    	      this.telephonySynthesizeSpeech = defaults.telephonySynthesizeSpeech;
-    	      this.telephonyTransferCall = defaults.telephonyTransferCall;
-    	      this.text = defaults.text;
+            $ = new GoogleCloudDialogflowV2beta1IntentMessageArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder basicCard(@Nullable Output<GoogleCloudDialogflowV2beta1IntentMessageBasicCardArgs> basicCard) {
-            this.basicCard = basicCard;
+            $.basicCard = basicCard;
             return this;
         }
-        public Builder basicCard(@Nullable GoogleCloudDialogflowV2beta1IntentMessageBasicCardArgs basicCard) {
-            this.basicCard = Codegen.ofNullable(basicCard);
-            return this;
+
+        public Builder basicCard(GoogleCloudDialogflowV2beta1IntentMessageBasicCardArgs basicCard) {
+            return basicCard(Output.of(basicCard));
         }
+
         public Builder browseCarouselCard(@Nullable Output<GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCardArgs> browseCarouselCard) {
-            this.browseCarouselCard = browseCarouselCard;
+            $.browseCarouselCard = browseCarouselCard;
             return this;
         }
-        public Builder browseCarouselCard(@Nullable GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCardArgs browseCarouselCard) {
-            this.browseCarouselCard = Codegen.ofNullable(browseCarouselCard);
-            return this;
+
+        public Builder browseCarouselCard(GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCardArgs browseCarouselCard) {
+            return browseCarouselCard(Output.of(browseCarouselCard));
         }
+
         public Builder card(@Nullable Output<GoogleCloudDialogflowV2beta1IntentMessageCardArgs> card) {
-            this.card = card;
+            $.card = card;
             return this;
         }
-        public Builder card(@Nullable GoogleCloudDialogflowV2beta1IntentMessageCardArgs card) {
-            this.card = Codegen.ofNullable(card);
-            return this;
+
+        public Builder card(GoogleCloudDialogflowV2beta1IntentMessageCardArgs card) {
+            return card(Output.of(card));
         }
+
         public Builder carouselSelect(@Nullable Output<GoogleCloudDialogflowV2beta1IntentMessageCarouselSelectArgs> carouselSelect) {
-            this.carouselSelect = carouselSelect;
+            $.carouselSelect = carouselSelect;
             return this;
         }
-        public Builder carouselSelect(@Nullable GoogleCloudDialogflowV2beta1IntentMessageCarouselSelectArgs carouselSelect) {
-            this.carouselSelect = Codegen.ofNullable(carouselSelect);
-            return this;
+
+        public Builder carouselSelect(GoogleCloudDialogflowV2beta1IntentMessageCarouselSelectArgs carouselSelect) {
+            return carouselSelect(Output.of(carouselSelect));
         }
+
         public Builder image(@Nullable Output<GoogleCloudDialogflowV2beta1IntentMessageImageArgs> image) {
-            this.image = image;
+            $.image = image;
             return this;
         }
-        public Builder image(@Nullable GoogleCloudDialogflowV2beta1IntentMessageImageArgs image) {
-            this.image = Codegen.ofNullable(image);
-            return this;
+
+        public Builder image(GoogleCloudDialogflowV2beta1IntentMessageImageArgs image) {
+            return image(Output.of(image));
         }
+
         public Builder linkOutSuggestion(@Nullable Output<GoogleCloudDialogflowV2beta1IntentMessageLinkOutSuggestionArgs> linkOutSuggestion) {
-            this.linkOutSuggestion = linkOutSuggestion;
+            $.linkOutSuggestion = linkOutSuggestion;
             return this;
         }
-        public Builder linkOutSuggestion(@Nullable GoogleCloudDialogflowV2beta1IntentMessageLinkOutSuggestionArgs linkOutSuggestion) {
-            this.linkOutSuggestion = Codegen.ofNullable(linkOutSuggestion);
-            return this;
+
+        public Builder linkOutSuggestion(GoogleCloudDialogflowV2beta1IntentMessageLinkOutSuggestionArgs linkOutSuggestion) {
+            return linkOutSuggestion(Output.of(linkOutSuggestion));
         }
+
         public Builder listSelect(@Nullable Output<GoogleCloudDialogflowV2beta1IntentMessageListSelectArgs> listSelect) {
-            this.listSelect = listSelect;
+            $.listSelect = listSelect;
             return this;
         }
-        public Builder listSelect(@Nullable GoogleCloudDialogflowV2beta1IntentMessageListSelectArgs listSelect) {
-            this.listSelect = Codegen.ofNullable(listSelect);
-            return this;
+
+        public Builder listSelect(GoogleCloudDialogflowV2beta1IntentMessageListSelectArgs listSelect) {
+            return listSelect(Output.of(listSelect));
         }
+
         public Builder mediaContent(@Nullable Output<GoogleCloudDialogflowV2beta1IntentMessageMediaContentArgs> mediaContent) {
-            this.mediaContent = mediaContent;
+            $.mediaContent = mediaContent;
             return this;
         }
-        public Builder mediaContent(@Nullable GoogleCloudDialogflowV2beta1IntentMessageMediaContentArgs mediaContent) {
-            this.mediaContent = Codegen.ofNullable(mediaContent);
-            return this;
+
+        public Builder mediaContent(GoogleCloudDialogflowV2beta1IntentMessageMediaContentArgs mediaContent) {
+            return mediaContent(Output.of(mediaContent));
         }
+
         public Builder payload(@Nullable Output<Map<String,String>> payload) {
-            this.payload = payload;
+            $.payload = payload;
             return this;
         }
-        public Builder payload(@Nullable Map<String,String> payload) {
-            this.payload = Codegen.ofNullable(payload);
-            return this;
+
+        public Builder payload(Map<String,String> payload) {
+            return payload(Output.of(payload));
         }
+
         public Builder platform(@Nullable Output<GoogleCloudDialogflowV2beta1IntentMessagePlatform> platform) {
-            this.platform = platform;
+            $.platform = platform;
             return this;
         }
-        public Builder platform(@Nullable GoogleCloudDialogflowV2beta1IntentMessagePlatform platform) {
-            this.platform = Codegen.ofNullable(platform);
-            return this;
+
+        public Builder platform(GoogleCloudDialogflowV2beta1IntentMessagePlatform platform) {
+            return platform(Output.of(platform));
         }
+
         public Builder quickReplies(@Nullable Output<GoogleCloudDialogflowV2beta1IntentMessageQuickRepliesArgs> quickReplies) {
-            this.quickReplies = quickReplies;
+            $.quickReplies = quickReplies;
             return this;
         }
-        public Builder quickReplies(@Nullable GoogleCloudDialogflowV2beta1IntentMessageQuickRepliesArgs quickReplies) {
-            this.quickReplies = Codegen.ofNullable(quickReplies);
-            return this;
+
+        public Builder quickReplies(GoogleCloudDialogflowV2beta1IntentMessageQuickRepliesArgs quickReplies) {
+            return quickReplies(Output.of(quickReplies));
         }
+
         public Builder rbmCarouselRichCard(@Nullable Output<GoogleCloudDialogflowV2beta1IntentMessageRbmCarouselCardArgs> rbmCarouselRichCard) {
-            this.rbmCarouselRichCard = rbmCarouselRichCard;
+            $.rbmCarouselRichCard = rbmCarouselRichCard;
             return this;
         }
-        public Builder rbmCarouselRichCard(@Nullable GoogleCloudDialogflowV2beta1IntentMessageRbmCarouselCardArgs rbmCarouselRichCard) {
-            this.rbmCarouselRichCard = Codegen.ofNullable(rbmCarouselRichCard);
-            return this;
+
+        public Builder rbmCarouselRichCard(GoogleCloudDialogflowV2beta1IntentMessageRbmCarouselCardArgs rbmCarouselRichCard) {
+            return rbmCarouselRichCard(Output.of(rbmCarouselRichCard));
         }
+
         public Builder rbmStandaloneRichCard(@Nullable Output<GoogleCloudDialogflowV2beta1IntentMessageRbmStandaloneCardArgs> rbmStandaloneRichCard) {
-            this.rbmStandaloneRichCard = rbmStandaloneRichCard;
+            $.rbmStandaloneRichCard = rbmStandaloneRichCard;
             return this;
         }
-        public Builder rbmStandaloneRichCard(@Nullable GoogleCloudDialogflowV2beta1IntentMessageRbmStandaloneCardArgs rbmStandaloneRichCard) {
-            this.rbmStandaloneRichCard = Codegen.ofNullable(rbmStandaloneRichCard);
-            return this;
+
+        public Builder rbmStandaloneRichCard(GoogleCloudDialogflowV2beta1IntentMessageRbmStandaloneCardArgs rbmStandaloneRichCard) {
+            return rbmStandaloneRichCard(Output.of(rbmStandaloneRichCard));
         }
+
         public Builder rbmText(@Nullable Output<GoogleCloudDialogflowV2beta1IntentMessageRbmTextArgs> rbmText) {
-            this.rbmText = rbmText;
+            $.rbmText = rbmText;
             return this;
         }
-        public Builder rbmText(@Nullable GoogleCloudDialogflowV2beta1IntentMessageRbmTextArgs rbmText) {
-            this.rbmText = Codegen.ofNullable(rbmText);
-            return this;
+
+        public Builder rbmText(GoogleCloudDialogflowV2beta1IntentMessageRbmTextArgs rbmText) {
+            return rbmText(Output.of(rbmText));
         }
+
         public Builder simpleResponses(@Nullable Output<GoogleCloudDialogflowV2beta1IntentMessageSimpleResponsesArgs> simpleResponses) {
-            this.simpleResponses = simpleResponses;
+            $.simpleResponses = simpleResponses;
             return this;
         }
-        public Builder simpleResponses(@Nullable GoogleCloudDialogflowV2beta1IntentMessageSimpleResponsesArgs simpleResponses) {
-            this.simpleResponses = Codegen.ofNullable(simpleResponses);
-            return this;
+
+        public Builder simpleResponses(GoogleCloudDialogflowV2beta1IntentMessageSimpleResponsesArgs simpleResponses) {
+            return simpleResponses(Output.of(simpleResponses));
         }
+
         public Builder suggestions(@Nullable Output<GoogleCloudDialogflowV2beta1IntentMessageSuggestionsArgs> suggestions) {
-            this.suggestions = suggestions;
+            $.suggestions = suggestions;
             return this;
         }
-        public Builder suggestions(@Nullable GoogleCloudDialogflowV2beta1IntentMessageSuggestionsArgs suggestions) {
-            this.suggestions = Codegen.ofNullable(suggestions);
-            return this;
+
+        public Builder suggestions(GoogleCloudDialogflowV2beta1IntentMessageSuggestionsArgs suggestions) {
+            return suggestions(Output.of(suggestions));
         }
+
         public Builder tableCard(@Nullable Output<GoogleCloudDialogflowV2beta1IntentMessageTableCardArgs> tableCard) {
-            this.tableCard = tableCard;
+            $.tableCard = tableCard;
             return this;
         }
-        public Builder tableCard(@Nullable GoogleCloudDialogflowV2beta1IntentMessageTableCardArgs tableCard) {
-            this.tableCard = Codegen.ofNullable(tableCard);
-            return this;
+
+        public Builder tableCard(GoogleCloudDialogflowV2beta1IntentMessageTableCardArgs tableCard) {
+            return tableCard(Output.of(tableCard));
         }
+
         public Builder telephonyPlayAudio(@Nullable Output<GoogleCloudDialogflowV2beta1IntentMessageTelephonyPlayAudioArgs> telephonyPlayAudio) {
-            this.telephonyPlayAudio = telephonyPlayAudio;
+            $.telephonyPlayAudio = telephonyPlayAudio;
             return this;
         }
-        public Builder telephonyPlayAudio(@Nullable GoogleCloudDialogflowV2beta1IntentMessageTelephonyPlayAudioArgs telephonyPlayAudio) {
-            this.telephonyPlayAudio = Codegen.ofNullable(telephonyPlayAudio);
-            return this;
+
+        public Builder telephonyPlayAudio(GoogleCloudDialogflowV2beta1IntentMessageTelephonyPlayAudioArgs telephonyPlayAudio) {
+            return telephonyPlayAudio(Output.of(telephonyPlayAudio));
         }
+
         public Builder telephonySynthesizeSpeech(@Nullable Output<GoogleCloudDialogflowV2beta1IntentMessageTelephonySynthesizeSpeechArgs> telephonySynthesizeSpeech) {
-            this.telephonySynthesizeSpeech = telephonySynthesizeSpeech;
+            $.telephonySynthesizeSpeech = telephonySynthesizeSpeech;
             return this;
         }
-        public Builder telephonySynthesizeSpeech(@Nullable GoogleCloudDialogflowV2beta1IntentMessageTelephonySynthesizeSpeechArgs telephonySynthesizeSpeech) {
-            this.telephonySynthesizeSpeech = Codegen.ofNullable(telephonySynthesizeSpeech);
-            return this;
+
+        public Builder telephonySynthesizeSpeech(GoogleCloudDialogflowV2beta1IntentMessageTelephonySynthesizeSpeechArgs telephonySynthesizeSpeech) {
+            return telephonySynthesizeSpeech(Output.of(telephonySynthesizeSpeech));
         }
+
         public Builder telephonyTransferCall(@Nullable Output<GoogleCloudDialogflowV2beta1IntentMessageTelephonyTransferCallArgs> telephonyTransferCall) {
-            this.telephonyTransferCall = telephonyTransferCall;
+            $.telephonyTransferCall = telephonyTransferCall;
             return this;
         }
-        public Builder telephonyTransferCall(@Nullable GoogleCloudDialogflowV2beta1IntentMessageTelephonyTransferCallArgs telephonyTransferCall) {
-            this.telephonyTransferCall = Codegen.ofNullable(telephonyTransferCall);
-            return this;
+
+        public Builder telephonyTransferCall(GoogleCloudDialogflowV2beta1IntentMessageTelephonyTransferCallArgs telephonyTransferCall) {
+            return telephonyTransferCall(Output.of(telephonyTransferCall));
         }
+
         public Builder text(@Nullable Output<GoogleCloudDialogflowV2beta1IntentMessageTextArgs> text) {
-            this.text = text;
+            $.text = text;
             return this;
         }
-        public Builder text(@Nullable GoogleCloudDialogflowV2beta1IntentMessageTextArgs text) {
-            this.text = Codegen.ofNullable(text);
-            return this;
-        }        public GoogleCloudDialogflowV2beta1IntentMessageArgs build() {
-            return new GoogleCloudDialogflowV2beta1IntentMessageArgs(basicCard, browseCarouselCard, card, carouselSelect, image, linkOutSuggestion, listSelect, mediaContent, payload, platform, quickReplies, rbmCarouselRichCard, rbmStandaloneRichCard, rbmText, simpleResponses, suggestions, tableCard, telephonyPlayAudio, telephonySynthesizeSpeech, telephonyTransferCall, text);
+
+        public Builder text(GoogleCloudDialogflowV2beta1IntentMessageTextArgs text) {
+            return text(Output.of(text));
+        }
+
+        public GoogleCloudDialogflowV2beta1IntentMessageArgs build() {
+            return $;
         }
     }
+
 }

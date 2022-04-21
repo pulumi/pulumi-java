@@ -17,7 +17,7 @@ public final class GetNetworkWatcherArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="networkWatcherName", required=true)
-      private final String networkWatcherName;
+    private String networkWatcherName;
 
     public String networkWatcherName() {
         return this.networkWatcherName;
@@ -28,55 +28,52 @@ public final class GetNetworkWatcherArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public GetNetworkWatcherArgs(
-        String networkWatcherName,
-        String resourceGroupName) {
-        this.networkWatcherName = Objects.requireNonNull(networkWatcherName, "expected parameter 'networkWatcherName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private GetNetworkWatcherArgs() {}
 
-    private GetNetworkWatcherArgs() {
-        this.networkWatcherName = null;
-        this.resourceGroupName = null;
+    private GetNetworkWatcherArgs(GetNetworkWatcherArgs $) {
+        this.networkWatcherName = $.networkWatcherName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetNetworkWatcherArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String networkWatcherName;
-        private String resourceGroupName;
+        private GetNetworkWatcherArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetNetworkWatcherArgs();
         }
 
         public Builder(GetNetworkWatcherArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.networkWatcherName = defaults.networkWatcherName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new GetNetworkWatcherArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder networkWatcherName(String networkWatcherName) {
-            this.networkWatcherName = Objects.requireNonNull(networkWatcherName);
+            $.networkWatcherName = networkWatcherName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public GetNetworkWatcherArgs build() {
-            return new GetNetworkWatcherArgs(networkWatcherName, resourceGroupName);
+        }
+
+        public GetNetworkWatcherArgs build() {
+            $.networkWatcherName = Objects.requireNonNull($.networkWatcherName, "expected parameter 'networkWatcherName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

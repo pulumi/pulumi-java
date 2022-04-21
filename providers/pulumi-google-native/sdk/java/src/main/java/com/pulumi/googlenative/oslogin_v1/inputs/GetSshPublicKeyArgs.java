@@ -13,62 +13,59 @@ public final class GetSshPublicKeyArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetSshPublicKeyArgs Empty = new GetSshPublicKeyArgs();
 
     @Import(name="sshPublicKeyId", required=true)
-      private final String sshPublicKeyId;
+    private String sshPublicKeyId;
 
     public String sshPublicKeyId() {
         return this.sshPublicKeyId;
     }
 
     @Import(name="userId", required=true)
-      private final String userId;
+    private String userId;
 
     public String userId() {
         return this.userId;
     }
 
-    public GetSshPublicKeyArgs(
-        String sshPublicKeyId,
-        String userId) {
-        this.sshPublicKeyId = Objects.requireNonNull(sshPublicKeyId, "expected parameter 'sshPublicKeyId' to be non-null");
-        this.userId = Objects.requireNonNull(userId, "expected parameter 'userId' to be non-null");
-    }
+    private GetSshPublicKeyArgs() {}
 
-    private GetSshPublicKeyArgs() {
-        this.sshPublicKeyId = null;
-        this.userId = null;
+    private GetSshPublicKeyArgs(GetSshPublicKeyArgs $) {
+        this.sshPublicKeyId = $.sshPublicKeyId;
+        this.userId = $.userId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetSshPublicKeyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String sshPublicKeyId;
-        private String userId;
+        private GetSshPublicKeyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetSshPublicKeyArgs();
         }
 
         public Builder(GetSshPublicKeyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.sshPublicKeyId = defaults.sshPublicKeyId;
-    	      this.userId = defaults.userId;
+            $ = new GetSshPublicKeyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder sshPublicKeyId(String sshPublicKeyId) {
-            this.sshPublicKeyId = Objects.requireNonNull(sshPublicKeyId);
+            $.sshPublicKeyId = sshPublicKeyId;
             return this;
         }
+
         public Builder userId(String userId) {
-            this.userId = Objects.requireNonNull(userId);
+            $.userId = userId;
             return this;
-        }        public GetSshPublicKeyArgs build() {
-            return new GetSshPublicKeyArgs(sshPublicKeyId, userId);
+        }
+
+        public GetSshPublicKeyArgs build() {
+            $.sshPublicKeyId = Objects.requireNonNull($.sshPublicKeyId, "expected parameter 'sshPublicKeyId' to be non-null");
+            $.userId = Objects.requireNonNull($.userId, "expected parameter 'userId' to be non-null");
+            return $;
         }
     }
+
 }

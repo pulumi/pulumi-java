@@ -5,7 +5,6 @@ package com.pulumi.aws.fsx.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,7 +19,7 @@ public final class OpenZfsVolumeNfsExportsClientConfigurationGetArgs extends com
      * 
      */
     @Import(name="clients", required=true)
-      private final Output<String> clients;
+    private Output<String> clients;
 
     public Output<String> clients() {
         return this.clients;
@@ -31,66 +30,64 @@ public final class OpenZfsVolumeNfsExportsClientConfigurationGetArgs extends com
      * 
      */
     @Import(name="options", required=true)
-      private final Output<List<String>> options;
+    private Output<List<String>> options;
 
     public Output<List<String>> options() {
         return this.options;
     }
 
-    public OpenZfsVolumeNfsExportsClientConfigurationGetArgs(
-        Output<String> clients,
-        Output<List<String>> options) {
-        this.clients = Objects.requireNonNull(clients, "expected parameter 'clients' to be non-null");
-        this.options = Objects.requireNonNull(options, "expected parameter 'options' to be non-null");
-    }
+    private OpenZfsVolumeNfsExportsClientConfigurationGetArgs() {}
 
-    private OpenZfsVolumeNfsExportsClientConfigurationGetArgs() {
-        this.clients = Codegen.empty();
-        this.options = Codegen.empty();
+    private OpenZfsVolumeNfsExportsClientConfigurationGetArgs(OpenZfsVolumeNfsExportsClientConfigurationGetArgs $) {
+        this.clients = $.clients;
+        this.options = $.options;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(OpenZfsVolumeNfsExportsClientConfigurationGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> clients;
-        private Output<List<String>> options;
+        private OpenZfsVolumeNfsExportsClientConfigurationGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new OpenZfsVolumeNfsExportsClientConfigurationGetArgs();
         }
 
         public Builder(OpenZfsVolumeNfsExportsClientConfigurationGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.clients = defaults.clients;
-    	      this.options = defaults.options;
+            $ = new OpenZfsVolumeNfsExportsClientConfigurationGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder clients(Output<String> clients) {
-            this.clients = Objects.requireNonNull(clients);
+            $.clients = clients;
             return this;
         }
+
         public Builder clients(String clients) {
-            this.clients = Output.of(Objects.requireNonNull(clients));
-            return this;
+            return clients(Output.of(clients));
         }
+
         public Builder options(Output<List<String>> options) {
-            this.options = Objects.requireNonNull(options);
+            $.options = options;
             return this;
         }
+
         public Builder options(List<String> options) {
-            this.options = Output.of(Objects.requireNonNull(options));
-            return this;
+            return options(Output.of(options));
         }
+
         public Builder options(String... options) {
             return options(List.of(options));
-        }        public OpenZfsVolumeNfsExportsClientConfigurationGetArgs build() {
-            return new OpenZfsVolumeNfsExportsClientConfigurationGetArgs(clients, options);
+        }
+
+        public OpenZfsVolumeNfsExportsClientConfigurationGetArgs build() {
+            $.clients = Objects.requireNonNull($.clients, "expected parameter 'clients' to be non-null");
+            $.options = Objects.requireNonNull($.options, "expected parameter 'options' to be non-null");
+            return $;
         }
     }
+
 }

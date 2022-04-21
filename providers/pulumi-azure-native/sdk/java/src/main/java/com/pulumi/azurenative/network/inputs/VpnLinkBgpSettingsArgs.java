@@ -5,10 +5,10 @@ package com.pulumi.azurenative.network.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class VpnLinkBgpSettingsArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="asn")
-      private final @Nullable Output<Double> asn;
+    private @Nullable Output<Double> asn;
 
-    public Output<Double> asn() {
-        return this.asn == null ? Codegen.empty() : this.asn;
+    public Optional<Output<Double>> asn() {
+        return Optional.ofNullable(this.asn);
     }
 
     /**
@@ -36,63 +36,58 @@ public final class VpnLinkBgpSettingsArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="bgpPeeringAddress")
-      private final @Nullable Output<String> bgpPeeringAddress;
+    private @Nullable Output<String> bgpPeeringAddress;
 
-    public Output<String> bgpPeeringAddress() {
-        return this.bgpPeeringAddress == null ? Codegen.empty() : this.bgpPeeringAddress;
+    public Optional<Output<String>> bgpPeeringAddress() {
+        return Optional.ofNullable(this.bgpPeeringAddress);
     }
 
-    public VpnLinkBgpSettingsArgs(
-        @Nullable Output<Double> asn,
-        @Nullable Output<String> bgpPeeringAddress) {
-        this.asn = asn;
-        this.bgpPeeringAddress = bgpPeeringAddress;
-    }
+    private VpnLinkBgpSettingsArgs() {}
 
-    private VpnLinkBgpSettingsArgs() {
-        this.asn = Codegen.empty();
-        this.bgpPeeringAddress = Codegen.empty();
+    private VpnLinkBgpSettingsArgs(VpnLinkBgpSettingsArgs $) {
+        this.asn = $.asn;
+        this.bgpPeeringAddress = $.bgpPeeringAddress;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VpnLinkBgpSettingsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Double> asn;
-        private @Nullable Output<String> bgpPeeringAddress;
+        private VpnLinkBgpSettingsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new VpnLinkBgpSettingsArgs();
         }
 
         public Builder(VpnLinkBgpSettingsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.asn = defaults.asn;
-    	      this.bgpPeeringAddress = defaults.bgpPeeringAddress;
+            $ = new VpnLinkBgpSettingsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder asn(@Nullable Output<Double> asn) {
-            this.asn = asn;
+            $.asn = asn;
             return this;
         }
-        public Builder asn(@Nullable Double asn) {
-            this.asn = Codegen.ofNullable(asn);
-            return this;
+
+        public Builder asn(Double asn) {
+            return asn(Output.of(asn));
         }
+
         public Builder bgpPeeringAddress(@Nullable Output<String> bgpPeeringAddress) {
-            this.bgpPeeringAddress = bgpPeeringAddress;
+            $.bgpPeeringAddress = bgpPeeringAddress;
             return this;
         }
-        public Builder bgpPeeringAddress(@Nullable String bgpPeeringAddress) {
-            this.bgpPeeringAddress = Codegen.ofNullable(bgpPeeringAddress);
-            return this;
-        }        public VpnLinkBgpSettingsArgs build() {
-            return new VpnLinkBgpSettingsArgs(asn, bgpPeeringAddress);
+
+        public Builder bgpPeeringAddress(String bgpPeeringAddress) {
+            return bgpPeeringAddress(Output.of(bgpPeeringAddress));
+        }
+
+        public VpnLinkBgpSettingsArgs build() {
+            return $;
         }
     }
+
 }

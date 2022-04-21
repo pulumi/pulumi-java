@@ -24,7 +24,7 @@ public final class WebtestLocationAvailabilityCriteriaArgs extends com.pulumi.re
      * 
      */
     @Import(name="componentId", required=true)
-      private final Output<String> componentId;
+    private Output<String> componentId;
 
     public Output<String> componentId() {
         return this.componentId;
@@ -35,7 +35,7 @@ public final class WebtestLocationAvailabilityCriteriaArgs extends com.pulumi.re
      * 
      */
     @Import(name="failedLocationCount", required=true)
-      private final Output<Double> failedLocationCount;
+    private Output<Double> failedLocationCount;
 
     public Output<Double> failedLocationCount() {
         return this.failedLocationCount;
@@ -47,7 +47,7 @@ public final class WebtestLocationAvailabilityCriteriaArgs extends com.pulumi.re
      * 
      */
     @Import(name="odataType", required=true)
-      private final Output<String> odataType;
+    private Output<String> odataType;
 
     public Output<String> odataType() {
         return this.odataType;
@@ -58,89 +58,82 @@ public final class WebtestLocationAvailabilityCriteriaArgs extends com.pulumi.re
      * 
      */
     @Import(name="webTestId", required=true)
-      private final Output<String> webTestId;
+    private Output<String> webTestId;
 
     public Output<String> webTestId() {
         return this.webTestId;
     }
 
-    public WebtestLocationAvailabilityCriteriaArgs(
-        Output<String> componentId,
-        Output<Double> failedLocationCount,
-        Output<String> odataType,
-        Output<String> webTestId) {
-        this.componentId = Objects.requireNonNull(componentId, "expected parameter 'componentId' to be non-null");
-        this.failedLocationCount = Objects.requireNonNull(failedLocationCount, "expected parameter 'failedLocationCount' to be non-null");
-        this.odataType = Codegen.stringProp("odataType").output().arg(odataType).require();
-        this.webTestId = Objects.requireNonNull(webTestId, "expected parameter 'webTestId' to be non-null");
-    }
+    private WebtestLocationAvailabilityCriteriaArgs() {}
 
-    private WebtestLocationAvailabilityCriteriaArgs() {
-        this.componentId = Codegen.empty();
-        this.failedLocationCount = Codegen.empty();
-        this.odataType = Codegen.empty();
-        this.webTestId = Codegen.empty();
+    private WebtestLocationAvailabilityCriteriaArgs(WebtestLocationAvailabilityCriteriaArgs $) {
+        this.componentId = $.componentId;
+        this.failedLocationCount = $.failedLocationCount;
+        this.odataType = $.odataType;
+        this.webTestId = $.webTestId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WebtestLocationAvailabilityCriteriaArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> componentId;
-        private Output<Double> failedLocationCount;
-        private Output<String> odataType;
-        private Output<String> webTestId;
+        private WebtestLocationAvailabilityCriteriaArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new WebtestLocationAvailabilityCriteriaArgs();
         }
 
         public Builder(WebtestLocationAvailabilityCriteriaArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.componentId = defaults.componentId;
-    	      this.failedLocationCount = defaults.failedLocationCount;
-    	      this.odataType = defaults.odataType;
-    	      this.webTestId = defaults.webTestId;
+            $ = new WebtestLocationAvailabilityCriteriaArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder componentId(Output<String> componentId) {
-            this.componentId = Objects.requireNonNull(componentId);
+            $.componentId = componentId;
             return this;
         }
+
         public Builder componentId(String componentId) {
-            this.componentId = Output.of(Objects.requireNonNull(componentId));
-            return this;
+            return componentId(Output.of(componentId));
         }
+
         public Builder failedLocationCount(Output<Double> failedLocationCount) {
-            this.failedLocationCount = Objects.requireNonNull(failedLocationCount);
+            $.failedLocationCount = failedLocationCount;
             return this;
         }
+
         public Builder failedLocationCount(Double failedLocationCount) {
-            this.failedLocationCount = Output.of(Objects.requireNonNull(failedLocationCount));
-            return this;
+            return failedLocationCount(Output.of(failedLocationCount));
         }
+
         public Builder odataType(Output<String> odataType) {
-            this.odataType = Objects.requireNonNull(odataType);
+            $.odataType = odataType;
             return this;
         }
+
         public Builder odataType(String odataType) {
-            this.odataType = Output.of(Objects.requireNonNull(odataType));
-            return this;
+            return odataType(Output.of(odataType));
         }
+
         public Builder webTestId(Output<String> webTestId) {
-            this.webTestId = Objects.requireNonNull(webTestId);
+            $.webTestId = webTestId;
             return this;
         }
+
         public Builder webTestId(String webTestId) {
-            this.webTestId = Output.of(Objects.requireNonNull(webTestId));
-            return this;
-        }        public WebtestLocationAvailabilityCriteriaArgs build() {
-            return new WebtestLocationAvailabilityCriteriaArgs(componentId, failedLocationCount, odataType, webTestId);
+            return webTestId(Output.of(webTestId));
+        }
+
+        public WebtestLocationAvailabilityCriteriaArgs build() {
+            $.componentId = Objects.requireNonNull($.componentId, "expected parameter 'componentId' to be non-null");
+            $.failedLocationCount = Objects.requireNonNull($.failedLocationCount, "expected parameter 'failedLocationCount' to be non-null");
+            $.odataType = Codegen.stringProp("odataType").output().arg($.odataType).require();
+            $.webTestId = Objects.requireNonNull($.webTestId, "expected parameter 'webTestId' to be non-null");
+            return $;
         }
     }
+
 }

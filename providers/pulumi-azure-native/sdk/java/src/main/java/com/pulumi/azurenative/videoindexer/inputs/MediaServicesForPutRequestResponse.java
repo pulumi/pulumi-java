@@ -23,10 +23,10 @@ public final class MediaServicesForPutRequestResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="resourceId")
-      private final @Nullable String resourceId;
+    private @Nullable String resourceId;
 
     public Optional<String> resourceId() {
-        return this.resourceId == null ? Optional.empty() : Optional.ofNullable(this.resourceId);
+        return Optional.ofNullable(this.resourceId);
     }
 
     /**
@@ -34,55 +34,50 @@ public final class MediaServicesForPutRequestResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="userAssignedIdentity")
-      private final @Nullable String userAssignedIdentity;
+    private @Nullable String userAssignedIdentity;
 
     public Optional<String> userAssignedIdentity() {
-        return this.userAssignedIdentity == null ? Optional.empty() : Optional.ofNullable(this.userAssignedIdentity);
+        return Optional.ofNullable(this.userAssignedIdentity);
     }
 
-    public MediaServicesForPutRequestResponse(
-        @Nullable String resourceId,
-        @Nullable String userAssignedIdentity) {
-        this.resourceId = resourceId;
-        this.userAssignedIdentity = userAssignedIdentity;
-    }
+    private MediaServicesForPutRequestResponse() {}
 
-    private MediaServicesForPutRequestResponse() {
-        this.resourceId = null;
-        this.userAssignedIdentity = null;
+    private MediaServicesForPutRequestResponse(MediaServicesForPutRequestResponse $) {
+        this.resourceId = $.resourceId;
+        this.userAssignedIdentity = $.userAssignedIdentity;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MediaServicesForPutRequestResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String resourceId;
-        private @Nullable String userAssignedIdentity;
+        private MediaServicesForPutRequestResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new MediaServicesForPutRequestResponse();
         }
 
         public Builder(MediaServicesForPutRequestResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.resourceId = defaults.resourceId;
-    	      this.userAssignedIdentity = defaults.userAssignedIdentity;
+            $ = new MediaServicesForPutRequestResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder resourceId(@Nullable String resourceId) {
-            this.resourceId = resourceId;
+            $.resourceId = resourceId;
             return this;
         }
+
         public Builder userAssignedIdentity(@Nullable String userAssignedIdentity) {
-            this.userAssignedIdentity = userAssignedIdentity;
+            $.userAssignedIdentity = userAssignedIdentity;
             return this;
-        }        public MediaServicesForPutRequestResponse build() {
-            return new MediaServicesForPutRequestResponse(resourceId, userAssignedIdentity);
+        }
+
+        public MediaServicesForPutRequestResponse build() {
+            return $;
         }
     }
+
 }

@@ -31,10 +31,10 @@ public final class IntegrationRuntimeSsisPropertiesResponse extends com.pulumi.r
      * 
      */
     @Import(name="catalogInfo")
-      private final @Nullable IntegrationRuntimeSsisCatalogInfoResponse catalogInfo;
+    private @Nullable IntegrationRuntimeSsisCatalogInfoResponse catalogInfo;
 
     public Optional<IntegrationRuntimeSsisCatalogInfoResponse> catalogInfo() {
-        return this.catalogInfo == null ? Optional.empty() : Optional.ofNullable(this.catalogInfo);
+        return Optional.ofNullable(this.catalogInfo);
     }
 
     /**
@@ -42,10 +42,10 @@ public final class IntegrationRuntimeSsisPropertiesResponse extends com.pulumi.r
      * 
      */
     @Import(name="customSetupScriptProperties")
-      private final @Nullable IntegrationRuntimeCustomSetupScriptPropertiesResponse customSetupScriptProperties;
+    private @Nullable IntegrationRuntimeCustomSetupScriptPropertiesResponse customSetupScriptProperties;
 
     public Optional<IntegrationRuntimeCustomSetupScriptPropertiesResponse> customSetupScriptProperties() {
-        return this.customSetupScriptProperties == null ? Optional.empty() : Optional.ofNullable(this.customSetupScriptProperties);
+        return Optional.ofNullable(this.customSetupScriptProperties);
     }
 
     /**
@@ -53,10 +53,10 @@ public final class IntegrationRuntimeSsisPropertiesResponse extends com.pulumi.r
      * 
      */
     @Import(name="dataProxyProperties")
-      private final @Nullable IntegrationRuntimeDataProxyPropertiesResponse dataProxyProperties;
+    private @Nullable IntegrationRuntimeDataProxyPropertiesResponse dataProxyProperties;
 
     public Optional<IntegrationRuntimeDataProxyPropertiesResponse> dataProxyProperties() {
-        return this.dataProxyProperties == null ? Optional.empty() : Optional.ofNullable(this.dataProxyProperties);
+        return Optional.ofNullable(this.dataProxyProperties);
     }
 
     /**
@@ -64,10 +64,10 @@ public final class IntegrationRuntimeSsisPropertiesResponse extends com.pulumi.r
      * 
      */
     @Import(name="edition")
-      private final @Nullable String edition;
+    private @Nullable String edition;
 
     public Optional<String> edition() {
-        return this.edition == null ? Optional.empty() : Optional.ofNullable(this.edition);
+        return Optional.ofNullable(this.edition);
     }
 
     /**
@@ -75,10 +75,10 @@ public final class IntegrationRuntimeSsisPropertiesResponse extends com.pulumi.r
      * 
      */
     @Import(name="expressCustomSetupProperties")
-      private final @Nullable List<Object> expressCustomSetupProperties;
+    private @Nullable List<Object> expressCustomSetupProperties;
 
-    public List<Object> expressCustomSetupProperties() {
-        return this.expressCustomSetupProperties == null ? List.of() : this.expressCustomSetupProperties;
+    public Optional<List<Object>> expressCustomSetupProperties() {
+        return Optional.ofNullable(this.expressCustomSetupProperties);
     }
 
     /**
@@ -86,94 +86,78 @@ public final class IntegrationRuntimeSsisPropertiesResponse extends com.pulumi.r
      * 
      */
     @Import(name="licenseType")
-      private final @Nullable String licenseType;
+    private @Nullable String licenseType;
 
     public Optional<String> licenseType() {
-        return this.licenseType == null ? Optional.empty() : Optional.ofNullable(this.licenseType);
+        return Optional.ofNullable(this.licenseType);
     }
 
-    public IntegrationRuntimeSsisPropertiesResponse(
-        @Nullable IntegrationRuntimeSsisCatalogInfoResponse catalogInfo,
-        @Nullable IntegrationRuntimeCustomSetupScriptPropertiesResponse customSetupScriptProperties,
-        @Nullable IntegrationRuntimeDataProxyPropertiesResponse dataProxyProperties,
-        @Nullable String edition,
-        @Nullable List<Object> expressCustomSetupProperties,
-        @Nullable String licenseType) {
-        this.catalogInfo = catalogInfo;
-        this.customSetupScriptProperties = customSetupScriptProperties;
-        this.dataProxyProperties = dataProxyProperties;
-        this.edition = edition;
-        this.expressCustomSetupProperties = expressCustomSetupProperties;
-        this.licenseType = licenseType;
-    }
+    private IntegrationRuntimeSsisPropertiesResponse() {}
 
-    private IntegrationRuntimeSsisPropertiesResponse() {
-        this.catalogInfo = null;
-        this.customSetupScriptProperties = null;
-        this.dataProxyProperties = null;
-        this.edition = null;
-        this.expressCustomSetupProperties = List.of();
-        this.licenseType = null;
+    private IntegrationRuntimeSsisPropertiesResponse(IntegrationRuntimeSsisPropertiesResponse $) {
+        this.catalogInfo = $.catalogInfo;
+        this.customSetupScriptProperties = $.customSetupScriptProperties;
+        this.dataProxyProperties = $.dataProxyProperties;
+        this.edition = $.edition;
+        this.expressCustomSetupProperties = $.expressCustomSetupProperties;
+        this.licenseType = $.licenseType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(IntegrationRuntimeSsisPropertiesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable IntegrationRuntimeSsisCatalogInfoResponse catalogInfo;
-        private @Nullable IntegrationRuntimeCustomSetupScriptPropertiesResponse customSetupScriptProperties;
-        private @Nullable IntegrationRuntimeDataProxyPropertiesResponse dataProxyProperties;
-        private @Nullable String edition;
-        private @Nullable List<Object> expressCustomSetupProperties;
-        private @Nullable String licenseType;
+        private IntegrationRuntimeSsisPropertiesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new IntegrationRuntimeSsisPropertiesResponse();
         }
 
         public Builder(IntegrationRuntimeSsisPropertiesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.catalogInfo = defaults.catalogInfo;
-    	      this.customSetupScriptProperties = defaults.customSetupScriptProperties;
-    	      this.dataProxyProperties = defaults.dataProxyProperties;
-    	      this.edition = defaults.edition;
-    	      this.expressCustomSetupProperties = defaults.expressCustomSetupProperties;
-    	      this.licenseType = defaults.licenseType;
+            $ = new IntegrationRuntimeSsisPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder catalogInfo(@Nullable IntegrationRuntimeSsisCatalogInfoResponse catalogInfo) {
-            this.catalogInfo = catalogInfo;
+            $.catalogInfo = catalogInfo;
             return this;
         }
+
         public Builder customSetupScriptProperties(@Nullable IntegrationRuntimeCustomSetupScriptPropertiesResponse customSetupScriptProperties) {
-            this.customSetupScriptProperties = customSetupScriptProperties;
+            $.customSetupScriptProperties = customSetupScriptProperties;
             return this;
         }
+
         public Builder dataProxyProperties(@Nullable IntegrationRuntimeDataProxyPropertiesResponse dataProxyProperties) {
-            this.dataProxyProperties = dataProxyProperties;
+            $.dataProxyProperties = dataProxyProperties;
             return this;
         }
+
         public Builder edition(@Nullable String edition) {
-            this.edition = edition;
+            $.edition = edition;
             return this;
         }
+
         public Builder expressCustomSetupProperties(@Nullable List<Object> expressCustomSetupProperties) {
-            this.expressCustomSetupProperties = expressCustomSetupProperties;
+            $.expressCustomSetupProperties = expressCustomSetupProperties;
             return this;
         }
+
         public Builder expressCustomSetupProperties(Object... expressCustomSetupProperties) {
             return expressCustomSetupProperties(List.of(expressCustomSetupProperties));
         }
+
         public Builder licenseType(@Nullable String licenseType) {
-            this.licenseType = licenseType;
+            $.licenseType = licenseType;
             return this;
-        }        public IntegrationRuntimeSsisPropertiesResponse build() {
-            return new IntegrationRuntimeSsisPropertiesResponse(catalogInfo, customSetupScriptProperties, dataProxyProperties, edition, expressCustomSetupProperties, licenseType);
+        }
+
+        public IntegrationRuntimeSsisPropertiesResponse build() {
+            return $;
         }
     }
+
 }

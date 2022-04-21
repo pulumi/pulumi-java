@@ -5,9 +5,9 @@ package com.pulumi.azurenative.azurearcdata.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,7 +24,7 @@ public final class OnPremisePropertyArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="id", required=true)
-      private final Output<String> id;
+    private Output<String> id;
 
     public Output<String> id() {
         return this.id;
@@ -35,7 +35,7 @@ public final class OnPremisePropertyArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="publicSigningKey", required=true)
-      private final Output<String> publicSigningKey;
+    private Output<String> publicSigningKey;
 
     public Output<String> publicSigningKey() {
         return this.publicSigningKey;
@@ -46,76 +46,70 @@ public final class OnPremisePropertyArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="signingCertificateThumbprint")
-      private final @Nullable Output<String> signingCertificateThumbprint;
+    private @Nullable Output<String> signingCertificateThumbprint;
 
-    public Output<String> signingCertificateThumbprint() {
-        return this.signingCertificateThumbprint == null ? Codegen.empty() : this.signingCertificateThumbprint;
+    public Optional<Output<String>> signingCertificateThumbprint() {
+        return Optional.ofNullable(this.signingCertificateThumbprint);
     }
 
-    public OnPremisePropertyArgs(
-        Output<String> id,
-        Output<String> publicSigningKey,
-        @Nullable Output<String> signingCertificateThumbprint) {
-        this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
-        this.publicSigningKey = Objects.requireNonNull(publicSigningKey, "expected parameter 'publicSigningKey' to be non-null");
-        this.signingCertificateThumbprint = signingCertificateThumbprint;
-    }
+    private OnPremisePropertyArgs() {}
 
-    private OnPremisePropertyArgs() {
-        this.id = Codegen.empty();
-        this.publicSigningKey = Codegen.empty();
-        this.signingCertificateThumbprint = Codegen.empty();
+    private OnPremisePropertyArgs(OnPremisePropertyArgs $) {
+        this.id = $.id;
+        this.publicSigningKey = $.publicSigningKey;
+        this.signingCertificateThumbprint = $.signingCertificateThumbprint;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(OnPremisePropertyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> id;
-        private Output<String> publicSigningKey;
-        private @Nullable Output<String> signingCertificateThumbprint;
+        private OnPremisePropertyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new OnPremisePropertyArgs();
         }
 
         public Builder(OnPremisePropertyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.id = defaults.id;
-    	      this.publicSigningKey = defaults.publicSigningKey;
-    	      this.signingCertificateThumbprint = defaults.signingCertificateThumbprint;
+            $ = new OnPremisePropertyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder id(Output<String> id) {
-            this.id = Objects.requireNonNull(id);
+            $.id = id;
             return this;
         }
+
         public Builder id(String id) {
-            this.id = Output.of(Objects.requireNonNull(id));
-            return this;
+            return id(Output.of(id));
         }
+
         public Builder publicSigningKey(Output<String> publicSigningKey) {
-            this.publicSigningKey = Objects.requireNonNull(publicSigningKey);
+            $.publicSigningKey = publicSigningKey;
             return this;
         }
+
         public Builder publicSigningKey(String publicSigningKey) {
-            this.publicSigningKey = Output.of(Objects.requireNonNull(publicSigningKey));
-            return this;
+            return publicSigningKey(Output.of(publicSigningKey));
         }
+
         public Builder signingCertificateThumbprint(@Nullable Output<String> signingCertificateThumbprint) {
-            this.signingCertificateThumbprint = signingCertificateThumbprint;
+            $.signingCertificateThumbprint = signingCertificateThumbprint;
             return this;
         }
-        public Builder signingCertificateThumbprint(@Nullable String signingCertificateThumbprint) {
-            this.signingCertificateThumbprint = Codegen.ofNullable(signingCertificateThumbprint);
-            return this;
-        }        public OnPremisePropertyArgs build() {
-            return new OnPremisePropertyArgs(id, publicSigningKey, signingCertificateThumbprint);
+
+        public Builder signingCertificateThumbprint(String signingCertificateThumbprint) {
+            return signingCertificateThumbprint(Output.of(signingCertificateThumbprint));
+        }
+
+        public OnPremisePropertyArgs build() {
+            $.id = Objects.requireNonNull($.id, "expected parameter 'id' to be non-null");
+            $.publicSigningKey = Objects.requireNonNull($.publicSigningKey, "expected parameter 'publicSigningKey' to be non-null");
+            return $;
         }
     }
+
 }

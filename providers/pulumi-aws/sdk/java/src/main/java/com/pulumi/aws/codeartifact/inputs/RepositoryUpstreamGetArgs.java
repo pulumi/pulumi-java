@@ -5,7 +5,6 @@ package com.pulumi.aws.codeartifact.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,49 +18,49 @@ public final class RepositoryUpstreamGetArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="repositoryName", required=true)
-      private final Output<String> repositoryName;
+    private Output<String> repositoryName;
 
     public Output<String> repositoryName() {
         return this.repositoryName;
     }
 
-    public RepositoryUpstreamGetArgs(Output<String> repositoryName) {
-        this.repositoryName = Objects.requireNonNull(repositoryName, "expected parameter 'repositoryName' to be non-null");
-    }
+    private RepositoryUpstreamGetArgs() {}
 
-    private RepositoryUpstreamGetArgs() {
-        this.repositoryName = Codegen.empty();
+    private RepositoryUpstreamGetArgs(RepositoryUpstreamGetArgs $) {
+        this.repositoryName = $.repositoryName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RepositoryUpstreamGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> repositoryName;
+        private RepositoryUpstreamGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RepositoryUpstreamGetArgs();
         }
 
         public Builder(RepositoryUpstreamGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.repositoryName = defaults.repositoryName;
+            $ = new RepositoryUpstreamGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder repositoryName(Output<String> repositoryName) {
-            this.repositoryName = Objects.requireNonNull(repositoryName);
+            $.repositoryName = repositoryName;
             return this;
         }
+
         public Builder repositoryName(String repositoryName) {
-            this.repositoryName = Output.of(Objects.requireNonNull(repositoryName));
-            return this;
-        }        public RepositoryUpstreamGetArgs build() {
-            return new RepositoryUpstreamGetArgs(repositoryName);
+            return repositoryName(Output.of(repositoryName));
+        }
+
+        public RepositoryUpstreamGetArgs build() {
+            $.repositoryName = Objects.requireNonNull($.repositoryName, "expected parameter 'repositoryName' to be non-null");
+            return $;
         }
     }
+
 }

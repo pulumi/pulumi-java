@@ -25,7 +25,7 @@ public final class FactoryGitHubConfigurationResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="accountName", required=true)
-      private final String accountName;
+    private String accountName;
 
     public String accountName() {
         return this.accountName;
@@ -36,10 +36,10 @@ public final class FactoryGitHubConfigurationResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="clientId")
-      private final @Nullable String clientId;
+    private @Nullable String clientId;
 
     public Optional<String> clientId() {
-        return this.clientId == null ? Optional.empty() : Optional.ofNullable(this.clientId);
+        return Optional.ofNullable(this.clientId);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class FactoryGitHubConfigurationResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="clientSecret")
-      private final @Nullable GitHubClientSecretResponse clientSecret;
+    private @Nullable GitHubClientSecretResponse clientSecret;
 
     public Optional<GitHubClientSecretResponse> clientSecret() {
-        return this.clientSecret == null ? Optional.empty() : Optional.ofNullable(this.clientSecret);
+        return Optional.ofNullable(this.clientSecret);
     }
 
     /**
@@ -58,7 +58,7 @@ public final class FactoryGitHubConfigurationResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="collaborationBranch", required=true)
-      private final String collaborationBranch;
+    private String collaborationBranch;
 
     public String collaborationBranch() {
         return this.collaborationBranch;
@@ -69,10 +69,10 @@ public final class FactoryGitHubConfigurationResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="hostName")
-      private final @Nullable String hostName;
+    private @Nullable String hostName;
 
     public Optional<String> hostName() {
-        return this.hostName == null ? Optional.empty() : Optional.ofNullable(this.hostName);
+        return Optional.ofNullable(this.hostName);
     }
 
     /**
@@ -80,10 +80,10 @@ public final class FactoryGitHubConfigurationResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="lastCommitId")
-      private final @Nullable String lastCommitId;
+    private @Nullable String lastCommitId;
 
     public Optional<String> lastCommitId() {
-        return this.lastCommitId == null ? Optional.empty() : Optional.ofNullable(this.lastCommitId);
+        return Optional.ofNullable(this.lastCommitId);
     }
 
     /**
@@ -91,7 +91,7 @@ public final class FactoryGitHubConfigurationResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="repositoryName", required=true)
-      private final String repositoryName;
+    private String repositoryName;
 
     public String repositoryName() {
         return this.repositoryName;
@@ -102,7 +102,7 @@ public final class FactoryGitHubConfigurationResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="rootFolder", required=true)
-      private final String rootFolder;
+    private String rootFolder;
 
     public String rootFolder() {
         return this.rootFolder;
@@ -114,118 +114,97 @@ public final class FactoryGitHubConfigurationResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
     }
 
-    public FactoryGitHubConfigurationResponse(
-        String accountName,
-        @Nullable String clientId,
-        @Nullable GitHubClientSecretResponse clientSecret,
-        String collaborationBranch,
-        @Nullable String hostName,
-        @Nullable String lastCommitId,
-        String repositoryName,
-        String rootFolder,
-        String type) {
-        this.accountName = Objects.requireNonNull(accountName, "expected parameter 'accountName' to be non-null");
-        this.clientId = clientId;
-        this.clientSecret = clientSecret;
-        this.collaborationBranch = Objects.requireNonNull(collaborationBranch, "expected parameter 'collaborationBranch' to be non-null");
-        this.hostName = hostName;
-        this.lastCommitId = lastCommitId;
-        this.repositoryName = Objects.requireNonNull(repositoryName, "expected parameter 'repositoryName' to be non-null");
-        this.rootFolder = Objects.requireNonNull(rootFolder, "expected parameter 'rootFolder' to be non-null");
-        this.type = Codegen.stringProp("type").arg(type).require();
-    }
+    private FactoryGitHubConfigurationResponse() {}
 
-    private FactoryGitHubConfigurationResponse() {
-        this.accountName = null;
-        this.clientId = null;
-        this.clientSecret = null;
-        this.collaborationBranch = null;
-        this.hostName = null;
-        this.lastCommitId = null;
-        this.repositoryName = null;
-        this.rootFolder = null;
-        this.type = null;
+    private FactoryGitHubConfigurationResponse(FactoryGitHubConfigurationResponse $) {
+        this.accountName = $.accountName;
+        this.clientId = $.clientId;
+        this.clientSecret = $.clientSecret;
+        this.collaborationBranch = $.collaborationBranch;
+        this.hostName = $.hostName;
+        this.lastCommitId = $.lastCommitId;
+        this.repositoryName = $.repositoryName;
+        this.rootFolder = $.rootFolder;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FactoryGitHubConfigurationResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String accountName;
-        private @Nullable String clientId;
-        private @Nullable GitHubClientSecretResponse clientSecret;
-        private String collaborationBranch;
-        private @Nullable String hostName;
-        private @Nullable String lastCommitId;
-        private String repositoryName;
-        private String rootFolder;
-        private String type;
+        private FactoryGitHubConfigurationResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new FactoryGitHubConfigurationResponse();
         }
 
         public Builder(FactoryGitHubConfigurationResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accountName = defaults.accountName;
-    	      this.clientId = defaults.clientId;
-    	      this.clientSecret = defaults.clientSecret;
-    	      this.collaborationBranch = defaults.collaborationBranch;
-    	      this.hostName = defaults.hostName;
-    	      this.lastCommitId = defaults.lastCommitId;
-    	      this.repositoryName = defaults.repositoryName;
-    	      this.rootFolder = defaults.rootFolder;
-    	      this.type = defaults.type;
+            $ = new FactoryGitHubConfigurationResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder accountName(String accountName) {
-            this.accountName = Objects.requireNonNull(accountName);
+            $.accountName = accountName;
             return this;
         }
+
         public Builder clientId(@Nullable String clientId) {
-            this.clientId = clientId;
+            $.clientId = clientId;
             return this;
         }
+
         public Builder clientSecret(@Nullable GitHubClientSecretResponse clientSecret) {
-            this.clientSecret = clientSecret;
+            $.clientSecret = clientSecret;
             return this;
         }
+
         public Builder collaborationBranch(String collaborationBranch) {
-            this.collaborationBranch = Objects.requireNonNull(collaborationBranch);
+            $.collaborationBranch = collaborationBranch;
             return this;
         }
+
         public Builder hostName(@Nullable String hostName) {
-            this.hostName = hostName;
+            $.hostName = hostName;
             return this;
         }
+
         public Builder lastCommitId(@Nullable String lastCommitId) {
-            this.lastCommitId = lastCommitId;
+            $.lastCommitId = lastCommitId;
             return this;
         }
+
         public Builder repositoryName(String repositoryName) {
-            this.repositoryName = Objects.requireNonNull(repositoryName);
+            $.repositoryName = repositoryName;
             return this;
         }
+
         public Builder rootFolder(String rootFolder) {
-            this.rootFolder = Objects.requireNonNull(rootFolder);
+            $.rootFolder = rootFolder;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
-        }        public FactoryGitHubConfigurationResponse build() {
-            return new FactoryGitHubConfigurationResponse(accountName, clientId, clientSecret, collaborationBranch, hostName, lastCommitId, repositoryName, rootFolder, type);
+        }
+
+        public FactoryGitHubConfigurationResponse build() {
+            $.accountName = Objects.requireNonNull($.accountName, "expected parameter 'accountName' to be non-null");
+            $.collaborationBranch = Objects.requireNonNull($.collaborationBranch, "expected parameter 'collaborationBranch' to be non-null");
+            $.repositoryName = Objects.requireNonNull($.repositoryName, "expected parameter 'repositoryName' to be non-null");
+            $.rootFolder = Objects.requireNonNull($.rootFolder, "expected parameter 'rootFolder' to be non-null");
+            $.type = Codegen.stringProp("type").arg($.type).require();
+            return $;
         }
     }
+
 }

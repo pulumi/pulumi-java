@@ -21,10 +21,10 @@ public final class DetectorEventVariable extends com.pulumi.resources.InvokeArgs
     public static final DetectorEventVariable Empty = new DetectorEventVariable();
 
     @Import(name="arn")
-      private final @Nullable String arn;
+    private @Nullable String arn;
 
     public Optional<String> arn() {
-        return this.arn == null ? Optional.empty() : Optional.ofNullable(this.arn);
+        return Optional.ofNullable(this.arn);
     }
 
     /**
@@ -32,31 +32,31 @@ public final class DetectorEventVariable extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="createdTime")
-      private final @Nullable String createdTime;
+    private @Nullable String createdTime;
 
     public Optional<String> createdTime() {
-        return this.createdTime == null ? Optional.empty() : Optional.ofNullable(this.createdTime);
+        return Optional.ofNullable(this.createdTime);
     }
 
     @Import(name="dataSource")
-      private final @Nullable DetectorEventVariableDataSource dataSource;
+    private @Nullable DetectorEventVariableDataSource dataSource;
 
     public Optional<DetectorEventVariableDataSource> dataSource() {
-        return this.dataSource == null ? Optional.empty() : Optional.ofNullable(this.dataSource);
+        return Optional.ofNullable(this.dataSource);
     }
 
     @Import(name="dataType")
-      private final @Nullable DetectorEventVariableDataType dataType;
+    private @Nullable DetectorEventVariableDataType dataType;
 
     public Optional<DetectorEventVariableDataType> dataType() {
-        return this.dataType == null ? Optional.empty() : Optional.ofNullable(this.dataType);
+        return Optional.ofNullable(this.dataType);
     }
 
     @Import(name="defaultValue")
-      private final @Nullable String defaultValue;
+    private @Nullable String defaultValue;
 
     public Optional<String> defaultValue() {
-        return this.defaultValue == null ? Optional.empty() : Optional.ofNullable(this.defaultValue);
+        return Optional.ofNullable(this.defaultValue);
     }
 
     /**
@@ -64,17 +64,17 @@ public final class DetectorEventVariable extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="description")
-      private final @Nullable String description;
+    private @Nullable String description;
 
     public Optional<String> description() {
-        return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
+        return Optional.ofNullable(this.description);
     }
 
     @Import(name="inline")
-      private final @Nullable Boolean inline;
+    private @Nullable Boolean inline;
 
     public Optional<Boolean> inline() {
-        return this.inline == null ? Optional.empty() : Optional.ofNullable(this.inline);
+        return Optional.ofNullable(this.inline);
     }
 
     /**
@@ -82,17 +82,17 @@ public final class DetectorEventVariable extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="lastUpdatedTime")
-      private final @Nullable String lastUpdatedTime;
+    private @Nullable String lastUpdatedTime;
 
     public Optional<String> lastUpdatedTime() {
-        return this.lastUpdatedTime == null ? Optional.empty() : Optional.ofNullable(this.lastUpdatedTime);
+        return Optional.ofNullable(this.lastUpdatedTime);
     }
 
     @Import(name="name")
-      private final @Nullable String name;
+    private @Nullable String name;
 
     public Optional<String> name() {
-        return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -100,146 +100,115 @@ public final class DetectorEventVariable extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="tags")
-      private final @Nullable List<DetectorTag> tags;
+    private @Nullable List<DetectorTag> tags;
 
-    public List<DetectorTag> tags() {
-        return this.tags == null ? List.of() : this.tags;
+    public Optional<List<DetectorTag>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     @Import(name="variableType")
-      private final @Nullable DetectorEventVariableVariableType variableType;
+    private @Nullable DetectorEventVariableVariableType variableType;
 
     public Optional<DetectorEventVariableVariableType> variableType() {
-        return this.variableType == null ? Optional.empty() : Optional.ofNullable(this.variableType);
+        return Optional.ofNullable(this.variableType);
     }
 
-    public DetectorEventVariable(
-        @Nullable String arn,
-        @Nullable String createdTime,
-        @Nullable DetectorEventVariableDataSource dataSource,
-        @Nullable DetectorEventVariableDataType dataType,
-        @Nullable String defaultValue,
-        @Nullable String description,
-        @Nullable Boolean inline,
-        @Nullable String lastUpdatedTime,
-        @Nullable String name,
-        @Nullable List<DetectorTag> tags,
-        @Nullable DetectorEventVariableVariableType variableType) {
-        this.arn = arn;
-        this.createdTime = createdTime;
-        this.dataSource = dataSource;
-        this.dataType = dataType;
-        this.defaultValue = defaultValue;
-        this.description = description;
-        this.inline = inline;
-        this.lastUpdatedTime = lastUpdatedTime;
-        this.name = name;
-        this.tags = tags;
-        this.variableType = variableType;
-    }
+    private DetectorEventVariable() {}
 
-    private DetectorEventVariable() {
-        this.arn = null;
-        this.createdTime = null;
-        this.dataSource = null;
-        this.dataType = null;
-        this.defaultValue = null;
-        this.description = null;
-        this.inline = null;
-        this.lastUpdatedTime = null;
-        this.name = null;
-        this.tags = List.of();
-        this.variableType = null;
+    private DetectorEventVariable(DetectorEventVariable $) {
+        this.arn = $.arn;
+        this.createdTime = $.createdTime;
+        this.dataSource = $.dataSource;
+        this.dataType = $.dataType;
+        this.defaultValue = $.defaultValue;
+        this.description = $.description;
+        this.inline = $.inline;
+        this.lastUpdatedTime = $.lastUpdatedTime;
+        this.name = $.name;
+        this.tags = $.tags;
+        this.variableType = $.variableType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DetectorEventVariable defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String arn;
-        private @Nullable String createdTime;
-        private @Nullable DetectorEventVariableDataSource dataSource;
-        private @Nullable DetectorEventVariableDataType dataType;
-        private @Nullable String defaultValue;
-        private @Nullable String description;
-        private @Nullable Boolean inline;
-        private @Nullable String lastUpdatedTime;
-        private @Nullable String name;
-        private @Nullable List<DetectorTag> tags;
-        private @Nullable DetectorEventVariableVariableType variableType;
+        private DetectorEventVariable $;
 
         public Builder() {
-    	      // Empty
+            $ = new DetectorEventVariable();
         }
 
         public Builder(DetectorEventVariable defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.arn = defaults.arn;
-    	      this.createdTime = defaults.createdTime;
-    	      this.dataSource = defaults.dataSource;
-    	      this.dataType = defaults.dataType;
-    	      this.defaultValue = defaults.defaultValue;
-    	      this.description = defaults.description;
-    	      this.inline = defaults.inline;
-    	      this.lastUpdatedTime = defaults.lastUpdatedTime;
-    	      this.name = defaults.name;
-    	      this.tags = defaults.tags;
-    	      this.variableType = defaults.variableType;
+            $ = new DetectorEventVariable(Objects.requireNonNull(defaults));
         }
 
         public Builder arn(@Nullable String arn) {
-            this.arn = arn;
+            $.arn = arn;
             return this;
         }
+
         public Builder createdTime(@Nullable String createdTime) {
-            this.createdTime = createdTime;
+            $.createdTime = createdTime;
             return this;
         }
+
         public Builder dataSource(@Nullable DetectorEventVariableDataSource dataSource) {
-            this.dataSource = dataSource;
+            $.dataSource = dataSource;
             return this;
         }
+
         public Builder dataType(@Nullable DetectorEventVariableDataType dataType) {
-            this.dataType = dataType;
+            $.dataType = dataType;
             return this;
         }
+
         public Builder defaultValue(@Nullable String defaultValue) {
-            this.defaultValue = defaultValue;
+            $.defaultValue = defaultValue;
             return this;
         }
+
         public Builder description(@Nullable String description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
+
         public Builder inline(@Nullable Boolean inline) {
-            this.inline = inline;
+            $.inline = inline;
             return this;
         }
+
         public Builder lastUpdatedTime(@Nullable String lastUpdatedTime) {
-            this.lastUpdatedTime = lastUpdatedTime;
+            $.lastUpdatedTime = lastUpdatedTime;
             return this;
         }
+
         public Builder name(@Nullable String name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
+
         public Builder tags(@Nullable List<DetectorTag> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
+
         public Builder tags(DetectorTag... tags) {
             return tags(List.of(tags));
         }
+
         public Builder variableType(@Nullable DetectorEventVariableVariableType variableType) {
-            this.variableType = variableType;
+            $.variableType = variableType;
             return this;
-        }        public DetectorEventVariable build() {
-            return new DetectorEventVariable(arn, createdTime, dataSource, dataType, defaultValue, description, inline, lastUpdatedTime, name, tags, variableType);
+        }
+
+        public DetectorEventVariable build() {
+            return $;
         }
     }
+
 }

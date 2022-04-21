@@ -7,8 +7,8 @@ import com.pulumi.aws.appmesh.inputs.VirtualServiceSpecProviderVirtualNodeArgs;
 import com.pulumi.aws.appmesh.inputs.VirtualServiceSpecProviderVirtualRouterArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class VirtualServiceSpecProviderArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="virtualNode")
-      private final @Nullable Output<VirtualServiceSpecProviderVirtualNodeArgs> virtualNode;
+    private @Nullable Output<VirtualServiceSpecProviderVirtualNodeArgs> virtualNode;
 
-    public Output<VirtualServiceSpecProviderVirtualNodeArgs> virtualNode() {
-        return this.virtualNode == null ? Codegen.empty() : this.virtualNode;
+    public Optional<Output<VirtualServiceSpecProviderVirtualNodeArgs>> virtualNode() {
+        return Optional.ofNullable(this.virtualNode);
     }
 
     /**
@@ -32,63 +32,58 @@ public final class VirtualServiceSpecProviderArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="virtualRouter")
-      private final @Nullable Output<VirtualServiceSpecProviderVirtualRouterArgs> virtualRouter;
+    private @Nullable Output<VirtualServiceSpecProviderVirtualRouterArgs> virtualRouter;
 
-    public Output<VirtualServiceSpecProviderVirtualRouterArgs> virtualRouter() {
-        return this.virtualRouter == null ? Codegen.empty() : this.virtualRouter;
+    public Optional<Output<VirtualServiceSpecProviderVirtualRouterArgs>> virtualRouter() {
+        return Optional.ofNullable(this.virtualRouter);
     }
 
-    public VirtualServiceSpecProviderArgs(
-        @Nullable Output<VirtualServiceSpecProviderVirtualNodeArgs> virtualNode,
-        @Nullable Output<VirtualServiceSpecProviderVirtualRouterArgs> virtualRouter) {
-        this.virtualNode = virtualNode;
-        this.virtualRouter = virtualRouter;
-    }
+    private VirtualServiceSpecProviderArgs() {}
 
-    private VirtualServiceSpecProviderArgs() {
-        this.virtualNode = Codegen.empty();
-        this.virtualRouter = Codegen.empty();
+    private VirtualServiceSpecProviderArgs(VirtualServiceSpecProviderArgs $) {
+        this.virtualNode = $.virtualNode;
+        this.virtualRouter = $.virtualRouter;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VirtualServiceSpecProviderArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<VirtualServiceSpecProviderVirtualNodeArgs> virtualNode;
-        private @Nullable Output<VirtualServiceSpecProviderVirtualRouterArgs> virtualRouter;
+        private VirtualServiceSpecProviderArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new VirtualServiceSpecProviderArgs();
         }
 
         public Builder(VirtualServiceSpecProviderArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.virtualNode = defaults.virtualNode;
-    	      this.virtualRouter = defaults.virtualRouter;
+            $ = new VirtualServiceSpecProviderArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder virtualNode(@Nullable Output<VirtualServiceSpecProviderVirtualNodeArgs> virtualNode) {
-            this.virtualNode = virtualNode;
+            $.virtualNode = virtualNode;
             return this;
         }
-        public Builder virtualNode(@Nullable VirtualServiceSpecProviderVirtualNodeArgs virtualNode) {
-            this.virtualNode = Codegen.ofNullable(virtualNode);
-            return this;
+
+        public Builder virtualNode(VirtualServiceSpecProviderVirtualNodeArgs virtualNode) {
+            return virtualNode(Output.of(virtualNode));
         }
+
         public Builder virtualRouter(@Nullable Output<VirtualServiceSpecProviderVirtualRouterArgs> virtualRouter) {
-            this.virtualRouter = virtualRouter;
+            $.virtualRouter = virtualRouter;
             return this;
         }
-        public Builder virtualRouter(@Nullable VirtualServiceSpecProviderVirtualRouterArgs virtualRouter) {
-            this.virtualRouter = Codegen.ofNullable(virtualRouter);
-            return this;
-        }        public VirtualServiceSpecProviderArgs build() {
-            return new VirtualServiceSpecProviderArgs(virtualNode, virtualRouter);
+
+        public Builder virtualRouter(VirtualServiceSpecProviderVirtualRouterArgs virtualRouter) {
+            return virtualRouter(Output.of(virtualRouter));
+        }
+
+        public VirtualServiceSpecProviderArgs build() {
+            return $;
         }
     }
+
 }

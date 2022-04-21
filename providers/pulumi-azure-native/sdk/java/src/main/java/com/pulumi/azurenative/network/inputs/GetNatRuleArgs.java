@@ -17,7 +17,7 @@ public final class GetNatRuleArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="gatewayName", required=true)
-      private final String gatewayName;
+    private String gatewayName;
 
     public String gatewayName() {
         return this.gatewayName;
@@ -28,7 +28,7 @@ public final class GetNatRuleArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="natRuleName", required=true)
-      private final String natRuleName;
+    private String natRuleName;
 
     public String natRuleName() {
         return this.natRuleName;
@@ -39,64 +39,59 @@ public final class GetNatRuleArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public GetNatRuleArgs(
-        String gatewayName,
-        String natRuleName,
-        String resourceGroupName) {
-        this.gatewayName = Objects.requireNonNull(gatewayName, "expected parameter 'gatewayName' to be non-null");
-        this.natRuleName = Objects.requireNonNull(natRuleName, "expected parameter 'natRuleName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private GetNatRuleArgs() {}
 
-    private GetNatRuleArgs() {
-        this.gatewayName = null;
-        this.natRuleName = null;
-        this.resourceGroupName = null;
+    private GetNatRuleArgs(GetNatRuleArgs $) {
+        this.gatewayName = $.gatewayName;
+        this.natRuleName = $.natRuleName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetNatRuleArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String gatewayName;
-        private String natRuleName;
-        private String resourceGroupName;
+        private GetNatRuleArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetNatRuleArgs();
         }
 
         public Builder(GetNatRuleArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.gatewayName = defaults.gatewayName;
-    	      this.natRuleName = defaults.natRuleName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new GetNatRuleArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder gatewayName(String gatewayName) {
-            this.gatewayName = Objects.requireNonNull(gatewayName);
+            $.gatewayName = gatewayName;
             return this;
         }
+
         public Builder natRuleName(String natRuleName) {
-            this.natRuleName = Objects.requireNonNull(natRuleName);
+            $.natRuleName = natRuleName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public GetNatRuleArgs build() {
-            return new GetNatRuleArgs(gatewayName, natRuleName, resourceGroupName);
+        }
+
+        public GetNatRuleArgs build() {
+            $.gatewayName = Objects.requireNonNull($.gatewayName, "expected parameter 'gatewayName' to be non-null");
+            $.natRuleName = Objects.requireNonNull($.natRuleName, "expected parameter 'natRuleName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

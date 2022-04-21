@@ -22,7 +22,7 @@ public final class GoogleCloudDatacatalogV1UsageSignalResponse extends com.pulum
      * 
      */
     @Import(name="updateTime", required=true)
-      private final String updateTime;
+    private String updateTime;
 
     public String updateTime() {
         return this.updateTime;
@@ -33,55 +33,52 @@ public final class GoogleCloudDatacatalogV1UsageSignalResponse extends com.pulum
      * 
      */
     @Import(name="usageWithinTimeRange", required=true)
-      private final Map<String,String> usageWithinTimeRange;
+    private Map<String,String> usageWithinTimeRange;
 
     public Map<String,String> usageWithinTimeRange() {
         return this.usageWithinTimeRange;
     }
 
-    public GoogleCloudDatacatalogV1UsageSignalResponse(
-        String updateTime,
-        Map<String,String> usageWithinTimeRange) {
-        this.updateTime = Objects.requireNonNull(updateTime, "expected parameter 'updateTime' to be non-null");
-        this.usageWithinTimeRange = Objects.requireNonNull(usageWithinTimeRange, "expected parameter 'usageWithinTimeRange' to be non-null");
-    }
+    private GoogleCloudDatacatalogV1UsageSignalResponse() {}
 
-    private GoogleCloudDatacatalogV1UsageSignalResponse() {
-        this.updateTime = null;
-        this.usageWithinTimeRange = Map.of();
+    private GoogleCloudDatacatalogV1UsageSignalResponse(GoogleCloudDatacatalogV1UsageSignalResponse $) {
+        this.updateTime = $.updateTime;
+        this.usageWithinTimeRange = $.usageWithinTimeRange;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudDatacatalogV1UsageSignalResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String updateTime;
-        private Map<String,String> usageWithinTimeRange;
+        private GoogleCloudDatacatalogV1UsageSignalResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudDatacatalogV1UsageSignalResponse();
         }
 
         public Builder(GoogleCloudDatacatalogV1UsageSignalResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.updateTime = defaults.updateTime;
-    	      this.usageWithinTimeRange = defaults.usageWithinTimeRange;
+            $ = new GoogleCloudDatacatalogV1UsageSignalResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder updateTime(String updateTime) {
-            this.updateTime = Objects.requireNonNull(updateTime);
+            $.updateTime = updateTime;
             return this;
         }
+
         public Builder usageWithinTimeRange(Map<String,String> usageWithinTimeRange) {
-            this.usageWithinTimeRange = Objects.requireNonNull(usageWithinTimeRange);
+            $.usageWithinTimeRange = usageWithinTimeRange;
             return this;
-        }        public GoogleCloudDatacatalogV1UsageSignalResponse build() {
-            return new GoogleCloudDatacatalogV1UsageSignalResponse(updateTime, usageWithinTimeRange);
+        }
+
+        public GoogleCloudDatacatalogV1UsageSignalResponse build() {
+            $.updateTime = Objects.requireNonNull($.updateTime, "expected parameter 'updateTime' to be non-null");
+            $.usageWithinTimeRange = Objects.requireNonNull($.usageWithinTimeRange, "expected parameter 'usageWithinTimeRange' to be non-null");
+            return $;
         }
     }
+
 }

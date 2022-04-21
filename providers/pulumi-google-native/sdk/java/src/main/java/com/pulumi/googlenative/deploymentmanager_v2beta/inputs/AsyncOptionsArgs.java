@@ -5,10 +5,10 @@ package com.pulumi.googlenative.deploymentmanager_v2beta.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.deploymentmanager_v2beta.inputs.PollingOptionsArgs;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class AsyncOptionsArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="methodMatch")
-      private final @Nullable Output<String> methodMatch;
+    private @Nullable Output<String> methodMatch;
 
-    public Output<String> methodMatch() {
-        return this.methodMatch == null ? Codegen.empty() : this.methodMatch;
+    public Optional<Output<String>> methodMatch() {
+        return Optional.ofNullable(this.methodMatch);
     }
 
     /**
@@ -36,63 +36,58 @@ public final class AsyncOptionsArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="pollingOptions")
-      private final @Nullable Output<PollingOptionsArgs> pollingOptions;
+    private @Nullable Output<PollingOptionsArgs> pollingOptions;
 
-    public Output<PollingOptionsArgs> pollingOptions() {
-        return this.pollingOptions == null ? Codegen.empty() : this.pollingOptions;
+    public Optional<Output<PollingOptionsArgs>> pollingOptions() {
+        return Optional.ofNullable(this.pollingOptions);
     }
 
-    public AsyncOptionsArgs(
-        @Nullable Output<String> methodMatch,
-        @Nullable Output<PollingOptionsArgs> pollingOptions) {
-        this.methodMatch = methodMatch;
-        this.pollingOptions = pollingOptions;
-    }
+    private AsyncOptionsArgs() {}
 
-    private AsyncOptionsArgs() {
-        this.methodMatch = Codegen.empty();
-        this.pollingOptions = Codegen.empty();
+    private AsyncOptionsArgs(AsyncOptionsArgs $) {
+        this.methodMatch = $.methodMatch;
+        this.pollingOptions = $.pollingOptions;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AsyncOptionsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> methodMatch;
-        private @Nullable Output<PollingOptionsArgs> pollingOptions;
+        private AsyncOptionsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AsyncOptionsArgs();
         }
 
         public Builder(AsyncOptionsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.methodMatch = defaults.methodMatch;
-    	      this.pollingOptions = defaults.pollingOptions;
+            $ = new AsyncOptionsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder methodMatch(@Nullable Output<String> methodMatch) {
-            this.methodMatch = methodMatch;
+            $.methodMatch = methodMatch;
             return this;
         }
-        public Builder methodMatch(@Nullable String methodMatch) {
-            this.methodMatch = Codegen.ofNullable(methodMatch);
-            return this;
+
+        public Builder methodMatch(String methodMatch) {
+            return methodMatch(Output.of(methodMatch));
         }
+
         public Builder pollingOptions(@Nullable Output<PollingOptionsArgs> pollingOptions) {
-            this.pollingOptions = pollingOptions;
+            $.pollingOptions = pollingOptions;
             return this;
         }
-        public Builder pollingOptions(@Nullable PollingOptionsArgs pollingOptions) {
-            this.pollingOptions = Codegen.ofNullable(pollingOptions);
-            return this;
-        }        public AsyncOptionsArgs build() {
-            return new AsyncOptionsArgs(methodMatch, pollingOptions);
+
+        public Builder pollingOptions(PollingOptionsArgs pollingOptions) {
+            return pollingOptions(Output.of(pollingOptions));
+        }
+
+        public AsyncOptionsArgs build() {
+            return $;
         }
     }
+
 }

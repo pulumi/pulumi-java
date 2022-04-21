@@ -5,7 +5,6 @@ package com.pulumi.azurenative.documentdb.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,7 +22,7 @@ public final class CassandraViewResourceArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="id", required=true)
-      private final Output<String> id;
+    private Output<String> id;
 
     public Output<String> id() {
         return this.id;
@@ -34,63 +33,60 @@ public final class CassandraViewResourceArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="viewDefinition", required=true)
-      private final Output<String> viewDefinition;
+    private Output<String> viewDefinition;
 
     public Output<String> viewDefinition() {
         return this.viewDefinition;
     }
 
-    public CassandraViewResourceArgs(
-        Output<String> id,
-        Output<String> viewDefinition) {
-        this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
-        this.viewDefinition = Objects.requireNonNull(viewDefinition, "expected parameter 'viewDefinition' to be non-null");
-    }
+    private CassandraViewResourceArgs() {}
 
-    private CassandraViewResourceArgs() {
-        this.id = Codegen.empty();
-        this.viewDefinition = Codegen.empty();
+    private CassandraViewResourceArgs(CassandraViewResourceArgs $) {
+        this.id = $.id;
+        this.viewDefinition = $.viewDefinition;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CassandraViewResourceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> id;
-        private Output<String> viewDefinition;
+        private CassandraViewResourceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CassandraViewResourceArgs();
         }
 
         public Builder(CassandraViewResourceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.id = defaults.id;
-    	      this.viewDefinition = defaults.viewDefinition;
+            $ = new CassandraViewResourceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder id(Output<String> id) {
-            this.id = Objects.requireNonNull(id);
+            $.id = id;
             return this;
         }
+
         public Builder id(String id) {
-            this.id = Output.of(Objects.requireNonNull(id));
-            return this;
+            return id(Output.of(id));
         }
+
         public Builder viewDefinition(Output<String> viewDefinition) {
-            this.viewDefinition = Objects.requireNonNull(viewDefinition);
+            $.viewDefinition = viewDefinition;
             return this;
         }
+
         public Builder viewDefinition(String viewDefinition) {
-            this.viewDefinition = Output.of(Objects.requireNonNull(viewDefinition));
-            return this;
-        }        public CassandraViewResourceArgs build() {
-            return new CassandraViewResourceArgs(id, viewDefinition);
+            return viewDefinition(Output.of(viewDefinition));
+        }
+
+        public CassandraViewResourceArgs build() {
+            $.id = Objects.requireNonNull($.id, "expected parameter 'id' to be non-null");
+            $.viewDefinition = Objects.requireNonNull($.viewDefinition, "expected parameter 'viewDefinition' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,9 +5,9 @@ package com.pulumi.azurenative.web.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class AppRegistrationArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="appId")
-      private final @Nullable Output<String> appId;
+    private @Nullable Output<String> appId;
 
-    public Output<String> appId() {
-        return this.appId == null ? Codegen.empty() : this.appId;
+    public Optional<Output<String>> appId() {
+        return Optional.ofNullable(this.appId);
     }
 
     /**
@@ -35,63 +35,58 @@ public final class AppRegistrationArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="appSecretSettingName")
-      private final @Nullable Output<String> appSecretSettingName;
+    private @Nullable Output<String> appSecretSettingName;
 
-    public Output<String> appSecretSettingName() {
-        return this.appSecretSettingName == null ? Codegen.empty() : this.appSecretSettingName;
+    public Optional<Output<String>> appSecretSettingName() {
+        return Optional.ofNullable(this.appSecretSettingName);
     }
 
-    public AppRegistrationArgs(
-        @Nullable Output<String> appId,
-        @Nullable Output<String> appSecretSettingName) {
-        this.appId = appId;
-        this.appSecretSettingName = appSecretSettingName;
-    }
+    private AppRegistrationArgs() {}
 
-    private AppRegistrationArgs() {
-        this.appId = Codegen.empty();
-        this.appSecretSettingName = Codegen.empty();
+    private AppRegistrationArgs(AppRegistrationArgs $) {
+        this.appId = $.appId;
+        this.appSecretSettingName = $.appSecretSettingName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AppRegistrationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> appId;
-        private @Nullable Output<String> appSecretSettingName;
+        private AppRegistrationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AppRegistrationArgs();
         }
 
         public Builder(AppRegistrationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.appId = defaults.appId;
-    	      this.appSecretSettingName = defaults.appSecretSettingName;
+            $ = new AppRegistrationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder appId(@Nullable Output<String> appId) {
-            this.appId = appId;
+            $.appId = appId;
             return this;
         }
-        public Builder appId(@Nullable String appId) {
-            this.appId = Codegen.ofNullable(appId);
-            return this;
+
+        public Builder appId(String appId) {
+            return appId(Output.of(appId));
         }
+
         public Builder appSecretSettingName(@Nullable Output<String> appSecretSettingName) {
-            this.appSecretSettingName = appSecretSettingName;
+            $.appSecretSettingName = appSecretSettingName;
             return this;
         }
-        public Builder appSecretSettingName(@Nullable String appSecretSettingName) {
-            this.appSecretSettingName = Codegen.ofNullable(appSecretSettingName);
-            return this;
-        }        public AppRegistrationArgs build() {
-            return new AppRegistrationArgs(appId, appSecretSettingName);
+
+        public Builder appSecretSettingName(String appSecretSettingName) {
+            return appSecretSettingName(Output.of(appSecretSettingName));
+        }
+
+        public AppRegistrationArgs build() {
+            return $;
         }
     }
+
 }

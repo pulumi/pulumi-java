@@ -9,11 +9,11 @@ import com.pulumi.azurenative.hybridnetwork.inputs.NetworkFunctionTemplateArgs;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class VendorSkusArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="deploymentMode")
-      private final @Nullable Output<Either<String,SkuDeploymentMode>> deploymentMode;
+    private @Nullable Output<Either<String,SkuDeploymentMode>> deploymentMode;
 
-    public Output<Either<String,SkuDeploymentMode>> deploymentMode() {
-        return this.deploymentMode == null ? Codegen.empty() : this.deploymentMode;
+    public Optional<Output<Either<String,SkuDeploymentMode>>> deploymentMode() {
+        return Optional.ofNullable(this.deploymentMode);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class VendorSkusArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="managedApplicationParameters")
-      private final @Nullable Output<Object> managedApplicationParameters;
+    private @Nullable Output<Object> managedApplicationParameters;
 
-    public Output<Object> managedApplicationParameters() {
-        return this.managedApplicationParameters == null ? Codegen.empty() : this.managedApplicationParameters;
+    public Optional<Output<Object>> managedApplicationParameters() {
+        return Optional.ofNullable(this.managedApplicationParameters);
     }
 
     /**
@@ -48,10 +48,10 @@ public final class VendorSkusArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="managedApplicationTemplate")
-      private final @Nullable Output<Object> managedApplicationTemplate;
+    private @Nullable Output<Object> managedApplicationTemplate;
 
-    public Output<Object> managedApplicationTemplate() {
-        return this.managedApplicationTemplate == null ? Codegen.empty() : this.managedApplicationTemplate;
+    public Optional<Output<Object>> managedApplicationTemplate() {
+        return Optional.ofNullable(this.managedApplicationTemplate);
     }
 
     /**
@@ -59,10 +59,10 @@ public final class VendorSkusArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="networkFunctionTemplate")
-      private final @Nullable Output<NetworkFunctionTemplateArgs> networkFunctionTemplate;
+    private @Nullable Output<NetworkFunctionTemplateArgs> networkFunctionTemplate;
 
-    public Output<NetworkFunctionTemplateArgs> networkFunctionTemplate() {
-        return this.networkFunctionTemplate == null ? Codegen.empty() : this.networkFunctionTemplate;
+    public Optional<Output<NetworkFunctionTemplateArgs>> networkFunctionTemplate() {
+        return Optional.ofNullable(this.networkFunctionTemplate);
     }
 
     /**
@@ -70,10 +70,10 @@ public final class VendorSkusArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="preview")
-      private final @Nullable Output<Boolean> preview;
+    private @Nullable Output<Boolean> preview;
 
-    public Output<Boolean> preview() {
-        return this.preview == null ? Codegen.empty() : this.preview;
+    public Optional<Output<Boolean>> preview() {
+        return Optional.ofNullable(this.preview);
     }
 
     /**
@@ -81,10 +81,10 @@ public final class VendorSkusArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="skuName")
-      private final @Nullable Output<String> skuName;
+    private @Nullable Output<String> skuName;
 
-    public Output<String> skuName() {
-        return this.skuName == null ? Codegen.empty() : this.skuName;
+    public Optional<Output<String>> skuName() {
+        return Optional.ofNullable(this.skuName);
     }
 
     /**
@@ -92,10 +92,10 @@ public final class VendorSkusArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="skuType")
-      private final @Nullable Output<Either<String,SkuType>> skuType;
+    private @Nullable Output<Either<String,SkuType>> skuType;
 
-    public Output<Either<String,SkuType>> skuType() {
-        return this.skuType == null ? Codegen.empty() : this.skuType;
+    public Optional<Output<Either<String,SkuType>>> skuType() {
+        return Optional.ofNullable(this.skuType);
     }
 
     /**
@@ -103,141 +103,119 @@ public final class VendorSkusArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="vendorName", required=true)
-      private final Output<String> vendorName;
+    private Output<String> vendorName;
 
     public Output<String> vendorName() {
         return this.vendorName;
     }
 
-    public VendorSkusArgs(
-        @Nullable Output<Either<String,SkuDeploymentMode>> deploymentMode,
-        @Nullable Output<Object> managedApplicationParameters,
-        @Nullable Output<Object> managedApplicationTemplate,
-        @Nullable Output<NetworkFunctionTemplateArgs> networkFunctionTemplate,
-        @Nullable Output<Boolean> preview,
-        @Nullable Output<String> skuName,
-        @Nullable Output<Either<String,SkuType>> skuType,
-        Output<String> vendorName) {
-        this.deploymentMode = deploymentMode;
-        this.managedApplicationParameters = managedApplicationParameters;
-        this.managedApplicationTemplate = managedApplicationTemplate;
-        this.networkFunctionTemplate = networkFunctionTemplate;
-        this.preview = preview;
-        this.skuName = skuName;
-        this.skuType = skuType;
-        this.vendorName = Objects.requireNonNull(vendorName, "expected parameter 'vendorName' to be non-null");
-    }
+    private VendorSkusArgs() {}
 
-    private VendorSkusArgs() {
-        this.deploymentMode = Codegen.empty();
-        this.managedApplicationParameters = Codegen.empty();
-        this.managedApplicationTemplate = Codegen.empty();
-        this.networkFunctionTemplate = Codegen.empty();
-        this.preview = Codegen.empty();
-        this.skuName = Codegen.empty();
-        this.skuType = Codegen.empty();
-        this.vendorName = Codegen.empty();
+    private VendorSkusArgs(VendorSkusArgs $) {
+        this.deploymentMode = $.deploymentMode;
+        this.managedApplicationParameters = $.managedApplicationParameters;
+        this.managedApplicationTemplate = $.managedApplicationTemplate;
+        this.networkFunctionTemplate = $.networkFunctionTemplate;
+        this.preview = $.preview;
+        this.skuName = $.skuName;
+        this.skuType = $.skuType;
+        this.vendorName = $.vendorName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VendorSkusArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Either<String,SkuDeploymentMode>> deploymentMode;
-        private @Nullable Output<Object> managedApplicationParameters;
-        private @Nullable Output<Object> managedApplicationTemplate;
-        private @Nullable Output<NetworkFunctionTemplateArgs> networkFunctionTemplate;
-        private @Nullable Output<Boolean> preview;
-        private @Nullable Output<String> skuName;
-        private @Nullable Output<Either<String,SkuType>> skuType;
-        private Output<String> vendorName;
+        private VendorSkusArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new VendorSkusArgs();
         }
 
         public Builder(VendorSkusArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.deploymentMode = defaults.deploymentMode;
-    	      this.managedApplicationParameters = defaults.managedApplicationParameters;
-    	      this.managedApplicationTemplate = defaults.managedApplicationTemplate;
-    	      this.networkFunctionTemplate = defaults.networkFunctionTemplate;
-    	      this.preview = defaults.preview;
-    	      this.skuName = defaults.skuName;
-    	      this.skuType = defaults.skuType;
-    	      this.vendorName = defaults.vendorName;
+            $ = new VendorSkusArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder deploymentMode(@Nullable Output<Either<String,SkuDeploymentMode>> deploymentMode) {
-            this.deploymentMode = deploymentMode;
+            $.deploymentMode = deploymentMode;
             return this;
         }
-        public Builder deploymentMode(@Nullable Either<String,SkuDeploymentMode> deploymentMode) {
-            this.deploymentMode = Codegen.ofNullable(deploymentMode);
-            return this;
+
+        public Builder deploymentMode(Either<String,SkuDeploymentMode> deploymentMode) {
+            return deploymentMode(Output.of(deploymentMode));
         }
+
         public Builder managedApplicationParameters(@Nullable Output<Object> managedApplicationParameters) {
-            this.managedApplicationParameters = managedApplicationParameters;
+            $.managedApplicationParameters = managedApplicationParameters;
             return this;
         }
-        public Builder managedApplicationParameters(@Nullable Object managedApplicationParameters) {
-            this.managedApplicationParameters = Codegen.ofNullable(managedApplicationParameters);
-            return this;
+
+        public Builder managedApplicationParameters(Object managedApplicationParameters) {
+            return managedApplicationParameters(Output.of(managedApplicationParameters));
         }
+
         public Builder managedApplicationTemplate(@Nullable Output<Object> managedApplicationTemplate) {
-            this.managedApplicationTemplate = managedApplicationTemplate;
+            $.managedApplicationTemplate = managedApplicationTemplate;
             return this;
         }
-        public Builder managedApplicationTemplate(@Nullable Object managedApplicationTemplate) {
-            this.managedApplicationTemplate = Codegen.ofNullable(managedApplicationTemplate);
-            return this;
+
+        public Builder managedApplicationTemplate(Object managedApplicationTemplate) {
+            return managedApplicationTemplate(Output.of(managedApplicationTemplate));
         }
+
         public Builder networkFunctionTemplate(@Nullable Output<NetworkFunctionTemplateArgs> networkFunctionTemplate) {
-            this.networkFunctionTemplate = networkFunctionTemplate;
+            $.networkFunctionTemplate = networkFunctionTemplate;
             return this;
         }
-        public Builder networkFunctionTemplate(@Nullable NetworkFunctionTemplateArgs networkFunctionTemplate) {
-            this.networkFunctionTemplate = Codegen.ofNullable(networkFunctionTemplate);
-            return this;
+
+        public Builder networkFunctionTemplate(NetworkFunctionTemplateArgs networkFunctionTemplate) {
+            return networkFunctionTemplate(Output.of(networkFunctionTemplate));
         }
+
         public Builder preview(@Nullable Output<Boolean> preview) {
-            this.preview = preview;
+            $.preview = preview;
             return this;
         }
-        public Builder preview(@Nullable Boolean preview) {
-            this.preview = Codegen.ofNullable(preview);
-            return this;
+
+        public Builder preview(Boolean preview) {
+            return preview(Output.of(preview));
         }
+
         public Builder skuName(@Nullable Output<String> skuName) {
-            this.skuName = skuName;
+            $.skuName = skuName;
             return this;
         }
-        public Builder skuName(@Nullable String skuName) {
-            this.skuName = Codegen.ofNullable(skuName);
-            return this;
+
+        public Builder skuName(String skuName) {
+            return skuName(Output.of(skuName));
         }
+
         public Builder skuType(@Nullable Output<Either<String,SkuType>> skuType) {
-            this.skuType = skuType;
+            $.skuType = skuType;
             return this;
         }
-        public Builder skuType(@Nullable Either<String,SkuType> skuType) {
-            this.skuType = Codegen.ofNullable(skuType);
-            return this;
+
+        public Builder skuType(Either<String,SkuType> skuType) {
+            return skuType(Output.of(skuType));
         }
+
         public Builder vendorName(Output<String> vendorName) {
-            this.vendorName = Objects.requireNonNull(vendorName);
+            $.vendorName = vendorName;
             return this;
         }
+
         public Builder vendorName(String vendorName) {
-            this.vendorName = Output.of(Objects.requireNonNull(vendorName));
-            return this;
-        }        public VendorSkusArgs build() {
-            return new VendorSkusArgs(deploymentMode, managedApplicationParameters, managedApplicationTemplate, networkFunctionTemplate, preview, skuName, skuType, vendorName);
+            return vendorName(Output.of(vendorName));
+        }
+
+        public VendorSkusArgs build() {
+            $.vendorName = Objects.requireNonNull($.vendorName, "expected parameter 'vendorName' to be non-null");
+            return $;
         }
     }
+
 }

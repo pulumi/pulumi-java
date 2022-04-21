@@ -24,7 +24,7 @@ public final class AzureFirewallIPConfigurationResponse extends com.pulumi.resou
      * 
      */
     @Import(name="etag", required=true)
-      private final String etag;
+    private String etag;
 
     public String etag() {
         return this.etag;
@@ -35,10 +35,10 @@ public final class AzureFirewallIPConfigurationResponse extends com.pulumi.resou
      * 
      */
     @Import(name="id")
-      private final @Nullable String id;
+    private @Nullable String id;
 
     public Optional<String> id() {
-        return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
+        return Optional.ofNullable(this.id);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class AzureFirewallIPConfigurationResponse extends com.pulumi.resou
      * 
      */
     @Import(name="name")
-      private final @Nullable String name;
+    private @Nullable String name;
 
     public Optional<String> name() {
-        return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -57,7 +57,7 @@ public final class AzureFirewallIPConfigurationResponse extends com.pulumi.resou
      * 
      */
     @Import(name="privateIPAddress", required=true)
-      private final String privateIPAddress;
+    private String privateIPAddress;
 
     public String privateIPAddress() {
         return this.privateIPAddress;
@@ -68,7 +68,7 @@ public final class AzureFirewallIPConfigurationResponse extends com.pulumi.resou
      * 
      */
     @Import(name="provisioningState", required=true)
-      private final String provisioningState;
+    private String provisioningState;
 
     public String provisioningState() {
         return this.provisioningState;
@@ -79,10 +79,10 @@ public final class AzureFirewallIPConfigurationResponse extends com.pulumi.resou
      * 
      */
     @Import(name="publicIPAddress")
-      private final @Nullable SubResourceResponse publicIPAddress;
+    private @Nullable SubResourceResponse publicIPAddress;
 
     public Optional<SubResourceResponse> publicIPAddress() {
-        return this.publicIPAddress == null ? Optional.empty() : Optional.ofNullable(this.publicIPAddress);
+        return Optional.ofNullable(this.publicIPAddress);
     }
 
     /**
@@ -90,10 +90,10 @@ public final class AzureFirewallIPConfigurationResponse extends com.pulumi.resou
      * 
      */
     @Import(name="subnet")
-      private final @Nullable SubResourceResponse subnet;
+    private @Nullable SubResourceResponse subnet;
 
     public Optional<SubResourceResponse> subnet() {
-        return this.subnet == null ? Optional.empty() : Optional.ofNullable(this.subnet);
+        return Optional.ofNullable(this.subnet);
     }
 
     /**
@@ -101,109 +101,90 @@ public final class AzureFirewallIPConfigurationResponse extends com.pulumi.resou
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
     }
 
-    public AzureFirewallIPConfigurationResponse(
-        String etag,
-        @Nullable String id,
-        @Nullable String name,
-        String privateIPAddress,
-        String provisioningState,
-        @Nullable SubResourceResponse publicIPAddress,
-        @Nullable SubResourceResponse subnet,
-        String type) {
-        this.etag = Objects.requireNonNull(etag, "expected parameter 'etag' to be non-null");
-        this.id = id;
-        this.name = name;
-        this.privateIPAddress = Objects.requireNonNull(privateIPAddress, "expected parameter 'privateIPAddress' to be non-null");
-        this.provisioningState = Objects.requireNonNull(provisioningState, "expected parameter 'provisioningState' to be non-null");
-        this.publicIPAddress = publicIPAddress;
-        this.subnet = subnet;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private AzureFirewallIPConfigurationResponse() {}
 
-    private AzureFirewallIPConfigurationResponse() {
-        this.etag = null;
-        this.id = null;
-        this.name = null;
-        this.privateIPAddress = null;
-        this.provisioningState = null;
-        this.publicIPAddress = null;
-        this.subnet = null;
-        this.type = null;
+    private AzureFirewallIPConfigurationResponse(AzureFirewallIPConfigurationResponse $) {
+        this.etag = $.etag;
+        this.id = $.id;
+        this.name = $.name;
+        this.privateIPAddress = $.privateIPAddress;
+        this.provisioningState = $.provisioningState;
+        this.publicIPAddress = $.publicIPAddress;
+        this.subnet = $.subnet;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AzureFirewallIPConfigurationResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String etag;
-        private @Nullable String id;
-        private @Nullable String name;
-        private String privateIPAddress;
-        private String provisioningState;
-        private @Nullable SubResourceResponse publicIPAddress;
-        private @Nullable SubResourceResponse subnet;
-        private String type;
+        private AzureFirewallIPConfigurationResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AzureFirewallIPConfigurationResponse();
         }
 
         public Builder(AzureFirewallIPConfigurationResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.etag = defaults.etag;
-    	      this.id = defaults.id;
-    	      this.name = defaults.name;
-    	      this.privateIPAddress = defaults.privateIPAddress;
-    	      this.provisioningState = defaults.provisioningState;
-    	      this.publicIPAddress = defaults.publicIPAddress;
-    	      this.subnet = defaults.subnet;
-    	      this.type = defaults.type;
+            $ = new AzureFirewallIPConfigurationResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder etag(String etag) {
-            this.etag = Objects.requireNonNull(etag);
+            $.etag = etag;
             return this;
         }
+
         public Builder id(@Nullable String id) {
-            this.id = id;
+            $.id = id;
             return this;
         }
+
         public Builder name(@Nullable String name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
+
         public Builder privateIPAddress(String privateIPAddress) {
-            this.privateIPAddress = Objects.requireNonNull(privateIPAddress);
+            $.privateIPAddress = privateIPAddress;
             return this;
         }
+
         public Builder provisioningState(String provisioningState) {
-            this.provisioningState = Objects.requireNonNull(provisioningState);
+            $.provisioningState = provisioningState;
             return this;
         }
+
         public Builder publicIPAddress(@Nullable SubResourceResponse publicIPAddress) {
-            this.publicIPAddress = publicIPAddress;
+            $.publicIPAddress = publicIPAddress;
             return this;
         }
+
         public Builder subnet(@Nullable SubResourceResponse subnet) {
-            this.subnet = subnet;
+            $.subnet = subnet;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
-        }        public AzureFirewallIPConfigurationResponse build() {
-            return new AzureFirewallIPConfigurationResponse(etag, id, name, privateIPAddress, provisioningState, publicIPAddress, subnet, type);
+        }
+
+        public AzureFirewallIPConfigurationResponse build() {
+            $.etag = Objects.requireNonNull($.etag, "expected parameter 'etag' to be non-null");
+            $.privateIPAddress = Objects.requireNonNull($.privateIPAddress, "expected parameter 'privateIPAddress' to be non-null");
+            $.provisioningState = Objects.requireNonNull($.provisioningState, "expected parameter 'provisioningState' to be non-null");
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

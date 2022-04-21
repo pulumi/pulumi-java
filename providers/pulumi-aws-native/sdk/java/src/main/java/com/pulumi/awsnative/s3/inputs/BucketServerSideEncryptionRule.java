@@ -24,62 +24,57 @@ public final class BucketServerSideEncryptionRule extends com.pulumi.resources.I
      * 
      */
     @Import(name="bucketKeyEnabled")
-      private final @Nullable Boolean bucketKeyEnabled;
+    private @Nullable Boolean bucketKeyEnabled;
 
     public Optional<Boolean> bucketKeyEnabled() {
-        return this.bucketKeyEnabled == null ? Optional.empty() : Optional.ofNullable(this.bucketKeyEnabled);
+        return Optional.ofNullable(this.bucketKeyEnabled);
     }
 
     @Import(name="serverSideEncryptionByDefault")
-      private final @Nullable BucketServerSideEncryptionByDefault serverSideEncryptionByDefault;
+    private @Nullable BucketServerSideEncryptionByDefault serverSideEncryptionByDefault;
 
     public Optional<BucketServerSideEncryptionByDefault> serverSideEncryptionByDefault() {
-        return this.serverSideEncryptionByDefault == null ? Optional.empty() : Optional.ofNullable(this.serverSideEncryptionByDefault);
+        return Optional.ofNullable(this.serverSideEncryptionByDefault);
     }
 
-    public BucketServerSideEncryptionRule(
-        @Nullable Boolean bucketKeyEnabled,
-        @Nullable BucketServerSideEncryptionByDefault serverSideEncryptionByDefault) {
-        this.bucketKeyEnabled = bucketKeyEnabled;
-        this.serverSideEncryptionByDefault = serverSideEncryptionByDefault;
-    }
+    private BucketServerSideEncryptionRule() {}
 
-    private BucketServerSideEncryptionRule() {
-        this.bucketKeyEnabled = null;
-        this.serverSideEncryptionByDefault = null;
+    private BucketServerSideEncryptionRule(BucketServerSideEncryptionRule $) {
+        this.bucketKeyEnabled = $.bucketKeyEnabled;
+        this.serverSideEncryptionByDefault = $.serverSideEncryptionByDefault;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BucketServerSideEncryptionRule defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Boolean bucketKeyEnabled;
-        private @Nullable BucketServerSideEncryptionByDefault serverSideEncryptionByDefault;
+        private BucketServerSideEncryptionRule $;
 
         public Builder() {
-    	      // Empty
+            $ = new BucketServerSideEncryptionRule();
         }
 
         public Builder(BucketServerSideEncryptionRule defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.bucketKeyEnabled = defaults.bucketKeyEnabled;
-    	      this.serverSideEncryptionByDefault = defaults.serverSideEncryptionByDefault;
+            $ = new BucketServerSideEncryptionRule(Objects.requireNonNull(defaults));
         }
 
         public Builder bucketKeyEnabled(@Nullable Boolean bucketKeyEnabled) {
-            this.bucketKeyEnabled = bucketKeyEnabled;
+            $.bucketKeyEnabled = bucketKeyEnabled;
             return this;
         }
+
         public Builder serverSideEncryptionByDefault(@Nullable BucketServerSideEncryptionByDefault serverSideEncryptionByDefault) {
-            this.serverSideEncryptionByDefault = serverSideEncryptionByDefault;
+            $.serverSideEncryptionByDefault = serverSideEncryptionByDefault;
             return this;
-        }        public BucketServerSideEncryptionRule build() {
-            return new BucketServerSideEncryptionRule(bucketKeyEnabled, serverSideEncryptionByDefault);
+        }
+
+        public BucketServerSideEncryptionRule build() {
+            return $;
         }
     }
+
 }

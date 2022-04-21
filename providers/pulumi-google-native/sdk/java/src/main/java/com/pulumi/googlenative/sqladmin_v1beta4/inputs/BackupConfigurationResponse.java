@@ -24,7 +24,7 @@ public final class BackupConfigurationResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="backupRetentionSettings", required=true)
-      private final BackupRetentionSettingsResponse backupRetentionSettings;
+    private BackupRetentionSettingsResponse backupRetentionSettings;
 
     public BackupRetentionSettingsResponse backupRetentionSettings() {
         return this.backupRetentionSettings;
@@ -35,7 +35,7 @@ public final class BackupConfigurationResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="binaryLogEnabled", required=true)
-      private final Boolean binaryLogEnabled;
+    private Boolean binaryLogEnabled;
 
     public Boolean binaryLogEnabled() {
         return this.binaryLogEnabled;
@@ -46,7 +46,7 @@ public final class BackupConfigurationResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="enabled", required=true)
-      private final Boolean enabled;
+    private Boolean enabled;
 
     public Boolean enabled() {
         return this.enabled;
@@ -57,7 +57,7 @@ public final class BackupConfigurationResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="kind", required=true)
-      private final String kind;
+    private String kind;
 
     public String kind() {
         return this.kind;
@@ -68,7 +68,7 @@ public final class BackupConfigurationResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="location", required=true)
-      private final String location;
+    private String location;
 
     public String location() {
         return this.location;
@@ -79,7 +79,7 @@ public final class BackupConfigurationResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="pointInTimeRecoveryEnabled", required=true)
-      private final Boolean pointInTimeRecoveryEnabled;
+    private Boolean pointInTimeRecoveryEnabled;
 
     public Boolean pointInTimeRecoveryEnabled() {
         return this.pointInTimeRecoveryEnabled;
@@ -90,7 +90,7 @@ public final class BackupConfigurationResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="replicationLogArchivingEnabled", required=true)
-      private final Boolean replicationLogArchivingEnabled;
+    private Boolean replicationLogArchivingEnabled;
 
     public Boolean replicationLogArchivingEnabled() {
         return this.replicationLogArchivingEnabled;
@@ -101,7 +101,7 @@ public final class BackupConfigurationResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="startTime", required=true)
-      private final String startTime;
+    private String startTime;
 
     public String startTime() {
         return this.startTime;
@@ -112,118 +112,101 @@ public final class BackupConfigurationResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="transactionLogRetentionDays", required=true)
-      private final Integer transactionLogRetentionDays;
+    private Integer transactionLogRetentionDays;
 
     public Integer transactionLogRetentionDays() {
         return this.transactionLogRetentionDays;
     }
 
-    public BackupConfigurationResponse(
-        BackupRetentionSettingsResponse backupRetentionSettings,
-        Boolean binaryLogEnabled,
-        Boolean enabled,
-        String kind,
-        String location,
-        Boolean pointInTimeRecoveryEnabled,
-        Boolean replicationLogArchivingEnabled,
-        String startTime,
-        Integer transactionLogRetentionDays) {
-        this.backupRetentionSettings = Objects.requireNonNull(backupRetentionSettings, "expected parameter 'backupRetentionSettings' to be non-null");
-        this.binaryLogEnabled = Objects.requireNonNull(binaryLogEnabled, "expected parameter 'binaryLogEnabled' to be non-null");
-        this.enabled = Objects.requireNonNull(enabled, "expected parameter 'enabled' to be non-null");
-        this.kind = Objects.requireNonNull(kind, "expected parameter 'kind' to be non-null");
-        this.location = Objects.requireNonNull(location, "expected parameter 'location' to be non-null");
-        this.pointInTimeRecoveryEnabled = Objects.requireNonNull(pointInTimeRecoveryEnabled, "expected parameter 'pointInTimeRecoveryEnabled' to be non-null");
-        this.replicationLogArchivingEnabled = Objects.requireNonNull(replicationLogArchivingEnabled, "expected parameter 'replicationLogArchivingEnabled' to be non-null");
-        this.startTime = Objects.requireNonNull(startTime, "expected parameter 'startTime' to be non-null");
-        this.transactionLogRetentionDays = Objects.requireNonNull(transactionLogRetentionDays, "expected parameter 'transactionLogRetentionDays' to be non-null");
-    }
+    private BackupConfigurationResponse() {}
 
-    private BackupConfigurationResponse() {
-        this.backupRetentionSettings = null;
-        this.binaryLogEnabled = null;
-        this.enabled = null;
-        this.kind = null;
-        this.location = null;
-        this.pointInTimeRecoveryEnabled = null;
-        this.replicationLogArchivingEnabled = null;
-        this.startTime = null;
-        this.transactionLogRetentionDays = null;
+    private BackupConfigurationResponse(BackupConfigurationResponse $) {
+        this.backupRetentionSettings = $.backupRetentionSettings;
+        this.binaryLogEnabled = $.binaryLogEnabled;
+        this.enabled = $.enabled;
+        this.kind = $.kind;
+        this.location = $.location;
+        this.pointInTimeRecoveryEnabled = $.pointInTimeRecoveryEnabled;
+        this.replicationLogArchivingEnabled = $.replicationLogArchivingEnabled;
+        this.startTime = $.startTime;
+        this.transactionLogRetentionDays = $.transactionLogRetentionDays;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BackupConfigurationResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private BackupRetentionSettingsResponse backupRetentionSettings;
-        private Boolean binaryLogEnabled;
-        private Boolean enabled;
-        private String kind;
-        private String location;
-        private Boolean pointInTimeRecoveryEnabled;
-        private Boolean replicationLogArchivingEnabled;
-        private String startTime;
-        private Integer transactionLogRetentionDays;
+        private BackupConfigurationResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new BackupConfigurationResponse();
         }
 
         public Builder(BackupConfigurationResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.backupRetentionSettings = defaults.backupRetentionSettings;
-    	      this.binaryLogEnabled = defaults.binaryLogEnabled;
-    	      this.enabled = defaults.enabled;
-    	      this.kind = defaults.kind;
-    	      this.location = defaults.location;
-    	      this.pointInTimeRecoveryEnabled = defaults.pointInTimeRecoveryEnabled;
-    	      this.replicationLogArchivingEnabled = defaults.replicationLogArchivingEnabled;
-    	      this.startTime = defaults.startTime;
-    	      this.transactionLogRetentionDays = defaults.transactionLogRetentionDays;
+            $ = new BackupConfigurationResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder backupRetentionSettings(BackupRetentionSettingsResponse backupRetentionSettings) {
-            this.backupRetentionSettings = Objects.requireNonNull(backupRetentionSettings);
+            $.backupRetentionSettings = backupRetentionSettings;
             return this;
         }
+
         public Builder binaryLogEnabled(Boolean binaryLogEnabled) {
-            this.binaryLogEnabled = Objects.requireNonNull(binaryLogEnabled);
+            $.binaryLogEnabled = binaryLogEnabled;
             return this;
         }
+
         public Builder enabled(Boolean enabled) {
-            this.enabled = Objects.requireNonNull(enabled);
+            $.enabled = enabled;
             return this;
         }
+
         public Builder kind(String kind) {
-            this.kind = Objects.requireNonNull(kind);
+            $.kind = kind;
             return this;
         }
+
         public Builder location(String location) {
-            this.location = Objects.requireNonNull(location);
+            $.location = location;
             return this;
         }
+
         public Builder pointInTimeRecoveryEnabled(Boolean pointInTimeRecoveryEnabled) {
-            this.pointInTimeRecoveryEnabled = Objects.requireNonNull(pointInTimeRecoveryEnabled);
+            $.pointInTimeRecoveryEnabled = pointInTimeRecoveryEnabled;
             return this;
         }
+
         public Builder replicationLogArchivingEnabled(Boolean replicationLogArchivingEnabled) {
-            this.replicationLogArchivingEnabled = Objects.requireNonNull(replicationLogArchivingEnabled);
+            $.replicationLogArchivingEnabled = replicationLogArchivingEnabled;
             return this;
         }
+
         public Builder startTime(String startTime) {
-            this.startTime = Objects.requireNonNull(startTime);
+            $.startTime = startTime;
             return this;
         }
+
         public Builder transactionLogRetentionDays(Integer transactionLogRetentionDays) {
-            this.transactionLogRetentionDays = Objects.requireNonNull(transactionLogRetentionDays);
+            $.transactionLogRetentionDays = transactionLogRetentionDays;
             return this;
-        }        public BackupConfigurationResponse build() {
-            return new BackupConfigurationResponse(backupRetentionSettings, binaryLogEnabled, enabled, kind, location, pointInTimeRecoveryEnabled, replicationLogArchivingEnabled, startTime, transactionLogRetentionDays);
+        }
+
+        public BackupConfigurationResponse build() {
+            $.backupRetentionSettings = Objects.requireNonNull($.backupRetentionSettings, "expected parameter 'backupRetentionSettings' to be non-null");
+            $.binaryLogEnabled = Objects.requireNonNull($.binaryLogEnabled, "expected parameter 'binaryLogEnabled' to be non-null");
+            $.enabled = Objects.requireNonNull($.enabled, "expected parameter 'enabled' to be non-null");
+            $.kind = Objects.requireNonNull($.kind, "expected parameter 'kind' to be non-null");
+            $.location = Objects.requireNonNull($.location, "expected parameter 'location' to be non-null");
+            $.pointInTimeRecoveryEnabled = Objects.requireNonNull($.pointInTimeRecoveryEnabled, "expected parameter 'pointInTimeRecoveryEnabled' to be non-null");
+            $.replicationLogArchivingEnabled = Objects.requireNonNull($.replicationLogArchivingEnabled, "expected parameter 'replicationLogArchivingEnabled' to be non-null");
+            $.startTime = Objects.requireNonNull($.startTime, "expected parameter 'startTime' to be non-null");
+            $.transactionLogRetentionDays = Objects.requireNonNull($.transactionLogRetentionDays, "expected parameter 'transactionLogRetentionDays' to be non-null");
+            return $;
         }
     }
+
 }

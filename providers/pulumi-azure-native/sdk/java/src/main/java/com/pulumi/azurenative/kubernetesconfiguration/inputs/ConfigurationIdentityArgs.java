@@ -6,8 +6,8 @@ package com.pulumi.azurenative.kubernetesconfiguration.inputs;
 import com.pulumi.azurenative.kubernetesconfiguration.enums.ResourceIdentityType;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class ConfigurationIdentityArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="type")
-      private final @Nullable Output<ResourceIdentityType> type;
+    private @Nullable Output<ResourceIdentityType> type;
 
-    public Output<ResourceIdentityType> type() {
-        return this.type == null ? Codegen.empty() : this.type;
+    public Optional<Output<ResourceIdentityType>> type() {
+        return Optional.ofNullable(this.type);
     }
 
-    public ConfigurationIdentityArgs(@Nullable Output<ResourceIdentityType> type) {
-        this.type = type;
-    }
+    private ConfigurationIdentityArgs() {}
 
-    private ConfigurationIdentityArgs() {
-        this.type = Codegen.empty();
+    private ConfigurationIdentityArgs(ConfigurationIdentityArgs $) {
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ConfigurationIdentityArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<ResourceIdentityType> type;
+        private ConfigurationIdentityArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ConfigurationIdentityArgs();
         }
 
         public Builder(ConfigurationIdentityArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.type = defaults.type;
+            $ = new ConfigurationIdentityArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder type(@Nullable Output<ResourceIdentityType> type) {
-            this.type = type;
+            $.type = type;
             return this;
         }
-        public Builder type(@Nullable ResourceIdentityType type) {
-            this.type = Codegen.ofNullable(type);
-            return this;
-        }        public ConfigurationIdentityArgs build() {
-            return new ConfigurationIdentityArgs(type);
+
+        public Builder type(ResourceIdentityType type) {
+            return type(Output.of(type));
+        }
+
+        public ConfigurationIdentityArgs build() {
+            return $;
         }
     }
+
 }

@@ -21,7 +21,7 @@ public final class JobStatusResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="jobName", required=true)
-      private final String jobName;
+    private String jobName;
 
     public String jobName() {
         return this.jobName;
@@ -32,55 +32,52 @@ public final class JobStatusResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="jobProgress", required=true)
-      private final String jobProgress;
+    private String jobProgress;
 
     public String jobProgress() {
         return this.jobProgress;
     }
 
-    public JobStatusResponse(
-        String jobName,
-        String jobProgress) {
-        this.jobName = Objects.requireNonNull(jobName, "expected parameter 'jobName' to be non-null");
-        this.jobProgress = Objects.requireNonNull(jobProgress, "expected parameter 'jobProgress' to be non-null");
-    }
+    private JobStatusResponse() {}
 
-    private JobStatusResponse() {
-        this.jobName = null;
-        this.jobProgress = null;
+    private JobStatusResponse(JobStatusResponse $) {
+        this.jobName = $.jobName;
+        this.jobProgress = $.jobProgress;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(JobStatusResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String jobName;
-        private String jobProgress;
+        private JobStatusResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new JobStatusResponse();
         }
 
         public Builder(JobStatusResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.jobName = defaults.jobName;
-    	      this.jobProgress = defaults.jobProgress;
+            $ = new JobStatusResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder jobName(String jobName) {
-            this.jobName = Objects.requireNonNull(jobName);
+            $.jobName = jobName;
             return this;
         }
+
         public Builder jobProgress(String jobProgress) {
-            this.jobProgress = Objects.requireNonNull(jobProgress);
+            $.jobProgress = jobProgress;
             return this;
-        }        public JobStatusResponse build() {
-            return new JobStatusResponse(jobName, jobProgress);
+        }
+
+        public JobStatusResponse build() {
+            $.jobName = Objects.requireNonNull($.jobName, "expected parameter 'jobName' to be non-null");
+            $.jobProgress = Objects.requireNonNull($.jobProgress, "expected parameter 'jobProgress' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,11 +5,11 @@ package com.pulumi.azurenative.network.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,7 +26,7 @@ public final class ConnectionMonitorTestGroupArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="destinations", required=true)
-      private final Output<List<String>> destinations;
+    private Output<List<String>> destinations;
 
     public Output<List<String>> destinations() {
         return this.destinations;
@@ -37,10 +37,10 @@ public final class ConnectionMonitorTestGroupArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="disable")
-      private final @Nullable Output<Boolean> disable;
+    private @Nullable Output<Boolean> disable;
 
-    public Output<Boolean> disable() {
-        return this.disable == null ? Codegen.empty() : this.disable;
+    public Optional<Output<Boolean>> disable() {
+        return Optional.ofNullable(this.disable);
     }
 
     /**
@@ -48,7 +48,7 @@ public final class ConnectionMonitorTestGroupArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="name", required=true)
-      private final Output<String> name;
+    private Output<String> name;
 
     public Output<String> name() {
         return this.name;
@@ -59,7 +59,7 @@ public final class ConnectionMonitorTestGroupArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="sources", required=true)
-      private final Output<List<String>> sources;
+    private Output<List<String>> sources;
 
     public Output<List<String>> sources() {
         return this.sources;
@@ -70,111 +70,104 @@ public final class ConnectionMonitorTestGroupArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="testConfigurations", required=true)
-      private final Output<List<String>> testConfigurations;
+    private Output<List<String>> testConfigurations;
 
     public Output<List<String>> testConfigurations() {
         return this.testConfigurations;
     }
 
-    public ConnectionMonitorTestGroupArgs(
-        Output<List<String>> destinations,
-        @Nullable Output<Boolean> disable,
-        Output<String> name,
-        Output<List<String>> sources,
-        Output<List<String>> testConfigurations) {
-        this.destinations = Objects.requireNonNull(destinations, "expected parameter 'destinations' to be non-null");
-        this.disable = disable;
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.sources = Objects.requireNonNull(sources, "expected parameter 'sources' to be non-null");
-        this.testConfigurations = Objects.requireNonNull(testConfigurations, "expected parameter 'testConfigurations' to be non-null");
-    }
+    private ConnectionMonitorTestGroupArgs() {}
 
-    private ConnectionMonitorTestGroupArgs() {
-        this.destinations = Codegen.empty();
-        this.disable = Codegen.empty();
-        this.name = Codegen.empty();
-        this.sources = Codegen.empty();
-        this.testConfigurations = Codegen.empty();
+    private ConnectionMonitorTestGroupArgs(ConnectionMonitorTestGroupArgs $) {
+        this.destinations = $.destinations;
+        this.disable = $.disable;
+        this.name = $.name;
+        this.sources = $.sources;
+        this.testConfigurations = $.testConfigurations;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ConnectionMonitorTestGroupArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<List<String>> destinations;
-        private @Nullable Output<Boolean> disable;
-        private Output<String> name;
-        private Output<List<String>> sources;
-        private Output<List<String>> testConfigurations;
+        private ConnectionMonitorTestGroupArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ConnectionMonitorTestGroupArgs();
         }
 
         public Builder(ConnectionMonitorTestGroupArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.destinations = defaults.destinations;
-    	      this.disable = defaults.disable;
-    	      this.name = defaults.name;
-    	      this.sources = defaults.sources;
-    	      this.testConfigurations = defaults.testConfigurations;
+            $ = new ConnectionMonitorTestGroupArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder destinations(Output<List<String>> destinations) {
-            this.destinations = Objects.requireNonNull(destinations);
+            $.destinations = destinations;
             return this;
         }
+
         public Builder destinations(List<String> destinations) {
-            this.destinations = Output.of(Objects.requireNonNull(destinations));
-            return this;
+            return destinations(Output.of(destinations));
         }
+
         public Builder destinations(String... destinations) {
             return destinations(List.of(destinations));
         }
+
         public Builder disable(@Nullable Output<Boolean> disable) {
-            this.disable = disable;
+            $.disable = disable;
             return this;
         }
-        public Builder disable(@Nullable Boolean disable) {
-            this.disable = Codegen.ofNullable(disable);
-            return this;
+
+        public Builder disable(Boolean disable) {
+            return disable(Output.of(disable));
         }
+
         public Builder name(Output<String> name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Output.of(Objects.requireNonNull(name));
-            return this;
+            return name(Output.of(name));
         }
+
         public Builder sources(Output<List<String>> sources) {
-            this.sources = Objects.requireNonNull(sources);
+            $.sources = sources;
             return this;
         }
+
         public Builder sources(List<String> sources) {
-            this.sources = Output.of(Objects.requireNonNull(sources));
-            return this;
+            return sources(Output.of(sources));
         }
+
         public Builder sources(String... sources) {
             return sources(List.of(sources));
         }
+
         public Builder testConfigurations(Output<List<String>> testConfigurations) {
-            this.testConfigurations = Objects.requireNonNull(testConfigurations);
+            $.testConfigurations = testConfigurations;
             return this;
         }
+
         public Builder testConfigurations(List<String> testConfigurations) {
-            this.testConfigurations = Output.of(Objects.requireNonNull(testConfigurations));
-            return this;
+            return testConfigurations(Output.of(testConfigurations));
         }
+
         public Builder testConfigurations(String... testConfigurations) {
             return testConfigurations(List.of(testConfigurations));
-        }        public ConnectionMonitorTestGroupArgs build() {
-            return new ConnectionMonitorTestGroupArgs(destinations, disable, name, sources, testConfigurations);
+        }
+
+        public ConnectionMonitorTestGroupArgs build() {
+            $.destinations = Objects.requireNonNull($.destinations, "expected parameter 'destinations' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.sources = Objects.requireNonNull($.sources, "expected parameter 'sources' to be non-null");
+            $.testConfigurations = Objects.requireNonNull($.testConfigurations, "expected parameter 'testConfigurations' to be non-null");
+            return $;
         }
     }
+
 }

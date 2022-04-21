@@ -8,11 +8,11 @@ import com.pulumi.awsnative.nimblestudio.enums.LaunchProfileStreamingInstanceTyp
 import com.pulumi.awsnative.nimblestudio.inputs.LaunchProfileStreamConfigurationSessionStorageArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,7 +25,7 @@ public final class LaunchProfileStreamConfigurationArgs extends com.pulumi.resou
     public static final LaunchProfileStreamConfigurationArgs Empty = new LaunchProfileStreamConfigurationArgs();
 
     @Import(name="clipboardMode", required=true)
-      private final Output<LaunchProfileStreamingClipboardMode> clipboardMode;
+    private Output<LaunchProfileStreamingClipboardMode> clipboardMode;
 
     public Output<LaunchProfileStreamingClipboardMode> clipboardMode() {
         return this.clipboardMode;
@@ -37,7 +37,7 @@ public final class LaunchProfileStreamConfigurationArgs extends com.pulumi.resou
      * 
      */
     @Import(name="ec2InstanceTypes", required=true)
-      private final Output<List<LaunchProfileStreamingInstanceType>> ec2InstanceTypes;
+    private Output<List<LaunchProfileStreamingInstanceType>> ec2InstanceTypes;
 
     public Output<List<LaunchProfileStreamingInstanceType>> ec2InstanceTypes() {
         return this.ec2InstanceTypes;
@@ -51,10 +51,10 @@ public final class LaunchProfileStreamConfigurationArgs extends com.pulumi.resou
      * 
      */
     @Import(name="maxSessionLengthInMinutes")
-      private final @Nullable Output<Double> maxSessionLengthInMinutes;
+    private @Nullable Output<Double> maxSessionLengthInMinutes;
 
-    public Output<Double> maxSessionLengthInMinutes() {
-        return this.maxSessionLengthInMinutes == null ? Codegen.empty() : this.maxSessionLengthInMinutes;
+    public Optional<Output<Double>> maxSessionLengthInMinutes() {
+        return Optional.ofNullable(this.maxSessionLengthInMinutes);
     }
 
     /**
@@ -71,17 +71,17 @@ public final class LaunchProfileStreamConfigurationArgs extends com.pulumi.resou
      * 
      */
     @Import(name="maxStoppedSessionLengthInMinutes")
-      private final @Nullable Output<Double> maxStoppedSessionLengthInMinutes;
+    private @Nullable Output<Double> maxStoppedSessionLengthInMinutes;
 
-    public Output<Double> maxStoppedSessionLengthInMinutes() {
-        return this.maxStoppedSessionLengthInMinutes == null ? Codegen.empty() : this.maxStoppedSessionLengthInMinutes;
+    public Optional<Output<Double>> maxStoppedSessionLengthInMinutes() {
+        return Optional.ofNullable(this.maxStoppedSessionLengthInMinutes);
     }
 
     @Import(name="sessionStorage")
-      private final @Nullable Output<LaunchProfileStreamConfigurationSessionStorageArgs> sessionStorage;
+    private @Nullable Output<LaunchProfileStreamConfigurationSessionStorageArgs> sessionStorage;
 
-    public Output<LaunchProfileStreamConfigurationSessionStorageArgs> sessionStorage() {
-        return this.sessionStorage == null ? Codegen.empty() : this.sessionStorage;
+    public Optional<Output<LaunchProfileStreamConfigurationSessionStorageArgs>> sessionStorage() {
+        return Optional.ofNullable(this.sessionStorage);
     }
 
     /**
@@ -90,121 +90,109 @@ public final class LaunchProfileStreamConfigurationArgs extends com.pulumi.resou
      * 
      */
     @Import(name="streamingImageIds", required=true)
-      private final Output<List<String>> streamingImageIds;
+    private Output<List<String>> streamingImageIds;
 
     public Output<List<String>> streamingImageIds() {
         return this.streamingImageIds;
     }
 
-    public LaunchProfileStreamConfigurationArgs(
-        Output<LaunchProfileStreamingClipboardMode> clipboardMode,
-        Output<List<LaunchProfileStreamingInstanceType>> ec2InstanceTypes,
-        @Nullable Output<Double> maxSessionLengthInMinutes,
-        @Nullable Output<Double> maxStoppedSessionLengthInMinutes,
-        @Nullable Output<LaunchProfileStreamConfigurationSessionStorageArgs> sessionStorage,
-        Output<List<String>> streamingImageIds) {
-        this.clipboardMode = Objects.requireNonNull(clipboardMode, "expected parameter 'clipboardMode' to be non-null");
-        this.ec2InstanceTypes = Objects.requireNonNull(ec2InstanceTypes, "expected parameter 'ec2InstanceTypes' to be non-null");
-        this.maxSessionLengthInMinutes = maxSessionLengthInMinutes;
-        this.maxStoppedSessionLengthInMinutes = maxStoppedSessionLengthInMinutes;
-        this.sessionStorage = sessionStorage;
-        this.streamingImageIds = Objects.requireNonNull(streamingImageIds, "expected parameter 'streamingImageIds' to be non-null");
-    }
+    private LaunchProfileStreamConfigurationArgs() {}
 
-    private LaunchProfileStreamConfigurationArgs() {
-        this.clipboardMode = Codegen.empty();
-        this.ec2InstanceTypes = Codegen.empty();
-        this.maxSessionLengthInMinutes = Codegen.empty();
-        this.maxStoppedSessionLengthInMinutes = Codegen.empty();
-        this.sessionStorage = Codegen.empty();
-        this.streamingImageIds = Codegen.empty();
+    private LaunchProfileStreamConfigurationArgs(LaunchProfileStreamConfigurationArgs $) {
+        this.clipboardMode = $.clipboardMode;
+        this.ec2InstanceTypes = $.ec2InstanceTypes;
+        this.maxSessionLengthInMinutes = $.maxSessionLengthInMinutes;
+        this.maxStoppedSessionLengthInMinutes = $.maxStoppedSessionLengthInMinutes;
+        this.sessionStorage = $.sessionStorage;
+        this.streamingImageIds = $.streamingImageIds;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LaunchProfileStreamConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<LaunchProfileStreamingClipboardMode> clipboardMode;
-        private Output<List<LaunchProfileStreamingInstanceType>> ec2InstanceTypes;
-        private @Nullable Output<Double> maxSessionLengthInMinutes;
-        private @Nullable Output<Double> maxStoppedSessionLengthInMinutes;
-        private @Nullable Output<LaunchProfileStreamConfigurationSessionStorageArgs> sessionStorage;
-        private Output<List<String>> streamingImageIds;
+        private LaunchProfileStreamConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new LaunchProfileStreamConfigurationArgs();
         }
 
         public Builder(LaunchProfileStreamConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.clipboardMode = defaults.clipboardMode;
-    	      this.ec2InstanceTypes = defaults.ec2InstanceTypes;
-    	      this.maxSessionLengthInMinutes = defaults.maxSessionLengthInMinutes;
-    	      this.maxStoppedSessionLengthInMinutes = defaults.maxStoppedSessionLengthInMinutes;
-    	      this.sessionStorage = defaults.sessionStorage;
-    	      this.streamingImageIds = defaults.streamingImageIds;
+            $ = new LaunchProfileStreamConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder clipboardMode(Output<LaunchProfileStreamingClipboardMode> clipboardMode) {
-            this.clipboardMode = Objects.requireNonNull(clipboardMode);
+            $.clipboardMode = clipboardMode;
             return this;
         }
+
         public Builder clipboardMode(LaunchProfileStreamingClipboardMode clipboardMode) {
-            this.clipboardMode = Output.of(Objects.requireNonNull(clipboardMode));
-            return this;
+            return clipboardMode(Output.of(clipboardMode));
         }
+
         public Builder ec2InstanceTypes(Output<List<LaunchProfileStreamingInstanceType>> ec2InstanceTypes) {
-            this.ec2InstanceTypes = Objects.requireNonNull(ec2InstanceTypes);
+            $.ec2InstanceTypes = ec2InstanceTypes;
             return this;
         }
+
         public Builder ec2InstanceTypes(List<LaunchProfileStreamingInstanceType> ec2InstanceTypes) {
-            this.ec2InstanceTypes = Output.of(Objects.requireNonNull(ec2InstanceTypes));
-            return this;
+            return ec2InstanceTypes(Output.of(ec2InstanceTypes));
         }
+
         public Builder ec2InstanceTypes(LaunchProfileStreamingInstanceType... ec2InstanceTypes) {
             return ec2InstanceTypes(List.of(ec2InstanceTypes));
         }
+
         public Builder maxSessionLengthInMinutes(@Nullable Output<Double> maxSessionLengthInMinutes) {
-            this.maxSessionLengthInMinutes = maxSessionLengthInMinutes;
+            $.maxSessionLengthInMinutes = maxSessionLengthInMinutes;
             return this;
         }
-        public Builder maxSessionLengthInMinutes(@Nullable Double maxSessionLengthInMinutes) {
-            this.maxSessionLengthInMinutes = Codegen.ofNullable(maxSessionLengthInMinutes);
-            return this;
+
+        public Builder maxSessionLengthInMinutes(Double maxSessionLengthInMinutes) {
+            return maxSessionLengthInMinutes(Output.of(maxSessionLengthInMinutes));
         }
+
         public Builder maxStoppedSessionLengthInMinutes(@Nullable Output<Double> maxStoppedSessionLengthInMinutes) {
-            this.maxStoppedSessionLengthInMinutes = maxStoppedSessionLengthInMinutes;
+            $.maxStoppedSessionLengthInMinutes = maxStoppedSessionLengthInMinutes;
             return this;
         }
-        public Builder maxStoppedSessionLengthInMinutes(@Nullable Double maxStoppedSessionLengthInMinutes) {
-            this.maxStoppedSessionLengthInMinutes = Codegen.ofNullable(maxStoppedSessionLengthInMinutes);
-            return this;
+
+        public Builder maxStoppedSessionLengthInMinutes(Double maxStoppedSessionLengthInMinutes) {
+            return maxStoppedSessionLengthInMinutes(Output.of(maxStoppedSessionLengthInMinutes));
         }
+
         public Builder sessionStorage(@Nullable Output<LaunchProfileStreamConfigurationSessionStorageArgs> sessionStorage) {
-            this.sessionStorage = sessionStorage;
+            $.sessionStorage = sessionStorage;
             return this;
         }
-        public Builder sessionStorage(@Nullable LaunchProfileStreamConfigurationSessionStorageArgs sessionStorage) {
-            this.sessionStorage = Codegen.ofNullable(sessionStorage);
-            return this;
+
+        public Builder sessionStorage(LaunchProfileStreamConfigurationSessionStorageArgs sessionStorage) {
+            return sessionStorage(Output.of(sessionStorage));
         }
+
         public Builder streamingImageIds(Output<List<String>> streamingImageIds) {
-            this.streamingImageIds = Objects.requireNonNull(streamingImageIds);
+            $.streamingImageIds = streamingImageIds;
             return this;
         }
+
         public Builder streamingImageIds(List<String> streamingImageIds) {
-            this.streamingImageIds = Output.of(Objects.requireNonNull(streamingImageIds));
-            return this;
+            return streamingImageIds(Output.of(streamingImageIds));
         }
+
         public Builder streamingImageIds(String... streamingImageIds) {
             return streamingImageIds(List.of(streamingImageIds));
-        }        public LaunchProfileStreamConfigurationArgs build() {
-            return new LaunchProfileStreamConfigurationArgs(clipboardMode, ec2InstanceTypes, maxSessionLengthInMinutes, maxStoppedSessionLengthInMinutes, sessionStorage, streamingImageIds);
+        }
+
+        public LaunchProfileStreamConfigurationArgs build() {
+            $.clipboardMode = Objects.requireNonNull($.clipboardMode, "expected parameter 'clipboardMode' to be non-null");
+            $.ec2InstanceTypes = Objects.requireNonNull($.ec2InstanceTypes, "expected parameter 'ec2InstanceTypes' to be non-null");
+            $.streamingImageIds = Objects.requireNonNull($.streamingImageIds, "expected parameter 'streamingImageIds' to be non-null");
+            return $;
         }
     }
+
 }

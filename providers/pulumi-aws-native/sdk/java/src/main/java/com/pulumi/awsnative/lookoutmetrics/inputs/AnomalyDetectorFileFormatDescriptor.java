@@ -16,62 +16,57 @@ public final class AnomalyDetectorFileFormatDescriptor extends com.pulumi.resour
     public static final AnomalyDetectorFileFormatDescriptor Empty = new AnomalyDetectorFileFormatDescriptor();
 
     @Import(name="csvFormatDescriptor")
-      private final @Nullable AnomalyDetectorCsvFormatDescriptor csvFormatDescriptor;
+    private @Nullable AnomalyDetectorCsvFormatDescriptor csvFormatDescriptor;
 
     public Optional<AnomalyDetectorCsvFormatDescriptor> csvFormatDescriptor() {
-        return this.csvFormatDescriptor == null ? Optional.empty() : Optional.ofNullable(this.csvFormatDescriptor);
+        return Optional.ofNullable(this.csvFormatDescriptor);
     }
 
     @Import(name="jsonFormatDescriptor")
-      private final @Nullable AnomalyDetectorJsonFormatDescriptor jsonFormatDescriptor;
+    private @Nullable AnomalyDetectorJsonFormatDescriptor jsonFormatDescriptor;
 
     public Optional<AnomalyDetectorJsonFormatDescriptor> jsonFormatDescriptor() {
-        return this.jsonFormatDescriptor == null ? Optional.empty() : Optional.ofNullable(this.jsonFormatDescriptor);
+        return Optional.ofNullable(this.jsonFormatDescriptor);
     }
 
-    public AnomalyDetectorFileFormatDescriptor(
-        @Nullable AnomalyDetectorCsvFormatDescriptor csvFormatDescriptor,
-        @Nullable AnomalyDetectorJsonFormatDescriptor jsonFormatDescriptor) {
-        this.csvFormatDescriptor = csvFormatDescriptor;
-        this.jsonFormatDescriptor = jsonFormatDescriptor;
-    }
+    private AnomalyDetectorFileFormatDescriptor() {}
 
-    private AnomalyDetectorFileFormatDescriptor() {
-        this.csvFormatDescriptor = null;
-        this.jsonFormatDescriptor = null;
+    private AnomalyDetectorFileFormatDescriptor(AnomalyDetectorFileFormatDescriptor $) {
+        this.csvFormatDescriptor = $.csvFormatDescriptor;
+        this.jsonFormatDescriptor = $.jsonFormatDescriptor;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AnomalyDetectorFileFormatDescriptor defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable AnomalyDetectorCsvFormatDescriptor csvFormatDescriptor;
-        private @Nullable AnomalyDetectorJsonFormatDescriptor jsonFormatDescriptor;
+        private AnomalyDetectorFileFormatDescriptor $;
 
         public Builder() {
-    	      // Empty
+            $ = new AnomalyDetectorFileFormatDescriptor();
         }
 
         public Builder(AnomalyDetectorFileFormatDescriptor defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.csvFormatDescriptor = defaults.csvFormatDescriptor;
-    	      this.jsonFormatDescriptor = defaults.jsonFormatDescriptor;
+            $ = new AnomalyDetectorFileFormatDescriptor(Objects.requireNonNull(defaults));
         }
 
         public Builder csvFormatDescriptor(@Nullable AnomalyDetectorCsvFormatDescriptor csvFormatDescriptor) {
-            this.csvFormatDescriptor = csvFormatDescriptor;
+            $.csvFormatDescriptor = csvFormatDescriptor;
             return this;
         }
+
         public Builder jsonFormatDescriptor(@Nullable AnomalyDetectorJsonFormatDescriptor jsonFormatDescriptor) {
-            this.jsonFormatDescriptor = jsonFormatDescriptor;
+            $.jsonFormatDescriptor = jsonFormatDescriptor;
             return this;
-        }        public AnomalyDetectorFileFormatDescriptor build() {
-            return new AnomalyDetectorFileFormatDescriptor(csvFormatDescriptor, jsonFormatDescriptor);
+        }
+
+        public AnomalyDetectorFileFormatDescriptor build() {
+            return $;
         }
     }
+
 }

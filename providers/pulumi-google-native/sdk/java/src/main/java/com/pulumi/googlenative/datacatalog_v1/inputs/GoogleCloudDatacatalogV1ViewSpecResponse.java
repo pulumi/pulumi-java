@@ -21,45 +21,45 @@ public final class GoogleCloudDatacatalogV1ViewSpecResponse extends com.pulumi.r
      * 
      */
     @Import(name="viewQuery", required=true)
-      private final String viewQuery;
+    private String viewQuery;
 
     public String viewQuery() {
         return this.viewQuery;
     }
 
-    public GoogleCloudDatacatalogV1ViewSpecResponse(String viewQuery) {
-        this.viewQuery = Objects.requireNonNull(viewQuery, "expected parameter 'viewQuery' to be non-null");
-    }
+    private GoogleCloudDatacatalogV1ViewSpecResponse() {}
 
-    private GoogleCloudDatacatalogV1ViewSpecResponse() {
-        this.viewQuery = null;
+    private GoogleCloudDatacatalogV1ViewSpecResponse(GoogleCloudDatacatalogV1ViewSpecResponse $) {
+        this.viewQuery = $.viewQuery;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudDatacatalogV1ViewSpecResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String viewQuery;
+        private GoogleCloudDatacatalogV1ViewSpecResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudDatacatalogV1ViewSpecResponse();
         }
 
         public Builder(GoogleCloudDatacatalogV1ViewSpecResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.viewQuery = defaults.viewQuery;
+            $ = new GoogleCloudDatacatalogV1ViewSpecResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder viewQuery(String viewQuery) {
-            this.viewQuery = Objects.requireNonNull(viewQuery);
+            $.viewQuery = viewQuery;
             return this;
-        }        public GoogleCloudDatacatalogV1ViewSpecResponse build() {
-            return new GoogleCloudDatacatalogV1ViewSpecResponse(viewQuery);
+        }
+
+        public GoogleCloudDatacatalogV1ViewSpecResponse build() {
+            $.viewQuery = Objects.requireNonNull($.viewQuery, "expected parameter 'viewQuery' to be non-null");
+            return $;
         }
     }
+
 }

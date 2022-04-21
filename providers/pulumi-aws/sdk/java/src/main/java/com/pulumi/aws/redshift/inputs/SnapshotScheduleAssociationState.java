@@ -5,9 +5,9 @@ package com.pulumi.aws.redshift.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class SnapshotScheduleAssociationState extends com.pulumi.resources
      * 
      */
     @Import(name="clusterIdentifier")
-      private final @Nullable Output<String> clusterIdentifier;
+    private @Nullable Output<String> clusterIdentifier;
 
-    public Output<String> clusterIdentifier() {
-        return this.clusterIdentifier == null ? Codegen.empty() : this.clusterIdentifier;
+    public Optional<Output<String>> clusterIdentifier() {
+        return Optional.ofNullable(this.clusterIdentifier);
     }
 
     /**
@@ -31,63 +31,58 @@ public final class SnapshotScheduleAssociationState extends com.pulumi.resources
      * 
      */
     @Import(name="scheduleIdentifier")
-      private final @Nullable Output<String> scheduleIdentifier;
+    private @Nullable Output<String> scheduleIdentifier;
 
-    public Output<String> scheduleIdentifier() {
-        return this.scheduleIdentifier == null ? Codegen.empty() : this.scheduleIdentifier;
+    public Optional<Output<String>> scheduleIdentifier() {
+        return Optional.ofNullable(this.scheduleIdentifier);
     }
 
-    public SnapshotScheduleAssociationState(
-        @Nullable Output<String> clusterIdentifier,
-        @Nullable Output<String> scheduleIdentifier) {
-        this.clusterIdentifier = clusterIdentifier;
-        this.scheduleIdentifier = scheduleIdentifier;
-    }
+    private SnapshotScheduleAssociationState() {}
 
-    private SnapshotScheduleAssociationState() {
-        this.clusterIdentifier = Codegen.empty();
-        this.scheduleIdentifier = Codegen.empty();
+    private SnapshotScheduleAssociationState(SnapshotScheduleAssociationState $) {
+        this.clusterIdentifier = $.clusterIdentifier;
+        this.scheduleIdentifier = $.scheduleIdentifier;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SnapshotScheduleAssociationState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> clusterIdentifier;
-        private @Nullable Output<String> scheduleIdentifier;
+        private SnapshotScheduleAssociationState $;
 
         public Builder() {
-    	      // Empty
+            $ = new SnapshotScheduleAssociationState();
         }
 
         public Builder(SnapshotScheduleAssociationState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.clusterIdentifier = defaults.clusterIdentifier;
-    	      this.scheduleIdentifier = defaults.scheduleIdentifier;
+            $ = new SnapshotScheduleAssociationState(Objects.requireNonNull(defaults));
         }
 
         public Builder clusterIdentifier(@Nullable Output<String> clusterIdentifier) {
-            this.clusterIdentifier = clusterIdentifier;
+            $.clusterIdentifier = clusterIdentifier;
             return this;
         }
-        public Builder clusterIdentifier(@Nullable String clusterIdentifier) {
-            this.clusterIdentifier = Codegen.ofNullable(clusterIdentifier);
-            return this;
+
+        public Builder clusterIdentifier(String clusterIdentifier) {
+            return clusterIdentifier(Output.of(clusterIdentifier));
         }
+
         public Builder scheduleIdentifier(@Nullable Output<String> scheduleIdentifier) {
-            this.scheduleIdentifier = scheduleIdentifier;
+            $.scheduleIdentifier = scheduleIdentifier;
             return this;
         }
-        public Builder scheduleIdentifier(@Nullable String scheduleIdentifier) {
-            this.scheduleIdentifier = Codegen.ofNullable(scheduleIdentifier);
-            return this;
-        }        public SnapshotScheduleAssociationState build() {
-            return new SnapshotScheduleAssociationState(clusterIdentifier, scheduleIdentifier);
+
+        public Builder scheduleIdentifier(String scheduleIdentifier) {
+            return scheduleIdentifier(Output.of(scheduleIdentifier));
+        }
+
+        public SnapshotScheduleAssociationState build() {
+            return $;
         }
     }
+
 }

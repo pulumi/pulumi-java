@@ -31,10 +31,10 @@ public final class VaultPropertiesResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="accessPolicies")
-      private final @Nullable List<AccessPolicyEntryResponse> accessPolicies;
+    private @Nullable List<AccessPolicyEntryResponse> accessPolicies;
 
-    public List<AccessPolicyEntryResponse> accessPolicies() {
-        return this.accessPolicies == null ? List.of() : this.accessPolicies;
+    public Optional<List<AccessPolicyEntryResponse>> accessPolicies() {
+        return Optional.ofNullable(this.accessPolicies);
     }
 
     /**
@@ -42,10 +42,10 @@ public final class VaultPropertiesResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="enablePurgeProtection")
-      private final @Nullable Boolean enablePurgeProtection;
+    private @Nullable Boolean enablePurgeProtection;
 
     public Optional<Boolean> enablePurgeProtection() {
-        return this.enablePurgeProtection == null ? Optional.empty() : Optional.ofNullable(this.enablePurgeProtection);
+        return Optional.ofNullable(this.enablePurgeProtection);
     }
 
     /**
@@ -53,10 +53,10 @@ public final class VaultPropertiesResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="enableRbacAuthorization")
-      private final @Nullable Boolean enableRbacAuthorization;
+    private @Nullable Boolean enableRbacAuthorization;
 
     public Optional<Boolean> enableRbacAuthorization() {
-        return this.enableRbacAuthorization == null ? Optional.empty() : Optional.ofNullable(this.enableRbacAuthorization);
+        return Optional.ofNullable(this.enableRbacAuthorization);
     }
 
     /**
@@ -64,10 +64,10 @@ public final class VaultPropertiesResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="enableSoftDelete")
-      private final @Nullable Boolean enableSoftDelete;
+    private @Nullable Boolean enableSoftDelete;
 
     public Optional<Boolean> enableSoftDelete() {
-        return this.enableSoftDelete == null ? Optional.empty() : Optional.ofNullable(this.enableSoftDelete);
+        return Optional.ofNullable(this.enableSoftDelete);
     }
 
     /**
@@ -75,10 +75,10 @@ public final class VaultPropertiesResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="enabledForDeployment")
-      private final @Nullable Boolean enabledForDeployment;
+    private @Nullable Boolean enabledForDeployment;
 
     public Optional<Boolean> enabledForDeployment() {
-        return this.enabledForDeployment == null ? Optional.empty() : Optional.ofNullable(this.enabledForDeployment);
+        return Optional.ofNullable(this.enabledForDeployment);
     }
 
     /**
@@ -86,10 +86,10 @@ public final class VaultPropertiesResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="enabledForDiskEncryption")
-      private final @Nullable Boolean enabledForDiskEncryption;
+    private @Nullable Boolean enabledForDiskEncryption;
 
     public Optional<Boolean> enabledForDiskEncryption() {
-        return this.enabledForDiskEncryption == null ? Optional.empty() : Optional.ofNullable(this.enabledForDiskEncryption);
+        return Optional.ofNullable(this.enabledForDiskEncryption);
     }
 
     /**
@@ -97,10 +97,10 @@ public final class VaultPropertiesResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="enabledForTemplateDeployment")
-      private final @Nullable Boolean enabledForTemplateDeployment;
+    private @Nullable Boolean enabledForTemplateDeployment;
 
     public Optional<Boolean> enabledForTemplateDeployment() {
-        return this.enabledForTemplateDeployment == null ? Optional.empty() : Optional.ofNullable(this.enabledForTemplateDeployment);
+        return Optional.ofNullable(this.enabledForTemplateDeployment);
     }
 
     /**
@@ -108,7 +108,7 @@ public final class VaultPropertiesResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="hsmPoolResourceId", required=true)
-      private final String hsmPoolResourceId;
+    private String hsmPoolResourceId;
 
     public String hsmPoolResourceId() {
         return this.hsmPoolResourceId;
@@ -119,10 +119,10 @@ public final class VaultPropertiesResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="networkAcls")
-      private final @Nullable NetworkRuleSetResponse networkAcls;
+    private @Nullable NetworkRuleSetResponse networkAcls;
 
     public Optional<NetworkRuleSetResponse> networkAcls() {
-        return this.networkAcls == null ? Optional.empty() : Optional.ofNullable(this.networkAcls);
+        return Optional.ofNullable(this.networkAcls);
     }
 
     /**
@@ -130,7 +130,7 @@ public final class VaultPropertiesResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="privateEndpointConnections", required=true)
-      private final List<PrivateEndpointConnectionItemResponse> privateEndpointConnections;
+    private List<PrivateEndpointConnectionItemResponse> privateEndpointConnections;
 
     public List<PrivateEndpointConnectionItemResponse> privateEndpointConnections() {
         return this.privateEndpointConnections;
@@ -141,10 +141,10 @@ public final class VaultPropertiesResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="provisioningState")
-      private final @Nullable String provisioningState;
+    private @Nullable String provisioningState;
 
     public Optional<String> provisioningState() {
-        return this.provisioningState == null ? Optional.empty() : Optional.ofNullable(this.provisioningState);
+        return Optional.ofNullable(this.provisioningState);
     }
 
     /**
@@ -152,7 +152,7 @@ public final class VaultPropertiesResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="sku", required=true)
-      private final SkuResponse sku;
+    private SkuResponse sku;
 
     public SkuResponse sku() {
         return this.sku;
@@ -163,10 +163,10 @@ public final class VaultPropertiesResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="softDeleteRetentionInDays")
-      private final @Nullable Integer softDeleteRetentionInDays;
+    private @Nullable Integer softDeleteRetentionInDays;
 
     public Optional<Integer> softDeleteRetentionInDays() {
-        return this.softDeleteRetentionInDays == null ? Optional.empty() : Optional.ofNullable(this.softDeleteRetentionInDays);
+        return Optional.ofNullable(this.softDeleteRetentionInDays);
     }
 
     /**
@@ -174,7 +174,7 @@ public final class VaultPropertiesResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="tenantId", required=true)
-      private final String tenantId;
+    private String tenantId;
 
     public String tenantId() {
         return this.tenantId;
@@ -185,178 +185,143 @@ public final class VaultPropertiesResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="vaultUri")
-      private final @Nullable String vaultUri;
+    private @Nullable String vaultUri;
 
     public Optional<String> vaultUri() {
-        return this.vaultUri == null ? Optional.empty() : Optional.ofNullable(this.vaultUri);
+        return Optional.ofNullable(this.vaultUri);
     }
 
-    public VaultPropertiesResponse(
-        @Nullable List<AccessPolicyEntryResponse> accessPolicies,
-        @Nullable Boolean enablePurgeProtection,
-        @Nullable Boolean enableRbacAuthorization,
-        @Nullable Boolean enableSoftDelete,
-        @Nullable Boolean enabledForDeployment,
-        @Nullable Boolean enabledForDiskEncryption,
-        @Nullable Boolean enabledForTemplateDeployment,
-        String hsmPoolResourceId,
-        @Nullable NetworkRuleSetResponse networkAcls,
-        List<PrivateEndpointConnectionItemResponse> privateEndpointConnections,
-        @Nullable String provisioningState,
-        SkuResponse sku,
-        @Nullable Integer softDeleteRetentionInDays,
-        String tenantId,
-        @Nullable String vaultUri) {
-        this.accessPolicies = accessPolicies;
-        this.enablePurgeProtection = enablePurgeProtection;
-        this.enableRbacAuthorization = Codegen.booleanProp("enableRbacAuthorization").arg(enableRbacAuthorization).def(false).getNullable();
-        this.enableSoftDelete = Codegen.booleanProp("enableSoftDelete").arg(enableSoftDelete).def(true).getNullable();
-        this.enabledForDeployment = enabledForDeployment;
-        this.enabledForDiskEncryption = enabledForDiskEncryption;
-        this.enabledForTemplateDeployment = enabledForTemplateDeployment;
-        this.hsmPoolResourceId = Objects.requireNonNull(hsmPoolResourceId, "expected parameter 'hsmPoolResourceId' to be non-null");
-        this.networkAcls = networkAcls;
-        this.privateEndpointConnections = Objects.requireNonNull(privateEndpointConnections, "expected parameter 'privateEndpointConnections' to be non-null");
-        this.provisioningState = provisioningState;
-        this.sku = Objects.requireNonNull(sku, "expected parameter 'sku' to be non-null");
-        this.softDeleteRetentionInDays = Codegen.integerProp("softDeleteRetentionInDays").arg(softDeleteRetentionInDays).def(90).getNullable();
-        this.tenantId = Objects.requireNonNull(tenantId, "expected parameter 'tenantId' to be non-null");
-        this.vaultUri = vaultUri;
-    }
+    private VaultPropertiesResponse() {}
 
-    private VaultPropertiesResponse() {
-        this.accessPolicies = List.of();
-        this.enablePurgeProtection = null;
-        this.enableRbacAuthorization = null;
-        this.enableSoftDelete = null;
-        this.enabledForDeployment = null;
-        this.enabledForDiskEncryption = null;
-        this.enabledForTemplateDeployment = null;
-        this.hsmPoolResourceId = null;
-        this.networkAcls = null;
-        this.privateEndpointConnections = List.of();
-        this.provisioningState = null;
-        this.sku = null;
-        this.softDeleteRetentionInDays = null;
-        this.tenantId = null;
-        this.vaultUri = null;
+    private VaultPropertiesResponse(VaultPropertiesResponse $) {
+        this.accessPolicies = $.accessPolicies;
+        this.enablePurgeProtection = $.enablePurgeProtection;
+        this.enableRbacAuthorization = $.enableRbacAuthorization;
+        this.enableSoftDelete = $.enableSoftDelete;
+        this.enabledForDeployment = $.enabledForDeployment;
+        this.enabledForDiskEncryption = $.enabledForDiskEncryption;
+        this.enabledForTemplateDeployment = $.enabledForTemplateDeployment;
+        this.hsmPoolResourceId = $.hsmPoolResourceId;
+        this.networkAcls = $.networkAcls;
+        this.privateEndpointConnections = $.privateEndpointConnections;
+        this.provisioningState = $.provisioningState;
+        this.sku = $.sku;
+        this.softDeleteRetentionInDays = $.softDeleteRetentionInDays;
+        this.tenantId = $.tenantId;
+        this.vaultUri = $.vaultUri;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VaultPropertiesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<AccessPolicyEntryResponse> accessPolicies;
-        private @Nullable Boolean enablePurgeProtection;
-        private @Nullable Boolean enableRbacAuthorization;
-        private @Nullable Boolean enableSoftDelete;
-        private @Nullable Boolean enabledForDeployment;
-        private @Nullable Boolean enabledForDiskEncryption;
-        private @Nullable Boolean enabledForTemplateDeployment;
-        private String hsmPoolResourceId;
-        private @Nullable NetworkRuleSetResponse networkAcls;
-        private List<PrivateEndpointConnectionItemResponse> privateEndpointConnections;
-        private @Nullable String provisioningState;
-        private SkuResponse sku;
-        private @Nullable Integer softDeleteRetentionInDays;
-        private String tenantId;
-        private @Nullable String vaultUri;
+        private VaultPropertiesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new VaultPropertiesResponse();
         }
 
         public Builder(VaultPropertiesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accessPolicies = defaults.accessPolicies;
-    	      this.enablePurgeProtection = defaults.enablePurgeProtection;
-    	      this.enableRbacAuthorization = defaults.enableRbacAuthorization;
-    	      this.enableSoftDelete = defaults.enableSoftDelete;
-    	      this.enabledForDeployment = defaults.enabledForDeployment;
-    	      this.enabledForDiskEncryption = defaults.enabledForDiskEncryption;
-    	      this.enabledForTemplateDeployment = defaults.enabledForTemplateDeployment;
-    	      this.hsmPoolResourceId = defaults.hsmPoolResourceId;
-    	      this.networkAcls = defaults.networkAcls;
-    	      this.privateEndpointConnections = defaults.privateEndpointConnections;
-    	      this.provisioningState = defaults.provisioningState;
-    	      this.sku = defaults.sku;
-    	      this.softDeleteRetentionInDays = defaults.softDeleteRetentionInDays;
-    	      this.tenantId = defaults.tenantId;
-    	      this.vaultUri = defaults.vaultUri;
+            $ = new VaultPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder accessPolicies(@Nullable List<AccessPolicyEntryResponse> accessPolicies) {
-            this.accessPolicies = accessPolicies;
+            $.accessPolicies = accessPolicies;
             return this;
         }
+
         public Builder accessPolicies(AccessPolicyEntryResponse... accessPolicies) {
             return accessPolicies(List.of(accessPolicies));
         }
+
         public Builder enablePurgeProtection(@Nullable Boolean enablePurgeProtection) {
-            this.enablePurgeProtection = enablePurgeProtection;
+            $.enablePurgeProtection = enablePurgeProtection;
             return this;
         }
+
         public Builder enableRbacAuthorization(@Nullable Boolean enableRbacAuthorization) {
-            this.enableRbacAuthorization = enableRbacAuthorization;
+            $.enableRbacAuthorization = enableRbacAuthorization;
             return this;
         }
+
         public Builder enableSoftDelete(@Nullable Boolean enableSoftDelete) {
-            this.enableSoftDelete = enableSoftDelete;
+            $.enableSoftDelete = enableSoftDelete;
             return this;
         }
+
         public Builder enabledForDeployment(@Nullable Boolean enabledForDeployment) {
-            this.enabledForDeployment = enabledForDeployment;
+            $.enabledForDeployment = enabledForDeployment;
             return this;
         }
+
         public Builder enabledForDiskEncryption(@Nullable Boolean enabledForDiskEncryption) {
-            this.enabledForDiskEncryption = enabledForDiskEncryption;
+            $.enabledForDiskEncryption = enabledForDiskEncryption;
             return this;
         }
+
         public Builder enabledForTemplateDeployment(@Nullable Boolean enabledForTemplateDeployment) {
-            this.enabledForTemplateDeployment = enabledForTemplateDeployment;
+            $.enabledForTemplateDeployment = enabledForTemplateDeployment;
             return this;
         }
+
         public Builder hsmPoolResourceId(String hsmPoolResourceId) {
-            this.hsmPoolResourceId = Objects.requireNonNull(hsmPoolResourceId);
+            $.hsmPoolResourceId = hsmPoolResourceId;
             return this;
         }
+
         public Builder networkAcls(@Nullable NetworkRuleSetResponse networkAcls) {
-            this.networkAcls = networkAcls;
+            $.networkAcls = networkAcls;
             return this;
         }
+
         public Builder privateEndpointConnections(List<PrivateEndpointConnectionItemResponse> privateEndpointConnections) {
-            this.privateEndpointConnections = Objects.requireNonNull(privateEndpointConnections);
+            $.privateEndpointConnections = privateEndpointConnections;
             return this;
         }
+
         public Builder privateEndpointConnections(PrivateEndpointConnectionItemResponse... privateEndpointConnections) {
             return privateEndpointConnections(List.of(privateEndpointConnections));
         }
+
         public Builder provisioningState(@Nullable String provisioningState) {
-            this.provisioningState = provisioningState;
+            $.provisioningState = provisioningState;
             return this;
         }
+
         public Builder sku(SkuResponse sku) {
-            this.sku = Objects.requireNonNull(sku);
+            $.sku = sku;
             return this;
         }
+
         public Builder softDeleteRetentionInDays(@Nullable Integer softDeleteRetentionInDays) {
-            this.softDeleteRetentionInDays = softDeleteRetentionInDays;
+            $.softDeleteRetentionInDays = softDeleteRetentionInDays;
             return this;
         }
+
         public Builder tenantId(String tenantId) {
-            this.tenantId = Objects.requireNonNull(tenantId);
+            $.tenantId = tenantId;
             return this;
         }
+
         public Builder vaultUri(@Nullable String vaultUri) {
-            this.vaultUri = vaultUri;
+            $.vaultUri = vaultUri;
             return this;
-        }        public VaultPropertiesResponse build() {
-            return new VaultPropertiesResponse(accessPolicies, enablePurgeProtection, enableRbacAuthorization, enableSoftDelete, enabledForDeployment, enabledForDiskEncryption, enabledForTemplateDeployment, hsmPoolResourceId, networkAcls, privateEndpointConnections, provisioningState, sku, softDeleteRetentionInDays, tenantId, vaultUri);
+        }
+
+        public VaultPropertiesResponse build() {
+            $.enableRbacAuthorization = Codegen.booleanProp("enableRbacAuthorization").arg($.enableRbacAuthorization).def(false).getNullable();
+            $.enableSoftDelete = Codegen.booleanProp("enableSoftDelete").arg($.enableSoftDelete).def(true).getNullable();
+            $.hsmPoolResourceId = Objects.requireNonNull($.hsmPoolResourceId, "expected parameter 'hsmPoolResourceId' to be non-null");
+            $.privateEndpointConnections = Objects.requireNonNull($.privateEndpointConnections, "expected parameter 'privateEndpointConnections' to be non-null");
+            $.sku = Objects.requireNonNull($.sku, "expected parameter 'sku' to be non-null");
+            $.softDeleteRetentionInDays = Codegen.integerProp("softDeleteRetentionInDays").arg($.softDeleteRetentionInDays).def(90).getNullable();
+            $.tenantId = Objects.requireNonNull($.tenantId, "expected parameter 'tenantId' to be non-null");
+            return $;
         }
     }
+
 }

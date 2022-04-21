@@ -15,94 +15,86 @@ public final class GetSessionArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetSessionArgs Empty = new GetSessionArgs();
 
     @Import(name="databaseId", required=true)
-      private final String databaseId;
+    private String databaseId;
 
     public String databaseId() {
         return this.databaseId;
     }
 
     @Import(name="instanceId", required=true)
-      private final String instanceId;
+    private String instanceId;
 
     public String instanceId() {
         return this.instanceId;
     }
 
     @Import(name="project")
-      private final @Nullable String project;
+    private @Nullable String project;
 
     public Optional<String> project() {
-        return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
+        return Optional.ofNullable(this.project);
     }
 
     @Import(name="sessionId", required=true)
-      private final String sessionId;
+    private String sessionId;
 
     public String sessionId() {
         return this.sessionId;
     }
 
-    public GetSessionArgs(
-        String databaseId,
-        String instanceId,
-        @Nullable String project,
-        String sessionId) {
-        this.databaseId = Objects.requireNonNull(databaseId, "expected parameter 'databaseId' to be non-null");
-        this.instanceId = Objects.requireNonNull(instanceId, "expected parameter 'instanceId' to be non-null");
-        this.project = project;
-        this.sessionId = Objects.requireNonNull(sessionId, "expected parameter 'sessionId' to be non-null");
-    }
+    private GetSessionArgs() {}
 
-    private GetSessionArgs() {
-        this.databaseId = null;
-        this.instanceId = null;
-        this.project = null;
-        this.sessionId = null;
+    private GetSessionArgs(GetSessionArgs $) {
+        this.databaseId = $.databaseId;
+        this.instanceId = $.instanceId;
+        this.project = $.project;
+        this.sessionId = $.sessionId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetSessionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String databaseId;
-        private String instanceId;
-        private @Nullable String project;
-        private String sessionId;
+        private GetSessionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetSessionArgs();
         }
 
         public Builder(GetSessionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.databaseId = defaults.databaseId;
-    	      this.instanceId = defaults.instanceId;
-    	      this.project = defaults.project;
-    	      this.sessionId = defaults.sessionId;
+            $ = new GetSessionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder databaseId(String databaseId) {
-            this.databaseId = Objects.requireNonNull(databaseId);
+            $.databaseId = databaseId;
             return this;
         }
+
         public Builder instanceId(String instanceId) {
-            this.instanceId = Objects.requireNonNull(instanceId);
+            $.instanceId = instanceId;
             return this;
         }
+
         public Builder project(@Nullable String project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
+
         public Builder sessionId(String sessionId) {
-            this.sessionId = Objects.requireNonNull(sessionId);
+            $.sessionId = sessionId;
             return this;
-        }        public GetSessionArgs build() {
-            return new GetSessionArgs(databaseId, instanceId, project, sessionId);
+        }
+
+        public GetSessionArgs build() {
+            $.databaseId = Objects.requireNonNull($.databaseId, "expected parameter 'databaseId' to be non-null");
+            $.instanceId = Objects.requireNonNull($.instanceId, "expected parameter 'instanceId' to be non-null");
+            $.sessionId = Objects.requireNonNull($.sessionId, "expected parameter 'sessionId' to be non-null");
+            return $;
         }
     }
+
 }

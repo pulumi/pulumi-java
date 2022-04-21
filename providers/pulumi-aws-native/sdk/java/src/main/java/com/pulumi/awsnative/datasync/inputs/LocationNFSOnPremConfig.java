@@ -22,48 +22,49 @@ public final class LocationNFSOnPremConfig extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="agentArns", required=true)
-      private final List<String> agentArns;
+    private List<String> agentArns;
 
     public List<String> agentArns() {
         return this.agentArns;
     }
 
-    public LocationNFSOnPremConfig(List<String> agentArns) {
-        this.agentArns = Objects.requireNonNull(agentArns, "expected parameter 'agentArns' to be non-null");
-    }
+    private LocationNFSOnPremConfig() {}
 
-    private LocationNFSOnPremConfig() {
-        this.agentArns = List.of();
+    private LocationNFSOnPremConfig(LocationNFSOnPremConfig $) {
+        this.agentArns = $.agentArns;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LocationNFSOnPremConfig defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<String> agentArns;
+        private LocationNFSOnPremConfig $;
 
         public Builder() {
-    	      // Empty
+            $ = new LocationNFSOnPremConfig();
         }
 
         public Builder(LocationNFSOnPremConfig defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.agentArns = defaults.agentArns;
+            $ = new LocationNFSOnPremConfig(Objects.requireNonNull(defaults));
         }
 
         public Builder agentArns(List<String> agentArns) {
-            this.agentArns = Objects.requireNonNull(agentArns);
+            $.agentArns = agentArns;
             return this;
         }
+
         public Builder agentArns(String... agentArns) {
             return agentArns(List.of(agentArns));
-        }        public LocationNFSOnPremConfig build() {
-            return new LocationNFSOnPremConfig(agentArns);
+        }
+
+        public LocationNFSOnPremConfig build() {
+            $.agentArns = Objects.requireNonNull($.agentArns, "expected parameter 'agentArns' to be non-null");
+            return $;
         }
     }
+
 }

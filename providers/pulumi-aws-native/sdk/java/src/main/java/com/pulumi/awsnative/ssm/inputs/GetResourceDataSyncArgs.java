@@ -13,45 +13,45 @@ public final class GetResourceDataSyncArgs extends com.pulumi.resources.InvokeAr
     public static final GetResourceDataSyncArgs Empty = new GetResourceDataSyncArgs();
 
     @Import(name="syncName", required=true)
-      private final String syncName;
+    private String syncName;
 
     public String syncName() {
         return this.syncName;
     }
 
-    public GetResourceDataSyncArgs(String syncName) {
-        this.syncName = Objects.requireNonNull(syncName, "expected parameter 'syncName' to be non-null");
-    }
+    private GetResourceDataSyncArgs() {}
 
-    private GetResourceDataSyncArgs() {
-        this.syncName = null;
+    private GetResourceDataSyncArgs(GetResourceDataSyncArgs $) {
+        this.syncName = $.syncName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetResourceDataSyncArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String syncName;
+        private GetResourceDataSyncArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetResourceDataSyncArgs();
         }
 
         public Builder(GetResourceDataSyncArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.syncName = defaults.syncName;
+            $ = new GetResourceDataSyncArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder syncName(String syncName) {
-            this.syncName = Objects.requireNonNull(syncName);
+            $.syncName = syncName;
             return this;
-        }        public GetResourceDataSyncArgs build() {
-            return new GetResourceDataSyncArgs(syncName);
+        }
+
+        public GetResourceDataSyncArgs build() {
+            $.syncName = Objects.requireNonNull($.syncName, "expected parameter 'syncName' to be non-null");
+            return $;
         }
     }
+
 }

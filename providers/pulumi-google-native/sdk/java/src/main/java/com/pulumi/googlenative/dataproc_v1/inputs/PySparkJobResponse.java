@@ -24,7 +24,7 @@ public final class PySparkJobResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="archiveUris", required=true)
-      private final List<String> archiveUris;
+    private List<String> archiveUris;
 
     public List<String> archiveUris() {
         return this.archiveUris;
@@ -35,7 +35,7 @@ public final class PySparkJobResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="args", required=true)
-      private final List<String> args;
+    private List<String> args;
 
     public List<String> args() {
         return this.args;
@@ -46,7 +46,7 @@ public final class PySparkJobResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="fileUris", required=true)
-      private final List<String> fileUris;
+    private List<String> fileUris;
 
     public List<String> fileUris() {
         return this.fileUris;
@@ -57,7 +57,7 @@ public final class PySparkJobResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="jarFileUris", required=true)
-      private final List<String> jarFileUris;
+    private List<String> jarFileUris;
 
     public List<String> jarFileUris() {
         return this.jarFileUris;
@@ -68,7 +68,7 @@ public final class PySparkJobResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="loggingConfig", required=true)
-      private final LoggingConfigResponse loggingConfig;
+    private LoggingConfigResponse loggingConfig;
 
     public LoggingConfigResponse loggingConfig() {
         return this.loggingConfig;
@@ -79,7 +79,7 @@ public final class PySparkJobResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="mainPythonFileUri", required=true)
-      private final String mainPythonFileUri;
+    private String mainPythonFileUri;
 
     public String mainPythonFileUri() {
         return this.mainPythonFileUri;
@@ -90,7 +90,7 @@ public final class PySparkJobResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="properties", required=true)
-      private final Map<String,String> properties;
+    private Map<String,String> properties;
 
     public Map<String,String> properties() {
         return this.properties;
@@ -101,124 +101,114 @@ public final class PySparkJobResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="pythonFileUris", required=true)
-      private final List<String> pythonFileUris;
+    private List<String> pythonFileUris;
 
     public List<String> pythonFileUris() {
         return this.pythonFileUris;
     }
 
-    public PySparkJobResponse(
-        List<String> archiveUris,
-        List<String> args,
-        List<String> fileUris,
-        List<String> jarFileUris,
-        LoggingConfigResponse loggingConfig,
-        String mainPythonFileUri,
-        Map<String,String> properties,
-        List<String> pythonFileUris) {
-        this.archiveUris = Objects.requireNonNull(archiveUris, "expected parameter 'archiveUris' to be non-null");
-        this.args = Objects.requireNonNull(args, "expected parameter 'args' to be non-null");
-        this.fileUris = Objects.requireNonNull(fileUris, "expected parameter 'fileUris' to be non-null");
-        this.jarFileUris = Objects.requireNonNull(jarFileUris, "expected parameter 'jarFileUris' to be non-null");
-        this.loggingConfig = Objects.requireNonNull(loggingConfig, "expected parameter 'loggingConfig' to be non-null");
-        this.mainPythonFileUri = Objects.requireNonNull(mainPythonFileUri, "expected parameter 'mainPythonFileUri' to be non-null");
-        this.properties = Objects.requireNonNull(properties, "expected parameter 'properties' to be non-null");
-        this.pythonFileUris = Objects.requireNonNull(pythonFileUris, "expected parameter 'pythonFileUris' to be non-null");
-    }
+    private PySparkJobResponse() {}
 
-    private PySparkJobResponse() {
-        this.archiveUris = List.of();
-        this.args = List.of();
-        this.fileUris = List.of();
-        this.jarFileUris = List.of();
-        this.loggingConfig = null;
-        this.mainPythonFileUri = null;
-        this.properties = Map.of();
-        this.pythonFileUris = List.of();
+    private PySparkJobResponse(PySparkJobResponse $) {
+        this.archiveUris = $.archiveUris;
+        this.args = $.args;
+        this.fileUris = $.fileUris;
+        this.jarFileUris = $.jarFileUris;
+        this.loggingConfig = $.loggingConfig;
+        this.mainPythonFileUri = $.mainPythonFileUri;
+        this.properties = $.properties;
+        this.pythonFileUris = $.pythonFileUris;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PySparkJobResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<String> archiveUris;
-        private List<String> args;
-        private List<String> fileUris;
-        private List<String> jarFileUris;
-        private LoggingConfigResponse loggingConfig;
-        private String mainPythonFileUri;
-        private Map<String,String> properties;
-        private List<String> pythonFileUris;
+        private PySparkJobResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new PySparkJobResponse();
         }
 
         public Builder(PySparkJobResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.archiveUris = defaults.archiveUris;
-    	      this.args = defaults.args;
-    	      this.fileUris = defaults.fileUris;
-    	      this.jarFileUris = defaults.jarFileUris;
-    	      this.loggingConfig = defaults.loggingConfig;
-    	      this.mainPythonFileUri = defaults.mainPythonFileUri;
-    	      this.properties = defaults.properties;
-    	      this.pythonFileUris = defaults.pythonFileUris;
+            $ = new PySparkJobResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder archiveUris(List<String> archiveUris) {
-            this.archiveUris = Objects.requireNonNull(archiveUris);
+            $.archiveUris = archiveUris;
             return this;
         }
+
         public Builder archiveUris(String... archiveUris) {
             return archiveUris(List.of(archiveUris));
         }
+
         public Builder args(List<String> args) {
-            this.args = Objects.requireNonNull(args);
+            $.args = args;
             return this;
         }
+
         public Builder args(String... args) {
             return args(List.of(args));
         }
+
         public Builder fileUris(List<String> fileUris) {
-            this.fileUris = Objects.requireNonNull(fileUris);
+            $.fileUris = fileUris;
             return this;
         }
+
         public Builder fileUris(String... fileUris) {
             return fileUris(List.of(fileUris));
         }
+
         public Builder jarFileUris(List<String> jarFileUris) {
-            this.jarFileUris = Objects.requireNonNull(jarFileUris);
+            $.jarFileUris = jarFileUris;
             return this;
         }
+
         public Builder jarFileUris(String... jarFileUris) {
             return jarFileUris(List.of(jarFileUris));
         }
+
         public Builder loggingConfig(LoggingConfigResponse loggingConfig) {
-            this.loggingConfig = Objects.requireNonNull(loggingConfig);
+            $.loggingConfig = loggingConfig;
             return this;
         }
+
         public Builder mainPythonFileUri(String mainPythonFileUri) {
-            this.mainPythonFileUri = Objects.requireNonNull(mainPythonFileUri);
+            $.mainPythonFileUri = mainPythonFileUri;
             return this;
         }
+
         public Builder properties(Map<String,String> properties) {
-            this.properties = Objects.requireNonNull(properties);
+            $.properties = properties;
             return this;
         }
+
         public Builder pythonFileUris(List<String> pythonFileUris) {
-            this.pythonFileUris = Objects.requireNonNull(pythonFileUris);
+            $.pythonFileUris = pythonFileUris;
             return this;
         }
+
         public Builder pythonFileUris(String... pythonFileUris) {
             return pythonFileUris(List.of(pythonFileUris));
-        }        public PySparkJobResponse build() {
-            return new PySparkJobResponse(archiveUris, args, fileUris, jarFileUris, loggingConfig, mainPythonFileUri, properties, pythonFileUris);
+        }
+
+        public PySparkJobResponse build() {
+            $.archiveUris = Objects.requireNonNull($.archiveUris, "expected parameter 'archiveUris' to be non-null");
+            $.args = Objects.requireNonNull($.args, "expected parameter 'args' to be non-null");
+            $.fileUris = Objects.requireNonNull($.fileUris, "expected parameter 'fileUris' to be non-null");
+            $.jarFileUris = Objects.requireNonNull($.jarFileUris, "expected parameter 'jarFileUris' to be non-null");
+            $.loggingConfig = Objects.requireNonNull($.loggingConfig, "expected parameter 'loggingConfig' to be non-null");
+            $.mainPythonFileUri = Objects.requireNonNull($.mainPythonFileUri, "expected parameter 'mainPythonFileUri' to be non-null");
+            $.properties = Objects.requireNonNull($.properties, "expected parameter 'properties' to be non-null");
+            $.pythonFileUris = Objects.requireNonNull($.pythonFileUris, "expected parameter 'pythonFileUris' to be non-null");
+            return $;
         }
     }
+
 }

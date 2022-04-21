@@ -12,6 +12,7 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -28,7 +29,7 @@ public final class SelectAudioTrackByAttributeArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="attribute", required=true)
-      private final Output<Either<String,TrackAttribute>> attribute;
+    private Output<Either<String,TrackAttribute>> attribute;
 
     public Output<Either<String,TrackAttribute>> attribute() {
         return this.attribute;
@@ -39,10 +40,10 @@ public final class SelectAudioTrackByAttributeArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="channelMapping")
-      private final @Nullable Output<Either<String,ChannelMapping>> channelMapping;
+    private @Nullable Output<Either<String,ChannelMapping>> channelMapping;
 
-    public Output<Either<String,ChannelMapping>> channelMapping() {
-        return this.channelMapping == null ? Codegen.empty() : this.channelMapping;
+    public Optional<Output<Either<String,ChannelMapping>>> channelMapping() {
+        return Optional.ofNullable(this.channelMapping);
     }
 
     /**
@@ -50,7 +51,7 @@ public final class SelectAudioTrackByAttributeArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="filter", required=true)
-      private final Output<Either<String,AttributeFilter>> filter;
+    private Output<Either<String,AttributeFilter>> filter;
 
     public Output<Either<String,AttributeFilter>> filter() {
         return this.filter;
@@ -61,10 +62,10 @@ public final class SelectAudioTrackByAttributeArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="filterValue")
-      private final @Nullable Output<String> filterValue;
+    private @Nullable Output<String> filterValue;
 
-    public Output<String> filterValue() {
-        return this.filterValue == null ? Codegen.empty() : this.filterValue;
+    public Optional<Output<String>> filterValue() {
+        return Optional.ofNullable(this.filterValue);
     }
 
     /**
@@ -73,102 +74,91 @@ public final class SelectAudioTrackByAttributeArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="odataType", required=true)
-      private final Output<String> odataType;
+    private Output<String> odataType;
 
     public Output<String> odataType() {
         return this.odataType;
     }
 
-    public SelectAudioTrackByAttributeArgs(
-        Output<Either<String,TrackAttribute>> attribute,
-        @Nullable Output<Either<String,ChannelMapping>> channelMapping,
-        Output<Either<String,AttributeFilter>> filter,
-        @Nullable Output<String> filterValue,
-        Output<String> odataType) {
-        this.attribute = Objects.requireNonNull(attribute, "expected parameter 'attribute' to be non-null");
-        this.channelMapping = channelMapping;
-        this.filter = Objects.requireNonNull(filter, "expected parameter 'filter' to be non-null");
-        this.filterValue = filterValue;
-        this.odataType = Codegen.stringProp("odataType").output().arg(odataType).require();
-    }
+    private SelectAudioTrackByAttributeArgs() {}
 
-    private SelectAudioTrackByAttributeArgs() {
-        this.attribute = Codegen.empty();
-        this.channelMapping = Codegen.empty();
-        this.filter = Codegen.empty();
-        this.filterValue = Codegen.empty();
-        this.odataType = Codegen.empty();
+    private SelectAudioTrackByAttributeArgs(SelectAudioTrackByAttributeArgs $) {
+        this.attribute = $.attribute;
+        this.channelMapping = $.channelMapping;
+        this.filter = $.filter;
+        this.filterValue = $.filterValue;
+        this.odataType = $.odataType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SelectAudioTrackByAttributeArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Either<String,TrackAttribute>> attribute;
-        private @Nullable Output<Either<String,ChannelMapping>> channelMapping;
-        private Output<Either<String,AttributeFilter>> filter;
-        private @Nullable Output<String> filterValue;
-        private Output<String> odataType;
+        private SelectAudioTrackByAttributeArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SelectAudioTrackByAttributeArgs();
         }
 
         public Builder(SelectAudioTrackByAttributeArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.attribute = defaults.attribute;
-    	      this.channelMapping = defaults.channelMapping;
-    	      this.filter = defaults.filter;
-    	      this.filterValue = defaults.filterValue;
-    	      this.odataType = defaults.odataType;
+            $ = new SelectAudioTrackByAttributeArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder attribute(Output<Either<String,TrackAttribute>> attribute) {
-            this.attribute = Objects.requireNonNull(attribute);
+            $.attribute = attribute;
             return this;
         }
+
         public Builder attribute(Either<String,TrackAttribute> attribute) {
-            this.attribute = Output.of(Objects.requireNonNull(attribute));
-            return this;
+            return attribute(Output.of(attribute));
         }
+
         public Builder channelMapping(@Nullable Output<Either<String,ChannelMapping>> channelMapping) {
-            this.channelMapping = channelMapping;
+            $.channelMapping = channelMapping;
             return this;
         }
-        public Builder channelMapping(@Nullable Either<String,ChannelMapping> channelMapping) {
-            this.channelMapping = Codegen.ofNullable(channelMapping);
-            return this;
+
+        public Builder channelMapping(Either<String,ChannelMapping> channelMapping) {
+            return channelMapping(Output.of(channelMapping));
         }
+
         public Builder filter(Output<Either<String,AttributeFilter>> filter) {
-            this.filter = Objects.requireNonNull(filter);
+            $.filter = filter;
             return this;
         }
+
         public Builder filter(Either<String,AttributeFilter> filter) {
-            this.filter = Output.of(Objects.requireNonNull(filter));
-            return this;
+            return filter(Output.of(filter));
         }
+
         public Builder filterValue(@Nullable Output<String> filterValue) {
-            this.filterValue = filterValue;
+            $.filterValue = filterValue;
             return this;
         }
-        public Builder filterValue(@Nullable String filterValue) {
-            this.filterValue = Codegen.ofNullable(filterValue);
-            return this;
+
+        public Builder filterValue(String filterValue) {
+            return filterValue(Output.of(filterValue));
         }
+
         public Builder odataType(Output<String> odataType) {
-            this.odataType = Objects.requireNonNull(odataType);
+            $.odataType = odataType;
             return this;
         }
+
         public Builder odataType(String odataType) {
-            this.odataType = Output.of(Objects.requireNonNull(odataType));
-            return this;
-        }        public SelectAudioTrackByAttributeArgs build() {
-            return new SelectAudioTrackByAttributeArgs(attribute, channelMapping, filter, filterValue, odataType);
+            return odataType(Output.of(odataType));
+        }
+
+        public SelectAudioTrackByAttributeArgs build() {
+            $.attribute = Objects.requireNonNull($.attribute, "expected parameter 'attribute' to be non-null");
+            $.filter = Objects.requireNonNull($.filter, "expected parameter 'filter' to be non-null");
+            $.odataType = Codegen.stringProp("odataType").output().arg($.odataType).require();
+            return $;
         }
     }
+
 }

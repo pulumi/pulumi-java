@@ -6,10 +6,10 @@ package com.pulumi.aws.sagemaker.inputs;
 import com.pulumi.aws.sagemaker.inputs.ProjectServiceCatalogProvisioningDetailsGetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class ProjectState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="arn")
-      private final @Nullable Output<String> arn;
+    private @Nullable Output<String> arn;
 
-    public Output<String> arn() {
-        return this.arn == null ? Codegen.empty() : this.arn;
+    public Optional<Output<String>> arn() {
+        return Optional.ofNullable(this.arn);
     }
 
     /**
@@ -33,10 +33,10 @@ public final class ProjectState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="projectDescription")
-      private final @Nullable Output<String> projectDescription;
+    private @Nullable Output<String> projectDescription;
 
-    public Output<String> projectDescription() {
-        return this.projectDescription == null ? Codegen.empty() : this.projectDescription;
+    public Optional<Output<String>> projectDescription() {
+        return Optional.ofNullable(this.projectDescription);
     }
 
     /**
@@ -44,10 +44,10 @@ public final class ProjectState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="projectId")
-      private final @Nullable Output<String> projectId;
+    private @Nullable Output<String> projectId;
 
-    public Output<String> projectId() {
-        return this.projectId == null ? Codegen.empty() : this.projectId;
+    public Optional<Output<String>> projectId() {
+        return Optional.ofNullable(this.projectId);
     }
 
     /**
@@ -55,10 +55,10 @@ public final class ProjectState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="projectName")
-      private final @Nullable Output<String> projectName;
+    private @Nullable Output<String> projectName;
 
-    public Output<String> projectName() {
-        return this.projectName == null ? Codegen.empty() : this.projectName;
+    public Optional<Output<String>> projectName() {
+        return Optional.ofNullable(this.projectName);
     }
 
     /**
@@ -66,10 +66,10 @@ public final class ProjectState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="serviceCatalogProvisioningDetails")
-      private final @Nullable Output<ProjectServiceCatalogProvisioningDetailsGetArgs> serviceCatalogProvisioningDetails;
+    private @Nullable Output<ProjectServiceCatalogProvisioningDetailsGetArgs> serviceCatalogProvisioningDetails;
 
-    public Output<ProjectServiceCatalogProvisioningDetailsGetArgs> serviceCatalogProvisioningDetails() {
-        return this.serviceCatalogProvisioningDetails == null ? Codegen.empty() : this.serviceCatalogProvisioningDetails;
+    public Optional<Output<ProjectServiceCatalogProvisioningDetailsGetArgs>> serviceCatalogProvisioningDetails() {
+        return Optional.ofNullable(this.serviceCatalogProvisioningDetails);
     }
 
     /**
@@ -77,10 +77,10 @@ public final class ProjectState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -88,128 +88,108 @@ public final class ProjectState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tagsAll")
-      private final @Nullable Output<Map<String,String>> tagsAll;
+    private @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> tagsAll() {
-        return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
+    public Optional<Output<Map<String,String>>> tagsAll() {
+        return Optional.ofNullable(this.tagsAll);
     }
 
-    public ProjectState(
-        @Nullable Output<String> arn,
-        @Nullable Output<String> projectDescription,
-        @Nullable Output<String> projectId,
-        @Nullable Output<String> projectName,
-        @Nullable Output<ProjectServiceCatalogProvisioningDetailsGetArgs> serviceCatalogProvisioningDetails,
-        @Nullable Output<Map<String,String>> tags,
-        @Nullable Output<Map<String,String>> tagsAll) {
-        this.arn = arn;
-        this.projectDescription = projectDescription;
-        this.projectId = projectId;
-        this.projectName = projectName;
-        this.serviceCatalogProvisioningDetails = serviceCatalogProvisioningDetails;
-        this.tags = tags;
-        this.tagsAll = tagsAll;
-    }
+    private ProjectState() {}
 
-    private ProjectState() {
-        this.arn = Codegen.empty();
-        this.projectDescription = Codegen.empty();
-        this.projectId = Codegen.empty();
-        this.projectName = Codegen.empty();
-        this.serviceCatalogProvisioningDetails = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.tagsAll = Codegen.empty();
+    private ProjectState(ProjectState $) {
+        this.arn = $.arn;
+        this.projectDescription = $.projectDescription;
+        this.projectId = $.projectId;
+        this.projectName = $.projectName;
+        this.serviceCatalogProvisioningDetails = $.serviceCatalogProvisioningDetails;
+        this.tags = $.tags;
+        this.tagsAll = $.tagsAll;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ProjectState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> arn;
-        private @Nullable Output<String> projectDescription;
-        private @Nullable Output<String> projectId;
-        private @Nullable Output<String> projectName;
-        private @Nullable Output<ProjectServiceCatalogProvisioningDetailsGetArgs> serviceCatalogProvisioningDetails;
-        private @Nullable Output<Map<String,String>> tags;
-        private @Nullable Output<Map<String,String>> tagsAll;
+        private ProjectState $;
 
         public Builder() {
-    	      // Empty
+            $ = new ProjectState();
         }
 
         public Builder(ProjectState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.arn = defaults.arn;
-    	      this.projectDescription = defaults.projectDescription;
-    	      this.projectId = defaults.projectId;
-    	      this.projectName = defaults.projectName;
-    	      this.serviceCatalogProvisioningDetails = defaults.serviceCatalogProvisioningDetails;
-    	      this.tags = defaults.tags;
-    	      this.tagsAll = defaults.tagsAll;
+            $ = new ProjectState(Objects.requireNonNull(defaults));
         }
 
         public Builder arn(@Nullable Output<String> arn) {
-            this.arn = arn;
+            $.arn = arn;
             return this;
         }
-        public Builder arn(@Nullable String arn) {
-            this.arn = Codegen.ofNullable(arn);
-            return this;
+
+        public Builder arn(String arn) {
+            return arn(Output.of(arn));
         }
+
         public Builder projectDescription(@Nullable Output<String> projectDescription) {
-            this.projectDescription = projectDescription;
+            $.projectDescription = projectDescription;
             return this;
         }
-        public Builder projectDescription(@Nullable String projectDescription) {
-            this.projectDescription = Codegen.ofNullable(projectDescription);
-            return this;
+
+        public Builder projectDescription(String projectDescription) {
+            return projectDescription(Output.of(projectDescription));
         }
+
         public Builder projectId(@Nullable Output<String> projectId) {
-            this.projectId = projectId;
+            $.projectId = projectId;
             return this;
         }
-        public Builder projectId(@Nullable String projectId) {
-            this.projectId = Codegen.ofNullable(projectId);
-            return this;
+
+        public Builder projectId(String projectId) {
+            return projectId(Output.of(projectId));
         }
+
         public Builder projectName(@Nullable Output<String> projectName) {
-            this.projectName = projectName;
+            $.projectName = projectName;
             return this;
         }
-        public Builder projectName(@Nullable String projectName) {
-            this.projectName = Codegen.ofNullable(projectName);
-            return this;
+
+        public Builder projectName(String projectName) {
+            return projectName(Output.of(projectName));
         }
+
         public Builder serviceCatalogProvisioningDetails(@Nullable Output<ProjectServiceCatalogProvisioningDetailsGetArgs> serviceCatalogProvisioningDetails) {
-            this.serviceCatalogProvisioningDetails = serviceCatalogProvisioningDetails;
+            $.serviceCatalogProvisioningDetails = serviceCatalogProvisioningDetails;
             return this;
         }
-        public Builder serviceCatalogProvisioningDetails(@Nullable ProjectServiceCatalogProvisioningDetailsGetArgs serviceCatalogProvisioningDetails) {
-            this.serviceCatalogProvisioningDetails = Codegen.ofNullable(serviceCatalogProvisioningDetails);
-            return this;
+
+        public Builder serviceCatalogProvisioningDetails(ProjectServiceCatalogProvisioningDetailsGetArgs serviceCatalogProvisioningDetails) {
+            return serviceCatalogProvisioningDetails(Output.of(serviceCatalogProvisioningDetails));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
-            this.tagsAll = tagsAll;
+            $.tagsAll = tagsAll;
             return this;
         }
-        public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Codegen.ofNullable(tagsAll);
-            return this;
-        }        public ProjectState build() {
-            return new ProjectState(arn, projectDescription, projectId, projectName, serviceCatalogProvisioningDetails, tags, tagsAll);
+
+        public Builder tagsAll(Map<String,String> tagsAll) {
+            return tagsAll(Output.of(tagsAll));
+        }
+
+        public ProjectState build() {
+            return $;
         }
     }
+
 }

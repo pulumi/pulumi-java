@@ -5,11 +5,11 @@ package com.pulumi.aws.ec2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class EipState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="address")
-      private final @Nullable Output<String> address;
+    private @Nullable Output<String> address;
 
-    public Output<String> address() {
-        return this.address == null ? Codegen.empty() : this.address;
+    public Optional<Output<String>> address() {
+        return Optional.ofNullable(this.address);
     }
 
     /**
@@ -33,10 +33,10 @@ public final class EipState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="allocationId")
-      private final @Nullable Output<String> allocationId;
+    private @Nullable Output<String> allocationId;
 
-    public Output<String> allocationId() {
-        return this.allocationId == null ? Codegen.empty() : this.allocationId;
+    public Optional<Output<String>> allocationId() {
+        return Optional.ofNullable(this.allocationId);
     }
 
     /**
@@ -44,10 +44,10 @@ public final class EipState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="associateWithPrivateIp")
-      private final @Nullable Output<String> associateWithPrivateIp;
+    private @Nullable Output<String> associateWithPrivateIp;
 
-    public Output<String> associateWithPrivateIp() {
-        return this.associateWithPrivateIp == null ? Codegen.empty() : this.associateWithPrivateIp;
+    public Optional<Output<String>> associateWithPrivateIp() {
+        return Optional.ofNullable(this.associateWithPrivateIp);
     }
 
     /**
@@ -55,10 +55,10 @@ public final class EipState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="associationId")
-      private final @Nullable Output<String> associationId;
+    private @Nullable Output<String> associationId;
 
-    public Output<String> associationId() {
-        return this.associationId == null ? Codegen.empty() : this.associationId;
+    public Optional<Output<String>> associationId() {
+        return Optional.ofNullable(this.associationId);
     }
 
     /**
@@ -66,10 +66,10 @@ public final class EipState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="carrierIp")
-      private final @Nullable Output<String> carrierIp;
+    private @Nullable Output<String> carrierIp;
 
-    public Output<String> carrierIp() {
-        return this.carrierIp == null ? Codegen.empty() : this.carrierIp;
+    public Optional<Output<String>> carrierIp() {
+        return Optional.ofNullable(this.carrierIp);
     }
 
     /**
@@ -77,10 +77,10 @@ public final class EipState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="customerOwnedIp")
-      private final @Nullable Output<String> customerOwnedIp;
+    private @Nullable Output<String> customerOwnedIp;
 
-    public Output<String> customerOwnedIp() {
-        return this.customerOwnedIp == null ? Codegen.empty() : this.customerOwnedIp;
+    public Optional<Output<String>> customerOwnedIp() {
+        return Optional.ofNullable(this.customerOwnedIp);
     }
 
     /**
@@ -88,10 +88,10 @@ public final class EipState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="customerOwnedIpv4Pool")
-      private final @Nullable Output<String> customerOwnedIpv4Pool;
+    private @Nullable Output<String> customerOwnedIpv4Pool;
 
-    public Output<String> customerOwnedIpv4Pool() {
-        return this.customerOwnedIpv4Pool == null ? Codegen.empty() : this.customerOwnedIpv4Pool;
+    public Optional<Output<String>> customerOwnedIpv4Pool() {
+        return Optional.ofNullable(this.customerOwnedIpv4Pool);
     }
 
     /**
@@ -99,10 +99,10 @@ public final class EipState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="domain")
-      private final @Nullable Output<String> domain;
+    private @Nullable Output<String> domain;
 
-    public Output<String> domain() {
-        return this.domain == null ? Codegen.empty() : this.domain;
+    public Optional<Output<String>> domain() {
+        return Optional.ofNullable(this.domain);
     }
 
     /**
@@ -110,10 +110,10 @@ public final class EipState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="instance")
-      private final @Nullable Output<String> instance;
+    private @Nullable Output<String> instance;
 
-    public Output<String> instance() {
-        return this.instance == null ? Codegen.empty() : this.instance;
+    public Optional<Output<String>> instance() {
+        return Optional.ofNullable(this.instance);
     }
 
     /**
@@ -121,10 +121,10 @@ public final class EipState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="networkBorderGroup")
-      private final @Nullable Output<String> networkBorderGroup;
+    private @Nullable Output<String> networkBorderGroup;
 
-    public Output<String> networkBorderGroup() {
-        return this.networkBorderGroup == null ? Codegen.empty() : this.networkBorderGroup;
+    public Optional<Output<String>> networkBorderGroup() {
+        return Optional.ofNullable(this.networkBorderGroup);
     }
 
     /**
@@ -132,10 +132,10 @@ public final class EipState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="networkInterface")
-      private final @Nullable Output<String> networkInterface;
+    private @Nullable Output<String> networkInterface;
 
-    public Output<String> networkInterface() {
-        return this.networkInterface == null ? Codegen.empty() : this.networkInterface;
+    public Optional<Output<String>> networkInterface() {
+        return Optional.ofNullable(this.networkInterface);
     }
 
     /**
@@ -143,10 +143,10 @@ public final class EipState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="privateDns")
-      private final @Nullable Output<String> privateDns;
+    private @Nullable Output<String> privateDns;
 
-    public Output<String> privateDns() {
-        return this.privateDns == null ? Codegen.empty() : this.privateDns;
+    public Optional<Output<String>> privateDns() {
+        return Optional.ofNullable(this.privateDns);
     }
 
     /**
@@ -154,10 +154,10 @@ public final class EipState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="privateIp")
-      private final @Nullable Output<String> privateIp;
+    private @Nullable Output<String> privateIp;
 
-    public Output<String> privateIp() {
-        return this.privateIp == null ? Codegen.empty() : this.privateIp;
+    public Optional<Output<String>> privateIp() {
+        return Optional.ofNullable(this.privateIp);
     }
 
     /**
@@ -165,10 +165,10 @@ public final class EipState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="publicDns")
-      private final @Nullable Output<String> publicDns;
+    private @Nullable Output<String> publicDns;
 
-    public Output<String> publicDns() {
-        return this.publicDns == null ? Codegen.empty() : this.publicDns;
+    public Optional<Output<String>> publicDns() {
+        return Optional.ofNullable(this.publicDns);
     }
 
     /**
@@ -176,10 +176,10 @@ public final class EipState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="publicIp")
-      private final @Nullable Output<String> publicIp;
+    private @Nullable Output<String> publicIp;
 
-    public Output<String> publicIp() {
-        return this.publicIp == null ? Codegen.empty() : this.publicIp;
+    public Optional<Output<String>> publicIp() {
+        return Optional.ofNullable(this.publicIp);
     }
 
     /**
@@ -187,10 +187,10 @@ public final class EipState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="publicIpv4Pool")
-      private final @Nullable Output<String> publicIpv4Pool;
+    private @Nullable Output<String> publicIpv4Pool;
 
-    public Output<String> publicIpv4Pool() {
-        return this.publicIpv4Pool == null ? Codegen.empty() : this.publicIpv4Pool;
+    public Optional<Output<String>> publicIpv4Pool() {
+        return Optional.ofNullable(this.publicIpv4Pool);
     }
 
     /**
@@ -198,10 +198,10 @@ public final class EipState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -209,10 +209,10 @@ public final class EipState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tagsAll")
-      private final @Nullable Output<Map<String,String>> tagsAll;
+    private @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> tagsAll() {
-        return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
+    public Optional<Output<Map<String,String>>> tagsAll() {
+        return Optional.ofNullable(this.tagsAll);
     }
 
     /**
@@ -220,284 +220,228 @@ public final class EipState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="vpc")
-      private final @Nullable Output<Boolean> vpc;
+    private @Nullable Output<Boolean> vpc;
 
-    public Output<Boolean> vpc() {
-        return this.vpc == null ? Codegen.empty() : this.vpc;
+    public Optional<Output<Boolean>> vpc() {
+        return Optional.ofNullable(this.vpc);
     }
 
-    public EipState(
-        @Nullable Output<String> address,
-        @Nullable Output<String> allocationId,
-        @Nullable Output<String> associateWithPrivateIp,
-        @Nullable Output<String> associationId,
-        @Nullable Output<String> carrierIp,
-        @Nullable Output<String> customerOwnedIp,
-        @Nullable Output<String> customerOwnedIpv4Pool,
-        @Nullable Output<String> domain,
-        @Nullable Output<String> instance,
-        @Nullable Output<String> networkBorderGroup,
-        @Nullable Output<String> networkInterface,
-        @Nullable Output<String> privateDns,
-        @Nullable Output<String> privateIp,
-        @Nullable Output<String> publicDns,
-        @Nullable Output<String> publicIp,
-        @Nullable Output<String> publicIpv4Pool,
-        @Nullable Output<Map<String,String>> tags,
-        @Nullable Output<Map<String,String>> tagsAll,
-        @Nullable Output<Boolean> vpc) {
-        this.address = address;
-        this.allocationId = allocationId;
-        this.associateWithPrivateIp = associateWithPrivateIp;
-        this.associationId = associationId;
-        this.carrierIp = carrierIp;
-        this.customerOwnedIp = customerOwnedIp;
-        this.customerOwnedIpv4Pool = customerOwnedIpv4Pool;
-        this.domain = domain;
-        this.instance = instance;
-        this.networkBorderGroup = networkBorderGroup;
-        this.networkInterface = networkInterface;
-        this.privateDns = privateDns;
-        this.privateIp = privateIp;
-        this.publicDns = publicDns;
-        this.publicIp = publicIp;
-        this.publicIpv4Pool = publicIpv4Pool;
-        this.tags = tags;
-        this.tagsAll = tagsAll;
-        this.vpc = vpc;
-    }
+    private EipState() {}
 
-    private EipState() {
-        this.address = Codegen.empty();
-        this.allocationId = Codegen.empty();
-        this.associateWithPrivateIp = Codegen.empty();
-        this.associationId = Codegen.empty();
-        this.carrierIp = Codegen.empty();
-        this.customerOwnedIp = Codegen.empty();
-        this.customerOwnedIpv4Pool = Codegen.empty();
-        this.domain = Codegen.empty();
-        this.instance = Codegen.empty();
-        this.networkBorderGroup = Codegen.empty();
-        this.networkInterface = Codegen.empty();
-        this.privateDns = Codegen.empty();
-        this.privateIp = Codegen.empty();
-        this.publicDns = Codegen.empty();
-        this.publicIp = Codegen.empty();
-        this.publicIpv4Pool = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.tagsAll = Codegen.empty();
-        this.vpc = Codegen.empty();
+    private EipState(EipState $) {
+        this.address = $.address;
+        this.allocationId = $.allocationId;
+        this.associateWithPrivateIp = $.associateWithPrivateIp;
+        this.associationId = $.associationId;
+        this.carrierIp = $.carrierIp;
+        this.customerOwnedIp = $.customerOwnedIp;
+        this.customerOwnedIpv4Pool = $.customerOwnedIpv4Pool;
+        this.domain = $.domain;
+        this.instance = $.instance;
+        this.networkBorderGroup = $.networkBorderGroup;
+        this.networkInterface = $.networkInterface;
+        this.privateDns = $.privateDns;
+        this.privateIp = $.privateIp;
+        this.publicDns = $.publicDns;
+        this.publicIp = $.publicIp;
+        this.publicIpv4Pool = $.publicIpv4Pool;
+        this.tags = $.tags;
+        this.tagsAll = $.tagsAll;
+        this.vpc = $.vpc;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EipState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> address;
-        private @Nullable Output<String> allocationId;
-        private @Nullable Output<String> associateWithPrivateIp;
-        private @Nullable Output<String> associationId;
-        private @Nullable Output<String> carrierIp;
-        private @Nullable Output<String> customerOwnedIp;
-        private @Nullable Output<String> customerOwnedIpv4Pool;
-        private @Nullable Output<String> domain;
-        private @Nullable Output<String> instance;
-        private @Nullable Output<String> networkBorderGroup;
-        private @Nullable Output<String> networkInterface;
-        private @Nullable Output<String> privateDns;
-        private @Nullable Output<String> privateIp;
-        private @Nullable Output<String> publicDns;
-        private @Nullable Output<String> publicIp;
-        private @Nullable Output<String> publicIpv4Pool;
-        private @Nullable Output<Map<String,String>> tags;
-        private @Nullable Output<Map<String,String>> tagsAll;
-        private @Nullable Output<Boolean> vpc;
+        private EipState $;
 
         public Builder() {
-    	      // Empty
+            $ = new EipState();
         }
 
         public Builder(EipState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.address = defaults.address;
-    	      this.allocationId = defaults.allocationId;
-    	      this.associateWithPrivateIp = defaults.associateWithPrivateIp;
-    	      this.associationId = defaults.associationId;
-    	      this.carrierIp = defaults.carrierIp;
-    	      this.customerOwnedIp = defaults.customerOwnedIp;
-    	      this.customerOwnedIpv4Pool = defaults.customerOwnedIpv4Pool;
-    	      this.domain = defaults.domain;
-    	      this.instance = defaults.instance;
-    	      this.networkBorderGroup = defaults.networkBorderGroup;
-    	      this.networkInterface = defaults.networkInterface;
-    	      this.privateDns = defaults.privateDns;
-    	      this.privateIp = defaults.privateIp;
-    	      this.publicDns = defaults.publicDns;
-    	      this.publicIp = defaults.publicIp;
-    	      this.publicIpv4Pool = defaults.publicIpv4Pool;
-    	      this.tags = defaults.tags;
-    	      this.tagsAll = defaults.tagsAll;
-    	      this.vpc = defaults.vpc;
+            $ = new EipState(Objects.requireNonNull(defaults));
         }
 
         public Builder address(@Nullable Output<String> address) {
-            this.address = address;
+            $.address = address;
             return this;
         }
-        public Builder address(@Nullable String address) {
-            this.address = Codegen.ofNullable(address);
-            return this;
+
+        public Builder address(String address) {
+            return address(Output.of(address));
         }
+
         public Builder allocationId(@Nullable Output<String> allocationId) {
-            this.allocationId = allocationId;
+            $.allocationId = allocationId;
             return this;
         }
-        public Builder allocationId(@Nullable String allocationId) {
-            this.allocationId = Codegen.ofNullable(allocationId);
-            return this;
+
+        public Builder allocationId(String allocationId) {
+            return allocationId(Output.of(allocationId));
         }
+
         public Builder associateWithPrivateIp(@Nullable Output<String> associateWithPrivateIp) {
-            this.associateWithPrivateIp = associateWithPrivateIp;
+            $.associateWithPrivateIp = associateWithPrivateIp;
             return this;
         }
-        public Builder associateWithPrivateIp(@Nullable String associateWithPrivateIp) {
-            this.associateWithPrivateIp = Codegen.ofNullable(associateWithPrivateIp);
-            return this;
+
+        public Builder associateWithPrivateIp(String associateWithPrivateIp) {
+            return associateWithPrivateIp(Output.of(associateWithPrivateIp));
         }
+
         public Builder associationId(@Nullable Output<String> associationId) {
-            this.associationId = associationId;
+            $.associationId = associationId;
             return this;
         }
-        public Builder associationId(@Nullable String associationId) {
-            this.associationId = Codegen.ofNullable(associationId);
-            return this;
+
+        public Builder associationId(String associationId) {
+            return associationId(Output.of(associationId));
         }
+
         public Builder carrierIp(@Nullable Output<String> carrierIp) {
-            this.carrierIp = carrierIp;
+            $.carrierIp = carrierIp;
             return this;
         }
-        public Builder carrierIp(@Nullable String carrierIp) {
-            this.carrierIp = Codegen.ofNullable(carrierIp);
-            return this;
+
+        public Builder carrierIp(String carrierIp) {
+            return carrierIp(Output.of(carrierIp));
         }
+
         public Builder customerOwnedIp(@Nullable Output<String> customerOwnedIp) {
-            this.customerOwnedIp = customerOwnedIp;
+            $.customerOwnedIp = customerOwnedIp;
             return this;
         }
-        public Builder customerOwnedIp(@Nullable String customerOwnedIp) {
-            this.customerOwnedIp = Codegen.ofNullable(customerOwnedIp);
-            return this;
+
+        public Builder customerOwnedIp(String customerOwnedIp) {
+            return customerOwnedIp(Output.of(customerOwnedIp));
         }
+
         public Builder customerOwnedIpv4Pool(@Nullable Output<String> customerOwnedIpv4Pool) {
-            this.customerOwnedIpv4Pool = customerOwnedIpv4Pool;
+            $.customerOwnedIpv4Pool = customerOwnedIpv4Pool;
             return this;
         }
-        public Builder customerOwnedIpv4Pool(@Nullable String customerOwnedIpv4Pool) {
-            this.customerOwnedIpv4Pool = Codegen.ofNullable(customerOwnedIpv4Pool);
-            return this;
+
+        public Builder customerOwnedIpv4Pool(String customerOwnedIpv4Pool) {
+            return customerOwnedIpv4Pool(Output.of(customerOwnedIpv4Pool));
         }
+
         public Builder domain(@Nullable Output<String> domain) {
-            this.domain = domain;
+            $.domain = domain;
             return this;
         }
-        public Builder domain(@Nullable String domain) {
-            this.domain = Codegen.ofNullable(domain);
-            return this;
+
+        public Builder domain(String domain) {
+            return domain(Output.of(domain));
         }
+
         public Builder instance(@Nullable Output<String> instance) {
-            this.instance = instance;
+            $.instance = instance;
             return this;
         }
-        public Builder instance(@Nullable String instance) {
-            this.instance = Codegen.ofNullable(instance);
-            return this;
+
+        public Builder instance(String instance) {
+            return instance(Output.of(instance));
         }
+
         public Builder networkBorderGroup(@Nullable Output<String> networkBorderGroup) {
-            this.networkBorderGroup = networkBorderGroup;
+            $.networkBorderGroup = networkBorderGroup;
             return this;
         }
-        public Builder networkBorderGroup(@Nullable String networkBorderGroup) {
-            this.networkBorderGroup = Codegen.ofNullable(networkBorderGroup);
-            return this;
+
+        public Builder networkBorderGroup(String networkBorderGroup) {
+            return networkBorderGroup(Output.of(networkBorderGroup));
         }
+
         public Builder networkInterface(@Nullable Output<String> networkInterface) {
-            this.networkInterface = networkInterface;
+            $.networkInterface = networkInterface;
             return this;
         }
-        public Builder networkInterface(@Nullable String networkInterface) {
-            this.networkInterface = Codegen.ofNullable(networkInterface);
-            return this;
+
+        public Builder networkInterface(String networkInterface) {
+            return networkInterface(Output.of(networkInterface));
         }
+
         public Builder privateDns(@Nullable Output<String> privateDns) {
-            this.privateDns = privateDns;
+            $.privateDns = privateDns;
             return this;
         }
-        public Builder privateDns(@Nullable String privateDns) {
-            this.privateDns = Codegen.ofNullable(privateDns);
-            return this;
+
+        public Builder privateDns(String privateDns) {
+            return privateDns(Output.of(privateDns));
         }
+
         public Builder privateIp(@Nullable Output<String> privateIp) {
-            this.privateIp = privateIp;
+            $.privateIp = privateIp;
             return this;
         }
-        public Builder privateIp(@Nullable String privateIp) {
-            this.privateIp = Codegen.ofNullable(privateIp);
-            return this;
+
+        public Builder privateIp(String privateIp) {
+            return privateIp(Output.of(privateIp));
         }
+
         public Builder publicDns(@Nullable Output<String> publicDns) {
-            this.publicDns = publicDns;
+            $.publicDns = publicDns;
             return this;
         }
-        public Builder publicDns(@Nullable String publicDns) {
-            this.publicDns = Codegen.ofNullable(publicDns);
-            return this;
+
+        public Builder publicDns(String publicDns) {
+            return publicDns(Output.of(publicDns));
         }
+
         public Builder publicIp(@Nullable Output<String> publicIp) {
-            this.publicIp = publicIp;
+            $.publicIp = publicIp;
             return this;
         }
-        public Builder publicIp(@Nullable String publicIp) {
-            this.publicIp = Codegen.ofNullable(publicIp);
-            return this;
+
+        public Builder publicIp(String publicIp) {
+            return publicIp(Output.of(publicIp));
         }
+
         public Builder publicIpv4Pool(@Nullable Output<String> publicIpv4Pool) {
-            this.publicIpv4Pool = publicIpv4Pool;
+            $.publicIpv4Pool = publicIpv4Pool;
             return this;
         }
-        public Builder publicIpv4Pool(@Nullable String publicIpv4Pool) {
-            this.publicIpv4Pool = Codegen.ofNullable(publicIpv4Pool);
-            return this;
+
+        public Builder publicIpv4Pool(String publicIpv4Pool) {
+            return publicIpv4Pool(Output.of(publicIpv4Pool));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
-            this.tagsAll = tagsAll;
+            $.tagsAll = tagsAll;
             return this;
         }
-        public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Codegen.ofNullable(tagsAll);
-            return this;
+
+        public Builder tagsAll(Map<String,String> tagsAll) {
+            return tagsAll(Output.of(tagsAll));
         }
+
         public Builder vpc(@Nullable Output<Boolean> vpc) {
-            this.vpc = vpc;
+            $.vpc = vpc;
             return this;
         }
-        public Builder vpc(@Nullable Boolean vpc) {
-            this.vpc = Codegen.ofNullable(vpc);
-            return this;
-        }        public EipState build() {
-            return new EipState(address, allocationId, associateWithPrivateIp, associationId, carrierIp, customerOwnedIp, customerOwnedIpv4Pool, domain, instance, networkBorderGroup, networkInterface, privateDns, privateIp, publicDns, publicIp, publicIpv4Pool, tags, tagsAll, vpc);
+
+        public Builder vpc(Boolean vpc) {
+            return vpc(Output.of(vpc));
+        }
+
+        public EipState build() {
+            return $;
         }
     }
+
 }

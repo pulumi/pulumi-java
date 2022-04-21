@@ -17,7 +17,7 @@ public final class GetTriggerArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="accountName", required=true)
-      private final String accountName;
+    private String accountName;
 
     public String accountName() {
         return this.accountName;
@@ -28,7 +28,7 @@ public final class GetTriggerArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -39,7 +39,7 @@ public final class GetTriggerArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="shareSubscriptionName", required=true)
-      private final String shareSubscriptionName;
+    private String shareSubscriptionName;
 
     public String shareSubscriptionName() {
         return this.shareSubscriptionName;
@@ -50,73 +50,66 @@ public final class GetTriggerArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="triggerName", required=true)
-      private final String triggerName;
+    private String triggerName;
 
     public String triggerName() {
         return this.triggerName;
     }
 
-    public GetTriggerArgs(
-        String accountName,
-        String resourceGroupName,
-        String shareSubscriptionName,
-        String triggerName) {
-        this.accountName = Objects.requireNonNull(accountName, "expected parameter 'accountName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.shareSubscriptionName = Objects.requireNonNull(shareSubscriptionName, "expected parameter 'shareSubscriptionName' to be non-null");
-        this.triggerName = Objects.requireNonNull(triggerName, "expected parameter 'triggerName' to be non-null");
-    }
+    private GetTriggerArgs() {}
 
-    private GetTriggerArgs() {
-        this.accountName = null;
-        this.resourceGroupName = null;
-        this.shareSubscriptionName = null;
-        this.triggerName = null;
+    private GetTriggerArgs(GetTriggerArgs $) {
+        this.accountName = $.accountName;
+        this.resourceGroupName = $.resourceGroupName;
+        this.shareSubscriptionName = $.shareSubscriptionName;
+        this.triggerName = $.triggerName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetTriggerArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String accountName;
-        private String resourceGroupName;
-        private String shareSubscriptionName;
-        private String triggerName;
+        private GetTriggerArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetTriggerArgs();
         }
 
         public Builder(GetTriggerArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accountName = defaults.accountName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.shareSubscriptionName = defaults.shareSubscriptionName;
-    	      this.triggerName = defaults.triggerName;
+            $ = new GetTriggerArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder accountName(String accountName) {
-            this.accountName = Objects.requireNonNull(accountName);
+            $.accountName = accountName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder shareSubscriptionName(String shareSubscriptionName) {
-            this.shareSubscriptionName = Objects.requireNonNull(shareSubscriptionName);
+            $.shareSubscriptionName = shareSubscriptionName;
             return this;
         }
+
         public Builder triggerName(String triggerName) {
-            this.triggerName = Objects.requireNonNull(triggerName);
+            $.triggerName = triggerName;
             return this;
-        }        public GetTriggerArgs build() {
-            return new GetTriggerArgs(accountName, resourceGroupName, shareSubscriptionName, triggerName);
+        }
+
+        public GetTriggerArgs build() {
+            $.accountName = Objects.requireNonNull($.accountName, "expected parameter 'accountName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.shareSubscriptionName = Objects.requireNonNull($.shareSubscriptionName, "expected parameter 'shareSubscriptionName' to be non-null");
+            $.triggerName = Objects.requireNonNull($.triggerName, "expected parameter 'triggerName' to be non-null");
+            return $;
         }
     }
+
 }

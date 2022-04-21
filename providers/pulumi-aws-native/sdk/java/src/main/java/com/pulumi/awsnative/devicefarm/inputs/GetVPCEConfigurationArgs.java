@@ -13,45 +13,45 @@ public final class GetVPCEConfigurationArgs extends com.pulumi.resources.InvokeA
     public static final GetVPCEConfigurationArgs Empty = new GetVPCEConfigurationArgs();
 
     @Import(name="arn", required=true)
-      private final String arn;
+    private String arn;
 
     public String arn() {
         return this.arn;
     }
 
-    public GetVPCEConfigurationArgs(String arn) {
-        this.arn = Objects.requireNonNull(arn, "expected parameter 'arn' to be non-null");
-    }
+    private GetVPCEConfigurationArgs() {}
 
-    private GetVPCEConfigurationArgs() {
-        this.arn = null;
+    private GetVPCEConfigurationArgs(GetVPCEConfigurationArgs $) {
+        this.arn = $.arn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetVPCEConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String arn;
+        private GetVPCEConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetVPCEConfigurationArgs();
         }
 
         public Builder(GetVPCEConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.arn = defaults.arn;
+            $ = new GetVPCEConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder arn(String arn) {
-            this.arn = Objects.requireNonNull(arn);
+            $.arn = arn;
             return this;
-        }        public GetVPCEConfigurationArgs build() {
-            return new GetVPCEConfigurationArgs(arn);
+        }
+
+        public GetVPCEConfigurationArgs build() {
+            $.arn = Objects.requireNonNull($.arn, "expected parameter 'arn' to be non-null");
+            return $;
         }
     }
+
 }

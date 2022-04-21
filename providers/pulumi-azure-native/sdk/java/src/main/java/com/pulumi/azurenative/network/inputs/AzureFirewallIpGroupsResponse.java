@@ -21,7 +21,7 @@ public final class AzureFirewallIpGroupsResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="changeNumber", required=true)
-      private final String changeNumber;
+    private String changeNumber;
 
     public String changeNumber() {
         return this.changeNumber;
@@ -32,55 +32,52 @@ public final class AzureFirewallIpGroupsResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="id", required=true)
-      private final String id;
+    private String id;
 
     public String id() {
         return this.id;
     }
 
-    public AzureFirewallIpGroupsResponse(
-        String changeNumber,
-        String id) {
-        this.changeNumber = Objects.requireNonNull(changeNumber, "expected parameter 'changeNumber' to be non-null");
-        this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
-    }
+    private AzureFirewallIpGroupsResponse() {}
 
-    private AzureFirewallIpGroupsResponse() {
-        this.changeNumber = null;
-        this.id = null;
+    private AzureFirewallIpGroupsResponse(AzureFirewallIpGroupsResponse $) {
+        this.changeNumber = $.changeNumber;
+        this.id = $.id;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AzureFirewallIpGroupsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String changeNumber;
-        private String id;
+        private AzureFirewallIpGroupsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AzureFirewallIpGroupsResponse();
         }
 
         public Builder(AzureFirewallIpGroupsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.changeNumber = defaults.changeNumber;
-    	      this.id = defaults.id;
+            $ = new AzureFirewallIpGroupsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder changeNumber(String changeNumber) {
-            this.changeNumber = Objects.requireNonNull(changeNumber);
+            $.changeNumber = changeNumber;
             return this;
         }
+
         public Builder id(String id) {
-            this.id = Objects.requireNonNull(id);
+            $.id = id;
             return this;
-        }        public AzureFirewallIpGroupsResponse build() {
-            return new AzureFirewallIpGroupsResponse(changeNumber, id);
+        }
+
+        public AzureFirewallIpGroupsResponse build() {
+            $.changeNumber = Objects.requireNonNull($.changeNumber, "expected parameter 'changeNumber' to be non-null");
+            $.id = Objects.requireNonNull($.id, "expected parameter 'id' to be non-null");
+            return $;
         }
     }
+
 }

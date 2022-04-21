@@ -5,10 +5,10 @@ package com.pulumi.docker.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -17,70 +17,66 @@ public final class ServiceTaskSpecLogDriverArgs extends com.pulumi.resources.Res
     public static final ServiceTaskSpecLogDriverArgs Empty = new ServiceTaskSpecLogDriverArgs();
 
     @Import(name="name", required=true)
-      private final Output<String> name;
+    private Output<String> name;
 
     public Output<String> name() {
         return this.name;
     }
 
     @Import(name="options")
-      private final @Nullable Output<Map<String,String>> options;
+    private @Nullable Output<Map<String,String>> options;
 
-    public Output<Map<String,String>> options() {
-        return this.options == null ? Codegen.empty() : this.options;
+    public Optional<Output<Map<String,String>>> options() {
+        return Optional.ofNullable(this.options);
     }
 
-    public ServiceTaskSpecLogDriverArgs(
-        Output<String> name,
-        @Nullable Output<Map<String,String>> options) {
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.options = options;
-    }
+    private ServiceTaskSpecLogDriverArgs() {}
 
-    private ServiceTaskSpecLogDriverArgs() {
-        this.name = Codegen.empty();
-        this.options = Codegen.empty();
+    private ServiceTaskSpecLogDriverArgs(ServiceTaskSpecLogDriverArgs $) {
+        this.name = $.name;
+        this.options = $.options;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ServiceTaskSpecLogDriverArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> name;
-        private @Nullable Output<Map<String,String>> options;
+        private ServiceTaskSpecLogDriverArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ServiceTaskSpecLogDriverArgs();
         }
 
         public Builder(ServiceTaskSpecLogDriverArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.options = defaults.options;
+            $ = new ServiceTaskSpecLogDriverArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder name(Output<String> name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Output.of(Objects.requireNonNull(name));
-            return this;
+            return name(Output.of(name));
         }
+
         public Builder options(@Nullable Output<Map<String,String>> options) {
-            this.options = options;
+            $.options = options;
             return this;
         }
-        public Builder options(@Nullable Map<String,String> options) {
-            this.options = Codegen.ofNullable(options);
-            return this;
-        }        public ServiceTaskSpecLogDriverArgs build() {
-            return new ServiceTaskSpecLogDriverArgs(name, options);
+
+        public Builder options(Map<String,String> options) {
+            return options(Output.of(options));
+        }
+
+        public ServiceTaskSpecLogDriverArgs build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            return $;
         }
     }
+
 }

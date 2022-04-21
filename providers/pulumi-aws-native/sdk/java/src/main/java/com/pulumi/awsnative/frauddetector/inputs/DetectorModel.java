@@ -19,45 +19,44 @@ public final class DetectorModel extends com.pulumi.resources.InvokeArgs {
     public static final DetectorModel Empty = new DetectorModel();
 
     @Import(name="arn")
-      private final @Nullable String arn;
+    private @Nullable String arn;
 
     public Optional<String> arn() {
-        return this.arn == null ? Optional.empty() : Optional.ofNullable(this.arn);
+        return Optional.ofNullable(this.arn);
     }
 
-    public DetectorModel(@Nullable String arn) {
-        this.arn = arn;
-    }
+    private DetectorModel() {}
 
-    private DetectorModel() {
-        this.arn = null;
+    private DetectorModel(DetectorModel $) {
+        this.arn = $.arn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DetectorModel defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String arn;
+        private DetectorModel $;
 
         public Builder() {
-    	      // Empty
+            $ = new DetectorModel();
         }
 
         public Builder(DetectorModel defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.arn = defaults.arn;
+            $ = new DetectorModel(Objects.requireNonNull(defaults));
         }
 
         public Builder arn(@Nullable String arn) {
-            this.arn = arn;
+            $.arn = arn;
             return this;
-        }        public DetectorModel build() {
-            return new DetectorModel(arn);
+        }
+
+        public DetectorModel build() {
+            return $;
         }
     }
+
 }

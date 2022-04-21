@@ -21,45 +21,45 @@ public final class EncryptionConfigResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="kmsKeyName", required=true)
-      private final String kmsKeyName;
+    private String kmsKeyName;
 
     public String kmsKeyName() {
         return this.kmsKeyName;
     }
 
-    public EncryptionConfigResponse(String kmsKeyName) {
-        this.kmsKeyName = Objects.requireNonNull(kmsKeyName, "expected parameter 'kmsKeyName' to be non-null");
-    }
+    private EncryptionConfigResponse() {}
 
-    private EncryptionConfigResponse() {
-        this.kmsKeyName = null;
+    private EncryptionConfigResponse(EncryptionConfigResponse $) {
+        this.kmsKeyName = $.kmsKeyName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EncryptionConfigResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String kmsKeyName;
+        private EncryptionConfigResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new EncryptionConfigResponse();
         }
 
         public Builder(EncryptionConfigResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.kmsKeyName = defaults.kmsKeyName;
+            $ = new EncryptionConfigResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder kmsKeyName(String kmsKeyName) {
-            this.kmsKeyName = Objects.requireNonNull(kmsKeyName);
+            $.kmsKeyName = kmsKeyName;
             return this;
-        }        public EncryptionConfigResponse build() {
-            return new EncryptionConfigResponse(kmsKeyName);
+        }
+
+        public EncryptionConfigResponse build() {
+            $.kmsKeyName = Objects.requireNonNull($.kmsKeyName, "expected parameter 'kmsKeyName' to be non-null");
+            return $;
         }
     }
+
 }

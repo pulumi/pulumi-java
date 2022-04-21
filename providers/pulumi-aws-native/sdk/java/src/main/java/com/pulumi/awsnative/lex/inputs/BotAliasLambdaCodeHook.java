@@ -21,7 +21,7 @@ public final class BotAliasLambdaCodeHook extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="codeHookInterfaceVersion", required=true)
-      private final String codeHookInterfaceVersion;
+    private String codeHookInterfaceVersion;
 
     public String codeHookInterfaceVersion() {
         return this.codeHookInterfaceVersion;
@@ -32,55 +32,52 @@ public final class BotAliasLambdaCodeHook extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="lambdaArn", required=true)
-      private final String lambdaArn;
+    private String lambdaArn;
 
     public String lambdaArn() {
         return this.lambdaArn;
     }
 
-    public BotAliasLambdaCodeHook(
-        String codeHookInterfaceVersion,
-        String lambdaArn) {
-        this.codeHookInterfaceVersion = Objects.requireNonNull(codeHookInterfaceVersion, "expected parameter 'codeHookInterfaceVersion' to be non-null");
-        this.lambdaArn = Objects.requireNonNull(lambdaArn, "expected parameter 'lambdaArn' to be non-null");
-    }
+    private BotAliasLambdaCodeHook() {}
 
-    private BotAliasLambdaCodeHook() {
-        this.codeHookInterfaceVersion = null;
-        this.lambdaArn = null;
+    private BotAliasLambdaCodeHook(BotAliasLambdaCodeHook $) {
+        this.codeHookInterfaceVersion = $.codeHookInterfaceVersion;
+        this.lambdaArn = $.lambdaArn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BotAliasLambdaCodeHook defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String codeHookInterfaceVersion;
-        private String lambdaArn;
+        private BotAliasLambdaCodeHook $;
 
         public Builder() {
-    	      // Empty
+            $ = new BotAliasLambdaCodeHook();
         }
 
         public Builder(BotAliasLambdaCodeHook defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.codeHookInterfaceVersion = defaults.codeHookInterfaceVersion;
-    	      this.lambdaArn = defaults.lambdaArn;
+            $ = new BotAliasLambdaCodeHook(Objects.requireNonNull(defaults));
         }
 
         public Builder codeHookInterfaceVersion(String codeHookInterfaceVersion) {
-            this.codeHookInterfaceVersion = Objects.requireNonNull(codeHookInterfaceVersion);
+            $.codeHookInterfaceVersion = codeHookInterfaceVersion;
             return this;
         }
+
         public Builder lambdaArn(String lambdaArn) {
-            this.lambdaArn = Objects.requireNonNull(lambdaArn);
+            $.lambdaArn = lambdaArn;
             return this;
-        }        public BotAliasLambdaCodeHook build() {
-            return new BotAliasLambdaCodeHook(codeHookInterfaceVersion, lambdaArn);
+        }
+
+        public BotAliasLambdaCodeHook build() {
+            $.codeHookInterfaceVersion = Objects.requireNonNull($.codeHookInterfaceVersion, "expected parameter 'codeHookInterfaceVersion' to be non-null");
+            $.lambdaArn = Objects.requireNonNull($.lambdaArn, "expected parameter 'lambdaArn' to be non-null");
+            return $;
         }
     }
+
 }

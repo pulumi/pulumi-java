@@ -14,62 +14,59 @@ public final class GetResourcePolicySnapshotSchedulePolicyScheduleDailySchedule 
     public static final GetResourcePolicySnapshotSchedulePolicyScheduleDailySchedule Empty = new GetResourcePolicySnapshotSchedulePolicyScheduleDailySchedule();
 
     @Import(name="daysInCycle", required=true)
-      private final Integer daysInCycle;
+    private Integer daysInCycle;
 
     public Integer daysInCycle() {
         return this.daysInCycle;
     }
 
     @Import(name="startTime", required=true)
-      private final String startTime;
+    private String startTime;
 
     public String startTime() {
         return this.startTime;
     }
 
-    public GetResourcePolicySnapshotSchedulePolicyScheduleDailySchedule(
-        Integer daysInCycle,
-        String startTime) {
-        this.daysInCycle = Objects.requireNonNull(daysInCycle, "expected parameter 'daysInCycle' to be non-null");
-        this.startTime = Objects.requireNonNull(startTime, "expected parameter 'startTime' to be non-null");
-    }
+    private GetResourcePolicySnapshotSchedulePolicyScheduleDailySchedule() {}
 
-    private GetResourcePolicySnapshotSchedulePolicyScheduleDailySchedule() {
-        this.daysInCycle = null;
-        this.startTime = null;
+    private GetResourcePolicySnapshotSchedulePolicyScheduleDailySchedule(GetResourcePolicySnapshotSchedulePolicyScheduleDailySchedule $) {
+        this.daysInCycle = $.daysInCycle;
+        this.startTime = $.startTime;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetResourcePolicySnapshotSchedulePolicyScheduleDailySchedule defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Integer daysInCycle;
-        private String startTime;
+        private GetResourcePolicySnapshotSchedulePolicyScheduleDailySchedule $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetResourcePolicySnapshotSchedulePolicyScheduleDailySchedule();
         }
 
         public Builder(GetResourcePolicySnapshotSchedulePolicyScheduleDailySchedule defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.daysInCycle = defaults.daysInCycle;
-    	      this.startTime = defaults.startTime;
+            $ = new GetResourcePolicySnapshotSchedulePolicyScheduleDailySchedule(Objects.requireNonNull(defaults));
         }
 
         public Builder daysInCycle(Integer daysInCycle) {
-            this.daysInCycle = Objects.requireNonNull(daysInCycle);
+            $.daysInCycle = daysInCycle;
             return this;
         }
+
         public Builder startTime(String startTime) {
-            this.startTime = Objects.requireNonNull(startTime);
+            $.startTime = startTime;
             return this;
-        }        public GetResourcePolicySnapshotSchedulePolicyScheduleDailySchedule build() {
-            return new GetResourcePolicySnapshotSchedulePolicyScheduleDailySchedule(daysInCycle, startTime);
+        }
+
+        public GetResourcePolicySnapshotSchedulePolicyScheduleDailySchedule build() {
+            $.daysInCycle = Objects.requireNonNull($.daysInCycle, "expected parameter 'daysInCycle' to be non-null");
+            $.startTime = Objects.requireNonNull($.startTime, "expected parameter 'startTime' to be non-null");
+            return $;
         }
     }
+
 }

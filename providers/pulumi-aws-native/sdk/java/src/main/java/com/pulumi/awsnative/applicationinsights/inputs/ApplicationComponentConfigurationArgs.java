@@ -7,9 +7,9 @@ import com.pulumi.awsnative.applicationinsights.inputs.ApplicationConfigurationD
 import com.pulumi.awsnative.applicationinsights.inputs.ApplicationSubComponentTypeConfigurationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class ApplicationComponentConfigurationArgs extends com.pulumi.reso
      * 
      */
     @Import(name="configurationDetails")
-      private final @Nullable Output<ApplicationConfigurationDetailsArgs> configurationDetails;
+    private @Nullable Output<ApplicationConfigurationDetailsArgs> configurationDetails;
 
-    public Output<ApplicationConfigurationDetailsArgs> configurationDetails() {
-        return this.configurationDetails == null ? Codegen.empty() : this.configurationDetails;
+    public Optional<Output<ApplicationConfigurationDetailsArgs>> configurationDetails() {
+        return Optional.ofNullable(this.configurationDetails);
     }
 
     /**
@@ -37,66 +37,62 @@ public final class ApplicationComponentConfigurationArgs extends com.pulumi.reso
      * 
      */
     @Import(name="subComponentTypeConfigurations")
-      private final @Nullable Output<List<ApplicationSubComponentTypeConfigurationArgs>> subComponentTypeConfigurations;
+    private @Nullable Output<List<ApplicationSubComponentTypeConfigurationArgs>> subComponentTypeConfigurations;
 
-    public Output<List<ApplicationSubComponentTypeConfigurationArgs>> subComponentTypeConfigurations() {
-        return this.subComponentTypeConfigurations == null ? Codegen.empty() : this.subComponentTypeConfigurations;
+    public Optional<Output<List<ApplicationSubComponentTypeConfigurationArgs>>> subComponentTypeConfigurations() {
+        return Optional.ofNullable(this.subComponentTypeConfigurations);
     }
 
-    public ApplicationComponentConfigurationArgs(
-        @Nullable Output<ApplicationConfigurationDetailsArgs> configurationDetails,
-        @Nullable Output<List<ApplicationSubComponentTypeConfigurationArgs>> subComponentTypeConfigurations) {
-        this.configurationDetails = configurationDetails;
-        this.subComponentTypeConfigurations = subComponentTypeConfigurations;
-    }
+    private ApplicationComponentConfigurationArgs() {}
 
-    private ApplicationComponentConfigurationArgs() {
-        this.configurationDetails = Codegen.empty();
-        this.subComponentTypeConfigurations = Codegen.empty();
+    private ApplicationComponentConfigurationArgs(ApplicationComponentConfigurationArgs $) {
+        this.configurationDetails = $.configurationDetails;
+        this.subComponentTypeConfigurations = $.subComponentTypeConfigurations;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ApplicationComponentConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<ApplicationConfigurationDetailsArgs> configurationDetails;
-        private @Nullable Output<List<ApplicationSubComponentTypeConfigurationArgs>> subComponentTypeConfigurations;
+        private ApplicationComponentConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ApplicationComponentConfigurationArgs();
         }
 
         public Builder(ApplicationComponentConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.configurationDetails = defaults.configurationDetails;
-    	      this.subComponentTypeConfigurations = defaults.subComponentTypeConfigurations;
+            $ = new ApplicationComponentConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder configurationDetails(@Nullable Output<ApplicationConfigurationDetailsArgs> configurationDetails) {
-            this.configurationDetails = configurationDetails;
+            $.configurationDetails = configurationDetails;
             return this;
         }
-        public Builder configurationDetails(@Nullable ApplicationConfigurationDetailsArgs configurationDetails) {
-            this.configurationDetails = Codegen.ofNullable(configurationDetails);
-            return this;
+
+        public Builder configurationDetails(ApplicationConfigurationDetailsArgs configurationDetails) {
+            return configurationDetails(Output.of(configurationDetails));
         }
+
         public Builder subComponentTypeConfigurations(@Nullable Output<List<ApplicationSubComponentTypeConfigurationArgs>> subComponentTypeConfigurations) {
-            this.subComponentTypeConfigurations = subComponentTypeConfigurations;
+            $.subComponentTypeConfigurations = subComponentTypeConfigurations;
             return this;
         }
-        public Builder subComponentTypeConfigurations(@Nullable List<ApplicationSubComponentTypeConfigurationArgs> subComponentTypeConfigurations) {
-            this.subComponentTypeConfigurations = Codegen.ofNullable(subComponentTypeConfigurations);
-            return this;
+
+        public Builder subComponentTypeConfigurations(List<ApplicationSubComponentTypeConfigurationArgs> subComponentTypeConfigurations) {
+            return subComponentTypeConfigurations(Output.of(subComponentTypeConfigurations));
         }
+
         public Builder subComponentTypeConfigurations(ApplicationSubComponentTypeConfigurationArgs... subComponentTypeConfigurations) {
             return subComponentTypeConfigurations(List.of(subComponentTypeConfigurations));
-        }        public ApplicationComponentConfigurationArgs build() {
-            return new ApplicationComponentConfigurationArgs(configurationDetails, subComponentTypeConfigurations);
+        }
+
+        public ApplicationComponentConfigurationArgs build() {
+            return $;
         }
     }
+
 }

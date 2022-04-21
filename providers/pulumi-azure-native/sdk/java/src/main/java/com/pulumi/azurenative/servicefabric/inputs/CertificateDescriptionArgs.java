@@ -5,9 +5,9 @@ package com.pulumi.azurenative.servicefabric.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,7 +24,7 @@ public final class CertificateDescriptionArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="thumbprint", required=true)
-      private final Output<String> thumbprint;
+    private Output<String> thumbprint;
 
     public Output<String> thumbprint() {
         return this.thumbprint;
@@ -35,10 +35,10 @@ public final class CertificateDescriptionArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="thumbprintSecondary")
-      private final @Nullable Output<String> thumbprintSecondary;
+    private @Nullable Output<String> thumbprintSecondary;
 
-    public Output<String> thumbprintSecondary() {
-        return this.thumbprintSecondary == null ? Codegen.empty() : this.thumbprintSecondary;
+    public Optional<Output<String>> thumbprintSecondary() {
+        return Optional.ofNullable(this.thumbprintSecondary);
     }
 
     /**
@@ -46,76 +46,69 @@ public final class CertificateDescriptionArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="x509StoreName")
-      private final @Nullable Output<String> x509StoreName;
+    private @Nullable Output<String> x509StoreName;
 
-    public Output<String> x509StoreName() {
-        return this.x509StoreName == null ? Codegen.empty() : this.x509StoreName;
+    public Optional<Output<String>> x509StoreName() {
+        return Optional.ofNullable(this.x509StoreName);
     }
 
-    public CertificateDescriptionArgs(
-        Output<String> thumbprint,
-        @Nullable Output<String> thumbprintSecondary,
-        @Nullable Output<String> x509StoreName) {
-        this.thumbprint = Objects.requireNonNull(thumbprint, "expected parameter 'thumbprint' to be non-null");
-        this.thumbprintSecondary = thumbprintSecondary;
-        this.x509StoreName = x509StoreName;
-    }
+    private CertificateDescriptionArgs() {}
 
-    private CertificateDescriptionArgs() {
-        this.thumbprint = Codegen.empty();
-        this.thumbprintSecondary = Codegen.empty();
-        this.x509StoreName = Codegen.empty();
+    private CertificateDescriptionArgs(CertificateDescriptionArgs $) {
+        this.thumbprint = $.thumbprint;
+        this.thumbprintSecondary = $.thumbprintSecondary;
+        this.x509StoreName = $.x509StoreName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CertificateDescriptionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> thumbprint;
-        private @Nullable Output<String> thumbprintSecondary;
-        private @Nullable Output<String> x509StoreName;
+        private CertificateDescriptionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CertificateDescriptionArgs();
         }
 
         public Builder(CertificateDescriptionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.thumbprint = defaults.thumbprint;
-    	      this.thumbprintSecondary = defaults.thumbprintSecondary;
-    	      this.x509StoreName = defaults.x509StoreName;
+            $ = new CertificateDescriptionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder thumbprint(Output<String> thumbprint) {
-            this.thumbprint = Objects.requireNonNull(thumbprint);
+            $.thumbprint = thumbprint;
             return this;
         }
+
         public Builder thumbprint(String thumbprint) {
-            this.thumbprint = Output.of(Objects.requireNonNull(thumbprint));
-            return this;
+            return thumbprint(Output.of(thumbprint));
         }
+
         public Builder thumbprintSecondary(@Nullable Output<String> thumbprintSecondary) {
-            this.thumbprintSecondary = thumbprintSecondary;
+            $.thumbprintSecondary = thumbprintSecondary;
             return this;
         }
-        public Builder thumbprintSecondary(@Nullable String thumbprintSecondary) {
-            this.thumbprintSecondary = Codegen.ofNullable(thumbprintSecondary);
-            return this;
+
+        public Builder thumbprintSecondary(String thumbprintSecondary) {
+            return thumbprintSecondary(Output.of(thumbprintSecondary));
         }
+
         public Builder x509StoreName(@Nullable Output<String> x509StoreName) {
-            this.x509StoreName = x509StoreName;
+            $.x509StoreName = x509StoreName;
             return this;
         }
-        public Builder x509StoreName(@Nullable String x509StoreName) {
-            this.x509StoreName = Codegen.ofNullable(x509StoreName);
-            return this;
-        }        public CertificateDescriptionArgs build() {
-            return new CertificateDescriptionArgs(thumbprint, thumbprintSecondary, x509StoreName);
+
+        public Builder x509StoreName(String x509StoreName) {
+            return x509StoreName(Output.of(x509StoreName));
+        }
+
+        public CertificateDescriptionArgs build() {
+            $.thumbprint = Objects.requireNonNull($.thumbprint, "expected parameter 'thumbprint' to be non-null");
+            return $;
         }
     }
+
 }

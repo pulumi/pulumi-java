@@ -24,7 +24,7 @@ public final class CloudErrorBodyResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="code", required=true)
-      private final String code;
+    private String code;
 
     public String code() {
         return this.code;
@@ -35,10 +35,10 @@ public final class CloudErrorBodyResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="details")
-      private final @Nullable List<CloudErrorBodyResponse> details;
+    private @Nullable List<CloudErrorBodyResponse> details;
 
-    public List<CloudErrorBodyResponse> details() {
-        return this.details == null ? List.of() : this.details;
+    public Optional<List<CloudErrorBodyResponse>> details() {
+        return Optional.ofNullable(this.details);
     }
 
     /**
@@ -46,7 +46,7 @@ public final class CloudErrorBodyResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="message", required=true)
-      private final String message;
+    private String message;
 
     public String message() {
         return this.message;
@@ -57,76 +57,68 @@ public final class CloudErrorBodyResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="target")
-      private final @Nullable String target;
+    private @Nullable String target;
 
     public Optional<String> target() {
-        return this.target == null ? Optional.empty() : Optional.ofNullable(this.target);
+        return Optional.ofNullable(this.target);
     }
 
-    public CloudErrorBodyResponse(
-        String code,
-        @Nullable List<CloudErrorBodyResponse> details,
-        String message,
-        @Nullable String target) {
-        this.code = Objects.requireNonNull(code, "expected parameter 'code' to be non-null");
-        this.details = details;
-        this.message = Objects.requireNonNull(message, "expected parameter 'message' to be non-null");
-        this.target = target;
-    }
+    private CloudErrorBodyResponse() {}
 
-    private CloudErrorBodyResponse() {
-        this.code = null;
-        this.details = List.of();
-        this.message = null;
-        this.target = null;
+    private CloudErrorBodyResponse(CloudErrorBodyResponse $) {
+        this.code = $.code;
+        this.details = $.details;
+        this.message = $.message;
+        this.target = $.target;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CloudErrorBodyResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String code;
-        private @Nullable List<CloudErrorBodyResponse> details;
-        private String message;
-        private @Nullable String target;
+        private CloudErrorBodyResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new CloudErrorBodyResponse();
         }
 
         public Builder(CloudErrorBodyResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.code = defaults.code;
-    	      this.details = defaults.details;
-    	      this.message = defaults.message;
-    	      this.target = defaults.target;
+            $ = new CloudErrorBodyResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder code(String code) {
-            this.code = Objects.requireNonNull(code);
+            $.code = code;
             return this;
         }
+
         public Builder details(@Nullable List<CloudErrorBodyResponse> details) {
-            this.details = details;
+            $.details = details;
             return this;
         }
+
         public Builder details(CloudErrorBodyResponse... details) {
             return details(List.of(details));
         }
+
         public Builder message(String message) {
-            this.message = Objects.requireNonNull(message);
+            $.message = message;
             return this;
         }
+
         public Builder target(@Nullable String target) {
-            this.target = target;
+            $.target = target;
             return this;
-        }        public CloudErrorBodyResponse build() {
-            return new CloudErrorBodyResponse(code, details, message, target);
+        }
+
+        public CloudErrorBodyResponse build() {
+            $.code = Objects.requireNonNull($.code, "expected parameter 'code' to be non-null");
+            $.message = Objects.requireNonNull($.message, "expected parameter 'message' to be non-null");
+            return $;
         }
     }
+
 }

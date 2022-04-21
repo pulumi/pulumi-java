@@ -19,7 +19,7 @@ public final class GetClusterArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="clusterId", required=true)
-      private final String clusterId;
+    private String clusterId;
 
     public String clusterId() {
         return this.clusterId;
@@ -30,55 +30,51 @@ public final class GetClusterArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="clusterState")
-      private final @Nullable String clusterState;
+    private @Nullable String clusterState;
 
     public Optional<String> clusterState() {
-        return this.clusterState == null ? Optional.empty() : Optional.ofNullable(this.clusterState);
+        return Optional.ofNullable(this.clusterState);
     }
 
-    public GetClusterArgs(
-        String clusterId,
-        @Nullable String clusterState) {
-        this.clusterId = Objects.requireNonNull(clusterId, "expected parameter 'clusterId' to be non-null");
-        this.clusterState = clusterState;
-    }
+    private GetClusterArgs() {}
 
-    private GetClusterArgs() {
-        this.clusterId = null;
-        this.clusterState = null;
+    private GetClusterArgs(GetClusterArgs $) {
+        this.clusterId = $.clusterId;
+        this.clusterState = $.clusterState;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetClusterArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String clusterId;
-        private @Nullable String clusterState;
+        private GetClusterArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetClusterArgs();
         }
 
         public Builder(GetClusterArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.clusterId = defaults.clusterId;
-    	      this.clusterState = defaults.clusterState;
+            $ = new GetClusterArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder clusterId(String clusterId) {
-            this.clusterId = Objects.requireNonNull(clusterId);
+            $.clusterId = clusterId;
             return this;
         }
+
         public Builder clusterState(@Nullable String clusterState) {
-            this.clusterState = clusterState;
+            $.clusterState = clusterState;
             return this;
-        }        public GetClusterArgs build() {
-            return new GetClusterArgs(clusterId, clusterState);
+        }
+
+        public GetClusterArgs build() {
+            $.clusterId = Objects.requireNonNull($.clusterId, "expected parameter 'clusterId' to be non-null");
+            return $;
         }
     }
+
 }

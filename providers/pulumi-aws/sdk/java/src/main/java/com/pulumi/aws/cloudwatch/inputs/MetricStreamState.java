@@ -7,11 +7,11 @@ import com.pulumi.aws.cloudwatch.inputs.MetricStreamExcludeFilterGetArgs;
 import com.pulumi.aws.cloudwatch.inputs.MetricStreamIncludeFilterGetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class MetricStreamState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="arn")
-      private final @Nullable Output<String> arn;
+    private @Nullable Output<String> arn;
 
-    public Output<String> arn() {
-        return this.arn == null ? Codegen.empty() : this.arn;
+    public Optional<Output<String>> arn() {
+        return Optional.ofNullable(this.arn);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class MetricStreamState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="creationDate")
-      private final @Nullable Output<String> creationDate;
+    private @Nullable Output<String> creationDate;
 
-    public Output<String> creationDate() {
-        return this.creationDate == null ? Codegen.empty() : this.creationDate;
+    public Optional<Output<String>> creationDate() {
+        return Optional.ofNullable(this.creationDate);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class MetricStreamState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="excludeFilters")
-      private final @Nullable Output<List<MetricStreamExcludeFilterGetArgs>> excludeFilters;
+    private @Nullable Output<List<MetricStreamExcludeFilterGetArgs>> excludeFilters;
 
-    public Output<List<MetricStreamExcludeFilterGetArgs>> excludeFilters() {
-        return this.excludeFilters == null ? Codegen.empty() : this.excludeFilters;
+    public Optional<Output<List<MetricStreamExcludeFilterGetArgs>>> excludeFilters() {
+        return Optional.ofNullable(this.excludeFilters);
     }
 
     /**
@@ -57,10 +57,10 @@ public final class MetricStreamState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="firehoseArn")
-      private final @Nullable Output<String> firehoseArn;
+    private @Nullable Output<String> firehoseArn;
 
-    public Output<String> firehoseArn() {
-        return this.firehoseArn == null ? Codegen.empty() : this.firehoseArn;
+    public Optional<Output<String>> firehoseArn() {
+        return Optional.ofNullable(this.firehoseArn);
     }
 
     /**
@@ -68,10 +68,10 @@ public final class MetricStreamState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="includeFilters")
-      private final @Nullable Output<List<MetricStreamIncludeFilterGetArgs>> includeFilters;
+    private @Nullable Output<List<MetricStreamIncludeFilterGetArgs>> includeFilters;
 
-    public Output<List<MetricStreamIncludeFilterGetArgs>> includeFilters() {
-        return this.includeFilters == null ? Codegen.empty() : this.includeFilters;
+    public Optional<Output<List<MetricStreamIncludeFilterGetArgs>>> includeFilters() {
+        return Optional.ofNullable(this.includeFilters);
     }
 
     /**
@@ -79,17 +79,17 @@ public final class MetricStreamState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="lastUpdateDate")
-      private final @Nullable Output<String> lastUpdateDate;
+    private @Nullable Output<String> lastUpdateDate;
 
-    public Output<String> lastUpdateDate() {
-        return this.lastUpdateDate == null ? Codegen.empty() : this.lastUpdateDate;
+    public Optional<Output<String>> lastUpdateDate() {
+        return Optional.ofNullable(this.lastUpdateDate);
     }
 
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -97,10 +97,10 @@ public final class MetricStreamState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="namePrefix")
-      private final @Nullable Output<String> namePrefix;
+    private @Nullable Output<String> namePrefix;
 
-    public Output<String> namePrefix() {
-        return this.namePrefix == null ? Codegen.empty() : this.namePrefix;
+    public Optional<Output<String>> namePrefix() {
+        return Optional.ofNullable(this.namePrefix);
     }
 
     /**
@@ -108,10 +108,10 @@ public final class MetricStreamState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="outputFormat")
-      private final @Nullable Output<String> outputFormat;
+    private @Nullable Output<String> outputFormat;
 
-    public Output<String> outputFormat() {
-        return this.outputFormat == null ? Codegen.empty() : this.outputFormat;
+    public Optional<Output<String>> outputFormat() {
+        return Optional.ofNullable(this.outputFormat);
     }
 
     /**
@@ -119,10 +119,10 @@ public final class MetricStreamState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="roleArn")
-      private final @Nullable Output<String> roleArn;
+    private @Nullable Output<String> roleArn;
 
-    public Output<String> roleArn() {
-        return this.roleArn == null ? Codegen.empty() : this.roleArn;
+    public Optional<Output<String>> roleArn() {
+        return Optional.ofNullable(this.roleArn);
     }
 
     /**
@@ -130,10 +130,10 @@ public final class MetricStreamState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="state")
-      private final @Nullable Output<String> state;
+    private @Nullable Output<String> state;
 
-    public Output<String> state() {
-        return this.state == null ? Codegen.empty() : this.state;
+    public Optional<Output<String>> state() {
+        return Optional.ofNullable(this.state);
     }
 
     /**
@@ -141,10 +141,10 @@ public final class MetricStreamState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -152,212 +152,176 @@ public final class MetricStreamState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tagsAll")
-      private final @Nullable Output<Map<String,String>> tagsAll;
+    private @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> tagsAll() {
-        return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
+    public Optional<Output<Map<String,String>>> tagsAll() {
+        return Optional.ofNullable(this.tagsAll);
     }
 
-    public MetricStreamState(
-        @Nullable Output<String> arn,
-        @Nullable Output<String> creationDate,
-        @Nullable Output<List<MetricStreamExcludeFilterGetArgs>> excludeFilters,
-        @Nullable Output<String> firehoseArn,
-        @Nullable Output<List<MetricStreamIncludeFilterGetArgs>> includeFilters,
-        @Nullable Output<String> lastUpdateDate,
-        @Nullable Output<String> name,
-        @Nullable Output<String> namePrefix,
-        @Nullable Output<String> outputFormat,
-        @Nullable Output<String> roleArn,
-        @Nullable Output<String> state,
-        @Nullable Output<Map<String,String>> tags,
-        @Nullable Output<Map<String,String>> tagsAll) {
-        this.arn = arn;
-        this.creationDate = creationDate;
-        this.excludeFilters = excludeFilters;
-        this.firehoseArn = firehoseArn;
-        this.includeFilters = includeFilters;
-        this.lastUpdateDate = lastUpdateDate;
-        this.name = name;
-        this.namePrefix = namePrefix;
-        this.outputFormat = outputFormat;
-        this.roleArn = roleArn;
-        this.state = state;
-        this.tags = tags;
-        this.tagsAll = tagsAll;
-    }
+    private MetricStreamState() {}
 
-    private MetricStreamState() {
-        this.arn = Codegen.empty();
-        this.creationDate = Codegen.empty();
-        this.excludeFilters = Codegen.empty();
-        this.firehoseArn = Codegen.empty();
-        this.includeFilters = Codegen.empty();
-        this.lastUpdateDate = Codegen.empty();
-        this.name = Codegen.empty();
-        this.namePrefix = Codegen.empty();
-        this.outputFormat = Codegen.empty();
-        this.roleArn = Codegen.empty();
-        this.state = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.tagsAll = Codegen.empty();
+    private MetricStreamState(MetricStreamState $) {
+        this.arn = $.arn;
+        this.creationDate = $.creationDate;
+        this.excludeFilters = $.excludeFilters;
+        this.firehoseArn = $.firehoseArn;
+        this.includeFilters = $.includeFilters;
+        this.lastUpdateDate = $.lastUpdateDate;
+        this.name = $.name;
+        this.namePrefix = $.namePrefix;
+        this.outputFormat = $.outputFormat;
+        this.roleArn = $.roleArn;
+        this.state = $.state;
+        this.tags = $.tags;
+        this.tagsAll = $.tagsAll;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MetricStreamState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> arn;
-        private @Nullable Output<String> creationDate;
-        private @Nullable Output<List<MetricStreamExcludeFilterGetArgs>> excludeFilters;
-        private @Nullable Output<String> firehoseArn;
-        private @Nullable Output<List<MetricStreamIncludeFilterGetArgs>> includeFilters;
-        private @Nullable Output<String> lastUpdateDate;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> namePrefix;
-        private @Nullable Output<String> outputFormat;
-        private @Nullable Output<String> roleArn;
-        private @Nullable Output<String> state;
-        private @Nullable Output<Map<String,String>> tags;
-        private @Nullable Output<Map<String,String>> tagsAll;
+        private MetricStreamState $;
 
         public Builder() {
-    	      // Empty
+            $ = new MetricStreamState();
         }
 
         public Builder(MetricStreamState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.arn = defaults.arn;
-    	      this.creationDate = defaults.creationDate;
-    	      this.excludeFilters = defaults.excludeFilters;
-    	      this.firehoseArn = defaults.firehoseArn;
-    	      this.includeFilters = defaults.includeFilters;
-    	      this.lastUpdateDate = defaults.lastUpdateDate;
-    	      this.name = defaults.name;
-    	      this.namePrefix = defaults.namePrefix;
-    	      this.outputFormat = defaults.outputFormat;
-    	      this.roleArn = defaults.roleArn;
-    	      this.state = defaults.state;
-    	      this.tags = defaults.tags;
-    	      this.tagsAll = defaults.tagsAll;
+            $ = new MetricStreamState(Objects.requireNonNull(defaults));
         }
 
         public Builder arn(@Nullable Output<String> arn) {
-            this.arn = arn;
+            $.arn = arn;
             return this;
         }
-        public Builder arn(@Nullable String arn) {
-            this.arn = Codegen.ofNullable(arn);
-            return this;
+
+        public Builder arn(String arn) {
+            return arn(Output.of(arn));
         }
+
         public Builder creationDate(@Nullable Output<String> creationDate) {
-            this.creationDate = creationDate;
+            $.creationDate = creationDate;
             return this;
         }
-        public Builder creationDate(@Nullable String creationDate) {
-            this.creationDate = Codegen.ofNullable(creationDate);
-            return this;
+
+        public Builder creationDate(String creationDate) {
+            return creationDate(Output.of(creationDate));
         }
+
         public Builder excludeFilters(@Nullable Output<List<MetricStreamExcludeFilterGetArgs>> excludeFilters) {
-            this.excludeFilters = excludeFilters;
+            $.excludeFilters = excludeFilters;
             return this;
         }
-        public Builder excludeFilters(@Nullable List<MetricStreamExcludeFilterGetArgs> excludeFilters) {
-            this.excludeFilters = Codegen.ofNullable(excludeFilters);
-            return this;
+
+        public Builder excludeFilters(List<MetricStreamExcludeFilterGetArgs> excludeFilters) {
+            return excludeFilters(Output.of(excludeFilters));
         }
+
         public Builder excludeFilters(MetricStreamExcludeFilterGetArgs... excludeFilters) {
             return excludeFilters(List.of(excludeFilters));
         }
+
         public Builder firehoseArn(@Nullable Output<String> firehoseArn) {
-            this.firehoseArn = firehoseArn;
+            $.firehoseArn = firehoseArn;
             return this;
         }
-        public Builder firehoseArn(@Nullable String firehoseArn) {
-            this.firehoseArn = Codegen.ofNullable(firehoseArn);
-            return this;
+
+        public Builder firehoseArn(String firehoseArn) {
+            return firehoseArn(Output.of(firehoseArn));
         }
+
         public Builder includeFilters(@Nullable Output<List<MetricStreamIncludeFilterGetArgs>> includeFilters) {
-            this.includeFilters = includeFilters;
+            $.includeFilters = includeFilters;
             return this;
         }
-        public Builder includeFilters(@Nullable List<MetricStreamIncludeFilterGetArgs> includeFilters) {
-            this.includeFilters = Codegen.ofNullable(includeFilters);
-            return this;
+
+        public Builder includeFilters(List<MetricStreamIncludeFilterGetArgs> includeFilters) {
+            return includeFilters(Output.of(includeFilters));
         }
+
         public Builder includeFilters(MetricStreamIncludeFilterGetArgs... includeFilters) {
             return includeFilters(List.of(includeFilters));
         }
+
         public Builder lastUpdateDate(@Nullable Output<String> lastUpdateDate) {
-            this.lastUpdateDate = lastUpdateDate;
+            $.lastUpdateDate = lastUpdateDate;
             return this;
         }
-        public Builder lastUpdateDate(@Nullable String lastUpdateDate) {
-            this.lastUpdateDate = Codegen.ofNullable(lastUpdateDate);
-            return this;
+
+        public Builder lastUpdateDate(String lastUpdateDate) {
+            return lastUpdateDate(Output.of(lastUpdateDate));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder namePrefix(@Nullable Output<String> namePrefix) {
-            this.namePrefix = namePrefix;
+            $.namePrefix = namePrefix;
             return this;
         }
-        public Builder namePrefix(@Nullable String namePrefix) {
-            this.namePrefix = Codegen.ofNullable(namePrefix);
-            return this;
+
+        public Builder namePrefix(String namePrefix) {
+            return namePrefix(Output.of(namePrefix));
         }
+
         public Builder outputFormat(@Nullable Output<String> outputFormat) {
-            this.outputFormat = outputFormat;
+            $.outputFormat = outputFormat;
             return this;
         }
-        public Builder outputFormat(@Nullable String outputFormat) {
-            this.outputFormat = Codegen.ofNullable(outputFormat);
-            return this;
+
+        public Builder outputFormat(String outputFormat) {
+            return outputFormat(Output.of(outputFormat));
         }
+
         public Builder roleArn(@Nullable Output<String> roleArn) {
-            this.roleArn = roleArn;
+            $.roleArn = roleArn;
             return this;
         }
-        public Builder roleArn(@Nullable String roleArn) {
-            this.roleArn = Codegen.ofNullable(roleArn);
-            return this;
+
+        public Builder roleArn(String roleArn) {
+            return roleArn(Output.of(roleArn));
         }
+
         public Builder state(@Nullable Output<String> state) {
-            this.state = state;
+            $.state = state;
             return this;
         }
-        public Builder state(@Nullable String state) {
-            this.state = Codegen.ofNullable(state);
-            return this;
+
+        public Builder state(String state) {
+            return state(Output.of(state));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
-            this.tagsAll = tagsAll;
+            $.tagsAll = tagsAll;
             return this;
         }
-        public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Codegen.ofNullable(tagsAll);
-            return this;
-        }        public MetricStreamState build() {
-            return new MetricStreamState(arn, creationDate, excludeFilters, firehoseArn, includeFilters, lastUpdateDate, name, namePrefix, outputFormat, roleArn, state, tags, tagsAll);
+
+        public Builder tagsAll(Map<String,String> tagsAll) {
+            return tagsAll(Output.of(tagsAll));
+        }
+
+        public MetricStreamState build() {
+            return $;
         }
     }
+
 }

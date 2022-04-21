@@ -6,10 +6,10 @@ package com.pulumi.azurenative.elastic.inputs;
 import com.pulumi.azurenative.elastic.inputs.FilteringTagArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class LogRulesArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="filteringTags")
-      private final @Nullable Output<List<FilteringTagArgs>> filteringTags;
+    private @Nullable Output<List<FilteringTagArgs>> filteringTags;
 
-    public Output<List<FilteringTagArgs>> filteringTags() {
-        return this.filteringTags == null ? Codegen.empty() : this.filteringTags;
+    public Optional<Output<List<FilteringTagArgs>>> filteringTags() {
+        return Optional.ofNullable(this.filteringTags);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class LogRulesArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="sendAadLogs")
-      private final @Nullable Output<Boolean> sendAadLogs;
+    private @Nullable Output<Boolean> sendAadLogs;
 
-    public Output<Boolean> sendAadLogs() {
-        return this.sendAadLogs == null ? Codegen.empty() : this.sendAadLogs;
+    public Optional<Output<Boolean>> sendAadLogs() {
+        return Optional.ofNullable(this.sendAadLogs);
     }
 
     /**
@@ -48,10 +48,10 @@ public final class LogRulesArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="sendActivityLogs")
-      private final @Nullable Output<Boolean> sendActivityLogs;
+    private @Nullable Output<Boolean> sendActivityLogs;
 
-    public Output<Boolean> sendActivityLogs() {
-        return this.sendActivityLogs == null ? Codegen.empty() : this.sendActivityLogs;
+    public Optional<Output<Boolean>> sendActivityLogs() {
+        return Optional.ofNullable(this.sendActivityLogs);
     }
 
     /**
@@ -59,92 +59,82 @@ public final class LogRulesArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="sendSubscriptionLogs")
-      private final @Nullable Output<Boolean> sendSubscriptionLogs;
+    private @Nullable Output<Boolean> sendSubscriptionLogs;
 
-    public Output<Boolean> sendSubscriptionLogs() {
-        return this.sendSubscriptionLogs == null ? Codegen.empty() : this.sendSubscriptionLogs;
+    public Optional<Output<Boolean>> sendSubscriptionLogs() {
+        return Optional.ofNullable(this.sendSubscriptionLogs);
     }
 
-    public LogRulesArgs(
-        @Nullable Output<List<FilteringTagArgs>> filteringTags,
-        @Nullable Output<Boolean> sendAadLogs,
-        @Nullable Output<Boolean> sendActivityLogs,
-        @Nullable Output<Boolean> sendSubscriptionLogs) {
-        this.filteringTags = filteringTags;
-        this.sendAadLogs = sendAadLogs;
-        this.sendActivityLogs = sendActivityLogs;
-        this.sendSubscriptionLogs = sendSubscriptionLogs;
-    }
+    private LogRulesArgs() {}
 
-    private LogRulesArgs() {
-        this.filteringTags = Codegen.empty();
-        this.sendAadLogs = Codegen.empty();
-        this.sendActivityLogs = Codegen.empty();
-        this.sendSubscriptionLogs = Codegen.empty();
+    private LogRulesArgs(LogRulesArgs $) {
+        this.filteringTags = $.filteringTags;
+        this.sendAadLogs = $.sendAadLogs;
+        this.sendActivityLogs = $.sendActivityLogs;
+        this.sendSubscriptionLogs = $.sendSubscriptionLogs;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LogRulesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<FilteringTagArgs>> filteringTags;
-        private @Nullable Output<Boolean> sendAadLogs;
-        private @Nullable Output<Boolean> sendActivityLogs;
-        private @Nullable Output<Boolean> sendSubscriptionLogs;
+        private LogRulesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new LogRulesArgs();
         }
 
         public Builder(LogRulesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.filteringTags = defaults.filteringTags;
-    	      this.sendAadLogs = defaults.sendAadLogs;
-    	      this.sendActivityLogs = defaults.sendActivityLogs;
-    	      this.sendSubscriptionLogs = defaults.sendSubscriptionLogs;
+            $ = new LogRulesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder filteringTags(@Nullable Output<List<FilteringTagArgs>> filteringTags) {
-            this.filteringTags = filteringTags;
+            $.filteringTags = filteringTags;
             return this;
         }
-        public Builder filteringTags(@Nullable List<FilteringTagArgs> filteringTags) {
-            this.filteringTags = Codegen.ofNullable(filteringTags);
-            return this;
+
+        public Builder filteringTags(List<FilteringTagArgs> filteringTags) {
+            return filteringTags(Output.of(filteringTags));
         }
+
         public Builder filteringTags(FilteringTagArgs... filteringTags) {
             return filteringTags(List.of(filteringTags));
         }
+
         public Builder sendAadLogs(@Nullable Output<Boolean> sendAadLogs) {
-            this.sendAadLogs = sendAadLogs;
+            $.sendAadLogs = sendAadLogs;
             return this;
         }
-        public Builder sendAadLogs(@Nullable Boolean sendAadLogs) {
-            this.sendAadLogs = Codegen.ofNullable(sendAadLogs);
-            return this;
+
+        public Builder sendAadLogs(Boolean sendAadLogs) {
+            return sendAadLogs(Output.of(sendAadLogs));
         }
+
         public Builder sendActivityLogs(@Nullable Output<Boolean> sendActivityLogs) {
-            this.sendActivityLogs = sendActivityLogs;
+            $.sendActivityLogs = sendActivityLogs;
             return this;
         }
-        public Builder sendActivityLogs(@Nullable Boolean sendActivityLogs) {
-            this.sendActivityLogs = Codegen.ofNullable(sendActivityLogs);
-            return this;
+
+        public Builder sendActivityLogs(Boolean sendActivityLogs) {
+            return sendActivityLogs(Output.of(sendActivityLogs));
         }
+
         public Builder sendSubscriptionLogs(@Nullable Output<Boolean> sendSubscriptionLogs) {
-            this.sendSubscriptionLogs = sendSubscriptionLogs;
+            $.sendSubscriptionLogs = sendSubscriptionLogs;
             return this;
         }
-        public Builder sendSubscriptionLogs(@Nullable Boolean sendSubscriptionLogs) {
-            this.sendSubscriptionLogs = Codegen.ofNullable(sendSubscriptionLogs);
-            return this;
-        }        public LogRulesArgs build() {
-            return new LogRulesArgs(filteringTags, sendAadLogs, sendActivityLogs, sendSubscriptionLogs);
+
+        public Builder sendSubscriptionLogs(Boolean sendSubscriptionLogs) {
+            return sendSubscriptionLogs(Output.of(sendSubscriptionLogs));
+        }
+
+        public LogRulesArgs build() {
+            return $;
         }
     }
+
 }

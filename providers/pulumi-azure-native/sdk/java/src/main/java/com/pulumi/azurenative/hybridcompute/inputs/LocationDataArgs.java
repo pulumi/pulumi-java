@@ -5,9 +5,9 @@ package com.pulumi.azurenative.hybridcompute.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class LocationDataArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="city")
-      private final @Nullable Output<String> city;
+    private @Nullable Output<String> city;
 
-    public Output<String> city() {
-        return this.city == null ? Codegen.empty() : this.city;
+    public Optional<Output<String>> city() {
+        return Optional.ofNullable(this.city);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class LocationDataArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="countryOrRegion")
-      private final @Nullable Output<String> countryOrRegion;
+    private @Nullable Output<String> countryOrRegion;
 
-    public Output<String> countryOrRegion() {
-        return this.countryOrRegion == null ? Codegen.empty() : this.countryOrRegion;
+    public Optional<Output<String>> countryOrRegion() {
+        return Optional.ofNullable(this.countryOrRegion);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class LocationDataArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="district")
-      private final @Nullable Output<String> district;
+    private @Nullable Output<String> district;
 
-    public Output<String> district() {
-        return this.district == null ? Codegen.empty() : this.district;
+    public Optional<Output<String>> district() {
+        return Optional.ofNullable(this.district);
     }
 
     /**
@@ -57,89 +57,79 @@ public final class LocationDataArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name", required=true)
-      private final Output<String> name;
+    private Output<String> name;
 
     public Output<String> name() {
         return this.name;
     }
 
-    public LocationDataArgs(
-        @Nullable Output<String> city,
-        @Nullable Output<String> countryOrRegion,
-        @Nullable Output<String> district,
-        Output<String> name) {
-        this.city = city;
-        this.countryOrRegion = countryOrRegion;
-        this.district = district;
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-    }
+    private LocationDataArgs() {}
 
-    private LocationDataArgs() {
-        this.city = Codegen.empty();
-        this.countryOrRegion = Codegen.empty();
-        this.district = Codegen.empty();
-        this.name = Codegen.empty();
+    private LocationDataArgs(LocationDataArgs $) {
+        this.city = $.city;
+        this.countryOrRegion = $.countryOrRegion;
+        this.district = $.district;
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LocationDataArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> city;
-        private @Nullable Output<String> countryOrRegion;
-        private @Nullable Output<String> district;
-        private Output<String> name;
+        private LocationDataArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new LocationDataArgs();
         }
 
         public Builder(LocationDataArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.city = defaults.city;
-    	      this.countryOrRegion = defaults.countryOrRegion;
-    	      this.district = defaults.district;
-    	      this.name = defaults.name;
+            $ = new LocationDataArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder city(@Nullable Output<String> city) {
-            this.city = city;
+            $.city = city;
             return this;
         }
-        public Builder city(@Nullable String city) {
-            this.city = Codegen.ofNullable(city);
-            return this;
+
+        public Builder city(String city) {
+            return city(Output.of(city));
         }
+
         public Builder countryOrRegion(@Nullable Output<String> countryOrRegion) {
-            this.countryOrRegion = countryOrRegion;
+            $.countryOrRegion = countryOrRegion;
             return this;
         }
-        public Builder countryOrRegion(@Nullable String countryOrRegion) {
-            this.countryOrRegion = Codegen.ofNullable(countryOrRegion);
-            return this;
+
+        public Builder countryOrRegion(String countryOrRegion) {
+            return countryOrRegion(Output.of(countryOrRegion));
         }
+
         public Builder district(@Nullable Output<String> district) {
-            this.district = district;
+            $.district = district;
             return this;
         }
-        public Builder district(@Nullable String district) {
-            this.district = Codegen.ofNullable(district);
-            return this;
+
+        public Builder district(String district) {
+            return district(Output.of(district));
         }
+
         public Builder name(Output<String> name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Output.of(Objects.requireNonNull(name));
-            return this;
-        }        public LocationDataArgs build() {
-            return new LocationDataArgs(city, countryOrRegion, district, name);
+            return name(Output.of(name));
+        }
+
+        public LocationDataArgs build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            return $;
         }
     }
+
 }

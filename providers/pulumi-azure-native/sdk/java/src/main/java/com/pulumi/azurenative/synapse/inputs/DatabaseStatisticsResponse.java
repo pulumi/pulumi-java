@@ -23,45 +23,44 @@ public final class DatabaseStatisticsResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="size")
-      private final @Nullable Double size;
+    private @Nullable Double size;
 
     public Optional<Double> size() {
-        return this.size == null ? Optional.empty() : Optional.ofNullable(this.size);
+        return Optional.ofNullable(this.size);
     }
 
-    public DatabaseStatisticsResponse(@Nullable Double size) {
-        this.size = size;
-    }
+    private DatabaseStatisticsResponse() {}
 
-    private DatabaseStatisticsResponse() {
-        this.size = null;
+    private DatabaseStatisticsResponse(DatabaseStatisticsResponse $) {
+        this.size = $.size;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DatabaseStatisticsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Double size;
+        private DatabaseStatisticsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new DatabaseStatisticsResponse();
         }
 
         public Builder(DatabaseStatisticsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.size = defaults.size;
+            $ = new DatabaseStatisticsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder size(@Nullable Double size) {
-            this.size = size;
+            $.size = size;
             return this;
-        }        public DatabaseStatisticsResponse build() {
-            return new DatabaseStatisticsResponse(size);
+        }
+
+        public DatabaseStatisticsResponse build() {
+            return $;
         }
     }
+
 }

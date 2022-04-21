@@ -25,10 +25,10 @@ public final class PrivilegeResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="actions")
-      private final @Nullable List<String> actions;
+    private @Nullable List<String> actions;
 
-    public List<String> actions() {
-        return this.actions == null ? List.of() : this.actions;
+    public Optional<List<String>> actions() {
+        return Optional.ofNullable(this.actions);
     }
 
     /**
@@ -36,58 +36,54 @@ public final class PrivilegeResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resource")
-      private final @Nullable PrivilegeResponseResource resource;
+    private @Nullable PrivilegeResponseResource resource;
 
     public Optional<PrivilegeResponseResource> resource() {
-        return this.resource == null ? Optional.empty() : Optional.ofNullable(this.resource);
+        return Optional.ofNullable(this.resource);
     }
 
-    public PrivilegeResponse(
-        @Nullable List<String> actions,
-        @Nullable PrivilegeResponseResource resource) {
-        this.actions = actions;
-        this.resource = resource;
-    }
+    private PrivilegeResponse() {}
 
-    private PrivilegeResponse() {
-        this.actions = List.of();
-        this.resource = null;
+    private PrivilegeResponse(PrivilegeResponse $) {
+        this.actions = $.actions;
+        this.resource = $.resource;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PrivilegeResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<String> actions;
-        private @Nullable PrivilegeResponseResource resource;
+        private PrivilegeResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new PrivilegeResponse();
         }
 
         public Builder(PrivilegeResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.actions = defaults.actions;
-    	      this.resource = defaults.resource;
+            $ = new PrivilegeResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder actions(@Nullable List<String> actions) {
-            this.actions = actions;
+            $.actions = actions;
             return this;
         }
+
         public Builder actions(String... actions) {
             return actions(List.of(actions));
         }
+
         public Builder resource(@Nullable PrivilegeResponseResource resource) {
-            this.resource = resource;
+            $.resource = resource;
             return this;
-        }        public PrivilegeResponse build() {
-            return new PrivilegeResponse(actions, resource);
+        }
+
+        public PrivilegeResponse build() {
+            return $;
         }
     }
+
 }

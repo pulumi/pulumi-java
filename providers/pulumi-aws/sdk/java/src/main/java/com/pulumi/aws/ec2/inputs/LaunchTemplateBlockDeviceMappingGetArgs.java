@@ -6,9 +6,9 @@ package com.pulumi.aws.ec2.inputs;
 import com.pulumi.aws.ec2.inputs.LaunchTemplateBlockDeviceMappingEbsGetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class LaunchTemplateBlockDeviceMappingGetArgs extends com.pulumi.re
      * 
      */
     @Import(name="deviceName")
-      private final @Nullable Output<String> deviceName;
+    private @Nullable Output<String> deviceName;
 
-    public Output<String> deviceName() {
-        return this.deviceName == null ? Codegen.empty() : this.deviceName;
+    public Optional<Output<String>> deviceName() {
+        return Optional.ofNullable(this.deviceName);
     }
 
     /**
@@ -32,10 +32,10 @@ public final class LaunchTemplateBlockDeviceMappingGetArgs extends com.pulumi.re
      * 
      */
     @Import(name="ebs")
-      private final @Nullable Output<LaunchTemplateBlockDeviceMappingEbsGetArgs> ebs;
+    private @Nullable Output<LaunchTemplateBlockDeviceMappingEbsGetArgs> ebs;
 
-    public Output<LaunchTemplateBlockDeviceMappingEbsGetArgs> ebs() {
-        return this.ebs == null ? Codegen.empty() : this.ebs;
+    public Optional<Output<LaunchTemplateBlockDeviceMappingEbsGetArgs>> ebs() {
+        return Optional.ofNullable(this.ebs);
     }
 
     /**
@@ -43,10 +43,10 @@ public final class LaunchTemplateBlockDeviceMappingGetArgs extends com.pulumi.re
      * 
      */
     @Import(name="noDevice")
-      private final @Nullable Output<String> noDevice;
+    private @Nullable Output<String> noDevice;
 
-    public Output<String> noDevice() {
-        return this.noDevice == null ? Codegen.empty() : this.noDevice;
+    public Optional<Output<String>> noDevice() {
+        return Optional.ofNullable(this.noDevice);
     }
 
     /**
@@ -56,89 +56,78 @@ public final class LaunchTemplateBlockDeviceMappingGetArgs extends com.pulumi.re
      * 
      */
     @Import(name="virtualName")
-      private final @Nullable Output<String> virtualName;
+    private @Nullable Output<String> virtualName;
 
-    public Output<String> virtualName() {
-        return this.virtualName == null ? Codegen.empty() : this.virtualName;
+    public Optional<Output<String>> virtualName() {
+        return Optional.ofNullable(this.virtualName);
     }
 
-    public LaunchTemplateBlockDeviceMappingGetArgs(
-        @Nullable Output<String> deviceName,
-        @Nullable Output<LaunchTemplateBlockDeviceMappingEbsGetArgs> ebs,
-        @Nullable Output<String> noDevice,
-        @Nullable Output<String> virtualName) {
-        this.deviceName = deviceName;
-        this.ebs = ebs;
-        this.noDevice = noDevice;
-        this.virtualName = virtualName;
-    }
+    private LaunchTemplateBlockDeviceMappingGetArgs() {}
 
-    private LaunchTemplateBlockDeviceMappingGetArgs() {
-        this.deviceName = Codegen.empty();
-        this.ebs = Codegen.empty();
-        this.noDevice = Codegen.empty();
-        this.virtualName = Codegen.empty();
+    private LaunchTemplateBlockDeviceMappingGetArgs(LaunchTemplateBlockDeviceMappingGetArgs $) {
+        this.deviceName = $.deviceName;
+        this.ebs = $.ebs;
+        this.noDevice = $.noDevice;
+        this.virtualName = $.virtualName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LaunchTemplateBlockDeviceMappingGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> deviceName;
-        private @Nullable Output<LaunchTemplateBlockDeviceMappingEbsGetArgs> ebs;
-        private @Nullable Output<String> noDevice;
-        private @Nullable Output<String> virtualName;
+        private LaunchTemplateBlockDeviceMappingGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new LaunchTemplateBlockDeviceMappingGetArgs();
         }
 
         public Builder(LaunchTemplateBlockDeviceMappingGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.deviceName = defaults.deviceName;
-    	      this.ebs = defaults.ebs;
-    	      this.noDevice = defaults.noDevice;
-    	      this.virtualName = defaults.virtualName;
+            $ = new LaunchTemplateBlockDeviceMappingGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder deviceName(@Nullable Output<String> deviceName) {
-            this.deviceName = deviceName;
+            $.deviceName = deviceName;
             return this;
         }
-        public Builder deviceName(@Nullable String deviceName) {
-            this.deviceName = Codegen.ofNullable(deviceName);
-            return this;
+
+        public Builder deviceName(String deviceName) {
+            return deviceName(Output.of(deviceName));
         }
+
         public Builder ebs(@Nullable Output<LaunchTemplateBlockDeviceMappingEbsGetArgs> ebs) {
-            this.ebs = ebs;
+            $.ebs = ebs;
             return this;
         }
-        public Builder ebs(@Nullable LaunchTemplateBlockDeviceMappingEbsGetArgs ebs) {
-            this.ebs = Codegen.ofNullable(ebs);
-            return this;
+
+        public Builder ebs(LaunchTemplateBlockDeviceMappingEbsGetArgs ebs) {
+            return ebs(Output.of(ebs));
         }
+
         public Builder noDevice(@Nullable Output<String> noDevice) {
-            this.noDevice = noDevice;
+            $.noDevice = noDevice;
             return this;
         }
-        public Builder noDevice(@Nullable String noDevice) {
-            this.noDevice = Codegen.ofNullable(noDevice);
-            return this;
+
+        public Builder noDevice(String noDevice) {
+            return noDevice(Output.of(noDevice));
         }
+
         public Builder virtualName(@Nullable Output<String> virtualName) {
-            this.virtualName = virtualName;
+            $.virtualName = virtualName;
             return this;
         }
-        public Builder virtualName(@Nullable String virtualName) {
-            this.virtualName = Codegen.ofNullable(virtualName);
-            return this;
-        }        public LaunchTemplateBlockDeviceMappingGetArgs build() {
-            return new LaunchTemplateBlockDeviceMappingGetArgs(deviceName, ebs, noDevice, virtualName);
+
+        public Builder virtualName(String virtualName) {
+            return virtualName(Output.of(virtualName));
+        }
+
+        public LaunchTemplateBlockDeviceMappingGetArgs build() {
+            return $;
         }
     }
+
 }

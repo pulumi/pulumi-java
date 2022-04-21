@@ -5,9 +5,9 @@ package com.pulumi.googlenative.containeranalysis_v1beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class SignatureArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="publicKeyId")
-      private final @Nullable Output<String> publicKeyId;
+    private @Nullable Output<String> publicKeyId;
 
-    public Output<String> publicKeyId() {
-        return this.publicKeyId == null ? Codegen.empty() : this.publicKeyId;
+    public Optional<Output<String>> publicKeyId() {
+        return Optional.ofNullable(this.publicKeyId);
     }
 
     /**
@@ -35,63 +35,58 @@ public final class SignatureArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="signature")
-      private final @Nullable Output<String> signature;
+    private @Nullable Output<String> signature;
 
-    public Output<String> signature() {
-        return this.signature == null ? Codegen.empty() : this.signature;
+    public Optional<Output<String>> signature() {
+        return Optional.ofNullable(this.signature);
     }
 
-    public SignatureArgs(
-        @Nullable Output<String> publicKeyId,
-        @Nullable Output<String> signature) {
-        this.publicKeyId = publicKeyId;
-        this.signature = signature;
-    }
+    private SignatureArgs() {}
 
-    private SignatureArgs() {
-        this.publicKeyId = Codegen.empty();
-        this.signature = Codegen.empty();
+    private SignatureArgs(SignatureArgs $) {
+        this.publicKeyId = $.publicKeyId;
+        this.signature = $.signature;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SignatureArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> publicKeyId;
-        private @Nullable Output<String> signature;
+        private SignatureArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SignatureArgs();
         }
 
         public Builder(SignatureArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.publicKeyId = defaults.publicKeyId;
-    	      this.signature = defaults.signature;
+            $ = new SignatureArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder publicKeyId(@Nullable Output<String> publicKeyId) {
-            this.publicKeyId = publicKeyId;
+            $.publicKeyId = publicKeyId;
             return this;
         }
-        public Builder publicKeyId(@Nullable String publicKeyId) {
-            this.publicKeyId = Codegen.ofNullable(publicKeyId);
-            return this;
+
+        public Builder publicKeyId(String publicKeyId) {
+            return publicKeyId(Output.of(publicKeyId));
         }
+
         public Builder signature(@Nullable Output<String> signature) {
-            this.signature = signature;
+            $.signature = signature;
             return this;
         }
-        public Builder signature(@Nullable String signature) {
-            this.signature = Codegen.ofNullable(signature);
-            return this;
-        }        public SignatureArgs build() {
-            return new SignatureArgs(publicKeyId, signature);
+
+        public Builder signature(String signature) {
+            return signature(Output.of(signature));
+        }
+
+        public SignatureArgs build() {
+            return $;
         }
     }
+
 }

@@ -19,7 +19,7 @@ public final class MigrateMySqlAzureDbForMySqlSyncTaskOutputErrorResponse extend
      * 
      */
     @Import(name="error", required=true)
-      private final ReportableExceptionResponse error;
+    private ReportableExceptionResponse error;
 
     public ReportableExceptionResponse error() {
         return this.error;
@@ -30,7 +30,7 @@ public final class MigrateMySqlAzureDbForMySqlSyncTaskOutputErrorResponse extend
      * 
      */
     @Import(name="id", required=true)
-      private final String id;
+    private String id;
 
     public String id() {
         return this.id;
@@ -42,64 +42,59 @@ public final class MigrateMySqlAzureDbForMySqlSyncTaskOutputErrorResponse extend
      * 
      */
     @Import(name="resultType", required=true)
-      private final String resultType;
+    private String resultType;
 
     public String resultType() {
         return this.resultType;
     }
 
-    public MigrateMySqlAzureDbForMySqlSyncTaskOutputErrorResponse(
-        ReportableExceptionResponse error,
-        String id,
-        String resultType) {
-        this.error = Objects.requireNonNull(error, "expected parameter 'error' to be non-null");
-        this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
-        this.resultType = Codegen.stringProp("resultType").arg(resultType).require();
-    }
+    private MigrateMySqlAzureDbForMySqlSyncTaskOutputErrorResponse() {}
 
-    private MigrateMySqlAzureDbForMySqlSyncTaskOutputErrorResponse() {
-        this.error = null;
-        this.id = null;
-        this.resultType = null;
+    private MigrateMySqlAzureDbForMySqlSyncTaskOutputErrorResponse(MigrateMySqlAzureDbForMySqlSyncTaskOutputErrorResponse $) {
+        this.error = $.error;
+        this.id = $.id;
+        this.resultType = $.resultType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MigrateMySqlAzureDbForMySqlSyncTaskOutputErrorResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private ReportableExceptionResponse error;
-        private String id;
-        private String resultType;
+        private MigrateMySqlAzureDbForMySqlSyncTaskOutputErrorResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new MigrateMySqlAzureDbForMySqlSyncTaskOutputErrorResponse();
         }
 
         public Builder(MigrateMySqlAzureDbForMySqlSyncTaskOutputErrorResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.error = defaults.error;
-    	      this.id = defaults.id;
-    	      this.resultType = defaults.resultType;
+            $ = new MigrateMySqlAzureDbForMySqlSyncTaskOutputErrorResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder error(ReportableExceptionResponse error) {
-            this.error = Objects.requireNonNull(error);
+            $.error = error;
             return this;
         }
+
         public Builder id(String id) {
-            this.id = Objects.requireNonNull(id);
+            $.id = id;
             return this;
         }
+
         public Builder resultType(String resultType) {
-            this.resultType = Objects.requireNonNull(resultType);
+            $.resultType = resultType;
             return this;
-        }        public MigrateMySqlAzureDbForMySqlSyncTaskOutputErrorResponse build() {
-            return new MigrateMySqlAzureDbForMySqlSyncTaskOutputErrorResponse(error, id, resultType);
+        }
+
+        public MigrateMySqlAzureDbForMySqlSyncTaskOutputErrorResponse build() {
+            $.error = Objects.requireNonNull($.error, "expected parameter 'error' to be non-null");
+            $.id = Objects.requireNonNull($.id, "expected parameter 'id' to be non-null");
+            $.resultType = Codegen.stringProp("resultType").arg($.resultType).require();
+            return $;
         }
     }
+
 }

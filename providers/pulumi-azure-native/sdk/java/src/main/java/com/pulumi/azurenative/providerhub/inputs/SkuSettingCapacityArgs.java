@@ -7,10 +7,10 @@ import com.pulumi.azurenative.providerhub.enums.SkuScaleType;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -19,110 +19,100 @@ public final class SkuSettingCapacityArgs extends com.pulumi.resources.ResourceA
     public static final SkuSettingCapacityArgs Empty = new SkuSettingCapacityArgs();
 
     @Import(name="default")
-      private final @Nullable Output<Integer> default_;
+    private @Nullable Output<Integer> default_;
 
-    public Output<Integer> default_() {
-        return this.default_ == null ? Codegen.empty() : this.default_;
+    public Optional<Output<Integer>> default_() {
+        return Optional.ofNullable(this.default_);
     }
 
     @Import(name="maximum")
-      private final @Nullable Output<Integer> maximum;
+    private @Nullable Output<Integer> maximum;
 
-    public Output<Integer> maximum() {
-        return this.maximum == null ? Codegen.empty() : this.maximum;
+    public Optional<Output<Integer>> maximum() {
+        return Optional.ofNullable(this.maximum);
     }
 
     @Import(name="minimum", required=true)
-      private final Output<Integer> minimum;
+    private Output<Integer> minimum;
 
     public Output<Integer> minimum() {
         return this.minimum;
     }
 
     @Import(name="scaleType")
-      private final @Nullable Output<Either<String,SkuScaleType>> scaleType;
+    private @Nullable Output<Either<String,SkuScaleType>> scaleType;
 
-    public Output<Either<String,SkuScaleType>> scaleType() {
-        return this.scaleType == null ? Codegen.empty() : this.scaleType;
+    public Optional<Output<Either<String,SkuScaleType>>> scaleType() {
+        return Optional.ofNullable(this.scaleType);
     }
 
-    public SkuSettingCapacityArgs(
-        @Nullable Output<Integer> default_,
-        @Nullable Output<Integer> maximum,
-        Output<Integer> minimum,
-        @Nullable Output<Either<String,SkuScaleType>> scaleType) {
-        this.default_ = default_;
-        this.maximum = maximum;
-        this.minimum = Objects.requireNonNull(minimum, "expected parameter 'minimum' to be non-null");
-        this.scaleType = scaleType;
-    }
+    private SkuSettingCapacityArgs() {}
 
-    private SkuSettingCapacityArgs() {
-        this.default_ = Codegen.empty();
-        this.maximum = Codegen.empty();
-        this.minimum = Codegen.empty();
-        this.scaleType = Codegen.empty();
+    private SkuSettingCapacityArgs(SkuSettingCapacityArgs $) {
+        this.default_ = $.default_;
+        this.maximum = $.maximum;
+        this.minimum = $.minimum;
+        this.scaleType = $.scaleType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SkuSettingCapacityArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> default_;
-        private @Nullable Output<Integer> maximum;
-        private Output<Integer> minimum;
-        private @Nullable Output<Either<String,SkuScaleType>> scaleType;
+        private SkuSettingCapacityArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SkuSettingCapacityArgs();
         }
 
         public Builder(SkuSettingCapacityArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.default_ = defaults.default_;
-    	      this.maximum = defaults.maximum;
-    	      this.minimum = defaults.minimum;
-    	      this.scaleType = defaults.scaleType;
+            $ = new SkuSettingCapacityArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder default_(@Nullable Output<Integer> default_) {
-            this.default_ = default_;
+            $.default_ = default_;
             return this;
         }
-        public Builder default_(@Nullable Integer default_) {
-            this.default_ = Codegen.ofNullable(default_);
-            return this;
+
+        public Builder default_(Integer default_) {
+            return default_(Output.of(default_));
         }
+
         public Builder maximum(@Nullable Output<Integer> maximum) {
-            this.maximum = maximum;
+            $.maximum = maximum;
             return this;
         }
-        public Builder maximum(@Nullable Integer maximum) {
-            this.maximum = Codegen.ofNullable(maximum);
-            return this;
+
+        public Builder maximum(Integer maximum) {
+            return maximum(Output.of(maximum));
         }
+
         public Builder minimum(Output<Integer> minimum) {
-            this.minimum = Objects.requireNonNull(minimum);
+            $.minimum = minimum;
             return this;
         }
+
         public Builder minimum(Integer minimum) {
-            this.minimum = Output.of(Objects.requireNonNull(minimum));
-            return this;
+            return minimum(Output.of(minimum));
         }
+
         public Builder scaleType(@Nullable Output<Either<String,SkuScaleType>> scaleType) {
-            this.scaleType = scaleType;
+            $.scaleType = scaleType;
             return this;
         }
-        public Builder scaleType(@Nullable Either<String,SkuScaleType> scaleType) {
-            this.scaleType = Codegen.ofNullable(scaleType);
-            return this;
-        }        public SkuSettingCapacityArgs build() {
-            return new SkuSettingCapacityArgs(default_, maximum, minimum, scaleType);
+
+        public Builder scaleType(Either<String,SkuScaleType> scaleType) {
+            return scaleType(Output.of(scaleType));
+        }
+
+        public SkuSettingCapacityArgs build() {
+            $.minimum = Objects.requireNonNull($.minimum, "expected parameter 'minimum' to be non-null");
+            return $;
         }
     }
+
 }

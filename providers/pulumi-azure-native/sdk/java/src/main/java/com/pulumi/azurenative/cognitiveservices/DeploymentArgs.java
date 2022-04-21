@@ -6,9 +6,9 @@ package com.pulumi.azurenative.cognitiveservices;
 import com.pulumi.azurenative.cognitiveservices.inputs.DeploymentPropertiesArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,7 +21,7 @@ public final class DeploymentArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="accountName", required=true)
-      private final Output<String> accountName;
+    private Output<String> accountName;
 
     public Output<String> accountName() {
         return this.accountName;
@@ -32,10 +32,10 @@ public final class DeploymentArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="deploymentName")
-      private final @Nullable Output<String> deploymentName;
+    private @Nullable Output<String> deploymentName;
 
-    public Output<String> deploymentName() {
-        return this.deploymentName == null ? Codegen.empty() : this.deploymentName;
+    public Optional<Output<String>> deploymentName() {
+        return Optional.ofNullable(this.deploymentName);
     }
 
     /**
@@ -43,10 +43,10 @@ public final class DeploymentArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="properties")
-      private final @Nullable Output<DeploymentPropertiesArgs> properties;
+    private @Nullable Output<DeploymentPropertiesArgs> properties;
 
-    public Output<DeploymentPropertiesArgs> properties() {
-        return this.properties == null ? Codegen.empty() : this.properties;
+    public Optional<Output<DeploymentPropertiesArgs>> properties() {
+        return Optional.ofNullable(this.properties);
     }
 
     /**
@@ -54,89 +54,80 @@ public final class DeploymentArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public DeploymentArgs(
-        Output<String> accountName,
-        @Nullable Output<String> deploymentName,
-        @Nullable Output<DeploymentPropertiesArgs> properties,
-        Output<String> resourceGroupName) {
-        this.accountName = Objects.requireNonNull(accountName, "expected parameter 'accountName' to be non-null");
-        this.deploymentName = deploymentName;
-        this.properties = properties;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private DeploymentArgs() {}
 
-    private DeploymentArgs() {
-        this.accountName = Codegen.empty();
-        this.deploymentName = Codegen.empty();
-        this.properties = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
+    private DeploymentArgs(DeploymentArgs $) {
+        this.accountName = $.accountName;
+        this.deploymentName = $.deploymentName;
+        this.properties = $.properties;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DeploymentArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> accountName;
-        private @Nullable Output<String> deploymentName;
-        private @Nullable Output<DeploymentPropertiesArgs> properties;
-        private Output<String> resourceGroupName;
+        private DeploymentArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DeploymentArgs();
         }
 
         public Builder(DeploymentArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accountName = defaults.accountName;
-    	      this.deploymentName = defaults.deploymentName;
-    	      this.properties = defaults.properties;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new DeploymentArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder accountName(Output<String> accountName) {
-            this.accountName = Objects.requireNonNull(accountName);
+            $.accountName = accountName;
             return this;
         }
+
         public Builder accountName(String accountName) {
-            this.accountName = Output.of(Objects.requireNonNull(accountName));
-            return this;
+            return accountName(Output.of(accountName));
         }
+
         public Builder deploymentName(@Nullable Output<String> deploymentName) {
-            this.deploymentName = deploymentName;
+            $.deploymentName = deploymentName;
             return this;
         }
-        public Builder deploymentName(@Nullable String deploymentName) {
-            this.deploymentName = Codegen.ofNullable(deploymentName);
-            return this;
+
+        public Builder deploymentName(String deploymentName) {
+            return deploymentName(Output.of(deploymentName));
         }
+
         public Builder properties(@Nullable Output<DeploymentPropertiesArgs> properties) {
-            this.properties = properties;
+            $.properties = properties;
             return this;
         }
-        public Builder properties(@Nullable DeploymentPropertiesArgs properties) {
-            this.properties = Codegen.ofNullable(properties);
-            return this;
+
+        public Builder properties(DeploymentPropertiesArgs properties) {
+            return properties(Output.of(properties));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
-        }        public DeploymentArgs build() {
-            return new DeploymentArgs(accountName, deploymentName, properties, resourceGroupName);
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        public DeploymentArgs build() {
+            $.accountName = Objects.requireNonNull($.accountName, "expected parameter 'accountName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

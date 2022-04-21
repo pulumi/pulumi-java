@@ -19,7 +19,7 @@ public final class GetDomainEbsOption extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="ebsEnabled", required=true)
-      private final Boolean ebsEnabled;
+    private Boolean ebsEnabled;
 
     public Boolean ebsEnabled() {
         return this.ebsEnabled;
@@ -30,7 +30,7 @@ public final class GetDomainEbsOption extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="iops", required=true)
-      private final Integer iops;
+    private Integer iops;
 
     public Integer iops() {
         return this.iops;
@@ -41,7 +41,7 @@ public final class GetDomainEbsOption extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="volumeSize", required=true)
-      private final Integer volumeSize;
+    private Integer volumeSize;
 
     public Integer volumeSize() {
         return this.volumeSize;
@@ -52,73 +52,66 @@ public final class GetDomainEbsOption extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="volumeType", required=true)
-      private final String volumeType;
+    private String volumeType;
 
     public String volumeType() {
         return this.volumeType;
     }
 
-    public GetDomainEbsOption(
-        Boolean ebsEnabled,
-        Integer iops,
-        Integer volumeSize,
-        String volumeType) {
-        this.ebsEnabled = Objects.requireNonNull(ebsEnabled, "expected parameter 'ebsEnabled' to be non-null");
-        this.iops = Objects.requireNonNull(iops, "expected parameter 'iops' to be non-null");
-        this.volumeSize = Objects.requireNonNull(volumeSize, "expected parameter 'volumeSize' to be non-null");
-        this.volumeType = Objects.requireNonNull(volumeType, "expected parameter 'volumeType' to be non-null");
-    }
+    private GetDomainEbsOption() {}
 
-    private GetDomainEbsOption() {
-        this.ebsEnabled = null;
-        this.iops = null;
-        this.volumeSize = null;
-        this.volumeType = null;
+    private GetDomainEbsOption(GetDomainEbsOption $) {
+        this.ebsEnabled = $.ebsEnabled;
+        this.iops = $.iops;
+        this.volumeSize = $.volumeSize;
+        this.volumeType = $.volumeType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetDomainEbsOption defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Boolean ebsEnabled;
-        private Integer iops;
-        private Integer volumeSize;
-        private String volumeType;
+        private GetDomainEbsOption $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetDomainEbsOption();
         }
 
         public Builder(GetDomainEbsOption defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.ebsEnabled = defaults.ebsEnabled;
-    	      this.iops = defaults.iops;
-    	      this.volumeSize = defaults.volumeSize;
-    	      this.volumeType = defaults.volumeType;
+            $ = new GetDomainEbsOption(Objects.requireNonNull(defaults));
         }
 
         public Builder ebsEnabled(Boolean ebsEnabled) {
-            this.ebsEnabled = Objects.requireNonNull(ebsEnabled);
+            $.ebsEnabled = ebsEnabled;
             return this;
         }
+
         public Builder iops(Integer iops) {
-            this.iops = Objects.requireNonNull(iops);
+            $.iops = iops;
             return this;
         }
+
         public Builder volumeSize(Integer volumeSize) {
-            this.volumeSize = Objects.requireNonNull(volumeSize);
+            $.volumeSize = volumeSize;
             return this;
         }
+
         public Builder volumeType(String volumeType) {
-            this.volumeType = Objects.requireNonNull(volumeType);
+            $.volumeType = volumeType;
             return this;
-        }        public GetDomainEbsOption build() {
-            return new GetDomainEbsOption(ebsEnabled, iops, volumeSize, volumeType);
+        }
+
+        public GetDomainEbsOption build() {
+            $.ebsEnabled = Objects.requireNonNull($.ebsEnabled, "expected parameter 'ebsEnabled' to be non-null");
+            $.iops = Objects.requireNonNull($.iops, "expected parameter 'iops' to be non-null");
+            $.volumeSize = Objects.requireNonNull($.volumeSize, "expected parameter 'volumeSize' to be non-null");
+            $.volumeType = Objects.requireNonNull($.volumeType, "expected parameter 'volumeType' to be non-null");
+            return $;
         }
     }
+
 }

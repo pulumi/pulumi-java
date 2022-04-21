@@ -23,7 +23,7 @@ public final class ResourceOperationResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="operationId", required=true)
-      private final String operationId;
+    private String operationId;
 
     public String operationId() {
         return this.operationId;
@@ -34,7 +34,7 @@ public final class ResourceOperationResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="provisioningState", required=true)
-      private final String provisioningState;
+    private String provisioningState;
 
     public String provisioningState() {
         return this.provisioningState;
@@ -45,10 +45,10 @@ public final class ResourceOperationResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="resourceName")
-      private final @Nullable String resourceName;
+    private @Nullable String resourceName;
 
     public Optional<String> resourceName() {
-        return this.resourceName == null ? Optional.empty() : Optional.ofNullable(this.resourceName);
+        return Optional.ofNullable(this.resourceName);
     }
 
     /**
@@ -56,10 +56,10 @@ public final class ResourceOperationResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="resourceType")
-      private final @Nullable String resourceType;
+    private @Nullable String resourceType;
 
     public Optional<String> resourceType() {
-        return this.resourceType == null ? Optional.empty() : Optional.ofNullable(this.resourceType);
+        return Optional.ofNullable(this.resourceType);
     }
 
     /**
@@ -67,7 +67,7 @@ public final class ResourceOperationResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="statusCode", required=true)
-      private final String statusCode;
+    private String statusCode;
 
     public String statusCode() {
         return this.statusCode;
@@ -78,91 +78,78 @@ public final class ResourceOperationResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="statusMessage", required=true)
-      private final String statusMessage;
+    private String statusMessage;
 
     public String statusMessage() {
         return this.statusMessage;
     }
 
-    public ResourceOperationResponse(
-        String operationId,
-        String provisioningState,
-        @Nullable String resourceName,
-        @Nullable String resourceType,
-        String statusCode,
-        String statusMessage) {
-        this.operationId = Objects.requireNonNull(operationId, "expected parameter 'operationId' to be non-null");
-        this.provisioningState = Objects.requireNonNull(provisioningState, "expected parameter 'provisioningState' to be non-null");
-        this.resourceName = resourceName;
-        this.resourceType = resourceType;
-        this.statusCode = Objects.requireNonNull(statusCode, "expected parameter 'statusCode' to be non-null");
-        this.statusMessage = Objects.requireNonNull(statusMessage, "expected parameter 'statusMessage' to be non-null");
-    }
+    private ResourceOperationResponse() {}
 
-    private ResourceOperationResponse() {
-        this.operationId = null;
-        this.provisioningState = null;
-        this.resourceName = null;
-        this.resourceType = null;
-        this.statusCode = null;
-        this.statusMessage = null;
+    private ResourceOperationResponse(ResourceOperationResponse $) {
+        this.operationId = $.operationId;
+        this.provisioningState = $.provisioningState;
+        this.resourceName = $.resourceName;
+        this.resourceType = $.resourceType;
+        this.statusCode = $.statusCode;
+        this.statusMessage = $.statusMessage;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ResourceOperationResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String operationId;
-        private String provisioningState;
-        private @Nullable String resourceName;
-        private @Nullable String resourceType;
-        private String statusCode;
-        private String statusMessage;
+        private ResourceOperationResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ResourceOperationResponse();
         }
 
         public Builder(ResourceOperationResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.operationId = defaults.operationId;
-    	      this.provisioningState = defaults.provisioningState;
-    	      this.resourceName = defaults.resourceName;
-    	      this.resourceType = defaults.resourceType;
-    	      this.statusCode = defaults.statusCode;
-    	      this.statusMessage = defaults.statusMessage;
+            $ = new ResourceOperationResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder operationId(String operationId) {
-            this.operationId = Objects.requireNonNull(operationId);
+            $.operationId = operationId;
             return this;
         }
+
         public Builder provisioningState(String provisioningState) {
-            this.provisioningState = Objects.requireNonNull(provisioningState);
+            $.provisioningState = provisioningState;
             return this;
         }
+
         public Builder resourceName(@Nullable String resourceName) {
-            this.resourceName = resourceName;
+            $.resourceName = resourceName;
             return this;
         }
+
         public Builder resourceType(@Nullable String resourceType) {
-            this.resourceType = resourceType;
+            $.resourceType = resourceType;
             return this;
         }
+
         public Builder statusCode(String statusCode) {
-            this.statusCode = Objects.requireNonNull(statusCode);
+            $.statusCode = statusCode;
             return this;
         }
+
         public Builder statusMessage(String statusMessage) {
-            this.statusMessage = Objects.requireNonNull(statusMessage);
+            $.statusMessage = statusMessage;
             return this;
-        }        public ResourceOperationResponse build() {
-            return new ResourceOperationResponse(operationId, provisioningState, resourceName, resourceType, statusCode, statusMessage);
+        }
+
+        public ResourceOperationResponse build() {
+            $.operationId = Objects.requireNonNull($.operationId, "expected parameter 'operationId' to be non-null");
+            $.provisioningState = Objects.requireNonNull($.provisioningState, "expected parameter 'provisioningState' to be non-null");
+            $.statusCode = Objects.requireNonNull($.statusCode, "expected parameter 'statusCode' to be non-null");
+            $.statusMessage = Objects.requireNonNull($.statusMessage, "expected parameter 'statusMessage' to be non-null");
+            return $;
         }
     }
+
 }

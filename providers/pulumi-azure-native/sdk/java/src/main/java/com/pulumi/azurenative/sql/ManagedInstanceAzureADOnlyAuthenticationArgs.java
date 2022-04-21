@@ -5,10 +5,10 @@ package com.pulumi.azurenative.sql;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class ManagedInstanceAzureADOnlyAuthenticationArgs extends com.pulu
      * 
      */
     @Import(name="authenticationName")
-      private final @Nullable Output<String> authenticationName;
+    private @Nullable Output<String> authenticationName;
 
-    public Output<String> authenticationName() {
-        return this.authenticationName == null ? Codegen.empty() : this.authenticationName;
+    public Optional<Output<String>> authenticationName() {
+        return Optional.ofNullable(this.authenticationName);
     }
 
     /**
@@ -32,7 +32,7 @@ public final class ManagedInstanceAzureADOnlyAuthenticationArgs extends com.pulu
      * 
      */
     @Import(name="azureADOnlyAuthentication", required=true)
-      private final Output<Boolean> azureADOnlyAuthentication;
+    private Output<Boolean> azureADOnlyAuthentication;
 
     public Output<Boolean> azureADOnlyAuthentication() {
         return this.azureADOnlyAuthentication;
@@ -43,7 +43,7 @@ public final class ManagedInstanceAzureADOnlyAuthenticationArgs extends com.pulu
      * 
      */
     @Import(name="managedInstanceName", required=true)
-      private final Output<String> managedInstanceName;
+    private Output<String> managedInstanceName;
 
     public Output<String> managedInstanceName() {
         return this.managedInstanceName;
@@ -54,89 +54,81 @@ public final class ManagedInstanceAzureADOnlyAuthenticationArgs extends com.pulu
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public ManagedInstanceAzureADOnlyAuthenticationArgs(
-        @Nullable Output<String> authenticationName,
-        Output<Boolean> azureADOnlyAuthentication,
-        Output<String> managedInstanceName,
-        Output<String> resourceGroupName) {
-        this.authenticationName = authenticationName;
-        this.azureADOnlyAuthentication = Objects.requireNonNull(azureADOnlyAuthentication, "expected parameter 'azureADOnlyAuthentication' to be non-null");
-        this.managedInstanceName = Objects.requireNonNull(managedInstanceName, "expected parameter 'managedInstanceName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private ManagedInstanceAzureADOnlyAuthenticationArgs() {}
 
-    private ManagedInstanceAzureADOnlyAuthenticationArgs() {
-        this.authenticationName = Codegen.empty();
-        this.azureADOnlyAuthentication = Codegen.empty();
-        this.managedInstanceName = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
+    private ManagedInstanceAzureADOnlyAuthenticationArgs(ManagedInstanceAzureADOnlyAuthenticationArgs $) {
+        this.authenticationName = $.authenticationName;
+        this.azureADOnlyAuthentication = $.azureADOnlyAuthentication;
+        this.managedInstanceName = $.managedInstanceName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ManagedInstanceAzureADOnlyAuthenticationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> authenticationName;
-        private Output<Boolean> azureADOnlyAuthentication;
-        private Output<String> managedInstanceName;
-        private Output<String> resourceGroupName;
+        private ManagedInstanceAzureADOnlyAuthenticationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ManagedInstanceAzureADOnlyAuthenticationArgs();
         }
 
         public Builder(ManagedInstanceAzureADOnlyAuthenticationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.authenticationName = defaults.authenticationName;
-    	      this.azureADOnlyAuthentication = defaults.azureADOnlyAuthentication;
-    	      this.managedInstanceName = defaults.managedInstanceName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new ManagedInstanceAzureADOnlyAuthenticationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder authenticationName(@Nullable Output<String> authenticationName) {
-            this.authenticationName = authenticationName;
+            $.authenticationName = authenticationName;
             return this;
         }
-        public Builder authenticationName(@Nullable String authenticationName) {
-            this.authenticationName = Codegen.ofNullable(authenticationName);
-            return this;
+
+        public Builder authenticationName(String authenticationName) {
+            return authenticationName(Output.of(authenticationName));
         }
+
         public Builder azureADOnlyAuthentication(Output<Boolean> azureADOnlyAuthentication) {
-            this.azureADOnlyAuthentication = Objects.requireNonNull(azureADOnlyAuthentication);
+            $.azureADOnlyAuthentication = azureADOnlyAuthentication;
             return this;
         }
+
         public Builder azureADOnlyAuthentication(Boolean azureADOnlyAuthentication) {
-            this.azureADOnlyAuthentication = Output.of(Objects.requireNonNull(azureADOnlyAuthentication));
-            return this;
+            return azureADOnlyAuthentication(Output.of(azureADOnlyAuthentication));
         }
+
         public Builder managedInstanceName(Output<String> managedInstanceName) {
-            this.managedInstanceName = Objects.requireNonNull(managedInstanceName);
+            $.managedInstanceName = managedInstanceName;
             return this;
         }
+
         public Builder managedInstanceName(String managedInstanceName) {
-            this.managedInstanceName = Output.of(Objects.requireNonNull(managedInstanceName));
-            return this;
+            return managedInstanceName(Output.of(managedInstanceName));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
-        }        public ManagedInstanceAzureADOnlyAuthenticationArgs build() {
-            return new ManagedInstanceAzureADOnlyAuthenticationArgs(authenticationName, azureADOnlyAuthentication, managedInstanceName, resourceGroupName);
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        public ManagedInstanceAzureADOnlyAuthenticationArgs build() {
+            $.azureADOnlyAuthentication = Objects.requireNonNull($.azureADOnlyAuthentication, "expected parameter 'azureADOnlyAuthentication' to be non-null");
+            $.managedInstanceName = Objects.requireNonNull($.managedInstanceName, "expected parameter 'managedInstanceName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

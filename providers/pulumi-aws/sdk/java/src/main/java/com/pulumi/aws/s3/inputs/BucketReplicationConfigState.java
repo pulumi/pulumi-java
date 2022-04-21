@@ -6,10 +6,10 @@ package com.pulumi.aws.s3.inputs;
 import com.pulumi.aws.s3.inputs.BucketReplicationConfigRuleGetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class BucketReplicationConfigState extends com.pulumi.resources.Res
      * 
      */
     @Import(name="bucket")
-      private final @Nullable Output<String> bucket;
+    private @Nullable Output<String> bucket;
 
-    public Output<String> bucket() {
-        return this.bucket == null ? Codegen.empty() : this.bucket;
+    public Optional<Output<String>> bucket() {
+        return Optional.ofNullable(this.bucket);
     }
 
     /**
@@ -33,10 +33,10 @@ public final class BucketReplicationConfigState extends com.pulumi.resources.Res
      * 
      */
     @Import(name="role")
-      private final @Nullable Output<String> role;
+    private @Nullable Output<String> role;
 
-    public Output<String> role() {
-        return this.role == null ? Codegen.empty() : this.role;
+    public Optional<Output<String>> role() {
+        return Optional.ofNullable(this.role);
     }
 
     /**
@@ -44,79 +44,72 @@ public final class BucketReplicationConfigState extends com.pulumi.resources.Res
      * 
      */
     @Import(name="rules")
-      private final @Nullable Output<List<BucketReplicationConfigRuleGetArgs>> rules;
+    private @Nullable Output<List<BucketReplicationConfigRuleGetArgs>> rules;
 
-    public Output<List<BucketReplicationConfigRuleGetArgs>> rules() {
-        return this.rules == null ? Codegen.empty() : this.rules;
+    public Optional<Output<List<BucketReplicationConfigRuleGetArgs>>> rules() {
+        return Optional.ofNullable(this.rules);
     }
 
-    public BucketReplicationConfigState(
-        @Nullable Output<String> bucket,
-        @Nullable Output<String> role,
-        @Nullable Output<List<BucketReplicationConfigRuleGetArgs>> rules) {
-        this.bucket = bucket;
-        this.role = role;
-        this.rules = rules;
-    }
+    private BucketReplicationConfigState() {}
 
-    private BucketReplicationConfigState() {
-        this.bucket = Codegen.empty();
-        this.role = Codegen.empty();
-        this.rules = Codegen.empty();
+    private BucketReplicationConfigState(BucketReplicationConfigState $) {
+        this.bucket = $.bucket;
+        this.role = $.role;
+        this.rules = $.rules;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BucketReplicationConfigState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> bucket;
-        private @Nullable Output<String> role;
-        private @Nullable Output<List<BucketReplicationConfigRuleGetArgs>> rules;
+        private BucketReplicationConfigState $;
 
         public Builder() {
-    	      // Empty
+            $ = new BucketReplicationConfigState();
         }
 
         public Builder(BucketReplicationConfigState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.bucket = defaults.bucket;
-    	      this.role = defaults.role;
-    	      this.rules = defaults.rules;
+            $ = new BucketReplicationConfigState(Objects.requireNonNull(defaults));
         }
 
         public Builder bucket(@Nullable Output<String> bucket) {
-            this.bucket = bucket;
+            $.bucket = bucket;
             return this;
         }
-        public Builder bucket(@Nullable String bucket) {
-            this.bucket = Codegen.ofNullable(bucket);
-            return this;
+
+        public Builder bucket(String bucket) {
+            return bucket(Output.of(bucket));
         }
+
         public Builder role(@Nullable Output<String> role) {
-            this.role = role;
+            $.role = role;
             return this;
         }
-        public Builder role(@Nullable String role) {
-            this.role = Codegen.ofNullable(role);
-            return this;
+
+        public Builder role(String role) {
+            return role(Output.of(role));
         }
+
         public Builder rules(@Nullable Output<List<BucketReplicationConfigRuleGetArgs>> rules) {
-            this.rules = rules;
+            $.rules = rules;
             return this;
         }
-        public Builder rules(@Nullable List<BucketReplicationConfigRuleGetArgs> rules) {
-            this.rules = Codegen.ofNullable(rules);
-            return this;
+
+        public Builder rules(List<BucketReplicationConfigRuleGetArgs> rules) {
+            return rules(Output.of(rules));
         }
+
         public Builder rules(BucketReplicationConfigRuleGetArgs... rules) {
             return rules(List.of(rules));
-        }        public BucketReplicationConfigState build() {
-            return new BucketReplicationConfigState(bucket, role, rules);
+        }
+
+        public BucketReplicationConfigState build() {
+            return $;
         }
     }
+
 }

@@ -17,7 +17,7 @@ public final class GetLoadBalancerBackendAddressPoolArgs extends com.pulumi.reso
      * 
      */
     @Import(name="backendAddressPoolName", required=true)
-      private final String backendAddressPoolName;
+    private String backendAddressPoolName;
 
     public String backendAddressPoolName() {
         return this.backendAddressPoolName;
@@ -28,7 +28,7 @@ public final class GetLoadBalancerBackendAddressPoolArgs extends com.pulumi.reso
      * 
      */
     @Import(name="loadBalancerName", required=true)
-      private final String loadBalancerName;
+    private String loadBalancerName;
 
     public String loadBalancerName() {
         return this.loadBalancerName;
@@ -39,64 +39,59 @@ public final class GetLoadBalancerBackendAddressPoolArgs extends com.pulumi.reso
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public GetLoadBalancerBackendAddressPoolArgs(
-        String backendAddressPoolName,
-        String loadBalancerName,
-        String resourceGroupName) {
-        this.backendAddressPoolName = Objects.requireNonNull(backendAddressPoolName, "expected parameter 'backendAddressPoolName' to be non-null");
-        this.loadBalancerName = Objects.requireNonNull(loadBalancerName, "expected parameter 'loadBalancerName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private GetLoadBalancerBackendAddressPoolArgs() {}
 
-    private GetLoadBalancerBackendAddressPoolArgs() {
-        this.backendAddressPoolName = null;
-        this.loadBalancerName = null;
-        this.resourceGroupName = null;
+    private GetLoadBalancerBackendAddressPoolArgs(GetLoadBalancerBackendAddressPoolArgs $) {
+        this.backendAddressPoolName = $.backendAddressPoolName;
+        this.loadBalancerName = $.loadBalancerName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetLoadBalancerBackendAddressPoolArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String backendAddressPoolName;
-        private String loadBalancerName;
-        private String resourceGroupName;
+        private GetLoadBalancerBackendAddressPoolArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetLoadBalancerBackendAddressPoolArgs();
         }
 
         public Builder(GetLoadBalancerBackendAddressPoolArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.backendAddressPoolName = defaults.backendAddressPoolName;
-    	      this.loadBalancerName = defaults.loadBalancerName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new GetLoadBalancerBackendAddressPoolArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder backendAddressPoolName(String backendAddressPoolName) {
-            this.backendAddressPoolName = Objects.requireNonNull(backendAddressPoolName);
+            $.backendAddressPoolName = backendAddressPoolName;
             return this;
         }
+
         public Builder loadBalancerName(String loadBalancerName) {
-            this.loadBalancerName = Objects.requireNonNull(loadBalancerName);
+            $.loadBalancerName = loadBalancerName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public GetLoadBalancerBackendAddressPoolArgs build() {
-            return new GetLoadBalancerBackendAddressPoolArgs(backendAddressPoolName, loadBalancerName, resourceGroupName);
+        }
+
+        public GetLoadBalancerBackendAddressPoolArgs build() {
+            $.backendAddressPoolName = Objects.requireNonNull($.backendAddressPoolName, "expected parameter 'backendAddressPoolName' to be non-null");
+            $.loadBalancerName = Objects.requireNonNull($.loadBalancerName, "expected parameter 'loadBalancerName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

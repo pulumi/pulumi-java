@@ -6,7 +6,6 @@ package com.pulumi.azurenative.databoxedge.inputs;
 import com.pulumi.azurenative.databoxedge.inputs.MetricCounterArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
 
@@ -24,52 +23,53 @@ public final class MetricCounterSetArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="counters", required=true)
-      private final Output<List<MetricCounterArgs>> counters;
+    private Output<List<MetricCounterArgs>> counters;
 
     public Output<List<MetricCounterArgs>> counters() {
         return this.counters;
     }
 
-    public MetricCounterSetArgs(Output<List<MetricCounterArgs>> counters) {
-        this.counters = Objects.requireNonNull(counters, "expected parameter 'counters' to be non-null");
-    }
+    private MetricCounterSetArgs() {}
 
-    private MetricCounterSetArgs() {
-        this.counters = Codegen.empty();
+    private MetricCounterSetArgs(MetricCounterSetArgs $) {
+        this.counters = $.counters;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MetricCounterSetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<List<MetricCounterArgs>> counters;
+        private MetricCounterSetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new MetricCounterSetArgs();
         }
 
         public Builder(MetricCounterSetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.counters = defaults.counters;
+            $ = new MetricCounterSetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder counters(Output<List<MetricCounterArgs>> counters) {
-            this.counters = Objects.requireNonNull(counters);
+            $.counters = counters;
             return this;
         }
+
         public Builder counters(List<MetricCounterArgs> counters) {
-            this.counters = Output.of(Objects.requireNonNull(counters));
-            return this;
+            return counters(Output.of(counters));
         }
+
         public Builder counters(MetricCounterArgs... counters) {
             return counters(List.of(counters));
-        }        public MetricCounterSetArgs build() {
-            return new MetricCounterSetArgs(counters);
+        }
+
+        public MetricCounterSetArgs build() {
+            $.counters = Objects.requireNonNull($.counters, "expected parameter 'counters' to be non-null");
+            return $;
         }
     }
+
 }

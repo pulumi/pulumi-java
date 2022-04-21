@@ -22,7 +22,7 @@ public final class GoogleCloudDialogflowCxV3beta1ResponseMessageOutputAudioTextR
      * 
      */
     @Import(name="allowPlaybackInterruption", required=true)
-      private final Boolean allowPlaybackInterruption;
+    private Boolean allowPlaybackInterruption;
 
     public Boolean allowPlaybackInterruption() {
         return this.allowPlaybackInterruption;
@@ -33,7 +33,7 @@ public final class GoogleCloudDialogflowCxV3beta1ResponseMessageOutputAudioTextR
      * 
      */
     @Import(name="ssml", required=true)
-      private final String ssml;
+    private String ssml;
 
     public String ssml() {
         return this.ssml;
@@ -44,64 +44,59 @@ public final class GoogleCloudDialogflowCxV3beta1ResponseMessageOutputAudioTextR
      * 
      */
     @Import(name="text", required=true)
-      private final String text;
+    private String text;
 
     public String text() {
         return this.text;
     }
 
-    public GoogleCloudDialogflowCxV3beta1ResponseMessageOutputAudioTextResponse(
-        Boolean allowPlaybackInterruption,
-        String ssml,
-        String text) {
-        this.allowPlaybackInterruption = Objects.requireNonNull(allowPlaybackInterruption, "expected parameter 'allowPlaybackInterruption' to be non-null");
-        this.ssml = Objects.requireNonNull(ssml, "expected parameter 'ssml' to be non-null");
-        this.text = Objects.requireNonNull(text, "expected parameter 'text' to be non-null");
-    }
+    private GoogleCloudDialogflowCxV3beta1ResponseMessageOutputAudioTextResponse() {}
 
-    private GoogleCloudDialogflowCxV3beta1ResponseMessageOutputAudioTextResponse() {
-        this.allowPlaybackInterruption = null;
-        this.ssml = null;
-        this.text = null;
+    private GoogleCloudDialogflowCxV3beta1ResponseMessageOutputAudioTextResponse(GoogleCloudDialogflowCxV3beta1ResponseMessageOutputAudioTextResponse $) {
+        this.allowPlaybackInterruption = $.allowPlaybackInterruption;
+        this.ssml = $.ssml;
+        this.text = $.text;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudDialogflowCxV3beta1ResponseMessageOutputAudioTextResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Boolean allowPlaybackInterruption;
-        private String ssml;
-        private String text;
+        private GoogleCloudDialogflowCxV3beta1ResponseMessageOutputAudioTextResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudDialogflowCxV3beta1ResponseMessageOutputAudioTextResponse();
         }
 
         public Builder(GoogleCloudDialogflowCxV3beta1ResponseMessageOutputAudioTextResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.allowPlaybackInterruption = defaults.allowPlaybackInterruption;
-    	      this.ssml = defaults.ssml;
-    	      this.text = defaults.text;
+            $ = new GoogleCloudDialogflowCxV3beta1ResponseMessageOutputAudioTextResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder allowPlaybackInterruption(Boolean allowPlaybackInterruption) {
-            this.allowPlaybackInterruption = Objects.requireNonNull(allowPlaybackInterruption);
+            $.allowPlaybackInterruption = allowPlaybackInterruption;
             return this;
         }
+
         public Builder ssml(String ssml) {
-            this.ssml = Objects.requireNonNull(ssml);
+            $.ssml = ssml;
             return this;
         }
+
         public Builder text(String text) {
-            this.text = Objects.requireNonNull(text);
+            $.text = text;
             return this;
-        }        public GoogleCloudDialogflowCxV3beta1ResponseMessageOutputAudioTextResponse build() {
-            return new GoogleCloudDialogflowCxV3beta1ResponseMessageOutputAudioTextResponse(allowPlaybackInterruption, ssml, text);
+        }
+
+        public GoogleCloudDialogflowCxV3beta1ResponseMessageOutputAudioTextResponse build() {
+            $.allowPlaybackInterruption = Objects.requireNonNull($.allowPlaybackInterruption, "expected parameter 'allowPlaybackInterruption' to be non-null");
+            $.ssml = Objects.requireNonNull($.ssml, "expected parameter 'ssml' to be non-null");
+            $.text = Objects.requireNonNull($.text, "expected parameter 'text' to be non-null");
+            return $;
         }
     }
+
 }

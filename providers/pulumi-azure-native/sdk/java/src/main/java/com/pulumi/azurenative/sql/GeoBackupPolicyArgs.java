@@ -6,9 +6,9 @@ package com.pulumi.azurenative.sql;
 import com.pulumi.azurenative.sql.enums.GeoBackupPolicyState;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,7 +21,7 @@ public final class GeoBackupPolicyArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="databaseName", required=true)
-      private final Output<String> databaseName;
+    private Output<String> databaseName;
 
     public Output<String> databaseName() {
         return this.databaseName;
@@ -32,10 +32,10 @@ public final class GeoBackupPolicyArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="geoBackupPolicyName")
-      private final @Nullable Output<String> geoBackupPolicyName;
+    private @Nullable Output<String> geoBackupPolicyName;
 
-    public Output<String> geoBackupPolicyName() {
-        return this.geoBackupPolicyName == null ? Codegen.empty() : this.geoBackupPolicyName;
+    public Optional<Output<String>> geoBackupPolicyName() {
+        return Optional.ofNullable(this.geoBackupPolicyName);
     }
 
     /**
@@ -43,7 +43,7 @@ public final class GeoBackupPolicyArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -54,7 +54,7 @@ public final class GeoBackupPolicyArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="serverName", required=true)
-      private final Output<String> serverName;
+    private Output<String> serverName;
 
     public Output<String> serverName() {
         return this.serverName;
@@ -65,102 +65,92 @@ public final class GeoBackupPolicyArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="state", required=true)
-      private final Output<GeoBackupPolicyState> state;
+    private Output<GeoBackupPolicyState> state;
 
     public Output<GeoBackupPolicyState> state() {
         return this.state;
     }
 
-    public GeoBackupPolicyArgs(
-        Output<String> databaseName,
-        @Nullable Output<String> geoBackupPolicyName,
-        Output<String> resourceGroupName,
-        Output<String> serverName,
-        Output<GeoBackupPolicyState> state) {
-        this.databaseName = Objects.requireNonNull(databaseName, "expected parameter 'databaseName' to be non-null");
-        this.geoBackupPolicyName = geoBackupPolicyName;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.serverName = Objects.requireNonNull(serverName, "expected parameter 'serverName' to be non-null");
-        this.state = Objects.requireNonNull(state, "expected parameter 'state' to be non-null");
-    }
+    private GeoBackupPolicyArgs() {}
 
-    private GeoBackupPolicyArgs() {
-        this.databaseName = Codegen.empty();
-        this.geoBackupPolicyName = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.serverName = Codegen.empty();
-        this.state = Codegen.empty();
+    private GeoBackupPolicyArgs(GeoBackupPolicyArgs $) {
+        this.databaseName = $.databaseName;
+        this.geoBackupPolicyName = $.geoBackupPolicyName;
+        this.resourceGroupName = $.resourceGroupName;
+        this.serverName = $.serverName;
+        this.state = $.state;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GeoBackupPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> databaseName;
-        private @Nullable Output<String> geoBackupPolicyName;
-        private Output<String> resourceGroupName;
-        private Output<String> serverName;
-        private Output<GeoBackupPolicyState> state;
+        private GeoBackupPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GeoBackupPolicyArgs();
         }
 
         public Builder(GeoBackupPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.databaseName = defaults.databaseName;
-    	      this.geoBackupPolicyName = defaults.geoBackupPolicyName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.serverName = defaults.serverName;
-    	      this.state = defaults.state;
+            $ = new GeoBackupPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder databaseName(Output<String> databaseName) {
-            this.databaseName = Objects.requireNonNull(databaseName);
+            $.databaseName = databaseName;
             return this;
         }
+
         public Builder databaseName(String databaseName) {
-            this.databaseName = Output.of(Objects.requireNonNull(databaseName));
-            return this;
+            return databaseName(Output.of(databaseName));
         }
+
         public Builder geoBackupPolicyName(@Nullable Output<String> geoBackupPolicyName) {
-            this.geoBackupPolicyName = geoBackupPolicyName;
+            $.geoBackupPolicyName = geoBackupPolicyName;
             return this;
         }
-        public Builder geoBackupPolicyName(@Nullable String geoBackupPolicyName) {
-            this.geoBackupPolicyName = Codegen.ofNullable(geoBackupPolicyName);
-            return this;
+
+        public Builder geoBackupPolicyName(String geoBackupPolicyName) {
+            return geoBackupPolicyName(Output.of(geoBackupPolicyName));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder serverName(Output<String> serverName) {
-            this.serverName = Objects.requireNonNull(serverName);
+            $.serverName = serverName;
             return this;
         }
+
         public Builder serverName(String serverName) {
-            this.serverName = Output.of(Objects.requireNonNull(serverName));
-            return this;
+            return serverName(Output.of(serverName));
         }
+
         public Builder state(Output<GeoBackupPolicyState> state) {
-            this.state = Objects.requireNonNull(state);
+            $.state = state;
             return this;
         }
+
         public Builder state(GeoBackupPolicyState state) {
-            this.state = Output.of(Objects.requireNonNull(state));
-            return this;
-        }        public GeoBackupPolicyArgs build() {
-            return new GeoBackupPolicyArgs(databaseName, geoBackupPolicyName, resourceGroupName, serverName, state);
+            return state(Output.of(state));
+        }
+
+        public GeoBackupPolicyArgs build() {
+            $.databaseName = Objects.requireNonNull($.databaseName, "expected parameter 'databaseName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.serverName = Objects.requireNonNull($.serverName, "expected parameter 'serverName' to be non-null");
+            $.state = Objects.requireNonNull($.state, "expected parameter 'state' to be non-null");
+            return $;
         }
     }
+
 }

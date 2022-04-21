@@ -6,8 +6,8 @@ package com.pulumi.azurenative.mixedreality.inputs;
 import com.pulumi.azurenative.mixedreality.enums.ResourceIdentityType;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,49 +20,48 @@ public final class ObjectAnchorsAccountIdentityArgs extends com.pulumi.resources
      * 
      */
     @Import(name="type")
-      private final @Nullable Output<ResourceIdentityType> type;
+    private @Nullable Output<ResourceIdentityType> type;
 
-    public Output<ResourceIdentityType> type() {
-        return this.type == null ? Codegen.empty() : this.type;
+    public Optional<Output<ResourceIdentityType>> type() {
+        return Optional.ofNullable(this.type);
     }
 
-    public ObjectAnchorsAccountIdentityArgs(@Nullable Output<ResourceIdentityType> type) {
-        this.type = type;
-    }
+    private ObjectAnchorsAccountIdentityArgs() {}
 
-    private ObjectAnchorsAccountIdentityArgs() {
-        this.type = Codegen.empty();
+    private ObjectAnchorsAccountIdentityArgs(ObjectAnchorsAccountIdentityArgs $) {
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ObjectAnchorsAccountIdentityArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<ResourceIdentityType> type;
+        private ObjectAnchorsAccountIdentityArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ObjectAnchorsAccountIdentityArgs();
         }
 
         public Builder(ObjectAnchorsAccountIdentityArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.type = defaults.type;
+            $ = new ObjectAnchorsAccountIdentityArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder type(@Nullable Output<ResourceIdentityType> type) {
-            this.type = type;
+            $.type = type;
             return this;
         }
-        public Builder type(@Nullable ResourceIdentityType type) {
-            this.type = Codegen.ofNullable(type);
-            return this;
-        }        public ObjectAnchorsAccountIdentityArgs build() {
-            return new ObjectAnchorsAccountIdentityArgs(type);
+
+        public Builder type(ResourceIdentityType type) {
+            return type(Output.of(type));
+        }
+
+        public ObjectAnchorsAccountIdentityArgs build() {
+            return $;
         }
     }
+
 }

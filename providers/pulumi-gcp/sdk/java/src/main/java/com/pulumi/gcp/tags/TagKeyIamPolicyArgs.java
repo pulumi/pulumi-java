@@ -5,7 +5,6 @@ package com.pulumi.gcp.tags;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +19,7 @@ public final class TagKeyIamPolicyArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="policyData", required=true)
-      private final Output<String> policyData;
+    private Output<String> policyData;
 
     public Output<String> policyData() {
         return this.policyData;
@@ -31,63 +30,60 @@ public final class TagKeyIamPolicyArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="tagKey", required=true)
-      private final Output<String> tagKey;
+    private Output<String> tagKey;
 
     public Output<String> tagKey() {
         return this.tagKey;
     }
 
-    public TagKeyIamPolicyArgs(
-        Output<String> policyData,
-        Output<String> tagKey) {
-        this.policyData = Objects.requireNonNull(policyData, "expected parameter 'policyData' to be non-null");
-        this.tagKey = Objects.requireNonNull(tagKey, "expected parameter 'tagKey' to be non-null");
-    }
+    private TagKeyIamPolicyArgs() {}
 
-    private TagKeyIamPolicyArgs() {
-        this.policyData = Codegen.empty();
-        this.tagKey = Codegen.empty();
+    private TagKeyIamPolicyArgs(TagKeyIamPolicyArgs $) {
+        this.policyData = $.policyData;
+        this.tagKey = $.tagKey;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TagKeyIamPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> policyData;
-        private Output<String> tagKey;
+        private TagKeyIamPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TagKeyIamPolicyArgs();
         }
 
         public Builder(TagKeyIamPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.policyData = defaults.policyData;
-    	      this.tagKey = defaults.tagKey;
+            $ = new TagKeyIamPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder policyData(Output<String> policyData) {
-            this.policyData = Objects.requireNonNull(policyData);
+            $.policyData = policyData;
             return this;
         }
+
         public Builder policyData(String policyData) {
-            this.policyData = Output.of(Objects.requireNonNull(policyData));
-            return this;
+            return policyData(Output.of(policyData));
         }
+
         public Builder tagKey(Output<String> tagKey) {
-            this.tagKey = Objects.requireNonNull(tagKey);
+            $.tagKey = tagKey;
             return this;
         }
+
         public Builder tagKey(String tagKey) {
-            this.tagKey = Output.of(Objects.requireNonNull(tagKey));
-            return this;
-        }        public TagKeyIamPolicyArgs build() {
-            return new TagKeyIamPolicyArgs(policyData, tagKey);
+            return tagKey(Output.of(tagKey));
+        }
+
+        public TagKeyIamPolicyArgs build() {
+            $.policyData = Objects.requireNonNull($.policyData, "expected parameter 'policyData' to be non-null");
+            $.tagKey = Objects.requireNonNull($.tagKey, "expected parameter 'tagKey' to be non-null");
+            return $;
         }
     }
+
 }

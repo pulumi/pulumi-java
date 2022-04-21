@@ -26,10 +26,10 @@ public final class StageCanarySetting extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="deploymentId")
-      private final @Nullable String deploymentId;
+    private @Nullable String deploymentId;
 
     public Optional<String> deploymentId() {
-        return this.deploymentId == null ? Optional.empty() : Optional.ofNullable(this.deploymentId);
+        return Optional.ofNullable(this.deploymentId);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class StageCanarySetting extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="percentTraffic")
-      private final @Nullable Double percentTraffic;
+    private @Nullable Double percentTraffic;
 
     public Optional<Double> percentTraffic() {
-        return this.percentTraffic == null ? Optional.empty() : Optional.ofNullable(this.percentTraffic);
+        return Optional.ofNullable(this.percentTraffic);
     }
 
     /**
@@ -48,10 +48,10 @@ public final class StageCanarySetting extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="stageVariableOverrides")
-      private final @Nullable Object stageVariableOverrides;
+    private @Nullable Object stageVariableOverrides;
 
     public Optional<Object> stageVariableOverrides() {
-        return this.stageVariableOverrides == null ? Optional.empty() : Optional.ofNullable(this.stageVariableOverrides);
+        return Optional.ofNullable(this.stageVariableOverrides);
     }
 
     /**
@@ -59,73 +59,62 @@ public final class StageCanarySetting extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="useStageCache")
-      private final @Nullable Boolean useStageCache;
+    private @Nullable Boolean useStageCache;
 
     public Optional<Boolean> useStageCache() {
-        return this.useStageCache == null ? Optional.empty() : Optional.ofNullable(this.useStageCache);
+        return Optional.ofNullable(this.useStageCache);
     }
 
-    public StageCanarySetting(
-        @Nullable String deploymentId,
-        @Nullable Double percentTraffic,
-        @Nullable Object stageVariableOverrides,
-        @Nullable Boolean useStageCache) {
-        this.deploymentId = deploymentId;
-        this.percentTraffic = percentTraffic;
-        this.stageVariableOverrides = stageVariableOverrides;
-        this.useStageCache = useStageCache;
-    }
+    private StageCanarySetting() {}
 
-    private StageCanarySetting() {
-        this.deploymentId = null;
-        this.percentTraffic = null;
-        this.stageVariableOverrides = null;
-        this.useStageCache = null;
+    private StageCanarySetting(StageCanarySetting $) {
+        this.deploymentId = $.deploymentId;
+        this.percentTraffic = $.percentTraffic;
+        this.stageVariableOverrides = $.stageVariableOverrides;
+        this.useStageCache = $.useStageCache;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(StageCanarySetting defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String deploymentId;
-        private @Nullable Double percentTraffic;
-        private @Nullable Object stageVariableOverrides;
-        private @Nullable Boolean useStageCache;
+        private StageCanarySetting $;
 
         public Builder() {
-    	      // Empty
+            $ = new StageCanarySetting();
         }
 
         public Builder(StageCanarySetting defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.deploymentId = defaults.deploymentId;
-    	      this.percentTraffic = defaults.percentTraffic;
-    	      this.stageVariableOverrides = defaults.stageVariableOverrides;
-    	      this.useStageCache = defaults.useStageCache;
+            $ = new StageCanarySetting(Objects.requireNonNull(defaults));
         }
 
         public Builder deploymentId(@Nullable String deploymentId) {
-            this.deploymentId = deploymentId;
+            $.deploymentId = deploymentId;
             return this;
         }
+
         public Builder percentTraffic(@Nullable Double percentTraffic) {
-            this.percentTraffic = percentTraffic;
+            $.percentTraffic = percentTraffic;
             return this;
         }
+
         public Builder stageVariableOverrides(@Nullable Object stageVariableOverrides) {
-            this.stageVariableOverrides = stageVariableOverrides;
+            $.stageVariableOverrides = stageVariableOverrides;
             return this;
         }
+
         public Builder useStageCache(@Nullable Boolean useStageCache) {
-            this.useStageCache = useStageCache;
+            $.useStageCache = useStageCache;
             return this;
-        }        public StageCanarySetting build() {
-            return new StageCanarySetting(deploymentId, percentTraffic, stageVariableOverrides, useStageCache);
+        }
+
+        public StageCanarySetting build() {
+            return $;
         }
     }
+
 }

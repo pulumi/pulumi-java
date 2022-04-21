@@ -25,7 +25,7 @@ public final class GooglePrivacyDlpV2StoredInfoTypeVersionResponse extends com.p
      * 
      */
     @Import(name="config", required=true)
-      private final GooglePrivacyDlpV2StoredInfoTypeConfigResponse config;
+    private GooglePrivacyDlpV2StoredInfoTypeConfigResponse config;
 
     public GooglePrivacyDlpV2StoredInfoTypeConfigResponse config() {
         return this.config;
@@ -36,7 +36,7 @@ public final class GooglePrivacyDlpV2StoredInfoTypeVersionResponse extends com.p
      * 
      */
     @Import(name="createTime", required=true)
-      private final String createTime;
+    private String createTime;
 
     public String createTime() {
         return this.createTime;
@@ -47,7 +47,7 @@ public final class GooglePrivacyDlpV2StoredInfoTypeVersionResponse extends com.p
      * 
      */
     @Import(name="errors", required=true)
-      private final List<GooglePrivacyDlpV2ErrorResponse> errors;
+    private List<GooglePrivacyDlpV2ErrorResponse> errors;
 
     public List<GooglePrivacyDlpV2ErrorResponse> errors() {
         return this.errors;
@@ -58,7 +58,7 @@ public final class GooglePrivacyDlpV2StoredInfoTypeVersionResponse extends com.p
      * 
      */
     @Import(name="state", required=true)
-      private final String state;
+    private String state;
 
     public String state() {
         return this.state;
@@ -69,85 +69,77 @@ public final class GooglePrivacyDlpV2StoredInfoTypeVersionResponse extends com.p
      * 
      */
     @Import(name="stats", required=true)
-      private final GooglePrivacyDlpV2StoredInfoTypeStatsResponse stats;
+    private GooglePrivacyDlpV2StoredInfoTypeStatsResponse stats;
 
     public GooglePrivacyDlpV2StoredInfoTypeStatsResponse stats() {
         return this.stats;
     }
 
-    public GooglePrivacyDlpV2StoredInfoTypeVersionResponse(
-        GooglePrivacyDlpV2StoredInfoTypeConfigResponse config,
-        String createTime,
-        List<GooglePrivacyDlpV2ErrorResponse> errors,
-        String state,
-        GooglePrivacyDlpV2StoredInfoTypeStatsResponse stats) {
-        this.config = Objects.requireNonNull(config, "expected parameter 'config' to be non-null");
-        this.createTime = Objects.requireNonNull(createTime, "expected parameter 'createTime' to be non-null");
-        this.errors = Objects.requireNonNull(errors, "expected parameter 'errors' to be non-null");
-        this.state = Objects.requireNonNull(state, "expected parameter 'state' to be non-null");
-        this.stats = Objects.requireNonNull(stats, "expected parameter 'stats' to be non-null");
-    }
+    private GooglePrivacyDlpV2StoredInfoTypeVersionResponse() {}
 
-    private GooglePrivacyDlpV2StoredInfoTypeVersionResponse() {
-        this.config = null;
-        this.createTime = null;
-        this.errors = List.of();
-        this.state = null;
-        this.stats = null;
+    private GooglePrivacyDlpV2StoredInfoTypeVersionResponse(GooglePrivacyDlpV2StoredInfoTypeVersionResponse $) {
+        this.config = $.config;
+        this.createTime = $.createTime;
+        this.errors = $.errors;
+        this.state = $.state;
+        this.stats = $.stats;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GooglePrivacyDlpV2StoredInfoTypeVersionResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private GooglePrivacyDlpV2StoredInfoTypeConfigResponse config;
-        private String createTime;
-        private List<GooglePrivacyDlpV2ErrorResponse> errors;
-        private String state;
-        private GooglePrivacyDlpV2StoredInfoTypeStatsResponse stats;
+        private GooglePrivacyDlpV2StoredInfoTypeVersionResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GooglePrivacyDlpV2StoredInfoTypeVersionResponse();
         }
 
         public Builder(GooglePrivacyDlpV2StoredInfoTypeVersionResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.config = defaults.config;
-    	      this.createTime = defaults.createTime;
-    	      this.errors = defaults.errors;
-    	      this.state = defaults.state;
-    	      this.stats = defaults.stats;
+            $ = new GooglePrivacyDlpV2StoredInfoTypeVersionResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder config(GooglePrivacyDlpV2StoredInfoTypeConfigResponse config) {
-            this.config = Objects.requireNonNull(config);
+            $.config = config;
             return this;
         }
+
         public Builder createTime(String createTime) {
-            this.createTime = Objects.requireNonNull(createTime);
+            $.createTime = createTime;
             return this;
         }
+
         public Builder errors(List<GooglePrivacyDlpV2ErrorResponse> errors) {
-            this.errors = Objects.requireNonNull(errors);
+            $.errors = errors;
             return this;
         }
+
         public Builder errors(GooglePrivacyDlpV2ErrorResponse... errors) {
             return errors(List.of(errors));
         }
+
         public Builder state(String state) {
-            this.state = Objects.requireNonNull(state);
+            $.state = state;
             return this;
         }
+
         public Builder stats(GooglePrivacyDlpV2StoredInfoTypeStatsResponse stats) {
-            this.stats = Objects.requireNonNull(stats);
+            $.stats = stats;
             return this;
-        }        public GooglePrivacyDlpV2StoredInfoTypeVersionResponse build() {
-            return new GooglePrivacyDlpV2StoredInfoTypeVersionResponse(config, createTime, errors, state, stats);
+        }
+
+        public GooglePrivacyDlpV2StoredInfoTypeVersionResponse build() {
+            $.config = Objects.requireNonNull($.config, "expected parameter 'config' to be non-null");
+            $.createTime = Objects.requireNonNull($.createTime, "expected parameter 'createTime' to be non-null");
+            $.errors = Objects.requireNonNull($.errors, "expected parameter 'errors' to be non-null");
+            $.state = Objects.requireNonNull($.state, "expected parameter 'state' to be non-null");
+            $.stats = Objects.requireNonNull($.stats, "expected parameter 'stats' to be non-null");
+            return $;
         }
     }
+
 }

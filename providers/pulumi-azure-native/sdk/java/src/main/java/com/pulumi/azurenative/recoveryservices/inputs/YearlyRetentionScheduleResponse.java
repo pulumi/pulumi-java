@@ -27,10 +27,10 @@ public final class YearlyRetentionScheduleResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="monthsOfYear")
-      private final @Nullable List<String> monthsOfYear;
+    private @Nullable List<String> monthsOfYear;
 
-    public List<String> monthsOfYear() {
-        return this.monthsOfYear == null ? List.of() : this.monthsOfYear;
+    public Optional<List<String>> monthsOfYear() {
+        return Optional.ofNullable(this.monthsOfYear);
     }
 
     /**
@@ -38,10 +38,10 @@ public final class YearlyRetentionScheduleResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="retentionDuration")
-      private final @Nullable RetentionDurationResponse retentionDuration;
+    private @Nullable RetentionDurationResponse retentionDuration;
 
     public Optional<RetentionDurationResponse> retentionDuration() {
-        return this.retentionDuration == null ? Optional.empty() : Optional.ofNullable(this.retentionDuration);
+        return Optional.ofNullable(this.retentionDuration);
     }
 
     /**
@@ -49,10 +49,10 @@ public final class YearlyRetentionScheduleResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="retentionScheduleDaily")
-      private final @Nullable DailyRetentionFormatResponse retentionScheduleDaily;
+    private @Nullable DailyRetentionFormatResponse retentionScheduleDaily;
 
     public Optional<DailyRetentionFormatResponse> retentionScheduleDaily() {
-        return this.retentionScheduleDaily == null ? Optional.empty() : Optional.ofNullable(this.retentionScheduleDaily);
+        return Optional.ofNullable(this.retentionScheduleDaily);
     }
 
     /**
@@ -60,10 +60,10 @@ public final class YearlyRetentionScheduleResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="retentionScheduleFormatType")
-      private final @Nullable String retentionScheduleFormatType;
+    private @Nullable String retentionScheduleFormatType;
 
     public Optional<String> retentionScheduleFormatType() {
-        return this.retentionScheduleFormatType == null ? Optional.empty() : Optional.ofNullable(this.retentionScheduleFormatType);
+        return Optional.ofNullable(this.retentionScheduleFormatType);
     }
 
     /**
@@ -71,10 +71,10 @@ public final class YearlyRetentionScheduleResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="retentionScheduleWeekly")
-      private final @Nullable WeeklyRetentionFormatResponse retentionScheduleWeekly;
+    private @Nullable WeeklyRetentionFormatResponse retentionScheduleWeekly;
 
     public Optional<WeeklyRetentionFormatResponse> retentionScheduleWeekly() {
-        return this.retentionScheduleWeekly == null ? Optional.empty() : Optional.ofNullable(this.retentionScheduleWeekly);
+        return Optional.ofNullable(this.retentionScheduleWeekly);
     }
 
     /**
@@ -82,97 +82,82 @@ public final class YearlyRetentionScheduleResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="retentionTimes")
-      private final @Nullable List<String> retentionTimes;
+    private @Nullable List<String> retentionTimes;
 
-    public List<String> retentionTimes() {
-        return this.retentionTimes == null ? List.of() : this.retentionTimes;
+    public Optional<List<String>> retentionTimes() {
+        return Optional.ofNullable(this.retentionTimes);
     }
 
-    public YearlyRetentionScheduleResponse(
-        @Nullable List<String> monthsOfYear,
-        @Nullable RetentionDurationResponse retentionDuration,
-        @Nullable DailyRetentionFormatResponse retentionScheduleDaily,
-        @Nullable String retentionScheduleFormatType,
-        @Nullable WeeklyRetentionFormatResponse retentionScheduleWeekly,
-        @Nullable List<String> retentionTimes) {
-        this.monthsOfYear = monthsOfYear;
-        this.retentionDuration = retentionDuration;
-        this.retentionScheduleDaily = retentionScheduleDaily;
-        this.retentionScheduleFormatType = retentionScheduleFormatType;
-        this.retentionScheduleWeekly = retentionScheduleWeekly;
-        this.retentionTimes = retentionTimes;
-    }
+    private YearlyRetentionScheduleResponse() {}
 
-    private YearlyRetentionScheduleResponse() {
-        this.monthsOfYear = List.of();
-        this.retentionDuration = null;
-        this.retentionScheduleDaily = null;
-        this.retentionScheduleFormatType = null;
-        this.retentionScheduleWeekly = null;
-        this.retentionTimes = List.of();
+    private YearlyRetentionScheduleResponse(YearlyRetentionScheduleResponse $) {
+        this.monthsOfYear = $.monthsOfYear;
+        this.retentionDuration = $.retentionDuration;
+        this.retentionScheduleDaily = $.retentionScheduleDaily;
+        this.retentionScheduleFormatType = $.retentionScheduleFormatType;
+        this.retentionScheduleWeekly = $.retentionScheduleWeekly;
+        this.retentionTimes = $.retentionTimes;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(YearlyRetentionScheduleResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<String> monthsOfYear;
-        private @Nullable RetentionDurationResponse retentionDuration;
-        private @Nullable DailyRetentionFormatResponse retentionScheduleDaily;
-        private @Nullable String retentionScheduleFormatType;
-        private @Nullable WeeklyRetentionFormatResponse retentionScheduleWeekly;
-        private @Nullable List<String> retentionTimes;
+        private YearlyRetentionScheduleResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new YearlyRetentionScheduleResponse();
         }
 
         public Builder(YearlyRetentionScheduleResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.monthsOfYear = defaults.monthsOfYear;
-    	      this.retentionDuration = defaults.retentionDuration;
-    	      this.retentionScheduleDaily = defaults.retentionScheduleDaily;
-    	      this.retentionScheduleFormatType = defaults.retentionScheduleFormatType;
-    	      this.retentionScheduleWeekly = defaults.retentionScheduleWeekly;
-    	      this.retentionTimes = defaults.retentionTimes;
+            $ = new YearlyRetentionScheduleResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder monthsOfYear(@Nullable List<String> monthsOfYear) {
-            this.monthsOfYear = monthsOfYear;
+            $.monthsOfYear = monthsOfYear;
             return this;
         }
+
         public Builder monthsOfYear(String... monthsOfYear) {
             return monthsOfYear(List.of(monthsOfYear));
         }
+
         public Builder retentionDuration(@Nullable RetentionDurationResponse retentionDuration) {
-            this.retentionDuration = retentionDuration;
+            $.retentionDuration = retentionDuration;
             return this;
         }
+
         public Builder retentionScheduleDaily(@Nullable DailyRetentionFormatResponse retentionScheduleDaily) {
-            this.retentionScheduleDaily = retentionScheduleDaily;
+            $.retentionScheduleDaily = retentionScheduleDaily;
             return this;
         }
+
         public Builder retentionScheduleFormatType(@Nullable String retentionScheduleFormatType) {
-            this.retentionScheduleFormatType = retentionScheduleFormatType;
+            $.retentionScheduleFormatType = retentionScheduleFormatType;
             return this;
         }
+
         public Builder retentionScheduleWeekly(@Nullable WeeklyRetentionFormatResponse retentionScheduleWeekly) {
-            this.retentionScheduleWeekly = retentionScheduleWeekly;
+            $.retentionScheduleWeekly = retentionScheduleWeekly;
             return this;
         }
+
         public Builder retentionTimes(@Nullable List<String> retentionTimes) {
-            this.retentionTimes = retentionTimes;
+            $.retentionTimes = retentionTimes;
             return this;
         }
+
         public Builder retentionTimes(String... retentionTimes) {
             return retentionTimes(List.of(retentionTimes));
-        }        public YearlyRetentionScheduleResponse build() {
-            return new YearlyRetentionScheduleResponse(monthsOfYear, retentionDuration, retentionScheduleDaily, retentionScheduleFormatType, retentionScheduleWeekly, retentionTimes);
+        }
+
+        public YearlyRetentionScheduleResponse build() {
+            return $;
         }
     }
+
 }

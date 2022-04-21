@@ -15,81 +15,77 @@ public final class GetInstanceMaintenancePolicyWeeklyMaintenanceWindow extends c
     public static final GetInstanceMaintenancePolicyWeeklyMaintenanceWindow Empty = new GetInstanceMaintenancePolicyWeeklyMaintenanceWindow();
 
     @Import(name="day", required=true)
-      private final String day;
+    private String day;
 
     public String day() {
         return this.day;
     }
 
     @Import(name="duration", required=true)
-      private final String duration;
+    private String duration;
 
     public String duration() {
         return this.duration;
     }
 
     @Import(name="startTimes", required=true)
-      private final List<GetInstanceMaintenancePolicyWeeklyMaintenanceWindowStartTime> startTimes;
+    private List<GetInstanceMaintenancePolicyWeeklyMaintenanceWindowStartTime> startTimes;
 
     public List<GetInstanceMaintenancePolicyWeeklyMaintenanceWindowStartTime> startTimes() {
         return this.startTimes;
     }
 
-    public GetInstanceMaintenancePolicyWeeklyMaintenanceWindow(
-        String day,
-        String duration,
-        List<GetInstanceMaintenancePolicyWeeklyMaintenanceWindowStartTime> startTimes) {
-        this.day = Objects.requireNonNull(day, "expected parameter 'day' to be non-null");
-        this.duration = Objects.requireNonNull(duration, "expected parameter 'duration' to be non-null");
-        this.startTimes = Objects.requireNonNull(startTimes, "expected parameter 'startTimes' to be non-null");
-    }
+    private GetInstanceMaintenancePolicyWeeklyMaintenanceWindow() {}
 
-    private GetInstanceMaintenancePolicyWeeklyMaintenanceWindow() {
-        this.day = null;
-        this.duration = null;
-        this.startTimes = List.of();
+    private GetInstanceMaintenancePolicyWeeklyMaintenanceWindow(GetInstanceMaintenancePolicyWeeklyMaintenanceWindow $) {
+        this.day = $.day;
+        this.duration = $.duration;
+        this.startTimes = $.startTimes;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetInstanceMaintenancePolicyWeeklyMaintenanceWindow defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String day;
-        private String duration;
-        private List<GetInstanceMaintenancePolicyWeeklyMaintenanceWindowStartTime> startTimes;
+        private GetInstanceMaintenancePolicyWeeklyMaintenanceWindow $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetInstanceMaintenancePolicyWeeklyMaintenanceWindow();
         }
 
         public Builder(GetInstanceMaintenancePolicyWeeklyMaintenanceWindow defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.day = defaults.day;
-    	      this.duration = defaults.duration;
-    	      this.startTimes = defaults.startTimes;
+            $ = new GetInstanceMaintenancePolicyWeeklyMaintenanceWindow(Objects.requireNonNull(defaults));
         }
 
         public Builder day(String day) {
-            this.day = Objects.requireNonNull(day);
+            $.day = day;
             return this;
         }
+
         public Builder duration(String duration) {
-            this.duration = Objects.requireNonNull(duration);
+            $.duration = duration;
             return this;
         }
+
         public Builder startTimes(List<GetInstanceMaintenancePolicyWeeklyMaintenanceWindowStartTime> startTimes) {
-            this.startTimes = Objects.requireNonNull(startTimes);
+            $.startTimes = startTimes;
             return this;
         }
+
         public Builder startTimes(GetInstanceMaintenancePolicyWeeklyMaintenanceWindowStartTime... startTimes) {
             return startTimes(List.of(startTimes));
-        }        public GetInstanceMaintenancePolicyWeeklyMaintenanceWindow build() {
-            return new GetInstanceMaintenancePolicyWeeklyMaintenanceWindow(day, duration, startTimes);
+        }
+
+        public GetInstanceMaintenancePolicyWeeklyMaintenanceWindow build() {
+            $.day = Objects.requireNonNull($.day, "expected parameter 'day' to be non-null");
+            $.duration = Objects.requireNonNull($.duration, "expected parameter 'duration' to be non-null");
+            $.startTimes = Objects.requireNonNull($.startTimes, "expected parameter 'startTimes' to be non-null");
+            return $;
         }
     }
+
 }

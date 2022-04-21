@@ -5,9 +5,9 @@ package com.pulumi.awsnative.networkmanager.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,70 +20,65 @@ public final class GlobalNetworkTagArgs extends com.pulumi.resources.ResourceArg
     public static final GlobalNetworkTagArgs Empty = new GlobalNetworkTagArgs();
 
     @Import(name="key")
-      private final @Nullable Output<String> key;
+    private @Nullable Output<String> key;
 
-    public Output<String> key() {
-        return this.key == null ? Codegen.empty() : this.key;
+    public Optional<Output<String>> key() {
+        return Optional.ofNullable(this.key);
     }
 
     @Import(name="value")
-      private final @Nullable Output<String> value;
+    private @Nullable Output<String> value;
 
-    public Output<String> value() {
-        return this.value == null ? Codegen.empty() : this.value;
+    public Optional<Output<String>> value() {
+        return Optional.ofNullable(this.value);
     }
 
-    public GlobalNetworkTagArgs(
-        @Nullable Output<String> key,
-        @Nullable Output<String> value) {
-        this.key = key;
-        this.value = value;
-    }
+    private GlobalNetworkTagArgs() {}
 
-    private GlobalNetworkTagArgs() {
-        this.key = Codegen.empty();
-        this.value = Codegen.empty();
+    private GlobalNetworkTagArgs(GlobalNetworkTagArgs $) {
+        this.key = $.key;
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GlobalNetworkTagArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> key;
-        private @Nullable Output<String> value;
+        private GlobalNetworkTagArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GlobalNetworkTagArgs();
         }
 
         public Builder(GlobalNetworkTagArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.key = defaults.key;
-    	      this.value = defaults.value;
+            $ = new GlobalNetworkTagArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder key(@Nullable Output<String> key) {
-            this.key = key;
+            $.key = key;
             return this;
         }
-        public Builder key(@Nullable String key) {
-            this.key = Codegen.ofNullable(key);
-            return this;
+
+        public Builder key(String key) {
+            return key(Output.of(key));
         }
+
         public Builder value(@Nullable Output<String> value) {
-            this.value = value;
+            $.value = value;
             return this;
         }
-        public Builder value(@Nullable String value) {
-            this.value = Codegen.ofNullable(value);
-            return this;
-        }        public GlobalNetworkTagArgs build() {
-            return new GlobalNetworkTagArgs(key, value);
+
+        public Builder value(String value) {
+            return value(Output.of(value));
+        }
+
+        public GlobalNetworkTagArgs build() {
+            return $;
         }
     }
+
 }

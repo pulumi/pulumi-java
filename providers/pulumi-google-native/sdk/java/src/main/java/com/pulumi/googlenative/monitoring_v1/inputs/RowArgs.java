@@ -5,11 +5,11 @@ package com.pulumi.googlenative.monitoring_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.monitoring_v1.inputs.WidgetArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class RowArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="weight")
-      private final @Nullable Output<String> weight;
+    private @Nullable Output<String> weight;
 
-    public Output<String> weight() {
-        return this.weight == null ? Codegen.empty() : this.weight;
+    public Optional<Output<String>> weight() {
+        return Optional.ofNullable(this.weight);
     }
 
     /**
@@ -37,66 +37,62 @@ public final class RowArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="widgets")
-      private final @Nullable Output<List<WidgetArgs>> widgets;
+    private @Nullable Output<List<WidgetArgs>> widgets;
 
-    public Output<List<WidgetArgs>> widgets() {
-        return this.widgets == null ? Codegen.empty() : this.widgets;
+    public Optional<Output<List<WidgetArgs>>> widgets() {
+        return Optional.ofNullable(this.widgets);
     }
 
-    public RowArgs(
-        @Nullable Output<String> weight,
-        @Nullable Output<List<WidgetArgs>> widgets) {
-        this.weight = weight;
-        this.widgets = widgets;
-    }
+    private RowArgs() {}
 
-    private RowArgs() {
-        this.weight = Codegen.empty();
-        this.widgets = Codegen.empty();
+    private RowArgs(RowArgs $) {
+        this.weight = $.weight;
+        this.widgets = $.widgets;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RowArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> weight;
-        private @Nullable Output<List<WidgetArgs>> widgets;
+        private RowArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RowArgs();
         }
 
         public Builder(RowArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.weight = defaults.weight;
-    	      this.widgets = defaults.widgets;
+            $ = new RowArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder weight(@Nullable Output<String> weight) {
-            this.weight = weight;
+            $.weight = weight;
             return this;
         }
-        public Builder weight(@Nullable String weight) {
-            this.weight = Codegen.ofNullable(weight);
-            return this;
+
+        public Builder weight(String weight) {
+            return weight(Output.of(weight));
         }
+
         public Builder widgets(@Nullable Output<List<WidgetArgs>> widgets) {
-            this.widgets = widgets;
+            $.widgets = widgets;
             return this;
         }
-        public Builder widgets(@Nullable List<WidgetArgs> widgets) {
-            this.widgets = Codegen.ofNullable(widgets);
-            return this;
+
+        public Builder widgets(List<WidgetArgs> widgets) {
+            return widgets(Output.of(widgets));
         }
+
         public Builder widgets(WidgetArgs... widgets) {
             return widgets(List.of(widgets));
-        }        public RowArgs build() {
-            return new RowArgs(weight, widgets);
+        }
+
+        public RowArgs build() {
+            return $;
         }
     }
+
 }

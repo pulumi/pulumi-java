@@ -5,11 +5,11 @@ package com.pulumi.gcp.datastore;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.datastore.inputs.DataStoreIndexPropertyArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class DataStoreIndexArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="ancestor")
-      private final @Nullable Output<String> ancestor;
+    private @Nullable Output<String> ancestor;
 
-    public Output<String> ancestor() {
-        return this.ancestor == null ? Codegen.empty() : this.ancestor;
+    public Optional<Output<String>> ancestor() {
+        return Optional.ofNullable(this.ancestor);
     }
 
     /**
@@ -35,7 +35,7 @@ public final class DataStoreIndexArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="kind", required=true)
-      private final Output<String> kind;
+    private Output<String> kind;
 
     public Output<String> kind() {
         return this.kind;
@@ -47,10 +47,10 @@ public final class DataStoreIndexArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -59,92 +59,83 @@ public final class DataStoreIndexArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="properties")
-      private final @Nullable Output<List<DataStoreIndexPropertyArgs>> properties;
+    private @Nullable Output<List<DataStoreIndexPropertyArgs>> properties;
 
-    public Output<List<DataStoreIndexPropertyArgs>> properties() {
-        return this.properties == null ? Codegen.empty() : this.properties;
+    public Optional<Output<List<DataStoreIndexPropertyArgs>>> properties() {
+        return Optional.ofNullable(this.properties);
     }
 
-    public DataStoreIndexArgs(
-        @Nullable Output<String> ancestor,
-        Output<String> kind,
-        @Nullable Output<String> project,
-        @Nullable Output<List<DataStoreIndexPropertyArgs>> properties) {
-        this.ancestor = ancestor;
-        this.kind = Objects.requireNonNull(kind, "expected parameter 'kind' to be non-null");
-        this.project = project;
-        this.properties = properties;
-    }
+    private DataStoreIndexArgs() {}
 
-    private DataStoreIndexArgs() {
-        this.ancestor = Codegen.empty();
-        this.kind = Codegen.empty();
-        this.project = Codegen.empty();
-        this.properties = Codegen.empty();
+    private DataStoreIndexArgs(DataStoreIndexArgs $) {
+        this.ancestor = $.ancestor;
+        this.kind = $.kind;
+        this.project = $.project;
+        this.properties = $.properties;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DataStoreIndexArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> ancestor;
-        private Output<String> kind;
-        private @Nullable Output<String> project;
-        private @Nullable Output<List<DataStoreIndexPropertyArgs>> properties;
+        private DataStoreIndexArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DataStoreIndexArgs();
         }
 
         public Builder(DataStoreIndexArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.ancestor = defaults.ancestor;
-    	      this.kind = defaults.kind;
-    	      this.project = defaults.project;
-    	      this.properties = defaults.properties;
+            $ = new DataStoreIndexArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder ancestor(@Nullable Output<String> ancestor) {
-            this.ancestor = ancestor;
+            $.ancestor = ancestor;
             return this;
         }
-        public Builder ancestor(@Nullable String ancestor) {
-            this.ancestor = Codegen.ofNullable(ancestor);
-            return this;
+
+        public Builder ancestor(String ancestor) {
+            return ancestor(Output.of(ancestor));
         }
+
         public Builder kind(Output<String> kind) {
-            this.kind = Objects.requireNonNull(kind);
+            $.kind = kind;
             return this;
         }
+
         public Builder kind(String kind) {
-            this.kind = Output.of(Objects.requireNonNull(kind));
-            return this;
+            return kind(Output.of(kind));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder properties(@Nullable Output<List<DataStoreIndexPropertyArgs>> properties) {
-            this.properties = properties;
+            $.properties = properties;
             return this;
         }
-        public Builder properties(@Nullable List<DataStoreIndexPropertyArgs> properties) {
-            this.properties = Codegen.ofNullable(properties);
-            return this;
+
+        public Builder properties(List<DataStoreIndexPropertyArgs> properties) {
+            return properties(Output.of(properties));
         }
+
         public Builder properties(DataStoreIndexPropertyArgs... properties) {
             return properties(List.of(properties));
-        }        public DataStoreIndexArgs build() {
-            return new DataStoreIndexArgs(ancestor, kind, project, properties);
+        }
+
+        public DataStoreIndexArgs build() {
+            $.kind = Objects.requireNonNull($.kind, "expected parameter 'kind' to be non-null");
+            return $;
         }
     }
+
 }

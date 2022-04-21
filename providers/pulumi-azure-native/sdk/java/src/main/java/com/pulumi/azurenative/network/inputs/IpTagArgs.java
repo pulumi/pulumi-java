@@ -5,9 +5,9 @@ package com.pulumi.azurenative.network.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class IpTagArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="ipTagType")
-      private final @Nullable Output<String> ipTagType;
+    private @Nullable Output<String> ipTagType;
 
-    public Output<String> ipTagType() {
-        return this.ipTagType == null ? Codegen.empty() : this.ipTagType;
+    public Optional<Output<String>> ipTagType() {
+        return Optional.ofNullable(this.ipTagType);
     }
 
     /**
@@ -35,63 +35,58 @@ public final class IpTagArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tag")
-      private final @Nullable Output<String> tag;
+    private @Nullable Output<String> tag;
 
-    public Output<String> tag() {
-        return this.tag == null ? Codegen.empty() : this.tag;
+    public Optional<Output<String>> tag() {
+        return Optional.ofNullable(this.tag);
     }
 
-    public IpTagArgs(
-        @Nullable Output<String> ipTagType,
-        @Nullable Output<String> tag) {
-        this.ipTagType = ipTagType;
-        this.tag = tag;
-    }
+    private IpTagArgs() {}
 
-    private IpTagArgs() {
-        this.ipTagType = Codegen.empty();
-        this.tag = Codegen.empty();
+    private IpTagArgs(IpTagArgs $) {
+        this.ipTagType = $.ipTagType;
+        this.tag = $.tag;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(IpTagArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> ipTagType;
-        private @Nullable Output<String> tag;
+        private IpTagArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new IpTagArgs();
         }
 
         public Builder(IpTagArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.ipTagType = defaults.ipTagType;
-    	      this.tag = defaults.tag;
+            $ = new IpTagArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder ipTagType(@Nullable Output<String> ipTagType) {
-            this.ipTagType = ipTagType;
+            $.ipTagType = ipTagType;
             return this;
         }
-        public Builder ipTagType(@Nullable String ipTagType) {
-            this.ipTagType = Codegen.ofNullable(ipTagType);
-            return this;
+
+        public Builder ipTagType(String ipTagType) {
+            return ipTagType(Output.of(ipTagType));
         }
+
         public Builder tag(@Nullable Output<String> tag) {
-            this.tag = tag;
+            $.tag = tag;
             return this;
         }
-        public Builder tag(@Nullable String tag) {
-            this.tag = Codegen.ofNullable(tag);
-            return this;
-        }        public IpTagArgs build() {
-            return new IpTagArgs(ipTagType, tag);
+
+        public Builder tag(String tag) {
+            return tag(Output.of(tag));
+        }
+
+        public IpTagArgs build() {
+            return $;
         }
     }
+
 }

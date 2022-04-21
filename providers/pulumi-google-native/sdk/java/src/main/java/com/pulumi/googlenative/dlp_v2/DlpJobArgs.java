@@ -5,11 +5,11 @@ package com.pulumi.googlenative.dlp_v2;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2InspectJobConfigArgs;
 import com.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2RiskAnalysisJobConfigArgs;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class DlpJobArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="inspectJob")
-      private final @Nullable Output<GooglePrivacyDlpV2InspectJobConfigArgs> inspectJob;
+    private @Nullable Output<GooglePrivacyDlpV2InspectJobConfigArgs> inspectJob;
 
-    public Output<GooglePrivacyDlpV2InspectJobConfigArgs> inspectJob() {
-        return this.inspectJob == null ? Codegen.empty() : this.inspectJob;
+    public Optional<Output<GooglePrivacyDlpV2InspectJobConfigArgs>> inspectJob() {
+        return Optional.ofNullable(this.inspectJob);
     }
 
     /**
@@ -33,24 +33,24 @@ public final class DlpJobArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="jobId")
-      private final @Nullable Output<String> jobId;
+    private @Nullable Output<String> jobId;
 
-    public Output<String> jobId() {
-        return this.jobId == null ? Codegen.empty() : this.jobId;
+    public Optional<Output<String>> jobId() {
+        return Optional.ofNullable(this.jobId);
     }
 
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -58,102 +58,88 @@ public final class DlpJobArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="riskJob")
-      private final @Nullable Output<GooglePrivacyDlpV2RiskAnalysisJobConfigArgs> riskJob;
+    private @Nullable Output<GooglePrivacyDlpV2RiskAnalysisJobConfigArgs> riskJob;
 
-    public Output<GooglePrivacyDlpV2RiskAnalysisJobConfigArgs> riskJob() {
-        return this.riskJob == null ? Codegen.empty() : this.riskJob;
+    public Optional<Output<GooglePrivacyDlpV2RiskAnalysisJobConfigArgs>> riskJob() {
+        return Optional.ofNullable(this.riskJob);
     }
 
-    public DlpJobArgs(
-        @Nullable Output<GooglePrivacyDlpV2InspectJobConfigArgs> inspectJob,
-        @Nullable Output<String> jobId,
-        @Nullable Output<String> location,
-        @Nullable Output<String> project,
-        @Nullable Output<GooglePrivacyDlpV2RiskAnalysisJobConfigArgs> riskJob) {
-        this.inspectJob = inspectJob;
-        this.jobId = jobId;
-        this.location = location;
-        this.project = project;
-        this.riskJob = riskJob;
-    }
+    private DlpJobArgs() {}
 
-    private DlpJobArgs() {
-        this.inspectJob = Codegen.empty();
-        this.jobId = Codegen.empty();
-        this.location = Codegen.empty();
-        this.project = Codegen.empty();
-        this.riskJob = Codegen.empty();
+    private DlpJobArgs(DlpJobArgs $) {
+        this.inspectJob = $.inspectJob;
+        this.jobId = $.jobId;
+        this.location = $.location;
+        this.project = $.project;
+        this.riskJob = $.riskJob;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DlpJobArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<GooglePrivacyDlpV2InspectJobConfigArgs> inspectJob;
-        private @Nullable Output<String> jobId;
-        private @Nullable Output<String> location;
-        private @Nullable Output<String> project;
-        private @Nullable Output<GooglePrivacyDlpV2RiskAnalysisJobConfigArgs> riskJob;
+        private DlpJobArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DlpJobArgs();
         }
 
         public Builder(DlpJobArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.inspectJob = defaults.inspectJob;
-    	      this.jobId = defaults.jobId;
-    	      this.location = defaults.location;
-    	      this.project = defaults.project;
-    	      this.riskJob = defaults.riskJob;
+            $ = new DlpJobArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder inspectJob(@Nullable Output<GooglePrivacyDlpV2InspectJobConfigArgs> inspectJob) {
-            this.inspectJob = inspectJob;
+            $.inspectJob = inspectJob;
             return this;
         }
-        public Builder inspectJob(@Nullable GooglePrivacyDlpV2InspectJobConfigArgs inspectJob) {
-            this.inspectJob = Codegen.ofNullable(inspectJob);
-            return this;
+
+        public Builder inspectJob(GooglePrivacyDlpV2InspectJobConfigArgs inspectJob) {
+            return inspectJob(Output.of(inspectJob));
         }
+
         public Builder jobId(@Nullable Output<String> jobId) {
-            this.jobId = jobId;
+            $.jobId = jobId;
             return this;
         }
-        public Builder jobId(@Nullable String jobId) {
-            this.jobId = Codegen.ofNullable(jobId);
-            return this;
+
+        public Builder jobId(String jobId) {
+            return jobId(Output.of(jobId));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder riskJob(@Nullable Output<GooglePrivacyDlpV2RiskAnalysisJobConfigArgs> riskJob) {
-            this.riskJob = riskJob;
+            $.riskJob = riskJob;
             return this;
         }
-        public Builder riskJob(@Nullable GooglePrivacyDlpV2RiskAnalysisJobConfigArgs riskJob) {
-            this.riskJob = Codegen.ofNullable(riskJob);
-            return this;
-        }        public DlpJobArgs build() {
-            return new DlpJobArgs(inspectJob, jobId, location, project, riskJob);
+
+        public Builder riskJob(GooglePrivacyDlpV2RiskAnalysisJobConfigArgs riskJob) {
+            return riskJob(Output.of(riskJob));
+        }
+
+        public DlpJobArgs build() {
+            return $;
         }
     }
+
 }

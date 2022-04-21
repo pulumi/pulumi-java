@@ -5,10 +5,10 @@ package com.pulumi.googlenative.sqladmin_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.sqladmin_v1.enums.SqlOutOfDiskReportSqlOutOfDiskState;
 import java.lang.Integer;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class SqlOutOfDiskReportArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="sqlMinRecommendedIncreaseSizeGb")
-      private final @Nullable Output<Integer> sqlMinRecommendedIncreaseSizeGb;
+    private @Nullable Output<Integer> sqlMinRecommendedIncreaseSizeGb;
 
-    public Output<Integer> sqlMinRecommendedIncreaseSizeGb() {
-        return this.sqlMinRecommendedIncreaseSizeGb == null ? Codegen.empty() : this.sqlMinRecommendedIncreaseSizeGb;
+    public Optional<Output<Integer>> sqlMinRecommendedIncreaseSizeGb() {
+        return Optional.ofNullable(this.sqlMinRecommendedIncreaseSizeGb);
     }
 
     /**
@@ -36,63 +36,58 @@ public final class SqlOutOfDiskReportArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="sqlOutOfDiskState")
-      private final @Nullable Output<SqlOutOfDiskReportSqlOutOfDiskState> sqlOutOfDiskState;
+    private @Nullable Output<SqlOutOfDiskReportSqlOutOfDiskState> sqlOutOfDiskState;
 
-    public Output<SqlOutOfDiskReportSqlOutOfDiskState> sqlOutOfDiskState() {
-        return this.sqlOutOfDiskState == null ? Codegen.empty() : this.sqlOutOfDiskState;
+    public Optional<Output<SqlOutOfDiskReportSqlOutOfDiskState>> sqlOutOfDiskState() {
+        return Optional.ofNullable(this.sqlOutOfDiskState);
     }
 
-    public SqlOutOfDiskReportArgs(
-        @Nullable Output<Integer> sqlMinRecommendedIncreaseSizeGb,
-        @Nullable Output<SqlOutOfDiskReportSqlOutOfDiskState> sqlOutOfDiskState) {
-        this.sqlMinRecommendedIncreaseSizeGb = sqlMinRecommendedIncreaseSizeGb;
-        this.sqlOutOfDiskState = sqlOutOfDiskState;
-    }
+    private SqlOutOfDiskReportArgs() {}
 
-    private SqlOutOfDiskReportArgs() {
-        this.sqlMinRecommendedIncreaseSizeGb = Codegen.empty();
-        this.sqlOutOfDiskState = Codegen.empty();
+    private SqlOutOfDiskReportArgs(SqlOutOfDiskReportArgs $) {
+        this.sqlMinRecommendedIncreaseSizeGb = $.sqlMinRecommendedIncreaseSizeGb;
+        this.sqlOutOfDiskState = $.sqlOutOfDiskState;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SqlOutOfDiskReportArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> sqlMinRecommendedIncreaseSizeGb;
-        private @Nullable Output<SqlOutOfDiskReportSqlOutOfDiskState> sqlOutOfDiskState;
+        private SqlOutOfDiskReportArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SqlOutOfDiskReportArgs();
         }
 
         public Builder(SqlOutOfDiskReportArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.sqlMinRecommendedIncreaseSizeGb = defaults.sqlMinRecommendedIncreaseSizeGb;
-    	      this.sqlOutOfDiskState = defaults.sqlOutOfDiskState;
+            $ = new SqlOutOfDiskReportArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder sqlMinRecommendedIncreaseSizeGb(@Nullable Output<Integer> sqlMinRecommendedIncreaseSizeGb) {
-            this.sqlMinRecommendedIncreaseSizeGb = sqlMinRecommendedIncreaseSizeGb;
+            $.sqlMinRecommendedIncreaseSizeGb = sqlMinRecommendedIncreaseSizeGb;
             return this;
         }
-        public Builder sqlMinRecommendedIncreaseSizeGb(@Nullable Integer sqlMinRecommendedIncreaseSizeGb) {
-            this.sqlMinRecommendedIncreaseSizeGb = Codegen.ofNullable(sqlMinRecommendedIncreaseSizeGb);
-            return this;
+
+        public Builder sqlMinRecommendedIncreaseSizeGb(Integer sqlMinRecommendedIncreaseSizeGb) {
+            return sqlMinRecommendedIncreaseSizeGb(Output.of(sqlMinRecommendedIncreaseSizeGb));
         }
+
         public Builder sqlOutOfDiskState(@Nullable Output<SqlOutOfDiskReportSqlOutOfDiskState> sqlOutOfDiskState) {
-            this.sqlOutOfDiskState = sqlOutOfDiskState;
+            $.sqlOutOfDiskState = sqlOutOfDiskState;
             return this;
         }
-        public Builder sqlOutOfDiskState(@Nullable SqlOutOfDiskReportSqlOutOfDiskState sqlOutOfDiskState) {
-            this.sqlOutOfDiskState = Codegen.ofNullable(sqlOutOfDiskState);
-            return this;
-        }        public SqlOutOfDiskReportArgs build() {
-            return new SqlOutOfDiskReportArgs(sqlMinRecommendedIncreaseSizeGb, sqlOutOfDiskState);
+
+        public Builder sqlOutOfDiskState(SqlOutOfDiskReportSqlOutOfDiskState sqlOutOfDiskState) {
+            return sqlOutOfDiskState(Output.of(sqlOutOfDiskState));
+        }
+
+        public SqlOutOfDiskReportArgs build() {
+            return $;
         }
     }
+
 }

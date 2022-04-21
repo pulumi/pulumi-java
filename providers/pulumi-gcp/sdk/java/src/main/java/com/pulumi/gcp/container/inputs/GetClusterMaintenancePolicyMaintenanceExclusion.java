@@ -13,78 +13,73 @@ public final class GetClusterMaintenancePolicyMaintenanceExclusion extends com.p
     public static final GetClusterMaintenancePolicyMaintenanceExclusion Empty = new GetClusterMaintenancePolicyMaintenanceExclusion();
 
     @Import(name="endTime", required=true)
-      private final String endTime;
+    private String endTime;
 
     public String endTime() {
         return this.endTime;
     }
 
     @Import(name="exclusionName", required=true)
-      private final String exclusionName;
+    private String exclusionName;
 
     public String exclusionName() {
         return this.exclusionName;
     }
 
     @Import(name="startTime", required=true)
-      private final String startTime;
+    private String startTime;
 
     public String startTime() {
         return this.startTime;
     }
 
-    public GetClusterMaintenancePolicyMaintenanceExclusion(
-        String endTime,
-        String exclusionName,
-        String startTime) {
-        this.endTime = Objects.requireNonNull(endTime, "expected parameter 'endTime' to be non-null");
-        this.exclusionName = Objects.requireNonNull(exclusionName, "expected parameter 'exclusionName' to be non-null");
-        this.startTime = Objects.requireNonNull(startTime, "expected parameter 'startTime' to be non-null");
-    }
+    private GetClusterMaintenancePolicyMaintenanceExclusion() {}
 
-    private GetClusterMaintenancePolicyMaintenanceExclusion() {
-        this.endTime = null;
-        this.exclusionName = null;
-        this.startTime = null;
+    private GetClusterMaintenancePolicyMaintenanceExclusion(GetClusterMaintenancePolicyMaintenanceExclusion $) {
+        this.endTime = $.endTime;
+        this.exclusionName = $.exclusionName;
+        this.startTime = $.startTime;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetClusterMaintenancePolicyMaintenanceExclusion defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String endTime;
-        private String exclusionName;
-        private String startTime;
+        private GetClusterMaintenancePolicyMaintenanceExclusion $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetClusterMaintenancePolicyMaintenanceExclusion();
         }
 
         public Builder(GetClusterMaintenancePolicyMaintenanceExclusion defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.endTime = defaults.endTime;
-    	      this.exclusionName = defaults.exclusionName;
-    	      this.startTime = defaults.startTime;
+            $ = new GetClusterMaintenancePolicyMaintenanceExclusion(Objects.requireNonNull(defaults));
         }
 
         public Builder endTime(String endTime) {
-            this.endTime = Objects.requireNonNull(endTime);
+            $.endTime = endTime;
             return this;
         }
+
         public Builder exclusionName(String exclusionName) {
-            this.exclusionName = Objects.requireNonNull(exclusionName);
+            $.exclusionName = exclusionName;
             return this;
         }
+
         public Builder startTime(String startTime) {
-            this.startTime = Objects.requireNonNull(startTime);
+            $.startTime = startTime;
             return this;
-        }        public GetClusterMaintenancePolicyMaintenanceExclusion build() {
-            return new GetClusterMaintenancePolicyMaintenanceExclusion(endTime, exclusionName, startTime);
+        }
+
+        public GetClusterMaintenancePolicyMaintenanceExclusion build() {
+            $.endTime = Objects.requireNonNull($.endTime, "expected parameter 'endTime' to be non-null");
+            $.exclusionName = Objects.requireNonNull($.exclusionName, "expected parameter 'exclusionName' to be non-null");
+            $.startTime = Objects.requireNonNull($.startTime, "expected parameter 'startTime' to be non-null");
+            return $;
         }
     }
+
 }

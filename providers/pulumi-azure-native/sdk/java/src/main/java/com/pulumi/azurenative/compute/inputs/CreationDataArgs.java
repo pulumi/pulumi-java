@@ -8,11 +8,11 @@ import com.pulumi.azurenative.compute.inputs.ImageDiskReferenceArgs;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -29,7 +29,7 @@ public final class CreationDataArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="createOption", required=true)
-      private final Output<Either<String,DiskCreateOption>> createOption;
+    private Output<Either<String,DiskCreateOption>> createOption;
 
     public Output<Either<String,DiskCreateOption>> createOption() {
         return this.createOption;
@@ -40,10 +40,10 @@ public final class CreationDataArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="galleryImageReference")
-      private final @Nullable Output<ImageDiskReferenceArgs> galleryImageReference;
+    private @Nullable Output<ImageDiskReferenceArgs> galleryImageReference;
 
-    public Output<ImageDiskReferenceArgs> galleryImageReference() {
-        return this.galleryImageReference == null ? Codegen.empty() : this.galleryImageReference;
+    public Optional<Output<ImageDiskReferenceArgs>> galleryImageReference() {
+        return Optional.ofNullable(this.galleryImageReference);
     }
 
     /**
@@ -51,10 +51,10 @@ public final class CreationDataArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="imageReference")
-      private final @Nullable Output<ImageDiskReferenceArgs> imageReference;
+    private @Nullable Output<ImageDiskReferenceArgs> imageReference;
 
-    public Output<ImageDiskReferenceArgs> imageReference() {
-        return this.imageReference == null ? Codegen.empty() : this.imageReference;
+    public Optional<Output<ImageDiskReferenceArgs>> imageReference() {
+        return Optional.ofNullable(this.imageReference);
     }
 
     /**
@@ -62,10 +62,10 @@ public final class CreationDataArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="logicalSectorSize")
-      private final @Nullable Output<Integer> logicalSectorSize;
+    private @Nullable Output<Integer> logicalSectorSize;
 
-    public Output<Integer> logicalSectorSize() {
-        return this.logicalSectorSize == null ? Codegen.empty() : this.logicalSectorSize;
+    public Optional<Output<Integer>> logicalSectorSize() {
+        return Optional.ofNullable(this.logicalSectorSize);
     }
 
     /**
@@ -73,10 +73,10 @@ public final class CreationDataArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="sourceResourceId")
-      private final @Nullable Output<String> sourceResourceId;
+    private @Nullable Output<String> sourceResourceId;
 
-    public Output<String> sourceResourceId() {
-        return this.sourceResourceId == null ? Codegen.empty() : this.sourceResourceId;
+    public Optional<Output<String>> sourceResourceId() {
+        return Optional.ofNullable(this.sourceResourceId);
     }
 
     /**
@@ -84,10 +84,10 @@ public final class CreationDataArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="sourceUri")
-      private final @Nullable Output<String> sourceUri;
+    private @Nullable Output<String> sourceUri;
 
-    public Output<String> sourceUri() {
-        return this.sourceUri == null ? Codegen.empty() : this.sourceUri;
+    public Optional<Output<String>> sourceUri() {
+        return Optional.ofNullable(this.sourceUri);
     }
 
     /**
@@ -95,10 +95,10 @@ public final class CreationDataArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="storageAccountId")
-      private final @Nullable Output<String> storageAccountId;
+    private @Nullable Output<String> storageAccountId;
 
-    public Output<String> storageAccountId() {
-        return this.storageAccountId == null ? Codegen.empty() : this.storageAccountId;
+    public Optional<Output<String>> storageAccountId() {
+        return Optional.ofNullable(this.storageAccountId);
     }
 
     /**
@@ -106,141 +106,119 @@ public final class CreationDataArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="uploadSizeBytes")
-      private final @Nullable Output<Double> uploadSizeBytes;
+    private @Nullable Output<Double> uploadSizeBytes;
 
-    public Output<Double> uploadSizeBytes() {
-        return this.uploadSizeBytes == null ? Codegen.empty() : this.uploadSizeBytes;
+    public Optional<Output<Double>> uploadSizeBytes() {
+        return Optional.ofNullable(this.uploadSizeBytes);
     }
 
-    public CreationDataArgs(
-        Output<Either<String,DiskCreateOption>> createOption,
-        @Nullable Output<ImageDiskReferenceArgs> galleryImageReference,
-        @Nullable Output<ImageDiskReferenceArgs> imageReference,
-        @Nullable Output<Integer> logicalSectorSize,
-        @Nullable Output<String> sourceResourceId,
-        @Nullable Output<String> sourceUri,
-        @Nullable Output<String> storageAccountId,
-        @Nullable Output<Double> uploadSizeBytes) {
-        this.createOption = Objects.requireNonNull(createOption, "expected parameter 'createOption' to be non-null");
-        this.galleryImageReference = galleryImageReference;
-        this.imageReference = imageReference;
-        this.logicalSectorSize = logicalSectorSize;
-        this.sourceResourceId = sourceResourceId;
-        this.sourceUri = sourceUri;
-        this.storageAccountId = storageAccountId;
-        this.uploadSizeBytes = uploadSizeBytes;
-    }
+    private CreationDataArgs() {}
 
-    private CreationDataArgs() {
-        this.createOption = Codegen.empty();
-        this.galleryImageReference = Codegen.empty();
-        this.imageReference = Codegen.empty();
-        this.logicalSectorSize = Codegen.empty();
-        this.sourceResourceId = Codegen.empty();
-        this.sourceUri = Codegen.empty();
-        this.storageAccountId = Codegen.empty();
-        this.uploadSizeBytes = Codegen.empty();
+    private CreationDataArgs(CreationDataArgs $) {
+        this.createOption = $.createOption;
+        this.galleryImageReference = $.galleryImageReference;
+        this.imageReference = $.imageReference;
+        this.logicalSectorSize = $.logicalSectorSize;
+        this.sourceResourceId = $.sourceResourceId;
+        this.sourceUri = $.sourceUri;
+        this.storageAccountId = $.storageAccountId;
+        this.uploadSizeBytes = $.uploadSizeBytes;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CreationDataArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Either<String,DiskCreateOption>> createOption;
-        private @Nullable Output<ImageDiskReferenceArgs> galleryImageReference;
-        private @Nullable Output<ImageDiskReferenceArgs> imageReference;
-        private @Nullable Output<Integer> logicalSectorSize;
-        private @Nullable Output<String> sourceResourceId;
-        private @Nullable Output<String> sourceUri;
-        private @Nullable Output<String> storageAccountId;
-        private @Nullable Output<Double> uploadSizeBytes;
+        private CreationDataArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CreationDataArgs();
         }
 
         public Builder(CreationDataArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.createOption = defaults.createOption;
-    	      this.galleryImageReference = defaults.galleryImageReference;
-    	      this.imageReference = defaults.imageReference;
-    	      this.logicalSectorSize = defaults.logicalSectorSize;
-    	      this.sourceResourceId = defaults.sourceResourceId;
-    	      this.sourceUri = defaults.sourceUri;
-    	      this.storageAccountId = defaults.storageAccountId;
-    	      this.uploadSizeBytes = defaults.uploadSizeBytes;
+            $ = new CreationDataArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder createOption(Output<Either<String,DiskCreateOption>> createOption) {
-            this.createOption = Objects.requireNonNull(createOption);
+            $.createOption = createOption;
             return this;
         }
+
         public Builder createOption(Either<String,DiskCreateOption> createOption) {
-            this.createOption = Output.of(Objects.requireNonNull(createOption));
-            return this;
+            return createOption(Output.of(createOption));
         }
+
         public Builder galleryImageReference(@Nullable Output<ImageDiskReferenceArgs> galleryImageReference) {
-            this.galleryImageReference = galleryImageReference;
+            $.galleryImageReference = galleryImageReference;
             return this;
         }
-        public Builder galleryImageReference(@Nullable ImageDiskReferenceArgs galleryImageReference) {
-            this.galleryImageReference = Codegen.ofNullable(galleryImageReference);
-            return this;
+
+        public Builder galleryImageReference(ImageDiskReferenceArgs galleryImageReference) {
+            return galleryImageReference(Output.of(galleryImageReference));
         }
+
         public Builder imageReference(@Nullable Output<ImageDiskReferenceArgs> imageReference) {
-            this.imageReference = imageReference;
+            $.imageReference = imageReference;
             return this;
         }
-        public Builder imageReference(@Nullable ImageDiskReferenceArgs imageReference) {
-            this.imageReference = Codegen.ofNullable(imageReference);
-            return this;
+
+        public Builder imageReference(ImageDiskReferenceArgs imageReference) {
+            return imageReference(Output.of(imageReference));
         }
+
         public Builder logicalSectorSize(@Nullable Output<Integer> logicalSectorSize) {
-            this.logicalSectorSize = logicalSectorSize;
+            $.logicalSectorSize = logicalSectorSize;
             return this;
         }
-        public Builder logicalSectorSize(@Nullable Integer logicalSectorSize) {
-            this.logicalSectorSize = Codegen.ofNullable(logicalSectorSize);
-            return this;
+
+        public Builder logicalSectorSize(Integer logicalSectorSize) {
+            return logicalSectorSize(Output.of(logicalSectorSize));
         }
+
         public Builder sourceResourceId(@Nullable Output<String> sourceResourceId) {
-            this.sourceResourceId = sourceResourceId;
+            $.sourceResourceId = sourceResourceId;
             return this;
         }
-        public Builder sourceResourceId(@Nullable String sourceResourceId) {
-            this.sourceResourceId = Codegen.ofNullable(sourceResourceId);
-            return this;
+
+        public Builder sourceResourceId(String sourceResourceId) {
+            return sourceResourceId(Output.of(sourceResourceId));
         }
+
         public Builder sourceUri(@Nullable Output<String> sourceUri) {
-            this.sourceUri = sourceUri;
+            $.sourceUri = sourceUri;
             return this;
         }
-        public Builder sourceUri(@Nullable String sourceUri) {
-            this.sourceUri = Codegen.ofNullable(sourceUri);
-            return this;
+
+        public Builder sourceUri(String sourceUri) {
+            return sourceUri(Output.of(sourceUri));
         }
+
         public Builder storageAccountId(@Nullable Output<String> storageAccountId) {
-            this.storageAccountId = storageAccountId;
+            $.storageAccountId = storageAccountId;
             return this;
         }
-        public Builder storageAccountId(@Nullable String storageAccountId) {
-            this.storageAccountId = Codegen.ofNullable(storageAccountId);
-            return this;
+
+        public Builder storageAccountId(String storageAccountId) {
+            return storageAccountId(Output.of(storageAccountId));
         }
+
         public Builder uploadSizeBytes(@Nullable Output<Double> uploadSizeBytes) {
-            this.uploadSizeBytes = uploadSizeBytes;
+            $.uploadSizeBytes = uploadSizeBytes;
             return this;
         }
-        public Builder uploadSizeBytes(@Nullable Double uploadSizeBytes) {
-            this.uploadSizeBytes = Codegen.ofNullable(uploadSizeBytes);
-            return this;
-        }        public CreationDataArgs build() {
-            return new CreationDataArgs(createOption, galleryImageReference, imageReference, logicalSectorSize, sourceResourceId, sourceUri, storageAccountId, uploadSizeBytes);
+
+        public Builder uploadSizeBytes(Double uploadSizeBytes) {
+            return uploadSizeBytes(Output.of(uploadSizeBytes));
+        }
+
+        public CreationDataArgs build() {
+            $.createOption = Objects.requireNonNull($.createOption, "expected parameter 'createOption' to be non-null");
+            return $;
         }
     }
+
 }

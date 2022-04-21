@@ -5,7 +5,6 @@ package com.pulumi.aws.ram;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,7 +18,7 @@ public final class ResourceAssociationArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="resourceArn", required=true)
-      private final Output<String> resourceArn;
+    private Output<String> resourceArn;
 
     public Output<String> resourceArn() {
         return this.resourceArn;
@@ -30,63 +29,60 @@ public final class ResourceAssociationArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="resourceShareArn", required=true)
-      private final Output<String> resourceShareArn;
+    private Output<String> resourceShareArn;
 
     public Output<String> resourceShareArn() {
         return this.resourceShareArn;
     }
 
-    public ResourceAssociationArgs(
-        Output<String> resourceArn,
-        Output<String> resourceShareArn) {
-        this.resourceArn = Objects.requireNonNull(resourceArn, "expected parameter 'resourceArn' to be non-null");
-        this.resourceShareArn = Objects.requireNonNull(resourceShareArn, "expected parameter 'resourceShareArn' to be non-null");
-    }
+    private ResourceAssociationArgs() {}
 
-    private ResourceAssociationArgs() {
-        this.resourceArn = Codegen.empty();
-        this.resourceShareArn = Codegen.empty();
+    private ResourceAssociationArgs(ResourceAssociationArgs $) {
+        this.resourceArn = $.resourceArn;
+        this.resourceShareArn = $.resourceShareArn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ResourceAssociationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> resourceArn;
-        private Output<String> resourceShareArn;
+        private ResourceAssociationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ResourceAssociationArgs();
         }
 
         public Builder(ResourceAssociationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.resourceArn = defaults.resourceArn;
-    	      this.resourceShareArn = defaults.resourceShareArn;
+            $ = new ResourceAssociationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder resourceArn(Output<String> resourceArn) {
-            this.resourceArn = Objects.requireNonNull(resourceArn);
+            $.resourceArn = resourceArn;
             return this;
         }
+
         public Builder resourceArn(String resourceArn) {
-            this.resourceArn = Output.of(Objects.requireNonNull(resourceArn));
-            return this;
+            return resourceArn(Output.of(resourceArn));
         }
+
         public Builder resourceShareArn(Output<String> resourceShareArn) {
-            this.resourceShareArn = Objects.requireNonNull(resourceShareArn);
+            $.resourceShareArn = resourceShareArn;
             return this;
         }
+
         public Builder resourceShareArn(String resourceShareArn) {
-            this.resourceShareArn = Output.of(Objects.requireNonNull(resourceShareArn));
-            return this;
-        }        public ResourceAssociationArgs build() {
-            return new ResourceAssociationArgs(resourceArn, resourceShareArn);
+            return resourceShareArn(Output.of(resourceShareArn));
+        }
+
+        public ResourceAssociationArgs build() {
+            $.resourceArn = Objects.requireNonNull($.resourceArn, "expected parameter 'resourceArn' to be non-null");
+            $.resourceShareArn = Objects.requireNonNull($.resourceShareArn, "expected parameter 'resourceShareArn' to be non-null");
+            return $;
         }
     }
+
 }

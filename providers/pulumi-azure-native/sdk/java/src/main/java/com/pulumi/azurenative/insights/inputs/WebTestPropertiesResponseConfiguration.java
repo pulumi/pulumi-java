@@ -23,45 +23,44 @@ public final class WebTestPropertiesResponseConfiguration extends com.pulumi.res
      * 
      */
     @Import(name="webTest")
-      private final @Nullable String webTest;
+    private @Nullable String webTest;
 
     public Optional<String> webTest() {
-        return this.webTest == null ? Optional.empty() : Optional.ofNullable(this.webTest);
+        return Optional.ofNullable(this.webTest);
     }
 
-    public WebTestPropertiesResponseConfiguration(@Nullable String webTest) {
-        this.webTest = webTest;
-    }
+    private WebTestPropertiesResponseConfiguration() {}
 
-    private WebTestPropertiesResponseConfiguration() {
-        this.webTest = null;
+    private WebTestPropertiesResponseConfiguration(WebTestPropertiesResponseConfiguration $) {
+        this.webTest = $.webTest;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WebTestPropertiesResponseConfiguration defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String webTest;
+        private WebTestPropertiesResponseConfiguration $;
 
         public Builder() {
-    	      // Empty
+            $ = new WebTestPropertiesResponseConfiguration();
         }
 
         public Builder(WebTestPropertiesResponseConfiguration defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.webTest = defaults.webTest;
+            $ = new WebTestPropertiesResponseConfiguration(Objects.requireNonNull(defaults));
         }
 
         public Builder webTest(@Nullable String webTest) {
-            this.webTest = webTest;
+            $.webTest = webTest;
             return this;
-        }        public WebTestPropertiesResponseConfiguration build() {
-            return new WebTestPropertiesResponseConfiguration(webTest);
+        }
+
+        public WebTestPropertiesResponseConfiguration build() {
+            return $;
         }
     }
+
 }

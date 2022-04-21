@@ -27,7 +27,7 @@ public final class ServingConfigResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="appAssociation", required=true)
-      private final String appAssociation;
+    private String appAssociation;
 
     public String appAssociation() {
         return this.appAssociation;
@@ -38,7 +38,7 @@ public final class ServingConfigResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="cleanUrls", required=true)
-      private final Boolean cleanUrls;
+    private Boolean cleanUrls;
 
     public Boolean cleanUrls() {
         return this.cleanUrls;
@@ -49,7 +49,7 @@ public final class ServingConfigResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="headers", required=true)
-      private final List<HeaderResponse> headers;
+    private List<HeaderResponse> headers;
 
     public List<HeaderResponse> headers() {
         return this.headers;
@@ -60,7 +60,7 @@ public final class ServingConfigResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="i18n", required=true)
-      private final I18nConfigResponse i18n;
+    private I18nConfigResponse i18n;
 
     public I18nConfigResponse i18n() {
         return this.i18n;
@@ -71,7 +71,7 @@ public final class ServingConfigResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="redirects", required=true)
-      private final List<RedirectResponse> redirects;
+    private List<RedirectResponse> redirects;
 
     public List<RedirectResponse> redirects() {
         return this.redirects;
@@ -82,7 +82,7 @@ public final class ServingConfigResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="rewrites", required=true)
-      private final List<RewriteResponse> rewrites;
+    private List<RewriteResponse> rewrites;
 
     public List<RewriteResponse> rewrites() {
         return this.rewrites;
@@ -93,109 +93,99 @@ public final class ServingConfigResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="trailingSlashBehavior", required=true)
-      private final String trailingSlashBehavior;
+    private String trailingSlashBehavior;
 
     public String trailingSlashBehavior() {
         return this.trailingSlashBehavior;
     }
 
-    public ServingConfigResponse(
-        String appAssociation,
-        Boolean cleanUrls,
-        List<HeaderResponse> headers,
-        I18nConfigResponse i18n,
-        List<RedirectResponse> redirects,
-        List<RewriteResponse> rewrites,
-        String trailingSlashBehavior) {
-        this.appAssociation = Objects.requireNonNull(appAssociation, "expected parameter 'appAssociation' to be non-null");
-        this.cleanUrls = Objects.requireNonNull(cleanUrls, "expected parameter 'cleanUrls' to be non-null");
-        this.headers = Objects.requireNonNull(headers, "expected parameter 'headers' to be non-null");
-        this.i18n = Objects.requireNonNull(i18n, "expected parameter 'i18n' to be non-null");
-        this.redirects = Objects.requireNonNull(redirects, "expected parameter 'redirects' to be non-null");
-        this.rewrites = Objects.requireNonNull(rewrites, "expected parameter 'rewrites' to be non-null");
-        this.trailingSlashBehavior = Objects.requireNonNull(trailingSlashBehavior, "expected parameter 'trailingSlashBehavior' to be non-null");
-    }
+    private ServingConfigResponse() {}
 
-    private ServingConfigResponse() {
-        this.appAssociation = null;
-        this.cleanUrls = null;
-        this.headers = List.of();
-        this.i18n = null;
-        this.redirects = List.of();
-        this.rewrites = List.of();
-        this.trailingSlashBehavior = null;
+    private ServingConfigResponse(ServingConfigResponse $) {
+        this.appAssociation = $.appAssociation;
+        this.cleanUrls = $.cleanUrls;
+        this.headers = $.headers;
+        this.i18n = $.i18n;
+        this.redirects = $.redirects;
+        this.rewrites = $.rewrites;
+        this.trailingSlashBehavior = $.trailingSlashBehavior;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ServingConfigResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String appAssociation;
-        private Boolean cleanUrls;
-        private List<HeaderResponse> headers;
-        private I18nConfigResponse i18n;
-        private List<RedirectResponse> redirects;
-        private List<RewriteResponse> rewrites;
-        private String trailingSlashBehavior;
+        private ServingConfigResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ServingConfigResponse();
         }
 
         public Builder(ServingConfigResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.appAssociation = defaults.appAssociation;
-    	      this.cleanUrls = defaults.cleanUrls;
-    	      this.headers = defaults.headers;
-    	      this.i18n = defaults.i18n;
-    	      this.redirects = defaults.redirects;
-    	      this.rewrites = defaults.rewrites;
-    	      this.trailingSlashBehavior = defaults.trailingSlashBehavior;
+            $ = new ServingConfigResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder appAssociation(String appAssociation) {
-            this.appAssociation = Objects.requireNonNull(appAssociation);
+            $.appAssociation = appAssociation;
             return this;
         }
+
         public Builder cleanUrls(Boolean cleanUrls) {
-            this.cleanUrls = Objects.requireNonNull(cleanUrls);
+            $.cleanUrls = cleanUrls;
             return this;
         }
+
         public Builder headers(List<HeaderResponse> headers) {
-            this.headers = Objects.requireNonNull(headers);
+            $.headers = headers;
             return this;
         }
+
         public Builder headers(HeaderResponse... headers) {
             return headers(List.of(headers));
         }
+
         public Builder i18n(I18nConfigResponse i18n) {
-            this.i18n = Objects.requireNonNull(i18n);
+            $.i18n = i18n;
             return this;
         }
+
         public Builder redirects(List<RedirectResponse> redirects) {
-            this.redirects = Objects.requireNonNull(redirects);
+            $.redirects = redirects;
             return this;
         }
+
         public Builder redirects(RedirectResponse... redirects) {
             return redirects(List.of(redirects));
         }
+
         public Builder rewrites(List<RewriteResponse> rewrites) {
-            this.rewrites = Objects.requireNonNull(rewrites);
+            $.rewrites = rewrites;
             return this;
         }
+
         public Builder rewrites(RewriteResponse... rewrites) {
             return rewrites(List.of(rewrites));
         }
+
         public Builder trailingSlashBehavior(String trailingSlashBehavior) {
-            this.trailingSlashBehavior = Objects.requireNonNull(trailingSlashBehavior);
+            $.trailingSlashBehavior = trailingSlashBehavior;
             return this;
-        }        public ServingConfigResponse build() {
-            return new ServingConfigResponse(appAssociation, cleanUrls, headers, i18n, redirects, rewrites, trailingSlashBehavior);
+        }
+
+        public ServingConfigResponse build() {
+            $.appAssociation = Objects.requireNonNull($.appAssociation, "expected parameter 'appAssociation' to be non-null");
+            $.cleanUrls = Objects.requireNonNull($.cleanUrls, "expected parameter 'cleanUrls' to be non-null");
+            $.headers = Objects.requireNonNull($.headers, "expected parameter 'headers' to be non-null");
+            $.i18n = Objects.requireNonNull($.i18n, "expected parameter 'i18n' to be non-null");
+            $.redirects = Objects.requireNonNull($.redirects, "expected parameter 'redirects' to be non-null");
+            $.rewrites = Objects.requireNonNull($.rewrites, "expected parameter 'rewrites' to be non-null");
+            $.trailingSlashBehavior = Objects.requireNonNull($.trailingSlashBehavior, "expected parameter 'trailingSlashBehavior' to be non-null");
+            return $;
         }
     }
+
 }

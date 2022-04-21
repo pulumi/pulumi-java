@@ -25,10 +25,10 @@ public final class RegistrationAssignmentPropertiesResponseProperties extends co
      * 
      */
     @Import(name="authorizations")
-      private final @Nullable List<AuthorizationResponse> authorizations;
+    private @Nullable List<AuthorizationResponse> authorizations;
 
-    public List<AuthorizationResponse> authorizations() {
-        return this.authorizations == null ? List.of() : this.authorizations;
+    public Optional<List<AuthorizationResponse>> authorizations() {
+        return Optional.ofNullable(this.authorizations);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class RegistrationAssignmentPropertiesResponseProperties extends co
      * 
      */
     @Import(name="description")
-      private final @Nullable String description;
+    private @Nullable String description;
 
     public Optional<String> description() {
-        return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class RegistrationAssignmentPropertiesResponseProperties extends co
      * 
      */
     @Import(name="managedByTenantId")
-      private final @Nullable String managedByTenantId;
+    private @Nullable String managedByTenantId;
 
     public Optional<String> managedByTenantId() {
-        return this.managedByTenantId == null ? Optional.empty() : Optional.ofNullable(this.managedByTenantId);
+        return Optional.ofNullable(this.managedByTenantId);
     }
 
     /**
@@ -58,10 +58,10 @@ public final class RegistrationAssignmentPropertiesResponseProperties extends co
      * 
      */
     @Import(name="managedByTenantName")
-      private final @Nullable String managedByTenantName;
+    private @Nullable String managedByTenantName;
 
     public Optional<String> managedByTenantName() {
-        return this.managedByTenantName == null ? Optional.empty() : Optional.ofNullable(this.managedByTenantName);
+        return Optional.ofNullable(this.managedByTenantName);
     }
 
     /**
@@ -69,10 +69,10 @@ public final class RegistrationAssignmentPropertiesResponseProperties extends co
      * 
      */
     @Import(name="manageeTenantId")
-      private final @Nullable String manageeTenantId;
+    private @Nullable String manageeTenantId;
 
     public Optional<String> manageeTenantId() {
-        return this.manageeTenantId == null ? Optional.empty() : Optional.ofNullable(this.manageeTenantId);
+        return Optional.ofNullable(this.manageeTenantId);
     }
 
     /**
@@ -80,10 +80,10 @@ public final class RegistrationAssignmentPropertiesResponseProperties extends co
      * 
      */
     @Import(name="manageeTenantName")
-      private final @Nullable String manageeTenantName;
+    private @Nullable String manageeTenantName;
 
     public Optional<String> manageeTenantName() {
-        return this.manageeTenantName == null ? Optional.empty() : Optional.ofNullable(this.manageeTenantName);
+        return Optional.ofNullable(this.manageeTenantName);
     }
 
     /**
@@ -91,10 +91,10 @@ public final class RegistrationAssignmentPropertiesResponseProperties extends co
      * 
      */
     @Import(name="provisioningState")
-      private final @Nullable String provisioningState;
+    private @Nullable String provisioningState;
 
     public Optional<String> provisioningState() {
-        return this.provisioningState == null ? Optional.empty() : Optional.ofNullable(this.provisioningState);
+        return Optional.ofNullable(this.provisioningState);
     }
 
     /**
@@ -102,112 +102,90 @@ public final class RegistrationAssignmentPropertiesResponseProperties extends co
      * 
      */
     @Import(name="registrationDefinitionName")
-      private final @Nullable String registrationDefinitionName;
+    private @Nullable String registrationDefinitionName;
 
     public Optional<String> registrationDefinitionName() {
-        return this.registrationDefinitionName == null ? Optional.empty() : Optional.ofNullable(this.registrationDefinitionName);
+        return Optional.ofNullable(this.registrationDefinitionName);
     }
 
-    public RegistrationAssignmentPropertiesResponseProperties(
-        @Nullable List<AuthorizationResponse> authorizations,
-        @Nullable String description,
-        @Nullable String managedByTenantId,
-        @Nullable String managedByTenantName,
-        @Nullable String manageeTenantId,
-        @Nullable String manageeTenantName,
-        @Nullable String provisioningState,
-        @Nullable String registrationDefinitionName) {
-        this.authorizations = authorizations;
-        this.description = description;
-        this.managedByTenantId = managedByTenantId;
-        this.managedByTenantName = managedByTenantName;
-        this.manageeTenantId = manageeTenantId;
-        this.manageeTenantName = manageeTenantName;
-        this.provisioningState = provisioningState;
-        this.registrationDefinitionName = registrationDefinitionName;
-    }
+    private RegistrationAssignmentPropertiesResponseProperties() {}
 
-    private RegistrationAssignmentPropertiesResponseProperties() {
-        this.authorizations = List.of();
-        this.description = null;
-        this.managedByTenantId = null;
-        this.managedByTenantName = null;
-        this.manageeTenantId = null;
-        this.manageeTenantName = null;
-        this.provisioningState = null;
-        this.registrationDefinitionName = null;
+    private RegistrationAssignmentPropertiesResponseProperties(RegistrationAssignmentPropertiesResponseProperties $) {
+        this.authorizations = $.authorizations;
+        this.description = $.description;
+        this.managedByTenantId = $.managedByTenantId;
+        this.managedByTenantName = $.managedByTenantName;
+        this.manageeTenantId = $.manageeTenantId;
+        this.manageeTenantName = $.manageeTenantName;
+        this.provisioningState = $.provisioningState;
+        this.registrationDefinitionName = $.registrationDefinitionName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RegistrationAssignmentPropertiesResponseProperties defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<AuthorizationResponse> authorizations;
-        private @Nullable String description;
-        private @Nullable String managedByTenantId;
-        private @Nullable String managedByTenantName;
-        private @Nullable String manageeTenantId;
-        private @Nullable String manageeTenantName;
-        private @Nullable String provisioningState;
-        private @Nullable String registrationDefinitionName;
+        private RegistrationAssignmentPropertiesResponseProperties $;
 
         public Builder() {
-    	      // Empty
+            $ = new RegistrationAssignmentPropertiesResponseProperties();
         }
 
         public Builder(RegistrationAssignmentPropertiesResponseProperties defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.authorizations = defaults.authorizations;
-    	      this.description = defaults.description;
-    	      this.managedByTenantId = defaults.managedByTenantId;
-    	      this.managedByTenantName = defaults.managedByTenantName;
-    	      this.manageeTenantId = defaults.manageeTenantId;
-    	      this.manageeTenantName = defaults.manageeTenantName;
-    	      this.provisioningState = defaults.provisioningState;
-    	      this.registrationDefinitionName = defaults.registrationDefinitionName;
+            $ = new RegistrationAssignmentPropertiesResponseProperties(Objects.requireNonNull(defaults));
         }
 
         public Builder authorizations(@Nullable List<AuthorizationResponse> authorizations) {
-            this.authorizations = authorizations;
+            $.authorizations = authorizations;
             return this;
         }
+
         public Builder authorizations(AuthorizationResponse... authorizations) {
             return authorizations(List.of(authorizations));
         }
+
         public Builder description(@Nullable String description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
+
         public Builder managedByTenantId(@Nullable String managedByTenantId) {
-            this.managedByTenantId = managedByTenantId;
+            $.managedByTenantId = managedByTenantId;
             return this;
         }
+
         public Builder managedByTenantName(@Nullable String managedByTenantName) {
-            this.managedByTenantName = managedByTenantName;
+            $.managedByTenantName = managedByTenantName;
             return this;
         }
+
         public Builder manageeTenantId(@Nullable String manageeTenantId) {
-            this.manageeTenantId = manageeTenantId;
+            $.manageeTenantId = manageeTenantId;
             return this;
         }
+
         public Builder manageeTenantName(@Nullable String manageeTenantName) {
-            this.manageeTenantName = manageeTenantName;
+            $.manageeTenantName = manageeTenantName;
             return this;
         }
+
         public Builder provisioningState(@Nullable String provisioningState) {
-            this.provisioningState = provisioningState;
+            $.provisioningState = provisioningState;
             return this;
         }
+
         public Builder registrationDefinitionName(@Nullable String registrationDefinitionName) {
-            this.registrationDefinitionName = registrationDefinitionName;
+            $.registrationDefinitionName = registrationDefinitionName;
             return this;
-        }        public RegistrationAssignmentPropertiesResponseProperties build() {
-            return new RegistrationAssignmentPropertiesResponseProperties(authorizations, description, managedByTenantId, managedByTenantName, manageeTenantId, manageeTenantName, provisioningState, registrationDefinitionName);
+        }
+
+        public RegistrationAssignmentPropertiesResponseProperties build() {
+            return $;
         }
     }
+
 }

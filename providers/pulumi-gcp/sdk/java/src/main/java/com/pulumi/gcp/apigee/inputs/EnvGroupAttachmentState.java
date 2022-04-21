@@ -5,9 +5,9 @@ package com.pulumi.gcp.apigee.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class EnvGroupAttachmentState extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="envgroupId")
-      private final @Nullable Output<String> envgroupId;
+    private @Nullable Output<String> envgroupId;
 
-    public Output<String> envgroupId() {
-        return this.envgroupId == null ? Codegen.empty() : this.envgroupId;
+    public Optional<Output<String>> envgroupId() {
+        return Optional.ofNullable(this.envgroupId);
     }
 
     /**
@@ -32,10 +32,10 @@ public final class EnvGroupAttachmentState extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="environment")
-      private final @Nullable Output<String> environment;
+    private @Nullable Output<String> environment;
 
-    public Output<String> environment() {
-        return this.environment == null ? Codegen.empty() : this.environment;
+    public Optional<Output<String>> environment() {
+        return Optional.ofNullable(this.environment);
     }
 
     /**
@@ -43,76 +43,68 @@ public final class EnvGroupAttachmentState extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
-    public EnvGroupAttachmentState(
-        @Nullable Output<String> envgroupId,
-        @Nullable Output<String> environment,
-        @Nullable Output<String> name) {
-        this.envgroupId = envgroupId;
-        this.environment = environment;
-        this.name = name;
-    }
+    private EnvGroupAttachmentState() {}
 
-    private EnvGroupAttachmentState() {
-        this.envgroupId = Codegen.empty();
-        this.environment = Codegen.empty();
-        this.name = Codegen.empty();
+    private EnvGroupAttachmentState(EnvGroupAttachmentState $) {
+        this.envgroupId = $.envgroupId;
+        this.environment = $.environment;
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EnvGroupAttachmentState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> envgroupId;
-        private @Nullable Output<String> environment;
-        private @Nullable Output<String> name;
+        private EnvGroupAttachmentState $;
 
         public Builder() {
-    	      // Empty
+            $ = new EnvGroupAttachmentState();
         }
 
         public Builder(EnvGroupAttachmentState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.envgroupId = defaults.envgroupId;
-    	      this.environment = defaults.environment;
-    	      this.name = defaults.name;
+            $ = new EnvGroupAttachmentState(Objects.requireNonNull(defaults));
         }
 
         public Builder envgroupId(@Nullable Output<String> envgroupId) {
-            this.envgroupId = envgroupId;
+            $.envgroupId = envgroupId;
             return this;
         }
-        public Builder envgroupId(@Nullable String envgroupId) {
-            this.envgroupId = Codegen.ofNullable(envgroupId);
-            return this;
+
+        public Builder envgroupId(String envgroupId) {
+            return envgroupId(Output.of(envgroupId));
         }
+
         public Builder environment(@Nullable Output<String> environment) {
-            this.environment = environment;
+            $.environment = environment;
             return this;
         }
-        public Builder environment(@Nullable String environment) {
-            this.environment = Codegen.ofNullable(environment);
-            return this;
+
+        public Builder environment(String environment) {
+            return environment(Output.of(environment));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
-        }        public EnvGroupAttachmentState build() {
-            return new EnvGroupAttachmentState(envgroupId, environment, name);
+
+        public Builder name(String name) {
+            return name(Output.of(name));
+        }
+
+        public EnvGroupAttachmentState build() {
+            return $;
         }
     }
+
 }

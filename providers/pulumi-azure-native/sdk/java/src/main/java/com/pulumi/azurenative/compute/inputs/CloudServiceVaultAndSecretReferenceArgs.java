@@ -6,9 +6,9 @@ package com.pulumi.azurenative.compute.inputs;
 import com.pulumi.azurenative.compute.inputs.SubResourceArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -17,70 +17,65 @@ public final class CloudServiceVaultAndSecretReferenceArgs extends com.pulumi.re
     public static final CloudServiceVaultAndSecretReferenceArgs Empty = new CloudServiceVaultAndSecretReferenceArgs();
 
     @Import(name="secretUrl")
-      private final @Nullable Output<String> secretUrl;
+    private @Nullable Output<String> secretUrl;
 
-    public Output<String> secretUrl() {
-        return this.secretUrl == null ? Codegen.empty() : this.secretUrl;
+    public Optional<Output<String>> secretUrl() {
+        return Optional.ofNullable(this.secretUrl);
     }
 
     @Import(name="sourceVault")
-      private final @Nullable Output<SubResourceArgs> sourceVault;
+    private @Nullable Output<SubResourceArgs> sourceVault;
 
-    public Output<SubResourceArgs> sourceVault() {
-        return this.sourceVault == null ? Codegen.empty() : this.sourceVault;
+    public Optional<Output<SubResourceArgs>> sourceVault() {
+        return Optional.ofNullable(this.sourceVault);
     }
 
-    public CloudServiceVaultAndSecretReferenceArgs(
-        @Nullable Output<String> secretUrl,
-        @Nullable Output<SubResourceArgs> sourceVault) {
-        this.secretUrl = secretUrl;
-        this.sourceVault = sourceVault;
-    }
+    private CloudServiceVaultAndSecretReferenceArgs() {}
 
-    private CloudServiceVaultAndSecretReferenceArgs() {
-        this.secretUrl = Codegen.empty();
-        this.sourceVault = Codegen.empty();
+    private CloudServiceVaultAndSecretReferenceArgs(CloudServiceVaultAndSecretReferenceArgs $) {
+        this.secretUrl = $.secretUrl;
+        this.sourceVault = $.sourceVault;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CloudServiceVaultAndSecretReferenceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> secretUrl;
-        private @Nullable Output<SubResourceArgs> sourceVault;
+        private CloudServiceVaultAndSecretReferenceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CloudServiceVaultAndSecretReferenceArgs();
         }
 
         public Builder(CloudServiceVaultAndSecretReferenceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.secretUrl = defaults.secretUrl;
-    	      this.sourceVault = defaults.sourceVault;
+            $ = new CloudServiceVaultAndSecretReferenceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder secretUrl(@Nullable Output<String> secretUrl) {
-            this.secretUrl = secretUrl;
+            $.secretUrl = secretUrl;
             return this;
         }
-        public Builder secretUrl(@Nullable String secretUrl) {
-            this.secretUrl = Codegen.ofNullable(secretUrl);
-            return this;
+
+        public Builder secretUrl(String secretUrl) {
+            return secretUrl(Output.of(secretUrl));
         }
+
         public Builder sourceVault(@Nullable Output<SubResourceArgs> sourceVault) {
-            this.sourceVault = sourceVault;
+            $.sourceVault = sourceVault;
             return this;
         }
-        public Builder sourceVault(@Nullable SubResourceArgs sourceVault) {
-            this.sourceVault = Codegen.ofNullable(sourceVault);
-            return this;
-        }        public CloudServiceVaultAndSecretReferenceArgs build() {
-            return new CloudServiceVaultAndSecretReferenceArgs(secretUrl, sourceVault);
+
+        public Builder sourceVault(SubResourceArgs sourceVault) {
+            return sourceVault(Output.of(sourceVault));
+        }
+
+        public CloudServiceVaultAndSecretReferenceArgs build() {
+            return $;
         }
     }
+
 }

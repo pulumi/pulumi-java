@@ -7,11 +7,11 @@ import com.pulumi.awsnative.pinpoint.enums.InAppTemplateLayout;
 import com.pulumi.awsnative.pinpoint.inputs.InAppTemplateInAppMessageContentArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,153 +20,138 @@ public final class InAppTemplateArgs extends com.pulumi.resources.ResourceArgs {
     public static final InAppTemplateArgs Empty = new InAppTemplateArgs();
 
     @Import(name="content")
-      private final @Nullable Output<List<InAppTemplateInAppMessageContentArgs>> content;
+    private @Nullable Output<List<InAppTemplateInAppMessageContentArgs>> content;
 
-    public Output<List<InAppTemplateInAppMessageContentArgs>> content() {
-        return this.content == null ? Codegen.empty() : this.content;
+    public Optional<Output<List<InAppTemplateInAppMessageContentArgs>>> content() {
+        return Optional.ofNullable(this.content);
     }
 
     @Import(name="customConfig")
-      private final @Nullable Output<Object> customConfig;
+    private @Nullable Output<Object> customConfig;
 
-    public Output<Object> customConfig() {
-        return this.customConfig == null ? Codegen.empty() : this.customConfig;
+    public Optional<Output<Object>> customConfig() {
+        return Optional.ofNullable(this.customConfig);
     }
 
     @Import(name="layout")
-      private final @Nullable Output<InAppTemplateLayout> layout;
+    private @Nullable Output<InAppTemplateLayout> layout;
 
-    public Output<InAppTemplateLayout> layout() {
-        return this.layout == null ? Codegen.empty() : this.layout;
+    public Optional<Output<InAppTemplateLayout>> layout() {
+        return Optional.ofNullable(this.layout);
     }
 
     @Import(name="tags")
-      private final @Nullable Output<Object> tags;
+    private @Nullable Output<Object> tags;
 
-    public Output<Object> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Object>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     @Import(name="templateDescription")
-      private final @Nullable Output<String> templateDescription;
+    private @Nullable Output<String> templateDescription;
 
-    public Output<String> templateDescription() {
-        return this.templateDescription == null ? Codegen.empty() : this.templateDescription;
+    public Optional<Output<String>> templateDescription() {
+        return Optional.ofNullable(this.templateDescription);
     }
 
     @Import(name="templateName", required=true)
-      private final Output<String> templateName;
+    private Output<String> templateName;
 
     public Output<String> templateName() {
         return this.templateName;
     }
 
-    public InAppTemplateArgs(
-        @Nullable Output<List<InAppTemplateInAppMessageContentArgs>> content,
-        @Nullable Output<Object> customConfig,
-        @Nullable Output<InAppTemplateLayout> layout,
-        @Nullable Output<Object> tags,
-        @Nullable Output<String> templateDescription,
-        Output<String> templateName) {
-        this.content = content;
-        this.customConfig = customConfig;
-        this.layout = layout;
-        this.tags = tags;
-        this.templateDescription = templateDescription;
-        this.templateName = Objects.requireNonNull(templateName, "expected parameter 'templateName' to be non-null");
-    }
+    private InAppTemplateArgs() {}
 
-    private InAppTemplateArgs() {
-        this.content = Codegen.empty();
-        this.customConfig = Codegen.empty();
-        this.layout = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.templateDescription = Codegen.empty();
-        this.templateName = Codegen.empty();
+    private InAppTemplateArgs(InAppTemplateArgs $) {
+        this.content = $.content;
+        this.customConfig = $.customConfig;
+        this.layout = $.layout;
+        this.tags = $.tags;
+        this.templateDescription = $.templateDescription;
+        this.templateName = $.templateName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(InAppTemplateArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<InAppTemplateInAppMessageContentArgs>> content;
-        private @Nullable Output<Object> customConfig;
-        private @Nullable Output<InAppTemplateLayout> layout;
-        private @Nullable Output<Object> tags;
-        private @Nullable Output<String> templateDescription;
-        private Output<String> templateName;
+        private InAppTemplateArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new InAppTemplateArgs();
         }
 
         public Builder(InAppTemplateArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.content = defaults.content;
-    	      this.customConfig = defaults.customConfig;
-    	      this.layout = defaults.layout;
-    	      this.tags = defaults.tags;
-    	      this.templateDescription = defaults.templateDescription;
-    	      this.templateName = defaults.templateName;
+            $ = new InAppTemplateArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder content(@Nullable Output<List<InAppTemplateInAppMessageContentArgs>> content) {
-            this.content = content;
+            $.content = content;
             return this;
         }
-        public Builder content(@Nullable List<InAppTemplateInAppMessageContentArgs> content) {
-            this.content = Codegen.ofNullable(content);
-            return this;
+
+        public Builder content(List<InAppTemplateInAppMessageContentArgs> content) {
+            return content(Output.of(content));
         }
+
         public Builder content(InAppTemplateInAppMessageContentArgs... content) {
             return content(List.of(content));
         }
+
         public Builder customConfig(@Nullable Output<Object> customConfig) {
-            this.customConfig = customConfig;
+            $.customConfig = customConfig;
             return this;
         }
-        public Builder customConfig(@Nullable Object customConfig) {
-            this.customConfig = Codegen.ofNullable(customConfig);
-            return this;
+
+        public Builder customConfig(Object customConfig) {
+            return customConfig(Output.of(customConfig));
         }
+
         public Builder layout(@Nullable Output<InAppTemplateLayout> layout) {
-            this.layout = layout;
+            $.layout = layout;
             return this;
         }
-        public Builder layout(@Nullable InAppTemplateLayout layout) {
-            this.layout = Codegen.ofNullable(layout);
-            return this;
+
+        public Builder layout(InAppTemplateLayout layout) {
+            return layout(Output.of(layout));
         }
+
         public Builder tags(@Nullable Output<Object> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Object tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Object tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder templateDescription(@Nullable Output<String> templateDescription) {
-            this.templateDescription = templateDescription;
+            $.templateDescription = templateDescription;
             return this;
         }
-        public Builder templateDescription(@Nullable String templateDescription) {
-            this.templateDescription = Codegen.ofNullable(templateDescription);
-            return this;
+
+        public Builder templateDescription(String templateDescription) {
+            return templateDescription(Output.of(templateDescription));
         }
+
         public Builder templateName(Output<String> templateName) {
-            this.templateName = Objects.requireNonNull(templateName);
+            $.templateName = templateName;
             return this;
         }
+
         public Builder templateName(String templateName) {
-            this.templateName = Output.of(Objects.requireNonNull(templateName));
-            return this;
-        }        public InAppTemplateArgs build() {
-            return new InAppTemplateArgs(content, customConfig, layout, tags, templateDescription, templateName);
+            return templateName(Output.of(templateName));
+        }
+
+        public InAppTemplateArgs build() {
+            $.templateName = Objects.requireNonNull($.templateName, "expected parameter 'templateName' to be non-null");
+            return $;
         }
     }
+
 }

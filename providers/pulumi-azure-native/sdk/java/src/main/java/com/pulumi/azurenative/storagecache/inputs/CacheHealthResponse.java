@@ -25,7 +25,7 @@ public final class CacheHealthResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="conditions", required=true)
-      private final List<ConditionResponse> conditions;
+    private List<ConditionResponse> conditions;
 
     public List<ConditionResponse> conditions() {
         return this.conditions;
@@ -36,10 +36,10 @@ public final class CacheHealthResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="state")
-      private final @Nullable String state;
+    private @Nullable String state;
 
     public Optional<String> state() {
-        return this.state == null ? Optional.empty() : Optional.ofNullable(this.state);
+        return Optional.ofNullable(this.state);
     }
 
     /**
@@ -47,67 +47,61 @@ public final class CacheHealthResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="statusDescription")
-      private final @Nullable String statusDescription;
+    private @Nullable String statusDescription;
 
     public Optional<String> statusDescription() {
-        return this.statusDescription == null ? Optional.empty() : Optional.ofNullable(this.statusDescription);
+        return Optional.ofNullable(this.statusDescription);
     }
 
-    public CacheHealthResponse(
-        List<ConditionResponse> conditions,
-        @Nullable String state,
-        @Nullable String statusDescription) {
-        this.conditions = Objects.requireNonNull(conditions, "expected parameter 'conditions' to be non-null");
-        this.state = state;
-        this.statusDescription = statusDescription;
-    }
+    private CacheHealthResponse() {}
 
-    private CacheHealthResponse() {
-        this.conditions = List.of();
-        this.state = null;
-        this.statusDescription = null;
+    private CacheHealthResponse(CacheHealthResponse $) {
+        this.conditions = $.conditions;
+        this.state = $.state;
+        this.statusDescription = $.statusDescription;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CacheHealthResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<ConditionResponse> conditions;
-        private @Nullable String state;
-        private @Nullable String statusDescription;
+        private CacheHealthResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new CacheHealthResponse();
         }
 
         public Builder(CacheHealthResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.conditions = defaults.conditions;
-    	      this.state = defaults.state;
-    	      this.statusDescription = defaults.statusDescription;
+            $ = new CacheHealthResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder conditions(List<ConditionResponse> conditions) {
-            this.conditions = Objects.requireNonNull(conditions);
+            $.conditions = conditions;
             return this;
         }
+
         public Builder conditions(ConditionResponse... conditions) {
             return conditions(List.of(conditions));
         }
+
         public Builder state(@Nullable String state) {
-            this.state = state;
+            $.state = state;
             return this;
         }
+
         public Builder statusDescription(@Nullable String statusDescription) {
-            this.statusDescription = statusDescription;
+            $.statusDescription = statusDescription;
             return this;
-        }        public CacheHealthResponse build() {
-            return new CacheHealthResponse(conditions, state, statusDescription);
+        }
+
+        public CacheHealthResponse build() {
+            $.conditions = Objects.requireNonNull($.conditions, "expected parameter 'conditions' to be non-null");
+            return $;
         }
     }
+
 }

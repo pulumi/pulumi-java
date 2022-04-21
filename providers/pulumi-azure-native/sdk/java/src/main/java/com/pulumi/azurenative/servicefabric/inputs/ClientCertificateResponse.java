@@ -24,10 +24,10 @@ public final class ClientCertificateResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="commonName")
-      private final @Nullable String commonName;
+    private @Nullable String commonName;
 
     public Optional<String> commonName() {
-        return this.commonName == null ? Optional.empty() : Optional.ofNullable(this.commonName);
+        return Optional.ofNullable(this.commonName);
     }
 
     /**
@@ -35,7 +35,7 @@ public final class ClientCertificateResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="isAdmin", required=true)
-      private final Boolean isAdmin;
+    private Boolean isAdmin;
 
     public Boolean isAdmin() {
         return this.isAdmin;
@@ -46,10 +46,10 @@ public final class ClientCertificateResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="issuerThumbprint")
-      private final @Nullable String issuerThumbprint;
+    private @Nullable String issuerThumbprint;
 
     public Optional<String> issuerThumbprint() {
-        return this.issuerThumbprint == null ? Optional.empty() : Optional.ofNullable(this.issuerThumbprint);
+        return Optional.ofNullable(this.issuerThumbprint);
     }
 
     /**
@@ -57,73 +57,63 @@ public final class ClientCertificateResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="thumbprint")
-      private final @Nullable String thumbprint;
+    private @Nullable String thumbprint;
 
     public Optional<String> thumbprint() {
-        return this.thumbprint == null ? Optional.empty() : Optional.ofNullable(this.thumbprint);
+        return Optional.ofNullable(this.thumbprint);
     }
 
-    public ClientCertificateResponse(
-        @Nullable String commonName,
-        Boolean isAdmin,
-        @Nullable String issuerThumbprint,
-        @Nullable String thumbprint) {
-        this.commonName = commonName;
-        this.isAdmin = Objects.requireNonNull(isAdmin, "expected parameter 'isAdmin' to be non-null");
-        this.issuerThumbprint = issuerThumbprint;
-        this.thumbprint = thumbprint;
-    }
+    private ClientCertificateResponse() {}
 
-    private ClientCertificateResponse() {
-        this.commonName = null;
-        this.isAdmin = null;
-        this.issuerThumbprint = null;
-        this.thumbprint = null;
+    private ClientCertificateResponse(ClientCertificateResponse $) {
+        this.commonName = $.commonName;
+        this.isAdmin = $.isAdmin;
+        this.issuerThumbprint = $.issuerThumbprint;
+        this.thumbprint = $.thumbprint;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ClientCertificateResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String commonName;
-        private Boolean isAdmin;
-        private @Nullable String issuerThumbprint;
-        private @Nullable String thumbprint;
+        private ClientCertificateResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ClientCertificateResponse();
         }
 
         public Builder(ClientCertificateResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.commonName = defaults.commonName;
-    	      this.isAdmin = defaults.isAdmin;
-    	      this.issuerThumbprint = defaults.issuerThumbprint;
-    	      this.thumbprint = defaults.thumbprint;
+            $ = new ClientCertificateResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder commonName(@Nullable String commonName) {
-            this.commonName = commonName;
+            $.commonName = commonName;
             return this;
         }
+
         public Builder isAdmin(Boolean isAdmin) {
-            this.isAdmin = Objects.requireNonNull(isAdmin);
+            $.isAdmin = isAdmin;
             return this;
         }
+
         public Builder issuerThumbprint(@Nullable String issuerThumbprint) {
-            this.issuerThumbprint = issuerThumbprint;
+            $.issuerThumbprint = issuerThumbprint;
             return this;
         }
+
         public Builder thumbprint(@Nullable String thumbprint) {
-            this.thumbprint = thumbprint;
+            $.thumbprint = thumbprint;
             return this;
-        }        public ClientCertificateResponse build() {
-            return new ClientCertificateResponse(commonName, isAdmin, issuerThumbprint, thumbprint);
+        }
+
+        public ClientCertificateResponse build() {
+            $.isAdmin = Objects.requireNonNull($.isAdmin, "expected parameter 'isAdmin' to be non-null");
+            return $;
         }
     }
+
 }

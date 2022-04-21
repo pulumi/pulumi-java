@@ -19,7 +19,7 @@ public final class VolumeResponse extends com.pulumi.resources.InvokeArgs {
     public static final VolumeResponse Empty = new VolumeResponse();
 
     @Import(name="configMap", required=true)
-      private final ConfigMapVolumeSourceResponse configMap;
+    private ConfigMapVolumeSourceResponse configMap;
 
     public ConfigMapVolumeSourceResponse configMap() {
         return this.configMap;
@@ -30,71 +30,66 @@ public final class VolumeResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
     }
 
     @Import(name="secret", required=true)
-      private final SecretVolumeSourceResponse secret;
+    private SecretVolumeSourceResponse secret;
 
     public SecretVolumeSourceResponse secret() {
         return this.secret;
     }
 
-    public VolumeResponse(
-        ConfigMapVolumeSourceResponse configMap,
-        String name,
-        SecretVolumeSourceResponse secret) {
-        this.configMap = Objects.requireNonNull(configMap, "expected parameter 'configMap' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.secret = Objects.requireNonNull(secret, "expected parameter 'secret' to be non-null");
-    }
+    private VolumeResponse() {}
 
-    private VolumeResponse() {
-        this.configMap = null;
-        this.name = null;
-        this.secret = null;
+    private VolumeResponse(VolumeResponse $) {
+        this.configMap = $.configMap;
+        this.name = $.name;
+        this.secret = $.secret;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VolumeResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private ConfigMapVolumeSourceResponse configMap;
-        private String name;
-        private SecretVolumeSourceResponse secret;
+        private VolumeResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new VolumeResponse();
         }
 
         public Builder(VolumeResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.configMap = defaults.configMap;
-    	      this.name = defaults.name;
-    	      this.secret = defaults.secret;
+            $ = new VolumeResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder configMap(ConfigMapVolumeSourceResponse configMap) {
-            this.configMap = Objects.requireNonNull(configMap);
+            $.configMap = configMap;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder secret(SecretVolumeSourceResponse secret) {
-            this.secret = Objects.requireNonNull(secret);
+            $.secret = secret;
             return this;
-        }        public VolumeResponse build() {
-            return new VolumeResponse(configMap, name, secret);
+        }
+
+        public VolumeResponse build() {
+            $.configMap = Objects.requireNonNull($.configMap, "expected parameter 'configMap' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.secret = Objects.requireNonNull($.secret, "expected parameter 'secret' to be non-null");
+            return $;
         }
     }
+
 }

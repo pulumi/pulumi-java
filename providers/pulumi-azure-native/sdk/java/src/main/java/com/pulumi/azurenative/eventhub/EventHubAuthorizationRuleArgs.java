@@ -7,10 +7,10 @@ import com.pulumi.azurenative.eventhub.enums.AccessRights;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,10 @@ public final class EventHubAuthorizationRuleArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="authorizationRuleName")
-      private final @Nullable Output<String> authorizationRuleName;
+    private @Nullable Output<String> authorizationRuleName;
 
-    public Output<String> authorizationRuleName() {
-        return this.authorizationRuleName == null ? Codegen.empty() : this.authorizationRuleName;
+    public Optional<Output<String>> authorizationRuleName() {
+        return Optional.ofNullable(this.authorizationRuleName);
     }
 
     /**
@@ -34,7 +34,7 @@ public final class EventHubAuthorizationRuleArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="eventHubName", required=true)
-      private final Output<String> eventHubName;
+    private Output<String> eventHubName;
 
     public Output<String> eventHubName() {
         return this.eventHubName;
@@ -45,7 +45,7 @@ public final class EventHubAuthorizationRuleArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="namespaceName", required=true)
-      private final Output<String> namespaceName;
+    private Output<String> namespaceName;
 
     public Output<String> namespaceName() {
         return this.namespaceName;
@@ -56,7 +56,7 @@ public final class EventHubAuthorizationRuleArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -67,105 +67,96 @@ public final class EventHubAuthorizationRuleArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="rights", required=true)
-      private final Output<List<Either<String,AccessRights>>> rights;
+    private Output<List<Either<String,AccessRights>>> rights;
 
     public Output<List<Either<String,AccessRights>>> rights() {
         return this.rights;
     }
 
-    public EventHubAuthorizationRuleArgs(
-        @Nullable Output<String> authorizationRuleName,
-        Output<String> eventHubName,
-        Output<String> namespaceName,
-        Output<String> resourceGroupName,
-        Output<List<Either<String,AccessRights>>> rights) {
-        this.authorizationRuleName = authorizationRuleName;
-        this.eventHubName = Objects.requireNonNull(eventHubName, "expected parameter 'eventHubName' to be non-null");
-        this.namespaceName = Objects.requireNonNull(namespaceName, "expected parameter 'namespaceName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.rights = Objects.requireNonNull(rights, "expected parameter 'rights' to be non-null");
-    }
+    private EventHubAuthorizationRuleArgs() {}
 
-    private EventHubAuthorizationRuleArgs() {
-        this.authorizationRuleName = Codegen.empty();
-        this.eventHubName = Codegen.empty();
-        this.namespaceName = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.rights = Codegen.empty();
+    private EventHubAuthorizationRuleArgs(EventHubAuthorizationRuleArgs $) {
+        this.authorizationRuleName = $.authorizationRuleName;
+        this.eventHubName = $.eventHubName;
+        this.namespaceName = $.namespaceName;
+        this.resourceGroupName = $.resourceGroupName;
+        this.rights = $.rights;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EventHubAuthorizationRuleArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> authorizationRuleName;
-        private Output<String> eventHubName;
-        private Output<String> namespaceName;
-        private Output<String> resourceGroupName;
-        private Output<List<Either<String,AccessRights>>> rights;
+        private EventHubAuthorizationRuleArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new EventHubAuthorizationRuleArgs();
         }
 
         public Builder(EventHubAuthorizationRuleArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.authorizationRuleName = defaults.authorizationRuleName;
-    	      this.eventHubName = defaults.eventHubName;
-    	      this.namespaceName = defaults.namespaceName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.rights = defaults.rights;
+            $ = new EventHubAuthorizationRuleArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder authorizationRuleName(@Nullable Output<String> authorizationRuleName) {
-            this.authorizationRuleName = authorizationRuleName;
+            $.authorizationRuleName = authorizationRuleName;
             return this;
         }
-        public Builder authorizationRuleName(@Nullable String authorizationRuleName) {
-            this.authorizationRuleName = Codegen.ofNullable(authorizationRuleName);
-            return this;
+
+        public Builder authorizationRuleName(String authorizationRuleName) {
+            return authorizationRuleName(Output.of(authorizationRuleName));
         }
+
         public Builder eventHubName(Output<String> eventHubName) {
-            this.eventHubName = Objects.requireNonNull(eventHubName);
+            $.eventHubName = eventHubName;
             return this;
         }
+
         public Builder eventHubName(String eventHubName) {
-            this.eventHubName = Output.of(Objects.requireNonNull(eventHubName));
-            return this;
+            return eventHubName(Output.of(eventHubName));
         }
+
         public Builder namespaceName(Output<String> namespaceName) {
-            this.namespaceName = Objects.requireNonNull(namespaceName);
+            $.namespaceName = namespaceName;
             return this;
         }
+
         public Builder namespaceName(String namespaceName) {
-            this.namespaceName = Output.of(Objects.requireNonNull(namespaceName));
-            return this;
+            return namespaceName(Output.of(namespaceName));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder rights(Output<List<Either<String,AccessRights>>> rights) {
-            this.rights = Objects.requireNonNull(rights);
+            $.rights = rights;
             return this;
         }
+
         public Builder rights(List<Either<String,AccessRights>> rights) {
-            this.rights = Output.of(Objects.requireNonNull(rights));
-            return this;
+            return rights(Output.of(rights));
         }
+
         public Builder rights(Either<String,AccessRights>... rights) {
             return rights(List.of(rights));
-        }        public EventHubAuthorizationRuleArgs build() {
-            return new EventHubAuthorizationRuleArgs(authorizationRuleName, eventHubName, namespaceName, resourceGroupName, rights);
+        }
+
+        public EventHubAuthorizationRuleArgs build() {
+            $.eventHubName = Objects.requireNonNull($.eventHubName, "expected parameter 'eventHubName' to be non-null");
+            $.namespaceName = Objects.requireNonNull($.namespaceName, "expected parameter 'namespaceName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.rights = Objects.requireNonNull($.rights, "expected parameter 'rights' to be non-null");
+            return $;
         }
     }
+
 }

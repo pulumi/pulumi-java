@@ -7,8 +7,8 @@ import com.pulumi.azurenative.portal.inputs.DashboardPartsPositionArgs;
 import com.pulumi.azurenative.portal.inputs.MarkdownPartMetadataArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class DashboardPartsArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="metadata")
-      private final @Nullable Output<MarkdownPartMetadataArgs> metadata;
+    private @Nullable Output<MarkdownPartMetadataArgs> metadata;
 
-    public Output<MarkdownPartMetadataArgs> metadata() {
-        return this.metadata == null ? Codegen.empty() : this.metadata;
+    public Optional<Output<MarkdownPartMetadataArgs>> metadata() {
+        return Optional.ofNullable(this.metadata);
     }
 
     /**
@@ -36,63 +36,59 @@ public final class DashboardPartsArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="position", required=true)
-      private final Output<DashboardPartsPositionArgs> position;
+    private Output<DashboardPartsPositionArgs> position;
 
     public Output<DashboardPartsPositionArgs> position() {
         return this.position;
     }
 
-    public DashboardPartsArgs(
-        @Nullable Output<MarkdownPartMetadataArgs> metadata,
-        Output<DashboardPartsPositionArgs> position) {
-        this.metadata = metadata;
-        this.position = Objects.requireNonNull(position, "expected parameter 'position' to be non-null");
-    }
+    private DashboardPartsArgs() {}
 
-    private DashboardPartsArgs() {
-        this.metadata = Codegen.empty();
-        this.position = Codegen.empty();
+    private DashboardPartsArgs(DashboardPartsArgs $) {
+        this.metadata = $.metadata;
+        this.position = $.position;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DashboardPartsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<MarkdownPartMetadataArgs> metadata;
-        private Output<DashboardPartsPositionArgs> position;
+        private DashboardPartsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DashboardPartsArgs();
         }
 
         public Builder(DashboardPartsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.metadata = defaults.metadata;
-    	      this.position = defaults.position;
+            $ = new DashboardPartsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder metadata(@Nullable Output<MarkdownPartMetadataArgs> metadata) {
-            this.metadata = metadata;
+            $.metadata = metadata;
             return this;
         }
-        public Builder metadata(@Nullable MarkdownPartMetadataArgs metadata) {
-            this.metadata = Codegen.ofNullable(metadata);
-            return this;
+
+        public Builder metadata(MarkdownPartMetadataArgs metadata) {
+            return metadata(Output.of(metadata));
         }
+
         public Builder position(Output<DashboardPartsPositionArgs> position) {
-            this.position = Objects.requireNonNull(position);
+            $.position = position;
             return this;
         }
+
         public Builder position(DashboardPartsPositionArgs position) {
-            this.position = Output.of(Objects.requireNonNull(position));
-            return this;
-        }        public DashboardPartsArgs build() {
-            return new DashboardPartsArgs(metadata, position);
+            return position(Output.of(position));
+        }
+
+        public DashboardPartsArgs build() {
+            $.position = Objects.requireNonNull($.position, "expected parameter 'position' to be non-null");
+            return $;
         }
     }
+
 }

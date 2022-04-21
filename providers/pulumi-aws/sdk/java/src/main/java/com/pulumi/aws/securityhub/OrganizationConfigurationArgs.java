@@ -5,7 +5,6 @@ package com.pulumi.aws.securityhub;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.Objects;
 
@@ -19,49 +18,49 @@ public final class OrganizationConfigurationArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="autoEnable", required=true)
-      private final Output<Boolean> autoEnable;
+    private Output<Boolean> autoEnable;
 
     public Output<Boolean> autoEnable() {
         return this.autoEnable;
     }
 
-    public OrganizationConfigurationArgs(Output<Boolean> autoEnable) {
-        this.autoEnable = Objects.requireNonNull(autoEnable, "expected parameter 'autoEnable' to be non-null");
-    }
+    private OrganizationConfigurationArgs() {}
 
-    private OrganizationConfigurationArgs() {
-        this.autoEnable = Codegen.empty();
+    private OrganizationConfigurationArgs(OrganizationConfigurationArgs $) {
+        this.autoEnable = $.autoEnable;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(OrganizationConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Boolean> autoEnable;
+        private OrganizationConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new OrganizationConfigurationArgs();
         }
 
         public Builder(OrganizationConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.autoEnable = defaults.autoEnable;
+            $ = new OrganizationConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder autoEnable(Output<Boolean> autoEnable) {
-            this.autoEnable = Objects.requireNonNull(autoEnable);
+            $.autoEnable = autoEnable;
             return this;
         }
+
         public Builder autoEnable(Boolean autoEnable) {
-            this.autoEnable = Output.of(Objects.requireNonNull(autoEnable));
-            return this;
-        }        public OrganizationConfigurationArgs build() {
-            return new OrganizationConfigurationArgs(autoEnable);
+            return autoEnable(Output.of(autoEnable));
+        }
+
+        public OrganizationConfigurationArgs build() {
+            $.autoEnable = Objects.requireNonNull($.autoEnable, "expected parameter 'autoEnable' to be non-null");
+            return $;
         }
     }
+
 }

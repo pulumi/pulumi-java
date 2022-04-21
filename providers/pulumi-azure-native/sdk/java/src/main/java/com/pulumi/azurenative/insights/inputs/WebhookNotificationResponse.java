@@ -24,10 +24,10 @@ public final class WebhookNotificationResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="properties")
-      private final @Nullable Map<String,String> properties;
+    private @Nullable Map<String,String> properties;
 
-    public Map<String,String> properties() {
-        return this.properties == null ? Map.of() : this.properties;
+    public Optional<Map<String,String>> properties() {
+        return Optional.ofNullable(this.properties);
     }
 
     /**
@@ -35,55 +35,50 @@ public final class WebhookNotificationResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="serviceUri")
-      private final @Nullable String serviceUri;
+    private @Nullable String serviceUri;
 
     public Optional<String> serviceUri() {
-        return this.serviceUri == null ? Optional.empty() : Optional.ofNullable(this.serviceUri);
+        return Optional.ofNullable(this.serviceUri);
     }
 
-    public WebhookNotificationResponse(
-        @Nullable Map<String,String> properties,
-        @Nullable String serviceUri) {
-        this.properties = properties;
-        this.serviceUri = serviceUri;
-    }
+    private WebhookNotificationResponse() {}
 
-    private WebhookNotificationResponse() {
-        this.properties = Map.of();
-        this.serviceUri = null;
+    private WebhookNotificationResponse(WebhookNotificationResponse $) {
+        this.properties = $.properties;
+        this.serviceUri = $.serviceUri;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WebhookNotificationResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Map<String,String> properties;
-        private @Nullable String serviceUri;
+        private WebhookNotificationResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new WebhookNotificationResponse();
         }
 
         public Builder(WebhookNotificationResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.properties = defaults.properties;
-    	      this.serviceUri = defaults.serviceUri;
+            $ = new WebhookNotificationResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder properties(@Nullable Map<String,String> properties) {
-            this.properties = properties;
+            $.properties = properties;
             return this;
         }
+
         public Builder serviceUri(@Nullable String serviceUri) {
-            this.serviceUri = serviceUri;
+            $.serviceUri = serviceUri;
             return this;
-        }        public WebhookNotificationResponse build() {
-            return new WebhookNotificationResponse(properties, serviceUri);
+        }
+
+        public WebhookNotificationResponse build() {
+            return $;
         }
     }
+
 }

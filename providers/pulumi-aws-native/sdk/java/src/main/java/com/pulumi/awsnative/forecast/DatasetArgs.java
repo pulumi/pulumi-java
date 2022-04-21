@@ -10,10 +10,10 @@ import com.pulumi.awsnative.forecast.inputs.SchemaPropertiesArgs;
 import com.pulumi.awsnative.forecast.inputs.TagsItemPropertiesArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class DatasetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="dataFrequency")
-      private final @Nullable Output<String> dataFrequency;
+    private @Nullable Output<String> dataFrequency;
 
-    public Output<String> dataFrequency() {
-        return this.dataFrequency == null ? Codegen.empty() : this.dataFrequency;
+    public Optional<Output<String>> dataFrequency() {
+        return Optional.ofNullable(this.dataFrequency);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class DatasetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="datasetName")
-      private final @Nullable Output<String> datasetName;
+    private @Nullable Output<String> datasetName;
 
-    public Output<String> datasetName() {
-        return this.datasetName == null ? Codegen.empty() : this.datasetName;
+    public Optional<Output<String>> datasetName() {
+        return Optional.ofNullable(this.datasetName);
     }
 
     /**
@@ -48,7 +48,7 @@ public final class DatasetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="datasetType", required=true)
-      private final Output<DatasetType> datasetType;
+    private Output<DatasetType> datasetType;
 
     public Output<DatasetType> datasetType() {
         return this.datasetType;
@@ -59,152 +59,136 @@ public final class DatasetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="domain", required=true)
-      private final Output<DatasetDomain> domain;
+    private Output<DatasetDomain> domain;
 
     public Output<DatasetDomain> domain() {
         return this.domain;
     }
 
     @Import(name="encryptionConfig")
-      private final @Nullable Output<EncryptionConfigPropertiesArgs> encryptionConfig;
+    private @Nullable Output<EncryptionConfigPropertiesArgs> encryptionConfig;
 
-    public Output<EncryptionConfigPropertiesArgs> encryptionConfig() {
-        return this.encryptionConfig == null ? Codegen.empty() : this.encryptionConfig;
+    public Optional<Output<EncryptionConfigPropertiesArgs>> encryptionConfig() {
+        return Optional.ofNullable(this.encryptionConfig);
     }
 
     @Import(name="schema", required=true)
-      private final Output<SchemaPropertiesArgs> schema;
+    private Output<SchemaPropertiesArgs> schema;
 
     public Output<SchemaPropertiesArgs> schema() {
         return this.schema;
     }
 
     @Import(name="tags")
-      private final @Nullable Output<List<TagsItemPropertiesArgs>> tags;
+    private @Nullable Output<List<TagsItemPropertiesArgs>> tags;
 
-    public Output<List<TagsItemPropertiesArgs>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<List<TagsItemPropertiesArgs>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public DatasetArgs(
-        @Nullable Output<String> dataFrequency,
-        @Nullable Output<String> datasetName,
-        Output<DatasetType> datasetType,
-        Output<DatasetDomain> domain,
-        @Nullable Output<EncryptionConfigPropertiesArgs> encryptionConfig,
-        Output<SchemaPropertiesArgs> schema,
-        @Nullable Output<List<TagsItemPropertiesArgs>> tags) {
-        this.dataFrequency = dataFrequency;
-        this.datasetName = datasetName;
-        this.datasetType = Objects.requireNonNull(datasetType, "expected parameter 'datasetType' to be non-null");
-        this.domain = Objects.requireNonNull(domain, "expected parameter 'domain' to be non-null");
-        this.encryptionConfig = encryptionConfig;
-        this.schema = Objects.requireNonNull(schema, "expected parameter 'schema' to be non-null");
-        this.tags = tags;
-    }
+    private DatasetArgs() {}
 
-    private DatasetArgs() {
-        this.dataFrequency = Codegen.empty();
-        this.datasetName = Codegen.empty();
-        this.datasetType = Codegen.empty();
-        this.domain = Codegen.empty();
-        this.encryptionConfig = Codegen.empty();
-        this.schema = Codegen.empty();
-        this.tags = Codegen.empty();
+    private DatasetArgs(DatasetArgs $) {
+        this.dataFrequency = $.dataFrequency;
+        this.datasetName = $.datasetName;
+        this.datasetType = $.datasetType;
+        this.domain = $.domain;
+        this.encryptionConfig = $.encryptionConfig;
+        this.schema = $.schema;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DatasetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> dataFrequency;
-        private @Nullable Output<String> datasetName;
-        private Output<DatasetType> datasetType;
-        private Output<DatasetDomain> domain;
-        private @Nullable Output<EncryptionConfigPropertiesArgs> encryptionConfig;
-        private Output<SchemaPropertiesArgs> schema;
-        private @Nullable Output<List<TagsItemPropertiesArgs>> tags;
+        private DatasetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DatasetArgs();
         }
 
         public Builder(DatasetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dataFrequency = defaults.dataFrequency;
-    	      this.datasetName = defaults.datasetName;
-    	      this.datasetType = defaults.datasetType;
-    	      this.domain = defaults.domain;
-    	      this.encryptionConfig = defaults.encryptionConfig;
-    	      this.schema = defaults.schema;
-    	      this.tags = defaults.tags;
+            $ = new DatasetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder dataFrequency(@Nullable Output<String> dataFrequency) {
-            this.dataFrequency = dataFrequency;
+            $.dataFrequency = dataFrequency;
             return this;
         }
-        public Builder dataFrequency(@Nullable String dataFrequency) {
-            this.dataFrequency = Codegen.ofNullable(dataFrequency);
-            return this;
+
+        public Builder dataFrequency(String dataFrequency) {
+            return dataFrequency(Output.of(dataFrequency));
         }
+
         public Builder datasetName(@Nullable Output<String> datasetName) {
-            this.datasetName = datasetName;
+            $.datasetName = datasetName;
             return this;
         }
-        public Builder datasetName(@Nullable String datasetName) {
-            this.datasetName = Codegen.ofNullable(datasetName);
-            return this;
+
+        public Builder datasetName(String datasetName) {
+            return datasetName(Output.of(datasetName));
         }
+
         public Builder datasetType(Output<DatasetType> datasetType) {
-            this.datasetType = Objects.requireNonNull(datasetType);
+            $.datasetType = datasetType;
             return this;
         }
+
         public Builder datasetType(DatasetType datasetType) {
-            this.datasetType = Output.of(Objects.requireNonNull(datasetType));
-            return this;
+            return datasetType(Output.of(datasetType));
         }
+
         public Builder domain(Output<DatasetDomain> domain) {
-            this.domain = Objects.requireNonNull(domain);
+            $.domain = domain;
             return this;
         }
+
         public Builder domain(DatasetDomain domain) {
-            this.domain = Output.of(Objects.requireNonNull(domain));
-            return this;
+            return domain(Output.of(domain));
         }
+
         public Builder encryptionConfig(@Nullable Output<EncryptionConfigPropertiesArgs> encryptionConfig) {
-            this.encryptionConfig = encryptionConfig;
+            $.encryptionConfig = encryptionConfig;
             return this;
         }
-        public Builder encryptionConfig(@Nullable EncryptionConfigPropertiesArgs encryptionConfig) {
-            this.encryptionConfig = Codegen.ofNullable(encryptionConfig);
-            return this;
+
+        public Builder encryptionConfig(EncryptionConfigPropertiesArgs encryptionConfig) {
+            return encryptionConfig(Output.of(encryptionConfig));
         }
+
         public Builder schema(Output<SchemaPropertiesArgs> schema) {
-            this.schema = Objects.requireNonNull(schema);
+            $.schema = schema;
             return this;
         }
+
         public Builder schema(SchemaPropertiesArgs schema) {
-            this.schema = Output.of(Objects.requireNonNull(schema));
-            return this;
+            return schema(Output.of(schema));
         }
+
         public Builder tags(@Nullable Output<List<TagsItemPropertiesArgs>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable List<TagsItemPropertiesArgs> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(List<TagsItemPropertiesArgs> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tags(TagsItemPropertiesArgs... tags) {
             return tags(List.of(tags));
-        }        public DatasetArgs build() {
-            return new DatasetArgs(dataFrequency, datasetName, datasetType, domain, encryptionConfig, schema, tags);
+        }
+
+        public DatasetArgs build() {
+            $.datasetType = Objects.requireNonNull($.datasetType, "expected parameter 'datasetType' to be non-null");
+            $.domain = Objects.requireNonNull($.domain, "expected parameter 'domain' to be non-null");
+            $.schema = Objects.requireNonNull($.schema, "expected parameter 'schema' to be non-null");
+            return $;
         }
     }
+
 }

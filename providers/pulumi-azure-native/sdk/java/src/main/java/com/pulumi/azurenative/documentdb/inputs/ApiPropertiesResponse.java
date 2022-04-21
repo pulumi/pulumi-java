@@ -19,45 +19,44 @@ public final class ApiPropertiesResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="serverVersion")
-      private final @Nullable String serverVersion;
+    private @Nullable String serverVersion;
 
     public Optional<String> serverVersion() {
-        return this.serverVersion == null ? Optional.empty() : Optional.ofNullable(this.serverVersion);
+        return Optional.ofNullable(this.serverVersion);
     }
 
-    public ApiPropertiesResponse(@Nullable String serverVersion) {
-        this.serverVersion = serverVersion;
-    }
+    private ApiPropertiesResponse() {}
 
-    private ApiPropertiesResponse() {
-        this.serverVersion = null;
+    private ApiPropertiesResponse(ApiPropertiesResponse $) {
+        this.serverVersion = $.serverVersion;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ApiPropertiesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String serverVersion;
+        private ApiPropertiesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ApiPropertiesResponse();
         }
 
         public Builder(ApiPropertiesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.serverVersion = defaults.serverVersion;
+            $ = new ApiPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder serverVersion(@Nullable String serverVersion) {
-            this.serverVersion = serverVersion;
+            $.serverVersion = serverVersion;
             return this;
-        }        public ApiPropertiesResponse build() {
-            return new ApiPropertiesResponse(serverVersion);
+        }
+
+        public ApiPropertiesResponse build() {
+            return $;
         }
     }
+
 }

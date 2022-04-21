@@ -17,7 +17,7 @@ public final class GetDscpConfigurationArgs extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="dscpConfigurationName", required=true)
-      private final String dscpConfigurationName;
+    private String dscpConfigurationName;
 
     public String dscpConfigurationName() {
         return this.dscpConfigurationName;
@@ -28,55 +28,52 @@ public final class GetDscpConfigurationArgs extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public GetDscpConfigurationArgs(
-        String dscpConfigurationName,
-        String resourceGroupName) {
-        this.dscpConfigurationName = Objects.requireNonNull(dscpConfigurationName, "expected parameter 'dscpConfigurationName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private GetDscpConfigurationArgs() {}
 
-    private GetDscpConfigurationArgs() {
-        this.dscpConfigurationName = null;
-        this.resourceGroupName = null;
+    private GetDscpConfigurationArgs(GetDscpConfigurationArgs $) {
+        this.dscpConfigurationName = $.dscpConfigurationName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetDscpConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String dscpConfigurationName;
-        private String resourceGroupName;
+        private GetDscpConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetDscpConfigurationArgs();
         }
 
         public Builder(GetDscpConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dscpConfigurationName = defaults.dscpConfigurationName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new GetDscpConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder dscpConfigurationName(String dscpConfigurationName) {
-            this.dscpConfigurationName = Objects.requireNonNull(dscpConfigurationName);
+            $.dscpConfigurationName = dscpConfigurationName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public GetDscpConfigurationArgs build() {
-            return new GetDscpConfigurationArgs(dscpConfigurationName, resourceGroupName);
+        }
+
+        public GetDscpConfigurationArgs build() {
+            $.dscpConfigurationName = Objects.requireNonNull($.dscpConfigurationName, "expected parameter 'dscpConfigurationName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

@@ -17,7 +17,7 @@ public final class GetTaskArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="registryName", required=true)
-      private final String registryName;
+    private String registryName;
 
     public String registryName() {
         return this.registryName;
@@ -28,7 +28,7 @@ public final class GetTaskArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -39,64 +39,59 @@ public final class GetTaskArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="taskName", required=true)
-      private final String taskName;
+    private String taskName;
 
     public String taskName() {
         return this.taskName;
     }
 
-    public GetTaskArgs(
-        String registryName,
-        String resourceGroupName,
-        String taskName) {
-        this.registryName = Objects.requireNonNull(registryName, "expected parameter 'registryName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.taskName = Objects.requireNonNull(taskName, "expected parameter 'taskName' to be non-null");
-    }
+    private GetTaskArgs() {}
 
-    private GetTaskArgs() {
-        this.registryName = null;
-        this.resourceGroupName = null;
-        this.taskName = null;
+    private GetTaskArgs(GetTaskArgs $) {
+        this.registryName = $.registryName;
+        this.resourceGroupName = $.resourceGroupName;
+        this.taskName = $.taskName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetTaskArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String registryName;
-        private String resourceGroupName;
-        private String taskName;
+        private GetTaskArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetTaskArgs();
         }
 
         public Builder(GetTaskArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.registryName = defaults.registryName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.taskName = defaults.taskName;
+            $ = new GetTaskArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder registryName(String registryName) {
-            this.registryName = Objects.requireNonNull(registryName);
+            $.registryName = registryName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder taskName(String taskName) {
-            this.taskName = Objects.requireNonNull(taskName);
+            $.taskName = taskName;
             return this;
-        }        public GetTaskArgs build() {
-            return new GetTaskArgs(registryName, resourceGroupName, taskName);
+        }
+
+        public GetTaskArgs build() {
+            $.registryName = Objects.requireNonNull($.registryName, "expected parameter 'registryName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.taskName = Objects.requireNonNull($.taskName, "expected parameter 'taskName' to be non-null");
+            return $;
         }
     }
+
 }

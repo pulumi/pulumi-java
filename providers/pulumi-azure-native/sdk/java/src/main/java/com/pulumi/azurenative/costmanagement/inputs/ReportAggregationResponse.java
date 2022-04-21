@@ -21,7 +21,7 @@ public final class ReportAggregationResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="function", required=true)
-      private final String function;
+    private String function;
 
     public String function() {
         return this.function;
@@ -32,55 +32,52 @@ public final class ReportAggregationResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
     }
 
-    public ReportAggregationResponse(
-        String function,
-        String name) {
-        this.function = Objects.requireNonNull(function, "expected parameter 'function' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-    }
+    private ReportAggregationResponse() {}
 
-    private ReportAggregationResponse() {
-        this.function = null;
-        this.name = null;
+    private ReportAggregationResponse(ReportAggregationResponse $) {
+        this.function = $.function;
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ReportAggregationResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String function;
-        private String name;
+        private ReportAggregationResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ReportAggregationResponse();
         }
 
         public Builder(ReportAggregationResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.function = defaults.function;
-    	      this.name = defaults.name;
+            $ = new ReportAggregationResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder function(String function) {
-            this.function = Objects.requireNonNull(function);
+            $.function = function;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
-        }        public ReportAggregationResponse build() {
-            return new ReportAggregationResponse(function, name);
+        }
+
+        public ReportAggregationResponse build() {
+            $.function = Objects.requireNonNull($.function, "expected parameter 'function' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            return $;
         }
     }
+
 }

@@ -7,9 +7,9 @@ import com.pulumi.azurenative.insights.enums.KnownPublicNetworkAccessOptions;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,49 +26,48 @@ public final class DataCollectionEndpointNetworkAclsArgs extends com.pulumi.reso
      * 
      */
     @Import(name="publicNetworkAccess")
-      private final @Nullable Output<Either<String,KnownPublicNetworkAccessOptions>> publicNetworkAccess;
+    private @Nullable Output<Either<String,KnownPublicNetworkAccessOptions>> publicNetworkAccess;
 
-    public Output<Either<String,KnownPublicNetworkAccessOptions>> publicNetworkAccess() {
-        return this.publicNetworkAccess == null ? Codegen.empty() : this.publicNetworkAccess;
+    public Optional<Output<Either<String,KnownPublicNetworkAccessOptions>>> publicNetworkAccess() {
+        return Optional.ofNullable(this.publicNetworkAccess);
     }
 
-    public DataCollectionEndpointNetworkAclsArgs(@Nullable Output<Either<String,KnownPublicNetworkAccessOptions>> publicNetworkAccess) {
-        this.publicNetworkAccess = publicNetworkAccess;
-    }
+    private DataCollectionEndpointNetworkAclsArgs() {}
 
-    private DataCollectionEndpointNetworkAclsArgs() {
-        this.publicNetworkAccess = Codegen.empty();
+    private DataCollectionEndpointNetworkAclsArgs(DataCollectionEndpointNetworkAclsArgs $) {
+        this.publicNetworkAccess = $.publicNetworkAccess;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DataCollectionEndpointNetworkAclsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Either<String,KnownPublicNetworkAccessOptions>> publicNetworkAccess;
+        private DataCollectionEndpointNetworkAclsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DataCollectionEndpointNetworkAclsArgs();
         }
 
         public Builder(DataCollectionEndpointNetworkAclsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.publicNetworkAccess = defaults.publicNetworkAccess;
+            $ = new DataCollectionEndpointNetworkAclsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder publicNetworkAccess(@Nullable Output<Either<String,KnownPublicNetworkAccessOptions>> publicNetworkAccess) {
-            this.publicNetworkAccess = publicNetworkAccess;
+            $.publicNetworkAccess = publicNetworkAccess;
             return this;
         }
-        public Builder publicNetworkAccess(@Nullable Either<String,KnownPublicNetworkAccessOptions> publicNetworkAccess) {
-            this.publicNetworkAccess = Codegen.ofNullable(publicNetworkAccess);
-            return this;
-        }        public DataCollectionEndpointNetworkAclsArgs build() {
-            return new DataCollectionEndpointNetworkAclsArgs(publicNetworkAccess);
+
+        public Builder publicNetworkAccess(Either<String,KnownPublicNetworkAccessOptions> publicNetworkAccess) {
+            return publicNetworkAccess(Output.of(publicNetworkAccess));
+        }
+
+        public DataCollectionEndpointNetworkAclsArgs build() {
+            return $;
         }
     }
+
 }

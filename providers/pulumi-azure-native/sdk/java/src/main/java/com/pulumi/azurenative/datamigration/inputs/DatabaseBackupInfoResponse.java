@@ -24,7 +24,7 @@ public final class DatabaseBackupInfoResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="backupFiles", required=true)
-      private final List<String> backupFiles;
+    private List<String> backupFiles;
 
     public List<String> backupFiles() {
         return this.backupFiles;
@@ -35,7 +35,7 @@ public final class DatabaseBackupInfoResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="backupFinishDate", required=true)
-      private final String backupFinishDate;
+    private String backupFinishDate;
 
     public String backupFinishDate() {
         return this.backupFinishDate;
@@ -46,7 +46,7 @@ public final class DatabaseBackupInfoResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="backupType", required=true)
-      private final String backupType;
+    private String backupType;
 
     public String backupType() {
         return this.backupType;
@@ -57,7 +57,7 @@ public final class DatabaseBackupInfoResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="databaseName", required=true)
-      private final String databaseName;
+    private String databaseName;
 
     public String databaseName() {
         return this.databaseName;
@@ -68,7 +68,7 @@ public final class DatabaseBackupInfoResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="familyCount", required=true)
-      private final Integer familyCount;
+    private Integer familyCount;
 
     public Integer familyCount() {
         return this.familyCount;
@@ -79,7 +79,7 @@ public final class DatabaseBackupInfoResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="isCompressed", required=true)
-      private final Boolean isCompressed;
+    private Boolean isCompressed;
 
     public Boolean isCompressed() {
         return this.isCompressed;
@@ -90,7 +90,7 @@ public final class DatabaseBackupInfoResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="isDamaged", required=true)
-      private final Boolean isDamaged;
+    private Boolean isDamaged;
 
     public Boolean isDamaged() {
         return this.isDamaged;
@@ -101,112 +101,98 @@ public final class DatabaseBackupInfoResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="position", required=true)
-      private final Integer position;
+    private Integer position;
 
     public Integer position() {
         return this.position;
     }
 
-    public DatabaseBackupInfoResponse(
-        List<String> backupFiles,
-        String backupFinishDate,
-        String backupType,
-        String databaseName,
-        Integer familyCount,
-        Boolean isCompressed,
-        Boolean isDamaged,
-        Integer position) {
-        this.backupFiles = Objects.requireNonNull(backupFiles, "expected parameter 'backupFiles' to be non-null");
-        this.backupFinishDate = Objects.requireNonNull(backupFinishDate, "expected parameter 'backupFinishDate' to be non-null");
-        this.backupType = Objects.requireNonNull(backupType, "expected parameter 'backupType' to be non-null");
-        this.databaseName = Objects.requireNonNull(databaseName, "expected parameter 'databaseName' to be non-null");
-        this.familyCount = Objects.requireNonNull(familyCount, "expected parameter 'familyCount' to be non-null");
-        this.isCompressed = Objects.requireNonNull(isCompressed, "expected parameter 'isCompressed' to be non-null");
-        this.isDamaged = Objects.requireNonNull(isDamaged, "expected parameter 'isDamaged' to be non-null");
-        this.position = Objects.requireNonNull(position, "expected parameter 'position' to be non-null");
-    }
+    private DatabaseBackupInfoResponse() {}
 
-    private DatabaseBackupInfoResponse() {
-        this.backupFiles = List.of();
-        this.backupFinishDate = null;
-        this.backupType = null;
-        this.databaseName = null;
-        this.familyCount = null;
-        this.isCompressed = null;
-        this.isDamaged = null;
-        this.position = null;
+    private DatabaseBackupInfoResponse(DatabaseBackupInfoResponse $) {
+        this.backupFiles = $.backupFiles;
+        this.backupFinishDate = $.backupFinishDate;
+        this.backupType = $.backupType;
+        this.databaseName = $.databaseName;
+        this.familyCount = $.familyCount;
+        this.isCompressed = $.isCompressed;
+        this.isDamaged = $.isDamaged;
+        this.position = $.position;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DatabaseBackupInfoResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<String> backupFiles;
-        private String backupFinishDate;
-        private String backupType;
-        private String databaseName;
-        private Integer familyCount;
-        private Boolean isCompressed;
-        private Boolean isDamaged;
-        private Integer position;
+        private DatabaseBackupInfoResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new DatabaseBackupInfoResponse();
         }
 
         public Builder(DatabaseBackupInfoResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.backupFiles = defaults.backupFiles;
-    	      this.backupFinishDate = defaults.backupFinishDate;
-    	      this.backupType = defaults.backupType;
-    	      this.databaseName = defaults.databaseName;
-    	      this.familyCount = defaults.familyCount;
-    	      this.isCompressed = defaults.isCompressed;
-    	      this.isDamaged = defaults.isDamaged;
-    	      this.position = defaults.position;
+            $ = new DatabaseBackupInfoResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder backupFiles(List<String> backupFiles) {
-            this.backupFiles = Objects.requireNonNull(backupFiles);
+            $.backupFiles = backupFiles;
             return this;
         }
+
         public Builder backupFiles(String... backupFiles) {
             return backupFiles(List.of(backupFiles));
         }
+
         public Builder backupFinishDate(String backupFinishDate) {
-            this.backupFinishDate = Objects.requireNonNull(backupFinishDate);
+            $.backupFinishDate = backupFinishDate;
             return this;
         }
+
         public Builder backupType(String backupType) {
-            this.backupType = Objects.requireNonNull(backupType);
+            $.backupType = backupType;
             return this;
         }
+
         public Builder databaseName(String databaseName) {
-            this.databaseName = Objects.requireNonNull(databaseName);
+            $.databaseName = databaseName;
             return this;
         }
+
         public Builder familyCount(Integer familyCount) {
-            this.familyCount = Objects.requireNonNull(familyCount);
+            $.familyCount = familyCount;
             return this;
         }
+
         public Builder isCompressed(Boolean isCompressed) {
-            this.isCompressed = Objects.requireNonNull(isCompressed);
+            $.isCompressed = isCompressed;
             return this;
         }
+
         public Builder isDamaged(Boolean isDamaged) {
-            this.isDamaged = Objects.requireNonNull(isDamaged);
+            $.isDamaged = isDamaged;
             return this;
         }
+
         public Builder position(Integer position) {
-            this.position = Objects.requireNonNull(position);
+            $.position = position;
             return this;
-        }        public DatabaseBackupInfoResponse build() {
-            return new DatabaseBackupInfoResponse(backupFiles, backupFinishDate, backupType, databaseName, familyCount, isCompressed, isDamaged, position);
+        }
+
+        public DatabaseBackupInfoResponse build() {
+            $.backupFiles = Objects.requireNonNull($.backupFiles, "expected parameter 'backupFiles' to be non-null");
+            $.backupFinishDate = Objects.requireNonNull($.backupFinishDate, "expected parameter 'backupFinishDate' to be non-null");
+            $.backupType = Objects.requireNonNull($.backupType, "expected parameter 'backupType' to be non-null");
+            $.databaseName = Objects.requireNonNull($.databaseName, "expected parameter 'databaseName' to be non-null");
+            $.familyCount = Objects.requireNonNull($.familyCount, "expected parameter 'familyCount' to be non-null");
+            $.isCompressed = Objects.requireNonNull($.isCompressed, "expected parameter 'isCompressed' to be non-null");
+            $.isDamaged = Objects.requireNonNull($.isDamaged, "expected parameter 'isDamaged' to be non-null");
+            $.position = Objects.requireNonNull($.position, "expected parameter 'position' to be non-null");
+            return $;
         }
     }
+
 }

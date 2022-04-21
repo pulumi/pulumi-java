@@ -29,7 +29,7 @@ public final class MigrateSyncCompleteCommandPropertiesResponse extends com.pulu
      * 
      */
     @Import(name="commandType", required=true)
-      private final String commandType;
+    private String commandType;
 
     public String commandType() {
         return this.commandType;
@@ -40,7 +40,7 @@ public final class MigrateSyncCompleteCommandPropertiesResponse extends com.pulu
      * 
      */
     @Import(name="errors", required=true)
-      private final List<ODataErrorResponse> errors;
+    private List<ODataErrorResponse> errors;
 
     public List<ODataErrorResponse> errors() {
         return this.errors;
@@ -51,10 +51,10 @@ public final class MigrateSyncCompleteCommandPropertiesResponse extends com.pulu
      * 
      */
     @Import(name="input")
-      private final @Nullable MigrateSyncCompleteCommandInputResponse input;
+    private @Nullable MigrateSyncCompleteCommandInputResponse input;
 
     public Optional<MigrateSyncCompleteCommandInputResponse> input() {
-        return this.input == null ? Optional.empty() : Optional.ofNullable(this.input);
+        return Optional.ofNullable(this.input);
     }
 
     /**
@@ -62,7 +62,7 @@ public final class MigrateSyncCompleteCommandPropertiesResponse extends com.pulu
      * 
      */
     @Import(name="output", required=true)
-      private final MigrateSyncCompleteCommandOutputResponse output;
+    private MigrateSyncCompleteCommandOutputResponse output;
 
     public MigrateSyncCompleteCommandOutputResponse output() {
         return this.output;
@@ -73,85 +73,76 @@ public final class MigrateSyncCompleteCommandPropertiesResponse extends com.pulu
      * 
      */
     @Import(name="state", required=true)
-      private final String state;
+    private String state;
 
     public String state() {
         return this.state;
     }
 
-    public MigrateSyncCompleteCommandPropertiesResponse(
-        String commandType,
-        List<ODataErrorResponse> errors,
-        @Nullable MigrateSyncCompleteCommandInputResponse input,
-        MigrateSyncCompleteCommandOutputResponse output,
-        String state) {
-        this.commandType = Codegen.stringProp("commandType").arg(commandType).require();
-        this.errors = Objects.requireNonNull(errors, "expected parameter 'errors' to be non-null");
-        this.input = input;
-        this.output = Objects.requireNonNull(output, "expected parameter 'output' to be non-null");
-        this.state = Objects.requireNonNull(state, "expected parameter 'state' to be non-null");
-    }
+    private MigrateSyncCompleteCommandPropertiesResponse() {}
 
-    private MigrateSyncCompleteCommandPropertiesResponse() {
-        this.commandType = null;
-        this.errors = List.of();
-        this.input = null;
-        this.output = null;
-        this.state = null;
+    private MigrateSyncCompleteCommandPropertiesResponse(MigrateSyncCompleteCommandPropertiesResponse $) {
+        this.commandType = $.commandType;
+        this.errors = $.errors;
+        this.input = $.input;
+        this.output = $.output;
+        this.state = $.state;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MigrateSyncCompleteCommandPropertiesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String commandType;
-        private List<ODataErrorResponse> errors;
-        private @Nullable MigrateSyncCompleteCommandInputResponse input;
-        private MigrateSyncCompleteCommandOutputResponse output;
-        private String state;
+        private MigrateSyncCompleteCommandPropertiesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new MigrateSyncCompleteCommandPropertiesResponse();
         }
 
         public Builder(MigrateSyncCompleteCommandPropertiesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.commandType = defaults.commandType;
-    	      this.errors = defaults.errors;
-    	      this.input = defaults.input;
-    	      this.output = defaults.output;
-    	      this.state = defaults.state;
+            $ = new MigrateSyncCompleteCommandPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder commandType(String commandType) {
-            this.commandType = Objects.requireNonNull(commandType);
+            $.commandType = commandType;
             return this;
         }
+
         public Builder errors(List<ODataErrorResponse> errors) {
-            this.errors = Objects.requireNonNull(errors);
+            $.errors = errors;
             return this;
         }
+
         public Builder errors(ODataErrorResponse... errors) {
             return errors(List.of(errors));
         }
+
         public Builder input(@Nullable MigrateSyncCompleteCommandInputResponse input) {
-            this.input = input;
+            $.input = input;
             return this;
         }
+
         public Builder output(MigrateSyncCompleteCommandOutputResponse output) {
-            this.output = Objects.requireNonNull(output);
+            $.output = output;
             return this;
         }
+
         public Builder state(String state) {
-            this.state = Objects.requireNonNull(state);
+            $.state = state;
             return this;
-        }        public MigrateSyncCompleteCommandPropertiesResponse build() {
-            return new MigrateSyncCompleteCommandPropertiesResponse(commandType, errors, input, output, state);
+        }
+
+        public MigrateSyncCompleteCommandPropertiesResponse build() {
+            $.commandType = Codegen.stringProp("commandType").arg($.commandType).require();
+            $.errors = Objects.requireNonNull($.errors, "expected parameter 'errors' to be non-null");
+            $.output = Objects.requireNonNull($.output, "expected parameter 'output' to be non-null");
+            $.state = Objects.requireNonNull($.state, "expected parameter 'state' to be non-null");
+            return $;
         }
     }
+
 }

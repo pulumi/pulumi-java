@@ -5,11 +5,11 @@ package com.pulumi.gcp.bigquery;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.bigquery.inputs.AppProfileSingleClusterRoutingArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,7 +22,7 @@ public final class AppProfileArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="appProfileId", required=true)
-      private final Output<String> appProfileId;
+    private Output<String> appProfileId;
 
     public Output<String> appProfileId() {
         return this.appProfileId;
@@ -33,10 +33,10 @@ public final class AppProfileArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -44,10 +44,10 @@ public final class AppProfileArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="ignoreWarnings")
-      private final @Nullable Output<Boolean> ignoreWarnings;
+    private @Nullable Output<Boolean> ignoreWarnings;
 
-    public Output<Boolean> ignoreWarnings() {
-        return this.ignoreWarnings == null ? Codegen.empty() : this.ignoreWarnings;
+    public Optional<Output<Boolean>> ignoreWarnings() {
+        return Optional.ofNullable(this.ignoreWarnings);
     }
 
     /**
@@ -55,10 +55,10 @@ public final class AppProfileArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="instance")
-      private final @Nullable Output<String> instance;
+    private @Nullable Output<String> instance;
 
-    public Output<String> instance() {
-        return this.instance == null ? Codegen.empty() : this.instance;
+    public Optional<Output<String>> instance() {
+        return Optional.ofNullable(this.instance);
     }
 
     /**
@@ -68,10 +68,10 @@ public final class AppProfileArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="multiClusterRoutingUseAny")
-      private final @Nullable Output<Boolean> multiClusterRoutingUseAny;
+    private @Nullable Output<Boolean> multiClusterRoutingUseAny;
 
-    public Output<Boolean> multiClusterRoutingUseAny() {
-        return this.multiClusterRoutingUseAny == null ? Codegen.empty() : this.multiClusterRoutingUseAny;
+    public Optional<Output<Boolean>> multiClusterRoutingUseAny() {
+        return Optional.ofNullable(this.multiClusterRoutingUseAny);
     }
 
     /**
@@ -80,10 +80,10 @@ public final class AppProfileArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -92,128 +92,109 @@ public final class AppProfileArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="singleClusterRouting")
-      private final @Nullable Output<AppProfileSingleClusterRoutingArgs> singleClusterRouting;
+    private @Nullable Output<AppProfileSingleClusterRoutingArgs> singleClusterRouting;
 
-    public Output<AppProfileSingleClusterRoutingArgs> singleClusterRouting() {
-        return this.singleClusterRouting == null ? Codegen.empty() : this.singleClusterRouting;
+    public Optional<Output<AppProfileSingleClusterRoutingArgs>> singleClusterRouting() {
+        return Optional.ofNullable(this.singleClusterRouting);
     }
 
-    public AppProfileArgs(
-        Output<String> appProfileId,
-        @Nullable Output<String> description,
-        @Nullable Output<Boolean> ignoreWarnings,
-        @Nullable Output<String> instance,
-        @Nullable Output<Boolean> multiClusterRoutingUseAny,
-        @Nullable Output<String> project,
-        @Nullable Output<AppProfileSingleClusterRoutingArgs> singleClusterRouting) {
-        this.appProfileId = Objects.requireNonNull(appProfileId, "expected parameter 'appProfileId' to be non-null");
-        this.description = description;
-        this.ignoreWarnings = ignoreWarnings;
-        this.instance = instance;
-        this.multiClusterRoutingUseAny = multiClusterRoutingUseAny;
-        this.project = project;
-        this.singleClusterRouting = singleClusterRouting;
-    }
+    private AppProfileArgs() {}
 
-    private AppProfileArgs() {
-        this.appProfileId = Codegen.empty();
-        this.description = Codegen.empty();
-        this.ignoreWarnings = Codegen.empty();
-        this.instance = Codegen.empty();
-        this.multiClusterRoutingUseAny = Codegen.empty();
-        this.project = Codegen.empty();
-        this.singleClusterRouting = Codegen.empty();
+    private AppProfileArgs(AppProfileArgs $) {
+        this.appProfileId = $.appProfileId;
+        this.description = $.description;
+        this.ignoreWarnings = $.ignoreWarnings;
+        this.instance = $.instance;
+        this.multiClusterRoutingUseAny = $.multiClusterRoutingUseAny;
+        this.project = $.project;
+        this.singleClusterRouting = $.singleClusterRouting;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AppProfileArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> appProfileId;
-        private @Nullable Output<String> description;
-        private @Nullable Output<Boolean> ignoreWarnings;
-        private @Nullable Output<String> instance;
-        private @Nullable Output<Boolean> multiClusterRoutingUseAny;
-        private @Nullable Output<String> project;
-        private @Nullable Output<AppProfileSingleClusterRoutingArgs> singleClusterRouting;
+        private AppProfileArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AppProfileArgs();
         }
 
         public Builder(AppProfileArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.appProfileId = defaults.appProfileId;
-    	      this.description = defaults.description;
-    	      this.ignoreWarnings = defaults.ignoreWarnings;
-    	      this.instance = defaults.instance;
-    	      this.multiClusterRoutingUseAny = defaults.multiClusterRoutingUseAny;
-    	      this.project = defaults.project;
-    	      this.singleClusterRouting = defaults.singleClusterRouting;
+            $ = new AppProfileArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder appProfileId(Output<String> appProfileId) {
-            this.appProfileId = Objects.requireNonNull(appProfileId);
+            $.appProfileId = appProfileId;
             return this;
         }
+
         public Builder appProfileId(String appProfileId) {
-            this.appProfileId = Output.of(Objects.requireNonNull(appProfileId));
-            return this;
+            return appProfileId(Output.of(appProfileId));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder ignoreWarnings(@Nullable Output<Boolean> ignoreWarnings) {
-            this.ignoreWarnings = ignoreWarnings;
+            $.ignoreWarnings = ignoreWarnings;
             return this;
         }
-        public Builder ignoreWarnings(@Nullable Boolean ignoreWarnings) {
-            this.ignoreWarnings = Codegen.ofNullable(ignoreWarnings);
-            return this;
+
+        public Builder ignoreWarnings(Boolean ignoreWarnings) {
+            return ignoreWarnings(Output.of(ignoreWarnings));
         }
+
         public Builder instance(@Nullable Output<String> instance) {
-            this.instance = instance;
+            $.instance = instance;
             return this;
         }
-        public Builder instance(@Nullable String instance) {
-            this.instance = Codegen.ofNullable(instance);
-            return this;
+
+        public Builder instance(String instance) {
+            return instance(Output.of(instance));
         }
+
         public Builder multiClusterRoutingUseAny(@Nullable Output<Boolean> multiClusterRoutingUseAny) {
-            this.multiClusterRoutingUseAny = multiClusterRoutingUseAny;
+            $.multiClusterRoutingUseAny = multiClusterRoutingUseAny;
             return this;
         }
-        public Builder multiClusterRoutingUseAny(@Nullable Boolean multiClusterRoutingUseAny) {
-            this.multiClusterRoutingUseAny = Codegen.ofNullable(multiClusterRoutingUseAny);
-            return this;
+
+        public Builder multiClusterRoutingUseAny(Boolean multiClusterRoutingUseAny) {
+            return multiClusterRoutingUseAny(Output.of(multiClusterRoutingUseAny));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder singleClusterRouting(@Nullable Output<AppProfileSingleClusterRoutingArgs> singleClusterRouting) {
-            this.singleClusterRouting = singleClusterRouting;
+            $.singleClusterRouting = singleClusterRouting;
             return this;
         }
-        public Builder singleClusterRouting(@Nullable AppProfileSingleClusterRoutingArgs singleClusterRouting) {
-            this.singleClusterRouting = Codegen.ofNullable(singleClusterRouting);
-            return this;
-        }        public AppProfileArgs build() {
-            return new AppProfileArgs(appProfileId, description, ignoreWarnings, instance, multiClusterRoutingUseAny, project, singleClusterRouting);
+
+        public Builder singleClusterRouting(AppProfileSingleClusterRoutingArgs singleClusterRouting) {
+            return singleClusterRouting(Output.of(singleClusterRouting));
+        }
+
+        public AppProfileArgs build() {
+            $.appProfileId = Objects.requireNonNull($.appProfileId, "expected parameter 'appProfileId' to be non-null");
+            return $;
         }
     }
+
 }

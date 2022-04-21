@@ -5,9 +5,9 @@ package com.pulumi.azurenative.containerregistry.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class AgentPropertiesArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="cpu")
-      private final @Nullable Output<Integer> cpu;
+    private @Nullable Output<Integer> cpu;
 
-    public Output<Integer> cpu() {
-        return this.cpu == null ? Codegen.empty() : this.cpu;
+    public Optional<Output<Integer>> cpu() {
+        return Optional.ofNullable(this.cpu);
     }
 
-    public AgentPropertiesArgs(@Nullable Output<Integer> cpu) {
-        this.cpu = cpu;
-    }
+    private AgentPropertiesArgs() {}
 
-    private AgentPropertiesArgs() {
-        this.cpu = Codegen.empty();
+    private AgentPropertiesArgs(AgentPropertiesArgs $) {
+        this.cpu = $.cpu;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AgentPropertiesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> cpu;
+        private AgentPropertiesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AgentPropertiesArgs();
         }
 
         public Builder(AgentPropertiesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cpu = defaults.cpu;
+            $ = new AgentPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder cpu(@Nullable Output<Integer> cpu) {
-            this.cpu = cpu;
+            $.cpu = cpu;
             return this;
         }
-        public Builder cpu(@Nullable Integer cpu) {
-            this.cpu = Codegen.ofNullable(cpu);
-            return this;
-        }        public AgentPropertiesArgs build() {
-            return new AgentPropertiesArgs(cpu);
+
+        public Builder cpu(Integer cpu) {
+            return cpu(Output.of(cpu));
+        }
+
+        public AgentPropertiesArgs build() {
+            return $;
         }
     }
+
 }

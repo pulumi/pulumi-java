@@ -6,9 +6,9 @@ package com.pulumi.aws.s3.inputs;
 import com.pulumi.aws.s3.inputs.AnalyticsConfigurationStorageClassAnalysisDataExportDestinationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,7 +21,7 @@ public final class AnalyticsConfigurationStorageClassAnalysisDataExportArgs exte
      * 
      */
     @Import(name="destination", required=true)
-      private final Output<AnalyticsConfigurationStorageClassAnalysisDataExportDestinationArgs> destination;
+    private Output<AnalyticsConfigurationStorageClassAnalysisDataExportDestinationArgs> destination;
 
     public Output<AnalyticsConfigurationStorageClassAnalysisDataExportDestinationArgs> destination() {
         return this.destination;
@@ -32,63 +32,59 @@ public final class AnalyticsConfigurationStorageClassAnalysisDataExportArgs exte
      * 
      */
     @Import(name="outputSchemaVersion")
-      private final @Nullable Output<String> outputSchemaVersion;
+    private @Nullable Output<String> outputSchemaVersion;
 
-    public Output<String> outputSchemaVersion() {
-        return this.outputSchemaVersion == null ? Codegen.empty() : this.outputSchemaVersion;
+    public Optional<Output<String>> outputSchemaVersion() {
+        return Optional.ofNullable(this.outputSchemaVersion);
     }
 
-    public AnalyticsConfigurationStorageClassAnalysisDataExportArgs(
-        Output<AnalyticsConfigurationStorageClassAnalysisDataExportDestinationArgs> destination,
-        @Nullable Output<String> outputSchemaVersion) {
-        this.destination = Objects.requireNonNull(destination, "expected parameter 'destination' to be non-null");
-        this.outputSchemaVersion = outputSchemaVersion;
-    }
+    private AnalyticsConfigurationStorageClassAnalysisDataExportArgs() {}
 
-    private AnalyticsConfigurationStorageClassAnalysisDataExportArgs() {
-        this.destination = Codegen.empty();
-        this.outputSchemaVersion = Codegen.empty();
+    private AnalyticsConfigurationStorageClassAnalysisDataExportArgs(AnalyticsConfigurationStorageClassAnalysisDataExportArgs $) {
+        this.destination = $.destination;
+        this.outputSchemaVersion = $.outputSchemaVersion;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AnalyticsConfigurationStorageClassAnalysisDataExportArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<AnalyticsConfigurationStorageClassAnalysisDataExportDestinationArgs> destination;
-        private @Nullable Output<String> outputSchemaVersion;
+        private AnalyticsConfigurationStorageClassAnalysisDataExportArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AnalyticsConfigurationStorageClassAnalysisDataExportArgs();
         }
 
         public Builder(AnalyticsConfigurationStorageClassAnalysisDataExportArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.destination = defaults.destination;
-    	      this.outputSchemaVersion = defaults.outputSchemaVersion;
+            $ = new AnalyticsConfigurationStorageClassAnalysisDataExportArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder destination(Output<AnalyticsConfigurationStorageClassAnalysisDataExportDestinationArgs> destination) {
-            this.destination = Objects.requireNonNull(destination);
+            $.destination = destination;
             return this;
         }
+
         public Builder destination(AnalyticsConfigurationStorageClassAnalysisDataExportDestinationArgs destination) {
-            this.destination = Output.of(Objects.requireNonNull(destination));
-            return this;
+            return destination(Output.of(destination));
         }
+
         public Builder outputSchemaVersion(@Nullable Output<String> outputSchemaVersion) {
-            this.outputSchemaVersion = outputSchemaVersion;
+            $.outputSchemaVersion = outputSchemaVersion;
             return this;
         }
-        public Builder outputSchemaVersion(@Nullable String outputSchemaVersion) {
-            this.outputSchemaVersion = Codegen.ofNullable(outputSchemaVersion);
-            return this;
-        }        public AnalyticsConfigurationStorageClassAnalysisDataExportArgs build() {
-            return new AnalyticsConfigurationStorageClassAnalysisDataExportArgs(destination, outputSchemaVersion);
+
+        public Builder outputSchemaVersion(String outputSchemaVersion) {
+            return outputSchemaVersion(Output.of(outputSchemaVersion));
+        }
+
+        public AnalyticsConfigurationStorageClassAnalysisDataExportArgs build() {
+            $.destination = Objects.requireNonNull($.destination, "expected parameter 'destination' to be non-null");
+            return $;
         }
     }
+
 }

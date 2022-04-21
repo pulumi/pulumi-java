@@ -5,7 +5,6 @@ package com.pulumi.gcp.bigquery.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.bigquery.inputs.TableEncryptionConfigurationGetArgs;
 import com.pulumi.gcp.bigquery.inputs.TableExternalDataConfigurationGetArgs;
 import com.pulumi.gcp.bigquery.inputs.TableMaterializedViewGetArgs;
@@ -18,6 +17,7 @@ import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -32,10 +32,10 @@ public final class TableState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="clusterings")
-      private final @Nullable Output<List<String>> clusterings;
+    private @Nullable Output<List<String>> clusterings;
 
-    public Output<List<String>> clusterings() {
-        return this.clusterings == null ? Codegen.empty() : this.clusterings;
+    public Optional<Output<List<String>>> clusterings() {
+        return Optional.ofNullable(this.clusterings);
     }
 
     /**
@@ -43,10 +43,10 @@ public final class TableState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="creationTime")
-      private final @Nullable Output<Integer> creationTime;
+    private @Nullable Output<Integer> creationTime;
 
-    public Output<Integer> creationTime() {
-        return this.creationTime == null ? Codegen.empty() : this.creationTime;
+    public Optional<Output<Integer>> creationTime() {
+        return Optional.ofNullable(this.creationTime);
     }
 
     /**
@@ -55,10 +55,10 @@ public final class TableState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="datasetId")
-      private final @Nullable Output<String> datasetId;
+    private @Nullable Output<String> datasetId;
 
-    public Output<String> datasetId() {
-        return this.datasetId == null ? Codegen.empty() : this.datasetId;
+    public Optional<Output<String>> datasetId() {
+        return Optional.ofNullable(this.datasetId);
     }
 
     /**
@@ -67,10 +67,10 @@ public final class TableState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="deletionProtection")
-      private final @Nullable Output<Boolean> deletionProtection;
+    private @Nullable Output<Boolean> deletionProtection;
 
-    public Output<Boolean> deletionProtection() {
-        return this.deletionProtection == null ? Codegen.empty() : this.deletionProtection;
+    public Optional<Output<Boolean>> deletionProtection() {
+        return Optional.ofNullable(this.deletionProtection);
     }
 
     /**
@@ -78,10 +78,10 @@ public final class TableState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -91,10 +91,10 @@ public final class TableState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="encryptionConfiguration")
-      private final @Nullable Output<TableEncryptionConfigurationGetArgs> encryptionConfiguration;
+    private @Nullable Output<TableEncryptionConfigurationGetArgs> encryptionConfiguration;
 
-    public Output<TableEncryptionConfigurationGetArgs> encryptionConfiguration() {
-        return this.encryptionConfiguration == null ? Codegen.empty() : this.encryptionConfiguration;
+    public Optional<Output<TableEncryptionConfigurationGetArgs>> encryptionConfiguration() {
+        return Optional.ofNullable(this.encryptionConfiguration);
     }
 
     /**
@@ -102,10 +102,10 @@ public final class TableState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="etag")
-      private final @Nullable Output<String> etag;
+    private @Nullable Output<String> etag;
 
-    public Output<String> etag() {
-        return this.etag == null ? Codegen.empty() : this.etag;
+    public Optional<Output<String>> etag() {
+        return Optional.ofNullable(this.etag);
     }
 
     /**
@@ -116,10 +116,10 @@ public final class TableState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="expirationTime")
-      private final @Nullable Output<Integer> expirationTime;
+    private @Nullable Output<Integer> expirationTime;
 
-    public Output<Integer> expirationTime() {
-        return this.expirationTime == null ? Codegen.empty() : this.expirationTime;
+    public Optional<Output<Integer>> expirationTime() {
+        return Optional.ofNullable(this.expirationTime);
     }
 
     /**
@@ -130,10 +130,10 @@ public final class TableState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="externalDataConfiguration")
-      private final @Nullable Output<TableExternalDataConfigurationGetArgs> externalDataConfiguration;
+    private @Nullable Output<TableExternalDataConfigurationGetArgs> externalDataConfiguration;
 
-    public Output<TableExternalDataConfigurationGetArgs> externalDataConfiguration() {
-        return this.externalDataConfiguration == null ? Codegen.empty() : this.externalDataConfiguration;
+    public Optional<Output<TableExternalDataConfigurationGetArgs>> externalDataConfiguration() {
+        return Optional.ofNullable(this.externalDataConfiguration);
     }
 
     /**
@@ -141,10 +141,10 @@ public final class TableState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="friendlyName")
-      private final @Nullable Output<String> friendlyName;
+    private @Nullable Output<String> friendlyName;
 
-    public Output<String> friendlyName() {
-        return this.friendlyName == null ? Codegen.empty() : this.friendlyName;
+    public Optional<Output<String>> friendlyName() {
+        return Optional.ofNullable(this.friendlyName);
     }
 
     /**
@@ -152,10 +152,10 @@ public final class TableState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="labels")
-      private final @Nullable Output<Map<String,String>> labels;
+    private @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> labels() {
-        return this.labels == null ? Codegen.empty() : this.labels;
+    public Optional<Output<Map<String,String>>> labels() {
+        return Optional.ofNullable(this.labels);
     }
 
     /**
@@ -163,10 +163,10 @@ public final class TableState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="lastModifiedTime")
-      private final @Nullable Output<Integer> lastModifiedTime;
+    private @Nullable Output<Integer> lastModifiedTime;
 
-    public Output<Integer> lastModifiedTime() {
-        return this.lastModifiedTime == null ? Codegen.empty() : this.lastModifiedTime;
+    public Optional<Output<Integer>> lastModifiedTime() {
+        return Optional.ofNullable(this.lastModifiedTime);
     }
 
     /**
@@ -174,10 +174,10 @@ public final class TableState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -186,10 +186,10 @@ public final class TableState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="materializedView")
-      private final @Nullable Output<TableMaterializedViewGetArgs> materializedView;
+    private @Nullable Output<TableMaterializedViewGetArgs> materializedView;
 
-    public Output<TableMaterializedViewGetArgs> materializedView() {
-        return this.materializedView == null ? Codegen.empty() : this.materializedView;
+    public Optional<Output<TableMaterializedViewGetArgs>> materializedView() {
+        return Optional.ofNullable(this.materializedView);
     }
 
     /**
@@ -197,10 +197,10 @@ public final class TableState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="numBytes")
-      private final @Nullable Output<Integer> numBytes;
+    private @Nullable Output<Integer> numBytes;
 
-    public Output<Integer> numBytes() {
-        return this.numBytes == null ? Codegen.empty() : this.numBytes;
+    public Optional<Output<Integer>> numBytes() {
+        return Optional.ofNullable(this.numBytes);
     }
 
     /**
@@ -208,10 +208,10 @@ public final class TableState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="numLongTermBytes")
-      private final @Nullable Output<Integer> numLongTermBytes;
+    private @Nullable Output<Integer> numLongTermBytes;
 
-    public Output<Integer> numLongTermBytes() {
-        return this.numLongTermBytes == null ? Codegen.empty() : this.numLongTermBytes;
+    public Optional<Output<Integer>> numLongTermBytes() {
+        return Optional.ofNullable(this.numLongTermBytes);
     }
 
     /**
@@ -219,10 +219,10 @@ public final class TableState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="numRows")
-      private final @Nullable Output<Integer> numRows;
+    private @Nullable Output<Integer> numRows;
 
-    public Output<Integer> numRows() {
-        return this.numRows == null ? Codegen.empty() : this.numRows;
+    public Optional<Output<Integer>> numRows() {
+        return Optional.ofNullable(this.numRows);
     }
 
     /**
@@ -231,10 +231,10 @@ public final class TableState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -243,10 +243,10 @@ public final class TableState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="rangePartitioning")
-      private final @Nullable Output<TableRangePartitioningGetArgs> rangePartitioning;
+    private @Nullable Output<TableRangePartitioningGetArgs> rangePartitioning;
 
-    public Output<TableRangePartitioningGetArgs> rangePartitioning() {
-        return this.rangePartitioning == null ? Codegen.empty() : this.rangePartitioning;
+    public Optional<Output<TableRangePartitioningGetArgs>> rangePartitioning() {
+        return Optional.ofNullable(this.rangePartitioning);
     }
 
     /**
@@ -264,10 +264,10 @@ public final class TableState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="schema")
-      private final @Nullable Output<String> schema;
+    private @Nullable Output<String> schema;
 
-    public Output<String> schema() {
-        return this.schema == null ? Codegen.empty() : this.schema;
+    public Optional<Output<String>> schema() {
+        return Optional.ofNullable(this.schema);
     }
 
     /**
@@ -275,10 +275,10 @@ public final class TableState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="selfLink")
-      private final @Nullable Output<String> selfLink;
+    private @Nullable Output<String> selfLink;
 
-    public Output<String> selfLink() {
-        return this.selfLink == null ? Codegen.empty() : this.selfLink;
+    public Optional<Output<String>> selfLink() {
+        return Optional.ofNullable(this.selfLink);
     }
 
     /**
@@ -287,10 +287,10 @@ public final class TableState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tableId")
-      private final @Nullable Output<String> tableId;
+    private @Nullable Output<String> tableId;
 
-    public Output<String> tableId() {
-        return this.tableId == null ? Codegen.empty() : this.tableId;
+    public Optional<Output<String>> tableId() {
+        return Optional.ofNullable(this.tableId);
     }
 
     /**
@@ -299,10 +299,10 @@ public final class TableState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="timePartitioning")
-      private final @Nullable Output<TableTimePartitioningGetArgs> timePartitioning;
+    private @Nullable Output<TableTimePartitioningGetArgs> timePartitioning;
 
-    public Output<TableTimePartitioningGetArgs> timePartitioning() {
-        return this.timePartitioning == null ? Codegen.empty() : this.timePartitioning;
+    public Optional<Output<TableTimePartitioningGetArgs>> timePartitioning() {
+        return Optional.ofNullable(this.timePartitioning);
     }
 
     /**
@@ -311,10 +311,10 @@ public final class TableState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="type")
-      private final @Nullable Output<String> type;
+    private @Nullable Output<String> type;
 
-    public Output<String> type() {
-        return this.type == null ? Codegen.empty() : this.type;
+    public Optional<Output<String>> type() {
+        return Optional.ofNullable(this.type);
     }
 
     /**
@@ -323,365 +323,292 @@ public final class TableState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="view")
-      private final @Nullable Output<TableViewGetArgs> view;
+    private @Nullable Output<TableViewGetArgs> view;
 
-    public Output<TableViewGetArgs> view() {
-        return this.view == null ? Codegen.empty() : this.view;
+    public Optional<Output<TableViewGetArgs>> view() {
+        return Optional.ofNullable(this.view);
     }
 
-    public TableState(
-        @Nullable Output<List<String>> clusterings,
-        @Nullable Output<Integer> creationTime,
-        @Nullable Output<String> datasetId,
-        @Nullable Output<Boolean> deletionProtection,
-        @Nullable Output<String> description,
-        @Nullable Output<TableEncryptionConfigurationGetArgs> encryptionConfiguration,
-        @Nullable Output<String> etag,
-        @Nullable Output<Integer> expirationTime,
-        @Nullable Output<TableExternalDataConfigurationGetArgs> externalDataConfiguration,
-        @Nullable Output<String> friendlyName,
-        @Nullable Output<Map<String,String>> labels,
-        @Nullable Output<Integer> lastModifiedTime,
-        @Nullable Output<String> location,
-        @Nullable Output<TableMaterializedViewGetArgs> materializedView,
-        @Nullable Output<Integer> numBytes,
-        @Nullable Output<Integer> numLongTermBytes,
-        @Nullable Output<Integer> numRows,
-        @Nullable Output<String> project,
-        @Nullable Output<TableRangePartitioningGetArgs> rangePartitioning,
-        @Nullable Output<String> schema,
-        @Nullable Output<String> selfLink,
-        @Nullable Output<String> tableId,
-        @Nullable Output<TableTimePartitioningGetArgs> timePartitioning,
-        @Nullable Output<String> type,
-        @Nullable Output<TableViewGetArgs> view) {
-        this.clusterings = clusterings;
-        this.creationTime = creationTime;
-        this.datasetId = datasetId;
-        this.deletionProtection = deletionProtection;
-        this.description = description;
-        this.encryptionConfiguration = encryptionConfiguration;
-        this.etag = etag;
-        this.expirationTime = expirationTime;
-        this.externalDataConfiguration = externalDataConfiguration;
-        this.friendlyName = friendlyName;
-        this.labels = labels;
-        this.lastModifiedTime = lastModifiedTime;
-        this.location = location;
-        this.materializedView = materializedView;
-        this.numBytes = numBytes;
-        this.numLongTermBytes = numLongTermBytes;
-        this.numRows = numRows;
-        this.project = project;
-        this.rangePartitioning = rangePartitioning;
-        this.schema = schema;
-        this.selfLink = selfLink;
-        this.tableId = tableId;
-        this.timePartitioning = timePartitioning;
-        this.type = type;
-        this.view = view;
-    }
+    private TableState() {}
 
-    private TableState() {
-        this.clusterings = Codegen.empty();
-        this.creationTime = Codegen.empty();
-        this.datasetId = Codegen.empty();
-        this.deletionProtection = Codegen.empty();
-        this.description = Codegen.empty();
-        this.encryptionConfiguration = Codegen.empty();
-        this.etag = Codegen.empty();
-        this.expirationTime = Codegen.empty();
-        this.externalDataConfiguration = Codegen.empty();
-        this.friendlyName = Codegen.empty();
-        this.labels = Codegen.empty();
-        this.lastModifiedTime = Codegen.empty();
-        this.location = Codegen.empty();
-        this.materializedView = Codegen.empty();
-        this.numBytes = Codegen.empty();
-        this.numLongTermBytes = Codegen.empty();
-        this.numRows = Codegen.empty();
-        this.project = Codegen.empty();
-        this.rangePartitioning = Codegen.empty();
-        this.schema = Codegen.empty();
-        this.selfLink = Codegen.empty();
-        this.tableId = Codegen.empty();
-        this.timePartitioning = Codegen.empty();
-        this.type = Codegen.empty();
-        this.view = Codegen.empty();
+    private TableState(TableState $) {
+        this.clusterings = $.clusterings;
+        this.creationTime = $.creationTime;
+        this.datasetId = $.datasetId;
+        this.deletionProtection = $.deletionProtection;
+        this.description = $.description;
+        this.encryptionConfiguration = $.encryptionConfiguration;
+        this.etag = $.etag;
+        this.expirationTime = $.expirationTime;
+        this.externalDataConfiguration = $.externalDataConfiguration;
+        this.friendlyName = $.friendlyName;
+        this.labels = $.labels;
+        this.lastModifiedTime = $.lastModifiedTime;
+        this.location = $.location;
+        this.materializedView = $.materializedView;
+        this.numBytes = $.numBytes;
+        this.numLongTermBytes = $.numLongTermBytes;
+        this.numRows = $.numRows;
+        this.project = $.project;
+        this.rangePartitioning = $.rangePartitioning;
+        this.schema = $.schema;
+        this.selfLink = $.selfLink;
+        this.tableId = $.tableId;
+        this.timePartitioning = $.timePartitioning;
+        this.type = $.type;
+        this.view = $.view;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TableState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> clusterings;
-        private @Nullable Output<Integer> creationTime;
-        private @Nullable Output<String> datasetId;
-        private @Nullable Output<Boolean> deletionProtection;
-        private @Nullable Output<String> description;
-        private @Nullable Output<TableEncryptionConfigurationGetArgs> encryptionConfiguration;
-        private @Nullable Output<String> etag;
-        private @Nullable Output<Integer> expirationTime;
-        private @Nullable Output<TableExternalDataConfigurationGetArgs> externalDataConfiguration;
-        private @Nullable Output<String> friendlyName;
-        private @Nullable Output<Map<String,String>> labels;
-        private @Nullable Output<Integer> lastModifiedTime;
-        private @Nullable Output<String> location;
-        private @Nullable Output<TableMaterializedViewGetArgs> materializedView;
-        private @Nullable Output<Integer> numBytes;
-        private @Nullable Output<Integer> numLongTermBytes;
-        private @Nullable Output<Integer> numRows;
-        private @Nullable Output<String> project;
-        private @Nullable Output<TableRangePartitioningGetArgs> rangePartitioning;
-        private @Nullable Output<String> schema;
-        private @Nullable Output<String> selfLink;
-        private @Nullable Output<String> tableId;
-        private @Nullable Output<TableTimePartitioningGetArgs> timePartitioning;
-        private @Nullable Output<String> type;
-        private @Nullable Output<TableViewGetArgs> view;
+        private TableState $;
 
         public Builder() {
-    	      // Empty
+            $ = new TableState();
         }
 
         public Builder(TableState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.clusterings = defaults.clusterings;
-    	      this.creationTime = defaults.creationTime;
-    	      this.datasetId = defaults.datasetId;
-    	      this.deletionProtection = defaults.deletionProtection;
-    	      this.description = defaults.description;
-    	      this.encryptionConfiguration = defaults.encryptionConfiguration;
-    	      this.etag = defaults.etag;
-    	      this.expirationTime = defaults.expirationTime;
-    	      this.externalDataConfiguration = defaults.externalDataConfiguration;
-    	      this.friendlyName = defaults.friendlyName;
-    	      this.labels = defaults.labels;
-    	      this.lastModifiedTime = defaults.lastModifiedTime;
-    	      this.location = defaults.location;
-    	      this.materializedView = defaults.materializedView;
-    	      this.numBytes = defaults.numBytes;
-    	      this.numLongTermBytes = defaults.numLongTermBytes;
-    	      this.numRows = defaults.numRows;
-    	      this.project = defaults.project;
-    	      this.rangePartitioning = defaults.rangePartitioning;
-    	      this.schema = defaults.schema;
-    	      this.selfLink = defaults.selfLink;
-    	      this.tableId = defaults.tableId;
-    	      this.timePartitioning = defaults.timePartitioning;
-    	      this.type = defaults.type;
-    	      this.view = defaults.view;
+            $ = new TableState(Objects.requireNonNull(defaults));
         }
 
         public Builder clusterings(@Nullable Output<List<String>> clusterings) {
-            this.clusterings = clusterings;
+            $.clusterings = clusterings;
             return this;
         }
-        public Builder clusterings(@Nullable List<String> clusterings) {
-            this.clusterings = Codegen.ofNullable(clusterings);
-            return this;
+
+        public Builder clusterings(List<String> clusterings) {
+            return clusterings(Output.of(clusterings));
         }
+
         public Builder clusterings(String... clusterings) {
             return clusterings(List.of(clusterings));
         }
+
         public Builder creationTime(@Nullable Output<Integer> creationTime) {
-            this.creationTime = creationTime;
+            $.creationTime = creationTime;
             return this;
         }
-        public Builder creationTime(@Nullable Integer creationTime) {
-            this.creationTime = Codegen.ofNullable(creationTime);
-            return this;
+
+        public Builder creationTime(Integer creationTime) {
+            return creationTime(Output.of(creationTime));
         }
+
         public Builder datasetId(@Nullable Output<String> datasetId) {
-            this.datasetId = datasetId;
+            $.datasetId = datasetId;
             return this;
         }
-        public Builder datasetId(@Nullable String datasetId) {
-            this.datasetId = Codegen.ofNullable(datasetId);
-            return this;
+
+        public Builder datasetId(String datasetId) {
+            return datasetId(Output.of(datasetId));
         }
+
         public Builder deletionProtection(@Nullable Output<Boolean> deletionProtection) {
-            this.deletionProtection = deletionProtection;
+            $.deletionProtection = deletionProtection;
             return this;
         }
-        public Builder deletionProtection(@Nullable Boolean deletionProtection) {
-            this.deletionProtection = Codegen.ofNullable(deletionProtection);
-            return this;
+
+        public Builder deletionProtection(Boolean deletionProtection) {
+            return deletionProtection(Output.of(deletionProtection));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder encryptionConfiguration(@Nullable Output<TableEncryptionConfigurationGetArgs> encryptionConfiguration) {
-            this.encryptionConfiguration = encryptionConfiguration;
+            $.encryptionConfiguration = encryptionConfiguration;
             return this;
         }
-        public Builder encryptionConfiguration(@Nullable TableEncryptionConfigurationGetArgs encryptionConfiguration) {
-            this.encryptionConfiguration = Codegen.ofNullable(encryptionConfiguration);
-            return this;
+
+        public Builder encryptionConfiguration(TableEncryptionConfigurationGetArgs encryptionConfiguration) {
+            return encryptionConfiguration(Output.of(encryptionConfiguration));
         }
+
         public Builder etag(@Nullable Output<String> etag) {
-            this.etag = etag;
+            $.etag = etag;
             return this;
         }
-        public Builder etag(@Nullable String etag) {
-            this.etag = Codegen.ofNullable(etag);
-            return this;
+
+        public Builder etag(String etag) {
+            return etag(Output.of(etag));
         }
+
         public Builder expirationTime(@Nullable Output<Integer> expirationTime) {
-            this.expirationTime = expirationTime;
+            $.expirationTime = expirationTime;
             return this;
         }
-        public Builder expirationTime(@Nullable Integer expirationTime) {
-            this.expirationTime = Codegen.ofNullable(expirationTime);
-            return this;
+
+        public Builder expirationTime(Integer expirationTime) {
+            return expirationTime(Output.of(expirationTime));
         }
+
         public Builder externalDataConfiguration(@Nullable Output<TableExternalDataConfigurationGetArgs> externalDataConfiguration) {
-            this.externalDataConfiguration = externalDataConfiguration;
+            $.externalDataConfiguration = externalDataConfiguration;
             return this;
         }
-        public Builder externalDataConfiguration(@Nullable TableExternalDataConfigurationGetArgs externalDataConfiguration) {
-            this.externalDataConfiguration = Codegen.ofNullable(externalDataConfiguration);
-            return this;
+
+        public Builder externalDataConfiguration(TableExternalDataConfigurationGetArgs externalDataConfiguration) {
+            return externalDataConfiguration(Output.of(externalDataConfiguration));
         }
+
         public Builder friendlyName(@Nullable Output<String> friendlyName) {
-            this.friendlyName = friendlyName;
+            $.friendlyName = friendlyName;
             return this;
         }
-        public Builder friendlyName(@Nullable String friendlyName) {
-            this.friendlyName = Codegen.ofNullable(friendlyName);
-            return this;
+
+        public Builder friendlyName(String friendlyName) {
+            return friendlyName(Output.of(friendlyName));
         }
+
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
-            this.labels = labels;
+            $.labels = labels;
             return this;
         }
-        public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Codegen.ofNullable(labels);
-            return this;
+
+        public Builder labels(Map<String,String> labels) {
+            return labels(Output.of(labels));
         }
+
         public Builder lastModifiedTime(@Nullable Output<Integer> lastModifiedTime) {
-            this.lastModifiedTime = lastModifiedTime;
+            $.lastModifiedTime = lastModifiedTime;
             return this;
         }
-        public Builder lastModifiedTime(@Nullable Integer lastModifiedTime) {
-            this.lastModifiedTime = Codegen.ofNullable(lastModifiedTime);
-            return this;
+
+        public Builder lastModifiedTime(Integer lastModifiedTime) {
+            return lastModifiedTime(Output.of(lastModifiedTime));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder materializedView(@Nullable Output<TableMaterializedViewGetArgs> materializedView) {
-            this.materializedView = materializedView;
+            $.materializedView = materializedView;
             return this;
         }
-        public Builder materializedView(@Nullable TableMaterializedViewGetArgs materializedView) {
-            this.materializedView = Codegen.ofNullable(materializedView);
-            return this;
+
+        public Builder materializedView(TableMaterializedViewGetArgs materializedView) {
+            return materializedView(Output.of(materializedView));
         }
+
         public Builder numBytes(@Nullable Output<Integer> numBytes) {
-            this.numBytes = numBytes;
+            $.numBytes = numBytes;
             return this;
         }
-        public Builder numBytes(@Nullable Integer numBytes) {
-            this.numBytes = Codegen.ofNullable(numBytes);
-            return this;
+
+        public Builder numBytes(Integer numBytes) {
+            return numBytes(Output.of(numBytes));
         }
+
         public Builder numLongTermBytes(@Nullable Output<Integer> numLongTermBytes) {
-            this.numLongTermBytes = numLongTermBytes;
+            $.numLongTermBytes = numLongTermBytes;
             return this;
         }
-        public Builder numLongTermBytes(@Nullable Integer numLongTermBytes) {
-            this.numLongTermBytes = Codegen.ofNullable(numLongTermBytes);
-            return this;
+
+        public Builder numLongTermBytes(Integer numLongTermBytes) {
+            return numLongTermBytes(Output.of(numLongTermBytes));
         }
+
         public Builder numRows(@Nullable Output<Integer> numRows) {
-            this.numRows = numRows;
+            $.numRows = numRows;
             return this;
         }
-        public Builder numRows(@Nullable Integer numRows) {
-            this.numRows = Codegen.ofNullable(numRows);
-            return this;
+
+        public Builder numRows(Integer numRows) {
+            return numRows(Output.of(numRows));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder rangePartitioning(@Nullable Output<TableRangePartitioningGetArgs> rangePartitioning) {
-            this.rangePartitioning = rangePartitioning;
+            $.rangePartitioning = rangePartitioning;
             return this;
         }
-        public Builder rangePartitioning(@Nullable TableRangePartitioningGetArgs rangePartitioning) {
-            this.rangePartitioning = Codegen.ofNullable(rangePartitioning);
-            return this;
+
+        public Builder rangePartitioning(TableRangePartitioningGetArgs rangePartitioning) {
+            return rangePartitioning(Output.of(rangePartitioning));
         }
+
         public Builder schema(@Nullable Output<String> schema) {
-            this.schema = schema;
+            $.schema = schema;
             return this;
         }
-        public Builder schema(@Nullable String schema) {
-            this.schema = Codegen.ofNullable(schema);
-            return this;
+
+        public Builder schema(String schema) {
+            return schema(Output.of(schema));
         }
+
         public Builder selfLink(@Nullable Output<String> selfLink) {
-            this.selfLink = selfLink;
+            $.selfLink = selfLink;
             return this;
         }
-        public Builder selfLink(@Nullable String selfLink) {
-            this.selfLink = Codegen.ofNullable(selfLink);
-            return this;
+
+        public Builder selfLink(String selfLink) {
+            return selfLink(Output.of(selfLink));
         }
+
         public Builder tableId(@Nullable Output<String> tableId) {
-            this.tableId = tableId;
+            $.tableId = tableId;
             return this;
         }
-        public Builder tableId(@Nullable String tableId) {
-            this.tableId = Codegen.ofNullable(tableId);
-            return this;
+
+        public Builder tableId(String tableId) {
+            return tableId(Output.of(tableId));
         }
+
         public Builder timePartitioning(@Nullable Output<TableTimePartitioningGetArgs> timePartitioning) {
-            this.timePartitioning = timePartitioning;
+            $.timePartitioning = timePartitioning;
             return this;
         }
-        public Builder timePartitioning(@Nullable TableTimePartitioningGetArgs timePartitioning) {
-            this.timePartitioning = Codegen.ofNullable(timePartitioning);
-            return this;
+
+        public Builder timePartitioning(TableTimePartitioningGetArgs timePartitioning) {
+            return timePartitioning(Output.of(timePartitioning));
         }
+
         public Builder type(@Nullable Output<String> type) {
-            this.type = type;
+            $.type = type;
             return this;
         }
-        public Builder type(@Nullable String type) {
-            this.type = Codegen.ofNullable(type);
-            return this;
+
+        public Builder type(String type) {
+            return type(Output.of(type));
         }
+
         public Builder view(@Nullable Output<TableViewGetArgs> view) {
-            this.view = view;
+            $.view = view;
             return this;
         }
-        public Builder view(@Nullable TableViewGetArgs view) {
-            this.view = Codegen.ofNullable(view);
-            return this;
-        }        public TableState build() {
-            return new TableState(clusterings, creationTime, datasetId, deletionProtection, description, encryptionConfiguration, etag, expirationTime, externalDataConfiguration, friendlyName, labels, lastModifiedTime, location, materializedView, numBytes, numLongTermBytes, numRows, project, rangePartitioning, schema, selfLink, tableId, timePartitioning, type, view);
+
+        public Builder view(TableViewGetArgs view) {
+            return view(Output.of(view));
+        }
+
+        public TableState build() {
+            return $;
         }
     }
+
 }

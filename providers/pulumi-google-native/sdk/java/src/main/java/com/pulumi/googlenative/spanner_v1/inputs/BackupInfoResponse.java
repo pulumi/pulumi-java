@@ -21,7 +21,7 @@ public final class BackupInfoResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="backup", required=true)
-      private final String backup;
+    private String backup;
 
     public String backup() {
         return this.backup;
@@ -32,7 +32,7 @@ public final class BackupInfoResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="createTime", required=true)
-      private final String createTime;
+    private String createTime;
 
     public String createTime() {
         return this.createTime;
@@ -43,7 +43,7 @@ public final class BackupInfoResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="sourceDatabase", required=true)
-      private final String sourceDatabase;
+    private String sourceDatabase;
 
     public String sourceDatabase() {
         return this.sourceDatabase;
@@ -54,73 +54,66 @@ public final class BackupInfoResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="versionTime", required=true)
-      private final String versionTime;
+    private String versionTime;
 
     public String versionTime() {
         return this.versionTime;
     }
 
-    public BackupInfoResponse(
-        String backup,
-        String createTime,
-        String sourceDatabase,
-        String versionTime) {
-        this.backup = Objects.requireNonNull(backup, "expected parameter 'backup' to be non-null");
-        this.createTime = Objects.requireNonNull(createTime, "expected parameter 'createTime' to be non-null");
-        this.sourceDatabase = Objects.requireNonNull(sourceDatabase, "expected parameter 'sourceDatabase' to be non-null");
-        this.versionTime = Objects.requireNonNull(versionTime, "expected parameter 'versionTime' to be non-null");
-    }
+    private BackupInfoResponse() {}
 
-    private BackupInfoResponse() {
-        this.backup = null;
-        this.createTime = null;
-        this.sourceDatabase = null;
-        this.versionTime = null;
+    private BackupInfoResponse(BackupInfoResponse $) {
+        this.backup = $.backup;
+        this.createTime = $.createTime;
+        this.sourceDatabase = $.sourceDatabase;
+        this.versionTime = $.versionTime;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BackupInfoResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String backup;
-        private String createTime;
-        private String sourceDatabase;
-        private String versionTime;
+        private BackupInfoResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new BackupInfoResponse();
         }
 
         public Builder(BackupInfoResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.backup = defaults.backup;
-    	      this.createTime = defaults.createTime;
-    	      this.sourceDatabase = defaults.sourceDatabase;
-    	      this.versionTime = defaults.versionTime;
+            $ = new BackupInfoResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder backup(String backup) {
-            this.backup = Objects.requireNonNull(backup);
+            $.backup = backup;
             return this;
         }
+
         public Builder createTime(String createTime) {
-            this.createTime = Objects.requireNonNull(createTime);
+            $.createTime = createTime;
             return this;
         }
+
         public Builder sourceDatabase(String sourceDatabase) {
-            this.sourceDatabase = Objects.requireNonNull(sourceDatabase);
+            $.sourceDatabase = sourceDatabase;
             return this;
         }
+
         public Builder versionTime(String versionTime) {
-            this.versionTime = Objects.requireNonNull(versionTime);
+            $.versionTime = versionTime;
             return this;
-        }        public BackupInfoResponse build() {
-            return new BackupInfoResponse(backup, createTime, sourceDatabase, versionTime);
+        }
+
+        public BackupInfoResponse build() {
+            $.backup = Objects.requireNonNull($.backup, "expected parameter 'backup' to be non-null");
+            $.createTime = Objects.requireNonNull($.createTime, "expected parameter 'createTime' to be non-null");
+            $.sourceDatabase = Objects.requireNonNull($.sourceDatabase, "expected parameter 'sourceDatabase' to be non-null");
+            $.versionTime = Objects.requireNonNull($.versionTime, "expected parameter 'versionTime' to be non-null");
+            return $;
         }
     }
+
 }

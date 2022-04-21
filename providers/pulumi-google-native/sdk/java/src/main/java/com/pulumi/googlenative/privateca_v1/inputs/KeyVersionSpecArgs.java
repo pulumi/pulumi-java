@@ -5,10 +5,10 @@ package com.pulumi.googlenative.privateca_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.privateca_v1.enums.KeyVersionSpecAlgorithm;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class KeyVersionSpecArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="algorithm")
-      private final @Nullable Output<KeyVersionSpecAlgorithm> algorithm;
+    private @Nullable Output<KeyVersionSpecAlgorithm> algorithm;
 
-    public Output<KeyVersionSpecAlgorithm> algorithm() {
-        return this.algorithm == null ? Codegen.empty() : this.algorithm;
+    public Optional<Output<KeyVersionSpecAlgorithm>> algorithm() {
+        return Optional.ofNullable(this.algorithm);
     }
 
     /**
@@ -36,63 +36,58 @@ public final class KeyVersionSpecArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="cloudKmsKeyVersion")
-      private final @Nullable Output<String> cloudKmsKeyVersion;
+    private @Nullable Output<String> cloudKmsKeyVersion;
 
-    public Output<String> cloudKmsKeyVersion() {
-        return this.cloudKmsKeyVersion == null ? Codegen.empty() : this.cloudKmsKeyVersion;
+    public Optional<Output<String>> cloudKmsKeyVersion() {
+        return Optional.ofNullable(this.cloudKmsKeyVersion);
     }
 
-    public KeyVersionSpecArgs(
-        @Nullable Output<KeyVersionSpecAlgorithm> algorithm,
-        @Nullable Output<String> cloudKmsKeyVersion) {
-        this.algorithm = algorithm;
-        this.cloudKmsKeyVersion = cloudKmsKeyVersion;
-    }
+    private KeyVersionSpecArgs() {}
 
-    private KeyVersionSpecArgs() {
-        this.algorithm = Codegen.empty();
-        this.cloudKmsKeyVersion = Codegen.empty();
+    private KeyVersionSpecArgs(KeyVersionSpecArgs $) {
+        this.algorithm = $.algorithm;
+        this.cloudKmsKeyVersion = $.cloudKmsKeyVersion;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(KeyVersionSpecArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<KeyVersionSpecAlgorithm> algorithm;
-        private @Nullable Output<String> cloudKmsKeyVersion;
+        private KeyVersionSpecArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new KeyVersionSpecArgs();
         }
 
         public Builder(KeyVersionSpecArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.algorithm = defaults.algorithm;
-    	      this.cloudKmsKeyVersion = defaults.cloudKmsKeyVersion;
+            $ = new KeyVersionSpecArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder algorithm(@Nullable Output<KeyVersionSpecAlgorithm> algorithm) {
-            this.algorithm = algorithm;
+            $.algorithm = algorithm;
             return this;
         }
-        public Builder algorithm(@Nullable KeyVersionSpecAlgorithm algorithm) {
-            this.algorithm = Codegen.ofNullable(algorithm);
-            return this;
+
+        public Builder algorithm(KeyVersionSpecAlgorithm algorithm) {
+            return algorithm(Output.of(algorithm));
         }
+
         public Builder cloudKmsKeyVersion(@Nullable Output<String> cloudKmsKeyVersion) {
-            this.cloudKmsKeyVersion = cloudKmsKeyVersion;
+            $.cloudKmsKeyVersion = cloudKmsKeyVersion;
             return this;
         }
-        public Builder cloudKmsKeyVersion(@Nullable String cloudKmsKeyVersion) {
-            this.cloudKmsKeyVersion = Codegen.ofNullable(cloudKmsKeyVersion);
-            return this;
-        }        public KeyVersionSpecArgs build() {
-            return new KeyVersionSpecArgs(algorithm, cloudKmsKeyVersion);
+
+        public Builder cloudKmsKeyVersion(String cloudKmsKeyVersion) {
+            return cloudKmsKeyVersion(Output.of(cloudKmsKeyVersion));
+        }
+
+        public KeyVersionSpecArgs build() {
+            return $;
         }
     }
+
 }

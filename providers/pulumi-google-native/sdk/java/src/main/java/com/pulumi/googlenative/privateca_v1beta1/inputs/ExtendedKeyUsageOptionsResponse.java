@@ -21,7 +21,7 @@ public final class ExtendedKeyUsageOptionsResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="clientAuth", required=true)
-      private final Boolean clientAuth;
+    private Boolean clientAuth;
 
     public Boolean clientAuth() {
         return this.clientAuth;
@@ -32,7 +32,7 @@ public final class ExtendedKeyUsageOptionsResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="codeSigning", required=true)
-      private final Boolean codeSigning;
+    private Boolean codeSigning;
 
     public Boolean codeSigning() {
         return this.codeSigning;
@@ -43,7 +43,7 @@ public final class ExtendedKeyUsageOptionsResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="emailProtection", required=true)
-      private final Boolean emailProtection;
+    private Boolean emailProtection;
 
     public Boolean emailProtection() {
         return this.emailProtection;
@@ -54,7 +54,7 @@ public final class ExtendedKeyUsageOptionsResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="ocspSigning", required=true)
-      private final Boolean ocspSigning;
+    private Boolean ocspSigning;
 
     public Boolean ocspSigning() {
         return this.ocspSigning;
@@ -65,7 +65,7 @@ public final class ExtendedKeyUsageOptionsResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="serverAuth", required=true)
-      private final Boolean serverAuth;
+    private Boolean serverAuth;
 
     public Boolean serverAuth() {
         return this.serverAuth;
@@ -76,91 +76,80 @@ public final class ExtendedKeyUsageOptionsResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="timeStamping", required=true)
-      private final Boolean timeStamping;
+    private Boolean timeStamping;
 
     public Boolean timeStamping() {
         return this.timeStamping;
     }
 
-    public ExtendedKeyUsageOptionsResponse(
-        Boolean clientAuth,
-        Boolean codeSigning,
-        Boolean emailProtection,
-        Boolean ocspSigning,
-        Boolean serverAuth,
-        Boolean timeStamping) {
-        this.clientAuth = Objects.requireNonNull(clientAuth, "expected parameter 'clientAuth' to be non-null");
-        this.codeSigning = Objects.requireNonNull(codeSigning, "expected parameter 'codeSigning' to be non-null");
-        this.emailProtection = Objects.requireNonNull(emailProtection, "expected parameter 'emailProtection' to be non-null");
-        this.ocspSigning = Objects.requireNonNull(ocspSigning, "expected parameter 'ocspSigning' to be non-null");
-        this.serverAuth = Objects.requireNonNull(serverAuth, "expected parameter 'serverAuth' to be non-null");
-        this.timeStamping = Objects.requireNonNull(timeStamping, "expected parameter 'timeStamping' to be non-null");
-    }
+    private ExtendedKeyUsageOptionsResponse() {}
 
-    private ExtendedKeyUsageOptionsResponse() {
-        this.clientAuth = null;
-        this.codeSigning = null;
-        this.emailProtection = null;
-        this.ocspSigning = null;
-        this.serverAuth = null;
-        this.timeStamping = null;
+    private ExtendedKeyUsageOptionsResponse(ExtendedKeyUsageOptionsResponse $) {
+        this.clientAuth = $.clientAuth;
+        this.codeSigning = $.codeSigning;
+        this.emailProtection = $.emailProtection;
+        this.ocspSigning = $.ocspSigning;
+        this.serverAuth = $.serverAuth;
+        this.timeStamping = $.timeStamping;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ExtendedKeyUsageOptionsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Boolean clientAuth;
-        private Boolean codeSigning;
-        private Boolean emailProtection;
-        private Boolean ocspSigning;
-        private Boolean serverAuth;
-        private Boolean timeStamping;
+        private ExtendedKeyUsageOptionsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ExtendedKeyUsageOptionsResponse();
         }
 
         public Builder(ExtendedKeyUsageOptionsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.clientAuth = defaults.clientAuth;
-    	      this.codeSigning = defaults.codeSigning;
-    	      this.emailProtection = defaults.emailProtection;
-    	      this.ocspSigning = defaults.ocspSigning;
-    	      this.serverAuth = defaults.serverAuth;
-    	      this.timeStamping = defaults.timeStamping;
+            $ = new ExtendedKeyUsageOptionsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder clientAuth(Boolean clientAuth) {
-            this.clientAuth = Objects.requireNonNull(clientAuth);
+            $.clientAuth = clientAuth;
             return this;
         }
+
         public Builder codeSigning(Boolean codeSigning) {
-            this.codeSigning = Objects.requireNonNull(codeSigning);
+            $.codeSigning = codeSigning;
             return this;
         }
+
         public Builder emailProtection(Boolean emailProtection) {
-            this.emailProtection = Objects.requireNonNull(emailProtection);
+            $.emailProtection = emailProtection;
             return this;
         }
+
         public Builder ocspSigning(Boolean ocspSigning) {
-            this.ocspSigning = Objects.requireNonNull(ocspSigning);
+            $.ocspSigning = ocspSigning;
             return this;
         }
+
         public Builder serverAuth(Boolean serverAuth) {
-            this.serverAuth = Objects.requireNonNull(serverAuth);
+            $.serverAuth = serverAuth;
             return this;
         }
+
         public Builder timeStamping(Boolean timeStamping) {
-            this.timeStamping = Objects.requireNonNull(timeStamping);
+            $.timeStamping = timeStamping;
             return this;
-        }        public ExtendedKeyUsageOptionsResponse build() {
-            return new ExtendedKeyUsageOptionsResponse(clientAuth, codeSigning, emailProtection, ocspSigning, serverAuth, timeStamping);
+        }
+
+        public ExtendedKeyUsageOptionsResponse build() {
+            $.clientAuth = Objects.requireNonNull($.clientAuth, "expected parameter 'clientAuth' to be non-null");
+            $.codeSigning = Objects.requireNonNull($.codeSigning, "expected parameter 'codeSigning' to be non-null");
+            $.emailProtection = Objects.requireNonNull($.emailProtection, "expected parameter 'emailProtection' to be non-null");
+            $.ocspSigning = Objects.requireNonNull($.ocspSigning, "expected parameter 'ocspSigning' to be non-null");
+            $.serverAuth = Objects.requireNonNull($.serverAuth, "expected parameter 'serverAuth' to be non-null");
+            $.timeStamping = Objects.requireNonNull($.timeStamping, "expected parameter 'timeStamping' to be non-null");
+            return $;
         }
     }
+
 }

@@ -24,10 +24,10 @@ public final class VirtualNetworkRuleResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="id")
-      private final @Nullable String id;
+    private @Nullable String id;
 
     public Optional<String> id() {
-        return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
+        return Optional.ofNullable(this.id);
     }
 
     /**
@@ -35,55 +35,50 @@ public final class VirtualNetworkRuleResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="ignoreMissingVNetServiceEndpoint")
-      private final @Nullable Boolean ignoreMissingVNetServiceEndpoint;
+    private @Nullable Boolean ignoreMissingVNetServiceEndpoint;
 
     public Optional<Boolean> ignoreMissingVNetServiceEndpoint() {
-        return this.ignoreMissingVNetServiceEndpoint == null ? Optional.empty() : Optional.ofNullable(this.ignoreMissingVNetServiceEndpoint);
+        return Optional.ofNullable(this.ignoreMissingVNetServiceEndpoint);
     }
 
-    public VirtualNetworkRuleResponse(
-        @Nullable String id,
-        @Nullable Boolean ignoreMissingVNetServiceEndpoint) {
-        this.id = id;
-        this.ignoreMissingVNetServiceEndpoint = ignoreMissingVNetServiceEndpoint;
-    }
+    private VirtualNetworkRuleResponse() {}
 
-    private VirtualNetworkRuleResponse() {
-        this.id = null;
-        this.ignoreMissingVNetServiceEndpoint = null;
+    private VirtualNetworkRuleResponse(VirtualNetworkRuleResponse $) {
+        this.id = $.id;
+        this.ignoreMissingVNetServiceEndpoint = $.ignoreMissingVNetServiceEndpoint;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VirtualNetworkRuleResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String id;
-        private @Nullable Boolean ignoreMissingVNetServiceEndpoint;
+        private VirtualNetworkRuleResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new VirtualNetworkRuleResponse();
         }
 
         public Builder(VirtualNetworkRuleResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.id = defaults.id;
-    	      this.ignoreMissingVNetServiceEndpoint = defaults.ignoreMissingVNetServiceEndpoint;
+            $ = new VirtualNetworkRuleResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder id(@Nullable String id) {
-            this.id = id;
+            $.id = id;
             return this;
         }
+
         public Builder ignoreMissingVNetServiceEndpoint(@Nullable Boolean ignoreMissingVNetServiceEndpoint) {
-            this.ignoreMissingVNetServiceEndpoint = ignoreMissingVNetServiceEndpoint;
+            $.ignoreMissingVNetServiceEndpoint = ignoreMissingVNetServiceEndpoint;
             return this;
-        }        public VirtualNetworkRuleResponse build() {
-            return new VirtualNetworkRuleResponse(id, ignoreMissingVNetServiceEndpoint);
+        }
+
+        public VirtualNetworkRuleResponse build() {
+            return $;
         }
     }
+
 }

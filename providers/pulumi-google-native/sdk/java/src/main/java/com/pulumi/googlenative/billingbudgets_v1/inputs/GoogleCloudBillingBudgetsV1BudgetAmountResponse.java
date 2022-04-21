@@ -22,7 +22,7 @@ public final class GoogleCloudBillingBudgetsV1BudgetAmountResponse extends com.p
      * 
      */
     @Import(name="lastPeriodAmount", required=true)
-      private final GoogleCloudBillingBudgetsV1LastPeriodAmountResponse lastPeriodAmount;
+    private GoogleCloudBillingBudgetsV1LastPeriodAmountResponse lastPeriodAmount;
 
     public GoogleCloudBillingBudgetsV1LastPeriodAmountResponse lastPeriodAmount() {
         return this.lastPeriodAmount;
@@ -33,55 +33,52 @@ public final class GoogleCloudBillingBudgetsV1BudgetAmountResponse extends com.p
      * 
      */
     @Import(name="specifiedAmount", required=true)
-      private final GoogleTypeMoneyResponse specifiedAmount;
+    private GoogleTypeMoneyResponse specifiedAmount;
 
     public GoogleTypeMoneyResponse specifiedAmount() {
         return this.specifiedAmount;
     }
 
-    public GoogleCloudBillingBudgetsV1BudgetAmountResponse(
-        GoogleCloudBillingBudgetsV1LastPeriodAmountResponse lastPeriodAmount,
-        GoogleTypeMoneyResponse specifiedAmount) {
-        this.lastPeriodAmount = Objects.requireNonNull(lastPeriodAmount, "expected parameter 'lastPeriodAmount' to be non-null");
-        this.specifiedAmount = Objects.requireNonNull(specifiedAmount, "expected parameter 'specifiedAmount' to be non-null");
-    }
+    private GoogleCloudBillingBudgetsV1BudgetAmountResponse() {}
 
-    private GoogleCloudBillingBudgetsV1BudgetAmountResponse() {
-        this.lastPeriodAmount = null;
-        this.specifiedAmount = null;
+    private GoogleCloudBillingBudgetsV1BudgetAmountResponse(GoogleCloudBillingBudgetsV1BudgetAmountResponse $) {
+        this.lastPeriodAmount = $.lastPeriodAmount;
+        this.specifiedAmount = $.specifiedAmount;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudBillingBudgetsV1BudgetAmountResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private GoogleCloudBillingBudgetsV1LastPeriodAmountResponse lastPeriodAmount;
-        private GoogleTypeMoneyResponse specifiedAmount;
+        private GoogleCloudBillingBudgetsV1BudgetAmountResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudBillingBudgetsV1BudgetAmountResponse();
         }
 
         public Builder(GoogleCloudBillingBudgetsV1BudgetAmountResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.lastPeriodAmount = defaults.lastPeriodAmount;
-    	      this.specifiedAmount = defaults.specifiedAmount;
+            $ = new GoogleCloudBillingBudgetsV1BudgetAmountResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder lastPeriodAmount(GoogleCloudBillingBudgetsV1LastPeriodAmountResponse lastPeriodAmount) {
-            this.lastPeriodAmount = Objects.requireNonNull(lastPeriodAmount);
+            $.lastPeriodAmount = lastPeriodAmount;
             return this;
         }
+
         public Builder specifiedAmount(GoogleTypeMoneyResponse specifiedAmount) {
-            this.specifiedAmount = Objects.requireNonNull(specifiedAmount);
+            $.specifiedAmount = specifiedAmount;
             return this;
-        }        public GoogleCloudBillingBudgetsV1BudgetAmountResponse build() {
-            return new GoogleCloudBillingBudgetsV1BudgetAmountResponse(lastPeriodAmount, specifiedAmount);
+        }
+
+        public GoogleCloudBillingBudgetsV1BudgetAmountResponse build() {
+            $.lastPeriodAmount = Objects.requireNonNull($.lastPeriodAmount, "expected parameter 'lastPeriodAmount' to be non-null");
+            $.specifiedAmount = Objects.requireNonNull($.specifiedAmount, "expected parameter 'specifiedAmount' to be non-null");
+            return $;
         }
     }
+
 }

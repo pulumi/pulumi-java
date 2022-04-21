@@ -5,9 +5,9 @@ package com.pulumi.gcp.cloudbuild.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class TriggerPubsubConfigArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="serviceAccountEmail")
-      private final @Nullable Output<String> serviceAccountEmail;
+    private @Nullable Output<String> serviceAccountEmail;
 
-    public Output<String> serviceAccountEmail() {
-        return this.serviceAccountEmail == null ? Codegen.empty() : this.serviceAccountEmail;
+    public Optional<Output<String>> serviceAccountEmail() {
+        return Optional.ofNullable(this.serviceAccountEmail);
     }
 
     /**
@@ -33,10 +33,10 @@ public final class TriggerPubsubConfigArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="state")
-      private final @Nullable Output<String> state;
+    private @Nullable Output<String> state;
 
-    public Output<String> state() {
-        return this.state == null ? Codegen.empty() : this.state;
+    public Optional<Output<String>> state() {
+        return Optional.ofNullable(this.state);
     }
 
     /**
@@ -45,10 +45,10 @@ public final class TriggerPubsubConfigArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="subscription")
-      private final @Nullable Output<String> subscription;
+    private @Nullable Output<String> subscription;
 
-    public Output<String> subscription() {
-        return this.subscription == null ? Codegen.empty() : this.subscription;
+    public Optional<Output<String>> subscription() {
+        return Optional.ofNullable(this.subscription);
     }
 
     /**
@@ -56,89 +56,79 @@ public final class TriggerPubsubConfigArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="topic", required=true)
-      private final Output<String> topic;
+    private Output<String> topic;
 
     public Output<String> topic() {
         return this.topic;
     }
 
-    public TriggerPubsubConfigArgs(
-        @Nullable Output<String> serviceAccountEmail,
-        @Nullable Output<String> state,
-        @Nullable Output<String> subscription,
-        Output<String> topic) {
-        this.serviceAccountEmail = serviceAccountEmail;
-        this.state = state;
-        this.subscription = subscription;
-        this.topic = Objects.requireNonNull(topic, "expected parameter 'topic' to be non-null");
-    }
+    private TriggerPubsubConfigArgs() {}
 
-    private TriggerPubsubConfigArgs() {
-        this.serviceAccountEmail = Codegen.empty();
-        this.state = Codegen.empty();
-        this.subscription = Codegen.empty();
-        this.topic = Codegen.empty();
+    private TriggerPubsubConfigArgs(TriggerPubsubConfigArgs $) {
+        this.serviceAccountEmail = $.serviceAccountEmail;
+        this.state = $.state;
+        this.subscription = $.subscription;
+        this.topic = $.topic;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TriggerPubsubConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> serviceAccountEmail;
-        private @Nullable Output<String> state;
-        private @Nullable Output<String> subscription;
-        private Output<String> topic;
+        private TriggerPubsubConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TriggerPubsubConfigArgs();
         }
 
         public Builder(TriggerPubsubConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.serviceAccountEmail = defaults.serviceAccountEmail;
-    	      this.state = defaults.state;
-    	      this.subscription = defaults.subscription;
-    	      this.topic = defaults.topic;
+            $ = new TriggerPubsubConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder serviceAccountEmail(@Nullable Output<String> serviceAccountEmail) {
-            this.serviceAccountEmail = serviceAccountEmail;
+            $.serviceAccountEmail = serviceAccountEmail;
             return this;
         }
-        public Builder serviceAccountEmail(@Nullable String serviceAccountEmail) {
-            this.serviceAccountEmail = Codegen.ofNullable(serviceAccountEmail);
-            return this;
+
+        public Builder serviceAccountEmail(String serviceAccountEmail) {
+            return serviceAccountEmail(Output.of(serviceAccountEmail));
         }
+
         public Builder state(@Nullable Output<String> state) {
-            this.state = state;
+            $.state = state;
             return this;
         }
-        public Builder state(@Nullable String state) {
-            this.state = Codegen.ofNullable(state);
-            return this;
+
+        public Builder state(String state) {
+            return state(Output.of(state));
         }
+
         public Builder subscription(@Nullable Output<String> subscription) {
-            this.subscription = subscription;
+            $.subscription = subscription;
             return this;
         }
-        public Builder subscription(@Nullable String subscription) {
-            this.subscription = Codegen.ofNullable(subscription);
-            return this;
+
+        public Builder subscription(String subscription) {
+            return subscription(Output.of(subscription));
         }
+
         public Builder topic(Output<String> topic) {
-            this.topic = Objects.requireNonNull(topic);
+            $.topic = topic;
             return this;
         }
+
         public Builder topic(String topic) {
-            this.topic = Output.of(Objects.requireNonNull(topic));
-            return this;
-        }        public TriggerPubsubConfigArgs build() {
-            return new TriggerPubsubConfigArgs(serviceAccountEmail, state, subscription, topic);
+            return topic(Output.of(topic));
+        }
+
+        public TriggerPubsubConfigArgs build() {
+            $.topic = Objects.requireNonNull($.topic, "expected parameter 'topic' to be non-null");
+            return $;
         }
     }
+
 }

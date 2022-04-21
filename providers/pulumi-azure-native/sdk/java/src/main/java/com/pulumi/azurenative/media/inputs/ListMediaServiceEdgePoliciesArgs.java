@@ -19,7 +19,7 @@ public final class ListMediaServiceEdgePoliciesArgs extends com.pulumi.resources
      * 
      */
     @Import(name="accountName", required=true)
-      private final String accountName;
+    private String accountName;
 
     public String accountName() {
         return this.accountName;
@@ -30,10 +30,10 @@ public final class ListMediaServiceEdgePoliciesArgs extends com.pulumi.resources
      * 
      */
     @Import(name="deviceId")
-      private final @Nullable String deviceId;
+    private @Nullable String deviceId;
 
     public Optional<String> deviceId() {
-        return this.deviceId == null ? Optional.empty() : Optional.ofNullable(this.deviceId);
+        return Optional.ofNullable(this.deviceId);
     }
 
     /**
@@ -41,64 +41,58 @@ public final class ListMediaServiceEdgePoliciesArgs extends com.pulumi.resources
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public ListMediaServiceEdgePoliciesArgs(
-        String accountName,
-        @Nullable String deviceId,
-        String resourceGroupName) {
-        this.accountName = Objects.requireNonNull(accountName, "expected parameter 'accountName' to be non-null");
-        this.deviceId = deviceId;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private ListMediaServiceEdgePoliciesArgs() {}
 
-    private ListMediaServiceEdgePoliciesArgs() {
-        this.accountName = null;
-        this.deviceId = null;
-        this.resourceGroupName = null;
+    private ListMediaServiceEdgePoliciesArgs(ListMediaServiceEdgePoliciesArgs $) {
+        this.accountName = $.accountName;
+        this.deviceId = $.deviceId;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ListMediaServiceEdgePoliciesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String accountName;
-        private @Nullable String deviceId;
-        private String resourceGroupName;
+        private ListMediaServiceEdgePoliciesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ListMediaServiceEdgePoliciesArgs();
         }
 
         public Builder(ListMediaServiceEdgePoliciesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accountName = defaults.accountName;
-    	      this.deviceId = defaults.deviceId;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new ListMediaServiceEdgePoliciesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder accountName(String accountName) {
-            this.accountName = Objects.requireNonNull(accountName);
+            $.accountName = accountName;
             return this;
         }
+
         public Builder deviceId(@Nullable String deviceId) {
-            this.deviceId = deviceId;
+            $.deviceId = deviceId;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public ListMediaServiceEdgePoliciesArgs build() {
-            return new ListMediaServiceEdgePoliciesArgs(accountName, deviceId, resourceGroupName);
+        }
+
+        public ListMediaServiceEdgePoliciesArgs build() {
+            $.accountName = Objects.requireNonNull($.accountName, "expected parameter 'accountName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

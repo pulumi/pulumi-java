@@ -6,9 +6,9 @@ package com.pulumi.awsnative.refactorspaces.inputs;
 import com.pulumi.awsnative.refactorspaces.enums.ApplicationApiGatewayEndpointType;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -17,70 +17,65 @@ public final class ApplicationApiGatewayProxyInputArgs extends com.pulumi.resour
     public static final ApplicationApiGatewayProxyInputArgs Empty = new ApplicationApiGatewayProxyInputArgs();
 
     @Import(name="endpointType")
-      private final @Nullable Output<ApplicationApiGatewayEndpointType> endpointType;
+    private @Nullable Output<ApplicationApiGatewayEndpointType> endpointType;
 
-    public Output<ApplicationApiGatewayEndpointType> endpointType() {
-        return this.endpointType == null ? Codegen.empty() : this.endpointType;
+    public Optional<Output<ApplicationApiGatewayEndpointType>> endpointType() {
+        return Optional.ofNullable(this.endpointType);
     }
 
     @Import(name="stageName")
-      private final @Nullable Output<String> stageName;
+    private @Nullable Output<String> stageName;
 
-    public Output<String> stageName() {
-        return this.stageName == null ? Codegen.empty() : this.stageName;
+    public Optional<Output<String>> stageName() {
+        return Optional.ofNullable(this.stageName);
     }
 
-    public ApplicationApiGatewayProxyInputArgs(
-        @Nullable Output<ApplicationApiGatewayEndpointType> endpointType,
-        @Nullable Output<String> stageName) {
-        this.endpointType = endpointType;
-        this.stageName = stageName;
-    }
+    private ApplicationApiGatewayProxyInputArgs() {}
 
-    private ApplicationApiGatewayProxyInputArgs() {
-        this.endpointType = Codegen.empty();
-        this.stageName = Codegen.empty();
+    private ApplicationApiGatewayProxyInputArgs(ApplicationApiGatewayProxyInputArgs $) {
+        this.endpointType = $.endpointType;
+        this.stageName = $.stageName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ApplicationApiGatewayProxyInputArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<ApplicationApiGatewayEndpointType> endpointType;
-        private @Nullable Output<String> stageName;
+        private ApplicationApiGatewayProxyInputArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ApplicationApiGatewayProxyInputArgs();
         }
 
         public Builder(ApplicationApiGatewayProxyInputArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.endpointType = defaults.endpointType;
-    	      this.stageName = defaults.stageName;
+            $ = new ApplicationApiGatewayProxyInputArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder endpointType(@Nullable Output<ApplicationApiGatewayEndpointType> endpointType) {
-            this.endpointType = endpointType;
+            $.endpointType = endpointType;
             return this;
         }
-        public Builder endpointType(@Nullable ApplicationApiGatewayEndpointType endpointType) {
-            this.endpointType = Codegen.ofNullable(endpointType);
-            return this;
+
+        public Builder endpointType(ApplicationApiGatewayEndpointType endpointType) {
+            return endpointType(Output.of(endpointType));
         }
+
         public Builder stageName(@Nullable Output<String> stageName) {
-            this.stageName = stageName;
+            $.stageName = stageName;
             return this;
         }
-        public Builder stageName(@Nullable String stageName) {
-            this.stageName = Codegen.ofNullable(stageName);
-            return this;
-        }        public ApplicationApiGatewayProxyInputArgs build() {
-            return new ApplicationApiGatewayProxyInputArgs(endpointType, stageName);
+
+        public Builder stageName(String stageName) {
+            return stageName(Output.of(stageName));
+        }
+
+        public ApplicationApiGatewayProxyInputArgs build() {
+            return $;
         }
     }
+
 }

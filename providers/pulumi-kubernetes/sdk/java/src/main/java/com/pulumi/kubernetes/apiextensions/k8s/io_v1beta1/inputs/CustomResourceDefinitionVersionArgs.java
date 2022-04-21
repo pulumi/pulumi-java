@@ -5,7 +5,6 @@ package com.pulumi.kubernetes.apiextensions.k8s.io_v1beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.kubernetes.apiextensions.k8s.io_v1beta1.inputs.CustomResourceColumnDefinitionArgs;
 import com.pulumi.kubernetes.apiextensions.k8s.io_v1beta1.inputs.CustomResourceSubresourcesArgs;
 import com.pulumi.kubernetes.apiextensions.k8s.io_v1beta1.inputs.CustomResourceValidationArgs;
@@ -13,6 +12,7 @@ import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -29,10 +29,10 @@ public final class CustomResourceDefinitionVersionArgs extends com.pulumi.resour
      * 
      */
     @Import(name="additionalPrinterColumns")
-      private final @Nullable Output<List<CustomResourceColumnDefinitionArgs>> additionalPrinterColumns;
+    private @Nullable Output<List<CustomResourceColumnDefinitionArgs>> additionalPrinterColumns;
 
-    public Output<List<CustomResourceColumnDefinitionArgs>> additionalPrinterColumns() {
-        return this.additionalPrinterColumns == null ? Codegen.empty() : this.additionalPrinterColumns;
+    public Optional<Output<List<CustomResourceColumnDefinitionArgs>>> additionalPrinterColumns() {
+        return Optional.ofNullable(this.additionalPrinterColumns);
     }
 
     /**
@@ -40,10 +40,10 @@ public final class CustomResourceDefinitionVersionArgs extends com.pulumi.resour
      * 
      */
     @Import(name="deprecated")
-      private final @Nullable Output<Boolean> deprecated;
+    private @Nullable Output<Boolean> deprecated;
 
-    public Output<Boolean> deprecated() {
-        return this.deprecated == null ? Codegen.empty() : this.deprecated;
+    public Optional<Output<Boolean>> deprecated() {
+        return Optional.ofNullable(this.deprecated);
     }
 
     /**
@@ -51,10 +51,10 @@ public final class CustomResourceDefinitionVersionArgs extends com.pulumi.resour
      * 
      */
     @Import(name="deprecationWarning")
-      private final @Nullable Output<String> deprecationWarning;
+    private @Nullable Output<String> deprecationWarning;
 
-    public Output<String> deprecationWarning() {
-        return this.deprecationWarning == null ? Codegen.empty() : this.deprecationWarning;
+    public Optional<Output<String>> deprecationWarning() {
+        return Optional.ofNullable(this.deprecationWarning);
     }
 
     /**
@@ -62,7 +62,7 @@ public final class CustomResourceDefinitionVersionArgs extends com.pulumi.resour
      * 
      */
     @Import(name="name", required=true)
-      private final Output<String> name;
+    private Output<String> name;
 
     public Output<String> name() {
         return this.name;
@@ -73,10 +73,10 @@ public final class CustomResourceDefinitionVersionArgs extends com.pulumi.resour
      * 
      */
     @Import(name="schema")
-      private final @Nullable Output<CustomResourceValidationArgs> schema;
+    private @Nullable Output<CustomResourceValidationArgs> schema;
 
-    public Output<CustomResourceValidationArgs> schema() {
-        return this.schema == null ? Codegen.empty() : this.schema;
+    public Optional<Output<CustomResourceValidationArgs>> schema() {
+        return Optional.ofNullable(this.schema);
     }
 
     /**
@@ -84,7 +84,7 @@ public final class CustomResourceDefinitionVersionArgs extends com.pulumi.resour
      * 
      */
     @Import(name="served", required=true)
-      private final Output<Boolean> served;
+    private Output<Boolean> served;
 
     public Output<Boolean> served() {
         return this.served;
@@ -95,7 +95,7 @@ public final class CustomResourceDefinitionVersionArgs extends com.pulumi.resour
      * 
      */
     @Import(name="storage", required=true)
-      private final Output<Boolean> storage;
+    private Output<Boolean> storage;
 
     public Output<Boolean> storage() {
         return this.storage;
@@ -106,144 +106,125 @@ public final class CustomResourceDefinitionVersionArgs extends com.pulumi.resour
      * 
      */
     @Import(name="subresources")
-      private final @Nullable Output<CustomResourceSubresourcesArgs> subresources;
+    private @Nullable Output<CustomResourceSubresourcesArgs> subresources;
 
-    public Output<CustomResourceSubresourcesArgs> subresources() {
-        return this.subresources == null ? Codegen.empty() : this.subresources;
+    public Optional<Output<CustomResourceSubresourcesArgs>> subresources() {
+        return Optional.ofNullable(this.subresources);
     }
 
-    public CustomResourceDefinitionVersionArgs(
-        @Nullable Output<List<CustomResourceColumnDefinitionArgs>> additionalPrinterColumns,
-        @Nullable Output<Boolean> deprecated,
-        @Nullable Output<String> deprecationWarning,
-        Output<String> name,
-        @Nullable Output<CustomResourceValidationArgs> schema,
-        Output<Boolean> served,
-        Output<Boolean> storage,
-        @Nullable Output<CustomResourceSubresourcesArgs> subresources) {
-        this.additionalPrinterColumns = additionalPrinterColumns;
-        this.deprecated = deprecated;
-        this.deprecationWarning = deprecationWarning;
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.schema = schema;
-        this.served = Objects.requireNonNull(served, "expected parameter 'served' to be non-null");
-        this.storage = Objects.requireNonNull(storage, "expected parameter 'storage' to be non-null");
-        this.subresources = subresources;
-    }
+    private CustomResourceDefinitionVersionArgs() {}
 
-    private CustomResourceDefinitionVersionArgs() {
-        this.additionalPrinterColumns = Codegen.empty();
-        this.deprecated = Codegen.empty();
-        this.deprecationWarning = Codegen.empty();
-        this.name = Codegen.empty();
-        this.schema = Codegen.empty();
-        this.served = Codegen.empty();
-        this.storage = Codegen.empty();
-        this.subresources = Codegen.empty();
+    private CustomResourceDefinitionVersionArgs(CustomResourceDefinitionVersionArgs $) {
+        this.additionalPrinterColumns = $.additionalPrinterColumns;
+        this.deprecated = $.deprecated;
+        this.deprecationWarning = $.deprecationWarning;
+        this.name = $.name;
+        this.schema = $.schema;
+        this.served = $.served;
+        this.storage = $.storage;
+        this.subresources = $.subresources;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CustomResourceDefinitionVersionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<CustomResourceColumnDefinitionArgs>> additionalPrinterColumns;
-        private @Nullable Output<Boolean> deprecated;
-        private @Nullable Output<String> deprecationWarning;
-        private Output<String> name;
-        private @Nullable Output<CustomResourceValidationArgs> schema;
-        private Output<Boolean> served;
-        private Output<Boolean> storage;
-        private @Nullable Output<CustomResourceSubresourcesArgs> subresources;
+        private CustomResourceDefinitionVersionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CustomResourceDefinitionVersionArgs();
         }
 
         public Builder(CustomResourceDefinitionVersionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.additionalPrinterColumns = defaults.additionalPrinterColumns;
-    	      this.deprecated = defaults.deprecated;
-    	      this.deprecationWarning = defaults.deprecationWarning;
-    	      this.name = defaults.name;
-    	      this.schema = defaults.schema;
-    	      this.served = defaults.served;
-    	      this.storage = defaults.storage;
-    	      this.subresources = defaults.subresources;
+            $ = new CustomResourceDefinitionVersionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder additionalPrinterColumns(@Nullable Output<List<CustomResourceColumnDefinitionArgs>> additionalPrinterColumns) {
-            this.additionalPrinterColumns = additionalPrinterColumns;
+            $.additionalPrinterColumns = additionalPrinterColumns;
             return this;
         }
-        public Builder additionalPrinterColumns(@Nullable List<CustomResourceColumnDefinitionArgs> additionalPrinterColumns) {
-            this.additionalPrinterColumns = Codegen.ofNullable(additionalPrinterColumns);
-            return this;
+
+        public Builder additionalPrinterColumns(List<CustomResourceColumnDefinitionArgs> additionalPrinterColumns) {
+            return additionalPrinterColumns(Output.of(additionalPrinterColumns));
         }
+
         public Builder additionalPrinterColumns(CustomResourceColumnDefinitionArgs... additionalPrinterColumns) {
             return additionalPrinterColumns(List.of(additionalPrinterColumns));
         }
+
         public Builder deprecated(@Nullable Output<Boolean> deprecated) {
-            this.deprecated = deprecated;
+            $.deprecated = deprecated;
             return this;
         }
-        public Builder deprecated(@Nullable Boolean deprecated) {
-            this.deprecated = Codegen.ofNullable(deprecated);
-            return this;
+
+        public Builder deprecated(Boolean deprecated) {
+            return deprecated(Output.of(deprecated));
         }
+
         public Builder deprecationWarning(@Nullable Output<String> deprecationWarning) {
-            this.deprecationWarning = deprecationWarning;
+            $.deprecationWarning = deprecationWarning;
             return this;
         }
-        public Builder deprecationWarning(@Nullable String deprecationWarning) {
-            this.deprecationWarning = Codegen.ofNullable(deprecationWarning);
-            return this;
+
+        public Builder deprecationWarning(String deprecationWarning) {
+            return deprecationWarning(Output.of(deprecationWarning));
         }
+
         public Builder name(Output<String> name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Output.of(Objects.requireNonNull(name));
-            return this;
+            return name(Output.of(name));
         }
+
         public Builder schema(@Nullable Output<CustomResourceValidationArgs> schema) {
-            this.schema = schema;
+            $.schema = schema;
             return this;
         }
-        public Builder schema(@Nullable CustomResourceValidationArgs schema) {
-            this.schema = Codegen.ofNullable(schema);
-            return this;
+
+        public Builder schema(CustomResourceValidationArgs schema) {
+            return schema(Output.of(schema));
         }
+
         public Builder served(Output<Boolean> served) {
-            this.served = Objects.requireNonNull(served);
+            $.served = served;
             return this;
         }
+
         public Builder served(Boolean served) {
-            this.served = Output.of(Objects.requireNonNull(served));
-            return this;
+            return served(Output.of(served));
         }
+
         public Builder storage(Output<Boolean> storage) {
-            this.storage = Objects.requireNonNull(storage);
+            $.storage = storage;
             return this;
         }
+
         public Builder storage(Boolean storage) {
-            this.storage = Output.of(Objects.requireNonNull(storage));
-            return this;
+            return storage(Output.of(storage));
         }
+
         public Builder subresources(@Nullable Output<CustomResourceSubresourcesArgs> subresources) {
-            this.subresources = subresources;
+            $.subresources = subresources;
             return this;
         }
-        public Builder subresources(@Nullable CustomResourceSubresourcesArgs subresources) {
-            this.subresources = Codegen.ofNullable(subresources);
-            return this;
-        }        public CustomResourceDefinitionVersionArgs build() {
-            return new CustomResourceDefinitionVersionArgs(additionalPrinterColumns, deprecated, deprecationWarning, name, schema, served, storage, subresources);
+
+        public Builder subresources(CustomResourceSubresourcesArgs subresources) {
+            return subresources(Output.of(subresources));
+        }
+
+        public CustomResourceDefinitionVersionArgs build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.served = Objects.requireNonNull($.served, "expected parameter 'served' to be non-null");
+            $.storage = Objects.requireNonNull($.storage, "expected parameter 'storage' to be non-null");
+            return $;
         }
     }
+
 }

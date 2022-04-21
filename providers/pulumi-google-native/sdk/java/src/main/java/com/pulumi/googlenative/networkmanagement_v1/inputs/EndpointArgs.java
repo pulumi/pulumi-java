@@ -5,11 +5,11 @@ package com.pulumi.googlenative.networkmanagement_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.networkmanagement_v1.enums.EndpointNetworkType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class EndpointArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="cloudSqlInstance")
-      private final @Nullable Output<String> cloudSqlInstance;
+    private @Nullable Output<String> cloudSqlInstance;
 
-    public Output<String> cloudSqlInstance() {
-        return this.cloudSqlInstance == null ? Codegen.empty() : this.cloudSqlInstance;
+    public Optional<Output<String>> cloudSqlInstance() {
+        return Optional.ofNullable(this.cloudSqlInstance);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class EndpointArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="gkeMasterCluster")
-      private final @Nullable Output<String> gkeMasterCluster;
+    private @Nullable Output<String> gkeMasterCluster;
 
-    public Output<String> gkeMasterCluster() {
-        return this.gkeMasterCluster == null ? Codegen.empty() : this.gkeMasterCluster;
+    public Optional<Output<String>> gkeMasterCluster() {
+        return Optional.ofNullable(this.gkeMasterCluster);
     }
 
     /**
@@ -48,10 +48,10 @@ public final class EndpointArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="instance")
-      private final @Nullable Output<String> instance;
+    private @Nullable Output<String> instance;
 
-    public Output<String> instance() {
-        return this.instance == null ? Codegen.empty() : this.instance;
+    public Optional<Output<String>> instance() {
+        return Optional.ofNullable(this.instance);
     }
 
     /**
@@ -59,10 +59,10 @@ public final class EndpointArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="ipAddress")
-      private final @Nullable Output<String> ipAddress;
+    private @Nullable Output<String> ipAddress;
 
-    public Output<String> ipAddress() {
-        return this.ipAddress == null ? Codegen.empty() : this.ipAddress;
+    public Optional<Output<String>> ipAddress() {
+        return Optional.ofNullable(this.ipAddress);
     }
 
     /**
@@ -70,10 +70,10 @@ public final class EndpointArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="network")
-      private final @Nullable Output<String> network;
+    private @Nullable Output<String> network;
 
-    public Output<String> network() {
-        return this.network == null ? Codegen.empty() : this.network;
+    public Optional<Output<String>> network() {
+        return Optional.ofNullable(this.network);
     }
 
     /**
@@ -81,10 +81,10 @@ public final class EndpointArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="networkType")
-      private final @Nullable Output<EndpointNetworkType> networkType;
+    private @Nullable Output<EndpointNetworkType> networkType;
 
-    public Output<EndpointNetworkType> networkType() {
-        return this.networkType == null ? Codegen.empty() : this.networkType;
+    public Optional<Output<EndpointNetworkType>> networkType() {
+        return Optional.ofNullable(this.networkType);
     }
 
     /**
@@ -92,10 +92,10 @@ public final class EndpointArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="port")
-      private final @Nullable Output<Integer> port;
+    private @Nullable Output<Integer> port;
 
-    public Output<Integer> port() {
-        return this.port == null ? Codegen.empty() : this.port;
+    public Optional<Output<Integer>> port() {
+        return Optional.ofNullable(this.port);
     }
 
     /**
@@ -103,141 +103,118 @@ public final class EndpointArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
-    public EndpointArgs(
-        @Nullable Output<String> cloudSqlInstance,
-        @Nullable Output<String> gkeMasterCluster,
-        @Nullable Output<String> instance,
-        @Nullable Output<String> ipAddress,
-        @Nullable Output<String> network,
-        @Nullable Output<EndpointNetworkType> networkType,
-        @Nullable Output<Integer> port,
-        @Nullable Output<String> project) {
-        this.cloudSqlInstance = cloudSqlInstance;
-        this.gkeMasterCluster = gkeMasterCluster;
-        this.instance = instance;
-        this.ipAddress = ipAddress;
-        this.network = network;
-        this.networkType = networkType;
-        this.port = port;
-        this.project = project;
-    }
+    private EndpointArgs() {}
 
-    private EndpointArgs() {
-        this.cloudSqlInstance = Codegen.empty();
-        this.gkeMasterCluster = Codegen.empty();
-        this.instance = Codegen.empty();
-        this.ipAddress = Codegen.empty();
-        this.network = Codegen.empty();
-        this.networkType = Codegen.empty();
-        this.port = Codegen.empty();
-        this.project = Codegen.empty();
+    private EndpointArgs(EndpointArgs $) {
+        this.cloudSqlInstance = $.cloudSqlInstance;
+        this.gkeMasterCluster = $.gkeMasterCluster;
+        this.instance = $.instance;
+        this.ipAddress = $.ipAddress;
+        this.network = $.network;
+        this.networkType = $.networkType;
+        this.port = $.port;
+        this.project = $.project;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EndpointArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> cloudSqlInstance;
-        private @Nullable Output<String> gkeMasterCluster;
-        private @Nullable Output<String> instance;
-        private @Nullable Output<String> ipAddress;
-        private @Nullable Output<String> network;
-        private @Nullable Output<EndpointNetworkType> networkType;
-        private @Nullable Output<Integer> port;
-        private @Nullable Output<String> project;
+        private EndpointArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new EndpointArgs();
         }
 
         public Builder(EndpointArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cloudSqlInstance = defaults.cloudSqlInstance;
-    	      this.gkeMasterCluster = defaults.gkeMasterCluster;
-    	      this.instance = defaults.instance;
-    	      this.ipAddress = defaults.ipAddress;
-    	      this.network = defaults.network;
-    	      this.networkType = defaults.networkType;
-    	      this.port = defaults.port;
-    	      this.project = defaults.project;
+            $ = new EndpointArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder cloudSqlInstance(@Nullable Output<String> cloudSqlInstance) {
-            this.cloudSqlInstance = cloudSqlInstance;
+            $.cloudSqlInstance = cloudSqlInstance;
             return this;
         }
-        public Builder cloudSqlInstance(@Nullable String cloudSqlInstance) {
-            this.cloudSqlInstance = Codegen.ofNullable(cloudSqlInstance);
-            return this;
+
+        public Builder cloudSqlInstance(String cloudSqlInstance) {
+            return cloudSqlInstance(Output.of(cloudSqlInstance));
         }
+
         public Builder gkeMasterCluster(@Nullable Output<String> gkeMasterCluster) {
-            this.gkeMasterCluster = gkeMasterCluster;
+            $.gkeMasterCluster = gkeMasterCluster;
             return this;
         }
-        public Builder gkeMasterCluster(@Nullable String gkeMasterCluster) {
-            this.gkeMasterCluster = Codegen.ofNullable(gkeMasterCluster);
-            return this;
+
+        public Builder gkeMasterCluster(String gkeMasterCluster) {
+            return gkeMasterCluster(Output.of(gkeMasterCluster));
         }
+
         public Builder instance(@Nullable Output<String> instance) {
-            this.instance = instance;
+            $.instance = instance;
             return this;
         }
-        public Builder instance(@Nullable String instance) {
-            this.instance = Codegen.ofNullable(instance);
-            return this;
+
+        public Builder instance(String instance) {
+            return instance(Output.of(instance));
         }
+
         public Builder ipAddress(@Nullable Output<String> ipAddress) {
-            this.ipAddress = ipAddress;
+            $.ipAddress = ipAddress;
             return this;
         }
-        public Builder ipAddress(@Nullable String ipAddress) {
-            this.ipAddress = Codegen.ofNullable(ipAddress);
-            return this;
+
+        public Builder ipAddress(String ipAddress) {
+            return ipAddress(Output.of(ipAddress));
         }
+
         public Builder network(@Nullable Output<String> network) {
-            this.network = network;
+            $.network = network;
             return this;
         }
-        public Builder network(@Nullable String network) {
-            this.network = Codegen.ofNullable(network);
-            return this;
+
+        public Builder network(String network) {
+            return network(Output.of(network));
         }
+
         public Builder networkType(@Nullable Output<EndpointNetworkType> networkType) {
-            this.networkType = networkType;
+            $.networkType = networkType;
             return this;
         }
-        public Builder networkType(@Nullable EndpointNetworkType networkType) {
-            this.networkType = Codegen.ofNullable(networkType);
-            return this;
+
+        public Builder networkType(EndpointNetworkType networkType) {
+            return networkType(Output.of(networkType));
         }
+
         public Builder port(@Nullable Output<Integer> port) {
-            this.port = port;
+            $.port = port;
             return this;
         }
-        public Builder port(@Nullable Integer port) {
-            this.port = Codegen.ofNullable(port);
-            return this;
+
+        public Builder port(Integer port) {
+            return port(Output.of(port));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
-        }        public EndpointArgs build() {
-            return new EndpointArgs(cloudSqlInstance, gkeMasterCluster, instance, ipAddress, network, networkType, port, project);
+
+        public Builder project(String project) {
+            return project(Output.of(project));
+        }
+
+        public EndpointArgs build() {
+            return $;
         }
     }
+
 }

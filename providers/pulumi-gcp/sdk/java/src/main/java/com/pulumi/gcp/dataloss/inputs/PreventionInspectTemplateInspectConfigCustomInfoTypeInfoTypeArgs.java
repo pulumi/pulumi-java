@@ -5,7 +5,6 @@ package com.pulumi.gcp.dataloss.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,49 +19,49 @@ public final class PreventionInspectTemplateInspectConfigCustomInfoTypeInfoTypeA
      * 
      */
     @Import(name="name", required=true)
-      private final Output<String> name;
+    private Output<String> name;
 
     public Output<String> name() {
         return this.name;
     }
 
-    public PreventionInspectTemplateInspectConfigCustomInfoTypeInfoTypeArgs(Output<String> name) {
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-    }
+    private PreventionInspectTemplateInspectConfigCustomInfoTypeInfoTypeArgs() {}
 
-    private PreventionInspectTemplateInspectConfigCustomInfoTypeInfoTypeArgs() {
-        this.name = Codegen.empty();
+    private PreventionInspectTemplateInspectConfigCustomInfoTypeInfoTypeArgs(PreventionInspectTemplateInspectConfigCustomInfoTypeInfoTypeArgs $) {
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PreventionInspectTemplateInspectConfigCustomInfoTypeInfoTypeArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> name;
+        private PreventionInspectTemplateInspectConfigCustomInfoTypeInfoTypeArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PreventionInspectTemplateInspectConfigCustomInfoTypeInfoTypeArgs();
         }
 
         public Builder(PreventionInspectTemplateInspectConfigCustomInfoTypeInfoTypeArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
+            $ = new PreventionInspectTemplateInspectConfigCustomInfoTypeInfoTypeArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder name(Output<String> name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Output.of(Objects.requireNonNull(name));
-            return this;
-        }        public PreventionInspectTemplateInspectConfigCustomInfoTypeInfoTypeArgs build() {
-            return new PreventionInspectTemplateInspectConfigCustomInfoTypeInfoTypeArgs(name);
+            return name(Output.of(name));
+        }
+
+        public PreventionInspectTemplateInspectConfigCustomInfoTypeInfoTypeArgs build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            return $;
         }
     }
+
 }

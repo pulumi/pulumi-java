@@ -5,13 +5,13 @@ package com.pulumi.docker.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.docker.inputs.ContainerMountVolumeOptionsLabelGetArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,113 +20,103 @@ public final class ContainerMountVolumeOptionsGetArgs extends com.pulumi.resourc
     public static final ContainerMountVolumeOptionsGetArgs Empty = new ContainerMountVolumeOptionsGetArgs();
 
     @Import(name="driverName")
-      private final @Nullable Output<String> driverName;
+    private @Nullable Output<String> driverName;
 
-    public Output<String> driverName() {
-        return this.driverName == null ? Codegen.empty() : this.driverName;
+    public Optional<Output<String>> driverName() {
+        return Optional.ofNullable(this.driverName);
     }
 
     @Import(name="driverOptions")
-      private final @Nullable Output<Map<String,String>> driverOptions;
+    private @Nullable Output<Map<String,String>> driverOptions;
 
-    public Output<Map<String,String>> driverOptions() {
-        return this.driverOptions == null ? Codegen.empty() : this.driverOptions;
+    public Optional<Output<Map<String,String>>> driverOptions() {
+        return Optional.ofNullable(this.driverOptions);
     }
 
     @Import(name="labels")
-      private final @Nullable Output<List<ContainerMountVolumeOptionsLabelGetArgs>> labels;
+    private @Nullable Output<List<ContainerMountVolumeOptionsLabelGetArgs>> labels;
 
-    public Output<List<ContainerMountVolumeOptionsLabelGetArgs>> labels() {
-        return this.labels == null ? Codegen.empty() : this.labels;
+    public Optional<Output<List<ContainerMountVolumeOptionsLabelGetArgs>>> labels() {
+        return Optional.ofNullable(this.labels);
     }
 
     @Import(name="noCopy")
-      private final @Nullable Output<Boolean> noCopy;
+    private @Nullable Output<Boolean> noCopy;
 
-    public Output<Boolean> noCopy() {
-        return this.noCopy == null ? Codegen.empty() : this.noCopy;
+    public Optional<Output<Boolean>> noCopy() {
+        return Optional.ofNullable(this.noCopy);
     }
 
-    public ContainerMountVolumeOptionsGetArgs(
-        @Nullable Output<String> driverName,
-        @Nullable Output<Map<String,String>> driverOptions,
-        @Nullable Output<List<ContainerMountVolumeOptionsLabelGetArgs>> labels,
-        @Nullable Output<Boolean> noCopy) {
-        this.driverName = driverName;
-        this.driverOptions = driverOptions;
-        this.labels = labels;
-        this.noCopy = noCopy;
-    }
+    private ContainerMountVolumeOptionsGetArgs() {}
 
-    private ContainerMountVolumeOptionsGetArgs() {
-        this.driverName = Codegen.empty();
-        this.driverOptions = Codegen.empty();
-        this.labels = Codegen.empty();
-        this.noCopy = Codegen.empty();
+    private ContainerMountVolumeOptionsGetArgs(ContainerMountVolumeOptionsGetArgs $) {
+        this.driverName = $.driverName;
+        this.driverOptions = $.driverOptions;
+        this.labels = $.labels;
+        this.noCopy = $.noCopy;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ContainerMountVolumeOptionsGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> driverName;
-        private @Nullable Output<Map<String,String>> driverOptions;
-        private @Nullable Output<List<ContainerMountVolumeOptionsLabelGetArgs>> labels;
-        private @Nullable Output<Boolean> noCopy;
+        private ContainerMountVolumeOptionsGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ContainerMountVolumeOptionsGetArgs();
         }
 
         public Builder(ContainerMountVolumeOptionsGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.driverName = defaults.driverName;
-    	      this.driverOptions = defaults.driverOptions;
-    	      this.labels = defaults.labels;
-    	      this.noCopy = defaults.noCopy;
+            $ = new ContainerMountVolumeOptionsGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder driverName(@Nullable Output<String> driverName) {
-            this.driverName = driverName;
+            $.driverName = driverName;
             return this;
         }
-        public Builder driverName(@Nullable String driverName) {
-            this.driverName = Codegen.ofNullable(driverName);
-            return this;
+
+        public Builder driverName(String driverName) {
+            return driverName(Output.of(driverName));
         }
+
         public Builder driverOptions(@Nullable Output<Map<String,String>> driverOptions) {
-            this.driverOptions = driverOptions;
+            $.driverOptions = driverOptions;
             return this;
         }
-        public Builder driverOptions(@Nullable Map<String,String> driverOptions) {
-            this.driverOptions = Codegen.ofNullable(driverOptions);
-            return this;
+
+        public Builder driverOptions(Map<String,String> driverOptions) {
+            return driverOptions(Output.of(driverOptions));
         }
+
         public Builder labels(@Nullable Output<List<ContainerMountVolumeOptionsLabelGetArgs>> labels) {
-            this.labels = labels;
+            $.labels = labels;
             return this;
         }
-        public Builder labels(@Nullable List<ContainerMountVolumeOptionsLabelGetArgs> labels) {
-            this.labels = Codegen.ofNullable(labels);
-            return this;
+
+        public Builder labels(List<ContainerMountVolumeOptionsLabelGetArgs> labels) {
+            return labels(Output.of(labels));
         }
+
         public Builder labels(ContainerMountVolumeOptionsLabelGetArgs... labels) {
             return labels(List.of(labels));
         }
+
         public Builder noCopy(@Nullable Output<Boolean> noCopy) {
-            this.noCopy = noCopy;
+            $.noCopy = noCopy;
             return this;
         }
-        public Builder noCopy(@Nullable Boolean noCopy) {
-            this.noCopy = Codegen.ofNullable(noCopy);
-            return this;
-        }        public ContainerMountVolumeOptionsGetArgs build() {
-            return new ContainerMountVolumeOptionsGetArgs(driverName, driverOptions, labels, noCopy);
+
+        public Builder noCopy(Boolean noCopy) {
+            return noCopy(Output.of(noCopy));
+        }
+
+        public ContainerMountVolumeOptionsGetArgs build() {
+            return $;
         }
     }
+
 }

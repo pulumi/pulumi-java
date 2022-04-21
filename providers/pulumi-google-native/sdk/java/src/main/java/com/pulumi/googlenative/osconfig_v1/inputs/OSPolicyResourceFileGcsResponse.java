@@ -21,7 +21,7 @@ public final class OSPolicyResourceFileGcsResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="bucket", required=true)
-      private final String bucket;
+    private String bucket;
 
     public String bucket() {
         return this.bucket;
@@ -32,7 +32,7 @@ public final class OSPolicyResourceFileGcsResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="generation", required=true)
-      private final String generation;
+    private String generation;
 
     public String generation() {
         return this.generation;
@@ -43,64 +43,59 @@ public final class OSPolicyResourceFileGcsResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="object", required=true)
-      private final String object;
+    private String object;
 
     public String object() {
         return this.object;
     }
 
-    public OSPolicyResourceFileGcsResponse(
-        String bucket,
-        String generation,
-        String object) {
-        this.bucket = Objects.requireNonNull(bucket, "expected parameter 'bucket' to be non-null");
-        this.generation = Objects.requireNonNull(generation, "expected parameter 'generation' to be non-null");
-        this.object = Objects.requireNonNull(object, "expected parameter 'object' to be non-null");
-    }
+    private OSPolicyResourceFileGcsResponse() {}
 
-    private OSPolicyResourceFileGcsResponse() {
-        this.bucket = null;
-        this.generation = null;
-        this.object = null;
+    private OSPolicyResourceFileGcsResponse(OSPolicyResourceFileGcsResponse $) {
+        this.bucket = $.bucket;
+        this.generation = $.generation;
+        this.object = $.object;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(OSPolicyResourceFileGcsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String bucket;
-        private String generation;
-        private String object;
+        private OSPolicyResourceFileGcsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new OSPolicyResourceFileGcsResponse();
         }
 
         public Builder(OSPolicyResourceFileGcsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.bucket = defaults.bucket;
-    	      this.generation = defaults.generation;
-    	      this.object = defaults.object;
+            $ = new OSPolicyResourceFileGcsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder bucket(String bucket) {
-            this.bucket = Objects.requireNonNull(bucket);
+            $.bucket = bucket;
             return this;
         }
+
         public Builder generation(String generation) {
-            this.generation = Objects.requireNonNull(generation);
+            $.generation = generation;
             return this;
         }
+
         public Builder object(String object) {
-            this.object = Objects.requireNonNull(object);
+            $.object = object;
             return this;
-        }        public OSPolicyResourceFileGcsResponse build() {
-            return new OSPolicyResourceFileGcsResponse(bucket, generation, object);
+        }
+
+        public OSPolicyResourceFileGcsResponse build() {
+            $.bucket = Objects.requireNonNull($.bucket, "expected parameter 'bucket' to be non-null");
+            $.generation = Objects.requireNonNull($.generation, "expected parameter 'generation' to be non-null");
+            $.object = Objects.requireNonNull($.object, "expected parameter 'object' to be non-null");
+            return $;
         }
     }
+
 }

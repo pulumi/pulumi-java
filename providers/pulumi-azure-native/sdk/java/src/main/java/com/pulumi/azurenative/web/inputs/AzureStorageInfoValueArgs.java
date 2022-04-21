@@ -6,9 +6,9 @@ package com.pulumi.azurenative.web.inputs;
 import com.pulumi.azurenative.web.enums.AzureStorageType;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class AzureStorageInfoValueArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="accessKey")
-      private final @Nullable Output<String> accessKey;
+    private @Nullable Output<String> accessKey;
 
-    public Output<String> accessKey() {
-        return this.accessKey == null ? Codegen.empty() : this.accessKey;
+    public Optional<Output<String>> accessKey() {
+        return Optional.ofNullable(this.accessKey);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class AzureStorageInfoValueArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="accountName")
-      private final @Nullable Output<String> accountName;
+    private @Nullable Output<String> accountName;
 
-    public Output<String> accountName() {
-        return this.accountName == null ? Codegen.empty() : this.accountName;
+    public Optional<Output<String>> accountName() {
+        return Optional.ofNullable(this.accountName);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class AzureStorageInfoValueArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="mountPath")
-      private final @Nullable Output<String> mountPath;
+    private @Nullable Output<String> mountPath;
 
-    public Output<String> mountPath() {
-        return this.mountPath == null ? Codegen.empty() : this.mountPath;
+    public Optional<Output<String>> mountPath() {
+        return Optional.ofNullable(this.mountPath);
     }
 
     /**
@@ -58,10 +58,10 @@ public final class AzureStorageInfoValueArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="shareName")
-      private final @Nullable Output<String> shareName;
+    private @Nullable Output<String> shareName;
 
-    public Output<String> shareName() {
-        return this.shareName == null ? Codegen.empty() : this.shareName;
+    public Optional<Output<String>> shareName() {
+        return Optional.ofNullable(this.shareName);
     }
 
     /**
@@ -69,102 +69,88 @@ public final class AzureStorageInfoValueArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="type")
-      private final @Nullable Output<AzureStorageType> type;
+    private @Nullable Output<AzureStorageType> type;
 
-    public Output<AzureStorageType> type() {
-        return this.type == null ? Codegen.empty() : this.type;
+    public Optional<Output<AzureStorageType>> type() {
+        return Optional.ofNullable(this.type);
     }
 
-    public AzureStorageInfoValueArgs(
-        @Nullable Output<String> accessKey,
-        @Nullable Output<String> accountName,
-        @Nullable Output<String> mountPath,
-        @Nullable Output<String> shareName,
-        @Nullable Output<AzureStorageType> type) {
-        this.accessKey = accessKey;
-        this.accountName = accountName;
-        this.mountPath = mountPath;
-        this.shareName = shareName;
-        this.type = type;
-    }
+    private AzureStorageInfoValueArgs() {}
 
-    private AzureStorageInfoValueArgs() {
-        this.accessKey = Codegen.empty();
-        this.accountName = Codegen.empty();
-        this.mountPath = Codegen.empty();
-        this.shareName = Codegen.empty();
-        this.type = Codegen.empty();
+    private AzureStorageInfoValueArgs(AzureStorageInfoValueArgs $) {
+        this.accessKey = $.accessKey;
+        this.accountName = $.accountName;
+        this.mountPath = $.mountPath;
+        this.shareName = $.shareName;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AzureStorageInfoValueArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> accessKey;
-        private @Nullable Output<String> accountName;
-        private @Nullable Output<String> mountPath;
-        private @Nullable Output<String> shareName;
-        private @Nullable Output<AzureStorageType> type;
+        private AzureStorageInfoValueArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AzureStorageInfoValueArgs();
         }
 
         public Builder(AzureStorageInfoValueArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accessKey = defaults.accessKey;
-    	      this.accountName = defaults.accountName;
-    	      this.mountPath = defaults.mountPath;
-    	      this.shareName = defaults.shareName;
-    	      this.type = defaults.type;
+            $ = new AzureStorageInfoValueArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder accessKey(@Nullable Output<String> accessKey) {
-            this.accessKey = accessKey;
+            $.accessKey = accessKey;
             return this;
         }
-        public Builder accessKey(@Nullable String accessKey) {
-            this.accessKey = Codegen.ofNullable(accessKey);
-            return this;
+
+        public Builder accessKey(String accessKey) {
+            return accessKey(Output.of(accessKey));
         }
+
         public Builder accountName(@Nullable Output<String> accountName) {
-            this.accountName = accountName;
+            $.accountName = accountName;
             return this;
         }
-        public Builder accountName(@Nullable String accountName) {
-            this.accountName = Codegen.ofNullable(accountName);
-            return this;
+
+        public Builder accountName(String accountName) {
+            return accountName(Output.of(accountName));
         }
+
         public Builder mountPath(@Nullable Output<String> mountPath) {
-            this.mountPath = mountPath;
+            $.mountPath = mountPath;
             return this;
         }
-        public Builder mountPath(@Nullable String mountPath) {
-            this.mountPath = Codegen.ofNullable(mountPath);
-            return this;
+
+        public Builder mountPath(String mountPath) {
+            return mountPath(Output.of(mountPath));
         }
+
         public Builder shareName(@Nullable Output<String> shareName) {
-            this.shareName = shareName;
+            $.shareName = shareName;
             return this;
         }
-        public Builder shareName(@Nullable String shareName) {
-            this.shareName = Codegen.ofNullable(shareName);
-            return this;
+
+        public Builder shareName(String shareName) {
+            return shareName(Output.of(shareName));
         }
+
         public Builder type(@Nullable Output<AzureStorageType> type) {
-            this.type = type;
+            $.type = type;
             return this;
         }
-        public Builder type(@Nullable AzureStorageType type) {
-            this.type = Codegen.ofNullable(type);
-            return this;
-        }        public AzureStorageInfoValueArgs build() {
-            return new AzureStorageInfoValueArgs(accessKey, accountName, mountPath, shareName, type);
+
+        public Builder type(AzureStorageType type) {
+            return type(Output.of(type));
+        }
+
+        public AzureStorageInfoValueArgs build() {
+            return $;
         }
     }
+
 }

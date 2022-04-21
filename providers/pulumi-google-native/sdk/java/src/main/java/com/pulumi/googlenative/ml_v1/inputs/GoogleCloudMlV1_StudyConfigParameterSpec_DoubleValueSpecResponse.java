@@ -17,7 +17,7 @@ public final class GoogleCloudMlV1_StudyConfigParameterSpec_DoubleValueSpecRespo
      * 
      */
     @Import(name="maxValue", required=true)
-      private final Double maxValue;
+    private Double maxValue;
 
     public Double maxValue() {
         return this.maxValue;
@@ -28,55 +28,52 @@ public final class GoogleCloudMlV1_StudyConfigParameterSpec_DoubleValueSpecRespo
      * 
      */
     @Import(name="minValue", required=true)
-      private final Double minValue;
+    private Double minValue;
 
     public Double minValue() {
         return this.minValue;
     }
 
-    public GoogleCloudMlV1_StudyConfigParameterSpec_DoubleValueSpecResponse(
-        Double maxValue,
-        Double minValue) {
-        this.maxValue = Objects.requireNonNull(maxValue, "expected parameter 'maxValue' to be non-null");
-        this.minValue = Objects.requireNonNull(minValue, "expected parameter 'minValue' to be non-null");
-    }
+    private GoogleCloudMlV1_StudyConfigParameterSpec_DoubleValueSpecResponse() {}
 
-    private GoogleCloudMlV1_StudyConfigParameterSpec_DoubleValueSpecResponse() {
-        this.maxValue = null;
-        this.minValue = null;
+    private GoogleCloudMlV1_StudyConfigParameterSpec_DoubleValueSpecResponse(GoogleCloudMlV1_StudyConfigParameterSpec_DoubleValueSpecResponse $) {
+        this.maxValue = $.maxValue;
+        this.minValue = $.minValue;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudMlV1_StudyConfigParameterSpec_DoubleValueSpecResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Double maxValue;
-        private Double minValue;
+        private GoogleCloudMlV1_StudyConfigParameterSpec_DoubleValueSpecResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudMlV1_StudyConfigParameterSpec_DoubleValueSpecResponse();
         }
 
         public Builder(GoogleCloudMlV1_StudyConfigParameterSpec_DoubleValueSpecResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.maxValue = defaults.maxValue;
-    	      this.minValue = defaults.minValue;
+            $ = new GoogleCloudMlV1_StudyConfigParameterSpec_DoubleValueSpecResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder maxValue(Double maxValue) {
-            this.maxValue = Objects.requireNonNull(maxValue);
+            $.maxValue = maxValue;
             return this;
         }
+
         public Builder minValue(Double minValue) {
-            this.minValue = Objects.requireNonNull(minValue);
+            $.minValue = minValue;
             return this;
-        }        public GoogleCloudMlV1_StudyConfigParameterSpec_DoubleValueSpecResponse build() {
-            return new GoogleCloudMlV1_StudyConfigParameterSpec_DoubleValueSpecResponse(maxValue, minValue);
+        }
+
+        public GoogleCloudMlV1_StudyConfigParameterSpec_DoubleValueSpecResponse build() {
+            $.maxValue = Objects.requireNonNull($.maxValue, "expected parameter 'maxValue' to be non-null");
+            $.minValue = Objects.requireNonNull($.minValue, "expected parameter 'minValue' to be non-null");
+            return $;
         }
     }
+
 }

@@ -6,10 +6,10 @@ package com.pulumi.aws.memorydb.inputs;
 import com.pulumi.aws.memorydb.inputs.ClusterShardNodeEndpointArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class ClusterShardNodeArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="availabilityZone")
-      private final @Nullable Output<String> availabilityZone;
+    private @Nullable Output<String> availabilityZone;
 
-    public Output<String> availabilityZone() {
-        return this.availabilityZone == null ? Codegen.empty() : this.availabilityZone;
+    public Optional<Output<String>> availabilityZone() {
+        return Optional.ofNullable(this.availabilityZone);
     }
 
     /**
@@ -33,17 +33,17 @@ public final class ClusterShardNodeArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="createTime")
-      private final @Nullable Output<String> createTime;
+    private @Nullable Output<String> createTime;
 
-    public Output<String> createTime() {
-        return this.createTime == null ? Codegen.empty() : this.createTime;
+    public Optional<Output<String>> createTime() {
+        return Optional.ofNullable(this.createTime);
     }
 
     @Import(name="endpoints")
-      private final @Nullable Output<List<ClusterShardNodeEndpointArgs>> endpoints;
+    private @Nullable Output<List<ClusterShardNodeEndpointArgs>> endpoints;
 
-    public Output<List<ClusterShardNodeEndpointArgs>> endpoints() {
-        return this.endpoints == null ? Codegen.empty() : this.endpoints;
+    public Optional<Output<List<ClusterShardNodeEndpointArgs>>> endpoints() {
+        return Optional.ofNullable(this.endpoints);
     }
 
     /**
@@ -52,92 +52,82 @@ public final class ClusterShardNodeArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
-    public ClusterShardNodeArgs(
-        @Nullable Output<String> availabilityZone,
-        @Nullable Output<String> createTime,
-        @Nullable Output<List<ClusterShardNodeEndpointArgs>> endpoints,
-        @Nullable Output<String> name) {
-        this.availabilityZone = availabilityZone;
-        this.createTime = createTime;
-        this.endpoints = endpoints;
-        this.name = name;
-    }
+    private ClusterShardNodeArgs() {}
 
-    private ClusterShardNodeArgs() {
-        this.availabilityZone = Codegen.empty();
-        this.createTime = Codegen.empty();
-        this.endpoints = Codegen.empty();
-        this.name = Codegen.empty();
+    private ClusterShardNodeArgs(ClusterShardNodeArgs $) {
+        this.availabilityZone = $.availabilityZone;
+        this.createTime = $.createTime;
+        this.endpoints = $.endpoints;
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ClusterShardNodeArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> availabilityZone;
-        private @Nullable Output<String> createTime;
-        private @Nullable Output<List<ClusterShardNodeEndpointArgs>> endpoints;
-        private @Nullable Output<String> name;
+        private ClusterShardNodeArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ClusterShardNodeArgs();
         }
 
         public Builder(ClusterShardNodeArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.availabilityZone = defaults.availabilityZone;
-    	      this.createTime = defaults.createTime;
-    	      this.endpoints = defaults.endpoints;
-    	      this.name = defaults.name;
+            $ = new ClusterShardNodeArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder availabilityZone(@Nullable Output<String> availabilityZone) {
-            this.availabilityZone = availabilityZone;
+            $.availabilityZone = availabilityZone;
             return this;
         }
-        public Builder availabilityZone(@Nullable String availabilityZone) {
-            this.availabilityZone = Codegen.ofNullable(availabilityZone);
-            return this;
+
+        public Builder availabilityZone(String availabilityZone) {
+            return availabilityZone(Output.of(availabilityZone));
         }
+
         public Builder createTime(@Nullable Output<String> createTime) {
-            this.createTime = createTime;
+            $.createTime = createTime;
             return this;
         }
-        public Builder createTime(@Nullable String createTime) {
-            this.createTime = Codegen.ofNullable(createTime);
-            return this;
+
+        public Builder createTime(String createTime) {
+            return createTime(Output.of(createTime));
         }
+
         public Builder endpoints(@Nullable Output<List<ClusterShardNodeEndpointArgs>> endpoints) {
-            this.endpoints = endpoints;
+            $.endpoints = endpoints;
             return this;
         }
-        public Builder endpoints(@Nullable List<ClusterShardNodeEndpointArgs> endpoints) {
-            this.endpoints = Codegen.ofNullable(endpoints);
-            return this;
+
+        public Builder endpoints(List<ClusterShardNodeEndpointArgs> endpoints) {
+            return endpoints(Output.of(endpoints));
         }
+
         public Builder endpoints(ClusterShardNodeEndpointArgs... endpoints) {
             return endpoints(List.of(endpoints));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
-        }        public ClusterShardNodeArgs build() {
-            return new ClusterShardNodeArgs(availabilityZone, createTime, endpoints, name);
+
+        public Builder name(String name) {
+            return name(Output.of(name));
+        }
+
+        public ClusterShardNodeArgs build() {
+            return $;
         }
     }
+
 }

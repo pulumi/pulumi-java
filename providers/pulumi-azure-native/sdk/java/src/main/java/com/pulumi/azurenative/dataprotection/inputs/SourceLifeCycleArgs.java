@@ -8,9 +8,9 @@ import com.pulumi.azurenative.dataprotection.inputs.DataStoreInfoBaseArgs;
 import com.pulumi.azurenative.dataprotection.inputs.TargetCopySettingArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,7 +27,7 @@ public final class SourceLifeCycleArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="deleteAfter", required=true)
-      private final Output<AbsoluteDeleteOptionArgs> deleteAfter;
+    private Output<AbsoluteDeleteOptionArgs> deleteAfter;
 
     public Output<AbsoluteDeleteOptionArgs> deleteAfter() {
         return this.deleteAfter;
@@ -38,86 +38,81 @@ public final class SourceLifeCycleArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="sourceDataStore", required=true)
-      private final Output<DataStoreInfoBaseArgs> sourceDataStore;
+    private Output<DataStoreInfoBaseArgs> sourceDataStore;
 
     public Output<DataStoreInfoBaseArgs> sourceDataStore() {
         return this.sourceDataStore;
     }
 
     @Import(name="targetDataStoreCopySettings")
-      private final @Nullable Output<List<TargetCopySettingArgs>> targetDataStoreCopySettings;
+    private @Nullable Output<List<TargetCopySettingArgs>> targetDataStoreCopySettings;
 
-    public Output<List<TargetCopySettingArgs>> targetDataStoreCopySettings() {
-        return this.targetDataStoreCopySettings == null ? Codegen.empty() : this.targetDataStoreCopySettings;
+    public Optional<Output<List<TargetCopySettingArgs>>> targetDataStoreCopySettings() {
+        return Optional.ofNullable(this.targetDataStoreCopySettings);
     }
 
-    public SourceLifeCycleArgs(
-        Output<AbsoluteDeleteOptionArgs> deleteAfter,
-        Output<DataStoreInfoBaseArgs> sourceDataStore,
-        @Nullable Output<List<TargetCopySettingArgs>> targetDataStoreCopySettings) {
-        this.deleteAfter = Objects.requireNonNull(deleteAfter, "expected parameter 'deleteAfter' to be non-null");
-        this.sourceDataStore = Objects.requireNonNull(sourceDataStore, "expected parameter 'sourceDataStore' to be non-null");
-        this.targetDataStoreCopySettings = targetDataStoreCopySettings;
-    }
+    private SourceLifeCycleArgs() {}
 
-    private SourceLifeCycleArgs() {
-        this.deleteAfter = Codegen.empty();
-        this.sourceDataStore = Codegen.empty();
-        this.targetDataStoreCopySettings = Codegen.empty();
+    private SourceLifeCycleArgs(SourceLifeCycleArgs $) {
+        this.deleteAfter = $.deleteAfter;
+        this.sourceDataStore = $.sourceDataStore;
+        this.targetDataStoreCopySettings = $.targetDataStoreCopySettings;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SourceLifeCycleArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<AbsoluteDeleteOptionArgs> deleteAfter;
-        private Output<DataStoreInfoBaseArgs> sourceDataStore;
-        private @Nullable Output<List<TargetCopySettingArgs>> targetDataStoreCopySettings;
+        private SourceLifeCycleArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SourceLifeCycleArgs();
         }
 
         public Builder(SourceLifeCycleArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.deleteAfter = defaults.deleteAfter;
-    	      this.sourceDataStore = defaults.sourceDataStore;
-    	      this.targetDataStoreCopySettings = defaults.targetDataStoreCopySettings;
+            $ = new SourceLifeCycleArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder deleteAfter(Output<AbsoluteDeleteOptionArgs> deleteAfter) {
-            this.deleteAfter = Objects.requireNonNull(deleteAfter);
+            $.deleteAfter = deleteAfter;
             return this;
         }
+
         public Builder deleteAfter(AbsoluteDeleteOptionArgs deleteAfter) {
-            this.deleteAfter = Output.of(Objects.requireNonNull(deleteAfter));
-            return this;
+            return deleteAfter(Output.of(deleteAfter));
         }
+
         public Builder sourceDataStore(Output<DataStoreInfoBaseArgs> sourceDataStore) {
-            this.sourceDataStore = Objects.requireNonNull(sourceDataStore);
+            $.sourceDataStore = sourceDataStore;
             return this;
         }
+
         public Builder sourceDataStore(DataStoreInfoBaseArgs sourceDataStore) {
-            this.sourceDataStore = Output.of(Objects.requireNonNull(sourceDataStore));
-            return this;
+            return sourceDataStore(Output.of(sourceDataStore));
         }
+
         public Builder targetDataStoreCopySettings(@Nullable Output<List<TargetCopySettingArgs>> targetDataStoreCopySettings) {
-            this.targetDataStoreCopySettings = targetDataStoreCopySettings;
+            $.targetDataStoreCopySettings = targetDataStoreCopySettings;
             return this;
         }
-        public Builder targetDataStoreCopySettings(@Nullable List<TargetCopySettingArgs> targetDataStoreCopySettings) {
-            this.targetDataStoreCopySettings = Codegen.ofNullable(targetDataStoreCopySettings);
-            return this;
+
+        public Builder targetDataStoreCopySettings(List<TargetCopySettingArgs> targetDataStoreCopySettings) {
+            return targetDataStoreCopySettings(Output.of(targetDataStoreCopySettings));
         }
+
         public Builder targetDataStoreCopySettings(TargetCopySettingArgs... targetDataStoreCopySettings) {
             return targetDataStoreCopySettings(List.of(targetDataStoreCopySettings));
-        }        public SourceLifeCycleArgs build() {
-            return new SourceLifeCycleArgs(deleteAfter, sourceDataStore, targetDataStoreCopySettings);
+        }
+
+        public SourceLifeCycleArgs build() {
+            $.deleteAfter = Objects.requireNonNull($.deleteAfter, "expected parameter 'deleteAfter' to be non-null");
+            $.sourceDataStore = Objects.requireNonNull($.sourceDataStore, "expected parameter 'sourceDataStore' to be non-null");
+            return $;
         }
     }
+
 }

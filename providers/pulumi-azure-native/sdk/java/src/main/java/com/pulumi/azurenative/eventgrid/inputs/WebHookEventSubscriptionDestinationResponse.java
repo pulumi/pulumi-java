@@ -25,10 +25,10 @@ public final class WebHookEventSubscriptionDestinationResponse extends com.pulum
      * 
      */
     @Import(name="azureActiveDirectoryApplicationIdOrUri")
-      private final @Nullable String azureActiveDirectoryApplicationIdOrUri;
+    private @Nullable String azureActiveDirectoryApplicationIdOrUri;
 
     public Optional<String> azureActiveDirectoryApplicationIdOrUri() {
-        return this.azureActiveDirectoryApplicationIdOrUri == null ? Optional.empty() : Optional.ofNullable(this.azureActiveDirectoryApplicationIdOrUri);
+        return Optional.ofNullable(this.azureActiveDirectoryApplicationIdOrUri);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class WebHookEventSubscriptionDestinationResponse extends com.pulum
      * 
      */
     @Import(name="azureActiveDirectoryTenantId")
-      private final @Nullable String azureActiveDirectoryTenantId;
+    private @Nullable String azureActiveDirectoryTenantId;
 
     public Optional<String> azureActiveDirectoryTenantId() {
-        return this.azureActiveDirectoryTenantId == null ? Optional.empty() : Optional.ofNullable(this.azureActiveDirectoryTenantId);
+        return Optional.ofNullable(this.azureActiveDirectoryTenantId);
     }
 
     /**
@@ -47,7 +47,7 @@ public final class WebHookEventSubscriptionDestinationResponse extends com.pulum
      * 
      */
     @Import(name="endpointBaseUrl", required=true)
-      private final String endpointBaseUrl;
+    private String endpointBaseUrl;
 
     public String endpointBaseUrl() {
         return this.endpointBaseUrl;
@@ -59,7 +59,7 @@ public final class WebHookEventSubscriptionDestinationResponse extends com.pulum
      * 
      */
     @Import(name="endpointType", required=true)
-      private final String endpointType;
+    private String endpointType;
 
     public String endpointType() {
         return this.endpointType;
@@ -70,10 +70,10 @@ public final class WebHookEventSubscriptionDestinationResponse extends com.pulum
      * 
      */
     @Import(name="endpointUrl")
-      private final @Nullable String endpointUrl;
+    private @Nullable String endpointUrl;
 
     public Optional<String> endpointUrl() {
-        return this.endpointUrl == null ? Optional.empty() : Optional.ofNullable(this.endpointUrl);
+        return Optional.ofNullable(this.endpointUrl);
     }
 
     /**
@@ -81,10 +81,10 @@ public final class WebHookEventSubscriptionDestinationResponse extends com.pulum
      * 
      */
     @Import(name="maxEventsPerBatch")
-      private final @Nullable Integer maxEventsPerBatch;
+    private @Nullable Integer maxEventsPerBatch;
 
     public Optional<Integer> maxEventsPerBatch() {
-        return this.maxEventsPerBatch == null ? Optional.empty() : Optional.ofNullable(this.maxEventsPerBatch);
+        return Optional.ofNullable(this.maxEventsPerBatch);
     }
 
     /**
@@ -92,100 +92,84 @@ public final class WebHookEventSubscriptionDestinationResponse extends com.pulum
      * 
      */
     @Import(name="preferredBatchSizeInKilobytes")
-      private final @Nullable Integer preferredBatchSizeInKilobytes;
+    private @Nullable Integer preferredBatchSizeInKilobytes;
 
     public Optional<Integer> preferredBatchSizeInKilobytes() {
-        return this.preferredBatchSizeInKilobytes == null ? Optional.empty() : Optional.ofNullable(this.preferredBatchSizeInKilobytes);
+        return Optional.ofNullable(this.preferredBatchSizeInKilobytes);
     }
 
-    public WebHookEventSubscriptionDestinationResponse(
-        @Nullable String azureActiveDirectoryApplicationIdOrUri,
-        @Nullable String azureActiveDirectoryTenantId,
-        String endpointBaseUrl,
-        String endpointType,
-        @Nullable String endpointUrl,
-        @Nullable Integer maxEventsPerBatch,
-        @Nullable Integer preferredBatchSizeInKilobytes) {
-        this.azureActiveDirectoryApplicationIdOrUri = azureActiveDirectoryApplicationIdOrUri;
-        this.azureActiveDirectoryTenantId = azureActiveDirectoryTenantId;
-        this.endpointBaseUrl = Objects.requireNonNull(endpointBaseUrl, "expected parameter 'endpointBaseUrl' to be non-null");
-        this.endpointType = Codegen.stringProp("endpointType").arg(endpointType).require();
-        this.endpointUrl = endpointUrl;
-        this.maxEventsPerBatch = Codegen.integerProp("maxEventsPerBatch").arg(maxEventsPerBatch).def(1).getNullable();
-        this.preferredBatchSizeInKilobytes = Codegen.integerProp("preferredBatchSizeInKilobytes").arg(preferredBatchSizeInKilobytes).def(64).getNullable();
-    }
+    private WebHookEventSubscriptionDestinationResponse() {}
 
-    private WebHookEventSubscriptionDestinationResponse() {
-        this.azureActiveDirectoryApplicationIdOrUri = null;
-        this.azureActiveDirectoryTenantId = null;
-        this.endpointBaseUrl = null;
-        this.endpointType = null;
-        this.endpointUrl = null;
-        this.maxEventsPerBatch = null;
-        this.preferredBatchSizeInKilobytes = null;
+    private WebHookEventSubscriptionDestinationResponse(WebHookEventSubscriptionDestinationResponse $) {
+        this.azureActiveDirectoryApplicationIdOrUri = $.azureActiveDirectoryApplicationIdOrUri;
+        this.azureActiveDirectoryTenantId = $.azureActiveDirectoryTenantId;
+        this.endpointBaseUrl = $.endpointBaseUrl;
+        this.endpointType = $.endpointType;
+        this.endpointUrl = $.endpointUrl;
+        this.maxEventsPerBatch = $.maxEventsPerBatch;
+        this.preferredBatchSizeInKilobytes = $.preferredBatchSizeInKilobytes;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WebHookEventSubscriptionDestinationResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String azureActiveDirectoryApplicationIdOrUri;
-        private @Nullable String azureActiveDirectoryTenantId;
-        private String endpointBaseUrl;
-        private String endpointType;
-        private @Nullable String endpointUrl;
-        private @Nullable Integer maxEventsPerBatch;
-        private @Nullable Integer preferredBatchSizeInKilobytes;
+        private WebHookEventSubscriptionDestinationResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new WebHookEventSubscriptionDestinationResponse();
         }
 
         public Builder(WebHookEventSubscriptionDestinationResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.azureActiveDirectoryApplicationIdOrUri = defaults.azureActiveDirectoryApplicationIdOrUri;
-    	      this.azureActiveDirectoryTenantId = defaults.azureActiveDirectoryTenantId;
-    	      this.endpointBaseUrl = defaults.endpointBaseUrl;
-    	      this.endpointType = defaults.endpointType;
-    	      this.endpointUrl = defaults.endpointUrl;
-    	      this.maxEventsPerBatch = defaults.maxEventsPerBatch;
-    	      this.preferredBatchSizeInKilobytes = defaults.preferredBatchSizeInKilobytes;
+            $ = new WebHookEventSubscriptionDestinationResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder azureActiveDirectoryApplicationIdOrUri(@Nullable String azureActiveDirectoryApplicationIdOrUri) {
-            this.azureActiveDirectoryApplicationIdOrUri = azureActiveDirectoryApplicationIdOrUri;
+            $.azureActiveDirectoryApplicationIdOrUri = azureActiveDirectoryApplicationIdOrUri;
             return this;
         }
+
         public Builder azureActiveDirectoryTenantId(@Nullable String azureActiveDirectoryTenantId) {
-            this.azureActiveDirectoryTenantId = azureActiveDirectoryTenantId;
+            $.azureActiveDirectoryTenantId = azureActiveDirectoryTenantId;
             return this;
         }
+
         public Builder endpointBaseUrl(String endpointBaseUrl) {
-            this.endpointBaseUrl = Objects.requireNonNull(endpointBaseUrl);
+            $.endpointBaseUrl = endpointBaseUrl;
             return this;
         }
+
         public Builder endpointType(String endpointType) {
-            this.endpointType = Objects.requireNonNull(endpointType);
+            $.endpointType = endpointType;
             return this;
         }
+
         public Builder endpointUrl(@Nullable String endpointUrl) {
-            this.endpointUrl = endpointUrl;
+            $.endpointUrl = endpointUrl;
             return this;
         }
+
         public Builder maxEventsPerBatch(@Nullable Integer maxEventsPerBatch) {
-            this.maxEventsPerBatch = maxEventsPerBatch;
+            $.maxEventsPerBatch = maxEventsPerBatch;
             return this;
         }
+
         public Builder preferredBatchSizeInKilobytes(@Nullable Integer preferredBatchSizeInKilobytes) {
-            this.preferredBatchSizeInKilobytes = preferredBatchSizeInKilobytes;
+            $.preferredBatchSizeInKilobytes = preferredBatchSizeInKilobytes;
             return this;
-        }        public WebHookEventSubscriptionDestinationResponse build() {
-            return new WebHookEventSubscriptionDestinationResponse(azureActiveDirectoryApplicationIdOrUri, azureActiveDirectoryTenantId, endpointBaseUrl, endpointType, endpointUrl, maxEventsPerBatch, preferredBatchSizeInKilobytes);
+        }
+
+        public WebHookEventSubscriptionDestinationResponse build() {
+            $.endpointBaseUrl = Objects.requireNonNull($.endpointBaseUrl, "expected parameter 'endpointBaseUrl' to be non-null");
+            $.endpointType = Codegen.stringProp("endpointType").arg($.endpointType).require();
+            $.maxEventsPerBatch = Codegen.integerProp("maxEventsPerBatch").arg($.maxEventsPerBatch).def(1).getNullable();
+            $.preferredBatchSizeInKilobytes = Codegen.integerProp("preferredBatchSizeInKilobytes").arg($.preferredBatchSizeInKilobytes).def(64).getNullable();
+            return $;
         }
     }
+
 }

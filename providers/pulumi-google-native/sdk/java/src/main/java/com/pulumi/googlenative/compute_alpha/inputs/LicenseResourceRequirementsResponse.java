@@ -17,7 +17,7 @@ public final class LicenseResourceRequirementsResponse extends com.pulumi.resour
      * 
      */
     @Import(name="minGuestCpuCount", required=true)
-      private final Integer minGuestCpuCount;
+    private Integer minGuestCpuCount;
 
     public Integer minGuestCpuCount() {
         return this.minGuestCpuCount;
@@ -28,55 +28,52 @@ public final class LicenseResourceRequirementsResponse extends com.pulumi.resour
      * 
      */
     @Import(name="minMemoryMb", required=true)
-      private final Integer minMemoryMb;
+    private Integer minMemoryMb;
 
     public Integer minMemoryMb() {
         return this.minMemoryMb;
     }
 
-    public LicenseResourceRequirementsResponse(
-        Integer minGuestCpuCount,
-        Integer minMemoryMb) {
-        this.minGuestCpuCount = Objects.requireNonNull(minGuestCpuCount, "expected parameter 'minGuestCpuCount' to be non-null");
-        this.minMemoryMb = Objects.requireNonNull(minMemoryMb, "expected parameter 'minMemoryMb' to be non-null");
-    }
+    private LicenseResourceRequirementsResponse() {}
 
-    private LicenseResourceRequirementsResponse() {
-        this.minGuestCpuCount = null;
-        this.minMemoryMb = null;
+    private LicenseResourceRequirementsResponse(LicenseResourceRequirementsResponse $) {
+        this.minGuestCpuCount = $.minGuestCpuCount;
+        this.minMemoryMb = $.minMemoryMb;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LicenseResourceRequirementsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Integer minGuestCpuCount;
-        private Integer minMemoryMb;
+        private LicenseResourceRequirementsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new LicenseResourceRequirementsResponse();
         }
 
         public Builder(LicenseResourceRequirementsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.minGuestCpuCount = defaults.minGuestCpuCount;
-    	      this.minMemoryMb = defaults.minMemoryMb;
+            $ = new LicenseResourceRequirementsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder minGuestCpuCount(Integer minGuestCpuCount) {
-            this.minGuestCpuCount = Objects.requireNonNull(minGuestCpuCount);
+            $.minGuestCpuCount = minGuestCpuCount;
             return this;
         }
+
         public Builder minMemoryMb(Integer minMemoryMb) {
-            this.minMemoryMb = Objects.requireNonNull(minMemoryMb);
+            $.minMemoryMb = minMemoryMb;
             return this;
-        }        public LicenseResourceRequirementsResponse build() {
-            return new LicenseResourceRequirementsResponse(minGuestCpuCount, minMemoryMb);
+        }
+
+        public LicenseResourceRequirementsResponse build() {
+            $.minGuestCpuCount = Objects.requireNonNull($.minGuestCpuCount, "expected parameter 'minGuestCpuCount' to be non-null");
+            $.minMemoryMb = Objects.requireNonNull($.minMemoryMb, "expected parameter 'minMemoryMb' to be non-null");
+            return $;
         }
     }
+
 }

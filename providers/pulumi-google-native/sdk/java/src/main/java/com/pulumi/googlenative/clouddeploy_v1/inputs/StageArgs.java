@@ -5,10 +5,10 @@ package com.pulumi.googlenative.clouddeploy_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class StageArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="profiles")
-      private final @Nullable Output<List<String>> profiles;
+    private @Nullable Output<List<String>> profiles;
 
-    public Output<List<String>> profiles() {
-        return this.profiles == null ? Codegen.empty() : this.profiles;
+    public Optional<Output<List<String>>> profiles() {
+        return Optional.ofNullable(this.profiles);
     }
 
     /**
@@ -36,66 +36,62 @@ public final class StageArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="targetId")
-      private final @Nullable Output<String> targetId;
+    private @Nullable Output<String> targetId;
 
-    public Output<String> targetId() {
-        return this.targetId == null ? Codegen.empty() : this.targetId;
+    public Optional<Output<String>> targetId() {
+        return Optional.ofNullable(this.targetId);
     }
 
-    public StageArgs(
-        @Nullable Output<List<String>> profiles,
-        @Nullable Output<String> targetId) {
-        this.profiles = profiles;
-        this.targetId = targetId;
-    }
+    private StageArgs() {}
 
-    private StageArgs() {
-        this.profiles = Codegen.empty();
-        this.targetId = Codegen.empty();
+    private StageArgs(StageArgs $) {
+        this.profiles = $.profiles;
+        this.targetId = $.targetId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(StageArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> profiles;
-        private @Nullable Output<String> targetId;
+        private StageArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new StageArgs();
         }
 
         public Builder(StageArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.profiles = defaults.profiles;
-    	      this.targetId = defaults.targetId;
+            $ = new StageArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder profiles(@Nullable Output<List<String>> profiles) {
-            this.profiles = profiles;
+            $.profiles = profiles;
             return this;
         }
-        public Builder profiles(@Nullable List<String> profiles) {
-            this.profiles = Codegen.ofNullable(profiles);
-            return this;
+
+        public Builder profiles(List<String> profiles) {
+            return profiles(Output.of(profiles));
         }
+
         public Builder profiles(String... profiles) {
             return profiles(List.of(profiles));
         }
+
         public Builder targetId(@Nullable Output<String> targetId) {
-            this.targetId = targetId;
+            $.targetId = targetId;
             return this;
         }
-        public Builder targetId(@Nullable String targetId) {
-            this.targetId = Codegen.ofNullable(targetId);
-            return this;
-        }        public StageArgs build() {
-            return new StageArgs(profiles, targetId);
+
+        public Builder targetId(String targetId) {
+            return targetId(Output.of(targetId));
+        }
+
+        public StageArgs build() {
+            return $;
         }
     }
+
 }

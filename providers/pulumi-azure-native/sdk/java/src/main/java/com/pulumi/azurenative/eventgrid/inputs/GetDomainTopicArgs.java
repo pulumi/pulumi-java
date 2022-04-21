@@ -17,7 +17,7 @@ public final class GetDomainTopicArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="domainName", required=true)
-      private final String domainName;
+    private String domainName;
 
     public String domainName() {
         return this.domainName;
@@ -28,7 +28,7 @@ public final class GetDomainTopicArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="domainTopicName", required=true)
-      private final String domainTopicName;
+    private String domainTopicName;
 
     public String domainTopicName() {
         return this.domainTopicName;
@@ -39,64 +39,59 @@ public final class GetDomainTopicArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public GetDomainTopicArgs(
-        String domainName,
-        String domainTopicName,
-        String resourceGroupName) {
-        this.domainName = Objects.requireNonNull(domainName, "expected parameter 'domainName' to be non-null");
-        this.domainTopicName = Objects.requireNonNull(domainTopicName, "expected parameter 'domainTopicName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private GetDomainTopicArgs() {}
 
-    private GetDomainTopicArgs() {
-        this.domainName = null;
-        this.domainTopicName = null;
-        this.resourceGroupName = null;
+    private GetDomainTopicArgs(GetDomainTopicArgs $) {
+        this.domainName = $.domainName;
+        this.domainTopicName = $.domainTopicName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetDomainTopicArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String domainName;
-        private String domainTopicName;
-        private String resourceGroupName;
+        private GetDomainTopicArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetDomainTopicArgs();
         }
 
         public Builder(GetDomainTopicArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.domainName = defaults.domainName;
-    	      this.domainTopicName = defaults.domainTopicName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new GetDomainTopicArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder domainName(String domainName) {
-            this.domainName = Objects.requireNonNull(domainName);
+            $.domainName = domainName;
             return this;
         }
+
         public Builder domainTopicName(String domainTopicName) {
-            this.domainTopicName = Objects.requireNonNull(domainTopicName);
+            $.domainTopicName = domainTopicName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public GetDomainTopicArgs build() {
-            return new GetDomainTopicArgs(domainName, domainTopicName, resourceGroupName);
+        }
+
+        public GetDomainTopicArgs build() {
+            $.domainName = Objects.requireNonNull($.domainName, "expected parameter 'domainName' to be non-null");
+            $.domainTopicName = Objects.requireNonNull($.domainTopicName, "expected parameter 'domainTopicName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

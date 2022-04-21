@@ -18,7 +18,7 @@ public final class TableGetPropertiesResponseResource extends com.pulumi.resourc
      * 
      */
     @Import(name="etag", required=true)
-      private final String etag;
+    private String etag;
 
     public String etag() {
         return this.etag;
@@ -29,7 +29,7 @@ public final class TableGetPropertiesResponseResource extends com.pulumi.resourc
      * 
      */
     @Import(name="id", required=true)
-      private final String id;
+    private String id;
 
     public String id() {
         return this.id;
@@ -40,7 +40,7 @@ public final class TableGetPropertiesResponseResource extends com.pulumi.resourc
      * 
      */
     @Import(name="rid", required=true)
-      private final String rid;
+    private String rid;
 
     public String rid() {
         return this.rid;
@@ -51,73 +51,66 @@ public final class TableGetPropertiesResponseResource extends com.pulumi.resourc
      * 
      */
     @Import(name="ts", required=true)
-      private final Double ts;
+    private Double ts;
 
     public Double ts() {
         return this.ts;
     }
 
-    public TableGetPropertiesResponseResource(
-        String etag,
-        String id,
-        String rid,
-        Double ts) {
-        this.etag = Objects.requireNonNull(etag, "expected parameter 'etag' to be non-null");
-        this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
-        this.rid = Objects.requireNonNull(rid, "expected parameter 'rid' to be non-null");
-        this.ts = Objects.requireNonNull(ts, "expected parameter 'ts' to be non-null");
-    }
+    private TableGetPropertiesResponseResource() {}
 
-    private TableGetPropertiesResponseResource() {
-        this.etag = null;
-        this.id = null;
-        this.rid = null;
-        this.ts = null;
+    private TableGetPropertiesResponseResource(TableGetPropertiesResponseResource $) {
+        this.etag = $.etag;
+        this.id = $.id;
+        this.rid = $.rid;
+        this.ts = $.ts;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TableGetPropertiesResponseResource defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String etag;
-        private String id;
-        private String rid;
-        private Double ts;
+        private TableGetPropertiesResponseResource $;
 
         public Builder() {
-    	      // Empty
+            $ = new TableGetPropertiesResponseResource();
         }
 
         public Builder(TableGetPropertiesResponseResource defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.etag = defaults.etag;
-    	      this.id = defaults.id;
-    	      this.rid = defaults.rid;
-    	      this.ts = defaults.ts;
+            $ = new TableGetPropertiesResponseResource(Objects.requireNonNull(defaults));
         }
 
         public Builder etag(String etag) {
-            this.etag = Objects.requireNonNull(etag);
+            $.etag = etag;
             return this;
         }
+
         public Builder id(String id) {
-            this.id = Objects.requireNonNull(id);
+            $.id = id;
             return this;
         }
+
         public Builder rid(String rid) {
-            this.rid = Objects.requireNonNull(rid);
+            $.rid = rid;
             return this;
         }
+
         public Builder ts(Double ts) {
-            this.ts = Objects.requireNonNull(ts);
+            $.ts = ts;
             return this;
-        }        public TableGetPropertiesResponseResource build() {
-            return new TableGetPropertiesResponseResource(etag, id, rid, ts);
+        }
+
+        public TableGetPropertiesResponseResource build() {
+            $.etag = Objects.requireNonNull($.etag, "expected parameter 'etag' to be non-null");
+            $.id = Objects.requireNonNull($.id, "expected parameter 'id' to be non-null");
+            $.rid = Objects.requireNonNull($.rid, "expected parameter 'rid' to be non-null");
+            $.ts = Objects.requireNonNull($.ts, "expected parameter 'ts' to be non-null");
+            return $;
         }
     }
+
 }

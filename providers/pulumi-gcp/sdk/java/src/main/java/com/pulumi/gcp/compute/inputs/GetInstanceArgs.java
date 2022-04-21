@@ -19,10 +19,10 @@ public final class GetInstanceArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable String name;
+    private @Nullable String name;
 
     public Optional<String> name() {
-        return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -32,10 +32,10 @@ public final class GetInstanceArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="project")
-      private final @Nullable String project;
+    private @Nullable String project;
 
     public Optional<String> project() {
-        return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -43,10 +43,10 @@ public final class GetInstanceArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="selfLink")
-      private final @Nullable String selfLink;
+    private @Nullable String selfLink;
 
     public Optional<String> selfLink() {
-        return this.selfLink == null ? Optional.empty() : Optional.ofNullable(this.selfLink);
+        return Optional.ofNullable(this.selfLink);
     }
 
     /**
@@ -56,73 +56,62 @@ public final class GetInstanceArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="zone")
-      private final @Nullable String zone;
+    private @Nullable String zone;
 
     public Optional<String> zone() {
-        return this.zone == null ? Optional.empty() : Optional.ofNullable(this.zone);
+        return Optional.ofNullable(this.zone);
     }
 
-    public GetInstanceArgs(
-        @Nullable String name,
-        @Nullable String project,
-        @Nullable String selfLink,
-        @Nullable String zone) {
-        this.name = name;
-        this.project = project;
-        this.selfLink = selfLink;
-        this.zone = zone;
-    }
+    private GetInstanceArgs() {}
 
-    private GetInstanceArgs() {
-        this.name = null;
-        this.project = null;
-        this.selfLink = null;
-        this.zone = null;
+    private GetInstanceArgs(GetInstanceArgs $) {
+        this.name = $.name;
+        this.project = $.project;
+        this.selfLink = $.selfLink;
+        this.zone = $.zone;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetInstanceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String name;
-        private @Nullable String project;
-        private @Nullable String selfLink;
-        private @Nullable String zone;
+        private GetInstanceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetInstanceArgs();
         }
 
         public Builder(GetInstanceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.project = defaults.project;
-    	      this.selfLink = defaults.selfLink;
-    	      this.zone = defaults.zone;
+            $ = new GetInstanceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder name(@Nullable String name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
+
         public Builder project(@Nullable String project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
+
         public Builder selfLink(@Nullable String selfLink) {
-            this.selfLink = selfLink;
+            $.selfLink = selfLink;
             return this;
         }
+
         public Builder zone(@Nullable String zone) {
-            this.zone = zone;
+            $.zone = zone;
             return this;
-        }        public GetInstanceArgs build() {
-            return new GetInstanceArgs(name, project, selfLink, zone);
+        }
+
+        public GetInstanceArgs build() {
+            return $;
         }
     }
+
 }

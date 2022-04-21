@@ -25,7 +25,7 @@ public final class ExecutionStageSummaryResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="componentSource", required=true)
-      private final List<ComponentSourceResponse> componentSource;
+    private List<ComponentSourceResponse> componentSource;
 
     public List<ComponentSourceResponse> componentSource() {
         return this.componentSource;
@@ -36,7 +36,7 @@ public final class ExecutionStageSummaryResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="componentTransform", required=true)
-      private final List<ComponentTransformResponse> componentTransform;
+    private List<ComponentTransformResponse> componentTransform;
 
     public List<ComponentTransformResponse> componentTransform() {
         return this.componentTransform;
@@ -47,7 +47,7 @@ public final class ExecutionStageSummaryResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="inputSource", required=true)
-      private final List<StageSourceResponse> inputSource;
+    private List<StageSourceResponse> inputSource;
 
     public List<StageSourceResponse> inputSource() {
         return this.inputSource;
@@ -58,7 +58,7 @@ public final class ExecutionStageSummaryResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="kind", required=true)
-      private final String kind;
+    private String kind;
 
     public String kind() {
         return this.kind;
@@ -69,7 +69,7 @@ public final class ExecutionStageSummaryResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -80,7 +80,7 @@ public final class ExecutionStageSummaryResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="outputSource", required=true)
-      private final List<StageSourceResponse> outputSource;
+    private List<StageSourceResponse> outputSource;
 
     public List<StageSourceResponse> outputSource() {
         return this.outputSource;
@@ -91,115 +91,107 @@ public final class ExecutionStageSummaryResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="prerequisiteStage", required=true)
-      private final List<String> prerequisiteStage;
+    private List<String> prerequisiteStage;
 
     public List<String> prerequisiteStage() {
         return this.prerequisiteStage;
     }
 
-    public ExecutionStageSummaryResponse(
-        List<ComponentSourceResponse> componentSource,
-        List<ComponentTransformResponse> componentTransform,
-        List<StageSourceResponse> inputSource,
-        String kind,
-        String name,
-        List<StageSourceResponse> outputSource,
-        List<String> prerequisiteStage) {
-        this.componentSource = Objects.requireNonNull(componentSource, "expected parameter 'componentSource' to be non-null");
-        this.componentTransform = Objects.requireNonNull(componentTransform, "expected parameter 'componentTransform' to be non-null");
-        this.inputSource = Objects.requireNonNull(inputSource, "expected parameter 'inputSource' to be non-null");
-        this.kind = Objects.requireNonNull(kind, "expected parameter 'kind' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.outputSource = Objects.requireNonNull(outputSource, "expected parameter 'outputSource' to be non-null");
-        this.prerequisiteStage = Objects.requireNonNull(prerequisiteStage, "expected parameter 'prerequisiteStage' to be non-null");
-    }
+    private ExecutionStageSummaryResponse() {}
 
-    private ExecutionStageSummaryResponse() {
-        this.componentSource = List.of();
-        this.componentTransform = List.of();
-        this.inputSource = List.of();
-        this.kind = null;
-        this.name = null;
-        this.outputSource = List.of();
-        this.prerequisiteStage = List.of();
+    private ExecutionStageSummaryResponse(ExecutionStageSummaryResponse $) {
+        this.componentSource = $.componentSource;
+        this.componentTransform = $.componentTransform;
+        this.inputSource = $.inputSource;
+        this.kind = $.kind;
+        this.name = $.name;
+        this.outputSource = $.outputSource;
+        this.prerequisiteStage = $.prerequisiteStage;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ExecutionStageSummaryResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<ComponentSourceResponse> componentSource;
-        private List<ComponentTransformResponse> componentTransform;
-        private List<StageSourceResponse> inputSource;
-        private String kind;
-        private String name;
-        private List<StageSourceResponse> outputSource;
-        private List<String> prerequisiteStage;
+        private ExecutionStageSummaryResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ExecutionStageSummaryResponse();
         }
 
         public Builder(ExecutionStageSummaryResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.componentSource = defaults.componentSource;
-    	      this.componentTransform = defaults.componentTransform;
-    	      this.inputSource = defaults.inputSource;
-    	      this.kind = defaults.kind;
-    	      this.name = defaults.name;
-    	      this.outputSource = defaults.outputSource;
-    	      this.prerequisiteStage = defaults.prerequisiteStage;
+            $ = new ExecutionStageSummaryResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder componentSource(List<ComponentSourceResponse> componentSource) {
-            this.componentSource = Objects.requireNonNull(componentSource);
+            $.componentSource = componentSource;
             return this;
         }
+
         public Builder componentSource(ComponentSourceResponse... componentSource) {
             return componentSource(List.of(componentSource));
         }
+
         public Builder componentTransform(List<ComponentTransformResponse> componentTransform) {
-            this.componentTransform = Objects.requireNonNull(componentTransform);
+            $.componentTransform = componentTransform;
             return this;
         }
+
         public Builder componentTransform(ComponentTransformResponse... componentTransform) {
             return componentTransform(List.of(componentTransform));
         }
+
         public Builder inputSource(List<StageSourceResponse> inputSource) {
-            this.inputSource = Objects.requireNonNull(inputSource);
+            $.inputSource = inputSource;
             return this;
         }
+
         public Builder inputSource(StageSourceResponse... inputSource) {
             return inputSource(List.of(inputSource));
         }
+
         public Builder kind(String kind) {
-            this.kind = Objects.requireNonNull(kind);
+            $.kind = kind;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder outputSource(List<StageSourceResponse> outputSource) {
-            this.outputSource = Objects.requireNonNull(outputSource);
+            $.outputSource = outputSource;
             return this;
         }
+
         public Builder outputSource(StageSourceResponse... outputSource) {
             return outputSource(List.of(outputSource));
         }
+
         public Builder prerequisiteStage(List<String> prerequisiteStage) {
-            this.prerequisiteStage = Objects.requireNonNull(prerequisiteStage);
+            $.prerequisiteStage = prerequisiteStage;
             return this;
         }
+
         public Builder prerequisiteStage(String... prerequisiteStage) {
             return prerequisiteStage(List.of(prerequisiteStage));
-        }        public ExecutionStageSummaryResponse build() {
-            return new ExecutionStageSummaryResponse(componentSource, componentTransform, inputSource, kind, name, outputSource, prerequisiteStage);
+        }
+
+        public ExecutionStageSummaryResponse build() {
+            $.componentSource = Objects.requireNonNull($.componentSource, "expected parameter 'componentSource' to be non-null");
+            $.componentTransform = Objects.requireNonNull($.componentTransform, "expected parameter 'componentTransform' to be non-null");
+            $.inputSource = Objects.requireNonNull($.inputSource, "expected parameter 'inputSource' to be non-null");
+            $.kind = Objects.requireNonNull($.kind, "expected parameter 'kind' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.outputSource = Objects.requireNonNull($.outputSource, "expected parameter 'outputSource' to be non-null");
+            $.prerequisiteStage = Objects.requireNonNull($.prerequisiteStage, "expected parameter 'prerequisiteStage' to be non-null");
+            return $;
         }
     }
+
 }

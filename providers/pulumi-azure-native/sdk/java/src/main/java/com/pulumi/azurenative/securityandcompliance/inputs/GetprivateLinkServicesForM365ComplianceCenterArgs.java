@@ -17,7 +17,7 @@ public final class GetprivateLinkServicesForM365ComplianceCenterArgs extends com
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -28,55 +28,52 @@ public final class GetprivateLinkServicesForM365ComplianceCenterArgs extends com
      * 
      */
     @Import(name="resourceName", required=true)
-      private final String resourceName;
+    private String resourceName;
 
     public String resourceName() {
         return this.resourceName;
     }
 
-    public GetprivateLinkServicesForM365ComplianceCenterArgs(
-        String resourceGroupName,
-        String resourceName) {
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.resourceName = Objects.requireNonNull(resourceName, "expected parameter 'resourceName' to be non-null");
-    }
+    private GetprivateLinkServicesForM365ComplianceCenterArgs() {}
 
-    private GetprivateLinkServicesForM365ComplianceCenterArgs() {
-        this.resourceGroupName = null;
-        this.resourceName = null;
+    private GetprivateLinkServicesForM365ComplianceCenterArgs(GetprivateLinkServicesForM365ComplianceCenterArgs $) {
+        this.resourceGroupName = $.resourceGroupName;
+        this.resourceName = $.resourceName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetprivateLinkServicesForM365ComplianceCenterArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String resourceGroupName;
-        private String resourceName;
+        private GetprivateLinkServicesForM365ComplianceCenterArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetprivateLinkServicesForM365ComplianceCenterArgs();
         }
 
         public Builder(GetprivateLinkServicesForM365ComplianceCenterArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.resourceName = defaults.resourceName;
+            $ = new GetprivateLinkServicesForM365ComplianceCenterArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceName(String resourceName) {
-            this.resourceName = Objects.requireNonNull(resourceName);
+            $.resourceName = resourceName;
             return this;
-        }        public GetprivateLinkServicesForM365ComplianceCenterArgs build() {
-            return new GetprivateLinkServicesForM365ComplianceCenterArgs(resourceGroupName, resourceName);
+        }
+
+        public GetprivateLinkServicesForM365ComplianceCenterArgs build() {
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.resourceName = Objects.requireNonNull($.resourceName, "expected parameter 'resourceName' to be non-null");
+            return $;
         }
     }
+
 }

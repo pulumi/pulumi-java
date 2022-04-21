@@ -23,45 +23,44 @@ public final class TIDataConnectorDataTypesResponse extends com.pulumi.resources
      * 
      */
     @Import(name="indicators")
-      private final @Nullable TIDataConnectorDataTypesResponseIndicators indicators;
+    private @Nullable TIDataConnectorDataTypesResponseIndicators indicators;
 
     public Optional<TIDataConnectorDataTypesResponseIndicators> indicators() {
-        return this.indicators == null ? Optional.empty() : Optional.ofNullable(this.indicators);
+        return Optional.ofNullable(this.indicators);
     }
 
-    public TIDataConnectorDataTypesResponse(@Nullable TIDataConnectorDataTypesResponseIndicators indicators) {
-        this.indicators = indicators;
-    }
+    private TIDataConnectorDataTypesResponse() {}
 
-    private TIDataConnectorDataTypesResponse() {
-        this.indicators = null;
+    private TIDataConnectorDataTypesResponse(TIDataConnectorDataTypesResponse $) {
+        this.indicators = $.indicators;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TIDataConnectorDataTypesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable TIDataConnectorDataTypesResponseIndicators indicators;
+        private TIDataConnectorDataTypesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new TIDataConnectorDataTypesResponse();
         }
 
         public Builder(TIDataConnectorDataTypesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.indicators = defaults.indicators;
+            $ = new TIDataConnectorDataTypesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder indicators(@Nullable TIDataConnectorDataTypesResponseIndicators indicators) {
-            this.indicators = indicators;
+            $.indicators = indicators;
             return this;
-        }        public TIDataConnectorDataTypesResponse build() {
-            return new TIDataConnectorDataTypesResponse(indicators);
+        }
+
+        public TIDataConnectorDataTypesResponse build() {
+            return $;
         }
     }
+
 }

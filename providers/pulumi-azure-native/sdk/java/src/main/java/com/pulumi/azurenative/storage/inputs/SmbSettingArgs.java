@@ -6,9 +6,9 @@ package com.pulumi.azurenative.storage.inputs;
 import com.pulumi.azurenative.storage.inputs.MultichannelArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class SmbSettingArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="authenticationMethods")
-      private final @Nullable Output<String> authenticationMethods;
+    private @Nullable Output<String> authenticationMethods;
 
-    public Output<String> authenticationMethods() {
-        return this.authenticationMethods == null ? Codegen.empty() : this.authenticationMethods;
+    public Optional<Output<String>> authenticationMethods() {
+        return Optional.ofNullable(this.authenticationMethods);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class SmbSettingArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="channelEncryption")
-      private final @Nullable Output<String> channelEncryption;
+    private @Nullable Output<String> channelEncryption;
 
-    public Output<String> channelEncryption() {
-        return this.channelEncryption == null ? Codegen.empty() : this.channelEncryption;
+    public Optional<Output<String>> channelEncryption() {
+        return Optional.ofNullable(this.channelEncryption);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class SmbSettingArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="kerberosTicketEncryption")
-      private final @Nullable Output<String> kerberosTicketEncryption;
+    private @Nullable Output<String> kerberosTicketEncryption;
 
-    public Output<String> kerberosTicketEncryption() {
-        return this.kerberosTicketEncryption == null ? Codegen.empty() : this.kerberosTicketEncryption;
+    public Optional<Output<String>> kerberosTicketEncryption() {
+        return Optional.ofNullable(this.kerberosTicketEncryption);
     }
 
     /**
@@ -58,10 +58,10 @@ public final class SmbSettingArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="multichannel")
-      private final @Nullable Output<MultichannelArgs> multichannel;
+    private @Nullable Output<MultichannelArgs> multichannel;
 
-    public Output<MultichannelArgs> multichannel() {
-        return this.multichannel == null ? Codegen.empty() : this.multichannel;
+    public Optional<Output<MultichannelArgs>> multichannel() {
+        return Optional.ofNullable(this.multichannel);
     }
 
     /**
@@ -69,102 +69,88 @@ public final class SmbSettingArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="versions")
-      private final @Nullable Output<String> versions;
+    private @Nullable Output<String> versions;
 
-    public Output<String> versions() {
-        return this.versions == null ? Codegen.empty() : this.versions;
+    public Optional<Output<String>> versions() {
+        return Optional.ofNullable(this.versions);
     }
 
-    public SmbSettingArgs(
-        @Nullable Output<String> authenticationMethods,
-        @Nullable Output<String> channelEncryption,
-        @Nullable Output<String> kerberosTicketEncryption,
-        @Nullable Output<MultichannelArgs> multichannel,
-        @Nullable Output<String> versions) {
-        this.authenticationMethods = authenticationMethods;
-        this.channelEncryption = channelEncryption;
-        this.kerberosTicketEncryption = kerberosTicketEncryption;
-        this.multichannel = multichannel;
-        this.versions = versions;
-    }
+    private SmbSettingArgs() {}
 
-    private SmbSettingArgs() {
-        this.authenticationMethods = Codegen.empty();
-        this.channelEncryption = Codegen.empty();
-        this.kerberosTicketEncryption = Codegen.empty();
-        this.multichannel = Codegen.empty();
-        this.versions = Codegen.empty();
+    private SmbSettingArgs(SmbSettingArgs $) {
+        this.authenticationMethods = $.authenticationMethods;
+        this.channelEncryption = $.channelEncryption;
+        this.kerberosTicketEncryption = $.kerberosTicketEncryption;
+        this.multichannel = $.multichannel;
+        this.versions = $.versions;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SmbSettingArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> authenticationMethods;
-        private @Nullable Output<String> channelEncryption;
-        private @Nullable Output<String> kerberosTicketEncryption;
-        private @Nullable Output<MultichannelArgs> multichannel;
-        private @Nullable Output<String> versions;
+        private SmbSettingArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SmbSettingArgs();
         }
 
         public Builder(SmbSettingArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.authenticationMethods = defaults.authenticationMethods;
-    	      this.channelEncryption = defaults.channelEncryption;
-    	      this.kerberosTicketEncryption = defaults.kerberosTicketEncryption;
-    	      this.multichannel = defaults.multichannel;
-    	      this.versions = defaults.versions;
+            $ = new SmbSettingArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder authenticationMethods(@Nullable Output<String> authenticationMethods) {
-            this.authenticationMethods = authenticationMethods;
+            $.authenticationMethods = authenticationMethods;
             return this;
         }
-        public Builder authenticationMethods(@Nullable String authenticationMethods) {
-            this.authenticationMethods = Codegen.ofNullable(authenticationMethods);
-            return this;
+
+        public Builder authenticationMethods(String authenticationMethods) {
+            return authenticationMethods(Output.of(authenticationMethods));
         }
+
         public Builder channelEncryption(@Nullable Output<String> channelEncryption) {
-            this.channelEncryption = channelEncryption;
+            $.channelEncryption = channelEncryption;
             return this;
         }
-        public Builder channelEncryption(@Nullable String channelEncryption) {
-            this.channelEncryption = Codegen.ofNullable(channelEncryption);
-            return this;
+
+        public Builder channelEncryption(String channelEncryption) {
+            return channelEncryption(Output.of(channelEncryption));
         }
+
         public Builder kerberosTicketEncryption(@Nullable Output<String> kerberosTicketEncryption) {
-            this.kerberosTicketEncryption = kerberosTicketEncryption;
+            $.kerberosTicketEncryption = kerberosTicketEncryption;
             return this;
         }
-        public Builder kerberosTicketEncryption(@Nullable String kerberosTicketEncryption) {
-            this.kerberosTicketEncryption = Codegen.ofNullable(kerberosTicketEncryption);
-            return this;
+
+        public Builder kerberosTicketEncryption(String kerberosTicketEncryption) {
+            return kerberosTicketEncryption(Output.of(kerberosTicketEncryption));
         }
+
         public Builder multichannel(@Nullable Output<MultichannelArgs> multichannel) {
-            this.multichannel = multichannel;
+            $.multichannel = multichannel;
             return this;
         }
-        public Builder multichannel(@Nullable MultichannelArgs multichannel) {
-            this.multichannel = Codegen.ofNullable(multichannel);
-            return this;
+
+        public Builder multichannel(MultichannelArgs multichannel) {
+            return multichannel(Output.of(multichannel));
         }
+
         public Builder versions(@Nullable Output<String> versions) {
-            this.versions = versions;
+            $.versions = versions;
             return this;
         }
-        public Builder versions(@Nullable String versions) {
-            this.versions = Codegen.ofNullable(versions);
-            return this;
-        }        public SmbSettingArgs build() {
-            return new SmbSettingArgs(authenticationMethods, channelEncryption, kerberosTicketEncryption, multichannel, versions);
+
+        public Builder versions(String versions) {
+            return versions(Output.of(versions));
+        }
+
+        public SmbSettingArgs build() {
+            return $;
         }
     }
+
 }

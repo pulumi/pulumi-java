@@ -5,10 +5,10 @@ package com.pulumi.gcp.compute.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.compute.inputs.InstanceGroupManagerVersionTargetSizeArgs;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,7 +21,7 @@ public final class InstanceGroupManagerVersionArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="instanceTemplate", required=true)
-      private final Output<String> instanceTemplate;
+    private Output<String> instanceTemplate;
 
     public Output<String> instanceTemplate() {
         return this.instanceTemplate;
@@ -32,10 +32,10 @@ public final class InstanceGroupManagerVersionArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -43,76 +43,69 @@ public final class InstanceGroupManagerVersionArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="targetSize")
-      private final @Nullable Output<InstanceGroupManagerVersionTargetSizeArgs> targetSize;
+    private @Nullable Output<InstanceGroupManagerVersionTargetSizeArgs> targetSize;
 
-    public Output<InstanceGroupManagerVersionTargetSizeArgs> targetSize() {
-        return this.targetSize == null ? Codegen.empty() : this.targetSize;
+    public Optional<Output<InstanceGroupManagerVersionTargetSizeArgs>> targetSize() {
+        return Optional.ofNullable(this.targetSize);
     }
 
-    public InstanceGroupManagerVersionArgs(
-        Output<String> instanceTemplate,
-        @Nullable Output<String> name,
-        @Nullable Output<InstanceGroupManagerVersionTargetSizeArgs> targetSize) {
-        this.instanceTemplate = Objects.requireNonNull(instanceTemplate, "expected parameter 'instanceTemplate' to be non-null");
-        this.name = name;
-        this.targetSize = targetSize;
-    }
+    private InstanceGroupManagerVersionArgs() {}
 
-    private InstanceGroupManagerVersionArgs() {
-        this.instanceTemplate = Codegen.empty();
-        this.name = Codegen.empty();
-        this.targetSize = Codegen.empty();
+    private InstanceGroupManagerVersionArgs(InstanceGroupManagerVersionArgs $) {
+        this.instanceTemplate = $.instanceTemplate;
+        this.name = $.name;
+        this.targetSize = $.targetSize;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(InstanceGroupManagerVersionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> instanceTemplate;
-        private @Nullable Output<String> name;
-        private @Nullable Output<InstanceGroupManagerVersionTargetSizeArgs> targetSize;
+        private InstanceGroupManagerVersionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new InstanceGroupManagerVersionArgs();
         }
 
         public Builder(InstanceGroupManagerVersionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.instanceTemplate = defaults.instanceTemplate;
-    	      this.name = defaults.name;
-    	      this.targetSize = defaults.targetSize;
+            $ = new InstanceGroupManagerVersionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder instanceTemplate(Output<String> instanceTemplate) {
-            this.instanceTemplate = Objects.requireNonNull(instanceTemplate);
+            $.instanceTemplate = instanceTemplate;
             return this;
         }
+
         public Builder instanceTemplate(String instanceTemplate) {
-            this.instanceTemplate = Output.of(Objects.requireNonNull(instanceTemplate));
-            return this;
+            return instanceTemplate(Output.of(instanceTemplate));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder targetSize(@Nullable Output<InstanceGroupManagerVersionTargetSizeArgs> targetSize) {
-            this.targetSize = targetSize;
+            $.targetSize = targetSize;
             return this;
         }
-        public Builder targetSize(@Nullable InstanceGroupManagerVersionTargetSizeArgs targetSize) {
-            this.targetSize = Codegen.ofNullable(targetSize);
-            return this;
-        }        public InstanceGroupManagerVersionArgs build() {
-            return new InstanceGroupManagerVersionArgs(instanceTemplate, name, targetSize);
+
+        public Builder targetSize(InstanceGroupManagerVersionTargetSizeArgs targetSize) {
+            return targetSize(Output.of(targetSize));
+        }
+
+        public InstanceGroupManagerVersionArgs build() {
+            $.instanceTemplate = Objects.requireNonNull($.instanceTemplate, "expected parameter 'instanceTemplate' to be non-null");
+            return $;
         }
     }
+
 }

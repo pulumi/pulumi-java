@@ -24,10 +24,10 @@ public final class AutomaticRepairsPolicyResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="enabled")
-      private final @Nullable Boolean enabled;
+    private @Nullable Boolean enabled;
 
     public Optional<Boolean> enabled() {
-        return this.enabled == null ? Optional.empty() : Optional.ofNullable(this.enabled);
+        return Optional.ofNullable(this.enabled);
     }
 
     /**
@@ -35,55 +35,50 @@ public final class AutomaticRepairsPolicyResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="gracePeriod")
-      private final @Nullable String gracePeriod;
+    private @Nullable String gracePeriod;
 
     public Optional<String> gracePeriod() {
-        return this.gracePeriod == null ? Optional.empty() : Optional.ofNullable(this.gracePeriod);
+        return Optional.ofNullable(this.gracePeriod);
     }
 
-    public AutomaticRepairsPolicyResponse(
-        @Nullable Boolean enabled,
-        @Nullable String gracePeriod) {
-        this.enabled = enabled;
-        this.gracePeriod = gracePeriod;
-    }
+    private AutomaticRepairsPolicyResponse() {}
 
-    private AutomaticRepairsPolicyResponse() {
-        this.enabled = null;
-        this.gracePeriod = null;
+    private AutomaticRepairsPolicyResponse(AutomaticRepairsPolicyResponse $) {
+        this.enabled = $.enabled;
+        this.gracePeriod = $.gracePeriod;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AutomaticRepairsPolicyResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Boolean enabled;
-        private @Nullable String gracePeriod;
+        private AutomaticRepairsPolicyResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AutomaticRepairsPolicyResponse();
         }
 
         public Builder(AutomaticRepairsPolicyResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.enabled = defaults.enabled;
-    	      this.gracePeriod = defaults.gracePeriod;
+            $ = new AutomaticRepairsPolicyResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = enabled;
+            $.enabled = enabled;
             return this;
         }
+
         public Builder gracePeriod(@Nullable String gracePeriod) {
-            this.gracePeriod = gracePeriod;
+            $.gracePeriod = gracePeriod;
             return this;
-        }        public AutomaticRepairsPolicyResponse build() {
-            return new AutomaticRepairsPolicyResponse(enabled, gracePeriod);
+        }
+
+        public AutomaticRepairsPolicyResponse build() {
+            return $;
         }
     }
+
 }
